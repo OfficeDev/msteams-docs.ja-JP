@@ -1,0 +1,371 @@
+- name: 概要
+  expanded: true
+  items:
+    - name: Microsoft Teams アプリとは
+      href: overview.md
+    - name: 新機能
+      href: whats-new.md
+- name: 作業の開始
+  items:
+    - name: 'C を使用してアプリを作成する#'
+      href: tutorials/get-started-dotnet-app-studio.md
+    - name: ノードを使用してアプリを作成する
+      href: tutorials/get-started-nodejs-app-studio.md
+    - name: '[ごみ箱 (オマーン) ジェネレーターでアプリを作成する。'
+      href: tutorials/get-started-yeoman.md
+- name: サンプルとテンプレート
+  items:
+    - name: サンプルアプリ
+      href: samples/code-samples.md
+    - name: 運用に対応したアプリテンプレート
+      href: samples/app-templates.md
+- name: 概念
+  expanded: true
+  items:
+    - name: Microsoft Teams 用アプリの作成
+      href: concepts/building-an-app.md
+    - name: Teams クライアントの拡張ポイント
+      href: concepts/extensibility-points.md
+    - name: アプリを設計する
+      items:
+        - name: ユースケースを理解する
+          href: concepts/design/understand-use-cases.md
+        - name: ユースケースを機能にマップする
+          href: concepts/design/map-use-cases.md
+        - name: 個人用アプリ
+          href: concepts/design/personal-apps.md
+        - name: UI コンポーネント
+          items:
+            - name: 色
+              href: concepts/design/components/color.md
+            - name: ボタン、リンク、コントロール
+              href: concepts/design/components/buttons.md
+            - name: 文字体裁
+              href: concepts/design/components/typography.md
+            - name: フィールドと Flyouts
+              href: concepts/design/components/fields.md
+            - name: Dialogs
+              href: concepts/design/components/dialogs.md
+    - name: アプリをビルドしてテストする
+      items:
+        - name: Office 365 テナントの準備
+          href: concepts/build-and-test/prepare-your-o365-tenant.md
+        - name: アプリ Studio を使用してアプリを作成する
+          href: concepts/build-and-test/app-studio-overview.md
+        - name: アプリパッケージを作成する
+          href: concepts/build-and-test/apps-package.md
+        - name: アプリのテストとデバッグ
+          href: concepts/build-and-test/debug.md
+        - name: テストデータを環境に追加する
+          href: concepts/build-and-test/test-data.md
+        - name: ナビゲーションにディープリンクを使用する
+          href: concepts/build-and-test/deep-links.md
+        - name: アプリのローカライズ
+          href: concepts/build-and-test/apps-localization.md
+        - name: 'Web サイトの [チームに共有] ボタンを作成する'
+          href: concepts/build-and-test/share-to-teams.md
+    - name: アプリを展開および発行する
+      items:
+        - name: 配布方法を選択する
+          href: concepts/deploy-and-publish/overview.md
+        - name: チームまたはユーザーのアプリをアップロードする
+          href: concepts/deploy-and-publish/apps-upload.md
+        - name: 組織にアプリを公開する
+          href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
+        - name: AppSource でアプリを発行する
+          items:
+            - name: AppSource 送信について
+              href: concepts/deploy-and-publish/appsource/publish.md
+            - name: アプリを準備する
+              items:
+                - name: 事前提出のチェックリスト
+                  href: concepts/deploy-and-publish/appsource/prepare/overview.md
+                - name: アプリ詳細ページのチェックリスト
+                  href: concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md
+                - name: アプリのマニフェストのチェックリスト
+                  href: concepts/deploy-and-publish/appsource/prepare/app-manifest-checklist.md
+                - name: 頻繁に発生するケース
+                  href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
+            - name: アプリを発行した後
+              items:
+                - name: アプリを発行した後の処理
+                  href: concepts/deploy-and-publish/appsource/post-publish/overview.md
+                - name: アプリケーション証明書プログラム
+                  href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
+    - name: Teams アプリでの認証
+      items:
+        - name: 認証の概要
+          href: concepts/authentication/authentication.md
+        - name: Id プロバイダーを構成する
+          href: concepts/authentication/configure-identity-provider.md
+- name: メッセージング拡張機能を使用したタスク指向の相互作用
+  items:
+    - name: メッセージング拡張機能とは
+      href: messaging-extensions/what-are-messaging-extensions.md
+    - name: Quickstarts
+      items:
+        - name: アクションコマンド
+          items:
+            - name: 'C#/.NET'
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
+            - name: TypeScript/node.js
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action'
+        - name: 検索コマンド付き
+          items:
+            - name: 'C#/.NET'
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
+            - name: TypeScript/node.js
+              href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search'
+    - name: 使い方ガイド
+      expanded: true
+      items:
+        - name: メッセージング拡張機能を作成する
+          href: messaging-extensions/how-to/create-messaging-extension.md
+        - name: アクションベースのコマンド
+          items:
+            - name: アクションコマンドを定義する
+              href: messaging-extensions/how-to/action-commands/define-action-command.md
+            - name: タスクモジュールを作成して送信する
+              href: messaging-extensions/how-to/action-commands/create-task-module.md
+            - name: 送信アクションに応答を送信する
+              href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
+        - name: 検索ベースのコマンド
+          items:
+            - name: 検索コマンドを定義する
+              href: messaging-extensions/how-to/search-commands/define-search-command.md
+            - name: 検索クエリを受信して応答する
+              href: messaging-extensions/how-to/search-commands/respond-to-search.md
+        - name: Link unfurling
+          href: messaging-extensions/how-to/link-unfurling.md
+        - name: 認証を追加する
+          href: messaging-extensions/how-to/add-authentication.md
+- name: 話し言葉の Bot
+  items:
+    - name: Microsoft Teams のボットとは
+      href: bots/what-are-bots.md
+    - name: Bot のしくみ
+      href: bots/bot-basics.md
+    - name: Quickstarts
+      items:
+        - name: 'C の Teams 会話 bot#'
+          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot'
+        - name: JavaScript での Teams の会話のボット
+          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot'
+        - name: Python での Teams の会話のボット
+          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/57.teams-conversation-bot'
+    - name: Bot を設計する
+      items:
+        - name: 設計の概要
+          href: bots/design/bots.md
+    - name: 使い方ガイド
+      expanded: true
+      items:
+        - name: Teams の bot を作成する
+          href: bots/how-to/create-a-bot-for-teams.md
+        - name: 会話
+          items:
+            - name: 会話の基礎
+              href: bots/how-to/conversations/conversation-basics.md
+            - name: 会話イベントにサブスクライブする
+              href: bots/how-to/conversations/subscribe-to-conversation-events.md
+            - name: チャネルとグループの会話
+              href: bots/how-to/conversations/channel-and-group-conversations.md
+            - name: 事前にメッセージを送信する
+              href: bots/how-to/conversations/send-proactive-messages.md
+            - name: ファイルを送受信する
+              href: bots/how-to/conversations/send-and-receive-files.md
+        - name: Bot をデバッグする
+          items:
+            - name: IDE を使用してローカルにデバッグする
+              href: bots/how-to/debug/locally-with-an-ide.md
+            - name: インスペクションミドルウェアを使用してデバッグする
+              href: /azure/bot-service/bot-service-debug-inspection-middleware
+        - name: 認証
+          items:
+            - name: ボットの認証フロー
+              href: bots/how-to/authentication/auth-flow-bot.md
+            - name: Bot に認証を追加する
+              href: bots/how-to/authentication/add-authentication.md
+        - name: Bot メッセージの書式設定
+          href: bots/how-to/format-your-bot-messages.md
+        - name: Bot メッセージの更新および削除
+          href: bots/how-to/update-and-delete-bot-messages.md
+        - name: Bot の Teams コンテキストを取得する
+          href: bots/how-to/get-teams-context.md
+        - name: Bot のコマンドメニューを作成する
+          href: bots/how-to/create-a-bot-commands-menu.md
+        - name: ボット速度制限の処理
+          href: bots/how-to/rate-limit.md
+    - name: 呼び出しと会議のボット
+      items:
+        - name: 呼び出しと会議のボットの概要
+          href: bots/calls-and-meetings/calls-meetings-bots-overview.md
+        - name: リアルタイムメディアの概念
+          href: bots/calls-and-meetings/real-time-media-concepts.md
+        - name: 呼び出し側のボットの登録
+          href: bots/calls-and-meetings/registering-calling-bot.md
+        - name: 着信通話通知
+          href: bots/calls-and-meetings/call-notifications.md
+        - name: デバッグとローカルテスト
+          href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
+        - name: アプリケーションによりホストされているメディア
+          href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
+- name: タブを使用した組み込みの web エクスペリエンス
+  items:
+    - name: ユーザー設定のタブとは
+      href: tabs/what-are-tabs.md
+    - name: Quickstarts
+      items:
+        - name: Node.js と応答
+          items:
+            - name: '[チャネルとグループの作成] タブ'
+              href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
+            - name: '[個人用] タブを作成する'
+              href: tabs/quickstarts/create-personal-tab-node-yeoman.md
+        - name: 'C#/ASP.NET Core'
+          items:
+            - name: '[チャネルとグループの作成] タブ'
+              href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
+            - name: '[個人用] タブを作成する'
+              href: tabs/quickstarts/create-personal-tab-dotnet-core.md
+        - name: 'C#/ASP.NET MVC'
+          items:
+            - name: '[チャネルとグループの作成] タブ'
+              href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
+            - name: '[個人用] タブを作成する'
+              href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
+    - name: タブを設計する
+      items:
+        - name: 設計の概要
+          href: tabs/design/tabs.md
+        - name: モバイルクライアントのタブ
+          href: tabs/design/tabs-mobile.md
+    - name: 使い方ガイド
+      expanded: true
+      items:
+        - name: アプリにタブを追加する
+          href: tabs/how-to/add-tab.md
+        - name: タブページの作成
+          items:
+            - name: コンテンツページを作成する
+              href: tabs/how-to/create-tab-pages/content-page.md
+            - name: 構成ページを作成する
+              href: tabs/how-to/create-tab-pages/configuration-page.md
+            - name: タブ削除ページを作成する
+              href: tabs/how-to/create-tab-pages/removal-page.md
+        - name: タブに認証を追加する
+          items:
+            - name: 認証フロー
+              href: tabs/how-to/authentication/auth-flow-tab.md
+            - name: Azure AD 認証の使用
+              href: tabs/how-to/authentication/auth-tab-aad.md
+            - name: サイレント認証の使用
+              href: tabs/how-to/authentication/auth-silent-aad.md
+            - name: シングルサインオン認証の使用
+              href: tabs/how-to/authentication/auth-aad-sso.md
+        - name: Teams クライアント SDK の使用
+          href: tabs/how-to/using-teams-client-sdk.md
+        - name: 追加の Teams コンテキストを取得する
+          href: tabs/how-to/access-teams-context.md
+        - name: Microsoft Teams タブの DevTools
+          href: tabs/how-to/developer-tools.md
+        - name: SharePoint にカスタムタブを追加する
+          href: tabs/how-to/tabs-in-sharepoint.md
+        - name: デバイスのアクセス許可の要求
+          href: tabs/how-to/native-device-permissions.md
+- name: タスクモジュールおよびカード
+  items:
+    - name: タスクモジュールとは
+      href: task-modules-and-cards/what-are-task-modules.md
+    - name: カードとは
+      href: task-modules-and-cards/what-are-cards.md
+    - name: Lcc
+      items:
+        - name: 効果的なカードの設計
+          href: task-modules-and-cards/cards/design-effective-cards.md
+        - name: カードテキストの書式設定
+          href: task-modules-and-cards/cards/cards-format.md
+        - name: カードアクションを追加して応答する
+          href: task-modules-and-cards/cards/cards-actions.md
+        - name: カードリファレンス
+          href: task-modules-and-cards/cards/cards-reference.md
+    - name: タスクモジュール
+      items:
+        - name: Bot から
+          href: task-modules-and-cards/task-modules/task-modules-bots.md
+        - name: タブから
+          href: task-modules-and-cards/task-modules/task-modules-tabs.md
+- name: Webhooks とコネクタ
+  items:
+    - name: Web フックとコネクタとは
+      href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
+    - name: 使い方ガイド
+      expanded: true
+      items:
+        - name: 受信 webhook を作成する
+          href: webhooks-and-connectors/how-to/add-incoming-webhook.md
+        - name: 送信 webhook を作成する
+          href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
+        - name: O365 コネクタを作成する
+          href: webhooks-and-connectors/how-to/connectors-creating.md
+        - name: コネクタと Web フックへのメッセージの送信
+          href: webhooks-and-connectors/how-to/connectors-using.md
+- name: リソース
+  items:
+    - name: ボット-v3 SDK
+      href: resources/bot-v3/bots-overview.md
+      items:
+        - name: ボットの作成
+          href: resources/bot-v3/bots-create.md
+        - name: 会話
+          href: resources/bot-v3/bot-conversations/bots-conversations.md
+          items:
+            - name: ボットを使用した個人会話
+              href: resources/bot-v3/bot-conversations/bots-conv-personal.md
+            - name: ボットを使用したチャネルとグループの会話
+              href: resources/bot-v3/bot-conversations/bots-conv-channel.md
+            - name: 会話の開始
+              href: resources/bot-v3/bot-conversations/bots-conv-proactive.md
+        - name: カードおよびカードのアクション
+          href: resources/bot-v3/bots-cards.md
+        - name: メッセージの書式設定
+          href: resources/bot-v3/bots-message-format.md
+        - name: Bot イベント
+          href: resources/bot-v3/bots-notifications.md
+        - name: Bot のコンテキスト
+          href: resources/bot-v3/bots-context.md
+        - name: ファイルの送受信
+          href: resources/bot-v3/bots-files.md
+        - name: 通知のみのボット
+          href: resources/bot-v3/bots-notification-only.md
+        - name: Bot メニュー
+          href: resources/bot-v3/bots-menus.md
+        - name: タブ付きのボット
+          href: resources/bot-v3/bots-with-tabs.md
+        - name: Bot をテストする
+          href: resources/bot-v3/bots-test.md
+    - name: メッセージング拡張機能-v3 SDK
+      href: resources/messaging-extension-v3/messaging-extensions-overview.md
+      items:
+        - name: 検索拡張機能
+          href: resources/messaging-extension-v3/search-extensions.md
+        - name: アクションの拡張機能
+          href: resources/messaging-extension-v3/create-extensions.md
+    - name: 公開開発者プレビュー
+      items:
+        - name: 開発者向けプレビューの概要
+          href: resources/dev-preview/developer-preview-intro.md
+        - name: 開発者プレビューマニフェストスキーマ
+          href: resources/schema/manifest-schema-dev-preview.md
+        - name: 開発者プレビューの機能
+          href: resources/dev-preview/developer-preview-features.md
+    - name: ボットでサポートされているメディア形式
+      href: resources/media-formats.md
+    - name: SameSite cookie 属性 (2020 更新)
+      href: resources/samesite-cookie-update.md
+    - name: マニフェストスキーマ
+      href: resources/schema/manifest-schema.md
+    - name: ローカライズファイル JSON スキーマ
+      href: resources/schema/localization-schema.md
+- name: サポートとフィードバック
+  href: feedback.md

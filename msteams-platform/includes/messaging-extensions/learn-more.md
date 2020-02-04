@@ -1,0 +1,10 @@
+## <a name="learn-more"></a><span data-ttu-id="a235c-101">詳細情報</span><span class="sxs-lookup"><span data-stu-id="a235c-101">Learn more</span></span>
+
+<span data-ttu-id="a235c-102">クイックスタートで試してみる:</span><span class="sxs-lookup"><span data-stu-id="a235c-102">Try it out in a quickstart:</span></span>
+
+* <span data-ttu-id="a235c-103">C のクイックスタート#</span><span class="sxs-lookup"><span data-stu-id="a235c-103">Quickstarts for C#</span></span>
+  * [<span data-ttu-id="a235c-104">アクションベースのコマンドを使用したメッセージング拡張機能</span><span class="sxs-lookup"><span data-stu-id="a235c-104">Messaging extension with action-based commands</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)
+  * [<span data-ttu-id="a235c-105">検索ベースのコマンドを使用したメッセージング拡張機能</span><span class="sxs-lookup"><span data-stu-id="a235c-105">Messaging extension with search-based commands</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)
+* <span data-ttu-id="a235c-106">JavaScript のクイックスタート</span><span class="sxs-lookup"><span data-stu-id="a235c-106">Quickstarts for JavaScript</span></span>
+  * [<span data-ttu-id="a235c-107">アクションベースのコマンドを使用したメッセージング拡張機能</span><span class="sxs-lookup"><span data-stu-id="a235c-107">Messaging extension with action-based commands</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
+  * [<span data-ttu-id="a235c-108">検索ベースのコマンドを使用したメッセージング拡張機能</span><span class="sxs-lookup"><span data-stu-id="a235c-108">Messaging extension with search-based commands</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)

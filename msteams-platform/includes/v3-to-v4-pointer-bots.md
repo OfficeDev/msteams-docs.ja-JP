@@ -1,0 +1,2 @@
+> [!Important]
+> <span data-ttu-id="8798e-101">このセクションの記事は、v3 Bot フレームワーク SDK に基づいています。</span><span class="sxs-lookup"><span data-stu-id="8798e-101">The articles in this section are based on the v3 Bot Framework SDK.</span></span> <span data-ttu-id="8798e-102">現在のドキュメント (バージョン4.6 以降の SDK) をお探しの場合は、「[話し言葉の bot](~/bots/what-are-bots.md) 」セクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="8798e-102">If you're looking for current documentation (version 4.6 or later of the SDK) see the [Conversational Bots](~/bots/what-are-bots.md) section.</span></span>
