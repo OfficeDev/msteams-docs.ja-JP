@@ -3,12 +3,12 @@ title: カードでのテキストの書式設定
 description: Microsoft Teams でのカードテキストの書式設定について説明します。
 keywords: teams の bot カード形式
 ms.date: 03/29/2018
-ms.openlocfilehash: 4a467c5b0b21cc3c19977bf7caa25e6790904b10
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: eb8aa13b9e75d08dadd5e615029a9d418c6c7892
+ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675066"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "41783970"
 ---
 # <a name="card-formatting"></a>カードの書式設定
 
@@ -105,14 +105,16 @@ Android では、アダプティブカードの markdown 書式は次のよう�
     ]
 }
 ```
+
 ## <a name="mention-support-within-adaptive-cards"></a>アダプティブカード内でのサポートを伝えます。 
 
 > [!NOTE]
-> 現在、カードでのサポートは、[開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro)のみでサポートされています。
+> 現在、カードでのサポートは、[開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md)のみでサポートされています。
 
 ボットおよびメッセージング拡張機能は、テキストブロックと FactSet 要素のカードコンテンツ内にメンションを含めることができるようになりました。 
 
 ### <a name="constructing-mentions"></a>メンションの構築
+
 アダプティブカードにメンションを含めるには、アプリに次の要素を含める必要があります。
 
 * `<at>username</at>`サポートされているアダプティブカード要素
@@ -121,6 +123,7 @@ Android では、アダプティブカードの markdown 書式は次のよう�
 この時点では、メンション付きのカードはモバイルクライアントではサポートされていません。
 
 ### <a name="sample-adaptive-card-with-a-mention"></a>アダプティブカードのサンプル
+
 ``` json
 {
   "contentType": "application/vnd.microsoft.card.adaptive",
@@ -158,7 +161,7 @@ Android では、アダプティブカードの markdown 書式は次のよう�
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| ヘッダー (レベル 1&ndash;3) | **テキスト** | `<h3>Text</h3>` |
+| ヘッダー (レベル 1&ndash;3) | **Text** | `<h3>Text</h3>` |
 | 打ち消し | ~~text~~ | `<strike>text</strike>` |
 | 順序なしリスト | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 順序付きリスト | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -246,7 +249,7 @@ Android では、HTML 形式は次のようになります。
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| ヘッダー (レベル 1&ndash;3) | **テキスト** | `### Text`|
+| ヘッダー (レベル 1&ndash;3) | **Text** | `### Text`|
 | 打ち消し | ~~text~~ | `~~text~~` |
 | 順序なしリスト | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | 順序付きリスト | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -331,7 +334,7 @@ Android では、markdown のコネクタカードの書式設定は次のよう
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| ヘッダー (レベル 1&ndash;3) | **テキスト** | `<h3>Text</h3>` |
+| ヘッダー (レベル 1&ndash;3) | **Text** | `<h3>Text</h3>` |
 | 打ち消し | ~~text~~ | `<strike>text</strike>` |
 | 順序なしリスト | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 順序付きリスト | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
