@@ -3,12 +3,12 @@ title: コネクタと Webhook にメッセージを送信する
 description: Microsoft Teams で Office 365 コネクタを使用する方法について説明します。
 localization_priority: Priority
 keywords: Teams o365 コネクタ
-ms.openlocfilehash: cf720bb8193c6b61ba37e8d89fafc044555222ac
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: b22159002713ccec6441f2128190e9944945aff6
+ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675057"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "41783914"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>コネクタと Webhook にメッセージを送信する
 
@@ -230,14 +230,15 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
 
 ## <a name="rate-limiting-for-connectors"></a>コネクタのレート制限
 
-この制限は、コネクタまたは着信 Webhook がチャネルで発生させることが許可されているトラフィックを制御します。
+この制限は、コネクタまたは着信 webhook がチャネルで発生させることが許可されているトラフィックを制御します。 webhook またはコネクタからの要求は、レート制限しきい値を超えると調整されます。 調整動作の時間の長さは、超過した要求レート パラメーターと直接相関しています。 たとえば、コネクタまたは webhook が 3600 秒以内に 100 件のメッセージ要求を超える場合、コネクタは次の 3600 秒の間調整されます。
 
 | 期間 (秒)  | 許可されるメッセージ要求の最大数  |
 |---|---|
 | 1   | 4  |  
 | 30   | 60  |  
-| 3600  | 100  | 
+| 3600 (1 時間)  | 100  | 
 | 7200 | 150  | 
+| 86400 (1 日) | 1800  | 
 
 次のような[指数バックオフを使用した再試行ロジック](/azure/architecture/patterns/retry)は、要求が 1 秒以内に制限を超えてしまうケースで、レート制限を緩和します。 レート制限に達しないよう、「[ベスト プラクティス](../../bots/how-to/rate-limit.md#best-practices)」に従ってください。
 
