@@ -2,16 +2,16 @@
 title: Office 365 テナントの準備
 description: Office 365 で Teams の使用を開始する方法
 keywords: Office 365 テナントチームのアップロードを構成する
-ms.openlocfilehash: 62cd640196631f50c72762253ff1bd75a143337d
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 634392ea3f0228aef69ff920d3b369eb49dd3965
+ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674988"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41953496"
 ---
 # <a name="prepare-your-office-365-tenant"></a>Office 365 テナントの準備
 
-Microsoft Teams 用のアプリを開発するには、[次のいずれかのプランを使用して Office 365 お客様](https://products.office.com/business/compare-more-office-365-for-business-plans)になる必要があります。
+Office 365 サブスクライバーの場合は、次のいずれかの[プラン](https://products.office.com/business/compare-more-office-365-for-business-plans)を使用して Microsoft Teams 用アプリを開発できます。
 
 * Business Essentials
 * Business Premium
@@ -19,24 +19,25 @@ Microsoft Teams 用のアプリを開発するには、[次のいずれかのプ
 * Developer
 * 教育、教育プラス、教育の E5
 
-また、廃棄の前に E4 を購入したお客様も、Microsoft Teams を利用することができます。
+また、[退職](https://support.office.com//article/important-information-for-office-365-enterprise-e4-customers-f9572348-43a2-43fa-a3d8-3b6c9c042147)前に、E4 をサブスクライブしたお客様も、Microsoft Teams を利用することができます。
 
 ## <a name="just-need-a-development-environment"></a>開発環境のみが必要ですか。
 
-現在 Office 365 アカウントを持っていない場合は、office [365 開発者プログラム](https://dev.office.com/devprogram)にサインアップして、*無料*の90日間を取得できます (開発アクティビティに使用している間は更新できます) office 365 developer テナント。 このアカウントは、テスト目的にのみ使用できます。 [テストアカウントの](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec?ui=en-US&rs=en-US&ad=US)セットアップの詳細については、「」を参照してください。
+現在 Office 365 アカウントを持っていない場合は、 [office 365 Developer Program](https://dev.office.com/devprogram)サブスクリプションにサインアップできます。 これは90日間*無料*で、開発アクティビティに使用している間は継続的に更新されます。 Visual Studio *Enterprise*または*Professional*サブスクリプションを所有している場合は、両方のプログラムに無料の Office 365[開発者サブスクリプション](https://aka.ms/MyVisualStudioBenefits)が含まれています。これは、visual studio サブスクリプションの有効期間中にアクティブになります。 *「* [Microsoft 365 developer サブスクリプションをセットアップする」を](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started)参照してください。
 
 ## <a name="enable-microsoft-teams-for-your-organization"></a>組織に対して Microsoft Teams を有効にする
 
-Microsoft Teams が組織でまだ有効になっていない場合は、最初にその作業を行う必要があります。 [組織で Teams を有効](/microsoftteams/how-to-roll-out-teams)にするための詳細なガイダンスを参照してください。
+Microsoft Teams が組織に対して有効になっていない場合は、最初にその作業を行う必要があります。 [組織で Teams を有効](https://docs.microsoft.com/microsoftteams/enable-features-office-365)にするための詳細なガイダンスを参照してください。
 
 ## <a name="enable-custom-teams-apps-and-turn-on-custom-app-uploading"></a>カスタム Teams アプリを有効にし、カスタムアプリのアップロードをオンにする
 
-> 注: O365 開発者組織を使用してアプリを構築している場合は、アプリのビルド、アップロード、およびテストができるように、これらの設定を構成しておく必要があります。
+> [!Note] 
+> Office 365 developer platform を使用してアプリをビルドしている場合は、アプリのビルド、アップロード、およびテストができるように、これらの設定を構成しておく必要があります。
 
 カスタムアプリとカスタムアプリのアップロードを有効にするには、次の3つの設定が関係します。
 
-* 組織**全体のカスタムアプリ設定**-この設定は、組織のカスタムアプリを有効または無効にします。 これをオンにする必要があります。 
-* [ **Team custom app setting** ]-この設定は、Microsoft Teams 内の個々のチームに対して使用されます。 特定のチームに対してアプリをインストールする場合は、そのチームに対してこれをオンにする必要があります。
-* **User custom app policy** -この設定セットは、個々のユーザーのアクセス許可を制御します。 カスタムアプリをアップロードする個人に対して、これを有効にする必要があります。
+* **組織全体のカスタムアプリ設定** => **で**カスタム => **アプリを使用することができ**ます—この設定では、組織のカスタムアプリを有効または無効にできます。 これをオンにする必要があります。 
+* **チームカスタムアプリ設定** => を使用すると、**メンバーがカスタムアプリ** => **のオン/オフ**をアップロードできるようになります。この設定は、Microsoft Teams 内の個々のチームに適用されます。 特定のチームに対してアプリをインストールする場合は、そのチームに対してこれをオンにする必要があります。
+* **User custom app policy** => **user はカスタムアプリ** => **をオン/オフに**することができます。この設定により、個々のユーザーのアクセス許可が制御されます。 これは、カスタムアプリのアップロードが許可されている個人に対して有効にする必要があります。
 
-これらの設定の相互関係の詳細については[、「Microsoft Teams でカスタムアプリポリシーと設定を管理](/MicrosoftTeams/teams-custom-app-policies-and-settings)する」を参照してください。
+これらの設定がどのように影響するかの詳細については、「 [Microsoft teams でカスタムアプリポリシーと設定を管理](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings)する」および「 [microsoft teams でアプリのセットアップポリシーを管理](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies)する *」を参照してください*。

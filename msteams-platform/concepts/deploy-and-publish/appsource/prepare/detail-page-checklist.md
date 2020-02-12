@@ -2,12 +2,12 @@
 title: 高度なアプリの詳細ページを作成する
 description: アプリの詳細ページに必要なものを説明します。
 keywords: teams 発行ストアの office 発行ポリシー AppSource コンテンツ
-ms.openlocfilehash: 4a98cca7b1ddd87d79e38d863fd3868171b7749e
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: a7ccacb89e330e55db986595d083790d07e46a53
+ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674720"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41953517"
 ---
 # <a name="build-a-great-app-details-page"></a>高度なアプリの詳細ページを作成する
 
@@ -41,7 +41,7 @@ ms.locfileid: "41674720"
 
 ## <a name="outline-icon"></a>アウトラインアイコン
 
-これは、ユーザーおよび左側のナビゲーションメニューでお気に入りとしてマークされたメッセージング拡張機能で使用されます。 シンプルで認識可能であることを確認してください。
+これは、ユーザーおよび左側のナビゲーションメニューでお気に入りとしてマークされたメッセージング拡張機能で使用されます。 シンプルで認識可能であることを確認してください。 アウトラインアイコンには、白と透明度のみが含まれている必要があります (その他の色は使用できません)。 必要な仕様については、「 [Microsoft Teams アプリアイコン用のアプリパッケージを作成する](../../../build-and-test/apps-package.md#icons) *」を参照してください*。
 
 ![アプリアイコンアウトラインストアビュー](~/assets/images/store-detail-page/AppIconOutline-02.png)
 ![アプリのアイコンのアウトラインを表示する (appstudio)](~/assets/images/store-detail-page/AppIconOutline-01.png)
