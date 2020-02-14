@@ -3,12 +3,12 @@ title: コネクタと Webhook にメッセージを送信する
 description: Microsoft Teams で Office 365 コネクタを使用する方法について説明します。
 localization_priority: Priority
 keywords: Teams o365 コネクタ
-ms.openlocfilehash: b22159002713ccec6441f2128190e9944945aff6
-ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
+ms.openlocfilehash: 56ef6adc7731eadc0a799f489867d8e056248e03
+ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "41783914"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "41953468"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>コネクタと Webhook にメッセージを送信する
 
@@ -215,7 +215,7 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
 }
 ```
 
-## <a name="testing-your-connector"></a>コネクタのテスト
+## <a name="testing-your-connector"></a>コネクタをテストする
 
 コネクタをテストするには、他のアプリと同じ方法でコネクタをチームにアップロードします。 (前のセクションの指示に従って変更された) コネクタ開発者ダッシュボードからのマニフェスト ファイルと 2 つのアイコン ファイルを使用して .zip パッケージを作成できます。
 
@@ -227,18 +227,21 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
 
 `HttpPOST` アクションが正常に動作していることを確認するには、[カスタム着信 Webhook](#setting-up-a-custom-incoming-webhook) を使用します。
 
-
 ## <a name="rate-limiting-for-connectors"></a>コネクタのレート制限
 
-この制限は、コネクタまたは着信 webhook がチャネルで発生させることが許可されているトラフィックを制御します。 webhook またはコネクタからの要求は、レート制限しきい値を超えると調整されます。 調整動作の時間の長さは、超過した要求レート パラメーターと直接相関しています。 たとえば、コネクタまたは webhook が 3600 秒以内に 100 件のメッセージ要求を超える場合、コネクタは次の 3600 秒の間調整されます。
+アプリケーション レートの制限は、コネクタまたは着信 Webhook がチャネルで発生させることが許可されているトラフィックを制御します。 Teams は、固定レート ウィンドウと増分カウンター (秒単位で測定) を使用して、要求を追跡します。  要求が多すぎる場合は、ウィンドウが更新されるまで (つまり固定レートの期間中)、クライアント接続が制限されます。
 
-| 期間 (秒)  | 許可されるメッセージ要求の最大数  |
+### <a name="transactions-per-second-thresholds"></a>**1 秒あたりのトランザクションのしきい値**
+
+| 時間 (秒)  | 許可される最大要求数  |
 |---|---|
 | 1   | 4  |  
 | 30   | 60  |  
-| 3600 (1 時間)  | 100  | 
-| 7200 | 150  | 
-| 86400 (1 日) | 1800  | 
+| 3600   | 100  |
+| 7200 | 150  |
+| 86400  | 1800  |
+
+「[Office 365 コネクタ — Microsoft Teams](https://docs.microsoft.com/connectors/teams/)」*も参照*
 
 次のような[指数バックオフを使用した再試行ロジック](/azure/architecture/patterns/retry)は、要求が 1 秒以内に制限を超えてしまうケースで、レート制限を緩和します。 レート制限に達しないよう、「[ベスト プラクティス](../../bots/how-to/rate-limit.md#best-practices)」に従ってください。
 
