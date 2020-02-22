@@ -3,12 +3,12 @@ title: Bot のコンテキストを取得する
 description: Microsoft Teams でボットのコンテキストを取得する方法について説明します。
 keywords: teams の bot コンテキスト
 ms.date: 05/20/2019
-ms.openlocfilehash: 2dea6fd51e7274fa899d9ae882441a21618d7e09
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 8f054661664850ffb843714230e209c8e4737f0a
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675110"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228003"
 ---
 # <a name="get-context-for-your-microsoft-teams-bot"></a>Microsoft Teams の bot のコンテキストを取得する
 
@@ -17,7 +17,7 @@ ms.locfileid: "41675110"
 Bot は、ユーザープロファイルなどのチームまたはチャットに関する追加のコンテキストにアクセスできます。 この情報は、ボットの機能を強化し、よりパーソナライズされた環境を提供するために使用できます。
 
 > [!NOTE]
-> これらの Microsoft&ndash;Teams 固有の bot api には、BOT ビルダー SDK の拡張機能を通じてアクセスすることをお勧めします。 C#/.NET については、「 [Microsoft の Bot](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet パッケージをダウンロードしてください。 Node.js を開発する場合は、 [botbuilder](https://www.npmjs.com/package/botbuilder-teams)の npm パッケージをインストールできます。 両方の Sdk がターゲットボットビルダー v3。
+> これらの Microsoft&ndash;Teams 固有の bot api には、BOT ビルダー SDK の拡張機能を通じてアクセスすることをお勧めします。 C#/.NET については、「 [Microsoft の Bot](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet パッケージをダウンロードしてください。 Node.js の開発では、Microsoft Teams の BotBuilder の機能が、v2.0 [FRAMEWORK SDK](https://github.com/microsoft/botframework-sdk) in v2.0 に組み込まれています。
 
 ## <a name="fetching-the-team-roster"></a>チーム名簿を取得する
 
@@ -90,8 +90,6 @@ await context.PostAsync($"People in this conversation: {sb.ToString()}");
 
 ### <a name="nodejstypescript-example"></a>Node.js/TypeScript の例
 
-次の例では、 [node.js の Bot ビルダー SDK の Microsoft Teams 拡張機能](https://www.npmjs.com/package/botbuilder-teams)を使用しています。
-
 ```typescript
 
 [...]
@@ -112,6 +110,8 @@ connector.fetchMembers(
   }
 );
 ```
+
+[Bot フレームワークサンプル](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)*も参照してください*。
 
 ## <a name="fetching-user-profile-or-roster-in-personal-or-group-chat"></a>個人またはグループチャットでのユーザープロファイルまたは名簿の取得
 

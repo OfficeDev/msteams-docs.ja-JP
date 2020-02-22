@@ -2,12 +2,12 @@
 title: Microsoft Teams 用のごみ箱のジェネレーターを使い始める
 description: Microsoft Teams 用のごみ箱のジェネレーターでのすぐれたアプリの構築を開始する
 keywords: js ノード js の概要
-ms.openlocfilehash: b0a9ae8d526286790d266e4291ef95d4ed7ce90f
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 6318b51c29c673b0bf3504218100cf0d7aad7b97
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674809"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228088"
 ---
 # <a name="build-your-first-microsoft-teams-app"></a>最初の Microsoft Teams アプリを構築する
 
@@ -118,7 +118,7 @@ npm install generator-teams@preview --global
 
 Microsoft Teams では、アプリを localhost でホストすることはできません。したがって、公開 URL に公開するか、ngrok などのプロキシを使用する必要があります。
 
-朗報として、スキャフォールディングプロジェクトにはこの組み込みがあります。 Ngrok サービスを`gulp ngrok-serve`実行すると、バックグラウンドで、非 qiue-v とパブリック DNS エントリが開始され、その一意の URL を持つマニフェストがパッケージ化され、と`gulp serve`まったく同じことを行います。
+朗報として、スキャフォールディングプロジェクトにはこの組み込みがあります。 を実行`gulp ngrok-serve`すると、ngrok サービスはバックグラウンドで開始され、一意の DNS エントリとパブリック DNS エントリが作成されます。さらに、この一意の URL を使用して`gulp serve`マニフェストをパッケージ化して、とまったく同じことを行います。
 
 を実行`gulp ngrok-serve`した後、新しい Microsoft Teams チームを作成して作成したら、チーム名をクリックして、Teams の設定に移動し、[*アプリ*] を選択します。 右下隅に [*カスタムアプリをアップロード*する] というリンクが表示されたら、それを選択して、という名前`package`のプロジェクトフォルダーとサブフォルダーを参照します。 そのフォルダー内の zip ファイルを選択し、[開く] を選択します。 これで、アプリが Microsoft Teams にサイドロードされました。
 

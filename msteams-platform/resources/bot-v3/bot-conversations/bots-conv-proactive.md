@@ -2,12 +2,12 @@
 title: 事前メッセージ
 description: Bot が Microsoft Teams で会話を開始できることについて説明します。
 keywords: teams シナリオの予防的なメッセージング会話 bot
-ms.openlocfilehash: c5c779b7ec5733b19366ae73053ef7d45ca6c1d6
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 2f644820da33acc885a7972b13a1f61c167d6d8f
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674676"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228067"
 ---
 # <a name="proactive-messaging-for-bots"></a>Bot のための事前のメッセージング
 
@@ -130,8 +130,6 @@ await client.Conversations.SendToConversationAsync(newActivity, response.Id);
 
 ### <a name="using-nodejs"></a>Node.js の使用
 
-この例では、 [botbuilder と](https://www.npmjs.com/package/botbuilder-teams)いう npm パッケージを使用します。
-
 ```javascript
 var address =
 {
@@ -156,13 +154,15 @@ msg.text('Hello, this is a notification');
 bot.send(msg);
 ```
 
+[Bot フレームワークサンプル](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)*も参照してください*。
+
 ## <a name="creating-a-channel-conversation"></a>チャネル会話の作成
 
 チームが追加した bot は、チャネルに投稿して新しい返信チェーンを作成できます。 Node.js Teams SDK を使用している場合は、を`startReplyChain()`使用して、適切なアクティビティ id と会話 id を持つ完全に入力されたアドレスを付与します。C# を使用している場合は、次の例を参照してください。
 
 または、REST API を使用して、POST 要求を resource [`/conversations`](https://docs.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation)に発行することもできます。
 
-### <a name="net-example-from-this-samplehttpsgithubcomofficedevmicrosoft-teams-sample-complete-csharpblob32c39268d60078ef54f21fb3c6f42d122b97da22template-bot-master-csharpsrcdialogsexamplesteamsproactivemsgto1to1dialogcs"></a>.NET の例 ([このサンプル](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs)から)
+### <a name="net-example-from-this-sample"></a>.NET の例 ([このサンプル](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs)から)
 
 ```csharp
 using Microsoft.Bot.Builder.Dialogs;

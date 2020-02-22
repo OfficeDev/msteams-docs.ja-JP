@@ -2,12 +2,12 @@
 title: メッセージング拡張機能を使用したアクションの開始
 description: アクションベースのメッセージング拡張機能を作成して、ユーザーが外部サービスを起動できるようにする
 keywords: teams メッセージング拡張メッセージング拡張検索
-ms.openlocfilehash: 9b7d3bd53ba45d55e80f858a3c89be265c13482b
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 1a38b4f7bfb413defd28950ca9b97f7411cf9c09
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674914"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228032"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>メッセージング拡張機能を使用したアクションの開始
 
@@ -496,9 +496,7 @@ Bot は、ユーザーの入力を受け取る前に、ユーザーが拡張機�
 
 `edit`要求に応答する場合は、ユーザーが既`task`に送信した情報で値が入力された応答と共に応答を返す必要があります。 `send`要求に応答する場合は、ファイナライズされたアダプティブカードを含むチャネルにメッセージを送信する必要があります。
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node.js](#tab/typescript)
-
-次の例は、 [Node.js Teams Bot ビルダー SDK](https://www.npmjs.com/package/botbuilder-teams)を使用してこれを行う方法を示しています。
+# <a name="typescriptnodejs"></a>[TypeScript/node.js](#tab/typescript)
 
 ```typescript
 teamChatConnector.onComposeExtensionSubmitAction((
@@ -558,7 +556,9 @@ teamChatConnector.onComposeExtensionSubmitAction((
     });
 ```
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+[Bot フレームワークサンプル](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)*も参照してください*。
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 このサンプルでは、このフローを示します。このフローは、 [TEAMS SDK (v3)](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)を使用しています。
 

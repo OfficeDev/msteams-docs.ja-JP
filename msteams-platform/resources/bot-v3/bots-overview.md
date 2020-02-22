@@ -3,12 +3,12 @@ title: Microsoft Teams アプリにボットを追加する
 description: Microsoft Teams でボットの開発を始める方法について説明します。
 keywords: teams のボット開発
 ms.date: 05/20/2018
-ms.openlocfilehash: 0ecb268c34275e958103c9905b2ed1f0858cafda
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 58221e94520ef6e748bbd6c17fa7933813874c56
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674659"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228053"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>Microsoft Teams アプリにボットを追加する
 
@@ -42,9 +42,9 @@ Microsoft Teams は、 [Microsoft Bot フレームワーク](https://dev.botfram
 
 SDK 拡張機能は、Bot ビルダー SDK を含む依存関係をインストールします。
 
-* **.Net**Bot ビルダー SDK for .NET の Microsoft Teams 拡張機能を使用するには、Visual Studio プロジェクトに、 [teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet パッケージをインストールします。
-* **Node.js**を使用して、Node.js のボット Builder SDK の Microsoft Teams 拡張機能を使用するには、 [botbuilder](https://www.npmjs.com/package/botbuilder-teams) npm パッケージを追加します。
-* **ソースコード**拡張機能の完全なソースコードについては、Github の「 [BotBuilder-Microsoft teams](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams)リポジトリ」を参照してください。
+* **.Net**Bot ビルダー SDK for .NET の Microsoft Teams 拡張機能を使用するには、Visual Studio プロジェクトに、 [teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet パッケージをインストールします。 Node.js の開発では、Microsoft Teams の BotBuilder の機能が、v2.0 [FRAMEWORK SDK](https://github.com/microsoft/botframework-sdk) in v2.0 に組み込まれています。
+
+[Bot フレームワークサンプル](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)*も参照してください*。
 
 > [!IMPORTANT]
 > 他の web プログラミングテクノロジで Teams アプリを開発し、 [Bot フレームワーク REST api](/bot-framework/rest-api/bot-framework-rest-overview)を直接呼び出すことができますが、すべてのトークン処理を自分自身で実行する必要があります。

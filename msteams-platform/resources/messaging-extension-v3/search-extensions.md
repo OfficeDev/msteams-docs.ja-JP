@@ -2,13 +2,13 @@
 title: メッセージング拡張機能を使用した検索
 description: 検索ベースのメッセージング拡張機能を開発する方法について説明します。
 keywords: teams メッセージング拡張メッセージング拡張検索
-ms.date: 05/20/2019
-ms.openlocfilehash: 7baf55d7184784a436ac5a3d6b82db233389bca7
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.date: 07/20/2019
+ms.openlocfilehash: c220d976fa3e9920c8d4bb332a793b23d9b294c4
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674911"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228046"
 ---
 # <a name="search-with-messaging-extensions"></a>メッセージング拡張機能を使用した検索
 
@@ -135,7 +135,7 @@ ms.locfileid: "41674911"
 |`channelData.tenant.id`| Azure Active Directory テナント ID。 |
 |`channelData.channel.id`| チャネル ID (チャネルで要求が行われた場合)。 |
 |`channelData.team.id`| チーム ID (チャネルで要求が行われた場合)。 |
-|`clientInfo`エンティティ | クライアントに関する追加のメタデータ (ロケール/言語、クライアントの種類など)。 |
+|`clientInfo`|ユーザーのメッセージの送信に使用されるクライアントソフトウェアに関するオプションのメタデータ。 エンティティには、次の2つのプロパティを含めることができます。<br>この`country`フィールドには、ユーザーが検出した場所が含まれています。<br>この`platform`フィールドには、メッセージングクライアントプラットフォームが記述されています。 <br>その他の情報については、 *「* [IRI 以外のエンティティの種類– clientinfo](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo)」を参照してください。|
 
 要求パラメーター自体は、次のプロパティを含む value オブジェクトにあります。
 
@@ -183,11 +183,9 @@ ms.locfileid: "41674911"
   },
   "entities": [
     {
-      "locale": "en-US",
+    "type": "clientInfo",
       "country": "US",
-      "platform": "Windows",
-      "timezone": "America/Los_Angeles",
-      "type": "clientInfo"
+      "platform": "Windows"
     }
   ]
 }
@@ -524,10 +522,10 @@ Microsoft Teams 内部で実行されている他の組み込みエクスペリ�
     "timestamp": "2017-04-26T05:18:25.629Z",
     "localTimestamp": "2017-04-25T22:18:25.629-07:00",
     "entities": [{
-        "locale": "en-US",
+        "type": "clientInfo",
         "country": "US",
         "platform": "Web",
-        "type": "clientInfo"
+        
     }],
     "text": "",
     "attachments": [],
@@ -602,8 +600,6 @@ public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
 
 ### <a name="nodejs"></a>Node.js
 
-Node.js のボット Builder SDK の[Teams 拡張機能](https://www.npmjs.com/package/botbuilder-teams)には、メッセージング拡張要求の受信、処理、応答を簡略化するヘルパーオブジェクトとメソッドが用意されています。
-
 #### <a name="example-code-in-nodejs"></a>Node.js のコード例
 
 ```javascript
@@ -659,3 +655,4 @@ class App {
 const app = new App();
 app.run();
 ```
+[Bot フレームワークサンプル](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)*も参照してください*。

@@ -3,12 +3,12 @@ title: ボットを使用したチャネルとグループチャットの会話
 description: Microsoft Teams のチャネルで bot との会話を行うエンドツーエンドのシナリオについて説明します。
 keywords: teams シナリオチャネル会話 bot
 ms.date: 06/25/2019
-ms.openlocfilehash: 168abd1e3894b95983eec01541d470f1b5384a66
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: d2d72bdba43de6ebb10c7504dd309459cb09d56c
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674677"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228004"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Microsoft Teams bot によるチャネルおよびグループチャットの会話
 
@@ -136,8 +136,6 @@ await client.Conversations.ReplyToActivityAsync(replyActivity);
 
 #### <a name="nodejs-example"></a>Node.js の例
 
-このサンプルでは、 [botbuilder](https://www.npmjs.com/package/botbuilder-teams)の npm パッケージを使用します。
-
 ```javascript
 // User to mention
 var toMention: builder.IIdentity = {
@@ -199,3 +197,5 @@ session.send(generalMessage);
 ## <a name="accessing-groupchat-or-channel-scope"></a>GroupChat またはチャネルスコープへのアクセス
 
 Bot は、グループと teams でメッセージを送受信することができます。 たとえば、プロファイル情報やチャネルの一覧を含む、メンバーの一覧を取得することもできます。 詳細については[、「Microsoft Teams の bot のコンテキストを取得](~/resources/bot-v3/bots-context.md)する」を参照してください。
+
+[Bot フレームワークサンプル](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)*も参照してください*。

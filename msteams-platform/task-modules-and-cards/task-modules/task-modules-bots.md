@@ -2,12 +2,12 @@
 title: Microsoft Teams の bot のタスクモジュールを使用する
 description: Bot フレームワークカード、アダプティブカード、ディープリンクなど、Microsoft Teams の bot でタスクモジュールを使用する方法について説明します。
 keywords: タスクモジュール teams の bot
-ms.openlocfilehash: 3a0e4591dbb26ff4afa8cc06edc0a03365da0eca
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 09b0ede85c613d5724c6ecddbccd2a59c43cad74
+ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674825"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "42228095"
 ---
 # <a name="using-task-modules-from-microsoft-teams-bots"></a>Microsoft Teams のボットからのタスクモジュールの使用
 
@@ -76,8 +76,6 @@ ms.locfileid: "41674825"
 | `value`  | 開発者が定義したペイロード。 通常、 `value`オブジェクトの構造は Teams から送信されたものを反映します。 ただし`task/fetch`、この場合は、bot フレームワーク (`value`) とアダプティブカード`Action.Submit`アクション (`data`) の両方から動的な fetch () をサポートし、に`context` `value` / `data`含まれていたものに加えて Teams を bot に伝達する方法が必要になります。<br/><br/>これを行うには、2つを親オブジェクトに結合します。<br/><br/><pre>{<br/>  "context": {<br/>    "theme": "default" &vert; "dark" &vert; "contrast",<br/>  },<br/>  "data": [value field from Bot Framework card] &vert; [data field from Adaptive Card] <br/>}</pre>  |
 
 ## <a name="example-receiving-and-responding-to-taskfetch-and-tasksubmit-invoke-messages---nodejs"></a>例: タスク/フェッチおよびタスク/送信呼び出しメッセージの受信と応答-node.js
-
-Bot フレームワーク`invoke`でのメッセージの処理は、BOT フレームワーク SDK では正式にサポートされていないため、少し厄介になることがあります。 これを簡単にするために、 `onInvoke()`チームは botbuilder npm パッケージでヘルパー関数を作成しました[(node.js の場合)](https://www.npmjs.com/package/botbuilder-teams)。 次の例は、その方法を示しています。
 
 > [!NOTE]
 > 次に示すサンプルコードは、この機能の Technical Preview と最終リリースの間で変更さ`task/fetch`れました。要求のスキーマは、[前のセクションで説明](#payload-of-taskfetch-and-tasksubmit-messages)した内容に従って変更されました。 つまり、ドキュメントは修正されましたが、実装はできませんでした。 変更点`// for Technical Preview [...]`については、次のコメントを参照してください。
@@ -159,6 +157,8 @@ private async onInvoke(event: builder.IEvent, cb: (err: Error, body: any, status
     }
 }
 ```
+
+*詳細について*は、「 [Microsoft Teams のタスクモジュールサンプルコード」、「nodejs](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts) 」および「 [Bot フレームワークサンプル](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)」を参照してください。
 
 ## <a name="example-receiving-and-responding-to-taskfetch-and-tasksubmit-invoke-messages---c"></a>例: タスク/フェッチおよびタスク/送信呼び出しメッセージを受信して応答する-C#
 
