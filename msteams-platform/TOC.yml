@@ -369,5 +369,7 @@
       href: resources/schema/manifest-schema.md
     - name: ローカライズファイル JSON スキーマ
       href: resources/schema/localization-schema.md
+    - name: Teams 共同作成者ガイド
+      href: resources/teams-contributor-reference.md
 - name: サポートとフィードバック
   href: feedback.md
