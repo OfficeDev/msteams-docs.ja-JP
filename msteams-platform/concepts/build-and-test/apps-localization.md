@@ -3,12 +3,12 @@ title: チームアプリのローカライズ
 description: アプリのローカライズに関する問題について説明します。
 keywords: teams 発行ストア office 発行アプリソースのローカライズ言語
 ms.date: 05/15/2018
-ms.openlocfilehash: b09f33e53303587e81b445c012de92b11dd90580
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 0affa61ee1967a0e1bc19e423f05049bad750ce7
+ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674742"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "42279762"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>Microsoft Teams アプリのローカライズ
 
@@ -66,7 +66,7 @@ Microsoft Teams アプリをローカライズする場合は、考慮する必�
 }
 ```
 
-マニフェスト内のすべてのユーザーが接続した文字列の翻訳を含む、追加の json ファイルを提供できます。 これらのファイルは、[ローカライズファイル JSON スキーマ](~/resources/schema/localization-schema.md)に準拠している必要があり、マニフェストの ' localizationInfo ' プロパティに追加されている必要があります。 各ファイルは、Teams クライアントが適切な文字列を選択するために使用する言語タグに関連付けています。 言語タグ<language> - <region>はの形式を取りますが、目的の言語を<region>サポートするすべての地域を対象とした部分を省略することをお勧めします。
+マニフェスト内のすべてのユーザーが接続した文字列の翻訳を含む、追加の json ファイルを提供できます。 これらのファイルは、[ローカライズファイル JSON スキーマ](../../resources/schema/localization-schema.md)に準拠している必要があり、マニフェストの ' localizationInfo ' プロパティに追加されている必要があります。 各ファイルは、Teams クライアントが適切な文字列を選択するために使用する言語タグに関連付けています。 言語タグ<language> - <region>はの形式を取りますが、目的の言語を<region>サポートするすべての地域を対象とした部分を省略することをお勧めします。
 
 Teams クライアントは、次の順序で文字列を適用します。 default language strings-> user's language only 文字列-> ユーザーの言語 + ユーザーの地域文字列。
 

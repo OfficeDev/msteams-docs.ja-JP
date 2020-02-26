@@ -3,30 +3,32 @@ title: カードでのテキストの書式設定
 description: Microsoft Teams でのカードテキストの書式設定について説明します。
 keywords: teams の bot カード形式
 ms.date: 03/29/2018
-ms.openlocfilehash: eb8aa13b9e75d08dadd5e615029a9d418c6c7892
-ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
+ms.openlocfilehash: 21adabe35011ba77d888165b9be7a544284cb1a3
+ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "41783970"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "42279782"
 ---
-# <a name="card-formatting"></a>カードの書式設定
+# <a name="format-cards-in-teams"></a>Teams の書式設定カード
 
-カードの種類に応じて、markdown または HTML のどちらかを使用して、リッチテキスト形式をカードに追加できます。
+カードの種類に応じて、Markdown または HTML のどちらかを使用して、リッチテキスト形式をカードに追加できます。
 
 カードは、title または副題のプロパティではなく、text プロパティのみの書式設定をサポートしています。 書式は、カードの種類に応じて、XML (HTML) 形式のサブセットまたは Markdown を使用して指定できます。 Markdown の書式設定を使用して、現在の amd の将来の展開用のアダプティブカードをお勧めします。
 
 カードの種類に応じて書式設定のサポートが異なります。また、カードのレンダリングはデスクトップとモバイルチームの両方のクライアントとデスクトップブラウザーの Teams で少しずつ異なります。
 
-## <a name="card-types"></a>カードの種類
+任意の Teams カードを含むインライン画像を含めることができます。 画像は、 `.png` `.jpg`、または`.gif`のファイルとして書式設定され、1024× 1024 px または 1 MB を超えることはできません。 アニメーション GIF は正式にはサポートされていません。 ** [カードリファレンス](./cards-reference.md#inline-card-images)を参照
 
-Teams で Markdown をサポートするカードには、次の3種類があります。
+## <a name="formatting-cards-with-markdown"></a>Markdown を使用したカードの書式設定
 
-* **アダプティブカード**: Markdown は、 `Textblock` `Fact.Title`および`Fact.Value`と同様に、アダプティブカードフィールドでサポートされています。 HTML は、アダプティブカードではサポートされていません。
-* **O365 コネクタカード**: Markdown および制限付き HTML は、テキストフィールドの Office 365 コネクタカードでサポートされています。
-* **シンプルなカード**: 制限付き HTML がサポートされていますが、markdown は単純なカードではサポートされていません。
+Teams で Markdown をサポートするカードには、次の2つの種類があります。
 
-## <a name="markdown-formatting-for-adaptive-cards"></a>アダプティブカードの Markdown の書式設定
+> [!div class="checklist"]
+> * **アダプティブカード**: Markdown は、 `Textblock` `Fact.Title`および`Fact.Value`と同様に、アダプティブカードフィールドでサポートされています。 HTML は、アダプティブカードではサポートされていません。
+> * **O365 コネクタカード**: Markdown および制限付き HTML は、テキストフィールドの Office 365 コネクタカードでサポートされています。
+
+# <a name="markdown-formatting-adaptive-cards"></a>[**Markdown の書式設定: アダプティブカード**](#tab/adaptive-md)
 
  と`Textblock` `Fact.Value`で`Fact.Title`サポートされているスタイルは、次のとおりです。
 
@@ -38,7 +40,7 @@ Teams で Markdown をサポートするカードには、次の3種類があり
 | 順序付きリスト | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
 | Hyperlinks |[Bing](https://www.bing.com/)| ```[Title](url)``` |
 
-次の markdown タグはサポートされていません。
+次の Markdown タグはサポートされていません。
 
 * ヘッダー
 * テーブル
@@ -46,7 +48,8 @@ Teams で Markdown をサポートするカードには、次の3種類があり
 * 書式設定済みのテキスト
 * Blockquotes
 
-アダプティブカードでは、HTML 形式はサポートされていません。
+> [!IMPORTANT]
+> アダプティブカードでは、HTML 形式はサポートされていません。
 
 ### <a name="newlines-for-adaptive-cards"></a>アダプティブカードの改行
 
@@ -56,19 +59,19 @@ Teams で Markdown をサポートするカードには、次の3種類があり
 
 デスクトップとモバイルバージョンの Teams では、書式設定が若干異なります。
 
-デスクトップでは、アダプティブカードの markdown 書式は、web ブラウザーと Teams クライアントアプリケーションの両方で次のように表示されます。
+デスクトップでは、アダプティブカードの Markdown 書式は、web ブラウザーと Teams クライアントアプリケーションの両方で次のように表示されます。
 
-![デスクトップクライアントでのアダプティブカード Markdown の書式設定](~/assets/images/cards/Adaptive-markdown-desktop-client.png)
+![デスクトップクライアントでのアダプティブカード Markdown の書式設定](/assets/images/cards/Adaptive-markdown-desktop-client.png)
 
-IOS では、アダプティブカード markdown 形式は次のように表示されます。
+IOS では、アダプティブカード Markdown 形式は次のように表示されます。
 
-![IOS のアダプティブカード Markdown 形式](~/assets/images/cards/Adaptive-markdown-iOS-75.png)
+![IOS のアダプティブカード Markdown 形式](/assets/images/cards/Adaptive-markdown-iOS-75.png)
 
-Android では、アダプティブカードの markdown 書式は次のように表示されます。
+Android では、アダプティブカードの Markdown 書式は次のように表示されます。
 
-![Android のアダプティブカード Markdown 形式](~/assets/images/cards/Adaptive-markdown-Android.png)
+![Android のアダプティブカード Markdown 形式](/assets/images/cards/Adaptive-markdown-Android.png)
 
-### <a name="for-more-information-on-adaptive-cards"></a>アダプティブカードの詳細については、
+### <a name="more-information-on-adaptive-cards"></a>アダプティブカードの詳細情報
 
 [アダプティブカードのテキスト機能](/adaptive-cards/create/textfeatures)このトピックで説明する日付とローカリゼーションの機能は、Teams ではサポートされていません。
 
@@ -106,12 +109,12 @@ Android では、アダプティブカードの markdown 書式は次のよう�
 }
 ```
 
-## <a name="mention-support-within-adaptive-cards"></a>アダプティブカード内でのサポートを伝えます。 
+### <a name="mention-support-within-adaptive-cards"></a>アダプティブカード内でのサポートを伝えます。
 
 > [!NOTE]
-> 現在、カードでのサポートは、[開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md)のみでサポートされています。
+> 現在、カードでのサポートは、[開発者向けプレビュー](../../resources/dev-preview/developer-preview-intro.md)のみでサポートされています。
 
-ボットおよびメッセージング拡張機能は、テキストブロックと FactSet 要素のカードコンテンツ内にメンションを含めることができるようになりました。 
+ボットおよびメッセージング拡張機能は、テキストブロックと FactSet 要素のカードコンテンツ内にメンションを含めることができるようになりました。
 
 ### <a name="constructing-mentions"></a>メンションの構築
 
@@ -153,9 +156,98 @@ Android では、アダプティブカードの markdown 書式は次のよう�
 }
 ```
 
-## <a name="html-formatting-for-connector-cards"></a>コネクタカードの HTML 形式
+# <a name="markdown-formatting-o365-connector-cards"></a>[**Markdown の形式: O365 コネクタカード**](#tab/connector-md)
 
-コネクタカードは、制限付きの markdown および HTML 形式をサポートしています。 Markdown については、次のセクションで説明します。
+コネクタカードは、制限付きの Markdown および HTML 形式をサポートしています。 HTML サポートについては、前のセクションで説明します。
+
+| Style | 例 | Markdown |
+| --- | --- | --- |
+| bold | **text** | `**text**` |
+| italic | *text* | `*text*` |
+| ヘッダー (レベル 1&ndash;3) | **Text** | `### Text`|
+| 打ち消し | ~~text~~ | `~~text~~` |
+| 順序なしリスト | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
+| 順序付きリスト | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
+| 書式設定済みのテキスト | `text` | ``preformatted text`` |
+| blockquote | >blockquote テキスト | `>blockquote text` |
+| hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
+| 画像リンク |![岩に関するアヒル](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
+
+コネクタカードで`\n\n` `\n`は、改行はに対してレンダリングされ`\r`ますが、では表示されません。
+
+### <a name="mobile-and-desktop-differences-for-connector-cards-using-markdown"></a>Markdown を使用したコネクタカードのモバイルとデスクトップの相違点
+
+デスクトップでは、Markdown のコネクタカードの書式は、次のようになります。
+
+![デスクトップクライアントでのコネクタカードの Markdown の書式設定](/assets/images/cards/connector-desktop-markdown-combined.png)
+
+IOS では、Markdown のコネクタカードの書式設定は次のようになります。
+
+![IOS クライアントでのコネクタカードの Markdown の書式設定](/assets/images/cards/connector-iphone-markdown-combined-80.png)
+
+懸案事項:
+
+* Teams の iOS クライアントは、コネクタカードで Markdown または HTML インライン画像を表示しません。
+* Blockquotes はインデント付きですが、灰色は表示されません。
+
+Android では、Markdown のコネクタカードの書式設定は次のようになります。
+
+![Android クライアントでのコネクタカードの Markdown の書式設定](/assets/images/cards/connector-android-markdown-combined.png)
+
+### <a name="formatting-example-for-markdown-connector-cards"></a>Markdown コネクタカードの書式設定の例
+
+``` json
+{
+  "contentType": "application/vnd.microsoft.teams.card.o365connector",
+  "content": {
+    "@type": "MessageCard",
+    "@context": "http://schema.org/extensions",
+    "summary": "Summary",
+    "title": "Connector Card Markdown formatting",
+    "sections": [
+        {
+            "text": "This is some **bold** text"
+        },
+        {
+            "text": "This is some _italic_ text"
+        },
+        {
+            "text": "# Header 1\r## Header 2\r### Header 3"
+        },
+        {
+            "text": "- Bullet \r- List \r"
+        },
+        {
+            "text": "1. Numbered\r1. List \r"
+        },
+        {
+            "text": "Link: [Bing](https://www.bing.com)"
+        },
+        {
+            "text": "embedded image link: ![Duck on a rock](http://aka.ms/Fo983c)"
+        },
+        {
+            "text": "`preformatted text`"
+        },
+        {
+            "text": "Newlines (backslash n, backslash n):\n\nline a\n\nline b\n\nline c"
+        },
+        {
+            "text": ">This is a blockquote"
+        }
+     ]
+  }
+}
+
+```
+
+---
+
+## <a name="formatting-cards-with-html"></a>HTML を使用してカードを書式設定する
+
+# <a name="html-formatting-o365-connector-cards"></a>[**HTML 形式: O365 コネクタカード**](#tab/connector-html)
+
+コネクタカードは、制限付きの Markdown および HTML 形式をサポートしています。 Markdown については、次のセクションで説明します。
 
 | Style | 例 | HTML |
 | --- | --- | --- |
@@ -176,20 +268,20 @@ Android では、アダプティブカードの markdown 書式は次のよう�
 
 デスクトップでは、コネクタカードの HTML 書式設定は次のようになります。
 
-![デスクトップクライアントのコネクタカードの HTML 形式](~/assets/images/cards/Connector-desktop-html-combined.png)
+![デスクトップクライアントのコネクタカードの HTML 形式](/assets/images/cards/Connector-desktop-html-combined.png)
 
 IOS では、HTML 形式は次のようになります。
 
-![IOS クライアントでのコネクタカードの HTML 書式設定](~/assets/images/cards/connector-iphone-html-combined-80.png)
+![IOS クライアントでのコネクタカードの HTML 書式設定](/assets/images/cards/connector-iphone-html-combined-80.png)
 
 懸案事項:
 
-* インライン画像は、コネクタカードで markdown または HTML のどちらかを使用して iOS でレンダリングされることはありません。
+* インライン画像は、コネクタカードで Markdown または HTML のどちらかを使用して iOS でレンダリングされることはありません。
 * 書式設定済みのテキストは表示されますが、灰色の背景は表示されません。
 
 Android では、HTML 形式は次のようになります。
 
-![Android クライアントでのコネクタカードの HTML 書式設定](~/assets/images/cards/connector-android-html-combined.png)
+![Android クライアントでのコネクタカードの HTML 書式設定](/assets/images/cards/connector-android-html-combined.png)
 
 ### <a name="formatting-sample-for-html-connector-cards"></a>HTML コネクタカードの書式設定のサンプル
 
@@ -241,94 +333,9 @@ Android では、HTML 形式は次のようになります。
 
 ```
 
-## <a name="markdown-formatting-for-connector-cards"></a>コネクタカードの Markdown の書式設定
+# <a name="html-formatting-hero-and-thumbnail-cards"></a>[**HTML 形式: 英雄とサムネイルカード**](#tab/simple-html)
 
-コネクタカードは、制限付きの markdown および HTML 形式をサポートしています。 HTML については、最後のセクションで説明します。
-
-| Style | 例 | Markdown |
-| --- | --- | --- |
-| bold | **text** | `**text**` |
-| italic | *text* | `*text*` |
-| ヘッダー (レベル 1&ndash;3) | **Text** | `### Text`|
-| 打ち消し | ~~text~~ | `~~text~~` |
-| 順序なしリスト | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
-| 順序付きリスト | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
-| 書式設定済みのテキスト | `text` | ``preformatted text`` |
-| blockquote | >blockquote テキスト | `>blockquote text` |
-| hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
-| 画像リンク |![岩に関するアヒル](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
-
-コネクタカードで`\n\n` `\n`は、改行はに対してレンダリングされ`\r`ますが、では表示されません。
-
-### <a name="mobile-and-desktop-differences-for-connector-cards-using-markdown"></a>Markdown を使用したコネクタカードのモバイルとデスクトップの相違点
-
-デスクトップでは、markdown のコネクタカードの書式は、次のようになります。
-
-![デスクトップクライアントのコネクタカードの HTML 形式](~/assets/images/cards/connector-desktop-markdown-combined.png)
-
-IOS では、markdown のコネクタカードの書式設定は次のようになります。
-
-![IOS クライアントでのコネクタカードの HTML 書式設定](~/assets/images/cards/connector-iphone-markdown-combined-80.png)
-
-懸案事項:
-
-* Teams の iOS クライアントは、コネクタカードで markdown または HTML インライン画像を表示しません。
-* Blockquotes はインデント付きですが、灰色は表示されません。
-
-Android では、markdown のコネクタカードの書式設定は次のようになります。
-
-![Android クライアントでのコネクタカードの HTML 書式設定](~/assets/images/cards/connector-android-markdown-combined.png)
-
-### <a name="formatting-example-for-markdown-connector-cards"></a>Markdown コネクタカードの書式設定の例
-
-``` json
-{
-  "contentType": "application/vnd.microsoft.teams.card.o365connector",
-  "content": {
-    "@type": "MessageCard",
-    "@context": "http://schema.org/extensions",
-    "summary": "Summary",
-    "title": "Connector Card Markdown formatting",
-    "sections": [
-        {
-            "text": "This is some **bold** text"
-        },
-        {
-            "text": "This is some _italic_ text"
-        },
-        {
-            "text": "# Header 1\r## Header 2\r### Header 3"
-        },
-        {
-            "text": "- Bullet \r- List \r"
-        },
-        {
-            "text": "1. Numbered\r1. List \r"
-        },
-        {
-            "text": "Link: [Bing](https://www.bing.com)"
-        },
-        {
-            "text": "embedded image link: ![Duck on a rock](http://aka.ms/Fo983c)"
-        },
-        {
-            "text": "`preformatted text`"
-        },
-        {
-            "text": "Newlines (backslash n, backslash n):\n\nline a\n\nline b\n\nline c"
-        },
-        {
-            "text": ">This is a blockquote"
-        }
-     ]
-  }
-}
-
-```
-
-## <a name="html-formatting-for-simple-cards"></a>シンプルなカードの HTML 形式
-
-これらの HTML タグは、ヒーローやサムネイルカードなどの単純なカードでサポートされています。 Markdown はサポートされていません。
+HTML タグは、ヒーローやサムネイルカードなどの単純なカードでサポートされています。 Markdown はサポートされていません。
 
 | Style | 例 | HTML |
 | --- | --- | --- |
@@ -349,11 +356,11 @@ Android では、markdown のコネクタカードの書式設定は次のよう
 
 デスクトップでは、HTML 形式は次のように表示されます。
 
-![デスクトップクライアントの HTML 形式](~/assets/images/cards/card-formatting-xml-desktop-v2.png)
+![デスクトップクライアントの HTML 形式](/assets/images/cards/card-formatting-xml-desktop-v2.png)
 
 IOS では、HTML 形式は次のように表示されます。
 
-![IOS クライアントでの HTML 形式](~/assets/images/cards/card-formatting-xml-mobile-v2.png)
+![IOS クライアントでの HTML 形式](/assets/images/cards/card-formatting-xml-mobile-v2.png)
 
 懸案事項:
 
@@ -361,7 +368,7 @@ IOS では、HTML 形式は次のように表示されます。
 
 Android では、HTML 形式は次のように表示されます。
 
-![Android クライアントでの HTML 形式](~/assets/images/cards/card-formatting-xml-android-60.png)
+![Android クライアントでの HTML 形式](/assets/images/cards/card-formatting-xml-android-60.png)
 
 Android では、太字や斜体などの文字書式が正しく表示されます。
 
@@ -370,3 +377,5 @@ Android では、太字や斜体などの文字書式が正しく表示されま
 これらのスクリーンショットは Teams AppStudio を使用して作成されています。これは、ヒーローカードの text プロパティが次の文字列に設定されています。 このコードを変更することにより、独自のカードで書式設定をテストできます。
 
 `<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
+
+---

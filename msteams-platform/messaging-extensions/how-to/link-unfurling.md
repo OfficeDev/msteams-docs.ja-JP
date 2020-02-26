@@ -4,12 +4,12 @@ author: clearab
 description: Microsoft Teams アプリでメッセージング拡張機能を使用してリンク unfurling を実行する方法について説明します。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 5b20ea303a2c3d085651a53b01af4bb449d386de
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: ccc23f06fbe759dc4c38dfc63dfa356d38352c27
+ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675124"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "42279775"
 ---
 # <a name="link-unfurling"></a>Link unfurling
 
@@ -25,7 +25,7 @@ Azure DevOps messaging extension は、リンク unfurling を使用して、作
 
 これを行うには、アプリマニフェスト`messageHandlers` JSON の`composeExtensions`セクションに新しい配列を追加します。 そのためには、アプリ Studio のヘルプを使用するか、手動で行うことができます。 ドメインリストには、たとえば`*.example.com`、ワイルドカードを含めることができます。 これは、1つのドメインのセグメントに一致します。に一致`a.b.example.com`させる必要がある`*.*.example.com`場合は、を使用します。
 
-### <a name="using-app-studio"></a>アプリ Studio の使用
+### <a name="using-app-studio"></a>App Studio を使用する場合
 
 1. App Studio の [マニフェストエディター] タブで、アプリマニフェストを読み込みます。
 1. [**メッセージング内線番号**] ページで、以下のスクリーンショットのように、[**メッセージハンドラ**] セクションで検索するドメインを追加します。
@@ -69,27 +69,27 @@ Azure DevOps messaging extension は、リンク unfurling を使用して、作
 
 概要については、「[カードとは](~/task-modules-and-cards/what-are-cards.md)」を参照してください。
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQueryAsync(ITurnContext<IInvokeActivity> turnContext, AppBasedLinkQuery query, CancellationToken cancellationToken)
 {
     //You'll use the query.link value to search your service and create a card response
-    var heroCard = new ThumbnailCard
+    var card = new HeroCard
     {
-        Title = "Thumbnail Card",
+        Title = "Hero Card",
         Text = query.Url,
         Images = new List<CardImage> { new CardImage("https://raw.githubusercontent.com/microsoft/botframework-sdk/master/icon.png") },
     };
 
-    var attachments = new MessagingExtensionAttachment(HeroCard.ContentType, null, heroCard);
+    var attachments = new MessagingExtensionAttachment(HeroCard.ContentType, null, card);
     var result = new MessagingExtensionResult(AttachmentLayoutTypes.List, "result", new[] { attachments }, null, "test unfurl");
 
     return new MessagingExtensionResponse(result);
 }
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node.js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/node.js](#tab/javascript)
 
 ```javascript
 class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
@@ -112,7 +112,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 これは、 `invoke`ボットに送信される例です。
 
