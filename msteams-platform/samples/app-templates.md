@@ -2,12 +2,12 @@
 title: Microsoft Teams アプリテンプレート
 description: Microsoft Teams プラットフォームのアプリテンプレートのリンクと説明
 keywords: Microsoft Teams テンプレートサンプルのデモ
-ms.openlocfilehash: b8f38020761cfff7cd821694ffba2d85d2d925d1
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 36f04727828b3bfa3be9b808cafcd33c11bf2c0d
+ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674893"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "42365270"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams のアプリテンプレート
 
@@ -20,15 +20,15 @@ ms.locfileid: "41674893"
 * **カスタマイズと拡張:** すべてのアプリテンプレートを展開する準備ができましたが、コードベースと展開スクリプト全体が提供されるので、独自のニーズに合わせてカスタマイズまたは拡張することが容易になります。
 * **サポート & 詳細なドキュメント:** すべてのアプリテンプレートには、ソリューションのアーキテクチャ、展開、および構成手順に関するエンドツーエンドのドキュメントが付属しています。 リポジトリも監視されるので、GitHub で問題を発生させることで、発生した問題を報告してください。
 
-## <a name="celebrations"></a>行事
+## <a name="celebrations"></a>お祝い
 
 [記念] は Teams アプリであり、チームメンバーは、他の誕生日、記念日、その他の定期的なイベントを担当することができます。 すべてのチームメンバーの特別な状況を記録して、イベントの作成時に選択されたすべてのチームでフレンドリメッセージを送信し、チームメンバーが自分の一日に特別な印象を感じられるようにします。
 
 アプリは、すべてのチームメンバーが自分のイベントを個人的に追加および表示し、ユーザーがイベントを共有するチームを選択できるようにするための簡単なインターフェイスを提供します。
 
-[ここで GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-celebrations-app)
+[GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-celebrations-app)
 
-## <a name="company-communicator"></a>会社の Communicator
+## <a name="company-communicator"></a>社内コミュニケーター
 
 会社の Communicator アプリを使用すると、企業チームはチャットを介して複数のチームまたは多数の従業員宛てのメッセージを作成して送信することができます。 このテンプレートを、新しいイニシアチブのアナウンス、従業員のオンボード、モダンラーニング、開発、組織全体のブロードキャストなど、複数のシナリオで利用できます。
 
@@ -36,7 +36,7 @@ ms.locfileid: "41674893"
 
 これにより、メッセージを確認したり操作したりしたユーザー数について、カスタムテレメトリなどのカスタムの対象化通信機能を構築するための基盤が提供されます。
 
-[ここで GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
+[GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
 
 ![FAQ + gif](~/assets/images/CompanyCommunicatorCompose.png)
 
@@ -44,17 +44,32 @@ ms.locfileid: "41674893"
 
 話し言葉 Q&ボットは、ユーザーからよく寄せられる質問に対する回答を簡単に提供する方法です。 ただし、bot が失敗したときにループに人間が存在しないため、ほとんどのボットはユーザーとの通信に失敗することがあります。 FAQ bot は、問題が解決できないときにループを処理する bot&ボットです。 この場合は、bot がサポート技術情報に含まれている場合、ボットに質問をして応答を求めることができます。 できない場合は、ユーザーはクエリを送信して、チーム内から通知を受け取ることによってサポートを提供できる専門家の事前に構成されたチームに投稿することができます。
 
-[ここで GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-faqplusplus-app)
+[GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-faqplusplus-app)
+
+> [!NOTE]
+> FAQ に加えて、**バージョン 2**の2020リリースでは、専門家のチームが次のことを実行できるようにすることで、改善された Q&サポートしています。
+>
+> &#x2714; メッセージ拡張機能を使用して、新しい Q&をナレッジベースに直接追加します。
+>
+> &#x2714; を編集および削除するには、bot によって追加されたペア&Q を追加します。
+>
+> &#x2714; Q&のリビジョン履歴を追跡します。
+>
+> &#x2714;[アダプティブカード](/task-modules-and-cards/cards/cards-reference#adaptive-card)として表示するには、追加の詳細を含む回答を構成します。
+>
+>[**GitHub で取得する**](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
+>
+>
 
 ![FAQ + gif](~/assets/images/FAQPlusEndUser.gif)
 
-## <a name="hr-support"></a>人事サポート
+## <a name="hr-support"></a>HR サポート
 
 HR サポート bot は、問題が解決できないときに、そのループの人事チームのサポートプロフェッショナル/専門家を支援する bot&のフレンドリな質問です。 この場合は、bot がサポート技術情報に含まれている場合、ボットに質問をして応答を求めることができます。 できない場合は、ユーザーはクエリを送信して、チーム内から通知を受け取ることによってサポートを提供できる専門家の事前に構成されたチームに投稿することができます。 また、bot は、質問で事前に構成されたタグを検索することにより、推奨される人事ポリシー/質問へのリンクを提案します。 これらのタイルは、クイックリファレンスとして、関連付けられたタブにもあります。 人事サポートは、軽いウエイト QnA に適しており、組織内で新しいプロジェクト/イニシアチブを開始する際の迅速なサポートを提供します。
 
-[ここで GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-hrsupport-app)
+[GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-hrsupport-app)
 
-![人事サポート](~/assets/images/expert-user.png)
+![HR サポート](~/assets/images/expert-user.png)
 
 ## <a name="list-search"></a>リスト検索
 
@@ -62,27 +77,27 @@ Microsoft Teams でのコラボレーションは、多くの場合、SharePoint
 
 このような問題を軽減するために、リスト検索アプリテンプレートに移動することになります。 数百万人のユーザーが SharePoint を使用して、組織内のコアワークフローの一部を強化します。 ただし、リストに関する共同作業は、特に面倒な場合があります。 Microsoft Teams でリスト検索アプリテンプレートを使用すると、ユーザーは SharePoint リストアイテムの情報をチャット会話内に直接挿入して、リンクをチャットに挿入するだけで済むようになったため、コンテキスト切り替えが軽減されます。 この情報は、簡単に読める自動フォーマットのカードとして挿入され、ユーザーが会話に参加し続けるのを支援します。
 
-[ここで GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-list-search-app)
+[GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
 ![検索アプリを一覧表示する](~/assets/images/list-search-template.png)
 
-## <a name="custom-stickers"></a>カスタムステッカー
+## <a name="custom-stickers"></a>カスタム ステッカー
 
 自己表現は、正常なチームのカルチャにとって中心的なものです。 このアプリテンプレートは、ユーザーが Microsoft Teams 内でカスタムステッカーと Gif を使用できるようにする[メッセージング拡張機能](~/messaging-extensions/what-are-messaging-extensions.md)です。 このテンプレートを使用すると、web ベースの構成を簡単に行うことができます。これにより、エンドユーザーが使用する Gif/ステッカー/画像を構成アクセス権を持つすべてのユーザーがアップロードできるようになります。
 
 このアプリでは、ストレージと共有のメカニズムとして、SharePoint サイトや個々のチャネルへのアクセスを必要とせずに、teams 間で画像、Gif、ステッカーを簡単に共有することもできます。 たとえば、製品チームは、プログラムを使用して、製品の画像や Gif をソーシャルメディア、マーケティング、営業チームに簡単に共有できます。 新しい画像/Gif が利用可能になったときに、特定の teams/個人に通知フローをトリガーすることによって、このアプリを拡張することもできます。
 
-[ここで GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-stickers-app)
+[GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-stickers-app)
 
 ![ステッカーアプリ](~/assets/images/stickers.png)
 
-## <a name="icebreaker"></a>Icebreaker
+## <a name="icebreaker"></a>アイスブレーカー
 
-Icebreaker は[Microsoft Teams の bot](~/bots/what-are-bots.md)で、チームは、2つのランダムなチームメンバーを毎週1つずつペアにすることによって近づくことができます。 Bot は、両方のメンバーに対して動作する空き時間を自動的に提案することで、スケジュールを簡単にします。 パーソナル接続を強化し、このアプリを使用して緊密な knit コミュニティを構築します。
+Icebreaker は[Microsoft Teams の bot](../bots/what-are-bots.md)で、チームは、2つのランダムなチームメンバーを毎週1つずつペアにすることによって近づくことができます。 Bot は、両方のメンバーに対して動作する空き時間を自動的に提案することで、スケジュールを簡単にします。 パーソナル接続を強化し、このアプリを使用して緊密な knit コミュニティを構築します。
 
 Icebreaker アプリは、チーム全体にわたる個人の接続を促進するだけでなく、組織内の利息ベースコミュニティを cultivate するのに役立ちます。 たとえば、このアプリを DevOps の趣味グループに対して使用すると、アイデアやベストプラクティスつれを組織全体に分散させることができます。
 
-[ここで GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-icebreaker-app)
+[GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-icebreaker-app)
 
 ![Icebreaker アプリ](~/assets/images/icebreaker.png)
 
@@ -90,8 +105,40 @@ Icebreaker アプリは、チーム全体にわたる個人の接続を促進す
 
 スクラム状態 bot は、ユーザーが非同期のスタンドアップ会議を実行し、ユーザーが毎日の更新を共有するための簡単な方法を提供できる、シンプルなスクラムアシスタントの bot です。 Teams グループチャットで機能するように設計されており、すべてのメンバーがスクラムに貢献できます。 1つはスクラムを開始および終了し、実行中のスクラムで他者が行った更新を表示することができます。
 
-[GitHub での Git it のこちら](https://github.com/OfficeDev/microsoft-teams-app-scrumstatus/)
+[GitHub での Git it](https://github.com/OfficeDev/microsoft-teams-app-scrumstatus/)
 
 ![スクラム状態 Bot](https://raw.githubusercontent.com/wiki/OfficeDev/microsoft-teams-app-scrumstatus/images/StartScrum.jpg)
 
-参照したいアプリテンプレートのアイデアがあるかどうか。 [お知らせください。](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u)
+## <a name="crowdsourcer-bot"></a>Crowdsourcer bot
+
+Crowdsourcer は、チームが照会した情報をグループメンバーから共同で提供する[Microsoft teams bot](../bots/what-are-bots.md)です。 これは、よく寄せられる質問に回答するための最適な方法であり、参加者が積極的に協力して、楽しくて役に立つ情報リソースに投稿することを可能にします。
+
+[Github で取得する](https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app)
+
+![Crowdsource エンドユーザーの操作](../assets/images/crowdsourcer.png)
+
+## <a name="expert-finder-bot"></a>エキスパートファインダー
+
+専門家の Finder は、スキル、関心事、教育の属性に基づいて特定の組織のメンバーを識別する[Microsoft Teams の bot](../bots/what-are-bots.md)です。 メンバーは、Azure Active Directory ユーザープロファイルのキーワード検索に一致する組織内の専門家を検索します。
+
+[GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-expertfinder)
+
+![エキスパートファインダー検索結果のデモ](../assets/images/expert-finder.png)
+
+## <a name="book-a-room-bot"></a>書籍-a-room bot
+
+書籍-a room は[Microsoft Teams の bot](../bots/what-are-bots.md)で、現在の時刻から 30 (既定)、60、または90分間、ユーザーが会議室をすばやく検索して予約することができます。 個人または1:1 の会話に対して、会議中の bot の範囲を示します。
+
+[GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom)
+
+![書籍-a ルームのデモ](../assets/images/book-a-room.png)
+
+## <a name="attendance-app"></a>出席アプリ
+
+出席アプリは、チーム内でピン留めできる [ [Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/embed-teams-appdesigned) ] タブです。 これは、通常、学習およびトレーニング環境などの設定で、プレゼンスを記録するように設計されています。 ユーザーは、過去30日間の参加をマークまたは編集したり、グループ全体または個々の出席者のレポートをまとめて表示したりできます。
+
+[GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-attendance)
+
+![出勤アプリデモ](../assets/images/attendance-app.png)
+
+参照したいアプリテンプレートのアイデアがあるかどうか。 お知らせ[ください](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u)。

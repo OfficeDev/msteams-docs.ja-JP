@@ -2,12 +2,12 @@
 title: レート制限
 description: Microsoft Teams でのレートの制限とベストプラクティス
 keywords: teams のボットレート制限
-ms.openlocfilehash: 4e9efab539ec7817d259fd6c149c438ba02e3ce5
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 145f65a7e17b833e11631dfc219d9f5732f43bc6
+ms.sourcegitcommit: 6c692734a382865531a83b9ebd6f604212f484fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674750"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "42371766"
 ---
 # <a name="optimize-your-bot-rate-limiting-and-best-practices-in-microsoft-teams"></a>Bot を最適化する: Microsoft Teams でのレートの制限とベストプラクティス
 
@@ -46,26 +46,29 @@ catch (HttpOperationException ex)
 
 ここでは、一時的な障害処理アプリケーションブロックによる指数バックオフを使用する例を示します。
 
-[一時的な障害処理ライブラリ](/previous-versions/msp-n-p/hh680901(v=pandp.50))を使用して、バックオフと再試行を実行できます。 NuGet パッケージを入手してインストールするためのガイドラインについては、「[ソリューションに一時的なエラー処理アプリケーションブロックを追加](/previous-versions/msp-n-p/hh680891(v=pandp.50))する」を参照してください。
+[一時的なエラー処理](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29)を使用して、バックオフと再試行を実行できます。 NuGet パッケージを入手してインストールするためのガイドラインについては、「[一時的なエラー処理アプリケーションブロックをソリューションに追加](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN)する」を参照してください。 「[一時的なフォールト処理](/azure/architecture/best-practices/transient-faults) *」も参照してください*。
 
 ```csharp
 public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectionStrategy
-{
-    // List of error codes to retry on
-    List<int> transientErrorStatusCodes = new List<int>() { 429 };
-
-    public bool IsTransient(Exception ex)
     {
-        var httpOperationException = ex as HttpOperationException;
-        if (httpOperationException != null)
-        {
-            return httpOperationException.Response != null &&
-                    transientErrorStatusCodes.Contains((int) httpOperationException.Response.StatusCode);
-        }
+        // List of error codes to retry on
+        List<int> transientErrorStatusCodes = new List<int>() { 429 };
 
-        return false;
+        public bool IsTransient(Exception ex)
+        {
+            if (ex.Message.Contains("429"))
+                return true;
+
+            var httpOperationException = ex as HttpOperationException;
+            if (httpOperationException != null)
+            {
+                return httpOperationException.Response != null &&
+                        transientErrorStatusCodes.Contains((int)httpOperationException.Response.StatusCode);
+            }
+
+            return false;
+        }
     }
-}
 ```
 
 ## <a name="example-backoff"></a>例: バックオフ
@@ -83,10 +86,10 @@ var exponentialBackoffRetryStrategy = new ExponentialBackoff(3, TimeSpan.FromSec
 
 
 // Define the Retry Policy
-var retryPolicy = new RetryPolicy(new BotSdkTransientExceptionDetectionStrategy(), fixedIntervalRetryStrategy);
+var retryPolicy = new RetryPolicy(new BotSdkTransientExceptionDetectionStrategy(), exponentialBackoffRetryStrategy);
 
 //Execute any bot sdk action
-await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsync((Activity)reply)).ConfigureAwait(false);
+await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsync( (Activity)reply) ).ConfigureAwait(false);
 ```
 
 前に説明した`System.Action`再試行ポリシーを使用して、メソッドを実行することもできます。 参照されるライブラリでは、固定の間隔または線形バックオフメカニズムを指定することもできます。
@@ -104,26 +107,22 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 | **シナリオ** | **期間 (秒)** | **許可される最大操作数** |
 | --- | --- | --- |
-| NewMessage | 1  | 7  |
-| NewMessage | 2  | 8  |
-| NewMessage | 31 | 60 |
-| NewMessage | 3600 | 1800 |
-| 次 | 1  | 7  |
-| 次 | 2  | 8  |
-| 次 | 31 | 60 |
-| 次 | 3600 | 1800 |
-| NewThread | 1  | 7  |
-| NewThread | 2  | 8  |
-| NewThread | 31 | 60 |
-| NewThread | 3600 | 1800 |
-| GetThreadMembers | 1  | 14  |
-| GetThreadMembers | 2  | 16  |
-| GetThreadMembers | 31 | 120 |
-| GetThreadMembers | 3600 | 3600 |
-| GetThread | 1  | 14  |
-| GetThread | 2  | 16  |
-| GetThread | 31 | 120 |
-| GetThread | 3600 | 3600 |
+|| 1-d | 7 |
+| 会話に送信 | pbm-2 | ~ |
+| 会話に送信 | 31 | 60 |
+| 会話に送信 | 3600 | 1800 |
+| 会話を作成する | 1-d | 7 |
+| 会話を作成する | pbm-2 | ~ |
+| 会話を作成する | 31 | 60 |
+| 会話を作成する | 3600 | 1800 |
+| 会話メンバーを取得する| 1-d | 14  |
+| 会話メンバーを取得する| pbm-2 | 16  |
+| 会話メンバーを取得する| 31 | 120 |
+| 会話メンバーを取得する| 3600 | 3600 |
+| 会話を取得する | 1-d | 14  |
+| 会話を取得する | pbm-2 | 16  |
+| 会話を取得する | 31 | 120 |
+| 会話を取得する | 3600 | 3600 |
 
 ## <a name="per-thread-limit-for-all-bots"></a>すべてのボットに対するスレッド数の制限
 
@@ -131,16 +130,16 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 | **シナリオ** | **期間 (秒)** | **許可される最大操作数** |
 | --- | --- | --- |
-| NewMessage | 1  | 14  |
-| NewMessage | 2  | 16  |
-| 次 | 1  | 14  |
-| 次 | 2  | 16  |
-| NewThread | 1  | 14  |
-| NewThread | 2  | 16  |
-| GetThreadMembers | 1  | 個 |
-| GetThreadMembers | 2  | 32 |
-| GetThread | 1  | 個 |
-| GetThread | 2  | 32 |
+| 会話に送信 | 1-d | 14  |
+| 会話に送信 | pbm-2 | 16  |
+| 会話を作成する | 1-d | 14  |
+| 会話を作成する | pbm-2 | 16  |
+| CreateConversation| 1-d | 14  |
+| CreateConversation| pbm-2 | 16  |
+| 会話メンバーを取得する| 1-d | 個 |
+| 会話メンバーを取得する| pbm-2 | 32 |
+| 会話を取得する | 1-d | 個 |
+| 会話を取得する | pbm-2 | 32 |
 
 ## <a name="bot-per-data-center-limit"></a>データセンターあたりの Bot 数の制限
 
@@ -148,6 +147,6 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 |**期間 (秒)** | **許可される最大操作数** |
 | --- | --- |
-| 1  | 1280 |
+| 1-d | 1280 |
 | 1800 | 8000 |
 | 3600 | 15000 |
