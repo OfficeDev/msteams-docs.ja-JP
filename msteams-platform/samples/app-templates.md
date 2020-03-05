@@ -2,12 +2,12 @@
 title: Microsoft Teams アプリテンプレート
 description: Microsoft Teams プラットフォームのアプリテンプレートのリンクと説明
 keywords: Microsoft Teams テンプレートサンプルのデモ
-ms.openlocfilehash: 36f04727828b3bfa3be9b808cafcd33c11bf2c0d
-ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
+ms.openlocfilehash: 7bbd1093a7d3d2ed29498ce79051549621784b57
+ms.sourcegitcommit: a955121927090ee01173d70628c388991f53d23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42365270"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "42416853"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams のアプリテンプレート
 
@@ -38,7 +38,7 @@ ms.locfileid: "42365270"
 
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
 
-![FAQ + gif](~/assets/images/CompanyCommunicatorCompose.png)
+![FAQ + gif](../assets/images/CompanyCommunicatorCompose.png)
 
 ## <a name="faq-plus"></a>FAQ プラス
 
@@ -61,7 +61,7 @@ ms.locfileid: "42365270"
 >
 >
 
-![FAQ + gif](~/assets/images/FAQPlusEndUser.gif)
+![FAQ + gif](../assets/images/FAQPlusEndUser.gif)
 
 ## <a name="hr-support"></a>HR サポート
 
@@ -69,7 +69,7 @@ HR サポート bot は、問題が解決できないときに、そのループ
 
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-hrsupport-app)
 
-![HR サポート](~/assets/images/expert-user.png)
+![HR サポート](../assets/images/expert-user.png)
 
 ## <a name="list-search"></a>リスト検索
 
@@ -79,7 +79,7 @@ Microsoft Teams でのコラボレーションは、多くの場合、SharePoint
 
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
-![検索アプリを一覧表示する](~/assets/images/list-search-template.png)
+![検索アプリを一覧表示する](../assets/images/list-search-template.png)
 
 ## <a name="custom-stickers"></a>カスタム ステッカー
 
@@ -89,7 +89,7 @@ Microsoft Teams でのコラボレーションは、多くの場合、SharePoint
 
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-stickers-app)
 
-![ステッカーアプリ](~/assets/images/stickers.png)
+![ステッカーアプリ](../assets/images/stickers.png)
 
 ## <a name="icebreaker"></a>アイスブレーカー
 
@@ -99,13 +99,13 @@ Icebreaker アプリは、チーム全体にわたる個人の接続を促進す
 
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-icebreaker-app)
 
-![Icebreaker アプリ](~/assets/images/icebreaker.png)
+![Icebreaker アプリ](../assets/images/icebreaker.png)
 
-## <a name="scrum-status-bot"></a>スクラム状態 Bot
+## <a name="scrum-status-bot"></a>スクラム状態 bot
 
 スクラム状態 bot は、ユーザーが非同期のスタンドアップ会議を実行し、ユーザーが毎日の更新を共有するための簡単な方法を提供できる、シンプルなスクラムアシスタントの bot です。 Teams グループチャットで機能するように設計されており、すべてのメンバーがスクラムに貢献できます。 1つはスクラムを開始および終了し、実行中のスクラムで他者が行った更新を表示することができます。
 
-[GitHub での Git it](https://github.com/OfficeDev/microsoft-teams-app-scrumstatus/)
+[GitHub での Git it](https://github.com/OfficeDev/microsoft-teams-app-scrumstatus)
 
 ![スクラム状態 Bot](https://raw.githubusercontent.com/wiki/OfficeDev/microsoft-teams-app-scrumstatus/images/StartScrum.jpg)
 
@@ -135,10 +135,27 @@ Crowdsourcer は、チームが照会した情報をグループメンバーか�
 
 ## <a name="attendance-app"></a>出席アプリ
 
-出席アプリは、チーム内でピン留めできる [ [Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/embed-teams-appdesigned) ] タブです。 これは、通常、学習およびトレーニング環境などの設定で、プレゼンスを記録するように設計されています。 ユーザーは、過去30日間の参加をマークまたは編集したり、グループ全体または個々の出席者のレポートをまとめて表示したりできます。
+出席アプリは、チーム内でピン留めできる [ [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) ] タブです。 これは、通常、学習およびトレーニング環境などの設定で、プレゼンスを記録するように設計されています。 ユーザーは、過去30日間の参加をマークまたは編集したり、グループ全体または個々の出席者のレポートをまとめて表示したりできます。
 
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-attendance)
 
 ![出勤アプリデモ](../assets/images/attendance-app.png)
+
+## <a name="associate-insights-app"></a>Insights アプリを関連付ける
+
+アソシエイト insights は、顧客の意見、心理、認識を直接取得して送信するための、第一線ワーカーを支援する[パワーアプリ](/powerapps/maker/canvas-apps/embed-teams-app)テンプレートです。 Firstline ワーカーは、多くの場合、一対一の取引先担当者として顧客と協力することになります。 収集されたデータは、ビジネスチーム (たとえば、Power BI Teams タブを介して) によって共有および使用して、製品の改善や顧客のエクスペリエンスの向上に利用できます。
+
+[GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights)
+
+:::row:::
+  :::column span="2":::
+    ![アプリケーションによって生成された分析情報のフィードバックビュー](../assets/images/associate-insights-app.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![App が生成した application insights の Power BI ビュー](../assets/images/associate-insights-app2.png)
+:::column-end:::
+:::row-end:::
 
 参照したいアプリテンプレートのアイデアがあるかどうか。 お知らせ[ください](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u)。
