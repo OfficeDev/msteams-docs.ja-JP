@@ -2,12 +2,12 @@
 title: 公開後にすべきこと
 description: アプリの公開後にすべきこと
 keywords: Teams、公開後、更新、証明書
-ms.openlocfilehash: 05e4ea47bbf81967ccf086230bf0ad8c633f6e0b
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 54d0615c262e45729a36f556c3eda3b810d2a097
+ms.sourcegitcommit: 2a84a3c8b10771e37ce51bf603a967633947a3e4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674719"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "42582861"
 ---
 # <a name="maintain-and-support-your-published-app"></a>公開したアプリの保守およびサポート 
 
@@ -27,7 +27,9 @@ Microsoft では、[アプリケーション証明書プログラム](./applicat
 
 * アプリを再送信する際に、*[新しいアプリの追加]* ボタンは使用しないでください。 代わりに、[概要] タブのアプリのタイルを使用します。
 * 更新されたマニフェストの appId は、現在のマニフェストと同じであり、バージョンの番号もインクリメントされている必要があります。
-* マニフェストのバージョン番号をインクリメントします。
+* 送信に対してマニフェストに変更を加える場合は、マニフェストでバージョン番号をインクリメントします。
+* 新しいレビューおよび検証プロセスを実行するには、更新された提出を行う必要があります。
+
 
 ### <a name="when-does-updating-your-app-trigger-the-user-consent-flow"></a>アプリ更新の際にユーザーの同意フローがトリガーされる場合
 
@@ -35,4 +37,4 @@ Microsoft では、[アプリケーション証明書プログラム](./applicat
 
 * タブのみのアプリへのボットの追加など、アプリに新しい機能を追加する。
 * マニフェストでアクセス許可の配列を変更する。
-* マニフェストでのアプリのバージョン番号をインクリメントする。
+* マニフェスト内のアプリのバージョン番号を増やします。
