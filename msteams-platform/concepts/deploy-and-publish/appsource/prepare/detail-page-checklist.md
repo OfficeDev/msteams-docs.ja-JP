@@ -2,12 +2,12 @@
 title: 高度なアプリの詳細ページを作成する
 description: アプリの詳細ページに必要なものを説明します。
 keywords: teams 発行ストアの office 発行ポリシー AppSource コンテンツ
-ms.openlocfilehash: a7ccacb89e330e55db986595d083790d07e46a53
-ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
+ms.openlocfilehash: 741bc7b623e97b338c54c4dcfec5b1ca75201867
+ms.sourcegitcommit: 2a84a3c8b10771e37ce51bf603a967633947a3e4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41953517"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "42582868"
 ---
 # <a name="build-a-great-app-details-page"></a>高度なアプリの詳細ページを作成する
 
@@ -29,22 +29,22 @@ ms.locfileid: "41953517"
 
 * 既存のアプリ名と同じような汎用用語または名前を使用しないでください。
 * アプリ名には、"Teams"、"Microsoft"、または "app" を使用しないでください。
-![アプリ名ストアビュー](~/assets/images/store-detail-page/AppName-02.png)
-![アプリ名 appstudio ビュー](~/assets/images/store-detail-page/AppName-01.png)
+![アプリケーション名ストアビュー](~/assets/images/store-detail-page/AppName-02.png)
+![アプリ名 app Studio ビュー](~/assets/images/store-detail-page/AppName-01.png)
 
 ## <a name="color-icon"></a>色アイコン
 
 これは、ユーザーによって最初に表示される要素の1つです。 これは、アプリストアをスクロールするときに魅力的で目立つものにする必要があります。 最初の印象を適切にし、ブランドの画像と目的を伝えることができるようにしてください。 AppSource には[、一貫性のあるビジュアル id を作成するため](/office/dev/store/create-effective-office-store-listings#create-a-consistent-visual-identity)のヒントが追加されています。
 
 ![アプリアイコンストアビュー](~/assets/images/store-detail-page/AppIcon-02.png)
-![アプリアイコン appstudio ビュー](~/assets/images/store-detail-page/AppIcon-01.png)
+![アプリのアイコンアプリ Studio ビュー](~/assets/images/store-detail-page/AppIcon-01.png)
 
 ## <a name="outline-icon"></a>アウトラインアイコン
 
 これは、ユーザーおよび左側のナビゲーションメニューでお気に入りとしてマークされたメッセージング拡張機能で使用されます。 シンプルで認識可能であることを確認してください。 アウトラインアイコンには、白と透明度のみが含まれている必要があります (その他の色は使用できません)。 必要な仕様については、「 [Microsoft Teams アプリアイコン用のアプリパッケージを作成する](../../../build-and-test/apps-package.md#icons) *」を参照してください*。
 
-![アプリアイコンアウトラインストアビュー](~/assets/images/store-detail-page/AppIconOutline-02.png)
-![アプリのアイコンのアウトラインを表示する (appstudio)](~/assets/images/store-detail-page/AppIconOutline-01.png)
+![アプリアイコンアウトラインストア表示](~/assets/images/store-detail-page/AppIconOutline-02.png)
+![アプリのアイコンアウトラインアプリ Studio ビュー](~/assets/images/store-detail-page/AppIconOutline-01.png)
 
 ## <a name="short-description"></a>簡潔な説明
 
@@ -64,7 +64,7 @@ ms.locfileid: "41953517"
 
 [アプリ Studio](https://aka.ms/InstallTeamsAppStudio)のビューを次に示します。
 
-![短い説明 appstudio ビュー](~/assets/images/store-detail-page/ShortDescription-01.png)
+![短い説明 App Studio ビュー](~/assets/images/store-detail-page/ShortDescription-01.png)
 
 ## <a name="long-description"></a>詳しい説明
 
@@ -80,6 +80,22 @@ ms.locfileid: "41953517"
 * アクティブな音声を使用して、ユーザーに直接話します。
 * 機能の一覧を表示するには、箇条書きを使用します。
 * 質問がある場合にユーザーに連絡する方法がわかるように、ヘルプまたはサポートリンクを含めます。
+* ユーザーガイダンスを改善するために、制限または制約を必ず呼び出してください。
+
+
+>[!NOTE]
+>Teams は、次の Markdown 構文をサポートしています。  
+> **リンク**。 `[title](url/address/here)`.  
+>**画像**。`![alt text](url/address/here)`.  
+> **太字** `**bold text**`   `__bold text__`.  
+> **斜体** `*italicized text*`  `_italicized text`.  
+>**[順序付きリスト](https://www.markdownguide.org/basic-syntax/#ordered-lists)**<br>
+>`1. first`  <br>` 1. second `  <br>`1.third`<br>
+>**[順序なしリスト](https://www.markdownguide.org/basic-syntax/#unordered-lists)**<br>
+` - short` <br>`- bulleted` <br>`- list`<br>
+>**改行**。 `Place two empty spaces or a backslash \`  \
+`at the end of a line.`<br>
+ >**エスケープ.** 特殊文字をエスケープするには、インラインバックスラッシュを使用します。 `\*asterisk`.
 
 **注意事項**
 
@@ -89,11 +105,11 @@ ms.locfileid: "41953517"
 
 [アプリ Studio](https://aka.ms/InstallTeamsAppStudio)のビューを次に示します。
 
-![アプリの長い説明 appstudio ビュー](~/assets/images/store-detail-page/LongDescription-01.png)
+![アプリの長い説明 App Studio ビュー](~/assets/images/store-detail-page/LongDescription-01.png)
 
 ## <a name="screenshots"></a>スクリーンショット
 
-[販売者ダッシュボード](https://sellerdashboard.microsoft.com/Registration)にアップロードされたスクリーンショットは、Teams クライアントの[appsource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1)とアプリリストの両方に表示されます。 アプリの説明と共にアプリのビジュアルプレビューを提供します。
+[パートナーセンター](https://partner.microsoft.com)にアップロードされたスクリーンショットは、Teams クライアントの[appsource](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1)とアプリの一覧の両方に表示されます。 アプリの説明と共にアプリのビジュアルプレビューを提供します。
 .Png、.jpg、.gif ファイルとして書式設定された1つのスクリーンショットを提供できます。 スクリーンショットは、最大サイズが 1024 KB で 1366 x 768 ピクセルでなければなりません。
 
 **手順は次のとおりです。**

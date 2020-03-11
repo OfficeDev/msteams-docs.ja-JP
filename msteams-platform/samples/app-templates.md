@@ -2,12 +2,12 @@
 title: Microsoft Teams アプリテンプレート
 description: Microsoft Teams プラットフォームのアプリテンプレートのリンクと説明
 keywords: Microsoft Teams テンプレートサンプルのデモ
-ms.openlocfilehash: 7bbd1093a7d3d2ed29498ce79051549621784b57
-ms.sourcegitcommit: a955121927090ee01173d70628c388991f53d23b
+ms.openlocfilehash: e3eb7788515d9d44c820c472b24eeee44f4b0993
+ms.sourcegitcommit: 2a84a3c8b10771e37ce51bf603a967633947a3e4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "42416853"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "42587338"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams のアプリテンプレート
 
@@ -38,7 +38,7 @@ ms.locfileid: "42416853"
 
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
 
-![FAQ + gif](../assets/images/CompanyCommunicatorCompose.png)
+![FAQ プラス GIF](../assets/images/CompanyCommunicatorCompose.png)
 
 ## <a name="faq-plus"></a>FAQ プラス
 
@@ -61,9 +61,9 @@ ms.locfileid: "42416853"
 >
 >
 
-![FAQ + gif](../assets/images/FAQPlusEndUser.gif)
+![FAQ プラス GIF](../assets/images/FAQPlusEndUser.gif)
 
-## <a name="hr-support"></a>HR サポート
+## <a name="hr-support-bot"></a>人事サポートボット
 
 HR サポート bot は、問題が解決できないときに、そのループの人事チームのサポートプロフェッショナル/専門家を支援する bot&のフレンドリな質問です。 この場合は、bot がサポート技術情報に含まれている場合、ボットに質問をして応答を求めることができます。 できない場合は、ユーザーはクエリを送信して、チーム内から通知を受け取ることによってサポートを提供できる専門家の事前に構成されたチームに投稿することができます。 また、bot は、質問で事前に構成されたタグを検索することにより、推奨される人事ポリシー/質問へのリンクを提案します。 これらのタイルは、クイックリファレンスとして、関連付けられたタブにもあります。 人事サポートは、軽いウエイト QnA に適しており、組織内で新しいプロジェクト/イニシアチブを開始する際の迅速なサポートを提供します。
 
@@ -71,7 +71,7 @@ HR サポート bot は、問題が解決できないときに、そのループ
 
 ![HR サポート](../assets/images/expert-user.png)
 
-## <a name="list-search"></a>リスト検索
+## <a name="list-search-app"></a>検索アプリを一覧表示する
 
 Microsoft Teams でのコラボレーションは、多くの場合、SharePoint リスト内のアイテムに含まれている情報を参照します。 目的のアイテムへのリンクを貼り付けるだけで、すべてのユーザーに対して、会話からのコンテキストの切り替え、必要な情報の検索、および会話を続行するために Teams に戻ることが強制されます。 会話は、通常、新しいコメントを確認し、アイテム内に含まれる情報を更新するために、参照アイテムに再び切り替える必要があります。 このコンテキストの切り替えは、グループ作業をスムーズにするための障壁を作成し、その亀裂についてのレシピとなります。
 
@@ -81,7 +81,7 @@ Microsoft Teams でのコラボレーションは、多くの場合、SharePoint
 
 ![検索アプリを一覧表示する](../assets/images/list-search-template.png)
 
-## <a name="custom-stickers"></a>カスタム ステッカー
+## <a name="custom-stickers-app"></a>カスタムステッカーアプリ
 
 自己表現は、正常なチームのカルチャにとって中心的なものです。 このアプリテンプレートは、ユーザーが Microsoft Teams 内でカスタムステッカーと Gif を使用できるようにする[メッセージング拡張機能](~/messaging-extensions/what-are-messaging-extensions.md)です。 このテンプレートを使用すると、web ベースの構成を簡単に行うことができます。これにより、エンドユーザーが使用する Gif/ステッカー/画像を構成アクセス権を持つすべてのユーザーがアップロードできるようになります。
 
@@ -91,7 +91,7 @@ Microsoft Teams でのコラボレーションは、多くの場合、SharePoint
 
 ![ステッカーアプリ](../assets/images/stickers.png)
 
-## <a name="icebreaker"></a>アイスブレーカー
+## <a name="icebreaker-bot"></a>Icebreaker bot
 
 Icebreaker は[Microsoft Teams の bot](../bots/what-are-bots.md)で、チームは、2つのランダムなチームメンバーを毎週1つずつペアにすることによって近づくことができます。 Bot は、両方のメンバーに対して動作する空き時間を自動的に提案することで、スケジュールを簡単にします。 パーソナル接続を強化し、このアプリを使用して緊密な knit コミュニティを構築します。
 
@@ -158,4 +158,13 @@ Crowdsourcer は、チームが照会した情報をグループメンバーか�
 :::column-end:::
 :::row-end:::
 
+## <a name="incentives-app"></a>インセンティブアプリ
+
+インセンティブは、トレーニングや変更管理イニシアティブなど、指定されたアクティビティに incentivized 従業員の参加を管理し、追跡するための[Power Apps](/powerapps/maker/canvas-apps/embed-teams-app)テンプレートです。 管理者はアプリを使用して、指定されたアクティビティを確立し、完了するためにポイントを割り当て、報奨に必要な適格性ポイントレベルを指定します。 従業員はアプリを使用して、蓄積されたポイントを表示したり、適格性に達した場合には、redeemable 報奨に同意します。
+
+[GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-incentives)
+
+![インセンティブアプリのデモ](../assets/images/incentives-app.png)
+
 参照したいアプリテンプレートのアイデアがあるかどうか。 お知らせ[ください](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u)。
+
