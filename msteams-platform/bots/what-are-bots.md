@@ -4,22 +4,46 @@ author: clearab
 description: Microsoft Teams の会話ボットの概要。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 7bde886b67788a355181c83287d999a3bfb9727a
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
-ms.translationtype: HT
+ms.openlocfilehash: e10275cba97f835cd59e572b48d2db7cb902d096
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674746"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "42635306"
 ---
 # <a name="what-are-conversational-bots"></a>会話ボットとは
 
-会話ボットを使用すると、ユーザーは、テキスト、対話型カード、タスク モジュールで Web サービスとのやり取りができるようになります。 会話型ボットの機能は非常に柔軟性があり、単純なコマンドだけでなく、複雑で人工知能を搭載した自然言語処理の仮想アシスタントを処理できるようにスコープを設定することができます。 大規模なアプリケーションはもちろん、スタンドアロンのものにも適用することができます。
+会話ボットを使用すると、ユーザーは、テキスト、対話型カード、タスク モジュールで Web サービスとのやり取りができるようになります。 これらは非常に柔軟になっており、話し言葉の bot は、いくつかの簡単なコマンドまたは複雑で人為的に処理される、自然言語の仮想アシスタントを処理するようにスコープを設定できます。 大規模なアプリケーションの1つの側面、または完全にスタンドアロンにすることができます。
 
 以下の GIF は、テキストと対話型カードの両方を使用して、1 対 1 のチャットのボットで会話しているユーザーを示しています。 カード、テキスト、タスク モジュールを適切に組み合わせることが、便利なボットを作成するための鍵となります。 ボットでテキスト以上のことができるようになります。
 
 ![FAQ プラス GIF](~/assets/images/FAQPlusEndUser.gif)
 
-## <a name="what-tasks-are-best-handled-by-bots"></a>ボットによって最適に処理されるタスク
+## <a name="how-bots-work"></a>Bot のしくみ
+
+Teams の bot は3つの要素で構成されます。
+
+* ホストをして、公開している Web サービス。
+* Bot が Bot フレームワークに登録されます。
+* アプリマニフェストを含む Teams アプリパッケージ。 これは、ユーザーがインストールし、チームクライアントを Bot サービスを経由して web サービスに接続することです。
+
+Microsoft Teams のボットは、[Microsoft Bot Framework](https://dev.botframework.com/)に基づいて構築されています。 Bot フレームワークに基づく bot が既にインストールされている場合は、それを Microsoft Teams での動作に容易に適応させることができます。 [Sdk](/microsoftteams/platform/#pivot=sdk-tools)を利用するには、C# または node.js のどちらかを使用することをお勧めします。 これらのパッケージは、基本的な Bot ビルダー SDK のクラスとメソッドを次のように拡張します。
+
+* Office 365 コネクタカードなどの専用カードの種類を使用します。
+* アクティビティのチーム固有のチャネルデータを使用して設定します。
+* メッセージング拡張要求を処理します。
+
+> [!IMPORTANT]
+> 任意の Web プログラミング技術で Teams アプリを開発し、[Bot Framework REST API](/bot-framework/rest-api/bot-framework-rest-overview) を直接呼び出すことができますが、すべてのトークン処理を自分で実行する必要があります。
+
+> [!TIP]
+> Teams アプリ Studio * を使用すると、アプリマニフェストを作成して構成し、web サービスを bot フレームワーク上の bot として登録できます。 また、React 制御ライブラリと、対話型カードのビルダーも用意されています。 「[Teams App Studio を使う](~/concepts/build-and-test/app-studio-overview.md)」を*参照してください*。
+
+## <a name="webhooks-and-connectors"></a>Webhook とコネクタ
+
+Webhook とコネクタを使用すると、ワークフローやその他の単純なコマンドの開始など、基本的なやり取りを行うためのシンプルなボットを作成することができます。 これらのユーザーは、ボットが作成されたチーム内にのみ存在し、会社のワークフロー固有の基本プロセスでのみ利用することができます。 詳細については、「[Webhook とコネクタとは](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)」を*参照してください*。
+
+## <a name="where-bots-work-best"></a>Bot の最適な動作
 
 Microsoft Teams のボットは、1 対 1 の会話、グループ チャット、チーム内のチャネルで扱うことができます。 各スコープに、会話ボット向けの機能と条件があります。
 
@@ -44,28 +68,31 @@ Microsoft Teams のボットは、1 対 1 の会話、グループ チャット�
 
 これは、会話ボットがユーザーとやり取りする従来の方法です。 これにより、さまざまなワークロードを実現できます。 Q&A ボット、別のシステムでワークフローを開始するボット、ジョークを言うボット、メモを取るボットなどがありますが、これらはごく一部です。 機能を表示するための方法として、会話ベースのインターフェイスが最適な方法であるかどうかを必ず検討します。
 
-## <a name="how-do-bots-work"></a>ボットの機能
+## <a name="bot-fails"></a>Bot が失敗する
 
-ボットは、以下の 3 つで構成されています。
+### <a name="having-multi-turn-experiences-in-chat"></a>チャットでの複数ターンエクスペリエンス
 
-* ホストをして、公開している Web サービス。
-* ボット登録 (Bot Framework にボットを登録する)。
-* アプリ マニフェストを含む Teams アプリ パッケージ。 これは、ユーザーがインストールし、Teams クライアントを Web サービスに接続 (Bot Service を経由してルーティング) します。
+Bot とユーザーの間の広範なダイアログは、タスクを完了するための低速で複雑な方法であり、開発者が状態を維持する必要もあります。 この状態を終了するには、ユーザーはタイムアウトまたは「*キャンセル*」と入力する必要があります。 すべてのプロセスは、不必要に面倒です。
 
-Microsoft Teams のボットは、[Microsoft Bot Framework](https://dev.botframework.com/)に基づいて構築されています。 (Bot Framework に基づくボットが既にある場合は、そのボットを Microsoft Teams での動作に容易に適応させることができます)。[SDK](/microsoftteams/platform/#pivot=sdk-tools) を利用するには、C# か Node.js のどちらかを使用することをお勧めします。 これらのパッケージは、以下の基本的な Bot Builder SDK のクラスとメソッドを拡張します。
+ユーザー: Megan を使用して会議をスケジュールします。
 
-* Office 365 コネクタ カードなどの専用のカードの使用。
-* アクティビティに関する Teams 固有のチャネル データの使用と設定。
-* メッセージング拡張要求の処理。
+BOT: 200 の結果が見つかった場合は、姓と名を含めるようにしてください。
 
-> [!IMPORTANT]
-> 任意の Web プログラミング技術で Teams アプリを開発し、[Bot Framework REST API](/bot-framework/rest-api/bot-framework-rest-overview) を直接呼び出すことができますが、すべてのトークン処理を自分で実行する必要があります。
+ユーザー: Megan Bowen を使用して会議をスケジュールします。
 
-*Teams App Studio* を使用すれば、アプリ マニフェストの作成と構成を行うことができ、Web サービスを Bot Framework のボットとして登録することができます。 また、React 制御ライブラリと、対話型カードのビルダーも用意されています。 「[Teams App Studio を使う](~/concepts/build-and-test/app-studio-overview.md)」を*参照してください*。
+BOT: Megan Bowen とどのような時間を使用しますか?
 
-## <a name="webhooks-and-connectors"></a>Webhook とコネクタ
+ユーザー: 1:00 pm。
 
-Webhook とコネクタを使用すると、ワークフローやその他の単純なコマンドの開始など、基本的なやり取りを行うためのシンプルなボットを作成することができます。 これらのユーザーは、ボットが作成されたチーム内にのみ存在し、会社のワークフロー固有の基本プロセスでのみ利用することができます。 詳細については、「[Webhook とコネクタとは](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)」を*参照してください*。
+BOT: どちらの日になりますか?
+
+### <a name="supporting-too-many-commands"></a>サポートするコマンドの数が多すぎる
+
+特に広範なコマンドをサポートしているボットは、ユーザーによって成功または肯定されることはありません。 現在の bot メニューに表示されるコマンドは6つだけなので、どのような頻度でも使用される可能性はほとんどありません。 広範なアシスタントではなく、特定の地域に深く関係している bot は、fare に適しています。
+
+### <a name="maintaining-a-large-retrieval-knowledge-base-with-unranked-responses"></a>ランク付けされていない応答を持つ大規模な取得ナレッジベースを維持する
+
+Bot は短時間ですばやく対話するのに適していますが、sifting では、回答を検索するのに長いリストは含まれていません。
 
 ## <a name="get-started"></a>作業の開始
 
@@ -74,5 +101,8 @@ Webhook とコネクタを使用すると、ワークフローやその他の単
 
 ## <a name="learn-more"></a>詳細情報
 
-* [Teams でのボットの基本](~/bots/bot-basics.md)
-* [Teams のボットを作成する](~/bots/how-to/create-a-bot-for-teams.md)
+> [!div class="nextstepaction"]
+> [Teams でのボットの基本](~/bots/bot-basics.md)
+
+> [!div class="nextstepaction"]
+> [Teams のボットを作成する](~/bots/how-to/create-a-bot-for-teams.md)

@@ -2,12 +2,12 @@
 title: 事前メッセージ
 description: Bot が Microsoft Teams で会話を開始できることについて説明します。
 keywords: teams シナリオの予防的なメッセージング会話 bot
-ms.openlocfilehash: 2f644820da33acc885a7972b13a1f61c167d6d8f
-ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
+ms.openlocfilehash: 30a21a15126e489ec50f8d3b7307880921d6062b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "42228067"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "42635320"
 ---
 # <a name="proactive-messaging-for-bots"></a>Bot のための事前のメッセージング
 
@@ -65,7 +65,7 @@ Bot は、ユーザーの*一意の id*とテナント id を取得すること�
 > [!Note]
 > Graph を使用してアプリを事前にインストールするのは、現在ベータ版です。
 
-場合によっては、既にインストールされていない、またはアプリと対話していないメッセージユーザーを予防的に行う必要があります。 たとえば、[会社の communicator](~/samples/app-templates.md#company-communicator)を使用して組織全体にメッセージを送信するとします。 このシナリオでは、Graph API を使用して、ユーザー用のアプリを事前にインストールし、インストール時に`conversationUpdate`アプリが受け取るイベントから必要な値をキャッシュすることができます。
+場合によっては、既にインストールされていない、またはアプリと対話していないメッセージユーザーを予防的に行う必要があります。 たとえば、[会社の communicator](~/samples/app-templates.md#company-communicator-app)を使用して組織全体にメッセージを送信するとします。 このシナリオでは、Graph API を使用して、ユーザー用のアプリを事前にインストールし、インストール時に`conversationUpdate`アプリが受け取るイベントから必要な値をキャッシュすることができます。
 
 組織のアプリカタログまたは Teams アプリストアにあるアプリのみをインストールできます。
 

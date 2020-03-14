@@ -4,12 +4,12 @@ author: clearab
 description: Microsoft Teams bot で予防的なメッセージを送信する方法。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 2821e4d7ddeb74b3921be792cc55a136ab4ac5e4
-ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
+ms.openlocfilehash: 566b93f519001cbc2470b43e4729fa8b4aa0a9d2
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "42228081"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "42635278"
 ---
 # <a name="send-proactive-messages"></a>事前にメッセージを送信する
 
@@ -68,7 +68,7 @@ Bot は、ユーザーの*一意の id*とテナント id を取得すること�
 > [!Note]
 > Graph を使用してアプリを事前にインストールするのは、現在ベータ版です。
 
-場合によっては、既にインストールされていない、またはアプリと対話していないメッセージユーザーを予防的に行う必要があります。 たとえば、[会社の communicator](~/samples/app-templates.md#company-communicator)を使用して組織全体にメッセージを送信するとします。 このシナリオでは、Graph API を使用して、ユーザー用のアプリを事前にインストールし、インストール時に`conversationUpdate`アプリが受け取るイベントから必要な値をキャッシュすることができます。
+場合によっては、既にインストールされていない、またはアプリと対話していないメッセージユーザーを予防的に行う必要があります。 たとえば、[会社の communicator](~/samples/app-templates.md#company-communicator-app)を使用して組織全体にメッセージを送信するとします。 このシナリオでは、Graph API を使用して、ユーザー用のアプリを事前にインストールし、インストール時に`conversationUpdate`アプリが受け取るイベントから必要な値をキャッシュすることができます。
 
 組織のアプリカタログまたは Teams アプリストアにあるアプリのみをインストールできます。
 
