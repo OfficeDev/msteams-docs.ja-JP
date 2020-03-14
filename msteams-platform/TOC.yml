@@ -5,7 +5,7 @@
       href: overview.md
     - name: 新機能
       href: whats-new.md
-- name: 作業の開始
+- name: はじめに
   items:
     - name: 'C を使用してアプリを作成する#'
       href: tutorials/get-started-dotnet-app-studio.md
@@ -19,6 +19,8 @@
       href: samples/code-samples.md
     - name: 運用に対応したアプリテンプレート
       href: samples/app-templates.md
+    - name: 本番対応のシフトコネクタ
+      href: samples/shifts-wfm-connectors.md
 - name: 概念
   expanded: true
   items:
@@ -149,7 +151,7 @@
       items:
         - name: 'C の Teams 会話 bot#'
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot'
-        - name: JavaScript での Teams の会話のボット
+        - name: JavaScript での Teams 会話ボット
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot'
         - name: Python での Teams の会話のボット
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/57.teams-conversation-bot'
@@ -160,7 +162,7 @@
     - name: 使い方ガイド
       expanded: true
       items:
-        - name: Teams の bot を作成する
+        - name: Teams のボットを作成する
           href: bots/how-to/create-a-bot-for-teams.md
         - name: 会話
           items:
@@ -304,7 +306,7 @@
       items:
         - name: 受信 webhook を作成する
           href: webhooks-and-connectors/how-to/add-incoming-webhook.md
-        - name: 送信 webhook を作成する
+        - name: 送信 Webhook を作成する
           href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
         - name: O365 コネクタを作成する
           href: webhooks-and-connectors/how-to/connectors-creating.md
