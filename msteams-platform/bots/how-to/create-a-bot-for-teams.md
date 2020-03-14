@@ -5,12 +5,12 @@ description: Microsoft Teams 用にボットを作成する方法。
 ms.topic: conceptual
 localization_priority: Priority
 ms.author: anclear
-ms.openlocfilehash: 9e0bd603772cf4da8465a638c4a7f5b426a1fbfb
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: b9999fb8fcb39b4cd70789d909fecd9cad13e5d7
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675021"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "42635299"
 ---
 # <a name="create-a-bot-for-microsoft-teams"></a>Microsoft Teams 用にボットを作成する
 
@@ -62,9 +62,9 @@ Azure に登録されていない既存の Bot Framework 登録のプロパテ�
 
 #### <a name="using-app-studio"></a>App Studio を使用する場合
 
-*App Studio* は Teams アプリの作成に役立つ Teams アプリで、これを使用して Web サービスをボットとして登録したり、アプリ マニフェストを作成したり、アプリ パッケージを作成したりできます。 React 制御ライブラリとカード用の構成可能なサンプルも含まれています。 「[Teams App Studio を使う](../../concepts/build-and-test/app-studio-overview.md)」を参照してください。
+*App Studio* は Teams アプリの構築に役立つ Teams アプリケーションです。これを使用して Web サービスをボットとして登録、アプリ マニフェストやアプリ パッケージの作成、設定や構成の更新などができます。 React 制御ライブラリとカード用の構成可能なサンプルも含まれています。 「[Teams App Studio を使う](../../concepts/build-and-test/app-studio-overview.md)」を参照してください。
 
-繰り返しますが、App Studio を使用して Web サービスを登録する場合は、https://dev.botframework.com/bots にアクセスして登録を管理する必要があります。 一部の設定 (メッセージング エンドポイントなど) は App Studio でも更新できます。
+繰り返しますが、App Studio を使用して Web サービスを登録する場合は、https://dev.botframework.com/bots にアクセスして登録を管理する必要があります。
 
 #### <a name="in-the-legacy-portal"></a>従来のポータルを使用する場合
 
