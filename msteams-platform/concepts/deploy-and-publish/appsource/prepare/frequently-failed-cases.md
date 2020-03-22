@@ -4,12 +4,12 @@ description: 送信に関するヒントと最も失敗したポリシーにつ�
 author: laujan
 ms.author: lajanuar
 ms.topic: how to
-ms.openlocfilehash: 75ac2a01f1ccd8e38977e1cd099544e7dd160733
-ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
+ms.openlocfilehash: 12d0f39da24fc6850d74c9c78728b6a9b6de587a
+ms.sourcegitcommit: 576a4768b835422545cb6b6b3f75dce8318ea02d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42279789"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42896521"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>アプリの送信を成功させるためのヒント
 
@@ -51,7 +51,7 @@ ms.locfileid: "42279789"
 
 認証の詳細については、次を参照してください。
 
-* [認証のドキュメント](/concepts/authentication/authentication.md)
+* [認証のドキュメント](../../../authentication/authentication.md)
 * [ノード内の Bot 認証のサンプル](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
 * [ノード内のタブ認証のサンプル](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
 * [C#/.NET の Tab/bot 認証](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)

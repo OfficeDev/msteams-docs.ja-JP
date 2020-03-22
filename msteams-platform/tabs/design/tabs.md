@@ -2,12 +2,12 @@
 title: タブの設計ガイドライン
 description: コンテンツとコラボレーションのタブを作成するためのガイドラインについて説明します。
 keywords: teams 設計ガイドラインリファレンスフレームワークタブの構成
-ms.openlocfilehash: c718dd897d314ecb5acfbb7cc537b8eead142b0c
-ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
+ms.openlocfilehash: 409c8994b4266e37146038df054c0da6fb887607
+ms.sourcegitcommit: 576a4768b835422545cb6b6b3f75dce8318ea02d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42365263"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "42896500"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>すべてのタブを使用したコンテンツと会話
 
@@ -139,7 +139,7 @@ Teams は、ウィンドウのサイズが720ピクセルの場合に使用で�
 
 > [!div class="checklist"]
 >
-> * **アプリ api を使用して、ユーザーに変更を通知**します。 このメッセージは、ユーザーのアクティビティフィードに表示され、タブに深くリンクします。「[Microsoft Teams のコンテンツと機能への詳細なリンクの作成](/concepts/build-and-test/deep-links?view=msteams-client-js-latest) *」を参照してください*。  
+> * **アプリ api を使用して、ユーザーに変更を通知**します。 このメッセージは、ユーザーのアクティビティフィードに表示され、タブに深くリンクします。「[Microsoft Teams のコンテンツと機能への詳細なリンクの作成](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest) *」を参照してください*。  
 > * **Bot を使用**します。 このメソッドは、特に Tab スレッドが対象の場合に適しています。 その結果、タブのスレッド化されたスレッドは、最近アクティブな状態で表示されるようになります。 また、このメソッドを使用すると、通知の送信方法をいくらか洗練することができます。
 
   Tab スレッドにメッセージを送信すると、すべてのユーザーに対して明示的に通知することなく、すべてのユーザーに対するアクティビティの認識が向上します。 これは、ノイズなしで認識されます。 さらに、 `@mention`特定のユーザーがフィードに同じ通知を配置する場合は、それらをタブスレッドに直接リンクします。

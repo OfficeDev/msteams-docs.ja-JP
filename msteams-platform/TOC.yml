@@ -5,7 +5,7 @@
       href: overview.md
     - name: 新機能
       href: whats-new.md
-- name: はじめに
+- name: 使用を開始する
   items:
     - name: 'C を使用してアプリを作成する#'
       href: tutorials/get-started-dotnet-app-studio.md
@@ -94,13 +94,13 @@
                   href: concepts/deploy-and-publish/appsource/post-publish/overview.md
                 - name: アプリケーション証明書プログラム
                   href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
-    - name: Teams アプリでの認証
+    - name: アプリでの認証フロー
       items:
         - name: 認証の概要
           href: concepts/authentication/authentication.md
         - name: Id プロバイダーを構成する
           href: concepts/authentication/configure-identity-provider.md
-- name: メッセージング拡張機能によるタスク指向の相互作用
+- name: メッセージング拡張機能
   items:
     - name: メッセージング拡張機能とは
       href: messaging-extensions/what-are-messaging-extensions.md
@@ -141,11 +141,13 @@
           href: messaging-extensions/how-to/link-unfurling.md
         - name: 認証を追加する
           href: messaging-extensions/how-to/add-authentication.md
+        - name: 構成ページを追加する
+          href: messaging-extensions/how-to/add-configuration-page.md
 - name: 話し言葉の Bot
   items:
     - name: Microsoft Teams のボットとは
       href: bots/what-are-bots.md
-    - name: Bot のしくみ
+    - name: ボットの機能
       href: bots/bot-basics.md
     - name: Quickstarts
       items:
@@ -212,7 +214,7 @@
           href: bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md
         - name: アプリケーションによりホストされているメディア
           href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-- name: タブによる埋め込み Web エクスペリエンス
+- name: タブ
   items:
     - name: ユーザー設定のタブとは
       href: tabs/what-are-tabs.md
@@ -297,7 +299,7 @@
           href: task-modules-and-cards/task-modules/task-modules-bots.md
         - name: タブから
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
-- name: Webhooks とコネクタ
+- name: Webhook とコネクタ
   items:
     - name: Web フックとコネクタとは
       href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
