@@ -4,12 +4,12 @@ author: laujan
 description: Teams クライアント SDK を使用して、ユーザー設定のタブに Teams 対応機能を追加する方法
 keywords: teams タブグループチャネルの構成可能な静的 SDK JavaScript personal
 ms.topic: conceptual
-ms.openlocfilehash: eac5a8ec03ba12d926346afb40ca9bc6e9dda8d6
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 66d44617b897e44268ae2cee53f7ea64743ad821
+ms.sourcegitcommit: c4a7bc638e848a702cce92798cba84917fcecc35
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675104"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "42928511"
 ---
 # <a name="using-the-teams-client-sdk"></a>Teams クライアント SDK の使用
 
@@ -23,6 +23,8 @@ ms.locfileid: "41675104"
 | -----     | -----     | -----    | -----        |
 | `microsoftTeams.initialize()` | Teams ライブラリを初期化します。 この関数は、他の SDK 呼び出しの前に呼び出す必要があります。|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#initialize-any-)|
 |`microsoftTeams.getContext(callback: (context: Context)`| ページが実行されている現在の状態を取得します。 コールバックは、**コンテキスト**オブジェクトを取得します。|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#getcontext--context--context-----void-)<br/>[context obj](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest)|
+| `microsoftTeams.initializeWithContext({contentUrl: string, websiteUrl: string})` | ContentUrl と websiteUrl に応じて、Teams ライブラリを初期化し、タブの[フレームコンテキスト](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest)を設定します。 これにより、web サイトへの移動/再読み込みの機能が正しい URL に対して動作するようになります。|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#initializewithframecontext-framecontext--------void--string---)|
+| `microsoftTeams.setFrameContext({contentUrl: string, websiteUrl: string})` | ContentUrl と websiteUrl に応じて、タブの[フレームコンテキスト](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest)を設定します。 これにより、web サイトへの移動/再読み込みの機能が正しい URL に対して動作するようになります。|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#setframecontext-framecontext-)|
 | `microsoftTeams.registerFullScreenHandler(handler: (isFullScreen: boolean)` |ユーザーがタブの全画面表示/ウィンドウ表示を切り替えたときに登録されるハンドラー。|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#registerfullscreenhandler--isfullscreen--boolean-----void-)<br/>[boolean](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest#isfullscreen)|
 |`microsoftTeams.registerChangeSettingsHandler()` |ユーザーがタブを再構成するために [有効な**設定**] ボタンを選択したときに登録されるハンドラー。|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#registerchangesettingshandler-------void-)|
 | `microsoftTeams.getTabInstances(callback: (tabInfo: TabInformation),tabInstanceParameters?: TabInstanceParameters,)` |アプリによって所有されているタブを取得します。 コールバックは、 **Tabinformation**オブジェクトを取得します。 **Tabinstanceparameters**オブジェクトは、省略可能なパラメーターです。|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#gettabinstances--tabinfo--tabinformation-----void--tabinstanceparameters-)<br/>[tabInfo obj](/javascript/api/@microsoft/teams-js/microsoftteams.tabinformation?view=msteams-client-js-latest)|

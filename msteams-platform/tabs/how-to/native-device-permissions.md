@@ -2,12 +2,12 @@
 title: Microsoft Teams タブのデバイスへのアクセス許可を要求する
 description: 通常、ユーザーの同意を必要とするネイティブ機能へのアクセスを要求するためにアプリのマニフェストを更新する方法
 keywords: teams タブの開発
-ms.openlocfilehash: 454466ff17ecf275f6ae6c7413df8e117335f3c8
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: f0e19c0ed716147c097137c4ef0bf3454783b2eb
+ms.sourcegitcommit: c4a7bc638e848a702cce92798cba84917fcecc35
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674626"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "42928518"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-tab"></a>Microsoft Teams タブのデバイスへのアクセス許可を要求する
 
@@ -106,3 +106,7 @@ Notification.requestPermission(function(result) { /* ... */ });
 ```
 
 ![タブのデバイスアクセス許可のプロンプト](~/assets/images/tabs/device-permissions-prompt.png)
+
+## <a name="permission-behavior-across-login-sessions"></a>ログインセッション間でのアクセス許可の動作
+
+ネイティブデバイスのアクセス許可は、ログインセッションごとに保存されます。 これは、別の Teams インスタンス (別のコンピューターでは、) にログインすると、以前のセッションからのデバイスのアクセス許可が使用できなくなることを意味します。 代わりに、新しいログイン設定に対するデバイスのアクセス許可への同意を再度受ける必要があります。 これはつまり、Teams からログアウトした場合 (または Teams 内でテナントを切り替える場合)、その前回のログインセッションでデバイスのアクセス許可が削除されることを意味します。 ネイティブデバイスのアクセス許可を開発する場合は、次の点に注意してください。同意するネイティブの機能は、_現在_のログイン設定に対してのみ使用できます。
