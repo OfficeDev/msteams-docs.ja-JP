@@ -2,12 +2,12 @@
 title: 新機能
 description: Microsoft Teams のすべての新しい開発者向け機能について説明します。
 keywords: teams 新しい最新情報
-ms.openlocfilehash: ad02795c7ab84e290b83e781ea413dd3ef797fdb
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: f8550070ed010d99c0c33202ada95b64c05cdc4f
+ms.sourcegitcommit: 68aeac34a2e585b985eabfae5d160b6b26d43b1a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674599"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "42982145"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -15,8 +15,9 @@ ms.locfileid: "41674599"
 
 変更ログには、Microsoft Teams プラットフォームおよびこのドキュメントセットに対する変更が一覧表示されます。 場合によっては、Teams 開発者にとって重要な新しい機能に注意を向けるためにエントリを使用することがあります。
 
-| **Date** | **注** | **変更されたトピック** |
+| **Date** | **メモ** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+| 03/24/2020 | 会話の単一メンバーを取得するためのサポートが追加され、ページングされたメンバーを取得するためのサポートが追加されました。 | [Bot の Teams コンテキストを取得する](~/bots/how-to/get-teams-context.md)
 | 12/26/2019 | Bot `replyToId`に送信されるペイロードのパラメーターは暗号化されなくなりました。この値を使用して、これらのメッセージに deeplinks を構築できます。 メッセージペイロードには、パラメーター `legacy.replyToId`に暗号化された値が含まれています。  |
 | 11/5/2019 | Web コンテンツページで Teams JavaScript SDK を使用したシングルサインオンが開発者向けプレビューである | [シングル サインオン](~/tabs/how-to/authentication/auth-aad-sso.md) |
 | 10/31/2019 | 話し言葉のボットとメッセージング拡張機能のドキュメントは、4.6 Bot フレームワーク SDK を反映するように更新されました。 V3 SDK のドキュメントについては、「Resources」セクションを参照してください。 | すべてのボットおよびメッセージング拡張機能のドキュメント。 |
@@ -30,7 +31,7 @@ ms.locfileid: "41674599"
 | 05/20/2019 | メッセージアクション | [メッセージアクション](resources/messaging-extension-v3/create-extensions.md#action-type-message-extensions) |
 | 05/20/2019 | Link unfurling (カスタム URL プレビュー) | [Link unfurling](messaging-extensions/how-to/link-unfurling.md)|
 | 05/06/2019 | Store アプリ用のアプリケーション証明書プログラム | [アプリケーション証明書](~/publishing/application-certification.md) |
-| 05/06/2019 | アプリテンプレートが使用可能になりました。 | [アプリテンプレート](~/samples/app-templates.md) |
+| 05/06/2019 | アプリテンプレートが使用可能になりました。 | [アプリのテンプレート](~/samples/app-templates.md) |
 | 04/23/2019 | アクションベースのメッセージング拡張機能が使用可能になりました | [アクションベースのメッセージ拡張機能](~/concepts/messaging-extensions/create-extensions.md) |
 | 02/18/2019 | プライベートチャットへの詳細なリンクの作成は、開発者向けプレビューでは使用できません | [チャットへの詳細なリンク](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 01/23/2019 | タブコンテキストで SKU と licenceType の情報を提示する | [タブのコンテキスト](~/concepts/tabs/tabs-context.md) |
