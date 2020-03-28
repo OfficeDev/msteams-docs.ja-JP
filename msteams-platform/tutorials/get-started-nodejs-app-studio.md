@@ -3,12 +3,14 @@ title: アプリスタジオと node.js を使い始める
 description: Node.js とアプリ Studio を使用して Microsoft Teams での高度なアプリの構築を開始する
 keywords: 初級ノード .js nodejs アプリ Studio
 ms.date: 11/09/2018
-ms.openlocfilehash: 36da6d7445ad7780f6bbbf52ccce3e558c76be72
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.topic: tutorial
+ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
+ms.openlocfilehash: 92fbbdd30e9cdaf54644b42bf642ca5825bcec51
+ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675056"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "43034051"
 ---
 # <a name="get-started-on-the-microsoft-teams-platform-with-nodejs-and-app-studio"></a>Node.js とアプリ Studio を使用して Microsoft Teams プラットフォームで作業を開始する
 
@@ -186,7 +188,7 @@ Ngrok を使用してアプリを実行している場合は、いくつかの�
 }
 ```
 
-ここで、
+詳細は次のとおりです。
 
 MICROSOFT_APP_ID と MICROSOFT_APP_PASSWORD は、それぞれの bot の ID とパスワードです。
 NODE_DEBUG は、Visual Studio Code デバッグコンソールで bot で起こっていることを示します。
