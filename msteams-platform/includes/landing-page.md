@@ -6,12 +6,12 @@ layout: LandingPage
 ms.topic: landing-page
 localization_priority: Priority
 ms.author: lajanuar
-ms.openlocfilehash: 4bfbef38bdafac6afc6c19b01666d2df111f8d17
-ms.sourcegitcommit: 301be564aabaa7e1437a436053805cb9abecda21
+ms.openlocfilehash: 85fb1f4f3112da1022613ac7d9a9cd5f64081abd
+ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "42949471"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "43035597"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -354,7 +354,7 @@ ms.locfileid: "42949471"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>出席</h3>
+                                                    <h3>勤怠アプリ</h3>
                                                     <p>チームが、出席を記録し、要約レポートを生成できます。</p>
                                                 </div>
                                             </div>
@@ -373,7 +373,7 @@ ms.locfileid: "42949471"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>アソシエイト インサイト</h3>
+                                                    <h3>アソシエイト インサイト アプリ</h3>
                                                     <p>現場担当者が顧客からのフィードバックを取得できます。</p>
                                                 </div>
                                             </div>
@@ -394,6 +394,44 @@ ms.locfileid: "42949471"
                                                 <div class="cardText">
                                                     <h3>奨励アプリ</h3>
                                                     <p>アクティビティとイベントで奨励される参加を管理し、追跡します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-openbadges">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/dynamics-gdpr-center.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>バッジ アプリを開く</h3>
+                                                    <p>デジタル学習資格情報バッジの評価と追跡を行います。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-groupactivities">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/team-services-agile-customize.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>グループ アクティビティ アプリ</h3>
+                                                    <p>アクティビティ グループとコラボレーション ワークフローをすばやく作成、管理します。</p>
                                                 </div>
                                             </div>
                                         </div>
