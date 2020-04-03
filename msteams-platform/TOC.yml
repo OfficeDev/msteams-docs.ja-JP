@@ -5,7 +5,7 @@
       href: overview.md
     - name: 新機能
       href: whats-new.md
-- name: 使用を開始する
+- name: はじめに
   items:
     - name: 'C を使用してアプリを作成する#'
       href: tutorials/get-started-dotnet-app-studio.md
@@ -15,12 +15,12 @@
       href: tutorials/get-started-yeoman.md
 - name: サンプルとテンプレート
   items:
-    - name: サンプルアプリ
-      href: samples/code-samples.md
     - name: 運用に対応したアプリテンプレート
       href: samples/app-templates.md
     - name: 本番対応のシフトコネクタ
       href: samples/shifts-wfm-connectors.md
+    - name: サンプルアプリ
+      href: samples/code-samples.md
 - name: 概念
   expanded: true
   items:
