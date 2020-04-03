@@ -4,12 +4,12 @@ author: clearab
 description: メッセージング拡張機能のアクションコマンドからタスクモジュール送信アクションに応答する方法について説明します。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 33a9388ee84dcf03a5bda59c5a5139c6f49bde6c
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 6372a683a7c9f08551a9c0d126a0db2ab9212e66
+ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674939"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "43120263"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>タスクモジュール送信アクションに応答する
 
@@ -39,7 +39,7 @@ ms.locfileid: "41674939"
 
 次に、呼び出しメッセージを受信する例を示します。
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(
@@ -48,7 +48,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node.js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -61,7 +61,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 受け取る JSON オブジェクトの例を次に示します。 パラメーター `commandContext`は、メッセージング拡張機能がどこからトリガーされたかを示します。 `data`オブジェクトには、パラメーターとしてフォーム上のフィールドと、ユーザーが送信した値が含まれています。 ここでは、JSON オブジェクトを短縮して、最も関連のあるフィールドを強調表示します。
 
@@ -95,7 +95,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 `composeExtension/submitAction`要求に応答する最も一般的な方法は、[メッセージの作成] 領域に挿入されたカードです。 ユーザーは、このカードを会話に送信するかどうかを選択できます。 カードの使用の詳細については[、「カードおよびカードのアクション](~/task-modules-and-cards/cards/cards-actions.md)」を参照してください。
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(
@@ -132,7 +132,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node.js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -155,7 +155,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -204,7 +204,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 また、サブカード付きのメッセージをボット付きのチャネルに挿入することによって、送信アクションに応答することもできます。 ユーザーは、メッセージを送信する前にプレビューでき、必要に応じて編集や操作を行うこともできます。 これは、アダプティブカード応答を作成する前にユーザーから情報を収集する必要がある場合や、カードを操作した後にカードを更新する必要がある場合に、非常に便利です。 次のシナリオでは、アプリがこのフローをかなり使用して、チャネル会話に構成手順を含めずにポーリングを構成する方法を示します。
 
 1. ユーザーが [メッセージング] 拡張をクリックして、タスクモジュールをトリガーします。
-2. ユーザーは、タスク moudule を使用してポーリングを構成します。
+2. ユーザーは、タスクモジュールを使用してポーリングを構成します。
 3. タスクモジュールを送信した後、アプリは提供された情報を使用して、投票をアダプティブカード`botMessagePreview`として作成し、クライアントへの応答として送信します。
 4. ユーザーは、カードをチャネルに挿入する前に、アダプティブカードメッセージをプレビューできます。 アプリがまだチャネルのメンバーではない場合は、を`Send`クリックするとそのアプリが追加されます。
    1. ユーザーはメッセージを`Edit`選択して、元のタスクモジュールに返すこともできます。
@@ -215,7 +215,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 このフローを有効にするには、タスクモジュールは`composeExtension/submitAction` 、bot がチャネルに送信するカードのプレビューを使用して、最初のメッセージに応答する必要があります。 これにより、ユーザーは送信前にカードを確認することができます。また、インストールされていない場合は、お客様が会話に bot をインストールしようとします。
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(
@@ -256,7 +256,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node.js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -295,7 +295,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 >[!Note]
 >に`activityPreview`は、完全`message`に1つのアダプティブカード添付ファイルがあるアクティビティが含まれている必要があります。 `<< Card Payload >>`値は、送信するカードのプレースホルダーです。
@@ -323,7 +323,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 メッセージの内線番号は、次の2つの新しい種類の`composeExtension/submitAction`呼び出し`value.botMessagePreviewAction = "send"`に応答する`value.botMessagePreviewAction = "edit"`必要があります。
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionBotMessagePreviewEditAsync(
@@ -340,7 +340,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node.js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -357,7 +357,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -400,7 +400,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ユーザーが [**送信**] ボタンをクリックすると、 `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = send`が表示されます。 Web サービスは、アダプティブカードを使用した予防的なメッセージを作成して会話に送信する必要があります。また、呼び出しに応答することもできます。
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionBotMessagePreviewSendAsync(
@@ -427,7 +427,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node.js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -476,7 +476,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 次のような新しい`composeExtension/submitAction`メッセージが表示されます。
 
@@ -511,7 +511,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 検索コマンドを追加する
 

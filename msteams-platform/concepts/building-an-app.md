@@ -4,12 +4,12 @@ author: clearab
 description: Microsoft Teams 用アプリを構築するための一般的なプロセスについて理解します。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 7c748829c481373dd7dfa011bfba4e7de3aba1bb
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 7ec67c52f9321579da34c490175f6becc3a8fdfd
+ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674966"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "43120256"
 ---
 # <a name="building-an-app-for-microsoft-teams"></a>Microsoft Teams 用アプリを構築する
 
@@ -17,7 +17,7 @@ Microsoft Teams プラットフォーム上に構築されたアプリを作成�
 
 ## <a name="design-a-great-app"></a>魅力的なアプリを設計する
 
-Microsoft Teams 用のアプリケーションを正常に作成するための最も重要な手順は、適切な組み合わせの拡張ポイントと、利点を活用する UI 要素を選択することです。 場合によっては非常に簡単な決定がありますが、より複雑なアプリの場合は、アプリで解決しようとしている問題を把握し、ユーザーが Microsoft のアプリと対話できるさまざまな方法でソリューションをマッピングする必要があります。Teams クライアント。 コンテキストとスコープの重要性を過小評価しないようにしてください。 1対1のチャットでうまく機能する会話は、グループチャットまたはチャネル会話の一部として機能しない場合があります。
+Microsoft Teams 用のアプリケーションを正常に作成するための最も重要な手順は、適切な組み合わせの拡張ポイントと、利点を活用する UI 要素を選択することです。 場合によっては非常に簡単な決定がありますが、より複雑なアプリの場合は、アプリで解決しようとしている問題を把握し、ユーザーが Microsoft Teams クライアントでアプリと対話できるさまざまな方法でソリューションをマッピングするのに十分な時間を費やす必要があります。 コンテキストとスコープの重要性を過小評価しないようにしてください。 1対1のチャットでうまく機能する会話は、グループチャットまたはチャネル会話の一部として機能しない場合があります。
 
 1. 最初に、アプリで使用できる[Teams クライアントの拡張ポイントと UI 要素につい](~/concepts/extensibility-points.md)て説明します。
 
@@ -32,7 +32,7 @@ Microsoft Teams 用のアプリケーションを正常に作成するための�
 
 ## <a name="prepare-your-environment"></a>環境を準備する
 
-Teams アプリをアップロードしてテストできる環境があることを確認する必要があります。 Teams サブスクリプションに Teams が有効になっておらず、アプリをそこにアップロードできる場合は[、o365 開発者プログラムにサインアップ](https://dev.office.com/devprogram)して、開発目的で無料の Office 365 サブスクリプションにアクセスできるようにすることができます。
+Teams アプリをアップロードしてテストできる環境があることを確認する必要があります。 Teams サブスクリプションに Teams が有効になっておらず、アプリをそこにアップロードできる場合は[、o365 開発者プログラムにサインアップ](https://developer.microsoft.com/microsoft-365/dev-program)して、開発目的で無料の Office 365 サブスクリプションにアクセスできるようにすることができます。
 
 追加情報については[、「O365 の環境を準備する](~/concepts/build-and-test/prepare-your-o365-tenant.md)」を参照してください。
 
@@ -85,6 +85,6 @@ Web サービスは、インターネット (通常は Azure などのクラウ�
 
 入門チュートリアル:
 
-* [C でボットおよび tab アプリをビルドする#](~/tutorials/get-started-dotnet-app-studio.md)
-* [JavaScript/node.js でボットおよび tab アプリをビルドする](~/tutorials/get-started-nodejs-app-studio.md)
+* [C# でボットとタブ アプリをビルドする](~/tutorials/get-started-dotnet-app-studio.md)
+* [JavaScript または Node.js でボットとタブ アプリをビルドする](~/tutorials/get-started-nodejs-app-studio.md)
 * [[ごみ箱 (オマーン) ジェネレーターでアプリを作成する。](~/tutorials/get-started-yeoman.md)

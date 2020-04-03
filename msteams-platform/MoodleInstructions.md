@@ -3,12 +3,12 @@ title: Microsoft Teams との Moodle の統合をインストールする
 description: Microsoft Teams 用の Moodle 統合アプリをインストールして構成する方法
 keywords: Teams Moodle app integration plugin
 ms.date: 01/31/2019
-ms.openlocfilehash: 012d6e9c979386e892b5a47b7655208eca95e11a
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 2b48cfb0bbef9a531e69ae5620c11a8258acdc64
+ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674595"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "43120298"
 ---
 # <a name="installing-the-moodle-integration-with-microsoft-teams"></a>Microsoft Teams との Moodle の統合をインストールする
 
@@ -21,10 +21,10 @@ IT 管理者がこの統合を簡単に設定できるようにするため、�
 * Azure AD での Moodle サーバーの自動登録。
 * Moodle Assistant bot を Azure に1回クリックして展開します。
 * すべてのまたは選択した Moodle のコースに対して、teams の自動プロビジョニングとチーム登録の自動同期を行います。
-* 同期された各チームへの Moodle タブと Moodle アシスタントの自動インストール。 (近日中)
-* ワンクリックで Moodle アプリをプライベート Teams アプリストアに発行します。 (近日中)
+* 同期された各チームへの Moodle タブと Moodle アシスタントの自動インストール。 (近日公開予定)
+* ワンクリックで Moodle アプリをプライベート Teams アプリストアに発行します。 (近日公開予定)
 
-この統合によって提供される機能の詳細については、[ここ](https://education.microsoft.com/courses-and-resources/resources/microsoft-teams-moodle)を参照してください。
+この統合によって提供される機能の詳細については、[ここ](https://education.microsoft.com/resource/3dffb3a8)を参照してください。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -71,7 +71,7 @@ Moodle プラグインをインストールする方法の詳細については�
     * 抽出したフォルダーを開きます。
     * `Moodle-AzureAD-Script.ps1`ファイルを右クリックし、[**プロパティ**] を選択します。
     * [プロパティ] ウィンドウの [**全般**] タブで、 `Unblock`下部にある [ **Security** ] 属性の横のチェックボックスをオンにします。
-    * **[OK]** をクリックします。
+    * [**OK**] をクリックします。
     * 抽出したフォルダーのディレクトリパスをコピーします。
 1. 次に、PowerShell を管理者として実行します。
     * [開始] をクリックします。

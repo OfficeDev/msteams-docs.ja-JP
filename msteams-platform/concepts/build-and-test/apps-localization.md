@@ -3,12 +3,12 @@ title: チームアプリのローカライズ
 description: アプリのローカライズに関する問題について説明します。
 keywords: teams 発行ストア office 発行アプリソースのローカライズ言語
 ms.date: 05/15/2018
-ms.openlocfilehash: 0affa61ee1967a0e1bc19e423f05049bad750ce7
-ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
+ms.openlocfilehash: c7d8ff47d370badcc75e3ad5d10a2ca298b80195
+ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42279762"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "43120284"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>Microsoft Teams アプリのローカライズ
 
@@ -78,7 +78,7 @@ Teams クライアントは、次の順序で文字列を適用します。 defa
 ユーザーの言語が "en-us" に設定されている場合: 
 
 1. Teams クライアントは、' fr ' 文字列を ' en ' 文字列で上書きする必要があります。
-2. ' En-ca ' localazation 指定されていないため、' en ' ローカライズが使用されます。
+2. ' En-ca ' ローカライズは提供されていないため、' en ' ローカライズが使用されます。
 
 ユーザーの言語が "es-es" に設定されている場合、Teams クライアントは ' fr ' 文字列を受け取ります。これらの言語ファイルでは上書きされません。
 

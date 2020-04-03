@@ -4,12 +4,12 @@ author: clearab
 description: Microsoft Teams の会話ボットの概要。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: e10275cba97f835cd59e572b48d2db7cb902d096
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
-ms.translationtype: HT
+ms.openlocfilehash: 132b71a4da7462c426468c7fc2f79b26b6fbb03b
+ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "42635306"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "43120291"
 ---
 # <a name="what-are-conversational-bots"></a>会話ボットとは
 
@@ -92,7 +92,7 @@ Microsoft Teams のボットは、1 対 1 の会話、グループ チャット�
 
 ### <a name="maintaining-a-large-retrieval-knowledge-base-with-unranked-responses"></a>ランクが未設定の応答を使用した大規模な情報入手ナレッジ ベースの維持
 
-ボットは、長いリストから答えを調べ出すようなものではなく、短く簡単なやり取りに最適です。
+Bot は、短時間で簡単にやり取りするのに最も適しています。これは、sifting ではなく、回答を探すために長いリストを使用しています。
 
 ## <a name="get-started"></a>作業の開始
 

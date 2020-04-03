@@ -2,12 +2,12 @@
 title: Office 365 テナントの準備
 description: Office 365 で Teams の使用を開始する方法
 keywords: Office 365 テナントチームのアップロードを構成する
-ms.openlocfilehash: 634392ea3f0228aef69ff920d3b369eb49dd3965
-ms.sourcegitcommit: 060b486c38b72a3e6b63b4d617b759174082a508
+ms.openlocfilehash: 35f102223a5f8e6a8e12268e22aedca07a61b1fa
+ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "41953496"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "43120270"
 ---
 # <a name="prepare-your-office-365-tenant"></a>Office 365 テナントの準備
 
@@ -23,7 +23,7 @@ Office 365 サブスクライバーの場合は、次のいずれかの[プラ�
 
 ## <a name="just-need-a-development-environment"></a>開発環境のみが必要ですか。
 
-現在 Office 365 アカウントを持っていない場合は、 [office 365 Developer Program](https://dev.office.com/devprogram)サブスクリプションにサインアップできます。 これは90日間*無料*で、開発アクティビティに使用している間は継続的に更新されます。 Visual Studio *Enterprise*または*Professional*サブスクリプションを所有している場合は、両方のプログラムに無料の Office 365[開発者サブスクリプション](https://aka.ms/MyVisualStudioBenefits)が含まれています。これは、visual studio サブスクリプションの有効期間中にアクティブになります。 *「* [Microsoft 365 developer サブスクリプションをセットアップする」を](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started)参照してください。
+現在 Office 365 アカウントを持っていない場合は、 [office 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program)サブスクリプションにサインアップできます。 これは90日間*無料*で、開発アクティビティに使用している間は継続的に更新されます。 Visual Studio *Enterprise*または*Professional*サブスクリプションを所有している場合は、両方のプログラムに無料の Office 365[開発者サブスクリプション](https://aka.ms/MyVisualStudioBenefits)が含まれています。これは、visual studio サブスクリプションの有効期間中にアクティブになります。 *「* [Microsoft 365 developer サブスクリプションをセットアップする」を](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started)参照してください。
 
 ## <a name="enable-microsoft-teams-for-your-organization"></a>組織に対して Microsoft Teams を有効にする
 
