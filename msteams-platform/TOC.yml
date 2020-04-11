@@ -46,7 +46,7 @@
               href: concepts/design/components/typography.md
             - name: フィールドと Flyouts
               href: concepts/design/components/fields.md
-            - name: Dialogs
+            - name: ダイアログ
               href: concepts/design/components/dialogs.md
     - name: アプリをビルドしてテストする
       items:
@@ -143,7 +143,7 @@
           href: messaging-extensions/how-to/add-authentication.md
         - name: 構成ページを追加する
           href: messaging-extensions/how-to/add-configuration-page.md
-- name: 話し言葉の Bot
+- name: ボット
   items:
     - name: Microsoft Teams のボットとは
       href: bots/what-are-bots.md

@@ -1,15 +1,15 @@
 ---
-title: フィードバックの送信
-description: Microsoft Teams 開発者プラットフォームにフィードバックを提供する
-keywords: teams フィードバックの質問はバグの投稿に問題がある
-ms.openlocfilehash: 1f92a1f685632a9bb1bcae9e382b3b651561ead7
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+title: サポートとフィードバック
+description: Microsoft Teams 開発者向けサポートとフィードバック
+keywords: teams フィードバック開発者からの質問問題連絡サポート要求バグ投稿
+ms.openlocfilehash: 9bec08dc1c40267445a54f31013a8ea9456ccb56
+ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674950"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "43225785"
 ---
-# <a name="send-feedback-about-the-microsoft-teams-developer-platform"></a>Microsoft Teams 開発者プラットフォームに関するフィードバックの送信
+# <a name="microsoft-teams-developer-support-and-feedback"></a>Microsoft Teams 開発者向けサポートとフィードバック  
 
 Microsoft Team product team は、開発者コミュニティに複数のチャネルで対応します。
 

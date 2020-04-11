@@ -3,13 +3,13 @@ title: Teams の bot に認証を追加する
 author: clearab
 description: Microsoft Teams の bot に OAuth 認証を追加する方法。
 ms.topic: overview
-ms.author: anclear
-ms.openlocfilehash: 63d06100f69a5dc3777bdfb20b3231a85dce1f04
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: 4a573037e970be3f6c010a0a3c4b2e18be811d2f
+ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674784"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "43225799"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Teams の bot に認証を追加する
 
@@ -25,11 +25,11 @@ Azure Bot サービスが認証を処理する方法の詳細については、�
 
 この記事では、以下について説明します。
 
-- **認証を有効にした bot を作成する方法**。 ユーザーのサインイン資格情報と認証トークンの生成を処理するには、 [cs-auth-サンプル][teams-auth-bot]を使用します。
+- **認証を有効にした bot を作成する方法**。 ユーザーのサインイン資格情報と認証トークンの生成を処理するには、 [cs-auth-サンプル][teams-auth-bot-cs]を使用します。
 - **Bot を Azure に展開し、id プロバイダーに関連付ける方法について説明**します。 プロバイダーは、ユーザーのサインイン資格情報に基づいてトークンを発行します。 Bot は、トークンを使用して、メールサービスなど、認証を必要とするリソースにアクセスできます。 詳細については、「[ボットの Microsoft Teams 認証フロー](auth-flow-bot.md)」を参照してください。
 - **Microsoft Teams 内で bot を統合する方法**。 Bot が統合されたら、チャットでサインインしてメッセージを交換することができます。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須条件
 
 - ボットの[基礎][concept-basics]知識、[状態の管理][concept-state]、[ダイアログライブラリ][concept-dialogs]、[シーケンシャルな会話フローを実装][simple-dialog]する方法を理解します。
 - Azure および OAuth 2.0 の開発に関する知識。
@@ -39,8 +39,9 @@ Azure Bot サービスが認証を処理する方法の詳細については、�
 
     | 例 | BotBuilder のバージョン | もの |
     |:---|:---:|:---|
-    | **** [(Cs 認証)-auth-サンプル][teams-auth-bot] | ipv4 | OAuthCard のサポート |
-    | Python の**Bot 認証**の[例][teams-auth-bot-py] | ipv4 | OAuthCard のサポート |
+    | **Bot authentication** [(Cs 認証)-auth-サンプル][teams-auth-bot-cs] | ipv4 | OAuthCard のサポート |
+    | Js の**ボット認証** [-auth-サンプル][teams-auth-bot-js] | ipv4| OAuthCard のサポート  |
+    | Py での**Bot 認証**-[サンプル][teams-auth-bot-py] | ipv4 | OAuthCard のサポート |
 
 ## <a name="create-the-resource-group"></a>リソースグループを作成する
 
@@ -64,7 +65,7 @@ Azure Bot サービスが認証を処理する方法の詳細については、�
 
 1. [**Azure portal**][azure-portal]の左側のナビゲーションパネルで、[**リソースの作成**] を選択します。
 1. [検索] ボックスに「 *App Service Plan*」と入力します。 検索結果から**App Service プラン**カードを選択します。
-1. [**作成**] を選択します。
+1. **[作成]** を選択します。
 1. 次の情報を入力するように求められます。
     1. **サブスクリプション**。 既存のサブスクリプションを使用できます。
     1. **リソースグループ**。 前に作成したグループを選択します。
@@ -73,7 +74,7 @@ Azure Bot サービスが認証を処理する方法の詳細については、�
     1. **地域**。 [ *WEST US* ] または [アプリケーションに近い地域] を選択します。
     1. **価格レベル**。 *標準 S1*が選択されていることを確認します。 これは既定値である必要があります。
     1. [**確認して作成**] ボタンを選択します。 *検証が成功*したことを示すバナーが表示されます。
-    1. [**作成**] を選択します。 App service プランを作成するには、数分かかる場合があります。 計画がリソースグループに一覧表示されます。
+    1. **[作成]** を選択します。 App service プランを作成するには、数分かかる場合があります。 計画がリソースグループに一覧表示されます。
 
 ## <a name="create-the-bot-channels-registration"></a>Bot チャネル登録を作成する
 
@@ -122,7 +123,7 @@ Azure で登録リソースが作成されると、リソースグループリ�
    1. [**クライアントシークレット**] で、[**新しいクライアントシークレット**&#x2795;] を選択します。
    1. このシークレットを、 *Teams の Bot id アプリ*など、このアプリ用に作成する必要がある他のユーザーから識別するための説明を追加します。
    1. 選択範囲に**期限**を設定します。
-   1. **[追加]** を選択します。
+   1. [**追加**] を選択します。
    1. このページを終了する前に、**シークレットを録音して**ください。 この値は、ボットを使用して Azure AD アプリケーションを登録するときに、_クライアントシークレット_として後で使用します。
 
 ### <a name="configure-the-identity-provider-connection-and-register-it-with-the-bot"></a>Id プロバイダー接続を構成し、bot に登録する
@@ -134,7 +135,7 @@ Azure で登録リソースが作成されると、リソースグループリ�
 1. フォームに次のように入力します。
 
     1. **名前**です。 接続の名前を入力します。 この名前は、 `appsettings.json`ファイル内の bot で使用します。 たとえば、 *BotTeamsAuthADv1*のようになります。
-    1. **サービスプロバイダー**。 **Azure Active Directory** を選択します。 このチェックボックスをオンにすると、Azure AD 固有のフィールドが表示されます。
+    1. **サービスプロバイダー**。 [**Azure Active Directory**] を選択します。 このチェックボックスをオンにすると、Azure AD 固有のフィールドが表示されます。
     1. **クライアント id**。前述の手順で、Azure id プロバイダアプリ用に記録したアプリケーション (クライアント) ID を入力します。
     1. **クライアントシークレット**。 前述の手順で、Azure id プロバイダアプリ用に記録したシークレットを入力します。
     1. **許可の種類**。 Enter `authorization_code`キーを押します。
@@ -172,9 +173,9 @@ Azure で登録リソースが作成されると、リソースグループリ�
 
 事前設定を完了したら、この記事で使用する bot の作成に重点を置いて説明します。
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-1. 複製の[cs-auth-サンプル][teams-auth-bot]。
+1. 複製の[cs-auth-サンプル][teams-auth-bot-cs]。
 1. Visual Studio を起動します。
 1. ツールバーの [**ファイル]-> [> プロジェクト/ソリューション**] を選択し、bot プロジェクトを開きます。
 1. C# では、次のようにして**appsettings**を更新します。
@@ -182,7 +183,7 @@ Azure で登録リソースが作成されると、リソースグループリ�
     - Bot `ConnectionName`チャネル登録に追加した id プロバイダー接続の名前に設定します。 この例で使用した名前は*BotTeamsAuthADv1*です。
     - Bot `MicrosoftAppId`チャネル登録時に保存した**bot アプリ ID**に設定します。
     - Bot `MicrosoftAppPassword`チャネル登録時に保存した**お客様のシークレット**に設定します。
-    - `ConnectionName`を id プロバイダー接続の名前に設定します。 
+    - `ConnectionName`を id プロバイダー接続の名前に設定します。
 
     Bot シークレットの文字によっては、パスワードを XML エスケープする必要があります。 たとえば、任意のアンパサンド (&) をとして`&amp;`エンコードする必要があります。
 
@@ -190,9 +191,28 @@ Azure で登録リソースが作成されると、リソースグループリ�
 
 1. ソリューションエクスプローラー `TeamsAppManifest`で、フォルダーに移動して、ボット`manifest.json`チャネルの`id`登録`botId`時に保存した**bot アプリ ID**を開き、設定します。
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="javascript"></a>[JavaScript](#tab/node-js)
 
-1. Github リポジトリからサンプル[Teams bot 認証][teams-auth-bot-py]のクローンを作成します。
+1. クローン[ノード-auth-サンプル][teams-auth-bot-js]。
+1. コンソールで、プロジェクトに移動します。 </br></br>
+`cd samples/javascript_nodejs/46.teams`  
+1. モジュールをインストールする</br></br>
+`npm install`
+1. 次のようにして、 **env**構成を更新します。
+
+    - Bot `MicrosoftAppId`チャネル登録時に保存した**bot アプリ ID**に設定します。
+    - Bot `MicrosoftAppPassword`チャネル登録時に保存した**お客様のシークレット**に設定します。
+    - `connectionName`を id プロバイダー接続の名前に設定します。
+
+    Bot シークレットの文字によっては、パスワードを XML エスケープする必要があります。 たとえば、任意のアンパサンド (&) をとして`&amp;`エンコードする必要があります。
+
+     [!code-javascript[settings](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/.env)]
+
+1. `teamsAppManifest` `manifest.json`フォルダーで、 **Microsoft アプリ id** `botId`を`id`開き、ボットチャネル登録時に保存した**bot アプリ id**を設定します。
+
+# <a name="python"></a>[Python](#tab/python)
+
+1. Github リポジトリからの複製[py-サンプル][teams-auth-bot-py]。
 1. **Config.py**を更新します。
 
     - Bot `ConnectionName`に追加した OAuth 接続設定の名前に設定します。
@@ -219,7 +239,7 @@ Bot を展開するには、「 [Azure に bot を展開](https://aka.ms/azure-b
 
    ![auth-app-service](../../../assets/images/authentication/auth-bot-app-service.png)
 
-1. [**作成**] を選択します。
+1. **[作成]** を選択します。
 1. 展開が正常に完了すると、Visual Studio に反映されたことがわかります。 さらに、*ボットの準備ができ*たことを示すページが既定のブラウザーに表示されます。 URL は、次`https://botteamsauth.azurewebsites.net/`のようになります。 ファイルに保存します。
 1. ブラウザーで[**Azure ポータル**][azure-portal]に移動します。
 1. リソースグループを確認すると、bot が他のリソースと共に一覧表示されます。 次の画像は例です。
@@ -424,9 +444,9 @@ Microsoft Teams アプリをローカルで実行する準備として ngrok を
 **呼び出しアクティビティ**は、他のチャネルによって使用されるイベントアクティビティではなく bot に送信されます。
 これは、 **Activityhandler**のサブクラスによって実行されます。
 
-**ボット/の bot**
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet-sample)
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+**ボット/の bot**
 
 [!code-csharp[ActivityHandler](~/../botbuilder-samples/samples/csharp_dotnetcore/46.teams-auth/Bots/DialogBot.cs?range=19-51)]
 
@@ -458,7 +478,36 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="javascript"></a>[JavaScript](#tab/node-js-dialog-sample)
+
+**bot/のボット**
+
+[!code-javascript[ActivityHandler](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/bots/dialogBot.js?range=4-46)]
+
+**ボット/teamsBot**
+
+**Oauthprompt**を使用している場合は、ダイアログに*呼び出しアクティビティ*を転送する必要があります。
+
+[!code-javascript[ActivityHandler](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/bots/teamsBot.js?range=4-33)]
+
+**ダイアログ/mainDialog .js**
+
+ダイアログステップで、を使用`beginDialog`して OAuth プロンプトを開始します。これにより、ユーザーにサインインするように求められます。
+
+- ユーザーが既にサインインしている場合は、ユーザーに確認を求めることなく、トークン応答イベントが生成されます。
+- それ以外の場合は、ユーザーにサインインを求めるメッセージが表示されます。 Azure Bot サービスは、ユーザーがサインインしようとした後に、トークン応答イベントを送信します。
+
+[!code-javascript[AddOAuthPrompt](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/dialogs/mainDialog.js?range=50-52)]
+
+次のダイアログステップでは、前の手順の結果にトークンが存在するかどうかを確認します。 Null でない場合、ユーザーは正常にサインインしています。
+
+[!code-javascript[AddOAuthPrompt](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/dialogs/mainDialog.js?range=50-64)]
+
+**ボット/logoutDialog .js**
+
+[!code-javascript[allow-logout](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/dialogs/logoutDialog.js?range=31-42&highlight=7)]
+
+# <a name="python"></a>[Python](#tab/python-sample)
 
 **ボット/dialog_bot py**
 
@@ -468,7 +517,7 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 
 **Oauthprompt**を使用している場合は、ダイアログに*呼び出しアクティビティ*を転送する必要があります。
 
-[!code-python[on_token_response_event](~/../botbuilder-samples/samples/python/46.teams-auth/bots/teams_bot.py?range=38-45)] 
+[!code-python[on_token_response_event](~/../botbuilder-samples/samples/python/46.teams-auth/bots/teams_bot.py?range=38-45)]
 
 **ダイアログ/main_dialog py**
 
@@ -481,7 +530,7 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 
 次のダイアログステップでは、前の手順の結果にトークンが存在するかどうかを確認します。 Null でない場合、ユーザーは正常にサインインしています。
 
-[!code-python[Add OAuthPrompt](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/main_dialog.py?range=54-65)]
+[!code-python[Add OAuthPrompt](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/main_dialog.py?range=51-61)]
 
 **ダイアログ/logout_dialog py**
 
@@ -489,9 +538,8 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 
 ---
 
-## <a name="further-reading"></a>参考資料
-
-- [Azure Bot サービスを使用して bot に認証を追加する](https://aka.ms/azure-bot-add-authentication)
+> [!div class="nextstepaction"]
+> [Azure Bot サービスによる追加認証の追加について説明します。](https://aka.ms/azure-bot-add-authentication)
 
 <!-- Footnote-style links -->
 
@@ -502,9 +550,11 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 [concept-dialogs]: https://docs.microsoft.com/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0
 [simple-dialog]: https://docs.microsoft.com/azure/bot-service/bot-builder-dialog-manage-conversation-flow?view=azure-bot-service-4.0
 
-[teams-auth-bot]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth
+[teams-auth-bot-cs]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth
 
 [teams-auth-bot-py]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/46.teams-auth
+
+[teams-auth-bot-js]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth
 
 [azure-aad-blade]: https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview
 [aad-registration-blade]: https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredAppsPreview

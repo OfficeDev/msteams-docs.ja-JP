@@ -4,12 +4,12 @@ author: clearab
 description: Microsoft Teams プラットフォームでのメッセージング拡張機能の概要
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 01a038d57368826345a55358b1d628447b21f772
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: dd68f2005cbb3ed119a9aadfafd6066db221000b
+ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674933"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "43225792"
 ---
 # <a name="what-are-messaging-extensions"></a>メッセージング拡張機能とは
 
@@ -60,14 +60,14 @@ Microsoft Teams アプリのアプリマニフェストには、最大10個の�
 
 また、[メッセージの作成] 領域に URL が貼り付けられたときに、サービスを呼び出すこともできます。 この機能 ( **link unfurling**と呼ばれる) を使用すると、特定のドメインを含む url が [メッセージの作成] 領域に貼り付けられたときに呼び出しを受信するようにサブスクライブできます。 Web サービスは、URL を詳細なカードに "アン url" して、標準の web サイトプレビューカードより多くの情報を提供することができます。 ボタンを追加して、ユーザーが Microsoft Teams クライアントを離れることなく、すぐにアクションを実行できるようにすることもできます。
 
-## <a name="get-started"></a>作業の開始
+## <a name="get-started"></a>はじめに
 
 構築を開始する準備ができましたか? クイックスタートのいずれかをお試しください。
 
-* C のクイックスタート#
+* **C#**
   * [アクションベースのコマンドを使用したメッセージング拡張機能](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)
   * [検索ベースのコマンドを使用したメッセージング拡張機能](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)
-* JavaScript のクイックスタート
+* **JavaScript**
   * [アクションベースのコマンドを使用したメッセージング拡張機能](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
   * [検索ベースのコマンドを使用したメッセージング拡張機能](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
 
