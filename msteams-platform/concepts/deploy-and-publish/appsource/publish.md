@@ -2,12 +2,12 @@
 title: Microsoft Teams アプリ承認プロセスガイダンス
 description: Microsoft Teams アプリストアに公開されたアプリを取得するための承認プロセスについて説明します。
 keywords: teams 発行ストア office 発行アプリソース
-ms.openlocfilehash: 761cb69ddebac28af5ffc39401eefa9e1b424bc3
-ms.sourcegitcommit: 27789fd2e6f522f33f2135c66b0153949d9b0d64
+ms.openlocfilehash: e0b8c7d1b98747019a096924de395a7ccf608a0c
+ms.sourcegitcommit: ebd653e0646c8ddf0b0f4f2da55831c5acbad5d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "43285938"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "43509331"
 ---
 # <a name="submit-your-app-to-appsource"></a>アプリを AppSource に提出する
 
@@ -43,7 +43,15 @@ ms.locfileid: "43285938"
 
 ## <a name="why-do-i-get-the-message-this-account-is-not-publish-eligible-when-i-try-to-submit-my-add-in-through-partner-center"></a>パートナーセンターからアドインを送信しようとすると、"このアカウントは公開されません" というメッセージが表示されるのはなぜですか?
 
-[アカウントの確認状態](/partner-center/verification-responses)が保留中の場合、上記のエラーメッセージが表示されます。 パートナーセンターの[ダッシュボード](https://partner.microsoft.com/dashboard)で [**設定**] オプション (歯車アイコン) を選択し、[**開発者設定** => ] [**アカウント**  => **アカウント設定**] を選択することによって、アカウントの確認状態を確認できます。 アカウント検証プロセスの間に、各必要な手順の状態 (電子メールの所有権、雇用の確認、およびビジネスの確認) が表示されます。 検証プロセスが正常に完了すると、プロファイルページの登録の検証状態が "保留" から "承認済み" に変わり、プロセスの手順は表示されなくなります。 考えられる検証の問題を解決するには、*以下を参照してください*。
+[アカウントの確認状態](/partner-center/verification-responses)が保留中の場合、上記のエラーメッセージが表示されます。 パートナーセンターの[ダッシュボード](https://partner.microsoft.com/dashboard)で [**設定**] オプション (歯車アイコン) を選択し、[**開発者設定** => ] [**アカウント**  => **アカウント設定**] を選択することによって、アカウントの確認状態を確認できます。
+
+![パートナーセンターのアカウント設定ページ](../../../assets/images/partner-center-accts-page.png)
+
+![パートナーセンターの確認状態](../../../assets/images/partner-center-verification-status.png)
+
+アカウント検証プロセスの間に、各必要な手順の状態 (電子メールの所有権、雇用の確認、およびビジネスの確認) が表示されます。 検証プロセスが正常に完了すると、プロファイルページの登録の検証状態が "保留" から "承認済み" に変わり、プロセスの手順は表示されなくなります。
+
+![パートナーセンターの検証エラー](../../../assets/images/partner-center-acct-verification-error.png)
 
 ## <a name="how-i-do-get-further-support-for-my-account-related-issues"></a>自分のアカウント関連の問題について、さらにサポートを受けるにはどうすればよいですか?
 
