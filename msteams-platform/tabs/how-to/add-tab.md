@@ -5,18 +5,18 @@ description: タブを作成するためのガイド
 keywords: 構成可能な teams タブグループチャネル
 ms.topic: conceptual
 ms.author: ''
-ms.openlocfilehash: 3f3b0ac8bc141672f25d9db2470cb71a856e0ed8
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 9f12f9eb39e4dfac4d5b725638bdbd2d7c2b4de6
+ms.sourcegitcommit: b8b06929981ebbeef4ae489f338271bf09d349a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674884"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "43537272"
 ---
 # <a name="extend-your-teams-app-with-a-custom-tab"></a>カスタムタブを使用して Teams アプリを拡張する
 
 カスタムタブを使用すると、チャネル、グループチャット、および個人ユーザーに対してホストする web コンテンツを提供できます。 高レベルでは、次の手順を実行してタブを作成する必要があります。
 
-1. 開発環境を準備します。
+1. 開発環境を準備する。
 1. ページを作成します。
 1. アプリサービスをホストします。
 1. アプリパッケージを作成し、Microsoft Teams にアップロードします。
@@ -38,11 +38,13 @@ ms.locfileid: "41674884"
 ページの種類に関係なく、タブは次の要件を満たす必要があります。
 
 * X フレームオプションまたはコンテンツセキュリティポリシーの HTTP 応答ヘッダーを使用して、IFrame でページを処理できるようにする必要があります。
-
+  * Set header:`Content-Security-Policy: frame-ancestors teams.microsoft.com *.teams.microsoft.com *.skype.com`        
+  * Internet Explorer 11 との互換性の`X-Content-Security-Policy`ためにも設定します。    
+  * または、ヘッダー `X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/`を設定します。 このヘッダーは推奨されていませんが、ほとんどのブラウザーで尊重されています。
 * 通常、クリック-jacking に対する保護手段として、ログインページは Iframe では表示されません。 そのため、認証ロジックでは、リダイレクト以外のメソッドを使用する必要があります (たとえば、トークンベースまたは cookie ベースの認証を使用します)。
 
 > [!NOTE]
-> Chrome 80 (初期2020でリリースが予定されています)。新しい cookie 値を紹介し、既定で cookie ポリシーを設定します。 既定のブラウザーの動作に依存するのではなく、cookie に対して使用する目的を設定することをお勧めします。 [SameSite cookie 属性 (2020 update)](../../resources/samesite-cookie-update.md)を*参照してください*。
+> Chrome 80 (2020 年初頭にリリース予定) では、新しい Cookie 値を紹介し、既定で Cookie ポリシーを設定します。 既定のブラウザーの動作を利用するのではなく、Cookie に対して使用する目的を設定することをお勧めします。 「[SameSite Cookie 属性 (2020 更新プログラム)](../../resources/samesite-cookie-update.md)」を*参照してください*。
 
 * ブラウザーは、web ページを提供するドメインとは別のドメインに対する要求を web ページから実行できないようにする、同一生成元ポリシー制限に従います。 ただし、別のドメインまたはサブドメインに、構成ページまたはコンテンツページをリダイレクトする必要がある場合があります。 クロスドメインナビゲーションロジックにより、チームクライアントは、タブを読み込んだり通信したりするときに、アプリマニフェストの静的な validDomains リストに対して生成元を検証できるようにする必要があります。
 
@@ -68,7 +70,7 @@ ms.locfileid: "41674884"
 1. [*ドメインと権限*] セクションで、[*タブのドメイン*] フィールドに、HTTPS プレフィックスのないホストまたはリバースプロキシの URL が含まれている必要があります。
 1. **[** => **テストと配布**の終了] タブでは、アプリパッケージを**ダウンロード**するか、パッケージをチームに**インストール**するか、Teams アプリストアに**提出**して承認を受けることができます。 *リバースプロキシを使用している場合は、右側の [**説明**] フィールドに警告が表示されます。タブのテスト中は、この警告を無視でき*ます。
 
-## <a name="create-your-app-package-manually"></a>アプリパッケージを手動で作成する
+## <a name="create-your-app-package-manually"></a>アプリ パッケージを手動で作成する
 
 ボットおよびメッセージング拡張機能と同様に、タブのプロパティを含むようにアプリの[アプリマニフェスト](~/resources/schema/manifest-schema.md)を更新します。 これらのプロパティは、タブが使用可能な範囲、使用する Url、およびその他のさまざまなプロパティを制御します。
 
@@ -78,11 +80,11 @@ ms.locfileid: "41674884"
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`entityId`|String|64文字|✔|タブに表示されるエンティティの一意識別子。|
+|`entityId`|String|64 文字|✔|タブに表示されるエンティティの一意識別子。|
 |`name`|String|128文字|✔|チャネルインターフェイスのタブの表示名。|
 |`contentUrl`|String|2048 文字|✔|Teams キャンバスに表示されるエンティティ UI をポイントする https://URL。|
 |`websiteUrl`|String|2048 文字||ユーザーがブラウザーで表示をポイントしたかどうかを示す https://URL。|
-|`scopes`|列挙型の配列|1 |✔|静的タブでは、 `personal`スコープのみがサポートされます。つまり、個人用アプリの一部としてのみプロビジョニングできます。|
+|`scopes`|列挙型の配列|1-d|✔|静的タブでは、 `personal`スコープのみがサポートされます。つまり、個人用アプリの一部としてのみプロビジョニングできます。|
 
 #### <a name="simple-personal-tab-manifest-example"></a>シンプルな個人用タブマニフェストの例
 
@@ -109,7 +111,7 @@ ms.locfileid: "41674884"
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 文字|✔|Https://URL を構成するページ。|
 |`canUpdateConfiguration`|Boolean|||作成後にタブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 限り`true`|
-|`scopes`|列挙型の配列|1 |✔|構成可能なタブで`team`は`groupchat` 、および範囲のみがサポートされています。 |
+|`scopes`|列挙型の配列|1-d|✔|構成可能なタブで`team`は`groupchat` 、および範囲のみがサポートされています。 |
 
 #### <a name="simple-channelgroup-tab-manifest-example"></a>シンプルなチャネル/グループタブマニフェストの例
 
