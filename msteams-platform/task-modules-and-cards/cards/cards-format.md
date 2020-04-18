@@ -3,12 +3,12 @@ title: カードでのテキストの書式設定
 description: Microsoft Teams でのカードテキストの書式設定について説明します。
 keywords: teams の bot カード形式
 ms.date: 03/29/2018
-ms.openlocfilehash: 0c723c436346498ed2e5704db6f6401204530165
-ms.sourcegitcommit: 646a8224523be7db96f9686e22d420d62d55d4b4
+ms.openlocfilehash: 9ced8a8956265322e91b9d40dc7dc7064ee4659f
+ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42365249"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43550953"
 ---
 # <a name="format-cards-in-teams"></a>Teams の書式設定カード
 
@@ -18,7 +18,7 @@ ms.locfileid: "42365249"
 
 カードの種類に応じて書式設定のサポートが異なります。また、カードのレンダリングはデスクトップとモバイルチームの両方のクライアントとデスクトップブラウザーの Teams で少しずつ異なります。
 
-任意の Teams カードを含むインライン画像を含めることができます。 画像は、 `.png` `.jpg`、または`.gif`のファイルとして書式設定され、1024× 1024 px または 1 MB を超えることはできません。 アニメーション GIF は正式にはサポートされていません。 ** [カードリファレンス](./cards-reference.md#inline-card-images)を参照
+任意の Teams カードを含むインライン画像を含めることができます。 画像は、 `.png` `.jpg`、または`.gif`のファイルとして書式設定され、1024× 1024 px または 1 MB を超えることはできません。 アニメーション GIF は正式にはサポートされていません。 *See* [カードリファレンス](./cards-reference.md#inline-card-images)を参照
 
 ## <a name="formatting-cards-with-markdown"></a>Markdown を使用したカードの書式設定
 
@@ -61,15 +61,15 @@ Teams で Markdown をサポートするカードには、次の2つの種類が
 
 デスクトップでは、アダプティブカードの Markdown 書式は、web ブラウザーと Teams クライアントアプリケーションの両方で次のように表示されます。
 
-![デスクトップクライアントでのアダプティブカード Markdown の書式設定](/assets/images/cards/Adaptive-markdown-desktop-client.png)
+![デスクトップクライアントでのアダプティブカード Markdown の書式設定](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
 IOS では、アダプティブカード Markdown 形式は次のように表示されます。
 
-![IOS のアダプティブカード Markdown 形式](/assets/images/cards/Adaptive-markdown-iOS-75.png)
+![IOS のアダプティブカード Markdown 形式](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
 
 Android では、アダプティブカードの Markdown 書式は次のように表示されます。
 
-![Android のアダプティブカード Markdown 形式](/assets/images/cards/Adaptive-markdown-Android.png)
+![Android のアダプティブカード Markdown 形式](../../assets/images/cards/Adaptive-markdown-Android.png)
 
 ### <a name="more-information-on-adaptive-cards"></a>アダプティブカードの詳細情報
 
@@ -164,7 +164,7 @@ Android では、アダプティブカードの Markdown 書式は次のよう�
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| ヘッダー (レベル 1&ndash;3) | **Text** | `### Text`|
+| ヘッダー (レベル 1&ndash;3) | **テキスト** | `### Text`|
 | 打ち消し | ~~text~~ | `~~text~~` |
 | 順序なしリスト | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | 順序付きリスト | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -179,11 +179,11 @@ Android では、アダプティブカードの Markdown 書式は次のよう�
 
 デスクトップでは、Markdown のコネクタカードの書式は、次のようになります。
 
-![デスクトップクライアントでのコネクタカードの Markdown の書式設定](/assets/images/cards/connector-desktop-markdown-combined.png)
+![デスクトップクライアントでのコネクタカードの Markdown の書式設定](../../assets/images/cards/connector-desktop-markdown-combined.png)
 
 IOS では、Markdown のコネクタカードの書式設定は次のようになります。
 
-![IOS クライアントでのコネクタカードの Markdown の書式設定](/assets/images/cards/connector-iphone-markdown-combined-80.png)
+![IOS クライアントでのコネクタカードの Markdown の書式設定](../../assets/images/cards/connector-iphone-markdown-combined-80.png)
 
 懸案事項:
 
@@ -192,7 +192,7 @@ IOS では、Markdown のコネクタカードの書式設定は次のように�
 
 Android では、Markdown のコネクタカードの書式設定は次のようになります。
 
-![Android クライアントでのコネクタカードの Markdown の書式設定](/assets/images/cards/connector-android-markdown-combined.png)
+![Android クライアントでのコネクタカードの Markdown の書式設定](../../assets/images/cards/connector-android-markdown-combined.png)
 
 ### <a name="formatting-example-for-markdown-connector-cards"></a>Markdown コネクタカードの書式設定の例
 
@@ -253,7 +253,7 @@ Android では、Markdown のコネクタカードの書式設定は次のよう
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| ヘッダー (レベル 1&ndash;3) | **Text** | `<h3>Text</h3>` |
+| ヘッダー (レベル 1&ndash;3) | **テキスト** | `<h3>Text</h3>` |
 | 打ち消し | ~~text~~ | `<strike>text</strike>` |
 | 順序なしリスト | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 順序付きリスト | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -268,11 +268,11 @@ Android では、Markdown のコネクタカードの書式設定は次のよう
 
 デスクトップでは、コネクタカードの HTML 書式設定は次のようになります。
 
-![デスクトップクライアントのコネクタカードの HTML 形式](/assets/images/cards/Connector-desktop-html-combined.png)
+![デスクトップクライアントのコネクタカードの HTML 形式](../../assets/images/cards/Connector-desktop-html-combined.png)
 
 IOS では、HTML 形式は次のようになります。
 
-![IOS クライアントでのコネクタカードの HTML 書式設定](/assets/images/cards/connector-iphone-html-combined-80.png)
+![IOS クライアントでのコネクタカードの HTML 書式設定](../../assets/images/cards/connector-iphone-html-combined-80.png)
 
 懸案事項:
 
@@ -281,7 +281,7 @@ IOS では、HTML 形式は次のようになります。
 
 Android では、HTML 形式は次のようになります。
 
-![Android クライアントでのコネクタカードの HTML 書式設定](/assets/images/cards/connector-android-html-combined.png)
+![Android クライアントでのコネクタカードの HTML 書式設定](../../assets/images/cards/connector-android-html-combined.png)
 
 ### <a name="formatting-sample-for-html-connector-cards"></a>HTML コネクタカードの書式設定のサンプル
 
@@ -341,7 +341,7 @@ HTML タグは、ヒーローやサムネイルカードなどの単純なカー
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| ヘッダー (レベル 1&ndash;3) | **Text** | `<h3>Text</h3>` |
+| ヘッダー (レベル 1&ndash;3) | **テキスト** | `<h3>Text</h3>` |
 | 打ち消し | ~~text~~ | `<strike>text</strike>` |
 | 順序なしリスト | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 順序付きリスト | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -356,11 +356,11 @@ HTML タグは、ヒーローやサムネイルカードなどの単純なカー
 
 デスクトップでは、HTML 形式は次のように表示されます。
 
-![デスクトップクライアントの HTML 形式](/assets/images/cards/card-formatting-xml-desktop-v2.png)
+![デスクトップクライアントの HTML 形式](../../assets/images/cards/card-formatting-xml-desktop-v2.png)
 
 IOS では、HTML 形式は次のように表示されます。
 
-![IOS クライアントでの HTML 形式](/assets/images/cards/card-formatting-xml-mobile-v2.png)
+![IOS クライアントでの HTML 形式](../../assets/images/cards/card-formatting-xml-mobile-v2.png)
 
 懸案事項:
 
@@ -368,7 +368,7 @@ IOS では、HTML 形式は次のように表示されます。
 
 Android では、HTML 形式は次のように表示されます。
 
-![Android クライアントでの HTML 形式](/assets/images/cards/card-formatting-xml-android-60.png)
+![Android クライアントでの HTML 形式](../../assets/images/cards/card-formatting-xml-android-60.png)
 
 Android では、太字や斜体などの文字書式が正しく表示されます。
 

@@ -1,17 +1,19 @@
 ---
-title: サポートとフィードバック
-description: Microsoft Teams 開発者向けサポートとフィードバック
+title: Microsoft Teams 開発者向けサポートとフィードバック
+description: Microsoft Teams 製品チームは、フィードバックとサポートのチャネルごとに開発者コミュニティに応答します。
 keywords: teams フィードバック開発者からの質問問題連絡サポート要求バグ投稿
-ms.openlocfilehash: 9bec08dc1c40267445a54f31013a8ea9456ccb56
-ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
+ms.openlocfilehash: dc152fc9445e3fc9583638d522c03e9f2052bcd9
+ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43225785"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43550946"
 ---
-# <a name="microsoft-teams-developer-support-and-feedback"></a>Microsoft Teams 開発者向けサポートとフィードバック  
+# <a name="microsoft-teams-developer-support-and-feedback"></a>Microsoft Teams 開発者向けサポートとフィードバック
 
-Microsoft Team product team は、開発者コミュニティに複数のチャネルで対応します。
+Microsoft Teams 製品チームは、フィードバックとサポートのチャネルごとに開発者コミュニティに応答します。
+
+## <a name="support-and-feedback-channels"></a>サポート/フィードバックチャネル
 
 - **Microsoft Teams 開発者向けプラットフォームに関する一般的な質問:**[Microsoft Teams 開発者サポート](mailto:microsoftteamsdev@microsoft.com)に電子メールを送信してください。 この電子メールアドレスは、Microsoft Teams の非プラットフォーム関連の機能に関するコメントや提案を対象としたものでは_ありません_。 さらに、このアドレスに送信されたすべての電子メールを読んでいる間に、全員に返信することはありません。
 

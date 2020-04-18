@@ -4,12 +4,12 @@ author: clearab
 description: Microsoft Teams の bot に OAuth 認証を追加する方法。
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 4a573037e970be3f6c010a0a3c4b2e18be811d2f
-ms.sourcegitcommit: a08f1c7eb9fca11f44842773ab669c69d4af40db
+ms.openlocfilehash: f5eae27de45cd0932e4d2ed62fa954429a48aa6d
+ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43225799"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43550979"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Teams の bot に認証を追加する
 
@@ -17,7 +17,7 @@ ms.locfileid: "43225799"
 
 この記事では、OAuth 2.0 に基づいて Azure Bot サービス v4 SDK 認証を使用する方法について説明します。 これにより、ユーザーの資格情報に基づいて認証トークンを使用できるボットを開発するのが容易になります。 すべてのキーこれは、後で説明するように、 **id プロバイダー**を使用していることです。
 
-OAuth 2.0 は、Azure Active Directory (Azure AD) とその他の多くの id プロバイダーによって使用される認証と承認のためのオープン標準です。 OAuth 2.0 に関する基本的な理解は、Teams で認証を使用するための前提条件です。
+OAuth 2.0 は、Azure Active Directory (Azure AD) および他の多くの ID プロバイダーが使用する認証および承認のオープン スタンダードです。 OAuth 2.0 に関する基本的な理解は、Teams で認証を使用するための前提条件です。
 
 基本的な理解と、完全な仕様の[oauth 2.0](https://oauth.net/2/)については、「 [Oauth 2 の単純化](https://aka.ms/oauth2-simplified)」を参照してください。
 
@@ -29,11 +29,11 @@ Azure Bot サービスが認証を処理する方法の詳細については、�
 - **Bot を Azure に展開し、id プロバイダーに関連付ける方法について説明**します。 プロバイダーは、ユーザーのサインイン資格情報に基づいてトークンを発行します。 Bot は、トークンを使用して、メールサービスなど、認証を必要とするリソースにアクセスできます。 詳細については、「[ボットの Microsoft Teams 認証フロー](auth-flow-bot.md)」を参照してください。
 - **Microsoft Teams 内で bot を統合する方法**。 Bot が統合されたら、チャットでサインインしてメッセージを交換することができます。
 
-## <a name="prerequisites"></a>必須条件
+## <a name="prerequisites"></a>前提条件
 
 - ボットの[基礎][concept-basics]知識、[状態の管理][concept-state]、[ダイアログライブラリ][concept-dialogs]、[シーケンシャルな会話フローを実装][simple-dialog]する方法を理解します。
 - Azure および OAuth 2.0 の開発に関する知識。
-- Visual Studio 2017 以降および Git。
+- 現在のバージョンの Visual Studio および Git。
 - Azure アカウント。 必要に応じて、 [Azure 無料アカウント](https://azure.microsoft.com/free/)を作成できます。
 - 次に例を示します。
 
@@ -162,7 +162,7 @@ Azure で登録リソースが作成されると、リソースグループリ�
 
     ![teams ボット app auth 接続文字列 adv1](../../../assets/images/authentication/auth-bot-connection-test-accept.PNG)
 
-1. [**同意**する] を選択します。
+1. **[同意する]** を選択します。
 1. これにより、[**接続名> 成功] \<ページへのテスト接続**にリダイレクトされます。 エラーが表示された場合は、ページを更新します。 次の画像は例です。
 
   ![teams ボット app auth 接続文字列 adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
@@ -283,7 +283,7 @@ Bot がサインインカードを表示し、ユーザーがサインインボ�
 1. **Microsoft App パスワード**に、 `appsettings.json`からの bot のアプリパスワードを入力します。
 1. [**接続**] を選択します。
 1. Bot が起動して実行されたら、サインインカードを表示するテキストを入力します。
-1. [**サインイン**] ボタンをクリックします。
+1. **[サインイン]** ボタンを選択します。
 1. 開いている**URL を確認**するポップアップダイアログが表示されます。 これにより、ボットのユーザー (ユーザー) が認証されるようになります。  
 1. [**確認**] を選択します。
 1. 要求された場合は、該当するユーザーのアカウントを選択します。
@@ -352,7 +352,7 @@ and when for these, and just reference that from here, along with the set of ste
 
     ![auth bot teams のアップロード](../../../assets/images/authentication/auth-bot-teams-upload.png)
 
-1. [**チームに追加**] ボタンをクリックします。
+1. **[チームに追加]** ボタンを選択します。
 1. 次のウィンドウで、ボットを使用するチームを選択します。
 1. [ **Bot の設定**] ボタンを選択します。
 1. 左側のパネルで、3つのドット (&#x25cf;&#x25cf;&#x25cf;) を選択します。 次に、[ **App Studio** ] アイコンを選択します。
