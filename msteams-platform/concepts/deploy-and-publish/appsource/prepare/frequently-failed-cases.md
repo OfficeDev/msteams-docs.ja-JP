@@ -4,12 +4,12 @@ description: 送信に関するヒントと最も失敗したポリシーにつ�
 author: laujan
 ms.author: lajanuar
 ms.topic: how to
-ms.openlocfilehash: 12d0f39da24fc6850d74c9c78728b6a9b6de587a
-ms.sourcegitcommit: 576a4768b835422545cb6b6b3f75dce8318ea02d
+ms.openlocfilehash: 52225bd082059430a9804cf8fb225ac539781b33
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "42896521"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914575"
 ---
 # <a name="tips-for-a-successful-app-submission"></a>アプリの送信を成功させるためのヒント
 
@@ -30,6 +30,7 @@ ms.locfileid: "42896521"
 * アプリでは、ユーザー環境の実行可能コードを自動的にダウンロード、インストール、または起動してはなりません。 すべてのダウンロードは、ユーザーから明示的な権限を検索する必要があります。
 * 説明やサポートドキュメントなど、ユーザーの環境に関連付けられているマテリアルが正確である必要があります。 説明と資料では、正しいスペル、大文字と小文字の区別、句読点、および文法を使用してください。
 * ヘルプとサポート情報を提供します。 アプリには、最初に実行するユーザーのためのヘルプ/FAQ リンクが含まれていることを強くお勧めします。 すべての個人用アプリについて、ユーザーの利便性を向上させるために、ヘルプページを [個人用] タブとして提供することをお勧めします。
+* 送信に対してマニフェストに変更を加える場合は、マニフェストでアプリのバージョン番号をインクリメントします。
 
 ### <a name="9989--provide-a-clear-and-simple-sign-insign-out-and-sign-up-experience"></a>明確でシンプルなサインイン/サインアウトとサインアップの機能を提供 &#9989;
 

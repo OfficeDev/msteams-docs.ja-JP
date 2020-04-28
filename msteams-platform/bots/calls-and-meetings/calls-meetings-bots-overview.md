@@ -2,12 +2,12 @@
 title: 通話とオンライン会議のボット
 description: Microsoft Teams アプリを使用して、Microsoft Graph Api を使用して通話やオンライン会議で音声とビデオを使用してユーザーと対話する方法について説明します。
 keywords: 通話の音声ビデオ IVR 音声オンライン会議
-ms.openlocfilehash: 03bd7e085908a49f070fe84aba87138ecabafb83
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: e89fc576a0688a65e86c03696619569c41b6a3a2
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674792"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914617"
 ---
 # <a name="calls-and-online-meetings-bots"></a>通話とオンライン会議のボット
 
@@ -36,8 +36,8 @@ Microsoft Teams アプリでこれらの Microsoft Graph Api を使用するに�
 通話とオンライン会議のボットを作成およびテストする方法については、以下の情報を参照してください。
 
 * [Graph API リファレンス](/graph/api/resources/communications-api-overview?view=graph-rest-beta)
-* [サンプルアプリ](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
-* 通話とオンライン会議の機能を[サポートするボットを登録](./registering-calling-bot.md)する、および[Microsoft Graph のアクセス許可を使用](/registering-calling-bot.md#add-microsoft-graph-permissions)する
+* [サンプル アプリ](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
+* 通話とオンライン会議の機能を[サポートするボットを登録](./registering-calling-bot.md)する、および[Microsoft Graph のアクセス許可を使用](./registering-calling-bot.md#add-microsoft-graph-permissions)する
 * [ローカル PC で通話およびオンライン会議のボットを開発する方法](./debugging-local-testing-calling-meeting-bots.md)
 * [リアルタイムメディア処理に関する詳細](./real-time-media-concepts.md)と、[アプリケーションホスト型メディアをサポートするために必要なもの](./requirements-considerations-application-hosted-media-bots.md)
 * [着信呼び出し通知の処理に関する技術情報](./call-notifications.md)

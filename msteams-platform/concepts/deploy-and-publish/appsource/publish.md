@@ -2,12 +2,12 @@
 title: Microsoft Teams アプリ承認プロセスガイダンス
 description: Microsoft Teams アプリストアに公開されたアプリを取得するための承認プロセスについて説明します。
 keywords: teams 発行ストア office 発行アプリソース
-ms.openlocfilehash: e0b8c7d1b98747019a096924de395a7ccf608a0c
-ms.sourcegitcommit: ebd653e0646c8ddf0b0f4f2da55831c5acbad5d3
+ms.openlocfilehash: 70f81f40ff424ab28e7129da7b947be0b1fcf469
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "43509331"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914547"
 ---
 # <a name="submit-your-app-to-appsource"></a>アプリを AppSource に提出する
 
@@ -28,7 +28,7 @@ ms.locfileid: "43509331"
 > * Teams アプリに bot が含まれている場合は、ボット開発者フレームワーク[の倫理](https://aka.ms/bf-conduct)規定に準拠する必要があります。
 > * アプリに Office 365 コネクタが含まれている場合は、追加の用語が適用されることがあります。 *「* [コネクタ開発者ダッシュボード](https://aka.ms/connectorsdashboard)と[アプリ開発者アグリーメント](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm)」を参照してください。
 
-## <a name="faqs--teams-apps-and-partner-accounts"></a>**Faq-Teams アプリとパートナーアカウント**
+## <a name="faqs--teams-apps-and-partner-accounts"></a>Faq-Teams アプリとパートナーアカウント
 
 ## <a name="how-do-i-create-a-partner-center-account"></a>パートナーセンターアカウントを作成するにはどうすればよいですか?
 
@@ -96,4 +96,4 @@ ms.locfileid: "43509331"
     * この問題のスクリーンショット。
 
 > [!div class="nextstepaction"]
-> [Microsoft Teams のアプリの検証ポリシーの詳細情報](/office/dev/store/validation-policies#14-microsoft-teams-apps)
+> [Microsoft Teams のアプリの検証ポリシーの詳細情報](https://docs.microsoft.com/legal/marketplace/certification-policies)

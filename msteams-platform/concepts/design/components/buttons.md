@@ -2,12 +2,12 @@
 title: 設計ガイドラインのリファレンス
 description: アプリでボタン、リンク、コントロールを使用するためのガイドラインについて説明します。
 keywords: teams デザインガイドラインリファレンスコンポーネントボタンリンクの色
-ms.openlocfilehash: 09dad651fee9c97fd52e672ea055e2c24b549a59
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: b9325980c38048ee250ace6b00f1ed29c6cbea8d
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674952"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914589"
 ---
 # <a name="buttons-links-and-controls"></a>ボタン、リンク、コントロール
 
@@ -18,6 +18,10 @@ ms.locfileid: "41674952"
 ボタンのスタイルを設定すると、どのような種類の動作が発生したかを伝えることができます。 さまざまな強調レベルを表示するように書式設定されたさまざまなボタンを維持しています。
 
 ボタンには、テキスト、アイコン、またはテキストとアイコンの組み合わせを含めることができます。 階層内のさまざまなレベルを通信するために、各カテゴリ内に主ボタンと副ボタンを設計しました。
+
+### <a name="fluent-design-system"></a>Fluent デザインシステム
+
+Fluent UI は、web およびデスクトップコンポーネントの状態、スタイル設定、およびアクセシビリティに関するガイダンスを提供します。 Teams プラットフォームのボタンは、さまざまな強調レベルを表示するように書式設定できます。 HTML および CSS の16進カラー値については、「[FLUENT UI ボタンの色](https://fluentsite.z22.web.core.windows.net/components/button/definition?showCode=false&showRtl=false&showTransparent=false&showVariables=true#types-emphasis) *」を参照してください*。  
 
 ### <a name="text-buttons"></a>テキストボタン
 

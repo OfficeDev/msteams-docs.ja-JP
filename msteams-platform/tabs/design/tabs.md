@@ -2,12 +2,12 @@
 title: タブの設計ガイドライン
 description: コンテンツとコラボレーションのタブを作成するためのガイドラインについて説明します。
 keywords: teams 設計ガイドラインリファレンスフレームワークタブの構成
-ms.openlocfilehash: 409c8994b4266e37146038df054c0da6fb887607
-ms.sourcegitcommit: 576a4768b835422545cb6b6b3f75dce8318ea02d
+ms.openlocfilehash: 342e01e348c74eb143391a7d238396a2d866766a
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "42896500"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43914554"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>すべてのタブを使用したコンテンツと会話
 
@@ -36,19 +36,19 @@ ms.locfileid: "42896500"
 
 タブは、特定のニーズに対応するように構築されている場合に最適に機能します。 タブがあるチャネルに関連する、少数のタスクまたはデータのサブセットにフォーカスします。
 
-### <a name="reduced-chrome"></a>クロムが縮小される
+### <a name="reduced-chrome"></a>クロムの削減
 
-タブに複数のパネルを作成したり、ナビゲーションのレイヤーを追加したり、1つのタブで垂直方向および水平方向にスクロールするようにユーザーに要求したりすることは避けてください。つまり、タブにタブを設定しないようにします。
+タブ内に複数のパネルを作成したり、ナビゲーションの階層を増やしたり、同一のタブ内で垂直方向と水平方向の両方のスクロール操作をユーザーに求めたりしないようにします。つまり、タブ内に他のタブがあるような状態にしないようにします。
 
 ### <a name="integration"></a>統合
 
-会話にカードを投稿することで、ユーザーにタブアクティビティについて通知する方法を検索します (例:)。
+会話に[アダプティブカード](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)を投稿することで、ユーザーにタブアクティビティについて通知する方法を検索します。
 
-### <a name="conversational"></a>会話
+### <a name="conversational"></a>会話性
 
 タブを中心に会話を円滑にする方法を見つけます。これにより、会話センターがコンテンツ、データ、またはプロセスに対して実行されることが保証されます。
 
-### <a name="streamlined-access"></a>円滑なアクセス
+### <a name="streamlined-access"></a>アクセスの効率化
 
 適切なときに、適切なユーザーにアクセスを許可していることを確認してください。 サインインプロセスを簡単にすることで、投稿とコラボレーションへの障壁をなくすことができます。
 
