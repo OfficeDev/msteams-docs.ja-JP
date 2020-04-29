@@ -5,7 +5,7 @@
       href: overview.md
     - name: 新機能
       href: whats-new.md
-- name: はじめに
+- name: チュートリアルとコード サンプル
   items:
     - name: 'C# を使用してアプリを作成する'
       href: tutorials/get-started-dotnet-app-studio.md
@@ -13,14 +13,14 @@
       href: tutorials/get-started-nodejs-app-studio.md
     - name: Yeoman ジェネレーターでアプリを作成する
       href: tutorials/get-started-yeoman.md
-- name: サンプルとテンプレート
+    - name: Teams クライアントをカスタム アプリで拡張する
+      href: tutorials/code-samples.md
+- name: アプリのテンプレートと統合
   items:
     - name: 本番対応のアプリ テンプレート
       href: samples/app-templates.md
     - name: 本番対応の Shifts コネクタ
       href: samples/shifts-wfm-connectors.md
-    - name: サンプル アプリ
-      href: samples/code-samples.md
 - name: 概念
   expanded: true
   items:
@@ -104,6 +104,10 @@
   items:
     - name: メッセージング拡張機能について
       href: messaging-extensions/what-are-messaging-extensions.md
+    - name: デザイン
+      items:
+        - name: メッセージング拡張機能のデザインのガイドライン
+          href: messaging-extensions/design/messaging-extension-design.md
     - name: クイックスタート
       items:
         - name: 操作コマンドを使用する
