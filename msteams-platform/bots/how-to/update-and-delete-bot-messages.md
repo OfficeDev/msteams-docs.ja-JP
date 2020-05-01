@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: Microsoft Teams bot から送信されたメッセージを更新および削除する方法
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 222409fa0d02a571b7295dedb0c60b1ca3f90cca
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 46994c6810197002ef1c108af4f725426395b37f
+ms.sourcegitcommit: 2b1fd50466d807869fd173371ba7dfd82a0064ac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43914610"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "43957188"
 ---
 # <a name="update-and-delete-messages-sent-from-your-bot"></a>Bot から送信されたメッセージの更新と削除
 
@@ -53,6 +53,22 @@ update_result = await context.update_activity(new_activity)
 
 ```
 
+# <a name="rest-api"></a>[REST API](#tab/rest)
+
+>[!NOTE]
+>任意の web プログラミングテクノロジで Teams アプリを開発し、 [Bot コネクタサービス REST api](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0)を直接呼び出すことができます。 これを行うには、API 要求に[認証](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0)セキュリティ手順を実装する必要があります。
+
+会話内の既存のアクティビティを更新するには`conversationId` 、 `activityId`とを要求エンドポイントに含めます。 このシナリオを完了するには、元の POST 呼び出しによって返されるアクティビティ ID をキャッシュする必要があります。
+
+```http
+PUT /v3/conversations/{conversationId}/activities/{activityId}
+```
+
+| | |
+|----|----|
+| **要求本文** | [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object)オブジェクト |
+| **返される値** | [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object)オブジェクト |
+
 ---
 
 ## <a name="deleting-messages"></a>メッセージの削除
@@ -90,5 +106,17 @@ for each activity_id in _list:
     await TurnContext.delete_activity(activity_id)
 ```
 
----
+# <a name="rest-api"></a>[REST API](#tab/rest)
 
+ 会話内の既存のアクティビティを削除するには`conversationId` 、 `activityId`とを要求エンドポイントに含めます。
+
+```http
+DELETE /v3/conversations/{conversationId}/activities/{activityId}
+```
+
+| | |
+|----|----|
+| **要求本文** | 該当なし |
+| **返される値** | 操作の結果を示す HTTP 状態コード。 応答の本文には何も指定されていません。 |
+
+---
