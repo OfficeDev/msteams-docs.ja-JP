@@ -6,12 +6,12 @@ layout: LandingPage
 ms.topic: landing-page
 localization_priority: Priority
 ms.author: lajanuar
-ms.openlocfilehash: d73bfe89ba2cc8a62c912572786bd81ab9e641fe
-ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
+ms.openlocfilehash: 7a1f3462daa79130994dc976e67bf36b5fca96a7
+ms.sourcegitcommit: 950e5f9c2a58d3856d026a251c5fe112d4d6121a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "43120826"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "44173632"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -38,17 +38,21 @@ ms.locfileid: "43120826"
                                         <h3 style="font-size: 1.15rem">ドキュメントを探す</h3>
                                         <hr />
                                         <p><a class="barLink" style="font-size: 0.95rem"
-                                                href="/microsoftteams/platform/overview">Microsoft Teams プラットフォームでアプリを作成する</a></p>
+                                              href="/microsoftteams/platform/overview">Microsoft Teams プラットフォームでアプリを作成する</a></p>
+                                        <p ><a class="barLink" style="font-size: 0.95rem"
+                                                href="/microsoftteams/platform/tabs/what-are-tabs"><img src="/microsoftteams/platform/assets/icons/tab-icon-2.svg" height="16" width="16" alt="tab icon">タブ — 内蔵型 Web エクスペリエンス</a></p>
                                         <p><a class="barLink" style="font-size: 0.95rem"
-                                                href="/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions">メッセージング拡張機能によるタスク指向の相互作用</a></p>
+                                                href="/microsoftteams/platform/bots/what-are-bots"><img src="/microsoftteams/platform/assets/icons/bot-icon-2.svg" height="16" width="16"  alt="bot icon">ボット — 会話ベースの相互作用</a></p>
                                         <p><a class="barLink" style="font-size: 0.95rem"
-                                                href="/microsoftteams/platform/tabs/what-are-tabs">タブによる埋め込み Web エクスペリエンス</a></p>
+                                                href="/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions"><img src="/microsoftteams/platform/assets/icons/messaging-icon-2.svg" height="16" width="16" alt="messaging icon">メッセージング拡張機能 — タスク指向の相互作用</a></p>
+                                         <p><a class="barLink" style="font-size: 0.95rem"
+                                                href="/microsoftteams/platform/task-modules-and-cards/what-are-task-modules"><img src="https://docs.microsoft.com/media/common/i_queries.svg" height="16" width="16" alt="task module icon">タスク モジュールとカード — 豊富なメッセージングと通知</a></p>
                                         <p><a class="barLink" style="font-size: 0.95rem"
-                                                href="/microsoftteams/platform/bots/what-are-bots">Microsoft Teams のボット</a></p>
+                                                href="/microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors"><img src="https://docs.microsoft.com/media/common/i_service-hooks.svg" height="16" width="16" alt="webhooks connectors icon">Webhook とコネクタ — プログラムされたメッセージングと通知</a></p>
                                         <p><a class="barLink" style="font-size: 0.95rem"
-                                                href="/graph/teams-concept-overview">Microsoft Teams + Graph</a></p>
+                                                href="https://docs.microsoft.com/graph/teams-concept-overview"><img src="/microsoftteams/platform/assets/icons/graph-icon-1.svg" height="16" width="16" alt="graph icon">Microsoft Teams + Graph</a></p>
                                         <p><a class="barLink" style="font-size: 0.95rem"
-                                                href="/MicrosoftTeams/Microsoft-Teams">Microsoft Teams の管理</a></p>
+                                                href="https://docs.microsoft.com/microsoftteams/"><img src="https://docs.microsoft.com/media/common/i_identity-protection.svg" height="16" width="16" alt="teams admin icon">Microsoft Teams の管理</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -124,7 +128,7 @@ ms.locfileid: "43120826"
                 </ul>
             </li>
             <li>
-                <a href="#samples-demos-templates">サンプル &amp; テンプレート</a>
+                <a href="#samples-demos-templates">テンプレート、統合 &amp; サンプル</a>
                 <ul id="samples-demos-templates">
                     <li>
                         <a href="#templates">アプリのテンプレート</a>
@@ -432,6 +436,82 @@ ms.locfileid: "43120826"
                                                 <div class="cardText">
                                                     <h3>グループ アクティビティ アプリ</h3>
                                                     <p>アクティビティ グループとコラボレーション ワークフローをすばやく作成、管理します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-quickresponses">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/teams-troubleshoot.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>クイック応答のアプリ</h3>
+                                                    <p>ユーザーからよく寄せられる質問に対して効率よく回答し、応答のダイナミック ライブラリを構築します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-remotesupport">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/bcs-partner-advanced-management-technical-support-4.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>リモート サポートのボット</h3>
+                                                    <p>組織全体の依頼者と内部サポート チームとの連携に重点を置いたインターフェイスを提供します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-incidentreport">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/media/illustrations/system-center-service-manager.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>インシデント レポートのボット</h3>
+                                                    <p>組織内でのインシデント管理を最適化します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/OfficeDev/microsoft-teams-apps-requestateam">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com//media/illustrations/teams-fast-track.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>チーム作成のアプリ</h3>
+                                                    <p>組織の新しいチームの作成フローを強化します。</p>
                                                 </div>
                                             </div>
                                         </div>
