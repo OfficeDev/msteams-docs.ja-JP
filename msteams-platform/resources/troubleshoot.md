@@ -3,12 +3,12 @@ title: アプリのトラブルシューティング
 description: Microsoft Teams 用アプリの作成中に発生する問題やエラーのトラブルシューティング
 keywords: teams アプリ開発のトラブルシューティング
 ms.date: 07/09/2018
-ms.openlocfilehash: f7fe42e7c1f3ff2c4d8d1cbe81ed8f71e6c04384
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 5f6c8b2d5496d1c49ea35b069c16f4ede507f5e1
+ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674646"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "44210709"
 ---
 # <a name="troubleshoot-your-microsoft-teams-app"></a>Microsoft Teams アプリのトラブルシューティング
 
@@ -22,35 +22,35 @@ ms.locfileid: "41674646"
 
 タブビューにコンテンツが表示されない場合は、次のようになります。
 
-* コンテンツをに表示することは`<iframe>`できません。
+* コンテンツをに表示することはできません `<iframe>` 。
 * コンテンツドメインは、マニフェストの[Validdomains](~/resources/schema/manifest-schema.md#validdomains)リストに含まれていません。
 
 ### <a name="the-save-button-isnt-enabled-on-the-settings-dialog"></a>[設定] ダイアログボックスの [保存] ボタンが有効になっていない
 
-[保存] ボタン`microsoftTeams.settings.setValidityState(true)`を有効にするには、ユーザーが入力したか、または [設定] ページですべての必要なデータを選択した場合には、必ず通話してください。
+`microsoftTeams.settings.setValidityState(true)`[保存] ボタンを有効にするには、ユーザーが入力したか、または [設定] ページですべての必要なデータを選択した場合には、必ず通話してください。
 
 ### <a name="after-selecting-the-save-button-the-tab-settings-cannot-be-saved"></a>[保存] ボタンを選択すると、タブの設定を保存できません。
 
 タブを追加するときに、[保存] ボタンをクリックしても、設定を保存できないことを示すエラーメッセージが表示される場合は、次の2つのクラスのいずれかの問題が考えられます。
 
-* 保存成功メッセージは受信されませんでした。 を使用して保存ハンドラーが`microsoftTeams.settings.registerOnSaveHandler(handler)`登録されている`saveEvent.notifySuccess()`場合、コールバックはを呼び出す必要があります。 このエラーは、コールバックが30秒以内に`saveEvent.notifyFailure(reason)` 、またはその代わりに呼び出しを行わない場合に表示されます。
+* 保存成功メッセージは受信されませんでした。 を使用して保存ハンドラーが登録されている場合、 `microsoftTeams.settings.registerOnSaveHandler(handler)` コールバックはを呼び出す必要があり `saveEvent.notifySuccess()` ます。 このエラーは、コールバックが30秒以内に、または `saveEvent.notifyFailure(reason)` その代わりに呼び出しを行わない場合に表示されます。
 
-* 保存ハンドラーが登録されてい`saveEvent.notifySuccess()`ない場合は、ユーザーが [保存] ボタンを選択すると、その時点で通話が自動的に実行されます。
+* 保存ハンドラーが登録されていない場合は、 `saveEvent.notifySuccess()` ユーザーが [保存] ボタンを選択すると、その時点で通話が自動的に実行されます。
 
-* 指定された設定は無効です。 その他の理由として、設定が無効な設定オブジェクト`microsoftTeams.setSettings(settings)`を呼び出した場合、または呼び出しが行われなかった場合は、設定が保存されないことがあります。 Settings オブジェクトの一般的な問題については、次のセクションを参照してください。
+* 指定された設定は無効です。 その他の理由として、設定が無効な設定オブジェクトを呼び出した場合、または呼び出しが行われなかった場合は、設定が保存されないことがあり `microsoftTeams.setSettings(settings)` ます。 Settings オブジェクトの一般的な問題については、次のセクションを参照してください。
 
 ### <a name="common-problems-with-the-settings-object"></a>Settings オブジェクトの一般的な問題
 
 * `settings.entityId`がありません。 通常、このフィールドには、定義される年ごとに 1 が指定されます。
 * `settings.contentUrl`がありません。 通常、このフィールドには、定義される年ごとに 1 が指定されます。
-* `settings.contentUrl`またはオプション`settings.removeUrl` `settings.websiteUrl`ですが、有効ではありません。 Url は HTTPS を使用する必要があり、また、マニフェストの`validDomains`一覧で指定されているか、または設定ページと同じドメインである必要があります。
+* `settings.contentUrl`またはオプションですが、有効では `settings.removeUrl` `settings.websiteUrl` ありません。 Url は HTTPS を使用する必要があり、また、マニフェストの一覧で指定されているか、または設定ページと同じドメインである必要があり `validDomains` ます。
 
 ### <a name="cant-authenticate-the-user-or-display-your-auth-provider-in-your-tab"></a>ユーザーを認証できないか、またはタブに認証プロバイダーが表示されない
 
 サイレント認証を実行していない場合は、 [Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client.md)によって提供される認証プロセスに従う必要があります。
 
 > [!NOTE]
->すべての認証フローをドメインで開始および終了する必要があります。これはマニフェスト`validDomains`内のオブジェクトに記載されている必要があります。
+>すべての認証フローをドメインで開始および終了する必要があり `validDomains` ます。これはマニフェスト内のオブジェクトに記載されている必要があります。
 
 認証の詳細については、「[ユーザーの認証](~/concepts/authentication/authentication.md)」を参照してください。
 
@@ -70,11 +70,11 @@ ms.locfileid: "41674646"
 
 ### <a name="my-bot-doesnt-get-my-message-in-a-channel"></a>自分の bot がチャネルでメッセージを受信できない
 
-チャネル内の bot は、前の bot メッセージに返信する場合でも、明示的に @mentioned ときにのみメッセージを受信します。 メッセージに bot 名が表示されない唯一の例外は、最初に送信した CardAction の結果として bot が`imBack`アクションを受け取った場合です。
+チャネル内の bot は、前の bot メッセージに返信する場合でも、明示的に @mentioned ときにのみメッセージを受信します。 メッセージに bot 名が表示されない唯一の例外は、 `imBack` 最初に送信した cardaction の結果として bot がアクションを受け取った場合です。
 
 ### <a name="my-bot-doesnt-understand-my-commands-when-in-a-channel"></a>自分の bot がチャネル内で自分のコマンドを理解していない
 
-チャネル内のボットは @mentioned 時にのみメッセージを受信するので、ボットがチャネル内で受信するすべてのメッセージには、テキストフィールドに @mention が含まれます。 解析ロジックに渡す前に、すべての受信テキストメッセージから bot 名自体を削除することをお勧めします。 このケースを処理する方法に関するヒントについては、[メンション](~/bots/how-to/conversations/channel-and-group-conversations.md#working-with--mentions)を確認してください。
+チャネル内のボットは @mentioned 時にのみメッセージを受信するので、ボットがチャネル内で受信するすべてのメッセージには、テキストフィールドに @mention が含まれます。 解析ロジックに渡す前に、すべての受信テキストメッセージから bot 名自体を削除することをお勧めします。 このケースを処理する方法に関するヒントについては、[メンション](../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions)を確認してください。
 
 ## <a name="issues-with-packaging-and-uploading"></a>パッケージ化とアップロードに関する問題
 

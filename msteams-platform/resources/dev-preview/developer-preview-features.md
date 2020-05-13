@@ -2,26 +2,22 @@
 title: 公開開発者プレビューの機能
 description: Microsoft Teams の公開開発者プレビューの機能について説明します。
 keywords: teams のプレビュー開発者向け機能
-ms.openlocfilehash: abec097d9f3b6fb48a4a50cb26d73cf811151149
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 7ed442072779917dcc5db3ebcb4afaac9db0407f
+ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674654"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "44210702"
 ---
 # <a name="features-in-the-public-developer-preview-for-microsoft-teams"></a>Microsoft Teams の公開開発者プレビューの機能
 
 開発者プレビューには、次の新機能が含まれています。
 
-## <a name="mention-support-in-adaptive-cards"></a>アダプティブカードでのサポートを説明します。
+## <a name="adaptive-cards-v12-support"></a>アダプティブカード1.2 のサポート
 
-ボットとメッセージング拡張機能の応答に対して、アダプティブカードの本文内に @ メンションを追加できるようになりました。 カードの @ メンションは、通常のメッセージベースのメンションと同じ通知ロジックに従い、レンダリングします。 なお、カードベースのメンションは、現在 Web およびデスクトップクライアントでのみサポートされており、近日中にモバイルクライアントでのレンダリングをサポートしています。
+Teams での[アダプティブカード](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0)v2.0 のサポートは、一般公開されるようになりました。 ただし、 [Media 要素](https://adaptivecards.io/explorer/Media.html)は、Teams プラットフォームのアダプティブカード v2.0 では現在サポートされていません。
 
-## <a name="adaptive-12-support"></a>アダプティブ1.2 サポート
-
-Microsoft Teams では、開発者向けプレビューで[アダプティブバージョン 1.2](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0)がサポートされるようになりました。 [メディア要素](https://adaptivecards.io/explorer/Media.html)はまだサポートされていないことに注意してください。
-
-## <a name="tabs-single-sign-on"></a>タブシングルサインオン
+## <a name="tabs-single-sign-on-sso"></a>タブシングルサインオン (SSO)
 
 [シングルサインオン (SSO)](~/tabs/how-to/authentication/auth-aad-sso.md)を使用して、デスクトップおよびモバイルでユーザーのログインと認証を行うことができます。これには、web コンテンツページから TEAMS JavaScript SDK を使用します。 利点の1つは、ユーザーがサインインする必要がないことです。また、プロファイルを使用してアプリに同意されると、そのタブ (mobile を含む) に自動的にサインインします。
 

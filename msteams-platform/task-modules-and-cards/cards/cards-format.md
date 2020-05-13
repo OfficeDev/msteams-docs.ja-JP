@@ -3,12 +3,12 @@ title: カードでのテキストの書式設定
 description: Microsoft Teams でのカードテキストの書式設定について説明します。
 keywords: teams の bot カード形式
 ms.date: 03/29/2018
-ms.openlocfilehash: 9ced8a8956265322e91b9d40dc7dc7064ee4659f
-ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
+ms.openlocfilehash: e857a1250593c135aa23ad38a571a5561bb91431
+ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "43550953"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "44210688"
 ---
 # <a name="format-cards-in-teams"></a>Teams の書式設定カード
 
@@ -18,19 +18,19 @@ ms.locfileid: "43550953"
 
 カードの種類に応じて書式設定のサポートが異なります。また、カードのレンダリングはデスクトップとモバイルチームの両方のクライアントとデスクトップブラウザーの Teams で少しずつ異なります。
 
-任意の Teams カードを含むインライン画像を含めることができます。 画像は、 `.png` `.jpg`、または`.gif`のファイルとして書式設定され、1024× 1024 px または 1 MB を超えることはできません。 アニメーション GIF は正式にはサポートされていません。 *See* [カードリファレンス](./cards-reference.md#inline-card-images)を参照
+任意の Teams カードを含むインライン画像を含めることができます。 画像は、、またはのファイルとして書式設定さ `.png` `.jpg` れ、 `.gif` 1024 × 1024 px または 1 MB を超えることはできません。 アニメーション GIF は正式にはサポートされていません。 *See* [カードリファレンス](./cards-reference.md#inline-card-images)を参照
 
 ## <a name="formatting-cards-with-markdown"></a>Markdown を使用したカードの書式設定
 
 Teams で Markdown をサポートするカードには、次の2つの種類があります。
 
 > [!div class="checklist"]
-> * **アダプティブカード**: Markdown は、 `Textblock` `Fact.Title`および`Fact.Value`と同様に、アダプティブカードフィールドでサポートされています。 HTML は、アダプティブカードではサポートされていません。
+> * **アダプティブカード**: Markdown は、およびと同様に、アダプティブカードフィールドでサポートされています `Textblock` `Fact.Title` `Fact.Value` 。 HTML は、アダプティブカードではサポートされていません。
 > * **O365 コネクタカード**: Markdown および制限付き HTML は、テキストフィールドの Office 365 コネクタカードでサポートされています。
 
 # <a name="markdown-formatting-adaptive-cards"></a>[**Markdown の書式設定: アダプティブカード**](#tab/adaptive-md)
 
- と`Textblock` `Fact.Value`で`Fact.Title`サポートされているスタイルは、次のとおりです。
+ とでサポートされているスタイル `Textblock` `Fact.Title` は、次のとおりです `Fact.Value` 。
 
 | Style | 例 | Markdown |
 | --- | --- | --- |
@@ -49,11 +49,11 @@ Teams で Markdown をサポートするカードには、次の2つの種類が
 * Blockquotes
 
 > [!IMPORTANT]
-> アダプティブカードでは、HTML 形式はサポートされていません。
+> アダプティブカードは、HTML 形式をサポートしていません。
 
 ### <a name="newlines-for-adaptive-cards"></a>アダプティブカードの改行
 
-リストでは、 `\r`または`\n`エスケープシーケンスを使用して改行することができます。 リスト`\n\n`でを使用すると、リスト内の次の要素がインデントされます。 Textblock の他の場所に改行が必要な`\n\n`場合は、を使用します。
+リストで `\r` は、または `\n` エスケープシーケンスを使用して改行することができます。 `\n\n`リストでを使用すると、リスト内の次の要素がインデントされます。 Textblock の他の場所に改行が必要な場合は、を使用 `\n\n` します。
 
 ### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a>アダプティブカードのモバイルとデスクトップの違い
 
@@ -109,21 +109,21 @@ Android では、アダプティブカードの Markdown 書式は次のよう�
 }
 ```
 
-### <a name="mention-support-within-adaptive-cards"></a>アダプティブカード内でのサポートを伝えます。
+### <a name="mention-support-within-adaptive-cards-v12"></a>アダプティブカード v2.0 でのサポートを説明します。
+
+カードベースのメンションは、Web、デスクトップ、モバイルクライアントでサポートされています。 ボットおよびメッセージング拡張機能の応答には、アダプティブカードの本文内に @ メンションを追加することができます。  カードに @ メンションを追加するには、同じ通知ロジックに従って、[チャネルおよびグループチャットの会話に](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions )あるメッセージに基づいたものとしてレンダリングします。
+
+ボットおよびメッセージング拡張機能には、 [TextBlock](https://adaptivecards.io/explorer/TextBlock.html)および[FactSet](https://adaptivecards.io/explorer/FactSet.html)要素のカードコンテンツ内のメンションを含めることができます。
 
 > [!NOTE]
-> 現在、カードでのサポートは、[開発者向けプレビュー](../../resources/dev-preview/developer-preview-intro.md)のみでサポートされています。
-
-ボットおよびメッセージング拡張機能は、テキストブロックと FactSet 要素のカードコンテンツ内にメンションを含めることができるようになりました。
+>[Media 要素](https://adaptivecards.io/explorer/Media.html)は、現在 Teams プラットフォームのアダプティブカード v2.0 ではサポートされていません。
 
 ### <a name="constructing-mentions"></a>メンションの構築
 
 アダプティブカードにメンションを含めるには、アプリに次の要素を含める必要があります。
 
 * `<at>username</at>`サポートされているアダプティブカード要素
-* カード`mention`コンテンツ内の`msteams`プロパティの内部にあるオブジェクト。このオブジェクトは、説明されているユーザーの Teams ユーザー id を含みます。
-
-この時点では、メンション付きのカードはモバイルクライアントではサポートされていません。
+* `mention`カードコンテンツ内のプロパティの内部にあるオブジェクト。このオブジェクトは、 `msteams` 説明されているユーザーの Teams ユーザー id を含みます。
 
 ### <a name="sample-adaptive-card-with-a-mention"></a>アダプティブカードのサンプル
 
@@ -164,7 +164,7 @@ Android では、アダプティブカードの Markdown 書式は次のよう�
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| ヘッダー (レベル 1&ndash;3) | **テキスト** | `### Text`|
+| ヘッダー (レベル 1 &ndash; 3) | **Text** | `### Text`|
 | 打ち消し | ~~text~~ | `~~text~~` |
 | 順序なしリスト | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | 順序付きリスト | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -173,7 +173,7 @@ Android では、アダプティブカードの Markdown 書式は次のよう�
 | hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
 | 画像リンク |![岩に関するアヒル](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
 
-コネクタカードで`\n\n` `\n`は、改行はに対してレンダリングされ`\r`ますが、では表示されません。
+コネクタカードでは、改行はに対してレンダリングされますが、では表示され `\n\n` ません `\n` `\r` 。
 
 ### <a name="mobile-and-desktop-differences-for-connector-cards-using-markdown"></a>Markdown を使用したコネクタカードのモバイルとデスクトップの相違点
 
@@ -253,7 +253,7 @@ Android では、Markdown のコネクタカードの書式設定は次のよう
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| ヘッダー (レベル 1&ndash;3) | **テキスト** | `<h3>Text</h3>` |
+| ヘッダー (レベル 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | 打ち消し | ~~text~~ | `<strike>text</strike>` |
 | 順序なしリスト | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 順序付きリスト | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -262,7 +262,7 @@ Android では、Markdown のコネクタカードの書式設定は次のよう
 | hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | 画像リンク | <img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
-コネクタカードでは、改行は`<p>`タグを使用して HTML でレンダリングされます。
+コネクタカードでは、改行はタグを使用して HTML でレンダリングされ `<p>` ます。
 
 ### <a name="mobile-and-desktop-differences-for-connector-cards-using-html"></a>HTML を使用するコネクタカードのモバイルとデスクトップの相違点
 
@@ -341,7 +341,7 @@ HTML タグは、ヒーローやサムネイルカードなどの単純なカー
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| ヘッダー (レベル 1&ndash;3) | **テキスト** | `<h3>Text</h3>` |
+| ヘッダー (レベル 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | 打ち消し | ~~text~~ | `<strike>text</strike>` |
 | 順序なしリスト | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 順序付きリスト | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |

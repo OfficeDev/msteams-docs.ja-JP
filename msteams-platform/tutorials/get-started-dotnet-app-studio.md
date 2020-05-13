@@ -5,12 +5,12 @@ keywords: .net c# csharp の概要
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 61237cd3178fcb41357230536827f732faf65ee4
-ms.sourcegitcommit: 510ae42f72798fb24ddef0afa771ecd9d38e5348
+ms.openlocfilehash: c29fdde23ff6ff0e8269ccaf256c5154c0145a7b
+ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "43550960"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "44210695"
 ---
 # <a name="get-started-on-the-microsoft-teams-platform-with-cnet-and-app-studio"></a>Microsoft Teams プラットフォームで C#/.NET とアプリ Studio を使用して作業を開始する
 
@@ -31,9 +31,9 @@ Microsoft Teams を拡張するには、Microsoft Teams アプリを作成する
 - [Git をインストールする](https://git-scm.com/downloads)
 - [Visual Studio をインストール](https://www.visualstudio.com/downloads/)します。 無料のコミュニティエディションをインストールすることができます。
 
-インストール時にパスに追加`git`するオプションが表示された場合は、それを選択します。 これは便利です。
+インストール時にパスに追加するオプションが表示された場合は `git` 、それを選択します。 これは便利です。
 
-ターミナルウィンドウ`git`で次のように実行して、インストールを確認します。
+`git`ターミナルウィンドウで次のように実行して、インストールを確認します。
 > [!NOTE]
 > ご使用のプラットフォームで最も快適なターミナルウィンドウを使用してください。 これらの例では Bash を使用していますが、ほとんどのプラットフォームで実行されます。
 
@@ -64,7 +64,7 @@ git clone https://github.com/OfficeDev/msteams-samples-hello-world-csharp.git
 
 ## <a name="build-and-run-the-sample"></a>サンプルの構築と実行
 
-リポジトリのクローンを作成したら、Visual Studio を使用して`Microsoft.Teams.Samples.HelloWorld.sln` 、サンプルのルートディレクトリからソリューションファイルを`Build Solution`開き、 `Build`メニューから [] をクリックします。 このサンプルを実行するには`F5` 、メニュー `Start Debugging`から [ `Debug` ] を押すか、選択します。
+リポジトリのクローンを作成したら、Visual Studio を使用して、 `Microsoft.Teams.Samples.HelloWorld.sln` サンプルのルートディレクトリからソリューションファイルを開き、メニューから [] をクリックし `Build Solution` `Build` ます。 このサンプルを実行するには `F5` `Start Debugging` 、メニューから [] を押すか、選択し `Debug` ます。
 
 アプリが開始すると、アプリのルートが起動されたブラウザーウィンドウが開きます。 次の Url に移動して、すべてのアプリ Url が読み込まれていることを確認できます。
 
@@ -76,15 +76,15 @@ git clone https://github.com/OfficeDev/msteams-samples-hello-world-csharp.git
 <a name="HostSample"></a>
 
 > [!Note]
-> そのような`Could not find a part of the path … bin\roslyn\csc.exe`エラーが表示された場合は、コマンド`Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r`を使用してパッケージを更新してみてください。 詳細については、[スタックオーバーフローでこの質問](https://stackoverflow.com/questions/32780315)を参照してください。
+> そのようなエラーが表示された場合は `Could not find a part of the path … bin\roslyn\csc.exe` 、コマンドを使用してパッケージを更新してみてください `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r` 。 詳細については、[スタックオーバーフローでこの質問](https://stackoverflow.com/questions/32780315)を参照してください。
 
 ## <a name="host-the-sample-app"></a>サンプルアプリをホストする
 
-Microsoft Teams のアプリは、1つまたは複数の機能を公開している web アプリケーションであることに注意してください。 Teams プラットフォームでアプリを読み込むには、インターネットからアプリにアクセスできる必要があります。 アプリをインターネットからアクセスできるようにするには、アプリをホストする必要があります。 Microsoft Azure で無料でホストすることも、を使用`ngrok`して開発用コンピューター上のローカルプロセスへのトンネルを作成することもできます。 アプリのホストが終了したら、ルート URL を書き留めておきます。 これは、 `https://yourteamsapp.ngrok.io`または`https://yourteamsapp.azurewebsites.net`というようになります。
+Microsoft Teams のアプリは、1つまたは複数の機能を公開している web アプリケーションであることに注意してください。 Teams プラットフォームでアプリを読み込むには、インターネットからアプリにアクセスできる必要があります。 アプリをインターネットからアクセスできるようにするには、アプリをホストする必要があります。 Microsoft Azure で無料でホストすることも、を使用して開発用コンピューター上のローカルプロセスへのトンネルを作成することもでき `ngrok` ます。 アプリのホストが終了したら、ルート URL を書き留めておきます。 これは、またはというようになり `https://yourteamsapp.ngrok.io` `https://yourteamsapp.azurewebsites.net` ます。
 
 ### <a name="tunnel-using-ngrok"></a>Ngrok を使用したトンネル
 
-迅速なテストのために、ローカルコンピューター上でアプリを実行し、web エンドポイント経由でそのアプリケーションへのトンネルを作成することができます。 [ngrok](https://ngrok.com)は、そのようなことを可能にする無償のツールです。 Ngrok を使用すると`https://d0ac14a5.ngrok.io` 、などの web アドレスを取得できます (この URL は例にすぎません)。 環境の ngrok を[ダウンロードしてインストール](https://ngrok.com/download)することができます。 がの場所に追加さ`PATH`れていることを確認してください。
+迅速なテストのために、ローカルコンピューター上でアプリを実行し、web エンドポイント経由でそのアプリケーションへのトンネルを作成することができます。 [ngrok](https://ngrok.com)は、そのようなことを可能にする無償のツールです。 Ngrok を使用すると、などの web アドレスを取得でき `https://d0ac14a5.ngrok.io` ます (この URL は例にすぎません)。 環境の ngrok を[ダウンロードしてインストール](https://ngrok.com/download)することができます。 がの場所に追加されていることを確認してください `PATH` 。
 
 インストールすると、新しいターミナルウィンドウを開き、次のコマンドを実行してトンネルを作成できます。 このサンプルではポート3333を使用しているため、ここで必ず指定してください。
 
@@ -92,18 +92,18 @@ Microsoft Teams のアプリは、1つまたは複数の機能を公開してい
 ngrok http 3333 -host-header=localhost:3333
 ```
 
-Ngrok は、インターネットからの要求をリスンし、ポート3333で実行されているアプリにルーティングします。 ブラウザー `https://d0ac14a5.ngrok.io/hello`を開き、アプリの hello ページを読み込むことによって確認できます。 この URL ではなく、コンソールセッションで ngrok によって表示される転送アドレスを使用してください。
+Ngrok は、インターネットからの要求をリスンし、ポート3333で実行されているアプリにルーティングします。 ブラウザーを開き、アプリの hello ページを読み込むことによって確認でき `https://d0ac14a5.ngrok.io/hello` ます。 この URL ではなく、コンソールセッションで ngrok によって表示される転送アドレスを使用してください。
 
 > [!NOTE]
-> 上記の[ビルド](#build-and-run-the-sample)で別のポートを使用している場合は、同じポート番号を使用して`ngrok`トンネルを設定してください。
+> 上記の[ビルド](#build-and-run-the-sample)で別のポートを使用している場合は、同じポート番号を使用してトンネルを設定してください `ngrok` 。
 > [!TIP]
-> 後で停止して再構築`ngrok`して再実行する必要があるアプリケーションに影響を与えることなく、別のターミナルウィンドウで実行して、そのまま実行することをお勧めします。 この`ngrok`ウィンドウでは、セッションが有用なデバッグ情報を返します。
+> 後で停止して `ngrok` 再構築して再実行する必要があるアプリケーションに影響を与えることなく、別のターミナルウィンドウで実行して、そのまま実行することをお勧めします。 `ngrok`このウィンドウでは、セッションが有用なデバッグ情報を返します。
 
 アプリは、開発コンピューター上の現在のセッション中にのみ使用できます。 コンピューターがシャットダウンされるかスリープ状態になると、サービスは使用できなくなります。 他のユーザーによるテスト用にアプリを共有する場合は、この点に注意してください。 サービスを再起動する必要がある場合は、新しいアドレスを返し、そのアドレスを使用するすべての場所を更新する必要があります。 Ngrok の有料バージョンには、この制限はありません。
 
 ### <a name="host-in-azure"></a>Azure でのホスト
 
-Microsoft Azure を使用すると、共有インフラストラクチャを使用して、.NET アプリケーションを自由層でホストできます。 この`Hello World`サンプルを実行するには、この方法で十分です。 詳細について[は、「新しい無料アカウントの作成](https://azure.microsoft.com/free/)」を参照してください。
+Microsoft Azure を使用すると、共有インフラストラクチャを使用して、.NET アプリケーションを自由層でホストできます。 このサンプルを実行するには、この方法で十分 `Hello World` です。 詳細について[は、「新しい無料アカウントの作成](https://azure.microsoft.com/free/)」を参照してください。
 
 Visual Studio には、Azure を含むさまざまなプロバイダーへのアプリ展開のサポートが組み込まれています。
 
@@ -115,7 +115,7 @@ Visual Studio には、Azure を含むさまざまなプロバイダーへのア
 
 サンプルアプリでは、以下の環境変数を事前にメモした値に設定する必要があります。
 
-Web.config ファイルを開き、 *appSettings*セクションを見つけます。 以前に保存した Bot ID を使用して、 *Microsoft appid*の値を更新します。 以前に保存した Bot パスワードを使用して、 *Microsoft Apppassword*を更新します。
+Appsettings ファイルを開きます。 以前に保存した Bot ID を使用して、 *Microsoft appid*の値を更新します。 以前に保存した Bot パスワードを使用して、 *Microsoft Apppassword*を更新します。
 
 <img width="560px" src="~/assets/images/get-started/get-started-net-azure-add-keys.png" title="キーの設定"/>
 
@@ -123,13 +123,13 @@ Web.config ファイルを開き、 *appSettings*セクションを見つけま�
 
 ## <a name="configure-the-app-tab"></a>[アプリ] タブを構成する
 
-アプリをチームにインストールしたら、コンテンツを表示するように構成する必要があります。 サンプルアプリをインストールしたチームのチャネルに移動し、[ **+** ] ボタンをクリックして新しいタブを追加します。その後、[ `Hello World` **タブの追加]** ボックスの一覧から選択できます。 構成ダイアログが表示されます。 このダイアログボックスを使用すると、このチャネルに表示するタブを選択できます。 タブを選択して、[] `Save`をクリックすると、 `Hello World`選択したタブが読み込まれたタブが表示されます。
+アプリをチームにインストールしたら、コンテンツを表示するように構成する必要があります。 サンプルアプリをインストールしたチームのチャネルに移動し、[ **+** ] ボタンをクリックして新しいタブを追加します。その後、[ `Hello World` **タブの追加]** ボックスの一覧から選択できます。 構成ダイアログが表示されます。 このダイアログボックスを使用すると、このチャネルに表示するタブを選択できます。 タブを選択して、[] をクリックすると、 `Save` 選択したタブが読み込まれたタブが表示され `Hello World` ます。
 
 <img width="530px" src="~/assets/images/samples-hello-world-tab-configure.png" title="構成のスクリーンショット" />
 
 ### <a name="test-your-bot-in-teams"></a>Teams でボットをテストする
 
-Teams で bot と対話できるようになりました。 アプリを登録したチームでチャネルを選択し、と入力`@your-bot-name`します。 これは、 ** \@メンション**と呼ばれます。 Bot に送信するすべてのメッセージは、返信として返送されます。
+Teams で bot と対話できるようになりました。 アプリを登録したチームでチャネルを選択し、と入力し `@your-bot-name` ます。 これは、 ** \@ メンション**と呼ばれます。 Bot に送信するすべてのメッセージは、返信として返送されます。
 
 <img width="450px" title="ボット応答" src="~/assets/images/samples-hello-world-bot.png" />
 
