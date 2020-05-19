@@ -4,12 +4,12 @@ author: clearab
 description: Microsoft Teams の会話ボットの概要。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 132b71a4da7462c426468c7fc2f79b26b6fbb03b
-ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
+ms.openlocfilehash: 6f1ce3cf905b0c638652784fdc76b37ea0f6aca9
+ms.sourcegitcommit: 28af65730884b788ff77a4ec4032219380df8b70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "43120291"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "44281847"
 ---
 # <a name="what-are-conversational-bots"></a>会話ボットとは
 
@@ -19,7 +19,13 @@ ms.locfileid: "43120291"
 
 ![FAQ プラス GIF](~/assets/images/FAQPlusEndUser.gif)
 
-## <a name="how-bots-work"></a>ボットの機能
+## <a name="build--a-bot-for-teams-with-the-microsoft-bot-framework"></a>Microsoft Bot フレームワークを使用して Teams 用の bot を構築する
+
+Microsoft Bot フレームワーク] ( https://dev.botframework.com/) C#、Java、Python、JavaScript を使用してボットを作成するための豊富な SDK)。 Bot Framework に基づくボットが既にある場合は、簡単な操作でそのボットを Microsoft Teams で動作するように適応させることができます。 用意されている [SDK](/microsoftteams/platform/#pivot=sdk-tools) を活用するため、C# か Node.js を使用することをお勧めします。 これらのパッケージは、基本的な Bot Builder SDK のクラスとメソッドを次のように拡張します。
+
+* Office 365 コネクタ カードなどの専用のカードを使用する。
+* アクティビティに関する Teams 固有のチャネル データを使用して設定する。
+* メッセージング拡張要求を処理する。
 
 Teams ボットは次の 3 つ要素で構成されています。
 
@@ -27,17 +33,15 @@ Teams ボットは次の 3 つ要素で構成されています。
 * Bot Framework へのボットの登録。
 * アプリ マニフェストを含む Teams アプリ パッケージ。 これは、ユーザーがインストールするもので、Bot Service 経由でルーティングされ、Teams クライアントをお客様の Web サービスに接続します。
 
-Microsoft Teams のボットは、[Microsoft Bot Framework](https://dev.botframework.com/) に基づいて構築されています。 Bot Framework に基づくボットが既にある場合は、簡単な操作でそのボットを Microsoft Teams で動作するように適応させることができます。 用意されている [SDK](/microsoftteams/platform/#pivot=sdk-tools) を活用するため、C# か Node.js を使用することをお勧めします。 これらのパッケージは、基本的な Bot Builder SDK のクラスとメソッドを次のように拡張します。
-
-* Office 365 コネクタ カードなどの専用のカードを使用する。
-* アクティビティに関する Teams 固有のチャネル データを使用して設定する。
-* メッセージング拡張要求を処理する。
-
 > [!IMPORTANT]
 > 任意の Web プログラミング技術で Teams アプリを開発し、[Bot Framework REST API](/bot-framework/rest-api/bot-framework-rest-overview) を直接呼び出すことができますが、すべてのトークン処理を自分で実行する必要があります。
 
 > [!TIP]
 > Teams App Studio を使用すると、アプリ マニフェストを作成して構成でき、Web サービスを Bot Framework のボットとして登録できます。 また、React 制御ライブラリと、対話型カードのビルダーも用意されています。 「[Teams App Studio を使う](~/concepts/build-and-test/app-studio-overview.md)」を*参照してください*。
+
+## <a name="create-a-chatbot-for-teams-with-microsoft-power-virtual-agents"></a>Microsoft Power Virtual Agent を使用して Teams の chatbot を作成する
+
+[パワー仮想エージェント](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)は、Microsoft Power Platform および Bot フレームワーク上に構築された chatbot サービスです。  パワー仮想エージェントの開発プロセスでは、コード化されていないグラフィカルインターフェイスアプローチを使用して、チームのすべてのメンバーがインテリジェントな仮想エージェントを簡単に作成および管理できるようにします。  [Power Virtual agents ポータル](https://powervirtualagents.microsoft.com)で chatbot を作成したら、 [power virtual agents Chatbot と Teams](how-to/add-power-virtual-agents-bot-to-teams.md)を簡単に統合することができます。 パワー仮想エージェント chatbot の作成を開始するには、[パワー仮想エージェントのドキュメント](https://docs.microsoft.com/power-virtual-agents/)を*参照してください*。
 
 ## <a name="webhooks-and-connectors"></a>Webhook とコネクタ
 
