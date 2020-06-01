@@ -4,12 +4,12 @@ author: clearab
 description: Microsoft Teams 開発者プラットフォーム、また Microsoft Teams のアプリのビルドを開始する方法について説明する概要ページ。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: cb9d91f2de29bac00f4cdcd9672adf9d7d4ee734
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 5225669ccc8c76bb532d045df6b65105c893e734
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675120"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44455486"
 ---
 # <a name="what-are-microsoft-teams-apps"></a>Microsoft Teams アプリとは
 
@@ -37,22 +37,22 @@ Teams アプリは 3 つの主要な部分で構成されています。
 * ユーザーによってインストールされたアプリを作成し、アプリのメタデータとサービスへのポインターを含む **Teams アプリ パッケージ**。
 * 必要なロジック、データ ストレージ、API 呼び出しを実行して、アプリを利用する**サービス、ワークフロー、Web サイト**。
 
-Microsoft Teams アプリで公開する機能が、セキュリティで保護するための追加の手順を実行しない限り、インターネット経由で一般に使用可能であることに留意することが重要です。 機密情報または保護された情報へのアクセスを提供する場合、サービスでは少なくとも、アプリに接続されているエンドポイントを認証しているか、[ユーザーを認証](~/concepts/authentication/authentication.md)していることをご確認ください。
+Microsoft Teams アプリで公開する機能が、セキュリティで保護するための追加の手順を実行しない限り、インターネット経由で一般に使用可能であることに留意することが重要です。 機密情報または保護された情報へのアクセスを提供する場合、サービスでは少なくとも、アプリに接続されているエンドポイントを認証しているか、[ユーザーを認証](concepts/authentication/authentication.md)していることをご確認ください。
 
 ## <a name="how-can-you-share-your-teams-app"></a>Teams アプリの共有方法
 
 Microsoft Teams アプリを共有する準備ができたら、対象ユーザーに応じて 3 つのオプションがあります。
 
-* **[アプリを直接アップロードする](~/concepts/deploy-and-publish/apps-upload.md)** アプリをチームや組織内の少人数にのみ共有する必要がある場合は、アプリ パッケージを共有して直接アップロードできます。
-* **[組織のアプリ カタログに公開する](~/concepts/deploy-and-publish/apps-publish.md)** アプリ カタログを使用してアプリを組織全体に共有できます。
-* **[パブリック App Store に公開する](~/concepts/deploy-and-publish/apps-publish.md)** アプリがすべてのユーザー向けの場合、そのアプリをパブリック App Store に公開できます。 目標に応じて、マーケティングや販売のサポート対象になる可能性があります。
+* **[アプリを直接アップロードする](concepts/deploy-and-publish/apps-upload.md)** アプリをチームや組織内の少人数にのみ共有する必要がある場合は、アプリ パッケージを共有して直接アップロードできます。
+* **[組織のアプリ カタログに公開する](concepts/deploy-and-publish/apps-upload.md)** アプリ カタログを使用してアプリを組織全体に共有できます。
+* **[パブリック App Store に公開する](concepts/deploy-and-publish/apps-upload.md)** アプリがすべてのユーザー向けの場合、そのアプリをパブリック App Store に公開できます。 目標に応じて、マーケティングや販売のサポート対象になる可能性があります。
 
 ## <a name="get-started"></a>作業の開始
 
-* [C# でボットとタブ アプリをビルドする](~/tutorials/get-started-dotnet-app-studio.md)
-* [JavaScript または Node.js でボットとタブ アプリをビルドする](~/tutorials/get-started-nodejs-app-studio.md)
+* [C# でボットとタブ アプリをビルドする](tutorials/get-started-dotnet-app-studio.md)
+* [JavaScript または Node.js でボットとタブ アプリをビルドする](tutorials/get-started-nodejs-app-studio.md)
 
 ## <a name="learn-more"></a>詳細情報
 
-* [Teams クライアントの拡張ポイント](~/concepts/extensibility-points.md)
-* [Teams 用アプリをビルドする](~/concepts/building-an-app.md)
+* [Teams クライアントの拡張ポイント](concepts/extensibility-points.md)
+* [Teams 用アプリをビルドする](concepts/building-an-app.md)
