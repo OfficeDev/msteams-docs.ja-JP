@@ -2,12 +2,12 @@
 title: Microsoft Teams でカスタムアプリをアップロードする
 description: Microsoft Teams でアプリをアップロードする方法について説明します。
 keywords: teams アプリのアップロード
-ms.openlocfilehash: b5807644a0c9afa26b81d07c71d5f45ab3c8ba00
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 256a9bea48ed816f2e9912006dd2fe7301743919
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674718"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44453883"
 ---
 # <a name="upload-an-app-package-to-microsoft-teams"></a>Microsoft Teams にアプリ パッケージをアップロードする
 
@@ -20,7 +20,7 @@ Microsoft Teams 内でアプリの使用状況をテストするには、アプ�
 
 開発および AppSource (旧称 Office ストア) の送信については、使用状況を説明する情報を含む uploadable パッケージを作成する必要があります。 パッケージ (.zip ファイル) には、ユーザーの環境を一意に定義するアプリケーションマニフェストとアイコンが含まれています。
 
-アップロードパッケージを作成するには、「 [Microsoft Teams アプリ用のパッケージを作成](~/concepts/build-and-test/apps-package.md)する」を参照してください。
+アップロードパッケージを作成するには、「 [Microsoft Teams アプリ用のパッケージを作成](../build-and-test/apps-package.md)する」を参照してください。
 
 パッケージを作成すると、それをチームにアップロードできるようになります。 アップロードすると、選択したチームのすべてのユーザーと、そのチームのユーザーのみが使用できるようになります。
 
@@ -40,16 +40,16 @@ Microsoft Teams 内でアプリの使用状況をテストするには、アプ�
 
 1. Teams の左下隅で、[ストア] アイコンを選択します。 [ストア] ページで、[カスタムアプリのアップロード] を選択します。
 
-   ![チームの表示](~/assets/images/store-upload-a-custom-app.png)
+   ![チームの表示](../../assets/images/store-upload-a-custom-app.png)
 
 2. [*開く*] ダイアログで、アップロードするパッケージに移動し、[*開く*] を選択します。
 
 アップロードされたパッケージは、同意ダイアログで指定されたチームまたは会話で使用できるようになります。 アプリが表示されない場合、最も一般的な原因は、マニフェストのエラー、特にアプリ、ボット、およびメッセージング拡張機能の id です。 アプリのスコープがスレッドに設定されていない場合、そのオプションは表示されません。
 
 >[!NOTE]
-> 現在、会話中のアプリは[開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md)です。 Teams がこのモードで実行されていない場合は、オプションは表示されません。
+> 現在、会話中のアプリは[開発者向けプレビュー](../../resources/dev-preview/developer-preview-intro.md)です。 Teams がこのモードで実行されていない場合は、オプションは表示されません。
 
-![アップロードされたボットのリストにある bot の例](~/assets/images/botinlist.jpg)
+![アップロードされたボットのリストにある bot の例](../../assets/images/botinlist.jpg)
 
 ## <a name="upload-your-package-into-a-team-using-the-apps-tab"></a>[アプリ] タブを使用して、チームにパッケージをアップロードする
 
@@ -60,13 +60,13 @@ Microsoft Teams 内でアプリの使用状況をテストするには、アプ�
 
 2. [アプリ] タブを選択し、右下の [*カスタムアプリをアップロードする*] を選択します。
 
-   ![エントリポイントのアップロード](~/assets/images/uploadACustomApp.png)
+   ![エントリポイントのアップロード](../../assets/images/UploadACustomApp.png)
 
 3. 使用しているコンピューターから .zip パッケージを参照して選択します。
 
 4. しばらくすると、アップロードしたアプリが一覧に表示されます。
 
-   ![アップロードされたボットのリストにある bot の例](~/assets/images/botinlist.jpg)
+   ![アップロードされたボットのリストにある bot の例](../../assets/images/botinlist.jpg)
 
 アプリが読み込まれない場合、最も一般的な原因は、マニフェストのエラー、特にアプリ、ボット、およびメッセージング拡張機能の id です。
 
@@ -74,15 +74,15 @@ Microsoft Teams 内でアプリの使用状況をテストするには、アプ�
 
 アプリにタブが含まれている場合、ユーザーは標準のタブギャラリーのフローを使用して、それらを任意の会話またはチームチャネルに固定できます。
 
-1. チーム内のチャネルに移動します。 既存*+* のタブの右側にある (*タブを追加*する) を選択します。
+1. チーム内のチャネルに移動します。 *+* 既存のタブの右側にある (*タブを追加*する) を選択します。
 
 2. 表示されるギャラリーからタブを選択します。
 
 3. 同意のプロンプトを承諾します。
 
-4. [[構成] ページ](~/tabs/how-to/create-tab-pages/configuration-page.md)を使用してタブを構成し、[*保存*] を選択します。
+4. [[構成] ページ](../../tabs/how-to/create-tab-pages/configuration-page.md)を使用してタブを構成し、[*保存*] を選択します。
 
-  ![[タブの追加] ダイアログボックス。使用可能なタブのギャラリーが表示されます。](~/assets/images/tab_gallery.png)
+  ![[タブの追加] ダイアログボックス。使用可能なタブのギャラリーが表示されます。](../../assets/images/tab_gallery.png)
 
 ## <a name="accessing-your-uploaded-bot"></a>アップロードした bot へのアクセス
 
@@ -102,15 +102,15 @@ Bot を会話に追加して、bot との直接的なチャットをテストす
 
 2. 下部にある [**アップロード**済み] セクションからコネクタを選択します。
 
-3. [構成ページ](~/webhooks-and-connectors/how-to/connectors-creating.md)からコネクタを構成し、[*保存*] を選択します。
+3. [構成ページ](../../webhooks-and-connectors/how-to/connectors-creating.md)からコネクタを構成し、[*保存*] を選択します。
 
-  ![[タブの追加] ダイアログボックス。使用可能なタブのギャラリーが表示されます。](~/assets/images/connector_gallery.png)
+  ![[タブの追加] ダイアログボックス。使用可能なタブのギャラリーが表示されます。](../../assets/images/connector_gallery.png)
 
 ## <a name="accessing-your-uploaded-messaging-extension"></a>アップロードされたメッセージング拡張機能へのアクセス
 
 メッセージ拡張機能を使用してアップロードしたアプリは、[新規作成] ボックスの [*その他のオプション*(*&#8943;*)] メニューに自動的に表示されます。
 
-![メッセージングの拡張機能](~/assets/images/compose-extensions/cesampleapp.png)
+![メッセージングの拡張機能](../../assets/images/compose-extensions/cesampleapp.png)
 
 ## <a name="removing-or-updating-your-app"></a>アプリを削除または更新する
 
@@ -123,5 +123,5 @@ Bot を会話に追加して、bot との直接的なチャットをテストす
 
 ## <a name="troubleshooting-notes"></a>トラブルシューティングのメモ
 
-* マニフェストが読み込まれていない場合は、「[パッケージを作成](~/concepts/build-and-test/apps-package.md)し、[スキーマ](~/resources/schema/manifest-schema.md)に対してマニフェストを検証する」に記載されているすべての手順に従っていることをもう一度確認してください。
+* マニフェストが読み込まれていない場合は、「[パッケージを作成](../../concepts/build-and-test/apps-package.md)し、[スキーマ](../../resources/schema/manifest-schema.md)に対してマニフェストを検証する」に記載されているすべての手順に従っていることをもう一度確認してください。
 

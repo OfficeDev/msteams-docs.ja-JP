@@ -4,12 +4,12 @@ author: clearab
 description: Microsoft Teams の会話ボットの概要。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 6f1ce3cf905b0c638652784fdc76b37ea0f6aca9
-ms.sourcegitcommit: 28af65730884b788ff77a4ec4032219380df8b70
+ms.openlocfilehash: a88d516c57faa96e29de3e786910a13c4d65ac84
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "44281847"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44453869"
 ---
 # <a name="what-are-conversational-bots"></a>会話ボットとは
 
@@ -53,7 +53,7 @@ Microsoft Teams のボットは、1 対 1 の会話、グループ チャット�
 
 ### <a name="in-a-channel"></a>チャネル
 
-チャネルでは、複数のユーザー間のスレッド形式の会話が扱われます。多くのユーザー同士 (現在は最大 2000) で会話が行われる場合もあります。 これにより、ボットが大規模になる可能性がでてきますが、それぞれの対話を簡潔にする必要があります。 ただし、従来の複数ターンの対話は、うまく動作しない可能性があります。 多くの情報を収集する必要がある場合は、対話型カードまたはタスク モジュールを使用するか、1 対 1 の会話に変更することをお勧めします。 ボットは `@mentioned` のメッセージにのみ直接アクセスできますが、Microsoft Graph および組織レベルの引き上げられたアクセス許可を使用して、会話から追加のメッセージを取得することはできません。
+チャネルでは、複数のユーザー間のスレッド形式の会話が扱われます。多くのユーザー同士 (現在は最大 2000) で会話が行われる場合もあります。 これにより、ボットが大規模になる可能性がでてきますが、それぞれの対話を簡潔にする必要があります。 ただし、従来の複数ターンの対話は、うまく動作しない可能性があります。 多くの情報を収集する必要がある場合は、対話型カードまたはタスク モジュールを使用するか、1 対 1 の会話に変更することをお勧めします。 Bot は、 `@mentioned` Microsoft Graph を使用して会話から他のメッセージを取得することもできますが、組織レベルの昇格されたアクセス許可を使用してメッセージを取得することができます。
 
 ボットの利点をチャネル内で活用できるシナリオは以下のとおりです。
 

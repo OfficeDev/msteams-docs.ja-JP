@@ -2,12 +2,12 @@
 title: シングル サインオン
 description: シングルサインオン (SSO) について説明します。
 keywords: teams 認証 SSO AAD
-ms.openlocfilehash: 1857651aecd902f04bd57f5b4e2fb0fda88eb348
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 8f9d94346aad7c096e4310f80b6cda73856afc8c
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674635"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44455514"
 ---
 # <a name="single-sign-on"></a>シングル サインオン
 
@@ -41,15 +41,15 @@ Azure AD v2.0 エンドポイントの登録ポータルでアプリケーショ
 * AAD アプリケーション ID を取得する
 * AAD エンドポイント (およびオプションで Microsoft Graph) に対してアプリケーションに必要なアクセス許可を指定します。 
 * アプリケーションに信頼するように Microsoft Teams デスクトップ、web、モバイルアプリケーションに付与する
-* 既定の`access_as_user`スコープ名を使用して、アプリに対して Microsoft Teams アプリケーションを事前認証します。
+* 既定のスコープ名を使用して、アプリに対して Microsoft Teams アプリケーションを事前認証し `access_as_user` ます。
 
 > [!NOTE]
 > 注意すべき重要な制限がいくつかあります。
 >
-> * ユーザーレベルの Graph API のアクセス許可 (ie: email、profile、offline_access、openid) のみサポートしています。 他のグラフスコープにアクセスする必要がある場合は、このドキュメントの最後にある「推奨される回避策」をお読みください。
+> * ユーザーレベルの Graph API アクセス許可 (電子メール、プロファイル、offline_access、openid など) のみがサポートしています。 他のグラフスコープにアクセスする必要がある場合は、このドキュメントの最後にある「推奨される回避策」をお読みください。
 > * アプリケーションのドメイン名が Azure AD アプリケーションに登録されていることが重要です。 これは、Teams で認証トークンを要求するときにアプリケーションが実行するドメイン名と同じである必要があります。また、Teams のマニフェストでリソースのプロパティを指定するときにも、次のセクションの詳細について説明します。
 > * 現在、アプリごとに複数のドメインをサポートしていません
-> * また、このドメインが一般的すぎるために`azurewebsites.net`ドメインを使用するアプリケーションをサポートしておらず、セキュリティリスクになる可能性もあります。
+> * また、このドメインが一般的すぎるためにドメインを使用するアプリケーションをサポートしておらず、 `azurewebsites.net` セキュリティリスクになる可能性もあります。
 
 #### <a name="steps"></a>手順
 
@@ -60,22 +60,22 @@ Azure AD v2.0 エンドポイントの登録ポータルでアプリケーショ
     * **リダイレクト URI**を空のままにする
     * [**登録**] を選択する
 3. [概要] ページで、**アプリケーション (クライアント) ID**をコピーして保存します。 Teams アプリケーションマニフェストを更新するときには、後で必要になります。
-4. **[管理]** の下の **[API の公開]** を選択します。 [**設定**] リンクを選択して、アプリケーション ID URI をの`api://{AppID}`形式で生成します。 二重スラッシュと GUID の間に、完全修飾ドメイン名 (末尾にスラッシュ "/" を付加したもの) を挿入します。 ID 全体の形式は次のようになります。`api://fully-qualified-domain-name.com/{AppID}`
-    * ex: `api://subdomain.example.com:6789/c6c1f32b-5e55-4997-881a-753cc1d563b7`。
+4. **[管理]** の下の **[API の公開]** を選択します。 [**設定**] リンクを選択して、アプリケーション ID URI をの形式で生成し `api://{AppID}` ます。 二重スラッシュと GUID の間に、完全修飾ドメイン名 (末尾にスラッシュ "/" を付加したもの) を挿入します。 ID 全体の形式は次のようになります。`api://fully-qualified-domain-name.com/{AppID}`
+    * ex: `api://subdomain.example.com:6789/c6c1f32b-5e55-4997-881a-753cc1d563b7` 。
 
 > [!NOTE]
 > ドメインを所有しているにもかかわらず、そのドメインが既に所有されているというエラーが表示される場合は、「[クイック スタート: カスタム ドメイン名を Azure Active Directory に追加する](/azure/active-directory/fundamentals/add-custom-domain)」の手順に従って登録し、この手順を繰り返します。 このエラーは、Office 365 テナントの管理者の資格情報を使用してサインインしていない場合にも発生します。
 
 5. **[Scope の追加]** ボタンをクリックします。 開いたパネルで、**[スコープ名]** として `access_as_user` を入力します。
 6. 同意できるユーザーを設定する管理者とユーザーに対して
-7. [管理者] と [ユーザーの同意] の入力を構成するためのフィールドに`access_as_user` 、範囲に適した値を入力します。 提案:
+7. [管理者] と [ユーザーの同意] の入力を構成するためのフィールドに、範囲に適した値を入力し `access_as_user` ます。 提案:
     * **管理者の同意のタイトル:** Teams はユーザーのプロファイルにアクセスできます
     * **管理者の同意の説明**: Teams は、現在のユーザーとしてアプリの web api を呼び出すことができます。
     * **ユーザーの同意のタイトル**: Teams はユーザープロファイルにアクセスして、自分の代わりに要求を行うことができます。
     * **ユーザーの同意の説明:** Teams が同じ権限でこのアプリの Api を呼び出せるようにします。
 8. **状態**が**有効**に設定されていることを確認する
 9. [**範囲の追加**] を選択します。
-    * 注: テキストフィールドのすぐ下に表示される**スコープ名**のドメイン部分は、前の手順で設定した**アプリケーション ID** URI と`/access_as_user`一致するように、末尾に追加する必要があります。例えば： 
+    * 注: テキストフィールドのすぐ下に表示される**スコープ名**のドメイン部分は、末尾に追加された、前の手順で設定した**アプリケーション ID** URI に自動的に一致する必要があります。 `/access_as_user` 次に例を示します。 
         * `api://subdomain.example.com:6789/c6c1f32b-5e55-4997-881a-753cc1d563b7/access_as_user`
 10. [承認された**クライアントアプリケーション**] セクションで、アプリの web アプリケーションに承認するアプリケーションを特定します。 次の各 Id を入力する必要があります。
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264`(Teams モバイル/デスクトップアプリケーション)
@@ -93,7 +93,7 @@ Microsoft Teams のマニフェストに新しいプロパティを追加しま�
 
 * **WebApplicationInfo** - 次の要素の親。
 * **Id** -アプリケーションのクライアント id。 これは、アプリケーションを Azure AD 1.0 エンドポイントに登録する際に取得するアプリケーション ID です。
-* **Resource** -アプリケーションのドメインとサブドメイン。 これは、AAD にアプリを登録`api://`するときに使用したものと同じ URI (プロトコルを含む) です。 この URI のドメイン部分は、Teams アプリケーションマニフェストのセクションの Url で使用されているすべてのサブドメインを含むドメインと一致する必要があります。
+* **Resource** -アプリケーションのドメインとサブドメイン。 これは、 `api://` AAD にアプリを登録するときに使用したものと同じ URI (プロトコルを含む) です。 この URI のドメイン部分は、Teams アプリケーションマニフェストのセクションの Url で使用されているすべてのサブドメインを含むドメインと一致する必要があります。
 
 ```json
 "webApplicationInfo": {
@@ -104,7 +104,7 @@ Microsoft Teams のマニフェストに新しいプロパティを追加しま�
 
 注:
 
-* AAD アプリのリソースは、通常、そのサイトの URL と appID (例`api://subdomain.example.com/6789/c6c1f32b-5e55-4997-881a-753cc1d563b7`) のルートにすぎません。 また、この値を使用して、要求が同じドメインから送信されるようにします。 Therefor タブ`contentURL`のがリソースプロパティと同じドメインを使用していることを確認してください。
+* AAD アプリのリソースは、通常、そのサイトの URL と appID (例) のルートにすぎ `api://subdomain.example.com/6789/c6c1f32b-5e55-4997-881a-753cc1d563b7` ません。 また、この値を使用して、要求が同じドメインから送信されるようにします。 Therefor `contentURL` タブのがリソースプロパティと同じドメインを使用していることを確認してください。
 * これらのフィールドを使用するには、マニフェストバージョン1.5 またはそれ以降を使用する必要があります。
 * 範囲はマニフェストではサポートされていません。代わりに、Azure portal の API 権限セクションで指定する必要があります。
 
@@ -120,13 +120,13 @@ var authTokenRequest = {
 microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```
 
-を呼び出し`getAuthToken`て、ユーザーレベルの権限に対してユーザーの同意を追加する必要がある場合は、追加の同意を付与するためのダイアログがユーザーに表示されます。 
+`getAuthToken`を呼び出して、ユーザーレベルの権限に対してユーザーの同意を追加する必要がある場合は、追加の同意を付与するためのダイアログがユーザーに表示されます。 
 
 <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
 
 ## <a name="demo-code"></a>デモコード
 
-ここでは、「test application [Task Meow](https://github.com/ydogandjiev/taskmeow) 」を参照し、SSO マニフェストを使用`teams.auth.service.js`し`sso.auth.service.js`て、およびファイルをチェックアウトし、認証ワークフローの処理方法を確認できます。
+ここでは、「test application [Task Meow](https://github.com/ydogandjiev/taskmeow) 」を参照し、SSO マニフェストを使用して、およびファイルをチェックアウトし、 `teams.auth.service.js` `sso.auth.service.js` 認証ワークフローの処理方法を確認できます。
 
 ## <a name="known-limitations"></a>既知の制限
 
@@ -148,12 +148,12 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 1. GetAuthToken を使用して取得したトークンは、その追加の Graph Api へのアクセスを取得するために、[代理送信フロー](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)を使用してサーバー側を交換する必要があります。
     * 必ず、この exchange の v2 Graph エンドポイントを使用してください。
-2. Exchange に障害が発生した場合、AAD は無効な付与の例外を返します。 通常、次の2つのエラーメッセージ`ConsentRequired`のいずれかがあります。`InteractionRequired`
+2. Exchange に障害が発生した場合、AAD は無効な付与の例外を返します。 通常、次の2つのエラーメッセージのいずれかがあります。 `ConsentRequired``InteractionRequired`
 3. Exchange に障害が発生した場合は、追加の同意を求める必要があります。 ユーザーに追加の同意を付与するように求める UI を表示することをお勧めします。 この UI には、 [aad 認証 API](~/concepts/authentication/auth-silent-aad.md)を使用して aad 同意ダイアログをトリガーするボタンが含まれている必要があります。
-4. AAD から追加の同意を求めている場合は、 `prompt=consent` aad に[クエリ文字列-パラメーター](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context)を含める必要があります。それ以外の場合、aad は追加のスコープを要求しません。
+4. AAD から追加の同意を求めている場合は、aad `prompt=consent` に[クエリ文字列-パラメーター](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context)を含める必要があります。それ以外の場合、aad は追加のスコープを要求しません。
     * 代わりに：`?scope={scopes}`
     * 使用するもの:`?prompt=consent&scope={scopes}`
-    * ユーザーに対し`{scopes}`て要求しているすべてのスコープが含まれていることを確認してください (例: Mail. read または User. read)。
+    * ユーザーに対して要求しているすべてのスコープが含まれていることを確認してください `{scopes}` (例: Mail. read または user. read)。
 5. ユーザーが追加のアクセス許可を付与した後、代理送信を再試行して、追加の Api へのアクセス権を取得します。
 
 ### <a name="non-aad-authentication"></a>非 AAD 認証
