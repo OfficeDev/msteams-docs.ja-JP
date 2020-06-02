@@ -320,14 +320,14 @@
           href: webhooks-and-connectors/how-to/connectors-creating.md
         - name: コネクタと Webhook にメッセージを送信する
           href: webhooks-and-connectors/how-to/connectors-using.md
-- name: Graph API のアクセス許可
+- name: Teams Graph REST API
   items:
     - name: リソース固有の同意 (RSC)
-      href: graph-permissions/resource-specific-consent.md
+      href: graph-api/rsc/resource-specific-consent.md
     - name: リソース固有の同意のアクセス許可をテストする
-      href: graph-permissions/test-resource-specific-consent.md
+      href: graph-api/rsc/test-resource-specific-consent.md
     - name: RSC JSON のテスト ファイル
-      href: graph-permissions/test-rsc-json-file.md
+      href: graph-api/rsc/test-rsc-json-file.md
 - name: リソース
   items:
     - name: ボット - v3 SDK
