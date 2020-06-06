@@ -3,12 +3,12 @@ title: チームアプリのローカライズ
 description: アプリのローカライズに関する問題について説明します。
 keywords: teams 発行ストア office 発行アプリソースのローカライズ言語
 ms.date: 05/15/2018
-ms.openlocfilehash: c7d8ff47d370badcc75e3ad5d10a2ca298b80195
-ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
+ms.openlocfilehash: 30e4a2589bf5c1093723406c78cff2258554c486
+ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "43120284"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "44590859"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>Microsoft Teams アプリのローカライズ
 
@@ -40,13 +40,13 @@ Microsoft Teams アプリをローカライズする場合は、考慮する必�
 
 ## <a name="localizing-the-strings-in-your-app-manifest"></a>アプリマニフェスト内の文字列のローカライズ
 
-アプリを適切にローカライズするには、Microsoft Teams アプリスキーマ v1.1 を使用する必要があります。 これを行うには、マニフェスト`$schema`の json ファイルの属性を 'https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json' に設定し、' manifestversion ' プロパティを ' 1.5 ' に更新します。
+アプリを適切にローカライズするには、Microsoft Teams アプリスキーマ v1.1 を使用する必要があります。 これを行うには、 `$schema` マニフェストの json ファイルの属性を ' ' に設定 https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json し、' manifestversion ' プロパティを ' 1.5 ' に更新します。
 
 ### <a name="example-manifestjson-change"></a>サンプルの manifest 変更
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   ...
 }
@@ -66,7 +66,7 @@ Microsoft Teams アプリをローカライズする場合は、考慮する必�
 }
 ```
 
-マニフェスト内のすべてのユーザーが接続した文字列の翻訳を含む、追加の json ファイルを提供できます。 これらのファイルは、[ローカライズファイル JSON スキーマ](../../resources/schema/localization-schema.md)に準拠している必要があり、マニフェストの ' localizationInfo ' プロパティに追加されている必要があります。 各ファイルは、Teams クライアントが適切な文字列を選択するために使用する言語タグに関連付けています。 言語タグ<language> - <region>はの形式を取りますが、目的の言語を<region>サポートするすべての地域を対象とした部分を省略することをお勧めします。
+マニフェスト内のすべてのユーザーが接続した文字列の翻訳を含む、追加の json ファイルを提供できます。 これらのファイルは、[ローカライズファイル JSON スキーマ](../../resources/schema/localization-schema.md)に準拠している必要があり、マニフェストの ' localizationInfo ' プロパティに追加されている必要があります。 各ファイルは、Teams クライアントが適切な文字列を選択するために使用する言語タグに関連付けています。 言語タグはの形式を取り <language> - <region> ますが、目的の言語を <region> サポートするすべての地域を対象とした部分を省略することをお勧めします。
 
 Teams クライアントは、次の順序で文字列を適用します。 default language strings-> user's language only 文字列-> ユーザーの言語 + ユーザーの地域文字列。
 
@@ -114,7 +114,7 @@ Teams クライアントは、次の順序で文字列を適用します。 defa
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
   "name.short": "Le App",
   "name.full": "App pour Microsoft Teams",
   "description.short": "Créez d'excellentes applications pour Microsoft Teams avec App.",
@@ -129,4 +129,4 @@ Teams クライアントは、次の順序で文字列を適用します。 defa
 
 ## <a name="handling-localized-text-submissions-from-your-users"></a>ユーザーからのローカライズされたテキストの送信を処理する
 
-アプリケーションのローカライズ版を提供している場合は、ユーザーが同じ言語で応答することが非常に高い可能性があります。 Teams はユーザーの送信を既定の言語に変換しないので、アプリでそれを処理する必要があります。 たとえば、ローカライズ`commandList`を指定すると、ボットへの応答は、既定の言語ではなく、コマンドのローカライズされたテキストになります。 アプリは適切に応答する必要があります。
+アプリケーションのローカライズ版を提供している場合は、ユーザーが同じ言語で応答することが非常に高い可能性があります。 Teams はユーザーの送信を既定の言語に変換しないので、アプリでそれを処理する必要があります。 たとえば、ローカライズを指定すると、 `commandList` ボットへの応答は、既定の言語ではなく、コマンドのローカライズされたテキストになります。 アプリは適切に応答する必要があります。

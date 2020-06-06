@@ -4,12 +4,12 @@ author: clearab
 description: Microsoft Teams の bot に OAuth 認証を追加する方法。
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: b5a246db1838d19d81e42e9a60efa74bb5363573
-ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
+ms.openlocfilehash: 2b9765a2f295e85dc9b4d2c1b1ddcae4d642e268
+ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "44210723"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "44590873"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Teams の bot に認証を追加する
 
@@ -119,7 +119,7 @@ Bot チャネル登録は、Microsoft アプリ Id とアプリパスワード (
    1. [**クライアントシークレット**] で、[**新しいクライアントシークレット**&#x2795;] を選択します。
    1. このシークレットを、 *Teams の Bot id アプリ*など、このアプリ用に作成する必要がある他のユーザーから識別するための説明を追加します。
    1. 選択範囲に**期限**を設定します。
-   1. [**追加**] を選択します。
+   1. **[追加]** を選択します。
    1. このページを終了する前に、**シークレットを録音して**ください。 この値は、ボットを使用して Azure AD アプリケーションを登録するときに、_クライアントシークレット_として後で使用します。
 
 ### <a name="configure-the-identity-provider-connection-and-register-it-with-the-bot"></a>Id プロバイダー接続を構成し、bot に登録する
@@ -143,11 +143,11 @@ Bot チャネル登録は、Microsoft アプリ Id とアプリパスワード (
         - 任意の組織ディレクトリでアカウントを選択した場合 *(任意の AAD ディレクトリ-マルチテナントおよび個人の Microsoft アカウント (Skype、Xbox、Outlook など)* の場合は、テナント ID ではなく**common**という単語を入力します。 それ以外の場合、AAD アプリは、ID が選択されたテナントを経由して検証し、個人の Microsoft アカウントを除外します。
 
     h. [**リソースの URL**] で、と入力し `https://graph.microsoft.com/` ます。 これは、現在のコードサンプルでは使用されません。  
-    私。 **範囲**を空白のままにします。 次の画像は例です。
+    i. **範囲**を空白のままにします。 次の画像は例です。
 
     ![teams ボット app auth 接続文字列 adv1](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
 
-1. **[保存]** を選択します。
+1. [**保存**] を選択します。
 
 ### <a name="test-the-connection"></a>接続をテストする
 
@@ -159,7 +159,7 @@ Bot チャネル登録は、Microsoft アプリ Id とアプリパスワード (
     ![teams ボット app auth 接続文字列 adv1](../../../assets/images/authentication/auth-bot-connection-test-accept.PNG)
 
 1. **[同意する]** を選択します。
-1. これにより、[ ** \< 接続名> 成功] ページへのテスト接続**にリダイレクトされます。 エラーが表示された場合は、ページを更新します。 次の画像は例です。
+1. これで、[**テスト接続は \<your-connection-name> 成功しまし**た] ページにリダイレクトされます。 エラーが表示された場合は、ページを更新します。 次の画像は例です。
 
   ![teams ボット app auth 接続文字列 adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
 
@@ -390,7 +390,7 @@ Microsoft Teams アプリをローカルで実行する準備として ngrok を
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "version": "1.0.0",
   "id": "",
