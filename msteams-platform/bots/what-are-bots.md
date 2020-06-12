@@ -4,12 +4,12 @@ author: clearab
 description: Microsoft Teams の会話ボットの概要。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: a88d516c57faa96e29de3e786910a13c4d65ac84
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: 140be426ac789efbf044130b0683f60af9f617d6
+ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44453869"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "44704468"
 ---
 # <a name="what-are-conversational-bots"></a>会話ボットとは
 
@@ -21,7 +21,7 @@ ms.locfileid: "44453869"
 
 ## <a name="build--a-bot-for-teams-with-the-microsoft-bot-framework"></a>Microsoft Bot フレームワークを使用して Teams 用の bot を構築する
 
-Microsoft Bot フレームワーク] ( https://dev.botframework.com/) C#、Java、Python、JavaScript を使用してボットを作成するための豊富な SDK)。 Bot Framework に基づくボットが既にある場合は、簡単な操作でそのボットを Microsoft Teams で動作するように適応させることができます。 用意されている [SDK](/microsoftteams/platform/#pivot=sdk-tools) を活用するため、C# か Node.js を使用することをお勧めします。 これらのパッケージは、基本的な Bot Builder SDK のクラスとメソッドを次のように拡張します。
+[Microsoft Bot フレームワーク](https://dev.botframework.com/)は、C#、Java、Python、JavaScript を使用してボットを作成するための豊富な SDK です。 Bot Framework に基づくボットが既にある場合は、簡単な操作でそのボットを Microsoft Teams で動作するように適応させることができます。 用意されている [SDK](/microsoftteams/platform/#pivot=sdk-tools) を活用するため、C# か Node.js を使用することをお勧めします。 これらのパッケージは、基本的な Bot Builder SDK のクラスとメソッドを次のように拡張します。
 
 * Office 365 コネクタ カードなどの専用のカードを使用する。
 * アクティビティに関する Teams 固有のチャネル データを使用して設定する。
