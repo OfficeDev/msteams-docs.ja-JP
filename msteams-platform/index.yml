@@ -1,0 +1,200 @@
+### YamlMime:Hub
+title: Microsoft Teams 開発者向けドキュメント
+brand: teams
+metadata:
+  title: Microsoft Teams プラットフォーム開発者向けドキュメント
+  description: Microsoft Teams 開発者プラットフォームでは、開発者が簡単に独自のアプリとサービスを統合して、生産性を向上させ、迅速に意思決定を行い、(コンテキストの切り替えを減らして) フォーカスを示し、既存のコンテンツとワークフロー関連のコラボレーションを作成できます。 .
+  ms.service: msteams
+  ms.topic: hub-page
+  ms.collection: collection
+  author: laujan
+  ms.author: lajanuar
+  ms.date: 05/29/2020
+  ms.openlocfilehash: f0cd5ae499497dad227a62f2938df2449a09dc81
+  ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 06/06/2020
+  ms.locfileid: "44801362"
+highlightedContent:
+  items:
+  - title: Microsoft Teams アプリケーション
+    itemType: overview
+    url: /microsoftteams/platform/overview
+  - title: タブ — 埋め込み Web エクスペリエンス
+    itemType: overview
+    url: /microsoftteams/platform/tabs/what-are-tabs
+  - title: ボット — 会話ベースの相互作用
+    itemType: overview
+    url: /microsoftteams/platform/bots/what-are-bots
+  - title: メッセージング拡張機能 — タスク指向の相互作用
+    itemType: overview
+    url: /microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
+  - title: タスク モジュールとカード — 豊富なメッセージングと通知
+    itemType: overview
+    url: /microsoftteams/platform/task-modules-and-cards/what-are-task-modules
+  - title: Webhook とコネクタ — プログラムされたメッセージングと通知
+    itemType: overview
+    url: /microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors
+  - title: Microsoft Teams と Microsoft Graph API
+    itemType: overview
+    url: /graph/teams-concept-overview
+conceptualContent:
+  title: ガイドとリソース
+  items:
+  - title: 参照
+    links:
+    - url: /microsoftteams/platform/concepts/building-an-app
+      itemType: concept
+      text: Microsoft Teams アプリを構築する
+    - url: /microsoftteams/platform/concepts/extensibility-points
+      itemType: concept
+      text: Microsoft Teams の機能ポイント
+    - url: /microsoftteams/platform/concepts/design/understand-use-cases
+      itemType: concept
+      text: Microsoft Teams の使用事例について
+    - url: /microsoftteams/platform/concepts/design/map-use-cases
+      itemType: concept
+      text: ユースケースを Microsoft Teams の機能にマップする
+    - url: /microsoftteams/platform/whats-new
+      itemType: whats-new
+      text: 新機能
+  - title: 詳細
+    links:
+    - url: /learn/modules/intro-microsoft-teams-apps
+      itemType: learn
+      text: Microsoft Teams 用アプリの作成—概要
+    - url: /learn/modules/embedded-web-experiences
+      itemType: learn
+      text: タブ—組み込みの web エクスペリエンスを作成する
+    - url: /learn/modules/msteams-conversation-bots/
+      itemType: learn
+      text: Bot —会話の対話を作成する
+    - url: /learn/modules/msteams-messaging-extensions/
+      itemType: learn
+      text: メッセージング拡張機能—タスク指向の対話を作成する
+    - url: /learn/modules/msteams-task-modules/
+      itemType: learn
+      text: タスクモジュール-入力を収集して情報を収集する
+    - url: /learn/modules/msteams-webhooks-connectors/
+      itemType: learn
+      text: Webhooks と Office 365 のコネクタ-web サービスをチャネルおよびチームに接続する
+  - title: 開発
+    links:
+    - url: /microsoftteams/platform/tutorials/get-started-nodejs-app-studio
+      itemType: get-started
+      text: JavaScript/Node.js とアプリ Studio を使用して Teams アプリを構築する
+    - url: /microsoftteams/platform/tutorials/get-started-dotnet-app-studio
+      itemType: get-started
+      text: C#/.NET およびアプリ Studio を使用して Teams アプリを構築する
+  - title: 展開
+    links:
+    - url: /microsoftteams/platform/samples/app-templates
+      itemType: deploy
+      text: Teams アプリテンプレート-運用準備アプリケーション
+    - url: /microsoftteams/platform/samples/shifts-wfm-connectors
+      itemType: deploy
+      text: Teams でコネクタをシフトする-生産対応の統合
+    - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
+      itemType: deploy
+      text: パワー仮想エージェントのボットと Teams の統合
+  - title: Connect
+    links:
+    - url: https://developer.microsoft.com/microsoft-teams/blogs/
+      itemType: overview
+      text: Microsoft Teams 開発者ブログ
+    - url: https://aka.ms/microsoftteamscommunitycall
+      itemType: overview
+      text: Microsoft Teams コミュニティ コール
+    - url: /microsoftteams/platform/feedback
+      itemType: overview
+      text: フィードバック & サポート
+tools:
+  title: Sdk & ツール
+  items:
+  - title: JavaScript SDK for Tabs
+    imageSrc: ./assets/icons/logo_js.png
+    url: /javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest
+  - title: ボットおよびメッセージング拡張機能用 Node.js Bot Framework SDK
+    imageSrc: ./assets/icons/logo_nodejs.png
+    url: https://github.com/Microsoft/botbuilder-js
+  - title: ボットおよびメッセージング拡張機能用 .NET Bot Framework SDK
+    imageSrc: ./assets/icons/logo_net.png
+    url: https://github.com/Microsoft/botbuilder-dotnet/
+  - title: Microsoft Graph SDK
+    imageSrc: ./assets/icons/graph-icon-1.png
+    url: https://docs.microsoft.com/graph/sdks/sdks-overview
+  - title: Microsoft Teams App Studio
+    imageSrc: ./assets/icons/AppStudioIcon.png
+    url: /microsoftteams/platform/concepts/build-and-test/app-studio-overview
+  - title: Microsoft Teams 用 Yeoman ジェネレーター
+    imageSrc: ./assets/icons/Yeoman.png
+    url: https://github.com/OfficeDev/generator-teams
+additionalContent:
+  sections:
+  - title: アプリテンプレート A ~ H
+    summary: すぐに使用できるアプリケーション
+    items:
+    - title: アソシエイト インサイト
+      url: https://github.com/OfficeDev/microsoft-teams-apps-associateinsights
+      summary: 現場担当者が顧客からのフィードバックを取得できます。
+    - title: 出席
+      url: https://github.com/OfficeDev/microsoft-teams-apps-attendance
+      summary: チームが出席を記録し、要約されたレポートを生成できるようにします。
+    - title: 書籍-a ルーム
+      url: https://github.com/OfficeDev/microsoft-teams-apps-bookaroom
+      summary: チームが、会議室をすばやく見つけて予約できます。
+    - title: お祝い
+      url: https://github.com/OfficeDev/microsoft-teams-celebrations-app
+      summary: 誕生日、記念日、その他の定期的なイベントの案内を促進します。
+    - title: 社内コミュニケーター
+      url: https://github.com/OfficeDev/microsoft-teams-company-communicator-app
+      summary: 会社のチームが、チャットメッセージを作成して従業員に送信できるようにします。
+    - title: 観客 Sourcer
+      url: https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app
+      summary: 共同でアウトソーシングされる情報からチームクエリに対する回答を提供します。
+    - title: カスタム ステッカー
+      url: https://github.com/OfficeDev/microsoft-teams-stickers-app
+      summary: チームまたは組織内でカスタムステッカーを追加します。
+    - title: エキスパート検索
+      url: https://github.com/OfficeDev/microsoft-teams-apps-expertfinder
+      summary: スキル、関心事、教育に基づいて、チームが社内の専門家を識別できるようにします。
+    - title: FAQ プラス
+      url: https://github.com/OfficeDev/microsoft-teams-faqplusplus-app
+      summary: 質問と回答のボットを使用して、チームの生産性を向上させます。
+    - title: グループアクティビティ
+      url: https://github.com/OfficeDev/microsoft-teams-apps-groupactivities
+      summary: アクティビティ グループとコラボレーション ワークフローをすばやく作成、管理します。
+    - title: HR サポート
+      url: https://github.com/OfficeDev/microsoft-teams-faqplusplus-app
+      summary: 質問と回答ボットを使用して HR サポートを提供します。
+  - title: アプリテンプレート I ~ Z
+    summary: すぐに使用できるアプリケーション
+    items:
+    - title: アイスブレーカー
+      url: https://github.com/OfficeDev/microsoft-teams-icebreaker-app
+      summary: 毎週会合のチームメンバーをランダムにペアリングすることでコラボレーションを促進します。
+    - title: 報奨金
+      url: https://github.com/OfficeDev/microsoft-teams-apps-incentives
+      summary: アクティビティとイベントで奨励される参加を管理し、追跡します。
+    - title: インシデントレポーター
+      url: https://github.com/OfficeDev/microsoft-teams-apps-incidentreport
+      summary: 組織内でのインシデント管理を最適化します。
+    - title: バッジを開く
+      url: https://github.com/OfficeDev/microsoft-teams-apps-openbadges
+      summary: デジタル学習と特典の資格情報バッジを追跡します。
+    - title: クイック応答
+      url: https://github.com/OfficeDev/microsoft-teams-apps-quickresponses
+      summary: よく寄せられる質問に答えて、応答の動的ライブラリを構築します。
+    - title: リモートサポート
+      url: https://github.com/OfficeDev/microsoft-teams-apps-remotesupport
+      summary: 内部サポートチームとのフォーカスのあるインターフェイスを提供します。
+    - title: チームの要求
+      url: https://github.com/OfficeDev/microsoft-teams-apps-requestateam
+      summary: 組織の新しいチーム作成フローを強化します。
+    - title: スクラムの状態
+      url: https://github.com/OfficeDev/microsoft-teams-app-scrumstatus
+      summary: チームが非同期的なスクラム会議を実行し、更新情報を共有できます。
+    - title: SharePoint リスト検索
+      url: https://github.com/OfficeDev/microsoft-teams-list-search-app
+      summary: SharePoint リストを検索し、Teams にアダプティブカードとしてアイテムを挿入します。

@@ -2,24 +2,24 @@
 title: レート制限
 description: Microsoft Teams でのレートの制限とベストプラクティス
 keywords: teams のボットレート制限
-ms.openlocfilehash: 145f65a7e17b833e11631dfc219d9f5732f43bc6
-ms.sourcegitcommit: 6c692734a382865531a83b9ebd6f604212f484fc
+ms.openlocfilehash: 9b244053d42aaddaf48c798e401438b614b0e1bd
+ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "42371766"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "44801314"
 ---
 # <a name="optimize-your-bot-rate-limiting-and-best-practices-in-microsoft-teams"></a>Bot を最適化する: Microsoft Teams でのレートの制限とベストプラクティス
 
 一般的な原則として、アプリケーションでは、個々のチャットまたはチャネル会話に投稿するメッセージ数を制限する必要があります。 これにより、エンドユーザーに "spammy" を感じない最適な操作性が実現されます。
 
-Microsoft Teams とそのユーザーを保護するために、bot Api rate は受信要求を制限します。 この制限を超えるアプリは、エラー `HTTP 429 Too Many Requests`状態を受信します。 すべての要求は、メッセージの送信、チャネルの列挙、名簿の取得など、同じ料金を制限するポリシーに従います。
+Microsoft Teams とそのユーザーを保護するために、bot Api rate は受信要求を制限します。 この制限を超えるアプリは、 `HTTP 429 Too Many Requests` エラー状態を受信します。 すべての要求は、メッセージの送信、チャネルの列挙、名簿の取得など、同じ料金を制限するポリシーに従います。
 
-レート制限の正確な値は変更される可能性があるため、API が戻る`HTTP 429 Too Many Requests`ときに、アプリケーションで適切なバックオフ動作を実装することをお勧めします。
+レート制限の正確な値は変更される可能性があるため、API が戻るときに、アプリケーションで適切なバックオフ動作を実装することをお勧め `HTTP 429 Too Many Requests` します。
 
 ## <a name="handling-rate-limits"></a>処理率の制限
 
-Bot ビルダー SDK 操作を発行するときに、状態`Microsoft.Rest.HttpOperationException`コードを処理および確認できます。
+Bot ビルダー SDK 操作を発行するときに、 `Microsoft.Rest.HttpOperationException` 状態コードを処理および確認できます。
 
 ```csharp
 try
@@ -38,7 +38,7 @@ catch (HttpOperationException ex)
 
 ## <a name="best-practices"></a>ベスト プラクティス
 
-通常、応答を受信`HTTP 429`しないようにするには、簡単な予防措置を講じる必要があります。 たとえば、同じ個人用またはチャネル会話に対して複数の要求を発行しないようにします。 代わりに、API 要求のバッチ処理を検討してください。
+通常、応答を受信しないようにするには、簡単な予防措置を講じる必要があり `HTTP 429` ます。 たとえば、同じ個人用またはチャネル会話に対して複数の要求を発行しないようにします。 代わりに、API 要求のバッチ処理を検討してください。
 
 ランダムな変位による指数バックオフを使用することは、429s を処理するために推奨される方法です。 これにより、複数の要求で再試行時に競合が発生しなくなります。
 
@@ -92,7 +92,7 @@ var retryPolicy = new RetryPolicy(new BotSdkTransientExceptionDetectionStrategy(
 await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsync( (Activity)reply) ).ConfigureAwait(false);
 ```
 
-前に説明した`System.Action`再試行ポリシーを使用して、メソッドを実行することもできます。 参照されるライブラリでは、固定の間隔または線形バックオフメカニズムを指定することもできます。
+前に説明した再試行ポリシーを使用して、メソッドを実行することもでき `System.Action` ます。 参照されるライブラリでは、固定の間隔または線形バックオフメカニズムを指定することもできます。
 
 値と戦略を構成ファイルに格納して、実行時に値を微調整および調整することをお勧めします。
 
@@ -107,19 +107,19 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 | **シナリオ** | **期間 (秒)** | **許可される最大操作数** |
 | --- | --- | --- |
-|| 1-d | 7 |
-| 会話に送信 | pbm-2 | ~ |
+| 会話に送信 | 1  | 7  |
+| 会話に送信 | pbm-2 | 8  |
 | 会話に送信 | 31 | 60 |
 | 会話に送信 | 3600 | 1800 |
-| 会話を作成する | 1-d | 7 |
-| 会話を作成する | pbm-2 | ~ |
+| 会話を作成する | 1  | 7  |
+| 会話を作成する | pbm-2 | 8  |
 | 会話を作成する | 31 | 60 |
 | 会話を作成する | 3600 | 1800 |
-| 会話メンバーを取得する| 1-d | 14  |
+| 会話メンバーを取得する| 1  | 14  |
 | 会話メンバーを取得する| pbm-2 | 16  |
 | 会話メンバーを取得する| 31 | 120 |
 | 会話メンバーを取得する| 3600 | 3600 |
-| 会話を取得する | 1-d | 14  |
+| 会話を取得する | 1  | 14  |
 | 会話を取得する | pbm-2 | 16  |
 | 会話を取得する | 31 | 120 |
 | 会話を取得する | 3600 | 3600 |
@@ -130,15 +130,15 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 | **シナリオ** | **期間 (秒)** | **許可される最大操作数** |
 | --- | --- | --- |
-| 会話に送信 | 1-d | 14  |
+| 会話に送信 | 1  | 14  |
 | 会話に送信 | pbm-2 | 16  |
-| 会話を作成する | 1-d | 14  |
+| 会話を作成する | 1  | 14  |
 | 会話を作成する | pbm-2 | 16  |
-| CreateConversation| 1-d | 14  |
+| CreateConversation| 1  | 14  |
 | CreateConversation| pbm-2 | 16  |
-| 会話メンバーを取得する| 1-d | 個 |
+| 会話メンバーを取得する| 1  | 個 |
 | 会話メンバーを取得する| pbm-2 | 32 |
-| 会話を取得する | 1-d | 個 |
+| 会話を取得する | 1  | 個 |
 | 会話を取得する | pbm-2 | 32 |
 
 ## <a name="bot-per-data-center-limit"></a>データセンターあたりの Bot 数の制限
@@ -147,6 +147,6 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 |**期間 (秒)** | **許可される最大操作数** |
 | --- | --- |
-| 1-d | 1280 |
+| 1  | 1280 |
 | 1800 | 8000 |
 | 3600 | 15000 |

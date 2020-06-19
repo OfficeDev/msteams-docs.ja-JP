@@ -1,26 +1,26 @@
 ---
-title: チャネルとグループの会話
+title: チャネルとグループ会話
 author: clearab
 description: チャネルまたはグループのチャットで bot 宛てのメッセージを送信、受信、処理する方法について説明します。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: ada2839ba41e4004b5f48449f4e057830dd841b9
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: ccc27d7638820cfa3c2b7cfe12b91b3a3a9fef1d
+ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675025"
+ms.lasthandoff: 05/31/2020
+ms.locfileid: "44801341"
 ---
-# <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Microsoft Teams bot によるチャネルおよびグループチャットの会話
+# <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Microsoft Teams ボットとのチャネルおよびグループ チャット会話
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Bot に`teams` or `groupchat`スコープを追加することで、チームまたはグループのチャットにインストールできるようになります。 これにより、会話のすべてのメンバーが bot と対話することができます。 インストールされた後は、会話メンバーのリストと同様に会話に関するメタデータにアクセスできます。また、チームの詳細と、そのチームに関する詳細なチャネルリストがインストールされている場合。
+Bot に or スコープを追加することで `teams` `groupchat` 、チームまたはグループのチャットにインストールできるようになります。 これにより、会話のすべてのメンバーがボットと対話できるようになります。 インストールされたボットは、会話メンバーのリストなど、会話に関するメタデータにもアクセスできるようになります。チームにインストールされた場合、そのチームに関する詳細とチャネルの完全な一覧にアクセスできるようになります。
 
 グループまたはチャネル内のボットは、メッセージが記載されている場合にのみメッセージを受信します ("@botname")、会話に送信された他のメッセージは受信しません。
 
 > [!NOTE]
-> Bot は直接 @mentioned する必要があります。 チームまたはチャネルが言及されたとき、またはユーザーが bot からメッセージに返信したときに @mentioning せずに、そのメッセージが bot に表示されることはありません。
+> ボットは直接 @メンションされる必要があります。 チームまたはチャネルが言及されたとき、またはユーザーが bot からメッセージに返信したときに @mentioning せずに、そのメッセージが bot に表示されることはありません。
 
 ## <a name="design-considerations"></a>設計上の考慮事項
 
@@ -30,21 +30,21 @@ Bot は、グループまたはチャネル内のすべてのメンバーにつ�
 
 Bot がチームにインストールされている場合、既存のスレッドに返信するのではなく、新しい会話スレッドを作成する必要が生じることがあります。 これは、[事前メッセージ](~/bots/how-to/conversations/send-proactive-messages.md)の形式です。
 
-## <a name="working-with--mentions"></a>@ メンションの使用
+## <a name="working-with-mentions"></a>メンションの使用
 
-グループまたはチャネルから bot へのすべてのメッセージには、メッセージテキストに独自の名前を持つ @mention が含まれているため、メッセージ解析でそのことを確実に処理する必要があります。 Bot は、メッセージに記載されている他のユーザーを取得し、そのユーザーが送信するメッセージにメンションを追加することもできます。
+グループやチャネルからボットに送信されるすべてのメッセージには、メッセージのテキストにボット自身の名前の付いた @メンションが含まれているため、メッセージ解析でメンションが確実に処理されるようにする必要があります。 ボットは、メッセージ内でメンションされている他のユーザーを取得したり、ボットが送信するすべてのメッセージにメンションを追加したりすることもできます。
 
 ### <a name="stripping-mentions-from-message-text"></a>メッセージテキストからメンションを除去する
 
-Bot が受信するメッセージのテキストから @mentions を削除する必要がある場合があります。
+ボットが受け取ったメッセージのテキストから @メンションを取り除く必要がある場合があります。
 
 ### <a name="retrieving-mentions"></a>メンションの取得
 
-メンションは、 `entities`ペイロードのオブジェクトに返され、ユーザーの一意の ID と、通常はユーザーの名前の両方が含まれます。 メッセージのテキストには、同様`<at>@John Smith<at>`の説明も含まれます。 ただし、ユーザーに関する情報を取得するために、メッセージ内のテキストに依存しないようにしてください。メッセージを送信するユーザーが変更を行うことができます。 代わりに、 `entities`オブジェクトを使用します。
+メンションは、 `entities` ペイロードのオブジェクトに返され、ユーザーの一意の ID と、通常はユーザーの名前の両方が含まれます。 メッセージのテキストには、`<at>@John Smith<at>` のようなメンションも含まれます。 ただし、ユーザーに関する情報を取得するために、メッセージ内のテキストに依存しないようにしてください。メッセージを送信するユーザーが変更を行うことができます。 代わりに、オブジェクトを使用 `entities` します。
 
-メッセージ内のすべてのメンションを取得するに`GetMentions`は、オブジェクトの`Mention`配列を返す Bot ビルダー SDK の関数を呼び出します。
+メッセージ内のすべてのメンションを取得するには、 `GetMentions` オブジェクトの配列を返す Bot ビルダー SDK の関数を呼び出します `Mention` 。
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -62,7 +62,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node.js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -78,7 +78,7 @@ this.onMessage(async (turnContext, next) => {
 });
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -120,7 +120,7 @@ this.onMessage(async (turnContext, next) => {
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 @staticmethod
@@ -139,14 +139,14 @@ def get_mentions(activity: Activity) -> List[Mention]:
 
 Bot は、チャネルに投稿されたメッセージに他のユーザーを伝えます。 これを行うには、メッセージで次の操作を実行する必要があります。
 
-オブジェクト`Mention`には、次の2つのプロパティを設定する必要があります。
+オブジェクトには、 `Mention` 次の2つのプロパティを設定する必要があります。
 
 * メッセージテキストに<at>@username</at>を含める
 * エンティティのコレクション内に、メンションオブジェクトを含めます。
 
 Bot フレームワーク SDK は、ヘルパーメソッドとオブジェクトを提供して、メンションを簡単に作成できるようにします。
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -164,7 +164,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node.js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -183,9 +183,9 @@ this.onMessage(async (turnContext, next) => {
 });
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
-配列内のオブジェクトのフィールドは、 `text`メッセージ** `text`フィールドの一部に正確に一致している必要があります。 `entities` そうでない場合、メンションは無視されます。
+`text`配列内のオブジェクトのフィールドは、 `entities` メッセージフィールドの一部に*正確*に一致している必要があり `text` ます。 そうでない場合、メンションは無視されます。
 
 ```json
 {
@@ -227,7 +227,7 @@ this.onMessage(async (turnContext, next) => {
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 async def _mention_activity(self, turn_context: TurnContext):
@@ -246,7 +246,7 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 ## <a name="sending-a-message-on-installation"></a>インストール時にメッセージを送信する
 
-Bot がグループまたはチームに最初に追加されたときに、それを紹介するメッセージを送信すると便利な場合があります。 このメッセージには、bot の機能の簡単な説明とその使用方法が記載されています。 `conversationUpdate`イベントをイベントにサブスクライブするには`teamMemberAdded` 、eventType を使用します。  新しいチームメンバーが追加されたときにイベントが送信されるため、追加された新しいメンバーが bot であるかどうかを確認する必要があります。 詳細については、「[新しいチームメンバーへのウェルカムメッセージの送信](~/bots/how-to/conversations/send-proactive-messages.md)」を参照してください。
+Bot がグループまたはチームに最初に追加されたときに、それを紹介するメッセージを送信すると便利な場合があります。 このメッセージには、bot の機能の簡単な説明とその使用方法が記載されています。 イベントをイベントにサブスクライブするに `conversationUpdate` は、eventType を使用し `teamMemberAdded` ます。  新しいチームメンバーが追加されたときにイベントが送信されるため、追加された新しいメンバーが bot であるかどうかを確認する必要があります。 詳細については、「[新しいチームメンバーへのウェルカムメッセージの送信](~/bots/how-to/conversations/send-proactive-messages.md)」を参照してください。
 
 Bot が追加されたときに、チームの各メンバーに個人メッセージを送信することもできます。 これを行うには、チーム名簿を取得して、各ユーザーに直接メッセージを送信することができます。
 

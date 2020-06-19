@@ -3,11 +3,11 @@ title: 詳細なリンクを作成する
 description: 詳細なリンクとアプリでの使用方法について説明します。
 keywords: teams ディープリンクディープリンク
 ms.openlocfilehash: 03580c4d15c82da70402d68d85b0d28f8afa670e
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674989"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801244"
 ---
 # <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>Microsoft Teams のコンテンツと機能への詳細なリンクを作成する
 
@@ -18,7 +18,7 @@ Teams クライアント内の情報と機能へのリンクを作成できま�
 
 ## <a name="deep-linking-to-your-tab"></a>タブへの詳細なリンク
 
-Teams のエンティティへの詳細なリンクを作成できます。 通常、これは、タブ内のコンテンツと情報に移動するリンクを作成するために使用されます。たとえば、タブにタスクリストが含まれている場合は、チームメンバーが個々のタスクへのリンクを作成して共有することがあります。 このリンクをクリックすると、特定の項目を中心とするタブに移動します。 これを実装するには、UI に最適な方法で、各アイテムに "リンクのコピー" アクションを追加します。 ユーザーがこのアクションを実行すると、 `shareDeepLink()`を呼び出して、クリップボードにコピーできるリンクを含むダイアログボックスを表示します。 この呼び出しを行うと、アイテムの ID も渡されます。この ID は、リンクの後に tab キーが再読み込みされたときに[コンテキスト](~/tabs/how-to/access-teams-context.md)に戻されます。
+Teams のエンティティへの詳細なリンクを作成できます。 通常、これは、タブ内のコンテンツと情報に移動するリンクを作成するために使用されます。たとえば、タブにタスクリストが含まれている場合は、チームメンバーが個々のタスクへのリンクを作成して共有することがあります。 このリンクをクリックすると、特定の項目を中心とするタブに移動します。 これを実装するには、UI に最適な方法で、各アイテムに "リンクのコピー" アクションを追加します。 ユーザーがこのアクションを実行すると、を呼び出して、 `shareDeepLink()` クリップボードにコピーできるリンクを含むダイアログボックスを表示します。 この呼び出しを行うと、アイテムの ID も渡されます。この ID は、リンクの後に tab キーが再読み込みされたときに[コンテキスト](~/tabs/how-to/access-teams-context.md)に戻されます。
 
 または、このトピックで後述する形式を使用して、プログラムによってディープリンクを生成することもできます。 これらのメッセージを[ボット](~/bots/what-are-bots.md)および[コネクタ](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)メッセージで使用して、タブの変更やその中のアイテムについてユーザーに通知することができます。
 
@@ -38,7 +38,7 @@ Teams のエンティティへの詳細なリンクを作成できます。 通�
 ### <a name="generating-a-deep-link-to-your-tab"></a>タブに詳細なリンクを生成する
 
 > [!NOTE]
-> 静的タブのスコープは "personal" で、構成可能なタブの範囲は "team" です。 2つのタブの種類の構文は、構成可能なタブだけに`channel`コンテキストオブジェクトに関連付けられているプロパティがあるため、構文が若干異なります。 個人とチームのスコープの詳細については、「[マニフェスト](~/resources/schema/manifest-schema.md)リファレンス」を参照してください。
+> 静的タブのスコープは "personal" で、構成可能なタブの範囲は "team" です。 2つのタブの種類の構文は、構成可能なタブだけに `channel` コンテキストオブジェクトに関連付けられているプロパティがあるため、構文が若干異なります。 個人とチームのスコープの詳細については、「[マニフェスト](~/resources/schema/manifest-schema.md)リファレンス」を参照してください。
 > [!NOTE]
 > ディープリンクは、タブが v2.0 以降のライブラリを使用して構成されている場合にのみ正しく機能し、そのためにはエンティティ ID を持っている必要があります。 エンティティ Id のないタブへの深いリンクは、タブに移動しますが、サブエンティティ ID をタブに提供することはできません。
 
@@ -50,8 +50,8 @@ Bot、コネクタ、またはメッセージング拡張カードで使用で�
 
 * `appId`&emsp;マニフェストからの ID。たとえば、"fe4a8eba-2a31-4737-8e33-e5fae6fee194" のようになります。
 * `entityId`&emsp;タブ内のアイテムの ID。タブを[構成](~/tabs/how-to/create-tab-pages/configuration-page.md)するときに指定します。たとえば、"tasklist123" のようになります。
-* `entityWebUrl`また`subEntityWebUrl` &emsp;は、クライアントがタブのレンダリングをサポートしていない場合に使用するフォールバック URL を持つオプションフィールド。たとえば、"https://tasklist.example.com/123" またはhttps://tasklist.example.com/list123/task456""
-* `entityLabel`また`subEntityLabel` &emsp;は、タブ内のアイテムのラベルを使用して、ディープリンクを表示するときに使用します。たとえば、"タスクリスト 123" または "タスク 456" などです。
+* `entityWebUrl`または、 `subEntityWebUrl` &emsp; クライアントがタブのレンダリングをサポートしていない場合に使用するフォールバック URL を持つオプションフィールド。たとえば、" https://tasklist.example.com/123 " または " https://tasklist.example.com/list123/task456 "
+* `entityLabel`または、 `subEntityLabel` &emsp; タブ内のアイテムのラベルを使用して、ディープリンクを表示するときに使用します。たとえば、"タスクリスト 123" や "タスク 456" などです。
 * `context`&emsp;次のフィールドを含む JSON オブジェクト。
   * `subEntityId`&emsp;タブ_内_のアイテムの ID。たとえば、"task456" のようになります。
   * `channelId`&emsp;Microsoft Teams channel ID (タブ[コンテキスト](~/tabs/how-to/access-teams-context.md)から使用可能)。たとえば、"19: cbe3683f25094106b826c9cada3afbe0@thread" です。 このプロパティは、範囲が "team" である構成可能なタブでのみ使用できます。 これは、スコープが "personal" である静的タブでは使用できません。
@@ -75,7 +75,7 @@ Bot、コネクタ、またはメッセージング拡張カードで使用で�
 
 深いリンクに移動すると、Microsoft Teams は単にタブに移動し、Microsoft Teams の JavaScript ライブラリを使用して、サブエンティティ ID (存在する場合) を取得するためのメカニズムを提供します。
 
-この[`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#getcontext--context--context-----void-)呼び出しは、ディープリンクを介し`subEntityId`てタブが移動された場合に、フィールドを含むコンテキストを返します。
+この [`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#getcontext--context--context-----void-) 呼び出しは、 `subEntityId` ディープリンクを介してタブが移動された場合に、フィールドを含むコンテキストを返します。
 
 ## <a name="deep-linking-from-your-tab"></a>タブからの詳細なリンク
 
@@ -115,7 +115,7 @@ Bot、コネクタ、またはメッセージング拡張カードで使用で�
 * `topicName`&emsp;3人以上のユーザーとチャットする場合は、チャットの表示名のオプションフィールド。 このフィールドが指定されていない場合、チャットの表示名は参加者の名前に基づきます。
 * `message`&emsp;現在のユーザーの新規作成ボックスに挿入するメッセージテキストのオプションフィールドで、チャットは下書きの状態になっています。
 
-この深いリンクを bot と組み合わせて使用するには、カードのボタンの URL のターゲットとしてこれを指定する`openUrl`か、アクションの種類の [アクション] をタップします。
+この深いリンクを bot と組み合わせて使用するには、カードのボタンの URL のターゲットとしてこれを指定するか、アクションの種類の [アクション] をタップし `openUrl` ます。
 
 ## <a name="linking-to-the-scheduling-dialog"></a>[スケジュール] ダイアログにリンクする
 
@@ -140,4 +140,4 @@ Bot、コネクタ、またはメッセージング拡張カードで使用で�
 
 現在、場所を指定することはサポートされていません。 開始時刻と終了時刻を生成するときは、必ず UTC オフセット (タイムゾーン) を指定してください。
 
-この深いリンクを bot と組み合わせて使用するには、カードのボタンの URL のターゲットとしてこれを指定する`openUrl`か、アクションの種類の [アクション] をタップします。
+この深いリンクを bot と組み合わせて使用するには、カードのボタンの URL のターゲットとしてこれを指定するか、アクションの種類の [アクション] をタップし `openUrl` ます。

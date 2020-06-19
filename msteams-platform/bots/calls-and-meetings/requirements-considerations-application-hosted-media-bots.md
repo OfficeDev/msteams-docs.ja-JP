@@ -4,11 +4,11 @@ description: Microsoft Teams のアプリケーションホスト型メディア
 keywords: アプリケーションホスト型メディア windows server azure vm
 ms.date: 11/16/2018
 ms.openlocfilehash: f5b721edacb11e867d05c8213b74036cb51f419c
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674786"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801208"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>アプリケーションホスト型メディアのボットの要件と考慮事項
 
@@ -19,7 +19,7 @@ ms.locfileid: "41674786"
 
 ## <a name="application-hosted-media-bot-development-requires-cnet-and-windows-server"></a>アプリケーションホスト型メディアボット開発には C#/.NET および Windows Server が必要です。
 
-- アプリケーションホスト型メディアボットには、 `Microsoft.Graph.Communications.Calls.Media` .net ライブラリ ([ここ](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)ではオーディオおよびビデオメディアストリームにアクセスできる) が必要であり、ボットは windows server コンピューター (または、Azure の windows server ゲスト OS) に展開されている必要があります。 そのため、ボットは C# および標準の .NET Framework で開発され、Microsoft Azure に展開されている必要があります。 C++ または node.js Api を使用してリアルタイムメディアにアクセスすることはできません。また、アプリケーションホスト型メディア bot に対して .NET Core はサポートされていません。
+- アプリケーションホスト型メディアボットには、 `Microsoft.Graph.Communications.Calls.Media` .net ライブラリ ([ここ](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)ではオーディオおよびビデオメディアストリームにアクセスできる) が必要であり、ボットは windows server コンピューター (または、Azure の WINDOWS server ゲスト OS) に展開されている必要があります。 そのため、ボットは C# および標準の .NET Framework で開発され、Microsoft Azure に展開されている必要があります。 C++ または Node.js Api を使用してリアルタイムメディアにアクセスすることはできません。また、アプリケーションホスト型メディア bot に対して .NET Core はサポートされていません。
 
 - アプリケーションホスト型メディアボットは、次のいずれかの Azure サービス環境でホストできます。
   - クラウドサービス。
@@ -28,7 +28,7 @@ ms.locfileid: "41674786"
   
 - アプリケーションホスト型のメディア bot は、Azure Web App として展開できません。
 
-- アプリケーションホスト型のメディアボットは、最新バージョンの`Microsoft.Graph.Communications.Calls.Media` .net ライブラリで実行されている必要があります。 Bot は、 [NuGet パッケージ](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)の最新バージョンを使用しているか、過去3か月を超えていないバージョンを使用する必要があります。 以前のバージョンのライブラリは廃止され、数か月後に機能しなくなる可能性があります。 `Microsoft.Graph.Communications.Calls.Media`ライブラリを最新の状態に保つことにより、Bot と Microsoft Teams の間の相互運用性が向上します。
+- アプリケーションホスト型のメディアボットは、最新バージョンの .Net ライブラリで実行されている必要があり `Microsoft.Graph.Communications.Calls.Media` ます。 Bot は、 [NuGet パッケージ](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)の最新バージョンを使用しているか、過去3か月を超えていないバージョンを使用する必要があります。 以前のバージョンのライブラリは廃止され、数か月後に機能しなくなる可能性があります。 ライブラリを `Microsoft.Graph.Communications.Calls.Media` 最新の状態に保つことにより、bot と Microsoft Teams の間の相互運用性が向上します。
 
 ## <a name="real-time-media-calls-stay-on-the-machine-where-they-were-created"></a>リアルタイムメディア通話は、作成されたコンピューター上に保持されます。
 

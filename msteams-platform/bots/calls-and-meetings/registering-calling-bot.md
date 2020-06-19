@@ -3,17 +3,17 @@ title: Microsoft Teams での通話と会議のボットの登録
 description: Microsoft Teams 用の新しい音声ビデオを呼び出すボットを登録する方法について説明します。
 keywords: ボット音声/ビデオ音声ビデオメディアの呼び出し
 ms.openlocfilehash: 9a246c9b1a5aae230881b468afef6c205d5bdecf
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675037"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801205"
 ---
 # <a name="registering-a-calling-bot-for-microsoft-teams"></a>Microsoft Teams 用の呼び出しボットの登録
 
 音声ビデオ通話やオンライン会議に参加する bot は、次のようないくつかの機能を備えた通常の Microsoft Teams bot です。
 
-* Teams アプリマニフェストの新バージョンとして、2つの追加設定`supportsCalling`と`supportsVideo`が用意されています。 これらの設定は、Microsoft Teams アプリマニフェストの[開発者プレビュー](../../resources/dev-preview/developer-preview-intro.md)バージョンに含まれています。
+* Teams アプリマニフェストの新バージョンとして、2つの追加設定とが用意さ `supportsCalling` `supportsVideo` れています。 これらの設定は、Microsoft Teams アプリマニフェストの[開発者プレビュー](../../resources/dev-preview/developer-preview-intro.md)バージョンに含まれています。
 * [Microsoft Graph のアクセス許可](./registering-calling-bot.md#add-microsoft-graph-permissions)は、ボットの MICROSOFT アプリ ID に対して構成する必要があります。
 * Microsoft Graph の呼び出しとオンライン会議の Api のアクセス許可には、テナント管理者の同意が必要です。
 
@@ -21,12 +21,12 @@ ms.locfileid: "41675037"
 
 ## <a name="new-manifest-settings"></a>新しいマニフェスト設定
 
-通話とオンライン会議のボットには、Teams で bot の音声/ビデオを有効にするための2つの追加設定が manifest.xml に含まれています。
+通話とオンライン会議のボットには、Teams のボットに対して音声/ビデオを有効にするための manifest.jsに、次の2つの追加設定があります。
 
-* `bots[0].supportsCalling`. が存在し、に`true`設定されている場合、チームは、お客様が bot に通話とオンライン会議への参加を許可します。
-* `bots[0].supportsVideo`. が存在し、に`true`設定されている場合、Teams は、ボットがビデオをサポートしていることを認識します。
+* `bots[0].supportsCalling`. が存在し、に設定されている場合 `true` 、チームは、お客様が bot に通話とオンライン会議への参加を許可します。
+* `bots[0].supportsVideo`. が存在し、に設定されている場合 `true` 、Teams は、ボットがビデオをサポートしていることを認識します。
 
-このような値について、IDE で、呼び出し側と会議ボット用の manifest.xml スキーマを適切に検証するには`$schema` 、次のように属性を変更します。
+このような値について、IDE で、呼び出し側と会議のスキーマの manifest.jsを適切に検証するには、次のように属性を変更し `$schema` ます。
 
 ```json
 "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
@@ -36,8 +36,8 @@ ms.locfileid: "41675037"
 
 新しい bot を作成する方法については、「 [Microsoft Teams の bot を作成する](../how-to/create-a-bot-for-teams.md)」トピックで詳しく説明されていますが、ここではその一部を繰り返します。
 
-1. 新しい bot を作成するには、この`https://dev.botframework.com/bots/new`リンクを使用します。 代わりに、Bot フレームワークポータルで [ *bot を作成*する] ボタンを選択すると、Microsoft azure に bot が作成され、azure アカウントが必要になります。
-1. Microsoft Teams チャネルを追加します。 Microsoft Teams channel ページの [通話中] タブをクリックし、[**通話を有効にする**] を選択してから、受信通知を受け取る HTTPS URL で**Webhook (通話用)** を更新します。たとえば、次のようにします。`https://contoso.com/teamsapp/api/calling` チャネルを構成する方法の詳細については、「[チャネルの構成](/bot-framework/portal-configure-channels)」を参照してください。
+1. 新しい bot を作成するには、このリンクを使用します。 `https://dev.botframework.com/bots/new` 代わりに、Bot フレームワークポータルで [ *bot を作成*する] ボタンを選択すると、Microsoft azure に bot が作成され、azure アカウントが必要になります。
+1. Microsoft Teams チャネルを追加します。 Microsoft Teams channel ページの [通話中] タブをクリックし、[**通話を有効にする**] を選択してから、受信通知を受け取る HTTPS URL で**Webhook (通話用)** を更新します。たとえば、次のように `https://contoso.com/teamsapp/api/calling` します。 チャネルを構成する方法の詳細については、「[チャネルの構成](/bot-framework/portal-configure-channels)」を参照してください。
   ![Microsoft Teams のチャネル情報を構成する](~/assets/images/calls-and-meetings/configure-msteams-channel.png)
 
 ## <a name="add-microsoft-graph-permissions"></a>Microsoft Graph のアクセス許可を追加する
@@ -72,10 +72,10 @@ Microsoft Graph では、アプリがリソースに対して持つアクセス�
 
 Azure AD V1 エンドポイントを使用するアプリの場合、テナント管理者は、アプリが組織にインストールされているときに、 [azure portal](https://portal.azure.com)を使用してアプリケーションのアクセス許可に同意することができます。または、構成したアクセス許可を管理者が承認できるようにするためのサインアップの機能をアプリで提供することができます。 管理者の同意が Azure AD によって記録されると、アプリは同意を要求せずにトークンを要求できます。
 
-[Azure ポータル](https://portal.azure.com)でアプリに必要なアクセス許可を管理者に付与することができます。ただし、多くの場合、Azure AD V2 `/adminconsent`エンドポイントを使用して管理者にサインアップのための機能を提供することをお勧めします。  詳細については、「[管理者の同意の URL](https://developer.microsoft.com/graph/docs/concepts/auth_v2_service#3-get-administrator-consent)を作成する」の手順を参照してください。
+[Azure ポータル](https://portal.azure.com)でアプリに必要なアクセス許可を管理者に付与することができます。ただし、多くの場合、Azure AD V2 エンドポイントを使用して管理者にサインアップのための機能を提供することをお勧め `/adminconsent` します。  詳細については、「[管理者の同意の URL](https://developer.microsoft.com/graph/docs/concepts/auth_v2_service#3-get-administrator-consent)を作成する」の手順を参照してください。
 
 > [!NOTE]
-> テナント管理者の同意 URL を作成するには、[アプリ登録ポータル](https://apps.dev.microsoft.com/)に構成されたリダイレクト URI/応答 url が必要です。 Bot の応答 Url を追加するには、ボット登録にアクセスし、[Advanced Options-> 編集アプリケーションマニフェスト] を選択します。  リダイレクト URL を`replyUrls`コレクションに追加します。
+> テナント管理者の同意 URL を作成するには、[アプリ登録ポータル](https://apps.dev.microsoft.com/)に構成されたリダイレクト URI/応答 url が必要です。 Bot の応答 Url を追加するには、ボット登録にアクセスし、[Advanced Options-> 編集アプリケーションマニフェスト] を選択します。  リダイレクト URL をコレクションに追加 `replyUrls` します。
 
 > [!IMPORTANT]
 > アプリケーションのアクセス許可を変更するときは常に、管理者の同意プロセスも繰り返す必要があります。 アプリ登録ポータルで行われた変更は、テナント管理者が同意を再適用するまで反映されません。

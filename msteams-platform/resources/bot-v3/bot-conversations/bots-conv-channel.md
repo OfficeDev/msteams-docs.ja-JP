@@ -4,13 +4,13 @@ description: Microsoft Teams のチャネルで bot との会話を行うエン�
 keywords: teams シナリオチャネル会話 bot
 ms.date: 06/25/2019
 ms.openlocfilehash: d2d72bdba43de6ebb10c7504dd309459cb09d56c
-ms.sourcegitcommit: 6c5c0574228310f844c81df0d57f11e2037e90c8
+ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "42228004"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "44801280"
 ---
-# <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Microsoft Teams bot によるチャネルおよびグループチャットの会話
+# <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Microsoft Teams ボットとのチャネルおよびグループ チャット会話
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -41,21 +41,21 @@ Bot は、すべてのスコープにあるものと完全に関連している�
 
 * `channelData`「 [Teams channel data](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data)」を参照してください。 グループチャットには、そのチャットに固有の情報が含まれています。
 * `conversation.id`応答チェーン ID。チャネル ID と、返信チェーン内の最初のメッセージの ID で構成されます。
-* `conversation.isGroup`チャネル`true`またはグループチャットのボットメッセージ用
+* `conversation.isGroup``true`チャネルまたはグループチャットのボットメッセージ用
 * `conversation.conversationType``groupChat`あるいは`channel`
 * `entities`1つ以上のメンションを含めることができます ([メンション](#-mentions)を参照してください)
 
 ### <a name="replying-to-messages"></a>メッセージへの返信
 
-既存のメッセージに返信するには[`ReplyToActivity`](/bot-framework/dotnet/bot-builder-dotnet-connector#send-a-reply) 、.net また[`session.send`](/bot-framework/nodejs/bot-builder-nodejs-use-default-message-handler)は node.js で呼び出します。 Bot ビルダー SDK は、すべての詳細を処理します。
+既存のメッセージに返信するに [`ReplyToActivity`](/bot-framework/dotnet/bot-builder-dotnet-connector#send-a-reply) は、.net または [`session.send`](/bot-framework/nodejs/bot-builder-nodejs-use-default-message-handler) Node.js で呼び出します。 Bot ビルダー SDK は、すべての詳細を処理します。
 
-REST API の使用を選択する場合は、 [`/conversations/{conversationId}/activities/{activityId}`](/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-the-reply)エンドポイントを呼び出すこともできます。
+REST API の使用を選択する場合は、エンドポイントを呼び出すこともでき [`/conversations/{conversationId}/activities/{activityId}`](/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-the-reply) ます。
 
-チャネルでは、メッセージへの返信として、開始側の返信チェインへの返信として表示されます。 に`conversation.id`は、チャネルとトップレベルのメッセージ ID が含まれています。 Bot フレームワークは詳細を考慮していますが、必要に`conversation.id`応じて、その会話スレッドへの今後の返信のためにキャッシュすることができます。
+チャネルでは、メッセージへの返信として、開始側の返信チェインへの返信として表示されます。 には、 `conversation.id` チャネルとトップレベルのメッセージ ID が含まれています。 Bot フレームワークは詳細を考慮していますが、必要に応じ `conversation.id` て、その会話スレッドへの今後の返信のためにキャッシュすることができます。
 
 ### <a name="best-practice-welcome-messages-in-teams"></a>ベストプラクティス: Teams でのウェルカムメッセージ
 
-Bot が初めてグループまたはチームに追加されると、すべてのユーザーに bot を紹介するウェルカムメッセージを送信すると便利です。 ウェルカムメッセージには、bot の機能とユーザーの利点についての説明が記載されています。 メッセージには、ユーザーがアプリを操作するためのコマンドも含めることが理想的です。 これを行うには、bot が`conversationUpdate`メッセージに応答して、 `teamsAddMembers` `channelData`オブジェクトに eventType があることを確認します。 ユーザーがチームに`memberAdded`追加されたときに同じイベントが送信されるので、ID が Bot のアプリ id 自体であることを確認してください。 詳細について[は、「Team member or bot の追加](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)」を参照してください。
+Bot が初めてグループまたはチームに追加されると、すべてのユーザーに bot を紹介するウェルカムメッセージを送信すると便利です。 ウェルカムメッセージには、bot の機能とユーザーの利点についての説明が記載されています。 メッセージには、ユーザーがアプリを操作するためのコマンドも含めることが理想的です。 これを行うには、bot がメッセージに応答して `conversationUpdate` 、オブジェクトに eventType があることを確認し `teamsAddMembers` `channelData` ます。 `memberAdded`ユーザーがチームに追加されたときに同じイベントが送信されるので、ID が bot のアプリ id 自体であることを確認してください。 詳細について[は、「Team member or bot の追加](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)」を参照してください。
 
 Bot が追加されたときに、チームの各メンバーに個人メッセージを送信することもできます。 これを行うには、[チーム名簿を取得](~/resources/bot-v3/bots-context.md#fetching-the-team-roster)して、各ユーザーを[直接メッセージ](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)として送信することができます。
 
@@ -72,7 +72,7 @@ Bot が追加されたときに、チームの各メンバーに個人メッセ�
 
 ### <a name="retrieving-mentions"></a>メンションの取得
 
-メンションは、 `entities`ペイロードのオブジェクトに返され、ユーザーの一意の ID と、通常はユーザーの名前の両方が含まれます。 メッセージ内のすべてのメンションを取得するに`GetMentions`は、BOT ビルダー SDK の関数を呼び出します。これは、 `Mentioned`オブジェクトの配列を返します。
+メンションは、 `entities` ペイロードのオブジェクトに返され、ユーザーの一意の ID と、通常はユーザーの名前の両方が含まれます。 メッセージ内のすべてのメンションを取得するには、 `GetMentions` Bot ビルダー SDK の関数を呼び出します。これは、オブジェクトの配列を返し `Mentioned` ます。
 
 #### <a name="net-example-code-check-for-and-strip-bot-mention"></a>.NET のコード例: @bot 言及していることを確認して削除する
 
@@ -93,9 +93,9 @@ for (int i = 0;i < m.Length;i++)
 ```
 
 > [!NOTE]
-> Teams 拡張機能`GetTextWithoutMentions`を使用して、bot を含むすべてのメンションをストリップすることもできます。
+> Teams 拡張機能を使用して、 `GetTextWithoutMentions` bot を含むすべてのメンションをストリップすることもできます。
 
-#### <a name="nodejs-example-code-check-for-and-strip-bot-mention"></a>Node.js のコード例: @bot 言及してください。
+#### <a name="nodejs-example-code-check-for-and-strip-bot-mention"></a>Node.js コード例: @bot 言及することを確認し、削除します。
 
 ```javascript
 var text = message.text;
@@ -109,14 +109,14 @@ if (message.entities) {
 }
 ```
 
-Teams 拡張機能`getTextWithoutMentions`を使用して、bot を含むすべてのメンションをストリップすることもできます。
+Teams 拡張機能を使用して、 `getTextWithoutMentions` bot を含むすべてのメンションをストリップすることもできます。
 
 ### <a name="constructing-mentions"></a>メンションの構築
 
 Bot は、チャネルに投稿されたメッセージに他のユーザーを伝えます。 これを行うには、メッセージで次の操作を実行する必要があります。
 
-* メッセージ`<at>@username</at>`テキストに含める
-* オブジェクトを`mention` entities コレクション内に含める
+* `<at>@username</at>`メッセージテキストに含める
+* オブジェクトを `mention` entities コレクション内に含める
 
 #### <a name="net-example"></a>.NET の例
 
