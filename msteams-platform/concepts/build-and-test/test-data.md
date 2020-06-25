@@ -3,46 +3,46 @@ title: テストデータを Office 365 テストテナントに追加する
 description: Microsoft Teams アプリを正常にテストするために Office 365 developer program サブスクリプションをセットアップする
 keywords: アプリ開発者プログラムチームのテスト
 ms.date: 11/01/2019
-ms.openlocfilehash: 2d32b0bf4243d540eeb5e2cc89ea2518d737ae17
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 87e9dc280c192f013098c3e9f604f72238bfafdf
+ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674739"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44867095"
 ---
-# <a name="add-test-data-to-your-office-365-test-tenant"></a><span data-ttu-id="01ec5-104">テストデータを Office 365 テストテナントに追加する</span><span class="sxs-lookup"><span data-stu-id="01ec5-104">Add test data to your Office 365 test tenant</span></span>
+# <a name="add-test-data-to-your-office-365-test-tenant"></a><span data-ttu-id="e910c-104">テストデータを Office 365 テストテナントに追加する</span><span class="sxs-lookup"><span data-stu-id="e910c-104">Add test data to your Office 365 test tenant</span></span>
 
-<span data-ttu-id="01ec5-105">O365 開発者プログラムのサブスクリプション (またはその他のテストテナント) をセットアップして、作成したアプリを簡単にテストできるようにします。</span><span class="sxs-lookup"><span data-stu-id="01ec5-105">Set up your O365 developer program subscription (or other test tenant) to make it easy for you to test the apps that you've built.</span></span>  <span data-ttu-id="01ec5-106">これは次のような場合に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="01ec5-106">It will help you:</span></span>
+<span data-ttu-id="e910c-105">O365 開発者プログラムのサブスクリプション (またはその他のテストテナント) をセットアップして、作成したアプリを簡単にテストできるようにします。</span><span class="sxs-lookup"><span data-stu-id="e910c-105">Set up your O365 developer program subscription (or other test tenant) to make it easy for you to test the apps that you've built.</span></span>  <span data-ttu-id="e910c-106">これは次のような場合に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="e910c-106">It will help you:</span></span>
 
-- <span data-ttu-id="01ec5-107">組織に新しいチームとチャネルを作成する</span><span class="sxs-lookup"><span data-stu-id="01ec5-107">Create new teams and channels in your organization</span></span>
+- <span data-ttu-id="e910c-107">組織に新しいチームとチャネルを作成する</span><span class="sxs-lookup"><span data-stu-id="e910c-107">Create new teams and channels in your organization</span></span>
 
-- <span data-ttu-id="01ec5-108">ユーザーコンテンツパックを介して作成されたユーザーを、これらのチームに追加します。</span><span class="sxs-lookup"><span data-stu-id="01ec5-108">Add the users that are created via the User content pack to those teams.</span></span>
+- <span data-ttu-id="e910c-108">ユーザーコンテンツパックを介して作成されたユーザーを、これらのチームに追加します。</span><span class="sxs-lookup"><span data-stu-id="e910c-108">Add the users that are created via the User content pack to those teams.</span></span>
 
-## <a name="before-you-start"></a><span data-ttu-id="01ec5-109">始める前に</span><span class="sxs-lookup"><span data-stu-id="01ec5-109">Before you start</span></span>
+## <a name="before-you-start"></a><span data-ttu-id="e910c-109">始める前に</span><span class="sxs-lookup"><span data-stu-id="e910c-109">Before you start</span></span>
 
-<span data-ttu-id="01ec5-110">まだテストテナントがない場合は、Office 365 開発者プログラムに参加して、開発者向けサブスクリプションにサインアップする必要があります。</span><span class="sxs-lookup"><span data-stu-id="01ec5-110">If you don't already have a test tenant, you will need to join the Office 365 developer program and sign up for a developer subscription.</span></span> <span data-ttu-id="01ec5-111">必要な powershell モジュールをインストールする必要もあります。</span><span class="sxs-lookup"><span data-stu-id="01ec5-111">You'll also need to install the necessary powershell modules.</span></span> <span data-ttu-id="01ec5-112">使用しているテナントについては、スクリプトを実行するためのグローバル管理者のアクセス許可が必要になります。</span><span class="sxs-lookup"><span data-stu-id="01ec5-112">For whatever tenant you use you'll need to have global administrator permissions to run the scripts.</span></span>
+<span data-ttu-id="e910c-110">まだテストテナントがない場合は、Office 365 開発者プログラムに参加して、開発者向けサブスクリプションにサインアップする必要があります。</span><span class="sxs-lookup"><span data-stu-id="e910c-110">If you don't already have a test tenant, you will need to join the Office 365 developer program and sign up for a developer subscription.</span></span> <span data-ttu-id="e910c-111">必要な PowerShell モジュールをインストールする必要もあります。</span><span class="sxs-lookup"><span data-stu-id="e910c-111">You'll also need to install the necessary PowerShell modules.</span></span> <span data-ttu-id="e910c-112">使用しているテナントについては、スクリプトを実行するためのグローバル管理者のアクセス許可が必要になります。</span><span class="sxs-lookup"><span data-stu-id="e910c-112">For whatever tenant you use you'll need to have global administrator permissions to run the scripts.</span></span>
 
-1. [<span data-ttu-id="01ec5-113">Office 365 Developer Program に参加する</span><span class="sxs-lookup"><span data-stu-id="01ec5-113">Join the Office 365 Developer Program</span></span>](/office/developer-program/office-365-developer-program)
-2. [<span data-ttu-id="01ec5-114">Microsoft 365 Developer サブスクリプションをセットアップする</span><span class="sxs-lookup"><span data-stu-id="01ec5-114">Set up a Microsoft 365 Developer Subscription</span></span>](/office/developer-program/office-365-developer-program-get-started)
-3. [<span data-ttu-id="01ec5-115">Office 365 開発者向けサブスクリプションでサンプルのデータパックを使用して、ユーザーのコンテンツパックをインストールする</span><span class="sxs-lookup"><span data-stu-id="01ec5-115">Use sample data packs with your Office 365 developer subscription to install the Users content pack</span></span>](/office/developer-program/install-sample-packs)
-4. [<span data-ttu-id="01ec5-116">Teams PowerShell モジュールをインストールする</span><span class="sxs-lookup"><span data-stu-id="01ec5-116">Install the Teams PowerShell module</span></span>](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)
-5. [<span data-ttu-id="01ec5-117">Azure AD PowerShell モジュールをインストールする</span><span class="sxs-lookup"><span data-stu-id="01ec5-117">Install the Azure AD PowerShell module</span></span>](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module)
+1. [<span data-ttu-id="e910c-113">Office 365 Developer Program に参加する</span><span class="sxs-lookup"><span data-stu-id="e910c-113">Join the Office 365 Developer Program</span></span>](/office/developer-program/office-365-developer-program)
+2. [<span data-ttu-id="e910c-114">Microsoft 365 Developer サブスクリプションをセットアップする</span><span class="sxs-lookup"><span data-stu-id="e910c-114">Set up a Microsoft 365 Developer Subscription</span></span>](/office/developer-program/office-365-developer-program-get-started)
+3. [<span data-ttu-id="e910c-115">Office 365 開発者向けサブスクリプションでサンプルのデータパックを使用して、ユーザーのコンテンツパックをインストールする</span><span class="sxs-lookup"><span data-stu-id="e910c-115">Use sample data packs with your Office 365 developer subscription to install the Users content pack</span></span>](/office/developer-program/install-sample-packs)
+4. [<span data-ttu-id="e910c-116">Teams PowerShell モジュールをインストールする</span><span class="sxs-lookup"><span data-stu-id="e910c-116">Install the Teams PowerShell module</span></span>](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)
+5. [<span data-ttu-id="e910c-117">Azure AD PowerShell モジュールをインストールする</span><span class="sxs-lookup"><span data-stu-id="e910c-117">Install the Azure AD PowerShell module</span></span>](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module)
 
-### <a name="optional-step-allow-upload-of-custom-apps"></a><span data-ttu-id="01ec5-118">オプションの手順: カスタムアプリのアップロードを許可する</span><span class="sxs-lookup"><span data-stu-id="01ec5-118">Optional step: allow upload of custom apps</span></span>
+### <a name="optional-step-allow-upload-of-custom-apps"></a><span data-ttu-id="e910c-118">オプションの手順: カスタムアプリのアップロードを許可する</span><span class="sxs-lookup"><span data-stu-id="e910c-118">Optional step: allow upload of custom apps</span></span>
 
-<span data-ttu-id="01ec5-119">既定では、グローバル管理者または teams サービス管理者のみが、カスタムアプリをテナントのアプリカタログにアップロードできます。</span><span class="sxs-lookup"><span data-stu-id="01ec5-119">By default, only global admins or teams service admins can upload custom apps into the tenant app catalog.</span></span>  <span data-ttu-id="01ec5-120">また、すべてのユーザーが自分で使用するカスタムアプリ、またはテストのために teams をアップロードできるようにすることもできます。</span><span class="sxs-lookup"><span data-stu-id="01ec5-120">You can also enable all users to upload custom apps for their own use or to teams for testing.</span></span>
+<span data-ttu-id="e910c-119">既定では、グローバル管理者または teams サービス管理者のみが、カスタムアプリをテナントのアプリカタログにアップロードできます。</span><span class="sxs-lookup"><span data-stu-id="e910c-119">By default, only global admins or teams service admins can upload custom apps into the tenant app catalog.</span></span>  <span data-ttu-id="e910c-120">また、すべてのユーザーが自分で使用するカスタムアプリ、またはテストのために teams をアップロードできるようにすることもできます。</span><span class="sxs-lookup"><span data-stu-id="e910c-120">You can also enable all users to upload custom apps for their own use or to teams for testing.</span></span>
 
-<span data-ttu-id="01ec5-121">この設定を有効にするには、Teams 管理ポータルでグローバルアプリセットアップポリシーを更新する必要があります。</span><span class="sxs-lookup"><span data-stu-id="01ec5-121">To enable this setting, you'll need to update the global App Setup Policy in your Teams Admin Portal.</span></span>
+<span data-ttu-id="e910c-121">この設定を有効にするには、Teams 管理ポータルでグローバルアプリセットアップポリシーを更新する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e910c-121">To enable this setting, you'll need to update the global App Setup Policy in your Teams Admin Portal.</span></span>
 
 <img width="430px" src="~/assets/images/microsoft-teams-admin-center-screenshot.png" title="アプリのセットアップポリシーのスクリーンショット" />
 
-<span data-ttu-id="01ec5-123">詳細については、次のトピックを参照してください。</span><span class="sxs-lookup"><span data-stu-id="01ec5-123">For more information see:</span></span>
+<span data-ttu-id="e910c-123">詳細については、次のトピックを参照してください。</span><span class="sxs-lookup"><span data-stu-id="e910c-123">For more information see:</span></span>
 
- - [<span data-ttu-id="01ec5-124">Microsoft Teams でアプリのセットアップポリシーを管理する</span><span class="sxs-lookup"><span data-stu-id="01ec5-124">Manage app setup policies in Microsoft Teams</span></span>](/microsoftteams/teams-app-setup-policies)
+ - [<span data-ttu-id="e910c-124">Microsoft Teams でアプリのセットアップポリシーを管理する</span><span class="sxs-lookup"><span data-stu-id="e910c-124">Manage app setup policies in Microsoft Teams</span></span>](/microsoftteams/teams-app-setup-policies)
 
-## <a name="create-teams-and-channels"></a><span data-ttu-id="01ec5-125">チームとチャネルを作成する</span><span class="sxs-lookup"><span data-stu-id="01ec5-125">Create teams and channels</span></span>
+## <a name="create-teams-and-channels"></a><span data-ttu-id="e910c-125">チームとチャネルを作成する</span><span class="sxs-lookup"><span data-stu-id="e910c-125">Create teams and channels</span></span>
 
-<span data-ttu-id="01ec5-126">次のスニペットを XML (.xml) として保存し、保存した場所をメモします。</span><span class="sxs-lookup"><span data-stu-id="01ec5-126">Save the following snippet as an XML (.xml) and note where you've saved it.</span></span>  <span data-ttu-id="01ec5-127">この XML は、作成する teams およびチャネルの構造と、そのメンバーによって定義されます。</span><span class="sxs-lookup"><span data-stu-id="01ec5-127">This XML defines the structure of the teams and channels that will be created - along with its members.</span></span>
+<span data-ttu-id="e910c-126">次のスニペットを XML (.xml) として保存し、保存した場所をメモします。</span><span class="sxs-lookup"><span data-stu-id="e910c-126">Save the following snippet as an XML (.xml) and note where you've saved it.</span></span>  <span data-ttu-id="e910c-127">この XML は、作成する teams およびチャネルの構造と、そのメンバーによって定義されます。</span><span class="sxs-lookup"><span data-stu-id="e910c-127">This XML defines the structure of the teams and channels that will be created - along with its members.</span></span>
 
 ```xml
 <?xml version="1.0"?>
@@ -156,7 +156,7 @@ ms.locfileid: "41674739"
 </Teams>
 ```
 
-<span data-ttu-id="01ec5-128">次のスニペットを PowerShell スクリプト (. ps1) として保存し、保存した場所をメモします。</span><span class="sxs-lookup"><span data-stu-id="01ec5-128">Save the following snippet as a PowerShell script (.ps1) and note where you've saved it.</span></span>  <span data-ttu-id="01ec5-129">このスクリプトは、チームとチャネルを作成し、それらにメンバーを追加するための手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="01ec5-129">This script executes the steps to create the teams and channels and add members to them.</span></span>
+<span data-ttu-id="e910c-128">次のスニペットを PowerShell スクリプト (. ps1) として保存し、保存した場所をメモします。</span><span class="sxs-lookup"><span data-stu-id="e910c-128">Save the following snippet as a PowerShell script (.ps1) and note where you've saved it.</span></span>  <span data-ttu-id="e910c-129">このスクリプトは、チームとチャネルを作成し、それらにメンバーを追加するための手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="e910c-129">This script executes the steps to create the teams and channels and add members to them.</span></span>
 
 ```powershell
 Param(
@@ -247,9 +247,9 @@ else {
 }
 ```
 
-<span data-ttu-id="01ec5-130">Windows PowerShell セッションを管理者モードで開きます。</span><span class="sxs-lookup"><span data-stu-id="01ec5-130">Open a Windows PowerShell session in Administrator mode.</span></span>  <span data-ttu-id="01ec5-131">保存したばかりのスクリプトを実行します。</span><span class="sxs-lookup"><span data-stu-id="01ec5-131">Run the script that you just saved.</span></span>  <span data-ttu-id="01ec5-132">資格情報を入力するように求めるメッセージが表示されます。開発者サブスクリプションに最初にサインアップしたときに受信したグローバル管理者の資格情報を使用します。</span><span class="sxs-lookup"><span data-stu-id="01ec5-132">You'll be prompted to provide the credentials - use the Global Administrator credentials you received when you first signed up for your developer subscription.</span></span>
+<span data-ttu-id="e910c-130">Windows PowerShell セッションを管理者モードで開きます。</span><span class="sxs-lookup"><span data-stu-id="e910c-130">Open a Windows PowerShell session in Administrator mode.</span></span>  <span data-ttu-id="e910c-131">保存したばかりのスクリプトを実行します。</span><span class="sxs-lookup"><span data-stu-id="e910c-131">Run the script that you just saved.</span></span>  <span data-ttu-id="e910c-132">資格情報を入力するように求めるメッセージが表示されます。開発者サブスクリプションに最初にサインアップしたときに受信したグローバル管理者の資格情報を使用します。</span><span class="sxs-lookup"><span data-stu-id="e910c-132">You'll be prompted to provide the credentials - use the Global Administrator credentials you received when you first signed up for your developer subscription.</span></span>
 
 > [!Note]
-> <span data-ttu-id="01ec5-133">このスクリプトは、実行に数分かかる場合があります。 PowerShell セッションを閉じないでください。</span><span class="sxs-lookup"><span data-stu-id="01ec5-133">The script will take several minutes to execute - do not close your PowerShell session.</span></span>  <span data-ttu-id="01ec5-134">サブスクリプション内のユーザーのうち、既定のコンテンツパックで作成されたものを変更した場合、一部のユーザーが teams に追加されないことがあります。</span><span class="sxs-lookup"><span data-stu-id="01ec5-134">If you've modified the users in your subscription from what is created in the default content pack, some users may not be added to teams.</span></span>  <span data-ttu-id="01ec5-135">スクリプトを実行すると、成功または失敗したアクションが出力されます。</span><span class="sxs-lookup"><span data-stu-id="01ec5-135">As the script executes it will output successful or failed actions.</span></span>
+> <span data-ttu-id="e910c-133">このスクリプトは、実行に数分かかる場合があります。 PowerShell セッションを閉じないでください。</span><span class="sxs-lookup"><span data-stu-id="e910c-133">The script will take several minutes to execute - do not close your PowerShell session.</span></span>  <span data-ttu-id="e910c-134">サブスクリプション内のユーザーのうち、既定のコンテンツパックで作成されたものを変更した場合、一部のユーザーが teams に追加されないことがあります。</span><span class="sxs-lookup"><span data-stu-id="e910c-134">If you've modified the users in your subscription from what is created in the default content pack, some users may not be added to teams.</span></span>  <span data-ttu-id="e910c-135">スクリプトを実行すると、成功または失敗したアクションが出力されます。</span><span class="sxs-lookup"><span data-stu-id="e910c-135">As the script executes it will output successful or failed actions.</span></span>
 
-<span data-ttu-id="01ec5-136">スクリプトの実行が完了すると、ユーザーアカウントのいずれかを使用して Teams クライアントにログインし、新しく作成された teams を表示することができます。</span><span class="sxs-lookup"><span data-stu-id="01ec5-136">Once the script has finished execution, you can login to the Teams client with one of the user accounts and view the newly created teams.</span></span>
+<span data-ttu-id="e910c-136">スクリプトの実行が完了すると、ユーザーアカウントのいずれかを使用して Teams クライアントにログインし、新しく作成された teams を表示することができます。</span><span class="sxs-lookup"><span data-stu-id="e910c-136">Once the script has finished execution, you can login to the Teams client with one of the user accounts and view the newly created teams.</span></span>
