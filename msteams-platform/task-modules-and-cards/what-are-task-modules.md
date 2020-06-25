@@ -4,12 +4,12 @@ author: clearab
 description: Microsoft Teams アプリからユーザーに情報を収集または表示するためのモーダルポップアップエクスペリエンスを追加します。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 22fdc7a9dab1ff6f27e2b0d144e54676b6cca50e
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: adf8f3a6fdbf5976296a58d9ffbae5de950ce64c
+ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801259"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44867119"
 ---
 # <a name="what-are-task-modules"></a>タスク モジュールとは
 
@@ -54,9 +54,9 @@ Bot から呼び出された場合のタスクモジュールは次のように�
 
 ## <a name="the-taskinfo-object"></a>TaskInfo オブジェクト
 
-オブジェクトには、 `TaskInfo` タスクモジュールのメタデータが含まれています。 オブジェクト定義は以下のとおりです。 **must** `url` (En 埋め込み iFrame の場合) または `card` (アダプティブカードの場合) のいずれかを定義する必要があります。
+オブジェクトには、 `TaskInfo` タスクモジュールのメタデータが含まれています。 オブジェクト定義は以下のとおりです。 **must** `url` (埋め込まれた iFrame の場合) または `card` (アダプティブカードの場合) のいずれかを定義する必要があります。
 
-| 属性 | 型 | 説明 |
+| 属性 | 種類 | 説明 |
 | --- | --- | --- |
 | `title` | string | アプリ名の下に表示され、アプリアイコンの右側に表示されます。 |
 | `height` | number または string | タスクモジュールの高さを表す数値をピクセル、または、またはで指定でき `small` `medium` `large` ます。 [高さと幅を処理する方法については、以下を参照して](#task-module-sizing)ください。 |
@@ -211,7 +211,7 @@ Bot またはタブから、アダプティブカードを含むタスクモジ�
 
 との情報を以下に示し `APP_ID` `BOT_APP_ID` ます。
 
-| 値 | 型 | 必須 | 説明 |
+| 値 | 種類 | 必須 | 説明 |
 | --- | --- | --- | --- |
 | `APP_ID` | string | はい | タスクモジュールを呼び出すアプリの[id](~/resources/schema/manifest-schema.md#id) 。 マニフェスト内の[Validdomains 配列](~/resources/schema/manifest-schema.md#validdomains)に `APP_ID` は、 `url` が URL にある場合のドメインが含まれている必要があり `url` ます。 (アプリ ID は、タスクモジュールがタブまたは bot から呼び出されたときに既に知られています。これは、に含まれていないため `TaskInfo` です)。 |
 | `BOT_APP_ID` | 文字列 | いいえ | の値が指定されている場合、 `completionBotId` `result` オブジェクトは、指定された bot へのメッセージによって送信され `task/submit invoke` ます。 `BOT_APP_ID`アプリのマニフェストでボットとして指定する必要があります。つまり、任意の bot に送信するだけではできません。 |

@@ -2,12 +2,12 @@
 title: 公開後にすべきこと
 description: アプリの公開後にすべきこと
 keywords: Teams、公開後、更新、証明書
-ms.openlocfilehash: 54d0615c262e45729a36f556c3eda3b810d2a097
-ms.sourcegitcommit: 2a84a3c8b10771e37ce51bf603a967633947a3e4
+ms.openlocfilehash: 77b74d77546de0ae93b0ae39aec925d2e3dec2cf
+ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "42582861"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44867096"
 ---
 # <a name="maintain-and-support-your-published-app"></a>公開したアプリの保守およびサポート 
 
@@ -30,11 +30,19 @@ Microsoft では、[アプリケーション証明書プログラム](./applicat
 * 送信に対してマニフェストに変更を加える場合は、マニフェストでバージョン番号をインクリメントします。
 * 新しいレビューおよび検証プロセスを実行するには、更新された提出を行う必要があります。
 
+## <a name="app-updates-and-the-user-consent-flow"></a>アプリの更新とユーザーの同意フロー
 
-### <a name="when-does-updating-your-app-trigger-the-user-consent-flow"></a>アプリ更新の際にユーザーの同意フローがトリガーされる場合
+ユーザーがアプリケーションをインストールするとき、まず、アプリがジョブを実行するのに必要なサービスと情報へのアクセス許可をアプリに与えることに同意する必要があります。 ほとんどの場合、アプリの更新が完了すると、新しいバージョンがエンドユーザーに対して自動的に表示されます。 ただし、 [Teams アプリのマニフェスト](../../../../resources/schema/manifest-schema.md)には、ユーザーの承認を完了し、この同意の動作を再始動する必要がある、いくつかの更新があります。
 
-ユーザーがアプリケーションをインストールするとき、まず、アプリがジョブを実行するのに必要なサービスと情報へのアクセス許可をアプリに与えることに同意する必要があります。 アプリを更新し、以下の変更を 1 つまたは複数行った場合、この同意の動作が再びトリガーされます。
-
-* タブのみのアプリへのボットの追加など、アプリに新しい機能を追加する。
-* マニフェストでアクセス許可の配列を変更する。
-* マニフェスト内のアプリのバージョン番号を増やします。
+ >[!div class="checklist"]
+>
+> * Bot が追加または削除されました。
+> * 既存の bot の一意の `botId` 値が変更されました。
+> * 既存の bot の `isNotificationOnly` ブール値が変更されました。
+> * 既存の bot の `supportsFiles` ブール値が変更されました。
+> * メッセージング拡張機能 ( `composeExtensions` ) が追加または削除されました。
+> * 新しいコネクタが追加されました。
+> * 新しい静的/個人用タブが追加されました。
+> * 新しい [構成可能なグループ/チャネル] タブが追加されました。
+> * `webApplicationInfo`値が変更されました。
+>

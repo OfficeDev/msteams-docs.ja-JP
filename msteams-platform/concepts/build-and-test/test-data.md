@@ -3,12 +3,12 @@ title: テストデータを Office 365 テストテナントに追加する
 description: Microsoft Teams アプリを正常にテストするために Office 365 developer program サブスクリプションをセットアップする
 keywords: アプリ開発者プログラムチームのテスト
 ms.date: 11/01/2019
-ms.openlocfilehash: 2d32b0bf4243d540eeb5e2cc89ea2518d737ae17
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 87e9dc280c192f013098c3e9f604f72238bfafdf
+ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674739"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44867095"
 ---
 # <a name="add-test-data-to-your-office-365-test-tenant"></a>テストデータを Office 365 テストテナントに追加する
 
@@ -20,7 +20,7 @@ O365 開発者プログラムのサブスクリプション (またはその他�
 
 ## <a name="before-you-start"></a>始める前に
 
-まだテストテナントがない場合は、Office 365 開発者プログラムに参加して、開発者向けサブスクリプションにサインアップする必要があります。 必要な powershell モジュールをインストールする必要もあります。 使用しているテナントについては、スクリプトを実行するためのグローバル管理者のアクセス許可が必要になります。
+まだテストテナントがない場合は、Office 365 開発者プログラムに参加して、開発者向けサブスクリプションにサインアップする必要があります。 必要な PowerShell モジュールをインストールする必要もあります。 使用しているテナントについては、スクリプトを実行するためのグローバル管理者のアクセス許可が必要になります。
 
 1. [Office 365 Developer Program に参加する](/office/developer-program/office-365-developer-program)
 2. [Microsoft 365 Developer サブスクリプションをセットアップする](/office/developer-program/office-365-developer-program-get-started)

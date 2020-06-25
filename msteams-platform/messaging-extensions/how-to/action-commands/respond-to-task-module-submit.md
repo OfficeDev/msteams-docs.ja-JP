@@ -4,18 +4,18 @@ author: clearab
 description: メッセージング拡張機能のアクションコマンドからタスクモジュール送信アクションに応答する方法について説明します。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 6372a683a7c9f08551a9c0d126a0db2ab9212e66
-ms.sourcegitcommit: 058b7bbd817af5f513e0e018f2ef562dc3086a84
+ms.openlocfilehash: 82dad570bac096a9b2fb0d1fbada4ee70ca2a662
+ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "43120263"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44867112"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>タスクモジュール送信アクションに応答する
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-ユーザーがタスクモジュールを送信すると、web サービスはコマンド id `composeExtension/submitAction`とパラメーター値が設定された invoke メッセージを受け取ります。 アプリには、呼び出しに応答するための5秒があります。それ以外の場合、ユーザーは "アプリに到達できません" というエラーメッセージを受け取り、呼び出しへの応答は Teams クライアントによって無視されます。
+ユーザーがタスクモジュールを送信すると、web サービスは `composeExtension/submitAction` コマンド id とパラメーター値が設定された invoke メッセージを受け取ります。 アプリには、呼び出しに応答するための5秒があります。それ以外の場合、ユーザーは "アプリに到達できません" というエラーメッセージを受け取り、呼び出しへの応答は Teams クライアントによって無視されます。
 
 応答するには、次のオプションがあります。
 
@@ -26,9 +26,9 @@ ms.locfileid: "43120263"
 * [ユーザーの認証を要求する](~/messaging-extensions/how-to/add-authentication.md)
 * [ユーザーに追加の構成を提供するよう要求する](~/messaging-extensions/how-to/add-configuration-page.md)
 
-次の表は、メッセージング拡張機能の呼び出し場所 (`commandContext`) に基づいて、使用可能な応答の種類を示しています。 認証または構成の場合、ユーザーがフローを完了すると、元の呼び出しが web サービスに再送信されます。
+次の表は、メッセージング拡張機能の呼び出し場所 () に基づいて、使用可能な応答の種類を示して `commandContext` います。 認証または構成の場合、ユーザーがフローを完了すると、元の呼び出しが web サービスに再送信されます。
 
-|応答の種類 | hotmail | コマンド バー | message |
+|応答の種類 | hotmail | コマンド バー | メッセージ​​ |
 |--------------|:-------------:|:-------------:|:---------:|
 |カード応答 | x | x | x |
 |別のタスクモジュール | x | x | x |
@@ -48,7 +48,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/node.js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -63,7 +63,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-受け取る JSON オブジェクトの例を次に示します。 パラメーター `commandContext`は、メッセージング拡張機能がどこからトリガーされたかを示します。 `data`オブジェクトには、パラメーターとしてフォーム上のフィールドと、ユーザーが送信した値が含まれています。 ここでは、JSON オブジェクトを短縮して、最も関連のあるフィールドを強調表示します。
+受け取る JSON オブジェクトの例を次に示します。 パラメーターは、 `commandContext` メッセージング拡張機能がどこからトリガーされたかを示します。 オブジェクトには、 `data` パラメーターとしてフォーム上のフィールドと、ユーザーが送信した値が含まれています。 ここでは、JSON オブジェクトを短縮して、最も関連のあるフィールドを強調表示します。
 
 ```json
 {
@@ -93,7 +93,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ## <a name="respond-with-a-card-inserted-into-the-compose-message-area"></a>メッセージの作成領域に挿入されたカードで応答する
 
-`composeExtension/submitAction`要求に応答する最も一般的な方法は、[メッセージの作成] 領域に挿入されたカードです。 ユーザーは、このカードを会話に送信するかどうかを選択できます。 カードの使用の詳細については[、「カードおよびカードのアクション](~/task-modules-and-cards/cards/cards-actions.md)」を参照してください。
+要求に応答する最も一般的な方法 `composeExtension/submitAction` は、[メッセージの作成] 領域に挿入されたカードです。 ユーザーは、このカードを会話に送信するかどうかを選択できます。 カードの使用の詳細については[、「カードおよびカードのアクション](~/task-modules-and-cards/cards/cards-actions.md)」を参照してください。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -132,7 +132,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/node.js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -188,32 +188,32 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ## <a name="respond-with-another-task-module"></a>別のタスクモジュールで応答する
 
-追加のタスクモジュールを使用し`submitAction`てイベントに応答することもできます。 これは、次のような場合に便利です。
+追加のタスクモジュールを使用してイベントに応答することもでき `submitAction` ます。 これは、次のような場合に便利です。
 
 * 大量の情報を収集する必要があります。
 * ユーザーの入力に基づいて収集している情報を動的に変更する必要がある場合
 * ユーザーによって送信された情報を検証する必要があり、何らかの問題が発生した場合に、フォームを再送信してエラーメッセージが表示される可能性がある場合。 
 
-応答のメソッドは、[最初`fetchTask`のイベントに応答する](~/messaging-extensions/how-to/action-commands/create-task-module.md)のと同じです。 Bot フレームワーク SDK を使用している場合は、両方の送信アクションに対して同じイベントがトリガーされます。 これは、正しい応答を決定するロジックを追加する必要があることを意味します。
+応答のメソッドは、[最初の `fetchTask` イベントに応答する](~/messaging-extensions/how-to/action-commands/create-task-module.md)のと同じです。 Bot フレームワーク SDK を使用している場合は、両方の送信アクションに対して同じイベントがトリガーされます。 これは、正しい応答を決定するロジックを追加する必要があることを意味します。
 
 ## <a name="bot-response-with-adaptive-card"></a>アダプティブカードを使用したボット応答
 
 >[!Note]
->このフローでは、アプリケーションマニフェスト`bot`にオブジェクトを追加し、bot に対して必要なスコープが定義されている必要があります。 Bot のメッセージング拡張機能と同じ Id を使用します。
+>このフローでは、 `bot` アプリケーションマニフェストにオブジェクトを追加し、bot に対して必要なスコープが定義されている必要があります。 Bot のメッセージング拡張機能と同じ Id を使用します。
 
 また、サブカード付きのメッセージをボット付きのチャネルに挿入することによって、送信アクションに応答することもできます。 ユーザーは、メッセージを送信する前にプレビューでき、必要に応じて編集や操作を行うこともできます。 これは、アダプティブカード応答を作成する前にユーザーから情報を収集する必要がある場合や、カードを操作した後にカードを更新する必要がある場合に、非常に便利です。 次のシナリオでは、アプリがこのフローをかなり使用して、チャネル会話に構成手順を含めずにポーリングを構成する方法を示します。
 
 1. ユーザーが [メッセージング] 拡張をクリックして、タスクモジュールをトリガーします。
 2. ユーザーは、タスクモジュールを使用してポーリングを構成します。
-3. タスクモジュールを送信した後、アプリは提供された情報を使用して、投票をアダプティブカード`botMessagePreview`として作成し、クライアントへの応答として送信します。
-4. ユーザーは、カードをチャネルに挿入する前に、アダプティブカードメッセージをプレビューできます。 アプリがまだチャネルのメンバーではない場合は、を`Send`クリックするとそのアプリが追加されます。
-   1. ユーザーはメッセージを`Edit`選択して、元のタスクモジュールに返すこともできます。
+3. タスクモジュールを送信した後、アプリは提供された情報を使用して、投票をアダプティブカードとして作成し、クライアントへの応答として送信し `botMessagePreview` ます。
+4. ユーザーは、カードをチャネルに挿入する前に、アダプティブカードメッセージをプレビューできます。 アプリがまだチャネルのメンバーではない場合は、をクリックするとそのアプリが `Send` 追加されます。
+   1. ユーザーはメッセージを選択して `Edit` 、元のタスクモジュールに返すこともできます。
 5. アダプティブカードとの対話は、メッセージを送信する前に変更します。
-6. ユーザーがクリック`Send`すると、メッセージがチャネルに投稿されます。
+6. ユーザーがクリックすると、 `Send` メッセージがチャネルに投稿されます。
 
 ### <a name="respond-to-initial-submit-action"></a>最初の送信アクションに応答する
 
-このフローを有効にするには、タスクモジュールは`composeExtension/submitAction` 、bot がチャネルに送信するカードのプレビューを使用して、最初のメッセージに応答する必要があります。 これにより、ユーザーは送信前にカードを確認することができます。また、インストールされていない場合は、お客様が会話に bot をインストールしようとします。
+このフローを有効にするには、タスクモジュールは、 `composeExtension/submitAction` bot がチャネルに送信するカードのプレビューを使用して、最初のメッセージに応答する必要があります。 これにより、ユーザーは送信前にカードを確認することができます。また、インストールされていない場合は、お客様が会話に bot をインストールしようとします。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -256,7 +256,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/node.js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -298,7 +298,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 # <a name="json"></a>[JSON](#tab/json)
 
 >[!Note]
->に`activityPreview`は、完全`message`に1つのアダプティブカード添付ファイルがあるアクティビティが含まれている必要があります。 `<< Card Payload >>`値は、送信するカードのプレースホルダーです。
+>には、 `activityPreview` `message` 完全に1つのアダプティブカード添付ファイルがあるアクティビティが含まれている必要があります。 `<< Card Payload >>`値は、送信するカードのプレースホルダーです。
 
 ```json
 {
@@ -321,7 +321,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="the-botmessagepreview-send-and-edit-events"></a>BotMessagePreview send および edit イベント
 
-メッセージの内線番号は、次の2つの新しい種類の`composeExtension/submitAction`呼び出し`value.botMessagePreviewAction = "send"`に応答する`value.botMessagePreviewAction = "edit"`必要があります。
+メッセージの内線番号は、次の2つの新しい種類の呼び出しに応答する必要があり `composeExtension/submitAction` `value.botMessagePreviewAction = "send"` `value.botMessagePreviewAction = "edit"` ます。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -340,7 +340,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/node.js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -392,13 +392,13 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="respond-to-botmessagepreview-edit"></a>BotMessagePreview 編集に応答する
 
-ユーザーが [**編集**] ボタンをクリックして送信する前にカードを編集する場合は`composeExtension/submitAction` 、と`value.botMessagePreviewAction = edit`いう呼び出しを受け取ります。 通常、対話を開始した最初`composeExtension/fetchTask`の呼び出しに応答して送信したタスクモジュールを返すことによって応答する必要があります。 これにより、ユーザーは元の情報を再入力することで、処理を開始することができます。 また、ユーザーがすべての情報を最初から入力していないように、タスクモジュールを事前入力するために、現在使用可能な情報を使用することも検討する必要があります。
+ユーザーが [**編集**] ボタンをクリックして送信する前にカードを編集する場合は、という呼び出しを受け取り `composeExtension/submitAction` `value.botMessagePreviewAction = edit` ます。 通常、対話を開始した最初の呼び出しに応答して送信したタスクモジュールを返すことによって応答する必要があり `composeExtension/fetchTask` ます。 これにより、ユーザーは元の情報を再入力することで、処理を開始することができます。 また、ユーザーがすべての情報を最初から入力していないように、タスクモジュールを事前入力するために、現在使用可能な情報を使用することも検討する必要があります。
 
-「[最初`fetchTask`のイベントへの対応」を](~/messaging-extensions/how-to/action-commands/create-task-module.md)参照してください。
+「[最初の `fetchTask` イベントへの対応」を](~/messaging-extensions/how-to/action-commands/create-task-module.md)参照してください。
 
 ### <a name="respond-to-botmessagepreview-send"></a>BotMessagePreview send に応答する
 
-ユーザーが [**送信**] ボタンをクリックすると、 `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = send`が表示されます。 Web サービスは、アダプティブカードを使用した予防的なメッセージを作成して会話に送信する必要があります。また、呼び出しに応答することもできます。
+ユーザーが [**送信**] ボタンをクリックすると、invoke with が表示され `composeExtension/submitAction` `value.botMessagePreviewAction = send` ます。 Web サービスは、アダプティブカードを使用した予防的なメッセージを作成して会話に送信する必要があります。また、呼び出しに応答することもできます。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -421,13 +421,27 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
   };
   responseActivity.Attachments.Add(attachment);
   
+  // Attribute the message to the user on whose behalf the bot is posting
+  responseActivity.ChannelData = new {
+    OnBehalfOf = new []
+    {
+      new
+      {
+        ItemId = 0,
+        MentionType = "person",
+        Mri = turnContext.Activity.From.Id,
+        DisplayName = turnContext.Activity.From.Name
+      }  
+    }
+  };
+  
   await turnContext.SendActivityAsync(responseActivity);
 
   return new MessagingExtensionActionResponse();
 }
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/node.js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -469,7 +483,11 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
         type: 'AdaptiveCard',
         version: '1.0'
       });
-      const responseActivity = { type: 'message', attachments: [adaptiveCard] };
+      const responseActivity = { type: 'message', attachments: [adaptiveCard], channelData: {
+          onBehalfOf: [
+              { itemId: 0, mentionType: 'person', mri: context.activity.from.id, displayname: context.activity.from.name }
+          ]
+      }};
     
       await context.sendActivity(responseActivity);
     }
@@ -478,7 +496,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-次のような新しい`composeExtension/submitAction`メッセージが表示されます。
+`composeExtension/submitAction`次のような新しいメッセージが表示されます。
 
 ```json
 {
