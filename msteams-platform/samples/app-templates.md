@@ -2,12 +2,12 @@
 title: Microsoft Teams アプリテンプレート
 description: Microsoft Teams プラットフォームのアプリテンプレートのリンクと説明
 keywords: Microsoft Teams テンプレートサンプルのデモ
-ms.openlocfilehash: 5a84cdce7e63404159f35a97ff8d877a7b4054c6
-ms.sourcegitcommit: 74b544e75f00299653d3405f049e242a9d390106
+ms.openlocfilehash: c03d0be2a115dafc13f80e30fd2c3e130e1edbba
+ms.sourcegitcommit: f39b6d39fac806decf9f04bf082b4fcf589e472f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44873404"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "44888807"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams のアプリテンプレート
 
@@ -131,7 +131,7 @@ CrowdSourcer は、チームが照会した情報をグループメンバーか�
 >
 > &#x2714; Q&のリビジョン履歴を追跡します。
 >
-> &#x2714;[アダプティブカード](/task-modules-and-cards/cards/cards-reference#adaptive-card)として表示するには、追加の詳細を含む回答を構成します。
+> &#x2714;[アダプティブカード](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)として表示するには、追加の詳細を含む回答を構成します。
 >
 [**GitHub で取得する**](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
 
@@ -296,5 +296,22 @@ Microsoft Teams でのコラボレーションは、多くの場合、SharePoint
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
 ![検索アプリを一覧表示する](../assets/images/list-search-template.png)
+
+## <a name="workplace-awards-9734"></a>Workplace 賞 &#9734;
+
+Workplace 賞は Teams アプリテンプレートです。これにより、モダンワークプレースで、認識を促進し、従業員の感謝を促します。 このアプリを使用すると、従業員が容易に仕事仲間を指名して承認することができる従業員報奨および認識 (R&R) プログラムを設定および管理できます。また、R&R リーダーは、送信された nominations の表示、特典の付与、受信者のアナウンスを行うことができます。
+
+[GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-workplaceawards)
+
+:::row:::
+  :::column span="2":::
+    ![Workplace 賞の推薦カード ](../assets/images/workplace-awards-nominate.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![Workplace 受賞リストタブ](../assets/images/workplace-awards-champion-tab.png)
+:::column-end:::
+:::row-end:::
 
 参照したいアプリテンプレートのアイデアがあるかどうか。 お知らせ[ください](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u)。
