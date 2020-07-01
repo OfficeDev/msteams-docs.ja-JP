@@ -2,12 +2,12 @@
 title: Microsoft Teams アプリテンプレート
 description: Microsoft Teams プラットフォームのアプリテンプレートのリンクと説明
 keywords: Microsoft Teams テンプレートサンプルのデモ
-ms.openlocfilehash: c03d0be2a115dafc13f80e30fd2c3e130e1edbba
-ms.sourcegitcommit: f39b6d39fac806decf9f04bf082b4fcf589e472f
+ms.openlocfilehash: 5333434d640a4195c3f090851d8589bef3e39bb9
+ms.sourcegitcommit: 704471f7f89ab9685f9fbd0f62468c7a4792f42c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44888807"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44943818"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams のアプリテンプレート
 
@@ -136,6 +136,23 @@ CrowdSourcer は、チームが照会した情報をグループメンバーか�
 [**GitHub で取得する**](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
 
 ![FAQ プラス GIF](../assets/images/FAQPlusEndUser.gif)
+
+## <a name="goal-tracker-9734"></a>目標追跡ツール &#9734;
+
+目標追跡アプリは、組織にとって、Microsoft Teams 内での目標の確立、進捗状況の確認、成功の確認をサポートするための包括的なソリューションです。 アプリを使用すると、ユーザーは professional、personal、および team の各レベルで目標を設定、追跡、更新することができます。 チームメンバーは、タイムリーな事前通知や進捗状況の更新を受信して、常に順調に進めることができます。
+
+[GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-app-goaltracker)
+
+:::row:::
+  :::column span="2":::
+    ![目標を設定する](../assets/images/goal-tracker-set-goals-view.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![設定目標を表示する](../assets/images/goal-tracker-your-goals-view.png)
+:::column-end:::
+:::row-end:::
 
 ## <a name="group-activities"></a>グループアクティビティ
 
@@ -287,6 +304,14 @@ Scrums for Channels は、ユーザーが Microsoft Teams 内のチャネルで 
 
 ![グループチャットのデモの Scrums](https://raw.githubusercontent.com/wiki/OfficeDev/microsoft-teams-app-scrumstatus/images/StartScrum.jpg)
 
+## <a name="share-now-9734"></a>今すぐ共有 &#9734;
+
+今すぐ共有アプリは、ユーザーが Teams 環境内でコンテンツを簡単に共有できるようにすることで、同僚間での情報交換を促進します。 ユーザーは、アプリを使用して、チームメンバーと関心のあるアイテムを共有したり、新しい共有コンテンツを検出したり、プレファレンスを設定したり、お気に入りにブックマークを設定したりして、後で閲覧できます。
+
+[GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-sharenow)
+
+![コンテンツビューの選択](../assets/images/share-now-suggested-content.png)
+
 ## <a name="sharepoint-list-search"></a>SharePoint リスト検索
 
 Microsoft Teams でのコラボレーションは、多くの場合、SharePoint リスト内のアイテムに含まれている情報を参照します。 目的のアイテムへのリンクを貼り付けるだけで、すべてのユーザーに対して、会話からのコンテキストの切り替え、必要な情報の検索、および会話を続行するために Teams に戻ることが強制されます。 会話は、通常、新しいコメントを確認し、アイテム内に含まれる情報を更新するために、参照アイテムに再び切り替える必要があります。 このコンテキストの切り替えは、グループ作業をスムーズにするための障壁を作成し、その亀裂についてのレシピとなります。
@@ -296,6 +321,23 @@ Microsoft Teams でのコラボレーションは、多くの場合、SharePoint
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
 ![検索アプリを一覧表示する](../assets/images/list-search-template.png)
+
+## <a name="visitor-management-9734"></a>ビジタ管理 &#9734;
+
+ゲスト管理アプリを使用すると、組織や従業員は、Microsoft Teams から直接オンサイトビジタープロセスを簡単かつ効率的に管理できます。 アプリを使用すると、従業員は訪問者の要求を作成し、訪問者のダッシュボードを介して要求の状態を一元管理し、訪問者が到着したときにリアルタイムで通知を受け取ることができます。
+
+[GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-app-visitormanagement)
+
+:::row:::
+  :::column span="2":::
+    ![要求ビューを作成する](../assets/images/visitor-management-create-request.png)
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![訪問者の到着通知](../assets/images/visitor-management-notify-host.png)
+:::column-end:::
+:::row-end:::
 
 ## <a name="workplace-awards-9734"></a>Workplace 賞 &#9734;
 
