@@ -2,20 +2,20 @@
 title: 公開後にすべきこと
 description: アプリの公開後にすべきこと
 keywords: Teams、公開後、更新、証明書
-ms.openlocfilehash: 77b74d77546de0ae93b0ae39aec925d2e3dec2cf
-ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
+ms.openlocfilehash: 887e18ac7e27cf12aa4319ac240e42f21f05fd75
+ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44867096"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "45021574"
 ---
 # <a name="maintain-and-support-your-published-app"></a>公開したアプリの保守およびサポート 
 
-アプリが承認され、公開アプリ カタログに一覧表示されたら、アプリの認定を取得するか、Web サイトに [ダウンロード] ボタンを追加して、利用対象者を増やすことができます。
+アプリが承認され、パブリックアプリカタログに表示された後で、Microsoft 365 App コンプライアンスプログラムを完了するか、web サイトに [ダウンロード] ボタンを追加することによって、リーチを拡大できます。
 
-## <a name="application-certificate"></a>アプリケーション証明書
+## <a name="m365-certified"></a>M365 認定
 
-Microsoft では、[アプリケーション証明書プログラム](./application-certification.md)を用意しています。アプリ情報を編集するプログラムで、[Microsoft Teams アプリのセキュリティとコンプライアンスのページ](https://aka.ms/AppCertification)で提供されます。 この情報は、管理者が組織にとって安全なアプリを選択できるようにすることを目的としています。
+[Microsoft 365 App コンプライアンスプログラム](./application-certification.md)は、アプリのセキュリティとコンプライアンスに関する3つの階層手法です。 各層は次のように構築されており、ユーザーのニーズを満たす階層化プログラムを提供します。 Teams アプリのセキュリティとコンプライアンスの姿勢の詳細については、「[コンプライアンス」ページ](https://docs.microsoft.com/microsoft-365-app-certification/teams/teams-apps)を参照してください。
 
 ## <a name="add-a-download-button-to-your-product-site"></a>製品サイトに [ダウンロード] ボタンを追加する
 
