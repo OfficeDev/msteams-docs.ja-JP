@@ -3,12 +3,12 @@ title: チームアプリのローカライズ
 description: アプリのローカライズに関する問題について説明します。
 keywords: teams 発行ストア office 発行アプリソースのローカライズ言語
 ms.date: 05/15/2018
-ms.openlocfilehash: 30e4a2589bf5c1093723406c78cff2258554c486
-ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
+ms.openlocfilehash: 138b6d66808fc5ed212f1cb0eed8579faea6f764
+ms.sourcegitcommit: bac0226d9048c363d96bbaf6f5395388c5f5c45a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "44590859"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "45039273"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>Microsoft Teams アプリのローカライズ
 
@@ -40,13 +40,13 @@ Microsoft Teams アプリをローカライズする場合は、考慮する必�
 
 ## <a name="localizing-the-strings-in-your-app-manifest"></a>アプリマニフェスト内の文字列のローカライズ
 
-アプリを適切にローカライズするには、Microsoft Teams アプリスキーマ v1.1 を使用する必要があります。 これを行うには、 `$schema` マニフェストの json ファイルの属性を ' ' に設定 https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json し、' manifestversion ' プロパティを ' 1.5 ' に更新します。
+アプリを適切にローカライズするには、Microsoft Teams アプリスキーマ v1.1 を使用する必要があります。 これを行うには、 `$schema` ファイルの manifest.jsの属性を ' ' に設定 https://developer.microsoft.com/en-us/json-schemas/teams/v1.7/MicrosoftTeams.Localization.schema.json し、' manifestversion ' プロパティを ' 1.7 ' に更新します。
 
-### <a name="example-manifestjson-change"></a>サンプルの manifest 変更
+### <a name="example-manifestjson-change"></a>変更時の manifest.js例
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.7/MicrosoftTeams.Localization.schema.json",
   "manifestVersion": "1.5",
   ...
 }
@@ -54,7 +54,7 @@ Microsoft Teams アプリをローカライズする場合は、考慮する必�
 
 次に、アプリケーションでサポートされている既定の言語で ' localizationInfo ' プロパティを追加します。 ユーザーのクライアント設定がその他の言語と一致しない場合、既定の言語が最終的なフォールバック言語として使用されます。
 
-### <a name="example-manifestjson-change"></a>サンプルの manifest 変更
+### <a name="example-manifestjson-change"></a>変更時の manifest.js例
 
 ```json
 {
@@ -84,7 +84,7 @@ Teams クライアントは、次の順序で文字列を適用します。 defa
 
 そのため、マニフェストには、("en-us" の代わりに ' en ' ではなく) 最上位レベルの翻訳を言語のみで提供し、地域レベルの上書きのみを必要とする少数の文字列に対して提供することを強くお勧めします。
 
-### <a name="example-manifestjson-change"></a>サンプルの manifest 変更
+### <a name="example-manifestjson-change"></a>変更時の manifest.js例
 
 ```json
 {
@@ -114,7 +114,7 @@ Teams クライアントは、次の順序で文字列を適用します。 defa
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.7/MicrosoftTeams.Localization.schema.json",
   "name.short": "Le App",
   "name.full": "App pour Microsoft Teams",
   "description.short": "Créez d'excellentes applications pour Microsoft Teams avec App.",
