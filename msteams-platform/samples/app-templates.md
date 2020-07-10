@@ -2,12 +2,12 @@
 title: Microsoft Teams アプリテンプレート
 description: Microsoft Teams プラットフォームのアプリテンプレートのリンクと説明
 keywords: Microsoft Teams テンプレートサンプルのデモ
-ms.openlocfilehash: 5333434d640a4195c3f090851d8589bef3e39bb9
-ms.sourcegitcommit: 704471f7f89ab9685f9fbd0f62468c7a4792f42c
+ms.openlocfilehash: 7e818f18e97da71fee0f51bd7502bedf2de3d465
+ms.sourcegitcommit: 1525db0515ab310a91939d85dbbfb7e887537849
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44943818"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45091343"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams のアプリテンプレート
 
@@ -154,6 +154,23 @@ CrowdSourcer は、チームが照会した情報をグループメンバーか�
 :::column-end:::
 :::row-end:::
 
+## <a name="great-ideas-9734"></a>魅力的なアイデア &#9734;
+
+魅力的なアイデアアプリは、組織内の革新と創造性をサポートしています。 アプリを使用すると、従業員は仕事仲間やリーダーシップを使用してアイデアを共有し、新しい提出物、ピアに関するスポットライトを見つけ、Microsoft Teams 内でのベスト提案に投票を行うことができます。
+
+[GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-greatideas)
+
+:::row:::
+  :::column span="2":::
+    ![提出されたアイデアの表示](../assets/images/great-ideas-all-view.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![アイデアを表示する](../assets/images/great-ideas-digest-view.png)
+:::column-end:::
+:::row-end:::
+
 ## <a name="group-activities"></a>グループアクティビティ
 
 グループアクティビティは、チームの所有者が簡単にアクティビティグループを作成し、Microsoft Teams のコンテキスト内でコラボレーションワークフローを管理できるようにする Microsoft Teams アプリです。 アクティビティの作成者はアクティビティの作成を有効にし、チームメンバーをランダムにグループに展開し、必要に応じて、アクティビティが完了するまで、必要に応じて bot に通知を送信します。
@@ -168,6 +185,23 @@ CrowdSourcer は、チームが照会した情報をグループメンバーか�
 :::row:::
 :::column span="2":::
     ![チャネル内のグループアクティビティ通知メッセージ](../assets/images/group-activities-2.png)
+:::column-end:::
+:::row-end:::
+
+## <a name="grow-your-skills-9734"></a>スキルを拡大 &#9734;
+
+It アプリの拡張は、従業員が新しいスキルを同時に習得しながら、従業員が組織の補助的なプロジェクトに貢献できるようにすることで、プロフェッショナルな成長と開発をサポートします。 従業員は、アプリを使用して、関心のある機会を見つけ、仲間との有意義なコラボレーションを楽しんで、新しいレベルの専門知識と機能を Teams 環境内で取得することができます。
+
+[GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-growyourskills)
+
+:::row:::
+  :::column span="2":::
+    ![利用可能なプロジェクトビュー](../assets/images/grow-your-skills-all-projects-view.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![閲覧者が取得したスキルビュー](../assets/images/grow-your-skills-acquired-skills-view.png)
 :::column-end:::
 :::row-end:::
 
@@ -321,6 +355,14 @@ Microsoft Teams でのコラボレーションは、多くの場合、SharePoint
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
 ![検索アプリを一覧表示する](../assets/images/list-search-template.png)
+
+## <a name="staff-check-ins-9734"></a>スタッフのチェックイン &#9734;
+
+スタッフのチェックインは、ビジネス担当者と現場担当者との間での監視コミュニケーションを可能にする、[電力アプリ](/powerapps/powerapps-overview)に基づくアプリです。 スタッフは、スケジュールされた、または臨時に Teams から直接、タイムクリティカルな情報と進捗状況の更新を簡単に提供できます。 アプリでは、リアルタイムの場所、写真、およびメモだけでなく、アラームの通知や自動化されたワークフローをサポートしています。
+
+[GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
+
+![チェックインビューを作成する](../assets/images/staff-check-ins-create.png)
 
 ## <a name="visitor-management-9734"></a>ビジタ管理 &#9734;
 

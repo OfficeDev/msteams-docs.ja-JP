@@ -1,19 +1,19 @@
 ---
-title: Teams クライアント SDK の使用
+title: Teams クライアント SDK を使用する
 author: laujan
 description: Teams クライアント SDK を使用して、ユーザー設定のタブに Teams 対応機能を追加する方法
 keywords: teams タブグループチャネルの構成可能な静的 SDK JavaScript personal
 ms.topic: conceptual
-ms.openlocfilehash: 66d44617b897e44268ae2cee53f7ea64743ad821
-ms.sourcegitcommit: c4a7bc638e848a702cce92798cba84917fcecc35
+ms.openlocfilehash: 07903d766ac67f2dbc9fc09268618ac5c2ae33c2
+ms.sourcegitcommit: 1525db0515ab310a91939d85dbbfb7e887537849
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "42928511"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45091299"
 ---
-# <a name="using-the-teams-client-sdk"></a>Teams クライアント SDK の使用
+# <a name="using-the-teams-client-sdk"></a>Teams クライアント SDK を使用する
 
-**Teams javascript クライアント SDK**および**teams javascript ライブラリ**は、 [Microsoft teams 開発者プラットフォーム](https://msdn.microsoft.com/microsoft-teams)の一部であり、teams アプリケーションの作成を容易にするツールとプロセスを提供します。 Teams クライアント SDK は、npm パッケージとして配布されます。 最新バージョンについては、「 <https://www.npmjs.com/package/@microsoft/teams-js>」を参照してください。 Teams ライブラリは、に<https://github.com/OfficeDev/microsoft-teams-library-js>あります。
+**Teams javascript クライアント SDK**および**teams javascript ライブラリ**は、 [Microsoft teams 開発者プラットフォーム](/microsoftteams/platform/)の一部であり、teams アプリケーションの作成を容易にするツールとプロセスを提供します。 Teams クライアント SDK は、npm パッケージとして配布されます。 最新バージョンについては、「」を参照して <https://www.npmjs.com/package/@microsoft/teams-js> ください。 Teams ライブラリは、にあり <https://github.com/OfficeDev/microsoft-teams-library-js> ます。
 
 次の表に、タブ開発で一般的に使用される Teams ライブラリ関数の概要を示します。
 

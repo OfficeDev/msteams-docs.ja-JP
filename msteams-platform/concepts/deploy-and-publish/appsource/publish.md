@@ -1,13 +1,13 @@
 ---
 title: Microsoft Teams アプリ承認プロセスガイダンス
 description: Microsoft Teams アプリストアに公開されたアプリを取得するための承認プロセスについて説明します。
-keywords: teams 発行ストア office 発行アプリソース
-ms.openlocfilehash: e93a17453e514b1e89f3f7070ff1f31000719260
-ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
+keywords: teams 発行ストア office publishing 発行 AppSource partner center アカウントの確認
+ms.openlocfilehash: 00266101f2c417a192ac97daaaa73f397f1bbdf6
+ms.sourcegitcommit: 1525db0515ab310a91939d85dbbfb7e887537849
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "44704489"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45091306"
 ---
 # <a name="submit-your-app-to-appsource"></a>アプリを AppSource に提出する
 
