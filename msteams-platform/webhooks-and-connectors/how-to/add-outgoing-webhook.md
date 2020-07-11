@@ -5,12 +5,12 @@ description: ''
 keywords: Teams、タブ、送信 Webhook*
 ms.topic: conceptual
 ms.author: laujan
-ms.openlocfilehash: 4570e597484494f05f4e18b4d29746da96c73661
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
-ms.translationtype: HT
+ms.openlocfilehash: 4881dc8768c7c51947f6a80a55affe78c28874d3
+ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674814"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "45102999"
 ---
 # <a name="add-custom-bots-to-microsoft-teams-with-outgoing-webhooks"></a>送信 Webhook を使用して Microsoft Teams にカスタム ボットを追加する
 
@@ -36,7 +36,7 @@ Webhook は、Teams と外部アプリを統合させるための便利な手段
 
 サービスは、標準の Azure Bot Service のメッセージング スキーマでメッセージを受信します。 Bot Framework Connector は、[Azure Bot Service API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference) で文書化されているように、サービスが HTTPS プロトコルを使用して JSON 形式のメッセージ交換を処理できるようにする RESTful サービスです。 [Microsoft Bot Framework SDK] を使用して、メッセージの処理と解析を行うこともできます。 詳細については、「[Azure Bot Service について](/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0)」も*参照してください*。
 
-送信 Webhook は、`team` レベルにスコープが設定され、チームのすべてのメンバーに表示されます。 ボットと同じように、ユーザーは送信 Webhook の名前に対して **\@メンション**の処理を行ってチャネルで呼び出す必要があります。
+送信 Webhook は、`team` レベルにスコープが設定され、チームのすべてのメンバーに表示されます。 Bot と同様に、ユーザーはチャネルで呼び出しを行うために、送信 webhook の名前を** \@ 言及**する必要があります。
 
 ### <a name="2-create-a-method-to-verify-the-outgoing-webhook-hmac-token"></a>2. 送信 Webhook HMAC トークンを確認するメソッドを作成する
 

@@ -4,12 +4,12 @@ author: clearab
 description: メッセージング拡張機能のアクションコマンドからタスクモジュール送信アクションに応答する方法について説明します。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 82dad570bac096a9b2fb0d1fbada4ee70ca2a662
-ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
+ms.openlocfilehash: a876275f5f4f9c3a7c1fea275eecb9c26b780fd0
+ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44867112"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "45103016"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>タスクモジュール送信アクションに応答する
 
@@ -451,7 +451,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
       const attachmentContent = activityPreview.attachments[0].content;
       const userText = attachmentContent.body[1].text;
       const choiceSet = attachmentContent.body[3];
-      
+
       const submitData = {
         MultiSelect: choiceSet.isMultiSelect ? 'true' : 'false',
         Option1: choiceSet.choices[0].title,
@@ -459,7 +459,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
         Option3: choiceSet.choices[2].title,
         Question: userText
       };
-    
+
       const adaptiveCard = CardFactory.adaptiveCard({
         actions: [
           { type: 'Action.Submit', title: 'Submit', data: { submitLocation: 'messagingExtensionSubmit' } }
@@ -488,7 +488,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
               { itemId: 0, mentionType: 'person', mri: context.activity.from.id, displayname: context.activity.from.name }
           ]
       }};
-    
+
       await context.sendActivity(responseActivity);
     }
 }
@@ -529,6 +529,61 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
+### <a name="user-attribution-for-bots-messages"></a>Bot メッセージのユーザー属性 
+
+Bot がユーザーに代わってメッセージを送信するシナリオでは、attributing は、そのユーザーにメッセージを送信することで、サービスを提供し、より自然な対話フローを実現できます。 この機能を使用すると、メッセージを開始しているユーザーの代わりにメッセージを送信できます。
+
+下の図では、左側がユーザーの属性を*持たない*bot によって送信されるカードメッセージで、右側には、ユーザーの属性*を持つ*bot によって送信されたカードがあります。
+
+![スクリーンショット](../../../assets/images/messaging-extension/user-attribution-bots.png)
+
+Teams でユーザーの属性を使用するに `OnBehalfOf` `ChannelData` は、 `Activity` teams に送信されるペイロードで、メンションエンティティをに追加する必要があります。
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet-1)
+
+```csharp
+    OnBehalfOf = new []
+    {
+      new
+      {
+        ItemId = 0,
+        MentionType = "person",
+        Mri = turnContext.Activity.From.Id,
+        DisplayName = turnContext.Activity.From.Name
+      }  
+    }
+
+```
+
+# <a name="json"></a>[JSON](#tab/json-1)
+
+```json
+{
+    "text": "Hello World!",
+    "ChannelData": {
+        "OnBehalfOf": [{
+            "itemid": 0,
+            "mentionType": "person",
+            "mri": "29:orgid:89e6508d-6c0f-4ffe-9f6a-b58416d965ae",
+            "displayName": "Sowrabh N R S"
+        }]
+    }
+}
+```
+
+* * *
+
+配列のエンティティの説明を次に示し `OnBehalfOf` ます。
+
+#### <a name="details-of--onbehalfof-entity-schema"></a>`OnBehalfOf`エンティティスキーマの詳細
+
+|フィールド|種類|説明|
+|:---|:---|:---|
+|`itemId`|整数|0である必要があります。|
+|`mentionType`|String|"Person" である必要があります。|
+|`mri`|String|メッセージの送信先であるユーザーのメッセージリソース識別子 (MRI)。 メッセージの送信者名は "via" として表示され \<user\> \<bot name\> ます。|
+|`displayName`|String|個人の名前。 名前解決ができないケースではフォールバックとして使用されます。|
+  
 ## <a name="next-steps"></a>次の手順
 
 検索コマンドを追加する

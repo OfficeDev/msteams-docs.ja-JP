@@ -2,12 +2,12 @@
 title: Microsoft Teams での通話と会議のボットの登録
 description: Microsoft Teams 用の新しい音声ビデオを呼び出すボットを登録する方法について説明します。
 keywords: ボット音声/ビデオ音声ビデオメディアの呼び出し
-ms.openlocfilehash: 9a246c9b1a5aae230881b468afef6c205d5bdecf
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: 9b932e6a330b495aef97e65c7bb1f297fdfc1336
+ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801205"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "45103006"
 ---
 # <a name="registering-a-calling-bot-for-microsoft-teams"></a>Microsoft Teams 用の呼び出しボットの登録
 
@@ -66,7 +66,7 @@ Microsoft Graph では、アプリがリソースに対して持つアクセス�
 
 ### <a name="assigning-permissions"></a>権限を割り当てる
 
-前もって bot のアプリケーションアクセス許可を構成する必要があります。 [ここで](/graph/docs/concepts/auth_register_app_v2)説明するように、 [Microsoft アプリ登録ポータル](https://apps.dev.microsoft.com/)を使用することをお勧めします。これは、ボットが構成されている場所です。ただし、 [AZURE AD V1 エンドポイント](/azure/active-directory/develop/azure-ad-endpoint-comparison)を使用したい場合は、 [azure ポータル](https://aka.ms/aadapplist)を使用することもできます。
+前もって bot のアプリケーションアクセス許可を構成する必要があります。 [ここで](/graph/auth_register_app_v2)説明するように、 [Microsoft アプリ登録ポータル](https://apps.dev.microsoft.com/)を使用することをお勧めします。これは、ボットが構成されている場所です。ただし、 [AZURE AD V1 エンドポイント](/azure/active-directory/develop/azure-ad-endpoint-comparison)を使用したい場合は、 [azure ポータル](https://aka.ms/aadapplist)を使用することもできます。
 
 ### <a name="getting-tenant-administrator-consent"></a>テナント管理者の同意を取得する
 

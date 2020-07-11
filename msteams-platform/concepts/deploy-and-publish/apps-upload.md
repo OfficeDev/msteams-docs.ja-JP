@@ -2,12 +2,12 @@
 title: Microsoft Teams でカスタムアプリをアップロードする
 description: Microsoft Teams でアプリをアップロードする方法について説明します。
 keywords: teams アプリのアップロード
-ms.openlocfilehash: 256a9bea48ed816f2e9912006dd2fe7301743919
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: c130ef48d3ad7476de9ca5afeb7b613197c43f18
+ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44453883"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "45103027"
 ---
 # <a name="upload-an-app-package-to-microsoft-teams"></a>Microsoft Teams にアプリ パッケージをアップロードする
 
@@ -100,7 +100,7 @@ Bot を会話に追加して、bot との直接的なチャットをテストす
 
 1. チーム内のチャネルに移動します。 [*その他のオプション*(*&#8943;*)] を選択し、[*コネクタ*] を選択します。
 
-2. 下部にある [**アップロード**済み] セクションからコネクタを選択します。
+2. 下部にある**サイドロード**セクションからコネクタを選択します。
 
 3. [構成ページ](../../webhooks-and-connectors/how-to/connectors-creating.md)からコネクタを構成し、[*保存*] を選択します。
 
