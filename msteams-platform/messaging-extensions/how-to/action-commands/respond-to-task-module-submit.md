@@ -4,12 +4,12 @@ author: clearab
 description: メッセージング拡張機能のアクションコマンドからタスクモジュール送信アクションに応答する方法について説明します。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: a876275f5f4f9c3a7c1fea275eecb9c26b780fd0
-ms.sourcegitcommit: 3ba5a5a7d9d9d906abc3ee1df9c2177de0cfd767
+ms.openlocfilehash: cc62bd6643fad9b3f2054d6595dd509b75c59680
+ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "45103016"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "45137662"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>タスクモジュール送信アクションに応答する
 
@@ -28,7 +28,7 @@ ms.locfileid: "45103016"
 
 次の表は、メッセージング拡張機能の呼び出し場所 () に基づいて、使用可能な応答の種類を示して `commandContext` います。 認証または構成の場合、ユーザーがフローを完了すると、元の呼び出しが web サービスに再送信されます。
 
-|応答の種類 | hotmail | コマンド バー | メッセージ​​ |
+|応答の種類 | hotmail | コマンド バー | message |
 |--------------|:-------------:|:-------------:|:---------:|
 |カード応答 | x | x | x |
 |別のタスクモジュール | x | x | x |
@@ -531,7 +531,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="user-attribution-for-bots-messages"></a>Bot メッセージのユーザー属性 
 
-Bot がユーザーに代わってメッセージを送信するシナリオでは、attributing は、そのユーザーにメッセージを送信することで、サービスを提供し、より自然な対話フローを実現できます。 この機能を使用すると、メッセージを開始しているユーザーの代わりにメッセージを送信できます。
+Bot がユーザーに代わってメッセージを送信するシナリオでは、attributing は、そのユーザーにメッセージを送信することで、サービスを提供し、より自然な対話フローを実現できます。 この機能を使用すると、bot から送信されたユーザーにメッセージを属性化することができます。
 
 下の図では、左側がユーザーの属性を*持たない*bot によって送信されるカードメッセージで、右側には、ユーザーの属性*を持つ*bot によって送信されたカードがあります。
 

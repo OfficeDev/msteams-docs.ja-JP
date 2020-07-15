@@ -1,16 +1,16 @@
 ---
-title: コンテンツページを作成する
+title: コンテンツ ページを作成する
 author: laujan
 description: ''
 keywords: teams タブグループチャネルの構成可能な静的
 ms.topic: conceptual
 ms.author: v-laujan
-ms.openlocfilehash: ac85e000c9bdaebf28cb33143a7c82a348d3771e
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: a9f1fa407c6377daa8bce6a6a6c63b47d50d8100
+ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674875"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "45137637"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>タブのコンテンツページを作成する
 
@@ -28,7 +28,7 @@ ms.locfileid: "41674875"
 
 ## <a name="integrate-your-code-with-teams"></a>コードを Teams と統合する
 
-ページを Teams に表示するには、 [Microsoft Teams の JavaScript クライアント SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest)を含み、ページの読み込み後`microsoftTeams.initialize()`にの呼び出しを含める必要があります。 ページと Teams クライアントが通信する方法は次のとおりです。
+ページを Teams に表示するには、 [Microsoft Teams の JavaScript クライアント SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest)を含み、ページの読み込み後にの呼び出しを含める必要があり `microsoftTeams.initialize()` ます。 ページと Teams クライアントが通信する方法は次のとおりです。
 
 ```html
 <!DOCTYPE html>
@@ -64,4 +64,28 @@ Teams のエンティティへの詳細なリンクを作成できます。 通�
 
 ### <a name="valid-domains"></a>有効なドメイン
 
-タブで使用されているすべての URL ドメインが[マニフェスト](~/concepts/build-and-test/apps-package.md)内`validDomains`の配列に含まれていることを確認します。 詳細については、「マニフェストスキーマリファレンス」の「 [Validdomains](~/resources/schema/manifest-schema.md#validdomains) 」を参照してください。 ただし、タブのコア機能は teams 内に存在し、Teams の外部ではないことに注意してください。
+タブで使用されているすべての URL ドメインがマニフェスト内の配列に含まれていることを確認し `validDomains` ます。 [manifest](~/concepts/build-and-test/apps-package.md) 詳細については、「マニフェストスキーマリファレンス」の「 [Validdomains](~/resources/schema/manifest-schema.md#validdomains) 」を参照してください。 ただし、タブのコア機能は teams 内に存在し、Teams の外部ではないことに注意してください。
+
+## <a name="showing-a-native-loading-indicator"></a>ネイティブローディングインジケーターの表示
+
+[マニフェストスキーマ](../../../resources/schema/manifest-schema.md)v2.0 以降では、web コンテンツが Teams ([タブのコンテンツページ](#integrate-your-code-with-teams)、[構成ページ](configuration-page.md)、[削除ページ](removal-page.md)、[タスクモジュール](../../../task-modules-and-cards/task-modules/task-modules-tabs.md)など) に読み込まれているすべての場所で、[ネイティブの読み込みインジケーター](../../../resources/schema/manifest-schema.md#showloadingindicator)を提供できます。
+
+> [!NOTE]
+> アプリマニフェストで指定する場合は、 `"showLoadingIndicator : true` すべてのタブ構成、コンテンツ、および削除ページと、すべての iframe ベースのタスクモジュールは、以下の必須プロトコルに従う必要があります。
+
+1. 読み込みインジケーターを表示するには、 `"showLoadingIndicator": true` マニフェストにを追加します。 
+2. にお問い合わせ `microsoftTeams.initialize();` ください。
+3. **省略可能**です。 画面に印刷する準備ができていて、アプリケーションのコンテンツの残りの部分を遅延ロードする必要がある場合は、を呼び出して、読み込みインジケーターを手動で非表示にすることができます。`microsoftTeams.appInitialization.notifyAppLoaded();`
+4. **必須**。 最後に、 `microsoftTeams.appInitialization.notifySuccess()` アプリが正常に読み込まれたことを Teams に通知する呼び出しを行います。 チームは、必要に応じて、読み込みインジケーターを非表示にします。 `notifySuccess`が30秒以内に呼び出されない場合は、アプリがタイムアウトになり、[再試行] オプションのあるエラー画面が表示されることを前提としています。
+5. アプリケーションの読み込みに失敗した場合は、 `microsoftTeams.appInitialization.notifyFailure(reason);` チームにエラーがあることを知らせるための呼び出しを行うことができます。 エラー画面がユーザーに表示されます。
+
+```typescript
+``
+/* List of failure reasons */
+export const enum FailedReason {
+    AuthFailed = "AuthFailed",
+    Timeout = "Timeout",
+    Other = "Other"
+}
+```
+>

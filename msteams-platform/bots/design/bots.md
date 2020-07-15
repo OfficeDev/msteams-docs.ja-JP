@@ -2,12 +2,12 @@
 title: ボットの設計ガイドライン
 description: Bot を作成するためのガイドラインについて説明します。
 keywords: teams デザインガイドラインリファレンスフレームワークの bot トーク
-ms.openlocfilehash: 731e36ac3437e22435ea6054ad359d0c6bc2ead3
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: 4f474278b37058f61886a620af634780d2e3cb19
+ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44453890"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "45137676"
 ---
 # <a name="start-talking-with-bots"></a>Bot との会話を開始する
 
@@ -33,7 +33,7 @@ Teams のボットアバターは、六角形のようになっているため�
 
 ### <a name="onboarding-users"></a>オンボードユーザー
 
-Bot が自分を紹介し、ユーザーにできることを伝えることが重要です。 この*値*を使用すると、ユーザーは bot との関係を理解しやすくなり、制限がある場合には、ユーザーが実際のユーザーほど直観的ではないコンピューターとの相互作用を許容できるようになります。 さらに、サービスによって提供される実際の値に対する exchange のユーザーデータへのアクセス許可を付与します。
+Bot が自分を紹介し、ユーザーが実行できることを伝えることが重要です。 この*値*を使用すると、ユーザーは bot との関係を理解しやすくなり、制限がある場合には、ユーザーが実際のユーザーほど直観的ではないコンピューターとの相互作用を許容できるようになります。 さらに、サービスによって提供される実際の値に対する exchange のユーザーデータへのアクセス許可を付与します。
 
 #### <a name="welcome-messages"></a>ウェルカム メッセージ
 
@@ -47,7 +47,7 @@ Bot が自分を紹介し、ユーザーにできることを伝えることが�
 
 ### <a name="responding-to-users-and-failing-gracefully"></a>ユーザーに応答して、正常にエラーを発生させる
 
-また、bot は、よくあるスペルミスと口語を考慮しながら、"*Hi*"、"*Help*"、"*どうもありがとう*" などに応答できるようにする必要があります。 例:
+また、bot は、よくあるスペルミスと口語を考慮しながら、"*Hi*"、"*Help*"、"*どうもありがとう*" などに応答できるようにする必要があります。 次に例を示します。
 
 #### <a name="x2713-hello"></a>&#x2713; Hello
 

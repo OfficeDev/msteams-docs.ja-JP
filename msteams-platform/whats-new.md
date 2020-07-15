@@ -2,12 +2,12 @@
 title: 新機能
 description: Microsoft Teams のすべての新しい開発者向け機能について説明します。
 keywords: teams 新しい最新情報
-ms.openlocfilehash: eede16c65faa2366b8c0734a39d84b558b1d68ed
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: 527f8fa9a029936f62203136a0891f3815db7ee2
+ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44453855"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "45137641"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -17,6 +17,7 @@ ms.locfileid: "44453855"
 
 | **Date** | **メモ** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+| 07/01/2020 |Visual Studio Code Toolkit を使用して Teams アプリの作成を開始します。|[Microsoft Teams Toolkit と Visual Studio コードを使用してアプリをビルドする](toolkit/visual-studio-code-overview.md) |
 | 05/20/2020 | Microsoft Graph Api を使用したリソース固有の同意アクセス許可は、開発者向けプレビューで表示されます。 |[リソース固有の同意 (RSC)-開発者プレビュー](graph-api/rsc/resource-specific-consent.md) |
 | 03/24/2020 | 会話の単一メンバーを取得するためのサポートが追加され、ページングされたメンバーを取得するためのサポートが追加されました。 | [Teams のコンテキストをボット用に取得する](~/bots/how-to/get-teams-context.md)
 | 12/26/2019 | `replyToId`Bot に送信されるペイロードのパラメーターは暗号化されなくなりました。この値を使用して、これらのメッセージに deeplinks を構築できます。 メッセージペイロードには、パラメーターに暗号化された値が含まれています。 `legacy.replyToId`.  |
@@ -32,7 +33,7 @@ ms.locfileid: "44453855"
 | 05/20/2019 | メッセージアクション。 | [メッセージアクション](resources/messaging-extension-v3/create-extensions.md#action-type-message-extensions) |
 | 05/20/2019 | Link unfurling (カスタム URL プレビュー)。 | [リンク展開](messaging-extensions/how-to/link-unfurling.md)|
 | 05/06/2019 | Store アプリ用のアプリケーション証明書プログラム。 | [アプリケーション証明書](~/publishing/application-certification.md) |
-| 05/06/2019 | アプリテンプレートが使用可能になりました。 | [アプリのテンプレート](~/samples/app-templates.md) |
+| 05/06/2019 | アプリテンプレートが使用可能になりました。 | [アプリテンプレート](~/samples/app-templates.md) |
 | 04/23/2019 | アクションベースのメッセージング拡張機能が使用できるようになりました。 | [アクションベースのメッセージ拡張機能](~/concepts/messaging-extensions/create-extensions.md) |
 | 02/18/2019 | プライベートチャットへの詳細なリンクを作成することは、開発者向けのプレビューではありません。 | [チャットへの詳細なリンク](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 01/23/2019 | タブコンテキストで SKU と licenceType の情報を提示します。 | [タブのコンテキスト](~/concepts/tabs/tabs-context.md) |
