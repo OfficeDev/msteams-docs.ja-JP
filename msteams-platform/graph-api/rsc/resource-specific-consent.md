@@ -6,23 +6,23 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams authorization OAuth SSO AAD rsc Graph
-ms.openlocfilehash: 7d0927fc360d8c005326cdff6453796fb45bf113
-ms.sourcegitcommit: fdc50183f3f4bec9e4b83bcfe5e016b591402f7c
+ms.openlocfilehash: a9380081e7694a7eae8e2c131e091b108acb051f
+ms.sourcegitcommit: 26b7404142706290810064f8216abaa1c262d1e5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "44867140"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45145915"
 ---
 # <a name="resource-specific-consent-rsc--developer-preview"></a>リソース固有の同意 (RSC)-開発者プレビュー
 
 >[!NOTE]
->リソース固有の同意アクセス許可は、開発者プレビューが有効になっている場合にのみ、デスクトップおよび Android クライアントで使用できます。 詳細については、「[開発者プレビューを有効にする方法](../../resources/dev-preview/developer-preview-intro.md)」を参照してください。
+>開発者プレビューが有効になっている場合、リソース固有の同意アクセス許可は、デスクトップおよび web クライアントで使用できます。 詳細については、「[開発者プレビューを有効にする方法](../../resources/dev-preview/developer-preview-intro.md)」を参照してください。
 
 リソース固有の同意 (RSC) は Microsoft Teams と Graph API の統合で、アプリが API エンドポイントを使用して組織内の特定のチームを管理できるようにします。 リソース固有の同意 (RSC) アクセス許可モデルを使用すると、チームの*所有者*は、チームのデータにアクセスしたり、変更したりするアプリケーションに同意を与えることができます。 きめ細かい、Teams 固有、RSC の各アクセス許可によって、アプリケーションが特定のチーム内で実行できる処理を定義します。
 
 ## <a name="resource-specific-permissions"></a>リソース固有のアクセス許可
 
-|アプリケーションのアクセス許可| Action |
+|アプリケーションのアクセス許可| アクション |
 | ----- | ----- |
 |TeamSettings. グループ | このチームの設定を取得します。|
 |TeamSettings. グループ|このチームの設定を更新します。|
@@ -69,7 +69,7 @@ Azure portal で直接[グループ所有者の同意](/azure/active-directory/m
 | 値 | 説明|
 |--- | --- |
 |はい | すべてのグループ所有者に対してグループ固有の同意を有効にします。|
-|いいえ |すべてのユーザーのグループ固有の同意を無効にします。| 
+|不要 |すべてのユーザーのグループ固有の同意を無効にします。| 
 |いう | 選択したグループのメンバーのグループ固有の同意を有効にします。|
 
 PowerShell を使用して Azure portal でグループ所有者の同意を有効または無効にするには、「 [powershell を使用してグループ所有者の同意を構成](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-using-powershell)する」に記載されている手順に従います。

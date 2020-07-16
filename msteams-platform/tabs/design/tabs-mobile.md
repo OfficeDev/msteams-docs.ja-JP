@@ -2,14 +2,17 @@
 title: モバイルのタブ
 description: モバイルで使用できるタブの設計ガイドラインについて説明します。
 keywords: teams デザインガイドラインリファレンスフレームワーク個人用アプリモバイルタブ
-ms.openlocfilehash: 6fe40b9cc5b6e898d0f0bce14b3dfedfd2c14032
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: ac547e74fd56e4f1da6c731959d8bb59dbe48213
+ms.sourcegitcommit: 26b7404142706290810064f8216abaa1c262d1e5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44455521"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45145927"
 ---
 # <a name="tabs-on-mobile"></a>モバイルのタブ
+
+> [!NOTE]
+> Teams モバイル クライアントに [チャネル/グループ] タブを表示するように選択した場合は、`setSettings()` 構成には `websiteUrl` プロパティの値を設定する必要があります (下記参照)。 [個人] タブは現在、[開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md)で利用できます。 モバイル クライアントでのタブの完全なサポートは、間もなくリリースされる予定です。 更新プログラムの準備をするには、タブを作成するときに、ここに示す手順を実行する必要があります。
 
 カスタムタブは、チャネル、グループチャット、または個人アプリの一部にすることができます (静的タブを含むアプリ、または1対1の bot を含むアプリ)。
 

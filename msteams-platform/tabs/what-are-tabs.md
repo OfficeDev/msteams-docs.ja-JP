@@ -4,12 +4,12 @@ author: laujan
 description: Microsoft Teams プラットフォームでのカスタム タブの概要
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 1c4f1e2a62fd9ce3542a229cbcb8d79551caee10
-ms.sourcegitcommit: 214eccbadb7f3a67236b79a041ef487b7bf6dfbd
+ms.openlocfilehash: d8aba99210369bf92ad1e600b13cf1d20984d06f
+ms.sourcegitcommit: 26b7404142706290810064f8216abaa1c262d1e5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "44119050"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45145908"
 ---
 # <a name="what-are-microsoft-teams-custom-tabs"></a>Microsoft Teams のカスタム タブとは
 
@@ -55,4 +55,4 @@ Teams では、[チャネル/グループ] および [個人] の 2 種類のタ
 
 ## <a name="mobile-clients"></a>モバイル クライアント
 
-Teams モバイル クライアントに [チャネル/グループ] タブを表示するように選択した場合は、`setSettings()` 構成には `websiteUrl` プロパティの値を設定する必要があります (下記参照)。 [個人] タブは現在、[開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md)で利用できます。 モバイル クライアントでのタブの完全なサポートは、間もなくリリースされる予定です。 更新プログラムの準備を行うには、タブの作成時に、[モバイルでのタブのガイダンス](~/tabs/design/tabs-mobile.md)に従ってください。
+Teams mobile クライアントに [チャネル/グループ] タブを表示する場合は、その `setSettings()` プロパティの値を設定する必要があり `websiteUrl` ます。 [個人] タブは現在、[開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md)で利用できます。 モバイル クライアントでのタブの完全なサポートは、間もなくリリースされる予定です。 更新プログラムの準備を行うには、タブの作成時に、[モバイルでのタブのガイダンス](~/tabs/design/tabs-mobile.md)に従ってください。
