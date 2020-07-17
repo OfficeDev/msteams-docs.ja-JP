@@ -1,13 +1,14 @@
 ---
 title: Microsoft Teams アプリテンプレート
 description: Microsoft Teams プラットフォームのアプリテンプレートのリンクと説明
+ms.topic: reference
 keywords: Microsoft Teams テンプレートサンプルのデモ
-ms.openlocfilehash: 7e818f18e97da71fee0f51bd7502bedf2de3d465
-ms.sourcegitcommit: 1525db0515ab310a91939d85dbbfb7e887537849
+ms.openlocfilehash: 827e6562bdab06b4aa2d44800222d72a10106439
+ms.sourcegitcommit: 81ac2a1070d16e20ae0e4cb6137dce09b31914af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45091343"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45152708"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams のアプリテンプレート
 

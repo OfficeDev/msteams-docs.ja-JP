@@ -3,12 +3,12 @@ title: チームアプリのローカライズ
 description: アプリのローカライズに関する問題について説明します。
 keywords: teams 発行ストア office 発行アプリソースのローカライズ言語
 ms.date: 05/15/2018
-ms.openlocfilehash: 138b6d66808fc5ed212f1cb0eed8579faea6f764
-ms.sourcegitcommit: bac0226d9048c363d96bbaf6f5395388c5f5c45a
+ms.openlocfilehash: 8d14da5c773bcc422081b50fc530a32163260b4a
+ms.sourcegitcommit: 81ac2a1070d16e20ae0e4cb6137dce09b31914af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "45039273"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45152680"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>Microsoft Teams アプリのローカライズ
 
@@ -20,9 +20,9 @@ Microsoft Teams アプリをローカライズする場合は、考慮する必�
 
 ## <a name="localizing-your-appsource-listing"></a>AppSource リストのローカライズ
 
-アプリストアに発行している場合は、AppSource リストのローカライズがまだサポートされていないことに注意する必要があります。 ただし、アプリストアでローカライズされたリストをサポートするための準備として、追加の言語を一覧に追加することができます。 現在、リストの[パートナーセンター](/dev/store/use-partner-center-to-submit-to-appsource)で提供される既定の (英語) の言語情報のみが、アプリの[appsource web サイト](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1)の一覧に表示されます。
+アプリストアに発行している場合は、AppSource リストのローカライズがまだサポートされていないことに注意する必要があります。 ただし、アプリストアでローカライズされたリストをサポートするための準備として、追加の言語を一覧に追加することができます。 現在、リストの[パートナーセンター](/office/dev/store/submit-to-appsource-via-partner-center)で提供される既定の (英語) の言語情報のみが、アプリの[appsource web サイト](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1)の一覧に表示されます。
 
-アプリの追加の言語を構成するには、[パートナーセンター](/dev/store/use-partner-center-to-submit-to-appsource)で、英語とアプリの追加言語を選択します。 この例では、フランス語が使用されています。
+アプリの追加の言語を構成するには、[パートナーセンター](/office/dev/store/submit-to-appsource-via-partner-center)で、英語とアプリの追加言語を選択します。 この例では、フランス語が使用されています。
 
 1. 英語の言語を追加する
     * アプリ名を入力します。

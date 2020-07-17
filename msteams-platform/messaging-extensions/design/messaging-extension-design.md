@@ -4,12 +4,12 @@ description: メッセージング拡張機能を作成するためのガイド�
 keywords: teams 設計ガイドラインリファレンスメッセージング拡張のヒントベストプラクティス
 author: EmilyyC
 ms.author: qinch
-ms.openlocfilehash: cf2862b8c8544efcab21616c420d66937fb7406a
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 5d62646c5757f93cc4f6ae6e089ef3a0918f9eea
+ms.sourcegitcommit: 81ac2a1070d16e20ae0e4cb6137dce09b31914af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "44801313"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "45152687"
 ---
 # <a name="start-sharing-with-powerful-messaging-extensions"></a>強力なメッセージング拡張機能を使用した共有の開始
 
@@ -46,4 +46,4 @@ ms.locfileid: "44801313"
 
 ### <a name="keep-users-in-the-app-context"></a>アプリコンテキストでユーザーを保持する
 
-カードが足りず、詳細情報を得るためにリンクを提供する必要がある場合は、ユーザーが快適に表示されるように、ブラウザーを開くのではなくタブを開くことをお勧めします。 「[ユーザー設定のチームアプリの wit を拡張する」を](../../tabs/how-to/add-tab.md)*参照してください*。
+カードが足りず、詳細情報を得るためにリンクを提供する必要がある場合は、ユーザーが快適に表示されるように、ブラウザーを開くのではなくタブを開くことをお勧めします。 「[カスタムタブで Teams アプリを拡張する](../../tabs/how-to/add-tab.md) *」を参照してください*。
