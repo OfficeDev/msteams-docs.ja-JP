@@ -13,7 +13,7 @@
       href: tutorials/get-started-nodejs-app-studio.md
     - name: Yeoman ジェネレーターでアプリを作成する
       href: tutorials/get-started-yeoman.md
-    - name: Teams クライアントをカスタム アプリで拡張する
+    - name: Teams 用カスタム アプリについて
       href: tutorials/code-samples.md
 - name: テンプレートと統合
   items:
