@@ -21,6 +21,10 @@
       href: samples/app-templates.md
     - name: 本番対応の Shifts コネクタ
       href: samples/shifts-wfm-connectors.md
+    - name: チーム用の仮想アシスタントを作成する
+      href: samples/virtual-assistant.md
+    - name: Power Virtual Agent チャットボットを Teams と統合する
+      href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
     - name: Microsoft Teams ツールキット拡張機能
       items:
         - name: Visual Studio Code 用 Teams ツールキット拡張機能
