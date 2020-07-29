@@ -5,12 +5,12 @@ description: ''
 keywords: teams タブグループチャネルの構成可能な静的
 ms.topic: conceptual
 ms.author: v-laujan
-ms.openlocfilehash: a9f1fa407c6377daa8bce6a6a6c63b47d50d8100
-ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
+ms.openlocfilehash: 49cd771c45bc3c4f91a7ab5f38beaf01da712544
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "45137637"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434490"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>タブのコンテンツページを作成する
 
@@ -66,7 +66,7 @@ Teams のエンティティへの詳細なリンクを作成できます。 通�
 
 タブで使用されているすべての URL ドメインがマニフェスト内の配列に含まれていることを確認し `validDomains` ます。 [manifest](~/concepts/build-and-test/apps-package.md) 詳細については、「マニフェストスキーマリファレンス」の「 [Validdomains](~/resources/schema/manifest-schema.md#validdomains) 」を参照してください。 ただし、タブのコア機能は teams 内に存在し、Teams の外部ではないことに注意してください。
 
-## <a name="showing-a-native-loading-indicator"></a>ネイティブローディングインジケーターの表示
+## <a name="show-a-native-loading-indicator"></a>ネイティブローディングインジケーターを表示する
 
 [マニフェストスキーマ](../../../resources/schema/manifest-schema.md)v2.0 以降では、web コンテンツが Teams ([タブのコンテンツページ](#integrate-your-code-with-teams)、[構成ページ](configuration-page.md)、[削除ページ](removal-page.md)、[タスクモジュール](../../../task-modules-and-cards/task-modules/task-modules-tabs.md)など) に読み込まれているすべての場所で、[ネイティブの読み込みインジケーター](../../../resources/schema/manifest-schema.md#showloadingindicator)を提供できます。
 

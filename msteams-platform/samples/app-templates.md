@@ -3,12 +3,12 @@ title: Microsoft Teams アプリテンプレート
 description: Microsoft Teams プラットフォームのアプリテンプレートのリンクと説明
 ms.topic: reference
 keywords: Microsoft Teams テンプレートサンプルのデモ
-ms.openlocfilehash: 827e6562bdab06b4aa2d44800222d72a10106439
-ms.sourcegitcommit: 81ac2a1070d16e20ae0e4cb6137dce09b31914af
+ms.openlocfilehash: c244a95c81a6bfd2475648d6578d92f40af407e1
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "45152708"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434539"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams のアプリテンプレート
 
@@ -359,7 +359,7 @@ Microsoft Teams でのコラボレーションは、多くの場合、SharePoint
 
 ## <a name="staff-check-ins-9734"></a>スタッフのチェックイン &#9734;
 
-スタッフのチェックインは、ビジネス担当者と現場担当者との間での監視コミュニケーションを可能にする、[電力アプリ](/powerapps/powerapps-overview)に基づくアプリです。 スタッフは、スケジュールされた、または臨時に Teams から直接、タイムクリティカルな情報と進捗状況の更新を簡単に提供できます。 アプリでは、リアルタイムの場所、写真、およびメモだけでなく、アラームの通知や自動化されたワークフローをサポートしています。
+スタッフのチェックインは、ビジネス担当者と現場担当者との間での監視コミュニケーションを可能にする、[電力アプリケーション](/powerapps/powerapps-overview)ベースのアプリです。 スタッフは、スケジュールされた、または臨時に Teams から直接、タイムクリティカルな情報と進捗状況の更新を簡単に提供できます。 アプリでは、リアルタイムの場所、写真、およびメモだけでなく、アラームの通知や自動化されたワークフローをサポートしています。
 
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
 

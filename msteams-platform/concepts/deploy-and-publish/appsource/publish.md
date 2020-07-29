@@ -2,12 +2,12 @@
 title: Microsoft Teams アプリ承認プロセスガイダンス
 description: Microsoft Teams アプリストアに公開されたアプリを取得するための承認プロセスについて説明します。
 keywords: teams 発行ストア office publishing 発行 AppSource partner center アカウントの確認
-ms.openlocfilehash: 00266101f2c417a192ac97daaaa73f397f1bbdf6
-ms.sourcegitcommit: 1525db0515ab310a91939d85dbbfb7e887537849
+ms.openlocfilehash: cafbffff46417d692f3b587dda7269ab4b82f6cd
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45091306"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434476"
 ---
 # <a name="submit-your-app-to-appsource"></a>アプリを AppSource に提出する
 
@@ -40,7 +40,7 @@ ms.locfileid: "45091306"
 
 ## <a name="what-if-i-cannot-find-my-office-store-account-in-partner-center"></a>パートナーセンターで Office ストアアカウントが見つからない場合はどうすればよいですか?
 
-[パートナーセンターのサポートチケット](https://partner.microsoft.com/en-US/support/v2/?stage=1)を開いて、ドロップダウンメニューから次のものを選択してください。
+[パートナーセンターのサポートチケット](https://partner.microsoft.com/support/v2/?stage=1)を開いて、ドロップダウンメニューから次のものを選択してください。
 
 | メニュー | オプション |
 | -------   | -------  |

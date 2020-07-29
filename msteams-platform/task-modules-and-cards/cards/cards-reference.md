@@ -2,12 +2,12 @@
 title: カードリファレンス
 description: Teams のボットで利用可能なすべてのカードおよびカードアクションについて説明します。
 keywords: bot カードリファレンス
-ms.openlocfilehash: 76b9cb7e2508d300deb2e3cd4f392fdb9850062d
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 7bd1cbea0aec03913c9bce205ae68eedba284637
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674829"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434546"
 ---
 # <a name="cards-reference"></a>カードリファレンス
 
@@ -43,7 +43,7 @@ ms.locfileid: "41674829"
 
 ### <a name="inline-card-images"></a>インラインカードの画像
 
-カードには、公的の使用可能な画像へのリンクを含めることで、インライン画像を含めることができます。 パフォーマンス上の理由から、公開されたコンテンツ配信ネットワーク (CDN) で画像をホストすることを強くお勧めします。
+カードには、公開されている画像へのリンクを含めることで、インライン画像を含めることができます。 パフォーマンス上の理由から、公開されたコンテンツ配信ネットワーク (CDN) で画像をホストすることを強くお勧めします。
 
 画像を拡大または縮小して、画像領域をカバーしてから、カードの適切な縦横比を達成するために、画像の縦横比を維持しながら、サイズを拡大または縮小します。
 
@@ -66,10 +66,7 @@ ms.locfileid: "41674829"
 
 ## <a name="adaptive-card"></a>アダプティブカード
 
-> [!NOTE]
-> すべてのユーザーに対して、アダプティブカードのバージョン1.0 のみがサポートされています。 現在、バージョン1.2 は開発者向けプレビューでのみ利用可能です。
-
-テキスト、音声、画像、ボタン、入力フィールドの任意の組み合わせを含むことができるカスタマイズ可能なカード。
+テキスト、音声、画像、ボタン、入力フィールドの任意の組み合わせを含むことができるカスタマイズ可能なカード。 *「* [アダプティブカード v 1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0)」を参照してください。
 
 ### <a name="support-for-adaptive-cards"></a>アダプティブカードのサポート
 
@@ -77,6 +74,9 @@ ms.locfileid: "41674829"
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 |
+
+> [!NOTE]
+> Media 要素は、現在 Teams プラットフォームのアダプティブカード v2.0 ではサポートされていません。
 
 ### <a name="example-adaptive-card"></a>アダプティブカードの例
 
@@ -217,7 +217,7 @@ ms.locfileid: "41674829"
 
 #### <a name="for-more-information-on-adaptive-cards"></a>アダプティブカードの詳細については、
 
-* [アダプティブカードの概要](/adaptive-cards/)
+* [アダプティブ カードの概要](/adaptive-cards/)
 * [Teams でのアダプティブカードアクション](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 
 ## <a name="hero-card"></a>英雄カード
@@ -386,18 +386,18 @@ Office 365 のコネクタカードは、 [Actioncard アクション](/outlook/
 コネクタからコネクタカードを使用することと、ボットでコネクタカードを使用することの重要な違いは、カードアクションの処理です。
 
 * コネクタの場合、エンドポイントは HTTP POST 経由でカードのペイロードを受信します。
-* Bot の場合、アクション`HttpPOST`は、アクション`invoke` ID と本文のみを bot に送信するアクティビティをトリガーします。
+* Bot の場合、アクションは、 `HttpPOST` `invoke` アクション ID と本文のみを bot に送信するアクティビティをトリガーします。
 
 各コネクタカードには最大10個のセクションを表示でき、各セクションには最大5つの画像と5つのアクションを含めることができます。
 
 > [!NOTE]
 > メッセージ内の追加のセクション、画像、アクションは表示されません。
 
-すべてのテキストフィールドは、Markdown と HTML をサポートしています。 Markdown または HTML を使用するセクションは、 `markdown`メッセージでプロパティを設定することによって制御できます。 既定では`markdown` 、はに`true`設定されています。代わりに HTML を使用する場合は、を`markdown`に`false`設定します。
+すべてのテキストフィールドは、Markdown と HTML をサポートしています。 Markdown または HTML を使用するセクションは、メッセージでプロパティを設定することによって制御できます `markdown` 。 既定で `markdown` は、はに設定されています。 `true` 代わりに HTML を使用する場合は、 `markdown` をに設定 `false` します。
 
-`themeColor`プロパティを指定すると、そのプロパティは`accentColor`アプリマニフェストのプロパティより優先されます。
+プロパティを指定すると `themeColor` 、そのプロパティはアプリマニフェストのプロパティより優先され `accentColor` ます。
 
-のレンダリングスタイルを指定する`activityImage`には、次`activityImageType`のように設定します。
+のレンダリングスタイルを指定するに `activityImage` は、次のように設定し `activityImageType` ます。
 
 | 値 | 説明 |
 | --- | --- |
@@ -408,7 +408,7 @@ Office 365 のコネクタカードは、 [Actioncard アクション](/outlook/
 
 * `heroImage`
 * `hideOriginalBody`
-* `startGroup`(常に Teams `true`で扱います)
+* `startGroup`(常に `true` Teams で扱います)
 * `originator`
 * `correlationId`
 
@@ -497,7 +497,7 @@ Bot フレームワークリファレンス:
 
 ## <a name="signin-card"></a>サインインカード
 
-Bot がユーザーのサインインを要求することを可能にするカード。 Bot フレームワークで見つかったものとは異なる形式の Teams でサポートされています。 Teams のサインインカードは bot フレームワークのサインインカードに似ていますが、Teams のサインインカードでは、 `signin`との2つのアクション`openUrl`のみがサポートされるという例外があります。
+Bot がユーザーのサインインを要求することを可能にするカード。 Bot フレームワークで見つかったものとは異なる形式の Teams でサポートされています。 Teams のサインインカードは bot フレームワークのサインインカードに似ていますが、Teams のサインインカードでは、との2つのアクションのみがサポートされるという例外があり `signin` `openUrl` ます。
 
 *サインインアクション*は、サインインカードだけでなく、Teams のすべてのカードから使用できます。 認証の詳細については、「 [bot の Microsoft Teams 認証フロー](~/bots/how-to/authentication/auth-flow-bot.md) 」を参照してください。
 
@@ -583,7 +583,7 @@ Bot フレームワークリファレンス:
 }
 ```
 
-### <a name="for-more-information"></a>関連情報
+### <a name="for-more-information"></a>詳細情報
 
 Bot フレームワークリファレンス:
 
@@ -594,7 +594,7 @@ Bot フレームワークリファレンス:
 
 カードコレクションは Teams でサポートされています。
 
-カードコレクションは Bot フレームワークによって提供`builder.AttachmentLayout.carousel`さ`builder.AttachmentLayout.list`れます。 これらのコレクションには、アダプティブ、英雄、またはサムネイルカードを含めることができます。
+カードコレクションは Bot フレームワークによって提供 `builder.AttachmentLayout.carousel` されます。 `builder.AttachmentLayout.list` これらのコレクションには、アダプティブ、英雄、またはサムネイルカードを含めることができます。
 
 ## <a name="carousel-collection"></a>カルーセルコレクション
 

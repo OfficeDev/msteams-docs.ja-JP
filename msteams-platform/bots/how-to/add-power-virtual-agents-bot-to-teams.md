@@ -4,14 +4,14 @@ author: laujan
 description: Teams プラットフォームでの Power Virtual Agent chatbot の統合
 ms.topic: how-to
 ms.author: lajanuar
-ms.openlocfilehash: 4f32a3c13d9288c3e733e92369645bcf9e32d586
-ms.sourcegitcommit: 28af65730884b788ff77a4ec4032219380df8b70
+ms.openlocfilehash: 57b06fd0d3e1fae0cbfb927335fb1b5941396bb0
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "44801333"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434525"
 ---
-# <a name="integrate-your-power-virtual-agents-chatbot-with-microsoft-teams"></a>Power Virtual Agents chatbot を Microsoft Teams と統合する
+# <a name="integrate-a-power-virtual-agents-chatbot-with-microsoft-teams"></a>Power Virtual Agents chatbot を Microsoft Teams と統合する
 
 [パワー仮想エージェント](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)は、コードを使用しないグラフィカルインターフェイスソリューションであり、チームのすべてのメンバーが、Teams プラットフォームと簡単に統合できる多彩な会話を作成することを可能にします。 Power Virtual Agent で作成されたすべてのコンテンツは、teams とパワー仮想エージェントの場合、Teams ネイティブチャットキャンバスでユーザーと連携して表示されます。 IT 管理者、ビジネスアナリスト、ドメインスペシャリスト、および熟練したアプリ開発者は、開発環境をセットアップしたり、web サービスを作成したり、Bot フレームワークに直接登録したりしなくても、チームのためのインテリジェントな仮想エージェントを設計、開発、および発行することができます。  「 [Microsoft Power Virtual エージェントを使用して Teams の chatbot を作成する](../what-are-bots.md#create-a-chatbot-for-teams-with-microsoft-power-virtual-agents) *」を参照してください*。
 

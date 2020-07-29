@@ -2,23 +2,33 @@
 title: 新機能
 description: Microsoft Teams のすべての新しい開発者向け機能について説明します。
 keywords: teams 新しい最新情報
-ms.openlocfilehash: 527f8fa9a029936f62203136a0891f3815db7ee2
-ms.sourcegitcommit: d0ca6a4856ffd03d197d47338e633126723fa78a
+ms.openlocfilehash: 28e83375ecbfec7f2adac14a4b5419a6cc40c61e
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "45137641"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434532"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
+
+>[!TIP]
+> 「 [**Teams アプリテンプレートカタログ**](samples/app-templates.md)」の「運用可能なテンプレート」を参照してください。 カタログはアルファベット順で、最新の追加内容にはスター **&#9734;** でタグが付けられます。
 
 ## <a name="change-log"></a>変更ログ
 
 変更ログには、Microsoft Teams プラットフォームおよびこのドキュメントセットに対する変更が一覧表示されます。 場合によっては、Teams 開発者にとって重要な新しい機能に注意を向けるためにエントリを使用することがあります。
 
-| **Date** | **メモ** | **変更されたトピック** |
+| **Date** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+| 07/22/2020 |モバイルデバイスの機能の更新。|[Microsoft Teams タブのデバイスへのアクセス許可を要求する](~/tabs/how-to/native-device-permissions.md) |
+|07/15/2020|Teams 用の仮想アシスタントを作成する|[Microsoft Teams の仮想アシスタント](samples/virtual-assistant.md)|
+|07/14/2020|ネイティブの読み込みインジケーターのドキュメントを提示する|[ネイティブローディングインジケーターの表示](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
 | 07/01/2020 |Visual Studio Code Toolkit を使用して Teams アプリの作成を開始します。|[Microsoft Teams Toolkit と Visual Studio コードを使用してアプリをビルドする](toolkit/visual-studio-code-overview.md) |
+|07/01/2020|Teams web およびデスクトップクライアント用のタブ (GA) のシングルサインオン|[シングルサインオン (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
+|06/05/2020| バージョン1.7 に更新されたマニフェストスキーマ| [リファレンス: Microsoft Teams のマニフェストスキーマ](resources/schema/manifest-schema.md)|
 | 05/20/2020 | Microsoft Graph Api を使用したリソース固有の同意アクセス許可は、開発者向けプレビューで表示されます。 |[リソース固有の同意 (RSC)-開発者プレビュー](graph-api/rsc/resource-specific-consent.md) |
+|5/18/2020|Power Virtual Agent を Teams と統合する|[Power Virtual Agents chatbot を Microsoft Teams と統合する](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
+|04/01/2020|Teams の交代コネクタを使用して、WFM システムを統合する|[Microsoft Teams が WFM コネクタをシフトする](samples/shifts-wfm-connectors.md)
 | 03/24/2020 | 会話の単一メンバーを取得するためのサポートが追加され、ページングされたメンバーを取得するためのサポートが追加されました。 | [Teams のコンテキストをボット用に取得する](~/bots/how-to/get-teams-context.md)
 | 12/26/2019 | `replyToId`Bot に送信されるペイロードのパラメーターは暗号化されなくなりました。この値を使用して、これらのメッセージに deeplinks を構築できます。 メッセージペイロードには、パラメーターに暗号化された値が含まれています。 `legacy.replyToId`.  |
 | 11/5/2019 | Web コンテンツページで Teams JavaScript SDK を使用したシングルサインオンは、開発者向けプレビューで表示されます。 | [シングル サインオン](tabs/how-to/authentication/auth-aad-sso.md) |

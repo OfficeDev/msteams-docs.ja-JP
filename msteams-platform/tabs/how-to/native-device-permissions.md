@@ -2,29 +2,29 @@
 title: Microsoft Teams タブのデバイスへのアクセス許可を要求する
 description: 通常、ユーザーの同意を必要とするネイティブ機能へのアクセスを要求するためにアプリのマニフェストを更新する方法
 keywords: teams タブの開発
-ms.openlocfilehash: e9dc6c6f177e3a87e2846bcb836cc38601c9a50e
-ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
+ms.openlocfilehash: e69c7540730307e62035c48ac64cd977419ea5f2
+ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "43034037"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45434557"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-tab"></a>Microsoft Teams タブのデバイスへのアクセス許可を要求する
 
 次のような、ネイティブデバイスへのアクセスを必要とする機能を使用して、タブを充実させることができます。
 
-* デジタル
-* マイク
-* 場所
-* 通知
-
-![デバイスアクセス許可の設定画面](~/assets/images/tabs/device-permissions.png)
+> [!div class="checklist"]
+>
+> * デジタル
+> * マイク
+> * 場所
+> * 通知
 
 > [!IMPORTANT]
 >
-> ネイティブデバイス機能は、現在、モバイルクライアントのタブではサポートされていません。
->
-> 現時点では、すべてのデスクトップクライアントで、地理位置情報 API は完全にはサポートされていません。
+> * 現時点では、Teams モバイルクライアント `camera` `location` はネイティブデバイス機能のみをサポートしており、タブを含むすべてのアプリ構成要素で利用できます。 </br>
+> * `camera`画像キャプチャのサポートは、 [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-)によって有効になります。
+> * 現時点では、すべてのデスクトップクライアントで、[**地理位置情報 API**](../../resources/schema/manifest-schema.md#devicepermissions)は完全にはサポートされていません。
 
 ## <a name="device-permissions"></a>デバイス アクセス許可
 
@@ -36,9 +36,31 @@ ms.locfileid: "43034037"
 
 これらの機能へのアクセスは、ほとんどのモダン web ブラウザーで標準になっていますが、アプリマニフェストを更新することによって、使用する機能を Teams に知らせる必要があります。 これにより、アプリが Teams デスクトップクライアント上で実行されているときに、ブラウザーと同じ方法でアクセス許可を要求することができます。
 
+## <a name="manage-permissions"></a>権限の管理
+
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
+1. Teams を開きます。
+1. ウィンドウの右上隅で、プロファイルアイコンを選択します。
+1. **Settings**  ->  ドロップダウンメニューから [設定]**アクセス許可**を選択します。
+1. 目的の設定を選択します。
+
+![デバイスアクセス許可のデスクトップ設定画面](../../assets/images/tabs/device-permissions.png)
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+1. Teams を開きます。
+1. 画面の左上隅で、[&#9776;] メニューアイコンを選択します。
+1. [**設定**デバイス] を選択し  ->  **Devices**ます。
+1. 目的の設定を選択します。
+
+![デバイスのアクセス許可のモバイル設定画面](../../assets/images/tabs/mobile-device-permissions-screen.png)
+
+---
+
 ## <a name="properties"></a>プロパティ
 
-アプリケーションで使用する`manifest.json` 5 つ`devicePermissions`のプロパティを追加して指定することにより、アプリを更新します。
+`manifest.json` `devicePermissions` アプリケーションで使用する5つのプロパティを追加して指定することにより、アプリを更新します。
 
 ``` json
 "devicePermissions": [
@@ -49,6 +71,9 @@ ms.locfileid: "43034037"
     "openExternal"
 ],
 ```
+> [!Note]
+>
+> メディアは、モバイルのカメラのアクセス許可にも使用されます。
 
 各プロパティによって、ユーザーに同意を求めるように求めるメッセージを表示することができます。
 
@@ -62,7 +87,7 @@ ms.locfileid: "43034037"
 
 ## <a name="checking-permissions-from-your-tab"></a>タブから権限を確認する
 
-アプリマニフェストに追加`devicePermissions`した後は、メッセージを表示せずに、HTML5 の "PERMISSIONS" API を使用してアクセス許可を確認できます。
+アプリマニフェストに追加した後 `devicePermissions` は、メッセージを表示せずに、HTML5 の "permissions" API を使用してアクセス許可を確認できます。
 
 ``` Javascript
 // Different query options:
@@ -84,16 +109,22 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 ## <a name="prompting-the-user"></a>ユーザーに確認を求める
 
-デバイスのアクセス許可にアクセスするための同意を得るためのプロンプトを表示するには、適切な HTML5 API を利用する必要があります。 たとえば、ユーザーにカメラへのアクセスを要求するために、を呼び出す必要があります。`getUserMedia`
+デバイスのアクセス許可にアクセスするための同意を得るためのプロンプトを表示するには、適切な HTML5 API または Teams API を利用する必要があります。 たとえば、ユーザーにカメラへのアクセスを要求するために、を呼び出す必要があります。`getCurrentPosition`
+
+```Javascript
+navigator.geolocation.getCurrentPosition(function (position) { /*... */ });
+```
+
+デスクトップまたは web でカメラを使用するために、Teams は、getUserMedia を呼び出すときにアクセス許可を求めるメッセージを表示します。
 
 ```Javascript
 navigator.mediaDevices.getUserMedia({ audio: true, video: true });
 ```
 
-呼び出し時に地理位置情報にアクセス許可プロンプトが表示される`getCurrentPosition`
+モバイルで画像をキャプチャするために、Teams mobile は captureImage () を呼び出したときにアクセス許可を要求します。
 
-```Javascript
-navigator.geolocation.getCurrentPosition(function (position) { /*... */ });
+```Typescript
+function captureImage(callback: (error: SdkError, files: File[]) => void)
 ```
 
 を呼び出したときに通知が表示されます。`requestPermission`
