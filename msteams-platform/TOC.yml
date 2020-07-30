@@ -330,12 +330,18 @@
           href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Teams Graph REST API
   items:
-    - name: リソース固有の同意 (RSC)
-      href: graph-api/rsc/resource-specific-consent.md
-    - name: リソース固有の同意のアクセス許可をテストする
-      href: graph-api/rsc/test-resource-specific-consent.md
-    - name: RSC JSON のテスト ファイル
-      href: graph-api/rsc/test-rsc-json-file.md
+    - name: リソース固有の同意
+      items:
+        - name: リソース固有の同意 (RSC) を有効にする
+          href: graph-api/rsc/resource-specific-consent.md
+        - name: リソース固有の同意のアクセス許可をテストする
+          href: graph-api/rsc/test-resource-specific-consent.md
+        - name: RSC JSON のテスト ファイル
+          href: graph-api/rsc/test-rsc-json-file.md
+    - name: プロアクティブなボットとプロアクティブ メッセージ
+      items:
+        - name: プロアクティブなボットをインストールしてプロアクティブ メッセージを有効にする
+          href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
 - name: リソース
   items:
     - name: ボット - v3 SDK
