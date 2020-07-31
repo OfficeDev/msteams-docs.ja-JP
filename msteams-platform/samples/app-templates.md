@@ -3,12 +3,12 @@ title: Microsoft Teams アプリテンプレート
 description: Microsoft Teams プラットフォームのアプリテンプレートのリンクと説明
 ms.topic: reference
 keywords: Microsoft Teams テンプレートサンプルのデモ
-ms.openlocfilehash: c244a95c81a6bfd2475648d6578d92f40af407e1
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.openlocfilehash: 5ecad6586d4bbe114d732869981d25b3305fa940
+ms.sourcegitcommit: 3e94edba28e9e1252b6a6ba35d4df32710dfc5d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434539"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "46531286"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams のアプリテンプレート
 
@@ -110,6 +110,23 @@ CrowdSourcer は、チームが照会した情報をグループメンバーか�
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-stickers-app)
 
 ![ステッカーアプリ](../assets/images/stickers.png)
+
+## <a name="e-prescriptions-9734"></a>電子処方箋 &#9734; 
+
+電子処方箋は、電子処方箋を患者に発行するプロセスを自動化することによって、telemedicine と仮想の治療を強化する[パワーアプリ](/powerapps/maker/canvas-apps/embed-teams-app)ベースのアプリです。 医療担当者は、予定をすばやくレビューし、電子処方箋を生成し、電子処方箋に添付された電子メールを Teams プラットフォーム内で直接患者に送信することができます。
+
+[GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-eprescription) 
+
+:::row:::
+:::column span="2":::
+    ![電子処方箋アプリのスクリーンショット。 医療機関が患者の処方箋を注文するための [生成] ボタンを選択する方法について説明します。](../assets/images/e-prescriptions-app-template.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    ![電子処方箋アプリのスクリーンショット。 管理者がアプリを使用する医療機関を管理する方法について説明します。](../assets/images/e-prescriptions-app-template-admin.png)
+:::column-end:::
+:::row-end:::
 
 ## <a name="expert-finder"></a>エキスパート検索
 

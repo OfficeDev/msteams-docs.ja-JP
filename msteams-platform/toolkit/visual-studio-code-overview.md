@@ -3,12 +3,12 @@ title: Microsoft Teams Toolkit と Visual Studio コードを使用してアプ�
 description: Microsoft Teams ツールキットを使用して、Visual Studio Code 内で魅力的なカスタムアプリを直接作成する
 keywords: teams visual studio code toolkit
 ms.date: 06/30/2020
-ms.openlocfilehash: 17f21d1656b32074318030b9df9e643200f58f80
-ms.sourcegitcommit: ecf7ca8e77e77fe3f4cad1b13e3d31a825155555
-ms.translationtype: Auto
+ms.openlocfilehash: 96293a2166e56495a8f775cb0142f721605cfdae
+ms.sourcegitcommit: 3e94edba28e9e1252b6a6ba35d4df32710dfc5d4
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "45054253"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "46531260"
 ---
 # <a name="build-apps-with-the-microsoft-teams-toolkit-and-visual-studio-code"></a>Microsoft Teams Toolkit と Visual Studio コードを使用してアプリをビルドする
 
@@ -87,7 +87,7 @@ Https を使用して localhost でタブベースのアプリをデバッグす
 
 * アプリの作成と実行
   * プロジェクト Readme の「**ビルドと実行**」セクションの instuctions に従って、そのサービスが提供されるように https://localhost:3000/tab します。一般的には、次のようにして実行します。 `npm install``npm start`
-  * https://localhost:3000/tabGoogle Chrome から移動します
+  * https://localhost:3000/tabGoogle Chrome または Edge Chromium から移動します。
 
 * SSL 証明書を取得します。
   * [Chrome 開発者ツール] ウィンドウ () を開き `ctrl + shift + i`  /  `cmd + option + i` ます。
