@@ -1,21 +1,24 @@
 ---
-title: Link unfurling
+title: リンク展開
 author: clearab
 description: Microsoft Teams アプリでメッセージング拡張機能を使用してリンク unfurling を実行する方法について説明します。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ccc23f06fbe759dc4c38dfc63dfa356d38352c27
-ms.sourcegitcommit: 67c021fa20eb5ea70c059fcc35be1c19c6c97c95
+ms.openlocfilehash: 32d19fcd44f2475047539350706d2745aeec3691
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "42279775"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587805"
 ---
-# <a name="link-unfurling"></a>Link unfurling
+# <a name="link-unfurling"></a>リンク展開
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Link unfurling を使用すると、アプリは、 `invoke`特定のドメインの url が [メッセージの作成] 領域に貼り付けられたときに、アクティビティを受信するように登録できます。 に`invoke`は、[メッセージの作成] 領域に貼り付けられた完全な url が格納されています。また、ユーザーが使用を中止して、追加の情報や*アクションを提供*することができます。 これは[検索コマンド](~/messaging-extensions/how-to/search-commands/define-search-command.md)とよく似ており、URL が検索用語として機能します。
+> [!NOTE]
+> 現時点では、リンク unfurling はモバイルクライアントではサポートされていません。
+
+リンク展開を使用すると、特定のドメインの URL がメッセージの作成領域に貼り付けられたときに、アプリが `invoke` アクティビティを受信するように登録することができます。 に `invoke` は、[メッセージの作成] 領域に貼り付けられた完全な url が格納されています*unfurl*。また、ユーザーが使用を中止して、追加の情報やアクションを提供することができます。 これは[検索コマンド](~/messaging-extensions/how-to/search-commands/define-search-command.md)とよく似ており、URL が検索用語として機能します。
 
 Azure DevOps messaging extension は、リンク unfurling を使用して、作業項目を指す作成メッセージ領域に貼り付けられた Url を検索します。 次のスクリーンショットでは、ユーザーが Azure DevOps の作業項目の URL を貼り付けて、メッセージング拡張機能がカードに解決されたことを示しています。
 
@@ -23,7 +26,7 @@ Azure DevOps messaging extension は、リンク unfurling を使用して、作
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>アプリマニフェストにリンク unfurling を追加する
 
-これを行うには、アプリマニフェスト`messageHandlers` JSON の`composeExtensions`セクションに新しい配列を追加します。 そのためには、アプリ Studio のヘルプを使用するか、手動で行うことができます。 ドメインリストには、たとえば`*.example.com`、ワイルドカードを含めることができます。 これは、1つのドメインのセグメントに一致します。に一致`a.b.example.com`させる必要がある`*.*.example.com`場合は、を使用します。
+これを行うには、 `messageHandlers` `composeExtensions` アプリマニフェスト JSON のセクションに新しい配列を追加します。 そのためには、アプリ Studio のヘルプを使用するか、手動で行うことができます。 ドメインリストには、たとえば、ワイルドカードを含めることができ `*.example.com` ます。 これは、1つのドメインのセグメントに一致します。に一致させる必要がある場合は `a.b.example.com` 、を使用 `*.*.example.com` します。
 
 ### <a name="using-app-studio"></a>App Studio を使用する場合
 
@@ -34,7 +37,7 @@ Azure DevOps messaging extension は、リンク unfurling を使用して、作
 
 ### <a name="manually"></a>手動
 
-この方法でメッセージング拡張機能がリンクを操作できるようにするには、次`messageHandlers`の例に示すように、最初に、配列をアプリのマニフェストに追加する必要があります。 この例は完全なマニフェストではありません。マニフェストの完全な例については、「[マニフェストリファレンス](~/resources/schema/manifest-schema.md)」を参照してください。
+この方法でメッセージング拡張機能がリンクを操作できるようにするには、 `messageHandlers` 次の例に示すように、最初に、配列をアプリのマニフェストに追加する必要があります。 この例は完全なマニフェストではありません。マニフェストの完全な例については、「[マニフェストリファレンス](~/resources/schema/manifest-schema.md)」を参照してください。
 
 ```json
 ...
@@ -56,7 +59,7 @@ Azure DevOps messaging extension は、リンク unfurling を使用して、作
 ...
 ```
 
-## <a name="handle-the-composeextensionquerylink-invoke"></a>呼び出しを`composeExtension/queryLink`処理する
+## <a name="handle-the-composeextensionquerylink-invoke"></a>呼び出しを処理する `composeExtension/queryLink`
 
 アプリマニフェストをリッスンするためにドメインを追加したら、呼び出し要求を処理するように web サービスコードを更新する必要があります。 受信した URL を使用してサービスを検索し、カード応答を作成します。 複数のカードで応答する場合は、最初のカードのみが使用されます。
 
@@ -89,7 +92,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQue
 }
 ```
 
-# <a name="javascriptnodejs"></a>[JavaScript/node.js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
@@ -114,7 +117,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-これは、 `invoke`ボットに送信される例です。
+これは、 `invoke` ボットに送信される例です。
 
 ```json
 {

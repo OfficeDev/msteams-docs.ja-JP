@@ -3,12 +3,12 @@ title: カードでのテキストの書式設定
 description: Microsoft Teams でのカードテキストの書式設定について説明します。
 keywords: teams の bot カード形式
 ms.date: 03/29/2018
-ms.openlocfilehash: e857a1250593c135aa23ad38a571a5561bb91431
-ms.sourcegitcommit: b9e8839858ea8e9e33fe5e20e14bbe86c75fd510
+ms.openlocfilehash: 944e6a69c68d284b3a7309063587bd4b75319bc7
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "44210688"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587812"
 ---
 # <a name="format-cards-in-teams"></a>Teams の書式設定カード
 
@@ -116,7 +116,8 @@ Android では、アダプティブカードの Markdown 書式は次のよう�
 ボットおよびメッセージング拡張機能には、 [TextBlock](https://adaptivecards.io/explorer/TextBlock.html)および[FactSet](https://adaptivecards.io/explorer/FactSet.html)要素のカードコンテンツ内のメンションを含めることができます。
 
 > [!NOTE]
->[Media 要素](https://adaptivecards.io/explorer/Media.html)は、現在 Teams プラットフォームのアダプティブカード v2.0 ではサポートされていません。
+> * [Media 要素](https://adaptivecards.io/explorer/Media.html)は、現在 Teams プラットフォームのアダプティブカード v2.0 ではサポートされていません。
+> * チャネル & チームメンションは bot メッセージではサポートされていません。
 
 ### <a name="constructing-mentions"></a>メンションの構築
 
@@ -164,7 +165,7 @@ Android では、アダプティブカードの Markdown 書式は次のよう�
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| ヘッダー (レベル 1 &ndash; 3) | **Text** | `### Text`|
+| ヘッダー (レベル 1 &ndash; 3) | **テキスト** | `### Text`|
 | 打ち消し | ~~text~~ | `~~text~~` |
 | 順序なしリスト | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | 順序付きリスト | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -253,7 +254,7 @@ Android では、Markdown のコネクタカードの書式設定は次のよう
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| ヘッダー (レベル 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
+| ヘッダー (レベル 1 &ndash; 3) | **テキスト** | `<h3>Text</h3>` |
 | 打ち消し | ~~text~~ | `<strike>text</strike>` |
 | 順序なしリスト | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 順序付きリスト | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -341,7 +342,7 @@ HTML タグは、ヒーローやサムネイルカードなどの単純なカー
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| ヘッダー (レベル 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
+| ヘッダー (レベル 1 &ndash; 3) | **テキスト** | `<h3>Text</h3>` |
 | 打ち消し | ~~text~~ | `<strike>text</strike>` |
 | 順序なしリスト | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 順序付きリスト | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |

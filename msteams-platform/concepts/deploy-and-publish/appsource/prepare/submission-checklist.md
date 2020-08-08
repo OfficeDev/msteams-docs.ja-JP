@@ -2,38 +2,63 @@
 title: 提出のチェックリスト
 description: Microsoft Teams アプリを AppSource に公開する前に使用するチェックリスト
 keywords: teams 発行ストア office 発行チェックリスト提出準備
-ms.openlocfilehash: 3379fe670c9835c1f2223067592d9574fff83a69
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 86217cef542cc3f3a09e0dc64e429a675011a0c1
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "44801301"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587753"
 ---
 # <a name="prepare-for-appsource-submission"></a>AppSource 提出の準備  
 
 AppSource にリストされるようにするには、アプリが承認プロセスを経る必要があります。 これは Microsoft Teams グループによって提供される無料のサービスで、アプリが説明どおりに動作することを確認し、適切なメタデータをすべて含み、エンドユーザーにとって有益なコンテンツを提供します。 迅速な承認を得るために、アプリが以下の要件とガイドラインを満たしていることを確認してください。
 
-* **Distribution メソッド:** アプリがストア用であることを確認します。 AppSource に発行せずにアプリを配布するため[のその他のオプション](../../overview.md)があります。
-* **アプリの詳細ページ:** アプリが[アプリ詳細ページのチェックリスト](detail-page-checklist.md)を満たしている
-* **ヒントとよく発生するケース:** これらの[ヒントとよくある失敗のケース](frequently-failed-cases.md)に対して、アプリの提出を承認時間に向上させるために特に注意を払ってください。
-* **アプリマニフェスト:** アプリのマニフェストをアプリの[マニフェスト](app-manifest-checklist.md)のチェックリストとマニフェストチェックに対して確認する
-* **テストとデバッグ:**[アプリのテストとデバッグ](../../../build-and-test/debug.md)が完了しました。
-* **検証ポリシー:** Teams のタブと bot に関する現在の[Appsource の検証ポリシー](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams)をすべて渡す必要があります。 これらのポリシーは変更される可能性があることに注意してください。
-* **メモのテスト:**[検証のテストメモを](#test-notes-for-validation)含める
+* **Distribution メソッド:** アプリがストアプラットフォームで公開されているかどうかを確認します。 AppSource に発行せずにアプリを配布するため[のその他のオプション](../../overview.md)があります。
+* **検証ポリシー:** アプリは、現在のすべての[Appsource 検証ポリシー](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams)に合格する必要があります。 提出する前に[検証ツール](#teams-app-validation-tool)に対してアプリをチェックしてください。 これらのポリシーは変更される可能性があることに注意してください。
+* **アプリの詳細ページ:** アプリは、[アプリの詳細ページチェックリスト](detail-page-checklist.md)と連携する必要があります。
+* **ヒントとよく発生するケース:** リストされている[ヒントおよび頻繁に失敗するケース](frequently-failed-cases.md)に、アプリの提出と承認の時間を向上させるために、さらに注意を払ってください。
+* **アプリマニフェスト:** アプリのマニフェストをアプリの[マニフェストチェックリスト](app-manifest-checklist.md)に照らして確認します。
+* **テストとデバッグ:** アプリを完全に[テストおよびデバッグ](../../../build-and-test/debug.md)していることを確認してください。
+* **メモのテスト:**[検証のためのテストメモを](#test-notes-for-validation)含める
 * **プライバシーポリシー:**[プライバシーポリシー、使用条件、サポート url の](#privacy-policy-terms-of-use-and-support-urls)ガイドラインに従っていることを確認します。
 
-上記のすべての要件を完了したら、[パートナーセンター](/office/dev/store/use-partner-center-to-submit-to-appsource)を使用して、アプリソースにパッケージを送信できます。
+上記のすべての要件を完了したら、[パートナーセンター](/office/dev/store/use-partner-center-to-submit-to-appsource)を使用してパッケージを appsource に提出します。
+
+## <a name="teams-app-validation-tool"></a>Teams アプリ検証ツール
+
+アプリ検証ツールは、[アプリ検証](#teams-app-validator)ツールと[事前チェックリスト](#preliminary-checklist)で構成されています。 このツールは、 [Appsource](/office/dev/store/submit-to-appsource-via-partner-center)で使用されているものと同じテストケースをレプリケートして、アプリの送信を評価します。 したがって、承認のためにソリューションを AppSource に提出する前に、すべてのテストケースに合格することが重要です。このツールは Teams プラットフォーム内のいくつかの領域にあります。
+
+> [!div class="checklist"]
+>
+> * [**アプリの検証のホームページ**](https://dev.teams.microsoft.com/appvalidation.html)
+> * [**Teams Visual Studio Code toolkit**](/toolkit/visual-studio-code-overview.md)
+> * [**App Studio**](/concepts/build-and-test/app-studio-overview.md)
+
+### <a name="teams-app-validator"></a>Teams アプリの検証
+
+[**検証**] ページでは、appsource に提出する前にアプリパッケージを確認できます。 アプリパッケージをアップロードすると、検証ツールは、すべてのマニフェスト関連のテストケースに対してアプリをチェックします。 失敗した各テストの説明には、エラーを解決するためのドキュメントリンクが記載されています。
+
+![検証ツール](../../../../assets/images/validation-tool/validator.png)
+
+### <a name="preliminary-checklist"></a>事前チェックリスト
+
+自動化が困難なテストシナリオでは、最も一般的に失敗しているテストケースの7つの事前チェックリストがあります。
+
+![事前チェックリスト](../../../../assets/images/validation-tool/preliminary-checklist.png)
 
 ## <a name="privacy-policy-terms-of-use-and-support-urls"></a>プライバシーポリシー、使用条件、およびサポート Url
 
 ### <a name="privacy-policy"></a>プライバシーポリシー
 
 プライバシーポリシーのガイドライン:
-* プライバシーポリシーは、アプリとアドインのどちらか一方または両方に固有のものか、すべてのサービスの全体的なポリシーであるかを指定できます。 
-* 汎用プライバシーポリシーを使用する場合は、Teams アプリと web サイトをカバーするために "サービス/アプリケーション/プラットフォーム" を参照する必要があります。 
-* ユーザーデータストレージ、ユーザーデータの保存、削除、およびセキュリティ制御に関する情報を処理する方法を含める必要があります。
-* 連絡先情報を含める必要があります。
-* 壊れたリンク、ベータ版 Url、またはステージング Url を含めることはできません。 
+
+> [!div class="checklist"]
+>
+> * プライバシーポリシーは、アプリや、すべてのサービスの全体的なポリシーに固有のものにすることができます。
+> * 汎用プライバシーポリシーを使用する場合は、「サービス」、「アプリケーション」、および「プラットフォーム」を参照して、自分の web サイトだけでなく、Teams アプリを含める必要があります。
+> * ユーザーデータストレージ、ユーザーデータの保存、削除、およびセキュリティ制御の処理方法を指定する必要があります。
+> * 連絡先情報を含める必要があります。
+> * 壊れたリンク、ベータ版 Url、またはステージング Url を含めることはできません。
 
 ### <a name="terms-of-use"></a>利用規約
 
@@ -64,6 +89,3 @@ AppSource にリストされるようにするには、アプリが承認プロ�
 * **Teams のアプリ機能に関するメモ**: teams 内でアプリが提供するすべての機能の詳細を確認し、各機能をテストするための手順を実行します。
 
 * **アプリの機能を示すビデオ (オプション)**: アプリの機能を完全に理解するために、製品のビデオ録画を提供することができます。
-
-
-

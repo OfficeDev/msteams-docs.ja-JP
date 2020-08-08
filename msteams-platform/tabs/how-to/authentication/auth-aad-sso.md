@@ -2,17 +2,14 @@
 title: シングル サインオン
 description: シングルサインオン (SSO) について説明します。
 keywords: teams 認証 SSO AAD シングルサインオン api
-ms.openlocfilehash: 849e2c357859a1e8980aaa4662a55319cd7b2493
-ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
+ms.openlocfilehash: cf3c33cf9721243936890140d5bcce641c443e2e
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "45021604"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587735"
 ---
 # <a name="single-sign-on-sso"></a>シングルサインオン (SSO)
-
-> [!NOTE]
-> * シングルサインオン (SSO) API は、一般に web とデスクトップで使用できます。 モバイルは近日中に利用可能になります。 それまでは、モバイルで[従来の認証 API](auth-flow-tab.md)を適切にフォールバックすることをお勧めします。
 
 ユーザーは、職場、学校、または Microsoft アカウント (Office 365、Outlook など) 経由で Microsoft Teams にサインインします。 この機能を利用すると、シングルサインオンで、デスクトップまたはモバイルクライアントの Microsoft Teams タブ (またはタスクモジュール) を承認できるようになります。 そのため、ユーザーがアプリを使用することに同意場合は、別のデバイスで再び同意する必要はありません。自動的にサインインされます。 また、アクセストークンをプリフェッチして、パフォーマンスと負荷の時間を短縮します。
 
@@ -87,6 +84,21 @@ SSO API は、web コンテンツを埋め込む[タスクモジュール](../..
     * offline_access
     * OpenId
     * profile
+
+13. [**認証**に移動します。
+
+    アプリに管理者の同意が与えられていない場合、ユーザーはアプリを初めて使用するときに同意を得る必要があります。
+
+    リダイレクト URI を設定します。
+    * [**プラットフォームの追加**] を選択します。
+    * [ **Web**] を選択します。
+    * アプリの**リダイレクト URI**を入力します。 これは、暗黙的な付与フローが成功した場合にユーザーをリダイレクトするページになります。
+
+    次のチェックボックスをオンにして、暗黙的な付与を有効にします。  
+    ✔ ID トークン  
+    ✔アクセストークン  
+    
+    
 
 > [!NOTE]
 >

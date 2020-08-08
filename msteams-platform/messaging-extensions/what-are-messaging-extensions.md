@@ -4,12 +4,12 @@ author: clearab
 description: Microsoft Teams プラットフォームでのメッセージング拡張機能の概要
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 2a9fcdbcdda6bb85b6f5edc21253d05327ca5157
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 3ea9649a22ecc134e983037d1ef109be918a26b3
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43914603"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587798"
 ---
 # <a name="what-are-messaging-extensions"></a>メッセージング拡張機能について
 
@@ -58,7 +58,7 @@ Microsoft Teams アプリのアプリマニフェストには、最大10個の�
 
 ### <a name="link-unfurling"></a>リンク展開
 
-また、[メッセージの作成] 領域に URL が貼り付けられたときに、サービスを呼び出すこともできます。 この機能 ( **link unfurling**と呼ばれる) を使用すると、特定のドメインを含む url が [メッセージの作成] 領域に貼り付けられたときに呼び出しを受信するようにサブスクライブできます。 Web サービスは、URL を詳細なカードに "アン url" して、標準の web サイトプレビューカードより多くの情報を提供することができます。 ボタンを追加して、ユーザーが Microsoft Teams クライアントを離れることなく、すぐにアクションを実行できるようにすることもできます。
+[メッセージの作成] 領域に URL が貼り付けられたときに、サービスを呼び出すこともできます。 この機能 ( **link unfurling**と呼ばれる) を使用すると、特定のドメインを含む url が [メッセージの作成] 領域に貼り付けられたときに呼び出しを受信するようにサブスクライブできます。 Web サービスは、URL を詳細なカードに "アン url" して、標準の web サイトプレビューカードより多くの情報を提供することができます。 ボタンを追加して、ユーザーが Microsoft Teams クライアントを離れることなく、すぐにアクションを実行できるようにすることもできます。
 
 ## <a name="get-started"></a>はじめに
 

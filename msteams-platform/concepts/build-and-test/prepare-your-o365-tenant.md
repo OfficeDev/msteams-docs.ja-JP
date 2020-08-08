@@ -2,12 +2,12 @@
 title: Office 365 テナントを準備する
 description: Office 365 で Teams の使用を開始する方法
 keywords: Office 365 テナントチームのアップロードを構成する
-ms.openlocfilehash: e07ffe7f5325be1293a49934669f36c81613278b
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 447968c9b56010e515fc1d1346eac4d8485c7f80
+ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43914568"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46587780"
 ---
 # <a name="prepare-your-office-365-tenant"></a>Office 365 テナントを準備する
 
@@ -31,13 +31,25 @@ Microsoft Teams が組織に対して有効になっていない場合は、最�
 
 ## <a name="enable-custom-teams-apps-and-turn-on-custom-app-uploading"></a>カスタム Teams アプリを有効にし、カスタムアプリのアップロードをオンにする
 
+開発者テナントのカスタムアプリのサイドロードを次のようにオンにします。
+
+1. 管理者の資格情報を使用して[Microsoft 365 管理センター](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/)にログインします。 
+
+2. [**すべてのチームを表示**] を選択し  -->  **Teams**ます。 
+
+![アプリのオーバーフローメニューのイメージ](~/assets/images/prepare-test-tenant/admin-center.png)
+
+3. **Teams apps**  -->  **セットアップポリシー**  -->  **グローバル (組織全体の既定)** に移動する  
+
+![アプリのオーバーフローメニューのイメージ](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
+
+4. [**カスタムアプリのアップロード**を**オン**の位置に切り替える。
+
+するだけです。 テストテナントは、カスタムアプリのサイドロードを許可するようになります。
+
 > [!Note] 
-> Office 365 developer platform を使用してアプリをビルドしている場合は、アプリのビルド、アップロード、およびテストができるように、これらの設定を構成しておく必要があります。
+> サイドローディングが有効になるまで最大24時間かかる場合があります。 中間時に、**の \<your tenant> upload**を使用してアプリをテストできます。
 
-カスタムアプリとカスタムアプリのアップロードを有効にするには、次の3つの設定が関係します。
+![アプリのオーバーフローメニューのイメージ](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
 
-* **組織全体のカスタムアプリ設定** => **で**カスタム => **アプリを使用することができ**ます—この設定では、組織のカスタムアプリを有効または無効にできます。 これをオンにする必要があります。 
-* **チームカスタムアプリ設定** => を使用すると、**メンバーがカスタムアプリ** => **のオン/オフ**をアップロードできるようになります。この設定は、Microsoft Teams 内の個々のチームに適用されます。 特定のチームに対してアプリをインストールする場合は、そのチームに対してこれをオンにする必要があります。
-* **User custom app policy** => **user はカスタムアプリ** => **をオン/オフに**することができます。この設定により、個々のユーザーのアクセス許可が制御されます。 これは、カスタムアプリのアップロードが許可されている個人に対して有効にする必要があります。
-
-これらの設定がどのように影響するかの詳細については、「 [Microsoft teams でカスタムアプリポリシーと設定を管理](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings)する」および「 [microsoft teams でアプリのセットアップポリシーを管理](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies)する *」を参照してください*。
+これらの設定がどのように影響するかの詳細については、「 [Microsoft teams のカスタムアプリポリシーと設定を管理](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings)する」および「 [microsoft teams でアプリのセットアップポリシーを管理](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies)する *」を参照してください*。
