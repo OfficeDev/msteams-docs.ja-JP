@@ -3,12 +3,12 @@ title: コネクタと Webhook にメッセージを送信する
 description: Microsoft Teams で Office 365 コネクタを使用する方法について説明します。
 localization_priority: Priority
 keywords: Teams o365 コネクタ
-ms.openlocfilehash: f3b89161a908af8709334c300a8ee6218817c21f
-ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
+ms.openlocfilehash: 16dbb99add82c26930baf22bfc2c5153fd47b2f1
+ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "44704496"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "46651650"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>コネクタと Webhook にメッセージを送信する
 
@@ -220,6 +220,55 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
   "needsIdentity": "true"
 }
 ```
+
+## <a name="send-adaptive-cards-using-an-incoming-webhook"></a>受信 Webhook を使用してアダプティブ カードを送信する
+
+> [!NOTE]
+>
+> ✔ `Action.Submit` 以外のすべてのネイティブのアダプティブ カード スキーマ要素は、完全にサポートされます。
+>
+> ✔ サポートされているアクションは [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html)、[**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html)、および [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html) です。
+
+### <a name="the-flow-for-sending-adaptive-cards-via-an-incoming-webhook-is-as-follows"></a>受信 Webhook を通して [アダプティブ カード](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card) を送信するためのフローは次のとおりです。
+
+**1.** [カスタム webhook](#setting-up-a-custom-incoming-webhook) を Teams に設定します。</br></br>
+**2.** アダプティブ カード JSON ファイルを作成します。
+
+```json
+{
+   "type":"message",
+   "attachments":[
+      {
+         "contentType":"application/vnd.microsoft.card.adaptive",
+         "contentUrl":null,
+         "content":{
+            "$schema":"http://adaptivecards.io/schemas/adaptive-card.json",
+            "type":"AdaptiveCard",
+            "version":"1.2",
+            "body":[
+               {
+                  "For Samples and Templates, see":"https://adaptivecards.io/samples"
+               }
+            ]
+         }
+      }
+   ]
+}
+```
+
+> [!div class="checklist"]
+>
+> - `"type"` フィールドは `"message"` であることが必要です。
+> - `"attachments"` 配列には、カード オブジェクトのセットが含まれています。
+> - `"contentType"` フィールドにはアダプティブカードの種類が設定されていることが必要です。
+> - `"content"` オブジェクトは、JSON で書式設定されたカードです。
+
+**3.** Postman でアダプティブ カードをテストする
+
+[Postman](https://www.postman.com) を使用して、受信 Webhook の設定時に作成した URL に POST 要求を送信することで、アダプティブカードをテストできます。 JSON ファイルを要求の本文に貼り付け、Teams でアダプティブ カード メッセージを表示します。
+
+>[!TIP]
+> テストの Post 要求の本文には、アダプティブ カード コードの [サンプルとテンプレート](https://adaptivecards.io/samples) を使用できます。
 
 ## <a name="testing-your-connector"></a>コネクタをテストする
 
