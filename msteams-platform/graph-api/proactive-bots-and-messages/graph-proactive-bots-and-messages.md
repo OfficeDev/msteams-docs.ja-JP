@@ -1,88 +1,88 @@
 ---
-title: Microsoft Graph を使用して Teams での積極的なボットのインストールとメッセージングを有効にする
-description: Teams における予防的なメッセージングと実装方法について説明します。
+title: Microsoft Graph を使用して、Teams でプロアクティブ ボット インストールとメッセージングを有効にする
+description: Teams のプロアクティブ メッセージングと実装方法について説明します。
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
 ms.topic: Overview
-keywords: teams の予防的なメッセージングチャットインストールグラフ
-ms.openlocfilehash: f1d2c51957eefbc548918210b843e408eb1107c8
-ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
+keywords: Teams プロアクティブなメッセージング チャットのインストール Graph
+ms.openlocfilehash: b601c5858e5141ce81985dca62968b1713e1d2ba
+ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46587742"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "46819162"
 ---
-# <a name="enable-proactive-bot-installation-and-proactive-messaging-in-teams-with-microsoft-graph-public-preview"></a>Microsoft Graph を使用した Teams での予防的なインストールと予防的なメッセージングを有効にする (パブリックプレビュー)
+# <a name="enable-proactive-bot-installation-and-proactive-messaging-in-teams-with-microsoft-graph-public-preview"></a>Microsoft Graph を使用して Teams のプロアクティブ ボットのインストールとプロアクティブなメッセージングを有効にする (パブリック プレビュー)
 
 >[!IMPORTANT]
-> Microsoft Graph のパブリックプレビューは、初めてアクセスしてフィードバックする際に使用できます。 このリリースは広範なテストを経ていますが、運用環境での使用は想定されていません。
+> Microsoft Graph と Microsoft Teams のパブリック プレビューは、すでにアクセスしてフィードバックを行います。 このリリースは、拡張的なテストを受けてきてきてきませんが、運用環境での使用を意図したものではありません。
 
-## <a name="proactive-messaging-in-teams"></a>Teams での事前のメッセージング
+## <a name="proactive-messaging-in-teams"></a>Teams でのプロアクティブ メッセージング
 
-事前メッセージは、ユーザーとの会話を開始する bot によって開始されます。 開始メッセージの送信、調査または投票の実行、組織全体にわたる通知の配信など、さまざまな目的に対応しています。  Teams の事前メッセージ**は、アドホックまたは****ダイアログベース**の会話として配信できます。
+ユーザーとの会話を開始するために、プロアクティブ メッセージがボットによって開始されます。 ウェルカム メッセージの送信、アンケートや投資の実行、組織全体の通知のブロードキャストなど、多くの目的に使用できます。  Teams のプロアクティブ メッセージは、アドホックまたは**ダイアログ ベースの会話****として配信**できます。
 
-|メッセージ型 | 説明 |
+|メッセージ型 | Description |
 |----------------|-------------- |
-|アドホックの事前メッセージ| Bot は、会話フローを中断することなくメッセージを interjects します。|
-|ダイアログベースの事前メッセージ | Bot は、新しいダイアログスレッドを作成し、会話の制御を取得し、事前メッセージを配信し、前のダイアログに制御を戻します。|
+|アドホックのプロアクティブ メッセージ| ボットは会話フローを中断することなくメッセージを挿入します。|
+|ダイアログベースのプロアクティブ メッセージ | ボットは新しいダイアログ スレッドを作成し、会話の制御を取得し、プロアクティブ メッセージを配信し、コントロールを閉じて前のダイアログに制御を返します。|
 
-「[ユーザーに事前通知を送信する SDK V4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp) *」を参照してください*。
+*「ユーザー* [SDK v4 へのプロアクティブ通知の送信」をご覧ください。](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp)
 
-## <a name="proactive-app-installation-in-teams"></a>Teams での事前にアプリをインストールする
+## <a name="proactive-app-installation-in-teams"></a>Teams でのアプリのプロアクティブなインストール
 
-Bot がユーザーに対して予防的なメッセージを実行できるようにするには、ユーザーを個人のアプリとしてインストールするか、またはユーザーがメンバーになっているチームにインストールする必要があります。 インストールさ_れていない_、またはアプリに以前対話したことがない場合は、事前にメッセージを事前に作成しておく必要があります。 たとえば、組織内のすべてのユーザーにとって重要な情報をメッセージにする必要があります。 このようなシナリオでは、Microsoft Graph API を使用して、ユーザー向けに bot を事前にインストールすることができます。
+ボットがユーザーにプロアクティブにメッセージを送信するには、その前に、個人用アプリとして、またはユーザーがメンバーであるチームにインストールする必要があります。 場合によっては、インストールしていない、または以前にアプリを操作した _ユーザーにメッセージ_ を、表示しないように促す必要があります。 たとえば、組織内のすべてのユーザーに対して、必要な情報をメッセージで送信する必要があります。 そのようなシナリオでは、Microsoft Graph API を使用して、ユーザー用にボットをプロアクティブにインストールできます。
 
 ## <a name="permissions"></a>アクセス許可
 
-Microsoft Graph [teamsAppInstallation リソースの種類](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0)のアクセス許可を使用すると、microsoft Teams プラットフォーム内のすべてのユーザー (個人) スコープまたはチーム (チャネル) スコープのアプリのインストールライフサイクルを管理できます。
+Microsoft Graph [teamsAppInstallation リソースの種類の](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0) アクセス許可を使用すると、Microsoft Teams プラットフォーム内のすべてのユーザー (個人) またはチーム (チャネル) スコープに対するアプリのインストール ライフサイクルを管理できます。
 
-|アプリケーションのアクセス許可 | 説明|
+|アプリケーションのアクセス許可 | Description|
 |------------------|---------------------|
-|`TeamsAppInstallation.ReadWriteSelfForUser.All`|Teams アプリは、サインインまたは使用前に、**ユーザー**の読み取り、インストール、アップグレード、およびアンインストールを行うことができます。|
-|`TeamsAppInstallation.ReadWriteSelfForTeam.All`|Teams アプリは、サインインまたは使用前に、任意の**チーム**で自分自身を読み取り、インストール、アップグレード、およびアンインストールできます。|
+|`TeamsAppInstallation.ReadWriteSelfForUser.All`|以前のサインインや使用をすることなく、Teams アプリで、すべてのユーザーに対してそれ **自体の**読み取り、インストール、アップグレード、アンインストールを行うことができます。|
+|`TeamsAppInstallation.ReadWriteSelfForTeam.All`|Teams アプリで、以前のサインインや使用をせずに、任意のチームでそれ自体の読み **取**り、インストール、アップグレード、アンインストールを行うことができます。|
 
-これらのアクセス許可を使用するには、次の値を使用して、 [Webapplicationinfo](../../resources/schema/manifest-schema.md#webapplicationinfo)キーをアプリのマニフェストに追加する必要があります。
+これらのアクセス許可を使用するには、次の値 [を使用して、アプリ](../../resources/schema/manifest-schema.md#webapplicationinfo) マニフェストに webApplicationInfo キーを追加する必要があります。
 > [!div class="checklist"]
 > [!div class="checklist"]
 >
-> * **id** : Azure AD アプリ id。
-> * **resource** —アプリのリソース URL。
+> * **id**  — Azure AD アプリ ID。
+> * **resource** — アプリのリソース URL。
 >
 
 >[!NOTE]
 >
-> * Bot には、ユーザーにはインストールされませんが、それ以外の場合は、_アプリケーション_による_委任_されたアクセス許可が必要です。
+> * ボットのインストール_は、ユーザー__に代用するもの_ではありませんが、他のユーザーに対してはインストールされないため、アプリケーションには、ユーザーに委任されたアクセス許可が必要です。
 >
-> * Azure AD テナント管理者は、[アプリケーションに対するアクセス許可を明示的に付与](/graph/security-authorization#grant-permissions-to-an-application)する必要があります。 アプリケーションにアクセス許可が付与されると、Azure AD テナントの_すべて_のメンバーが付与されたアクセス許可を取得します。
+> * テナント管理者が Azure ADは、アプリケーション [にアクセス許可を明示的に付与する必要があります](/graph/security-authorization#grant-permissions-to-an-application)。 アプリケーションにアクセス許可が付与されると _、テナント_ テナントのすべてのメンバーにADアクセス許可が付与されます。
 
-## <a name="enable-proactive-app-installation-and-messaging"></a>事前にアプリのインストールとメッセージングを有効にする
+## <a name="enable-proactive-app-installation-and-messaging"></a>プロアクティブ アプリのインストールとメッセージングを有効にする
 
  > [!IMPORTANT]
->Microsoft Graph では、組織の[アプリカタログ](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog)または[appsource](https://appsource.microsoft.com/)に発行されたアプリのみがインストールされます。
+>Microsoft Graph は、組織のアプリ カタログ内または AppSource 内に [公開された](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) アプリのみを [インストールします](https://appsource.microsoft.com/)。
 
-### <a name="-create-and-publish-your-proactive-messaging-bot-for-teams"></a>チームのために予防的なメッセージングボットを作成して発行する✔
+### <a name="-create-and-publish-your-proactive-messaging-bot-for-teams"></a>✔ Teams のプロアクティブ メッセージング ボットを作成して公開する
 
-作業を開始するには、[積極的なメッセージング](../../concepts/bots/bot-conversations/bots-conv-proactive.md)機能を備え、組織の[アプリカタログ](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog)または[appsource](https://appsource.microsoft.com/)に[公開](../../concepts/deploy-and-publish/overview.md)されている[Teams 用の bot](../../bots/how-to/create-a-bot-for-teams.md)が必要です。
+開始するには、プロアクティブ メッセージング機能を使用し、[proactive messaging](../../concepts/bots/bot-conversations/bots-conv-proactive.md)組織のアプリ カタログまたは[published](../../concepts/deploy-and-publish/overview.md)AppSource で公開[される Teams](../../bots/how-to/create-a-bot-for-teams.md) [用ボ](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog)ットが[必要です](https://appsource.microsoft.com/)。
 
 >[!TIP]
-> 運用に対応した[**会社の Communicator**](../..//samples/app-templates.md#company-communicator)アプリテンプレートでは、ブロードキャストメッセージングが有効になり、予防的な bot アプリケーションを構築するための基礎となります。
+> 運用環境に適した [**会社のCommunicator、**](../..//samples/app-templates.md#company-communicator) ブロードキャスト メッセージングを有効にして、プロアクティブなボット アプリケーションを構築するための基盤になります。
 
-### <a name="-get-the-teamsappid-for-your-app"></a>`teamsAppId`アプリのを取得✔
+### <a name="-get-the-teamsappid-for-your-app"></a>✔アプリを `teamsAppId` 取得する
 
-**1.** 次の手順では、が必要になります。 `teamsAppId`
+**1.** 次の `teamsAppId`  手順に進んでください。
 
-は、 `teamsAppId` 組織のアプリカタログから取得できます。
+組織 `teamsAppId` のアプリ カタログから取得できます。
 
-**Microsoft Graph ページリファレンス:** [teamsapp リソースの種類](/graph/api/resources/teamsapp?view=graph-rest-1.0)
+**Microsoft Graph ページ リファレンス:** [teamsApp リソース タイプ](/graph/api/resources/teamsapp?view=graph-rest-1.0)
 
-**HTTP GET**要求:
+**HTTP GET** 要求:
 
 ```http
 GET https://graph.microsoft.com/beta/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
 ```
 
-要求はオブジェクトを返し `teamsApp` ます。 返されるオブジェクトは、アプリのカタログ生成されたアプリ id であり、 `id` Teams アプリマニフェストで指定した "id:" とは異なります。
+要求はオブジェクトを返 `teamsApp`  します。 返されたオブジェクトのカタログ `id`  は、アプリのカタログに生成されたアプリ ID で、Teams アプリ マニフェストに指定した "id:" とは異なります。
 
 ```json
 {
@@ -98,46 +98,46 @@ GET https://graph.microsoft.com/beta/appCatalogs/teamsApps?$filter=externalId eq
 }
 ```
 
-**2.** 個人スコープ内のユーザーに対してアプリが既にアップロードされている場合は、次のようにサイドロードを取得できます。 `teamsAppId`
+**2.**  個人用スコープでユーザーのアプリが既にアップロードまたはサイドローディングされている場合は、次のように `teamsAppId` して取得できます。
 
-**Microsoft Graph ページリファレンス:** [ユーザー用にインストールされているアプリの一覧](/graph/api/user-list-teamsappinstallation?view=graph-rest-beta&tabs=http)
+**Microsoft Graph ページ リファレンス: ユーザーにインストール**[されたアプリを一覧表示する](/graph/api/user-list-teamsappinstallation?view=graph-rest-beta&tabs=http)
 
-**HTTP GET**要求:
+**HTTP GET** 要求:
 
 ```http
-GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
+GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
 ```
 
-**3.** アプリがチームスコープ内のチャネルに対して既にアップロードまたはサイドロードされている場合は、次のようにを取得できます `teamsAppId` 。
+**3.** チームのスコープでチャネル用にアプリが既にアップロードまたはサイドロードされている場合は、次のように `teamsAppId` して取得できます。
 
-**Microsoft Graph ページリファレンス:** teams[のアプリの一覧](/graph/api/teamsappinstallation-list?view=graph-rest-beta&tabs=http)
+**Microsoft Graph ページ リファレンス:** [チーム内のアプリを一覧表示する](/graph/api/teamsappinstallation-list?view=graph-rest-beta&tabs=http)
 
-**HTTP GET**要求:
+**HTTP GET** 要求:
 
 ```http
-GET https://graph.microsoft.com/beta/teams/{team-id}/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{manifestId}'
+GET https://graph.microsoft.com/beta/teams/{team-id}/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
 ```
 
 >[!TIP]
-> [**Teamsapp**](/graph/api/resources/teamsapp?view=graph-rest-1.0)オブジェクトの任意のフィールドをフィルター処理して、結果の一覧を絞り込むことができます。
+> [**teamsApp**](/graph/api/resources/teamsapp?view=graph-rest-1.0)オブジェクトのいずれかのフィールドでフィルター処理して結果リストを絞り込むことができます。
 
-### <a name="-determine-whether-your-bot-is-currently-installed-for-a-message-recipient"></a>✔ Bot がメッセージの受信者に現在インストールされているかどうかを判断するには
+### <a name="-determine-whether-your-bot-is-currently-installed-for-a-message-recipient"></a>✔メッセージ受信者にボットが現在インストールされているかどうかを確認する
 
-**Microsoft Graph ページリファレンス:** [ユーザー用にインストールされているアプリの一覧](/graph/api/user-list-teamsappinstallation?view=graph-rest-beta&tabs=http)
+**Microsoft Graph ページ リファレンス: ユーザーにインストール**[されたアプリを一覧表示する](/graph/api/user-list-teamsappinstallation?view=graph-rest-beta&tabs=http)
 
-**HTTP GET**要求:
+**HTTP GET** 要求:
 
 ```http
 GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
 ```
 
-この要求は、アプリがインストールされていない場合は空の配列を返し、インストールされている場合は1つの[teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-beta)オブジェクトを持つ配列を返します。
+この要求は、アプリがインストールされていない場合は空の配列を返し、インストールされている [場合は、単一の teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-beta) オブジェクトの配列を返します。
 
-### <a name="-install-your-app"></a>アプリをインストール✔には
+### <a name="-install-your-app"></a>✔をインストールする
 
-**Microsoft Graph リファレンス:** [ユーザーのアプリをインストールする](/graph/api/user-add-teamsappinstallation?view=graph-rest-beta&tabs=http)
+**Microsoft Graph リファレンス: ユーザー**[用アプリをインストールする](/graph/api/user-add-teamsappinstallation?view=graph-rest-beta&tabs=http)
 
-**HTTP POST**要求:
+**HTTP POST** 要求:
 
 ```http
 POST https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps
@@ -146,51 +146,51 @@ POST https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps
 }
 ```
 
-ユーザーが Microsoft Teams を実行している場合は、直ちにアプリのインストールが表示されることがあります。 または、インストールされているアプリを表示するために再起動が必要な場合があります。
+ユーザーが Microsoft Teams を実行している場合は、アプリのインストールがすぐに表示される可能性があります。 または、インストール済みアプリを表示するには、再起動が必要になる場合があります。
 
-### <a name="-retrieve-the-conversation-chatid"></a>会話**chatId**を取得✔には
+### <a name="-retrieve-the-conversation-chatid"></a>✔ **chatId を取得する**
 
-アプリがユーザー用にインストールされている場合、bot は、 `conversationUpdate` 事前メッセージを送信するために必要な情報が含まれた[イベント通知](../../resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)を受け取ります。
+アプリがユーザー用にインストールされると、ボットはイベント通知を受け取り、プロアクティブ メッセージを `conversationUpdate` [event notification](../../resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)送信するために必要な情報が含まれます。
 
-は、次のように `chatId` 取得することもできます。
+`chatId`次のように取得できる。
 
-**Microsoft Graph リファレンス:** [チャットの取得](/graph/api/chat-get?view=graph-rest-beta&tabs=http)
+**Microsoft Graph リファレンス:** [チャットを取得する](/graph/api/chat-get?view=graph-rest-beta&tabs=http)
 
-**1.** アプリは必要になります `{teamsAppInstallationId}` 。 使用していない場合は、次のようにします。
+**1.** アプリが必要になります `{teamsAppInstallationId}` 。 使用しない場合は、以下を使用します。
 
-**HTTP GET**要求:
+**HTTP GET** 要求:
 
 ```http
 GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
 ```
 
-応答の**id**プロパティは、 `teamsAppInstallationId` です。
+応答 **の id** プロパティは次の場所です `teamsAppInstallationId` 。
 
-**2.** 次のものをフェッチするための要求を行います。 `chatId`
+**2. 次** のような要求を行ってフェッチします `chatId` 。
 
-**HTTP GET**要求 (アクセス許可— `TeamsAppInstallation.ReadWriteSelfForUser.All` ):  
+**HTTP GET 要求** (アクセス許可 `TeamsAppInstallation.ReadWriteSelfForUser.All` —  
 
 ```http
  GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
 ```
 
-応答の**id**プロパティは、 `chatId` です。
+応答 **の id** プロパティは次の場所です `chatId` 。
 
-または、以下の要求でを取得することもでき `chatId` ますが、より広範なアクセス許可が必要になり `Chat.Read.All` ます。
+または、次の要求で `chatId`  取得できますが、より広範なアクセス許可が必要 `Chat.Read.All` になります。
 
-**HTTP GET**要求 (アクセス許可— `Chat.Read.All` ):
+**HTTP GET 要求** (アクセス許可 `Chat.Read.All` —
 
 ```http
 GET https://graph.microsoft.com/beta/users/{user-id}/chats?$filter=installedApps/any(a:a/teamsApp/id eq '{teamsAppId}')
 ```
 
-### <a name="-send-proactive-messages"></a>積極的なメッセージを送信✔には
+### <a name="-send-proactive-messages"></a>✔アクティブ メッセージを送信する
 
-ユーザーまたはチームに bot が追加され、必要なユーザー情報を取得している場合は、[事前メッセージの送信](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp)を開始できます。
+ユーザーまたはチームにボットが追加され、必要なユーザー情報を取得したら、プロアクティブ メッセージ [を送信できるようになります](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp)。
 
-# <a name="c--net"></a>[C#/.NET](#tab/csharp)
+# <a name="c--net"></a>[C# / .NET](#tab/csharp)
 
-次のコードスニペットは、 [C# の Microsoft Bot フレームワークサンプル](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/16.proactive-messages)からのものです。
+次のコード スニペットは [、Microsoft Bot Framework Samples for C# のサンプルのスニペットです。](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/16.proactive-messages)
 
 ```csharp
 using System.Collections.Concurrent;
@@ -253,7 +253,7 @@ namespace Microsoft.BotBuilderSamples
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
-次のコードスニペットは、 [JavaScript の Microsoft Bot フレームワークサンプル](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/16.proactive-messages)からのものです。
+次のコード スニペットは [、JavaScript 用 Microsoft Bot Framework サンプルのものです](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/16.proactive-messages)。
 
 ```javascript
 const { ActivityHandler, TurnContext } = require('botbuilder');
@@ -307,10 +307,10 @@ module.exports.ProactiveBot = ProactiveBot;
 ## <a name="related-topic-for-teams-administrators"></a>Teams 管理者向けの関連トピック
 >
 > [!div class="nextstepaction"]
-> [**Microsoft Teams でアプリのセットアップポリシーを管理する**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
+> [**Microsoft Teams でアプリのセットアップ ポリシーを管理する**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
 
-## <a name="view-additional-code-samples"></a>追加のコードサンプルを表示する
+## <a name="view-additional-code-samples"></a>その他のコード サンプルを表示する
 >
 > [!div class="nextstepaction"]
-> [**Teams の予防的なメッセージングコードサンプル**](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
+> [**Teams のプロアクティブなメッセージング コード サンプル**](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
 >
