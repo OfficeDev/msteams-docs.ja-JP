@@ -344,6 +344,10 @@
       items:
         - name: プロアクティブなボットをインストールしてプロアクティブ メッセージを有効にする
           href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
+    - name: メッセージをインポートする
+      items:
+        - name: Microsoft Graph を使用してサードパーティのプラットフォーム メッセージを Teams にインポートする
+          href: graph-api/import-messages/import-external-messages-to-teams.md
 - name: リソース
   items:
     - name: ボット - v3 SDK
