@@ -1,33 +1,34 @@
 ---
-title: Microsoft Teams アプリ承認プロセスガイダンス
-description: Microsoft Teams アプリストアに公開されたアプリを取得するための承認プロセスについて説明します。
+title: Microsoft Teams アプリ承認提出プロセスガイダンス
+description: Microsoft Teams アプリストアに公開されたアプリを取得するための送信承認プロセスについて説明します。
 keywords: teams 発行ストア office publishing 発行 AppSource partner center アカウントの確認
-ms.openlocfilehash: cafbffff46417d692f3b587dda7269ab4b82f6cd
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.openlocfilehash: d165ac144926e0a956c211e5a3d55ac67c77fdb8
+ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434476"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "46874871"
 ---
 # <a name="submit-your-app-to-appsource"></a>アプリを AppSource に提出する
 
 ## <a name="teams-app-submission"></a>Teams アプリの提出
 
-アプリを[Appsource](https://appsource.microsoft.com)に発行すると、Teams アプリカタログと web 上で使用できるようになります。 高レベルでは、アプリを AppSource に提出するプロセスは次のようになります。
+アプリを [Appsource](https://appsource.microsoft.com) に発行すると、Teams アプリカタログと web 上で使用できるようになります。 高レベルでは、アプリを AppSource に提出するプロセスは次のようになります。
 
-1. [デザインガイドライン](~/concepts/design/understand-use-cases.md)に従ってアプリを開発します。 タブは、[タブデザインガイドライン](~/tabs/design/tabs.md)に準拠している必要があります。 Bot は[bot 設計ガイドライン](~/bots/design/bots.md)に従う必要があります。
-1. アプリが Microsoft Teams のアプリの[検証ポリシー](/legal/marketplace/certification-policies)を満たしていることを確認します。
+1. [デザインガイドライン](~/concepts/design/understand-use-cases.md)に従ってアプリを開発します。 タブは、 [タブデザインガイドライン](~/tabs/design/tabs.md)に準拠している必要があります。 Bot は [bot 設計ガイドライン](~/bots/design/bots.md)に従う必要があります。
+1. アプリが Microsoft Teams のアプリの [検証ポリシー](/legal/marketplace/certification-policies) を満たしていることを確認します。
 1. [パートナーセンター](https://support.microsoft.com/help/4499930/partner-center-overview)で[開発者アカウントをセットアップ](/office/dev/store/open-a-developer-account)します。 下記の FAQ セクションで、[パートナーセンターアカウントを作成する方法](#how-do-i-create-a-partner-center-account)に*ついても参照して*ください。
 1. [提出のチェックリスト](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)に従って、アプリを提出する準備をします。
 1. [アプリの送信を成功させるためのヒントを](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)確認します。
 1. [パートナーセンターを使用して、Appsource](/office/dev/store/use-partner-center-to-submit-to-appsource)にパッケージを提出します。
 1. パートナーセンターダッシュボードで承認プロセスを追跡します。 *「* [Partner Center の概要](https://support.microsoft.com/help/4499930/partner-center-overview)」を参照してください。
-1. 投稿後: 公開された[アプリの管理とサポート](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)に関するガイダンスを確認してください。
+1. 投稿後: 公開された [アプリの管理とサポート](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)に関するガイダンスを確認してください。
 
 >[!NOTE]
 >
->- Teams アプリに bot が含まれている場合は、ボット開発者フレームワーク[の倫理](https://aka.ms/bf-conduct)規定に準拠する必要があります。
->- アプリに Office 365 コネクタが含まれている場合は、追加の用語が適用されることがあります。 *「* [コネクタ開発者ダッシュボード](https://aka.ms/connectorsdashboard)と[アプリ開発者アグリーメント](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm)」を参照してください。
+>- Teams アプリに bot が含まれている場合は、ボット開発者フレームワーク [の倫理](https://aka.ms/bf-conduct)規定に準拠する必要があります。
+>- アプリに Office 365 コネクタが含まれている場合は、追加の用語が適用されることがあります。 *「* [コネクタ開発者ダッシュボード](https://aka.ms/connectorsdashboard) と [アプリ開発者アグリーメント](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm)」を参照してください。
+>- アプリを GCC ユーザーが使用できるようにし、ストア内のアプリリストが重複しないようにするには、認証プロセス/フローでは、ユーザーを識別し、GCC ユーザーの指定されたコンテンツ URL または予想されるコンテンツ URL にルーティングする必要があります。
 
 ## <a name="faqs--teams-apps-and-partner-accounts"></a>Faq-Teams アプリとパートナーアカウント
 
@@ -35,8 +36,8 @@ ms.locfileid: "45434476"
 
 パートナーセンターアカウントを作成するには、次の2つの方法があります。
 
-- パートナーセンターを初めて使用していて、Microsoft ネットワーク内にアカウントがない場合は、[パートナーセンターの登録ページを使用してアカウントを作成](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment)します。
-- パートナーネットワークに既に登録されている場合は、[既存の登録を使用してパートナーセンターで直接アカウントを作成](/office/dev/store/)します。
+- パートナーセンターを初めて使用していて、Microsoft ネットワーク内にアカウントがない場合は、 [パートナーセンターの登録ページを使用してアカウントを作成](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment)します。
+- パートナーネットワークに既に登録されている場合は、 [既存の登録を使用してパートナーセンターで直接アカウントを作成](/office/dev/store/)します。
 
 ## <a name="what-if-i-cannot-find-my-office-store-account-in-partner-center"></a>パートナーセンターで Office ストアアカウントが見つからない場合はどうすればよいですか?
 
@@ -50,11 +51,11 @@ ms.locfileid: "45434476"
 
 ## <a name="where-can-i-get-support-for-my-partner-center-issues"></a>パートナーセンターの問題のサポートを受けるには、どうすればよいですか?
 
-「 [Publishers support」ページ](https://aka.ms/marketplacepublishersupport)にアクセスして、問題のトピックを検索し、ガイダンスを見つけてください。 提供されているガイダンスが役に立たない場合は、[パートナーセンターのサポートチケットを開き](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket)ます。
+「 [Publishers support」ページ](https://aka.ms/marketplacepublishersupport) にアクセスして、問題のトピックを検索し、ガイダンスを見つけてください。 提供されているガイダンスが役に立たない場合は、 [パートナーセンターのサポートチケットを開き](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket)ます。
 
 ## <a name="how-do-i-manage-my-office-store-account"></a>Office ストアアカウントを管理するにはどうすればよいですか?
 
-パートナーセンターで Office ストアアカウントを管理するためのガイダンスについては、「 [Partner center で Office ストアアカウントを管理する」](/office/dev/store/manage-account-settings-and-profile)を参照してください。
+パートナーセンターで Office ストアアカウントを管理するためのガイダンスについては、「  [Partner center で Office ストアアカウントを管理する」](/office/dev/store/manage-account-settings-and-profile) を参照してください。
 
 ## <a name="how-do-i-add-my-phone-number-to-the-partner-profile-contact-section"></a>パートナープロファイルの連絡先セクションに電話番号を追加するにはどうすればよいですか?
 
@@ -78,24 +79,24 @@ ms.locfileid: "45434476"
 
 ## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-how-should-i-proceed"></a>自分のアカウントの確認状態が、電子メールの所有権を超える高度ではありません。 続行するにはどうすればよいですか?
 
-**電子メールの所有権**の確認プロセスでは、確認メールがプライマリ連絡先の電子メールアドレスに送信されます。 プライマリ連絡先の受信トレイで**maccount@<span>microsoft</span>.com**からの電子メールが必要です。そのためには、「件名を付けてください。」というアクションを必要とします。電子メール*アカウントが microsoft によって確認*され、電子メールの確認プロセスが完了することを要求します。 確認メールは、パートナーセンターの [アカウント設定] ページに表示されている電子メールアドレスに送信されます。
+**電子メールの所有権**の確認プロセスでは、確認メールがプライマリ連絡先の電子メールアドレスに送信されます。 プライマリ連絡先の受信トレイで **maccount@<span>microsoft</span>.com** からの電子メールが必要です。そのためには、「件名を付けてください。」というアクションを必要とします。電子メール *アカウントが microsoft によって確認*され、電子メールの確認プロセスが完了することを要求します。 確認メールは、パートナーセンターの [アカウント設定] ページに表示されている電子メールアドレスに送信されます。
 
 > [!NOTE]
- >[電子メールの確認のリンクは、7日間のみ有効です。 パートナープロファイルページにアクセスして、[**再送信の確認**] の電子メールリンクを選択することによって、電子メールを送信するように要求することができます。 電子メールが受信されるようにするには、microsoft.com からの電子メールを安全なドメインとしてホワイトリストし、迷惑メールフォルダーをチェックします。
+ >[電子メールの確認のリンクは、7日間のみ有効です。 パートナープロファイルページにアクセスして、[ **再送信の確認** ] の電子メールリンクを選択することによって、電子メールを送信するように要求することができます。 電子メールが受信されるようにするには、microsoft.com からの電子メールを安全なドメインとしてホワイトリストし、迷惑メールフォルダーをチェックします。
 
 ## <a name="how-i-do-get-further-support-for-my-account-related-issues"></a>自分のアカウント関連の問題について、さらにサポートを受けるにはどうすればよいですか?
 
-サポートチケットを作成するためのガイダンスと手順については、「パートナーセンター」のページの「[コマーシャル市場プログラムのサポート」](/azure/marketplace/partner-center-portal/support)を参照してください。
+サポートチケットを作成するためのガイダンスと手順については、「パートナーセンター」のページの「 [コマーシャル市場プログラムのサポート」](/azure/marketplace/partner-center-portal/support) を参照してください。
 
 ## <a name="ive-checked-my-mail-folders-and-havent-received-the-verification-email-what--should-i-do-next"></a>メールフォルダーをチェックしていて、確認の電子メールを受信していません。 次の手順を実行します。
 
 次のことを試してください。
 
 1. 迷惑メールフォルダーを確認してください。
-1. ブラウザーのキャッシュをクリアし、パートナーセンターのアカウントダッシュボードに移動し、[**再送信確認**] 電子メールリンクを選択して、確認の電子メールを電子メールアドレスに送信します。
-1. 別のブラウザーから [**再送信の確認の電子メール**へのアクセスを試行してください。
+1. ブラウザーのキャッシュをクリアし、パートナーセンターのアカウントダッシュボードに移動し、[ **再送信確認** ] 電子メールリンクを選択して、確認の電子メールを電子メールアドレスに送信します。
+1. 別のブラウザーから [  **再送信の確認の電子メール** へのアクセスを試行してください。
 1. IT 部門と協力して、電子メールサーバーによって検証メールがブロックされないようにします。
-1. サーバーのスパムフィルターを調整して、maccount@microsoft からのすべての電子メールを許可またはホワイトリストに**します。 <span></span>com**。
+1. サーバーのスパムフィルターを調整して、maccount@microsoft からのすべての電子メールを許可またはホワイトリストに **します。 <span></span>com**。
 
 ## <a name="how-long-does-the-employment-verification-process-usually-take"></a>雇用確認プロセスには、通常どのくらいの時間がかかりますか?
 
@@ -111,13 +112,13 @@ ms.locfileid: "45434476"
 
 ## <a name="my-issue-is-not-listed-here--are-there-other-pages-i-can-reference-for-partner-center-issues"></a>この一覧には表示されません。  パートナーセンターの問題を参照できる他のページはありますか?
 
-詳細については、「[市販のマーケットプレース](/azure/marketplace/)」のドキュメントを参照してください。
+詳細については、「 [市販のマーケットプレース](/azure/marketplace/) 」のドキュメントを参照してください。
 
 ## <a name="ive-created-a-support-ticket-it-has-been-7-business-days-and-i-havent-received-an-update-where-can-i-get-additional-help"></a>サポートチケットを作成したが、それは7営業日でしたが、更新を受信していません。 追加のヘルプはどこで入手できますか?
 
 次の情報を使用して、にメールを送信してください **<teamsubm@microsoft.com>** 。
 
-1. **件名行** *<App_Name>のパートナーセンターのアカウントの問題*(アプリの名前を指定してください)。
+1. **件名行** *<App_Name>のパートナーセンターのアカウントの問題 * (アプリの名前を指定してください)。
 1. **メール本文:**
     * サポートチケット番号:
     * 販売者 ID:

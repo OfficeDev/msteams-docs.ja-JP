@@ -4,12 +4,12 @@ author: clearab
 description: 開発者が Teams プラットフォームを使用して Microsoft Teams の機能を拡張およびカスタマイズする方法の概要について説明します。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: d127acb33212f23dff9cf0dd83a1936044c10d5e
-ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
+ms.openlocfilehash: 4af4d34ffa4581be6e69f6233d3eb356aa6a2a08
+ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46652058"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "46874885"
 ---
 # <a name="building-for-microsoft-teams"></a>Microsoft Teams の構築
 
@@ -84,7 +84,6 @@ Microsoft Teams アプリは、ユーザーが収集、学習、作業を徐々�
 ## <a name="resources"></a>リソース
 
 * [Web サイトに [Teams に共有] ボタンを追加する](doc-links/share-to-teams.md)
-* [推奨ガイドラインを使用してアプリを設計する](doc-links/designing-overview.md)
 * [Fluent UI デザインシステム](https://fluentsite.z22.web.core.windows.net/)
 * [Microsoft Teams JavaScript クライアント SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest)
 * [JavaScript のボット FRAMEWORK sdk](https://github.com/Microsoft/botbuilder-js)および[bot framework sdk (.net](https://github.com/Microsoft/botbuilder-dotnet/) )
