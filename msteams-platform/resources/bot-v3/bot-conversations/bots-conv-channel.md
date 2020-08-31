@@ -3,12 +3,12 @@ title: ボットを使用したチャネルとグループチャットの会話
 description: Microsoft Teams のチャネルで bot との会話を行うエンドツーエンドのシナリオについて説明します。
 keywords: teams シナリオチャネル会話 bot
 ms.date: 06/25/2019
-ms.openlocfilehash: d2d72bdba43de6ebb10c7504dd309459cb09d56c
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: f44db4a88ab5e6541c52395a58fc643cb07df606
+ms.sourcegitcommit: b3962a7b36f260aef1af9124d14d71ae08b01ac4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801280"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47303725"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Microsoft Teams ボットとのチャネルおよびグループ チャット会話
 
@@ -20,30 +20,27 @@ Microsoft Teams を使用すると、ユーザーは自分のチャネルまた�
 
 ## <a name="designing-a-great-bot-for-channels-or-groups"></a>チャネルまたはグループ向けに優位な bot を設計する
 
-チームに追加された bot は、他のチームメンバーとなり、会話の一部として @mentioned できます。 実際には、ボットは @mentioned ときにのみメッセージを受信するので、チャネルの他の会話は bot に送信されません。
+チームに追加されたボットは別のチームメンバーとなり、会話の一部として @mentioned できます。 実際には、ボットは @mentioned ときにのみメッセージを受信するので、チャネルの他の会話は bot に送信されません。
 
-> [!NOTE]
-> チャネル内の bot メッセージに返信する際に便宜上、[新規作成] メッセージボックスに bot 名が自動的に付加されます。
+グループまたはチャネル内の bot は、すべてのメンバーに関連する情報を提供する必要があります。 ボットは確かに、その環境に関連する情報をすべて提供できるようになりますが、すべてのユーザーが見ることができるように注意してください。 そのため、グループまたはチャネル内の大 bot は、すべてのユーザーに値を追加する必要があります。また、1対1の会話により適切な情報を誤って共有することはありません。
 
-グループまたはチャネル内の bot は、すべてのメンバーに関連する情報を提供する必要があります。 ボットは確かに、その環境に関連する情報をすべて提供できるようになりますが、すべてのユーザーが見ることができるように注意してください。 そのため、グループまたはチャネル内の大 bot は、すべてのユーザーに値を追加する必要があります。これにより、1対1の会話でより適切に情報を共有することは間違いありません。
+Bot の場合と同様に、追加の作業を必要とせず、すべてのスコープに完全に関連することができます。 Microsoft Teams では、bot がすべてのスコープで機能することを想定していませんが、ボットがサポートする範囲内でユーザー値を提供していることを確認する必要があります。 範囲の詳細については、「 [Microsoft Teams のアプリ](~/concepts/build-and-test/app-studio-overview.md)」を参照してください。
 
-Bot は、すべてのスコープにあるものと完全に関連している可能性があります。また、bot がそれらを越えて機能できるようにするための重要な特別な作業は必要ありません。 Microsoft Teams では、bot がすべてのスコープで機能することを想定していませんが、bot がサポートする範囲でユーザー値を提供できるようにする必要があります。 範囲の詳細については、「 [Microsoft Teams のアプリ](~/concepts/build-and-test/app-studio-overview.md)」を参照してください。
-
-グループまたはチャネルで機能する bot を開発すると、個人の会話と同じ機能が多く使用されます。 ペイロードの追加のイベントとデータは、Teams グループとチャネル情報を提供します。 次のセクションでは、これらの相違点と、共通機能の主な違いについて説明します。
+グループまたはチャネルで機能する bot を開発すると、個人の会話と同じ機能の多くが使用されます。 ペイロードの追加のイベントとデータは、Teams グループとチャネル情報を提供します。 次のセクションでは、これらの相違点と、共通機能の主な違いについて説明します。
 
 ### <a name="creating-messages"></a>メッセージを作成する
 
-ボットの詳細については、「 [bot の](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)メッセージを作成する」および「特に[チャネル会話を作成](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md#creating-a-channel-conversation)する」を参照してください。
+ボットの詳細については、「 [bot の](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)メッセージを作成する」および「特に [チャネル会話を作成](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md#creating-a-channel-conversation)する」を参照してください。
 
 ### <a name="receiving-messages"></a>メッセージの受信
 
 [通常のメッセージスキーマ](https://docs.botframework.com/core-concepts/reference/#activity)に加えて、グループまたはチャネル内の bot の場合、bot は次のプロパティも受け取ります。
 
-* `channelData`「 [Teams channel data](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data)」を参照してください。 グループチャットには、そのチャットに固有の情報が含まれています。
-* `conversation.id`応答チェーン ID。チャネル ID と、返信チェーン内の最初のメッセージの ID で構成されます。
+* `channelData` 「 [Teams channel data](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data)」を参照してください。 グループチャットには、そのチャットに固有の情報が含まれています。
+* `conversation.id` 応答チェーン ID。チャネル ID と、返信チェーン内の最初のメッセージの ID で構成されます。
 * `conversation.isGroup``true`チャネルまたはグループチャットのボットメッセージ用
 * `conversation.conversationType``groupChat`あるいは`channel`
-* `entities`1つ以上のメンションを含めることができます ([メンション](#-mentions)を参照してください)
+* `entities` 1つ以上のメンションを含めることができます ( [メンション](#-mentions)を参照してください)
 
 ### <a name="replying-to-messages"></a>メッセージへの返信
 
@@ -55,11 +52,11 @@ REST API の使用を選択する場合は、エンドポイントを呼び出�
 
 ### <a name="best-practice-welcome-messages-in-teams"></a>ベストプラクティス: Teams でのウェルカムメッセージ
 
-Bot が初めてグループまたはチームに追加されると、すべてのユーザーに bot を紹介するウェルカムメッセージを送信すると便利です。 ウェルカムメッセージには、bot の機能とユーザーの利点についての説明が記載されています。 メッセージには、ユーザーがアプリを操作するためのコマンドも含めることが理想的です。 これを行うには、bot がメッセージに応答して `conversationUpdate` 、オブジェクトに eventType があることを確認し `teamsAddMembers` `channelData` ます。 `memberAdded`ユーザーがチームに追加されたときに同じイベントが送信されるので、ID が bot のアプリ id 自体であることを確認してください。 詳細について[は、「Team member or bot の追加](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)」を参照してください。
+Bot が初めてグループまたはチームに追加されると、すべてのユーザーに bot を紹介するウェルカムメッセージを送信すると便利です。 ウェルカムメッセージには、bot の機能とユーザーの利点についての説明が記載されています。 メッセージには、ユーザーがアプリを操作するためのコマンドも含めることが理想的です。 これを行うには、bot がメッセージに応答して `conversationUpdate` 、オブジェクトに eventType があることを確認し `teamsAddMembers` `channelData` ます。 `memberAdded`ユーザーがチームに追加されたときに同じイベントが送信されるので、ID が bot のアプリ id 自体であることを確認してください。 詳細について [は、「Team member or bot の追加](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) 」を参照してください。
 
-Bot が追加されたときに、チームの各メンバーに個人メッセージを送信することもできます。 これを行うには、[チーム名簿を取得](~/resources/bot-v3/bots-context.md#fetching-the-team-roster)して、各ユーザーを[直接メッセージ](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)として送信することができます。
+Bot が追加されたときに、チームの各メンバーに個人メッセージを送信することもできます。 これを行うには、 [チーム名簿を取得](~/resources/bot-v3/bots-context.md#fetching-the-team-roster) して、各ユーザーを [直接メッセージ](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)として送信することができます。
 
-次の状況では、お客様がウェルカムメッセージを送信し*ない*ことをお勧めします。
+次の状況では、お客様がウェルカムメッセージを送信し *ない* ことをお勧めします。
 
 * チームは大規模です (ただし、100メンバーよりも大きいなど)。 Bot が "spammy" と表示されている可能性があります。これを追加したユーザーは、ウェルカムメッセージが表示されるすべてのユーザーに bot の価値提案を明確に伝えない限り、苦情を受けることがあります。
 * Bot は、最初にグループまたはチャネルで言及されます (チームに最初に追加されるものではありません)。
@@ -196,6 +193,6 @@ session.send(generalMessage);
 
 ## <a name="accessing-groupchat-or-channel-scope"></a>GroupChat またはチャネルスコープへのアクセス
 
-Bot は、グループと teams でメッセージを送受信することができます。 たとえば、プロファイル情報やチャネルの一覧を含む、メンバーの一覧を取得することもできます。 詳細については[、「Microsoft Teams の bot のコンテキストを取得](~/resources/bot-v3/bots-context.md)する」を参照してください。
+Bot は、グループと teams でメッセージを送受信することができます。 たとえば、プロファイル情報やチャネルの一覧を含む、メンバーの一覧を取得することもできます。 詳細については [、「Microsoft Teams の bot のコンテキストを取得](~/resources/bot-v3/bots-context.md) する」を参照してください。
 
 [Bot フレームワークサンプル](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)*も参照してください*。

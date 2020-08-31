@@ -2,12 +2,12 @@
 title: レート制限
 description: Microsoft Teams でのレートの制限とベストプラクティス
 keywords: teams のボットレート制限
-ms.openlocfilehash: 9b244053d42aaddaf48c798e401438b614b0e1bd
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 2e401b59df075688cb6d459a881e6b813f2cf8e6
+ms.sourcegitcommit: b3962a7b36f260aef1af9124d14d71ae08b01ac4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "44801314"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "47303711"
 ---
 # <a name="optimize-your-bot-rate-limiting-and-best-practices-in-microsoft-teams"></a>Bot を最適化する: Microsoft Teams でのレートの制限とベストプラクティス
 
@@ -46,7 +46,7 @@ catch (HttpOperationException ex)
 
 ここでは、一時的な障害処理アプリケーションブロックによる指数バックオフを使用する例を示します。
 
-[一時的なエラー処理](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29)を使用して、バックオフと再試行を実行できます。 NuGet パッケージを入手してインストールするためのガイドラインについては、「[一時的なエラー処理アプリケーションブロックをソリューションに追加](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN)する」を参照してください。 「[一時的なフォールト処理](/azure/architecture/best-practices/transient-faults) *」も参照してください*。
+[一時的なエラー処理](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29)を使用して、バックオフと再試行を実行できます。 NuGet パッケージを入手してインストールするためのガイドラインについては、「 [一時的なエラー処理アプリケーションブロックをソリューションに追加](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN)する」を参照してください。 「[一時的なフォールト処理](/azure/architecture/best-practices/transient-faults) *」も参照してください*。
 
 ```csharp
 public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectionStrategy
@@ -96,7 +96,7 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 値と戦略を構成ファイルに格納して、実行時に値を微調整および調整することをお勧めします。
 
-詳細については、この便利な「再試行[パターン](/azure/architecture/patterns/retry)」を参照してください。
+詳細については、この便利な「再試行 [パターン](/azure/architecture/patterns/retry)」を参照してください。
 
 ## <a name="per-bot-per-thread-limit"></a>スレッドの制限ごとに1つの bot
 
@@ -108,19 +108,19 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 | **シナリオ** | **期間 (秒)** | **許可される最大操作数** |
 | --- | --- | --- |
 | 会話に送信 | 1  | 7  |
-| 会話に送信 | pbm-2 | 8  |
+| 会話に送信 | 2  | 8  |
 | 会話に送信 | 31 | 60 |
 | 会話に送信 | 3600 | 1800 |
 | 会話を作成する | 1  | 7  |
-| 会話を作成する | pbm-2 | 8  |
+| 会話を作成する | 2  | 8  |
 | 会話を作成する | 31 | 60 |
 | 会話を作成する | 3600 | 1800 |
 | 会話メンバーを取得する| 1  | 14  |
-| 会話メンバーを取得する| pbm-2 | 16  |
+| 会話メンバーを取得する| 2  | 16  |
 | 会話メンバーを取得する| 31 | 120 |
 | 会話メンバーを取得する| 3600 | 3600 |
 | 会話を取得する | 1  | 14  |
-| 会話を取得する | pbm-2 | 16  |
+| 会話を取得する | 2  | 16  |
 | 会話を取得する | 31 | 120 |
 | 会話を取得する | 3600 | 3600 |
 
@@ -131,22 +131,12 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 | **シナリオ** | **期間 (秒)** | **許可される最大操作数** |
 | --- | --- | --- |
 | 会話に送信 | 1  | 14  |
-| 会話に送信 | pbm-2 | 16  |
+| 会話に送信 | 2  | 16  |
 | 会話を作成する | 1  | 14  |
-| 会話を作成する | pbm-2 | 16  |
+| 会話を作成する | 2  | 16  |
 | CreateConversation| 1  | 14  |
-| CreateConversation| pbm-2 | 16  |
+| CreateConversation| 2  | 16  |
 | 会話メンバーを取得する| 1  | 個 |
-| 会話メンバーを取得する| pbm-2 | 32 |
+| 会話メンバーを取得する| 2  | 32 |
 | 会話を取得する | 1  | 個 |
-| 会話を取得する | pbm-2 | 32 |
-
-## <a name="bot-per-data-center-limit"></a>データセンターあたりの Bot 数の制限
-
-この制限は、1つのデータセンター (複数のテナント) 内のすべてのスレッド間でボットが生成できるトラフィックを制御します。
-
-|**期間 (秒)** | **許可される最大操作数** |
-| --- | --- |
-| 1  | 1280 |
-| 1800 | 8000 |
-| 3600 | 15000 |
+| 会話を取得する | 2  | 32 |
