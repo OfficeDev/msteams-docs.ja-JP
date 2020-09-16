@@ -1,16 +1,16 @@
 ---
 title: コンテンツ ページを作成する
 author: laujan
-description: ''
+description: コンテンツページを作成する方法
 keywords: teams タブグループチャネルの構成可能な静的
 ms.topic: conceptual
-ms.author: v-laujan
-ms.openlocfilehash: 49cd771c45bc3c4f91a7ab5f38beaf01da712544
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.author: lajanuar
+ms.openlocfilehash: 91a7d643d3a631610989e31eae14265cd725dbd0
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434490"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47818907"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>タブのコンテンツページを作成する
 
@@ -28,7 +28,7 @@ ms.locfileid: "45434490"
 
 ## <a name="integrate-your-code-with-teams"></a>コードを Teams と統合する
 
-ページを Teams に表示するには、 [Microsoft Teams の JavaScript クライアント SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest)を含み、ページの読み込み後にの呼び出しを含める必要があり `microsoftTeams.initialize()` ます。 ページと Teams クライアントが通信する方法は次のとおりです。
+ページを Teams に表示するには、 [Microsoft Teams の JavaScript クライアント SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) を含み、ページの読み込み後にの呼び出しを含める必要があり `microsoftTeams.initialize()` ます。 ページと Teams クライアントが通信する方法は次のとおりです。
 
 ```html
 <!DOCTYPE html>
@@ -60,7 +60,7 @@ Teams のエンティティへの詳細なリンクを作成できます。 通�
 
 ### <a name="task-modules"></a>タスクモジュール
 
-タスクモジュールは、タブからトリガーできるモーダルのポップアップ表示のようなものです。通常、コンテンツページでは、複数のページを介してユーザーを移動する必要はありません。 その代わりに、タスクモジュールを使用して、追加情報を収集するためのフォームを表示したり、リスト内のアイテムの詳細を表示したり、またはその他の時間についてユーザーに追加情報を提示する必要があります。 タスクモジュール自体は、追加のコンテンツページにすることも、アダプティブカードを使用して完全に作成することもできます。 詳細については、「 [tab でタスクモジュールを使用する](~/task-modules-and-cards/task-modules/task-modules-tabs.md)」を参照してください。
+タスクモジュールとは、タブからトリガーできるモーダルなポップアップのような操作のことです。通常、コンテンツページでは、複数のページを使用してユーザーを移動する必要はありません。 その代わりに、タスクモジュールを使用して、追加情報を収集するためのフォームを表示したり、リスト内のアイテムの詳細を表示したり、またはその他の時間についてユーザーに追加情報を提示する必要があります。 タスクモジュール自体は、追加のコンテンツページにすることも、アダプティブカードを使用して完全に作成することもできます。 詳細については、「 [tab でタスクモジュールを使用する](~/task-modules-and-cards/task-modules/task-modules-tabs.md) 」を参照してください。
 
 ### <a name="valid-domains"></a>有効なドメイン
 
@@ -71,11 +71,11 @@ Teams のエンティティへの詳細なリンクを作成できます。 通�
 [マニフェストスキーマ](../../../resources/schema/manifest-schema.md)v2.0 以降では、web コンテンツが Teams ([タブのコンテンツページ](#integrate-your-code-with-teams)、[構成ページ](configuration-page.md)、[削除ページ](removal-page.md)、[タスクモジュール](../../../task-modules-and-cards/task-modules/task-modules-tabs.md)など) に読み込まれているすべての場所で、[ネイティブの読み込みインジケーター](../../../resources/schema/manifest-schema.md#showloadingindicator)を提供できます。
 
 > [!NOTE]
-> アプリマニフェストで指定する場合は、 `"showLoadingIndicator : true` すべてのタブ構成、コンテンツ、および削除ページと、すべての iframe ベースのタスクモジュールは、以下の必須プロトコルに従う必要があります。
+> アプリマニフェストで指定する場合は、  `"showLoadingIndicator : true`  すべてのタブ構成、コンテンツ、および削除ページと、すべての iframe ベースのタスクモジュールは、以下の必須プロトコルに従う必要があります。
 
 1. 読み込みインジケーターを表示するには、 `"showLoadingIndicator": true` マニフェストにを追加します。 
 2. にお問い合わせ `microsoftTeams.initialize();` ください。
-3. **省略可能**です。 画面に印刷する準備ができていて、アプリケーションのコンテンツの残りの部分を遅延ロードする必要がある場合は、を呼び出して、読み込みインジケーターを手動で非表示にすることができます。`microsoftTeams.appInitialization.notifyAppLoaded();`
+3. **省略可能**です。 画面に印刷する準備ができていて、アプリケーションのコンテンツの残りの部分を遅延ロードする必要がある場合は、を呼び出して、読み込みインジケーターを手動で非表示にすることができます。 `microsoftTeams.appInitialization.notifyAppLoaded();`
 4. **必須**。 最後に、 `microsoftTeams.appInitialization.notifySuccess()` アプリが正常に読み込まれたことを Teams に通知する呼び出しを行います。 チームは、必要に応じて、読み込みインジケーターを非表示にします。 `notifySuccess`が30秒以内に呼び出されない場合は、アプリがタイムアウトになり、[再試行] オプションのあるエラー画面が表示されることを前提としています。
 5. アプリケーションの読み込みに失敗した場合は、 `microsoftTeams.appInitialization.notifyFailure(reason);` チームにエラーがあることを知らせるための呼び出しを行うことができます。 エラー画面がユーザーに表示されます。
 

@@ -2,28 +2,23 @@
 title: タブの設計ガイドライン
 description: コンテンツとコラボレーションのタブを作成するためのガイドラインについて説明します。
 keywords: teams 設計ガイドラインリファレンスフレームワークタブの構成
-ms.openlocfilehash: 51c2d7ac445d03ed993764d964b7a5d8b69399f5
-ms.sourcegitcommit: e355f59d2d21a2d5ae36cc46acad5ed4765b42e0
+ms.openlocfilehash: b6394b164c5d57adfa4c796c89339f1586241396
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "45021616"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819040"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>すべてのタブを使用したコンテンツと会話
 
 > [!Important]
 > **モバイルクライアントのタブ**
 >
-> タブを作成するときに、 [[モバイル] のタブのガイダンス](./tabs-mobile.md)に従ってください。 タブで認証を使用している場合は、Teams の JavaScript SDK をバージョン1.4.1 以降にアップグレードする必要があります。認証は失敗します。
->
-> **モバイルの個人用 (静的) タブ:**
->
-> * 静的タブ (個人用アプリ) は、[開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md)で利用できます。
-> * 静的タブを作成する際には、「[モバイルのタブのガイダンス](~/tabs/design/tabs-mobile.md)」に従ってください。
+> タブを作成するときに、 [[モバイル] のタブのガイダンス](./tabs-mobile.md) に従ってください。 タブで認証を使用している場合は、Teams の JavaScript SDK をバージョン1.4.1 以降にアップグレードする必要があります。認証は失敗します。
 >
 > **モバイルのチャネル/グループ (構成可能) のタブ:**
 >
-> * モバイルクライアントは、の値があるタブのみを表示 `websiteUrl` します。 チームのモバイルクライアントにタブを表示する場合は、の値を設定する必要があり `websiteUrl` ます。
+> * モバイルクライアントは、の値を持つ構成可能なタブのみを表示 `websiteUrl` します。 チームのモバイルクライアントにタブを表示する場合は、の値を設定する必要があり `websiteUrl` ます。
 > * モバイルでの既定のオープン動作は、を使用してブラウザーの外部で開くことが `websiteUrl` できます。 公開アプリストアに発行されたアプリの場合、[チャネル] タブを既定でオンにするには、 [[モバイル] のタブのガイダンス](~/tabs/design/tabs-mobile.md)に従って、サポート担当者に連絡して、ホワイトリストを要求します。
 
 タブは、チームの有機ワークフロー内でコンテンツを共有し、会話を保持し、サードパーティのサービスをホストするために使用できるキャンバスです。 Microsoft Teams でタブを作成すると、主要な会話から簡単にアクセスできるように、web アプリのフロントおよび中央が配置されます。
@@ -42,7 +37,7 @@ ms.locfileid: "45021616"
 
 ### <a name="integration"></a>統合
 
-会話に[アダプティブカード](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)を投稿することで、ユーザーにタブアクティビティについて通知する方法を検索します。
+会話に [アダプティブカード](../../task-modules-and-cards/what-are-cards.md#adaptive-cards) を投稿することで、ユーザーにタブアクティビティについて通知する方法を検索します。
 
 ### <a name="conversational"></a>会話性
 
@@ -58,7 +53,7 @@ Teams は、ウィンドウのサイズが720ピクセルの場合に使用で�
 
 ### <a name="flat-navigation"></a>フラットナビゲーション
 
-開発者は、ポータル全体をタブに追加しないようにしてください。ナビゲーションを比較的フラットに保つことにより、より単純な会話モデルが維持されます。 言い換えると、会話は、トリアージされた作業項目、または仕様のような1つの事柄の一覧についてのものです。
+開発者は、ポータル全体をタブに追加しないようにしてください。ナビゲーションを比較的フラットに維持すると、より単純な会話モデルが維持されます。 言い換えると、会話は、トリアージされた作業項目、または仕様のような1つの事柄の一覧についてのものです。
 
 スレッド化された会話内に深いナビゲーション階層を使用して、固有のナビゲーションの課題があります。 ユーザーにとって最適な操作を行うには、タブナビゲーションを最小限に抑え、次のように設計する必要があります。
 
@@ -99,11 +94,13 @@ Teams は、ウィンドウのサイズが720ピクセルの場合に使用で�
 ## <a name="configuration-page-height"></a>構成ページの高さ
 
 >[!IMPORTANT]
->2018年9月に、[タブの[構成] ページ](~/tabs/how-to/create-tab-pages/configuration-page.md)の高さが変更されましたが、幅は変更されませんでした。 アプリが古いサイズを対象として設計されている場合は、タブの構成ページに大きな縦方向の空白があります。 この変更によって除外された従来のストアアプリは、新しいディメンションに対応するために、更新後に Microsoft に連絡する必要があります。
+>2018年9月に、[タブの [構成] ページ](~/tabs/how-to/create-tab-pages/configuration-page.md) の高さが変更されましたが、幅は変更されませんでした。 アプリが古いサイズを対象として設計されている場合は、タブの構成ページに大きな縦方向の空白があります。 この変更によって除外された従来のストアアプリは、新しいディメンションに対応するために、更新後に Microsoft に連絡する必要があります。
 
 [タブの構成] ページのサイズ:
 
-<img width="450px" title="構成タブのサイズ" src="~/assets/images/tabs/config-dialog-Contoso2.png" />
+
+<img width="450px" title="構成タブのサイズ" src="~/assets/images/tabs/config-dialog-Contoso2.png" alt="sizes for config tabs" />
+
 
 ### <a name="guidelines-for-tab-configuration-page-format"></a>タブ構成ページ形式に関するガイドライン
 
@@ -117,7 +114,7 @@ Teams は、ウィンドウのサイズが720ピクセルの場合に使用で�
 
 適切なサイズに設定すると、タブの構成ページは次のようになります。
 
-<img width="450px" title="[新しい構成] タブ" src="~/assets/images/tabs/config-dialog-Contoso.png" />
+<img width="450px" title="[新しい構成] タブ" src="~/assets/images/tabs/config-dialog-Contoso.png" alt="new config tab"/>
 
 ## <a name="best-practices"></a>ベスト プラクティス
 
@@ -139,7 +136,7 @@ Teams は、ウィンドウのサイズが720ピクセルの場合に使用で�
 
 > [!div class="checklist"]
 >
-> * **アプリ api を使用して、ユーザーに変更を通知**します。 このメッセージは、ユーザーのアクティビティフィードに表示され、タブに深くリンクします。「[Microsoft Teams のコンテンツと機能への詳細なリンクの作成](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest) *」を参照してください*。  
+> * **アプリ api を使用して、ユーザーに変更を通知**します。 このメッセージは、ユーザーのアクティビティフィードに表示され、タブに深くリンクします。「[Microsoft Teams のコンテンツと機能への詳細なリンクの作成](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true ) *」を参照してください*。  
 > * **Bot を使用**します。 このメソッドは、特に Tab スレッドが対象の場合に適しています。 その結果、タブのスレッド化されたスレッドは、最近アクティブな状態で表示されるようになります。 また、このメソッドを使用すると、通知の送信方法をいくらか洗練することができます。
 
-  Tab スレッドにメッセージを送信すると、すべてのユーザーに対して明示的に通知することなく、すべてのユーザーに対するアクティビティの認識が向上します。 これは、ノイズなしで認識されます。 さらに、特定の `@mention` ユーザーがフィードに同じ通知を配置する場合は、それらをタブスレッドに直接リンクします。
+  Tab スレッドにメッセージを送信すると、すべてのユーザーに対して明示的に通知することなく、すべてのユーザーに対するアクティビティの認識が向上します。 これは、ノイズなしで認識されます。 さらに、特定の `@mention`  ユーザーがフィードに同じ通知を配置する場合は、それらをタブスレッドに直接リンクします。

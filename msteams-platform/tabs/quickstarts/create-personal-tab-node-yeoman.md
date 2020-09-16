@@ -1,22 +1,22 @@
 ---
-title: 'クイックスタート: node.js を使用してカスタムの個人用タブを作成し、Microsoft Teams 用の Outlook を使用します。'
+title: 'クイックスタート: Node.js と Microsoft Teams 用のごみ箱のジェネレーターを使用して、カスタムの個人用タブを作成します。'
 author: laujan
 description: Microsoft Teams 用のごみ箱のジェネレーターを使用して、個人用タブを作成するためのクイックスタートガイド。
 ms.topic: quickstart
-ms.author: laujan
-ms.openlocfilehash: 2d1b17360b92a161179091c1f6ba06ffa194e958
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.author: lajanuar
+ms.openlocfilehash: e39878d117b0b1b1f8c0e2450021d9238f5b7877
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674618"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47818886"
 ---
-# <a name="quickstart-create-a-custom-personal-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>クイックスタート: node.js を使用してカスタムの個人用タブを作成し、Microsoft Teams 用の Outlook を使用します。
+# <a name="quickstart-create-a-custom-personal-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>クイックスタート: Node.js と Microsoft Teams 用のごみ箱のジェネレーターを使用して、カスタムの個人用タブを作成します。
 
 >[!NOTE]
->このクイックスタートは、「Microsoft OfficeDev GitHub リポジトリにある[最初の Microsoft Teams アプリ](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)Wiki を構築する」に記載されている手順に従います。
+>このクイックスタートは、「Microsoft OfficeDev GitHub リポジトリにある [最初の Microsoft Teams アプリ](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki を構築する」に記載されている手順に従います。
 
-このクイックスタートでは、Teams の [[オマーン] ジェネレーター](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)を使用して、カスタムの個人用タブを作成する手順を順を追って説明します。 また、アプリケーションをチームにアップロードします。
+このクイックスタートでは、Teams の [ [オマーン] ジェネレーター](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)を使用して、カスタムの個人用タブを作成する手順を順を追って説明します。 また、アプリケーションをチームにアップロードします。
 
 [!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
 
@@ -25,15 +25,15 @@ ms.locfileid: "41674618"
 方向キーを使用して、[静的] タブを選択します。
 
 >[!IMPORTANT]
->このクイックスタートで参照される path コンポーネントの*Defaulttabnametab*は、[*既定のタブ名*] と [word *] タブ*に入力した値です。
+>このクイックスタートで参照される path コンポーネントの *Defaulttabnametab*は、[ *既定のタブ名* ] と [word *] タブ*に入力した値です。
 >
->例: defaulttabname: *MyTab* => /*mytabtab/*
+>例: defaulttabname: *MyTab*/  =>  *mytabtab/*
 
 ## <a name="create-your-personal-tab"></a>[個人用] タブを作成する
 
 このアプリケーションに個人用タブを追加するには、コンテンツページを作成し、既存のファイルを更新します。
 
-- コードエディター**で、新しい html ファイル (.html** ) を作成し、次のマークアップを追加します。
+- コードエディターで、新しい HTML ファイルを作成し、 **personal.html** を追加して、次のマークアップを追加します。
 
 ```html
 <!DOCTYPE html>
@@ -55,19 +55,19 @@ ms.locfileid: "41674618"
 </html>
 ```
 
-- アプリケーションの**web**フォルダーに**personal .html**を保存します。
+- アプリケーションの**web**フォルダーに**personal.html**を保存します。
 
 ```bash
 ./src/app/web/<yourDefaultTabNameTab>/personal.html
 ```
 
-- コードエディターで**マニフェスト**を開きます。
+- コードエディターで **manifest.jsを** 開きます。
 
 ```bash
 ./src/manifest/manifest.json/
 ```
 
-次のものを空`staticTabs`の配列 (`staticTabs":[]`) に追加し、次の JSON オブジェクトを追加します。
+次のものを空の `staticTabs` 配列 ( `staticTabs":[]` ) に追加し、次の JSON オブジェクトを追加します。
 
 ```json
 {
@@ -82,7 +82,7 @@ ms.locfileid: "41674618"
 
 「 **Defaulttabnametab** 」という実際のタブ名を使用して、 **「contenturl」** パスコンポーネントを必ず更新してください。
 
-- 更新された**manifest**を保存します。
+- 更新した **manifest.jsをに**保存します。
 
 - コンテンツページは IFrame で提供される必要があります。 コードエディターで、次のように Tab を開きます **。**
 
@@ -96,7 +96,7 @@ ms.locfileid: "41674618"
  @PreventIframe("/<yourDefaultAppName>TabNameTab>/personal.html")
 ```
 
-- 更新した**タブの ts**ファイルを保存してください。 タブコードが完成しました。
+- 更新した **タブの ts** ファイルを保存してください。 タブコードが完成しました。
 
 ## <a name="build-and-run-your-application"></a>アプリケーションをビルドして実行する
 
@@ -104,7 +104,7 @@ ms.locfileid: "41674618"
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
-[個人用] タブを表示するには、`http://localhost:3007/<yourDefaultAppNameTab>/personal.html`
+[個人用] タブを表示するには、 `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`
 
 >![[個人用] タブのスクリーンショット](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
 
@@ -112,7 +112,7 @@ ms.locfileid: "41674618"
 
 Microsoft Teams は完全なクラウドベースの製品であり、HTTPS エンドポイントを使用してクラウドからタブのコンテンツを利用できるようにする必要があります。 Teams ではローカルホスティングが許可されていません。そのため、タブをパブリック URL に公開するか、またはプロキシを使用して、ローカルポートをインターネットに接続する URL に公開する必要があります。
 
-タブ拡張機能をテストするには、このアプリケーションに組み込まれている[ngrok](https://ngrok.com/docs)を使用します。 Ngrok はリバースプロキシソフトウェアツールであり、ローカルで実行されている web サーバーの公開された HTTPS エンドポイントへのトンネルを作成します。 サーバーの web エンドポイントは、ローカルコンピューターの現在のセッション中に使用できるようになります。 コンピューターがシャットダウンされるかスリープ状態になると、サービスは使用できなくなります。
+タブ拡張機能をテストするには、このアプリケーションに組み込まれている [ngrok](https://ngrok.com/docs)を使用します。 Ngrok はリバースプロキシソフトウェアツールであり、ローカルで実行されている web サーバーの公開された HTTPS エンドポイントへのトンネルを作成します。 サーバーの web エンドポイントは、ローカルコンピューターの現在のセッション中に使用できるようになります。 コンピューターがシャットダウンされるかスリープ状態になると、サービスは使用できなくなります。
 
 コマンドプロンプトで、localhost を終了し、次のように入力します。
 
@@ -126,10 +126,10 @@ gulp ngrok-serve
 ## <a name="upload-your-application-to-teams"></a>アプリケーションを Teams にアップロードする
 
 - Microsoft Teams クライアントを開きます。 [Web ベースのバージョン](https://teams.microsoft.com)を使用する場合は、ブラウザーの[開発者ツール](~/tabs/how-to/developer-tools.md)を使用してフロントエンドコードを調べることができます。
-- 左側の [*チーム*] パネルで、使用して`...`いるチームの横のメニューを選択して、タブのテストを行い、[**チームの管理**] を選択します。
-- メインパネルで、タブバーから [**アプリ**] を選択し、ページの右下隅にある [**カスタムアプリのアップロード**] を選択します。
-- プロジェクトディレクトリを開き、 **./パッケージ**フォルダーを参照し、zip フォルダーを選択して右クリックし、[**開く**] を選択します。 タブが Teams にアップロードされます。
+- 左側の [ *チーム* ] パネルで、 `...` 使用しているチームの横のメニューを選択して、タブのテストを行い、[ **チームの管理**] を選択します。
+- メインパネルで、タブバーから [ **アプリ** ] を選択し、ページの右下隅にある [ **カスタムアプリのアップロード** ] を選択します。
+- プロジェクトディレクトリを開き、 **./パッケージ** フォルダーを参照し、zip フォルダーを選択して右クリックし、[ **開く**] を選択します。 タブが Teams にアップロードされます。
 
 ## <a name="view-your-personal-tabs"></a>個人用タブの表示
 
-Teams クライアントの左端にあるナビゲーションバーで、 `...`メニューを選択し、リストからアプリを選択します。
+Teams クライアントの左端にあるナビゲーションバーで、メニューを選択し、 `...` リストからアプリを選択します。

@@ -1,46 +1,46 @@
 ---
-title: 会話の基礎
+title: 会話の基本
 author: clearab
 description: Microsoft Teams bot との会話を行う方法
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 2d241ad04509c596e97647138bab2a749fa0f74c
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: bc016a8f0dcce474f80898dc93e309692ba20471
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674768"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819054"
 ---
-# <a name="conversation-basics"></a>会話の基礎
+# <a name="conversation-basics"></a>会話の基本
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-会話とは、ボットと1人以上のユーザーとの間で送信される一連のメッセージのことです。 Teams には、次の3種類の会話 (スコープとも呼ばれる) があります。
+会話は、ボットと 1 人以上のユーザーとの間でやり取りされる一連のメッセージです。 Teams には、次の 3 種類の会話 (スコープとも呼ばれる) があります。
 
-* `teams`チャネルの会話とも呼ばれ、チャネルのすべてのメンバーに表示されます。
-* `personal`ボットと1人のユーザーとの会話。
-* `groupChat`ボットと2人以上のユーザーとの間でチャットを行います。 また、会議チャットでボットを有効にします。
+* `teams` チャネルの会話とも呼ばれ、チャネルのすべてのメンバーに表示されます。
+* `personal` ボットと1人のユーザーとの会話。
+* `groupChat` ボットと2人以上のユーザーとの間でチャットを行います。 また、会議チャットでボットを有効にします。
 
 Bot は、関係する会話の種類に応じて、微妙に動作が異なります。
 
 * チャネルおよびグループチャットの会話に含まれる bot は、ユーザーがチャネルで bot を呼び出すようにボットに言及する必要があります。
-* 一対一の会話の bot には、@ メンションは必要ありません。 ユーザーによって送信されるすべてのメッセージは bot にルーティングされます。
+* 一対一の会話の bot には、@ メンションは必要ありません。 ユーザーによって送信されたすべてのメッセージがボットにルーティングされます。
 
-特定のスコープでボットを有効にするには、そのスコープを[アプリのマニフェスト](~/resources/schema/manifest-schema.md)に追加します。
+特定のスコープでボットを有効にするには、そのスコープを [アプリのマニフェスト](~/resources/schema/manifest-schema.md)に追加します。
 
 ## <a name="activities"></a>アクティビティ
 
-各メッセージは、 `Activity`型`messageType: message`のオブジェクトです。 ユーザーがメッセージを送信すると、Teams がメッセージを bot に投稿します。具体的には、ユーザーは bot のメッセージングエンドポイントに JSON オブジェクトを送信します。 Bot は、メッセージを調べて、その種類を特定し、それに応じて応答します。
+各メッセージは `messageType: message` 型の `Activity` オブジェクトです。 ユーザーがメッセージを送信すると、Teams はそのメッセージをボットに投稿します。具体的には、ボットのメッセージング エンドポイントに JSON オブジェクトを送信します。 Bot は、メッセージを調べて、その種類を特定し、それに応じて応答します。
 
 基本的な会話は Bot フレームワークコネクタを介して処理されます。これは、ボットが Teams やその他のチャネルと通信できるようにするための1つの REST API です。 Bot ビルダー SDK は、この API への簡単なアクセス、会話フローと状態を管理するための追加機能、自然言語処理 (NLP) などの認知サービスを簡単に組み込むための簡単な方法を提供します。
 
 ## <a name="receive-a-message"></a>メッセージを受信する
 
-テキストメッセージを受信するには、 `Text` `Activity`オブジェクトのプロパティを使用します。 Bot のアクティビティハンドラーで、turn コンテキストオブジェクト`Activity`を使用して1つのメッセージ要求を読み取ります。
+テキスト メッセージを受信するには、`Activity` オブジェクトの `Text` プロパティを使用します。 ボットのアクティビティ ハンドラーで、ターン コンテキスト オブジェクトの `Activity` を使用して、1 つのメッセージ要求を読み取ります。
 
 次のコードは例を示しています。
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -50,7 +50,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node.js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 
@@ -66,7 +66,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 <!-- Verify -->
 ```python
@@ -76,7 +76,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -121,21 +121,21 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ---
 
-## <a name="send-a-message"></a>メッセージの送信
+## <a name="send-a-message"></a>メッセージを送信する
 
-テキストメッセージを送信するには、アクティビティとして送信する文字列を指定します。 Bot のアクティビティハンドラーで、turn コンテキストオブジェクトの`SendActivityAsync`メソッドを使用して、1つのメッセージ応答を送信します。 オブジェクトのメソッドを使用して`SendActivitiesAsync` 、一度に複数の応答を送信することもできます。 次のコードは、会話に他のユーザーが追加されたときにメッセージを送信する例を示しています。  
+テキスト メッセージを送信するには、送信する文字列をアクティビティとして指定します。 ボットのアクティビティ ハンドラーで、ターン コンテキスト オブジェクトの `SendActivityAsync` メソッドを使用して、1 つのメッセージ応答を送信します。 オブジェクトのメソッドを使用して、 `SendActivitiesAsync` 一度に複数の応答を送信することもできます。 次のコードは、会話に他のユーザーが追加されたときにメッセージを送信する例を示しています。  
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
-protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
 {
   await turnContext.SendActivityAsync(MessageFactory.Text($"Hello and welcome!"), cancellationToken);
 }
 
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node.js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 
@@ -150,7 +150,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 <!-- Verify -->
 
@@ -165,7 +165,7 @@ async def on_members_added_activity(
 
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -212,22 +212,22 @@ async def on_members_added_activity(
 
 ## <a name="teams-channel-data"></a>Teams チャネルデータ
 
-この`channelData`オブジェクトには Teams 固有の情報が含まれており、チームおよびチャネル id の最終ソースとなります。 これらの id をローカルストレージのキーとしてキャッシュして使用する必要がある場合があります。 通常`TeamsActivityHandler` 、SDK のでは、 `channelData`オブジェクトから重要な情報を取得して、アクセスしやすいようにします。ただし、 `turnContext`オブジェクトから元の情報にいつでもアクセスできます。
+この `channelData` オブジェクトには Teams 固有の情報が含まれており、チームおよびチャネル id の最終ソースとなります。 これらの id をローカルストレージのキーとしてキャッシュして使用する必要がある場合があります。 通常、SDK のでは、 `TeamsActivityHandler` オブジェクトから重要な情報を取得し `channelData` て、アクセスしやすいようにします。ただし、オブジェクトから元の情報にいつでもアクセスでき `turnContext` ます。
 
-この`channelData`オブジェクトは、チャネルの外側で行われるため、個人の会話のメッセージには含まれません。
+`channelData`このオブジェクトは、チャネルの外側で行われるため、個人の会話のメッセージには含まれません。
 
 Bot に送信されるアクティビティの一般的な channelData オブジェクトには、次の情報が含まれています。
 
 * `eventType`Teams イベントの種類。[チャネル変更イベント](~/bots/how-to/conversations/subscribe-to-conversation-events.md)の場合にのみ渡されます。
-* `tenant.id`Azure Active Directory テナント ID。すべてのコンテキストで渡される
-* `team`チャネルコンテキストでのみ渡され、個人用チャットには渡されません。
-  * `id`チャネルの GUID
+* `tenant.id` Azure Active Directory テナント ID。すべてのコンテキストで渡される
+* `team` チャネルコンテキストでのみ渡され、個人用チャットには渡されません。
+  * `id` チャネルの GUID
   * `name`チームの名前。[チームの名前変更イベント](~/bots/how-to/conversations/subscribe-to-conversation-events.md)の場合にのみ渡される
-* `channel`Bot が言及された場合、または bot が追加されている teams のチャネルでイベントが発生した場合に、チャネルコンテキストでのみ渡されます。
-  * `id`チャネルの GUID
-  * `name`チャネル名。[チャネル変更イベント](~/bots/how-to/conversations/subscribe-to-conversation-events.md)の場合にのみ渡されます。
-* `channelData.teamsTeamId`予定. このプロパティは、下位互換性のためにのみ含まれています。
-* `channelData.teamsChannelId`予定. このプロパティは、下位互換性のためにのみ含まれています。
+* `channel` Bot が言及された場合、または bot が追加されている teams のチャネルでイベントが発生した場合に、チャネルコンテキストでのみ渡されます。
+  * `id` チャネルの GUID
+  * `name` チャネル名。 [チャネル変更イベント](~/bots/how-to/conversations/subscribe-to-conversation-events.md)の場合にのみ渡されます。
+* `channelData.teamsTeamId` 予定. このプロパティは、下位互換性のためにのみ含まれています。
+* `channelData.teamsChannelId` 予定. このプロパティは、下位互換性のためにのみ含まれています。
 
 ### <a name="example-channeldata-object-channelcreated-event"></a>ChannelData オブジェクトの例 (Channeldata イベント)
 
@@ -251,18 +251,18 @@ Bot に送信されるアクティビティの一般的な channelData オブジ
 
 Bot は、リッチテキスト、画像、およびカードを送信できます。 ユーザーは bot にリッチテキストと画像を送信できます。
 
-| Format    | ユーザーから bot | Bot からユーザー | メモ                                                                                   |
+| フォーマット    | ユーザーから bot | Bot からユーザー | Notes                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | リッチ テキスト  | ✔                | ✔                |                                                                                         |
 | ピクチャ  | ✔                | ✔                | 最高1024×1024、1 MB (PNG、JPEG、または GIF 形式)アニメーション GIF はサポートされていません  |
-| Lcc     | ✖                | ✔                | サポートされているカードについては、 [Teams カードリファレンス](~/task-modules-and-cards/cards/cards-reference.md)を参照してください。 |
+| カード     | ✖                | ✔                | サポートされているカードについては、 [Teams カードリファレンス](~/task-modules-and-cards/cards/cards-reference.md) を参照してください。 |
 | 絵文字    | ✖                | ✔                | 現在、Teams は utf-16 を介して絵文字をサポートしています (grinning フェイスの U + 1f600 など)          |
 
 ## <a name="adding-notifications-to-your-message"></a>メッセージに通知を追加する
 
-通知ユーザーが作業していることに関連する新しいタスク、メンション、コメントについてユーザーに警告するか、アクティビティフィードに通知を挿入して確認する必要があります。 " `TeamsChannelData` Objects/オブジェクト`Notification.Alert` " プロパティを true に設定することによって、ボットメッセージからトリガに対する通知を設定することができます。 通知が発生するかどうかは、最終的に個々のユーザーの Teams 設定に依存し、これらの設定をプログラムで上書きすることはできません。 通知の種類は、バナーまたはバナーと電子メールの両方のいずれかになります。
+通知ユーザーが作業していることに関連する新しいタスク、メンション、コメントについてユーザーに警告するか、アクティビティフィードに通知を挿入して確認する必要があります。 `TeamsChannelData`"Objects/オブジェクト `Notification.Alert` " プロパティを true に設定することによって、ボットメッセージからトリガに対する通知を設定することができます。 通知が発生するかどうかは、最終的に個々のユーザーの Teams 設定に依存し、これらの設定をプログラムで上書きすることはできません。 通知の種類は、バナーまたはバナーと電子メールの両方のいずれかになります。
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -274,7 +274,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[TypeScript/node.js](#tab/typescript)
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -288,7 +288,7 @@ this.onMessage(async (turnContext, next) => {
 });
 ```
 
-# <a name="pythontabpython"></a>[Python](#tab/python)
+# <a name="python"></a>[Python](#tab/python)
 
 ```python
 
@@ -300,7 +300,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -335,16 +335,16 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## <a name="picture-messages"></a>画像メッセージ
 
-画像は、メッセージに添付ファイルを追加することによって送信されます。 添付ファイルの詳細については、[ボットフレームワークのドキュメント](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0)を参照してください。
+画像は、メッセージに添付ファイルを追加することによって送信されます。 添付ファイルの詳細については、 [ボットフレームワークのドキュメント](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0)を参照してください。
 
 画像は最大1024×1024で、PNG、JPEG、または GIF 形式の 1 MB にすることができます。アニメーション GIF はサポートされていません。
 
-XML を使用して、各画像の高さと幅を指定することをお勧めします。 Markdown を使用する場合、画像のサイズは既定で256×256に設定されています。 例:
+XML を使用して、各画像の高さと幅を指定することをお勧めします。 Markdown を使用する場合、画像のサイズは既定で256×256に設定されています。 以下に例を示します。
 
-* 使え`<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
-* を使用しない-`![Duck on a rock](http://aka.ms/Fo983c)`
+* 使え `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
+* を使用しない- `![Duck on a rock](http://aka.ms/Fo983c)`
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 * [事前メッセージの送信](~/bots/how-to/conversations/send-proactive-messages.md)
 * [会話イベントにサブスクライブする](~/bots/how-to/conversations/subscribe-to-conversation-events.md)

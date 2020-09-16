@@ -2,17 +2,17 @@
 title: モバイルのタブ
 description: モバイルで使用できるタブの設計ガイドラインについて説明します。
 keywords: teams デザインガイドラインリファレンスフレームワーク個人用アプリモバイルタブ
-ms.openlocfilehash: ac547e74fd56e4f1da6c731959d8bb59dbe48213
-ms.sourcegitcommit: 26b7404142706290810064f8216abaa1c262d1e5
+ms.openlocfilehash: d47039c245b8e262af6e1f60bc0c644dc7e65bd6
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "45145927"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819047"
 ---
 # <a name="tabs-on-mobile"></a>モバイルのタブ
 
 > [!NOTE]
-> Teams モバイル クライアントに [チャネル/グループ] タブを表示するように選択した場合は、`setSettings()` 構成には `websiteUrl` プロパティの値を設定する必要があります (下記参照)。 [個人] タブは現在、[開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md)で利用できます。 モバイル クライアントでのタブの完全なサポートは、間もなくリリースされる予定です。 更新プログラムの準備をするには、タブを作成するときに、ここに示す手順を実行する必要があります。
+> Teams モバイル クライアントに [チャネル/グループ] タブを表示するように選択した場合は、`setSettings()` 構成には `websiteUrl` プロパティの値を設定する必要があります (下記参照)。
 
 カスタムタブは、チャネル、グループチャット、または個人アプリの一部にすることができます (静的タブを含むアプリ、または1対1の bot を含むアプリ)。
 
@@ -28,11 +28,11 @@ ms.locfileid: "45145927"
 
 ### <a name="testing-on-mobile-clients"></a>モバイルクライアントでのテスト
 
-さまざまなサイズと品質のモバイルデバイスでタブが正しく機能することを検証する必要があります。 Android デバイスの場合、 [Devtools](~/tabs/how-to/developer-tools.md)を使用して、実行中にタブをデバッグできます。 高および低パフォーマンスのデバイスに加えて、タブレット上でテストすることをお勧めします。
+さまざまなサイズと品質のモバイルデバイスでタブが正しく機能することを検証する必要があります。 Android デバイスの場合、 [Devtools](~/tabs/how-to/developer-tools.md) を使用して、実行中にタブをデバッグできます。 高および低パフォーマンスのデバイスに加えて、タブレット上でテストすることをお勧めします。
 
 ### <a name="responsive-design"></a>レスポンシブ デザイン
 
-タブはさまざまな画面サイズのデバイス上で開くことができるため、[応答性](https://www.w3schools.com/html/html_responsive.asp)の高い設計原則に従う必要があります。 すべてのキーの構成はモバイルデバイスでアクセスできる必要があり、ビューがゆがんではないことが必要です。 タブがモバイルデバイスにロードされている場合、すべてのボタンとリンクは、finger ベースのナビゲーションを使用して簡単にアクセスできます。
+タブはさまざまな画面サイズのデバイス上で開くことができるため、 [応答性](https://www.w3schools.com/html/html_responsive.asp) の高い設計原則に従う必要があります。 すべてのキーの構成はモバイルデバイスでアクセスできる必要があり、ビューがゆがんではないことが必要です。 タブがモバイルデバイスにロードされている場合、すべてのボタンとリンクは、finger ベースのナビゲーションを使用して簡単にアクセスできます。
 
 ### <a name="authentication"></a>認証
 
@@ -92,7 +92,7 @@ ms.locfileid: "45145927"
 
 ボタンのスタイルを設定すると、どのような種類の動作が発生したかを伝えることができます。 さまざまな強調レベルを表示するように書式設定されたさまざまなボタンを維持しています。 ボタンには、テキスト、アイコン、またはテキストとアイコンの組み合わせを含めることができます。 階層内のさまざまなレベルを通信するために、各カテゴリ内に主ボタンと副ボタンを設計しました。
 
-![リモコン](~/assets/images/buttons.png)
+![ボタンの画像](~/assets/images/buttons.png)
 
 ![選択コントロール](~/assets/images/selection-controls.png)
 

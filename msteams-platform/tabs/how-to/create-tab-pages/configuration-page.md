@@ -1,20 +1,20 @@
 ---
 title: 構成ページを作成する
 author: laujan
-description: ''
+description: 構成ページを作成する方法
 keywords: 構成可能な teams タブグループチャネル
 ms.topic: conceptualF
-ms.author: laujan
-ms.openlocfilehash: 55fe1efca4defacf10b9be34f788704b7b4491f5
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.author: lajanuar
+ms.openlocfilehash: 6288fc8c296ebf0aa85ffe8e08234e5faf22a1ef
+ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434483"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "47819026"
 ---
 # <a name="create-a-configuration-page"></a>構成ページを作成する
 
-構成ページは、ユーザーが Teams アプリのいくつかの側面を構成できる特別な種類の[コンテンツページ](content-page.md)です。 通常は、次の一部として使用されます。
+構成ページは、ユーザーが Teams アプリのいくつかの側面を構成できる特別な種類の [コンテンツページ](content-page.md) です。 通常は、次の一部として使用されます。
 
 * [チャネルまたはグループチャット] タブ-[構成] ページでは、ユーザーから情報を収集し、 `contentUrl` 表示するコンテンツページのを設定できます。
 * [メッセージング拡張機能](~/messaging-extensions/what-are-messaging-extensions.md)
@@ -22,7 +22,7 @@ ms.locfileid: "45434483"
 
 ## <a name="configuring-a-channel-or-group-chat-tab"></a>チャネルまたはグループの [チャット] タブの構成
 
-構成ページがコンテンツページに表示される方法を通知します。 アプリケーションは、 [Microsoft Teams の JavaScript クライアント SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest)および呼び出しを参照する必要があり `microsoft.initialize()` ます。 さらに、Url は、セキュリティで保護された HTTPS エンドポイントであり、クラウドから入手可能である必要があります。 構成ページの例を次に示します。
+構成ページがコンテンツページに表示される方法を通知します。 アプリケーションは、 [Microsoft Teams の JavaScript クライアント SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) および呼び出しを参照する必要があり `microsoft.initialize()` ます。 さらに、Url は、セキュリティで保護された HTTPS エンドポイントであり、クラウドから入手可能である必要があります。 構成ページの例を次に示します。
 
 ```html
 <head>
@@ -79,32 +79,32 @@ ms.locfileid: "45434483"
 ...
 ```
 
-ここでは、ユーザーに2つのオプションボタンを表示し、[**灰色**] または **[赤**] を選択してタブのコンテンツを赤または灰色のアイコンで表示します。 [相対] ボタンを選択する `saveGray()` `saveRed()` と、次のように起動されます。
+ここでは、ユーザーに2つのオプションボタンを表示し、[ **灰色** ] または **[赤** ] を選択してタブのコンテンツを赤または灰色のアイコンで表示します。 [相対] ボタンを選択する `saveGray()` `saveRed()` と、次のように起動されます。
 
 1. `settings.setValidityState(true)`は true に設定されています。
 1. `microsoftTeams.settings.registerOnSaveHandler()`イベントハンドラーがトリガーされます。
-1. アプリの [構成] ページの [**保存**] ボタン (Teams にアップロードされたもの) は有効になっています。
+1. アプリの [構成] ページの [ **保存** ] ボタン (Teams にアップロードされたもの) は有効になっています。
 
 このコードを使用すると、構成の要件が満たされており、インストールを続行できることがわかります。 **Save**では、のパラメーターは、 `settings.setSettings()` インターフェイスの定義に従って、現在のインスタンスに対して設定され `Settings` ます (「 [Settings interface](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest) 」を参照してください)。 最後に、 `saveEvent.notifySuccess()` は、コンテンツ URL が正常に解決されたことを示すためにを呼び出します。
 
 >[!NOTE]
 >
 >* を使用して保存ハンドラーを登録した場合 `microsoftTeams.settings.registerOnSaveHandler()` は、コールバックが起動する `saveEvent.notifySuccess()` か、 `saveEvent.notifyFailure()` 構成の結果を示す必要があります。
->* 保存ハンドラーが登録されていない場合は、 `saveEvent.notifySuccess()` ユーザーが [**保存**] ボタンを選択すると、その時点で通話が自動的に実行されます。
+>* 保存ハンドラーが登録されていない場合は、 `saveEvent.notifySuccess()` ユーザーが [ **保存** ] ボタンを選択すると、その時点で通話が自動的に実行されます。
 
 ### <a name="get-context-data-for-your-tab-settings"></a>タブ設定のコンテキストデータを取得する
 
 タブには、関連するコンテンツを表示するためにコンテキスト情報が必要な場合があります。 コンテキスト情報を使用すると、よりカスタマイズされたユーザー環境を提供することにより、タブの外観をさらに向上させることができます。
 
-Teams[コンテキストインターフェイス](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest)は、タブの構成に使用できるプロパティを定義します。 コンテキストデータ変数の値は、次の2つの方法で収集できます。
+Teams [コンテキストインターフェイス](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) は、タブの構成に使用できるプロパティを定義します。 コンテキストデータ変数の値は、次の2つの方法で収集できます。
 
 1. マニフェスト内に URL クエリ文字列プレースホルダーを挿入 `configurationURL` します。
 
 1. [TEAMS SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest)メソッドを使用し `microsoftTeams.getContext((context) =>{}` ます。
 
-#### <a name="insert-placeholders-in-the-configurationurl"></a>にプレースホルダーを挿入します。`configurationURL`
+#### <a name="insert-placeholders-in-the-configurationurl"></a>にプレースホルダーを挿入します。 `configurationURL`
 
-コンテキストインターフェイスプレースホルダーは、ベースに追加でき `configurationUrl` ます。 例:
+コンテキストインターフェイスプレースホルダーは、ベースに追加でき `configurationUrl` ます。 以下に例を示します。
 
 ##### <a name="base-url"></a>ベース Url
 
@@ -139,7 +139,7 @@ document.write(getId());
 
 ### <a name="use-the-getcontext-function-to-retrieve-context"></a>関数を使用して `getContext()` コンテキストを取得する
 
-呼び出されると、 `microsoftTeams.getContext((context) => {})` 関数は[コンテキストインターフェイス](/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest)を取得します。 この関数を構成ページに追加して、コンテキストの値を取得できます。
+呼び出されると、 `microsoftTeams.getContext((context) => {})` 関数は [コンテキストインターフェイス](/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest)を取得します。 この関数を構成ページに追加して、コンテキストの値を取得できます。
 
 ```html
 <!-- `userPrincipalName` will render in the span with the id "user". -->
@@ -157,12 +157,12 @@ document.write(getId());
 
 ## <a name="context-and-authentication"></a>コンテキストと認証
 
-ユーザーにアプリの構成を許可する前に認証が必要な場合や、独自の認証プロトコルを使用するソースがコンテンツに含まれている場合があります。 「 [Microsoft Teams でユーザーを認証する」タブ](~/tabs/how-to/authentication/auth-flow-tab.md)コンテキスト情報は、認証要求および承認ページの url を構築するのに役立ちます。
+ユーザーにアプリの構成を許可する前に認証が必要な場合や、独自の認証プロトコルを使用するソースがコンテンツに含まれている場合があります。 「 [Microsoft Teams でユーザーを認証する」タブ](~/tabs/how-to/authentication/auth-flow-tab.md) コンテキスト情報は、認証要求および承認ページの url を構築するのに役立ちます。
 タブページで使用されているすべてのドメインが配列に含まれていることを確認してください `manifest.json` `validDomains` 。
 
 ## <a name="modify-or-remove-a-tab"></a>タブを変更または削除する
 
-サポートされている削除オプションでは、ユーザーの作業をさらに絞り込むことができます。 ユーザーがマニフェストのプロパティをに設定して、グループ/チャネルタブの変更、再構成、または名前の変更を行うことができるようになり `canUpdateConfiguration` `true` ます。  また、アプリに [削除オプション] ページを含め、構成内のプロパティの値を設定することによって、タブが削除されたときにコンテンツに何が起こるかを指定でき `removeUrl` `setSettings()` ます (以下を参照)。 個人用タブは変更できませんが、ユーザーがアンインストールすることはできます。 詳細については、「[タブの削除ページを作成する](~/tabs/how-to/create-tab-pages/removal-page.md)」を参照してください。
+サポートされている削除オプションでは、ユーザーの作業をさらに絞り込むことができます。 ユーザーがマニフェストのプロパティをに設定して、グループ/チャネルタブの変更、再構成、または名前の変更を行うことができるようになり `canUpdateConfiguration` `true` ます。  また、アプリに [削除オプション] ページを含め、構成内のプロパティの値を設定することによって、タブが削除されたときにコンテンツに何が起こるかを指定でき `removeUrl`  `setSettings()` ます (以下を参照)。 個人用タブは変更できませんが、ユーザーがアンインストールすることはできます。 詳細については、「 [タブの削除ページを作成する](~/tabs/how-to/create-tab-pages/removal-page.md)」を参照してください。
 
 ## <a name="mobile-clients"></a>モバイル クライアント
 
