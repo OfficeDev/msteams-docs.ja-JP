@@ -1,14 +1,16 @@
 ---
-title: Teams の [チャネルの作成] タブ
 author: heath-hamilton
 description: 最初の Microsoft Teams アプリで [チャネル] タブを作成する方法について説明します。
+ms.author: lajanuar
+ms.date: 08/31/2020
 ms.topic: tutorial
-ms.openlocfilehash: f0c59328219b5611efc02c9eb04db6fdc517ca08
-ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
+title: Teams の [チャネルの作成] タブ
+ms.openlocfilehash: 2346c67d10ea857bdafbfac6d29a07cb58f5c644
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46652108"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964614"
 ---
 # <a name="create-a-channel-tab-for-teams"></a>Teams の [チャネルの作成] タブ
 
@@ -16,7 +18,7 @@ ms.locfileid: "46652108"
 
 ## <a name="before-you-begin"></a>はじめに
 
-開始するには、基本的な実行アプリが必要です。 お持ちでない場合は、「build」の手順に従って、 [Teams first app を実行して](build-and-run-with-toolkit.md)ください。 アプリプロジェクトを作成するときは、[ **グループまたはチームチャネル] タブ** のオプションのみを選択します。
+開始するには、基本的な実行アプリが必要です。 使用していない場合は、 [ビルドを実行し、Teams 最初のアプリの手順を実行](../build-your-first-app/build-and-run.md)します。 アプリプロジェクトを作成するときは、[ **グループまたはチームチャネル] タブ** のオプションのみを選択します。
 
 ## <a name="your-assignment"></a>自分の割り当て
 
@@ -28,15 +30,15 @@ ms.locfileid: "46652108"
 
 > [!div class="checklist"]
 >
-> * チャネルタブに関連するアプリマニフェストとスキャフォールディングコンポーネントを特定する
+> * チャネルタブに関連するアプリマニフェストのプロパティとスキャフォールディングを特定する
 > * タブのコンテンツを作成する
 > * タブの構成ページのコンテンツを作成する
 > * タブを構成およびインストールできるようにする
 > * 提案されたタブ名を指定する
 
-## <a name="identify-relevant-app-manifest-and-scaffolding-components"></a>関連するアプリマニフェストとスキャフォールディングコンポーネントを特定する
+## <a name="identify-relevant-app-project-components"></a>関連するアプリプロジェクトコンポーネントを特定する
 
-Teams ツールキットを使用してプロジェクトを作成すると、[チャネル] タブのスキャフォールディングとマニフェストの多くが自動的に設定されます。 [チャネル] タブを作成するための主なコンポーネントについて説明します。
+Teams ツールキットを使用してプロジェクトを作成すると、アプリマニフェストとスキャフォールディングの多くが自動的に設定されます。 [チャネル] タブを作成するための主なコンポーネントについて説明します。
 
 ### <a name="app-manifest"></a>アプリマニフェスト
 
@@ -141,7 +143,7 @@ Teams ツールキットを使用してプロジェクトを作成すると、[�
 
 ## <a name="allow-the-tab-to-be-configured-and-installed"></a>タブを構成およびインストールできるようにする
 
-ユーザーが [チャネル] タブを正しく構成してインストールするには、 [最初のアプリを作成し](build-and-run-with-toolkit.md) て構成ページコンポーネントに対して実行するときに設定するホスト URL を追加する必要があります。
+ユーザーが [チャネル] タブを正しく構成してインストールするには、 [最初のアプリを作成し](../build-your-first-app/build-and-run.md) て構成ページコンポーネントに対して実行するときに設定するホスト URL を追加する必要があります。
 
 に移動 `TabConfig.js` し、を見つけ `microsoftTeams.settings.setSettings` ます。 の場合は `"contentUrl"` 、 `localhost:3000` URL の部分を、タブの内容をホストしているドメインに置き換えます (図を見てください)。
 
@@ -177,11 +179,11 @@ Teams ツールキットを使用してプロジェクトを作成すると、[�
 1. [ **チームに追加する** ] または [ **チャットに追加** する] を選択し、テストに使用できるチャネルまたはチャットを探します。
 1. [ **タブの設定]** を選択します。[構成] ページが表示されます。
 
-:::image type="content" source="../doc-links/images/channel-tab-tutorial-content.png" alt-text="[チャネル] タブの構成ページのスクリーンショットの例":::
+:::image type="content" source="../doc-links/images/channel-tab-tutorial-content.png" alt-text="静的コンテンツを含む [チャネル] タブのスクリーンショットの例です。":::
 
 [ **保存** ] を選択してタブを構成すると、コンテンツが表示されます。
 
-![静的コンテンツを含む [チャネル] タブのスクリーンショットの例](../doc-links/images/channel-tab-tutorial-content-installed.png)
+:::image type="content" source="../doc-links/images/channel-tab-tutorial-content-installed.png" alt-text="静的コンテンツを含む [チャネル] タブのスクリーンショットの例です。":::
 
 ## <a name="well-done"></a>よくやりましたね
 
@@ -192,4 +194,11 @@ Teams ツールキットを使用してプロジェクトを作成すると、[�
 * [認証タブのユーザーに SSO を使用](../../tabs/how-to/authentication/auth-aad-sso.md)する: 承認されたユーザーのみにタブを表示する場合は、Azure Active DIRECTORY (AD) を使用してシングルサインオン (SSO) を設定します。
 * [既存の web アプリまたは web ページからコンテンツを埋め込む](../../tabs/how-to/add-tab.md#tab-requirements): [個人用] タブの新しいコンテンツを作成する方法を示しましたが、外部 URL からコンテンツを読み込むこともできます。
 * [タブに対してシームレスな環境を作成する](../../tabs/design/tabs.md): Teams タブの設計に関する推奨ガイドラインを参照してください。
-* [モバイル用のタブの作成](../../tabs/design/tabs-mobile.md): スマートフォンとタブレットのタブを開発する方法について理解します。
+* [モバイル用のタブの作成](../../tabs/design/tabs-mobile.md): 電話とタブレットのタブを開発する方法について理解します。
+
+## <a name="next-lesson"></a>次のレッスン
+
+グループ作業用のタブを作成する方法を理解していること。 別の種類の Teams アプリを作成しようとしていますか?
+
+> [!div class="nextstepaction"]
+> [Bot を構築する](../build-your-first-app/add-bot.md)

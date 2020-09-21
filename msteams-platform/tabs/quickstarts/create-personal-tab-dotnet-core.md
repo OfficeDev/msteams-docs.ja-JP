@@ -1,6 +1,16 @@
 ---
-タイトル: ASP.NET Core を使用して [個人用タブを作成する] の作成者: ASP.NET Core を使用してカスタムの個人用タブを作成するためのクイックスタートガイドです。
-ms トピック: quickstart ms. author: lajanuar
+title: ASP.NET Core を使用して [個人用] タブを作成する
+author: laujan
+description: ASP.NET コアを使用してカスタムの個人用タブを作成するためのクイックスタートガイド。
+ms.topic: quickstart
+ms.author: lajanuar
+ms.openlocfilehash: 21d1de18bfa8b7959cbecfe6eb50430ed8d3f3ec
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964579"
+---
 # <a name="create-a-custom-personal-tab-with-aspnet-core"></a>ASP.NET Core を使用してカスタムの個人用タブを作成する
 
 このクイックスタートでは、C# と ASP.Net コアの Razor ページを使用して、カスタムの個人用タブを作成する手順を説明します。 また、 [Microsoft teams 用のアプリ Studio](~/concepts/build-and-test/app-studio-overview.md) を使用して、アプリマニフェストを完成させ、タブを teams に展開します。

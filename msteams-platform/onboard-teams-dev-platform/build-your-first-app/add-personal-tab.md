@@ -3,12 +3,14 @@ title: Teams の [個人用] タブを作成する
 author: heath-hamilton
 description: 最初の Microsoft Teams アプリで [個人用] タブを作成する方法について説明します。
 ms.topic: tutorial
-ms.openlocfilehash: 1c782adce2201550d30d658907d507dc6a1337f3
-ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
+ms.author: lajanuar
+ms.date: 08/31/2020
+ms.openlocfilehash: 5dbe3a8314102807992b15e34a15c23f395c4d74
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46652107"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964600"
 ---
 # <a name="create-a-personal-tab-for-teams"></a>Teams の [個人用] タブを作成する
 
@@ -18,7 +20,7 @@ Teams には、2種類のタブがあります。 このチュートリアルで
 
 ## <a name="before-you-begin"></a>はじめに
 
-開始するには、基本的な実行アプリが必要です。 まだお持ちでない場合は、「[最初の Teams アプリを構築して実行](build-and-run-with-toolkit.md)する」を参照してください。
+開始するには、基本的に実行中の [個人用] タブが必要です。 まだお持ちでない場合は、「 [最初の Teams アプリを構築して実行](../build-your-first-app/build-and-run.md)する」を参照してください。
 
 ## <a name="your-assignment"></a>自分の割り当て
 
@@ -32,9 +34,9 @@ Teams には、2種類のタブがあります。 このチュートリアルで
 > * タブのコンテンツを作成する
 > * ユーザーの設定に基づいてタブの色のテーマを更新する
 
-## <a name="identify-relevant-app-manifest-and-scaffolding-components"></a>関連するアプリマニフェストとスキャフォールディングコンポーネントを特定する
+## <a name="identify-relevant-app-project-components"></a>関連するアプリプロジェクトコンポーネントを特定する
 
-Teams ツールキットを使用してプロジェクトを作成すると、個人タブアプリのスキャフォールディングとマニフェストの多くが自動的に設定されます。 個人タブを作成するための主なコンポーネントについて説明します。
+Teams ツールキットを使用してプロジェクトを作成すると、アプリマニフェストとスキャフォールディングの多くが自動的に設定されます。 個人タブを作成するための主なコンポーネントについて説明します。
 
 ### <a name="app-manifest"></a>アプリマニフェスト
 
@@ -108,17 +110,17 @@ Teams ツールキットを使用してプロジェクトを作成すると、�
 
 変更内容を保存します。 Teams のアプリのタブに移動して、新しいコンテンツを表示します。
 
-![静的コンテンツを含む個人用タブのスクリーンショットの例](../doc-links/images/personal-tab-tutorial-content.png)
+:::image type="content" source="../doc-links/images/personal-tab-tutorial-content.png" alt-text="静的コンテンツを含む personal tab のスクリーンショットの例":::
 
 ## <a name="update-the-tab-theme"></a>タブテーマを更新する
 
 優れたアプリは Teams にネイティブであるため、タブは、ユーザーが推奨する Teams のテーマ (既定値 (淡色)、濃い色、またはハイコントラスト) と融合することが重要です。 最後のスクリーンショットで気付いたかもしれませんが、クライアントが暗いテーマを使用している場合は、タブの背景が淡色で表示されます。 これは推奨されるユーザー環境ではありません。
 
-[Teams JavaScript クライアント SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest)を使用すると、アプリでクライアントのテーマの変更を認識し、対応することができます。 これを実行する方法について説明します。
+[Teams JavaScript クライアント SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)を使用すると、アプリでクライアントのテーマの変更を認識し、対応することができます。 これを実行する方法について説明します。
 
 ### <a name="get-context-about-the-teams-client"></a>Teams クライアントに関するコンテキストを取得する
 
-ファイルには `Tab.js` 、構成されている `microsoftTeams.getContext()` クライアントテーマをいくつかの詳細情報とともに提供する呼び出しがあり [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) ます。 アプリのスキャフォールディングにより、このコードをとして使用して、 `context` インターフェイスおよびそのプロパティにアクセスします。
+ファイルには `Tab.js` 、構成されている `microsoftTeams.getContext()` クライアントテーマをいくつかの詳細情報とともに提供する呼び出しがあり [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) ます。 アプリのスキャフォールディングにより、このコードをとして使用して、 `context` インターフェイスおよびそのプロパティにアクセスします。
 
 ```JavaScript
   componentDidMount(){
@@ -151,7 +153,7 @@ Teams ツールキットを使用してプロジェクトを作成すると、�
 テーマの変更ハンドラーは準備が整っていますが、それらの変更に応答して、タブの色を現在のテーマと揃えるコードを記述する必要があります。
 
 > [!NOTE]
-> 次の例は、タブにスタイルを適用する方法の1つにすぎません。コードをそのまま使用するか、それを展開するか、独自のコードを記述します。
+> 次の例は、タブにスタイルを適用する方法の1つにすぎません。そのコードをそのまま使用するか、それを展開するか、独自のコードを記述します。
 
 のテーマ変更ハンドラーによって提供される状態を格納 `isTheme` します。
 
@@ -179,23 +181,22 @@ Teams ツールキットを使用してプロジェクトを作成すると、�
 
 Teams のタブを確認します。 外観は、暗いテーマに密接に一致する必要があります。
 
-![静的コンテンツを含む個人用タブのスクリーンショットの例](../doc-links/images/personal-tab-tutorial-updated-theme.png)
+:::image type="content" source="../doc-links/images/personal-tab-tutorial-updated-theme.png" alt-text="静的コンテンツを含む個人用タブのスクリーンショットの例":::
 
 ## <a name="well-done"></a>よくやりましたね
 
 おめでとうございます! Teams アプリに [個人用] タブがあり、組織内で重要な連絡先を簡単に見つけられるようになりました。
-
-## <a name="next-step"></a>次の手順
-
-個人用のタブを作成する方法を理解していること。 チームチャネルとチャットのタブを構築するために必要な作業を見てみましょう。
-
-> [!div class="nextstepaction"]
-> [[チャネル] タブを作成する](add-channel-tab.md)
 
 ## <a name="learn-more"></a>詳細情報
 
 * [認証タブのユーザーに SSO を使用](../../tabs/how-to/authentication/auth-aad-sso.md)する: 承認されたユーザーのみにタブを表示する場合は、Azure Active DIRECTORY (AD) を使用してシングルサインオン (SSO) を設定します。
 * [既存の web アプリまたは web ページからコンテンツを埋め込む](../../tabs/how-to/add-tab.md#tab-requirements): [個人用] タブの新しいコンテンツを作成する方法を示しましたが、外部 URL からコンテンツを読み込むこともできます。
 * [タブに対してシームレスな環境を作成する](../../tabs/design/tabs.md): Teams タブの設計に関する推奨ガイドラインを参照してください。
-* [モバイル用のタブの作成](../../tabs/design/tabs-mobile.md): スマートフォンとタブレットのタブを開発する方法について理解します。
+* [モバイル用のタブの作成](../../tabs/design/tabs-mobile.md): 電話とタブレットのタブを開発する方法について理解します。
 
+## <a name="next-lesson"></a>次のレッスン
+
+個人用のタブを作成する方法を理解していること。 チームチャネルとチャットのタブを構築するために必要な作業を見てみましょう。
+
+> [!div class="nextstepaction"]
+> [[チャネル] タブを作成する](../build-your-first-app/add-channel-tab.md)

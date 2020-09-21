@@ -3,14 +3,14 @@ title: 構成ページを作成する
 author: laujan
 description: 構成ページを作成する方法
 keywords: 構成可能な teams タブグループチャネル
-ms.topic: conceptualF
+ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6288fc8c296ebf0aa85ffe8e08234e5faf22a1ef
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 591e1aa91bd33d1a61e9d70b35fd1561368fcda4
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47819026"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964607"
 ---
 # <a name="create-a-configuration-page"></a>構成ページを作成する
 
@@ -22,7 +22,7 @@ ms.locfileid: "47819026"
 
 ## <a name="configuring-a-channel-or-group-chat-tab"></a>チャネルまたはグループの [チャット] タブの構成
 
-構成ページがコンテンツページに表示される方法を通知します。 アプリケーションは、 [Microsoft Teams の JavaScript クライアント SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) および呼び出しを参照する必要があり `microsoft.initialize()` ます。 さらに、Url は、セキュリティで保護された HTTPS エンドポイントであり、クラウドから入手可能である必要があります。 構成ページの例を次に示します。
+構成ページがコンテンツページに表示される方法を通知します。 アプリケーションは、 [Microsoft Teams の JavaScript クライアント SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) および呼び出しを参照する必要があり `microsoft.initialize()` ます。 さらに、Url は、セキュリティで保護された HTTPS エンドポイントであり、クラウドから入手可能である必要があります。 構成ページの例を次に示します。
 
 ```html
 <head>
@@ -85,7 +85,7 @@ ms.locfileid: "47819026"
 1. `microsoftTeams.settings.registerOnSaveHandler()`イベントハンドラーがトリガーされます。
 1. アプリの [構成] ページの [ **保存** ] ボタン (Teams にアップロードされたもの) は有効になっています。
 
-このコードを使用すると、構成の要件が満たされており、インストールを続行できることがわかります。 **Save**では、のパラメーターは、 `settings.setSettings()` インターフェイスの定義に従って、現在のインスタンスに対して設定され `Settings` ます (「 [Settings interface](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest) 」を参照してください)。 最後に、 `saveEvent.notifySuccess()` は、コンテンツ URL が正常に解決されたことを示すためにを呼び出します。
+このコードを使用すると、構成の要件が満たされており、インストールを続行できることがわかります。 **Save**では、のパラメーターは、 `settings.setSettings()` インターフェイスの定義に従って、現在のインスタンスに対して設定され `Settings` ます (「 [Settings interface](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) 」を参照してください)。 最後に、 `saveEvent.notifySuccess()` は、コンテンツ URL が正常に解決されたことを示すためにを呼び出します。
 
 >[!NOTE]
 >
@@ -96,15 +96,15 @@ ms.locfileid: "47819026"
 
 タブには、関連するコンテンツを表示するためにコンテキスト情報が必要な場合があります。 コンテキスト情報を使用すると、よりカスタマイズされたユーザー環境を提供することにより、タブの外観をさらに向上させることができます。
 
-Teams [コンテキストインターフェイス](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) は、タブの構成に使用できるプロパティを定義します。 コンテキストデータ変数の値は、次の2つの方法で収集できます。
+Teams [コンテキストインターフェイス](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) は、タブの構成に使用できるプロパティを定義します。 コンテキストデータ変数の値は、次の2つの方法で収集できます。
 
 1. マニフェスト内に URL クエリ文字列プレースホルダーを挿入 `configurationURL` します。
 
-1. [TEAMS SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest)メソッドを使用し `microsoftTeams.getContext((context) =>{}` ます。
+1. [TEAMS SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)メソッドを使用し `microsoftTeams.getContext((context) =>{}` ます。
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>にプレースホルダーを挿入します。 `configurationURL`
 
-コンテキストインターフェイスプレースホルダーは、ベースに追加でき `configurationUrl` ます。 以下に例を示します。
+コンテキストインターフェイスプレースホルダーは、ベースに追加でき `configurationUrl` ます。 次に例を示します。
 
 ##### <a name="base-url"></a>ベース Url
 
@@ -139,7 +139,7 @@ document.write(getId());
 
 ### <a name="use-the-getcontext-function-to-retrieve-context"></a>関数を使用して `getContext()` コンテキストを取得する
 
-呼び出されると、 `microsoftTeams.getContext((context) => {})` 関数は [コンテキストインターフェイス](/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest)を取得します。 この関数を構成ページに追加して、コンテキストの値を取得できます。
+呼び出されると、 `microsoftTeams.getContext((context) => {})` 関数は [コンテキストインターフェイス](/javascript/api/@microsoft/teams-js//microsoftteams.context?view=msteams-client-js-latest&preserve-view=true)を取得します。 この関数を構成ページに追加して、コンテキストの値を取得できます。
 
 ```html
 <!-- `userPrincipalName` will render in the span with the id "user". -->

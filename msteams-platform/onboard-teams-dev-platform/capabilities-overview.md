@@ -1,15 +1,15 @@
 ---
 title: Teams アプリの機能について
 author: heath-hamilton
-description: Teams の機能と拡張点の概要
+description: Teams プラットフォーム機能の概要。 Teams アプリを構築するための拡張点です。
 ms.topic: overview
-ms.author: v-heha
-ms.openlocfilehash: f83cf0240b32d35028135b48e7d4c56b939777a9
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.author: lajanuar
+ms.openlocfilehash: 9bb94d2cfd5c30b2245c5ccf580d374972315e72
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47819082"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964565"
 ---
 # <a name="understanding-teams-app-capabilities"></a>Teams アプリの機能について
 

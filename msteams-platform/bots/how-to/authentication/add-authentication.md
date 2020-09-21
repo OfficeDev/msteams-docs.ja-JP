@@ -4,12 +4,12 @@ author: clearab
 description: Microsoft Teams の bot に OAuth 認証を追加する方法。
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 0ec80c558a34af70530175d340869895fd2fda81
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 403072efeccdd09e46ac93e2e811ee2d10131668
+ms.sourcegitcommit: aabfd65a67e1889ec16f09476bc757dd4a46ec5b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47819096"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "48097887"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Teams の bot に認証を追加する
 
@@ -81,7 +81,7 @@ Azure Bot サービスが認証を処理する方法の詳細については、�
 Bot チャネル登録は、Microsoft アプリ Id とアプリパスワード (クライアントシークレット) がある場合に、ボットフレームワークを使用して web サービスをボットとして登録します。
 
 > [!IMPORTANT]
-> Bot が Azure でホストされていない場合にのみ、ボットを登録する必要があります。 Azure ポータルを使用して [ボットを作成](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0) した場合は、既にサービスに登録されています。 Bot [フレームワーク](https://dev.botframework.com/bots/new) または [appstudio](~/concepts/build-and-test/app-studio-overview.md) を使用して bot を作成した場合、その bot は Azure に登録されていません。
+> Bot が Azure でホストされていない場合にのみ、ボットを登録する必要があります。 Azure ポータルを使用して [ボットを作成](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0&preserve-view=true) した場合は、既にサービスに登録されています。 Bot [フレームワーク](https://dev.botframework.com/bots/new) または [appstudio](~/concepts/build-and-test/app-studio-overview.md) を使用して bot を作成した場合、その bot は Azure に登録されていません。
 
 [!INCLUDE [bot channels registration steps](~/includes/bots/azure-bot-channels-registration.md)]
 
@@ -107,7 +107,7 @@ Bot チャネル登録は、Microsoft アプリ Id とアプリパスワード (
    1. **リダイレクト URI**の場合:<br/>
        [ **Web**] を &#x2713;選択します。 <br/>
        &#x2713; URL をに設定 `https://token.botframework.com/.auth/web/redirect` します。
-   1. **[登録]** を選択します。
+   1. [**登録**] を選択します。
 
 1. 作成されたアプリの **概要** ページが Azure に表示されます。 次の情報をコピーしてファイルに保存します。
 
@@ -124,7 +124,7 @@ Bot チャネル登録は、Microsoft アプリ Id とアプリパスワード (
 
 ### <a name="configure-the-identity-provider-connection-and-register-it-with-the-bot"></a>Id プロバイダー接続を構成し、bot に登録する
 
-注: サービスプロバイダーには、次の2つのオプションがあります。 Azure AD V1 と Azure AD V2。  [ここ](https://docs.microsoft.com/en-us/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison)では、2つのプロバイダー間の相違点について要約していますが、通常、バージョン V2 は bot のアクセス許可の変更に関してより柔軟に対応しています。  Graph API のアクセス許可は、[範囲] フィールドに一覧表示されており、新しいものが追加されたときに、ボットを使用すると、ユーザーは次のサインイン時に新しいアクセス許可に同意することができます。  V1 の場合、新しい権限を OAuth ダイアログで確認するには、ユーザーが bot の同意を削除する必要があります。 
+注: サービスプロバイダーには、次の2つのオプションがあります。 Azure AD V1 と Azure AD V2。  [ここ](https://docs.microsoft.com/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison)では、2つのプロバイダー間の相違点について要約していますが、通常、バージョン V2 は bot のアクセス許可の変更に関してより柔軟に対応しています。  Graph API のアクセス許可は、[範囲] フィールドに一覧表示されており、新しいものが追加されたときに、ボットを使用すると、ユーザーは次のサインイン時に新しいアクセス許可に同意することができます。  V1 の場合、新しい権限を OAuth ダイアログで確認するには、ユーザーが bot の同意を削除する必要があります。 
 
 #### <a name="azure-ad-v1"></a>Azure AD V1
 
@@ -149,7 +149,7 @@ Bot チャネル登録は、Microsoft アプリ Id とアプリパスワード (
     h. [ **リソースの URL**] で、と入力し `https://graph.microsoft.com/` ます。 これは、現在のコードサンプルでは使用されません。  
     i. **範囲**を空白のままにします。 次の画像は例です。
 
-    ![teams ボット app auth 接続文字列 adv1](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
+    ![teams bot app auth 接続文字列 adv1 ビュー](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
 
 1. [**保存**] を選択します。
 
@@ -183,12 +183,12 @@ Bot チャネル登録は、Microsoft アプリ Id とアプリパスワード (
 1. 最初にこの操作を行うと、新しいブラウザーウィンドウが開き、アカウントを選択するように求められます。 使用するものを選択します。
 1. 次に、id プロバイダーがデータ (資格情報) を使用することを許可するように求められます。 次の画像は例です。
 
-    ![teams ボット app auth 接続文字列 adv1](../../../assets/images/authentication/auth-bot-connection-test-accept.PNG)
+    ![teams bot 認証接続文字列 adv1](../../../assets/images/authentication/auth-bot-connection-test-accept.PNG)
 
 1. **[同意する]** を選択します。
 1. これで、[ **テスト接続は \<your-connection-name> 成功しまし** た] ページにリダイレクトされます。 エラーが表示された場合は、ページを更新します。 次の画像は例です。
 
-  ![teams ボット app auth 接続文字列 adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
+  ![teams bot app auth connection str adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
 
 接続名は、ユーザー認証トークンを取得するために bot コードによって使用されます。
 
@@ -391,7 +391,7 @@ Microsoft Teams アプリをローカルで実行する準備として ngrok を
 1. たとえば、を実行 `ngrok http 3978 --host-header=localhost:3978` します。 必要に応じてポート番号を置き換えます。
 これにより、指定したポートをリッスンする ngrok が起動します。 これにより、ngrok が実行されている限り、外部的にアドレス指定可能な URL が得られます。 次の画像は例です。
 
-    ![teams ボット app auth 接続文字列 adv1](../../../assets/images/authentication/auth-bot-ngrok-start.PNG).
+    ![teams bot アプリ認証の接続文字列 adv1](../../../assets/images/authentication/auth-bot-ngrok-start.PNG).
 
 1. 転送用の HTTPS アドレスをコピーします。 これは、次のようになり `https://dea822bf.ngrok.io/` ます。
 1. `/api/messages`取得する追加 `https://dea822bf.ngrok.io/api/messages` 。 これは、コンピューター上でローカルに実行されていて、Microsoft Teams のチャットで web 経由でアクセスできる bot の **メッセージエンドポイント** です。

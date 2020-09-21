@@ -5,12 +5,12 @@ description: '[方法] タブ削除ページを作成する'
 keywords: teams タブグループチャネルの構成可能な削除削除
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: a8b40911de3e2519d8194415e2d8e467d0766ef2
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 4ee060b8ef1f439ed4f8e4007e63606ce34c3d24
+ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47818900"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "47964593"
 ---
 # <a name="modify-or-remove-a-channel-group-tab"></a>チャネルグループタブの変更または削除
 
@@ -39,7 +39,7 @@ ms.locfileid: "47818900"
 
 ### <a name="register-a-remove-handler"></a>削除ハンドラーを登録する
 
-必要に応じて、削除ページロジック内で、 `registerOnRemoveHandler((RemoveEvent) => {}` ユーザーが既存のタブ構成を削除したときに、イベントハンドラーを呼び出すことができます。 メソッドはインターフェイスを取得 [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest) し、ユーザーがコンテンツを削除しようとしたときにハンドラー内のコードを実行します。 これを使用して、基になるリソースを削除するなどのクリーンアップ操作を実行して、タブのコンテンツを電源にします。 一度に登録できる削除ハンドラーは1つだけです。
+必要に応じて、削除ページロジック内で、 `registerOnRemoveHandler((RemoveEvent) => {}` ユーザーが既存のタブ構成を削除したときに、イベントハンドラーを呼び出すことができます。 メソッドはインターフェイスを取得 [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest&preserve-view=true) し、ユーザーがコンテンツを削除しようとしたときにハンドラー内のコードを実行します。 これを使用して、基になるリソースを削除するなどのクリーンアップ操作を実行して、タブのコンテンツを電源にします。 一度に登録できる削除ハンドラーは1つだけです。
 
 この `RemoveEvent` インターフェイスは、次の2つのメソッドを使用してオブジェクトを記述します。
 
@@ -49,11 +49,11 @@ ms.locfileid: "47818900"
 
 #### <a name="use-the-getsettings-function"></a>関数を使用する `getSettings()`
 
-を使用し `getSettings()` て、削除するタブの内容を指定できます。 `getSettings((Settings) =>{})`関数は、を使用して、 [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest) 取得できる有効な設定プロパティ値を提供します。
+を使用し `getSettings()` て、削除するタブの内容を指定できます。 `getSettings((Settings) =>{})`関数は、を使用して、 [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) 取得できる有効な設定プロパティ値を提供します。
 
 #### <a name="use-the-getcontext-function"></a>関数を使用する `getContext()`
 
-を使用して、 `getContext()` フレームが実行されている現在のコンテキストを取得できます。 関数は、を使用して、削除ページ `getContext((Context) =>{})` [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest) `Context` に表示するコンテンツを決定するために削除ページロジックで使用できる有効なプロパティ値を提供します。
+を使用して、 `getContext()` フレームが実行されている現在のコンテキストを取得できます。 関数は、を使用して、削除ページ `getContext((Context) =>{})` [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) `Context` に表示するコンテンツを決定するために削除ページロジックで使用できる有効なプロパティ値を提供します。
 
 #### <a name="include-authentication"></a>認証を含める
 
