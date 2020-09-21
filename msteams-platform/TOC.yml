@@ -330,6 +330,14 @@
           href: webhooks-and-connectors/how-to/connectors-creating.md
         - name: コネクタと Webhook にメッセージを送信する
           href: webhooks-and-connectors/how-to/connectors-using.md
+- name: 会議のアプリ
+  items:
+    - name: アプリをデザインする
+      items:
+        - name: 会議中ダイアログ
+          href: apps-in-teams-meetings/designing-in-meeting-dialog.md
+        - name: 会議中タブ
+          href: apps-in-teams-meetings/designing-in-meeting-tab.md
 - name: Teams Graph REST API
   items:
     - name: リソース固有の同意
