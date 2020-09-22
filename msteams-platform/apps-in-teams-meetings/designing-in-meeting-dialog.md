@@ -4,14 +4,14 @@ author: heath-hamilton
 description: Microsoft Teams の会議中のダイアログを設計するためのガイダンスとベストプラクティス。
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 449e6cdf9aecefba9fe70099c961ab56955306f8
-ms.sourcegitcommit: aabfd65a67e1889ec16f09476bc757dd4a46ec5b
+ms.openlocfilehash: 8e9671d8d284311d3d0a299573d3f0e08b195e97
+ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "48098113"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48178331"
 ---
-# <a name="designing-an-in-meeting-dialog"></a>会議中のダイアログを設計する
+# <a name="design-an-in-meeting-dialog"></a>会議中のダイアログを設計する
 
 会議中のダイアログは Teams の会議のステージに表示されます。 ユーザーの注意、確認、または対話が必要ですが、それは微妙で、会議に割り込むことはありません。
 

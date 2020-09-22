@@ -1,17 +1,17 @@
 ---
-title: Microsoft Teams の [会議] タブの設計
+title: Microsoft Teams を会議のタブで設計する
 author: heath-hamilton
 description: Microsoft Teams の [会議中] タブを設計するためのガイダンスとベストプラクティスについて説明します。
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: ec095654f4a0816478b1b32a45c931d74dbb3209
-ms.sourcegitcommit: aabfd65a67e1889ec16f09476bc757dd4a46ec5b
+ms.openlocfilehash: 91981ab79c8e50483568dd0dc750b4e9b3fdef24
+ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "48098077"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48178324"
 ---
-# <a name="designing-an-in-meeting-tab"></a>[会議中] タブの設計
+# <a name="design-an-in-meeting-tab"></a>[会議中] タブを設計する
 
 [会議中] タブは、会議中に共同作業を補強するためのキャンバスです。 [チーム] タブの機能に基づいて、参加者は共有ビューまたはロールベースのビューを使用して、会議ステージ外の専用の領域でアプリコンテンツを表示したり操作したりできます。
 

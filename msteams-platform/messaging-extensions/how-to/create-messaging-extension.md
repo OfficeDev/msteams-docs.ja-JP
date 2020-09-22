@@ -1,15 +1,15 @@
 ---
-title: メッセージング拡張機能を作成する
+title: メッセージングの拡張機能を作成する
 author: clearab
 description: Microsoft Teams アプリのメッセージング拡張機能を作成する方法について説明します。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 5d70ee361bdf32024f3cbdb56505a8aa410e7db0
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: ca03469b04c9696b26db3512790e03be26ca63af
+ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675125"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48178310"
 ---
 # <a name="create-a-messaging-extension-in-microsoft-teams"></a>Microsoft Teams でメッセージング拡張機能を作成する
 
@@ -17,9 +17,9 @@ ms.locfileid: "41675125"
 
 1. 開発環境を準備する
 2. Web サービスを作成および展開する (ngrok のようなトンネリングサービスを使用してローカルに実行する)
-3. Web サービスを Bot フレームワークに登録する
-4. アプリパッケージを作成する
-5. Microsoft Teams にパッケージをアップロードする
+3. Web サービスを Bot Framework に登録する
+4. アプリ パッケージを作成する
+5. Microsoft Teams にアプリ パッケージをアップロードする
 
 Web サービスを作成し、アプリパッケージを作成し、web サービスを Bot フレームワークに登録するには、任意の順序で行うことができます。 これらの3つの要素は so intertwined なので、どの順序で実行するかにかかわらず、他の要素を更新するために戻る必要があります。 登録では、展開された web サービスのメッセージングエンドポイントが必要です。また、web サービスでは、登録から作成された Id とパスワードが必要です。 アプリマニフェストには、チームを web サービスに接続するための Id も必要です。
 
@@ -29,68 +29,68 @@ Web サービスを作成し、アプリパッケージを作成し、web サー
 
 ## <a name="create-your-web-service"></a>Web サービスを作成する
 
-メッセージング拡張機能の核心部分は、web サービスです。 1つのルート (通常`/api/messages`は、すべての要求を受信する) を定義します。 最初から作業を開始する場合は、いくつかのオプションから選択できます。
+メッセージング拡張機能の核心部分は、web サービスです。 1つのルート (通常は、 `/api/messages` すべての要求を受信する) を定義します。 最初から作業を開始する場合は、いくつかのオプションから選択できます。
 
-* Web サービスを作成するためのガイドとして、[クイックスタート](#learn-more)チュートリアルの1つを使用します。
+* Web サービスを作成するためのガイドとして、 [クイックスタート](#learn-more) チュートリアルの1つを使用します。
 * [Bot フレームワークサンプルリポジトリ](https://github.com/Microsoft/BotBuilder-Samples)で使用可能なメッセージング拡張機能のサンプルの1つを選択し、開始します。
-* JavaScript を使用している場合は、 [Microsoft teams 用の](https://github.com/OfficeDev/generator-teams)スキャフォールディングを使用して、web サービスを含む teams アプリを作成します。
-* Web サービスを最初から作成します。 自分の言語用に Bot Framework SDK を追加するか、JSON ペイロードを直接操作するかを選択できます。
+* JavaScript を使用している場合は、 [Microsoft teams 用の](https://github.com/OfficeDev/generator-teams) スキャフォールディングを使用して、web サービスを含む teams アプリを作成します。
+* Web サービスを一から作成する。 お使いの言語用の Bot Framework SDK を追加することも、JSON ペイロードに対して直接作業を行うこともできます。
 
-## <a name="register-your-web-service-with-the-bot-framework"></a>Web サービスを Bot フレームワークに登録する
+## <a name="register-your-web-service-with-the-bot-framework"></a>Web サービスを Bot Framework に登録する
 
-メッセージング拡張機能は、Bot フレームワークのメッセージングスキーマとセキュリティで保護された通信プロトコルを利用します。まだお持ちでない場合は、ボットフレームワークに web サービスを登録する必要があります。 Microsoft App Id (Teams の内部から Bot Id としてこの Id を参照し、処理している可能性がある他のアプリ Id からその id を識別するため)、および Bot フレームワークを使用した登録は、メッセージング拡張機能で使用され、要件を受信して応答します。uests. 既存の登録を使用している場合は、 [Microsoft Teams チャネルが有効に](/azure/bot-service/bot-service-manage-channels.md?view=azure-bot-service-4.0)なっていることを確認してください。
+メッセージング拡張機能は、Bot フレームワークのメッセージングスキーマとセキュリティで保護された通信プロトコルを利用します。まだお持ちでない場合は、ボットフレームワークに web サービスを登録する必要があります。 Microsoft App Id (Teams の内部から Bot Id として参照されている可能性があります)。また、要求に対する応答を受信して応答するために、ユーザーのメッセージング拡張機能でこの登録が使用されます。 既存の登録を使用している場合は、 [Microsoft Teams チャネルが有効に](/azure/bot-service/bot-service-manage-channels.md?view=azure-bot-service-4.0&preserve-view=true)なっていることを確認してください。
 
 クイックスタートのいずれかを実行した場合、または利用可能なサンプルのいずれかから開始した場合は、web サービスを登録することになります。 サービスを手動で登録する場合は、3つのオプションがあります。 Azure サブスクリプションを使用せずに登録することを選択した場合、Bot フレームワークによって提供される簡素化された OAuth 認証フローを利用することはできません。 作成後に、登録を Azure に移行することができます。
 
 * Azure サブスクリプションを保有している場合 (または新しいサブスクリプションを作成する場合) は、Azure Portal を使用して web サービスを手動で登録できます。 "Bot チャネル登録" リソースを作成します。 無料料金層は、Microsoft Teams からのメッセージが1か月あたりの合計許容メッセージ数を超えないように、選択することができます。
-* Azure サブスクリプションを使用しない場合は、[従来の登録ポータル](https://dev.botframework.com/bots/new)を使用できます。
+* Azure サブスクリプションを使用しない場合は、 [従来の登録ポータル](https://dev.botframework.com/bots/new)を使用できます。
 * アプリ Studio は、web サービス (bot) の登録にも役立ちます。 アプリ Studio によって登録された Web サービスが Azure に登録されていません。 [従来のポータル](https://dev.botframework.com/bots)を使用して、登録の表示、管理、移行を行うことができます。
 
 ## <a name="create-your-app-manifest"></a>アプリのマニフェストを作成する
 
-アプリのマニフェストを作成するために、または手動で作成するために、アプリ Studio を使用することができます。
+アプリ マニフェストは、App Studio を使用して作成することも、手動で作成することもできます。
 
 ### <a name="create-your-app-manifest-using-app-studio"></a>アプリ Studio を使用してアプリマニフェストを作成する
 
 アプリのマニフェストを作成するために、Microsoft Teams クライアント内からアプリ Studio アプリを使用することができます。
 
-1. Teams クライアントで、左側のナビゲーションレールの [アプリ Studio] を **[オーバーフロー]** メニューから開きます。 まだインストールされていない場合は、それを検索することができます。
-2. [**マニフェストエディター** ] タブで、[**新しいアプリの作成**] を選択します (または、既存のアプリにメッセージング拡張機能を追加している場合は、アプリパッケージをインポートできます)。
-3. アプリの詳細を追加します (各フィールドの詳細については、「[マニフェストスキーマ定義](~/resources/schema/manifest-schema.md)」を参照してください)。
-4. [**メッセージング拡張機能**] タブで、[**セットアップ**] ボタンをクリックします。
+1. Teams クライアントで、左側のナビゲーション レールにあるオーバーフロー メニュー (**...**) から App Studio を開きます。 まだインストールされていない場合は、それを検索することができます。
+2. [ **マニフェストエディター** ] タブで、[ **新しいアプリの作成** ] を選択します (または、既存のアプリにメッセージング拡張機能を追加している場合は、アプリパッケージをインポートできます)。
+3. アプリの詳細情報を入力します (各フィールドの詳細な説明については、「[マニフェスト スキーマの定義](~/resources/schema/manifest-schema.md)」を参照してください)。
+4. [ **メッセージング拡張機能** ] タブで、[ **セットアップ** ] ボタンをクリックします。
 5. メッセージング拡張機能を使用する新しい web サービス (bot) を作成するか、または既に1つの選択/追加をここに登録していることを確認できます。
-6. 必要に応じて、ボットをポイントするように bot エンドポイントアドレスを更新します。 これは、次の`https://someplace.com/api/messages`ようなものになります。
-7. **コマンド**セクションの [**追加**] ボタンを使用すると、メッセージング拡張機能にコマンドを追加できます。 コマンドの追加の詳細については、「[詳細](#learn-more)情報」セクションを参照してください。 メッセージング拡張機能には最大10個のコマンドを定義できます。
-8. [**メッセージハンドラ**] セクションでは、メッセージングがトリガーされるドメインを追加できます。 詳細については、「 [link unfurling](~/messaging-extensions/how-to/link-unfurling.md) 」を参照してください。
+6. 必要に応じて、ボット エンドポイント アドレスを変更して、ボットにポイントします。 だいたい次のようになります: `https://someplace.com/api/messages`
+7. **コマンド**セクションの [**追加**] ボタンを使用すると、メッセージング拡張機能にコマンドを追加できます。 コマンドの追加の詳細については、「 [詳細](#learn-more) 情報」セクションを参照してください。 メッセージング拡張機能には最大10個のコマンドを定義できます。
+8. [ **メッセージハンドラ** ] セクションでは、メッセージングがトリガーされるドメインを追加できます。 詳細については、「 [link unfurling](~/messaging-extensions/how-to/link-unfurling.md) 」を参照してください。
 
 **[完了] => [テストと配布**] タブで、アプリパッケージ (アプリのマニフェストやアプリのアイコンを含む) を**ダウンロード**したり、パッケージを**インストール**したりできます。
 
 ### <a name="create-your-app-manifest-manually"></a>アプリのマニフェストを手動で作成する
 
-ボットやタブの場合と同様に、メッセージング拡張機能のプロパティを含むようにアプリの[アプリマニフェスト](~/resources/schema/manifest-schema.md#composeextensions)を更新します。 これらのプロパティは、Microsoft Teams クライアントでメッセージング拡張機能がどのように表示され、動作するかを制御します。 メッセージング内線番号は、マニフェストの v 1.0 以降でサポートされています。
+ボットやタブの場合と同様に、メッセージング拡張機能のプロパティを含むようにアプリの [アプリマニフェスト](~/resources/schema/manifest-schema.md#composeextensions) を更新します。 これらのプロパティは、Microsoft Teams クライアントでメッセージング拡張機能がどのように表示され、動作するかを制御します。 メッセージング内線番号は、マニフェストの v 1.0 以降でサポートされています。
 
 #### <a name="declare-your-messaging-extension"></a>メッセージング拡張機能を宣言する
 
-メッセージング拡張機能を追加するには、 `composeExtensions`プロパティを使用して、アプリマニフェストに新しいトップレベルの JSON 構造を含めます。 アプリに対して1つのメッセージング拡張機能を作成します。これには最大10個のコマンドがあります。
+メッセージング拡張機能を追加するには、プロパティを使用して、アプリマニフェストに新しいトップレベルの JSON 構造を含め `composeExtensions` ます。 アプリに対して1つのメッセージング拡張機能を作成します。これには最大10個のコマンドがあります。
 
 > [!NOTE]
-> マニフェストは、として`composeExtensions`メッセージング拡張機能を参照します。 これは、下位互換性を維持するためのものです。
+> マニフェストは、としてメッセージング拡張機能を参照し `composeExtensions` ます。 これは、下位互換性を維持するためのものです。
 
 拡張機能の定義は、次の構造を持つオブジェクトです。
 
 | プロパティ名 | 用途 | 必須 |
 |---|---|---|
-| `botId` | Bot フレームワークに登録された bot の一意の Microsoft アプリ ID。 これは通常、Teams アプリ全体の ID と同じである必要があります。 | はい |
+| `botId` | Bot Framework に登録された、ボット用の一意の Microsoft アプリ ID。 これは通常、Teams アプリ全体の ID と同じである必要があります。 | はい |
 | `canUpdateConfiguration` | **設定**メニュー項目を有効にします。 | いいえ |
 | `commands` | このメッセージング拡張機能がサポートするコマンドの配列です。 コマンドは10個に制限されています。 | はい |
 
 #### <a name="define-your-commands"></a>コマンドを定義する
 
-メッセージング拡張機能では、1つまたは複数のコマンドを宣言します。これにより、ユーザーがメッセージング拡張機能をトリガーする場所、および対話の種類が定義されます。 メッセージング拡張機能のコマンドの詳細につい[ては、「詳細情報](#learn-more)」を参照してください。
+メッセージング拡張機能では、1つまたは複数のコマンドを宣言します。これにより、ユーザーがメッセージング拡張機能をトリガーする場所、および対話の種類が定義されます。 メッセージング拡張機能のコマンドの詳細につい [ては、「詳細情報](#learn-more) 」を参照してください。
 
-#### <a name="simple-manifest-example"></a>単純なマニフェストの例
+#### <a name="simple-manifest-example"></a>マニフェストの簡単な例
 
-次の例では、検索コマンドを使用して、アプリマニフェストの単純なメッセージング拡張オブジェクトを示します。 これは、すべてのアプリマニフェストファイルではなく、メッセージング拡張機能に固有の部分だけではありません。 完全な例については、「 [app manifest schema](~/resources/schema/manifest-schema.md) 」を参照してください。
+次の例では、検索コマンドを使用して、アプリマニフェストの単純なメッセージング拡張オブジェクトを示します。 これは、アプリ マニフェスト ファイルの全体ではなく、メッセージング拡張機能に関わる部分のみです。 完全な例については、「 [app manifest schema](~/resources/schema/manifest-schema.md) 」を参照してください。
 
 ```json
 ...
@@ -120,13 +120,25 @@ Web サービスを作成し、アプリパッケージを作成し、web サー
 
 ## <a name="add-your-invoke-message-handlers"></a>呼び出しメッセージハンドラーを追加する
 
-ユーザーがメッセージング拡張機能をトリガーする場合は、最初の呼び出しメッセージを処理し、ユーザーから情報を収集し、その情報を処理して適切に応答する必要があります。 そのためには、まずメッセージング拡張機能に追加するコマンドの種類を決定し、[アクションコマンドを追加](~/messaging-extensions/how-to/action-commands/define-action-command.md)するか、[検索コマンドを追加](~/messaging-extensions/how-to/search-commands/define-search-command.md)する必要があります。
+ユーザーがメッセージング拡張機能をトリガーする場合は、最初の呼び出しメッセージを処理し、ユーザーから情報を収集し、その情報を処理して適切に応答する必要があります。 そのためには、まずメッセージング拡張機能に追加するコマンドの種類を決定し、 [アクションコマンドを追加](~/messaging-extensions/how-to/action-commands/define-action-command.md) するか、 [検索コマンドを追加](~/messaging-extensions/how-to/search-commands/define-search-command.md)する必要があります。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="messaging-extensions-in-teams-meetings"></a>Teams 会議でのメッセージング拡張機能
+
+会議が開始されると、チームの参加者は、live 呼び出しの間にメッセージング拡張機能と直接対話できます。 会議でのメッセージング拡張機能を構築する場合は、次の点を考慮してください。
+
+1. **Location**。 メッセージング拡張機能は、会議チャットの [メッセージの作成] 領域、コマンドボックス、または @mentioned から呼び出すことができます。
+
+1. **メタデータ**。 メッセージング拡張機能が呼び出されると、との間でユーザーとテナントを識別できるようになり `userId` `tenantId` ます。 は、 `meetingId` オブジェクトの一部として見つけることができ `channelData` ます。 アプリでは、および API 要求にを使用して、 `userId` `meetingId`  ユーザーの役割を取得でき `GetParticipant` ます。
+
+1. **コマンドの種類**。 メッセージ拡張機能が [アクションベースのコマンド](../../messaging-extensions/what-are-messaging-extensions.md#action-commands)を使用している場合は、タブ [シングルサインオン](../../tabs/how-to/authentication/auth-aad-sso.md) 認証に従う必要があります。 
+
+1. **ユーザーの利便性**。 会議チャット中に呼び出されるメッセージング拡張機能のエンドユーザーの環境を決定する必要があります。
+
+## <a name="next-steps"></a>次の手順
 
 * [アクションコマンドを作成する](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 * [検索コマンドを作成する](~/messaging-extensions/how-to/search-commands/define-search-command.md)
-* [Link unfurling](~/messaging-extensions/how-to/link-unfurling.md)
+* [リンク展開](~/messaging-extensions/how-to/link-unfurling.md)
 
 ## <a name="learn-more"></a>詳細情報
 
