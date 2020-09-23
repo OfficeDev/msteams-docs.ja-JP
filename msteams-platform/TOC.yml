@@ -31,6 +31,16 @@
           href: toolkit/visual-studio-code-overview.md
         - name: Visual Studio 用 Teams ツールキット拡張機能
           href: toolkit/visual-studio-overview.md
+- name: 会議のアプリ
+  items:
+    - name: 会議の Teams アプリ
+      href: apps-in-teams-meetings/teams-apps-in-meetings.md
+    - name: Teams 会議用のアプリを作成する
+      href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
+    - name: 会議中のダイアログを設計する
+      href: apps-in-teams-meetings/designing-in-meeting-dialog.md
+    - name: 会議中のタブを設計する
+      href: apps-in-teams-meetings/designing-in-meeting-tab.md
 - name: 概念
   expanded: true
   items:
