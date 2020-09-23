@@ -1,58 +1,145 @@
 ---
-title: Microsoft Teams 開発者プラットフォーム
-author: clearab
-description: Microsoft Teams 開発者プラットフォーム、また Microsoft Teams のアプリのビルドを開始する方法について説明する概要ページ。
+title: Microsoft Teams プラットフォーム用のアプリを構築する
+author: heath-hamilton
+description: 開発者がカスタムアプリを使用して Microsoft Teams の機能を拡張およびカスタマイズする方法の概要。
 ms.topic: overview
-ms.author: anclear
-ms.openlocfilehash: 5225669ccc8c76bb532d045df6b65105c893e734
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
-ms.translationtype: HT
+ms.author: lajanuar
+ms.date: 09/22/2020
+ms.openlocfilehash: c430add71e7c23a44a552270c5e3c1bacbe650e4
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44455486"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209800"
 ---
-# <a name="what-are-microsoft-teams-apps"></a><span data-ttu-id="1d8ec-103">Microsoft Teams アプリとは</span><span class="sxs-lookup"><span data-stu-id="1d8ec-103">What are Microsoft Teams apps?</span></span>
+# <a name="build-apps-for-microsoft-teams"></a><span data-ttu-id="acc1f-103">Microsoft Teams のアプリを構築する</span><span class="sxs-lookup"><span data-stu-id="acc1f-103">Build apps for Microsoft Teams</span></span>
 
-<span data-ttu-id="1d8ec-104">Microsoft Teams は、メンバーが共同作業するために使用するアプリやサービスを統合する Office 365 のコラボレーション ワークスペースです。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-104">Microsoft Teams is a collaboration workspace in Office 365 that integrates with apps and services people use to get work done together.</span></span> <span data-ttu-id="1d8ec-105">Microsoft Teams 開発者プラットフォームでは、開発者が簡単に独自のアプリとサービスを統合して、生産性を向上させ、迅速に意思決定を行い、(コンテキストの切り替えを減らして) フォーカスを示し、既存のコンテンツとワークフロー関連のコラボレーションを作成できます。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-105">The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services to improve productivity, make decisions faster, provide focus (by reducing context switching), and create collaboration around existing content and workflows.</span></span> <span data-ttu-id="1d8ec-106">Microsoft Teams プラットフォームにビルドされているアプリは、Teams クライアント、サービス、ワークフローの間のブリッジとして機能し、それらはコラボレーション プラットフォームのコンテキストに直接取り込まれます。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-106">Apps built on the Microsoft Teams platform are bridges between the Teams client and your services and workflows; bringing them directly into the context of your collaboration platform.</span></span>
+<span data-ttu-id="acc1f-104">Microsoft Teams アプリは、ユーザーが収集、学習、作業を徐々に行うことができるように、重要な情報、共通ツール、および信頼されたプロセスを提供します。</span><span class="sxs-lookup"><span data-stu-id="acc1f-104">Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work.</span></span>
 
-## <a name="what-can-teams-apps-do"></a><span data-ttu-id="1d8ec-107">Teams アプリで実行できること</span><span class="sxs-lookup"><span data-stu-id="1d8ec-107">What can Teams apps do?</span></span>
+<span data-ttu-id="acc1f-105">アプリは、ニーズに合わせて Teams を拡張する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="acc1f-105">Apps are how you extend Teams to fit your needs.</span></span> <span data-ttu-id="acc1f-106">Teams で新しいものを作成するか、既存のアプリを統合します。</span><span class="sxs-lookup"><span data-stu-id="acc1f-106">Create something brand new for Teams or integrate an existing app.</span></span>
 
-<span data-ttu-id="1d8ec-108">Microsoft Teams プラットフォームにビルドされているアプリは、コラボレーションの強化と生産性の向上に主に重点を置いています。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-108">Apps built on the Microsoft Teams platform primarily focus on increasing collaboration and improving productivity.</span></span> <span data-ttu-id="1d8ec-109">アプリは、他のシステムや複雑なマルチファセット アプリケーションからの通知を投稿するなど、シンプルなものにすることができます。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-109">Your app can be something simple, like posting notifications from other systems, or complex multi-faceted applications.</span></span> <span data-ttu-id="1d8ec-110">Teams がソーシャル コラボレーション プラットフォームであることにご注意ください。最適なアプリでは、メンバーが自身を表現し、共同作業を効率化することができます。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-110">Just keep in mind that Teams is a social collaboration platform; the best apps focus on helping people express themselves and work better together.</span></span>
+## <a name="what-are-teams-apps"></a><span data-ttu-id="acc1f-107">Teams アプリとは</span><span class="sxs-lookup"><span data-stu-id="acc1f-107">What are Teams apps?</span></span>
 
-* <span data-ttu-id="1d8ec-111">**外部システムのアイテムで共同作業を行います。**</span><span class="sxs-lookup"><span data-stu-id="1d8ec-111">**Collaborate on items in external systems.**</span></span> <span data-ttu-id="1d8ec-112">カスタムの Teams アプリのコア シナリオの 1 つは、情報またはアイテムを別の場所から Teams に取り込んで、会話を行うことです。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-112">One of the core scenarios for a custom Teams app is to bring information or items into Teams from some other place, and have a conversation around it.</span></span> <span data-ttu-id="1d8ec-113">情報を Teams にプッシュして、必要に応じてユーザーが検索して取得できるようにするか、埋め込み Web ビューで使用できるようにすることができます。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-113">You can push information into Teams, enable your users to search for and pull it on demand, or make it available in an embedded web view.</span></span>
+<span data-ttu-id="acc1f-108">Teams アプリは、 [機能](concepts/capabilities-overview.md) と [エントリポイント](concepts/extensibility-points.md)の組み合わせです。</span><span class="sxs-lookup"><span data-stu-id="acc1f-108">Teams apps are a combination of [capabilities](concepts/capabilities-overview.md) and [entry points](concepts/extensibility-points.md).</span></span> <span data-ttu-id="acc1f-109">たとえば、ユーザーは、*チャネル*(エントリポイント) のアプリの*bot* (機能) とチャットできます。</span><span class="sxs-lookup"><span data-stu-id="acc1f-109">For example, people can chat with your app's *bot* (capability) in a *channel* (entry point).</span></span>
 
-* <span data-ttu-id="1d8ec-114">**会話からワークフローをトリガーします。**</span><span class="sxs-lookup"><span data-stu-id="1d8ec-114">**Trigger workflows from conversations.**</span></span> <span data-ttu-id="1d8ec-115">多くの場合、会話を行った後、いくつかのワークフローを開始するか、いくつかのアクションを完了する必要があります。それについてメモを取り、pull request を確認して、それを潜在顧客情報に反映します。Teams アプリを使用すると、Teams 内で直接そのワークフローへのアクセスを付与できます。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-115">Often conversations result in the need to kick off some workflow or complete some action; take a note about that, review my pull request, convert that to a sales lead, etc. Your Teams app can put access to that workflow right inside of Teams.</span></span>
+<span data-ttu-id="acc1f-110">単純な (通知を送信する) アプリもあれば、複雑なアプリ (患者レコードの管理) もあります。</span><span class="sxs-lookup"><span data-stu-id="acc1f-110">Some apps are simple (send notifications), while others are complex (manage patient records).</span></span> <span data-ttu-id="acc1f-111">アプリを計画するときは、Teams がコラボレーションハブであることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="acc1f-111">When planning your app, remember that Teams is a collaboration hub.</span></span> <span data-ttu-id="acc1f-112">最良の Teams アプリを使用すると、ユーザーが自分を表現し、連携しやすくなります。</span><span class="sxs-lookup"><span data-stu-id="acc1f-112">The best Teams apps help people express themselves and work better together.</span></span>
 
-* <span data-ttu-id="1d8ec-116">**チームに重要なイベントを通知します。**</span><span class="sxs-lookup"><span data-stu-id="1d8ec-116">**Notify your team of important events.**</span></span> <span data-ttu-id="1d8ec-117">メール通知を受け取りたくない場合、</span><span class="sxs-lookup"><span data-stu-id="1d8ec-117">Sick of email notifications?</span></span> <span data-ttu-id="1d8ec-118">代わりに Teams に通知を送信できます。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-118">Send notifications to Teams instead!</span></span> <span data-ttu-id="1d8ec-119">ユーザー、チャネル、アクティビティ フィード、またはそれらにサブスクライブしているユーザーに直接通知を送信します。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-119">Send notifications directly to users, to a channel, to the Activity Feed, or to anyone who subscribes to them.</span></span>
+:::row:::
+   :::column span="":::
 
-* <span data-ttu-id="1d8ec-120">**他のサイトまたはサービスの機能を埋め込みます。**</span><span class="sxs-lookup"><span data-stu-id="1d8ec-120">**Embed functionality from other sites/services.**</span></span> <span data-ttu-id="1d8ec-121">アプリを見つけやすくするだけで済む場合があります。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-121">Sometimes you just need to make your app easier to discover.</span></span> <span data-ttu-id="1d8ec-122">既存のシングルページ アプリを埋め込むか、チーム用に一からビルドします。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-122">Embed your existing single-page app, or build something from scratch for Teams.</span></span>
+### <a name="tabs"></a><span data-ttu-id="acc1f-113">タブ</span><span class="sxs-lookup"><span data-stu-id="acc1f-113">Tabs</span></span>
 
-## <a name="how-do-teams-apps-work"></a><span data-ttu-id="1d8ec-123">Teams アプリのしくみ</span><span class="sxs-lookup"><span data-stu-id="1d8ec-123">How do Teams apps work?</span></span>
+<span data-ttu-id="acc1f-114">**情報をさら**にわかりやすくする: 必要な場合にのみ、簡単に情報を見つけられるようにしましょう。</span><span class="sxs-lookup"><span data-stu-id="acc1f-114">**Get information more conveniently**: Sometimes you just need to make things easier to find.</span></span> <span data-ttu-id="acc1f-115">重要な web ページを [タブ](tabs/what-are-tabs.md)で表示します。これにより、チーム内の静的および動的なコンテンツについて全画面 web を利用できます。</span><span class="sxs-lookup"><span data-stu-id="acc1f-115">Display an important webpage in a [tab](tabs/what-are-tabs.md), which provides a full-screen web experience for static and dynamic content in Teams.</span></span>
 
-<span data-ttu-id="1d8ec-124">Microsoft Teams のカスタム アプリについて (いかにすばらしいアプリであるかということ以外に) 最初に調べることは、Teams はホスティング サービスではないということです。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-124">The first thing to know about custom apps for Microsoft Teams (other than how amazing they can be), is that Teams is not a hosting service.</span></span> <span data-ttu-id="1d8ec-125">アプリ パッケージには、アプリについてのメタデータ (名前、アイコンなど) と、アプリを利用するホストの Web サービスへのポインターが含まれます。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-125">Your app package contains metadata about your app (name, icons, etc.), and pointers to the web services you host that power your app.</span></span> <span data-ttu-id="1d8ec-126">Microsoft Teams には、配布メカニズム、利用できる UI/UX コンストラクト、アプリで利用できる情報やアクションを強化するために使用できる API が用意されています。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-126">Microsoft Teams provides the distribution mechanism, UI/UX constructs for you to take advantage of, and APIs you can use to augment the information and actions available to your app.</span></span>
+:::image type="content" source="assets/images/overview-tabs.png" alt-text="Teams クライアントでタブがどのように表示されるかを概念として表します。" border="false":::
 
-<span data-ttu-id="1d8ec-127">Teams アプリは 3 つの主要な部分で構成されています。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-127">A Teams app consists of three major pieces:</span></span>
+   :::column-end:::
+   :::column span="":::
 
-* <span data-ttu-id="1d8ec-128">ユーザーがアプリを操作する **Microsoft Teams クライアント (Web、デスクトップ、モバイル)**。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-128">**The Microsoft Teams client (web, desktop or mobile)** where users will interact with your app.</span></span>
-* <span data-ttu-id="1d8ec-129">ユーザーによってインストールされたアプリを作成し、アプリのメタデータとサービスへのポインターを含む **Teams アプリ パッケージ**。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-129">**Your Teams app package** that creates the app installed by your users, and contains your app's metadata and pointers to your services.</span></span>
-* <span data-ttu-id="1d8ec-130">必要なロジック、データ ストレージ、API 呼び出しを実行して、アプリを利用する**サービス、ワークフロー、Web サイト**。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-130">**Your service, workflow or website** which perform the necessary logic, data storage and API calls to power your app.</span></span>
+### <a name="messaging-extensions"></a><span data-ttu-id="acc1f-117">メッセージングの拡張機能</span><span class="sxs-lookup"><span data-stu-id="acc1f-117">Messaging extensions</span></span>
 
-<span data-ttu-id="1d8ec-131">Microsoft Teams アプリで公開する機能が、セキュリティで保護するための追加の手順を実行しない限り、インターネット経由で一般に使用可能であることに留意することが重要です。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-131">It is important to keep in mind that any functionality you expose in a Microsoft Teams app is publicly available over the internet unless you take additional steps to secure it.</span></span> <span data-ttu-id="1d8ec-132">機密情報または保護された情報へのアクセスを提供する場合、サービスでは少なくとも、アプリに接続されているエンドポイントを認証しているか、[ユーザーを認証](concepts/authentication/authentication.md)していることをご確認ください。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-132">If you are providing access to confidential or protected information you'll want make sure your services are at a minimum authenticating the endpoint connecting to your app, or [authenticating your users](concepts/authentication/authentication.md).</span></span>
+<span data-ttu-id="acc1f-118">マルチ**タスクを簡単にする**:[メッセージング拡張機能](messaging-extensions/what-are-messaging-extensions.md)を使用すると、会話で外部情報をすばやく共有できます。</span><span class="sxs-lookup"><span data-stu-id="acc1f-118">**Make it easier to multitask**: With [messaging extensions](messaging-extensions/what-are-messaging-extensions.md), you can quickly share external information in a conversation.</span></span> <span data-ttu-id="acc1f-119">また、メッセージを操作することもできます。これには、チャネル投稿の内容に基づくヘルプチケットの作成などがあります。</span><span class="sxs-lookup"><span data-stu-id="acc1f-119">You also can act on a message, such as creating a help ticket based on the content of a channel post.</span></span>
 
-## <a name="how-can-you-share-your-teams-app"></a><span data-ttu-id="1d8ec-133">Teams アプリの共有方法</span><span class="sxs-lookup"><span data-stu-id="1d8ec-133">How can you share your Teams app?</span></span>
+:::image type="content" source="assets\images\overview-messaging.png" alt-text="Teams クライアントでメッセージング拡張機能がどのように表示されるかを概念的に表現します。" border="false":::
 
-<span data-ttu-id="1d8ec-134">Microsoft Teams アプリを共有する準備ができたら、対象ユーザーに応じて 3 つのオプションがあります。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-134">When you're ready to share your Microsoft Teams apps, you have three options depending on who your target audience is.</span></span>
+   :::column-end:::
+:::row-end:::
 
-* <span data-ttu-id="1d8ec-135">**[アプリを直接アップロードする](concepts/deploy-and-publish/apps-upload.md)** アプリをチームや組織内の少人数にのみ共有する必要がある場合は、アプリ パッケージを共有して直接アップロードできます。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-135">**[Upload your app directly](concepts/deploy-and-publish/apps-upload.md)** If your app only needs to be shared to your team, or a few individuals in your organization, you can share your app package and upload it directly.</span></span>
-* <span data-ttu-id="1d8ec-136">**[組織のアプリ カタログに公開する](concepts/deploy-and-publish/apps-upload.md)** アプリ カタログを使用してアプリを組織全体に共有できます。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-136">**[Publish to your organizational app catalog](concepts/deploy-and-publish/apps-upload.md)** You can share your app with your entire organization through your app catalog.</span></span>
-* <span data-ttu-id="1d8ec-137">**[パブリック App Store に公開する](concepts/deploy-and-publish/apps-upload.md)** アプリがすべてのユーザー向けの場合、そのアプリをパブリック App Store に公開できます。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-137">**[Publish to the public app store](concepts/deploy-and-publish/apps-upload.md)** If your app is for everyone, you can publish it to our public app store.</span></span> <span data-ttu-id="1d8ec-138">目標に応じて、マーケティングや販売のサポート対象になる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="1d8ec-138">Depending on your goals, you might be eligible for marketing and sales assistance.</span></span>
+:::row:::
+   :::column span="":::
 
-## <a name="get-started"></a><span data-ttu-id="1d8ec-139">作業の開始</span><span class="sxs-lookup"><span data-stu-id="1d8ec-139">Get started</span></span>
+### <a name="bots"></a><span data-ttu-id="acc1f-121">ボット</span><span class="sxs-lookup"><span data-stu-id="acc1f-121">Bots</span></span>
 
-* [<span data-ttu-id="1d8ec-140">C# でボットとタブ アプリをビルドする</span><span class="sxs-lookup"><span data-stu-id="1d8ec-140">Build a bot and tab app in C#</span></span>](tutorials/get-started-dotnet-app-studio.md)
-* [<span data-ttu-id="1d8ec-141">JavaScript または Node.js でボットとタブ アプリをビルドする</span><span class="sxs-lookup"><span data-stu-id="1d8ec-141">Build a bot and tab app in JavaScript/Node.js</span></span>](tutorials/get-started-nodejs-app-studio.md)
+<span data-ttu-id="acc1f-122">**単語をアクションにする**: 会話では、多くの場合、何らかの処理が必要になります (注文を生成し、自分のコードを確認し、チケットの状態を確認するなど)。</span><span class="sxs-lookup"><span data-stu-id="acc1f-122">**Turn words into actions**: Conversations often result in the need to do something (generate an order, review my code, check ticket status, etc.).</span></span> <span data-ttu-id="acc1f-123">[Bot](bots/what-are-bots.md)は、Teams 内でこれらの種類のワークフローを直接開始できます。</span><span class="sxs-lookup"><span data-stu-id="acc1f-123">A [bot](bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.</span></span>
 
-## <a name="learn-more"></a><span data-ttu-id="1d8ec-142">詳細情報</span><span class="sxs-lookup"><span data-stu-id="1d8ec-142">Learn more</span></span>
+:::image type="content" source="assets/images/overview-bots.png" alt-text="Teams クライアントでボットがどのように表示されるかを概念的に表現します。" border="false":::
 
-* [<span data-ttu-id="1d8ec-143">Teams クライアントの拡張ポイント</span><span class="sxs-lookup"><span data-stu-id="1d8ec-143">Extensibility points in the Teams client</span></span>](concepts/extensibility-points.md)
-* [<span data-ttu-id="1d8ec-144">Teams 用アプリをビルドする</span><span class="sxs-lookup"><span data-stu-id="1d8ec-144">Building apps for Teams</span></span>](concepts/building-an-app.md)
+   :::column-end:::
+   :::column span="":::
+
+### <a name="webhooks"></a><span data-ttu-id="acc1f-125">Webhook</span><span class="sxs-lookup"><span data-stu-id="acc1f-125">Webhooks</span></span>
+
+<span data-ttu-id="acc1f-126">**外部アプリと通信**する: [受信 web フック](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) は、別のアプリから Teams チャネルに通知を自動的に送信する簡単な方法です。</span><span class="sxs-lookup"><span data-stu-id="acc1f-126">**Communicate with external apps**: [Incoming webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel.</span></span> <span data-ttu-id="acc1f-127">送信用の [webhook](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)を使用して、web サービスに @mention のメッセージを表示します。</span><span class="sxs-lookup"><span data-stu-id="acc1f-127">With [outgoing webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), message your web service with an @mention.</span></span>
+
+:::image type="content" source="assets/images/overview-connectors.png" alt-text="Teams クライアントでどのコネクタが表示されるかを概念として表します。" border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+
+### <a name="microsoft-graph-for-teams"></a><span data-ttu-id="acc1f-129">Teams の Microsoft Graph</span><span class="sxs-lookup"><span data-stu-id="acc1f-129">Microsoft Graph for Teams</span></span>
+
+<span data-ttu-id="acc1f-130">**Teams データを利用**する: [Microsoft Graph API for teams](https://docs.microsoft.com/graph/teams-concept-overview) は、teams、チャネル、ユーザー、およびメッセージに関する情報へのアクセスを提供します。これは、アプリの機能を作成または拡張するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="acc1f-130">**Utilize Teams data**: The [Microsoft Graph API for Teams](https://docs.microsoft.com/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app.</span></span>
+
+:::image type="content" source="assets/images/overview-graph.png" alt-text="Teams 用の Microsoft Graph API の概念図。" border="false":::
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+## <a name="get-started"></a><span data-ttu-id="acc1f-132">概要</span><span class="sxs-lookup"><span data-stu-id="acc1f-132">Get started</span></span>
+
+<span data-ttu-id="acc1f-133">最初のアプリチュートリアルですぐにジャンプするか、既存のアプリを統合してインポートする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="acc1f-133">Jump right in with our first app tutorials or find out how to integrate and import existing apps.</span></span>
+
+:::row:::
+   :::column span="2":::
+
+### <a name="start-building"></a><span data-ttu-id="acc1f-134">構築を開始する</span><span class="sxs-lookup"><span data-stu-id="acc1f-134">Start building</span></span>
+
+   <span data-ttu-id="acc1f-135">シンプルなアプリを作成し、一般的に使用される機能を追加することで、Teams の構築にすばやく慣れることができます。</span><span class="sxs-lookup"><span data-stu-id="acc1f-135">Quickly familiarize yourself with building for Teams by creating a simple app and adding some commonly used capabilities.</span></span>
+
+   > [!div class="nextstepaction"]
+   > [<span data-ttu-id="acc1f-136">今すぐ最初のアプリを作成する</span><span class="sxs-lookup"><span data-stu-id="acc1f-136">Build your first app now</span></span>](build-your-first-app/build-first-app-overview.md)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="2":::
+
+### <a name="integrate-with-teams"></a><span data-ttu-id="acc1f-137">Teams との統合</span><span class="sxs-lookup"><span data-stu-id="acc1f-137">Integrate with Teams</span></span>
+
+   <span data-ttu-id="acc1f-138">Teams の共同作業機能を使用して、ユーザーが既存の web アプリ、サービス、またはシステムについて気に入った機能を融合します。</span><span class="sxs-lookup"><span data-stu-id="acc1f-138">Blend the features users love about an existing web app, service, or system with the collaborative features of Teams.</span></span>
+
+   > [!div class="nextstepaction"]
+   > [<span data-ttu-id="acc1f-139">既存のアプリを統合する</span><span class="sxs-lookup"><span data-stu-id="acc1f-139">Integrate an existing app</span></span>](samples/integrating-web-apps.md)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="2":::
+
+### <a name="a-little-code-goes-a-long-way"></a><span data-ttu-id="acc1f-140">少しのコードが長い</span><span class="sxs-lookup"><span data-stu-id="acc1f-140">A little code goes a long way</span></span>
+
+   <span data-ttu-id="acc1f-141">魅力的な Teams アプリを構築するために専門のプログラマである必要はありません。</span><span class="sxs-lookup"><span data-stu-id="acc1f-141">You don't need to be an expert programmer to build a great Teams app.</span></span> <span data-ttu-id="acc1f-142">いくつかの低コードソリューションのいずれかを試してみてください。</span><span class="sxs-lookup"><span data-stu-id="acc1f-142">Try one of several low-code solutions.</span></span>
+
+   > [!div class="nextstepaction"]
+   > [<span data-ttu-id="acc1f-143">低コードアプリを作成する</span><span class="sxs-lookup"><span data-stu-id="acc1f-143">Create a low-code app</span></span>](samples/teams-low-code-solutions.md)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="2":::
+
+## <a name="resources"></a><span data-ttu-id="acc1f-144">リソース</span><span class="sxs-lookup"><span data-stu-id="acc1f-144">Resources</span></span>
+
+* <span data-ttu-id="acc1f-145">[Web サイトに [Teams に共有] ボタンを追加する](concepts/build-and-test/share-to-teams.md)</span><span class="sxs-lookup"><span data-stu-id="acc1f-145">[Add a Share to Teams button to your website](concepts/build-and-test/share-to-teams.md)</span></span>
+* [<span data-ttu-id="acc1f-146">Fluent デザインシステム</span><span class="sxs-lookup"><span data-stu-id="acc1f-146">Fluent Design System</span></span>](https://fluentsite.z22.web.core.windows.net/)
+* [<span data-ttu-id="acc1f-147">Microsoft Teams JavaScript クライアント SDK</span><span class="sxs-lookup"><span data-stu-id="acc1f-147">Microsoft Teams JavaScript client SDK</span></span>](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
+* <span data-ttu-id="acc1f-148">[JavaScript のボット FRAMEWORK sdk](https://github.com/Microsoft/botbuilder-js)および[bot framework sdk (.net](https://github.com/Microsoft/botbuilder-dotnet/) )</span><span class="sxs-lookup"><span data-stu-id="acc1f-148">[Bot Framework SDK for JavaScript](https://github.com/Microsoft/botbuilder-js) and [Bot Framework SDK for .NET](https://github.com/Microsoft/botbuilder-dotnet/)</span></span>
+* [<span data-ttu-id="acc1f-149">アプリを組織または AppSource に発行する</span><span class="sxs-lookup"><span data-stu-id="acc1f-149">Publish your app to an organization or AppSource</span></span>](concepts/deploy-and-publish/overview.md)
