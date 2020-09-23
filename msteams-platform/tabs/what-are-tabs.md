@@ -4,12 +4,12 @@ author: laujan
 description: Teams プラットフォームのカスタムタブの概要
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: c9e76d13c96c48f88b555b3d740912017a8b2d0a
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 67b509e7d4f71fe6b597a22bb9141f51dc8284ab
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47818879"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209775"
 ---
 # <a name="what-are-microsoft-teams-custom-tabs"></a>Microsoft Teams のカスタム タブとは
 
@@ -55,4 +55,4 @@ Teams では、[チャネル/グループ] および [個人] の 2 種類のタ
 
 ## <a name="mobile-clients"></a>モバイル クライアント
 
-Teams mobile クライアントに [チャネル/グループ] タブ/[個人用] タブを表示するように選択した場合は、その `setSettings()` プロパティの値を設定する必要があり `websiteUrl` ます。 最適なユーザー環境を確保するには、タブを作成するときに [[モバイル] のタブのガイダンス](~/tabs/design/tabs-mobile.md) に従ってください。
+Teams mobile クライアントに [チャネル/グループ] タブを表示する場合は、その `setSettings()` プロパティの値を設定する必要があり `websiteUrl` ます。 最適なユーザー環境を確保するには、タブを作成するときに [[モバイル] のタブのガイダンス](~/tabs/design/tabs-mobile.md) に従ってください。

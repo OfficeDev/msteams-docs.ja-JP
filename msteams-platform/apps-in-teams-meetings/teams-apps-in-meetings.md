@@ -5,12 +5,12 @@ description: 参加者とユーザーの役割に基づく Teams 会議のアプ
 ms.topic: overview
 ms.author: lajanuar
 keywords: teams アプリ会議ユーザー参加者ロール api
-ms.openlocfilehash: f60f09283827ee8b22db4e77154ee986b26b54f8
-ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
+ms.openlocfilehash: c1cb894f066ac82b49fe327a3bbf10acf0d750dd
+ms.sourcegitcommit: 71b12e346c43853a99341b13837a44ff9555a5d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "48182008"
+ms.locfileid: "48204025"
 ---
 # <a name="apps-in-teams-meetings-preview"></a>Teams 会議のアプリ (プレビュー)
 
@@ -62,7 +62,7 @@ Teams のアプリの拡張機能センターは3つの概念に基づいてい�
 アプリの✔は、次の2つの領域で Teams 会議に表示できます。
 
 &emsp;&emsp;&#9679; **サイドパネル**。 </br>
-> **注**: アプリの _マニフェスト_ で、タブが [サイドパネル用に最適化](create-apps-for-teams-meetings.md#in-meeting)されていることが指定されている場合は、それが表示されます。 また、指定された設計ガイドラインに従って、共有トレイの環境の一部にすることもできます。
+> **注**: アプリの _マニフェスト_ で、タブが [サイドパネル用に最適化](create-apps-for-teams-meetings.md#in-meeting)されていることが指定されている場合は、それが表示されます。 また、この機能は、指定された設計ガイドラインに従って、共有トレイの環境の一部にすることもできます。
 
 &emsp;&emsp;&#9679; **会議中] ダイアログ**。 会議中のダイアログを使用して、会議の参加者に対して操作可能なコンテンツを示します。 「 [Teams 会議用アプリの作成」を](create-apps-for-teams-meetings.md)*参照してください*。
 
@@ -120,7 +120,7 @@ _See_ [ **Teams 会議でのロールの**表示](https://support.microsoft.com/
 > ユーザーの種類は会議に参加でき、前述の参加者の役割の1つを引き受けます。 ユーザーの種類は、 **getParticipantRole** API の一部として公開されません。
 
 1. **テナント内**。 これらのユーザーは組織に属しており、テナントの Azure Active Directory に資格情報を持っています。 通常は、フルタイム、オンサイト、またはリモートの従業員です。
-1. **ゲスト**。 ゲストは、組織のテナント内の Teams またはその他のリソースへのアクセスを招待された別の組織からの参加者です。 ゲストは組織の Active Directory に追加され、チームのチャット、会議、およびファイルへのフルアクセスを備えたネイティブのチームメンバーと同じ Teams の機能をほぼすべて提供できます。 _「_ [Microsoft Teams でのアクセスを推定](/microsoftteams/guest-access)する」をご覧ください。
+1. **ゲスト**。 ゲストは、組織のテナント内の Teams またはその他のリソースへのアクセスを招待された別の組織からの参加者です。 ゲストは組織の Active Directory に追加され、チームのチャット、会議、およびファイルへのフルアクセスを備えたネイティブのチームメンバーと同じ Teams の機能をほぼすべて提供できます。 [Microsoft Teams でのゲストアクセスを](/microsoftteams/guest-access)_参照してください_。
 1. **フェデレーション/外部**。 フェデレーションユーザーは、会議への参加を招待された別の組織の外部 Teams ユーザーです。 これらのユーザーは、フェデレーションパートナーとの間に有効な資格情報を持っているため、これらのユーザーは Teams によって認証されたものとして扱われますが、組織からチームや他の共有リソースにアクセスすることはできません。 外部ユーザーが teams やチャネルにアクセスできるようにする場合は、ゲストアクセスの方が適していることがあります。 「 [Microsoft Teams で外部アクセスを管理](/microsoftteams/manage-external-access)する _」を参照してください_。
 1. **匿名**。 匿名ユーザーは、Active Directory id を持たず、テナントと共にフェデレーションされません。 匿名の参加者は外部ユーザーのようになりますが、その id は会議に投影されません。 匿名ユーザーは、会議ウィンドウでアプリにアクセスできません。
 

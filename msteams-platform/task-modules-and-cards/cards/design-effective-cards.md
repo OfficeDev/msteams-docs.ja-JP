@@ -1,15 +1,15 @@
 ---
-title: 効果的なカードの設計
+title: 効果的なカードを設計する
 description: カードを作成するためのデザインガイドラインについて説明します。
 keywords: teams 設計ガイドラインリファレンスフレームワークカードのアダプタブルライトウェイト
-ms.openlocfilehash: 33ee0b59a3a5a1490d6e2106f8532094ed852598
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 4ec410820e0288d99dacb6944a8096f4f61b9d34
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675065"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209838"
 ---
-# <a name="designing-effective-cards"></a>効果的なカードの設計
+# <a name="design-effective-cards"></a>効果的なカードを設計する
 
 カードは、ボット、コネクタ、またはアプリを介して会話に追加できる、コンテンツの操作可能なスニペットです。 カードを使用すると、テキスト、グラフィックス、ボタンを使用して、対象ユーザーと通信することができます。
 
@@ -130,6 +130,6 @@ ms.locfileid: "41675065"
 ### <a name="use-mentions-if-you-want-the-attention-of-specific-users"></a>特定のユーザーの注意を引く場合は、メンションを使用します。
 
 > [!NOTE]
-> 現在、カードでのサポートは、[開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md)のみでサポートされています。
+> 現在、カードでのサポートは、 [開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md) のみでサポートされています。
 
 メンションは、チームまたはグループのチャットで特定のユーザーに通知するための最適な方法です。 ユーザーに割り当てられたタスクや、チームメイトに称賛を付与するようなシナリオで、カードに説明を含めることができます。 [カード形式ページ](~/task-modules-and-cards/cards/cards-format.md)のカードにメンションを含める方法について説明します。 

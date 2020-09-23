@@ -1,58 +1,145 @@
 ---
-title: Microsoft Teams 開発者プラットフォーム
-author: clearab
-description: Microsoft Teams 開発者プラットフォーム、また Microsoft Teams のアプリのビルドを開始する方法について説明する概要ページ。
+title: Microsoft Teams プラットフォーム用のアプリを構築する
+author: heath-hamilton
+description: 開発者がカスタムアプリを使用して Microsoft Teams の機能を拡張およびカスタマイズする方法の概要。
 ms.topic: overview
-ms.author: anclear
-ms.openlocfilehash: 5225669ccc8c76bb532d045df6b65105c893e734
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
-ms.translationtype: HT
+ms.author: lajanuar
+ms.date: 09/22/2020
+ms.openlocfilehash: c430add71e7c23a44a552270c5e3c1bacbe650e4
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44455486"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209800"
 ---
-# <a name="what-are-microsoft-teams-apps"></a>Microsoft Teams アプリとは
+# <a name="build-apps-for-microsoft-teams"></a>Microsoft Teams のアプリを構築する
 
-Microsoft Teams は、メンバーが共同作業するために使用するアプリやサービスを統合する Office 365 のコラボレーション ワークスペースです。 Microsoft Teams 開発者プラットフォームでは、開発者が簡単に独自のアプリとサービスを統合して、生産性を向上させ、迅速に意思決定を行い、(コンテキストの切り替えを減らして) フォーカスを示し、既存のコンテンツとワークフロー関連のコラボレーションを作成できます。 Microsoft Teams プラットフォームにビルドされているアプリは、Teams クライアント、サービス、ワークフローの間のブリッジとして機能し、それらはコラボレーション プラットフォームのコンテキストに直接取り込まれます。
+Microsoft Teams アプリは、ユーザーが収集、学習、作業を徐々に行うことができるように、重要な情報、共通ツール、および信頼されたプロセスを提供します。
 
-## <a name="what-can-teams-apps-do"></a>Teams アプリで実行できること
+アプリは、ニーズに合わせて Teams を拡張する方法を示します。 Teams で新しいものを作成するか、既存のアプリを統合します。
 
-Microsoft Teams プラットフォームにビルドされているアプリは、コラボレーションの強化と生産性の向上に主に重点を置いています。 アプリは、他のシステムや複雑なマルチファセット アプリケーションからの通知を投稿するなど、シンプルなものにすることができます。 Teams がソーシャル コラボレーション プラットフォームであることにご注意ください。最適なアプリでは、メンバーが自身を表現し、共同作業を効率化することができます。
+## <a name="what-are-teams-apps"></a>Teams アプリとは
 
-* **外部システムのアイテムで共同作業を行います。** カスタムの Teams アプリのコア シナリオの 1 つは、情報またはアイテムを別の場所から Teams に取り込んで、会話を行うことです。 情報を Teams にプッシュして、必要に応じてユーザーが検索して取得できるようにするか、埋め込み Web ビューで使用できるようにすることができます。
+Teams アプリは、 [機能](concepts/capabilities-overview.md) と [エントリポイント](concepts/extensibility-points.md)の組み合わせです。 たとえば、ユーザーは、*チャネル*(エントリポイント) のアプリの*bot* (機能) とチャットできます。
 
-* **会話からワークフローをトリガーします。** 多くの場合、会話を行った後、いくつかのワークフローを開始するか、いくつかのアクションを完了する必要があります。それについてメモを取り、pull request を確認して、それを潜在顧客情報に反映します。Teams アプリを使用すると、Teams 内で直接そのワークフローへのアクセスを付与できます。
+単純な (通知を送信する) アプリもあれば、複雑なアプリ (患者レコードの管理) もあります。 アプリを計画するときは、Teams がコラボレーションハブであることに注意してください。 最良の Teams アプリを使用すると、ユーザーが自分を表現し、連携しやすくなります。
 
-* **チームに重要なイベントを通知します。** メール通知を受け取りたくない場合、 代わりに Teams に通知を送信できます。 ユーザー、チャネル、アクティビティ フィード、またはそれらにサブスクライブしているユーザーに直接通知を送信します。
+:::row:::
+   :::column span="":::
 
-* **他のサイトまたはサービスの機能を埋め込みます。** アプリを見つけやすくするだけで済む場合があります。 既存のシングルページ アプリを埋め込むか、チーム用に一からビルドします。
+### <a name="tabs"></a>タブ
 
-## <a name="how-do-teams-apps-work"></a>Teams アプリのしくみ
+**情報をさら**にわかりやすくする: 必要な場合にのみ、簡単に情報を見つけられるようにしましょう。 重要な web ページを [タブ](tabs/what-are-tabs.md)で表示します。これにより、チーム内の静的および動的なコンテンツについて全画面 web を利用できます。
 
-Microsoft Teams のカスタム アプリについて (いかにすばらしいアプリであるかということ以外に) 最初に調べることは、Teams はホスティング サービスではないということです。 アプリ パッケージには、アプリについてのメタデータ (名前、アイコンなど) と、アプリを利用するホストの Web サービスへのポインターが含まれます。 Microsoft Teams には、配布メカニズム、利用できる UI/UX コンストラクト、アプリで利用できる情報やアクションを強化するために使用できる API が用意されています。
+:::image type="content" source="assets/images/overview-tabs.png" alt-text="Teams クライアントでタブがどのように表示されるかを概念として表します。" border="false":::
 
-Teams アプリは 3 つの主要な部分で構成されています。
+   :::column-end:::
+   :::column span="":::
 
-* ユーザーがアプリを操作する **Microsoft Teams クライアント (Web、デスクトップ、モバイル)**。
-* ユーザーによってインストールされたアプリを作成し、アプリのメタデータとサービスへのポインターを含む **Teams アプリ パッケージ**。
-* 必要なロジック、データ ストレージ、API 呼び出しを実行して、アプリを利用する**サービス、ワークフロー、Web サイト**。
+### <a name="messaging-extensions"></a>メッセージングの拡張機能
 
-Microsoft Teams アプリで公開する機能が、セキュリティで保護するための追加の手順を実行しない限り、インターネット経由で一般に使用可能であることに留意することが重要です。 機密情報または保護された情報へのアクセスを提供する場合、サービスでは少なくとも、アプリに接続されているエンドポイントを認証しているか、[ユーザーを認証](concepts/authentication/authentication.md)していることをご確認ください。
+マルチ**タスクを簡単にする**:[メッセージング拡張機能](messaging-extensions/what-are-messaging-extensions.md)を使用すると、会話で外部情報をすばやく共有できます。 また、メッセージを操作することもできます。これには、チャネル投稿の内容に基づくヘルプチケットの作成などがあります。
 
-## <a name="how-can-you-share-your-teams-app"></a>Teams アプリの共有方法
+:::image type="content" source="assets\images\overview-messaging.png" alt-text="Teams クライアントでメッセージング拡張機能がどのように表示されるかを概念的に表現します。" border="false":::
 
-Microsoft Teams アプリを共有する準備ができたら、対象ユーザーに応じて 3 つのオプションがあります。
+   :::column-end:::
+:::row-end:::
 
-* **[アプリを直接アップロードする](concepts/deploy-and-publish/apps-upload.md)** アプリをチームや組織内の少人数にのみ共有する必要がある場合は、アプリ パッケージを共有して直接アップロードできます。
-* **[組織のアプリ カタログに公開する](concepts/deploy-and-publish/apps-upload.md)** アプリ カタログを使用してアプリを組織全体に共有できます。
-* **[パブリック App Store に公開する](concepts/deploy-and-publish/apps-upload.md)** アプリがすべてのユーザー向けの場合、そのアプリをパブリック App Store に公開できます。 目標に応じて、マーケティングや販売のサポート対象になる可能性があります。
+:::row:::
+   :::column span="":::
 
-## <a name="get-started"></a>作業の開始
+### <a name="bots"></a>ボット
 
-* [C# でボットとタブ アプリをビルドする](tutorials/get-started-dotnet-app-studio.md)
-* [JavaScript または Node.js でボットとタブ アプリをビルドする](tutorials/get-started-nodejs-app-studio.md)
+**単語をアクションにする**: 会話では、多くの場合、何らかの処理が必要になります (注文を生成し、自分のコードを確認し、チケットの状態を確認するなど)。 [Bot](bots/what-are-bots.md)は、Teams 内でこれらの種類のワークフローを直接開始できます。
 
-## <a name="learn-more"></a>詳細情報
+:::image type="content" source="assets/images/overview-bots.png" alt-text="Teams クライアントでボットがどのように表示されるかを概念的に表現します。" border="false":::
 
-* [Teams クライアントの拡張ポイント](concepts/extensibility-points.md)
-* [Teams 用アプリをビルドする](concepts/building-an-app.md)
+   :::column-end:::
+   :::column span="":::
+
+### <a name="webhooks"></a>Webhook
+
+**外部アプリと通信**する: [受信 web フック](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) は、別のアプリから Teams チャネルに通知を自動的に送信する簡単な方法です。 送信用の [webhook](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)を使用して、web サービスに @mention のメッセージを表示します。
+
+:::image type="content" source="assets/images/overview-connectors.png" alt-text="Teams クライアントでどのコネクタが表示されるかを概念として表します。" border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+
+### <a name="microsoft-graph-for-teams"></a>Teams の Microsoft Graph
+
+**Teams データを利用**する: [Microsoft Graph API for teams](https://docs.microsoft.com/graph/teams-concept-overview) は、teams、チャネル、ユーザー、およびメッセージに関する情報へのアクセスを提供します。これは、アプリの機能を作成または拡張するのに役立ちます。
+
+:::image type="content" source="assets/images/overview-graph.png" alt-text="Teams 用の Microsoft Graph API の概念図。" border="false":::
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+## <a name="get-started"></a>概要
+
+最初のアプリチュートリアルですぐにジャンプするか、既存のアプリを統合してインポートする方法について説明します。
+
+:::row:::
+   :::column span="2":::
+
+### <a name="start-building"></a>構築を開始する
+
+   シンプルなアプリを作成し、一般的に使用される機能を追加することで、Teams の構築にすばやく慣れることができます。
+
+   > [!div class="nextstepaction"]
+   > [今すぐ最初のアプリを作成する](build-your-first-app/build-first-app-overview.md)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="2":::
+
+### <a name="integrate-with-teams"></a>Teams との統合
+
+   Teams の共同作業機能を使用して、ユーザーが既存の web アプリ、サービス、またはシステムについて気に入った機能を融合します。
+
+   > [!div class="nextstepaction"]
+   > [既存のアプリを統合する](samples/integrating-web-apps.md)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="2":::
+
+### <a name="a-little-code-goes-a-long-way"></a>少しのコードが長い
+
+   魅力的な Teams アプリを構築するために専門のプログラマである必要はありません。 いくつかの低コードソリューションのいずれかを試してみてください。
+
+   > [!div class="nextstepaction"]
+   > [低コードアプリを作成する](samples/teams-low-code-solutions.md)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="2":::
+
+## <a name="resources"></a>リソース
+
+* [Web サイトに [Teams に共有] ボタンを追加する](concepts/build-and-test/share-to-teams.md)
+* [Fluent デザインシステム](https://fluentsite.z22.web.core.windows.net/)
+* [Microsoft Teams JavaScript クライアント SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
+* [JavaScript のボット FRAMEWORK sdk](https://github.com/Microsoft/botbuilder-js)および[bot framework sdk (.net](https://github.com/Microsoft/botbuilder-dotnet/) )
+* [アプリを組織または AppSource に発行する](concepts/deploy-and-publish/overview.md)

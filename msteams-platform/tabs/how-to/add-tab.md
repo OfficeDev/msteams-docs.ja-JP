@@ -1,16 +1,16 @@
 ---
 title: カスタムタブを使用して Teams アプリを拡張する
 author: laujan
-description: タブを作成するためのガイド
+description: アプリ Studio または手動で Microsoft Teams のタブを作成する方法について説明します。
 keywords: 構成可能な teams タブグループチャネル
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 0434aabc39900e8f8232ae307a5854b2eb3a756d
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 78077a19c8597826ca6d10a7c1c6240fae3f3fbd
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47819033"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48209719"
 ---
 # <a name="extend-your-teams-app-with-a-custom-tab"></a>カスタムタブを使用して Teams アプリを拡張する
 
@@ -78,13 +78,13 @@ ms.locfileid: "47819033"
 
 個人用タブに表示されるコンテンツは、すべてのユーザーに対して同じであり、配列に構成されてい `staticTabs` ます。 アプリで最大16個の個人用タブを宣言することができます。
 
-|Name| 型| 最大サイズ | 必須 | 説明|
+|名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`entityId`|String|64 文字|✔|タブに表示されるエンティティの一意識別子。|
 |`name`|文字列|128文字|✔|チャネルインターフェイスのタブの表示名。|
 |`contentUrl`|文字列|2048 文字|✔|Teams キャンバスに表示されるエンティティ UI をポイントする https://URL。|
 |`websiteUrl`|文字列|2048 文字||ユーザーがブラウザーで表示をポイントしたかどうかを示す https://URL。|
-|`scopes`|列挙型の配列|1 |✔|静的タブでは、スコープのみがサポート `personal` されます。つまり、個人用アプリの一部としてのみプロビジョニングできます。|
+|`scopes`|列挙型の配列|1-d|✔|静的タブでは、スコープのみがサポート `personal` されます。つまり、個人用アプリの一部としてのみプロビジョニングできます。|
 
 #### <a name="simple-personal-tab-manifest-example"></a>シンプルな個人用タブマニフェストの例
 
@@ -107,11 +107,11 @@ ms.locfileid: "47819033"
 
 チャネルまたはグループのタブが配列に追加され `configurableTabs` ます。 配列には、[チャネル/グループ] タブを1つだけ宣言でき `configurableTabs` ます。
 
-|Name| 型| 最大サイズ | 必須 | 説明|
+|名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`configurationUrl`|文字列|2048 文字|✔|Https://URL を構成するページ。|
-|`canUpdateConfiguration`|ブール型|||作成後にタブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 限り `true`|
-|`scopes`|列挙型の配列|1 |✔|構成可能なタブでは、および範囲のみがサポートさ `team` `groupchat` れています。 |
+|`canUpdateConfiguration`|ブール値|||作成後にタブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 限り `true`|
+|`scopes`|列挙型の配列|1-d|✔|構成可能なタブでは、および範囲のみがサポートさ `team` `groupchat` れています。 |
 
 #### <a name="simple-channelgroup-tab-manifest-example"></a>シンプルなチャネル/グループタブマニフェストの例
 
