@@ -5,12 +5,12 @@ description: Microsoft Teams 用にボットを作成する方法。
 ms.topic: conceptual
 localization_priority: Priority
 ms.author: anclear
-ms.openlocfilehash: b9999fb8fcb39b4cd70789d909fecd9cad13e5d7
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: eab1d5b76c4fa534e7a5bbab8572004b9f737a1b
+ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "42635299"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "48178317"
 ---
 # <a name="create-a-bot-for-microsoft-teams"></a>Microsoft Teams 用にボットを作成する
 
@@ -172,7 +172,14 @@ Web サービスは、Azure ポータルでボット チャネル登録リソー
 
 ## <a name="upload-your-package-to-microsoft-teams"></a>Microsoft Teams にアプリ パッケージをアップロードする
 
+> [!NOTE]
+> ボットを正常にアップロードするには、テナント管理者が最初にサードパーティまたはカスタムのアプリを Teams に[アップロードすることを許可](/microsoftteams/manage-apps#manage-org-wide-app-settings)する必要があります。
+
 App Studio を使用した場合は、[**Manifest editor**] (マニフェスト エディター) の [**Test and distribute**] (テストと発行) タブからアプリをインストールできます。 また、左側のオーバーフロー メニュー (`...`) をクリックし、[**その他のアプリ**] をクリックし、[**カスタム アプリをアップロード**] リンクをクリックする方法でもアプリ パッケージをインストールすることができます。 アプリ マニフェストまたはアプリ パッケージを App Studio にインポートして、アップロードする前に追加の更新を行うこともできます。
+
+## <a name="bots-in-teams-meetings"></a>Teams 会議のボット
+
+Teams は、会議中のボットの呼び出しをサポートしています。 ボットが呼び出しメッセージを受信すると、`userId` と `tenantId` からユーザーとテナントを識別できます。 `meetingId` は、`channelData` オブジェクトに含まれています。 ボットは、ユーザーの役割を取得するために `GetParticipant` API 要求に対して、`userId` と `meetingId` を使用できます。
 
 ## <a name="next-steps"></a>次の手順
 
