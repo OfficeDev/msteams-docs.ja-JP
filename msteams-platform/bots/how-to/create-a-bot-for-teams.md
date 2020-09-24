@@ -1,16 +1,16 @@
 ---
 title: Microsoft Teams 用にボットを作成する
 author: clearab
-description: Microsoft Teams 用にボットを作成する方法。
+description: アプリスタジオ、Yeoman Generatorおよびその他のツールを使用して Microsoft Teams の bot を作成する方法について説明します。
 ms.topic: conceptual
 localization_priority: Priority
 ms.author: anclear
-ms.openlocfilehash: eab1d5b76c4fa534e7a5bbab8572004b9f737a1b
-ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
+ms.openlocfilehash: 03196c32e5e1a4b2714a4c916a71c80fc10a5edc
+ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "48178317"
+ms.locfileid: "48209831"
 ---
 # <a name="create-a-bot-for-microsoft-teams"></a>Microsoft Teams 用にボットを作成する
 
