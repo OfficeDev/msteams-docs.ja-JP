@@ -3,12 +3,12 @@ title: コネクタと Webhook にメッセージを送信する
 description: Microsoft Teams で Office 365 コネクタを使用する方法について説明します。
 localization_priority: Priority
 keywords: Teams o365 コネクタ
-ms.openlocfilehash: 16dbb99add82c26930baf22bfc2c5153fd47b2f1
-ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
+ms.openlocfilehash: bfcee2c00d30517522621f61142324b4f81a93f8
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46651650"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237966"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>コネクタと Webhook にメッセージを送信する
 
@@ -154,7 +154,7 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
 
    ```bash
    // on Windows
-   curl.exe -H 'Content-Type: application/json' -d '{"text": "Hello World"}' <YOUR WEBHOOK URL>
+   curl.exe -H "Content-Type:application/json" -d "{'text':'Hello World'}" <YOUR WEBHOOK URL>
    ```
 
 2. POST が成功すると、単に "**1**" という `curl` の出力が表示されます。
@@ -246,9 +246,10 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
             "type":"AdaptiveCard",
             "version":"1.2",
             "body":[
-               {
-                  "For Samples and Templates, see":"https://adaptivecards.io/samples"
-               }
+                {
+                "type": "TextBlock",
+                "text": "For Samples and Templates, see https://adaptivecards.io/samples](https://adaptivecards.io/samples)",
+                }
             ]
          }
       }
