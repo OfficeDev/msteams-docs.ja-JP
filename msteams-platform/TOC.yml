@@ -1,10 +1,25 @@
 - name: 概要
   expanded: true
   items:
-    - name: Microsoft Teams アプリとは
+    - name: Microsoft Teams のアプリを作成する
       href: overview.md
     - name: 新機能
       href: whats-new.md
+- name: 最初のアプリを作成
+  expanded: true
+  items:
+    - name: 概要と前提条件
+      href: build-your-first-app/build-first-app-overview.md
+    - name: '"Hello, World!" の作成 アプリ'
+      href: build-your-first-app/build-and-run.md
+    - name: 個人用のタブを作成する
+      href: build-your-first-app/build-personal-tab.md
+    - name: チャネルのタブを作成する
+      href: build-your-first-app/build-channel-tab.md
+    - name: Bot を作成する
+      href: build-your-first-app/build-bot.md
+    - name: メッセージングの拡張機能を作成する
+      href: build-your-first-app/build-messaging-extension.md
 - name: チュートリアルとコード サンプル
   items:
     - name: C# を使用してアプリを作成する
@@ -15,8 +30,12 @@
       href: tutorials/get-started-yeoman.md
     - name: Teams 用カスタム アプリについて
       href: tutorials/code-samples.md
-- name: テンプレートと統合
+- name: 統合およびテンプレート
   items:
+    - name: Web アプリを統合する
+      href: samples/integrating-web-apps.md
+    - name: ローコードアプリを作成する
+      href: samples/teams-low-code-solutions.md
     - name: 本番対応のアプリ テンプレート
       href: samples/app-templates.md
     - name: 本番対応の Shifts コネクタ
@@ -44,9 +63,9 @@
 - name: 概念
   expanded: true
   items:
-    - name: Microsoft Teams 用アプリの構築
-      href: concepts/building-an-app.md
-    - name: Teams クライアントの拡張ポイント
+    - name: アプリの機能
+      href: concepts/capabilities-overview.md
+    - name: アプリのエントリ ポイント
       href: concepts/extensibility-points.md
     - name: アプリをデザインする
       items:
@@ -175,11 +194,11 @@
               href: tabs/how-to/authentication/auth-aad-sso.md
         - name: Teams クライアント SDK を使用する
           href: tabs/how-to/using-teams-client-sdk.md
-        - name: 他の Teams のコンテキストを取得する
+        - name: 追加の Teams のコンテキストを取得する
           href: tabs/how-to/access-teams-context.md
         - name: Microsoft Teams タブの DevTools
           href: tabs/how-to/developer-tools.md
-        - name: SharePoint にカスタム タブを追加する
+        - name: SharePoint にユーザー設定タブを追加する
           href: tabs/how-to/tabs-in-sharepoint.md
         - name: デバイス アクセス許可を要求する
           href: tabs/how-to/native-device-permissions.md
@@ -248,7 +267,7 @@
           href: bots/calls-and-meetings/calls-meetings-bots-overview.md
         - name: リアルタイム メディアの概念
           href: bots/calls-and-meetings/real-time-media-concepts.md
-        - name: 通話ボットの登録
+        - name: 通話ボットを登録する
           href: bots/calls-and-meetings/registering-calling-bot.md
         - name: 着信通知
           href: bots/calls-and-meetings/call-notifications.md
@@ -311,7 +330,7 @@
       href: task-modules-and-cards/what-are-cards.md
     - name: カード
       items:
-        - name: 効果的なカードのデザイン
+        - name: 効果的にカードをデザインする
           href: task-modules-and-cards/cards/design-effective-cards.md
         - name: カードのテキストを書式設定する
           href: task-modules-and-cards/cards/cards-format.md
@@ -398,7 +417,7 @@
           href: resources/bot-v3/bots-menus.md
         - name: タブ付きのボット
           href: resources/bot-v3/bots-with-tabs.md
-        - name: ボット メッセージの書式設定
+        - name: ボット メッセージを書式設定する
           href: resources/bot-v3/bots-text-formats.md
         - name: ボットをテストする
           href: resources/bot-v3/bots-test.md
