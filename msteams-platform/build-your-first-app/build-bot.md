@@ -5,12 +5,12 @@ description: 最初の Microsoft Teams アプリの bot を構築する方法に
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: 7d3d1b63aace7fda971fb6ccaddddf631b4b2ad9
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: cc004bd0d86eca1e4e63c2a96a72f9c11d2269db
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210196"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237826"
 ---
 # <a name="build-a-teams-bot"></a>Teams bot を構築する
 
@@ -34,7 +34,7 @@ ms.locfileid: "48210196"
 
 まだお持ちでない場合は、 [Teams 開発の前提条件を理解し、インストール](build-first-app-overview.md#get-prerequisites)してください。
 
-## <a name="create-your-app-project"></a>アプリプロジェクトを作成する
+## <a name="1-create-your-app-project"></a>1. アプリプロジェクトを作成します。
 
 Microsoft Teams Toolkit は、アプリ用に次のコンポーネントをセットアップするのに役に立ちます。
 
@@ -53,7 +53,7 @@ Microsoft Teams Toolkit は、アプリ用に次のコンポーネントをセ�
 1. オプションBot のカスタム名を入力し、[ **作成**] を選択します。 (これは bot の名前であり、既に指定した Teams アプリの名前ではないことに注意してください)。
 1. 画面の下部にある [ **完了** ] を選択して、プロジェクトを構成します。
 
-## <a name="identify-relevant-app-project-components"></a>関連するアプリプロジェクトコンポーネントを特定する
+## <a name="2-identify-relevant-app-project-components"></a>2. 関連するアプリプロジェクトコンポーネントを特定する
 
 Teams ツールキットを使用してプロジェクトを作成すると、アプリマニフェストとスキャフォールディングの多くが自動的に設定されます。 Bot を構築するための主なコンポーネントを見てみましょう。
 
@@ -105,7 +105,7 @@ Teams ツールキットを使用してプロジェクトを作成すると、�
 
 このファイルには、 `.env` ルートディレクトリにも BOT ID とパスワードが保存されます。
 
-## <a name="set-up-a-secure-tunnel-to-your-app"></a>アプリへのセキュリティで保護されたトンネルの設定
+## <a name="3-set-up-a-secure-tunnel-to-your-app"></a>3. アプリへのセキュリティで保護されたトンネルをセットアップする
 
 テストを目的として、ボットをローカル web サーバー (ポート 3978) にホストしてみましょう。
 
@@ -116,7 +116,7 @@ Teams ツールキットを使用してプロジェクトを作成すると、�
 
 アプリのマニフェストが bot をホストしている場所を指しています。
 
-## <a name="configuring-your-bot"></a>Bot を構成する
+## <a name="4-configure-your-bot"></a>4. bot を構成する
 
 Teams でボットを使用するには、その bot を Azure Bot サービスに登録する必要があります。 さいわい、Teams ツールキットを使用してアプリをセットアップすると、これは自動的に実行されます。
 
@@ -140,7 +140,7 @@ Bot に送信されるユーザーメッセージ (つまり、要求) を受信
 
 Bot は Teams のメッセージに応答できるようになります。
 
-## <a name="run-your-app"></a>アプリを実行する
+## <a name="5-run-your-app"></a>5. アプリを実行する
 
 Bot をホストする URL を設定し、メッセージを処理するように構成します。 その後、自分の bot を起動して実行します。
 
@@ -151,19 +151,19 @@ Bot をホストする URL を設定し、メッセージを処理するよう�
 
 `Bot/ME service listening at http://localhost:3978`
 
-## <a name="sideload-your-bot-in-teams"></a>Teams でボットをサイドロード
+## <a name="6-sideload-your-bot-in-teams"></a>6 Teams での bot のサイドロード
 
 Bot を実行している場合は、Teams にインストールできます。
 
 > [!TIP]
-> 以前に Teams アプリをサイドロードしていない場合は、以下の [手順](../build-your-first-app/build-and-run.md#sideload-your-app-in-teams)を実行します。
+> 以前に Teams アプリをサイドロードしていない場合は、以下の [手順](../build-your-first-app/build-and-run.md#5-sideload-your-app-in-teams)を実行します。
 
 1. アプリのサイドロードを許可するアカウントを使用して、Teams クライアントにログインします。
 1. [ **アプリ**] を選択し、[ **カスタムアプリのアップロード**] を選択します。
 1. アプリプロジェクトフォルダーに移動し `.publish` 、を選択し `Development.zip` ます。
 1. [モーダルのインストール] で、[ **追加** ] を選択してアプリをインストールします。
 
-## <a name="test-your-bot"></a>Bot をテストする
+## <a name="7-test-your-bot"></a>7. bot をテストする
 
 おもしろい部分のために、1対1のチャットで bot に "Hello" と言うことができます。
 

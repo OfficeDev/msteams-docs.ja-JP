@@ -5,12 +5,12 @@ description: 参加者とユーザーの役割に基づく Teams 会議のアプ
 ms.topic: overview
 ms.author: lajanuar
 keywords: teams アプリ会議ユーザー参加者ロール api
-ms.openlocfilehash: c1cb894f066ac82b49fe327a3bbf10acf0d750dd
-ms.sourcegitcommit: 71b12e346c43853a99341b13837a44ff9555a5d6
+ms.openlocfilehash: 6af9cac2040a9301ba2bdf64ddbd7857490a679f
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48204025"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237889"
 ---
 # <a name="apps-in-teams-meetings-preview"></a>Teams 会議のアプリ (プレビュー)
 
@@ -62,7 +62,9 @@ Teams のアプリの拡張機能センターは3つの概念に基づいてい�
 アプリの✔は、次の2つの領域で Teams 会議に表示できます。
 
 &emsp;&emsp;&#9679; **サイドパネル**。 </br>
-> **注**: アプリの _マニフェスト_ で、タブが [サイドパネル用に最適化](create-apps-for-teams-meetings.md#in-meeting)されていることが指定されている場合は、それが表示されます。 また、この機能は、指定された設計ガイドラインに従って、共有トレイの環境の一部にすることもできます。
+
+> [!NOTE]
+> アプリの _マニフェスト_ で、タブが [サイドパネル用に最適化](create-apps-for-teams-meetings.md#in-meeting)されていることが指定されている場合は、それが表示されます。 また、この機能は、指定された設計ガイドラインに従って、共有トレイの環境の一部にすることもできます。
 
 &emsp;&emsp;&#9679; **会議中] ダイアログ**。 会議中のダイアログを使用して、会議の参加者に対して操作可能なコンテンツを示します。 「 [Teams 会議用アプリの作成」を](create-apps-for-teams-meetings.md)*参照してください*。
 

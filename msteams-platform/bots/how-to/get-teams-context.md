@@ -4,12 +4,12 @@ author: clearab
 description: 会話名簿、details、channel list を含む、bot の Microsoft チーム固有のコンテキストを取得する方法。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: a29fc192a88534620a463e7e14d383999a7783e7
-ms.sourcegitcommit: 68aeac34a2e585b985eabfae5d160b6b26d43b1a
+ms.openlocfilehash: 55f93a914cdb0f92885ff535424cd823072184aa
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "44801286"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237799"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Bot のチーム固有のコンテキストを取得する
 
@@ -19,7 +19,7 @@ Bot は、にインストールされているチームまたはチャットに�
 
 ## <a name="fetching-the-roster-or-user-profile"></a>名簿またはユーザープロファイルを取得する
 
-Bot は、メンバーの一覧とその基本プロファイルを照会できます。これには、Teams のユーザー Id や Azure Active Directory (Azure AD) (name、objectId など) の情報が含まれます。 この情報を使用して、ユーザー id (たとえば、Azure AD 資格情報を介してタブにログインしたユーザー) がチームのメンバーであるかどうかを調べることができます。 次のサンプルコードでは、名簿を取得するためにページエンドポイントを使用しています。 非ページバージョンを引き続き使用する場合もありますが、大規模なチームでは信頼性が低く、使用しないでください。 詳細については、[この記事](~/resources/team-chat-member-api-changes.md)を参照してください。
+Bot は、メンバーの一覧とその基本プロファイルを照会できます。これには、Teams のユーザー Id や Azure Active Directory (Azure AD) (name、objectId など) の情報が含まれます。 この情報を使用して、ユーザー id (たとえば、Azure AD 資格情報を介してタブにログインしたユーザー) がチームのメンバーであるかどうかを調べることができます。 次のサンプルコードでは、名簿を取得するためにページエンドポイントを使用しています。 非ページバージョンを引き続き使用する場合もありますが、大規模なチームでは信頼性が低く、使用しないでください。 詳細については、 [この記事](~/resources/team-chat-member-api-changes.md) を参照してください。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -35,10 +35,10 @@ public class MyBot : TeamsActivityHandler
         {
             var currentPage = await TeamsInfo.GetPagedMembersAsync(turnContext, 100, continuationToken, cancellationToken);
             continuationToken = currentPage.ContinuationToken;
-            members = members.Concat(currentPage.Members).ToList();
-        }
-        while (continuationToken != null);
-    }
+            members.AddRange(currentPage.Members);
+         }
+         while (continuationToken != null);
+     }
 }
 ```
 

@@ -1,15 +1,15 @@
 ---
 title: Microsoft Teams 用のごみ箱のジェネレーターを使い始める
 description: Microsoft Teams 用のごみ箱のジェネレーターでのすぐれたアプリの構築を開始する
-keywords: js ノード js の概要
+keywords: nodejs node.js の概要
 ms.topic: tutorial
 ms.custom: scenarios:getting-started
-ms.openlocfilehash: 217c0900e067a61e083e7ffb0b121afdaa51c49f
-ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
+ms.openlocfilehash: f9b3f165d3b5387f8e7d30563134ed4889920ca5
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "43034044"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237994"
 ---
 # <a name="build-your-first-microsoft-teams-app"></a>最初の Microsoft Teams アプリを構築する
 
@@ -26,7 +26,7 @@ Teams ジェネレーターの使用を開始する前に、次のものをコ�
 
 ### <a name="install-node"></a>インストールノード
 
-NodeJS がコンピューターにインストールされている必要があります。 最新の[LTS バージョン](https://nodejs.org/dist/latest-v8.x/)を使用する必要があります。
+NodeJS がコンピューターにインストールされている必要があります。 最新の [LTS バージョン](https://nodejs.org)を使用する必要があります。
 
 ### <a name="install-a-code-editor"></a>コード エディターのインストール
 
@@ -60,7 +60,7 @@ npm install generator-teams@preview --global
 
 ## <a name="generate-your-project"></a>プロジェクトを生成する
 
-コマンドプロンプトを開き、プロジェクトを作成する新しいディレクトリを作成し、そのディレクトリにコマンド`yo teams`を入力します。 これにより Teams アプリジェネレーターが開始され、一連の質問が寄せられます。
+コマンドプロンプトを開き、プロジェクトを作成する新しいディレクトリを作成し、そのディレクトリにコマンドを入力し `yo teams` ます。 これにより Teams アプリジェネレーターが開始され、一連の質問が寄せられます。
 
 ![yo teams](~/assets/yeoman-images/teams-first-app-1.png)
 
@@ -68,9 +68,9 @@ npm install generator-teams@preview --global
 
 次の手順では、プロジェクトのタイトルを求めます。このタイトルは、アプリのマニフェストと説明で使用されます。 その後、会社名の入力を求められます。これはマニフェストでも使用されます。
 
-5番目の質問では、使用するマニフェストのバージョンについて確認します。 このチュートリアルでは`v1.5`、[現在使用可能な汎用スキーマ] を選択します。
+5番目の質問では、使用するマニフェストのバージョンについて確認します。 このチュートリアルで `v1.5` は、[現在使用可能な汎用スキーマ] を選択します。
 
-その後、ジェネレーターはプロジェクトに追加するアイテムを要求します。 1つまたは複数のアイテムの組み合わせを選択できます。 ここでは、*タブを選択する*だけです。
+その後、ジェネレーターはプロジェクトに追加するアイテムを要求します。 1つまたは複数のアイテムの組み合わせを選択できます。 ここでは、 *タブを選択する*だけです。
 
 ![アイテムの選択](~/assets/yeoman-images/teams-first-app-2.png)
 
@@ -86,9 +86,9 @@ npm install generator-teams@preview --global
 
 ## <a name="add-some-code-to-your-tab"></a>タブにコードを追加する
 
-ジェネレーターが完了すると、任意のコードエディターでソリューションを開くことができます。 時間をかけて、コードがどのように整理されているかを理解し、[プロジェクト構造](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure)のドキュメントで詳細を確認できます。
+ジェネレーターが完了すると、任意のコードエディターでソリューションを開くことができます。 時間をかけて、コードがどのように整理されているかを理解し、 [プロジェクト構造](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) のドキュメントで詳細を確認できます。
 
-タブは`./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx`ファイル内に配置されます。 これは、タブの TypeScript に対応した基本クラスです`render()` 。メソッドを見つけ、 `<PanelBody>`コントロール内にコードの行を追加して、次のようにします。
+タブはファイル内に配置され `./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx` ます。 これは、タブの TypeScript に対応した基本クラスです。メソッドを見つけ、 `render()` コントロール内にコードの行を追加して、次のようにします。 `<PanelBody>`
 
 ``` TypeScript
 <PanelBody>
@@ -104,15 +104,15 @@ npm install generator-teams@preview --global
 
 これで、プロジェクトをビルドできるようになります。 これは、2つの手順 (または、次の手順を参照) で行われます。
 
-最初に Teams アプリのマニフェストファイルを作成する必要があります。これにより、Microsoft Teams にサイドロードをアップロードします。 これは、Gulp タスク`gulp manifest`によって実行されます。 これにより、マニフェストが検証され、 `./package`ディレクトリに zip ファイルが作成されます。
+最初に Teams アプリのマニフェストファイルを作成する必要があります。これにより、Microsoft Teams にサイドロードをアップロードします。 これは、Gulp タスクによって実行され `gulp manifest` ます。 これにより、マニフェストが検証され、ディレクトリに zip ファイルが作成され `./package` ます。
 
-ソリューションを構築するには、 `gulp build`このコマンドを使用します。 これにより、ソリューションが`./dist`フォルダーに transpile されます。 
+ソリューションを構築するには、このコマンドを使用し `gulp build` ます。 これにより、ソリューションがフォルダーに transpile され `./dist` ます。 
 
 ## <a name="run-your-app"></a>アプリを実行する
 
-アプリを実行するには、 `gulp serve`このコマンドを使用します。 これにより、アプリをテストするためのローカル web サーバーが構築および開始されます。 また、プロジェクトでファイルを保存するたびに、アプリケーションが再構築されます。 
+アプリを実行するには、このコマンドを使用し `gulp serve` ます。 これにより、アプリをテストするためのローカル web サーバーが構築および開始されます。 また、プロジェクトでファイルを保存するたびに、アプリケーションが再構築されます。 
 
-これで`http://localhost:3007/myFirstAppTab/` 、tab がレンダリングされていることを確認できるようになります。 ただし、Microsoft Teams ではまだありません。
+これで `http://localhost:3007/myFirstAppTab/` 、tab がレンダリングされていることを確認できるようになります。 ただし、Microsoft Teams ではまだありません。
 
 ![ブラウザーでサイトを表示する](~/assets/yeoman-images/teams-first-app-3.png)
 
@@ -120,17 +120,17 @@ npm install generator-teams@preview --global
 
 Microsoft Teams では、アプリを localhost でホストすることはできません。したがって、公開 URL に公開するか、ngrok などのプロキシを使用する必要があります。
 
-朗報として、スキャフォールディングプロジェクトにはこの組み込みがあります。 を実行`gulp ngrok-serve`すると、ngrok サービスはバックグラウンドで開始され、一意の DNS エントリとパブリック DNS エントリが作成されます。さらに、この一意の URL を使用して`gulp serve`マニフェストをパッケージ化して、とまったく同じことを行います。
+朗報として、スキャフォールディングプロジェクトにはこの組み込みがあります。 を実行すると、 `gulp ngrok-serve` ngrok サービスはバックグラウンドで開始され、一意の DNS エントリとパブリック DNS エントリが作成されます。さらに、この一意の URL を使用してマニフェストをパッケージ化して、とまったく同じことを行い `gulp serve` ます。
 
-を実行`gulp ngrok-serve`した後、新しい Microsoft Teams チームを作成して作成したら、チーム名をクリックして、Teams の設定に移動し、[*アプリ*] を選択します。 右下隅に [*カスタムアプリをアップロード*する] というリンクが表示されたら、それを選択して、という名前`package`のプロジェクトフォルダーとサブフォルダーを参照します。 そのフォルダー内の zip ファイルを選択し、[開く] を選択します。 これで、アプリが Microsoft Teams にサイドロードされました。
+を実行した後 `gulp ngrok-serve` 、新しい Microsoft Teams チームを作成して作成したら、チーム名をクリックして、Teams の設定に移動し、[ *アプリ*] を選択します。 右下隅に [ *カスタムアプリをアップロード*する] というリンクが表示されたら、それを選択して、という名前のプロジェクトフォルダーとサブフォルダーを参照し `package` ます。 そのフォルダー内の zip ファイルを選択し、[開く] を選択します。 これで、アプリが Microsoft Teams にサイドロードされました。
 
 ![サイドロードアプリ](~/assets/yeoman-images/teams-first-app-4.png)
 
-*一般的な*チャネルに戻り、新しいタブ*+* を追加するには、を選択します。タブの一覧にタブが表示されます。
+*一般的な*チャネルに戻り、 *+* 新しいタブを追加するには、を選択します。タブの一覧にタブが表示されます。
 
 ![[構成] タブ](~/assets/yeoman-images/teams-first-app-5.png)
 
-タブを選択し、指示に従って追加します。 ソースを編集できるカスタム構成ダイアログがあることに注意してください。 [*保存*] を選択して、タブをチャネルに追加します。 完了すると、Microsoft Teams 内でタブが読み込まれます。
+タブを選択し、指示に従って追加します。 ソースを編集できるカスタム構成ダイアログがあることに注意してください。 [ *保存* ] を選択して、タブをチャネルに追加します。 完了すると、Microsoft Teams 内でタブが読み込まれます。
 
 ![teams での実行中のタブ](~/assets/yeoman-images/teams-first-app-6.png)
 

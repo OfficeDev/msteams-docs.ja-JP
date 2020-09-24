@@ -5,18 +5,18 @@ description: 最初の Microsoft Teams アプリ、つまり "Hello, World!" を
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: quickstart
-ms.openlocfilehash: 5be2e8f2932a91ed11137f3a7be544e12bd65559
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 244a899670f71b9446c8c3d3e404c9fd7c7b510c
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210248"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237833"
 ---
 # <a name="build-a-hello-world-teams-app"></a>"Hello, World!" を作成します。 Teams アプリ
 
 "Hello, World!" と表示される個人タブを作成することによって、Microsoft Teams プラットフォーム開発に直接ジャンプできます。
 
-## <a name="create-your-app-project"></a>アプリプロジェクトを作成する
+## <a name="1-create-your-app-project"></a>1. アプリプロジェクトを作成します。
 
 最初のアプリプロジェクトをセットアップするには、Visual Studio Code の Microsoft Teams ツールキットを使用します。
 
@@ -27,7 +27,7 @@ ms.locfileid: "48210248"
 :::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="Visual Studio Code Teams Toolkit を使用してアプリプロジェクトを構成する方法を示すスクリーンショット。":::
 1. [ **個人用] タブ** のオプションを確認し、画面の下部にある [ **完了** ] を選択してプロジェクトを構成します。
 
-## <a name="understand-important-app-project-components"></a>重要なアプリプロジェクトコンポーネントについて理解する
+## <a name="2-understand-important-app-project-components"></a>2. 重要なアプリプロジェクトコンポーネントを理解する
 
 ツールキットによってプロジェクトが構成されると、Teams 用の基本的な個人用タブを作成するためのコンポーネントが用意されます。 プロジェクトのディレクトリとファイルは、Visual Studio Code のエクスプローラー領域に表示されます。
 
@@ -51,13 +51,13 @@ Teams アプリ開発者が扱う主要なファイルのいくつかについ�
 
 アプリパッケージファイルの詳細については、以下を参照してください。
 
-|名前|型|Size|マニフェストの場所|ツールキットのファイル名|
+|名前|種類|Size|マニフェストの場所|ツールキットのファイル名|
 |---|---|:---:|:---:|-----|
 |**アプリマニフェスト**|`.json`| — | — |`.publish/manifest.json`|
 |**色のロゴ**|`.png`|192 &times; 192 ピクセル|`icon.color`|`.publish/color.png`|
 |**アウトラインロゴ**|`.png`|32 &times; 32 ピクセル|`icon.outline`|`.publish/outline.png`|
 
-## <a name="run-your-app"></a>アプリを実行する
+## <a name="3-run-your-app"></a>3. アプリを実行する
 
 時間の経過とともに、アプリをローカルでビルドして実行します。
 
@@ -68,7 +68,7 @@ Teams アプリ開発者が扱う主要なファイルのいくつかについ�
 1. ブラウザーを開き、に移動して、 `https://localhost:3000` **Microsoft Teams タブ**という名前の空の web ページを表示します。(ページ上にコンテンツが表示されないことを心配しないでください)。<br/>
    :::image type="content" source="../assets/images/build-your-first-app/local-host-tab.png" alt-text="実行中のアプリをブラウザーで表示するときの外観を示すスクリーンショット。":::
 
-## <a name="set-up-a-secure-tunnel-to-your-app"></a>アプリへのセキュリティで保護されたトンネルの設定
+## <a name="4-set-up-a-secure-tunnel-to-your-app"></a>4. アプリへのセキュリティで保護されたトンネルをセットアップする
 
 アプリは、ローカル web サーバー上で実行されています。 Teams でアプリを実行するには、HTTPS を介してアクセスできるようにする必要があり `localhost` ます。
 
@@ -82,7 +82,7 @@ Teams アプリ開発者が扱う主要なファイルのいくつかについ�
 
 アプリのマニフェストは、アプリをホストしている場所を指すようになります。
 
-## <a name="sideload-your-app-in-teams"></a>Teams でのアプリのサイドロード
+## <a name="5-sideload-your-app-in-teams"></a>5. Teams でアプリをサイドロードする
 
 アプリを実行し、HTTPS を介してアクセスできるようにすると、そのアプリを Teams にアップロードする準備ができました。
 

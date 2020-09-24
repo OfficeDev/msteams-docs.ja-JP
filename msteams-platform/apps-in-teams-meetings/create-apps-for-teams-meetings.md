@@ -5,12 +5,12 @@ description: teams 会議用のアプリを作成する
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: teams アプリ会議ユーザー参加者ロール api
-ms.openlocfilehash: 83e0a5b53e363a090935b4afa9840dd96c5f7381
-ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
+ms.openlocfilehash: 9ead77e3573510bc9c9415c6f3ac9a6e83f23ece
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48182004"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237987"
 ---
 # <a name="create-apps-for-teams-meetings-preview"></a>Teams 会議用のアプリを作成する (プレビュー)
 
@@ -27,7 +27,7 @@ ms.locfileid: "48182004"
 
 1. などの一部の会議 Api で `GetParticipant` は、 [ボット登録と BOT アプリ ID](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) が認証トークンを生成する必要があります。
 
-1. 開発者は、チームの会議中にトリガー[される会議](designing-in-meeting-dialog.md)中のダイアログのための、会議前およびミーティング後のシナリオのための [teams][タブデザインのガイドライン](../tabs/design/tabs.md)に従う必要があります。
+1. 開発者は、会議中および会議中 (「 [in meeting dialog](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md) 」、および「 [in meeting」タブ](../apps-in-teams-meetings/design/designing-in-meeting-tab.md)デザインガイドラインを参照してください) に加えて、ミーティング前およびミーティング後のシナリオについて、Teams の一般的な[タブデザインガイドライン](../tabs/design/tabs.md)に従う必要があります。
 
 ## <a name="meeting-apps-api-reference"></a>会議アプリ API リファレンス
 
@@ -269,7 +269,7 @@ Tab `context` およびプロパティは、 `scopes` アプリを表示する�
 
 #### <a name="in-meeting-dialog"></a>**会議中のダイアログ**
 
-✔ [会議中のダイアログの設計ガイドライン](designing-in-meeting-dialog.md)に従う必要があります。
+✔ [会議中のダイアログの設計ガイドライン](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md)に従う必要があります。
 
 ✔ [タブの Teams 認証フロー](../tabs/how-to/authentication/auth-flow-tab.md)を参照してください。
 

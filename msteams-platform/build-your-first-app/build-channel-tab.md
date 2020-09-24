@@ -1,24 +1,20 @@
 ---
 author: heath-hamilton
-description: 最初の Microsoft Teams アプリ用に [チャネル] タブを作成する方法について説明します。
+description: 最初の Microsoft Teams アプリ用に [チャネルとグループ] タブを作成する方法について説明します。
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-title: Teams の [チャネル] タブを作成する
-ms.openlocfilehash: d0846c3af23fd9df6013f989e9f455f711d05a5f
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+title: Teams のチャネルとグループの作成タブ
+ms.openlocfilehash: d97d8c13404077bff999db48b24b773aa4bc04ca
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210255"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237812"
 ---
-# <a name="build-a-teams-channel-tab"></a>Teams の [チャネル] タブを作成する
+# <a name="build-a-teams-channel-and-group-tab"></a>Teams のチャネルとグループの作成タブ
 
-このチュートリアルでは、チームチャネルまたはチャットの全画面コンテンツページである基本 *チャネルタブ*を作成します。 [個人用] タブとは異なり、ユーザーは [チャネル] タブのいくつかの側面を構成できます (たとえば、タブの名前を変更して、チャネルにとって意味がある場合)。
-
-## <a name="before-you-begin"></a>はじめに
-
-開始するには、基本的な実行アプリが必要です。 使用していない場合は、 [ビルドを実行し、Teams 最初のアプリの手順を実行](../build-your-first-app/build-and-run.md)します。 アプリプロジェクトを作成するときは、[ **グループまたはチームチャネル] タブ** のオプションのみを選択します。
+このチュートリアルでは、チームチャネルまたはチャットの全画面ページである基本 *チャネルタブ* ( *グループタブ*とも呼ばれます) を作成します。 [個人用] タブとは異なり、ユーザーはこの種類のタブのいくつかの側面を構成できます (たとえば、タブの名前を変更して、チャネルにとって意味がある場合)。
 
 ## <a name="your-assignment"></a>自分の割り当て
 
@@ -30,19 +26,33 @@ ms.locfileid: "48210255"
 
 > [!div class="checklist"]
 >
-> * チャネルタブに関連するアプリマニフェストのプロパティとスキャフォールディングの一部を特定する
+> * Microsoft Teams Toolkit for Visual Studio Code を使用してアプリプロジェクトを作成する
+> * チャネルおよびグループのタブに関連するアプリマニフェストのプロパティとスキャフォールディングの一部を特定する
+> * アプリをローカルでホストする
 > * タブのコンテンツを作成する
 > * タブの構成ページのコンテンツを作成する
 > * タブを構成およびインストールできるようにする
 > * 提案されたタブ名を指定する
 
-## <a name="identify-relevant-app-project-components"></a>関連するアプリプロジェクトコンポーネントを特定する
+## <a name="1-create-your-app-project"></a>1. アプリプロジェクトを作成します。
 
-Teams ツールキットを使用してプロジェクトを作成すると、アプリマニフェストとスキャフォールディングの多くが自動的に設定されます。 [チャネル] タブを作成するための主なコンポーネントについて説明します。
+Microsoft Teams Toolkit は、"Hello, World!" と表示される基本的な構成ページやコンテンツページなど、チャネルおよびグループのタブに関連するアプリのマニフェストとスキャフォールディングを設定するのに役立ちます。 メッセージ。
+
+> [!TIP]
+> 以前に Teams アプリプロジェクトを作成していない場合は、 [以下の手順](../build-your-first-app/build-and-run.md) に従って、プロジェクトについて詳しく説明することをお勧めします。
+
+1. Visual Studio Code で、左側のアクティビティバーにある [ **Microsoft teams** ] を選択 :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: し、[ **新しい teams アプリの作成**] を選択します。
+1. Teams アプリの名前を入力します。 (これは、アプリの既定の名前であり、ローカルコンピューター上のアプリプロジェクトディレクトリの名前でもあります。)
+1. [ **機能の追加** ] 画面で、[ **タブ** 、 **グループ、またはチームチャネル] タブ**を選択します。
+1. 画面の下部にある [ **完了** ] を選択して、プロジェクトを構成します。  
+
+## <a name="2-identify-relevant-app-project-components"></a>2. 関連するアプリプロジェクトコンポーネントを特定する
+
+Teams ツールキットを使用してプロジェクトを作成すると、アプリマニフェストとスキャフォールディングの多くが自動的に設定されます。 [チャネルとグループ] タブを構築するための主なコンポーネントについて見てみましょう。
 
 ### <a name="app-manifest"></a>アプリマニフェスト
 
-アプリマニフェストの次のスニペットが表示され [`configurableTabs`](../resources/schema/manifest-schema.md#configurabletabs) ます。これには、チャネルタブに関連するプロパティと既定値が含まれています。
+アプリマニフェストの次のスニペットは [`configurableTabs`](../resources/schema/manifest-schema.md#configurabletabs) 、[チャネル] タブおよび [グループ] タブに関連するプロパティと既定値を含みます。
 
 ```JSON
 "configurableTabs": [
@@ -65,7 +75,27 @@ Teams ツールキットを使用してプロジェクトを作成すると、�
 
 アプリのスキャフォールディングは、 `TabConfig.js` `src/components` タブの構成ページをレンダリングするために、プロジェクトのディレクトリにあるファイルを提供します (詳細については、すぐに説明します)。
 
-## <a name="create-your-tab-content"></a>タブコンテンツを作成する
+## <a name="3-run-your-app"></a>3. アプリを実行する
+
+時間の経過とともに、アプリをローカルでビルドして実行します。
+
+1. ターミナルで、アプリプロジェクトのルートディレクトリに移動し、を実行 `npm install` します。
+1. `npm start` を実行します。
+
+完了すると、**コンパイルに成功**しました。 ターミナルのメッセージ。
+
+## <a name="4-set-up-a-secure-tunnel-to-your-app"></a>4. アプリへのセキュリティで保護されたトンネルをセットアップする
+
+テストを目的として、ローカル web サーバー (ポート 3000) 上でタブをホストしてみましょう。
+
+1. ターミナルで、を実行 `ngrok http 3000` します。
+1. 提供されている HTTPS URL をコピーします。
+1. ディレクトリで `.publish` 、を開き `Development.env` ます。
+1. 値を `baseUrl0` コピーした URL に置き換えます。 (たとえば、 `baseUrl0=http://localhost:3000` をに変更 `baseUrl0=https://85528b2b3ca5.ngrok.io` します)。
+
+アプリのマニフェストは、タブをホストしている場所を指しています。
+
+## <a name="5-customize-your-tab-content-page"></a>5. タブのコンテンツページをカスタマイズする
 
 ディレクトリでアプリマニフェスト ( `manifest.json` ) を開き `.publish` 、で次のプロパティを設定し [`staticTabs`](../resources/schema/manifest-schema.md#statictabs) ます。タブのコンテンツページが定義されています。
 
@@ -121,9 +151,9 @@ a {
 }
 ```
 
-## <a name="create-your-tab-configuration-page"></a>タブの構成ページを作成する
+## <a name="6-create-your-tab-configuration-page"></a>6. [タブの構成] ページを作成する
 
-各 [チャネル] タブには構成ページがあり、アプリをインストールするときに表示される1つ以上のセットアップオプションを持つモーダルです。 既定では、構成ページは、タブがインストールされたときにチャネルまたはチャットに通知するかどうかをユーザーに確認します。
+チャネルまたはチャットのすべてのタブには構成ページがあります。このページには、ユーザーがアプリをインストールするときに表示されるセットアップオプションが1つ以上あるモーダルがあります。 既定では、構成ページは、タブがインストールされたときにチャネルまたはチャットに通知するかどうかをユーザーに確認します。
 
 構成ページにコンテンツを追加します。 プロジェクトのディレクトリに移動し、を `src/components` 開いて、その内部にコンテンツを挿入し `TabConfig.js` `return()` ます (図を参照)。
 
@@ -141,9 +171,9 @@ return (
 > [!TIP]
 > 少なくとも、ユーザーが初めて理解しているときに、このページにあるアプリについて簡単な情報を提供します。 また、タブの構成ページに共通のカスタム構成オプションまたは [認証ワークフロー](../tabs/how-to/authentication/auth-aad-sso.md)を含めることもできます。
 
-## <a name="allow-the-tab-to-be-configured-and-installed"></a>タブを構成およびインストールできるようにする
+## <a name="7-allow-the-tab-to-be-configured-and-installed"></a>7. タブを構成してインストールできるようにする
 
-ユーザーが [チャネル] タブを正しく構成してインストールするには、 [最初のアプリを作成し](../build-your-first-app/build-and-run.md) て構成ページコンポーネントに対して実行するときに設定するホスト URL を追加する必要があります。
+ユーザーがタブを正しく構成およびインストールするには、構成ページコンポーネントに設定した、 [セキュリティで保護さ](#4-set-up-a-secure-tunnel-to-your-app) れたホストの URL を追加する必要があります。
 
 に移動 `TabConfig.js` し、を見つけ `microsoftTeams.settings.setSettings` ます。 の場合は `"contentUrl"` 、 `localhost:3000` URL の部分を、タブの内容をホストしているドメインに置き換えます (図を見てください)。
 
@@ -155,7 +185,7 @@ microsoftTeams.settings.setSettings({
 
 また、があることを確認してください `microsoftTeams.settings.setValidityState(true);` 。 既定では、がに設定されている場合 `false` 、[構成] ページの [ **保存** ] ボタンは無効になっています。
 
-## <a name="provide-a-suggested-tab-name"></a>提案されたタブ名を指定する
+## <a name="8-provide-a-suggested-tab-name"></a>8. 提案されたタブ名を指定する
 
 個人用に使用するタブをインストールすると、表示名は、 `name` `staticTabs` アプリマニフェストの一部のプロパティ (たとえば、 **[連絡先**]) になります。 [チャネル] タブをインストールすると、既定ではアプリケーション名が表示されます (たとえば、 **最初のアプリ**)。
 
@@ -170,9 +200,9 @@ microsoftTeams.settings.setSettings({
 });
 ```
 
-## <a name="view-the-channel-tab"></a>[チャネル] タブを表示する
+## <a name="9-view-the-tab"></a>9. タブを表示する
 
-チャネルタブの構成とコンテンツページを表示するには、チャネルまたはチャットにインストールする必要があります。
+タブの構成とコンテンツページを表示するには、チャネルまたはチャットにインストールする必要があります。
 
 1. Teams クライアントで、[ **アプリ**] を選択します。
 1. [ **カスタムアプリのアップロード** ] を選択し、アプリを選択し `Development.zip` ます。
@@ -184,7 +214,7 @@ microsoftTeams.settings.setSettings({
 
 ## <a name="well-done"></a>よくやりましたね
 
-おめでとうございます! [チャネル] タブを備えた Teams アプリを使用すると、チャンネルやチャットに役立つコンテンツを表示できます。
+おめでとうございます! Teams アプリには、チャネルとチャットに役立つコンテンツを表示するためのタブがあります。
 
 ## <a name="learn-more"></a>詳細情報
 

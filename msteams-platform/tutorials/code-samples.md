@@ -2,12 +2,12 @@
 title: Microsoft Teams のコードサンプル
 description: Microsoft Teams 開発者向けプラットフォーム用のサンプルアプリケーションのリンクと説明
 keywords: Microsoft Teams の開発者向けサンプル
-ms.openlocfilehash: 955588608fde694b163104d0a9e9e94289719003
-ms.sourcegitcommit: 61edf47c9dd1dbc1df03d0d9fb83bfedca4c423b
+ms.openlocfilehash: 7a81494d7808c27c495c660b5d58f7779ba87c83
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "44801302"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237959"
 ---
 # <a name="tutorials-and-code-samples-for-the-microsoft-teams-developer-platform"></a>Microsoft Teams 開発者向けプラットフォームのチュートリアルとコードサンプル
 
@@ -28,7 +28,7 @@ ms.locfileid: "44801302"
 GitHub からサンプルをダウンロードするには、次のようにします。
 
 1. 次に示すプロジェクトのいずれかを選択し、GitHub でプロジェクトを開きます。
-2. [**クローン] または [ダウンロード**] ボタンを選択し、URL をコピーします。
+2. [ **クローン] または [ダウンロード** ] ボタンを選択し、URL をコピーします。
 3. サンプルプロジェクトをインストールする親ディレクトリで、コマンドプロンプトを開きます。
 4. `git clone <pasted url>` を実行します。
 
@@ -55,23 +55,25 @@ GitHub からサンプルをダウンロードするには、次のようにし�
 
 | サンプル | 説明 | .NET Core | JavaScript | Python|
 |--------|------------- |---|---|----|
-| 検索コマンド | 検索コマンドを使用した単純なメッセージング拡張機能 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)| [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/50.teams-messaging-extension-search)|
-| アクションコマンド | アクションコマンドを使用した単純なメッセージング拡張機能。 [メッセージの作成] 領域に挿入された応答。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/51.teams-messaging-extensions-action)|
-| アクションコマンド w/bot 応答 | アクションコマンドを使用したメッセージング拡張機能。 Bot が会話に挿入する応答。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/53.teams-messaging-extensions-action-preview)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/53.teams-messaging-extensions-action-preview)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/53.teams-messaging-extensions-action-preview)|
-| 検索コマンド | 検索コマンドを使用したメッセージング拡張機能と認証および構成 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)| [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/52.teams-messaging-extensions-search-auth-config)|
+| メッセージング拡張機能-検索 | 検索要求を受け付けて結果を返すメッセージング拡張機能。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
+| メッセージング拡張機能-アクション | パラメーターを受け取り、カードを返すメッセージング拡張機能。 また、メッセージング拡張機能で転送されたメッセージをパラメーターとして受信する方法についても説明します。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
+| メッセージング拡張機能-auth および config | 構成ページがあるメッセージング拡張機能は、検索要求を受け付け、ユーザーがサインインした後に結果を返します。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) |
+| メッセージング拡張機能-アクションのプレビュー | メッセージング拡張機能のプレビューおよび編集フローを作成する方法について説明します。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/53.teams-messaging-extensions-action-preview) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/53.teams-messaging-extensions-action-preview) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/53.teams-messaging-extensions-action-preview) |
+| リンク展開 | Link unfurling を実行するメッセージング拡張機能。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/55.teams-link-unfurling) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/55.teams-link-unfurling) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/55.teams-link-unfurling) |
+
 
 ## <a name="outgoing-webhooks"></a>送信 Web フック
 
 | サンプル | 説明
 |--------|-------------
-| [C#/.NET の送信 Webhook](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook) | C#/.NET. で Microsoft Teams の**送信 Webhook**を作成する方法について説明します。
-| [Node.jsの送信 Webhook](https://github.com/OfficeDev/msteams-samples-outgoing-webhook-nodejs) | Node.js コードの ~ 50 行に Microsoft Teams 用の簡単な**送信 Webhook**を作成する方法を示します。
+| [C#/.NET の送信 Webhook](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook) | C#/.NET. で Microsoft Teams の **送信 Webhook** を作成する方法について説明します。
+| [Node.jsの送信 Webhook ](https://github.com/OfficeDev/msteams-samples-outgoing-webhook-nodejs) | Node.js コードの ~ 50 行に Microsoft Teams 用の簡単な **送信 Webhook** を作成する方法を示します。
 
 ## <a name="connectors"></a>コネクタ
 
 | サンプル | 説明
 |--------|-------------
-| [Node.js用のサンプルコネクタ](https://github.com/OfficeDev/microsoft-teams-sample-connector-nodejs) | このサンプルは Node.js で記述されており、コネクタ通知を生成するための例として GitHub を使用して Microsoft Teams 用のコネクタを構築する方法を示しています。
+| [Node.js用のサンプルコネクタ ](https://github.com/OfficeDev/microsoft-teams-sample-connector-nodejs) | このサンプルは Node.js で記述されており、コネクタ通知を生成するための例として GitHub を使用して Microsoft Teams 用のコネクタを構築する方法を示しています。
 | [C#/.NET のサンプルコネクタ](https://github.com/OfficeDev/microsoft-teams-sample-connector-csharp) | このサンプルは、C# で記述されており、コネクタ通知を生成するための例としてサンプルのタスクリストアプリを使用して、Microsoft Teams 用のコネクタを構築する方法を示しています。
 
 ## <a name="graph-api"></a>Graph API
@@ -85,4 +87,4 @@ GitHub からサンプルをダウンロードするには、次のようにし�
 | サンプル | 説明 |
 |--------|------------- |
 | [C#/.NET のサンプル bot](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/CSharp/Samples/Microsoft.Bot.Connector.Teams.SampleBot) | Bot フレームワーク v3 のサンプル|
-| [Node.jsの bot の例](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/Node/samples) | Bot フレームワーク v3 のサンプル |
+| [Node.jsの bot の例 ](https://github.com/OfficeDev/BotBuilder-MicrosoftTeams/tree/master/Node/samples) | Bot フレームワーク v3 のサンプル |

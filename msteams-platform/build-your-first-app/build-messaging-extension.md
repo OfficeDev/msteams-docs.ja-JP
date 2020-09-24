@@ -5,12 +5,12 @@ description: 最初の Microsoft Teams アプリのメッセージング拡張�
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: 0475fcea7d865849fa60c5b3b23788bf90ee5e25
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 4fd35f6d5cc4b4ba202cb4276386918a5d88d692
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210228"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237819"
 ---
 # <a name="build-a-teams-messaging-extension"></a>Teams メッセージング拡張機能を構築する
 
@@ -36,7 +36,7 @@ Teams *メッセージング拡張機能*には、 [検索コマンド](../messa
 
 まだお持ちでない場合は、 [Teams 開発の前提条件を理解し、インストール](build-first-app-overview.md#get-prerequisites)してください。
 
-## <a name="create-your-app-project"></a>アプリプロジェクトを作成する
+## <a name="1-create-your-app-project"></a>1. アプリプロジェクトを作成します。
 
 Microsoft Teams Toolkit は、メッセージング拡張機能に次のコンポーネントをセットアップするのに役に立ちます。
 
@@ -58,7 +58,7 @@ Microsoft Teams Toolkit は、メッセージング拡張機能に次のコン�
 :::image type="content" source="../assets/images/build-your-first-app/choose-me-search.png" alt-text="Teams ツールキットで、メッセージング拡張機能のために新しい bot を作成するために Microsoft 365 アカウントにログインする方法を示す図。":::
 1. 画面の下部にある [ **完了** ] を選択して、プロジェクトを構成します。
 
-## <a name="identify-relevant-app-project-components"></a>関連するアプリプロジェクトコンポーネントを特定する
+## <a name="2-identify-relevant-app-project-components"></a>2. 関連するアプリプロジェクトコンポーネントを特定する
 
 Teams ツールキットを使用してプロジェクトを作成すると、アプリマニフェストとスキャフォールディングの多くが自動的に設定されます。
 
@@ -108,9 +108,9 @@ Teams ツールキットを使用してプロジェクトを作成すると、�
 
 アプリのスキャフォールディングには、 `.env` プロジェクトのルートディレクトリにあるファイルが含まれています。このファイルには、メッセージング拡張機能の bot の ID とパスワードが格納されています。
 
-また、ルートディレクトリには、 `botActivityHandler.js` メッセージング拡張機能 (または、技術的には [メッセージング拡張機能](#configuring-the-bot-for-your-messaging-extension)) が Teams の検索クエリに応答する方法を処理するためのファイルがあります。
+また、ルートディレクトリには、 `botActivityHandler.js` メッセージング拡張機能 (または、技術的には [メッセージング拡張機能](#4-configure-the-bot-for-your-messaging-extension)) が Teams の検索クエリに応答する方法を処理するためのファイルがあります。
 
-## <a name="set-up-a-secure-tunnel-to-your-app"></a>アプリへのセキュリティで保護されたトンネルの設定
+## <a name="3-set-up-a-secure-tunnel-to-your-app"></a>3. アプリへのセキュリティで保護されたトンネルをセットアップする
 
 テストを目的として、ローカル web サーバーでメッセージング拡張機能をホストします (ポート 3978)。
 
@@ -121,7 +121,7 @@ Teams ツールキットを使用してプロジェクトを作成すると、�
 
 アプリのマニフェストは、メッセージング拡張機能によって使用される bot をホストしている場所を指しています。
 
-## <a name="configuring-the-bot-for-your-messaging-extension"></a>メッセージング拡張機能の bot を構成する
+## <a name="4-configure-the-bot-for-your-messaging-extension"></a>4. メッセージング拡張機能の bot を構成する
 
 メッセージング拡張機能は、ボットに依存して、チームからのユーザー要求をホストされたサービスに送信して処理します。
 
@@ -145,7 +145,7 @@ Bot が Azure Bot サービスに登録されると、Teams アプリが知っ�
 
 Bot は、メッセージング拡張機能でクエリを処理できるようになります。
 
-## <a name="run-your-app"></a>アプリを実行する
+## <a name="5-run-your-app"></a>5. アプリを実行する
 
 メッセージング拡張機能をホストする URL を設定し、検索を処理するように構成します。 アプリを起動して実行します。
 
@@ -156,19 +156,19 @@ Bot は、メッセージング拡張機能でクエリを処理できるよう�
 
 `Bot/ME service listening at http://localhost:3978`
 
-## <a name="sideload-your-messaging-extension-in-teams"></a>Teams でのメッセージング拡張のサイドロード
+## <a name="6-sideload-your-messaging-extension-in-teams"></a>サイドロード Teams でのメッセージング拡張機能の作成
 
 メッセージング拡張機能が実行されている状態で、Teams にインストールできます。
 
 > [!TIP]
-> 以前に Teams アプリをサイドロードしていない場合は、以下の [手順](../build-your-first-app/build-and-run.md#sideload-your-app-in-teams)を実行します。
+> 以前に Teams アプリをサイドロードしていない場合は、以下の [手順](../build-your-first-app/build-and-run.md#5-sideload-your-app-in-teams)を実行します。
 
 1. アプリのサイドロードを許可するアカウントを使用して、Teams クライアントにログインします。
 1. [ **アプリ**] を選択し、[ **カスタムアプリのアップロード**] を選択します。
 1. アプリプロジェクトフォルダーに移動し `.publish` 、を選択し `Development.zip` ます。
 1. [モーダルのインストール] で、[ **追加** ] を選択してアプリをインストールします。
 
-## <a name="test-your-messaging-extension"></a>メッセージング拡張機能をテストする
+## <a name="7-test-your-messaging-extension"></a>7. メッセージング拡張機能をテストする
 
 Teams チャットでのメッセージング拡張機能のしくみについて説明します。
 
@@ -181,7 +181,7 @@ Teams チャットでのメッセージング拡張機能のしくみについ�
 
 おめでとうございます! [作成] または [コマンド] ボックスで外部コンテンツを検索するように設定されている基本的な Teams メッセージング拡張機能があります。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 次のページを参照して続行し、完全な機能を備えたメッセージング拡張機能を構築します。
 

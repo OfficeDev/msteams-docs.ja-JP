@@ -4,12 +4,12 @@ description: Microsoft Teams のマニフェストによってサポートされ
 keywords: teams マニフェストスキーマ
 author: laujan
 ms.author: lajanuar
-ms.openlocfilehash: b67b23278a2d2bbb2b24c0e828f01cf1789c6191
-ms.sourcegitcommit: bac0226d9048c363d96bbaf6f5395388c5f5c45a
+ms.openlocfilehash: aea75276d37ae0a99ecc55b204d29706cc5a07c8
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "45039287"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237980"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>リファレンス: Microsoft Teams のマニフェストスキーマ
 
@@ -265,29 +265,29 @@ Microsoft Teams のマニフェストでは、アプリを Microsoft Teams 製�
 
 ## <a name="schema"></a>$schema
 
-*省略可能 (ただし推奨*) 文字列
+*省略可能 (ただし推奨* ) 文字列
 
 マニフェストの JSON スキーマを参照する https://URL。
 
 ## <a name="manifestversion"></a>manifestVersion
 
-**必須**-文字列
+**必須** -文字列
 
 このマニフェストが使用しているマニフェストスキーマのバージョン。 "1.5" である必要があります。
 
 ## <a name="version"></a>バージョン
 
-**必須**-文字列
+**必須** -文字列
 
 特定のアプリのバージョン。 マニフェスト内の内容を更新する場合は、そのバージョンも同時にインクリメントする必要があります。 このように、新しいマニフェストをインストールすると、既存のマニフェストが上書きされ、ユーザーは新機能を取得します。 このアプリがストアに送信された場合は、新しいマニフェストを再送信して再検証する必要があります。 その後、このアプリのユーザーは、承認後に数時間以内に新しい更新されたマニフェストを自動的に取得します。
 
 アプリによって要求されたアクセス許可が変更された場合、ユーザーはアプリをアップグレードして再同意するように求められます。
 
-このバージョンの文字列は、 [semver](http://semver.org/)標準 (メジャー) に従う必要があります。間隔.パッチ)。
+このバージョンの文字列は、 [semver](http://semver.org/) 標準 (メジャー) に従う必要があります。間隔.パッチ)。
 
 ## <a name="id"></a>id
 
-**必須**-MICROSOFT アプリ ID
+**必須** -MICROSOFT アプリ ID
 
 このアプリの一意の Microsoft 生成識別子。 Microsoft Bot フレームワークを介して bot を登録した場合、またはタブの web アプリが Microsoft によって既にサインインしている場合は、既に ID があるので、ここで入力する必要があります。 それ以外の場合は、Microsoft アプリケーション登録ポータル ([My Applications](https://apps.dev.microsoft.com)) で新しい ID を生成し、ここで入力してから、bot を追加するときにそれを再利用する必要があります。注: AppSource で既存のアプリに更新を送信する場合は、マニフェスト内の ID を変更しないでください。
 
@@ -295,7 +295,7 @@ Microsoft Teams のマニフェストでは、アプリを Microsoft Teams 製�
 
 **Required** -オブジェクト
 
-会社に関する情報を指定します。 AppSource (旧称 Office ストア) に提出されたアプリの場合、これらの値は AppSource エントリの情報と一致する必要があります。 追加情報については、[発行に関するガイドライン](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)を参照してください。
+会社に関する情報を指定します。 AppSource (旧称 Office ストア) に提出されたアプリの場合、これらの値は AppSource エントリの情報と一致する必要があります。 追加情報については、 [発行に関するガイドライン](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md) を参照してください。
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
@@ -303,7 +303,7 @@ Microsoft Teams のマニフェストでは、アプリを Microsoft Teams 製�
 |`websiteUrl`|2048 文字|✔|開発者の web サイトへの https://URL。 このリンクは、ユーザーを会社または製品固有のランディングページに移動する必要があります。|
 |`privacyUrl`|2048 文字|✔|開発者のプライバシーポリシーへの https://URL。|
 |`termsOfUseUrl`|2048 文字|✔|開発者の使用条件への https://URL。|
-|`mpnId`|10文字| |**省略可能**アプリを構築するパートナー組織を識別する Microsoft パートナーのネットワーク ID。|
+|`mpnId`|10文字| |**省略可能** アプリを構築するパートナー組織を識別する Microsoft パートナーのネットワーク ID。|
 
 ## <a name="name"></a>name
 
@@ -331,7 +331,7 @@ Teams でユーザーに表示されるアプリの動作の名前です。 AppS
 
 ## <a name="packagename"></a>packageName
 
-**省略可能**(string)
+**省略可能** (string)
 
 逆引きドメイン表記でのこのアプリの一意識別子。たとえば、例のようになります。 最大長: 64 文字
 
@@ -339,7 +339,7 @@ Teams でユーザーに表示されるアプリの動作の名前です。 AppS
 
 **Optional** -オブジェクト
 
-既定の言語の指定、および追加の言語ファイルへのポインターを許可します。 「[ローカライズ](~/concepts/build-and-test/apps-localization.md)」を参照してください。
+既定の言語の指定、および追加の言語ファイルへのポインターを許可します。 「 [ローカライズ](~/concepts/build-and-test/apps-localization.md)」を参照してください。
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
@@ -358,7 +358,7 @@ Teams でユーザーに表示されるアプリの動作の名前です。 AppS
 
 **Required** -オブジェクト
 
-Teams アプリ内で使用されるアイコン。 アイコンファイルは、アップロードパッケージの一部として含める必要があります。 詳細については、「[アイコン](~/concepts/build-and-test/apps-package.md#icons)」を参照してください。
+Teams アプリ内で使用されるアイコン。 アイコンファイルは、アップロードパッケージの一部として含める必要があります。 詳細については、「 [アイコン](~/concepts/build-and-test/apps-package.md#icons) 」を参照してください。
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
@@ -367,7 +367,7 @@ Teams アプリ内で使用されるアイコン。 アイコンファイルは�
 
 ## <a name="accentcolor"></a>アクセントカラー
 
-**オプション**-HTML 16 進カラーコード
+**オプション** -HTML 16 進カラーコード
 
 とと組み合わせてアウトラインアイコンの背景として使用する色。
 
@@ -375,21 +375,21 @@ Teams アプリ内で使用されるアイコン。 アイコンファイルは�
 
 ## <a name="configurabletabs"></a>の各タブ
 
-**省略可能**-配列
+**省略可能** -配列
 
-アプリの機能に、追加の構成を必要とするチームチャネルのタブがある場合に使用されます。 構成可能なタブは teams スコープ (個人ではない) でのみサポートされており、現在、アプリごとに**1 つ**のタブのみがサポートされています。
+アプリの機能に、追加の構成を必要とするチームチャネルのタブがある場合に使用されます。 構成可能なタブは teams スコープ (個人ではない) でのみサポートされており、現在、アプリごとに **1 つ** のタブのみがサポートされています。
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 文字|✔|タブを構成するときに使用する https://URL。|
-|`scopes`|列挙型の配列|1 |✔|現在、構成可能なタブでは、およびスコープのみがサポートさ `team` `groupchat` れています。 |
-|`canUpdateConfiguration`|boolean|||作成後にタブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 既定値は**true**です。|
+|`scopes`|列挙型の配列|1-d|✔|現在、構成可能なタブでは、およびスコープのみがサポートさ `team` `groupchat` れています。 |
+|`canUpdateConfiguration`|boolean|||作成後にタブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 既定値は **true**です。|
 |`sharePointPreviewImage`|string|2048||SharePoint で使用するタブプレビュー画像への相対ファイルパス。 サイズ1024x768。 |
-|`supportedSharePointHosts`|列挙型の配列|1 ||SharePoint でどのようにタブを使用できるようにするかを定義します。 オプション `sharePointFullPage` と`sharePointWebPart` |
+|`supportedSharePointHosts`|列挙型の配列|1-d||SharePoint でどのようにタブを使用できるようにするかを定義します。 オプション `sharePointFullPage` と `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
-**省略可能**-配列
+**省略可能** -配列
 
 ユーザーが手動で追加せずに、既定で "固定" できるタブのセットを定義します。 スコープ内で宣言 `personal` されている静的タブは、常にアプリの個人の環境に固定されます。 スコープ内で宣言されている静的タブ `team` は現在サポートされていません。
 
@@ -401,14 +401,14 @@ Teams アプリ内で使用されるアイコン。 アイコンファイルは�
 |`name`|string|128文字|✔|チャネルインターフェイスのタブの表示名。|
 |`contentUrl`|string|2048 文字|✔|Teams キャンバスに表示されるエンティティ UI をポイントする https://URL。|
 |`websiteUrl`|string|2048 文字||ユーザーがブラウザーで表示をポイントしたかどうかを示す https://URL。|
-|`scopes`|列挙型の配列|1 |✔|現時点では、静的タブではスコープのみがサポート `personal` されます。つまり、個人の利便性の一環としてのみプロビジョニングできます。|
+|`scopes`|列挙型の配列|1-d|✔|現時点では、静的タブではスコープのみがサポート `personal` されます。つまり、個人の利便性の一環としてのみプロビジョニングできます。|
 
 > [!NOTE]
 > 関連するコンテンツを表示したり、認証フローを開始したりするために、タブにコンテキスト依存情報が必要な場合は、「 [Microsoft Teams のコンテキストを取得する」タブ](../../tabs/how-to/access-teams-context.md)を*参照してください*。
 
 ## <a name="bots"></a>bot
 
-**省略可能**-配列
+**省略可能** -配列
 
 Bot ソリューションと、既定のコマンドプロパティなどのオプション情報を定義します。
 
@@ -416,11 +416,11 @@ Bot ソリューションと、既定のコマンドプロパティなどのオ�
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`botId`|string|64 文字|✔|Bot Framework に登録された、ボット用の一意の Microsoft アプリ ID。 これは、アプリの全体的な[ID](#id)と同じである場合もあります。|
-|`scopes`|列挙型の配列|3 |✔|ボットがエクスペリエンスを提供するのは、`team` 内のチャネルのコンテキスでなのか、グループ チャット (`groupchat`) でなのか、あるいは個別のユーザーのみをエクスペリエンスの対象にする (`personal`) のかを指定します。 これらのオプションは非排他的です。|
-|`needsChannelSelector`|boolean|||ボットを特定のチャネルに追加するためのユーザー用ヒントをボットで使用するかどうかの説明。 限り**`false`**|
-|`isNotificationOnly`|boolean|||ボットが会話ボットではなく、一方向性の通知専用ボットなのかどうかを示します。 限り`**false**`|
-|`supportsFiles`|boolean|||パーソナル チャットでのファイルのアップロード/ダウンロード機能をボットでサポートするかどうかを示します。 限り**`false`**|
+|`botId`|string|64 文字|✔|Bot Framework に登録された、ボット用の一意の Microsoft アプリ ID。 これは、アプリの全体的な [ID](#id)と同じである場合もあります。|
+|`scopes`|列挙型の配列|1/3|✔|ボットがエクスペリエンスを提供するのは、`team` 内のチャネルのコンテキスでなのか、グループ チャット (`groupchat`) でなのか、あるいは個別のユーザーのみをエクスペリエンスの対象にする (`personal`) のかを指定します。 これらのオプションは非排他的です。|
+|`needsChannelSelector`|boolean|||ボットを特定のチャネルに追加するためのユーザー用ヒントをボットで使用するかどうかの説明。 限り **`false`**|
+|`isNotificationOnly`|boolean|||ボットが会話ボットではなく、一方向性の通知専用ボットなのかどうかを示します。 限り `**false**`|
+|`supportsFiles`|boolean|||パーソナル チャットでのファイルのアップロード/ダウンロード機能をボットでサポートするかどうかを示します。 限り **`false`**|
 
 ### <a name="botscommandlists"></a>bot リスト
 
@@ -428,7 +428,7 @@ Bot がユーザーに推奨できるコマンドのオプションの一覧。 
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`items.scopes`|列挙型の配列|3 |✔|コマンド リストが有効なスコープを指定します。 `team`、`personal`、`groupchat` の中から選択できます。|
+|`items.scopes`|列挙型の配列|1/3|✔|コマンド リストが有効なスコープを指定します。 `team`、`personal`、`groupchat` の中から選択できます。|
 |`items.commands`|オブジェクトの配列|10 |✔|ボットがサポートするコマンドの配列:<br>`title`: ボット コマンドの名前 (文字列、32)<br>`description`: コマンドの構文およびその構文の引数
 の簡単な説明または例 (文字列、128)|
 
@@ -441,7 +441,7 @@ Bot がユーザーに推奨できるコマンドのオプションの一覧。 
 
 ## <a name="connectors"></a>コネクタ
 
-**省略可能**-配列
+**省略可能** -配列
 
 ブロックは、 `connectors` アプリの Office 365 コネクタを定義します。
 
@@ -450,12 +450,12 @@ Object は、type のすべての要素を含む配列 (最大1つの要素) で
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 文字|✔|コネクタを構成するときに使用する https://URL。|
-|`scopes`|列挙型の配列|1 |✔|コネクタが内のチャネルのコンテキストで、 `team` または個別のユーザー単独 () にスコープ設定された環境での動作を提供するかどうかを指定し `personal` ます。 現時点では、 `team` 範囲のみがサポートされています。|
-|`connectorId`|string|64 文字|✔|コネクタ[開発者ダッシュボード](https://aka.ms/connectorsdashboard)の ID と一致するコネクタの一意識別子。|
+|`scopes`|列挙型の配列|1-d|✔|コネクタが内のチャネルのコンテキストで、 `team` または個別のユーザー単独 () にスコープ設定された環境での動作を提供するかどうかを指定し `personal` ます。 現時点では、 `team` 範囲のみがサポートされています。|
+|`connectorId`|string|64 文字|✔|コネクタ [開発者ダッシュボード](https://aka.ms/connectorsdashboard)の ID と一致するコネクタの一意識別子。|
 
 ## <a name="composeextensions"></a>この機能
 
-**省略可能**-配列
+**省略可能** -配列
 
 アプリのメッセージング拡張機能を定義します。
 
@@ -469,7 +469,7 @@ Item は、type のすべての要素を含む配列 (最大1つの要素) で�
 |`botId`|string|64|✔|Bot フレームワークに登録されているメッセージング拡張機能をバックアップする bot の一意の Microsoft アプリ ID。 これは、アプリの全体的な ID と同じである場合もあります。|
 |`commands`|オブジェクトの配列|10 |✔|メッセージング拡張機能がサポートするコマンドの配列|
 |`canUpdateConfiguration`|boolean|||メッセージング拡張機能の構成をユーザーが更新できるかどうかを示す値。 既定値: **false**|
-|`messageHandlers`|オブジェクトの配列|5 ||特定の条件が満たされたときにアプリを呼び出せるようにするハンドラーの一覧。 ドメインも、にリストされている必要があります。`validDomains`|
+|`messageHandlers`|オブジェクトの配列|5 ||特定の条件が満たされたときにアプリを呼び出せるようにするハンドラーの一覧。 ドメインも、にリストされている必要があります。 `validDomains`|
 |`messageHandlers.type`|string|||メッセージハンドラの種類。 `"link"` である必要があります。|
 |`messageHandlers.value.domains`|文字列の配列|||リンクメッセージハンドラが登録できるドメインの配列。|
 
@@ -486,7 +486,7 @@ Item は、type のすべての要素を含む配列 (最大1つの要素) で�
 |`type`|string|64 文字||コマンドの種類。 またはのいずれか `query` `action` です。 既定値: **query**。|
 |`description`|string|128文字||このコマンドの目的を示すためにユーザーに表示される説明。|
 |`initialRun`|boolean|||パラメーターを指定せずにコマンドを最初に実行する必要があるかどうかを示すブール値。 既定値: **false**|
-|`context`|文字列の配列|3 ||メッセージの内線番号をから呼び出すことができる場所を定義します。 、、の任意の組み合わせ `compose` `commandBox` `message` 。 既定値は `["compose","commandBox"]` です。|
+|`context`|文字列の配列|1/3||メッセージの内線番号をから呼び出すことができる場所を定義します。 、、の任意の組み合わせ `compose` `commandBox` `message` 。 既定値は `["compose","commandBox"]` です。|
 |`fetchTask`|boolean|||タスクモジュールを動的にフェッチする必要があるかどうかを示すブール値。 既定値: **false**|
 |`taskInfo`|object|||メッセージ拡張コマンドの使用時に、タスクモジュールを事前に読み込むように指定します。|
 |`taskInfo.title`|string|64 文字||最初のダイアログのタイトル。|
@@ -505,18 +505,18 @@ Item は、type のすべての要素を含む配列 (最大1つの要素) で�
 
 ## <a name="permissions"></a>アクセス許可
 
-**省略可能**-文字列の配列
+**省略可能** -文字列の配列
 
 `string`アプリが要求するアクセス許可を指定する配列。これにより、エンドユーザーは拡張機能の動作を知ることができます。 非排他的なオプションは次のとおりです。
 
 * `identity`&emsp;ユーザー id 情報が必要
 * `messageTeamMembers`&emsp;チームメンバーに直接メッセージを送信するためのアクセス許可が必要
 
-アプリを更新するときにこれらのアクセス許可を変更すると、ユーザーは、更新されたアプリを初めて実行したときに同意プロセスを繰り返すようになります。 詳細については[、「アプリの更新](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)」を参照してください。
+アプリを更新するときにこれらのアクセス許可を変更すると、ユーザーは、更新されたアプリを初めて実行したときに同意プロセスを繰り返すようになります。 詳細については [、「アプリの更新](~/concepts/deploy-and-publish/appsource/post-publish/overview.md) 」を参照してください。
 
 ## <a name="devicepermissions"></a>devicePermissions
 
-**省略可能**-文字列の配列
+**省略可能** -文字列の配列
 
 アプリがアクセスを要求することができる、ユーザーのデバイスのネイティブ機能を指定します。 オプションは、次のとおりです。
 
@@ -528,11 +528,11 @@ Item は、type のすべての要素を含む配列 (最大1つの要素) で�
 
 ## <a name="validdomains"></a>validDomains
 
-**省略可能**(記載個所に**必要な**場合を除く)
+**省略可能**(記載個所に **必要な** 場合を除く)
 
 アプリが Teams クライアント内で読み込むことが想定されている web サイトの有効なドメインの一覧。 ドメインリストには、たとえば、ワイルドカードを含めることができ `*.example.com` ます。 これは、1つのドメインのセグメントに一致します。に一致させる必要がある場合は `a.b.example.com` 、を使用 `*.*.example.com` します。 タブ構成またはコンテンツ UI が他のドメインに移動する必要がある場合 (タブの構成に使用するものを除く)、そのドメインをここで指定する必要があります。
 
-ただし、アプリでサポートする id プロバイダーのドメインを含める必要は**ありません**。 たとえば、Google ID を使用して認証するには、accounts.google.com にリダイレクトする必要がありますが、に accounts.google.com を含めることはできません `validDomains[]` 。
+ただし、アプリでサポートする id プロバイダーのドメインを含める必要は **ありません** 。 たとえば、Google ID を使用して認証するには、accounts.google.com にリダイレクトする必要がありますが、に accounts.google.com を含めることはできません `validDomains[]` 。
 
 自分の sharepoint Url が適切に機能する必要がある Teams アプリは、有効なドメインリストに "{teamsitedomain}" を含めることができます。
 
@@ -557,7 +557,10 @@ Aad アプリ ID とグラフ情報を指定して、ユーザーが AAD アプ�
 
 **Optional** -boolean
 
-アプリ/タブの読み込み時に、読み込みインジケーターを表示するかどうかを指定します。 既定値: **false**
+アプリ/タブが読み込まれているときに、読み込みインジケーターを表示するかどうかを指定します。 既定値: **false**
+>[!NOTE]
+>アプリマニフェストで "showLoadingIndicator: true" を設定した場合、ページが正しく読み込まれるようにするには、「 [ネイティブロードインジケーター](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) ドキュメントを表示する」で説明されているプロトコルに従って、タブおよびタスクモジュールのコンテンツページを変更する必要があります。
+
 
 ## <a name="isfullscreen"></a>isFullScreen
 

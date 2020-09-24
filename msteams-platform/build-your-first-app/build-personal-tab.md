@@ -5,12 +5,12 @@ description: 最初の Microsoft Teams アプリ用に個人用タブを作成�
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: 3b54efa9b7ed8019b5d4901eeaaf0864e1afc7ac
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: a86c9e1e46b97c6b265bfa9ad2f618655c524ee4
+ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210220"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "48237805"
 ---
 # <a name="build-a-teams-personal-tab"></a>Teams の [個人] タブを構築する
 
@@ -34,7 +34,7 @@ Teams には、2種類のタブがあります。 このチュートリアルで
 > * タブのコンテンツを作成する
 > * ユーザーの設定に基づいてタブの色のテーマを更新する
 
-## <a name="identify-relevant-app-project-components"></a>関連するアプリプロジェクトコンポーネントを特定する
+## <a name="1-identify-relevant-app-project-components"></a>1. 関連するアプリプロジェクトコンポーネントを特定する
 
 Teams ツールキットを使用してプロジェクトを作成すると、アプリマニフェストとスキャフォールディングの多くが自動的に設定されます。 個人タブを作成するための主なコンポーネントについて説明します。
 
@@ -65,7 +65,7 @@ Teams ツールキットを使用してプロジェクトを作成すると、�
 * `Tab.js``src/components`プロジェクトのディレクトリ内のファイル
 * Microsoft Teams JavaScript クライアント SDK (プロジェクトのフロントエンドコンポーネントに事前に読み込まれているもの)
 
-## <a name="create-your-tab-content"></a>タブコンテンツを作成する
+## <a name="2-customize-your-tab-content-page"></a>2. タブのコンテンツページをカスタマイズする
 
 組織内の重要な連絡先の一覧をコンパイルします。 次のスニペットをコピーして、自分に関連する情報で更新するか、または時間のためにコードをそのものとして使用します。
 
@@ -112,7 +112,7 @@ a {
 
 :::image type="content" source="../assets/images/tabs/personal-tab-tutorial-content.png" alt-text="静的コンテンツを含む個人用タブのスクリーンショット。":::
 
-## <a name="update-the-tab-theme"></a>タブテーマを更新する
+## <a name="3-update-the-tab-theme"></a>3. タブテーマを更新する
 
 優れたアプリは Teams にネイティブであるため、タブは、ユーザーが推奨する Teams のテーマ (既定値 (淡色)、濃い色、またはハイコントラスト) と融合することが重要です。 最後のスクリーンショットで気付いたかもしれませんが、クライアントが暗いテーマを使用している場合は、タブの背景が淡色で表示されます。 これは推奨されるユーザー環境ではありません。
 
