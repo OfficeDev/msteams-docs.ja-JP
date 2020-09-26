@@ -2,12 +2,12 @@
 title: Microsoft Teams アプリ承認提出プロセスガイダンス
 description: Microsoft Teams アプリストアに公開されたアプリを取得するための送信承認プロセスについて説明します。
 keywords: teams 発行ストア office publishing 発行 AppSource partner center アカウントの確認
-ms.openlocfilehash: d165ac144926e0a956c211e5a3d55ac67c77fdb8
-ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
+ms.openlocfilehash: caf7a433158aaf79184d7247b95b5786b61de31f
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "46874871"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279691"
 ---
 # <a name="submit-your-app-to-appsource"></a>アプリを AppSource に提出する
 
@@ -30,7 +30,7 @@ ms.locfileid: "46874871"
 >- アプリに Office 365 コネクタが含まれている場合は、追加の用語が適用されることがあります。 *「* [コネクタ開発者ダッシュボード](https://aka.ms/connectorsdashboard) と [アプリ開発者アグリーメント](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm)」を参照してください。
 >- アプリを GCC ユーザーが使用できるようにし、ストア内のアプリリストが重複しないようにするには、認証プロセス/フローでは、ユーザーを識別し、GCC ユーザーの指定されたコンテンツ URL または予想されるコンテンツ URL にルーティングする必要があります。
 
-## <a name="faqs--teams-apps-and-partner-accounts"></a>Faq-Teams アプリとパートナーアカウント
+## <a name="faqs--teams-apps-and-partner-account-verification-process-in-partner-center"></a>よくあるご質問-Teams アプリとパートナーアカウント検証プロセスパートナーセンター
 
 ## <a name="how-do-i-create-a-partner-center-account"></a>パートナーセンターアカウントを作成するにはどうすればよいですか?
 
@@ -49,11 +49,11 @@ ms.locfileid: "46874871"
 | トピック | 一般的な Marketplace のヘルプと操作方法に関する質問 |
 | サブ| Office アドイン |
 
-## <a name="where-can-i-get-support-for-my-partner-center-issues"></a>パートナーセンターの問題のサポートを受けるには、どうすればよいですか?
+## <a name="where-can-i-get-support-for-my-partner-center-account-issues"></a>パートナーセンターのアカウントの問題をサポートするには、どうすればよいですか?
 
 「 [Publishers support」ページ](https://aka.ms/marketplacepublishersupport) にアクセスして、問題のトピックを検索し、ガイダンスを見つけてください。 提供されているガイダンスが役に立たない場合は、 [パートナーセンターのサポートチケットを開き](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket)ます。
 
-## <a name="how-do-i-manage-my-office-store-account"></a>Office ストアアカウントを管理するにはどうすればよいですか?
+## <a name="how-do-i-manage-my-office-store-account-in-partner-center"></a>パートナーセンターで Office ストアアカウントを管理するにはどうすればよいですか?
 
 パートナーセンターで Office ストアアカウントを管理するためのガイダンスについては、「  [Partner center で Office ストアアカウントを管理する」](/office/dev/store/manage-account-settings-and-profile) を参照してください。
 
@@ -77,12 +77,12 @@ ms.locfileid: "46874871"
 
 ![パートナーセンターの検証エラー](../../../assets/images/partner-center-acct-verification-error.png)
 
-## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-how-should-i-proceed"></a>自分のアカウントの確認状態が、電子メールの所有権を超える高度ではありません。 続行するにはどうすればよいですか?
+## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-in-partner-center-how-should-i-proceed"></a>自分のアカウントの確認状態は、パートナーセンターの電子メールの所有権を超えていません。 続行するにはどうすればよいですか?
 
 **電子メールの所有権**の確認プロセスでは、確認メールがプライマリ連絡先の電子メールアドレスに送信されます。 プライマリ連絡先の受信トレイで **maccount@<span>microsoft</span>.com** からの電子メールが必要です。そのためには、「件名を付けてください。」というアクションを必要とします。電子メール *アカウントが microsoft によって確認*され、電子メールの確認プロセスが完了することを要求します。 確認メールは、パートナーセンターの [アカウント設定] ページに表示されている電子メールアドレスに送信されます。
 
 > [!NOTE]
- >[電子メールの確認のリンクは、7日間のみ有効です。 パートナープロファイルページにアクセスして、[ **再送信の確認** ] の電子メールリンクを選択することによって、電子メールを送信するように要求することができます。 電子メールが受信されるようにするには、microsoft.com からの電子メールを安全なドメインとしてホワイトリストし、迷惑メールフォルダーをチェックします。
+ >[電子メールの確認のリンクは、7日間のみ有効です。 パートナープロファイルページにアクセスして、[ **再送信の確認** ] の電子メールリンクを選択することによって、電子メールを送信するように要求することができます。 電子メールが受信されることを確認するには、microsoft.com からのセキュリティで保護されたドメインとして電子メールのセーフリストを作成し、迷惑メールフォルダーをチェックします。
 
 ## <a name="how-i-do-get-further-support-for-my-account-related-issues"></a>自分のアカウント関連の問題について、さらにサポートを受けるにはどうすればよいですか?
 
@@ -96,7 +96,7 @@ ms.locfileid: "46874871"
 1. ブラウザーのキャッシュをクリアし、パートナーセンターのアカウントダッシュボードに移動し、[ **再送信確認** ] 電子メールリンクを選択して、確認の電子メールを電子メールアドレスに送信します。
 1. 別のブラウザーから [  **再送信の確認の電子メール** へのアクセスを試行してください。
 1. IT 部門と協力して、電子メールサーバーによって検証メールがブロックされないようにします。
-1. サーバーのスパムフィルターを調整して、maccount@microsoft からのすべての電子メールを許可またはホワイトリストに **します。 <span></span>com**。
+1. サーバーのスパムフィルターを調整して、maccount@microsoft からのすべての電子メールを許可/セーフリストにし **ます。 <span></span>com**。
 
 ## <a name="how-long-does-the-employment-verification-process-usually-take"></a>雇用確認プロセスには、通常どのくらいの時間がかかりますか?
 

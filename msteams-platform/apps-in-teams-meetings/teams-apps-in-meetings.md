@@ -5,12 +5,12 @@ description: 参加者とユーザーの役割に基づく Teams 会議のアプ
 ms.topic: overview
 ms.author: lajanuar
 keywords: teams アプリ会議ユーザー参加者ロール api
-ms.openlocfilehash: 6af9cac2040a9301ba2bdf64ddbd7857490a679f
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: b5e649f1630ff6c4a120c4b7aefbac1f5f6df06f
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237889"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279718"
 ---
 # <a name="apps-in-teams-meetings-preview"></a>Teams 会議のアプリ (プレビュー)
 
@@ -129,4 +129,4 @@ _See_ [ **Teams 会議でのロールの**表示](https://support.microsoft.com/
 ## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [Teams 会議のアプリを有効にする](teams-ミーティング/使用可能なアプリ-md)。
+> [Teams 会議用のアプリを作成する](create-apps-for-teams-meetings.md)

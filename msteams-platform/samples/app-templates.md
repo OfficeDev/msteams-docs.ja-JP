@@ -3,12 +3,12 @@ title: Microsoft Teams アプリテンプレート
 description: Microsoft Teams プラットフォームのアプリテンプレートのリンクと説明
 ms.topic: reference
 keywords: Microsoft Teams テンプレートサンプルのデモ
-ms.openlocfilehash: 5ecad6586d4bbe114d732869981d25b3305fa940
-ms.sourcegitcommit: 3e94edba28e9e1252b6a6ba35d4df32710dfc5d4
+ms.openlocfilehash: 1ac0bdcd5e52681ea42483cac04d5da9c34bab12
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "46531286"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279800"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams のアプリテンプレート
 
@@ -23,9 +23,21 @@ ms.locfileid: "46531286"
 * **カスタマイズと拡張:** すべてのアプリテンプレートを展開する準備ができましたが、コードベースと展開スクリプト全体が提供されるので、独自のニーズに合わせてカスタマイズまたは拡張することが容易になります。
 * **サポート & 詳細なドキュメント:** すべてのアプリテンプレートには、ソリューションのアーキテクチャ、展開、および構成手順に関するエンドツーエンドのドキュメントが付属しています。 リポジトリも監視されるので、GitHub で問題を発生させることで、発生した問題を報告してください。
 
+## <a name="ask-away-9734"></a>他の &#9734; を確認する
+
+この質問は、ユーザーが Teams 内で Q&A (質問と回答) セッションを実施できるようにする [Microsoft Teams の bot](../bots/what-are-bots.md) です。 不在時のボットを使用すると、チームメンバーは仕事仲間によって共有されている質問を提出したり、&して、ホストが、チャネルまたはチャット内の重要な質問を簡単に収集できるようになります。 この bot を使用して、Teams 会議のセッションをリアルタイムで Q&し、参加者がチャットで実際に質問を送信できるようにすることができます。
+
+[GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-askaway)
+
+:::row:::
+  :::column span="2":::
+    ![ユーザーが質問に投票できるようにするためのスコアボードポップアップダイアログの表示](../assets/images/ask-away-app.png)  
+:::column-end:::
+:::row-end:::
+
 ## <a name="associate-insights"></a>アソシエイト インサイト
 
-アソシエイト insights は、顧客の意見、心理、認識を直接取得して送信するための、第一線ワーカーを支援する[パワーアプリ](/powerapps/maker/canvas-apps/embed-teams-app)テンプレートです。 Firstline ワーカーは、多くの場合、一対一の取引先担当者として顧客と協力することになります。 収集されたデータは、ビジネスチーム (たとえば、Power BI Teams タブを介して) によって共有および使用して、製品の改善や顧客のエクスペリエンスの向上に利用できます。
+アソシエイト Insights は、顧客の意見、心理、認識を直接取得して送信するための、第一線ワーカーを支援する [パワーアプリ](/powerapps/maker/canvas-apps/embed-teams-app) テンプレートです。 Firstline ワーカーは、多くの場合、一対一の取引先担当者として顧客と協力することになります。 収集されたデータは、ビジネスチーム (たとえば、Power BI Teams タブを介して) によって共有および使用して、製品の改善や顧客のエクスペリエンスの向上に利用できます。
 
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights)
 
@@ -50,7 +62,7 @@ ms.locfileid: "46531286"
 
 ## <a name="book-a-room"></a>書籍-a ルーム
 
-書籍-a room は[Microsoft Teams の bot](../bots/what-are-bots.md)で、現在の時刻から 30 (既定)、60、または90分間、ユーザーが会議室をすばやく検索して予約することができます。 個人または1:1 の会話に対して、会議中の bot の範囲を示します。
+書籍-a room は [Microsoft Teams の bot](../bots/what-are-bots.md) で、現在の時刻から 30 (既定)、60、または90分間、ユーザーが会議室をすばやく検索して予約することができます。 個人または1:1 の会話に対して、会議中の bot の範囲を示します。
 
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom)
 
@@ -74,7 +86,7 @@ ms.locfileid: "46531286"
 
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
 
-![FAQ プラス GIF](../assets/images/CompanyCommunicatorCompose.png)
+![jCompany Communicator 新規作成ボックスビュー](../assets/images/CompanyCommunicatorCompose.png)
 
 ## <a name="contact-group-lookup-9734"></a>連絡先グループ参照 &#9734;
 
@@ -95,7 +107,7 @@ ms.locfileid: "46531286"
 
 ## <a name="crowdsourcer"></a>CrowdSourcer
 
-CrowdSourcer は、チームが照会した情報をグループメンバーから共同で提供する[Microsoft teams bot](../bots/what-are-bots.md)です。 これは、よく寄せられる質問に回答するための最適な方法であり、参加者が積極的に協力して、楽しくて役に立つ情報リソースに投稿することを可能にします。
+CrowdSourcer は、チームが照会した情報をグループメンバーから共同で提供する [Microsoft teams bot](../bots/what-are-bots.md) です。 これは、よく寄せられる質問に回答するための最適な方法であり、参加者が積極的に協力して、楽しくて役に立つ情報リソースに投稿することを可能にします。
 
 [Github で取得する](https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app)
 
@@ -103,7 +115,7 @@ CrowdSourcer は、チームが照会した情報をグループメンバーか�
 
 ## <a name="custom-stickers"></a>カスタム ステッカー
 
-自己表現は、正常なチームのカルチャにとって中心的なものです。 このアプリテンプレートは、ユーザーが Microsoft Teams 内でカスタムステッカーと Gif を使用できるようにする[メッセージング拡張機能](~/messaging-extensions/what-are-messaging-extensions.md)です。 このテンプレートを使用すると、web ベースの構成を簡単に行うことができます。これにより、エンドユーザーが使用する Gif/ステッカー/画像を構成アクセス権を持つすべてのユーザーがアップロードできるようになります。
+自己表現は、正常なチームのカルチャにとって中心的なものです。 このアプリテンプレートは、ユーザーが Microsoft Teams 内でカスタムステッカーと Gif を使用できるようにする [メッセージング拡張機能](~/messaging-extensions/what-are-messaging-extensions.md) です。 このテンプレートを使用すると、web ベースの構成を簡単に行うことができます。これにより、エンドユーザーが使用する Gif/ステッカー/画像を構成アクセス権を持つすべてのユーザーがアップロードできるようになります。
 
 このアプリでは、ストレージと共有のメカニズムとして、SharePoint サイトや個々のチャネルへのアクセスを必要とせずに、teams 間で画像、Gif、ステッカーを簡単に共有することもできます。 たとえば、製品チームは、プログラムを使用して、製品の画像や Gif をソーシャルメディア、マーケティング、営業チームに簡単に共有できます。 新しい画像/Gif が利用可能になったときに、特定の teams/個人に通知フローをトリガーすることによって、このアプリを拡張することもできます。
 
@@ -113,7 +125,7 @@ CrowdSourcer は、チームが照会した情報をグループメンバーか�
 
 ## <a name="e-prescriptions-9734"></a>電子処方箋 &#9734; 
 
-電子処方箋は、電子処方箋を患者に発行するプロセスを自動化することによって、telemedicine と仮想の治療を強化する[パワーアプリ](/powerapps/maker/canvas-apps/embed-teams-app)ベースのアプリです。 医療担当者は、予定をすばやくレビューし、電子処方箋を生成し、電子処方箋に添付された電子メールを Teams プラットフォーム内で直接患者に送信することができます。
+電子処方箋は、電子処方箋を患者に発行するプロセスを自動化することによって、telemedicine と仮想の治療を強化する [パワーアプリ](/powerapps/maker/canvas-apps/embed-teams-app)ベースのアプリです。 医療担当者は、予定をすばやくレビューし、電子処方箋を生成し、電子処方箋に添付された電子メールを Teams プラットフォーム内で直接患者に送信することができます。
 
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-eprescription) 
 
@@ -130,7 +142,7 @@ CrowdSourcer は、チームが照会した情報をグループメンバーか�
 
 ## <a name="expert-finder"></a>エキスパート検索
 
-専門家の Finder は、スキル、関心事、教育の属性に基づいて特定の組織のメンバーを識別する[Microsoft Teams の bot](../bots/what-are-bots.md)です。 メンバーは、Azure Active Directory ユーザープロファイルのキーワード検索に一致する組織内の専門家を検索します。
+専門家の Finder は、スキル、関心事、教育の属性に基づいて特定の組織のメンバーを識別する [Microsoft Teams の bot](../bots/what-are-bots.md) です。 メンバーは、Azure Active Directory ユーザープロファイルのキーワード検索に一致する組織内の専門家を検索します。
 
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-expertfinder)
 
@@ -149,13 +161,13 @@ CrowdSourcer は、チームが照会した情報をグループメンバーか�
 >
 > &#x2714; Q&のリビジョン履歴を追跡します。
 >
-> &#x2714;[アダプティブカード](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)として表示するには、追加の詳細を含む回答を構成します。
+> &#x2714; [アダプティブカード](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)として表示するには、追加の詳細を含む回答を構成します。
 >
 [**GitHub で取得する**](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
 
 ![FAQ プラス GIF](../assets/images/FAQPlusEndUser.gif)
 
-## <a name="goal-tracker-9734"></a>目標追跡ツール &#9734;
+## <a name="goal-tracker"></a>目標追跡ツール
 
 目標追跡アプリは、組織にとって、Microsoft Teams 内での目標の確立、進捗状況の確認、成功の確認をサポートするための包括的なソリューションです。 アプリを使用すると、ユーザーは professional、personal、および team の各レベルで目標を設定、追跡、更新することができます。 チームメンバーは、タイムリーな事前通知や進捗状況の更新を受信して、常に順調に進めることができます。
 
@@ -172,7 +184,7 @@ CrowdSourcer は、チームが照会した情報をグループメンバーか�
 :::column-end:::
 :::row-end:::
 
-## <a name="great-ideas-9734"></a>魅力的なアイデア &#9734;
+## <a name="great-ideas"></a>魅力的なアイデア
 
 魅力的なアイデアアプリは、組織内の革新と創造性をサポートしています。 アプリを使用すると、従業員は仕事仲間やリーダーシップを使用してアイデアを共有し、新しい提出物、ピアに関するスポットライトを見つけ、Microsoft Teams 内でのベスト提案に投票を行うことができます。
 
@@ -206,7 +218,7 @@ CrowdSourcer は、チームが照会した情報をグループメンバーか�
 :::column-end:::
 :::row-end:::
 
-## <a name="grow-your-skills-9734"></a>スキルを拡大 &#9734;
+## <a name="grow-your-skills"></a>スキルを拡張する
 
 It アプリの拡張は、従業員が新しいスキルを同時に習得しながら、従業員が組織の補助的なプロジェクトに貢献できるようにすることで、プロフェッショナルな成長と開発をサポートします。 従業員は、アプリを使用して、関心のある機会を見つけ、仲間との有意義なコラボレーションを楽しんで、新しいレベルの専門知識と機能を Teams 環境内で取得することができます。
 
@@ -233,7 +245,7 @@ HR サポート bot は、問題が解決できないときに、そのループ
 
 ## <a name="icebreaker"></a>アイスブレーカー
 
-Icebreaker は[Microsoft Teams の bot](../bots/what-are-bots.md)で、チームは、2つのランダムなチームメンバーを毎週1つずつペアにすることによって近づくことができます。 Bot は、両方のメンバーに対して動作する空き時間を自動的に提案することで、スケジュールを簡単にします。 パーソナル接続を強化し、このアプリを使用して緊密な knit コミュニティを構築します。
+Icebreaker は [Microsoft Teams の bot](../bots/what-are-bots.md) で、チームは、2つのランダムなチームメンバーを毎週1つずつペアにすることによって近づくことができます。 Bot は、両方のメンバーに対して動作する空き時間を自動的に提案することで、スケジュールを簡単にします。 パーソナル接続を強化し、このアプリを使用して緊密な knit コミュニティを構築します。
 
 Icebreaker アプリは、チーム全体にわたる個人の接続を促進するだけでなく、組織内の利息ベースコミュニティを cultivate するのに役立ちます。 たとえば、このアプリを DevOps の趣味グループに対して使用すると、アイデアやベストプラクティスつれを組織全体に分散させることができます。
 
@@ -243,15 +255,15 @@ Icebreaker アプリは、チーム全体にわたる個人の接続を促進す
 
 ## <a name="incentives"></a>報奨金
 
-インセンティブは、トレーニングや変更管理イニシアティブなど、指定されたアクティビティに incentivized 従業員の参加を管理し、追跡するための[Power Apps](/powerapps/maker/canvas-apps/embed-teams-app)テンプレートです。 管理者はアプリを使用して、指定されたアクティビティを確立し、完了するためにポイントを割り当て、報奨に必要な適格性ポイントレベルを指定します。 従業員はアプリを使用して、蓄積されたポイントを表示したり、適格性に達した場合には、redeemable 報奨に同意します。
+インセンティブは、トレーニングや変更管理イニシアティブなど、指定されたアクティビティに incentivized 従業員の参加を管理し、追跡するための [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) テンプレートです。 管理者はアプリを使用して、指定されたアクティビティを確立し、完了するためにポイントを割り当て、報奨に必要な適格性ポイントレベルを指定します。 従業員はアプリを使用して、蓄積されたポイントを表示したり、適格性に達した場合には、redeemable 報奨に同意します。
 
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-incentives)
 
 ![インセンティブアプリのデモ](../assets/images/incentives-app.png)
 
-## <a name="incident-reporter-9734"></a>インシデントレポーター &#9734;
+## <a name="incident-reporter"></a>インシデントレポーター 
 
-インシデントレポーターは、組織内のインシデントの管理を最適化する[Microsoft Teams の bot](../bots/what-are-bots.md)です。 Bot は、インシデントデータの自動収集、カスタマイズされたインシデントレポート、関連するステークホルダーの通知、およびエンドツーエンドのインシデント追跡を容易にします。
+インシデントレポーターは、組織内のインシデントの管理を最適化する [Microsoft Teams の bot](../bots/what-are-bots.md)  です。 Bot は、インシデントデータの自動収集、カスタマイズされたインシデントレポート、関連するステークホルダーの通知、およびエンドツーエンドのインシデント追跡を容易にします。
 
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-incidentreport)
 
@@ -285,15 +297,15 @@ Icebreaker アプリは、チーム全体にわたる個人の接続を促進す
 
 ## <a name="quick-responses"></a>クイック応答
 
-クイック応答は、ユーザーによく寄せられる質問 (Faq) を効果的に回答するための堅牢なソリューションを提供する Microsoft Teams アプリです。 アプリでは、各クエリに手動で応答して情報を繰り返し表示するのではなく、Teams の[メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)によって対話的なユーザー操作に対する応答のライブラリをビルドします。
+クイック応答は、ユーザーによく寄せられる質問 (Faq) を効果的に回答するための堅牢なソリューションを提供する Microsoft Teams アプリです。 アプリでは、各クエリに手動で応答して情報を繰り返し表示するのではなく、Teams の [メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)によって対話的なユーザー操作に対する応答のライブラリをビルドします。
 
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-quickresponses)
 
 ![応答のサンプルビュー](../assets/images/quick-responses.png)
 
-## <a name="remote-support-9734"></a>リモートサポート &#9734;
+## <a name="remote-support"></a>リモートサポート
 
-リモートサポートは、組織全体のサポート依頼者と内部のサポートチームの間でフォーカスがあるインターフェイスを提供する[Microsoft Teams の bot](../bots/what-are-bots.md)です。  エンドユーザーは、サポートのための要求を提出、編集、または取り消すことができます。また、サポートチームは、すべての要求を Teams プラットフォーム内で応答、管理、および更新できます。
+リモートサポートは、組織全体のサポート依頼者と内部のサポートチームの間でフォーカスがあるインターフェイスを提供する [Microsoft Teams の bot](../bots/what-are-bots.md) です。  エンドユーザーは、サポートのための要求を提出、編集、または取り消すことができます。また、サポートチームは、すべての要求を Teams プラットフォーム内で応答、管理、および更新できます。
 
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-remotesupport)
 
@@ -308,7 +320,7 @@ Icebreaker アプリは、チーム全体にわたる個人の接続を促進す
 :::column-end:::
 :::row-end:::
 
-## <a name="request-a-team-9734"></a>Team &#9734; の要求
+## <a name="request-a-team"></a>チームの要求
 
 要求-a team は、企業組織の新しいチーム作成を最適化する Microsoft Teams アプリです。 このアプリは、ウィザードで指示された要求フォーム、組み込みの承認プロセス、要求状態ダッシュボード、および自動化されたチームビルドを統合することによって、新しいチームインスタンスを作成する際の標準化とベストプラクティスをサポートしています。
 
@@ -325,14 +337,14 @@ Icebreaker アプリは、チーム全体にわたる個人の接続を促進す
 :::column-end:::
 :::row-end:::
 
-## <a name="scrums-for-channels-9734"></a>チャネル &#9734; の Scrums
+## <a name="scrums-for-channels"></a>チャネルの Scrums
 
 Scrums for Channels は、ユーザーが Microsoft Teams 内のチャネルで Scrums をスケジュールして実行できるようにする、スクラムアシスタントアプリです。 このアプリは、リモートチームとチームが、さまざまな地理的場所とタイムゾーンのメンバーで構成された、毎日の更新情報を共有し、スクラムのスタンドアップ会議に参加できるようにするために役立ちます。
 
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-scrumsforchannels)
 
 > [!NOTE]
-> グループチャットでスクラム会議を実施するには、「 [Scrums For Group chat](#scrums-for-group-chat-) app template」を参照してください。
+> グループチャットでスクラム会議を実施するには、「 [Scrums For Group chat](#scrums-for-group-chat) app template」を参照してください。
 
 :::row:::
   :::column span="2":::
@@ -345,7 +357,7 @@ Scrums for Channels は、ユーザーが Microsoft Teams 内のチャネルで 
 :::column-end:::
 :::row-end:::
 
-## <a name="scrums-for-group-chat-9734"></a>グループチャット &#9734; の Scrums
+## <a name="scrums-for-group-chat"></a>グループチャットの Scrums
 
 > [!NOTE]
 > Scrums Status app テンプレートが更新され、グループチャット用に Scrums になりました。
@@ -374,9 +386,9 @@ Microsoft Teams でのコラボレーションは、多くの場合、SharePoint
 
 ![検索アプリを一覧表示する](../assets/images/list-search-template.png)
 
-## <a name="staff-check-ins-9734"></a>スタッフのチェックイン &#9734;
+## <a name="staff-check-ins"></a>スタッフのチェックイン
 
-スタッフのチェックインは、ビジネス担当者と現場担当者との間での監視コミュニケーションを可能にする、[電力アプリケーション](/powerapps/powerapps-overview)ベースのアプリです。 スタッフは、スケジュールされた、または臨時に Teams から直接、タイムクリティカルな情報と進捗状況の更新を簡単に提供できます。 アプリでは、リアルタイムの場所、写真、およびメモだけでなく、アラームの通知や自動化されたワークフローをサポートしています。
+スタッフのチェックインは、ビジネス担当者と現場担当者との間での監視コミュニケーションを可能にする、 [電力アプリケーション](/powerapps/powerapps-overview)ベースのアプリです。 スタッフは、スケジュールされた、または臨時に Teams から直接、タイムクリティカルな情報と進捗状況の更新を簡単に提供できます。 アプリでは、リアルタイムの場所、写真、およびメモだけでなく、アラームの通知や自動化されたワークフローをサポートしています。
 
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
 

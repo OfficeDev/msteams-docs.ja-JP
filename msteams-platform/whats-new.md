@@ -2,12 +2,12 @@
 title: 新機能
 description: Microsoft Teams のすべての新しい開発者向け機能について説明します。
 keywords: teams 新しい最新情報
-ms.openlocfilehash: 46e18dbe385680fea38c98f4396047a8d10a2b9c
-ms.sourcegitcommit: b3962a7b36f260aef1af9124d14d71ae08b01ac4
+ms.openlocfilehash: dde75b3d8ca921d15f3a24145035d96a7aca86b8
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47303718"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279660"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -18,9 +18,15 @@ ms.locfileid: "47303718"
 
 変更ログには、Microsoft Teams プラットフォームおよびこのドキュメントセットに対する変更が一覧表示されます。 場合によっては、Teams 開発者にとって重要な新しい機能に注意を向けるためにエントリを使用することがあります。
 
-| **Date** | **注** | **変更されたトピック** |
+| **Date** | **メモ** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+|09/22/2020|新しい "Teams の使用を開始する" ガイダンス|[最初の Teams アプリの概要を作成する](build-your-first-app/build-first-app-overview.md)|
+|9/18/2020|会議中の Teams アプリのサポート (パブリックプレビュー)|Teams 会議で Teams 会議と[アプリ](apps-in-teams-meetings/teams-apps-in-meetings.md)[用のアプリを作成する](apps-in-teams-meetings/create-apps-for-teams-meetings.md)|
+|8/19/2020|Microsoft Graph を使用した Teams メッセージのインポート|[Microsoft Graph を使用してサードパーティのプラットフォーム メッセージを Teams にインポートする](graph-api/import-messages/import-external-messages-to-teams.md)
 | 08/12/2020 |受信 webhook でのアダプティブカードのサポートは、GA に移動されました。|[受信 Webhook を使用してアダプティブ カードを送信する](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
+|08/10/2020|Visual Studio Toolkit を使用して Teams アプリの作成を開始します。|[Microsoft Teams Toolkit と Visual Studio コードを使用してアプリをビルドする](toolkit/visual-studio-overview.md) |
+|08/06/2020|タブの SSO 認証のサポート|[SSO Microsoft Teams タブを開発する](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
+|07/27/2020 | プロアクティブな bot およびメッセージをグラフ化する (パブリックプレビュー)|[Microsoft Graph を使用して Teams での積極的なボットインストールおよび予防的なメッセージングを有効にする](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
 | 07/22/2020 |モバイルデバイスの機能の更新。|[Microsoft Teams タブのデバイスへのアクセス許可を要求する](~/tabs/how-to/native-device-permissions.md) |
 |07/20/2020|AppSource 提出用 Teams App Validation Tool。|[Teams アプリ検証ツール](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)
 |07/15/2020|Teams 用の仮想アシスタントを作成する|[Microsoft Teams の仮想アシスタント](samples/virtual-assistant.md)|

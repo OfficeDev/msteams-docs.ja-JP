@@ -5,14 +5,14 @@ description: 最初の Microsoft Teams アプリを構築するための概要�
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: quickstart
-ms.openlocfilehash: bcfbcaa9de85f4b7135483aed3d1d11bf8bffad6
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 7431230487f1644de8b17b0b9e143819395b7527
+ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210181"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "48279707"
 ---
-# <a name="building-your-first-teams-app-overview"></a>最初の Teams アプリの概要を作成する
+# <a name="build-your-first-teams-app-overview"></a>最初の Teams アプリの概要を作成する
 
 最初の **アプリ** のレッスンを構築するには、基本的な Teams アプリを作成します。 各チュートリアルでは、一般的なツール、基本概念、および高度な機能について紹介しながら、簡単な現実世界の Teams アプリを構築する方法について順を追って説明します。
 
@@ -93,7 +93,7 @@ Teams では、アプリコンテンツは HTTPS 接続を介してのみ表示�
 
 :::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Teams ' 最初のアプリのチュートリアルを構築するための学習パスを示すスキルツリー。" border="false":::
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 アカウントと環境をセットアップしたら、構築を開始できます。
 
@@ -105,6 +105,6 @@ Teams では、アプリコンテンツは HTTPS 接続を介してのみ表示�
 ### <a name="other-tutorials"></a>その他のチュートリアル
 
 > [!div class="nextstepaction"]
-> [Bot を構築する](../build-your-first-app/build-bot.md)
+> [Bot を作成する](../build-your-first-app/build-bot.md)
 > [!div class="nextstepaction"]
-> [メッセージング拡張機能を構築する](../build-your-first-app/build-messaging-extension.md)
+> [メッセージングの拡張機能を作成する](../build-your-first-app/build-messaging-extension.md)
