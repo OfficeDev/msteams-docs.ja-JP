@@ -157,7 +157,7 @@
       items:
         - name: デザインの概要
           href: tabs/design/tabs.md
-        - name: モバイル クライアントのタブ
+        - name: モバイルのタブ
           href: tabs/design/tabs-mobile.md
     - name: 使い方ガイド
       expanded: true
