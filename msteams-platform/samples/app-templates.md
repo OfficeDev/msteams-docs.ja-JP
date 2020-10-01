@@ -3,12 +3,12 @@ title: Microsoft Teams アプリテンプレート
 description: Microsoft Teams プラットフォームのアプリテンプレートのリンクと説明
 ms.topic: reference
 keywords: Microsoft Teams テンプレートサンプルのデモ
-ms.openlocfilehash: 1ac0bdcd5e52681ea42483cac04d5da9c34bab12
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: a3f9090526a92fba3f6cebe13a973cebeb056889
+ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279800"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "48326364"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams のアプリテンプレート
 
@@ -67,6 +67,21 @@ ms.locfileid: "48279800"
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom)
 
 ![書籍-a ルームのデモ](../assets/images/book-a-room.png)
+
+## <a name="building-access-9734"></a>Access &#9734; を作成する
+
+Access の作成は、施設ディレクターが従業員のオンサイトプレゼンスを管理、追跡、および報告することにより、占有しきい値と社会的 distancing 基準を構築するための管理をサポートする Microsoft の [電源プラットフォーム](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)ベースのアプリです。 Microsoft [Power Apps](/powerapps/powerapps-overview)を使用して構築されたアプリ、および [強力な機能](/power-automate/getting-started)を備えた microsoft Teams との緊密な統合により、組織は、建物の準備状況を判断し、オンサイトアクセスのための資格情報を設定して、今後の計画のために洞察を集めることができます。
+
+[GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-buildingaccess)
+
+:::row:::
+   :::column span="":::
+     ![アクセス予約カードの作成](../assets/images/building-access-reservation.png)
+   :::column-end:::
+   :::column span="":::
+      ![アクセスキービューを作成する](../assets/images/building-access-access-key.png)
+   :::column-end:::
+:::row-end:::
 
 ## <a name="celebrations"></a>お祝い
 

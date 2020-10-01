@@ -5,17 +5,14 @@ description: 既存の Teams タブを sharepoint Framework web パーツとし�
 keywords: teams のタブ sharepoint framework の開発
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 2bdc7ab578be485eee33020b3b0c1a4099fd8ade
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: d7f617f0967743eab84423cd31f78d4700db1c1c
+ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47818942"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "48326348"
 ---
 # <a name="adding-a-microsoft-teams-tab-in-sharepoint-as-an-spfx-web-part"></a>SharePoint の Microsoft Teams タブを SPFx web パーツとして追加する
-
-> [!IMPORTANT]
-> この機能は現在プレビュー段階であり、変更される可能性があります。 運用環境での使用はサポートされていません。 [SharePoint 開発ドキュメントの問題リスト](https://github.com/SharePoint/sp-dev-docs/issues)を使用して、この機能に関するフィードバックやご意見をお寄せください。
 
 ## <a name="rich-integration-between-teams-and-sharepoint"></a>Teams と SharePoint の間の高度な統合
 
@@ -70,7 +67,7 @@ SharePoint Framework v2.0 を使用すると、開発者は Teams タブを使�
 
 SharePoint Framework を使用して Microsoft Teams のタブを実装することもできます。 Sharepoint 開発者にとって、sharepoint Framework web パーツは Azure などの外部サービスを必要とせずに SharePoint 内でホストされるため、これにより、Teams タブの開発プロセスが大幅に簡素化されます。 [Teams での SharePoint Framework の使用方法について説明します。](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
 
-## <a name="introduction"></a>概要
+## <a name="introduction"></a>はじめに
 
 次の手順では、Microsoft Teams サンプルアプリからタブを取得し、それを SharePoint で使用する方法について説明します。 必要な統合作業に焦点を当てるために、Azure で既にホストされているタブを使用します。
 

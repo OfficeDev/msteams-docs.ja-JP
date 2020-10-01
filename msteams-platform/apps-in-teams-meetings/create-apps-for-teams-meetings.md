@@ -5,17 +5,17 @@ description: teams 会議用のアプリを作成する
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: teams アプリ会議ユーザー参加者ロール api
-ms.openlocfilehash: a489a2a439c8aaacc2900e4c62084f13b34b3e30
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: 847e79d188a52892cda8732a2b58cee068cb5e95
+ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279674"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "48326306"
 ---
-# <a name="create-apps-for-teams-meetings-preview"></a>Teams 会議用のアプリを作成する (プレビュー)
+# <a name="create-apps-for-teams-meetings-release-preview"></a>Teams 会議用のアプリを作成する (リリースプレビュー)
 
 >[!IMPORTANT]
-> Microsoft Teams プレビューに含まれている機能は、すぐにアクセス、テスト、およびフィードバックのために提供されています。 公開リリースで利用できるようになる前に変更が行われ、運用アプリケーションでは使用できません。
+> Microsoft Teams のリリースプレビューで強調表示されている機能は、初期の洞察とフィードバックのみを目的として提供されています。 これらは、有効になる前に変更される可能性があります。
 
 ## <a name="prerequisites-and-considerations"></a>前提条件と考慮事項
 
@@ -27,7 +27,7 @@ ms.locfileid: "48279674"
 
 1. などの一部の会議 Api で `GetParticipant` は、 [ボット登録と BOT アプリ ID](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) が認証トークンを生成する必要があります。
 
-1. 開発者は、会議中および会議中 (「 [in meeting dialog](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md) 」、および「 [in meeting」タブ](../apps-in-teams-meetings/design/designing-in-meeting-tab.md)デザインガイドラインを参照してください) に加えて、ミーティング前およびミーティング後のシナリオについて、Teams の一般的な[タブデザインガイドライン](../tabs/design/tabs.md)に従う必要があります。
+1. 開発者は、チームの会議中にトリガー[される会議](design/designing-in-meeting-dialog.md)中のダイアログのための、会議前およびミーティング後のシナリオのための [teams][タブデザインのガイドライン](../tabs/design/tabs.md)に従う必要があります。
 
 ## <a name="meeting-apps-api-reference"></a>会議アプリ API リファレンス
 
@@ -98,11 +98,11 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 ```json
 {
-   "meetingRole":"Presenter",
-   "conversation":{
-      "isGroup":true,
-      "id":"19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
-   }
+    "meetingRole":"Presenter",
+    "conversation":{
+            "isGroup": true,
+            "id": "19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
+        }
 }
 ```
 
@@ -112,10 +112,10 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 ```json
 {
-   "meetingRole":"Attendee",
+   "meetingRole":"Presenter",
    "conversation":{
       "isGroup":true,
-      "id":"19:meeting_OWIyYWVhZWMtM2ExMi00ZTc2LTg0OGEtYWNhMTM4MmZlZTNj@thread.v2"
+      "id":"19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
    }
 }
 ```
@@ -149,17 +149,17 @@ POST /v3/conversations/{conversationId}/activities
 
 ```json
 {
-   "type":"message",
-   "text":"John Phillips assigned you a weekly todo",
-   "summary":"Don't forget to meet with Marketing next week",
-   "channelData":{
-      "notification":{
-         "alert":true,
-         "externalResourceUrl":"https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
-      }
-   },
-   "replyToId":"1493070356924"
-}
+    "type": "message",
+    "text": "John Phillips assigned you a weekly todo",
+    "summary": "Don't forget to meet with Marketing next week",
+    "channelData": {
+    "notification": {
+    "alertInMeeting": true,
+    "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
+    }
+},
+    "replyToId": "1493070356924"
+    }
 ```
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
@@ -210,6 +210,9 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 
 ミーティングアプリの機能は、[アプリケーションマニフェスト] の [セキュリティの定義]**タブ**  ->  **スコープ**と**コンテキスト**配列を使用して宣言されています。 *スコープ* は、アプリが使用可能になる場所と *コンテキスト* を定義します。
 
+> [!NOTE]
+> [開発者プレビューマニフェストスキーマ](../resources/schema/manifest-schema-dev-preview.md)を使用して、アプリマニフェストでこれを試してください。
+
 ```json
 "configurableTabs": [
     {
@@ -232,7 +235,7 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 
 ### <a name="context-property"></a>Context プロパティ
 
-Tab `context` およびプロパティは、 `scopes` アプリを表示する場所を決定できるようにするために、ハーモニーで機能します。 範囲内のタブは、 `personal` 1 つのコンテキストのみを持つことができます。つまり、 `personalTab`  `team` またはスコープ設定されたタブには、複数のコンテキストを含める `groupchat` ことができます。 Context プロパティに指定できる値は次のとおりです。
+Tab `context` およびプロパティは、 `scopes` アプリを表示する場所を決定できるようにするために、ハーモニーで機能します。 またはの範囲内のタブに `team` は、 `groupchat` 複数のコンテキストを含めることができます。 Context プロパティに指定できる値は次のとおりです。
 
 * [ **Channeltab タブ**: チームチャネルのヘッダーのタブ。
 * **privateChatTab**: チームまたは会議のコンテキストではないユーザーのセット間のグループチャットのヘッダーにあるタブ。
@@ -257,9 +260,9 @@ Tab `context` およびプロパティは、 `scopes` アプリを表示する�
 
 ### <a name="in-meeting"></a>会議中
 
-#### <a name="side-panel"></a>**サイドパネル**
+#### <a name="sidepanel"></a>**sidePanel**
 
-アプリマニフェスト内の✔上で説明したように、**会議の面**の配列に**sidepanel**を追加します。
+アプリマニフェスト内の✔前述のように、**コンテキスト**配列に**sidepanel**を追加します。
 
 会議の✔とすべてのシナリオにおいて、アプリは、ため320px ですの幅で表示される [会議中] タブに表示されます。 このためにタブを最適化する必要があります。 *参照*、 [framecontext インターフェイス](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)
 
@@ -269,7 +272,7 @@ Tab `context` およびプロパティは、 `scopes` アプリを表示する�
 
 #### <a name="in-meeting-dialog"></a>**会議中のダイアログ**
 
-✔ [会議中のダイアログの設計ガイドライン](../apps-in-teams-meetings/design/designing-in-meeting-dialog.md)に従う必要があります。
+✔ [会議中のダイアログの設計ガイドライン](design/designing-in-meeting-dialog.md)に従う必要があります。
 
 ✔ [タブの Teams 認証フロー](../tabs/how-to/authentication/auth-flow-tab.md)を参照してください。
 
@@ -278,7 +281,10 @@ Tab `context` およびプロパティは、 `scopes` アプリを表示する�
 ✔通知要求のペイロードの一部として、紹介するコンテンツがホストされる URL を含めます。
 
 > [!NOTE]
-> これらの通知は、本質的に永続的なものです。 ユーザーが web ビューでアクションを実行した後に、 [**Submittask ()**](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) 関数を呼び出して自動消去する必要があります。 これは、アプリを送信するための要件です。 「 [TEAMS SDK: タスクモジュール](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true) *」も参照してください*。
+>
+> * これらの通知は、本質的に永続的なものです。 ユーザーが web ビューでアクションを実行した後に、 [**Submittask ()**](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) 関数を呼び出して自動消去する必要があります。 これは、アプリを送信するための要件です。 「 [TEAMS SDK: タスクモジュール](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true) *」も参照してください*。
+>
+> * アプリで匿名ユーザーをサポートする場合、最初の呼び出し要求のペイロードは、( `from.id` `from` `from.aadObjectId` ユーザーの AZURE Active Directory ID) 要求メタデータではなく、オブジェクト内の (ユーザーの ID) 要求メタデータに依存している必要があります。 *「* [タスクモジュールを使用して](../task-modules-and-cards/task-modules/task-modules-tabs.md) タスク [モジュールを作成し、送信](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)する」を参照してください。
 
 ### <a name="post-meeting"></a>会議後
 

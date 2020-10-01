@@ -5,17 +5,17 @@ description: 参加者とユーザーの役割に基づく Teams 会議のアプ
 ms.topic: overview
 ms.author: lajanuar
 keywords: teams アプリ会議ユーザー参加者ロール api
-ms.openlocfilehash: b5e649f1630ff6c4a120c4b7aefbac1f5f6df06f
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: e7f0f95566347c06a4ab422565c3f49665a5150e
+ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279718"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "48326313"
 ---
-# <a name="apps-in-teams-meetings-preview"></a>Teams 会議のアプリ (プレビュー)
+# <a name="apps-in-teams-meetings-release-preview"></a>Teams 会議のアプリ (リリースプレビュー)
 
 >[!IMPORTANT]
-> Microsoft Teams プレビューに含まれている機能は、すぐにアクセス、テスト、およびフィードバックのために提供されています。 公開リリースで利用できるようになる前に変更が行われ、運用アプリケーションでは使用できません。
+> Microsoft Teams のリリースプレビューで強調表示されている機能は、初期の洞察とフィードバックのみを目的として提供されています。 これらは、有効になる前に変更される可能性があります。
 
 会議は、Teams の生産性にとって重要です。 このツールを使用すると、包括的でアクティブなフォーラムで、コラボレーション、パートナーシップ、情報を伝えるコミュニケーション、および共有フィードバックを行うことができます。 開発者は、 [構成可能なタブ](../tabs/what-are-tabs.md#how-do-tabs-work)、 [ボット](../bots/what-are-bots.md)、および [メッセージ拡張](../messaging-extensions/what-are-messaging-extensions.md) アプリケーションを作成して、Teams の会議環境を強化し、充実させることができます。 会議ユーザーは、タブギャラリーを使用してアプリにアクセスし、かんばんボードの事前ステージング、会議中のアクション可能なダイアログの開始、会議後の投票の作成など、関連するシナリオを有効にすることができます。 会議アプリは、出席者の状態に基づいて、会議のライフサイクルの各段階でユーザー環境を提供できます。
 
@@ -126,7 +126,7 @@ _See_ [ **Teams 会議でのロールの**表示](https://support.microsoft.com/
 1. **フェデレーション/外部**。 フェデレーションユーザーは、会議への参加を招待された別の組織の外部 Teams ユーザーです。 これらのユーザーは、フェデレーションパートナーとの間に有効な資格情報を持っているため、これらのユーザーは Teams によって認証されたものとして扱われますが、組織からチームや他の共有リソースにアクセスすることはできません。 外部ユーザーが teams やチャネルにアクセスできるようにする場合は、ゲストアクセスの方が適していることがあります。 「 [Microsoft Teams で外部アクセスを管理](/microsoftteams/manage-external-access)する _」を参照してください_。
 1. **匿名**。 匿名ユーザーは、Active Directory id を持たず、テナントと共にフェデレーションされません。 匿名の参加者は外部ユーザーのようになりますが、その id は会議に投影されません。 匿名ユーザーは、会議ウィンドウでアプリにアクセスできません。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [Teams 会議用のアプリを作成する](create-apps-for-teams-meetings.md)
