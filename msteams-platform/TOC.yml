@@ -103,6 +103,8 @@
           href: concepts/deploy-and-publish/apps-upload.md
         - name: アプリを組織に公開する
           href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
+        - name: Teams アプリの SaaS プランを作成する
+          href: concepts/deploy-and-publish/add-saas-offer.md
         - name: AppSource でアプリを公開する
           items:
             - name: AppSource への提出について
