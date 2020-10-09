@@ -2,12 +2,12 @@
 title: 新機能
 description: Microsoft Teams のすべての新しい開発者向け機能について説明します。
 keywords: teams 新しい最新情報
-ms.openlocfilehash: dde75b3d8ca921d15f3a24145035d96a7aca86b8
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: 87fa50bc374310c2fe5d8081b18268c6298fb515
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279660"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397667"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -18,10 +18,10 @@ ms.locfileid: "48279660"
 
 変更ログには、Microsoft Teams プラットフォームおよびこのドキュメントセットに対する変更が一覧表示されます。 場合によっては、Teams 開発者にとって重要な新しい機能に注意を向けるためにエントリを使用することがあります。
 
-| **Date** | **メモ** | **変更されたトピック** |
+| **Date** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
 |09/22/2020|新しい "Teams の使用を開始する" ガイダンス|[最初の Teams アプリの概要を作成する](build-your-first-app/build-first-app-overview.md)|
-|9/18/2020|会議中の Teams アプリのサポート (パブリックプレビュー)|Teams 会議で Teams 会議と[アプリ](apps-in-teams-meetings/teams-apps-in-meetings.md)[用のアプリを作成する](apps-in-teams-meetings/create-apps-for-teams-meetings.md)|
+|9/18/2020|会議中の Teams アプリのサポート (リリースプレビュー)|Teams 会議で Teams 会議と[アプリ](apps-in-teams-meetings/teams-apps-in-meetings.md)[用のアプリを作成する](apps-in-teams-meetings/create-apps-for-teams-meetings.md)|
 |8/19/2020|Microsoft Graph を使用した Teams メッセージのインポート|[Microsoft Graph を使用してサードパーティのプラットフォーム メッセージを Teams にインポートする](graph-api/import-messages/import-external-messages-to-teams.md)
 | 08/12/2020 |受信 webhook でのアダプティブカードのサポートは、GA に移動されました。|[受信 Webhook を使用してアダプティブ カードを送信する](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
 |08/10/2020|Visual Studio Toolkit を使用して Teams アプリの作成を開始します。|[Microsoft Teams Toolkit と Visual Studio コードを使用してアプリをビルドする](toolkit/visual-studio-overview.md) |
@@ -32,7 +32,7 @@ ms.locfileid: "48279660"
 |07/15/2020|Teams 用の仮想アシスタントを作成する|[Microsoft Teams の仮想アシスタント](samples/virtual-assistant.md)|
 |07/14/2020|ネイティブの読み込みインジケーターのドキュメントを提示する|[ネイティブローディングインジケーターの表示](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
 |07/01/2020|Visual Studio Code Toolkit を使用して Teams アプリの作成を開始します。|[Microsoft Teams Toolkit と Visual Studio コードを使用してアプリをビルドする](toolkit/visual-studio-code-overview.md) |
-|07/01/2020|Teams web およびデスクトップクライアント用のタブ (GA) のシングルサインオン|[シングルサインオン (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
+|07/01/2020|Teams web およびデスクトップクライアント用のタブ (GA) のシングルサインオン|[単一の Sign-On (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
 |06/05/2020| バージョン1.7 に更新されたマニフェストスキーマ| [リファレンス: Microsoft Teams のマニフェストスキーマ](resources/schema/manifest-schema.md)|
 | 05/20/2020 | Microsoft Graph Api を使用したリソース固有の同意アクセス許可は、開発者向けプレビューで表示されます。 |[リソース固有の同意 (RSC)-開発者プレビュー](graph-api/rsc/resource-specific-consent.md) |
 |5/18/2020|Power Virtual Agent を Teams と統合する|[Power Virtual Agents chatbot を Microsoft Teams と統合する](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|

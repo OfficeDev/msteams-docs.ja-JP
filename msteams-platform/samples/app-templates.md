@@ -3,12 +3,12 @@ title: Microsoft Teams アプリテンプレート
 description: Microsoft Teams プラットフォームのアプリテンプレートのリンクと説明
 ms.topic: reference
 keywords: Microsoft Teams テンプレートサンプルのデモ
-ms.openlocfilehash: a3f9090526a92fba3f6cebe13a973cebeb056889
-ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
+ms.openlocfilehash: 9bb93ab55d520265645cf999250bfdf6fae75ea6
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "48326364"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397730"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams のアプリテンプレート
 
@@ -90,6 +90,18 @@ Access の作成は、施設ディレクターが従業員のオンサイトプ�
 アプリは、すべてのチームメンバーが自分のイベントを個人的に追加および表示し、ユーザーがイベントを共有するチームを選択できるようにするための簡単なインターフェイスを提供します。
 
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-celebrations-app)
+
+## <a name="checklist-9734"></a>チェックリスト &#9734;
+
+チェックリストは、チャットまたはチャネルで共有チェックリストを作成することで、チームと共同作業を行えるようにするカスタム Microsoft Teams [メッセージング拡張](../messaging-extensions/what-are-messaging-extensions.md) アプリです。 このアプリは、すべての Teams プラットフォームクライアント (デスクトップ、ブラウザー、iOS、および Android) でサポートされており、Microsoft 365 サブスクリプションの一部として展開の準備ができています。  
+
+[GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-checklist-app )
+
+:::row:::
+:::column span="2":::
+    ![Teams ビューでチェックリストを作成する](../assets/images/checklist-app-template-compose-view.gif)  
+:::column-end:::
+:::row-end:::
 
 ## <a name="company-communicator"></a>社内コミュニケーター
 
@@ -276,7 +288,7 @@ Icebreaker アプリは、チーム全体にわたる個人の接続を促進す
 
 ![インセンティブアプリのデモ](../assets/images/incentives-app.png)
 
-## <a name="incident-reporter"></a>インシデントレポーター 
+## <a name="incident-reporter"></a>インシデントレポーター
 
 インシデントレポーターは、組織内のインシデントの管理を最適化する [Microsoft Teams の bot](../bots/what-are-bots.md)  です。 Bot は、インシデントデータの自動収集、カスタマイズされたインシデントレポート、関連するステークホルダーの通知、およびエンドツーエンドのインシデント追跡を容易にします。
 
@@ -307,6 +319,18 @@ Icebreaker アプリは、チーム全体にわたる個人の接続を促進す
 :::row:::
 :::column span="2":::
     ![落札バッジビュー](../assets/images/open-badges-2.png)
+:::column-end:::
+:::row-end:::
+
+## <a name="poll-9734"></a>Poll &#9734;
+
+Poll は、ユーザーがチームの意見や好みを収集できるように、チャットまたはチャネルで投票をすばやく作成して送信できるようにするカスタム Microsoft Teams [メッセージング拡張](../messaging-extensions/what-are-messaging-extensions.md) アプリです。 このアプリは、すべての Teams プラットフォームクライアント (デスクトップ、ブラウザー、iOS、および Android) でサポートされており、Microsoft 365 サブスクリプションの一部として展開の準備ができています。
+
+[GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-poll-app)
+
+:::row:::
+  :::column span="1":::
+    ![Teams ビューでの投票の作成](../assets/images/poll-app-template-compose-view.gif)  
 :::column-end:::
 :::row-end:::
 
@@ -408,6 +432,18 @@ Microsoft Teams でのコラボレーションは、多くの場合、SharePoint
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
 
 ![チェックインビューを作成する](../assets/images/staff-check-ins-create.png)
+
+## <a name="survey-9734"></a>アンケート &#9734;
+
+アンケートは、チャットまたはチャネルでアンケートを作成してデータを収集し、実用的な洞察を得ることができる、カスタムの Microsoft Teams [メッセージング拡張](../messaging-extensions/what-are-messaging-extensions.md) アプリです。  このアプリは、すべての Teams プラットフォームクライアント (デスクトップ、ブラウザー、iOS、および Android) でサポートされており、Microsoft 365 サブスクリプションの一部として展開の準備ができています。  
+
+[GitHub で取得する](https://github.com/OfficeDev/Microsoft-Teams-Survey-app)
+
+:::row:::
+  :::column span="2":::
+    ![Teams ビューでアンケートを作成する](../assets/images/survey-app-template-compose-view.gif)
+:::column-end:::
+:::row-end:::
 
 ## <a name="visitor-management-9734"></a>ビジタ管理 &#9734;
 

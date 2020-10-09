@@ -4,12 +4,12 @@ author: laujan
 description: Teams プラットフォームでの Power Virtual Agent chatbot の統合
 ms.topic: how-to
 ms.author: lajanuar
-ms.openlocfilehash: 0a85738857015e4bce9627333ed6f1a74e489c43
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: 125a114cb4775dfe2c9265afefae0257f57282df
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279694"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397688"
 ---
 # <a name="integrate-a-power-virtual-agents-chatbot-with-microsoft-teams"></a>Power Virtual Agents chatbot を Microsoft Teams と統合する
 
@@ -39,11 +39,12 @@ Teams インスタンスで [カスタムアプリのアップロードが有効
 
   * Teams インスタンスの左側のナビゲーションバーの下部にある [app store] アイコンを選択し、 **アプリ Studio**を検索します。
 >
-&emsp;&emsp; <img  width="450px" title="ストア内のアプリ Studio の検索" src="../../assets/images/get-started/app-studio-store.png" alt="app in studio store view"/>    
+
+&emsp;&emsp; <img  width="450px" alt="Finding App Studio in the Store" src="/msteams-docs/msteams-platform/assets/images/get-started/app-studio-store.png"/>   
 
   * [ **App Studio** ] タイルを選択し、ポップアップダイアログボックスの [ **インストール** ] を選択します。
 >
-&emsp;&emsp; <img  width="450px" title="App Studio をインストールする" src="../../assets/images/get-started/app-studio-install.png" alt="install app studio view"/>
+&emsp;&emsp; <img  width="450px" alt="Installing App Studio" src="../../assets/images/get-started/app-studio-install.png"/>
 
 2. **App Studio で Teams アプリマニフェストを作成**します。  Teams のボットは、ボットとその機能に関する基本的な情報を提供するアプリマニフェスト (JSON) ファイルによって定義されます。 **アプリ Studio**で [**マニフェストエディター**] を選択して   =>  **、新しいアプリを作成**します。
 3. **Bot の詳細を追加**します。 各フィールドの詳細については、「 [マニフェストスキーマ定義](../../resources/schema/manifest-schema.md)」を参照してください。 すべての必須フィールドに入力してください。

@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: Microsoft Teams bot からの会話イベントを購読する方法。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: a8c6c39989a7d09a325412438f0d2ace78259cb7
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: c678690b1dc2c948cceacdf42c95f169fff753bb
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801217"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397681"
 ---
 # <a name="subscribe-to-conversation-events"></a>会話イベントにサブスクライブする
 
@@ -339,7 +339,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-これは、ボットが**チームに**追加されたときに bot が受け取るメッセージです。
+これは、ボットが **チームに**追加されたときに bot が受け取るメッセージです。
 
 ```json
 {
@@ -432,7 +432,9 @@ async def on_teams_members_added_activity(
 
 ### <a name="team-members-removed"></a>チームメンバーの削除
 
-`teamMemberRemoved`このイベントは、チームから削除され、bot がメンバーになっているチームからユーザーが削除されるたびに、bot に送信されます。 が削除された新しいメンバーが bot 自体またはユーザーであったかどうかを調べるには、のオブジェクトを参照して `Activity` `turnContext` ください。  オブジェクトの `Id` フィールド `MembersRemoved` がオブジェクトのフィールドと同じ場合は、削除された `Id` `Recipient` メンバーが bot になります。それ以外の場合は、ユーザーになります。  Bot は `Id` 通常、次のようになります。`28:<MicrosoftAppId>`
+`teamMemberRemoved`このイベントは、チームから削除され、bot がメンバーになっているチームからユーザーが削除されるたびに、bot に送信されます。 が削除された新しいメンバーが bot 自体またはユーザーであったかどうかを調べるには、のオブジェクトを参照して `Activity` `turnContext` ください。  オブジェクトの `Id` フィールド `MembersRemoved` がオブジェクトのフィールドと同じ場合は、削除された `Id` `Recipient` メンバーが bot になります。それ以外の場合は、ユーザーになります。  Bot は `Id` 通常、次のようになります。 `28:<MicrosoftAppId>`
+
+[!Note] ユーザーがテナントから完全に削除されると、 `membersRemoved conversationUpdate` イベントがトリガーされます。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 

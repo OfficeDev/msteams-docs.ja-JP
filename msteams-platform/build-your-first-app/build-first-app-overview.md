@@ -5,12 +5,12 @@ description: 最初の Microsoft Teams アプリを構築するための概要�
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: quickstart
-ms.openlocfilehash: 7431230487f1644de8b17b0b9e143819395b7527
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+ms.openlocfilehash: 14776b147309877212f710677ae5941238cf5c0d
+ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279707"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48397695"
 ---
 # <a name="build-your-first-teams-app-overview"></a>最初の Teams アプリの概要を作成する
 
@@ -69,7 +69,7 @@ Microsoft 365 開発者プログラムに参加することによって、アプ
 1. [ **今すぐ参加** ] を選択し、画面の指示に従います。
 1. [ようこそ] 画面が表示されたら、[ **設定] E5 サブスクリプション**を選択します。
 1. 管理者アカウントを設定します。 完了すると、次のような画面が表示になります。
-:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Microsoft 365 開発者プログラムにサインアップした後の表示例。":::
+:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Teams でカスタムアプリをアップロードできる場所を示す図":::
 1. 設定したのと同じ管理者アカウントを使用して Teams にログインします。
 1. [ **カスタムアプリをアップロード** する] オプションが選択されているかどうかを確認します。
 
@@ -85,15 +85,16 @@ Teams では、アプリコンテンツは HTTPS 接続を介してのみ表示�
 1. [Ngrok](https://ngrok.com/download)をインストールします。
 1. [Visual Studio Code](https://code.visualstudio.com/download)の最新バージョンをインストールします。 (以前のバージョンは、ツールキットでは動作しない可能性があります)。
 1. Visual Studio Code で、左側のアクティビティバーにある [ **拡張機能**] を選択 :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: し、 **Microsoft Teams Toolkit**をインストールします。
-    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="Visual Studio Code の場所を示す図は、Microsoft Teams ツールキットの拡張機能をインストールできます。":::
+
+    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="Teams でカスタムアプリをアップロードできる場所を示す図":::
 
 ## <a name="about-the-tutorials"></a>チュートリアルについて
 
 **最初のアプリ**レッスンを構築する Teams のいずれかで開始できます。 最初にどこに行くべきかがわからない場合は、初心者フレンドリパスに従って "Hello, World!" を作成します。 アプリ.
 
-:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Teams ' 最初のアプリのチュートリアルを構築するための学習パスを示すスキルツリー。" border="false":::
+:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Teams でカスタムアプリをアップロードできる場所を示す図" border="false":::
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 アカウントと環境をセットアップしたら、構築を開始できます。
 
