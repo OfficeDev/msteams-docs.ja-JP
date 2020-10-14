@@ -1,20 +1,20 @@
 ---
-title: Office 365 テナントを準備する
-description: Office 365 で Teams の使用を開始する方法
-keywords: Office 365 テナントチームのアップロードを構成する
-ms.openlocfilehash: a246b13ae3a12a486a06ff9d98d37d4d147e4ed4
-ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
+title: Microsoft 365 テナントの準備
+description: Microsoft 365 で Teams の使用を開始する方法
+keywords: Microsoft 365 テナントチームのアップロードを構成する
+ms.openlocfilehash: 67a0342a7e8605097eed53dd1b0bdf273d537c0e
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "46874864"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452766"
 ---
-# <a name="prepare-your-office-365-tenant"></a>Office 365 テナントを準備する
+# <a name="prepare-your-microsoft-365-tenant"></a>Microsoft 365 テナントの準備
 
-Office 365 サブスクライバーの場合は、次のいずれかの [プラン](https://products.office.com/business/compare-more-office-365-for-business-plans)を使用して Microsoft Teams 用アプリを開発できます。
+Microsoft 365 サブスクライバーの場合は、次のいずれかの [プラン](https://products.office.com/business/compare-more-office-365-for-business-plans)を使用して microsoft Teams 用アプリを開発できます。
 
-* Business Essentials
-* Business Premium
+* Basic
+* Standard
 * Enterprise E1、E3、E5
 * Developer
 * 教育、教育プラス、教育の E5
@@ -23,7 +23,7 @@ Office 365 サブスクライバーの場合は、次のいずれかの [プラ�
 
 ## <a name="just-need-a-development-environment"></a>開発環境のみが必要ですか。
 
-現在 Office 365 アカウントを持っていない場合は、 [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) サブスクリプションにサインアップできます。 これは90日間 *無料* で、開発アクティビティに使用している間は継続的に更新されます。 Visual Studio *Enterprise* または *Professional* サブスクリプションを所有している場合は、どちらのプログラムにも、visual studio サブスクリプションの有効期間中にアクティブな Microsoft 365 [開発者向けサブスクリプション](https://aka.ms/MyVisualStudioBenefits)が組み込まれています。 *「* [Microsoft 365 developer サブスクリプションをセットアップする」を](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started)参照してください。
+現在 Microsoft 365 アカウントを持っていない場合は、 [microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) サブスクリプションにサインアップできます。 これは90日間 *無料* で、開発アクティビティに使用している間は継続的に更新されます。 Visual Studio *Enterprise* または *Professional* サブスクリプションを所有している場合は、どちらのプログラムにも、visual studio サブスクリプションの有効期間中にアクティブな Microsoft 365 [開発者向けサブスクリプション](https://aka.ms/MyVisualStudioBenefits)が組み込まれています。 *「* [Microsoft 365 developer サブスクリプションをセットアップする」を](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started)参照してください。
 
 ## <a name="enable-microsoft-teams-for-your-organization"></a>組織に対して Microsoft Teams を有効にする 
 

@@ -2,12 +2,12 @@
 title: 高度なアプリの詳細ページを作成する
 description: アプリの詳細ページの要件について説明します。
 keywords: teams 発行ストアの office 発行ポリシー AppSource コンテンツ
-ms.openlocfilehash: 90ce6962668c6a7a66bb10d33b1315340de29b4d
-ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
+ms.openlocfilehash: 103f57ba99404b8d7d5fb28c7aeaa0b770db6969
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "48326327"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452772"
 ---
 # <a name="build-a-great-app-details-page"></a>高度なアプリの詳細ページを作成する
 
@@ -31,7 +31,7 @@ ms.locfileid: "48326327"
 >* ガイダンスには次のリソースを使用します。
 
 * [アプリ名ガイド](https://docs.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist#app-name)
-* [Microsoft の商標とブランドに関するガイドライン](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general)
+* [Microsoft の商標とブランドに関するガイドライン](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)
 
 **手順は次のとおりです。**
 

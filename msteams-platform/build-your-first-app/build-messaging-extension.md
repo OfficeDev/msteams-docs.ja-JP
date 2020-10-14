@@ -1,18 +1,18 @@
 ---
-title: Teams メッセージング拡張機能を構築する
+title: まず、メッセージング拡張機能を構築する
 author: heath-hamilton
-description: 最初の Microsoft Teams アプリのメッセージング拡張機能を構築する方法について説明します。
+description: Microsoft Teams ツールキットを使用して、Microsoft Teams メッセージング拡張機能をすばやく作成できます。
 ms.author: lajanuar
 ms.date: 09/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: 4fd35f6d5cc4b4ba202cb4276386918a5d88d692
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: b19856eacee866ebbc89f21ac12575f1392918b3
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237819"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452835"
 ---
-# <a name="build-a-teams-messaging-extension"></a>Teams メッセージング拡張機能を構築する
+# <a name="build-a-messaging-extension-for-microsoft-teams"></a>Microsoft Teams のメッセージング拡張機能を構築する
 
 Teams *メッセージング拡張機能*には、 [検索コマンド](../messaging-extensions/how-to/search-commands/define-search-command.md) と [アクションコマンド](../messaging-extensions/how-to/action-commands/define-action-command.md)の2種類があります。
 
@@ -173,9 +173,9 @@ Bot は、メッセージング拡張機能でクエリを処理できるよう�
 Teams チャットでのメッセージング拡張機能のしくみについて説明します。
 
 1. 新しいチャットを開始します。 [新規作成] ボックスで、[ **その他**] を選択し、 :::image type="icon" source="../assets/icons/teams-client-more.png"::: サイドロードしたばかりのメッセージング拡張アプリを選択します。<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/me-teams-access.png" alt-text="Teams の新規作成ボックスで検索ベースのメッセージング拡張機能にアクセスする方法を示す図。":::
+   :::image type="content" source="../assets/images/build-your-first-app/me-teams-access.png" alt-text="Teams ツールキットで、メッセージング拡張機能のために新しい bot を作成するために Microsoft 365 アカウントにログインする方法を示す図。":::
 1. 何らかの検索を試してみてください (たとえば、「チケット」)。 アプリが動作している場合は、サンプルの検索結果が表示されます (後で自分で追加することができます)。<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="検索ベースのメッセージング拡張が Teams の新規作成ボックスでどのように使用されるかを示すスクリーンショット。":::
+   :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="Teams ツールキットで、メッセージング拡張機能のために新しい bot を作成するために Microsoft 365 アカウントにログインする方法を示す図。":::
 
 ## <a name="well-done"></a>よくやりましたね
 

@@ -5,17 +5,17 @@ description: teams 会議用のアプリを作成する
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: teams アプリ会議ユーザー参加者ロール api
-ms.openlocfilehash: 847e79d188a52892cda8732a2b58cee068cb5e95
-ms.sourcegitcommit: e92408e751a8f51028908ab7e2415a8051a536c0
+ms.openlocfilehash: e80dd50590d9e0828ab094c691a6b8e07ace3b0c
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "48326306"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452625"
 ---
-# <a name="create-apps-for-teams-meetings-release-preview"></a>Teams 会議用のアプリを作成する (リリースプレビュー)
+# <a name="create-apps-for-teams-meetings-developer-preview"></a>Teams 会議用のアプリを作成する (開発者プレビュー)
 
 >[!IMPORTANT]
-> Microsoft Teams のリリースプレビューで強調表示されている機能は、初期の洞察とフィードバックのみを目的として提供されています。 これらは、有効になる前に変更される可能性があります。
+> Microsoft Teams の開発者プレビューに含まれる機能は、すぐにアクセス、テスト、フィードバック目的のみに提供されています。 公開リリースで利用できるようになる前に変更が行われ、運用アプリケーションでは使用できません。
 
 ## <a name="prerequisites-and-considerations"></a>前提条件と考慮事項
 
@@ -80,6 +80,7 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 {
     var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
     var theObject = Rest.Serialization.SafeJsonConvert.DeserializeObject<WhateverObjectIsReturned>(content, connectorClient.DeserializationSettings);
+}
 ```
 
 * * *
@@ -94,32 +95,34 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 #### <a name="response-payload"></a>応答ペイロード
 <!-- markdownlint-disable MD036 -->
 
+**会議の役割** は、 *開催者*、 *発表者*、または *出席*者になることができます。
+
 **例 1**
 
 ```json
 {
-    "meetingRole":"Presenter",
-    "conversation":{
-            "isGroup": true,
-            "id": "19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
-        }
+  "user":
+  {
+      "id": "29:1JKiJGPAX9TTxtGxhVo0wLx_zwzo-gG8Z-X03306vBwi9p-xMTEbDXsT6KH7-0kkTS8cD-2zkrsoV6f5WJ6_aYw",
+      "aadObjectId": "6aebbad0-e5a5-424a-834a-20fb051f3c1a",
+      "name": "Allan Deyoung",
+      "givenName": "Allan",
+      "surname": "Deyoung",
+      "email": "Allan.Deyoung@microsoft.com",
+      "userPrincipalName": "Allan.Deyoung@microsoft.com",
+      "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+  },
+  "meeting":
+  {
+      "role ": "Presenter",
+      "inMeeting":true
+  },
+  "conversation":
+  {
+      "id": "<conversation id>"
+  }
 }
 ```
-
-**会議の役割** は、 *開催者*、 *発表者*、または *出席*者になることができます。
-
-**例 2**
-
-```json
-{
-   "meetingRole":"Presenter",
-   "conversation":{
-      "isGroup":true,
-      "id":"19:meeting_NDQxMzg1YjUtMGIzNC00Yjc1LWFmYWYtYzk1MGY2MTMwNjE0@thread.v2"
-   }
-}
-```
-
 #### <a name="response-codes"></a>応答コード
 
 **403**: アプリは、参加者情報を取得することを許可されていません。 これは、最も一般的なエラー応答であり、アプリがテナント管理者によって無効にされた場合や、ライブサイトの緩和時にブロックされた場合など、アプリがインストールされていない場合にトリガーされます。  
@@ -143,6 +146,8 @@ POST /v3/conversations/{conversationId}/activities
 
 **conversationId**: 会話 id。 必須
 
+[次の場合は Bot ID になり**ます。** 省略可能
+
 #### <a name="request-payload"></a>要求のペイロード
 
 # <a name="json"></a>[JSON](#tab/json)
@@ -153,13 +158,13 @@ POST /v3/conversations/{conversationId}/activities
     "text": "John Phillips assigned you a weekly todo",
     "summary": "Don't forget to meet with Marketing next week",
     "channelData": {
-    "notification": {
-    "alertInMeeting": true,
-    "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
-    }
-},
+        "notification": {
+            "alertInMeeting": true,
+            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID"
+        }
+    },
     "replyToId": "1493070356924"
-    }
+}
 ```
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
@@ -167,14 +172,14 @@ POST /v3/conversations/{conversationId}/activities
 ```csharp
 Activity activity = MessageFactory.Text("This is a meeting signal test");
 MeetingNotification notification = new MeetingNotification
-{
+  {
     AlertInMeeting = true,
-    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<TaskInfo.title>"
-};
+    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID"
+  };
 activity.ChannelData = new TeamsChannelData
-{
+  {
     Notification = notification
-};
+  };
 await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```
 
@@ -186,10 +191,10 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
         replyActivity.channelData = {
             notification: {
                 alertInMeeting: true,
-                externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>’
+                externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID’
             }
         };
-        await context.sendActivity(replyActivity);
+await context.sendActivity(replyActivity);
 ```
 
 * * *
@@ -211,7 +216,9 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 ミーティングアプリの機能は、[アプリケーションマニフェスト] の [セキュリティの定義]**タブ**  ->  **スコープ**と**コンテキスト**配列を使用して宣言されています。 *スコープ* は、アプリが使用可能になる場所と *コンテキスト* を定義します。
 
 > [!NOTE]
-> [開発者プレビューマニフェストスキーマ](../resources/schema/manifest-schema-dev-preview.md)を使用して、アプリマニフェストでこれを試してください。
+> * [開発者プレビューマニフェストスキーマ](../resources/schema/manifest-schema-dev-preview.md)を使用して、アプリマニフェストでこれを試してください。
+> * 現在、モバイルプラットフォームはマニフェストスキーマ1.6 のみをサポートしています。
+> * モバイルプラットフォームは、会議の前と後の表面でのみタブをサポートします。 モバイルでの会議中のエクスペリエンス (会議中のダイアログおよびタブ) は近日中に利用できるようになります。
 
 ```json
 "configurableTabs": [

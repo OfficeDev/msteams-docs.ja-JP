@@ -1,18 +1,18 @@
 ---
+title: 「はじめに」-「チャネルとグループの作成」タブ
 author: heath-hamilton
-description: 最初の Microsoft Teams アプリ用に [チャネルとグループ] タブを作成する方法について説明します。
+description: Microsoft Teams ツールキットを使用して、Microsoft Teams のチャネルとグループタブをすばやく作成できます。
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
-title: Teams のチャネルとグループの作成タブ
-ms.openlocfilehash: d97d8c13404077bff999db48b24b773aa4bc04ca
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: f890754cdf4ca43f39c25e3ba24fcf47b08c5a9f
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237812"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452856"
 ---
-# <a name="build-a-teams-channel-and-group-tab"></a>Teams のチャネルとグループの作成タブ
+# <a name="build-a-channel-and-group-tab-for-microsoft-teams"></a>Microsoft Teams の [チャネルとグループの作成] タブ
 
 このチュートリアルでは、チームチャネルまたはチャットの全画面ページである基本 *チャネルタブ* ( *グループタブ*とも呼ばれます) を作成します。 [個人用] タブとは異なり、ユーザーはこの種類のタブのいくつかの側面を構成できます (たとえば、タブの名前を変更して、チャネルにとって意味がある場合)。
 
@@ -210,7 +210,7 @@ microsoftTeams.settings.setSettings({
 1. [ **タブの設定]** を選択します。[構成] ページが表示されます。<br/>
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="[チャネル] タブの構成ページのスクリーンショット。":::
 1. [ **保存** ] を選択してタブを構成します。コンテンツが表示されます。<br/>
-   :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="静的コンテンツビューがある [チャネル] タブのスクリーンショット。":::
+   :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="[チャネル] タブの構成ページのスクリーンショット。":::
 
 ## <a name="well-done"></a>よくやりましたね
 
@@ -229,4 +229,4 @@ microsoftTeams.settings.setSettings({
 グループ作業用のタブを作成する方法を理解していること。 別の種類の Teams アプリを作成しようとしていますか?
 
 > [!div class="nextstepaction"]
-> [Bot を構築する](../build-your-first-app/build-bot.md)
+> [Bot を作成する](../build-your-first-app/build-bot.md)

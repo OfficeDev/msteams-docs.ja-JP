@@ -2,12 +2,12 @@
 title: カードリファレンス
 description: Teams のボットで利用可能なすべてのカードおよびカードアクションについて説明します。
 keywords: bot カードリファレンス
-ms.openlocfilehash: 7bd1cbea0aec03913c9bce205ae68eedba284637
-ms.sourcegitcommit: 1b909fb9ccf6cdd84ed0d8f9ea0463243a802a23
+ms.openlocfilehash: 0bcc905f3d5b678700a396ff3e5b8b5f0232046f
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45434546"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452611"
 ---
 # <a name="cards-reference"></a>カードリファレンス
 
@@ -58,11 +58,11 @@ ms.locfileid: "45434546"
 
 ボタンは、カードの下部に積み重ねて表示されます。 ボタンのテキストは常に1行になり、テキストがボタンの幅を超えた場合は切り捨てられます。 カードでサポートされている最大数を超える追加のボタンは表示されません。
 
-詳細については、「[カードアクション](~/task-modules-and-cards/cards/cards-actions.md)」を参照してください。
+詳細については、「 [カードアクション](~/task-modules-and-cards/cards/cards-actions.md) 」を参照してください。
 
 ### <a name="card-formatting"></a>カードの書式設定
 
-カードのテキストの書式設定の詳細については、「[カードの書式設定](~/task-modules-and-cards/cards/cards-format.md)」を参照してください。
+カードのテキストの書式設定の詳細については、「 [カードの書式設定](~/task-modules-and-cards/cards/cards-format.md) 」を参照してください。
 
 ## <a name="adaptive-card"></a>アダプティブカード
 
@@ -235,9 +235,9 @@ ms.locfileid: "45434546"
 
 | プロパティ | 型  | 説明 |
 | --- | --- | --- |
-| title | リッチ テキスト  | カードのタイトル。 最大2行現在サポートされていない書式設定 |
-| サブタイトル | リッチ テキスト  | カードのサブタイトル。 最大2行現在サポートされていない書式設定 |
-| text | リッチ テキスト  | テキストは、サブタイトルのすぐ下に表示されます。書式設定オプションの[カード書式](~/task-modules-and-cards/cards/cards-format.md)を表示する |
+| title | リッチ テキスト  | カードのタイトル。 最大2行 |
+| サブタイトル | リッチ テキスト  | カードのサブタイトル。 最大2行|
+| text | リッチ テキスト  | テキストは、サブタイトルのすぐ下に表示されます。書式設定オプションの [カード書式](~/task-modules-and-cards/cards/cards-format.md) を表示する |
 | images | 画像の配列 | カードの上部に表示される画像。 縦横比16:9 |
 | リモコン | Action オブジェクトの配列 | 現在のカードに適用できるアクションのセット。 最大6 |
 | 搭載 | Action オブジェクト | このアクションは、ユーザーがカード自体をタップしたときにアクティブになります。 |
@@ -281,7 +281,7 @@ ms.locfileid: "45434546"
 Bot フレームワークリファレンス:
 
 * [英雄カードノード](https://docs.microsoft.com/javascript/api/botframework-schema/herocard)
-* [英雄カード C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.herocard?view=botbuilder-dotnet-3.0)
+* [英雄カード C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.herocard?view=botbuilder-dotnet-3.0&preserve-view=true)
 
 ## <a name="list-card"></a>カードの一覧表示
 
@@ -298,10 +298,9 @@ Bot フレームワークリファレンス:
 
 | プロパティ | 型  | 説明 |
 | --- | --- | --- |
-| title | リッチ テキスト  | カードのタイトル。 最大2行現在サポートされていない書式設定 |
-| items | リストアイテムの配列  ||
-| リモコン | Action オブジェクトの配列 | 現在のカードに適用できるアクションのセット。 最大6。 モバイルでは表示されません。 |
-|
+| title | リッチ テキスト  | カードのタイトル。 最大2行|
+| アイテム | リストアイテムの配列  ||
+| リモコン | Action オブジェクトの配列 | 現在のカードに適用できるアクションのセット。 最大6。 |
 
 ### <a name="example-list-card"></a>リストカードの例
 
@@ -374,9 +373,9 @@ Office 365 コネクタカードには、複数のセクション、フィール
 
 | プロパティ | 型  | 説明 |
 | --- | --- | --- |
-| title | リッチ テキスト  | カードのタイトル。 最大2行現在サポートされていない書式設定 |
-| summary | リッチ テキスト  | カードの概要。 最大2行現在サポートされていない書式設定 |
-| text | リッチ テキスト  | テキストは、サブタイトルのすぐ下に表示されます。書式設定オプションの[カード書式](~/task-modules-and-cards/cards/cards-format.md)を表示する |
+| title | リッチ テキスト  | カードのタイトル。 最大2行 |
+| summary | リッチ テキスト  | カードの概要。 最大2行 |
+| text | リッチ テキスト  | テキストは、サブタイトルのすぐ下に表示されます。書式設定オプションの [カード書式](~/task-modules-and-cards/cards/cards-format.md) を表示する |
 | themeColor | 16進文字列 | アプリケーションマニフェストで提供される、表示色をオーバーライドする色 |
 
 ### <a name="notes-on-the-office-365-connector-card"></a>Office 365 コネクタカードのメモ
@@ -401,14 +400,14 @@ Office 365 のコネクタカードは、 [Actioncard アクション](/outlook/
 
 | 値 | 説明 |
 | --- | --- |
-| `avatar` | 限り`activityImage`円としてトリミングされます。 |
-| `article` | `activityImage`四角形として表示され、その縦横比を保持します。 |
+| `avatar` | 限り `activityImage` 円としてトリミングされます。 |
+| `article` | `activityImage` 四角形として表示され、その縦横比を保持します。 |
 
-コネクタカードのプロパティに関するその他の詳細については、「操作可能な[メッセージカードリファレンス](/outlook/actionable-messages/card-reference)」を参照してください。 Microsoft Teams が現在サポートしていないコネクタカードのプロパティは、次のとおりです。
+コネクタカードのプロパティに関するその他の詳細については、「操作可能な [メッセージカードリファレンス](/outlook/actionable-messages/card-reference)」を参照してください。 Microsoft Teams が現在サポートしていないコネクタカードのプロパティは、次のとおりです。
 
 * `heroImage`
 * `hideOriginalBody`
-* `startGroup`(常に `true` Teams で扱います)
+* `startGroup` (常に `true` Teams で扱います)
 * `originator`
 * `correlationId`
 
@@ -492,8 +491,8 @@ Bot がユーザーにレシートを提供できるようにするカード。 
 
 Bot フレームワークリファレンス:
 
-* [レシートカードノード](https://docs.microsoft.com/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest)
-* [レシートカード C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.receiptcard?view=botbuilder-dotnet-3.0)
+* [レシートカードノード](https://docs.microsoft.com/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
+* [レシートカード C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.receiptcard?view=botbuilder-dotnet-3.0&preserve-view=true)
 
 ## <a name="signin-card"></a>サインインカード
 
@@ -512,8 +511,8 @@ Bot がユーザーのサインインを要求することを可能にするカ�
 
 Bot フレームワークリファレンス:
 
-* [サインインカードのノード](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest)
-* [サインインカード C#](/dotnet/api/microsoft.bot.connector.signincard?view=botbuilder-dotnet-3.0)
+* [サインインカードのノード](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
+* [サインインカード C#](/dotnet/api/microsoft.bot.connector.signincard?view=botbuilder-dotnet-3.0&preserve-view=true)
 
 ## <a name="thumbnail-card"></a>サムネイルカード
 
@@ -532,9 +531,9 @@ Bot フレームワークリファレンス:
 
 | プロパティ | 型  | 説明 |
 | --- | --- | --- |
-| title | リッチ テキスト  | カードのタイトル。 最大2行現在サポートされていない書式設定 |
-| サブタイトル | リッチ テキスト  | カードのサブタイトル。 最大2行現在サポートされていない書式設定 |
-| text | リッチ テキスト  | テキストは、サブタイトルのすぐ下に表示されます。書式設定オプションの[カード書式](~/task-modules-and-cards/cards/cards-format.md)を表示する |
+| title | リッチ テキスト  | カードのタイトル。 最大2行|
+| サブタイトル | リッチ テキスト  | カードのサブタイトル。 最大2行|
+| text | リッチ テキスト  | テキストは、サブタイトルのすぐ下に表示されます。書式設定オプションの [カード書式](~/task-modules-and-cards/cards/cards-format.md) を表示する |
 | images | 画像の配列 | カードの上部に表示される画像。 縦横比 1:1 (正方形) |
 | リモコン | Action オブジェクトの配列 | 現在のカードに適用できるアクションのセット。 最大6 |
 | 搭載 | Action オブジェクト | このアクションは、ユーザーがカード自体をタップしたときにアクティブになります。 |
@@ -587,8 +586,8 @@ Bot フレームワークリファレンス:
 
 Bot フレームワークリファレンス:
 
-* [サムネイルカードノード](https://docs.microsoft.com/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest)
-* [サムネイルカード C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.thumbnailcard?view=botbuilder-dotnet-3.0)
+* [サムネイルカードノード](https://docs.microsoft.com/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest&preserve-view=true)
+* [サムネイルカード C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.thumbnailcard?view=botbuilder-dotnet-3.0&preserve-view=true)
 
 ## <a name="card-collections"></a>カードコレクション
 
@@ -598,7 +597,7 @@ Bot フレームワークリファレンス:
 
 ## <a name="carousel-collection"></a>カルーセルコレクション
 
-[カルーセルのレイアウト](/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0)は、オプションで、関連付けられたアクションボタンを表示するカルーセルのカードを示しています。
+[カルーセルのレイアウト](/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0&preserve-view=true)は、オプションで、関連付けられたアクションボタンを表示するカルーセルのカードを示しています。
 
 ### <a name="support-for-carousel-collections"></a>カルーセルコレクションのサポート
 

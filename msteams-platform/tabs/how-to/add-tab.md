@@ -1,20 +1,23 @@
 ---
-title: カスタムタブを使用して Teams アプリを拡張する
+title: Teams のタブを作成する
 author: laujan
-description: アプリ Studio または手動で Microsoft Teams のタブを作成する方法について説明します。
+description: Teams タブを作成する方法について説明します。
 keywords: 構成可能な teams タブグループチャネル
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 78077a19c8597826ca6d10a7c1c6240fae3f3fbd
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 8718bdfe075f8187e41b1b7493ea561498b1c8b7
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48209719"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452758"
 ---
-# <a name="extend-your-teams-app-with-a-custom-tab"></a>カスタムタブを使用して Teams アプリを拡張する
+# <a name="create-a-tab-for-microsoft-teams"></a>Microsoft Teams のタブを作成する
 
-カスタムタブを使用すると、チャネル、グループチャット、および個人ユーザーに対してホストする web コンテンツを提供できます。 高レベルでは、次の手順を実行してタブを作成する必要があります。
+> [!TIP]
+> 開始するためのより迅速な方法をお探しですか。 Microsoft Teams ツールキットを使用して、 [個人](../../build-your-first-app/build-personal-tab.md) または [ [チャネルとグループ](../../build-your-first-app/build-channel-tab.md) ] タブを作成します。
+
+タブを使用すると、チャネル、グループチャット、および個人ユーザーに対してホストする web コンテンツを提供できます。 高レベルでは、次の手順を実行してタブを作成する必要があります。
 
 1. 開発環境を準備する。
 1. ページを作成します。
@@ -81,9 +84,9 @@ ms.locfileid: "48209719"
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`entityId`|String|64 文字|✔|タブに表示されるエンティティの一意識別子。|
-|`name`|文字列|128文字|✔|チャネルインターフェイスのタブの表示名。|
-|`contentUrl`|文字列|2048 文字|✔|Teams キャンバスに表示されるエンティティ UI をポイントする https://URL。|
-|`websiteUrl`|文字列|2048 文字||ユーザーがブラウザーで表示をポイントしたかどうかを示す https://URL。|
+|`name`|String|128文字|✔|チャネルインターフェイスのタブの表示名。|
+|`contentUrl`|String|2048 文字|✔|Teams キャンバスに表示されるエンティティ UI をポイントする https://URL。|
+|`websiteUrl`|String|2048 文字||ユーザーがブラウザーで表示をポイントしたかどうかを示す https://URL。|
 |`scopes`|列挙型の配列|1-d|✔|静的タブでは、スコープのみがサポート `personal` されます。つまり、個人用アプリの一部としてのみプロビジョニングできます。|
 
 #### <a name="simple-personal-tab-manifest-example"></a>シンプルな個人用タブマニフェストの例
@@ -109,7 +112,7 @@ ms.locfileid: "48209719"
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`configurationUrl`|文字列|2048 文字|✔|Https://URL を構成するページ。|
+|`configurationUrl`|String|2048 文字|✔|Https://URL を構成するページ。|
 |`canUpdateConfiguration`|ブール値|||作成後にタブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 限り `true`|
 |`scopes`|列挙型の配列|1-d|✔|構成可能なタブでは、および範囲のみがサポートさ `team` `groupchat` れています。 |
 

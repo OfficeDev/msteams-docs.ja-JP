@@ -1,20 +1,20 @@
 ---
-title: "\"Hello, World!\" をビルドして実行します。 Teams アプリ"
+title: 作業の開始-最初のアプリをビルドして実行する
 author: heath-hamilton
-description: 最初の Microsoft Teams アプリ、つまり "Hello, World!" を表示する個人用タブを作成して実行します。
+description: "\"Hello, World!\" を表示する Microsoft Teams アプリをすばやく作成する Microsoft Teams ツールキットを使用したメッセージ。"
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: quickstart
-ms.openlocfilehash: 244a899670f71b9446c8c3d3e404c9fd7c7b510c
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: 20c9eee14649cda23e1d682940f489e78cba24b9
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237833"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452646"
 ---
-# <a name="build-a-hello-world-teams-app"></a>"Hello, World!" を作成します。 Teams アプリ
+# <a name="build-and-run-your-first-microsoft-teams-app"></a>最初の Microsoft Teams アプリを構築して実行する
 
-"Hello, World!" と表示される個人タブを作成することによって、Microsoft Teams プラットフォーム開発に直接ジャンプできます。
+"Hello, World!" と表示される個人タブを作成することによって、Microsoft Teams 開発に直接ジャンプできます。
 
 ## <a name="1-create-your-app-project"></a>1. アプリプロジェクトを作成します。
 
@@ -24,14 +24,14 @@ ms.locfileid: "48237833"
 :::image type="content" source="../assets/images/build-your-first-app/create-teams-app.png" alt-text="Visual Studio Code Teams ツールキットを使用して新しいアプリを作成する方法を示すスクリーンショット。":::
 1. Teams アプリの名前を入力します。 (これは、アプリの既定の名前であり、ローカルコンピューター上のアプリプロジェクトディレクトリの名前でもあります。)
 1. [ **機能の追加** ] 画面で、[ **タブ]** 、[ **次へ**] の順に選択します。
-:::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="Visual Studio Code Teams Toolkit を使用してアプリプロジェクトを構成する方法を示すスクリーンショット。":::
+:::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="Visual Studio Code Teams ツールキットを使用して新しいアプリを作成する方法を示すスクリーンショット。":::
 1. [ **個人用] タブ** のオプションを確認し、画面の下部にある [ **完了** ] を選択してプロジェクトを構成します。
 
 ## <a name="2-understand-important-app-project-components"></a>2. 重要なアプリプロジェクトコンポーネントを理解する
 
 ツールキットによってプロジェクトが構成されると、Teams 用の基本的な個人用タブを作成するためのコンポーネントが用意されます。 プロジェクトのディレクトリとファイルは、Visual Studio Code のエクスプローラー領域に表示されます。
 
-:::image type="content" source="../assets/images/build-your-first-app/app-project-files.png" alt-text="Visual Studio Code の [個人用] タブのアプリプロジェクトファイルを示すスクリーンショット。":::
+:::image type="content" source="../assets/images/build-your-first-app/app-project-files.png" alt-text="Visual Studio Code Teams ツールキットを使用して新しいアプリを作成する方法を示すスクリーンショット。":::
 
 Teams アプリ開発者が扱う主要なファイルのいくつかについて理解しておきましょう。
 
@@ -51,7 +51,7 @@ Teams アプリ開発者が扱う主要なファイルのいくつかについ�
 
 アプリパッケージファイルの詳細については、以下を参照してください。
 
-|名前|種類|Size|マニフェストの場所|ツールキットのファイル名|
+|名前|型|Size|マニフェストの場所|ツールキットのファイル名|
 |---|---|:---:|:---:|-----|
 |**アプリマニフェスト**|`.json`| — | — |`.publish/manifest.json`|
 |**色のロゴ**|`.png`|192 &times; 192 ピクセル|`icon.color`|`.publish/color.png`|
@@ -66,7 +66,7 @@ Teams アプリ開発者が扱う主要なファイルのいくつかについ�
 1. ターミナルで、アプリプロジェクトのルートディレクトリに移動し、を実行 `npm install` します。
 1. `npm start` を実行します。 完了すると、**コンパイルに成功**しました。 ターミナルのメッセージ。
 1. ブラウザーを開き、に移動して、 `https://localhost:3000` **Microsoft Teams タブ**という名前の空の web ページを表示します。(ページ上にコンテンツが表示されないことを心配しないでください)。<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/local-host-tab.png" alt-text="実行中のアプリをブラウザーで表示するときの外観を示すスクリーンショット。":::
+   :::image type="content" source="../assets/images/build-your-first-app/local-host-tab.png" alt-text="Visual Studio Code Teams ツールキットを使用して新しいアプリを作成する方法を示すスクリーンショット。":::
 
 ## <a name="4-set-up-a-secure-tunnel-to-your-app"></a>4. アプリへのセキュリティで保護されたトンネルをセットアップする
 
@@ -76,7 +76,7 @@ Teams アプリ開発者が扱う主要なファイルのいくつかについ�
 
 1. 新しいターミナルを開き、を実行 `ngrok http 3000` します。
 1. 提供されている HTTPS URL をコピーします (次の例を参照してください)。
-:::image type="content" source="../assets/images/build-your-first-app/ngrok-running.png" alt-text="Ngrok を実行しているターミナルを示すスクリーンショット。":::
+:::image type="content" source="../assets/images/build-your-first-app/ngrok-running.png" alt-text="Visual Studio Code Teams ツールキットを使用して新しいアプリを作成する方法を示すスクリーンショット。":::
 1. ディレクトリで `.publish` 、を開き `Development.env` ます。
 1. 値を `baseUrl0` コピーした URL に置き換えます。 (たとえば、 `baseUrl0=http://localhost:3000` をに変更 `baseUrl0=https://85528b2b3ba5.ngrok.io` します)。
 
@@ -92,9 +92,9 @@ Teams アプリ開発者が扱う主要なファイルのいくつかについ�
 1. アプリのサイドロードを許可するアカウントを使用して、Teams クライアントにログインします。 (あるかどうかがわからない場合は、 [Teams 開発アカウント](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account)の取得についてを参照してください)。
 1. [ **アプリ**] を選択し、[ **カスタムアプリのアップロード**] を選択します。
 1. アプリプロジェクトフォルダーに移動し `.publish` 、を選択し `Development.zip` ます。 インストールモーダルが表示されます。
-:::image type="content" source="../assets/images/build-your-first-app/add-teams-app.png" alt-text="Teams アプリのインストールモーダルの例を示すスクリーンショット。":::
+:::image type="content" source="../assets/images/build-your-first-app/add-teams-app.png" alt-text="Visual Studio Code Teams ツールキットを使用して新しいアプリを作成する方法を示すスクリーンショット。":::
 1. [ **追加** ] を選択してアプリをインストールします。
-:::image type="content" source="../assets/images/build-your-first-app/tab-running.png" alt-text="Teams で実行されている ' Hello, World! ' personal tab アプリの例を示すスクリーンショット。":::
+:::image type="content" source="../assets/images/build-your-first-app/tab-running.png" alt-text="Visual Studio Code Teams ツールキットを使用して新しいアプリを作成する方法を示すスクリーンショット。":::
 
 おめでとうございます🎉 アプリは Teams で実行されています。
 
@@ -105,6 +105,6 @@ Teams アプリ開発者が扱う主要なファイルのいくつかについ�
 > [!div class="nextstepaction"]
 > [[個人用] タブに追加する](../build-your-first-app/build-personal-tab.md)
 > [!div class="nextstepaction"]
-> [[チャネル] タブを作成する](../build-your-first-app/build-channel-tab.md)
+> [チャネルのタブを作成する](../build-your-first-app/build-channel-tab.md)
 > [!div class="nextstepaction"]
-> [Bot を構築する](../build-your-first-app/build-bot.md)
+> [Bot を作成する](../build-your-first-app/build-bot.md)

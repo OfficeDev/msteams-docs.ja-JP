@@ -1,18 +1,18 @@
 ---
-title: Teams の [個人] タブを構築する
+title: 作業の開始-個人用タブの作成
 author: heath-hamilton
-description: 最初の Microsoft Teams アプリ用に個人用タブを作成する方法について説明します。
+description: Microsoft Teams ツールキットを使用して、Microsoft Teams の [個人] タブをすばやく作成できます。
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: a86c9e1e46b97c6b265bfa9ad2f618655c524ee4
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: 7c12c87fff5126662f9473ecb0c5838b61f5faf2
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237805"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452744"
 ---
-# <a name="build-a-teams-personal-tab"></a>Teams の [個人] タブを構築する
+# <a name="build-a-personal-tab-for-microsoft-teams"></a>Microsoft Teams 用の個人用タブを作成する
 
 タブは、Teams に web ページを埋め込むことで、アプリ内にコンテンツを表示する簡単な方法です。
 
@@ -181,7 +181,7 @@ if (isTheme === "default") {
 
 Teams のタブを確認します。 外観は、暗いテーマに密接に一致する必要があります。
 
-:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="静的コンテンツビューを含む [個人用] タブのスクリーンショット。":::
+:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="静的コンテンツを含む個人用タブのスクリーンショット。":::
 
 ## <a name="well-done"></a>よくやりましたね
 
@@ -201,4 +201,4 @@ Teams のタブを確認します。 外観は、暗いテーマに密接に一�
 個人用のタブを作成する方法を理解していること。 チームチャネルとチャットのタブを構築するために必要な作業を見てみましょう。
 
 > [!div class="nextstepaction"]
-> [[チャネル] タブを作成する](../build-your-first-app/build-channel-tab.md)
+> [チャネルのタブを作成する](../build-your-first-app/build-channel-tab.md)

@@ -1,17 +1,20 @@
 ---
-title: メッセージングの拡張機能を作成する
+title: Teams のメッセージング拡張機能を作成する
 author: clearab
-description: Microsoft Teams アプリのメッセージング拡張機能を作成する方法について説明します。
+description: Teams メッセージング拡張機能を作成する方法について説明します。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ca03469b04c9696b26db3512790e03be26ca63af
-ms.sourcegitcommit: b01986739a05c65094618fbe76aeb53d038b1c74
+ms.openlocfilehash: 03fe4463f7e7af0874af4ce4f487f1a01fdd5fe6
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48178310"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452597"
 ---
-# <a name="create-a-messaging-extension-in-microsoft-teams"></a>Microsoft Teams でメッセージング拡張機能を作成する
+# <a name="create-a-messaging-extension-for-microsoft-teams"></a>Microsoft Teams のメッセージング拡張機能を作成する
+
+> [!TIP]
+> 開始するためのより迅速な方法をお探しですか。 Microsoft Teams ツールキットを使用して、 [メッセージング拡張機能](../../build-your-first-app/build-messaging-extension.md) を作成します。
 
 高レベルでは、次の手順を実行してメッセージング拡張機能を作成する必要があります。
 
@@ -80,9 +83,9 @@ Web サービスを作成し、アプリパッケージを作成し、web サー
 
 | プロパティ名 | 用途 | 必須 |
 |---|---|---|
-| `botId` | Bot Framework に登録された、ボット用の一意の Microsoft アプリ ID。 これは通常、Teams アプリ全体の ID と同じである必要があります。 | はい |
+| `botId` | Bot Framework に登録された、ボット用の一意の Microsoft アプリ ID。 これは通常、Teams アプリ全体の ID と同じである必要があります。 | 必要 |
 | `canUpdateConfiguration` | **設定**メニュー項目を有効にします。 | いいえ |
-| `commands` | このメッセージング拡張機能がサポートするコマンドの配列です。 コマンドは10個に制限されています。 | はい |
+| `commands` | このメッセージング拡張機能がサポートするコマンドの配列です。 コマンドは10個に制限されています。 | 必要 |
 
 #### <a name="define-your-commands"></a>コマンドを定義する
 
@@ -128,9 +131,9 @@ Web サービスを作成し、アプリパッケージを作成し、web サー
 
 1. **Location**。 メッセージング拡張機能は、会議チャットの [メッセージの作成] 領域、コマンドボックス、または @mentioned から呼び出すことができます。
 
-1. **メタデータ**。 メッセージング拡張機能が呼び出されると、との間でユーザーとテナントを識別できるようになり `userId` `tenantId` ます。 は、 `meetingId` オブジェクトの一部として見つけることができ `channelData` ます。 アプリでは、および API 要求にを使用して、 `userId` `meetingId`  ユーザーの役割を取得でき `GetParticipant` ます。
+1. **メタデータ**。 メッセージング拡張機能が呼び出されると、との間でユーザーとテナントを識別できるようになり `userId` `tenantId` ます。 `meetingId` は、`channelData` オブジェクトに含まれています。 アプリでは、および API 要求にを使用して、 `userId` `meetingId`  ユーザーの役割を取得でき `GetParticipant` ます。
 
-1. **コマンドの種類**。 メッセージ拡張機能が [アクションベースのコマンド](../../messaging-extensions/what-are-messaging-extensions.md#action-commands)を使用している場合は、タブ [シングルサインオン](../../tabs/how-to/authentication/auth-aad-sso.md) 認証に従う必要があります。 
+1. **コマンドの種類**。 メッセージ拡張機能が [アクションベースのコマンド](../../messaging-extensions/what-are-messaging-extensions.md#action-commands)を使用している場合は、タブ [シングルサインオン](../../tabs/how-to/authentication/auth-aad-sso.md) 認証に従う必要があります。
 
 1. **ユーザーの利便性**。 会議チャット中に呼び出されるメッセージング拡張機能のエンドユーザーの環境を決定する必要があります。
 

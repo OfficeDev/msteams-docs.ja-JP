@@ -1,18 +1,18 @@
 ---
-title: Teams bot を構築する
+title: 作業の開始-bot をビルドする
 author: heath-hamilton
-description: 最初の Microsoft Teams アプリの bot を構築する方法について説明します。
+description: Microsoft Teams ツールキットを使用して、Microsoft Teams bot をすばやく作成できます。
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: cc004bd0d86eca1e4e63c2a96a72f9c11d2269db
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: 78fe535137864a72dcacf20857572599a7c2409a
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48237826"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452793"
 ---
-# <a name="build-a-teams-bot"></a>Teams bot を構築する
+# <a name="build-a-bot-for-microsoft-teams"></a>Microsoft Teams の bot を構築する
 
 このチュートリアルでは、基本的な *bot* アプリを構築します。 Bot は Teams ユーザーと web サービス間の仲介者として機能します。 ユーザーは bot とチャットして、サービスによって実行された情報をすばやく取得したり、ワークフローやタスクを開始したりできます。
 
@@ -136,7 +136,7 @@ Bot に送信されるユーザーメッセージ (つまり、要求) を受信
 1. [ **ボット management > 既存の bot 登録** ] に移動し、セットアップ時に作成した bot を選択します。
 1. **Bot エンドポイントアドレス**フィールドに、bot (値) をホストしているローカル web サーバーを入力 `baseUrl10` し、 `/api/messages` それに追加します。
 
-    :::image type="content" source="../assets/images/build-your-first-app/bot-config-endpoint-url.png" alt-text="Teams ツールキットで bot エンドポイント URL を構成できる場所を示す図。":::
+    :::image type="content" source="../assets/images/build-your-first-app/bot-config-endpoint-url.png" alt-text="Teams ツールキットで、Microsoft 365 アカウントにログインして新しい bot を作成する方法を示す図。":::
 
 Bot は Teams のメッセージに応答できるようになります。
 
@@ -169,12 +169,12 @@ Bot を実行している場合は、Teams にインストールできます。
 
 1. Teams で、左側にある [ **その他**] を選択し :::image type="icon" source="../assets/icons/teams-client-more.png"::: ます。
 1. サイドロードの bot を見つけて選択します。<br/>
-   :::image type="content" source="../assets/images/build-your-first-app/bot-teams-access.png" alt-text="Teams で bot にアクセスする場所を示す図。":::
+   :::image type="content" source="../assets/images/build-your-first-app/bot-teams-access.png" alt-text="Teams ツールキットで、Microsoft 365 アカウントにログインして新しい bot を作成する方法を示す図。":::
 1. [新規作成] ボックスで、 `Hello` メッセージを送信します。
 
 Bot は次のようなメッセージに返信します。
 
-:::image type="content" source="../assets/images/build-your-first-app/contoso-chatbot.png" alt-text="ユーザーが Teams の bot に "Hello" と言って、応答を取得することを示すスクリーンショット。":::
+:::image type="content" source="../assets/images/build-your-first-app/contoso-chatbot.png" alt-text="Teams ツールキットで、Microsoft 365 アカウントにログインして新しい bot を作成する方法を示す図。":::
 
 ## <a name="well-done"></a>よくやりましたね
 

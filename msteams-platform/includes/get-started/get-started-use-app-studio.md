@@ -93,7 +93,7 @@ Bot リストでインポートされた*bot*の横にある [*削除*] ボタ�
 
 <img  width="450px" alt="Adding a bot dialog" src="~/assets/images/get-started/Setupbot.png"/>
 
-のような bot 名を追加 `Contoso bot` し、[ *範囲*] の下にあるボタンをクリックします。
+のような bot 名を追加 `Contoso bot` し、[ *scope*] の下にある3つのボタンすべてを選択します。
 
 [ *ボットの作成* ] を選択してダイアログを終了します。 アプリ Studio は、ボットを Microsoft に登録するのに時間を費やして、bot リストに新しい bot を表示する必要があります。 これで、メモ帳でテキストファイルを開いて、新しい bot id をコピーして貼り付けるのはよい時間になります。 この id は後で必要になります。
 

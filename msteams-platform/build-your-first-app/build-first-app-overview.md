@@ -1,18 +1,18 @@
 ---
-title: 最初の Teams アプリの作成を始める
+title: はじめにアプリの概要と前提条件を最初に作成する
 author: heath-hamilton
-description: 最初の Microsoft Teams アプリを構築するための概要と前提条件
+description: Microsoft Teams アプリ開発を開始する方法と、環境をセットアップする方法について説明します。
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 10/09/2020
 ms.topic: quickstart
-ms.openlocfilehash: 14776b147309877212f710677ae5941238cf5c0d
-ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
+ms.openlocfilehash: c158b7ad925e05e4056769536f5e0d212763942a
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "48397695"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452604"
 ---
-# <a name="build-your-first-teams-app-overview"></a>最初の Teams アプリの概要を作成する
+# <a name="build-your-first-microsoft-teams-app-overview"></a>最初の Microsoft Teams アプリの概要を作成する
 
 最初の **アプリ** のレッスンを構築するには、基本的な Teams アプリを作成します。 各チュートリアルでは、一般的なツール、基本概念、および高度な機能について紹介しながら、簡単な現実世界の Teams アプリを構築する方法について順を追って説明します。
 

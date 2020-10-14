@@ -2,12 +2,12 @@
 title: Microsoft Teams 開発者向けサポートとフィードバック
 description: Microsoft Teams 製品チームは、フィードバックとサポートのチャネルごとに開発者コミュニティに応答します。
 keywords: teams フィードバック開発者の質問問題連絡サポートリクエストバグ投稿コミュニティ
-ms.openlocfilehash: d0837cb3ef27290483c9df0ebde6aeca81d4a797
-ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
+ms.openlocfilehash: 4caf17387d029327562ef4c4f86389f67f4f3841
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "48397674"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452618"
 ---
 # <a name="microsoft-teams-developer-community-channels"></a>Microsoft Teams 開発者コミュニティチャネル
 
@@ -16,7 +16,7 @@ Microsoft Teams 製品チームは、フィードバックとサポートのチ�
 
 |            **サポートの種類**            |               **Contact**                                                                                  |
 |-----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|         **コミュニティ サポート**          | 1. 質問は、タグを使用して、[スタックオーバーフロー](https://stackoverflow.com/questions/tagged/microsoft-teams)に投稿できます。 `microsoft-teams` スタックオーバーフローには、説明的なタイトル、完全で簡潔な問題の説明、問題を再現するための十分な詳細情報などのガイドラインがありますのでご注意ください。 機能のリクエストや、あまりにも広範な質問は、ここでは扱いません。新規ユーザーは、詳細について [Stack Overflow ヘルプ センター](https://stackoverflow.com/help/how-to-ask)にお問い合わせください。                                                                                                                                                                        <br/>2. タグを使用して[、Microsoft Q&](/answers/topics/office-teams-app-dev.html)に質問を投稿することもできます。 `office-teams-app-dev` スタックオーバーフローが大好きです。 引き続きお客様に質問するお客様に対してサポートを行います。 ただし、スタックオーバーフローには、コミュニティおよび [Microsoft Q&](/answers/topics/office-teams-app-dev.html) に適切な質問に関する特定の条件があります。これについては、より多くの情報があります。                                                                                                    |
+|         **コミュニティ サポート**          |<ol><li> [](https://stackoverflow.com/questions/tagged/microsoft-teams) タグを使用して、`microsoft-teams` に質問を投稿することができます。 なお、Stack Overflow には、ガイドライン (わかりやすいタイトル、正確で簡潔な問題の記述、問題を再現するための十分な詳細など) があります。 機能の要求や、あまりにも広範な質問は、ここでは扱いません。新規ユーザーは、詳細について [Stack Overflow ヘルプ センター](https://stackoverflow.com/help/how-to-ask)にお問い合わせください。</li>                                                                                                                                                                       <li> また、タグを使用して [Microsoft Q&](/answers/topics/office-teams-app-dev.html) に質問を投稿することもでき `office-teams-app-dev` ます。 スタックオーバーフローが大好きです。 引き続きお客様に質問するお客様に対してサポートを行います。 ただし、スタックオーバーフローには、コミュニティおよび [Microsoft Q&](/answers/topics/office-teams-app-dev.html) に適切な質問に関する特定の条件があります。これについては、より多くの情報があります。  </li> </ol>                                                                                                  |
 |        **Tab の SDK の問題/提案**        |  [Microsoft Teams JavaScript ライブラリ](https://github.com/OfficeDev/microsoft-teams-library-js/issues)の SDK リポジトリに問題と機能の要求を提出します。 タグを使用して [スタックオーバーフロー](https://stackoverflow.com/questions/tagged/microsoft-teams) で SDK に関する質問を投稿でき `microsoft-teams` ます。                                                                                                                                                                                                                       |
 |            **Bot & メッセージ拡張 SDK の問題/提案**             |       Bot の言語 ([C#](https://github.com/Microsoft/botbuilder-dotnet/)、 [Javascript](https://github.com/Microsoft/botbuilder-js)、または [Python](https://github.com/Microsoft/botbuilder-python)) について、問題と機能の要求を SDK リポジトリに提出します。 タグを使用して [スタックオーバーフロー](https://stackoverflow.com/questions/tagged/botframework%20microsoft-teams) で SDK に関する質問を投稿でき `botframework & microsoft-teams` ます。                                                                                            |
 | **サンプル** |             サンプルに関する問題を、それぞれの [Microsoft Teams サンプル](/microsoftteams/platform/tutorials/code-samples) リポジトリに送信します。                                                                                                                                                                                            |

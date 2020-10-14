@@ -1,21 +1,21 @@
 ---
-title: Microsoft Teams を会議のタブで設計する
+title: 会議中のタブを設計する
 author: heath-hamilton
-description: Microsoft Teams の [会議中] タブを設計するためのガイダンスとベストプラクティスについて説明します。
+description: Microsoft Teams の [会議中] タブを効果的に設計する方法について説明します。
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 4f75591468de41b5d4d3ac62a25b93412b3fccaa
-ms.sourcegitcommit: f9a2f5cedc9d30ef7a9cf78a47d01cfd277e150d
+ms.openlocfilehash: a5c4d0cc0d2c61f422ea9bc189f164d02b28aae0
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "48243340"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452660"
 ---
 # <a name="design-an-in-meeting-tab"></a>会議中のタブを設計する
 
 [会議中] タブは、会議中に共同作業を補強するためのキャンバスです。 [チーム] タブの機能に基づいて、参加者は共有ビューまたはロールベースのビューを使用して、会議ステージ外の専用の領域でアプリコンテンツを表示したり操作したりできます。
 
-## <a name="use-cases"></a>使用例
+## <a name="use-cases"></a>ユース ケース
 
 [会議中] タブを使用して、次のことを行うことができます。
 
@@ -40,7 +40,7 @@ ms.locfileid: "48243340"
 * **幅**: webview エリアの場合は280ピクセル。 Webview の左側と右側には、20ピクセルのパディングがあります。
 * **高さ**: タブの下端までの裁ち落とし。Webview エリアと tab ヘッダーの間には、20ピクセルのパディングがあります。
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-anatomy.png" alt-text="会議の拡張機能の UI を [会議] タブに示す図" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-anatomy.png" alt-text="例では、会議の開催者からの会議タブは、会議の開催者の視点から見ることができるようになります。" border="false":::
 
 1. **アプリアイコン**: [会議中] タブへのエントリポイントです。
 1. **ヘッダー**: タブ名を含みます。
@@ -62,13 +62,13 @@ ms.locfileid: "48243340"
 * スクロールした内容のみが表示されます (何も上または下にありません)。
 * Scrollbar は、webview コンテンツの一部です。
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll.png" alt-text="[会議中] タブでの webview コンテンツのスクロール方法を示す図。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll.png" alt-text="例では、会議の開催者からの会議タブは、会議の開催者の視点から見ることができるようになります。" border="false":::
 
 ### <a name="navigation"></a>ナビゲーション
 
 ナビゲーション層またはヘビーコンテンツがあるシナリオでは、ユーザーがセカンダリレイヤーに移動できるようにすることをお勧めします。 ユーザーは前のレイヤーに戻ることができる必要があります。
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav.png" alt-text="[会議中] タブでのセカンダリレイヤーへの移動方法を示す図" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav.png" alt-text="例では、会議の開催者からの会議タブは、会議の開催者の視点から見ることができるようになります。" border="false":::
 
 ## <a name="components"></a>コンポーネント
 
@@ -100,7 +100,7 @@ Dropdown | リストから1つ以上のオプションを選択します。 検�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-before-meeting.png" alt-text="会議の前と後に、会議内のタブのコンテンツが全画面のタブのように表示されることを示す図。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-before-meeting.png" alt-text="例では、会議の開催者からの会議タブは、会議の開催者の視点から見ることができるようになります。" border="false":::
 
 #### <a name="before-the-meeting"></a>会議の前
 
@@ -108,7 +108,7 @@ Dropdown | リストから1つ以上のオプションを選択します。 検�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-during-meeting.png" alt-text="会議中に [会議前] タブの内容が [会議中] タブにどのように縮小されるかを示す図。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-during-meeting.png" alt-text="例では、会議の開催者からの会議タブは、会議の開催者の視点から見ることができるようになります。" border="false":::
 
 #### <a name="during-the-meeting"></a>会議中
 
@@ -121,7 +121,7 @@ Dropdown | リストから1つ以上のオプションを選択します。 検�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-theming-do.png" alt-text="Teams 会議で使用される暗いテーマの [会議中] タブの設計方法を示す図。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-theming-do.png" alt-text="例では、会議の開催者からの会議タブは、会議の開催者の視点から見ることができるようになります。" border="false":::
 
 #### <a name="do-design-for-a-dark-theme"></a>Do: 暗いテーマのデザイン
 
@@ -129,7 +129,7 @@ Teams 会議は、ビジュアルおよび認知ノイズを軽減するため�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-theming-dont.png" alt-text="この図は、Teams の暗いテーマに向いていない色を使用しないことを示しています。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-theming-dont.png" alt-text="例では、会議の開催者からの会議タブは、会議の開催者の視点から見ることができるようになります。" border="false":::
 
 #### <a name="dont-use-unfamiliar-colors"></a>いいえ: 見慣れない色を使用する
 
@@ -142,7 +142,7 @@ Teams 会議は、ビジュアルおよび認知ノイズを軽減するため�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll-do.png" alt-text="[会議中] タブで垂直方向にスクロールできることを示す図" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll-do.png" alt-text="例では、会議の開催者からの会議タブは、会議の開催者の視点から見ることができるようになります。" border="false":::
 
 #### <a name="do-scroll-vertically"></a>Do: 上下にスクロール
 
@@ -150,7 +150,7 @@ Teams 会議は、ビジュアルおよび認知ノイズを軽減するため�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll-dont.png" alt-text="[会議中] タブで水平スクロールを許可しないことを示す図" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-scroll-dont.png" alt-text="例では、会議の開催者からの会議タブは、会議の開催者の視点から見ることができるようになります。" border="false":::
 
 #### <a name="dont-scroll-horizontally"></a>いいえ: 横方向にスクロール
 
@@ -163,7 +163,7 @@ Teams 会議は、ビジュアルおよび認知ノイズを軽減するため�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-layout-do.png" alt-text="[会議中] タブで推奨される単一列のレイアウトを示す図" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-layout-do.png" alt-text="例では、会議の開催者からの会議タブは、会議の開催者の視点から見ることができるようになります。" border="false":::
 
 #### <a name="do-single-columns"></a>Do: 単一列
 
@@ -171,7 +171,7 @@ Teams 会議は、ビジュアルおよび認知ノイズを軽減するため�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-layout-dont.png" alt-text="[会議中] タブの2列のレイアウトが最適でないことを示す図" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-layout-dont.png" alt-text="例では、会議の開催者からの会議タブは、会議の開催者の視点から見ることができるようになります。" border="false":::
 
 #### <a name="dont-multiple-columns"></a>いいえ: 複数列
 
@@ -184,7 +184,7 @@ Teams 会議は、ビジュアルおよび認知ノイズを軽減するため�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-do.png" alt-text="会議中のタブアプリに複数のナビゲーション層がある場合は、常に [戻る] ボタンを表示する図を示します。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-do.png" alt-text="例では、会議の開催者からの会議タブは、会議の開催者の視点から見ることができるようになります。" border="false":::
 
 #### <a name="do-have-a-back-button"></a>Do: [戻る] ボタンを用意する
 
@@ -192,7 +192,7 @@ Teams 会議は、ビジュアルおよび認知ノイズを軽減するため�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-dont.png" alt-text="ナビゲーション用に [会議中] タブにもう1つの [閉じる] ボタンを追加することによって、問題が発生する可能性があることを示す図。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-dont.png" alt-text="例では、会議の開催者からの会議タブは、会議の開催者の視点から見ることができるようになります。" border="false":::
 
 #### <a name="dont-include-another-close-button"></a>[しない]: 別の [閉じる] ボタンを含める
 
@@ -205,7 +205,7 @@ Teams 会議は、ビジュアルおよび認知ノイズを軽減するため�
    :::column span="":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-caution.png" alt-text="制限されたスペースがある場合に、[会議中] タブで modals (つまり、タスクモジュール) を使用するときに注意が必要なことを示す図" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-nav-caution.png" alt-text="例では、会議の開催者からの会議タブは、会議の開催者の視点から見ることができるようになります。" border="false":::
 
 #### <a name="caution-using-dialogs-in-a-narrow-space"></a>注意: 狭いスペースでのダイアログの使用
 

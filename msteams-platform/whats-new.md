@@ -2,12 +2,12 @@
 title: 新機能
 description: Microsoft Teams のすべての新しい開発者向け機能について説明します。
 keywords: teams 新しい最新情報
-ms.openlocfilehash: 87fa50bc374310c2fe5d8081b18268c6298fb515
-ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
+ms.openlocfilehash: b4e36ab00a784017cef20657e9ee548ed90f3efa
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "48397667"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452814"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -20,6 +20,7 @@ ms.locfileid: "48397667"
 
 | **Date** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+|9/30/2020|モバイルデバイスでのボットへのファイルの送信と受信がサポートされるようになりました。|[Bot を使用してファイルを送受信する](resources/bot-v3/bots-files.md)|
 |09/22/2020|新しい "Teams の使用を開始する" ガイダンス|[最初の Teams アプリの概要を作成する](build-your-first-app/build-first-app-overview.md)|
 |9/18/2020|会議中の Teams アプリのサポート (リリースプレビュー)|Teams 会議で Teams 会議と[アプリ](apps-in-teams-meetings/teams-apps-in-meetings.md)[用のアプリを作成する](apps-in-teams-meetings/create-apps-for-teams-meetings.md)|
 |8/19/2020|Microsoft Graph を使用した Teams メッセージのインポート|[Microsoft Graph を使用してサードパーティのプラットフォーム メッセージを Teams にインポートする](graph-api/import-messages/import-external-messages-to-teams.md)
