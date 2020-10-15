@@ -1,13 +1,13 @@
 ---
 title: Microsoft Teams アプリ承認提出プロセスガイダンス
 description: Microsoft Teams アプリストアに公開されたアプリを取得するための送信承認プロセスについて説明します。
-keywords: teams 発行ストア office publishing 発行 AppSource partner center アカウントの確認
-ms.openlocfilehash: caf7a433158aaf79184d7247b95b5786b61de31f
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+keywords: teams 発行ストア office publishing 発行 AppSource partner center アカウント検証アプリアカウントが対象として公開されていません
+ms.openlocfilehash: 6cc38e29d02935cf023bb26d3a317554493b0fe2
+ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279691"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "48465930"
 ---
 # <a name="submit-your-app-to-appsource"></a>アプリを AppSource に提出する
 
@@ -76,6 +76,11 @@ ms.locfileid: "48279691"
 アカウント検証プロセスの間に、各必要な手順の状態 (電子メールの所有権、雇用の確認、およびビジネスの確認) が表示されます。 検証プロセスが正常に完了すると、プロファイルページの登録の検証状態が "保留" から "承認済み" に変わり、プロセスの手順は表示されなくなります。
 
 ![パートナーセンターの検証エラー](../../../assets/images/partner-center-acct-verification-error.png)
+
+## <a name="what-is-verified-in-partner-center-account-verification-process-and-how-to-respond"></a>パートナーセンターのアカウント検証プロセスと応答の確認方法
+3つの検証領域には、電子メールの所有権、雇用、ビジネスがあります。 主な連絡先 (グローバル管理者またはアカウント管理者) で [ある場合は](/partner-center/verification-responses#what-is-verified-and-how-to-respond) 、パートナープロファイルに移動して検証の状態を監視し、進行状況を追跡することをお勧めします。
+
+検証プロセスが完了すると、プロファイルページの登録の検証状態が [ *保留中* ] から [ *承認済み* ] に変更され、そのページに表示されている状態のプロセスステップが非表示になります。 プライマリ連絡先は、確認が完了した後、数営業日以内に Microsoft からの電子メールを受け取ります。
 
 ## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-in-partner-center-how-should-i-proceed"></a>自分のアカウントの確認状態は、パートナーセンターの電子メールの所有権を超えていません。 続行するにはどうすればよいですか?
 

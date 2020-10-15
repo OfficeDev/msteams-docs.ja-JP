@@ -1,18 +1,21 @@
 ---
-title: Microsoft Teams 用にボットを作成する
+title: Teams 用にボットを作成する
 author: clearab
-description: アプリスタジオ、Yeoman Generatorおよびその他のツールを使用して Microsoft Teams の bot を作成する方法について説明します。
+description: Teams 用ボットを作成する方法について説明します。
 ms.topic: conceptual
 localization_priority: Priority
 ms.author: anclear
-ms.openlocfilehash: 03196c32e5e1a4b2714a4c916a71c80fc10a5edc
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 86ef162ceee07b1f66992d6943b22336d717c9f7
+ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48209831"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "48452800"
 ---
 # <a name="create-a-bot-for-microsoft-teams"></a>Microsoft Teams 用にボットを作成する
+
+> [!TIP]
+> すばやく開始する方法をお探しですか? Microsoft Teams のツールキットを使用して[ボット](../../build-your-first-app/build-bot.md)を作成する。
 
 会話ボットを作成するには、次の手順を実行する必要があります。
 

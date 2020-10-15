@@ -5,13 +5,13 @@ localization_priority: Normal
 author: laujan
 ms.author: lajanuar
 ms.topic: Overview
-keywords: teams 余裕期間インポートメッセージ api グラフ microsoft は移行の投稿を移行する
-ms.openlocfilehash: 0e0aa96373d29f07893456adf54986ec23bdec3c
-ms.sourcegitcommit: 02ab2cb7820dc8665bb4ec6a1a40c3b8b8f29d66
+keywords: teams インポートメッセージ api graph microsoft は移行の投稿を移行する
+ms.openlocfilehash: 0f53e27ec849e18be49f233a754658587343f68b
+ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "47340950"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "48465909"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Microsoft Graph を使用してサードパーティのプラットフォーム メッセージを Teams にインポートする
 
@@ -36,8 +36,8 @@ Microsoft Graph を使用すると、ユーザーの既存のメッセージ履�
 
 ✔では、サードパーティのデータを確認して、移行対象を決定します。  
 ✔サードパーティのチャットシステムから選択されたデータを抽出します。  
+✔、サードパーティのチャット構造を Teams 構造にマップします。  
 ✔、移行に必要な形式にインポートデータを変換します。  
-✔、サードパーティのチャット構造を Teams 構造にマップします。
 
 ### <a name="set-up-your-office-365-tenant"></a>Office 365 テナントのセットアップ
 
@@ -48,17 +48,17 @@ Microsoft Graph を使用すると、ユーザーの既存のメッセージ履�
 
 既存のデータは移行されているため、移行プロセス中の元のメッセージのタイムスタンプを維持し、メッセージングの動作を防ぐために、ユーザーの既存のメッセージフローを Teams に再作成するための鍵となります。 これは次のようにして実現されます。
 
-1. チームリソースプロパティを使用して、タイムスタンプを持つ[新しいチームを作成](/graph/api/team-post?view=graph-rest-beta&tabs=http)し `createdDateTime` ます。  
+> チームリソースプロパティを使用して、タイムスタンプを持つ[新しいチームを作成](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true)し `createdDateTime` ます。 `migration mode`移行プロセスが完了するまで、チーム内のほとんどのアクティビティからのユーザーを表示する特別な状態で、新しいチームをに配置します。 `teamCreationMode` `migration` 移行のために作成される新しいチームを明示的に識別するために、POST 要求に値のインスタンス属性を含めます。  
 
-1. `migration mode`移行プロセスが完了するまで、チーム内のほとんどのアクティビティからのユーザーを表示する特別な状態で、新しいチームをに配置します。 `teamCreationMode` `migration` 移行のために作成される新しいチームを明示的に識別するために、POST 要求に値のインスタンス属性を含めます。  
+> **注**: フィールドは、 `createdDateTime` 移行されたチームまたはチャネルのインスタンスに対してのみ設定されます。
 
 <!-- markdownlint-disable MD001 -->
 
-#### <a name="permissions"></a>アクセス許可
+#### <a name="permissions"></a>権限
 
 |ScopeName|DisplayName|説明|型|管理者の同意|対象となるエンティティ/Api|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|Microsoft Teams への移行を管理する|Microsoft Teams への移行のためのリソースの作成、管理|**アプリケーション専用**|**はい**|`POST /teams`|
+|`Teamwork.Migrate.All`|Microsoft Teams への移行の管理|Microsoft Teams への移行のためのリソースの作成、管理|**アプリケーション専用**|**はい**|`POST /teams`|
 
 #### <a name="request-create-a-team-in-migration-state"></a>要求 (移行状態でチームを作成する)
 
@@ -70,8 +70,8 @@ Content-Type: application/json
   "@microsoft.graph.teamCreationMode": "migration",
   "template@odata.bind": "https://graph.microsoft.com/beta/teamsTemplates('standard')",
   "displayName": "My Sample Team",
-  "description": "My Sample Team’s Description",
-  "createdDateTime": "2020-03-14T11:22:17.067Z"
+  "description": "My Sample Team’s Description"
+  "createdDateTime": "2020-03-14T11:22:17.043Z"
 }
 ```
 
@@ -94,17 +94,15 @@ Content-Location: /teams/{teamId}
 
 ## <a name="step-two-create-a-channel"></a>手順 2: チャネルを作成する
 
-インポートされたメッセージのチャネルの作成は、「チームを作成する」シナリオに似ています。 
+インポートされたメッセージのチャネルの作成は、「チームを作成する」シナリオに似ています。
 
-1. Channel リソースプロパティを使用して、タイムスタンプがある[新しいチャネルを作成](/graph/api/channel-post?view=graph-rest-beta&tabs=http)し `createdDateTime` ます。
-
-1. 新しいチャネルを `migration mode` 、移行プロセスが完了するまで、チャネル内のほとんどのチャットアクティビティからのユーザーを示す特別な状態で、その新しいチャネルを配置します。  `channelCreationMode` `migration` 移行のために作成される新しいチームを明示的に識別するために、POST 要求に値のインスタンス属性を含めます。  
+> Channel リソースプロパティを使用して、タイムスタンプがある[新しいチャネルを作成](/graph/api/channel-post?view=graph-rest-beta&tabs=http&preserve-view=true)し `createdDateTime` ます。 新しいチャネルを `migration mode` 、移行プロセスが完了するまで、チャネル内のほとんどのチャットアクティビティからのユーザーを示す特別な状態で、その新しいチャネルを配置します。  `channelCreationMode` `migration` 移行のために作成される新しいチームを明示的に識別するために、POST 要求に値のインスタンス属性を含めます。  
 <!-- markdownlint-disable MD024 -->
-#### <a name="permissions"></a>アクセス許可
+#### <a name="permissions"></a>権限
 
 |ScopeName|DisplayName|説明|型|管理者の同意|対象となるエンティティ/Api|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|Microsoft Teams への移行を管理する|Microsoft Teams への移行のためのリソースの作成、管理|**アプリケーション専用**|**はい**|`POST /teams`|
+|`Teamwork.Migrate.All`|Microsoft Teams への移行の管理|Microsoft Teams への移行のためのリソースの作成、管理|**アプリケーション専用**|**はい**|`POST /teams`|
 
 #### <a name="request-create-a-channel-in-migration-state"></a>要求 (移行状態でチャネルを作成する)
 
@@ -117,7 +115,7 @@ Content-Type: application/json
   "displayName": "Architecture Discussion",
   "description": "This channel is where we debate all future architecture plans",
   "membershipType": "standard",
-  "createdDateTime": "2020-03-14T11:22:17.067Z"
+  "createdDateTime": "2020-03-14T11:22:17.047Z"
 }
 ```
 
@@ -125,11 +123,21 @@ Content-Type: application/json
 
 ```http
 HTTP/1.1 202 Accepted
-Location: /teams/{teamId}/channels/{channelId}/operations/{operationId}
-Content-Location: /teams/{teamId}/channels/{channelId}
-```
 
-#### <a name="error-message"></a>エラー メッセージ
+{
+   "@odata.context":"https://canary.graph.microsoft.com/testprodbetateamsgraphsvcncus/$metadata#teams('9cc6d6ab-07d8-4d14-bc2b-7db8995d6d23')/channels/$entity",
+   "id":"19:e90f6814ce674072a4126206e7de485e@thread.tacv2",
+   "createdDateTime":null,
+   "displayName":"Architecture Discussion",
+   "description":"This channel is where we debate all future architecture plans",
+   "isFavoriteByDefault":null,
+   "email":null,
+   "webUrl":null,
+   "membershipType":null,
+   "moderationSettings":null
+}
+
+#### Error message
 
 ```http
 400 Bad Request
@@ -140,7 +148,10 @@ Content-Location: /teams/{teamId}/channels/{channelId}
 
 ## <a name="step-three-import-messages"></a>手順 3: メッセージをインポートする
 
-チームとチャネルを作成したら、 `createdDateTime`  要求本文のキーとキーを使用して、タイムラインメッセージの送信を開始することができ `from`  ます。
+チームとチャネルを作成したら、 `createdDateTime`  要求本文のキーとキーを使用して、タイムラインメッセージの送信を開始することができ `from`  ます。 **注**: `createdDateTime` メッセージスレッドより前にインポートしたメッセージ `createdDateTime` はサポートされていません。
+
+> [!NOTE]
+> 指定した Datetime は、同じスレッド内のメッセージ間で一意である必要があります。
 
 #### <a name="request-post-message-that-is-text-only"></a>要求 (テキストのみの投稿メッセージ)
 
@@ -148,33 +159,18 @@ Content-Location: /teams/{teamId}/channels/{channelId}
 POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
 
 {
-    "replyToId": null,
-    "messageType": "message",
-    "createdDateTime": "2019-02-04T19:58:15.511Z",
-    "lastModifiedDateTime": null,
-    "deleted": false,
-    "subject": null,
-    "summary": null,
-    "importance": "normal",
-    "locale": "en-us",
-    "policyViolation": null,
-    "from": {
-        "application": null,
-        "device": null,
-        "conversation": null,
-        "user": {
-            "id": "id-value",
-            "displayName": "Joh Doe",
-            "userIdentityType": "aadUser"
-        }
-    },
-    "body": {
-        "contentType": "html",
-        "content": "Hello World"
-    },
-    "attachments": [],
-    "mentions": [],
-    "reactions": []
+   "createdDateTime":"2019-02-04T19:58:15.511Z",
+   "from":{
+      "user":{
+         "id":"id-value",
+         "displayName":"Joh Doe",
+         "userIdentityType":"aadUser"
+      }
+   },
+   "body":{
+      "contentType":"html",
+      "content":"Hello World"
+   }
 }
 ```
 
@@ -184,40 +180,49 @@ POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
 HTTP/1.1 200 OK
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#teams('teamId')/channels('channelId')/messages/$entity",
-    "id": "id-value",
-    "replyToId": null,
-    "etag": "id-value",
-    "messageType": "message",
-    "createdDateTime": "2019-02-04T19:58:15.511Z",
-    "lastModifiedDateTime": null,
-    "deleted": false,
-    "subject": null,
-    "summary": null,
-    "importance": "normal",
-    "locale": "en-us",
-    "policyViolation": null,
-    "from": {
-        "application": null,
-        "device": null,
-        "conversation": null,
-        "user": {
-            "id": "id-value",
-            "displayName": "Joh Doe",
-            "userIdentityType": "aadUser"
-        }
-    },
-    "body": {
-        "contentType": "html",
-        "content": "Hello World"
-    },
-    "attachments": [],
-    "mentions": [],
-    "reactions": []
+   "@odata.context":"https://graph.microsoft.com/beta/$metadata#teams('teamId')/channels('channelId')/messages/$entity",
+   "id":"id-value",
+   "replyToId":null,
+   "etag":"id-value",
+   "messageType":"message",
+   "createdDateTime":"2019-02-04T19:58:15.58Z",
+   "lastModifiedDateTime":null,
+   "deleted":false,
+   "subject":null,
+   "summary":null,
+   "importance":"normal",
+   "locale":"en-us",
+   "policyViolation":null,
+   "from":{
+      "application":null,
+      "device":null,
+      "conversation":null,
+      "user":{
+         "id":"id-value",
+         "displayName":"Joh Doe",
+         "userIdentityType":"aadUser"
+      }
+   },
+   "body":{
+      "contentType":"html",
+      "content":"Hello World"
+   },
+   "attachments":[
+   ],
+   "mentions":[
+   ],
+   "reactions":[
+   ]
 }
 ```
 
-#### <a name="request-post-a-message-with-inline-image"></a>要求 (インラインの ' image を含むメッセージを投稿する)
+#### <a name="error-messages"></a>エラー メッセージ
+
+```http
+400 Bad Request
+```
+
+#### <a name="request-post-a-message-with-inline-image"></a>要求 (インライン画像を含むメッセージを投稿する)
 
 > **注**: 要求は chatmessage の一部であるため、このシナリオでは特別なアクセス許可スコープがありません。チャットメッセージのスコープも同様に適用されます。
 
@@ -268,7 +273,6 @@ HTTP/1.1 200 OK
             "userIdentityType": "aadUser"
         }
     },
-    {
       "body": {
         "contentType": "html",
         "content": "<div><div>\n<div><span><img height=\"250\" src=\"https://graph.microsoft.com/teams/teamId/channels/channelId/messages/id-value/hostedContents/hostedContentId/$value\" width=\"176.2295081967213\" style=\"vertical-align:bottom; width:176px; height:250px\"></span>\n\n</div>\n\n\n</div>\n</div>"
@@ -319,17 +323,18 @@ HTTP/1.1 204 NoContent
 
 ## <a name="step-five-add-team-members"></a>手順 5: チームメンバーを追加する
 
-Teams UI または Microsoft Graph [add member](/graph/api/group-post-members?view=graph-rest-beta&tabs=http) API[を使用して](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9)、チームにメンバーを追加することができます。
+Teams UI または Microsoft Graph [add member](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true) API[を使用して](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9)、チームにメンバーを追加することができます。
 
 #### <a name="request-add-member"></a>要求 (メンバーの追加)
 
 ```http
-POST https://graph.microsoft.com/beta/groups/{id}/members/$ref
+POST https://graph.microsoft.com/beta/teams/{id}/members
 Content-type: application/json
 Content-length: 30
-
 {
-  "@odata.id": "https://graph.microsoft.com/beta/directoryObjects/{id}"
+"@odata.type": "#microsoft.graph.aadUserConversationMember",
+"roles": [],
+"user@odata.bind": "https://graph.microsoft.com/beta/users/{user-id}"
 }
 ```
 
@@ -344,7 +349,7 @@ HTTP/1.1 204 No Content
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
 
-* Teams に含まれていないユーザーからメッセージをインポートできます。
+* Teams に含まれていないユーザーからメッセージをインポートできます。 **注**: テナントに存在しないユーザーのためにインポートされたメッセージは、パブリックプレビュー時に Teams クライアントまたはコンプライアンスポータルで検索できません。
 
 * `completeMigration`要求が行われると、チームにさらにメッセージをインポートすることはできません。
 
@@ -355,7 +360,7 @@ HTTP/1.1 204 No Content
 * 移行結果に訂正を加える必要がある場合は、チームを削除して、チームとチャネルを作成してメッセージを再移行するための手順を繰り返す必要があります。
 
 > [!NOTE]
-> 現在、インライン画像は、インポートメッセージ API スキーマでサポートされている唯一の種類のメディアです。
+> 現時点では、インライン画像は、インポートメッセージ API スキーマでサポートされている唯一の種類のメディアです。
 
 ##### <a name="import-content-scope"></a>コンテンツスコープのインポート
 
@@ -366,7 +371,7 @@ HTTP/1.1 204 No Content
 |メッセージの一部としてのインライン画像|メンション|
 |SPO/OneDrive の既存ファイルへのリンク|感想|
 |リッチテキスト付きのメッセージ|動画|
-|メッセージの返信チェーン|お知らせ|
+|メッセージの返信チェーン|Announcements|
 |高スループット処理|コード スニペット|
 ||アダプティブカード|
 ||シール|

@@ -1,13 +1,13 @@
 ---
 title: 高度なアプリの詳細ページを作成する
 description: アプリの詳細ページの要件について説明します。
-keywords: teams 発行ストアの office 発行ポリシー AppSource コンテンツ
-ms.openlocfilehash: 103f57ba99404b8d7d5fb28c7aeaa0b770db6969
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+keywords: teams 発行ストア office publishing policy AppSource content Metadata スクリーンショットロゴ説明アプリ名アイコンの簡単な説明
+ms.openlocfilehash: 98c6ccedb20f43a0bc1a34f5c4ecb30f98150d9a
+ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452772"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "48465944"
 ---
 # <a name="build-a-great-app-details-page"></a>高度なアプリの詳細ページを作成する
 
@@ -91,7 +91,7 @@ ms.locfileid: "48452772"
 **注意事項**
 
 * タイトルを繰り返さないでください。
-* "MS" を省略することはできません。
+* "MS" または "MSFT" を省略することはできません。
 * 専門用語や専門用語を使用しないでください。ユーザーが検索対象を知っているとは想定できません。
 * 完全に必要な場合を除き、Microsoft 製品名への不必要な参照を避けます。
 * アプリが Microsoft から提供されたものであることを示すものではありません。
