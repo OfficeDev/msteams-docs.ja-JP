@@ -5,12 +5,12 @@ description: teams 会議用のアプリを作成する
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: teams アプリ会議ユーザー参加者ロール api
-ms.openlocfilehash: e80dd50590d9e0828ab094c691a6b8e07ace3b0c
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 74f04ce9420110f721d95045fccee1d455cc7ea8
+ms.sourcegitcommit: b0b2f148add54ccd17fdf863c2f1973a615f8657
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452625"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "48487841"
 ---
 # <a name="create-apps-for-teams-meetings-developer-preview"></a>Teams 会議用のアプリを作成する (開発者プレビュー)
 
@@ -88,9 +88,11 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 #### <a name="query-parameters"></a>クエリ パラメーター
 
-**会議 id**。 会議識別子が必要です。  
-**participantId**。 参加者識別子が必要です。  
-**tenantId**。 参加者の[テナント id](/onedrive/find-your-office-365-tenant-id) 。 テナントユーザーにとって必須です。
+|値|型|必須|説明|
+|---|---|----|---|
+|**meetingId**| 文字列 | はい | 会議識別子は、ボット Invoke および Teams クライアント SDK を介して利用できます。|
+|**participantId**| 文字列 | はい | このフィールドはユーザー ID であり、タブ SSO、Bot 呼び出し、Teams クライアント SDK で使用できます。 タブ SSO を強くお勧めします。|
+|**tenantId**| 文字列 | はい | これは、テナントのユーザーに必要です。 これは、タブ SSO、Bot 呼び出し、Teams クライアント SDK で利用できます。 タブ SSO を強くお勧めします。|
 
 #### <a name="response-payload"></a>応答ペイロード
 <!-- markdownlint-disable MD036 -->
@@ -144,9 +146,10 @@ POST /v3/conversations/{conversationId}/activities
 
 #### <a name="query-parameters"></a>クエリ パラメーター
 
-**conversationId**: 会話 id。 必須
-
-[次の場合は Bot ID になり**ます。** 省略可能
+|値|型|必須|説明|
+|---|---|----|---|
+|**conversationId**| 文字列 | はい | Convdersation 識別子は bot 呼び出しの一部として使用できます。 |
+|**○ (補完) Tid**| 文字列 | いいえ | このフィールドは、マニフェストで宣言されている Bot ID です。 Bot は result オブジェクトを受け取ります。 |
 
 #### <a name="request-payload"></a>要求のペイロード
 
@@ -188,12 +191,12 @@ await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```javascript
 
 const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive card instead
-        replyActivity.channelData = {
-            notification: {
-                alertInMeeting: true,
-                externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID’
-            }
-        };
+replyActivity.channelData = {
+    notification: {
+        alertInMeeting: true,
+        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID’
+    }
+};
 await context.sendActivity(replyActivity);
 ```
 
