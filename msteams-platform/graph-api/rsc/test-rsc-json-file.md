@@ -1,19 +1,19 @@
 ---
-title: Teams でのリソース固有の同意のテスト
-description: Postman を使用する Teams でのリソース固有の同意のテストの詳細
+title: Teams でのリソース固有の同意をテストする
+description: Postman を使用して Teams でリソース固有の同意をテストする方法
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
 ms.topic: How-to
 keywords: teams authorization OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: e659a4e3e7ee4d316867f969358f8a3f15e9b122
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+ms.openlocfilehash: 63b2b708cf775816c5e6c0bb39a36537c2f20722
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44801346"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796149"
 ---
-# <a name="test-rsc-postman-collection-json"></a><span data-ttu-id="56c90-104">RSC Postman collection JSON のテスト</span><span class="sxs-lookup"><span data-stu-id="56c90-104">Test RSC Postman collection JSON</span></span>
+# <a name="test-rsc-postman-collection-json"></a><span data-ttu-id="5a4cb-104">RSC Postman collection JSON のテスト</span><span class="sxs-lookup"><span data-stu-id="5a4cb-104">Test RSC Postman collection JSON</span></span>
 
 ```json
 {
@@ -396,7 +396,7 @@ ms.locfileid: "44801346"
                 ],
                 "body": {
                     "mode": "raw",
-                    "raw": "{\r\n  \"displayName\": \"ChannelCreatedThruRsc\",\r\n  \"description\": \"This channel was ceated using RSC\",\r\n  \"membershipType\": \"standard\"\r\n}",
+                    "raw": "{\r\n  \"displayName\": \"ChannelCreatedThruRsc\",\r\n  \"description\": \"This channel was created using RSC\",\r\n  \"membershipType\": \"standard\"\r\n}",
                     "options": {
                         "raw": {
                             "language": "json"
