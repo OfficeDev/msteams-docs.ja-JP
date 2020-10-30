@@ -3,11 +3,11 @@ title: サイレント認証
 description: サイレント認証について説明します。
 keywords: teams 認証 SSO サイレント AAD
 ms.openlocfilehash: b8a5b8cb9328635f5730ca089da29140d0a17ac4
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801220"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796366"
 ---
 # <a name="silent-authentication"></a>サイレント認証
 
@@ -16,7 +16,7 @@ ms.locfileid: "44801220"
 
 Azure Active Directory (Azure AD) でのサイレント認証は、ユーザーが認証トークンを自動的に更新することによってログイン資格情報を入力する回数を最小限に抑えます。 (真のシングルサインオンがサポートされるように、 [SSO に関するドキュメント](~/tabs/how-to/authentication/auth-aad-sso.md)をご覧ください)
 
-コードを完全にクライアント側に保持する場合は、JavaScript の[Azure Active Directory 認証ライブラリ](/azure/active-directory/develop/active-directory-authentication-libraries)を使用して、azure AD アクセストークンの取得を暗黙的に試行することができます。 これは、ユーザーが最近サインインしたときに、ポップアップダイアログが表示されない可能性があることを意味します。
+コードを完全にクライアント側に保持する場合は、JavaScript の [Azure Active Directory 認証ライブラリ](/azure/active-directory/develop/active-directory-authentication-libraries) を使用して、azure AD アクセストークンの取得を暗黙的に試行することができます。 これは、ユーザーが最近サインインしたときに、ポップアップダイアログが表示されない可能性があることを意味します。
 
 ADAL.js ライブラリは AngularJS アプリケーション用に最適化されていますが、純粋な JavaScript シングルページアプリケーションでも動作します。
 
@@ -29,7 +29,7 @@ ADAL.js ライブラリは、OAuth 2.0 の暗黙的な付与フロー用の非�
 
 ## <a name="how-to-do-silent-authentication"></a>サイレント認証を行う方法
 
-この記事のコードは Teams サンプルアプリの[Microsoft Teams 認証サンプル (ノード)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)から取得されます。
+この記事のコードは Teams サンプルアプリの [Microsoft Teams 認証サンプル (ノード)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)から取得されます。
 
 ### <a name="include-and-configure-adal"></a>ADAL を含めるおよび構成する
 

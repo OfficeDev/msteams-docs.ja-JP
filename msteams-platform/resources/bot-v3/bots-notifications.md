@@ -3,12 +3,13 @@ title: Bot イベントを処理する
 description: Microsoft Teams でボットのイベントを処理する方法について説明します。
 keywords: teams の bot イベント
 ms.date: 05/20/2019
-ms.openlocfilehash: 06da5e6b0668e86012d87af3184493cdeb70aecd
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+author: laujan
+ms.openlocfilehash: 5ef37a931d421f245cca4fbb984b69217f779785
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801232"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796177"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>Microsoft Teams で bot イベントを処理する
 
@@ -22,7 +23,7 @@ Microsoft Teams は、bot がアクティブである範囲で発生した変更
 * Bot が削除された場合にチームのキャッシュされた情報を削除する
 * Bot メッセージがユーザーによって好評になった場合
 
-各 bot イベントは、 `Activity` `messageType` オブジェクトに含まれている情報を定義するオブジェクトとして送信されます。 受信メッセージの種類につい `message` ては、「[メッセージの送受信](~/resources/bot-v3/bot-conversations/bots-conversations.md)」を参照してください。
+各 bot イベントは、 `Activity` `messageType` オブジェクトに含まれている情報を定義するオブジェクトとして送信されます。 受信メッセージの種類につい `message` ては、「 [メッセージの送受信](~/resources/bot-v3/bot-conversations/bots-conversations.md)」を参照してください。
 
 通常、チームおよびグループイベントは、通常は型から呼び出され、 `conversationUpdate` 追加の teams イベント情報がオブジェクトの一部として渡される `channelData` ため、イベントハンドラーは `channelData` teams `eventType` および追加のイベント固有のメタデータのペイロードを照会する必要があります。
 
@@ -47,7 +48,7 @@ Microsoft Teams は、bot がアクティブである範囲で発生した変更
 
 `conversationUpdate` `membersAdded` ユーザーがチームに bot が追加されるか、または bot が追加されたチームに新しいユーザーが追加されると、ペイロード内のオブジェクトを持つイベントが送信されます。 Microsoft Teams でも `eventType.teamMemberAdded` オブジェクトが追加さ `channelData` れます。
 
-このイベントは両方の場合で送信されるため、オブジェクトを解析して、 `membersAdded` 追加がユーザーか bot 自体かを判断する必要があります。 後者の場合は、ユーザーが bot が提供する機能を理解できるように、[開始メッセージ](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#best-practice-welcome-messages-in-teams)をチャネルに送信することをお勧めします。
+このイベントは両方の場合で送信されるため、オブジェクトを解析して、 `membersAdded` 追加がユーザーか bot 自体かを判断する必要があります。 後者の場合は、ユーザーが bot が提供する機能を理解できるように、 [開始メッセージ](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#best-practice-welcome-messages-in-teams) をチャネルに送信することをお勧めします。
 
 #### <a name="example-code-checking-whether-bot-was-the-added-member"></a>コード例: bot が追加されたメンバーであるかどうかを確認する
 
@@ -130,10 +131,10 @@ bot.on('conversationUpdate', (msg) => {
 
 ### <a name="bot-added-for-personal-context-only"></a>個人コンテキストのみに追加された Bot
 
-Bot は、 `conversationUpdate` ユーザーが `membersAdded` 個人チャット用に直接追加したを使用してを受信します。 この場合、ボットが受け取るペイロードにはオブジェクトが含まれていません `channelData.team` 。 この範囲に応じて、bot が異なる[ウェルカムメッセージ](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations)を提供するようにする場合に備えて、これをフィルターとして使用する必要があります。
+Bot は、 `conversationUpdate` ユーザーが `membersAdded` 個人チャット用に直接追加したを使用してを受信します。 この場合、ボットが受け取るペイロードにはオブジェクトが含まれていません `channelData.team` 。 この範囲に応じて、bot が異なる [ウェルカムメッセージ](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) を提供するようにする場合に備えて、これをフィルターとして使用する必要があります。
 
 > [!NOTE]
-> 個人のスコープのボットの場合、bot が削除されて再度追加されても、そのイベントは1回だけ受信され `conversationUpdate` ます。 開発およびテストの場合は、ボットを完全にリセットできるヘルパー関数を追加すると便利です。 これを実装する方法の詳細については、 [Node.js 例](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts)または[C# の例](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238)を参照してください。
+> 個人のスコープのボットの場合、bot が削除されて再度追加されても、そのイベントは1回だけ受信され `conversationUpdate` ます。 開発およびテストの場合は、ボットを完全にリセットできるヘルパー関数を追加すると便利です。 これを実装する方法の詳細については、 [Node.js 例](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) または [C# の例](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) を参照してください。
 
 #### <a name="schema-example-bot-added-to-personal-context"></a>スキーマの例: 個人コンテキストに追加された bot
 
@@ -154,11 +155,11 @@ Bot は、 `conversationUpdate` ユーザーが `membersAdded` 個人チャッ�
   "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
   "from": {
     "id": "29:<USERID>",
-    "aadObjectId": "***"
+    "aadObjectId": "**_"
   },
   "conversation": {
     "conversationType": "personal",
-    "id": "***"
+    "id": "_*_"
   },
   "recipient": {
     "id": "28:<BOT ID>",
@@ -264,7 +265,7 @@ Bot が追加されたチームでチャネルが作成、名前変更、また�
 
 チャネルイベントは次のとおりです。
 
-* **Channelcreated** &emsp;ユーザーが新しいチャネルをチームに追加した
+_ **Channelcreated** &emsp; ユーザーが新しいチャネルをチームに追加する
 * **Channelrenamed 名前変更** &emsp;ユーザーが既存のチャネルの名前を変更する
 * **Channeldeleted** &emsp;ユーザーがチャネルを削除した場合
 
@@ -348,7 +349,7 @@ Bot が追加されたチームでチャネルが作成、名前変更、また�
 
 ## <a name="reactions"></a>感想
 
-この `messageReaction` イベントは、ユーザーが最初に bot によって送信されたメッセージに対して、自分の反応を追加または削除したときに送信されます。 `replyToId`特定のメッセージの ID を格納します。
+この `messageReaction` イベントは、ユーザーが最初に bot によって送信されたメッセージに対して、自分の反応を追加または削除したときに送信されます。 `replyToId` 特定のメッセージの ID を格納します。
 
 ### <a name="schema-example-a-user-likes-a-message"></a>スキーマの例: ユーザーがメッセージを好む
 

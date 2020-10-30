@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams インポートメッセージ api graph microsoft は移行の投稿を移行する
-ms.openlocfilehash: 0f53e27ec849e18be49f233a754658587343f68b
-ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
+ms.openlocfilehash: 934e00541773140c90c270a616d6bc50aacac6e1
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "48465909"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796296"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Microsoft Graph を使用してサードパーティのプラットフォーム メッセージを Teams にインポートする
 
@@ -41,8 +41,8 @@ Microsoft Graph を使用すると、ユーザーの既存のメッセージ履�
 
 ### <a name="set-up-your-office-365-tenant"></a>Office 365 テナントのセットアップ
 
-✔インポートデータに Office 365 テナントが存在することを確認してください。 Teams 用の Office 365 テナントの設定の詳細については、「 [office 365 テナントを準備](../../concepts/build-and-test/prepare-your-o365-tenant.md)する *」を参照してください*。  
-✔チームメンバーが Azure Active Directory (AAD) に含まれていることを確認します。  詳細につい*て*[は、](/azure/active-directory/fundamentals/add-users-azure-active-directory) 「Azure Active Directory に新しいユーザーを追加する」を参照してください。
+✔インポートデータに Office 365 テナントが存在することを確認してください。 Teams 用の Office 365 テナントの設定の詳細については、「 [office 365 テナントを準備](../../concepts/build-and-test/prepare-your-o365-tenant.md)する *」を参照してください* 。  
+✔チームメンバーが Azure Active Directory (AAD) に含まれていることを確認します。  詳細につい *て*[は、](/azure/active-directory/fundamentals/add-users-azure-active-directory) 「Azure Active Directory に新しいユーザーを追加する」を参照してください。
 
 ## <a name="step-one-create-a-team"></a>手順 1: チームを作成する
 
@@ -50,11 +50,11 @@ Microsoft Graph を使用すると、ユーザーの既存のメッセージ履�
 
 > チームリソースプロパティを使用して、タイムスタンプを持つ[新しいチームを作成](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true)し `createdDateTime` ます。 `migration mode`移行プロセスが完了するまで、チーム内のほとんどのアクティビティからのユーザーを表示する特別な状態で、新しいチームをに配置します。 `teamCreationMode` `migration` 移行のために作成される新しいチームを明示的に識別するために、POST 要求に値のインスタンス属性を含めます。  
 
-> **注**: フィールドは、 `createdDateTime` 移行されたチームまたはチャネルのインスタンスに対してのみ設定されます。
+> **注** : フィールドは、 `createdDateTime` 移行されたチームまたはチャネルのインスタンスに対してのみ設定されます。
 
 <!-- markdownlint-disable MD001 -->
 
-#### <a name="permissions"></a>権限
+#### <a name="permissions"></a>アクセス許可
 
 |ScopeName|DisplayName|説明|型|管理者の同意|対象となるエンティティ/Api|
 |-|-|-|-|-|-|
@@ -70,7 +70,7 @@ Content-Type: application/json
   "@microsoft.graph.teamCreationMode": "migration",
   "template@odata.bind": "https://graph.microsoft.com/beta/teamsTemplates('standard')",
   "displayName": "My Sample Team",
-  "description": "My Sample Team’s Description"
+  "description": "My Sample Team’s Description",
   "createdDateTime": "2020-03-14T11:22:17.043Z"
 }
 ```
@@ -98,7 +98,7 @@ Content-Location: /teams/{teamId}
 
 > Channel リソースプロパティを使用して、タイムスタンプがある[新しいチャネルを作成](/graph/api/channel-post?view=graph-rest-beta&tabs=http&preserve-view=true)し `createdDateTime` ます。 新しいチャネルを `migration mode` 、移行プロセスが完了するまで、チャネル内のほとんどのチャットアクティビティからのユーザーを示す特別な状態で、その新しいチャネルを配置します。  `channelCreationMode` `migration` 移行のために作成される新しいチームを明示的に識別するために、POST 要求に値のインスタンス属性を含めます。  
 <!-- markdownlint-disable MD024 -->
-#### <a name="permissions"></a>権限
+#### <a name="permissions"></a>アクセス許可
 
 |ScopeName|DisplayName|説明|型|管理者の同意|対象となるエンティティ/Api|
 |-|-|-|-|-|-|
@@ -136,8 +136,9 @@ HTTP/1.1 202 Accepted
    "membershipType":null,
    "moderationSettings":null
 }
+```
 
-#### Error message
+#### <a name="error-message"></a>エラー メッセージ
 
 ```http
 400 Bad Request
@@ -148,7 +149,7 @@ HTTP/1.1 202 Accepted
 
 ## <a name="step-three-import-messages"></a>手順 3: メッセージをインポートする
 
-チームとチャネルを作成したら、 `createdDateTime`  要求本文のキーとキーを使用して、タイムラインメッセージの送信を開始することができ `from`  ます。 **注**: `createdDateTime` メッセージスレッドより前にインポートしたメッセージ `createdDateTime` はサポートされていません。
+チームとチャネルを作成したら、 `createdDateTime`  要求本文のキーとキーを使用して、タイムラインメッセージの送信を開始することができ `from`  ます。 **注** : `createdDateTime` メッセージスレッドより前にインポートしたメッセージ `createdDateTime` はサポートされていません。
 
 > [!NOTE]
 > 指定した Datetime は、同じスレッド内のメッセージ間で一意である必要があります。
@@ -224,7 +225,7 @@ HTTP/1.1 200 OK
 
 #### <a name="request-post-a-message-with-inline-image"></a>要求 (インライン画像を含むメッセージを投稿する)
 
-> **注**: 要求は chatmessage の一部であるため、このシナリオでは特別なアクセス許可スコープがありません。チャットメッセージのスコープも同様に適用されます。
+> **注** : 要求は chatmessage の一部であるため、このシナリオでは特別なアクセス許可スコープがありません。チャットメッセージのスコープも同様に適用されます。
 
 ```http
 POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
@@ -349,7 +350,7 @@ HTTP/1.1 204 No Content
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
 
-* Teams に含まれていないユーザーからメッセージをインポートできます。 **注**: テナントに存在しないユーザーのためにインポートされたメッセージは、パブリックプレビュー時に Teams クライアントまたはコンプライアンスポータルで検索できません。
+* Teams に含まれていないユーザーからメッセージをインポートできます。 **注** : テナントに存在しないユーザーのためにインポートされたメッセージは、パブリックプレビュー時に Teams クライアントまたはコンプライアンスポータルで検索できません。
 
 * `completeMigration`要求が行われると、チームにさらにメッセージをインポートすることはできません。
 

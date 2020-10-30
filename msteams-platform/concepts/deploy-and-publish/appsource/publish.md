@@ -2,12 +2,12 @@
 title: Microsoft Teams アプリ承認提出プロセスガイダンス
 description: Microsoft Teams アプリストアに公開されたアプリを取得するための送信承認プロセスについて説明します。
 keywords: teams 発行ストア office publishing 発行 AppSource partner center アカウント検証アプリアカウントが対象として公開されていません
-ms.openlocfilehash: 6cc38e29d02935cf023bb26d3a317554493b0fe2
-ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
+ms.openlocfilehash: 2879717aebd9d295cdf37cc0371b68f5f695b86b
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "48465930"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796310"
 ---
 # <a name="submit-your-app-to-appsource"></a>アプリを AppSource に提出する
 
@@ -16,8 +16,9 @@ ms.locfileid: "48465930"
 アプリを [Appsource](https://appsource.microsoft.com) に発行すると、Teams アプリカタログと web 上で使用できるようになります。 高レベルでは、アプリを AppSource に提出するプロセスは次のようになります。
 
 1. [デザインガイドライン](~/concepts/design/understand-use-cases.md)に従ってアプリを開発します。 タブは、 [タブデザインガイドライン](~/tabs/design/tabs.md)に準拠している必要があります。 Bot は [bot 設計ガイドライン](~/bots/design/bots.md)に従う必要があります。
-1. アプリが Microsoft Teams のアプリの [検証ポリシー](/legal/marketplace/certification-policies) を満たしていることを確認します。
-1. [パートナーセンター](https://support.microsoft.com/help/4499930/partner-center-overview)で[開発者アカウントをセットアップ](/office/dev/store/open-a-developer-account)します。 下記の FAQ セクションで、[パートナーセンターアカウントを作成する方法](#how-do-i-create-a-partner-center-account)に*ついても参照して*ください。
+1. アプリが Microsoft Teams のアプリの [検証ポリシー](/legal/marketplace/certification-policies) を満たしていることを確認します。 
+1. [マニフェスト検証ツール](https://docs.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist#teams-app-validation-tool)を使用してアプリを自己テストします。
+1. [パートナーセンター](https://support.microsoft.com/help/4499930/partner-center-overview)で[開発者アカウントをセットアップ](/office/dev/store/open-a-developer-account)します。 下記の FAQ セクションで、 [パートナーセンターアカウントを作成する方法](#how-do-i-create-a-partner-center-account)に *ついても参照して* ください。
 1. [提出のチェックリスト](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)に従って、アプリを提出する準備をします。
 1. [アプリの送信を成功させるためのヒントを](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)確認します。
 1. [パートナーセンターを使用して、Appsource](/office/dev/store/use-partner-center-to-submit-to-appsource)にパッケージを提出します。
@@ -67,7 +68,7 @@ ms.locfileid: "48465930"
 
 ## <a name="why-do-i-receive-the-message-this-account-is-not-publish-eligible-when-i-try-to-submit-my-add-in-through-partner-center"></a>パートナーセンターからアドインを送信しようとすると、"このアカウントは公開されていません" というメッセージが表示されるのはなぜですか?
 
-[アカウントの確認状態](/partner-center/verification-responses)が保留中の場合、上記のエラーメッセージが表示されます。 パートナーセンターの[ダッシュボード](https://partner.microsoft.com/dashboard)で [**設定**] オプション (歯車アイコン) を選択し、[**開発者設定**] [  =>  **アカウント**   =>  **アカウント設定**] を選択することによって、アカウントの確認状態を確認できます。
+[アカウントの確認状態](/partner-center/verification-responses)が保留中の場合、上記のエラーメッセージが表示されます。 パートナーセンターの [ダッシュボード](https://partner.microsoft.com/dashboard)で [ **設定** ] オプション (歯車アイコン) を選択し、[ **開発者設定** ] [  =>  **アカウント**   =>  **アカウント設定** ] を選択することによって、アカウントの確認状態を確認できます。
 
 ![パートナーセンターのアカウント設定ページ](../../../assets/images/partner-center-accts-page.png)
 
@@ -84,7 +85,7 @@ ms.locfileid: "48465930"
 
 ## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-in-partner-center-how-should-i-proceed"></a>自分のアカウントの確認状態は、パートナーセンターの電子メールの所有権を超えていません。 続行するにはどうすればよいですか?
 
-**電子メールの所有権**の確認プロセスでは、確認メールがプライマリ連絡先の電子メールアドレスに送信されます。 プライマリ連絡先の受信トレイで **maccount@<span>microsoft</span>.com** からの電子メールが必要です。そのためには、「件名を付けてください。」というアクションを必要とします。電子メール *アカウントが microsoft によって確認*され、電子メールの確認プロセスが完了することを要求します。 確認メールは、パートナーセンターの [アカウント設定] ページに表示されている電子メールアドレスに送信されます。
+**電子メールの所有権** の確認プロセスでは、確認メールがプライマリ連絡先の電子メールアドレスに送信されます。 プライマリ連絡先の受信トレイで **maccount@ <span>microsoft</span>.com** からの電子メールが必要です。そのためには、「件名を付けてください。」というアクションを必要とします。電子メール *アカウントが microsoft によって確認* され、電子メールの確認プロセスが完了することを要求します。 確認メールは、パートナーセンターの [アカウント設定] ページに表示されている電子メールアドレスに送信されます。
 
 > [!NOTE]
  >[電子メールの確認のリンクは、7日間のみ有効です。 パートナープロファイルページにアクセスして、[ **再送信の確認** ] の電子メールリンクを選択することによって、電子メールを送信するように要求することができます。 電子メールが受信されることを確認するには、microsoft.com からのセキュリティで保護されたドメインとして電子メールのセーフリストを作成し、迷惑メールフォルダーをチェックします。
@@ -101,7 +102,7 @@ ms.locfileid: "48465930"
 1. ブラウザーのキャッシュをクリアし、パートナーセンターのアカウントダッシュボードに移動し、[ **再送信確認** ] 電子メールリンクを選択して、確認の電子メールを電子メールアドレスに送信します。
 1. 別のブラウザーから [  **再送信の確認の電子メール** へのアクセスを試行してください。
 1. IT 部門と協力して、電子メールサーバーによって検証メールがブロックされないようにします。
-1. サーバーのスパムフィルターを調整して、maccount@microsoft からのすべての電子メールを許可/セーフリストにし **ます。 <span></span>com**。
+1. サーバーのスパムフィルターを調整して、maccount@microsoft からのすべての電子メールを許可/セーフリストにし **ます。 <span></span>com** 。
 
 ## <a name="how-long-does-the-employment-verification-process-usually-take"></a>雇用確認プロセスには、通常どのくらいの時間がかかりますか?
 
@@ -123,7 +124,7 @@ ms.locfileid: "48465930"
 
 次の情報を使用して、にメールを送信してください **<teamsubm@microsoft.com>** 。
 
-1. **件名行** *<App_Name>のパートナーセンターのアカウントの問題 * (アプリの名前を指定してください)。
+1. **件名行** *<App_Name>のパートナーセンターのアカウントの問題* (アプリの名前を指定してください)。
 1. **メール本文:**
     * サポートチケット番号:
     * 販売者 ID:

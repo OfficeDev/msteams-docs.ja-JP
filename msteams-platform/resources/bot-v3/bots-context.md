@@ -4,11 +4,11 @@ description: Microsoft Teams でボットのコンテキストを取得する方
 keywords: teams の bot コンテキスト
 ms.date: 05/20/2019
 ms.openlocfilehash: 8f054661664850ffb843714230e209c8e4737f0a
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801229"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "48796163"
 ---
 # <a name="get-context-for-your-microsoft-teams-bot"></a>Microsoft Teams の bot のコンテキストを取得する
 
@@ -28,8 +28,8 @@ Bot は、チームメンバーの一覧とその基本プロファイルを照�
 [`/conversations/{teamId}/members/`](/bot-framework/rest-api/bot-framework-rest-connector-api-reference#get-conversation-members)エンドポイントとしての値を使用して、GET 要求を直接発行することができ `serviceUrl` ます。
 
 は、 `teamId` `channeldata` 次のシナリオで、ボットが受け取るアクティビティペイロードのオブジェクトにあります。
-* ユーザーがチームコンテキストの bot との間でメッセージを送信したり、対話したりする場合 ([メッセージの受信](~/resources/bot-v3/bot-conversations/bots-conversations.md#receiving-messages)を参照)
-* 新しいユーザーまたは bot がチームに追加されたとき (「[チームに追加された bot またはユーザー」を](~/resources/bot-v3/bots-notifications.md#bot-or-user-added-to-a-team)参照)
+* ユーザーがチームコンテキストの bot との間でメッセージを送信したり、対話したりする場合 ( [メッセージの受信](~/resources/bot-v3/bot-conversations/bots-conversations.md#receiving-messages)を参照)
+* 新しいユーザーまたは bot がチームに追加されたとき (「 [チームに追加された bot またはユーザー」を](~/resources/bot-v3/bots-notifications.md#bot-or-user-added-to-a-team)参照)
 
 > [!NOTE]
 >* Api を呼び出すときにチーム id を必ず使用してください。
@@ -111,7 +111,7 @@ connector.fetchMembers(
 );
 ```
 
-[Bot フレームワークサンプル](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)*も参照してください*。
+[Bot フレームワークサンプル](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)*も参照してください* 。
 
 ## <a name="fetching-user-profile-or-roster-in-personal-or-group-chat"></a>個人またはグループチャットでのユーザープロファイルまたは名簿の取得
 
@@ -132,7 +132,7 @@ Bot は、チーム内のチャネルの一覧を照会できます。
 
 `/teams/{teamId}/conversations/`エンドポイントとしての値を使用して、GET 要求を直接発行することができ `serviceUrl` ます。
 
-の唯一のソース `teamId` は、チームコンテキストからのメッセージです。これは、ユーザーからのメッセージ、または、チームに追加されたときにボットが受信するメッセージのどちらかです (「[チームに追加されたボットまたはユーザー」を](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)参照)。
+の唯一のソース `teamId` は、チームコンテキストからのメッセージです。これは、ユーザーからのメッセージ、または、チームに追加されたときにボットが受信するメッセージのどちらかです (「 [チームに追加されたボットまたはユーザー」を](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)参照)。
 
 > [!NOTE]
 > の値は `serviceUrl` 安定していますが、変更することができます。 新しいメッセージが到着すると、ボットはに格納されている値を確認する必要があり `serviceUrl` ます。
@@ -168,7 +168,7 @@ ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelL
 
 #### <a name="nodejs-example"></a>Node.js の例
 
-次の例では、 `fetchChannelList` [Node.jsの BOT ビルダー SDK の Microsoft Teams 拡張機能](https://www.npmjs.com/package/botbuilder-teams)からの呼び出しを使用しています。
+次の例では、 `fetchChannelList` [Node.jsの BOT ビルダー SDK の Microsoft Teams 拡張機能 ](https://www.npmjs.com/package/botbuilder-teams)からの呼び出しを使用しています。
 
 ```javascript
 var teamId = session.message.sourceEvent.team.id;
