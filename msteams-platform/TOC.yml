@@ -164,7 +164,7 @@
     - name: 使い方ガイド
       expanded: true
       items:
-        - name: Teams のタブを作成する
+        - name: App Studio を使用してタブを作成する
           href: tabs/how-to/add-tab.md
         - name: タブ ページを作成する
           items:
@@ -215,7 +215,7 @@
     - name: 使い方ガイド
       expanded: true
       items:
-        - name: Teams のボットを作成する
+        - name: App Studio を使用してボットを作成する
           href: bots/how-to/create-a-bot-for-teams.md
         - name: Power Virtual Agent チャットボットを Teams と統合する
           href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
@@ -292,7 +292,7 @@
     - name: 使い方ガイド
       expanded: true
       items:
-        - name: Teams のメッセージングの拡張機能を作成する
+        - name: App Studio を使用してメッセージングの拡張機能を作成する
           href: messaging-extensions/how-to/create-messaging-extension.md
         - name: アクションベースのコマンド
           items:
@@ -363,7 +363,7 @@
           href: apps-in-teams-meetings/design/designing-in-meeting-dialog.md
         - name: 会議中タブ
           href: apps-in-teams-meetings/design/designing-in-meeting-tab.md
-- name: Teams Graph REST API
+- name: Microsoft Graph REST API の統合
   items:
     - name: リソース固有の同意
       items:
