@@ -243,6 +243,8 @@
               href: bots/how-to/authentication/auth-flow-bot.md
             - name: 認証をボットに追加する
               href: bots/how-to/authentication/add-authentication.md
+            - name: ボットのシングル サインオンのサポート
+              href: bots/how-to/authentication/auth-aad-sso-bots.md
         - name: ボット メッセージの書式を設定する
           href: bots/how-to/format-your-bot-messages.md
         - name: ボット メッセージの更新および削除
