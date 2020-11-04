@@ -4,12 +4,12 @@ author: heath-hamilton
 description: Microsoft Teams の会議中のダイアログを効果的に設計する方法について説明します。
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: f2ac0df3ce28293d9e3f61f45dd2d460dc01f2e9
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: ded8793f6ea0a736e559e72afaf314608c0875fe
+ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452674"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "48877051"
 ---
 # <a name="design-an-in-meeting-dialog"></a>会議中のダイアログを設計する
 
@@ -36,22 +36,22 @@ ms.locfileid: "48452674"
 
 ## <a name="anatomy"></a>構造
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-anatomy.png" alt-text="例は、会議の参加者の視点から、会議中のダイアログがどのようなものかを示しています。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-anatomy.png" alt-text="会議中のダイアログビューの UI の構造" border="false":::
 
 1. **アプリ アイコン**
 1. **アプリ名**
 1. **アクション文字列**
 1. **消しアイコン:** 1つのダイアログを閉じます。 フッター内のアクションではなく、右上にある閉じるアイコンを常に使用します。
-1. **Webview**: サードパーティのアプリのコンテンツとボタンをすべて表示します ([Teams の標準] ボタンを推奨)。
+1. **Webview** : サードパーティのアプリのコンテンツとボタンをすべて表示します ([Teams の標準] ボタンを推奨)。
 
 ### <a name="sizing"></a>決定
 
 会議中のダイアログのサイズはさまざまなユースケースに応じて異なる可能性がありますが、常にパディングとコンポーネントのサイズを維持する必要があります。
 
-* **高さ**: ダイアログの高さは、webview の内容によって決まります。 指定した最大の高さを超えているコンテンツに対して垂直方向のスクロールが行われます。
-* **幅**: webview の幅は、指定した範囲内の絶対的な値です。
+* **高さ** : ダイアログの高さは、webview の内容によって決まります。 指定した最大の高さを超えているコンテンツに対して垂直方向のスクロールが行われます。
+* **幅** : webview の幅は、指定した範囲内の絶対的な値です。
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-sizing.png" alt-text="例は、会議の参加者の視点から、会議中のダイアログがどのようなものかを示しています。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-sizing.png" alt-text="会議中のダイアログの可能な大きさを示す図高さ: ダイアログの高さは、webview の内容によって決まります。高さの最大値 (ユーザーが定義した値) を超える縦方向のスクロールが行われます。Min: なし。最大値: 400 ピクセル (320 ピクセル webview)。幅: webview の幅は、指定した範囲内の絶対的な値です。最小値: 288 ピクセル (256 ピクセル webview)。最大値: 468 ピクセル (436 ピクセル webview)。" border="false":::
 
 ## <a name="behavior"></a>動作
 
@@ -61,9 +61,9 @@ ms.locfileid: "48452674"
 
 会議中のダイアログは、会議のステージの中央に配置されます。 チームのシステムレベル通知のフレームワーク内でドラッグして作業することはできません。
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-position.png" alt-text="例は、会議の参加者の視点から、会議中のダイアログがどのようなものかを示しています。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-position.png" alt-text="会議中のダイアログの UI 構造を示す図" border="false":::
 
-### <a name="aggregation"></a>Aggregation
+### <a name="aggregation"></a>集計
 
 一度に表示されるのは1つのダイアログのみで、最下部に最後に送信された時点からのスタックランキング。 ダイアログが解決または消去されると、次のダイアログボックスに移動します。
 
@@ -76,7 +76,7 @@ ms.locfileid: "48452674"
 * 垂直方向にスクロールできるようにする必要があります。
 * スクロールした内容のみが表示されます (何も上または下にありません)。
 
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-scroll.png" alt-text="例は、会議の参加者の視点から、会議中のダイアログがどのようなものかを示しています。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-scroll.png" alt-text="会議中のダイアログでの webview コンテンツのスクロール方法を示す図。" border="false":::
 
 ### <a name="buttons"></a>ボタン
 
@@ -114,7 +114,7 @@ Dropdown | リストから1つ以上のオプションを選択します。 検�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-steps-do.png" alt-text="例は、会議の参加者の視点から、会議中のダイアログがどのようなものかを示しています。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-steps-do.png" alt-text="ユーザーが会議に集中できるように、会議中のダイアログコンテンツを単一の画面に制限する方法を示す図。" border="false":::
 
 #### <a name="do-keep-it-contained"></a>Do: 格納されたまま保持する
 
@@ -122,7 +122,7 @@ Dropdown | リストから1つ以上のオプションを選択します。 検�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-steps-dont.png" alt-text="例は、会議の参加者の視点から、会議中のダイアログがどのようなものかを示しています。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-steps-dont.png" alt-text="会議中のダイアログで、ユーザーがコンテンツ間を移動する必要がないことを示す図" border="false":::
 
 #### <a name="dont-include-multiple-steps"></a>いいえ: 複数の手順を含めます
 
@@ -135,18 +135,18 @@ Dropdown | リストから1つ以上のオプションを選択します。 検�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-interactions-do.png" alt-text="例は、会議の参加者の視点から、会議中のダイアログがどのようなものかを示しています。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-interactions-do.png" alt-text="ユーザーが迅速に作業を行うことができないような、不要なコンテンツを削除する理由を示す図。" border="false":::
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-interactions-dont.png" alt-text="例は、会議の参加者の視点から、会議中のダイアログがどのようなものかを示しています。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-interactions-dont.png" alt-text="不要なコンテンツを削除する理由を示す別の図は、ユーザーにとってすぐには解決できないものです。" border="false":::
 
    :::column-end:::
 :::row-end:::
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-tab-do.png" alt-text="例は、会議の参加者の視点から、会議中のダイアログがどのようなものかを示しています。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-tab-do.png" alt-text="複雑な対話が必要な場合、代わりに会議の右ウィンドウで1つの列を使用することを示す図" border="false":::
 
 #### <a name="do-limit-number-of-interactions"></a>Do: 操作の数を制限する
 
@@ -154,7 +154,7 @@ Dropdown | リストから1つ以上のオプションを選択します。 検�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-tab-dont.png" alt-text="例は、会議の参加者の視点から、会議中のダイアログがどのようなものかを示しています。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-tab-dont.png" alt-text="会議の中で会議中のダイアログ distracts の相互作用が多すぎることを示す図。" border="false":::
 
 #### <a name="dont-introduce-unnecessary-elements"></a>いいえ: 不要な要素を紹介します。
 
@@ -167,7 +167,7 @@ Dropdown | リストから1つ以上のオプションを選択します。 検�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-layout-do.png" alt-text="例は、会議の参加者の視点から、会議中のダイアログがどのようなものかを示しています。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-layout-do.png" alt-text="会議中のダイアログの理想的なレイアウトを示す図" border="false":::
 
 #### <a name="do-use-single-column-layouts"></a>手順: 単一列のレイアウトを使用する
 
@@ -175,7 +175,7 @@ Dropdown | リストから1つ以上のオプションを選択します。 検�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-layout-dont.png" alt-text="例は、会議の参加者の視点から、会議中のダイアログがどのようなものかを示しています。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-layout-dont.png" alt-text="推奨されていない会議中のダイアログのレイアウトを示す図" border="false":::
 
 #### <a name="dont-clutter-the-space"></a>[しない: スペースを整頓する」
 
@@ -188,7 +188,7 @@ Dropdown | リストから1つ以上のオプションを選択します。 検�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-size-do.png" alt-text="例は、会議の参加者の視点から、会議中のダイアログがどのようなものかを示しています。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-size-do.png" alt-text="会議中のダイアログのサイズを常に同じにする方法を示す図。" border="false":::
 
 #### <a name="do-keep-it-consistent"></a>実行: 一貫性を保つ
 
@@ -196,7 +196,7 @@ Dropdown | リストから1つ以上のオプションを選択します。 検�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-size-dont.png" alt-text="例は、会議の参加者の視点から、会議中のダイアログがどのようなものかを示しています。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-size-dont.png" alt-text="異なるダイアログサイズを使用する方法を示す図" border="false":::
 
 #### <a name="dont-always-fit-to-the-content"></a>いいえ: 常にコンテンツに合わせる
 
@@ -209,7 +209,7 @@ Dropdown | リストから1つ以上のオプションを選択します。 検�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-controls-do.png" alt-text="例は、会議の参加者の視点から、会議中のダイアログがどのようなものかを示しています。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-controls-do.png" alt-text="会議中のダイアログにボタンを配置する場所を示す図" border="false":::
 
 #### <a name="do-right-align-the-primary-action"></a>Do: 右揃えで主な操作を行います。
 
@@ -217,7 +217,7 @@ Dropdown | リストから1つ以上のオプションを選択します。 検�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-controls-dont.png" alt-text="例は、会議の参加者の視点から、会議中のダイアログがどのようなものかを示しています。" border="false":::
+:::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-dialog-controls-dont.png" alt-text="会議中のダイアログにボタンを配置しない場所を示す図。" border="false":::
 
 #### <a name="dont-left-or-center-align-actions"></a>いいえ: 左揃えまたは中央揃えのアクション
 
@@ -239,4 +239,4 @@ Dropdown | リストから1つ以上のオプションを選択します。 検�
 アプリを AppSource に発行することを計画している場合は、一般的にアプリが送信中に失敗する原因となる設計上の問題について理解しておく必要があります。
 
 > [!div class="nextstepaction"]
-> [設計検証ガイドラインの確認](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines)
+> [設計検証ガイドラインの確認](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

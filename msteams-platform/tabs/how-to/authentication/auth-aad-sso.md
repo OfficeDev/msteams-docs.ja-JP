@@ -1,15 +1,15 @@
 ---
-title: シングル サインオン
+title: タブのシングルサインオンのサポート
 description: シングルサインオン (SSO) について説明します。
 keywords: teams 認証 SSO AAD シングルサインオン api
-ms.openlocfilehash: 011be3fe7fe614bd42f0ee6b88289cf97740a4d3
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: aa2cdf303c7ae7241b9efe2f771479fbeb58a0de
+ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796380"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "48877058"
 ---
-# <a name="single-sign-on-sso"></a>単一の Sign-On (SSO)
+# <a name="single-sign-on-sso-support-for-tabs"></a>タブのシングルサインオン (SSO) のサポート
 
 ユーザーは、職場、学校、または Microsoft アカウント (Office 365、Outlook など) 経由で Microsoft Teams にサインインします。 この機能を利用すると、シングルサインオンで、デスクトップまたはモバイルクライアントの Microsoft Teams タブ (またはタスクモジュール) を承認できるようになります。 そのため、ユーザーがアプリを使用することに同意場合、別のデバイスで再び同意する必要はありません。自動的にサインインします。 また、アクセストークンをプリフェッチして、パフォーマンスと負荷の時間を短縮します。
 
