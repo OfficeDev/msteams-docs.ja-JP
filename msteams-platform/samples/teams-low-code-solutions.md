@@ -4,12 +4,12 @@ author: laujan
 description: Teams の利用可能な Microsoft 低およびコードソリューションの詳細
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: 4b112a674df76d0bd33e1b461d6b2f194f764f7b
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 2dc9f6ed17a11407efbd4496439848266fc0a604
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210261"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931758"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Microsoft Teams 用の低コードカスタムアプリを作成する
 
@@ -85,7 +85,7 @@ Teams で新しい [Power Virtual Agents アプリ](https://aka.ms/pva-teams-doc
 ### <a name="-project-oakdale-preview"></a>✔ Project Oakdale (プレビュー)
 
 [Project Oakdale](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180
-) は、近日中に Microsoft Teams に提供される新しい低コードデータプラットフォームです。 開発者は teams で Teams の電力プラットフォームソリューションを直接作成することができます。 詳細については、「 [Teams のブログ Microsoft Project の Oakdale」ページ](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams)を参照し*てください*。
+) は、近日中に Microsoft Teams に提供される新しい低コードデータプラットフォームです。 開発者は teams で Teams の電力プラットフォームソリューションを直接作成することができます。 詳細については、「 [Teams のブログ Microsoft Project の Oakdale」ページ](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams)を参照し *てください* 。
 
 ### <a name="-microsoft-blog-insights"></a>✔ Microsoft ブログ insights
 
@@ -94,3 +94,8 @@ Teams で新しい [Power Virtual Agents アプリ](https://aka.ms/pva-teams-doc
 [お客様がリモート作業に適応できるように、電力プラットフォームと Teams の更新を発表する](https://cloudblogs.microsoft.com/powerplatform/2020/05/19/announcing-power-platform-and-teams-updates-to-help-customers-adapt-to-remote-work/)
 
 [開発チームが、デジタルワークスペースを拡張するために低レベルのコード機能を使用した将来の作業を整える](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180)
+
+### <a name="-managing-power-platform-apps"></a>電源プラットフォームアプリの管理✔
+
+> [!div class="nextstepaction"]
+> [Microsoft Teams 管理センターで Microsoft Power Platform アプリを管理する](/microsoftteams/manage-power-platform-apps)

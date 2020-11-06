@@ -3,20 +3,20 @@ title: 作業の開始-個人用タブの作成
 author: heath-hamilton
 description: Microsoft Teams ツールキットを使用して、Microsoft Teams の [個人] タブをすばやく作成できます。
 ms.author: lajanuar
-ms.date: 10/09/2020
+ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: 7c12c87fff5126662f9473ecb0c5838b61f5faf2
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 17153b9b7cd7e6dd9052fc40073fec60a4d51f81
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452744"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931730"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>Microsoft Teams 用の個人用タブを作成する
 
 タブは、Teams に web ページを埋め込むことで、アプリ内にコンテンツを表示する簡単な方法です。
 
-Teams には、2種類のタブがあります。 このチュートリアルでは、個々のユーザーのために全画面表示のコンテンツページである [個人用の基本 *] タブ*を作成します。 (個人タブは、Teams で従来の web サイトの操作に最も近いものです)。
+Teams には、2種類のタブがあります。 このチュートリアルでは、個々のユーザーのために全画面表示のコンテンツページである [個人用の基本 *] タブ* を作成します。 (個人タブは、Teams で従来の web サイトの操作に最も近いものです)。
 
 ## <a name="before-you-begin"></a>はじめに
 
@@ -30,40 +30,26 @@ Teams には、2種類のタブがあります。 このチュートリアルで
 
 > [!div class="checklist"]
 >
-> * 個人用タブに関連するアプリマニフェストのプロパティとスキャフォールディングの一部を特定する
+> * 個人用タブに関連するアプリの構成とスキャフォールディングの一部を特定する
 > * タブのコンテンツを作成する
 > * ユーザーの設定に基づいてタブの色のテーマを更新する
 
 ## <a name="1-identify-relevant-app-project-components"></a>1. 関連するアプリプロジェクトコンポーネントを特定する
 
-Teams ツールキットを使用してプロジェクトを作成すると、アプリマニフェストとスキャフォールディングの多くが自動的に設定されます。 個人タブを作成するための主なコンポーネントについて説明します。
+Teams ツールキットを使用してプロジェクトを作成すると、アプリの構成とスキャフォールディングの多くが自動的に設定されます。 個人タブを作成するための主なコンポーネントについて説明します。
 
-### <a name="app-manifest"></a>アプリマニフェスト
+### <a name="app-configurations"></a>アプリの構成
 
-アプリマニフェスト (プロジェクトのディレクトリ内のファイル) にある次のスニペットが表示されます `manifest.json` `.publish` 。これには [`staticTabs`](../resources/schema/manifest-schema.md#statictabs) 、個人用タブに関連するプロパティと既定値が含まれています。
+アプリの構成は、ツールキットに含まれる App Studio を使用して表示および更新できます。
 
-```JSON
-"staticTabs": [
-    {
-        "entityId": "index",
-        "name": "Personal Tab",
-        "contentUrl": "{baseUrl0}/tab",
-        "scopes": [ "personal" ]
-    }
-],
-```
-
-* `entityId`: タブによって表示されるページの一意の識別子。
-* `name`: タブの表示名 (たとえば、"個人用連絡先")。
-* `contentUrl`: タブのコンテンツページのホスト URL (HTTPS である必要があります)。
-* `scopes`: タブは個人使用のみを対象として指定します。
+セットアップ時に、ツールキットは最初にタブコンテンツページを構成しました。これには、プライマリコンテンツが表示されます。 ツールキットで、[ **App Studio** ] に移動し、[ **タブ** ] を選択して構成を表示します。
 
 ### <a name="app-scaffolding"></a>アプリのスキャフォールディング
 
-アプリのスキャフォールディングには、Teams のタブをレンダリングするためのコンポーネントが用意されています。 多くの作業を行うことができますが、現時点では、次の点を重視するだけで十分です。
+アプリのスキャフォールディングは、Teams で個人用タブを表示するためのコンポーネントを提供します。 多くの作業を行うことができますが、現時点では、次の点を重視するだけで十分です。
 
-* `Tab.js``src/components`プロジェクトのディレクトリ内のファイル
-* Microsoft Teams JavaScript クライアント SDK (プロジェクトのフロントエンドコンポーネントに事前に読み込まれているもの)
+* `Tab.js``src/components`プロジェクトのディレクトリ内のファイル。 これは、タブのコンテンツページをレンダリングするためのものです。
+* Microsoft Teams JavaScript クライアント SDK。これは、プロジェクトのフロントエンドコンポーネントに事前に読み込まれています。
 
 ## <a name="2-customize-your-tab-content-page"></a>2. タブのコンテンツページをカスタマイズする
 
@@ -181,11 +167,11 @@ if (isTheme === "default") {
 
 Teams のタブを確認します。 外観は、暗いテーマに密接に一致する必要があります。
 
-:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="静的コンテンツを含む個人用タブのスクリーンショット。":::
+:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="静的コンテンツビューを含む [個人用] タブのスクリーンショット。":::
 
 ## <a name="well-done"></a>よくやりましたね
 
-おめでとうございます! Teams アプリに [個人用] タブがあり、組織内で重要な連絡先を簡単に見つけられるようになりました。
+おめでとうございます。 Teams アプリに [個人用] タブがあり、組織内で重要な連絡先を簡単に見つけられるようになりました。
 
 ## <a name="learn-more"></a>詳細情報
 
@@ -193,7 +179,7 @@ Teams のタブを確認します。 外観は、暗いテーマに密接に一�
 * [既存の web アプリまたは web ページからコンテンツを埋め込む](../tabs/how-to/add-tab.md#tab-requirements): [個人用] タブの新しいコンテンツを作成する方法を示しましたが、外部 URL からコンテンツを読み込むこともできます。
 * [タブに対してシームレスな環境を作成する](../tabs/design/tabs.md): Teams タブの設計に関する推奨ガイドラインを参照してください。
 * [モバイル用のタブの作成](../tabs/design/tabs-mobile.md): 電話とタブレットのタブを開発する方法について理解します。
-* [Microsoft Graph API との統合](https://docs.microsoft.com/graph/teams-concept-overview)
+* [Microsoft Graph API で Teams データを利用する](https://docs.microsoft.com/graph/teams-concept-overview)
 * [ツールキットなしでタブを作成する](../tabs/how-to/add-tab.md)
 
 ## <a name="next-lesson"></a>次のレッスン

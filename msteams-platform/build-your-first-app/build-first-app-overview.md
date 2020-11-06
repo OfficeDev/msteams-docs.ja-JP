@@ -3,14 +3,14 @@ title: はじめにアプリの概要と前提条件を最初に作成する
 author: heath-hamilton
 description: Microsoft Teams アプリ開発を開始する方法と、環境をセットアップする方法について説明します。
 ms.author: lajanuar
-ms.date: 10/09/2020
+ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: c158b7ad925e05e4056769536f5e0d212763942a
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 7fc3f7e9fd9d3c2a028999be53ba6bdcd5b3ba72
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452604"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931793"
 ---
 # <a name="build-your-first-microsoft-teams-app-overview"></a>最初の Microsoft Teams アプリの概要を作成する
 
@@ -22,11 +22,11 @@ ms.locfileid: "48452604"
 
 > [!div class="checklist"]
   >
-  > * **Teams ツールキットを使用**して迅速に作業を開始します。 Visual Studio 用の Microsoft Teams toolkit は、アプリプロジェクトとスキャフォールディングを作成するためのものであり、実行中のアプリを数分で利用できるようにします。
-  > * **マニフェストを使用**してアプリを定義します。アプリマニフェストは、Teams アプリが使用する機能とサービスを指定する場所です。
-  > * **アプリの対象ユーザーの範囲**を作成します。個人利用、グループ作業、またはその両方用の Teams アプリを作成します。
-  > * Teams**フレームワークを使用**して作業を開始します。アプリをカスタマイズする (たとえば、チームのテーマに合わせて配色を変更するなど)、TEAMS JavaScript SDK のヘルプを参照してください。 また、ボットを作成および管理するための一般的なツールについても説明します。
-  > * **アプリの展開**: レッスン全体を通して、よくある関連トピック (認証やデザインのガイドラインなど) について説明します。
+  > * **Teams ツールキットを使用** して迅速に作業を開始します。 Visual Studio 用の Microsoft Teams toolkit は、アプリプロジェクトとスキャフォールディングを作成するためのものであり、実行中のアプリを数分で利用できるようにします。
+  > * App **Studio を使用してアプリを構成する** : Teams アプリで使用する機能とサービスを指定します。
+  > * **アプリの対象ユーザーの範囲** を作成します。個人利用、グループ作業、またはその両方用の Teams アプリを作成します。
+  > * Teams の **ツールと sdk を使用** して、Teams の JavaScript SDK のヘルプを使用してアプリをカスタマイズします (たとえば、その配色を teams のテーマに合わせて変更するなど)。 また、ボットを作成および管理するための一般的なツールについても説明します。
+  > * **アプリの展開** : レッスン全体を通して、よくある関連トピック (認証やデザインのガイドラインなど) について説明します。
 
 ## <a name="teams-app-fundamentals"></a>Teams アプリの基礎
 
@@ -34,15 +34,15 @@ ms.locfileid: "48452604"
 
 ### <a name="apps-can-have-multiple-capabilities-and-entry-points"></a>アプリには複数の機能とエントリポイントを含めることができます。
 
-Teams アプリは、1つ以上の [プラットフォーム機能](../concepts/capabilities-overview.md) と [エントリポイント](../concepts/extensibility-points.md)で構成されます。 さまざまなチーム固有の [UI コンポーネントと](../concepts/extensibility-points.md#ui-components)、カードやタスクモジュールなどの規則を使用して、アプリを提示することができます。
+Teams アプリは、1つ以上の [プラットフォーム機能](../concepts/capabilities-overview.md) (アプリを使用する方法) と [エントリポイント](../concepts/extensibility-points.md) (ユーザーがアプリを検出する) で構成されます。
 
 ### <a name="teams-doesnt-host-your-app"></a>Teams がアプリをホストしていない
 
-Teams アプリには、次の3つの重要な要素があります。
+Teams アプリには、次の重要な要素が含まれています。
 
 * アプリに電力を供給するロジック、データストレージ、および API 呼び出し。 これらのサービスは Teams でホストされるものではなく、HTTPS 経由でアクセスできる必要があります。
 * ユーザーがアプリを使用する Teams クライアント (web、デスクトップ、またはモバイル)。
-* アプリパッケージ。 Teams にアプリをインストールするために使用します。 このファイルには、ホストされているサービスへのアプリケーションメタデータとポインターが含まれています。
+* アプリ ID は、アプリをアプリ Studio で構成できます。
 
 ## <a name="get-prerequisites"></a>前提条件を取得する
 
@@ -53,8 +53,8 @@ Teams アプリを作成するための適切なアカウントを持ってお�
 カスタムアプリのサイドロードを許可する Teams アカウントが必要です。 (アカウントで既に提供されている場合があります。)
 
 1. Teams アカウントを所有している場合は、Teams でアプリをサイドロードできるかどうかを確認します。
-    1. Teams クライアントで、[ **アプリ**] を選択します。
-    1. **カスタムアプリをアップロード**するオプションを探します。
+    1. Teams クライアントで、[ **アプリ** ] を選択します。
+    1. **カスタムアプリをアップロード** するオプションを探します。
 
     :::image type="content" source="../assets/images/build-your-first-app/upload-custom-app-closeup.png" alt-text="Teams でカスタムアプリをアップロードできる場所を示す図":::
 
@@ -67,9 +67,9 @@ Microsoft 365 開発者プログラムに参加することによって、アプ
 
 1. [Microsoft 365 開発者プログラム](https://developer.microsoft.com/microsoft-365/dev-program)に移動します。
 1. [ **今すぐ参加** ] を選択し、画面の指示に従います。
-1. [ようこそ] 画面が表示されたら、[ **設定] E5 サブスクリプション**を選択します。
+1. [ようこそ] 画面が表示されたら、[ **設定] E5 サブスクリプション** を選択します。
 1. 管理者アカウントを設定します。 完了すると、次のような画面が表示になります。
-:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Teams でカスタムアプリをアップロードできる場所を示す図":::
+:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Microsoft 365 開発者プログラムにサインアップした後の表示例。":::
 1. 設定したのと同じ管理者アカウントを使用して Teams にログインします。
 1. [ **カスタムアプリをアップロード** する] オプションが選択されているかどうかを確認します。
 
@@ -79,22 +79,22 @@ Microsoft 365 開発者プログラムに参加することによって、アプ
 
 推奨ツールを使用して Teams アプリを構築することはできますが、これらのレッスンでは、Visual Studio Code for the Microsoft Teams Toolkit を使用してすぐに作業を開始する方法を説明します。
 
-Teams では、アプリコンテンツは HTTPS 接続を介してのみ表示されます。 最初のアプリをローカルにホストして時間を節約するので、ngrok を使用して Teams とアプリの間に [セキュリティで保護されたトンネルを設定](../concepts/build-and-test/debug.md#locally-hosted) する方法について説明します。 (運用レベルの Teams アプリは、クラウドでホストされます。)
+Teams では、アプリコンテンツは HTTPS 接続を介してのみ表示されます。 特定の種類のアプリをローカルでデバッグする (bot など) 場合は、ngrok を使用して Teams とアプリの間に [セキュリティで保護されたトンネルを設定](../concepts/build-and-test/debug.md#locally-hosted) する方法について説明します。 (運用チームアプリは、クラウドでホストされます。)
 
 1. [Node.js](https://nodejs.org/en/) をインストールします。
-1. [Ngrok](https://ngrok.com/download)をインストールします。
+1. Bot またはメッセージング拡張機能の構築を計画している場合は、 [ngrok](https://ngrok.com/download) をインストールします。
 1. [Visual Studio Code](https://code.visualstudio.com/download)の最新バージョンをインストールします。 (以前のバージョンは、ツールキットでは動作しない可能性があります)。
-1. Visual Studio Code で、左側のアクティビティバーにある [ **拡張機能**] を選択 :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: し、 **Microsoft Teams Toolkit**をインストールします。
+1. Visual Studio Code で、左側のアクティビティバーにある [ **拡張機能** ] を選択 :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: し、 **Microsoft Teams Toolkit** をインストールします。
 
-    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="Teams でカスタムアプリをアップロードできる場所を示す図":::
+    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="Visual Studio Code の場所を示す図は、Microsoft Teams ツールキットの拡張機能をインストールできます。":::
 
 ## <a name="about-the-tutorials"></a>チュートリアルについて
 
-**最初のアプリ**レッスンを構築する Teams のいずれかで開始できます。 最初にどこに行くべきかがわからない場合は、初心者フレンドリパスに従って "Hello, World!" を作成します。 アプリ.
+**最初のアプリ** レッスンを構築する Teams のいずれかで開始できます。 最初にどこに行くべきかがわからない場合は、初心者フレンドリパスに従って "Hello, World!" を作成します。 アプリ.
 
-:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Teams でカスタムアプリをアップロードできる場所を示す図" border="false":::
+:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Teams ' 最初のアプリのチュートリアルを構築するための学習パスを示すスキルツリー。" border="false":::
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 アカウントと環境をセットアップしたら、構築を開始できます。
 

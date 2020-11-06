@@ -1,18 +1,17 @@
 ---
-title: アプリスタジオと node.js を使い始める
-description: Node.js とアプリ Studio を使用して Microsoft Teams での高度なアプリの構築を開始する
-keywords: 初級ノード .js nodejs アプリ Studio
-ms.date: 11/09/2018
+title: アプリ Studio および Node.js の使用を開始する
+description: Node.js とアプリ Studio を使用して Microsoft Teams での高度なアプリの作成を開始する
+keywords: nodejs App Studio node.js の概要
 ms.topic: tutorial
 ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
-ms.openlocfilehash: 92fbbdd30e9cdaf54644b42bf642ca5825bcec51
-ms.sourcegitcommit: b13b38a104946c32cd5245a7af706070e534927d
+ms.openlocfilehash: 3d86738d32c049d31a84c6c47746e275db5e6349
+ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2020
-ms.locfileid: "43034051"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "48931814"
 ---
-# <a name="get-started-on-the-microsoft-teams-platform-with-nodejs-and-app-studio"></a>Node.js とアプリ Studio を使用して Microsoft Teams プラットフォームで作業を開始する
+# <a name="get-started-on-the-microsoft-teams-platform-with-nodejs-and-app-studio"></a>Node.js とアプリ Studio を使用して Microsoft Teams プラットフォームでの作業を開始する
 
 [Microsoft teams](/microsoftteams/)開発者プラットフォームを使用すると、teams の拡張が容易になり、独自のアプリケーションやサービスを teams ワークスペースにシームレスに統合することができます。 これらのアプリは、企業または世界中の teams に配布できます。
 
@@ -33,10 +32,10 @@ Microsoft Teams を拡張するには、Microsoft Teams アプリを作成する
 このチュートリアルを完了するには、次のツールが必要です。 これらのリンクからインストールすることはできません。
 
 - [Git](https://git-scm.com/downloads)
-- [Node.js および NPM](https://nodejs.org/)
+- [Node.js と NPM](https://nodejs.org/)
 - 任意のテキストエディターまたは IDE を取得します。 [Visual Studio コード](https://code.visualstudio.com/download)を無料でインストールして使用することができます。
 
-インストール時に、、、 `git` `node` `npm`、および`code`のパスを追加するオプションが表示されたら、それを選択します。 これは便利です。
+インストール時に、、、、およびのパスを追加するオプションが表示さ `git` `node` れたら `npm` `code` 、それを選択します。 これは便利です。
 
 ターミナルウィンドウで次のように実行して、ツールが使用可能であることを確認します。
 
@@ -54,12 +53,13 @@ $ npm -v
 5.5.1
 
 $ gulp -v
-CLI version 4.0.2
+CLI version 2.3.0
+Local version 4.0.2
 ```
 
 これらのアプリケーションのバージョンが異なる場合があります。 これは、gulp を除き、問題になりません。 Gulp の場合は、バージョン4.0.0 以降を使用する必要があります。
 
-Gulp がインストールされていない (または、バージョンが正しくない) 場合は、 `npm install gulp`ターミナルウィンドウでを実行して、これを実行します。
+Gulp がインストールされていない (または、バージョンが正しくない) 場合は、ターミナルウィンドウでを実行して、これを実行し `npm install gulp` ます。
 
 Visual Studio Code をインストールした場合は、インストールを確認するには、次のように実行します。
 
@@ -75,7 +75,7 @@ code --version
 
 ### <a name="download-the-sample"></a>サンプルをダウンロードする
 
-シンプルな Hello を提供してい[ます。](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) 開始するためのサンプルです。 ターミナルウィンドウで、次のコマンドを実行して、サンプルリポジトリをローカルコンピューターに複製します。
+シンプルな Hello を提供してい [ます。](https://github.com/OfficeDev/msteams-samples-hello-world-nodejs) 開始するためのサンプルです。 ターミナルウィンドウで、次のコマンドを実行して、サンプルリポジトリをローカルコンピューターに複製します。
 
 ```bash
 git clone https://github.com/OfficeDev/msteams-samples-hello-world-nodejs.git
@@ -106,7 +106,7 @@ npm install
 npm start
 ```
 
-Hello world アプリが開始すると、ターミナルウィンドウ`App started listening on port 3333`に表示されます。
+Hello world アプリが開始すると、 `App started listening on port 3333` ターミナルウィンドウに表示されます。
 
 > [!NOTE]
 > 上記のメッセージに別のポート番号が表示されている場合は、ポート環境変数が設定されているためです。 そのポートを引き続き使用するか、環境変数を3333に変更することができます。
@@ -122,9 +122,9 @@ Hello world アプリが開始すると、ターミナルウィンドウ`App sta
 
 ### <a name="host-the-sample-app"></a>サンプルアプリをホストする
 
-Microsoft Teams のアプリは、1つまたは複数の機能を公開している web アプリケーションであることに注意してください。 Teams プラットフォームでアプリを読み込むには、インターネットからアプリにアクセスできる必要があります。 アプリをインターネットからアクセスできるようにするには、アプリを*ホスト*する必要があります。
+Microsoft Teams のアプリは、1つまたは複数の機能を公開している web アプリケーションであることに注意してください。 Teams プラットフォームでアプリを読み込むには、インターネットからアプリにアクセスできる必要があります。 アプリをインターネットからアクセスできるようにするには、アプリを *ホスト* する必要があります。
 
-ローカルテストでは、ローカルコンピューター上でアプリを実行し、web エンドポイントを使用してそのアプリケーションへのトンネルを作成できます。 [ngrok](https://ngrok.com)は、そのようなことを可能にする無償のツールです。 *Ngrok*を使用すると`https://d0ac14a5.ngrok.io` 、などの web アドレスを取得できます (この URL は例にすぎません)。 環境の*ngrok*を[ダウンロードしてインストール](https://ngrok.com/download)することができます。 がの場所に追加さ`PATH`れていることを確認してください。
+ローカルテストでは、ローカルコンピューター上でアプリを実行し、web エンドポイントを使用してそのアプリケーションへのトンネルを作成できます。 [ngrok](https://ngrok.com) は、そのようなことを可能にする無償のツールです。 *Ngrok* を使用すると、などの web アドレスを取得でき `https://d0ac14a5.ngrok.io` ます (この URL は例にすぎません)。 環境の *ngrok* を [ダウンロードしてインストール](https://ngrok.com/download)することができます。 がの場所に追加されていることを確認してください `PATH` 。
 
 インストールすると、新しいターミナルウィンドウを開き、次のコマンドを実行してトンネルを作成できます。 このサンプルではポート3333を使用しているため、ここで必ず指定してください。
 
@@ -132,14 +132,14 @@ Microsoft Teams のアプリは、1つまたは複数の機能を公開してい
 ngrok http 3333 -host-header=localhost:3333
 ```
 
-*Ngrok*は、インターネットからの要求をリスンし、ポート3333で実行されているアプリにルーティングします。 ブラウザー `https://d0ac14a5.ngrok.io/hello`を開き、アプリの hello ページを読み込むことによって確認できます。 この URL ではなく、コンソールセッションで*ngrok*によって表示される転送アドレスを使用してください。
+*Ngrok* は、インターネットからの要求をリスンし、ポート3333で実行されているアプリにルーティングします。 ブラウザーを開き、アプリの hello ページを読み込むことによって確認でき `https://d0ac14a5.ngrok.io/hello` ます。 この URL ではなく、コンソールセッションで *ngrok* によって表示される転送アドレスを使用してください。
 
 > [!NOTE]
-> 上記の[ビルド](#build-and-run-the-sample)で別のポートを使用している場合は、同じポート番号を使用して*ngrok*トンネルをセットアップしてください。
+> 上記の [ビルド](#build-and-run-the-sample) で別のポートを使用している場合は、同じポート番号を使用して *ngrok* トンネルをセットアップしてください。
 > [!TIP]
-> *Ngrok*を別のターミナルウィンドウで実行して、ノードアプリに影響を及ぼすことなく、後で停止、再構築、再実行する必要があります。 *Ngrok*セッションは、このウィンドウで役に立つデバッグ情報を返します。
+> *Ngrok* を別のターミナルウィンドウで実行して、ノードアプリに影響を及ぼすことなく、後で停止、再構築、再実行する必要があります。 *Ngrok* セッションは、このウィンドウで役に立つデバッグ情報を返します。
 
-固定名を許可する有料版の*ngrok*があります。 無料バージョンを使用する場合、アプリは開発用コンピューター上の現在のセッション中にのみ使用できます。 コンピューターがシャットダウンされるかスリープ状態になると、サービスは使用できなくなります。 他のユーザーによるテスト用にアプリを共有する場合は、この点に注意してください。 サービスを再起動する必要がある場合は、新しいアドレスを返し、そのアドレスを使用するすべての場所を更新する必要があります。
+固定名を許可する有料版の *ngrok* があります。 無料バージョンを使用する場合、アプリは開発用コンピューター上の現在のセッション中にのみ使用できます。 コンピューターがシャットダウンされるかスリープ状態になると、サービスは使用できなくなります。 他のユーザーによるテスト用にアプリを共有する場合は、この点に注意してください。 サービスを再起動する必要がある場合は、新しいアドレスを返し、そのアドレスを使用するすべての場所を更新する必要があります。
 
 アプリをアプリを使用して Teams に登録するときに必要になるため、後でアプリの URL を書き留めておいてください。 このため、メモ帳は正常に動作します。
 
@@ -168,7 +168,7 @@ WEBSITE_NODE_DEFAULT_VERSION=8.9.4
 
 その方法は、アプリをホストした方法によって異なります。 環境変数を使用する場合の重要な点は、これらの値は環境の一部であり、アプリのコードからアクセスできますが、サイトを構成するファイルを調べる可能性がある第三者には公開されません。
 
-Ngrok を使用してアプリを実行している場合は、いくつかのローカル環境変数を設定する必要があります。 これを行うには多くの方法がありますが、Visual Studio Code を使用している場合は、[起動構成](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations)を追加するのが最も簡単です。
+Ngrok を使用してアプリを実行している場合は、いくつかのローカル環境変数を設定する必要があります。 これを行うには多くの方法がありますが、Visual Studio Code を使用している場合は、 [起動構成](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations)を追加するのが最も簡単です。
 
 ``` 
 {
@@ -188,28 +188,28 @@ Ngrok を使用してアプリを実行している場合は、いくつかの�
 }
 ```
 
-詳細は次のとおりです。
+ここで、
 
 MICROSOFT_APP_ID と MICROSOFT_APP_PASSWORD は、それぞれの bot の ID とパスワードです。
 NODE_DEBUG は、Visual Studio Code デバッグコンソールで bot で起こっていることを示します。
 NODE_CONFIG_DIR リポジトリのルートにあるディレクトリを指します (既定では、アプリがローカルで実行されている場合は、そのフォルダーが src フォルダーで検索されます)。
 
 > [!Note]
-> チュートリアルの前半で npm を停止していない場合は、Visual Studio Code `npm stop`が起動構成変数を正しくピックアップするために実行する必要があります。
+> チュートリアルの前半で npm を停止していない場合は、 `npm stop` Visual Studio Code が起動構成変数を正しくピックアップするために実行する必要があります。
 
 <a name="ConfigureTheAppTab"></a>
 
 ## <a name="configure-the-app-tab"></a>[アプリ] タブを構成する
 
-アプリをチームにインストールしたら、コンテンツを表示するように構成する必要があります。 チーム内のチャネルに移動し、[ **+** ] ボタンをクリックして新しいタブを追加します。その後、[ `Hello World` **タブの追加]** ボックスの一覧から選択できます。 構成ダイアログが表示されます。 このダイアログボックスを使用すると、このチャネルに表示するタブを選択できます。 タブを選択して [] を`Save`クリックすると、 `Hello World`選択したタブに読み込まれたタブが表示されます。
+アプリをチームにインストールしたら、コンテンツを表示するように構成する必要があります。 チーム内のチャネルに移動し、[ **+** ] ボタンをクリックして新しいタブを追加します。その後、[ `Hello World` **タブの追加]** ボックスの一覧から選択できます。 構成ダイアログが表示されます。 このダイアログボックスを使用すると、このチャネルに表示するタブを選択できます。 タブを選択して [] をクリックすると、選択したタブに読み込まれたタブが表示され `Save` `Hello World` ます。
 
-<img width="430px" src="~/assets/images/samples-hello-world-tab-configure.png" title="構成のスクリーンショット" />
+<img width="430px" src="~/assets/images/samples-hello-world-tab-configure.png" alt-text="Screenshot of configure" />
 
 ### <a name="test-your-bot-in-teams"></a>Teams でボットをテストする
 
-Teams で bot と対話できるようになりました。 アプリを登録したチームでチャネルを選択し、「」 `@your-bot-name`と入力して、その後にメッセージを入力します。 これは、 ** \@メンション**と呼ばれます。 Bot に送信するすべてのメッセージは、返信として返送されます。
+Teams で bot と対話できるようになりました。 アプリを登録したチームでチャネルを選択し、「」と入力し `@your-bot-name` て、その後にメッセージを入力します。 これは、 **\@ メンション** と呼ばれます。 Bot に送信するすべてのメッセージは、返信として返送されます。
 
-<img width="450px" title="ボット応答" src="~/assets/images/samples-hello-world-bot.png" />
+<img width="450px" alt-text="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
 <a name="ComposeRichMessages"></a>
 
@@ -217,10 +217,10 @@ Teams で bot と対話できるようになりました。 アプリを登録�
 
 メッセージング拡張機能をテストするには、スレッドビューの入力ボックスの下にある3つのドットをクリックします。 **' Hello World '** アプリが含まれるメニューが表示されます。 これをクリックすると、いくつかのランダムなテキストが表示されます。 いずれかを選択して、会話に挿入することができます。
 
-<img width="430px" title="メッセージング拡張メニュー" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
+<img width="430px" alt-text="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
 
-<img width="430px" title="メッセージング拡張機能の結果" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
+<img width="430px" alt-text="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
 
 ランダムなテキストの1つを選択すると、カードが書式設定されており、メッセージの下部に自分のメッセージで送信する準備ができます。
 
-<img width="430px" title="メッセージング拡張送信" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
+<img width="430px" alt-text="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
