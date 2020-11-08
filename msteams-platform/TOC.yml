@@ -14,7 +14,7 @@
       href: build-your-first-app/build-and-run.md
     - name: 個人用のタブを作成する
       href: build-your-first-app/build-personal-tab.md
-    - name: チャネルのタブを作成する
+    - name: '[チャネルとグループ] タブを作成する'
       href: build-your-first-app/build-channel-tab.md
     - name: Bot を作成する
       href: build-your-first-app/build-bot.md
