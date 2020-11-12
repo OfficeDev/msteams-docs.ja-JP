@@ -4,14 +4,14 @@ description: Teams でのリソース固有の同意と、その利点を活用�
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
-ms.topic: Overview
+ms.topic: reference
 keywords: teams authorization OAuth SSO AAD rsc Graph
-ms.openlocfilehash: e7a59497b77b303b6ef06582828f7c5cb36dbb58
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: cbeb1069f7f80608ec3a65710543b429e6f2908b
+ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796194"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48995024"
 ---
 # <a name="resource-specific-consent-rsc"></a>リソース固有の同意 (RSC)
 
@@ -25,18 +25,18 @@ ms.locfileid: "48796194"
 |アプリケーションのアクセス許可| アクション |
 | ----- | ----- |
 |TeamSettings.Read.Group | このチームの設定を取得します。|
-|TeamSettings。|このチームの設定を更新します。|
+|TeamSettings.ReadWrite.Group|このチームの設定を更新します。|
 |ChannelSettings.Read.Group|このチームのチャネル名、チャネルの説明、およびチャネルの設定を取得します。|
-|ChannelSettings のグループ|このチームのチャネル名、チャネルの説明、およびチャネルの設定を更新します。|
+|ChannelSettings.ReadWrite.Group|このチームのチャネル名、チャネルの説明、およびチャネルの設定を更新します。|
 |Channel.Create.Group|このチームのチャネルを作成します。|
 |Channel.Delete.Group|このチームのチャネルを削除します。|
 |ChannelMessage.Read.Group |このチームのチャネルメッセージを取得します。|
-|TeamsAppInstallation|このチームのインストール済みアプリのリストを取得します。|
+|TeamsAppInstallation.Read.Group|このチームのインストール済みアプリのリストを取得します。|
 |TeamsTab.Read.Group|このチームのタブのリストを取得します。|
 |TeamsTab.Create.Group|このチームのタブを作成します。|
-|TeamsTab|このチームのタブを更新します。|
+|TeamsTab.ReadWrite.Group|このチームのタブを更新します。|
 |TeamsTab.Delete.Group|このチームのタブを削除します。|
-|TeamMember. グループ|このチームのメンバーを取得します。|
+|TeamMember.Read.Group|このチームのメンバーを取得します。|
 
 >[!NOTE]
 >リソース固有のアクセス許可は、Teams クライアントにインストールされている Teams アプリに対してのみ使用できます。現在、Azure Active Directory ポータルには含まれていません。

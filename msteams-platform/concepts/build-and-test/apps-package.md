@@ -3,12 +3,12 @@ title: アプリをパッケージ化する
 description: Microsoft Teams で、テスト用、アップロード用、公開用のアプリをパッケージ化する方法について説明します
 keywords: Teams のアプリのパッケージ化
 ms.topic: conceptual
-ms.openlocfilehash: d2d49dcc5c4ccada0a75de5df6fda29a60e809f6
-ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
+ms.openlocfilehash: aec25d3346a93e15f704435f3c6aa3ddca9fd435
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "48397702"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48997987"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>Microsoft Teams アプリのアプリ パッケージを作成する
 
@@ -28,7 +28,7 @@ Teams アプリ パッケージは、次のものを含む .zip ファイルで�
 > [!TIP]
 > マニフェストの最初にスキーマを指定して、コード エディターで IntelliSense または同様のサポートを有効にします。
 >
-> `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",`
+> `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
 
 ## <a name="icons"></a>アイコン
 

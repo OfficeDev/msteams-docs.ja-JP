@@ -5,12 +5,12 @@ description: teams 会議用のアプリを作成する
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: teams アプリ会議ユーザー参加者ロール api
-ms.openlocfilehash: cf42d660c9b4a82f8e28d4d4379194c1bcc681e1
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: d7dc812f715b6a7edbcc706946b8d80dd692daee
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796170"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48997973"
 ---
 # <a name="create-apps-for-teams-meetings-developer-preview"></a>Teams 会議用のアプリを作成する (開発者プレビュー)
 
@@ -27,7 +27,9 @@ ms.locfileid: "48796170"
 
 1. などの一部の会議 Api で `GetParticipant` は、 [ボット登録と BOT アプリ ID](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) が認証トークンを生成する必要があります。
 
-1. 開発者は、チームの会議中にトリガー[される会議](design/designing-in-meeting-dialog.md)中のダイアログのための、会議前およびミーティング後のシナリオのための [teams][タブデザインのガイドライン](../tabs/design/tabs.md)に従う必要があります。
+1. 開発者は、teams の会議中にトリガー[される会議](design/designing-in-meeting-dialog.md)中のダイアログに加えて、会議前およびミーティング後のシナリオについて、teams の一般的な[タブデザインガイドライン](../tabs/design/tabs.md)に従う必要があります。
+
+1. アプリをリアルタイムで更新するためには、会議のイベントアクティビティに基づいて最新の状態になっている必要があります。 これらのイベントは、会議中のダイアログ (の「完了パラメーター」を参照してください `bot Id` `Notification Signal API` ) および会議ライフサイクル全体のその他のサーフェス内に存在することができます。
 
 ## <a name="meeting-apps-api-reference"></a>会議アプリ API リファレンス
 
@@ -52,6 +54,7 @@ ms.locfileid: "48796170"
 > * 現時点では、Teams は、API のために350以上の参加者の大きな配布リストまたは名簿サイズをサポートしていません `GetParticipant` 。
 >
 > * Bot Framework SDK のサポートは近日に予定されています。
+
 
 #### <a name="request"></a>要求
 
@@ -128,10 +131,15 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 ```
 #### <a name="response-codes"></a>応答コード
 
-**403** : アプリは、参加者情報を取得することを許可されていません。 これは、最も一般的なエラー応答であり、アプリがテナント管理者によって無効にされた場合や、ライブサイトの緩和時にブロックされた場合など、アプリがインストールされていない場合にトリガーされます。  
-**200** : 参加者情報が正常に取得されました  
-**401** : 無効なトークン  
-**404** : 会議が存在しないか、参加者が見つかりません。
+**403** : アプリは、参加者情報を取得することを許可されていません。 これは、最も一般的なエラー応答であり、アプリがテナント管理者によって無効にされた場合や、ライブサイトの移行中にブロックされた場合など、会議にインストールされていない場合にトリガーされます。  
+**200** : 参加者情報が正常に取得されました。  
+**401** : 無効なトークンです。  
+**404** : 参加者が見つかりません。 
+**500** : 会議は有効期限が切れています (会議が終了してからの経過期間は60日を超えています)。または、参加者が役割に基づいてアクセス許可を持っていません。
+
+**近日公開**
+
+**404** : 会議の有効期限が切れているか、参加者が見つかりません。 
 
 <!-- markdownlint-disable MD024 -->
 ### <a name="notificationsignal-api"></a>NotificationSignal API
@@ -155,7 +163,10 @@ POST /v3/conversations/{conversationId}/activities
 
 > [!NOTE]
 >
-> 以下の requeste ペイロードの externalResourceUrl に含まれる [参照入力 Tid はオプションのパラメーターです。 マニフェストで宣言されている Bot ID です。 Bot は result オブジェクトを受け取ります。
+> *  次に示す要求されたペイロードで `completionBotId` は、のパラメーター `externalResourceUrl` は省略可能です。 これは、 `Bot ID` マニフェストで宣言されているです。 Bot は result オブジェクトを受け取ります。
+> * ExternalResourceUrl の幅と高さのパラメーターは、ピクセル単位でなければなりません。 ディメンションが許容範囲内にあることを確認するには、 [設計ガイドライン](design/designing-in-meeting-dialog.md) を参照してください。
+> * URL は、 `<iframe>` [会議中] ダイアログボックスの内側に読み込まれるページです。 URL のドメインは、アプリのマニフェストのアプリの配列に含まれている必要があり `validDomains` ます。
+
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -167,7 +178,7 @@ POST /v3/conversations/{conversationId}/activities
     "channelData": {
         "notification": {
             "alertInMeeting": true,
-            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID"
+            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
         }
     },
     "replyToId": "1493070356924"
@@ -181,7 +192,7 @@ Activity activity = MessageFactory.Text("This is a meeting signal test");
 MeetingNotification notification = new MeetingNotification
   {
     AlertInMeeting = true,
-    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID"
+    ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
   };
 activity.ChannelData = new TeamsChannelData
   {
@@ -198,7 +209,7 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 replyActivity.channelData = {
     notification: {
         alertInMeeting: true,
-        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID’
+        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID’
     }
 };
 await context.sendActivity(replyActivity);

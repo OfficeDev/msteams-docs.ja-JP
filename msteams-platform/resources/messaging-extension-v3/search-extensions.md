@@ -3,12 +3,12 @@ title: メッセージング拡張機能を使用した検索
 description: 検索ベースのメッセージング拡張機能を開発する方法について説明します。
 keywords: teams メッセージング拡張メッセージング拡張検索
 ms.date: 07/20/2019
-ms.openlocfilehash: b791e7cc8f9a311d0610573f2fa3659578c29c7d
-ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
+ms.openlocfilehash: f46548d2e7e03ecebd8bc0fb6685aeb82b8eec6e
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "44801368"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48998001"
 ---
 # <a name="search-with-messaging-extensions"></a>メッセージング拡張機能を使用した検索
 
@@ -30,7 +30,7 @@ ms.locfileid: "44801368"
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
@@ -87,13 +87,13 @@ ms.locfileid: "44801368"
 
 アプリをアップロードすることで、メッセージング拡張機能をテストできます。
 
-メッセージング拡張機能を開くには、いずれかのチャットまたはチャネルに移動します。 [新規作成] ボックスの [**その他のオプション**(**&#8943;**)] ボタンをクリックして、メッセージング拡張機能を選択します。
+メッセージング拡張機能を開くには、いずれかのチャットまたはチャネルに移動します。 [新規作成] ボックスの [ **その他のオプション** ( **&#8943;** )] ボタンをクリックして、メッセージング拡張機能を選択します。
 
 ## <a name="add-event-handlers"></a>イベントハンドラーを追加する
 
 ほとんどの作業では、 `onQuery` メッセージング拡張ウィンドウでのすべての操作を処理するイベントが必要になります。
 
-マニフェストにがに設定されている場合は、 `canUpdateConfiguration` `true` メッセージング拡張機能の [**設定**] メニュー項目を有効にして、とも処理する必要があり `onQuerySettingsUrl` `onSettingsUpdate` ます。
+マニフェストにがに設定されている場合は、 `canUpdateConfiguration` `true` メッセージング拡張機能の [ **設定** ] メニュー項目を有効にして、とも処理する必要があり `onQuerySettingsUrl` `onSettingsUpdate` ます。
 
 ### <a name="handle-onquery-events"></a>OnQuery イベントを処理する
 
@@ -101,7 +101,7 @@ ms.locfileid: "44801368"
 
 メッセージング拡張機能が構成ページを使用している場合は、のハンドラーで、格納されている構成情報があるかどうかを `onQuery` まずチェックする必要があります。メッセージング拡張機能が構成されていない場合は、 `config` 構成ページへのリンクを含む応答を返します。 構成ページからの応答もによって処理されることに注意して `onQuery` ください。 (唯一の例外は、のハンドラーによって構成ページが呼び出されたときです `onQuerySettingsUrl` 。次のセクションを参照してください)。
 
-メッセージング拡張機能で認証が必要な場合は、ユーザー状態情報を確認してください。ユーザーがサインインしていない場合は、このトピックで後述する「[認証](#authentication)」の手順に従ってください。
+メッセージング拡張機能で認証が必要な場合は、ユーザー状態情報を確認してください。ユーザーがサインインしていない場合は、このトピックで後述する「 [認証](#authentication) 」の手順に従ってください。
 
 次に、が設定されているかどうかを確認します `initialRun` 。そうである場合は、指示の提供や応答の一覧などの適切なアクションを実行します。
 
@@ -109,11 +109,11 @@ ms.locfileid: "44801368"
 
 ### <a name="handle-onquerysettingsurl-and-onsettingsupdate-events"></a>OnQuerySettingsUrl と onSettingsUpdate イベントを処理する
 
-イベントとイベントは連携して、[ `onQuerySettingsUrl` `onSettingsUpdate` **設定**] メニュー項目を有効にします。
+イベントとイベントは連携して、[ `onQuerySettingsUrl` `onSettingsUpdate` **設定** ] メニュー項目を有効にします。
 
 ![設定メニュー項目の場所のスクリーンショット](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
 
-のハンドラーは、 `onQuerySettingsUrl` 構成ページの URL を返します。構成ページが閉じると、のハンドラーは、 `onSettingsUpdate` 返された状態を受け入れて保存します。 (これは1つのケースで `onQuery` 、構成ページから応答を受信し*ません*。)
+のハンドラーは、 `onQuerySettingsUrl` 構成ページの URL を返します。構成ページが閉じると、のハンドラーは、 `onSettingsUpdate` 返された状態を受け入れて保存します。 (これは1つのケースで `onQuery` 、構成ページから応答を受信し *ません* 。)
 
 ## <a name="receive-and-respond-to-queries"></a>クエリを受信して応答する
 
@@ -217,7 +217,7 @@ ms.locfileid: "44801368"
 ]
 ```
 
-アプリマニフェストをリッスンするためにドメインを追加したら、次の呼び出し要求に[応答](#respond-to-user-requests)するように bot コードを変更する必要があります。
+アプリマニフェストをリッスンするためにドメインを追加したら、次の呼び出し要求に [応答](#respond-to-user-requests) するように bot コードを変更する必要があります。
 
 ```json
 {
@@ -255,9 +255,9 @@ ms.locfileid: "44801368"
 * [Office 365 コネクタカード](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [アダプティブカード](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-概要については、「[カード](~/task-modules-and-cards/what-are-cards.md)」を参照してください。
+概要については、「 [カード](~/task-modules-and-cards/what-are-cards.md) 」を参照してください。
 
-サムネイルおよびヒーローカードの種類を使用する方法については、「[カードおよびカードのアクションを追加](~/task-modules-and-cards/cards/cards-actions.md)する」を参照してください。
+サムネイルおよびヒーローカードの種類を使用する方法については、「 [カードおよびカードのアクションを追加](~/task-modules-and-cards/cards/cards-actions.md)する」を参照してください。
 
 Office 365 コネクタカードに関するその他のドキュメントについては、「 [office 365 コネクタカードの使用](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)」を参照してください。
 
@@ -484,11 +484,11 @@ Office 365 コネクタカードに関するその他のドキュメントにつ
 ```
 
 > [!NOTE]
-> チームのポップアップでサインインするために、URL のドメイン部分は、アプリの有効なドメインの一覧に含まれている必要があります。 (マニフェストスキーマの[Validdomains](~/resources/schema/manifest-schema.md#validdomains)を参照してください)。
+> チームのポップアップでサインインするために、URL のドメイン部分は、アプリの有効なドメインの一覧に含まれている必要があります。 (マニフェストスキーマの [Validdomains](~/resources/schema/manifest-schema.md#validdomains) を参照してください)。
 
 ### <a name="start-the-sign-in-flow"></a>サインインフローを開始する
 
-サインイン手順は、ポップアップウィンドウ内に表示されるようにする必要があります。 これは、メッセージパッシングを使用する[Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client)と統合する必要があります。
+サインイン手順は、ポップアップウィンドウ内に表示されるようにする必要があります。 これは、メッセージパッシングを使用する [Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client)と統合する必要があります。
 
 Microsoft Teams 内部で実行されている他の組み込みエクスペリエンスと同様に、ウィンドウ内のコードは最初に呼び出す必要があり `microsoftTeams.initialize()` ます。 コードで OAuth フローを実行すると、Teams ユーザー ID をウィンドウに渡すことができます。これにより、OAuth サインイン URL に渡されます。
 
@@ -554,7 +554,7 @@ Microsoft Teams 内部で実行されている他の組み込みエクスペリ�
 
 ### <a name="net"></a>.NET
 
-Bot ビルダー SDK for .NET を使用してクエリを受信して処理するには、受信アクティビティのアクションの種類を確認し `invoke` てから、NuGet パッケージの[各 Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)でヘルパーメソッドを使用して、メッセージング拡張アクティビティであるかどうかを確認します。
+Bot ビルダー SDK for .NET を使用してクエリを受信して処理するには、受信アクティビティのアクションの種類を確認し `invoke` てから、NuGet パッケージの [各 Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) でヘルパーメソッドを使用して、メッセージング拡張アクティビティであるかどうかを確認します。
 
 #### <a name="example-code-in-net"></a>.NET でのコード例
 
@@ -655,4 +655,4 @@ class App {
 const app = new App();
 app.run();
 ```
-[Bot フレームワークサンプル](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)*も参照してください*。
+[Bot フレームワークサンプル](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)*も参照してください* 。

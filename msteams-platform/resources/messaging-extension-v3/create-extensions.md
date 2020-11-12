@@ -2,12 +2,12 @@
 title: メッセージング拡張機能を使用したアクションの開始
 description: アクションベースのメッセージング拡張機能を作成して、ユーザーが外部サービスを起動できるようにする
 keywords: teams メッセージング拡張メッセージング拡張検索
-ms.openlocfilehash: 4eb5984f4a75f185accfe7ba87e9389361946959
-ms.sourcegitcommit: 6c786434b56cc8c2765a14aa1f6149870245f309
+ms.openlocfilehash: dd88360e342788fc0505809c6c8281c64fb7afbb
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "44801371"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48997994"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>メッセージング拡張機能を使用したアクションの開始
 
@@ -29,7 +29,7 @@ ms.locfileid: "44801371"
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
@@ -132,7 +132,7 @@ ms.locfileid: "44801371"
 
 ![メッセージからアクションを開始する例](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
-メッセージからメッセージング拡張機能を有効にするには、 `context` `commands` 次の例に示すように、アプリマニフェストのメッセージング拡張機能のオブジェクトにパラメーターを追加する必要があります。 配列の有効な文字列 `context` は `"message"` 、、、 `"commandBox"` `"compose"` です。 既定値は `["compose", "commandBox"]` です。 パラメーターの詳細については、「[コマンドの定義](#define-commands)」セクションを参照してください `context` 。
+メッセージからメッセージング拡張機能を有効にするには、 `context` `commands` 次の例に示すように、アプリマニフェストのメッセージング拡張機能のオブジェクトにパラメーターを追加する必要があります。 配列の有効な文字列 `context` は `"message"` 、、、 `"commandBox"` `"compose"` です。 既定値は `["compose", "commandBox"]` です。 パラメーターの詳細については、「 [コマンドの定義](#define-commands) 」セクションを参照してください `context` 。
 
 ```json
 "composeExtensions": [
@@ -224,9 +224,9 @@ ms.locfileid: "44801371"
 
 ### <a name="test-via-uploading"></a>アップロードによるテスト
 
-アプリをアップロードすることで、メッセージング拡張機能をテストできます。 詳細について[は、「チームでアプリをアップロード](~/concepts/deploy-and-publish/apps-upload.md)する」を参照してください。
+アプリをアップロードすることで、メッセージング拡張機能をテストできます。 詳細について [は、「チームでアプリをアップロード](~/concepts/deploy-and-publish/apps-upload.md) する」を参照してください。
 
-メッセージング拡張機能を開くには、いずれかのチャットまたはチャネルに移動します。 [新規作成] ボックスの [**その他のオプション**(**&#8943;**)] ボタンをクリックして、メッセージング拡張機能を選択します。
+メッセージング拡張機能を開くには、いずれかのチャットまたはチャネルに移動します。 [新規作成] ボックスの [ **その他のオプション** ( **&#8943;** )] ボタンをクリックして、メッセージング拡張機能を選択します。
 
 ## <a name="collecting-input-from-users"></a>ユーザーからの入力を収集する
 
@@ -242,7 +242,7 @@ Teams でエンドユーザーから情報を収集するには、3つの方法�
 
 この方法では、サービスでカスタムのアダプティブカードを定義して、エンドユーザーの入力を収集できます。 この方法では、 `fetchTask` マニフェスト内のパラメーターをに設定し `true` ます。 `fetchTask` `true` コマンドに対して定義されている静的パラメーターが設定されている場合は無視されることに注意してください。
 
-このメソッドでは、サービスはイベントを受け取り、 `composeExtension/fetchTask` アダプティブカードベースの[タスクモジュール応答](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)と共に応答する必要があります。 アダプティブカードを使用した応答の例を次に示します。
+このメソッドでは、サービスはイベントを受け取り、 `composeExtension/fetchTask` アダプティブカードベースの [タスクモジュール応答](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)と共に応答する必要があります。 アダプティブカードを使用した応答の例を次に示します。
 
 ```json
 {
@@ -293,7 +293,7 @@ Bot は、ユーザーの入力を受け取る前に、ユーザーが拡張機�
 
 このメソッドでは、 `<iframe>` カスタム UI を表示してユーザー入力を収集するためのベースのウィジェットをサービスで表示できます。 この方法では、 `fetchTask` マニフェスト内のパラメーターをに設定し `true` ます。
 
-アダプティブカードフローと同じように、サービスはイベントを送信 `fetchTask` し、URL ベースの[タスクモジュール応答](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)で応答する必要があります。 アダプティブカードを使用した応答の例を次に示します。
+アダプティブカードフローと同じように、サービスはイベントを送信 `fetchTask` し、URL ベースの [タスクモジュール応答](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)で応答する必要があります。 アダプティブカードを使用した応答の例を次に示します。
 
 ```json
 {
@@ -378,7 +378,7 @@ Bot は、ユーザーの入力を受け取る前に、ユーザーが拡張機�
 
 ### <a name="compose-extension-authconfig-response"></a>新規作成拡張機能の認証/構成応答
 
-これは、拡張機能が続行するために認証または構成を必要とする場合に使用されます。 詳細については、「検索」セクションの「[認証」セクション](~/resources/messaging-extension-v3/search-extensions.md#authentication)を参照してください。
+これは、拡張機能が続行するために認証または構成を必要とする場合に使用されます。 詳細については、「検索」セクションの「 [認証」セクション](~/resources/messaging-extension-v3/search-extensions.md#authentication) を参照してください。
 
 ### <a name="compose-extension-result-response"></a>拡張結果の作成の応答
 
@@ -556,7 +556,7 @@ teamChatConnector.onComposeExtensionSubmitAction((
     });
 ```
 
-[Bot フレームワークサンプル](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)*も参照してください*。
+[Bot フレームワークサンプル](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)*も参照してください* 。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 

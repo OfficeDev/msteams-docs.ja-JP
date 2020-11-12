@@ -2,12 +2,12 @@
 title: 新機能
 description: Microsoft Teams のすべての新しい開発者向け機能について説明します。
 keywords: teams 新しい最新情報
-ms.openlocfilehash: b4e36ab00a784017cef20657e9ee548ed90f3efa
-ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
+ms.openlocfilehash: 69dec453483ec9edab3ad07abf57044ac93c2dee
+ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "48452814"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "48997959"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -20,6 +20,7 @@ ms.locfileid: "48452814"
 
 | **Date** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+|11/11/2020| バージョン1.8 に更新されたマニフェストスキーマ| [リファレンス: Microsoft Teams のマニフェストスキーマ](resources/schema/manifest-schema.md)|
 |9/30/2020|モバイルデバイスでのボットへのファイルの送信と受信がサポートされるようになりました。|[Bot を使用してファイルを送受信する](resources/bot-v3/bots-files.md)|
 |09/22/2020|新しい "Teams の使用を開始する" ガイダンス|[最初の Teams アプリの概要を作成する](build-your-first-app/build-first-app-overview.md)|
 |9/18/2020|会議中の Teams アプリのサポート (リリースプレビュー)|Teams 会議で Teams 会議と[アプリ](apps-in-teams-meetings/teams-apps-in-meetings.md)[用のアプリを作成する](apps-in-teams-meetings/create-apps-for-teams-meetings.md)|
