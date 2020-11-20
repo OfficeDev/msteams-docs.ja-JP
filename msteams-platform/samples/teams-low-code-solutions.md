@@ -4,31 +4,31 @@ author: laujan
 description: Teams の利用可能な Microsoft 低およびコードソリューションの詳細
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 089e436d43819f9aabe3ceb47760f521b014d93f
-ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
+ms.openlocfilehash: 1166de0ae6e5512f4943ca1a3a7e74c62a0d5cf1
+ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48995003"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "49366890"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Microsoft Teams 用の低コードカスタムアプリを作成する
 
 [Microsoft Teams](/microsoftteams/platform) は、拡張性と適応性の両方を備えています。 これは、ユーザーの個別のニーズを満たす Teams 用のカスタムアプリケーションを自由に構築できることを意味します。 アプリケーションは最初から作成できますが、将来の迅速なソリューションに対する需要があるため、低コードオプションは、圧縮されたタイムフレーム内で洗練されたアプリを作成するために必要なものにすぎない場合があります。
 
-低コードプラットフォームは、ソフトウェア開発に直観的な方法を提供し、アプリケーションとプロセスを構築するためのコーディングをほとんどまたはまったく必要としません。 市民開発者は、カスタムアプリを簡単に構築できます。プロフェッショナル開発者は、アプリの開発と展開プロセスを飛躍的に促進できます。 ほとんどの低コードプラットフォームは、ビジュアルインターフェイス、バックエンドサービスへのコネクタ、および組み込みのアプリライフサイクル管理システムによって構成されており、アプリケーションを構築、デバッグ、展開、および維持します。 Microsoft は、低コード属性を使用して、魅力的な Teams 互換アプリをすばやく構築するためのいくつかの革新的なゲートウェイを提供しています。
+低コードプラットフォームは、ソフトウェア開発に直観的な方法を提供し、アプリケーションとプロセスを構築するためのコーディングをほとんどまたはまったく必要としません。 開発者は、カスタムアプリを簡単に作成できるようになり、プロフェッショナル開発者は、アプリの開発と展開プロセスを飛躍的に促進することができます。 ほとんどの低コードプラットフォームは、ビジュアルインターフェイス、バックエンドサービスへのコネクタ、および組み込みのアプリライフサイクル管理システムによって構成されており、アプリケーションを構築、デバッグ、展開、および維持します。 Microsoft は、低コード属性を使用して、魅力的な Teams 互換アプリをすばやく構築するためのいくつかの革新的なゲートウェイを提供しています。
 
 1. [Microsoft 電源プラットフォーム](#teams-and-microsoft-power-platform)
 1. [Microsoft Teams アプリテンプレート](#teams-app-templates)
 
 ## <a name="teams-and-microsoft-power-platform"></a>Teams と Microsoft Power Platform
 
-Microsoft Power Platform (/powerplatform) は、1つの強力なアプリケーションプラットフォームで、4つの堅牢な Microsoft テクノロジを組み合わせたものです。 Power BI、Power Apps、Power オートメーション (旧称 Microsoft Flow) および Power Virtual Agent は、ソリューションの構築、プロセスの自動化、データの分析、および統合された統合環境内の仮想エージェントの作成を支援します。
+[Microsoft 電源プラットフォーム](/power-platform) は、1つの強力なアプリケーションプラットフォームで、4つの堅牢な microsoft テクノロジを組み合わせています。 Power BI、Power Apps、Power オートメーション (旧称 Microsoft Flow) および Power Virtual Agent は、ソリューションの構築、プロセスの自動化、データの分析、および統合された統合環境内の仮想エージェントの作成を支援します。
 
 :::image type="content" source="../assets/images/power-platform-and-teams/ms-power-platform.png" alt-text="電源プラットフォームサービス":::
 
 ### <a name="-teams-and-power-bi"></a>Teams と Power BI の✔
 
-[Microsoft teams の [POWER BI] タブ](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/)では、Teams のワークスペースにレポートのサポートが追加され、ユーザーは[対話的な power BI コンテンツを共有](/power-bi/collaborate-share/service-embed-report-microsoft-teams)し、[他のユーザーと連携](/power-bi/collaborate-share/service-collaborate-microsoft-teams)することができます。 パッケージ化された [POWER bi アプリ](/power-bi/collaborate-share/service-create-distribute-apps) コンテンツを最初から作成し、アプリとして配布するか、または [power bi でテンプレートアプリを作成](/connect-data/service-template-apps-create)することができます。 また、 [teams で新しい POWER bi アプリ](https://go.microsoft.com/fwlink/?linkid=2143643) を使用して、基本的な power bi サービスのすべての機能を teams に組み込むことができます。
+[Microsoft teams の [POWER BI] タブ](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/)では、teams ワークスペースにレポートのサポートが追加され、ユーザーは、[インタラクティブな power BI コンテンツを共有](/power-bi/collaborate-share/service-embed-report-microsoft-teams)し、teams チャネルやチャット[で他のユーザーと共同作業](/power-bi/collaborate-share/service-collaborate-microsoft-teams)を行うことができます。 パッケージ化された [POWER bi アプリ](/power-bi/collaborate-share/service-create-distribute-apps) コンテンツを最初から作成してアプリとして配布したり、 [power bi でテンプレートアプリを作成](/connect-data/service-template-apps-create)したりすることができます。 また、 [teams で新しい POWER bi アプリ](https://go.microsoft.com/fwlink/?linkid=2143643) を使用して、基本的な power bi サービスのすべての機能を teams に組み込むことができます。
 
 ### <a name="-teams-and-power-apps"></a>✔ Teams およびパワーアプリ
 
@@ -52,7 +52,7 @@ Teams で新しい [Power Virtual Agents アプリ](https://aka.ms/pva-teams-doc
 
 ### <a name="-app-template-catalog"></a>✔アプリテンプレートカタログ
 
-[アプリテンプレート](../samples/app-templates.md) とは、コミュニティ主導で、オープンソースで、GitHub 上で利用可能な Microsoft Teams 用のプロダクション対応アプリのことです。 各テンプレートには、そのアプリを展開して組織にインストールするための詳細な手順が含まれており、すぐにインストールして使用できるアプリを提供します。 完全なソースコードも利用できます。そのため、詳細について確認したり、コードをフォークして、特定のニーズを満たすように変更したりすることができます。
+[アプリテンプレート](../samples/app-templates.md) とは、コミュニティ主導で、オープンソースで、GitHub 上で利用可能な Microsoft Teams 用のプロダクション対応アプリのことです。 各テンプレートには、組織用のアプリを展開してインストールするための詳細な手順が含まれており、すぐにインストールして使用を開始できる、すぐに使用できるアプリケーションを提供します。 完全なソースコードも利用できます。そのため、詳細について確認したり、コードをフォークして、特定のニーズを満たすように変更したりすることができます。
 
 ### <a name="-virtual-assistant-for-teams"></a>Teams の✔仮想アシスタント
 
@@ -75,7 +75,7 @@ Teams で新しい [Power Virtual Agents アプリ](https://aka.ms/pva-teams-doc
 |[Power BI (開発者向け)](/learn/browse/?expanded=power-platform&products=power-bi&roles=developer)|
 |**Power Apps**|
 |[アプリメーカー用のパワーアプリ](/learn/browse/?products=power-apps&roles=maker)|
-|[アプリ開発者向けのパワーアプリ](/learn/browse/?products=power-apps)|
+|[開発者向けのパワーアプリ](/learn/browse/?products=power-apps)|
 |**Power Automate**|
 |[アプリメーカーの電源自動化](/learn/browse/?expanded=power-platform&products=power-automate&roles=maker)|
 |[開発者のための電源自動化](/learn/browse/?expanded=power-platform&products=power-automate&roles=developer)|
@@ -85,7 +85,7 @@ Teams で新しい [Power Virtual Agents アプリ](https://aka.ms/pva-teams-doc
 ### <a name="-project-oakdale-preview"></a>✔ Project Oakdale (プレビュー)
 
 [Project Oakdale](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180
-) は、近日中に Microsoft Teams に提供される新しい低コードデータプラットフォームです。 開発者は teams で Teams の電力プラットフォームソリューションを直接作成することができます。 詳細については、「 [Teams のブログ Microsoft Project の Oakdale」ページ](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams)を参照し *てください* 。
+) は、Microsoft Teams に向けて近日中に公開される新しい低コードデータプラットフォームです。 開発者は teams で Teams の電力プラットフォームソリューションを直接作成することができます。 [Teams ブログの Microsoft Project Oakdale](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams)を *参照してください*。
 
 ### <a name="-microsoft-blog-insights"></a>✔ Microsoft ブログ insights
 

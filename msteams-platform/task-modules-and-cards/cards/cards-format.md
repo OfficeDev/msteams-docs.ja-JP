@@ -3,12 +3,12 @@ title: カードでのテキストの書式設定
 description: Microsoft Teams でのカードテキストの書式設定について説明します。
 keywords: teams の bot カード形式
 ms.date: 03/29/2018
-ms.openlocfilehash: 944e6a69c68d284b3a7309063587bd4b75319bc7
-ms.sourcegitcommit: 7a2da3b65246a125d441a971e7e6a6418355adbe
+ms.openlocfilehash: fcf0692fe033cd3c30ea1e3ac7bda8ddd06297ca
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46587812"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346708"
 ---
 # <a name="format-cards-in-teams"></a>Teams の書式設定カード
 
@@ -18,7 +18,7 @@ ms.locfileid: "46587812"
 
 カードの種類に応じて書式設定のサポートが異なります。また、カードのレンダリングはデスクトップとモバイルチームの両方のクライアントとデスクトップブラウザーの Teams で少しずつ異なります。
 
-任意の Teams カードを含むインライン画像を含めることができます。 画像は、、またはのファイルとして書式設定さ `.png` `.jpg` れ、 `.gif` 1024 × 1024 px または 1 MB を超えることはできません。 アニメーション GIF は正式にはサポートされていません。 *See* [カードリファレンス](./cards-reference.md#inline-card-images)を参照
+任意の Teams カードを含むインライン画像を含めることができます。 画像は、、またはのファイルとして書式設定さ  `.png` `.jpg` れ、 `.gif` 1024 × 1024 px または 1 MB を超えることはできません。 アニメーション GIF は正式にはサポートされていません。 *See* [カードリファレンス](./cards-reference.md#inline-card-images)を参照
 
 ## <a name="formatting-cards-with-markdown"></a>Markdown を使用したカードの書式設定
 
@@ -73,13 +73,13 @@ Android では、アダプティブカードの Markdown 書式は次のよう�
 
 ### <a name="more-information-on-adaptive-cards"></a>アダプティブカードの詳細情報
 
-[アダプティブカードのテキスト機能](/adaptive-cards/create/textfeatures)このトピックで説明する日付とローカリゼーションの機能は、Teams ではサポートされていません。
+[アダプティブカードのテキスト機能](/adaptive-cards/create/textfeatures) このトピックで説明する日付とローカリゼーションの機能は、Teams ではサポートされていません。
 
 ### <a name="formatting-sample-for-adaptive-cards"></a>アダプティブカード用の書式設定のサンプル
 
 ``` json
 {
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
     "type": "AdaptiveCard",
     "version": "1.0",
     "body": [
@@ -103,7 +103,7 @@ Android では、アダプティブカードの Markdown 書式は次のよう�
         },
         {
             "type": "TextBlock",
-            "text": "Check out [Adaptive Cards](http://adaptivecards.io)"
+            "text": "Check out [Adaptive Cards](https://adaptivecards.io)"
         }
     ]
 }
@@ -111,19 +111,19 @@ Android では、アダプティブカードの Markdown 書式は次のよう�
 
 ### <a name="mention-support-within-adaptive-cards-v12"></a>アダプティブカード v2.0 でのサポートを説明します。
 
-カードベースのメンションは、Web、デスクトップ、モバイルクライアントでサポートされています。 ボットおよびメッセージング拡張機能の応答には、アダプティブカードの本文内に @ メンションを追加することができます。  カードに @ メンションを追加するには、同じ通知ロジックに従って、[チャネルおよびグループチャットの会話に](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions )あるメッセージに基づいたものとしてレンダリングします。
+カードベースのメンションは、Web、デスクトップ、モバイルクライアントでサポートされています。 ボットおよびメッセージング拡張機能の応答には、アダプティブカードの本文内に @ メンションを追加することができます。  カードに @ メンションを追加するには、同じ通知ロジックに従って、 [チャネルおよびグループチャットの会話に](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions )あるメッセージに基づいたものとしてレンダリングします。
 
-ボットおよびメッセージング拡張機能には、 [TextBlock](https://adaptivecards.io/explorer/TextBlock.html)および[FactSet](https://adaptivecards.io/explorer/FactSet.html)要素のカードコンテンツ内のメンションを含めることができます。
+ボットおよびメッセージング拡張機能には、 [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) および [FactSet](https://adaptivecards.io/explorer/FactSet.html) 要素のカードコンテンツ内のメンションを含めることができます。
 
 > [!NOTE]
-> * [Media 要素](https://adaptivecards.io/explorer/Media.html)は、現在 Teams プラットフォームのアダプティブカード v2.0 ではサポートされていません。
+> * [Media 要素](https://adaptivecards.io/explorer/Media.html) は、現在 Teams プラットフォームのアダプティブカード v2.0 ではサポートされていません。
 > * チャネル & チームメンションは bot メッセージではサポートされていません。
 
 ### <a name="constructing-mentions"></a>メンションの構築
 
 アダプティブカードにメンションを含めるには、アプリに次の要素を含める必要があります。
 
-* `<at>username</at>`サポートされているアダプティブカード要素
+* `<at>username</at>` サポートされているアダプティブカード要素
 * `mention`カードコンテンツ内のプロパティの内部にあるオブジェクト。このオブジェクトは、 `msteams` 説明されているユーザーの Teams ユーザー id を含みます。
 
 ### <a name="sample-adaptive-card-with-a-mention"></a>アダプティブカードのサンプル
@@ -139,7 +139,7 @@ Android では、アダプティブカードの Markdown 書式は次のよう�
         "text": "Hi <at>John Doe</at>"
       }
     ],
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
     "version": "1.0",
     "msteams": {
       "entities": [
@@ -165,7 +165,7 @@ Android では、アダプティブカードの Markdown 書式は次のよう�
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| ヘッダー (レベル 1 &ndash; 3) | **テキスト** | `### Text`|
+| ヘッダー (レベル 1 &ndash; 3) | **Text** | `### Text`|
 | 打ち消し | ~~text~~ | `~~text~~` |
 | 順序なしリスト | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | 順序付きリスト | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -202,7 +202,7 @@ Android では、Markdown のコネクタカードの書式設定は次のよう
   "contentType": "application/vnd.microsoft.teams.card.o365connector",
   "content": {
     "@type": "MessageCard",
-    "@context": "http://schema.org/extensions",
+    "@context": "https://schema.org/extensions",
     "summary": "Summary",
     "title": "Connector Card Markdown formatting",
     "sections": [
@@ -225,7 +225,7 @@ Android では、Markdown のコネクタカードの書式設定は次のよう
             "text": "Link: [Bing](https://www.bing.com)"
         },
         {
-            "text": "embedded image link: ![Duck on a rock](http://aka.ms/Fo983c)"
+            "text": "embedded image link: ![Duck on a rock](https://aka.ms/Fo983c)"
         },
         {
             "text": "`preformatted text`"
@@ -254,14 +254,14 @@ Android では、Markdown のコネクタカードの書式設定は次のよう
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| ヘッダー (レベル 1 &ndash; 3) | **テキスト** | `<h3>Text</h3>` |
+| ヘッダー (レベル 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | 打ち消し | ~~text~~ | `<strike>text</strike>` |
 | 順序なしリスト | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 順序付きリスト | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
 | 書式設定済みのテキスト | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
 | hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| 画像リンク | <img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| 画像リンク | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 コネクタカードでは、改行はタグを使用して HTML でレンダリングされ `<p>` ます。
 
@@ -291,7 +291,7 @@ Android では、HTML 形式は次のようになります。
   "contentType": "application/vnd.microsoft.teams.card.o365connector",
   "content": {
     "@type": "MessageCard",
-    "@context": "http://schema.org/extensions",
+    "@context": "https://schema.org/extensions",
     "summary": "Summary",
     "title": "Connector Card HTML formatting",
     "sections": [
@@ -317,7 +317,7 @@ Android では、HTML 形式は次のようになります。
             "text": "hyperlink <a href=\"https://www.bing.com/\">Bing</a>"
         },
         {
-            "text": "embedded image <img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img>"
+            "text": "embedded image <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img>"
         },
         {
             "text": "preformatted text <pre>text</pre>"
@@ -342,14 +342,14 @@ HTML タグは、ヒーローやサムネイルカードなどの単純なカー
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| ヘッダー (レベル 1 &ndash; 3) | **テキスト** | `<h3>Text</h3>` |
+| ヘッダー (レベル 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | 打ち消し | ~~text~~ | `<strike>text</strike>` |
 | 順序なしリスト | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 順序付きリスト | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
 | 書式設定済みのテキスト | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
 | hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| 画像リンク |<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| 画像リンク |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 ### <a name="mobile-and-desktop-differences-for-simple-cards"></a>簡単なカードのモバイルとデスクトップの相違点
 
@@ -377,6 +377,6 @@ Android では、太字や斜体などの文字書式が正しく表示されま
 
 これらのスクリーンショットは Teams AppStudio を使用して作成されています。これは、ヒーローカードの text プロパティが次の文字列に設定されています。 このコードを変更することにより、独自のカードで書式設定をテストできます。
 
-`<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"http://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
+`<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
 
 ---

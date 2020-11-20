@@ -4,18 +4,18 @@ author: heath-hamilton
 description: Microsoft Teams の [会議中] タブを効果的に設計する方法について説明します。
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 402d25e543494636af287bcc2e8a308765b4cea9
-ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
+ms.openlocfilehash: fc10c5b60672d243ac2e330ce93b4e01c2e7a278
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "48877030"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346673"
 ---
 # <a name="design-an-in-meeting-tab"></a>会議中のタブを設計する
 
 [会議中] タブは、会議中に共同作業を補強するためのキャンバスです。 [チーム] タブの機能に基づいて、参加者は共有ビューまたはロールベースのビューを使用して、会議ステージ外の専用の領域でアプリコンテンツを表示したり操作したりできます。
 
-## <a name="use-cases"></a>ユース ケース
+## <a name="use-cases"></a>使用例
 
 [会議中] タブを使用して、次のことを行うことができます。
 
@@ -37,16 +37,16 @@ ms.locfileid: "48877030"
 
 [会議中] タブには、次のディメンションを使用してアプリのコンテンツが表示されます。
 
-* **幅** : webview エリアの場合は280ピクセル。 Webview の左側と右側には、20ピクセルのパディングがあります。
-* **高さ** : タブの下端までの裁ち落とし。Webview エリアと tab ヘッダーの間には、20ピクセルのパディングがあります。
+* **幅**: webview エリアの場合は280ピクセル。 Webview の左側と右側には、20ピクセルのパディングがあります。
+* **高さ**: タブの下端までの裁ち落とし。Webview エリアと tab ヘッダーの間には、20ピクセルのパディングがあります。
 
 :::image type="content" source="../../assets/images/calls-and-meetings/in-meeting-tab-anatomy.png" alt-text="会議の拡張機能の UI を [会議] タブに示す図" border="false":::
 
-1. **アプリアイコン** : [会議中] タブへのエントリポイントです。
-1. **ヘッダー** : タブ名を含みます。
-1. **Name** : tab インスタンスの名前。
-1. [ **閉じる** ]: タブを閉じます。フッター内のアクションではなく、右上にある閉じるアイコンを常に使用します。
-1. **Webview** : サードパーティアプリのすべてのコンテンツを表示します。
+1. **アプリアイコン**: [会議中] タブへのエントリポイントです。
+1. **ヘッダー**: タブ名を含みます。
+1. **Name**: tab インスタンスの名前。
+1. [**閉じる**]: タブを閉じます。フッター内のアクションではなく、右上にある閉じるアイコンを常に使用します。
+1. **Webview**: サードパーティアプリのすべてのコンテンツを表示します。
 
 ## <a name="behavior"></a>動作
 
@@ -125,7 +125,7 @@ Dropdown | リストから1つ以上のオプションを選択します。 検�
 
 #### <a name="do-design-for-a-dark-theme"></a>Do: 暗いテーマのデザイン
 
-Teams 会議は、ビジュアルおよび認知ノイズを軽減するために最適化されており、ユーザーがディスカッションと共有コンテンツに集中できるようにするために役立ちます。
+Teams 会議は、ビジュアルおよび認知ノイズを軽減するために最適化されており、ユーザーがディスカッションと共有コンテンツに集中できるようにするために役立ちます。 [会議中] タブでは、濃色のテーマを適用し、テーマのガイドラインに従う必要があります。
 
    :::column-end:::
    :::column span="":::

@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Microsoft Teams テンプレートサンプルのデモ
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 5ab38f28cab22011fdcd7109f88663f4159a6356
-ms.sourcegitcommit: 03efdfb2feb115702c40adcd71d6e96eb5888cc7
+ms.openlocfilehash: 3bf038b2d62a0805ae3f16fd879664d755108acf
+ms.sourcegitcommit: e70d41ae793a407fdbb71bc79ef7b67b40386c96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "49019619"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "49358029"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams のアプリテンプレート
 
@@ -307,7 +307,7 @@ Icebreaker アプリは、チーム全体にわたる個人の接続を促進す
 :::column-end:::
 :::row-end:::
 
-## <a name="new-employee-onboarding9734"></a>新入社員のオンボード&#9734;
+## <a name="new-employee-onboarding-9734"></a>新入社員のオンボード &#9734;
 
 新入社員のオンボードとは、統合された Microsoft Teams および [SharePoint 新入社員のオンボードソリューション](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19) で、お客様の新入社員向けの、一貫性のある高品質の開始時の実績を、入社時に提供することができます。 このアプリは、人手と誘導プロセス全体で関連情報を提供したり、フィードバックを共有し、序文を提供したり、すべてのオンボードタスクを行ったりするために、人的リソースチームおよび雇用マネージャーが使用することができます。
 
@@ -360,6 +360,20 @@ Poll は、ユーザーがチームの意見や好みを収集できるように
 [GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-quickresponses)
 
 ![応答のサンプルビュー](../assets/images/quick-responses.png)
+
+## <a name="reflect-9734"></a>&#9734; 反映
+
+リフレクションは、チームメンバーが同僚やグループリーダーと Teams 内に直接連携している状態を共有するための、安全で包括的なリソースを提供するカスタムの Microsoft Teams [メッセージング拡張](../messaging-extensions/what-are-messaging-extensions.md) アプリです。 このアプリは channel、group、meeting、および1:1 のチャットで利用でき、チェックインの応答は、パブリック、プライベート、または完全に匿名に設定できます。
+
+[GitHub で取得する](https://github.com/OfficeDev/Microsoft-Teams-App-Reflect)
+
+:::row:::
+    :::column:::
+    **良好なポーリング**
+    
+    ![アプリユーザーのポーリングを反映します。](../assets/images/reflect-app-user-poll.png)
+    :::column-end:::
+:::row-end:::
 
 ## <a name="remote-support"></a>リモートサポート
 

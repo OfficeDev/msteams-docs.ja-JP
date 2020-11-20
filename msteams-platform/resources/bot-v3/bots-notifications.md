@@ -5,12 +5,12 @@ keywords: teams の bot イベント
 ms.date: 05/20/2019
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: cb3463b8cfb14920644f16f84a09260739a82ede
-ms.sourcegitcommit: df9448681d2a81f1029aad5a5e1989cd438d1ae0
+ms.openlocfilehash: e15629ef2f178c0498e33518f5976ff2b2bdf776
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "48877044"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346729"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>Microsoft Teams で bot イベントを処理する
 
@@ -30,7 +30,7 @@ Microsoft Teams は、bot がアクティブである範囲で発生した変更
 
 次の表に、ボットが受信してアクションを実行できるイベントを示します。
 
-|型|ペイロードオブジェクト|Teams の eventType |説明|範囲|
+|種類|ペイロードオブジェクト|Teams の eventType |Description|範囲|
 |---|---|---|---|---|
 | `conversationUpdate` |`membersAdded`| `teamMemberAdded`|[チームに追加されたメンバー](#team-member-or-bot-addition)| すべての |
 | `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|[メンバーがチームから削除されました](#team-member-or-bot-removed)| `groupChat` & `team` |
@@ -185,7 +185,7 @@ bot.on('conversationUpdate', (msg) => {
 Bot は、 `conversationUpdate` ユーザーが `membersAdded` 個人チャット用に直接追加したを使用してを受信します。 この場合、ボットが受け取るペイロードにはオブジェクトが含まれていません `channelData.team` 。 この範囲に応じて、bot が異なる [ウェルカムメッセージ](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) を提供するようにする場合に備えて、これをフィルターとして使用する必要があります。
 
 > [!NOTE]
-> 個人のスコープのボットの場合、bot が削除されて再度追加されても、そのイベントは1回だけ受信され `conversationUpdate` ます。 開発およびテストの場合は、ボットを完全にリセットできるヘルパー関数を追加すると便利です。 これを実装する方法の詳細については、 [Node.js 例](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) または [C# の例](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) を参照してください。
+> 個人スコープのボットの場合、bot が削除されて `conversationUpdate` 再度追加された場合でも、bot はイベントを複数回受け取ります。 開発およびテストの場合は、ボットを完全にリセットできるヘルパー関数を追加すると便利です。 これを実装する方法の詳細については、 [Node.js 例](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) または [C# の例](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) を参照してください。
 
 #### <a name="schema-example-bot-added-to-personal-context"></a>スキーマの例: 個人コンテキストに追加された bot
 

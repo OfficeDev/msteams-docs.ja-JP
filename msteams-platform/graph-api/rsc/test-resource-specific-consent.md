@@ -1,17 +1,17 @@
 ---
-title: Teams でのリソース固有の同意のテスト
+title: Teams でのリソース固有の同意をテストする
 description: Postman を使用する Teams でのリソース固有の同意のテストの詳細
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: teams authorization OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: f780829100e47ad04a588106e83843876b8d7932
-ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
+ms.openlocfilehash: f50f61e7eb62e3bcc6af2dafc1c7c781ff2145de
+ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48995010"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "49366855"
 ---
 # <a name="test-resource-specific-consent-permissions--in-teams"></a>Teams でのリソース固有の同意権限をテストする
 
@@ -20,9 +20,9 @@ ms.locfileid: "48995010"
 > [!NOTE]
 >RSC のアクセス許可をテストするには、Teams アプリのマニフェストファイルに、次のフィールドで設定された **Webapplicationinfo** キーが含まれている必要があります。
 >
-> - **id** : azure ad アプリ id については、「 [azure ad ポータルでアプリを登録](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)する *」を参照してください* 。
-> - **resource** : 任意の文字列。「 [Teams アプリのマニフェストを更新する](resource-specific-consent.md#update-your-teams-app-manifest)」のメモを参照して *ください* 。
-> - **アプリケーションのアクセス許可** -アプリの RSC アクセス許可については、「 [リソース固有のアクセス許可](resource-specific-consent.md#resource-specific-permissions) *」を参照してください* 。
+> - **id** : azure ad アプリ id については、「 [azure ad ポータルでアプリを登録](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)する *」を参照してください*。
+> - **resource** : 任意の文字列。「 [Teams アプリのマニフェストを更新する](resource-specific-consent.md#update-your-teams-app-manifest)」のメモを参照して *ください*。
+> - **アプリケーションのアクセス許可**-アプリの RSC アクセス許可については、「[リソース固有のアクセス許可](resource-specific-consent.md#resource-specific-permissions) *」を参照してください*。
 
 ```json
 "webApplicationInfo":{
@@ -64,7 +64,7 @@ RSC アクセス許可が API 要求ペイロードによって受け入れら�
 > * Teams クライアントで、左端のナビゲーションバーにある [ **teams** ] を選択します。
 > * アプリがインストールされているチームをドロップダウンメニューから選択します。
 > * [ **その他のオプション** ] アイコン (&#8943;) を選択します。
-> * [ **チームへのリンクの取得** ] を選択する 
+> * [**チームへのリンクの取得**] を選択する 
 > * 文字列から **groupId** 値をコピーして保存します。
 
 ### <a name="using-postman"></a>Postman を使用する
@@ -72,7 +72,7 @@ RSC アクセス許可が API 要求ペイロードによって受け入れら�
 > [!div class="checklist"]
 >
 > * [Postman](https://www.postman.com)アプリを開きます。
-> * [ **ファイル**  =>  の **インポート** ] [  =>  **インポートファイル** ] を選択して、更新された JSON ファイルを環境からアップロードします。  
+> * [**ファイル**  =>  の **インポート**] [  =>  **インポートファイル**] を選択して、更新された JSON ファイルを環境からアップロードします。  
 > * [ **コレクション** ] タブを選択します。 
 > * **テスト RSC** の横にある山形 (>) を選択して、詳細ビューを展開し、API 要求を表示します。
 
@@ -91,4 +91,5 @@ API 呼び出しごとに、アクセス許可のコレクション全体を実�
 
 > [!div class="nextstepaction"]
 >
-> [Graph API と Teams の詳細情報](/graph/api/resources/teams-api-overview?view=graph-rest-1.0)
+> [詳細情報: Microsoft Graph API と Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0)
+

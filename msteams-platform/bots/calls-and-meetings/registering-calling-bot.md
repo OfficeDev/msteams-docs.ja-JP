@@ -2,12 +2,12 @@
 title: Microsoft Teams での通話と会議のボットの登録
 description: Microsoft Teams 用の新しい音声ビデオを呼び出すボットを登録する方法について説明します。
 keywords: ボット音声/ビデオ音声ビデオメディアの呼び出し
-ms.openlocfilehash: 4db6c29352aa117e0dd1959826d0560359864d8a
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: d38b9584440bcff664bd3a2d4b57e52bc695f1b5
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48209754"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346848"
 ---
 # <a name="register-a-calling-bot-for-microsoft-teams"></a>Microsoft Teams 用の呼び出しボットを登録する
 
@@ -42,7 +42,7 @@ ms.locfileid: "48209754"
 
 ## <a name="add-microsoft-graph-permissions"></a>Microsoft Graph のアクセス許可を追加する
 
-Microsoft Graph では、アプリがリソースに対して持つアクセス権を制御する詳細なアクセス許可を公開しています。 開発者は、アプリが要求する Microsoft Graph のアクセス許可を決定します。  Microsoft Graph の呼び出し元の Api は、サインインしているユーザーなしで実行されるアプリで使用される _アプリケーションのアクセス許可_をサポートします。  テナント管理者は、アプリケーションのアクセス許可に同意を付与する必要があります。 これらのアクセス許可の一覧を以下に示します。
+Microsoft Graph では、アプリがリソースに対して持つアクセス権を制御する詳細なアクセス許可を公開しています。 開発者は、アプリが要求する Microsoft Graph のアクセス許可を決定します。  Microsoft Graph の呼び出し元の Api は、サインインしているユーザーなしで実行されるアプリで使用される _アプリケーションのアクセス許可_ をサポートします。  テナント管理者は、アプリケーションのアクセス許可に同意を付与する必要があります。 これらのアクセス許可の一覧を以下に示します。
 
 ### <a name="application-permissions-calls"></a>アプリケーションのアクセス許可: 呼び出し
 
@@ -50,8 +50,8 @@ Microsoft Graph では、アプリがリソースに対して持つアクセス�
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 |_Calls.Initiate.All_|アプリからの発信 1 対 1 通話の開始 (プレビュー)|アプリで、サインインしているユーザーがいなくても、1 人のユーザーに発信し、組織のディレクトリ内のユーザーに通話を転送することができるようにします。|はい|
 |_Calls.InitiateGroupCall.All_|アプリからの発信グループ通話の開始 (プレビュー)|アプリで、サインインしているユーザーがいなくても、複数のユーザーに発信し、組織内の会議に参加者を追加することができるようにします。|はい|
-|_Calls.JoinGroupCall.All_|グループ通話と会議にアプリとして参加する (プレビュー)|アプリで、サインインしているユーザーがいなくても、組織のグループ通話やスケジュールされた会議に参加することができるようにします。 このアプリは、ディレクトリ ユーザーの特権を使用してテナントの会議に参加します。|はい|
-|_Calls.JoinGroupCallasGuest.All_|グループ通話と会議にゲストとして参加する (プレビュー)|アプリで、サインインしているユーザーがいなくても、組織のグループ通話とスケジュールされた会議に匿名で参加することができるようにします。 このアプリは、テナントの会議にゲストとして参加します。|はい|
+|_Calls.JoinGroupCall.All_|グループ通話と会議にアプリとして参加する (プレビュー)|Allows the app to join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined with the privileges of a directory user to meetings in your tenant.|はい|
+|_Calls.JoinGroupCallasGuest.All_|グループ通話と会議にゲストとして参加する (プレビュー)|Allows the app to anonymously join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined as a guest to meetings in your tenant.|はい|
 |_通話メディアを呼び出します。_ <sup>_以下を参照_</sup>|通話内のメディア ストリームにアプリとしてアクセスする (プレビュー)|アプリで、サインインしているユーザーがいなくても、通話内のメディア ストリームに直接アクセスすることができるようにします。|はい|
 
 > [!IMPORTANT]
@@ -66,7 +66,7 @@ Microsoft Graph では、アプリがリソースに対して持つアクセス�
 
 ### <a name="assigning-permissions"></a>権限を割り当てる
 
-前もって bot のアプリケーションアクセス許可を構成する必要があります。 [ここで](/graph/auth_register_app_v2)説明するように、 [Microsoft アプリ登録ポータル](https://apps.dev.microsoft.com/)を使用することをお勧めします。これは、ボットが構成されている場所です。ただし、 [AZURE AD V1 エンドポイント](/azure/active-directory/develop/azure-ad-endpoint-comparison)を使用したい場合は、 [azure ポータル](https://aka.ms/aadapplist)を使用することもできます。
+[AZURE AD V1 エンドポイント](/azure/active-directory/develop/azure-ad-endpoint-comparison)を使用する場合は、 [azure ポータル](https://aka.ms/aadapplist)を使用して、ボットのアプリケーション権限を事前に構成する必要があります。
 
 ### <a name="getting-tenant-administrator-consent"></a>テナント管理者の同意を取得する
 

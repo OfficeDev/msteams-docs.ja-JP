@@ -4,12 +4,12 @@ description: Teams ドキュメントを作成して発行するための手順
 author: laujan
 ms.author: lajanuar
 ms.topic: contributor-guide
-ms.openlocfilehash: 80aaf7795a226c0437140fe72e1d74b07fa66775
-ms.sourcegitcommit: f6029c8ff0c5315613a3efcd86777aa4cede39e6
+ms.openlocfilehash: 18aae61a674cf9c4c94831f22149cd4b9e7ebeda
+ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48995017"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "49366897"
 ---
 # <a name="contributing-to-microsoft-teams-documentation"></a>Microsoft Teams ドキュメントへの投稿
 
@@ -34,13 +34,13 @@ ms.locfileid: "48995017"
 
 ## <a name="review-the-microsoft-docs-contributors-guide"></a>Microsoft Docs コントリビューターガイドを確認する
 
-[投稿者ガイド](/contribute)は、Microsoft/docの技術的なコンテンツを作成、発行、更新するための指示を提供します。「 [Docs Style」および「voice quick Start](/contribute/style-quick-start) *」も参照してください* 。
+[投稿者ガイド](/contribute)は、Microsoft Docs platform で技術コンテンツを作成、発行、更新する方法を提供します。 「 [Docs Style」および「voice quick Start](/contribute/style-quick-start) *」も参照してください*。
 
 ## <a name="microsoft-writing-style-and-content-guides"></a>Microsoft の書き方、スタイル、およびコンテンツガイド
 
 * **[Microsoft の書き方のスタイルガイド](/style-guide/welcome)** です。 このオンラインガイドをブラウザーの [ **お気に入り** ] メニューに追加することを検討してください。 これは、今日の技術的な執筆に関する包括的なリソースであり、音声とスタイルに対する Microsoft の先進のアプローチを反映しています。
 
-* **[開発者向けコンテンツを書く](/style-guide/developer-content/)** 。 Teams 固有のコンテンツは、プログラミングの概念とプロセスについて基本的に理解している開発者を対象としています。 Microsoft の語調とスタイルを維持しながら、わかりやすく技術的に正確な情報を提供することが重要です。
+* **[開発者向けコンテンツを書く](/style-guide/developer-content/)**。 Teams 固有のコンテンツは、プログラミングの概念とプロセスについて基本的に理解している開発者を対象としています。 Microsoft の語調とスタイルを維持しながら、わかりやすく技術的に正確な情報を提供することが重要です。
 
 * ステップ **[ごとの指示を記述](/style-guide/procedures-instructions/writing-step-by-step-instructions)** します。 適用された対話的なエクスペリエンスは、開発者が Microsoft の製品とテクノロジについて理解するのに便利な方法です。 複雑な手順や単純な手順をプログレッシブ形式で表現することは、自然でわかりやすいものです。
 
@@ -59,14 +59,14 @@ ms.locfileid: "48995017"
 > &emsp;&#x2714; には、スラッシュを先頭に付けずに相対パスを使用します。<br>
 > &emsp; Markdown ファイル拡張子が含まれている&#x2714;。<br>
 >Ex:  **親ディレクトリ/ディレクトリ/パス名** : > `[Building an app for Microsoft Teams](../concepts/building-an-app.md)` <br><br>
-> <https://docs.microsoft.com/>Teams のプラットフォーム docset に含まれて *いない* Microsoft Docs library () の記事を参照するには、次の手順を実行します。<br>
+> Teams のプラットフォーム docset に含まれて *いない* Microsoft Docs library 記事を参照するには、次の手順を実行します。<br>
 > &emsp;&#x2714; スラッシュで始まる相対パスを使用します。<br>
-> &emsp;&#x2714; ファイル拡張子は含めないでください。 <br> Ex:  **/docset/addressofflocation** — > `[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`
->
+> &emsp;&#x2714; ファイル拡張子は含めないでください。 <br> Ex:  **/docset/addressofflocation** — > `[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`<br><br>
+> GitHub など、Microsoft Docs ライブラリの外部にあるページを参照するには、完全なファイルパスを使用し `https` ます。<br>
 
 ## <a name="code-samples-and-snippets"></a>コードサンプルとスニペット
 
-コードサンプルは、開発者が Api と Sdk を正常に使用するのに役立つ重要な役割を果たします。 適切に表示されているコードサンプルは、説明テキストと説明情報だけではなく、どのように機能するかを伝えることができます。 コードサンプルは正確で簡潔で、ドキュメント化されている必要があります。また、最も重要なのは閲覧者フレンドリです。 読みやすいコードも理解しやすく、テスト、デバッグ、保守、変更、拡張が簡単です。 *「* [ドキュメントにコードを含める方法」を](/contribute/code-in-docs)参照してください。読みやすさのヒントについては、「 [切削エッジ: ソースコードの読みやすさのヒント](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips) *」も参照* してください。
+コードサンプルは、開発者が Api と Sdk を正常に使用するのに役立つ重要な役割を果たします。 適切に表示されているコードサンプルは、説明テキストと説明情報だけではなく、どのように機能するかを伝えることができます。 コードサンプルは正確で簡潔で、ドキュメント化されている必要があります。また、最も重要なのは閲覧者フレンドリです。 読みやすいコードも理解しやすく、テスト、デバッグ、保守、変更、拡張が簡単です。 *「* [ドキュメントにコードを含める方法」を](/contribute/code-in-docs)参照してください。読みやすさのヒントについては、「[切削エッジ: ソースコードの読みやすさのヒント](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips) *」も参照* してください。
 
 > [!div class="nextstepaction"]
 > [Microsoft Docs の更新プログラムと最新のアナウンスを入手する](/teamblog)

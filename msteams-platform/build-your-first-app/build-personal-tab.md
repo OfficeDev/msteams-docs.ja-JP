@@ -5,12 +5,12 @@ description: Microsoft Teams ツールキットを使用して、Microsoft Teams
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: 17153b9b7cd7e6dd9052fc40073fec60a4d51f81
-ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
+ms.openlocfilehash: a82d3dcfd9529d88160c4193d27105c3468fe654
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931730"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346806"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>Microsoft Teams 用の個人用タブを作成する
 
@@ -18,7 +18,7 @@ ms.locfileid: "48931730"
 
 Teams には、2種類のタブがあります。 このチュートリアルでは、個々のユーザーのために全画面表示のコンテンツページである [個人用の基本 *] タブ* を作成します。 (個人タブは、Teams で従来の web サイトの操作に最も近いものです)。
 
-## <a name="before-you-begin"></a>はじめに
+## <a name="before-you-begin"></a>開始する前に
 
 開始するには、基本的に実行中の [個人用] タブが必要です。 まだお持ちでない場合は、「 [最初の Teams アプリを構築して実行](../build-your-first-app/build-and-run.md)する」を参照してください。
 
@@ -106,7 +106,7 @@ a {
 
 ### <a name="get-context-about-the-teams-client"></a>Teams クライアントに関するコンテキストを取得する
 
-ファイルには `Tab.js` 、構成されている `microsoftTeams.getContext()` クライアントテーマをいくつかの詳細情報とともに提供する呼び出しがあり [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) ます。 アプリのスキャフォールディングにより、このコードをとして使用して、 `context` インターフェイスおよびそのプロパティにアクセスします。
+ファイルには `Tab.js` 、構成されている `microsoftTeams.getContext()` クライアントテーマをいくつかの詳細情報とともに提供する呼び出しがあり [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) ます。 アプリのスキャフォールディングにより、このコードをとして使用して、 `context` インターフェイスおよびそのプロパティにアクセスします。
 
 ```JavaScript
 componentDidMount(){

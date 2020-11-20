@@ -2,18 +2,18 @@
 title: Bot にカードアクションを追加する
 description: Microsoft Teams でのカードアクションと、それらを bot で使用する方法について説明します。
 keywords: teams のボットカードのアクション
-ms.openlocfilehash: e0b050cde9adf5bd811d5d95ce1c6f1bf60546a1
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: f4db5d137051fa8d557d8a060adae6f15b4769c3
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801268"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346778"
 ---
 # <a name="card-actions"></a>カードのアクション
 
 Teams のボットおよびメッセージング拡張機能によって使用されるカードは、次のアクティビティ () の種類をサポートして [`CardAction`](https://docs.microsoft.com/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) います。 これらのアクションは、 `potentialActions` コネクタから使用された場合、Office 365 コネクタカードとは異なることに注意してください。
 
-| 型 | Action |
+| 種類 | Action |
 | --- | --- |
 | `openUrl` | 既定のブラウザーで URL を開きます。 |
 | `messageBack` | (ボタンをクリックしたユーザーまたはカードをタップしたユーザーから) メッセージとペイロードを bot に送信し、別のメッセージをチャットストリームに送信します。 |
@@ -24,10 +24,10 @@ Teams のボットおよびメッセージング拡張機能によって使用�
 > [!NOTE]
 >* Teams `CardAction` では、上記の表に記載されていない種類はサポートされていません。
 >* Teams はプロパティをサポートしていません `potentialActions` 。
->* カードアクションは、Bot フレームワーク/Azure Bot サービスの推奨される[アクション](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button)とは異なります。 Microsoft Teams では、推奨されるアクションはサポートされていません。 Teams の bot メッセージにボタンを表示する場合は、カードを使用します。
+>* カードアクションは、Bot フレームワーク/Azure Bot サービスの推奨される [アクション](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) とは異なります。 Microsoft Teams では、推奨されるアクションはサポートされていません。 Teams の bot メッセージにボタンを表示する場合は、カードを使用します。
 >* メッセージ拡張機能の一部としてカードアクションを使用している場合、カードがチャネルに送信されるまで、アクションは機能しません (カードが [新規作成] メッセージボックスにある間は機能しません)。
 
-Teams は、アダプティブカードによってのみ使用される[アダプティブカードアクション](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)もサポートしています。 これらの操作は、このリファレンスの最後にあるセクションに記載されています。
+Teams は、アダプティブカードによってのみ使用される [アダプティブカードアクション](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)もサポートしています。 これらの操作は、このリファレンスの最後にあるセクションに記載されています。
 
 ## <a name="openurl"></a>openUrl
 
@@ -50,7 +50,7 @@ Teams は、アダプティブカードによってのみ使用される[アダ�
 | プロパティ | 説明 |
 | --- | --- |
 | `title` | ボタンのラベルとして表示されます。 |
-| `displayText` | 省略可能です。 アクションの実行時にユーザーによってチャットストリームにエコーされます。 このテキストは bot に送信され*ません*。 |
+| `displayText` | 省略可能。 アクションの実行時にユーザーによってチャットストリームにエコーされます。 このテキストは bot に送信され *ません* 。 |
 | `value` | アクションが実行されたときに bot に送信されます。 一意の識別子や JSON オブジェクトなど、アクションのコンテキストをエンコードできます。 |
 | `text` | アクションが実行されたときに bot に送信されます。 このプロパティを使用して、ボットの開発を簡素化します。コードでは、ボットロジックをディスパッチするために1つのトップレベルのプロパティをチェックできます。 |
 
@@ -74,7 +74,7 @@ Teams は、アダプティブカードによってのみ使用される[アダ�
 
 ### <a name="inbound-message-example"></a>受信メッセージの例
 
-`replyToId`カードアクションの送信元のメッセージの ID が含まれます。 メッセージを更新する場合に使用します。
+`replyToId` カードアクションの送信元のメッセージの ID が含まれます。 メッセージを更新する場合に使用します。
 
 ```json
 {
@@ -229,14 +229,17 @@ OAuth フローを開始し、次の詳細に説明するように、ボット�
 
 前述の操作に加え `Action.Submit` て、のオブジェクトのプロパティを使用して、既存の Bot フレームワークアクションをサポートするようにアダプティブカードのペイロードを変更でき `msteams` `data` `Action.Submit` ます。 次のセクションでは、既存の Bot フレームワークアクションをアダプティブカードで使用する方法について詳しく説明します。
 
+> [!NOTE]
+> `msteams`Bot フレームワークアクションを使用してデータに追加すると、アダプティブカードタスクモジュールでは機能しません。
+
 ### <a name="adaptive-cards-with-messageback-action"></a>MessageBack アクションを備えたアダプティブカード
 
 アダプティブカードにアクションを含めるには、 `messageBack` オブジェクトに次の詳細情報が含まれて `msteams` います。 必要に応じて、追加の非表示プロパティをオブジェクトに含めることができることに注意 `data` してください。
 
 | プロパティ | 説明 |
 | --- | --- |
-| `type` | に設定`messageBack` |
-| `displayText` | 省略可能です。 アクションの実行時にユーザーによってチャットストリームにエコーされます。 このテキストは bot に送信され*ません*。 |
+| `type` | に設定 `messageBack` |
+| `displayText` | 省略可能。 アクションの実行時にユーザーによってチャットストリームにエコーされます。 このテキストは bot に送信され *ません* 。 |
 | `value` | アクションが実行されたときに bot に送信されます。 一意の識別子や JSON オブジェクトなど、アクションのコンテキストをエンコードできます。 |
 | `text` | アクションが実行されたときに bot に送信されます。 このプロパティを使用して、ボットの開発を簡素化します。コードでは、ボットロジックをディスパッチするために1つのトップレベルのプロパティをチェックできます。 |
 
@@ -263,7 +266,7 @@ OAuth フローを開始し、次の詳細に説明するように、ボット�
 
 | プロパティ | 説明 |
 | --- | --- |
-| `type` | に設定`imBack` |
+| `type` | に設定 `imBack` |
 | `value` | チャットでエコーバックする必要がある文字列 |
 
 #### <a name="example"></a>例
@@ -287,7 +290,7 @@ OAuth フローを開始し、次の詳細に説明するように、ボット�
 
 | プロパティ | 説明 |
 | --- | --- |
-| `type` | に設定`signin` |
+| `type` | に設定 `signin` |
 | `value` | リダイレクト先の URL に設定します。  |
 
 #### <a name="example"></a>例

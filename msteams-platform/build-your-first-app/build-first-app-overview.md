@@ -5,12 +5,12 @@ description: Microsoft Teams アプリ開発を開始する方法と、環境を
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: 7fc3f7e9fd9d3c2a028999be53ba6bdcd5b3ba72
-ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
+ms.openlocfilehash: e2e73e755c45fa3bff3b6320dfbf0999a575fe99
+ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931793"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49346813"
 ---
 # <a name="build-your-first-microsoft-teams-app-overview"></a>最初の Microsoft Teams アプリの概要を作成する
 
@@ -23,10 +23,10 @@ ms.locfileid: "48931793"
 > [!div class="checklist"]
   >
   > * **Teams ツールキットを使用** して迅速に作業を開始します。 Visual Studio 用の Microsoft Teams toolkit は、アプリプロジェクトとスキャフォールディングを作成するためのものであり、実行中のアプリを数分で利用できるようにします。
-  > * App **Studio を使用してアプリを構成する** : Teams アプリで使用する機能とサービスを指定します。
+  > * App **Studio を使用してアプリを構成する**: Teams アプリで使用する機能とサービスを指定します。
   > * **アプリの対象ユーザーの範囲** を作成します。個人利用、グループ作業、またはその両方用の Teams アプリを作成します。
   > * Teams の **ツールと sdk を使用** して、Teams の JavaScript SDK のヘルプを使用してアプリをカスタマイズします (たとえば、その配色を teams のテーマに合わせて変更するなど)。 また、ボットを作成および管理するための一般的なツールについても説明します。
-  > * **アプリの展開** : レッスン全体を通して、よくある関連トピック (認証やデザインのガイドラインなど) について説明します。
+  > * **アプリの展開**: レッスン全体を通して、よくある関連トピック (認証やデザインのガイドラインなど) について説明します。
 
 ## <a name="teams-app-fundamentals"></a>Teams アプリの基礎
 
@@ -53,7 +53,7 @@ Teams アプリを作成するための適切なアカウントを持ってお�
 カスタムアプリのサイドロードを許可する Teams アカウントが必要です。 (アカウントで既に提供されている場合があります。)
 
 1. Teams アカウントを所有している場合は、Teams でアプリをサイドロードできるかどうかを確認します。
-    1. Teams クライアントで、[ **アプリ** ] を選択します。
+    1. Teams クライアントで、[ **アプリ**] を選択します。
     1. **カスタムアプリをアップロード** するオプションを探します。
 
     :::image type="content" source="../assets/images/build-your-first-app/upload-custom-app-closeup.png" alt-text="Teams でカスタムアプリをアップロードできる場所を示す図":::
@@ -75,6 +75,9 @@ Microsoft 365 開発者プログラムに参加することによって、アプ
 
 </details>
 
+> [!Note]
+> それでもアプリをサイドロードできない場合は、「 [カスタム Teams アプリを有効にする」および「カスタムアプリのアップロード](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)を有効にする」を参照してください。
+
 ### <a name="install-your-development-tools"></a>開発ツールをインストールする
 
 推奨ツールを使用して Teams アプリを構築することはできますが、これらのレッスンでは、Visual Studio Code for the Microsoft Teams Toolkit を使用してすぐに作業を開始する方法を説明します。
@@ -84,7 +87,7 @@ Teams では、アプリコンテンツは HTTPS 接続を介してのみ表示�
 1. [Node.js](https://nodejs.org/en/) をインストールします。
 1. Bot またはメッセージング拡張機能の構築を計画している場合は、 [ngrok](https://ngrok.com/download) をインストールします。
 1. [Visual Studio Code](https://code.visualstudio.com/download)の最新バージョンをインストールします。 (以前のバージョンは、ツールキットでは動作しない可能性があります)。
-1. Visual Studio Code で、左側のアクティビティバーにある [ **拡張機能** ] を選択 :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: し、 **Microsoft Teams Toolkit** をインストールします。
+1. Visual Studio Code で、左側のアクティビティバーにある [ **拡張機能**] を選択 :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: し、 **Microsoft Teams Toolkit** をインストールします。
 
     :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="Visual Studio Code の場所を示す図は、Microsoft Teams ツールキットの拡張機能をインストールできます。":::
 
