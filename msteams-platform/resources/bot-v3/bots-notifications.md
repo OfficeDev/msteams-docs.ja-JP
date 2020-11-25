@@ -5,12 +5,12 @@ keywords: teams の bot イベント
 ms.date: 05/20/2019
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: e15629ef2f178c0498e33518f5976ff2b2bdf776
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 1161d21ee755cebe6ddb2a2d5a219f9538de77cf
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346729"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409051"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>Microsoft Teams で bot イベントを処理する
 
@@ -30,7 +30,7 @@ Microsoft Teams は、bot がアクティブである範囲で発生した変更
 
 次の表に、ボットが受信してアクションを実行できるイベントを示します。
 
-|種類|ペイロードオブジェクト|Teams の eventType |Description|範囲|
+|型|ペイロードオブジェクト|Teams の eventType |説明|範囲|
 |---|---|---|---|---|
 | `conversationUpdate` |`membersAdded`| `teamMemberAdded`|[チームに追加されたメンバー](#team-member-or-bot-addition)| すべての |
 | `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|[メンバーがチームから削除されました](#team-member-or-bot-removed)| `groupChat` & `team` |
@@ -279,8 +279,42 @@ Bot は、 `conversationUpdate` ユーザーが `membersAdded` 個人チャッ�
 
 #### <a name="schema-example-user-removed-from-meeting"></a>スキーマの例: ユーザーが会議から削除されました
 
-{       "メンバーを削除しました":        {           "id": "29 1Z_XHWBMhDuehhDBYoPQD6Y1DSFsTtqOZx: SA5Jh9Y4zHKm4VbFGRn7-rK7SWiW1JECwxkMdrWpHoBut2sSyQPA"         }       ],       "type": "conversationUpdate",       "timestamp": "2020-09-29t21:15: 08.6391139 z",       "id": "f: ee8dfdf3-54ac-51de2-05daoff9d49514974bb", "channelId       ": "msteams", "       serviceurl": "", https://canary.botapi.skype.com/amer/ "from       ": {"id         ": "f30ba569-abef-4e97-8762-35f85cbae706"         }, "aadObjectId": ""},       "会話       ": {4kEQW4BJnWuFYVIVu87xCNP99nidgQRCcwD3L3p_schiMShzx8IDRzf8mw 1siKxZhSoTapsXvI0gyf7Gywm_HM    
-        "isgroup": true、         "tenantId": "e15762ef-a8d8-416b-871c-25516354f1fe"、         "id": "19: meeting_MWJlNGViOTgtMGExYi00NDA3LWExODgtOTZhMWNlYjM4ZTRj@thread v2"       },       "recipient": {         "id": "28: 3af3604a-d4fc-486b-911e-86fab41aa91c"、         "name": "EchoBot1_Rename"       }、       "channeldata": {         "tenant": {           "id": "e15762ef-a8d8-416b-871c-25516354f1fe"         }、         "source": null、         "meeting": {           "id": "MCMxOTptZWV0aW5nX01XSmxOR1ZpT1RndE1HRXhZaTAwTkRBM0xXRXhPRGd0T1RaaE1XTmxZak00WlRSakB0aHJlYWQudjIjMA = ="         }       }    }   
+```
+{   
+      "membersRemoved": 
+        {  
+          "id": "29:1Z_XHWBMhDuehhDBYoPQD6Y1DSFsTtqOZx-SA5Jh9Y4zHKm4VbFGRn7-rK7SWiW1JECwxkMdrWpHoBut2sSyQPA"   
+        }   
+      ],   
+      "type": "conversationUpdate",   
+      "timestamp": "2020-09-29T21:15:08.6391139Z",   
+      "id": "f:ee8dfdf3-54ac-51de-05da-9d49514974bb",   
+      "channelId": "msteams",   
+      "serviceUrl": "https://canary.botapi.skype.com/amer/",   
+      "from": {   
+        "id": "29:1siKxZhSoTapsXvI0gyf7Gywm_HM-4kEQW4BJnWuFYVIVu87xCNP99nidgQRCcwD3L3p_schiMShzx8IDRzf8mw",   
+        "aadObjectId": "f30ba569-abef-4e97-8762-35f85cbae706"   
+      },   
+      "conversation": {    
+        "isGroup": true,   
+        "tenantId": "e15762ef-a8d8-416b-871c-25516354f1fe",   
+        "id": "19:meeting_MWJlNGViOTgtMGExYi00NDA3LWExODgtOTZhMWNlYjM4ZTRj@thread.v2"   
+      },   
+      "recipient": {   
+        "id": "28:3af3604a-d4fc-486b-911e-86fab41aa91c",   
+        "name": "EchoBot1_Rename"   
+      },   
+      "channelData": {   
+        "tenant": {   
+          "id": "e15762ef-a8d8-416b-871c-25516354f1fe"   
+        },   
+        "source": null,   
+        "meeting": {   
+          "id": "MCMxOTptZWV0aW5nX01XSmxOR1ZpT1RndE1HRXhZaTAwTkRBM0xXRXhPRGd0T1RaaE1XTmxZak00WlRSakB0aHJlYWQudjIjMA=="   
+        }   
+      }   
+}
+```
 
 ## <a name="team-name-updates"></a>チーム名の更新
 

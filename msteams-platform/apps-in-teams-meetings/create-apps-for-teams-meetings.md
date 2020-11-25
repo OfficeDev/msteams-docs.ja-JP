@@ -5,12 +5,12 @@ description: teams 会議用のアプリを作成する
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: teams アプリ会議ユーザー参加者ロール api
-ms.openlocfilehash: 30c7a2d6bc3afed28fe0f24a9dd54b67f9b1223c
-ms.sourcegitcommit: e70d41ae793a407fdbb71bc79ef7b67b40386c96
+ms.openlocfilehash: f448885e3664209858eb90fa9f0853c3d31e015a
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "49358015"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409114"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Teams 会議用のアプリを作成する
 
@@ -30,7 +30,7 @@ ms.locfileid: "49358015"
 
 ## <a name="meeting-apps-api-reference"></a>会議アプリ API リファレンス
 
-|API|Description|要求|ソース|
+|API|説明|要求|Source|
 |---|---|----|---|
 |**GetUserContext**| 関連するコンテンツを Teams タブに表示するためのコンテキスト情報を取得します。 |_**getContext (() => {/*...*/ } )**_|Microsoft Teams クライアント SDK|
 |**GetParticipant**|この API を使用すると、ボットはミーティング id と参加者 id で参加者情報を取得できます。|/V1/meetings/{meetingId}/participants/{participantId} を **取得** する ( _**tenantid** )_ |Microsoft Bot フレームワーク SDK|
@@ -88,7 +88,7 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 #### <a name="query-parameters"></a>クエリ パラメーター
 
-|値|Type|必須|説明|
+|値|型|必須|説明|
 |---|---|----|---|
 |**meetingId**| 文字列 | はい | 会議識別子は、ボット Invoke および Teams クライアント SDK を介して利用できます。|
 |**participantId**| 文字列 | はい | このフィールドはユーザー ID であり、タブ SSO、Bot 呼び出し、Teams クライアント SDK で使用できます。 タブ SSO を強くお勧めします。|
@@ -152,7 +152,7 @@ POST /v3/conversations/{conversationId}/activities
 
 #### <a name="query-parameters"></a>クエリ パラメーター
 
-|値|Type|必須|説明|
+|値|型|必須|説明|
 |---|---|----|---|
 |**conversationId**| 文字列 | はい | 会話 id は bot 呼び出しの一部として使用できます。 |
 
@@ -289,7 +289,8 @@ Tab `context` およびプロパティは、 `scopes` アプリを表示する�
 
 アプリマニフェスト内の✔前述のように、**コンテキスト** 配列に **sidepanel** を追加します。
 
-会議の✔とすべてのシナリオにおいて、アプリは、ため320px ですの幅で表示される [会議中] タブに表示されます。 このためにタブを最適化する必要があります。 *参照*、 [framecontext インターフェイス](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)
+会議の✔とすべてのシナリオにおいて、アプリは、ため320px ですの幅で表示される [会議中] タブに表示されます。 このためにタブを最適化する必要があります。 *参照*、 [framecontext インターフェイス](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest&preserve-view=true
+)
 
 **UserContext** API を使用して要求を適切にルーティングするには、 [Teams SDK](../tabs/how-to/access-teams-context.md#user-context)を参照してください✔。
 

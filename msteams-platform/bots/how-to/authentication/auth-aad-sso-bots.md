@@ -2,12 +2,12 @@
 title: ボットのシングル サインオンのサポート
 description: ユーザートークンを取得する方法について説明します。 現在、ボット開発者は、OAuth カードサポート付きのサインインカードまたは azure bot サービスを使用できます。
 keywords: ボットのトークン、ユーザートークン、SSO のサポート
-ms.openlocfilehash: a056ce1a8bf0e59c9f4f30392df3bce7e8c63e00
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: f2f04cefdea874c42961404339f54b8eb581c7ee
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346855"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409100"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>ボットに対するシングルサインオン (SSO) のサポート
 
@@ -48,13 +48,16 @@ SSO Microsoft Teams bot を開発するには、次の手順を実行する必�
 
 この手順は、 [タブ SSO フロー](../../../tabs/how-to/authentication/auth-aad-sso.md)に似ています。
 
-1. [AZURE AD アプリケーション ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)を取得します。
+1. Teams デスクトップ、web、モバイルクライアントの [AZURE AD アプリケーション ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in) を取得します。
 2. Azure AD エンドポイントと、必要に応じて Microsoft Graph に対してアプリケーションに必要なアクセス許可を指定します。
 3. Teams デスクトップ、web、モバイルアプリケーションに[アクセス許可を付与](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources)します。
-4. 事前承認する [ **スコープの追加** ] ボタンを選択し、表示されるパネルで、 `access_as_user` **範囲名** としてを入力します。
+4. クライアントアプリを追加する [ **スコープの追加** ] ボタンを選択し、開いたパネルに `access_as_user` **範囲名** としてを入力します。
+
+>[!NOTE]
+> クライアントアプリを追加するために使用される "access_as_user" スコープは、"管理者とユーザー" を対象としています。
 
 > [!IMPORTANT]
-> * スタンドアロン bot を構築する場合は、アプリケーション ID URI をに設定し `api://botid-{YourBotId}` ます。
+> * スタンドアロン bot を構築している場合は、アプリケーション ID URI をここに設定し `api://botid-{YourBotId}` ます。この場合、 **Botid** は AZURE AD アプリケーション ID を参照します。
 > * Bot とタブを使用してアプリを作成する場合は、アプリケーション ID URI をに設定し `api://fully-qualified-domain-name.com/botid-{YourBotId}` ます。
 
 ### <a name="update-your-app-manifest"></a>アプリのマニフェストを更新する
@@ -78,6 +81,9 @@ Microsoft Teams のマニフェストに新しいプロパティを追加しま�
 ### <a name="request-a-bot-token"></a>Bot トークンを要求する
 
 トークンを取得する要求は、(既存のメッセージスキーマを使用して) 通常の POST メッセージ要求です。 これは、OAuthCard の添付ファイルに含まれています。 OAuthCard クラスのスキーマは、 [Microsoft Bot スキーマ 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true) で定義されており、サインインカードに非常によく似ています。 この `TokenExchangeResource` プロパティがカードに設定されている場合、Teams はこの要求をサイレントトークンの取得として扱います。 Teams チャネルの場合は、 `Id` トークン要求を一意に識別するプロパティのみを優先します。
+
+>[!NOTE]
+> Bot フレームワークまたはは `OAuthPrompt` 、 `MultiProviderAuthDialog` シングルサインオン (SSO) 認証をサポートしています。
 
 ユーザーが初めてアプリケーションを使用していて、ユーザーの同意が必要な場合は、次のような同意を得るためのダイアログがユーザーに表示されます。 ユーザーが [ **続行**] を選択すると、bot が定義されているかどうか、および OAuthCard のサインインボタンが定義されているかどうかに応じて、次の2つの問題が発生します。
 
@@ -116,14 +122,14 @@ var attachment = new Attachment
 **呼び出しアクティビティを処理するために応答する C# コード**:
 
 ```csharp
-protected override async Task<InvokeResponse> OnInvokeActivity
+protected override async Task<InvokeResponse> OnInvokeActivityAsync
   (ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
         {
             try
             {
                 if (turnContext.Activity.Name == SignInConstants.TokenExchangeOperationName && turnContext.Activity.ChannelId == Channels.Msteams)
                 {
-                    await OnTokenResponse(turnContext, cancellationToken);
+                    await OnTokenResponseEventAsync(turnContext, cancellationToken);
                     return new InvokeResponse() { Status = 200 };
                 }
                 else
@@ -155,6 +161,10 @@ protected override async Task<InvokeResponse> OnInvokeActivity
 > * 新しい接続設定の名前を入力します。 これは、 **手順 5** で bot サービスコードの設定内で参照される名前になります。
 > * サービスプロバイダーのドロップダウンで、[ **Azure Active Directory V2**] を選択します。
 >* AAD アプリケーションのクライアント資格情報を入力します。
+
+>[!NOTE]
+> AAD アプリケーションで **暗黙的な付与** が必要になる場合があります。
+
 >* トークン交換 URL の場合は、AAD アプリケーションの前の手順で定義した範囲の値を使用します。 トークン交換 URL の存在は、この AAD アプリケーションが SSO 用に構成されていることを SDK に示します。
 >* **テナント ID** として "common" を指定します。
 >* AAD アプリケーションの下流 Api へのアクセス許可を指定するときに構成されているすべてのスコープを追加します。 クライアント id とクライアントシークレットが指定されている場合、トークンストアは、定義されたアクセス許可を持つグラフトークンのトークンを交換します。

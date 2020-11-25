@@ -5,12 +5,12 @@ description: Microsoft Teams ツールキットを使用して、Microsoft Teams
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: a82d3dcfd9529d88160c4193d27105c3468fe654
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 89d9a2109a863402dd7641d0882c530a0c2e6f66
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346806"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409072"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>Microsoft Teams 用の個人用タブを作成する
 
@@ -18,7 +18,7 @@ ms.locfileid: "49346806"
 
 Teams には、2種類のタブがあります。 このチュートリアルでは、個々のユーザーのために全画面表示のコンテンツページである [個人用の基本 *] タブ* を作成します。 (個人タブは、Teams で従来の web サイトの操作に最も近いものです)。
 
-## <a name="before-you-begin"></a>開始する前に
+## <a name="before-you-begin"></a>はじめに
 
 開始するには、基本的に実行中の [個人用] タブが必要です。 まだお持ちでない場合は、「 [最初の Teams アプリを構築して実行](../build-your-first-app/build-and-run.md)する」を参照してください。
 
@@ -171,7 +171,7 @@ Teams のタブを確認します。 外観は、暗いテーマに密接に一�
 
 ## <a name="well-done"></a>よくやりましたね
 
-おめでとうございます。 Teams アプリに [個人用] タブがあり、組織内で重要な連絡先を簡単に見つけられるようになりました。
+おめでとうございます! Teams アプリに [個人用] タブがあり、組織内で重要な連絡先を簡単に見つけられるようになりました。
 
 ## <a name="learn-more"></a>詳細情報
 

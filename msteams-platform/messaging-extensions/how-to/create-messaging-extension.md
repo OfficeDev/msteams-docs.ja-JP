@@ -1,17 +1,17 @@
 ---
-title: アプリ Studio を使用してメッセージング拡張機能を作成する
+title: App Studio を使用してメッセージングの拡張機能を作成する
 author: clearab
 description: アプリ Studio を使用して Microsoft Teams メッセージング拡張機能を作成する方法について説明します。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: c3437457f7084d2d768af0f0db5208525c368682
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: 24d5736fcc7c88d903d30c6f1103a95154143058
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796184"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49409058"
 ---
-# <a name="create-a-messaging-extension-using-app-studio"></a>アプリ Studio を使用してメッセージング拡張機能を作成する
+# <a name="create-a-messaging-extension-using-app-studio"></a>App Studio を使用してメッセージングの拡張機能を作成する
 
 > [!TIP]
 > すばやく開始する方法をお探しですか? Microsoft Teams ツールキットを使用して、 [メッセージング拡張機能](../../build-your-first-app/build-messaging-extension.md) を作成します。
@@ -57,16 +57,16 @@ Web サービスを作成し、アプリパッケージを作成し、web サー
 
 アプリのマニフェストを作成するために、Microsoft Teams クライアント内からアプリ Studio アプリを使用することができます。
 
-1. Teams クライアントで、左側のナビゲーション レールにあるオーバーフロー メニュー ( **...** ) から App Studio を開きます。 まだインストールされていない場合は、それを検索することができます。
+1. Teams クライアントで、左側のナビゲーション レールにあるオーバーフロー メニュー (**...**) から App Studio を開きます。 まだインストールされていない場合は、それを検索することができます。
 2. [ **マニフェストエディター** ] タブで、[ **新しいアプリの作成** ] を選択します (または、既存のアプリにメッセージング拡張機能を追加している場合は、アプリパッケージをインポートできます)。
 3. アプリの詳細情報を入力します (各フィールドの詳細な説明については、「[マニフェスト スキーマの定義](~/resources/schema/manifest-schema.md)」を参照してください)。
 4. [ **メッセージング拡張機能** ] タブで、[ **セットアップ** ] ボタンをクリックします。
 5. メッセージング拡張機能を使用する新しい web サービス (bot) を作成するか、または既に1つの選択/追加をここに登録していることを確認できます。
 6. 必要に応じて、ボット エンドポイント アドレスを変更して、ボットにポイントします。 だいたい次のようになります: `https://someplace.com/api/messages`
-7. **コマンド** セクションの [ **追加** ] ボタンを使用すると、メッセージング拡張機能にコマンドを追加できます。 コマンドの追加の詳細については、「 [詳細](#learn-more) 情報」セクションを参照してください。 メッセージング拡張機能には最大10個のコマンドを定義できます。
+7. **コマンド** セクションの [**追加**] ボタンを使用すると、メッセージング拡張機能にコマンドを追加できます。 コマンドの追加の詳細については、「 [詳細](#learn-more) 情報」セクションを参照してください。 メッセージング拡張機能には最大10個のコマンドを定義できます。
 8. [ **メッセージハンドラ** ] セクションでは、メッセージングがトリガーされるドメインを追加できます。 詳細については、「 [link unfurling](~/messaging-extensions/how-to/link-unfurling.md) 」を参照してください。
 
-**[完了] => [テストと配布** ] タブで、アプリパッケージ (アプリのマニフェストやアプリのアイコンを含む) を **ダウンロード** したり、パッケージを **インストール** したりできます。
+**[完了] => [テストと配布**] タブで、アプリパッケージ (アプリのマニフェストやアプリのアイコンを含む) を **ダウンロード** したり、パッケージを **インストール** したりできます。
 
 ### <a name="create-your-app-manifest-manually"></a>アプリのマニフェストを手動で作成する
 
@@ -83,9 +83,9 @@ Web サービスを作成し、アプリパッケージを作成し、web サー
 
 | プロパティ名 | 用途 | 必須 |
 |---|---|---|
-| `botId` | Bot Framework に登録された、ボット用の一意の Microsoft アプリ ID。 これは通常、Teams アプリ全体の ID と同じである必要があります。 | 必要 |
+| `botId` | Bot Framework に登録された、ボット用の一意の Microsoft アプリ ID。 これは通常、Teams アプリ全体の ID と同じである必要があります。 | はい |
 | `canUpdateConfiguration` | **設定** メニュー項目を有効にします。 | いいえ |
-| `commands` | このメッセージング拡張機能がサポートするコマンドの配列です。 コマンドは10個に制限されています。 | 必要 |
+| `commands` | このメッセージング拡張機能がサポートするコマンドの配列です。 コマンドは10個に制限されています。 | はい |
 
 #### <a name="define-your-commands"></a>コマンドを定義する
 
@@ -127,15 +127,18 @@ Web サービスを作成し、アプリパッケージを作成し、web サー
 
 ## <a name="messaging-extensions-in-teams-meetings"></a>Teams 会議でのメッセージング拡張機能
 
+> [!NOTE]
+> 会議またはグループのチャットでフェデレーションユーザーが名簿に含まれている場合、Teams は開催者を含むすべてのユーザーのメッセージング拡張機能へのアクセスを抑制します。
+
 会議が開始されると、チームの参加者は、live 呼び出しの間にメッセージング拡張機能と直接対話できます。 会議でのメッセージング拡張機能を構築する場合は、次の点を考慮してください。
 
-1. **Location** 。 メッセージング拡張機能は、会議チャットの [メッセージの作成] 領域、コマンドボックス、または @mentioned から呼び出すことができます。
+1. **Location**。 メッセージング拡張機能は、会議チャットの [メッセージの作成] 領域、コマンドボックス、または @mentioned から呼び出すことができます。
 
-1. **メタデータ** 。 メッセージング拡張機能が呼び出されると、との間でユーザーとテナントを識別できるようになり `userId` `tenantId` ます。 `meetingId` は、`channelData` オブジェクトに含まれています。 アプリでは、および API 要求にを使用して、 `userId` `meetingId`  ユーザーの役割を取得でき `GetParticipant` ます。
+1. **メタデータ**。 メッセージング拡張機能が呼び出されると、との間でユーザーとテナントを識別できるようになり `userId` `tenantId` ます。 `meetingId` は、`channelData` オブジェクトに含まれています。 アプリでは、および API 要求にを使用して、 `userId` `meetingId`  ユーザーの役割を取得でき `GetParticipant` ます。
 
-1. **コマンドの種類** 。 メッセージ拡張機能が [アクションベースのコマンド](../../messaging-extensions/what-are-messaging-extensions.md#action-commands)を使用している場合は、タブ [シングルサインオン](../../tabs/how-to/authentication/auth-aad-sso.md) 認証に従う必要があります。
+1. **コマンドの種類**。 メッセージ拡張機能が [アクションベースのコマンド](../../messaging-extensions/what-are-messaging-extensions.md#action-commands)を使用している場合は、タブ [シングルサインオン](../../tabs/how-to/authentication/auth-aad-sso.md) 認証に従う必要があります。
 
-1. **ユーザーの利便性** 。 メッセージング内線番号は、会議の外部と同じように表示および動作する必要があります。
+1. **ユーザーの利便性**。 メッセージング内線番号は、会議の外部と同じように表示および動作する必要があります。
 
 ## <a name="next-steps"></a>次の手順
 
