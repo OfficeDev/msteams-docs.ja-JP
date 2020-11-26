@@ -229,8 +229,6 @@
               href: bots/how-to/conversations/channel-and-group-conversations.md
             - name: プロアクティブ メッセージを送信する
               href: bots/how-to/conversations/send-proactive-messages.md
-            - name: ファイルを送受信する
-              href: bots/how-to/conversations/send-and-receive-files.md
         - name: ボットのデバッグ
           items:
             - name: IDE でローカルのデバッグを行う
