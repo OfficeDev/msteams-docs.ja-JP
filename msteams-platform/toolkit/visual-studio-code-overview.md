@@ -2,16 +2,18 @@
 title: Microsoft Teams Toolkit と Visual Studio コードを使用してアプリをビルドする
 description: Microsoft Teams ツールキットを使用して、Visual Studio Code 内で魅力的なカスタムアプリを直接作成する
 keywords: teams visual studio code toolkit
-ms.openlocfilehash: 7b8a32c099d85bec2584da2b42dcf5a524ecddbc
-ms.sourcegitcommit: 9fbc701a9a039ecdc360aefbe86df52b9c3593f3
+ms.topic: overview
+ms.author: lajanuar
+ms.openlocfilehash: 41b0eeaeef1c7094fc9c8cbdc05c2db899245fc6
+ms.sourcegitcommit: 7e47bf158249050c36d97509eea00e77089a54e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "46651664"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "49476931"
 ---
-# <a name="build-apps-with-the-microsoft-teams-toolkit-and-visual-studio-code"></a>Microsoft Teams Toolkit と Visual Studio コードを使用してアプリをビルドする
+# <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>Teams Toolkit と Visual Studio Code を使用してアプリをビルドする
 
-Microsoft Teams Toolkit を使用すると、カスタム Teams アプリを Visual Studio Code 環境内で直接作成することができます。 このツールキットは、このプロセスを順を追って説明しており、Teams アプリを構築、デバッグ、および起動するために必要なすべての情報を提供します。
+Microsoft Teams ツールキットを使用すると、Visual Studio Code 環境内で直接カスタムの Teams アプリを構築できます。 ツールキットはプロセスをガイドし、Teams アプリの構築、デバッグ、起動に必要なすべてを提供します。
 
 ## <a name="installing-the-teams-toolkit"></a>Teams ツールキットをインストールする
 
@@ -26,9 +28,7 @@ Microsoft Teams Toolkit for Visual studio code は、visual [Studio Marketplace]
 - [既存のプロジェクトをインポートする](#import-an-existing-teams-app-project)
 - [アプリを構成する](#configure-your-app)
 - [アプリをパッケージ化する](#package-your-app)
-- [Teams でアプリを実行する](#run-your-app-in-teams)
-- [アプリを検証する](#validate-your-app)
-- [アプリを発行する](#publish-your-app-to-teams)
+- [アプリをローカルで、または Teams で実行する](#run-your-app)
 
 ## <a name="set-up-a-new-teams-project"></a>新しい Teams プロジェクトをセットアップする
 
@@ -37,7 +37,7 @@ Microsoft Teams Toolkit for Visual studio code は、visual [Studio Marketplace]
 1. [コマンド] メニューから [ **Microsoft Teams Toolkit** ] を選択します。
 1. [コマンド] メニューから [ **新しい Teams アプリの作成** ] を選択します。
 1. メッセージが表示されたら、ワークスペースの名前を入力します。 これは、プロジェクトが存在するフォルダーの名前と、アプリの既定の名前の両方として使用されます。
-1. **Enter**キーを押すと、[**機能の追加**] 画面が表示され、新しいアプリのプロパティを構成します。
+1. **Enter** キーを押すと、[**機能の追加**] 画面が表示され、新しいアプリのプロパティを構成します。
 1. [ **完了** ] ボタンを選択して、構成プロセスを完了します。
 
 ## <a name="import-an-existing-teams-app-project"></a>既存の Teams アプリプロジェクトをインポートする
@@ -66,66 +66,29 @@ Microsoft Teams Toolkit for Visual studio code は、visual [Studio Marketplace]
 
 1. アプリを構成するには、Visual Studio Code の [ **Microsoft Teams Toolkit** ] タブに移動します。
 1. [ **アプリパッケージの編集** ] を選択して、[ **アプリの詳細** ] ページを表示します。
-1. [アプリの詳細] ページのフィールドを編集すると、最終的にアプリパッケージの一部として配布されるファイルの manifest.jsの内容が更新されます。 [詳細情報](https://aka.ms/teams-toolkit-manifest)
+1. [アプリの詳細] ページのフィールドを編集すると、最終的にアプリパッケージの一部として配布されるファイルの manifest.jsの内容が更新されます。 *「* [App Studio manifest Editor](https://aka.ms/teams-toolkit-manifest) 」を参照
 
 ## <a name="package-your-app"></a>アプリをパッケージ化する
 
-**アプリの詳細**ページを変更するか、**マニフェスト**を更新するか、またはアプリの**publish**フォルダー内の**env**ファイルを変更すると、 **Development.zip**ファイルが自動的に生成されます。 同じフォルダーに [2 つのアイコン](../concepts/build-and-test/apps-package.md#icons) を含める必要があります。
+アプリの **詳細** ページを変更するか、**マニフェスト**、またはアプリの **publish** フォルダー内の **env** ファイルを更新すると、 **Development.zip** ファイルが自動的に生成されます。 同じフォルダーに [2 つのアイコン](../concepts/build-and-test/apps-package.md#icons) を含める必要があります。
 
-## <a name="install-and-run-your-app-locally"></a>アプリをローカルにインストールして実行する
+## <a name="run-your-app"></a>アプリを実行する
 
-アプリのパッケージ化とテストの詳細な手順については、「プロジェクトホームページのコンテンツを*ビルドして実行* する」を参照してください。 一般に、アプリのサーバーをインストールし、実行して、トンネリングソリューションをセットアップして、Teams が localhost から実行されているコンテンツにアクセスできるようにする必要があります。
+### <a name="install-and-run-your-app-locally"></a>アプリをローカルにインストールして実行する
 
-## <a name="add-a-trusted-certificate-for-localhost"></a>Localhost の信頼できる証明書を追加する
+アプリをパッケージ化してテストする方法の詳細については、「プロジェクトホームページのコンテンツを *ビルドして実行* する」を参照してください。 一般に、アプリのサーバーをインストールし、実行して、トンネリングソリューションをセットアップして、Teams が localhost から実行されているコンテンツにアクセスできるようにする必要があります。
 
-Https を使用して localhost でタブベースのアプリをデバッグする場合は、localhost の証明書を catalog に追加する必要があり `Trusted Root Certification Authorities` ます。 この手順は、コンピューターごとに1回だけ実行する必要があります。</br></br>
+### <a name="enable-development-from-localhost"></a>Localhost からの開発を有効にする
 
-**信頼できる証明書を作成してインストールします。**
-<details>
-  <summary>展開する場所</summary>
+HTTPS を使用して localhost でタブベースのアプリをデバッグする場合は、提供元のアプリが信頼されていることをブラウザーに通知する必要があり <https://localhost> ます。 <https://localhost:3000/tab> に移動します。 サイトが信頼されていないことを示す警告が表示された場合は、そのまま続行するオプションを選択します。 これで、アプリは Teams クライアントからアクセスできるようになります。
 
-* アプリの作成と実行
-  * プロジェクト Readme の「**ビルドと実行**」セクションの instuctions に従って、そのサービスが提供されるように https://localhost:3000/tab します。一般的には、次のようにして実行します。 `npm install``npm start`
-  * https://localhost:3000/tabGoogle Chrome または Edge Chromium から移動します。
+### <a name="run-your-app-in-teams"></a>Teams でアプリを実行する
 
-* SSL 証明書を取得します。
-  * [Chrome 開発者ツール] ウィンドウ () を開き `ctrl + shift + i`  /  `cmd + option + i` ます。
-  * タブをクリックします。 `Security`
-  * [] `View certificate` をクリックすると、OS X でデスクトップに証明書をドラッグするか、または Windows のタブをクリックして、次のボタンをクリックすることによって、証明書をダウンロードすることができます。 `Details``Copy to File…`
-  * ファイルに *任意* の> <名前を付け、書き込み操作を実行するために管理者の同意を必要としないフォルダーに保存します。
-  
-* **Windows**に証明書をインストールする
-  * `DER encoded binary X.509 (.CER)`オプション (最初の1つ) を選択し、保存します。
-  * 証明書をダブルクリックしてインストールします。
-  * [ `Local Machine`
-  * 選択 `Place all certificates in the following store`
-  * [ `Trusted Root Certification Authorities`
-  * インストールを確認する
-  
-* **MAC OS X**の証明書をインストールする
-  * OS X で、キーチェーンアクセスユーティリティを開き、 `System` 左側のメニューから選択します。 ロックアイコンをクリックして、変更を有効にします。
-  * 下部にあるプラスボタンをクリックして新しい証明書を追加し、 `localhost.cer` デスクトップにドラッグしたファイルを選択します。 `Always Trust`表示されるダイアログボックスをクリックします。
-  * システムキーチェーンに証明書を追加した後、証明書をダブルクリックして、[ `Trust` 証明書の詳細] セクションを展開します。 [ `Always Trust` すべて] オプションを選択します。
-
-> [!IMPORTANT]
-> セキュリティ証明書の警告が表示された場合は、に移動 https://localhost:3000/tab します。サイトが依然として信頼されていない場合は、コンピューターを再起動し、localhost を信頼できるユーザーとして承認する必要があります。
-</details>
-
-## <a name="run-your-app-in-teams"></a>Teams でアプリを実行する
-- 前提条件:
-  - [Teams 開発者プレビューモードを有効にする](https://aka.ms/teams-toolkit-enable-devpreview)
+前提条件: [Teams 開発者プレビューモードを有効にする](https://aka.ms/teams-toolkit-enable-devpreview)
 
 1. Visual Studio の [コード] ウィンドウの左側にあるアクティビティバーに移動します。
 1. [実行 **] アイコンを** 選択して、[ **実行] および [デバッグ** ] ビューを表示します。
 1. キーボードショートカットを使用することもでき `Ctrl+Shift+D` ます。
-
-## <a name="validate-your-app"></a>アプリを検証する
-
-[ **検証** ] ページでは、アプリを appsource に提出する前にアプリパッケージを確認できます。 マニフェストパッケージをアップロードすると、検証ツールによって、マニフェスト関連のすべてのテストケースに対してアプリがチェックされます。 失敗した各テストの説明には、エラーを解決するためのドキュメントリンクが記載されています。 自動化が困難なテストの場合、最も一般的な失敗したテストケースの7つの **事前チェックリスト** と、完全な提出チェックリストへのリンクがあります。
-
-## <a name="publish-your-app-to-teams"></a>アプリを Teams に公開する
-
-プロジェクトのホームページでは、アプリをチームにアップロードしたり、アプリを組織内のユーザーに対して会社のカスタムアプリストアに提出したり、アプリをアプリソースに提出してすべての Teams ユーザーに提供したりすることができます。 IT 管理者は、これらの送信を確認します。 [ *発行* ] ページに戻り、送信の状態を確認し、アプリが IT 管理者によって承認または拒否されたかどうかを確認することができます。これは、アプリに更新を送信するか、現在アクティブな提出を取り消すこともできます。
 
 > [!div class="nextstepaction"]
 > [次のステップ: 公開アプリの管理とサポート](../concepts/deploy-and-publish/appsource/post-publish/overview.md)

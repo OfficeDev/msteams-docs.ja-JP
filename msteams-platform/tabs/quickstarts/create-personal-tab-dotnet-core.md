@@ -4,16 +4,16 @@ author: laujan
 description: ASP.NET コアを使用してカスタムの個人用タブを作成するためのクイックスタートガイド。
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 3eb0c42bb81ec8b2d906863051bd551c88c35f57
-ms.sourcegitcommit: fdb53284a20285f7e8a7daf25e85cb5d06c52b95
+ms.openlocfilehash: 39f45dd79606d1416f3924d01f75c5bedc11bfba
+ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48992632"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "49476940"
 ---
 # <a name="create-a-personal-tab-with-aspnet-core"></a>ASP.NET Core を使用して [個人用] タブを作成する
 
-このクイックスタートでは、C# と ASP.Net コアの Razor ページを使用して、カスタムの個人用タブを作成する手順を説明します。 また、 [Microsoft teams 用のアプリ Studio](~/concepts/build-and-test/app-studio-overview.md) を使用して、アプリマニフェストを完成させ、タブを teams に展開します。
+このクイックスタートでは、C# および ASP.Net コアの Razor ページを使用して、カスタムの個人用タブを作成する手順を説明します。 また、 [Microsoft teams 用のアプリ Studio](~/concepts/build-and-test/app-studio-overview.md) を使用して、アプリマニフェストを完成させ、タブを teams に展開します。
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
@@ -25,9 +25,9 @@ ms.locfileid: "48992632"
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
 
-ソースコードを取得したら、Visual Studio を開き、[ **プロジェクトまたはソリューションを開く** ] を選択します。 Tab アプリケーションディレクトリに移動して、"独自のタブを開く" という名前の **.sln** を開きます。
+ソースコードを取得したら、Visual Studio を開き、[ **プロジェクトまたはソリューションを開く**] を選択します。 Tab アプリケーションディレクトリに移動して、"独自のタブを開く" という名前の **.sln** を開きます。
 
-アプリケーションをビルドして実行するには、 **F5** キーを押すか、[ **デバッグ** ] メニューの [ **デバッグ開始** ] を選択します。 ブラウザーで以下の Url に移動し、アプリケーションが正しく読み込まれていることを確認します。
+アプリケーションをビルドして実行するには、 **F5** キーを押すか、[**デバッグ**] メニューの [**デバッグ開始**] を選択します。 ブラウザーで以下の Url に移動し、アプリケーションが正しく読み込まれていることを確認します。
 
 - `http://localhost:44325/`
 - `http://localhost:44325/personal`
@@ -68,11 +68,11 @@ ASP.NET Core は、 *Index* というファイルをサイトの既定または�
 - 32 x 32 ピクセルを測定する **透明のアウトラインアイコン** 。
 - アプリの属性を指定するファイルの **manifest.js** 。
 
-これらのファイルは、タブを Teams にアップロードする際に使用するために、アプリパッケージに圧縮する必要があります。 Microsoft Teams は、 `contentUrl` マニフェストで指定されたを読み込み、それを IFrame に埋め込んで、それをタブに表示します。
+これらのファイルは、タブを Teams にアップロードする際に使用するために、アプリパッケージに圧縮する必要があります。 Microsoft Teams は、 `contentUrl` マニフェストで指定されたを読み込み、それを <iframe に埋め込み、 \> タブにレンダリングします。
 
 ### <a name="csproj"></a>.csproj
 
-Visual Studio の [ソリューションエクスプローラー] ウィンドウで、プロジェクトを右クリックし、[ **プロジェクトファイルの編集** ] を選択します。 ファイルの末尾に、アプリケーションのビルド時に zip フォルダーを作成して更新するコードが表示されます。
+Visual Studio の [ソリューションエクスプローラー] ウィンドウで、プロジェクトを右クリックし、[ **プロジェクトファイルの編集**] を選択します。 ファイルの末尾に、アプリケーションのビルド時に zip フォルダーを作成して更新するコードが表示されます。
 
 ```xml
 <PropertyGroup>
@@ -113,6 +113,6 @@ ngrok http https://localhost:44325 -host-header="localhost:44325"
 
 ### <a name="run-your-application"></a>アプリケーションを実行する
 
-- Visual Studio で **F5** キーを押すか、アプリケーションの **デバッグ** メニューから [ **デバッグ開始** ] を選択します。
+- Visual Studio で **F5** キーを押すか、アプリケーションの **デバッグ** メニューから [**デバッグ開始**] を選択します。
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
