@@ -5,12 +5,12 @@ description: コンテンツページを作成する方法
 keywords: teams タブグループチャネルの構成可能な静的
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 62a398c87b681013c89e540d2bdc463c97877307
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: ad1e1a015526fd723670ea7eda735ebf88f85bf8
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796317"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552536"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>タブのコンテンツページを作成する
 
@@ -71,12 +71,14 @@ Teams のエンティティへの詳細なリンクを作成できます。 通�
 [マニフェストスキーマ](../../../resources/schema/manifest-schema.md)v2.0 以降では、web コンテンツが Teams ([タブのコンテンツページ](#integrate-your-code-with-teams)、[構成ページ](configuration-page.md)、[削除ページ](removal-page.md)、[タスクモジュール](../../../task-modules-and-cards/task-modules/task-modules-tabs.md)など) に読み込まれているすべての場所で、[ネイティブの読み込みインジケーター](../../../resources/schema/manifest-schema.md#showloadingindicator)を提供できます。
 
 > [!NOTE]
-> アプリマニフェストで指定する場合は、  `"showLoadingIndicator : true`  すべてのタブ構成、コンテンツ、および削除ページと、すべての iframe ベースのタスクモジュールは、以下の必須プロトコルに従う必要があります。
+> 1. ネイティブの読み込みインジケーターは、モバイルデバイスではまだサポートされていません。
+> 2. アプリマニフェストで指定する場合は、  `"showLoadingIndicator : true`  すべてのタブ構成、コンテンツ、および削除ページと、すべての iframe ベースのタスクモジュールは、以下の必須プロトコルに従う必要があります。
+
 
 1. 読み込みインジケーターを表示するには、 `"showLoadingIndicator": true` マニフェストにを追加します。 
 2. にお問い合わせ `microsoftTeams.initialize();` ください。
 3. **省略可能** です。 画面に印刷する準備ができていて、アプリケーションのコンテンツの残りの部分を遅延ロードする必要がある場合は、を呼び出して、読み込みインジケーターを手動で非表示にすることができます。 `microsoftTeams.appInitialization.notifyAppLoaded();`
-4. **必須** 。 最後に、 `microsoftTeams.appInitialization.notifySuccess()` アプリが正常に読み込まれたことを Teams に通知する呼び出しを行います。 チームは、必要に応じて、読み込みインジケーターを非表示にします。 `notifySuccess`が30秒以内に呼び出されない場合は、アプリがタイムアウトになり、[再試行] オプションのあるエラー画面が表示されることを前提としています。
+4. **必須**。 最後に、 `microsoftTeams.appInitialization.notifySuccess()` アプリが正常に読み込まれたことを Teams に通知する呼び出しを行います。 チームは、必要に応じて、読み込みインジケーターを非表示にします。 `notifySuccess`が30秒以内に呼び出されない場合は、アプリがタイムアウトになり、[再試行] オプションのあるエラー画面が表示されることを前提としています。
 5. アプリケーションの読み込みに失敗した場合は、 `microsoftTeams.appInitialization.notifyFailure(reason);` チームにエラーがあることを知らせるための呼び出しを行うことができます。 エラー画面がユーザーに表示されます。
 
 ```typescript

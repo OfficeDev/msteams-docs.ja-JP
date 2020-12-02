@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Microsoft Teams テンプレートサンプルのデモ
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 3bf038b2d62a0805ae3f16fd879664d755108acf
-ms.sourcegitcommit: e70d41ae793a407fdbb71bc79ef7b67b40386c96
+ms.openlocfilehash: 87361e8c6be068b932400d97379db8f182afd499
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "49358029"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552578"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams のアプリテンプレート
 
@@ -166,6 +166,23 @@ CrowdSourcer は、チームが照会した情報をグループメンバーか�
 :::row:::
 :::column span="2":::
     ![電子処方箋アプリのスクリーンショット。 管理者がアプリを使用する医療機関を管理する方法について説明します。](../assets/images/e-prescriptions-app-template-admin.png)
+:::column-end:::
+:::row-end:::
+
+## <a name="employee-training-9734"></a>従業員トレーニング &#9734;
+
+従業員トレーニングは、開催者が組織のために学習およびトレーニングイベントを簡単に発行、追跡、促進できるようにする Microsoft Teams アプリです。  アプリを使用すると、イベントプランナーはイベント登録者に通知と通知を送信でき、従業員は、今後のイベントに関する関心を示し、現在のイベントに関する更新を続行し、Teams メッセージング拡張機能を使用してイベントの詳細を同僚と共有できます。
+
+[GitHub で取得する](https://github.com/OfficeDev/microsoft-teams-apps-employeetraining)
+
+:::row:::
+:::column span="2":::
+    **従業員のトレーニングイベント** ![ を表示する[従業員トレーニング] タブの画像](../assets/images/employee-training-discover-tab.png)  
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="2":::
+    **従業員のトレーニングイベント** ![ を作成する従業員トレーニング作成イベントフォーム](../assets/images/employee-training-create-event.jpg)
 :::column-end:::
 :::row-end:::
 

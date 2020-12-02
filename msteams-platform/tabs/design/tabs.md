@@ -2,12 +2,12 @@
 title: タブの設計ガイドライン
 description: コンテンツとコラボレーションのタブを作成するためのガイドラインについて説明します。
 keywords: teams 設計ガイドラインリファレンスフレームワークタブ [構成チャネル] タブ [静的] タブ [シンプル] [デザインチーム] タブ
-ms.openlocfilehash: 9ce72e97fa92e7d5db0fd51f29b2b905f378e788
-ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
+ms.openlocfilehash: ad4d79608364cc2d37c5e02bd3c98a03deb886cf
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931800"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552550"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>すべてのタブを使用したコンテンツと会話
 
@@ -75,7 +75,7 @@ Teams は、ウィンドウのサイズが720ピクセルの場合に使用で�
 独自の色とレイアウトを組み込むことは、個性を伝える上でも役立ちます。
 
 > [!TIP]
-> Visual スタイルを使用して、サービスが Teams の一部として感じられるようにしてください。 [Teams の色](../../concepts/design/components/color.md)などの例を *参照してください* 。
+> Visual スタイルを使用して、サービスが Teams の一部として感じられるようにしてください。 [Teams の色](../../concepts/design/components/color.md)などの例を *参照してください*。
 
 ---
 
@@ -172,7 +172,7 @@ Tab キーは水平スクロールできません。
 
 ### <a name="no-link-to-external-browser"></a>外部ブラウザーへのリンクはありません
 
-タブ内のリンクターゲットは、外部ブラウザーにリンクするのではなく、Teams に含まれる div 要素 (たとえば、タスクモジュール、タブなど) にリンクする必要があります。
+タブ内のリンクターゲットは、外部ブラウザーにリンクするのではなく、Teams 内に含まれる div 要素にリンクする必要があります。 たとえば、タスクモジュール、タブなどに含まれます。
 
 ## <a name="notifications-for-tabs"></a>タブの通知
 
@@ -180,7 +180,7 @@ Tab キーは水平スクロールできません。
 
 > [!div class="checklist"]
 >
-> * **アプリ API を使用して、ユーザーに変更を通知** します。 このメッセージは、ユーザーのアクティビティフィードに表示され、タブに深くリンクします。「 [Microsoft Teams のコンテンツと機能への詳細なリンクの作成](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true ) *」を参照してください* 。  
+> * **アプリ API を使用して、ユーザーに変更を通知** します。 このメッセージは、ユーザーのアクティビティフィードに表示され、タブに深くリンクします。「[Microsoft Teams のコンテンツと機能への詳細なリンクの作成](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true ) *」を参照してください*。  
 
 > * **Bot を使用** します。 このメソッドは、特に Tab スレッドが対象の場合に適しています。 その結果、タブのスレッド化されたスレッドは、最近アクティブな状態で表示されるようになります。 また、このメソッドを使用すると、通知の送信方法をいくらか洗練することができます。
 
@@ -198,3 +198,4 @@ Tab スレッドにメッセージを送信すると、すべてのユーザー�
 * タブには、アプリ内で3つ以上のレベルのナビゲーションを表示しないようにする必要があります。
 * タブ内のセカンダリページと3番目のページは、階層リンクを介して移動するメインタブ領域の L2/L3 ビューで開く必要があります。
 * アプリケーション内で複雑な編集機能があるタブでは、タブ (デスクトップおよび web) ではなく、複数ウィンドウでエディタービューを開く必要があります。
+* ユーザーの操作性を向上させるために、最初の実行時にようこそメッセージをユーザーに送信し、 **hi**、 **help**、および **hello** コマンドに応答する個人 bot を追加します。 詳細については、「 [会話の bot](../../bots/what-are-bots#in-a-one-to-one-chat) 」のドキュメントを参照してください。

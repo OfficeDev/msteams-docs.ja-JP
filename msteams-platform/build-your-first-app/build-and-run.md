@@ -5,12 +5,12 @@ description: "\"Hello, World!\" を表示する Microsoft Teams アプリをす�
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: 62c4bd950183ceb64fb30b528661cf84e9210d89
-ms.sourcegitcommit: 99c35de7e2c604bd8bce392242c2c2fa709cd50b
+ms.openlocfilehash: 2d357ef71bfc4c498b54d94f9d0717cf886df17d
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "48931779"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552480"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app"></a>最初の Microsoft Teams アプリを構築して実行する
 
@@ -20,12 +20,16 @@ ms.locfileid: "48931779"
 
 最初のアプリプロジェクトをセットアップするには、Visual Studio Code の Microsoft Teams ツールキットを使用します。
 
-1. Visual Studio Code で、左側のアクティビティバーにある [ **Microsoft teams** ] を選択 :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: し、[ **新しい teams アプリの作成** ] を選択します。
+1. Visual Studio Code で、左側のアクティビティバーにある [ **Microsoft teams** ] を選択 :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: し、[ **新しい teams アプリの作成**] を選択します。
 1. メッセージが表示されたら、Microsoft 365 開発アカウントでサインインします。
-1. [ **機能の追加** ] 画面で、[ **タブ]** 、[ **次へ** ] の順に選択します。
+1. [ **機能の追加** ] 画面で、[ **タブ]** 、[ **次へ**] の順に選択します。
 :::image type="content" source="../assets/images/build-your-first-app/choose-tab.png" alt-text="Visual Studio Code Teams Toolkit を使用してアプリプロジェクトを構成する方法を示すスクリーンショット。":::
 1. Teams アプリの名前を入力します。 (これは、アプリの既定の名前であり、ローカルコンピューター上のアプリプロジェクトディレクトリの名前でもあります。)
 1. [ **個人用] タブ** のオプションのみをチェックし、画面の下部にある [ **完了** ] を選択してプロジェクトを構成します。
+
+> [!NOTE]
+
+> ツールキットで新しいプロジェクトを作成した後にアプリパッケージをインストールするには、F5 キーまたは run キーを押します。 Chrome が起動し、パッケージがインストールされます。 このパッケージは、アプリ Studio に格納され、を使用してインストールされ `appId` ます。
 
 ## <a name="2-understand-important-app-project-components"></a>2. 重要なアプリプロジェクトコンポーネントを理解する
 
@@ -52,7 +56,7 @@ Teams アプリ ID は、アプリをアプリ Studio で構成するために�
 1. ターミナルで、アプリプロジェクトのルートディレクトリに移動し、を実行 `npm install` します。
 1. `npm start` を実行します。
 
-完了すると、 **コンパイルに成功** しました。 ターミナルのメッセージ。 アプリが実行されている `https://localhost:3000` 。
+完了すると、**コンパイルに成功** しました。 ターミナルのメッセージ。 アプリが実行されている `https://localhost:3000` 。
 
 ## <a name="4-sideload-your-app-in-teams"></a>4. アプリを Teams でサイドロード
 
@@ -70,7 +74,7 @@ Teams アプリ ID は、アプリをアプリ Studio で構成するために�
 
 おめでとうございます🎉 アプリは Teams で実行されています。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 作成したばかりの [個人] タブを展開するか、別の種類の Teams アプリを作成します。
 

@@ -2,12 +2,12 @@
 title: Microsoft Teams での通話と会議のボットの登録
 description: Microsoft Teams 用の新しい音声ビデオを呼び出すボットを登録する方法について説明します。
 keywords: ボット音声/ビデオ音声ビデオメディアの呼び出し
-ms.openlocfilehash: d38b9584440bcff664bd3a2d4b57e52bc695f1b5
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 5a832646d4fa622f746f88a3a969ae4ad3ce69a6
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346848"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552445"
 ---
 # <a name="register-a-calling-bot-for-microsoft-teams"></a>Microsoft Teams 用の呼び出しボットを登録する
 
@@ -50,12 +50,12 @@ Microsoft Graph では、アプリがリソースに対して持つアクセス�
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 |_Calls.Initiate.All_|アプリからの発信 1 対 1 通話の開始 (プレビュー)|アプリで、サインインしているユーザーがいなくても、1 人のユーザーに発信し、組織のディレクトリ内のユーザーに通話を転送することができるようにします。|はい|
 |_Calls.InitiateGroupCall.All_|アプリからの発信グループ通話の開始 (プレビュー)|アプリで、サインインしているユーザーがいなくても、複数のユーザーに発信し、組織内の会議に参加者を追加することができるようにします。|はい|
-|_Calls.JoinGroupCall.All_|グループ通話と会議にアプリとして参加する (プレビュー)|Allows the app to join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined with the privileges of a directory user to meetings in your tenant.|はい|
-|_Calls.JoinGroupCallasGuest.All_|グループ通話と会議にゲストとして参加する (プレビュー)|Allows the app to anonymously join group calls and scheduled meetings in your organization, without a signed-in user. The app will be joined as a guest to meetings in your tenant.|はい|
+|_Calls.JoinGroupCall.All_|グループ通話と会議にアプリとして参加する (プレビュー)|アプリで、サインインしているユーザーがいなくても、組織のグループ通話やスケジュールされた会議に参加することができるようにします。 このアプリは、ディレクトリ ユーザーの特権を使用してテナントの会議に参加します。|はい|
+|_Calls.JoinGroupCallasGuest.All_|グループ通話と会議にゲストとして参加する (プレビュー)|アプリで、サインインしているユーザーがいなくても、組織のグループ通話とスケジュールされた会議に匿名で参加することができるようにします。 このアプリは、テナントの会議にゲストとして参加します。|はい|
 |_通話メディアを呼び出します。_ <sup>_以下を参照_</sup>|通話内のメディア ストリームにアプリとしてアクセスする (プレビュー)|アプリで、サインインしているユーザーがいなくても、通話内のメディア ストリームに直接アクセスすることができるようにします。|はい|
 
 > [!IMPORTANT]
-> Microsoft Graph API を使用して、ボットがアクセスする通話または会議からメディアコンテンツを録音または保存する **ことはできません** 。
+> メディアアクセス API を使用して、アプリケーションがアクセスする通話または会議のメディアコンテンツを記録または保存する **ことはできません**。また、そのメディアコンテンツ ("record" または "レコーディング") から派生したデータは、最初にその api を呼び出してレコーディングが開始されたことを示し、その api から成功応答を受け取ることもあり [ `updateRecordingStatus`](/graph/api/call-updaterecordingstatus) アプリケーションで会議または通話の記録を開始する場合、API を呼び出す前にレコーディングを終了して、 `updateRecordingStatus` レコーディングが終了したことを示す必要があります。
 
 ### <a name="application-permissions-online-meetings"></a>アプリケーションのアクセス許可: オンライン会議
 

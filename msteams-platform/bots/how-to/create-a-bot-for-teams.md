@@ -5,12 +5,12 @@ description: App Studio を使用して Microsoft Teams ボットを作成する
 ms.topic: conceptual
 localization_priority: Priority
 ms.author: anclear
-ms.openlocfilehash: 3d4f954afd56bf6ee442b57961c9d6b736ffa4d8
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: 42b825ff2883e9b2b8b13dbd6774ed7ce6d0f40f
+ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796352"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49476972"
 ---
 # <a name="create-a-bot-using-app-studio"></a>App Studio を使用してボットを作成する
 
@@ -44,7 +44,7 @@ Bot Framework の詳細については、「[Bot Framework のドキュメント
 ## <a name="register-your-web-service-with-the-bot-framework"></a>Web サービスを Bot Framework に登録する
 
 > [!IMPORTANT]
-> Web サービスを登録する際は、 **表示名** を、アプリ マニフェストで使用した **短い名前** と必ず同じ名前にします。 直接のアップロードまたは組織のアプリ カタログ経由でのアップロードのいずれかの方法でアプリを発行すると、ボットにより会話に送信されるメッセージでは、アプリの **短い名前** ではなく、登録時の **表示名** がボットにより使用されます。
+> Web サービスを登録する際は、**表示名** を、アプリ マニフェストで使用した **短い名前** と必ず同じ名前にします。 直接のアップロードまたは組織のアプリ カタログ経由でのアップロードのいずれかの方法でアプリを発行すると、ボットにより会話に送信されるメッセージでは、アプリの **短い名前** ではなく、登録時の **表示名** がボットにより使用されます。
 
 Web サービスを Bot Framework に登録することで、Teams クライアントと Web サービスの間に安全な通信チャネルが提供されます。 Teams クライアントと Web サービスが直接通信することはありません。 代わりに、メッセージは Bot Framework サービス経由でルーティングされます (Microsoft Teams では、このサービスの、Office 365 の基準に準拠する別のインスタンスが使用されます)。
 
@@ -52,9 +52,9 @@ Web サービスを Bot Framework に登録するときは、2 つの選択肢�
 
 ### <a name="without-an-azure-subscription"></a>Azure サブスクリプションがない場合
 
-ボットの登録を Azure で作成しない場合は、こちらのリンク (https://dev.botframework.com/bots/new) または App Studio のいずれかを使用する **必要があります** 。 Bot Framework ポータルで [ *ボットを作成* ] ボタンをクリックすると Microsoft Azure にボット登録が作成され、Azure サブスクリプション情報の提供を求められます。 登録の管理を行う場合、または登録作成後に登録を Azure サブスクリプションに移動する場合は、https://dev.botframework.com/bots にアクセスします。
+ボットの登録を Azure で作成しない場合は、こちらのリンク (https://dev.botframework.com/bots/new) または App Studio のいずれかを使用する **必要があります**。 Bot Framework ポータルで [*ボットを作成*] ボタンをクリックすると Microsoft Azure にボット登録が作成され、Azure サブスクリプション情報の提供を求められます。 登録の管理を行う場合、または登録作成後に登録を Azure サブスクリプションに移動する場合は、https://dev.botframework.com/bots にアクセスします。
 
-Azure に登録されていない既存の Bot Framework 登録のプロパティを編集すると、[移行の状態] 列と、Microsoft Azure ポータルに移動するための [移行] ボタンが表示されます。 意図する場合を除き、[移行] ボタンは選択しないでください。 代わりに、ボットの [ **名前** ] を選択し、そのプロパティを編集できます。
+Azure に登録されていない既存の Bot Framework 登録のプロパティを編集すると、[移行の状態] 列と、Microsoft Azure ポータルに移動するための [移行] ボタンが表示されます。 意図する場合を除き、[移行] ボタンは選択しないでください。 代わりに、ボットの [**名前**] を選択し、そのプロパティを編集できます。
 
    ![ボットのプロパティを編集する](~/assets/images/bots/bf-migrate-bot-to-azure.png)
 
@@ -83,6 +83,7 @@ Web サービスは、Azure ポータルでボット チャネル登録リソー
 
 [Bot Framework ポータル](https://dev.botframework.com)は、Microsoft Azure でのボットの登録に最適化されています。 留意事項がいくつかあります。
 
+* ボットの作成後は必ず、おすすめのチャネル一覧に Microsoft Teams をチャネルとして登録します。
 * Azure で登録したボット用の Microsoft Teams チャネルは **無料** です。 Teams チャネル経由で送信されるメッセージは、ボットの消費メッセージとしてはカウントされません。
 * Microsoft Azure を使用してボットを登録する場合、ボット コードは Microsoft Azure で *ホスト* される必要はあります。
 * Microsoft Azure ポータルを使用してボットを登録する場合は、Microsoft Azure アカウントを持っている必要があります。 このアカウントは[無料で作成](https://azure.microsoft.com/free/)できます。 Azure アカウントを作成するときは、ユーザーの ID を確認するためにユーザーはクレジット カードを提供する必要がありますが、課金はされません。Microsoft Teams を使用してのボットの作成と使用は常に無料です。
@@ -93,15 +94,15 @@ Web サービスは、Azure ポータルでボット チャネル登録リソー
 
 ### <a name="add-using-app-studio"></a>App Studio を使用して追加する
 
-1. Teams クライアントで、左側のナビゲーション レールにあるオーバーフロー メニュー ( **...** ) から App Studio を開きます。 App Studio がまだインストールされていない場合は、それを検索してインストールできます。
-2. On the [ **Manifest editor** ] (マニフェスト エディター) タブで、[ **Create a new app** ] (新しいアプリの作成) を選択します (または、ボットを既存のアプリに追加する場合は、アプリ パッケージをインポートできます)。
+1. Teams クライアントで、左側のナビゲーション レールにあるオーバーフロー メニュー (**...**) から App Studio を開きます。 App Studio がまだインストールされていない場合は、それを検索してインストールできます。
+2. On the [**Manifest editor**] (マニフェスト エディター) タブで、[**Create a new app**] (新しいアプリの作成) を選択します (または、ボットを既存のアプリに追加する場合は、アプリ パッケージをインポートできます)。
 3. アプリの詳細情報を入力します (各フィールドの詳細な説明については、「[マニフェスト スキーマの定義](~/resources/schema/manifest-schema.md)」を参照してください)。
-4. [ **Bots** ] (ボット) タブで、[ **セットアップ** ] (セットアップ) ボタンを選択します。
-5. 新しい Web サービス登録を作成することも ([ **New bot** ] (新しいボット))、既に登録したものがある場合は、[ **Existing bot** ] (既存のボット) を選択することもできます。
+4. [**Bots**] (ボット) タブで、[**セットアップ**] (セットアップ) ボタンを選択します。
+5. 新しい Web サービス登録を作成することも ([**New bot**] (新しいボット))、既に登録したものがある場合は、[**Existing bot**] (既存のボット) を選択することもできます。
 6. ボットで必要な機能とスコープを選択します。
 7. 必要に応じて、ボット エンドポイント アドレスを変更して、ボットにポイントします。 だいたい次のようになります: `https://someplace.com/api/messages`
 8. 必要に応じて、[ボット コマンド](~/bots/how-to/create-a-bot-commands-menu.md)を追加します。
-9. 必要な場合、完成したアプリ パッケージを [ **Test and distribute** ] (テストと発行) タブからダウンロードできます。
+9. 必要な場合、完成したアプリ パッケージを [**Test and distribute**] (テストと発行) タブからダウンロードできます。
 
 ### <a name="create-it-manually"></a>手動で作成する
 
@@ -178,7 +179,7 @@ Web サービスは、Azure ポータルでボット チャネル登録リソー
 > [!NOTE]
 > ボットを正常にアップロードするには、テナント管理者が最初にサードパーティまたはカスタムのアプリを Teams に[アップロードすることを許可](/microsoftteams/manage-apps#manage-org-wide-app-settings)する必要があります。
 
-App Studio を使用した場合は、[ **Manifest editor** ] (マニフェスト エディター) の [ **Test and distribute** ] (テストと発行) タブからアプリをインストールできます。 また、左側のオーバーフロー メニュー (`...`) をクリックし、[ **その他のアプリ** ] をクリックし、[ **カスタム アプリをアップロード** ] リンクをクリックする方法でもアプリ パッケージをインストールすることができます。 アプリ マニフェストまたはアプリ パッケージを App Studio にインポートして、アップロードする前に追加の更新を行うこともできます。
+App Studio を使用した場合は、[**Manifest editor**] (マニフェスト エディター) の [**Test and distribute**] (テストと発行) タブからアプリをインストールできます。 また、左側のオーバーフロー メニュー (`...`) をクリックし、[**その他のアプリ**] をクリックし、[**カスタム アプリをアップロード**] リンクをクリックする方法でもアプリ パッケージをインストールすることができます。 アプリ マニフェストまたはアプリ パッケージを App Studio にインポートして、アップロードする前に追加の更新を行うこともできます。
 
 ## <a name="bots-in-teams-meetings"></a>Teams 会議のボット
 

@@ -2,12 +2,12 @@
 title: タブの認証フロー
 description: タブ内の認証フローについて説明します。
 keywords: teams の認証フロータブ
-ms.openlocfilehash: de5e0312e4523c3adef211dc03b0349c205f92cb
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
+ms.openlocfilehash: 5ecd4d7d3a2658d17a8c6dea5d73cbd98eb2dfde
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346680"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552543"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>タブの Microsoft Teams 認証フロー
 
@@ -17,7 +17,7 @@ ms.locfileid: "49346680"
 
 OAuth 2.0 は、Azure AD とその他の多くの id プロバイダーによって使用される認証と承認のためのオープン標準です。 OAuth 2.0 に関する基本的な理解は、Teams で認証を使用するための前提条件です。[正式な仕様](https://oauth.net/2/)よりも簡単に理解できる[概要を](https://aaronparecki.com/oauth-2-simplified/)次に示します。 タブと bot の認証フローは、タブが web サイトと非常によく似ており、OAuth 2.0 を直接使用できるため、少し異なります。bot は、いくつかの操作を行う必要はありませんが、中心となる概念は同じです。
 
-[OAuth 2.0 暗黙的な許可の種類](https://oauth.net/2/grant-types/implicit/)を使用するノードを使用したタブとボットの認証フローを示す例について説明します。
+ノードおよび [OAuth 2.0 の暗黙的な許可の種類](https://oauth.net/2/grant-types/implicit/)を使用したタブとボットの認証フローの例については、「[タブの認証フローを開始](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow)する」を参照して *ください*。
 
 ![タブ認証シーケンスの図](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
@@ -35,7 +35,7 @@ OAuth 2.0 は、Azure AD とその他の多くの id プロバイダーによっ
 
 ## <a name="treat-tab-context-as-hints"></a>Tab コンテキストをヒントとして扱う
 
-Tab コンテキストはユーザーに関して有用な情報を提供しますが、この情報を使用してユーザーがタブのコンテンツ URL への URL パラメーターとして取得するか、 `microsoftTeams.getContext()` Microsoft Teams クライアント SDK の関数を呼び出すかを認証しません。 悪意のあるアクターは、独自のパラメーターを使用してタブコンテンツ URL を呼び出すことができ、Microsoft Teams を偽装している web ページは、タブコンテンツ URL を iframe に読み込み、そのデータを関数に返すことができました `getContext()` 。 Tab コンテキストの id 関連情報は単にヒントとして扱い、使用する前に検証する必要があります。
+Tab コンテキストはユーザーに関して有用な情報を提供しますが、この情報を使用してユーザーがタブのコンテンツ URL への URL パラメーターとして取得するか、 `microsoftTeams.getContext()` Microsoft Teams クライアント SDK の関数を呼び出すかを認証しません。 悪意のあるアクターは、独自のパラメーターを使用してタブコンテンツ URL を呼び出すことができ、Microsoft Teams を偽装している web ページは、タブコンテンツ URL を iframe に読み込み、そのデータを関数に返すことができました `getContext()` 。 Tab コンテキストの id 関連情報は単にヒントとして扱い、使用する前に検証する必要があります。 [ポップアップページから [認証] ページに移動する](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page)には、「注」を参照してください。
 
 ## <a name="samples"></a>サンプル
 

@@ -5,12 +5,12 @@ description: teams 会議用のアプリを作成する
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: teams アプリ会議ユーザー参加者ロール api
-ms.openlocfilehash: f448885e3664209858eb90fa9f0853c3d31e015a
-ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
+ms.openlocfilehash: fba22dfeb9d05a186ef836d058d88ef6fc8879cc
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "49409114"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552424"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Teams 会議用のアプリを作成する
 
@@ -30,7 +30,7 @@ ms.locfileid: "49409114"
 
 ## <a name="meeting-apps-api-reference"></a>会議アプリ API リファレンス
 
-|API|説明|要求|Source|
+|API|説明|要求|ソース|
 |---|---|----|---|
 |**GetUserContext**| 関連するコンテンツを Teams タブに表示するためのコンテキスト情報を取得します。 |_**getContext (() => {/*...*/ } )**_|Microsoft Teams クライアント SDK|
 |**GetParticipant**|この API を使用すると、ボットはミーティング id と参加者 id で参加者情報を取得できます。|/V1/meetings/{meetingId}/participants/{participantId} を **取得** する ( _**tenantid** )_ |Microsoft Bot フレームワーク SDK|
@@ -103,27 +103,25 @@ if (response.StatusCode == System.Net.HttpStatusCode.OK)
 
 ```json
 {
-  "user":
-  {
-      "id": "29:1JKiJGPAX9TTxtGxhVo0wLx_zwzo-gG8Z-X03306vBwi9p-xMTEbDXsT6KH7-0kkTS8cD-2zkrsoV6f5WJ6_aYw",
-      "aadObjectId": "6aebbad0-e5a5-424a-834a-20fb051f3c1a",
-      "name": "Allan Deyoung",
-      "givenName": "Allan",
-      "surname": "Deyoung",
-      "email": "Allan.Deyoung@microsoft.com",
-      "userPrincipalName": "Allan.Deyoung@microsoft.com",
-      "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
-      "userRole": "user"
-  },
-  "meeting":
-  {
-      "role ": "Presenter",
+   "user":{
+      "id":"29:1JKiJGPAX9TTxtGxhVo0wLx_zwzo-gG8Z-X03306vBwi9p-xMTEbDXsT6KH7-0kkTS8cD-2zkrsoV6f5WJ6_aYw",
+      "aadObjectId":"6aebbad0-e5a5-424a-834a-20fb051f3c1a",
+      "name":"Allan Deyoung",
+      "givenName":"Allan",
+      "surname":"Deyoung",
+      "email":"Allan.Deyoung@microsoft.com",
+      "userPrincipalName":"Allan.Deyoung@microsoft.com",
+      "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47",
+      "userRole":"user"
+   },
+   "meeting":{
+      "role ":"Presenter",
       "inMeeting":true
-  },
-  "conversation":
-  {
-      "id": "<conversation id>"
-  }
+   },
+   "conversation":{
+      "id":"<conversation id>",
+      "isGroup":true
+   }
 }
 ```
 #### <a name="response-codes"></a>応答コード

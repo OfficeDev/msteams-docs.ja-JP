@@ -2,12 +2,12 @@
 title: 詳細なリンクを作成する
 description: 詳細なリンクとアプリでの使用方法について説明します。
 keywords: teams ディープリンクディープリンク
-ms.openlocfilehash: 03580c4d15c82da70402d68d85b0d28f8afa670e
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: a3d5dac3fc83510ae47d91bd70390b9ca2860120
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796331"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552564"
 ---
 # <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>Microsoft Teams のコンテンツと機能への詳細なリンクを作成する
 
@@ -15,6 +15,22 @@ Teams クライアント内の情報と機能へのリンクを作成できま�
 
 * アプリのタブのいずれか内のコンテンツにユーザーを移動します。 たとえば、アプリには、重要なアクティビティをユーザーに通知するメッセージを送信する bot がある場合があります。 ユーザーが通知をタップすると、ディープリンクがタブに移動し、ユーザーがアクティビティの詳細を表示できるようになります。
 * アプリでは、必要なパラメーターでディープリンクを事前に設定することによって、チャットの作成、会議のスケジュール設定など、特定のユーザータスクを自動化または簡素化します。 これにより、ユーザーが情報を手動で入力する必要がなくなります。
+
+> [!NOTE]
+>
+> ディープリンクは、ブラウザーを最初に起動してから、次のようにコンテンツと情報に移動します。
+>
+> **Tab**:  
+> ✔、ディープリンクの url に直接移動します。
+>
+> **Bot**:  
+> [カード本文にディープリンクを✔します。最初にブラウザーで開きます。  
+> アダプティブカードで OpenURL アクションに追加されたディープリンク✔は、ディープリンク url に直接移動します。  
+> ✔ハイパーリンク markdown をカードに入力します。最初にブラウザーで開きます。  
+>
+> **チャット**:  
+> ✔テキストメッセージのハイパーリンク markdown: ディープリンク url に直接移動します。  
+> 一般的なチャットの会話に貼り付けられた✔リンク-ディープリンクの url に直接移動します。
 
 ## <a name="deep-linking-to-your-tab"></a>タブへの詳細なリンク
 
@@ -24,6 +40,9 @@ Teams のエンティティへの詳細なリンクを作成できます。 通�
 
 > [!NOTE]
 > これは、[ **リンクのリンク] タブ** メニュー項目で提供されるリンクとは異なり、このタブをポイントするディープリンクのみを生成します。
+
+>[!NOTE]
+> 現時点では、モバイルプラットフォームでは、この機能は使用できません。
 
 ### <a name="showing-a-deep-link-to-an-item-within-your-tab"></a>タブ内のアイテムへの詳細なリンクを表示する
 
@@ -45,6 +64,10 @@ Teams のエンティティへの詳細なリンクを作成できます。 通�
 Bot、コネクタ、またはメッセージング拡張カードで使用できるディープリンクには、次の形式を使用します。
 
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
+
+> [!NOTE]
+> Bot がディープリンクを持つを含むメッセージを送信する場合、 `TextBlock` ユーザーがリンクを選択すると、新しいブラウザータブが開きます。 これは、Chrome と Microsoft Teams デスクトップアプリ (どちらも Linux で実行されている) で発生します。
+> Bot が同じディープリンク URL をに送信した場合、 `Action.OpenUrl` ユーザーがリンクをクリックすると、現在のブラウザタブで Teams タブが開きます。 新しいブラウザータブは開かれません。
 
 クエリパラメーターは次のとおりです。
 
@@ -85,7 +108,7 @@ Bot、コネクタ、またはメッセージング拡張カードで使用で�
 microsoftTeams.executeDeepLink(/*deepLink*/);
 ```
 
-これにより、正しい URL に移動するか、スケジュール設定またはアプリのインストールダイアログを開くなど、クライアントの動作を開始することができます。 例: 
+これにより、正しい URL に移動するか、スケジュール設定またはアプリのインストールダイアログを開くなど、クライアントの動作を開始することができます。 例:
 
 ```Javascript
 // Open a scheduling dialog from your tab

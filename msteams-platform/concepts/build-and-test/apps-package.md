@@ -3,12 +3,12 @@ title: アプリをパッケージ化する
 description: Microsoft Teams で、テスト用、アップロード用、公開用のアプリをパッケージ化する方法について説明します
 keywords: Teams のアプリのパッケージ化
 ms.topic: conceptual
-ms.openlocfilehash: aec25d3346a93e15f704435f3c6aa3ddca9fd435
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: 4c20e2c1b3c8d7ef13d16b354449887b3c0f1147
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48997987"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552571"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>Microsoft Teams アプリのアプリ パッケージを作成する
 
@@ -45,12 +45,13 @@ Microsoft Teams では、アプリを製品内で使用するために、2 つ�
 
 `outline` アイコンは、ユーザーが "お気に入り" としてマークしたアプリ バーやメッセージングの拡張機能で使用されます。 このアイコンは、32x32 ピクセルである必要があります。 outline アイコンには、白色と透明色のみを含めます (その他の色は使用できません)。 このアイコンは、背景が透明な白色、または背景が白の透明色にできます。 outline アイコンでは、アイコンの周囲に特別なパディングを設けないようにする必要があります。また、32x32 のサイズを維持したまま、できるだけタイトにトリミングする必要があります。 次にいくつかの良い例を示します。
 
-> [!TIP]
->  * 色は RGB では "白" にする必要があります (赤: 255, Green: 255, Blue: 255)。
->  * その他のアイコンの一部は透明にする必要があります。
->  * 渡す場合、小さいアイコンは完全に透明、アルファチャネルを0に、その他の値は fail である必要があります。
-
 ![outline アイコンの例](~/assets/images/icons/sample20x20s.png)
+
+[!ヒントを作成して透明アイコンを作成する
+
+* 色は RGB では "白" にする必要があります (赤: 255, Green: 255, Blue: 255)。
+* その他のアイコンの一部は透明にする必要があります。
+* 渡す場合は、アルファチャネルの値が0の小さいアイコンが完全に透明である必要があります。その他の値は fail です。
 
 たとえば、会社が Contoso であるとします。 2 つのアイコンを提出します。
 

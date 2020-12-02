@@ -4,12 +4,12 @@ author: laujan
 description: 会話名簿、details、channel list を含む、bot の Microsoft チーム固有のコンテキストを取得する方法。
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 36ec992e009a7f45064021ae1235b159d100b9cd
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
+ms.openlocfilehash: 7f3b2fbea33f64659dcd5d9d39bb95e2d953dbea
+ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796345"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "49552473"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Bot のチーム固有のコンテキストを取得する
 
@@ -19,7 +19,7 @@ Bot は、にインストールされているチームまたはチャットに�
 
 ## <a name="fetching-the-roster-or-user-profile"></a>名簿またはユーザープロファイルを取得する
 
-Bot は、メンバーの一覧とその基本プロファイルを照会できます。これには、Teams のユーザー Id や Azure Active Directory (Azure AD) (name、objectId など) の情報が含まれます。 この情報を使用して、ユーザー id (たとえば、Azure AD 資格情報を介してタブにログインしたユーザー) がチームのメンバーであるかどうかを調べることができます。 次のサンプルコードでは、名簿を取得するためにページエンドポイントを使用しています。 非ページバージョンを引き続き使用する場合もありますが、大規模なチームでは信頼性が低く、使用しないでください。 詳細については、 [この記事](~/resources/team-chat-member-api-changes.md) を参照してください。
+Bot は、メンバーの一覧とその基本プロファイルを照会できます。これには、Teams のユーザー Id や Azure Active Directory (Azure AD) (name、objectId など) の情報が含まれます。 この情報を使用して、ユーザー id (たとえば、Azure AD 資格情報を介してタブにログインしたユーザー) がチームのメンバーであるかどうかを調べることができます。 次のサンプルコードでは、名簿を取得するためにページエンドポイントを使用しています。 会話メンバーを取得する場合、ページサイズの最小値または最大値は、実装によって異なります。 ページサイズが50未満で、50として扱われ、ページサイズが500を超えると、500には上限があります。 非ページバージョンを引き続き使用する場合もありますが、大規模なチームでは信頼性が低く、使用しないでください。 追加情報については、「 [Teams Bot api に対するチーム/チャットメンバーを取得するための変更点」を](~/resources/team-chat-member-api-changes.md)*参照してください*。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
