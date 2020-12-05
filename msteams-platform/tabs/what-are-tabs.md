@@ -4,12 +4,12 @@ author: laujan
 description: Teams プラットフォームのカスタムタブの概要
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 7400d5d2c7ffb1d56ec6dec01261e08de597fcdd
-ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
+ms.openlocfilehash: e89f07133f86b6c0700e6a71d8e53bf6d9831196
+ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "49366876"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "49576849"
 ---
 # <a name="what-are-microsoft-teams-custom-tabs"></a>Microsoft Teams のカスタム タブとは
 
@@ -56,3 +56,9 @@ Teams で使用できるタブには、チャネル/グループと個人の2種
 ## <a name="mobile-clients"></a>モバイル クライアント
 
 Teams mobile クライアントに [チャネル/グループ] タブを表示する場合は、その `setSettings()` プロパティの値を設定する必要があり `websiteUrl` ます。 最適なユーザー環境を確保するには、タブを作成するときに [[モバイル] のタブのガイダンス](~/tabs/design/tabs-mobile.md) に従ってください。
+
+> [!div class="nextstepaction"]
+> [詳細情報: デバイスのアクセス許可を要求する](/concepts/device-capabilities/native-device-permissions.md)
+
+> [!div class="nextstepaction"]
+>[詳細情報: カメラとイメージギャラリーのアクセス許可](/concepts/device-capabilities/mobile-camera-image-permissions.md)

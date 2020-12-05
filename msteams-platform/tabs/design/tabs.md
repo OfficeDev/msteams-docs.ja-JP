@@ -2,12 +2,12 @@
 title: タブの設計ガイドライン
 description: コンテンツとコラボレーションのタブを作成するためのガイドラインについて説明します。
 keywords: teams 設計ガイドラインリファレンスフレームワークタブ [構成チャネル] タブ [静的] タブ [シンプル] [デザインチーム] タブ
-ms.openlocfilehash: ad4d79608364cc2d37c5e02bd3c98a03deb886cf
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: 2d4e809e3ac11a5742113bf65125848a922c0207
+ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552550"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "49576863"
 ---
 # <a name="content-and-conversations-all-at-once-using-tabs"></a>すべてのタブを使用したコンテンツと会話
 
@@ -198,4 +198,4 @@ Tab スレッドにメッセージを送信すると、すべてのユーザー�
 * タブには、アプリ内で3つ以上のレベルのナビゲーションを表示しないようにする必要があります。
 * タブ内のセカンダリページと3番目のページは、階層リンクを介して移動するメインタブ領域の L2/L3 ビューで開く必要があります。
 * アプリケーション内で複雑な編集機能があるタブでは、タブ (デスクトップおよび web) ではなく、複数ウィンドウでエディタービューを開く必要があります。
-* ユーザーの操作性を向上させるために、最初の実行時にようこそメッセージをユーザーに送信し、 **hi**、 **help**、および **hello** コマンドに応答する個人 bot を追加します。 詳細については、「 [会話の bot](../../bots/what-are-bots#in-a-one-to-one-chat) 」のドキュメントを参照してください。
+* ユーザーの操作性を向上させるために、最初の実行時にようこそメッセージをユーザーに送信し、 **hi**、 **help**、および **hello** コマンドに応答する個人 bot を追加します。 詳細については、「 [会話の bot](../../bots/what-are-bots.md#in-a-one-to-one-chat) 」のドキュメントを参照してください。

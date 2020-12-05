@@ -2,12 +2,12 @@
 title: 新機能
 description: Microsoft Teams のすべての新しい開発者向け機能について説明します。
 keywords: teams 新しい最新情報
-ms.openlocfilehash: 69dec453483ec9edab3ad07abf57044ac93c2dee
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: acd02c9765fbbf2e4e1d93d48cb1287936940dee
+ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48997959"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "49576835"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -20,7 +20,10 @@ ms.locfileid: "48997959"
 
 | **Date** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+|11/30/2020|New: Id プラットフォームと Teams ツールキットの統合、およびタブ用の Visual Studio Code|[Teams ツールキットを使用したシングルサインオン認証と、タブ用 Visual Studio コード](toolkit/visual-studio-code-tab-sso.md)|
+|11/16/2020|Teams アプリのマニフェストがバージョン1.8 に更新されました|リファレンス: Microsoft Teams のマニフェストスキーマ|[リファレンス: Microsoft Teams のマニフェストスキーマ](resources/schema/manifest-schema.md)|
 |11/11/2020| バージョン1.8 に更新されたマニフェストスキーマ| [リファレンス: Microsoft Teams のマニフェストスキーマ](resources/schema/manifest-schema.md)|
+|11/10/2020|Teams bot 設計ガイドライン|[Bot 設計ガイドライン](bots/design/bots.md#bot-design-guidelines)|
 |9/30/2020|モバイルデバイスでのボットへのファイルの送信と受信がサポートされるようになりました。|[Bot を使用してファイルを送受信する](resources/bot-v3/bots-files.md)|
 |09/22/2020|新しい "Teams の使用を開始する" ガイダンス|[最初の Teams アプリの概要を作成する](build-your-first-app/build-first-app-overview.md)|
 |9/18/2020|会議中の Teams アプリのサポート (リリースプレビュー)|Teams 会議で Teams 会議と[アプリ](apps-in-teams-meetings/teams-apps-in-meetings.md)[用のアプリを作成する](apps-in-teams-meetings/create-apps-for-teams-meetings.md)|
@@ -29,7 +32,7 @@ ms.locfileid: "48997959"
 |08/10/2020|Visual Studio Toolkit を使用して Teams アプリの作成を開始します。|[Microsoft Teams Toolkit と Visual Studio コードを使用してアプリをビルドする](toolkit/visual-studio-overview.md) |
 |08/06/2020|タブの SSO 認証のサポート|[SSO Microsoft Teams タブを開発する](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
 |07/27/2020 | プロアクティブな bot およびメッセージをグラフ化する (パブリックプレビュー)|[Microsoft Graph を使用して Teams での積極的なボットインストールおよび予防的なメッセージングを有効にする](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
-| 07/22/2020 |モバイルデバイスの機能の更新。|[Microsoft Teams タブのデバイスへのアクセス許可を要求する](~/tabs/how-to/native-device-permissions.md) |
+| 07/22/2020 |モバイルデバイスの機能の更新。|[Microsoft Teams タブのデバイスへのアクセス許可を要求する](concepts/device-capabilities/native-device-permissions.md) |
 |07/20/2020|AppSource 提出用 Teams App Validation Tool。|[Teams アプリ検証ツール](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)
 |07/15/2020|Teams 用の仮想アシスタントを作成する|[Microsoft Teams の仮想アシスタント](samples/virtual-assistant.md)|
 |07/14/2020|ネイティブの読み込みインジケーターのドキュメントを提示する|[ネイティブローディングインジケーターの表示](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
