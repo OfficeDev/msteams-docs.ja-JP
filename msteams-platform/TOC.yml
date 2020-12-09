@@ -134,6 +134,12 @@
           href: concepts/authentication/authentication.md
         - name: ID プロバイダーを構成する
           href: concepts/authentication/configure-identity-provider.md
+    - name: デバイスの機能を有効にする
+      items:
+        - name: デバイスのアクセス許可を要求する
+          href: concepts/device-capabilities/native-device-permissions.md
+        - name: カメラとギャラリー
+          href: concepts/device-capabilities/mobile-camera-image-permissions.md
 - name: タブ — 埋め込み Web エクスペリエンス
   items:
     - name: カスタム タブとは
@@ -195,8 +201,6 @@
           href: tabs/how-to/developer-tools.md
         - name: SharePoint にユーザー設定タブを追加する
           href: tabs/how-to/tabs-in-sharepoint.md
-        - name: デバイス アクセス許可を要求する
-          href: tabs/how-to/native-device-permissions.md
 - name: ボット — 会話ベースの相互作用
   items:
     - name: Microsoft Teams のボットについて
