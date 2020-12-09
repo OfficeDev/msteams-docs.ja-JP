@@ -1,183 +1,323 @@
 ---
-title: ボットの設計ガイドライン
-description: Bot を作成するためのガイドラインについて説明します。
-keywords: teams デザインガイドラインリファレンスフレームワークの bot トーク
-ms.openlocfilehash: 0691c483d12e537772b74abc015d71e1704f88c8
-ms.sourcegitcommit: fdb53284a20285f7e8a7daf25e85cb5d06c52b95
+title: Bot の設計
+description: Teams bot を設計し、Microsoft Teams UI キットを取得する方法について説明します。
+author: heath-hamilton
+ms.topic: conceptual
+ms.author: lajanuar
+ms.openlocfilehash: d1a7470f4986de22ecca7071823b620cb0234abb
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48992639"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605494"
 ---
-# <a name="start-talking-with-bots"></a>Bot との会話を開始する
+# <a name="designing-your-microsoft-teams-bot"></a>Microsoft Teams bot の設計
 
-Bot は、特定のタスクセットを実行する会話アプリです。 これにより、ユーザーとのコミュニケーションが可能になり、質問に回答して、変更について事前に通知する機会が得られます。 これらは、お客に到達するための最適な方法です。
+Bot は、特定のタスクセットを実行する会話アプリです。 Bot は、 <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot フレームワーク</a>に基づいてユーザーと通信し、質問に応答して、変更やその他のイベントについて事前に通知します。 これらは、お客に到達するための最適な方法です。
 
----
+アプリの設計をガイドするには、次の情報を参照してください。 Teams でボットを追加、使用、管理する方法について説明しています。
 
-## <a name="guidelines"></a>ガイドライン
+## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-### <a name="bot-design-guidelines"></a>Bot 設計ガイドライン
+Microsoft Teams UI キットでは、必要に応じて取得および変更できる要素を含む、より包括的な bot 設計ガイドラインを見つけることができます。
 
-* アクティビティがある場合は、ボットが関連する通知を提供する必要があります。
-* Bot は、データを表示しない対象ユーザーに対して、チーム、グループチャット、または1:1 会話に機密データをプッシュすることはできません。
-* Bot 通知には、通知の関連性をユーザーに通知するための意味のあるデータが含まれている必要があります。
-* この bot の雰囲気は、ガイドラインに定義されているように、Teams の音声を反映している必要があります。
-* Bot は、ボットの値とその主な機能を強調する最初の実行時のウェルカムメッセージを提供する必要があります。これは、「ツアーを開始する」、カルーセルを使用した対話式チュートリアル、または「お試しください」のような形式になっている場合があります。
-* Bot テキストにスペルミスまたは文法上の誤りを含めることはできません。
-* Bot は、実行可能な一連の bot コマンドを提供する必要があります。
-* ボットメッセージは、わかりやすく、操作が容易である必要があります。
-* Bot は、メッセージが認識されない場合に、フォールバックヘルプコマンドを提供する必要があります。
-* Bot によって送信されるフォームは、シーケンシャル更新を必要としない確定的な入力を提供する必要があります。
-* Bot 通知は、対象ユーザーの関連コンテンツを含むチーム、グループチャット、または1:1 会話にスコープされる必要があります。
+> [!div class="nextstepaction"]
+> [Microsoft Teams UI Kit (Figma) を取得する](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="avatars"></a>アバター
+## <a name="add-a-bot"></a>Bot を追加する
 
-Teams のボットアバターは、六角形のようになっているため、ユーザーはユーザーではなく bot に話しかけていることがすぐにわかります。 アバターを正方形として送信し、自分でトリミングします。 アバターに関しては、2フィート離れて高いコントラストを使用することをお勧めします。
+Bot は、チャット、チャネル、および個人用アプリで利用できます。 Bot を追加するには、次のいずれかの方法を使用します。
 
-[!include[Avatar image](~/includes/design/bot-avatar-image.html)]
+* Teams ストア (AppSource) から。
+* Teams の左側にある [ **その他** ] アイコンを選択して、アプリのポップアップを使用します。
+* 新しいチャットまたは新規作成ボックスに @mention します (次の例は、グループチャットでこの操作を実行する方法を示しています)。
 
-### <a name="buttons"></a>ボタン
+:::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="例は、@mention を使用してグループチャットに bot を追加する方法を示しています。" border="false":::
 
-カードごとに最大6つのボタンをサポートしています。 ボタンテキストを記述する場合は簡潔にする必要があります。ほとんどのボタンは、自分のタスクにのみ対処する必要があることに注意してください。
+## <a name="introduce-a-bot"></a>Bot を導入する
 
-### <a name="graphics"></a>グラフィックス
+Bot が自らを導入し、その機能について説明していることが重要です。 この最初の exchange は、ユーザーが bot との関係を理解し、制限事項を確認します。
 
-グラフィックスはストーリーを伝えるのに適した方法ですが、すべての bot がグラフィックスを必要とするわけではないため、これらを使用して最大の影響を受けることができます。
+### <a name="welcome-message-in-a-one-on-one-chat"></a>ワンワンチャットでのウェルカムメッセージ
 
-### <a name="onboarding-users"></a>オンボードユーザー
+個人のコンテキストでは、ウェルカムメッセージに bot の雰囲気が設定されます。 メッセージには、案内応答、bot が実行できること、および操作方法に関するいくつかの提案が含まれています (たとえば、「質問してください...」)。 可能であれば、これらの提案は、サインインせずに、保存された応答を返す必要があります。
 
-Bot が自分を紹介し、ユーザーが実行できることを伝えることが重要です。 この *値* を使用すると、ユーザーは bot との関係を理解しやすくなり、制限がある場合には、ユーザーが実際のユーザーほど直観的ではないコンピューターとの相互作用を許容できるようになります。 さらに、サービスによって提供される実際の値に対する exchange のユーザーデータへのアクセス許可を付与します。
+:::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="例は、個人アプリでの bot の紹介を示しています。" border="false":::
 
-#### <a name="welcome-messages"></a>ウェルカム メッセージ
+### <a name="introductions-in-group-chats-and-channels"></a>グループチャットとチャネルでの紹介
 
-ウェルカムメッセージは、ボットの雰囲気を設定するための最適な方法であり、個人およびチームまたはグループのシナリオで使用する必要があります。 このメッセージは、bot が何をしているか、およびそれと対話するための一般的な方法を示しています。 " *お問い合わせ* ください" などの特定の機能の例を使用します。 記号付きリスト。 可能な限り、これらの提案は、保存された応答を返す必要があります。 機能の例は、ユーザーにサインインを求めることなく動作することが重要です。
-追加のガイダンスについては、 *「* [ウェルカムメッセージの要件](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-personal-bots-must-always-send-a-welcome-message-on-first-launch) 」を参照してください。
+Bot の紹介は、個人のコンテキスト (個人のアプリなど) と比較して、グループのチャットとチャネルにおいて少し異なるものにする必要があります。 実際には、入室したチャットルームがある場合は、「人」と入力します。既にあるすべてのユーザーを歓迎するのではなく、自分で紹介します。 Bot 設計に対してそのような考えを行います。
 
-#### <a name="tours"></a>ガイド
+:::image type="content" source="../../assets/images/bots/bot-group-welcome.png" alt-text="例は、共同作業コンテキストでの bot の紹介を示しています。" border="false":::
 
-ウェルカムメッセージと、" *help* " に相当するユーザー入力への応答を含む *ツアー* 属性を用意します。 これは、ユーザーが bot が実行できることを理解させる最も効果的な方法です。 1対1のエクスペリエンスでの Carousels は、考えられる応答の例にリンクするように、このストーリーをわかり *やすく* する優れた方法です。 ツアーでは、アプリの他の機能についても説明します。 たとえば、メッセージング拡張機能と Teams タブのスクリーンショットを含めることができます。  ユーザーが、ツアーにアクセスして使用するためにサインインする必要はありません。
+### <a name="bot-authentication-with-single-sign-on"></a>シングルサインオンを使用した Bot 認証
 
-チームまたはグループのシナリオでツアーを使用する場合は、ユーザー間の進行中の会話にカードのノイズを追加しないように、タスクモジュールで開く必要があります。
+ユーザーが bot にメッセージを送信すると、サインインが必要になる場合があります。そのすべての機能を使用します。 シングルサインオン (SSO) を使用して認証プロセスを簡略化できます。
 
-### <a name="responding-to-users-and-failing-gracefully"></a>ユーザーに応答して、正常にエラーを発生させる
+忘れることはありません。 bot のコマンドメニュー (**何ができますか**) で、サインアウトするコマンドも提供する必要があります。
 
-また、bot は、よくあるスペルミスと口語を考慮しながら、" *Hi* "、" *Help* "、" *どうもありがとう* " などに応答できるようにする必要があります。 以下に例を示します。
+:::image type="content" source="../../assets/images/bots/bot-sso-example.png" alt-text="例は、[サインイン] ボタンがある bot を示しています。" border="false":::
 
-#### <a name="x2713-hello"></a>&#x2713; Hello
+### <a name="tours"></a>ガイド
 
-`"Hi"`  `"How are you"`  `"Howdy"`
+ウェルカムメッセージにツアーを含めることができます。また、bot が "help" コマンドのように応答します。 ツアーは、bot が実行できることを理解するための最も効果的な方法です。 また、必要に応じて、アプリのその他の機能 (たとえば、メッセージング内線番号のスクリーンショットを含む) を記述するのにも適しています。
 
-#### <a name="x2713-help"></a>&#x2713; のヘルプ
+> [!IMPORTANT]
+> ツアーは、サインインしなくてもアクセス可能である必要があります。
 
-`"What do you do?"`  `"How does this work?"`  `"What the heck?"`
+#### <a name="one-on-one-chats"></a>1対1のチャット
 
-#### <a name="x2713-thanks"></a>&#x2713; よろしくお願いいたします。
+個人アプリでは、カルーセルを使用して、ボットとアプリのその他の機能の効果的な概要を得ることができます。 ボタンを含む [ユーザーに **タスクを実行する**] コマンドを使用することをお勧めします。
 
-`"Thank you"`  `"Thankyou"`  `"Thx"`
+:::image type="content" source="../../assets/images/bots/bot-tour-personal.png" alt-text="例は、1対1のチャットでの bot ツアーを示しています。" border="false":::
 
-Bot は、次の種類のクエリと入力を処理できる必要があります。
+#### <a name="channels-and-group-chats"></a>チャネルとグループのチャット
 
-> [!div class="checklist"]
->
-> * **認識** された質問。 ユーザーから期待される "ベストケースのシナリオ" についての質問を以下に示します。
-> * **認識されない不明な質問** 。 サポートされていない機能、またはランダム、無関係、または profane エントリに関するクエリ。
-> * **認識できない質問** : 判読不能、無意味、または無意味な入力またはエントリ。
+チャネルおよびグループチャットでは、進行中の会話を中断しないように、ツアーはモーダル ( [タスクモジュール](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) とも呼ばれます) で開きます。 これにより、ツアーの役割ベースのビューを実装するオプションも提供されます。
 
-Bot のパーソナリティと応答の種類の例:
+:::image type="content" source="../../assets/images/bots/bot-tour-channel.png" alt-text="例は、チャネル内の bot ツアーを示しています。" border="false":::
 
-[!include[Bot responses](~/includes/design/bot-responses-table.html)]
+## <a name="chat-with-a-bot"></a>Bot とのチャット
 
-> [!TIP]
-> Bot スクリプトを記述するときは、「応答が画面にキャプチャおよび共有されている場合は会社の embarrassed になりますか?」という質問をします。
+Bot は、チームのメッセージングフレームワークに直接統合されます。 ユーザーは bot とチャットすることで、疑問を解決したり、コマンドを入力して、小または特定の一連のタスクを実行したりすることができます。 Bot は、チャット経由でアプリの変更や更新に関するユーザーに積極的な通知を行うことができます。
 
-### <a name="understanding-what-users-are-trying-to-say"></a>ユーザーが発言しようとしていることを理解する
+### <a name="chat-with-a-bot-in-different-contexts"></a>異なるコンテキストにある bot とのチャット
 
-#### <a name="use-a-thesaurus-for-synonyms"></a>類義語辞典を使用する
+Bot は、次のコンテキストで使用できます。
 
-バリエーションを使用している場合は、シソーラスを使用して、各クエリのさまざまな解釈を生成するのに役立つように、できるだけ多くの背景からユーザーを取得します。
+* **個人アプリ**: 個人アプリでは、ボットには専用のチャットタブがあります。
+* **ワンワンチャット**: ユーザーはボットでプライベート会話を開始できます。 個人アプリで bot を使用した場合と同じです。
+* **グループチャット**: ユーザーは bot を @mentioning ことで、グループチャットの bot と対話できます。
+* **チャネル**: ユーザーはチャネル内の bot と対話できます。 [新規作成] ボックスに bot 名を @mentioning します。 このコンテキストでは、ボットはチャネルだけでなく、チーム全体で利用可能であることに注意してください。
 
-#### <a name="make-use-of-telemetry-and-interviews"></a>テレメトリとインタビューを利用する
+### <a name="anatomy"></a>構造
 
-ユーザーが何を言っているか、ボットを照会する際にどのような意図があるかを確認します。 これは、さまざまな場所や企業の種類でユーザーを取得するときに、継続的なプロセスになります。 言語を使用した言語認識と意図的なマッピングを微調整することができます ([LUIS](/azure/cognitive-services/luis/what-is-luis))。
+:::image type="content" source="../../assets/images/bots/bot-anatomy.png" alt-text="例は、bot の構造的な構造を示しています。" border="false":::
 
-### <a name="how-often-should-you-use-your-bot-to-reach-out-to-a-user"></a>ボットを使用してユーザーに連絡する頻度を指定します。
+|カウンター|説明|
+|----------|-----------|
+|1|**アプリの名前とアイコン**|
+|2 |**[チャット] タブ**: bot と会話するためのスペースを開きます (個人アプリにのみ適用されます)。|
+|3 |**カスタムタブ**: アプリに関連するその他のコンテンツを開きます。|
+|4 |**[バージョン情報] タブ**: アプリに関する基本情報が表示されます。|
+|5 |**チャットバブル**: ボット会話は Teams メッセージングフレームワークを使用します。|
+|6 |**アダプティブカード**: bot の応答に適応カードが含まれている場合、カードはチャットのバブルの幅全体を占めます。|
+|7 |**コマンドメニュー**: bot の標準コマンド (ユーザーが定義) を表示します。
 
-#### <a name="x2713-when-a-state-has-changed"></a>状態が変更されたときの &#x2713;
+### <a name="command-menu"></a>コマンドメニュー
 
-たとえば、割り当てが完了としてマークされている場合、バグが変更された場合、新しいソーシャルメディアが利用可能になった場合、またはポーリングが完了した場合などです。
+コマンドメニューには、ボットに常に応答する単語または語句の一覧が表示されます。 ユーザーが bot に conversing ている場合は、[新規作成] ボックスの上にコマンドメニューが表示されます。 コマンドが選択されている場合は、メッセージに挿入します。
 
-#### <a name="x2713-when-the-timing-is-right"></a>タイミングが正しい場合の &#x2713;
+コマンドの一覧は、短くする必要があります。 このメニューは、bot の主要な機能を強調表示することのみを目的としています。 コマンドは簡潔にしてください。 たとえば **、ヘルプというコマンド** を **作成します。**
+[コマンド] メニューは、会話の状態に関係なく、常に使用できるようにする必要があります。
 
-Bot は、特定の頻度でユーザーまたはチャネルに通知を送信して、デイリーダイジェストのように機能することができます。
+:::image type="content" source="../../assets/images/bots/bot-command-menu.png" alt-text="例は bot のコマンドメニューを示しています。" border="false":::
 
-ユーザーをコントロールのままにします。 頻度と優先度を含む通知設定を提供します。
+## <a name="understand-what-people-are-saying"></a>ユーザーが何を言っているかを理解する
 
-[!include[Bot notification](~/includes/design/bot-notification-image.html)]
+シソーラスを使用して、標準クエリのさまざまな解釈を生成できるように、できるだけ多くの背景からユーザーを取得します。
 
----
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-understanding-hello.png" alt-text="Bot が ' Hello ' を解釈する方法を示す図" border="false":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-understanding-help.png" alt-text="Bot が ' Help ' を解釈する方法を示す図" border="false":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-understanding-thanks.png" alt-text="Bot が ' 感謝 ' を解釈する方法を示す図" border="false":::
+   :::column-end:::
+:::row-end:::
 
-## <a name="using-tabs"></a>タブの使用
+### <a name="extract-intent-and-data-from-messages"></a>メッセージから意図的およびデータを抽出する
 
-タブを使用すると、ボットの機能が向上します。 タブでは、次のものを作成できます。
+意図を認識するように bot を設計し、メッセージまたはクエリに対する応答で bot からの要望を取得します。 インテントは、メッセージまたはクエリを、アクションによって影響を受ける1つ以上のデータオブジェクトを使用して1つのアクションとして分類します。 
 
-### <a name="x2713-a-place-to-host-standing-queries"></a>サバイバルクエリをホストする場所を &#x2713;
+次の例は、ボットに送信されたメッセージのユーザーの意図とデータの概要を示しています。
 
-Bot と1人のユーザーの個人用会話で、タブにはユーザー固有の情報とリストを含めることができます。 また、よく寄せられる質問 (Faq) に対してボットへの回答を維持するための適切な場所でもあります。そのため、ユーザーがたずねる必要はありません。
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-intent-1.png" alt-text="「シアトルへのフライトを予約する」という文の例では、ユーザーの目的は「予約」で、データは「シアトル」です。" border="false":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-intent-2.png" alt-text="例は、「ストアを開いている場合」という文で示されています。ユーザーの意図は ' when ' で、データが ' open ' です。" border="false":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-intent-3.png" alt-text="「1pm での会議の予約」という文の表示例、ユーザーの目的は ' 1pm ' と ' Bob in Distribution ' のようになっています。" border="false":::
+   :::column-end:::
+:::row-end:::
 
-### <a name="x2713-a-place-to-finish-a-conversation"></a>会話を終了するための場所の &#x2713;
+### <a name="analyze-and-improve"></a>分析と改善
 
-カードからタブにリンクすることができます。 Bot が応答を提供し、さらにいくつかの手順が必要な場合は、タブにリンクしてタスクまたはフローを完了できます。 たとえば、"iPhone を書式設定するにはどうすればよいですか" に対応していますが、適切な応答としては、 *最初のいくつ* かの手順を概説するカードがあり、それを *表示* するボタンがあります。
+ユーザーが bot とチャットするときに読み上げられる内容について説明します。 これは、ユーザーベースがさまざまな場所および orgs で増加している間、継続的に反復的なプロセスになります。 Bot の言語認識と意図的なマッピングを Microsoft 言語理解 (LUIS) で調整することができます。
 
-### <a name="x2713-a-place-to-host-a-settings-page"></a>設定ページをホストする場所を &#x2713;
+* [LUIS につい](https://docs.microsoft.com/azure/cognitive-services/luis/artificial-intelligence)て: LUIS が AI を使用してアプリデータに自然言語の理解 (nlu) を提供する方法について説明します。
+* [LUIS との統合](https://www.luis.ai/): コンピューター学習モデルを作成する複雑なプロセスを使用せずに、bot に自然言語機能を追加します。
 
-Bot にはユーザーコントロールが必要です。 多くの bot については、チャットインターフェイスを通じて許可されます。ただし、これらの設定を覚えておくことは困難です。 [設定] タブでは、ユーザー設定を表示し、ユーザーが一度にすべての設定を変更できるようにすることができます。また、より複雑な bot カスタム動作に対して適切な手持在庫ポイントになる場合もあります。
+## <a name="use-cases"></a>ユース ケース
 
-### <a name="x2713-a-place-to-provide-some-help"></a>いくつかのヘルプを提供する場所を &#x2713;
+### <a name="simple-queries"></a>単純なクエリ
 
-Bot との通信方法をユーザーに伝えるタブを追加します。 何らかの状況や Faq を提供することができます。
+Bot は、あいまいさを解決するために、クエリまたは関連する一連の一致項目のグループに正確に一致するものを提供できます。 一致するものがある場合は、リストカードを使用してコンテンツをグループ化します。
 
-![ヘルプの提供](~/assets/images/framework/framework_bots_tbot-help.png)
+:::image type="content" source="../../assets/images/bots/bot-simple-query.png" alt-text="例は、bot との簡単なクエリ操作を示しています。" border="false":::
 
-> [!TIP]
-> サイトのパーツをタブに埋め込むと、ユーザーはサービスを使用するときに会話のコンテキストを維持できます。 ブラウザーでサービスを起動して、アプリ間で切り替えを行う必要がなくなります。
+### <a name="multi-turn-interactions"></a>複数ターンの相互作用
 
----
+Bot は完全な要求と質問をサポートできますが、複数ターンの対話を処理できる必要があります。 考えられる次の手順により、ユーザーは、包括的な要求を作成することを期待するのではなく、完全なタスクフローを行うことが容易になります。
 
-## <a name="bots-in-channels"></a>チャネル内のボット
+次の例では、bot は、次に実行する必要のあるオプションを使用して、各メッセージに応答します。
 
-チャネル内の bot を呼び出すことができ `@mention` ます。 Bot ダイアログは、チャネルとグループの間で一意である必要があります。一般的に、個別のアプローチを検討することをお勧めします。 これは、次のような場合に特に当てはまります。
+:::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="例は、ボットとの相互作用を示しています。" border="false":::
 
-### <a name="sensitive-data-sent-by-a-bot"></a>Bot が送信する機密データ
+### <a name="reach-out-to-users"></a>ユーザーに連絡する
 
-チーム内のユーザーはサービスに対して認識されますが、実際のユーザーの役割はできません。 このことは、たとえば、文書に関する情報が含まれている場合に、親と受講者の連絡先情報をチーム設定で共有できないということです。 Bot のメッセージは、詳細を表示するためのボタンと共に "現在、2つの非文書インシデントが発生しました" ということになります。
+事前メッセージングでは、bot は、個人、グループチャット、またはチャネルに関連する通知を特定の頻度で送信するダイジェストとして機能することができます。 文書内の内容が変更されたとき、または作業項目が閉じられたときに、bot がメッセージを送信することがあります。
 
-Web ページで詳細を起動するか、タスクモジュールでユーザーの資格情報の入力を求めたり、AAD アカウントとペアになっているユーザーロールのインデックスに対してクエリを実行したりすることができます。 どちらのオプションでも、データはプライベートビュースコープ内にあり、データ漏洩はありません。 ユーザーと bot の間の1対1のチャットで同じデータが送信される場合、データはそのコンテキストのユーザーにのみ表示されるため、安全に bot が bot メッセージに完全に表示されます。 チャネルから1対1のチャットへのユーザーの移動は、強制された移動が非常に中断されるため、回避する必要があります。
+次の例では、ユーザーは、bot が別のチャネルで伝達したトースト通知を取得します。
 
-### <a name="sending-cards-as-a-response-to-interactions"></a>相互作用への対応としてカードを送信する
+:::image type="content" source="../../assets/images/bots/bot-proactive-message-toast.png" alt-text="例は、bot が別のチャネルからユーザーに対して事前にメッセージングを行うことを示しています。" border="false":::
 
-一対一のチャットで *ツアーを実行* するために、カルーセルのカードを送信する際には、同じパターンを使用すると、多数のユーザーが含まれるアクティブなチャネルで数十台または数百種類の *ツアー carousels* を生成できます。 これを回避するには、セカンダリカードをタスクモジュールでホストする必要があります。 このパターンを使用すると、ユーザーはチャネルに対してコンテキストで保持され、そのチャネルは長い bot 応答のままになり、必要に応じて *ツアー* が表示されたときに異なるユーザーの役割を考慮することができます。
+これで、そのチャネルでユーザーは bot から自分のメッセージを読むことができます。
 
-## <a name="useful-tips"></a>役に立つヒント
+:::image type="content" source="../../assets/images/bots/bot-proactive-message.png" alt-text="例は、bot の事前メッセージを見ているユーザーを示しています。" border="false":::
 
-### <a name="x2713-remember-bots-arent-assistants"></a>&#x2713; を覚えておくことはできません。
+### <a name="use-tabs-with-bots"></a>Bot でタブを使用する
 
-Cortana や bot などのエージェントとは異なり、スペシャリストとして機能します。
+タブを使用すると、ボットを使いやすくすることができます。 たとえば、ボットで作業項目を作成できる場合は、すべてのアイテムを1つのタブ内の中央の場所に表示することをお勧めします。 [タブのデザイン](../../tabs/design/tabs.md)に関する詳細を参照してください。
 
-### <a name="x2713-discourage-chitchat"></a>&#x2713; 防ぐ chitchat
+:::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="例は、タブを使用して bot コンテンツを整理する方法を示しています。" border="false":::
 
-Bot が会話用に構築されていない場合は、chitchat をタスク完了にリダイレクトする方法を検索します。
+## <a name="manage-a-bot"></a>Bot を管理する
 
-### <a name="x2713-introduce-some-personality"></a>&#x2713; を紹介します。
+ユーザーは bot の設定を変更できる必要があります。 この機能は bot コマンドで提供できますが、通常は、すべての設定を [タスクモジュール](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) に含めることをお勧めします (次の例を参照)。
 
-お客様の bot の個性を製品の声と同じにしておきます。 お客様の企業の bot と考えてください。
+:::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="例は、bot の設定を構成するためのタスクモジュールを示しています。" border="false":::
 
-### <a name="x2713-maintain-tone"></a>トーンを維持 &#x2713;
+## <a name="best-practices"></a>ベスト プラクティス
 
-トーンがわかりやすく、明るいかどうかを判断するために、"ファクトのみ"、または super quirky を使用します。
+### <a name="content"></a>コンテンツ
 
-### <a name="x2713-encourage-easy-task-flow"></a>簡単なタスクフローを促す &#x2713;
+:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="この例では、ボットのベストプラクティスを示しています。" border="false":::
 
-完全な形式の質問を引き続き許可しながら、複数ターンの対話をサポートします。 次の手順を予測することで、ユーザーはタスクフローをより簡単に理解できるようになります。
+#### <a name="do-establish-a-clear-persona"></a>Do: 明快なペルソナを設定する
 
-ユーザーがタスクを完了するためにいくつかの手順を実行する場合は、各手順を通じて bot に対して実行を許可し、より迅速なパスを提案することによって終了します。 たとえば、ユーザーがいくつかの会話を行って会議を設定した場合 (最初に会議を指定し、次にその人物を特定して、その日を示す時刻を指定した場合)、次の提案で会話を終了します。次回は、「1:00 明日で Bob を使用して会議をスケジュールする」を試してみます。
+Bot の雰囲気をよく理解しているかどうか、「ファクトのみ」、またはスーパー quirky? さまざまなシナリオでどのように対応する必要があるか。 Bot のペルソナを計画および文書化することで、自然で凝集しているように見える応答を簡単に記述できるようになります。
+
+詳細については、「 <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Microsoft TEAMS UI Kit (Figma)</a> 」を参照してください。
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="この例では、ボットのベストプラクティスを示しています。" border="false":::
+
+#### <a name="do-clearly-convey-what-your-bot-can-do"></a>Do: bot が実行できることを明確に伝える
+
+ウェルカムメッセージとツアーは、ユーザーが bot に対して何ができるかを理解するのに役立ちます。
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="この例では、ボットのベストプラクティスを示しています。" border="false":::
+
+#### <a name="dont-obscure-your-bots-features"></a>しない: bot の機能を不明瞭にする
+
+最初のインプレッションの問題。 Nondescript サインインメッセージが表示された場合、ユーザーが混乱したり疑わしいことがあります。
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="この例では、ボットのベストプラクティスを示しています。" border="false":::
+
+#### <a name="do-recognize-non-questions"></a>Do: 質問以外の項目を認識する
+
+Bot は、よくあるスペルミスと口語を考慮しながら、"Hi"、"Help"、"ありがとうございます" などのメッセージに応答できるようにする必要があります。
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="この例では、ボットのベストプラクティスを示しています。" border="false":::
+
+#### <a name="dont-miss-out-on-opportunities-to-delight"></a>成功へのチャンスを見逃さないようにします。
+
+ユーザーによっては、実際の人物のような会話を自然に流すことが予想されます。 単純なメッセージへの clumsy 応答を避けるようにしてください。
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="troubleshooting"></a>トラブルシューティング
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="この例では、ボットのベストプラクティスを示しています。" border="false":::
+
+#### <a name="do-provide-help"></a>Do: ヘルプを提供する
+
+Bot が要求を満たすことができない場合は、ユーザーが bot との対話について自分で教育する方法を提供します。
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="この例では、ボットのベストプラクティスを示しています。" border="false":::
+
+#### <a name="dont-leave-users-stranded"></a>いいえ: ユーザーを残されたままにします
+
+問題のトラブルシューティングができない場合、ユーザーは bot をすぐに放棄します。
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="complex-interactions"></a>複雑な相互作用
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="この例では、ボットのベストプラクティスを示しています。" border="false":::
+
+#### <a name="do-use-task-modules-or-tabs"></a>Do: タスクモジュールまたはタブを使用する
+
+Bot が応答を提供し、さらにいくつかの手順が必要な場合は、タスクモジュールまたはタブにリンクして、タスクまたはフローを完了できます。
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="この例では、ボットのベストプラクティスを示しています。" border="false":::
+
+#### <a name="dont-make-multi-turn-interactions-tedious"></a>いいえ: 複数ターンの対話を面倒にする
+
+1つのタスクを完了するための広範な会話は、遅く、過度に複雑です。 また、開発者は、状態の変更 (会話のタイムアウト、"キャンセル" メッセージの送信など) を考慮する必要があります。
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="privacy"></a>プライバシー
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="この例では、ボットのベストプラクティスを示しています。" border="false":::
+
+#### <a name="do-only-show-sensitive-info-in-a-personal-context"></a>Do: 個人のコンテキストに機密情報のみを表示する
+
+Bot がグループチャットまたはチャネルにある場合は、機密情報を表示するためにユーザーをプライベートな場所 (タスクモジュール、タブ、ブラウザーなど) に送ることをお勧めします。
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="この例では、ボットのベストプラクティスを示しています。" border="false":::
+
+#### <a name="dont-some-content-isnt-meant-to-be-seen-by-everyone"></a>いいえ: 一部のコンテンツは、すべてのユーザーに表示されることを意図したものではありません
+
+Bot は、ユーザーのグループに機密情報を公開することはできません。
+
+   :::column-end:::
+:::row-end:::
+
+## <a name="learn-more"></a>詳細情報
+
+このような他のガイドラインは、ボット設計に役立てることができます。
+
+* [個人用アプリを設計する](../../concepts/design/personal-apps.md)
+* [アダプティブカードの設計](../../task-modules-and-cards/cards/design-effective-cards.md)
+* [タスクモジュールを設計する](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
+
+## <a name="validate-your-design"></a>設計を検証する
+
+アプリを AppSource に発行することを計画している場合は、一般的にアプリが送信中に失敗する原因となる設計上の問題について理解しておく必要があります。
+
+> [!div class="nextstepaction"]
+> [設計検証ガイドラインの確認](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

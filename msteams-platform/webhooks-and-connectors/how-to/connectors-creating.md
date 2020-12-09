@@ -3,12 +3,12 @@ title: Office 365 コネクタ
 description: Microsoft Teams で Office 365 コネクタを使い始める方法について説明します。
 keywords: Teams o365 コネクタ
 ms.date: 04/19/2019
-ms.openlocfilehash: dcd9f7e68dfe834fbcac245941944007beedf478
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: 374e5058d2041d43f675d643e5b830bf72ad79c2
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48998022"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605343"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>Microsoft Teams 用 Office 365 コネクタの作成
 
@@ -79,7 +79,7 @@ ms.locfileid: "48998022"
 
 自動生成された Teams アプリのマニフェストは、ポータルからダウンロードできます。 ただし、これを使用してアプリをテストまたは発行するには、次の操作を実行する必要があります。
 
-- 「[アイコン](~/concepts/build-and-test/apps-package.md#icons)」の説明に従い、アイコンを 2 つ含めます。
+- [2 つのアイコンを含み](../../concepts/build-and-test/apps-package.md#app-icons)ます。
 - マニフェストの `icons` の部分を変更し、アイコンの URL ではなくアイコンのファイル名を参照するようにします。
 
 次の manifest.json ファイルには、アプリをテストして送信するために必要な基本的な要素が含まれています。
@@ -131,7 +131,7 @@ ms.locfileid: "48998022"
 
 コネクタをテストするには、他のアプリと同じ方法でコネクタをチームにアップロードします。 (前のセクションの指示に従って変更された) コネクタ開発者ダッシュボードからのマニフェスト ファイルと 2 つのアイコン ファイルを使用して .zip パッケージを作成できます。
 
-アプリをアップロードしたら、任意のチャネルからコネクタ リストを開きます。 一番下までスクロールして、アプリが [ **アップロード済み** ] セクションに表示されていることを確認します。
+アプリをアップロードしたら、任意のチャネルからコネクタ リストを開きます。 一番下までスクロールして、アプリが [**アップロード済み**] セクションに表示されていることを確認します。
 
 ![コネクタ ダイアログ ボックスの [アップロード済み] セクションのスクリーンショット](~/assets/images/connectors/connector_dialog_uploaded.png)
 
@@ -146,7 +146,7 @@ ms.locfileid: "48998022"
 アプリパッケージをアップロードした後、チーム内でコネクタを構成して使用するには、次の手順を実行して組織のアプリカタログからインストールできます。
 
 1. 左端の垂直ナビゲーションバーから [アプリ] アイコンを選択します。
-1. [ **アプリ** ] ウィンドウで、[ **コネクタ** ] を選択します。
+1. [ **アプリ** ] ウィンドウで、[ **コネクタ**] を選択します。
 1. 追加するコネクタを選択すると、ポップアップダイアログウィンドウが表示されます。
 1. [ **チームバーに追加] を** 選択します。
 1. 次のダイアログウィンドウで、チームまたはチャネルの名前を入力します。

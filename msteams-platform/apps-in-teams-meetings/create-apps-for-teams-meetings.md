@@ -5,12 +5,12 @@ description: teams 会議用のアプリを作成する
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: teams アプリ会議ユーザー参加者ロール api
-ms.openlocfilehash: 1be9763bdd81bdff7fa2a6f5b44d936dced6755a
-ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
+ms.openlocfilehash: a086050b7cdef671fcbd187b68d707280e8df359
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "49576828"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605232"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Teams 会議用のアプリを作成する
 
@@ -24,7 +24,7 @@ ms.locfileid: "49576828"
 
 1. などの一部の会議 Api で `GetParticipant` は、 [ボット登録と BOT アプリ ID](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) が認証トークンを生成する必要があります。
 
-1. 開発者は、teams の会議中にトリガー[される会議](design/designing-in-meeting-dialog.md)中のダイアログに加えて、会議前およびミーティング後のシナリオについて、teams の一般的な[タブデザインガイドライン](../tabs/design/tabs.md)に従う必要があります。
+1. 開発者は、teams の会議中にトリガー[される会議](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)中のダイアログに加えて、会議前およびミーティング後のシナリオについて、teams の一般的な[タブデザインガイドライン](../tabs/design/tabs.md)に従う必要があります。
 
 1. アプリをリアルタイムで更新するためには、会議のイベントアクティビティに基づいて最新の状態になっている必要があります。 これらのイベントは、会議中のダイアログ (の「完了パラメーター」を参照してください `bot Id` `Notification Signal API` ) および会議ライフサイクル全体のその他のサーフェス内に存在することができます。
 
@@ -111,6 +111,7 @@ GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
    }
 }
 ```
+
 #### <a name="response-codes"></a>応答コード
 
 **403**: アプリは、参加者情報を取得することを許可されていません。 これは、最も一般的なエラー応答であり、アプリがテナント管理者によって無効にされた場合や、ライブサイトの移行中にブロックされた場合など、会議にインストールされていない場合にトリガーされます。  
@@ -146,7 +147,7 @@ POST /v3/conversations/{conversationId}/activities
 > [!NOTE]
 >
 > *  次に示す要求されたペイロードで `completionBotId` は、のパラメーター `externalResourceUrl` は省略可能です。 これは、 `Bot ID` マニフェストで宣言されているです。 Bot は result オブジェクトを受け取ります。
-> * ExternalResourceUrl の幅と高さのパラメーターは、ピクセル単位でなければなりません。 ディメンションが許容範囲内にあることを確認するには、 [設計ガイドライン](design/designing-in-meeting-dialog.md) を参照してください。
+> * ExternalResourceUrl の幅と高さのパラメーターは、ピクセル単位でなければなりません。 ディメンションが許容範囲内にあることを確認するには、 [設計ガイドライン](design/designing-apps-in-meetings.md) を参照してください。
 > * URL は、 `<iframe>` [会議中] ダイアログボックスの内側に読み込まれるページです。 URL のドメインは、アプリのマニフェストのアプリの配列に含まれている必要があり `validDomains` ます。
 
 
@@ -256,9 +257,9 @@ Tab `context` およびプロパティは、 `scopes` アプリを表示する�
 > [!NOTE]
 > * アプリケーションがタブギャラリーに表示されるようにするには、 **構成可能なタブ** と **グループチャットスコープ** をサポートする必要があります。
 >
-> * モバイルクライアントは、会議のプレおよびポストの表面でのみタブをサポートします。 モバイルの会議中のエクスペリエンス (会議中のダイアログとパネル) は近日中に利用可能になります。 モバイル用のタブを作成するときに、 [[モバイル] のタブのガイダンス](../tabs/design/tabs-mobile.md) に従ってください。 
+> * モバイルクライアントは、会議のプレおよびポストの表面でのみタブをサポートします。 モバイルの会議中のエクスペリエンス (会議中のダイアログおよびタブ) は近日中に利用可能になります。 モバイル用のタブを作成するときに、 [[モバイル] のタブのガイダンス](../tabs/design/tabs-mobile.md) に従ってください。
 
-### <a name="pre-meeting"></a>プレミーティング
+### <a name="before-a-meeting"></a>会議の前
 
 開催者または発表者の役割を持つユーザーは、会議 **チャット** および会議の **詳細** ページのプラス➕ボタンを使用して、会議にタブを追加します。 メッセージング拡張機能は、[会話の作成メッセージ] 領域の下にある [楕円/オーバーフロー] メニュー &#x25CF;&#x25CF;&#x25CF; 経由で追加されます。 Bot は、"" キーを使用して会議チャットに追加され、[ **@** **ボットを取得**] を選択します。
 
@@ -268,7 +269,7 @@ Tab `context` およびプロパティは、 `scopes` アプリを表示する�
 
 > **注**: 役割の割り当ては、会議の進行中に変更できます。  *「* [Teams Meeting の役割](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)」を参照してください。 
 
-### <a name="in-meeting"></a>会議中
+### <a name="during-a-meeting"></a>会議中
 
 #### <a name="sidepanel"></a>**sidePanel**
 
@@ -285,9 +286,9 @@ Tab `context` およびプロパティは、 `scopes` アプリを表示する�
 
 [会議中のアプリケーション名を指定してください✔の場合は、会議の U バーでアプリ名を指定する必要があります。
 
-#### <a name="in-meeting-dialog"></a>**会議中のダイアログ**
+#### <a name="in-meeting-dialog"></a>**会議中ダイアログ**
 
-✔ [会議中のダイアログの設計ガイドライン](design/designing-in-meeting-dialog.md)に従う必要があります。
+✔ [会議中のダイアログの設計ガイドライン](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)に従う必要があります。
 
 ✔ [タブの Teams 認証フロー](../tabs/how-to/authentication/auth-flow-tab.md)を参照してください。
 
@@ -303,7 +304,7 @@ Tab `context` およびプロパティは、 `scopes` アプリを表示する�
 >
 > * アプリで匿名ユーザーをサポートする場合、最初の呼び出し要求のペイロードは、( `from.id` `from` `from.aadObjectId` ユーザーの AZURE Active Directory ID) 要求メタデータではなく、オブジェクト内の (ユーザーの ID) 要求メタデータに依存している必要があります。 *「* [タスクモジュールを使用して](../task-modules-and-cards/task-modules/task-modules-tabs.md) タスク [モジュールを作成し、送信](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)する」を参照してください。
 
-### <a name="post-meeting"></a>会議後
+### <a name="after-a-meeting"></a>会議の後
 
 ポストミーティングと事前会議の構成は同等です。
 

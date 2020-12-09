@@ -1,73 +1,178 @@
 ---
-title: 設計ガイドラインのリファレンス
-description: 個人用アプリの設計ガイドラインについて説明します。
-keywords: teams の設計ガイドラインリファレンスフレームワーク個人用アプリ
-ms.openlocfilehash: f66691234149afa56a6753dd51379c9f2355318e
-ms.sourcegitcommit: 61c93b22490526b1de87c0b14a3c7eb6e046caf6
+title: 個人用アプリを設計する
+description: Teams personal app を設計し、Microsoft Teams UI キットを取得する方法について説明します。
+author: heath-hamilton
+ms.topic: conceptual
+ms.author: lajanuar
+ms.openlocfilehash: 971071be9f345815f5461646d7970efdf05fd5c4
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2020
-ms.locfileid: "44455500"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605021"
 ---
-# <a name="personal-apps"></a>個人用アプリ
+# <a name="designing-your-personal-app-for-microsoft-teams"></a>Microsoft Teams 用の個人用アプリを設計する
 
-> [!NOTE]
-> Teams では、モバイルクライアントでのタブの完全なサポートがサポートされています。 モバイルプラットフォームのタブを作成するときは、「 [mobile のタブのガイダンス](../../tabs/design/tabs-mobile.md)」に従ってください。
+個人アプリは、ボット、プライベートワークスペース、またはその両方にすることができます。 アプリが複数のチャネルのタブとして構成されている場合は、コンテンツを作成または表示する場所のような機能をユーザーに提供することもあります。
 
-個人用アプリは、個人のスコープを持つ Teams アプリケーションです。  アプリ開発者は、1人のユーザーとの対話に焦点を当てたバージョンのアプリを提供するオプションを選択できます。 [対話](../../bots/what-are-bots.md)式を使用して、ユーザーまたは[個人用タブ](../../tabs/what-are-tabs.md)で1対1の会話を行い、組み込みの web 環境を提供することができます。 個人用アプリを使用すると、ユーザーが選択したコンテンツを1つの場所に表示できます。 次のスクリーンショットでは、Contoso は個人用アプリのポップアップにある個人用アプリです。
+アプリの設計をガイドするには、次の情報を参照して、ユーザーが Teams で個人アプリを追加、使用、および管理する方法について説明します。
 
-![アプリのオーバーフローメニューのイメージ](~/assets/images/Personal-apps-App-flyout.png)
+## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
----
+Microsoft Teams UI キットでは、必要に応じて取得および変更できる要素を含む、アプリの総合的な設計ガイドラインを見つけることができます。 UI キットには、ここでは説明していないアクセシビリティや応答性の高いサイズ変更などの重要なトピックもあります。
 
-## <a name="guidelines"></a>ガイドライン
+> [!div class="nextstepaction"]
+> [Microsoft Teams UI Kit (Figma) を取得する](https://www.figma.com/community/file/916836509871353159)
 
-個人用アプリには通常、次のタブが含まれています。
+## <a name="add-a-personal-app"></a>個人用アプリを追加する
 
-### <a name="your-tab"></a>タブ
+Teams ストア (AppSource) またはアプリポップアップから個人用アプリを追加するには、Teams の左側にある [ **その他** ] アイコンを選択します (次の例を参照)。
 
-これで、ユーザーにすべてのアイテムが表示されます。 個人のスペースです。 このタブは、リスト、グリッド、列、または1つのキャンバスとして配置できます。アプリケーションにとって最適なものは何か。 有効なタブの設計の詳細については、「 [tabs design](../../tabs/design/tabs.md)」を参照してください。
+:::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="例は、アプリのポップアップから個人用アプリを追加する方法を示しています。" border="false":::
 
-このタブには複数のチャネルのアイテムが表示されることがあるので、各アイテムには自分のチーム、チャネル、およびタブが表示され、ユーザーは自分の元の場所を簡単に確認できます。
+## <a name="use-a-personal-app-private-workspace"></a>個人用アプリを使用する (プライベートワークスペース)
 
-![[個人用タスク] タブ](~/assets/images/Personal-apps-MY-tab.png)
+プライベートワークスペースを使用すると、Teams を離れずに、中心となる場所で重要なアプリコンテンツを表示できます。
 
-### <a name="recent"></a>最新
+(実装メモ: プライベートワークスペースは、[ [*個人用] タブ*](../../build-your-first-app/build-personal-tab.md) の機能に基づいています。)
 
-[**最近使っ**た項目] タブを使用すると、アプリで最近表示したすべての情報を他のユーザーが参照できます。 これは、時系列 (最も新しいものから最も古いものまで) に一覧表示されます。 このリスト内のアイテムをクリックすると、そのアイテムのチャネルとタブに移動します。
+### <a name="anatomy-personal-app-private-workspace"></a>分析: 個人アプリ (プライベートワークスペース)
 
-![[最近使用したタブ]](~/assets/images/Personal-apps-Recent-tab.png)
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="例は、個人用タブのコンポーネントの構造を示しています。" border="false":::
 
-### <a name="all"></a>すべて
+|カウンター|説明|
+|----------|-----------|
+|A|**アプリの属性**: アプリのロゴと名前。|
+|B|**タブ**: 個人用アプリのナビゲーションを提供します。 たとえば、[ **バージョン情報** ] タブまたは [ **ヘルプ** ] タブを含めます。|
+|C|**Popout view**: アプリのコンテンツを親ウィンドウからスタンドアロンの子ウィンドウにプッシュします。|
+|D|**[その他のメニュー]**: 追加のアプリ情報とオプションが含まれています。 (または、タブを **設定** することもできます)。|
 
-これは、ユーザーの組織内のすべてのタブ (アクセスできるもの) の一覧です。 つまり、アプリが使用されているすべての場所を表示します。 [**最近使っ**た項目] タブと同様に、リスト内で何かを選択すると、ユーザーは関連するチャネルとタブに直接移動します。
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="例は、個人用タブの構造の構造を示しています。" border="false":::
 
-### <a name="bot"></a>Bot
+|カウンター|説明|
+|----------|-----------|
+|A|**タブ**: 個人用アプリのナビゲーションを提供します。|
+|1 |**iframe**: アプリのコンテンツを表示します。|
 
-Bot は必須ではありませんが、ユーザーと直接やり取りするための最適な方法です。 通知は個人アプリの最も重要な機能の1つで、直接的なコミュニケーションと比べてより良い通知方法ですか。
+### <a name="designing-with-ui-templates"></a>UI テンプレートを使用して設計する
 
-Bot は、メッセージをカード形式で配信します。これにより、特定の情報 (新しいコンテンツが利用可能であることを示す通知など) や広範な更新 (毎日のタスクリストなど) を提供できます。 効果的なボットを設計する詳細については、「 [bot 設計](../../bots/design/bots.md)」を参照してください。
+次の Teams UI テンプレートのいずれかを使用して、[個人用] タブの設計に役立てることができます。
 
-![Bot 案内応答](~/assets/images/Personal-apps-Bot.png)
+* [リスト](../../concepts/design/design-teams-app-ui-templates.md#list): リストでは、関連するアイテムを scannable 形式で表示し、ユーザーがリスト全体または個々のアイテムに対してアクションを実行できるようにします。
+* [タスクボード](../../concepts/design/design-teams-app-ui-templates.md#task-board): タスクボード (かんばんボードまたはスイムレーンと呼ばれることもあります) は、多くの場合、作業項目またはチケットの状態を追跡するために使用されるカードのコレクションです。
+* [ダッシュボード](../../concepts/design/design-teams-app-ui-templates.md#dashboard): ダッシュボードは、データまたはコンテンツの概要を提供する複数のカードを含むキャンバスです。
+* [フォーム](../../concepts/design/design-teams-app-ui-templates.md#form): フォームは、構造化された方法でユーザー入力を収集、検証、および提出するためのものです。
+* [Empty state](../../concepts/design/design-teams-app-ui-templates.md#empty-state): 空の状態テンプレートは、サインイン、初回実行時のエクスペリエンス、エラーメッセージなど、多くのシナリオで使用できます。
+* [左](../../concepts/design/design-teams-app-ui-templates.md#left-nav)ナビゲーション: タブにいくつかのナビゲーションが必要な場合は、左側のナビゲーションテンプレートが役立ちます。 一般的に、タブナビゲーションは最小限にする必要があります。
 
-### <a name="help-and-settings"></a>ヘルプと設定
+## <a name="use-a-personal-app-bot"></a>個人アプリ (bot) を使用する
 
-ヘルプコンテンツは、ユーザーがアプリの微妙な違いを見つけられるようにします。 [**設定**] タブを追加して、さらにカスタマイズできるようにします。
+個人用アプリには、1対1の会話およびプライベート通知用の bot を含めることができます (たとえば、同僚がアートボードにコメントを投稿した場合)。 Bot は、指定したタブで使用できます。
 
-### <a name="about"></a>概要
+### <a name="anatomy-personal-app-bot"></a>分析: Personal app (bot)
 
-バージョン番号、機能、プライバシー、アクセス許可のリンクなどの情報を提供するための [**概要**] タブを含めます。
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="例は、パーソナル bot コンポーネントの分析を示しています。" border="false":::
+
+|カウンター|説明|
+|----------|-----------|
+|A|**Bot タブ**: たとえば、ボット会話や通知にアクセスするための [ **チャット** ] タブを含みます。|
+|B|**Bot メッセージ**: bot は、メッセージと通知をカード (アダプティブカードなど) 形式で送信することがよくあります。|
+|C|**新規作成ボックス**: bot にメッセージを送信するための入力フィールド。|
 
 ## <a name="best-practices"></a>ベスト プラクティス
 
-### <a name="communicate-directly-with-your-users"></a>ユーザーと直接通信する
+### <a name="tab-priority"></a>タブの優先度
 
-Bot を使用して、ユーザーに変更と新機能があることを通知します。
+#### <a name="do-show-the-most-relevant-content-in-the-first-tab"></a>実行: 最初のタブに最も関連のあるコンテンツを表示する
 
-### <a name="customize-your-tabs"></a>タブをカスタマイズする...
+応答性の高いサイズに設定すると、右側のタブが切り捨てられるか、表示されなくなることがあります。
 
-ユーザーが特定のタスクを実行するのに役立つその他のタブを自由に追加できます。
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-do.png" alt-text="例は、個人用アプリのベストプラクティスを示しています。" border="false":::
 
-### <a name="and-make-them-relevant-to-every-user"></a>...すべてのユーザーに関連するようにします。
+#### <a name="dont-lead-with-secondary-content-or-metadata"></a>いいえ: セカンダリコンテンツまたはメタデータをリードします。
 
-アプリマニフェストで宣言したすべてのタブは、すべてのユーザーに表示されます。 たとえば、個人アプリが、マネージャーと従業員の両方で使用される経費報告ツールである場合、[**承認**] タブで、両方の役割にとって意味のあるコンテンツを提供する必要があります。
+標準的な web アプリと同様に、タブナビゲーションは、アプリの主要な機能を理解するために役立つ順序で実行する必要があります。
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-dont.png" alt-text="例は、個人用アプリのベストプラクティスを示しています。" border="false":::
+
+### <a name="tab-hierarchy"></a>タブ階層
+
+#### <a name="do-tabs-should-be-of-equal-hierarchy-and-represent-key-app-pages"></a>Do: タブを同じ階層にして、主要なアプリページを表す必要があります。
+
+タブでは、アプリの主要な機能とコンテンツを分類する必要があります。 応答性の高いサイズに設定すると、右側のコンテンツが切り捨てられるか、表示されなくなることがあります。
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-do.png" alt-text="例は、個人用アプリのベストプラクティスを示しています。" border="false":::
+
+#### <a name="dont-include-different-levels-of-hierarchy"></a>異なる階層のレベルを含めないでください。
+
+コンテンツは、ユーザーが理解しやすくなる論理的な順序で実行する必要があります。 互いに密接な関係がある2つのタブがある場合は、1つのタブに結合することを検討してください。
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-dont.png" alt-text="例は、個人用アプリのベストプラクティスを示しています。" border="false":::
+
+### <a name="first-run-experience"></a>初回実行時エクスペリエンス
+
+#### <a name="do-include-a-first-run-experience"></a>実行: 最初の実行環境を含める
+
+個人用アプリを初めて使用するときは、少なくともようこそ画面が表示されている必要があります。 Bot の場合は、bot が実行できることを説明し、サインインボタンなどのクイック操作を提供します。
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-do.png" alt-text="例は、個人用アプリのベストプラクティスを示しています。" border="false":::
+
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-fre-do.png" alt-text="例は、個人用アプリのベストプラクティスを示しています。" border="false":::
+
+#### <a name="dont-start-with-a-blank-screen"></a>いいえ: 空の画面で開始します
+
+アプリを初めて実行したときに何も表示されない場合は、ユーザーが混乱する可能性があります。
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-dont.png" alt-text="例は、個人用アプリのベストプラクティスを示しています。" border="false":::
+
+### <a name="personalized-content"></a>個人用コンテンツ
+
+#### <a name="do-aggregate-app-content-relevant-to-a-user"></a>Do: ユーザーに関連するアプリコンテンツを集計する
+
+個人のタブか bot かにかかわらず、アプリ内のユーザーのアクティビティのみに関連するコンテンツが表示されます。
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-do.png" alt-text="例は、個人用アプリのベストプラクティスを示しています。" border="false":::
+
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-do.png" alt-text="例は、個人用アプリのベストプラクティスを示しています。" border="false":::
+
+#### <a name="dont-show-unrelated-or-overly-broad-content"></a>[しない]: 関連性のないコンテンツまたは過度に広いコンテンツを表示する
+
+個人コンテキストでは、ユーザーが所属していない teams のコンテンツは表示されません。 個人 bot コンテンツは、グループではなく個人に焦点を当てる必要があります。
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-dont.png" alt-text="例は、個人用アプリのベストプラクティスを示しています。" border="false":::
+
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-dont.png" alt-text="例は、個人用アプリのベストプラクティスを示しています。" border="false":::
+
+### <a name="complex-app-features"></a>複雑なアプリ機能
+
+#### <a name="do-allow-users-to-access-complex-features-in-a-browser"></a>Do: ブラウザーで複雑な機能にアクセスすることをユーザーに許可する
+
+アプリは Teams のコアタスクに焦点を当てる必要がありますが、完全なスタンドアロンアプリをブラウザーで表示することもできます。
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-do.png" alt-text="例は、個人用アプリのベストプラクティスを示しています。" border="false":::
+
+#### <a name="dont-include-your-entire-app"></a>アプリ全体を含めないでください。
+
+特に Teams 用のアプリを作成していない場合は、コラボレーションツールで意味を持たない機能が存在する可能性があります。
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="例は、個人用アプリのベストプラクティスを示しています。" border="false":::
+
+## <a name="manage-a-personal-tab"></a>個人用タブを管理する
+
+Teams の左側で、ユーザーは個人用アプリを右クリックして、他のアプリオプションを固定、削除、および構成できます。
+
+:::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="例は、個人用アプリを管理するためのオプションを示しています。" border="false":::
+
+## <a name="learn-more"></a>詳細情報
+
+個人アプリの範囲によっては、次のような設計ガイドラインが役になることがあります。
+
+* [タブのデザイン](../../tabs/design/tabs.md)
+* [Bot のデザイン](../../bots/design/bots.md)
+
+## <a name="validate-your-design"></a>設計を検証する
+
+アプリを AppSource に発行することを計画している場合は、一般的にアプリが送信中に失敗する原因となる設計上の問題について理解しておく必要があります。
+
+> [!div class="nextstepaction"]
+> [設計検証ガイドラインの確認](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

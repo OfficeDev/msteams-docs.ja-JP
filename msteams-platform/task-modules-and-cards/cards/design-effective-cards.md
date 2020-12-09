@@ -1,135 +1,138 @@
 ---
-title: 効果的なカードを設計する
-description: カードを作成するためのデザインガイドラインについて説明します。
-keywords: teams 設計ガイドラインリファレンスフレームワークカードのアダプタブルライトウェイト
-ms.openlocfilehash: 4ec410820e0288d99dacb6944a8096f4f61b9d34
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+title: アプリに適応カードを設計する
+description: Teams 用のアダプティブカードを設計し、Microsoft Teams UI キットを取得する方法について説明します。
+ms.topic: conceptual
+ms.author: lajanuar
+ms.openlocfilehash: bd48846284620415cc8cadabc59f2ab7b61d5189
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48209838"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604555"
 ---
-# <a name="design-effective-cards"></a>効果的なカードを設計する
+# <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Microsoft Teams アプリ用のアダプティブカードの設計
 
-カードは、ボット、コネクタ、またはアプリを介して会話に追加できる、コンテンツの操作可能なスニペットです。 カードを使用すると、テキスト、グラフィックス、ボタンを使用して、対象ユーザーと通信することができます。
+アダプティブカードには、フリーフォームのカード要素と任意のアクションセットが含まれています。 アダプティブカードは、ボットまたはメッセージング拡張機能を使用して会話に追加できる、実行可能なコンテンツのスニペットです。 これらのカードは、テキスト、グラフィックス、ボタンを使用して、対象ユーザーに豊富なコミュニケーションを提供します。
 
-カードフレームワークは、完全に機能する UX を設計する負担を排除します。 Microsoft は、いくつかの標準カードの種類を開発し、それぞれがサポートされるプラットフォーム内に収まるようにしました。 これは、レイアウトが完全に機能しており、プラットフォーム間で異なるカードの繰り返しを開発する必要がないことを意味します。 代わりに、コンテンツでのダイヤルに集中できます。
+アダプティブカードフレームワークは、Teams を含む多くの Microsoft 製品で使用されています。 Bot またはメッセージング拡張機能を使用して、メッセージ内のカードをユーザーに送信することができます。 ユーザーは、表示されている場合は、カードに対してアクションを実行できます。
 
----
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="例は、アダプティブカードを示しています。" border="false":::
 
-## <a name="guidelines"></a>ガイドライン
+## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-カードをユーザーの質問または設定に対する応答として考えます。 カードは、直接的な質問 ("開いているバグの数" など) または条件 (たとえば、"open バグの一覧を毎日午前9時に送信する" など) に応答できます。
+Microsoft Teams UI キットでは、必要に応じて取得して変更できる要素を含め、Teams のアダプティブカードについて、より包括的な設計ガイドラインを参照できます。 UI キットでは、テーマ、アクセシビリティ、応答性の高いサイズ設定など、重要なトピックについても説明しています。
 
-> [!TIP]
-> 標準カードの種類のいずれかを使用すると、サポートされている各プラットフォーム間ですべての応答が適切にレンダリングされることが既にわかっていることになります。
+> [!div class="nextstepaction"]
+> [Microsoft Teams UI Kit (Figma) を取得する](https://www.figma.com/community/file/916836509871353159)
 
-カードには、次の要素のいずれかを含めることができます。<br />
+## <a name="adaptive-cards-designer"></a>アダプティブカードデザイナー
 
-[!include[Card anatomy](~/includes/design/card-image-anatomy.html)]
+また、アダプティブカードのデザインをブラウザーで直接開始することもできます。
 
-1. **封筒テキスト**: チャットメッセージに最適です。 たとえば、次のようになります。「検索されたものが見つかりました!」と言います。 または「1:00 ニュースダイジェストの時間」というメッセージは、封筒テキストに表示されるのが最適です。
+> [!div class="nextstepaction"]
+> [アダプティブカードデザイナーを試す](https://adaptivecards.io/designer/)
 
-   封筒テキストは、サービスに少しの個性を注入するための最適な方法です。これは、比較的短いままにしておくことを忘れないでください。
-
-2. **タイトル**: タイトルは常に、カード内の最大のテキストになります。 また、"フック" として機能するので、タイトルは短くて覚えやすいものにして、スキャンしやすいものにしてください。
-
-3. **副題**: 属性、taglines、またはセカンダリディレクティブとして最適に使用されます。 このコンポーネントは、タイトルのすぐ下に表示されます。
-
-4. **画像**: コンテナーに合わせて画像を拡大または縮小します。 英雄カードの最大幅は420px、サムネイルの最大幅は100px、リストビューではデスクトップモードでは間隔のみが許可されています。
-
-5. **テキスト**: カードの本文にプレーンテキストを使用するのに最適です。 最大長は、選択したカードの種類によって異なります。
-
-6. **ボタン**: web ページ、タブ、または追加のチャットコンテンツを開くために最適です。 ボタンのテキストを短くして、その点まで維持するようにしてください。
-
-   カードごとに最大6つのボタンを含めることができますが、ここでは「less is more」という原則に従うことをお勧めします。
-
-7. **タップ地域**: これは、カードのクリック可能な領域です。 ほとんどのユーザーは、画像を自動的にクリックする必要があるので、自分がタップまたはクリックした位置がわかるようにテキストを作成してみましょう。
-
-> [!TIP]
-> 作成した各カードにすべての要素を含める必要はありません。 コンテンツに要素を説明します。
-
----
-
-## <a name="types-of-cards"></a>カードの種類
+## <a name="types-of-adaptive-cards"></a>アダプティブカードの種類
 
 ### <a name="hero"></a>ヒーロー
 
-最大のカード 最もよく使用されるのは、記事、詳細な説明、または画像がほとんどの話を伝えるシナリオです。
+最大のカード 画像が最も多くの話を伝える記事やシナリオを共有するために使用します。
 
-[!include[Card anatomy](~/includes/design/card-image-hero.html)]
+:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="例は、アダプティブカードを示しています。" border="false":::
 
 ### <a name="thumbnail"></a>Thumbnail
 
-短時間、かつ甘い。 これらのカードは、短い回答に適している場合や、一度に複数のカードを返して、ユーザーが一連のオプションから選択できるようにする場合に最適です。 他のタブまたは web サービスに深くリンクするには、これらの方法が適していると考えています。
+簡単な操作可能なメッセージを送信するために使用します。
 
-[!include[Card anatomy](~/includes/design/card-image-thumbnail.html)]
+:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="例は、アダプティブカードを示しています。" border="false":::
 
-### <a name="sign-in"></a>サインイン
+### <a name="list"></a>リスト
 
-一部のサービスでは、ユーザーは認証とは無関係にサインインする必要があります。 このイベントでは、ユーザーがサービスに接続する前に、サインインカードを提示します。
+ユーザーがリストからアイテムを選択する必要があるが、アイテムには多くの説明は必要ない場合に使用します。
 
-[!include[Card anatomy](~/includes/design/card-image-signin.html)]
-
-> [!TIP]
-> 追加のサインインカードの発生を制限して、新しいユーザーのスピードを大幅に向上させることができます。
-
----
-
-## <a name="card-collections"></a>カードコレクション
-
-また、複数の部分のコンテンツを一度に、またはすぐに表示する場合に最適な標準カードの種類が用意されています。 そのためには、カルーセル、ダイジェスト、リスト、および ' バブルマージ ' という呼び出しを行います。
-
-### <a name="carousel"></a>カルーセル
-
-記事、ショッピング、およびカードを参照するのに最適です。
-
-[!include[Card anatomy](~/includes/design/card-image-carousel.html)]
-
-> [!TIP]
-> カルーセルは、最も大きいカードの最大の高さになります。 同じ種類のカードとコンテンツフィールドを使用することをお勧めします。
+:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="例は、アダプティブカードを示しています。" border="false":::
 
 ### <a name="digest"></a>Digest
 
-ユーザーが複数のカードを一度に表示できるようにする場合に、ニュース、ダイジェスト、およびいつでも使用することをお勧めします。 ダイジェストにはサムネイルカードを使用することをお勧めします。
+ニュースダイジェストおよび切り上げられた投稿に使用します。 注: 1 つの更新プログラムまたはニュースアイテムには、サムネイルカードをお勧めします。
 
-[!include[Card anatomy](~/includes/design/card-image-digest.html)]
+:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="例は、アダプティブカードを示しています。" border="false":::
 
-### <a name="lists"></a>リスト
+### <a name="media"></a>メディア
 
-リストは、"これらのうち1つを選ぶ" シナリオでオブジェクトの scannable セットを表示するための最適な方法です。 リストは、多くの説明を必要としないアイテムに使用するのに最適です。
+音声やビデオなどのテキストとメディアを結合する場合に使用します。
 
-[!include[Card anatomy](~/includes/design/card-image-list.html)]
+:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="例は、アダプティブカードを示しています。" border="false":::
 
-### <a name="bubble-merge"></a>バブルマージ
+### <a name="people"></a>People
 
-いくつかの興味深い効果は、1つの英雄と複数のサムネイルをすばやく連続して送信することによって実現できます。 メインの結果を提供するが、さらに多くの関連アイテムを含める場合は、この方法をお勧めします。
+タスクに関係する人物を効率的に伝える場合に最適です。
 
-[!include[Card anatomy](~/includes/design/card-image-bubble-merge.html)]
+:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="例は、アダプティブカードを示しています。" border="false":::
 
----
+### <a name="request-ticket"></a>要求チケット
+
+ユーザーからすばやく入力を取得して、タスクまたはチケットを自動的に作成するために使用します。
+
+:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="例は、アダプティブカードを示しています。" border="false":::
+
+### <a name="imageset"></a>ImageSet
+
+複数の画像のサムネイルを送信するために使用します。
+
+:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="例は、アダプティブカードを示しています。" border="false":::
+
+### <a name="actionset"></a>ActionSet
+
+ユーザーにボタンを選択させ、そのカードから追加のユーザー入力を収集する場合に使用します。
+
+:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="例は、アダプティブカードを示しています。" border="false":::
+
+### <a name="choiceset"></a>ChoiceSet
+
+ユーザーから複数の入力を収集するために使用します。
+
+:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="例は、アダプティブカードを示しています。" border="false":::
+
+## <a name="anatomy"></a>構造
+
+:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="アダプティブカードの UI の構造を示す図。" border="false":::
+
+アダプティブカードには多くの柔軟性があります。 ただし、少なくとも、以下のコンポーネントをすべてのカードに含めることを強くお勧めします。
+
+|カウンター|説明|
+|----------|-----------|
+|A|**ヘッダー**: ヘッダーを明瞭で簡潔なものにします。ただし、わかりやすくする。|
+|B|**本文のコピー**: ヘッダーに含めるには、長すぎる、または重要ではない詳細情報を伝達するために使用します。|
+|C|**主な処置**: ベストプラクティスとして、1-3 プライマリアクションを含めます。 最大6個が許可されます。|
 
 ## <a name="best-practices"></a>ベスト プラクティス
 
-### <a name="keep-the-noise-down"></a>ノイズを抑える
+### <a name="primary-and-secondary-actions"></a>プライマリおよびセカンダリのアクション
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="アダプティブカードのベストプラクティスを示す例。" border="false":::
+
+#### <a name="do-use-up-to-six-primary-actions"></a>Do: 最大6つの主要なアクションを使用します。
+
+アダプティブカードは6つの主要なアクションをサポートしていますが、ほとんどのカードはそれを必要としません。 アクションは、明瞭、簡潔、およびまっすぐに実行する必要があります。 これよりも少なくなります。
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="アダプティブカードのベストプラクティスを示す例。" border="false":::
+
+#### <a name="dont-use-more-than-six-primary-actions"></a>6つ以上の主なアクションを使用します。
+
+アダプティブカードは、すぐに実行可能なコンテンツを表示する必要があります。 ユーザーが過負荷になる可能性があります。
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="frequency"></a>Frequency
+
+:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="アダプティブカードのベストプラクティスを示す例。" border="false":::
+
+#### <a name="do-be-concise"></a>実行: 簡潔
 
 複数のカードを1つの会話に簡単に送信できますが、カードが表示されなくなると、利便性が低下します。 Essentials に制限するようにしてください。 これは、ユーザーが "ノイズ" として認識される許容範囲を下回っているチャネルの場合に特に当てはまります。
-
-### <a name="test-on-mobile"></a>モバイルでのテスト
-
-モバイル環境は、スペースと帯域幅に制約があるため、サイズの大きい画像と大規模なデータセットをリストと carousels に含めることに注意してください。 また、タイトルの幅とテキストの長さはモバイルで切り捨てられるので、もう1つ注目することもあります。
-
-### <a name="check-your-graphics"></a>グラフィックスを確認する
-
-画像は拡大していきますので、必ずすべてのプラットフォームでプレビューしてください。
-
-### <a name="avoid-including-text-in-a-graphic"></a>テキストをグラフィックに含めないようにする
-
-ユーザーが読み取る必要があるものは、すべてテキストフィールドに含まれている必要があります。 画像が動的に拡大縮小されると、画像に追加したテキストが判読できなくなることがあります。
-
-### <a name="use-mentions-if-you-want-the-attention-of-specific-users"></a>特定のユーザーの注意を引く場合は、メンションを使用します。
-
-> [!NOTE]
-> 現在、カードでのサポートは、 [開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md) のみでサポートされています。
-
-メンションは、チームまたはグループのチャットで特定のユーザーに通知するための最適な方法です。 ユーザーに割り当てられたタスクや、チームメイトに称賛を付与するようなシナリオで、カードに説明を含めることができます。 [カード形式ページ](~/task-modules-and-cards/cards/cards-format.md)のカードにメンションを含める方法について説明します。 

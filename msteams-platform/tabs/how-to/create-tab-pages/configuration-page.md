@@ -5,12 +5,12 @@ description: 構成ページを作成する方法
 keywords: 構成可能な teams タブグループチャネル
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 591e1aa91bd33d1a61e9d70b35fd1561368fcda4
-ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
+ms.openlocfilehash: f217ce39f234b3058607d81f418fa29da318ff21
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "47964607"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605326"
 ---
 # <a name="create-a-configuration-page"></a>構成ページを作成する
 
@@ -85,7 +85,7 @@ ms.locfileid: "47964607"
 1. `microsoftTeams.settings.registerOnSaveHandler()`イベントハンドラーがトリガーされます。
 1. アプリの [構成] ページの [ **保存** ] ボタン (Teams にアップロードされたもの) は有効になっています。
 
-このコードを使用すると、構成の要件が満たされており、インストールを続行できることがわかります。 **Save**では、のパラメーターは、 `settings.setSettings()` インターフェイスの定義に従って、現在のインスタンスに対して設定され `Settings` ます (「 [Settings interface](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) 」を参照してください)。 最後に、 `saveEvent.notifySuccess()` は、コンテンツ URL が正常に解決されたことを示すためにを呼び出します。
+このコードを使用すると、構成の要件が満たされており、インストールを続行できることがわかります。 **Save** では、のパラメーターは、 `settings.setSettings()` インターフェイスの定義に従って、現在のインスタンスに対して設定され `Settings` ます (「 [Settings interface](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) 」を参照してください)。 最後に、 `saveEvent.notifySuccess()` は、コンテンツ URL が正常に解決されたことを示すためにを呼び出します。
 
 >[!NOTE]
 >
@@ -104,7 +104,7 @@ Teams [コンテキストインターフェイス](/javascript/api/@microsoft/te
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>にプレースホルダーを挿入します。 `configurationURL`
 
-コンテキストインターフェイスプレースホルダーは、ベースに追加でき `configurationUrl` ます。 次に例を示します。
+コンテキストインターフェイスプレースホルダーは、ベースに追加でき `configurationUrl` ます。 以下に例を示します。
 
 ##### <a name="base-url"></a>ベース Url
 
@@ -166,7 +166,7 @@ document.write(getId());
 
 ## <a name="mobile-clients"></a>モバイル クライアント
 
-Teams モバイル クライアントに [チャネル/グループ] タブを表示するように選択した場合は、`setSettings()` 構成には `websiteUrl` プロパティの値を設定する必要があります (下記参照)。 モバイル クライアントでのタブの完全なサポートは、間もなくリリースされる予定です。 更新プログラムの準備を行うには、タブの作成時に、[モバイルでのタブのガイダンス](~/tabs/design/tabs-mobile.md)に従ってください。
+Teams モバイル クライアントに [チャネル/グループ] タブを表示するように選択した場合は、`setSettings()` 構成には `websiteUrl` プロパティの値を設定する必要があります (下記参照)。 「 [Mobile のタブのガイダンス」を](~/tabs/design/tabs-mobile.md)参照してください。
 
 削除ページまたはモバイルクライアントの Microsoft Teams setSettings () 構成:
 

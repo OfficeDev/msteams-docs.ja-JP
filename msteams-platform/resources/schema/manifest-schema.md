@@ -4,12 +4,12 @@ description: Microsoft Teams のマニフェストスキーマについて説明
 keywords: teams マニフェストスキーマ
 author: laujan
 ms.author: lajanuar
-ms.openlocfilehash: 26c6ca0ed6edceb9b34c84c28a43a63f65a348de
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: e25f50fc8da357553c1f0a8b01dc51af079ed2bb
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552557"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604614"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>リファレンス: Microsoft Teams のマニフェストスキーマ
 
@@ -376,7 +376,7 @@ Teams でユーザーに表示されるアプリの動作の名前です。 AppS
 
 **Required** -オブジェクト
 
-Teams アプリ内で使用されるアイコン。 アイコンファイルは、アップロードパッケージの一部として含める必要があります。 詳細については、「 [アイコン](~/concepts/build-and-test/apps-package.md#icons) 」を参照してください。
+Teams アプリ内で使用されるアイコン。 アイコンファイルは、アップロードパッケージの一部として含める必要があります。 詳細については、「 [アイコン](../../concepts/build-and-test/apps-package.md#app-icons) 」を参照してください。
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
@@ -400,11 +400,11 @@ Teams アプリ内で使用されるアイコン。 アイコンファイルは�
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 文字|✔|タブを構成するときに使用する https://URL。|
-|`scopes`|列挙型の配列|1-d|✔|現在、構成可能なタブでは、およびスコープのみがサポートさ `team` `groupchat` れています。 |
+|`scopes`|列挙型の配列|1 |✔|現在、構成可能なタブでは、およびスコープのみがサポートさ `team` `groupchat` れています。 |
 |`canUpdateConfiguration`|ブール値|||作成後にタブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 既定値は **true** です。|
 |`context` |列挙型の配列|6 ||`contextItem`タブがサポートされているスコープのセット。 既定値: **[Channeltab、privateChatTab、meetingChatTab、会議の設定]**。|
 |`sharePointPreviewImage`|string|2048||SharePoint で使用するタブプレビュー画像への相対ファイルパス。 サイズ1024x768。 |
-|`supportedSharePointHosts`|列挙型の配列|1-d||SharePoint でどのようにタブを使用できるようにするかを定義します。 オプション `sharePointFullPage` と `sharePointWebPart` |
+|`supportedSharePointHosts`|列挙型の配列|1 ||SharePoint でどのようにタブを使用できるようにするかを定義します。 オプション `sharePointFullPage` と `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -421,8 +421,8 @@ Teams アプリ内で使用されるアイコン。 アイコンファイルは�
 |`contentUrl`|string||✔|Teams キャンバスに表示されるエンティティ UI をポイントする https://URL。|
 |`websiteUrl`|string|||ユーザーがブラウザーで表示をポイントしたかどうかを示す https://URL。|
 |`searchUrl`|string|||ユーザーの検索クエリを指す https://URL。|
-|`scopes`|列挙型の配列|1-d|✔|現時点では、静的タブではスコープのみがサポート `personal` されます。つまり、個人の利便性の一環としてのみプロビジョニングできます。|
-|`context` | 列挙型の配列| pbm-2|| `contextItem`タブがサポートされているスコープのセット。|
+|`scopes`|列挙型の配列|1 |✔|現時点では、静的タブではスコープのみがサポート `personal` されます。つまり、個人の利便性の一環としてのみプロビジョニングできます。|
+|`context` | 列挙型の配列| 2 || `contextItem`タブがサポートされているスコープのセット。|
 
 > [!NOTE]
 > 関連するコンテンツを表示したり、認証フローを開始したりするために、タブにコンテキスト依存情報が必要な場合は、「 [Microsoft Teams のコンテキストを取得する」タブ](../../tabs/how-to/access-teams-context.md)を *参照してください*。
@@ -438,7 +438,7 @@ Bot ソリューションと、既定のコマンドプロパティなどのオ�
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`botId`|string|64 文字|✔|Bot Framework に登録された、ボット用の一意の Microsoft アプリ ID。 これは、アプリの全体的な [ID](#id)と同じである場合もあります。|
-|`scopes`|列挙型の配列|1/3|✔|ボットがエクスペリエンスを提供するのは、`team` 内のチャネルのコンテキスでなのか、グループ チャット (`groupchat`) でなのか、あるいは個別のユーザーのみをエクスペリエンスの対象にする (`personal`) のかを指定します。 これらのオプションは非排他的です。|
+|`scopes`|列挙型の配列|3 |✔|ボットがエクスペリエンスを提供するのは、`team` 内のチャネルのコンテキスでなのか、グループ チャット (`groupchat`) でなのか、あるいは個別のユーザーのみをエクスペリエンスの対象にする (`personal`) のかを指定します。 これらのオプションは非排他的です。|
 |`needsChannelSelector`|ブール値|||ボットを特定のチャネルに追加するためのユーザー用ヒントをボットで使用するかどうかの説明。 限り **`false`**|
 |`isNotificationOnly`|ブール値|||ボットが会話ボットではなく、一方向性の通知専用ボットなのかどうかを示します。 限り `**false**`|
 |`supportsFiles`|ブール値|||パーソナル チャットでのファイルのアップロード/ダウンロード機能をボットでサポートするかどうかを示します。 限り **`false`**|
@@ -451,8 +451,8 @@ Bot がユーザーに推奨できるコマンドのオプションの一覧。 
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`items.scopes`|列挙型の配列|1/3|✔|コマンド リストが有効なスコープを指定します。 `team`、`personal`、`groupchat` の中から選択できます。|
-|`items.commands`|オブジェクトの配列|10  |✔|ボットがサポートするコマンドの配列:<br>`title`: ボット コマンドの名前 (文字列、32)<br>`description`: コマンドの構文およびその構文の引数
+|`items.scopes`|列挙型の配列|3 |✔|コマンド リストが有効なスコープを指定します。 `team`、`personal`、`groupchat` の中から選択できます。|
+|`items.commands`|オブジェクトの配列|10 |✔|ボットがサポートするコマンドの配列:<br>`title`: ボット コマンドの名前 (文字列、32)<br>`description`: コマンドの構文およびその構文の引数
 の簡単な説明または例 (文字列、128)|
 
 ### <a name="botscommandlistscommands"></a>bot のリストコマンド
@@ -473,7 +473,7 @@ Object は、type のすべての要素を含む配列 (最大1つの要素) で
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 文字|✔|コネクタを構成するときに使用する https://URL。|
-|`scopes`|列挙型の配列|1-d|✔|コネクタが内のチャネルのコンテキストで、 `team` または個別のユーザー単独 () にスコープ設定された環境での動作を提供するかどうかを指定し `personal` ます。 現時点では、 `team` 範囲のみがサポートされています。|
+|`scopes`|列挙型の配列|1 |✔|コネクタが内のチャネルのコンテキストで、 `team` または個別のユーザー単独 () にスコープ設定された環境での動作を提供するかどうかを指定し `personal` ます。 現時点では、 `team` 範囲のみがサポートされています。|
 |`connectorId`|string|64 文字|✔|コネクタ [開発者ダッシュボード](https://aka.ms/connectorsdashboard)の ID と一致するコネクタの一意識別子。|
 
 ## <a name="composeextensions"></a>この機能
@@ -490,7 +490,7 @@ Item は、type のすべての要素を含む配列 (最大1つの要素) で�
 |名前| 型 | 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`botId`|string|64|✔|Bot フレームワークに登録されているメッセージング拡張機能をバックアップする bot の一意の Microsoft アプリ ID。 これは、アプリの全体的な ID と同じである場合もあります。|
-|`commands`|オブジェクトの配列|10  |✔|メッセージング拡張機能がサポートするコマンドの配列|
+|`commands`|オブジェクトの配列|10 |✔|メッセージング拡張機能がサポートするコマンドの配列|
 |`canUpdateConfiguration`|ブール値|||メッセージング拡張機能の構成をユーザーが更新できるかどうかを示す値。 既定値: **false**|
 |`messageHandlers`|オブジェクトの配列|5 ||特定の条件が満たされたときにアプリを呼び出せるようにするハンドラーの一覧。 ドメインも、にリストされている必要があります。 `validDomains`|
 |`messageHandlers.type`|string|||メッセージハンドラの種類。 `"link"` である必要があります。|
@@ -509,7 +509,7 @@ Item は、type のすべての要素を含む配列 (最大1つの要素) で�
 |`type`|string|64 文字||コマンドの種類。 またはのいずれか `query` `action` です。 既定値: **query**。|
 |`description`|string|128文字||このコマンドの目的を示すためにユーザーに表示される説明。|
 |`initialRun`|ブール値|||パラメーターを指定せずにコマンドを最初に実行する必要があるかどうかを示すブール値。 既定値: **false**|
-|`context`|文字列の配列|1/3||メッセージの内線番号をから呼び出すことができる場所を定義します。 、、の任意の組み合わせ `compose` `commandBox` `message` 。 既定値は `["compose","commandBox"]` です。|
+|`context`|文字列の配列|3 ||メッセージの内線番号をから呼び出すことができる場所を定義します。 、、の任意の組み合わせ `compose` `commandBox` `message` 。 既定値は `["compose","commandBox"]` です。|
 |`fetchTask`|ブール値|||タスクモジュールを動的にフェッチする必要があるかどうかを示すブール値。 既定値: **false**|
 |`taskInfo`|object|||メッセージ拡張コマンドの使用時に、タスクモジュールを事前に読み込むように指定します。|
 |`taskInfo.title`|string|64 文字||最初のダイアログのタイトル。|

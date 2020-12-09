@@ -2,12 +2,12 @@
 title: 高度なアプリの詳細ページを作成する
 description: アプリの詳細ページの要件について説明します。
 keywords: teams 発行ストア office publishing policy AppSource content Metadata スクリーンショットロゴ説明アプリ名アイコンの簡単な説明
-ms.openlocfilehash: 98c6ccedb20f43a0bc1a34f5c4ecb30f98150d9a
-ms.sourcegitcommit: 25afe104d10c9a6a2849decf5ec1d08969d827c3
+ms.openlocfilehash: aa12cab0bb89349b4d9d613a9c533773fa593283
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "48465944"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605319"
 ---
 # <a name="build-a-great-app-details-page"></a>高度なアプリの詳細ページを作成する
 
@@ -65,7 +65,7 @@ ms.locfileid: "48465944"
 
 ## <a name="outline-icon"></a>アウトラインアイコン
 
-これは、メッセージング拡張機能、ユーザーによってお気に入りとしてマークされたアプリ、左側のナビゲーションメニューで使用されます。 シンプルで認識可能であることを確認してください。 アウトラインアイコンには、白の色のみが含まれ、透明になっている必要があります。 必要な仕様については、「 [Microsoft Teams アプリアイコン用のアプリパッケージを作成する](../../../build-and-test/apps-package.md#icons) *」を参照してください*。
+このアイコンは、拡張されたメッセージング拡張機能と、アプリが Teams の左側に表示されるタイミングで使用されます。 [アウトラインアイコンのデザインガイダンスを](../../../../concepts/build-and-test/apps-package.md#outline-icon)参照してください。
 
 ![アプリアイコンアウトラインストア表示 ](../../../../assets/images/store-detail-page/AppIconOutline-02.png)
  ![ アプリのアイコンアウトラインアプリ Studio ビュー](../../../../assets/images/store-detail-page/AppIconOutline-01.png)
@@ -83,7 +83,7 @@ ms.locfileid: "48465944"
 
 * 最も重要な情報を最初に説明します。
 * 顧客が検索する可能性があるキーワードを含めます。
-* Microsoft teams について言及する必要がある場合は、microsoft teams の最初の説明を *Microsoft teams*として完全に記述する必要があります。 Teams を同じ説明に再度記述する場合は、その名前を *teams*に短縮することができます。
+* Microsoft teams について言及する必要がある場合は、microsoft teams の最初の説明を *Microsoft teams* として完全に記述する必要があります。 Teams を同じ説明に再度記述する場合は、その名前を *teams* に短縮することができます。
 * Microsoft または Microsoft Teams への参照は、説明の一部にすることができます。また、Microsoft のブランド標準およびガイドラインに準拠する必要があります。
 * すべての説明は、言語エラーのない文法上の正しいものである必要があります。
 * "ユーザー" ではなく "Users" という capitalizations を使用しないようにします。
@@ -202,7 +202,7 @@ ms.locfileid: "48465944"
 * スクリーンショットに Teams またはブラウザー UI をキャプチャしないでください。
 * アプリを正確に反映しないモックを含めないでください。これには、Teams タブではなく web サイトを表示するなどの実際の UI が表示されます。
 
-ベストプラクティスの詳細については、以下を *参照して*ください。 [appsource store の画像を有効](/office/dev/store/craft-effective-appsource-store-images)にします。
+ベストプラクティスの詳細については、以下を *参照して* ください。 [appsource store の画像を有効](/office/dev/store/craft-effective-appsource-store-images)にします。
 
 ## <a name="videos"></a>動画
 

@@ -4,12 +4,12 @@ description: Microsoft Teams ツールキットを使用して、Visual Studio C
 keywords: teams visual studio code toolkit
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 41b0eeaeef1c7094fc9c8cbdc05c2db899245fc6
-ms.sourcegitcommit: 7e47bf158249050c36d97509eea00e77089a54e6
+ms.openlocfilehash: 350da030d15e72e2cad51c5967afab9b6f29fe9e
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "49476931"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604474"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>Teams Toolkit と Visual Studio Code を使用してアプリをビルドする
 
@@ -70,7 +70,9 @@ Microsoft Teams Toolkit for Visual studio code は、visual [Studio Marketplace]
 
 ## <a name="package-your-app"></a>アプリをパッケージ化する
 
-アプリの **詳細** ページを変更するか、**マニフェスト**、またはアプリの **publish** フォルダー内の **env** ファイルを更新すると、 **Development.zip** ファイルが自動的に生成されます。 同じフォルダーに [2 つのアイコン](../concepts/build-and-test/apps-package.md#icons) を含める必要があります。
+アプリの **publish** フォルダーにある **アプリの詳細** ページ、**マニフェスト**、または **env** ファイルを変更すると、 **Development.zip** ファイルが自動的に生成されます。 同じフォルダーに [2 つのアイコン](../concepts/build-and-test/apps-package.md#app-icons) を含める必要があります。
+
+## <a name="install-and-run-your-app-locally"></a>アプリをローカルにインストールして実行する
 
 ## <a name="run-your-app"></a>アプリを実行する
 

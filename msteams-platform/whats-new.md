@@ -2,12 +2,12 @@
 title: 新機能
 description: Microsoft Teams のすべての新しい開発者向け機能について説明します。
 keywords: teams 新しい最新情報
-ms.openlocfilehash: acd02c9765fbbf2e4e1d93d48cb1287936940dee
-ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
+ms.openlocfilehash: 29101e45a317268d1eacf00273a98bc30593d5bd
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "49576835"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604467"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -23,7 +23,7 @@ ms.locfileid: "49576835"
 |11/30/2020|New: Id プラットフォームと Teams ツールキットの統合、およびタブ用の Visual Studio Code|[Teams ツールキットを使用したシングルサインオン認証と、タブ用 Visual Studio コード](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Teams アプリのマニフェストがバージョン1.8 に更新されました|リファレンス: Microsoft Teams のマニフェストスキーマ|[リファレンス: Microsoft Teams のマニフェストスキーマ](resources/schema/manifest-schema.md)|
 |11/11/2020| バージョン1.8 に更新されたマニフェストスキーマ| [リファレンス: Microsoft Teams のマニフェストスキーマ](resources/schema/manifest-schema.md)|
-|11/10/2020|Teams bot 設計ガイドライン|[Bot 設計ガイドライン](bots/design/bots.md#bot-design-guidelines)|
+|11/10/2020|Teams bot 設計ガイドライン|[Bot 設計ガイドライン](bots/design/bots.md)|
 |9/30/2020|モバイルデバイスでのボットへのファイルの送信と受信がサポートされるようになりました。|[Bot を使用してファイルを送受信する](resources/bot-v3/bots-files.md)|
 |09/22/2020|新しい "Teams の使用を開始する" ガイダンス|[最初の Teams アプリの概要を作成する](build-your-first-app/build-first-app-overview.md)|
 |9/18/2020|会議中の Teams アプリのサポート (リリースプレビュー)|Teams 会議で Teams 会議と[アプリ](apps-in-teams-meetings/teams-apps-in-meetings.md)[用のアプリを作成する](apps-in-teams-meetings/create-apps-for-teams-meetings.md)|
@@ -75,7 +75,7 @@ ms.locfileid: "49576835"
 | 08/06/2018 | Bot は、ファイルを送受信できるようになります。| [Bot を使用してファイルを送受信する](~/concepts/bots/bots-files.md)|
 | 07/27/2018 | 開発者プレビューは、メッセージング拡張機能で複数のコマンドをサポートするようになりました。 | [メッセージング拡張機能が拡張されました](~/resources/dev-preview/developer-preview-features.md)|
 | 07/23/2018 | アプリの再証明に関する情報が、公開セクションに追加されました。 |[マニフェストのアクセス許可](resources/schema/manifest-schema.md#permissions)|
-| 07/16/2018 | 開発者向けプレビューでは、[タブの構成] ページに割り当てられている領域が増えています。 | [タブの構成ページの高さが大幅に大きくなっています。](tabs/design/tabs.md#configuration-page-height)|
+| 07/16/2018 | 開発者向けプレビューでは、[タブの構成] ページに割り当てられている領域が増えています。 | [タブの構成ページの高さが大幅に大きくなっています。](tabs/design/tabs.md)|
 | 07/12/2018 | ゲストアクセスに関する情報。 | [Microsoft Teams でのゲスト アクセス](https://docs.microsoft.com/microsoftteams/guest-access#guest-access-overview)|
 | 06/07/2018 | Microsoft Teams テナントアプリカタログのリリース前の情報が追加されました。 | [Microsoft Teams アプリを公開する](~/publishing/apps-publish.md)|
 | 05/31/2018 | Teams 開発者プレビュー (リング 3.6) は、ボットとタブをグループチャットに追加する機能を含むように更新されました。 | [開発者プレビューの機能](~/resources/dev-preview/developer-preview-features.md)、 [開発者プレビュースキーマ](~/resources/schema/manifest-schema-dev-preview.md)|

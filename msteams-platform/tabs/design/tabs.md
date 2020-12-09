@@ -1,201 +1,236 @@
 ---
-title: タブの設計ガイドライン
-description: コンテンツとコラボレーションのタブを作成するためのガイドラインについて説明します。
-keywords: teams 設計ガイドラインリファレンスフレームワークタブ [構成チャネル] タブ [静的] タブ [シンプル] [デザインチーム] タブ
-ms.openlocfilehash: 2d4e809e3ac11a5742113bf65125848a922c0207
-ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
+title: デスクトップと web 用のタブの設計
+description: Teams タブ (デスクトップと web) を設計し、Microsoft Teams UI キットを取得する方法について説明します。
+author: heath-hamilton
+ms.topic: conceptual
+ms.author: lajanuar
+ms.openlocfilehash: 692a21c78dc86cbca5bf248e55d0332bd71c6b92
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "49576863"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604702"
 ---
-# <a name="content-and-conversations-all-at-once-using-tabs"></a>すべてのタブを使用したコンテンツと会話
+# <a name="designing-your-tab-for-microsoft-teams-desktop-and-web"></a>Microsoft Teams デスクトップおよび web 用のタブの設計
 
-> [!Important]
-> **モバイルクライアントのタブ**
->
-> タブを作成するときに、 [[モバイル] のタブのガイダンス](./tabs-mobile.md) に従ってください。 タブで認証を使用している場合は、Teams の JavaScript SDK をバージョン1.4.1 以降にアップグレードする必要があります。認証は失敗します。
->
-> **モバイルのチャネル/グループ (構成可能) のタブ:**
->
-> * モバイルクライアントは、の値を持つ構成可能なタブのみを表示 `websiteUrl` します。 チームのモバイルクライアントにタブを表示する場合は、の値を設定する必要があり `websiteUrl` ます。
-> * モバイルでの既定のオープン動作は、を使用してブラウザーの外部で開くことが `websiteUrl` できます。 公開アプリストアに発行されたアプリの場合、[チャネル] タブを既定でオンにするには、 [[モバイル] のタブのガイダンス](~/tabs/design/tabs-mobile.md)に従って、サポート担当者に連絡して、ホワイトリストを要求します。
+タブは、コラボレーションを促進するコンテンツの大きなキャンバスです。 アプリの設計をガイドするには、次の情報を参照して、Teams でのタブの追加、使用、管理を行う方法を示します。
 
-タブは、チームの有機ワークフロー内でコンテンツを共有し、会話を保持し、サードパーティのサービスをホストするために使用できるキャンバスです。 Microsoft Teams でタブを作成すると、主要な会話から簡単にアクセスできるように、web アプリのフロントおよび中央が配置されます。
+## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-## <a name="guidelines"></a>ガイドライン
+Microsoft Teams UI キットでは、必要に応じて取得および変更できる要素を含む、包括的なタブデザインガイドラインを見つけることができます。 UI キットには、ここでは説明していないアクセシビリティや応答性の高いサイズ変更などの重要なトピックもあります。
 
-適切なタブには、次の特性が表示されます。
+> [!div class="nextstepaction"]
+> [Microsoft Teams UI Kit (Figma) を取得する](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="focused-functionality"></a>フォーカスのある機能
+## <a name="add-a-tab"></a>タブの追加
 
-タブは、特定のニーズに対応するように構築されている場合に最適に機能します。 タブがあるチャネルに関連する、少数のタスクまたはデータのサブセットにフォーカスします。
+Teams ストア (AppSource) または次のいずれかのコンテキストからタブを追加できます。
 
-### <a name="reduced-chrome"></a>クロムの削減
+* チャット
+* チャネル
+* 会議 (会議の前、中、または後)
 
-タブ内に複数のパネルを作成したり、ナビゲーションの階層を増やしたり、同一のタブ内で垂直方向と水平方向の両方のスクロール操作をユーザーに求めたりしないようにします。つまり、タブ内に他のタブがあるような状態にしないようにします。
+次の例は、チャネルにタブを追加する方法を示しています。
 
-### <a name="integration"></a>統合
+:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="例は、チャネルで追加されているタブを示しています。" border="false":::
 
-会話に [アダプティブカード](../../task-modules-and-cards/what-are-cards.md#adaptive-cards) を投稿することで、ユーザーにタブアクティビティについて通知する方法を検索します。
+## <a name="set-up-a-tab"></a>タブを設定する
 
-### <a name="conversational"></a>会話性
+アプリをチャネル、チャット、または会議のタブとして追加するための短いセットアッププロセスがあります。これらの機能は、ユーザーにとって非常に大きくなります。 たとえば、アプリの使用方法とオプションの設定を行う方法について説明します。 ユーザーを認証する必要がある場合は、ここにサインイン手順を含めます。
 
-タブを中心に会話を円滑にする方法を見つけます。これにより、会話センターがコンテンツ、データ、またはプロセスに対して実行されることが保証されます。
+### <a name="tab-configuration-modal"></a>タブの構成のモーダル
 
-### <a name="streamlined-access"></a>アクセスの効率化
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="例は、タブの構成のモーダルを示しています。" border="false":::
 
-適切なときに、適切なユーザーにアクセスを許可していることを確認してください。 サインインプロセスを簡単にすることで、投稿とコラボレーションへの障壁をなくすことができます。
+### <a name="anatomy-tab-configuration-modal"></a>構造: タブの構成のモーダル
 
-### <a name="responsiveness-to-window-sizing"></a>ウィンドウのサイズ変更への応答
+:::image type="content" source="../../assets/images/tabs/test.png" alt-text="タブ構成モーダルの UI 構造を示す図" border="false":::
 
-Teams は、ウィンドウのサイズが720ピクセルの場合に使用できるので、タブを小さなウィンドウで使用できることを確認することは、非常に高解像度の場合と同様に重要です。
+|カウンター|説明|
+|----------|-----------|
+|1|**アプリロゴ**: アプリのフルカラーアプリのロゴ。|
+|2 |**アプリ名**: アプリの完全な名前。|
+|3 |**iframe**: アプリのコンテンツ (タブ設定または認証など) に対する応答性の高いスペース。|
+|4 |**リンクについて**: 詳細な説明、アプリに必要なアクセス許可など、アプリに関する詳細情報を示すダイアログボックスを開き、プライバシーポリシーおよびサービス条件へのリンクを表示します。
+|5 |**[閉じる] ボタン**: モーダルを閉じます。|
+|6 |[**チームメンバーに通知する] オプション**: 他のユーザーにタブを追加することを知らせる投稿を作成するかどうかを確認するには、[モーダル] を選択します。|
+|7 |[**戻る] ボタン**: ダイアログが開いている場所に基づいて、前の手順に進みます。|
+|8 |[**保存] ボタン**: タブの設定を完了します。|
 
-### <a name="flat-navigation"></a>フラットナビゲーション
+### <a name="tab-authentication-with-single-sign-on"></a>シングルサインオンを使用したタブ認証
 
-開発者は、ポータル全体をタブに追加しないようにしてください。ナビゲーションを比較的フラットに維持すると、より単純な会話モデルが維持されます。 言い換えると、会話は、トリアージされた作業項目、または仕様のような1つの事柄の一覧についてのものです。
+ユーザーが Microsoft 資格情報を使用して最初にサインインする必要がある手順を追加できます。 この認証方法は、シングルサインオン (SSO) と呼ばれます。
 
-スレッド化された会話内に深いナビゲーション階層を使用して、固有のナビゲーションの課題があります。 ユーザーにとって最適な操作を行うには、タブナビゲーションを最小限に抑え、次のように設計する必要があります。
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="例は、タブ認証画面を示しています。" border="false":::
 
-> [!div class="checklist"]
->
-> * **個別の作業項目またはエンティティなどのタスクモジュールを開き** ます。 これにより、チャットが完全には不可能になります。これは、サブエンティティや編集機能ではなく、特にタブについてのチャットを維持するための最適なオプションです。
->* **Iframe で擬似ダイアログを開き** ます。 スクリーン背景を使用する場合は、暗色ではなく明るい色を使用することをお勧めします。 `app-gray-10 at 30%`透過性は適切に機能します。
->* **ブラウザーページを開き** ます。
+### <a name="designing-a-tab-setup-with-ui-templates"></a>UI テンプレートを使用してタブ設定を設計する
 
-### <a name="personality"></a>プラン
+次の Teams UI テンプレートのいずれかを使用して、タブのセットアップ環境を設計します。
 
-タブキャンバスは、自分の環境をブランド化する絶好の機会を提供します。 ロゴは、ユーザーとの間で id と接続の重要な部分です。そのため、必ず含めてください。
+* [リスト](../../concepts/design/design-teams-app-ui-templates.md#list): リストでは、関連するアイテムを scannable 形式で表示し、ユーザーがリスト全体または個々のアイテムに対してアクションを実行できるようにします。
+* [フォーム](../../concepts/design/design-teams-app-ui-templates.md#form): フォームは、構造化された方法でユーザー入力を収集、検証、および提出するためのものです。
+* [Empty state](../../concepts/design/design-teams-app-ui-templates.md#empty-state): 空の状態テンプレートは、サインイン、初回実行時のエクスペリエンス、エラーメッセージなど、多くのシナリオで使用できます。
 
-> [!div class="checklist"]
->
->* ロゴを左または右または下の端に配置する
-> * ロゴのサイズを小さくして、邪魔されないようにする
+## <a name="view-a-tab"></a>タブを表示する
 
-独自の色とレイアウトを組み込むことは、個性を伝える上でも役立ちます。
+タブは、チームで全画面表示の web 環境を提供します。これにより、コラボレーションコンテンツ (タスクボードやダッシュボードなど) や重要な情報を表示できます。
 
-> [!TIP]
-> Visual スタイルを使用して、サービスが Teams の一部として感じられるようにしてください。 [Teams の色](../../concepts/design/components/color.md)などの例を *参照してください*。
+:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="例は、タスクボードを含むタブを示しています。" border="false":::
 
----
+### <a name="anatomy-tab"></a>[構造]: タブ
 
-## <a name="tab-layouts"></a>タブレイアウト
+:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="タブの UI の構造を示す図。" border="false":::
 
-[!INCLUDE [Tab layouts](../../includes/design/tab-layouts.html)]
+|カウンター|説明|
+|----------|-----------|
+|1|**[タブ名**]: タブのナビゲーションラベル。|
+|2 |**Tab overflow**: 名前の変更や削除などのタブアクションを開きます。|
+|3 |**タブチャット**: チャットスレッドを右側に開き、ユーザーがコンテンツの横に会話できるようにします。|
+|4 |**iframe**: タブのコンテンツを表示します。
 
----
+### <a name="designing-a-tab-with-ui-templates"></a>UI テンプレートを使用してタブを設計する
 
-## <a name="types-of-tabs"></a>タブの種類
+次の Teams UI テンプレートのいずれかを使用して、タブの動作を設計します。
 
-[!INCLUDE [Tab types](../../includes/design/tab-types.html)]
+* [リスト](../../concepts/design/design-teams-app-ui-templates.md#list): リストでは、関連するアイテムを scannable 形式で表示し、ユーザーがリスト全体または個々のアイテムに対してアクションを実行できるようにします。
+* [タスクボード](../../concepts/design/design-teams-app-ui-templates.md#task-board): タスクボード (かんばんボードまたはスイムレーンと呼ばれることもあります) は、多くの場合、作業項目またはチケットの状態を追跡するために使用されるカードのコレクションです。
+* [ダッシュボード](../../concepts/design/design-teams-app-ui-templates.md#dashboard): ダッシュボードは、データまたはコンテンツの概要を提供する複数のカードを含むキャンバスです。
+* [フォーム](../../concepts/design/design-teams-app-ui-templates.md#form): フォームは、構造化された方法でユーザー入力を収集、検証、および提出するためのものです。
+* [Empty state](../../concepts/design/design-teams-app-ui-templates.md#empty-state): 空の状態テンプレートは、サインイン、初回実行時のエクスペリエンス、エラーメッセージなど、多くのシナリオで使用できます。
+* [左](../../concepts/design/design-teams-app-ui-templates.md#left-nav)ナビゲーション: タブにいくつかのナビゲーションが必要な場合は、左側のナビゲーションテンプレートが役立ちます。 一般的に、タブナビゲーションは最小限にする必要があります。
 
----
+## <a name="use-a-tab-to-collaborate"></a>タブを使用して共同作業する
 
-## <a name="configuration-page-height"></a>構成ページの高さ
+タブを使用すると、コンテンツに関する会話を一元的に容易に行うことができます。
 
->[!IMPORTANT]
->2018年9月に、[タブの [構成] ページ](~/tabs/how-to/create-tab-pages/configuration-page.md) の高さが変更されましたが、幅は変更されませんでした。 アプリが古いサイズを対象として設計されている場合は、タブの構成ページに大きな縦方向の空白があります。 この変更によって除外された従来のストアアプリは、新しいディメンションに対応するために、更新後に Microsoft に連絡する必要があります。
+### <a name="thread-discussion"></a>スレッドディスカッション
 
-[タブの構成] ページのサイズ:
+新しいタブを追加すると、ユーザーはチャネルまたはチャットに自動的に投稿できるようになります。これにより、新しいコンテンツのチームメンバーに通知されるだけでなく、tab へのリンクも表示されるので、ユーザーはタブについての会話を開始できます。
 
+:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="例は、チャネルスレッドで説明されているタブを示しています。" border="false":::
 
-<img width="450px" title="構成タブのサイズ" src="~/assets/images/tabs/config-dialog-Contoso2.png" alt="sizes for config tabs" />
+### <a name="side-by-side-discussion"></a>Side-by-side ディスカッション
 
+タブのコンテンツを表示しているときに、ユーザーは次の会話を行うことができます。
 
-### <a name="guidelines-for-tab-configuration-page-format"></a>タブ構成ページ形式に関するガイドライン
+:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="例は、右側にチャットが開いているタブを示しています。" border="false":::
 
-* 固定高高さのグラフィック要素で、タブの構成ページのコンテンツ領域の最小の高さを基準にします。
-* を使用して、使用可能な垂直方向の間隔 ([構成] ページのコンテンツ領域の高さ) を計算し `window.innerHeight` ます。 これは、構成ページが存在するのサイズを返します。これは、 `<iframe>` 今後のリリースで変更される可能性があります。 この値を使用すると、コンテンツは今後の変更に合わせて自動的に調整されます。
-* 可変長要素に垂直方向のスペースを割り当て、固定された高さの要素に対して必要なものを減算します。
-* *ログイン* 状態では、コンテンツを上下に中央揃えで配置します。
-* 背景画像が必要な場合は、新しい画像、領域に合わせてサイズを変更する (推奨) か、同じ画像を保持して次のいずれかを選択できます。
-  * 左上隅に合わせて配置します。
-  * イメージのサイズを調整します。
+### <a name="permissions-and-role-based-views"></a>アクセス許可と役割ベースのビュー
 
-適切なサイズに設定すると、タブの構成ページは次のようになります。
+ユーザーのアクセス許可によっては、タブの動作が異なる場合があります。 たとえば、1人のユーザーがサインインせずにタブにアクセスできます。 ただし、別のユーザーが署名する必要があり、多少異なる内容が表示されます。
 
-<img width="450px" title="[新しい構成] タブ" src="~/assets/images/tabs/config-dialog-Contoso.png" alt="new config tab"/>
+## <a name="manage-a-tab"></a>タブを管理する
+
+タブの名前変更、削除、または変更を行うオプションを含めることができます。
+
+### <a name="anatomy-tab-menu"></a>分析: タブメニュー
+
+:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="タブメニューの UI の構造を示す図。" border="false":::
+
+|カウンター|説明|
+|----------|-----------|
+|1|**設定**: (オプション) ユーザーが追加されたタブの設定を変更できます。|
+|2 |[**名前の変更**]: ユーザーは、チームにとってわかりやすい名前をタブに付けることができます。|
+|3 |**削除**: チャネル、チャット、または会議からタブを削除します。|
+
+## <a name="tab-notifications-and-deep-linking"></a>タブ通知とディープリンク
+
+詳細なリンクを持つメッセージをタブに送信できます。たとえば、カードはバグデータの概要を示しています。これは、ユーザーが選択してバグ全体をタブに表示することができます。Tab アクティビティに関するメッセージを送信すると、ユーザーに明示的に通知することなく (つまり、ノイズのないアクティビティ)、認識が向上します。 必要に応じて特定のユーザーを @mention することもできます。
+
+Tab アクティビティをユーザーに通知するには、次のいずれかの方法を実行します。
+
+* **Bot**: このメソッドは、特に tab スレッドが対象の場合に適しています。 タブのスレッドスレッドは、最近アクティブになったときと同じように表示に移動します。 また、このメソッドを使用すると、通知の送信方法をいくらか洗練することができます。
+* **メッセージ**: ユーザーのアクティビティフィードにメッセージが表示され、 [タブへの詳細なリンク](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true)が表示されます。
 
 ## <a name="best-practices"></a>ベスト プラクティス
 
-### <a name="always-include-a-default-state"></a>常に既定の状態を含める
+### <a name="collaboration"></a>グループ作業
 
-タブを構成できる場合でも、タブを簡単に設定できるように、既定の状態を含めます。
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="タブナビゲーションデザインの操作を示す図" border="false":::
 
-### <a name="deep-linking"></a>ディープリンク
+#### <a name="do-facilitate-conversation"></a>Do: 会話を促進する
 
-可能な限り、カードやボットは、ホストされたタブで豊富なデータにリンクする必要があります。たとえば、カードにバグデータの要約が表示されている場合でも、それをクリックすると、バグ全体がタブに表示されることがあります。
+ユーザーが説明できるコンテンツとコンポーネントを含めます。 チャット、チャネル、または会議のコンテキスト内に収まらない場合は、タブに含まれません。
 
-### <a name="naming"></a>規約
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="タブナビゲーションデザインではできないことを示す図" border="false":::
 
-多くの場合、アプリの名前を使用すると、便利なタブ名が作成されます。 ただし、タブは、提供される機能に従って名前を付けることも検討してください。
+#### <a name="dont-treat-your-tab-like-any-other-webpage"></a>いいえ: 他の web ページと同じようにタブを扱います
 
-### <a name="multi-window"></a>複数ウィンドウ
+タブは、誰かが一度に表示する可能性がある web ページではありません。 タブには、ユーザーが共同作業を行うために必要とする、最も重要な関連コンテンツが表示されます。
 
-複雑な編集機能があるチャネルタブでは、タブではなく複数のウィンドウでエディタービューを開く必要があります。
-
-### <a name="no-horizontal-scrolling"></a>水平方向のスクロールなし
-
-Tab キーは水平スクロールできません。
-
-### <a name="easy-navigation"></a>簡単なナビゲーション
-
-タブアプリ内のナビゲーションは、簡単に実行できるようにする必要があります。または、必要/該当するページは次のとおりです。
-* 戻るボタン
-* ページヘッダー
-* クラム
-* ハンバーガーメニュー
-
-### <a name="undo-last-action"></a>直前の操作を元に戻す
-
-ユーザーは、アプリの最後の操作を元に戻すことができる必要があります。
-
-### <a name="share-content"></a>コンテンツを共有する
-
-個人用アプリを使用すると、ユーザーが個人のアプリの作業環境から他のチームメンバーとコンテンツを共有できるようになります。 [チャネル] タブでは、メインチームのナビゲーションを補完するナビゲーションを提供する必要があります (左側のレールのナビゲーションバーなど)。
-
-### <a name="single-view"></a>単一ビュー
-
-個人用アプリは、チームまたはグループのチャットを対象としたアプリのインスタンスのコンテンツを1つのビューに表示する必要があります。たとえば、Trello ユーザーは、個人のアプリでチームレベルで参加した Trello ボードのすべてのインスタンスを表示できる必要があります。
-
-### <a name="no-app-bar"></a>アプリバーなし
-
-タブは、メインの Teams ナビゲーションと競合するアイコンがあるアプリバーを左側のレールに表示しません。
+   :::column-end:::
+:::row-end:::
 
 ### <a name="navigation"></a>ナビゲーション
 
-タブには、アプリ内で3レベルを超えるナビゲーションを含めることはできません。
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="タブナビゲーションデザインの操作を示す図" border="false":::
 
-### <a name="l2l3-view"></a>L2/L3 ビュー
+#### <a name="do-limit-tasks-and-data"></a>Do: タスクとデータを制限する
 
-タブ内のセカンダリページと3番目のページは、階層リンクを介して移動するメインタブ領域の L2/L3 ビューで開く必要があります。
+タブは特定のニーズに対応するために最適に機能します。 チームまたはグループに関連するタスクとデータの限定されたセットを含めます。
 
-### <a name="no-link-to-external-browser"></a>外部ブラウザーへのリンクはありません
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-dont.png" alt-text="タブナビゲーションデザインではできないことを示す図" border="false":::
 
-タブ内のリンクターゲットは、外部ブラウザーにリンクするのではなく、Teams 内に含まれる div 要素にリンクする必要があります。 たとえば、タスクモジュール、タブなどに含まれます。
+#### <a name="dont-embed-your-entire-app"></a>いいえ: アプリ全体を埋め込む
 
-## <a name="notifications-for-tabs"></a>タブの通知
+タブを使用して、複数レベルのナビゲーションを備えたアプリ全体を表示し、複雑な対話によって情報の過負荷につながります。
 
-タブのコンテンツの変更については、次の2つのモードの通知があります。
+   :::column-end:::
+:::row-end:::
 
-> [!div class="checklist"]
->
-> * **アプリ API を使用して、ユーザーに変更を通知** します。 このメッセージは、ユーザーのアクティビティフィードに表示され、タブに深くリンクします。「[Microsoft Teams のコンテンツと機能への詳細なリンクの作成](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true ) *」を参照してください*。  
+### <a name="setup"></a>セットアップ
 
-> * **Bot を使用** します。 このメソッドは、特に Tab スレッドが対象の場合に適しています。 その結果、タブのスレッド化されたスレッドは、最近アクティブな状態で表示されるようになります。 また、このメソッドを使用すると、通知の送信方法をいくらか洗練することができます。
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-do.png" alt-text="タブセットアップデザインの操作を示す図" border="false":::
 
-Tab スレッドにメッセージを送信すると、すべてのユーザーに対して明示的に通知することなく、すべてのユーザーに対するアクティビティの認識が向上します。 これは、ノイズなしで認識されます。 さらに、特定の `@mention`  ユーザーがフィードに同じ通知を配置する場合は、それらをタブスレッドに直接リンクします。
+#### <a name="do-keep-it-simple"></a>Do: シンプルを維持する
 
-### <a name="tab-design-best-practices"></a>タブデザインのベストプラクティス
+アプリで認証が必要な場合は、Microsoft シングルサインオン (SSO) を統合して、よりシームレスなサインイン操作を実行してみてください。 また、基本的な情報と、タブを追加する手順についても記載します。
 
-* 個人/静的タブを使用すると、ユーザーが個人のアプリの作業環境から別のチームメンバーとコンテンツを共有できるようになります。
-* 個人/静的タブでは、チームまたはグループのチャットを対象とするアプリのインスタンスのコンテンツが1つのビューに表示されることがあります。
-* タブ内のリンクターゲットは、外部ブラウザーにリンクするのではなく、Teams 内に含まれる div 要素 (例: in、task モジュール、タブなど) にリンクする必要があります。
-* タブは、チームのテーマに応答する必要があります。 Teams テーマが変更されると、アプリ内のテーマもそのテーマを反映するように変更されます。
-* タブでは、可能な場合は Teams スタイルのコンポーネントを使用する必要があります。 これは、Teams フォント、種類傾斜、カラーパレット、グリッドシステム、モーション、音声のトーンなどを採用していることを意味します。
-* タブでは、ページ内のナビゲーション、位置、およびダイアログや情報階層の使用に Teams の対話動作を使用する必要があります。
-* タブでは、アプリ内ナビゲーション用に標準の Teams のハンバーガーメニューまたは階層リンクを使用する必要があります。 タブは、メインの Teams ナビゲーションと競合するアイコンがあるアプリバーを左側のレールに表示しません。
-* タブには、アプリ内で3つ以上のレベルのナビゲーションを表示しないようにする必要があります。
-* タブ内のセカンダリページと3番目のページは、階層リンクを介して移動するメインタブ領域の L2/L3 ビューで開く必要があります。
-* アプリケーション内で複雑な編集機能があるタブでは、タブ (デスクトップおよび web) ではなく、複数ウィンドウでエディタービューを開く必要があります。
-* ユーザーの操作性を向上させるために、最初の実行時にようこそメッセージをユーザーに送信し、 **hi**、 **help**、および **hello** コマンドに応答する個人 bot を追加します。 詳細については、「 [会話の bot](../../bots/what-are-bots.md#in-a-one-to-one-chat) 」のドキュメントを参照してください。
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-dont.png" alt-text="タブセットアップデザインでは実行しないことを示す図" border="false":::
+
+#### <a name="dont-have-too-many-steps"></a>いいえ: 手順が多すぎます
+
+タブを追加するための不要な手順を削除します。
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="theming"></a>テーマ
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="タブのテーマの操作を示す図" border="false":::
+
+#### <a name="do-take-advantage-of-teams-color-tokens"></a>Do: Teams のカラートークンを活用する
+
+各 Teams テーマには独自の配色があります。 テーマの変更を自動的に処理するには、設計で <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">color token (FLUENT UI)</a> を使用します。
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="タブのテーマを使用していないことを示す図" border="false":::
+
+#### <a name="dont-hard-code-color-values"></a>いいえ: ハードコードの色の値
+
+Teams のカラートークンを使用しない場合、設計のスケーラビリティが低下し、管理にかかる時間が長くなります。
+
+   :::column-end:::
+:::row-end:::
+
+## <a name="validate-your-design"></a>設計を検証する
+
+アプリを AppSource に発行することを計画している場合は、一般的にアプリが送信中に失敗する原因となる設計上の問題について理解しておく必要があります。
+
+> [!div class="nextstepaction"]
+> [設計検証ガイドラインの確認](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

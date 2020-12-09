@@ -4,12 +4,12 @@ description: Microsoft Teams ツールキットを使用して、Visual Studio �
 keywords: teams visual studio toolkit
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 5ba3cd8b5714876a96595aec295ff6d0066e115f
-ms.sourcegitcommit: 7e47bf158249050c36d97509eea00e77089a54e6
+ms.openlocfilehash: a1221945659b2dd0f45bdd3a966d9b029ddcde09
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "49476987"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604488"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>Teams Toolkit と Visual Studio を使用してアプリをビルドする
 
@@ -82,7 +82,7 @@ Microsoft Teams Toolkit for Visual Studio は、visual [Studio Marketplace](http
 
 ## <a name="package-your-app"></a>アプリをパッケージ化する
 
-アプリの **詳細** ページを変更するか、**マニフェスト**、またはアプリの **publish** フォルダー内の **env** ファイルを更新すると、 **Development.zip** ファイルが自動的に生成されます。 Development.zip ファイルには、3つの必要なファイル ( **manifest.js** と [2 つのアイコンファイル](../concepts/build-and-test/apps-package.md#icons)) が含まれます。
+アプリの **詳細** ページを変更するか、**マニフェスト**、またはアプリの **publish** フォルダー内の **env** ファイルを更新すると、 **Development.zip** ファイルが自動的に生成されます。 Development.zip ファイルには、3つの必須ファイル ( **manifest.js** と [2 つのアイコン](../concepts/build-and-test/apps-package.md#app-icons)) が含まれています。
 
 ## <a name="install-and-run-your-app-locally"></a>アプリをローカルにインストールして実行する
 

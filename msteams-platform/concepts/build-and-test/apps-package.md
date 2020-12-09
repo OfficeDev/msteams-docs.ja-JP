@@ -1,23 +1,22 @@
 ---
 title: アプリをパッケージ化する
-description: Microsoft Teams で、テスト用、アップロード用、公開用のアプリをパッケージ化する方法について説明します
-keywords: Teams のアプリのパッケージ化
+description: 発行をテスト、アップロード、および保存するために Microsoft Teams アプリをパッケージ化する方法について説明します。
 ms.topic: conceptual
-ms.openlocfilehash: 4c20e2c1b3c8d7ef13d16b354449887b3c0f1147
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: 6929375c8d6a1602f01d83d15bfa0dab7f02a664
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552571"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605289"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>Microsoft Teams アプリのアプリ パッケージを作成する
 
-Teams のアプリは、アプリ マニフェスト JSON ファイルによって定義され、各アイコンがアプリ パッケージにバンドルされます。 Teams にアプリをアップロードしてインストールし、基幹業務アプリ カタログまたは AppSource に公開するには、アプリ パッケージが必要です。
+Teams のアプリは、アプリ マニフェスト JSON ファイルによって定義され、各アイコンがアプリ パッケージにバンドルされます。 アプリをアップロードして Teams にインストールし、基幹業務アプリカタログまたは AppSource に発行するには、アプリパッケージが必要です。
 
 Teams アプリ パッケージは、次のものを含む .zip ファイルです。
 
-* "manifest.json" という名前のマニフェスト ファイル。これは、アプリの属性を指定し、ユーザーが操作するために必要なリソースを指し示します。たとえば、タブ構成ページの場所や、ボット用の Microsoft アプリ ID などです。
-* 透明な "outline" アイコンと、完全な "color" アイコン。 詳細については、このトピックで後述する「[アイコン](#icons)」を参照してください。
+* という名前のマニフェストファイル。アプリの属性を指定して、その機能に `manifest.json` 必要なリソースをポイントします。たとえば、そのタブの構成ページの場所や、その bot の Microsoft アプリ ID を指定します。
+* [アプリの色とアウトラインアイコン](#app-icons)。
 
 ## <a name="creating-a-manifest"></a>マニフェストの作成
 
@@ -30,43 +29,65 @@ Teams アプリ パッケージは、次のものを含む .zip ファイルで�
 >
 > `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
 
-## <a name="icons"></a>アイコン
+## <a name="app-icons"></a>アプリのアイコン
+
+アプリパッケージには、2つの PNG バージョンのアプリアイコン (カラーアイコンとアウトラインアイコン) が含まれている必要があります。 アプリが AppSource レビューに合格するには、これらのアイコンが次のサイズ要件を満たしている必要があります。
 
 > [!Note]
-> アプリにボットまたはメッセージングの拡張機能が含まれている場合、使用されるアイコンは Bot Framework のボット登録にアップロードされたアイコンになります。
+> アプリに bot またはメッセージングの拡張機能がある場合は、それらのアイコンも Microsoft Azure Bot サービスの登録に含まれます。
 
-Microsoft Teams では、アプリを製品内で使用するために、2 つのアイコンが必要です。 アイコンは、パッケージに含められ、マニフェストの相対パスで参照されている必要があります。 各パスの最大長は 2048 バイトで、アイコンの形式は .png です。
+### <a name="color-icon"></a>色アイコン
 
-### <a name="color"></a>color
+アイコンのカラーバージョンは、ほとんどの Teams のシナリオで表示され、192x192 ピクセルである必要があります。 アイコン記号 (96x96 ピクセル) は任意の色または色にすることができますが、単色または完全に透明な四角形の背景上に配置する必要があります。
 
-`color` アイコンは Microsoft Teams のあらゆる箇所で使用されます (アプリやタブのギャラリー、ボット、フライアウトなど)。 このアイコンは、192x192 ピクセルである必要があります。 アイコンにはどんな色 (または複数色) でも指定できますが、背景はブランド化されたアクセント カラーにする必要があります。 また、ボット バージョンのアイコンでの六角形のトリミングに対応するために、アイコンの周囲に少しパディングを設ける必要があります。
+Teams では、複数のシナリオで角の丸い四角形が表示されるように自動的にアイコンがトリミングされます。 シンボルの周囲に48ピクセルのパディングを含めることにより、ディテールを失わずにこれらのトリミングを行うことができるようにします。
 
-### <a name="outline"></a>outline
+:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Teams のカラーアイコン設計ガイダンス。" border="false":::
 
-`outline` アイコンは、ユーザーが "お気に入り" としてマークしたアプリ バーやメッセージングの拡張機能で使用されます。 このアイコンは、32x32 ピクセルである必要があります。 outline アイコンには、白色と透明色のみを含めます (その他の色は使用できません)。 このアイコンは、背景が透明な白色、または背景が白の透明色にできます。 outline アイコンでは、アイコンの周囲に特別なパディングを設けないようにする必要があります。また、32x32 のサイズを維持したまま、できるだけタイトにトリミングする必要があります。 次にいくつかの良い例を示します。
+### <a name="outline-icon"></a>アウトラインアイコン
 
-![outline アイコンの例](~/assets/images/icons/sample20x20s.png)
+アウトラインアイコンは2つのシナリオで表示されます。
 
-[!ヒントを作成して透明アイコンを作成する
+* アプリが使用中で、Teams の左側にあるアプリバーで "ホイストされた"。
+* ユーザーがアプリのメッセージング拡張機能を固定するとき。
 
-* 色は RGB では "白" にする必要があります (赤: 255, Green: 255, Blue: 255)。
-* その他のアイコンの一部は透明にする必要があります。
-* 渡す場合は、アルファチャネルの値が0の小さいアイコンが完全に透明である必要があります。その他の値は fail です。
+アイコンは32x32 ピクセルでなければなりません。 背景を透明にする、または背景を透明にすることができます (他の色は使用できません)。 アウトラインアイコンには、記号の周りに特別なスペースを含めることはできません。
 
-たとえば、会社が Contoso であるとします。 2 つのアイコンを提出します。
+:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Teams のカラーアイコン設計ガイダンス。" border="false":::
 
-![アイコン ショーケース](~/assets/images/framework/framework_submit_icon.png)
+### <a name="best-practices"></a>ベスト プラクティス
 
-アイコンは以下のように UI に表示されます。
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/icons/design-icon-do.png" alt-text="アプリアイコンを設計する方法を示す図。" border="false":::
 
-#### <a name="bot-and-chiclet-in-channel-view"></a>[チャネル] ビューのボットとチクレット
+#### <a name="do-follow-the-precise-outline-icon-guidelines"></a>Do: 正確なアウトラインアイコンのガイドラインに従う
 
-![ボットとチクレット UX](~/assets/images/icons/botandchiclet.png)
+アイコンで使用される白の RGB 値は、赤である必要があります: 255、Green: 255、Blue: 255。 アウトラインアイコンの他の部分はすべて完全に透明にする必要があり、アルファチャネルを0に設定します。
 
-#### <a name="flyout"></a>ポップアップ
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/icons/design-icon-dont.png" alt-text="アプリアイコンをデザインする方法を示す図。" border="false":::
 
-![サンプル Contoso フライアウト](~/assets/images/icons/flyout.png)
+#### <a name="dont-crop-in-a-circular-or-rounded-square-shape"></a>[いいえ: 円形または角丸正方形] 図形でトリミングします。
 
-#### <a name="app-bar-and-home-screen"></a>アプリ バーとホーム画面
+アプリパッケージで送信されるカラーアイコンは、正方形である必要があります。 アイコンの角を丸くしないようにしてください。 Teams では、角の半径が自動的に調整されます。
 
-![サンプル Contoso app bar homescreen](~/assets/images/icons/appbarhomescreen.png)
+   :::column-end:::
+:::row-end:::
+
+### <a name="examples"></a>例
+
+アプリアイコンをさまざまなチームの機能やコンテキストで表示する方法は次のとおりです。
+
+#### <a name="personal-app"></a>個人用アプリ
+
+:::image type="content" source="../../assets/images/icons/personal-app-icon-example.png" alt-text="アプリアイコンが個人用アプリでどのように表示されるかを示す例。" border="false":::
+
+#### <a name="bot-channel"></a>Bot (チャネル)
+
+:::image type="content" source="../../assets/images/icons/bot-icon-example.png" alt-text="アプリアイコンがチャネル内のボットをどのように表示されるかを示す例。" border="false":::
+
+#### <a name="messaging-extension"></a>メッセージング拡張機能
+
+:::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<代替テキスト>" border="false":::
