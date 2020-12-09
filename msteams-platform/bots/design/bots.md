@@ -1,183 +1,323 @@
 ---
-title: ボットの設計ガイドライン
-description: Bot を作成するためのガイドラインについて説明します。
-keywords: teams デザインガイドラインリファレンスフレームワークの bot トーク
-ms.openlocfilehash: 0691c483d12e537772b74abc015d71e1704f88c8
-ms.sourcegitcommit: fdb53284a20285f7e8a7daf25e85cb5d06c52b95
+title: Bot の設計
+description: Teams bot を設計し、Microsoft Teams UI キットを取得する方法について説明します。
+author: heath-hamilton
+ms.topic: conceptual
+ms.author: lajanuar
+ms.openlocfilehash: d1a7470f4986de22ecca7071823b620cb0234abb
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48992639"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49605494"
 ---
-# <a name="start-talking-with-bots"></a><span data-ttu-id="9c593-104">Bot との会話を開始する</span><span class="sxs-lookup"><span data-stu-id="9c593-104">Start talking with bots</span></span>
+# <a name="designing-your-microsoft-teams-bot"></a><span data-ttu-id="96b27-103">Microsoft Teams bot の設計</span><span class="sxs-lookup"><span data-stu-id="96b27-103">Designing your Microsoft Teams bot</span></span>
 
-<span data-ttu-id="9c593-105">Bot は、特定のタスクセットを実行する会話アプリです。</span><span class="sxs-lookup"><span data-stu-id="9c593-105">Bots are conversational apps that perform a narrow or specific set of tasks.</span></span> <span data-ttu-id="9c593-106">これにより、ユーザーとのコミュニケーションが可能になり、質問に回答して、変更について事前に通知する機会が得られます。</span><span class="sxs-lookup"><span data-stu-id="9c593-106">They give you an opportunity to communicate with users, respond to their questions, and proactively notify them about changes.</span></span> <span data-ttu-id="9c593-107">これらは、お客に到達するための最適な方法です。</span><span class="sxs-lookup"><span data-stu-id="9c593-107">They’re a great way to reach out.</span></span>
+<span data-ttu-id="96b27-104">Bot は、特定のタスクセットを実行する会話アプリです。</span><span class="sxs-lookup"><span data-stu-id="96b27-104">Bots are conversational apps that perform a specific set of tasks.</span></span> <span data-ttu-id="96b27-105">Bot は、 <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot フレームワーク</a>に基づいてユーザーと通信し、質問に応答して、変更やその他のイベントについて事前に通知します。</span><span class="sxs-lookup"><span data-stu-id="96b27-105">Based on the <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot Framework</a>, bots communicate with users, respond to their questions, and proactively notify them about changes and other events.</span></span> <span data-ttu-id="96b27-106">これらは、お客に到達するための最適な方法です。</span><span class="sxs-lookup"><span data-stu-id="96b27-106">They're a great way to reach out.</span></span>
 
----
+<span data-ttu-id="96b27-107">アプリの設計をガイドするには、次の情報を参照してください。 Teams でボットを追加、使用、管理する方法について説明しています。</span><span class="sxs-lookup"><span data-stu-id="96b27-107">To guide your app design, the following information describes and illustrates how people can add, use, and manage bots in Teams.</span></span>
 
-## <a name="guidelines"></a><span data-ttu-id="9c593-108">ガイドライン</span><span class="sxs-lookup"><span data-stu-id="9c593-108">Guidelines</span></span>
+## <a name="microsoft-teams-ui-kit"></a><span data-ttu-id="96b27-108">Microsoft Teams UI Kit</span><span class="sxs-lookup"><span data-stu-id="96b27-108">Microsoft Teams UI Kit</span></span>
 
-### <a name="bot-design-guidelines"></a><span data-ttu-id="9c593-109">Bot 設計ガイドライン</span><span class="sxs-lookup"><span data-stu-id="9c593-109">Bot design guidelines</span></span>
+<span data-ttu-id="96b27-109">Microsoft Teams UI キットでは、必要に応じて取得および変更できる要素を含む、より包括的な bot 設計ガイドラインを見つけることができます。</span><span class="sxs-lookup"><span data-stu-id="96b27-109">You can find more comprehensive bot design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit.</span></span>
 
-* <span data-ttu-id="9c593-110">アクティビティがある場合は、ボットが関連する通知を提供する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9c593-110">Bots should provide relevant notifications when there has been activity.</span></span>
-* <span data-ttu-id="9c593-111">Bot は、データを表示しない対象ユーザーに対して、チーム、グループチャット、または1:1 会話に機密データをプッシュすることはできません。</span><span class="sxs-lookup"><span data-stu-id="9c593-111">Bots must not push sensitive data to a team, group chat, or 1:1 conversation to an audience that should not view that data.</span></span>
-* <span data-ttu-id="9c593-112">Bot 通知には、通知の関連性をユーザーに通知するための意味のあるデータが含まれている必要があります。</span><span class="sxs-lookup"><span data-stu-id="9c593-112">Bot notifications should include meaningful data to inform the relevance of the notification to users.</span></span>
-* <span data-ttu-id="9c593-113">この bot の雰囲気は、ガイドラインに定義されているように、Teams の音声を反映している必要があります。</span><span class="sxs-lookup"><span data-stu-id="9c593-113">The bot's tone should reflect the Teams voice, as defined in the guidelines.</span></span>
-* <span data-ttu-id="9c593-114">Bot は、ボットの値とその主な機能を強調する最初の実行時のウェルカムメッセージを提供する必要があります。これは、「ツアーを開始する」、カルーセルを使用した対話式チュートリアル、または「お試しください」のような形式になっている場合があります。</span><span class="sxs-lookup"><span data-stu-id="9c593-114">Bots should provide an first-run-experience welcome message that highlights the value of the bot and what its primary functions are, this might be in the form of "take a tour", an interactive tutorial with carousel cards, or "try it" buttons.</span></span>
-* <span data-ttu-id="9c593-115">Bot テキストにスペルミスまたは文法上の誤りを含めることはできません。</span><span class="sxs-lookup"><span data-stu-id="9c593-115">Bot text must not have any spelling mistakes or grammatical errors.</span></span>
-* <span data-ttu-id="9c593-116">Bot は、実行可能な一連の bot コマンドを提供する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9c593-116">Bots must provide a set of predefined bot commands that are actionable.</span></span>
-* <span data-ttu-id="9c593-117">ボットメッセージは、わかりやすく、操作が容易である必要があります。</span><span class="sxs-lookup"><span data-stu-id="9c593-117">Bot messages should be easy to understand and actionable.</span></span>
-* <span data-ttu-id="9c593-118">Bot は、メッセージが認識されない場合に、フォールバックヘルプコマンドを提供する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9c593-118">Bots must provide fallback help commands when a message is not understood.</span></span>
-* <span data-ttu-id="9c593-119">Bot によって送信されるフォームは、シーケンシャル更新を必要としない確定的な入力を提供する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9c593-119">Forms, embedded in cards, sent by a bot should provide deterministic inputs that do not require sequential updating.</span></span>
-* <span data-ttu-id="9c593-120">Bot 通知は、対象ユーザーの関連コンテンツを含むチーム、グループチャット、または1:1 会話にスコープされる必要があります。</span><span class="sxs-lookup"><span data-stu-id="9c593-120">Bot notifications should be scoped to a team, group chat, or 1:1 conversation with relevant content for the audience.</span></span>
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="96b27-110">Microsoft Teams UI Kit (Figma) を取得する</span><span class="sxs-lookup"><span data-stu-id="96b27-110">Get the Microsoft Teams UI Kit (Figma)</span></span>](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="avatars"></a><span data-ttu-id="9c593-121">アバター</span><span class="sxs-lookup"><span data-stu-id="9c593-121">Avatars</span></span>
+## <a name="add-a-bot"></a><span data-ttu-id="96b27-111">Bot を追加する</span><span class="sxs-lookup"><span data-stu-id="96b27-111">Add a bot</span></span>
 
-<span data-ttu-id="9c593-122">Teams のボットアバターは、六角形のようになっているため、ユーザーはユーザーではなく bot に話しかけていることがすぐにわかります。</span><span class="sxs-lookup"><span data-stu-id="9c593-122">Bot avatars in Teams are shaped like hexagons so people can quickly tell that they’re talking to a bot instead of a person.</span></span> <span data-ttu-id="9c593-123">アバターを正方形として送信し、自分でトリミングします。</span><span class="sxs-lookup"><span data-stu-id="9c593-123">You’ll submit your avatar as a square and we’ll crop it for you.</span></span> <span data-ttu-id="9c593-124">アバターに関しては、2フィート離れて高いコントラストを使用することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="9c593-124">When it comes to avatars, we recommend making yours legible from 2 feet away and using a higher contrast.</span></span>
+<span data-ttu-id="96b27-112">Bot は、チャット、チャネル、および個人用アプリで利用できます。</span><span class="sxs-lookup"><span data-stu-id="96b27-112">Bots are available in chats, channels, and personal apps.</span></span> <span data-ttu-id="96b27-113">Bot を追加するには、次のいずれかの方法を使用します。</span><span class="sxs-lookup"><span data-stu-id="96b27-113">You can add a bot one of the following ways:</span></span>
 
-[!include[Avatar image](~/includes/design/bot-avatar-image.html)]
+* <span data-ttu-id="96b27-114">Teams ストア (AppSource) から。</span><span class="sxs-lookup"><span data-stu-id="96b27-114">From the Teams store (AppSource).</span></span>
+* <span data-ttu-id="96b27-115">Teams の左側にある [ **その他** ] アイコンを選択して、アプリのポップアップを使用します。</span><span class="sxs-lookup"><span data-stu-id="96b27-115">Using the app flyout by selecting the **More** icon on the left side of Teams.</span></span>
+* <span data-ttu-id="96b27-116">新しいチャットまたは新規作成ボックスに @mention します (次の例は、グループチャットでこの操作を実行する方法を示しています)。</span><span class="sxs-lookup"><span data-stu-id="96b27-116">With an @mention in the new chat or compose box (the following example shows how you can do this in a group chat).</span></span>
 
-### <a name="buttons"></a><span data-ttu-id="9c593-125">ボタン</span><span class="sxs-lookup"><span data-stu-id="9c593-125">Buttons</span></span>
+:::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="例は、@mention を使用してグループチャットに bot を追加する方法を示しています。" border="false":::
 
-<span data-ttu-id="9c593-126">カードごとに最大6つのボタンをサポートしています。</span><span class="sxs-lookup"><span data-stu-id="9c593-126">We support up to six buttons per card.</span></span> <span data-ttu-id="9c593-127">ボタンテキストを記述する場合は簡潔にする必要があります。ほとんどのボタンは、自分のタスクにのみ対処する必要があることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="9c593-127">Be concise when writing button text, and keep in mind that most buttons should only address the task at hand.</span></span>
+## <a name="introduce-a-bot"></a><span data-ttu-id="96b27-118">Bot を導入する</span><span class="sxs-lookup"><span data-stu-id="96b27-118">Introduce a bot</span></span>
 
-### <a name="graphics"></a><span data-ttu-id="9c593-128">グラフィックス</span><span class="sxs-lookup"><span data-stu-id="9c593-128">Graphics</span></span>
+<span data-ttu-id="96b27-119">Bot が自らを導入し、その機能について説明していることが重要です。</span><span class="sxs-lookup"><span data-stu-id="96b27-119">It’s critical that your bot introduces itself and describes what it can do.</span></span> <span data-ttu-id="96b27-120">この最初の exchange は、ユーザーが bot との関係を理解し、制限事項を確認します。</span><span class="sxs-lookup"><span data-stu-id="96b27-120">This initial exchange helps people understand what to do with the bot, find out its limitations and, most importantly, get comfortable interacting with it.</span></span>
 
-<span data-ttu-id="9c593-129">グラフィックスはストーリーを伝えるのに適した方法ですが、すべての bot がグラフィックスを必要とするわけではないため、これらを使用して最大の影響を受けることができます。</span><span class="sxs-lookup"><span data-stu-id="9c593-129">Graphics are a good way to tell a story, but not all bot conversations require graphics, so use them for maximum impact.</span></span>
+### <a name="welcome-message-in-a-one-on-one-chat"></a><span data-ttu-id="96b27-121">ワンワンチャットでのウェルカムメッセージ</span><span class="sxs-lookup"><span data-stu-id="96b27-121">Welcome message in a one-on-one chat</span></span>
 
-### <a name="onboarding-users"></a><span data-ttu-id="9c593-130">オンボードユーザー</span><span class="sxs-lookup"><span data-stu-id="9c593-130">Onboarding users</span></span>
+<span data-ttu-id="96b27-122">個人のコンテキストでは、ウェルカムメッセージに bot の雰囲気が設定されます。</span><span class="sxs-lookup"><span data-stu-id="96b27-122">In personal contexts, welcome messages set your bot's tone.</span></span> <span data-ttu-id="96b27-123">メッセージには、案内応答、bot が実行できること、および操作方法に関するいくつかの提案が含まれています (たとえば、「質問してください...」)。</span><span class="sxs-lookup"><span data-stu-id="96b27-123">The message includes a greeting, what the bot can do, and some suggestions for how to interact (for example, “Try asking me about …”).</span></span> <span data-ttu-id="96b27-124">可能であれば、これらの提案は、サインインせずに、保存された応答を返す必要があります。</span><span class="sxs-lookup"><span data-stu-id="96b27-124">If possible, these suggestions should return stored responses without having to sign in.</span></span>
 
-<span data-ttu-id="9c593-131">Bot が自分を紹介し、ユーザーが実行できることを伝えることが重要です。</span><span class="sxs-lookup"><span data-stu-id="9c593-131">It is critical that bots introduce themselves and convey what they can do for users.</span></span> <span data-ttu-id="9c593-132">この *値* を使用すると、ユーザーは bot との関係を理解しやすくなり、制限がある場合には、ユーザーが実際のユーザーほど直観的ではないコンピューターとの相互作用を許容できるようになります。</span><span class="sxs-lookup"><span data-stu-id="9c593-132">This *value exchange* helps users understand what to do with the bot, where the limitations may lie, and, most importantly, helps users tolerate the interaction with a machine that won’t be as intuitive as a real person .</span></span> <span data-ttu-id="9c593-133">さらに、サービスによって提供される実際の値に対する exchange のユーザーデータへのアクセス許可を付与します。</span><span class="sxs-lookup"><span data-stu-id="9c593-133">Additionally, it grants permission to user data in exchange for the real value the service provides.</span></span>
+:::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="例は、個人アプリでの bot の紹介を示しています。" border="false":::
 
-#### <a name="welcome-messages"></a><span data-ttu-id="9c593-134">ウェルカム メッセージ</span><span class="sxs-lookup"><span data-stu-id="9c593-134">Welcome messages</span></span>
+### <a name="introductions-in-group-chats-and-channels"></a><span data-ttu-id="96b27-126">グループチャットとチャネルでの紹介</span><span class="sxs-lookup"><span data-stu-id="96b27-126">Introductions in group chats and channels</span></span>
 
-<span data-ttu-id="9c593-135">ウェルカムメッセージは、ボットの雰囲気を設定するための最適な方法であり、個人およびチームまたはグループのシナリオで使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9c593-135">Welcome messages are the best way to set your bot's tone and should be used in personal and team or group scenarios.</span></span> <span data-ttu-id="9c593-136">このメッセージは、bot が何をしているか、およびそれと対話するための一般的な方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="9c593-136">The message states what the bot does and some common ways to interact with it.</span></span> <span data-ttu-id="9c593-137">" *お問い合わせ* ください" などの特定の機能の例を使用します。</span><span class="sxs-lookup"><span data-stu-id="9c593-137">Use specific capability examples like,  “ *Try asking ….* ”</span></span> <span data-ttu-id="9c593-138">記号付きリスト。</span><span class="sxs-lookup"><span data-stu-id="9c593-138">in a bulleted list.</span></span> <span data-ttu-id="9c593-139">可能な限り、これらの提案は、保存された応答を返す必要があります。</span><span class="sxs-lookup"><span data-stu-id="9c593-139">Whenever possible, these suggestions should return stored responses.</span></span> <span data-ttu-id="9c593-140">機能の例は、ユーザーにサインインを求めることなく動作することが重要です。</span><span class="sxs-lookup"><span data-stu-id="9c593-140">It's critical that the capability examples work without requiring users to sign in.</span></span>
-<span data-ttu-id="9c593-141">追加のガイダンスについては、 *「* [ウェルカムメッセージの要件](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-personal-bots-must-always-send-a-welcome-message-on-first-launch) 」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9c593-141">Please *see* [welcome message requirements](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-personal-bots-must-always-send-a-welcome-message-on-first-launch) for additional guidance.</span></span>
+<span data-ttu-id="96b27-127">Bot の紹介は、個人のコンテキスト (個人のアプリなど) と比較して、グループのチャットとチャネルにおいて少し異なるものにする必要があります。</span><span class="sxs-lookup"><span data-stu-id="96b27-127">Your bot's introduction should be slightly little different in group chats and channels compared to a personal context (like a personal app).</span></span> <span data-ttu-id="96b27-128">実際には、入室したチャットルームがある場合は、「人」と入力します。既にあるすべてのユーザーを歓迎するのではなく、自分で紹介します。</span><span class="sxs-lookup"><span data-stu-id="96b27-128">In real life, if you entered a room full of people; you’d introduce yourself instead of welcoming everyone who’s already there.</span></span> <span data-ttu-id="96b27-129">Bot 設計に対してそのような考えを行います。</span><span class="sxs-lookup"><span data-stu-id="96b27-129">Carry that thinking into your bot design.</span></span>
 
-#### <a name="tours"></a><span data-ttu-id="9c593-142">ガイド</span><span class="sxs-lookup"><span data-stu-id="9c593-142">Tours</span></span>
+:::image type="content" source="../../assets/images/bots/bot-group-welcome.png" alt-text="例は、共同作業コンテキストでの bot の紹介を示しています。" border="false":::
 
-<span data-ttu-id="9c593-143">ウェルカムメッセージと、" *help* " に相当するユーザー入力への応答を含む *ツアー* 属性を用意します。</span><span class="sxs-lookup"><span data-stu-id="9c593-143">Include a *Take a tour* attribute with welcome messages and responses to user input equivalent to “ *help* ”.</span></span> <span data-ttu-id="9c593-144">これは、ユーザーが bot が実行できることを理解させる最も効果的な方法です。</span><span class="sxs-lookup"><span data-stu-id="9c593-144">This is the most effective way to let users learn what a bot can do.</span></span> <span data-ttu-id="9c593-145">1対1のエクスペリエンスでの Carousels は、考えられる応答の例にリンクするように、このストーリーをわかり *やすく* する優れた方法です。</span><span class="sxs-lookup"><span data-stu-id="9c593-145">Carousels in one-to-one experiences are an excellent way to tell this story and including *Try it* buttons linking to  examples of possible responses is encouraged.</span></span> <span data-ttu-id="9c593-146">ツアーでは、アプリの他の機能についても説明します。</span><span class="sxs-lookup"><span data-stu-id="9c593-146">Tours are also great places to talk about an app’s other features.</span></span> <span data-ttu-id="9c593-147">たとえば、メッセージング拡張機能と Teams タブのスクリーンショットを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="9c593-147">For example, you can include screenshots of messaging extensions and Teams tabs.</span></span>  <span data-ttu-id="9c593-148">ユーザーが、ツアーにアクセスして使用するためにサインインする必要はありません。</span><span class="sxs-lookup"><span data-stu-id="9c593-148">Users shouldn't have to sign in to access and use a tour.</span></span>
+### <a name="bot-authentication-with-single-sign-on"></a><span data-ttu-id="96b27-131">シングルサインオンを使用した Bot 認証</span><span class="sxs-lookup"><span data-stu-id="96b27-131">Bot authentication with single sign-on</span></span>
 
-<span data-ttu-id="9c593-149">チームまたはグループのシナリオでツアーを使用する場合は、ユーザー間の進行中の会話にカードのノイズを追加しないように、タスクモジュールで開く必要があります。</span><span class="sxs-lookup"><span data-stu-id="9c593-149">When tours are used in team or group scenarios, they should open in a task module so as not to add more card noise to the ongoing conversations between users.</span></span>
+<span data-ttu-id="96b27-132">ユーザーが bot にメッセージを送信すると、サインインが必要になる場合があります。そのすべての機能を使用します。</span><span class="sxs-lookup"><span data-stu-id="96b27-132">When a person messages a bot, sign in may be required use all its features.</span></span> <span data-ttu-id="96b27-133">シングルサインオン (SSO) を使用して認証プロセスを簡略化できます。</span><span class="sxs-lookup"><span data-stu-id="96b27-133">You can simplify the authentication process using single sign-on (SSO).</span></span>
 
-### <a name="responding-to-users-and-failing-gracefully"></a><span data-ttu-id="9c593-150">ユーザーに応答して、正常にエラーを発生させる</span><span class="sxs-lookup"><span data-stu-id="9c593-150">Responding to users and failing gracefully</span></span>
+<span data-ttu-id="96b27-134">忘れることはありません。 bot のコマンドメニュー (**何ができますか**) で、サインアウトするコマンドも提供する必要があります。</span><span class="sxs-lookup"><span data-stu-id="96b27-134">Don’t forget: In the bot command menu (**What can I do?**), you must also provide a command to sign out.</span></span>
 
-<span data-ttu-id="9c593-151">また、bot は、よくあるスペルミスと口語を考慮しながら、" *Hi* "、" *Help* "、" *どうもありがとう* " などに応答できるようにする必要があります。</span><span class="sxs-lookup"><span data-stu-id="9c593-151">Your bot should also be able to respond to things like " *Hi* ", " *Help* ", and " *Thanks* " while taking common misspellings and colloquialisms into account.</span></span> <span data-ttu-id="9c593-152">以下に例を示します。</span><span class="sxs-lookup"><span data-stu-id="9c593-152">For example:</span></span>
+:::image type="content" source="../../assets/images/bots/bot-sso-example.png" alt-text="例は、[サインイン] ボタンがある bot を示しています。" border="false":::
 
-#### <a name="x2713-hello"></a><span data-ttu-id="9c593-153">&#x2713; Hello</span><span class="sxs-lookup"><span data-stu-id="9c593-153">&#x2713; Hello</span></span>
+### <a name="tours"></a><span data-ttu-id="96b27-136">ガイド</span><span class="sxs-lookup"><span data-stu-id="96b27-136">Tours</span></span>
 
-<span data-ttu-id="9c593-154">`"Hi"`  `"How are you"`  `"Howdy"`</span><span class="sxs-lookup"><span data-stu-id="9c593-154">`"Hi"`  `"How are you"`  `"Howdy"`</span></span>
+<span data-ttu-id="96b27-137">ウェルカムメッセージにツアーを含めることができます。また、bot が "help" コマンドのように応答します。</span><span class="sxs-lookup"><span data-stu-id="96b27-137">You can include a tour with welcome messages and if the bot responds to something like a “help” command.</span></span> <span data-ttu-id="96b27-138">ツアーは、bot が実行できることを理解するための最も効果的な方法です。</span><span class="sxs-lookup"><span data-stu-id="96b27-138">A tour is the most effective way to describe what your bot can do.</span></span> <span data-ttu-id="96b27-139">また、必要に応じて、アプリのその他の機能 (たとえば、メッセージング内線番号のスクリーンショットを含む) を記述するのにも適しています。</span><span class="sxs-lookup"><span data-stu-id="96b27-139">If applicable, they’re also great for describing your app’s other features (for example, include screenshots of your messaging extension).</span></span>
 
-#### <a name="x2713-help"></a><span data-ttu-id="9c593-155">&#x2713; のヘルプ</span><span class="sxs-lookup"><span data-stu-id="9c593-155">&#x2713; Help</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="96b27-140">ツアーは、サインインしなくてもアクセス可能である必要があります。</span><span class="sxs-lookup"><span data-stu-id="96b27-140">Tours should be accessible without having to sign in.</span></span>
 
-<span data-ttu-id="9c593-156">`"What do you do?"`  `"How does this work?"`  `"What the heck?"`</span><span class="sxs-lookup"><span data-stu-id="9c593-156">`"What do you do?"`  `"How does this work?"`  `"What the heck?"`</span></span>
+#### <a name="one-on-one-chats"></a><span data-ttu-id="96b27-141">1対1のチャット</span><span class="sxs-lookup"><span data-stu-id="96b27-141">One-on-one chats</span></span>
 
-#### <a name="x2713-thanks"></a><span data-ttu-id="9c593-157">&#x2713; よろしくお願いいたします。</span><span class="sxs-lookup"><span data-stu-id="9c593-157">&#x2713; Thanks</span></span>
+<span data-ttu-id="96b27-142">個人アプリでは、カルーセルを使用して、ボットとアプリのその他の機能の効果的な概要を得ることができます。</span><span class="sxs-lookup"><span data-stu-id="96b27-142">In a personal app, a carousel can provide an effective overview of your bot and any other features of your app.</span></span> <span data-ttu-id="96b27-143">ボタンを含む [ユーザーに **タスクを実行する**] コマンドを使用することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="96b27-143">Including buttons the let users try bot commands is encouraged (for example, **Create a task**).</span></span>
 
-<span data-ttu-id="9c593-158">`"Thank you"`  `"Thankyou"`  `"Thx"`</span><span class="sxs-lookup"><span data-stu-id="9c593-158">`"Thank you"`  `"Thankyou"`  `"Thx"`</span></span>
+:::image type="content" source="../../assets/images/bots/bot-tour-personal.png" alt-text="例は、1対1のチャットでの bot ツアーを示しています。" border="false":::
 
-<span data-ttu-id="9c593-159">Bot は、次の種類のクエリと入力を処理できる必要があります。</span><span class="sxs-lookup"><span data-stu-id="9c593-159">Your bot should be able to handle the following types of queries and inputs:</span></span>
+#### <a name="channels-and-group-chats"></a><span data-ttu-id="96b27-145">チャネルとグループのチャット</span><span class="sxs-lookup"><span data-stu-id="96b27-145">Channels and group chats</span></span>
 
-> [!div class="checklist"]
->
-> * <span data-ttu-id="9c593-160">**認識** された質問。</span><span class="sxs-lookup"><span data-stu-id="9c593-160">**Recognized questions**.</span></span> <span data-ttu-id="9c593-161">ユーザーから期待される "ベストケースのシナリオ" についての質問を以下に示します。</span><span class="sxs-lookup"><span data-stu-id="9c593-161">These are the “best case scenario” questions you would expect from users.</span></span>
-> * <span data-ttu-id="9c593-162">**認識されない不明な質問** 。</span><span class="sxs-lookup"><span data-stu-id="9c593-162">**Recognized non-questions**.</span></span> <span data-ttu-id="9c593-163">サポートされていない機能、またはランダム、無関係、または profane エントリに関するクエリ。</span><span class="sxs-lookup"><span data-stu-id="9c593-163">Queries about unsupported functionality and/or random, unrelated , or profane entries.</span></span>
-> * <span data-ttu-id="9c593-164">**認識できない質問** : 判読不能、無意味、または無意味な入力またはエントリ。</span><span class="sxs-lookup"><span data-stu-id="9c593-164">**Unrecognized questions** : Input or entries that are unintelligible, meaningless, or nonsense.</span></span>
+<span data-ttu-id="96b27-146">チャネルおよびグループチャットでは、進行中の会話を中断しないように、ツアーはモーダル ( [タスクモジュール](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) とも呼ばれます) で開きます。</span><span class="sxs-lookup"><span data-stu-id="96b27-146">In channels and group chats, a tour should open in a modal (also known as a [task module](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) so it doesn’t interrupt ongoing conversations.</span></span> <span data-ttu-id="96b27-147">これにより、ツアーの役割ベースのビューを実装するオプションも提供されます。</span><span class="sxs-lookup"><span data-stu-id="96b27-147">This also gives you the option to implement role-based views for your tour.</span></span>
 
-<span data-ttu-id="9c593-165">Bot のパーソナリティと応答の種類の例:</span><span class="sxs-lookup"><span data-stu-id="9c593-165">Examples of bot personality and response types:</span></span>
+:::image type="content" source="../../assets/images/bots/bot-tour-channel.png" alt-text="例は、チャネル内の bot ツアーを示しています。" border="false":::
 
-[!include[Bot responses](~/includes/design/bot-responses-table.html)]
+## <a name="chat-with-a-bot"></a><span data-ttu-id="96b27-149">Bot とのチャット</span><span class="sxs-lookup"><span data-stu-id="96b27-149">Chat with a bot</span></span>
 
-> [!TIP]
-> <span data-ttu-id="9c593-166">Bot スクリプトを記述するときは、「応答が画面にキャプチャおよび共有されている場合は会社の embarrassed になりますか?」という質問をします。</span><span class="sxs-lookup"><span data-stu-id="9c593-166">When writing your bot script, ask yourself: “Will my company be embarrassed if a response is screen captured and shared?”</span></span>
+<span data-ttu-id="96b27-150">Bot は、チームのメッセージングフレームワークに直接統合されます。</span><span class="sxs-lookup"><span data-stu-id="96b27-150">Bots integrate directly into Team’s messaging framework.</span></span> <span data-ttu-id="96b27-151">ユーザーは bot とチャットすることで、疑問を解決したり、コマンドを入力して、小または特定の一連のタスクを実行したりすることができます。</span><span class="sxs-lookup"><span data-stu-id="96b27-151">Users can chat with a bot to get their questions answered or type commands to have the bot perform a narrow or specific set of tasks.</span></span> <span data-ttu-id="96b27-152">Bot は、チャット経由でアプリの変更や更新に関するユーザーに積極的な通知を行うことができます。</span><span class="sxs-lookup"><span data-stu-id="96b27-152">Bots can proactively notify users about changes or updates to your app via chat.</span></span>
 
-### <a name="understanding-what-users-are-trying-to-say"></a><span data-ttu-id="9c593-167">ユーザーが発言しようとしていることを理解する</span><span class="sxs-lookup"><span data-stu-id="9c593-167">Understanding what users are trying to say</span></span>
+### <a name="chat-with-a-bot-in-different-contexts"></a><span data-ttu-id="96b27-153">異なるコンテキストにある bot とのチャット</span><span class="sxs-lookup"><span data-stu-id="96b27-153">Chat with a bot in different contexts</span></span>
 
-#### <a name="use-a-thesaurus-for-synonyms"></a><span data-ttu-id="9c593-168">類義語辞典を使用する</span><span class="sxs-lookup"><span data-stu-id="9c593-168">Use a thesaurus for synonyms</span></span>
+<span data-ttu-id="96b27-154">Bot は、次のコンテキストで使用できます。</span><span class="sxs-lookup"><span data-stu-id="96b27-154">You can use bots in the following contexts:</span></span>
 
-<span data-ttu-id="9c593-169">バリエーションを使用している場合は、シソーラスを使用して、各クエリのさまざまな解釈を生成するのに役立つように、できるだけ多くの背景からユーザーを取得します。</span><span class="sxs-lookup"><span data-stu-id="9c593-169">When brainstorming variants, use a thesaurus and get people from as many different backgrounds as possible to help you generate different interpretations of each query.</span></span>
+* <span data-ttu-id="96b27-155">**個人アプリ**: 個人アプリでは、ボットには専用のチャットタブがあります。</span><span class="sxs-lookup"><span data-stu-id="96b27-155">**Personal apps**: In a personal app, a bot has a dedicated chat tab.</span></span>
+* <span data-ttu-id="96b27-156">**ワンワンチャット**: ユーザーはボットでプライベート会話を開始できます。</span><span class="sxs-lookup"><span data-stu-id="96b27-156">**One-on-one chat**: A user can initiate a private conversation with a bot.</span></span> <span data-ttu-id="96b27-157">個人アプリで bot を使用した場合と同じです。</span><span class="sxs-lookup"><span data-stu-id="96b27-157">It's the same experience as using a bot in a personal app.</span></span>
+* <span data-ttu-id="96b27-158">**グループチャット**: ユーザーは bot を @mentioning ことで、グループチャットの bot と対話できます。</span><span class="sxs-lookup"><span data-stu-id="96b27-158">**Group chat**: People can interact with a bot in a group chat by @mentioning the bot.</span></span>
+* <span data-ttu-id="96b27-159">**チャネル**: ユーザーはチャネル内の bot と対話できます。</span><span class="sxs-lookup"><span data-stu-id="96b27-159">**Channel**: People can interact with a bot in a channel.</span></span> <span data-ttu-id="96b27-160">[新規作成] ボックスに bot 名を @mentioning します。</span><span class="sxs-lookup"><span data-stu-id="96b27-160">by @mentioning the bot name in the compose box.</span></span> <span data-ttu-id="96b27-161">このコンテキストでは、ボットはチャネルだけでなく、チーム全体で利用可能であることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="96b27-161">Remember, in this context, the bot is available to the entire team, not just the channel.</span></span>
 
-#### <a name="make-use-of-telemetry-and-interviews"></a><span data-ttu-id="9c593-170">テレメトリとインタビューを利用する</span><span class="sxs-lookup"><span data-stu-id="9c593-170">Make use of telemetry and interviews</span></span>
+### <a name="anatomy"></a><span data-ttu-id="96b27-162">構造</span><span class="sxs-lookup"><span data-stu-id="96b27-162">Anatomy</span></span>
 
-<span data-ttu-id="9c593-171">ユーザーが何を言っているか、ボットを照会する際にどのような意図があるかを確認します。</span><span class="sxs-lookup"><span data-stu-id="9c593-171">Find out what users are saying and what was their intent when querying your bot.</span></span> <span data-ttu-id="9c593-172">これは、さまざまな場所や企業の種類でユーザーを取得するときに、継続的なプロセスになります。</span><span class="sxs-lookup"><span data-stu-id="9c593-172">This will be an ongoing process as you get users in different locations and types of companies.</span></span> <span data-ttu-id="9c593-173">言語を使用した言語認識と意図的なマッピングを微調整することができます ([LUIS](/azure/cognitive-services/luis/what-is-luis))。</span><span class="sxs-lookup"><span data-stu-id="9c593-173">You can fine-tune language recognition and intent mapping with Language Understanding Intelligent Service ([LUIS](/azure/cognitive-services/luis/what-is-luis)).</span></span>
+:::image type="content" source="../../assets/images/bots/bot-anatomy.png" alt-text="例は、bot の構造的な構造を示しています。" border="false":::
 
-### <a name="how-often-should-you-use-your-bot-to-reach-out-to-a-user"></a><span data-ttu-id="9c593-174">ボットを使用してユーザーに連絡する頻度を指定します。</span><span class="sxs-lookup"><span data-stu-id="9c593-174">How often should you use your bot to reach out to a user?</span></span>
+|<span data-ttu-id="96b27-164">カウンター</span><span class="sxs-lookup"><span data-stu-id="96b27-164">Counter</span></span>|<span data-ttu-id="96b27-165">説明</span><span class="sxs-lookup"><span data-stu-id="96b27-165">Description</span></span>|
+|----------|-----------|
+|<span data-ttu-id="96b27-166">1</span><span class="sxs-lookup"><span data-stu-id="96b27-166">1</span></span>|<span data-ttu-id="96b27-167">**アプリの名前とアイコン**</span><span class="sxs-lookup"><span data-stu-id="96b27-167">**App name and icon**</span></span>|
+|<span data-ttu-id="96b27-168">2 </span><span class="sxs-lookup"><span data-stu-id="96b27-168">2</span></span>|<span data-ttu-id="96b27-169">**[チャット] タブ**: bot と会話するためのスペースを開きます (個人アプリにのみ適用されます)。</span><span class="sxs-lookup"><span data-stu-id="96b27-169">**Chat tab**: Opens the space to talk with your bot (applicable only to personal apps).</span></span>|
+|<span data-ttu-id="96b27-170">3 </span><span class="sxs-lookup"><span data-stu-id="96b27-170">3</span></span>|<span data-ttu-id="96b27-171">**カスタムタブ**: アプリに関連するその他のコンテンツを開きます。</span><span class="sxs-lookup"><span data-stu-id="96b27-171">**Custom tabs**: Opens other content related to your app.</span></span>|
+|<span data-ttu-id="96b27-172">4 </span><span class="sxs-lookup"><span data-stu-id="96b27-172">4</span></span>|<span data-ttu-id="96b27-173">**[バージョン情報] タブ**: アプリに関する基本情報が表示されます。</span><span class="sxs-lookup"><span data-stu-id="96b27-173">**About tab**: Displays basic information about your app.</span></span>|
+|<span data-ttu-id="96b27-174">5 </span><span class="sxs-lookup"><span data-stu-id="96b27-174">5</span></span>|<span data-ttu-id="96b27-175">**チャットバブル**: ボット会話は Teams メッセージングフレームワークを使用します。</span><span class="sxs-lookup"><span data-stu-id="96b27-175">**Chat bubble**: Bot conversations use the Teams messaging framework.</span></span>|
+|<span data-ttu-id="96b27-176">6 </span><span class="sxs-lookup"><span data-stu-id="96b27-176">6</span></span>|<span data-ttu-id="96b27-177">**アダプティブカード**: bot の応答に適応カードが含まれている場合、カードはチャットのバブルの幅全体を占めます。</span><span class="sxs-lookup"><span data-stu-id="96b27-177">**Adaptive Card**: If your bot’s responses include Adaptive Cards, the card takes up the full width of the chat bubble.</span></span>|
+|<span data-ttu-id="96b27-178">7 </span><span class="sxs-lookup"><span data-stu-id="96b27-178">7</span></span>|<span data-ttu-id="96b27-179">**コマンドメニュー**: bot の標準コマンド (ユーザーが定義) を表示します。</span><span class="sxs-lookup"><span data-stu-id="96b27-179">**Command menu**: Displays your bot's standard commands (defined by you).</span></span>
 
-#### <a name="x2713-when-a-state-has-changed"></a><span data-ttu-id="9c593-175">状態が変更されたときの &#x2713;</span><span class="sxs-lookup"><span data-stu-id="9c593-175">&#x2713; When a state has changed</span></span>
+### <a name="command-menu"></a><span data-ttu-id="96b27-180">コマンドメニュー</span><span class="sxs-lookup"><span data-stu-id="96b27-180">Command menu</span></span>
 
-<span data-ttu-id="9c593-176">たとえば、割り当てが完了としてマークされている場合、バグが変更された場合、新しいソーシャルメディアが利用可能になった場合、またはポーリングが完了した場合などです。</span><span class="sxs-lookup"><span data-stu-id="9c593-176">For example, if an assignment is marked as complete, when a bug changes, when new social media is available, or when a poll has been completed.</span></span>
+<span data-ttu-id="96b27-181">コマンドメニューには、ボットに常に応答する単語または語句の一覧が表示されます。</span><span class="sxs-lookup"><span data-stu-id="96b27-181">The command menu provides a list of words or phrases you want your bot to always respond to.</span></span> <span data-ttu-id="96b27-182">ユーザーが bot に conversing ている場合は、[新規作成] ボックスの上にコマンドメニューが表示されます。</span><span class="sxs-lookup"><span data-stu-id="96b27-182">The command menu displays above the compose box when someone is conversing with a bot.</span></span> <span data-ttu-id="96b27-183">コマンドが選択されている場合は、メッセージに挿入します。</span><span class="sxs-lookup"><span data-stu-id="96b27-183">When a command is selected, it gets inserted into a message.</span></span>
 
-#### <a name="x2713-when-the-timing-is-right"></a><span data-ttu-id="9c593-177">タイミングが正しい場合の &#x2713;</span><span class="sxs-lookup"><span data-stu-id="9c593-177">&#x2713; When the timing is right</span></span>
+<span data-ttu-id="96b27-184">コマンドの一覧は、短くする必要があります。</span><span class="sxs-lookup"><span data-stu-id="96b27-184">The list of commands should be brief.</span></span> <span data-ttu-id="96b27-185">このメニューは、bot の主要な機能を強調表示することのみを目的としています。</span><span class="sxs-lookup"><span data-stu-id="96b27-185">The menu is only meant to highlight your bot’s primary features.</span></span> <span data-ttu-id="96b27-186">コマンドは簡潔にしてください。</span><span class="sxs-lookup"><span data-stu-id="96b27-186">Keep commands concise, too.</span></span> <span data-ttu-id="96b27-187">たとえば **、ヘルプというコマンド** を **作成します。**</span><span class="sxs-lookup"><span data-stu-id="96b27-187">For example, create a command called **Help** instead of **Can you please help me**?</span></span>
+<span data-ttu-id="96b27-188">[コマンド] メニューは、会話の状態に関係なく、常に使用できるようにする必要があります。</span><span class="sxs-lookup"><span data-stu-id="96b27-188">The command menu must always be available regardless of the state of the conversation.</span></span>
 
-<span data-ttu-id="9c593-178">Bot は、特定の頻度でユーザーまたはチャネルに通知を送信して、デイリーダイジェストのように機能することができます。</span><span class="sxs-lookup"><span data-stu-id="9c593-178">Your bot can act like a daily digest, sending a notification to the user or channel at a specific frequency.</span></span>
+:::image type="content" source="../../assets/images/bots/bot-command-menu.png" alt-text="例は bot のコマンドメニューを示しています。" border="false":::
 
-<span data-ttu-id="9c593-179">ユーザーをコントロールのままにします。</span><span class="sxs-lookup"><span data-stu-id="9c593-179">Leave the user in control.</span></span> <span data-ttu-id="9c593-180">頻度と優先度を含む通知設定を提供します。</span><span class="sxs-lookup"><span data-stu-id="9c593-180">Provide notification settings that include frequency and priority.</span></span>
+## <a name="understand-what-people-are-saying"></a><span data-ttu-id="96b27-190">ユーザーが何を言っているかを理解する</span><span class="sxs-lookup"><span data-stu-id="96b27-190">Understand what people are saying</span></span>
 
-[!include[Bot notification](~/includes/design/bot-notification-image.html)]
+<span data-ttu-id="96b27-191">シソーラスを使用して、標準クエリのさまざまな解釈を生成できるように、できるだけ多くの背景からユーザーを取得します。</span><span class="sxs-lookup"><span data-stu-id="96b27-191">Use a thesaurus and get people from as many different backgrounds as possible to help you generate different interpretations of standard queries.</span></span>
 
----
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-understanding-hello.png" alt-text="Bot が ' Hello ' を解釈する方法を示す図" border="false":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-understanding-help.png" alt-text="Bot が ' Help ' を解釈する方法を示す図" border="false":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-understanding-thanks.png" alt-text="Bot が ' 感謝 ' を解釈する方法を示す図" border="false":::
+   :::column-end:::
+:::row-end:::
 
-## <a name="using-tabs"></a><span data-ttu-id="9c593-181">タブの使用</span><span class="sxs-lookup"><span data-stu-id="9c593-181">Using tabs</span></span>
+### <a name="extract-intent-and-data-from-messages"></a><span data-ttu-id="96b27-195">メッセージから意図的およびデータを抽出する</span><span class="sxs-lookup"><span data-stu-id="96b27-195">Extract intent and data from messages</span></span>
 
-<span data-ttu-id="9c593-182">タブを使用すると、ボットの機能が向上します。</span><span class="sxs-lookup"><span data-stu-id="9c593-182">Tabs make your bot much more functional.</span></span> <span data-ttu-id="9c593-183">タブでは、次のものを作成できます。</span><span class="sxs-lookup"><span data-stu-id="9c593-183">With tabs, you can create the following:</span></span>
+<span data-ttu-id="96b27-196">意図を認識するように bot を設計し、メッセージまたはクエリに対する応答で bot からの要望を取得します。</span><span class="sxs-lookup"><span data-stu-id="96b27-196">Design your bot to recognize intent, which captures what someone wants from a bot in response to a message or query.</span></span> <span data-ttu-id="96b27-197">インテントは、メッセージまたはクエリを、アクションによって影響を受ける1つ以上のデータオブジェクトを使用して1つのアクションとして分類します。</span><span class="sxs-lookup"><span data-stu-id="96b27-197">Intent classifies a message or query as a single action with one or more data objects that are affected by the action.</span></span> 
 
-### <a name="x2713-a-place-to-host-standing-queries"></a><span data-ttu-id="9c593-184">サバイバルクエリをホストする場所を &#x2713;</span><span class="sxs-lookup"><span data-stu-id="9c593-184">&#x2713; A place to host standing queries</span></span>
+<span data-ttu-id="96b27-198">次の例は、ボットに送信されたメッセージのユーザーの意図とデータの概要を示しています。</span><span class="sxs-lookup"><span data-stu-id="96b27-198">The following examples outline the user intent and data in messages sent to bots.</span></span>
 
-<span data-ttu-id="9c593-185">Bot と1人のユーザーの個人用会話で、タブにはユーザー固有の情報とリストを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="9c593-185">In personal conversations between a bot and a single person, tabs can contain user-specific information and lists.</span></span> <span data-ttu-id="9c593-186">また、よく寄せられる質問 (Faq) に対してボットへの回答を維持するための適切な場所でもあります。そのため、ユーザーがたずねる必要はありません。</span><span class="sxs-lookup"><span data-stu-id="9c593-186">They’re also a good place to maintain bot responses to frequently-asked questions (FAQs) — so users don’t need to keep asking.</span></span>
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-intent-1.png" alt-text="「シアトルへのフライトを予約する」という文の例では、ユーザーの目的は「予約」で、データは「シアトル」です。" border="false":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-intent-2.png" alt-text="例は、「ストアを開いている場合」という文で示されています。ユーザーの意図は ' when ' で、データが ' open ' です。" border="false":::
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-intent-3.png" alt-text="「1pm での会議の予約」という文の表示例、ユーザーの目的は ' 1pm ' と ' Bob in Distribution ' のようになっています。" border="false":::
+   :::column-end:::
+:::row-end:::
 
-### <a name="x2713-a-place-to-finish-a-conversation"></a><span data-ttu-id="9c593-187">会話を終了するための場所の &#x2713;</span><span class="sxs-lookup"><span data-stu-id="9c593-187">&#x2713; A place to finish a conversation</span></span>
+### <a name="analyze-and-improve"></a><span data-ttu-id="96b27-202">分析と改善</span><span class="sxs-lookup"><span data-stu-id="96b27-202">Analyze and improve</span></span>
 
-<span data-ttu-id="9c593-188">カードからタブにリンクすることができます。</span><span class="sxs-lookup"><span data-stu-id="9c593-188">You can link to a tab from a card.</span></span> <span data-ttu-id="9c593-189">Bot が応答を提供し、さらにいくつかの手順が必要な場合は、タブにリンクしてタスクまたはフローを完了できます。</span><span class="sxs-lookup"><span data-stu-id="9c593-189">If your bot provides an answer that requires a few more steps, it can link to a tab to complete the task or flow.</span></span> <span data-ttu-id="9c593-190">たとえば、"iPhone を書式設定するにはどうすればよいですか" に対応していますが、適切な応答としては、 *最初のいくつ* かの手順を概説するカードがあり、それを *表示* するボタンがあります。</span><span class="sxs-lookup"><span data-stu-id="9c593-190">For instance, in response to, "How do I format my iPhone?", a good response might be a card which outlines the first few steps and has a button for *Show more* that then takes the user to the bot's *Help* tab and deep links to the specific instructions.</span></span>
+<span data-ttu-id="96b27-203">ユーザーが bot とチャットするときに読み上げられる内容について説明します。</span><span class="sxs-lookup"><span data-stu-id="96b27-203">Learn what users say when chatting with your bot.</span></span> <span data-ttu-id="96b27-204">これは、ユーザーベースがさまざまな場所および orgs で増加している間、継続的に反復的なプロセスになります。</span><span class="sxs-lookup"><span data-stu-id="96b27-204">This will be an ongoing, iterative process as your user base grows in different locations and orgs.</span></span> <span data-ttu-id="96b27-205">Bot の言語認識と意図的なマッピングを Microsoft 言語理解 (LUIS) で調整することができます。</span><span class="sxs-lookup"><span data-stu-id="96b27-205">You can tune your bot's language recognition and intent mapping with Microsoft Language Understanding (LUIS).</span></span>
 
-### <a name="x2713-a-place-to-host-a-settings-page"></a><span data-ttu-id="9c593-191">設定ページをホストする場所を &#x2713;</span><span class="sxs-lookup"><span data-stu-id="9c593-191">&#x2713; A place to host a settings page</span></span>
+* <span data-ttu-id="96b27-206">[LUIS につい](https://docs.microsoft.com/azure/cognitive-services/luis/artificial-intelligence)て: LUIS が AI を使用してアプリデータに自然言語の理解 (nlu) を提供する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="96b27-206">[Understanding LUIS](https://docs.microsoft.com/azure/cognitive-services/luis/artificial-intelligence): Find out how LUIS uses AI to provide natural language understanding (NLU) to your app data.</span></span>
+* <span data-ttu-id="96b27-207">[LUIS との統合](https://www.luis.ai/): コンピューター学習モデルを作成する複雑なプロセスを使用せずに、bot に自然言語機能を追加します。</span><span class="sxs-lookup"><span data-stu-id="96b27-207">[Integrating with LUIS](https://www.luis.ai/): Add natural language capabilities to your bot without the complex process of creating machine learning models.</span></span>
 
-<span data-ttu-id="9c593-192">Bot にはユーザーコントロールが必要です。</span><span class="sxs-lookup"><span data-stu-id="9c593-192">Bots should have some user control.</span></span> <span data-ttu-id="9c593-193">多くの bot については、チャットインターフェイスを通じて許可されます。ただし、これらの設定を覚えておくことは困難です。</span><span class="sxs-lookup"><span data-stu-id="9c593-193">For many bots it is allowed through a chat interface; however, it's hard to remember those settings.</span></span> <span data-ttu-id="9c593-194">[設定] タブでは、ユーザー設定を表示し、ユーザーが一度にすべての設定を変更できるようにすることができます。また、より複雑な bot カスタム動作に対して適切な手持在庫ポイントになる場合もあります。</span><span class="sxs-lookup"><span data-stu-id="9c593-194">A settings tab can display users settings, allow users to change them all at once, and may also be a good hand-off point for more complex bot custom behaviors.</span></span>
+## <a name="use-cases"></a><span data-ttu-id="96b27-208">ユース ケース</span><span class="sxs-lookup"><span data-stu-id="96b27-208">Use cases</span></span>
 
-### <a name="x2713-a-place-to-provide-some-help"></a><span data-ttu-id="9c593-195">いくつかのヘルプを提供する場所を &#x2713;</span><span class="sxs-lookup"><span data-stu-id="9c593-195">&#x2713; A place to provide some help</span></span>
+### <a name="simple-queries"></a><span data-ttu-id="96b27-209">単純なクエリ</span><span class="sxs-lookup"><span data-stu-id="96b27-209">Simple queries</span></span>
 
-<span data-ttu-id="9c593-196">Bot との通信方法をユーザーに伝えるタブを追加します。</span><span class="sxs-lookup"><span data-stu-id="9c593-196">Add a tab that educates users about how to communicate with your bot.</span></span> <span data-ttu-id="9c593-197">何らかの状況や Faq を提供することができます。</span><span class="sxs-lookup"><span data-stu-id="9c593-197">You can provide some context for what it does or FAQs.</span></span>
+<span data-ttu-id="96b27-210">Bot は、あいまいさを解決するために、クエリまたは関連する一連の一致項目のグループに正確に一致するものを提供できます。</span><span class="sxs-lookup"><span data-stu-id="96b27-210">Bots can deliver an exact match to a query or a group of related matches to help with disambiguation.</span></span> <span data-ttu-id="96b27-211">一致するものがある場合は、リストカードを使用してコンテンツをグループ化します。</span><span class="sxs-lookup"><span data-stu-id="96b27-211">For related matches, group the content using a list card.</span></span>
 
-![ヘルプの提供](~/assets/images/framework/framework_bots_tbot-help.png)
+:::image type="content" source="../../assets/images/bots/bot-simple-query.png" alt-text="例は、bot との簡単なクエリ操作を示しています。" border="false":::
 
-> [!TIP]
-> <span data-ttu-id="9c593-199">サイトのパーツをタブに埋め込むと、ユーザーはサービスを使用するときに会話のコンテキストを維持できます。</span><span class="sxs-lookup"><span data-stu-id="9c593-199">Embedding parts of your site in a tab will help users maintain the context of a conversation as they use your service.</span></span> <span data-ttu-id="9c593-200">ブラウザーでサービスを起動して、アプリ間で切り替えを行う必要がなくなります。</span><span class="sxs-lookup"><span data-stu-id="9c593-200">It removes the need to launch your service in a browser and switch back and forth between apps.</span></span>
+### <a name="multi-turn-interactions"></a><span data-ttu-id="96b27-213">複数ターンの相互作用</span><span class="sxs-lookup"><span data-stu-id="96b27-213">Multi-turn interactions</span></span>
 
----
+<span data-ttu-id="96b27-214">Bot は完全な要求と質問をサポートできますが、複数ターンの対話を処理できる必要があります。</span><span class="sxs-lookup"><span data-stu-id="96b27-214">While your bot can support complete requests and questions, it should also be able to handle multi-turn interactions.</span></span> <span data-ttu-id="96b27-215">考えられる次の手順により、ユーザーは、包括的な要求を作成することを期待するのではなく、完全なタスクフローを行うことが容易になります。</span><span class="sxs-lookup"><span data-stu-id="96b27-215">Anticipating possible next steps makes it much easier for people to a complete task flow (rather than expecting them to craft a comprehensive request).</span></span>
 
-## <a name="bots-in-channels"></a><span data-ttu-id="9c593-201">チャネル内のボット</span><span class="sxs-lookup"><span data-stu-id="9c593-201">Bots in channels</span></span>
+<span data-ttu-id="96b27-216">次の例では、bot は、次に実行する必要のあるオプションを使用して、各メッセージに応答します。</span><span class="sxs-lookup"><span data-stu-id="96b27-216">In the following example, the bot responds to each message with options for what might want to do next.</span></span>
 
-<span data-ttu-id="9c593-202">チャネル内の bot を呼び出すことができ `@mention` ます。</span><span class="sxs-lookup"><span data-stu-id="9c593-202">Invoking a bot in a channel can be accomplished by `@mention`.</span></span> <span data-ttu-id="9c593-203">Bot ダイアログは、チャネルとグループの間で一意である必要があります。一般的に、個別のアプローチを検討することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="9c593-203">Bot dialog should be unique in channels and groups vs. one-to-one scenarios and it's generally a good idea to consider separate approaches.</span></span> <span data-ttu-id="9c593-204">これは、次のような場合に特に当てはまります。</span><span class="sxs-lookup"><span data-stu-id="9c593-204">This is especially true in the following cases:</span></span>
+:::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="例は、ボットとの相互作用を示しています。" border="false":::
 
-### <a name="sensitive-data-sent-by-a-bot"></a><span data-ttu-id="9c593-205">Bot が送信する機密データ</span><span class="sxs-lookup"><span data-stu-id="9c593-205">Sensitive data sent by a bot</span></span>
+### <a name="reach-out-to-users"></a><span data-ttu-id="96b27-218">ユーザーに連絡する</span><span class="sxs-lookup"><span data-stu-id="96b27-218">Reach out to users</span></span>
 
-<span data-ttu-id="9c593-206">チーム内のユーザーはサービスに対して認識されますが、実際のユーザーの役割はできません。</span><span class="sxs-lookup"><span data-stu-id="9c593-206">While the users in a team can be known to the service, the actual user roles cannot.</span></span> <span data-ttu-id="9c593-207">このことは、たとえば、文書に関する情報が含まれている場合に、親と受講者の連絡先情報をチーム設定で共有できないということです。</span><span class="sxs-lookup"><span data-stu-id="9c593-207">This means that, for example, in an education scenario involving bullying, parent and student contact information wouldn't be shared in a team setting.</span></span> <span data-ttu-id="9c593-208">Bot のメッセージは、詳細を表示するためのボタンと共に "現在、2つの非文書インシデントが発生しました" ということになります。</span><span class="sxs-lookup"><span data-stu-id="9c593-208">Instead the bot's message might be,"Two bullying incidents occurred today" along with a button to show details.</span></span>
+<span data-ttu-id="96b27-219">事前メッセージングでは、bot は、個人、グループチャット、またはチャネルに関連する通知を特定の頻度で送信するダイジェストとして機能することができます。</span><span class="sxs-lookup"><span data-stu-id="96b27-219">With proactive messaging, your bot can act like a digest that sends notifications relevant to an individual, group chat, or channel at a specific frequency.</span></span> <span data-ttu-id="96b27-220">文書内の内容が変更されたとき、または作業項目が閉じられたときに、bot がメッセージを送信することがあります。</span><span class="sxs-lookup"><span data-stu-id="96b27-220">A bot may send a message when something has changed in a document or a work item is closed.</span></span>
 
-<span data-ttu-id="9c593-209">Web ページで詳細を起動するか、タスクモジュールでユーザーの資格情報の入力を求めたり、AAD アカウントとペアになっているユーザーロールのインデックスに対してクエリを実行したりすることができます。</span><span class="sxs-lookup"><span data-stu-id="9c593-209">Launching details in a web page, or a task module can prompt for user credentials or query against an index for user roles paired with AAD accounts.</span></span> <span data-ttu-id="9c593-210">どちらのオプションでも、データはプライベートビュースコープ内にあり、データ漏洩はありません。</span><span class="sxs-lookup"><span data-stu-id="9c593-210">In both of these options the data is in a private view scope and there will be no data leakage.</span></span> <span data-ttu-id="9c593-211">ユーザーと bot の間の1対1のチャットで同じデータが送信される場合、データはそのコンテキストのユーザーにのみ表示されるため、安全に bot が bot メッセージに完全に表示されます。</span><span class="sxs-lookup"><span data-stu-id="9c593-211">If the same data is sent in a one-to-one chat between a user and the bot, the data is only visible to the user in that context and is, therefore safe, to fully display in the bot message.</span></span> <span data-ttu-id="9c593-212">チャネルから1対1のチャットへのユーザーの移動は、強制された移動が非常に中断されるため、回避する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9c593-212">Taking users from a channel to a one-to-one chat should be avoided however as that forced navigation is highly disruptive.</span></span>
+<span data-ttu-id="96b27-221">次の例では、ユーザーは、bot が別のチャネルで伝達したトースト通知を取得します。</span><span class="sxs-lookup"><span data-stu-id="96b27-221">In the following example, a user gets a toast notification that a bot messaged them in another channel.</span></span>
 
-### <a name="sending-cards-as-a-response-to-interactions"></a><span data-ttu-id="9c593-213">相互作用への対応としてカードを送信する</span><span class="sxs-lookup"><span data-stu-id="9c593-213">Sending cards as a response to interactions</span></span>
+:::image type="content" source="../../assets/images/bots/bot-proactive-message-toast.png" alt-text="例は、bot が別のチャネルからユーザーに対して事前にメッセージングを行うことを示しています。" border="false":::
 
-<span data-ttu-id="9c593-214">一対一のチャットで *ツアーを実行* するために、カルーセルのカードを送信する際には、同じパターンを使用すると、多数のユーザーが含まれるアクティブなチャネルで数十台または数百種類の *ツアー carousels* を生成できます。</span><span class="sxs-lookup"><span data-stu-id="9c593-214">While sending a carousel card in response to *Take a tour* in a one-to-one chat is perfectly acceptable, the same pattern could yield tens or hundreds of *tour carousels* in an active channel with lots of users.</span></span> <span data-ttu-id="9c593-215">これを回避するには、セカンダリカードをタスクモジュールでホストする必要があります。</span><span class="sxs-lookup"><span data-stu-id="9c593-215">To avoid this, secondary cards should be hosted in a task module.</span></span> <span data-ttu-id="9c593-216">このパターンを使用すると、ユーザーはチャネルに対してコンテキストで保持され、そのチャネルは長い bot 応答のままになり、必要に応じて *ツアー* が表示されたときに異なるユーザーの役割を考慮することができます。</span><span class="sxs-lookup"><span data-stu-id="9c593-216">This pattern keeps users in context with the channel, keeps the channel clean of excessive bot responses, and can optionally consider different user roles when the *tour* is shown.</span></span>
+<span data-ttu-id="96b27-223">これで、そのチャネルでユーザーは bot から自分のメッセージを読むことができます。</span><span class="sxs-lookup"><span data-stu-id="96b27-223">Now in that channel, the user can read their message from the bot.</span></span>
 
-## <a name="useful-tips"></a><span data-ttu-id="9c593-217">役に立つヒント</span><span class="sxs-lookup"><span data-stu-id="9c593-217">Useful tips</span></span>
+:::image type="content" source="../../assets/images/bots/bot-proactive-message.png" alt-text="例は、bot の事前メッセージを見ているユーザーを示しています。" border="false":::
 
-### <a name="x2713-remember-bots-arent-assistants"></a><span data-ttu-id="9c593-218">&#x2713; を覚えておくことはできません。</span><span class="sxs-lookup"><span data-stu-id="9c593-218">&#x2713; Remember, bots aren’t assistants</span></span>
+### <a name="use-tabs-with-bots"></a><span data-ttu-id="96b27-225">Bot でタブを使用する</span><span class="sxs-lookup"><span data-stu-id="96b27-225">Use tabs with bots</span></span>
 
-<span data-ttu-id="9c593-219">Cortana や bot などのエージェントとは異なり、スペシャリストとして機能します。</span><span class="sxs-lookup"><span data-stu-id="9c593-219">Unlike agents, e.g., Cortana, bots act as specialists.</span></span>
+<span data-ttu-id="96b27-226">タブを使用すると、ボットを使いやすくすることができます。</span><span class="sxs-lookup"><span data-stu-id="96b27-226">A tab can make your bot easier to use.</span></span> <span data-ttu-id="96b27-227">たとえば、ボットで作業項目を作成できる場合は、すべてのアイテムを1つのタブ内の中央の場所に表示することをお勧めします。 [タブのデザイン](../../tabs/design/tabs.md)に関する詳細を参照してください。</span><span class="sxs-lookup"><span data-stu-id="96b27-227">For example, if your bot can create work items, it would be nice to show all those items in a central location inside a tab. See more about [designing tabs](../../tabs/design/tabs.md).</span></span>
 
-### <a name="x2713-discourage-chitchat"></a><span data-ttu-id="9c593-220">&#x2713; 防ぐ chitchat</span><span class="sxs-lookup"><span data-stu-id="9c593-220">&#x2713; Discourage chitchat</span></span>
+:::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="例は、タブを使用して bot コンテンツを整理する方法を示しています。" border="false":::
 
-<span data-ttu-id="9c593-221">Bot が会話用に構築されていない場合は、chitchat をタスク完了にリダイレクトする方法を検索します。</span><span class="sxs-lookup"><span data-stu-id="9c593-221">Unless your bot is built for conversation, find ways to redirect chitchat toward task completion.</span></span>
+## <a name="manage-a-bot"></a><span data-ttu-id="96b27-229">Bot を管理する</span><span class="sxs-lookup"><span data-stu-id="96b27-229">Manage a bot</span></span>
 
-### <a name="x2713-introduce-some-personality"></a><span data-ttu-id="9c593-222">&#x2713; を紹介します。</span><span class="sxs-lookup"><span data-stu-id="9c593-222">&#x2713; Introduce some personality</span></span>
+<span data-ttu-id="96b27-230">ユーザーは bot の設定を変更できる必要があります。</span><span class="sxs-lookup"><span data-stu-id="96b27-230">Users should be able to change a bot's settings.</span></span> <span data-ttu-id="96b27-231">この機能は bot コマンドで提供できますが、通常は、すべての設定を [タスクモジュール](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) に含めることをお勧めします (次の例を参照)。</span><span class="sxs-lookup"><span data-stu-id="96b27-231">You can provide this functionality with bot commands, but it's usually more efficient to include all settings in a [task module](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) (as shown in the following example).</span></span>
 
-<span data-ttu-id="9c593-223">お客様の bot の個性を製品の声と同じにしておきます。</span><span class="sxs-lookup"><span data-stu-id="9c593-223">Keep your bot personality consistent with the voice of your product.</span></span> <span data-ttu-id="9c593-224">お客様の企業の bot と考えてください。</span><span class="sxs-lookup"><span data-stu-id="9c593-224">Think of your bot as speaking for your company.</span></span>
+:::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="例は、bot の設定を構成するためのタスクモジュールを示しています。" border="false":::
 
-### <a name="x2713-maintain-tone"></a><span data-ttu-id="9c593-225">トーンを維持 &#x2713;</span><span class="sxs-lookup"><span data-stu-id="9c593-225">&#x2713; Maintain tone</span></span>
+## <a name="best-practices"></a><span data-ttu-id="96b27-233">ベスト プラクティス</span><span class="sxs-lookup"><span data-stu-id="96b27-233">Best practices</span></span>
 
-<span data-ttu-id="9c593-226">トーンがわかりやすく、明るいかどうかを判断するために、"ファクトのみ"、または super quirky を使用します。</span><span class="sxs-lookup"><span data-stu-id="9c593-226">Determine whether you want your tone to be friendly and light, “just the facts”, or super quirky.</span></span>
+### <a name="content"></a><span data-ttu-id="96b27-234">コンテンツ</span><span class="sxs-lookup"><span data-stu-id="96b27-234">Content</span></span>
 
-### <a name="x2713-encourage-easy-task-flow"></a><span data-ttu-id="9c593-227">簡単なタスクフローを促す &#x2713;</span><span class="sxs-lookup"><span data-stu-id="9c593-227">&#x2713; Encourage easy task flow</span></span>
+:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="この例では、ボットのベストプラクティスを示しています。" border="false":::
 
-<span data-ttu-id="9c593-228">完全な形式の質問を引き続き許可しながら、複数ターンの対話をサポートします。</span><span class="sxs-lookup"><span data-stu-id="9c593-228">Support multi-turn interactions while still allowing for fully formed questions.</span></span> <span data-ttu-id="9c593-229">次の手順を予測することで、ユーザーはタスクフローをより簡単に理解できるようになります。</span><span class="sxs-lookup"><span data-stu-id="9c593-229">Anticipating the next step will help users get through task flows much easier.</span></span>
+#### <a name="do-establish-a-clear-persona"></a><span data-ttu-id="96b27-236">Do: 明快なペルソナを設定する</span><span class="sxs-lookup"><span data-stu-id="96b27-236">Do: Establish a clear persona</span></span>
 
-<span data-ttu-id="9c593-230">ユーザーがタスクを完了するためにいくつかの手順を実行する場合は、各手順を通じて bot に対して実行を許可し、より迅速なパスを提案することによって終了します。</span><span class="sxs-lookup"><span data-stu-id="9c593-230">If a user takes several steps to complete a task, allow your bot to take them through each step, but finish by having it suggest a quicker path.</span></span> <span data-ttu-id="9c593-231">たとえば、ユーザーがいくつかの会話を行って会議を設定した場合 (最初に会議を指定し、次にその人物を特定して、その日を示す時刻を指定した場合)、次の提案で会話を終了します。次回は、「1:00 明日で Bob を使用して会議をスケジュールする」を試してみます。</span><span class="sxs-lookup"><span data-stu-id="9c593-231">For example, if a user has taken several conversational turns to set a meeting (by first specifying a meeting, then identifying with whom, then stating the time, then stating the day), finish the conversation with the following suggestion: Next time, try asking if you can ‘schedule a meeting with Bob at 1:00 tomorrow’.</span></span>
+<span data-ttu-id="96b27-237">Bot の雰囲気をよく理解しているかどうか、「ファクトのみ」、またはスーパー quirky?</span><span class="sxs-lookup"><span data-stu-id="96b27-237">Is your bot's tone friendly and light, “just the facts”, or super quirky?</span></span> <span data-ttu-id="96b27-238">さまざまなシナリオでどのように対応する必要があるか。</span><span class="sxs-lookup"><span data-stu-id="96b27-238">How should it respond in different scenarios?</span></span> <span data-ttu-id="96b27-239">Bot のペルソナを計画および文書化することで、自然で凝集しているように見える応答を簡単に記述できるようになります。</span><span class="sxs-lookup"><span data-stu-id="96b27-239">Planning and documenting your bot's persona makes it easier to write responses that seem natural and cohesive.</span></span>
+
+<span data-ttu-id="96b27-240">詳細については、「 <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Microsoft TEAMS UI Kit (Figma)</a> 」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="96b27-240">See more about writing for bots in the <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Microsoft Teams UI Kit (Figma).</a></span></span>
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="この例では、ボットのベストプラクティスを示しています。" border="false":::
+
+#### <a name="do-clearly-convey-what-your-bot-can-do"></a><span data-ttu-id="96b27-242">Do: bot が実行できることを明確に伝える</span><span class="sxs-lookup"><span data-stu-id="96b27-242">Do: Clearly convey what your bot can do</span></span>
+
+<span data-ttu-id="96b27-243">ウェルカムメッセージとツアーは、ユーザーが bot に対して何ができるかを理解するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="96b27-243">Welcome messages and tours help people understand what they can do with your bot.</span></span>
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="この例では、ボットのベストプラクティスを示しています。" border="false":::
+
+#### <a name="dont-obscure-your-bots-features"></a><span data-ttu-id="96b27-245">しない: bot の機能を不明瞭にする</span><span class="sxs-lookup"><span data-stu-id="96b27-245">Don't: Obscure your bot's features</span></span>
+
+<span data-ttu-id="96b27-246">最初のインプレッションの問題。</span><span class="sxs-lookup"><span data-stu-id="96b27-246">First impressions matter.</span></span> <span data-ttu-id="96b27-247">Nondescript サインインメッセージが表示された場合、ユーザーが混乱したり疑わしいことがあります。</span><span class="sxs-lookup"><span data-stu-id="96b27-247">People will likely be confused or suspicious when presented with a nondescript sign-in message.</span></span>
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="この例では、ボットのベストプラクティスを示しています。" border="false":::
+
+#### <a name="do-recognize-non-questions"></a><span data-ttu-id="96b27-249">Do: 質問以外の項目を認識する</span><span class="sxs-lookup"><span data-stu-id="96b27-249">Do: Recognize non-questions</span></span>
+
+<span data-ttu-id="96b27-250">Bot は、よくあるスペルミスと口語を考慮しながら、"Hi"、"Help"、"ありがとうございます" などのメッセージに応答できるようにする必要があります。</span><span class="sxs-lookup"><span data-stu-id="96b27-250">Your bot should be able to respond to messages like "Hi", "Help", and "Thanks" while also accounting for common misspellings and colloquialisms.</span></span>
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="この例では、ボットのベストプラクティスを示しています。" border="false":::
+
+#### <a name="dont-miss-out-on-opportunities-to-delight"></a><span data-ttu-id="96b27-252">成功へのチャンスを見逃さないようにします。</span><span class="sxs-lookup"><span data-stu-id="96b27-252">Don't: Miss out on opportunities to delight</span></span>
+
+<span data-ttu-id="96b27-253">ユーザーによっては、実際の人物のような会話を自然に流すことが予想されます。</span><span class="sxs-lookup"><span data-stu-id="96b27-253">Some people expect conversations to flow naturally like they would with a real person.</span></span> <span data-ttu-id="96b27-254">単純なメッセージへの clumsy 応答を避けるようにしてください。</span><span class="sxs-lookup"><span data-stu-id="96b27-254">Try to avoid clumsy responses to simple messages.</span></span>
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="troubleshooting"></a><span data-ttu-id="96b27-255">トラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="96b27-255">Troubleshooting</span></span>
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="この例では、ボットのベストプラクティスを示しています。" border="false":::
+
+#### <a name="do-provide-help"></a><span data-ttu-id="96b27-257">Do: ヘルプを提供する</span><span class="sxs-lookup"><span data-stu-id="96b27-257">Do: Provide help</span></span>
+
+<span data-ttu-id="96b27-258">Bot が要求を満たすことができない場合は、ユーザーが bot との対話について自分で教育する方法を提供します。</span><span class="sxs-lookup"><span data-stu-id="96b27-258">If your bot can’t satisfy a request, provide ways for a user to educate themselves about interacting with your bot.</span></span>
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="この例では、ボットのベストプラクティスを示しています。" border="false":::
+
+#### <a name="dont-leave-users-stranded"></a><span data-ttu-id="96b27-260">いいえ: ユーザーを残されたままにします</span><span class="sxs-lookup"><span data-stu-id="96b27-260">Don't: Leave users stranded</span></span>
+
+<span data-ttu-id="96b27-261">問題のトラブルシューティングができない場合、ユーザーは bot をすぐに放棄します。</span><span class="sxs-lookup"><span data-stu-id="96b27-261">People will quickly abandon your bot if they can’t troubleshoot issues.</span></span>
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="complex-interactions"></a><span data-ttu-id="96b27-262">複雑な相互作用</span><span class="sxs-lookup"><span data-stu-id="96b27-262">Complex interactions</span></span>
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="この例では、ボットのベストプラクティスを示しています。" border="false":::
+
+#### <a name="do-use-task-modules-or-tabs"></a><span data-ttu-id="96b27-264">Do: タスクモジュールまたはタブを使用する</span><span class="sxs-lookup"><span data-stu-id="96b27-264">Do: Use task modules or tabs</span></span>
+
+<span data-ttu-id="96b27-265">Bot が応答を提供し、さらにいくつかの手順が必要な場合は、タスクモジュールまたはタブにリンクして、タスクまたはフローを完了できます。</span><span class="sxs-lookup"><span data-stu-id="96b27-265">If your bot provides an answer that requires a few more steps, you can link to a task module or tab to complete the task or flow.</span></span>
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="この例では、ボットのベストプラクティスを示しています。" border="false":::
+
+#### <a name="dont-make-multi-turn-interactions-tedious"></a><span data-ttu-id="96b27-267">いいえ: 複数ターンの対話を面倒にする</span><span class="sxs-lookup"><span data-stu-id="96b27-267">Don't: Make multi-turn interactions tedious</span></span>
+
+<span data-ttu-id="96b27-268">1つのタスクを完了するための広範な会話は、遅く、過度に複雑です。</span><span class="sxs-lookup"><span data-stu-id="96b27-268">An extensive conversation to complete a single task is slow and overly complex.</span></span> <span data-ttu-id="96b27-269">また、開発者は、状態の変更 (会話のタイムアウト、"キャンセル" メッセージの送信など) を考慮する必要があります。</span><span class="sxs-lookup"><span data-stu-id="96b27-269">It also requires the developer to account for state changes (such as the conversation timing out or you sending a “Cancel” message).</span></span>
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="privacy"></a><span data-ttu-id="96b27-270">プライバシー</span><span class="sxs-lookup"><span data-stu-id="96b27-270">Privacy</span></span>
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="この例では、ボットのベストプラクティスを示しています。" border="false":::
+
+#### <a name="do-only-show-sensitive-info-in-a-personal-context"></a><span data-ttu-id="96b27-272">Do: 個人のコンテキストに機密情報のみを表示する</span><span class="sxs-lookup"><span data-stu-id="96b27-272">Do: Only show sensitive info in a personal context</span></span>
+
+<span data-ttu-id="96b27-273">Bot がグループチャットまたはチャネルにある場合は、機密情報を表示するためにユーザーをプライベートな場所 (タスクモジュール、タブ、ブラウザーなど) に送ることをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="96b27-273">If your bot is in a group chat or channel, we recommend directing users to a private location (such as a task module, tab, or browser) to view sensitive information.</span></span>
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="この例では、ボットのベストプラクティスを示しています。" border="false":::
+
+#### <a name="dont-some-content-isnt-meant-to-be-seen-by-everyone"></a><span data-ttu-id="96b27-275">いいえ: 一部のコンテンツは、すべてのユーザーに表示されることを意図したものではありません</span><span class="sxs-lookup"><span data-stu-id="96b27-275">Don't: Some content isn’t meant to be seen by everyone</span></span>
+
+<span data-ttu-id="96b27-276">Bot は、ユーザーのグループに機密情報を公開することはできません。</span><span class="sxs-lookup"><span data-stu-id="96b27-276">Your bot shouldn’t reveal sensitive information to a group of people.</span></span>
+
+   :::column-end:::
+:::row-end:::
+
+## <a name="learn-more"></a><span data-ttu-id="96b27-277">詳細情報</span><span class="sxs-lookup"><span data-stu-id="96b27-277">Learn more</span></span>
+
+<span data-ttu-id="96b27-278">このような他のガイドラインは、ボット設計に役立てることができます。</span><span class="sxs-lookup"><span data-stu-id="96b27-278">These other guidelines may help with your bot design:</span></span>
+
+* [<span data-ttu-id="96b27-279">個人用アプリを設計する</span><span class="sxs-lookup"><span data-stu-id="96b27-279">Designing your personal app</span></span>](../../concepts/design/personal-apps.md)
+* [<span data-ttu-id="96b27-280">アダプティブカードの設計</span><span class="sxs-lookup"><span data-stu-id="96b27-280">Designing Adaptive Cards</span></span>](../../task-modules-and-cards/cards/design-effective-cards.md)
+* [<span data-ttu-id="96b27-281">タスクモジュールを設計する</span><span class="sxs-lookup"><span data-stu-id="96b27-281">Designing task modules</span></span>](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
+
+## <a name="validate-your-design"></a><span data-ttu-id="96b27-282">設計を検証する</span><span class="sxs-lookup"><span data-stu-id="96b27-282">Validate your design</span></span>
+
+<span data-ttu-id="96b27-283">アプリを AppSource に発行することを計画している場合は、一般的にアプリが送信中に失敗する原因となる設計上の問題について理解しておく必要があります。</span><span class="sxs-lookup"><span data-stu-id="96b27-283">If you plan to publish your app to AppSource, you should understand the design issues that commonly cause apps to fail during submission.</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="96b27-284">設計検証ガイドラインの確認</span><span class="sxs-lookup"><span data-stu-id="96b27-284">Check design validation guidelines</span></span>](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

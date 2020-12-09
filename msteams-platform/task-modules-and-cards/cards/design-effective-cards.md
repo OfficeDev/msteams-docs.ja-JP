@@ -1,135 +1,138 @@
 ---
-title: 効果的なカードを設計する
-description: カードを作成するためのデザインガイドラインについて説明します。
-keywords: teams 設計ガイドラインリファレンスフレームワークカードのアダプタブルライトウェイト
-ms.openlocfilehash: 4ec410820e0288d99dacb6944a8096f4f61b9d34
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+title: アプリに適応カードを設計する
+description: Teams 用のアダプティブカードを設計し、Microsoft Teams UI キットを取得する方法について説明します。
+ms.topic: conceptual
+ms.author: lajanuar
+ms.openlocfilehash: bd48846284620415cc8cadabc59f2ab7b61d5189
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48209838"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604555"
 ---
-# <a name="design-effective-cards"></a><span data-ttu-id="4ed02-104">効果的なカードを設計する</span><span class="sxs-lookup"><span data-stu-id="4ed02-104">Design effective cards</span></span>
+# <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a><span data-ttu-id="1c79e-103">Microsoft Teams アプリ用のアダプティブカードの設計</span><span class="sxs-lookup"><span data-stu-id="1c79e-103">Designing Adaptive Cards for your Microsoft Teams app</span></span>
 
-<span data-ttu-id="4ed02-105">カードは、ボット、コネクタ、またはアプリを介して会話に追加できる、コンテンツの操作可能なスニペットです。</span><span class="sxs-lookup"><span data-stu-id="4ed02-105">Cards are actionable snippets of content that you can add to a conversation through a bot, a connector, or app.</span></span> <span data-ttu-id="4ed02-106">カードを使用すると、テキスト、グラフィックス、ボタンを使用して、対象ユーザーと通信することができます。</span><span class="sxs-lookup"><span data-stu-id="4ed02-106">Using text, graphics, and buttons, cards allow you to communicate with an audience.</span></span>
+<span data-ttu-id="1c79e-104">アダプティブカードには、フリーフォームのカード要素と任意のアクションセットが含まれています。</span><span class="sxs-lookup"><span data-stu-id="1c79e-104">An Adaptive Card contains a freeform body of card elements and optional set of actions.</span></span> <span data-ttu-id="1c79e-105">アダプティブカードは、ボットまたはメッセージング拡張機能を使用して会話に追加できる、実行可能なコンテンツのスニペットです。</span><span class="sxs-lookup"><span data-stu-id="1c79e-105">Adaptive Cards are actionable snippets of content that you can add to a conversation through a bot or messaging extension.</span></span> <span data-ttu-id="1c79e-106">これらのカードは、テキスト、グラフィックス、ボタンを使用して、対象ユーザーに豊富なコミュニケーションを提供します。</span><span class="sxs-lookup"><span data-stu-id="1c79e-106">Using text, graphics, and buttons, these cards provide rich communication to your audience.</span></span>
 
-<span data-ttu-id="4ed02-107">カードフレームワークは、完全に機能する UX を設計する負担を排除します。</span><span class="sxs-lookup"><span data-stu-id="4ed02-107">Our card framework eliminates the burden of designing a fully functional UX.</span></span> <span data-ttu-id="4ed02-108">Microsoft は、いくつかの標準カードの種類を開発し、それぞれがサポートされるプラットフォーム内に収まるようにしました。</span><span class="sxs-lookup"><span data-stu-id="4ed02-108">We developed several standard card types and each one fits within our supported platforms.</span></span> <span data-ttu-id="4ed02-109">これは、レイアウトが完全に機能しており、プラットフォーム間で異なるカードの繰り返しを開発する必要がないことを意味します。</span><span class="sxs-lookup"><span data-stu-id="4ed02-109">This means layout is completely taken care of, and you won’t need to develop different card iterations across platforms.</span></span> <span data-ttu-id="4ed02-110">代わりに、コンテンツでのダイヤルに集中できます。</span><span class="sxs-lookup"><span data-stu-id="4ed02-110">Instead, you can focus on dialing in your content.</span></span>
+<span data-ttu-id="1c79e-107">アダプティブカードフレームワークは、Teams を含む多くの Microsoft 製品で使用されています。</span><span class="sxs-lookup"><span data-stu-id="1c79e-107">The Adaptive Card framework is used across many Microsoft products, including Teams.</span></span> <span data-ttu-id="1c79e-108">Bot またはメッセージング拡張機能を使用して、メッセージ内のカードをユーザーに送信することができます。</span><span class="sxs-lookup"><span data-stu-id="1c79e-108">You can send cards inside messages to users via bots or messaging extensions.</span></span> <span data-ttu-id="1c79e-109">ユーザーは、表示されている場合は、カードに対してアクションを実行できます。</span><span class="sxs-lookup"><span data-stu-id="1c79e-109">Users can take actions on cards when present.</span></span>
 
----
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="例は、アダプティブカードを示しています。" border="false":::
 
-## <a name="guidelines"></a><span data-ttu-id="4ed02-111">ガイドライン</span><span class="sxs-lookup"><span data-stu-id="4ed02-111">Guidelines</span></span>
+## <a name="microsoft-teams-ui-kit"></a><span data-ttu-id="1c79e-111">Microsoft Teams UI Kit</span><span class="sxs-lookup"><span data-stu-id="1c79e-111">Microsoft Teams UI Kit</span></span>
 
-<span data-ttu-id="4ed02-112">カードをユーザーの質問または設定に対する応答として考えます。</span><span class="sxs-lookup"><span data-stu-id="4ed02-112">Think of a card as a response to a user question or a setting.</span></span> <span data-ttu-id="4ed02-113">カードは、直接的な質問 ("開いているバグの数" など) または条件 (たとえば、"open バグの一覧を毎日午前9時に送信する" など) に応答できます。</span><span class="sxs-lookup"><span data-stu-id="4ed02-113">A card can respond to a direct question (like, “How many open bugs do I have?”) or to a condition (like, “Send a list of my open bugs at 9 am every day”).</span></span>
+<span data-ttu-id="1c79e-112">Microsoft Teams UI キットでは、必要に応じて取得して変更できる要素を含め、Teams のアダプティブカードについて、より包括的な設計ガイドラインを参照できます。</span><span class="sxs-lookup"><span data-stu-id="1c79e-112">You can find more comprehensive design guidelines for Adaptive Cards in Teams, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit.</span></span> <span data-ttu-id="1c79e-113">UI キットでは、テーマ、アクセシビリティ、応答性の高いサイズ設定など、重要なトピックについても説明しています。</span><span class="sxs-lookup"><span data-stu-id="1c79e-113">The UI kit also covers essential topics such as theming, accessibility, and responsive sizing.</span></span>
 
-> [!TIP]
-> <span data-ttu-id="4ed02-114">標準カードの種類のいずれかを使用すると、サポートされている各プラットフォーム間ですべての応答が適切にレンダリングされることが既にわかっていることになります。</span><span class="sxs-lookup"><span data-stu-id="4ed02-114">Using one of our standard card types means you’ll already know that all your responses will render nicely across each supported platform.</span></span>
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="1c79e-114">Microsoft Teams UI Kit (Figma) を取得する</span><span class="sxs-lookup"><span data-stu-id="1c79e-114">Get the Microsoft Teams UI Kit (Figma)</span></span>](https://www.figma.com/community/file/916836509871353159)
 
-<span data-ttu-id="4ed02-115">カードには、次の要素のいずれかを含めることができます。</span><span class="sxs-lookup"><span data-stu-id="4ed02-115">A card could include any of the following elements:</span></span><br />
+## <a name="adaptive-cards-designer"></a><span data-ttu-id="1c79e-115">アダプティブカードデザイナー</span><span class="sxs-lookup"><span data-stu-id="1c79e-115">Adaptive Cards designer</span></span>
 
-[!include[Card anatomy](~/includes/design/card-image-anatomy.html)]
+<span data-ttu-id="1c79e-116">また、アダプティブカードのデザインをブラウザーで直接開始することもできます。</span><span class="sxs-lookup"><span data-stu-id="1c79e-116">You also can start designing your Adaptive Cards directly in the browser.</span></span>
 
-1. <span data-ttu-id="4ed02-116">**封筒テキスト**: チャットメッセージに最適です。</span><span class="sxs-lookup"><span data-stu-id="4ed02-116">**Envelope text**: Best used for chat messages.</span></span> <span data-ttu-id="4ed02-117">たとえば、次のようになります。「検索されたものが見つかりました!」と言います。</span><span class="sxs-lookup"><span data-stu-id="4ed02-117">For example, if you want a bot to say: “Here’s what I found!”</span></span> <span data-ttu-id="4ed02-118">または「1:00 ニュースダイジェストの時間」というメッセージは、封筒テキストに表示されるのが最適です。</span><span class="sxs-lookup"><span data-stu-id="4ed02-118">or “Time for your 1:00 news digest”, that message is best displayed in envelope text.</span></span>
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="1c79e-117">アダプティブカードデザイナーを試す</span><span class="sxs-lookup"><span data-stu-id="1c79e-117">Try the Adaptive Cards designer</span></span>](https://adaptivecards.io/designer/)
 
-   <span data-ttu-id="4ed02-119">封筒テキストは、サービスに少しの個性を注入するための最適な方法です。これは、比較的短いままにしておくことを忘れないでください。</span><span class="sxs-lookup"><span data-stu-id="4ed02-119">Envelope text is a great way to inject a little personality into your service—just remember to keep it relatively short.</span></span>
+## <a name="types-of-adaptive-cards"></a><span data-ttu-id="1c79e-118">アダプティブカードの種類</span><span class="sxs-lookup"><span data-stu-id="1c79e-118">Types of Adaptive Cards</span></span>
 
-2. <span data-ttu-id="4ed02-120">**タイトル**: タイトルは常に、カード内の最大のテキストになります。</span><span class="sxs-lookup"><span data-stu-id="4ed02-120">**Title**: Your title will always be the largest text in your card.</span></span> <span data-ttu-id="4ed02-121">また、"フック" として機能するので、タイトルは短くて覚えやすいものにして、スキャンしやすいものにしてください。</span><span class="sxs-lookup"><span data-stu-id="4ed02-121">It also serves as your “hook”, so try to keep the title short, memorable, and easy to scan.</span></span>
+### <a name="hero"></a><span data-ttu-id="1c79e-119">ヒーロー</span><span class="sxs-lookup"><span data-stu-id="1c79e-119">Hero</span></span>
 
-3. <span data-ttu-id="4ed02-122">**副題**: 属性、taglines、またはセカンダリディレクティブとして最適に使用されます。</span><span class="sxs-lookup"><span data-stu-id="4ed02-122">**Subtitle**: Best used for attribution, taglines, or as a secondary directive.</span></span> <span data-ttu-id="4ed02-123">このコンポーネントは、タイトルのすぐ下に表示されます。</span><span class="sxs-lookup"><span data-stu-id="4ed02-123">This component appears just below your title.</span></span>
+<span data-ttu-id="1c79e-120">最大のカード</span><span class="sxs-lookup"><span data-stu-id="1c79e-120">Our largest card.</span></span> <span data-ttu-id="1c79e-121">画像が最も多くの話を伝える記事やシナリオを共有するために使用します。</span><span class="sxs-lookup"><span data-stu-id="1c79e-121">Use for sharing articles or scenarios where an image tells most of the story.</span></span>
 
-4. <span data-ttu-id="4ed02-124">**画像**: コンテナーに合わせて画像を拡大または縮小します。</span><span class="sxs-lookup"><span data-stu-id="4ed02-124">**Image**: Images scale to fit their container.</span></span> <span data-ttu-id="4ed02-125">英雄カードの最大幅は420px、サムネイルの最大幅は100px、リストビューではデスクトップモードでは間隔のみが許可されています。</span><span class="sxs-lookup"><span data-stu-id="4ed02-125">Hero cards have a max width of 420px, thumbnails have a max width of 100px, and list views only allow for 32px in desktop mode.</span></span>
+:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="例は、アダプティブカードを示しています。" border="false":::
 
-5. <span data-ttu-id="4ed02-126">**テキスト**: カードの本文にプレーンテキストを使用するのに最適です。</span><span class="sxs-lookup"><span data-stu-id="4ed02-126">**Text**: Best used for plain text in the body of your card.</span></span> <span data-ttu-id="4ed02-127">最大長は、選択したカードの種類によって異なります。</span><span class="sxs-lookup"><span data-stu-id="4ed02-127">Your max length depends on the card type you’ve selected.</span></span>
+### <a name="thumbnail"></a><span data-ttu-id="1c79e-123">Thumbnail</span><span class="sxs-lookup"><span data-stu-id="1c79e-123">Thumbnail</span></span>
 
-6. <span data-ttu-id="4ed02-128">**ボタン**: web ページ、タブ、または追加のチャットコンテンツを開くために最適です。</span><span class="sxs-lookup"><span data-stu-id="4ed02-128">**Buttons**: Best used to open web pages, tabs, or additional chat content.</span></span> <span data-ttu-id="4ed02-129">ボタンのテキストを短くして、その点まで維持するようにしてください。</span><span class="sxs-lookup"><span data-stu-id="4ed02-129">Make sure to keep your button text short and to the point.</span></span>
+<span data-ttu-id="1c79e-124">簡単な操作可能なメッセージを送信するために使用します。</span><span class="sxs-lookup"><span data-stu-id="1c79e-124">Use for sending a simple actionable message.</span></span>
 
-   <span data-ttu-id="4ed02-130">カードごとに最大6つのボタンを含めることができますが、ここでは「less is more」という原則に従うことをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="4ed02-130">You can include up to 6 buttons per card, but we’d recommend following a ‘less is more’ philosophy here.</span></span>
+:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="例は、アダプティブカードを示しています。" border="false":::
 
-7. <span data-ttu-id="4ed02-131">**タップ地域**: これは、カードのクリック可能な領域です。</span><span class="sxs-lookup"><span data-stu-id="4ed02-131">**Tap region**: This is the clickable region of your card.</span></span> <span data-ttu-id="4ed02-132">ほとんどのユーザーは、画像を自動的にクリックする必要があるので、自分がタップまたはクリックした位置がわかるようにテキストを作成してみましょう。</span><span class="sxs-lookup"><span data-stu-id="4ed02-132">Most users will want to click on images automatically, so try and craft your text so they know where they should tap or click.</span></span>
+### <a name="list"></a><span data-ttu-id="1c79e-126">リスト</span><span class="sxs-lookup"><span data-stu-id="1c79e-126">List</span></span>
 
-> [!TIP]
-> <span data-ttu-id="4ed02-133">作成した各カードにすべての要素を含める必要はありません。</span><span class="sxs-lookup"><span data-stu-id="4ed02-133">There’s no need to include every element in each card you create.</span></span> <span data-ttu-id="4ed02-134">コンテンツに要素を説明します。</span><span class="sxs-lookup"><span data-stu-id="4ed02-134">Let your content dictate your elements.</span></span>
+<span data-ttu-id="1c79e-127">ユーザーがリストからアイテムを選択する必要があるが、アイテムには多くの説明は必要ない場合に使用します。</span><span class="sxs-lookup"><span data-stu-id="1c79e-127">Use in scenarios where you want the user to pick an item from a list, but the items don’t need a lot of explanation.</span></span>
 
----
+:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="例は、アダプティブカードを示しています。" border="false":::
 
-## <a name="types-of-cards"></a><span data-ttu-id="4ed02-135">カードの種類</span><span class="sxs-lookup"><span data-stu-id="4ed02-135">Types of cards</span></span>
+### <a name="digest"></a><span data-ttu-id="1c79e-129">Digest</span><span class="sxs-lookup"><span data-stu-id="1c79e-129">Digest</span></span>
 
-### <a name="hero"></a><span data-ttu-id="4ed02-136">ヒーロー</span><span class="sxs-lookup"><span data-stu-id="4ed02-136">Hero</span></span>
+<span data-ttu-id="1c79e-130">ニュースダイジェストおよび切り上げられた投稿に使用します。</span><span class="sxs-lookup"><span data-stu-id="1c79e-130">Use for news digests and round-up posts.</span></span> <span data-ttu-id="1c79e-131">注: 1 つの更新プログラムまたはニュースアイテムには、サムネイルカードをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="1c79e-131">Note: We recommend the thumbnail card for a single update or news item.</span></span>
 
-<span data-ttu-id="4ed02-137">最大のカード</span><span class="sxs-lookup"><span data-stu-id="4ed02-137">Our largest card.</span></span> <span data-ttu-id="4ed02-138">最もよく使用されるのは、記事、詳細な説明、または画像がほとんどの話を伝えるシナリオです。</span><span class="sxs-lookup"><span data-stu-id="4ed02-138">Best used for articles, long descriptions, or scenarios where your image is telling most of the story.</span></span>
+:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="例は、アダプティブカードを示しています。" border="false":::
 
-[!include[Card anatomy](~/includes/design/card-image-hero.html)]
+### <a name="media"></a><span data-ttu-id="1c79e-133">メディア</span><span class="sxs-lookup"><span data-stu-id="1c79e-133">Media</span></span>
 
-### <a name="thumbnail"></a><span data-ttu-id="4ed02-139">Thumbnail</span><span class="sxs-lookup"><span data-stu-id="4ed02-139">Thumbnail</span></span>
+<span data-ttu-id="1c79e-134">音声やビデオなどのテキストとメディアを結合する場合に使用します。</span><span class="sxs-lookup"><span data-stu-id="1c79e-134">Use when you want to combine text and media, like audio or video.</span></span>
 
-<span data-ttu-id="4ed02-140">短時間、かつ甘い。</span><span class="sxs-lookup"><span data-stu-id="4ed02-140">Short and sweet.</span></span> <span data-ttu-id="4ed02-141">これらのカードは、短い回答に適している場合や、一度に複数のカードを返して、ユーザーが一連のオプションから選択できるようにする場合に最適です。</span><span class="sxs-lookup"><span data-stu-id="4ed02-141">These cards are ideal for short answers, or if you want to return several cards at once so the user can choose from a bunch of options.</span></span> <span data-ttu-id="4ed02-142">他のタブまたは web サービスに深くリンクするには、これらの方法が適していると考えています。</span><span class="sxs-lookup"><span data-stu-id="4ed02-142">We think these are a great way to deep link to another tab or a web service.</span></span>
+:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="例は、アダプティブカードを示しています。" border="false":::
 
-[!include[Card anatomy](~/includes/design/card-image-thumbnail.html)]
+### <a name="people"></a><span data-ttu-id="1c79e-136">People</span><span class="sxs-lookup"><span data-stu-id="1c79e-136">People</span></span>
 
-### <a name="sign-in"></a><span data-ttu-id="4ed02-143">サインイン</span><span class="sxs-lookup"><span data-stu-id="4ed02-143">Sign in</span></span>
+<span data-ttu-id="1c79e-137">タスクに関係する人物を効率的に伝える場合に最適です。</span><span class="sxs-lookup"><span data-stu-id="1c79e-137">Best used when you to efficiently convey who's involved with a task.</span></span>
 
-<span data-ttu-id="4ed02-144">一部のサービスでは、ユーザーは認証とは無関係にサインインする必要があります。</span><span class="sxs-lookup"><span data-stu-id="4ed02-144">Some services require users to sign in independently of our authentication.</span></span> <span data-ttu-id="4ed02-145">このイベントでは、ユーザーがサービスに接続する前に、サインインカードを提示します。</span><span class="sxs-lookup"><span data-stu-id="4ed02-145">In that event, you would present a sign-in card before the user can connect to your service.</span></span>
+:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="例は、アダプティブカードを示しています。" border="false":::
 
-[!include[Card anatomy](~/includes/design/card-image-signin.html)]
+### <a name="request-ticket"></a><span data-ttu-id="1c79e-139">要求チケット</span><span class="sxs-lookup"><span data-stu-id="1c79e-139">Request ticket</span></span>
 
-> [!TIP]
-> <span data-ttu-id="4ed02-146">追加のサインインカードの発生を制限して、新しいユーザーのスピードを大幅に向上させることができます。</span><span class="sxs-lookup"><span data-stu-id="4ed02-146">Limit the occurrences of an additional sign-in card since they pose a significant speed bump for new users.</span></span>
+<span data-ttu-id="1c79e-140">ユーザーからすばやく入力を取得して、タスクまたはチケットを自動的に作成するために使用します。</span><span class="sxs-lookup"><span data-stu-id="1c79e-140">Use to get quick inputs from a user to automatically create a task or ticket.</span></span>
 
----
+:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="例は、アダプティブカードを示しています。" border="false":::
 
-## <a name="card-collections"></a><span data-ttu-id="4ed02-147">カードコレクション</span><span class="sxs-lookup"><span data-stu-id="4ed02-147">Card collections</span></span>
+### <a name="imageset"></a><span data-ttu-id="1c79e-142">ImageSet</span><span class="sxs-lookup"><span data-stu-id="1c79e-142">ImageSet</span></span>
 
-<span data-ttu-id="4ed02-148">また、複数の部分のコンテンツを一度に、またはすぐに表示する場合に最適な標準カードの種類が用意されています。</span><span class="sxs-lookup"><span data-stu-id="4ed02-148">We also have standard card types that are best used when you want to present several pieces of content at once or in quick succession.</span></span> <span data-ttu-id="4ed02-149">そのためには、カルーセル、ダイジェスト、リスト、および ' バブルマージ ' という呼び出しを行います。</span><span class="sxs-lookup"><span data-stu-id="4ed02-149">For that purpose, we have a carousel, a digest, a list, and what we call a ‘bubble merge’.</span></span>
+<span data-ttu-id="1c79e-143">複数の画像のサムネイルを送信するために使用します。</span><span class="sxs-lookup"><span data-stu-id="1c79e-143">Use to send multiple image thumbnails.</span></span>
 
-### <a name="carousel"></a><span data-ttu-id="4ed02-150">カルーセル</span><span class="sxs-lookup"><span data-stu-id="4ed02-150">Carousel</span></span>
+:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="例は、アダプティブカードを示しています。" border="false":::
 
-<span data-ttu-id="4ed02-151">記事、ショッピング、およびカードを参照するのに最適です。</span><span class="sxs-lookup"><span data-stu-id="4ed02-151">Best used for articles, shopping, and browsing through cards.</span></span>
+### <a name="actionset"></a><span data-ttu-id="1c79e-145">ActionSet</span><span class="sxs-lookup"><span data-stu-id="1c79e-145">ActionSet</span></span>
 
-[!include[Card anatomy](~/includes/design/card-image-carousel.html)]
+<span data-ttu-id="1c79e-146">ユーザーにボタンを選択させ、そのカードから追加のユーザー入力を収集する場合に使用します。</span><span class="sxs-lookup"><span data-stu-id="1c79e-146">Use when you want to the user to select a button, then gather addition user input from the same card.</span></span>
 
-> [!TIP]
-> <span data-ttu-id="4ed02-152">カルーセルは、最も大きいカードの最大の高さになります。</span><span class="sxs-lookup"><span data-stu-id="4ed02-152">The carousel will be the max height of your largest card.</span></span> <span data-ttu-id="4ed02-153">同じ種類のカードとコンテンツフィールドを使用することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="4ed02-153">We recommend using the same card type and content fields throughout.</span></span>
+:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="例は、アダプティブカードを示しています。" border="false":::
 
-### <a name="digest"></a><span data-ttu-id="4ed02-154">Digest</span><span class="sxs-lookup"><span data-stu-id="4ed02-154">Digest</span></span>
+### <a name="choiceset"></a><span data-ttu-id="1c79e-148">ChoiceSet</span><span class="sxs-lookup"><span data-stu-id="1c79e-148">ChoiceSet</span></span>
 
-<span data-ttu-id="4ed02-155">ユーザーが複数のカードを一度に表示できるようにする場合に、ニュース、ダイジェスト、およびいつでも使用することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="4ed02-155">Best used for news, digests, and whenever you want the user to view multiple cards at once.</span></span> <span data-ttu-id="4ed02-156">ダイジェストにはサムネイルカードを使用することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="4ed02-156">We recommend using thumbnail cards for digests.</span></span>
+<span data-ttu-id="1c79e-149">ユーザーから複数の入力を収集するために使用します。</span><span class="sxs-lookup"><span data-stu-id="1c79e-149">Use to gather multiple inputs from the user.</span></span>
 
-[!include[Card anatomy](~/includes/design/card-image-digest.html)]
+:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="例は、アダプティブカードを示しています。" border="false":::
 
-### <a name="lists"></a><span data-ttu-id="4ed02-157">リスト</span><span class="sxs-lookup"><span data-stu-id="4ed02-157">Lists</span></span>
+## <a name="anatomy"></a><span data-ttu-id="1c79e-151">構造</span><span class="sxs-lookup"><span data-stu-id="1c79e-151">Anatomy</span></span>
 
-<span data-ttu-id="4ed02-158">リストは、"これらのうち1つを選ぶ" シナリオでオブジェクトの scannable セットを表示するための最適な方法です。</span><span class="sxs-lookup"><span data-stu-id="4ed02-158">Lists are a great way to present a scannable set of objects in a “pick one of these” scenario.</span></span> <span data-ttu-id="4ed02-159">リストは、多くの説明を必要としないアイテムに使用するのに最適です。</span><span class="sxs-lookup"><span data-stu-id="4ed02-159">Lists are best used for items that don’t need a lot of explanation.</span></span>
+:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="アダプティブカードの UI の構造を示す図。" border="false":::
 
-[!include[Card anatomy](~/includes/design/card-image-list.html)]
+<span data-ttu-id="1c79e-153">アダプティブカードには多くの柔軟性があります。</span><span class="sxs-lookup"><span data-stu-id="1c79e-153">Adaptive Cards have a lot of flexibility.</span></span> <span data-ttu-id="1c79e-154">ただし、少なくとも、以下のコンポーネントをすべてのカードに含めることを強くお勧めします。</span><span class="sxs-lookup"><span data-stu-id="1c79e-154">But at a minimum, we strongly suggest including the following components in every card:</span></span>
 
-### <a name="bubble-merge"></a><span data-ttu-id="4ed02-160">バブルマージ</span><span class="sxs-lookup"><span data-stu-id="4ed02-160">Bubble merge</span></span>
+|<span data-ttu-id="1c79e-155">カウンター</span><span class="sxs-lookup"><span data-stu-id="1c79e-155">Counter</span></span>|<span data-ttu-id="1c79e-156">説明</span><span class="sxs-lookup"><span data-stu-id="1c79e-156">Description</span></span>|
+|----------|-----------|
+|<span data-ttu-id="1c79e-157">A</span><span class="sxs-lookup"><span data-stu-id="1c79e-157">A</span></span>|<span data-ttu-id="1c79e-158">**ヘッダー**: ヘッダーを明瞭で簡潔なものにします。ただし、わかりやすくする。</span><span class="sxs-lookup"><span data-stu-id="1c79e-158">**Header**: Make headers clear and concise, yet descriptive.</span></span>|
+|<span data-ttu-id="1c79e-159">B</span><span class="sxs-lookup"><span data-stu-id="1c79e-159">B</span></span>|<span data-ttu-id="1c79e-160">**本文のコピー**: ヘッダーに含めるには、長すぎる、または重要ではない詳細情報を伝達するために使用します。</span><span class="sxs-lookup"><span data-stu-id="1c79e-160">**Body copy**: Use to convey detail that is either too long or not important enough to include in the header.</span></span>|
+|<span data-ttu-id="1c79e-161">C</span><span class="sxs-lookup"><span data-stu-id="1c79e-161">C</span></span>|<span data-ttu-id="1c79e-162">**主な処置**: ベストプラクティスとして、1-3 プライマリアクションを含めます。</span><span class="sxs-lookup"><span data-stu-id="1c79e-162">**Primary actions**: As a best practice, include 1-3 primary actions.</span></span> <span data-ttu-id="1c79e-163">最大6個が許可されます。</span><span class="sxs-lookup"><span data-stu-id="1c79e-163">A maximum of six are allowed.</span></span>|
 
-<span data-ttu-id="4ed02-161">いくつかの興味深い効果は、1つの英雄と複数のサムネイルをすばやく連続して送信することによって実現できます。</span><span class="sxs-lookup"><span data-stu-id="4ed02-161">Some interesting effects can be achieved by sending one hero and several thumbnails in quick succession.</span></span> <span data-ttu-id="4ed02-162">メインの結果を提供するが、さらに多くの関連アイテムを含める場合は、この方法をお勧めします。</span><span class="sxs-lookup"><span data-stu-id="4ed02-162">We recommend this approach when you want to serve a main result but include a few more related items.</span></span>
+## <a name="best-practices"></a><span data-ttu-id="1c79e-164">ベスト プラクティス</span><span class="sxs-lookup"><span data-stu-id="1c79e-164">Best practices</span></span>
 
-[!include[Card anatomy](~/includes/design/card-image-bubble-merge.html)]
+### <a name="primary-and-secondary-actions"></a><span data-ttu-id="1c79e-165">プライマリおよびセカンダリのアクション</span><span class="sxs-lookup"><span data-stu-id="1c79e-165">Primary and secondary actions</span></span>
 
----
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="アダプティブカードのベストプラクティスを示す例。" border="false":::
 
-## <a name="best-practices"></a><span data-ttu-id="4ed02-163">ベスト プラクティス</span><span class="sxs-lookup"><span data-stu-id="4ed02-163">Best practices</span></span>
+#### <a name="do-use-up-to-six-primary-actions"></a><span data-ttu-id="1c79e-167">Do: 最大6つの主要なアクションを使用します。</span><span class="sxs-lookup"><span data-stu-id="1c79e-167">Do: Use up to six primary actions</span></span>
 
-### <a name="keep-the-noise-down"></a><span data-ttu-id="4ed02-164">ノイズを抑える</span><span class="sxs-lookup"><span data-stu-id="4ed02-164">Keep the noise down</span></span>
+<span data-ttu-id="1c79e-168">アダプティブカードは6つの主要なアクションをサポートしていますが、ほとんどのカードはそれを必要としません。</span><span class="sxs-lookup"><span data-stu-id="1c79e-168">While Adaptive Cards can support six primary actions, most cards don’t need that.</span></span> <span data-ttu-id="1c79e-169">アクションは、明瞭、簡潔、およびまっすぐに実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="1c79e-169">Actions should be clear, concise, and straight forward.</span></span> <span data-ttu-id="1c79e-170">これよりも少なくなります。</span><span class="sxs-lookup"><span data-stu-id="1c79e-170">Less is more.</span></span>
 
-<span data-ttu-id="4ed02-165">複数のカードを1つの会話に簡単に送信できますが、カードが表示されなくなると、利便性が低下します。</span><span class="sxs-lookup"><span data-stu-id="4ed02-165">It’s easy to send multiple cards into a conversation, but once cards scroll out of view, they become less useful.</span></span> <span data-ttu-id="4ed02-166">Essentials に制限するようにしてください。</span><span class="sxs-lookup"><span data-stu-id="4ed02-166">Try to limit yourself to the essentials.</span></span> <span data-ttu-id="4ed02-167">これは、ユーザーが "ノイズ" として認識される許容範囲を下回っているチャネルの場合に特に当てはまります。</span><span class="sxs-lookup"><span data-stu-id="4ed02-167">This is especially true in a channel where users have less tolerance for what they perceive as “noise”.</span></span>
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="アダプティブカードのベストプラクティスを示す例。" border="false":::
 
-### <a name="test-on-mobile"></a><span data-ttu-id="4ed02-168">モバイルでのテスト</span><span class="sxs-lookup"><span data-stu-id="4ed02-168">Test on mobile</span></span>
+#### <a name="dont-use-more-than-six-primary-actions"></a><span data-ttu-id="1c79e-172">6つ以上の主なアクションを使用します。</span><span class="sxs-lookup"><span data-stu-id="1c79e-172">Don't: Use more than six primary actions</span></span>
 
-<span data-ttu-id="4ed02-169">モバイル環境は、スペースと帯域幅に制約があるため、サイズの大きい画像と大規模なデータセットをリストと carousels に含めることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="4ed02-169">Mobile environments are space- and bandwidth-constrained, so be cautious about including oversized images and large data sets in lists and carousels.</span></span> <span data-ttu-id="4ed02-170">また、タイトルの幅とテキストの長さはモバイルで切り捨てられるので、もう1つ注目することもあります。</span><span class="sxs-lookup"><span data-stu-id="4ed02-170">Also, title widths and text lengths will truncate on mobile, so that’s another thing to keep an eye on.</span></span>
+<span data-ttu-id="1c79e-173">アダプティブカードは、すぐに実行可能なコンテンツを表示する必要があります。</span><span class="sxs-lookup"><span data-stu-id="1c79e-173">Adaptive Cards should present quick, actionable content.</span></span> <span data-ttu-id="1c79e-174">ユーザーが過負荷になる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="1c79e-174">Too many actions can overwhelm a user.</span></span>
 
-### <a name="check-your-graphics"></a><span data-ttu-id="4ed02-171">グラフィックスを確認する</span><span class="sxs-lookup"><span data-stu-id="4ed02-171">Check your graphics</span></span>
+   :::column-end:::
+:::row-end:::
 
-<span data-ttu-id="4ed02-172">画像は拡大していきますので、必ずすべてのプラットフォームでプレビューしてください。</span><span class="sxs-lookup"><span data-stu-id="4ed02-172">Graphics are going to scale, so be sure to preview them on all platforms.</span></span>
+### <a name="frequency"></a><span data-ttu-id="1c79e-175">Frequency</span><span class="sxs-lookup"><span data-stu-id="1c79e-175">Frequency</span></span>
 
-### <a name="avoid-including-text-in-a-graphic"></a><span data-ttu-id="4ed02-173">テキストをグラフィックに含めないようにする</span><span class="sxs-lookup"><span data-stu-id="4ed02-173">Avoid including text in a graphic</span></span>
+:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="アダプティブカードのベストプラクティスを示す例。" border="false":::
 
-<span data-ttu-id="4ed02-174">ユーザーが読み取る必要があるものは、すべてテキストフィールドに含まれている必要があります。</span><span class="sxs-lookup"><span data-stu-id="4ed02-174">Anything that needs to be read by a user should be included in a text field.</span></span> <span data-ttu-id="4ed02-175">画像が動的に拡大縮小されると、画像に追加したテキストが判読できなくなることがあります。</span><span class="sxs-lookup"><span data-stu-id="4ed02-175">Once an image is dynamically scaled, any text you add to a graphic may become unintelligible.</span></span>
+#### <a name="do-be-concise"></a><span data-ttu-id="1c79e-177">実行: 簡潔</span><span class="sxs-lookup"><span data-stu-id="1c79e-177">Do: Be concise</span></span>
 
-### <a name="use-mentions-if-you-want-the-attention-of-specific-users"></a><span data-ttu-id="4ed02-176">特定のユーザーの注意を引く場合は、メンションを使用します。</span><span class="sxs-lookup"><span data-stu-id="4ed02-176">Use mentions if you want the attention of specific users</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="4ed02-177">現在、カードでのサポートは、 [開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md) のみでサポートされています。</span><span class="sxs-lookup"><span data-stu-id="4ed02-177">Mention support in cards is currently supported in [Developer Preview](~/resources/dev-preview/developer-preview-intro.md) only.</span></span>
-
-<span data-ttu-id="4ed02-178">メンションは、チームまたはグループのチャットで特定のユーザーに通知するための最適な方法です。</span><span class="sxs-lookup"><span data-stu-id="4ed02-178">Mentions are a great way to notify specific users in a Team or group chat.</span></span> <span data-ttu-id="4ed02-179">ユーザーに割り当てられたタスクや、チームメイトに称賛を付与するようなシナリオで、カードに説明を含めることができます。</span><span class="sxs-lookup"><span data-stu-id="4ed02-179">You can include a mention in card in scenarios like, a task thats assigned to a user or giving Kudos to a teammate.</span></span> <span data-ttu-id="4ed02-180">[カード形式ページ](~/task-modules-and-cards/cards/cards-format.md)のカードにメンションを含める方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="4ed02-180">Learn how to include mentions in cards in the [card formatting page](~/task-modules-and-cards/cards/cards-format.md).</span></span> 
+<span data-ttu-id="1c79e-178">複数のカードを1つの会話に簡単に送信できますが、カードが表示されなくなると、利便性が低下します。</span><span class="sxs-lookup"><span data-stu-id="1c79e-178">It's easy to send multiple cards into a conversation, but once cards scroll out of view, they become less useful.</span></span> <span data-ttu-id="1c79e-179">Essentials に制限するようにしてください。</span><span class="sxs-lookup"><span data-stu-id="1c79e-179">Try to limit yourself to the essentials.</span></span> <span data-ttu-id="1c79e-180">これは、ユーザーが "ノイズ" として認識される許容範囲を下回っているチャネルの場合に特に当てはまります。</span><span class="sxs-lookup"><span data-stu-id="1c79e-180">This is especially true in a channel where users have less tolerance for what they perceive as "noise".</span></span>
