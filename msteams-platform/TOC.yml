@@ -60,26 +60,10 @@
       href: concepts/capabilities-overview.md
     - name: アプリのエントリ ポイント
       href: concepts/extensibility-points.md
-    - name: アプリをデザインする
-      items:
-        - name: ユース ケースを理解する
-          href: concepts/design/understand-use-cases.md
-        - name: ユース ケースを機能にマッピングする
-          href: concepts/design/map-use-cases.md
-        - name: 個人用アプリ
-          href: concepts/design/personal-apps.md
-        - name: UI コンポーネント
-          items:
-            - name: 色
-              href: concepts/design/components/color.md
-            - name: ボタン、リンク、コントロール
-              href: concepts/design/components/buttons.md
-            - name: 文字体裁
-              href: concepts/design/components/typography.md
-            - name: フィールドとポップアップ
-              href: concepts/design/components/fields.md
-            - name: ダイアログ
-              href: concepts/design/components/dialogs.md
+    - name: ユース ケースを理解する
+      href: concepts/design/understand-use-cases.md
+    - name: ユース ケースを機能にマッピングする
+      href: concepts/design/map-use-cases.md
     - name: アプリの構築およびテスト
       items:
         - name: Office 365 テナントを準備する
@@ -140,6 +124,34 @@
           href: concepts/device-capabilities/native-device-permissions.md
         - name: カメラとギャラリー
           href: concepts/device-capabilities/mobile-camera-image-permissions.md
+- name: アプリをデザインする
+  items:
+    - name: 概要
+      href: concepts/design/design-teams-app-overview.md
+    - name: 基礎
+      href: concepts/design/design-teams-app-fundamentals.md
+    - name: 基本的な UI コンポーネント
+      href: concepts/design/design-teams-app-basic-ui-components.md
+    - name: UI テンプレート
+      href: concepts/design/design-teams-app-ui-templates.md
+    - name: 個人用アプリ
+      href: concepts/design/personal-apps.md
+    - name: タブ
+      items:
+        - name: デスクトップと Web
+          href: tabs/design/tabs.md
+        - name: モバイル
+          href: tabs/design/tabs-mobile.md
+    - name: メッセージング拡張機能
+      href: messaging-extensions/design/messaging-extension-design.md
+    - name: ボット
+      href: bots/design/bots.md
+    - name: ミーディング拡張機能
+      href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
+    - name: タスク モジュール
+      href: task-modules-and-cards/task-modules/design-teams-task-modules.md
+    - name: アダプティブ カード
+      href: task-modules-and-cards/cards/design-effective-cards.md
 - name: タブ — 埋め込み Web エクスペリエンス
   items:
     - name: カスタム タブとは
@@ -164,12 +176,6 @@
               href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
             - name: プライベート タブを作成する
               href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-    - name: タブをデザインする
-      items:
-        - name: デザインの概要
-          href: tabs/design/tabs.md
-        - name: モバイルのタブ
-          href: tabs/design/tabs-mobile.md
     - name: 使い方ガイド
       expanded: true
       items:
@@ -215,10 +221,6 @@
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot'
         - name: Python での Teams 会話ボット
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot'
-    - name: ボットをデザインする
-      items:
-        - name: デザインの概要
-          href: bots/design/bots.md
     - name: 使い方ガイド
       expanded: true
       items:
@@ -278,10 +280,6 @@
   items:
     - name: メッセージング拡張機能について
       href: messaging-extensions/what-are-messaging-extensions.md
-    - name: デザイン
-      items:
-        - name: メッセージング拡張機能のデザインのガイドライン
-          href: messaging-extensions/design/messaging-extension-design.md
     - name: クイックスタート
       items:
         - name: 操作コマンドを使用する
@@ -329,8 +327,6 @@
       href: task-modules-and-cards/what-are-cards.md
     - name: カード
       items:
-        - name: 効果的にカードをデザインする
-          href: task-modules-and-cards/cards/design-effective-cards.md
         - name: カードのテキストを書式設定する
           href: task-modules-and-cards/cards/cards-format.md
         - name: カード アクションへの追加と応答
@@ -364,12 +360,6 @@
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
     - name: Teams 会議用のアプリを作成する
       href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
-    - name: 会議中のアプリを設計する
-      items:
-        - name: 会議中ダイアログ
-          href: apps-in-teams-meetings/design/designing-in-meeting-dialog.md
-        - name: 会議中タブ
-          href: apps-in-teams-meetings/design/designing-in-meeting-tab.md
 - name: Microsoft Graph REST API の統合
   items:
     - name: リソース固有の同意

@@ -1,58 +1,58 @@
 ---
-title: Microsoft 365 テナントの準備
-description: Microsoft 365 で Teams の使用を開始する方法
-keywords: Microsoft 365 テナントチームのアップロードを構成する
+title: Microsoft 365 テナントを準備する
+description: Microsoft 365 の Teams の概要
+keywords: Microsoft 365 テナントTeams のアップロードの構成
 ms.openlocfilehash: 67a0342a7e8605097eed53dd1b0bdf273d537c0e
 ms.sourcegitcommit: d61f14053fc695bc1956bf50e83956613c19ccca
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/13/2020
 ms.locfileid: "48452766"
 ---
-# <a name="prepare-your-microsoft-365-tenant"></a>Microsoft 365 テナントの準備
+# <a name="prepare-your-microsoft-365-tenant"></a>Microsoft 365 テナントを準備する
 
-Microsoft 365 サブスクライバーの場合は、次のいずれかの [プラン](https://products.office.com/business/compare-more-office-365-for-business-plans)を使用して microsoft Teams 用アプリを開発できます。
+Microsoft 365 のサブスクライバーである場合は、 次のいずれかの[プラン](https://products.office.com/business/compare-more-office-365-for-business-plans) を使用して、Microsoft Teams のアプリを開発できます。
 
-* Basic
-* Standard
+* 基本
+* 標準
 * Enterprise E1、E3、E5
-* Developer
-* 教育、教育プラス、教育の E5
+* 開発者
+* 学歴, Education Plus, and Education E5
 
-また、 [退職](https://support.office.com//article/important-information-for-office-365-enterprise-e4-customers-f9572348-43a2-43fa-a3d8-3b6c9c042147)前に、E4 をサブスクライブしたお客様も、Microsoft Teams を利用することができます。
+またMicrosoft Teamsは、 [廃止](https://support.office.com//article/important-information-for-office-365-enterprise-e4-customers-f9572348-43a2-43fa-a3d8-3b6c9c042147)前に E4 以前を購読していた客様も利用できます。
 
-## <a name="just-need-a-development-environment"></a>開発環境のみが必要ですか。
+## <a name="just-need-a-development-environment"></a>開発環境が必要ですか?
 
-現在 Microsoft 365 アカウントを持っていない場合は、 [microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) サブスクリプションにサインアップできます。 これは90日間 *無料* で、開発アクティビティに使用している間は継続的に更新されます。 Visual Studio *Enterprise* または *Professional* サブスクリプションを所有している場合は、どちらのプログラムにも、visual studio サブスクリプションの有効期間中にアクティブな Microsoft 365 [開発者向けサブスクリプション](https://aka.ms/MyVisualStudioBenefits)が組み込まれています。 *「* [Microsoft 365 developer サブスクリプションをセットアップする」を](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started)参照してください。
+現在 Microsoft 365 アカウントを使用していない場合は、 [Microsoft 365 開発者プログラム](https://developer.microsoft.com/microsoft-365/dev-program) サブスクリプションにサイン アップできます。 これは 90 日間 *無料* で開発活動に使用する限り継続的に更新されます。 Visual Studio *Enterprise* または *Professional* サブスクリプションをお持ちの場合、両方のプログラムには、無料の Microsoft 365 [開発者向けサブスクリプション](https://aka.ms/MyVisualStudioBenefits)が含まれています。これは、Visual Studio サブスクリプションの有効期間中はアクティブです。 「*Microsoft 365 開発者サブスクリプションを設定する*」[を参照してください](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started)。
 
-## <a name="enable-microsoft-teams-for-your-organization"></a>組織に対して Microsoft Teams を有効にする 
+## <a name="enable-microsoft-teams-for-your-organization"></a>組織用に Microsoft Teams を有効にする 
 
-Microsoft Teams が組織に対して有効になっていない場合は、最初にその作業を行う必要があります。 [組織で Teams を有効](/microsoftteams/enable-features-office-365)にするための詳細なガイダンスを参照してください。
+組織に対して Microsoft Teams が有効になっていない場合は、最初に行う必要があります。 詳しい説明は、「[組織での Teams を有効にする](/microsoftteams/enable-features-office-365)」を参照してください。
 
-## <a name="enable-custom-teams-apps-and-turn-on-custom-app-uploading"></a>カスタム Teams アプリを有効にし、カスタムアプリのアップロードをオンにする
+## <a name="enable-custom-teams-apps-and-turn-on-custom-app-uploading"></a>カスタム Teams アプリを有効にして、カスタム アプリのアップロードを有効にする
 
-開発者テナントのカスタムアプリのサイドロードを次のようにオンにします。
+開発者テナントのカスタムアプリのサイドローディングを次のようにオンにします。
 
-1. 管理者の資格情報を使用して [Microsoft 365 管理センター](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) にログインします。 
+1. 管理者の資格情報を使用して[ Microsoft 365 管理センター](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/)にサイン インします。 
 
-2. [**すべてのチームを表示**] を選択し  -->  **Teams**ます。 
+2. [**すべての** --> **Teams の表示**]を選択します。 
 
-![管理センターメニューの画像](~/assets/images/prepare-test-tenant/admin-center.png)
-
-> [!Note] 
-> "Teams" オプションが表示されるまでに最大24時間かかる場合があります。 中間では、 [カスタムアプリを Teams 環境にアップロード](/microsoftteams/upload-custom-apps#validate) して、テストと検証を行うことができます。
-
-3. **Teams apps**  -->  **セットアップポリシー**  -->  **グローバル (組織全体の既定)** に移動する  
-
-![サイドロード表示をオンにする](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
-
-4. [ **カスタムアプリのアップロード** を **オン** の位置に切り替える。
-
-するだけです。 テストテナントは、カスタムアプリのサイドロードを許可するようになります。
+![管理センター メニューの画像](~/assets/images/prepare-test-tenant/admin-center.png)
 
 > [!Note] 
-> サイドローディングが有効になるまで最大24時間かかる場合があります。 中間時に、**の \<your tenant> upload**を使用してアプリをテストできます。
+> "Teams" オプションが表示されるまで、最大で24時間かかります。 その間、テストおよび検証用に[カスタムアプリをTeams 環境にアップロード](/microsoftteams/upload-custom-apps#validate) することができます。
 
-![updload app ビュー](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
+3. **Teams アプリ** --> **セット アップ ポリシー** --> **グローバル (組織全体の既定)** に移動する  
 
-これらの設定がどのように影響するかの詳細については、「 [Microsoft teams のカスタムアプリポリシーと設定を管理](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings)する」および「 [microsoft teams でアプリのセットアップポリシーを管理](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies)する *」を参照してください*。
+![sideload ビューを有効にする](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
+
+4. **カスタム アプリのアップロード** を切り替え **オン** の位置にします。
+
+手順は以上です。 テスト テナントで、カスタムアプリのサイドローディングができるようになりました。
+
+> [!Note] 
+> サイドローディングが有効になるまでに 24 時間かかることがあります。 その間、[**アップロード\<your tenant>**] を使用して、アプリをテストできます。
+
+![updload アプリ ビュー](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
+
+これらの設定がどのように機能するかの詳細については、「[Microsoft Teams のカスタム アプリ ポリシーと設定の管理](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings)」 および「[Microsoft Teams のアプリ セットアップ ポリシーの管理](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies)」を *参照してください*。

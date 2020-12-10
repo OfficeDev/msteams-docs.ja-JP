@@ -3,12 +3,12 @@ title: コネクタと Webhook にメッセージを送信する
 description: Microsoft Teams で Office 365 コネクタを使用する方法について説明します。
 localization_priority: Priority
 keywords: Teams o365 コネクタ
-ms.openlocfilehash: 913e441e6953102eeef2295625ce3e0734934bd9
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: e14b02a5a93d10feca49b6dcd653979aa9a94370
+ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48998008"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "49604481"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>コネクタと Webhook にメッセージを送信する
 
@@ -129,17 +129,17 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
 > [!NOTE]
 > Microsoft Teams で `style` プロパティに `compact` を指定することは、Microsoft Outlook で `style` プロパティに `normal` を指定することと同じです。
 
-コネクタ カードのアクションのその他の詳細については、操作可能なメッセージ カードのレファレンスの、「 **[アクション](/outlook/actionable-messages/card-reference#actions)** 」を参照してください。
+コネクタ カードのアクションのその他の詳細については、操作可能なメッセージ カードのレファレンスの、「**[アクション](/outlook/actionable-messages/card-reference#actions)**」を参照してください。
 
 ## <a name="setting-up-a-custom-incoming-webhook"></a>カスタム着信 Webhook の設定
 
 単純なカードをコネクタに送信する方法を見るには、次の手順に従って操作を行ってください。
 
-1. Microsoft Teams で、チャネル名の横にある [ **その他のオプション** ] ( **&#8943;** ) を選択し、[ **コネクタ** ] を選択します。
-2. コネクタのリストをスクロールして [ **着信 Webhook** ] を選択し、次に [ **追加** ] を選択します。
-3. Webhook の名前を入力し、Webhook からのデータと関連づける画像を更新し、[ **作成** ] を選択します。
+1. Microsoft Teams で、チャネル名の横にある [**その他のオプション**] (**&#8943;**) を選択し、[**コネクタ**] を選択します。
+2. コネクタのリストをスクロールして [**着信 Webhook**] を選択し、次に [**追加**] を選択します。
+3. Webhook の名前を入力し、Webhook からのデータと関連づける画像を更新し、[**作成**] を選択します。
 4. Webhook をクリップボードにコピーして保存します。 Microsoft Teams に情報を送信するには、Webhook URL が必要です。
-5. [ **完了** ] を選択します。
+5. [**完了**] を選択します。
 
 ### <a name="post-a-message-to-the-webhook-using-curl"></a>cURL を使用してメッセージを Webhook に投稿する
 
@@ -157,7 +157,7 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
    curl.exe -H "Content-Type:application/json" -d "{'text':'Hello World'}" <YOUR WEBHOOK URL>
    ```
 
-2. POST が成功すると、単に " **1** " という `curl` の出力が表示されます。
+2. POST が成功すると、単に "**1**" という `curl` の出力が表示されます。
 3. Microsoft Team クライアントを確認します。 チームに新しいカードが投稿されるはずです。
 
 ### <a name="post-a-message-to-the-webhook-using-powershell"></a>PowerShell を使用して Webhook にメッセージを投稿します。
@@ -170,10 +170,10 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
    Invoke-RestMethod -Method post -ContentType 'Application/Json' -Body '{"text":"Hello World!"}' -Uri <YOUR WEBHOOK URL>
    ```
 
-2. POST が成功すると、単に " **1** " という `Invoke-RestMethod` の出力が表示されます。
+2. POST が成功すると、単に "**1**" という `Invoke-RestMethod` の出力が表示されます。
 3. Webhook URL に関連付けられている Microsoft Teams チャネルを確認します。 チャネルに新しいカードが投稿されているはずです。
 
-- 「[アイコン](~/concepts/build-and-test/apps-package.md#icons)」の説明に従い、アイコンを 2 つ含めます。
+- [ 2 つのアイコンが含まれます ](../../concepts/build-and-test/apps-package.md#app-icons)。
 - マニフェストの `icons` の部分を変更し、アイコンの URL ではなくアイコンのファイル名を参照するようにします。
 
 次の manifest.json ファイルには、アプリをテストして送信するために必要な基本的な要素が含まれています。
@@ -227,7 +227,7 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
 >
 > ✔ `Action.Submit` 以外のすべてのネイティブのアダプティブ カード スキーマ要素は、完全にサポートされます。
 >
-> ✔ サポートされているアクションは [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html)、 [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html)、および [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html) です。
+> ✔ サポートされているアクションは [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html)、[**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html)、および [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html) です。
 
 ### <a name="the-flow-for-sending-adaptive-cards-via-an-incoming-webhook-is-as-follows"></a>受信 Webhook を通して [アダプティブ カード](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card) を送信するためのフローは次のとおりです。
 
@@ -275,7 +275,7 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
 
 コネクタをテストするには、他のアプリと同じ方法でコネクタをチームにアップロードします。 (前のセクションの指示に従って変更された) コネクタ開発者ダッシュボードからのマニフェスト ファイルと 2 つのアイコン ファイルを使用して .zip パッケージを作成できます。
 
-アプリをアップロードしたら、任意のチャネルからコネクタ リストを開きます。 一番下までスクロールして、アプリが [ **アップロード済み** ] セクションに表示されていることを確認します。
+アプリをアップロードしたら、任意のチャネルからコネクタ リストを開きます。 一番下までスクロールして、アプリが [**アップロード済み**] セクションに表示されていることを確認します。
 
 ![コネクタ ダイアログ ボックスの [アップロード済み] セクションのスクリーンショット](~/assets/images/connectors/connector_dialog_uploaded.png)
 
@@ -297,7 +297,7 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
 | 7200 | 150  |
 | 86400  | 1800  |
 
-「 [Office 365 コネクタ — Microsoft Teams](https://docs.microsoft.com/connectors/teams/)」 *も参照*
+「[Office 365 コネクタ — Microsoft Teams](https://docs.microsoft.com/connectors/teams/)」*も参照*
 
 次のような[指数バックオフを使用した再試行ロジック](/azure/architecture/patterns/retry)は、要求が 1 秒以内に制限を超えてしまうケースで、レート制限を緩和します。 レート制限に達しないよう、「[ベスト プラクティス](../../bots/how-to/rate-limit.md#best-practices)」に従ってください。
 

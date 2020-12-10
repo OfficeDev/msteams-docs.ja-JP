@@ -6,7 +6,7 @@ ms.topic: overview
 ms.author: anclear
 ms.openlocfilehash: 6a2453cb7d0c2d55a8df938849313f47702e5585
 ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/29/2020
 ms.locfileid: "48796373"
@@ -29,7 +29,7 @@ Webhook とコネクタを使用すると、Web サービスを、Microsoft Team
 
 ### <a name="incoming-webhooks"></a>受信 Webhook
 
-受信 web フックは、最も単純な種類のコネクタです。 (チームに対して有効になっていれば) チームのどのチャネルにおいても、適切に書式設定された JSON に対応し、そのチャネルにメッセージを挿入する HTTPS エンドポイントを公開することができます。 これは、チャネルをサービスにすばやく簡単に接続する方法であり、特定のチームの固有のシナリオで使用するのに最適です。 たとえば、アラート送信が行えるように、DevOps チャネルで受信 Webhook を作成し、ビルド、展開、監視サービスを構成することができます。
+受信 Webhook は、最も簡単な種類のコネクタです。 (チームに対して有効になっていれば) チームのどのチャネルにおいても、適切に書式設定された JSON に対応し、そのチャネルにメッセージを挿入する HTTPS エンドポイントを公開することができます。 これは、チャネルをサービスにすばやく簡単に接続する方法であり、特定のチームの固有のシナリオで使用するのに最適です。 たとえば、アラート送信が行えるように、DevOps チャネルで受信 Webhook を作成し、ビルド、展開、監視サービスを構成することができます。
 
 「[受信 Webhook を作成する](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)」を参照してください。
 

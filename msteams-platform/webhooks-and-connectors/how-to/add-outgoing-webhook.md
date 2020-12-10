@@ -1,13 +1,13 @@
 ---
 title: 送信 Webhook を使用して Microsoft Teams にカスタム ボットを追加する
 author: laujan
-description: 送信 webhook を追加する方法
+description: 送信 Webhook を追加する方法
 keywords: Teams、タブ、送信 Webhook*
 ms.topic: conceptual
 ms.author: lajanuar
 ms.openlocfilehash: 61dc8441795925b53e5c8459f9c6eed5a28856e1
 ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/02/2020
 ms.locfileid: "49552466"
@@ -36,15 +36,15 @@ Webhook は、Teams と外部アプリを統合させるための便利な手段
 
 サービスは、標準の Azure Bot Service のメッセージング スキーマでメッセージを受信します。 Bot Framework Connector は、[Azure Bot Service API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference) で文書化されているように、サービスが HTTPS プロトコルを使用して JSON 形式のメッセージ交換を処理できるようにする RESTful サービスです。 [Microsoft Bot Framework SDK] を使用して、メッセージの処理と解析を行うこともできます。 詳細については、「[Azure Bot Service について](/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0)」も *参照してください*。
 
-送信 Webhook は、`team` レベルにスコープが設定され、チームのすべてのメンバーに表示されます。 Bot と同様に、ユーザーはチャネルで呼び出しを行うために、送信 webhook の名前を **\@ 言及** する必要があります。
+送信 Webhook は、`team` レベルにスコープが設定され、チームのすべてのメンバーに表示されます。 ボットと同じように、ユーザーは送信 Webhook の名前に対して **\@メンション** の処理を行ってチャネルで呼び出す必要があります。
 
 ### <a name="2-create-a-method-to-verify-the-outgoing-webhook-hmac-token"></a>2. 送信 Webhook HMAC トークンを確認するメソッドを作成する
 
-#### <a name="hmac-signature-for-testing-with-code-example"></a>コード例を使用したテストのための HMAC 署名
+#### <a name="hmac-signature-for-testing-with-code-example"></a>コード例を使用してテストのための HMAC 署名を使用する
 
-受信メッセージと id の例を使用します。これは、{"contoso", "vqF0En + Z0ucuRTM/01o2GuhMH3hKKk/N2bOmlM31zaA ="} の SigningKeyDictionary の "contoso" です。
+受信メッセージと id の例: {"contoso" の SigningKeyDictionary の "contoso"、"vqF0En + Z0ucuRTM/01o2GuhMH3hKKk/N2bOmlM31zaA ="}。
 
-要求ヘッダーの承認には、「HMAC 03TCao0i55H1eVKUusZOTZRjtvYTs + mO41mPL + R1e1U =」という値を使用します。
+要求ヘッダーの認証には、"HMAC 03TCao0i55H1eVKUusZOTZRjtvYTs + mO41mPL + R1e1U =" の値を使用します。
 
 サービスが実際の Teams クライアントからの呼び出しのみを受信できるようにするために、Teams では、認証プロトコルに常に含まれている必要がある HTTP `hmac` ヘッダーに HMAC コードが用意されています。
 
