@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Microsoft Teams テンプレートのサンプル デモ
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 87361e8c6be068b932400d97379db8f182afd499
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
-ms.translationtype: HT
+ms.openlocfilehash: 2135180a91d7cf123c4b456ac6ab4c236687ae87
+ms.sourcegitcommit: b9771f8f4be9ac1ff8c85c2d7bd8d5c5408bc653
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552578"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "49768093"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 用のアプリ テンプレート
 
@@ -25,7 +25,7 @@ ms.locfileid: "49552578"
 * **カスタマイズ可能かつ拡張可能:** すべてのアプリ テンプレートはそのまま展開する準備ができていますが、コード ベース全体と展開スクリプトを提供しているため、独自のニーズに合わせて簡単にカスタマイズまたは拡張できます。
 * **詳細なドキュメントとサポート:** すべてのアプリ テンプレートには、ソリューション アーキテクチャ、展開、構成の手順に関するエンドツーエンドのドキュメントが付属しています。 リポジトリも監視されているため、GitHub で問題を提起して、発生した問題を報告してください。
 
-## <a name="ask-away-9734"></a>Ask Away &#9734;
+## <a name="ask-away"></a>Ask Away
 
 Ask Away は、ユーザーが Teams 内で Q&A (質問と回答) セッションを実行できるようにする [Microsoft Teams ボット](../bots/what-are-bots.md)です。 チーム メンバーは、Ask Away ボットを使用して、同僚が共有する質問を送信して賛成票を投じることができます。これにより、Q&A ホストは、チャネルまたはチャット内で最も重要な質問を簡単に収集できます。 ボットを使用して、Teams 会議でリアルタイムの Q&A セッションを実行でき、出席者はチャットを介してライブで質問を送信できます。
 
@@ -70,7 +70,7 @@ Ask Away は、ユーザーが Teams 内で Q&A (質問と回答) セッショ�
 
 ![会議室予約のデモ](../assets/images/book-a-room.png)
 
-## <a name="building-access-9734"></a>Building Access &#9734;
+## <a name="building-access"></a>アクセスを構築する
 
 Building Access は、施設の管理者が従業員が施設に滞在しているかどうかを管理、追跡、報告できるようにして、建物の占有しきい値と社会的距離の基準の管理をサポートする Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) ベースのアプリです。 Microsoft [Power Apps](/powerapps/powerapps-overview)、[Power Automate](/power-automate/getting-started)を使用して構築されたこのアプリは、Microsoft Teams と緊密に統合されており、組織が建物の準備状況を判断し、現場アクセスの適格基準を確立し、将来の計画のための分析情報を収集できるようにします。
 
@@ -93,7 +93,7 @@ Celebrations は、チームメンバーがお互いの誕生日、記念日、�
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-celebrations-app)
 
-## <a name="checklist-9734"></a>Checklist &#9734;
+## <a name="checklist"></a>チェックリスト
 
 Checklist は、チャットやチャネルで共有チェックリストを作成することで、チームと共同作業を行うことができる、Microsoft Teams のカスタム [メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)アプリです。 このアプリは、デスクトップ、ブラウザー、iOS、Android のすべての Teams プラットフォーム クライアントでサポートされており、Microsoft365 サブスクリプションの一部として展開する準備ができています。  
 
@@ -104,6 +104,14 @@ Checklist は、チャットやチャネルで共有チェックリストを作�
     ![Teams ビューにチェックリストを作成する](../assets/images/checklist-app-template-compose-view.gif)  
 :::column-end:::
 :::row-end:::
+
+## <a name="classroom-drop-in-9734"></a>Classroom Drop-in &#9734;
+
+Classroom Drop-in は、システム リーダーがクラス チーム (仮想教室) を見つけて、必要に応じて指定したドロップイン期間に自分自身または他のユーザーをこれらのクラス チームに追加できる Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)ベースのアプリです。 Microsoft [Power Apps](/powerapps/powerapps-overview) と [Power Automate](/power-automate/getting-started)を使用して構築されたアプリは、Microsoft Teams と深く統合され、教育機関がビジネス要件ごとにクラス チームの関連関係者にアクセスを提供することで、ハイブリッド学習環境での運用を最適化できます。
+
+[GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-classroom-dropin)
+
+![クラスルームのドロップイン要求](../assets/images/classroom-drop-in-request.png)
 
 ## <a name="company-communicator"></a>社内コミュニケーター
 
@@ -117,7 +125,7 @@ Checklist は、チャットやチャネルで共有チェックリストを作�
 
 ![社内コミュニケーターの作成ボックス ビュー](../assets/images/CompanyCommunicatorCompose.png)
 
-## <a name="contact-group-lookup-9734"></a>Contact Group Lookup &#9734;
+## <a name="contact-group-lookup"></a>連絡先グループの参照
 
 Contact Group Lookup アプリは、組織の連絡先グループ (以前は、「配布リストまたはコミュニケーション グループ」と呼ばれていました) を作成、アクセス、および管理するための便利で有用なアプローチを提供します。 ユーザーは、すべての Teams 環境内で、グループ メンバーの表示とチャット、メンバー ステータスの表示、連絡先グループの選択したメンバーとのグループ チャットの作成をすばやく行うことができます。
 
@@ -133,6 +141,14 @@ Contact Group Lookup アプリは、組織の連絡先グループ (以前は、
     ![Contact Group Lookup のチャット開始のデモ](../assets/images/contact-group-lookup-chat.png)
 :::column-end:::
 :::row-end:::
+
+## <a name="co-worker-appreciation-9734"></a>同僚の働き&#9734;
+
+Microsoft Teams の同僚の仕事仲間テンプレートを使用すると、ユーザーは Teams のコンテキスト内で同僚の実績を認識できます。 同僚が仕事仲間に報酬を与える場合、受信者と他のチーム メンバーはチャネルの会話でタグ付けされ、チャネルの特典の詳細に関する通知を受け取ります。 The awards are recorded in the Teams app, which is secure, portable, and easily shareable. これは、ランキング付き、PowerApps ベースのバージョンの Open Badges アプリ テンプレートと見なされます。
+
+[GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-coworker-appreciation)
+
+![全体](../assets/images/coworker-appreciation-1.png)
 
 ## <a name="crowdsourcer"></a>CrowdSourcer
 
@@ -152,7 +168,26 @@ CrowdSourcer は、グループ メンバーから共同で調達された情報
 
 ![ステッカー アプリ](../assets/images/stickers.png)
 
-## <a name="e-prescriptions-9734"></a>E-Prescriptions &#9734; 
+## <a name="employee-ideas-9734"></a>Employee Ideas &#9734;
+
+Employee Ideas アプリは、Azure ベースの Great Ideas アプリ テンプレートの PowerApps バージョンです。 このアプリを使用すると、Teams ユーザーはアイデア キャンペーンを設定および構成できます。 アイデア キャンペーンは、一般的なテーマに関するアイデアをグループ化するカテゴリです。
+
+Teams ユーザーは、次のアクティビティを実行できます。
+* アイデアごとに従業員が提出する必要がある標準的な提出フォームを構成します。 
+* キャンペーンのアイデアとリストを確認して管理します。
+* キャンペーンを変更および削除します。
+* リーダーのアイデア掲示板を確認します。
+* 優先するアイデアに投票して共有します。
+* キャンペーンのアイデアを提出します。
+* 他のチーム メンバーのアイデアを表示します。
+* 最もいいね! アイデアに投票します。
+* キャンペーン内の他のユーザーと比較して、アイデアのパフォーマンスを確認します。
+
+[GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-employeeideas)
+
+![キャンペーン ビューの管理](../assets/images/employee-ideas-manage-campaigns.png) 
+
+## <a name="e-prescriptions"></a>E-前書き 
 
 E-Prescriptions は、患者に電子処方箋を発行するプロセスを自動化することにより、遠隔医療と仮想ケアを強化する [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) ベースのアプリです。 医療専門家は、Teams プラットフォーム内で直接、予定をすばやく確認し、電子処方箋を生成し、電子処方箋を添付した電子メールを患者に送信できます。
 
@@ -169,7 +204,7 @@ E-Prescriptions は、患者に電子処方箋を発行するプロセスを自�
 :::column-end:::
 :::row-end:::
 
-## <a name="employee-training-9734"></a>従業員トレーニング &#9734;
+## <a name="employee-training"></a>従業員トレーニング 
 
 従業員トレーニングは、主催者が組織の学習およびトレーニング イベントを簡単に公開、追跡、促進できるようにする Microsoft Teams アプリです。  このアプリを使用すると、イベント プランナーはイベント登録者にリマインダーと通知を送信できます。従業員は今後のイベントへの関心を示し、現在のイベントの最新情報を入手し、Teams メッセージング拡張機能を介して同僚とイベントの詳細を共有できます。
 
@@ -209,7 +244,7 @@ E-Prescriptions は、患者に電子処方箋を発行するプロセスを自�
 >
 > &#x2714; [アダプティブ カード](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)として表示する追加の詳細を含む回答を構成します。
 >
-[**GitHub で入手する**](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
+[GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
 
 ![FAQ プラス GIF](../assets/images/FAQPlusEndUser.gif)
 
@@ -324,7 +359,30 @@ Incident Reporter は、組織内のインシデントの管理を最適化す�
 :::column-end:::
 :::row-end:::
 
-## <a name="new-employee-onboarding-9734"></a>New Employee Onboarding &#9734;
+## <a name="inspection-9734"></a>検査&#9734;
+
+ 検査は、フロント ライン ワーカーが場所から資産や機器までを検査できる Microsoft Teams アプリです。 たとえば、小売店、製造工場、自動車やコンピューターなどです。 このソリューションには、それぞれ異なる種類のユーザーを対象とした 2 つのアプリがあります。
+
+このアプリは、フロント ラインの作業者が資産やエリアを検査したり、製品やサービスの品質を管理したり、職場で安全を維持したりできる機能を提供します。 検査中に見つかった問題に対処するために、チーム メンバー間の通信を容易に行います。 このアプリは、問題の解決を迅速に行い、傾向を強調するマネージャー向け簡単なレポートを提供します。
+
+[GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-inspection)
+
+ ![検査の概要](../assets/images/inspection-app.png)  
+
+
+## <a name="issue-reporting-9734"></a>問題の報告&#9734;
+
+問題報告アプリは、従業員とマネージャーが問題の発生と管理を支援します。 これは、問題を報告するための問題報告アプリと、問題を管理するための問題の管理アプリの 2 つのアプリで構成されています。
+
+チーム マネージャーは、問題の管理アプリを使用して、Microsoft Teams メッセージと Planner タスクがアプリによって作成されるチャネルを含むアプリ エクスペリエンスを構成します。 マネージャーは、ユーザーが問題を報告するときに詳細を収集するテンプレート フォームを作成するためにもアプリを使用します。 たとえば、問題テンプレート フォームを確認、編集、または削除します。 また、アプリを使用して、チームの問題を確認し、問題履歴を報告し、問題の解決を効率的に管理することもできます。
+
+従業員は、問題報告アプリを使用して、問題の解決に必要な問題と詳細を記録します。 アプリは、既存の問題を変更して解決し、個人またはチームの問題の大きなビューを取得するためにも使用されます。
+
+[GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-issuereporting)
+
+![Issue reporting team view](../assets/images/issue-reporting-team-view.png)  
+
+## <a name="new-employee-onboarding"></a>新入社員オンボーディング 
 
 New Employee Onboarding は、組織が新入社員教育で、従業員に一貫した高品質のオンボーディング エクスペリエンスを提供できるようにする Microsoft Teams と [SharePoint New Employee Onboarding が統合されたソリューション](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19)です。 このアプリは、人事チームと採用マネージャーがオリエンテーションと導入プロセス全体で関連情報を提供するために使用でき、新入社員がフィードバックを共有し、紹介を提供し、オンボーディング タスクを完了するために使用できます。
 
@@ -358,7 +416,7 @@ New Employee Onboarding は、組織が新入社員教育で、従業員に一�
 :::column-end:::
 :::row-end:::
 
-## <a name="poll-9734"></a>Poll &#9734;
+## <a name="poll"></a>ポーリング 
 
 Poll は、チャットまたはチャネルで投票をすばやく作成して送信し、チームの意見や好みを収集できるようにする Microsoft Teams のカスタム [メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)アプリです。 このアプリは、デスクトップ、ブラウザー、iOS、Android のすべての Teams プラットフォーム クライアントでサポートされており、Microsoft365 サブスクリプションの一部として展開する準備ができています。
 
@@ -378,7 +436,22 @@ Poll は、チャットまたはチャネルで投票をすばやく作成して
 
 ![応答のサンプル ビュー](../assets/images/quick-responses.png)
 
-## <a name="reflect-9734"></a>Reflect &#9734;
+## <a name="rapid-assist-9734"></a>迅速なアシスト&#9734;
+
+Rapid Assist は、Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) ベースのアプリです。お客様に対する関係者は、迅速な回答の取得、情報の検索、オープンな要求のフォローアップを行い、専門家が質問に答えるのに役立つ通話を迅速に受け取る通知を受信できます。 Microsoft [Power Apps](/powerapps/powerapps-overview) と [Power Automate](/power-automate/getting-started)を使用して構築されたアプリは、Microsoft Teams と深く統合され、組織はフロントライン ワーカーを企業の連絡員と簡単に接続して、顧客の問い合わせを解決し、優れたカスタマー エクスペリエンスを提供できます。 
+
+[GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-rapid-assist)
+
+:::row:::
+   :::column span="":::
+     ![エンド ユーザー要求インターフェイス](../assets/images/EndUserHome.png)
+   :::column-end:::
+   :::column span="":::
+      ![エキスパート 要求ビュー](../assets/images/ExpertViewRequests.png)
+   :::column-end:::
+:::row-end:::
+
+## <a name="reflect"></a>反映 
 
 Reflect は、チーム メンバーがチーム内の同僚やグループリーダーと感情的に幸福な状態を直接共有するための安全かつ包括的なリソースを提供する Microsoft Teams のカスタム [メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)アプリです。 このアプリは、チャネル、グループ、会議、一対一チャットで利用でき、チェックイン応答は、パブリック、プライベートから送信者、または完全に匿名に設定できます。
 
@@ -457,7 +530,7 @@ Scrums for Group Chat は、グループ チャットのメンバーが非同期
 
 ![Scrums for Group Chat のデモ](https://raw.githubusercontent.com/wiki/OfficeDev/microsoft-teams-app-scrumstatus/images/StartScrum.jpg)
 
-## <a name="share-now-9734"></a>Share Now &#9734;
+## <a name="share-now"></a>今すぐ共有 
 
 Share Now アプリは、ユーザーがチーム環境内でコンテンツを簡単に共有できるようにすることで、同僚間の積極的な情報交換を促進します。 ユーザーはアプリを使用して、関心のあるアイテムをチーム メンバーと共有し、新しい共有コンテンツを見つけ、環境設定を設定し、後で読むためにお気に入りをブックマークします。
 
@@ -483,7 +556,7 @@ Staff Check-ins は、[Power Apps](/powerapps/powerapps-overview) ベースの�
 
 ![チェックインの作成ビュー](../assets/images/staff-check-ins-create.png)
 
-## <a name="survey-9734"></a>Survey &#9734;
+## <a name="survey"></a>アンケート
 
 Survey は、チャットまたはチャネルで調査を作成してデータを収集し、実用的な洞察を得ることができる Microsoft Teams のカスタム [メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)アプリです。  このアプリは、デスクトップ、ブラウザー、iOS、Android のすべての Teams プラットフォーム クライアントでサポートされており、Microsoft365 サブスクリプションの一部として展開する準備ができています。  
 
@@ -495,7 +568,17 @@ Survey は、チャットまたはチャネルで調査を作成してデータ�
 :::column-end:::
 :::row-end:::
 
-## <a name="visitor-management-9734"></a>Visitor Management &#9734;
+## <a name="virtual-rounding-9734"></a>仮想丸め&#9734;
+
+病院や緊急電話のプロバイダーは、1 日に数十回、多くの場合何百回もの "ラウンド" を行います。 患者に対するこれらの迅速なチェックインは、患者がどのように行っているのかの状態チェックを提供し、患者の懸念に対処することを目的とします。 丸めは、患者が複数の種類のプロバイダーによって監視されるのを確実にするための不可欠な方法ですが、各プロバイダーから、新しいマスク、および新しい一連のテープを使用する必要がある各訪問について、PPE の大きなドレインを表します。 このアプリ テンプレートを使用すると、医療労働者は、プロバイダーと患者の間の Microsoft Teams 会議を通じて、事実上簡単にラウンドを実施できます。
+
+仮想丸めソリューションは、Microsoft Health and Life Sciences ブログの投稿 [でも参照されています](https://aka.ms/teamsvirtualrounding)。
+
+[GitHub で入手する](https://github.com/SmartterHealth/Virtual-Rounding)
+
+![仮想丸め](../assets/images/virtual-rounding-overview.png)
+
+## <a name="visitor-management"></a>訪問者の管理
 
 Visitor Management アプリを使用すると、組織と従業員は、Microsoft Teams から直接、オンサイトの訪問者プロセスを簡単かつ効率的に管理できます。 このアプリを使用すると、従業員は訪問者の要求を作成し、訪問者のダッシュボードを介して要求状態を一元的に追跡し、訪問者が到着したときにリアルタイムの通知を受け取ることができます。
 
@@ -512,7 +595,7 @@ Visitor Management アプリを使用すると、組織と従業員は、Microso
 :::column-end:::
 :::row-end:::
 
-## <a name="workplace-awards-9734"></a>Workplace Awards &#9734;
+## <a name="workplace-awards"></a>Workplace の特典
 
 Workplace Awards は、現代の職場での認識を促進し、従業員の感謝の文化を促進するための前向きなフレームワークを提供する Teams アプリ テンプレートです。 このアプリを使用すると、従業員の報酬と表彰 (R&R) プログラムを設定および管理できます。このプログラムでは、従業員が同僚を簡単に指名して承認し、 R&R リーダーが提出された指名を表示し、賞を授与し、受領者を発表できます。
 

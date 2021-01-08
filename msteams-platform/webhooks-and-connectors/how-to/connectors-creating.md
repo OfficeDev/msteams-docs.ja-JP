@@ -1,85 +1,144 @@
 ---
 title: Office 365 コネクタ
-description: Microsoft Teams で Office 365 コネクタを使い始める方法について説明します。
+description: Microsoft Teams で Office 365 コネクタの使用を開始する方法について説明します
 keywords: Teams o365 コネクタ
+ms.topic: conceptual
 ms.date: 04/19/2019
-ms.openlocfilehash: 374e5058d2041d43f675d643e5b830bf72ad79c2
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: 62a27e8f7b218491682ff0b9216e428f51264d0a
+ms.sourcegitcommit: 5f1d6c12d80d48f403b73586f68bacf15785c855
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49605343"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "49739050"
 ---
-# <a name="creating-office-365-connectors-for-microsoft-teams"></a>Microsoft Teams 用 Office 365 コネクタの作成
+# <a name="creating-office-365-connectors-for-microsoft-teams"></a>Microsoft Teams Office 365 コネクタの作成
 
->Microsoft Teams アプリを使用すると、既存の Office 365 コネクタを追加したり、Microsoft Teams に含める新しい Office コネクタを作成したりできます。 詳細については [、「独自のコネクタを作成](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector) する」を参照してください。
+>Microsoft Teams アプリを使用すると、既存の Office 365 コネクタを追加したり、Microsoft Teams に含める新しいコネクタを作成することができます。 詳細 [については、「独自のコネクタを作成する](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector) 」を参照してください。
 
-## <a name="adding-a-connector-to-your-teams-app"></a>Teams アプリにコネクタを追加する
+## <a name="adding-a-connector-to-your-teams-app"></a>Teams アプリへのコネクタの追加
 
-登録済みのコネクタを Teams アプリ パッケージの一部として配布できます。 スタンドアロンソリューションとして、または Teams で利用できるいくつかの [機能](~/concepts/extensibility-points.md) の1つとして、appsource の提出の一環として、コネクタを [パッケージ化](~/concepts/build-and-test/apps-package.md) して [発行](~/concepts/deploy-and-publish/apps-publish.md) することができます。また、teams 内でアップロードするために直接ユーザーに提供することもできます。
+登録済みのコネクタを Teams アプリ パッケージの一部として配布できます。 スタンドアロン ソリューションとしても、Teams でエクスペリエンスが可能[](~/concepts/extensibility-points.md)ないくつかの機能の 1 つとしても、AppSource[](~/concepts/deploy-and-publish/apps-publish.md)提出の一部としてコネクタをパッケージ化して公開したり、Teams 内でアップロードするためにユーザーに直接提供することができます。 [](~/concepts/build-and-test/apps-package.md)
 
-コネクタを配布するには、 [コネクタ開発者ダッシュボード](https://outlook.office.com/connectors/home/login/#/publish)を使用して登録する必要があります。 既定では、コネクタが登録されると、そのコネクタは、それらをサポートするすべての Office 365 製品 (Outlook と Teams を含む) で動作していると見なされます。 それ以外の _場合は、_ microsoft teams でのみ動作するコネクタを作成する必要がある場合は、 [microsoft Teams アプリの提出](mailto:teamsubm@microsoft.com)に直接お問い合わせください。
+コネクタを配布するには、コネクタ開発者ダッシュボードを使用して [登録する必要があります](https://outlook.office.com/connectors/home/login/#/publish)。 既定では、コネクタを登録すると、Outlook や Teams を含む、コネクタをサポートする Office 365 製品すべてでコネクタが機能すると想定されます。 Microsoft Teams _でのみ動作_ するコネクタを作成する必要がある場合は、Microsoft Teams アプリの申請で直接 [お問い合わせください](mailto:teamsubm@microsoft.com)。
 
 > [!IMPORTANT]
-> コネクタ開発者ダッシュボードで [ **保存** ] を選択すると、コネクタが登録されます。 AppSource でコネクタを公開する場合は、「 [Microsoft Teams アプリを AppSource に発行](~/concepts/deploy-and-publish/apps-publish.md)する」の手順に従ってください。 アプリを AppSource で公開せず、組織に直接配布するだけではなく、 [組織に公開](#publish-connectors-for-your-organization)することもできます。 組織への発行のみを希望する場合は、コネクタのダッシュボードで、これ以上の操作は必要ありません。
+> コネクタ開発者ダッシュボード **で** [保存] を選択すると、コネクタが登録されます。 AppSource でコネクタを発行する場合は、「Microsoft Teams アプリを AppSource に発行する」の手順 [に従います](~/concepts/deploy-and-publish/apps-publish.md)。 AppSource でアプリを公開するのではなく、組織にのみ直接配布する場合は、組織に公開 [します](#publish-connectors-for-your-organization)。 組織にのみ発行する場合は、コネクタ ダッシュボードでこれ以上の操作は必要ありません。
 
-### <a name="integrating-the-configuration-experience"></a>構成作業の統合
+### <a name="integrating-the-configuration-experience"></a>構成エクスペリエンスの統合
 
-ユーザーは、Teams クライアントを離れることなく、コネクタ構成作業全体を完了します。 この操作を実現するために、Teams は構成ページを iframe 内に直接埋め込みます。 操作の順序は次のとおりです。
+ユーザーは、Teams クライアントから離れることなく、コネクタの構成エクスペリエンス全体を完了します。 このエクスペリエンスを実現するために、Teams は構成ページを iframe 内に直接埋め込む必要があります。 操作の順序は次のとおりです。
 
-1. ユーザーがコネクタをクリックして、構成プロセスを開始します。
-2. Teams は、構成の操作を行に読み込みます。
-3. ユーザーは、web experience と対話して構成を完了します。
-4. ユーザーが [保存] を押すと、コード内でコールバックがトリガーされます。
-5. コードでは、webhook 設定 (以下に記載) を取得することによって、save イベントを処理します。 コードでは、後でイベントを post するために webhook を格納する必要があります。
+1. ユーザーがコネクタをクリックして構成プロセスを開始します。
+2. Teams は、構成エクスペリエンスをラインで読み込む。
+3. ユーザーは Web エクスペリエンスを操作して構成を完了します。
+4. ユーザーが "Save" を押すと、コード内でコールバックがトリガーされます。
+5. コードは、webhook 設定を取得して保存イベントを処理します (以下に説明します)。 コードでは、後でイベントを投稿するために webhook を保存する必要があります。
 
-既存の web 構成機能を再利用するか、Teams で特別にホストされる個別のバージョンを作成することができます。 コードは次のようにする必要があります。
+既存の Web 構成エクスペリエンスを再利用したり、Teams で特にホストする別のバージョンを作成することができます。 コードは次の条件を実行する必要があります。
 
-1. Microsoft Teams JavaScript SDK を含めます。 これにより、コードは、現在のユーザー/チャネル/チームコンテキストを取得し、認証フローを開始するなどの一般的な操作を実行するための Api にアクセスできます。 `microsoftTeams.initialize()` を呼び出して SDK を初期化します。
-2. `microsoftTeams.settings.setValidityState(true)`[保存] ボタンを有効にする場合に呼び出されます。 これは、選択範囲またはフィールドの更新など、有効なユーザー入力に対する応答として実行する必要があります。
-3. `microsoftTeams.settings.registerOnSaveHandler()`ユーザーが [保存] をクリックしたときに呼び出されるイベントハンドラーを登録します。
-4. `microsoftTeams.settings.setSettings()`を呼び出して、コネクタの設定を保存します。 ここに保存される内容は、ユーザーがコネクタの既存の構成を更新しようとした場合に、[構成] ダイアログに表示される内容にもなります。
-5. `microsoftTeams.settings.getSettings()`URL 自体を含む webhook プロパティをフェッチする呼び出し。 Save イベントの実行時に加えて、この関数は、ページが最初に読み込まれたときに再構成したときにも呼び出す必要があります。
-6. オプション `microsoftTeams.settings.registerOnRemoveHandler()` ユーザーがコネクタを削除したときに呼び出されるイベントハンドラーを登録します。 このイベントは、サービスにクリーンアップアクションを実行する機会を提供します。
+1. Microsoft Teams JavaScript SDK を含める。 これにより、現在のユーザー/チャネル/チーム コンテキストの取得や認証フローの開始など、一般的な操作を実行する API へのコード アクセスが可能になります。 `microsoftTeams.initialize()` を呼び出して SDK を初期化します。
+2. [ `microsoftTeams.settings.setValidityState(true)` 保存] ボタンを有効にする場合に呼び出します。 これは、選択やフィールドの更新など、有効なユーザー入力への応答として行う必要があります。
+3. ユーザーが `microsoftTeams.settings.registerOnSaveHandler()` [保存] をクリックすると呼び出されるイベント ハンドラーを登録します。
+4. コネクタ `microsoftTeams.settings.setSettings()` の設定を保存するために呼び出します。 ここで保存される情報は、ユーザーがコネクタの既存の構成を更新しようとすると、構成ダイアログに表示されます。
+5. `microsoftTeams.settings.getSettings()`URL 自体を含む webhook プロパティをフェッチする呼び出し。 保存イベント中にこのメソッドを呼び出す必要があります。また、再構成の場合にページが最初に読み込まれたときにも、このメソッドを呼び出す必要があります。
+6. (省略可能)ユーザーが `microsoftTeams.settings.registerOnRemoveHandler()` コネクタを削除するときに呼び出されるイベント ハンドラーを登録します。 このイベントにより、サービスはクリーンアップ操作を実行できます。
 
-#### <a name="getsettings-response-properties"></a>`GetSettings()` 応答のプロパティ
+CSS を使用せずにコネクタ構成ページを作成するサンプル HTML を次に示します。
+
+```html
+<h2>Send notifications when tasks are:</h2>
+<div class="col-md-8">
+    <section id="configSection">
+        <form id="configForm">
+            <input type="radio" name="notificationType" value="Create" onclick="onClick()"> Created
+            <br>
+            <br>
+            <input type="radio" name="notificationType" value="Update" onclick="onClick()"> Updated
+        </form>
+    </section>
+</div>
+
+<script src="https://statics.teams.microsoft.com/sdk/v1.5.2/js/MicrosoftTeams.min.js" crossorigin="anonymous"></script>
+<script src="/Scripts/jquery-1.10.2.js"></script>
+
+<script type="text/javascript">
+
+        function onClick() {
+            microsoftTeams.settings.setValidityState(true);
+        }
+
+        microsoftTeams.initialize();
+        microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
+            var radios = document.getElementsByName('notificationType');
+
+            var eventType = '';
+            if (radios[0].checked) {
+                eventType = radios[0].value;
+            } else {
+                eventType = radios[1].value;
+            }
+
+            microsoftTeams.settings.setSettings({
+                 entityId: eventType,
+                contentUrl: "https://YourSite/Connector/Setup",
+                removeUrl:"https://YourSite/Connector/Setup",
+                 configName: eventType
+                });
+
+            microsoftTeams.settings.getSettings(function (settings) {
+                // We get the Webhook URL in settings.webhookUrl which needs to be saved. 
+                // This can be used later to send notification.
+            });
+
+            saveEvent.notifySuccess();
+        });
+
+        microsoftTeams.settings.registerOnRemoveHandler(function (removeEvent) {
+            var removeCalled = true;
+            alert("Removed" + JSON.stringify(removeEvent));
+        });
+
+</script>
+```
+
+#### <a name="getsettings-response-properties"></a>`GetSettings()` 応答プロパティ
 
 >[!Note]
->この呼び出しによって返されるパラメーター `getSettings` は、このメソッドをタブから呼び出した場合とは異なり、 [ここ](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true)に記載されているものとは異なります。
+>ここでの呼び出しによって返されるパラメーターは、タブからこのメソッドを呼び出す場合とは異なります。また、ここに記載されているパラメーター `getSettings` とは異 [なります](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true)。
 
 | パラメーター   | 詳細 |
 |-------------|---------|
-| `entityId`       | 呼び出し時にコードによって設定されたエンティティ ID `setSettings()` 。 |
-| `configName`  | 呼び出し時にコードによって設定された構成名 `setSettings()` 。 |
-| `contentUrl` | 呼び出し時にコードによって設定された、構成ページの URL `setSettings()` |
-| `webhookUrl` | このコネクタ用に作成された webhook URL。 Webhook URL を保持し、それを使用して、カードをチャネルに送信するように構造化された JSON をポストします。 は、アプリケーションが正常に返される場合にのみ返されます。 |
+| `entityId`       | 呼び出し時にコードによって設定されるエンティティ `setSettings()` ID。 |
+| `configName`  | 呼び出し時にコードによって設定される構成名 `setSettings()` 。 |
+| `contentUrl` | 呼び出し時にコードによって設定される構成ページの URL `setSettings()` |
+| `webhookUrl` | このコネクタ用に作成された webhook URL。 webhook URL を永続化し、POST 構造化 JSON に使用してカードをチャネルに送信します。 は、アプリケーションが正常に返される場合にのみ返されます。 |
 | `appType` | 返される値には、Office 365 メール、Office 365 グループ、Microsoft Teams のそれぞれに対応する `mail`、`groups`、`teams` を指定できます。 |
-| `userObjectId` | これは、コネクタのセットアップを開始した Office 365 ユーザーに対応する一意の id です。 セキュリティで保護する必要があります。 この値は、構成をセットアップした Office 365 内のユーザーをサービス内のユーザーに関連付けるために使用できます。 |
+| `userObjectId` | これは、コネクタのセットアップを開始した Office 365 ユーザーに対応する一意の ID です。 セキュリティで保護する必要があります。 この値は、構成をセットアップした Office 365 内のユーザーをサービス内のユーザーに関連付けるために使用できます。 |
 
-ページの読み込みの一環としてユーザーを認証する必要がある場合は、ページが埋め込まれているときにログインを統合する方法の詳細については、 [このリンク](~/tabs/how-to/authentication/auth-flow-tab.md) を参照してください。
+上記の手順 2 でページを読み込む際にユーザーを認証する必要[](~/tabs/how-to/authentication/auth-flow-tab.md)がある場合は、ページが埋め込まれたときにログインを統合する方法の詳細については、このリンクを参照してください。
 
 > [!NOTE]
-> クライアント間の互換性に関する理由から、コードは、 `microsoftTeams.authentication.registerAuthenticationHandlers()` URL と、成功/失敗のコールバックメソッドを呼び出してから呼び出す必要があり `authenticate()` ます。
+> クライアント間の互換性上の理由から、コードは呼び出す前に URL と成功/失敗コールバック メソッドを使用して呼び `microsoftTeams.authentication.registerAuthenticationHandlers()` 出す必要があります `authenticate()` 。
 
 #### <a name="handling-edits"></a>編集の処理
 
-コードは、既存のコネクタ構成を編集するために戻るユーザーを処理する必要があります。 これを行うには、 `microsoftTeams.settings.setSettings()` 次のパラメーターを使用して、初期構成中にを呼び出します。
+コードは、既存のコネクタ構成を編集するために戻るユーザーを処理する必要があります。 これを行うには、次の `microsoftTeams.settings.setSettings()` パラメーターを使用して初期構成中に呼び出します。
 
-- `entityId` は、サービスによって認識されるカスタム ID であり、ユーザーが構成した内容を表します。
-- `configName` は、構成コードが取得できるフレンドリ名です。
-- `contentUrl` は、ユーザーが既存のコネクタ構成を編集したときに読み込まれるカスタム URL です。 この URL を使用して、コードが編集ケースを簡単に処理できるようにすることができます。
+- `entityId` は、サービスによって理解されるカスタム ID であり、ユーザーが構成した構成を表します。
+- `configName` は、構成コードで取得できる表示名です。
+- `contentUrl` は、ユーザーが既存のコネクタ構成を編集するときに読み込まれるカスタム URL です。 この URL を使用すると、コードで編集ケースを簡単に処理できます。
 
-通常、この呼び出しは、save イベントハンドラーの一部として行われます。 次に、 `contentUrl` 上記のコードが読み込まれたときに、 `getSettings()` 設定またはフォームを構成 UI に事前に設定するためのコードを呼び出す必要があります。
+通常、この呼び出しは保存イベント ハンドラーの一部として行います。 次に、上記が読み込まれたら、コードを呼び出して、構成 UI に設定または `contentUrl` `getSettings()` フォームを事前設定する必要があります。
 
 #### <a name="handling-removals"></a>削除の処理
 
-ユーザーが既存のコネクタ構成を削除したときに、必要に応じてイベントハンドラーを実行することができます。 このハンドラーは、を呼び出して登録し `microsoftTeams.settings.registerOnRemoveHandler()` ます。 このハンドラーは、データベースからエントリを削除するなど、クリーンアップ操作を実行するために使用できます。
+必要に応じて、ユーザーが既存のコネクタ構成を削除するときにイベント ハンドラーを実行できます。 このハンドラーは、呼び出して登録します `microsoftTeams.settings.registerOnRemoveHandler()` 。 このハンドラーを使用して、データベースからエントリを削除するなどのクリーンアップ操作を実行できます。
 
-### <a name="including-the-connector-in-your-manifest"></a>マニフェストにコネクタを含める
+### <a name="including-the-connector-in-your-manifest"></a>マニフェストにコネクタを含む
 
-自動生成された Teams アプリのマニフェストは、ポータルからダウンロードできます。 ただし、これを使用してアプリをテストまたは発行するには、次の操作を実行する必要があります。
+自動生成された Teams アプリ マニフェストは、ポータルからダウンロードできます。 アプリをテストまたは公開する前に、次の操作を行う必要があります。
 
-- [2 つのアイコンを含み](../../concepts/build-and-test/apps-package.md#app-icons)ます。
+- [アイコンを 2 つ含めます](../../concepts/build-and-test/apps-package.md#app-icons)。
 - マニフェストの `icons` の部分を変更し、アイコンの URL ではなくアイコンのファイル名を参照するようにします。
 
 次の manifest.json ファイルには、アプリをテストして送信するために必要な基本的な要素が含まれています。
@@ -135,21 +194,21 @@ ms.locfileid: "49605343"
 
 ![コネクタ ダイアログ ボックスの [アップロード済み] セクションのスクリーンショット](~/assets/images/connectors/connector_dialog_uploaded.png)
 
-構成機能を起動できるようになりました。 このフローは、Microsoft Teams 内でホストされる環境として全面的に発生することに注意してください。
+構成機能を起動できるようになりました。 このフローは、ホストされたエクスペリエンスとして Microsoft Teams 内で完全に発生します。
 
-アクションが正常に動作していることを確認するには `HttpPOST` 、 [コネクタにメッセージを送信](~/webhooks-and-connectors/how-to/connectors-using.md)します。
+操作が正しく `HttpPOST` 動作を確認するには、 [コネクタにメッセージを送信します](~/webhooks-and-connectors/how-to/connectors-using.md)。
 
-## <a name="publish-connectors-for-your-organization"></a>組織の公開コネクタ
+## <a name="publish-connectors-for-your-organization"></a>組織のコネクタを発行する
 
-場合によっては、コネクタアプリを公開する AppSource/Store に公開する必要はありませんが、組織内のユーザーのみが使用できるようにする必要があります。 そのような場合は、カスタムコネクタアプリを [組織のアプリカタログ](~/concepts/deploy-and-publish/apps-publish.md)にアップロードすることができます。 このようにすると、コネクタアプリはその組織のみが使用できるようになり、パブリックストアにコネクタを公開する必要はありません。
+場合によっては、コネクタ アプリをパブリック AppSource/Store に公開したくないが、組織内のユーザーだけが利用できる場合があります。 このような場合は、カスタム コネクタ アプリを組織のアプリ カタログ [にアップロードできます](~/concepts/deploy-and-publish/apps-publish.md)。 これにより、コネクタ アプリは、その組織でのみ利用できます。また、コネクタをパブリック ストアに公開する必要が生じられません。
 
-アプリパッケージをアップロードした後、チーム内でコネクタを構成して使用するには、次の手順を実行して組織のアプリカタログからインストールできます。
+アプリ パッケージをアップロードしたら、チームでコネクタを構成して使用するために、次の手順に従って、組織のアプリ カタログからインストールできます。
 
-1. 左端の垂直ナビゲーションバーから [アプリ] アイコンを選択します。
-1. [ **アプリ** ] ウィンドウで、[ **コネクタ**] を選択します。
-1. 追加するコネクタを選択すると、ポップアップダイアログウィンドウが表示されます。
-1. [ **チームバーに追加] を** 選択します。
-1. 次のダイアログウィンドウで、チームまたはチャネルの名前を入力します。
-1. ダイアログウィンドウの右下隅にあるコネクタバーの **設定** を選択します。
-1. このコネクタは、「 &#9679;&#9679;&#9679; =」の「> その *他のオプション* コネクタのすべてのコネクタ」のセクションで使用でき  =>  *Connectors*  =>  *All*  =>  *Connectors for you team* ます。 このセクションまでスクロールするか、コネクタアプリを検索することによって移動できます。
-1. コネクタを構成または変更するには、[ **構成** ] バーを選択します。
+1. 一方、一方のバーティカル ナビゲーション バーからアプリ アイコンを選択します。
+1. [アプリ **] ウィンドウで** 、[コネクタ] **を選択します**。
+1. 追加するコネクタを選択すると、ポップアップ ダイアログ ウィンドウが表示されます。
+1. [チーム **に追加] バーを選択** します。
+1. 次のダイアログ ウィンドウで、チーム名またはチャネル名を入力します。
+1. ダイアログ ウィンドウ **の右下隅** から [コネクタ バーのセットアップ] を選択します。
+1. コネクタは、そのチームのチームの &#9679;&#9679;&#9679; =>その他のオプションコネクタすべてのコネクタのセクション  =>    =>    =>  で使用できます。 このセクションをスクロールするか、コネクタ アプリを検索して移動できます。
+1. コネクタを構成または変更するには、[構成] バー **を選択** します。

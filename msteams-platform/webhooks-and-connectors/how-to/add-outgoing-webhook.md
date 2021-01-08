@@ -36,17 +36,17 @@ Webhook は、Teams と外部アプリを統合させるための便利な手段
 
 サービスは、標準の Azure Bot Service のメッセージング スキーマでメッセージを受信します。 Bot Framework Connector は、[Azure Bot Service API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference) で文書化されているように、サービスが HTTPS プロトコルを使用して JSON 形式のメッセージ交換を処理できるようにする RESTful サービスです。 [Microsoft Bot Framework SDK] を使用して、メッセージの処理と解析を行うこともできます。 詳細については、「[Azure Bot Service について](/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0)」も *参照してください*。
 
-送信 Webhook は、`team` レベルにスコープが設定され、チームのすべてのメンバーに表示されます。 ボットと同じように、ユーザーは送信 Webhook の名前に対して **\@メンション** の処理を行ってチャネルで呼び出す必要があります。
+送信 Webhook は、`team` レベルにスコープが設定され、チームのすべてのメンバーに表示されます。 ボットと同様、チャネルで送信 Webhook を呼び出すには、ユーザーはその名前を **\@メンション** する必要があります。
 
 ### <a name="2-create-a-method-to-verify-the-outgoing-webhook-hmac-token"></a>2. 送信 Webhook HMAC トークンを確認するメソッドを作成する
 
-#### <a name="hmac-signature-for-testing-with-code-example"></a>コード例を使用してテストのための HMAC 署名を使用する
+#### <a name="hmac-signature-for-testing-with-code-example"></a>コード例を使ったテスト用の HMAC 署名
 
-受信メッセージと id の例: {"contoso" の SigningKeyDictionary の "contoso"、"vqF0En + Z0ucuRTM/01o2GuhMH3hKKk/N2bOmlM31zaA ="}。
+受信メッセージと ID の例: {"contoso", "vqF0En+Z0ucuRTM/01o2GuhMH3hKKk/N2bOmlM31zaA=" } という SigningKeyDictionary の "contoso"。 
 
-要求ヘッダーの認証には、"HMAC 03TCao0i55H1eVKUusZOTZRjtvYTs + mO41mPL + R1e1U =" の値を使用します。
+要求ヘッダーの認証には、"HMAC 03TCao0i55H1eVKUusZOTZRjtvYTs + mO41mPL + R1e1U =" という値を使用します。
 
-サービスが実際の Teams クライアントからの呼び出しのみを受信できるようにするために、Teams では、認証プロトコルに常に含まれている必要がある HTTP `hmac` ヘッダーに HMAC コードが用意されています。
+サービスが受け取る呼び出しが本物の Teams クライアントからの呼び出しのみになるよう、認証プロトコルに常に含まれている必要がある HTTP `hmac` ヘッダーの HMAC コードが Teams によって提供されます。
 
 コードで、要求に含まれる HMAC 署名を常に検証する必要があり、以下のような動作が求められます。
 

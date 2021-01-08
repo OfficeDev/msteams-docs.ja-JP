@@ -173,7 +173,7 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
 2. POST が成功すると、単に "**1**" という `Invoke-RestMethod` の出力が表示されます。
 3. Webhook URL に関連付けられている Microsoft Teams チャネルを確認します。 チャネルに新しいカードが投稿されているはずです。
 
-- [ 2 つのアイコンが含まれます ](../../concepts/build-and-test/apps-package.md#app-icons)。
+- [アイコンを 2 つ含めます](../../concepts/build-and-test/apps-package.md#app-icons)。
 - マニフェストの `icons` の部分を変更し、アイコンの URL ではなくアイコンのファイル名を参照するようにします。
 
 次の manifest.json ファイルには、アプリをテストして送信するために必要な基本的な要素が含まれています。
