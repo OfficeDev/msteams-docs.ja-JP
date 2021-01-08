@@ -2,12 +2,12 @@
 title: カード リファレンス
 description: Teams の Bot で使用できるすべてのカードとカード アクションについての説明
 keywords: Bot のカード リファレンス
-ms.openlocfilehash: 7c37d05ae4cfd07049eaec6dec5eda0f3312cefa
-ms.sourcegitcommit: 64acd30eee8af5fe151e9866c13226ed3f337c72
-ms.translationtype: HT
+ms.openlocfilehash: 22a4faa932173387cbefe900e30106d063c49e50
+ms.sourcegitcommit: 5739245903278d521ec920427248b6b48676e637
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346743"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "49778395"
 ---
 # <a name="cards-reference"></a>カード リファレンス
 
@@ -76,8 +76,8 @@ ms.locfileid: "49346743"
 |
 
 > [!NOTE]
-> メディア要素は、現在、Teams プラットフォームのアダプティブ カード v1.2 ではサポートされていません。
-
+> * Teams プラットフォームは、アダプティブ カード機能の v1.2 以前をサポートしています。
+> * メディア要素は現在、Teams プラットフォームのアダプティブ カード v1.2 ではサポートされていません。
 ### <a name="example-adaptive-card"></a>アダプティブ カードの例
 
 ![アダプティブ カードの例](~/assets/images/cards/adaptivecard.png)
@@ -593,7 +593,7 @@ Bot がユーザーのサインインを要求できるようにするカード�
 
 カード コレクションは Teams でサポートされています。
 
-`builder.AttachmentLayout.carousel` と `builder.AttachmentLayout.list` のカード コレクションが Bot Framework によって提供されています。 これらのコレクションには、アダプティブ、ヒーロー、サムネイルのカードを含めることができます。
+カード コレクション: `builder.AttachmentLayout.carousel` and `builder.AttachmentLayout.list` . これらのコレクションには、アダプティブ カード、ヒーロー カード、サムネイル カードが含まれている。
 
 ## <a name="carousel-collection"></a>カルーセル コレクション
 
@@ -609,15 +609,182 @@ Bot がユーザーのサインインを要求できるようにするカード�
 > [!NOTE]
 > カルーセルでは、メッセージごとに最大 10 枚のカードを表示することができます。
 
+### <a name="properties-of-a-carousel-card"></a>カルーセル カードのプロパティ
+
+カルーセル カードのプロパティは、ヒーロー カードとサムネイル カードのプロパティと同じです。
+
 ### <a name="example-carousel-collection"></a>カルーセル コレクションの例
 
 ![カードのカルーセルの例](~/assets/images/cards/carousel.png)
 
-プロパティは、ヒーローやサムネイル カードの場合と同じです。
+```json
+{
+ "attachmentLayout": "carousel",
+ "attachments":[
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+          {
+            "type": "Container",
+            "items": [
+              {
+                "type": "TextBlock",
+                "size": "extraLarge",
+                "weight": "bolder",
+                "text": "Welcome to Employee Connect",
+                "height": "stretch"
+              },
+              {
+                "type": "TextBlock",
+                "size": "medium",
+                "weight": "bolder",
+                "text": "Add events to your calendar",
+                "height": "stretch"
+              },
+              {
+                "type": "TextBlock",
+                "weight": "bolder",
+                "text": "The bot can send \r\rnotification to remind \r\ryou about the latest \r\revents and trainings.",
+                "wrap": true,
+                "height": "stretch"
+              },
+              {
+                "type": "ColumnSet",
+                "columns": [
+                  {
+                    "type": "Column",
+                    "items": [],
+                    "height": "stretch"
+                  }
+                ]
+              },
+              {
+                "type": "ColumnSet",
+                "columns": [
+                  {
+                    "type": "Column",
+                    "items": [],
+                    "height": "stretch"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "type": "Action.Submit",
+            "title": "Let's get started"
+          }
+        ]
+      }
+    },
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "type": "AdaptiveCard",
+        "version": "1.2",
+        "body": [
+          {
+            "type": "Container",
+            "items": [
+              {
+                "type": "TextBlock",
+                "size": "large",
+                "weight": "bolder",
+                "text": "Employee connect"
+              },
+              {
+                "type": "TextBlock",
+                "text": "The bot can send notifications \r\rto remind you about the latest \r\r events and trainings",
+                "wrap": true,
+                "maxWidth": 2
+              },
+              {
+                "type": "ColumnSet",
+                "columns": [
+                  {
+                    "type": "Column",
+                    "items": [],
+                    "height": "stretch"
+                  }
+                ]
+              },
+              {
+                "type": "ColumnSet",
+                "columns": [
+                  {
+                    "type": "Column",
+                    "items": [],
+                    "height": "stretch"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "type": "Action.Submit",
+            "title": "Let's get started"
+          }
+        ]
+      }
+    },
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+          {
+            "type": "Container",
+            "items": [
+              {
+                "type": "TextBlock",
+                "size": "large",
+                "weight": "bolder",
+                "text": "Employee Connect final"
+              },
+              {
+                "type": "TextBlock",
+                "weight": "bolder",
+                "text": "Create and manage your tasks",
+                "wrap": true
+              },
+              {
+                "type": "TextBlock",
+                "text": "The app identifies all your pending tasks \r\r and helps you manage everything at \r\r one place.",
+                "wrap": true
+              },
+              {
+                "type": "TextBlock",
+                "weight": "bolder",
+                "text": "Try these commands \r\r- Pending Submissions \r\r- Pending Approvals- My Tools",
+                "wrap": true,
+                "height": "stretch"
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "type": "Action.Submit",
+            "title": "Let's get started"
+          }
+        ]
+      }
+    }
+  ]
+}
+```
 
 ### <a name="syntax-for-carousel-collections"></a>カルーセル コレクションの構文
 
-`builder.AttachmentLayout.carousel`
+`builder.AttachmentLayoutTypes.Carousel`
 
 ## <a name="list-collection"></a>リスト コレクション
 
