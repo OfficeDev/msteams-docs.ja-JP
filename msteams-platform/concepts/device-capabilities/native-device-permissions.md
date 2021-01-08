@@ -1,66 +1,68 @@
 ---
-title: Microsoft Teams タブのデバイスへのアクセス許可を要求する
-description: 通常、ユーザーの同意を必要とするネイティブ機能へのアクセスを要求するためにアプリのマニフェストを更新する方法
+title: Microsoft Teams タブのデバイスのアクセス許可を要求する
+description: 通常はユーザーの同意が必要なネイティブ機能へのアクセスを要求するためにアプリ マニフェストを更新する方法
 keywords: teams タブの開発
-ms.openlocfilehash: d6c66525ab0e81f0632df5e2c323926279e38a8e
-ms.sourcegitcommit: 50571f5c6afc86177c4fe1032fe13366a7b706dd
+ms.openlocfilehash: 6be183d2610616f3bd3bdf32554976322193c132
+ms.sourcegitcommit: d0e71ea63af2f67eba75ba283ec46cc7cdf87d75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "49576881"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "49731980"
 ---
-# <a name="request-device-permissions-for-your-microsoft-teams-tab"></a><span data-ttu-id="4676d-104">Microsoft Teams タブのデバイスへのアクセス許可を要求する</span><span class="sxs-lookup"><span data-stu-id="4676d-104">Request device permissions for your Microsoft Teams tab</span></span>
+# <a name="request-device-permissions-for-your-microsoft-teams-tab"></a><span data-ttu-id="0f5e7-104">Microsoft Teams タブのデバイスのアクセス許可を要求する</span><span class="sxs-lookup"><span data-stu-id="0f5e7-104">Request device permissions for your Microsoft Teams tab</span></span>
 
-<span data-ttu-id="4676d-105">次のような、ネイティブデバイスへのアクセスを必要とする機能を使用して、タブを充実させることができます。</span><span class="sxs-lookup"><span data-stu-id="4676d-105">You might want to enrich your tab with features that require access native device functionality like:</span></span>
+<span data-ttu-id="0f5e7-105">次のようなネイティブ デバイス機能へのアクセスが必要な機能をタブに追加することもできます。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-105">You might want to enrich your tab with features that require access to native device functionality like:</span></span>
 
 > [!div class="checklist"]
 >
-> * <span data-ttu-id="4676d-106">デジタル</span><span class="sxs-lookup"><span data-stu-id="4676d-106">Camera</span></span>
-> * <span data-ttu-id="4676d-107">マイク</span><span class="sxs-lookup"><span data-stu-id="4676d-107">Microphone</span></span>
-> * <span data-ttu-id="4676d-108">Location</span><span class="sxs-lookup"><span data-stu-id="4676d-108">Location</span></span>
-> * <span data-ttu-id="4676d-109">通知</span><span class="sxs-lookup"><span data-stu-id="4676d-109">Notifications</span></span>
+> * <span data-ttu-id="0f5e7-106">カメラ</span><span class="sxs-lookup"><span data-stu-id="0f5e7-106">Camera</span></span>
+> * <span data-ttu-id="0f5e7-107">マイク</span><span class="sxs-lookup"><span data-stu-id="0f5e7-107">Microphone</span></span>
+> * <span data-ttu-id="0f5e7-108">Location</span><span class="sxs-lookup"><span data-stu-id="0f5e7-108">Location</span></span>
+> * <span data-ttu-id="0f5e7-109">通知</span><span class="sxs-lookup"><span data-stu-id="0f5e7-109">Notifications</span></span>
+
+[!Note] <span data-ttu-id="0f5e7-110">Microsoft Teams モバイル アプリにカメラと画像の機能を統合するには、Teams のカメラ機能と画像機能 [を参照してください。](../../concepts/device-capabilities/mobile-camera-image-permissions.md)</span><span class="sxs-lookup"><span data-stu-id="0f5e7-110">To integrate camera and image capabilities within your Microsoft Teams mobile app, refer [Camera and image capabilities in Teams.](../../concepts/device-capabilities/mobile-camera-image-permissions.md)</span></span>
 
 > [!IMPORTANT]
 >
-> * <span data-ttu-id="4676d-110">現時点では、Teams モバイルクライアント `camera` `location`  はネイティブデバイス機能のみをサポートしており、タブを含むすべてのアプリ構成要素で利用できます。</span><span class="sxs-lookup"><span data-stu-id="4676d-110">Currently, Teams mobile client only supports `camera` and `location`  through native device capabilities and is available on all app constructs including tabs.</span></span> </br>
-> * <span data-ttu-id="4676d-111">`camera`画像キャプチャのサポートは、 [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true)によって有効になります。</span><span class="sxs-lookup"><span data-stu-id="4676d-111">Support for `camera` image capture is enabled by the [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true).</span></span>
-> * <span data-ttu-id="4676d-112">現時点では、すべてのデスクトップクライアントで、 [**地理位置情報 API**](../../resources/schema/manifest-schema.md#devicepermissions) は完全にはサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="4676d-112">The [**geolocation API**](../../resources/schema/manifest-schema.md#devicepermissions) is currently not fully supported on all desktop clients.</span></span>
+> * <span data-ttu-id="0f5e7-111">現時点では、Teams モバイル クライアントは、ネイティブ デバイス機能を介したアクセスのみをサポートし、タブを含むすべてのアプリコンストラクト `camera` `gallery` `mic` `location` で利用できます。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-111">At present, Teams mobile client only supports access to `camera`, `gallery`, `mic`, and `location` through native device capabilities and is available on all app constructs including tabs.</span></span> </br>
+> * <span data-ttu-id="0f5e7-112">selectMedia `camera` `gallery` API を通じて `mic` サポート [**され、有効になります**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true)。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-112">Support for `camera`, `gallery`, and `mic` is enabled through [**selectMedia API**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true).</span></span> <span data-ttu-id="0f5e7-113">単一のイメージ キャプチャでは [**、captureImage API を使用できます**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true)。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-113">For single image capture you may use [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true).</span></span>
+> * <span data-ttu-id="0f5e7-114">`location`getLocation API を使用してサポート [**が有効になります**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true)。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-114">Support for `location` is enabled through [**getLocation API**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true).</span></span> <span data-ttu-id="0f5e7-115">位置情報 API は現在、すべてのデスクトップ クライアントで完全にはサポートされていないので、この [**API**](../../resources/schema/manifest-schema.md#devicepermissions) を使用してください。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-115">It's recommended you use this API as [**geolocation API**](../../resources/schema/manifest-schema.md#devicepermissions) is currently not fully supported on all desktop clients.</span></span>
 
-## <a name="device-permissions"></a><span data-ttu-id="4676d-113">デバイス アクセス許可</span><span class="sxs-lookup"><span data-stu-id="4676d-113">Device permissions</span></span>
+## <a name="device-permissions"></a><span data-ttu-id="0f5e7-116">デバイス アクセス許可</span><span class="sxs-lookup"><span data-stu-id="0f5e7-116">Device permissions</span></span>
 
-<span data-ttu-id="4676d-114">ユーザーのデバイスのアクセス許可にアクセスすると、次のように、より高度なエクスペリエンスを構築できます。</span><span class="sxs-lookup"><span data-stu-id="4676d-114">Accessing a user’s device permissions allows you to build much richer experiences, for example:</span></span>
+<span data-ttu-id="0f5e7-117">ユーザーのデバイスのアクセス許可にアクセスすると、次に示す、より豊富なエクスペリエンスを構築できます。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-117">Accessing a user’s device permissions allows you to build much richer experiences, for example:</span></span>
 
-* <span data-ttu-id="4676d-115">短いビデオを録音および共有する</span><span class="sxs-lookup"><span data-stu-id="4676d-115">Record and share short videos</span></span>
-* <span data-ttu-id="4676d-116">短い音声メモを録音し、後で保存する</span><span class="sxs-lookup"><span data-stu-id="4676d-116">Record short audio memos and save them for later</span></span>
-* <span data-ttu-id="4676d-117">ユーザーの場所情報を使用して関連情報を表示する</span><span class="sxs-lookup"><span data-stu-id="4676d-117">Use user location information to display relevant information</span></span>
+* <span data-ttu-id="0f5e7-118">短いビデオを録画して共有する</span><span class="sxs-lookup"><span data-stu-id="0f5e7-118">Record and share short videos</span></span>
+* <span data-ttu-id="0f5e7-119">短いオーディオ メモを録音し、後で保存する</span><span class="sxs-lookup"><span data-stu-id="0f5e7-119">Record short audio memos and save them for later</span></span>
+* <span data-ttu-id="0f5e7-120">ユーザーの位置情報を使用して関連情報を表示する</span><span class="sxs-lookup"><span data-stu-id="0f5e7-120">Use user location information to display relevant information</span></span>
 
-<span data-ttu-id="4676d-118">これらの機能へのアクセスは、ほとんどのモダン web ブラウザーで標準になっていますが、アプリマニフェストを更新することによって、使用する機能を Teams に知らせる必要があります。</span><span class="sxs-lookup"><span data-stu-id="4676d-118">While access to these features are standard in most modern web browsers, you need to let Teams know which features you’d like to use by updating your app manifest.</span></span> <span data-ttu-id="4676d-119">これにより、アプリが Teams デスクトップクライアント上で実行されているときに、ブラウザーと同じ方法でアクセス許可を要求することができます。</span><span class="sxs-lookup"><span data-stu-id="4676d-119">This will allow you to ask for permissions, the same way you would in a browser, while your app is running on the Teams desktop client.</span></span>
+<span data-ttu-id="0f5e7-121">これらの機能へのアクセスは、ほとんどの最新の Web ブラウザーでは標準ですが、アプリ マニフェストを更新して使用する機能を Teams に知らせる必要があります。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-121">While access to these features is standard in most modern web browsers, you need to let Teams know which features you’d like to use by updating your app manifest.</span></span> <span data-ttu-id="0f5e7-122">これにより、アプリが Teams デスクトップ クライアントで実行されている間に、ブラウザーで行うのと同じ方法でアクセス許可を要求できます。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-122">This will allow you to ask for permissions, the same way you would in a browser, while your app is running on the Teams desktop client.</span></span>
 
-## <a name="manage-permissions"></a><span data-ttu-id="4676d-120">権限の管理</span><span class="sxs-lookup"><span data-stu-id="4676d-120">Manage permissions</span></span>
+## <a name="manage-permissions"></a><span data-ttu-id="0f5e7-123">権限の管理</span><span class="sxs-lookup"><span data-stu-id="0f5e7-123">Manage permissions</span></span>
 
-# <a name="desktop"></a>[<span data-ttu-id="4676d-121">デスクトップ</span><span class="sxs-lookup"><span data-stu-id="4676d-121">Desktop</span></span>](#tab/desktop)
+# <a name="desktop"></a>[<span data-ttu-id="0f5e7-124">デスクトップ</span><span class="sxs-lookup"><span data-stu-id="0f5e7-124">Desktop</span></span>](#tab/desktop)
 
-1. <span data-ttu-id="4676d-122">Teams を開きます。</span><span class="sxs-lookup"><span data-stu-id="4676d-122">Open Teams.</span></span>
-1. <span data-ttu-id="4676d-123">ウィンドウの右上隅で、プロファイルアイコンを選択します。</span><span class="sxs-lookup"><span data-stu-id="4676d-123">In the upper right corner of the window, select your profile icon.</span></span>
-1. <span data-ttu-id="4676d-124">**Settings**  ->  ドロップダウンメニューから [設定]**アクセス許可** を選択します。</span><span class="sxs-lookup"><span data-stu-id="4676d-124">Select **Settings** -> **Permissions** from the drop-down menu.</span></span>
-1. <span data-ttu-id="4676d-125">目的の設定を選択します。</span><span class="sxs-lookup"><span data-stu-id="4676d-125">Choose your desired settings.</span></span>
+1. <span data-ttu-id="0f5e7-125">Teams を開きます。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-125">Open Teams.</span></span>
+1. <span data-ttu-id="0f5e7-126">ウィンドウの右上隅で、プロファイル アイコンを選択します。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-126">In the upper right corner of the window, select your profile icon.</span></span>
+1. <span data-ttu-id="0f5e7-127">ドロップダウン **メニュー**  ->  **から [設定の** アクセス許可] を選択します。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-127">Select **Settings** -> **Permissions** from the drop-down menu.</span></span>
+1. <span data-ttu-id="0f5e7-128">目的の設定を選択します。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-128">Choose your desired settings.</span></span>
 
-![デバイスアクセス許可のデスクトップ設定画面](../../assets/images/tabs/device-permissions.png)
+![デバイスのアクセス許可のデスクトップ設定画面](../../assets/images/tabs/device-permissions.png)
 
-# <a name="mobile"></a>[<span data-ttu-id="4676d-127">モバイル</span><span class="sxs-lookup"><span data-stu-id="4676d-127">Mobile</span></span>](#tab/mobile)
+# <a name="mobile"></a>[<span data-ttu-id="0f5e7-130">モバイル</span><span class="sxs-lookup"><span data-stu-id="0f5e7-130">Mobile</span></span>](#tab/mobile)
 
-1. <span data-ttu-id="4676d-128">Teams を開きます。</span><span class="sxs-lookup"><span data-stu-id="4676d-128">Open Teams.</span></span>
-1. <span data-ttu-id="4676d-129">画面の左上隅で、[&#9776;] メニューアイコンを選択します。</span><span class="sxs-lookup"><span data-stu-id="4676d-129">In the upper left corner of the screen, select the &#9776; menu icon.</span></span>
-1. <span data-ttu-id="4676d-130">[**設定** デバイス] を選択し  ->  **Devices** ます。</span><span class="sxs-lookup"><span data-stu-id="4676d-130">Select **Settings** -> **Devices**.</span></span>
-1. <span data-ttu-id="4676d-131">目的の設定を選択します。</span><span class="sxs-lookup"><span data-stu-id="4676d-131">Choose your desired settings.</span></span>
+1. <span data-ttu-id="0f5e7-131">Teams を開きます。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-131">Open Teams.</span></span>
+1. <span data-ttu-id="0f5e7-132">[設定アプリ **の**  ->  **アクセス許可] に移動します**。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-132">Go to **Settings** -> **App Permissions**.</span></span>
+1. <span data-ttu-id="0f5e7-133">設定を選択する必要があるアプリを選択します。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-133">Select the app you need to choose settings for.</span></span>
+1. <span data-ttu-id="0f5e7-134">目的の設定を選択します。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-134">Choose your desired settings.</span></span>
 
-![デバイスのアクセス許可のモバイル設定画面](../../assets/images/tabs/mobile-device-permissions-screen.png)
+![デバイスのアクセス許可のモバイル設定画面](../../assets/images/tabs/MobilePermissions.png)
 
 ---
 
-## <a name="properties"></a><span data-ttu-id="4676d-133">プロパティ</span><span class="sxs-lookup"><span data-stu-id="4676d-133">Properties</span></span>
+## <a name="properties"></a><span data-ttu-id="0f5e7-136">プロパティ</span><span class="sxs-lookup"><span data-stu-id="0f5e7-136">Properties</span></span>
 
-<span data-ttu-id="4676d-134">`manifest.json` `devicePermissions` アプリケーションで使用する5つのプロパティを追加して指定することにより、アプリを更新します。</span><span class="sxs-lookup"><span data-stu-id="4676d-134">Update your app's `manifest.json` by adding `devicePermissions` and specifying which of the five properties you’d like to use in your application:</span></span>
+<span data-ttu-id="0f5e7-137">アプリケーションで使用する 5 つのプロパティを追加して指定することで、アプリを `manifest.json` `devicePermissions` 更新します。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-137">Update your app's `manifest.json` by adding `devicePermissions` and specifying which of the five properties you’d like to use in your application:</span></span>
 
 ``` json
 "devicePermissions": [
@@ -73,21 +75,21 @@ ms.locfileid: "49576881"
 ```
 > [!Note]
 >
-> <span data-ttu-id="4676d-135">メディアは、モバイルのカメラのアクセス許可にも使用されます。</span><span class="sxs-lookup"><span data-stu-id="4676d-135">Media is also used for camera permissions in mobile.</span></span>
+> <span data-ttu-id="0f5e7-138">メディアは、モバイルでのカメラのアクセス許可にも使用されます。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-138">Media is also used for camera permissions on mobile.</span></span>
 
-<span data-ttu-id="4676d-136">各プロパティによって、ユーザーに同意を求めるように求めるメッセージを表示することができます。</span><span class="sxs-lookup"><span data-stu-id="4676d-136">Each property will allow you to prompt the user to ask for their consent</span></span>
+<span data-ttu-id="0f5e7-139">各プロパティを使用すると、ユーザーに同意を求めるメッセージを表示できます。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-139">Each property will allow you to prompt the user to ask for their consent:</span></span>
 
-| <span data-ttu-id="4676d-137">プロパティ</span><span class="sxs-lookup"><span data-stu-id="4676d-137">Property</span></span>      | <span data-ttu-id="4676d-138">説明</span><span class="sxs-lookup"><span data-stu-id="4676d-138">Description</span></span>   |
+| <span data-ttu-id="0f5e7-140">プロパティ</span><span class="sxs-lookup"><span data-stu-id="0f5e7-140">Property</span></span>      | <span data-ttu-id="0f5e7-141">説明</span><span class="sxs-lookup"><span data-stu-id="0f5e7-141">Description</span></span>   |
 | --- | --- |
-| <span data-ttu-id="4676d-139">media</span><span class="sxs-lookup"><span data-stu-id="4676d-139">media</span></span>         | <span data-ttu-id="4676d-140">カメラ、マイク、およびスピーカーを使用するためのアクセス許可</span><span class="sxs-lookup"><span data-stu-id="4676d-140">permission to use the camera, microphone and speakers</span></span> |
-| <span data-ttu-id="4676d-141">地理位置情報</span><span class="sxs-lookup"><span data-stu-id="4676d-141">geolocation</span></span>   | <span data-ttu-id="4676d-142">ユーザーの場所を返すためのアクセス許可</span><span class="sxs-lookup"><span data-stu-id="4676d-142">permission to return the user's location</span></span>      |
-| <span data-ttu-id="4676d-143">受け取る</span><span class="sxs-lookup"><span data-stu-id="4676d-143">notifications</span></span> | <span data-ttu-id="4676d-144">ユーザー通知を送信するためのアクセス許可</span><span class="sxs-lookup"><span data-stu-id="4676d-144">permission to send the user notifications</span></span>      |
-| <span data-ttu-id="4676d-145">次回</span><span class="sxs-lookup"><span data-stu-id="4676d-145">midi</span></span>          | <span data-ttu-id="4676d-146">デジタル音楽機器から midi 情報を送受信するためのアクセス許可</span><span class="sxs-lookup"><span data-stu-id="4676d-146">permission to send and receive midi information from a digital musical instrument</span></span>   |
-| <span data-ttu-id="4676d-147">openExternal</span><span class="sxs-lookup"><span data-stu-id="4676d-147">openExternal</span></span>  | <span data-ttu-id="4676d-148">外部アプリケーションでリンクを開くためのアクセス許可</span><span class="sxs-lookup"><span data-stu-id="4676d-148">permission to open links in external applications</span></span>  |
+| <span data-ttu-id="0f5e7-142">media</span><span class="sxs-lookup"><span data-stu-id="0f5e7-142">media</span></span>         | <span data-ttu-id="0f5e7-143">カメラ、マイク、スピーカー、およびメディア ギャラリーにアクセスするためのアクセス許可</span><span class="sxs-lookup"><span data-stu-id="0f5e7-143">permission to use the camera, microphone, speakers, and access media gallery</span></span> |
+| <span data-ttu-id="0f5e7-144">geolocation</span><span class="sxs-lookup"><span data-stu-id="0f5e7-144">geolocation</span></span>   | <span data-ttu-id="0f5e7-145">ユーザーの位置情報を返すアクセス許可</span><span class="sxs-lookup"><span data-stu-id="0f5e7-145">permission to return the user's location</span></span>      |
+| <span data-ttu-id="0f5e7-146">notifications</span><span class="sxs-lookup"><span data-stu-id="0f5e7-146">notifications</span></span> | <span data-ttu-id="0f5e7-147">ユーザー通知を送信するアクセス許可</span><span class="sxs-lookup"><span data-stu-id="0f5e7-147">permission to send the user notifications</span></span>      |
+| <span data-ttu-id="0f5e7-148">midi</span><span class="sxs-lookup"><span data-stu-id="0f5e7-148">midi</span></span>          | <span data-ttu-id="0f5e7-149">デジタル 音楽インストルメントの MIDI 情報を送受信するためのアクセス許可</span><span class="sxs-lookup"><span data-stu-id="0f5e7-149">permission to send and receive midi information from a digital musical instrument</span></span>   |
+| <span data-ttu-id="0f5e7-150">openExternal</span><span class="sxs-lookup"><span data-stu-id="0f5e7-150">openExternal</span></span>  | <span data-ttu-id="0f5e7-151">外部アプリケーションでリンクを開くアクセス許可</span><span class="sxs-lookup"><span data-stu-id="0f5e7-151">permission to open links in external applications</span></span>  |
 
-## <a name="checking-permissions-from-your-tab"></a><span data-ttu-id="4676d-149">タブから権限を確認する</span><span class="sxs-lookup"><span data-stu-id="4676d-149">Checking permissions from your tab</span></span>
+## <a name="checking-permissions-from-your-tab"></a><span data-ttu-id="0f5e7-152">タブからアクセス許可を確認する</span><span class="sxs-lookup"><span data-stu-id="0f5e7-152">Checking permissions from your tab</span></span>
 
-<span data-ttu-id="4676d-150">アプリマニフェストに追加した後 `devicePermissions` は、メッセージを表示せずに、HTML5 の "permissions" API を使用してアクセス許可を確認できます。</span><span class="sxs-lookup"><span data-stu-id="4676d-150">Once you’ve added `devicePermissions` to your app manifest, you can check permissions using the HTML5 “permissions” API without causing a prompt.</span></span>
+<span data-ttu-id="0f5e7-153">アプリ マニフェストに追加したら、プロンプトを表示せずに HTML5 "アクセス許可" API を使用してアクセス許可 `devicePermissions` を確認できます。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-153">Once you’ve added `devicePermissions` to your app manifest, you can check permissions using the HTML5 “permissions” API without causing a prompt.</span></span>
 
 ``` Javascript
 // Different query options:
@@ -107,34 +109,69 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 });
 ```
 
-## <a name="prompting-the-user"></a><span data-ttu-id="4676d-151">ユーザーに確認を求める</span><span class="sxs-lookup"><span data-stu-id="4676d-151">Prompting the user</span></span>
+## <a name="prompting-the-user"></a><span data-ttu-id="0f5e7-154">ユーザーに確認を求める</span><span class="sxs-lookup"><span data-stu-id="0f5e7-154">Prompting the user</span></span>
 
-<span data-ttu-id="4676d-152">デバイスのアクセス許可にアクセスするための同意を得るためのプロンプトを表示するには、適切な HTML5 API または Teams API を利用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="4676d-152">In order to show a prompt to get consent to access device permissions you need to leverage the appropriate HTML5 or Teams API.</span></span> <span data-ttu-id="4676d-153">たとえば、ユーザーにカメラへのアクセスを要求するために、を呼び出す必要があります。 `getCurrentPosition`</span><span class="sxs-lookup"><span data-stu-id="4676d-153">For example, in order to prompt the user to access their camera you need to call `getCurrentPosition`</span></span>
+<span data-ttu-id="0f5e7-155">デバイスのアクセス許可にアクセスする同意を求めるプロンプトを表示するには、適切な HTML5 または Teams API を利用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-155">To show a prompt to get consent to access device permissions you need to leverage the appropriate HTML5 or Teams API.</span></span> 
+
+<span data-ttu-id="0f5e7-156">たとえば、ユーザーに位置情報へのアクセスを求めるメッセージを表示するには、次のコマンドを呼び出す必要があります `getCurrentPosition` 。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-156">For example, to prompt the user to access their location you need to call `getCurrentPosition`:</span></span>
 
 ```Javascript
 navigator.geolocation.getCurrentPosition(function (position) { /*... */ });
 ```
 
-<span data-ttu-id="4676d-154">デスクトップまたは web でカメラを使用するために、Teams は、getUserMedia を呼び出すときにアクセス許可を求めるメッセージを表示します。</span><span class="sxs-lookup"><span data-stu-id="4676d-154">To use camera on desktop or web, Teams will show a permission prompt when you call getUserMedia</span></span>
+<span data-ttu-id="0f5e7-157">デスクトップまたは Web でカメラを使用する場合、Teams は次の呼び出し時にアクセス許可のプロンプトを表示します `getUserMedia` 。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-157">To use the camera on desktop or web, Teams will show a permission prompt when you call `getUserMedia`:</span></span>
 
 ```Javascript
 navigator.mediaDevices.getUserMedia({ audio: true, video: true });
 ```
 
-<span data-ttu-id="4676d-155">モバイルで画像をキャプチャするために、Teams mobile は captureImage () を呼び出したときにアクセス許可を要求します。</span><span class="sxs-lookup"><span data-stu-id="4676d-155">To capture image on mobile, Teams mobile will ask for permission when called captureImage()</span></span>
+<span data-ttu-id="0f5e7-158">モバイルでイメージをキャプチャするために、Teams モバイルは、次の呼び出し時にアクセス許可を求めるメッセージを表示します `captureImage()` 。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-158">To capture the image on mobile, Teams mobile will ask for permission when you call `captureImage()`:</span></span>
 
-```Typescript
-function captureImage(callback: (error: SdkError, files: File[]) => void)
+```Javascript
+microsoftTeams.media.captureImage((error: microsoftTeams.SdkError, files: microsoftTeams.media.File[]) => {
+  /* ... */
+});
 ```
 
-<span data-ttu-id="4676d-156">を呼び出したときに通知が表示されます。 `requestPermission`</span><span class="sxs-lookup"><span data-stu-id="4676d-156">Notifications will prompt the user when you call `requestPermission`</span></span>
+<span data-ttu-id="0f5e7-159">通知は、次の呼び出し時にユーザーに表示されます `requestPermission` 。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-159">Notifications will prompt the user when you call `requestPermission`:</span></span>
 
 ```Javascript
 Notification.requestPermission(function(result) { /* ... */ });
 ```
 
-![タブのデバイスアクセス許可のプロンプト](~/assets/images/tabs/device-permissions-prompt.png)
+<span data-ttu-id="0f5e7-160">カメラを使用するか、フォト ギャラリーにアクセスするために、Teams モバイルは、次の呼び出し時にアクセス許可を求めるメッセージを表示します `selectMedia()` 。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-160">To use camera or access photo gallery, Teams mobile will ask permission when you call `selectMedia()`:</span></span>
 
-## <a name="permission-behavior-across-login-sessions"></a><span data-ttu-id="4676d-158">ログインセッション間でのアクセス許可の動作</span><span class="sxs-lookup"><span data-stu-id="4676d-158">Permission behavior across login sessions</span></span>
+```JavaScript
+microsoftTeams.media.selectMedia({ maxMediaCount: 10, mediaType: microsoftTeams.media.MediaType.Image }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
+  /* ... */
+});
+```
 
-<span data-ttu-id="4676d-159">ネイティブデバイスのアクセス許可は、ログインセッションごとに保存されます。</span><span class="sxs-lookup"><span data-stu-id="4676d-159">Native device permissions are stored per login session.</span></span> <span data-ttu-id="4676d-160">これは、別の Teams インスタンス (別のコンピューターでは、) にログインすると、以前のセッションからのデバイスのアクセス許可が使用できなくなることを意味します。</span><span class="sxs-lookup"><span data-stu-id="4676d-160">This means that if you log into another instance of Teams (ex: on another computer), your device permissions from your previous sessions will not be available.</span></span> <span data-ttu-id="4676d-161">代わりに、新しいログインセッションのデバイスアクセス許可への同意を再度受ける必要があります。</span><span class="sxs-lookup"><span data-stu-id="4676d-161">Instead, you will need to re-consent to device permissions for the new login session.</span></span> <span data-ttu-id="4676d-162">これはつまり、Teams からログアウトした場合 (または Teams 内でテナントを切り替える場合)、その前回のログインセッションでデバイスのアクセス許可が削除されることを意味します。</span><span class="sxs-lookup"><span data-stu-id="4676d-162">This also means, if you log out of Teams (or switch tenants inside of Teams), your device permissions will be deleted for that previous login session.</span></span> <span data-ttu-id="4676d-163">ネイティブデバイスのアクセス許可を開発する場合は、次の点に注意してください。同意するネイティブの機能は、 _現在_ のログインセッションにのみ使用されます。</span><span class="sxs-lookup"><span data-stu-id="4676d-163">Please keep this in mind when developing native device permissions: the native capabilities you consent to are only for your _current_ login session.</span></span>
+<span data-ttu-id="0f5e7-161">マイクを使用するために、Teams モバイルは通話時にアクセス許可を求めるメッセージを表示します `selectMedia()` 。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-161">To use mic, Teams mobile will ask permission when you call `selectMedia()`:</span></span>
+
+```JavaScript 
+microsoftTeams.media.selectMedia({ maxMediaCount: 1, mediaType: microsoftTeams.media.MediaType.Audio }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
+  /* ... */
+});
+```
+
+<span data-ttu-id="0f5e7-162">マップ インターフェイス上で位置情報を共有するようにユーザーに求めるメッセージを表示するために、Teams モバイルは次の呼び出し時にアクセス許可を求めるメッセージを表示します `getLocation()` 。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-162">To prompt user to share location on map interface, Teams mobile will ask permission when you call `getLocation()`:</span></span>
+
+```JavaScript 
+microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
+  /* ... *
+/});
+```
+
+# <a name="desktop"></a>[<span data-ttu-id="0f5e7-163">デスクトップ</span><span class="sxs-lookup"><span data-stu-id="0f5e7-163">Desktop</span></span>](#tab/desktop)
+
+![タブ デスクトップ デバイスのアクセス許可の確認メッセージ](~/assets/images/tabs/device-permissions-prompt.png)
+
+# <a name="mobile"></a>[<span data-ttu-id="0f5e7-165">モバイル</span><span class="sxs-lookup"><span data-stu-id="0f5e7-165">Mobile</span></span>](#tab/mobile)
+
+![タブ モバイル デバイスのアクセス許可の確認メッセージ](../../assets/images/tabs/MobileLocationPermission.png)
+
+
+## <a name="permission-behavior-across-login-sessions"></a><span data-ttu-id="0f5e7-167">ログイン セッション間のアクセス許可の動作</span><span class="sxs-lookup"><span data-stu-id="0f5e7-167">Permission behavior across login sessions</span></span>
+
+<span data-ttu-id="0f5e7-168">ネイティブ デバイスのアクセス許可は、ログイン セッションごとに格納されます。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-168">Native device permissions are stored for every login session.</span></span> <span data-ttu-id="0f5e7-169">つまり、Teams の別のインスタンス (別のコンピューターなど) にログインした場合、以前のセッションからのデバイスのアクセス許可は利用できません。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-169">It means that if you log into another instance of Teams (ex: on another computer), your device permissions from your previous sessions will not be available.</span></span> <span data-ttu-id="0f5e7-170">代わりに、新しいログイン セッションのデバイスのアクセス許可に再同意する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-170">Instead, you will need to re-consent to device permissions for the new login session.</span></span> <span data-ttu-id="0f5e7-171">また、Teams からログアウトした場合 (または Teams 内でテナントを切り替える場合)、以前のログイン セッションでデバイスのアクセス許可が削除されます。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-171">It also means, if you log out of Teams (or switch tenants inside of Teams), your device permissions will be deleted for that previous login session.</span></span> <span data-ttu-id="0f5e7-172">ネイティブ デバイスのアクセス許可を開発する場合は、この注意が必要です。同意するネイティブ機能は、現在のログイン セッション _専用_ です。</span><span class="sxs-lookup"><span data-stu-id="0f5e7-172">Please keep this in mind when developing native device permissions: the native capabilities you consent to are only for your _current_ login session.</span></span>

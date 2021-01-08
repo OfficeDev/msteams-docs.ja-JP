@@ -1,88 +1,88 @@
 ---
-title: Microsoft Graph を使用して、Teams でプロアクティブ ボット インストールとメッセージングを有効にする
-description: Teams のプロアクティブ メッセージングと実装方法について説明します。
+title: Microsoft Graph を使用して Teams で事前ボットのインストールとメッセージングを有効にする
+description: Teams でのプロアクティブ メッセージングと実装方法について説明します。
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
 ms.topic: Overview
-keywords: Teams プロアクティブなメッセージング チャットのインストール Graph
-ms.openlocfilehash: b601c5858e5141ce81985dca62968b1713e1d2ba
-ms.sourcegitcommit: 9fd61042e8be513c2b2bd8a33ab5e9e6498d65c5
+keywords: Teams のプロアクティブ メッセージング チャットのインストールのグラフ
+ms.openlocfilehash: ee1620c8fdcaeeecf0e8b0992017bf6f2fbacbf9
+ms.sourcegitcommit: d0e71ea63af2f67eba75ba283ec46cc7cdf87d75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "46819162"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "49731973"
 ---
-# <a name="enable-proactive-bot-installation-and-proactive-messaging-in-teams-with-microsoft-graph-public-preview"></a><span data-ttu-id="2a07d-104">Microsoft Graph を使用して Teams のプロアクティブ ボットのインストールとプロアクティブなメッセージングを有効にする (パブリック プレビュー)</span><span class="sxs-lookup"><span data-stu-id="2a07d-104">Enable proactive bot installation and proactive messaging in Teams with Microsoft Graph (Public Preview)</span></span>
+# <a name="enable-proactive-bot-installation-and-proactive-messaging-in-teams-with-microsoft-graph-public-preview"></a><span data-ttu-id="7e5b0-104">Microsoft Graph を使用して Teams でプロアクティブ ボットのインストールとプロアクティブ メッセージングを有効にする (パブリック プレビュー)</span><span class="sxs-lookup"><span data-stu-id="7e5b0-104">Enable proactive bot installation and proactive messaging in Teams with Microsoft Graph (Public Preview)</span></span>
 
 >[!IMPORTANT]
-> <span data-ttu-id="2a07d-105">Microsoft Graph と Microsoft Teams のパブリック プレビューは、すでにアクセスしてフィードバックを行います。</span><span class="sxs-lookup"><span data-stu-id="2a07d-105">Microsoft Graph and Microsoft Teams public previews are available for early-access and feedback.</span></span> <span data-ttu-id="2a07d-106">このリリースは、拡張的なテストを受けてきてきてきませんが、運用環境での使用を意図したものではありません。</span><span class="sxs-lookup"><span data-stu-id="2a07d-106">Although this release has undergone extensive testing, it is not intended for use in production.</span></span>
+> <span data-ttu-id="7e5b0-105">Microsoft Graph と Microsoft Teams のパブリック プレビューは、早期アクセスとフィードバックに利用できます。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-105">Microsoft Graph and Microsoft Teams public previews are available for early-access and feedback.</span></span> <span data-ttu-id="7e5b0-106">このリリースでは広範なテストが実施されましたが、実稼働環境での使用を意図した方法ではありません。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-106">Although this release has undergone extensive testing, it is not intended for use in production.</span></span>
 
-## <a name="proactive-messaging-in-teams"></a><span data-ttu-id="2a07d-107">Teams でのプロアクティブ メッセージング</span><span class="sxs-lookup"><span data-stu-id="2a07d-107">Proactive messaging in Teams</span></span>
+## <a name="proactive-messaging-in-teams"></a><span data-ttu-id="7e5b0-107">Teams でのプロアクティブ メッセージング</span><span class="sxs-lookup"><span data-stu-id="7e5b0-107">Proactive messaging in Teams</span></span>
 
-<span data-ttu-id="2a07d-108">ユーザーとの会話を開始するために、プロアクティブ メッセージがボットによって開始されます。</span><span class="sxs-lookup"><span data-stu-id="2a07d-108">Proactive messages are initiated by bots to start conversations with a user.</span></span> <span data-ttu-id="2a07d-109">ウェルカム メッセージの送信、アンケートや投資の実行、組織全体の通知のブロードキャストなど、多くの目的に使用できます。</span><span class="sxs-lookup"><span data-stu-id="2a07d-109">They serve many purposes including sending welcome messages, conducting surveys or polls, and broadcasting organization-wide notifications.</span></span>  <span data-ttu-id="2a07d-110">Teams のプロアクティブ メッセージは、アドホックまたは**ダイアログ ベースの会話\*\*\*\*として配信**できます。</span><span class="sxs-lookup"><span data-stu-id="2a07d-110">Proactive messages in Teams can be delivered as either **ad-hoc** or **dialog-based** conversations:</span></span>
+<span data-ttu-id="7e5b0-108">プロアクティブ メッセージは、ユーザーとの会話を開始するためにボットによって開始されます。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-108">Proactive messages are initiated by bots to start conversations with a user.</span></span> <span data-ttu-id="7e5b0-109">ウェルカム メッセージの送信、アンケートや投票の実施、組織全体の通知のブロードキャストなど、さまざまな目的に対応します。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-109">They serve many purposes including sending welcome messages, conducting surveys or polls, and broadcasting organization-wide notifications.</span></span>  <span data-ttu-id="7e5b0-110">Teams のプロアクティブ メッセージは、アドホックまたはダイアログ ベースの **会話として配信** できます。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-110">Proactive messages in Teams can be delivered as either **ad-hoc** or **dialog-based** conversations:</span></span>
 
-|<span data-ttu-id="2a07d-111">メッセージ型</span><span class="sxs-lookup"><span data-stu-id="2a07d-111">Message Type</span></span> | <span data-ttu-id="2a07d-112">Description</span><span class="sxs-lookup"><span data-stu-id="2a07d-112">Description</span></span> |
+|<span data-ttu-id="7e5b0-111">メッセージ型</span><span class="sxs-lookup"><span data-stu-id="7e5b0-111">Message Type</span></span> | <span data-ttu-id="7e5b0-112">説明</span><span class="sxs-lookup"><span data-stu-id="7e5b0-112">Description</span></span> |
 |----------------|-------------- |
-|<span data-ttu-id="2a07d-113">アドホックのプロアクティブ メッセージ</span><span class="sxs-lookup"><span data-stu-id="2a07d-113">Ad-hoc proactive message</span></span>| <span data-ttu-id="2a07d-114">ボットは会話フローを中断することなくメッセージを挿入します。</span><span class="sxs-lookup"><span data-stu-id="2a07d-114">The bot interjects a message without interrupting the conversation flow.</span></span>|
-|<span data-ttu-id="2a07d-115">ダイアログベースのプロアクティブ メッセージ</span><span class="sxs-lookup"><span data-stu-id="2a07d-115">Dialog-based proactive message</span></span> | <span data-ttu-id="2a07d-116">ボットは新しいダイアログ スレッドを作成し、会話の制御を取得し、プロアクティブ メッセージを配信し、コントロールを閉じて前のダイアログに制御を返します。</span><span class="sxs-lookup"><span data-stu-id="2a07d-116">The bot creates a new dialog thread, takes control of a conversation, delivers the proactive message, closes, and returns control to the previous dialog.</span></span>|
+|<span data-ttu-id="7e5b0-113">臨時のプロアクティブ メッセージ</span><span class="sxs-lookup"><span data-stu-id="7e5b0-113">Ad-hoc proactive message</span></span>| <span data-ttu-id="7e5b0-114">ボットは、会話フローを中断せずにメッセージを対話します。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-114">The bot interjects a message without interrupting the conversation flow.</span></span>|
+|<span data-ttu-id="7e5b0-115">ダイアログ ベースのプロアクティブ メッセージ</span><span class="sxs-lookup"><span data-stu-id="7e5b0-115">Dialog-based proactive message</span></span> | <span data-ttu-id="7e5b0-116">ボットは、新しいダイアログ スレッドを作成し、会話を制御し、プロアクティブ メッセージを配信し、閉じ、前のダイアログにコントロールを返します。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-116">The bot creates a new dialog thread, takes control of a conversation, delivers the proactive message, closes, and returns control to the previous dialog.</span></span>|
 
-<span data-ttu-id="2a07d-117">*「ユーザー* [SDK v4 へのプロアクティブ通知の送信」をご覧ください。](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp)</span><span class="sxs-lookup"><span data-stu-id="2a07d-117">*See*, [Send proactive notifications to users SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp)</span></span>
+<span data-ttu-id="7e5b0-117">*See* [,Send proactive notifications to users SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)</span><span class="sxs-lookup"><span data-stu-id="7e5b0-117">*See*, [Send proactive notifications to users SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)</span></span>
 
-## <a name="proactive-app-installation-in-teams"></a><span data-ttu-id="2a07d-118">Teams でのアプリのプロアクティブなインストール</span><span class="sxs-lookup"><span data-stu-id="2a07d-118">Proactive app installation in Teams</span></span>
+## <a name="proactive-app-installation-in-teams"></a><span data-ttu-id="7e5b0-118">Teams でのアプリのプロアクティブ インストール</span><span class="sxs-lookup"><span data-stu-id="7e5b0-118">Proactive app installation in Teams</span></span>
 
-<span data-ttu-id="2a07d-119">ボットがユーザーにプロアクティブにメッセージを送信するには、その前に、個人用アプリとして、またはユーザーがメンバーであるチームにインストールする必要があります。</span><span class="sxs-lookup"><span data-stu-id="2a07d-119">Before your bot can proactively message a user, it needs to be installed either as a personal app, or in a team where the user is a member.</span></span> <span data-ttu-id="2a07d-120">場合によっては、インストールしていない、または以前にアプリを操作した _ユーザーにメッセージ_ を、表示しないように促す必要があります。</span><span class="sxs-lookup"><span data-stu-id="2a07d-120">At times,  you may need to proactively message users that have _not_ installed or previously interacted with your app.</span></span> <span data-ttu-id="2a07d-121">たとえば、組織内のすべてのユーザーに対して、必要な情報をメッセージで送信する必要があります。</span><span class="sxs-lookup"><span data-stu-id="2a07d-121">For instance, the need to message vital information to everyone in your organization.</span></span> <span data-ttu-id="2a07d-122">そのようなシナリオでは、Microsoft Graph API を使用して、ユーザー用にボットをプロアクティブにインストールできます。</span><span class="sxs-lookup"><span data-stu-id="2a07d-122">For such scenarios, you can use the Microsoft Graph API to proactively install your bot for your users.</span></span>
+<span data-ttu-id="7e5b0-119">ボットが事前にユーザーにメッセージを送信するには、事前に個人用アプリとして、またはユーザーがメンバーであるチームにインストールする必要があります。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-119">Before your bot can proactively message a user, it needs to be installed either as a personal app, or in a team where the user is a member.</span></span> <span data-ttu-id="7e5b0-120">場合によっては、アプリをインストールしていないユーザーや以前にアプリとやり取りしていないユーザーに事前にメッセージを送信する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-120">At times,  you may need to proactively message users that have _not_ installed or previously interacted with your app.</span></span> <span data-ttu-id="7e5b0-121">たとえば、組織内のすべてのユーザーに重要な情報をメッセージ送信する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-121">For instance, the need to message vital information to everyone in your organization.</span></span> <span data-ttu-id="7e5b0-122">このようなシナリオでは、Microsoft Graph API を使用して、ユーザーのボットを事前にインストールできます。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-122">For such scenarios, you can use the Microsoft Graph API to proactively install your bot for your users.</span></span>
 
-## <a name="permissions"></a><span data-ttu-id="2a07d-123">アクセス許可</span><span class="sxs-lookup"><span data-stu-id="2a07d-123">Permissions</span></span>
+## <a name="permissions"></a><span data-ttu-id="7e5b0-123">アクセス許可</span><span class="sxs-lookup"><span data-stu-id="7e5b0-123">Permissions</span></span>
 
-<span data-ttu-id="2a07d-124">Microsoft Graph [teamsAppInstallation リソースの種類の](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0) アクセス許可を使用すると、Microsoft Teams プラットフォーム内のすべてのユーザー (個人) またはチーム (チャネル) スコープに対するアプリのインストール ライフサイクルを管理できます。</span><span class="sxs-lookup"><span data-stu-id="2a07d-124">Microsoft Graph [teamsAppInstallation resource type](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0) permissions allow you to manage your app's installation lifecycle for all user (personal) or team (channel) scopes within the Microsoft Teams platform:</span></span>
+<span data-ttu-id="7e5b0-124">Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true) リソースの種類のアクセス許可を使用すると、Microsoft Teams プラットフォーム内のすべてのユーザー (個人用) スコープまたはチーム (チャネル) スコープに対するアプリのインストール ライフサイクルを管理できます。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-124">Microsoft Graph [teamsAppInstallation resource type](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true) permissions allow you to manage your app's installation lifecycle for all user (personal) or team (channel) scopes within the Microsoft Teams platform:</span></span>
 
-|<span data-ttu-id="2a07d-125">アプリケーションのアクセス許可</span><span class="sxs-lookup"><span data-stu-id="2a07d-125">Application permission</span></span> | <span data-ttu-id="2a07d-126">Description</span><span class="sxs-lookup"><span data-stu-id="2a07d-126">Description</span></span>|
+|<span data-ttu-id="7e5b0-125">アプリケーションのアクセス許可</span><span class="sxs-lookup"><span data-stu-id="7e5b0-125">Application permission</span></span> | <span data-ttu-id="7e5b0-126">説明</span><span class="sxs-lookup"><span data-stu-id="7e5b0-126">Description</span></span>|
 |------------------|---------------------|
-|`TeamsAppInstallation.ReadWriteSelfForUser.All`|<span data-ttu-id="2a07d-127">以前のサインインや使用をすることなく、Teams アプリで、すべてのユーザーに対してそれ **自体の**読み取り、インストール、アップグレード、アンインストールを行うことができます。</span><span class="sxs-lookup"><span data-stu-id="2a07d-127">Allows a Teams app to read, install, upgrade, and uninstall itself for any **user**, without prior sign in or use.</span></span>|
-|`TeamsAppInstallation.ReadWriteSelfForTeam.All`|<span data-ttu-id="2a07d-128">Teams アプリで、以前のサインインや使用をせずに、任意のチームでそれ自体の読み **取**り、インストール、アップグレード、アンインストールを行うことができます。</span><span class="sxs-lookup"><span data-stu-id="2a07d-128">Allows a Teams app to read, install, upgrade, and uninstall itself in any **team**, without prior sign in or use.</span></span>|
+|`TeamsAppInstallation.ReadWriteSelfForUser.All`|<span data-ttu-id="7e5b0-127">Teams アプリは、事前サインインや使用なしで、任意のユーザーの読み取り、インストール、アップグレード、アンインストールを実行できます。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-127">Allows a Teams app to read, install, upgrade, and uninstall itself for any **user**, without prior sign in or use.</span></span>|
+|`TeamsAppInstallation.ReadWriteSelfForTeam.All`|<span data-ttu-id="7e5b0-128">Teams アプリは、事前にサインインしたり使用したりすることなく、任意のチームで自身を読み取り、インストール、アップグレード、アンインストールできます。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-128">Allows a Teams app to read, install, upgrade, and uninstall itself in any **team**, without prior sign in or use.</span></span>|
 
-<span data-ttu-id="2a07d-129">これらのアクセス許可を使用するには、次の値 [を使用して、アプリ](../../resources/schema/manifest-schema.md#webapplicationinfo) マニフェストに webApplicationInfo キーを追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="2a07d-129">To use these permissions, you must add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:</span></span>
+<span data-ttu-id="7e5b0-129">これらのアクセス許可を使用するには、次の値を使用して [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) キーをアプリ マニフェストに追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-129">To use these permissions, you must add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:</span></span>
 > [!div class="checklist"]
 > [!div class="checklist"]
 >
-> * <span data-ttu-id="2a07d-130">**id**  — Azure AD アプリ ID。</span><span class="sxs-lookup"><span data-stu-id="2a07d-130">**id**  — your Azure AD app id.</span></span>
-> * <span data-ttu-id="2a07d-131">**resource** — アプリのリソース URL。</span><span class="sxs-lookup"><span data-stu-id="2a07d-131">**resource** — the resource URL for the app.</span></span>
+> * <span data-ttu-id="7e5b0-130">**id**  — Azure ADアプリ ID。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-130">**id**  — your Azure AD app id.</span></span>
+> * <span data-ttu-id="7e5b0-131">**resource** — アプリのリソース URL。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-131">**resource** — the resource URL for the app.</span></span>
 >
 
 >[!NOTE]
 >
-> * <span data-ttu-id="2a07d-132">ボットのインストール_は、ユーザー__に代用するもの_ではありませんが、他のユーザーに対してはインストールされないため、アプリケーションには、ユーザーに委任されたアクセス許可が必要です。</span><span class="sxs-lookup"><span data-stu-id="2a07d-132">Your bot requires _application_ not _user delegated_ permissions because the installation is not for yourself but for others.</span></span>
+> * <span data-ttu-id="7e5b0-132">ボットでは、 _アプリケーションは_ ユーザー _によって委任_ されたアクセス許可を必要とします。これは、インストールは自分用ではなく、他のユーザー向けのためです。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-132">Your bot requires _application_ not _user delegated_ permissions because the installation is not for yourself but for others.</span></span>
 >
-> * <span data-ttu-id="2a07d-133">テナント管理者が Azure ADは、アプリケーション [にアクセス許可を明示的に付与する必要があります](/graph/security-authorization#grant-permissions-to-an-application)。</span><span class="sxs-lookup"><span data-stu-id="2a07d-133">An Azure AD tenant administrator must [explicitly grant permissions to an application](/graph/security-authorization#grant-permissions-to-an-application).</span></span> <span data-ttu-id="2a07d-134">アプリケーションにアクセス許可が付与されると _、テナント_ テナントのすべてのメンバーにADアクセス許可が付与されます。</span><span class="sxs-lookup"><span data-stu-id="2a07d-134">After an application is granted permissions, _all_ members of the Azure AD tenant will gain the granted permissions.</span></span>
+> * <span data-ttu-id="7e5b0-133">Azure ADテナント管理者は、アプリケーションにアクセス [許可を明示的に付与する必要があります](/graph/security-authorization#grant-permissions-to-an-application)。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-133">An Azure AD tenant administrator must [explicitly grant permissions to an application](/graph/security-authorization#grant-permissions-to-an-application).</span></span> <span data-ttu-id="7e5b0-134">アプリケーションにアクセス許可が付与された後、Azure AD テナントのすべてのメンバーに付与されたアクセス許可が付与されます。 </span><span class="sxs-lookup"><span data-stu-id="7e5b0-134">After an application is granted permissions, _all_ members of the Azure AD tenant will gain the granted permissions.</span></span>
 
-## <a name="enable-proactive-app-installation-and-messaging"></a><span data-ttu-id="2a07d-135">プロアクティブ アプリのインストールとメッセージングを有効にする</span><span class="sxs-lookup"><span data-stu-id="2a07d-135">Enable proactive app installation and messaging</span></span>
+## <a name="enable-proactive-app-installation-and-messaging"></a><span data-ttu-id="7e5b0-135">予防的なアプリのインストールとメッセージングを有効にする</span><span class="sxs-lookup"><span data-stu-id="7e5b0-135">Enable proactive app installation and messaging</span></span>
 
  > [!IMPORTANT]
-><span data-ttu-id="2a07d-136">Microsoft Graph は、組織のアプリ カタログ内または AppSource 内に [公開された](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) アプリのみを [インストールします](https://appsource.microsoft.com/)。</span><span class="sxs-lookup"><span data-stu-id="2a07d-136">Microsoft Graph will only install apps published within your organization's [app catalog](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) or in [AppSource](https://appsource.microsoft.com/).</span></span>
+><span data-ttu-id="7e5b0-136">Microsoft Graph は、組織のアプリ カタログ内または AppSource 内で [公開されている](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) アプリのみを [インストールします](https://appsource.microsoft.com/)。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-136">Microsoft Graph will only install apps published within your organization's [app catalog](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) or in [AppSource](https://appsource.microsoft.com/).</span></span>
 
-### <a name="-create-and-publish-your-proactive-messaging-bot-for-teams"></a><span data-ttu-id="2a07d-137">✔ Teams のプロアクティブ メッセージング ボットを作成して公開する</span><span class="sxs-lookup"><span data-stu-id="2a07d-137">✔ Create and publish your proactive messaging bot for Teams</span></span>
+### <a name="-create-and-publish-your-proactive-messaging-bot-for-teams"></a><span data-ttu-id="7e5b0-137">✔ Teams 用のプロアクティブ メッセージング ボットを作成して発行する</span><span class="sxs-lookup"><span data-stu-id="7e5b0-137">✔ Create and publish your proactive messaging bot for Teams</span></span>
 
-<span data-ttu-id="2a07d-138">開始するには、プロアクティブ メッセージング機能を使用し、[proactive messaging](../../concepts/bots/bot-conversations/bots-conv-proactive.md)組織のアプリ カタログまたは[published](../../concepts/deploy-and-publish/overview.md)AppSource で公開[される Teams](../../bots/how-to/create-a-bot-for-teams.md) [用ボ](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog)ットが[必要です](https://appsource.microsoft.com/)。</span><span class="sxs-lookup"><span data-stu-id="2a07d-138">To get started, you will need a [bot for Teams](../../bots/how-to/create-a-bot-for-teams.md) with [proactive messaging](../../concepts/bots/bot-conversations/bots-conv-proactive.md) capabilities and  [published](../../concepts/deploy-and-publish/overview.md) in your organization's [app catalog](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) or in [AppSource](https://appsource.microsoft.com/).</span></span>
+<span data-ttu-id="7e5b0-138">To get started, you will need a [bot for Teams](../../bots/how-to/create-a-bot-for-teams.md) with proactive [messaging](../../concepts/bots/bot-conversations/bots-conv-proactive.md) capabilities and  [published](../../concepts/deploy-and-publish/overview.md) in your organization's [app catalog](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) or [in AppSource](https://appsource.microsoft.com/).</span><span class="sxs-lookup"><span data-stu-id="7e5b0-138">To get started, you will need a [bot for Teams](../../bots/how-to/create-a-bot-for-teams.md) with [proactive messaging](../../concepts/bots/bot-conversations/bots-conv-proactive.md) capabilities and  [published](../../concepts/deploy-and-publish/overview.md) in your organization's [app catalog](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) or in [AppSource](https://appsource.microsoft.com/).</span></span>
 
 >[!TIP]
-> <span data-ttu-id="2a07d-139">運用環境に適した [**会社のCommunicator、**](../..//samples/app-templates.md#company-communicator) ブロードキャスト メッセージングを有効にして、プロアクティブなボット アプリケーションを構築するための基盤になります。</span><span class="sxs-lookup"><span data-stu-id="2a07d-139">The production-ready [**Company Communicator**](../..//samples/app-templates.md#company-communicator) app template enables broadcast messaging and is a good foundation for building your proactive bot application.</span></span>
+> <span data-ttu-id="7e5b0-139">実稼働対応の [**Company Communicator**](../..//samples/app-templates.md#company-communicator) アプリ テンプレートは、ブロードキャスト メッセージングを有効にし、プロアクティブ ボット アプリケーションを構築する良い基盤です。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-139">The production-ready [**Company Communicator**](../..//samples/app-templates.md#company-communicator) app template enables broadcast messaging and is a good foundation for building your proactive bot application.</span></span>
 
-### <a name="-get-the-teamsappid-for-your-app"></a><span data-ttu-id="2a07d-140">✔アプリを `teamsAppId` 取得する</span><span class="sxs-lookup"><span data-stu-id="2a07d-140">✔ Get the `teamsAppId` for your app</span></span>
+### <a name="-get-the-teamsappid-for-your-app"></a><span data-ttu-id="7e5b0-140">✔アプリを `teamsAppId` 取得する</span><span class="sxs-lookup"><span data-stu-id="7e5b0-140">✔ Get the `teamsAppId` for your app</span></span>
 
-<span data-ttu-id="2a07d-141">**1.** 次の `teamsAppId`  手順に進んでください。</span><span class="sxs-lookup"><span data-stu-id="2a07d-141">**1.** You will need the `teamsAppId`  for the next steps.</span></span>
+<span data-ttu-id="7e5b0-141">**1.** 次の手順 `teamsAppId`  が必要です。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-141">**1.** You will need the `teamsAppId`  for the next steps.</span></span>
 
-<span data-ttu-id="2a07d-142">組織 `teamsAppId` のアプリ カタログから取得できます。</span><span class="sxs-lookup"><span data-stu-id="2a07d-142">The `teamsAppId` can be retrieved from your organization's app catalog:</span></span>
+<span data-ttu-id="7e5b0-142">組織 `teamsAppId` のアプリ カタログから取得できます。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-142">The `teamsAppId` can be retrieved from your organization's app catalog:</span></span>
 
-<span data-ttu-id="2a07d-143">**Microsoft Graph ページ リファレンス:** [teamsApp リソース タイプ](/graph/api/resources/teamsapp?view=graph-rest-1.0)</span><span class="sxs-lookup"><span data-stu-id="2a07d-143">**Microsoft Graph page reference:** [teamsApp resource type](/graph/api/resources/teamsapp?view=graph-rest-1.0)</span></span>
+<span data-ttu-id="7e5b0-143">**Microsoft Graph ページ リファレンス:** [teamsApp リソースの種類](/graph/api/resources/teamsapp?view=graph-rest-1.0&preserve-view=true)</span><span class="sxs-lookup"><span data-stu-id="7e5b0-143">**Microsoft Graph page reference:** [teamsApp resource type](/graph/api/resources/teamsapp?view=graph-rest-1.0&preserve-view=true)</span></span>
 
-<span data-ttu-id="2a07d-144">**HTTP GET** 要求:</span><span class="sxs-lookup"><span data-stu-id="2a07d-144">**HTTP GET** request:</span></span>
+<span data-ttu-id="7e5b0-144">**HTTP GET** 要求:</span><span class="sxs-lookup"><span data-stu-id="7e5b0-144">**HTTP GET** request:</span></span>
 
 ```http
 GET https://graph.microsoft.com/beta/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
 ```
 
-<span data-ttu-id="2a07d-145">要求はオブジェクトを返 `teamsApp`  します。</span><span class="sxs-lookup"><span data-stu-id="2a07d-145">The request will return a `teamsApp`  object.</span></span> <span data-ttu-id="2a07d-146">返されたオブジェクトのカタログ `id`  は、アプリのカタログに生成されたアプリ ID で、Teams アプリ マニフェストに指定した "id:" とは異なります。</span><span class="sxs-lookup"><span data-stu-id="2a07d-146">The returned object's `id`  is the app's catalog generated app id and is different from the "id:" that you provided in your Teams app manifest:</span></span>
+<span data-ttu-id="7e5b0-145">要求はオブジェクトを返 `teamsApp`  します。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-145">The request will return a `teamsApp`  object.</span></span> <span data-ttu-id="7e5b0-146">返されるオブジェクトは、アプリのカタログによって生成されたアプリ ID であり、Teams アプリ マニフェストで指定した `id`  "id:" とは異なります。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-146">The returned object's `id`  is the app's catalog generated app id and is different from the "id:" that you provided in your Teams app manifest:</span></span>
 
 ```json
 {
@@ -98,46 +98,46 @@ GET https://graph.microsoft.com/beta/appCatalogs/teamsApps?$filter=externalId eq
 }
 ```
 
-<span data-ttu-id="2a07d-147">**2.**  個人用スコープでユーザーのアプリが既にアップロードまたはサイドローディングされている場合は、次のように `teamsAppId` して取得できます。</span><span class="sxs-lookup"><span data-stu-id="2a07d-147">**2.**  If your app has already been uploaded/sideloaded for a user in the personal scope, you can retrieve the `teamsAppId` as follows:</span></span>
+<span data-ttu-id="7e5b0-147">**2.**  個人用スコープのユーザーに対してアプリが既にアップロードまたはサイドロードされている場合は、次の情報を `teamsAppId` 取得できます。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-147">**2.**  If your app has already been uploaded/sideloaded for a user in the personal scope, you can retrieve the `teamsAppId` as follows:</span></span>
 
-<span data-ttu-id="2a07d-148">**Microsoft Graph ページ リファレンス: ユーザーにインストール**[されたアプリを一覧表示する](/graph/api/user-list-teamsappinstallation?view=graph-rest-beta&tabs=http)</span><span class="sxs-lookup"><span data-stu-id="2a07d-148">**Microsoft Graph page reference:** [List apps installed for user](/graph/api/user-list-teamsappinstallation?view=graph-rest-beta&tabs=http)</span></span>
+<span data-ttu-id="7e5b0-148">**Microsoft Graph ページ リファレンス:** [ユーザー用にインストールされたアプリを一覧表示する](/graph/api/userteamwork-list-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true)</span><span class="sxs-lookup"><span data-stu-id="7e5b0-148">**Microsoft Graph page reference:** [List apps installed for user](/graph/api/userteamwork-list-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true)</span></span>
 
-<span data-ttu-id="2a07d-149">**HTTP GET** 要求:</span><span class="sxs-lookup"><span data-stu-id="2a07d-149">**HTTP GET** request:</span></span>
+<span data-ttu-id="7e5b0-149">**HTTP GET** 要求:</span><span class="sxs-lookup"><span data-stu-id="7e5b0-149">**HTTP GET** request:</span></span>
 
 ```http
 GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
 ```
 
-<span data-ttu-id="2a07d-150">**3.** チームのスコープでチャネル用にアプリが既にアップロードまたはサイドロードされている場合は、次のように `teamsAppId` して取得できます。</span><span class="sxs-lookup"><span data-stu-id="2a07d-150">**3.** If your app has already been uploaded/sideloaded for a channel in the team scope, you can retrieve the `teamsAppId` as follows:</span></span>
+<span data-ttu-id="7e5b0-150">**3.** チーム スコープのチャネルに対してアプリが既にアップロードまたはサイドロードされている場合は、次のように `teamsAppId` 取得できます。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-150">**3.** If your app has already been uploaded/sideloaded for a channel in the team scope, you can retrieve the `teamsAppId` as follows:</span></span>
 
-<span data-ttu-id="2a07d-151">**Microsoft Graph ページ リファレンス:** [チーム内のアプリを一覧表示する](/graph/api/teamsappinstallation-list?view=graph-rest-beta&tabs=http)</span><span class="sxs-lookup"><span data-stu-id="2a07d-151">**Microsoft Graph page reference:** [List apps in team](/graph/api/teamsappinstallation-list?view=graph-rest-beta&tabs=http)</span></span>
+<span data-ttu-id="7e5b0-151">**Microsoft Graph ページ リファレンス:** [チーム内のアプリを一覧表示する](/graph/api/team-list-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true)</span><span class="sxs-lookup"><span data-stu-id="7e5b0-151">**Microsoft Graph page reference:** [List apps in team](/graph/api/team-list-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true)</span></span>
 
-<span data-ttu-id="2a07d-152">**HTTP GET** 要求:</span><span class="sxs-lookup"><span data-stu-id="2a07d-152">**HTTP GET** request:</span></span>
+<span data-ttu-id="7e5b0-152">**HTTP GET** 要求:</span><span class="sxs-lookup"><span data-stu-id="7e5b0-152">**HTTP GET** request:</span></span>
 
 ```http
 GET https://graph.microsoft.com/beta/teams/{team-id}/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
 ```
 
 >[!TIP]
-> <span data-ttu-id="2a07d-153">[**teamsApp**](/graph/api/resources/teamsapp?view=graph-rest-1.0)オブジェクトのいずれかのフィールドでフィルター処理して結果リストを絞り込むことができます。</span><span class="sxs-lookup"><span data-stu-id="2a07d-153">You can filter on any of the fields of the [**teamsApp**](/graph/api/resources/teamsapp?view=graph-rest-1.0) object to narrow the list of results.</span></span>
+> <span data-ttu-id="7e5b0-153">[**teamsApp**](/graph/api/resources/teamsapp?view=graph-rest-1.0&preserve-view=true)オブジェクトの任意のフィールドにフィルターを適用して、結果の一覧を絞り込む。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-153">You can filter on any of the fields of the [**teamsApp**](/graph/api/resources/teamsapp?view=graph-rest-1.0&preserve-view=true) object to narrow the list of results.</span></span>
 
-### <a name="-determine-whether-your-bot-is-currently-installed-for-a-message-recipient"></a><span data-ttu-id="2a07d-154">✔メッセージ受信者にボットが現在インストールされているかどうかを確認する</span><span class="sxs-lookup"><span data-stu-id="2a07d-154">✔ Determine whether your bot is currently installed for a message recipient</span></span>
+### <a name="-determine-whether-your-bot-is-currently-installed-for-a-message-recipient"></a><span data-ttu-id="7e5b0-154">✔メッセージ受信者用にボットが現在インストールされているかどうかを確認する</span><span class="sxs-lookup"><span data-stu-id="7e5b0-154">✔ Determine whether your bot is currently installed for a message recipient</span></span>
 
-<span data-ttu-id="2a07d-155">**Microsoft Graph ページ リファレンス: ユーザーにインストール**[されたアプリを一覧表示する](/graph/api/user-list-teamsappinstallation?view=graph-rest-beta&tabs=http)</span><span class="sxs-lookup"><span data-stu-id="2a07d-155">**Microsoft Graph page reference:** [List apps installed for user](/graph/api/user-list-teamsappinstallation?view=graph-rest-beta&tabs=http)</span></span>
+<span data-ttu-id="7e5b0-155">**Microsoft Graph ページ リファレンス:** [ユーザー用にインストールされたアプリを一覧表示する](/graph/api/userteamwork-list-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true)</span><span class="sxs-lookup"><span data-stu-id="7e5b0-155">**Microsoft Graph page reference:** [List apps installed for user](/graph/api/userteamwork-list-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true)</span></span>
 
-<span data-ttu-id="2a07d-156">**HTTP GET** 要求:</span><span class="sxs-lookup"><span data-stu-id="2a07d-156">**HTTP GET** request:</span></span>
+<span data-ttu-id="7e5b0-156">**HTTP GET** 要求:</span><span class="sxs-lookup"><span data-stu-id="7e5b0-156">**HTTP GET** request:</span></span>
 
 ```http
 GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
 ```
 
-<span data-ttu-id="2a07d-157">この要求は、アプリがインストールされていない場合は空の配列を返し、インストールされている [場合は、単一の teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-beta) オブジェクトの配列を返します。</span><span class="sxs-lookup"><span data-stu-id="2a07d-157">This request will return an empty array if the app is not installed, or an array with a single [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-beta) object if it has been installed.</span></span>
+<span data-ttu-id="7e5b0-157">この要求は、アプリがインストールされていない場合は空の配列を返し、インストールされている場合は [単一の teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-beta&preserve-view=true) オブジェクトを持つ配列を返します。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-157">This request will return an empty array if the app is not installed, or an array with a single [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-beta&preserve-view=true) object if it has been installed.</span></span>
 
-### <a name="-install-your-app"></a><span data-ttu-id="2a07d-158">✔をインストールする</span><span class="sxs-lookup"><span data-stu-id="2a07d-158">✔ Install your app</span></span>
+### <a name="-install-your-app"></a><span data-ttu-id="7e5b0-158">✔をインストールする</span><span class="sxs-lookup"><span data-stu-id="7e5b0-158">✔ Install your app</span></span>
 
-<span data-ttu-id="2a07d-159">**Microsoft Graph リファレンス: ユーザー**[用アプリをインストールする](/graph/api/user-add-teamsappinstallation?view=graph-rest-beta&tabs=http)</span><span class="sxs-lookup"><span data-stu-id="2a07d-159">**Microsoft Graph reference:** [Install app for user](/graph/api/user-add-teamsappinstallation?view=graph-rest-beta&tabs=http)</span></span>
+<span data-ttu-id="7e5b0-159">**Microsoft Graph ページ リファレンス:** [ユーザー用アプリのインストール](/graph/api/userteamwork-post-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true)</span><span class="sxs-lookup"><span data-stu-id="7e5b0-159">**Microsoft Graph page reference:** [Install app for user](/graph/api/userteamwork-post-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true)</span></span>
 
-<span data-ttu-id="2a07d-160">**HTTP POST** 要求:</span><span class="sxs-lookup"><span data-stu-id="2a07d-160">**HTTP POST** request:</span></span>
+<span data-ttu-id="7e5b0-160">**HTTP POST** 要求:</span><span class="sxs-lookup"><span data-stu-id="7e5b0-160">**HTTP POST** request:</span></span>
 
 ```http
 POST https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps
@@ -146,51 +146,51 @@ POST https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps
 }
 ```
 
-<span data-ttu-id="2a07d-161">ユーザーが Microsoft Teams を実行している場合は、アプリのインストールがすぐに表示される可能性があります。</span><span class="sxs-lookup"><span data-stu-id="2a07d-161">If the user has Microsoft Teams running, they may see the app install immediately.</span></span> <span data-ttu-id="2a07d-162">または、インストール済みアプリを表示するには、再起動が必要になる場合があります。</span><span class="sxs-lookup"><span data-stu-id="2a07d-162">Alternatively,  a  restart may be necessary to see the installed app.</span></span>
+<span data-ttu-id="7e5b0-161">ユーザーが Microsoft Teams を実行している場合、アプリがすぐにインストールされる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-161">If the user has Microsoft Teams running, they may see the app install immediately.</span></span> <span data-ttu-id="7e5b0-162">または、インストールされているアプリを表示するために再起動が必要になる場合があります。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-162">Alternatively,  a  restart may be necessary to see the installed app.</span></span>
 
-### <a name="-retrieve-the-conversation-chatid"></a><span data-ttu-id="2a07d-163">✔ **chatId を取得する**</span><span class="sxs-lookup"><span data-stu-id="2a07d-163">✔ Retrieve the conversation **chatId**</span></span>
+### <a name="-retrieve-the-conversation-chatid"></a><span data-ttu-id="7e5b0-163">✔ **chatId を取得する**</span><span class="sxs-lookup"><span data-stu-id="7e5b0-163">✔ Retrieve the conversation **chatId**</span></span>
 
-<span data-ttu-id="2a07d-164">アプリがユーザー用にインストールされると、ボットはイベント通知を受け取り、プロアクティブ メッセージを `conversationUpdate` [event notification](../../resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)送信するために必要な情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="2a07d-164">When your app is installed for the user, the bot will receive a `conversationUpdate` [event notification](../../resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) that will contain the necessary information to send the proactive message.</span></span>
+<span data-ttu-id="7e5b0-164">ユーザー用にアプリがインストールされている場合、ボットはプロアクティブ メッセージを送信するために必要な情報を含むイベント `conversationUpdate` [](../../resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)通知を受け取ります。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-164">When your app is installed for the user, the bot will receive a `conversationUpdate` [event notification](../../resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) that will contain the necessary information to send the proactive message.</span></span>
 
-<span data-ttu-id="2a07d-165">`chatId`次のように取得できる。</span><span class="sxs-lookup"><span data-stu-id="2a07d-165">The `chatId` can also be retrieved as follows:</span></span>
+<span data-ttu-id="7e5b0-165">次 `chatId` のように取得することもできます。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-165">The `chatId` can also be retrieved as follows:</span></span>
 
-<span data-ttu-id="2a07d-166">**Microsoft Graph リファレンス:** [チャットを取得する](/graph/api/chat-get?view=graph-rest-beta&tabs=http)</span><span class="sxs-lookup"><span data-stu-id="2a07d-166">**Microsoft Graph reference:** [Get chat](/graph/api/chat-get?view=graph-rest-beta&tabs=http)</span></span>
+<span data-ttu-id="7e5b0-166">**Microsoft Graph ページ リファレンス:** [チャットを取得する](/graph/api/chat-get?view=graph-rest-beta&tabs=http&preserve-view=true)</span><span class="sxs-lookup"><span data-stu-id="7e5b0-166">**Microsoft Graph page reference:** [Get chat](/graph/api/chat-get?view=graph-rest-beta&tabs=http&preserve-view=true)</span></span>
 
-<span data-ttu-id="2a07d-167">**1.** アプリが必要になります `{teamsAppInstallationId}` 。</span><span class="sxs-lookup"><span data-stu-id="2a07d-167">**1.** You will need your app's `{teamsAppInstallationId}`.</span></span> <span data-ttu-id="2a07d-168">使用しない場合は、以下を使用します。</span><span class="sxs-lookup"><span data-stu-id="2a07d-168">If you don't have it, use the following:</span></span>
+<span data-ttu-id="7e5b0-167">**1.** アプリが必要です `{teamsAppInstallationId}` 。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-167">**1.** You will need your app's `{teamsAppInstallationId}`.</span></span> <span data-ttu-id="7e5b0-168">お持ちでない場合は、次のコマンドを使用します。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-168">If you don't have it, use the following:</span></span>
 
-<span data-ttu-id="2a07d-169">**HTTP GET** 要求:</span><span class="sxs-lookup"><span data-stu-id="2a07d-169">**HTTP GET** request:</span></span>
+<span data-ttu-id="7e5b0-169">**HTTP GET** 要求:</span><span class="sxs-lookup"><span data-stu-id="7e5b0-169">**HTTP GET** request:</span></span>
 
 ```http
 GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
 ```
 
-<span data-ttu-id="2a07d-170">応答 **の id** プロパティは次の場所です `teamsAppInstallationId` 。</span><span class="sxs-lookup"><span data-stu-id="2a07d-170">The **id** property of the response is the `teamsAppInstallationId`.</span></span>
+<span data-ttu-id="7e5b0-170">応答 **の id** プロパティは次の値です `teamsAppInstallationId` 。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-170">The **id** property of the response is the `teamsAppInstallationId`.</span></span>
 
-<span data-ttu-id="2a07d-171">**2. 次** のような要求を行ってフェッチします `chatId` 。</span><span class="sxs-lookup"><span data-stu-id="2a07d-171">**2.** Make the following request to fetch the `chatId`:</span></span>
+<span data-ttu-id="7e5b0-171">**2. 次** の要求を行って、次の要求をフェッチします `chatId` 。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-171">**2.** Make the following request to fetch the `chatId`:</span></span>
 
-<span data-ttu-id="2a07d-172">**HTTP GET 要求** (アクセス許可 `TeamsAppInstallation.ReadWriteSelfForUser.All` —</span><span class="sxs-lookup"><span data-stu-id="2a07d-172">**HTTP GET** request (permission — `TeamsAppInstallation.ReadWriteSelfForUser.All`):</span></span>  
+<span data-ttu-id="7e5b0-172">**HTTP GET** 要求 (アクセス許可 — `TeamsAppInstallation.ReadWriteSelfForUser.All` ):</span><span class="sxs-lookup"><span data-stu-id="7e5b0-172">**HTTP GET** request (permission — `TeamsAppInstallation.ReadWriteSelfForUser.All`):</span></span>  
 
 ```http
  GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
 ```
 
-<span data-ttu-id="2a07d-173">応答 **の id** プロパティは次の場所です `chatId` 。</span><span class="sxs-lookup"><span data-stu-id="2a07d-173">The **id** property of the response is the `chatId`.</span></span>
+<span data-ttu-id="7e5b0-173">応答 **の id** プロパティは次の値です `chatId` 。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-173">The **id** property of the response is the `chatId`.</span></span>
 
-<span data-ttu-id="2a07d-174">または、次の要求で `chatId`  取得できますが、より広範なアクセス許可が必要 `Chat.Read.All` になります。</span><span class="sxs-lookup"><span data-stu-id="2a07d-174">Alternately, you can retrieve the `chatId`  with the request below, but it will require the broader `Chat.Read.All` permission:</span></span>
+<span data-ttu-id="7e5b0-174">または、以下の要求を使用して取得できますが、 `chatId`  より広範なアクセス許可が必要 `Chat.Read.All` になります。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-174">Alternately, you can retrieve the `chatId`  with the request below, but it will require the broader `Chat.Read.All` permission:</span></span>
 
-<span data-ttu-id="2a07d-175">**HTTP GET 要求** (アクセス許可 `Chat.Read.All` —</span><span class="sxs-lookup"><span data-stu-id="2a07d-175">**HTTP GET** request (permission — `Chat.Read.All`):</span></span>
+<span data-ttu-id="7e5b0-175">**HTTP GET** 要求 (アクセス許可 — `Chat.Read.All` ):</span><span class="sxs-lookup"><span data-stu-id="7e5b0-175">**HTTP GET** request (permission — `Chat.Read.All`):</span></span>
 
 ```http
 GET https://graph.microsoft.com/beta/users/{user-id}/chats?$filter=installedApps/any(a:a/teamsApp/id eq '{teamsAppId}')
 ```
 
-### <a name="-send-proactive-messages"></a><span data-ttu-id="2a07d-176">✔アクティブ メッセージを送信する</span><span class="sxs-lookup"><span data-stu-id="2a07d-176">✔ Send proactive messages</span></span>
+### <a name="-send-proactive-messages"></a><span data-ttu-id="7e5b0-176">✔メッセージを送信する</span><span class="sxs-lookup"><span data-stu-id="7e5b0-176">✔ Send proactive messages</span></span>
 
-<span data-ttu-id="2a07d-177">ユーザーまたはチームにボットが追加され、必要なユーザー情報を取得したら、プロアクティブ メッセージ [を送信できるようになります](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp)。</span><span class="sxs-lookup"><span data-stu-id="2a07d-177">Once your bot has been added for a user or team and has acquired the necessary user  information, it can begin to [send proactive messages](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp).</span></span>
+<span data-ttu-id="7e5b0-177">ボットがユーザーまたはチームに追加され、必要なユーザー情報を取得したら、プロアクティブ メッセージの送信 [を開始できます](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-177">Once your bot has been added for a user or team and has acquired the necessary user  information, it can begin to [send proactive messages](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true).</span></span>
 
-# <a name="c--net"></a>[<span data-ttu-id="2a07d-178">C# / .NET</span><span class="sxs-lookup"><span data-stu-id="2a07d-178">C# / .NET</span></span>](#tab/csharp)
+# <a name="c--net"></a>[<span data-ttu-id="7e5b0-178">C# / .NET</span><span class="sxs-lookup"><span data-stu-id="7e5b0-178">C# / .NET</span></span>](#tab/csharp)
 
-<span data-ttu-id="2a07d-179">次のコード スニペットは [、Microsoft Bot Framework Samples for C# のサンプルのスニペットです。](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/16.proactive-messages)</span><span class="sxs-lookup"><span data-stu-id="2a07d-179">The following code snippet is from the [Microsoft Bot Framework Samples for C#.](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/16.proactive-messages)</span></span>
+<span data-ttu-id="7e5b0-179">次のコード スニペットは [、C# 用 Microsoft Bot Framework サンプルの抜粋です。](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/16.proactive-messages)</span><span class="sxs-lookup"><span data-stu-id="7e5b0-179">The following code snippet is from the [Microsoft Bot Framework Samples for C#.](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/16.proactive-messages)</span></span>
 
 ```csharp
 using System.Collections.Concurrent;
@@ -251,9 +251,9 @@ namespace Microsoft.BotBuilderSamples
 }
 ```
 
-# <a name="javascript"></a>[<span data-ttu-id="2a07d-180">JavaScript</span><span class="sxs-lookup"><span data-stu-id="2a07d-180">JavaScript</span></span>](#tab/javascript)
+# <a name="javascript"></a>[<span data-ttu-id="7e5b0-180">JavaScript</span><span class="sxs-lookup"><span data-stu-id="7e5b0-180">JavaScript</span></span>](#tab/javascript)
 
-<span data-ttu-id="2a07d-181">次のコード スニペットは [、JavaScript 用 Microsoft Bot Framework サンプルのものです](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/16.proactive-messages)。</span><span class="sxs-lookup"><span data-stu-id="2a07d-181">The following code snippet is from the [Microsoft Bot Framework Samples for JavaScript](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/16.proactive-messages).</span></span>
+<span data-ttu-id="7e5b0-181">次のコード スニペットは [、Microsoft Bot Framework Samples for JavaScript の抜粋です](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/16.proactive-messages)。</span><span class="sxs-lookup"><span data-stu-id="7e5b0-181">The following code snippet is from the [Microsoft Bot Framework Samples for JavaScript](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/16.proactive-messages).</span></span>
 
 ```javascript
 const { ActivityHandler, TurnContext } = require('botbuilder');
@@ -304,13 +304,13 @@ module.exports.ProactiveBot = ProactiveBot;
 ```
 ---
 
-## <a name="related-topic-for-teams-administrators"></a><span data-ttu-id="2a07d-182">Teams 管理者向けの関連トピック</span><span class="sxs-lookup"><span data-stu-id="2a07d-182">Related topic for Teams administrators</span></span>
+## <a name="related-topic-for-teams-administrators"></a><span data-ttu-id="7e5b0-182">Teams 管理者向け関連トピック</span><span class="sxs-lookup"><span data-stu-id="7e5b0-182">Related topic for Teams administrators</span></span>
 >
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="2a07d-183">**Microsoft Teams でアプリのセットアップ ポリシーを管理する**</span><span class="sxs-lookup"><span data-stu-id="2a07d-183">**Manage app setup policies in Microsoft Teams**</span></span>](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
+> [<span data-ttu-id="7e5b0-183">**Microsoft Teams のアプリのセットアップ ポリシーを管理する**</span><span class="sxs-lookup"><span data-stu-id="7e5b0-183">**Manage app setup policies in Microsoft Teams**</span></span>](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
 
-## <a name="view-additional-code-samples"></a><span data-ttu-id="2a07d-184">その他のコード サンプルを表示する</span><span class="sxs-lookup"><span data-stu-id="2a07d-184">View additional code samples</span></span>
+## <a name="view-additional-code-samples"></a><span data-ttu-id="7e5b0-184">その他のコード サンプルを表示する</span><span class="sxs-lookup"><span data-stu-id="7e5b0-184">View additional code samples</span></span>
 >
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="2a07d-185">**Teams のプロアクティブなメッセージング コード サンプル**</span><span class="sxs-lookup"><span data-stu-id="2a07d-185">**Teams proactive messaging code samples**</span></span>](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
+> [<span data-ttu-id="7e5b0-185">**Teams プロアクティブ メッセージングのコード サンプル**</span><span class="sxs-lookup"><span data-stu-id="7e5b0-185">**Teams proactive messaging code samples**</span></span>](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
 >
