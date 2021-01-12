@@ -3,12 +3,12 @@ title: コネクタと Webhook にメッセージを送信する
 description: Microsoft Teams で Office 365 コネクタを使用する方法について説明します。
 localization_priority: Priority
 keywords: Teams o365 コネクタ
-ms.openlocfilehash: e14b02a5a93d10feca49b6dcd653979aa9a94370
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: 0cc53fa6110247e02582474ef4781a05af2a8fac
+ms.sourcegitcommit: 5687a901d48bcf2f5a3a086e0f703f854e8b9c21
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49604481"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "49795476"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>コネクタと Webhook にメッセージを送信する
 
@@ -67,6 +67,11 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
             "name": "Save",
             "target": "http://..."
         }]
+        {
+            "@type": "OpenUri",
+            "name": "Learn More",
+            "targets": [{ "os": "default", "uri": "https://docs.microsoft.com/outlook/actionable-messages" }]
+        }
     }, {
         "@type": "ActionCard",
         "name": "Change status",
@@ -108,8 +113,6 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
 - `ActionCard` 1 つまたは複数の入力の種類と、関連付けられたアクションを示します
 - `HttpPOST` POST 要求を URL に送信します
 - `OpenUri` URI を別のブラウザーまたはアプリで開きます。必要に応じて、オペレーティング システムに基づいて異なる URI をターゲットにします。
-
-(4 つ目のアクションである `ViewAction` は現在もサポートされていますが、不必要になりました。代わりに、`OpenUri` を使用してください。)
 
 `ActionCard` アクションでは、次の 3 つの入力の種類がサポートされています。
 
