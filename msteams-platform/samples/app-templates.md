@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Microsoft Teams テンプレートのサンプル デモ
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 2135180a91d7cf123c4b456ac6ab4c236687ae87
-ms.sourcegitcommit: b9771f8f4be9ac1ff8c85c2d7bd8d5c5408bc653
+ms.openlocfilehash: 4a9b2ee9a5fadfa86dead4a15f49a6cea67d4963
+ms.sourcegitcommit: 5687a901d48bcf2f5a3a086e0f703f854e8b9c21
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "49768093"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "49795497"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 用のアプリ テンプレート
 
@@ -24,6 +24,17 @@ ms.locfileid: "49768093"
 * **本番用コード:** アプリ テンプレートは、セキュリティとインフラストラクチャに関する推奨されるベスト プラクティスに準拠しており、コミュニティから送信されたすべての変更は、継続的な準拠を保証するために確認されます。
 * **カスタマイズ可能かつ拡張可能:** すべてのアプリ テンプレートはそのまま展開する準備ができていますが、コード ベース全体と展開スクリプトを提供しているため、独自のニーズに合わせて簡単にカスタマイズまたは拡張できます。
 * **詳細なドキュメントとサポート:** すべてのアプリ テンプレートには、ソリューション アーキテクチャ、展開、構成の手順に関するエンドツーエンドのドキュメントが付属しています。 リポジトリも監視されているため、GitHub で問題を提起して、発生した問題を報告してください。
+
+## <a name="appointment-manager-9734"></a>Appointment Manager &#9734;
+
+予定マネージャーは、企業が Teams を通じてコンシューマーとの仮想予定を作成、管理、および実施するのに役立つ Teams アプリ テンプレートです。 コンシューマーからの新しい予定の要求は Teams チャネルに表示され、チーム内のスタッフにすばやく割り当て、再割り当てできます。 予定の依頼は、カスタム タブを使用して、チーム レベルまたは個人レベルで表示できます。 すべての予定は Teams オンライン会議に関連付けられているため、スタッフとコンシューマーはスケジュールされた時間に簡単に会議に参加できます。
+
+アプリ テンプレートは、Microsoft Bookings と統合して、予定を簡単に管理できます。 スケジュールされた予定は割り当てられたスタッフの予定表に自動的に表示され、コンシューマーは会議リンクが埋め込まれたカスタマイズ可能な電子メール通知と事前通知を受け取ります。
+
+[GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-appointment-manager)
+
+![Appointment Manager Overview ](../assets/images/appointment-manager-overview.png)
+ ![ Appointment Manager in Teams](../assets/images/appointment-manager-2.png)
 
 ## <a name="ask-away"></a>Ask Away
 
@@ -70,7 +81,7 @@ Ask Away は、ユーザーが Teams 内で Q&A (質問と回答) セッショ�
 
 ![会議室予約のデモ](../assets/images/book-a-room.png)
 
-## <a name="building-access"></a>アクセスを構築する
+## <a name="building-access"></a>アクセス権の構築
 
 Building Access は、施設の管理者が従業員が施設に滞在しているかどうかを管理、追跡、報告できるようにして、建物の占有しきい値と社会的距離の基準の管理をサポートする Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) ベースのアプリです。 Microsoft [Power Apps](/powerapps/powerapps-overview)、[Power Automate](/power-automate/getting-started)を使用して構築されたこのアプリは、Microsoft Teams と緊密に統合されており、組織が建物の準備状況を判断し、現場アクセスの適格基準を確立し、将来の計画のための分析情報を収集できるようにします。
 
@@ -107,7 +118,7 @@ Checklist は、チャットやチャネルで共有チェックリストを作�
 
 ## <a name="classroom-drop-in-9734"></a>Classroom Drop-in &#9734;
 
-Classroom Drop-in は、システム リーダーがクラス チーム (仮想教室) を見つけて、必要に応じて指定したドロップイン期間に自分自身または他のユーザーをこれらのクラス チームに追加できる Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)ベースのアプリです。 Microsoft [Power Apps](/powerapps/powerapps-overview) と [Power Automate](/power-automate/getting-started)を使用して構築されたアプリは、Microsoft Teams と深く統合され、教育機関がビジネス要件ごとにクラス チームの関連関係者にアクセスを提供することで、ハイブリッド学習環境での運用を最適化できます。
+Classroom Drop-in は Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)ベースのアプリで、システム リーダーがクラス チーム (仮想教室) を見つけて、必要に応じて、指定したドロップイン期間に自分または他のユーザーをこれらのクラス チームに追加できます。 Microsoft [Power Apps](/powerapps/powerapps-overview) と [Power Automate](/power-automate/getting-started)を使用して構築されたアプリは、Microsoft Teams と深く統合され、教育機関がビジネス要件ごとにクラス チームの関連関係者にアクセスを提供することで、ハイブリッド学習環境での運用を最適化できます。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-classroom-dropin)
 
@@ -187,7 +198,7 @@ Teams ユーザーは、次のアクティビティを実行できます。
 
 ![キャンペーン ビューの管理](../assets/images/employee-ideas-manage-campaigns.png) 
 
-## <a name="e-prescriptions"></a>E-前書き 
+## <a name="e-prescriptions"></a>E-しがち 
 
 E-Prescriptions は、患者に電子処方箋を発行するプロセスを自動化することにより、遠隔医療と仮想ケアを強化する [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) ベースのアプリです。 医療専門家は、Teams プラットフォーム内で直接、予定をすばやく確認し、電子処方箋を生成し、電子処方箋を添付した電子メールを患者に送信できます。
 
@@ -370,13 +381,13 @@ Incident Reporter は、組織内のインシデントの管理を最適化す�
  ![検査の概要](../assets/images/inspection-app.png)  
 
 
-## <a name="issue-reporting-9734"></a>問題の報告&#9734;
+## <a name="issue-reporting-9734"></a>Issue Reporting &#9734;
 
 問題報告アプリは、従業員とマネージャーが問題の発生と管理を支援します。 これは、問題を報告するための問題報告アプリと、問題を管理するための問題の管理アプリの 2 つのアプリで構成されています。
 
 チーム マネージャーは、問題の管理アプリを使用して、Microsoft Teams メッセージと Planner タスクがアプリによって作成されるチャネルを含むアプリ エクスペリエンスを構成します。 マネージャーは、ユーザーが問題を報告するときに詳細を収集するテンプレート フォームを作成するためにもアプリを使用します。 たとえば、問題テンプレート フォームを確認、編集、または削除します。 また、アプリを使用して、チームの問題を確認し、問題履歴を報告し、問題の解決を効率的に管理することもできます。
 
-従業員は、問題報告アプリを使用して、問題の解決に必要な問題と詳細を記録します。 アプリは、既存の問題を変更して解決し、個人またはチームの問題の大きなビューを取得するためにも使用されます。
+従業員は問題報告アプリを使用して、問題の解決に必要な問題と詳細を記録します。 アプリは、既存の問題を変更して解決し、個人またはチームの問題の大きなビューを取得するためにも使用されます。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-issuereporting)
 
