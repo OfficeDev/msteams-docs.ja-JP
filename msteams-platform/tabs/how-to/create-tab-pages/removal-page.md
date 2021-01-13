@@ -1,65 +1,65 @@
 ---
 title: タブ削除のページを作成する
 author: laujan
-description: '[方法] タブ削除ページを作成する'
-keywords: teams タブグループチャネルの構成可能な削除削除
+description: タブ削除ページを作成する方法
+keywords: Teams タブ グループ チャネルの構成可能な削除の削除
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 4ee060b8ef1f439ed4f8e4007e63606ce34c3d24
-ms.sourcegitcommit: d3bb4bbcdff9545c9869647dcdbe563a2db868be
+ms.openlocfilehash: 49e2df47095999e9f9eea76ea341a44215bfacb3
+ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "47964593"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "49797884"
 ---
-# <a name="modify-or-remove-a-channel-group-tab"></a>チャネルグループタブの変更または削除
+# <a name="modify-or-remove-a-channel-group-tab"></a>チャネル グループ タブを変更または削除する
 
-アプリでの削除および変更オプションをサポートすることで、ユーザーの作業を拡張し、強化することができます。 Teams を使用すると、ユーザーは [チャネル/グループ] タブの名前を変更または削除することができ、インストール後にタブを再構成することができます。 また、タブ削除の操作では、タブが削除されたときにコンテンツに何が起きるかを指定したり、コンテンツの削除やアーカイブなどの削除後のオプションをユーザーに提供したりすることができます。
+アプリで削除と変更のオプションをサポートすることで、ユーザー エクスペリエンスを拡張および強化できます。 Teams を使用すると、ユーザーはチャネル/グループ タブの名前を変更または削除できます。また、インストール後にユーザーがタブを再構成することもできます。 さらに、タブ削除エクスペリエンスには、タブが削除された場合のコンテンツに対する処理の指定や、コンテンツの削除やアーカイブなどの削除後のオプションをユーザーに提供する操作も含まれます。
 
-## <a name="enable-your-tab-to-be-reconfigured-after-installation"></a>インストール後にタブを再構成できるようにする
+## <a name="enable-your-tab-to-be-reconfigured-after-installation"></a>インストール後にタブを再構成する
 
-**manifest.jsで**は、タブの機能を定義します。 Tab インスタンスプロパティは、 `canUpdateConfiguration` 作成後にユーザーがタブを変更または再構成できるかどうかを示すブール値を受け取ります。
+ユーザー **manifest.jsタブ** の機能を定義します。 タブ インスタンス プロパティは、ユーザーがタブの作成後に変更または再構成できるかどうかを示すブール `canUpdateConfiguration` 値を受け取います。
 
-|Name| 型| 最大サイズ | 必須 | 説明|
+|名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`canUpdateConfiguration`|ブール型|||作成後にタブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 限り `true`|
+|`canUpdateConfiguration`|Boolean|||タブの構成のインスタンスを作成後にユーザーが更新できるかどうかを示す値。 既定値: `true`|
 
-タブがチャネルまたはグループチャットにアップロードされると、チームはタブに右クリックされたドロップダウンメニューを追加します。使用可能なオプションは、次の設定によって決まり `canUpdateConfiguration` ます。
+タブがチャネルまたはグループ チャットにアップロードされると、Teams はタブの右クリック ドロップダウン メニューを追加します。使用可能なオプションは、設定によって決 `canUpdateConfiguration` まります。
 
 | `canUpdateConfiguration`| true   | false | 説明 |
 | ----------------------- | :----: | ----- | ----------- |
-|     設定            |   √    |       |`configurationUrl`ページが IFrame に再読み込みされ、ユーザーがタブを再設定できるようになります。  |
-|     名前の変更              |   √    |   √   | ユーザーは、タブバーに表示されるタブ名を変更できます。          |
-|     削除              |   √    |   √   |  `removeURL`プロパティと値が [**構成] ページ**に含まれている場合は、**削除ページ**が IFrame に読み込まれ、ユーザーに表示されます。 削除ページが含まれていない場合は、ユーザーに確認のダイアログボックスが表示されます。          |
+|     設定            |   √    |       |ページ `configurationUrl` が IFrame に再読み込みされ、ユーザーはタブを再構成できます。  |
+|     名前の変更              |   √    |   √   | ユーザーは、タブ バーに表示されるタブ名を変更できます。          |
+|     削除              |   √    |   √   |  プロパティと値が構成ページに含まれている場合、削除ページは IFrame に読み込まれ `removeURL` 、ユーザーに表示されます。   削除ページが含まれていない場合は、ユーザーに確認ダイアログ ボックスが表示されます。          |
 |||||
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>アプリケーションのタブ削除ページを作成する
 
-オプションの削除ページは、ホストする HTML ページで、タブが削除されるときに表示されます。 削除ページの URL は、構成ページ内のメソッドによって指定され `setSettings()` ます。 アプリ内のすべてのページと同様に、削除ページは [Teams のタブ要件](~/tabs/how-to/add-tab.md)に準拠している必要があります。
+オプションの削除ページは、ホストする HTML ページであり、タブが削除されると表示されます。 削除ページの URL は、構成ページ `setSettings()` 内のメソッドによって指定されます。 アプリ内のすべてのページと同様に、削除ページは Teams タブの要件 [に準拠している必要があります](../../../tabs/how-to/tab-requirements.md)。
 
 ### <a name="register-a-remove-handler"></a>削除ハンドラーを登録する
 
-必要に応じて、削除ページロジック内で、 `registerOnRemoveHandler((RemoveEvent) => {}` ユーザーが既存のタブ構成を削除したときに、イベントハンドラーを呼び出すことができます。 メソッドはインターフェイスを取得 [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest&preserve-view=true) し、ユーザーがコンテンツを削除しようとしたときにハンドラー内のコードを実行します。 これを使用して、基になるリソースを削除するなどのクリーンアップ操作を実行して、タブのコンテンツを電源にします。 一度に登録できる削除ハンドラーは1つだけです。
+必要に応じて、削除ページ ロジック内で、ユーザーが既存のタブ構成を削除するときにイベント ハンドラー `registerOnRemoveHandler((RemoveEvent) => {}` を呼び出します。 このメソッドはインターフェイスを取り込み、ユーザーがコンテンツを削除しようとするときにハンドラーで [`RemoveEvent`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.removeevent?view=msteams-client-js-latest&preserve-view=true) コードを実行します。 このプロパティは、基になるリソースを削除してタブ コンテンツを作成するなどのクリーンアップ操作を実行するために使用されます。 一度に登録できる削除ハンドラーは 1 つのみです。
 
-この `RemoveEvent` インターフェイスは、次の2つのメソッドを使用してオブジェクトを記述します。
+インターフェイス `RemoveEvent` は、2 つのメソッドを持つオブジェクトを記述します。
 
-* `notifySuccess()`関数が必要です。 これは、基になるリソースの削除が正常に終了し、そのコンテンツを削除できることを示します。
+* この `notifySuccess()` 関数は必須です。 基になるリソースの削除が成功し、そのコンテンツを削除できる状態を示します。
 
-* `notifyFailure(string)`関数はオプションです。 基になるリソースの削除が失敗し、そのコンテンツを削除できないことを示します。 オプションの文字列パラメーターは、失敗の理由を指定します。 指定した場合、この文字列がユーザーに表示されます。それ以外の場合は、一般的なエラーが表示されます。
+* この `notifyFailure(string)` 関数は省略可能です。 基になるリソースの削除が失敗し、そのコンテンツを削除できないことを示します。 オプションの文字列パラメーターは、失敗の理由を指定します。 指定した場合、この文字列はユーザーに表示されます。それ以外の場合は、汎用エラーが表示されます。
 
-#### <a name="use-the-getsettings-function"></a>関数を使用する `getSettings()`
+#### <a name="use-the-getsettings-function"></a>関数を使用 `getSettings()` する
 
-を使用し `getSettings()` て、削除するタブの内容を指定できます。 `getSettings((Settings) =>{})`関数は、を使用して、 [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) 取得できる有効な設定プロパティ値を提供します。
+削除する `getSettings()` タブ コンテンツを指定するために使用できます。 この `getSettings((Settings) =>{})` 関数は、取得 [`Settings interface`](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true) 可能な有効な設定プロパティ値を取り込み、提供します。
 
-#### <a name="use-the-getcontext-function"></a>関数を使用する `getContext()`
+#### <a name="use-the-getcontext-function"></a>関数を使用 `getContext()` する
 
-を使用して、 `getContext()` フレームが実行されている現在のコンテキストを取得できます。 関数は、を使用して、削除ページ `getContext((Context) =>{})` [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) `Context` に表示するコンテンツを決定するために削除ページロジックで使用できる有効なプロパティ値を提供します。
+フレームが `getContext()` 実行されている現在のコンテキストを取得するために使用できます。 関数は、削除ページのロジックで使用できる有効なプロパティ値を取り込み、削除ページに表示するコンテンツ `getContext((Context) =>{})` [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) `Context` を決定します。
 
 #### <a name="include-authentication"></a>認証を含める
 
-ユーザーがタブの内容を削除できるようにするには、認証が必要な場合があります。 コンテキスト情報を使用して、認証要求および認証ページの Url を作成することができます。 [タブについては、「Microsoft Teams の認証フロー」を](~/tabs/how-to/authentication/auth-flow-tab.md)参照してください。 タブページで使用されているすべてのドメインが配列に含まれていることを確認してください `manifest.json` `validDomains` 。
+ユーザーにタブ コンテンツの削除を許可する前に認証が必要になる場合があります。 コンテキスト情報は、認証要求と承認ページ URL の構築に役立ちます。 タブについては [、Microsoft Teams の認証フローを参照してください](~/tabs/how-to/authentication/auth-flow-tab.md)。 タブ ページで使用されているドメインすべてが配列に表示されます `manifest.json` `validDomains` 。
 
-タブ削除コードブロックの例を次に示します。
+次に、タブ削除コード ブロックのサンプルを示します。
 
 ```html
 <body>
@@ -82,11 +82,11 @@ ms.locfileid: "47964593"
 
 ```
 
-ユーザーがタブのドロップダウンメニューから [ **削除** ] を選択すると、Teams は、 `removeUrl` ( **構成ページ**で指定されている) 省略可能なページを IFrame に読み込みます。 ここでは、削除 `onClick()` `microsoftTeams.settings.setValidityState(true)` ページの IFrame の下部にある [ **削除** ] ボタンを呼び出して有効にする関数と共に、ユーザーにボタンが表示されます。
+ユーザーがタブのドロップダウンメニューから [削除] を選択すると、Teams はオプションのページ (構成ページで指定) を IFrame に読み込 `removeUrl` む必要があります。  ここでは、ユーザーには、削除ページ IFrame の下部付近にある [削除] ボタンを呼び出す関数が読み込まれたボタン `onClick()` `microsoftTeams.settings.setValidityState(true)` が表示されます。 
 
-削除ハンドラーの実行後、 `removeEvent.notifySuccess()` または `removeEvent.notifyFailure()` チームにコンテンツ削除の結果が通知されます。
+削除ハンドラーの実行に従って、 `removeEvent.notifySuccess()` または `removeEvent.notifyFailure()` コンテンツ削除の結果を Teams に通知します。
 
 >[!NOTE]
->承認されたユーザーのコントロールがタブで禁止されないようにするために、Teams は成功とエラーの両方の場合にタブを削除します。
->Teams では、タブが呼び出されていない場合でも、5秒後に [ **削除** ] ボタンが有効になり `setValidityState()` ます。
->ユーザーが [チームの **削除** ] を選択すると、操作が完了したかどうかにかかわらず、30秒後にタブが削除されます。
+>承認されたユーザーによるタブに対する制御が禁止されない場合、Teams は成功と失敗の両方の場合にタブを削除します。\
+>Teams は、 **タブが呼** び出されていない場合でも、5 秒後に [削除] ボタンを `setValidityState()` 有効にします。
+>ユーザーが **[Teams** の削除] を選択すると、操作が完了したかどうかに関係なく、30 秒後にタブが削除されます。

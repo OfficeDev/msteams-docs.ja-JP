@@ -5,28 +5,28 @@ description: チーム会議用アプリの作成
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: Teams アプリ会議ユーザー参加者ロール api
-ms.openlocfilehash: e768c2dc6722d006c89927adfe60e03243a076d0
-ms.sourcegitcommit: f0dfae429385ef02f61896ad49172c4803ef6622
+ms.openlocfilehash: 82327eca86dcdac5c47f5f4471bc91d55484d07e
+ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2020
-ms.locfileid: "49740872"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "49797765"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Teams 会議用のアプリを作成する
 
 ## <a name="prerequisites-and-considerations"></a>前提条件と考慮事項
 
-1. 会議のアプリには、Teams アプリ開発に関する基本的な [知識が必要です](../overview.md)。 会議内のアプリは、タブ、[](../tabs/what-are-tabs.md)ボット、[](../bots/what-are-bots.md)メッセージング拡張機能の機能[](../messaging-extensions/what-are-messaging-extensions.md)で構成できます。また[、Teams](#update-your-app-manifest)アプリ マニフェストを更新して、アプリが会議で利用できる状態を示す必要があります。
+* 会議のアプリには、Teams アプリ開発に関する基本的な [知識が必要です](../overview.md)。 会議内のアプリは、タブ、[](../tabs/what-are-tabs.md)ボット、[](../bots/what-are-bots.md)メッセージング拡張機能の機能[](../messaging-extensions/what-are-messaging-extensions.md)で構成できます。また[、Teams](#update-your-app-manifest)アプリ マニフェストを更新して、アプリが会議で利用できる状態を示す必要があります。
 
-1. アプリをタブとして会議のライフサイクルで機能するには、グループチャット スコープで構成可能なタブをサポート [する必要があります](../resources/schema/manifest-schema.md#configurabletabs)。 *「Teams* [アプリをカスタム タブで拡張する」を参照してください](../tabs/how-to/add-tab.md)。スコープを `groupchat` サポートすると、会議前および [](teams-apps-in-meetings.md#pre-meeting-app-experience)会議後のチャット [でアプリを](teams-apps-in-meetings.md#post-meeting-app-experience)有効にできます。
+* アプリをタブとして会議のライフサイクルで機能するには、 [グループ](../resources/schema/manifest-schema.md#configurabletabs) チャット スコープで構成可能なタブをサポートする必要があります (グループ タブの作成方法 [を参照してください](../build-your-first-app/build-channel-tab.md))。 スコープを `groupchat` サポートすると、会議前および[](teams-apps-in-meetings.md#pre-meeting-app-experience)会議後のチャット[でアプリを](teams-apps-in-meetings.md#post-meeting-app-experience)有効にできます。
 
-1. 会議 API URL パラメーターには、必要な場合があります。tenantId これらは、Teams クライアント SDK およびボット アクティビティの一 `meetingId` `userId` 部として利用できます。 [](/onedrive/find-your-office-365-tenant-id) さらに、タブ SSO 認証を使用して、ユーザー ID とテナント ID の信頼性の高い [情報を取得できます](../tabs/how-to/authentication/auth-aad-sso.md)。
+* 会議 API URL パラメーターには、必要な場合があります。tenantId これらは、Teams クライアント SDK およびボット アクティビティの一 `meetingId` `userId` 部として利用できます。 [](/onedrive/find-your-office-365-tenant-id) さらに、タブ SSO 認証を使用して、ユーザー ID とテナント ID の信頼性の高い [情報を取得できます](../tabs/how-to/authentication/auth-aad-sso.md)。
 
-1. 一部の会議 API では、認証トークンを生成するためにボット登録とボット アプリ `GetParticipant` [ID](../bots/how-to/create-a-bot-for-teams.md#with-an-azure-subscription) が必要になります。
+* 会議 API の中には、認証トークンを生成するためにボット登録と `GetParticipant` [ID](../build-your-first-app/build-bot.md) が必要な場合があります。
 
-1. 開発者は、会議前および会議後のシナリオに関する一般的な[Teams](../tabs/design/tabs.md)タブ設計ガイドライン、および Teams[](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)会議中にトリガーされる会議内ダイアログのガイドラインに従う必要があります。
+* 会議前および会議後の [シナリオでは、Teams タブの設計に](../tabs/design/tabs.md) 関する一般的なガイドラインに従う必要があります。 会議中のエクスペリエンスについては、 [会議内タブ](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) と会議内ダイアログ [の](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog) 設計ガイドラインを参照してください。
 
-1. アプリをリアルタイムで更新するには、会議のイベント アクティビティに基づいてアプリを最新の情報に更新する必要があります。 これらのイベントは、会議のライフサイクル全体にわたって、会議内ダイアログ (完了パラメーターを参照) 内に含め、その他 `bot Id` `Notification Signal API` のサーフェスにできます。
+* アプリをリアルタイムで更新するには、会議のイベント アクティビティに基づいてアプリを最新の情報に更新する必要があります。 これらのイベントは、会議のライフサイクル全体にわたって、会議内ダイアログ (完了パラメーターを参照) 内に含め、その他 `bot Id` `Notification Signal API` のサーフェスにできます。
 
 ## <a name="meeting-apps-api-reference"></a>会議アプリ API リファレンス
 

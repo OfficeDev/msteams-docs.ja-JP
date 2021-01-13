@@ -5,20 +5,20 @@ description: Microsoft Teams を使用して、Microsoft Teams チャネルと�
 ms.author: lajanuar
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 2ad0474859118f302a39e823f7669dc54061d525
-ms.sourcegitcommit: 5687a901d48bcf2f5a3a086e0f703f854e8b9c21
+ms.openlocfilehash: ae06217cf9ffd99ce94aff981fbbec19136d4aeb
+ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "49795455"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "49797877"
 ---
 # <a name="build-a-channel-and-group-tab-for-microsoft-teams"></a>Microsoft Teams のチャネルとグループ タブを作成する
 
-このチュートリアルでは、基本的なチャネル タブ *(グループ* タブとも呼ばれる) を作成します。これは、チーム チャネルまたはチャットの全画面ページです。 個人用タブとは異なり、ユーザーは、この種のタブの一部を構成できます (たとえば、チャネルにとって意味のある名前に変更します)。
+このチュートリアルでは、基本的なチャネル タブ *(グループ* タブとも呼ばれる) を作成します。これは、チーム チャネルまたはチャットの全画面ページです。 個人用タブとは異なり、ユーザーは、この種のタブのいくつかの側面を構成できます (たとえば、チャネルにとって意味のある名前にタブの名前を変更します)。
 
 ## <a name="your-assignment"></a>割り当て
 
-少し前に、組織はタブを使用して重要な連絡先情報 (ヘルプ デスク、人事など) を表示する Teams アプリを作成しました。 ただし、個人用タブの場合は、各ユーザーがタブをインストールして表示する必要があります。また、導入が予想より低くなります。 言い換えると、多すぎるワーカーは、ヘルプ デスクにアクセスする方法をまだ知りません。
+少し前に、組織はタブを使用して重要な連絡先情報 (ヘルプ デスク、人事など) を表示する Teams アプリを作成しました。 ただし、個人用タブの場合は、各ユーザーがタブをインストールして表示する必要があります。また、導入が予想より低くなります。 言い換えると、多すぎるワーカーは、ヘルプ デスクに到達する方法をまだ知りません。
 
 チャネル タブを作成すると、この情報を見つけやすくすることができます。これにより、すべてのユーザーがアプリをインストールする必要が生じやすくなります。 代わりに、1 人のユーザーがチャネルまたはチャットにタブを追加して、グループ全体を利用できます。
 
@@ -113,9 +113,9 @@ a {
 
 ## <a name="4-customize-your-tab-configuration-page"></a>4. タブ構成ページをカスタマイズする
 
-チャネルまたはチャット内のすべてのタブには構成ページがあります。モーダルで、ユーザーがアプリを追加するときに少なくとも 1 つのセットアップ オプションが表示されます。 既定では、構成ページは、タブのインストール時にチャネルまたはチャットに通知する必要がある場合にユーザーに確認を求めるメッセージを表示します。
+チャネルまたはチャット内のすべてのタブには構成ページがあります。モーダルなモーダルで、ユーザーがアプリを追加するときに少なくとも 1 つのセットアップ オプションが表示されます。 既定では、構成ページは、タブのインストール時にチャネルまたはチャットに通知する必要がある場合にユーザーに確認を求めるメッセージを表示します。
 
-構成ページにカスタム コンテンツを追加します。 プロジェクトのディレクトリに移動し、内部のプレースホルダー コンテンツを開いて更新 `src/components` `TabConfig.js` します `return()` (次の例を参照)。
+構成ページにカスタム コンテンツを追加します。 プロジェクトのディレクトリに移動し、内部のプレースホルダー コンテンツを開いて更新 `src/components` `TabConfig.js` します (次の例 `return()` を参照)。
 
 ```JavaScript
 return (
@@ -135,7 +135,7 @@ return (
 
 チャネル タブを追加すると、既定でアプリ名 (たとえば、最初のアプリ) **が表示されます**。
 
-これは、アプリの呼び出しによって問題ありませんが、グループコラボレーションのコンテキスト (チーム連絡先など) で意味のある名前を付け加える必要がある場合 **があります**。
+これは、アプリの呼び出しに応じて問題ありませんが、グループコラボレーションのコンテキスト (チーム連絡先など) で意味のある名前を付け加える必要がある場合 **があります**。
 
 1. In `TabConfig.js` に移動します `microsoftTeams.settings.setSettings` 。
 2. 既定で `suggestedDisplayName` 表示するタブ名を持つプロパティを追加します。 
@@ -161,7 +161,7 @@ microsoftTeams.settings.setSettings({
 
 ## <a name="7-sideload-your-app-in-teams"></a>7. Teams でアプリをサイドロードする
 
-アプリは Teams でテストする準備が整っています。 これを行うには、アプリのサイドローディングを許可するアカウントが必要です。 (それが確実でない場合は、Teams 開発アカウントを取得する方法 [について説明します](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account))。
+アプリは Teams でテストする準備が整っています。 これを行うには、アプリのサイドローディングを許可するアカウントが必要です。 (そのアカウントが分からない場合は、Teams 開発アカウントを取得する方法 [について説明します](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account))。
 
 1. コードVisual Studio **F5** キーを押して、Teams Web クライアントを起動します。
 1. Teams でアプリのコンテンツを表示するには、アプリが実行されている場所 ( `localhost` ) が信頼できる場所を指定します。
@@ -180,15 +180,15 @@ microsoftTeams.settings.setSettings({
 ## <a name="learn-more"></a>詳細情報
 
 * [SSO を使用して](../tabs/how-to/authentication/auth-aad-sso.md)タブ ユーザーを認証する : 承認されたユーザーにのみタブを表示する場合は、Azure Active Directory (AD) を使用してシングル サインオン (SSO) を設定します。
-* [既存の Web アプリまたは Web](../tabs/how-to/add-tab.md#tab-requirements)ページからコンテンツを埋め込む : タブの新しいコンテンツを作成する方法を説明しましたが、外部 URL からコンテンツを読み込む方法も示しました。
+* [既存の Web アプリ](../tabs/how-to/add-tab.md#tab-requirements)または Web ページからコンテンツを埋め込む : タブの新しいコンテンツを作成する方法を説明しましたが、外部 URL からコンテンツを読み込む方法も示しました。
 * [シームレスなタブ エクスペリエンスを作成](../tabs/design/tabs.md)する : Teams タブを設計する際の推奨ガイドラインを参照してください。
 * [モバイル用のタブの作成](../tabs/design/tabs-mobile.md): 携帯電話やタブレットのタブを開発する方法について説明します。
-* [Microsoft Graph API を使用して Teams データを利用する](https://docs.microsoft.com/graph/teams-concept-overview)
-* [ツールキットを使わずにタブを作成する](../tabs/how-to/add-tab.md)
+* [ツールキットを使用せずにタブを作成する](../tabs/quickstarts/create-channel-group-tab-node-yeoman.md)
+* [Microsoft Graph で Teams データを利用する](https://docs.microsoft.com/graph/teams-concept-overview)
 
 ## <a name="next-lesson"></a>次のレッスン
 
-コラボレーション用のタブを作成する方法を知っている。 別の種類の Teams アプリを作成する場合
+コラボレーション用のタブを作成する方法を知っている。 別の種類の Teams アプリを構築する場合
 
 > [!div class="nextstepaction"]
 > [Bot を作成する](../build-your-first-app/build-bot.md)

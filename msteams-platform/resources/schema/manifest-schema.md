@@ -4,12 +4,12 @@ description: Microsoft Teams のマニフェスト スキーマについて説�
 keywords: teams マニフェスト スキーマ
 author: laujan
 ms.author: lajanuar
-ms.openlocfilehash: c66add190b0492170acf9756980ee16fb1fdf1fd
-ms.sourcegitcommit: 5f1d6c12d80d48f403b73586f68bacf15785c855
+ms.openlocfilehash: 17626df3aa4b076190413c67d9a0ecd7cd2eed31
+ms.sourcegitcommit: 4275a502f9f7742da2900c79e19551e481c9e48a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/30/2020
-ms.locfileid: "49739057"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "49797053"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>リファレンス: Microsoft Teams のマニフェスト スキーマ
 
@@ -334,7 +334,7 @@ Teams エクスペリエンスでユーザーに表示されるアプリ エク�
 |`short`|30 文字|✔|アプリの短い表示名。|
 |`full`|100 文字||完全なアプリ名が 30 文字を超える場合に使用される、アプリの完全な名前。|
 
-## <a name="description"></a>description
+## <a name="description"></a>説明
 
 **必須** — オブジェクト
 
@@ -460,7 +460,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |title|string|12 |✔|ボット コマンド名|
-|description|string|128 文字|✔|単純なテキストの説明、またはコマンド構文とその引数の例。|
+|説明|string|128 文字|✔|単純なテキストの説明、またはコマンド構文とその引数の例。|
 
 ## <a name="connectors"></a>コネクタ
 
@@ -487,7 +487,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 アイテムは、すべての型の要素を持つ配列 (最大 1 つの要素) です `object` 。 このブロックは、メッセージング拡張機能を提供するソリューションでのみ必要です。
 
-|名前| 型 | 最大サイズ | 必須 | 説明|
+|名前| 種類 | 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`botId`|string|64|✔|Bot Framework に登録されている、メッセージング拡張機能をサポートするボットの一意の Microsoft アプリ ID。 これは、アプリ全体の ID と同じ場合があります。|
 |`commands`|オブジェクトの配列|10 |✔|メッセージング拡張機能がサポートするコマンドの配列|
@@ -573,8 +573,8 @@ Azure Active Directory (Azure AD) アプリ ID と Microsoft Graph 情報を指�
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`id`|string|36 文字|✔|アプリの AAD アプリケーション ID。 この ID は GUID である必要があります。|
-|`resource`|string|2048 文字|✔|SSO の認証トークンを取得するためのアプリのリソース URL。|
-|`applicationPermissions`|文字列の配列|128 文字||リソース固有の詳細 [な同意を指定する](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)|
+|`resource`|string|2048 文字|✔|SSO の認証トークンを取得するためのアプリのリソース URL。 </br> **注:** SSO を使用していない場合は、エラー応答を回避するために、このフィールドにダミー文字列値をアプリ マニフェストに入力 https://notapplicable してください。 |
+|`applicationPermissions`|文字列の配列|128 文字||詳細なリソース [固有の同意を指定します](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)。|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
 

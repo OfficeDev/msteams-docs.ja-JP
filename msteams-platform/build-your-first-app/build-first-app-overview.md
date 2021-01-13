@@ -5,16 +5,16 @@ description: Microsoft Teams アプリの開発を開始し、環境をセット
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: 06e26c57e6f6d3fd0bbeb981ef7ab46c8217bb4a
-ms.sourcegitcommit: 5687a901d48bcf2f5a3a086e0f703f854e8b9c21
+ms.openlocfilehash: 4288efdbfada5f1a51fa1d4aeccdd6cdf9c64382
+ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "49795462"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "49797898"
 ---
 # <a name="build-your-first-microsoft-teams-app-overview"></a>最初の Microsoft Teams アプリの概要を作成する
 
-最初の **アプリのレッスンを構築する** 場合は、基本的な Teams アプリを作成します。 各チュートリアルでは、一般的なツール、基本的な概念、より高度な機能を紹介しながら、シンプルで実際の Teams アプリを構築する方法について説明します。
+授業の **開始では** 、基本的な Teams アプリを作成する方法について説明します。 各チュートリアルでは、一般的なツール、基本的な概念、より高度な機能を紹介しながら、シンプルで実際の Teams アプリを構築する方法について説明します。
 
 ## <a name="what-youll-learn"></a>学習する情報
 
@@ -34,7 +34,7 @@ ms.locfileid: "49795462"
 
 ### <a name="apps-can-have-multiple-capabilities-and-entry-points"></a>アプリは複数の機能とエントリ ポイントを持つ場合があります。
 
-Teams アプリは、1 つ以上のプラットフォーム機能 [(ユーザー](../concepts/capabilities-overview.md) がアプリを使用する方法) とエントリ ポイント [(ユーザー](../concepts/extensibility-points.md) がアプリを検出する場所) で構成されます。
+Teams アプリは、1 つ以上のプラットフォーム機能 [(ユーザー](../concepts/capabilities-overview.md) がアプリを使用する方法) とエントリ ポイント [(ユーザー](../concepts/extensibility-points.md) がアプリを使用する場所) で構成されます。
 
 ### <a name="teams-doesnt-host-your-app"></a>Teams がアプリをホストしない
 
@@ -93,9 +93,9 @@ Teams は、HTTPS 接続を通じてのみアプリのコンテンツを表示�
 
 ## <a name="about-the-tutorials"></a>チュートリアルについて
 
-どの Teams でも、最初のアプリの **レッスンを構築できます** 。 最初の場所が不明な場合は、初心者向けのパスに従って"Hello, World!" を構築します。 app.
+最初に、Teams の任意の開始 **レッスンを開始** できます。 最初の場所が不明な場合は、初心者向けのパスに従って"Hello, World!" を構築します。 app.
 
-:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Teams の「最初のアプリを構築する」チュートリアルのラーニング パスを示すスキル ツリー。" border="false":::
+:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Teams の 「開始」のレッスンのラーニング パスを示すスキル ツリー。" border="false":::
 
 ## <a name="next-step"></a>次の手順
 

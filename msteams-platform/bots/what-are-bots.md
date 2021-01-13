@@ -4,14 +4,14 @@ author: clearab
 description: Microsoft Teams の会話ボットの概要。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 140be426ac789efbf044130b0683f60af9f617d6
-ms.sourcegitcommit: b822584b643e003d12d2e9b5b02a0534b2d57d71
-ms.translationtype: HT
+ms.openlocfilehash: 0304ae436b54db0d111eaed507beb350f1ca4632
+ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "44704468"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "49797870"
 ---
-# <a name="what-are-conversational-bots"></a>会話ボットとは
+# <a name="what-are-conversational-bots-in-microsoft-teams"></a>Microsoft Teams の会話ボットとは
 
 会話ボットを使用すると、ユーザーは、テキスト、対話型カード、タスク モジュールで Web サービスとのやり取りができるようになります。 会話型ボットの機能は非常に柔軟性があり、単純なコマンドだけでなく、複雑で人工知能を搭載した自然言語処理の仮想アシスタントを処理できるようにスコープを設定することができます。 大規模なアプリケーションはもちろん、スタンドアロンのものにも適用することができます。
 
@@ -41,7 +41,7 @@ Teams ボットは次の 3 つ要素で構成されています。
 
 ## <a name="create-a-chatbot-for-teams-with-microsoft-power-virtual-agents"></a>Microsoft Power Virtual Agent を使用してTeams用のチャット ボットを作成する
 
-[Power Virtual Agent](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) は、Microsoft Power platform および Bot Framework で構築された チャット ボット サービスです。  Power Virtual Agent の開発プロセスでは、ガイド付きのコーディングされていないグラフィカル インターフェイス アプローチを使用して、チームのすべてのメンバーが高度な仮想エージェントを簡単に作成して管理できるようにします。  [Power Virtual Agent ポータル](https://powervirtualagents.microsoft.com)でのチャット ボットの作成が完了したら、[Power Virtual Agent の チャット ボット を Teams の](how-to/add-power-virtual-agents-bot-to-teams.md)に簡単に統合 ことができます。 Power Virtual Agent のチャットボットの作成を開始するには、*こちら* の[「Power Virtual Agent のドキュメントをご覧ください」](https://docs.microsoft.com/power-virtual-agents/)。
+[Power Virtual Agent](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) は、Microsoft Power platform および Bot Framework で構築された チャット ボット サービスです。  Power Virtual Agent の開発プロセスでは、ガイド付きのコーディングされていないグラフィカル インターフェイス アプローチを使用して、チームのすべてのメンバーが高度な仮想エージェントを簡単に作成して管理できるようにします。  [Power Virtual Agent ポータル](https://powervirtualagents.microsoft.com)でのチャット ボットの作成が完了したら、[Power Virtual Agent の チャット ボット を Teams の](how-to/add-power-virtual-agents-bot-to-teams.md)に簡単に統合 ことができます。 Power Virtual Agent のチャットボットの作成を開始するには、*こちら* の [「Power Virtual Agent のドキュメントをご覧ください」](https://docs.microsoft.com/power-virtual-agents/)。
 
 ## <a name="webhooks-and-connectors"></a>Webhook とコネクタ
 
