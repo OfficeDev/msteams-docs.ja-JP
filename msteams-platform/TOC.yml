@@ -34,19 +34,19 @@
       items:
         - name: C# を使ったチャットボット (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot'
-        - name: JavaScript を使ったチャットボット (GitHub)
+        - name: Node.js を使ったチャットボット (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot'
         - name: Python を使ったチャットボット (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot'
     - name: メッセージング拡張機能のサンプル
       items:
-        - name: C#/.NET を使ったアクション コマンド (GitHub)
+        - name: C# を使ったアクション コマンド (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
-        - name: TypeScript/Node.js を使ったアクション コマンド (GitHub)
+        - name: Node.js を使ったアクション コマンド (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action'
-        - name: C#/.NET でコマンドを検索する (GitHub)
+        - name: C# を使った検索コマンド (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
-        - name: TypeScript/Node.js でコマンドを検索する (GitHub)
+        - name: Node.js を使った検索コマンド (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search'
 - name: アプリの基本事項
   items:
@@ -74,7 +74,7 @@
       href: samples/app-templates.md
     - name: 本番対応の Shifts コネクタ
       href: samples/shifts-wfm-connectors.md
-    - name: Moodle LMS のインストール
+    - name: Moodle LMS をインストールする
       href: resources/moodleInstructions.md
     - name: '[Teams で共有] ボタンを作成する'
       href: concepts/build-and-test/share-to-teams.md
@@ -126,12 +126,14 @@
       href: 'https://github.com/pnp/generator-teams'
     - name: App Studio
       href: concepts/build-and-test/app-studio-overview.md
+    - name: Teams JavaScript クライアント SDK
+      href: tabs/how-to/using-teams-client-sdk.md
     - name: ボットおよびメッセージング拡張機能用 Node.js Bot Framework (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-js'
     - name: ボットおよびメッセージング拡張機能用 .NET Bot Framework (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-dotnet'
     - name: Microsoft Graph SDK
-      href: 'https://docs.microsoft.com/en-us/graph/sdks/sdks-overview'
+      href: 'https://docs.microsoft.com/graph/sdks/sdks-overview'
     - name: 従来の SDK
       items:
         - name: ボット SDK (v3)
@@ -182,17 +184,17 @@
       href: tabs/what-are-tabs.md
     - name: クイックスタート
       items:
-        - name: Node.js/React を使った個人用タブ
+        - name: Node.js を使った個人用タブ
           href: tabs/quickstarts/create-personal-tab-node-yeoman.md
         - name: C#/ASP.NET Core を使った個人用タブ
           href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-        - name: C#/ASP.NET MVC を使った個人用タブ
+        - name: C#/ASP.NET Core MVC を使った個人用タブ
           href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-        - name: Node.js/React を使ったチャネル タブ
+        - name: Node.js を使ったチャネル タブ
           href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
         - name: C#/ASP.NET Core を使ったチャネル タブ
           href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
-        - name: C#/ASP.NET MVC を使ったチャネル タブ
+        - name: C#/ASP.NET Core MVC を使ったチャネル タブ
           href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
     - name: コンテンツ ページを作成する
       href: tabs/how-to/create-tab-pages/content-page.md
@@ -200,9 +202,7 @@
       href: tabs/how-to/create-tab-pages/configuration-page.md
     - name: 削除ページを作成する
       href: tabs/how-to/create-tab-pages/removal-page.md
-    - name: Teams JavaScript クライアント SDK を使用する
-      href: tabs/how-to/using-teams-client-sdk.md
-    - name: 他のコンテキストを取得する
+    - name: タブのコンテキストを取得する
       href: tabs/how-to/access-teams-context.md
 - name: ボットを作成する
   items:
