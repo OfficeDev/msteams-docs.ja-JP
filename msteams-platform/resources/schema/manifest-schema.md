@@ -4,12 +4,12 @@ description: Microsoft Teams のマニフェスト スキーマについて説�
 keywords: teams マニフェスト スキーマ
 author: laujan
 ms.author: lajanuar
-ms.openlocfilehash: 17626df3aa4b076190413c67d9a0ecd7cd2eed31
-ms.sourcegitcommit: 4275a502f9f7742da2900c79e19551e481c9e48a
+ms.openlocfilehash: cf80251abd22f0c89388cbe5a6287a02dedce1fb
+ms.sourcegitcommit: bf61ae5ad2afa4efdb0311158184d0cbb9c40174
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797053"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "49845631"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>リファレンス: Microsoft Teams のマニフェスト スキーマ
 
@@ -285,7 +285,7 @@ Microsoft Teams マニフェストは、アプリが Microsoft Teams 製品に�
 
 *省略可能、ただし推奨* — 文字列
 
-マニフェストhttps:// JSON スキーマを参照する URL を指定します。
+次https://マニフェストの JSON スキーマを参照する URL を示します。
 
 ## <a name="manifestversion"></a>manifestVersion
 
@@ -293,7 +293,7 @@ Microsoft Teams マニフェストは、アプリが Microsoft Teams 製品に�
 
 このマニフェストが使用しているマニフェスト スキーマのバージョン。 "1.7" である必要があります。
 
-## <a name="version"></a>バージョン
+## <a name="version"></a>version
 
 **必須** — string
 
@@ -313,12 +313,12 @@ Microsoft Teams マニフェストは、アプリが Microsoft Teams 製品に�
 
 **必須** — オブジェクト
 
-会社に関する情報を指定します。 AppSource (以前はストアOffice提出されたアプリの場合、これらの値は AppSource エントリの情報と一致する必要があります。 その他の [情報については、発行ガイドライン](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md) を参照してください。
+会社に関する情報を指定します。 AppSource (以前はストアOffice提出されたアプリの場合、これらの値は AppSource エントリの情報と一致する必要があります。 追加情報については [、発行ガイドライン](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md) を参照してください。
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
 |`name`|32 文字|✔|開発者の表示名。|
-|`websiteUrl`|2048 文字|✔|開発者https://の Web サイトの URL を指定します。 このリンクは、ユーザーを会社または製品固有のランディング ページに移動する必要があります。|
+|`websiteUrl`|2048 文字|✔|このhttps://の Web サイトの URL を指定します。 このリンクは、ユーザーを会社または製品固有のランディング ページに移動する必要があります。|
 |`privacyUrl`|2048 文字|✔|このhttps://開発者のプライバシー ポリシーの URL を指定します。|
 |`termsOfUseUrl`|2048 文字|✔|このhttps://開発者の利用規約の URL を示します。|
 |`mpnId`|10 文字| |**省略可能** アプリを構築するパートナー組織を識別する Microsoft Partner Network ID。|
@@ -340,7 +340,7 @@ Teams エクスペリエンスでユーザーに表示されるアプリ エク�
 
 アプリをユーザーに説明します。 AppSource に送信されるアプリの場合、これらの値は AppSource エントリの情報と一致する必要があります。
 
-説明がエクスペリエンスを正確に説明し、潜在的な顧客がエクスペリエンスの内容を理解するのに役立つ情報を提供します。 また、外部アカウントの使用が必要な場合は、完全な説明で注意する必要があります。 値は `short` 同じで `full` 、同じにすべきではありません。  簡単な説明は、詳細な説明の中で繰り返さず、他のアプリ名を含めずにしてください。
+説明がエクスペリエンスを正確に説明し、潜在的な顧客がエクスペリエンスの内容を理解するのに役立つ情報を提供します。 また、外部アカウントの使用が必要な場合は、完全な説明で注意する必要があります。 値は `short` 同じで `full` 、同じにすべきではありません。  短い説明は、詳細な説明の中で繰り返さず、他のアプリ名を含めずにしてください。
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
@@ -351,7 +351,7 @@ Teams エクスペリエンスでユーザーに表示されるアプリ エク�
 
 **省略可能** - 文字列
 
-逆ドメイン表記でのこのアプリの一意識別子。たとえば、com.example.myapp などです。 最大長: 64 文字
+逆引きドメイン表記でのこのアプリの一意の識別子。たとえば、com.example.myapp などです。 最大長: 64 文字
 
 ## <a name="localizationinfo"></a>localizationInfo
 
@@ -403,7 +403,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |`scopes`|列挙型の配列|1 |✔|現在、構成可能なタブは、スコープ `team` とスコープのみを `groupchat` サポートしています。 |
 |`canUpdateConfiguration`|ブール値|||タブの構成のインスタンスを作成後にユーザーが更新できるかどうかを示す値。 既定値: **true 。**|
 |`context` |列挙型の配列|6 ||タブが `contextItem` サポートされる範囲のセット。 既定値: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
-|`sharePointPreviewImage`|string|2048||SharePoint で使用するタブ プレビュー イメージへの相対ファイル パス。 サイズ 1024x768。 |
+|`sharePointPreviewImage`|文字列|2048||SharePoint で使用するタブ プレビュー イメージへの相対ファイル パス。 サイズ 1024x768。 |
 |`supportedSharePointHosts`|列挙型の配列|1 ||SharePoint でタブを使用する方法を定義します。 オプション `sharePointFullPage` は次のとおりです。 `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
@@ -417,10 +417,10 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`entityId`|string|64 文字|✔|タブが表示されるエンティティの一意の識別子。|
-|`name`|string|128 文字|✔|チャネル インターフェイスのタブの表示名。|
-|`contentUrl`|string||✔|次https:// Teams キャンバスに表示されるエンティティ UI を示す URL を指定します。|
-|`websiteUrl`|string|||ユーザー https://ブラウザーで表示することを選択した場合にポイントする URL を指定します。|
-|`searchUrl`|string|||ユーザー https://の検索クエリを指す URL を指定します。|
+|`name`|文字列|128 文字|✔|チャネル インターフェイスのタブの表示名。|
+|`contentUrl`|文字列||✔|次https:// Teams キャンバスに表示されるエンティティ UI を示す URL を指定します。|
+|`websiteUrl`|文字列|||ユーザー https://ブラウザーで表示することを選択した場合にポイントする URL を指定します。|
+|`searchUrl`|文字列|||ユーザー https://の検索クエリを指す URL を指定します。|
 |`scopes`|列挙型の配列|1 |✔|現在、静的タブはスコープのみをサポートしています。つまり、個人用エクスペリエンスの一部としてのみ `personal` プロビジョニングできます。|
 |`context` | 列挙型の配列| 2 || タブが `contextItem` サポートされる範囲のセット。|
 
@@ -437,7 +437,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`botId`|string|64 文字|✔|Bot Framework に登録された、ボット用の一意の Microsoft アプリ ID。 これは、アプリ全体の ID と同じ場合 [があります](#id)。|
+|`botId`|string|64 文字|✔|Bot Framework に登録された、ボット用の一意の Microsoft アプリ ID。 これは、アプリ全体の ID と同じ [場合があります](#id)。|
 |`scopes`|列挙型の配列|3 |✔|ボットがエクスペリエンスを提供するのは、`team` 内のチャネルのコンテキスでなのか、グループ チャット (`groupchat`) でなのか、あるいは個別のユーザーのみをエクスペリエンスの対象にする (`personal`) のかを指定します。 これらのオプションは非排他的です。|
 |`needsChannelSelector`|ブール値|||ボットを特定のチャネルに追加するためのユーザー用ヒントをボットで使用するかどうかの説明。 既定値: **`false`**|
 |`isNotificationOnly`|ブール値|||ボットが会話ボットではなく、一方向性の通知専用ボットなのかどうかを示します。 既定値: **`false`**|
@@ -474,7 +474,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 文字|✔|コネクタhttps://するときに使用する URL を指定します。|
 |`scopes`|列挙型の配列|1 |✔|コネクタがチャネルのコンテキストでエクスペリエンスを提供するか、または個々のユーザーを対象範囲としたエクスペリエンス `team` () を提供するかどうかを指定します `personal` 。 現時点では、 `team` スコープだけがサポートされています。|
-|`connectorId`|string|64 文字|✔|コネクタ開発者ダッシュボードの ID と一致するコネクタの一 [意の識別子](https://aka.ms/connectorsdashboard)。|
+|`connectorId`|文字列|64 文字|✔|コネクタ開発者ダッシュボードの ID と一致するコネクタの一 [意の識別子](https://aka.ms/connectorsdashboard)。|
 
 ## <a name="composeextensions"></a>composeExtensions
 
@@ -492,8 +492,8 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |`botId`|string|64|✔|Bot Framework に登録されている、メッセージング拡張機能をサポートするボットの一意の Microsoft アプリ ID。 これは、アプリ全体の ID と同じ場合があります。|
 |`commands`|オブジェクトの配列|10 |✔|メッセージング拡張機能がサポートするコマンドの配列|
 |`canUpdateConfiguration`|ブール値|||ユーザーがメッセージング拡張機能の構成を更新できるかどうかを示す値。 既定値: **false**|
-|`messageHandlers`|オブジェクトの配列|5 ||特定の条件が満たされた場合にアプリを呼び出すことができるハンドラーの一覧。 ドメインも登録する必要があります。 `validDomains`|
-|`messageHandlers.type`|string|||メッセージ ハンドラーの種類。 `"link"` である必要があります。|
+|`messageHandlers`|オブジェクトの配列|5 ||特定の条件が満たされた場合にアプリを呼び出すことができるハンドラーの一覧。|
+|`messageHandlers.type`|文字列|||メッセージ ハンドラーの種類。 `"link"` である必要があります。|
 |`messageHandlers.value.domains`|文字列の配列|||リンク メッセージ ハンドラーが登録できるドメインの配列。|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -505,26 +505,26 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`id`|string|64 文字|✔|コマンドの ID。|
-|`title`|string|32 文字|✔|ユーザーに分かしいコマンド名。|
-|`type`|string|64 文字||コマンドの種類。 次のいずれかを `query` 指定します `action` 。 既定値: **クエリ** です。|
-|`description`|string|128 文字||このコマンドの目的を示すためにユーザーに表示される説明。|
+|`title`|文字列|32 文字|✔|ユーザーに分かしいコマンド名。|
+|`type`|文字列|64 文字||コマンドの種類。 次のいずれかを `query` 指定します `action` 。 既定値: **クエリ** です。|
+|`description`|文字列|128 文字||このコマンドの目的を示すためにユーザーに表示される説明。|
 |`initialRun`|ブール値|||パラメーターを指定してコマンドを最初に実行するかどうかを示すブール値。 既定値: **false**|
 |`context`|文字列の配列|3 ||メッセージ拡張を呼び出すことができる場所を定義します。 `compose`, の任意の組 `commandBox` み合 `message` わせ。 既定値は `["compose","commandBox"]` です。|
 |`fetchTask`|ブール値|||タスク モジュールを動的にフェッチする必要かどうかを示すブール値。 既定値: **false**|
 |`taskInfo`|object|||メッセージング拡張機能コマンドを使用するときに事前読み込むタスク モジュールを指定します。|
-|`taskInfo.title`|string|64 文字||最初のダイアログ タイトル。|
-|`taskInfo.width`|string|||ダイアログの幅: ピクセル単位の数値、または 'large'、'medium'、'small' などの既定のレイアウトのどちらかです。|
-|`taskInfo.height`|string|||ダイアログの高さ : ピクセル単位の数値、または 'large'、'medium'、'small' などの既定のレイアウトのどちらかです。|
-|`taskInfo.url`|string|||最初の Webview URL。|
+|`taskInfo.title`|文字列|64 文字||最初のダイアログ タイトル。|
+|`taskInfo.width`|文字列|||ダイアログの幅: ピクセル単位の数値、または 'large'、'medium'、'small' などの既定のレイアウトのどちらかです。|
+|`taskInfo.height`|文字列|||ダイアログの高さ : ピクセル単位の数値、または 'large'、'medium'、'small' などの既定のレイアウトのどちらかです。|
+|`taskInfo.url`|文字列|||最初の Webview URL。|
 |`parameters`|オブジェクトの配列|5 アイテム|✔|コマンドが受け取るパラメーターの一覧。 最小: 1;最大: 5。|
-|`parameters.name`|string|64 文字|✔|クライアントに表示されるパラメーターの名前。 これはユーザー要求に含まれます。|
-|`parameters.title`|string|32 文字|✔|パラメーターのユーザー フレンドリーなタイトル。|
-|`parameters.description`|string|128 文字||このパラメーターの目的を説明するユーザー フレンドリーな文字列。|
-|`parameters.value`|string|512 文字||パラメーターの初期値。|
-|`parameters.inputType`|string|128 文字||タスク モジュールに表示されるコントロールの種類を定義します `fetchTask: true` 。 の 1 つ `text, textarea, number, date, time, toggle, choiceset` 。|
+|`parameters.name`|文字列|64 文字|✔|クライアントに表示されるパラメーターの名前。 これはユーザー要求に含まれます。|
+|`parameters.title`|文字列|32 文字|✔|パラメーターのユーザー フレンドリーなタイトル。|
+|`parameters.description`|文字列|128 文字||このパラメーターの目的を説明するユーザー フレンドリーな文字列。|
+|`parameters.value`|文字列|512 文字||パラメーターの初期値。|
+|`parameters.inputType`|文字列|128 文字||タスク モジュールに表示されるコントロールの種類を定義します `fetchTask: true` 。 の 1 つ `text, textarea, number, date, time, toggle, choiceset` 。|
 |`parameters.choices`|オブジェクトの配列|10 アイテム||The choice options for the `choiceset` . 次の場合にのみ `parameter.inputType` 使用します `choiceset` 。|
-|`parameters.choices.title`|string|128 文字|✔|選択したタイトル。|
-|`parameters.choices.value`|string|512 文字|✔|Value of the choice.|
+|`parameters.choices.title`|文字列|128 文字|✔|選択したタイトル。|
+|`parameters.choices.value`|文字列|512 文字|✔|Value of the choice.|
 
 ## <a name="permissions"></a>アクセス許可
 
@@ -539,7 +539,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 ## <a name="devicepermissions"></a>devicePermissions
 
-**オプション** - 文字列の配列
+**省略** 可能 - 文字列の配列
 
 アプリがアクセスを要求できるユーザーのデバイスのネイティブ機能を指定します。 オプションは、次のとおりです。
 
@@ -553,9 +553,9 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 **省略** 可能 。ただし **、省略可能 (省略可能** )、省略可能 (省略可能)、省略可能 (省略
 
-アプリが Teams クライアント内で読み込む Web サイトの有効なドメインの一覧。 ドメイン一覧には、ワイルドカードを含めできます `*.example.com` 。 これは、ドメインの 1 つのセグメントと正確に一致します。if you need to match then `a.b.example.com` use `*.*.example.com` . タブ構成またはコンテンツ UI で、タブ構成に使用するドメイン以外のドメインに移動する必要がある場合は、ここでそのドメインを指定する必要があります。
+アプリが Teams クライアント内で読み込む Web サイトの有効なドメインの一覧。 ドメイン一覧には、ワイルドカードを含めできます `*.example.com` 。 これは、ドメインの 1 つのセグメントと正確に一致します。if you need to match `a.b.example.com` then use `*.*.example.com` . タブ構成またはコンテンツ UI で、タブ構成に使用するドメイン以外のドメインに移動する必要がある場合は、ここでそのドメインを指定する必要があります。
 
-ただし、 **アプリ** でサポートする ID プロバイダーのドメインを含める必要はありません。 たとえば、Google ID を使用して認証を行う場合は、accounts.google.com にリダイレクトする必要がありますが、accounts.google.com含めず `validDomains[]` にしてください。
+ただし、 **アプリ** でサポートする ID プロバイダーのドメインを含める必要はありません。 たとえば、Google ID を使用して認証するには、accounts.google.com にリダイレクトする必要がありますが、accounts.google.com含めず `validDomains[]` にしてください。
 
 機能するために独自の SharePoint URL を必要とする Teams アプリでは、有効なドメイン リストに "{teamsitedomain}" が含まれる場合があります。
 
@@ -573,14 +573,14 @@ Azure Active Directory (Azure AD) アプリ ID と Microsoft Graph 情報を指�
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`id`|string|36 文字|✔|アプリの AAD アプリケーション ID。 この ID は GUID である必要があります。|
-|`resource`|string|2048 文字|✔|SSO の認証トークンを取得するためのアプリのリソース URL。 </br> **注:** SSO を使用していない場合は、エラー応答を回避するために、このフィールドにダミー文字列値をアプリ マニフェストに入力 https://notapplicable してください。 |
+|`resource`|文字列|2048 文字|✔|SSO の認証トークンを取得するためのアプリのリソース URL。 </br> **注:** SSO を使用していない場合は、エラー応答を回避するために、このフィールドにダミー文字列値をアプリ マニフェストに入力 https://notapplicable してください。 |
 |`applicationPermissions`|文字列の配列|128 文字||詳細なリソース [固有の同意を指定します](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)。|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
 
 **省略可能** - ブール値
 
-アプリ/タブの読み込み中に読み込みインジケーターを表示するかどうかを示します。 既定値: **false**
+アプリ/タブの読み込み中に読み込みインジケーターを表示するかどうかを指定します。 既定値: **false**
 >[!NOTE]
 >アプリ マニフェストで "showLoadingIndicator : true" を設定した場合、ページが正しく読み込まれます。「ネイティブ読み込みインジケーター ドキュメントを表示する[](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)」で説明されているプロトコルに従って、タブとタスク モジュールのコンテンツ ページを変更する必要があります。
 
@@ -606,8 +606,8 @@ Azure Active Directory (Azure AD) アプリ ID と Microsoft Graph 情報を指�
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`type`|string|32 文字|✔|通知の種類。 *以下を参照してください*。|
-|`description`|string|128 文字|✔|通知の簡単な説明。 *以下を参照してください*。|
-|`templateText`|string|128 文字|✔|例: "{actor} created task {taskId} for you"|
+|`description`|文字列|128 文字|✔|通知の簡単な説明。 *以下を参照してください*。|
+|`templateText`|文字列|128 文字|✔|例: "{actor} created task {taskId} for you"|
 
 ```json
 {
