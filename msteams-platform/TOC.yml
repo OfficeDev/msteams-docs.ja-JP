@@ -40,9 +40,9 @@
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot'
     - name: メッセージング拡張機能のサンプル
       items:
-        - name: C# を使ったアクション コマンド (GitHub)
+        - name: C# を使った操作コマンド (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
-        - name: Node.js を使ったアクション コマンド (GitHub)
+        - name: Node.js を使った操作コマンド (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action'
         - name: C# を使った検索コマンド (GitHub)
           href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
@@ -126,7 +126,7 @@
       href: 'https://github.com/pnp/generator-teams'
     - name: App Studio
       href: concepts/build-and-test/app-studio-overview.md
-    - name: Teams JavaScript クライアント SDK
+    - name: Teams JavaScript client SDK
       href: tabs/how-to/using-teams-client-sdk.md
     - name: ボットおよびメッセージング拡張機能用 Node.js Bot Framework (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-js'
