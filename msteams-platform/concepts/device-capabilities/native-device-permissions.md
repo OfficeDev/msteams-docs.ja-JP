@@ -2,12 +2,12 @@
 title: Microsoft Teams タブのデバイスのアクセス許可を要求する
 description: 通常はユーザーの同意が必要なネイティブ機能へのアクセスを要求するためにアプリ マニフェストを更新する方法
 keywords: teams タブの開発
-ms.openlocfilehash: 6be183d2610616f3bd3bdf32554976322193c132
-ms.sourcegitcommit: d0e71ea63af2f67eba75ba283ec46cc7cdf87d75
+ms.openlocfilehash: b021ae4ae8b50ddd1f3603f696922c129eb25f10
+ms.sourcegitcommit: 84f408aa2854aa7a5cefaa66ce9a373b19e0864a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "49731980"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "49886745"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-tab"></a>Microsoft Teams タブのデバイスのアクセス許可を要求する
 
@@ -17,10 +17,11 @@ ms.locfileid: "49731980"
 >
 > * カメラ
 > * マイク
-> * Location
+> * 場所
 > * 通知
 
-[!Note] Microsoft Teams モバイル アプリにカメラと画像の機能を統合するには、Teams のカメラ機能と画像機能 [を参照してください。](../../concepts/device-capabilities/mobile-camera-image-permissions.md)
+> [!NOTE]
+> Microsoft Teams モバイル アプリにカメラと画像の機能を統合するには、Teams のカメラ機能と画像 [機能を参照してください。](../../concepts/device-capabilities/mobile-camera-image-permissions.md)
 
 > [!IMPORTANT]
 >
