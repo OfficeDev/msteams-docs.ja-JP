@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: Microsoft Teams ボットから会話イベントをサブスクライブする方法。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: f0da861834bbf221fe715d35c0beea6c3bd08f26
-ms.sourcegitcommit: 5f1d6c12d80d48f403b73586f68bacf15785c855
+ms.openlocfilehash: 17d13d51ab26aba60defb962dd425c1aed5b4133
+ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/30/2020
-ms.locfileid: "49739036"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "49911962"
 ---
 # <a name="subscribe-to-conversation-events"></a>会話イベントにサブスクライブする
 
@@ -17,7 +17,7 @@ ms.locfileid: "49739036"
 
 Microsoft Teams はボットがアクティブな範囲で発生するイベントの通知をボットに送ります。 コードでこれらのイベントをキャプチャして、次のようなアクションを行うことができます。
 
-* ボットがチームに追加されると、ウェルカム メッセージをトリガーする
+* ボットがチームに追加されるとウェルカム メッセージをトリガーする
 * 新しいチーム メンバーが追加または削除されると、ウェルカム メッセージをトリガーする
 * チャネルの作成、名前の変更、または削除時に通知をトリガーする
 * ボット メッセージがユーザーに 「いいね!」と付けらた場合
@@ -385,7 +385,7 @@ async def on_teams_channel_restored(
 
 ### <a name="team-members-added"></a>チーム メンバーの追加
 
-イベントは、会話に初めて追加された場合や、ボットがインストールされているチームまたはグループ チャットに新しいユーザーが追加されるたび、ボットに送信 `teamMemberAdded` されます。 ユーザー情報 (ID) はボットに対して一意であり、サービスが将来使用するためにキャッシュできます (特定のユーザーへのメッセージの送信など)。
+イベントは、初めて会話に追加された場合や、ボットがインストールされているチームまたはグループ チャットに新しいユーザーが追加されるたび、ボットに送信 `teamMemberAdded` されます。 ユーザー情報 (ID) はボットに対して一意であり、サービスが将来使用するためにキャッシュできます (特定のユーザーへのメッセージの送信など)。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -527,7 +527,7 @@ _ * *
 
 ### <a name="team-members-removed"></a>チーム メンバーの削除
 
-イベントがチームから削除され、ボットがメンバーであるチームからユーザーが削除されるたび、ボット `teamMemberRemoved` に送信されます。 削除された新しいメンバーがボット自体かユーザーかは、次のオブジェクトを見て `Activity` 判断できます `turnContext` 。  オブジェクトのフィールドがオブジェクトのフィールドと同じ場合、削除されたメンバーはボット、それ以外の場合は `Id` `MembersRemoved` `Id` `Recipient` ユーザーです。  通常、ボットは `Id` 次の条件を使用します。 `28:<MicrosoftAppId>`
+イベントがチームから削除され、ボットがメンバーであるチームからユーザーが削除されるたび、ボット `teamMemberRemoved` に送信されます。 削除された新しいメンバーがボット自体かユーザーかは、次のオブジェクトを見て `Activity` 確認できます `turnContext` 。  オブジェクトのフィールドがオブジェクトのフィールドと同じ場合、削除されたメンバーはボット、それ以外の場合はユーザー `Id` `MembersRemoved` `Id` `Recipient` です。  通常、ボットは `Id` 次の条件を使用します。 `28:<MicrosoftAppId>`
 
 [!Note] ユーザーがテナントから完全に削除されると、 `membersRemoved conversationUpdate` イベントがトリガーされます。
 
@@ -636,7 +636,7 @@ async def on_teams_members_removed(
 
 ### <a name="team-renamed"></a>チームの名前の変更
 
-ボットは、チームの名前が変更された際に通知されます。 オブジェクト内で `conversationUpdate` イベント `eventType.teamRenamed` を受け取 `channelData` ります。
+ボットは、チームの名前が変更された際に通知されます。 オブジェクト内で `conversationUpdate` イベントを `eventType.teamRenamed` 受け取 `channelData` ります。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -714,7 +714,7 @@ async def on_teams_team_renamed(
 
 ### <a name="team-archived"></a>チームのアーカイブ
 
-ボットは、インストールされているチームがアーカイブされる際に通知を受け取ります。 オブジェクト内で `conversationUpdate` イベント `eventType.teamarchived` を受け取 `channelData` ります。
+ボットは、インストールされているチームがアーカイブされる際に通知を受け取ります。 オブジェクト内で `conversationUpdate` イベントを `eventType.teamarchived` 受け取 `channelData` ります。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -792,7 +792,7 @@ async def on_teams_team_archived(
 
 ### <a name="team-restored"></a>チームの復元
 
-ボットは、インストールされているチームが復元された際に通知を受け取ります。 オブジェクト内で `conversationUpdate` イベント `eventType.teamrestored` を受け取 `channelData` ります。
+ボットは、インストールされているチームが復元された際に通知を受け取ります。 オブジェクト内で `conversationUpdate` イベントを `eventType.teamrestored` 受け取 `channelData` ります。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -870,7 +870,7 @@ async def on_teams_team_restored(
 
 ## <a name="message-reaction-events"></a>メッセージリアクション イベント
 
-このイベントは、ユーザーがボットによって送信されたメッセージに対するリアクションを追加 `messageReaction` または削除するときに送信されます。 特定 `replyToId` のメッセージの ID を含み、テキスト形式でのリアクション `Type` の種類です。  反応の種類には、"a立"、"heart"、"立つ"、"like"、"Sad"、"surprised" があります。 このイベントには元のメッセージの内容が含まれているのではないので、メッセージに対する処理がボットにとって重要な場合は、メッセージを送信するときにメッセージを保存する必要があります。
+このイベントは、ボットによって送信されたメッセージに対するリアクションをユーザーが追加 `messageReaction` または削除すると送信されます。 特定 `replyToId` のメッセージの ID を含み、テキスト形式でのリアクション `Type` の種類です。  反応の種類には、"a立"、"heart"、"子"、"like"、"Sad"、"surprised" があります。 このイベントには元のメッセージの内容が含まれているのではないので、メッセージに対する反応の処理がボットにとって重要な場合は、メッセージを送信するときにメッセージを保存する必要があります。
 
 | EventType       | Payload オブジェクト   | 説明                                                             | 範囲 |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
@@ -1092,3 +1092,11 @@ async def on_reactions_removed(
 ```
 
 * * *
+
+## <a name="samples"></a>サンプル
+ボットの会話イベントを示すサンプル コードについては、次を参照してください。
+
+[Microsoft Teams ボット会話イベントのサンプル](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)
+
+
+

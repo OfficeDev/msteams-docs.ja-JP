@@ -1,39 +1,39 @@
 ---
-title: カスタムアプリを設計する
+title: カスタム アプリの設計
 author: heath-hamilton
-description: Microsoft Teams アプリを設計する方法について説明します。 リソースには、Microsoft Teams UI Kit、ベストプラクティス、例などが含まれます。
+description: Microsoft Teams アプリを設計する方法について説明します。 リソースには、Microsoft Teams UI Kit、ベスト プラクティス、例などがあります。
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: 0160a59ed4ebc51e900acbb5d74735ccae0b6083
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: 0c791b1e4733cd2a015e443ca5c4d0c433dd4d31
+ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49606015"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "49911906"
 ---
-# <a name="designing-your-microsoft-teams-app"></a>Microsoft Teams アプリを設計する
+# <a name="designing-your-microsoft-teams-app"></a>Microsoft Teams アプリの設計
 
-:::image type="content" source="../../assets/images/design-guidelines-overview.png" alt-text="Microsoft Teams 設計ガイドラインの概要を説明するイメージ。":::
+:::image type="content" source="../../assets/images/design-guidelines-overview.png" alt-text="Microsoft Teams の設計ガイドラインを紹介する概念イメージ。":::
 
-低コードツールを使用して、デザイナー、製品マネージャー、開発者、または開発者であるかどうかにかかわらず、これらのガイドラインは、Microsoft Teams アプリに対して適切な設計上の決定を迅速に行うのに役立ちます。
+設計者、製品マネージャー、開発者、またはメーカーが低コードツールを使用している場合でも、これらのガイドラインは、Microsoft Teams アプリの適切な設計上の決定をすばやく行うのに役立ちます。
 
 ## <a name="teams-app-design-principles"></a>Teams アプリ設計の原則
 
-Teams アプリは、ユーザーがより多くのことを実現するのに役立ちます。 設計をガイドするには、これらの原則を使用します。
+Teams アプリは、ユーザーが一緒にもっと多くの成果を達成するのに役立ちます。 これらの原則を使用して、設計をガイドします。
 
 :::row:::
    :::column span="":::
 
-### <a name="collaborative"></a>業務
+### <a name="collaborative"></a>Collaborative
 
-Teams アプリは、ユーザーがより多くのことを実現するのに役立ちます。 設計をガイドするには、これらの原則を使用します。
+Teams アプリは、ユーザーが一緒にもっと多くの成果を達成するのに役立ちます。 これらの原則を使用して、設計をガイドします。
 
    :::column-end:::
    :::column span="":::
 
-### <a name="trustworthy"></a>信用
+### <a name="trustworthy"></a>信頼できる
 
-アプリはセキュリティで保護され、準拠しています。 ユーザーは、プライバシーに関する情報を簡単に見つけることができます。
+アプリはセキュリティで保護され、準拠しています。 ユーザーはプライバシーに関する情報を簡単に検索できます。
 
    :::column-end:::
 :::row-end:::
@@ -41,16 +41,16 @@ Teams アプリは、ユーザーがより多くのことを実現するのに�
 :::row:::
    :::column span="":::
 
-### <a name="globally-inclusive"></a>グローバル包括
+### <a name="globally-inclusive"></a>グローバルに包括
 
-すべての背景、skillsets、および分野の人々は、アプリを使用できます。 カルチャ、racially、および socially に対応します。
+すべてのバックグラウンド、スキルセット、および分野のユーザーがアプリを使用できます。 文化的、人種的、社会的な認識を持つ。
 
    :::column-end:::
    :::column span="":::
 
 ### <a name="light"></a>低負荷
 
-アプリは、Teams ワークフローと組み合わせたコアシナリオに重点を置いています。
+このアプリは、Teams のワークフローとブレンドするコア シナリオに重点を当てはっています。
 
    :::column-end:::
 :::row-end:::
@@ -60,14 +60,14 @@ Teams アプリは、ユーザーがより多くのことを実現するのに�
 
 ### <a name="native-or-distinct"></a>ネイティブまたは個別
 
-アプリでは、ネイティブの Teams デザインコンポーネントまたは独自のコンポーネントを使用します。 配色パターン、コントロールなどは混在していません。
+アプリは、ネイティブの Teams 設計コンポーネントまたは独自のコンポーネントを使用します。 配色、コントロールなどのブレンドはありません。
 
    :::column-end:::
    :::column span="":::
 
-### <a name="useful"></a>とき
+### <a name="useful"></a>役に立つ
 
-アプリは、ユーザーが Teams で行う必要のあるシナリオに基づいています。
+アプリは、ユーザーが Teams で行う必要があるシナリオに基づいて作成されます。
 
    :::column-end:::
 :::row-end:::
@@ -77,14 +77,14 @@ Teams アプリは、ユーザーがより多くのことを実現するのに�
 
 ### <a name="easy-to-use"></a>使いやすい
 
-UI は、わかりやすく、ルックアンドトーンがよく、ユーザーの生産性を向上させるのに役立ちます。
+UI は理解が容易で、外観とトーンが楽で、ユーザーの生産性が向上します。
 
    :::column-end:::
    :::column span="":::
 
 ### <a name="responsive"></a>速い
 
-アプリはデバイスと画面に依存しません。
+アプリはデバイスと画面に依存しない。
 
    :::column-end:::
 :::row-end:::
@@ -94,73 +94,96 @@ UI は、わかりやすく、ルックアンドトーンがよく、ユーザ�
 
 ### <a name="accessible"></a>アクセシビリティ
 
-アプリは、色のコントラスト、移動方法など、Teams のアクセシビリティ要件を満たしています。
+このアプリは、色コントラストやナビゲーションの代替手段など、Teams のアクセシビリティ要件を満たしています。
 
    :::column-end:::
    :::column span="":::
 
-### <a name="well-described"></a>よく説明
+### <a name="well-described"></a>よく説明されています
 
-テキスト、アイコン、画像によって、アプリの用途と使用方法が明確になります。
+テキスト、アイコン、画像を使って、アプリの意味と使い方を明確に示します。
 
    :::column-end:::
 :::row-end:::
 
-## <a name="creating-a-cohesive-experience"></a>凝集した環境を作成する
+## <a name="creating-a-cohesive-experience"></a>コーヒーティブ なエクスペリエンスの作成
 
-Teams アプリを設計することは、従来の web アプリの設計に似ていますが、多少異なるものです。 効果的なデザインでは、アプリの一意の属性を強調表示する一方で、Teams の機能やコンテキストを自然に調整します。
+Teams アプリの設計は、従来の Web アプリの設計に似たものですが、少し異なります。 効果的な設計では、Teams の機能やコンテキストに自然に適合しながら、アプリの固有の属性を強調します。
 
-これらのガイドラインとリソースは、そのバランスを取るのに役立ちます。 Teams アプリを設計するときに何ができるか、何を回避するか (タブ内の複数レベルのナビゲーションなど) について説明します。
+これらのガイドラインとリソースは、そのバランスを取る際に役立ちます。 Teams アプリを設計する際の対応方法と避ける必要がある操作 (タブ内の複数レベルのナビゲーションなど) を確認できます。
 
-## <a name="planning-your-app"></a>アプリを計画する
+## <a name="planning-your-app"></a>アプリの計画
 
-高品質 Teams アプリを設計するには、まず、アプリに対して実行する操作とその使用方法を理解する必要があります。 まだ作業していない場合は、アプリを正しく [計画](../../concepts/extensibility-points.md)するためにしばらく時間がかかります。
+高品質の Teams アプリを設計するには、まず、アプリが何を行い、ユーザーがアプリを使用すると思うのかを理解する必要があります。 まだ計画していない場合は、しばらく時間を取ってアプリを [適切に計画してください](../../concepts/extensibility-points.md)。
 
-## <a name="design-fundamentals"></a>設計の基礎
+## <a name="design-fundamentals"></a>デザインの基本事項
 
-レイアウト、配色など、 [Teams アプリデザインの基本事項](design-teams-app-fundamentals.md)について説明します。
+レイアウト [、配色など、Teams](design-teams-app-fundamentals.md)アプリ設計の基本について学習します。
 
 ## <a name="basic-fluent-ui-components-for-teams"></a>Teams の基本的な Fluent UI コンポーネント
 
-Fluent UI に基づいて、これらは [一般的な Teams インターフェイスを作成するための中心的な要素](design-teams-app-basic-ui-components.md)です。
+Fluent UI に基づいて、これらは使い慣れた Teams インターフェイスを作成 [するための主要な要素です](design-teams-app-basic-ui-components.md)。
+
+## <a name="ui-templates"></a>UI テンプレート
+
+一般的な Teams の使用事例とワークフロー用のテンプレートを使用して、複雑で忠実な [設計をすばやく作成できます](design-teams-app-ui-templates.md)。
 
 ## <a name="app-capabilities"></a>アプリの機能
 
-ユーザーがチームアプリを追加、使用、および管理して、設計の各機能を最大限に活用する方法について理解します。
+ユーザーが Teams アプリを追加、使用、管理して、設計の各機能を有効に利用する方法について説明します。
 
 * [個人用アプリ](../../concepts/design/personal-apps.md)
 * [タブ](../../tabs/design/tabs.md)
 * [メッセージング拡張機能](../../messaging-extensions/design/messaging-extension-design.md)
 * [ボット](../../bots/design/bots.md)
-* [会議の内線番号](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [ミーディング拡張機能](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 * [タスク モジュール](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
 * [アダプティブ カード](../../task-modules-and-cards/cards/design-effective-cards.md)
 
-## <a name="ui-templates"></a>UI テンプレート
+## <a name="tools-and-samples"></a>ツールとサンプル
 
-[一般的な Teams のユースケースとワークフローのテンプレート](design-teams-app-ui-templates.md)を使用して、複雑で忠実なデザインをすばやく作成できます。
+以下のツールは、デザイナーや開発者の使用を開始するのに役立ちます。
 
-## <a name="get-started-with-the-microsoft-teams-ui-kit"></a>Microsoft Teams UI キットを使用して作業を開始する
+### <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-Microsoft Teams UI キットには、UI コンポーネント、テンプレート、および、必要に応じてドラッグ、ドロップ、および変更できる例があります。 UI キットには、さまざまな Teams シナリオでのアプリの外観や動作に関する包括的な情報も含まれています。
+必要に応じてドラッグ、ドロップ、変更できる UI コンポーネント、テンプレート、例を含む Teams アプリを設計します。 UI キットには、さまざまな Teams シナリオでのアプリの外観と動作に関する包括的な情報も含まれています。
 
 > [!div class="nextstepaction"]
-> [Microsoft Teams UI Kit (Figma) を取得する](https://www.figma.com/community/file/916836509871353159)
+> [UI キットを取得する (Figma)](https://www.figma.com/community/file/916836509871353159)
+
+### <a name="microsoft-teams-ui-library"></a>Microsoft Teams UI ライブラリ
+
+ブラウザーで個々の Teams UI テンプレートと関連コンポーネントを表示およびテストします。
+
+> [!div class="nextstepaction"]
+> [UI ライブラリ (プレイグラウンド) を試す](https://dev-int.teams.microsoft.com/storybook/main/index.html)
+
+これらのテンプレートと関連コンポーネントを Teams アプリ プロジェクトに直接インポートします。
+
+> [!div class="nextstepaction"]
+> [UI ライブラリを取得する (GitHub)](https://github.com/OfficeDev/microsoft-teams-ui-component-library)
+
+### <a name="sample-app"></a>サンプル アプリ
+
+サンプル アプリをインストールして、Teams コンテキスト内での UI テンプレートの外観と動作を確認します。
+
+> [!div class="nextstepaction"]
+> [サンプル アプリを取得する (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
 ## <a name="other-resources"></a>その他のリソース
 
-詳細については、次のいずれかのリソースを参照してください。
+詳細については、次のいずれかのリソースを試してください。
 
-### <a name="fluent-ui"></a>Fluent UI
+### <a name="fluent-ui-documentation"></a>Fluent UI ドキュメント
 
-Teams エクスペリエンスの構築に使用される Fluent UI ベースコンポーネントのコードサンプルと実装の詳細を取得します。
+Teams エクスペリエンスの構築に使用される Fluent UI ベースのコンポーネントのコード サンプルと実装の詳細を取得します。
 
 > [!div class="nextstepaction"]
 > [Teams UI コンポーネントを試す (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)
 
-### <a name="adaptive-cards-designer"></a>アダプティブカードデザイナー
+### <a name="adaptive-cards-designer"></a>アダプティブ カード デザイナー
 
-Web ベースのツールでアダプティブカードをデザインします。
+Web ベースのツールでアダプティブ カードを設計します。
 
 > [!div class="nextstepaction"]
-> [アダプティブカードデザイナーを試す](https://adaptivecards.io/designer/)
+> [アダプティブ カード デザイナーを試す](https://adaptivecards.io/designer/)

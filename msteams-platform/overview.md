@@ -1,16 +1,16 @@
 ---
 title: Microsoft Teams プラットフォーム用アプリを構築する
 author: heath-hamilton
-description: 開発者がカスタム アプリで Microsoft Teams の機能を拡張する方法の概要について説明します。
+description: 開発者がカスタム アプリを使用して Microsoft Teams の機能を拡張する方法の概要について説明します。
 ms.topic: overview
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: 45be2dd7d0e421ac331cfc02703f0b81eab3dfe5
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 9f043fd5bab441ce88b0e04b4254b925aff25aad
+ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797772"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "49911885"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Microsoft Teams のアプリを作成する
 
@@ -42,7 +42,7 @@ Teams アプリは、機能と [エントリ ポイントの](concepts/capabilit
 
 ### <a name="bots"></a>ボット
 
-**単語をアクション** にする : 会話の結果、多くの場合、何かを行う必要があります (注文の生成、コードの確認、チケットの状態の確認など)。 ボット [は](bots/what-are-bots.md) 、Teams 内でこれらの種類のワークフローを開始できます。
+**単語をアクション** に変換する : 会話の結果、多くの場合、何かを行う必要があります (注文の生成、コードの確認、チケットの状態の確認など)。 ボット [は](bots/what-are-bots.md) 、Teams 内でこの種のワークフローを開始できます。
 
 :::image type="content" source="assets/images/overview-bots.png" alt-text="Teams クライアントでのボットの外観の概念表現。" border="false":::
 
@@ -56,7 +56,7 @@ Teams アプリは、機能と [エントリ ポイントの](concepts/capabilit
 
 ### <a name="messaging-extensions"></a>メッセージング拡張機能
 
-**マルチタスクを容易にする**: メッセージング [](messaging-extensions/what-are-messaging-extensions.md)拡張機能を使用すると、会話内で外部情報をすばやく共有できます。 また、チャネル投稿のコンテンツに基づいてヘルプ チケットを作成するなどのメッセージに対して処理を実行できます。
+**マルチタスクを容易にする**: メッセージング [拡張機能](messaging-extensions/what-are-messaging-extensions.md)を使用すると、会話内で外部情報をすばやく共有できます。 また、チャネル投稿のコンテンツに基づいてヘルプ チケットを作成するなどのメッセージに対して処理を実行できます。
 
 :::image type="content" source="assets\images\overview-messaging.png" alt-text="Teams クライアントでのメッセージング拡張機能の概念表現。" border="false":::
 
@@ -93,7 +93,7 @@ Teams アプリは、機能と [エントリ ポイントの](concepts/capabilit
 
 ## <a name="start-building"></a>構築を開始する
 
-   簡単なアプリを作成し、一般的に使用される機能を追加することで、Teams の構築にすばやく慣れ親しむ必要があります。
+   簡単なアプリを作成し、一般的に使用される機能を追加することで、Teams の構築についてすぐに理解できます。
 
    > [!div class="nextstepaction"]
    > [最初のアプリを今すぐビルドする](build-your-first-app/build-first-app-overview.md)
@@ -109,7 +109,7 @@ Teams アプリは、機能と [エントリ ポイントの](concepts/capabilit
 
 ## <a name="integrate-with-teams"></a>Teams との統合
 
-   ユーザーが既存の Web アプリ、サービス、またはシステムについて気に入った機能と、Teams の共同作業機能をブレンドします。
+   ユーザーが既存の Web アプリ、サービス、またはシステムについて気に入った機能を、Teams の共同作業機能とブレンドします。
 
    > [!div class="nextstepaction"]
    > [既存のアプリを統合する](samples/integrating-web-apps.md)
@@ -139,7 +139,7 @@ Teams アプリは、機能と [エントリ ポイントの](concepts/capabilit
 ## <a name="resources"></a>リソース
 
 * [Web サイトに [Share-to-Teams] ボタンを追加する](concepts/build-and-test/share-to-teams.md)
-* <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a>
+* [Teams アプリを設計する](concepts/design/design-teams-app-overview.md)
 * [Microsoft Teams JavaScript クライアント SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
-* [Bot Framework SDK for JavaScript](https://github.com/Microsoft/botbuilder-js) および [Bot Framework SDK for .NET](https://github.com/Microsoft/botbuilder-dotnet/)
-* [組織または AppSource にアプリを公開する](concepts/deploy-and-publish/overview.md)
+* Bot Framework SDK for [JavaScript](https://github.com/Microsoft/botbuilder-js) および [.NET](https://github.com/Microsoft/botbuilder-dotnet/)
+* [Teams アプリを公開する](concepts/deploy-and-publish/overview.md)

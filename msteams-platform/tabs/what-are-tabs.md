@@ -4,12 +4,12 @@ author: laujan
 description: Teams プラットフォームでのカスタム タブの概要
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 64c6e44177f1fb598895f748dbd0ec1c0b1e3aa1
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 18981955374a892e45ad5ec1e5ec087ae75cb007
+ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797891"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "49911955"
 ---
 # <a name="what-are-microsoft-teams-tabs"></a>Microsoft Teams のタブとは
 
@@ -65,12 +65,11 @@ Teams モバイル クライアントにチャネルまたはグループ タブ
 
 >[!NOTE]
 >
->- アプリの既定の動作は、AppSource を通じて配布されている場合にのみ適用されます。 他の配布方法で配布されるアプリの承認 [プロセスはありません](~/concepts/deploy-and-publish/overview.md)。 既定では、すべてのタブが Teams クライアントで開きます。
+>- アプリの既定の動作は、Teams ストア (AppSource) 経由で配布される場合にのみ適用されます。 他の配布方法で配布されたアプリの承認 [プロセスはありません](~/concepts/deploy-and-publish/overview.md)。 既定では、すべてのタブが Teams クライアントで開きます。
 >- モバイルデバイス用にアプリの評価を開始するには、アプリのteamsubm@microsoft.comを確認してください。
 
+> [!div class="nextstepaction"]
+> [詳細については、デバイスのアクセス許可の要求を参照してください](../concepts/device-capabilities/native-device-permissions.md)
 
 > [!div class="nextstepaction"]
-> [詳細については、デバイスのアクセス許可の要求を参照してください](/concepts/device-capabilities/native-device-permissions.md)
-
-> [!div class="nextstepaction"]
->[詳細については、カメラおよびイメージ ギャラリーのアクセス許可を参照してください](/concepts/device-capabilities/mobile-camera-image-permissions.md)
+>[詳細については、カメラおよびイメージ ギャラリーのアクセス許可を参照してください](../concepts/device-capabilities/mobile-camera-image-permissions.md)
