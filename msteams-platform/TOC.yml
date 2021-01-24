@@ -332,6 +332,8 @@
           href: bots/how-to/authentication/auth-flow-bot.md
         - name: 認証をボットに追加する
           href: bots/how-to/authentication/add-authentication.md
+        - name: SSO 認証を利用する
+          href: bots/how-to/authentication/auth-aad-sso-bots.md
     - name: メッセージング拡張機能
       href: messaging-extensions/how-to/add-authentication.md
 - name: Microsoft Graph を使用したTeams データを使用する
