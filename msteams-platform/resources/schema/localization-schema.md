@@ -1,18 +1,19 @@
 ---
-title: ローカリゼーションファイル JSON スキーマリファレンス
-description: Microsoft Teams のローカリゼーションファイルでサポートされているローカライズスキーマについて説明します。
-keywords: teams マニフェストスキーマのローカライズ
+title: ローカライズ ファイルの JSON スキーマ リファレンス
+description: Microsoft Teams のローカライズ ファイルでサポートされているローカライズ スキーマについて説明します。
+ms.topic: reference
+keywords: teams マニフェスト スキーマのローカライズ
 ms.date: 05/20/2019
-ms.openlocfilehash: 2c0f449ef0b018e0ed377ea8f5d79b285b36e829
-ms.sourcegitcommit: 0aeb60027f423d8ceff3b377db8c3efbb6da4d17
+ms.openlocfilehash: 696a65de70a63e767f8fcdb040364fe90cde8716
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "48997966"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014601"
 ---
-# <a name="reference-localization-file-json-schema"></a>リファレンス: ローカライズファイル JSON スキーマ
+# <a name="reference-localization-file-json-schema"></a>リファレンス: ローカライズ ファイルの JSON スキーマ
 
-Microsoft Teams のローカリゼーションファイルでは、クライアントの言語設定に基づいて提供される言語の翻訳について説明します。 ファイルは、でホストされているスキーマに準拠している必要があり [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json) ます。 詳細については、「 [アプリのローカライズ](~/concepts/build-and-test/apps-localization.md)」を参照してください。
+Microsoft Teams ローカライズ ファイルには、クライアントの言語設定に基づいて提供される言語翻訳が記述されています。 ファイルは、ホストされているスキーマに準拠している必要があります [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json) 。 詳しくは、アプリのローカライズ [に関するページをご覧ください](~/concepts/build-and-test/apps-localization.md)。
 
 ## <a name="sample"></a>サンプル
 
@@ -37,91 +38,91 @@ Microsoft Teams のローカリゼーションファイルでは、クライア�
 
 **URI**
 
-マニフェストの JSON スキーマを参照する https://URL。
+次https://マニフェストの JSON スキーマを参照する URL を示します。
 
 > [!TIP]
-> マニフェストの最初にスキーマを指定して、コードエディターで IntelliSense または同様のサポートを有効にします。 `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
+> マニフェストの先頭にスキーマを指定して、コード エディター IntelliSense同様のサポートを有効にしてください。 `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
 
-## <a name="nameshort"></a>名前。 short
+## <a name="nameshort"></a>name.short
 
-**文字列、最大長30**
+**String、Max Length 30**
 
-アプリマニフェストの対応する文字列を、ここで指定した値に置き換えます。
+アプリ マニフェストの対応する文字列を、ここで指定した値に置き換します。
 
-## <a name="namefull"></a>名前。完全
+## <a name="namefull"></a>name.full
 
-**文字列、最大長100**
+**文字列、最大長 100**
 
-アプリマニフェストの対応する文字列を、ここで指定した値に置き換えます。
+アプリ マニフェストの対応する文字列を、ここで指定した値に置き換します。
 
-## <a name="descriptionshort"></a>説明。 short
+## <a name="descriptionshort"></a>description.short
 
-**文字列、最大長80**
+**文字列、最大長 80**
 
-アプリマニフェストの対応する文字列を、ここで指定した値に置き換えます。
+アプリ マニフェストの対応する文字列を、ここで指定した値に置き換します。
 
-## <a name="descriptionfull"></a>詳細
+## <a name="descriptionfull"></a>description.full
 
-**文字列、最大長4000**
+**String、Max Length 4000**
 
-アプリマニフェストの対応する文字列を、ここで指定した値に置き換えます。
+アプリ マニフェストの対応する文字列を、ここで指定した値に置き換します。
 
-## <a name="statictabs0-910-5name"></a>staticTabs \\ [([0-9] | 1 [0-5]) \\ ] \\ . 名前
+## <a name="statictabs0-910-5name"></a>staticTabs \\ [([0-9]|1[0-5]) \\ ] \\ .name
 
-**文字列、最大長128**
+**文字列、最大長 128**
 
-対応する文字列を、アプリマニフェストからここで提供される値で置き換えます。
+アプリ マニフェストの対応する文字列を、ここで指定した値に置き換します。
 
-## <a name="bots0commandlists0-2commands0-9title"></a>bot \\ [0 \\ ] \\ commandlists \\ [[0-2]] \\ \\ . コマンド \\ [[0-9] \\ \\ ]. title
+## <a name="bots0commandlists0-2commands0-9title"></a>bots \\ [0 \\ ] \\ .commandLists \\ [[0-2] \\ ] \\ .commands \\ [[0-9] \\ \\ .title
 
-**文字列、最大長32**
+**文字列、最大長 32**
 
-対応する文字列を、アプリマニフェストからここで提供される値で置き換えます。
+アプリ マニフェストの対応する文字列を、ここで指定した値に置き換します。
 
-## <a name="bots0commandlists0-2commands0-9description"></a>bot \\ [0 \\ ] \\ commandlists \\ [[0-2]] \\ \\ . コマンド \\ [[0-9] \\ \\ ]. 説明
+## <a name="bots0commandlists0-2commands0-9description"></a>bots \\ [0 \\ ] \\ .commandLists \\ [[0-2] \\ ] \\ .commands \\ [[0-9] \\ \\ .description
 
-**文字列、最大長128**
+**文字列、最大長 128**
 
-対応する文字列を、アプリマニフェストからここで提供される値で置き換えます。
+アプリ マニフェストの対応する文字列を、ここで指定した値に置き換します。
 
-## <a name="composeextensions0commands0-9title"></a>この機能 \\ [0 \\ ] \\ コマンド \\ [[0-9] \\ ] \\ . タイトル
+## <a name="composeextensions0commands0-9title"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ \\ .title
 
-**文字列、最大長32**
+**文字列、最大長 32**
 
-対応する文字列を、アプリマニフェストからここで提供される値で置き換えます。
+アプリ マニフェストの対応する文字列を、ここで指定した値に置き換します。
 
-## <a name="composeextensions0commands0-9description"></a>この機能 \\ [0 \\ ] \\ コマンド \\ [[0-9] \\ ] \\ . 説明
+## <a name="composeextensions0commands0-9description"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .description
 
-**文字列、最大長128**
+**文字列、最大長 128**
 
-対応する文字列を、アプリマニフェストからここで提供される値で置き換えます。
+アプリ マニフェストの対応する文字列を、ここで指定した値に置き換します。
 
-## <a name="composeextensions0commands0-9parameters0-4title"></a>スキーマの [ \\ 0 \\ ] \\ コマンド \\ [[0-9]]. \\ \\ パラメーター \\ [[0-4] \\ ] \\ . タイトル
+## <a name="composeextensions0commands0-9parameters0-4title"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .parameters \\ [[0-4] \\ \\ .title
 
-**文字列、最大長32**
+**文字列、最大長 32**
 
-対応する文字列を、アプリマニフェストからここで提供される値で置き換えます。
+アプリ マニフェストの対応する文字列を、ここで指定した値に置き換します。
 
-## <a name="composeextensions0commands0-9parameters0-4description"></a>この機能 [ \\ 0 \\ ] \\ コマンド \\ [[0-9]]. \\ \\ パラメーター \\ [[0-4] \\ ] \\ . 説明
+## <a name="composeextensions0commands0-9parameters0-4description"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .parameters \\ [[0-4] \\ . \\ description
 
-**文字列、最大長128**
+**文字列、最大長 128**
 
-対応する文字列を、アプリマニフェストからここで提供される値で置き換えます。
+アプリ マニフェストの対応する文字列を、ここで指定した値に置き換します。
 
-## <a name="composeextensions0commands0-9parameters0-4value"></a>この機能 [ \\ 0 \\ ] \\ コマンド \\ [[0-9]]. \\ \\ パラメーター \\ [[0-4]] \\ \\ . 値
+## <a name="composeextensions0commands0-9parameters0-4value"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .parameters \\ [[0-4] \\ ] \\ .value
 
-**文字列、最大長512**
+**文字列、最大長 512**
 
-対応する文字列を、アプリマニフェストからここで提供される値で置き換えます。
+アプリ マニフェストの対応する文字列を、ここで指定した値に置き換します。
 
-## <a name="composeextensions0commands0-9parameters0-4choices0-9title"></a>\\色の設定 [0 \\ ] \\ コマンド \\ [[0-9]]. \\ \\ パラメーター [[ \\ 0-4] \\ ]. \\ 選択肢 \\ [[0-9] \\ ] \\ . タイトル
+## <a name="composeextensions0commands0-9parameters0-4choices0-9title"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .parameters \\ [[0-4] \\ ] \\ .choices \\ [[0-9] \\ \\ .title
 
-**文字列、最大長128**
+**文字列、最大長 128**
 
-対応する文字列を、アプリマニフェストからここで提供される値で置き換えます。
+アプリ マニフェストの対応する文字列を、ここで指定した値に置き換します。
 
-## <a name="composeextensions0commands0-9taskinfotitle"></a>オブジェクトの \\ [0 \\ ] \\ . コマンド \\ [[0-9] \\ ] \\ \\ .
+## <a name="composeextensions0commands0-9taskinfotitle"></a>composeExtensions \\ [0 \\ ] \\ .commands \\ [[0-9] \\ ] \\ .taskInfo \\ .title
 
-**文字列、最大長64**
+**文字列、最大長 64**
 
-対応する文字列を、アプリマニフェストからここで提供される値で置き換えます。
+アプリ マニフェストの対応する文字列を、ここで指定した値に置き換します。

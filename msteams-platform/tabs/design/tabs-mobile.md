@@ -1,137 +1,138 @@
 ---
 title: モバイルのタブ
-description: モバイルで使用できるタブの設計ガイドラインについて説明します。
-keywords: teams デザインガイドラインリファレンスフレームワーク個人用アプリモバイルタブ
-ms.openlocfilehash: a1939465b04a1fe4b803efaf83402852ca536059
-ms.sourcegitcommit: b51a4982842948336cfabedb63bdf8f72703585e
+description: モバイルで動作するタブを設計する際のガイドラインについて説明します。
+ms.topic: conceptual
+keywords: Teams の設計ガイドラインリファレンス フレームワーク個人用アプリのモバイル タブ
+ms.openlocfilehash: 462228daa2179482110e2deb42f0f16ab2f5d5ec
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "48279781"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014174"
 ---
 # <a name="tabs-on-mobile"></a>モバイルのタブ
 
 > [!NOTE]
 > Teams モバイル クライアントに [チャネル/グループ] タブを表示するように選択した場合は、`setSettings()` 構成には `websiteUrl` プロパティの値を設定する必要があります (下記参照)。
 
-カスタムタブは、チャネル、グループチャット、または個人アプリの一部にすることができます (静的タブを含むアプリ、または1対1の bot を含むアプリ)。
+カスタム タブは、チャネル、グループ チャット、または個人用アプリ (静的なタブや 1 対 1 のボットを含むアプリ) の一部にできます。
 
-個人用アプリは、アプリケーションドロワーのモバイルクライアントで使用できます。 アプリは、デスクトップまたは web クライアントからのみインストールでき、モバイルクライアントに表示されるまでに最大24時間かかることがあります。
+個人用アプリは、アプリ ドロワーのモバイル クライアントで利用できます。 アプリはデスクトップまたは Web クライアントからのみインストールできます。モバイル クライアントに表示するには最大 24 時間かかります。
 
-[チャネル] タブは、モバイルでも使用できます。 既定の動作では、を使用して、 `websiteUrl` ブラウザーウィンドウでタブを起動します。 ただし、[] タブの横にあるオーバーフローメニューをクリックし、[開く] を選択することによって、モバイルクライアントに読み込むことができます `...` 。これは**Open**、を使用して、 `contentUrl` Teams モバイルクライアント内にタブをロードします。
+チャネル タブはモバイルでも利用できます。 既定の動作では、現在、ブラウザー ウィンドウ `websiteUrl` でタブを起動します。 ただし、タブの横にあるオーバーフロー メニューをクリックして [開く] を選択すると、モバイル クライアントに読み込まれます。このメニューを使用して、Teams モバイル クライアント内にタブが読み込 `...`  `contentUrl` まれます。
 
 ## <a name="accessing-personal-tabs"></a>個人用タブへのアクセス
 
-次の図は、モバイルの [個人用] タブにアクセスする方法を示しています。
+次の図は、モバイルで個人用タブにアクセスする方法を示しています。
 
-:::image type="content" source="../../assets/images/tabs/mobile-app-drawer.png" alt-text="Teams モバイルアプリドロワーを示す図" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-app-drawer.png" alt-text="Teams モバイル アプリのドロワーを示す図。" border="false":::
 
-## <a name="accessing-channel-tabs"></a>チャネルタブへのアクセス
+## <a name="accessing-channel-tabs"></a>チャネル タブへのアクセス
 
-次の図は、モバイルの [チャネル] タブにアクセスする方法を示しています。
+次の図は、モバイルでチャネル タブにアクセスする方法を示しています。
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab.png" alt-text="Teams の [モバイル] タブを示す図。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab.png" alt-text="Teams のモバイル タブを示す図。" border="false":::
 
 ## <a name="design-considerations"></a>設計上の考慮事項
 
-弊社のモバイルプラットフォームを使用すると、アプリのコンテンツがメインの Teams ナビゲーションとは別にすべての画面を占有しているため、アプリをイマーシブ操作とすることができます。 Teams に適したイマーシブ環境を作成するには、次のガイドラインに従ってください。
+このモバイル プラットフォームを使用すると、アプリのコンテンツが Teams のメイン ナビゲーションとは別に、すべての画面を使いこなすイマーシブ エクスペリエンスをアプリに提供できます。 Teams に適合するイマーシブ エクスペリエンスを作成するには、次のガイドラインに従います。
 
 ### <a name="responsive-design"></a>レスポンシブ デザイン
 
-タブはさまざまな画面サイズのデバイス上で開くことができるため、 [応答性](https://www.w3schools.com/html/html_responsive.asp) の高い設計原則に従う必要があります。 すべてのキーの構成はモバイルデバイスでアクセスできる必要があり、ビューがゆがんではないことが必要です。 タブがモバイルデバイスにロードされている場合、すべてのボタンとリンクは、finger ベースのナビゲーションを使用して簡単にアクセスできます。
+タブはさまざまな画面サイズのデバイスで開くことができるため、レスポンシブ デザインの原則に従 [う](https://www.w3schools.com/html/html_responsive.asp) 必要があります。 すべての主要なコンストラクトにモバイル デバイスでアクセスできる必要があります。また、ビューがゆがんでも表示されません。 タブがモバイル デバイスに読み込まれると、指ベースのナビゲーションを使用してすべてのボタンとリンクに簡単にアクセスできます。
 
 ### <a name="layouts"></a>レイアウト
 
-タブの正しいレイアウトを選択することは重要です。 表示する情報の種類を検討し、簡単に使用できるように整理されたレイアウトを選択する必要があります。 考えられるオプションには、次のようなものがあります。
+タブの適切なレイアウトを選択することが重要です。 表示する情報の種類を検討し、簡単に使用するために整理するレイアウトを選択する必要があります。 次に、考え得るオプションの一部を示します。
 
-#### <a name="single-canvas"></a>1つのキャンバス
+#### <a name="single-canvas"></a>単一キャンバス
 
-これは、作業が行われる大きな領域の1つです。 Teams Wiki アプリは、このパターンに従います。 コンテンツを小さなコンポーネントに分離しないアプリがある場合は、それに適しています。
+これは、作業が完了する 1 つの大きな領域です。 Teams Wiki アプリは、このパターンに従います。 コンテンツを小さなコンポーネントに分離しないアプリがある場合は、この方法が適しています。
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab-single-canvas.png" alt-text="Teams の [モバイルシングルキャンバス] タブを示す図" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab-single-canvas.png" alt-text="Teams モバイルの単一キャンバス タブを示す図。" border="false":::
 
 #### <a name="list"></a>リスト
 
-リストは大量のデータの並べ替えとフィルター処理を行うのに適しており、最も重要なものを最上位に保持するのに適しています。 並べ替え可能な列を使用すると便利です。 アクションは、省略記号メニューの各リスト項目に追加できます。
+リストは、大量のデータを並べ替え、フィルター処理する場合に最適で、最も重要な情報を一番上に維持するのに最適です。 並べ替え可能な列を使用すると便利です。 アクションは、省略記号メニューの下の各リスト アイテムに追加できます。
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab-list.png" alt-text="Teams モバイルリストタブを示す図" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab-list.png" alt-text="Teams のモバイル リスト タブを示す図。" border="false":::
 
 #### <a name="grid"></a>グリッド
 
-グリッドは、ビジュアルの高い要素を表示するのに便利です。 フィルターまたは検索コントロールを上部に含めることができます。
+グリッドは、視覚的な要素を表示する場合に便利です。 上部にフィルター コントロールまたは検索コントロールを含めるのに役立ちます。
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab-grid.png" alt-text="グリッドレイアウトを含む Teams mobile タブを示す図" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab-grid.png" alt-text="グリッド レイアウトが表示された Teams モバイル タブを示す図。" border="false":::
 
-### <a name="tabs-with-bots-on-mobile"></a>モバイルに bot があるタブ
+### <a name="tabs-with-bots-on-mobile"></a>モバイル上のボットを含むタブ
 
-次の例は、タブと bot を備えた個人のアプリです。
+次の例は、タブとボットを含む個人用アプリです。
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab-with-bot.png" alt-text="タブと bot を備えたモバイル Teams アプリを示す図" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab-with-bot.png" alt-text="タブとボットを含むモバイル Teams アプリを示す図。" border="false":::
 
 ## <a name="ui-components"></a>UI コンポーネント
 
 ### <a name="color-palettes"></a>カラー パレット
 
-背景、通知、テキスト、およびボタンに対して承認されたニュートラルパレットを使用すると、アプリが Teams での自宅をよりよく理解できるようになります。 Teams mobile には2つの色のテーマ (軽いと濃) があるため、アプリが両方に適したものになるようにすることをお勧めします。
+承認されたニュートラル パレットを背景、通知、テキスト、ボタンに使用すると、アプリの Teams での使用感を高めることができます。 Teams モバイルには 2 つのテーマ (淡色と濃色) が用意されているので、両方でアプリが見栄え良く表示されるのを確認する方が良い方法です。
 
 #### <a name="light-color"></a>明るい色
 
-![ライトカラーパレット](../../assets/images/light-color.png)
+![淡色パレット](../../assets/images/light-color.png)
 
-#### <a name="dark-color"></a>暗い色
+#### <a name="dark-color"></a>濃色
 
-![濃い色パレット](../../assets/images/dark-color.png)
+![濃色パレット](../../assets/images/dark-color.png)
 
 ### <a name="buttons-and-controls"></a>ボタンとコントロール
 
-ボタンのスタイルを設定すると、どのような種類の動作が発生したかを伝えることができます。 さまざまな強調レベルを表示するように書式設定されたさまざまなボタンを維持しています。 ボタンには、テキスト、アイコン、またはテキストとアイコンの組み合わせを含めることができます。 階層内のさまざまなレベルを通信するために、各カテゴリ内に主ボタンと副ボタンを設計しました。
+ボタンのスタイルを設定する方法は、トリガーするアクションの種類を伝えるのに役立ちます。 さまざまなレベルの強調を表示するために書式設定された幅広いボタンを維持しています。 ボタンには、テキスト、アイコン、またはテキストとアイコンの組み合わせを設定できます。 階層内の異なるレベルを伝える目的で、各カテゴリ内のプライマリ ボタンとセカンダリ ボタンを設計しました。
 
 #### <a name="buttons"></a>ボタン
 
-主ボタンとセカンダリボタン。
+プライマリ ボタンとセカンダリ ボタン。
 
 ![ボタンの画像](../../assets/images/buttons.png)
 
 #### <a name="selection-controls"></a>選択コントロール
 
-ラジオボタン、チェックボックス、および切り替え。
+ラジオ ボタン、チェック ボックス、トグル。
 
 ![選択コントロール](../../assets/images/selection-controls.png)
 
-#### <a name="chiclets-and-pills"></a>Chiclets および pills
+#### <a name="chiclets-and-pills"></a>小冊子とくし
 
-![chiclets および pills](../../assets/images/chiclets-and-pills.png)
+![のり子とくじ](../../assets/images/chiclets-and-pills.png)
 
 ### <a name="typography"></a>文字体裁
 
-文字体裁はクリアで、意図的にする必要があります。 重要な情報を強調して、混乱を減らすために複数のフォントとサイズを使用しないようにします。 ローカライズと読みやすくするために、文のケースを使用し、すべての cap の使用を回避することをお勧めします。
+文字体裁は明確で、目的に合ったものにしてください。 重要な情報を強調し、混乱を減らすために複数のフォントとサイズを使用しないようにします。 文の大文字と小文字を使用し、ローカライズと読み読みのためにすべての大文字の使用を避けることをお勧めします。
 
-![モバイル typograph](../../assets/images/mobile-typography.png)
+![モバイル入力ミス](../../assets/images/mobile-typography.png)
 
-### <a name="fields-and-flyouts"></a>フィールドと flyouts
+### <a name="fields-and-flyouts"></a>フィールドとフライアウト
 
-フィールドは、ユーザーがテキストを入力できる領域です。 Flyouts はダイアログよりも軽量で、上部のウィンドウに表示されます。
+フィールドは、ユーザーがテキストを入力できる領域です。 フライアウトはダイアログよりも軽量で、上部のウィンドウから表示されます。
 
 #### <a name="list-controls"></a>コントロールを一覧表示する
 
-![モバイルリストコントロール](../../assets/images/mobile-list-controls.png)
+![モバイル リスト コントロール](../../assets/images/mobile-list-controls.png)
 
-#### <a name="field-controls"></a>フィールドコントロール
+#### <a name="field-controls"></a>フィールド コントロール
 
-![モバイルフィールドコントロール](../../assets/images/mobile-field-controls.png)
+![モバイル フィールド コントロール](../../assets/images/mobile-field-controls.png)
 
 ## <a name="developer-considerations"></a>開発者の考慮事項
 
-タブを含むアプリを構築する場合は、Android と iOS の Microsoft Teams クライアントの両方でタブがどのように機能するかを考慮する必要があります (およびテストする必要があります)。 以下のセクションでは、考慮する必要がある主なシナリオのいくつかについて概説します。
+タブを含むアプリを作成する場合は、Android と iOS の両方の Microsoft Teams クライアントでタブがどのように機能するのか検討 (およびテスト) する必要があります。 以下のセクションでは、考慮する必要がある重要なシナリオの一部について説明します。
 
-### <a name="testing-on-mobile-clients"></a>モバイルクライアントでのテスト
+### <a name="testing-on-mobile-clients"></a>モバイル クライアントでのテスト
 
-さまざまなサイズと品質のモバイルデバイスでタブが正しく機能することを検証する必要があります。 Android デバイスの場合、 [Devtools](~/tabs/how-to/developer-tools.md) を使用して、実行中にタブをデバッグできます。 高および低パフォーマンスのデバイスに加えて、タブレット上でテストすることをお勧めします。
+さまざまなサイズと特性を持つモバイル デバイスでタブが正しく機能する必要があります。 Android デバイスでは [、DevTools を使用して](~/tabs/how-to/developer-tools.md) 、実行中にタブをデバッグできます。 パフォーマンスの高いデバイスと低パフォーマンスデバイスの両方で、タブレットでテストすることをお勧めします。
 
 ### <a name="authentication"></a>認証
 
-モバイルクライアントで認証を行うには、Teams JavaScript SDK を少なくともバージョン1.4.1 にアップグレードする必要があります。
+モバイル クライアントで認証を機能するには、Teams JavaScript SDK をバージョン 1.4.1 以上にアップグレードする必要があります。
 
 ### <a name="low-bandwidth-and-intermittent-connections"></a>低帯域幅および断続的な接続
 
-モバイルクライアントは、低帯域幅および断続的な接続で通常に機能する必要があります。 アプリでは、ユーザーにコンテキストメッセージを提供することによって、すべてのタイムアウトを適切に処理する必要があります。 また、長時間実行されているプロセスのユーザーにフィードバックを提供するために、ユーザーの進捗状況インジケーターを表示する必要があります。
+モバイル クライアントは、低帯域幅および断続的な接続で定期的に機能する必要があります。 アプリでは、ユーザーにコンテキスト メッセージを提供することで、タイムアウトを適切に処理する必要があります。 また、長時間実行されるプロセスに関するフィードバックをユーザーに提供する進行状況インジケーターも必要です。

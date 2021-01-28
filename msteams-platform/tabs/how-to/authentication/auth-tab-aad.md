@@ -1,20 +1,21 @@
 ---
 title: Azure Active Directory を使用したタブの認証
 description: Teams での認証とタブでの認証の使い方について説明します。
+ms.topic: how-to
 keywords: Teams 認証タブ AAD
-ms.openlocfilehash: f6df2dbf84583488ddc0c57798d423b6288af16d
-ms.sourcegitcommit: 23ceb25d07a76f03ffe92cf1ac578b7c50b0bafc
+ms.openlocfilehash: 1502d2634b39230e0428863383bf97ada0be0359
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "49777932"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014566"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>Microsoft Teams タブでユーザーを認証する
 
 > [!Note]
 > モバイル クライアントのタブで認証を機能するには、Teams JavaScript SDK のバージョン 1.4.1 以降を使用している必要があります。
 
-Teams アプリ内で使用するサービスは多数あるので、それらのサービスのほとんどで、サービスにアクセスするには認証と承認が必要です。 サービスには、Facebook、Twitter、もちろん Teams が含まれます。 Teams のユーザーは、Microsoft Graph を使用して Azure Active Directory (Azure AD) に保存されているユーザー プロファイル情報を持っています。この記事では、Azure AD を使用してこの情報にアクセスする認証に重点を置きます。
+Teams アプリ内で使用するサービスは多数あるので、それらのサービスのほとんどで、サービスにアクセスするには認証と承認が必要です。 サービスには、Facebook、Twitter、そしてもちろん Teams が含まれます。 Teams のユーザーは、Microsoft Graph を使用して Azure Active Directory (Azure AD) に保存されているユーザー プロファイル情報を持っています。この記事では、Azure AD を使用してこの情報にアクセスする認証に重点を置きます。
 
 OAuth 2.0 は、Azure AD他の多くのサービス プロバイダーで使用される認証のオープン標準です。 OAuth 2.0 について理解するには、Teams および Azure AD で認証を操作する必要があります。 次の例では、OAuth 2.0 の暗黙的な付与フローを使用して、最終的に Azure AD および Microsoft Graph からユーザーのプロファイル情報を読み取るという目標を達成しています。
 
@@ -60,7 +61,7 @@ microsoftTeams.authentication.authenticate({
 
 ## <a name="navigate-to-the-authorization-page-from-your-popup-page"></a>ポップアップ ページから承認ページに移動する
 
-ポップアップ ページ ( ) が表示 `/tab-auth/simple-start` される場合は、次のコードが実行されます。 このページの主な目的は、ユーザーがサインインできるよう ID プロバイダーにリダイレクトする方法です。 このリダイレクトは、HTTP 302 を使用してサーバー側で実行できますが、この場合は、クライアント側で呼び出しを使用して行われます `window.location.assign()` 。 これにより、Azure アプリに渡されるヒント情報を取得 `microsoftTeams.getContext()` AD。
+ポップアップ ページ ( ) が表示 `/tab-auth/simple-start` される場合は、次のコードが実行されます。 このページの主な目的は、ユーザーがサインインできるよう ID プロバイダーにリダイレクトする方法です。 このリダイレクトは、HTTP 302 を使用してサーバー側で実行できますが、この場合は、クライアント側で呼び出しを使用して行われます `window.location.assign()` 。 これにより、Azure AD に渡されるヒント情報 `microsoftTeams.getContext()` を取得するためにも使用AD。
 
 ```javascript
 microsoftTeams.getContext(function (context) {
@@ -93,7 +94,7 @@ microsoftTeams.getContext(function (context) {
 
 * 認証 [要求と URL の構築に](~/tabs/how-to/access-teams-context.md) 関するヘルプについては、ユーザー コンテキスト情報の取得に関するページを参照してください。 たとえば、Azure AD サインインの値としてユーザーのログイン名を使用できます。これは、ユーザーが入力する必要が少ない可能性があることを `login_hint` 意味します。 攻撃者が悪意のあるブラウザーにページを読み込み、必要な情報をページに提供する可能性があります。そのため、このコンテキストを ID の証明として直接使用することはできません。
 * タブ コンテキストはユーザーに関する有用な情報を提供しますが、タブ コンテンツの URL への URL パラメーターとして取得するか、Microsoft Teams クライアント SDK の関数を呼び出す場合でも、この情報を使用してユーザーを認証しません。 `microsoftTeams.getContext()` 悪意のあるアクターが独自のパラメーターを使用してタブ コンテンツの URL を呼び出す可能性があります。また、Microsoft Teams を偽装する Web ページが iframe にタブ コンテンツ URL を読み込み、独自のデータを関数に返す可能性があります。 `getContext()` タブ コンテキストでは、ID 関連の情報をヒントとして扱い、使用する前に検証する必要があります。
-* この `state` パラメーターは、コールバック URI を呼び出すサービスが呼び出したサービスを確認するために使用されます。 コールバックのパラメーターが呼び出し中に送信したパラメーターと一致しない場合、戻り値の呼び出しは検証されないので、 `state` 終了する必要があります。
+* この `state` パラメーターは、コールバック URI を呼び出すサービスが呼び出したサービスを確認するために使用されます。 コールバックのパラメーターが呼び出し中に送信したパラメーターと一致しない場合、戻り値の呼び出しは検証されないの `state` で、終了する必要があります。
 * ID プロバイダーのドメインをアプリの on ファイルの一覧に含 `validDomains` manifest.js必要はありません。
 
 ## <a name="the-callback-page"></a>コールバック ページ

@@ -1,46 +1,47 @@
 ---
 title: Microsoft Teams の仮想アシスタント
-description: Microsoft Teams で使用する仮想アシスタントのボットとスキルを作成する方法
-keywords: teams 仮想アシスタントの bot
-ms.openlocfilehash: 0bb1ad832fd33675e607874fcc50f20ffbb96943
-ms.sourcegitcommit: 26b7404142706290810064f8216abaa1c262d1e5
+description: Microsoft Teams で使用する仮想アシスタントボットとスキルを作成する方法
+ms.topic: how-to
+keywords: Teams 仮想アシスタント ボット
+ms.openlocfilehash: d72b1afbf975707d694d4aaef31263a3ce467629
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "45146023"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014615"
 ---
 # <a name="virtual-assistant-for-microsoft-teams"></a>Microsoft Teams の仮想アシスタント
 
-仮想アシスタントは、ユーザーの操作、組織のブランド化、必要なデータのフルコントロールを維持しながら、強力な会話ソリューションを作成できる、Microsoft のオープンソーステンプレートです。 [仮想アシスタントコアテンプレート](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template)は基本的なビルディングブロックであり、[ボット Framework SDK](https://github.com/microsoft/botframework-sdk)、[言語の理解 (LUIS)](https://www.luis.ai/)、 [qna](https://www.qnamaker.ai/)の開発者、スキルの登録、リンクされたアカウント、基本会話など、エンドユーザーにシームレスな対話とエクスペリエンスの範囲を提供する基本的な機能を含む、仮想アシスタントの構築に必要な Microsoft テクノロジを統合したものです。 さらに、テンプレート機能には、再利用可能な会話[スキル](https://microsoft.github.io/botframework-solutions/overview/skills)の豊富な例も含まれています。  個々のスキルを仮想アシスタントソリューションに統合して、複数のシナリオを有効にすることができます。 Bot フレームワーク SDK を使用すると、スキルがソースコードの形式で表示され、必要に応じてカスタマイズおよび拡張することができます。 [Bot フレームワークのスキル](https://microsoft.github.io/botframework-solutions/overview/skills/)を参照してください。
+仮想アシスタントは、ユーザー エクスペリエンス、組織のブランド化、および必要なデータのフル コントロールを維持しながら、堅牢な会話ソリューションを作成できる Microsoft オープン ソース テンプレートです。 仮想[](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template)アシスタントコア テンプレートは[、Bot Framework SDK、Language](https://github.com/microsoft/botframework-sdk) [Understanding (FRAMEWORK)](https://www.luis.ai/) [、QnA Maker](https://www.qnamaker.ai/)など、仮想アシスタントの構築に必要な Microsoft テクノロジと、スキルの登録、リンクされたアカウント、さまざまなシームレスな対話とエクスペリエンスをエンド ユーザーに提供するための基本的な会話の意図など、重要な機能をまとめる基本の構成ブロックです。 さらに、テンプレート機能には、再利用可能な会話スキルの豊富な例が含 [まれます](https://microsoft.github.io/botframework-solutions/overview/skills)。  個々のスキルを仮想アシスタント ソリューションに統合して、複数のシナリオを有効にできます。 Bot Framework SDK を使用すると、必要に応じてカスタマイズおよび拡張できるソース コード形式でスキルが表示されます。 「Bot [Framework のスキルとは」を参照してください](https://microsoft.github.io/botframework-solutions/overview/skills/)。
 
 ![仮想アシスタントの概要図](../assets/images/bots/virtual-assistant/overview.png)
 
-テキストメッセージアクティビティは、[ディスパッチ](/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=cs)モデルを使用して仮想アシスタントコアによって関連付けられたスキルにルーティングされます。 
+テキスト メッセージ アクティビティは、ディスパッチ モデルを使用して仮想アシスタント コアによって関連付けられたスキルに [ルーティング](/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=cs) されます。 
 
 ## <a name="implementation-considerations"></a>実装に関する考慮事項
 
-仮想アシスタントを追加するかどうかの決定には、組織ごとにさまざまな式を含めることができます。 組織の仮想アシスタントの実装をサポートする要因を次に示します。
+仮想アシスタントを追加する決定には、多くの決定性を含め、組織ごとに異なる場合があります。 組織の仮想アシスタントの実装をサポートする要因を次に示します。
 
-- 中央チームは、すべての従業員エクスペリエンスを管理し、新しいスキルの追加など、中核となるエクスペリエンスの更新プログラムを管理する機能を備えています。
-- 複数のアプリケーションが複数のビジネス機能にわたって存在するか、または将来の増加が予想されます。
-- 既存のアプリケーションは、組織が所有するカスタマイズが可能であり、仮想アシスタントのスキルに変換することができます。
-- 中央従業員エクスペリエンスチームは、既存のアプリにカスタマイズを反映して、既存のアプリケーションを仮想アシスタントエクスペリエンスのスキルとして統合するために必要なガイダンスを提供することができます。
+- 中央チームは、すべての従業員のエクスペリエンスを管理し、仮想アシスタント エクスペリエンスを構築し、新しいスキルの追加を含むコア エクスペリエンスの更新を管理する機能を備えています。
+- 複数のアプリケーションが複数のビジネス機能に存在したり、その数が将来増える見込みです。
+- 既存のアプリケーションはカスタマイズ可能で、組織が所有し、仮想アシスタントのスキルに変換できます。
+- 中央の従業員エクスペリエンス チームは、既存のアプリのカスタマイズに影響を与え、既存のアプリケーションを仮想アシスタントエクスペリエンスのスキルとして統合するために必要なガイダンスを提供できます。
 
-![中央チームがアシスタントを管理し、ビジネス機能チームがスキルを貢献](../assets/images/bots/virtual-assistant/business-functions.png)
+![中央チームがアシスタントを管理し、ビジネス機能チームがスキルを貢献する](../assets/images/bots/virtual-assistant/business-functions.png)
 
-## <a name="create-a-teams-focused-virtual-assistant"></a>Teams に特化した仮想アシスタントを作成する
+## <a name="create-a-teams-focused-virtual-assistant"></a>Teams に重点を置く仮想アシスタントを作成する
 
-Microsoft は、仮想アシスタントとスキルを構築するための[Visual Studio テンプレート](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate)を公開しています。 Visual Studio テンプレートを使用すると、アクションを備えた限られたリッチカードのサポートを提供して、テキストベースの操作で提供される仮想アシスタントを作成できます。 Visual Studio の基本テンプレートが拡張され、Microsoft Teams のプラットフォーム機能と power Teams アプリのエクスペリエンスが追加されました。 豊富なアダプティブカード、タスクモジュール、teams/グループチャット、メッセージング拡張機能のサポートが含まれています。 「[チュートリアル: 仮想アシスタントを Microsoft Teams に拡張する](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/) *」も参照して*ください。
+Microsoft は、仮想アシスタント [Visual Studio構築のための](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate) 新しいテンプレートを公開しました。 新しいVisual Studioテンプレートを使用すると、アクションを含む限られたリッチ カードをサポートするテキスト ベースのエクスペリエンスを利用した仮想アシスタントを作成できます。 Microsoft Teams プラットフォーム機能をVisual Studio Teams アプリエクスペリエンスを強化するために、新しい基本テンプレートが強化されました。 機能のいくつかには、豊富なアダプティブ カード、タスク モジュール、チーム/グループ チャット、メッセージング拡張機能のサポートが含まれます。 *「チュートリアル:* 仮想 [アシスタントを Microsoft Teams に拡張する」も参照してください](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/)。
 
-![仮想アシスタントソリューションの高レベルの図](../assets/images/bots/virtual-assistant/high-level-diagram.png)
+![仮想アシスタント ソリューションの大きな図](../assets/images/bots/virtual-assistant/high-level-diagram.png)
 
-### <a name="add-adaptive-cards-to-your-virtual-assistant"></a>仮想アシスタントに適応カードを追加する
+### <a name="add-adaptive-cards-to-your-virtual-assistant"></a>アダプティブ カードを仮想アシスタントに追加する
 
-要求を適切にディスパッチするには、仮想アシスタントが正しい LUIS モデルとそれに関連するスキルを特定する必要があります。 ただし、これらは固定された定義済みのキーワードであり、ユーザーからの utterances ではないため、カードアクションの処理に対しては、そのスキルに関連付けられている LUIS モデルを使用することはできないため、ディスパッチメカニズムを使用することはできません。
+要求を適切にディスパッチするには、仮想アシスタントが適切な THEIS モデルとそれに関連付けられているスキルを識別する必要があります。 ただし、ユーザーからの発声ではなく、定義済みの固定キーワードで、スキルに関連付けられたカード アクション テキストに対してトレーニングを受けできない可能性があります。このため、ディスパッチメカニズムはカード アクション アクティビティには使用できません。
 
-このことは、スキル情報をカードアクションペイロードに埋め込むことによって解決されました。 各スキルは `skillId` 、カードアクションのフィールドに埋め込む必要があり `value` ます。 各カードアクションアクティビティに関連するスキル情報が確実に伝達され、仮想アシスタントがこの情報をディスパッチに利用できるようにするには、これが最善の方法です。
+この問題を解決するには、スキル情報をカードアクションペイロードに埋め込む必要があります。 すべてのスキルはカード `skillId` アクションの  `value` フィールドに埋め込む必要があります。 これは、各カード アクション アクティビティが関連するスキル情報を持ち、仮想アシスタントがディスパッチにこの情報を利用できる最善の方法です。
 
-カードアクションデータサンプルを次に示します。 コンストラクターに提供することで、 `skillId` スキル情報がカードのアクションに常に表示されるようになります。
+カード アクション データのサンプルを次に示します。 コンストラクターを `skillId` 指定することで、スキル情報が常にカード アクションに存在する必要があります。
 
 ```csharp
     public class CardActionData
@@ -64,7 +65,7 @@ Microsoft は、仮想アシスタントとスキルを構築するための[Vis
     };
 ```
 
-次に、 `SkillCardActionData` `skillId` カードアクションペイロードから抽出するために、仮想アシスタントテンプレートにクラスを導入します。
+次に、仮想アシスタント `SkillCardActionData` テンプレートのクラスを導入して、カード `skillId` アクションペイロードから抽出します。
 
 ```csharp
     // Skill Card action data should contain skillId parameter
@@ -79,7 +80,7 @@ Microsoft は、仮想アシスタントとスキルを構築するための[Vis
     }
 ```
 
-カードアクションデータから抽出するコードスニペットを次に示し `skillId` ます。 [Activity](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md)クラスの拡張メソッドとして実装されています。
+カードのアクション データから抽出するコード  `skillId` スニペットを次に示します。 Activity クラスに拡張メソッドとして [実装](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md) しました。
 
 ```csharp
     public static class ActivityExtensions
@@ -112,17 +113,17 @@ Microsoft は、仮想アシスタントとスキルを構築するための[Vis
     }
 ```
 
-### <a name="handle-interruptions-gracefully"></a>正常に中断する処理
+### <a name="handle-interruptions-gracefully"></a>中断を適切に処理する
 
-仮想アシスタントは、ユーザーがスキルを呼び出そうとしているときに、別のスキルが現在アクティブな場合に、中断を処理できます。 `TeamsSkillDialog`また `TeamsSwitchSkillDialog` 、Bot フレームワークのスキル[ダイアログ](https://github.com/microsoft/botframework-solutions/blob/5b46d73e220bbb4fba86c48be532e495535ca78a/sdk/csharp/libraries/microsoft.bot.solutions/Skills/SkillDialog.cs)と [ [switchスキル] ダイアログ](https://github.com/microsoft/botframework-solutions/blob/6d40fa8ae05f96b0c5e0464e01361a9e1deb696c/sdk/csharp/libraries/microsoft.bot.solutions/Skills/Dialogs/SwitchSkillDialog.cs)に基づいて、ユーザーがカードアクションからスキル経験を切り替えることができるようになりました。 この要求を処理するために、仮想アシスタントは、スキルを切り替えるための確認メッセージをユーザーに表示します。
+仮想アシスタントは、別のスキルが現在アクティブな間にユーザーがスキルを呼び出そうとする場合に、中断を処理できます。 Bot Framework の `TeamsSkillDialog` `TeamsSwitchSkillDialog` [SkillDialog](https://github.com/microsoft/botframework-solutions/blob/5b46d73e220bbb4fba86c48be532e495535ca78a/sdk/csharp/libraries/microsoft.bot.solutions/Skills/SkillDialog.cs) と [SwitchSkillDialog](https://github.com/microsoft/botframework-solutions/blob/6d40fa8ae05f96b0c5e0464e01361a9e1deb696c/sdk/csharp/libraries/microsoft.bot.solutions/Skills/Dialogs/SwitchSkillDialog.cs)に基づいて、ユーザーがカードアクションからスキル エクスペリエンスを切り替え可能にしました。 この要求を処理するために、仮想アシスタントは、スキルを切り替える確認メッセージをユーザーに表示します。
 
-![新しいスキルに切り替える際の確認メッセージ](../assets/images/bots/virtual-assistant/switch-skills-prompt.png)
+![新しいスキルに切り替える際の確認プロンプト](../assets/images/bots/virtual-assistant/switch-skills-prompt.png)
 
-### <a name="handling-task-module-requests"></a>タスクモジュール要求の処理
+### <a name="handling-task-module-requests"></a>タスク モジュール要求の処理
 
-仮想アシスタントにタスクモジュールの機能を追加するには、仮想アシスタントアクティビティハンドラーに、という2つのメソッドが追加されてい `OnTeamsTaskModuleFetchAsync` `OnTeamsTaskModuleSubmitAsync` ます。 これらのメソッドは、仮想アシスタントからタスクモジュールに関連するアクティビティをリッスンし、要求に関連付けられているスキルを特定し、要求を識別されたスキルに転送します。 
+仮想アシスタントにタスク モジュール機能を追加するには、仮想アシスタント アクティビティ ハンドラーに次の 2 つの追加メソッドが含 `OnTeamsTaskModuleFetchAsync` まれています `OnTeamsTaskModuleSubmitAsync` 。 これらのメソッドは、仮想アシスタントからタスク モジュール関連のアクティビティをリッスンし、要求に関連付けられているスキルを特定し、識別されたスキルに要求を転送します。 
 
-要求の転送は、[スキル Httpclient](/dotnet/api/microsoft.bot.builder.integration.aspnet.core.skills.skillhttpclient?view=botbuilder-dotnet-stable)、メソッドによって行われ `PostActivityAsync` ます。 これ `InvokeResponse` は、解析され、に変換される応答を返し `TaskModuleResponse` ます。
+要求の転送は  [、SkillHttpClient メソッドを使用](/dotnet/api/microsoft.bot.builder.integration.aspnet.core.skills.skillhttpclient?view=botbuilder-dotnet-stable)して行 `PostActivityAsync` われます。 これは、解析され、 `InvokeResponse` 変換された応答を返します `TaskModuleResponse` 。
 
 ```csharp
     public static TaskModuleResponse GetTaskModuleRespose(this InvokeResponse invokeResponse)
@@ -161,9 +162,9 @@ Microsoft は、仮想アシスタントとスキルを構築するための[Vis
         }
 ```
 
-同様の方法で、カードアクションのディスパッチとタスクモジュールの応答が続きます。 タスクモジュールのフェッチと送信アクションのデータが更新され、を含むように `skillId` なります。 アクティビティ拡張メソッド `GetSkillId` は `skillId` 、呼び出す必要があるスキルの詳細を提供するペイロードから抽出します。
+カード アクションのディスパッチとタスク モジュールの応答にも同様のアプローチが使用されます。 タスク モジュールのフェッチと送信のアクション データが更新され、含まれます `skillId` 。 Activity Extension メソッド `GetSkillId` は、呼び出す必要があるスキルに関する詳細を提供するペイロード `skillId` から抽出します。
 
-とメソッドのコードスニペットを次に示し `OnTeamsTaskModuleFetchAsync` `OnTeamsTaskModuleSubmitAsync` ます。
+次のコード スニペットと `OnTeamsTaskModuleFetchAsync` メソッドを `OnTeamsTaskModuleSubmitAsync` 示します。
 
 ```csharp
     // Invoked when a "task/fetch" event is received to invoke task module.
@@ -211,18 +212,18 @@ Microsoft は、仮想アシスタントとスキルを構築するための[Vis
     }
 ```
 
-さらに、 `validDomains` スキルを適切に使用してタスクモジュールが呼び出されるように、すべてのスキルドメインを仮想アシスタントのマニフェストファイルのセクションに含める必要があります。
+さらに、スキルによって呼び出されるタスク モジュールが適切にレンダリングされるには、すべてのスキル ドメインを仮想アシスタントのマニフェスト ファイルのセクション `validDomains` に含める必要があります。
 
-### <a name="handling-collaborative-app-scopes"></a>共同作業アプリのスコープを処理する
+### <a name="handling-collaborative-app-scopes"></a>共同作業アプリのスコープの処理
 
-Teams アプリは、1:1 のチャット、グループチャット、チャネルを含む複数のスコープ内に存在することができます。 コア仮想アシスタントテンプレートは、1:1 のチャット用に設計されています。 オンボードの機能の一部として、仮想アシスタントは、ユーザーに名前の入力を求め、ユーザーの状態を維持します。 その開始時の動作は、グループチャット/チャネルのスコープには適していないため、削除されました。
+Teams アプリは、1 対 1 のチャット、グループ チャット、チャネルなど、複数のスコープで存在できます。 コア仮想アシスタント テンプレートは、1 対 1 のチャット用に設計されています。 オンボーディング エクスペリエンスの一環として、仮想アシスタントはユーザーに名前の入力を求め、ユーザーの状態を維持します。 オンボーディング エクスペリエンスはグループ チャット/チャネル スコープには適していないので、削除されています。
 
-スキルは、複数の範囲 (1:1 チャット、グループチャット、チャネル会話) でのアクティビティを処理する必要があります。 これらのスコープのいずれかがサポートされていない場合、スキルは適切なメッセージで応答する必要があります。
+スキルは、複数の範囲 (1 対 1 のチャット、グループ チャット、チャネル会話) のアクティビティを処理する必要があります。 これらのスコープがサポートされていない場合、スキルは適切なメッセージで応答する必要があります。
 
-次の処理関数が仮想アシスタントコアに追加されました。
+次の処理機能が仮想アシスタント コアに追加されました。
 
-- 仮想アシスタントは、グループチャットまたはチャネルからのテキストメッセージなしで呼び出すことができます。
-- Articulations は、メッセージをディスパッチモジュールに送信する前に、(bot の必要な @mention を削除する) クリーンアップされます。
+- 仮想アシスタントは、グループ チャットまたはチャネルからのテキスト メッセージなしで呼び出すことができます。
+- メッセージをディスパッチ モジュールに送信する前に、明確化がクリーンアップされます (つまり、ボットの@mentionを削除します)。
 
 ```csharp
     if (innerDc.Context.Activity.Conversation?.IsGroup == true)
@@ -241,9 +242,9 @@ Teams アプリは、1:1 のチャット、グループチャット、チャネ�
 
 ### <a name="handling-messaging-extensions"></a>メッセージング拡張機能の処理
 
-メッセージング拡張機能のコマンドは、アプリマニフェストファイルで宣言されています。 メッセージング拡張機能のユーザーインターフェイスは、これらのコマンドによって処理されます。 メッセージング拡張コマンド (添付スキルとして) を電源にする仮想アシスタントの場合、仮想アシスタント自体のマニフェストにこれらのコマンドを含める必要があります。 個々のスキルのマニフェストからのコマンドも、仮想アシスタントのマニフェストに追加する必要があります。 コマンド ID は、スキルのアプリ ID をセパレーター () で追加することによって、関連付けられたスキルに関する情報を提供し `:` ます。
+メッセージング拡張機能のコマンドは、アプリ マニフェスト ファイルで宣言されています。 メッセージング拡張機能のユーザー インターフェイスには、これらのコマンドが搭載されています。 仮想アシスタントがメッセージング拡張機能コマンドの電源を入れるには (付属のスキルとして)、仮想アシスタント独自のマニフェストにこれらのコマンドが含まれている必要があります。 個々のスキルのマニフェストのコマンドも仮想アシスタントのマニフェストに追加する必要があります。 コマンド ID は、スキルのアプリ ID を区切り記号 ( ) を介して追加することで、関連付けられたスキルに関する情報を提供します `:` 。
 
-以下は、スキルのマニフェストファイルのスニペットです。
+スキルのマニフェスト ファイルのスニペットを次に示します。
 
 ```json
  "composeExtensions": [
@@ -257,7 +258,7 @@ Teams アプリは、1:1 のチャット、グループチャット、チャネ�
     ....
 ```
 
-次に、対応する仮想アシスタントマニフェストファイルのコードスニペットを示します。
+対応する仮想アシスタント マニフェスト ファイル コード スニペットを次に示します。
 
 ```json
  "composeExtensions": [
@@ -271,7 +272,7 @@ Teams アプリは、1:1 のチャット、グループチャット、チャネ�
     ....
 ```
 
-コマンドがユーザーによって起動されると、仮想アシスタントはコマンド ID を解析することによって関連付けられたスキルを特定し、コマンド ID から特別なサフィックス () を削除してアクティビティを更新し、それを対応するスキルに転送することができ `:<skill_id>` ます。 スキルのコードでは、特別なサフィックスを処理する必要がないため、複数のスキルを使用したコマンド Id 間の競合は回避されます。 この方法では、すべてのコンテキスト内のスキルのすべての検索およびアクションコマンド ("新規"、"commandBox"、"message") を仮想アシスタントで利用できます。
+ユーザーによってコマンドが呼び出されると、仮想アシスタントは、コマンド ID を解析して関連付けられたスキルを識別し、コマンド ID から余分なサフィックス ( ) を削除してアクティビティを更新し、対応するスキルに転送できます。 `:<skill_id>` スキルのコードは余分なサフィックスを処理する必要はありません。したがって、スキル間のコマンドの ID 間の競合は回避されます。 この方法では、すべてのコンテキスト内のスキルのすべての検索コマンドとアクション コマンド ("compose"、"commandBox"、および "message") を仮想アシスタントが利用できます。
 
 ```csharp
     const string MessagingExtensionCommandIdSeparator = ":";
@@ -307,7 +308,7 @@ Teams アプリは、1:1 のチャット、グループチャット、チャネ�
     }
 ```
 
-メッセージング拡張機能の中には、コマンド ID を含まないものがあります。 たとえば、には、 `composeExtension/selectItem` invoke タップアクションの値のみが含まれています。 関連付けられたスキルを識別するために、 `skillId` の応答を形成している間、各アイテムカードに接続されてい `OnTeamsMessagingExtensionQueryAsync` ます。 (これは、[アダプティブカードを仮想アシスタントに追加](#add-adaptive-cards-to-your-virtual-assistant)する方法に似ています。
+メッセージング拡張機能のアクティビティの中には、コマンド ID が含まれるものがあります。 たとえば、呼 `composeExtension/selectItem` び出しタップ アクションの値だけが含まれているとします。 関連するスキルを識別するために、応答を形成している間に各アイテム `skillId`  カードに添付されます `OnTeamsMessagingExtensionQueryAsync` 。 (これは、アダプティブ カードを仮想アシスタント [に追加する方法に似ています](#add-adaptive-cards-to-your-virtual-assistant)。
 
 ```csharp
     // Invoked when a 'composeExtension/selectItem' invoke activity is received for compose extension query command.
@@ -323,17 +324,17 @@ Teams アプリは、1:1 のチャット、グループチャット、チャネ�
 
 ---
 
-## <a name="example-convert-the-book-a-room-app-template-to-a-virtual-assistant-skill"></a>例: ブック-a room アプリテンプレートを仮想アシスタントスキルに変換する
+## <a name="example-convert-the-book-a-room-app-template-to-a-virtual-assistant-skill"></a>例: ブック ルーム アプリ テンプレートを仮想アシスタントのスキルに変換する
 
-[書籍-a room](app-templates.md#book-a-room)は[Microsoft Teams の bot](../bots/what-are-bots.md)で、現在の時刻から 30 (既定)、60、または90分間、ユーザーが会議室をすばやく検索して予約することができます。 個人または1:1 の会話に対して、会議中の bot の範囲を示します。
+[会議室](app-templates.md#book-a-room) の予約は [、ユーザー](../bots/what-are-bots.md) が現在の時刻から 30 分 (既定)、60 分、または 90 分間の会議室をすばやく見つけて予約できる Microsoft Teams ボットです。 会議室予約ボットは、個人の会話または一対一の会話を対象としています。
 
-![「Book a room」というスキルを持つ仮想アシスタント](../assets/images/bots/virtual-assistant/book-a-room-skill.png)
+!["部屋を予約する" スキルを持つ仮想アシスタント](../assets/images/bots/virtual-assistant/book-a-room-skill.png)
 
-「」では、仮想アシスタントに接続できるスキルに変換するために導入されたデルタの変更について説明します。 同様のガイドラインに従って、既存の v4 bot をスキルに変換することができます。
+仮想アシスタントにアタッチできるスキルに変換するために導入された差分の変更を次に示します。 同様のガイドラインに従って、既存の v4 ボットをスキルに変換できます。
 
-### <a name="skill-manifest"></a>スキルマニフェスト
+### <a name="skill-manifest"></a>スキル マニフェスト
 
-スキルマニフェストは、スキルのメッセージングエンドポイント、id、名前、およびその他の関連するメタデータを公開する JSON ファイルです (このマニフェストは、Microsoft Teams のアプリのサイドローディングに使用されるマニフェストとは異なります)。仮想アシスタントには、スキルを添付するための入力としてこのファイルへのパスが必要です。 次のマニフェストが bot の wwwroot フォルダーに追加されました。
+スキル マニフェストは、スキルのメッセージング エンドポイント、ID、名前、その他の関連するメタデータを公開する JSON ファイルです (このマニフェストは、Microsoft Teams でアプリをサイドロードするために使用されるマニフェストとは異なります)。仮想アシスタントは、スキルを添付する入力としてこのファイルへのパスを必要とします。 ボットの wwwroot フォルダーに次のマニフェストを追加しました。
 
 ```bash
 botskills connect --remoteManifest "<url to skill's manifest>" ..
@@ -382,11 +383,11 @@ botskills connect --remoteManifest "<url to skill's manifest>" ..
 }
 ```
 
-### <a name="luis-integration"></a>LUIS の統合
+### <a name="luis-integration"></a>[!!--]--
 
-仮想アシスタントのディスパッチモデルは、添付されたスキルの LUIS モデルに基づいて構築されています。 ディスパッチモデルは、すべてのテキストアクティビティの目的を特定し、それに関連付けられているスキルを検出します。
+仮想アシスタントのディスパッチ モデルは、アタッチされたスキルの数を持つ OF モデルを基に構築されています。 ディスパッチ モデルは、すべてのテキスト アクティビティの意図を識別し、関連付けられているスキルを見つけ出します。
 
-仮想アシスタント `.lu` は、スキルを付加する際に、入力としてスキルの LUIS モデル (形式) を必要とします。 LUIS json は `.lu` 、botframework ツールを使用して形式に変換できます。
+仮想アシスタントでは、スキルを追加する一方で、入力としてスキルの (形式で) スキルの種類 `.lu` (形式) が必要です。 BOTframework-cli ツールを使用して、JSON を形式 `.lu` に変換できます。
 
 ```json
 botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<path to the folder containing your Skill's .lu files>" --languages "en-us" --cs
@@ -397,12 +398,12 @@ npm i -g @microsoft/botframework-cli
 bf luis:convert --in <pathToLUIS.json> --out <pathToLuFile>
 ```
 
-本-room bot には、ユーザーに対して2つの主要なコマンドがあります。
+Book-a-room ボットには、ユーザーに対して次の 2 つの主なコマンドがあります。
 
 - `Book room`
 - `Manage Favorites`
 
-これら2つのコマンドについて理解している LUIS モデルを構築しました。 対応する機密情報を入力する必要があり `cognitivemodels.json` ます。 対応する LUIS JSON ファイルは[ここで](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/blob/nebhagat/microsoft-teams-apps-bookaroom-skill/Deployment/Resources/LU/book-a-meeting.json)見つけることができます。これは、対応するファイルがどのように見えるかを示してい `.lu` ます。
+これら 2 つのコマンドを理解する、1 つの大きなモデルを構築しました。 対応するシークレットを設定する必要があります `cognitivemodels.json` 。 対応する JSON ファイルはここに [見つか](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/blob/nebhagat/microsoft-teams-apps-bookaroom-skill/Deployment/Resources/LU/book-a-meeting.json) り、対応するファイルは `.lu` 次のように表示されます。
 
 ```
 > ! Automatically generated by [LUDown CLI](https://github.com/Microsoft/botbuilder-tools/tree/master/Ludown), Tue Mar 31 2020 17:30:32 GMT+0530 (India Standard Time)
@@ -452,12 +453,12 @@ bf luis:convert --in <pathToLUIS.json> --out <pathToLuFile>
 > # RegEx entities
 ```
 
-この方法では、ユーザーが、 `book room` `manage favorites` 会議室の bot に関連付けられている、またはこのスキルに転送されたコマンドとして識別されるため、ユーザーによる仮想アシスタントへのすべてのコマンドを実行できます。
-一方、会議室の場合は、LUIS モデルを使用して、これらのコマンドが入力されていない場合 (例:) について理解しておく必要があり `I want to manage my favorite rooms` ます。
+この方法では、仮想アシスタントに関連するユーザーによるコマンドの問題、または `book room` Book-a-room ボットに関連付けられたコマンドとして識別されるコマンドは、このスキルに転送 `manage favorites` されます。
+一方、BOOK-a-room room bot は、これらのコマンドが入力されていない場合は、このモデルを使用してこれらのコマンドを理解する必要があります (次に例を示します `I want to manage my favorite rooms` )。
 
 ### <a name="multi-language-support"></a>複数言語のサポート
 
-この例では、英語のカルチャを持つ LUIS モデルのみが作成されています。 他の言語に対応する LUIS モデルを作成し、にエントリを追加することができ `cognitivemodels.json` ます。
+この例では、英語のカルチャを持つ、唯一の種類のオブジェクト モデルを作成しました。 他の言語に対応する数型 (-) のモデルを作成し、エントリを追加できます `cognitivemodels.json` 。
 
 ```json
 {
@@ -477,7 +478,7 @@ bf luis:convert --in <pathToLUIS.json> --out <pathToLuFile>
 }
 ```
 
-パラレルで、対応する `.lu` ファイルを luisFolder パスに追加します。 フォルダー構造は次のようにする必要があります。
+並行して、対応する `.lu` ファイルをfolder パスに追加します。 フォルダーの構造は次のようになります。
 
 ```bash
 | - luisFolder
@@ -491,43 +492,43 @@ bf luis:convert --in <pathToLUIS.json> --out <pathToLuFile>
                 | - book-a-meeting.lu
 ```
 
-Botskills コマンドを次のように更新して、パラメーターを変更し `languages` ます。
+botskills コマンドを次のように更新してパラメーターを変更 `languages` します。
 
 ```json
 botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<path to luisFolder>" --languages "en-us, your_language_culture" --cs
 ```
 
-仮想アシスタントを使用し `SetLocaleMiddleware` て、現在のロケールを識別し、対応するディスパッチモデルを起動します。 (Bot フレームワークアクティビティには、このミドルウェアで使用されるロケールフィールドがあります)。スキルにも同じを使用することをお勧めします。 本-room bot はこのミドルウェアを使用せず、代わりに Bot フレームワークアクティビティの[Clientinfo エンティティ](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo)からロケールを取得します。
+仮想アシスタントは、 `SetLocaleMiddleware` 現在のロケールを識別し、対応するディスパッチ モデルを呼び出します。 (Bot フレームワーク アクティビティには、このミドルウェアで使用されるロケール フィールドがあります)。スキルにも同じ機能を使用することをお勧めします。 Book-a-room bot は、このミドルウェアを使用しません。代わりに、Bot フレームワーク アクティビティの clientInfo エンティティから [ロケールを取得します](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md#clientinfo)。
 
 ### <a name="claim-validation"></a>要求の検証
 
-発信者をスキルに制限する[claimsValidator](https://github.com/nebhagat/msteams-virtual-assistant-dotnet/blob/master/msteams-virtual-assistant-dotnet/Authentication/AllowedCallersClaimsValidator.cs)が追加されました。 仮想アシスタントがこのスキルを呼び出せるようにするには、 `AllowedCallers` `appsettings` 特定の仮想アシスタントのアプリ ID を使用して配列を設定します。
+呼び出し [元をスキルに制限するために claimsValidator](https://github.com/nebhagat/msteams-virtual-assistant-dotnet/blob/master/msteams-virtual-assistant-dotnet/Authentication/AllowedCallersClaimsValidator.cs) が追加されました。 仮想アシスタントがこのスキルを呼び出すのを許可するには、その特定の仮想アシスタントのアプリ ID から `AllowedCallers` `appsettings` 配列を設定します。
 
 ```
 "AllowedCallers": [ "<caller_VA1_appId>", "<caller_VA2_appId>" ],
 ```
 
-許可された発信者の配列は、スキルにアクセスできるスキルコンシューマーを制限できます。 `*`任意のスキルコンシューマーからの呼び出しを受け入れるには、この配列に1つのエントリを追加します。
+許可された呼び出し元の配列では、ユーザーがスキルにアクセスできるスキルを制限できます。 任意のスキル コンシューマー `*` からの呼び出しを受け入れるには、この配列に単一のエントリを追加します。
 
 ```
 "AllowedCallers": [ "*" ],
 ```
-スキルにクレーム検証を追加するための詳細なドキュメントは、[こちら](https://docs.microsoft.com/azure/bot-service/skill-implement-skill?view=azure-bot-service-4.0&tabs=cs#claims-validator)を参照してください。
+スキルにクレーム検証を追加する詳細なドキュメントについては、こちらを参照 [してください](https://docs.microsoft.com/azure/bot-service/skill-implement-skill?view=azure-bot-service-4.0&tabs=cs#claims-validator)。
 
 ### <a name="card-refresh-limitation"></a>カードの更新の制限
 
-アクティビティの更新 (カードの更新) は、Virtual Assistant ([github の問題](https://github.com/microsoft/botbuilder-dotnet/issues/3686)) 経由ではまだサポートされていません。 そのため、すべてのカード更新呼び出し ( `UpdateActivityAsync` ) を新しいカード呼び出し () に置き換えました `SendActivityAsync` 。
+アクティビティの更新 (カードの更新) は、仮想アシスタント[(github](https://github.com/microsoft/botbuilder-dotnet/issues/3686)の問題) ではサポートされていません。 そのため、すべてのカード更新呼び出し ( ) を新しいカード呼び出し ( ) の投稿 `UpdateActivityAsync` に置き換えました `SendActivityAsync` 。
 
-### <a name="card-actions-and-task-module-flows"></a>カードアクションとタスクモジュールフロー
+### <a name="card-actions-and-task-module-flows"></a>カード アクションとタスク モジュール フロー
 
-関連付けられたスキルにカードアクションまたはタスクモジュールのアクティビティを転送するには、スキルをそのスキルに埋め込む必要があり `skillId` ます。
-Book-a room ボットカードアクション、タスクモジュールのフェッチと送信アクションのペイロードは、パラメーターとして格納されるように変更され `skillId` ます。 
+カードアクションまたはタスク モジュールアクティビティを関連付けられたスキルに転送するには、スキルをそのスキルに埋め込む `skillId` 必要があります。
+Book-a-room bot card action, task module fetch and submit action payloads are modified to contain `skillId` as a parameter. 
 
-詳細については、このドキュメント[のセクションを参照して](https://msteams-captain.visualstudio.com/xGrowth%20App%20Templates/_wiki/wikis/xGrowth.wiki/88/Virtual-Assistant-for-MS-Teams?anchor=rich-cards)ください。
+詳細については、このドキュメント [のこの](https://msteams-captain.visualstudio.com/xGrowth%20App%20Templates/_wiki/wikis/xGrowth.wiki/88/Virtual-Assistant-for-MS-Teams?anchor=rich-cards) セクションを参照してください。
 
-### <a name="handle-activities-from-group-chat-or-channel-scope"></a>グループチャットまたはチャネルスコープからのアクティビティを処理する
+### <a name="handle-activities-from-group-chat-or-channel-scope"></a>グループ チャットまたはチャネル スコープからのアクティビティの処理
 
-本-a room bot は、プライベートチャット (個人/1: 1 のスコープ) に対してのみ設計されています。 グループチャットとチャネルスコープをサポートするようにカスタマイズされた仮想アシスタントを使用しているため、これらのスコープから仮想アシスタントが呼び出される可能性があるので、このようにして、会議室 bot は同じ作業を行うことができます。 そのため、このようなアクティビティを処理するために、ルーム bot がカスタマイズされています。 このチェックは、 `OnMessageActivityAsync` 会議室の bot アクティビティハンドラーのメソッドに追加されました。
+Book-a-room ボットは、プライベート チャット (個人用/1:1 スコープ) 専用に設計されています。 グループ チャットとチャネルスコープをサポートするために仮想アシスタントをカスタマイズしたので、仮想アシスタントがこれらのスコープから呼び出される可能性があります。したがって、Book-a-room ボットは同じアクティビティを取得する可能性があります。 したがって、ブック ルーム ボットは、これらのアクティビティを処理するためにカスタマイズされます。 チェックは `OnMessageActivityAsync` 、Book-a-room ボットのアクティビティ ハンドラーのメソッドに入れらされています。
 
 ```csharp
     protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -544,20 +545,20 @@ Book-a room ボットカードアクション、タスクモジュールのフ�
     }
 ```
 
-[Bot フレームワークソリューションリポジトリ](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp)から既存のスキルを活用したり、新しいスキルを最初から作成したりすることもできます。 [この記事](https://microsoft.github.io/botframework-solutions/overview/skills/)では、以降のチュートリアルをご覧ください。 仮想アシスタントとスキルのアーキテクチャについては、[ドキュメント](https://docs.microsoft.com/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0)を参照してください。
+[Bot Framework](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp)ソリューション リポジトリの既存のスキルを活用したり、新しいスキルを最初から完全に作成したりすることもできます。 以降のチュートリアルについては、こちらを参照 [してください](https://microsoft.github.io/botframework-solutions/overview/skills/)。 仮想アシスタントと [スキル アーキテクチャ](https://docs.microsoft.com/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0)   のドキュメントを参照してください。
 
-## <a name="sample-code-to-get-started"></a>開始するためのサンプルコード
+## <a name="sample-code-to-get-started"></a>開始するサンプル コード
 
-- [更新された visual studio テンプレート](https://github.com/nebhagat/msteams-virtual-assistant-dotnet)
-- [書籍-a room bot スキルコード](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill)
+- [Visual Studio テンプレートの更新](https://github.com/nebhagat/msteams-virtual-assistant-dotnet)
+- [Book-a-room ボットのスキル コード](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill)
 
-## <a name="virtual-assistant-known-limitations"></a>仮想アシスタントの既知の制限
+## <a name="virtual-assistant-known-limitations"></a>仮想アシスタントの既知の制限事項
 
-- **Endofconversation**。 スキルは、会話が `endOfConversation` 終了したときにアクティビティを送信する必要があります。 このアクティビティの基準として、仮想アシスタントは特定のスキルのコンテキストを終了し、仮想アシスタントの (ルート) コンテキストに戻ります。 冊子の bot の場合、会話を終了する明確な状態はありません。 そのため、ユーザーが `endOfConversation` ルートコンテキストに戻る必要がある場合は、単にコマンドを実行するだけで済み `start over` ます。
-- **カードの更新**。 仮想アシスタントでは、カードの更新はまだサポートされていません。
-- **メッセージング拡張機能**:
-  - 現在、仮想アシスタントは、メッセージング拡張機能に対して最大10個のコマンドをサポートできます。
-  - メッセージング拡張機能の構成は、個々のコマンドを対象としたものではありません。 これは、仮想アシスタントを通じて個々のスキルの構成を制限します。
-  - メッセージング拡張機能のコマンド Id の最大長は[64 文字](../resources/schema/manifest-schema.md#composeextensions)、37文字は、スキル情報を埋め込むために使用されます。 このため、コマンド ID の更新された制約は27文字に制限されます。
+- **EndOfConversation**. スキルは会話を終了 `endOfConversation` するときにアクティビティを送信する必要があります。 このアクティビティに基づいて、仮想アシスタントは特定のスキルを持つコンテキストを終了し、仮想アシスタント (ルート) コンテキストに戻ります。 Book-a-room ボットの場合、会話を終了できる明確な状態はありません。 そのため、Book-a-room ボットから送信したのではなく、ユーザーがルート コンテキストに戻る必要がある場合は、コマンドを使用するだけで `endOfConversation` 行 `start over` えるのです。
+- **カードの更新**。 カードの更新は、仮想アシスタントを通じてまだサポートされていません。
+- **メッセージング拡張機能**。:
+  - 現在、仮想アシスタントはメッセージング拡張機能に対して最大 10 個のコマンドをサポートできます。
+  - メッセージング拡張機能の構成は、個々のコマンドではなく、拡張機能全体を対象とします。 これにより、仮想アシスタントを通じて個々のスキルの構成が制限されます。
+  - メッセージング拡張機能コマンドの ID の長さは最大 [64](../resources/schema/manifest-schema.md#composeextensions) 文字で、スキル情報の埋め込みには 37 文字が使用されます。 したがって、コマンド ID の更新された制約は 27 文字に制限されています。
 >
 >

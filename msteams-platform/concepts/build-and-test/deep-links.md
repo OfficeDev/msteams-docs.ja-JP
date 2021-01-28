@@ -1,13 +1,14 @@
 ---
 title: コンテンツへのディープ リンクを作成する
 description: ディープ リンクとアプリでの使用方法について説明する
+ms.topic: how-to
 keywords: Teams ディープ リンク ディープリンク
-ms.openlocfilehash: 35aceba4b569baac9283a3355ee5719273145652
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 96e6fc0a47eb64b9e1c6c03721d386ce4dfbb51d
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797786"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014314"
 ---
 # <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>Microsoft Teams のコンテンツと機能へのディープ リンクを作成する
 
@@ -57,7 +58,7 @@ Teams のエンティティへのディープ リンクを作成できます。 
 ### <a name="generating-a-deep-link-to-your-tab"></a>タブへのディープ リンクを作成する
 
 > [!NOTE]
-> [個人用] タブには `personal` 範囲が設定され、チャネルタブとグループ タブでは範囲 `team` が `group` 使用されます。 構成可能なタブだけがコンテキスト オブジェクトに関連付けられている `channel` プロパティを持つため、2 つのタブの種類の構文はわずかに異なります。 タブ スコープ [の詳細](~/resources/schema/manifest-schema.md) については、マニフェスト リファレンスを参照してください。
+> [個人用] タブ `personal` には範囲が設定され、チャネルタブとグループ タブでは範囲 `team` が `group` 使用されます。 構成可能なタブだけがコンテキスト オブジェクトに関連付けられている `channel` プロパティを持つため、2 つのタブの種類の構文はわずかに異なります。 タブ スコープ [の詳細](~/resources/schema/manifest-schema.md) については、マニフェスト リファレンスを参照してください。
 
 > [!NOTE]
 > ディープ リンクは、タブが v0.4 以降のライブラリを使用して構成されていて、そのためエンティティ ID がある場合にのみ正常に機能します。 エンティティ ID のないタブへのディープ リンクは、引き続きタブに移動しますが、サブ エンティティ ID をタブに提供することはできません。
@@ -157,7 +158,7 @@ Teams の組み込みスケジュール ダイアログへのディープ リン
 クエリ パラメーターは次のとおりです。
 
 * `attendees`: 会議の出席者を表すユーザー ID のコンマ区切りリスト (省略可能)。 アクションを実行するユーザーは、会議の開催者です。 現在、[ユーザー ID] フィールドには、Azure AD UserPrincipalName のみがサポートされています (通常はメール アドレス)。
-* `startTime`: イベントの開始時刻 (省略可能)。 これは、[long ISO 8601 形式](https://en.wikipedia.org/wiki/ISO_8601)、たとえば、「2018-03-12T23:55:25+02:00」にする必要があります。
+* `startTime`: イベントのオプションの開始時刻。 これは、[long ISO 8601 形式](https://en.wikipedia.org/wiki/ISO_8601)、たとえば、「2018-03-12T23:55:25+02:00」にする必要があります。
 * `endTime`: イベントのオプションの終了時刻(ISO 8601 形式)。
 * `subject`: 会議の件名の省略可能なフィールドです。
 * `content`: 会議の詳細フィールドのオプションのフィールドです。

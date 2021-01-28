@@ -1,13 +1,14 @@
 ---
-title: カスタム アプリを Microsoft Teams にアップロードする
+title: カスタム アプリをアップロードする
 description: Microsoft Teams でアプリをアップロードする方法について説明します
+ms.topic: how-to
 keywords: Teams アプリのアップロード
-ms.openlocfilehash: 6fbcd7a81c113d25a26ee6db15865929a53def0d
-ms.sourcegitcommit: 560bf433129c16888135879e2703dbdeb38ec99f
-ms.translationtype: HT
+ms.openlocfilehash: 2e7a21dc27fdfe824ecacebabbb61a3b99ae8e79
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "48397709"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014342"
 ---
 # <a name="upload-an-app-package-to-microsoft-teams"></a>Microsoft Teams にアプリ パッケージをアップロードする
 
@@ -126,4 +127,3 @@ Teams 対応のボットの場合、オートコンプリートする必要が�
 ## <a name="troubleshooting-notes"></a>トラブルシューティングに関する注意
 
 * マニフェストが読み込まれない場合は、[「パッケージの作成」](../../concepts/build-and-test/apps-package.md)のすべての手順に従い、[スキーマ](../../resources/schema/manifest-schema.md)に対してマニフェストを検証したことを再確認してください。
-

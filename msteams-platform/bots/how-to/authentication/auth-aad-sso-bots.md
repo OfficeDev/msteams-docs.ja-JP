@@ -3,19 +3,19 @@ title: ボットのシングル サインオンのサポート
 description: ユーザー トークンを取得する方法について説明します。 現在、ボット開発者はサインイン カードまたは Azure Bot サービスを OAuth カードのサポートと一緒に使用できます。
 keywords: トークン, ユーザー トークン, ボットの SSO サポート
 ms.topic: conceptual
-ms.openlocfilehash: 55b930ba50eede6ac970fbe0f901d418605f3f91
-ms.sourcegitcommit: 5662bf23fafdbcc6d06f826a647f3696cd17f5e5
+ms.openlocfilehash: 8669e00fcfcfb69844c4d63c9e7aa06b47567705
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "49935255"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014496"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>ボットのシングル サインオン (SSO) のサポート
 
 Azure Active Directory (AAD) のシングル サインオン認証では、ユーザーがサインイン資格情報を入力する必要がある回数を最小限に抑えるために、認証トークンをサイレント 更新します。 ユーザーがアプリの使用に同意した場合、別のデバイスでもう一度同意する必要はありません。また、自動的にサインインできます。 フローは[Microsoft Teams](../../../tabs/how-to/authentication/auth-aad-sso.md)タブ SSO サポートのフローと似ていますが、ボットがトークンを要求して[](#request-a-bot-token)応答を受信する方法のプロトコルが[異なっています](#receive-the-bot-token)。
 
 >[!NOTE]
-> OAuth 2.0 は、AAD および他の多くの ID プロバイダーで使用される認証と承認のオープン標準です。 OAuth 2.0 の基本的な理解は、Teams で認証を操作する場合の前提条件です。
+> OAuth 2.0 は、AAD や他の多くの ID プロバイダーで使用される認証と承認のオープン標準です。 OAuth 2.0 の基本的な理解は、Teams で認証を操作する場合の前提条件です。
 
 ## <a name="bot-sso-at-runtime"></a>実行時の Bot SSO
 
@@ -58,18 +58,18 @@ AAD ポータルを通じてアプリを登録する手順は、タブ SSO フ�
 2. [新規 **登録] を選択します**。 [ **アプリケーションの登録] ページ** が表示されます。
 3. [アプリケーション **の登録] ページで** 、次の値を入力します。
     1. アプリの **名前** を入力します。
-    2. サポートされている **アカウントの種類を選択し、** 単一テナントアカウントまたはマルチテナント アカウントの種類を選択します。
+    2. サポートされている **アカウントの種類を選択し、** 単一テナントアカウントの種類またはマルチテナント アカウントの種類を選択します。
 
         > [!NOTE]
         >
         > AAD アプリが Teams で認証要求を行っているのと同じテナントに登録されている場合、ユーザーは同意を求めではなく、アクセス トークンを直接付与されます。 ただし、AAD アプリが別のテナントに登録されている場合、ユーザーはアクセス許可に同意する必要があります。
 
     3. **[登録]** を選択します。
-4. 概要ページで、アプリケーション **(クライアント) ID をコピーして保存します**。 後で Teams アプリケーション マニフェストを更新するときに必要になります。
+4. [概要] ページで、アプリケーション **(クライアント) ID をコピーして保存します**。 後で Teams アプリケーション マニフェストを更新するときに必要になります。
 5. [**管理**] で [**API の公開**] を選択します。 
 
    > [!IMPORTANT]
-    > * スタンドアロン ボットを作成する場合は、次のようにアプリケーション ID URI を入力します `api://botid-{YourBotId}` 。 ここで **、YourBotId** は AAD アプリケーション ID です。
+    > * スタンドアロン ボットを作成する場合は、アプリケーション ID URI を次のように入力します `api://botid-{YourBotId}` 。 ここで **、YourBotId** は AAD アプリケーション ID です。
     > * ボットとタブを使用してアプリを作成する場合は、アプリケーション ID URI を次のように入力します `api://fully-qualified-domain-name.com/botid-{YourBotId}` 。
 
 5. アプリケーションが AAD エンドポイントに必要とするアクセス許可と、必要に応じて Microsoft Graph に必要なアクセス許可を選択します。
@@ -91,20 +91,22 @@ AAD ポータルを通じてアプリを登録する手順は、タブ SSO フ�
 
 OAuth 接続を使用して Azure Portal を更新するには、次の手順を実行します。
 
-1. Azure Portal で、ボット チャネル登録 **に移動します**。
+1. Azure Portal で、アプリの登録 **に移動します**。
 
 2. API の **アクセス許可に移動します**。 [Microsoft Graph **委任されたアクセス** 許可のアクセス許可の追加] を選択し、Microsoft Graph API から次のアクセス  >    >  許可を追加します。
     * User.Read (既定で有効)
     * メール
     * offline_access
     * OpenId
-    * プロフィール
+    * profile
 
-3. 左側 **のウィンドウで [** 設定] を選択し、[OAuth 接続 **の設定]** セクションで [ **設定の追加] を選択** します。
+3. Azure Portal で、ボット チャネル登録 **に移動します**。
+
+4. 左側 **のウィンドウで [** 設定] を選択し、[OAuth 接続 **の設定]** セクションで [ **設定の追加] を選択** します。
 
     ![SSOBotHandle2 ビュー](../../../assets/images/bots/bots-vuSSOBotHandle2-settings.png)
 
-4. [新しい接続設定] フォームを完了するには **、次の手順を実行** します。
+5. [新しい接続設定] フォームを完了するには **、次の手順を実行** します。
 
     >[!NOTE]
     > **AAD アプリケーション** では暗黙的な許可が必要になる場合があります。
@@ -115,7 +117,7 @@ OAuth 接続を使用して Azure Portal を更新するには、次の手順を
     4. トークン交換 **URL の場合は**、「ボットの Teams アプリケーション マニフェストを更新 [する」で定義されているスコープ値を使用します](#update-your-teams-application-manifest-for-your-bot)。 Token Exchange URL は、この AAD アプリケーションが SSO 用に構成されていることを SDK に示します。
     5. [テナント **ID] ボックスに** 「共通」と *入力します*。
     6. AAD **アプリケーションのダウンストリーム** API へのアクセス許可を指定するときに構成されたスコープを追加します。 クライアント ID とクライアント シークレットが提供された場合、トークン ストアは、定義されたアクセス許可を持つグラフ トークンのトークンを交換します。
-    7. [**保存**] を選択します。
+    7. **[保存]** を選択します。
 
     ![VuSSOBotConnection 設定ビュー](../../../assets/images/bots/bots-vuSSOBotConnection-settings.png)
 

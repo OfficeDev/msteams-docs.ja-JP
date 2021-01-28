@@ -1,13 +1,14 @@
 ---
-title: Microsoft Teams のコード サンプル
+title: アプリのコード サンプル
 description: Microsoft Teams 開発者プラットフォーム用のサンプル アプリケーションのリンクと説明
+ms.topic: reference
 keywords: Microsoft Teams 開発者向けサンプル
-ms.openlocfilehash: 665d3565f4f453d263fef6a17cb27f5060111468
-ms.sourcegitcommit: 6d9c60cce1f2e5204e680c074ce77a8376233b59
+ms.openlocfilehash: f51ffb22a5e6b3b757d1971422adf955d95fb223
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49912317"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014111"
 ---
 # <a name="tutorials-and-code-samples-for-the-microsoft-teams-developer-platform"></a>Microsoft Teams 開発者プラットフォームのチュートリアルとコード サンプル
 

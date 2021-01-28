@@ -1,15 +1,16 @@
 ---
-title: Teams でユーザーを認証する
+title: アプリ ユーザーの認証
 description: Teams での認証と、アプリでの認証の使用方法について説明します
+ms.topic: conceptual
 keywords: Teams 認証 OAuth SSO AAD
-ms.openlocfilehash: d3ae57d9937c6794fb743b44ca8210a5afd181bf
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
-ms.translationtype: HT
+ms.openlocfilehash: 6ddcd8a9e847d9216b7e2dcc12733a6cd413b48e
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674743"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014293"
 ---
-# <a name="authentication-in-teams"></a>Teams での認証
+# <a name="authenticating-users-in-microsoft-teams"></a>Microsoft Teams でのユーザーの認証
 
 > [!Note]
 > モバイル クライアントでの Web ベースの認証には、Teams JavaScript SDK のバージョン 1.4.1 以降が必要です。

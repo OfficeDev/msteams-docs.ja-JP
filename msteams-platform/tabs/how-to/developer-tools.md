@@ -1,48 +1,49 @@
 ---
 title: Microsoft Teams タブの DevTools
-description: Microsoft Teams デスクトップクライアントを使用しているときに DevTools にアクセスする方法について説明します。
-keywords: devtools デバッグモバイル chrome デスクトップクライアント開発者ツール
-ms.openlocfilehash: 6c8ac15caf64c979b23155be847e8791988486e6
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+description: Microsoft Teams デスクトップ クライアントを使用するときに DevTools にアクセスする方法について説明します。
+ms.topic: how-to
+keywords: devtools debug mobile chrome desktop client developer tools
+ms.openlocfilehash: 8f23a5d56faa00d40451d2bbeadde32f6a5d0f7f
+ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674873"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "50014580"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>Microsoft Teams タブの DevTools
 
-Teams がブラウザーで実行されている場合、ブラウザーの DevTools (Windows 上) またはコマンドオプション-I (MacOS 上) に簡単にアクセスできます。 DevTools を使用すると、次のものにアクセスできます。
+Teams がブラウザーで実行されている場合、ブラウザーの DevTools: F12 (Windows の場合) または Command-Option-I (MacOS の場合) に簡単にアクセスできます。 DevTools を使用すると、次の機能にアクセスできます。
 
-1. コンソールログを表示します。
+1. コンソール ログを表示します。
 1. 実行時に html、css、およびネットワーク要求を表示/変更します。
 1. JavaScript コードにブレークポイントを追加し、対話型デバッグを実行します。
 
-この機能は、開発者プレビューが有効になっている場合にのみ、デスクトップおよび Android クライアントで使用できます。 詳細については、「[開発者プレビューを有効にする方法](~/resources/dev-preview/developer-preview-intro.md)」を参照してください。
+この機能は、デスクトップクライアントと Android クライアントでのみ使用できます。Developer Preview有効にした後です。 詳細 [については、「この機能を有効Developer Preview](~/resources/dev-preview/developer-preview-intro.md) 方法」を参照してください。
 
-## <a name="accessing-devtools-in-the-desktop"></a>デスクトップの DevTools へのアクセス
+## <a name="accessing-devtools-in-the-desktop"></a>デスクトップでの DevTools へのアクセス
 
-Teams の web 版とデスクトップ版の teams はほぼ同じですが、特に認証に関していくつかの違いがあります。 状況に応じて、DevTools を使用することもできます。 Teams デスクトップクライアントからこれらのユーザーにアクセスする方法は次のとおりです。 デスクトップクライアントで DevTools を使用するには、次のようにします。
+Teams の Web バージョンとデスクトップ バージョンのチームはほとんど同じですが、特に認証に関していくつかの違いがあります。 場合によっては、何が起こっているのかを把握する唯一の方法は、DevTools を使用する方法です。 Teams デスクトップ クライアントからアクセスする方法を次に示します。 デスクトップ クライアントで DevTools を使用するには:
 
-1. [開発者プレビュー](~/resources/dev-preview/developer-preview-intro.md)が有効になっていることを確認する
-1. [] タブを開いて、DevTools で検査する内容を確認します。
+1. 開発者プレビューが有効 [になっているか確認する](~/resources/dev-preview/developer-preview-intro.md)
+1. DevTools で検査する必要があるタブを開きます。
 1. DevTools を開く
-    * Windows では、デスクトップトレイの Microsoft Teams アイコンを使用して、DevTools を開きます。
+    * Windows では、デスクトップ トレイの Microsoft Teams アイコンを使って DevTools を開きます。
 
-  ![右クリックして [DevTools] を開きます。](~/assets/images/dev-preview/devtools-right-click.png)
+  ![右クリックして DevTools を開く](~/assets/images/dev-preview/devtools-right-click.png)
 
     * MacOS で、ドックの Microsoft Teams アイコンをクリックします。
 
-DevTools を開いて、要素を選択すると、サンプルタブは次のようになります。
+DevTools が開き、要素が選択されている場合のサンプル タブは次のように表示されます。
 
-![Tab および DevTools](~/assets/images/dev-preview/tab-and-devtools.png)
+![Tab と DevTools](~/assets/images/dev-preview/tab-and-devtools.png)
 
-## <a name="accessing-devtools-from-an-android-client"></a>Android クライアントからの DevTools へのアクセス
+## <a name="accessing-devtools-from-an-android-client"></a>Android クライアントから DevTools にアクセスする
 
-Teams Android クライアントから DevTools を有効にすることもできます。 これを行うには、以下のようにします:
+Teams Android クライアントから DevTools を有効にできます。 これを行うには、以下のようにします。
 
-1. [開発者プレビュー](~/resources/dev-preview/developer-preview-intro.md)が有効になっていることを確認する
-1. デバイスをデスクトップコンピューターに接続し、[リモートデバッグ](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/)用の Android デバイスをセットアップする
-1. Chrome ブラウザーで、を開き`chrome://inspect/#devices`ます。
-1. 次のスクリーンショットに示すように、デバッグするタブの下の [**検査**] をクリックします。
+1. 開発者プレビューが有効 [になっているか確認する](~/resources/dev-preview/developer-preview-intro.md)
+1. デバイスをデスクトップ コンピューターに接続し、リモート デバッグ用に Android デバイス [をセットアップする](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/)
+1. Chrome ブラウザーで開きます `chrome://inspect/#devices` 。
+1. 次 **のスクリーンショット** のように、デバッグするタブの下にある [inspect] をクリックします。
 
 ![Android DevTools](~/assets/images/android-devtools.png)
