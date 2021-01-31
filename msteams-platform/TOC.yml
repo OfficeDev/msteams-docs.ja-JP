@@ -230,6 +230,8 @@
           href: bots/how-to/update-and-delete-bot-messages.md
     - name: コンテキストをボット用に取得する
       href: bots/how-to/get-teams-context.md
+    - name: ファイルを送受信する
+      href: bots/how-to/bots-filesv4.md
     - name: ボットのレート制限の処理
       href: bots/how-to/rate-limit.md
     - name: 通話ボットと会議ボット
