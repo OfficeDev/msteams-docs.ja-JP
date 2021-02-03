@@ -1,46 +1,46 @@
 ---
 title: 会話の基本
 author: clearab
-description: Microsoft Teams bot との会話を行う方法
+description: Microsoft Teams ボットと会話する方法
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: bc016a8f0dcce474f80898dc93e309692ba20471
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 6f7e7a4d1be08126c96dff07ddbc3e1156700a90
+ms.sourcegitcommit: 94ad961ecd002805b4e0424601d1c0ec191ff376
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47819054"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "50075694"
 ---
-# <a name="conversation-basics"></a><span data-ttu-id="8cf9a-103">会話の基本</span><span class="sxs-lookup"><span data-stu-id="8cf9a-103">Conversation basics</span></span>
+# <a name="conversation-basics"></a><span data-ttu-id="9e6c4-103">会話の基本</span><span class="sxs-lookup"><span data-stu-id="9e6c4-103">Conversation basics</span></span>
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-<span data-ttu-id="8cf9a-104">会話は、ボットと 1 人以上のユーザーとの間でやり取りされる一連のメッセージです。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-104">A conversation is a series of messages sent between your bot and one or more users.</span></span> <span data-ttu-id="8cf9a-105">Teams には、次の 3 種類の会話 (スコープとも呼ばれる) があります。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-105">There are three kinds of conversations (also called scopes) in Teams:</span></span>
+<span data-ttu-id="9e6c4-104">会話は、ボットと 1 人以上のユーザーとの間でやり取りされる一連のメッセージです。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-104">A conversation is a series of messages sent between your bot and one or more users.</span></span> <span data-ttu-id="9e6c4-105">Teams には、次の 3 種類の会話 (スコープとも呼ばれる) があります。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-105">There are three kinds of conversations (also called scopes) in Teams:</span></span>
 
-* <span data-ttu-id="8cf9a-106">`teams` チャネルの会話とも呼ばれ、チャネルのすべてのメンバーに表示されます。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-106">`teams` Also called channel conversations, visible to all members of the channel.</span></span>
-* <span data-ttu-id="8cf9a-107">`personal` ボットと1人のユーザーとの会話。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-107">`personal` Conversations between bots and a single user.</span></span>
-* <span data-ttu-id="8cf9a-108">`groupChat` ボットと2人以上のユーザーとの間でチャットを行います。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-108">`groupChat` Chat between a bot and two or more users.</span></span> <span data-ttu-id="8cf9a-109">また、会議チャットでボットを有効にします。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-109">Also enables your bot in meeting chats.</span></span>
+* <span data-ttu-id="9e6c4-106">`teams` チャネル会話とも呼ばれる、チャネルのすべてのメンバーに表示されます。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-106">`teams` Also called channel conversations, visible to all members of the channel.</span></span>
+* <span data-ttu-id="9e6c4-107">`personal` ボットと 1 人のユーザーの会話。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-107">`personal` Conversations between bots and a single user.</span></span>
+* <span data-ttu-id="9e6c4-108">`groupChat` ボットと 2 人以上のユーザーの間でチャットします。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-108">`groupChat` Chat between a bot and two or more users.</span></span> <span data-ttu-id="9e6c4-109">また、会議チャットでボットを有効にできます。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-109">Also enables your bot in meeting chats.</span></span>
 
-<span data-ttu-id="8cf9a-110">Bot は、関係する会話の種類に応じて、微妙に動作が異なります。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-110">A bot behaves slightly differently depending on what kind of conversation it is involved in:</span></span>
+<span data-ttu-id="9e6c4-110">ボットの動作は、関連する会話の種類によって少し異なります。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-110">A bot behaves slightly differently depending on what kind of conversation it is involved in:</span></span>
 
-* <span data-ttu-id="8cf9a-111">チャネルおよびグループチャットの会話に含まれる bot は、ユーザーがチャネルで bot を呼び出すようにボットに言及する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-111">Bots in channel and group chat conversations require the user to @ mention the bot to invoke it in a channel.</span></span>
-* <span data-ttu-id="8cf9a-112">一対一の会話の bot には、@ メンションは必要ありません。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-112">Bots in a one-to-one conversation do not require an @ mention.</span></span> <span data-ttu-id="8cf9a-113">ユーザーによって送信されたすべてのメッセージがボットにルーティングされます。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-113">All messages sent by the user will be routed to your bot.</span></span>
+* <span data-ttu-id="9e6c4-111">チャネルとグループ チャットの会話のボットでは、ユーザーがボットを @メンションしてチャネルで呼び出す必要があります。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-111">Bots in channel and group chat conversations require the user to @ mention the bot to invoke it in a channel.</span></span>
+* <span data-ttu-id="9e6c4-112">1 対 1 の会話のボットには@ メンションは必要ではありません。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-112">Bots in a one-to-one conversation do not require an @ mention.</span></span> <span data-ttu-id="9e6c4-113">ユーザーによって送信されたすべてのメッセージがボットにルーティングされます。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-113">All messages sent by the user will be routed to your bot.</span></span>
 
-<span data-ttu-id="8cf9a-114">特定のスコープでボットを有効にするには、そのスコープを [アプリのマニフェスト](~/resources/schema/manifest-schema.md)に追加します。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-114">To enable your bot in a particular scope, add that scope to your [app manifest](~/resources/schema/manifest-schema.md).</span></span>
+<span data-ttu-id="9e6c4-114">特定のスコープでボットを有効にするには、そのスコープをアプリ マニフェストに [追加します](~/resources/schema/manifest-schema.md)。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-114">To enable your bot in a particular scope, add that scope to your [app manifest](~/resources/schema/manifest-schema.md).</span></span>
 
-## <a name="activities"></a><span data-ttu-id="8cf9a-115">アクティビティ</span><span class="sxs-lookup"><span data-stu-id="8cf9a-115">Activities</span></span>
+## <a name="activities"></a><span data-ttu-id="9e6c4-115">アクティビティ</span><span class="sxs-lookup"><span data-stu-id="9e6c4-115">Activities</span></span>
 
-<span data-ttu-id="8cf9a-116">各メッセージは `messageType: message` 型の `Activity` オブジェクトです。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-116">Each message is an `Activity` object of type `messageType: message`.</span></span> <span data-ttu-id="8cf9a-117">ユーザーがメッセージを送信すると、Teams はそのメッセージをボットに投稿します。具体的には、ボットのメッセージング エンドポイントに JSON オブジェクトを送信します。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-117">When a user sends a message, Teams posts the message to your bot; specifically, it sends a JSON object to your bot's messaging endpoint.</span></span> <span data-ttu-id="8cf9a-118">Bot は、メッセージを調べて、その種類を特定し、それに応じて応答します。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-118">Your bot examines the message to determine its type and responds accordingly.</span></span>
+<span data-ttu-id="9e6c4-116">各メッセージは `messageType: message` 型の `Activity` オブジェクトです。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-116">Each message is an `Activity` object of type `messageType: message`.</span></span> <span data-ttu-id="9e6c4-117">ユーザーがメッセージを送信すると、Teams はそのメッセージをボットに投稿します。具体的には、ボットのメッセージング エンドポイントに JSON オブジェクトを送信します。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-117">When a user sends a message, Teams posts the message to your bot; specifically, it sends a JSON object to your bot's messaging endpoint.</span></span> <span data-ttu-id="9e6c4-118">ボットがメッセージを調べて種類を特定し、それに応じて応答します。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-118">Your bot examines the message to determine its type and responds accordingly.</span></span>
 
-<span data-ttu-id="8cf9a-119">基本的な会話は Bot フレームワークコネクタを介して処理されます。これは、ボットが Teams やその他のチャネルと通信できるようにするための1つの REST API です。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-119">Basic conversation is handled through the Bot Framework Connector, a single REST API to enable your bot to communicate with Teams and other channels.</span></span> <span data-ttu-id="8cf9a-120">Bot ビルダー SDK は、この API への簡単なアクセス、会話フローと状態を管理するための追加機能、自然言語処理 (NLP) などの認知サービスを簡単に組み込むための簡単な方法を提供します。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-120">The Bot Builder SDK provides easy access to this API, additional functionality to manage conversation flow and state, and simple ways to incorporate cognitive services such as natural language processing (NLP).</span></span>
+<span data-ttu-id="9e6c4-119">基本的な会話は、ボットが Teams や他のチャネルと通信するための単一の REST API である Bot Framework Connector を通じて処理されます。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-119">Basic conversation is handled through the Bot Framework Connector, a single REST API to enable your bot to communicate with Teams and other channels.</span></span> <span data-ttu-id="9e6c4-120">Bot Builder SDK は、この API への簡単なアクセス、会話のフローと状態を管理するための追加機能、自然言語処理 (NLP) などの認知サービスを組み込む簡単な方法を提供します。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-120">The Bot Builder SDK provides easy access to this API, additional functionality to manage conversation flow and state, and simple ways to incorporate cognitive services such as natural language processing (NLP).</span></span>
 
-## <a name="receive-a-message"></a><span data-ttu-id="8cf9a-121">メッセージを受信する</span><span class="sxs-lookup"><span data-stu-id="8cf9a-121">Receive a message</span></span>
+## <a name="receive-a-message"></a><span data-ttu-id="9e6c4-121">メッセージを受信する</span><span class="sxs-lookup"><span data-stu-id="9e6c4-121">Receive a message</span></span>
 
-<span data-ttu-id="8cf9a-122">テキスト メッセージを受信するには、`Activity` オブジェクトの `Text` プロパティを使用します。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-122">To receive a text message, use the `Text` property of the `Activity` object.</span></span> <span data-ttu-id="8cf9a-123">ボットのアクティビティ ハンドラーで、ターン コンテキスト オブジェクトの `Activity` を使用して、1 つのメッセージ要求を読み取ります。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-123">In the bot's activity handler, use the turn context object's `Activity` to read a single message request.</span></span>
+<span data-ttu-id="9e6c4-122">テキスト メッセージを受信するには、`Activity` オブジェクトの `Text` プロパティを使用します。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-122">To receive a text message, use the `Text` property of the `Activity` object.</span></span> <span data-ttu-id="9e6c4-123">ボットのアクティビティ ハンドラーで、ターン コンテキスト オブジェクトの `Activity` を使用して、1 つのメッセージ要求を読み取ります。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-123">In the bot's activity handler, use the turn context object's `Activity` to read a single message request.</span></span>
 
-<span data-ttu-id="8cf9a-124">次のコードは例を示しています。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-124">The code below shows an example.</span></span>
+<span data-ttu-id="9e6c4-124">次のコードは例を示しています。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-124">The code below shows an example.</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="8cf9a-125">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="8cf9a-125">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="9e6c4-125">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="9e6c4-125">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -50,7 +50,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 ```
 
-# <a name="typescriptnodejs"></a>[<span data-ttu-id="8cf9a-126">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="8cf9a-126">TypeScript/Node.js</span></span>](#tab/typescript)
+# <a name="typescriptnodejs"></a>[<span data-ttu-id="9e6c4-126">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="9e6c4-126">TypeScript/Node.js</span></span>](#tab/typescript)
 
 ```typescript
 
@@ -66,7 +66,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="python"></a>[<span data-ttu-id="8cf9a-127">Python</span><span class="sxs-lookup"><span data-stu-id="8cf9a-127">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="9e6c4-127">Python</span><span class="sxs-lookup"><span data-stu-id="9e6c4-127">Python</span></span>](#tab/python)
 
 <!-- Verify -->
 ```python
@@ -76,7 +76,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ```
 
-# <a name="json"></a>[<span data-ttu-id="8cf9a-128">JSON</span><span class="sxs-lookup"><span data-stu-id="8cf9a-128">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="9e6c4-128">JSON</span><span class="sxs-lookup"><span data-stu-id="9e6c4-128">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -121,11 +121,11 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ---
 
-## <a name="send-a-message"></a><span data-ttu-id="8cf9a-129">メッセージを送信する</span><span class="sxs-lookup"><span data-stu-id="8cf9a-129">Send a message</span></span>
+## <a name="send-a-message"></a><span data-ttu-id="9e6c4-129">メッセージを送信する</span><span class="sxs-lookup"><span data-stu-id="9e6c4-129">Send a message</span></span>
 
-<span data-ttu-id="8cf9a-130">テキスト メッセージを送信するには、送信する文字列をアクティビティとして指定します。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-130">To send a text message, specify the string you want to send as the activity.</span></span> <span data-ttu-id="8cf9a-131">ボットのアクティビティ ハンドラーで、ターン コンテキスト オブジェクトの `SendActivityAsync` メソッドを使用して、1 つのメッセージ応答を送信します。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-131">In the bot's activity handlers, use the turn context object's `SendActivityAsync` method to send a single message response.</span></span> <span data-ttu-id="8cf9a-132">オブジェクトのメソッドを使用して、 `SendActivitiesAsync` 一度に複数の応答を送信することもできます。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-132">You can also use the object's `SendActivitiesAsync` method to send multiple responses at once.</span></span> <span data-ttu-id="8cf9a-133">次のコードは、会話に他のユーザーが追加されたときにメッセージを送信する例を示しています。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-133">The code below shows an example of sending a message when someone is added to a conversation</span></span>  
+<span data-ttu-id="9e6c4-130">テキスト メッセージを送信するには、送信する文字列をアクティビティとして指定します。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-130">To send a text message, specify the string you want to send as the activity.</span></span> <span data-ttu-id="9e6c4-131">ボットのアクティビティ ハンドラーで、ターン コンテキスト オブジェクトの `SendActivityAsync` メソッドを使用して、1 つのメッセージ応答を送信します。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-131">In the bot's activity handlers, use the turn context object's `SendActivityAsync` method to send a single message response.</span></span> <span data-ttu-id="9e6c4-132">オブジェクトのメソッドを使用して、一 `SendActivitiesAsync` 度に複数の応答を送信できます。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-132">You can also use the object's `SendActivitiesAsync` method to send multiple responses at once.</span></span> <span data-ttu-id="9e6c4-133">次のコードは、誰かが会話に追加されたときにメッセージを送信する例を示しています</span><span class="sxs-lookup"><span data-stu-id="9e6c4-133">The code below shows an example of sending a message when someone is added to a conversation</span></span>  
 
-# <a name="cnet"></a>[<span data-ttu-id="8cf9a-134">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="8cf9a-134">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="9e6c4-134">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="9e6c4-134">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -135,7 +135,7 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
 
 ```
 
-# <a name="typescriptnodejs"></a>[<span data-ttu-id="8cf9a-135">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="8cf9a-135">TypeScript/Node.js</span></span>](#tab/typescript)
+# <a name="typescriptnodejs"></a>[<span data-ttu-id="9e6c4-135">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="9e6c4-135">TypeScript/Node.js</span></span>](#tab/typescript)
 
 ```typescript
 
@@ -150,7 +150,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="8cf9a-136">Python</span><span class="sxs-lookup"><span data-stu-id="8cf9a-136">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="9e6c4-136">Python</span><span class="sxs-lookup"><span data-stu-id="9e6c4-136">Python</span></span>](#tab/python)
 
 <!-- Verify -->
 
@@ -165,7 +165,7 @@ async def on_members_added_activity(
 
 ```
 
-# <a name="json"></a>[<span data-ttu-id="8cf9a-137">JSON</span><span class="sxs-lookup"><span data-stu-id="8cf9a-137">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="9e6c4-137">JSON</span><span class="sxs-lookup"><span data-stu-id="9e6c4-137">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -210,26 +210,26 @@ async def on_members_added_activity(
 
 ---
 
-## <a name="teams-channel-data"></a><span data-ttu-id="8cf9a-138">Teams チャネルデータ</span><span class="sxs-lookup"><span data-stu-id="8cf9a-138">Teams channel data</span></span>
+## <a name="teams-channel-data"></a><span data-ttu-id="9e6c4-138">Teams チャネル データ</span><span class="sxs-lookup"><span data-stu-id="9e6c4-138">Teams channel data</span></span>
 
-<span data-ttu-id="8cf9a-139">この `channelData` オブジェクトには Teams 固有の情報が含まれており、チームおよびチャネル id の最終ソースとなります。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-139">The `channelData` object contains Teams-specific information and is the definitive source for team and channel IDs.</span></span> <span data-ttu-id="8cf9a-140">これらの id をローカルストレージのキーとしてキャッシュして使用する必要がある場合があります。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-140">You may need to cache and use these ids as keys for local storage.</span></span> <span data-ttu-id="8cf9a-141">通常、SDK のでは、 `TeamsActivityHandler` オブジェクトから重要な情報を取得し `channelData` て、アクセスしやすいようにします。ただし、オブジェクトから元の情報にいつでもアクセスでき `turnContext` ます。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-141">The `TeamsActivityHandler` in the SDK will typically pull out important information from the `channelData` object to make it more easily accessible, however you can always access the original information from the `turnContext` object.</span></span>
+<span data-ttu-id="9e6c4-139">オブジェクトには Teams 固有の情報が含まれているので、チームとチャネルの ID の確定的 `channelData` なソースです。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-139">The `channelData` object contains Teams-specific information and is the definitive source for team and channel IDs.</span></span> <span data-ttu-id="9e6c4-140">ローカル ストレージのキーとしてこれらの ID をキャッシュして使用する必要がある場合があります。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-140">You may need to cache and use these ids as keys for local storage.</span></span> <span data-ttu-id="9e6c4-141">SDK では通常、オブジェクトから重要な情報を取り出してアクセスしやすくしますが、いつでもオブジェクトの元の情報に `TeamsActivityHandler` `channelData` アクセス `turnContext` できます。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-141">The `TeamsActivityHandler` in the SDK will typically pull out important information from the `channelData` object to make it more easily accessible, however you can always access the original information from the `turnContext` object.</span></span>
 
-<span data-ttu-id="8cf9a-142">`channelData`このオブジェクトは、チャネルの外側で行われるため、個人の会話のメッセージには含まれません。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-142">The `channelData` object is not included in messages in personal conversations since these take place outside of any channel.</span></span>
+<span data-ttu-id="9e6c4-142">オブジェクトはチャネルの外部で行うので、個人の会話の `channelData` メッセージには含まれません。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-142">The `channelData` object is not included in messages in personal conversations since these take place outside of any channel.</span></span>
 
-<span data-ttu-id="8cf9a-143">Bot に送信されるアクティビティの一般的な channelData オブジェクトには、次の情報が含まれています。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-143">A typical channelData object in an activity sent to your bot contains the following information:</span></span>
+<span data-ttu-id="9e6c4-143">ボットに送信されるアクティビティの一般的な channelData オブジェクトには、次の情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-143">A typical channelData object in an activity sent to your bot contains the following information:</span></span>
 
-* <span data-ttu-id="8cf9a-144">`eventType`Teams イベントの種類。[チャネル変更イベント](~/bots/how-to/conversations/subscribe-to-conversation-events.md)の場合にのみ渡されます。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-144">`eventType` Teams event type; passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)</span></span>
-* <span data-ttu-id="8cf9a-145">`tenant.id` Azure Active Directory テナント ID。すべてのコンテキストで渡される</span><span class="sxs-lookup"><span data-stu-id="8cf9a-145">`tenant.id` Azure Active Directory tenant ID; passed in all contexts</span></span>
-* <span data-ttu-id="8cf9a-146">`team` チャネルコンテキストでのみ渡され、個人用チャットには渡されません。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-146">`team` Passed only in channel contexts, not in personal chat.</span></span>
-  * <span data-ttu-id="8cf9a-147">`id` チャネルの GUID</span><span class="sxs-lookup"><span data-stu-id="8cf9a-147">`id` GUID for the channel</span></span>
-  * <span data-ttu-id="8cf9a-148">`name`チームの名前。[チームの名前変更イベント](~/bots/how-to/conversations/subscribe-to-conversation-events.md)の場合にのみ渡される</span><span class="sxs-lookup"><span data-stu-id="8cf9a-148">`name` Name of the team; passed only in cases of [team rename events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)</span></span>
-* <span data-ttu-id="8cf9a-149">`channel` Bot が言及された場合、または bot が追加されている teams のチャネルでイベントが発生した場合に、チャネルコンテキストでのみ渡されます。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-149">`channel` Passed only in channel contexts when the bot is mentioned or for events in channels in teams where the bot has been added</span></span>
-  * <span data-ttu-id="8cf9a-150">`id` チャネルの GUID</span><span class="sxs-lookup"><span data-stu-id="8cf9a-150">`id` GUID for the channel</span></span>
-  * <span data-ttu-id="8cf9a-151">`name` チャネル名。 [チャネル変更イベント](~/bots/how-to/conversations/subscribe-to-conversation-events.md)の場合にのみ渡されます。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-151">`name` Channel name; passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).</span></span>
-* <span data-ttu-id="8cf9a-152">`channelData.teamsTeamId` 予定.</span><span class="sxs-lookup"><span data-stu-id="8cf9a-152">`channelData.teamsTeamId` Deprecated.</span></span> <span data-ttu-id="8cf9a-153">このプロパティは、下位互換性のためにのみ含まれています。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-153">This property is included only for backwards compatibility.</span></span>
-* <span data-ttu-id="8cf9a-154">`channelData.teamsChannelId` 予定.</span><span class="sxs-lookup"><span data-stu-id="8cf9a-154">`channelData.teamsChannelId` Deprecated.</span></span> <span data-ttu-id="8cf9a-155">このプロパティは、下位互換性のためにのみ含まれています。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-155">This property is included only for backwards compatibility.</span></span>
+* <span data-ttu-id="9e6c4-144">`eventType` Teams イベントの種類:チャネル変更イベントの場合 [にのみ渡されます。](~/bots/how-to/conversations/subscribe-to-conversation-events.md)</span><span class="sxs-lookup"><span data-stu-id="9e6c4-144">`eventType` Teams event type; passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)</span></span>
+* <span data-ttu-id="9e6c4-145">`tenant.id` Azure Active Directory テナント ID;すべてのコンテキストで渡される</span><span class="sxs-lookup"><span data-stu-id="9e6c4-145">`tenant.id` Azure Active Directory tenant ID; passed in all contexts</span></span>
+* <span data-ttu-id="9e6c4-146">`team` チャネル コンテキストでのみ渡されます。個人用チャットでは渡されます。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-146">`team` Passed only in channel contexts, not in personal chat.</span></span>
+  * <span data-ttu-id="9e6c4-147">`id` チャネルの GUID</span><span class="sxs-lookup"><span data-stu-id="9e6c4-147">`id` GUID for the channel</span></span>
+  * <span data-ttu-id="9e6c4-148">`name` チームの名前。チームの名前変更イベントの場合 [にのみ渡されます](~/bots/how-to/conversations/subscribe-to-conversation-events.md)</span><span class="sxs-lookup"><span data-stu-id="9e6c4-148">`name` Name of the team; passed only in cases of [team rename events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)</span></span>
+* <span data-ttu-id="9e6c4-149">`channel` ボットが言及されている場合、またはボットが追加されたチームのチャネルのイベントに対して、チャネル コンテキストでのみ渡されます。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-149">`channel` Passed only in channel contexts when the bot is mentioned or for events in channels in teams where the bot has been added</span></span>
+  * <span data-ttu-id="9e6c4-150">`id` チャネルの GUID</span><span class="sxs-lookup"><span data-stu-id="9e6c4-150">`id` GUID for the channel</span></span>
+  * <span data-ttu-id="9e6c4-151">`name` チャネル名チャネル変更イベントの場合 [にのみ渡されます](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-151">`name` Channel name; passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).</span></span>
+* <span data-ttu-id="9e6c4-152">`channelData.teamsTeamId` 非推奨。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-152">`channelData.teamsTeamId` Deprecated.</span></span> <span data-ttu-id="9e6c4-153">このプロパティは、下位互換性のためにのみ含まれています。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-153">This property is included only for backwards compatibility.</span></span>
+* <span data-ttu-id="9e6c4-154">`channelData.teamsChannelId` 非推奨。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-154">`channelData.teamsChannelId` Deprecated.</span></span> <span data-ttu-id="9e6c4-155">このプロパティは、下位互換性のためにのみ含まれています。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-155">This property is included only for backwards compatibility.</span></span>
 
-### <a name="example-channeldata-object-channelcreated-event"></a><span data-ttu-id="8cf9a-156">ChannelData オブジェクトの例 (Channeldata イベント)</span><span class="sxs-lookup"><span data-stu-id="8cf9a-156">Example channelData object (channelCreated event)</span></span>
+### <a name="example-channeldata-object-channelcreated-event"></a><span data-ttu-id="9e6c4-156">channelData オブジェクトの例 (channelCreated イベント)</span><span class="sxs-lookup"><span data-stu-id="9e6c4-156">Example channelData object (channelCreated event)</span></span>
 
 ```json
 "channelData": {
@@ -247,22 +247,22 @@ async def on_members_added_activity(
 }
 ```
 
-## <a name="message-content"></a><span data-ttu-id="8cf9a-157">メッセージの内容</span><span class="sxs-lookup"><span data-stu-id="8cf9a-157">Message content</span></span>
+## <a name="message-content"></a><span data-ttu-id="9e6c4-157">メッセージの内容</span><span class="sxs-lookup"><span data-stu-id="9e6c4-157">Message content</span></span>
 
-<span data-ttu-id="8cf9a-158">Bot は、リッチテキスト、画像、およびカードを送信できます。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-158">Your bot can send rich text, pictures, and cards.</span></span> <span data-ttu-id="8cf9a-159">ユーザーは bot にリッチテキストと画像を送信できます。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-159">Users can send rich text and pictures to your bot.</span></span>
+<span data-ttu-id="9e6c4-158">ボットは、リッチ テキスト、画像、カードを送信できます。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-158">Your bot can send rich text, pictures, and cards.</span></span> <span data-ttu-id="9e6c4-159">ユーザーは、リッチ テキストと画像をボットに送信できます。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-159">Users can send rich text and pictures to your bot.</span></span>
 
-| <span data-ttu-id="8cf9a-160">フォーマット</span><span class="sxs-lookup"><span data-stu-id="8cf9a-160">Format</span></span>    | <span data-ttu-id="8cf9a-161">ユーザーから bot</span><span class="sxs-lookup"><span data-stu-id="8cf9a-161">From user to bot</span></span> | <span data-ttu-id="8cf9a-162">Bot からユーザー</span><span class="sxs-lookup"><span data-stu-id="8cf9a-162">From bot to user</span></span> | <span data-ttu-id="8cf9a-163">Notes</span><span class="sxs-lookup"><span data-stu-id="8cf9a-163">Notes</span></span>                                                                                   |
+| <span data-ttu-id="9e6c4-160">フォーマット</span><span class="sxs-lookup"><span data-stu-id="9e6c4-160">Format</span></span>    | <span data-ttu-id="9e6c4-161">ユーザーからボットへ</span><span class="sxs-lookup"><span data-stu-id="9e6c4-161">From user to bot</span></span> | <span data-ttu-id="9e6c4-162">ボットからユーザーへ</span><span class="sxs-lookup"><span data-stu-id="9e6c4-162">From bot to user</span></span> | <span data-ttu-id="9e6c4-163">Notes</span><span class="sxs-lookup"><span data-stu-id="9e6c4-163">Notes</span></span>                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
-| <span data-ttu-id="8cf9a-164">リッチ テキスト </span><span class="sxs-lookup"><span data-stu-id="8cf9a-164">Rich text</span></span> | <span data-ttu-id="8cf9a-165">✔</span><span class="sxs-lookup"><span data-stu-id="8cf9a-165">✔</span></span>                | <span data-ttu-id="8cf9a-166">✔</span><span class="sxs-lookup"><span data-stu-id="8cf9a-166">✔</span></span>                |                                                                                         |
-| <span data-ttu-id="8cf9a-167">ピクチャ</span><span class="sxs-lookup"><span data-stu-id="8cf9a-167">Pictures</span></span>  | <span data-ttu-id="8cf9a-168">✔</span><span class="sxs-lookup"><span data-stu-id="8cf9a-168">✔</span></span>                | <span data-ttu-id="8cf9a-169">✔</span><span class="sxs-lookup"><span data-stu-id="8cf9a-169">✔</span></span>                | <span data-ttu-id="8cf9a-170">最高1024×1024、1 MB (PNG、JPEG、または GIF 形式)アニメーション GIF はサポートされていません</span><span class="sxs-lookup"><span data-stu-id="8cf9a-170">Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF are not supported</span></span>  |
-| <span data-ttu-id="8cf9a-171">カード</span><span class="sxs-lookup"><span data-stu-id="8cf9a-171">Cards</span></span>     | <span data-ttu-id="8cf9a-172">✖</span><span class="sxs-lookup"><span data-stu-id="8cf9a-172">✖</span></span>                | <span data-ttu-id="8cf9a-173">✔</span><span class="sxs-lookup"><span data-stu-id="8cf9a-173">✔</span></span>                | <span data-ttu-id="8cf9a-174">サポートされているカードについては、 [Teams カードリファレンス](~/task-modules-and-cards/cards/cards-reference.md) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-174">See the [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards</span></span> |
-| <span data-ttu-id="8cf9a-175">絵文字</span><span class="sxs-lookup"><span data-stu-id="8cf9a-175">Emojis</span></span>    | <span data-ttu-id="8cf9a-176">✖</span><span class="sxs-lookup"><span data-stu-id="8cf9a-176">✖</span></span>                | <span data-ttu-id="8cf9a-177">✔</span><span class="sxs-lookup"><span data-stu-id="8cf9a-177">✔</span></span>                | <span data-ttu-id="8cf9a-178">現在、Teams は utf-16 を介して絵文字をサポートしています (grinning フェイスの U + 1f600 など)</span><span class="sxs-lookup"><span data-stu-id="8cf9a-178">Teams currently supports emojis via UTF-16 (such as U+1F600 for grinning face)</span></span>          |
+| <span data-ttu-id="9e6c4-164">リッチ テキスト</span><span class="sxs-lookup"><span data-stu-id="9e6c4-164">Rich text</span></span> | <span data-ttu-id="9e6c4-165">✔</span><span class="sxs-lookup"><span data-stu-id="9e6c4-165">✔</span></span>                | <span data-ttu-id="9e6c4-166">✔</span><span class="sxs-lookup"><span data-stu-id="9e6c4-166">✔</span></span>                |                                                                                         |
+| <span data-ttu-id="9e6c4-167">ピクチャ</span><span class="sxs-lookup"><span data-stu-id="9e6c4-167">Pictures</span></span>  | <span data-ttu-id="9e6c4-168">✔</span><span class="sxs-lookup"><span data-stu-id="9e6c4-168">✔</span></span>                | <span data-ttu-id="9e6c4-169">✔</span><span class="sxs-lookup"><span data-stu-id="9e6c4-169">✔</span></span>                | <span data-ttu-id="9e6c4-170">最大 1024×1024 および 1 MB (PNG、JPEG、または GIF 形式)。アニメーション GIF はサポートされていません</span><span class="sxs-lookup"><span data-stu-id="9e6c4-170">Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF are not supported</span></span>  |
+| <span data-ttu-id="9e6c4-171">カード</span><span class="sxs-lookup"><span data-stu-id="9e6c4-171">Cards</span></span>     | <span data-ttu-id="9e6c4-172">✖</span><span class="sxs-lookup"><span data-stu-id="9e6c4-172">✖</span></span>                | <span data-ttu-id="9e6c4-173">✔</span><span class="sxs-lookup"><span data-stu-id="9e6c4-173">✔</span></span>                | <span data-ttu-id="9e6c4-174">サポートされている [カードについては、「Teams カード リファレンス](~/task-modules-and-cards/cards/cards-reference.md) 」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-174">See the [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards</span></span> |
+| <span data-ttu-id="9e6c4-175">Emojis</span><span class="sxs-lookup"><span data-stu-id="9e6c4-175">Emojis</span></span>    | <span data-ttu-id="9e6c4-176">✖</span><span class="sxs-lookup"><span data-stu-id="9e6c4-176">✖</span></span>                | <span data-ttu-id="9e6c4-177">✔</span><span class="sxs-lookup"><span data-stu-id="9e6c4-177">✔</span></span>                | <span data-ttu-id="9e6c4-178">Teams は現在 UTF-16 を介して絵文字をサポートしています (顔のくびくびくをする U+1F600 など)</span><span class="sxs-lookup"><span data-stu-id="9e6c4-178">Teams currently supports emojis via UTF-16 (such as U+1F600 for grinning face)</span></span>          |
 
-## <a name="adding-notifications-to-your-message"></a><span data-ttu-id="8cf9a-179">メッセージに通知を追加する</span><span class="sxs-lookup"><span data-stu-id="8cf9a-179">Adding notifications to your message</span></span>
+## <a name="adding-notifications-to-your-message"></a><span data-ttu-id="9e6c4-179">メッセージへの通知の追加</span><span class="sxs-lookup"><span data-stu-id="9e6c4-179">Adding notifications to your message</span></span>
 
-<span data-ttu-id="8cf9a-180">通知ユーザーが作業していることに関連する新しいタスク、メンション、コメントについてユーザーに警告するか、アクティビティフィードに通知を挿入して確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-180">Notifications alert users about new tasks, mentions and comments related to what they are working on, or need to look at by inserting a notice into their Activity Feed.</span></span> <span data-ttu-id="8cf9a-181">`TeamsChannelData`"Objects/オブジェクト `Notification.Alert` " プロパティを true に設定することによって、ボットメッセージからトリガに対する通知を設定することができます。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-181">You can set notifications to trigger from your bot message by setting the `TeamsChannelData` objects `Notification.Alert` property to true.</span></span> <span data-ttu-id="8cf9a-182">通知が発生するかどうかは、最終的に個々のユーザーの Teams 設定に依存し、これらの設定をプログラムで上書きすることはできません。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-182">Whether or not a notification is raised will ultimately depend on the individual user's Teams settings and you cannot programmatically override these settings.</span></span> <span data-ttu-id="8cf9a-183">通知の種類は、バナーまたはバナーと電子メールの両方のいずれかになります。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-183">The type of notification will be either a banner or both a banner and an email.</span></span>
+<span data-ttu-id="9e6c4-180">通知は、作業している作業に関連する新しいタスク、メンション、コメント、またはアクティビティ フィードに通知を挿入して確認する必要があるタスク、メンション、コメントについてユーザーに警告します。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-180">Notifications alert users about new tasks, mentions and comments related to what they are working on, or need to look at by inserting a notice into their Activity Feed.</span></span> <span data-ttu-id="9e6c4-181">objects プロパティを true に設定することで、ボット メッセージからトリガーする `TeamsChannelData` `Notification.Alert` 通知を設定できます。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-181">You can set notifications to trigger from your bot message by setting the `TeamsChannelData` objects `Notification.Alert` property to true.</span></span> <span data-ttu-id="9e6c4-182">通知が発生するかどうかは、最終的には個々のユーザーの Teams 設定に依存し、これらの設定をプログラムで上書きすることはできません。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-182">Whether or not a notification is raised will ultimately depend on the individual user's Teams settings and you cannot programmatically override these settings.</span></span> <span data-ttu-id="9e6c4-183">通知の種類は、バナー、またはバナーとメールの両方です。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-183">The type of notification will be either a banner or both a banner and an email.</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="8cf9a-184">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="8cf9a-184">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="9e6c4-184">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="9e6c4-184">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -274,7 +274,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# <a name="typescriptnodejs"></a>[<span data-ttu-id="8cf9a-185">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="8cf9a-185">TypeScript/Node.js</span></span>](#tab/typescript)
+# <a name="typescriptnodejs"></a>[<span data-ttu-id="9e6c4-185">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="9e6c4-185">TypeScript/Node.js</span></span>](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -288,7 +288,7 @@ this.onMessage(async (turnContext, next) => {
 });
 ```
 
-# <a name="python"></a>[<span data-ttu-id="8cf9a-186">Python</span><span class="sxs-lookup"><span data-stu-id="8cf9a-186">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="9e6c4-186">Python</span><span class="sxs-lookup"><span data-stu-id="9e6c4-186">Python</span></span>](#tab/python)
 
 ```python
 
@@ -300,7 +300,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ```
 
-# <a name="json"></a>[<span data-ttu-id="8cf9a-187">JSON</span><span class="sxs-lookup"><span data-stu-id="8cf9a-187">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="9e6c4-187">JSON</span><span class="sxs-lookup"><span data-stu-id="9e6c4-187">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -333,18 +333,23 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ---
 
-## <a name="picture-messages"></a><span data-ttu-id="8cf9a-188">画像メッセージ</span><span class="sxs-lookup"><span data-stu-id="8cf9a-188">Picture messages</span></span>
+## <a name="picture-messages"></a><span data-ttu-id="9e6c4-188">画像メッセージ</span><span class="sxs-lookup"><span data-stu-id="9e6c4-188">Picture messages</span></span>
 
-<span data-ttu-id="8cf9a-189">画像は、メッセージに添付ファイルを追加することによって送信されます。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-189">Pictures are sent by adding attachments to a message.</span></span> <span data-ttu-id="8cf9a-190">添付ファイルの詳細については、 [ボットフレームワークのドキュメント](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-190">You can find more information on attachments in the [Bot Framework documentation](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0).</span></span>
+<span data-ttu-id="9e6c4-189">画像は、メッセージに添付ファイルを追加することで送信されます。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-189">Pictures are sent by adding attachments to a message.</span></span> <span data-ttu-id="9e6c4-190">添付ファイルの詳細については、Bot Framework のドキュメント [を参照してください](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0&preserve-view=true)。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-190">You can find more information on attachments in the [Bot Framework documentation](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0&preserve-view=true).</span></span>
 
-<span data-ttu-id="8cf9a-191">画像は最大1024×1024で、PNG、JPEG、または GIF 形式の 1 MB にすることができます。アニメーション GIF はサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-191">Pictures can be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF is not supported.</span></span>
+<span data-ttu-id="9e6c4-191">画像は、PNG、JPEG、GIF 形式で最大 1024×1024 および 1 MB です。アニメーション GIF はサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-191">Pictures can be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF is not supported.</span></span>
 
-<span data-ttu-id="8cf9a-192">XML を使用して、各画像の高さと幅を指定することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-192">We recommend that you specify the height and width of each image by using XML.</span></span> <span data-ttu-id="8cf9a-193">Markdown を使用する場合、画像のサイズは既定で256×256に設定されています。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-193">If you use Markdown, the image size defaults to 256×256.</span></span> <span data-ttu-id="8cf9a-194">以下に例を示します。</span><span class="sxs-lookup"><span data-stu-id="8cf9a-194">For example:</span></span>
+<span data-ttu-id="9e6c4-192">XML を使用して各イメージの高さと幅を指定することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-192">We recommend that you specify the height and width of each image by using XML.</span></span> <span data-ttu-id="9e6c4-193">Markdown を使用する場合、画像サイズの既定値は 256×256 です。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-193">If you use Markdown, the image size defaults to 256×256.</span></span> <span data-ttu-id="9e6c4-194">例:</span><span class="sxs-lookup"><span data-stu-id="9e6c4-194">For example:</span></span>
 
-* <span data-ttu-id="8cf9a-195">使え `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`</span><span class="sxs-lookup"><span data-stu-id="8cf9a-195">Use - `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`</span></span>
-* <span data-ttu-id="8cf9a-196">を使用しない- `![Duck on a rock](http://aka.ms/Fo983c)`</span><span class="sxs-lookup"><span data-stu-id="8cf9a-196">Don't use - `![Duck on a rock](http://aka.ms/Fo983c)`</span></span>
+* <span data-ttu-id="9e6c4-195">Use - `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`</span><span class="sxs-lookup"><span data-stu-id="9e6c4-195">Use - `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`</span></span>
+* <span data-ttu-id="9e6c4-196">使用しない - `![Duck on a rock](http://aka.ms/Fo983c)`</span><span class="sxs-lookup"><span data-stu-id="9e6c4-196">Don't use - `![Duck on a rock](http://aka.ms/Fo983c)`</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="8cf9a-197">次の手順</span><span class="sxs-lookup"><span data-stu-id="8cf9a-197">Next steps</span></span>
+## <a name="code-sample"></a><span data-ttu-id="9e6c4-197">コード サンプル</span><span class="sxs-lookup"><span data-stu-id="9e6c4-197">Code sample</span></span>
+|<span data-ttu-id="9e6c4-198">**サンプルの名前**</span><span class="sxs-lookup"><span data-stu-id="9e6c4-198">**Sample name**</span></span> | <span data-ttu-id="9e6c4-199">**説明**</span><span class="sxs-lookup"><span data-stu-id="9e6c4-199">**Description**</span></span> | <span data-ttu-id="9e6c4-200">**.NETCore**</span><span class="sxs-lookup"><span data-stu-id="9e6c4-200">**.NETCore**</span></span> | <span data-ttu-id="9e6c4-201">**Javascript**</span><span class="sxs-lookup"><span data-stu-id="9e6c4-201">**Javascript**</span></span> | <span data-ttu-id="9e6c4-202">**Python**</span><span class="sxs-lookup"><span data-stu-id="9e6c4-202">**Python**</span></span>|
+|----------------|-----------------|--------------|----------------|-----------|
+| <span data-ttu-id="9e6c4-203">Teams 会話ボット</span><span class="sxs-lookup"><span data-stu-id="9e6c4-203">Teams Conversation Bot</span></span> | <span data-ttu-id="9e6c4-204">メッセージングと会話イベントの処理。</span><span class="sxs-lookup"><span data-stu-id="9e6c4-204">Messaging and conversation event handling.</span></span> |[<span data-ttu-id="9e6c4-205">View</span><span class="sxs-lookup"><span data-stu-id="9e6c4-205">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[<span data-ttu-id="9e6c4-206">View</span><span class="sxs-lookup"><span data-stu-id="9e6c4-206">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [<span data-ttu-id="9e6c4-207">View</span><span class="sxs-lookup"><span data-stu-id="9e6c4-207">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
-* [<span data-ttu-id="8cf9a-198">事前メッセージの送信</span><span class="sxs-lookup"><span data-stu-id="8cf9a-198">Sending proactive messages</span></span>](~/bots/how-to/conversations/send-proactive-messages.md)
-* [<span data-ttu-id="8cf9a-199">会話イベントにサブスクライブする</span><span class="sxs-lookup"><span data-stu-id="8cf9a-199">Subscribe to conversation events</span></span>](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+## <a name="next-steps"></a><span data-ttu-id="9e6c4-208">次の手順</span><span class="sxs-lookup"><span data-stu-id="9e6c4-208">Next steps</span></span>
+
+* [<span data-ttu-id="9e6c4-209">プロアクティブ メッセージの送信</span><span class="sxs-lookup"><span data-stu-id="9e6c4-209">Sending proactive messages</span></span>](~/bots/how-to/conversations/send-proactive-messages.md)
+* [<span data-ttu-id="9e6c4-210">会話イベントにサブスクライブする</span><span class="sxs-lookup"><span data-stu-id="9e6c4-210">Subscribe to conversation events</span></span>](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
