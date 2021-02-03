@@ -1,43 +1,126 @@
 ---
-title: タスクモジュールを作成して送信する
+title: タスク モジュールの作成と送信
 author: clearab
-description: '[方法] 最初の呼び出しアクションを処理し、アクションメッセージング拡張コマンドからタスクモジュールで応答する方法'
+description: 最初の呼び出しアクションを処理し、アクション メッセージング拡張機能コマンドからタスク モジュールで応答する方法
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: f5f96e71517d45f52d17d2d70c583ec1eec3babd
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 58fb7e1ff5690b33c2e23f68529f05869afa9016
+ms.sourcegitcommit: ce74f821660b1258c72b3c3f71c1cf177e7e92ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674941"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "50072876"
 ---
-# <a name="create-and-send-the-task-module"></a>タスクモジュールを作成して送信する
+# <a name="create-and-send-the-task-module"></a>タスク モジュールの作成と送信
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-アプリマニフェストで定義されたパラメーターを使用してタスクモジュールを設定していない場合は、ユーザーに表示するタスクモジュールを作成する必要があります。 アダプティブカードまたは埋め込まれた web ビューのいずれかを使用できます。
+アプリ マニフェストで定義されたパラメーターを使ってタスク モジュールにデータを入力しない場合は、ユーザー用のタスク モジュールを作成する必要があります。 アダプティブ カードまたは埋め込み Web ビューのいずれかを使用します。
 
 ## <a name="the-initial-invoke-request"></a>最初の呼び出し要求
 
-このメソッドを使用すると、サービス`Activity`は型`composeExtension/fetchTask`のオブジェクトを受け取ります。また、アダプティブカード`task`を含むオブジェクト、または埋め込み web ビューへの URL のいずれかを返す必要があります。 標準の bot アクティビティプロパティに加えて、最初の呼び出しペイロードには次の要求メタデータが含まれています。
+このメソッドを使用すると、サービスは型のオブジェクトを受け取り、アダプティブ カードまたは埋め込み Web ビューへの URL を含むオブジェクトで応答 `Activity` `composeExtension/fetchTask` `task` する必要があります。 標準のボット アクティビティ プロパティと共に、最初の呼び出しペイロードには次の要求メタデータが含まれます。
 
 |プロパティ名|用途|
 |---|---|
-|`type`| 要求の種類。で`invoke`ある必要があります。 |
-|`name`| サービスに対して発行されるコマンドの種類。 はに`composeExtension/fetchTask`なります。 |
+|`type`| 要求の種類。 この値は次の値である必要があります `invoke` 。 |
+|`name`| サービスに発行されるコマンドの種類。 この値は次の値である必要があります `composeExtension/fetchTask` 。 |
 |`from.id`| 要求を送信したユーザーの ID。 |
 |`from.name`| 要求を送信したユーザーの名前。 |
-|`from.aadObjectId`| 要求を送信したユーザーの Azure Active Directory オブジェクト id。 |
+|`from.aadObjectId`| 要求を送信したユーザーの Azure Active Directory オブジェクト ID。 |
 |`channelData.tenant.id`| Azure Active Directory テナント ID。 |
-|`channelData.channel.id`| チャネル ID (チャネルで要求が行われた場合)。 |
+|`channelData.channel.id`| チャネル ID (要求がチャネルで行われた場合)。 |
 |`channelData.team.id`| チーム ID (チャネルで要求が行われた場合)。 |
-|`value.commandId` | 呼び出されたコマンドの Id が含まれています。 |
-|`value.commandContext` | イベントを発生させたコンテキスト。 はに`compose`なります。 |
-|`value.context.theme` | 埋め込み web ビューの書式設定に役立つ、ユーザーのクライアントテーマ。 は`default`、また`contrast`は`dark`になります。 |
+|`value.commandId` | 呼び出されたコマンドの ID を格納します。 |
+|`value.commandContext` | イベントをトリガーしたコンテキスト。 この値は次の値である必要があります `compose` 。 |
+|`value.context.theme` | ユーザーのクライアント テーマ。埋め込み Web ビューの書式設定に便利です。 この値は `default` 、次の値 `contrast` である必要があります `dark` 。 |
 
-### <a name="example-fetchtask-request"></a>FetchTask 要求の例
+### <a name="payload-activity-properties-when-invoked-a-task-module-from-11-chat-are-listed-in-the-following-section"></a>1 対 1 のチャットからタスク モジュールが呼び出された場合のペイロード アクティビティのプロパティは、次のセクションに一覧表示されます。
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+|プロパティ名|用途|
+|---|---|
+|`type`| 要求の種類。 この値は、次の値である必要があります `invoke` 。 |
+|`name`| サービスに発行されるコマンドの種類。 この値は次の値である必要があります `composeExtension/fetchTask` 。 |
+|`from.id`| 要求を送信したユーザーの ID。 |
+|`from.name`| 要求を送信したユーザーの名前。 |
+|`from.aadObjectId`| 要求を送信したユーザーの Azure Active Directory オブジェクト ID。 |
+|`channelData.tenant.id`| Azure Active Directory テナント ID。 |
+|`channelData.source.name`| タスク モジュールの呼び出し元のソース名。 |
+|`ChannelData.legacy. replyToId`| このメッセージが返信であるメッセージの ID を取得または設定します。 |
+|`value.commandId` | 呼び出されたコマンドの ID を格納します。 |
+|`value.commandContext` | イベントをトリガーしたコンテキスト。 この値は次の値である必要があります `compose` 。 |
+|`value.context.theme` | ユーザーのクライアント テーマ。埋め込み Web ビューの書式設定に便利です。 この値は `default` 、次の値 `contrast` である必要があります `dark` 。 |
+
+### <a name="payload-activity-properties-when-invoked-a-task-module-from-a-group-chat-are-listed-in-the-following-section"></a>グループ チャットからタスク モジュールを呼び出した場合のペイロード アクティビティプロパティは、次のセクションに示されています。
+
+|プロパティ名|用途|
+|---|---|
+|`type`| 要求の種類。 この値は次の値である必要があります `invoke` 。 |
+|`name`| サービスに発行されるコマンドの種類。 この値は、次の値である必要があります `composeExtension/fetchTask` 。 |
+|`from.id`| 要求を送信したユーザーの ID。 |
+|`from.name`| 要求を送信したユーザーの名前。 |
+|`from.aadObjectId`| 要求を送信したユーザーの Azure Active Directory オブジェクト ID。 |
+|`channelData.tenant.id`| Azure Active Directory テナント ID。 |
+|`channelData.source.name`| タスク モジュールの呼び出し元のソース名。 |
+|`ChannelData.legacy. replyToId`| このメッセージが返信であるメッセージの ID を取得または設定します。 |
+|`value.commandId` | 呼び出されたコマンドの ID を格納します。 |
+|`value.commandContext` | イベントをトリガーしたコンテキスト。 この値は次の値である必要があります `compose` 。 |
+|`value.context.theme` | ユーザーのクライアント テーマ。埋め込み Web ビューの書式設定に便利です。 この値は 、または `default` `contrast` `dark` . |
+
+### <a name="payload-activity-properties-when-invoked-a-task-module-from-a-channel-new-post-are-listed-in-the-following-section"></a>チャネルからタスク モジュールを呼び出した場合のペイロード アクティビティ プロパティ (新しい投稿) は、次のセクションに一覧表示されます。
+
+|プロパティ名|用途|
+|---|---|
+|`type`| 要求の種類。 この値は次の値である必要があります `invoke` 。 |
+|`name`| サービスに発行されるコマンドの種類。 この値は、次の値である必要があります `composeExtension/fetchTask` 。 |
+|`from.id`| 要求を送信したユーザーの ID。 |
+|`from.name`| 要求を送信したユーザーの名前。 |
+|`from.aadObjectId`| 要求を送信したユーザーの Azure Active Directory オブジェクト ID。 |
+|`channelData.tenant.id`| Azure Active Directory テナント ID。 |
+|`channelData.channel.id`| チャネル ID (要求がチャネルで行われた場合)。 |
+|`channelData.team.id`| チーム ID (チャネルで要求が行われた場合)。 |
+|`channelData.source.name`| タスク モジュールの呼び出し元のソース名。 |
+|`ChannelData.legacy. replyToId`| このメッセージが返信であるメッセージの ID を取得または設定します。 |
+|`value.commandId` | 呼び出されたコマンドの ID を格納します。 |
+|`value.commandContext` | イベントをトリガーしたコンテキスト。 この値は、次の値である必要があります `compose` 。 |
+|`value.context.theme` | ユーザーのクライアント テーマ。埋め込み Web ビューの書式設定に便利です。 この値は `default` 、次の値 `contrast` である必要があります `dark` 。 |
+
+### <a name="payload-activity-properties-when-invoked-a-task-module-from-a-channel-reply-to-thread-are-listed-in-the-following-section"></a>チャネルからタスク モジュールを呼び出した場合のペイロード アクティビティ プロパティ (スレッドに返信) を次のセクションに示します。
+
+|プロパティ名|用途|
+|---|---|
+|`type`| 要求の種類。 この値は、次の値である必要があります `invoke` 。 |
+|`name`| サービスに発行されるコマンドの種類。 この値は次の値である必要があります `composeExtension/fetchTask` 。 |
+|`from.id`| 要求を送信したユーザーの ID。 |
+|`from.name`| 要求を送信したユーザーの名前。 |
+|`from.aadObjectId`| 要求を送信したユーザーの Azure Active Directory オブジェクト ID。 |
+|`channelData.tenant.id`| Azure Active Directory テナント ID。 |
+|`channelData.channel.id`| チャネル ID (要求がチャネルで行われた場合)。 |
+|`channelData.team.id`| チーム ID (チャネルで要求が行われた場合)。 |
+|`channelData.source.name`| タスク モジュールの呼び出し元のソース名。 |
+|`ChannelData.legacy. replyToId`| このメッセージが返信であるメッセージの ID を取得または設定します。 |
+|`value.commandId` | 呼び出されたコマンドの ID を格納します。 |
+|`value.commandContext` | イベントをトリガーしたコンテキスト。 この値は次の値である必要があります `compose` 。 |
+|`value.context.theme` | ユーザーのクライアント テーマ。埋め込み Web ビューの書式設定に便利です。 この値は 、または `default` `contrast` `dark` . |
+
+### <a name="payload-activity-properties-when-invoked-a-task-module-from-a-command-box-are-listed-in-the-following-section"></a>コマンド ボックスからタスク モジュールを呼び出した場合のペイロード アクティビティ のプロパティは、次のセクションに示します。
+
+|プロパティ名|用途|
+|---|---|
+|`type`| 要求の種類。 この値は、次の値である必要があります `invoke` 。 |
+|`name`| サービスに発行されるコマンドの種類。 この値は次の値である必要があります `composeExtension/fetchTask` 。 |
+|`from.id`| 要求を送信したユーザーの ID。 |
+|`from.name`| 要求を送信したユーザーの名前。 |
+|`from.aadObjectId`| 要求を送信したユーザーの Azure Active Directory オブジェクト ID。 |
+|`channelData.tenant.id`| Azure Active Directory テナント ID。 |
+|`channelData.source.name`| タスク モジュールの呼び出し元のソース名。 |
+|`value.commandId` | 呼び出されたコマンドの ID を格納します。 |
+|`value.commandContext` | イベントをトリガーしたコンテキスト。 この値は、次の値である必要があります `compose` 。 |
+|`value.context.theme` | ユーザーのクライアント テーマ。埋め込み Web ビューの書式設定に便利です。 この値は 、または `default` `contrast` `dark` . |
+
+### <a name="example-fetchtask-request"></a>fetchTask 要求の例
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -46,7 +129,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node.js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
@@ -56,7 +139,7 @@ class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -119,9 +202,9 @@ class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
 
 ## <a name="initial-invoke-request-from-a-message"></a>メッセージからの最初の呼び出し要求
 
-Bot が [新規作成] エリアまたはコマンドバーではなくメッセージから呼び出された`value`場合、最初の要求のオブジェクトには、メッセージングの内線番号から呼び出されたメッセージの詳細が含まれます。 このオブジェクトの例を以下に示します。 および`reactions` `mentions`の配列はオプションであり、元のメッセージに反応またはメンションが存在しない場合は表示されません。
+ボットが作成領域またはコマンド バーではなくメッセージから呼び出された場合、最初の要求のオブジェクトには、メッセージング拡張機能が呼び出されるメッセージの詳細が含まれている `value` 必要があります。 このオブジェクトの例については、次のセクションを参照してください。 The `reactions` and arrays are `mentions` optional, and they are not present if there are no reactions or mentions in the original message.
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -133,7 +216,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node.js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -145,7 +228,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -217,35 +300,35 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-## <a name="respond-to-the-fetchtask"></a>FetchTask に応答する
+## <a name="respond-to-the-fetchtask"></a>fetchTask に応答する
 
-アダプティブカードまたは web URL を`task`持つ`taskInfo`オブジェクトまたは単純な文字列メッセージを含むオブジェクトを使用して、呼び出し要求に応答します。
-
-|プロパティ名|用途|
-|---|---|
-|`type`| フォームを表示`continue`するか、または`message`簡単なポップアップ用にすることができます。 |
-|`value`| フォームの`taskInfo`オブジェクト、またはのメッセージ`string`のいずれか。 |
-
-TaskInfo オブジェクトのスキーマは次のとおりです。
+アダプティブ カードまたは Web URL を持つオブジェクト、または単純な文字列メッセージを含むオブジェクトを使用して、呼び出し要求 `task` `taskInfo` に応答します。
 
 |プロパティ名|用途|
 |---|---|
-|`title`| タスクモジュールのタイトルを示します。|
-|`height`| 整数 (ピクセル単位)、または`small` `medium`、のいずれかを`large`することができます。|
-|`width`| 整数 (ピクセル単位)、または`small` `medium`、のいずれかを`large`することができます。|
-|`card`| フォームを定義するアダプティブカード (使用している場合)。
-|`url`| 埋め込み web ビューとしてタスクモジュールの内部に開く URL。|
-|`fallbackUrl`| クライアントがタスクモジュール機能をサポートしていない場合、この URL はブラウザタブで開かれます。 |
+|`type`| フォームを `continue` 表示するか、単純な `message` ポップアップを表示することができます。 |
+|`value`| フォーム `taskInfo` のオブジェクト、またはメッセージ `string` の a。 |
 
-### <a name="with-an-adaptive-card"></a>アダプティブカード
+taskInfo オブジェクトのスキーマは次の例です。
 
-アダプティブカードを使用する場合は、アダプティブカードを含むオブジェクト`task`を使用し`value`て、オブジェクトで応答する必要があります。
+|プロパティ名|用途|
+|---|---|
+|`title`| タスク モジュールのタイトル。|
+|`height`| 整数 (ピクセル単位) または , `small` `medium` , . `large`|
+|`width`| 整数 (ピクセル単位) または , `small` `medium` , . `large`|
+|`card`| フォームを定義するアダプティブ カード (使用している場合)。
+|`url`| 埋め込み Web ビューとしてタスク モジュール内で開く URL。|
+|`fallbackUrl`| クライアントがタスク モジュール機能をサポートしていない場合、この URL はブラウザー タブで開きます。 |
 
-#### <a name="example-fetchtask-response-with-an-adaptive-card"></a>アダプティブカードによるタスク応答のフェッチの例
+### <a name="with-an-adaptive-card"></a>アダプティブ カードを使用する
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+アダプティブ カードを使用する場合は、アダプティブ カードを含むオブジェクトを持つ `task` `value` オブジェクトに応答する必要があります。
 
-このサンプルでは、Bot フレームワーク SDK に加えて[AdaptiveCards NuGet パッケージ](https://www.nuget.org/packages/AdaptiveCards)を使用します。
+#### <a name="example-fetchtask-response-with-an-adaptive-card"></a>アダプティブ カードを使用した fetchTask 応答の例
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+
+このサンプルでは、Bot Framework SDK [に加えて AdaptiveCards NuGet](https://www.nuget.org/packages/AdaptiveCards) パッケージを使用します。
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -296,7 +379,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node.js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -344,15 +427,18 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
-{
+ {
   "task": {
     "type": "continue",
     "value": {
-      "card":
-      {
+      "title": "Task module title",
+      "height": 500,
+      "width": "medium",
+      "card": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
         "type": "AdaptiveCard",
         "version": "1.0",
         "body": [
@@ -381,8 +467,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
               }
             ]
           }
-        ],
-        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+        ]
       }
     }
   }
@@ -391,11 +476,11 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-### <a name="with-an-embedded-web-view"></a>埋め込み web ビュー付き
+### <a name="with-an-embedded-web-view"></a>埋め込み Web ビューを使用する
 
-埋め込み web ビューを使用する場合は、読み込む web フォームへ`task`の URL を`value`含むオブジェクトを使用してオブジェクトで応答する必要があります。 読み込む必要のある URL のドメインは、アプリのマニフェストの`validDomains`配列に含まれている必要があります。 埋め込み web ビューの作成に関する詳細については、「[タスクモジュールのドキュメント](~/task-modules-and-cards/what-are-task-modules.md)」を参照してください。
+埋め込み Web ビューを使用する場合は、読み込む Web フォームの URL を含むオブジェクトを持つオブジェクトに応答 `task` `value` する必要があります。 読み込む URL のドメインは、アプリのマニフェストの配列に含 `validDomains` める必要があります。 埋め [込み Web ビューの構築](~/task-modules-and-cards/what-are-task-modules.md) に関する詳細については、タスク モジュールのドキュメントを参照してください。
 
-# <a name="cnettabdotnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -427,7 +512,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejstabjavascript"></a>[JavaScript/node.js](#tab/javascript)
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -448,7 +533,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[JSON](#tab/json)
+# <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -467,10 +552,89 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-## <a name="next-steps"></a>次のステップ
+### <a name="request-to-install-your-conversational-bot"></a>会話ボットのインストール要求
 
-ユーザーがタスクモジュールから応答を返信できるようにするには、送信アクションを処理する必要があります。
+アプリに会話ボットが含まれている場合は、タスク モジュールを読み込む前に会話にボットをインストールします。 タスク モジュールの追加のコンテキストを取得すると便利です。 このシナリオの一般的な例は、名簿をフェッチして、ユーザー選択コントロールまたはチーム内のチャネルの一覧を設定します。
 
-* [タスクモジュールを作成して応答する](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+メッセージング拡張機能が呼び出しを受信したら、ボットが現在のコンテキストにインストールされていることを確認して、フロー `composeExtension/fetchTask` を容易にしてください。 たとえば、名簿呼び出しを取得してフローを確認します。 ボットがインストールされていない場合は、ユーザーにボットのインストールを要求するアクションを含むアダプティブ カードを返します。 次の例のアクションを参照してください。 ユーザーには、その場所にアプリをインストールして確認するためのアクセス許可が必要です。 アプリのインストールが失敗した場合、ユーザーは管理者に連絡するメッセージを受け取ります。
+
+#### <a name="example-of-the-response"></a>応答の例:
+
+```json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Looks like you haven't used Disco in this team/chat"
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Continue",
+      "data": {
+        "msteams": {
+          "justInTimeInstall": true
+        }
+      }
+    }
+  ],
+  "version": "1.0"
+}
+```
+
+インストール後、ボットは別の呼び出しメッセージを `name = composeExtension/submitAction` 受け取ります `value.data.msteams.justInTimeInstall = true` 。
+
+#### <a name="example-of-the-invoke"></a>呼び出しの例:
+
+```json
+{
+  "value": {
+    "commandId": "giveKudos",
+    "commandContext": "compose",
+    "context": {
+      "theme": "default"
+    },
+    "data": {
+      "msteams": {
+        "justInTimeInstall": true
+      }
+    }
+  },
+  "conversation": {
+    "id": "19:7705841b240044b297123ad7f9c99217@thread.skype"
+  },
+  "name": "composeExtension/submitAction",
+  "imdisplayname": "Bob Smith"
+}
+```
+
+呼び出しに対するタスクの応答は、インストールされているボットの応答と似ている必要があります。
+
+#### <a name="example-of-just-in-time-installation-of-app-with-adaptive-card"></a>アダプティブ カードを含むアプリの just-in Time インストールの例: 
+
+```csharp
+private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
+  {
+      //Read the card json and create attachment.
+         string[] paths = { ".", "Resources", fileName };
+         var adaptiveCardJson = File.ReadAllText(Path.Combine(paths));
+         var adaptiveCardAttachment = new Attachment()
+            {
+                ContentType = "application/vnd.microsoft.card.adaptive",
+                Content = JsonConvert.DeserializeObject(adaptiveCardJson),
+            };
+            return adaptiveCardAttachment;
+        }
+```
+
+* * *
+
+## <a name="next-steps"></a>次の手順
+
+ユーザーがタスク モジュールから応答を返送できる場合は、送信アクションを処理する必要があります。
+
+* [タスク モジュールを作成して応答する](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
 [!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]

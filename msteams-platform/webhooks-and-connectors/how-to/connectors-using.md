@@ -4,12 +4,12 @@ description: Microsoft Teams で Office 365 コネクタを使用する方法に
 ms.topic: how-to
 localization_priority: Priority
 keywords: Teams o365 コネクタ
-ms.openlocfilehash: 36d30c0be3d562c7a71989355249f0cfa76e797d
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: edf84ad8902fa3b4a1827ffde415097aac978532
+ms.sourcegitcommit: 843da1730443ff8474a05295f60a6b376ed140da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014083"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "50073090"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>コネクタと Webhook にメッセージを送信する
 
@@ -254,7 +254,7 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
             "body":[
                 {
                 "type": "TextBlock",
-                "text": "For Samples and Templates, see [https://adaptivecards.io/samples](https://adaptivecards.io/samples)",
+                "text": "For Samples and Templates, see [https://adaptivecards.io/samples](https://adaptivecards.io/samples)"
                 }
             ]
          }

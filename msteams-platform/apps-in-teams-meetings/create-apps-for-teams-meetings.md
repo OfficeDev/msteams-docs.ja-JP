@@ -5,12 +5,12 @@ description: チーム会議用アプリの作成
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: Teams アプリ会議ユーザー参加者ロール api
-ms.openlocfilehash: 82327eca86dcdac5c47f5f4471bc91d55484d07e
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: 7f6d8fec735aa21033c6bcb2462c20458634f10a
+ms.sourcegitcommit: 843da1730443ff8474a05295f60a6b376ed140da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797765"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "50073097"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Teams 会議用のアプリを作成する
 
@@ -18,19 +18,19 @@ ms.locfileid: "49797765"
 
 * 会議のアプリには、Teams アプリ開発に関する基本的な [知識が必要です](../overview.md)。 会議内のアプリは、タブ、[](../tabs/what-are-tabs.md)ボット、[](../bots/what-are-bots.md)メッセージング拡張機能の機能[](../messaging-extensions/what-are-messaging-extensions.md)で構成できます。また[、Teams](#update-your-app-manifest)アプリ マニフェストを更新して、アプリが会議で利用できる状態を示す必要があります。
 
-* アプリをタブとして会議のライフサイクルで機能するには、 [グループ](../resources/schema/manifest-schema.md#configurabletabs) チャット スコープで構成可能なタブをサポートする必要があります (グループ タブの作成方法 [を参照してください](../build-your-first-app/build-channel-tab.md))。 スコープを `groupchat` サポートすると、会議前および[](teams-apps-in-meetings.md#pre-meeting-app-experience)会議後のチャット[でアプリを](teams-apps-in-meetings.md#post-meeting-app-experience)有効にできます。
+* アプリをタブとして会議のライフサイクルで機能するには、 [グループ](../resources/schema/manifest-schema.md#configurabletabs) チャット スコープで構成可能なタブをサポートする必要があります (グループ タブを作成する方法 [を参照してください](../build-your-first-app/build-channel-tab.md))。 スコープを `groupchat` サポートすると、会議前および[](teams-apps-in-meetings.md#pre-meeting-app-experience)会議後のチャット[でアプリを](teams-apps-in-meetings.md#post-meeting-app-experience)有効にできます。
 
 * 会議 API URL パラメーターには、必要な場合があります。tenantId これらは、Teams クライアント SDK およびボット アクティビティの一 `meetingId` `userId` 部として利用できます。 [](/onedrive/find-your-office-365-tenant-id) さらに、タブ SSO 認証を使用して、ユーザー ID とテナント ID の信頼性の高い [情報を取得できます](../tabs/how-to/authentication/auth-aad-sso.md)。
 
 * 会議 API の中には、認証トークンを生成するためにボット登録と `GetParticipant` [ID](../build-your-first-app/build-bot.md) が必要な場合があります。
 
-* 会議前および会議後の [シナリオでは、Teams タブの設計に](../tabs/design/tabs.md) 関する一般的なガイドラインに従う必要があります。 会議中のエクスペリエンスについては、 [会議内タブ](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) と会議内ダイアログ [の](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog) 設計ガイドラインを参照してください。
+* 会議前および会議後の [シナリオでは、Teams タブの設計](../tabs/design/tabs.md) に関する一般的なガイドラインに従う必要があります。 会議中のエクスペリエンスについては、 [会議内タブ](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) と会議内ダイアログ [の](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog) 設計ガイドラインを参照してください。
 
 * アプリをリアルタイムで更新するには、会議のイベント アクティビティに基づいてアプリを最新の情報に更新する必要があります。 これらのイベントは、会議のライフサイクル全体にわたって、会議内ダイアログ (完了パラメーターを参照) 内に含め、その他 `bot Id` `Notification Signal API` のサーフェスにできます。
 
 ## <a name="meeting-apps-api-reference"></a>会議アプリ API リファレンス
 
-|API|説明|要求|ソース|
+|API|説明|要求|Source|
 |---|---|----|---|
 |**GetUserContext**| 関連するコンテンツを Teams タブに表示するコンテキスト情報を取得します。 |_**microsoftTeams.getContext( ( ) => { /*...*/ } )**_|Microsoft Teams クライアント SDK|
 |**GetParticipant**|この API を使用すると、ボットは会議 ID と参加者 ID で参加者情報を取得できます。|**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
@@ -56,7 +56,7 @@ ms.locfileid: "49797765"
 |---|---|----|---|
 |**meetingId**| 文字列 | はい | 会議識別子は、Bot Invoke と Teams クライアント SDK から利用できます。|
 |**participantId**| 文字列 | はい | participantId はユーザー ID です。 タブ SSO、ボット呼び出し、および Teams クライアント SDK で利用できます。 Tab SSO から participantId を取得することを強くお勧めします。 |
-|**tenantId**| 文字列 | はい | テナント ユーザーには tenantId が必要です。 タブ SSO、ボット呼び出し、および Teams クライアント SDK で利用できます。 Tab SSO から tenantId を取得することを強くお勧めします。 |
+|**tenantId**| 文字列 | はい | テナント ユーザーには tenantId が必要です。 これは、タブ SSO、ボット呼び出し、および Teams クライアント SDK で利用できます。 Tab SSO から tenantId を取得することを強くお勧めします。 |
 
 #### <a name="example"></a>例
 
@@ -136,7 +136,7 @@ GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 * **200**: 参加者の情報が正常に取得されました。
 * **401**: 無効なトークンです。
 * **404**: 参加者が見つかりません。
-* **500**: 会議の有効期限が切れているか (会議の終了から 60 日を超える) か、参加者の役割に基づいてアクセス許可を持っていません。
+* **500**: 会議の有効期限が切れているか (会議の終了から 60 日を超える) か、参加者の役割に基づいてアクセス許可が付与されていない。
 
 
 **近日公開**
@@ -260,7 +260,7 @@ POST /v3/conversations/{conversationId}/activities
 
 * **channelTab**: チーム チャネルのヘッダー内のタブ。
 * **privateChatTab**: チームまたは会議のコンテキスト内に存在しない一連のユーザー間のグループ チャットのヘッダー内のタブ。
-* **meetingChatTab**: スケジュールされた会議のコンテキストで一連のユーザー間のグループ チャットのヘッダー内のタブ。
+* **meetingChatTab**: スケジュールされた会議のコンテキスト内の一連のユーザー間のグループ チャットのヘッダー内のタブ。
 * **meetingDetailsTab**: 予定表の会議詳細ビューのヘッダー内のタブ。
 * **meetingSidePanel**: 統合バー (u-bar) 経由で開いた会議内パネル。
 
@@ -278,7 +278,7 @@ POST /v3/conversations/{conversationId}/activities
 
 開催者または発表者の役割を持つユーザーは、会議チャットおよび会議の詳細ページのプラス ➕ ボタンを使用して、会議に **タブを****追加** します。 メッセージング拡張機能は、チャットのメッセージ作成領域 &#x25CF;&#x25CF;&#x25CF; 下にある省略記号/オーバーフロー メニューを介して追加されます。 ボットは、"" キーを使用して [ボットの取得] を選択して会議 **@** チャット **に追加されます**。
 
-✔は、Tabs SSO *を使用して* 確認 [する必要があります](../tabs/how-to/authentication/auth-aad-sso.md)。 この認証の後、アプリは GetParticipant API を介してユーザー ロールを取得できます。
+✔は、Tabs SSO *を使用* して確認 [する必要があります](../tabs/how-to/authentication/auth-aad-sso.md)。 この認証の後、アプリは GetParticipant API を介してユーザー ロールを取得できます。
 
  ✔ユーザー ロールに基づいて、アプリはロール固有のエクスペリエンスを表示する機能を備えています。 たとえば、ポーリング アプリでは、開催者と発表者だけが新しいポーリングを作成できます。
 
@@ -290,14 +290,14 @@ POST /v3/conversations/{conversationId}/activities
 
 ✔マニフェストで、上記のようにコンテキスト配列に **sidePanel** を追加します。
 
-✔とすべてのシナリオで、アプリは幅 320 ピクセルの会議内タブに表示されます。 このためには、タブを最適化する必要があります。 *「FrameContext*[インターフェイス」を参照](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest&preserve-view=true
+✔、すべてのシナリオで、アプリは幅 320 ピクセルの会議内タブにレンダリングされます。 このためには、タブを最適化する必要があります。 *「参照*[」、FrameContext インターフェイス](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest&preserve-view=true
 )
 
 ✔に応じて[、userContext](../tabs/how-to/access-teams-context.md#user-context) API を使用して要求をルーティングするために Teams SDK に参照します。
 
-✔タブの Teams 認証 [フローを参照してください](../tabs/how-to/authentication/auth-flow-tab.md)。 タブの認証フローは、Web サイトの認証フローと非常に似ています。 したがって、タブは OAuth 2.0 を直接使用できます。 *「Microsoft* [ID プラットフォーム」および「OAuth 2.0 認証コード フロー」も参照してください](/azure/active-directory/develop/v2-oauth2-auth-code-flow)。
+✔タブの Teams 認証 [フローを参照してください](../tabs/how-to/authentication/auth-flow-tab.md)。 タブの認証フローは、Web サイトの認証フローと非常に似ています。 したがって、タブは OAuth 2.0 を直接使用できます。 *Microsoft ID* プラットフォーム [と OAuth 2.0 認証コード フローも参照してください](/azure/active-directory/develop/v2-oauth2-auth-code-flow)。
 
-✔は、ユーザーが会議中のビューで、作成メッセージの内線カードを投稿できる必要がある場合に、期待通り動作する必要があります。
+✔は、ユーザーが会議中のビューで、作成メッセージの内線カードを投稿できる場合に、期待通り動作する必要があります。
 
 ✔ AppName in meeting - ツールヒントには、会議中の U バーにアプリ名が表示されます。
 
@@ -307,7 +307,7 @@ POST /v3/conversations/{conversationId}/activities
 
 ✔タブの Teams 認証 [フローを参照してください](../tabs/how-to/authentication/auth-flow-tab.md)。
 
-✔ API を [使用して](/graph/api/resources/notifications-api-overview?view=graph-rest-beta&preserve-view=true) 、バブル通知をトリガーする必要がある場合に通知します。
+✔ [NotificationSignal API を](create-apps-for-teams-meetings.md#notificationsignal-api) 使用して、バブル通知をトリガーする必要がある場合に通知します。
 
 ✔要求ペイロードの一部として、紹介するコンテンツがホストされている URL を含める必要があります。
 

@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Microsoft Teams テンプレートのサンプル デモ
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 4a9b2ee9a5fadfa86dead4a15f49a6cea67d4963
-ms.sourcegitcommit: 5687a901d48bcf2f5a3a086e0f703f854e8b9c21
+ms.openlocfilehash: 573291a9747b3df3cbdd11c52fe8f1d71525f0f6
+ms.sourcegitcommit: ce74f821660b1258c72b3c3f71c1cf177e7e92ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "49795497"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "50072890"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 用のアプリ テンプレート
 
@@ -81,7 +81,7 @@ Ask Away は、ユーザーが Teams 内で Q&A (質問と回答) セッショ�
 
 ![会議室予約のデモ](../assets/images/book-a-room.png)
 
-## <a name="building-access"></a>アクセス権の構築
+## <a name="building-access"></a>アクセスを構築する
 
 Building Access は、施設の管理者が従業員が施設に滞在しているかどうかを管理、追跡、報告できるようにして、建物の占有しきい値と社会的距離の基準の管理をサポートする Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) ベースのアプリです。 Microsoft [Power Apps](/powerapps/powerapps-overview)、[Power Automate](/power-automate/getting-started)を使用して構築されたこのアプリは、Microsoft Teams と緊密に統合されており、組織が建物の準備状況を判断し、現場アクセスの適格基準を確立し、将来の計画のための分析情報を収集できるようにします。
 
@@ -155,7 +155,7 @@ Contact Group Lookup アプリは、組織の連絡先グループ (以前は、
 
 ## <a name="co-worker-appreciation-9734"></a>同僚の働き&#9734;
 
-Microsoft Teams の同僚の仕事仲間テンプレートを使用すると、ユーザーは Teams のコンテキスト内で同僚の実績を認識できます。 同僚が仕事仲間に報酬を与える場合、受信者と他のチーム メンバーはチャネルの会話でタグ付けされ、チャネルの特典の詳細に関する通知を受け取ります。 The awards are recorded in the Teams app, which is secure, portable, and easily shareable. これは、ランキング付き、PowerApps ベースのバージョンの Open Badges アプリ テンプレートと見なされます。
+Microsoft Teams の同僚の仕事仲間テンプレートを使用すると、ユーザーは Teams のコンテキスト内で同僚の実績を認識できます。 同僚が仕事仲間に報酬を与える選択をすると、受信者と他のチーム メンバーはチャネル会話でタグ付けされ、チャネルのリワードの詳細に関する通知を受け取ります。 The awards are recorded in the Teams app, which is secure, portable, and easily shareable. これは、ランキング付き、PowerApps ベースのバージョンの Open Badges アプリ テンプレートと見なされます。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-coworker-appreciation)
 
@@ -198,7 +198,7 @@ Teams ユーザーは、次のアクティビティを実行できます。
 
 ![キャンペーン ビューの管理](../assets/images/employee-ideas-manage-campaigns.png) 
 
-## <a name="e-prescriptions"></a>E-しがち 
+## <a name="e-prescriptions"></a>E-前書き 
 
 E-Prescriptions は、患者に電子処方箋を発行するプロセスを自動化することにより、遠隔医療と仮想ケアを強化する [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) ベースのアプリです。 医療専門家は、Teams プラットフォーム内で直接、予定をすばやく確認し、電子処方箋を生成し、電子処方箋を添付した電子メールを患者に送信できます。
 
@@ -214,6 +214,18 @@ E-Prescriptions は、患者に電子処方箋を発行するプロセスを自�
     ![E-Prescriptions アプリのスクリーンショット。 管理者がアプリを使用する医療提供者を管理する方法を示します。](../assets/images/e-prescriptions-app-template-admin.png)
 :::column-end:::
 :::row-end:::
+
+
+## <a name="emergency-button-power-9734"></a>緊急ボタンの電源&#9734;
+
+緊急ボタンの Power アプリは、Microsoft Teams を使用している組織が使用して、すべてのユーザーが監督者に支援を要求するために使用できます。 このアプリには、次のようなさまざまな機能が含まれています。
+-   Power App からさまざまなカテゴリのサポートを要求する
+-   割り当てられたユーザーを通知する要求者に送信される通知 
+-   割り当てられた監督者に、サポートが必要なユーザーを通知する通知 
+-   SharePoint で開催された監査証跡の表示
+
+[GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-emergency-button-app)
+
 
 ## <a name="employee-training"></a>従業員トレーニング 
 
@@ -381,13 +393,13 @@ Incident Reporter は、組織内のインシデントの管理を最適化す�
  ![検査の概要](../assets/images/inspection-app.png)  
 
 
-## <a name="issue-reporting-9734"></a>Issue Reporting &#9734;
+## <a name="issue-reporting-9734"></a>問題の報告&#9734;
 
 問題報告アプリは、従業員とマネージャーが問題の発生と管理を支援します。 これは、問題を報告するための問題報告アプリと、問題を管理するための問題の管理アプリの 2 つのアプリで構成されています。
 
 チーム マネージャーは、問題の管理アプリを使用して、Microsoft Teams メッセージと Planner タスクがアプリによって作成されるチャネルを含むアプリ エクスペリエンスを構成します。 マネージャーは、ユーザーが問題を報告するときに詳細を収集するテンプレート フォームを作成するためにもアプリを使用します。 たとえば、問題テンプレート フォームを確認、編集、または削除します。 また、アプリを使用して、チームの問題を確認し、問題履歴を報告し、問題の解決を効率的に管理することもできます。
 
-従業員は問題報告アプリを使用して、問題の解決に必要な問題と詳細を記録します。 アプリは、既存の問題を変更して解決し、個人またはチームの問題の大きなビューを取得するためにも使用されます。
+従業員は、問題報告アプリを使用して、問題の解決に必要な問題と詳細を記録します。 アプリは、既存の問題を変更して解決し、個人またはチームの問題の大きなビューを取得するためにも使用されます。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-issuereporting)
 
@@ -449,7 +461,7 @@ Poll は、チャットまたはチャネルで投票をすばやく作成して
 
 ## <a name="rapid-assist-9734"></a>迅速なアシスト&#9734;
 
-Rapid Assist は、Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) ベースのアプリです。お客様に対する関係者は、迅速な回答の取得、情報の検索、オープンな要求のフォローアップを行い、専門家が質問に答えるのに役立つ通話を迅速に受け取る通知を受信できます。 Microsoft [Power Apps](/powerapps/powerapps-overview) と [Power Automate](/power-automate/getting-started)を使用して構築されたアプリは、Microsoft Teams と深く統合され、組織はフロントライン ワーカーを企業の連絡員と簡単に接続して、顧客の問い合わせを解決し、優れたカスタマー エクスペリエンスを提供できます。 
+Rapid Assist は、Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) ベースのアプリです。お客様に対する関係者は、迅速な回答の取得、情報の検索、オープンな要求のフォローアップを行い、専門家が質問に答えるのに役立つ通話を迅速に受け取る通知を受信できます。 Microsoft [Power Apps](/powerapps/powerapps-overview) と [Power Automate](/power-automate/getting-started)を使用して構築されたアプリは、Microsoft Teams と深く統合され、組織はフロントライン ワーカーを企業の連絡員と簡単に接続して、顧客のクエリを解決し、優れたカスタマー エクスペリエンスを提供できます。 
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-rapid-assist)
 
@@ -581,7 +593,7 @@ Survey は、チャットまたはチャネルで調査を作成してデータ�
 
 ## <a name="virtual-rounding-9734"></a>仮想丸め&#9734;
 
-病院や緊急電話のプロバイダーは、1 日に数十回、多くの場合何百回もの "ラウンド" を行います。 患者に対するこれらの迅速なチェックインは、患者がどのように行っているのかの状態チェックを提供し、患者の懸念に対処することを目的とします。 丸めは、患者が複数の種類のプロバイダーによって監視されるのを確実にするための不可欠な方法ですが、各プロバイダーから、新しいマスク、および新しい一連のテープを使用する必要がある各訪問について、PPE の大きなドレインを表します。 このアプリ テンプレートを使用すると、医療労働者は、プロバイダーと患者の間の Microsoft Teams 会議を通じて、事実上簡単にラウンドを実施できます。
+病院や緊急電話のプロバイダーは、1 日に数十回、多くの場合何百回もの "ラウンド" を行います。 患者に対するこれらの迅速なチェックインは、患者がどのように行っているのかの状態チェックを提供し、患者の懸念に対処することを目的とします。 丸めは、患者が複数の種類のプロバイダーによって監視されるのを保証するための不可欠な方法ですが、各プロバイダーから、新しいマスクと新しいセットのマスクを使用する必要があるという理由で、PPE の大きなドレインを表します。 このアプリ テンプレートを使用すると、医療労働者は、プロバイダーと患者の間の Microsoft Teams 会議を通じて、事実上簡単にラウンドを実施できます。
 
 仮想丸めソリューションは、Microsoft Health and Life Sciences ブログの投稿 [でも参照されています](https://aka.ms/teamsvirtualrounding)。
 

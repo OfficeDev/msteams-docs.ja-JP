@@ -1,45 +1,46 @@
 ---
 title: アプリ ユーザーの認証
-description: Teams での認証と、アプリでの認証の使用方法について説明します
+description: Teams での認証とアプリでの認証の使い方について説明します。
 ms.topic: conceptual
 keywords: Teams 認証 OAuth SSO AAD
-ms.openlocfilehash: 6ddcd8a9e847d9216b7e2dcc12733a6cd413b48e
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 88b2098b7d45444cf47bebdfccc22fae772b7c22
+ms.sourcegitcommit: 843da1730443ff8474a05295f60a6b376ed140da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014293"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "50073104"
 ---
-# <a name="authenticating-users-in-microsoft-teams"></a>Microsoft Teams でのユーザーの認証
+# <a name="authenticate-users-in-microsoft-teams"></a>Microsoft Teams でユーザーを認証する
 
-> [!Note]
-> モバイル クライアントでの Web ベースの認証には、Teams JavaScript SDK のバージョン 1.4.1 以降が必要です。
+> [!NOTE]
+> モバイル クライアントでの Web ベース認証には、Microsoft Teams JavaScript SDK のバージョン 1.4.1 以降が必要です。
 
-アプリが Azure Active Directory で保護されたユーザー情報にアクセスしたり、Facebook や Twitter などの他のサービスからデータにアクセスしたりするには、アプリがそれらのプロバイダーとの間に信頼された接続を確立する必要があります。 アプリがユーザーのスコープ内で Microsoft Graph API を使用する必要がある場合、適切な認証トークンを取得するためにユーザーを認証する必要もあります。
+Azure Active Directory (AAD) で保護されたユーザー情報にアクセスし、Facebook や Twitter のようなサービスからデータにアクセスするために、アプリはそれらのプロバイダーとの信頼できる接続を確立します。 アプリがユーザー スコープで Microsoft Graph API を使用する場合は、適切な認証トークンを取得するためにユーザーを認証します。
 
-Microsoft Teams には、アプリが利用できる 2 つの異なる認証フローがあります。 タブ、構成ページ、タスク モジュールに埋め込まれた[コンテンツ ページ](~/tabs/how-to/create-tab-pages/content-page.md)で、従来の Web ベースの認証フローを実行できます。 アプリに会話ボットが含まれている場合、OAuthPrompt フロー (およびオプションの Azure Bot Framework のトークン サービス) を使用して、会話の一部としてユーザーを認証することができます。
+Teams では、アプリに対して 2 つの異なる認証フローがあります。 タブ、構成ページ、またはタスク モジュールに[](~/tabs/how-to/create-tab-pages/content-page.md)埋め込まれたコンテンツ ページで、従来の Web ベースの認証フローを実行します。 アプリに会話ボットが含まれている場合は、OAuthPrompt フローと、必要に応じて Azure Bot Framework のトークン サービスを使用して、会話の一部としてユーザーを認証します。
 
 ## <a name="web-based-authentication-flow"></a>Web ベースの認証フロー
 
-[タブ](~/tabs/what-are-tabs.md)には Web ベースの認証フローを使用する必要がありますが、[会話ボット](~/bots/what-are-bots.md)や[メッセージング拡張機能](~/messaging-extensions/what-are-messaging-extensions.md)との併用を選択することもできます。 [Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) を Web コンテンツ ページで使用して認証を有効にし、次にそのコンテンツ ページを、タブ、構成ページ、タスク モジュールに埋め込みます。 Web ベースの認証フローと会話ボットを併用する場合には、[タスク モジュールとボットを併用する](~/task-modules-and-cards/task-modules/task-modules-bots.md)必要があります。
+タブの Web ベースの認証[フローを](~/tabs/what-are-tabs.md)使用し、会話ボット[](~/bots/what-are-bots.md)またはメッセージング拡張機能で使用[するように選択します](~/messaging-extensions/what-are-messaging-extensions.md)。 認証を有効 [にするには、Web コンテンツ](/javascript/api/overview/msteams-client) ページで Microsoft Teams JavaScript クライアント SDK を使用します。 認証を有効にした後、タブ、構成ページ、またはタスク モジュールにコンテンツ ページを埋め込む。 Web ベースの認証フローの詳細については、以下を参照してください。
 
-* [タブでの認証フロー](~/tabs/how-to/authentication/auth-flow-tab.md)では、Teams でのタブ認証の仕組みを説明しています。 ここでは、タブに使用される一般的な Web ベースの認証フローを示しています。
-* [タブでの Azure AD 認証](~/tabs/how-to/authentication/auth-tab-AAD.md)では、Teams のアプリ内のタブから Azure Active Directory に接続する方法を説明しています。
-* [サイレント認証 (Azure AD)](~/tabs/how-to/authentication/auth-silent-AAD.md) では、アプリ内でのサインイン/同意プロンプトを Azure Active Directory を使用して減らす方法を説明しています。
-* [dotnet/C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) または [JavaScript/Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) での Web ベースの認証
+* [Teams ボットに認証を追加すると](~/bots/how-to/authentication/add-authentication.md) 、会話ボットで Web ベースの認証フローを使用する方法について説明します。
+* [タブでの認証フロー](~/tabs/how-to/authentication/auth-flow-tab.md)では、Teams でのタブ認証の仕組みを説明しています。 これは、タブに使用される一般的な Web ベースの認証フローを示しています。
+* [タブの AAD 認証では](~/tabs/how-to/authentication/auth-tab-AAD.md) 、Teams のアプリのタブ内から AAD に接続する方法について説明します。
+* [サイレント認証 AAD は、AAD](~/tabs/how-to/authentication/auth-silent-AAD.md) を使用してアプリでサインインまたは同意のプロンプトを減らす方法について説明します。
+* [.Net、C#、JavaScript、Node.js](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)は、Web ベース認証のサンプルを提供します。 [](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
 
 ## <a name="the-oauthprompt-flow-for-conversational-bots"></a>会話ボットの OAuthPrompt フロー
 
-Azure Bot Framework の OAuthPrompt で、会話ボットを使用したアプリの認証が簡単になります。 Azure Bot Framework のトークン サービスを利用して、トークン キャッシュをアシストすることもできます。
+Azure Bot Framework の OAuthPrompt で、会話ボットを使用したアプリの認証が簡単になります。 Azure Bot Framework のトークン サービスを使用して、トークンのキャッシュを支援します。
 
-OAuthPrompt の使用の詳細については、次を参照してください。
+OAuthPrompt の使用の詳細については、以下を参照してください。
 
-* [ボット認証フローの概要](~/bots/how-to/authentication/auth-flow-bot.md)では、Teams のアプリ内のボットでの認証の仕組みを説明しています。 ここでは、Teams のすべてのバージョン (Web、デスクトップ アプリ、モバイル アプリ) でボットに使用される非 Web ベースの認証フローを示しています。
-* [ボット認証](~/bots/how-to/authentication/add-authentication.md)
-* [dotnet/C#](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) または [JavaScript/Node.js](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) でのボット認証 (v3 SDK) のサンプル
+* [ボット認証フローの概要では](~/bots/how-to/authentication/auth-flow-bot.md) 、Teams のアプリのボット内での認証のしくみについて説明します。 これは、Teams Web、デスクトップ アプリ、およびモバイル アプリ上のボットに使用される、Web ベースではない認証フローを示しています。
+* [ボット認証では](~/bots/how-to/authentication/add-authentication.md) 、Teams ボットに OAuth 認証を追加する方法について説明します。
+* [.Net、C#、JavaScript、](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth)または Node.jsボット認証 v3 SDK サンプルを提供します。 [](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth)
 
-## <a name="configure-your-identity-provider"></a>ID プロバイダーを構成する
+## <a name="configure-the-identity-provider"></a>ID プロバイダーを構成する
 
-アプリがどちらの認証フローを使用しているかにかかわらず (両方を使用している可能性もあります)、Teams アプリと通信を行うには ID プロバイダーを構成する必要があります。 ここで紹介するサンプルやチュートリアルの大半では、主に Azure Active Directory を ID プロバイダーとして使用しています。 ただし、この概念は、どの ID プロバイダーを使用するかにかかわらず適用されます。
+アプリの認証フローに関係なく、Teams アプリと通信するために ID プロバイダーを構成します。 ほとんどのサンプルとチュートリアルでは、主に ID プロバイダーとして AAD を使用します。 ただし、この概念は ID プロバイダーに関係なく適用されます。
 
-詳細については、「[configuring an identity provider (ID プロバイダーの構成)](~/concepts/authentication/configure-identity-provider.md)」を参照してください
+詳細については、「ID プロバイダー [の構成」を参照してください](~/concepts/authentication/configure-identity-provider.md)。
