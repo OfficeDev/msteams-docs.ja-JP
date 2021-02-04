@@ -1,111 +1,108 @@
 ---
 title: Teams でのリソース固有の同意
-description: Teams でのリソース固有の同意と、その利点を活用する方法について説明します。
+description: Teams でのリソース固有の同意と、それを活用する方法について説明します。
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
 ms.topic: reference
-keywords: teams authorization OAuth SSO AAD rsc Graph
-ms.openlocfilehash: 3cafbb090c4e4bc44a814c840a7a297357341bba
-ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
+keywords: Teams 承認 OAuth SSO AAD rsc Graph
+ms.openlocfilehash: 1b5c0f645d93ed33c11bf3279e70133f35f53a2c
+ms.sourcegitcommit: 55a4246e62d69d631a63bdd33de34f1b62cc0132
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "49366862"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "50093930"
 ---
 # <a name="resource-specific-consent-rsc"></a>リソース固有の同意 (RSC)
 
->[!IMPORTANT]
-> エンドポイントでは、これらの Api にアクセスでき https://graph.microsoft.com/beta ます。  [ベータバージョン](/graph/versioning-and-support#beta-version)エンドポイントには、現在プレビュー段階の api が含まれており、通常は使用できません。 ベータ版エンドポイントの Api は変更される可能性があり、運用アプリで使用することはお勧めしません。 
-
-リソース固有の同意 (RSC) は、Microsoft Teams と Microsoft Graph API の統合で、アプリが API エンドポイントを使用して組織内の特定のチームを管理できるようにします。 リソース固有の同意 (RSC) アクセス許可モデルを使用すると、チームの *所有者* は、チームのデータにアクセスしたり、変更したりするアプリケーションに同意を与えることができます。 きめ細かい、Teams 固有、RSC の各アクセス許可によって、アプリケーションが特定のチーム内で実行できる処理を定義します。
+リソース固有の同意 (RSC) は、Microsoft Teams と Microsoft Graph API の統合であり、アプリで API エンドポイントを使用して組織内の特定のチームを管理できます。 リソース固有の同意 (RSC) アクセス許可モデルを使用すると、チーム所有者は、アプリケーションがチームのデータにアクセスしたり変更したりするための同意を付与できます。 詳細な Teams 固有の RSC アクセス許可は、アプリケーションが特定のチーム内で実行できる操作を定義します。
 
 ## <a name="resource-specific-permissions"></a>リソース固有のアクセス許可
 
-|アプリケーションのアクセス許可| Action |
+|アプリケーションのアクセス許可| 操作 |
 | ----- | ----- |
 |TeamSettings.Read.Group | このチームの設定を取得します。|
 |TeamSettings.ReadWrite.Group|このチームの設定を更新します。|
-|ChannelSettings.Read.Group|このチームのチャネル名、チャネルの説明、およびチャネルの設定を取得します。|
-|ChannelSettings.ReadWrite.Group|このチームのチャネル名、チャネルの説明、およびチャネルの設定を更新します。|
+|ChannelSettings.Read.Group|このチームのチャネル名、チャネルの説明、チャネル設定を取得します。|
+|ChannelSettings.ReadWrite.Group|このチームのチャネル名、チャネルの説明、チャネル設定を更新します。|
 |Channel.Create.Group|このチームのチャネルを作成します。|
 |Channel.Delete.Group|このチームのチャネルを削除します。|
-|ChannelMessage.Read.Group |このチームのチャネルメッセージを取得します。|
-|TeamsAppInstallation.Read.Group|このチームのインストール済みアプリのリストを取得します。|
-|TeamsTab.Read.Group|このチームのタブのリストを取得します。|
+|ChannelMessage.Read.Group |このチームのチャネル メッセージを取得します。|
+|TeamsAppInstallation.Read.Group|このチームのインストール済みアプリの一覧を取得します。|
+|TeamsTab.Read.Group|このチームのタブの一覧を取得します。|
 |TeamsTab.Create.Group|このチームのタブを作成します。|
 |TeamsTab.ReadWrite.Group|このチームのタブを更新します。|
 |TeamsTab.Delete.Group|このチームのタブを削除します。|
 |TeamMember.Read.Group|このチームのメンバーを取得します。|
 
 >[!NOTE]
->リソース固有のアクセス許可は、Teams クライアントにインストールされている Teams アプリに対してのみ使用できます。現在、Azure Active Directory ポータルには含まれていません。
+>リソース固有のアクセス許可は、Teams クライアントにインストールされている Teams アプリでのみ使用できます。現在、Azure Active Directory ポータルには含められません。
 
 ## <a name="enable-resource-specific-consent-in-your-application"></a>アプリケーションでリソース固有の同意を有効にする
 
 アプリケーションで RSC を有効にする手順は次のとおりです。
 
-1. [Azure Active Directory ポータルでグループ所有者の同意設定を構成](#configure-group-owner-consent-settings-in-the-azure-ad-portal)します。
-1. Azure AD ポータルを使用して、[アプリを Microsoft identity platform に登録](#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)します。
-1. [AZURE AD ポータルでアプリケーションのアクセス許可を確認](#review-your-application-permissions-in-the-azure-ad-portal)します。
-1. [Microsoft Identity platform からアクセストークンを取得](#obtain-an-access-token-from-the-microsoft-identity-platform)します。
-1. [Teams アプリマニフェストを更新](#update-your-teams-app-manifest)します。
-1. [Teams にアプリを直接インストール](#install-your-app-directly-in-teams)します。
-1. [アプリで RSC 権限が追加されているかどうかを確認](#check-your-app-for-added-rsc-permissions)します。
+1. [Azure Active Directory ポータルでグループ所有者の同意設定を構成します](#configure-group-owner-consent-settings-in-the-azure-ad-portal)。
+1. [Azure AD ポータルを使用して、Microsoft](#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)ID プラットフォームにアプリを登録します。
+1. [Azure AD ポータルでアプリケーションのアクセス許可を確認します](#review-your-application-permissions-in-the-azure-ad-portal)。
+1. [Microsoft Identity プラットフォームからアクセス トークンを取得します](#obtain-an-access-token-from-the-microsoft-identity-platform)。
+1. [Teams アプリ マニフェストを更新します](#update-your-teams-app-manifest)。
+1. [Teams に直接アプリをインストールします](#install-your-app-directly-in-teams)。
+1. [RSC のアクセス許可が追加されていないかアプリを確認します](#check-your-app-for-added-rsc-permissions)。
 
-## <a name="configure-group-owner-consent-settings-in-the-azure-ad-portal"></a>Azure AD ポータルでグループ所有者の同意設定を構成する
+## <a name="configure-group-owner-consent-settings-in-the-azure-ad-portal"></a>Azure ポータルでグループ所有者の同意設定ADする
 
-Azure portal で直接 [グループ所有者の同意](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-to-apps-accessing-group-data) を有効または無効にすることができます。
+Azure Portal 内でグループ [所有者の同意を](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal) 直接有効または無効にできます。
 
 > [!div class="checklist"]
 >
->- [グローバル管理者または会社の管理者](/azure/active-directory/users-groups-roles/directory-assign-admin-roles.md#global-administrator--company-administrator)として、 [Azure portal](https://portal.azure.com)にサインインします。  
- > - [[](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings) **Azure Active Directory**  =>  **エンタープライズアプリケーション**  =>  の **同意とアクセス許可**]  =>  **ユーザーの同意設定** を選択します。
-> - [ **グループ所有者がデータにアクセスするためのアプリに対するグループ所有者の同意** を有効にする] (既定では、すべての **グループ所有者に対して [許可グループ所有者に同意** します)] というラベルが付けられます。 チーム所有者が RSC を使用してアプリをインストールするには、そのユーザーに対してグループ所有者の同意を有効にする必要があります。
+>- グローバル管理者/ [会社管理者として Azure Portal](https://portal.azure.com) [にサインインします](/azure/active-directory/users-groups-roles/directory-assign-admin-roles.md#global-administrator--company-administrator)。  
+ > - [[Azure](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings) **Active Directory Enterprise**  =>  **アプリケーションの同意とアクセス**  =>  **許可]** ユーザーの同意  =>  **設定を選択します**。
+> - データにアクセスするアプリに対するグループ所有者の同意というラベルが付いたコントロールを使用して、ユーザーの同意を有効、無効、または制限します **(既定** では、すべてのグループ所有者に対するグループ所有者の同意 **を許可します**)。 チーム所有者が RSC を使用してアプリをインストールするには、そのユーザーに対してグループ所有者の同意を有効にする必要があります。
 
-![azure rsc 構成](../../assets/images/azure-rsc-configuration.png)
+![azure rsc の構成](../../assets/images/azure-rsc-configuration.png)
 
-PowerShell を使用して Azure portal でグループ所有者の同意を有効または無効にするには、「 [powershell を使用してグループ所有者の同意を構成](/azure/active-directory/manage-apps/configure-user-consent#configure-group-owner-consent-using-powershell)する」に記載されている手順に従います。
+PowerShell を使用してグループ所有者の同意を有効または無効にするには、「PowerShell を使用してグループ所有者の同意を構成する」で説明 [されている手順に従います](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-powershell)。
 
-## <a name="register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal"></a>Azure AD ポータルを使用してアプリを Microsoft identity platform に登録する
+## <a name="register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal"></a>Azure AD ポータルを使用してアプリを Microsoft ID プラットフォームに登録する
 
-Azure Active Directory ポータルには、アプリを登録して構成するための一元的なプラットフォームが用意されています。 Microsoft identity platform と統合して Microsoft Graph Api を呼び出すには、アプリが Azure AD ポータルに登録されている必要があります。 「 [Microsoft identity platform を使用してアプリケーションを登録する」を](/graph/auth-register-app-v2)*参照してください*。
+Azure Active Directory ポータルは、アプリを登録および構成する中心的なプラットフォームを提供します。 Microsoft ID プラットフォームと統合し、Microsoft Graph API を呼び出AD Azure AD ポータルにアプリを登録する必要があります。 *「Microsoft* [ID プラットフォームにアプリケーションを登録する」を参照してください](/graph/auth-register-app-v2)。
 
 >[!WARNING]
->複数の Teams アプリを同じ Azure AD アプリ id に登録しないでください。アプリ id は、アプリごとに一意である必要があります。 同じアプリ id に複数のアプリをインストールしようとすると失敗します。
+>複数の Teams アプリを同じ Azure アプリ id AD登録しない。アプリ ID は、アプリごとに一意である必要があります。 同じアプリ ID に複数のアプリをインストールしようとすると失敗します。
 
 ## <a name="review-your-application-permissions-in-the-azure-ad-portal"></a>Azure AD ポータルでアプリケーションのアクセス許可を確認する
 
-[**ホーム**  =>  **アプリの登録**] ページに移動して、RSC アプリを選択します。 左側のナビゲーションバーから [ **API アクセス許可** ] を選択し、アプリに対して構成されているアクセス許可の一覧を確認します。 アプリケーションが RSC Graph API 呼び出しのみを行う場合は、そのページのすべてのアクセス許可を削除します。 アプリが非 RSC 呼び出しを行う場合は、必要に応じてそれらのアクセス許可を維持します。
+[ホーム アプリ **の**  =>  **登録] ページに移動し**、RSC アプリを選択します。 左側 **のナビゲーション バーから API** のアクセス許可を選択し、アプリに対して構成されているアクセス許可の一覧を確認します。 アプリで RSC Graph API 呼び出しのみを行う場合は、そのページのすべてのアクセス許可を削除します。 アプリで RSC 以外の呼び出しも行う場合は、必要に応じてこれらのアクセス許可を保持します。
 
 >[!IMPORTANT]
->Azure AD portal は、RSC のアクセス許可を要求するために使用することはできません。 RSC のアクセス許可は、現在、Teams クライアントにインストールされ、アプリマニフェスト (JSON) ファイルで宣言されている Teams アプリケーションに対して排他的です。
+>Azure AD ポータルを使用して RSC アクセス許可を要求することはできません。 RSC のアクセス許可は現在、Teams クライアントにインストールされている Teams アプリケーション専用であり、アプリ マニフェスト (JSON) ファイルで宣言されています。
 
-## <a name="obtain-an-access-token-from-the-microsoft-identity-platform"></a>Microsoft identity platform からアクセストークンを取得する
+## <a name="obtain-an-access-token-from-the-microsoft-identity-platform"></a>Microsoft ID プラットフォームからアクセス トークンを取得する
 
-Graph API の呼び出しを行うには、id プラットフォームからアプリのアクセストークンを取得する必要があります。 アプリが Microsoft identity platform からトークンを取得する前に、Azure AD ポータルに登録されている必要があります。 アクセス トークンには、アプリとアプリに付与されているアクセス許可に関する情報が含まれています。このアクセス許可は、Microsoft Graph を通じて利用できるリソースと API に対応するものです。
+Graph API 呼び出しを行う場合は、ID プラットフォームからアプリのアクセス トークンを取得する必要があります。 アプリが Microsoft ID プラットフォームからトークンを取得するには、その前に Azure AD ポータルに登録する必要があります。 アクセス トークンには、アプリとアプリに付与されているアクセス許可に関する情報が含まれています。このアクセス許可は、Microsoft Graph を通じて利用できるリソースと API に対応するものです。
 
-Id プラットフォームからアクセストークンを取得するには、Azure AD 登録プロセスの次の値を持っている必要があります。
+ID プラットフォームからアクセス トークンを取得するには、Azure AD 登録プロセスから次の値を取得する必要があります。
 
-- アプリ登録ポータルによって割り当てられた **アプリケーション ID** 。 アプリでシングルサインオン (SSO) がサポートされている場合は、アプリと SSO に対して同じアプリケーション ID を使用する必要があります。
-- **クライアントシークレット/パスワード**、または公開/秘密キーペア (**証明書**)。 ネイティブ アプリの場合、これは必須ではありません。
-- Azure AD からの応答を受信するための、アプリの **リダイレクト URI** (または応答 URL)。
+- アプリ **登録ポータルによって** 割り当てられたアプリケーション ID。 アプリでシングル サインオン (SSO) がサポートされている場合は、アプリと SSO に同じアプリケーション ID を使用する必要があります。
+- クライアント  **シークレット/パスワード、** または公開/秘密キーのペア (**証明書**)。 ネイティブ アプリの場合、これは必須ではありません。
+- Azure AD からの応答をアプリが受信するリダイレクト **URI** (または応答 URL)。
 
- ユーザー [の代理](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token)としてアクセスを取得し、[ユーザーなしでアクセスを取得する](/graph/auth-v2-service)を *参照してください*。
+ *「ユーザー*[の代わりにアクセスを取得する」と「ユーザー](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token&preserve-view=true)なしで [アクセスを取得する」を参照](/graph/auth-v2-service)
 
-## <a name="update-your-teams-app-manifest"></a>Teams アプリマニフェストを更新する
+## <a name="update-your-teams-app-manifest"></a>Teams アプリ マニフェストを更新する
 
-RSC アクセス許可は、アプリマニフェスト (JSON) ファイルで宣言されています。  次の値を使用して、 [Webapplicationinfo](../../resources/schema/manifest-schema.md#webapplicationinfo) キーをアプリのマニフェストに追加します。
+RSC アクセス許可は、アプリ マニフェスト (JSON) ファイルで宣言されます。  次の [値を使用して、webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) キーをアプリ マニフェストに追加します。
 
 > [!div class="checklist"]
 >
-> - **id**  : azure ad アプリ Id。 *「* [azure ad ポータルでアプリを登録](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)する」を参照してください。
-> - **resource**  -任意の文字列。 このフィールドは、RSC では操作を行いませんが、追加して、エラー応答が発生しないように値を設定する必要があります。任意の文字列が実行されます。
-> - **アプリケーションのアクセス許可** -アプリの RSC アクセス許可。 [リソース固有の権限](resource-specific-consent.md#resource-specific-permissions)を *参照してください*。
+> - **id** — Azure ADアプリ ID。Azure AD ポータルにアプリ [を登録するを参照してください](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)。
+> - **resource**  — 任意の文字列。 このフィールドは RSC では操作されませんが、エラー応答を回避するために値を追加する必要があります。任意の文字列で実行されます。
+> - **アプリケーションのアクセス許可** — アプリの RSC アクセス許可。 *「リソース*[固有のアクセス許可」を参照してください](resource-specific-consent.md#resource-specific-permissions)。
 
 >
 >[!IMPORTANT]
-> 非 RSC アクセス許可は、Azure portal に格納されます。 アプリマニフェストに追加しないでください。
+> RSC 以外のアクセス許可は Azure portal に保存されます。 アプリ マニフェストに追加しません。
 >
 
 ```json
@@ -130,36 +127,36 @@ RSC アクセス許可は、アプリマニフェスト (JSON) ファイルで�
   }
 ```
 
-## <a name="install-your-app-directly-in-teams"></a>Teams にアプリを直接インストールする
+## <a name="install-your-app-directly-in-teams"></a>Teams に直接アプリをインストールする
 
-アプリを作成したら、 [アプリパッケージ](../../concepts/deploy-and-publish/apps-upload.md#upload-your-package-into-a-team-using-the-apps-tab) を特定のチームに直接アップロードすることができます。  そのためには、カスタムアプリのセットアップポリシーの一部として、[ **カスタムアプリのアップロード** ] ポリシー設定を有効にする必要があります。 *「* [Custom App policy Settings](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings)」を参照してください。
+アプリを作成したら、アプリ パッケージを特定の [チームに直接](../../concepts/deploy-and-publish/apps-upload.md#upload-your-package-into-a-team-using-the-apps-tab) アップロードできます。  これを行うには、カスタム アプリ **セットアップ** ポリシーの一部として [カスタム アプリのアップロード] ポリシー設定を有効にする必要があります。 *「カスタム*[アプリ ポリシー設定」をご覧ください](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings)。
 
-## <a name="check-your-app-for-added-rsc-permissions"></a>アプリで RSC 権限が追加されていることを確認する
+## <a name="check-your-app-for-added-rsc-permissions"></a>RSC のアクセス許可が追加されていないかアプリを確認する
 
 >[!IMPORTANT]
->RSC のアクセス許可は、ユーザーには含まれません。 呼び出しは、ユーザーが委任したアクセス許可ではなく、アプリのアクセス許可で行われます。 そのため、アプリは、チャネルの作成やタブの削除など、ユーザーができない操作を実行できる場合があります。RSC API 呼び出しを行う前に、ユースケースに対するチーム所有者の意図を確認する必要があります。 *「* [Microsoft Teams API の概要](/graph/teams-concept-overview)」を参照してください。
+>RSC アクセス許可はユーザーに属性付けされません。 呼び出しは、ユーザーによって委任されたアクセス許可ではなく、アプリのアクセス許可で行います。 したがって、チャネルの作成やタブの削除など、ユーザーが実行できない操作をアプリで実行できる場合があります。RSC API 呼び出しを行う前に、チーム所有者の使用事例の意図を確認する必要があります。 *Microsoft* [Teams API の概要を参照してください](/graph/teams-concept-overview)。
 
-アプリがチームにインストールされたら、 [Graph エクスプローラー](https://developer.microsoft.com/graph/graph-explorer)  を使用して、チーム内のアプリに付与されているアクセス許可を表示できます。
+アプリがチームにインストールされた後 [、Graph エクスプローラー](https://developer.microsoft.com/graph/graph-explorer)  を使用して、チーム内のアプリに付与されているアクセス許可を表示できます。
 
 > [!div class="checklist"]
 >
->- Teams クライアントからチームの **groupId** を取得します。
-> - Teams クライアントで、左端のナビゲーションバーにある [ **teams** ] を選択します。
-> - アプリがインストールされているチームを、ドロップダウンメニューから選択します。
-> - [ **その他のオプション** ] アイコン (&#8943;) を選択します。
-> - [ **チームへのリンクの取得**] を選択します。
-> - 文字列から **groupId** 値をコピーして保存します。
-> - **Graph エクスプローラー** にログインします。
-> - 次のエンドポイントに対して **GET** を `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants` 呼び出します。 応答の clientAppId フィールドは、Teams アプリマニフェストで指定されている appId にマップされます。
-  ![通話を取得するための Graph エクスプローラーの応答。](../../assets/images/graph-permissions.png)
+>- Teams クライアントからチーム **の groupId** を取得します。
+> - Teams クライアントで、一 **方** の左側のナビゲーション バーから Teams を選択します。
+> - アプリがインストールされているチームをドロップダウン メニューから選択します。
+> - [その他 **のオプション]** アイコン (&#8943;)。
+> - [チーム **へのリンクを取得する] を選択します**。
+> - 文字列から **groupId 値をコピー** して保存します。
+> - Graph エクスプローラー **にログインします**。
+> - 次の **エンドポイントに対** して GET 呼び出しを行います `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants` 。 応答の clientAppId フィールドは、Teams アプリ マニフェストで指定された appId にマップされます。
+  ![GET 呼び出しに対する Graph エクスプローラーの応答。](../../assets/images/graph-permissions.png)
  
 ## <a name="test-resource-specific-consent"></a>リソース固有の同意をテストする
  
 > [!div class="nextstepaction"]
-> [**Teams でのリソース固有の同意権限をテストする**](test-resource-specific-consent.md)
+> [**Teams でリソース固有の同意のアクセス許可をテストする**](test-resource-specific-consent.md)
  
-## <a name="related-topic-for-teams-administrators"></a>Teams 管理者向けの関連トピック
+## <a name="related-topic-for-teams-administrators"></a>Teams 管理者向け関連トピック
 
 > [!div class="nextstepaction"]
-> [**管理者のための Microsoft Teams でのリソース固有の同意**](/MicrosoftTeams/resource-specific-consent)
+> [**管理者向け Microsoft Teams でのリソース固有の同意**](/MicrosoftTeams/resource-specific-consent)
 > 

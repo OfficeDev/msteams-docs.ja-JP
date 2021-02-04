@@ -1,27 +1,27 @@
 ---
-title: ストア申請のチェックリスト
+title: ストア申請チェックリスト
 description: Microsoft Teams アプリを AppSource に公開する前に使用するチェックリスト
 ms.topic: reference
 keywords: teams publish store office publishing checklist submission Teams apps appsource validation
-ms.openlocfilehash: 7cb9192c159e7d65aad188c9746de3de7947a42b
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 02490d7a020b8887589c65840a0abe597887527f
+ms.sourcegitcommit: 55a4246e62d69d631a63bdd33de34f1b62cc0132
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014216"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "50093937"
 ---
-# <a name="prepare-for-appsource-submission"></a>AppSource の申請を準備する  
+# <a name="prepare-for-appsource-submission"></a>AppSource 申請の準備  
 
-AppSource に一覧表示するには、アプリが承認プロセスを実行する必要があります。 これは、Microsoft Teams グループによって提供される無料のサービスであり、アプリが説明されているとおりに動作し、適切なすべてのメタデータを含み、エンド ユーザーにとって有益なコンテンツを提供します。 迅速な承認を得る上で役立つには、アプリが次の要件とガイドラインを満たしていることを確認してください。
+AppSource に一覧表示するには、アプリが承認プロセスを実行する必要があります。 これは、Microsoft Teams グループによって提供される無料のサービスであり、アプリが説明されているとおりに動作し、適切なすべてのメタデータを含み、エンド ユーザーにとって有益なコンテンツを提供します。 迅速な承認を得る上で役立つには、アプリが次の要件とガイドラインを満たしていることを確認します。
 
 * **配布方法:** アプリがストア プラットフォームで公開することを意図している必要があります。 AppSource [に公開](../../overview.md) せずにアプリを配布するには、他のオプションがあります。
 * **検証ポリシー:** アプリは、申請前に現在のすべての [AppSource 検証ポリシーを渡](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) す必要があります。 
   > [!NOTE] 
-  > Appsource の検証ポリシーは変更される可能性があります。
+  > Appsource 検証ポリシーは変更される可能性があります。
 * **モバイルの準備:** アプリはモバイル対応である必要があります。 アプリにタブが含まれている場合は、モバイル設計[](~/tabs/design/tabs-mobile.md)ガイドラインに従う必要があります。また、アプリ[](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment)はモバイル OS (iOS および Android) のアップセル要件に準拠する必要はありません。
 * **アプリの自己テスト:** マニフェスト検証ツールを使 [ってアプリをテストします](#teams-app-validation-tool)。
 * **アプリの詳細ページ:** アプリは、アプリの詳細ページ  [のチェックリストと一致している必要があります](detail-page-checklist.md)。
-* **ヒントとよく失敗するケース:** アプリの申請と承認時間を [改善](frequently-failed-cases.md)  するために、一覧表示されているヒントと頻繁に失敗するケースに特に注意してください。
+* **ヒントとよく失敗するケース:** アプリの申請と承認時間を [改善するために、](frequently-failed-cases.md)  一覧表示されているヒントや頻繁に失敗するケースに特に注意を払います。
 * **アプリ マニフェスト:** アプリ マニフェストのチェックリストに対して [アプリ マニフェストを確認します](app-manifest-checklist.md)。
 * **テストとデバッグ:** アプリを完全にテストしてデバッグ [したと確認します](../../../build-and-test/debug.md)。
 * **テストノート:** 検証用の [テスト ノートを含める](#test-notes-for-validation)
@@ -37,7 +37,7 @@ AppSource に一覧表示するには、アプリが承認プロセスを実行�
 >
 > * [**アプリ検証機能のホームページ**](https://dev.teams.microsoft.com/appvalidation.html)
 > * [**Teams Visual Studio Code ツールキット**](/toolkit/visual-studio-code-overview.md)
-> * [**App Studio**](/concepts/build-and-test/app-studio-overview.md)
+> * [**App Studio**](../../../build-and-test/app-studio-overview.md)
 
 ### <a name="teams-app-validator"></a>Teams アプリ検証機能
 
@@ -49,9 +49,9 @@ AppSource に一覧表示するには、アプリが承認プロセスを実行�
 
 自動化が困難なテスト シナリオの場合、暫定的なチェックリストには、最も一般的に失敗したテスト ケースの 7 つが示されています。
 
-![暫定的なチェックリスト](../../../../assets/images/validation-tool/preliminary-checklist.png)
+![準備チェックリスト](../../../../assets/images/validation-tool/preliminary-checklist.png)
 
-## <a name="privacy-policy-terms-of-use-and-support-urls"></a>プライバシー ポリシー、利用規約、およびサポート URL
+## <a name="privacy-policy-terms-of-use-and-support-urls"></a>プライバシー ポリシー、使用条件、サポート URL
 
 ### <a name="privacy-policy"></a>プライバシー ポリシー
 
@@ -63,7 +63,7 @@ AppSource に一覧表示するには、アプリが承認プロセスを実行�
 > * 汎用のプライバシー ポリシーを使用する場合、Teams アプリと Web サイトを含めるには、"サービス"、"アプリケーション"、"プラットフォーム" を参照する必要があります。
 > * ユーザー データの保存、ユーザー データの保持、削除、およびセキュリティ制御の処理方法を含める必要があります。
 > * 連絡先情報を含める必要があります。
-> * リンク切れ、ベータ版の URL、またはステージング URL は含めずにしてください。
+> * リンク切れ、ベータ版の URL、またはステージング URL を含めずにしてください。
 
 ### <a name="terms-of-use"></a>利用規約
 
@@ -71,7 +71,7 @@ AppSource に一覧表示するには、アプリが承認プロセスを実行�
 
 ### <a name="support-urls"></a>サポート URL
 
-サポート URL では、アプリに関する問題について連絡するために認証またはログイン資格情報を必要としなけずにしてください。
+サポート URL では、アプリに関する問題について連絡するために認証またはログイン資格情報を要求する必要があります。
 
 ## <a name="test-notes-for-validation"></a>検証のテスト ノート
 
@@ -81,7 +81,7 @@ AppSource に一覧表示するには、アプリが承認プロセスを実行�
 
 * 確認のために、提供するアカウントには、事前に入力された十分なデータが必要です。
 
-* エンタープライズ アプリ、サブスクリプションが必要なアプリ、または Office 365 テナント/ドメインの依存関係があるアプリの場合は、初回実行時のユーザー エクスペリエンスを検証するために、アプリ用に事前に構成されていない同じドメイン内の 3 番目のアカウントを指定する必要があります。
+* エンタープライズ アプリ、サブスクリプションが必要なアプリ、または Office 365 テナント/ドメインの依存関係があるアプリの場合は、初回実行時のユーザー エクスペリエンスを検証するために、アプリ用に事前に構成されていない同じドメイン内の 3 番目のアカウントを提供する必要があります。
 
 * アプリにプレミアム/アップグレードされた機能がある場合は、そのエクスペリエンスをテストするために必要なアクセス権を持つアカウントを提供する必要があります。
 
@@ -93,4 +93,4 @@ AppSource に一覧表示するには、アプリが承認プロセスを実行�
 
 * **Teams のアプリ機能** に関するメモ : Teams 内でアプリが提供する機能のすべてと、各機能をテストするための手順について詳しく説明します。
 
-* **アプリの機能を示すビデオ (オプション)**: 製品のビデオ録画を提供して、アプリの機能を完全に理解することができます。
+* **アプリの機能を** 示すビデオ (オプション) : 製品のビデオ録画を提供して、アプリの機能を完全に理解することができます。

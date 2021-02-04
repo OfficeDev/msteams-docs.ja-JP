@@ -3,12 +3,12 @@ title: Microsoft 365 テナントを準備する
 description: Microsoft 365 の Teams の概要
 ms.topic: how-to
 keywords: Microsoft 365 テナントTeams のアップロードの構成
-ms.openlocfilehash: bfeb1a5d39b8a6ad8d1dd4d631f984ecec4e26f1
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 50765271b93edd380d1c23672289b618baf1d346
+ms.sourcegitcommit: 55a4246e62d69d631a63bdd33de34f1b62cc0132
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014454"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "50093944"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Microsoft 365 テナントを準備する
 
@@ -48,6 +48,8 @@ Microsoft 365 のサブスクライバーである場合は、 次のいずれ�
 ![sideload ビューを有効にする](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
 
 4. **カスタム アプリのアップロード** を切り替え **オン** の位置にします。
+
+5. [保存 **] を** 選択して変更を保存します。
 
 手順は以上です。 テスト テナントで、カスタムアプリのサイドローディングができるようになりました。
 
