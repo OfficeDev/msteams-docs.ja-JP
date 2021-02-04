@@ -22,7 +22,7 @@
       href: build-your-first-app/build-messaging-extension.md
 - name: チュートリアルとコード サンプル
   items:
-    - name: 概要
+    - name: チュートリアル
       href: tutorials/code-samples.md
     - name: C# を使用してアプリを作成する
       href: tutorials/get-started-dotnet-app-studio.md
@@ -30,24 +30,8 @@
       href: tutorials/get-started-nodejs-app-studio.md
     - name: Yeoman ジェネレーターを使用してアプリを作成する
       href: tutorials/get-started-yeoman.md
-    - name: ボット サンプル
-      items:
-        - name: C# を使ったチャットボット (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot'
-        - name: Node.js を使ったチャットボット (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot'
-        - name: Python を使ったチャットボット (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot'
-    - name: メッセージング拡張機能のサンプル
-      items:
-        - name: C# を使った操作コマンド (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/51.teams-messaging-extensions-action'
-        - name: Node.js を使った操作コマンド (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/51.teams-messaging-extensions-action'
-        - name: C# を使った検索コマンド (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/50.teams-messaging-extensions-search'
-        - name: Node.js を使った検索コマンド (GitHub)
-          href: 'https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search'
+    - name: コード サンプル
+      href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: アプリの基本事項
   items:
     - name: Teams アプリの機能
