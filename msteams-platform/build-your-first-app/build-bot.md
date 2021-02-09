@@ -5,12 +5,12 @@ description: Microsoft Teams ボットを使用して、Microsoft Teams ボッ�
 ms.author: lajanuar
 ms.date: 11/04/2020
 ms.topic: tutorial
-ms.openlocfilehash: fbabd5130f0b7eb648a980f5f143792cc4c17933
-ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
+ms.openlocfilehash: 3e07c148e1b03431dc419a4e3679abac0229ff72
+ms.sourcegitcommit: e08f309f62db2cf0f505f2aadfe728e5b46c17a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49911948"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "50140469"
 ---
 # <a name="build-a-bot-for-microsoft-teams"></a>Microsoft Teams のボットを構築する
 
@@ -53,7 +53,7 @@ Microsoft Teams Toolkitは、アプリ用に次のコンポーネントを設定
 
 ## <a name="2-identify-relevant-app-project-components"></a>2. 関連するアプリ プロジェクト コンポーネントを特定する
 
-アプリの構成とスキャフォールディングの多くが、Teams アプリを使用してプロジェクトを作成するときに自動的に設定Toolkit。 ボットを構築する主なコンポーネントを見てみしましょう。
+アプリの構成とスキャフォールディングの多くが、Teams アプリケーションを使用してプロジェクトを作成するときに自動的に設定Toolkit。 ボットを構築する主なコンポーネントを見てみしましょう。
 
 ### <a name="app-configurations"></a>アプリの構成
 
@@ -61,7 +61,7 @@ Microsoft Teams Toolkitは、アプリ用に次のコンポーネントを設定
 
 ### <a name="app-scaffolding"></a>アプリのスキャフォールディング
 
-アプリのスキャフォールディングは、ボットが Teams でアクティビティを処理する方法 (たとえば、ボットが "Hello" などの特定のメッセージに応答する方法) を処理するために、プロジェクトのルート ディレクトリにあるファイルを提供します。 `botActivityHandler.js`
+アプリのスキャフォールディングでは、ボットが Teams でアクティビティを処理する方法 (たとえば、ボットが "Hello" などの特定のメッセージに応答する方法) を処理するために、プロジェクトのルート ディレクトリにあるファイルが提供されます。 `botActivityHandler.js`
 
 ## <a name="3-set-up-a-secure-tunnel-to-your-app"></a>3. アプリへのセキュリティで保護されたトンネルを設定する
 
@@ -69,20 +69,20 @@ Microsoft Teams Toolkitは、アプリ用に次のコンポーネントを設定
 
 1. まだインストールしていない場合は [、ngrok をインストールします](https://ngrok.com/download)。
 1. ターミナルで、次を実行します `ngrok http -host-header=rewrite 3978` 。
-1. Teams は HTTPS 接続を必要としますので、出力内の HTTPS URL (たとえば `https://468b9ab725e9.ngrok.io` ) をコピーします。
+1. Teams は HTTPS 接続を必要としますので、出力内の HTTPS URL (例 `https://468b9ab725e9.ngrok.io` : HTTPS URL) をコピーします。
 
 この URL を使用すると、Teams (HTTPS 接続が必要) は、アプリをホストしている場所 (ポート `localhost` 3978) にトンネリングできます。
 
 ## <a name="4-configure-your-bot"></a>4. ボットを構成する
 
-Teams でボットを使用するには、Azure Bot Service にボットを登録する必要があります。 Teams アプリを使用してアプリをセットアップすると、自動的にToolkit。
+Teams でボットを使用するには、Azure Bot Service にボットを登録する必要があります。 Teams アプリを使用してアプリをセットアップすると、自動的に実行Toolkit。
 
 引き続き、ボットに送信されるユーザー メッセージ (要求) を受信および処理するエンドポイント アドレスを指定する必要があります。 通常、URL は次のように表示されます `https://HOST_URL/api/messages` 。 この設定は、ツールキットですばやく構成できます。
 
 1. In Visual Studio Code, select **Microsoft Teams** on the left Activity Bar and choose Open Microsoft Teams :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: **Toolkit.**
 1. 既存の **ボット登録>ボットに移動し** 、セットアップ時に作成したボットを選択します。
 1. [Bot **endpoint address]** フィールドに、ボットをホストしている ngrok URL (たとえば) を入力し、 `https://468b9ab725e9.ngrok.io` ボットに `/api/messages` 追加します。<br/>
-    :::image type="content" source="../assets/images/build-your-first-app/bot-config-endpoint-url.png" alt-text="Teams アプリケーションでボット エンドポイント URL を構成できる場所を示すToolkit。":::
+    :::image type="content" source="../assets/images/build-your-first-app/bot-config-endpoint-url.png" alt-text="Teams アプリケーションでボット エンドポイント URL を構成できる場所を示Toolkit。":::
 
 ボットは Teams のメッセージに応答できます。
 
@@ -119,7 +119,7 @@ Teams でボットを使用するには、Azure Bot Service にボットを登�
 
 ## <a name="well-done"></a>よくやりましたね
 
-おめでとうございます! 1 対 1 またはグループ設定 (チャネルとチャット) でユーザーと通信できる基本的な Teams ボットがあります。
+おめでとうございます。 1 対 1 またはグループ設定 (チャネルとチャット) でユーザーと通信できる基本的な Teams ボットがあります。
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 
@@ -135,7 +135,7 @@ Teams でボットを使用するには、Azure Bot Service にボットを登�
 
 * [サンプルの 1 つで Teams ボットが実行できるその他の操作を参照する](https://github.com/microsoft/BotBuilder-Samples#teams-samples)
 * [ボット会話の基本](../bots/how-to/conversations/conversation-basics.md)
-* 設計ガイドライン [に従い](../bots/design/bots.md) 、実稼働対応 [の UI](../concepts/design/design-teams-app-ui-templates.md) テンプレートを使用してビルドし、シームレスなエクスペリエンスを作成します。
+* 設計ガイドライン [に従い](../bots/design/bots.md) 、実稼働環境対応 [の UI](../concepts/design/design-teams-app-ui-templates.md) テンプレートを使用してビルドし、シームレスなエクスペリエンスを作成します。
 * [Teams でのボット認証](../bots/how-to/authentication/auth-flow-bot.md)
 * [Microsoft Bot Framework](https://dev.botframework.com/)
-* [ツールキットを使用せずにボットを作成する](../bots/how-to/create-a-bot-for-teams.md)
+* [ツールキットを使用せずにボットを作成する](../resources/bot-v3/bots-create.md)
