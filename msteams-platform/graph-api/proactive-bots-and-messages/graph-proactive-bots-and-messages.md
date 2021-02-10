@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Teams のプロアクティブ メッセージング チャットのインストールのグラフ
-ms.openlocfilehash: ee1620c8fdcaeeecf0e8b0992017bf6f2fbacbf9
-ms.sourcegitcommit: d0e71ea63af2f67eba75ba283ec46cc7cdf87d75
+ms.openlocfilehash: 4f26b4d2f4e82fcf50b7a35c46bcd07e5afecf19
+ms.sourcegitcommit: b99ed616db734371e4af4594b7e895c5b05737c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "49731973"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "50162895"
 ---
 # <a name="enable-proactive-bot-installation-and-proactive-messaging-in-teams-with-microsoft-graph-public-preview"></a>Microsoft Graph を使用して Teams でプロアクティブ ボットのインストールとプロアクティブ メッセージングを有効にする (パブリック プレビュー)
 
@@ -33,7 +33,7 @@ ms.locfileid: "49731973"
 
 ボットが事前にユーザーにメッセージを送信するには、事前に個人用アプリとして、またはユーザーがメンバーであるチームにインストールする必要があります。 場合によっては、アプリをインストールしていないユーザーや以前にアプリとやり取りしていないユーザーに事前にメッセージを送信する必要があります。 たとえば、組織内のすべてのユーザーに重要な情報をメッセージ送信する必要があります。 このようなシナリオでは、Microsoft Graph API を使用して、ユーザーのボットを事前にインストールできます。
 
-## <a name="permissions"></a>アクセス許可
+## <a name="permissions"></a>許可
 
 Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true) リソースの種類のアクセス許可を使用すると、Microsoft Teams プラットフォーム内のすべてのユーザー (個人用) スコープまたはチーム (チャネル) スコープに対するアプリのインストール ライフサイクルを管理できます。
 
@@ -79,7 +79,7 @@ To get started, you will need a [bot for Teams](../../bots/how-to/create-a-bot-f
 **HTTP GET** 要求:
 
 ```http
-GET https://graph.microsoft.com/beta/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
+GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
 ```
 
 要求はオブジェクトを返 `teamsApp`  します。 返されるオブジェクトは、アプリのカタログによって生成されたアプリ ID であり、Teams アプリ マニフェストで指定した `id`  "id:" とは異なります。
@@ -100,22 +100,22 @@ GET https://graph.microsoft.com/beta/appCatalogs/teamsApps?$filter=externalId eq
 
 **2.**  個人用スコープのユーザーに対してアプリが既にアップロードまたはサイドロードされている場合は、次の情報を `teamsAppId` 取得できます。
 
-**Microsoft Graph ページ リファレンス:** [ユーザー用にインストールされたアプリを一覧表示する](/graph/api/userteamwork-list-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true)
+**Microsoft Graph ページ リファレンス:** [ユーザー用にインストールされたアプリを一覧表示する](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
 **HTTP GET** 要求:
 
 ```http
-GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
+GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
 ```
 
 **3.** チーム スコープのチャネルに対してアプリが既にアップロードまたはサイドロードされている場合は、次のように `teamsAppId` 取得できます。
 
-**Microsoft Graph ページ リファレンス:** [チーム内のアプリを一覧表示する](/graph/api/team-list-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true)
+**Microsoft Graph ページ リファレンス:** [チーム内のアプリを一覧表示する](/graph/api/team-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
 **HTTP GET** 要求:
 
 ```http
-GET https://graph.microsoft.com/beta/teams/{team-id}/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
+GET https://graph.microsoft.com/v1.0/teams/{team-id}/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
 ```
 
 >[!TIP]
@@ -123,26 +123,26 @@ GET https://graph.microsoft.com/beta/teams/{team-id}/installedApps?$expand=teams
 
 ### <a name="-determine-whether-your-bot-is-currently-installed-for-a-message-recipient"></a>✔メッセージ受信者用にボットが現在インストールされているかどうかを確認する
 
-**Microsoft Graph ページ リファレンス:** [ユーザー用にインストールされたアプリを一覧表示する](/graph/api/userteamwork-list-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true)
+**Microsoft Graph ページ リファレンス:** [ユーザー用にインストールされたアプリを一覧表示する](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
 **HTTP GET** 要求:
 
 ```http
-GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
+GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
 ```
 
-この要求は、アプリがインストールされていない場合は空の配列を返し、インストールされている場合は [単一の teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-beta&preserve-view=true) オブジェクトを持つ配列を返します。
+この要求は、アプリがインストールされていない場合は空の配列を返し、インストールされている場合は [単一の teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-v1.0&preserve-view=true) オブジェクトを持つ配列を返します。
 
 ### <a name="-install-your-app"></a>✔をインストールする
 
-**Microsoft Graph ページ リファレンス:** [ユーザー用アプリのインストール](/graph/api/userteamwork-post-installedapps?view=graph-rest-beta&tabs=http&preserve-view=true)
+**Microsoft Graph ページ リファレンス:** [ユーザー用アプリのインストール](/graph/api/userteamwork-post-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
 **HTTP POST** 要求:
 
 ```http
-POST https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps
+POST https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps
 {
-   "teamsApp@odata.bind" : "https://graph.microsoft.com/beta/appCatalogs/teamsApps/{teamsAppId}"
+   "teamsApp@odata.bind" : "https://graph.microsoft.com/v1.0/appCatalogs/teamsApps/{teamsAppId}"
 }
 ```
 

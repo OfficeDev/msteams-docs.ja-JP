@@ -5,12 +5,12 @@ description: Microsoft Teams を使用して、Microsoft Teams の個人用タ�
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: 17263303207ffb5bee333f1ec0e655096b1062ee
-ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
+ms.openlocfilehash: 083d1425fe43a9b150732aa35bef34e2349c6ea6
+ms.sourcegitcommit: b99ed616db734371e4af4594b7e895c5b05737c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49911913"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "50162902"
 ---
 # <a name="build-a-personal-tab-for-microsoft-teams"></a>Microsoft Teams の個人用タブを作成する
 
@@ -36,7 +36,7 @@ Teams には 2 種類のタブがあります。 このチュートリアルで�
 
 ## <a name="1-identify-relevant-app-project-components"></a>1. 関連するアプリ プロジェクト コンポーネントを特定する
 
-アプリの構成とスキャフォールディングの多くが、Teams アプリを使用してプロジェクトを作成するときに自動的に設定Toolkit。 個人用タブを作成する主なコンポーネントを見てみしましょう。
+アプリの構成とスキャフォールディングの多くが、Teams アプリケーションを使用してプロジェクトを作成するときに自動的に設定Toolkit。 個人用タブを作成する主なコンポーネントを見てみしましょう。
 
 ### <a name="app-configurations"></a>アプリの構成
 
@@ -44,14 +44,14 @@ Teams には 2 種類のタブがあります。 このチュートリアルで�
 
 ### <a name="app-scaffolding"></a>アプリのスキャフォールディング
 
-アプリのスキャフォールディングは、Teams で個人用タブをレンダリングするコンポーネントを提供します。 作業できる作業は多くあるのですが、今のところは次の作業にのみ重点を置く必要があります。
+アプリのスキャフォールディングは、Teams で個人用タブをレンダリングするコンポーネントを提供します。 作業できる作業は多くあるのですが、今のところは次の作業に集中する必要があります。
 
 * `Tab.js` ファイルを `src/components` プロジェクトのディレクトリに保存します。 これは、タブ コンテンツ ページをレンダリングする場合に使用します。
 * Microsoft Teams JavaScript クライアント SDK。プロジェクトのフロントエンド コンポーネントに事前に読み込まれます。
 
 ## <a name="2-customize-your-tab-content-page"></a>2. タブ コンテンツ ページをカスタマイズする
 
-組織内の重要な連絡先の一覧をコンパイルします。 次のスニペットを、自分に関連する情報でコピーして更新するか、時間を取り合い、コードを使用します。
+組織内の重要な連絡先の一覧をコンパイルします。 自分に関連する情報を使用して次のスニペットをコピーして更新するか、時間の間、コードを使用します。
 
 ```JSX
 <div>
@@ -98,13 +98,13 @@ a {
 
 ## <a name="3-update-the-tab-theme"></a>3. タブ テーマを更新する
 
-優れたアプリは Teams にネイティブだと感じるので、ユーザーが優先する Teams テーマ (既定 (明るい)、暗い、ハイ コントラスト) とタブをブレンドすることが重要です。 前のスクリーンショットでお気付きのように、クライアントが濃色テーマを使用している場合でも、タブの背景は明るい色になります。 これは推奨されるユーザー エクスペリエンスではありません。
+優れたアプリは Teams ネイティブと感じるので、ユーザーが優先する Teams テーマ (既定 (明色)、濃色、ハイ コントラスト) とタブをブレンドすることが重要です。 前のスクリーンショットでお気付きのように、クライアントが濃色テーマを使用している場合でも、タブの背景は明るい色になります。 これは推奨されるユーザー エクスペリエンスではありません。
 
-[Teams JavaScript クライアント SDK を使用](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)すると、アプリがクライアントのテーマの変更を認識して対応できます。 これを行う方法を見てみしましょう。
+[Teams JavaScript クライアント SDK は](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)、アプリを認識し、クライアントのテーマの変更に対応できます。 これを行う方法を見てみしましょう。
 
 ### <a name="get-context-about-the-teams-client"></a>Teams クライアントに関するコンテキストを取得する
 
-ファイルには、構成済みのクライアント テーマに関する情報を提供する呼び出し `Tab.js` `microsoftTeams.getContext()` [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) があります。 アプリのスキャフォールディングにより、このコードを使用してインターフェイスとそのプロパティ `context` にアクセスします。
+ファイルには、構成済みのクライアント テーマについて、特に詳細を提供 `Tab.js` `microsoftTeams.getContext()` [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) する呼び出しがあります。 アプリのスキャフォールディングにより、インターフェイスとそのプロパティにアクセスするために、このコード `context` を使用します。
 
 ```JavaScript
 componentDidMount(){
@@ -132,7 +132,7 @@ componentDidMount(){
   });
 ```
 
-### <a name="match-theme-styles"></a>一致するテーマのスタイル
+### <a name="match-theme-styles"></a>テーマのスタイルを一致する
 
 テーマ変更ハンドラーは配置されますが、これらの変更に応答し、タブの色を現在のテーマに合わせて調整するコードが必要です。
 
@@ -148,7 +148,7 @@ componentDidMount(){
 テーマ変更ハンドラーによって提供される状態を格納した後、現在のテーマに基づいてタブのスタイルをレンダリングするための条件ロジックを提供します。 次の例は、これを行う基本的な方法を示しています。
 1. で現在のテーマを確認します `isTheme` 。
 2. 現在の `newTheme` テーマに関連する CSS プロパティを持つオブジェクトを作成します。
-3. CSS をタブ コンテンツのルート HTML 要素 ( ) に適用します `<div>` 。
+3. CSS をタブ コンテンツのルート HTML 要素 ( ) に適用します `<div style={newTheme}>` 。
 
 ```JavaScript
 let newTheme
@@ -172,11 +172,11 @@ Teams でタブを確認します。 外観は濃色テーマと密接に一致�
 
 ## <a name="well-done"></a>よくやりましたね
 
-おめでとうございます! 組織の重要な連絡先を簡単に検索できる個人用タブを含む Teams アプリがあります。
+おめでとうございます。 組織の重要な連絡先を簡単に見つけやすくする個人用タブを含む Teams アプリがあります。
 
 ## <a name="learn-more"></a>詳細情報
 
-* 設計ガイドライン [に従い](../tabs/design/tabs.md) 、実稼働対応 [の UI](../concepts/design/design-teams-app-ui-templates.md) テンプレートを使用してビルドし、シームレスなエクスペリエンスを作成します。
+* 設計ガイドライン [に従い](../tabs/design/tabs.md) 、実稼働環境対応 [の UI](../concepts/design/design-teams-app-ui-templates.md) テンプレートを使用してビルドし、シームレスなエクスペリエンスを作成します。
 * タブ [のモバイルに関する考慮事項](../tabs/design/tabs-mobile.md) について説明します。
 * [SSO 認証をタブに追加します](../tabs/how-to/authentication/auth-aad-sso.md)。
 * Microsoft Graph で Teams データ [を利用します](https://docs.microsoft.com/graph/teams-concept-overview)。
