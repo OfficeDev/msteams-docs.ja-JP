@@ -3,12 +3,12 @@ title: 新機能
 description: Microsoft Teams のすべての新しい開発者向け機能について説明します。
 ms.topic: reference
 keywords: Teams の新機能
-ms.openlocfilehash: 37192878bf6c3e3697faf535dcd757c2ceb1f5f3
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 49603a9e48cd0a9951c6d9f0132a705770322de4
+ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014559"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "50231653"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -21,6 +21,7 @@ ms.locfileid: "50014559"
 
 | **日付** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+|02/09/2021|新機能: デバイス機能の概要を追加しました。 <br/> 更新: マイク機能の情報がネイティブ デバイスのアクセス許可に追加され、メディア機能ファイルが統合されます。|[概要](concepts/device-capabilities/device-capabilities-overview.md), [デバイスのアクセス許可の要求](concepts/device-capabilities/native-device-permissions.md), [メディア機能の統合](concepts/device-capabilities/mobile-camera-image-permissions.md)|
 |11/30/2020|新機能: タブ用の Id プラットフォームと Teams Toolkit Visual Studioコードの統合|[Teams を使用したシングル サインオン認証ToolkitタブVisual Studioコード](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|バージョン 1.8 に更新された Teams アプリ マニフェスト|[リファレンス: Microsoft Teams のマニフェスト スキーマ](resources/schema/manifest-schema.md)|
 |11/10/2020|Teams ボット設計ガイドライン|[ボットの設計ガイドライン](bots/design/bots.md)|

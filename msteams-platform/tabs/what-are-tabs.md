@@ -4,12 +4,12 @@ author: laujan
 description: Teams プラットフォームでのカスタム タブの概要
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 18981955374a892e45ad5ec1e5ec087ae75cb007
-ms.sourcegitcommit: 00c657e3bf57d3b92aca7da941cde47a2eeff4d0
+ms.openlocfilehash: 7e256423ad713b81f9d4bc3760c33903ef91b179
+ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "49911955"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "50231667"
 ---
 # <a name="what-are-microsoft-teams-tabs"></a>Microsoft Teams のタブとは
 
@@ -72,4 +72,4 @@ Teams モバイル クライアントにチャネルまたはグループ タブ
 > [詳細については、デバイスのアクセス許可の要求を参照してください](../concepts/device-capabilities/native-device-permissions.md)
 
 > [!div class="nextstepaction"]
->[詳細については、カメラおよびイメージ ギャラリーのアクセス許可を参照してください](../concepts/device-capabilities/mobile-camera-image-permissions.md)
+> [詳細: メディア機能の統合](../concepts/device-capabilities/mobile-camera-image-permissions.md)
