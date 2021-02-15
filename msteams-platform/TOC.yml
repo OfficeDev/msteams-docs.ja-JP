@@ -54,7 +54,7 @@
           href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
         - name: 仮想アシスタントを作成する
           href: samples/virtual-assistant.md
-    - name: 本番対応のアプリ テンプレート
+    - name: Microsoft Teams 用のアプリ テンプレート
       href: samples/app-templates.md
     - name: 本番対応の Shifts コネクタ
       href: samples/shifts-wfm-connectors.md
@@ -68,9 +68,11 @@
       href: concepts/build-and-test/deep-links.md
     - name: デバイス機能
       items:
+        - name: 概要
+          href: concepts/device-capabilities/device-capabilities-overview.md
         - name: デバイスのアクセス許可を要求する
           href: concepts/device-capabilities/native-device-permissions.md
-        - name: カメラとフォト ギャラリーの使い方
+        - name: メディア機能を統合する
           href: concepts/device-capabilities/mobile-camera-image-permissions.md
 - name: アプリをデザインする
   items:
