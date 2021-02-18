@@ -1,5 +1,6 @@
 ### YamlMime:Hub
 title: Microsoft Teams 開発者向けドキュメント
+summary: カスタム Microsoft Teams アプリの構築に役立つドキュメント、サンプル コード、チュートリアルなどをご覧ください。
 brand: teams
 metadata:
   title: Microsoft Teams プラットフォーム開発者向けドキュメント
@@ -10,97 +11,115 @@ metadata:
   author: laujan
   ms.author: lajanuar
   ms.date: 05/29/2020
-  ms.openlocfilehash: b49635a0bfc927e4c9323985842ef470fa895340
-  ms.sourcegitcommit: b0b2f148add54ccd17fdf863c2f1973a615f8657
+  ms.openlocfilehash: a0bcb386423f937603a6bfca56b5954d55c97bc0
+  ms.sourcegitcommit: 6caf503de5544fb8b9c8c6bef8eff4ff5a46068c
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 10/16/2020
-  ms.locfileid: "48487848"
+  ms.lasthandoff: 02/17/2021
+  ms.locfileid: "50270785"
 highlightedContent:
   items:
-  - title: "Microsoft Teams 開発の新機能 \U0001F680ここから開始してください。"
+  - title: "Teams 開発の新機能 \U0001F680ここから開始してください。"
     itemType: get-started
     url: /microsoftteams/platform/overview
-  - title: タブ — 埋め込み Web エクスペリエンス
+  - title: アプリを計画する
     itemType: overview
-    url: /microsoftteams/platform/tabs/what-are-tabs
-  - title: ボット — 会話ベースの相互作用
+    url: /microsoftteams/platform/concepts/design/understand-use-cases
+  - title: アプリをデザインする
     itemType: overview
-    url: /microsoftteams/platform/bots/what-are-bots
-  - title: メッセージング拡張機能—タスク指向の相互作用
-    itemType: overview
-    url: /microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
-  - title: タスク モジュールとカード — 豊富なメッセージングと通知
-    itemType: overview
-    url: /microsoftteams/platform/task-modules-and-cards/what-are-task-modules
-  - title: Webhook とコネクタ — プログラムされたメッセージングと通知
-    itemType: overview
-    url: /microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors
-  - title: Microsoft Teams と Microsoft Graph API
-    itemType: overview
+    url: /microsoftteams/platform/concepts/design/design-teams-app-overview
+  - title: アプリを作成する
+    itemType: how-to-guide
+    url: /microsoftteams/platform/overview#start-building
+  - title: Microsoft Graph を使用してアプリを強化する
+    itemType: how-to-guide
     url: /graph/teams-concept-overview
-  - title: Microsoft Power Platform を使用した低コードアプリ、ボット、フロー、およびレポート
-    itemType: overview
-    url: /microsoftteams/platform/samples/teams-low-code-solutions/
+  - title: アプリを Teams ストアに公開する
+    itemType: deploy
+    url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
+  - title: チュートリアルとコード サンプル
+    itemType: sample
+    url: /microsoftteams/platform/tutorials/code-samples
+  - title: 新機能
+    itemType: whats-new
+    url: /microsoftteams/platform/whats-new
 conceptualContent:
   title: ガイドとリソース
   items:
-  - title: 参照
+  - title: 対象ユーザー
     links:
-    - url: /microsoftteams/platform/concepts/building-an-app
+    - url: https://developer.microsoft.com/microsoft-teams
       itemType: concept
-      text: Microsoft Teams アプリを構築する
-    - url: /microsoftteams/platform/concepts/extensibility-points
+      text: 開発者
+    - url: /microsoftteams/microsoft-teams
       itemType: concept
-      text: Microsoft Teams の機能ポイント
-    - url: /microsoftteams/platform/concepts/design/understand-use-cases
+      text: IT 担当者
+    - url: https://support.microsoft.com/en-us/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-US&rs=en-US&ad=US#PickTab=Basics
       itemType: concept
-      text: Microsoft Teams の使用事例について
+      text: エンド ユーザー
+  - title: 探索
+    links:
+    - url: /microsoftteams/platform/concepts/capabilities-overview
+      itemType: overview
+      text: Teams アプリの機能
     - url: /microsoftteams/platform/concepts/design/map-use-cases
-      itemType: concept
-      text: ユースケースを Microsoft Teams の機能にマップする
-    - url: /microsoftteams/platform/whats-new
-      itemType: whats-new
-      text: 新機能
+      itemType: overview
+      text: 使用例を Microsoft Teams の機能にマップする
+    - url: /microsoftteams/platform/tutorials/get-started-nodejs-app-studio
+      itemType: how-to-guide
+      text: アプリを使用して Teams アプリをNode.js
+    - url: /microsoftteams/platform/tutorials/get-started-dotnet-app-studio
+      itemType: how-to-guide
+      text: C を使用して Teams アプリを構築する#
+    - url: /microsoftteams/platform/samples/teams-low-code-solutions
+      itemType: how-to-guide
+      text: Microsoft Power Platform を使用して低コードの Teams アプリ、ボット、フローを構築する
+    - url: /microsoftteams/platform/resources/schema/manifest-schema
+      itemType: reference
+      text: Teams アプリのマニフェスト スキーマ
   - title: 詳細
     links:
     - url: /learn/modules/intro-microsoft-teams-apps
       itemType: learn
-      text: Microsoft Teams 用アプリの作成—概要
+      text: Microsoft Teams のアプリを作成する
     - url: /learn/modules/embedded-web-experiences
       itemType: learn
-      text: タブ—組み込みの web エクスペリエンスを作成する
+      text: タブを使用して埋め込み Web エクスペリエンスを作成する
     - url: /learn/modules/msteams-conversation-bots/
       itemType: learn
-      text: Bot —会話の対話を作成する
+      text: ボットとの会話的な対話を作成する
     - url: /learn/modules/msteams-messaging-extensions/
       itemType: learn
-      text: メッセージング拡張機能—タスク指向の対話を作成する
+      text: メッセージング拡張機能とのタスク指向の対話を作成する
     - url: /learn/modules/msteams-task-modules/
       itemType: learn
-      text: タスクモジュール-入力を収集して情報を収集する
+      text: 入力を収集し、タスク モジュールで情報を収集する
     - url: /learn/modules/msteams-webhooks-connectors/
       itemType: learn
-      text: Webhooks と Office 365 のコネクタ-web サービスをチャネルおよびチームに接続する
-  - title: 開発
+      text: Webhook および Office 365 コネクタを使用して、Web サービスをチャネルおよびチームに接続する
+  - title: 統合
     links:
-    - url: /microsoftteams/platform/tutorials/get-started-nodejs-app-studio
-      itemType: get-started
-      text: JavaScript/Node.js とアプリ Studio を使用して Teams アプリを構築する
-    - url: /microsoftteams/platform/tutorials/get-started-dotnet-app-studio
-      itemType: get-started
-      text: C#/.NET およびアプリ Studio を使用して Teams アプリを構築する
-  - title: 展開
-    links:
-    - url: /microsoftteams/platform/samples/app-templates
-      itemType: deploy
-      text: Teams アプリテンプレート-運用準備アプリケーション
-    - url: /microsoftteams/platform/samples/shifts-wfm-connectors
-      itemType: deploy
-      text: Teams でコネクタをシフトする-生産対応の統合
+    - url: /microsoftteams/platform/samples/integrating-web-apps
+      itemType: concept
+      text: Web アプリを統合する
     - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
-      itemType: deploy
-      text: パワー仮想エージェントのボットと Teams の統合
+      itemType: how-to-guide
+      text: Power Virtual Agents チャットボットの統合
+    - url: /microsoftteams/platform/concepts/build-and-test/share-to-teams
+      itemType: reference
+      text: Web サイトの [Share-to-Teams] ボタンを統合する
+    - url: /microsoftteams/platform/tabs/how-to/tabs-in-sharepoint
+      itemType: reference
+      text: Teams タブを SharePoint と統合する
+    - url: /microsoftteams/platform/resources/moodleinstructions
+      itemType: how-to-guide
+      text: 色月の学習管理システムとの統合
+    - url: /microsoftteams/platform/samples/app-templates
+      itemType: reference
+      text: 実稼働環境対応のアプリ テンプレートを統合する
+    - url: /microsoftteams/platform/samples/shifts-wfm-connectors
+      itemType: reference
+      text: 実稼働対応のシフト コネクタを統合する
   - title: Connect
     links:
     - url: https://developer.microsoft.com/microsoft-teams/blogs/
@@ -108,24 +127,30 @@ conceptualContent:
       text: Microsoft Teams 開発者ブログ
     - url: https://aka.ms/microsoftteamscommunitycall
       itemType: overview
-      text: Microsoft Teams コミュニティ コール
-  - title: コミュニティヘルプ
+      text: Microsoft Teams コミュニティコール
+    - url: https://docs.microsoft.com/en-us/teamblog/
+      itemType: whats-new
+      text: お知らせ
+  - title: コミュニティ ヘルプ
     links:
     - url: /microsoftteams/platform/feedback
       itemType: overview
-      text: Microsoft Teams 開発者コミュニティと応答
+      text: Microsoft Teams 開発者コミュニティと対応
+    - url: /microsoftteams/platform/resources/teams-contributor-reference
+      itemType: overview
+      text: Microsoft Teams ドキュメントに投稿する
 tools:
-  title: Sdk & ツール
+  title: SDK とツール
   items:
-  - title: Visual Studio Code の Microsoft Teams ツールキットの拡張機能
+  - title: Microsoft Teams ToolkitコードのVisual Studio拡張機能
     imageSrc: /media/logos/logo_vs-code.svg
     url: /microsoftteams/platform/toolkit/visual-studio-code-overview
-  - title: Visual Studio の Microsoft Teams ツールキットの拡張機能
+  - title: Microsoft Teams Toolkitの拡張機能Visual Studio
     imageSrc: /media/logos/logo_vs-ide.svg
     url: /microsoftteams/platform/toolkit/visual-studio-overview
-  - title: JavaScript SDK for Tabs
+  - title: タブやその他のホスト型エクスペリエンス用の JavaScript クライアント SDK
     imageSrc: ./assets/icons/logo_js.png
-    url: /javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest
+    url: /microsoftteams/platform/tabs/how-to/using-teams-client-sdk
   - title: ボットおよびメッセージング拡張機能用 Node.js Bot Framework SDK
     imageSrc: ./assets/icons/logo_nodejs.png
     url: https://github.com/Microsoft/botbuilder-js

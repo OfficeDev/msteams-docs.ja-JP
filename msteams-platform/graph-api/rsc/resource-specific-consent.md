@@ -6,20 +6,20 @@ author: laujan
 ms.author: lajanuar
 ms.topic: reference
 keywords: Teams 承認 OAuth SSO AAD rsc Graph
-ms.openlocfilehash: 1b5c0f645d93ed33c11bf3279e70133f35f53a2c
-ms.sourcegitcommit: 55a4246e62d69d631a63bdd33de34f1b62cc0132
+ms.openlocfilehash: 97f642b203a1f7fb4cd9332b61265c0b27788e2b
+ms.sourcegitcommit: 6caf503de5544fb8b9c8c6bef8eff4ff5a46068c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "50093930"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "50270799"
 ---
 # <a name="resource-specific-consent-rsc"></a>リソース固有の同意 (RSC)
 
-リソース固有の同意 (RSC) は、Microsoft Teams と Microsoft Graph API の統合であり、アプリで API エンドポイントを使用して組織内の特定のチームを管理できます。 リソース固有の同意 (RSC) アクセス許可モデルを使用すると、チーム所有者は、アプリケーションがチームのデータにアクセスしたり変更したりするための同意を付与できます。 詳細な Teams 固有の RSC アクセス許可は、アプリケーションが特定のチーム内で実行できる操作を定義します。
+リソース固有の同意 (RSC) は、アプリが API エンドポイントを使用して組織内の特定のチームを管理できる Microsoft Teams と Microsoft Graph API の統合です。 リソース固有の同意 (RSC) アクセス許可モデルを使用すると、チーム所有者は、アプリケーションがチームのデータにアクセスしたり変更したりするための同意を付与できます。 Teams 固有の RSC の詳細なアクセス許可は、アプリケーションが特定のチーム内で実行できる操作を定義します。
 
 ## <a name="resource-specific-permissions"></a>リソース固有のアクセス許可
 
-|アプリケーションのアクセス許可| 操作 |
+|アプリケーションのアクセス許可| Action |
 | ----- | ----- |
 |TeamSettings.Read.Group | このチームの設定を取得します。|
 |TeamSettings.ReadWrite.Group|このチームの設定を更新します。|
@@ -50,9 +50,9 @@ ms.locfileid: "50093930"
 1. [Teams に直接アプリをインストールします](#install-your-app-directly-in-teams)。
 1. [RSC のアクセス許可が追加されていないかアプリを確認します](#check-your-app-for-added-rsc-permissions)。
 
-## <a name="configure-group-owner-consent-settings-in-the-azure-ad-portal"></a>Azure ポータルでグループ所有者の同意設定ADする
+## <a name="configure-group-owner-consent-settings-in-the-azure-ad-portal"></a>Azure AD ポータルでグループ所有者の同意設定を構成する
 
-Azure Portal 内でグループ [所有者の同意を](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal) 直接有効または無効にできます。
+Azure Portal 内で直接 [グループ所有者の同意](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal) を有効または無効にできます。
 
 > [!div class="checklist"]
 >
@@ -76,7 +76,7 @@ Azure Active Directory ポータルは、アプリを登録および構成する
 [ホーム アプリ **の**  =>  **登録] ページに移動し**、RSC アプリを選択します。 左側 **のナビゲーション バーから API** のアクセス許可を選択し、アプリに対して構成されているアクセス許可の一覧を確認します。 アプリで RSC Graph API 呼び出しのみを行う場合は、そのページのすべてのアクセス許可を削除します。 アプリで RSC 以外の呼び出しも行う場合は、必要に応じてこれらのアクセス許可を保持します。
 
 >[!IMPORTANT]
->Azure AD ポータルを使用して RSC アクセス許可を要求することはできません。 RSC のアクセス許可は現在、Teams クライアントにインストールされている Teams アプリケーション専用であり、アプリ マニフェスト (JSON) ファイルで宣言されています。
+>Azure AD ポータルを使用して RSC アクセス許可を要求することはできません。 RSC アクセス許可は現在、Teams クライアントにインストールされている Teams アプリケーション専用であり、アプリ マニフェスト (JSON) ファイルで宣言されています。
 
 ## <a name="obtain-an-access-token-from-the-microsoft-identity-platform"></a>Microsoft ID プラットフォームからアクセス トークンを取得する
 
@@ -102,7 +102,7 @@ RSC アクセス許可は、アプリ マニフェスト (JSON) ファイルで�
 
 >
 >[!IMPORTANT]
-> RSC 以外のアクセス許可は Azure portal に保存されます。 アプリ マニフェストに追加しません。
+> RSC 以外のアクセス許可は、Azure Portal に保存されます。 アプリ マニフェストに追加しません。
 >
 
 ```json
@@ -149,7 +149,12 @@ RSC アクセス許可は、アプリ マニフェスト (JSON) ファイルで�
 > - Graph エクスプローラー **にログインします**。
 > - 次の **エンドポイントに対** して GET 呼び出しを行います `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants` 。 応答の clientAppId フィールドは、Teams アプリ マニフェストで指定された appId にマップされます。
   ![GET 呼び出しに対する Graph エクスプローラーの応答。](../../assets/images/graph-permissions.png)
- 
+
+## <a name="code-sample"></a>コード サンプル
+| **サンプルの名前** | **説明** | **C#** |
+|-----------------|-----------------|----------------|
+| リソース固有の同意 (RSC) | RSC を使用して Graph API を呼び出します。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|
+
 ## <a name="test-resource-specific-consent"></a>リソース固有の同意をテストする
  
 > [!div class="nextstepaction"]
@@ -160,3 +165,4 @@ RSC アクセス許可は、アプリ マニフェスト (JSON) ファイルで�
 > [!div class="nextstepaction"]
 > [**管理者向け Microsoft Teams でのリソース固有の同意**](/MicrosoftTeams/resource-specific-consent)
 > 
+
