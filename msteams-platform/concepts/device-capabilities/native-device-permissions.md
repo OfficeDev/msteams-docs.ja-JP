@@ -1,43 +1,45 @@
 ---
-title: Microsoft Teams アプリのデバイスアクセス許可を要求する
-keywords: Teams アプリ機能のアクセス許可
-description: 通常はユーザーの同意が必要なネイティブ機能へのアクセスを要求するためにアプリ マニフェストを更新する方法
+title: Microsoft Teams アプリのデバイスのアクセス許可を要求する
+keywords: teams アプリの機能のアクセス許可
+description: 通常、ユーザーの同意が必要なネイティブ機能へのアクセスを要求するためにアプリ マニフェストを更新する方法
 ms.topic: how-to
-ms.openlocfilehash: 0343754eacbb6088a3e44fa5df8ec90e3b10b076
-ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
+ms.openlocfilehash: 60c28e1170e8bbdf664145bde7f7de585bd55a45
+ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "50231611"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "50294748"
 ---
-# <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Microsoft Teams アプリのデバイスアクセス許可を要求する
+# <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Microsoft Teams アプリのデバイスのアクセス許可を要求する
 
-カメラ、マイク、位置情報などのネイティブ デバイス機能を使用して、Teams アプリを強化できます。 このドキュメントでは、ユーザーの同意を要求し、ネイティブ デバイスのアクセス許可にアクセスする方法について示します。
+カメラ、マイク、場所などのネイティブ デバイス機能を使用して Teams アプリを強化できます。 このドキュメントでは、ユーザーの同意を要求し、ネイティブ デバイスのアクセス許可にアクセスする方法についてガイドします。
 
 > [!NOTE]
-> Microsoft Teams モバイル アプリにメディア機能を統合するには、「メディア機能の統合 [」を参照してください](mobile-camera-image-permissions.md)。
+> * Microsoft Teams モバイル アプリにメディア機能を統合するには、「メディア機能の統合 [」を参照してください](mobile-camera-image-permissions.md)。
+> * Microsoft Teams モバイル アプリに QR またはバーコード スキャナー機能を統合するには、「Teams に QR またはバーコード スキャナー機能を統合する」 [を参照してください。](qr-barcode-scanner-capability.md)
 
 ## <a name="native-device-permissions"></a>ネイティブ デバイスのアクセス許可
 
-ネイティブ デバイス機能にアクセスするには、デバイスのアクセス許可を要求する必要があります。 デバイスのアクセス許可は、タブ、タスク モジュール、メッセージング拡張機能など、すべてのアプリ構成で同様に動作します。 ユーザーがデバイスのアクセス許可を管理するには、Teams の設定の [アクセス許可] ページに移動する必要があります。
-デバイスの機能にアクセスすることで、Teams プラットフォームで次のような豊富なエクスペリエンスを構築できます。
+ネイティブ デバイス機能にアクセスするには、デバイスのアクセス許可を要求する必要があります。 デバイスのアクセス許可は、タブ、タスク モジュール、メッセージング拡張機能など、すべてのアプリ構成で同様に機能します。 ユーザーは、デバイスのアクセス許可を管理するために Teams 設定のアクセス許可ページに移動する必要があります。
+デバイス機能にアクセスすることで、Teams プラットフォームで次のような豊富なエクスペリエンスを構築できます。
 * 画像をキャプチャして表示します。
-* 短いビデオを録画して共有します。
+* QR またはバーコードをスキャンします。
+* 短いビデオを記録して共有します。
 * オーディオ メモを録音し、後で使用するために保存します。
-* ユーザーの場所情報を使用して、関連情報を表示します。
+* ユーザーの位置情報を使用して、関連する情報を表示します。
 
-## <a name="access-device-permissions"></a>アクセス デバイスのアクセス許可
+## <a name="access-device-permissions"></a>デバイスのアクセス許可にアクセスする
 
-[Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)は、Teams モバイル アプリがユーザーのデバイス[](#manage-permissions)のアクセス許可にアクセスし、より豊富なエクスペリエンスを構築するために必要なツールを提供します。
+[Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)には、Teams モバイル アプリがユーザーのデバイス[](#manage-permissions)アクセス許可にアクセスし、より豊富なエクスペリエンスを構築するために必要なツールが提供されています。
 
-これらの機能へのアクセスは最新の Web ブラウザーでは標準ですが、アプリ マニフェストを更新して使用する機能について Teams に通知する必要があります。 この更新プログラムでは、アプリが Teams デスクトップ クライアントで実行されている間にアクセス許可を要求できます。
+これらの機能へのアクセスは最新の Web ブラウザーでは標準ですが、アプリ マニフェストを更新して使用する機能について Teams に通知する必要があります。 この更新プログラムを使用すると、アプリが Teams デスクトップ クライアントで実行されている間にアクセス許可を要求できます。
 
 > [!NOTE] 
-> 現在、メディア機能に対する Microsoft Teams のサポートはモバイル クライアントでのみ利用できます。
+> 現在、Microsoft Teams はメディア機能をサポートし、QR バーコード スキャナー機能はモバイル クライアントでのみ利用できます。
 
 ## <a name="manage-permissions"></a>権限の管理
 
-ユーザーは、特定のアプリに対するアクセス許可を許可または拒否するを選択して、Teams の **設定でデバイス** のアクセス許可を管理できます。
+ユーザーは、特定のアプリに対するアクセス許可を許可または拒否を選択して、Teams 設定でデバイスのアクセス許可を管理できます。
  
 # <a name="desktop"></a>[デスクトップ](#tab/desktop)
 
@@ -46,22 +48,22 @@ ms.locfileid: "50231611"
 1. ドロップダウン **メニュー**  >  **から [設定の** アクセス許可] を選択します。
 1. 目的の設定を選択します。
 
-   ![デバイスのアクセス許可のデスクトップ設定画面](../../assets/images/tabs/device-permissions.png)
+   ![[デバイスのアクセス許可] デスクトップ設定画面](../../assets/images/tabs/device-permissions.png)
 
 # <a name="mobile"></a>[モバイル](#tab/mobile)
 
 1. Teams を開きます。
-1. [設定]**アプリの**  >  **アクセス許可に移動します**。
+1. [設定] **[**  >  **アプリのアクセス許可] に移動します**。
 1. 設定を選択する必要があるアプリを選択します。
 1. 目的の設定を選択します。
 
-    ![デバイスのアクセス許可のモバイル設定画面](../../assets/images/tabs/MobilePermissions.png)
+    ![[デバイスのアクセス許可] モバイル設定画面](../../assets/images/tabs/MobilePermissions.png)
 
 ---
 
 ## <a name="specify-permissions"></a>アクセス許可を指定する
 
-アプリケーションで使用する 5 つのプロパティの中から、次のプロパティを追加して指定することで、アプリ `manifest.json` `devicePermissions` を更新します。
+アプリケーションで使用する 5 つのプロパティのどちらを追加して指定して、アプリ `manifest.json` `devicePermissions` を更新します。
 
 ``` json
 "devicePermissions": [
@@ -73,19 +75,19 @@ ms.locfileid: "50231611"
 ],
 ```
 
-各プロパティを使用すると、ユーザーに同意を求めるメッセージを表示できます。
+各プロパティを使用すると、ユーザーに同意を求めるプロンプトを表示できます。
 
 | プロパティ      | 説明   |
 | --- | --- |
-| media         | カメラ、マイク、スピーカー、およびメディア ギャラリーへのアクセス許可。 |
-| geolocation   | ユーザーの位置情報を返すアクセス許可。      |
-| notifications | ユーザー通知を送信するアクセス許可。      |
-| midi          | デジタル 音楽機器から、Instrument Instrument Digital Interface (MIDI) 情報を送受信するためのアクセス許可。   |
-| openExternal  | 外部アプリケーションでリンクを開く権限。  |
+| media         | カメラ、マイク、スピーカー、およびアクセス メディア ギャラリーを使用する権限。 |
+| 地理位置情報   | ユーザーの場所を返すアクセス許可。      |
+| 通知 | ユーザー通知を送信するアクセス許可。      |
+| midi          | デジタル楽器から楽器デジタル インターフェイス (MIDI) 情報を送受信する権限。   |
+| openExternal  | 外部アプリケーションでリンクを開くアクセス許可。  |
 
-## <a name="check-permissions-from-your-app"></a>アプリからアクセス許可を確認する
+## <a name="check-permissions-from-your-app"></a>アプリからのアクセス許可を確認する
 
-アプリ マニフェスト `devicePermissions` に追加した後、プロンプトを表示せずに **HTML5** アクセス許可 API を使用してアクセス許可を確認します。
+アプリ マニフェスト `devicePermissions` に追加した後、プロンプトを表示せずに **HTML5 アクセス** 許可 API を使用してアクセス許可を確認します。
 
 ``` Javascript
 // Different query options:
@@ -107,26 +109,26 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 ## <a name="use-teams-apis-to-get-device-permissions"></a>Teams API を使用してデバイスのアクセス許可を取得する
 
-適切な HTML5 または Teams API を利用して、デバイスのアクセス許可にアクセスするための同意を求めるプロンプトを表示します。
+適切な HTML5 または Teams API を活用して、デバイスのアクセス許可にアクセスする同意を得るプロンプトを表示します。
 
 > [!IMPORTANT]
-> * selectMedia `camera` `gallery` API を通じて `microphone` サポート [**され、有効になります**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true)。 1 [**つのイメージ キャプチャに captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) を使用します。
-> * getLocation `location` API を使用してサポート [**が有効になります**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true)。 HTML5 位置情報 API は現在 Teams デスクトップ クライアントで完全にはサポートされていないので、場所に使用する `getLocation API` 必要があります。
+> * をサポート `camera` し `gallery` `microphone` 、selectMedia API を [**使用して有効になります**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true)。 1 [**つのイメージ キャプチャに captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) を使用します。
+> * getLocation `location` API を使用して [**サポートが有効になります**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true)。 HTML5 地理位置情報 API は現在 Teams デスクトップ クライアントで完全にサポートされていないので、場所に使用 `getLocation API` する必要があります。
 
-以下に例を示します。
- * ユーザーに位置情報へのアクセスを求めるメッセージを表示するには、次のコマンドを呼び出す必要があります `getCurrentPosition()` 。
+次に例を示します。
+ * ユーザーに自分の場所へのアクセスを求めるメッセージを表示するには、次のコマンドを呼び出す必要があります `getCurrentPosition()` 。
 
     ```Javascript
     navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
     ```
 
- * デスクトップまたは Web 上のカメラにアクセスするようにユーザーに求めるには、次を呼び出す必要があります `getUserMedia()` 。
+ * デスクトップまたは Web 上のカメラにアクセスするようにユーザーに求めるには、次のコマンドを呼び出す必要があります `getUserMedia()` 。
 
     ```Javascript
     navigator.mediaDevices.getUserMedia({ audio: true, video: true });
     ```
 
- * モバイルでイメージをキャプチャするために、Teams モバイルは、次を呼び出す際にアクセス許可を求めるメッセージを表示します `captureImage()` 。
+ * モバイルで画像をキャプチャするには、Teams モバイルから次の呼び出し時にアクセス許可を求めるメッセージが表示されます `captureImage()` 。
 
     ```Javascript
     microsoftTeams.media.captureImage((error: microsoftTeams.SdkError, files: microsoftTeams.media.File[]) => {
@@ -134,7 +136,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
     });
     ```
 
- * 通知は、次の呼び出し時にユーザーに表示されます `requestPermission()` 。
+ * 次の呼び出し時に通知がユーザーに表示されます `requestPermission()` 。
 
     ```Javascript
     Notification.requestPermission(function(result) { /* ... */ });
@@ -143,7 +145,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 
 
-* カメラを使用するか、フォト ギャラリーにアクセスするために、Teams モバイルは次を呼び出す際にアクセス許可を求めるメッセージを表示します `selectMedia()` 。
+* カメラを使用するか、フォト ギャラリーにアクセスするには、Teams モバイルが次の呼び出し時にアクセス許可を求めるメッセージを表示します `selectMedia()` 。
 
     ```JavaScript
     microsoftTeams.media.selectMedia({ maxMediaCount: 10, mediaType: microsoftTeams.media.MediaType.Image }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
@@ -151,7 +153,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
     );
     ```
 
-* マイクを使用するために、Teams モバイルは通話時にアクセス許可を求めるメッセージを表示します `selectMedia()` 。
+* マイクを使用するには、Teams モバイルから次の呼び出し時にアクセス許可を求めるメッセージが表示されます `selectMedia()` 。
 
     ```JavaScript 
     microsoftTeams.media.selectMedia({ maxMediaCount: 1, mediaType: microsoftTeams.media.MediaType.Audio }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
@@ -159,7 +161,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
     });
     ```
 
-* マップ インターフェイス上の場所を共有するようにユーザーに求めるメッセージを表示するために、Teams モバイルは次を呼び出す際にアクセス許可を求めるメッセージを表示します `getLocation()` 。
+* マップ インターフェイス上の場所を共有するようにユーザーに求めるメッセージを表示するには、Teams モバイルは次の呼び出し時にアクセス許可を求めるメッセージを表示します `getLocation()` 。
 
     ```JavaScript 
     microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
@@ -168,22 +170,25 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
     ```
 # <a name="desktop"></a>[デスクトップ](#tab/desktop)
 
-   ![タブ デスクトップ デバイスのアクセス許可の確認メッセージ](~/assets/images/tabs/device-permissions-prompt.png)
+   ![タブ デスクトップ デバイスのアクセス許可のプロンプト](~/assets/images/tabs/device-permissions-prompt.png)
 
 # <a name="mobile"></a>[モバイル](#tab/mobile)
 
-   ![タブ モバイル デバイスのアクセス許可の確認メッセージ](../../assets/images/tabs/MobileLocationPermission.png)
+   ![タブ モバイル デバイスのアクセス許可のプロンプト](../../assets/images/tabs/MobileLocationPermission.png)
 
 * * * 
 
 ## <a name="permission-behavior-across-login-sessions"></a>ログイン セッション間のアクセス許可の動作
 
-デバイスのアクセス許可は、ログイン セッションごとに格納されます。 つまり、たとえば別のコンピューターで Teams の別のインスタンスにサインインすると、以前のセッションからのデバイスのアクセス許可は使用できません。 したがって、新しいセッションのデバイスのアクセス許可に再同意する必要があります。 また、Teams からサインアウトするか、Teams でテナントを切り替える場合、デバイスのアクセス許可は以前のログイン セッションから削除されます。  
+デバイスのアクセス許可は、ログイン セッションごとに格納されます。 つまり、別のコンピューターなど、Teams の別のインスタンスにサインインすると、以前のセッションからのデバイスのアクセス許可は使用できません。 したがって、新しいセッションのデバイスのアクセス許可に再同意する必要があります。 また、Teams からサインアウトするか、Teams でテナントを切り替える場合、デバイスのアクセス許可は以前のログイン セッションから削除されます。  
 
 > [!NOTE]
 > ネイティブ デバイスのアクセス許可に同意すると、現在のログイン _セッションでのみ有効_ です。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [Teams でのメディア機能の統合](mobile-camera-image-permissions.md)
+
+> [!div class="nextstepaction"]
+> [Teams に QR またはバーコード スキャナー機能を統合する](qr-barcode-scanner-capability.md)
