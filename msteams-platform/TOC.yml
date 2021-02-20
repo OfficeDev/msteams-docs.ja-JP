@@ -74,6 +74,8 @@
           href: concepts/device-capabilities/native-device-permissions.md
         - name: メディア機能を統合する
           href: concepts/device-capabilities/mobile-camera-image-permissions.md
+        - name: QR コードまたはバーコード スキャナー機能を統合する
+          href: concepts/device-capabilities/qr-barcode-scanner-capability.md
 - name: アプリをデザインする
   items:
     - name: 概要
