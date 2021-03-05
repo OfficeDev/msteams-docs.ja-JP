@@ -1,53 +1,59 @@
 ---
 title: タブの認証フロー
-description: タブの認証フローについて説明します
+description: タブの認証フローについて説明する
 ms.topic: conceptual
-keywords: Teams の認証フロー タブ
-ms.openlocfilehash: 9505419a6594529bcf8d19a90d029705e573c67b
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+keywords: teams 認証フロー タブ
+ms.openlocfilehash: ddd9ea1ee907b154005445613fd3d09de2158766
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014587"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449564"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>タブの Microsoft Teams 認証フロー
 
-> [!Note]
-> モバイル クライアントのタブで認証を機能するには、Teams JavaScript SDK の 1.4.1 バージョン以上を使用している必要があります。
-> Teams SDK は認証フロー用に個別のウィンドウを起動するため、samesite 属性を 'Lax' に設定できます。 現在、SameSite=None は Teams デスクトップ クライアントまたは Chrome または Safari の以前のバージョンではサポートされていません。
+> [!NOTE]
+> モバイル クライアントでタブで認証を機能するには、少なくとも 1.4.1 バージョンの Microsoft Teams JavaScript SDK を使用している必要があります。
+> Teams SDK は、認証フロー用に個別のウィンドウを起動します。 属性を `SameSite` **Lax に設定します**。 Teams デスクトップ クライアントまたは以前のバージョンの Chrome または Safari は `SameSite` =None をサポートしていない。
 
-OAuth 2.0 は、Azure AD および他の多くの ID プロバイダーで使用される認証と承認のオープン標準です。 OAuth 2.0 の基本的な理解は、Teams で認証を操作する場合の前提条件です。 [ここでは、正式な仕様よりも](https://aaronparecki.com/oauth-2-simplified/) 簡単に従える優れた概要 [を示します](https://oauth.net/2/)。 タブとボットの認証フローは少し異なります。タブは Web サイトに非常に似ているため、OAuth 2.0 を直接使用できます。bots are not and must do a few things differently, but the core concepts are identical.
+OAuth 2.0 は、Azure Active Directory (AAD) および他の多くの ID プロバイダーによって使用される認証と承認のオープン標準です。 OAuth 2.0 の基本的な理解は、Teams での認証を操作する前提条件です。 詳細については、「正式な仕様よりも簡単に実行できる [OAuth 2](https://aaronparecki.com/oauth-2-simplified/) 簡略化」 [を参照してください](https://oauth.net/2/)。 タブとボットの認証フローは異なります。タブは Web サイトに似ているため、OAuth 2.0 を直接使用できます。 ボットの動作はいくつかの方法が異なりますが、コア概念は同じです。
 
-*「Node*[と](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow) [OAuth 2.0](https://oauth.net/2/grant-types/implicit/)の暗黙的な許可の種類を使用して、タブとボットの認証フローの例については、タブの認証フローを開始する」を参照してください。
+Node と [OAuth 2.0](https://oauth.net/2/grant-types/implicit/)暗黙的付与の種類を使用するタブとボットの認証フローの例については、「タブの認証フローを開始する」 [を参照してください](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow)。
+
+> [!NOTE]
+> ユーザーにログイン ボタン **を** 表示し、ボタンの選択に応じて API を呼び出す前に、SDK の初期化が完了するのを `microsoftTeams.authentication.authenticate` 待つ必要があります。 初期化が完了すると呼び `microsoftTeams.initialize` 出される API にコールバックを渡します。
 
 ![タブ認証シーケンス図](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
-1. ユーザーは、タブ構成またはコンテンツ ページのコンテンツを操作します。通常、"サインイン" または "ログイン" というラベルの付いたボタンです。
-2. タブは、認証開始ページの URL を作成します。必要に応じて、URL プレースホルダーの情報を使用するか、Teams クライアント SDK メソッドを呼び出して、ユーザーの認証エクスペリエンスを `microsoftTeams.getContext()` 合理化します。 たとえば、Azure AD で認証を行う場合、パラメーターがユーザーの電子メール アドレスに設定されている場合、Azure AD はユーザーのキャッシュされた資格情報を可能な限り使用します。ポップアップが短時間点滅して消えるので、ユーザーが最近サインインした場合でも、ユーザーはサインインする必要がなくなる可能性があります。 `login_hint`
+1. ユーザーは、タブ構成またはコンテンツ ページのコンテンツ (通常は [サインイン] または [ログイン] ボタン)**を操作** します。
+2. タブは、認証開始ページの URL を作成します。 必要に応じて、URL プレースホルダーの情報を使用するか、Teams クライアント SDK メソッドを呼び出して、ユーザーの認証 `microsoftTeams.getContext()` エクスペリエンスを合理化します。 たとえば、AAD を使用して認証する場合、パラメーターがユーザーの電子メール アドレスに設定されている場合、ユーザーが最近サインインした場合、ユーザーはサインイン `login_hint` する必要が生じなきます。 これは、AAD がユーザーのキャッシュされた資格情報を使用する理由です。 ポップアップ ウィンドウが簡単に表示され、表示されなくなります。
 3. 次に、タブは `microsoftTeams.authentication.authenticate()` メソッドを呼び出し、`successCallback` 関数と `failureCallback` 関数を登録します。
-4. Teams は、ポップアップ ウィンドウの iframe でスタート ページを開きます。 開始ページは、ランダムなデータを生成し、将来の検証のために保存し、Azure AD などの ID プロバイダーの `state` `/authorize` `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` エンドポイントにリダイレクトします。 独自 `<tenant id>` のテナント ID (context.tid) に置き換えてください。
-    * Teams の他のアプリケーション認証フローと同様に、スタート ページは、そのリスト内のドメインと、ログイン後のリダイレクト ページと同じドメイン上にある `validDomains` 必要があります。
-    * **重要**: OAuth 2.0 の暗黙的な許可フローは、クロスサイト要求フォージェリ攻撃を防ぐために、一意のセッション データを含む認証要求のパラメーターを呼び出 `state` [します](https://en.wikipedia.org/wiki/Cross-site_request_forgery)。 次の例では、データにランダムに生成された GUID を使用 `state` します。
+4. Teams は、ポップアップ ウィンドウで iframe でスタート ページを開きます。 スタート ページは、ランダム なデータを生成し、将来の検証のために保存し、Azure プロバイダーのエンドポイントなどの ID プロバイダーのエンドポイント `state` `/authorize` `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` にリダイレクトAD。 `<tenant id>`context.tid である独自のテナント ID に置き換える。
+Teams の他のアプリケーション認証フローと同様に、スタート ページはリスト内のドメインと、リダイレクト ページのポスト サインインと同じドメイン上にある `validDomains` 必要があります。
+
+    > [!NOTE]
+    > OAuth 2.0 暗黙的な付与フローでは、認証要求内のパラメーターが呼び出されます。これは、クロスサイト要求フォージェリ攻撃を防ぐための一意のセッション データを `state` [含む。](https://en.wikipedia.org/wiki/Cross-site_request_forgery) この例では、データにランダムに生成された GUID を使用 `state` します。
+
 5. プロバイダーのサイトで、ユーザーはサインインし、タブへのアクセスを許可します。
-6. プロバイダーは、アクセス トークンを使用してユーザーをタブの OAuth 2.0 リダイレクト ページに移動します。
-7. タブは、戻り値が以前に保存された値と一致することを確認し、呼び出しは手順 3 で登録された関数を呼び出 `state` `microsoftTeams.authentication.notifySuccess()` `successCallback` します。
-8. Teams がポップアップ ウィンドウを閉じます。
-9. タブは、ユーザーの開始場所に応じて、構成 UI を表示するか、タブのコンテンツを更新または再読み込みします。
+6. プロバイダーは、ユーザーをアクセス トークンを使用してタブの OAuth 2.0 リダイレクト ページに移動します。
+7. タブは、返された値が以前に保存された値と一致することを確認し、手順 3 で登録された関数を呼び出 `state` `microsoftTeams.authentication.notifySuccess()` `successCallback` します。
+8. Teams はポップアップ ウィンドウを閉じます。
+9. タブは、ユーザーの開始場所に応じて、構成 UI を表示するか、タブの内容を更新または再読み込みします。
 
 ## <a name="treat-tab-context-as-hints"></a>タブ コンテキストをヒントとして扱う
 
-タブ コンテキストはユーザーに関する有用な情報を提供しますが、タブ コンテンツの URL への URL パラメーターとして取得するか、Microsoft Teams クライアント SDK の関数を呼び出す場合でも、この情報を使用してユーザーを認証しません。 `microsoftTeams.getContext()` 悪意のあるアクターが独自のパラメーターを使用してタブ コンテンツの URL を呼び出す可能性があります。また、Microsoft Teams を偽装する Web ページが iframe にタブ コンテンツ URL を読み込み、独自のデータを関数に返す可能性があります。 `getContext()` タブ コンテキストでは、ID 関連の情報をヒントとして扱い、使用する前に検証する必要があります。 ポップアップ ページから承認ページに [移動するのメモを参照してください](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page)。
+タブ コンテキストはユーザーに関する有用な情報を提供しますが、この情報を使用してユーザーを認証することはできません。 タブ コンテンツの URL に URL パラメーターとして情報を取得した場合や、Microsoft Teams クライアント SDK で関数を呼び出した場合でも、ユーザー `microsoftTeams.getContext()` を認証します。 悪意のあるアクターは、独自のパラメーターを使用してタブ コンテンツ URL を呼び出す可能性があります。 アクターは、Microsoft Teams を偽装する Web ページを呼び出して、タブ コンテンツ URL を iframe に読み込み、独自のデータを関数に返 `getContext()` することもできます。 使用する前に、タブ コンテキスト内の ID 関連情報をヒントとして扱い、検証する必要があります。 ポップアップ ページから認証 [ページに移動するノートを参照してください](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page)。
 
 ## <a name="samples"></a>サンプル
 
 タブ認証プロセスを示すサンプル コードについては、以下を参照してください。
 
-* [Microsoft Teams タブ認証のサンプル (ノード)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
-* [Microsoft Teams タブ認証のサンプル (C#)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
+* [Teams タブ認証サンプル (ノード)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
+* [Teams タブ認証のサンプル (C#)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
 
 ## <a name="more-details"></a>詳細情報
 
-Azure Active Directory をターゲットとするタブ認証の詳細な実装チュートリアルについては、以下を参照してください。
+AAD を使用したタブ認証の詳細な実装については、以下を参照してください。
 
-* [Microsoft Teams タブでユーザーを認証する](~/tabs/how-to/authentication/auth-tab-AAD.md)
+* [Teams タブでユーザーを認証する](~/tabs/how-to/authentication/auth-tab-AAD.md)
 * [サイレント認証](~/tabs/how-to/authentication/auth-silent-AAD.md)

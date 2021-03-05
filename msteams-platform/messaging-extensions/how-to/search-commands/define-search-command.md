@@ -1,74 +1,79 @@
 ---
-title: メッセージング拡張機能検索コマンドを定義する
+title: メッセージング拡張機能の検索コマンドを定義する
 author: clearab
 description: Microsoft Teams アプリのメッセージング拡張機能検索コマンドを定義します。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: b6837fb8a131d8ce3e2bbd0c51c2861dbffda2bc
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 18bac3049fec8fead168c12f2832bfbbb72cf609
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41674934"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449270"
 ---
-# <a name="define-messaging-extension-search-commands"></a>メッセージング拡張機能検索コマンドを定義する
+# <a name="define-messaging-extension-search-commands"></a>メッセージング拡張機能の検索コマンドを定義する
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-メッセージング拡張検索コマンドを使用すると、ユーザーは外部システムを検索し、その検索結果をカードの形式でメッセージに挿入することができます。
+メッセージング拡張機能検索コマンドを使用すると、ユーザーは外部システムを検索し、その検索結果をカード形式でメッセージに挿入できます。
 
-## <a name="choose-messaging-extension-invoke-locations"></a>メッセージング拡張機能の呼び出し場所を選択する
+> [!NOTE]
+> 結果のカード サイズの制限は 28 KB です。 カードのサイズが 28 KB を超える場合、カードは送信されません。 
 
-最初に決定する必要があるのは、検索コマンドをトリガー (または、より具体的に*呼び出す*) できる場所です。 検索コマンドは、次の場所のいずれかまたは両方から呼び出すことができます。
+## <a name="choose-messaging-extension-invoke-locations"></a>メッセージング拡張機能の呼び出し場所の選択
 
-* [メッセージの作成] 領域の下部にあるボタン
-* コマンドボックスで @mentioning
+最初に決定する必要があるのは、検索コマンドをトリガーできる場所 (具体的には呼び *出し先*) です。 検索コマンドは、次のいずれかの場所または両方から呼び出すことができます。
 
-[メッセージの作成] 領域から呼び出した場合、ユーザーは会話に結果を送信することができます。 コマンドボックスから呼び出した場合、ユーザーは結果として得られたカードを操作したり、別の場所で使用するためにコピーしたりすることができます。
+* 作成メッセージ領域の下部にあるボタン
+* コマンド @mentioningを使用して
 
-## <a name="add-the-command-to-your-app-manifest"></a>アプリケーションマニフェストにコマンドを追加する
+作成メッセージ領域から呼び出されると、ユーザーは結果を会話に送信できます。 コマンド ボックスから呼び出されると、ユーザーは結果のカードを操作したり、別の場所で使用するためにコピーすることができます。
 
-ユーザーが検索コマンドをどのように操作するかが決定したので、それをアプリのマニフェストに追加します。 これを行うには、アプリマニフェスト`composeExtension` JSON の最上位レベルに新しいオブジェクトを追加します。 そのためには、アプリ Studio のヘルプを使用するか、手動で行うことができます。
+## <a name="add-the-command-to-your-app-manifest"></a>アプリ マニフェストにコマンドを追加する
 
-### <a name="create-a-command-using-app-studio"></a>アプリ Studio を使用してコマンドを作成する
+ユーザーが検索コマンドを操作する方法を決めたので、それをアプリ マニフェストに追加します。 これを行うには、アプリ マニフェスト JSON のトップ レベルに新 `composeExtension` しいオブジェクトを追加します。 これを行うには、App Studio のヘルプを使用するか、手動で実行します。
 
-次の手順では、[メッセージング拡張機能が](~/messaging-extensions/how-to/create-messaging-extension.md)既に作成済みであることを前提としています。
+### <a name="create-a-command-using-app-studio"></a>App Studio を使用してコマンドを作成する
 
-1. Microsoft Teams クライアントから、 **App Studio**を開き、[**マニフェストエディター** ] タブを選択します。
-2. アプリパッケージが既にアプリ Studio で作成されている場合は、一覧から選択します。 それ以外の場合は、既存のアプリパッケージをインポートできます。
-3. [コマンド] セクションの [**追加**] ボタンをクリックします。
-4. [ユーザーがサービスを照会して情報を受信できるようにする] を選択し、**それをメッセージに挿入**します。
-5. **コマンド Id**と**タイトル**を追加します。
-6. 検索コマンドを開始する場所を選択します。 現在、**メッセージ**を選択しても、検索コマンドの動作は変更されません。
-7. 検索パラメーターを追加します。
-8. [保存] をクリックします。
+検索コマンドを作成するには、メッセージング拡張機能を既に作成する必要があります。 メッセージング拡張機能を作成する方法の詳細については、「Create [a messaging extension 」を参照してください](~/messaging-extensions/how-to/create-messaging-extension.md)。
 
+**検索コマンドを作成するには**
+
+1. Microsoft Teams クライアントで App Studio を **開** き、[マニフェスト エディター] **タブを選択** します。
+1. App Studio でアプリ パッケージを既に作成している **場合** は、一覧からアプリ パッケージを選択します。 アプリ パッケージを作成していない場合は、既存のパッケージをインポートします。
+1. アプリ パッケージをインポートした後、[機能] で [ **メッセージング拡張機能]** **を選択します**。
+1. [ **メッセージング拡張機能** ] **ページの [コマンド** ] セクションで [追加] を選択します。
+1. [ **ユーザーにサービスの情報のクエリを許可する] を選択し、メッセージに挿入します**。
+1. コマンド ID **と Title** を **追加します**。
+1. 検索コマンドをトリガーする必要がある場所を選択します。 メッセージを **選択しても** 、現在、検索コマンドの動作は変更されません。
+1. 検索パラメーターを追加し、[保存] を **選択します**。
+ 
 ### <a name="manually-create-a-command"></a>コマンドを手動で作成する
 
-メッセージング拡張機能検索コマンドをアプリマニフェストに手動で追加するには、オブジェクトの`composeExtension.commands`配列に follow パラメーターを追加する必要があります。
+メッセージング拡張機能の検索コマンドをアプリ マニフェストに手動で追加するには、次のパラメーターをオブジェクトの配列 `composeExtension.commands` に追加する必要があります。
 
 | プロパティ名 | 用途 | 必須 | マニフェストの最小バージョン |
 |---|---|---|---|
-| `id` | このコマンドに割り当てる一意の ID です。 ユーザー要求には、この ID が含まれます。 | はい | 1.0 |
-| `title` | コマンド名を指定します。 この値は UI に表示されます。 | はい | 1.0 |
-| `description` | このコマンドの機能を示すヘルプテキスト。 この値は UI に表示されます。 | はい | 1.0 |
+| `id` | このコマンドに割り当てる一意の ID。 ユーザー要求には、この ID が含まれます。 | はい | 1.0 |
+| `title` | コマンド名。 この値は UI に表示されます。 | はい | 1.0 |
+| `description` | このコマンドの動作を示すヘルプ テキスト。 この値は UI に表示されます。 | はい | 1.0 |
 | `type` | にする必要があります。 | いいえ | 1.4 |
-|`initialRun` | **True**に設定すると、ユーザーが UI でこのコマンドを選択するとすぐにこのコマンドが実行されることを示します。 | いいえ | 1.0 |
-| `context` | 検索アクションを使用できるコンテキストを定義する値のオプションの配列です。 可能な値`message`は`compose`、、 `commandBox`、です。 既定値は `["compose", "commandBox"]` です。 | いいえ | 1.5 |
+|`initialRun` | true に **設定されている場合** は、ユーザーが UI でこのコマンドを選択するとすぐにこのコマンドを実行する必要があります。 | いいえ | 1.0 |
+| `context` | 検索アクションが使用できるコンテキストを定義する値の任意の配列。 指定できる値 `message` は `compose` 、、、または `commandBox` です。 既定値は `["compose", "commandBox"]` です。 | いいえ | 1.5 |
 
-また、検索パラメーターの詳細を追加して、Teams クライアントでユーザーに表示されるテキストを定義する必要があります。
+また、Teams クライアントでユーザーに表示されるテキストを定義する検索パラメーターの詳細を追加する必要があります。
 
 | プロパティ名 | 用途 | 必須 | マニフェストの最小バージョン |
 |---|---|---|---|
 | `parameters` | コマンドのパラメーターの静的リスト。 | いいえ | 1.0 |
-| `parameter.name` | パラメーターの名前です。 これは、ユーザーの要求でサービスに送信されます。 | はい | 1.0 |
-| `parameter.description` | このパラメーターの目的または提供する必要がある値の例について説明します。 この値は UI に表示されます。 | はい | 1.0 |
-| `parameter.title` | 簡単なユーザーフレンドリパラメーターのタイトルまたはラベル。 | はい | 1.0 |
-| `parameter.inputType` | 必要な入力の種類を設定します。 可能な値`text`は`textarea`、 `number` `date` `time`、、、 `toggle`、です。 既定値はに設定されています`text` | いいえ | 1.4 |
+| `parameter.name` | パラメーターの名前です。 これは、ユーザー要求でサービスに送信されます。 | はい | 1.0 |
+| `parameter.description` | 指定する必要がある値のこのパラメーターの目的または例について説明します。 この値は UI に表示されます。 | はい | 1.0 |
+| `parameter.title` | 短いユーザーフレンドリーなパラメーターのタイトルまたはラベル。 | はい | 1.0 |
+| `parameter.inputType` | 必要な入力の種類に設定します。 可能な値 `text` には `textarea` 、、 `number` 、 、 、 、 `date` `time` が含まれます `toggle` 。 既定値はに設定されています `text` | いいえ | 1.4 |
 
-#### <a name="app-manifest-example"></a>アプリマニフェストの例
+#### <a name="app-manifest-example"></a>アプリ マニフェストの例
 
-以下に、検索コマンドを定義`composeExtensions`するオブジェクトの例を示します。 完全なマニフェストの例として、完全なアプリマニフェストスキーマについては、「 [app manifest スキーマ](~/resources/schema/manifest-schema.md)」を参照してください。
+検索コマンドを定義する `composeExtensions` オブジェクトの例を次に示します。 完全なマニフェストの例ではありません。完全なアプリ マニフェスト スキーマについては、「アプリ マニフェスト [スキーマ」を参照してください](~/resources/schema/manifest-schema.md)。
 
 ```json
 {
@@ -95,8 +100,8 @@ ms.locfileid: "41674934"
 }
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
-検索コマンドが追加されたので、[検索要求を処理](~/messaging-extensions/how-to/search-commands/respond-to-search.md)する必要があります。
+検索コマンドが追加されたので、検索要求を [処理する必要があります](~/messaging-extensions/how-to/search-commands/respond-to-search.md)。
 
 [!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]

@@ -1,14 +1,14 @@
 ---
 title: デバイス機能の概要
 description: ネイティブ デバイス機能の概要。
-keywords: カメラ イメージ メディア マイク マイク QR コード qrcode バーコード バーコード スキャン スキャナー機能ネイティブ デバイスのアクセス許可
+keywords: カメラ イメージ メディア マイク マイク QR コード qrcode バーコード バーコード スキャン スキャナーの場所マップ機能ネイティブ デバイスのアクセス許可
 ms.topic: overview
-ms.openlocfilehash: 03ce0267f7160772e30ec88de2c29f81886b5280
-ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
+ms.openlocfilehash: 4c826d1705dfeea1feea21b02e7be51789817e48
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "50294727"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449592"
 ---
 # <a name="device-capabilities"></a>デバイス機能 
 
@@ -37,4 +37,4 @@ Microsoft Teams プラットフォームは、組み込みのファースト パ
 * 画像のキャプチャと共有
 * スキャナーコントロールを使用して QR またはバーコード [をスキャンする](qr-barcode-scanner-capability.md)
 * マイクでオーディオを録音する
-* 位置情報を共有する
+* 場所ピッカーを使用 [して場所を共有します](location-capability.md)。

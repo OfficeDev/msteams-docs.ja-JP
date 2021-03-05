@@ -1,22 +1,26 @@
 ---
-title: QR またはバーコード スキャナーの機能を統合する
+title: QR コードまたはバーコード スキャナー機能を統合する
 description: Teams JavaScript クライアント SDK を使用して QR またはバーコード スキャナー機能を活用する方法
 keywords: カメラ メディア QR コード qrcode バーコード バーコード スキャナー スキャン機能ネイティブ デバイスのアクセス許可
 ms.author: lajanuar
-ms.openlocfilehash: 048c6b58fc126d1dd08867605784b6a150737195
-ms.sourcegitcommit: 0bb6efb3003a1949288e4601e3301b69e67d4c26
+ms.openlocfilehash: 1a13de1a4d9e03f0f36f03af0fdd948cf74a0392
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "50295090"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449417"
 ---
-# <a name="integrate-qr-or-barcode-scanner-capability"></a>QR またはバーコード スキャナーの機能を統合する 
+# <a name="integrate-qr-or-barcode-scanner-capability"></a>QR コードまたはバーコード スキャナー機能を統合する 
 
-バーコードは、視覚的で機械で読み取り可能な形式でデータを表す方法です。 バーコードには、バーとスペースの形式で、種類、サイズ、製造元、発生国などの製品に関する情報が含まれます。 コードは、ネイティブ デバイス カメラの光学スキャナーを使用して読み取ります。 より豊富な共同作業エクスペリエンスを実現するには、Teams プラットフォームで提供される QR またはバーコード スキャナー機能を Teams アプリと統合できます。 このドキュメントでは、機能を統合する方法についてガイドします。  
+このドキュメントでは、QR またはバーコード スキャナー機能を統合する方法についてガイドします。 
+
+バーコードは、視覚的で機械で読み取り可能な形式でデータを表す方法です。 バーコードには、バーとスペースの形式で、種類、サイズ、製造元、発生国などの製品に関する情報が含まれます。 コードは、ネイティブ デバイス カメラの光学スキャナーを使用して読み取ります。 より豊富な共同作業エクスペリエンスを実現するには、Teams プラットフォームで提供される QR またはバーコード スキャナー機能を Teams アプリと統合できます。   
 
 [アプリがユーザーのネイティブ デバイス](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)機能にアクセスするために必要なツールを提供する Microsoft Teams JavaScript クライアント SDK[を使用できます](native-device-permissions.md)。 API を `scanBarCode` 使用して、スキャナー機能をアプリ内に統合します。 
 
 ## <a name="advantage-of-integrating-qr-or-barcode-scanner-capability"></a>QR またはバーコード スキャナー機能を統合する利点
+
+QR またはバーコード スキャナー機能の統合の利点は次のとおりです。 
 
 * この統合により、Teams プラットフォーム上の Web アプリ開発者は、Teams JavaScript クライアント SDK で QR またはバーコードスキャン機能を利用できます。
 * この機能を使用すると、ユーザーはスキャナー UI の中央にあるフレーム内の QR またはバーコードのみを配置する必要があります。コードは自動的にスキャンされます。 保存されたデータは、呼び出し元の Web アプリと共有されます。 これにより、長い製品コードや他の関連情報を手動で入力する際の不便や人的ミスを回避できます。
@@ -48,7 +52,7 @@ API は、ユーザーがさまざまな種類のバーコードをスキャン�
 
 **scanBarCode()** API は、次のバーコードの種類をサポートしています。
 
-| バーコードの種類 | Android でサポート | iOS でサポート |
+| バーコードの種類 | Android でサポートされる | iOS でサポート |
 | ---------- | ---------- | ------------ |
 | Codebar | はい | いいえ |
 | コード 39 | はい | はい | 
@@ -105,3 +109,6 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 > [!div class="nextstepaction"]
 > [Teams でのメディア機能の統合](mobile-camera-image-permissions.md)
+
+> [!div class="nextstepaction"]
+> [Teams での場所機能の統合](location-capability.md)

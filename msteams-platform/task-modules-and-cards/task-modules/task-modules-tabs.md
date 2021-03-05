@@ -1,19 +1,19 @@
 ---
-title: Microsoft Teams のタブでタスクモジュールを使用する
-description: Microsoft Teams クライアント SDK を使用して Teams タブからタスクモジュールを呼び出す方法について説明します。
-keywords: タスクモジュールチームタブクライアント sdk
-ms.openlocfilehash: e10958195713f338a9b5e0a0672d8b6a29da9264
-ms.sourcegitcommit: 2a84a3c8b10771e37ce51bf603a967633947a3e4
+title: Microsoft Teams タブでのタスク モジュールの使用
+description: Microsoft Teams クライアント SDK を使用して Teams タブからタスク モジュールを呼び出す方法について説明します。
+keywords: タスク モジュールチームがクライアント SDK をタブする
+ms.openlocfilehash: 3f1da4d5eec31638d69adc01a45831534d015f41
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "44801199"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449557"
 ---
-# <a name="using-task-modules-in-tabs"></a>タブでタスクモジュールを使用する
+# <a name="using-task-modules-in-tabs"></a>タブでタスク モジュールを使用する
 
-タスクモジュールをタブに追加すると、データ入力を必要とするすべてのワークフローについて、ユーザーの操作が大幅に簡素化されます。 タスクモジュールを使用すると、チーム対応のポップアップで入力を収集できます。 プランナーカードを編集することをよく例を示します。タスクモジュールを使用して、同様の操作を作成できます。
+タブにタスク モジュールを追加すると、データ入力が必要なワークフローに対するユーザー エクスペリエンスが大幅に簡素化されます。 タスク モジュールを使用すると、Teams 対応のポップアップで入力を収集できます。 この例の良い例は、Planner カードの編集です。タスク モジュールを使用して同様のエクスペリエンスを作成できます。
 
-タスクモジュール機能をサポートするために、 [Microsoft Teams クライアント SDK](/javascript/api/overview/msteams-client)に2つの新しい関数が追加されました。
+タスク モジュール機能をサポートするために、Microsoft Teams クライアント SDK に 2 つの新しい [機能が追加されました](/javascript/api/overview/msteams-client)。
 
 ```typescript
 microsoftTeams.tasks.startTask(
@@ -27,22 +27,22 @@ microsoftTeams.tasks.submitTask(
 ): void;
 ```
 
-それぞれがどのように機能するかを見てみましょう。
+それぞれの動作を見てみよ。
 
-## <a name="invoking-a-task-module-from-a-tab"></a>タブからタスクモジュールを呼び出す
+## <a name="invoking-a-task-module-from-a-tab"></a>タブからのタスク モジュールの呼び出し
 
-タスクモジュールをタブから呼び出し `microsoftTeams.tasks.startTask()` て、 [taskinfo オブジェクト](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)とオプションの `submitHandler` コールバック関数を渡す方法。 前述したように、次の2つのケースを考慮する必要があります。
+タブからタスク モジュールを呼び出す場合は `microsoftTeams.tasks.startTask()` [、TaskInfo](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object) オブジェクトとオプションのコールバック関数を渡 `submitHandler` します。 前述したように、次の 2 つのケースを考慮する必要があります。
 
-1. の値 `TaskInfo.url` は、URL に設定されます。 タスクモジュールウィンドウが表示され、 `TaskModule.url` そのウィンドウ内に読み込まれ `<iframe>` ます。 そのページの JavaScript がを呼び出す必要があり `microsoftTeams.initialize()` ます。 ページ上に関数があり、呼び出し時にエラーが発生した場合は、以下に示すように、エラーを `submitHandler` `microsoftTeams.tasks.startTask()` `submitHandler` `err` 示すエラー文字列に[below](#task-module-invocation-errors)set を指定して呼び出されます。
-1. の値 `taskInfo.card` は、[アダプティブカードの JSON](~/task-modules-and-cards/what-are-task-modules.md#adaptive-card-or-adaptive-card-bot-card-attachment)です。 この場合、 `submitHandler` ユーザーがアダプティブカード上でボタンを閉じたり押したりしたときに呼び出す JavaScript 関数は存在しません。ユーザーが入力した内容を受信するには、結果を bot に渡す以外に方法はありません。 タブからアダプティブカードタスクモジュールを使用するには、アプリがユーザーから情報を取得する bot を含んでいる必要があります。 これについては、以下で説明します。
+1. の値 `TaskInfo.url` は URL に設定されます。 タスク モジュール ウィンドウが表示され `TaskModule.url` 、内部として `<iframe>` 読み込まれます。 そのページの JavaScript を呼び出す必要があります `microsoftTeams.initialize()` 。 ページに関数が存在し、呼び出し時にエラーが発生した場合は、次に説明するようにエラーを示すエラー文字列に設定して `submitHandler` `microsoftTeams.tasks.startTask()` `submitHandler` `err` 呼び出 [されます](#task-module-invocation-errors)。
+1. 値はアダプティブ `taskInfo.card` カード [の JSON です](~/task-modules-and-cards/what-are-task-modules.md#adaptive-card-or-adaptive-card-bot-card-attachment)。 この場合、ユーザーがアダプティブ カードのボタンを閉じるか押した場合に呼び出す JavaScript 関数は明らかではありません。ユーザーが入力した値を受け取る唯一の方法は、結果をボットに渡す方法です。 `submitHandler` タブからアダプティブ カード タスク モジュールを使用するには、ユーザーから情報を取得するために、アプリにボットを含める必要があります。 これは以下で説明します。
 
-## <a name="example-invoking-a-task-module"></a>例: タスクモジュールを呼び出す
+## <a name="example-invoking-a-task-module"></a>例: タスク モジュールの呼び出し
 
-次のコードは、[タスクモジュールサンプル](~/task-modules-and-cards/what-are-task-modules.md#task-module-samples)から適用されます。 タスクモジュールは以下のようになります。
+以下のコードは、タスク モジュールの [サンプルから適合しています](~/task-modules-and-cards/what-are-task-modules.md#code-sample)。 タスク モジュールの外観を次に示します。
 
-![タスクモジュール-ユーザー設定フォーム](~/assets/images/task-module/task-module-custom-form.png)
+![タスク モジュール - カスタム フォーム](~/assets/images/task-module/task-module-custom-form.png)
 
-は `submitHandler` 非常に単純で、またはコンソールの値をエコーするだけです `err` `result` 。
+これは `submitHandler` 非常に単純です。コンソールの値またはコンソール `err` に `result` エコーします。
 
 ```javascript
 let taskInfo = {
@@ -66,33 +66,33 @@ submitHandler = (err, result) => {
 microsoftTeams.tasks.startTask(taskInfo, submitHandler);
 ```
 
-## <a name="submitting-the-result-of-a-task-module"></a>タスクモジュールの結果を提出する
+## <a name="submitting-the-result-of-a-task-module"></a>タスク モジュールの結果の送信
 
-`submitHandler`関数は、で使用され `TaskInfo.url` ます。 `submitHandler`関数は web ページに存在し `TaskInfo.url` ます。 タスクモジュールの呼び出し時にエラーが発生した場合は、 `submitHandler` `err` [エラーが発生した](#task-module-invocation-errors)ことを示す文字列を使用して、関数が直ちに呼び出されます。 この `submitHandler` 関数は、 `err` ユーザーがタスクモジュールの右上にある X を押したときに、文字列を使用しても呼び出されます。
+この `submitHandler` 関数は、 と一緒に使用されます `TaskInfo.url` 。 関数 `submitHandler` は Web ページに `TaskInfo.url` 存在します。 タスク モジュールを呼び出す際にエラーが発生した場合、関数は直ちに呼び出され、どのエラーが発生したのかを `submitHandler` `err` 示す文字列 [が表示されます](#task-module-invocation-errors)。 この関数は、ユーザーがタスク モジュールの右上にある X を押すと、文字列 `submitHandler` `err` で呼び出されます。
 
-呼び出しエラーがなく、ユーザーが X を押してそれを破棄しなかった場合、ユーザーは終了時にボタンを押したことになります。 タスクモジュールの URL であるか、アダプティブカードであるかによって、次のようになります。
+呼び出しエラーが発生し、ユーザーが X キーを押して閉じなかった場合、ユーザーは終了するとボタンを押します。 タスク モジュールの URL かアダプティブ カードかによって、次の処理が実行されます。
 
 ### <a name="htmljavascript-taskinfourl"></a>HTML/JavaScript ( `TaskInfo.url` )
 
-ユーザーが入力したことを確認したら、 `microsoftTeams.tasks.submitTask()` SDK 関数を呼び出し `submitTask()` ます (読みやすさを目的として、以降を参照)。 `submitTask()`タスクモジュールを閉じるだけの場合は、パラメーターを指定せずに呼び出すことができますが、ほとんどの場合、オブジェクトまたは文字列をに渡すことが必要になり `submitHandler` ます。
+ユーザーが入力した情報を検証したら、SDK 関数を呼び出します (以下、読みやすさの目的 `microsoftTeams.tasks.submitTask()` `submitTask()` で呼び出します)。 Teams でタスク モジュールを閉じるだけで、ほとんどの場合、オブジェクトまたは文字列を自分のタスク モジュールに渡す必要がある場合は、パラメーターを指定せずに `submitTask()` 呼び出します `submitHandler` 。
 
-結果を最初のパラメーターとして渡します。 Teams は、を呼び出し、 `submitHandler` `err` 渡され `null` `result` たオブジェクト/文字列になり `submitTask()` ます。 パラメーターを指定して呼び出しを行う場合 `submitTask()` `result` は、または文字列の配列を渡す**必要があり** `appId` `appId` ます。これにより、チームは、結果を送信しているアプリがタスクモジュールを呼び出したものと同じであることを確認できます。
+結果を最初のパラメーターとして渡します。 Teams は場所 `submitHandler` を `err` 呼び出 `null` し `result` 、渡したオブジェクト/文字列になります `submitTask()` 。 パラメーターを使用して呼び出す場合は、文字列または文字列の配列を渡す必要があります。これにより、Teams は、結果を送信するアプリがタスク モジュールを呼び出したアプリと同じことを検証 `submitTask()` `result`  `appId` `appId` できます。
 
-### <a name="adaptive-card-taskinfocard"></a>アダプティブカード ( `TaskInfo.card` )
+### <a name="adaptive-card-taskinfocard"></a>アダプティブ カード ( `TaskInfo.card` )
 
-でタスクモジュールを呼び出した場合 `submitHandler` 、ユーザーがボタンを押すと、 `Action.Submit` カード内の値はの値として返され `result` ます。 ユーザーが Esc ボタンを押すか、X を押すと、 `err` 代わりにが返されます。 または、アプリにタブに加えて bot が含まれている場合は、その `appId` bot のをオブジェクト内のの値として簡単に含めることができ `completionBotId` `TaskInfo` ます。 ユーザーがボタンを押したときに、ユーザーが入力したアダプティブカードの本文が、メッセージによって bot に送信され `task/submit invoke` `Action.Submit` ます。 受け取るオブジェクトのスキーマは、[タスク/フェッチおよびタスク/送信メッセージのために受け取るスキーマ](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages)によく似ています。唯一の違いは、JSON オブジェクトのスキーマは、インテリカードを[bot と組み合わせて使用する場合](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages)と同様に、アダプティブカードオブジェクトを*格納*しているオブジェクトではなく、アダプティブカードオブジェクトであるということです。
+タスク モジュールを呼び出した場合、ユーザーがボタンを押すと、カード内の値がの値 `submitHandler` `Action.Submit` として返されます `result` 。 ユーザーが Esc ボタンを押すか、X キーを押すと `err` 、代わりに返されます。 または、タブに加えてアプリにボットが含まれている場合は、単にボットの値をオブジェクトに `appId` `completionBotId` 含 `TaskInfo` める必要があります。 アダプティブ カード本文 (ユーザーが入力した場合) は、ユーザーがボタンを押すと、メッセージを介してボット `task/submit invoke` に送信 `Action.Submit` されます。 受信するオブジェクトのスキーマは、タスク/フェッチおよびタスク/送信メッセージで受け取る[スキーマと非常に似ています](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages)。唯一の違いは、JSON オブジェクトのスキーマがアダプティブ カード オブジェクトで、アダプティブカード オブジェクトを含むオブジェクト[](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages)ではなく、アダプティブ カード オブジェクトである点です。
 
-## <a name="example-submitting-the-result-of-a-task-module"></a>例: タスクモジュールの結果を提出する
+## <a name="example-submitting-the-result-of-a-task-module"></a>例: タスク モジュールの結果の送信
 
-前述の[タスクモジュールのフォーム](#example-invoking-a-task-module)を HTML フォームで取り消します。 フォームが定義されている場所は次のとおりです。
+上記の [タスク モジュールのフォームを](#example-invoking-a-task-module) HTML フォームで呼び出します。 フォームが定義されている場所を次に示します。
 
 ```html
 <form method="POST" id="customerForm" action="/register" onSubmit="return validateForm()">
 ```
 
-このフォームには5つのフィールドがありますが、この例では、、、およびの3つのフィールドの値のみを対象としています。 `name` `email` `favoriteBook`
+このフォームには 5 つのフィールドがありますが、この例では、3 つのフィールドの値にのみ関心 `name` があります。 `email` `favoriteBook`
 
-を呼び出す関数を次に示し `validateForm()` `submitTask()` ます。
+呼び出す `validateForm()` 関数を次に示します `submitTask()` 。
 
 ```javascript
 function validateForm() {
@@ -108,11 +108,11 @@ function validateForm() {
 
 ## <a name="task-module-invocation-errors"></a>タスク モジュール呼び出しのエラー
 
-で受信可能な値は次のとおりです `err` `submitHandler` 。
+以下に、ユーザーが受 `err` け取る可能性の値を示します `submitHandler` 。
 
-| 問題 | エラーメッセージ (の値 `err` ) |
+| 問題 | エラー メッセージ (値 `err` ) |
 | ------- | ------------------------------ |
-| との両方の値 `TaskInfo.url` `TaskInfo.card` が指定されました。 | カードと url の両方の値が指定されています。 どちらか一方のみが許可されます。 |
-| `TaskInfo.url`または `TaskInfo.card` 指定されません。 | "カードまたは url のいずれかに値を指定する必要があります。" |
-| 無効 `appId` です。 | "無効な appId"。 |
-| ユーザーが X ボタンを押して、それを閉じる。 | "ユーザーがタスクモジュールを取り消しまたは終了しました。" |
+| 両方の値と `TaskInfo.url` 指定 `TaskInfo.card` された値。 | "カードと URL の両方の値が指定されました。 一方または他の両方は許可されません。 |
+| 指定も `TaskInfo.url` `TaskInfo.card` 指定もされていません。 | "カードまたは URL の値を指定する必要があります。 |
+| 無効 `appId` です。 | "無効な appId" |
+| ユーザーが X ボタンを押し、閉じる。 | "ユーザーがタスク モジュールを取り消し/閉じた。 |

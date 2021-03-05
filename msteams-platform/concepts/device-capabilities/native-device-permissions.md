@@ -3,12 +3,12 @@ title: Microsoft Teams アプリのデバイスのアクセス許可を要求す
 keywords: teams アプリの機能のアクセス許可
 description: 通常、ユーザーの同意が必要なネイティブ機能へのアクセスを要求するためにアプリ マニフェストを更新する方法
 ms.topic: how-to
-ms.openlocfilehash: 60c28e1170e8bbdf664145bde7f7de585bd55a45
-ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
+ms.openlocfilehash: e7c5f7ff477bc193924cdf11700c77ae620cd1c0
+ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "50294748"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "50449437"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Microsoft Teams アプリのデバイスのアクセス許可を要求する
 
@@ -17,10 +17,11 @@ ms.locfileid: "50294748"
 > [!NOTE]
 > * Microsoft Teams モバイル アプリにメディア機能を統合するには、「メディア機能の統合 [」を参照してください](mobile-camera-image-permissions.md)。
 > * Microsoft Teams モバイル アプリに QR またはバーコード スキャナー機能を統合するには、「Teams に QR またはバーコード スキャナー機能を統合する」 [を参照してください。](qr-barcode-scanner-capability.md)
+> * 場所の機能を Microsoft Teams モバイル アプリに統合するには、「場所の機能を統合 [する」を参照してください](location-capability.md)。
 
 ## <a name="native-device-permissions"></a>ネイティブ デバイスのアクセス許可
 
-ネイティブ デバイス機能にアクセスするには、デバイスのアクセス許可を要求する必要があります。 デバイスのアクセス許可は、タブ、タスク モジュール、メッセージング拡張機能など、すべてのアプリ構成で同様に機能します。 ユーザーは、デバイスのアクセス許可を管理するために Teams 設定のアクセス許可ページに移動する必要があります。
+ネイティブ デバイス機能にアクセスするには、デバイスのアクセス許可を要求する必要があります。 デバイスのアクセス許可は、タブ、タスク モジュール、メッセージング拡張機能など、すべてのアプリ構成で同様に機能します。 ユーザーは、デバイスのアクセス許可を管理するために Teams 設定の [アクセス許可] ページに移動する必要があります。
 デバイス機能にアクセスすることで、Teams プラットフォームで次のような豊富なエクスペリエンスを構築できます。
 * 画像をキャプチャして表示します。
 * QR またはバーコードをスキャンします。
@@ -192,3 +193,6 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 > [!div class="nextstepaction"]
 > [Teams に QR またはバーコード スキャナー機能を統合する](qr-barcode-scanner-capability.md)
+
+> [!div class="nextstepaction"]
+> [Teams での場所機能の統合](location-capability.md)
