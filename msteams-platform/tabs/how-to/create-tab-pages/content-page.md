@@ -1,34 +1,34 @@
 ---
 title: コンテンツ ページを作成する
 author: laujan
-description: コンテンツページを作成する方法
-keywords: teams タブグループチャネルの構成可能な静的
+description: コンテンツ ページを作成する方法
+keywords: teams タブ グループ チャネル構成可能静的
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: ad1e1a015526fd723670ea7eda735ebf88f85bf8
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: 619ca1079fcdb5a44eec2fa63d6687a0eb65cd4d
+ms.sourcegitcommit: 9cfbc44912980a33d2d7c7c85739aeea6ccb41de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552536"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "50479873"
 ---
-# <a name="create-a-content-page-for-your-tab"></a>タブのコンテンツページを作成する
+# <a name="create-a-content-page-for-your-tab"></a>タブのコンテンツ ページを作成する
 
-コンテンツページは、Teams クライアント内でレンダリングされる web ページです。 通常は、次の一部です。
+コンテンツ ページは、Teams クライアント内でレンダリングされる Web ページです。 通常、これらは次の一部です。
 
-* このインスタンスでは、個人を対象範囲とするカスタムタブ。コンテンツページは、ユーザーが最初に検出したページです。
-* チャネル/グループカスタムタブ-ユーザーが適切なコンテキストでタブを固定して構成すると、[コンテンツ] ページが表示されます。
-* [タスクモジュール](~/task-modules-and-cards/what-are-task-modules.md)-コンテンツページを作成し、それをタスクモジュール内の webview として埋め込むことができます。 ページはモーダルポップアップ内にレンダリングされます。
+* 個人用スコープのカスタム タブ - このインスタンスでは、コンテンツ ページはユーザーが最初に表示するページです。
+* チャネル/グループ のカスタム タブ - ユーザーが適切なコンテキストでタブをピンで固定して構成すると、コンテンツ ページが表示されます。
+* タスク [モジュール](~/task-modules-and-cards/what-are-task-modules.md) - コンテンツ ページを作成し、それをタスク モジュール内の Web ビューとして埋め込みできます。 モーダル ポップアップ内にページが表示されます。
 
-この記事では、コンテンツページをタブとして使用する方法について説明します。ただし、ここに示すガイダンスの大部分は、エンドユーザーにコンテンツページを表示する方法に関係なく適用されます。
+この記事では、コンテンツ ページをタブとして使用する方法について説明します。ただし、ここでのガイダンスの大部分は、コンテンツ ページがエンド ユーザーに提示される方法に関係なく適用されます。
 
-## <a name="tab-content-and-style-guidelines"></a>タブの内容とスタイルのガイドライン
+## <a name="tab-content-and-style-guidelines"></a>タブのコンテンツとスタイルのガイドライン
 
-タブの全体的な目的は、実用的な価値と明確な目的を持つ、有意義で魅力的なコンテンツへのアクセスを提供することです。 見栄えの良いスタイルを先送りする必要があるわけではありませんが、タブデザインをすっきりさせ、ナビゲーションを直観的に、コンテンツのイマーシブ化を行うことによって、乱雑さを最小化することを重視する必要があります。 タブおよび[Microsoft Teams アプリ承認プロセスガイダンス](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)[を使用して、コンテンツと会話を一度にすべて](~/tabs/design/tabs.md)表示
+タブの全体的な目的は、実用的な価値と明らかな目的を持つ有意義で魅力的なコンテンツへのアクセスを提供する必要があります。 これは、快適なスタイルを見送る必要があるという意味ではありません。タブデザインをクリーンにし、ナビゲーションを直感的に行い、コンテンツを没入感のあるものにすることで、混乱を最小限に抑えることに集中する必要があります。 タブと Microsoft Teams [アプリ承認プロセスの](~/tabs/design/tabs.md) ガイダンスを使用して、コンテンツと会話を [一度に表示する](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)
 
 ## <a name="integrate-your-code-with-teams"></a>コードを Teams と統合する
 
-ページを Teams に表示するには、 [Microsoft Teams の JavaScript クライアント SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latestadd &preserve-view=true) を含み、ページの読み込み後にの呼び出しを含める必要があり `microsoftTeams.initialize()` ます。 ページと Teams クライアントが通信する方法は次のとおりです。
+Teams にページを表示するには [、Microsoft Teams JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) クライアント SDK を含め、ページの読み込み後に呼び `microsoftTeams.initialize()` 出しを含める必要があります。 ページと Teams クライアントが通信する方法は次の通りです。
 
 ```html
 <!DOCTYPE html>
@@ -48,38 +48,60 @@ ms.locfileid: "49552536"
 </body>
 ```
 
-## <a name="accessing-additional-content"></a>その他のコンテンツへのアクセス
+## <a name="accessing-additional-content"></a>追加コンテンツへのアクセス
 
-### <a name="using-the-sdk-to-interact-with-teams"></a>SDK を使用して Teams を操作する
+### <a name="using-the-sdk-to-interact-with-teams"></a>SDK を使用した Teams の操作
 
-[Teams クライアント JAVASCRIPT SDK](~/tabs/how-to/using-teams-client-sdk.md)には、コンテンツページの開発時に役立つ可能性がある多くの追加機能が用意されています。
+[Teams クライアント JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md)には、コンテンツ ページの開発に役立つ機能が多数含まれています。
 
 ### <a name="deep-links"></a>ディープ リンク
 
-Teams のエンティティへの詳細なリンクを作成できます。 通常、これらは、タブ内のコンテンツと情報に移動するリンクを作成するために使用されます。「 [Microsoft Teams のコンテンツと機能への詳細なリンクを作成する」を](~/concepts/build-and-test/deep-links.md)参照してください。
+Teams のエンティティへのディープ リンクを作成できます。 通常、これらは、タブ内のコンテンツと情報に移動するリンクを作成するために使用されます。「Microsoft [Teams でコンテンツと機能へのディープ リンクを作成する」を参照してください](~/concepts/build-and-test/deep-links.md)。
 
-### <a name="task-modules"></a>タスクモジュール
+### <a name="task-modules"></a>タスク モジュール
 
-タスクモジュールとは、タブからトリガーできるモーダルなポップアップのような操作のことです。通常、コンテンツページでは、複数のページを使用してユーザーを移動する必要はありません。 その代わりに、タスクモジュールを使用して、追加情報を収集するためのフォームを表示したり、リスト内のアイテムの詳細を表示したり、またはその他の時間についてユーザーに追加情報を提示する必要があります。 タスクモジュール自体は、追加のコンテンツページにすることも、アダプティブカードを使用して完全に作成することもできます。 詳細については、「 [tab でタスクモジュールを使用する](~/task-modules-and-cards/task-modules/task-modules-tabs.md) 」を参照してください。
+タスク モジュールは、タブからトリガーできるモーダル ポップアップのようなエクスペリエンスです。通常、コンテンツ ページでは、複数のページを介してユーザーを移動する必要があります。 代わりに、タスク モジュールを使用して、追加情報の収集、リスト内のアイテムの詳細の表示、またはユーザーに追加情報を提示する必要があるその他の時間を表示するためのフォームを提示します。 タスク モジュール自体は、追加のコンテンツ ページでも、アダプティブ カードを使用して完全に作成することもできます。 詳細については [、「タブでのタスク モジュールの使用](~/task-modules-and-cards/task-modules/task-modules-tabs.md) 」を参照してください。
 
 ### <a name="valid-domains"></a>有効なドメイン
 
-タブで使用されているすべての URL ドメインがマニフェスト内の配列に含まれていることを確認し `validDomains` ます。 [manifest](~/concepts/build-and-test/apps-package.md) 詳細については、「マニフェストスキーマリファレンス」の「 [Validdomains](~/resources/schema/manifest-schema.md#validdomains) 」を参照してください。 ただし、タブのコア機能は teams 内に存在し、Teams の外部ではないことに注意してください。
+タブで使用されているすべての URL ドメインがマニフェストの配列に含 `validDomains` まれているか確認 [します](~/concepts/build-and-test/apps-package.md)。 詳細については、マニフェスト スキーマ [リファレンスの validDomains](~/resources/schema/manifest-schema.md#validdomains) を参照してください。 ただし、タブのコア機能は Teams 内に存在し、Teams の外部には存在しません。
 
-## <a name="show-a-native-loading-indicator"></a>ネイティブローディングインジケーターを表示する
+## <a name="reorder-static-personal-tabs"></a>静的な個人用タブの並べ替え
 
-[マニフェストスキーマ](../../../resources/schema/manifest-schema.md)v2.0 以降では、web コンテンツが Teams ([タブのコンテンツページ](#integrate-your-code-with-teams)、[構成ページ](configuration-page.md)、[削除ページ](removal-page.md)、[タスクモジュール](../../../task-modules-and-cards/task-modules/task-modules-tabs.md)など) に読み込まれているすべての場所で、[ネイティブの読み込みインジケーター](../../../resources/schema/manifest-schema.md#showloadingindicator)を提供できます。
+マニフェスト バージョン 1.7 から、開発者は個人用アプリ内のすべてのタブを再配置できます。 特に、開発者はボット チャットタブを移動できます。これは常に既定で最初の位置に、個人用アプリのタブ ヘッダー内の任意の場所に移動できます。 2 つの予約済みタブ entityId キーワード、会話 *、およびについて* 宣言 *しました*。
+
+個人用スコープを持つボットを *作成* すると、既定では個人用アプリの最初のタブ位置に表示されます。 別の位置に移動する場合は、予約キーワードである会話を使用して静的タブ オブジェクトをマニフェストに追加する必要 *があります*。 [ *会話* ] タブは、配列に [会話] タブを追加した場所に基づいて *Web* またはデスクトップに表示 `staticTabs` されます。 
+
+```json
+{
+   "staticTabs":[
+      {
+         
+      },
+      {
+         "entityId":"conversations",
+         "scopes":[
+            "personal"
+         ]
+      }
+   ]
+}
+```
+
+## <a name="show-a-native-loading-indicator"></a>ネイティブ読み込みインジケーターの表示
+
+マニフェスト スキーマ[v1.7](../../../resources/schema/manifest-schema.md)から、Web コンテンツ[](../../../resources/schema/manifest-schema.md#showloadingindicator)が Teams に読み込まれる場所 (タブ コンテンツ ページ、構成ページ、[](configuration-page.md)タブ内の[](removal-page.md)削除ページ、タスク モジュールなど) にネイティブ読み込みインジケーターを提供[できます](../../../task-modules-and-cards/task-modules/task-modules-tabs.md)。 [](#integrate-your-code-with-teams)
 
 > [!NOTE]
-> 1. ネイティブの読み込みインジケーターは、モバイルデバイスではまだサポートされていません。
-> 2. アプリマニフェストで指定する場合は、  `"showLoadingIndicator : true`  すべてのタブ構成、コンテンツ、および削除ページと、すべての iframe ベースのタスクモジュールは、以下の必須プロトコルに従う必要があります。
+> 1. モバイル デバイスでは、ネイティブ読み込みインジケーターはまだサポートされていません。
+> 2. アプリ マニフェストで指定した場合は、すべてのタブ構成、コンテンツ、および削除ページとすべての iframe ベースのタスク モジュールは、以下の必須プロトコルに従う  `"showLoadingIndicator : true`  必要があります。
 
 
-1. 読み込みインジケーターを表示するには、 `"showLoadingIndicator": true` マニフェストにを追加します。 
-2. にお問い合わせ `microsoftTeams.initialize();` ください。
-3. **省略可能** です。 画面に印刷する準備ができていて、アプリケーションのコンテンツの残りの部分を遅延ロードする必要がある場合は、を呼び出して、読み込みインジケーターを手動で非表示にすることができます。 `microsoftTeams.appInitialization.notifyAppLoaded();`
-4. **必須**。 最後に、 `microsoftTeams.appInitialization.notifySuccess()` アプリが正常に読み込まれたことを Teams に通知する呼び出しを行います。 チームは、必要に応じて、読み込みインジケーターを非表示にします。 `notifySuccess`が30秒以内に呼び出されない場合は、アプリがタイムアウトになり、[再試行] オプションのあるエラー画面が表示されることを前提としています。
-5. アプリケーションの読み込みに失敗した場合は、 `microsoftTeams.appInitialization.notifyFailure(reason);` チームにエラーがあることを知らせるための呼び出しを行うことができます。 エラー画面がユーザーに表示されます。
+1. 読み込みインジケーターを表示するには、マニフェスト `"showLoadingIndicator": true` に追加します。 
+2. を呼び出す `microsoftTeams.initialize();` 必要があります。
+3. **オプション**。 画面に印刷する準備が整い、アプリケーションの残りのコンテンツを遅延読み込みする場合は、呼び出しによって読み込みインジケーターを手動で非表示にできます `microsoftTeams.appInitialization.notifyAppLoaded();`
+4. **必須です**。 最後に、アプリが `microsoftTeams.appInitialization.notifySuccess()` 正常に読み込まれたと Teams に通知する呼び出しを行います。 該当する場合、Teams は読み込みインジケーターを非表示にします。 30 秒以内に呼び出されない場合は、アプリがタイム アウトし、再試行オプション付きエラー画面が  `notifySuccess`  表示されます。
+5. アプリケーションの読み込みに失敗した場合は、Teams にエラー `microsoftTeams.appInitialization.notifyFailure(reason);` が発生したと知らせる呼び出しを行います。 次に、エラー画面がユーザーに表示されます。
 
 ```typescript
 ``

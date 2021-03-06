@@ -3,12 +3,12 @@ title: 新機能
 description: Microsoft Teams のすべての新しい開発者機能について説明します。
 ms.topic: reference
 keywords: チームの最新情報
-ms.openlocfilehash: c8271a1d3cd442301016874fbb364b697c4f7c73
-ms.sourcegitcommit: 47cf0d05e15e5c23616b18ae4e815fd871bbf827
+ms.openlocfilehash: 62504b076fb8e4b0523a4a223301c9f031f03e7c
+ms.sourcegitcommit: 9cfbc44912980a33d2d7c7c85739aeea6ccb41de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50455386"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "50479856"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -21,6 +21,9 @@ ms.locfileid: "50455386"
 
 | **日付** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+|03/05/2021|注意: タブには、エクスペリエンスを囲む余白がなくなりました。 タブ開発者は、アプリを確認して更新する必要があります。 | [タブ余白の削除](resources/removing-tab-margins.md) |
+|03/05/2021 | 既定のインストール スコープとグループ機能は、開発者プレビューに表示されます。| [既定のインストール スコープとグループ機能](concepts/deploy-and-publish/apps-upload.md#add-a-default-install-scope-and-group-capability) |
+|03/05/2021|個人用アプリのタブを並べ替える|[個人用アプリのチャット タブを並べ替える](tabs/how-to/create-tab-pages/content-page.md#reorder-static-personal-tabs)|
 |03/04/2021|アダプティブ カードの情報マスキングは、開発者向けプレビューで行います。| [アダプティブ カードの情報マスキング](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
 |02/19/2021|新規: 位置情報機能を追加しました。 <br/> 更新: 場所の機能情報は、デバイス機能の概要、ネイティブ デバイスのアクセス許可、メディア機能と QR またはバーコード スキャナー機能ファイルの統合に追加されます。|[概要](concepts/device-capabilities/device-capabilities-overview.md)、[デバイスのアクセス許可の要求](concepts/device-capabilities/native-device-permissions.md)、[メディア機能の統合](concepts/device-capabilities/mobile-camera-image-permissions.md)[、QR またはバーコード](concepts/device-capabilities/qr-barcode-scanner-capability.md)スキャナー機能の統合、[場所の統合機能](concepts/device-capabilities/location-capability.md) |
 |02/18/2021|新機能: QR またはバーコード スキャナー機能を追加しました。 <br/> 更新: QR またはバーコード スキャナー機能情報は、デバイス機能の概要、ネイティブ デバイスのアクセス許可、メディア機能ファイルの統合に追加されます。|[概要](concepts/device-capabilities/device-capabilities-overview.md)、[デバイスのアクセス許可の要求](concepts/device-capabilities/native-device-permissions.md)、[メディア機能の統合](concepts/device-capabilities/mobile-camera-image-permissions.md)[、QR またはバーコード スキャナー機能の統合](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
