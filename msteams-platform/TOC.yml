@@ -30,6 +30,8 @@
       href: tutorials/get-started-nodejs-app-studio.md
     - name: Yeoman ジェネレーターを使用してアプリを作成する
       href: tutorials/get-started-yeoman.md
+    - name: Yeoman ジェネレーターを使用して Microsoft Teams をアップグレードする
+      href: tutorials/UpgradeTeamsUsingYeoman.md
     - name: コード サンプル
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: アプリの基本事項
@@ -76,6 +78,8 @@
           href: concepts/device-capabilities/mobile-camera-image-permissions.md
         - name: QR コードまたはバーコード スキャナー機能を統合する
           href: concepts/device-capabilities/qr-barcode-scanner-capability.md
+        - name: 場所機能を統合する
+          href: concepts/device-capabilities/location-capability.md
 - name: アプリをデザインする
   items:
     - name: 概要
@@ -334,7 +338,7 @@
       href: 'https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab'
     - name: リソース固有の同意を有効にする
       href: graph-api/rsc/resource-specific-consent.md
-    - name: プロアクティブなボットをインストールしてメッセージングを有効にする
+    - name: Graph API を使用したアプリの事前インストールとメッセージの送信
       href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
     - name: サードパーティのメッセージをインポートする
       href: graph-api/import-messages/import-external-messages-to-teams.md
@@ -408,6 +412,8 @@
           href: resources/schema/manifest-schema-dev-preview.md
         - name: 機能
           href: resources/dev-preview/developer-preview-features.md
+    - name: タブ余白の変更
+      href: resources/removing-tab-margins.md
     - name: SameSite Cookie 属性 (2020 更新プログラム)
       href: resources/samesite-cookie-update.md
     - name: Teamsドキュメントへの関与
