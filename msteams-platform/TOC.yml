@@ -31,7 +31,7 @@
     - name: Yeoman ジェネレーターを使用してアプリを作成する
       href: tutorials/get-started-yeoman.md
     - name: Yeoman ジェネレーターを使用して Microsoft Teams をアップグレードする
-      href: tutorials/UpgradeTeamsUsingYeoman.md
+      href: tutorials/upgrade-using-yeoman.md
     - name: コード サンプル
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: アプリの基本事項
