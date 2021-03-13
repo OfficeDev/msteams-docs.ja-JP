@@ -3,17 +3,17 @@ title: 新機能
 description: Microsoft Teams のすべての新しい開発者機能について説明します。
 ms.topic: reference
 keywords: チームの最新情報
-ms.openlocfilehash: 62504b076fb8e4b0523a4a223301c9f031f03e7c
-ms.sourcegitcommit: 9cfbc44912980a33d2d7c7c85739aeea6ccb41de
+ms.openlocfilehash: d1a6a0532a857d02e7188c42282f1d0727d6f309
+ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "50479856"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "50753547"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
 >[!TIP]
-> Teams アプリ テンプレート カタログで、実稼働可能な   [**テンプレートを確認してください**](samples/app-templates.md)。 カタログはアルファベット化され、最新の追加には星のタグが付 **&#9734;。**
+> Teams アプリ テンプレート カタログで一般的なチーム シナリオのサンプル [**ソリューションを確認してください**](samples/app-templates.md)。 カタログはアルファベット順に表示され、最新の追加には星 ☆がタグ付けされます。
 
 ## <a name="change-log"></a>変更ログ
 

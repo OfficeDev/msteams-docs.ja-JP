@@ -3,12 +3,12 @@ title: ボットのシングル サインオンのサポート
 description: ユーザー トークンを取得する方法について説明します。 現在、ボット開発者は、OAuth カードのサポートを受け取ってサインイン カードまたは Azure ボット サービスを使用できます。
 keywords: トークン、ユーザー トークン、ボットの SSO サポート
 ms.topic: conceptual
-ms.openlocfilehash: a023c232186ce855c0b262f8cb535ec9d05db95a
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: dad36f52a3e23c00f8725e2e906308339629bb05
+ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449487"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "50753533"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>ボットのシングル サインオン (SSO) のサポート
 
@@ -82,7 +82,7 @@ AAD ポータルを介してアプリを登録する手順は、タブ SSO フ�
     >
     > 次の重要な制限に注意する必要があります。
     >
-    > * ユーザー レベルの Microsoft Graph API アクセス許可 (メール、プロファイル、offline_access OpenId など) だけがサポートされます。 その他の Microsoft Graph スコープ (またはなど) へのアクセスが必要な場合は `User.Read` `Mail.Read` 、推奨される回避策 [を参照してください](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-microsoft-graph-scopes)。
+    > * ユーザー レベルの Microsoft Graph API アクセス許可 (メール、プロファイル、offline_access OpenId など) だけがサポートされます。 その他の Microsoft Graph スコープ (またはなど) へのアクセスが必要な場合は `User.Read` `Mail.Read` 、推奨される回避策 [を参照してください](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-graph-scopes)。
     > * アプリケーションのドメイン名は、AAD アプリケーションに登録したドメイン名と同じである必要があります。
     > * アプリごとに複数のドメインは現在サポートされていません。
     > * ドメインを使用するアプリケーションは一般的であり、セキュリティ リスクである可能性があるため `azurewebsites.net` 、サポートされていません。
