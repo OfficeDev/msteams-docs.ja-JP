@@ -4,12 +4,12 @@ description: Microsoft Teams の 365 コネクタOfficeを開始する方法に�
 keywords: Teams o365 コネクタ
 ms.topic: conceptual
 ms.date: 04/19/2019
-ms.openlocfilehash: 8f9fcc40ca0634ead0a6c5d7d0653ad4ab993860
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: d0fe380cd168b8dcbddc5af0de96160e0bc259a9
+ms.sourcegitcommit: 1ce74ed167bb81bf09f7f6f8d518093efafb549e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449256"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "50827922"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>Microsoft Teams Office 365 コネクタの作成
 
@@ -94,7 +94,6 @@ CSS を使用せずにコネクタ構成ページを作成するサンプル HTM
         });
 
         microsoftTeams.settings.registerOnRemoveHandler(function (removeEvent) {
-            var removeCalled = true;
             alert("Removed" + JSON.stringify(removeEvent));
         });
 
