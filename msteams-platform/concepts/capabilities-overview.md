@@ -5,34 +5,34 @@ description: Teams アプリの機能の説明
 ms.topic: conceptual
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: e7a6fe61fa5c74547ce20cc895afdd044f35e512
-ms.sourcegitcommit: 1aa0b172931d0f81db346452788c41dc4a6717b9
+ms.openlocfilehash: 5336b36b52cf81be414f18ccaaf9e235c079e626
+ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "48210276"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "51034706"
 ---
 # <a name="understanding-teams-app-capabilities"></a>Teams アプリの機能について
 
-*機能* は、Microsoft Teams プラットフォームでアプリを作成するための拡張点です。
+*機能は* 、Microsoft Teams プラットフォームでアプリを構築する拡張ポイントです。
 
-Teams を拡張する方法は複数ありますが、すべてのアプリが一意であるため、一部のアプリは1つの機能 (webhook など) しか持たないため、ユーザーのオプションを提供する方法がいくつかあります。 たとえば、アプリではデータを中央の場所 (タブ) に表示し、会話インターフェイス (bot) を通じて同じ情報を表示することができます。
+Teams を拡張する方法は複数あるので、すべてのアプリは一意です。一部のアプリには 1 つの機能 (webhook など) しか持てない場合と、ユーザーにオプションを提供する機能がいくつかあります。 たとえば、アプリは中央の場所 (タブ) にデータを表示し、会話インターフェイス (ボット) を通じて同じ情報を表示できます。
 
-Teams アプリには、次のコア機能のいずれかまたはすべてを含めることができます。
+Teams アプリには、次のコア機能の 1 つまたはすべてが含まれます。
 
 * [タブ](../tabs/what-are-tabs.md)
 * [メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)
 * [ボット](../bots/what-are-bots.md)
 * [Webhook とコネクタ](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)
 
-アプリでは、 [Microsoft GRAPH API For Teams](https://docs.microsoft.com/graph/teams-concept-overview)などの高度な機能を利用することもできます。
+アプリでは、Microsoft Graph API for Teams などの高度な [機能を利用することもできます](https://docs.microsoft.com/graph/teams-concept-overview)。
 
-アプリに必要な機能を提供する機能については、次の図を参照してください。
+アプリで必要な機能を提供する機能を確認するには、次の図を参照してください。
 
-:::image type="content" source="../assets/images/capabilities-overview.png" alt-text="Teams アプリの機能についてのマインドマップ。":::
+:::image type="content" source="../assets/images/capabilities-overview.png" alt-text="Teams アプリの機能を示すマインド マップ。":::
 
-## <a name="doing-whats-best-for-your-users"></a>ユーザーにとって最適な方法
+## <a name="doing-whats-best-for-your-users"></a>ユーザーに最適な機能を実行する
 
-Teams アプリの開発について理解すると、その微妙な違いについて理解し始められます。 特定の機能 (ユーザー入力の収集など) を構築する方法は複数あります。 たとえば、を使用して、web ベースのフォームをタブに埋め込むことができ `<iframe>` ます。 また、タスクモジュールである Teams の UI 規則を使用して、ユーザーが望むようによりネイティブな操作を行うことができるタブで、これを行うこともできます。
+Teams アプリの開発に慣れ親しんだら、その微妙な点を理解し始めるでしょう。 特定の機能 (ユーザー入力の収集など) を作成する方法は複数ある。 たとえば、Web ベースのフォームをタブに埋め込むには、 を使用します `<iframe>` 。 また、ユーザーが優先するよりネイティブなエクスペリエンスを得る場合は、タスク モジュールである Teams UI 規則を使用してタブでこれを実行することもできます。
 
-適切な機能と設計を選択することによって、最初に [対象ユーザーのユースケースを理解](../concepts/design/understand-use-cases.md)します。
+適切な機能と設計を選ぶには、まず対象ユーザーの使用例 [を理解する必要があります](../concepts/design/understand-use-cases.md)。

@@ -1,34 +1,40 @@
 ---
-title: Microsoft Teams 開発者サポートとフィードバック
-description: Microsoft Teams 製品チームは、いくつかのフィードバックとサポート チャネルを通して開発者コミュニティに対応します。
+title: Microsoft Teams 開発者のサポートとフィードバック
+description: Microsoft Teams 製品チームは、さまざまなフィードバックとサポート チャネルを通して開発者コミュニティに対応します。
 ms.topic: reference
-keywords: チームフィードバック開発者の質問に関する問題、サポート要求バグ貢献コミュニティへの問い合わせ
-ms.openlocfilehash: 74543a6eddb0f7515cc7d20824525e4b1b21dcd6
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+keywords: チームフィードバック開発者の質問の問題連絡先サポート要求バグの投稿 コミュニティディスカッション
+ms.openlocfilehash: 49dfe06dd1e343b04e8c15c7cc3bdb6957946706
+ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014524"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "51034720"
 ---
 # <a name="microsoft-teams-developer-community-channels"></a>Microsoft Teams 開発者コミュニティ チャネル
 
-Microsoft Teams 製品チームは、いくつかのフィードバックとサポート チャネルを通して開発者コミュニティに対応します。
-
+開発者の Microsoft Teams コミュニティでは、スタック オーバーフローを使用して他の開発者と接続してアイデアの作成、明確化、クエリの送信を行います。 さらに、クエリ、疑問、または明確化を送信するために必要なサポートの種類に応じて、次のいずれかの連絡先またはサイトを使用できます。 Microsoft Teams に関する問題、制限事項、一般的な質問など、製品固有の情報を取得できます。
 
 |            **サポートの種類**            |               **Contact**                                                                                  |
 |-----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|         **コミュニティ サポート**          |<ol><li> [](https://stackoverflow.com/questions/tagged/microsoft-teams) タグを使用して、`microsoft-teams` に質問を投稿することができます。 なお、Stack Overflow には、ガイドライン (わかりやすいタイトル、正確で簡潔な問題の記述、問題を再現するための十分な詳細など) があります。 機能の要求や、あまりにも広範な質問は、ここでは扱いません。新規ユーザーは、詳細について [Stack Overflow ヘルプ センター](https://stackoverflow.com/help/how-to-ask)にお問い合わせください。</li>                                                                                                                                                                       <li> 質問は、タグを使用 [して Microsoft Q&A に](/answers/topics/office-teams-app-dev.html) 投稿 `office-teams-app-dev` できます。 スタック オーバーフローが好きです。 ご質問があるお客様を引き続きサポートします。 ただし、Stack Overflow にはコミュニティに適した質問に関する特定の条件があります。 [また、Microsoft Q&A](/answers/topics/office-teams-app-dev.html) にはこれに関するよりオープンなポリシーが適用されます。  </li> </ol>                                                                                                  |
-|        **Tab SDK の問題/提案**        |  Microsoft Teams JavaScript ライブラリの SDK レポに問題と機能の要求 [を送信します](https://github.com/OfficeDev/microsoft-teams-library-js/issues)。 SDK に関する使い方に関する質問は、タグを使用 [して Stack Overflow](https://stackoverflow.com/questions/tagged/microsoft-teams) に投稿 `microsoft-teams` できます。                                                                                                                                                                                                                       |
-|            **Bot & Messaging Extension SDK の問題/提案**             |       ボットの言語[(C#](https://github.com/Microsoft/botbuilder-dotnet/) [、Javascript、](https://github.com/Microsoft/botbuilder-js)[または Python)](https://github.com/Microsoft/botbuilder-python)の問題と機能の要求を SDK レポに送信します。 SDK に関する使い方に関する質問は、タグを使用 [して Stack Overflow](https://stackoverflow.com/questions/tagged/botframework%20microsoft-teams) に投稿 `botframework & microsoft-teams` できます。                                                                                            |
-| **サンプル** |             サンプルに関する問題をそれぞれの [Microsoft Teams サンプル レポートに](/microsoftteams/platform/tutorials/code-samples) 提出します。                                                                                                                                                                                            |
-| **機能に関する提案**             |      UserVoice の Microsoft Teams フィードバック ポータルで機能 [に関する提案を行います](https://microsoftteams.uservoice.com/forums/555103-public-preview/category/182881-developer-platform)。                                                                                                                                                            |
-|        **ドキュメントの問題**        |                                                                                                                                                                      各ドキュメントの下部にある [フィードバックの送信と表示] セクションでオプションを選択し、Microsoft Teams のドキュメント GitHub リポジトリで問題を `This page` 開きます。  [](https://github.com/MicrosoftDocs/msteams-docs/issues)                                                                                                                                                                      |
-|       **ドキュメントの更新**        | 記事の [編集] リンクを選択し [、Microsoft Teams ドキュメントの GitHub](https://github.com/MicrosoftDocs/msteams-docs) リポジトリにプル要求を送信します。                                                                                                                                                                      |
-|       **コミュニティ チャット グループ**        | 初 **めてログインする場合** は、[サインインして話し始める] を選択して [、Microsoft Teams](https://gitter.im/OfficeDev/MicrosoftTeamsAppDev)アプリ開発者向けの非公式のコミュニティ チャット ルームに参加します。 既 **にログインしている場合** は、[JOIN ROOM] を選択します。 |
-|          **一般的な質問**         |          Microsoft Teams 開発者プラットフォームに関する一般的な質問は [、Microsoft Teams コミュニティ ヘルプにメールでお送りください](mailto:microsoftteamsdev@microsoft.com)。 上記のチャネルに質問を投稿し、上記のいずれも該当しない場合にのみメールを使用してください。                                                                                                                                                                          |
+|         **ボットとメッセージング拡張機能 SDK の問題または提案**         | ボットの言語 (C#、Javascript、または Python) の SDK リポジトリに問題と[](https://github.com/Microsoft/botbuilder-js)[機能](https://github.com/Microsoft/botbuilder-dotnet/)要求を[送信します](https://github.com/Microsoft/botbuilder-python)。 タグを使用してスタック オーバーフローに [関する質問](https://stackoverflow.com/questions/tagged/botframework%20microsoft-teams) を投稿 `botframework & microsoft-teams` します。   |
+|         **コミュニティ チャット グループ**         |  初 **めてサインインする場合** は、[サインインして話を開始する] を選択して [、Microsoft Teams](https://gitter.im/OfficeDev/MicrosoftTeamsAppDev)アプリ開発者向けの非公式コミュニティ チャット ルームに参加します。 既 **にログインしている場合** は、[JOIN ROOM] を選択します。      |
+|            **コミュニティ サポート**             |     <ul><li> [スタック オーバーフロー](https://stackoverflow.com/questions/tagged/microsoft-teams): タグを使用 `botframework & microsoft-teams` して質問を投稿します。 説明的なタイトル、完全で簡潔な問題ステートメント、および問題を再現するための十分な詳細を提供するなど、スタック オーバーフローのガイドラインに従う必要があります。 機能要求または広範な質問は、トピック外です。 新しいユーザーの場合、詳細については、「Stack Overflow ヘルプ センター」を参照してください。 </li>                                                                                                                                                                       <li>  [Microsoft Q&A:](/answers/topics/office-teams-app-dev.html)タグを使用 `office-teams-app-dev` して質問を投稿します。 スタック オーバーフローが大好きであり、そこで質問をする顧客に対する広範なサポートが保証されています。 ただし、スタック オーバーフローにはコミュニティに適した質問に関する特定の条件があります [。Microsoft Q](/answers/topics/office-teams-app-dev.html)&A には、これに関するオープン ポリシーがあります。  </li> </ul>                                                                                            |
+|  **ドキュメントの問題**  |        Microsoft Teams のドキュメント GitHub リポジトリで問題を開く場合は、ドキュメントのフッターにある [フィードバックの送信と表示] セクション `This page` で選択します。  [](https://github.com/MicrosoftDocs/msteams-docs/issues)                                                                                                                                                                                            |
+|  **ドキュメントの更新**           |     更新 **する記事** で [編集] を選択し、Microsoft Teams のドキュメント GitHub リポジトリにプル [要求を送信](https://github.com/MicrosoftDocs/msteams-docs) します。                                                                                                                                                           |
+|       **機能の提案**       |                                                                                                                                                                      [UserVoice の Microsoft Teams フィードバック ポータルに機能の提案を投稿します](https://microsoftteams.uservoice.com/forums/555103-public-preview/category/182881-developer-platform)。                                                                                                                                                                      |
+|       **一般的な質問**         |Microsoft Teams 開発者プラットフォームに関する一般的な質問を [Microsoft Teams コミュニティ ヘルプに送信します](mailto:microsoftteamsdev@microsoft.com)。 ここで説明したチャネルに質問を投稿し、他の通信モードが適用できない場合にのみ電子メールを使用してください。                                                                                                                                                                      |
+|        **サンプル**         | サンプルに関する問題をそれぞれの [Microsoft Teams サンプル リポジトリに提出](/microsoftteams/platform/tutorials/code-samples) します。|
+|           **Tab SDK の問題または提案**          |         Microsoft Teams JavaScript ライブラリの SDK リポジトリに問題と [機能要求を送信します](https://github.com/OfficeDev/microsoft-teams-library-js/issues)。 タグを `microsoft-teams` 使用して、スタック オーバーフローで SDK に関する質問を [投稿します](https://stackoverflow.com/questions/tagged/microsoft-teams)。                                                                                                                                                                            |
 
 ## <a name="product-support-channels"></a>製品サポート チャネル
+次の表に、Teams 製品関連のクエリを送信するサポート チャネルの一覧を示します。
+
 |            **サポートの種類**            |               **Contact**                                                                                  |
 |-----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|         **Microsoft Teams 製品の問題/エラー**          | テナント管理者は [、Microsoft 365 製品サポートに問い合わせください](/microsoft-365/admin/contact-support-for-business-products)。                                                            |
-|        **Microsoft Teams に関する一般的な質問**        |  Microsoft Teams コミュニティに質問 [を投稿してください](https://answers.microsoft.com/en-us/msteams/forum)。               |                                                                                                                                                         
+|         **Microsoft Teams 製品の問題とエラー**          | テナント管理者は [、Microsoft 365 製品サポートに連絡できます](/microsoft-365/admin/contact-support-for-business-products)。                                                            |
+|        **Microsoft Teams に関する一般的な質問**        |  Microsoft Teams コミュニティで質問 [を送信します](https://answers.microsoft.com/en-us/msteams/forum)。               |                                                           
+
+## <a name="see-also"></a>関連項目
+
+> [!div class="nextstepaction"]
+> [SDK リファレンス](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)

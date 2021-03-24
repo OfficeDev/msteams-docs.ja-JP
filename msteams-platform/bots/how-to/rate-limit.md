@@ -1,25 +1,25 @@
 ---
 title: レート制限
-description: Microsoft Teams でのレートの制限とベストプラクティス
-keywords: teams のボットレート制限
-ms.openlocfilehash: 2e401b59df075688cb6d459a881e6b813f2cf8e6
-ms.sourcegitcommit: b3962a7b36f260aef1af9124d14d71ae08b01ac4
+description: Microsoft Teams のレート制限とベスト プラクティス
+keywords: Teams ボットのレート制限
+ms.openlocfilehash: 840737178234bcd6e2da1925b0031083717e2b91
+ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "47303711"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "51034684"
 ---
-# <a name="optimize-your-bot-rate-limiting-and-best-practices-in-microsoft-teams"></a>Bot を最適化する: Microsoft Teams でのレートの制限とベストプラクティス
+# <a name="optimize-your-bot-rate-limiting-and-best-practices-in-microsoft-teams"></a>ボットを最適化する: Microsoft Teams でのレート制限とベスト プラクティス
 
-一般的な原則として、アプリケーションでは、個々のチャットまたはチャネル会話に投稿するメッセージ数を制限する必要があります。 これにより、エンドユーザーに "spammy" を感じない最適な操作性が実現されます。
+一般的な原則として、アプリケーションは投稿するメッセージの数を個々のチャットまたはチャネルの会話に制限する必要があります。 これにより、エンド ユーザーに "スパム" を感じない最適なエクスペリエンスが保証されます。
 
-Microsoft Teams とそのユーザーを保護するために、bot Api rate は受信要求を制限します。 この制限を超えるアプリは、 `HTTP 429 Too Many Requests` エラー状態を受信します。 すべての要求は、メッセージの送信、チャネルの列挙、名簿の取得など、同じ料金を制限するポリシーに従います。
+Microsoft Teams とそのユーザーを保護するために、ボット API は受信要求をレート制限します。 この制限を超えるアプリは、エラー状態 `HTTP 429 Too Many Requests` を受け取る。 すべての要求は、メッセージの送信、チャネル列挙、名簿フェッチなど、同じレート制限ポリシーの対象です。
 
-レート制限の正確な値は変更される可能性があるため、API が戻るときに、アプリケーションで適切なバックオフ動作を実装することをお勧め `HTTP 429 Too Many Requests` します。
+レート制限の正確な値は変更される可能性があります。API が返される場合は、アプリケーションで適切なバックオフ動作を実装することをお勧めします `HTTP 429 Too Many Requests` 。
 
-## <a name="handling-rate-limits"></a>処理率の制限
+## <a name="handling-rate-limits"></a>レート制限の処理
 
-Bot ビルダー SDK 操作を発行するときに、 `Microsoft.Rest.HttpOperationException` 状態コードを処理および確認できます。
+ボット ビルダー SDK 操作を発行する場合は、状態コードを処理 `Microsoft.Rest.HttpOperationException` して確認できます。
 
 ```csharp
 try
@@ -38,15 +38,15 @@ catch (HttpOperationException ex)
 
 ## <a name="best-practices"></a>ベスト プラクティス
 
-通常、応答を受信しないようにするには、簡単な予防措置を講じる必要があり `HTTP 429` ます。 たとえば、同じ個人用またはチャネル会話に対して複数の要求を発行しないようにします。 代わりに、API 要求のバッチ処理を検討してください。
+一般に、応答を受信しないように、簡単な予防措置を講 `HTTP 429` じるべきです。 たとえば、同じ個人またはチャネルの会話に対して複数の要求を発行しないようにします。 代わりに、API 要求のバッチ処理を検討してください。
 
-ランダムな変位による指数バックオフを使用することは、429s を処理するために推奨される方法です。 これにより、複数の要求で再試行時に競合が発生しなくなります。
+ランダムなジッターで指数バックオフを使用する方法は、429 を処理するための推奨される方法です。 これにより、複数の要求が再試行時に競合を発生しない。
 
-## <a name="example-detecting-transient-exceptions"></a>例: 一時的な例外を検出する
+## <a name="example-detecting-transient-exceptions"></a>例: 一時的な例外の検出
 
-ここでは、一時的な障害処理アプリケーションブロックによる指数バックオフを使用する例を示します。
+一時的な障害処理アプリケーション ブロックを介して指数バックオフを使用するサンプルを次に示します。
 
-[一時的なエラー処理](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29)を使用して、バックオフと再試行を実行できます。 NuGet パッケージを入手してインストールするためのガイドラインについては、「 [一時的なエラー処理アプリケーションブロックをソリューションに追加](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN)する」を参照してください。 「[一時的なフォールト処理](/azure/architecture/best-practices/transient-faults) *」も参照してください*。
+一時的な障害処理を使用して、バックオフと [再試行を実行できます](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29)。 NuGet パッケージの取得とインストールに関するガイドラインについては、「一時的な障害処理アプリケーション ブロックをソリューションに追加する」 [を参照してください](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN)。 *「一時的な*[障害の処理」も参照してください](/azure/architecture/best-practices/transient-faults)。
 
 ```csharp
 public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectionStrategy
@@ -73,7 +73,7 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
 
 ## <a name="example-backoff"></a>例: バックオフ
 
-速度制限の検出に加えて、指数バックオフを実行することもできます。
+レート制限の検出に加えて、指数バックオフも実行できます。
 
 ```csharp
 /**
@@ -92,51 +92,54 @@ var retryPolicy = new RetryPolicy(new BotSdkTransientExceptionDetectionStrategy(
 await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsync( (Activity)reply) ).ConfigureAwait(false);
 ```
 
-前に説明した再試行ポリシーを使用して、メソッドを実行することもでき `System.Action` ます。 参照されるライブラリでは、固定の間隔または線形バックオフメカニズムを指定することもできます。
+また、前述の再試行 `System.Action` ポリシーを使用してメソッドの実行を実行できます。 参照されるライブラリでは、固定間隔または線形バックオフ メカニズムを指定することもできます。
 
-値と戦略を構成ファイルに格納して、実行時に値を微調整および調整することをお勧めします。
+実行時に値を微調整および調整するには、値と戦略を構成ファイルに格納することをお勧めします。
 
-詳細については、この便利な「再試行 [パターン](/azure/architecture/patterns/retry)」を参照してください。
+詳細については、さまざまな再試行パターンに関するこの便利なガイド:再試行 [パターンを参照してください](/azure/architecture/patterns/retry)。
 
-## <a name="per-bot-per-thread-limit"></a>スレッドの制限ごとに1つの bot
+## <a name="per-bot-per-thread-limit"></a>スレッドごとのボットごとの制限
 
 >[!NOTE]
->サービスレベルでのメッセージ分割は、予想される1秒あたりの要求数 (RPS) を超える結果になります。 制限への接近を懸念している場合は、前述のバックオフ戦略を実装する必要があります。 以下の値は、見積のみを対象としています。
+>サービス レベルでのメッセージの分割は、予想される要求 /秒 (RPS) を超える結果になります。 制限に近づくのが懸念される場合は、前述のバックオフ戦略を実装する必要があります。 以下に示す値は、見積もり専用です。
 
-この制限は、bot が1回の会話で生成できるトラフィックを制御します。 ここでの会話は、ボットとユーザー、グループチャット、またはチーム内のチャネルの間で1:1 です。
+この制限は、ボットが 1 回の会話で生成できるトラフィックを制御します。 ここでの会話は、ボットとユーザー、グループ チャット、またはチーム内のチャネルの間で 1:1 です。
 
-| **シナリオ** | **期間 (秒)** | **許可される最大操作数** |
+| **シナリオ** | **期間 (秒)** | **許可される操作の上限** |
 | --- | --- | --- |
-| 会話に送信 | 1  | 7  |
-| 会話に送信 | 2  | 8  |
-| 会話に送信 | 31 | 60 |
-| 会話に送信 | 3600 | 1800 |
-| 会話を作成する | 1  | 7  |
-| 会話を作成する | 2  | 8  |
-| 会話を作成する | 31 | 60 |
-| 会話を作成する | 3600 | 1800 |
-| 会話メンバーを取得する| 1  | 14  |
-| 会話メンバーを取得する| 2  | 16  |
-| 会話メンバーを取得する| 31 | 120 |
-| 会話メンバーを取得する| 3600 | 3600 |
-| 会話を取得する | 1  | 14  |
-| 会話を取得する | 2  | 16  |
-| 会話を取得する | 31 | 120 |
-| 会話を取得する | 3600 | 3600 |
+| 会話に送信する | 1 | 7 |
+| 会話に送信する | 2 | 8 |
+| 会話に送信する | 30 | 60 |
+| 会話に送信する | 3600 | 1800 |
+| 会話の作成 | 1 | 7 |
+| 会話の作成 | 2 | 8 |
+| 会話の作成 | 30 | 60 |
+| 会話の作成 | 3600 | 1800 |
+| 会話メンバーの取得| 1 | 14  |
+| 会話メンバーの取得| 2 | 16  |
+| 会話メンバーの取得| 30 | 120 |
+| 会話メンバーの取得| 3600 | 3600 |
+| 会話の取得 | 1 | 14  |
+| 会話の取得 | 2 | 16  |
+| 会話の取得 | 30 | 120 |
+| 会話の取得 | 3600 | 3600 |
 
-## <a name="per-thread-limit-for-all-bots"></a>すべてのボットに対するスレッド数の制限
+>[!NOTE]
+> 以前のバージョンと `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` API は非推奨です。 1 分あたり 5 つの要求に調整され、チームごとに最大 10K のメンバーが返されます。 ボット フレームワーク SDK と、ページ分割された最新の API エンドポイントを使用するコードを更新するには、「チームおよびチャット メンバーのボット API の変更」 [を参照してください](../../resources/team-chat-member-api-changes.md)。
 
-この制限は、すべてのボットが1つの会話で生成できるトラフィックを制御します。 ここでの会話は、ボットとユーザー、グループチャット、またはチーム内のチャネルの間で1:1 です。
+## <a name="per-thread-limit-for-all-bots"></a>すべてのボットのスレッドごとの制限
 
-| **シナリオ** | **期間 (秒)** | **許可される最大操作数** |
+この制限は、すべてのボットが 1 回の会話で生成できるトラフィックを制御します。 ここでの会話は、ボットとユーザー、グループ チャット、またはチーム内のチャネルの間で 1:1 です。
+
+| **シナリオ** | **期間 (秒)** | **許可される操作の上限** |
 | --- | --- | --- |
-| 会話に送信 | 1  | 14  |
-| 会話に送信 | 2  | 16  |
-| 会話を作成する | 1  | 14  |
-| 会話を作成する | 2  | 16  |
-| CreateConversation| 1  | 14  |
-| CreateConversation| 2  | 16  |
-| 会話メンバーを取得する| 1  | 個 |
-| 会話メンバーを取得する| 2  | 32 |
-| 会話を取得する | 1  | 個 |
-| 会話を取得する | 2  | 32 |
+| 会話に送信する | 1 | 14  |
+| 会話に送信する | 2 | 16  |
+| 会話の作成 | 1 | 14  |
+| 会話の作成 | 2 | 16  |
+| CreateConversation| 1 | 14  |
+| CreateConversation| 2 | 16  |
+| 会話メンバーの取得| 1 | 28 |
+| 会話メンバーの取得| 2 | 32 |
+| 会話の取得 | 1 | 28 |
+| 会話の取得 | 2 | 32 |

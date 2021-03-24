@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Microsoft Teams テンプレートのサンプル デモ
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 21721848ba7893380ac217b5f47ce6a6e669e869
-ms.sourcegitcommit: e3b6bc31059ec77de5fbef9b15c17d358abbca0f
-ms.translationtype: HT
+ms.openlocfilehash: fffacb567f4b74f282020d61aea07e142256c84a
+ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "50231639"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "51034738"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 用のアプリ テンプレート
 
@@ -30,7 +30,7 @@ ms.locfileid: "50231639"
 
 ## <a name="adoption-bot-9734"></a>Adoption Bot &#9734;
 
-Adoption Bot は Power Virtual Agent for Teams (PVA) で構築されたユーザーケア チャット ボットです。 FAQPlus の PVA 版と考えることができます。 Adoption Bot は、Microsoft 365 と Teams に関する 100 以上の一般的な質問に回答しています。 含まれているトピックを編集したり、自分のトピックを追加したり、既存のよくある質問を導入することができます。 ユーザーが追加のヘルプを必要とする場合、Adoption Bot は専門家への接続や、プレミアム フロー コネクタを使用して拡張し、サービス チケットを開くことができます。
+Adoption Bot は Power Virtual Agent for Teams (PVA) で構築されたユーザーケア チャット ボットです。 FAQPlus の PVA 版と考えることができます。 Adoption Bot は、Microsoft 365 と Teams に関する 100 以上の一般的な質問に回答しています。 既存のトピックの編集、独自のトピックの追加、および既存の FAQ の取り込みが可能です。 ユーザーが追加のヘルプを必要とする場合、導入ボットはそれらを専門家に接続したり、プレミアム フロー コネクタを使用してサービス チケットを開くまで拡張することができます。このボットは、独自のボットにインストールするか、導入ハブのようなカスタム アプリに [組み込む場合があります](https://github.com/akporzondek/adoption_hub)。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot)
 
@@ -188,7 +188,7 @@ CrowdSourcer は、グループ メンバーから共同で調達された情報
 
 ![ステッカー アプリ](../assets/images/stickers.png)
 
-## <a name="employee-ideas-9734"></a>Employee Ideas &#9734;
+## <a name="employee-ideas"></a>従業員のアイデア
 
 Employee Ideas アプリは、Azure ベースの Great Ideas アプリ テンプレートの PowerApps 版です。 このアプリでは、Teams ユーザーがアイデア キャンペーンの設定や構成を行うことができます。 アイデア キャンペーンとは、共通のテーマを中心にアイデアをグループ化するためのカテゴリーです。
 
@@ -402,7 +402,7 @@ Incident Reporter は、組織内のインシデントの管理を最適化す�
  ![Inspection の概要](../assets/images/inspection-app.png)  
 
 
-## <a name="issue-reporting-9734"></a>Issue Reporting &#9734;
+## <a name="issue-reporting"></a>問題レポート
 
 Issue Reporting アプリは、従業員や管理者が課題を提起し、管理するための権限を付与するためのものです。 これは、問題を報告するための「問題報告アプリ」と、問題を管理するための「問題管理アプリ」の 2 つのアプリで構成されています。
 
@@ -468,7 +468,7 @@ Poll は、チャットまたはチャネルで投票をすばやく作成して
 
 ![応答のサンプル ビュー](../assets/images/quick-responses.png)
 
-## <a name="rapid-assist-9734"></a>Rapid Assist &#9734;
+## <a name="rapid-assist"></a>Rapid Assist
 
 Rapid Assist は、Microsof t[Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) ベースのアプリで、顧客対応担当者が専門家と素早く接続して迅速な回答を得たり、情報を検索したり、オープンな要求をフォローしたりして、専門家が通知を受信して素早く応答し、質問に答えるためのサポートを行います。 Microsoft [Power Apps](/powerapps/powerapps-overview) と [Power Automate](/power-automate/getting-started) を使用して構築されたアプリは、Microsoft Teams と深く統合されており、組織は現場の従業員と企業のリエゾンを簡単に接続して、顧客の問い合わせを解決し、優れた顧客エクスペリエンスを提供できるようにします。 
 
@@ -600,9 +600,18 @@ Survey は、チャットまたはチャネルで調査を作成してデータ�
 :::column-end:::
 :::row-end:::
 
-## <a name="virtual-rounding-9734"></a>Virtual Rounding &#9734;
+## <a name="time-tally-9734"></a>Time Tally &#9734;
 
-病院や救急処置室のプロバイダーは、1 日に数十回、多くの場合は数百回の「回診」を行っています。 患者に対するこれらの迅速なチェックは、患者がどのように行動しているかの状態チェックを行い、患者の懸念に確実な対処を行うことを目的としています。 回診は、患者が複数のタイプのプロバイダーによって監視されていることを確認するために必要不可欠な演習ですが、訪問のたびに、各プロバイダーで新しいマスクと新しい手袋のセットを使用しなければならないため、PPE の膨大な消耗につながります。 このアプリのテンプレートを使用すると、医療従事者は、プロバイダーと患者の間で Microsoft Teams の会議を介して、仮想的に簡単な回診を行うことができます。
+プロジェクトには複数のタスクを含め、さまざまなプロジェクトを従業員に割り当てることができます。 管理者は、従業員がこれらのタスクに費やした時間を通じてプロジェクトの進捗状況を理解する必要があります。 従業員がタイムシートを入力する必要がある場合、これは面倒な作業になる場合があります。 タイム 集計アプリを使用すると、従業員はモバイル デバイスを使用してタイムシートをすばやく入力し、管理者はタイムシートエントリで従業員をフォローアップする必要が生じない。 管理者はリソースに基づいてプロジェクトの使用率を表示し、エントリを承認または拒否できます。 タイムシートのコンプライアンスを確保するために、アラーム通知が送信されます。 また、過去のデータと使用状況は分析に利用できます。
+
+[GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-timetally)
+
+![Time Tally](../assets/images/11zon_gif.gif)
+
+
+## <a name="virtual-rounding"></a>Virtual Rounding
+
+病院および緊急治療室のプロバイダーは、1 日に数十回、多くの場合数百 **ラウンドを** 行います。 患者に対するこれらの迅速なチェックは、患者がどのように行動しているかの状態チェックを行い、患者の懸念に確実な対処を行うことを目的としています。 回診は、患者が複数のタイプのプロバイダーによって監視されていることを確認するために必要不可欠な演習ですが、訪問のたびに、各プロバイダーで新しいマスクと新しい手袋のセットを使用しなければならないため、PPE の膨大な消耗につながります。 このアプリのテンプレートを使用すると、医療従事者は、プロバイダーと患者の間で Microsoft Teams の会議を介して、仮想的に簡単な回診を行うことができます。
 
 Virtual Rounding のソリューションは、Microsoft Health とライフ サイエンスの[ブログ記事](https://aka.ms/teamsvirtualrounding)でも参照できます。
 

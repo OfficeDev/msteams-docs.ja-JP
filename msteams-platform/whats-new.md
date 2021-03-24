@@ -3,12 +3,12 @@ title: 新機能
 description: Microsoft Teams のすべての新しい開発者機能について説明します。
 ms.topic: reference
 keywords: チームの最新情報
-ms.openlocfilehash: d1a6a0532a857d02e7188c42282f1d0727d6f309
-ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
+ms.openlocfilehash: e166cbed4b8fb7849cee71d75fa1751b23da3df2
+ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "50753547"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "51034727"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -21,6 +21,7 @@ ms.locfileid: "50753547"
 
 | **日付** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+|03/18/2021|注意: Bot Framework SDK の **バージョン 4.10** 以上に更新してください `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` 。 | [チーム/チャット メンバーのボット API の変更](resources/team-chat-member-api-changes.md) |
 |03/05/2021|注意: タブには、エクスペリエンスを囲む余白がなくなりました。 タブ開発者は、アプリを確認して更新する必要があります。 | [タブ余白の削除](resources/removing-tab-margins.md) |
 |03/05/2021 | 既定のインストール スコープとグループ機能は、開発者プレビューに表示されます。| [既定のインストール スコープとグループ機能](concepts/deploy-and-publish/apps-upload.md#add-a-default-install-scope-and-group-capability) |
 |03/05/2021|個人用アプリのタブを並べ替える|[個人用アプリのチャット タブを並べ替える](tabs/how-to/create-tab-pages/content-page.md#reorder-static-personal-tabs)|

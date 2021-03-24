@@ -5,12 +5,12 @@ description: コンテンツ ページを作成する方法
 keywords: teams タブ グループ チャネル構成可能静的
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 619ca1079fcdb5a44eec2fa63d6687a0eb65cd4d
-ms.sourcegitcommit: 9cfbc44912980a33d2d7c7c85739aeea6ccb41de
+ms.openlocfilehash: c33f58197e8b49ac7122178e154724cc5186bcb1
+ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "50479873"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "51034699"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>タブのコンテンツ ページを作成する
 
@@ -28,7 +28,7 @@ ms.locfileid: "50479873"
 
 ## <a name="integrate-your-code-with-teams"></a>コードを Teams と統合する
 
-Teams にページを表示するには [、Microsoft Teams JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) クライアント SDK を含め、ページの読み込み後に呼び `microsoftTeams.initialize()` 出しを含める必要があります。 ページと Teams クライアントが通信する方法は次の通りです。
+Teams にページを表示するには [、Microsoft Teams JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) クライアント SDK を含め、ページの読み込み後に呼び `microsoftTeams.initialize()` 出しを含める必要があります。 ページと Teams クライアントが通信する方法は次の通りです。
 
 ```html
 <!DOCTYPE html>
@@ -93,7 +93,7 @@ Teams のエンティティへのディープ リンクを作成できます。 
 マニフェスト スキーマ[v1.7](../../../resources/schema/manifest-schema.md)から、Web コンテンツ[](../../../resources/schema/manifest-schema.md#showloadingindicator)が Teams に読み込まれる場所 (タブ コンテンツ ページ、構成ページ、[](configuration-page.md)タブ内の[](removal-page.md)削除ページ、タスク モジュールなど) にネイティブ読み込みインジケーターを提供[できます](../../../task-modules-and-cards/task-modules/task-modules-tabs.md)。 [](#integrate-your-code-with-teams)
 
 > [!NOTE]
-> 1. モバイル デバイスでは、ネイティブ読み込みインジケーターはまだサポートされていません。
+> 1. モバイル クライアントでの動作は、このマニフェスト プロパティでは構成できません。 モバイル クライアントは、コンテンツ ページと iframe ベースのタスク モジュール間で既定でネイティブ読み込みインジケーターを表示します。 モバイル上のこのインジケーターは、コンテンツの取得要求が行われたときに表示され、要求が完了するとすぐに却下されます。
 > 2. アプリ マニフェストで指定した場合は、すべてのタブ構成、コンテンツ、および削除ページとすべての iframe ベースのタスク モジュールは、以下の必須プロトコルに従う  `"showLoadingIndicator : true`  必要があります。
 
 
