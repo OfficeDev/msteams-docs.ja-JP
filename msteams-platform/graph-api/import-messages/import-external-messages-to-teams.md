@@ -6,59 +6,62 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams import messages api graph microsoft migrate migration post
-ms.openlocfilehash: 97f24c34ebb825aad0fd104c9a814e46f9b5fa0d
-ms.sourcegitcommit: f74b74d5bed1df193e59f46121ada443fb57277b
+ms.openlocfilehash: 8cf4f964aba7ce9375b1b259ae88a7fbcb620631
+ms.sourcegitcommit: f6e4a303828224a702138753a8e5e27c8a094c82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "50093261"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "51176957"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Microsoft Graph を使用してサードパーティのプラットフォーム メッセージを Teams にインポートする
 
 >[!IMPORTANT]
-> Microsoft Graph と Microsoft Teams のパブリック プレビューは、早期アクセスとフィードバックに利用できます。 このリリースでは広範なテストが実施されましたが、実稼働環境での使用を意図した方法ではありません。
+> Microsoft Graph と Microsoft Teams のパブリック プレビューは、早期アクセスとフィードバックに利用できます。 このリリースでは広範なテストが実施されましたが、実稼働環境での使用を意図した製品ではありません。
 
-Microsoft Graph を使用すると、ユーザーの既存のメッセージ履歴とデータを外部システムから Teams チャネルに移行できます。 Teams 内でサード パーティ製プラットフォームのメッセージング階層を作成することで、ユーザーはシームレスな方法で通信を続行し、中断することなく続行できます。
+Microsoft Graph を使用すると、ユーザーの既存のメッセージ履歴とデータを外部システムから Teams チャネルに移行できます。 Teams 内のサード パーティプラットフォーム メッセージング階層のレクリエーションを有効にすると、ユーザーはシームレスな方法で通信を続行し、中断することなく続行できます。
+
+> [!NOTE] 
+> 今後、Microsoft は、インポートされるデータの量に基づいて、お客様またはお客様の顧客に追加料金の支払いを要求する場合があります。
 
 ## <a name="import-overview"></a>インポートの概要
 
-大きなレベルでは、インポート プロセスは次の要素で構成されます。
+高レベルでは、インポート プロセスは次で構成されます。
 
-1. [バックインタイム タイムスタンプを使用してチームを作成する](#step-one-create-a-team)
-1. [バックインタイム タイムスタンプを使用してチャネルを作成する](#step-two-create-a-channel)  
-1. [外部のバックインタイム日付メッセージをインポートする](#step-three-import-messages)
+1. [タイム スタンプを使用してチームを作成する](#step-one-create-a-team)
+1. [タイム スタンプを使用してチャネルを作成する](#step-two-create-a-channel)  
+1. [外部のバックインタイム日付メッセージのインポート](#step-three-import-messages)
 1. [チームとチャネルの移行プロセスを完了する](#step-four-complete-migration-mode)
-1. [チーム メンバーを追加する](#step-five-add-team-members)
+1. [チーム メンバーの追加](#step-five-add-team-members)
 
 ## <a name="necessary-requirements"></a>必要な要件
 
 ### <a name="analyze-and-prepare-message-data"></a>メッセージ データの分析と準備
 
 ✔サード パーティのデータを確認して、移行するデータを決定します。  
-✔サード パーティのチャット システムから選択したデータを抽出します。  
-✔サード パーティのチャット構造を Teams の構造にマップします。  
-✔データを移行に必要な形式に変換します。  
+✔サード パーティチャット システムから選択したデータを抽出します。  
+✔サードパーティのチャット構造を Teams 構造にマップします。  
+✔移行に必要な形式にインポート データを変換します。  
 
 ### <a name="set-up-your-office-365-tenant"></a>Office 365 テナントのセットアップ
 
-✔データ用に Office 365 テナントが存在することを確認します。 Teams の Office 365 テナントのセットアップの詳細については、「Office  [365](../../concepts/build-and-test/prepare-your-o365-tenant.md)テナントを準備する」を参照してください。  
+✔インポート データOffice 365 テナントが存在することを確認します。 Teams の 365 テナントOffice設定の詳細については、「Prepare your  [Office 365 テナント」を参照してください](../../concepts/build-and-test/prepare-your-o365-tenant.md)。  
 ✔チーム メンバーが Azure Active Directory (AAD) に存在するようにします。  詳細 *については、「Azure* Active Directory [に新しいユーザーを追加](/azure/active-directory/fundamentals/add-users-azure-active-directory) する」を参照してください。
 
 ## <a name="step-one-create-a-team"></a>手順 1: チームを作成する
 
-既存のデータは移行中ですから、元のメッセージのタイムスタンプを維持し、移行プロセス中のメッセージング アクティビティを防ぐことが、Teams でユーザーの既存のメッセージ フローを再作成する鍵になります。 これは、次のように行われます。
+既存のデータは移行中ですから、元のメッセージ タイムスタンプを維持し、移行プロセス中のメッセージング アクティビティを防止する方法は、Teams でユーザーの既存のメッセージ フローを再作成する際に重要です。 これは、次のように実現されます。
 
-> [チーム リソース プロパティを使用](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) して、バックインタイム タイムスタンプを持つ新しいチームを作成  `createdDateTime`  します。 新しいチームを配置します。移行プロセスが完了するまで、チーム内のほとんどのアクティビティからユーザーを選択できる `migration mode` 特別な状態です。 新しいチームを移行用に作成されたチームとして明示的に識別するには、POST 要求に値を持つ `teamCreationMode` `migration` instance 属性を含める。  
+> [チーム リソース プロパティを使用して](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) 、タイム スタンプを使用して新しいチームを作成  `createdDateTime`  します。 移行プロセスが完了するまで、チーム内のほとんどのアクティビティからユーザーをバーする特別な状態で、新しいチーム `migration mode` を配置します。 新しいチームが移行用に作成されているとして明示的に識別するには、POST 要求に値を持つ `teamCreationMode` `migration` instance 属性を含める。  
 
-> **注**: このフィールドには、移行されたチームまたはチャネルのインスタンス `createdDateTime` に対するデータだけが入力されます。
+> **注**: このフィールドは、移行されたチームまたはチャネルのインスタンス `createdDateTime` に対してのみ設定されます。
 
 <!-- markdownlint-disable MD001 -->
 
-#### <a name="permissions"></a>許可
+#### <a name="permissions"></a>アクセス許可
 
-|ScopeName|DisplayName|説明|型|管理者の同意|対象となるエンティティ/API|
+|ScopeName|DisplayName|説明|型|管理者の同意|対象のエンティティ/API|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|Microsoft Teams への移行の管理|Microsoft Teams に移行するためのリソースの作成、管理|**アプリケーション専用**|**はい**|`POST /teams`|
+|`Teamwork.Migrate.All`|Microsoft Teams への移行の管理|Microsoft Teams への移行用のリソースの作成、管理|**アプリケーション専用**|**はい**|`POST /teams`|
 
 #### <a name="request-create-a-team-in-migration-state"></a>要求 (移行状態でチームを作成する)
 
@@ -89,20 +92,20 @@ Content-Location: /teams/{teamId}
 400 Bad Request
 ```
 
-* `createdDateTime`  を設定します。
-* `createdDateTime`  が正しく指定されているが `teamCreationMode`  、instance 属性が見つからないか無効な値に設定されている。
+* `createdDateTime`  将来に向け設定されます。
+* `createdDateTime`  正しく指定されますが `teamCreationMode`  、インスタンス属性が見つからないか、無効な値に設定されています。
 
 ## <a name="step-two-create-a-channel"></a>手順 2: チャネルを作成する
 
-インポートされたメッセージのチャネルの作成は、チーム作成シナリオに似ています。
+インポートされたメッセージのチャネルの作成は、チームの作成シナリオに似ています。
 
-> [チャネル リソース プロパティを使用](/graph/api/channel-post?view=graph-rest-beta&tabs=http&preserve-view=true) して、バックインタイム タイムスタンプを持つ新しいチャネルを作成 `createdDateTime` します。 新しいチャネルを配置します。移行プロセスが完了するまで、チャネル内のほとんどのチャット アクティビティからユーザーをバーする `migration mode` 特別な状態です。  新しいチームを移行用に作成されたチームとして明示的に識別するには、POST 要求に値を持つ `channelCreationMode` `migration` instance 属性を含める。  
+> [チャネル リソース プロパティを使用](/graph/api/channel-post?view=graph-rest-beta&tabs=http&preserve-view=true) して、タイム スタンプをバックインする新しいチャネルを作成 `createdDateTime` します。 移行プロセスが完了するまで、チャネル内のほとんどのチャット アクティビティからユーザーをバーする特別な状態で、新しいチャネル `migration mode` を配置します。  新しいチームが移行用に作成されているとして明示的に識別するには、POST 要求に値を持つ `channelCreationMode` `migration` instance 属性を含める。  
 <!-- markdownlint-disable MD024 -->
-#### <a name="permissions"></a>許可
+#### <a name="permissions"></a>アクセス許可
 
-|ScopeName|DisplayName|説明|型|管理者の同意|対象となるエンティティ/API|
+|ScopeName|DisplayName|説明|型|管理者の同意|対象のエンティティ/API|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|Microsoft Teams への移行の管理|Microsoft Teams への移行に関するリソースの作成、管理|**アプリケーション専用**|**はい**|`POST /teams`|
+|`Teamwork.Migrate.All`|Microsoft Teams への移行の管理|Microsoft Teams への移行用のリソースの作成、管理|**アプリケーション専用**|**はい**|`POST /teams`|
 
 #### <a name="request-create-a-channel-in-migration-state"></a>要求 (移行状態でチャネルを作成する)
 
@@ -144,16 +147,16 @@ HTTP/1.1 202 Accepted
 400 Bad Request
 ```
 
-* `createdDateTime`  を設定します。
-* `createdDateTime`  が正しく指定 `channelCreationMode`  されましたが、インスタンス属性が見つからないか、無効な値に設定されています。
+* `createdDateTime`  将来に向け設定されます。
+* `createdDateTime`  正しく指定されますが `channelCreationMode`  、インスタンス属性が見つからないか、無効な値に設定されています。
 
-## <a name="step-three-import-messages"></a>手順 3: メッセージをインポートする
+## <a name="step-three-import-messages"></a>手順 3: メッセージのインポート
 
-チームとチャネルを作成したら、要求本文のキーとキーを使用して、バックインタイム メッセージ `createdDateTime` `from`  の送信を開始できます。 **注**: メッセージ スレッドより `createdDateTime` 前のバージョンでインポートされたメッセージ `createdDateTime` はサポートされていません。
+チームとチャネルを作成したら、要求本文のキーとキーを使用して、バックインタイム メッセージ `createdDateTime` `from`  の送信を開始できます。 **注**: メッセージ スレッドより前 `createdDateTime` にインポートされたメッセージ `createdDateTime` はサポートされていません。
 
 > [!NOTE]
-> * `createdDateTime` は、同じスレッド内のメッセージ間で一意である必要があります。
-> * `createdDateTime` は、ミリ秒単位の精度でのタイムスタンプをサポートします。 たとえば、受信要求メッセージの値が `createdDateTime` *2020-09-16T05:50:31.0025302Z* に設定されている場合、メッセージが取り込まれたときに *2020-09-16T05:50:31.002Z* に変換されます。
+> * `createdDateTime` 同じスレッド内のメッセージ間で一意である必要があります。
+> * `createdDateTime` ミリ秒単位の精度のタイムスタンプをサポートします。 たとえば、受信要求メッセージの値が `createdDateTime` *2020-09-16T05:50:31.0025302Z* の場合、メッセージが取り込まれたときに *2020-09-16T05:50:31.002Z* に変換されます。
 
 #### <a name="request-post-message-that-is-text-only"></a>要求 (テキスト専用の POST メッセージ)
 
@@ -224,7 +227,7 @@ HTTP/1.1 200 OK
 400 Bad Request
 ```
 
-#### <a name="request-post-a-message-with-inline-image"></a>要求 (インライン画像を含むメッセージを POST する)
+#### <a name="request-post-a-message-with-inline-image"></a>要求 (インライン イメージを含むメッセージを POST する)
 
 > **注**: 要求は chatMessage の一部のため、このシナリオには特別なアクセス許可スコープはありません。chatMessage のスコープもここに適用されます。
 
@@ -287,7 +290,7 @@ HTTP/1.1 200 OK
 
 ## <a name="step-four-complete-migration-mode"></a>手順 4: 移行モードの完了
 
-メッセージ移行プロセスが完了すると、この方法を使用してチームとチャネルの両方が移行モードから抜  `completeMigration`  け出されます。 この手順では、チーム メンバーが一般的に使用するチームリソースとチャネル リソースを開きます。 アクションはインスタンスにバインド `team` されます。
+メッセージの移行プロセスが完了すると、チームとチャネルの両方がメソッドを使用して移行モードから取り出  `completeMigration`  されます。 この手順では、チーム メンバーが一般的に使用するチームリソースとチャネル リソースを開きます。 アクションはインスタンスにバインド `team` されます。
 
 #### <a name="request-end-team-migration-mode"></a>要求 (チーム移行モードの終了)
 
@@ -302,7 +305,7 @@ POST https://graph.microsoft.com/beta/teams/teamId/completeMigration
 HTTP/1.1 204 NoContent
 ```
 
-#### <a name="request-end-channel-migration-mode"></a>要求 (終了チャネル移行モード)
+#### <a name="request-end-channel-migration-mode"></a>要求 (エンド チャネル移行モード)
 
 ```http
 POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/completeMigration
@@ -321,11 +324,11 @@ HTTP/1.1 204 NoContent
 400 Bad Request
 ```
 
-* に対して呼び `team` 出されたアクション `channel` 、または呼び出されていないアクション `migrationMode` 。
+* a に対して呼び `team` 出されたアクション、 `channel` またはに含めされていないアクション `migrationMode` 。
 
 ## <a name="step-five-add-team-members"></a>手順 5: チーム メンバーを追加する
 
-Teams UI または Microsoft Graph メンバー [追加 API](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) を使用して、チームに [メンバーを追加](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true) できます。
+Teams UI または Microsoft Graph Add メンバー [API](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) を使用して、チームに [メンバーを追加](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true) できます。
 
 #### <a name="request-add-member"></a>要求 (メンバーの追加)
 
@@ -351,35 +354,37 @@ HTTP/1.1 204 No Content
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
 
-* Teams に存在しないユーザーからメッセージをインポートできます。 **注**: テナントに存在しないユーザーにインポートされたメッセージは、パブリック プレビュー中に Teams クライアントまたはコンプライアンス ポータルで検索できません。
+* Teams に参加していないユーザーからメッセージをインポートできます。 **メモ**: テナントに存在しないユーザーに対してインポートされたメッセージは、パブリック プレビュー中に Teams クライアントまたはコンプライアンス ポータルで検索できません。
 
-* 要求が `completeMigration` 行われたら、それ以上のメッセージをチームにインポートすることはできません。
+* 要求が `completeMigration` 行われたら、チームに追加のメッセージをインポートすることはできません。
 
-* 要求が正常に応答を返した後にのみ、チーム メンバーを新しい `completeMigration` チームに追加できます。
+* チーム メンバーは、要求が正常に応答を返した後にのみ、新 `completeMigration` しいチームに追加できます。
 
-* 調整: メッセージはチャネルごとに 5 RPS でインポートされます。
+* 調整: チャネルごとに 5 RPS でメッセージがインポートされます。
 
 * 移行結果を修正する必要がある場合は、チームを削除し、手順を繰り返してチームとチャネルを作成し、メッセージを再移行する必要があります。
 
 > [!NOTE]
-> 現在、インライン画像は、インポート メッセージ API スキーマでサポートされている唯一の種類のメディアです。
+> 現在、インライン イメージは、インポート メッセージ API スキーマでサポートされているメディアの唯一の種類です。
 
-##### <a name="import-content-scope"></a>コンテンツ 範囲をインポートする
+##### <a name="import-content-scope"></a>コンテンツ スコープのインポート
 
-|スコープ内 | 現在、スコープ外|
+|スコープ内 | 現在のスコープ外|
 |----------|--------------------------|
 |チームメッセージとチャネル メッセージ|1:1 およびグループ チャット メッセージ|
 |元のメッセージの作成時刻|プライベート チャネル|
-|メッセージの一部としてのインライン画像|At mentions|
+|メッセージの一部としてのインライン イメージ|メンション|
 |SPO/OneDrive の既存のファイルへのリンク|リアクション|
 |リッチ テキストを含むメッセージ|ビデオ|
-|メッセージの返信チェーン|お知らせ|
+|メッセージ返信チェーン|お知らせ|
 |高スループット処理|コード スニペット|
 ||アダプティブ カード|
 ||ステッカー|
-||Emojis|
+||絵文字|
 ||引用符|
 ||チャネル間のクロス投稿|
 
+
+## <a name="see-also"></a>関連項目
 > [!div class="nextstepaction"]
 >[Microsoft Graph と Teams の統合の詳細](/graph/teams-concept-overview)
