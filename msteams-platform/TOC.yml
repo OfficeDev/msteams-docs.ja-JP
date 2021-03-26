@@ -334,6 +334,8 @@
   items:
     - name: 概要
       href: 'https://docs.microsoft.com/graph/teams-concept-overview'
+    - name: Microsoft Graph ツールキット
+      href: 'https://docs.microsoft.com/graph/toolkit/overview'
     - name: 作業の開始
       href: 'https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab'
     - name: リソース固有の同意を有効にする
