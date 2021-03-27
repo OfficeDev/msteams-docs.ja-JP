@@ -1,25 +1,25 @@
 ---
-title: Bot のチーム固有のコンテキストを取得する
+title: ボットのチーム固有のコンテキストを取得する
 author: laujan
-description: 会話名簿、details、channel list を含む、bot の Microsoft チーム固有のコンテキストを取得する方法。
+description: 会話の名簿、詳細、チャネル リストなど、ボットの Microsoft Team の特定のコンテキストを取得する方法。
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 7f3b2fbea33f64659dcd5d9d39bb95e2d953dbea
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+ms.openlocfilehash: dfbf5e1638a2397492714b1e1945721450428d63
+ms.sourcegitcommit: 0206ed48c6a287d14aec3739540194a91766f0a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552473"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "51378337"
 ---
-# <a name="get-teams-specific-context-for-your-bot"></a>Bot のチーム固有のコンテキストを取得する
+# <a name="get-teams-specific-context-for-your-bot"></a>ボットのチーム固有のコンテキストを取得する
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Bot は、にインストールされているチームまたはチャットに関する追加のコンテキストデータにアクセスできます。 この情報は、ボットの機能を強化し、よりパーソナライズされた環境を提供するために使用できます。
+ボットは、インストールされているチームまたはチャットに関する追加のコンテキスト データにアクセスできます。 この情報は、ボットの機能を強化し、よりカスタマイズされたエクスペリエンスを提供するために使用できます。
 
-## <a name="fetching-the-roster-or-user-profile"></a>名簿またはユーザープロファイルを取得する
+## <a name="fetching-the-roster-or-user-profile"></a>名簿またはユーザー プロファイルのフェッチ
 
-Bot は、メンバーの一覧とその基本プロファイルを照会できます。これには、Teams のユーザー Id や Azure Active Directory (Azure AD) (name、objectId など) の情報が含まれます。 この情報を使用して、ユーザー id (たとえば、Azure AD 資格情報を介してタブにログインしたユーザー) がチームのメンバーであるかどうかを調べることができます。 次のサンプルコードでは、名簿を取得するためにページエンドポイントを使用しています。 会話メンバーを取得する場合、ページサイズの最小値または最大値は、実装によって異なります。 ページサイズが50未満で、50として扱われ、ページサイズが500を超えると、500には上限があります。 非ページバージョンを引き続き使用する場合もありますが、大規模なチームでは信頼性が低く、使用しないでください。 追加情報については、「 [Teams Bot api に対するチーム/チャットメンバーを取得するための変更点」を](~/resources/team-chat-member-api-changes.md)*参照してください*。
+ボットは、Teams ユーザー ID や Azure Active Directory (Azure AD) 情報 (名前や objectId など) を含む、メンバーの一覧とその基本的なプロファイルを照会できます。 この情報を使用して、ユーザー ID を関連付け、Azure AD 資格情報を使用してタブにログインしたユーザーがチームのメンバーであるかどうかを確認できます。 次のサンプル コードでは、名簿の取得にページ化されたエンドポイントを使用します。 会話メンバーを取得する場合、最小または最大のページ サイズは実装によって異なります。 50 未満のページ サイズは 50 として扱い、500 より大きいページ サイズは 500 に制限されます。 ページ以外のバージョンを使用することもできますが、大規模なチームでは使用できません。使用する必要があります。 *詳細については*[、「チーム/チャット](~/resources/team-chat-member-api-changes.md)メンバーをフェッチする Teams ボット API への変更」を参照してください。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -79,7 +79,7 @@ async def _show_members(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-`/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}`エンドポイントとしての値を使用して、GET 要求を直接発行することができ `serviceUrl` ます。 の値は `serviceUrl` 安定していますが、変更することができます。 新しいメッセージが到着すると、bot はに格納されている値を確認する必要があり `serviceUrl` ます。 応答ペイロードは、ユーザーが通常のユーザーであるか匿名であるかも示します。
+エンドポイントとして値を使用して、GET 要求を `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}` 直接 `serviceUrl` 発行できます。 値は安定 `serviceUrl` している傾向がありますが、変更される可能性があります。 新しいメッセージが届いた場合、ボットは保存されている値を確認する必要があります `serviceUrl` 。 応答ペイロードは、ユーザーが正規ユーザーか匿名ユーザーかも示します。
 
 ```http
 GET /v3/conversations/19:meeting_N2QzYTA3YmItYmMwOC00OTJmLThkYzMtZWMzZGU0NGIyZGI0@thread.v2/pagedmembers?pageSize=100&continuationToken=asdfasdfalkdsjfalksjdf
@@ -120,9 +120,9 @@ Response body
 
 * * *
 
-## <a name="get-single-member-details"></a>単一メンバーの詳細を取得する
+## <a name="get-single-member-details"></a>単一のメンバーの詳細を取得する
 
-Teams のユーザー Id、UPN、または AAD オブジェクト Id を使用して、特定のユーザーの詳細を取得することもできます。
+Teams ユーザー ID、UPN、または AAD オブジェクト ID を使用して、特定のユーザーの詳細を取得できます。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -164,9 +164,9 @@ async def _show_members(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-`/v3/conversations/{conversationId}/members/{userId}`エンドポイントとしての値を使用して、GET 要求を直接発行することができ `serviceUrl` ます。 の値は `serviceUrl` 安定していますが、変更することができます。 新しいメッセージが到着すると、bot はに格納されている値を確認する必要があり `serviceUrl` ます。 これは、regualr ユーザーおよび匿名ユーザーに使用できます。
+エンドポイントとして値を使用して、GET 要求を `/v3/conversations/{conversationId}/members/{userId}` 直接 `serviceUrl` 発行できます。 値は安定 `serviceUrl` している傾向がありますが、変更される可能性があります。 新しいメッセージが届いた場合、ボットは保存されている値を確認する必要があります `serviceUrl` 。 これは、通常のユーザーと匿名ユーザーに使用できます。
 
-通常のユーザーに対する応答のサンプルを以下に示します。
+通常のユーザーの応答サンプルを以下に示します。
 
 ```http
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc
@@ -184,7 +184,7 @@ Response body
 }
 ```
 
-匿名ユーザーに対する応答の例
+匿名ユーザーの応答を以下に示します。
 
 ```http
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/<anonymous user id>"
@@ -202,7 +202,7 @@ Response body
 
 ## <a name="get-teams-details"></a>チームの詳細を取得する
 
-Bot がチームにインストールされている場合は、そのチームに関するメタデータのクエリを実行できます (Azure AD groupId を含む)。
+チームにインストールすると、ボットは、Azure のグループ ID を含むそのチームに関するメタデータADできます。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -256,7 +256,7 @@ async def _show_details(self, turn_context: TurnContext):
 
 # <a name="json"></a>[JSON](#tab/json)
 
-`/v3/teams/{teamId}`エンドポイントとしての値を使用して、GET 要求を直接発行することができ `serviceUrl` ます。 の値は `serviceUrl` 安定していますが、変更することができます。 新しいメッセージが到着すると、bot はに格納されている値を確認する必要があり `serviceUrl` ます。
+エンドポイントとして値を使用して、GET 要求を `/v3/teams/{teamId}` 直接 `serviceUrl` 発行できます。 値は安定 `serviceUrl` している傾向がありますが、変更される可能性があります。 新しいメッセージが届いた場合、ボットは保存されている値を確認する必要があります `serviceUrl` 。
 
 ```http
 GET /v3/teams/19:ja0cu120i1jod12j@skype.net
@@ -273,12 +273,12 @@ Response body
 
 ## <a name="get-the-list-of-channels-in-a-team"></a>チーム内のチャネルの一覧を取得する
 
-Bot は、チーム内のチャネルの一覧を照会できます。
+ボットは、チーム内のチャネルの一覧を照会できます。
 
 > [!NOTE]
 >
->* 既定の一般的なチャネルの名前は、 `null` ローカリゼーションを許可するためにとして返されます。
->* 一般チャネルのチャネル ID は、常にチーム ID と一致します。
+>* ローカライズを許可するために、既定の一般チャネル `null` の名前が返されます。
+>* General チャネルのチャネル ID は、常にチーム ID と一致します。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -327,7 +327,7 @@ async def _show_channels(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-`/v3/teams/{teamId}/conversations`エンドポイントとしての値を使用して、GET 要求を直接発行することができ `serviceUrl` ます。 の値は `serviceUrl` 安定していますが、変更することができます。 新しいメッセージが到着すると、bot はに格納されている値を確認する必要があり `serviceUrl` ます。
+エンドポイントとして値を使用して、GET 要求を `/v3/teams/{teamId}/conversations` 直接 `serviceUrl` 発行できます。 値は安定 `serviceUrl` している傾向がありますが、変更される可能性があります。 新しいメッセージが届いた場合、ボットは保存されている値を確認する必要があります `serviceUrl` 。
 
 ```http
 GET /v3/teams/19%3A033451497ea84fcc83d17ed7fb08a1b6%40thread.skype/conversations

@@ -5,12 +5,12 @@ description: 構成ページの作成方法
 keywords: teams タブ グループ チャネル構成可能
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: b6da8437b6988f863288d77aedc1acb786c12d4b
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: 9407e4afc0b52f1b16f2d6b5a55e824f484a1870
+ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034680"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "51382377"
 ---
 # <a name="create-a-configuration-page"></a>構成ページを作成する
 
@@ -22,7 +22,15 @@ ms.locfileid: "51034680"
 
 ## <a name="configuring-a-channel-or-group-chat-tab"></a>チャネルまたはグループ チャット タブの構成
 
-アプリケーションは [、Microsoft Teams JavaScript クライアント SDK を参照して呼び](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) 出す必要があります `microsoft.initialize()` 。 また、使用する URL はセキュリティで保護された HTTPS エンドポイントで、クラウドから利用できる必要があります。 次のコードは、構成ページの例です。
+アプリケーションは [、Microsoft Teams JavaScript クライアント SDK を参照して呼び](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) 出す必要があります `microsoft.initialize()` 。 また、使用する URL はセキュリティで保護された HTTPS エンドポイントで、クラウドから利用できる必要があります。 
+
+### <a name="example"></a>例
+
+構成ページの例を次の図に示します。 
+
+<img src="~/assets/images/tab-images/configuration-page.png" alt="Configuration page" width="400"/>
+
+構成ページの対応するコードは、次のセクションに表示されます。
 
 ```html
 <head>
@@ -79,7 +87,17 @@ ms.locfileid: "51034680"
 ...
 ```
 
-構成ページ **で [灰色の選択****]** または [赤の選択] ボタンを選択して、タブコンテンツを灰色または赤のアイコンで表示します。 相対ボタンを選択すると、次のいずれかを起動するか `saveGray()` `saveRed()` 、または、次のコマンドを呼び出します。
+構成ページ **で [灰色の選択****]** または [赤の選択] ボタンを選択して、タブコンテンツを灰色または赤のアイコンで表示します。 
+
+次の図は、灰色のアイコンでタブ コンテンツを表示します。
+
+<img src="~/assets/images/tab-images/configure-tab-with-gray.png" alt="Configure tab with select gray" width="400"/>
+
+次の図は、赤いアイコンでタブ コンテンツを表示します。
+
+<img src="~/assets/images/tab-images/configure-tab-with-red.png" alt="Configure tab with select red" width="400"/>
+
+相対ボタンを選択すると、トリガーまたは `saveGray()` `saveRed()` 、 がトリガーされ、次のコマンドが呼び出されます。
 
 1. は `settings.setValidityState(true)` true に設定されます。
 1. イベント `microsoftTeams.settings.registerOnSaveHandler()` ハンドラーがトリガーされます。
@@ -104,7 +122,7 @@ ms.locfileid: "51034680"
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>プレースホルダーを `configurationUrl`
 
-コンテキスト インターフェイスのプレースホルダーを基本に追加します `configurationUrl` 。 例:
+コンテキスト インターフェイスのプレースホルダーを基本に追加します `configurationUrl` 。 次に例を示します。
 
 ##### <a name="base-url"></a>ベース URL
 

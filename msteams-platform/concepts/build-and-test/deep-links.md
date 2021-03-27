@@ -3,12 +3,12 @@ title: コンテンツへのディープ リンクを作成する
 description: ディープ リンクとアプリでの使用方法について説明する
 ms.topic: how-to
 keywords: Teams ディープ リンク ディープリンク
-ms.openlocfilehash: ec6357998c5d5aa60d0f512bf35514f8aa76a0ed
-ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
+ms.openlocfilehash: 493f9a010f7076ec97fc7da7110244645e76cfe8
+ms.sourcegitcommit: 0206ed48c6a287d14aec3739540194a91766f0a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "50753512"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "51378330"
 ---
 # <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>Microsoft Teams のコンテンツと機能へのディープ リンクを作成する
 
@@ -141,6 +141,23 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 * `message`: チャットが下書き状態の間に現在のユーザーの作成ボックスに挿入するメッセージ テキストのオプション フィールド。
 
 ボットとのこのディープ リンクを使用するには、カードのボタンで URL を対象として指定するか、[ `openUrl` アクションの種類] で [アクション] をタップします。
+
+## <a name="deep-links-for-sharepoint-framework-tabs"></a>SharePoint Framework タブのディープ リンク
+
+ボット、コネクタ、またはメッセージング拡張カードでは、次のディープ リンク形式を使用できます。 `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
+
+> [!NOTE]
+> ボットがディープ リンクを含む TextBlock メッセージを送信すると、ユーザーがリンクを選択すると、新しいブラウザー タブが開きます。 これは、Linux で実行されている Chrome および Microsoft Teams デスクトップ アプリで発生します。
+> ボットが同じディープ リンク URL を A に送信すると、ユーザーがリンクを選択すると、現在のブラウザーで `Action.OpenUrl` [Teams] タブが開きます。 新しいブラウザー タブは開きません。
+
+クエリ パラメーターは次のとおりです。
+
+* `appID` - マニフェスト ID **fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
+* `entityID` - タブの構成時に指定 [したアイテム ID。](~/tabs/how-to/create-tab-pages/configuration-page.md)たとえば **、tasklist123**.
+* `entityWebUrl`- クライアントがタブのレンダリングをサポートしていない場合に使用するフォールバック URL を含むオプションのフィールド https://tasklist.example.com/123 。 https://tasklist.example.com/list123/task456
+* `entityName` - ディープ リンク、タスク リスト 123、またはタスク 456 を表示するときに使用するタブ内のアイテムのラベル。
+
+例: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
 
 ## <a name="linking-to-the-scheduling-dialog"></a>スケジュール設定ダイアログへのリンクの設定
 

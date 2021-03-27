@@ -3,12 +3,12 @@ title: サイレント認証
 description: サイレント認証について説明します
 ms.topic: conceptual
 keywords: teams 認証 SSO サイレント AAD
-ms.openlocfilehash: db8409cd4a6edface6d5dc3b3de6698852eaaa24
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: 7facaef0941ff7602b3e23444653ef41415c3396
+ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449229"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "51382346"
 ---
 # <a name="silent-authentication"></a>サイレント認証
 
@@ -67,7 +67,7 @@ if (loginHint) {
 
 ### <a name="authenticate"></a>認証
 
-ADAL にユーザー用にキャッシュされた未発行のトークンがある場合は、トークンを使用します。 または、呼び出してトークンをサイレント モードで取得します `acquireToken(resource, callback)` 。 ADAL.jsトークンを使用してコールバック関数を呼び出したり、認証に失敗した場合にエラーが発生したりします。
+有効期限が切れていないユーザーのトークンが ADAL にキャッシュされている場合は、そのトークンを使用します。 または、呼び出してトークンをサイレント モードで取得します `acquireToken(resource, callback)` 。 ADAL.js要求されたトークンでコールバック関数を呼び出したり、認証に失敗した場合にエラーが発生したりします。
 
 コールバック関数でエラーが発生した場合は、サインイン ボタンを表示し、明示的なサインインに戻します。
 
@@ -116,5 +116,19 @@ if (authContext.isCallback(window.location.hash)) {
             microsoftTeams.authentication.notifyFailure(authContext.getLoginError());
         }
     }
+}
+```
+
+### <a name="handle-sign-out-flow"></a>サインアウト フローの処理
+
+AAD Auth のサインアウト フローを処理するには、次のコードを使用します。
+
+> [!NOTE]
+> Teams タブまたはボットのログアウトが完了すると、現在のセッションもクリアされます。
+
+```javascript
+function logout() {
+localStorage.clear();
+window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 }
 ```
