@@ -4,12 +4,12 @@ description: Microsoft Teams で Office 365 コネクタを使用する方法に
 ms.topic: how-to
 localization_priority: Priority
 keywords: Teams o365 コネクタ
-ms.openlocfilehash: edf84ad8902fa3b4a1827ffde415097aac978532
-ms.sourcegitcommit: 843da1730443ff8474a05295f60a6b376ed140da
+ms.openlocfilehash: 6554a9cc1db0ffdae65f1cb875ca7a4c47c21259
+ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "50073090"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "51382332"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>コネクタと Webhook にメッセージを送信する
 
@@ -132,10 +132,12 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
 
 複数選択リストを最初はコンパクトなスタイルで表示させる場合は、`"isMultiSelect": true` と `"style": true` の両方を指定する必要があります。
 
+コネクタ カード アクションの詳細については、アクション可能メッセージ カードの参考資料の [**アクション**] (/outlook/actionable-messages/card-reference#actions) を参照してください。
+
 > [!NOTE]
 > Microsoft Teams で `style` プロパティに `compact` を指定することは、Microsoft Outlook で `style` プロパティに `normal` を指定することと同じです。
-
-コネクタ カードのアクションのその他の詳細については、操作可能なメッセージ カードのレファレンスの、「**[アクション](/outlook/actionable-messages/card-reference#actions)**」を参照してください。
+> 
+> HttpPOST アクションでは、ベアラー トークンは要求に含まれています。 このトークンには、アクションを実行した Office 365 ユーザーの Azure AD ID が含まれています。
 
 ## <a name="setting-up-a-custom-incoming-webhook"></a>カスタム着信 Webhook の設定
 

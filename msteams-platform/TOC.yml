@@ -329,7 +329,11 @@
         - name: SSO 認証を利用する
           href: bots/how-to/authentication/auth-aad-sso-bots.md
     - name: メッセージング拡張機能
-      href: messaging-extensions/how-to/add-authentication.md
+      items:
+        - name: メッセージング拡張機能に認証を追加する
+          href: messaging-extensions/how-to/add-authentication.md
+        - name: メッセージング拡張機能用の SSO を有効化する
+          href: messaging-extensions/how-to/enable-SSO-auth-me.md
 - name: Microsoft Graph を使用したTeams データを使用する
   items:
     - name: 概要
