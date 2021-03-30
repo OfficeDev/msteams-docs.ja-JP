@@ -6,17 +6,14 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams import messages api graph microsoft migrate migration post
-ms.openlocfilehash: 8cf4f964aba7ce9375b1b259ae88a7fbcb620631
-ms.sourcegitcommit: f6e4a303828224a702138753a8e5e27c8a094c82
+ms.openlocfilehash: 1b5a8ccc243c795801552519b4b52f51366e047d
+ms.sourcegitcommit: c9446200b8e76fbd434d012dc11dd9f191776d13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "51176957"
+ms.lasthandoff: 03/29/2021
+ms.locfileid: "51403970"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Microsoft Graph を使用してサードパーティのプラットフォーム メッセージを Teams にインポートする
-
->[!IMPORTANT]
-> Microsoft Graph と Microsoft Teams のパブリック プレビューは、早期アクセスとフィードバックに利用できます。 このリリースでは広範なテストが実施されましたが、実稼働環境での使用を意図した製品ではありません。
 
 Microsoft Graph を使用すると、ユーザーの既存のメッセージ履歴とデータを外部システムから Teams チャネルに移行できます。 Teams 内のサード パーティプラットフォーム メッセージング階層のレクリエーションを有効にすると、ユーザーはシームレスな方法で通信を続行し、中断することなく続行できます。
 
@@ -66,12 +63,12 @@ Microsoft Graph を使用すると、ユーザーの既存のメッセージ履�
 #### <a name="request-create-a-team-in-migration-state"></a>要求 (移行状態でチームを作成する)
 
 ```http
-POST https://graph.microsoft.com/beta/teams
+POST https://graph.microsoft.com/v1.0/teams
 
 Content-Type: application/json
 {
   "@microsoft.graph.teamCreationMode": "migration",
-  "template@odata.bind": "https://graph.microsoft.com/beta/teamsTemplates('standard')",
+  "template@odata.bind": "https://graph.microsoft.com/v1.0/teamsTemplates('standard')",
   "displayName": "My Sample Team",
   "description": "My Sample Team’s Description",
   "createdDateTime": "2020-03-14T11:22:17.043Z"
@@ -82,8 +79,8 @@ Content-Type: application/json
 
 ```http
 HTTP/1.1 202 Accepted
-Location: /teams/{teamId}/operations/{operationId}
-Content-Location: /teams/{teamId}
+Location: /teams/{team-id}/operations/{operation-id}
+Content-Location: /teams/{team-id}
 ```
 
 #### <a name="error-messages"></a>エラー メッセージ
@@ -99,7 +96,7 @@ Content-Location: /teams/{teamId}
 
 インポートされたメッセージのチャネルの作成は、チームの作成シナリオに似ています。
 
-> [チャネル リソース プロパティを使用](/graph/api/channel-post?view=graph-rest-beta&tabs=http&preserve-view=true) して、タイム スタンプをバックインする新しいチャネルを作成 `createdDateTime` します。 移行プロセスが完了するまで、チャネル内のほとんどのチャット アクティビティからユーザーをバーする特別な状態で、新しいチャネル `migration mode` を配置します。  新しいチームが移行用に作成されているとして明示的に識別するには、POST 要求に値を持つ `channelCreationMode` `migration` instance 属性を含める。  
+> [チャネル リソース プロパティを使用](/graph/api/channel-post?view=graph-rest-v1.0&tabs=http&preserve-view=true) して、タイム スタンプをバックインする新しいチャネルを作成 `createdDateTime` します。 移行プロセスが完了するまで、チャネル内のほとんどのチャット アクティビティからユーザーをバーする特別な状態で、新しいチャネル `migration mode` を配置します。  新しいチームが移行用に作成されているとして明示的に識別するには、POST 要求に値を持つ `channelCreationMode` `migration` instance 属性を含める。  
 <!-- markdownlint-disable MD024 -->
 #### <a name="permissions"></a>アクセス許可
 
@@ -110,7 +107,7 @@ Content-Location: /teams/{teamId}
 #### <a name="request-create-a-channel-in-migration-state"></a>要求 (移行状態でチャネルを作成する)
 
 ```http
-POST https://graph.microsoft.com/beta/teams/{id}/channels
+POST https://graph.microsoft.com/v1.0/teams/{team-id}/channels
 
 Content-Type: application/json
 {
@@ -128,8 +125,8 @@ Content-Type: application/json
 HTTP/1.1 202 Accepted
 
 {
-   "@odata.context":"https://canary.graph.microsoft.com/testprodbetateamsgraphsvcncus/$metadata#teams('9cc6d6ab-07d8-4d14-bc2b-7db8995d6d23')/channels/$entity",
-   "id":"19:e90f6814ce674072a4126206e7de485e@thread.tacv2",
+   "@odata.context":"https://graph.microsoft.com/v1.0/$metadata#teams('team-id')/channels/$entity",
+   "id":"id-value",
    "createdDateTime":null,
    "displayName":"Architecture Discussion",
    "description":"This channel is where we debate all future architecture plans",
@@ -161,7 +158,7 @@ HTTP/1.1 202 Accepted
 #### <a name="request-post-message-that-is-text-only"></a>要求 (テキスト専用の POST メッセージ)
 
 ```http
-POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
+POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/messages
 
 {
    "createdDateTime":"2019-02-04T19:58:15.511Z",
@@ -185,7 +182,7 @@ POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
 HTTP/1.1 200 OK
 
 {
-   "@odata.context":"https://graph.microsoft.com/beta/$metadata#teams('teamId')/channels('channelId')/messages/$entity",
+   "@odata.context":"https://graph.microsoft.com/v1.0/$metadata#teams('team-id')/channels('channel-id')/messages/$entity",
    "id":"id-value",
    "replyToId":null,
    "etag":"id-value",
@@ -232,7 +229,7 @@ HTTP/1.1 200 OK
 > **注**: 要求は chatMessage の一部のため、このシナリオには特別なアクセス許可スコープはありません。chatMessage のスコープもここに適用されます。
 
 ```http
-POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
+POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/messages
 
 {
   "body": {
@@ -255,7 +252,7 @@ POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/messages
 HTTP/1.1 200 OK
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#teams('teamId')/channels('channelId')/messages/$entity",
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#teams('team-id')/channels('channel-id')/messages/$entity",
     "id": "id-value",
     "replyToId": null,
     "etag": "id-value",
@@ -290,25 +287,12 @@ HTTP/1.1 200 OK
 
 ## <a name="step-four-complete-migration-mode"></a>手順 4: 移行モードの完了
 
-メッセージの移行プロセスが完了すると、チームとチャネルの両方がメソッドを使用して移行モードから取り出  `completeMigration`  されます。 この手順では、チーム メンバーが一般的に使用するチームリソースとチャネル リソースを開きます。 アクションはインスタンスにバインド `team` されます。
-
-#### <a name="request-end-team-migration-mode"></a>要求 (チーム移行モードの終了)
-
-```http
-POST https://graph.microsoft.com/beta/teams/teamId/completeMigration
-
-```
-
-#### <a name="response"></a>応答
-
-```http
-HTTP/1.1 204 NoContent
-```
+メッセージの移行プロセスが完了すると、チームとチャネルの両方がメソッドを使用して移行モードから取り出  `completeMigration`  されます。 この手順では、チーム メンバーが一般的に使用するチームリソースとチャネル リソースを開きます。 アクションはインスタンスにバインド `team` されます。 チームを完了するには、移行モードからすべてのチャネルを完了する必要があります。
 
 #### <a name="request-end-channel-migration-mode"></a>要求 (エンド チャネル移行モード)
 
 ```http
-POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/completeMigration
+POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/completeMigration
 
 ```
 
@@ -318,10 +302,16 @@ POST https://graph.microsoft.com/beta/teams/teamId/channels/channelId/completeMi
 HTTP/1.1 204 NoContent
 ```
 
-#### <a name="error-response"></a>エラー応答
+#### <a name="request-end-team-migration-mode"></a>要求 (チーム移行モードの終了)
 
 ```http
-400 Bad Request
+POST https://graph.microsoft.com/v1.0/teams/team-id/completeMigration
+```
+
+#### <a name="response"></a>応答
+
+```http
+HTTP/1.1 204 NoContent
 ```
 
 * a に対して呼び `team` 出されたアクション、 `channel` またはに含めされていないアクション `migrationMode` 。
@@ -333,7 +323,7 @@ Teams UI または Microsoft Graph Add メンバー [API](https://support.micros
 #### <a name="request-add-member"></a>要求 (メンバーの追加)
 
 ```http
-POST https://graph.microsoft.com/beta/teams/{id}/members
+POST https://graph.microsoft.com/beta/teams/{team-id}/members
 Content-type: application/json
 Content-length: 30
 {
@@ -353,8 +343,6 @@ HTTP/1.1 204 No Content
 
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
-
-* Teams に参加していないユーザーからメッセージをインポートできます。 **メモ**: テナントに存在しないユーザーに対してインポートされたメッセージは、パブリック プレビュー中に Teams クライアントまたはコンプライアンス ポータルで検索できません。
 
 * 要求が `completeMigration` 行われたら、チームに追加のメッセージをインポートすることはできません。
 
@@ -378,7 +366,6 @@ HTTP/1.1 204 No Content
 |リッチ テキストを含むメッセージ|ビデオ|
 |メッセージ返信チェーン|お知らせ|
 |高スループット処理|コード スニペット|
-||アダプティブ カード|
 ||ステッカー|
 ||絵文字|
 ||引用符|
@@ -387,4 +374,4 @@ HTTP/1.1 204 No Content
 
 ## <a name="see-also"></a>関連項目
 > [!div class="nextstepaction"]
->[Microsoft Graph と Teams の統合の詳細](/graph/teams-concept-overview)
+> [Microsoft Graph と Teams の統合の詳細](/graph/teams-concept-overview)
