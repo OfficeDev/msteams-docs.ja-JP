@@ -3,12 +3,12 @@ title: カード内のテキストの書式設定
 description: Microsoft Teams のカード テキストの書式設定について説明します。
 keywords: teams ボット カードの形式
 ms.date: 03/29/2018
-ms.openlocfilehash: 1221693ab9ae002ee982ef34a05ead1feb8b1f27
-ms.sourcegitcommit: 47cf0d05e15e5c23616b18ae4e815fd871bbf827
+ms.openlocfilehash: 240481f6deaa9246692ca297712bd311fbd9405d
+ms.sourcegitcommit: 2bf651dfbaf5dbab6d466788f668e7a6c5d69c36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50455398"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "51421621"
 ---
 # <a name="format-cards-in-teams"></a>Teams でカードを書式設定する
 
@@ -159,12 +159,14 @@ Android では、アダプティブ カード マークダウンの書式設定�
 
 
 ### <a name="information-masking-in-adaptive-cards"></a>アダプティブ カードの情報マスキング
-information masking プロパティを使用して、パスワードやユーザーからの機密情報などの特定の情報をマスクします。
+Information masking プロパティを使用して、アダプティブ カード入力要素内のユーザーからのパスワードや機密情報などの特定の情報を [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) マスクします。 
+
+> [!NOTE]
+> この機能はクライアント側の情報マスキングのみをサポートします。マスクされた入力テキストは、ボットの構成中に指定された https エンドポイント アドレスにクリア テキスト [として送信されます](../../build-your-first-app/build-bot.md#4-configure-your-bot)。 
 
 > [!NOTE]
 > information masking プロパティは現在、開発者プレビューでのみ使用できます。
 
-#### <a name="mask-information"></a>マスク情報
 アダプティブ カードで情報をマスクするには、型に `isMasked` プロパティを追加 **し** `Input.Text` 、その値を true に設定 *します*。
 
 #### <a name="sample-adaptive-card-with-masking-property"></a>マスキング プロパティを持つアダプティブ カードのサンプル
@@ -203,7 +205,7 @@ information masking プロパティを使用して、パスワードやユーザ
             "weight": "Bolder"
         }]
     }],
-    
+
     "msteams": {
         "width": "Full"
     },
@@ -216,7 +218,60 @@ information masking プロパティを使用して、パスワードやユーザ
 
 プロパティを Full に設定していない場合、アダプティブ カードの既定のビューは次のとおりです。小幅アダプティブ カード `width`  ![ ビュー](../../assets/images/cards/small-width-adaptive-card.png)
 
+### <a name="typeahead-support"></a>Typeahead のサポート
 
+schema 要素内で、ユーザーにフィルター処理を求め、多数の選択肢を選択すると、タスクの完了が大幅 [`Input.Choiceset`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) に遅くなる可能性があります。 アダプティブ カード内の Typeahead サポートは、ユーザーが入力を入力する場合に入力の選択肢のセットを絞り込むかフィルター処理することで、入力の選択を簡略化できます。 
+
+#### <a name="enable-typeahead-in-adaptive-cards"></a>アダプティブ カードで typeahead を有効にする
+
+セット内で typeahead を有効 `Input.Choiceset` にし `style` 、 `filtered` 必ずに `isMultiSelect` に設定します `false` 。 
+
+#### <a name="sample-adaptive-card-with-typeahead-support"></a>typeahead サポートを備えるアダプティブ カードのサンプル
+
+``` json
+{
+   "type": "Input.ChoiceSet",
+   "label": "Select a user",
+   "isMultiSelect": false,
+   "choices":  [
+      { "title": "User 1", "value": "User1" },
+      { "title": "User 2", "value": "User2" }
+    ],
+   "style": "filtered"
+}
+``` 
+
+### <a name="stage-view-for-images-in-adaptive-cards"></a>アダプティブ カードの画像のステージ ビュー
+アダプティブ カードでは、このプロパティを使用して、ステージ ビューに画像を選択的 `msteams` に表示する機能を追加できます。 ユーザーが画像にカーソルを合わせると、展開アイコンが表示され、属性が `allowExpand` に設定されます `true` 。 プロパティの使用方法については、次の例を参照してください。
+
+``` json
+{
+    "type": "AdaptiveCard",
+     "body": [
+          {
+            "type": "Image",
+            "url": "https://picsum.photos/200/200?image=110",
+            "msTeams": {
+              "allowExpand": true
+            }
+          },
+     ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2"
+}
+```
+
+ユーザーが画像の上にマウス ポインターを置くと、画像の右上隅に展開アイコンが表示されます。展開可能なイメージを持つ ![ アダプティブ カード](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
+
+ユーザーが展開ボタンを選択すると、イメージがステージ ビューに表示されます。 ![ イメージはステージ ビューに展開されます。](../../assets/images/cards/adaptivecard-expand-image.png)
+
+ステージ ビューでは、ユーザーは画像を拡大および縮小できます。 アダプティブ カードでこの機能を使用する必要があるイメージを選択できます。
+
+> [!NOTE]
+> 拡大および縮小機能は、アダプティブ カード内のイメージ要素 (画像の種類) にのみ適用されます。
+
+> [!NOTE]
+> Teams モバイル アプリの場合、アダプティブ カードの画像のステージ ビュー機能は既定で利用できます。ユーザーは、属性が存在するかどうかに関係なく、画像をタップするだけでステージ ビューでアダプティブ カードイメージを表示できます。 `allowExpand`
 
 # <a name="markdown-formatting-o365-connector-cards"></a>[**Markdown の書式設定: O365 コネクタ カード**](#tab/connector-md)
 

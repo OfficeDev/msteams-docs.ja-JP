@@ -3,12 +3,12 @@ title: サイレント認証
 description: サイレント認証について説明します
 ms.topic: conceptual
 keywords: teams 認証 SSO サイレント AAD
-ms.openlocfilehash: 7facaef0941ff7602b3e23444653ef41415c3396
-ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
+ms.openlocfilehash: 7a68c532cadf181b15c16d6bc4d4ab861d5c9922
+ms.sourcegitcommit: 2bf651dfbaf5dbab6d466788f668e7a6c5d69c36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51382346"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "51421609"
 ---
 # <a name="silent-authentication"></a>サイレント認証
 
@@ -32,7 +32,9 @@ Azure Active Directory (AAD) でのサイレント認証では、ユーザーが
 
 この記事のコードは、Teams 認証サンプル ノードである [Teams サンプル アプリから提供されます](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)。
 
-### <a name="include-and-configure-adal"></a>ADAL を含め、構成する
+[AAD を使用してサイレント認証と簡単な認証構成可能](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) タブを開始し、指示に従ってローカル コンピューターでサンプルを実行します。
+
+### <a name="include-and-configure-adal"></a>ADAL を含めるおよび構成する
 
 タブ ページに ADAL.jsライブラリを含め、クライアント ID とリダイレクト URL を使用して ADAL を構成します。
 

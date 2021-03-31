@@ -5,12 +5,12 @@ description: チーム会議用のアプリを作成する
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: 78b7791deb61354ab93fa108f8bb2e134dc86080
-ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
+ms.openlocfilehash: ac0d3dee30e82cde51651f7eab3b05e569b820f7
+ms.sourcegitcommit: 94b1d3e50563b31c1ff01c52d563c112a2553611
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51382353"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "51435037"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Teams 会議用のアプリを作成する
 
@@ -289,6 +289,8 @@ POST /v3/conversations/{conversationId}/activities
     ![会議前のエクスペリエンス](../assets/images/apps-in-meetings/PreMeeting.png)
 
 1. タブ ギャラリーで、追加するアプリを選択し、必要に応じて手順に従います。 アプリはタブとしてインストールされます。
+    > [!NOTE] 
+    > 現在、会議タブでは、会議の詳細と参加者情報の取得はサポートされていません。
 
 **会議にメッセージング拡張機能を追加するには**
 
