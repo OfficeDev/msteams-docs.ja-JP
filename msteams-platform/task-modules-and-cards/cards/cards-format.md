@@ -3,12 +3,12 @@ title: カード内のテキストの書式設定
 description: Microsoft Teams のカード テキストの書式設定について説明します。
 keywords: teams ボット カードの形式
 ms.date: 03/29/2018
-ms.openlocfilehash: 240481f6deaa9246692ca297712bd311fbd9405d
-ms.sourcegitcommit: 2bf651dfbaf5dbab6d466788f668e7a6c5d69c36
+ms.openlocfilehash: d7016f8b954e885221c55bd6c29309fd90a1dcfc
+ms.sourcegitcommit: d41da0b608327829b902aded6bc85c0d0016d068
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "51421621"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "51475000"
 ---
 # <a name="format-cards-in-teams"></a>Teams でカードを書式設定する
 
@@ -242,6 +242,10 @@ schema 要素内で、ユーザーにフィルター処理を求め、多数の�
 ``` 
 
 ### <a name="stage-view-for-images-in-adaptive-cards"></a>アダプティブ カードの画像のステージ ビュー
+
+> [!NOTE]
+> この機能は現在、開発者プレビューでのみ利用できます。
+ 
 アダプティブ カードでは、このプロパティを使用して、ステージ ビューに画像を選択的 `msteams` に表示する機能を追加できます。 ユーザーが画像にカーソルを合わせると、展開アイコンが表示され、属性が `allowExpand` に設定されます `true` 。 プロパティの使用方法については、次の例を参照してください。
 
 ``` json

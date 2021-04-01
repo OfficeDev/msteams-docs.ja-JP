@@ -6,14 +6,14 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Teams プロアクティブ メッセージング チャットのインストール Graph
-ms.openlocfilehash: ac59f3408096993379cae490cd555d3b913cc827
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: 4f9c1c2e73fc89d37792e59153affc398bb87044
+ms.sourcegitcommit: 3bd2627b7a334568f61ccc606395e3d89aa521d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449403"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "51475936"
 ---
-# <a name="proactive-installation-of-apps-using-graph-api-and-send-messages"></a>Graph API を使用してアプリをプロアクティブにインストールし、メッセージを送信する
+# <a name="proactive-installation-of-apps-using-graph-api-and-send-messages"></a>Graph API を使用したアプリの事前インストールとメッセージの送信
 
 >[!IMPORTANT]
 > Microsoft Graph と Microsoft Teams のパブリック プレビューは、早期アクセスとフィードバックに利用できます。 このリリースでは広範なテストが実施されましたが、実稼働環境での使用を意図した製品ではありません。
@@ -140,6 +140,8 @@ GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps?$exp
 
 ```http
 POST https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps
+Content-Type: application/json
+
 {
    "teamsApp@odata.bind" : "https://graph.microsoft.com/v1.0/appCatalogs/teamsApps/{teamsAppId}"
 }
@@ -170,7 +172,7 @@ GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$exp
 **HTTP GET 要求** (アクセス許可 — `TeamsAppInstallation.ReadWriteSelfForUser.All` ):  
 
 ```http
- GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
+GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
 ```
 
 応答 **の id** プロパティは、 `chatId` です。

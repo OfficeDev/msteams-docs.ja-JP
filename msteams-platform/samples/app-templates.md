@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Microsoft Teams テンプレートのサンプル デモ
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: fffacb567f4b74f282020d61aea07e142256c84a
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: ac2062e8f62ee52a53c6e129301e2a5615110789
+ms.sourcegitcommit: 3bd2627b7a334568f61ccc606395e3d89aa521d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034738"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "51475964"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 用のアプリ テンプレート
 
@@ -468,6 +468,19 @@ Poll は、チャットまたはチャネルで投票をすばやく作成して
 
 ![応答のサンプル ビュー](../assets/images/quick-responses.png)
 
+
+## <a name="quiz--9734"></a>クイズ&#9734;
+
+Quiz はカスタム [Teams メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md) アプリで、チャットまたはチャネル内にクイズを作成し、知識チェックと瞬時の結果を得ることができます。 Quiz for, In-class and offline exams, Knowledge check in team, and for fun quizs in a team. クイズ アプリは、Teams デスクトップ、ブラウザー、iOS、Android クライアントなど、複数のプラットフォームでサポートされています。 このアプリは、既存の Microsoft 365 サブスクリプションの一部として展開する準備が整いました。
+
+[GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-quiz)
+
+:::row:::
+  :::column span="1":::
+    ![Teams ビューでクイズを作成する](../assets/images/quiz-app-template-compose-view.gif)  
+:::column-end:::
+:::row-end:::
+
 ## <a name="rapid-assist"></a>Rapid Assist
 
 Rapid Assist は、Microsof t[Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) ベースのアプリで、顧客対応担当者が専門家と素早く接続して迅速な回答を得たり、情報を検索したり、オープンな要求をフォローしたりして、専門家が通知を受信して素早く応答し、質問に答えるためのサポートを行います。 Microsoft [Power Apps](/powerapps/powerapps-overview) と [Power Automate](/power-automate/getting-started) を使用して構築されたアプリは、Microsoft Teams と深く統合されており、組織は現場の従業員と企業のリエゾンを簡単に接続して、顧客の問い合わせを解決し、優れた顧客エクスペリエンスを提供できるようにします。 
@@ -608,6 +621,18 @@ Survey は、チャットまたはチャネルで調査を作成してデータ�
 
 ![Time Tally](../assets/images/11zon_gif.gif)
 
+
+## <a name="training--9734"></a>トレーニング &#9734;
+
+トレーニングは、 [ユーザー](../messaging-extensions/what-are-messaging-extensions.md) がチャットまたはチャネル内でトレーニングを公開し、オフラインでのナレッジ共有とスキルアップを行うカスタム Teams メッセージング拡張機能アプリです。 アプリは、デスクトップ、ブラウザー、iOS、Android など、複数の Teams プラットフォーム クライアントでサポートされています。 このアプリは、Microsoft 365 サブスクリプションの一部として展開する準備が整いました。
+
+[GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-training)
+
+:::row:::
+  :::column span="1":::
+    ![Teams ビューでトレーニングを作成する](../assets/images/training-app-template-compose-view.gif)  
+:::column-end:::
+:::row-end:::
 
 ## <a name="virtual-rounding"></a>Virtual Rounding
 
