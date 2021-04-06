@@ -4,16 +4,16 @@ description: Microsoft Teams のマニフェスト スキーマについて説�
 ms.topic: reference
 ms.author: lajanuar
 keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: 291d748d546dec16fa4bf748318b8749b7d0275d
-ms.sourcegitcommit: 9cfbc44912980a33d2d7c7c85739aeea6ccb41de
+ms.openlocfilehash: fc7af73dd90ae74d76645281d9e761b91678873b
+ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "50479857"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "51585842"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>リファレンス: Microsoft Teams のマニフェスト スキーマ
 
-Teams マニフェストは、アプリが Microsoft Teams 製品に統合される方法について説明します。 マニフェストは、 でホストされるスキーマに準拠している必要があります [`https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json) 。 以前のバージョン 1.0-1.4 もサポートされています (URL で "v1.x" を使用)。
+Teams マニフェストは、アプリが Microsoft Teams 製品に統合される方法について説明します。 マニフェストは、 でホストされるスキーマに準拠している必要があります [`https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json) 。 以前のバージョン 1.0-1.4 もサポートされています (URL で "v1.x" を使用)。
 
 次のスキーマ サンプルは、すべての機能拡張オプションを示しています。
 
@@ -21,8 +21,8 @@ Teams マニフェストは、アプリが Microsoft Teams 製品に統合され
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.8",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.9",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
   "packageName": "com.example.myapp",
@@ -276,50 +276,8 @@ Teams マニフェストは、アプリが Microsoft Teams 製品に統合され
       }
     ]
   },
-  "defaultInstallScope": {
-     "type": "string",
-     "enum": [
-        "personal",
-        "team",
-        "groupchat",
-        "meetings"
-      ],
-      "description": "The install scope is defined for this app by default. It is the option displayed on the button when a user tries to add the app."
-    },
-  "defaultGroupCapability": {
-      "type": "object",
-      "properties": {
-        "team": {
-          "type": "string",
-          "enum": [
-            "tab",
-            "bot",
-            "connector"
-          ],
-          "description": "When the selected install scope is Team, this field specifies the default capability available."
-    },
-    "groupchat": {
-      "type": "string",
-      "enum": [
-            "tab",
-            "bot",
-            "connector"
-      ],
-      "description": "When the selected install scope is Group Chat, this field specifies the default capability available."
-    },
-    "meetings": {
-      "type": "string",
-      "enum": [
-            "tab",
-            "bot",
-            "connector"
-      ],
-      "description": "When the selected install scope is Meetings, this field specifies the default capability available."
-      }
-    },
-    "description": "When a group install scope is selected, this defines the default capability when the user installs the app.",
-    "additionalProperties": false
-
+  "defaultInstallScope": "meetings",
+  "defaultGroupCapability": {"meetings": "tab" , "team": "bot", "groupchat": "bot"}
 }
 ```
 
@@ -329,13 +287,13 @@ Teams マニフェストは、アプリが Microsoft Teams 製品に統合され
 
 省略可能ですが、推奨される — string
 
-マニフェストhttps:// JSON スキーマを参照する URL を指定します。
+マニフェスト https:// JSON スキーマを参照する URL を指定します。
 
 ## <a name="manifestversion"></a>manifestVersion
 
 **必須** — 文字列
 
-このマニフェストが使用しているマニフェスト スキーマのバージョン。 1.7 である必要があります。
+このマニフェストが使用しているマニフェスト スキーマのバージョン。 1.9 である必要があります。
 
 ## <a name="version"></a>version
 
@@ -365,9 +323,9 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
 |`name`|32 文字|✔|開発者の表示名。|
-|`websiteUrl`|2048 文字|✔|開発者https:// WEB サイトの URL を指定します。 このリンクは、ユーザーを会社または製品固有のランディング ページに移動する必要があります。|
-|`privacyUrl`|2048 文字|✔|開発者https://のプライバシー ポリシーの URL を指定します。|
-|`termsOfUseUrl`|2048 文字|✔|開発者https://の使用条件の URL を指定します。|
+|`websiteUrl`|2048 文字|✔|開発者 https:// WEB サイトの URL を指定します。 このリンクは、ユーザーを会社または製品固有のランディング ページに移動する必要があります。|
+|`privacyUrl`|2048 文字|✔|開発者 https:// のプライバシー ポリシーの URL を指定します。|
+|`termsOfUseUrl`|2048 文字|✔|開発者 https:// の使用条件の URL を指定します。|
 |`mpnId`|10 文字| |**省略可能** アプリを構築するパートナー組織を識別する Microsoft パートナー ネットワーク ID。|
 
 ## <a name="name"></a>name
@@ -381,7 +339,7 @@ Teams エクスペリエンスのユーザーに表示されるアプリ エク�
 |`short`|30 文字|✔|アプリの短い表示名。|
 |`full`|100 文字||完全なアプリ名が 30 文字を超える場合に使用されるアプリの完全な名前。|
 
-## <a name="description"></a>説明
+## <a name="description"></a>description
 
 **必須** — オブジェクト
 
@@ -446,12 +404,12 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`configurationUrl`|string|2048 文字|✔|タブhttps://する際に使用する URL を指定します。|
-|`scopes`|列挙型の配列|1 |✔|現在、構成可能なタブは、スコープ `team` とスコープ `groupchat` のみをサポートしています。 |
+|`configurationUrl`|string|2048 文字|✔|タブ https:// する際に使用する URL を指定します。|
+|`scopes`|列挙型の配列|1|✔|現在、構成可能なタブは、スコープ `team` とスコープ `groupchat` のみをサポートしています。 |
 |`canUpdateConfiguration`|ブール値|||作成後に、タブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 既定値: **true 。**|
-|`context` |列挙型の配列|6 ||タブが `contextItem` サポートされているスコープのセット。 既定値: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
+|`context` |列挙型の配列|6||タブが `contextItem` サポートされているスコープのセット。 既定値: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||SharePoint で使用するタブ プレビュー イメージへの相対ファイル パス。 サイズは 1024x768 です。 |
-|`supportedSharePointHosts`|列挙型の配列|1 ||SharePoint でタブを使用する方法を定義します。 オプションは `sharePointFullPage` 次のとおりです。 `sharePointWebPart` |
+|`supportedSharePointHosts`|列挙型の配列|1||SharePoint でタブを使用する方法を定義します。 オプションは `sharePointFullPage` 次のとおりです。 `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -465,11 +423,11 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |---|---|---|---|---|
 |`entityId`|string|64 文字|✔|タブが表示されるエンティティの一意の識別子。|
 |`name`|string|128 文字|✔|チャネル インターフェイスのタブの表示名。|
-|`contentUrl`|string||✔|Teams https://表示するエンティティ UI を示す URL を指定します。|
-|`websiteUrl`|string|||ユーザー https://ブラウザーで表示することを選択した場合に示す URL を指定します。|
-|`searchUrl`|string|||ユーザー https://検索クエリを参照する URL を指定します。|
-|`scopes`|列挙型の配列|1 |✔|現在、静的タブはスコープのみをサポートしています。つまり、個人用エクスペリエンスの一部としてのみ `personal` プロビジョニングできます。|
-|`context` | 列挙型の配列| 2 || タブが `contextItem` サポートされているスコープのセット。|
+|`contentUrl`|string||✔|Teams https:// 表示するエンティティ UI を示す URL を指定します。|
+|`websiteUrl`|string|||ユーザー https:// ブラウザーで表示することを選択した場合に示す URL を指定します。|
+|`searchUrl`|string|||ユーザー https:// 検索クエリを参照する URL を指定します。|
+|`scopes`|列挙型の配列|1|✔|現在、静的タブはスコープのみをサポートしています。つまり、個人用エクスペリエンスの一部としてのみ `personal` プロビジョニングできます。|
+|`context` | 列挙型の配列| 2|| タブが `contextItem` サポートされているスコープのセット。|
 
 > [!NOTE]
 > 関連するコンテンツを表示したり、認証フローを開始したりするために、タブでコンテキストに依存する情報が必要な場合は、「Microsoft Teams タブのコンテキストを取得する」[を参照してください](../../tabs/how-to/access-teams-context.md)。
@@ -485,7 +443,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`botId`|string|64 文字|✔|Bot Framework に登録された、ボット用の一意の Microsoft アプリ ID。 これは、アプリ全体の ID と同じ [可能性があります](#id)。|
-|`scopes`|列挙型の配列|3 |✔|ボットがエクスペリエンスを提供するのは、`team` 内のチャネルのコンテキスでなのか、グループ チャット (`groupchat`) でなのか、あるいは個別のユーザーのみをエクスペリエンスの対象にする (`personal`) のかを指定します。 これらのオプションは非排他的です。|
+|`scopes`|列挙型の配列|3|✔|ボットがエクスペリエンスを提供するのは、`team` 内のチャネルのコンテキスでなのか、グループ チャット (`groupchat`) でなのか、あるいは個別のユーザーのみをエクスペリエンスの対象にする (`personal`) のかを指定します。 これらのオプションは非排他的です。|
 |`needsChannelSelector`|ブール値|||ボットを特定のチャネルに追加するためのユーザー用ヒントをボットで使用するかどうかの説明。 既定値: **`false`**|
 |`isNotificationOnly`|ブール値|||ボットが会話ボットではなく、一方向性の通知専用ボットなのかどうかを示します。 既定値: **`false`**|
 |`supportsFiles`|ブール値|||パーソナル チャットでのファイルのアップロード/ダウンロード機能をボットでサポートするかどうかを示します。 既定値: **`false`**|
@@ -498,8 +456,8 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`items.scopes`|列挙型の配列|3 |✔|コマンド リストが有効なスコープを指定します。 `team`、`personal`、`groupchat` の中から選択できます。|
-|`items.commands`|オブジェクトの配列|10  |✔|ボットがサポートするコマンドの配列:<br>`title`: ボット コマンドの名前 (文字列、32)<br>`description`: コマンドの構文およびその構文の引数
+|`items.scopes`|列挙型の配列|3|✔|コマンド リストが有効なスコープを指定します。 `team`、`personal`、`groupchat` の中から選択できます。|
+|`items.commands`|オブジェクトの配列|10|✔|ボットがサポートするコマンドの配列:<br>`title`: ボット コマンドの名前 (文字列、32)<br>`description`: コマンドの構文およびその構文の引数
 の簡単な説明または例 (文字列、128)|
 
 ### <a name="botscommandlistscommands"></a>bots.commandLists.command
@@ -507,7 +465,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |title|string|12 |✔|ボット コマンド名|
-|説明|string|128 文字|✔|単純なテキストの説明、またはコマンド構文とその引数の例。|
+|description|string|128 文字|✔|単純なテキストの説明、またはコマンド構文とその引数の例。|
 
 ## <a name="connectors"></a>コネクタ
 
@@ -519,8 +477,8 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`configurationUrl`|string|2048 文字|✔|コネクタhttps://する際に使用する URL を指定します。|
-|`scopes`|列挙型の配列|1 |✔|Connector がチャネルのコンテキストでエクスペリエンスを提供するかどうか、または個々のユーザー () にスコープを設定したエクスペリエンスを提供するかどうかを `team` 指定します `personal` 。 現在、スコープ `team` だけがサポートされています。|
+|`configurationUrl`|string|2048 文字|✔|コネクタ https:// する際に使用する URL を指定します。|
+|`scopes`|列挙型の配列|1|✔|Connector がチャネルのコンテキストでエクスペリエンスを提供するかどうか、または個々のユーザー () にスコープを設定したエクスペリエンスを提供するかどうかを `team` 指定します `personal` 。 現在、スコープ `team` だけがサポートされています。|
 |`connectorId`|string|64 文字|✔|コネクタ開発者ダッシュボードの ID に一致するコネクタの一 [意の識別子](https://aka.ms/connectorsdashboard)です。|
 
 ## <a name="composeextensions"></a>composeExtensions
@@ -537,9 +495,9 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |名前| 型 | 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`botId`|string|64|✔|ボット フレームワークに登録されているメッセージング拡張機能をバックするボットの一意の Microsoft アプリ ID。 これは、アプリ ID 全体と同じ可能性があります。|
-|`commands`|オブジェクトの配列|10  |✔|メッセージング拡張機能がサポートするコマンドの配列|
+|`commands`|オブジェクトの配列|10|✔|メッセージング拡張機能がサポートするコマンドの配列|
 |`canUpdateConfiguration`|ブール値|||メッセージング拡張機能の構成をユーザーが更新できるかどうかを示す値。 既定値: **false**|
-|`messageHandlers`|オブジェクトの配列|5 ||特定の条件が満たされた場合にアプリを呼び出すことができるハンドラーの一覧。|
+|`messageHandlers`|オブジェクトの配列|5||特定の条件が満たされた場合にアプリを呼び出すことができるハンドラーの一覧。|
 |`messageHandlers.type`|string|||メッセージ ハンドラーの種類。 `"link"` である必要があります。|
 |`messageHandlers.value.domains`|文字列の配列|||リンク メッセージ ハンドラーが登録できるドメインの配列。|
 
@@ -556,7 +514,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |`type`|string|64 文字||コマンドの種類。 または `query` の 1 `action` つ。 既定: **クエリ** です。|
 |`description`|string|128 文字||このコマンドの目的を示すためにユーザーに表示される説明。|
 |`initialRun`|ブール値|||ブール値は、コマンドがパラメーターを使用して最初に実行されるかどうかを示します。 既定値は **false** です。|
-|`context`|文字列の配列|3 ||メッセージ拡張機能の呼び出し先を定義します。 `compose`、 の任意の `commandBox` 組み合 `message` わせ。 既定値は `["compose","commandBox"]` です。|
+|`context`|文字列の配列|3||メッセージ拡張機能の呼び出し先を定義します。 `compose`、 の任意の `commandBox` 組み合 `message` わせ。 既定値は `["compose","commandBox"]` です。|
 |`fetchTask`|ブール値|||タスク モジュールを動的にフェッチする必要があるかどうかを示すブール値。 既定値は **false** です。|
 |`taskInfo`|object|||メッセージング拡張機能コマンドを使用する場合に事前読み込みするタスク モジュールを指定します。|
 |`taskInfo.title`|string|64 文字||最初のダイアログ タイトル。|
@@ -602,7 +560,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 アプリが Teams クライアント内で読み込むと予想される Web サイトの有効なドメインの一覧。 ドメインの一覧には、ワイルドカード (たとえば) を含めできます `*.example.com` 。 これは、ドメインの 1 つのセグメントと完全に一致します。一致する必要がある場合は、 `a.b.example.com` を使用します `*.*.example.com` 。 タブ構成またはコンテンツ UI で、タブ構成に使用するドメイン以外のドメインに移動する必要がある場合は、ここでそのドメインを指定する必要があります。
 
-サポート **する** ID プロバイダーのドメインをアプリに含める必要はありません。 たとえば、Google ID を使用して認証を行う場合は、accounts.google.com にリダイレクトする必要があります。ただし、accounts.google.comを含accounts.google.com必要があります `validDomains[]` 。
+サポート **する** ID プロバイダーのドメインをアプリに含める必要はありません。 たとえば、Google ID を使用して認証を行う場合は、accounts.google.com にリダイレクトする必要があります。ただし、accounts.google.com を含 accounts.google.com 必要があります `validDomains[]` 。
 
 自分の sharepoint URL がうまく機能する必要がある Teams アプリには、有効なドメイン リストに "{teamsitedomain}" が含まれます。
 

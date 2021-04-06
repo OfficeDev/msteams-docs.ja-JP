@@ -5,12 +5,12 @@ description: チーム会議用のアプリを作成する
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: ac0d3dee30e82cde51651f7eab3b05e569b820f7
-ms.sourcegitcommit: 94b1d3e50563b31c1ff01c52d563c112a2553611
+ms.openlocfilehash: ba00a2dc78cefb167f1bef8507f32dad5e38452c
+ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "51435037"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "51585849"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Teams 会議用のアプリを作成する
 
@@ -233,6 +233,7 @@ POST /v3/conversations/{conversationId}/activities
 
 > [!NOTE]
 > マニフェスト スキーマを使用してアプリ マニフェストを [更新してみてください](../resources/schema/manifest-schema-dev-preview.md)。
+> 会議のアプリには、 *グループチャットスコープが必要* です。 チーム *スコープは* 、チャネル内のタブでのみ機能します。
 
 ```json
 
@@ -249,11 +250,14 @@ POST /v3/conversations/{conversationId}/activities
         "privateChatTab",
         "meetingChatTab",
         "meetingDetailsTab",
-        "meetingSidePanel"
+        "meetingSidePanel",
+        "meetingStage"
      ]
     }
   ]
 ```
+> [!NOTE]
+> `meetingStage` は現在、開発者プレビューでのみ使用できます。
 
 ### <a name="context-property"></a>Context プロパティ
 
@@ -266,6 +270,7 @@ POST /v3/conversations/{conversationId}/activities
 | **meetingChatTab** | スケジュールされた会議のコンテキスト内の一連のユーザー間のグループ チャットのヘッダー内のタブ。 |
 | **meetingDetailsTab** | 予定表の会議の詳細ビューのヘッダーにあるタブ。 |
 | **meetingSidePanel** | 統合バー (U バー) を介して開いた会議内パネル。 |
+| **meetingStage** | サイドパネルのアプリを会議ステージに共有できます。 |
 
 > [!NOTE]
 > `Context` プロパティは現在、モバイル クライアントではサポートされていません。
@@ -326,6 +331,18 @@ API を使用して `userContext` 要求をルーティングするには [、�
 > [!NOTE]
 > * ユーザーが Web ビューでアクションを実行した後に自動的に終了するには [、submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) 関数を呼び出す必要があります。 これは、アプリの申請に必要な要件です。 詳細については、「Teams SDK タスク [モジュール」を参照してください](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。
 > * アプリで匿名ユーザーをサポートする場合、最初の呼び出し要求ペイロードは、要求メタデータではなく、オブジェクト内の要求メタデータ `from.id` `from` に `from.aadObjectId` 依存する必要があります。 `from.id` はユーザー ID であり `from.aadObjectId` 、ユーザーの Azure Active Directory (AAD) ID です。 詳細については、「タブでタスク [モジュールを使用する」を参照し](../task-modules-and-cards/task-modules/task-modules-tabs.md) 、 [タスク モジュールを作成して送信します](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
+
+#### <a name="share-to-stage"></a>ステージ間の共有 
+
+> [!NOTE]
+> この機能は、Insider 開発プレビューでのみ利用できます。
+
+
+この機能により、開発者はアプリを会議ステージに共有できます。 会議ステージへの共有を有効にすると、会議の参加者はリアルタイムで共同作業できます。 
+
+必要なコンテキストは、アプリ マニフェストの meetingStage です。 このための前提条件は、meetingSidePanel コンテキストを持つ必要があります。 これにより、サイドパネルの "共有" ボタンが以下のように有効になります。
+
+
 
 ### <a name="after-a-meeting"></a>会議の後
 

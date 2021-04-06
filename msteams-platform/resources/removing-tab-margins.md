@@ -5,12 +5,12 @@ description: タブ 余白を削除すると、開発者のエクスペリエン
 keywords: タブの余白の余白の削除
 ms.topic: reference
 ms.author: lomeybur
-ms.openlocfilehash: f26701b2c432ba35ce6f069eabd3b401aae8e369
-ms.sourcegitcommit: 1ce74ed167bb81bf09f7f6f8d518093efafb549e
+ms.openlocfilehash: 953dcf0a0edd47a0bf65bbd0db5901c5b98b11c3
+ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "50827929"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "51585821"
 ---
 # <a name="tab-margin-changes"></a>タブ余白の変更
 
@@ -18,6 +18,9 @@ ms.locfileid: "50827929"
 すべてのタブの余白を削除すると、開発者は Teams のネイティブに見えるアプリを作成できます。 これは、UI キットのデザイン [にも対応します](~/tabs/design/tabs.md)。 ほとんどのアプリは、エクスペリエンスを取り巻く余白がなくても、既に見た目が良くなります。 ただし、一部のタブは、この変更によって視覚的に影響を受け、開発者は必要な変更を行う必要があります。
 
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="タブの wit と余白なし" border="false":::
+
+> [!NOTE]
+> モバイル クライアントで表示されるタブに余白が含まれるので、この機能はモバイル クライアントには適用されません。 
 
 ## <a name="timelines"></a>タイムライン
 
