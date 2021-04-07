@@ -5,12 +5,12 @@ description: 開発者がカスタム アプリを使用して Microsoft Teams �
 ms.topic: overview
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: e40d2b0d8b0d12e6275b97f79d103310d22f9720
-ms.sourcegitcommit: 3bd2627b7a334568f61ccc606395e3d89aa521d9
+ms.openlocfilehash: b4f5d5fa3014d2acc5e4178a89c84ddb5a250132
+ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "51475929"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596211"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Microsoft Teams のアプリを作成する
 
@@ -74,9 +74,8 @@ Teams アプリは、機能とエントリ[ポイントの組み](concepts/capab
 :::row-end:::
 
 :::row:::
+
    :::column span="":::
-   :::column-end:::
-:::row-end:::
 
 ### <a name="microsoft-graph-for-teams"></a>Microsoft Graph for Teams
 
@@ -85,25 +84,20 @@ Teams アプリは、機能とエントリ[ポイントの組み](concepts/capab
 :::image type="content" source="assets/images/overview-graph.png" alt-text="Microsoft Graph API for Teams の概念表現。" border="false":::
 
    :::column-end:::
-   :::column span="":::
 
-:::row:::
-   :::column span="2":::
+   :::column span="":::
    :::column-end:::
 :::row-end:::
 
-## <a name="build-solutions-for-microsoft-teams-apps"></a>Microsoft Teams アプリのソリューションを構築する
- 
-Microsoft は、業界別に整理された Teams アプリのシナリオ ライブラリである拡張性の外観ブックを提供しています。 このブックは、Teams プラットフォームでアプリを構築し、さまざまな Teams プラットフォーム機能を使用してさまざまなシナリオを理解するのに役立ちます。 ルック ブックのシナリオは、ビジネス上の問題、課題に関連するペルサから始め、ビジネス ニーズに対応する Teams アプリ ソリューションで終了します。
-
-このライブラリの各シナリオには、一連の忠実度の高いデザイン概念モックが伴います。これは、アプリを設計し、ユーザー エクスペリエンスを向上させるインスピレーションとして役立つ可能性があります。 さらに、このルック ブックでは、各アプリの構築に続く設計とアーキテクチャのベスト プラクティスが強調表示されています。 詳細については、「機能拡張の一覧」を参照してください。 詳細については、「機能拡張 [ルック ブック」を参照してください](https://adoption.microsoft.com/extensibility-look-book/scenarios/)。 
+:::row:::
+   :::column span="2":::
 
 ## <a name="start-building"></a>構築を開始する
 
-簡単なアプリを作成し、一般的に使用される機能を追加することで、Teams の構築についてすぐに理解できます。
+環境をセットアップし、簡単なアプリを作成することで、Teams の構築についてすぐに理解できます。
 
 > [!div class="nextstepaction"]
-> [最初のアプリを今すぐビルドする](build-your-first-app/build-first-app-overview.md)
+> [初めてのアプリを構築する](build-your-first-app/build-first-app-overview.md)
 
    :::column-end:::
    :::column span="":::
@@ -143,7 +137,23 @@ Microsoft は、業界別に整理された Teams アプリのシナリオ ラ�
    :::column-end:::
 :::row-end:::
 
-## <a name="resources"></a>関連情報
+:::row:::
+   :::column span="2":::
+
+## <a name="get-ideas-for-your-app"></a>アプリのアイデアを取得する
+
+アプリ開発のインスピレーションをお探しですか? 高忠実度の概念モックを使用して、実際のシナリオと業界ソリューションのリストを参照して、Teams アプリがユーザーに役立つさまざまな方法を理解します。
+
+> [!div class="nextstepaction"]
+> [アプリのシナリオを見る](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+## <a name="see-also"></a>関連項目
 
 * [Share-to-Teams ボタンを Web サイトに追加する](concepts/build-and-test/share-to-teams.md)
 * [Teams アプリを設計する](concepts/design/design-teams-app-overview.md)

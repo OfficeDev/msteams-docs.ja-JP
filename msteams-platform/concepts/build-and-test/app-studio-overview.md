@@ -2,13 +2,13 @@
 title: Microsoft Teams 用の App Studio を開始する
 description: App Studio を使用して Microsoft Teams で優れたアプリのビルドを開始する
 keywords: App Studio Teams の開始
-ms.date: 03/20/2019
-ms.openlocfilehash: b8bae38ae2a3044d87389b4bd5ee3d5a7d1e029d
-ms.sourcegitcommit: 52732714105fac07c331cd31e370a9685f45d3e1
+ms.topic: overview
+ms.openlocfilehash: ca7d777458c8c8f9646d7e862f7a5b83059c21f3
+ms.sourcegitcommit: 098d38dd947e87e69d289b99e807bea2d95c42f9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "46874878"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "49713397"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Microsoft Teams 用の App Studio を使用してアプリをすばやく開発する
 
@@ -64,9 +64,9 @@ App Studio の [マニフェスト エディター] タブでは、マニフェ�
 
 ##### <a name="bots"></a>ボット
 
-このセクションでは、[会話ボット](~/bots/what-are-bots.md)をアプリに追加することができます。 Bot Framework にボットが既に登録されている場合、そのボットを追加するには、*[セットアップ]* をクリックし、ボットの名前、Bot Framework ID を指定し、ボットが動作するスコープを定義します。
+このセクションでは、[会話ボット](~/bots/what-are-bots.md)をアプリに追加することができます。 Bot Framework にボットが既に登録されている場合、そのボットを追加するには、*[Set Up]* (セットアップ) をクリックし、ボットの名前と Bot Framework ID を指定し、ボットが動作するスコープを定義します。
 
-Bot Framework にボットをまだ登録していない場合は、*[登録]* をクリックして新しいボットを作成します。 ボットの登録が完了したら、マニフェスト エディターのこのセクションに戻り、ボットの名前と Bot Framework ID を入力します。
+Bot Framework にボットをまだ登録していない場合は、*[Register]* (登録) をクリックして新しいボットを作成します。 ボットの登録が完了したら、[Manifest Editor] (マニフェスト エディター) のこのセクションに戻り、ボットの名前と Bot Framework ID を入力します。
 
 ボットの情報を指定したら、必要に応じて、ボットがユーザーに候補として表示できるコマンドの一覧を定義できます。 コマンドの名前、コマンドの構文と引数を示すコマンドの説明、このコマンドが適用されるスコープを追加します。
 
@@ -92,10 +92,10 @@ Bot Framework にボットをまだ登録していない場合は、*[登録]* �
 
 #### <a name="test-and-distribute"></a>テストと配布
 
-アプリケーションの定義が完了したら、テストと配布のセクションを使用して、アプリの定義を zip ファイルとしてエクスポートし、それをテストのために Teams クライアントに共有およびアップロードできます。 [エクスポート] をクリックすると、zip ファイルが *appname.zip* として既定のダウンロード ディレクトリにダウンロードされます。
+アプリケーションの定義が完了したら、テストと配布のセクションを使用して、アプリの定義を zip ファイルとしてエクスポートし、それをテストのために Teams クライアントに共有およびアップロードできます。 [Export] (エクスポート) をクリックすると、zip ファイルが *appname.zip* として既定のダウンロード ディレクトリにダウンロードされます。
 
 ##### <a name="publish-your-app-to-teams"></a>アプリを Teams に公開する
-プロジェクトのホームページで、アプリをチームにアップロードしたり、組織内のユーザーに対してアプリを会社のカスタム App Store に送信したり、Teams のユーザーに対してアプリを App Source に送信することもできます。 IT 管理者は、これらの送信を確認します。 [ *発行* ] ページに戻って、送信状態を確認し、アプリが IT 管理者によって承認または却下されたかどうかを確認します。ここでは、アプリの更新プログラムを送信したり、現在アクティブな投稿をキャンセルすることもできます。
+プロジェクトのホーム ページでは、アプリをチーム向けにアップロードしたり、組織内のユーザー向けに会社のカスタム App Store に提出したり、すべての Teams ユーザー向けに App Source に提出したりできます。 これらの送信内容は、IT 管理者によって審査されます。 *[Publish]* (発行) ページに戻ると提出ステータスを確認することができ、アプリが IT 管理者によって承認または却下されたかどうかを確認できます。このページでは、アプリの更新プログラムを提出したり、現在提出中のアプリをキャンセルしたりすることもできます。
 
 ### <a name="card-editor"></a>Card Editor
 

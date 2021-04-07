@@ -1,49 +1,37 @@
 ---
-title: Office 365 テスト テナントにテスト データを追加する
-description: Microsoft Teams アプリOfficeテストを成功するには、Office 365 開発者プログラム サブスクリプションをセットアップします。
+title: テスト データを Microsoft 365 テスト テナントに追加する
+description: Microsoft Teams Apps のOfficeテストを成功に向け、365 開発者プログラムのサブスクリプションをセットアップする
 ms.topic: how-to
 keywords: アプリ開発者プログラム チームのテスト
 ms.date: 11/01/2019
-ms.openlocfilehash: 97eeb9c35b22adf75ad7f630fb2a621f0330e060
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 863f1d9843bb3ebe968ca180ee70a5b6bfa6cd7a
+ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014440"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596190"
 ---
-# <a name="add-test-data-to-your-office-365-test-tenant"></a>Office 365 テスト テナントにテスト データを追加する
+# <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>テスト データを Microsoft 365 テスト テナントに追加する
 
-作成したアプリを簡単にテストするために、O365 開発者プログラム サブスクリプション (または他のテスト テナント) をセットアップします。  これは、次の場合に役立ちます。
-
-- 組織で新しいチームとチャネルを作成する
-
-- ユーザー コンテンツ パックを介して作成されたユーザーをそれらのチームに追加します。
+Microsoft 365 開発者サブスクリプションを使用すると、テスト チーム、チャネル、およびユーザーと Microsoft Teams アプリを使用できます。
 
 ## <a name="before-you-start"></a>始める前に
 
-テスト テナントをまだお持ちでない場合は、Office 365 開発者プログラムに参加して、開発者サブスクリプションにサインアップする必要があります。 必要な PowerShell モジュールもインストールする必要があります。 どのテナントを使用する場合でも、スクリプトを実行するにはグローバル管理者のアクセス許可が必要です。
+テスト テナントがない場合は、Office 365 開発者プログラムに参加し、開発者サブスクリプションにサインアップする必要があります。 また、必要な PowerShell モジュールをインストールする必要があります。 どのテナントを使用する場合でも、スクリプトを実行するには、グローバル管理者のアクセス許可が必要です。
 
-1. [Office 365 Developer Program に参加する](/office/developer-program/office-365-developer-program)
-2. [Microsoft 365 Developer サブスクリプションをセットアップする](/office/developer-program/office-365-developer-program-get-started)
-3. [Office 365 開発者サブスクリプションでサンプル データ パックを使用して Users コンテンツ パックをインストールする](/office/developer-program/install-sample-packs)
-4. [Teams PowerShell モジュールをインストールする](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)
-5. [Azure AD PowerShell モジュールをインストールする](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module)
+1. [Microsoft 365 開発者プログラムに参加する](/office/developer-program/office-365-developer-program)
+2. [Microsoft 365 開発者サブスクリプションのセットアップ](/office/developer-program/office-365-developer-program-get-started)
+3. [Microsoft 365 開発者サブスクリプションでサンプル データ パックを使用して Users コンテンツ パックをインストールする](/office/developer-program/install-sample-packs)
+4. [Teams PowerShell モジュールのインストール](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)
+5. [Azure の PowerShell モジュールADインストールする](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true)
 
-### <a name="optional-step-allow-upload-of-custom-apps"></a>オプションの手順: カスタム アプリのアップロードを許可する
+## <a name="optional-enable-custom-app-sideloading"></a>(省略可能)カスタム アプリのサイドローディングを有効にする
 
-既定では、テナント アプリ カタログにカスタム アプリをアップロードできるのは、グローバル管理者または Teams サービス管理者のみです。  また、すべてのユーザーが自分で使用するためにカスタム アプリをアップロードしたり、テスト用にチームにアップロードしたりすることもできます。
+既定では、テナント アプリ カタログにカスタム アプリをアップロードできるのは、グローバル管理者または Teams サービス管理者のみです。 ユーザーが Teams にカスタム アプリをアップロードすることもできます。 詳細については [、「Teams でアプリセットアップ ポリシーを管理する」を参照してください](/microsoftteams/teams-app-setup-policies)。
 
-この設定を有効にするには、Teams 管理ポータルでグローバルなアプリセットアップ ポリシーを更新する必要があります。
+## <a name="create-teams-and-channels"></a>チームとチャネルの作成
 
-<img width="430px" src="~/assets/images/microsoft-teams-admin-center-screenshot.png" title="アプリのセットアップ ポリシーのスクリーンショット" />
-
-詳細については、次のトピックを参照してください。
-
- - [Microsoft Teams のアプリのセットアップ ポリシーを管理する](/microsoftteams/teams-app-setup-policies)
-
-## <a name="create-teams-and-channels"></a>チームとチャネルを作成する
-
-次のスニペットを XML (.xml) として保存し、保存した場所をメモします。  この XML は、作成されるチームとチャネルの構造とそのメンバーを定義します。
+次のスニペットを XML (.xml) として保存し、保存した場所に注意してください。  この XML は、作成されるチームとチャネルの構造とそのメンバーを定義します。
 
 ```xml
 <?xml version="1.0"?>
@@ -157,7 +145,7 @@ ms.locfileid: "50014440"
 </Teams>
 ```
 
-次のスニペットを PowerShell スクリプト (.ps1) として保存し、保存した場所をメモします。  このスクリプトは、チームとチャネルを作成し、メンバーを追加する手順を実行します。
+次のスニペットを PowerShell スクリプト (.ps1) として保存し、保存した場所に注意してください。  このスクリプトは、チームとチャネルを作成し、メンバーを追加する手順を実行します。
 
 ```powershell
 Param(
@@ -248,9 +236,9 @@ else {
 }
 ```
 
-管理者モードWindows PowerShellセッションを開きます。  保存したスクリプトを実行します。  資格情報の入力を求めるメッセージが表示されます。開発者サブスクリプションに最初にサインアップするときに受け取ったグローバル管理者の資格情報を使用します。
+管理者モードでWindows PowerShellセッションを開きます。  保存したスクリプトを実行します。  資格情報の入力を求めるメッセージが表示されます。開発者サブスクリプションに最初にサインアップした際に受け取ったグローバル管理者の資格情報を使用します。
 
 > [!Note]
-> スクリプトの実行には数分かかりますが、PowerShell セッションは閉じできません。  サブスクリプションのユーザーを既定のコンテンツ パックで作成された内容から変更した場合、一部のユーザーがチームに追加されない可能性があります。  スクリプトを実行すると、成功または失敗したアクションが出力されます。
+> スクリプトの実行には数分かかります。PowerShell セッションを閉じない。  サブスクリプション内のユーザーを既定のコンテンツ パックで作成した内容から変更した場合、一部のユーザーはチームに追加されない場合があります。  スクリプトを実行すると、成功または失敗したアクションが出力されます。
 
 スクリプトの実行が完了したら、ユーザー アカウントのいずれかを使用して Teams クライアントにログインし、新しく作成したチームを表示できます。

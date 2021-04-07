@@ -5,12 +5,12 @@ description: チームとチャットのメンバーを取得するために使�
 keywords: bot framework apis チーム メンバー名簿
 ms.topic: reference
 ms.author: ojchoudh
-ms.openlocfilehash: d55cbcdfea5e374c151c3eec82c52ac7f434c153
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: ee90c9c324f11e191cf596bcf8e27cd2bef41240
+ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034692"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596183"
 ---
 # <a name="changes-to-teams-bot-apis-for-fetching-team-and-chat-members"></a>チームメンバーとチャット メンバーをフェッチする Teams ボット API の変更点
 
@@ -56,16 +56,18 @@ ms.locfileid: "51034692"
 ```
 
 ## <a name="api-changes"></a>API の変更
+
 今後の API の変更点を次に示します。
 
-* チャット/チームのメンバーのプロファイル情報を取得するための新しい [`TeamsInfo.GetPagedMembersAsync`](../bots/how-to/get-teams-context.md#fetching-the-roster-or-user-profile) API が作成されました。 この API は、ボット フレームワーク 4.10 SDK で利用できます。 他のすべてのバージョンでの開発では、このメソッドを使用 [`GetConversationPagedMembers`](/dotnet/api/microsoft.bot.connector.conversationsextensions.getconversationpagedmembersasync?view=botbuilder-dotnet-stable&preserve-view=true) します。 
+* チャット/チームのメンバーのプロファイル情報を取得するための新しい [`TeamsInfo.GetPagedMembersAsync`](~/bots/how-to/get-teams-context.md?tabs=dotnet#fetching-the-roster-or-user-profile) API が作成されました。 この API は、ボット フレームワーク 4.10 SDK で利用できます。 他のすべてのバージョンでの開発では、このメソッドを使用 [`GetConversationPagedMembers`](/dotnet/api/microsoft.bot.connector.conversationsextensions.getconversationpagedmembersasync?view=botbuilder-dotnet-stable&preserve-view=true) します。
   > [!NOTE]
-  > v3 または v4 では、ベスト アクションは、最新のポイント リリースにアップグレードする方法です。 
-* 1 人のユーザーのプロファイル情報を取得するための新しい API [`TeamsInfo.GetMemberAsync`](../bots/how-to/get-teams-context.md#get-single-member-details) が作成されました。 チーム/チャットの ID と[UPN](https://docs.microsoft.com/windows/win32/ad/naming-properties#userprincipalname) (上記を参照 `userPrincipalName` )、Azure Active Directory オブジェクト ID (、上記参照)、または Teams ユーザー ID (上記を参照 `objectId`  `id` )をパラメーターとして受け取り、そのユーザーのプロファイル情報を返します。 
+  > v3 または v4 では、ベスト アクションは、最新のポイント リリースにアップグレードする方法です。
+* 1 人のユーザーのプロファイル情報を取得するための新しい API [`TeamsInfo.GetMemberAsync`](~/bots/how-to/get-teams-context.md?tabs=dotnet#get-single-member-details) が作成されました。 チーム/チャットの ID と[UPN](https://docs.microsoft.com/windows/win32/ad/naming-properties#userprincipalname) (上記を参照 `userPrincipalName` )、Azure Active Directory オブジェクト ID (、上記参照)、または Teams ユーザー ID (上記を参照 `objectId`  `id` )をパラメーターとして受け取り、そのユーザーのプロファイル情報を返します。
   > [!NOTE]
-  > ボット フレームワーク メッセージのオブジェクトで呼び出された名前に合 `objectId` `aadObjectId` `Activity` わせて変更しています。 新しい API は、ボット フレームワーク SDK のバージョン 4.10 で使用できます。 Teams SDK 拡張機能 Bot Framework 3.x でもすぐに利用できます。一方 [、REST](../bots/how-to/get-teams-context.md?get-single-member-details) エンドポイントを使用できます。
-* `TeamsInfo.GetMembersAsync` (C#) および `TeamsInfo.getMembers` (TypeScript/Node.js) は正式に廃止され、2021 年後半に動作を停止します。 ページ API を使用するボットを更新してください。 (これは、これらの API が使用する [基になる REST API にも適用されます](../bots/how-to/get-teams-context.md)。)
+  > ボット フレームワーク メッセージのオブジェクトで呼び出された名前に合 `objectId` `aadObjectId` `Activity` わせて変更しています。 新しい API は、ボット フレームワーク SDK のバージョン 4.10 で使用できます。 Teams SDK 拡張機能 Bot Framework 3.x でもすぐに利用できます。一方 [、REST](~/bots/how-to/get-teams-context.md?tabs=json#get-single-member-details) エンドポイントを使用できます。
+* `TeamsInfo.GetMembersAsync` (C#) および `TeamsInfo.getMembers` (TypeScript/Node.js) は正式に廃止され、2021 年後半に動作を停止します。 ページ API を使用するボットを更新してください。 (これは、これらの API が使用する [基になる REST API にも適用されます](~/bots/how-to/get-teams-context.md?tabs=json)。)
 * 2021 年後半には、ボットはチャット/チームのメンバーのプロパティを事前に取得する機能を使用し、Microsoft Graph を使用して取得する `userPrincipalName` `email` 必要があります。 具体的には、 `userPrincipalName` プロパティ `email` は 2021 年後半から新しい API から `GetConversationPagedMembers` 返されません。 ボットは、この情報を取得するためにアクセス トークンと Microsoft Graph を使用する必要があります。 これは明らかに大きな変更です。ボットがアクセス トークンを取得しやすくする必要があります。また、エンドユーザーの同意プロセスを合理化して簡素化する必要があります。
 
 ## <a name="feedback-and-more-information"></a>フィードバックと詳細
-これらの変更に関する最新の情報を提供するために、このページを使用します。 ご質問がある場合は、以下の 「フィードバック」セクション>「このページでフィードバックを送信 **する」を** 使用してください。 
+
+これらの変更に関する最新の情報を提供するために、このページを使用します。 ご質問がある場合は、以下の 「フィードバック」セクション>「このページでフィードバックを送信 **する」を** 使用してください。

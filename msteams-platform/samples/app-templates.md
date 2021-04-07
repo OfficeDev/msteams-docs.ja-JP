@@ -5,19 +5,19 @@ ms.topic: reference
 keywords: Microsoft Teams テンプレートのサンプル デモ
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 098325d973ad1fa5306761cd60c6504d808cea9d
-ms.sourcegitcommit: 0628a85293f7e26de3490e4dd23a54e586cdfeca
+ms.openlocfilehash: 53355b4a22ae9ace5dec36a97183ddc1f6bf05fb
+ms.sourcegitcommit: 82bda0599ba2676ab9348c2f4284f73c7dad0838
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "51493056"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596689"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 用のアプリ テンプレート
 
 アプリ テンプレートは、オープン ソースで、GitHub で利用できる Microsoft Teams 用の完全なアプリの例です。 各アプリ テンプレートには、組織用に展開してインストールするための詳細な手順が記載されています。 サンプル アプリも提供されているため、すぐにインストールして使用を開始できます。 完全なソースコードも利用できるので、詳細を調べたり、コードをフォークして特定のニーズに合わせて変更したりできます。
 すべてのアプリテンプレートは [MIT ライセンス](https://github.com/OfficeDev/microsoft-teams-apps-eprescription/blob/master/LICENSE)の条件下で提供されます。
->[!NOTE] 
->Microsoft ではなく、ユーザーや組織のために、アプリ テンプレートで作成したアプリをライセンスしてサポートする必要があります。
+> [!NOTE] 
+> ユーザーと組織のアプリ テンプレートから作成されたアプリをライセンスおよびサポートする必要があります。 Microsoft はライセンスとサポートについて責任を負いません。
 
 **&#9734; 新たにリリースされたアプリ テンプレートを示します。**
 
@@ -28,13 +28,29 @@ ms.locfileid: "51493056"
 * **カスタマイズ可能かつ拡張可能:** すべてのアプリ テンプレートは最小限の構成で展開する準備ができていますが、コード ベース全体と展開スクリプトを提供しているため、独自のニーズに合わせて簡単にカスタマイズまたは拡張できます。
 * **詳細なドキュメント:** すべてのアプリ テンプレートには、ソリューション アーキテクチャ、展開、構成の手順に関するエンドツーエンドのドキュメントが付属しています。  
 
-## <a name="adoption-bot-9734"></a>Adoption Bot &#9734;
+## <a name="adoption-bot"></a>導入ボット 
 
 Adoption Bot は Power Virtual Agent for Teams (PVA) で構築されたユーザーケア チャット ボットです。 FAQPlus の PVA 版と考えることができます。 Adoption Bot は、Microsoft 365 と Teams に関する 100 以上の一般的な質問に回答しています。 既存のトピックの編集、独自のトピックの追加、および既存の FAQ の取り込みが可能です。 ユーザーが追加のヘルプを必要とする場合、導入ボットはそれらを専門家に接続したり、プレミアム フロー コネクタを使用してサービス チケットを開くまで拡張することができます。このボットは、独自のボットにインストールするか、導入ハブのようなカスタム アプリに [組み込む場合があります](https://github.com/akporzondek/adoption_hub)。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot)
 
-## <a name="appointment-manager-9734"></a>Appointment Manager &#9734;
+## <a name="adoption-tool-9734"></a>導入ツールの&#9734;
+
+導入ツールは、次の 2 つのアプリ テンプレートで構成されます。
+
+### <a name="champion-management-platform"></a>チャンピオン管理プラットフォーム
+
+チャンピオン管理プラットフォーム (CMP) アプリ テンプレートを使用すると、チームワーク チャンピオンの管理、拡大、刺激を受け、より多くのことを達成できます。 このアプリ テンプレートは SharePoint Framework 上に構築され、チーム内のタブに読み込まれます。 グループは、このツールを利用して、プログラムメンバーシップの管理、ログ記録用のランキングとイベントの種類、およびプログラム参加者にデジタル バッジをオーバーレイするツールを提供できます。
+
+[GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-champion-management)
+
+### <a name="get-started"></a>はじめに
+
+アプリの開始テンプレートを使用すると、Microsoft Teams の内部で Microsoft 365 学習パスの機能を利用できます。 このアプリ テンプレートを使用すると、特定のトレーニング ページや他のイントラネットアセットに簡単にアクセスし、Teams 内でコンテンツを直接読み込むできます。 また、会社のブランドに合わせてアプリ名やロゴを変更することもできます。
+
+[GitHub で入手する](https://github.com/msft-teams/tools/tree/master/M365%20Learning%20Pathways)
+
+## <a name="appointment-manager"></a>予定マネージャー 
 
 Appointment Manager は、企業が Teams を経由して消費者とのバーチャルの予定を作成、管理、実施するための Teams アプリ テンプレートです。 消費者からの新規予定リクエストは Teams チャネルに表示され、チームのスタッフに素早く割り当てたり、割り当てし直したりすることができます。 予定リクエストは、カスタム タブを使用してチーム レベルまたは個人レベルで確認することができます。 すべての予定は Teams のオンライン会議に関連付けられているため、スタッフと消費者は簡単に予定された時間に会議に参加することができます。
 
@@ -125,7 +141,7 @@ Checklist は、チャットやチャネルで共有チェックリストを作�
 :::column-end:::
 :::row-end:::
 
-## <a name="classroom-drop-in-9734"></a>Classroom Drop-in &#9734;
+## <a name="classroom-drop-in"></a>Classroom ドロップイン 
 
 Classroom Drop-in は、Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) ベースのアプリで、システム リーダーがクラスチーム (仮想教室) を見つけて、必要に応じて指定されたドロップイン期間に自分自身や他のユーザーをそのクラスチームに追加することができます。 Microsoft [Power Apps](/powerapps/powerapps-overview) と [Power Automate](/power-automate/getting-started) を使用して構築されたアプリは、Microsoft Teams と深く統合されており、教育機関は、ビジネス要件に応じてクラスチームに関連する関係者へのアクセスを提供することで、ハイブリッドな学習環境での運用を最適化することができます。
 
@@ -162,7 +178,7 @@ Contact Group Lookup アプリは、組織の連絡先グループ (以前は、
 :::column-end:::
 :::row-end:::
 
-## <a name="co-worker-appreciation-9734"></a>Co-worker Appreciation &#9734;
+## <a name="co-worker-appreciation"></a>同僚の感謝 
 
 Microsoft Teams の Co-worker Appreciation テンプレートを使用すると、ユーザーは Teams のコンテキストで同僚の業績を認識することができます。 共同作業者が同僚へのリワードを選択すると、受信者や他のチーム メンバーがチャネルの会話でタグ付けされ、チャネルのリワードの詳細についての通知を受け取ることができます。 アワードは Teams アプリに記録され、安全で携帯性に優れ、簡単に共有することができます。 これは、ランキングを備えた Open Badges アプリ テンプレートの PowerApps ベースのバージョンと考えることができます。
 
@@ -268,7 +284,7 @@ E-Prescriptions は、患者に電子処方箋を発行するプロセスを自�
 
 ![FAQ プラス GIF](../assets/images/FAQPlusEndUser.gif)
 
-## <a name="get-support-app-9734"></a>Get Support App &#9734;
+## <a name="get-support-app"></a>サポート アプリの取得
 
 Microsoft Teams を使用している組織では、Get Support App を使用することで、任意のユーザーセットが上司にサポートを要求できるようになります。 このアプリには、次のようなさまざまな機能が搭載されています。
 -   Power App とは異なるカテゴリのサポートを要求する
@@ -391,7 +407,7 @@ Incident Reporter は、組織内のインシデントの管理を最適化す�
 :::column-end:::
 :::row-end:::
 
-## <a name="inspection-9734"></a>Inspection &#9734;
+## <a name="inspection"></a>特殊評価 
 
  Inspection は、現場の最前線にいる従業員が位置情報から資産、備品まで何でも検査できる Microsoft Teams アプリです。 たとえば、小売店、製造工場、車両、または機械などがあります。 このソリューションには 2 つのアプリがあり、それぞれ異なるタイプのユーザーを対象としています。
 
@@ -601,7 +617,7 @@ Survey は、チャットまたはチャネルで調査を作成してデータ�
 :::column-end:::
 :::row-end:::
 
-## <a name="time-tally-9734"></a>Time Tally &#9734;
+## <a name="time-tally"></a>Time Tally 
 
 プロジェクトには複数のタスクを含め、さまざまなプロジェクトを従業員に割り当てることができます。 管理者は、従業員がこれらのタスクに費やした時間を通じてプロジェクトの進捗状況を理解する必要があります。 従業員がタイムシートを入力する必要がある場合、これは面倒な作業になる場合があります。 タイム 集計アプリを使用すると、従業員はモバイル デバイスを使用してタイムシートをすばやく入力し、管理者はタイムシートエントリで従業員をフォローアップする必要が生じない。 管理者はリソースに基づいてプロジェクトの使用率を表示し、エントリを承認または拒否できます。 タイムシートのコンプライアンスを確保するために、アラーム通知が送信されます。 また、過去のデータと使用状況は分析に利用できます。
 

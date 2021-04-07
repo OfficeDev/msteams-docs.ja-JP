@@ -5,12 +5,12 @@ description: チーム会議用のアプリを作成する
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: ba00a2dc78cefb167f1bef8507f32dad5e38452c
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: d9356e37a0c2b5b70d23fc6805b0af5340a1efc6
+ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585849"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596232"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Teams 会議用のアプリを作成する
 
@@ -350,10 +350,10 @@ API を使用して `userContext` 要求をルーティングするには [、�
 
 ## <a name="code-sample"></a>コード サンプル
 
-|サンプルの名前 | 説明 | C# |
-|----------------|-----------------|--------------|
-| 会議の機能拡張 | トークンを渡す Microsoft Teams の会議機能拡張サンプル。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) |
-| 会議コンテンツ バブル ボット | 会議でコンテンツ バブル ボットを操作するための Microsoft Teams 会議機能拡張サンプル。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |
+|サンプルの名前 | 説明 | .NET | Node.js |
+|----------------|-----------------|--------------|--------------|
+| 会議の機能拡張 | トークンを渡す Microsoft Teams の会議機能拡張サンプル。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | |
+| 会議コンテンツ バブル ボット | 会議でコンテンツ バブル ボットを操作するための Microsoft Teams 会議機能拡張サンプル。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
 
 ## <a name="see-also"></a>関連項目
 

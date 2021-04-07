@@ -5,12 +5,12 @@ keywords: getting started .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: ee90d07b9616d130f4c418427762f9531c203672
-ms.sourcegitcommit: c9446200b8e76fbd434d012dc11dd9f191776d13
+ms.openlocfilehash: 99a0982a0fa453c6eb7ffeea25ba8a2607cf2d5e
+ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2021
-ms.locfileid: "51403977"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596260"
 ---
 # <a name="create-your-first-teams-app-using-c-or-net"></a>ユーザーまたは .NET を使用して最初C# Teams アプリを作成する
 
@@ -117,9 +117,9 @@ Visual Studio Azure を含むさまざまなプロバイダーへのアプリ展
 
 ## <a name="update-the-credentials-for-your-hosted-app"></a>ホストされたアプリの資格情報を更新する
 
-サンプル アプリでは、テキスト ファイルに保存した値に環境変数を設定する [必要があります](~/includes/get-started/get-started-use-app-studio.md#bots)。
+サンプル アプリでは、テキスト ファイルに保存した値に環境変数を設定する必要があります。
 
-ファイルのappsettings.js開きます。 テキスト ファイルに保存したボット ID で **MicrosoftAppId** 値を更新します。 保存した **ボット パスワードを使用して MicrosoftAppPassword** を更新します。
+`appsettings.json` ファイルを開きます。 テキスト ファイルに保存したボット ID で **MicrosoftAppId** 値を更新します。 保存した **ボット パスワードを使用して MicrosoftAppPassword** を更新します。
 
 <img width="560px" alt="Setting the keys" src="~/assets/images/get-started/get-started-net-azure-add-keys.png"/>
 

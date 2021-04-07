@@ -4,12 +4,12 @@ description: Microsoft Teams ボットと会話する方法について説明し
 ms.topic: overview
 ms.author: anclear
 keyword: conversations basics receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 3cf11b5b96a1504ddb3fb8c9fc5814c5131d072f
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: 193a93dbf775389383e0385207fa4112440bffe5
+ms.sourcegitcommit: 82bda0599ba2676ab9348c2f4284f73c7dad0838
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585856"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596675"
 ---
 # <a name="conversation-basics"></a>会話の基本
 
@@ -282,6 +282,9 @@ async def on_members_added_activity(
 ## <a name="notifications-to-your-message"></a>メッセージへの通知
 
 通知は、新しいタスク、メンション、コメントについてユーザーに通知します。 これらのアラートは、ユーザーが作業している情報や、アクティビティ フィードに通知を挿入して表示する必要があるものに関連しています。 ボット メッセージから通知をトリガーするには、objects プロパティを `TeamsChannelData` true `Notification.Alert` に設定します。 通知が発生するかどうかは、個々のユーザーの Teams 設定によって異なります。これらの設定を上書きすることはできません。 通知の種類は、バナーまたはバナーとメールの両方です。
+
+> [!NOTE]
+> [ **概要] フィールド** には、ユーザーからのテキストがフィードに通知メッセージとして表示されます。
 
 次のコードは、メッセージに通知を追加する例を示しています。
 

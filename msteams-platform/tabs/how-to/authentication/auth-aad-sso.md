@@ -3,12 +3,12 @@ title: タブのシングル サインオンのサポート
 description: シングル サインオン (SSO) について説明します。
 ms.topic: how-to
 keywords: teams 認証 SSO AAD シングル サインオン API
-ms.openlocfilehash: e5f79aaf62d195144dd9b34cfbce601c94478191
-ms.sourcegitcommit: 23ed7edf145df10dcfba15c43978eae9e0d451a8
+ms.openlocfilehash: e6bf278e446861556da8362905916cc030df723e
+ms.sourcegitcommit: 82bda0599ba2676ab9348c2f4284f73c7dad0838
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "50753540"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596682"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>タブのシングル サインオン (SSO) のサポート
 
@@ -35,12 +35,12 @@ ms.locfileid: "50753540"
 <!-- markdownlint-disable MD033 -->
 <img src="~/assets/images/tabs/tabs-sso-diagram.png" alt="Tab single sign-on SSO diagram" width="75%"/>
 
-1. タブで、 に JavaScript 呼び出しが行います `getAuthToken()` 。 これにより、タブ アプリケーションの認証トークンを取得する必要があります。
+1. タブでは、JavaScript 呼び出しが `getAuthToken()`に対してなされます。 これにより、タブ アプリケーションの認証トークンを取得する必要があります。
 2. 現在のユーザーが初めてタブ アプリケーションを使用する場合は、同意が必要な場合は同意を求める要求プロンプトや、2 要素認証などのステップアップ認証を処理する要求プロンプトが表示されます。
 3. Teams は、現在のユーザーの Azure Active Directory (AAD) エンドポイントからタブ アプリケーション トークンを要求します。
 4. AAD は、タブ アプリケーション トークンを Teams アプリケーションに送信します。
 5. Teams は、呼び出しによって返される結果オブジェクトの一部としてタブ アプリケーション トークンをタブに送信 `getAuthToken()` します。
-6. トークンは JavaScript を使用してタブ アプリケーションで解析され、ユーザーの電子メール アドレスなどの必要な情報を抽出します。
+6. トークンは JavaScript を使用してタブ アプリケーションで解析され、ユーザーのメール アドレスなどの必要な情報を抽出します。
 
 > [!NOTE]
 > この API は、電子メール、プロファイル、および OpenId であるユーザー レベル API の制限されたセット `getAuthToken()` offline_access有効です。 または など、それ以上の Graph スコープには使用 `User.Read` されません `Mail.Read` 。 推奨される回避策については、その他の [Graph スコープを参照してください](#apps-that-require-additional-graph-scopes)。
@@ -83,10 +83,10 @@ SSO API は、Web コンテンツを [埋め込むタスク](../../../task-modul
 7. **[スコープの追加]** を選択します。 開くパネルで、[スコープ名] **access_as_user** を **入力します**。
 8. [同意できる **ユーザー] ボックスに「** 管理者と **ユーザー」と入力します**。
 9. スコープに適した値を使用して管理者とユーザーの同意のプロンプトを構成するための詳細をボックスに入力 `access_as_user` します。
-    * **管理者の同意タイトル:** Teams は、ユーザーのプロファイルにアクセスできます。
+    * **管理者の同意タイトル:** チームはユーザーのプロフィールにアクセスできます。
     * **管理者の同意の説明**: Teams は、アプリの Web API を現在のユーザーとして呼び出します。
-    * **ユーザーの同意タイトル**: Teams はユーザー プロファイルにアクセスし、ユーザーの代わりに要求を行うことができます。
-    * **ユーザーの同意の説明:** Teams は、ユーザーと同じ権限でこのアプリの API を呼び出します。
+    * **ユーザーの同意のタイトル**: Teams はプロファイルにアクセスし、ユーザーに代わって要求を行うことができます。
+    * **ユーザーの同意の説明:** Teams は、このアプリの API を、ユーザーと同じ権限で呼び出します。
 10. **[状態]** が **[有効]** に設定されていることを確認してください。
 11. [スコープ **の追加] を** 選択して詳細を保存します。 テキスト フィールドの下に表示 **されるスコープ** 名のドメイン 部分は、前の手順で設定した **アプリケーション ID** URI と自動的に一致し、末尾に追加 `/access_as_user` する必要があります `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user` 。
 12. [承認済 **みクライアント アプリケーション** ] セクションで、アプリの Web アプリケーションに対して承認するアプリケーションを特定します。 [クライアント **アプリケーションの追加] を選択します**。 次の各クライアント ID を入力し、前の手順で作成した承認済みスコープを選択します。
@@ -110,7 +110,7 @@ SSO API は、Web コンテンツを [埋め込むタスク](../../../task-modul
 
     次のボックスをチェックして暗黙的な付与を有効にする: ✔ ID トークン✔アクセス トークン
 
-おめでとうございます。 タブ SSO アプリを続行するためのアプリ登録の前提条件が完了しました。
+お疲れさまでした。 タブ SSO アプリを続行するためのアプリ登録の前提条件が完了しました。
 
 > [!NOTE]
 >
@@ -154,7 +154,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 ユーザー レベルのアクセス許可を呼び出し、追加のユーザーの同意が必要な場合は、追加の同意を付与するためのダイアログ `getAuthToken` がユーザーに表示されます。
 
-成功コールバックでアクセス トークンを受信した後、アクセス トークンをデコードして、そのトークンに関連付けられているクレームを表示できます。 必要に応じて、アクセス トークンを手動でコピーしてツールに貼り付[](https://jwt.ms/)けます (コンテンツをjwt.msなど)。 返されるアクセス トークンで UPN を受信していない場合は、AAD でオプションのクレーム [として](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims) 追加できます。
+成功コールバックでアクセス トークンを受信した後、アクセス トークンをデコードして、そのトークンに関連付けられているクレームを表示できます。 必要に応じて、アクセス トークンを手動でコピーしてツールに貼り付[](https://jwt.ms/)けます (コンテンツを jwt.ms など)。 返されるアクセス トークンで UPN を受信していない場合は、AAD でオプションのクレーム [として](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims) 追加できます。
 
 <p>
     <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>

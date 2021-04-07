@@ -4,12 +4,12 @@ author: heath-hamilton
 description: Teams 会議でアプリを設計し、Microsoft Teams UI キットを取得する方法について説明します。
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 83dfaf3f92c00c420f758b66488b4a6b09c75717
-ms.sourcegitcommit: 1ce74ed167bb81bf09f7f6f8d518093efafb549e
+ms.openlocfilehash: e4e7bb05fbc9717a4eb8323302d1a10eac4c77dd
+ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "50827950"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "51596253"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Microsoft Teams 会議拡張機能の設計
 
@@ -88,9 +88,9 @@ ms.locfileid: "50827950"
 |1|**アプリ アイコン (選択):** 16 ピクセルの透明なアプリ ロゴ。|
 |2|**アプリ名**|
 |3|**ヘッダー**: アプリ名が含まれます。|
-|4 |**[閉じる]** ボタン: タブを閉じます。フッターのアクションではなく、常に右上の閉じるアイコンを使用します。|
-|5 |**通知バー**: エラー通知はヘッダーの直下に表示され、iframe コンテンツを 20 ピクセル下にプッシュします。|
-|6 |**iframe**: アプリのコンテンツを表示します。|
+|4|**[閉じる]** ボタン: タブを閉じます。フッターのアクションではなく、常に右上の閉じるアイコンを使用します。|
+|5|**通知バー**: エラー通知はヘッダーの直下に表示され、iframe コンテンツを 20 ピクセル下にプッシュします。|
+|6|**iframe**: アプリのコンテンツを表示します。|
 
 ### <a name="spacing"></a>Spacing
 
@@ -145,18 +145,17 @@ Iframe のコンテンツは垂直方向にスクロールする必要があり�
 |1|**アバター**: 会議内ダイアログを開始するユーザー。|
 |2|**アプリ アイコン**|
 |3|**アプリ名**|
-|4 |**[閉じる]** ボタン: ダイアログを閉じます。|
-|5 |**アクション文字列**: 通常、ダイアログを開始したユーザーを示します。|
+|4|**[閉じる]** ボタン: ダイアログを閉じます。|
+|5|**アクション文字列**: 通常、ダイアログを開始したユーザーを示します。|
 
 ### <a name="responsive-behavior"></a>応答性の高い動作
 
 会議内のダイアログは、さまざまなシナリオを考慮してサイズが異なる場合があります。 パディングとコンポーネントのサイズは必ず維持してください。
 
-* **Width**: ダイアログの iframe 幅は、指定した範囲内の絶対値です。
-* **Height**: ダイアログの iframe の高さは、指定した範囲内の絶対値です。
+* **Width**: ダイアログの iframe の幅は、サポートされているサイズ範囲内の任意の場所で指定できます。
+* **Height**: ダイアログの iframe の高さは、サポートされているサイズ範囲内の任意の場所で指定できます。 アプリのコンテンツが最大の高さを超えた場合は、ユーザーが垂直方向にスクロールすることもできます。
 
-> [!NOTE]
-> 幅と高さに対して定義する値は、会議内 `externalResourceURL` ダイアログで使用されます。
+実装するには、キーを使用して幅と高さを指定 [`externalResourceUrl`](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#notificationsignal-api) します。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="例は、会議中のダイアログを表示します。幅: 最小--280 ピクセル (248 ピクセルの iframe)。Max---460 ピクセル (428 ピクセルの iframe)。高さ: 300 ピクセル (iframe)。" border="false":::
 
@@ -164,7 +163,7 @@ Iframe のコンテンツは垂直方向にスクロールする必要があり�
 
 会議の終了後に会議に戻り、アプリのコンテンツを表示できます。 この例では、会議開催者は **[Contoso]** タブで投票結果を確認できます (注: デザインの観点から、会議前と会議後のタブ エクスペリエンスの違いはありません)。
 
-:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="例は、会議後のタブを示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="例の図は、会議後のタブを示しています。" border="false":::
 
 ## <a name="best-practices"></a>ベスト プラクティス
 
