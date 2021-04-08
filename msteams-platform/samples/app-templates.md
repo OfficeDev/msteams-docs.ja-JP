@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Microsoft Teams テンプレートのサンプル デモ
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 53355b4a22ae9ace5dec36a97183ddc1f6bf05fb
-ms.sourcegitcommit: 82bda0599ba2676ab9348c2f4284f73c7dad0838
+ms.openlocfilehash: 47fb1748f0c88edd2233c4e17aa50d235818d609
+ms.sourcegitcommit: 2de062dd2258147cff8d6a3cadd8839890d9791a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596689"
+ms.lasthandoff: 04/07/2021
+ms.locfileid: "51612651"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 用のアプリ テンプレート
 
@@ -34,17 +34,13 @@ Adoption Bot は Power Virtual Agent for Teams (PVA) で構築されたユーザ
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot)
 
-## <a name="adoption-tool-9734"></a>導入ツールの&#9734;
-
-導入ツールは、次の 2 つのアプリ テンプレートで構成されます。
-
-### <a name="champion-management-platform"></a>チャンピオン管理プラットフォーム
+## <a name="adoption-tool--champion-management-platform-9734"></a>導入ツール - チャンピオン管理プラットフォーム &#9734;
 
 チャンピオン管理プラットフォーム (CMP) アプリ テンプレートを使用すると、チームワーク チャンピオンの管理、拡大、刺激を受け、より多くのことを達成できます。 このアプリ テンプレートは SharePoint Framework 上に構築され、チーム内のタブに読み込まれます。 グループは、このツールを利用して、プログラムメンバーシップの管理、ログ記録用のランキングとイベントの種類、およびプログラム参加者にデジタル バッジをオーバーレイするツールを提供できます。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-champion-management)
 
-### <a name="get-started"></a>はじめに
+## <a name="adoption-tool--microsoft-365-learning-pathways-get-started-9734"></a>導入ツール - Microsoft 365 ラーニング パス (開始) &#9734;
 
 アプリの開始テンプレートを使用すると、Microsoft Teams の内部で Microsoft 365 学習パスの機能を利用できます。 このアプリ テンプレートを使用すると、特定のトレーニング ページや他のイントラネットアセットに簡単にアクセスし、Teams 内でコンテンツを直接読み込むできます。 また、会社のブランドに合わせてアプリ名やロゴを変更することもできます。
 
