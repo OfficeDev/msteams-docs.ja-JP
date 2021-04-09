@@ -4,12 +4,12 @@ description: Microsoft Teams のマニフェスト スキーマについて説�
 ms.topic: reference
 ms.author: lajanuar
 keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: fc7af73dd90ae74d76645281d9e761b91678873b
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: 8c77d2e82c65a11b67eb6a223313f477238517d9
+ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585842"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "51634524"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>リファレンス: Microsoft Teams のマニフェスト スキーマ
 
@@ -277,7 +277,11 @@ Teams マニフェストは、アプリが Microsoft Teams 製品に統合され
     ]
   },
   "defaultInstallScope": "meetings",
-  "defaultGroupCapability": {"meetings": "tab" , "team": "bot", "groupchat": "bot"}
+  "defaultGroupCapability": {
+    "meetings": "tab", 
+    "team": "bot", 
+    "groupchat": "bot"
+  }
 }
 ```
 
@@ -659,5 +663,5 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 ```
 
 ***
->
->
+
+

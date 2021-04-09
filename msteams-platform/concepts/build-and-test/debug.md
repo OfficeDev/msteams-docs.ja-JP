@@ -1,71 +1,81 @@
 ---
 title: アプリをテストおよびデバッグするためのセットアップの選択
-description: Microsoft Teams アプリをテストおよびデバッグするためのオプションについて説明します。
+description: Microsoft Teams アプリのテストとデバッグのオプションについて説明します。
 keywords: チームがデバッグ アプリを実行する
 ms.topic: conceptual
-ms.openlocfilehash: ea851a0d3ecf3ec87093bcc095050190a282c25e
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: fde8a5907e0815ff798a3acc316cba8336ab8704
+ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797800"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "51634735"
 ---
-# <a name="choosing-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Microsoft Teams アプリをテストおよびデバッグするためのセットアップの選択
+# <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Microsoft Teams アプリをテストおよびデバッグするセットアップを選択する
 
-Microsoft Teams アプリには 1 つ以上の機能を含め、それらを実行またはホストする方法は異なる場合があります。 デバッグに関しては、通常、Microsoft Teams アプリを実行する方法は次のとおりです。
+Microsoft Teams アプリには 1 つ以上の機能が含まれているので、それらを実行またはホストする方法は異なります。 デバッグには、次のいずれかの方法を使用します。
 
-* **純粋にローカル** &emsp;ボットの場合は、Bot Emulator でエクスペリエンスをテストできます。 その他のコンテンツについては、ブラウザーでローカルに実行し、コンテンツにアドレスを指定できます `http://localhost` 。
-* **Teams でローカルにホストされる** &emsp;これには、トンネリング ソフトウェアを使用してローカル [](~/concepts/build-and-test/apps-package.md)で実行し、Teams にアップロードするパッケージ [を作成する](~/concepts/deploy-and-publish/apps-upload.md)必要があります。 これにより、Teams クライアント内でアプリを簡単に実行およびデバッグできます。
-* **クラウド ホスト型 (Teams)** これは、Teams アプリの実稼働レベルのサポートを真にシミュレート (つまり) します。 外部からアクセス可能なサーバーまたはクラウド プロバイダーにソリューションをアップロードし (もちろん、Azure をお勧めします)、Teams[](~/concepts/build-and-test/apps-package.md)にアップロードするパッケージ[](~/concepts/deploy-and-publish/apps-upload.md)を作成します。
+* **純粋にローカル**: ボットの場合は、ボット エミュレーターでエクスペリエンスをテストできます。 その他のコンテンツについては、ブラウザーでローカルで実行し、コンテンツにアドレスを指定できます `http://localhost` 。
+* **Teams でローカルにホスト** される : これには、トンネリング ソフトウェアでアプリ [](~/concepts/build-and-test/apps-package.md)をローカルで実行し、Teams にアップロードするパッケージ [を作成する](~/concepts/deploy-and-publish/apps-upload.md)必要があります。 これにより、Teams クライアント内でアプリを簡単に実行およびデバッグできます。
+* **Teams でクラウドホスト**: Teams アプリの実稼働レベルのサポートを実際にシミュレートします。 ソリューションを外部からアクセス可能なサーバーまたはクラウド プロバイダーにアップロードし、Teams にアップロード[](~/concepts/build-and-test/apps-package.md)するパッケージを作成[する](~/concepts/deploy-and-publish/apps-upload.md)必要があります。
 
-純粋にローカルまたはローカルの Teams テストの場合は、独自のコンピューターからエクスペリエンスを実行します。 これにより、IDE 内で実際にコンパイルして実行し、ブレークポイントやステップ デバッグなどの手法をフルに活用できます。 実稼働規模のデバッグとテストでは、独自のプロセスを通じてテスト、ステージング、展開を確実にサポートするために、独自の会社のガイドラインに従う必要があります。
+純粋にローカルまたはローカルの Teams テストのために、独自のコンピューターからエクスペリエンスを実行します。 これにより、統合された開発環境内でコンパイルおよび実行し、ブレークポイントやステップ デバッグなどの手法を活用できます。 
 
-一般に、複数のマニフェストとパッケージを使用して、実稼働サービスと開発サービスの分離を維持することをお勧めします。 たとえば、開発ボットと実稼働ボットを個別に登録し、テスト環境でアップロードする適切なパッケージを作成できます。 また、アプリ ストアで公開するアプリを提出する前、またはユーザーに配布する前に、製品パッケージをアップロードしてテストすることをお勧めします。
+> [!NOTE]
+> 実稼働規模のデバッグとテストでは、独自のプロセスを通じてテスト、ステージング、および展開をサポートするために、独自の会社のガイドラインに従う必要があります。
+
+複数のマニフェストとパッケージを使用して、実稼働サービスと開発サービスの分離を維持します。 たとえば、個別の開発ボットと実稼働ボットを登録し、テスト環境でアップロードする適切なパッケージを作成できます。 また、アプリストアでの発行や顧客への配布のためにアプリを提出する前に、実稼働パッケージをアップロードしてテストすることをお勧めします。
 
 ## <a name="purely-local"></a>純粋にローカル
 
 > [!NOTE]
-> この方法では、Teams アプリ機能や、名簿呼び出しなどの Teams 固有のボット機能や、その他のチャネル固有の機能にアクセスできます。 また、一部の機能は、Microsoft Teams で実行すると機能しないボット エミュレーターの Bot Framework で許可される場合があります。
+> ボットをローカルで実行しても、Teams アプリ機能や、名簿呼び出しや他のチャネル固有の機能などの Teams 固有のボット機能にアクセスできない。 さらに、一部の機能は、Microsoft Teams で実行するときに機能しない可能性があるボット エミュレーターのボット フレームワークによって許可されます。
 
-ボットは Bot Emulator 内で実行できます。 これにより、ボットのコア ロジックの一部をテストし、メッセージの大まかなレイアウトを確認し、簡単なテストを実行できます。 それらのステップは次のとおりです。
+ボットはボット エミュレーター内で実行できます。 これにより、ボットのコア ロジックの一部をテストし、メッセージの大まかなレイアウトを確認し、簡単なテストを実行できます。 手順は次のとおりです。
 
-* コードをローカルで実行する
-* Bot Emulator を起動し、URL を設定します。
-  * Node.js: `http://localhost:3978/api/messages`
-  * .NET/C#: `http://localhost:3979/api/messages`
-* 既定の環境変数と一致するには、Microsoft アプリ ID と Microsoft アプリパスワードを空白のままにします。
+1. コードをローカルで実行します。
+2. ボット エミュレーターを起動し、URL を設定します。
+   * Node.js: `http://localhost:3978/api/messages`
+   * .NET/C#: `http://localhost:3979/api/messages`
+3. 既定の環境変数と一致するには、Microsoft アプリ ID と Microsoft アプリのパスワードを空白のままにします。
 
-## <a name="locally-hosted"></a>ローカルにホストされる
+## <a name="locally-hosted"></a>ローカルでホストされる
 
-Microsoft Teams は完全にクラウドベースの製品なので、アクセスするサービスはすべて HTTPS エンドポイントを使用して一般に利用できる必要があります。 そのため、アプリが Teams 内で動作するには、選択したクラウドにコードを公開するか、ローカルで実行中のインスタンスを外部からアクセス可能にする必要があります。 この操作は、トンネリング ソフトウェアを使用して行います。
+Microsoft Teams は完全にクラウドベースの製品です。アクセスするサービスはすべて HTTPS エンドポイントを使用して一般公開する必要があります。 そのため、アプリが Teams 内で動作するには、コードを選択したクラウドに発行するか、ローカル実行中のインスタンスに外部からアクセス可能にする必要があります。 トンネリング ソフトウェアを使用して後者を実行できます。
 
-任意のツールを使用することもできますが、ngrok を使用して推奨します [。ngrok](https://ngrok.com/download)は、コンピューター上でローカルに開くポートの外部アドレス指定可能な URL を作成します。 Microsoft Teams アプリをローカルで実行する準備として ngrok をセットアップするには、
+任意のツールを使用することもできますが、コンピューター上でローカルで開くポートの外部アドレス指定可能な URL を作成する [ngrok](https://ngrok.com/download)を使用して推奨します。 
 
-* ターミナル アプリケーションで、インストールしたディレクトリにngrok.exeします。 この手順を回避するために、パス変数として追加できます。
-* たとえば、ポート番号を `ngrok http 3978 --host-header=localhost:3978` 必要に応じて置き換え、実行します。
+**Microsoft Teams アプリをローカルで実行する準備として ngrok を設定するには**
 
-これにより、ngrok が起動し、指定したポートでリッスンします。 その結果、ngrok が実行されている限り有効な外部アドレス指定可能な URL が提供されます。
+1. ターミナル アプリケーションにインストールされているディレクトリngrok.exe移動します。 この手順を回避するために、パス変数として追加できます。
+2. たとえば、ポート番号を `ngrok http 3978 --host-header=localhost:3978` 必要に応じて実行するか、置換します。
+   これにより、指定したポートのリストに ngrok が起動します。 その代り、ngrok が実行されている限り、外部でアドレス指定可能な URL が有効になります。
 
 > [!NOTE]
 > ngrok を停止して再起動すると、URL が変更されます。
 
-プロジェクトで ngrok を使用し、使用している機能に応じて、この URL エンドポイントを使用するには、ファイル上のコード、構成、または manifest.jsのすべての URL 参照を置き換える必要があります。
+使用している機能に基づいてプロジェクトで ngrok を使用するには、この URL エンドポイントを使用するには、コード、構成、および manifest.json ファイル内のすべての URL 参照を置き換える必要があります。
 
-たとえば、Microsoft Bot Framework に登録されているボットの場合は、ボットのメッセージング エンドポイントを更新して、この新しい ngrok エンドポイントを使用します。 たとえば、`https://2d1224fb.ngrok.io/api/messages` などです。 Bot Framework ポータルの [テスト チャット] ウィンドウでボットの応答をテストすることで、ngrok が動作を検証できます。 (エミュレーターと同様に、このテストでは Teams 固有の機能にアクセスできません)。
+Microsoft Bot Framework に登録されているボットの場合は、ボットのメッセージング エンドポイントを更新して、この新しい ngrok エンドポイントを使用します。 たとえば、`https://2d1224fb.ngrok.io/api/messages` などです。 ボット フレームワーク ポータルの [テスト チャット] ウィンドウでボット応答をテストすることで、ngrok が動作しているのを検証できます。 エミュレーターと同様に、このテストでは Teams 固有の機能にアクセスできません。
 
 > [!NOTE]
-> ボットのメッセージング エンドポイントを更新するには、Bot Framework を使用する必要があります。 Bot Framework のボット [の一覧でボットをクリックします](https://dev.botframework.com/bots)。 ボットを Microsoft Azure に移行する必要はない。 また [、App Studio](~/concepts/build-and-test/app-studio-overview.md)を使用してメッセージング エンドポイントを更新することもできます。
+> ボットのメッセージング エンドポイントを更新するには、ボット フレームワークを使用する必要があります。 ボット フレームワークのボット [の一覧でボットを選択します](https://dev.botframework.com/bots)。 ボットを Microsoft Azure に移行する必要はない。 また、App Studio を使用してメッセージング エンドポイント [を更新することもできます](~/concepts/build-and-test/app-studio-overview.md)。
 
 ## <a name="cloud-hosted"></a>クラウド ホスト型
 
-外部でアドレス指定可能な任意のサービスを使用して、開発コードと実稼働コード、および HTTPS エンドポイントをホストできます。 機能が同じサービスに存在する可能性はありません。 Microsoft Teams アプリからアクセスしているすべてのドメインが、ファイルの manifest.js内 [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) のオブジェクトに一覧表示されている必要があります。
+外部アドレス指定可能なサービスを使用して、開発および実稼働コードとその HTTPS エンドポイントをホストできます。 機能が同じサービスに存在する期待はありません。 ファイル内のオブジェクトに一覧表示されている Microsoft Teams アプリからすべてのドメイン [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) にアクセスする必要 `manifest.json` があります。
 
 > [!NOTE]
-> 安全な環境を確保するには、参照する正確なドメインとサブドメインを明示的に指定し、それらのドメインを制御する必要があります。 たとえば、 `*.azurewebsites.net` お勧めできませんが、推奨 `contoso.azurewebsites.net` されます。
+> 安全な環境を確保するには、参照する正確なドメインとサブドメインについて明示的に説明し、それらのドメインを制御する必要があります。 たとえば、お `*.azurewebsites.net` 勧めできませんが、 `contoso.azurewebsites.net` お勧めします。
 
-## <a name="loading-and-running"></a>読み込みと実行
+## <a name="load-and-run-your-experience"></a>エクスペリエンスの読み込みと実行
 
-一般に、Microsoft Teams 内でエクスペリエンスを読み込み、実行するには、次のガイダンスに従ってパッケージを作成し、Teams にアップロードする必要があります。
+Microsoft Teams 内でエクスペリエンスを読み込み、実行するには、パッケージを作成して Teams にアップロードする必要があります。 詳細については、以下を参照してください。
 
 * [Microsoft Teams アプリのパッケージを作成する](~/concepts/build-and-test/apps-package.md)
 * [Microsoft Teams でアプリをアップロードする](~/concepts/deploy-and-publish/apps-upload.md)
+
+## <a name="next-step"></a>次の手順
+
+> [!div class="nextstepaction"] 
+> [テスト データを環境に追加する](~/concepts/build-and-test/test-data.md)
+

@@ -3,12 +3,12 @@ title: 新機能
 description: Microsoft Teams のすべての新しい開発者機能について説明します。
 ms.topic: reference
 keywords: チームの最新情報
-ms.openlocfilehash: e166cbed4b8fb7849cee71d75fa1751b23da3df2
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: 298305f11788963817ddacfabbc052297d3eaabe
+ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034727"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "51634531"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -19,8 +19,9 @@ ms.locfileid: "51034727"
 
 変更ログには、Microsoft Teams プラットフォームとこのドキュメント セットに対する変更が一覧表示されます。 場合によっては、Teams 開発者が関心を持つ新しい機能に注意を呼び出す場合があります。
 
-| **日付** | **注** | **変更されたトピック** |
+| **Date** | **メモ** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+|04/08/2021| アプリのカスタマイズ機能は、開発者プレビューで利用できます。|[デザイン チーム アプリの概要](concepts/design/design-teams-app-overview.md#app-customization)[、App studio の概要](concepts/build-and-test/app-studio-overview.md#connectors)、マニフェスト[スキーマ](resources/schema/manifest-schema-dev-preview.md) |
 |03/18/2021|注意: Bot Framework SDK の **バージョン 4.10** 以上に更新してください `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` 。 | [チーム/チャット メンバーのボット API の変更](resources/team-chat-member-api-changes.md) |
 |03/05/2021|注意: タブには、エクスペリエンスを囲む余白がなくなりました。 タブ開発者は、アプリを確認して更新する必要があります。 | [タブ余白の削除](resources/removing-tab-margins.md) |
 |03/05/2021 | 既定のインストール スコープとグループ機能は、開発者プレビューに表示されます。| [既定のインストール スコープとグループ機能](concepts/deploy-and-publish/apps-upload.md#add-a-default-install-scope-and-group-capability) |

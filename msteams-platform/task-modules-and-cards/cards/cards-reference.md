@@ -3,28 +3,28 @@ title: カード リファレンス
 description: Teams の Bot で使用できるすべてのカードとカード アクションについての説明
 keywords: Bot のカード リファレンス
 ms.topic: reference
-ms.openlocfilehash: 5cb289738f379dedf53f3a96a7dcff61b908e901
-ms.sourcegitcommit: 1ce74ed167bb81bf09f7f6f8d518093efafb549e
+ms.openlocfilehash: b9e11a6a6cb6de370323a3b07e2451a3abc41f12
+ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "50827936"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "51634538"
 ---
 # <a name="cards-reference"></a>カード リファレンス
 
-このセクションに記載されているカードは、Microsoft Teams のボットでサポートされています。 Bot Framework で定義されたカードに基づいていますが、すべての Bot Framework カードが Teams でサポートされているわけではなく、独自のカードがいくつか追加されています。 相違点は、このドキュメントの参照で呼び出されます。
+このドキュメントに記載されているカードは、Microsoft Teams のボットでサポートされています。 これらはボット フレームワークによって定義されたカードに基づいておりますが、Teams ではすべてのボット フレームワーク カードがサポートされるのではなく、一部の Teams カードが追加されています。 相違点は、このドキュメントの参照で呼び出されます。
 
 ## <a name="card-examples"></a>カードの例
 
-カードの使用方法の詳細については、Bot Builder SDK (v3) のドキュメントで確認できます。 コード サンプルは、GitHub の Microsoft/BotBuilder-Samples リポジトリでも利用できます。
+カードの使用方法に関する追加情報については、Bot Builder SDK v3 のドキュメントを参照してください。 コード サンプルは、GitHub の Microsoft/BotBuilder-Samples リポジトリでも利用できます。
 
 * .NET
   * [メッセージに添付ファイルとしてカードを追加する](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
-  * [カードのサンプル コード (ボット ビルダー v4)](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/06.using-cards)
+  * [カードのサンプル コード Bot Builder v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/06.using-cards)
 
 * Node.js
   * [メッセージに添付ファイルとしてカードを追加する](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
-  * [カードのサンプル コード (ボット ビルダー v4)](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/06.using-cards)
+  * [カードのサンプル コード Bot Builder v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/06.using-cards)
 
 ## <a name="types-of-cards"></a>カードの種類
 
@@ -32,14 +32,14 @@ ms.locfileid: "50827936"
 
 | カードの種類 | 説明 |
 | --- | --- |
-| [アダプティブ カード](#adaptive-card) | 高度なカスタマイズができるカード。テキスト、音声、画像、ボタン、入力フィールドの任意の組み合わせが可能です。 |
-| [ヒーロー カード](#hero-card) | 通常、1 つの大きな画像、1 つまたは複数のボタン、少量のテキストが含まれます。 |
-| [リスト カード](#list-card) | アイテムのスクロール リスト。 |
-| [Office 365 コネクタ カード](#office-365-connector-card) | 複数のセクション、フィールド、画像、アクションに対応した柔軟なレイアウトです。 |
-| [レシート カード](#receipt-card) | ユーザーに受領確認を提供します。 |
-| [Signin カード](#signin-card) | Bot がユーザーのサインインを要求できるようにします。 |
-| [サムネイル カード](#thumbnail-card) | 通常、1 つのサムネイル画像、短いテキスト、1 つまたは複数のボタンが含まれます。 |
-| [カード コレクション](#card-collections) | 1 つの応答で複数のアイテムを返す場合に使用します。 |
+| [アダプティブ カード](#adaptive-card) | このカードは、テキスト、音声、画像、ボタン、および入力フィールドの任意の組み合わせを含む高度にカスタマイズ可能なカードです。 |
+| [ヒーロー カード](#hero-card) | このカードには、通常、1 つの大きな画像、1 つ以上のボタン、および少量のテキストが含まれる。 |
+| [リスト カード](#list-card) | このカードはアイテムのスクロール リストです。 |
+| [Office 365 コネクタ カード](#office-365-connector-card) | このカードには、複数のセクション、フィールド、画像、およびアクションを含む柔軟なレイアウトがあります。 |
+| [レシート カード](#receipt-card) | このカードは、ユーザーにレシートを提供します。 |
+| [サインイン カード](#signin-card) | このカードを使用すると、ボットはユーザーのサインインを要求できます。 |
+| [サムネイル カード](#thumbnail-card) | このカードには、通常、1 つのサムネイル 画像、短いテキスト、および 1 つ以上のボタンが含まれる。 |
+| [カード コレクション](#card-collections) | このカードは、1 つの応答で複数のアイテムを返す場合に使用します。 |
 
 ## <a name="common-properties-for-all-cards"></a>すべてのカードの共通プロパティ
 
@@ -47,28 +47,31 @@ ms.locfileid: "50827936"
 
 カードには、公開されている画像へのリンクを含め、インライン イメージを含めできます。 パフォーマンス上の目的で、パブリック コンテンツ配信ネットワーク (CDN) でイメージをホストすることを強くお勧めします。
 
-画像領域をカバーするように縦横比を保持しながらサイズを拡大または縮小し、カードの縦横比が適切になるように中央からトリミングします。
+画像のサイズは拡大または縮小され、縦横比を維持して画像領域をカバーします。 次に、カードの適切な縦横比を実現するために、中央から画像がトリミングされます。
 
-画像は、PNG、JPEG、または GIF 形式で最大 1024×1024 である必要があります。アニメーション GIF はサポートされていません。
+画像は、PNG、JPEG、または GIF 形式×最大 1024、×1024 である必要があります。アニメーション GIF はサポートされていません。
 
 | プロパティ | 型  | 説明 |
 | --- | --- | --- |
-| url | URL | 画像の HTTPS URL |
-| alt | 文字列 | 画像へのアクセスに関する説明 |
+| url | URL | イメージの HTTPS URL。 |
+| alt | 文字列 | 画像のアクセス可能な説明。 |
+
+> [!NOTE]
+> 最終的なイメージの前にリダイレクトを行うイメージ URL がカードに含まれる場合、イメージ URL のリダイレクトはサポートされません。 これは、パブリック クラウド上で共有されるイメージに対して発生します。
 
 ### <a name="buttons"></a>ボタン
 
-ボタンはカードの下部に上下に並んで表示されます。 ボタンのテキストは常に 1 行で表示され、テキストがボタンの幅を超えた場合は切り捨てられます。 カードでサポートされている最大数を超えるボタンは表示されません。
+ボタンはカードの下部に上下に並んで表示されます。 ボタンのテキストは常に 1 行に表示され、テキストがボタンの幅を超えると切り捨てされます。 カードでサポートされている最大数を超える追加のボタンは表示されません。
 
-詳細については、「[カード アクション](~/task-modules-and-cards/cards/cards-actions.md)」を参照してください。
+詳細については、「カードアクション [」を参照してください](~/task-modules-and-cards/cards/cards-actions.md)。
 
 ### <a name="card-formatting"></a>カードの書式設定
 
-カードのテキストの書式設定の詳細については、「[カードの書式設定](~/task-modules-and-cards/cards/cards-format.md)」を参照してください。
+カードのテキスト書式の詳細については、「カードの書式設定」 [を参照してください](~/task-modules-and-cards/cards/cards-format.md)。
 
 ## <a name="adaptive-card"></a>アダプティブ カード
 
-アダプティブ カードは、テキスト、音声、画像、ボタン、入力フィールドの任意の組み合わせを含むカスタマイズ可能なカードです。 「 [アダプティブ カード v1.2.0」を参照してください](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0)。
+アダプティブ カードは、テキスト、音声、画像、ボタン、入力フィールドの任意の組み合わせを含むカスタマイズ可能なカードです。 アダプティブ [カード v1.2.0 を参照してください](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0)。
 
 ### <a name="support-for-adaptive-cards"></a>アダプティブ カードのサポート
 
@@ -77,7 +80,7 @@ ms.locfileid: "50827936"
 | ✔ | ✔ | ✖ | ✔ |
 
 > [!NOTE]
-> * Teams プラットフォームは、アダプティブ カード機能の v1.2 以前をサポートしています。
+> * Teams プラットフォームは、v1.2 以前のアダプティブ カード機能をサポートしています。
 > * メディア要素は、Teams プラットフォームのアダプティブ カード v1.2 では現在サポートされていません。
 
 ### <a name="example-of-an-adaptive-card"></a>アダプティブ カードの例
@@ -221,12 +224,12 @@ ms.locfileid: "50827936"
 
 以下の Bot Framework リファレンスを参照してください。
 
-* [アダプティブ カード ノード](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
+* [アダプティブ カードNode.js](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
 * [アダプティブ カード C#](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
 
 ## <a name="hero-card"></a>ヒーロー カード
 
-通常、1 つの大きな画像、1 つまたは複数のボタン、テキストを含むカードです。
+通常、1 つの大きな画像、1 つ以上のボタン、およびテキストを含むカード。
 
 ### <a name="support-for-hero-cards"></a>ヒーロー カードのサポート
 
@@ -240,10 +243,10 @@ ms.locfileid: "50827936"
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。 |
 | サブタイトル | リッチ テキスト | カードのサブタイトル。 最大 2 行。|
-| テキスト | リッチ テキスト | テキストがサブタイトルの下に表示されます。書式設定オプション [については、「カードの](~/task-modules-and-cards/cards/cards-format.md) 書式設定」を参照してください。 |
+| テキスト | リッチ テキスト | 字幕の下にテキストが表示されます。 書式設定オプションについては、「カードの書式設定 [」を参照してください](~/task-modules-and-cards/cards/cards-format.md)。 |
 | images | 画像の配列 | カードの上部に表示される画像。 縦横比 16:9。 |
 | buttons | Action オブジェクトの配列 | 現在のカードに適用できるアクション一式。 最大で 6 までサポートされています。 |
-| tap | Action オブジェクト | このアクションは、ユーザーがカード自体をタップするとアクティブ化されます。 |
+| tap | Action オブジェクト | ユーザーがカード自体をタップするとアクティブ化されます。 |
 
 ### <a name="example-of-a-hero-card"></a>ヒーロー カードの例
 
@@ -282,7 +285,7 @@ ms.locfileid: "50827936"
 
 以下の Bot Framework リファレンスを参照してください。
 
-* [ヒーロー カード ノード](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-a-hero-card&preserve-view=true)
+* [ヒーロー カード Node.js](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-a-hero-card&preserve-view=true)
 * [ヒーロー カード C#](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-hero-card&preserve-view=true)
 
 ## <a name="list-card"></a>リスト カード
@@ -300,7 +303,7 @@ ms.locfileid: "50827936"
 | プロパティ | 型  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。|
-| アイテム | リスト アイテムの配列  ||
+| アイテム | リスト アイテムの配列 ||
 | buttons | Action オブジェクトの配列 | 現在のカードに適用できるアクション一式。 最大で 6 までサポートされています。 |
 
 ### <a name="example-of-a-list-card"></a>リスト カードの例
@@ -359,7 +362,7 @@ ms.locfileid: "50827936"
 
 ## <a name="office-365-connector-card"></a>Office 365 コネクタ カード
 
-365 Officeカードは、ボット フレームワークではなく Teams でサポートされています。 このカードは、複数のセクション、フィールド、画像、およびアクションを含む柔軟なレイアウトを提供します。 Bot が使用できるように、このカードがコネクタ カードをカプセル化します。 コネクタ カードと O365 カードの違いについては、「注意事項」の欄を参照してください。
+365 Officeカードは、ボット フレームワークではなく Teams でサポートされています。 このカードは、複数のセクション、フィールド、画像、およびアクションを含む柔軟なレイアウトを提供します。 Bot が使用できるように、このカードがコネクタ カードをカプセル化します。 コネクタ カードと O365 カードの違いについては、「Office [365 コネクタ カードに関するメモ」を参照してください](#notes-on-the-office-365-connector-card)。
 
 ### <a name="support-for-office-365-connector-cards"></a>Office 365 コネクタ カードでのサポート
 
@@ -373,7 +376,7 @@ ms.locfileid: "50827936"
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。 |
 | 概要 | リッチ テキスト | カードの概要。 最大 2 行。 |
-| テキスト | リッチ テキスト | テキストがサブタイトルの下に表示されます。書式設定オプション [については、「カードの](~/task-modules-and-cards/cards/cards-format.md) 書式設定」を参照してください。 |
+| テキスト | リッチ テキスト | 字幕の下にテキストが表示されます。 書式設定オプションについては、「カードの書式設定 [」を参照してください](~/task-modules-and-cards/cards/cards-format.md)。 |
 | themeColor | 16 進数文字列 | アプリケーション マニフェストから提供される accentColor を上書きする色。 |
 
 ### <a name="notes-on-the-office-365-connector-card"></a>Office 365 コネクタ カードに関する注意事項
@@ -385,12 +388,12 @@ Office 365 コネクタ カードは、ActionCard アクションを含む Micro
 * コネクタの場合、エンドポイントは HTTP POST を介してカード ペイロードを受け取ります。
 * Bot の場合、`HttpPOST` アクションが、アクション ID と本文のみを Bot に送信する `invoke` アクティビティをトリガーします。
 
-各コネクタ カードには最大 10 のセクションを表示し、各セクションには最大 5 つのイメージと 5 つのアクションを含めできます。
+各コネクタ カードには最大 10 個のセクションを表示できます。各セクションには最大 5 つのイメージと 5 つのアクションを含めできます。
 
 > [!NOTE]
-> メッセージ内の他のセクション、画像、アクションは表示されません。
+> メッセージ内の追加のセクション、イメージ、またはアクションは表示されません。
 
-すべてのテキスト フィールドは Markdown と HTML をサポートしています。 メッセージの `markdown` プロパティを設定して、Markdown または HTML を使用するセクションを制御することができます。 既定では、`markdown` は `true` に設定されています。代わりに HTML を使用する場合は、`markdown` を `false` に設定します。
+すべてのテキスト フィールドは、マークダウンと HTML をサポートします。 メッセージ内のプロパティを設定することで、マークダウンまたは HTML を使用 `markdown` するセクションを制御できます。 既定では `markdown` 、 に設定されています `true` 。 HTML を代わりに使用する場合は、 に `markdown` 設定します `false` 。
 
 `themeColor` プロパティを指定すると、そのプロパティがアプリのマニフェストの `accentColor` プロパティよりも優先されます。
 
@@ -398,14 +401,14 @@ Office 365 コネクタ カードは、ActionCard アクションを含む Micro
 
 | 値 | 説明 |
 | --- | --- |
-| `avatar` | 既定値。 `activityImage` は円としてトリミングされます。 |
-| `article` | `activityImage` は四角形として表示され、縦横比を維持します。 |
+| `avatar` | 既定値。 `activityImage` は、円としてトリミングされます。 |
+| `article` | `activityImage` は四角形として表示され、縦横比が保持されます。 |
 
-コネクタ カードのプロパティに関するその他の詳細については [、「Actionable message card reference」を参照してください](/outlook/actionable-messages/card-reference)。 Microsoft Teams が現在サポートしていないコネクタ カードのプロパティは、次のとおりです。
+コネクタ カードのプロパティに関するその他の詳細については、「アクション可能な [メッセージ カードリファレンス」を参照してください](/outlook/actionable-messages/card-reference)。 Microsoft Teams が現在サポートしていないコネクタ カードのプロパティは、次のとおりです。
 
 * `heroImage`
 * `hideOriginalBody`
-* `startGroup` (Teams では常に `true` として扱われます)
+* `startGroup` Teams で常に `true` 扱われる
 * `originator`
 * `correlationId`
 
@@ -537,16 +540,16 @@ Teams はレシート カードをサポートしています。 ボットがユ
 
 以下の Bot Framework リファレンスを参照してください。
 
-* [レシート カード ノード](/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
+* [レシート カードNode.js](/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
 * [レシート カード C#](/dotnet/api/microsoft.bot.schema.receiptcard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## <a name="signin-card"></a>サインイン カード
 
-Signin card を使用すると、ボットはユーザーにサインインを要求できます。 Bot Framework とは若干異なる形式で Teams でサポートされています。 Teams のサインイン カードはボット フレームワークのサインイン カードと似ていますが、Teams のサインイン カードでは 2 つのアクション `signin` のみサポートされます。 `openUrl`
+Signin card を使用すると、ボットはユーザーにサインインを要求できます。 これは、ボット フレームワークで見つかった形式とは少し異なる形式で Teams でサポートされています。 Teams のサインイン カードはボット フレームワークのサインイン カードと似ていますが、Teams のサインイン カードでは 2 つのアクション `signin` のみサポートされます。 `openUrl`
 
-**サインイン アクション** は、サインイン カードだけでなく、Teams のすべてのカードで使用できます。 認証の詳細については、「ボットの [Microsoft Teams 認証フロー」を参照してください](~/bots/how-to/authentication/auth-flow-bot.md)。
+サインイン アクションは、サインイン カードだけでなく、Teams のすべてのカードで使用できます。 認証の詳細については、「ボットの [Microsoft Teams 認証フロー」を参照してください](~/bots/how-to/authentication/auth-flow-bot.md)。
 
-### <a name="support-for-signin-cards"></a>サインイン カードでのサポート
+### <a name="support-for-signin-cards"></a>サインイン カードのサポート
 
 | Teams の Bot | メッセージング拡張機能  | コネクタ | Bot Framework |
 | --- | --- | --- | --- |
@@ -556,7 +559,7 @@ Signin card を使用すると、ボットはユーザーにサインインを�
 
 以下の Bot Framework リファレンスを参照してください。
 
-* [サインイン カード ノード](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
+* [Signin カード Node.js](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
 * [サインイン カード C#](/dotnet/api/microsoft.bot.schema.signincard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## <a name="thumbnail-card"></a>サムネイル カード
@@ -577,10 +580,10 @@ Signin card を使用すると、ボットはユーザーにサインインを�
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。|
 | サブタイトル | リッチ テキスト | カードのサブタイトル。 最大 2 行。|
-| テキスト | リッチ テキスト | テキストがサブタイトルの下に表示されます。書式設定オプション [については、「カードの](~/task-modules-and-cards/cards/cards-format.md) 書式設定」を参照してください。 |
-| images | 画像の配列 | カードの上部に表示される画像。 縦横比 1:1 (四角形)。 |
+| テキスト | リッチ テキスト | 字幕の下にテキストが表示されます。 書式設定オプションについては、「カードの書式設定 [」を参照してください](~/task-modules-and-cards/cards/cards-format.md)。 |
+| images | 画像の配列 | カードの上部に表示される画像。 縦横比 1:1 平方 |
 | buttons | Action オブジェクトの配列 | 現在のカードに適用できるアクション一式。 最大で 6 までサポートされています。 |
-| tap | Action オブジェクト | このアクションは、ユーザーがカード自体をタップするとアクティブ化されます。 |
+| tap | Action オブジェクト | ユーザーがカード自体をタップするとアクティブ化されます。 |
 
 ### <a name="example-of-a-thumbnail-card"></a>サムネイル カードの例
 
@@ -629,14 +632,14 @@ Signin card を使用すると、ボットはユーザーにサインインを�
 
 以下の Bot Framework リファレンスを参照してください。
 
-* [サムネイル カード ノード](/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest&preserve-view=true)
+* [サムネイル カード Node.js](/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest&preserve-view=true)
 * [サムネイル カード C#](/dotnet/api/microsoft.bot.schema.thumbnailcard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## <a name="card-collections"></a>カード コレクション
 
 Teams はカード コレクションをサポートしています。
 
-カード コレクション: `builder.AttachmentLayout.carousel` および `builder.AttachmentLayout.list` . これらのコレクションには、アダプティブ カード、ヒーロー カード、またはサムネイル カードが含まれる。
+カード コレクションには、 `builder.AttachmentLayout.carousel` と が含まれます `builder.AttachmentLayout.list` 。 これらのコレクションには、アダプティブ カード、ヒーロー カード、またはサムネイル カードが含まれる。
 
 ## <a name="carousel-collection"></a>カルーセル コレクション
 
@@ -649,7 +652,7 @@ Teams はカード コレクションをサポートしています。
 | ✔ | ✖ | ✖ | ✔ |
 
 > [!NOTE]
-> カルーセルでは、メッセージごとに最大 10 枚のカードを表示することができます。
+> カルーセルは、メッセージごとに最大 10 枚のカードを表示できます。
 
 ### <a name="properties-of-a-carousel-card"></a>カルーセル カードのプロパティ
 
@@ -826,7 +829,7 @@ Teams はカード コレクションをサポートしています。
 
 ### <a name="syntax-for-carousel-collections"></a>カルーセル コレクションの構文
 
-`builder.AttachmentLayoutTypes.Carousel`
+`builder.AttachmentLayoutTypes.Carousel` はカルーセル コレクションの構文です。
 
 ## <a name="list-collection"></a>リスト コレクション
 
@@ -844,18 +847,18 @@ Teams はカード コレクションをサポートしています。
 
 プロパティは、ヒーローやサムネイル カードの場合と同じです。
 
-リストでは、メッセージごとに最大 10 枚のカードを表示することができます。
+リストには、メッセージごとに最大 10 枚のカードを表示できます。
 
 > [!NOTE]
 > iOS および Android では、一部のリスト カードの組み合わせがまだサポートされていません。
 
 ### <a name="syntax-for-list-collections"></a>リスト コレクションの構文
 
-`builder.AttachmentLayout.list`
+`builder.AttachmentLayout.list` はリスト コレクションの構文です。
 
 ## <a name="cards-not-supported-in-teams"></a>Teams でサポートされていないカード
 
-次のカードは Bot Framework によって実装されていますが、Teams ではサポートされていません。
+次のカードはボット フレームワークによって実装されますが、Teams ではサポートされていません。
 
 * アニメーション カード
 * オーディオ カード

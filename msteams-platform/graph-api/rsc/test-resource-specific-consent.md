@@ -1,28 +1,28 @@
 ---
-title: Teams でのリソース固有の同意をテストする
-description: Postman を使用する Teams でのリソース固有の同意のテストの詳細
+title: Teams でリソース固有の同意のアクセス許可をテストする
+description: Postman を使用して Teams でリソース固有の同意をテストする詳細
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
 ms.topic: tutorial
-keywords: teams authorization OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: f50f61e7eb62e3bcc6af2dafc1c7c781ff2145de
-ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
+keywords: teams 承認 OAuth SSO AAD rsc Postman Graph
+ms.openlocfilehash: 0d3d1c895c77bb417a9fdd84e319103485aa8944
+ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "49366855"
+ms.lasthandoff: 04/08/2021
+ms.locfileid: "51634709"
 ---
-# <a name="test-resource-specific-consent-permissions--in-teams"></a>Teams でのリソース固有の同意権限をテストする
+# <a name="test-resource-specific-consent-permissions-in-teams"></a>Teams でリソース固有の同意のアクセス許可をテストする
 
-リソース固有の同意 (RSC) は Microsoft Teams と Graph API の統合で、アプリが API エンドポイントを使用して組織内の特定のチームを管理できるようにします。 [リソース固有の同意 (RSC) — Microsoft Teams GRAPH API](resource-specific-consent.md)を *参照* してください。  
+リソース固有の同意 (RSC) は、Microsoft Teams と Graph API の統合であり、アプリで API エンドポイントを使用して組織内の特定のチームを管理できます。 詳細については、「リソース固有の [同意 (RSC) - Microsoft Teams Graph API」を参照してください](resource-specific-consent.md)。
 
 > [!NOTE]
->RSC のアクセス許可をテストするには、Teams アプリのマニフェストファイルに、次のフィールドで設定された **Webapplicationinfo** キーが含まれている必要があります。
+> RSC アクセス許可をテストするには、Teams アプリ マニフェスト ファイルに、次のフィールドが設定された **webApplicationInfo** キーを含める必要があります。
 >
-> - **id** : azure ad アプリ id については、「 [azure ad ポータルでアプリを登録](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)する *」を参照してください*。
-> - **resource** : 任意の文字列。「 [Teams アプリのマニフェストを更新する](resource-specific-consent.md#update-your-teams-app-manifest)」のメモを参照して *ください*。
-> - **アプリケーションのアクセス許可**-アプリの RSC アクセス許可については、「[リソース固有のアクセス許可](resource-specific-consent.md#resource-specific-permissions) *」を参照してください*。
+> - **id**: Azure ADアプリ ID については、「Azure アプリ ポータルにアプリを登録する [」をADしてください](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)。
+> - **resource**: 任意の文字列は、「Teams アプリ マニフェストの更新  [」のノートを参照してください。](resource-specific-consent.md#update-your-teams-app-manifest)
+> - **アプリケーションのアクセス許可**: アプリの RSC アクセス許可については、「リソース固有の [アクセス許可」を参照してください](resource-specific-consent.md#resource-specific-permissions)。
 
 ```json
 "webApplicationInfo":{
@@ -47,49 +47,46 @@ ms.locfileid: "49366855"
    }
 ```
 
->[!IMPORTANT]
->アプリのマニフェストには、アプリに必要な RSC アクセス許可のみが含まれています。
+> [!IMPORTANT]
+> アプリ マニフェストには、アプリに付与する RSC アクセス許可のみを含める必要があります。
 
-## <a name="test-added-rsc-permissions-using-the-postman-app"></a>Postman アプリを使用して、追加された RSC アクセス許可をテストする
+## <a name="test-added-rsc-permissions-using-the-postman-app"></a>Postman アプリを使用して追加された RSC アクセス許可をテストする
 
-RSC アクセス許可が API 要求ペイロードによって受け入れられているかどうかを確認するには、 [RSC JSON テストコード](test-rsc-json-file.md) をローカル環境にコピーし、次の値を更新する必要があります。
+RSC アクセス許可が API 要求ペイロードによって付与されているかどうかを確認するには [、RSC JSON](test-rsc-json-file.md) テスト コードをローカル環境にコピーし、次の値を更新する必要があります。
 
-1. `azureADAppId`  -アプリの Azure AD アプリ id。
-1. `azureADAppSecret`  -Azure AD アプリシークレット (パスワード)
-1. `token_scope`  -トークンに値を設定するには、スコープが必要です。 https://graph.microsoft.com/.default
-1. `teamGroupId` — Teams クライアントからチームグループ id を取得するには、次のようにします。
+* `azureADAppId`: アプリの Azure AD ID
+* `azureADAppSecret`: Azure AD アプリ シークレット (パスワード)
+* `token_scope`: トークンを取得するにはスコープが必要です。 https://graph.microsoft.com/.default
+* `teamGroupId`: 次のように Teams クライアントからチーム グループ ID を取得できます。
 
-> [!div class="checklist"]
->
-> * Teams クライアントで、左端のナビゲーションバーにある [ **teams** ] を選択します。
-> * アプリがインストールされているチームをドロップダウンメニューから選択します。
-> * [ **その他のオプション** ] アイコン (&#8943;) を選択します。
-> * [**チームへのリンクの取得**] を選択する 
-> * 文字列から **groupId** 値をコピーして保存します。
+  > [!div class="checklist"]
+  >
+  > * Teams クライアントで、左上のナビゲーション バーから **[Teams]** を選択します。
+  > * ドロップダウン メニューからアプリがインストールされているチームを選択します。
+  > * [その他 **のオプション]** アイコンを選択します (&#8943;)
+  > * [チーム **へのリンクを取得する] を選択します。** 
+  > * 文字列から **groupId 値をコピー** して保存します。
 
-### <a name="using-postman"></a>Postman を使用する
+### <a name="use-postman"></a>Postman の使用
 
-> [!div class="checklist"]
->
-> * [Postman](https://www.postman.com)アプリを開きます。
-> * [**ファイル**  =>  の **インポート**] [  =>  **インポートファイル**] を選択して、更新された JSON ファイルを環境からアップロードします。  
-> * [ **コレクション** ] タブを選択します。 
-> * **テスト RSC** の横にある山形 (>) を選択して、詳細ビューを展開し、API 要求を表示します。
+1. Postman [アプリを開](https://www.postman.com) きます。
+2. [**ファイル**  >  **インポート ファイル**  >  **] を選択** して、更新された JSON ファイルを環境からアップロードします。  
+3. [コレクション **] タブを選択** します。 
+4. テスト RSC の横にあるシェブロンを選択して詳細ビューを **>** 展開し、API 要求を表示します。
 
-API 呼び出しごとに、アクセス許可のコレクション全体を実行します。 アプリのマニフェストで指定したアクセス許可は成功するはずですが、指定されていない場合は、HTTP 403 状態コードで失敗する必要があります。 すべての応答状態コードを確認して、アプリの RSC アクセス許可の動作が期待どおりかどうかを確認します。
+API 呼び出しごとにアクセス許可コレクション全体を実行します。 アプリ マニフェストで指定したアクセス許可は成功する必要があります。指定されていないアクセス許可は HTTP 403 状態コードで失敗する必要があります。 すべての応答状態コードを確認して、アプリ内の RSC アクセス許可の動作が期待を満たしている状態を確認します。
 
->[!NOTE]
->特定の削除および読み取り API 呼び出しをテストするには、これらのインスタンスシナリオを JSON ファイルに追加します。
+> [!NOTE]
+> 特定の DELETE および READ API 呼び出しをテストするには、それらのインスタンス シナリオを JSON ファイルに追加します。
 
-## <a name="test--revoked-rsc-permissions-using-postman"></a>[Postman](https://www.postman.com/)を使用して失効した RSC アクセス許可をテストする
+## <a name="test-revoked-rsc-permissions-using-postman"></a>Postman を使用して取り消された RSC アクセス [許可をテストする](https://www.postman.com/)
 
-> [!div class="checklist"]
->
-> * 特定のチームからアプリをアンインストールします。
-> * [Postman を使用して、追加された RSC のアクセス許可をテスト](#test-added-rsc-permissions-using-the-postman-app)するには、上記の手順に従います。
-> * すべての応答状態コードを調べて、成功した特定の API 呼び出しが HTTP 403 状態コードで失敗したことを確認します。
+1. 特定のチームからアプリをアンインストールします。
+2. Postman を使用して [RSC アクセス許可を追加したテストの手順に従います](#test-added-rsc-permissions-using-the-postman-app)。
+3. すべての応答状態コードを確認して、特定の API 呼び出しが成功し **、HTTP 403** 状態コードで失敗したと確認します。
+
+## <a name="see-also"></a>関連項目
 
 > [!div class="nextstepaction"]
->
-> [詳細情報: Microsoft Graph API と Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0)
+> [Microsoft Graph API と Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
 
