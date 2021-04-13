@@ -1,22 +1,24 @@
 ---
-title: Teams アプリの機能について
+title: アプリの機能を理解する
 author: heath-hamilton
 description: Teams アプリの機能の説明
 ms.topic: conceptual
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: 5336b36b52cf81be414f18ccaaf9e235c079e626
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: 6d08d06c55aed4b531fba4bb533c896c13073cfc
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034706"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654434"
 ---
-# <a name="understanding-teams-app-capabilities"></a>Teams アプリの機能について
+# <a name="understand-microsoft-teams-app-capabilities"></a>Microsoft Teams アプリの機能について
 
-*機能は* 、Microsoft Teams プラットフォームでアプリを構築する拡張ポイントです。
+機能拡張またはエントリ ポイントは、アプリがユーザーに表示されるさまざまな方法です。 たとえば、ユーザーはキャンバス タブでアプリを操作してアクティビティを実行したり、会話型ボットを使用して同じ操作を行う場合があります。 Teams アプリの構築に使用されるさまざまな機能を使用すると、使用範囲を拡大できます。
 
-Teams を拡張する方法は複数あるので、すべてのアプリは一意です。一部のアプリには 1 つの機能 (webhook など) しか持てない場合と、ユーザーにオプションを提供する機能がいくつかあります。 たとえば、アプリは中央の場所 (タブ) にデータを表示し、会話インターフェイス (ボット) を通じて同じ情報を表示できます。
+Teams を拡張する方法は複数あるので、すべてのアプリは一意です。 Webhook などの機能は 1 つのみ、ユーザーにさまざまなオプションを提供する複数の機能を備える機能もあります。 たとえば、アプリは、データを中央の場所 (タブ) に表示し、会話インターフェイス (ボット) を介して同じ情報を表示 **できます**。
+
+## <a name="app-capabilities"></a>アプリの機能
 
 Teams アプリには、次のコア機能の 1 つまたはすべてが含まれます。
 
@@ -27,12 +29,20 @@ Teams アプリには、次のコア機能の 1 つまたはすべてが含ま�
 
 アプリでは、Microsoft Graph API for Teams などの高度な [機能を利用することもできます](https://docs.microsoft.com/graph/teams-concept-overview)。
 
-アプリで必要な機能を提供する機能を確認するには、次の図を参照してください。
+次の図は、アプリで必要な機能を提供する機能を示しています。
 
 :::image type="content" source="../assets/images/capabilities-overview.png" alt-text="Teams アプリの機能を示すマインド マップ。":::
 
-## <a name="doing-whats-best-for-your-users"></a>ユーザーに最適な機能を実行する
+## <a name="always-consider-your-user"></a>ユーザーを常に考慮する
 
-Teams アプリの開発に慣れ親しんだら、その微妙な点を理解し始めるでしょう。 特定の機能 (ユーザー入力の収集など) を作成する方法は複数ある。 たとえば、Web ベースのフォームをタブに埋め込むには、 を使用します `<iframe>` 。 また、ユーザーが優先するよりネイティブなエクスペリエンスを得る場合は、タスク モジュールである Teams UI 規則を使用してタブでこれを実行することもできます。
+Teams アプリの開発に慣れ親しんだら、その基本的な基本を理解できます。 特定の機能を構築する方法は複数あると理解しています。 このようなシナリオでは、ユーザーによりネイティブなエクスペリエンスを提供する方法を検討してください。
+たとえば、アプリ内のタブとして構築されたフォームでユーザー入力を収集できます。 また、ビューを切り替え、ユーザーの作業フローを中断することなく、タスク モジュールを使用してこれを実行できます。 ユーザーの通常の作業フローから最も逸脱しない拡張ポイントを選択することが重要です。
 
-適切な機能と設計を選ぶには、まず対象ユーザーの使用例 [を理解する必要があります](../concepts/design/understand-use-cases.md)。
+## <a name="see-also"></a>関連項目
+
+> [!div class="nextstepaction"]
+> [Teams 用アプリのビルド](../overview.md)
+## <a name="next-step"></a>次の手順
+
+> [!div class="nextstepaction"]
+> [Teams アプリのエントリ ポイント](../concepts/extensibility-points.md)

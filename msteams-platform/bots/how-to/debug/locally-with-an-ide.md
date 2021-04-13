@@ -4,12 +4,12 @@ author: clearab
 description: IDE を使用してボットをローカルでテストおよびデバッグする
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 449d6dd5e10a72538e6443c9d17f998ebc662379
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: 5a35419564f87617ee5d590e2a604e970caa16b3
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634770"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654469"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>ボットをローカルでテストおよびデバッグする
 
@@ -20,7 +20,7 @@ ms.locfileid: "51634770"
 ボットをテストする最も包括的な方法は、アプリ パッケージを作成して Teams にアップロードする方法です。 これは、すべてのスコープでボットで使用できる完全な機能をテストする唯一の方法です。
 
 アプリをアップロードするには、次の 2 つの方法があります。
-* [アプリ Studio を使用する](~/concepts/build-and-test/app-studio-overview.md)
+* [App Studio を使用します](~/concepts/build-and-test/app-studio-overview.md)。
 * [アプリ パッケージを手動で作成](~/concepts/build-and-test/apps-package.md) し、アプリ [をアップロードします](~/concepts/deploy-and-publish/apps-upload.md)。
 
 > [!NOTE]

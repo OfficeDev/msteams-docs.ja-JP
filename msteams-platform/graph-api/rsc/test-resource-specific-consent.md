@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: teams 承認 OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: 0d3d1c895c77bb417a9fdd84e319103485aa8944
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: ea764ec2cbca653221d7194d0759ac39f93ec802
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634709"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654427"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Teams でリソース固有の同意のアクセス許可をテストする
 
@@ -21,7 +21,7 @@ ms.locfileid: "51634709"
 > RSC アクセス許可をテストするには、Teams アプリ マニフェスト ファイルに、次のフィールドが設定された **webApplicationInfo** キーを含める必要があります。
 >
 > - **id**: Azure ADアプリ ID については、「Azure アプリ ポータルにアプリを登録する [」をADしてください](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)。
-> - **resource**: 任意の文字列は、「Teams アプリ マニフェストの更新  [」のノートを参照してください。](resource-specific-consent.md#update-your-teams-app-manifest)
+> - **resource**: 任意の文字列で、「Teams アプリ マニフェストの更新  [」のメモを参照してください](resource-specific-consent.md#update-your-teams-app-manifest)。
 > - **アプリケーションのアクセス許可**: アプリの RSC アクセス許可については、「リソース固有の [アクセス許可」を参照してください](resource-specific-consent.md#resource-specific-permissions)。
 
 ```json
@@ -54,18 +54,16 @@ ms.locfileid: "51634709"
 
 RSC アクセス許可が API 要求ペイロードによって付与されているかどうかを確認するには [、RSC JSON](test-rsc-json-file.md) テスト コードをローカル環境にコピーし、次の値を更新する必要があります。
 
-* `azureADAppId`: アプリの Azure AD ID
-* `azureADAppSecret`: Azure AD アプリ シークレット (パスワード)
-* `token_scope`: トークンを取得するにはスコープが必要です。 https://graph.microsoft.com/.default
+* `azureADAppId`: アプリの Azure AD ID。
+* `azureADAppSecret`: Azure ADパスワード。
+* `token_scope`: トークンを取得するには、スコープが必要です。 に値を設定します https://graph.microsoft.com/.default 。
 * `teamGroupId`: 次のように Teams クライアントからチーム グループ ID を取得できます。
 
-  > [!div class="checklist"]
-  >
-  > * Teams クライアントで、左上のナビゲーション バーから **[Teams]** を選択します。
-  > * ドロップダウン メニューからアプリがインストールされているチームを選択します。
-  > * [その他 **のオプション]** アイコンを選択します (&#8943;)
-  > * [チーム **へのリンクを取得する] を選択します。** 
-  > * 文字列から **groupId 値をコピー** して保存します。
+    1. Teams クライアントで、左側のナビゲーション バーから **[Teams]** を選択します。
+    2. ドロップダウン メニューからアプリがインストールされているチームを選択します。
+    3. [その他 **のオプション]** アイコンを選択します (&#8943;)。
+    4. [チーム **へのリンクを取得する] を選択します**。 
+    5. 文字列から **groupId 値をコピー** して保存します。
 
 ### <a name="use-postman"></a>Postman の使用
 

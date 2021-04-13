@@ -4,12 +4,12 @@ description: ngrok を使用して、ローカル PC で通話とオンライン
 ms.topic: how-to
 keywords: ローカル開発 ngrok トンネル
 ms.date: 11/18/2018
-ms.openlocfilehash: d61c380fda941618a769ad3fffa053b2a4800de9
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: b764e41302ab569e40c9dacd374a31e6abb1d642
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634728"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654287"
 ---
 # <a name="develop-calling-and-online-meeting-bots-on-your-local-pc"></a>ローカル PC で通話およびオンライン会議ボットを開発する
 
@@ -19,7 +19,7 @@ ms.locfileid: "51634728"
 
 ## <a name="configure-ngrokyml"></a>ngrok.yml を構成する
 
-[ngrok に移動し](https://ngrok.com)、無料アカウントにサインアップするか、既存のアカウントにログインします。 サインインした後、ダッシュボードに [移動し](https://dashboard.ngrok.com) 、authtoken を取得します。
+[ngrok に移動し](https://ngrok.com)、無料アカウントにサインアップするか、既存のアカウントにログインします。 サインインした後、ダッシュボードに [移動し、](https://dashboard.ngrok.com) 認証トークンを取得します。
 
 ngrok 構成ファイルを作成し `ngrok.yml` 、次の行を追加します。 ファイルの場所の詳細については [、「ngrok」を参照してください](https://ngrok.com/docs#config)。
 
@@ -47,7 +47,7 @@ tunnels:
 
 1. Ngrok のパブリック TCP エンドポイントには固定 URL があります。 これらは `0.tcp.ngrok.io` `1.tcp.ngrok.io` 、、、などです。 これらの URL をポイントするサービスの DNS CNAME エントリが必要です。 たとえば、参照、参照、などと `0.bot.contoso.com` `0.tcp.ngrok.io` `1.bot.contoso.com` `1.tcp.ngrok.io` します。
 2. URL には SSL 証明書が必要です。 簡単に行う場合は、ワイルドカード ドメインに発行された SSL 証明書を使用します。 この場合は、 `*.bot.contoso.com` です。 この SSL 証明書はメディア SDK によって検証されます。そのため、ボットのパブリック URL と一致する必要があります。 拇印をメモし、コンピューター証明書にインストールします。
-3. 次に、トラフィックを localhost に転送する TCP トンネルをセットアップします。 ngrok.yml に次の行を記述します。
+3. 次に、トラフィックを localhost に転送する TCP トンネルを設定します。 ngrok.yml に次の行を記述します。
 
     ```yaml
     media:

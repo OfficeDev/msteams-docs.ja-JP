@@ -4,12 +4,12 @@ description: Microsoft Teams ボットを使用して、プロアクティブメ
 ms.topic: overview
 ms.author: anclear
 Keywords: メッセージの送信、ユーザー ID の取得、チャネル ID の取得、会話 ID の取得
-ms.openlocfilehash: 2d7ff10469a181bb06fda5029c8f6b2725b0402d
-ms.sourcegitcommit: 7db6eabe3ef128ac7f14b32d07e9e86c995d187f
-ms.translationtype: HT
+ms.openlocfilehash: 7da470eaba6ae9ecb82c9a7ba04d69b2f196a9d7
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "50103606"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654294"
 ---
 # <a name="send-proactive-messages"></a>プロアクティブ メッセージを送信する
 
@@ -83,6 +83,13 @@ ms.locfileid: "50103606"
 * **誰が/何がトリガーになったのですか。** 誰が、または何をして、通知を送信されることになったのか。
 * **ユーザーが対応できることは何ですか。** ユーザーが通知に基づいてアクションを取ることを容易にします。
 * **ユーザーがオプトアウトするにはどうすればいいですか。** ユーザーが追加の通知をオプトアウトするためのパスを提供する必要があります。
+
+### <a name="scheduled-messages"></a>予定されたメッセージ
+
+プロアクティブ メッセージングを使用してスケジュールされたメッセージをユーザーに送信する場合は、タイム ゾーンがタイム ゾーンに更新されるのを確認します。 これにより、メッセージが関連する時刻にユーザーに配信されます。 通常、スケジュール メッセージには次のものが含まれます。
+
+* **ユーザーがメッセージを受信** する理由 : ユーザーがメッセージを受け取る理由を簡単に理解できます。
+* **ユーザーが次に実行できる** 操作: ユーザーは、メッセージの内容に基づいて必要なアクションを実行できます。
 
 ## <a name="proactively-install-your-app-using-graph"></a>Graph を使用してアプリをプロアクティブにインストール
 

@@ -5,12 +5,12 @@ description: チーム会議用のアプリを作成する
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: d9356e37a0c2b5b70d23fc6805b0af5340a1efc6
-ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
+ms.openlocfilehash: 267c90792e07b483c92965bc61e46fca33573841
+ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596232"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51654375"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Teams 会議用のアプリを作成する
 
@@ -36,7 +36,7 @@ Teams 会議用のアプリを作成する前に、次の知識が必要です�
 
 ## <a name="meeting-apps-api-reference"></a>会議アプリ API リファレンス
 
-|API|説明|要求|ソース|
+|API|Description|要求|ソース|
 |---|---|----|---|
 |**GetUserContext**| この API を使用すると、関連するコンテンツを Teams タブに表示するコンテキスト情報を取得できます。 |_**microsoftTeams.getContext( ( ) => { /*...*/ } )**_|Microsoft Teams クライアント SDK|
 |**GetParticipant**| この API を使用すると、ボットは会議 ID と参加者 ID によって参加者情報を取得できます。 |**GET** _**/v1/meetings/{meetingId}/participants/{participantsId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
@@ -134,7 +134,7 @@ API の JSON 応答 `GetParticipant` 本文は次の形式です。
 
 #### <a name="response-codes"></a>応答コード
 
-|応答コード|説明|
+|応答コード|Description|
 |---|---|
 | **403** | アプリは参加者情報の取得を許可されません。 これは最も一般的なエラー応答であり、アプリが会議にインストールされていない場合にトリガーされます。 たとえば、テナント管理者によってアプリが無効になっている場合や、ライブ サイトの移行中にブロックされている場合などです。|
 | **200** | 参加者情報が正常に取得されます。|
@@ -218,7 +218,7 @@ POST /v3/conversations/{conversationId}/activities
 
 #### <a name="response-codes"></a>応答コード
 
-|応答コード|説明|
+|応答コード|Description|
 |---|---|
 | **201** | シグナルを含むアクティビティが正常に送信される |
 | **401** | アプリは無効なトークンで応答します。 |
@@ -335,12 +335,35 @@ API を使用して `userContext` 要求をルーティングするには [、�
 #### <a name="share-to-stage"></a>ステージ間の共有 
 
 > [!NOTE]
-> この機能は、Insider 開発プレビューでのみ利用できます。
+> * この機能は現在、開発者プレビューでのみ使用できます。
+> * この機能を使用するには、アプリが会議中のサイドパネルをサポートしている必要があります。
 
 
 この機能により、開発者はアプリを会議ステージに共有できます。 会議ステージへの共有を有効にすると、会議の参加者はリアルタイムで共同作業できます。 
 
-必要なコンテキストは、アプリ マニフェストの meetingStage です。 このための前提条件は、meetingSidePanel コンテキストを持つ必要があります。 これにより、サイドパネルの "共有" ボタンが以下のように有効になります。
+必要なコンテキストは `meetingStage` 、アプリ マニフェスト内です。 このための前提条件は、コンテキストを持 `meetingSidePanel` つ必要があります。 これにより、 **サイドパネルの** [共有] ボタンが次の図で切り離されます。
+
+  ![share_to_stage_during_meetingエクスペリエンス](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
+
+この機能を有効にするために必要なマニフェストの変更は次のとおりです。 
+
+```json
+
+"configurableTabs": [
+    {
+      "configurationUrl": "https://contoso.com/teamstab/configure",
+      "canUpdateConfiguration": true,
+      "scopes": [
+        "groupchat"
+      ],
+      "context":[
+        
+        "meetingSidePanel",
+        "meetingStage"
+     ]
+    }
+  ]
+```
 
 
 
