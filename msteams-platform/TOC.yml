@@ -30,12 +30,12 @@
       href: tutorials/get-started-nodejs-app-studio.md
     - name: Yeoman ジェネレーターを使用してアプリを作成する
       href: tutorials/get-started-yeoman.md
-    - name: Yeoman ジェネレーターを使用して Microsoft Teams をアップグレードする
-      href: tutorials/upgrade-using-yeoman.md
     - name: コード サンプル
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: アプリの基本事項
   items:
+    - name: 概要
+      href: concepts/app-fundamentals-overview.md
     - name: Teams アプリの機能
       href: concepts/capabilities-overview.md
     - name: Teams アプリのエントリ ポイント
