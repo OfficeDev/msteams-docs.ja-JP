@@ -350,6 +350,8 @@
       href: graph-api/import-messages/import-external-messages-to-teams.md
 - name: アプリのテスト
   items:
+    - name: 概要
+      href: concepts/build-and-test/test-app-overview.md
     - name: Microsoft 365 テナントを準備する
       href: concepts/build-and-test/prepare-your-o365-tenant.md
     - name: テスト セットアップの選択
