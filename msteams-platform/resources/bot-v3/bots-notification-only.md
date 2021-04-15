@@ -1,30 +1,34 @@
 ---
-title: 通知専用ボット
-description: Microsoft Teams で通知のみのボットがあることを説明します。
-keywords: teams の bot 通知
+title: 通知のみのボット
+description: Microsoft Teams の通知専用ボットについて説明します。
+keywords: teams ボットの通知
+ms.topic: conceptual
 ms.date: 01/29/2020
-ms.openlocfilehash: d312f9cd4558d35fc2492b5cf0b4f77b65660833
-ms.sourcegitcommit: 44ac886c0ca34a16222d3991a61606f8483b8481
+ms.openlocfilehash: 39ba25893623d6b963b44363b8458db6def58b60
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "41783907"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696074"
 ---
-# <a name="notification-only-bots-in-microsoft-teams"></a>Microsoft Teams での通知のみのボット
+# <a name="notification-only-bots-in-microsoft-teams"></a>Microsoft Teams の通知専用ボット
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Bot がユーザーに通知を配信し、会話ではないことを目的としている場合`isNotificationOnly`は、アプリマニフェストでフィールドを有効にすることができます。 これにより、次の変更が生じます。
+ボットの唯一の目的がユーザーに通知を配信し、会話型ではない場合は、アプリ マニフェストでフィールド `isNotificationOnly` を有効にできます。 これにより、次の変更が行えます。
 
-* ユーザーが通知のみの bot にメッセージを表示することはできません。
-* ユーザーが bot を @mention ことはできません。
-
-## <a name="app-manifest"></a>アプリマニフェスト
-
-これを有効にする`isNotificationOnly`に`true`は、をに設定します。
+* ユーザーは通知専用ボットにメッセージを送信できません。
+* ユーザーは@mentionを作成できません。
 
 > [!NOTE]
-> の`isNotificationOnly`値は、文字列ではなく boolean であることに注意してください。
+> ボット専用アプリは、どちらの場合も個人用アプリ トレイに表示 `isNotificationOnly: true` されます。 `isNotificationOnly: false`
+
+## <a name="app-manifest"></a>アプリ マニフェスト
+
+これを有効にするには、 に `isNotificationOnly` 設定します `true` 。
+
+> [!NOTE]
+> 値がブール値であり `isNotificationOnly` 、文字列ではない点に注意してください。
 
 ```json
 {
@@ -43,6 +47,6 @@ Bot がユーザーに通知を配信し、会話ではないことを目的と�
 }
 ```
 
-## <a name="best-practices-and-limitations"></a>ベストプラクティスと制限事項
+## <a name="best-practices-and-limitations"></a>ベスト プラクティスと制限事項
 
-* 通知専用ボットは、ユーザーとの通信に事前メッセージを使用します。 詳細については、「[ボット向けの事前メッセージング](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)」を参照してください。
+* 通知専用ボットは、プロアクティブ メッセージングを使用してユーザーと通信します。 詳細 [については、「ボットのプロアクティブ メッセージング](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) 」を参照してください。

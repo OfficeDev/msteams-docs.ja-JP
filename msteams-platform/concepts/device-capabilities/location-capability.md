@@ -2,13 +2,14 @@
 title: 場所機能を統合する
 description: Teams JavaScript クライアント SDK を使用して場所の機能を活用する方法
 keywords: 場所マップ機能ネイティブ デバイスのアクセス許可
+ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: b941080eaece2cd2346bfa046ae97f855195ff20
-ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
+ms.openlocfilehash: de699d4edbf1c95f283cead9d12dcd2c98f8d3b9
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596197"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696858"
 ---
 # <a name="integrate-location-capabilities"></a>場所機能を統合する 
 

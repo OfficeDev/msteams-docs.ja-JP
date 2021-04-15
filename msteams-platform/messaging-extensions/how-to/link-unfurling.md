@@ -1,46 +1,48 @@
 ---
 title: リンク展開
 author: clearab
-description: Microsoft Teams アプリでメッセージング拡張機能を使用してリンクの分岐を実行する方法。
+description: Microsoft Teams アプリでメッセージング拡張機能を使用してリンク解除を実行する方法。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 0d488638e63b8ec78bfa5bed8cf6f4f037883fb1
-ms.sourcegitcommit: bf61ae5ad2afa4efdb0311158184d0cbb9c40174
+ms.openlocfilehash: 628c5e760a4bc038443a20714e6960f1ffe8a2ad
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "49845638"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696232"
 ---
 # <a name="link-unfurling"></a>リンク展開
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-> [!NOTE]
-> 現時点では、モバイル クライアントではリンクの分岐はサポートされていません。
-
-リンク展開を使用すると、特定のドメインの URL がメッセージの作成領域に貼り付けられたときに、アプリが `invoke` アクティビティを受信するように登録することができます。 作成 `invoke` メッセージ領域に貼り付けされた完全な URL が含まれるので、ユーザーがリンクを解除して追加の情報やアクションを提供できるカードで応答できます。 これは検索コマンドと非常に [似て機能し](~/messaging-extensions/how-to/search-commands/define-search-command.md)、URL は検索用語として機能します。
-
-Azure DevOps メッセージング拡張機能は、リンクの分岐を使用して、作業項目を指すメッセージ作成領域に貼り付けされた URL を検索します。 次のスクリーンショットでは、ユーザーが Azure DevOps の作業項目の URL に貼り付け、メッセージング拡張機能がカードに解決されています。
-
-![リンクの分岐の例](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
-
-## <a name="add-link-unfurling-to-your-app-manifest"></a>アプリ マニフェストにリンクの分岐を追加する
-
- リンク展開をアプリ マニフェストに追加するには、アプリ マニフェスト JSON のセクションに新しい `messageHandlers` `composeExtensions` 配列を追加します。 配列は、App Studio のヘルプを使用して追加するか、手動で追加できます。 たとえば、ドメイン一覧にはワイルドカードを含めできます `*.example.com` 。 これは、ドメインの 1 つのセグメントと正確に一致します。if you need to match `a.b.example.com` then use `*.*.example.com` .
+このドキュメントでは、App studio を使用して手動でアプリ マニフェストにリンク解除を追加する方法についてガイドします。 リンク展開を使用すると、特定のドメインの URL がメッセージの作成領域に貼り付けられたときに、アプリが `invoke` アクティビティを受信するように登録することができます。 作成メッセージ領域に貼り付けされた完全な URL が含まれているので、ユーザーがリンクを解除できるカードで応答し、追加情報やアクション `invoke` を提供できます。 これは、URL が検索用語として機能する検索コマンドと似ています。
 
 > [!NOTE]
-> 直接またはワイルドカードを使用して、制御の外部にあるドメインを追加しません。 たとえば、yourapp.onmicrosoft.comは有効ですが、*.onmicrosoft.comは無効です。 また、トップ レベル ドメインは禁止されています。 たとえば、*.com、*.org などです。
+> 現時点では、モバイル クライアントではリンクのリンク解除はサポートされていません。
 
-### <a name="using-app-studio"></a>App Studio を使用する場合
+Azure DevOps メッセージング拡張機能では、リンク解除を使用して、作業項目を指すメッセージの作成領域に貼り付け先の URL を探します。 次の図では、ユーザーが Azure DevOps の作業項目の URL を貼り付け、メッセージング拡張機能がカードに解決されています。
 
-1. App Studio の [マニフェスト エディター] タブで、アプリ マニフェストを読み込む。
-1. [ **メッセージングの拡張機能] ページ** で、次のスクリーンショットに示すように、[ **メッセージ** ハンドラー] セクションで探すドメインを追加します。
+![リンクの分岐解除の例](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
-![App Studio のメッセージ ハンドラー セクション](~/assets/images/link-unfurling.png)
+## <a name="add-link-unfurling-to-your-app-manifest"></a>アプリ マニフェストへのリンクのリンク解除の追加
 
-### <a name="manually"></a>手動
+リンク展開をアプリ マニフェストに追加するには、アプリ マニフェスト JSON のセクションに新しい `messageHandlers` `composeExtensions` 配列を追加します。 配列は、App Studio の助けを借りて、または手動で追加できます。 ドメインの一覧には、ワイルドカードを含め、たとえば、 を含めできます `*.example.com` 。 これは、ドメインの 1 つのセグメントと完全に一致します。一致する必要がある場合は、 `a.b.example.com` を使用します `*.*.example.com` 。
 
-この方法でメッセージング拡張機能がリンクとやり取りするには、まず、次の例に示すアプリ マニフェストに配列を `messageHandlers` 追加する必要があります。 この例は完全なマニフェストではありません [。マニフェストの](~/resources/schema/manifest-schema.md) 完全な例については、マニフェスト リファレンスを参照してください。
+> [!NOTE]
+> Donot は、直接またはワイルドカードを使用して、コントロールに含まれているドメインを追加します。 たとえば、有効 `yourapp.onmicrosoft.com` ですが、 `*.onmicrosoft.com` 無効です。 また、トップ レベルのドメインは禁止されています。 たとえば `*.com` 、. `*.org`
+
+### <a name="add-link-unfurling-using-app-studio"></a>App Studio を使用してリンクの分岐を解除する
+
+1. Microsoft **Teams クライアントから App Studio** を開き、[マニフェスト エディター] **タブを選択** します。
+1. アプリ マニフェストを読み込む。
+1. [メッセージング **拡張機能] ページ** で、探すドメインを [メッセージ ハンドラー] セクション **に追加** します。 次の図は、プロセスを説明しています。
+
+    ![App Studio の [メッセージ ハンドラー] セクション](~/assets/images/link-unfurling.png)
+    
+### <a name="add-link-unfurling-manually"></a>リンクの手動でのリンク解除の追加
+
+メッセージング拡張機能でリンクを操作するには、まず配列をアプリ マニフェスト `messageHandlers` に追加する必要があります。 次の例では、リンクの分岐を手動で追加する方法について説明します。 
+
 
 ```json
 ...
@@ -62,9 +64,11 @@ Azure DevOps メッセージング拡張機能は、リンクの分岐を使用�
 ...
 ```
 
+マニフェストの完全な例については、「マニフェスト参照」 [を参照してください](~/resources/schema/manifest-schema.md)。
+
 ## <a name="handle-the-composeextensionquerylink-invoke"></a>呼び出しの `composeExtension/queryLink` 処理
 
-アプリ マニフェストをリッスンするドメインを追加したら、呼び出し要求を処理するために Web サービス コードを更新する必要があります。 受け取った URL を使用してサービスを検索し、カードの応答を作成します。 複数のカードで応答する場合は、最初のカードだけが使用されます。
+アプリ マニフェストにドメインを追加した後、呼び出し要求を処理するために Web サービス コードを更新する必要があります。 受信した URL を使用してサービスを検索し、カード応答を作成します。 複数のカードで応答する場合は、最初のカード応答だけが使用されます。
 
 次のカードの種類がサポートされています。
 
@@ -73,7 +77,7 @@ Azure DevOps メッセージング拡張機能は、リンクの分岐を使用�
 * [Office 365 コネクタ カード](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [アダプティブ カード](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-概要 [については、「カードについて](~/task-modules-and-cards/what-are-cards.md) 」を参照してください。
+### <a name="example"></a>例
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -120,7 +124,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-これは、ボットに送信 `invoke` される例です。
+ボットに送信される送信の `invoke` 例を次に示します。
 
 ```json
 {
@@ -146,14 +150,14 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
           "sections": [
             {
               "activityTitle": "[85069]: Create a cool app",
-              "activityImage": "https://placekitten.com/200/200"
+              "activityImage&quot;: &quot;https://placekitten.com/200/200"
             },
             {
               "title": "Details",
               "facts": [
                 {
                   "name": "Assigned to:",
-                  "value": "[Larry Brown](mailto:larryb@example.com)"
+                  "value&quot;: &quot;[Larry Brown](mailto:larryb@example.com)"
                 },
                 {
                   "name": "State:",
@@ -170,3 +174,8 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 ```
 
 * * *
+
+## <a name="see-also"></a>関連項目 
+
+> [!div class="nextstepaction"]
+> [カードについて](~/task-modules-and-cards/what-are-cards.md)

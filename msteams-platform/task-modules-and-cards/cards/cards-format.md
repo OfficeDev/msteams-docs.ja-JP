@@ -2,13 +2,14 @@
 title: カード内のテキストの書式設定
 description: Microsoft Teams のカード テキストの書式設定について説明します。
 keywords: teams ボット カードの形式
+ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: d7016f8b954e885221c55bd6c29309fd90a1dcfc
-ms.sourcegitcommit: d41da0b608327829b902aded6bc85c0d0016d068
+ms.openlocfilehash: e6b8cc835780e03cf4e23eae31fa447c8a03c002
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "51475000"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696536"
 ---
 # <a name="format-cards-in-teams"></a>Teams でカードを書式設定する
 
@@ -111,7 +112,7 @@ Android では、アダプティブ カード マークダウンの書式設定�
 
 ### <a name="mention-support-within-adaptive-cards-v12"></a>アダプティブ カード v1.2 内でのサポートのメンション
 
-カード ベースのメンションは、Web、デスクトップ、モバイル クライアントでサポートされています。 ボットおよびメッセージング拡張機能の応答に対してアダプティブ カード本文内に @ メンションを追加できます。  カードに @ メンションを追加するには、チャネルとグループ チャットの会話でメッセージ ベースのメンションと同じ通知ロジックとレンダリングに [従います](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions )。
+カード ベースのメンションは、Web、デスクトップ、モバイル クライアントでサポートされています。 ボットおよびメッセージング拡張機能の応答に対して、アダプティブ カード本文内に @ メンションを追加できます。 カードに @ メンションを追加するには、チャネルとグループ チャットの会話でメッセージ ベースのメンションと同じ通知ロジックとレンダリングに [従います](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)。
 
 ボットとメッセージング拡張機能には [、TextBlock](https://adaptivecards.io/explorer/TextBlock.html) 要素と FactSet 要素のカード コンテンツ内にメンション [を含](https://adaptivecards.io/explorer/FactSet.html) めることはできません。
 
@@ -285,7 +286,7 @@ schema 要素内で、ユーザーにフィルター処理を求め、多数の�
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| ヘッダー (レベル 1 &ndash; 3) | **テキスト** | `### Text`|
+| ヘッダー (レベル 1 &ndash; 3) | **Text** | `### Text`|
 | 取り消し線 | ~~text~~ | `~~text~~` |
 | 順序なしリスト | <ul><li>テキスト</li><li>テキスト</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | 順序付きリスト | <ol><li>テキスト</li><li>テキスト</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -374,7 +375,7 @@ Android では、コネクタ カードの Markdown 書式は次のように表�
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| ヘッダー (レベル 1 &ndash; 3) | **テキスト** | `<h3>Text</h3>` |
+| ヘッダー (レベル 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | 取り消し線 | ~~text~~ | `<strike>text</strike>` |
 | 順序なしリスト | <ul><li>テキスト</li><li>テキスト</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 順序付きリスト | <ol><li>テキスト</li><li>テキスト</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -462,7 +463,7 @@ HTML タグは、ヒーロー カードやサムネイル カードなどの単�
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| ヘッダー (レベル 1 &ndash; 3) | **テキスト** | `<h3>Text</h3>` |
+| ヘッダー (レベル 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | 取り消し線 | ~~text~~ | `<strike>text</strike>` |
 | 順序なしリスト | <ul><li>テキスト</li><li>テキスト</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 順序付きリスト | <ol><li>テキスト</li><li>テキスト</li></ol> | `<ol><li>text</li><li>text</li></ol>` |

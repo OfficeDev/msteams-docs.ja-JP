@@ -1,63 +1,63 @@
 ---
-title: Power Virtual Agents chatbot を Teams に追加する
+title: Teams に Power Virtual Agents チャットボットを追加する
 author: laujan
-description: Teams プラットフォームでの Power Virtual Agent chatbot の統合
+description: Teams プラットフォームでの Power Virtual Agents チャットボットの統合
 ms.topic: how-to
 ms.author: lajanuar
-ms.openlocfilehash: 3f877505cb2ef20bbd74d236dc17816df04bbef1
-ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
+ms.openlocfilehash: 6103e3b58d7283eab6e9a9932f6dc7778d6fc697
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "49366869"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51697096"
 ---
-# <a name="integrate-a-power-virtual-agents-chatbot-with-microsoft-teams"></a>Power Virtual Agents chatbot を Microsoft Teams と統合する
+# <a name="integrate-a-power-virtual-agents-chatbot-with-microsoft-teams"></a>Power Virtual Agents チャットボットを Microsoft Teams に統合する
 
-[パワー仮想エージェント](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) は、コードを使用しないグラフィカルインターフェイスソリューションであり、チームのすべてのメンバーが、Teams プラットフォームと簡単に統合できる多彩な会話を作成することを可能にします。 Power Virtual Agent で作成されたすべてのコンテンツは、teams とパワー仮想エージェントの場合、Teams ネイティブチャットキャンバスでユーザーと連携して表示されます。 IT 管理者、ビジネスアナリスト、ドメインスペシャリスト、および熟練したアプリ開発者は、開発環境をセットアップしたり、web サービスを作成したり、Bot フレームワークに直接登録したりしなくても、チームのためのインテリジェントな仮想エージェントを設計、開発、および発行することができます。  「 [Microsoft Power Virtual エージェントを使用して Teams の chatbot を作成する](../what-are-bots.md#create-a-chatbot-for-teams-with-microsoft-power-virtual-agents) *」を参照してください*。
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) はコードなしガイド付きグラフィカル インターフェイス ソリューションで、チームのすべてのメンバーが Teams プラットフォームと簡単に統合できるリッチで会話型のチャットボットを作成できます。 Power Virtual Agents で作成されたコンテンツはすべて、Teams および Power Virtual Agents ボットで自然にレンダリングされ、Teams ネイティブ チャット キャンバスでユーザーと関わり合います。 IT 管理者、ビジネス アナリスト、ドメイン スペシャリスト、および熟練したアプリ開発者は、開発環境をセットアップしたり、Web サービスを作成したり、ボット フレームワークに直接登録したりすることなく、Teams のインテリジェント仮想エージェントを設計、開発、発行できます。  *「Microsoft* Power Virtual Agents [を使用して Teams 用チャットボットを作成する」を参照してください](../bot-features.md#bots-and-the-microsoft-power-virtual-agents)。
 
 > [!NOTE]
-> お客様の chatbot を Microsoft Teams に追加することによって、bot コンテンツやエンドユーザーチャットコンテンツなどの一部のデータが Microsoft Teams と共有されます (つまり、データは [組織のコンプライアンスと地理的または地域の境界](/power-virtual-agents/data-location)の外部に流れます)。 <br/>
-> 詳細については、「 [Microsoft Teams のセキュリティとコンプライアンス](/MicrosoftTeams/security-compliance-overview)」を参照してください。
+> チャットボットを Microsoft Teams に追加すると、ボット コンテンツやエンド ユーザー チャット コンテンツなどの一部のデータが Microsoft Teams と共有されます (つまり[](/power-virtual-agents/data-location)、データは組織のコンプライアンスや地理的または地域の境界外に流れる)。 <br/>
+> 詳細については [、「Microsoft Teams のセキュリティとコンプライアンス」を参照してください](/MicrosoftTeams/security-compliance-overview)。
 
-## <a name="make-your-chatbot-available-in-teams-via-the-power-virtual-agents-portal"></a>Power Virtual Agents ポータルを使用して、chatbot を Teams で利用できるようにする
+## <a name="make-your-chatbot-available-in-teams-via-the-power-virtual-agents-portal"></a>Power Virtual Agents ポータルを介して Teams でチャットボットを利用可能にする
 
-1. **最新の bot コンテンツを公開** します。  [Power Virtual Agents ポータル](https://powervirtualagents.microsoft.com)で chatbot を作成した後、Teams を少なくとも1回発行して Teams ユーザーが操作できるようにする必要があります。 「 [最新の bot コンテンツを発行する](/power-virtual-agents/publication-fundamentals-publish-channels#publish-the-latest-bot-content)」を参照してください。
+1. **最新のボット コンテンツを発行します**。  [Power Virtual Agents](https://powervirtualagents.microsoft.com)ポータルでチャットボットを作成した後、Teams ユーザーがボットを操作するには、少なくとも 1 回はボットを発行する必要があります。 「最新 [のボット コンテンツを発行する」を参照してください](/power-virtual-agents/publication-fundamentals-publish-channels#publish-the-latest-bot-content)。
 
-![パワー仮想エージェントポータルでの発行](../../assets/images/pva-publish.png)
+![Power Virtual Agents ポータルで発行する](../../assets/images/pva-publish.png)
 
-2. **Teams チャネルを構成** します。 Bot を発行した後、teams チャネルを追加して、Teams ユーザーがこの bot を利用できるようにすることができます。
+2. **Teams チャネルを構成します**。 ボットを発行した後、Teams チャネルを追加して、ボットを Teams ユーザーが利用できます。
 
-![電源仮想エージェントポータルのチャネル](../../assets/images/pva-channels.png)
+![電源仮想エージェント ポータルのチャネル](../../assets/images/pva-channels.png)
 
-3. **Chatbot のアプリ Id を生成** します。  Teams のチャネルが chatbot に正常に追加されると、ダイアログボックスに **アプリ Id** が生成されます。 アプリ Id は、ボットに対して一意の Microsoft 生成された識別子です。  アプリ Id をコピーして保存する-Teams 用のアプリパッケージを作成するには、後で必要になります。
+3. **チャットボットのアプリ ID を生成します**。  Teams チャネルがチャットボットに正常に追加されると、ダイアログ ボックスに **アプリ ID** が生成されます。 アプリ ID は、ボットの Microsoft が生成した一意の識別子です。  アプリ ID をコピーして保存します。後で Teams 用のアプリ パッケージを作成する必要があります。
 
-## <a name="add-your-bot-to-teams-using-app-studio"></a>アプリ Studio を使用して bot を Teams に追加する
+## <a name="add-your-bot-to-teams-using-app-studio"></a>App Studio を使用してボットを Teams に追加する
 
-Teams インスタンスで [カスタムアプリのアップロードが有効になっ](/microsoftteams/admin-settings) ている場合は、Teams アプリ Studio を使用して、chatbot を直接アップロードし、すぐに使用を開始することができます。 Chatbot を共有する場合は、管理者がテナントのアプリカタログで bot を利用できるようにするか、他のアプリパッケージを送信して個別にアップロードするように依頼することができます。
+Teams [インスタンスでカスタム アプリ](/microsoftteams/admin-settings) のアップロードが有効になっている場合は、Teams App Studio を使用してチャットボットを直接アップロードし、その使用を直に開始できます。 チャットボットを共有する場合は、管理者がボットをテナント アプリ カタログで利用できるよう要求するか、他のユーザーにアプリ パッケージを送信して個別にアップロードを依頼することもできます。
 
-1. **Teams にアプリ Studio をインストール** します。 App Studio は teams ストアからインストールできる Teams アプリであり、Teams でのボットの作成と登録を簡単にします。 
+1. **Teams に App Studio をインストールします**。 App Studio は Teams ストアからインストールできる Teams アプリで、Teams でのボットの作成と登録を簡略化します。 
 
-  * Teams インスタンスの左側のナビゲーションバーの下部にある [app store] アイコンを選択し、 **アプリ Studio** を検索します。
+  * Teams インスタンスの左側のナビゲーション バーの下部からアプリ ストア アイコンを選択し **、App Studio を検索します**。
 >
 
 &emsp;&emsp; <img  width="450px" alt="Finding App Studio in the Store" src="/msteams-docs/msteams-platform/assets/images/get-started/app-studio-store.png"/>   
 
-  * [ **App Studio** ] タイルを選択し、ポップアップダイアログボックスの [ **インストール** ] を選択します。
+  * [App **Studio] タイルを** 選択し **、ポップアップ** ダイアログ ボックスで [インストール] を選択します。
 >
 &emsp;&emsp; <img  width="450px" alt="Installing App Studio" src="../../assets/images/get-started/app-studio-install.png"/>
 
-2. **App Studio で Teams アプリマニフェストを作成** します。  Teams のボットは、ボットとその機能に関する基本的な情報を提供するアプリマニフェスト (JSON) ファイルによって定義されます。 **アプリ Studio** で [**マニフェストエディター**] を選択して   =>  **、新しいアプリを作成** します。
-3. **Bot の詳細を追加** します。 各フィールドの詳細については、「 [マニフェストスキーマ定義](../../resources/schema/manifest-schema.md)」を参照してください。 すべての必須フィールドに入力してください。
-4. **Bot をセットアップ** します。 [ **ボット** ] タブに移動して、[ **セットアップ** ] ボタンを選択し、[ **既存のボット**] を選択して、bot 名を入力します。
-5. **アプリ Id を追加** します。 **別の bot id に接続** して、先ほどコピーした **アプリ id** に貼り付けます。 [範囲] で [ **個人** ] を選択し、[ **保存**] を選択します。
-6. **Bot の有効なドメインを追加** します。  この手順は、bot がサインインすることをユーザーに要求する場合にのみ必要です。 [ **ドメインとアクセス許可** ] に移動し、[ **有効なドメイン** ] フィールドに次を入力します。
+2. **App Studio で Teams アプリ マニフェストを作成します**。  Teams のボットは、ボットとその機能に関する基本情報を提供するアプリ マニフェスト (JSON) ファイルによって定義されます。 [App **Studio] で**[マニフェスト エディター **] [**   =>  **新しいアプリを作成する] を選択します**。
+3. **ボットの詳細を追加します**。 各フィールドの詳細については、「マニフェスト スキーマ定義 [」を参照してください](../../resources/schema/manifest-schema.md)。 必ずすべての必須フィールドに入力してください。
+4. **ボットをセットアップします**。 [ボット] **タブに移動し** 、[セットアップ] ボタン **を** 選択し、[既存のボット] **を** 選択し、ボット名を入力します。
+5. **アプリ ID を追加します**。[別の **ボット ID に接続する] に移動し** 、前にコピーした **アプリ ID** に貼り付けます。 [スコープ] で [個人用] **を選択** し、[保存] を **選択します**。
+6. **ボットの有効なドメインを追加します**。  この手順は、ボットがユーザーにサインインを要求する場合にのみ必要です。 [ドメイン **とアクセス許可] に移動し、[** 有効な **ドメイン** ] フィールドに次の値を入力します。
 
 ```bash
 token.botframework.com
 ```
 
-7.  **Bot をテストして配布** します。 [ **テストと配布** ] タブを選択し、[ **インストール** ] を選択して、自分の Teams インスタンスに bot を直接追加します。 必要に応じて、完成したアプリパッケージをダウンロードして Teams ユーザーと共有するか、管理者に提供して、テナントのアプリカタログで bot を使用できるようにすることができます。
-8. **チャットを開始** します。 Power Virtual Agents チャットボットを Teams に追加するためのセットアッププロセスは完了しています。 これで、個人のチャットで bot との会話を開始できるようになります。
+7.  **ボットをテストして配布します**。 [テストと **配布] タブを選択** し、[インストール] **を選択** して、ボットを Teams インスタンスに直接追加します。 必要に応じて、完成したアプリ パッケージをダウンロードして Teams ユーザーと共有したり、管理者に提供して、テナント アプリ カタログでボットを利用することもできます。
+8. **チャットを開始します**。 Power Virtual Agents チャット ボットを Teams に追加するセットアップ プロセスは完了です。 これで、個人用チャットでボットとの会話を開始できます。
 
 > [!div class="nextstepaction"]
-> [詳細については、「Power Virtual Agents bot を公開する」を参照してください。](/power-virtual-agents/publication-fundamentals-publish-channels)
+> [詳細: Power Virtual Agents ボットを発行する](/power-virtual-agents/publication-fundamentals-publish-channels)

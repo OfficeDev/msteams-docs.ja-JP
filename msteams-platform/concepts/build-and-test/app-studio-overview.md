@@ -3,12 +3,12 @@ title: Microsoft Teams 用の App Studio を開始する
 description: App Studio を使用して Microsoft Teams で優れたアプリのビルドを開始する
 keywords: App Studio Teams の開始
 ms.topic: overview
-ms.openlocfilehash: f9b1763fdd616485a08a059a89f6792cbabfce54
-ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.openlocfilehash: d275e78909fe35a6032bf67cb7454396f3dbd7af
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634510"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696305"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Microsoft Teams 用の App Studio を使用してアプリをすばやく開発する
 
@@ -101,6 +101,9 @@ Bot Framework にボットをまだ登録していない場合は、*[Register]*
 * Teams クライアントに表示され、ユーザーの要求に含まれているパラメーターの名前
 * ユーザー フレンドリなタイトル
 * 任意の説明
+
+> [!NOTE]
+> アプリ スタジオを使用してメッセージング拡張機能を作成するには、「 [アプリ スタジオを使用してメッセージング拡張機能を作成する」を参照してください](~/resources/create-messaging-extension-using-appstudio.md)。
 
 #### <a name="test-and-distribute"></a>テストと配布
 

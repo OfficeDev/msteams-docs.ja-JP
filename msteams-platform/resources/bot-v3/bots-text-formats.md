@@ -2,13 +2,14 @@
 title: 会話でサポートされるテキストの書式設定
 description: ボットの会話でのテキストの書式設定のサポートについて説明します。
 keywords: ボットの会話メッセージング
+ms.topic: how-to
 ms.date: 03/29/2018
-ms.openlocfilehash: 3ef51a7f6e4e923d83ab746a2dfa1f22464efb93
-ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
+ms.openlocfilehash: d8cb4ffd18871737ed4a64443800938f424910c9
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596267"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696060"
 ---
 # <a name="formatting-bot-messages"></a>ボット メッセージの書式設定
 
@@ -78,7 +79,7 @@ Microsoft Teams では、Markdown タグと XML (HTML) 書式タグのサブセ�
 | --- | --- | --- | --- |
 | bold | **text** | `**text**` | `<strong>text</strong>` |
 | italic | *text* | `*text*` | `<em>text</em>` |
-| ヘッダー (レベル 1 &ndash; 3) | **テキスト** | `### Text` | `<h3>Text</h3>` |
+| ヘッダー (レベル 1 &ndash; 3) | **Text** | `### Text` | `<h3>Text</h3>` |
 | 取り消し線 | ~~text~~ | `~~text~~` | `<strike>text</strike>` |
 | 順序なしリスト | <ul><li>テキスト</li><li>テキスト</li></ul> | `* text`<br>`* text` | `<ul><li>text</li><li>text</li></ul>` |
 | 順序付きリスト | <ol><li>テキスト</li><li>テキスト</li></ol> | `1. text`<br>`2. text` | `<ol><li>text</li><li>text</li></ol>` |

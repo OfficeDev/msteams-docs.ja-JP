@@ -1,27 +1,29 @@
 ---
-title: ボットのチーム固有のコンテキストを取得する
+title: ボットの Teams 固有のコンテキストを取得する
 author: laujan
 description: 会話の名簿、詳細、チャネル リストなど、ボットの Microsoft Team の特定のコンテキストを取得する方法。
-ms.topic: overview
+ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: dfbf5e1638a2397492714b1e1945721450428d63
-ms.sourcegitcommit: 0206ed48c6a287d14aec3739540194a91766f0a3
+ms.openlocfilehash: 9703a063ccccc8409239d5826a4935070b307edd
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51378337"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696330"
 ---
-# <a name="get-teams-specific-context-for-your-bot"></a>ボットのチーム固有のコンテキストを取得する
+# <a name="get-teams-specific-context-for-your-bot"></a>ボットの Teams 固有のコンテキストを取得する
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
 ボットは、インストールされているチームまたはチャットに関する追加のコンテキスト データにアクセスできます。 この情報は、ボットの機能を強化し、よりカスタマイズされたエクスペリエンスを提供するために使用できます。
 
-## <a name="fetching-the-roster-or-user-profile"></a>名簿またはユーザー プロファイルのフェッチ
+## <a name="fetch-the-roster-or-user-profile"></a>名簿またはユーザー プロファイルを取得する
 
-ボットは、Teams ユーザー ID や Azure Active Directory (Azure AD) 情報 (名前や objectId など) を含む、メンバーの一覧とその基本的なプロファイルを照会できます。 この情報を使用して、ユーザー ID を関連付け、Azure AD 資格情報を使用してタブにログインしたユーザーがチームのメンバーであるかどうかを確認できます。 次のサンプル コードでは、名簿の取得にページ化されたエンドポイントを使用します。 会話メンバーを取得する場合、最小または最大のページ サイズは実装によって異なります。 50 未満のページ サイズは 50 として扱い、500 より大きいページ サイズは 500 に制限されます。 ページ以外のバージョンを使用することもできますが、大規模なチームでは使用できません。使用する必要があります。 *詳細については*[、「チーム/チャット](~/resources/team-chat-member-api-changes.md)メンバーをフェッチする Teams ボット API への変更」を参照してください。
+ボットは、Teams ユーザー ID や Azure Active Directory (AAD) 情報 (名前や objectId など) を含む、メンバーのリストとその基本的なユーザー プロファイルを照会できます。 この情報を使用して、ユーザー ID を関連付けできます。 たとえば、ユーザーが AAD 資格情報を使用してタブにログインしたかどうかを確認するには、チームのメンバーです。 会話メンバーを取得する場合、最小または最大のページ サイズは実装によって異なります。 50 未満のページ サイズは 50 として扱い、500 より大きい場合は 500 に制限されます。 ページ以外のバージョンを使用する場合でも、大規模なチームではこのバージョンは使用できません。 詳細については、「チームまたはチャット メンバーをフェッチする Teams Bot API への変更 [」を参照してください](~/resources/team-chat-member-api-changes.md)。
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+次のサンプル コードでは、ページ化されたエンドポイントを使用して、名簿をフェッチします。
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -42,7 +44,7 @@ public class MyBot : TeamsActivityHandler
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -79,7 +81,7 @@ async def _show_members(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-エンドポイントとして値を使用して、GET 要求を `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}` 直接 `serviceUrl` 発行できます。 値は安定 `serviceUrl` している傾向がありますが、変更される可能性があります。 新しいメッセージが届いた場合、ボットは保存されている値を確認する必要があります `serviceUrl` 。 応答ペイロードは、ユーザーが正規ユーザーか匿名ユーザーかも示します。
+エンドポイントとして値を使用して、GET 要求を `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}` 直接 `serviceUrl` 発行できます。 値は安定 `serviceUrl` していますが、変更できます。 新しいメッセージが届いた場合、ボットは保存されている値を確認する必要があります `serviceUrl` 。 応答ペイロードは、ユーザーが正規ユーザーか匿名ユーザーかも示します。
 
 ```http
 GET /v3/conversations/19:meeting_N2QzYTA3YmItYmMwOC00OTJmLThkYzMtZWMzZGU0NGIyZGI0@thread.v2/pagedmembers?pageSize=100&continuationToken=asdfasdfalkdsjfalksjdf
@@ -120,11 +122,15 @@ Response body
 
 * * *
 
+名簿またはユーザー プロファイルを取得した後、1 つのメンバーの詳細を取得できます。 現在、チャットまたはチームの 1 人または複数のメンバーの情報を取得するには、Microsoft Teams ボット API を使用して、C#または TypeScript API 用に `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` 使用します。
+
 ## <a name="get-single-member-details"></a>単一のメンバーの詳細を取得する
 
 Teams ユーザー ID、UPN、または AAD オブジェクト ID を使用して、特定のユーザーの詳細を取得できます。
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+次のサンプル コードは、単一のメンバーの詳細を取得するために使用されます。
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -136,7 +142,7 @@ public class MyBot : TeamsActivityHandler
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -164,9 +170,9 @@ async def _show_members(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-エンドポイントとして値を使用して、GET 要求を `/v3/conversations/{conversationId}/members/{userId}` 直接 `serviceUrl` 発行できます。 値は安定 `serviceUrl` している傾向がありますが、変更される可能性があります。 新しいメッセージが届いた場合、ボットは保存されている値を確認する必要があります `serviceUrl` 。 これは、通常のユーザーと匿名ユーザーに使用できます。
+エンドポイントとして値を使用して、GET 要求を `/v3/conversations/{conversationId}/members/{userId}` 直接 `serviceUrl` 発行できます。 値は安定 `serviceUrl` していますが、変更できます。 新しいメッセージが届いた場合、ボットは保存されている値を確認する必要があります `serviceUrl` 。 これは、通常のユーザーと匿名ユーザーに使用できます。
 
-通常のユーザーの応答サンプルを以下に示します。
+通常のユーザーの応答サンプルを次に示します。
 
 ```http
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc
@@ -184,7 +190,7 @@ Response body
 }
 ```
 
-匿名ユーザーの応答を以下に示します。
+匿名ユーザーの応答サンプルを次に示します。
 
 ```http
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/<anonymous user id>"
@@ -200,11 +206,15 @@ Response body
 
 * * *
 
+1 人のメンバーの詳細を取得した後、チームの詳細を取得できます。 現時点では、チームの情報を取得するには、Microsoft Teams ボット API を使用して、C#または `TeamsInfo.GetMemberDetailsAsync` `TeamsInfo.getTeamDetails` TypeScript 用に使用します。
+
 ## <a name="get-teams-details"></a>チームの詳細を取得する
 
-チームにインストールすると、ボットは、Azure のグループ ID を含むそのチームに関するメタデータADできます。
+チームにインストールすると、ボットは AAD グループ ID を含むそのチームに関するメタデータを照会できます。
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+チームの詳細を取得するには、次のサンプル コードを使用します。
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -222,7 +232,7 @@ public class MyBot : TeamsActivityHandler
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -256,7 +266,7 @@ async def _show_details(self, turn_context: TurnContext):
 
 # <a name="json"></a>[JSON](#tab/json)
 
-エンドポイントとして値を使用して、GET 要求を `/v3/teams/{teamId}` 直接 `serviceUrl` 発行できます。 値は安定 `serviceUrl` している傾向がありますが、変更される可能性があります。 新しいメッセージが届いた場合、ボットは保存されている値を確認する必要があります `serviceUrl` 。
+エンドポイントとして値を使用して、GET 要求を `/v3/teams/{teamId}` 直接 `serviceUrl` 発行できます。 値は安定 `serviceUrl` していますが、変更できます。 新しいメッセージが届いた場合、ボットは保存されている値を確認する必要があります `serviceUrl` 。
 
 ```http
 GET /v3/teams/19:ja0cu120i1jod12j@skype.net
@@ -271,16 +281,19 @@ Response body
 
 * * *
 
+チームの詳細を取得した後、チーム内のチャネルの一覧を取得できます。 現時点では、チーム内のチャネルの一覧の情報を取得するには、Microsoft Teams ボット API を使用して、C#または `TeamsInfo.GetTeamChannelsAsync` `TeamsInfo.getTeamChannels` TypeScript API に使用します。
+
 ## <a name="get-the-list-of-channels-in-a-team"></a>チーム内のチャネルの一覧を取得する
 
 ボットは、チーム内のチャネルの一覧を照会できます。
 
 > [!NOTE]
->
->* ローカライズを許可するために、既定の一般チャネル `null` の名前が返されます。
->* General チャネルのチャネル ID は、常にチーム ID と一致します。
+> * ローカライズを許可するために、既定の一般チャネル `null` の名前が返されます。
+> * General チャネルのチャネル ID は、常にチーム ID と一致します。
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+チーム内のチャネルの一覧を取得するには、次のサンプル コードを使用します。
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -294,7 +307,7 @@ public class MyBot : TeamsActivityHandler
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -327,7 +340,7 @@ async def _show_channels(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-エンドポイントとして値を使用して、GET 要求を `/v3/teams/{teamId}/conversations` 直接 `serviceUrl` 発行できます。 値は安定 `serviceUrl` している傾向がありますが、変更される可能性があります。 新しいメッセージが届いた場合、ボットは保存されている値を確認する必要があります `serviceUrl` 。
+エンドポイントとして値を使用して、GET 要求を `/v3/teams/{teamId}/conversations` 直接 `serviceUrl` 発行できます。 値は安定 `serviceUrl` していますが、変更できます。 新しいメッセージが届いた場合、ボットは保存されている値を確認する必要があります `serviceUrl` 。
 
 ```http
 GET /v3/teams/19%3A033451497ea84fcc83d17ed7fb08a1b6%40thread.skype/conversations
@@ -353,3 +366,8 @@ Response body
 * * *
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
+
+## <a name="next-step"></a>次の手順
+
+> [!div class="nextstepaction"]
+> [ボットを介してファイルを送受信する](~/bots/how-to/bots-filesv4.md)

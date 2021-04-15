@@ -1,77 +1,78 @@
 ---
-title: Bot メッセージ形式
-description: Bot メッセージの書式設定の詳細について説明します。
-keywords: teams のシナリオチャネルの会話メッセージ
+title: ボット メッセージの形式
+description: ボット メッセージの書式設定の詳細について説明します。
+keywords: teams シナリオ チャネルの会話ボット メッセージ
+ms.topic: reference
 ms.date: 05/20/2019
-ms.openlocfilehash: eb0d0303d2b414ff84beab73055be5f057fff11c
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 4eccc8af8f2cdad153998a13502df2a1baf9ceec
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675106"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696620"
 ---
-# <a name="message-formatting-for-bots"></a>Bot のメッセージ形式
+# <a name="message-formatting-for-bots"></a>ボットのメッセージの書式設定
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-オプション[`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message)のプロパティを設定して、メッセージのテキストコンテンツの表示方法を制御することができます。
+省略可能なプロパティを設定して、メッセージのテキスト コンテンツのレンダリング方法 [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) を制御できます。
 
-Microsoft Teams では、次の書式設定オプションをサポートしています。
+Microsoft Teams では、次の書式設定オプションがサポートされています。
 
-| TextFormat の値 | 説明 |
+| TextFormat 値 | 説明 |
 | --- | --- |
-| 標準 | 書式をまったく適用せずに、テキストを raw テキストとして処理する必要があります。 |
-| markdown | テキストは Markdown 書式設定として扱われ、必要に応じてチャネル上でレンダリングされます。サポートされているスタイルの[テキストコンテンツの書式設定](#formatting-text-content)を参照してください。 |
-| xml-rpc | テキストは単純な XML マークアップです。サポートされているスタイルの[テキストコンテンツの書式設定](#formatting-text-content)を参照してください。 |
+| プレーン | テキストは、書式が適用されずに生テキストとして扱われる必要があります。 |
+| markdown | テキストは Markdown 書式設定として扱い、必要に応じてチャネルにレンダリングする必要があります。「サポート [されているスタイルのテキスト コンテンツ](#formatting-text-content) の書式設定」を参照してください。 |
+| xml | テキストは単純な XML マークアップです。「サポート [されているスタイルのテキスト コンテンツ](#formatting-text-content) の書式設定」を参照してください。 |
 
-## <a name="formatting-text-content"></a>テキストコンテンツの書式設定
+## <a name="formatting-text-content"></a>テキスト コンテンツの書式設定
 
-Microsoft Teams では、Markdown と XML (HTML) 書式設定タグのサブセットをサポートしています。
+Microsoft Teams では、Markdown タグと XML (HTML) 書式タグのサブセットがサポートされています。
 
 現時点では、次の制限が適用されます。
 
-* テキストのみのメッセージが表の書式設定をサポートしていない
-* リッチカードは、title または副題のプロパティではなく、text プロパティのみをサポートしています。
-* リッチカードでは、Markdown または表の書式設定はサポートされていません。
+* テキスト専用メッセージはテーブルの書式設定をサポートしません
+* リッチ カードは、タイトルまたは字幕プロパティではなく、text プロパティの書式設定のみをサポートします。
+* リッチ カードは Markdown またはテーブルの書式設定をサポートしていない
 
 ## <a name="cross-platform-support"></a>クロスプラットフォームのサポート
 
-Microsoft Teams でサポートされているすべてのプラットフォームで書式設定が機能することを確認するために、一部のスタイルは現在すべてのプラットフォームでサポートされていないことに注意してください。
+書式設定が Microsoft Teams でサポートされているすべてのプラットフォームで確実に機能するには、一部のスタイルが現在すべてのプラットフォームでサポートされていない点に注意してください。
 
-| Style                     | テキストのみのメッセージ | リッチカード (XML のみ) |
+| Style                     | テキスト専用メッセージ | リッチ カード (XML のみ) |
 | ---                       | :---: | :---: |
 | bold                      | ✔ | ✖ |
 | italic                    | ✔ | ✔ |
-| ヘッダー (レベル 1&ndash;3) | ✖ | ✔ |
-| 打ち消し             | ✖ | ✔ |
-| 段落罫線           | ✖ | ✖ |
+| ヘッダー (レベル 1 &ndash; 3) | ✖ | ✔ |
+| 取り消し線             | ✖ | ✔ |
+| 水平ルール           | ✖ | ✖ |
 | 順序なしリスト            | ✖ | ✔ |
 | 順序付きリスト              | ✖ | ✔ |
-| 書式設定済みのテキスト         | ✔ | ✔ |
+| 事前に書式設定されたテキスト         | ✔ | ✔ |
 | blockquote                | ✔ | ✔ |
 | hyperlink                 | ✔ | ✔ |
 | 画像リンク                | ✔ | ✖ |
 
-## <a name="support-by-individual-platform"></a>個別のプラットフォームによるサポート
+## <a name="support-by-individual-platform"></a>個々のプラットフォームによるサポート
 
-テキストの書式設定のサポートは、メッセージの種類およびプラットフォームによって異なります。
+テキストの書式設定のサポートは、メッセージの種類やプラットフォームによって異なります。
 
-### <a name="text-only-messages"></a>テキストのみのメッセージ
+### <a name="text-only-messages"></a>テキスト専用メッセージ
 
 | Style                     | Desktop | iOS | Android |
 | ---                       | :---: | :---: | :---: |
 | bold                      | ✔ | ✔ | ✔ |
 | italic                    | ✔ | ✔ | ✔ |
-| ヘッダー (レベル 1&ndash;3) | ✖ | ✖ | ✖ |
-| 打ち消し             | ✔ | ✔ | ✖ |
-| 段落罫線           | ✖ | ✖ | ✖ |
+| ヘッダー (レベル 1 &ndash; 3) | ✖ | ✖ | ✖ |
+| 取り消し線             | ✔ | ✔ | ✖ |
+| 水平ルール           | ✖ | ✖ | ✖ |
 | 順序なしリスト            | ✔ | ✖ | ✖ |
 | 順序付きリスト              | ✔ | ✖ | ✖ |
-| 書式設定済みのテキスト         | ✔ | ✔ | ✔ |
+| 事前に書式設定されたテキスト         | ✔ | ✔ | ✔ |
 | blockquote                | ✔ | ✔ | ✔ |
 | hyperlink                 | ✔ | ✔ | ✔ |
 | 画像リンク                | ✔ | ✔ | ✔ |
 
-### <a name="cards"></a>Lcc
+### <a name="cards"></a>カード
 
-カードのサポートについては、[カード形式](~/task-modules-and-cards/cards/cards-format.md)を参照してください。
+カードの [サポートについては、「カードの書式設定](~/task-modules-and-cards/cards/cards-format.md) 」を参照してください。

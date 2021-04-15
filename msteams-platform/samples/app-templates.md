@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: Microsoft Teams テンプレートのサンプル デモ
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 47fb1748f0c88edd2233c4e17aa50d235818d609
-ms.sourcegitcommit: 2de062dd2258147cff8d6a3cadd8839890d9791a
+ms.openlocfilehash: 58e7e1711ef4075841d1c3c41d184ad0e861b194
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "51612651"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696284"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 用のアプリ テンプレート
 
@@ -480,6 +480,17 @@ Poll は、チャットまたはチャネルで投票をすばやく作成して
 
 ![応答のサンプル ビュー](../assets/images/quick-responses.png)
 
+## <a name="quiz--9734"></a>クイズ&#9734;
+
+Quiz はカスタム [Teams メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md) アプリで、チャットまたはチャネル内にクイズを作成し、知識チェックと瞬時の結果を得ることができます。 Quiz for, In-class and offline exams, Knowledge check in team, and for fun quizs in a team. クイズ アプリは、Teams デスクトップ、ブラウザー、iOS、Android クライアントなど、複数のプラットフォームでサポートされています。 このアプリは、既存の Microsoft 365 サブスクリプションの一部として展開する準備が整いました。
+
+[GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-quiz)
+
+:::row:::
+  :::column span="1":::
+    ![Teams ビューでクイズを作成する](../assets/images/quiz-app-template-compose-view.gif)  
+:::column-end:::
+:::row-end:::
 
 ## <a name="rapid-assist"></a>Rapid Assist
 
@@ -620,6 +631,18 @@ Survey は、チャットまたはチャネルで調査を作成してデータ�
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-timetally)
 
 ![Time Tally](../assets/images/11zon_gif.gif)
+
+## <a name="training--9734"></a>トレーニング &#9734;
+
+トレーニングは、 [ユーザー](../messaging-extensions/what-are-messaging-extensions.md) がチャットまたはチャネル内でトレーニングを公開し、オフラインでのナレッジ共有とスキルアップを行うカスタム Teams メッセージング拡張機能アプリです。 アプリは、デスクトップ、ブラウザー、iOS、Android など、複数の Teams プラットフォーム クライアントでサポートされています。 このアプリは、Microsoft 365 サブスクリプションの一部として展開する準備が整いました。
+
+[GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-training)
+
+:::row:::
+  :::column span="1":::
+    ![Teams ビューでトレーニングを作成する](../assets/images/training-app-template-compose-view.gif)  
+:::column-end:::
+:::row-end:::
 
 ## <a name="virtual-rounding"></a>Virtual Rounding
 

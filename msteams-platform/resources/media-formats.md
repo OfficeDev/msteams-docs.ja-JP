@@ -1,18 +1,18 @@
 ---
 title: ボットでサポートされているメディア形式
-description: Microsoft Teams のボットは、オーディオとビデオのコンテンツに対して次のメディア形式のみをサポートしています。
+description: Microsoft Teams のボットは、オーディオおよびビデオ コンテンツに対して次のメディア形式のみをサポートしています。
 ms.topic: reference
-keywords: Teams ボットのメディア形式
-ms.openlocfilehash: 1f6fe7abf33ae9b831a2c7a5315be3161ac6952d
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+keywords: teams ボットのメディア形式
+ms.openlocfilehash: ed0dfc8d96aa1a1af62686efded8564b7100e7c7
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014349"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696564"
 ---
 # <a name="supported-media-formats-for-bots"></a>ボットでサポートされているメディア形式
 
-Microsoft Teams のボットは、オーディオとビデオのコンテンツに対して次のメディア形式のみをサポートしています。
+Microsoft Teams のボットは、オーディオおよびビデオ コンテンツに対して次のメディア形式のみをサポートしています。
 
 | フォーマット | 詳細情報 |
 | --- | --- |
@@ -26,3 +26,8 @@ Microsoft Teams のボットは、オーディオとビデオのコンテンツ�
 | MP3 | https://en.wikipedia.org/wiki/MP3 |
 | Opus | http://opus-codec.org/ |
 | MP4 | https://en.wikipedia.org/wiki/MPEG-4 |
+
+## <a name="next-step"></a>次の手順
+
+> [!div class="nextstepaction"]
+> [チームまたはチャット メンバーをフェッチする Teams ボット API の変更](~/resources/team-chat-member-api-changes.md)

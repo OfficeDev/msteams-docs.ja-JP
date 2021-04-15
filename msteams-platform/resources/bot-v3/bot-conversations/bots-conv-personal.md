@@ -1,29 +1,30 @@
 ---
-title: ボットを使用した1対1の会話
-description: Microsoft Teams で bot との1対1の会話を行うエンドツーエンドのシナリオについて説明します。
-keywords: teams シナリオ1on1to1 会話 bot
+title: ボットとの 1 対 1 の会話
+description: Microsoft Teams でボットと 1 対 1 の会話を行うエンドツーエンドのシナリオについて説明します。
+keywords: teams シナリオ 1on1 1to1 会話ボット
+ms.topic: conceptual
 ms.date: 05/20/2019
-ms.openlocfilehash: e23bb98160125d7fdbb4521467e2f522d6b6ce40
-ms.sourcegitcommit: fdcd91b270d4c2e98ab2b2c1029c76c49bb807fa
+ms.openlocfilehash: 43b44d15b675db2fa6c38d6661858c4e0a595039
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "44801241"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696669"
 ---
-# <a name="have-a-personal-one-on-one-conversation-with-a-microsoft-teams-bot"></a>Microsoft Teams bot との個人的な (1 対 1) 会話がある
+# <a name="have-a-personal-one-on-one-conversation-with-a-microsoft-teams-bot"></a>Microsoft Teams ボットとの個人的な (1 対 1 の) 会話を行う
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Microsoft Teams を使用すると、ユーザーは、 [Microsoft Bot フレームワーク](/azure/bot-service/?view=azure-bot-service-3.0)上に構築された bot と直接会話することができます。 ユーザーは、[アプリの検索] ギャラリーでボットを検索して、個人の会話に備えて Teams の機能に追加することができます。 チームの所有者と適切なアクセス許可を持つユーザーは、チームのメンバーとして bot を追加することもできます (「[チームチャネルでの対話](~/resources/bot-v3/bot-conversations/bots-conv-channel.md)」を参照)。これは、チームのチャネルで利用できるようにするだけでなく、すべてのユーザーに対して個人用チャットを行うためにも使用できます。
+Microsoft Teams を使用すると、ユーザーは Microsoft Bot [Framework](/azure/bot-service/?view=azure-bot-service-3.0&preserve-view=true)上に構築されたボットと直接会話できます。 ユーザーは、[アプリの検出] ギャラリーでボットを見つけ、個人の会話のために Teams エクスペリエンスに追加できます。 適切なアクセス許可を持つチームの所有者とユーザーは、ボットをチーム メンバー[](~/resources/bot-v3/bot-conversations/bots-conv-channel.md)として追加することもできます (「チーム チャネルでの対話」を参照してください)。
 
-個人チャットは、ユーザーが bot を @mention する必要がないという点で、チャネルでのチャットとは異なります。 Bot が複数のコンテキスト (personal、groupChat または channel) で使用されている場合は、bot がグループチャットまたはチャネル内にあるかどうかを検出し、メッセージを少し異なる方法で処理する必要があります。 詳細について[は、「チームチャネルまたはグループチャットで対話する](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)」を参照してください。
+個人用チャットは、ユーザーがボットにアクセスする必要が@mention異なります。 ボットが複数のコンテキスト (個人用、groupChat、またはチャネル) で使用されている場合は、ボットがグループ チャットまたはチャネル内にあるか検出し、メッセージを少し異なる方法で処理する必要があります。 詳細 [については、「チーム チャネルまたはグループ チャットでの対話」](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) を参照してください。
 
-## <a name="designing-a-great-personal-bot"></a>大個人 bot の設計
+## <a name="designing-a-great-personal-bot"></a>偉大な個人ボットの設計
 
-Microsoft Teams の大部分では、ユーザーが必要とする情報を Teams の環境のコンテキスト内で取得することができます。 Bot との個人的な会話は、ボットとそのユーザーの間のプライベートなやりとりです。個人のコンテキストでそのユーザーに固有で、関連する情報を提供するための最適な方法です。 個人チャットのボットは、実際にはサービスと個人の間でのダイアログです。グループチャットまたはチャネル内の bot は、すべてをユーザーのグループにブロードキャストします。
+Microsoft Teams の偉大なボットは、ユーザーが Teams エクスペリエンスのコンテキスト内で必要な情報を取得するのに役立ちます。 ボットとの個人的な会話は、ボットとそのユーザー間のプライベートなやり取りです。個人のコンテキストで、そのユーザーに固有で関連性の高い情報を提供する最適な方法です。 個人用チャット内のボットは、実際にはサービスと個人の間のダイアログであり、グループ チャットまたはチャネル内のボットがグループのユーザーにすべてをブロードキャストします。
 
-作成する操作によっては、bot が複数のスコープで作業する必要があります-personal、groupChat、または teams。 複数のスコープをサポートする作業は最小限に抑えられます。 Teams では、すべてのスコープにおいて bot が機能するとは想定されていませんが、ボットが意味を持ち、サポートする任意の範囲でユーザー値を提供するようにしてください。
+作成するエクスペリエンスに応じて、ボットは個人、groupChat、チームなど、複数のスコープで作業する必要があります。 複数のスコープをサポートする作業は最小限です。 Teams では、ボットがすべてのスコープで機能するとは思ってはいありませんが、ボットが意味を持ち、サポートするために選択したスコープでユーザー値を提供する必要があります。
 
-## <a name="best-practice-welcome-messages-in-personal-conversations"></a>ベストプラクティス: 個人の会話でのウェルカムメッセージ
+## <a name="best-practice-welcome-messages-in-personal-conversations"></a>ベスト プラクティス: 個人的な会話でのウェルカム メッセージ
 
-Bot は、初めて、ユーザーが自分の bot との個人チャットを開始するために、最初に開始メッセージを個人チャットに[事前に送信](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)する必要があります。 (この推奨事項は、チャネルの最初の時点の連絡先には適用されません)。
+ボットは、 [ユーザー](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) がボットとの個人用チャットを初めて (初めて) 開始する場合にのみ、事前にウェルカム メッセージを個人チャットに送信する必要があります。 (この推奨事項は、チャネルの初回連絡先には適用されません)。

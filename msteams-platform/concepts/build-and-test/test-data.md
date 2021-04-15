@@ -4,12 +4,12 @@ description: Microsoft Teams Apps のOfficeテストを成功に向け、365 開
 ms.topic: how-to
 keywords: アプリ開発者プログラム チームのテスト
 ms.date: 11/01/2019
-ms.openlocfilehash: 9e23b9054f45ccff6c08b97c72f4d5375fef58ea
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: c702921b1c55570ca8e2869b95c00ae6ae4ebdf4
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634721"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696865"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>テスト データを Microsoft 365 テスト テナントに追加する
 
@@ -26,7 +26,15 @@ Microsoft 365 開発者サブスクリプションを使用すると、テスト
 > [!NOTE]
 > 使用するテナントの場合は、スクリプトを実行するためのグローバル管理者のアクセス許可を取得する必要があります。
 
-## <a name="enable-custom-app-sideloading"></a>カスタム アプリのサイドローディングを有効にする
+### <a name="optional-step-to-allow-upload-of-custom-apps"></a>カスタム アプリのアップロードを許可するオプションの手順
+
+既定では、テナント アプリ カタログにカスタム アプリをアップロードできるのは、グローバル管理者または teams サービス管理者のみです。 また、すべてのユーザーが自分で使用するためにカスタム アプリをアップロードしたり、テストのためにチームにアップロードしたりすることもできます。
+
+この設定を有効にするには、Teams 管理ポータルでグローバル アプリ セットアップ ポリシーを更新する必要があります。
+
+<img width="430px" src="~/assets/images/microsoft-teams-admin-center-screenshot.png" alt="Screenshot of App Setup Policy"/>
+
+## <a name="optional-step-to-enable-custom-app-sideloading"></a>カスタム アプリのサイドローディングを有効にするオプションの手順
 
 カスタム アプリサイドローディングの有効化はオプションです。 既定では、テナント アプリ カタログにカスタム アプリをアップロードできるのは、グローバル管理者または Teams サービス管理者のみです。 ユーザーが Teams にカスタム アプリをアップロードすることもできます。 詳細については [、「Teams でのアプリセットアップ ポリシーの管理」を参照してください](/microsoftteams/teams-app-setup-policies)。
 

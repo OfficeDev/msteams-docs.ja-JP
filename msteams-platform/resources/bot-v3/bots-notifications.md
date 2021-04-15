@@ -1,57 +1,58 @@
 ---
-title: Bot イベントを処理する
-description: Microsoft Teams でボットのイベントを処理する方法について説明します。
-keywords: teams の bot イベント
+title: ボット イベントの処理
+description: Microsoft Teams のボットでイベントを処理する方法について説明します。
+keywords: teams ボット イベント
 ms.date: 05/20/2019
+ms.topic: how-to
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 1161d21ee755cebe6ddb2a2d5a219f9538de77cf
-ms.sourcegitcommit: aca9990e1f84b07b9e77c08bfeca4440eb4e64f0
+ms.openlocfilehash: 0fdd30a8eed63ea83e15825b0bf097125b4b665d
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "49409051"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696613"
 ---
-# <a name="handle-bot-events-in-microsoft-teams"></a>Microsoft Teams で bot イベントを処理する
+# <a name="handle-bot-events-in-microsoft-teams"></a>Microsoft Teams でのボット イベントの処理
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Microsoft Teams は、bot がアクティブである範囲で発生した変更やイベントについて、bot に通知を送信します。 これらのイベントを使用して、次のようなサービスロジックをトリガーできます。
+Microsoft Teams は、ボットがアクティブなスコープで発生する変更やイベントに関する通知をボットに送信します。 これらのイベントを使用して、次のようなサービス ロジックをトリガーできます。
 
-* Bot がチームに追加されたときに開始メッセージをトリガーする
-* Bot がグループチャットに追加されたときに、グループ情報を照会およびキャッシュする
-* チームメンバーシップまたはチャネル情報のキャッシュされた情報を更新する
-* Bot が削除された場合にチームのキャッシュされた情報を削除する
-* Bot メッセージがユーザーによって好評になった場合
+* ボットをチームに追加するときにウェルカム メッセージをトリガーする
+* ボットがグループ チャットに追加された場合のグループ情報のクエリとキャッシュ
+* チーム メンバーシップまたはチャネル情報に関するキャッシュ情報を更新する
+* ボットが削除された場合、チームのキャッシュされた情報を削除する
+* ボット メッセージがユーザーに気に入らされた場合
 
-各 bot イベントは、 `Activity` `messageType` オブジェクトに含まれている情報を定義するオブジェクトとして送信されます。 受信メッセージの種類につい `message` ては、「 [メッセージの送受信](~/resources/bot-v3/bot-conversations/bots-conversations.md)」を参照してください。
+各ボット イベントは、オブジェクト `Activity` 内の情報を定義 `messageType` するオブジェクトとして送信されます。 種類のメッセージについては、「 `message` メッセージの [送受信」を参照してください](~/resources/bot-v3/bot-conversations/bots-conversations.md)。
 
-通常、チームおよびグループイベントは、通常は型から呼び出され、 `conversationUpdate` 追加の teams イベント情報がオブジェクトの一部として渡される `channelData` ため、イベントハンドラーは `channelData` teams `eventType` および追加のイベント固有のメタデータのペイロードを照会する必要があります。
+Teams イベントとグループ イベント (通常は型からトリガーされる) には、オブジェクトの一部として渡される Teams イベント情報が追加されるため、イベント ハンドラーは Teams のペイロードと追加のイベント固有のメタデータを照会する `conversationUpdate` `channelData` `channelData` `eventType` 必要があります。
 
-次の表に、ボットが受信してアクションを実行できるイベントを示します。
+次の表に、ボットが受け取ってアクションを実行できるイベントの一覧を示します。
 
-|型|ペイロードオブジェクト|Teams の eventType |説明|範囲|
+|種類|Payload オブジェクト|Teams eventType |説明|範囲|
 |---|---|---|---|---|
 | `conversationUpdate` |`membersAdded`| `teamMemberAdded`|[チームに追加されたメンバー](#team-member-or-bot-addition)| すべての |
-| `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|[メンバーがチームから削除されました](#team-member-or-bot-removed)| `groupChat` & `team` |
-| `conversationUpdate` | |`teamRenamed`| [チームの名前変更](#team-name-updates)| `team` |
+| `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|[メンバーがチームから削除された](#team-member-or-bot-removed)| `groupChat` & `team` |
+| `conversationUpdate` | |`teamRenamed`| [チームの名前が変更されました](#team-name-updates)| `team` |
 | `conversationUpdate` | |`channelCreated`| [チャネルが作成されました](#channel-updates)|`team` |
 | `conversationUpdate` | |`channelRenamed`| [チャネルの名前が変更されました](#channel-updates)|`team` |
 | `conversationUpdate` | |`channelDeleted`| [チャネルが削除されました](#channel-updates)|`team` |
-| `messageReaction` |`reactionsAdded`|| [Bot メッセージへの反応](#reactions)| すべての |
-| `messageReaction` |`reactionsRemoved`|| [Bot メッセージからの反力の削除](#reactions)| すべての |
+| `messageReaction` |`reactionsAdded`|| [ボット メッセージへの反応](#reactions)| すべての |
+| `messageReaction` |`reactionsRemoved`|| [ボット メッセージから削除された反応](#reactions)| すべての |
 
-## <a name="team-member-or-bot-addition"></a>チームメンバーまたはボットの追加
+## <a name="team-member-or-bot-addition"></a>チーム メンバーまたはボットの追加
 
-イベントは、 [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true) 追加されたチームのメンバーシップ更新に関する情報を受け取ったときに bot に送信されます。 また、ボットが特定の個人の会話に初めて追加されたときにも更新を受け取ります。 ユーザー情報 ( `Id` ) は bot に対して一意であることに注意してください。また、サービス (特定のユーザーへのメッセージの送信など) で将来使用するためにキャッシュすることができます。
+イベントは、追加されたチームのメンバーシップ更新に関する情報を受信すると、ボット [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true) に送信されます。 また、ボットが特定の個人の会話に初めて追加されたときにも更新を受け取ります。 ユーザー情報 ( ) はボットに対して一意であり、サービスで将来使用するためにキャッシュできます (特定のユーザーにメッセージを送信するなど `Id` )。
 
-### <a name="bot-or-user-added-to-a-team"></a>チームに追加された Bot またはユーザー
+### <a name="bot-or-user-added-to-a-team"></a>チームに追加されたボットまたはユーザー
 
-`conversationUpdate` `membersAdded` ユーザーがチームに bot が追加されるか、または bot が追加されたチームに新しいユーザーが追加されると、ペイロード内のオブジェクトを持つイベントが送信されます。 Microsoft Teams でも `eventType.teamMemberAdded` オブジェクトが追加さ `channelData` れます。
+ペイロード内のオブジェクトを含むイベントは、ボットがチームに追加された場合、またはボットが追加されたチームに新しいユーザーが追加された場合 `conversationUpdate` `membersAdded` に送信されます。 Microsoft Teams もオブジェクト `eventType.teamMemberAdded` に追加 `channelData` します。
 
-このイベントは両方の場合で送信されるため、オブジェクトを解析して、 `membersAdded` 追加がユーザーか bot 自体かを判断する必要があります。 後者の場合は、ユーザーが bot が提供する機能を理解できるように、 [開始メッセージ](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#best-practice-welcome-messages-in-teams) をチャネルに送信することをお勧めします。
+このイベントはどちらの場合も送信されますので、オブジェクトを解析して、追加がユーザーかボット自体かを `membersAdded` 判断する必要があります。 後者の場合、ベスト プラクティスは、ユーザーが[](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#best-practice-welcome-messages-in-teams)ボットが提供する機能をユーザーが理解できるよう、チャネルにウェルカム メッセージを送信する方法です。
 
-#### <a name="example-code-checking-whether-bot-was-the-added-member"></a>コード例: bot が追加されたメンバーであるかどうかを確認する
+#### <a name="example-code-checking-whether-bot-was-the-added-member"></a>コード例: ボットが追加されたメンバーであるかどうかを確認する
 
 ##### <a name="net"></a>.NET
 
@@ -91,7 +92,7 @@ bot.on('conversationUpdate', (msg) => {
 });
 ```
 
-#### <a name="schema-example-bot-added-to-team"></a>スキーマの例: チームに追加された Bot
+#### <a name="schema-example-bot-added-to-team"></a>スキーマの例: ボットがチームに追加されました
 
 ```json
 {
@@ -130,16 +131,16 @@ bot.on('conversationUpdate', (msg) => {
 }
 ```
 
-### <a name="user-added-to-a-meeting"></a>ユーザーが会議に追加されました
+### <a name="user-added-to-a-meeting"></a>会議に追加されたユーザー
 
-`conversationUpdate`ペイロード内のオブジェクトに対するイベントは、 `membersAdded` ユーザーが定期的な予約済みの会議に追加されたときに送信されます。 匿名ユーザーが会議に参加している場合でも、イベントの詳細が送信されます。 
+ペイロード `conversationUpdate` 内のオブジェクトを含むイベントは、ユーザーがプライベートスケジュールされた会議に追加 `membersAdded` された場合に送信されます。 匿名ユーザーが会議に参加した場合でも、イベントの詳細が送信されます。 
 
 > [!NOTE]
 >
->* 匿名ユーザーが会議に追加されると、メンバーが追加したペイロードオブジェクトにフィールドはありません `aadObjectId` 。
->* 匿名ユーザーが会議に追加されると、そのユーザーが `from` 別の発表者によって追加された場合でも、ペイロードのオブジェクトには常に会議の開催者の id が割り当てられます。
+>* 匿名ユーザーが会議に追加される場合、membersAdded ペイロード オブジェクトにはフィールド `aadObjectId` はありません。
+>* 匿名ユーザーが会議に追加された場合、匿名ユーザーが別の発表者によって追加された場合でも、ペイロード内のオブジェクトは常に会議開催者の `from` ID を持つ。
 
-#### <a name="schema-example-user-added-to-meeting"></a>スキーマの例: ユーザーが会議に追加されました
+#### <a name="schema-example-user-added-to-meeting"></a>スキーマの例: 会議に追加されたユーザー
 
 ```json
 {
@@ -180,14 +181,14 @@ bot.on('conversationUpdate', (msg) => {
 
 ```
 
-### <a name="bot-added-for-personal-context-only"></a>個人コンテキストのみに追加された Bot
+### <a name="bot-added-for-personal-context-only"></a>個人用コンテキスト用に追加されたボットのみ
 
-Bot は、 `conversationUpdate` ユーザーが `membersAdded` 個人チャット用に直接追加したを使用してを受信します。 この場合、ボットが受け取るペイロードにはオブジェクトが含まれていません `channelData.team` 。 この範囲に応じて、bot が異なる [ウェルカムメッセージ](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) を提供するようにする場合に備えて、これをフィルターとして使用する必要があります。
+ボットは、ユーザーが `conversationUpdate` 個人用 `membersAdded` チャットに直接追加すると、そのメッセージを受信します。 この場合、ボットが受け取るペイロードにはオブジェクトが含 `channelData.team` まれます。 スコープに応じてボットが別のウェルカム メッセージを提供する場合は、これを [フィルターとして使用](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) する必要があります。
 
 > [!NOTE]
-> 個人スコープのボットの場合、bot が削除されて `conversationUpdate` 再度追加された場合でも、bot はイベントを複数回受け取ります。 開発およびテストの場合は、ボットを完全にリセットできるヘルパー関数を追加すると便利です。 これを実装する方法の詳細については、 [Node.js 例](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) または [C# の例](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) を参照してください。
+> 個人用スコープボットの場合、ボットが削除され、再追加された場合でも、ボットはイベントを複数回 `conversationUpdate` 受信します。 開発とテストでは、ボットを完全にリセットできるヘルパー関数を追加すると便利です。 この実装 [Node.js詳細については](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) 、Node.js [C#例](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) または例を参照してください。
 
-#### <a name="schema-example-bot-added-to-personal-context"></a>スキーマの例: 個人コンテキストに追加された bot
+#### <a name="schema-example-bot-added-to-personal-context"></a>スキーマの例: 個人用コンテキストにボットを追加する
 
 ```json
 {
@@ -206,11 +207,11 @@ Bot は、 `conversationUpdate` ユーザーが `membersAdded` 個人チャッ�
   "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
   "from": {
     "id": "29:<USERID>",
-    "aadObjectId": "**_"
+    "aadObjectId": "***"
   },
   "conversation": {
     "conversationType": "personal",
-    "id": "_*_"
+    "id": "***"
   },
   "recipient": {
     "id": "28:<BOT ID>",
@@ -224,11 +225,11 @@ Bot は、 `conversationUpdate` ユーザーが `membersAdded` 個人チャッ�
 }
 ```
 
-## <a name="team-member-or-bot-removed"></a>チームメンバーまたは bot が削除されました
+## <a name="team-member-or-bot-removed"></a>チーム メンバーまたはボットが削除されました
 
-`conversationUpdate` `membersRemoved` ユーザーがチームから bot を削除したとき、または bot が追加されたチームからユーザーが削除されたときに、ペイロード内のオブジェクトを含むイベントが送信されます。 Microsoft Teams でも `eventType.teamMemberRemoved` オブジェクトが追加さ `channelData` れます。 オブジェクトと同様に、 `membersAdded` `membersRemoved` Bot のアプリ ID のオブジェクトを解析して、削除されたユーザーを特定する必要があります。
+ペイロード内のオブジェクトを含むイベントは、ボットがチームから削除されたか、ボットが追加されたチームからユーザーが削除されると `conversationUpdate` `membersRemoved` 送信されます。 Microsoft Teams もオブジェクト `eventType.teamMemberRemoved` に追加 `channelData` します。 オブジェクトと同様に、ボットのアプリ ID のオブジェクトを解析して、削除された `membersAdded` `membersRemoved` ユーザーを特定する必要があります。
 
-### <a name="schema-example-team-member-removed"></a>スキーマの例: チームメンバーが削除されました
+### <a name="schema-example-team-member-removed"></a>スキーマの例: チーム メンバーが削除されました
 
 ```json
 {
@@ -268,16 +269,16 @@ Bot は、 `conversationUpdate` ユーザーが `membersAdded` 個人チャッ�
 }
 ```
 
-### <a name="user-removed-from-a-meeting"></a>ユーザーが会議から削除された
+### <a name="user-removed-from-a-meeting"></a>会議から削除されたユーザー
 
-`conversationUpdate` `membersRemoved` ペイロード内のオブジェクトを持つイベントは、ユーザーが定期的な予約済み会議から削除されたときに送信されます。 匿名ユーザーが会議に参加している場合でも、イベントの詳細が送信されます。 
+ペイロード内のオブジェクトを含むイベントは、ユーザーがプライベートスケジュールされた会議から削除 `conversationUpdate` `membersRemoved` されると送信されます。 匿名ユーザーが会議に参加した場合でも、イベントの詳細が送信されます。 
 
 > [!NOTE]
 >
->_ 匿名ユーザーが会議から削除された場合、membersRemoved されたペイロードオブジェクトにフィールドはありません `aadObjectId` 。
->* 匿名ユーザーが会議から削除されると、その `from` 匿名ユーザーが別の発表者によって削除された場合でも、ペイロード内のオブジェクトは常に会議の開催者の id を持ちます。
+>* 匿名ユーザーが会議から削除されると、membersRemoved ペイロード オブジェクトにはフィールド `aadObjectId` はありません。
+>* 匿名ユーザーが会議から削除されると、匿名ユーザーが別の発表者によって削除された場合でも、ペイロード内のオブジェクトは常に会議開催者の `from` ID を持つ。
 
-#### <a name="schema-example-user-removed-from-meeting"></a>スキーマの例: ユーザーが会議から削除されました
+#### <a name="schema-example-user-removed-from-meeting"></a>スキーマの例: 会議から削除されたユーザー
 
 ```
 {   
@@ -319,11 +320,11 @@ Bot は、 `conversationUpdate` ユーザーが `membersAdded` 個人チャッ�
 ## <a name="team-name-updates"></a>チーム名の更新
 
 > [!NOTE]
-> すべてのチーム名を照会する機能はありません。また、他のイベントからのペイロードではチーム名が返されません。
+> すべてのチーム名を照会する機能はありません。また、他のイベントからのペイロードではチーム名は返されません。
 
-自分のチームの名前が変更されると、ボットに通知されます。 `conversationUpdate` `eventType.teamRenamed` オブジェクト内でイベントを受け取り `channelData` ます。 Bot は teams の一部としてのみ存在し、追加された範囲外には表示されないので、チーム作成または削除の通知はありません。
+ボットが含むチームの名前が変更された場合、ボットに通知されます。 オブジェクトで `conversationUpdate` イベントを `eventType.teamRenamed` 受け取 `channelData` ります。 ボットはチームの一部としてのみ存在し、追加されたスコープ外の可視性を持たないので、チームの作成または削除に関する通知はありません。
 
-### <a name="schema-example-team-renamed"></a>スキーマの例: チームの名前変更
+### <a name="schema-example-team-renamed"></a>スキーマの例: チームの名前が変更されました
 
 ```json
 { 
@@ -360,13 +361,13 @@ Bot は、 `conversationUpdate` ユーザーが `membersAdded` 個人チャッ�
 
 ## <a name="channel-updates"></a>チャネルの更新
 
-Bot が追加されたチームでチャネルが作成、名前変更、または削除されると、ボットに通知されます。 `conversationUpdate`イベントが受信され、チーム固有のイベント識別子がオブジェクトの一部として送信され `channelData.eventType` ます。ここで、チャネルデータはチャネルの GUID で、チャネル `channel.id` `channel.name` 名自体が含まれます。
+チャネルが追加されたチームでチャネルが作成、名前変更、または削除されると、ボットに通知されます。 繰り返しますが、イベントが受信され、Teams 固有のイベント識別子がオブジェクトの一部として送信され、チャネル データはチャネルの GUID であり、チャネル名自体が `conversationUpdate` `channelData.eventType`  `channel.id` `channel.name` 含まれる。
 
-チャネルイベントは次のとおりです。
+チャネル イベントは次のとおりです。
 
-* **Channelcreated** &emsp;ユーザーが新しいチャネルをチームに追加した
-* **Channelrenamed 名前変更** &emsp;ユーザーが既存のチャネルの名前を変更する
-* **Channeldeleted** &emsp;ユーザーがチャネルを削除した場合
+* **channelCreated** &emsp;ユーザーがチームに新しいチャネルを追加する
+* **channelRenamed** &emsp;ユーザーが既存のチャネルの名前を変更する
+* **channelDeleted** &emsp;ユーザーがチャネルを削除する
 
 ### <a name="full-schema-example-channelcreated"></a>完全なスキーマの例: channelCreated
 
@@ -406,7 +407,7 @@ Bot が追加されたチームでチャネルが作成、名前変更、また�
 }
 ```
 
-### <a name="schema-excerpt-channeldata-for-channelrenamed"></a>スキーマの抜粋: channelData が名前変更されました
+### <a name="schema-excerpt-channeldata-for-channelrenamed"></a>スキーマの抜粋: channelData for channelRenamed
 
 ```json
 ⋮
@@ -426,7 +427,7 @@ Bot が追加されたチームでチャネルが作成、名前変更、また�
 ⋮
 ```
 
-### <a name="schema-excerpt-channeldata-for-channeldeleted"></a>スキーマの抜粋: チャネルが削除された channelData
+### <a name="schema-excerpt-channeldata-for-channeldeleted"></a>スキーマの抜粋: channelData for channelDeleted
 
 ```json
 ⋮
@@ -446,11 +447,11 @@ Bot が追加されたチームでチャネルが作成、名前変更、また�
 ⋮
 ```
 
-## <a name="reactions"></a>感想
+## <a name="reactions"></a>リアクション
 
-この `messageReaction` イベントは、ユーザーが最初に bot によって送信されたメッセージに対して、自分の反応を追加または削除したときに送信されます。 `replyToId` 特定のメッセージの ID を格納します。
+イベントは、ユーザーがボットから送信されたメッセージに対する反応を追加または削除 `messageReaction` すると送信されます。 `replyToId` には、特定のメッセージの ID が含まれる。
 
-### <a name="schema-example-a-user-likes-a-message"></a>スキーマの例: ユーザーがメッセージを好む
+### <a name="schema-example-a-user-likes-a-message"></a>スキーマの例: ユーザーがメッセージを気に入る
 
 ```json
 {
@@ -492,7 +493,7 @@ Bot が追加されたチームでチャネルが作成、名前変更、また�
 }
 ```
 
-### <a name="schema-example-a-user-un-likes-a-message"></a>スキーマの例: ユーザーがメッセージの表示を取り消す
+### <a name="schema-example-a-user-un-likes-a-message"></a>スキーマの例: ユーザーがメッセージを好きにしない
 
 ```json
 {

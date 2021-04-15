@@ -5,24 +5,24 @@ keywords: teams の設計ガイドラインは、メッセージング拡張機�
 author: heath-hamilton
 ms.author: qinch
 ms.topic: conceptual
-ms.openlocfilehash: 747b48e3aeb803f91cfb8d4412c98cb6d52c1fd1
-ms.sourcegitcommit: f6e4a303828224a702138753a8e5e27c8a094c82
+ms.openlocfilehash: c616d8e3e7c40ae124f96cb80a42873f9aaa7865
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "51176978"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51697012"
 ---
 # <a name="designing-your-microsoft-teams-messaging-extension"></a>Microsoft Teams メッセージング拡張機能の設計
 
 メッセージング拡張機能は、アプリコンテンツを挿入したり、会話から離れることなくメッセージに作用するためのショートカットです。
 アプリの設計をガイドするために、次の情報は、Teams でユーザーがメッセージング拡張機能を追加、使用、および管理する方法を示しています。
 
-## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI キット
+## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
 Microsoft Teams UI Kit には、必要に応じて取得および変更できる要素を含む、包括的なメッセージング拡張機能の設計ガイドラインがあります。
 
 > [!div class="nextstepaction"]
-> [Microsoft Teams UI キットの取得 (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Microsoft Teams UI Kit (Figma) を入手する](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-messaging-extension"></a>メッセージング拡張機能の追加
 
@@ -55,7 +55,7 @@ Teams アプリ全体で一貫性を保つには、サインイン画面をカ�
 
 #### <a name="compose-box-layout-options"></a>作成ボックスのレイアウト オプション
 
-リストビューやグリッド ビューなど、メッセージング拡張機能の検索結果を表示 [するためのいくつかのオプションがあります](../../messaging-Ask about extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests)。
+リストビューやグリッド ビューなど、メッセージング拡張機能の検索結果を表示 [するためのいくつかのオプションがあります](../../messaging-extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests)。
 
 :::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="メッセージング拡張機能の検索結果のレイアウト オプションを示す図。" border="false":::
 
@@ -112,7 +112,7 @@ Teams アプリ全体で一貫性を保つには、サインイン画面をカ�
 
 **2. アクションを完了します**。 アプリは、メッセージ アクションによって送信されたコンテンツまたはデータを受信および処理できます。 これにより、ユーザーは会話を続け、次の例では、アプリに直接情報を入力する心配はありません。
 
-:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="例は、作成ボックスから挿入するコンテンツを検索しているユーザーを示しています。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="メッセージに対してアクションを実行する方法の例。" border="false":::
 
 ### <a name="preview-links"></a>リンクのプレビュー
 
@@ -130,7 +130,7 @@ Teams アプリ全体で一貫性を保つには、サインイン画面をカ�
 
 アイコンを右クリックすると、ユーザーはメッセージング拡張機能をピン留め、削除、または構成できます。
 
-## <a name="anatomy"></a>Anatomy
+## <a name="anatomy"></a>構造
 
 ### <a name="messaging-extension-in-the-compose-box"></a>作成ボックスのメッセージング拡張機能
 
@@ -164,7 +164,7 @@ Teams アプリ全体で一貫性を保つには、サインイン画面をカ�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="メッセージング拡張機能のベスト プラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="セットアップと一般的な使用方法の例。" border="false":::
 
 #### <a name="do-integrate-with-single-sign-on"></a>Do: シングル サインオンとの統合
 
@@ -172,7 +172,7 @@ SSO を使用すると、サインイン プロセスが簡単、高速、およ
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="メッセージング拡張機能のベスト プラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="シングル サインオンとの統合の例。" border="false":::
 
 #### <a name="dont-take-users-away-from-the-conversation"></a>[しない]: ユーザーを会話から離す
 
@@ -189,7 +189,7 @@ SSO を使用すると、サインイン プロセスが簡単、高速、およ
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="メッセージング拡張機能のベスト プラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="テンプレートの例。" border="false":::
 
 #### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>Do: 可能であれば、Teams が設計作業の一部を処理する
 
@@ -197,7 +197,7 @@ SSO を使用すると、サインイン プロセスが簡単、高速、およ
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="メッセージング拡張機能のベスト プラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="設計作業の処理例。" border="false":::
 
 #### <a name="dont-embed-your-entire-app-in-a-task-module"></a>[しない] タスク モジュールにアプリ全体を埋め込む
 
@@ -210,7 +210,7 @@ SSO を使用すると、サインイン プロセスが簡単、高速、およ
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="メッセージング拡張機能のベスト プラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="例: それらを使用します。" border="false":::
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>Do: Teams カラー トークンを活用する
 
@@ -218,7 +218,7 @@ SSO を使用すると、サインイン プロセスが簡単、高速、およ
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/theming-dont.png" alt-text="メッセージング拡張機能のベスト プラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/theming-dont.png" alt-text="カラー トークンの例。" border="false":::
 
 #### <a name="dont-hard-code-color-values"></a>[しない] : ハード コードの色の値
 
@@ -231,7 +231,7 @@ Teams カラー トークンを使用しない場合、デザインの拡張性�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/action-commands-do.png" alt-text="メッセージング拡張機能のベスト プラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/action-commands-do.png" alt-text="アクションの例。" border="false":::
 
 #### <a name="do-include-action-commands-that-make-sense-in-context"></a>Do: コンテキストで意味のあるアクション コマンドを含める
 
@@ -239,7 +239,7 @@ Teams カラー トークンを使用しない場合、デザインの拡張性�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/action-commands-dont.png" alt-text="メッセージング拡張機能のベスト プラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/action-commands-dont.png" alt-text="アクション コマンドの例。" border="false":::
 
 #### <a name="dont-include-actions-commands-that-arent-contextual"></a>[しない]: コンテキストに依存しないアクション コマンドを含める
 
@@ -264,7 +264,7 @@ Teams カラー トークンを使用しない場合、デザインの拡張性�
 
 ## <a name="validate-your-design"></a>デザインを検証する
 
-アプリを AppSource に発行する予定の場合は、申請中にアプリが失敗する一般的な設計上の問題を理解する必要があります。
+AppSource にアプリを公開する予定がある場合、アプリの提出時に失敗する原因となるデザイン上の問題を理解しておく必要があります。
 
 > [!div class="nextstepaction"]
-> [デザイン検証のガイドラインを確認する](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)
+> [デザイン検証ガイドラインをチェックする](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

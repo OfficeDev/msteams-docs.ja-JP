@@ -1,81 +1,97 @@
 ---
-title: Microsoft Teams での通話と会議のボットの登録
-description: Microsoft Teams 用の新しい音声ビデオを呼び出すボットを登録する方法について説明します。
-keywords: ボット音声/ビデオ音声ビデオメディアの呼び出し
-ms.openlocfilehash: 5a832646d4fa622f746f88a3a969ae4ad3ce69a6
-ms.sourcegitcommit: bfdcd122b6b4ffc52d92320d4741f870c07f0542
+title: Microsoft Teams の通話と会議ボットを登録する
+description: Microsoft Teams の新しい音声/ビデオ通話ボットを登録する方法について説明します。
+ms.topic: conceptual
+keywords: ボットのオーディオ/ビデオ オーディオ ビデオ メディアを呼び出す
+ms.openlocfilehash: 6cbba3f63a97e47fd9cca6dbeea6595cc3bdc9d7
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "49552445"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696358"
 ---
-# <a name="register-a-calling-bot-for-microsoft-teams"></a>Microsoft Teams 用の呼び出しボットを登録する
+# <a name="register-a-calls-and-meetings-bot-for-microsoft-teams"></a>Microsoft Teams の通話と会議ボットを登録する
 
-音声ビデオ通話やオンライン会議に参加する bot は、次のようないくつかの機能を備えた通常の Microsoft Teams bot です。
+音声通話またはビデオ通話やオンライン会議に参加するボットは、通常の Microsoft Teams ボットであり、ボットの登録に使用される追加機能は次のとおりです。
 
-* Teams アプリマニフェストの新バージョンとして、2つの追加設定とが用意さ `supportsCalling` `supportsVideo` れています。 これらの設定は、Microsoft Teams アプリマニフェストの [開発者プレビュー](../../resources/dev-preview/developer-preview-intro.md) バージョンに含まれています。
-* [Microsoft Graph のアクセス許可](./registering-calling-bot.md#add-microsoft-graph-permissions) は、ボットの MICROSOFT アプリ ID に対して構成する必要があります。
-* Microsoft Graph の呼び出しとオンライン会議の Api のアクセス許可には、テナント管理者の同意が必要です。
-
-詳細について説明します。
+* 2 つの追加設定を含む Teams アプリ マニフェストの新しいバージョンがあります `supportsCalling` `supportsVideo` 。 これらの設定は、Teams アプリ [マニフェストの開発者プレビュー](../../resources/dev-preview/developer-preview-intro.md) バージョンに含まれています。
+* [Microsoft Graph のアクセス許可は](./registering-calling-bot.md#add-graph-permissions) 、ボットの Microsoft App ID 用に構成する必要があります。
+* Graph 呼び出しとオンライン会議 API のアクセス許可には、テナント管理者の同意が必要です。
 
 ## <a name="new-manifest-settings"></a>新しいマニフェスト設定
 
-通話とオンライン会議のボットには、Teams のボットに対して音声/ビデオを有効にするための manifest.jsに、次の2つの追加設定があります。
+通話とオンライン会議ボットには、Teams でボットのオーディオまたはビデオを有効にする manifest.jsに次の 2 つの追加設定があります。
 
-* `bots[0].supportsCalling`. が存在し、に設定されている場合 `true` 、チームは、お客様が bot に通話とオンライン会議への参加を許可します。
-* `bots[0].supportsVideo`. が存在し、に設定されている場合 `true` 、Teams は、ボットがビデオをサポートしていることを認識します。
+* `bots[0].supportsCalling`. 存在してに設定されている `true` 場合、Teams を使用すると、ボットは通話やオンライン会議に参加できます。
+* `bots[0].supportsVideo`. 存在してに設定されている場合 `true` 、Teams はボットがビデオをサポートしているのを知っています。
 
-このような値について、IDE で、呼び出し側と会議のスキーマの manifest.jsを適切に検証するには、次のように属性を変更し `$schema` ます。
+これらの値の呼び出しと会議ボットmanifest.jsスキーマの検証を IDE で適切に行う場合は、次のように属性を `$schema` 変更できます。
 
 ```json
 "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
 ```
 
-## <a name="creating-a-new-bot-or-adding-calling-capabilities-to-an-existing-bot"></a>新しい bot を作成するか、既存の bot に呼び出し機能を追加する
+次のセクションでは、新しいボットを作成したり、既存のボットに通話機能を追加することができます。
 
-新しい bot を作成する方法については、「 [Microsoft Teams の bot を作成する](../how-to/create-a-bot-for-teams.md) 」トピックで詳しく説明されていますが、ここではその一部を繰り返します。
+## <a name="create-new-bot-or-add-calling-capabilities"></a>新しいボットを作成するか、通話機能を追加する
 
-1. 新しい bot を作成するには、このリンクを使用します。 `https://dev.botframework.com/bots/new` 代わりに、Bot フレームワークポータルで [ *bot を作成* する] ボタンを選択すると、Microsoft azure に bot が作成され、azure アカウントが必要になります。
-1. Microsoft Teams チャネルを追加します。 Microsoft Teams channel ページの [通話中] タブをクリックし、[ **通話を有効にする**] を選択してから、受信通知を受け取る HTTPS URL で **Webhook (通話用)** を更新します。たとえば、次のように `https://contoso.com/teamsapp/api/calling` します。 チャネルを構成する方法の詳細については、「 [チャネルの構成](/bot-framework/portal-configure-channels) 」を参照してください。
-  ![Microsoft Teams のチャネル情報を構成する](~/assets/images/calls-and-meetings/configure-msteams-channel.png)
+ボットの作成の詳細については [、「Create a bot for Teams」を参照してください](../how-to/create-a-bot-for-teams.md)。
 
-## <a name="add-microsoft-graph-permissions"></a>Microsoft Graph のアクセス許可を追加する
+**Teams 用の新しいボットを作成するには**
 
-Microsoft Graph では、アプリがリソースに対して持つアクセス権を制御する詳細なアクセス許可を公開しています。 開発者は、アプリが要求する Microsoft Graph のアクセス許可を決定します。  Microsoft Graph の呼び出し元の Api は、サインインしているユーザーなしで実行されるアプリで使用される _アプリケーションのアクセス許可_ をサポートします。  テナント管理者は、アプリケーションのアクセス許可に同意を付与する必要があります。 これらのアクセス許可の一覧を以下に示します。
+1. 新しいボットを作成するには、このリンクを使用します `https://dev.botframework.com/bots/new` 。 または、ボット フレームワーク ポータルで [ボットの作成] ボタンを選択した場合は、Azure アカウントが必要な Microsoft Azure でボットを作成します。
+1. Teams チャネルを追加します。
+1. Teams チャネル **ページの [** 通話] タブを選択します。 [ **通話を有効にする**] を選択し、受信通知を受信する HTTPS URL を使用して **Webhook (通話用)** を更新します `https://contoso.com/teamsapp/api/calling` 。 詳細については、「チャネルの [構成」を参照してください](/bot-framework/portal-configure-channels)。
 
-### <a name="application-permissions-calls"></a>アプリケーションのアクセス許可: 呼び出し
+    ![Teams チャネル情報の構成](~/assets/images/calls-and-meetings/configure-msteams-channel.png)
+
+次のセクションでは、通話およびオンライン会議でサポートされているアプリケーションのアクセス許可の一覧を示します。
+
+## <a name="add-graph-permissions"></a>Graph アクセス許可の追加
+
+Graph は、アプリがリソースに対して持つアクセスを制御するための詳細なアクセス許可を提供します。 アプリの要求を Graph に対するアクセス許可を決定します。 Graph 呼び出し API は、サインインしているユーザーが存在せずに実行されるアプリで使用されるアプリケーションのアクセス許可をサポートします。 テナント管理者は、アプリケーションのアクセス許可に同意する必要があります。
+
+### <a name="application-permissions-for-calls"></a>呼び出しのアプリケーションのアクセス許可
+
+次の表に、呼び出しに対するアプリケーションのアクセス許可の一覧を示します。
 
 |アクセス許可    |表示文字列   |説明 |管理者の同意が必要 |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
-|_Calls.Initiate.All_|アプリからの発信 1 対 1 通話の開始 (プレビュー)|アプリで、サインインしているユーザーがいなくても、1 人のユーザーに発信し、組織のディレクトリ内のユーザーに通話を転送することができるようにします。|はい|
-|_Calls.InitiateGroupCall.All_|アプリからの発信グループ通話の開始 (プレビュー)|アプリで、サインインしているユーザーがいなくても、複数のユーザーに発信し、組織内の会議に参加者を追加することができるようにします。|はい|
-|_Calls.JoinGroupCall.All_|グループ通話と会議にアプリとして参加する (プレビュー)|アプリで、サインインしているユーザーがいなくても、組織のグループ通話やスケジュールされた会議に参加することができるようにします。 このアプリは、ディレクトリ ユーザーの特権を使用してテナントの会議に参加します。|はい|
-|_Calls.JoinGroupCallasGuest.All_|グループ通話と会議にゲストとして参加する (プレビュー)|アプリで、サインインしているユーザーがいなくても、組織のグループ通話とスケジュールされた会議に匿名で参加することができるようにします。 このアプリは、テナントの会議にゲストとして参加します。|はい|
-|_通話メディアを呼び出します。_ <sup>_以下を参照_</sup>|通話内のメディア ストリームにアプリとしてアクセスする (プレビュー)|アプリで、サインインしているユーザーがいなくても、通話内のメディア ストリームに直接アクセスすることができるようにします。|はい|
+| Calls.Initiate.All |アプリ プレビューから発信 1:1 通話を開始します。 |アプリで、サインインしているユーザーがいなくても、1 人のユーザーに発信し、組織のディレクトリ内のユーザーに通話を転送することができるようにします。|はい|
+| Calls.InitiateGroupCall.All |アプリ プレビューからグループの発信呼び出しを開始します。 |アプリで、サインインしているユーザーがいなくても、複数のユーザーに発信し、組織内の会議に参加者を追加することができるようにします。|はい|
+| Calls.JoinGroupCall.All |アプリ のプレビューとしてグループ通話と会議に参加します。 |アプリで、サインインしているユーザーがいなくても、組織のグループ通話やスケジュールされた会議に参加することができるようにします。 アプリは、テナント内の会議にディレクトリ ユーザーの特権で参加します。|はい|
+| Calls.JoinGroupCallasGuest.All |グループ通話と会議にゲスト プレビューとして参加します。 |アプリで、サインインしているユーザーがいなくても、組織のグループ通話とスケジュールされた会議に匿名で参加することができるようにします。 アプリは、テナント内の会議にゲストとして参加します。|はい|
+| Calls.AccessMedia.All |アプリ プレビューとして通話のメディア ストリームにアクセスします。 |アプリで、サインインしているユーザーがいなくても、通話内のメディア ストリームに直接アクセスすることができるようにします。|はい|
 
 > [!IMPORTANT]
-> メディアアクセス API を使用して、アプリケーションがアクセスする通話または会議のメディアコンテンツを記録または保存する **ことはできません**。また、そのメディアコンテンツ ("record" または "レコーディング") から派生したデータは、最初にその api を呼び出してレコーディングが開始されたことを示し、その api から成功応答を受け取ることもあり [ `updateRecordingStatus`](/graph/api/call-updaterecordingstatus) アプリケーションで会議または通話の記録を開始する場合、API を呼び出す前にレコーディングを終了して、 `updateRecordingStatus` レコーディングが終了したことを示す必要があります。
+> メディア アクセス API を使用して、アプリケーションがアクセスしたり、そのメディア コンテンツ レコードまたは記録からデータを派生したりした通話や会議からメディア コンテンツを記録したり、保持したりすることはできません。 最初に API[ `updateRecordingStatus` を呼び](/graph/api/call-updaterecordingstatus)出して、記録が開始されたと示し、その API から成功の返信を受け取る必要があります。 アプリケーションが会議または通話の録音を開始する場合は、API を呼び出す前に録音を終了して、録音が終了した `updateRecordingStatus` かどうかを示す必要があります。
 
-### <a name="application-permissions-online-meetings"></a>アプリケーションのアクセス許可: オンライン会議
+### <a name="application-permissions-for-online-meetings"></a>オンライン会議のアプリケーションのアクセス許可
+
+次の表に、オンライン会議のアプリケーションアクセス許可の一覧を示します。
 
 |アクセス許可    |表示文字列   |説明 |管理者の同意が必要 |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
-|_OnlineMeetings.Read.All_|アプリからオンライン会議の詳細を読み取る (プレビュー)|アプリで、サインインしているユーザーがいなくても、組織内のすべてのオンライン会議を読み取ることができるようにします。|はい|
-|_OnlineMeetings.ReadWrite.All_|サインインしているユーザーの代わりにアプリが行うオンライン会議の読み取りと作成 (プレビュー)|アプリで、サインインしているユーザーがいなくても、ユーザーの代わりに、組織内のオンライン会議を作成することができるようにします。|はい|
+| OnlineMeetings.Read.All |アプリ プレビューからオンライン会議の詳細を読み取る|サインインしているユーザーなしで、アプリが組織内のオンライン会議の詳細を読み取るを許可します。|はい|
+| OnlineMeetings.ReadWrite.All |ユーザーに代わってアプリ プレビューからオンライン会議を読み取り、作成する|サインインしているユーザーなしで、アプリがユーザーに代わって組織内でオンライン会議を作成できます。|はい|
 
-### <a name="assigning-permissions"></a>権限を割り当てる
+### <a name="assign-permissions"></a>アクセス許可の割り当て
 
-[AZURE AD V1 エンドポイント](/azure/active-directory/develop/azure-ad-endpoint-comparison)を使用する場合は、 [azure ポータル](https://aka.ms/aadapplist)を使用して、ボットのアプリケーション権限を事前に構成する必要があります。
+[Azure Active Directory (AAD) V1](/azure/active-directory/develop/azure-ad-endpoint-comparison)エンドポイントを使用する場合は[、Azure portal](https://aka.ms/aadapplist)を使用して事前にボットのアプリケーションアクセス許可を構成する必要があります。
 
-### <a name="getting-tenant-administrator-consent"></a>テナント管理者の同意を取得する
+### <a name="get-tenant-administrator-consent"></a>テナント管理者の同意を取得する
 
-Azure AD V1 エンドポイントを使用するアプリの場合、テナント管理者は、アプリが組織にインストールされているときに、 [azure portal](https://portal.azure.com) を使用してアプリケーションのアクセス許可に同意することができます。または、構成したアクセス許可を管理者が承認できるようにするためのサインアップの機能をアプリで提供することができます。 管理者の同意が Azure AD によって記録されると、アプリは同意を要求せずにトークンを要求できます。
+AAD V1 エンドポイントを使用するアプリの場合、テナント管理者は、アプリが組織にインストールされている [ときに Azure portal](https://portal.azure.com) を使用してアプリケーションのアクセス許可に同意できます。 または、構成したアクセス許可に管理者が同意できるサインアップ エクスペリエンスをアプリに提供することもできます。 管理者の同意が AAD によって記録された後、アプリは再び同意を要求することなくトークンを要求できます。
 
-[Azure ポータル](https://portal.azure.com)でアプリに必要なアクセス許可を管理者に付与することができます。ただし、多くの場合、Azure AD V2 エンドポイントを使用して管理者にサインアップのための機能を提供することをお勧め `/adminconsent` します。  詳細については、「 [管理者の同意の URL](https://developer.microsoft.com/graph/docs/concepts/auth_v2_service#3-get-administrator-consent) を作成する」の手順を参照してください。
+管理者に頼って、Azure portal でアプリに必要なアクセス許可を [付与できます](https://portal.azure.com)。 AAD V2 エンドポイントを使用して管理者にサインアップ エクスペリエンスを提供する方が良い `/adminconsent` 方法です。 詳細については、「管理者の [同意 URL の作成に関する手順」を参照してください](https://developer.microsoft.com/graph/docs/concepts/auth_v2_service#3-get-administrator-consent)。
 
 > [!NOTE]
-> テナント管理者の同意 URL を作成するには、 [アプリ登録ポータル](https://apps.dev.microsoft.com/)に構成されたリダイレクト URI/応答 url が必要です。 Bot の応答 Url を追加するには、ボット登録にアクセスし、[Advanced Options-> 編集アプリケーションマニフェスト] を選択します。  リダイレクト URL をコレクションに追加 `replyUrls` します。
+> テナント管理者の同意 URL を作成するには、アプリ登録ポータルで構成されたリダイレクト URI または返信 URL [が](https://apps.dev.microsoft.com/) 必要です。 ボットの返信 URL を追加するには、ボット登録にアクセスし、[高度なオプション] [**アプリケーション** マニフェストの編集  >  **] を選択します**。 リダイレクト URL をコレクションに追加 `replyUrls` します。
 
 > [!IMPORTANT]
-> アプリケーションのアクセス許可を変更するときは常に、管理者の同意プロセスも繰り返す必要があります。 アプリ登録ポータルで行われた変更は、テナント管理者が同意を再適用するまで反映されません。
+> アプリケーションのアクセス許可を変更する場合は、管理者の同意プロセスも繰り返す必要があります。 アプリ登録ポータルで行われた変更は、テナントの管理者が同意を再適用するまで反映されません。
+
+## <a name="next-step"></a>次の手順
+
+> [!div class="nextstepaction"]
+> [着信通知](~/bots/calls-and-meetings/call-notifications.md)

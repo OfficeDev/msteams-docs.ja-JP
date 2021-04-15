@@ -4,12 +4,12 @@ description: Microsoft Teams のマニフェスト スキーマについて説�
 ms.topic: reference
 ms.author: lajanuar
 keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: 8c77d2e82c65a11b67eb6a223313f477238517d9
-ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.openlocfilehash: fa1c1cfd732fe5a30fc5fc32b693dd21b2e8ee82
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634524"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696046"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>リファレンス: Microsoft Teams のマニフェスト スキーマ
 
@@ -313,7 +313,7 @@ Teams マニフェストは、アプリが Microsoft Teams 製品に統合され
 
 **必須** — Microsoft アプリ ID
 
-ID は、アプリの Microsoft が生成する一意の識別子です。 ボットが Microsoft Bot Framework を通じて登録されている場合、またはタブの Web アプリが既に Microsoft にサインインしている場合は、ID を持っています。 ここに ID を入力する必要があります。 それ以外の場合は、Microsoft アプリケーション登録ポータル (My Applications) で新しい ID[を生成する必要があります](https://apps.dev.microsoft.com)。 ボットを追加する場合は、同じ ID を使用します。
+ID は、アプリの Microsoft が生成する一意の識別子です。 ボットが Microsoft Bot Framework を通じて登録されている場合、またはタブの Web アプリが既に Microsoft にサインインしている場合は、ID を持っています。 ここに ID を入力する必要があります。 それ以外の場合は、Microsoft アプリケーション登録ポータルで新しい ID [を生成する必要があります](https://aka.ms/appregistrations)。 ボットを追加する場合は、同じ ID を使用します。
 
 > [!NOTE]
 > AppSource で既存のアプリに更新プログラムを提出する場合は、マニフェスト内の ID を変更することはできません。
@@ -496,7 +496,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 アイテムは、型のすべての要素を持つ配列 (最大 1 要素) です `object` 。 このブロックは、メッセージング拡張機能を提供するソリューションにのみ必要です。
 
-|名前| 型 | 最大サイズ | 必須 | 説明|
+|名前| 種類 | 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`botId`|string|64|✔|ボット フレームワークに登録されているメッセージング拡張機能をバックするボットの一意の Microsoft アプリ ID。 これは、アプリ ID 全体と同じ可能性があります。|
 |`commands`|オブジェクトの配列|10|✔|メッセージング拡張機能がサポートするコマンドの配列|

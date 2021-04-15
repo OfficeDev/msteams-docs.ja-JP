@@ -1,50 +1,54 @@
 ---
-title: ボットとのチャネル会話とグループ会話
+title: ボットとのチャネルとグループの会話
 author: clearab
-description: チャネルまたはグループ チャットでボットのメッセージを送信、受信、処理する方法。
-ms.topic: overview
+description: チャネルまたはグループ チャットでボットのメッセージを送信、受信、および処理する方法。
+ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 8a9a58208fff5cc2fe376fcb9932bad6ac2bf36f
-ms.sourcegitcommit: 4539479289b43812eaae07a1c0f878bed815d2d2
+ms.openlocfilehash: e1379a62e3ef7d58efe52c3f91fd9e02b3c46ac9
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "49797842"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696368"
 ---
-# <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Microsoft Teams ボットとのチャネルとグループ チャットの会話
+# <a name="channel-and-group-chat-conversations-with-a-bot"></a>ボットとのチャネルチャットとグループ チャットの会話
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-ボットに `teams` スコープを追加することで、チームチャットまたはグループ チャットにインストール `groupchat` できます。 これにより、会話のすべてのメンバーがボットと対話できるようになります。 インストールされたボットは、会話メンバーのリストなど、会話に関するメタデータにもアクセスできるようになります。チームにインストールされた場合、そのチームに関する詳細とチャネルの完全な一覧にアクセスできるようになります。
+チームまたはグループ チャットに Microsoft Teams ボットをインストールするには、ボットに `teams` スコープ `groupchat` を追加します。 これにより、会話のすべてのメンバーがボットと対話できるようになります。 ボットをインストールすると、会話に関するメタデータ (会話メンバーの一覧など) にアクセスできます。 また、チームにインストールすると、ボットは、そのチームに関する詳細とチャネルの完全なリストにアクセスできます。
 
-グループまたはチャネル内のボットは、メッセージが記載されている場合 (@botname) にのみメッセージを受信します。会話に送信された他のメッセージは受信しません。
+グループまたはチャネル内のボットは、メッセージが言及されている場合にのみメッセージを受信します `@botname` 。 会話に送信された他のメッセージは受信しません。
 
 > [!NOTE]
-> ボットは直接 @メンションされる必要があります。 チームまたはチャネルが言及されている場合や、ボットからのメッセージに返信したユーザーがメッセージに応答しない場合、ボットはメッセージ@mentioningされません。
+> ボットは直接である必要 `@mentioned` があります。 チームまたはチャネルが言及された場合、またはボットからメッセージに返信しても、ボットはメッセージを受信@mentioningされません。
 
 ## <a name="design-guidelines"></a>デザインのガイドライン
 
-チャネルとチャットで [ボットの会話を設計する方法を参照してください](~/bots/design/bots.md)。
+個人用チャットとは異なり、グループ チャットやチャネルでは、ボットが簡単な概要を提供する必要があります。 これらのボットの設計ガイドラインに従う必要があります。 Teams でボットを設計する方法の詳細については、「チャネルとチャットでボットの会話を設計する方法」 [を参照してください](~/bots/design/bots.md)。
 
-## <a name="creating-new-conversation-threads"></a>新しい会話スレッドの作成
+これで、新しい会話スレッドを作成し、チャネル内の異なる会話を簡単に管理できます。
 
-ボットがチームにインストールされている場合、既存の会話スレッドに返信するのではなく、新しい会話スレッドを作成する必要がある場合があります。 これはプロアクティブ メッセージング [の 1 つの形式です](~/bots/how-to/conversations/send-proactive-messages.md)。
+## <a name="create-new-conversation-threads"></a>新しいスレッドの作成
 
-## <a name="working-with-mentions"></a>メンションの操作
+ボットがチームにインストールされている場合は、既存のスレッドに返信するのではなく、新しいスレッドを作成する必要があります。 2 つの会話を区別することは困難な場合があります。 スレッド化された会話の場合は、チャネルでさまざまな会話を整理して管理する方が簡単です。 これは、プロアクティブ メッセージング [の形式です](~/bots/how-to/conversations/send-proactive-messages.md)。
 
-グループやチャネルからボットに送信されるすべてのメッセージには、メッセージのテキストにボット自身の名前の付いた @メンションが含まれているため、メッセージ解析でメンションが確実に処理されるようにする必要があります。 ボットは、メッセージ内でメンションされている他のユーザーを取得したり、ボットが送信するすべてのメッセージにメンションを追加したりすることもできます。
+次に、オブジェクトを使用してメンションを取得し、オブジェクトを使用して `entities` メッセージにメンションを追加 `Mention` できます。
 
-### <a name="stripping-mentions-from-message-text"></a>メッセージ テキストからメンションを削除する
+## <a name="work-with-mentions"></a>メンションを使用する
 
-ボットが受け取ったメッセージのテキストから @メンションを取り除く必要がある場合があります。
+グループまたはチャネルからボットに送信されるメッセージには、@mentionに名前が含まれているメッセージが含まれる。 メッセージの解析でメッセージが処理@mention。 ボットは、メッセージに記載されている他のユーザーを取得し、送信するメッセージにメンションを追加することもできます。
 
-### <a name="retrieving-mentions"></a>メンションの取得
+また、ボットが受信したメッセージ@mentionsコンテンツから削除する必要があります。
 
-メンションはペイロード内のオブジェクトで返され、ユーザーの一意の ID と、ほとんどの場合、メンションされたユーザーの名前の両方 `entities` が含まれます。 メッセージのテキストには、`<at>@John Smith<at>` のようなメンションも含まれます。 ただし、メッセージ内のテキストを使用してユーザーに関する情報を取得する必要があります。メッセージを送信したユーザーがメッセージを変更する可能性があります。 代わりに、オブジェクトを使用 `entities` します。
+### <a name="retrieve-mentions"></a>メンションの取得
 
-オブジェクトの配列を返す Bot Builder SDK の関数を呼び出すことによって、メッセージ内のすべてのメンション `GetMentions` を取得 `Mention` できます。
+メンションはペイロード内のオブジェクトに返され、ユーザーの一意の ID と、指定したユーザーの `entities` 名前の両方が含まれます。 メッセージのテキストには、次のようなメンションも含まれます `<at>@John Smith<at>` 。 ただし、メッセージ内のテキストを使用して、ユーザーに関する情報を取得しない。 メッセージを送信するユーザーがメッセージを変更することができます。 したがって、オブジェクトを使用 `entities` します。
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+メッセージ内のすべてのメンションを取得するには、Bot Builder SDK で関数を呼び出し、オブジェクトの `GetMentions` 配列を返 `Mention` します。
+
+次のコードは、メンションを取得する例を示しています。
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -62,7 +66,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -135,18 +139,20 @@ def get_mentions(activity: Activity) -> List[Mention]:
 
 * * *
 
-### <a name="adding-mentions-to-your-messages"></a>メッセージへのメンションの追加
+### <a name="add-mentions-to-your-messages"></a>メッセージにメンションを追加する
 
-ボットは、チャネルに投稿されたメッセージで他のユーザーをメンションできます。 これを行うには、メッセージで次の操作を行う必要があります。
+ボットは、チャネルに投稿されたメッセージで他のユーザーに言及できます。
 
-この `Mention` オブジェクトには、次の 2 つのプロパティを設定する必要があります。
+オブジェクト `Mention` には、次の 2 つのプロパティを使用して設定する必要があります。
 
-* メッセージ <at>@username</at> にメッセージを含める
-* entities コレクション内に mention オブジェクトを含める
+* メッセージ <at>の@username</at> にデータを含める。
+* エンティティ コレクション内にメンション オブジェクトを含める。
 
-Bot Framework SDK には、メンションを簡単に構築するためのヘルパー メソッドとオブジェクトが含まれています。
+Bot Framework SDK には、メンションを作成するヘルパー メソッドとオブジェクトが含まれています。
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+次のコードは、メッセージにメンションを追加する例を示しています。
+
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -164,7 +170,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -185,7 +191,7 @@ this.onMessage(async (turnContext, next) => {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-配列 `text` 内のオブジェクトのフィールド `entities` は、メッセージ *フィールドの一* 部と完全に一致している必要 `text` があります。 指定しない場合、メンションは無視されます。
+配列 `text` 内のオブジェクトのフィールドは、メッセージ `entities` フィールドの一部と一致している必要 `text` があります。 指定しない場合、メンションは無視されます。
 
 ```json
 {
@@ -244,23 +250,29 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 * * *
 
-## <a name="sending-a-message-on-installation"></a>インストール時にメッセージを送信する
+これで、ボットが最初にインストールまたはグループまたはチームに追加された場合に、概要メッセージを送信できます。
 
-ボットが最初にグループまたはチームに追加された場合、ボットを紹介するメッセージを送信すると便利な場合があります。 メッセージには、ボットの機能の簡単な説明と、その使い方が記載されている必要があります。 eventType を使用して `conversationUpdate` イベントをサブスクライブ `teamMemberAdded` する必要があります。  イベントは新しいチーム メンバーが追加された際に送信されます。このイベントは、追加された新しいメンバーがボットかどうかを確認する必要があります。 詳細 [については、「新しいチーム メンバーへのウェルカム メッセージ](~/bots/how-to/conversations/send-proactive-messages.md) の送信」を参照してください。
+## <a name="send-a-message-on-installation"></a>インストール時にメッセージを送信する
 
-ボットを追加するときに、チームの各メンバーに個人用メッセージを送信する必要がある場合があります。 これを行うには、チーム名簿を取得し、各ユーザーに直接メッセージを送信します。
+ボットが最初にグループまたはチームに追加された場合は、紹介メッセージを送信する必要があります。 メッセージには、ボットの機能とボットの機能の使い方について簡単に説明する必要があります。 eventType を使用して `conversationUpdate` イベントをサブスクライブする `teamMemberAdded` 必要があります。  イベントは、新しいチーム メンバーが追加された場合に送信されます。 追加された新しいメンバーがボットか確認します。 詳細については、「ウェルカム [メッセージを新しいチーム メンバーに送信する」を参照してください](~/bots/how-to/conversations/send-proactive-messages.md)。
 
-次の状況では、メッセージを送信する方法は推奨されません。
+ボットが追加された場合、各チーム メンバーに個人メッセージを送信します。 これを行うには、チーム名簿を取得し、各ユーザーに直接メッセージを送信します。
 
-* チームは大規模です (明らかに主観的ですが、たとえば 100 人を超えるメンバー)。 ボットは "spammy" と見なされ、ボットを追加したユーザーは、ウェルカム メッセージを見たすべてのユーザーにボットの価値提案を明確に伝えられない限り、苦情を受け取る可能性があります。
-* ボットは最初にグループまたはチャネルで言及されます (最初にチームに追加されるのとは比較して)
-* グループまたはチャネルの名前が変更される
-* チーム メンバーがグループまたはチャネルに追加される
+次の場合は、メッセージを送信しない。
 
-## <a name="learn-more"></a>詳細情報
-
-ボットは、インストールされているグループ チャットまたはチームに関する追加情報にアクセスできます。 ボット [で利用できる追加の](~/bots/how-to/get-teams-context.md) API については、チームのコンテキストの取得に関するページをご覧ください。
-
-ボットがサブスクライブして応答できる追加のイベントも用意されています。 その [方法については、会話イベントのサブスクライブ](~/bots/how-to/conversations/subscribe-to-conversation-events.md) に関するページをご覧ください。
+* チームは大きい (たとえば、100 人を超えるメンバー) です。 ボットはスパムと見なされ、追加したユーザーは苦情を受け取ることができます。 ウェルカム メッセージを見たすべてのユーザーに、ボットの価値提案を明確に伝える必要があります。
+* ボットは、最初にチームに追加されるのではなく、グループまたはチャネルで最初に言及されます。
+* グループまたはチャネルの名前が変更されます。
+* チーム メンバーがグループまたはチャネルに追加されます。
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
+
+## <a name="see-also"></a>関連項目
+
+> [!div class="nextstepaction"]
+> [チームのコンテキストを取得します](~/bots/how-to/get-teams-context.md)。
+
+## <a name="next-step"></a>次の手順
+
+> [!div class="nextstepaction"]
+> [会話イベントにサブスクライブする](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
