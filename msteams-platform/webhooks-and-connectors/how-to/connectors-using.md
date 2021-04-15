@@ -4,12 +4,12 @@ description: Microsoft Teams で Office 365 コネクタを使用する方法に
 ms.topic: how-to
 localization_priority: Priority
 keywords: Teams o365 コネクタ
-ms.openlocfilehash: 6554a9cc1db0ffdae65f1cb875ca7a4c47c21259
-ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
+ms.openlocfilehash: 28c1a6e68a0ac83a2eb4785d71596814d5a859d3
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51382332"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696018"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>コネクタと Webhook にメッセージを送信する
 
@@ -307,7 +307,7 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
 
 「[Office 365 コネクタ — Microsoft Teams](https://docs.microsoft.com/connectors/teams/)」*も参照*
 
-次のような[指数バックオフを使用した再試行ロジック](/azure/architecture/patterns/retry)は、要求が 1 秒以内に制限を超えてしまうケースで、レート制限を緩和します。 レート制限に達しないよう、「[ベスト プラクティス](../../bots/how-to/rate-limit.md#best-practices)」に従ってください。
+次のような[指数バックオフを使用した再試行ロジック](/azure/architecture/patterns/retry)は、要求が 1 秒以内に制限を超えてしまうケースで、レート制限を緩和します。 レート制限を避けるために、[HTTP 429 応答](../../bots/how-to/rate-limit.md#handle-http-429-responses)を参照してください。
 
 ```csharp
 // Please note that response body needs to be extracted and read 
