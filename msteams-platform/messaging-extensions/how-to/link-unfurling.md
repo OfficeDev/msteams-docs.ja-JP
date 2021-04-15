@@ -1,46 +1,48 @@
 ---
 title: リンク展開
 author: clearab
-description: Microsoft Teams アプリでメッセージング拡張機能を使用してリンクの分岐を実行する方法。
+description: Microsoft Teams アプリでメッセージング拡張機能を使用してリンク解除を実行する方法。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 0d488638e63b8ec78bfa5bed8cf6f4f037883fb1
-ms.sourcegitcommit: bf61ae5ad2afa4efdb0311158184d0cbb9c40174
+ms.openlocfilehash: 628c5e760a4bc038443a20714e6960f1ffe8a2ad
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "49845638"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696232"
 ---
-# <a name="link-unfurling"></a><span data-ttu-id="f90e6-103">リンク展開</span><span class="sxs-lookup"><span data-stu-id="f90e6-103">Link unfurling</span></span>
+# <a name="link-unfurling"></a><span data-ttu-id="098c1-103">リンク展開</span><span class="sxs-lookup"><span data-stu-id="098c1-103">Link unfurling</span></span>
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-> [!NOTE]
-> <span data-ttu-id="f90e6-104">現時点では、モバイル クライアントではリンクの分岐はサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="f90e6-104">Currently, Link unfurling is not supported on Mobile clients.</span></span>
-
-<span data-ttu-id="f90e6-105">リンク展開を使用すると、特定のドメインの URL がメッセージの作成領域に貼り付けられたときに、アプリが `invoke` アクティビティを受信するように登録することができます。</span><span class="sxs-lookup"><span data-stu-id="f90e6-105">With link unfurling your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area.</span></span> <span data-ttu-id="f90e6-106">作成 `invoke` メッセージ領域に貼り付けされた完全な URL が含まれるので、ユーザーがリンクを解除して追加の情報やアクションを提供できるカードで応答できます。</span><span class="sxs-lookup"><span data-stu-id="f90e6-106">The `invoke` will contain the full URL that was pasted into the compose message area, and you can respond with a card the user can *unfurl*, providing additional information or actions.</span></span> <span data-ttu-id="f90e6-107">これは検索コマンドと非常に [似て機能し](~/messaging-extensions/how-to/search-commands/define-search-command.md)、URL は検索用語として機能します。</span><span class="sxs-lookup"><span data-stu-id="f90e6-107">This works very similarly to a [search command](~/messaging-extensions/how-to/search-commands/define-search-command.md), with the URL serving as the search term.</span></span>
-
-<span data-ttu-id="f90e6-108">Azure DevOps メッセージング拡張機能は、リンクの分岐を使用して、作業項目を指すメッセージ作成領域に貼り付けされた URL を検索します。</span><span class="sxs-lookup"><span data-stu-id="f90e6-108">The Azure DevOps messaging extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item.</span></span> <span data-ttu-id="f90e6-109">次のスクリーンショットでは、ユーザーが Azure DevOps の作業項目の URL に貼り付け、メッセージング拡張機能がカードに解決されています。</span><span class="sxs-lookup"><span data-stu-id="f90e6-109">In the screenshot below, a user has pasted in a URL for a work item in Azure DevOps which the messaging extension has resolved into a card.</span></span>
-
-![リンクの分岐の例](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
-
-## <a name="add-link-unfurling-to-your-app-manifest"></a><span data-ttu-id="f90e6-111">アプリ マニフェストにリンクの分岐を追加する</span><span class="sxs-lookup"><span data-stu-id="f90e6-111">Add link unfurling to your app manifest</span></span>
-
- <span data-ttu-id="f90e6-112">リンク展開をアプリ マニフェストに追加するには、アプリ マニフェスト JSON のセクションに新しい `messageHandlers` `composeExtensions` 配列を追加します。</span><span class="sxs-lookup"><span data-stu-id="f90e6-112">To add link unfurling to your app manifest add a new `messageHandlers` array to the `composeExtensions` section of your app manifest JSON.</span></span> <span data-ttu-id="f90e6-113">配列は、App Studio のヘルプを使用して追加するか、手動で追加できます。</span><span class="sxs-lookup"><span data-stu-id="f90e6-113">You can add the array either with the help of App Studio or manually.</span></span> <span data-ttu-id="f90e6-114">たとえば、ドメイン一覧にはワイルドカードを含めできます `*.example.com` 。</span><span class="sxs-lookup"><span data-stu-id="f90e6-114">Domain listings can include wildcards, for example `*.example.com`.</span></span> <span data-ttu-id="f90e6-115">これは、ドメインの 1 つのセグメントと正確に一致します。if you need to match `a.b.example.com` then use `*.*.example.com` .</span><span class="sxs-lookup"><span data-stu-id="f90e6-115">This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`.</span></span>
+<span data-ttu-id="098c1-104">このドキュメントでは、App studio を使用して手動でアプリ マニフェストにリンク解除を追加する方法についてガイドします。</span><span class="sxs-lookup"><span data-stu-id="098c1-104">This document guides you on how to add link unfurling to your app manifest using App studio and manually.</span></span> <span data-ttu-id="098c1-105">リンク展開を使用すると、特定のドメインの URL がメッセージの作成領域に貼り付けられたときに、アプリが `invoke` アクティビティを受信するように登録することができます。</span><span class="sxs-lookup"><span data-stu-id="098c1-105">With link unfurling your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area.</span></span> <span data-ttu-id="098c1-106">作成メッセージ領域に貼り付けされた完全な URL が含まれているので、ユーザーがリンクを解除できるカードで応答し、追加情報やアクション `invoke` を提供できます。</span><span class="sxs-lookup"><span data-stu-id="098c1-106">The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions.</span></span> <span data-ttu-id="098c1-107">これは、URL が検索用語として機能する検索コマンドと似ています。</span><span class="sxs-lookup"><span data-stu-id="098c1-107">This works similar to a search command with the URL serving as the search term.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="f90e6-116">直接またはワイルドカードを使用して、制御の外部にあるドメインを追加しません。</span><span class="sxs-lookup"><span data-stu-id="f90e6-116">Do not add domains that are outside your control, either directly or through wildcards.</span></span> <span data-ttu-id="f90e6-117">たとえば、yourapp.onmicrosoft.comは有効ですが、\*.onmicrosoft.comは無効です。</span><span class="sxs-lookup"><span data-stu-id="f90e6-117">For example, yourapp.onmicrosoft.com is valid, but \*.onmicrosoft.com is not valid.</span></span> <span data-ttu-id="f90e6-118">また、トップ レベル ドメインは禁止されています。</span><span class="sxs-lookup"><span data-stu-id="f90e6-118">Also, the top-level domains are prohibited.</span></span> <span data-ttu-id="f90e6-119">たとえば、*.com、*.org などです。</span><span class="sxs-lookup"><span data-stu-id="f90e6-119">For example, \*.com, \*.org.</span></span>
+> <span data-ttu-id="098c1-108">現時点では、モバイル クライアントではリンクのリンク解除はサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="098c1-108">Currently, link unfurling is not supported on Mobile clients.</span></span>
 
-### <a name="using-app-studio"></a><span data-ttu-id="f90e6-120">App Studio を使用する場合</span><span class="sxs-lookup"><span data-stu-id="f90e6-120">Using App Studio</span></span>
+<span data-ttu-id="098c1-109">Azure DevOps メッセージング拡張機能では、リンク解除を使用して、作業項目を指すメッセージの作成領域に貼り付け先の URL を探します。</span><span class="sxs-lookup"><span data-stu-id="098c1-109">The Azure DevOps messaging extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item.</span></span> <span data-ttu-id="098c1-110">次の図では、ユーザーが Azure DevOps の作業項目の URL を貼り付け、メッセージング拡張機能がカードに解決されています。</span><span class="sxs-lookup"><span data-stu-id="098c1-110">In the following image, a user has pasted a URL for a work item in Azure DevOps, which the messaging extension has resolved into a card:</span></span>
 
-1. <span data-ttu-id="f90e6-121">App Studio の [マニフェスト エディター] タブで、アプリ マニフェストを読み込む。</span><span class="sxs-lookup"><span data-stu-id="f90e6-121">In App Studio, on the Manifest editor tab, load your app manifest.</span></span>
-1. <span data-ttu-id="f90e6-122">[ **メッセージングの拡張機能] ページ** で、次のスクリーンショットに示すように、[ **メッセージ** ハンドラー] セクションで探すドメインを追加します。</span><span class="sxs-lookup"><span data-stu-id="f90e6-122">On the **Messaging Extension** page, add the domain you want to look for in the **Message handlers** section as in the screenshot below.</span></span>
+![リンクの分岐解除の例](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
-![App Studio のメッセージ ハンドラー セクション](~/assets/images/link-unfurling.png)
+## <a name="add-link-unfurling-to-your-app-manifest"></a><span data-ttu-id="098c1-112">アプリ マニフェストへのリンクのリンク解除の追加</span><span class="sxs-lookup"><span data-stu-id="098c1-112">Add link unfurling to your app manifest</span></span>
 
-### <a name="manually"></a><span data-ttu-id="f90e6-124">手動</span><span class="sxs-lookup"><span data-stu-id="f90e6-124">Manually</span></span>
+<span data-ttu-id="098c1-113">リンク展開をアプリ マニフェストに追加するには、アプリ マニフェスト JSON のセクションに新しい `messageHandlers` `composeExtensions` 配列を追加します。</span><span class="sxs-lookup"><span data-stu-id="098c1-113">To add link unfurling to your app manifest, add a new `messageHandlers` array to the `composeExtensions` section of your app manifest JSON.</span></span> <span data-ttu-id="098c1-114">配列は、App Studio の助けを借りて、または手動で追加できます。</span><span class="sxs-lookup"><span data-stu-id="098c1-114">You can add the array either with the help of App Studio or manually.</span></span> <span data-ttu-id="098c1-115">ドメインの一覧には、ワイルドカードを含め、たとえば、 を含めできます `*.example.com` 。</span><span class="sxs-lookup"><span data-stu-id="098c1-115">Domain listings can include wildcards, for example `*.example.com`.</span></span> <span data-ttu-id="098c1-116">これは、ドメインの 1 つのセグメントと完全に一致します。一致する必要がある場合は、 `a.b.example.com` を使用します `*.*.example.com` 。</span><span class="sxs-lookup"><span data-stu-id="098c1-116">This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`.</span></span>
 
-<span data-ttu-id="f90e6-125">この方法でメッセージング拡張機能がリンクとやり取りするには、まず、次の例に示すアプリ マニフェストに配列を `messageHandlers` 追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="f90e6-125">To enable your messaging extension to interact with links this way you'll first need to add the `messageHandlers` array to your app manifest as in the example below.</span></span> <span data-ttu-id="f90e6-126">この例は完全なマニフェストではありません [。マニフェストの](~/resources/schema/manifest-schema.md) 完全な例については、マニフェスト リファレンスを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f90e6-126">This example is not the complete manifest, see [manifest reference](~/resources/schema/manifest-schema.md) for a complete manifest example.</span></span>
+> [!NOTE]
+> <span data-ttu-id="098c1-117">Donot は、直接またはワイルドカードを使用して、コントロールに含まれているドメインを追加します。</span><span class="sxs-lookup"><span data-stu-id="098c1-117">Donot add domains that are not in your control, either directly or through wildcards.</span></span> <span data-ttu-id="098c1-118">たとえば、有効 `yourapp.onmicrosoft.com` ですが、 `*.onmicrosoft.com` 無効です。</span><span class="sxs-lookup"><span data-stu-id="098c1-118">For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid.</span></span> <span data-ttu-id="098c1-119">また、トップ レベルのドメインは禁止されています。</span><span class="sxs-lookup"><span data-stu-id="098c1-119">Also, the top-level domains are prohibited.</span></span> <span data-ttu-id="098c1-120">たとえば `*.com` 、. `*.org`</span><span class="sxs-lookup"><span data-stu-id="098c1-120">For example, `*.com`, `*.org`.</span></span>
+
+### <a name="add-link-unfurling-using-app-studio"></a><span data-ttu-id="098c1-121">App Studio を使用してリンクの分岐を解除する</span><span class="sxs-lookup"><span data-stu-id="098c1-121">Add link unfurling using App Studio</span></span>
+
+1. <span data-ttu-id="098c1-122">Microsoft **Teams クライアントから App Studio** を開き、[マニフェスト エディター] **タブを選択** します。</span><span class="sxs-lookup"><span data-stu-id="098c1-122">Open **App Studio** from the Microsoft Teams client, and select the **Manifest Editor** tab.</span></span>
+1. <span data-ttu-id="098c1-123">アプリ マニフェストを読み込む。</span><span class="sxs-lookup"><span data-stu-id="098c1-123">Load your app manifest.</span></span>
+1. <span data-ttu-id="098c1-124">[メッセージング **拡張機能] ページ** で、探すドメインを [メッセージ ハンドラー] セクション **に追加** します。</span><span class="sxs-lookup"><span data-stu-id="098c1-124">On the **Messaging Extension** page, add the domain that you want to look for in the **Message handlers** section.</span></span> <span data-ttu-id="098c1-125">次の図は、プロセスを説明しています。</span><span class="sxs-lookup"><span data-stu-id="098c1-125">The following image explains the process:</span></span>
+
+    ![App Studio の [メッセージ ハンドラー] セクション](~/assets/images/link-unfurling.png)
+    
+### <a name="add-link-unfurling-manually"></a><span data-ttu-id="098c1-127">リンクの手動でのリンク解除の追加</span><span class="sxs-lookup"><span data-stu-id="098c1-127">Add link unfurling manually</span></span>
+
+<span data-ttu-id="098c1-128">メッセージング拡張機能でリンクを操作するには、まず配列をアプリ マニフェスト `messageHandlers` に追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="098c1-128">To enable your messaging extension to interact with links, first you must add the `messageHandlers` array to your app manifest.</span></span> <span data-ttu-id="098c1-129">次の例では、リンクの分岐を手動で追加する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="098c1-129">The following example explains how to add link unfurling manually:</span></span> 
+
 
 ```json
 ...
@@ -62,20 +64,22 @@ ms.locfileid: "49845638"
 ...
 ```
 
-## <a name="handle-the-composeextensionquerylink-invoke"></a><span data-ttu-id="f90e6-127">呼び出しの `composeExtension/queryLink` 処理</span><span class="sxs-lookup"><span data-stu-id="f90e6-127">Handle the `composeExtension/queryLink` invoke</span></span>
+<span data-ttu-id="098c1-130">マニフェストの完全な例については、「マニフェスト参照」 [を参照してください](~/resources/schema/manifest-schema.md)。</span><span class="sxs-lookup"><span data-stu-id="098c1-130">For a complete manifest example, see [manifest reference](~/resources/schema/manifest-schema.md).</span></span>
 
-<span data-ttu-id="f90e6-128">アプリ マニフェストをリッスンするドメインを追加したら、呼び出し要求を処理するために Web サービス コードを更新する必要があります。</span><span class="sxs-lookup"><span data-stu-id="f90e6-128">Once you've added the domain to listen on to the app manifest, you'll need to update your web service code to handle the invoke request.</span></span> <span data-ttu-id="f90e6-129">受け取った URL を使用してサービスを検索し、カードの応答を作成します。</span><span class="sxs-lookup"><span data-stu-id="f90e6-129">Use the URL you receive to search your service and create a card response.</span></span> <span data-ttu-id="f90e6-130">複数のカードで応答する場合は、最初のカードだけが使用されます。</span><span class="sxs-lookup"><span data-stu-id="f90e6-130">If you respond with more than one card, only the first will be used.</span></span>
+## <a name="handle-the-composeextensionquerylink-invoke"></a><span data-ttu-id="098c1-131">呼び出しの `composeExtension/queryLink` 処理</span><span class="sxs-lookup"><span data-stu-id="098c1-131">Handle the `composeExtension/queryLink` invoke</span></span>
 
-<span data-ttu-id="f90e6-131">次のカードの種類がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="f90e6-131">We support the following card types:</span></span>
+<span data-ttu-id="098c1-132">アプリ マニフェストにドメインを追加した後、呼び出し要求を処理するために Web サービス コードを更新する必要があります。</span><span class="sxs-lookup"><span data-stu-id="098c1-132">After adding the domain to the app manifest, you must update your web service code to handle the invoke request.</span></span> <span data-ttu-id="098c1-133">受信した URL を使用してサービスを検索し、カード応答を作成します。</span><span class="sxs-lookup"><span data-stu-id="098c1-133">Use the received URL to search your service and create a card response.</span></span> <span data-ttu-id="098c1-134">複数のカードで応答する場合は、最初のカード応答だけが使用されます。</span><span class="sxs-lookup"><span data-stu-id="098c1-134">If you respond with more than one card, only the first card response is used.</span></span>
 
-* [<span data-ttu-id="f90e6-132">サムネイル カード</span><span class="sxs-lookup"><span data-stu-id="f90e6-132">Thumbnail card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
-* [<span data-ttu-id="f90e6-133">ヒーロー カード</span><span class="sxs-lookup"><span data-stu-id="f90e6-133">Hero card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [<span data-ttu-id="f90e6-134">Office 365 コネクタ カード</span><span class="sxs-lookup"><span data-stu-id="f90e6-134">Office 365 Connector card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
-* [<span data-ttu-id="f90e6-135">アダプティブ カード</span><span class="sxs-lookup"><span data-stu-id="f90e6-135">Adaptive Card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
+<span data-ttu-id="098c1-135">次のカードの種類がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="098c1-135">The following card types are supported:</span></span>
 
-<span data-ttu-id="f90e6-136">概要 [については、「カードについて](~/task-modules-and-cards/what-are-cards.md) 」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f90e6-136">See [What are cards](~/task-modules-and-cards/what-are-cards.md) for an overview.</span></span>
+* [<span data-ttu-id="098c1-136">サムネイル カード</span><span class="sxs-lookup"><span data-stu-id="098c1-136">Thumbnail card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
+* [<span data-ttu-id="098c1-137">ヒーロー カード</span><span class="sxs-lookup"><span data-stu-id="098c1-137">Hero card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
+* [<span data-ttu-id="098c1-138">Office 365 コネクタ カード</span><span class="sxs-lookup"><span data-stu-id="098c1-138">Office 365 Connector card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [<span data-ttu-id="098c1-139">アダプティブ カード</span><span class="sxs-lookup"><span data-stu-id="098c1-139">Adaptive Card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-# <a name="cnet"></a>[<span data-ttu-id="f90e6-137">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="f90e6-137">C#/.NET</span></span>](#tab/dotnet)
+### <a name="example"></a><span data-ttu-id="098c1-140">例</span><span class="sxs-lookup"><span data-stu-id="098c1-140">Example</span></span>
+
+# <a name="cnet"></a>[<span data-ttu-id="098c1-141">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="098c1-141">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQueryAsync(ITurnContext<IInvokeActivity> turnContext, AppBasedLinkQuery query, CancellationToken cancellationToken)
@@ -95,7 +99,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQue
 }
 ```
 
-# <a name="javascriptnodejs"></a>[<span data-ttu-id="f90e6-138">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="f90e6-138">JavaScript/Node.js</span></span>](#tab/javascript)
+# <a name="javascriptnodejs"></a>[<span data-ttu-id="098c1-142">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="098c1-142">JavaScript/Node.js</span></span>](#tab/javascript)
 
 ```javascript
 class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
@@ -118,9 +122,9 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[<span data-ttu-id="f90e6-139">JSON</span><span class="sxs-lookup"><span data-stu-id="f90e6-139">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="098c1-143">JSON</span><span class="sxs-lookup"><span data-stu-id="098c1-143">JSON</span></span>](#tab/json)
 
-<span data-ttu-id="f90e6-140">これは、ボットに送信 `invoke` される例です。</span><span class="sxs-lookup"><span data-stu-id="f90e6-140">This is an example of the `invoke` sent to your bot.</span></span>
+<span data-ttu-id="098c1-144">ボットに送信される送信の `invoke` 例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="098c1-144">Following is an example of the `invoke` sent to your bot:</span></span>
 
 ```json
 {
@@ -132,7 +136,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 }
 ```
 
-<span data-ttu-id="f90e6-141">応答の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="f90e6-141">An example of the response is shown below.</span></span>
+<span data-ttu-id="098c1-145">応答の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="098c1-145">Following is an example of the response:</span></span>
 
 ```json
 {
@@ -146,14 +150,14 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
           "sections": [
             {
               "activityTitle": "[85069]: Create a cool app",
-              "activityImage": "https://placekitten.com/200/200"
+              "activityImage&quot;: &quot;https://placekitten.com/200/200"
             },
             {
               "title": "Details",
               "facts": [
                 {
                   "name": "Assigned to:",
-                  "value": "[Larry Brown](mailto:larryb@example.com)"
+                  "value&quot;: &quot;[Larry Brown](mailto:larryb@example.com)"
                 },
                 {
                   "name": "State:",
@@ -170,3 +174,8 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 ```
 
 * * *
+
+## <a name="see-also"></a><span data-ttu-id="098c1-146">関連項目</span><span class="sxs-lookup"><span data-stu-id="098c1-146">See also</span></span> 
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="098c1-147">カードについて</span><span class="sxs-lookup"><span data-stu-id="098c1-147">What are cards</span></span>](~/task-modules-and-cards/what-are-cards.md)

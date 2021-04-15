@@ -1,34 +1,36 @@
 ---
 title: 検索コマンドに応答する
 author: clearab
-description: Microsoft Teams アプリのメッセージング拡張機能から [検索] コマンドに応答する方法。
+description: Microsoft Teams アプリのメッセージング拡張機能から検索コマンドに応答する方法。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: e8b40dd8f422ffbd2537e8fa76a38c15eb6208de
-ms.sourcegitcommit: 4329a94918263c85d6c65ff401f571556b80307b
+ms.openlocfilehash: 2cc53796deddb47e8dbce86a5b02f4d80a1b91e0
+ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41675121"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51696193"
 ---
-# <a name="respond-to-the-search-command"></a><span data-ttu-id="10b92-103">[検索] コマンドに応答する</span><span class="sxs-lookup"><span data-stu-id="10b92-103">Respond to the search command</span></span>
+# <a name="respond-to-search-command"></a><span data-ttu-id="d2959-103">検索コマンドに応答する</span><span class="sxs-lookup"><span data-stu-id="d2959-103">Respond to search command</span></span>
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-<span data-ttu-id="10b92-104">Web サービスは、検索パラメーター `composeExtension/query`を持つオブジェクトを`value`含む呼び出しメッセージを受信します。</span><span class="sxs-lookup"><span data-stu-id="10b92-104">Your web service will receive a `composeExtension/query` invoke message that contains a `value` object with the search parameters.</span></span> <span data-ttu-id="10b92-105">この呼び出しはトリガーされます。</span><span class="sxs-lookup"><span data-stu-id="10b92-105">This invoke is triggered:</span></span>
+<span data-ttu-id="d2959-104">ユーザーが検索コマンドを送信すると、Web サービスは、検索パラメーターを持つオブジェクトを含む呼び出し `composeExtension/query` `value` メッセージを受信します。</span><span class="sxs-lookup"><span data-stu-id="d2959-104">After the user submits the search command, your web service receives a `composeExtension/query` invoke message that contains a `value` object with the search parameters.</span></span> <span data-ttu-id="d2959-105">この呼び出しは、次の条件でトリガーされます。</span><span class="sxs-lookup"><span data-stu-id="d2959-105">This invoke is triggered with the following conditions:</span></span>
 
-* <span data-ttu-id="10b92-106">文字は検索ボックスに入力されます。</span><span class="sxs-lookup"><span data-stu-id="10b92-106">As characters are entered into the search box.</span></span>
-* <span data-ttu-id="10b92-107">が`initialRun`アプリマニフェストで true に設定されている場合は、検索コマンドが呼び出された直後に invoke メッセージを受信します。</span><span class="sxs-lookup"><span data-stu-id="10b92-107">If `initialRun` is set to true in your app manifest, you'll receive the invoke message as soon as the search command is invoked.</span></span> <span data-ttu-id="10b92-108">[既定のクエリ](#default-query)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="10b92-108">See [default query](#default-query).</span></span>
+* <span data-ttu-id="d2959-106">検索ボックスに文字が入力されます。</span><span class="sxs-lookup"><span data-stu-id="d2959-106">As characters are entered into the search box.</span></span>
+* <span data-ttu-id="d2959-107">`initialRun` がアプリ マニフェストで true に設定されている場合、検索コマンドが呼び出されるとすぐに呼び出しメッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="d2959-107">`initialRun` is set to true in your app manifest, you receive the invoke message as soon as the search command is invoked.</span></span> <span data-ttu-id="d2959-108">詳細については、「既定のクエリ [」を参照してください](#default-query)。</span><span class="sxs-lookup"><span data-stu-id="d2959-108">For more information, see [default query](#default-query).</span></span>
 
-<span data-ttu-id="10b92-109">要求のパラメーター自体は、要求の`value`オブジェクト内にあります。これには、次のプロパティが含まれます。</span><span class="sxs-lookup"><span data-stu-id="10b92-109">The request parameters itself are found in the `value` object in the request, which includes the following properties:</span></span>
+<span data-ttu-id="d2959-109">このドキュメントでは、カードとプレビューの形式でユーザー要求に応答する方法と、Microsoft Teams が既定のクエリを発行する条件について説明します。</span><span class="sxs-lookup"><span data-stu-id="d2959-109">This document guides you on how to respond to user requests in the form of cards and previews, and the conditions under which Microsoft Teams issues a default query.</span></span>
 
-| <span data-ttu-id="10b92-110">プロパティ名</span><span class="sxs-lookup"><span data-stu-id="10b92-110">Property name</span></span> | <span data-ttu-id="10b92-111">用途</span><span class="sxs-lookup"><span data-stu-id="10b92-111">Purpose</span></span> |
+<span data-ttu-id="d2959-110">要求パラメーターは、次の `value` プロパティを含む要求内のオブジェクトに含まれています。</span><span class="sxs-lookup"><span data-stu-id="d2959-110">The request parameters are found in the `value` object in the request, which includes the following properties:</span></span>
+
+| <span data-ttu-id="d2959-111">プロパティ名</span><span class="sxs-lookup"><span data-stu-id="d2959-111">Property name</span></span> | <span data-ttu-id="d2959-112">用途</span><span class="sxs-lookup"><span data-stu-id="d2959-112">Purpose</span></span> |
 |---|---|
-| `commandId` | <span data-ttu-id="10b92-112">アプリマニフェストで宣言されているコマンドのいずれかと一致する、ユーザーによって起動されたコマンドの名前。</span><span class="sxs-lookup"><span data-stu-id="10b92-112">The name of the command invoked by the user, matching one of the commands declared in the app manifest.</span></span> |
-| `parameters` | <span data-ttu-id="10b92-113">パラメーターの配列。</span><span class="sxs-lookup"><span data-stu-id="10b92-113">Array of parameters.</span></span> <span data-ttu-id="10b92-114">各 parameter オブジェクトには、ユーザーによって提供されるパラメータ値とともにパラメータ名が含まれています。</span><span class="sxs-lookup"><span data-stu-id="10b92-114">Each parameter object contains the parameter name, along with the parameter value provided by the user.</span></span> |
-| `queryOptions` | <span data-ttu-id="10b92-115">改ページのパラメーター:</span><span class="sxs-lookup"><span data-stu-id="10b92-115">Pagination parameters:</span></span> <br><span data-ttu-id="10b92-116">`skip`: このクエリの skip count</span><span class="sxs-lookup"><span data-stu-id="10b92-116">`skip`: skip count for this query</span></span> <br><span data-ttu-id="10b92-117">`count`: 返される要素の数</span><span class="sxs-lookup"><span data-stu-id="10b92-117">`count`: number of elements to return</span></span> |
+| `commandId` | <span data-ttu-id="d2959-113">アプリ マニフェストで宣言されているコマンドの 1 つと一致する、ユーザーによって呼び出されるコマンドの名前。</span><span class="sxs-lookup"><span data-stu-id="d2959-113">The name of the command invoked by the user, matching one of the commands declared in the app manifest.</span></span> |
+| `parameters` | <span data-ttu-id="d2959-114">パラメーターの配列。</span><span class="sxs-lookup"><span data-stu-id="d2959-114">Array of parameters.</span></span> <span data-ttu-id="d2959-115">各パラメーター オブジェクトには、ユーザーが指定したパラメーター値と共に、パラメーター名が含まれる。</span><span class="sxs-lookup"><span data-stu-id="d2959-115">Each parameter object contains the parameter name, along with the parameter value provided by the user.</span></span> |
+| `queryOptions` | <span data-ttu-id="d2959-116">ページネーション パラメーター:</span><span class="sxs-lookup"><span data-stu-id="d2959-116">Pagination parameters:</span></span> <br><span data-ttu-id="d2959-117">`skip`: このクエリのスキップ カウント</span><span class="sxs-lookup"><span data-stu-id="d2959-117">`skip`: Skip count for this query</span></span> <br><span data-ttu-id="d2959-118">`count`: 返す要素の数。</span><span class="sxs-lookup"><span data-stu-id="d2959-118">`count`: Number of elements to return.</span></span> |
 
-# <a name="cnettabdotnet"></a>[<span data-ttu-id="10b92-118">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="10b92-118">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="d2959-119">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="d2959-119">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionQueryAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken)
@@ -37,7 +39,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[<span data-ttu-id="10b92-119">TypeScript/node.js</span><span class="sxs-lookup"><span data-stu-id="10b92-119">TypeScript/Node.js</span></span>](#tab/typescript)
+# <a name="typescriptnodejs"></a>[<span data-ttu-id="d2959-120">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="d2959-120">TypeScript/Node.js</span></span>](#tab/typescript)
 
 ```typescript
 class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
@@ -47,9 +49,9 @@ class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[<span data-ttu-id="10b92-120">JSON</span><span class="sxs-lookup"><span data-stu-id="10b92-120">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="d2959-121">JSON</span><span class="sxs-lookup"><span data-stu-id="d2959-121">JSON</span></span>](#tab/json)
 
-<span data-ttu-id="10b92-121">次の JSON は、最も関連のあるセクションを強調するために短縮されています。</span><span class="sxs-lookup"><span data-stu-id="10b92-121">The JSON below is shortened to highlight the most relevant sections.</span></span>
+<span data-ttu-id="d2959-122">以下の JSON は、最も関連性の高いセクションを強調表示するために短縮されています。</span><span class="sxs-lookup"><span data-stu-id="d2959-122">The JSON below is shortened to highlight the most relevant sections.</span></span>
 
 ```json
 {
@@ -74,46 +76,46 @@ class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
 
 * * *
 
-## <a name="respond-to-user-requests"></a><span data-ttu-id="10b92-122">ユーザー要求に応答する</span><span class="sxs-lookup"><span data-stu-id="10b92-122">Respond to user requests</span></span>
+## <a name="respond-to-user-requests"></a><span data-ttu-id="d2959-123">ユーザー要求に応答する</span><span class="sxs-lookup"><span data-stu-id="d2959-123">Respond to user requests</span></span>
 
-<span data-ttu-id="10b92-123">ユーザーがクエリを実行すると、Microsoft Teams はサービスに対して同期 HTTP 要求を発行します。</span><span class="sxs-lookup"><span data-stu-id="10b92-123">When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service.</span></span> <span data-ttu-id="10b92-124">その時点で、コードには、要求に対する HTTP 応答を提供する5秒の時間があります。</span><span class="sxs-lookup"><span data-stu-id="10b92-124">At that point, your code has 5 seconds to provide an HTTP response to the request.</span></span> <span data-ttu-id="10b92-125">この間、サービスは、追加の参照、または要求の提供に必要なその他のビジネスロジックを実行できます。</span><span class="sxs-lookup"><span data-stu-id="10b92-125">During this time, your service can perform additional lookup, or any other business logic needed to serve the request.</span></span>
+<span data-ttu-id="d2959-124">ユーザーがクエリを実行すると、Microsoft Teams はサービスに同期 HTTP 要求を発行します。</span><span class="sxs-lookup"><span data-stu-id="d2959-124">When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service.</span></span> <span data-ttu-id="d2959-125">その時点で、要求に対する `5` HTTP 応答を提供する秒がコードに設定されています。</span><span class="sxs-lookup"><span data-stu-id="d2959-125">At that point, your code has `5` seconds to provide an HTTP response to the request.</span></span> <span data-ttu-id="d2959-126">この間、サービスは追加の参照、または要求を処理するために必要なその他のビジネス ロジックを実行できます。</span><span class="sxs-lookup"><span data-stu-id="d2959-126">During this time, your service can perform additional lookup, or any other business logic needed to serve the request.</span></span>
 
-<span data-ttu-id="10b92-126">サービスは、ユーザークエリに一致する結果で応答する必要があります。</span><span class="sxs-lookup"><span data-stu-id="10b92-126">Your service should respond with the results matching the user query.</span></span> <span data-ttu-id="10b92-127">応答は、HTTP 状態コード`200 OK`と、次の本文を含む有効な application/json オブジェクトを示す必要があります。</span><span class="sxs-lookup"><span data-stu-id="10b92-127">The response must indicate an HTTP status code of `200 OK` and a valid application/json object with the following body:</span></span>
+<span data-ttu-id="d2959-127">サービスは、ユーザー クエリに一致する結果で応答する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d2959-127">Your service must respond with the results matching the user query.</span></span> <span data-ttu-id="d2959-128">応答は、HTTP 状態コードと、次のプロパティを持 `200 OK` つ有効なアプリケーションまたは JSON オブジェクトを示す必要があります。</span><span class="sxs-lookup"><span data-stu-id="d2959-128">The response must indicate an HTTP status code of `200 OK` and a valid application or JSON object with the following properties:</span></span>
 
-|<span data-ttu-id="10b92-128">プロパティ名</span><span class="sxs-lookup"><span data-stu-id="10b92-128">Property name</span></span>|<span data-ttu-id="10b92-129">用途</span><span class="sxs-lookup"><span data-stu-id="10b92-129">Purpose</span></span>|
+|<span data-ttu-id="d2959-129">プロパティ名</span><span class="sxs-lookup"><span data-stu-id="d2959-129">Property name</span></span>|<span data-ttu-id="d2959-130">用途</span><span class="sxs-lookup"><span data-stu-id="d2959-130">Purpose</span></span>|
 |---|---|
-|`composeExtension`|<span data-ttu-id="10b92-130">最上位レベルの応答封筒。</span><span class="sxs-lookup"><span data-stu-id="10b92-130">Top-level response envelope.</span></span>|
-|`composeExtension.type`|<span data-ttu-id="10b92-131">応答の種類。</span><span class="sxs-lookup"><span data-stu-id="10b92-131">Type of response.</span></span> <span data-ttu-id="10b92-132">次の種類がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="10b92-132">The following types are supported:</span></span> <br><span data-ttu-id="10b92-133">`result`: 検索結果の一覧を表示します。</span><span class="sxs-lookup"><span data-stu-id="10b92-133">`result`: displays a list of search results</span></span> <br><span data-ttu-id="10b92-134">`auth`: ユーザーに認証を要求する</span><span class="sxs-lookup"><span data-stu-id="10b92-134">`auth`: asks the user to authenticate</span></span> <br><span data-ttu-id="10b92-135">`config`: メッセージング拡張機能をセットアップするようにユーザーに要求します。</span><span class="sxs-lookup"><span data-stu-id="10b92-135">`config`: asks the user to set up the messaging extension</span></span> <br><span data-ttu-id="10b92-136">`message`: テキスト形式のメッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="10b92-136">`message`: displays a plain text message</span></span> |
-|`composeExtension.attachmentLayout`|<span data-ttu-id="10b92-137">添付ファイルのレイアウトを指定します。</span><span class="sxs-lookup"><span data-stu-id="10b92-137">Specifies the layout of the attachments.</span></span> <span data-ttu-id="10b92-138">種類`result`の応答に使用されます。</span><span class="sxs-lookup"><span data-stu-id="10b92-138">Used for responses of type `result`.</span></span> <br><span data-ttu-id="10b92-139">現在、次の種類がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="10b92-139">Currently the following types are supported:</span></span> <br><span data-ttu-id="10b92-140">`list`: サムネイル、タイトル、テキストフィールドを含む card オブジェクトのリスト</span><span class="sxs-lookup"><span data-stu-id="10b92-140">`list`: a list of card objects containing thumbnail, title, and text fields</span></span> <br><span data-ttu-id="10b92-141">`grid`: サムネイル画像のグリッド</span><span class="sxs-lookup"><span data-stu-id="10b92-141">`grid`: a grid of thumbnail images</span></span> |
-|`composeExtension.attachments`|<span data-ttu-id="10b92-142">有効な attachment オブジェクトの配列。</span><span class="sxs-lookup"><span data-stu-id="10b92-142">Array of valid attachment objects.</span></span> <span data-ttu-id="10b92-143">種類`result`の応答に使用されます。</span><span class="sxs-lookup"><span data-stu-id="10b92-143">Used for responses of type `result`.</span></span> <br><span data-ttu-id="10b92-144">現在、次の種類がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="10b92-144">Currently the following types are supported:</span></span> <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
-|`composeExtension.suggestedActions`|<span data-ttu-id="10b92-145">推奨されるアクション。</span><span class="sxs-lookup"><span data-stu-id="10b92-145">Suggested actions.</span></span> <span data-ttu-id="10b92-146">種類`auth`または`config`の応答に使用されます。</span><span class="sxs-lookup"><span data-stu-id="10b92-146">Used for responses of type `auth` or `config`.</span></span> |
-|`composeExtension.text`|<span data-ttu-id="10b92-147">表示するメッセージ。</span><span class="sxs-lookup"><span data-stu-id="10b92-147">Message to display.</span></span> <span data-ttu-id="10b92-148">種類`message`の応答に使用されます。</span><span class="sxs-lookup"><span data-stu-id="10b92-148">Used for responses of type `message`.</span></span> |
+|`composeExtension`|<span data-ttu-id="d2959-131">トップ レベルの応答エンベロープ。</span><span class="sxs-lookup"><span data-stu-id="d2959-131">Top-level response envelope.</span></span>|
+|`composeExtension.type`|<span data-ttu-id="d2959-132">応答の種類。</span><span class="sxs-lookup"><span data-stu-id="d2959-132">Type of response.</span></span> <span data-ttu-id="d2959-133">次の種類がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="d2959-133">The following types are supported:</span></span> <br><span data-ttu-id="d2959-134">`result`: 検索結果の一覧を表示します。</span><span class="sxs-lookup"><span data-stu-id="d2959-134">`result`: Displays a list of search results</span></span> <br><span data-ttu-id="d2959-135">`auth`: ユーザーに認証を求める</span><span class="sxs-lookup"><span data-stu-id="d2959-135">`auth`: Asks the user to authenticate</span></span> <br><span data-ttu-id="d2959-136">`config`: メッセージング拡張機能のセットアップをユーザーに求める</span><span class="sxs-lookup"><span data-stu-id="d2959-136">`config`: Asks the user to set up the messaging extension</span></span> <br><span data-ttu-id="d2959-137">`message`: テキスト形式のメッセージを表示します。</span><span class="sxs-lookup"><span data-stu-id="d2959-137">`message`: Displays a plain text message</span></span> |
+|`composeExtension.attachmentLayout`|<span data-ttu-id="d2959-138">添付ファイルのレイアウトを指定します。</span><span class="sxs-lookup"><span data-stu-id="d2959-138">Specifies the layout of the attachments.</span></span> <span data-ttu-id="d2959-139">型の応答に使用されます `result` 。</span><span class="sxs-lookup"><span data-stu-id="d2959-139">Used for responses of type `result`.</span></span> <br><span data-ttu-id="d2959-140">現在、次の種類がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="d2959-140">Currently, the following types are supported:</span></span> <br><span data-ttu-id="d2959-141">`list`: サムネイル、タイトル、テキスト フィールドを含むカード オブジェクトの一覧</span><span class="sxs-lookup"><span data-stu-id="d2959-141">`list`: A list of card objects containing thumbnail, title, and text fields</span></span> <br><span data-ttu-id="d2959-142">`grid`: サムネイル画像のグリッド</span><span class="sxs-lookup"><span data-stu-id="d2959-142">`grid`: A grid of thumbnail images</span></span> |
+|`composeExtension.attachments`|<span data-ttu-id="d2959-143">有効な添付ファイル オブジェクトの配列。</span><span class="sxs-lookup"><span data-stu-id="d2959-143">Array of valid attachment objects.</span></span> <span data-ttu-id="d2959-144">型の応答に使用されます `result` 。</span><span class="sxs-lookup"><span data-stu-id="d2959-144">Used for responses of type `result`.</span></span> <br><span data-ttu-id="d2959-145">現在、次の種類がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="d2959-145">Currently, the following types are supported:</span></span> <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
+|`composeExtension.suggestedActions`|<span data-ttu-id="d2959-146">推奨されるアクション。</span><span class="sxs-lookup"><span data-stu-id="d2959-146">Suggested actions.</span></span> <span data-ttu-id="d2959-147">型または . の応答に `auth` 使用 `config` されます。</span><span class="sxs-lookup"><span data-stu-id="d2959-147">Used for responses of type `auth` or `config`.</span></span> |
+|`composeExtension.text`|<span data-ttu-id="d2959-148">表示するメッセージ。</span><span class="sxs-lookup"><span data-stu-id="d2959-148">Message to display.</span></span> <span data-ttu-id="d2959-149">型の応答に使用されます `message` 。</span><span class="sxs-lookup"><span data-stu-id="d2959-149">Used for responses of type `message`.</span></span> |
 
-### <a name="response-card-types-and-previews"></a><span data-ttu-id="10b92-149">応答カードの種類とプレビュー</span><span class="sxs-lookup"><span data-stu-id="10b92-149">Response card types and previews</span></span>
+### <a name="response-card-types-and-previews"></a><span data-ttu-id="d2959-150">応答カードの種類とプレビュー</span><span class="sxs-lookup"><span data-stu-id="d2959-150">Response card types and previews</span></span>
 
-<span data-ttu-id="10b92-150">次の種類の添付ファイルがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="10b92-150">We support the following attachment types:</span></span>
+<span data-ttu-id="d2959-151">Teams では、次のカードの種類がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="d2959-151">Teams supports the following card types:</span></span>
 
-* [<span data-ttu-id="10b92-151">サムネイルカード</span><span class="sxs-lookup"><span data-stu-id="10b92-151">Thumbnail card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
-* [<span data-ttu-id="10b92-152">英雄カード</span><span class="sxs-lookup"><span data-stu-id="10b92-152">Hero card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [<span data-ttu-id="10b92-153">Office 365 コネクタカード</span><span class="sxs-lookup"><span data-stu-id="10b92-153">Office 365 Connector card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
-* [<span data-ttu-id="10b92-154">アダプティブカード</span><span class="sxs-lookup"><span data-stu-id="10b92-154">Adaptive Card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
+* [<span data-ttu-id="d2959-152">サムネイル カード</span><span class="sxs-lookup"><span data-stu-id="d2959-152">Thumbnail card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
+* [<span data-ttu-id="d2959-153">ヒーロー カード</span><span class="sxs-lookup"><span data-stu-id="d2959-153">Hero card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
+* [<span data-ttu-id="d2959-154">Office 365 コネクタ カード</span><span class="sxs-lookup"><span data-stu-id="d2959-154">Office 365 Connector card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [<span data-ttu-id="d2959-155">アダプティブ カード</span><span class="sxs-lookup"><span data-stu-id="d2959-155">Adaptive Card</span></span>](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-<span data-ttu-id="10b92-155">概要については、「[カードとは](~/task-modules-and-cards/what-are-cards.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="10b92-155">See [What are cards](~/task-modules-and-cards/what-are-cards.md) for an overview.</span></span>
+<span data-ttu-id="d2959-156">カードの理解と概要を把握するには、カード [の概要を参照してください](~/task-modules-and-cards/what-are-cards.md)。</span><span class="sxs-lookup"><span data-stu-id="d2959-156">To have a better understanding and overview on cards, see [what are cards](~/task-modules-and-cards/what-are-cards.md).</span></span>
 
-<span data-ttu-id="10b92-156">サムネイルおよびヒーローカードの種類を使用する方法については、「[カードおよびカードのアクションを追加](~/task-modules-and-cards/cards/cards-actions.md)する」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="10b92-156">To learn how to use the thumbnail and hero card types, see [Add cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).</span></span>
+<span data-ttu-id="d2959-157">サムネイルカードとヒーロー カードの種類を使用する方法については、「Add [card and card actions」を参照してください](~/task-modules-and-cards/cards/cards-actions.md)。</span><span class="sxs-lookup"><span data-stu-id="d2959-157">To learn how to use the thumbnail and hero card types, see [add cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).</span></span>
 
-<span data-ttu-id="10b92-157">Office 365 コネクタカードに関するその他のドキュメントについては、「 [office 365 コネクタカードの使用](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="10b92-157">For additional documentation regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).</span></span>
+<span data-ttu-id="d2959-158">365 コネクタ カードの詳細Office 365 コネクタ カードの使用Office [を参照してください](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)。</span><span class="sxs-lookup"><span data-stu-id="d2959-158">For additional information regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).</span></span>
 
-<span data-ttu-id="10b92-158">結果リストは、Microsoft Teams UI に各アイテムのプレビューと共に表示されます。</span><span class="sxs-lookup"><span data-stu-id="10b92-158">The result list is displayed in the Microsoft Teams UI with a preview of each item.</span></span> <span data-ttu-id="10b92-159">プレビューは、次の2つの方法のいずれかで生成されます。</span><span class="sxs-lookup"><span data-stu-id="10b92-159">The preview is generated in one of two ways:</span></span>
+<span data-ttu-id="d2959-159">結果の一覧が Microsoft Teams UI に表示され、各アイテムのプレビューが表示されます。</span><span class="sxs-lookup"><span data-stu-id="d2959-159">The result list is displayed in the Microsoft Teams UI with a preview of each item.</span></span> <span data-ttu-id="d2959-160">プレビューは、次の 2 つの方法で生成されます。</span><span class="sxs-lookup"><span data-stu-id="d2959-160">The preview is generated in one of the two ways:</span></span>
 
-* <span data-ttu-id="10b92-160">`attachment`オブジェクト内で`preview`プロパティを使用します。</span><span class="sxs-lookup"><span data-stu-id="10b92-160">Using the `preview` property within the `attachment` object.</span></span> <span data-ttu-id="10b92-161">添付`preview`ファイルには、ヒーローまたはサムネイルカードのみを指定できます。</span><span class="sxs-lookup"><span data-stu-id="10b92-161">The `preview` attachment can only be a Hero or Thumbnail card.</span></span>
-* <span data-ttu-id="10b92-162">添付ファイルの基本`title`、 `text`、および`image`プロパティから抽出されます。</span><span class="sxs-lookup"><span data-stu-id="10b92-162">Extracted from the basic `title`, `text`, and `image` properties of the attachment.</span></span> <span data-ttu-id="10b92-163">これらのプロパティは、 `preview`プロパティが設定されておらず、これらのプロパティを使用できる場合にのみ使用されます。</span><span class="sxs-lookup"><span data-stu-id="10b92-163">These are used only if the `preview` property is not set and these properties are available.</span></span>
+* <span data-ttu-id="d2959-161">オブジェクト内 `preview` のプロパティを使用 `attachment` する。</span><span class="sxs-lookup"><span data-stu-id="d2959-161">Using the `preview` property within the `attachment` object.</span></span> <span data-ttu-id="d2959-162">添付 `preview` ファイルには、ヒーロー カードまたはサムネイル カードのみを指定できます。</span><span class="sxs-lookup"><span data-stu-id="d2959-162">The `preview` attachment can only be a Hero or Thumbnail card.</span></span>
+* <span data-ttu-id="d2959-163">添付ファイルの基本 `title` 、 `text` および `image` プロパティから抽出されます。</span><span class="sxs-lookup"><span data-stu-id="d2959-163">Extracted from the basic `title`, `text`, and `image` properties of the attachment.</span></span> <span data-ttu-id="d2959-164">これらは、プロパティが設定されていない `preview` 場合にのみ使用され、これらのプロパティを使用できます。</span><span class="sxs-lookup"><span data-stu-id="d2959-164">These are used only if the `preview` property is not set and these properties are available.</span></span>
 
-<span data-ttu-id="10b92-164">そのプレビュープロパティを使用して、アダプティブカードまたは Office 365 のコネクタカードのプレビューを結果リストに表示することができます。</span><span class="sxs-lookup"><span data-stu-id="10b92-164">You can display a preview of an Adaptive Card or Office 365 Connector card in the result list simply by its preview property.</span></span> <span data-ttu-id="10b92-165">結果が既にヒーローまたはサムネイルカードである場合は、この手順は必要ありません。</span><span class="sxs-lookup"><span data-stu-id="10b92-165">This is not necessary if the results are already hero or thumbnail cards.</span></span> <span data-ttu-id="10b92-166">プレビューの添付ファイルを使用する場合は、ヒーローまたは Thumbnail カードである必要があります。</span><span class="sxs-lookup"><span data-stu-id="10b92-166">If you use the preview attachment, it must be either a Hero or Thumbnail card.</span></span> <span data-ttu-id="10b92-167">Preview プロパティが指定されていない場合、カードのプレビューは失敗し、何も表示されません。</span><span class="sxs-lookup"><span data-stu-id="10b92-167">If no preview property is specified, the preview of the card will fail and nothing will be displayed.</span></span>
+<span data-ttu-id="d2959-165">アダプティブ カードまたは 365 コネクタ カードOfficeプレビュー プロパティを使用して、結果リストに表示できます。</span><span class="sxs-lookup"><span data-stu-id="d2959-165">You can display a preview of an Adaptive Card or Office 365 Connector card in the result list using its preview property.</span></span> <span data-ttu-id="d2959-166">結果が既にヒーロー カードまたはサムネイル カードである場合、preview プロパティは必要ありません。</span><span class="sxs-lookup"><span data-stu-id="d2959-166">The preview property is not necessary if the results are already Hero or Thumbnail cards.</span></span> <span data-ttu-id="d2959-167">プレビュー添付ファイルを使用する場合は、ヒーロー カードまたはサムネイル カードである必要があります。</span><span class="sxs-lookup"><span data-stu-id="d2959-167">If you use the preview attachment, it must be either a Hero or Thumbnail card.</span></span> <span data-ttu-id="d2959-168">preview プロパティを指定しない場合、カードのプレビューは失敗し、何も表示されません。</span><span class="sxs-lookup"><span data-stu-id="d2959-168">If no preview property is specified, the preview of the card fails and nothing is displayed.</span></span>
 
-### <a name="response-example"></a><span data-ttu-id="10b92-168">応答の例</span><span class="sxs-lookup"><span data-stu-id="10b92-168">Response example</span></span>
+### <a name="response-example"></a><span data-ttu-id="d2959-169">応答の例</span><span class="sxs-lookup"><span data-stu-id="d2959-169">Response example</span></span>
 
-# <a name="cnettabdotnet"></a>[<span data-ttu-id="10b92-169">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="10b92-169">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="d2959-170">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="d2959-170">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionQueryAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken) 
@@ -147,7 +149,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 }
 ```
 
-# <a name="typescriptnodejstabtypescript"></a>[<span data-ttu-id="10b92-170">TypeScript/node.js</span><span class="sxs-lookup"><span data-stu-id="10b92-170">TypeScript/Node.js</span></span>](#tab/typescript)
+# <a name="typescriptnodejs"></a>[<span data-ttu-id="d2959-171">TypeScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="d2959-171">TypeScript/Node.js</span></span>](#tab/typescript)
 
 ```typescript
 class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
@@ -174,7 +176,7 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="jsontabjson"></a>[<span data-ttu-id="10b92-171">JSON</span><span class="sxs-lookup"><span data-stu-id="10b92-171">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="d2959-172">JSON</span><span class="sxs-lookup"><span data-stu-id="d2959-172">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -188,14 +190,14 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
           "sections": [
             {
               "activityTitle": "[85069]: Create a cool app",
-              "activityImage": "https://placekitten.com/200/200"
+              "activityImage&quot;: &quot;https://placekitten.com/200/200"
             },
             {
               "title": "Details",
               "facts": [
                 {
                   "name": "Assigned to:",
-                  "value": "[Larry Brown](mailto:larryb@example.com)"
+                  "value&quot;: &quot;[Larry Brown](mailto:larryb@example.com)"
                 },
                 {
                   "name": "State:",
@@ -308,11 +310,11 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 
 * * *
 
-## <a name="default-query"></a><span data-ttu-id="10b92-172">既定のクエリ</span><span class="sxs-lookup"><span data-stu-id="10b92-172">Default query</span></span>
+## <a name="default-query"></a><span data-ttu-id="d2959-173">既定のクエリ</span><span class="sxs-lookup"><span data-stu-id="d2959-173">Default query</span></span>
 
-<span data-ttu-id="10b92-173">マニフェスト内に`initialRun`が`true`設定されている場合、Microsoft Teams は、ユーザーが最初にメッセージング拡張機能を開いたときに "既定" クエリを発行します。</span><span class="sxs-lookup"><span data-stu-id="10b92-173">If you set `initialRun` to `true` in the manifest, Microsoft Teams issues a "default" query when the user first opens the messaging extension.</span></span> <span data-ttu-id="10b92-174">サービスは、このクエリに対して事前に設定された一連の結果で応答できます。</span><span class="sxs-lookup"><span data-stu-id="10b92-174">Your service can respond to this query with a set of pre-populated results.</span></span> <span data-ttu-id="10b92-175">これは、検索コマンドが認証または構成を必要とし、最近表示されたアイテム、お気に入り、またはユーザー入力に依存しないその他の情報を表示する場合に便利です。</span><span class="sxs-lookup"><span data-stu-id="10b92-175">This can be useful when your search command requires authentication or configuration, displaying recently viewed items, favorites, or any other information that is not dependent on user input.</span></span>
+<span data-ttu-id="d2959-174">マニフェストで設定した場合、Microsoft Teams は、ユーザーが最初にメッセージング拡張機能を開くと既定 `initialRun` `true` のクエリを発行します。 </span><span class="sxs-lookup"><span data-stu-id="d2959-174">If you set `initialRun` to `true` in the manifest, Microsoft Teams issues a **default** query when the user first opens the messaging extension.</span></span> <span data-ttu-id="d2959-175">サービスは、事前に設定された結果のセットでこのクエリに応答できます。</span><span class="sxs-lookup"><span data-stu-id="d2959-175">Your service can respond to this query with a set of pre-populated results.</span></span> <span data-ttu-id="d2959-176">これは、検索コマンドで認証または構成が必要な場合、最近表示されたアイテム、お気に入り、またはユーザー入力に依存しないその他の情報を表示する場合に便利です。</span><span class="sxs-lookup"><span data-stu-id="d2959-176">This is useful when your search command requires authentication or configuration, displaying recently viewed items, favorites, or any other information that is not dependent on user input.</span></span>
 
-<span data-ttu-id="10b92-176">既定のクエリは、通常のユーザークエリと同じ構造を持って`name`おり`initialRun` `value` 、フィールドはに設定`true`され、以下のオブジェクトと同様に設定されています。</span><span class="sxs-lookup"><span data-stu-id="10b92-176">The default query has the same structure as any regular user query, with the `name` field set to `initialRun` and `value` set to `true` as in the object below.</span></span>
+<span data-ttu-id="d2959-177">既定のクエリは、通常のユーザー クエリと同じ構造を持ち、フィールドを次のオブジェクトに示すように設定 `name` `initialRun` `value` `true` します。</span><span class="sxs-lookup"><span data-stu-id="d2959-177">The default query has the same structure as any regular user query, with the `name` field set to `initialRun` and `value` set to `true` as shown in the following object:</span></span>
 
 ```json
 {
@@ -335,15 +337,22 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 }
 ```
 
-## <a name="next-steps"></a><span data-ttu-id="10b92-177">次のステップ</span><span class="sxs-lookup"><span data-stu-id="10b92-177">Next Steps</span></span>
+## <a name="code-sample"></a><span data-ttu-id="d2959-178">コード サンプル</span><span class="sxs-lookup"><span data-stu-id="d2959-178">Code sample</span></span>
 
-<span data-ttu-id="10b92-178">認証または構成を追加する</span><span class="sxs-lookup"><span data-stu-id="10b92-178">Add authentication and/or configuration</span></span>
+| <span data-ttu-id="d2959-179">サンプルの名前</span><span class="sxs-lookup"><span data-stu-id="d2959-179">Sample Name</span></span>           | <span data-ttu-id="d2959-180">説明</span><span class="sxs-lookup"><span data-stu-id="d2959-180">Description</span></span> | <span data-ttu-id="d2959-181">.NET</span><span class="sxs-lookup"><span data-stu-id="d2959-181">.NET</span></span>    | <span data-ttu-id="d2959-182">Node.js</span><span class="sxs-lookup"><span data-stu-id="d2959-182">Node.js</span></span>   |   
+|:---------------------|:--------------|:---------|:--------|
+|<span data-ttu-id="d2959-183">Teams メッセージング拡張機能アクション</span><span class="sxs-lookup"><span data-stu-id="d2959-183">Teams messaging extension action</span></span>| <span data-ttu-id="d2959-184">アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="d2959-184">Describes how to define action commands, create task module, and  respond to task module submit action.</span></span> |[<span data-ttu-id="d2959-185">View</span><span class="sxs-lookup"><span data-stu-id="d2959-185">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[<span data-ttu-id="d2959-186">View</span><span class="sxs-lookup"><span data-stu-id="d2959-186">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|<span data-ttu-id="d2959-187">Teams メッセージング拡張機能の検索</span><span class="sxs-lookup"><span data-stu-id="d2959-187">Teams messaging extension search</span></span>   |  <span data-ttu-id="d2959-188">検索コマンドを定義し、検索に応答する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="d2959-188">Describes how to define search commands and respond to searches.</span></span>        |[<span data-ttu-id="d2959-189">View</span><span class="sxs-lookup"><span data-stu-id="d2959-189">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[<span data-ttu-id="d2959-190">View</span><span class="sxs-lookup"><span data-stu-id="d2959-190">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-* [<span data-ttu-id="10b92-179">メッセージング拡張機能に認証を追加する</span><span class="sxs-lookup"><span data-stu-id="10b92-179">Add authentication to a messaging extension</span></span>](~/messaging-extensions/how-to/add-authentication.md)
-* [<span data-ttu-id="10b92-180">メッセージング拡張機能に構成を追加する</span><span class="sxs-lookup"><span data-stu-id="10b92-180">Add configuration to a messaging extension</span></span>](~/messaging-extensions/how-to/add-configuration-page.md)
+## <a name="see-also"></a><span data-ttu-id="d2959-191">関連項目</span><span class="sxs-lookup"><span data-stu-id="d2959-191">See also</span></span>
 
-<span data-ttu-id="10b92-181">構成の展開</span><span class="sxs-lookup"><span data-stu-id="10b92-181">Deploy configuration</span></span>
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="d2959-192">メッセージング拡張機能に構成を追加する</span><span class="sxs-lookup"><span data-stu-id="d2959-192">Add configuration to a messaging extension</span></span>](~/messaging-extensions/how-to/add-configuration-page.md)
+ 
+## <a name="next-step"></a><span data-ttu-id="d2959-193">次の手順</span><span class="sxs-lookup"><span data-stu-id="d2959-193">Next step</span></span>
 
-* [<span data-ttu-id="10b92-182">アプリパッケージを展開する</span><span class="sxs-lookup"><span data-stu-id="10b92-182">Deploy your app package</span></span>](~/concepts/deploy-and-publish/apps-upload.md)
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="d2959-194">メッセージング拡張機能に認証を追加する</span><span class="sxs-lookup"><span data-stu-id="d2959-194">Add authentication to a messaging extension</span></span>](~/messaging-extensions/how-to/add-authentication.md)
 
-[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
+
+
