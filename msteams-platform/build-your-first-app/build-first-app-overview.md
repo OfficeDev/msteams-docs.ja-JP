@@ -5,12 +5,12 @@ description: Microsoft Teams アプリ開発を開始し、環境をセットア
 ms.author: lajanuar
 ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: 11bc263fae28866338abf37456ccf483d9f0a9fd
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: 6594ac175cd8ad92c5db399bb675ef3a6b271321
+ms.sourcegitcommit: 0e252159f53ff9b4452e0574b759bfe73cbf6c84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585863"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51762040"
 ---
 # <a name="build-your-first-microsoft-teams-app-overview"></a>最初の Microsoft Teams アプリの概要を作成する
 
@@ -87,7 +87,7 @@ Microsoft 365 開発者プログラムに参加することで、アプリのサ
 Teams は、HTTPS 接続を介してアプリのコンテンツのみを表示します。 ボットなど、特定の種類のアプリをローカルでデバッグするには [、ngrok](../concepts/build-and-test/debug.md#locally-hosted) を使用して Teams とアプリの間にセキュリティで保護されたトンネルを設定する方法について説明します。 (Production Teams アプリはクラウドでホストされます)。
 
 1. [Node.js](https://nodejs.org/en/) をインストールします。
-1. ボット [またはメッセージング拡張機能を](https://ngrok.com/download) ビルドする予定の場合は、ngrok をインストールします。
+1. [ボットまたはメッセージング拡張機能を](https://ngrok.com/download)構築し、ngrok を使用してトンネルを作成する場合は[、ngrok をインストールします](https://docs.microsoft.com/microsoftteams/platform/tutorials/get-started-dotnet-app-studio#tunnel-using-ngrok)。
 1. 最新バージョンのコードを [インストールVisual Studioします](https://code.visualstudio.com/download)。 (以前のバージョンはツールキットで動作しない場合があります)。
 1. [Visual Studio コード] で、左側の [アクティビティ バー] で [拡張機能] を選択し、Microsoft Teams サーバーをインストール :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: **Toolkit。**
 

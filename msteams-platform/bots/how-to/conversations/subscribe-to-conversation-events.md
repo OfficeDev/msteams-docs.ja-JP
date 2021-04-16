@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: Microsoft Teams ボットからの会話イベントを処理する方法。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: af06dba58b3784a03dbcbbc627fa38fce681eeb8
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: af1724620ede44f8d0f7739e265ef1ebd1e3afd8
+ms.sourcegitcommit: 0e252159f53ff9b4452e0574b759bfe73cbf6c84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696347"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51762033"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams ボットの会話イベント
 
@@ -1060,10 +1060,10 @@ async def on_teams_team_unarchived(
 
 | EventType       | Payload オブジェクト   | 説明                                                             | 範囲 |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [ボット メッセージへの反応](#reactions-to-a-bot-message)                   | すべて   |
-| messageReaction | reactionsRemoved | [ボット メッセージから削除されたリアクション](#reactions-removed-from-bot-message) | すべて   |
+| messageReaction | reactionsAdded   | [ボット メッセージに追加された反応](#reactions-added-to-bot-message)。           | すべて   |
+| messageReaction | reactionsRemoved | [ボット メッセージから削除された反応](#reactions-removed-from-bot-message)。 | すべて |
 
-### <a name="reactions-to-a-bot-message"></a>ボット メッセージへの反応
+### <a name="reactions-added-to-bot-message"></a>ボット メッセージに追加された反応
 
 次のコードは、ボット メッセージに対する反応の例を示しています。
 
@@ -1283,13 +1283,104 @@ async def on_reactions_removed(
 
 * * *
 
+## <a name="installation-update-event"></a>インストール更新イベント
+
+ボットをスレッドに `installationUpdate` インストールすると、ボットはイベントを受け取ります。 スレッドからボットをアンインストールすると、イベントもトリガーされます。 ボットをインストールすると、イベント内のアクション フィールドが追加に設定され、ボットがアンインストールされた場合、アクションフィールドは削除に設定 *されます*。
+ 
+> [!NOTE]
+> アプリケーションをアップグレードし、ボットを追加または削除すると、アクションによってイベントもトリガー `installationUpdate` されます。 ボット **を** 削除した場合、ボット *を追加したり* 、削除アップグレードを行った場合は、アクション フィールドは追加 *アップグレード* に設定されます。 
+
+> [!IMPORTANT]
+> インストール更新イベントは、現在開発者向けプレビューで、2021 年 3 月に一般提供 (GA) になります。 インストール更新イベントを確認するには、Teams クライアントをパブリック開発者プレビューに移動し、個人またはチームまたはチャットにアプリを追加できます。
+
+### <a name="install-update-event"></a>更新イベントのインストール
+イベントを `installationUpdate` 使用して、インストール時にボットから導入メッセージを送信します。 このイベントは、プライバシーとデータ保持の要件を満たすのに役立ちます。 ボットがアンインストールされた場合は、ユーザーデータまたはスレッド データをクリーンアップして削除できます。
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+
+```csharp
+protected override async Task
+OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken) {
+var activity = turnContext.Activity; if
+(string.Equals(activity.Action, "Add",
+StringComparison.InvariantCultureIgnoreCase)) {
+// TO:DO Installation workflow }
+else
+{ // TO:DO Uninstallation workflow
+} return; }
+```
+
+イベントをキャプチャする別の方法として、シナリオの追加または削除に専用のハンドラーを使用することもできます。
+
+```csharp
+protected override async Task
+OnInstallationUpdateAddAsync(ITurnContext<IInstallationUpdateActivity>
+turnContext, CancellationToken cancellationToken) {
+// TO:DO Installation workflow return;
+}
+```
+
+# <a name="json"></a>[JSON](#tab/json)
+
+```json
+{ 
+  "action": "add", 
+  "type": "installationUpdate", 
+  "timestamp": "2020-10-20T22:08:07.869Z", 
+  "id": "f:3033745319439849398", 
+  "channelId": "msteams", 
+  "serviceUrl": "https://smba.trafficmanager.net/amer/", 
+  "from": { 
+    "id": "sample id", 
+    "aadObjectId": "sample AAD Object ID" 
+  },
+  "conversation": { 
+    "isGroup": true, 
+    "conversationType": "channel", 
+    "tenantId": "sample tenant ID", 
+    "id": "sample conversation Id@thread.skype" 
+  }, 
+
+  "recipient": { 
+    "id": "sample reciepent bot ID", 
+    "name": "bot name" 
+  }, 
+  "entities": [ 
+    { 
+      "locale": "en", 
+      "platform": "Windows", 
+      "type": "clientInfo" 
+    } 
+  ], 
+  "channelData": { 
+    "settings": { 
+      "selectedChannel": { 
+        "id": "sample channel ID@thread.skype" 
+      } 
+    }, 
+    "channel": { 
+      "id": "sample channel ID" 
+    }, 
+    "team": { 
+      "id": "sample team ID" 
+    }, 
+    "tenant": { 
+      "id": "sample tenant ID" 
+    }, 
+    "source": { 
+      "name": "message" 
+    } 
+  }, 
+  "locale": "en" 
+}
+```
+* * *
+
 ## <a name="code-sample"></a>コード サンプル
 
-次の表に、ボットの会話イベントを Teams アプリケーションに組み込む簡単なコード サンプルを示します。
-
-| サンプル | 説明 | .NET Core |
-|--------|------------- |---|
-| Teams ボットの会話イベントのサンプル | Teams のボット フレームワーク v4 会話ボットのサンプル。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|
+| **サンプル名** | **説明** | **.NET** |
+|-----------------|-----------------|---------|
+|Microsoft Teams ボットの会話イベント | ボット イベントのサンプル。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>次の手順
 
