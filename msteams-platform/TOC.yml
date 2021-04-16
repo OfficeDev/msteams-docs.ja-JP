@@ -202,21 +202,25 @@
   items:
     - name: 概要
       href: bots/what-are-bots.md
-    - name: ボットの機能
+    - name: ボットと SDK
+      href: bots/bot-features.md
+    - name: ボットのアクティビティ ハンドラー
       href: bots/bot-basics.md
     - name: ボットの会話
       items:
-        - name: 会話の基本
+        - name: 概要
           href: bots/how-to/conversations/conversation-basics.md
+        - name: ボットの会話内のメッセージ
+          href: bots/how-to/conversations/conversation-messages.md
         - name: ボットのコマンド メニューを作成する
           href: bots/how-to/create-a-bot-commands-menu.md
         - name: チャネルとグループ会話
           href: bots/how-to/conversations/channel-and-group-conversations.md
-        - name: 会話イベントにサブスクライブする
+        - name: Teams ボットの会話イベント
           href: bots/how-to/conversations/subscribe-to-conversation-events.md
         - name: プロアクティブ メッセージを送信する
           href: bots/how-to/conversations/send-proactive-messages.md
-        - name: ボット メッセージの書式設定
+        - name: ボット メッセージの書式を設定する
           href: bots/how-to/format-your-bot-messages.md
         - name: ボット メッセージの更新および削除
           href: bots/how-to/update-and-delete-bot-messages.md
@@ -224,13 +228,13 @@
       href: bots/how-to/get-teams-context.md
     - name: ファイルを送受信する
       href: bots/how-to/bots-filesv4.md
-    - name: ボットのレート制限の処理
+    - name: Teams でレートを制限してボットを最適化する
       href: bots/how-to/rate-limit.md
-    - name: 通話ボットと会議ボット
+    - name: 通話と会議のボット
       items:
         - name: 概要
           href: bots/calls-and-meetings/calls-meetings-bots-overview.md
-        - name: リアルタイム メディアの概念
+        - name: リアルタイムのメディア通話と会議
           href: bots/calls-and-meetings/real-time-media-concepts.md
         - name: 通話ボットを登録する
           href: bots/calls-and-meetings/registering-calling-bot.md
@@ -246,7 +250,7 @@
   items:
     - name: 概要
       href: messaging-extensions/what-are-messaging-extensions.md
-    - name: 操作コマンドを作成する
+    - name: 操作コマンド
       items:
         - name: 操作コマンドを定義する
           href: messaging-extensions/how-to/action-commands/define-action-command.md
@@ -254,13 +258,13 @@
           href: messaging-extensions/how-to/action-commands/create-task-module.md
         - name: 操作コマンドに返信する
           href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
-    - name: 検索コマンドを作成する
+    - name: 検索コマンド
       items:
         - name: 構成ページを追加する
           href: messaging-extensions/how-to/add-configuration-page.md
         - name: 検索コマンドを定義する
           href: messaging-extensions/how-to/search-commands/define-search-command.md
-        - name: 検索クエリを受信して応答する
+        - name: 検索コマンドに応答する
           href: messaging-extensions/how-to/search-commands/respond-to-search.md
     - name: リンク展開を追加する
       href: messaging-extensions/how-to/link-unfurling.md
