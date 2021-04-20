@@ -3,12 +3,12 @@ title: コンテンツへのディープ リンクを作成する
 description: ディープ リンクとアプリでの使用方法について説明する
 ms.topic: how-to
 keywords: Teams ディープ リンク ディープリンク
-ms.openlocfilehash: 493f9a010f7076ec97fc7da7110244645e76cfe8
-ms.sourcegitcommit: 0206ed48c6a287d14aec3739540194a91766f0a3
+ms.openlocfilehash: afcb079873f97055c4af43323d12846294861f74
+ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51378330"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "51885060"
 ---
 # <a name="create-deep-links-to-content-and-features-in-microsoft-teams"></a>Microsoft Teams のコンテンツと機能へのディープ リンクを作成する
 
@@ -25,13 +25,13 @@ Teams 内で情報と機能へのリンクを作成できます。 ディープ 
 > ✔ ディープリンクの URL に直接移動します。
 >
 > **ボット**:  
-> ✔ カード本文のディープリンク - ブラウザーを最初に開きます。  
-> ✔ アダプティブ カードの OpenURL アクションに追加されたディープリンク - ディープリンクの URL に直接移動します。  
-> ✔ カードのハイパーリンク マークダウン テキスト - ブラウザーを最初に開きます。  
+> ✔本文の Deeplink: ブラウザーで最初に開きます。  
+> ✔カードの OpenURL アクションに Deeplink を追加: ディープリンク URL に直接移動します。  
+> ✔の [ハイパーリンク] マークダウン テキスト: ブラウザーで最初に開きます。  
 >
 > **チャット**  
-> ✔ テキスト メッセージ ハイパーリンク マークダウン: ディープリンクの URL に直接移動します。  
-> ✔ 一般的なチャット会話に貼り付けられたリンク - ディープリンクの URL に直接移動します。
+> ✔ メッセージのハイパーリンク マークダウン: ディープリンク URL に直接移動します。  
+> ✔チャット会話で貼り付けリンク: ディープリンク URL に直接移動します。
 
 ## <a name="deep-linking-to-your-tab"></a>タブへのディープ リンクの設定
 
@@ -126,7 +126,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 ユースケースの例として、ボットから Office 365 ユーザー プロファイルをカードとして返す場合、このディープ リンクを使用すると、ユーザーはそのユーザーと簡単にチャットできます。
 
-### <a name="generating-a-deep-link-to-a-chat"></a>チェットへのディープ リンクを作成する
+### <a name="generate-a-deep-link-to-a-chat"></a>チャットへのディープ リンクを生成する
 
 ボット、コネクタ、またはメッセージング拡張機能カードで使用できるディープ リンクには、次の形式を使用します。
 
@@ -142,6 +142,38 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 ボットとのこのディープ リンクを使用するには、カードのボタンで URL を対象として指定するか、[ `openUrl` アクションの種類] で [アクション] をタップします。
 
+## <a name="generate-deep-links-to-file-in-channel"></a>チャネル内のファイルへのディープ リンクを生成する
+
+ボット、コネクタ、またはメッセージング拡張機能カードでは、次のディープ リンク形式を使用できます。
+
+`https://teams.microsoft.com/I/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=<tenantid>&fileType=<filetype>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadid>&groupId=<groupId>`
+
+クエリ パラメーターは次のとおりです。
+
+* `tenantId`: テナント ID の例、0d9b645f-597b-41f0-a2a3-ef103fbd91bb
+* `fileType`: docx、pptx、xlsx、pdf などのサポートされているファイルの種類
+* `objectUrl`: ファイルのオブジェクト URL、 https://microsoft.sharepoint.com/teams/(filepath)
+* `baseUrl`: ファイルの基本 URL、 https://microsoft.sharepoint.com/teams
+* `serviceName`: サービスの名前、アプリ ID
+* `threadId`: threadId は、ファイルが保存されているチームのチーム ID です。 これはオプションであり、ユーザーの OneDrive フォルダーに格納されているファイルには設定できません。 threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
+* `groupId`: ファイルのグループ ID ae063b79-5315-4ddb-ba70-27328ba6c31e
+
+ファイルへのディープリンクのサンプル形式を次に示します。
+
+`https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80 ?tenantId=0d9b645f-597b-41f0-a2a3-ef103fbd91bb&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
+
+### <a name="serialization-of-this-object"></a>このオブジェクトのシリアル化:
+```
+{
+tenantId: "0d9b645f-597b-41f0-a2a3-ef103fbd91bb",
+filetype: = "pptx",
+objectUrl: "https://microsoft.sharepoint.com/teams/ActionPlatform/Shared Documents/FC7- Bot and Action Infra/Kaizala Actions in Adaptive Cards - Deck.pptx",
+baseUrl: "https://microsoft.sharepoint.com/teams/ActionPlatform",
+serviceName: "teams",
+threadId: = "19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype",
+groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
+}
+```
 ## <a name="deep-links-for-sharepoint-framework-tabs"></a>SharePoint Framework タブのディープ リンク
 
 ボット、コネクタ、またはメッセージング拡張カードでは、次のディープ リンク形式を使用できます。 `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
@@ -152,10 +184,10 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 クエリ パラメーターは次のとおりです。
 
-* `appID` - マニフェスト ID **fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
-* `entityID` - タブの構成時に指定 [したアイテム ID。](~/tabs/how-to/create-tab-pages/configuration-page.md)たとえば **、tasklist123**.
-* `entityWebUrl`- クライアントがタブのレンダリングをサポートしていない場合に使用するフォールバック URL を含むオプションのフィールド https://tasklist.example.com/123 。 https://tasklist.example.com/list123/task456
-* `entityName` - ディープ リンク、タスク リスト 123、またはタスク 456 を表示するときに使用するタブ内のアイテムのラベル。
+* `appID`: マニフェスト ID fe4a8eba-2a31-4737-8e33-e5fae6fee194。
+* `entityID`: タブの構成時に指定 [したアイテム ID](~/tabs/how-to/create-tab-pages/configuration-page.md)です。たとえば **、tasklist123**.
+* `entityWebUrl`: クライアントがタブのレンダリングをサポートしていない場合に使用するフォールバック URL を含むオプションのフィールド https://tasklist.example.com/123 。 https://tasklist.example.com/list123/task456
+* `entityName`: タブ内のアイテムのラベルで、ディープ リンクであるタスク リスト 123 またはタスク 456 を表示するときに使用します。
 
 例: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
 
@@ -175,7 +207,7 @@ Teams の組み込みスケジュール ダイアログへのディープ リン
 クエリ パラメーターは次のとおりです。
 
 * `attendees`: 会議の出席者を表すユーザー ID のオプションのコンマ区切りリスト。 アクションを実行するユーザーは、会議の開催者です。 [ユーザー ID] フィールドは現在、Azure AD UserPrincipalName (通常は電子メール アドレス) のみをサポートしています。
-* `startTime`: イベントのオプションの開始時刻です。 これは、[long ISO 8601 形式](https://en.wikipedia.org/wiki/ISO_8601)、たとえば、「2018-03-12T23:55:25+02:00」にする必要があります。
+* `startTime`: イベントのオプションの開始時刻です。 これは *、2018-03-12T23:55:25+02:00* など、長い [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)形式である必要があります。
 * `endTime`: イベントのオプションの終了時刻 (ISO 8601 形式)。
 * `subject`: 会議の件名の省略可能なフィールドです。
 * `content`: 会議の詳細フィールドのオプション フィールドです。
