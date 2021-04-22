@@ -2,14 +2,15 @@
 title: カード内のテキストの書式設定
 description: Microsoft Teams のカード テキストの書式設定について説明します。
 keywords: teams ボット カードの形式
+localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: e6b8cc835780e03cf4e23eae31fa447c8a03c002
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: b50109ad664bda2fc130e08c53dd7fca2a3d54ef
+ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696536"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "51922518"
 ---
 # <a name="format-cards-in-teams"></a>Teams でカードを書式設定する
 
@@ -124,8 +125,9 @@ Android では、アダプティブ カード マークダウンの書式設定�
 
 アダプティブ カードにメンションを含めるには、アプリに次の要素を含める必要があります。
 
-* `<at>username</at>` サポートされているアダプティブ カード要素で
-* カード コンテンツ内のプロパティ内のオブジェクト (言及されているユーザーの `mention` `msteams` Teams ユーザー ID を含む)
+* `<at>username</at>` は、サポートされているアダプティブ カード要素に含まれます。
+* カード コンテンツ内のプロパティ内のオブジェクト 。このオブジェクトには、言及されているユーザーの Teams ユーザー `mention` `msteams` ID が含まれます。
+* これは `userId` 、ボット ID と特定のユーザーに固有です。 特定のユーザーを@mention使用できます。 ユーザー `userId` ID の取得に記載されているオプションのいずれかを使用して [取得できます](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id)。
 
 #### <a name="sample-adaptive-card-with-a-mention"></a>メンション付きアダプティブ カードのサンプル
 
@@ -157,7 +159,6 @@ Android では、アダプティブ カード マークダウンの書式設定�
   }
 }
 ```
-
 
 ### <a name="information-masking-in-adaptive-cards"></a>アダプティブ カードの情報マスキング
 Information masking プロパティを使用して、アダプティブ カード入力要素内のユーザーからのパスワードや機密情報などの特定の情報を [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) マスクします。 

@@ -1,16 +1,16 @@
 ---
-title: Teams のレート制限を使用してボットを最適化する
+title: Teams でレートを制限してボットを最適化する
 description: Microsoft Teams のレート制限とベスト プラクティス
 ms.topic: conceptual
 keywords: Teams ボットのレート制限
-ms.openlocfilehash: 245c51fc736e5f888299535c3e50ec6232183623
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 690d09e4a3b611c024f32d3776ca73e42d63ee7f
+ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696998"
+ms.lasthandoff: 04/21/2021
+ms.locfileid: "51922504"
 ---
-# <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Teams のレート制限を使用してボットを最適化する
+# <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Teams でレートを制限してボットを最適化する
 
 レート制限は、メッセージを特定の最大頻度に制限する方法です。 一般的な原則として、アプリケーションは投稿するメッセージの数を個々のチャットまたはチャネルの会話に制限する必要があります。 これにより、最適なエクスペリエンスが確保され、メッセージがユーザーにスパムとして表示されません。
 
@@ -113,10 +113,12 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 ## <a name="per-bot-per-thread-limit"></a>スレッドごとのボットごとの制限
 
->[!NOTE]
-> サービス レベルでのメッセージの分割は、予想される要求 /秒 (RPS) よりも高くなります。 制限への近付きが懸念される場合は、バックオフ戦略を [実装する必要があります](#backoff-example)。 このセクションで提供される値は、見積もり専用です。
+スレッドごとのボットごとの制限は、ボットが 1 回の会話で生成できるトラフィックを制御します。 ボットとユーザー、グループ チャット、またはチーム内のチャネル間の会話は 1:1 です。 したがって、アプリケーションが各ユーザーにボット メッセージを 1 つ送信しても、スレッドの制限は調整されません。
 
-スレッドごとのボットごとの制限は、ボットが 1 回の会話で生成できるトラフィックを制御します。 ここでの会話は、ボットとユーザー、グループ チャット、またはチーム内のチャネルの間で 1:1 です。
+>[!NOTE]
+> * 3600 秒と 1800 の操作のスレッド制限は、複数のボット メッセージが 1 人のユーザーに送信される場合にのみ適用されます。 
+> * テナントごとのアプリごとのグローバル制限は、1 秒あたり 30 要求 (RPS) です。 したがって、1 秒あたりのボット メッセージの総数がスレッドの制限を超えなけってはいけない。
+> * サービス レベルでのメッセージの分割は、予想される RPS よりも高くなります。 制限への近付きが懸念される場合は、バックオフ戦略を [実装する必要があります](#backoff-example)。 このセクションで提供される値は、見積もり専用です。
 
 次の表に、スレッドごとのボットごとの制限を示します。
 
@@ -166,5 +168,5 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [通話と会議ボット](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+> [通話と会議のボット](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 
