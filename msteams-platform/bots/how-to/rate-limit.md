@@ -3,12 +3,12 @@ title: Teams でレートを制限してボットを最適化する
 description: Microsoft Teams のレート制限とベスト プラクティス
 ms.topic: conceptual
 keywords: Teams ボットのレート制限
-ms.openlocfilehash: 690d09e4a3b611c024f32d3776ca73e42d63ee7f
-ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
+ms.openlocfilehash: 9a30d86a82a591c4a1125632fa7409780effb269
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "51922504"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995856"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Teams でレートを制限してボットを最適化する
 
@@ -48,6 +48,9 @@ catch (HttpOperationException ex)
 ランダムなジッターで指数バックオフを使用する方法は、429 を処理するための推奨される方法です。 これにより、複数の要求が再試行時に競合を発生しない。
 
 応答を `HTTP 429` 処理した後、一時的な例外を検出する例を確認できます。
+
+> [!NOTE]
+> エラー コード **429** の再入力に加えて、エラー コード **412、502、****および 504** も再試行する必要があります。 
 
 ## <a name="detect-transient-exceptions-example"></a>一時的な例外の検出の例
 

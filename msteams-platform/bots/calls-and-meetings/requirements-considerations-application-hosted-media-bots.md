@@ -4,12 +4,12 @@ description: Microsoft Teams 用のアプリケーションホスト型メディ
 ms.topic: conceptual
 keywords: アプリケーションホスト型メディア Windows サーバー azure vm
 ms.date: 11/16/2018
-ms.openlocfilehash: dfd0b3a2ba9020622a2926c4fc395c060599afb6
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 4a191bbde6b592c74930069d794ff37273785c1b
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697082"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995954"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>アプリケーションホスト型メディア ボットの要件と考慮事項
 
@@ -60,6 +60,18 @@ ms.locfileid: "51697082"
 
 アプリケーションホスト型メディア ボットには、次のスケーラビリティとパフォーマンスに関する考慮事項が必要です。
 
+## <a name="code-sample"></a>コード サンプル
+
+アプリケーションホスト型メディア ボットのサンプルは次のとおりです。
+
+| **サンプル名** | **説明** | **Graph** |
+|------------|-------------|-----------|
+| ローカル メディアのサンプル | さまざまなローカル メディア シナリオを示すサンプル。 | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
+| リモート メディアのサンプル | さまざまなリモート メディア シナリオを示すサンプル。 | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
+
+## <a name="see-also"></a>関連項目
+
+- [グラフ呼び出し SDK のドキュメント](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
 - ボットでは、メッセージング ボットよりも多くのコンピューティングとネットワーク帯域幅の容量が必要であり、運用コストが大幅に高くなります。 リアルタイムのメディア ボット開発者は、ボットのスケーラビリティを慎重に測定し、ボットが管理できる以上の同時呼び出しを受け入れなかねない必要があります。 ビデオが有効なボットは、RAW RGB24 または NV12 ビデオ形式を使用する場合、CPU コアごとに 1 つまたは 2 つの同時メディア セッションのみを維持できます。
 - リアルタイム メディア プラットフォームでは、現在、VM で使用できるグラフィックス処理ユニット (GPU) を利用して H.264 ビデオ エンコードまたはデコードをオフロードできません。 代わりに、ビデオエンコードとデコードは CPU 上のソフトウェアで行われます。 GPU が使用可能な場合、ボットが 3D グラフィックス エンジンを使用している場合など、ボットは独自のグラフィックス レンダリングで GPU を利用します。
 - リアルタイム メディア ボットをホストする VM インスタンスには、少なくとも 2 つの CPU コアが必要です。 Azure では、Dv2 シリーズ仮想マシンをお勧めします。 他の Azure VM の種類では、4 つの仮想 CPU (vCPU) を持つシステムが必要な最小サイズです。 Azure VM の種類の詳細については、「Azure のドキュメント」 [を参照してください](/azure/virtual-machines/windows/sizes-general)。

@@ -3,14 +3,14 @@ title: Microsoft Teams の通話と会議ボットを登録する
 description: Microsoft Teams の新しい音声/ビデオ通話ボットを登録する方法について説明します。
 ms.topic: conceptual
 keywords: ボットのオーディオ/ビデオ オーディオ ビデオ メディアを呼び出す
-ms.openlocfilehash: 6cbba3f63a97e47fd9cca6dbeea6595cc3bdc9d7
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 4f4f1fdf0c33685e146081085aa7ff8e07f1a87d
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696358"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995863"
 ---
-# <a name="register-a-calls-and-meetings-bot-for-microsoft-teams"></a>Microsoft Teams の通話と会議ボットを登録する
+# <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Microsoft Teams の通話と会議ボットを登録する
 
 音声通話またはビデオ通話やオンライン会議に参加するボットは、通常の Microsoft Teams ボットであり、ボットの登録に使用される追加機能は次のとおりです。
 

@@ -4,12 +4,12 @@ description: Microsoft Teams ボットでプロアクティブ メッセージ�
 ms.topic: conceptual
 ms.author: anclear
 Keywords: メッセージの送信、ユーザー ID の取得、チャネル ID の取得、会話 ID の取得
-ms.openlocfilehash: 25d5c6a1b51240c87ff0d8610a965d30f6b01095
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 44e8f3335b7ade4f4a8b1e6192802d932cbd39ed
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697054"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995842"
 ---
 # <a name="send-proactive-messages"></a>プロアクティブ メッセージを送信する
 
@@ -31,6 +31,8 @@ ms.locfileid: "51697054"
 1. [必要に応じて、](#create-the-conversation)会話を作成します。
 1. [会話ID を取得します](#get-the-conversation-id)。
 1. [メッセージを送信します](#send-the-message)。
+
+サンプル セクションのコード スニペット [は](#samples) 、1 対 1 の会話を作成するためのコード スニペットです。 1 対 1 の会話とグループまたはチャネルの両方の作業サンプルを完了するリンクについては、コード サンプルを [参照してください](#code-sample)。
 
 プロアクティブ メッセージを効果的に使用するには、「プロアクティブ [メッセージングのベスト プラクティス」を参照してください](#best-practices-for-proactive-messaging)。 特定のシナリオでは、Graph を [使用してアプリを事前にインストールする必要があります](#proactively-install-your-app-using-graph)。 サンプル セクションのコード スニペット [は](#samples) 、1 対 1 の会話を作成するためのコード スニペットです。 1 対 1 の会話とグループまたはチャネルの両方の完全な作業サンプルについては、コード サンプルを [参照してください](#code-sample)。
 
@@ -63,6 +65,8 @@ ms.locfileid: "51697054"
 適切なアドレス情報を取得した後、メッセージを送信できます。
 
 ## <a name="send-the-message"></a>メッセージを送信する
+
+正しいアドレス情報を取得したので、メッセージを送信することができます。 SDK を使用している場合は `continueConversation` メソッドを使用し、直接 API を呼び出すには `conversationId` と `tenantId` を使用します。 メッセージを正常に送信するには、`conversationParameters` を正しく設定する必要があります。 サンプル セクション [を参照](#samples) するか、コード サンプル セクションに記載されているサンプル [のいずれかを使用](#code-sample) します。
 
 SDK を使用している場合は、メソッドを使用し、メッセージを送信するために直接 API 呼び出しを行 `continueConversation` `conversationId` `tenantId` う必要があります。 メッセージを正常に送信するには、`conversationParameters` を正しく設定する必要があります。
 
@@ -98,8 +102,8 @@ SDK を使用している場合は、メソッドを使用し、メッセージ�
 
 プロアクティブ メッセージングを使用してスケジュールされたメッセージをユーザーに送信する場合は、タイム ゾーンがタイム ゾーンに更新されるのを確認します。 これにより、メッセージが関連する時刻にユーザーに配信されます。 通常、スケジュール メッセージには次のものが含まれます。
 
-* **ユーザーがメッセージを受信** する理由 : ユーザーがメッセージを受け取る理由を簡単に理解できます。
-* **ユーザーが次に実行できる** 操作: ユーザーは、メッセージの内容に基づいて必要なアクションを実行できます。
+* ユーザーがメッセージを受信する理由: ユーザーがメッセージを受け取る理由を簡単に理解できます。
+* ユーザーが次に実行できる操作: ユーザーは、メッセージの内容に基づいて必要なアクションを実行できます。
 
 ## <a name="proactively-install-your-app-using-graph"></a>Graph を使用してアプリをプロアクティブにインストール
 
@@ -262,10 +266,10 @@ POST /v3/conversations
 
 次の表に、Teams アプリケーションに基本的な会話フローを組み込む簡単なコード サンプルと、Teams のチャネルで新しい会話スレッドを作成する方法を示します。
 
-| サンプルの名前           | 説明                                                                      | .NET    | Node.js   | Python  |
-|:----------------------|:---------------------------------------------------------------------------------|:--------|:-------------|:--------|
-|Teams の会話の基本  | 1 対 1 のプロアクティブ メッセージの送信など、Teams での会話の基本をご紹介します。|[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot)|
-|チャネルで新しいスレッドを開始する     | チャネルで新しいスレッドを作成する方法をご紹介します。 |[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
+| **サンプルの名前** | **説明** | **.NET** | **Node.js** | **Python** |
+|---------------|--------------|--------|-------------|--------|
+| Teams での会話の基本  | 1 対 1 のプロアクティブ メッセージの送信など、Teams での会話の基本をご紹介します。| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
+| チャネルで新しいスレッドを開始する | チャネルで新しいスレッドを作成する方法をご紹介します。 | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
 
 ### <a name="additional-code-sample"></a>追加のコード サンプル
 
@@ -275,4 +279,5 @@ POST /v3/conversations
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
+> [**Teams のプロアクティブ メッセージング コードサンプル**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp) 
 > [ボット メッセージの書式設定](~/bots/how-to/format-your-bot-messages.md)

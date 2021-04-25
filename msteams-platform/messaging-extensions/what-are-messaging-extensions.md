@@ -4,12 +4,12 @@ author: clearab
 description: Microsoft Teams プラットフォームでのメッセージング拡張機能の概要
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 2d82202c72584927fc705813151d91510a7f12c9
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: a6d4f478541724cd2643068d9e1615a15b03fd13
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696752"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995884"
 ---
 # <a name="messaging-extensions"></a>メッセージング拡張機能
 
@@ -67,11 +67,18 @@ Web サービスは、作成メッセージ領域に URL を貼り付けする�
 
 ![リンクのリンク解除](../assets/images/messaging-extension/link-unfurl.gif)
 
+## <a name="code-sample"></a>コード サンプル
+
+| **サンプル名** | **説明** | **.NET** | **Node.js** | **Python** |
+|------------|-------------|----------------|------------|
+| アクションベースのコマンドを使用したメッセージング拡張機能 | このサンプルは、アクション ベースのメッセージング拡張機能を構築する方法を示しています。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
+| 検索ベースのコマンドを使用したメッセージング拡張機能 | このサンプルは、検索ベースのメッセージング拡張機能を構築する方法を示しています。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 
 ## <a name="see-also"></a>関連項目
 
 > [!div class="nextstepaction"]
 > [メッセージング拡張機能を作成する](../build-your-first-app/build-messaging-extension.md)
+
 
 ## <a name="next-step"></a>次の手順
 

@@ -4,19 +4,19 @@ author: clearab
 description: Microsoft Teams のボットと SDK。
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: c76a3300229e038e0d6a93d2701b3b3c5a1286da
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: b38a40cfd88c9b5879f6d777f50b919125ce9ec9
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697244"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995975"
 ---
 # <a name="bots-and-sdks"></a>ボットと SDK
 
 Microsoft Teams で動作するボットを作成するには、次のいずれかを使用できます。
-* Microsoft Bot Framework SDK 上に構築された既存のボット
-* Power Virtual Agents chatbot Service
-* Webhook とコネクタ
+* Microsoft Bot Framework SDK 上に構築された既存のボット。
+* Power Virtual Agents chatbot Service。
+* Webhooks とコネクタ。
 
 ## <a name="bots-and-the-microsoft-bot-framework"></a>ボットと Microsoft Bot Framework
 
@@ -114,4 +114,4 @@ Microsoft Teams のボットは、1 対 1 の会話、グループ チャット�
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [ボット アクティビティ ハンドラー](~/bots/bot-basics.md)
+> [ボットのアクティビティ ハンドラー](~/bots/bot-basics.md)

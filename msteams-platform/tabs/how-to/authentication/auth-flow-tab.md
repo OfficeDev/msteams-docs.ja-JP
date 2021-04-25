@@ -3,12 +3,12 @@ title: タブの認証フロー
 description: タブの認証フローについて説明する
 ms.topic: conceptual
 keywords: teams 認証フロー タブ
-ms.openlocfilehash: ddd9ea1ee907b154005445613fd3d09de2158766
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: ccc507c08007c72e5393d9175d69ea3672d73609
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449564"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995849"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>タブの Microsoft Teams 認証フロー
 
@@ -44,12 +44,13 @@ Teams の他のアプリケーション認証フローと同様に、スター�
 
 タブ コンテキストはユーザーに関する有用な情報を提供しますが、この情報を使用してユーザーを認証することはできません。 タブ コンテンツの URL に URL パラメーターとして情報を取得した場合や、Microsoft Teams クライアント SDK で関数を呼び出した場合でも、ユーザー `microsoftTeams.getContext()` を認証します。 悪意のあるアクターは、独自のパラメーターを使用してタブ コンテンツ URL を呼び出す可能性があります。 アクターは、Microsoft Teams を偽装する Web ページを呼び出して、タブ コンテンツ URL を iframe に読み込み、独自のデータを関数に返 `getContext()` することもできます。 使用する前に、タブ コンテキスト内の ID 関連情報をヒントとして扱い、検証する必要があります。 ポップアップ ページから認証 [ページに移動するノートを参照してください](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page)。
 
-## <a name="samples"></a>サンプル
+## <a name="code-sample"></a>コード サンプル
 
-タブ認証プロセスを示すサンプル コードについては、以下を参照してください。
+タブ認証プロセスを示すサンプル コード。
 
-* [Teams タブ認証サンプル (ノード)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
-* [Teams タブ認証のサンプル (C#)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
+| **サンプル名** | **説明** | **C#** | **Node.js** |
+|-----------------|-----------------|-------------|------------|
+| Teams タブ認証 | AAD を使用したタブの認証プロセス。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
 
 ## <a name="more-details"></a>詳細情報
 

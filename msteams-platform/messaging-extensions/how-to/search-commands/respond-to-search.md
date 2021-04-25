@@ -4,12 +4,12 @@ author: clearab
 description: Microsoft Teams アプリのメッセージング拡張機能から検索コマンドに応答する方法。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 2cc53796deddb47e8dbce86a5b02f4d80a1b91e0
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 4dff59d0bd923618a3079c81cbb6f9e7aea2bab4
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696193"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51996010"
 ---
 # <a name="respond-to-search-command"></a>検索コマンドに応答する
 
@@ -110,6 +110,7 @@ Teams では、次のカードの種類がサポートされています。
 
 * オブジェクト内 `preview` のプロパティを使用 `attachment` する。 添付 `preview` ファイルには、ヒーロー カードまたはサムネイル カードのみを指定できます。
 * 添付ファイルの基本 `title` 、 `text` および `image` プロパティから抽出されます。 これらは、プロパティが設定されていない `preview` 場合にのみ使用され、これらのプロパティを使用できます。
+* [ヒーロー] または [サムネイル] カードボタンとタップアクション (呼び出しを除く) は、プレビュー カードではサポートされません。
 
 アダプティブ カードまたは 365 コネクタ カードOfficeプレビュー プロパティを使用して、結果リストに表示できます。 結果が既にヒーロー カードまたはサムネイル カードである場合、preview プロパティは必要ありません。 プレビュー添付ファイルを使用する場合は、ヒーロー カードまたはサムネイル カードである必要があります。 preview プロパティを指定しない場合、カードのプレビューは失敗し、何も表示されません。
 

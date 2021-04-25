@@ -4,12 +4,12 @@ author: WashingtonKayaker
 description: Microsoft Teams ボットからの会話イベントを処理する方法。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: af1724620ede44f8d0f7739e265ef1ebd1e3afd8
-ms.sourcegitcommit: 0e252159f53ff9b4452e0574b759bfe73cbf6c84
+ms.openlocfilehash: 0736ce07f91f0f33505c5ac3fa031a201d01c2f9
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51762033"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51996031"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams ボットの会話イベント
 
@@ -1296,7 +1296,7 @@ async def on_reactions_removed(
 ### <a name="install-update-event"></a>更新イベントのインストール
 イベントを `installationUpdate` 使用して、インストール時にボットから導入メッセージを送信します。 このイベントは、プライバシーとデータ保持の要件を満たすのに役立ちます。 ボットがアンインストールされた場合は、ユーザーデータまたはスレッド データをクリーンアップして削除できます。
 
-# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+# <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
 protected override async Task
@@ -1378,9 +1378,9 @@ turnContext, CancellationToken cancellationToken) {
 
 ## <a name="code-sample"></a>コード サンプル
 
-| **サンプル名** | **説明** | **.NET** |
-|-----------------|-----------------|---------|
-|Microsoft Teams ボットの会話イベント | ボット イベントのサンプル。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) |
+| **サンプル名** | **説明** | **.NET** | **Node.js** | **Python** |
+|----------|-----------------|----------|
+| 会話ボット | ボットの会話イベントのサンプル コード。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>次の手順
 

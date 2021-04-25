@@ -3,12 +3,12 @@ title: 通話とオンライン会議ボット
 description: Microsoft Graph API を使用して通話やオンライン会議を使用して、Microsoft Teams アプリが音声とビデオを使用してユーザーとやり取りする方法について説明します。
 ms.topic: conceptual
 keywords: 通話通話オーディオ ビデオ IVR 音声オンライン会議
-ms.openlocfilehash: cac9e31c39f35aeb3ea72e5e8964441f0a1c38f5
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: be3286afe739c8b1d99af896ad64a3963875768d
+ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697112"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "51995982"
 ---
 # <a name="calls-and-online-meetings-bots"></a>通話とオンライン会議ボット
 
@@ -85,6 +85,12 @@ Teams ユーザーの観点から見ると、アドホック会議とスケジ�
     たとえば、ユーザーが **0** を押してオペレーターに到達した場合を知る。
 
 * **アプリケーションホスト型メディア**: ボットがメディアに直接アクセスするには、特定の Graph アクセス許可が必要です。 ボットにアクセス許可が付与された後[](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)、リアルタイム メディア ライブラリ、[およびグラフ](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/articles/index.html#graph-calling-sdk-and-stateful-client-builder)呼び出し SDK を使用すると、リッチでリアルタイムのメディアを構築し、ボットを呼び出すのに役立ちます。 アプリケーションによりホストされるボットは、Windows 環境でホストされる必要があります。 詳細については、「アプリケーションホスト [型メディア ボット」を参照してください](./requirements-considerations-application-hosted-media-bots.md)。
+
+## <a name="code-sample"></a>コード サンプル
+
+| **サンプル名** | **説明** | **Graph** |
+|---------------|----------|--------|
+| グラフ通信 | Microsoft の通信プラットフォームとやり取りするための通信をグラフ化します。 | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
 
 ## <a name="see-also"></a>関連項目
 

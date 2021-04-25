@@ -1,8 +1,8 @@
-## <a name="teams-bot-samples"></a>Teams ボットのサンプル
+## <a name="code-sample"></a>コード サンプル
 
 機能を示す完全な作業サンプルについては、ボット フレームワーク用の次の Teams サンプルを参照してください。
 
-| サンプル | 説明 | .NET Core | Node.js | Python |
+| **サンプル** | **説明** | **.NET** | **JavaScript** | **Python** |
 |--------|------------- |---|---|---|
 | Teams 会話ボット | メッセージングおよび会話イベントの処理。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/57.teams-conversation-bot) |
 | OAuthPrompt を使用した認証| Bot Framework v4 での認証と基本メッセージング。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/46.teams-auth) |
