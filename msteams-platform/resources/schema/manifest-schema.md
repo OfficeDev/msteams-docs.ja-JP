@@ -4,12 +4,12 @@ description: Microsoft Teams のマニフェスト スキーマについて説�
 ms.topic: reference
 ms.author: lajanuar
 keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: fa1c1cfd732fe5a30fc5fc32b693dd21b2e8ee82
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: d4dd299a9e848820e81f87361460b5b8b14f15b7
+ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696046"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "51946446"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>リファレンス: Microsoft Teams のマニフェスト スキーマ
 
@@ -343,7 +343,7 @@ Teams エクスペリエンスのユーザーに表示されるアプリ エク�
 |`short`|30 文字|✔|アプリの短い表示名。|
 |`full`|100 文字||完全なアプリ名が 30 文字を超える場合に使用されるアプリの完全な名前。|
 
-## <a name="description"></a>description
+## <a name="description"></a>説明
 
 **必須** — オブジェクト
 
@@ -469,7 +469,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |title|string|12 |✔|ボット コマンド名|
-|description|string|128 文字|✔|単純なテキストの説明、またはコマンド構文とその引数の例。|
+|説明|string|128 文字|✔|単純なテキストの説明、またはコマンド構文とその引数の例。|
 
 ## <a name="connectors"></a>コネクタ
 
@@ -496,7 +496,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 アイテムは、型のすべての要素を持つ配列 (最大 1 要素) です `object` 。 このブロックは、メッセージング拡張機能を提供するソリューションにのみ必要です。
 
-|名前| 種類 | 最大サイズ | 必須 | 説明|
+|名前| 型 | 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`botId`|string|64|✔|ボット フレームワークに登録されているメッセージング拡張機能をバックするボットの一意の Microsoft アプリ ID。 これは、アプリ ID 全体と同じ可能性があります。|
 |`commands`|オブジェクトの配列|10|✔|メッセージング拡張機能がサポートするコマンドの配列|
@@ -663,5 +663,30 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 ```
 
 ***
+
+## <a name="defaultinstallscope"></a>defaultInstallScope
+
+**省略** 可能 - 文字列
+
+既定では、このアプリに対して定義されているインストール スコープを指定します。 定義されたスコープは、ユーザーがアプリを追加しようとするときにボタンに表示されるオプションになります。 オプションは、次のとおりです。
+* `personal`
+* `team`
+* `groupchat`
+* `meetings`
+
+## <a name="defaultgroupcapability"></a>defaultGroupCapability
+
+**省略可能** - オブジェクト
+
+グループ インストール スコープを選択すると、ユーザーがアプリをインストールするときに既定の機能が定義されます。 オプションは、次のとおりです。
+* `team`
+* `groupchat`
+* `meetings`
+ 
+|名前| 型| 最大サイズ | 必須 | 説明|
+|---|---|---|---|---|
+|`team`|string|||選択したインストール スコープが次の場合 `team` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
+|`groupchat`|string|||選択したインストール スコープが次の場合 `groupchat` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
+|`meetings`|string|||選択したインストール スコープが次の場合 `meetings` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
 
 

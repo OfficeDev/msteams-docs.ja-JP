@@ -3,12 +3,12 @@ title: 新機能
 description: Microsoft Teams のすべての新しい開発者機能について説明します。
 ms.topic: reference
 keywords: チームの最新情報
-ms.openlocfilehash: 298305f11788963817ddacfabbc052297d3eaabe
-ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.openlocfilehash: 8d38c5a4f79b557209eedab6747517e689248874
+ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634531"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "51946460"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -19,12 +19,12 @@ ms.locfileid: "51634531"
 
 変更ログには、Microsoft Teams プラットフォームとこのドキュメント セットに対する変更が一覧表示されます。 場合によっては、Teams 開発者が関心を持つ新しい機能に注意を呼び出す場合があります。
 
-| **Date** | **メモ** | **変更されたトピック** |
+| **Date** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
 |04/08/2021| アプリのカスタマイズ機能は、開発者プレビューで利用できます。|[デザイン チーム アプリの概要](concepts/design/design-teams-app-overview.md#app-customization)[、App studio の概要](concepts/build-and-test/app-studio-overview.md#connectors)、マニフェスト[スキーマ](resources/schema/manifest-schema-dev-preview.md) |
-|03/18/2021|注意: Bot Framework SDK の **バージョン 4.10** 以上に更新してください `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` 。 | [チーム/チャット メンバーのボット API の変更](resources/team-chat-member-api-changes.md) |
+|03/18/2021|注意: Bot Framework SDK のバージョン 4.10 以上に更新します。廃止プロセスと廃止プロセスを開始しました `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` 。 | [チーム/チャット メンバーのボット API の変更](resources/team-chat-member-api-changes.md) |
 |03/05/2021|注意: タブには、エクスペリエンスを囲む余白がなくなりました。 タブ開発者は、アプリを確認して更新する必要があります。 | [タブ余白の削除](resources/removing-tab-margins.md) |
-|03/05/2021 | 既定のインストール スコープとグループ機能は、開発者プレビューに表示されます。| [既定のインストール スコープとグループ機能](concepts/deploy-and-publish/apps-upload.md#add-a-default-install-scope-and-group-capability) |
+|03/05/2021|既定のインストール スコープとグループ機能は、開発者プレビューに表示されます。| [既定のインストール スコープとグループ機能](concepts/deploy-and-publish/add-default-install-scope.md) |
 |03/05/2021|個人用アプリのタブを並べ替える|[個人用アプリのチャット タブを並べ替える](tabs/how-to/create-tab-pages/content-page.md#reorder-static-personal-tabs)|
 |03/04/2021|アダプティブ カードの情報マスキングは、開発者向けプレビューで行います。| [アダプティブ カードの情報マスキング](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
 |02/19/2021|新規: 位置情報機能を追加しました。 <br/> 更新: 場所の機能情報は、デバイス機能の概要、ネイティブ デバイスのアクセス許可、メディア機能と QR またはバーコード スキャナー機能ファイルの統合に追加されます。|[概要](concepts/device-capabilities/device-capabilities-overview.md)、[デバイスのアクセス許可の要求](concepts/device-capabilities/native-device-permissions.md)、[メディア機能の統合](concepts/device-capabilities/mobile-camera-image-permissions.md)[、QR またはバーコード](concepts/device-capabilities/qr-barcode-scanner-capability.md)スキャナー機能の統合、[場所の統合機能](concepts/device-capabilities/location-capability.md) |

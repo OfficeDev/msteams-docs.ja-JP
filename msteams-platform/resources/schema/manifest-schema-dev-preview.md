@@ -4,12 +4,12 @@ description: Microsoft Teams のマニフェストでサポートされるスキ
 ms.topic: reference
 keywords: teams マニフェスト スキーマ Developer Preview
 ms.date: 05/20/2019
-ms.openlocfilehash: f8c1842d6b9f9d07d8743f5bf7f868cacbd282af
-ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.openlocfilehash: adb178000d909c9031e4b4df187bbf6f74f6e783
+ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634489"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "51946474"
 ---
 # <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>Microsoft Teams の開発者プレビュー マニフェスト スキーマ
 
@@ -195,7 +195,13 @@ Microsoft Teams マニフェストでは、アプリを Microsoft Teams 製品�
      "websiteUrl",
      "privacyUrl",
      "termsOfUseUrl"        
-  ]              
+  ],
+  "defaultInstallScope": "meetings",
+  "defaultGroupCapability": {
+    "meetings": "tab", 
+    "team": "bot", 
+    "groupchat": "bot"
+  }
 }
 ```
 
@@ -279,7 +285,7 @@ Teams エクスペリエンスのユーザーに表示されるアプリ エク�
 |`short`|30 文字|✔|アプリの短い表示名。|
 |`full`|100 文字||完全なアプリ名が 30 文字を超える場合に使用されるアプリの完全な名前。|
 
-## <a name="description"></a>description
+## <a name="description"></a>説明
 
 **Required**
 
@@ -500,4 +506,28 @@ AAD アプリ ID と Graph 情報を指定して、ユーザーが AAD アプリ
 * `privacyUrl`: 開発者の https:// の URL です。
 * `termsOfUseUrl`: 開発者の https:// の URL です。
 
+## <a name="defaultinstallscope"></a>defaultInstallScope
+
+**省略** 可能 - 文字列
+
+既定では、このアプリに対して定義されているインストール スコープを指定します。 定義されたスコープは、ユーザーがアプリを追加しようとするときにボタンに表示されるオプションになります。 オプションは、次のとおりです。
+* `personal`
+* `team`
+* `groupchat`
+* `meetings`
+
+## <a name="defaultgroupcapability"></a>defaultGroupCapability
+
+**省略可能** - オブジェクト
+
+グループ インストール スコープを選択すると、ユーザーがアプリをインストールするときに既定の機能が定義されます。 オプションは、次のとおりです。
+* `team`
+* `groupchat`
+* `meetings`
+ 
+|名前| 型| 最大サイズ | 必須 | 説明|
+|---|---|---|---|---|
+|`team`|string|||選択したインストール スコープが次の場合 `team` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
+|`groupchat`|string|||選択したインストール スコープが次の場合 `groupchat` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
+|`meetings`|string|||選択したインストール スコープが次の場合 `meetings` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
 

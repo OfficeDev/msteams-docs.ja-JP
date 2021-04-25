@@ -4,12 +4,12 @@ description: Microsoft Teams でアプリをアップロードする方法につ
 ms.topic: how-to
 ms.author: lajanuar
 keywords: teams アプリのアップロード
-ms.openlocfilehash: 3ca086cf8dbb992de84b22b7499f739d7c80b9d6
-ms.sourcegitcommit: 9cfbc44912980a33d2d7c7c85739aeea6ccb41de
+ms.openlocfilehash: c9102fa5b7056dda0db8d3e260bfb3e94b7f4e56
+ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "50479884"
+ms.lasthandoff: 04/22/2021
+ms.locfileid: "51946481"
 ---
 # <a name="upload-an-app-package-to-microsoft-teams"></a>Microsoft Teams にアプリ パッケージをアップロードする
 
@@ -116,21 +116,6 @@ Teams ボットの場合は、まずボットの名前を@mentioningしてボッ
 
 ![メッセージング拡張機能](../../assets/images/compose-extensions/cesampleapp.png)
 
-## <a name="add-a-default-install-scope-and-group-capability"></a>既定のインストール スコープとグループ機能を追加する
-
-> [!NOTE]
-> 既定のインストール スコープとグループ機能は、現在開発者プレビューでのみ使用できます。
-
-個人用スコープにアプリをインストールすると、ほとんどのアプリで動作しますが、Teams ストアの一部のアプリでは、個人用スコープとチーム スコープの両方がサポートされています。
-これらのアプリの中には、チーム、会議、またはグループチャットで動作することを目的とします。個人用アプリのエクスペリエンスはセカンダリです。
-既定のインストール スコープの選択は、発行する `defaultInstallScope` アプリを指定するのに役立ちます。 アプリのインストール エクスペリエンスでは、ユーザーが既定のオプションを使用できます。残りはイメージで強調表示されているシェブロンの下に移動されます。
-
-![アプリの追加](../../assets/images/compose-extensions/addanapp.png)
-
-プロパティ `defaultInstallScope` は、個人、チーム、グループチャット、会議などの値をサポートします。
-
-> [!NOTE]
->`defaultGroupCapability` は、チーム、グループチャット、または会議に追加される既定の機能を提供します。 アプリの既定の機能としてタブ、ボット、またはコネクタを選択しますが、アプリ定義で選択した機能が提供されている必要があります。
 
 ## <a name="remove-or-update-your-app"></a>アプリを削除または更新する
 
