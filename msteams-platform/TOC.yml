@@ -224,6 +224,8 @@
           href: bots/how-to/format-your-bot-messages.md
         - name: ボット メッセージの更新および削除
           href: bots/how-to/update-and-delete-bot-messages.md
+        - name: ボットのヘッダーをリクエストする
+          href: bots/how-to/conversations/request-headers-of-the-bot.md
     - name: コンテキストをボット用に取得する
       href: bots/how-to/get-teams-context.md
     - name: ファイルを送受信する
