@@ -2,13 +2,14 @@
 title: Teams での Azure Bot Service の認証の使用
 description: Azure Bot Service OAuthCard と、それが認証に使用される方法について説明します。
 ms.topic: conceptual
+localization_priority: Normal
 keywords: teams 認証 OAuthCard OAuth カード Azure Bot Service
-ms.openlocfilehash: 6e609daba1374f4e971e1634810d3b217ce55371
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 3d0df4f04625c5be3468d12319b54096ae06de90
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696676"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020682"
 ---
 # <a name="using-azure-bot-service-for-authentication-in-teams"></a>Teams での Azure Bot Service の認証の使用
 

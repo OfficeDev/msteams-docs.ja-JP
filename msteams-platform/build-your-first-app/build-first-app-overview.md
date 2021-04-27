@@ -3,14 +3,15 @@ title: 概要 - 最初のアプリの概要と前提条件を構築する
 author: heath-hamilton
 description: Microsoft Teams アプリ開発を開始し、環境をセットアップする方法について説明します。
 ms.author: lajanuar
+localization_priority: Normal
 ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: 6594ac175cd8ad92c5db399bb675ef3a6b271321
-ms.sourcegitcommit: 0e252159f53ff9b4452e0574b759bfe73cbf6c84
+ms.openlocfilehash: d975383022089579a04317de73595106e7920c56
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51762040"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019994"
 ---
 # <a name="build-your-first-microsoft-teams-app-overview"></a>最初の Microsoft Teams アプリの概要を作成する
 

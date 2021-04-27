@@ -2,14 +2,14 @@
 title: コネクタと Webhook にメッセージを送信する
 description: Microsoft Teams で Office 365 コネクタを使用する方法について説明します。
 ms.topic: how-to
-localization_priority: Priority
+localization_priority: Normal
 keywords: Teams o365 コネクタ
-ms.openlocfilehash: 28c1a6e68a0ac83a2eb4785d71596814d5a859d3
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
-ms.translationtype: HT
+ms.openlocfilehash: 1a625524f4c0bd278bd19b3adecdf6a59bd818a6
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696018"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020205"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>コネクタと Webhook にメッセージを送信する
 

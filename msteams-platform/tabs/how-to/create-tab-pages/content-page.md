@@ -3,14 +3,15 @@ title: コンテンツ ページを作成する
 author: laujan
 description: コンテンツ ページを作成する方法
 keywords: teams タブ グループ チャネル構成可能静的
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c33f58197e8b49ac7122178e154724cc5186bcb1
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: 9dc6c73d877d9355c5d4a9653e0d8ed669fb347e
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034699"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020381"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>タブのコンテンツ ページを作成する
 

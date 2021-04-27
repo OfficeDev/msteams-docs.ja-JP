@@ -1,14 +1,15 @@
 ---
 title: カード リファレンス
 description: Teams の Bot で使用できるすべてのカードとカード アクションについての説明
+localization_priority: Normal
 keywords: Bot のカード リファレンス
 ms.topic: reference
-ms.openlocfilehash: b9e11a6a6cb6de370323a3b07e2451a3abc41f12
-ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.openlocfilehash: 1e8cf2e474b8a74f6cab1cd6ef3439924b91892d
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634538"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019532"
 ---
 # <a name="cards-reference"></a>カード リファレンス
 
@@ -51,7 +52,7 @@ ms.locfileid: "51634538"
 
 画像は、PNG、JPEG、または GIF 形式×最大 1024、×1024 である必要があります。アニメーション GIF はサポートされていません。
 
-| プロパティ | 型  | 説明 |
+| プロパティ | 種類  | 説明 |
 | --- | --- | --- |
 | url | URL | イメージの HTTPS URL。 |
 | alt | 文字列 | 画像のアクセス可能な説明。 |
@@ -239,7 +240,7 @@ ms.locfileid: "51634538"
 
 ### <a name="properties-of-a-hero-card"></a>ヒーロー カードのプロパティ
 
-| プロパティ | 型  | 説明 |
+| プロパティ | 種類  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。 |
 | サブタイトル | リッチ テキスト | カードのサブタイトル。 最大 2 行。|
@@ -300,7 +301,7 @@ ms.locfileid: "51634538"
 
 ### <a name="properties-of-a-list-card"></a>リスト カードのプロパティ
 
-| プロパティ | 型  | 説明 |
+| プロパティ | 種類  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。|
 | アイテム | リスト アイテムの配列 ||
@@ -372,7 +373,7 @@ ms.locfileid: "51634538"
 
 ### <a name="properties-of-the-office-365-connector-card"></a>Office 365 コネクタ カードのプロパティ
 
-| プロパティ | 型  | 説明 |
+| プロパティ | 種類  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。 |
 | 概要 | リッチ テキスト | カードの概要。 最大 2 行。 |
@@ -576,7 +577,7 @@ Signin card を使用すると、ボットはユーザーにサインインを�
 
 ### <a name="properties-of-a-thumbnail-card"></a>サムネイル カードのプロパティ
 
-| プロパティ | 型  | 説明 |
+| プロパティ | 種類  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。|
 | サブタイトル | リッチ テキスト | カードのサブタイトル。 最大 2 行。|

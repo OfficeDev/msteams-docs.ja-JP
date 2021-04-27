@@ -3,13 +3,14 @@ title: Developer Preview マニフェスト スキーマ参照
 description: Microsoft Teams のマニフェストでサポートされるスキーマについて説明します。
 ms.topic: reference
 keywords: teams マニフェスト スキーマ Developer Preview
+localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: adb178000d909c9031e4b4df187bbf6f74f6e783
-ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
+ms.openlocfilehash: 1cfa25949024e03ef4c6e5737396e75aff8bd50b
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "51946474"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019700"
 ---
 # <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>Microsoft Teams の開発者プレビュー マニフェスト スキーマ
 
@@ -400,7 +401,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 オブジェクトは、型のすべての要素を持つ配列 (最大 1 要素) です `object` 。 このブロックは、メッセージング拡張機能を提供するソリューションにのみ必要です。
 
-|名前| 型 | 最大サイズ | 必須 | 説明|
+|名前| 種類 | 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`botId`|String|64|✔|ボット フレームワークに登録されているメッセージング拡張機能をバックするボットの一意の Microsoft アプリ ID。 これは、アプリ全体の ID と同じ [可能性があります](#id)。|
 |`canUpdateConfiguration`|ブール値|||メッセージング拡張機能の構成をユーザーが更新できるかどうかを示す値。 既定値は `false` です。|
@@ -528,6 +529,6 @@ AAD アプリ ID と Graph 情報を指定して、ユーザーが AAD アプリ
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`team`|string|||選択したインストール スコープが次の場合 `team` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
-|`groupchat`|string|||選択したインストール スコープが次の場合 `groupchat` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
-|`meetings`|string|||選択したインストール スコープが次の場合 `meetings` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
+|`groupchat`|文字列|||選択したインストール スコープが次の場合 `groupchat` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
+|`meetings`|文字列|||選択したインストール スコープが次の場合 `meetings` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
 

@@ -1,16 +1,19 @@
 ---
-title: デバイス機能の概要
+title: デバイス機能 - 概要
+author: Rajeshwari-v
 description: ネイティブ デバイス機能の概要。
+ms.author: surbhigupta
 keywords: カメラ イメージ メディア マイク マイク QR コード qrcode バーコード バーコード スキャン スキャナーの場所マップ機能ネイティブ デバイスのアクセス許可
+localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: 4c826d1705dfeea1feea21b02e7be51789817e48
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: 7d214e5011abdc83d2f6b5b49c2261359259035e
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449592"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020752"
 ---
-# <a name="device-capabilities"></a>デバイス機能 
+# <a name="device-capabilities---overview"></a>デバイス機能 - 概要
 
 Microsoft Teams プラットフォームは、組み込みのファースト パーティ エクスペリエンスと一致する開発者機能を継続的に強化しています。 強化された Teams プラットフォームを使用すると、パートナーは、カメラ、QR、バーコード スキャナー、フォト ギャラリー、マイク、場所などのデバイス機能を Web アプリと統合できます。 この統合により、アプリ開発の障壁が軽減され、開発サイクルが短縮され、開発者コミュニティの新しいシナリオや使用例が作成されます。
 
@@ -22,7 +25,7 @@ Microsoft Teams プラットフォームは、組み込みのファースト パ
     * マイク
     * ギャラリー
     * QR またはバーコード スキャナー
-* Location
+* 場所
 
 デバイス機能にアクセスした後、それらを Teams プラットフォームと統合して、共同作業のエクスペリエンスを強化できます。 
 

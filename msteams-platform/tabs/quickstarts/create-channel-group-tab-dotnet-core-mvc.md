@@ -1,43 +1,44 @@
 ---
-title: ASP.NET コア MVC を使用して [チャネルとグループ] タブを作成する
+title: Core MVC を使用してチャネルとグループ タブ ASP.NET 作成する
 author: laujan
-description: ASP.NET コア MVC を使用してカスタムチャネルおよびグループタブを作成するためのクイックスタートガイド。
+description: コア MVC を使用してカスタム チャネルとグループ タブを作成するクイック ASP.NET ガイド
+localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: cda91825ee37da94ee84747c5d2439c2940c728b
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 9d89fd98bae9732a8f9e2d34b82d7fc0e6985e01
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47818928"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020311"
 ---
-# <a name="create-a-custom-channel-and-group-tab-with-aspnet-core-mvc"></a>ASP.NET コア MVC を使用してカスタムのチャネルとグループタブを作成する
+# <a name="create-a-custom-channel-and-group-tab-with-aspnet-core-mvc"></a>コア MVC を使用してカスタム チャネルとグループ ASP.NET を作成する
 
-このクイックスタートでは、C# および ASP.Net コア MVC を使用して、カスタムのチャネル/グループタブを作成する手順を説明します。 また、 [Microsoft teams 用のアプリ Studio](~/concepts/build-and-test/app-studio-overview.md) を使用して、アプリマニフェストを完成させ、タブを teams に展開します。
+このクイック スタートでは、コア MVC を使用してカスタム チャネル/グループ タブを作成C#を ASP.Net します。 また、App [Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) を使用してアプリ マニフェストを最終決定し、タブを Teams に展開します。
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
-## <a name="get-the-source-code"></a>ソースコードを取得する
+## <a name="get-the-source-code"></a>ソース コードを取得する
 
-コマンドプロンプトを開き、タブプロジェクト用の新しいディレクトリを作成します。 開始するための簡単な [チャネルグループタブ](https://github.com/OfficeDev/microsoft-teams-sample-tabs/ChannelGroupTabMVC) プロジェクトを提供しています。 ソースコードを取得するには、zip フォルダーをダウンロードして、ファイルを抽出するか、またはサンプルリポジトリを新しいディレクトリに複製します。
+コマンド プロンプトを開き、タブ プロジェクトの新しいディレクトリを作成します。 開始する簡単な [チャネル グループ タブ](https://github.com/OfficeDev/microsoft-teams-sample-tabs/ChannelGroupTabMVC) プロジェクトを提供しました。 ソース コードを取得するには、zip フォルダーをダウンロードしてファイルを抽出するか、サンプル リポジトリを新しいディレクトリに複製します。
 
 ```bash
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
 
-ソースコードを取得したら、Visual Studio を開き、[ **プロジェクトまたはソリューションを開く**] を選択します。 Tab アプリケーションディレクトリに移動し、[ **Channelgrouptabmvc .sln**] を開きます。
+ソース コードを取得したら、[プロジェクト] を開Visual Studioプロジェクトまたはソリューションを **開く] を選択します**。 タブ アプリケーション ディレクトリに移動し **、ChannelGroupTabMVC.sln を開きます**。
 
-アプリケーションをビルドして実行するには、 **F5**キーを押すか、[**デバッグ**] メニューの [**デバッグ開始**] を選択します。 ブラウザーで以下の Url に移動し、アプリケーションが正しく読み込まれていることを確認します。
+アプリケーションをビルドして実行するには **、F5** キーを押するか、[デバッグ] メニューから [ **デバッグ** の開始] **を選択** します。 ブラウザーで、以下の URL に移動し、アプリケーションが正しく読み込まれたか確認します。
 
 - `http://localhost:44360`
 - `http://localhost:44360/privacy`
 - `http://localhost:44360/tou`
 
-## <a name="review-the-source-code"></a>ソースコードを確認する
+## <a name="review-the-source-code"></a>ソース コードを確認する
 
 ### <a name="startupcs"></a>Startup.cs
 
-このプロジェクトは、セットアップ時に選択されている *[HTTPS の詳細構成* ] チェックボックスがオンになっている ASP.NET Core 2.2 Web アプリケーションの空のテンプレートから作成されました。 MVC サービスは、依存関係の挿入フレームワークのメソッドによって登録され `ConfigureServices()` ます。 また、空のテンプレートでは、既定で静的コンテンツの提供が有効になっていないため、このメソッドには静的ファイルミドルウェアが追加され `Configure()` ます。
+このプロジェクトは、コア 2.2 Web アプリケーション ASP.NET テンプレートから作成され、セットアップ時に [ *詳細設定 - HTTPS* の構成] チェック ボックスがオンになっています。 MVC サービスは、依存関係の挿入フレームワークのメソッドによって登録 `ConfigureServices()` されます。 さらに、空のテンプレートでは既定では静的コンテンツの配信が有効ではないので、静的ファイル ミドルウェアがメソッドに追加 `Configure()` されます。
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -53,21 +54,21 @@ public void Configure(IApplicationBuilder app)
 
 ### <a name="wwwroot-folder"></a>wwwroot フォルダー
 
-ASP.NET Core で、web ルートフォルダーはアプリケーションが静的ファイルを検索する場所です。
+コア ASP.NET Web ルート フォルダーは、アプリケーションが静的ファイルを検索する場所です。
 
-### <a name="appmanifest-folder"></a>Appmanifest.xml フォルダー
+### <a name="appmanifest-folder"></a>AppManifest フォルダー
 
-このフォルダーには、次の必要なアプリパッケージファイルが含まれています。
+このフォルダーには、次の必須アプリ パッケージ ファイルが含まれています。
 
-- 192 x 192 ピクセルを測定する **フルカラーアイコン** 。
-- 32 x 32 ピクセルを測定する **透明のアウトラインアイコン** 。
-- アプリの属性を指定するファイルの **manifest.js** 。
+- 192 x 192 ピクセルのフル カラー アイコン。 
+- **32** x 32 ピクセルの透明なアウトライン アイコン。
+- アプリ **manifest.js** を指定するファイルのプロパティです。
 
-これらのファイルは、タブを Teams にアップロードする際に使用するために、アプリパッケージに圧縮する必要があります。
+これらのファイルは、Teams にタブをアップロードする場合に使用するアプリ パッケージに圧縮する必要があります。
 
 ### <a name="csproj"></a>.csproj
 
-Visual Studio の [ソリューションエクスプローラー] ウィンドウで、プロジェクトを右クリックし、[ **プロジェクトファイルの編集**] を選択します。 ファイルの末尾に、アプリケーションのビルド時に zip フォルダーを作成して更新するコードが表示されます。
+[ソリューション エクスプローラー Visual Studioでプロジェクトを右クリックし、[プロジェクト ファイルの編集] **を選択します**。 ファイルの下部には、アプリケーションのビルド時に zip フォルダーを作成および更新するコードが表示されます。
 
 ```xml
 <PropertyGroup>
@@ -89,37 +90,37 @@ Visual Studio の [ソリューションエクスプローラー] ウィンド�
 
 ### <a name="models"></a>モデル
 
-*ChannelGroup.cs* は、構成中にコントローラーから呼び出されるメッセージオブジェクトとメソッドを示しています。
+*ChannelGroup.cs* は、構成中にコントローラーから呼び出される Message オブジェクトとメソッドを示します。
 
 ### <a name="views"></a>ビュー
 
-#### <a name="home"></a>Home
+#### <a name="home"></a>ホーム
 
-ASP.NET Core は、 *Index* というファイルをサイトの既定またはホームページとして扱います。 ブラウザーの URL がサイトのルートを指している場合は、アプリケーションのホームページとして、 **cshtml** が表示されます。
+ASP.NET Core は *、Index* と呼ばれるファイルをサイトの既定/ホーム ページとして扱います。 ブラウザーの URL がサイトのルートをポイントすると **、Index.cshtml** がアプリケーションのホーム ページとして表示されます。
 
 #### <a name="shared"></a>共有
 
-部分的なビューのマークアップ *_Layout* には、アプリケーションの全体的なページ構造と共有のビジュアル要素が含まれています。 Teams ライブラリを参照することもできます。
+部分ビュー マークアップ *_Layout.cshtml* には、アプリケーションの全体的なページ構造と共有ビジュアル要素が含まれます。 また、Teams ライブラリも参照します。
 
 ### <a name="controllers"></a>コントローラー
 
-コントローラーは、ViewBag プロパティを使用して、ビューに値を動的に転送します。
+コントローラーは ViewBag プロパティを使用して、値を Views に動的に転送します。
 
 [!INCLUDE [dotnet-ngrok-intro](~/includes/tabs/dotnet-ngrok-intro.md)]
 
-- プロジェクトディレクトリのルートでコマンドプロンプトを開き、次のコマンドを実行します。
+- プロジェクト ディレクトリのルートでコマンド プロンプトを開き、次のコマンドを実行します。
 
 ```bash
 ngrok http https://localhost:443560 -host-header="localhost:44360"
 ```
 
-- Ngrok は、インターネットからの要求をリッスンし、ポート44355上で実行されている場合にそれらをアプリケーションにルーティングします。  `https://y8rCgT2b.ngrok.io/` *Y8rCgT2b*は、ngrok alpha の数字の HTTPS URL に置き換えられる場所に似ているはずです。
+- Ngrok はインターネットからの要求をリッスンし、ポート 44355 で実行されているアプリケーションにルーティングします。  `https://y8rCgT2b.ngrok.io/` *y8rCgT2b* が ngrok の英数字 HTTPS URL に置き換えられる場所に似ている必要があります。
 
-- Ngrok を実行していることを確認し、URL をメモするためには、後で必要になるように、コマンドプロンプトを常に使用してください。
+- ngrok を実行してコマンド プロンプトを保持し、URL をメモしてください。後で必要になります。
 
 ## <a name="update-your-application"></a>アプリケーションを更新する
 
-**Tab. cshtml**アプリケーションは、赤いアイコンまたは灰色のアイコンでタブを表示するための2つのオプションボタンをユーザーに提供します。 **[灰色]** または **[赤の選択**] ボタンを選択する `saveGray()` と、[構成] ページの [ `saveRed()` `settings.setValidityState(true)` **保存**] ボタンが設定され、有効になります。 このコードを使用すると、構成の要件を満たしていることを Teams で認識し、インストールを続行することができます。 Save では、のパラメーター `settings.setSettings` が設定されます。 最後に、 `saveEvent.notifySuccess()` は、コンテンツ URL が正常に解決されたことを示すためにを呼び出します。
+**Tab.cshtml 内** では、アプリケーションは、赤または灰色のアイコンでタブを表示するための 2 つのオプション ボタンをユーザーに表示します。 [灰色の **選択] または** **[** 赤の選択] ボタンを選択すると、構成ページの [保存] ボタンが設定され、 `saveGray()` `saveRed()` `settings.setValidityState(true)` 有効になります。  このコードを使用すると、構成要件を満たしていることを Teams に知らされ、インストールを続行できます。 保存時に、のパラメーターが `settings.setSettings` 設定されます。 最後に、 `saveEvent.notifySuccess()` コンテンツ URL が正常に解決されたことを示すために呼び出されます。
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
 

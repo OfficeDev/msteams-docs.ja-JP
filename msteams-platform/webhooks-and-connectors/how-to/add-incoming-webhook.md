@@ -2,15 +2,16 @@
 title: 受信 Webhook を使用して外部リクエストを Microsoft Teams に投稿する
 author: laujan
 description: Teams アプリに受信 Webhook を追加する方法
-keywords: Teams タブ 送信 Webhook*
+keywords: teams タブ送信 Webhook
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: a05f9ec448a722f3d662a8323a40ebe6b2de1e27
-ms.sourcegitcommit: 23ceb25d07a76f03ffe92cf1ac578b7c50b0bafc
+ms.openlocfilehash: bc4d768751d34ccf305ef99e126159123a83ef3f
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "49777918"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52018419"
 ---
 # <a name="post-external-requests-to-teams-with-incoming-webhooks"></a>受信 Webhook を使用して外部リクエストを Teams に投稿する
 
@@ -33,7 +34,7 @@ ms.locfileid: "49777918"
 |Markdown のサポート|アクション可能なメッセージング カードのすべてのテキスト フィールドで、基本的な Markdown がサポートされています。 **カードには HTML マークアップを使用しないでください**。 HTML は無視され、プレーン テキストとして扱われます。|
 
 > [!Note]
-> Teams ボット、メッセージング拡張機能、受信 Webhook、Bot Framework は、オープンなクロスカード プラットフォーム フレームワークであるアダプティブ カードをサポートします。 [Teams コネクタは現在](../../webhooks-and-connectors/how-to/connectors-creating.md) 、アダプティブ カードをサポートしていない。 ただし、Teams チャネルにアダプティブ カード [を](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) 投稿するフローを作成することもできます。
+> Teams ボット、メッセージング拡張機能、受信 Webhook、および Bot Framework は、オープンなクロスカード プラットフォーム フレームワークであるアダプティブ カードをサポートします。 [Teams コネクタは現在](../../webhooks-and-connectors/how-to/connectors-creating.md) アダプティブ カードをサポートしていない。 ただし、アダプティブ カードを Teams チャネル [に](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) 投稿するフローを作成することもできます。
 
 ## <a name="add-an-incoming-webhook-to-a-teams-channel"></a>Teams チャネルに受信 Webhook を追加する
 

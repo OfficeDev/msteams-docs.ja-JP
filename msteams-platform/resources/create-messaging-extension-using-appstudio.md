@@ -3,13 +3,14 @@ title: App Studio を使用してメッセージングの拡張機能を作成�
 author: clearab
 description: App Studio を使用して Microsoft Teams メッセージング拡張機能を作成する方法について説明します。
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 25086d959004046e8227de46b31d840c0b3fd228
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 10de4c6f9e7b81e1edc47622cb5c0c814d2eb3a7
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697233"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019742"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>App Studio を使用してメッセージングの拡張機能を作成する
 
@@ -241,7 +242,7 @@ App Studio アプリは、Microsoft Teams クライアント内から使用し�
 
 1. **ユーザー エクスペリエンス**。 メッセージング拡張機能は、会議の外部と同じように表示および動作する必要があります。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 * [操作コマンドを作成する](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 * [検索コマンドを作成する](~/messaging-extensions/how-to/search-commands/define-search-command.md)

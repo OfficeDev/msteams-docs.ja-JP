@@ -2,13 +2,14 @@
 title: 発行済みアプリの保守とサポート
 description: アプリの公開後にすべきこと
 ms.topic: how-to
+localization_priority: Normal
 keywords: teams post publish update certification app update manifest
-ms.openlocfilehash: 8644db5e329e15d77062553eda4a41a36b2740ee
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: 11c32ce61664f34a246905124b767e17d3c6f536
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585835"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020801"
 ---
 # <a name="maintain-and-support-your-published-app"></a>公開したアプリの保守およびサポート 
 

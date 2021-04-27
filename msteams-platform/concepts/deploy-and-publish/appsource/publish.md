@@ -1,135 +1,136 @@
 ---
 title: Teams ストアの申請プロセスについて
-description: Microsoft Teams アプリ ストアにアプリを公開する承認申請プロセスについて説明します。
+description: Microsoft Teams アプリ ストアにアプリを発行する承認申請プロセスについて説明します。
 ms.topic: overview
-keywords: teams publish store office publishing publish AppSource partner center account verification apps account not publish eligible app submission
-ms.openlocfilehash: d2dc624c6dd13896397041c5c69ce5c5eb471a5b
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+localization_priority: Normal
+keywords: teams publish store office publishing publish AppSource パートナー センター アカウント検証アプリ アカウントが対象アプリの申請を発行しない
+ms.openlocfilehash: 79584ae1eb0be24b4a66e2421f23dd694f8d610f
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014412"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019896"
 ---
-# <a name="submit-your-app-to-appsource"></a>AppSource にアプリを提出する
+# <a name="submit-your-app-to-appsource"></a>アプリを AppSource に送信する
 
 ## <a name="teams-app-submission"></a>Teams アプリの申請
 
-AppSource に発行して、Microsoft Teams アプリ カタログと Web 上でアプリを [利用できます](https://appsource.microsoft.com)。 大きなレベルでは、AppSource にアプリを提出するプロセスは次のとおりです。
+アプリを AppSource に発行して、Microsoft Teams アプリ カタログと Web 上でアプリを [利用できます](https://appsource.microsoft.com)。 高レベルでは、AppSource にアプリを送信するプロセスは次のとおりです。
 
-1. 設計ガイドラインに従ってアプリ [を開発します](~/concepts/design/understand-use-cases.md)。 タブは、デスクトップと Web、モバイルの両方のタブデザインガイドライン [に従う](~/tabs/design/tabs.md) 必要 [があります](~/tabs/design/tabs-mobile.md)。 ボットは、ボットの [設計ガイドラインに従う必要があります](~/bots/design/bots.md)。
-1. アプリが Microsoft Teams のアプリ検証 [ポリシーを満](/legal/marketplace/certification-policies) たしている必要があります。 
-1. マニフェスト検証ツールを使 [ってアプリをテストします](prepare/submission-checklist.md#teams-app-validation-tool)。
-1. パートナー センターで [開発者アカウント](/office/dev/store/open-a-developer-account) を [セットアップします](https://support.microsoft.com/help/4499930/partner-center-overview)。 *「FAQ」*[セクションの「パートナー センター アカウントを作成する](#how-do-i-create-a-partner-center-account)方法」も参照してください。
-1. 提出チェックリストに従って、申請用にアプリ [を準備します](prepare/submission-checklist.md)。
+1. 設計ガイドラインに従ってアプリ [を開発します](~/concepts/design/understand-use-cases.md)。 タブは、デスクトップと Web、モバイルの両方のタブ [設計ガイドラインに従う](~/tabs/design/tabs.md) 必要 [があります](~/tabs/design/tabs-mobile.md)。 ボットは、ボットの設計 [ガイドラインに従う必要があります](~/bots/design/bots.md)。
+1. アプリが Microsoft Teams のアプリ [検証ポリシーを満た](/legal/marketplace/certification-policies) している必要があります。 
+1. マニフェスト検証ツールを使用 [してアプリをテストします](prepare/submission-checklist.md#teams-app-validation-tool)。
+1. パートナー センターで[開発者アカウント](/office/dev/store/open-a-developer-account)[を設定します](https://support.microsoft.com/help/4499930/partner-center-overview)。 *「FAQ」*[セクションの「パートナー センター アカウントを作成する](#how-do-i-create-a-partner-center-account)方法」も参照してください。
+1. 申請チェックリストに従って、アプリを申請 [用に準備します](prepare/submission-checklist.md)。
 1. 最も [失敗したテスト ケースを確認して、アプリ品質の承認を迅速に行います](prepare/frequently-failed-cases.md)。
-1. パートナー センターから [AppSource にパッケージを提出します](/office/dev/store/use-partner-center-to-submit-to-appsource)。
+1. パートナー センターを通じて [AppSource にパッケージを送信します](/office/dev/store/use-partner-center-to-submit-to-appsource)。
 1. パートナー センター ダッシュボードで承認プロセスを追跡します。 *「パートナー* [センターの概要」を参照してください](https://support.microsoft.com/help/4499930/partner-center-overview)。
-1. 提出後、公開されたアプリの [保守とサポートのガイダンスを確認します](post-publish/overview.md)。
+1. 申請後、発行済みアプリの保守と [サポートに関するガイダンスを確認します](post-publish/overview.md)。
 
 >[!NOTE]
 >
->- Teams アプリは、モバイル対応である必要があります。[](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment)また、モバイル OS (iOS および Android) ではアップセル要件に準拠する必要はありません。 
->- Teams アプリにボットが含まれている場合は、Bot Developer Framework [の実施基準に準拠する必要があります](https://aka.ms/bf-conduct)。
->- アプリに Office 365 コネクタが含まれている場合は、追加の用語が適用される場合があります。 「 [コネクタ開発者ダッシュボードと](https://aka.ms/connectorsdashboard) アプリ開発者契約 [」を参照してください](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm)。
->- アプリを Government Community Cloud (GCC) ユーザーが利用し、ストア内のアプリ登録情報が重複しないようにするには、認証プロセスまたはフローでユーザーを識別し、GCC ユーザーの指定または予想されるコンテンツ URL にユーザーをルーティングする必要があります。
+>- Teams アプリはモバイル対応で、モバイル OS [](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment) (iOS と Android) ではアップセルの要件に準拠している必要があります。 
+>- Teams アプリにボットが含まれている場合は、Bot Developer Framework Code of [Conduct に準拠する必要があります](https://aka.ms/bf-conduct)。
+>- アプリに 365 Connector Office場合は、追加の用語が適用される場合があります。 [「Connectors Developer Dashboard and App](https://aka.ms/connectorsdashboard) Developer [Agreement」を参照してください](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm)。
+>- アプリを Government Community Cloud (GCC) ユーザーが利用し、ストア内のアプリの登録情報が重複しないようにするには、認証プロセスまたはフローでユーザーを特定し、GCC ユーザーの指定または予想されるコンテンツ URL にルーティングする必要があります。
 
-## <a name="faqs--teams-apps-and-partner-account-verification-process-in-partner-center"></a>FAQ - パートナー センターでの Teams アプリとパートナー アカウント検証プロセス
+## <a name="faqs--teams-apps-and-partner-account-verification-process-in-partner-center"></a>FAQ - パートナー センターの Teams アプリとパートナー アカウントの確認プロセス
 
 ## <a name="how-do-i-create-a-partner-center-account"></a>パートナー センター アカウントを作成する方法
 
 パートナー センター アカウントを作成するには、次の 2 つの方法があります。
 
-- パートナー センターを使い、Microsoft ネットワークにアカウントを持ってない場合は、パートナー センターの登録ページを使用 [してアカウントを作成します](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment)。
-- 既にパートナー ネットワークに登録している場合は、既存の登録ページを使用して、パートナー センターで直接 [ アカウントを作成します](/office/dev/store/)。
+- パートナー センターを利用し、Microsoft ネットワークにアカウントを持ってない場合は、[パートナー センターの登録] ページ [を使用してアカウントを作成します](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment)。
+- パートナー ネットワークに既に登録されている場合は、既存の登録ページを使用してパートナー センターに直接 [ アカウントを作成します](/office/dev/store/)。
 
-## <a name="what-if-i-cannot-find-my-office-store-account-in-partner-center"></a>パートナー センターで自分のストア アカウントOffice見つからでは?
+## <a name="what-if-i-cannot-find-my-office-store-account-in-partner-center"></a>パートナー センターで自分のストア Officeが見つからな場合は、
 
-パートナー センター [のサポート チケットを開](https://partner.microsoft.com/support/v2/?stage=1) き、ドロップダウン メニューから次を選択します。
+パートナー センター [のサポート チケットを開](https://partner.microsoft.com/support/v2/?stage=1) き、ドロップダウン メニューから次の項目を選択します。
 
 | メニュー | オプション |
 | -------   | -------  |
-|カテゴリ| Commercial Marketplace|
-| トピック | 一般的なマーケットプレースのヘルプと使い方に関する質問 |
+|カテゴリ| 商用マーケットプレース|
+| トピック | 一般的な Marketplace のヘルプと使い方に関する質問 |
 | サブトピック| Office アドイン |
 
-## <a name="where-can-i-get-support-for-my-partner-center-account-issues"></a>パートナー センター アカウントの問題に対するサポートはどこで受け取できますか?
+## <a name="where-can-i-get-support-for-my-partner-center-account-issues"></a>パートナー センター アカウントの問題のサポートはどこで受け取れるのですか?
 
-発行元 [のサポート ページで問題](https://aka.ms/marketplacepublishersupport) のトピックを検索し、ガイダンスを見つける。 提供されたガイダンスが役に立たない場合は、パートナー センター [のサポート チケットを購入します](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket)。
+発行元 [のサポート ページにアクセスして](https://aka.ms/marketplacepublishersupport) 、問題のトピックを検索し、ガイダンスを見つける。 提供されたガイダンスが役に立たない場合は、パートナー センター [のサポート チケットを引き上げてください](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket)。
 
-## <a name="how-do-i-manage-my-office-store-account-in-partner-center"></a>パートナー センターでストア アカウントOffice管理する方法
+## <a name="how-do-i-manage-my-office-store-account-in-partner-center"></a>パートナー センターで自分のストア Officeを管理する方法
 
-ガイダンスについては [、パートナー センター Officeストアアカウントの管理に](/office/dev/store/manage-account-settings-and-profile) アクセスしてください。
+ガイダンスについては [、「パートナー センター Officeストアの管理」アカウントを](/office/dev/store/manage-account-settings-and-profile) 参照してください。
 
-## <a name="how-do-i-add-my-phone-number-to-the-partner-profile-contact-section"></a>パートナー プロファイルの連絡先セクションに電話番号を追加する方法
+## <a name="how-do-i-add-my-phone-number-to-the-partner-profile-contact-section"></a>パートナー プロファイル連絡先セクションに電話番号を追加する方法
 
-電話番号には、国コード、エリア コード、電話番号の 3 つの部分があります。 電話番号にエリア コードが含まれる場合は、2 番目のボックスを空のままにして、3 番目のボックスに入力します。
+電話番号には、国コード、地域コード、電話番号の 3 つの部分があります。 電話番号にエリア コードが含されていない場合は、2 番目のボックスを空のままにして、3 番目のボックスを完成します。
 
 ## <a name="how-do-i-manage-my-account-settings-and-partner-profile-in-partner-center"></a>パートナー センターでアカウント設定とパートナー プロファイルを管理する方法
 
-パートナー センター [のアカウント設定の管理に関する](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) ガイダンスについては、「アカウント設定とプロファイル情報の管理」ページを参照してください。
+パートナー センター の [アカウント設定の管理に関する](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) ガイダンスについては、「アカウント設定とプロファイル情報の管理」ページをご覧ください。
 
-## <a name="why-do-i-receive-the-message-this-account-is-not-publish-eligible-when-i-try-to-submit-my-add-in-through-partner-center"></a>パートナー センターからアドインを提出しようとするときに、「このアカウントは発行の対象ではありません」というメッセージが表示される理由は何ですか。
+## <a name="why-do-i-receive-the-message-this-account-is-not-publish-eligible-when-i-try-to-submit-my-add-in-through-partner-center"></a>パートナー センターを通じてアドインを提出しようとするときに、「このアカウントは発行対象ではありません」というメッセージが表示される理由
 
-アカウントの確認状態が保留中の場合、上記の [エラー メッセージ](/partner-center/verification-responses) が表示されます。 パートナー センター ダッシュボードでアカウントの確認状態を確認  [します](https://partner.microsoft.com/dashboard)。 [ **設定]** を選択すると、ページ ヘッダー シェルの右上隅にある歯車アイコンが表示されます。 Choose **Developer settings**  =>  **Account** Account   =>  **settings**.
+アカウント検証の状態が保留中の場合、上記 [のエラー メッセージ](/partner-center/verification-responses) が表示されます。 パートナー センター ダッシュボードでアカウント検証の状態を確認  [します](https://partner.microsoft.com/dashboard)。 [ **設定]** を選択し、ページ ヘッダー シェルの右上隅にある歯車アイコンを選択します。 [開発者 **設定] [**  =>  **アカウント**   =>  **アカウントの設定] を選択します**。
 
 ![パートナー センター のアカウント設定ページ](../../../assets/images/partner-center-accts-page.png)
 
-![パートナー センターの確認状態](../../../assets/images/partner-center-verification-status.png)
+![パートナー センターの検証状態](../../../assets/images/partner-center-verification-status.png)
 
-アカウント検証プロセスには、電子メールの所有権、雇用の確認、ビジネスの確認など、必要な各手順の状態が表示されます。  確認プロセスが完了すると、プロファイル ページの登録の確認状態が承認待ちから承認済みに *変わります*。 プロセス手順は表示されなくなりました。
+電子メールの所有権、雇用の検証、ビジネス検証など、必要な各手順の状態がアカウント検証プロセスに表示されます。  検証プロセスが完了すると、プロファイル ページの登録の確認状態が保留中から承認済み *に**変わります*。 プロセス手順は表示されなくなりました。
 
-![パートナー センターの確認エラー](../../../assets/images/partner-center-acct-verification-error.png)
+![パートナー センターの検証エラー](../../../assets/images/partner-center-acct-verification-error.png)
 
 ## <a name="what-is-verified-in-the-partner-center-account-verification-process-and-how-to-respond"></a>パートナー センター のアカウント検証プロセスで確認される情報と対応方法
-確認領域には、電子メールの所有権 **、雇用**、 **ビジネスの** 3 **つがあります**。 確認プロセスの詳細については、「確認された機能と対応 [方法」を参照してください](/partner-center/verification-responses#what-is-verified-and-how-to-respond)。
-プライマリ連絡先、グローバル管理者、またはアカウント管理者である場合は、パートナー プロファイルに移動して、確認状態を監視し、進行状況を追跡します。
+検証領域は、電子メールの所有権 **、雇用、** およびビジネスの **3****つがあります**。 検証プロセスの詳細については、「確認される処理と応答 [方法」を参照してください](/partner-center/verification-responses#what-is-verified-and-how-to-respond)。
+プライマリ連絡先、グローバル管理者、またはアカウント管理者の場合は、パートナー プロファイルに移動して検証の状態を監視し、進行状況を追跡します。
 
-確認プロセスが完了すると、プロファイル ページの登録の確認状態が承認待ちから承認済みに *変わります*。 承認後、プロセスの手順とその状態はページで使用できなくなりました。 プライマリ連絡先は、確認が完了した数営業日以内に Microsoft からメールを受信します。
+検証プロセスが完了すると、プロファイル ページの登録の確認状態が保留中から承認済み *に**変わります*。 承認後、プロセスの手順とその状態はページで使用できなくなりました。 プライマリ連絡先は、検証が完了した数営業日以内に Microsoft から電子メールを受信します。
 
-## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-in-the-partner-center-how-should-i-proceed"></a>自分のアカウントの確認ステータスが、パートナー センターでのメールの所有権を超えては進んだ状態ではありません。 続行する方法
+## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-in-the-partner-center-how-should-i-proceed"></a>パートナー センターの [メールの所有権] を超えて、アカウントの検証の状態が進んだのではありません。 どのように進める必要がありますか?
 
-電子メール **の所有権の** 検証プロセス中に、確認メールがプライマリ連絡先のメール アドレスに送信されます。 プライマリ連絡先の受信トレイで、maccount@ **<span>microsoft</span>.com** からのメールを確認し、必要な件名行の操作を行います。Microsoft でメール アカウントを *確認します*。 電子メールの検証プロセスを完了します。 確認メールは、パートナー センターのアカウント設定ページに表示されるメール アドレスに送信されます。
+電子メール **所有権の検証** プロセス中に、確認メールがプライマリ連絡先の電子メール アドレスに送信されます。 メインの連絡先の受信トレイで、microsoft **.com maccount@<span>の</span>** メールを確認します。件名の [アクションが必要です: Microsoft でメール アカウントを確認する] を *クリックします*。 電子メールの検証プロセスを完了します。 確認メールは、パートナー センターの [アカウント設定] ページに記載されているメール アドレスに送信されます。
 
 > [!NOTE]
-> * メール検証リンクは 7 日間のみ有効です。 
-> * パートナー プロファイル ページにアクセスし、[確認メールの再送信] リンクを選択すると、メールの再送信 **を要求** できます。
-> * 電子メールを確実に受信するには、セキュリティで保護されたドメインとしてmicrosoft.comメールを安全に一覧表示し、迷惑メール フォルダーを確認します。
+> * 電子メール検証リンクは 7 日間のみ有効です。 
+> * パートナー プロファイル ページにアクセスし、[確認メールの再送信] リンクを選択すると、メールの再送信を **要求** できます。
+> * メールを確実に受信するには、セキュリティで保護されたドメイン microsoft.com メールを安全に一覧表示し、迷惑メール フォルダーを確認します。
 
-## <a name="how-do-i-get-further-support-for-my-account-related-issues"></a>アカウント関連の問題に対するサポートを受け取る方法
+## <a name="how-do-i-get-further-support-for-my-account-related-issues"></a>アカウントに関連する問題のサポートを受け取る方法
 
-サポート チケット [を作成するためのガイダンスと手順](/azure/marketplace/partner-center-portal/support) については、パートナー センターの [商用マーケットプレース のサポート] ページを参照してください。
+サポート チケット [を作成するためのガイダンスと](/azure/marketplace/partner-center-portal/support) 手順については、「パートナー センターの商用マーケットプレース プログラムのサポート」ページをご覧ください。
 
 ## <a name="ive-checked-my-mail-folders-and-havent-received-the-verification-email-what-must-i-do-next"></a>メール フォルダーを確認し、確認メールを受信していない。 次に何をする必要がありますか?
 
 以下の操作を試してください。
 * 迷惑メールフォルダーまたはスパム フォルダーを確認します。
-* ブラウザー のキャッシュをクリアし、パートナー センター アカウント のダッシュボードに移動し、[確認メールの再送信] リンクを選択して、確認メールをメール アドレスに再送信します。
-* 別のブラウザーから **[確認メールの** 再送信] リンクにアクセスしてみてください。
-* IT 部門と連絡を取り、確認メールが電子メール サーバーによってブロックされていないことを確認します。
-* サーバーのスパム フィルターを調整して、サーバーからのすべてのメールを許可またはセーフ **リストmaccount@microsoft。 <span></span>com**.
+* ブラウザー キャッシュをクリアし、パートナー センター アカウント ダッシュボードに移動し、[確認メールの再送信] リンクを選択して、確認メールを電子メール アドレスに再送信します。
+* 別のブラウザーから **[再送信確認メール** ] リンクにアクセスしてみてください。
+* IT 部門と一緒に作業して、確認メールが電子メール サーバーによってブロックされていないことを確認します。
+* サーバーのスパム フィルターを調整して、サーバーからのすべてのメールを許可または **maccount@microsoft。 <span></span>com**.
 
 ## <a name="how-long-does-the-employment-verification-process-usually-take"></a>通常、雇用確認プロセスにはどのくらいの時間が必要ですか?
 
-提出された詳細すべてが正しい場合、雇用確認プロセスが完了するのに約 2 時間かかります。
+提出された詳細が正しい場合、雇用確認プロセスの完了には約 2 時間かかります。
 
-## <a name="how-long-does-the-business-verification-process-usually-take"></a>ビジネス検証プロセスには通常どのくらいの時間が必要ですか?
+## <a name="how-long-does-the-business-verification-process-usually-take"></a>ビジネス検証プロセスには通常どれくらいの時間が必要ですか?
 
-すべての必要なドキュメントが送信された場合、業務の検証が完了するのに 1 から 2 営業日かかります。
+必要なすべてのドキュメントが提出された場合、ビジネス検証の完了には 1 日から 2 営業日かかります。
 
-## <a name="if-i-reach-out-to-the-support-team-will-my-ticket-be-expedited"></a>サポート チームに連絡すると、チケットは迅速に提供されますか?
+## <a name="if-i-reach-out-to-the-support-team-will-my-ticket-be-expedited"></a>サポート チームに連絡を取った場合、チケットは迅速に行いますか?
 
-サポート チケットは 1 週間後に解決されます。 サポート チケットを引き上げる際に提供された電子メール ID に送信された更新プログラムを確認します。
+サポート チケットは 1 週間で解決されます。 サポート チケットを引き上げる際に提供されたメール ID に送信される更新プログラムを確認します。
 
-## <a name="my-issue-is-not-listed-here-are-there-other-pages-i-can-reference-for-partner-center-issues"></a>問題はここに記載されません。 パートナー センターの問題に関して参照できる他のページはありますか?
+## <a name="my-issue-is-not-listed-here-are-there-other-pages-i-can-reference-for-partner-center-issues"></a>ここでは、問題は一覧に表示されません。 パートナー センターの問題に関して参照できるページは他にもありますか?
 
-詳細については、 [商用マーケットプレースのドキュメント](/azure/marketplace/) を参照してください。
+詳細については [、商用マーケットプレースのドキュメント](/azure/marketplace/) を参照してください。
 
-## <a name="ive-created-a-support-ticket-it-has-been-7-business-days-and-i-havent-received-an-update-where-can-i-get-additional-help"></a>サポート チケットを作成し、7 営業日が過ごし、更新プログラムを受信していない。 その他のヘルプはどこで利用できますか?
+## <a name="ive-created-a-support-ticket-it-has-been-7-business-days-and-i-havent-received-an-update-where-can-i-get-additional-help"></a>サポート チケットを作成しました。7 営業日が過ごし、更新プログラムを受け取っていない。 追加のヘルプはどこで受け取れるのですか?
 
-次の詳細情報を **<teamsubm@microsoft.com>** 含むメールを送信します。
+次の詳細を含 **<teamsubm@microsoft.com>** むメールを送信します。
 
-* **件名:** パートナー センター アカウントの問題<App_Name> (アプリの名前を指定します)。
-* **電子メールの本文**:
+* **件名 :** パートナー センター アカウントの問題 (<App_Name>名を指定します)。
+* **メール本文**:
     * サポート チケット番号
     * 販売者 ID
     * 問題のスクリーンショット (可能な場合)
@@ -141,11 +142,11 @@ AppSource に発行して、Microsoft Teams アプリ カタログと Web 上で
 | 分析と BI | 分析、データ可視化、BI |
 | 開発者と IT | 開発者ツール、IT 管理者 |
 | 教育 | 教育 |
-| 人事管理 | 人事および採用 |
+| 人事管理 | 人事と採用 |
 | 生産性 | コンテンツ管理、ファイルとドキュメント、生産性、トレーニングとチュートリアル、ユーティリティ |
 | プロジェクト管理 | コミュニケーション、プロジェクト管理、ワークフロー、およびビジネス管理 |
-| 販売とサポート | 顧客と連絡先の管理、カスタマー サポート、財務管理、販売とマーケティング |
-| ソーシャルで楽しい | 画像とビデオ ギャラリー、ライフ スタイル、ニュースと天気予報、ソーシャル、旅行、ナビゲーション |
+| 販売とサポート | 顧客と連絡先の管理、カスタマー サポート、財務管理、営業およびマーケティング |
+| ソーシャルで楽しい | 画像とビデオ ギャラリー、ライフスタイル、ニュースと天気予報、ソーシャル、旅行、ナビゲーション |
 
 >
 > [!div class="nextstepaction"]

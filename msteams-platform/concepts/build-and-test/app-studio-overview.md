@@ -2,13 +2,14 @@
 title: Microsoft Teams 用の App Studio を開始する
 description: App Studio を使用して Microsoft Teams で優れたアプリのビルドを開始する
 keywords: App Studio Teams の開始
+localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: d275e78909fe35a6032bf67cb7454396f3dbd7af
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: aa55abb6a4acd4220c2988d1a42c2a2bddc89042
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696305"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019966"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Microsoft Teams 用の App Studio を使用してアプリをすばやく開発する
 

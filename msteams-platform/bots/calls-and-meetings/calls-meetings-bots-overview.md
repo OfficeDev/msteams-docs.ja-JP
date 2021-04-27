@@ -2,13 +2,14 @@
 title: 通話とオンライン会議ボット
 description: Microsoft Graph API を使用して通話やオンライン会議を使用して、Microsoft Teams アプリが音声とビデオを使用してユーザーとやり取りする方法について説明します。
 ms.topic: conceptual
+localization_priority: Normal
 keywords: 通話通話オーディオ ビデオ IVR 音声オンライン会議
-ms.openlocfilehash: be3286afe739c8b1d99af896ad64a3963875768d
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 52a7e1e24fdc0a2c17264087e4f4461b7c43a50a
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51995982"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020170"
 ---
 # <a name="calls-and-online-meetings-bots"></a>通話とオンライン会議ボット
 

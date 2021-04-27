@@ -2,13 +2,14 @@
 title: パブリック サービスのDeveloper Preview
 description: Details the features in the Microsoft Teams Public Developer Preview
 ms.topic: reference
+localization_priority: Normal
 keywords: teams プレビュー開発者向け機能
-ms.openlocfilehash: 05954383931444cd0fb53dc37d9f790257f7dd39
-ms.sourcegitcommit: b50f6d68482cad43a60642a9947d1be17809a7df
+ms.openlocfilehash: 38acccedacb86437f5e6c949b674c0a62bbbd63c
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634517"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020619"
 ---
 # <a name="features-in-the-public-developer-preview-for-microsoft-teams"></a>Microsoft Teams のパブリック Developer Preview機能
 

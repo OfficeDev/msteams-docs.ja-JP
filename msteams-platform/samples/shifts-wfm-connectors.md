@@ -1,65 +1,76 @@
 ---
-title: Teams シフト コネクタ
-description: Teams の従業員管理シフト コネクタ
+title: 本番対応の Shifts コネクタ
+description: Workforce management Shifts connectors for Teams
 ms.topic: reference
 author: laujan
 ms.date: 03/09/2020
+localization_priority: Normal
 keywords: Microsoft Teams コネクタ kronos
 ms.author: lajanuar
-ms.openlocfilehash: 9d32c9e1aa3baba660440492df55bb00f677baa4
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 94e0b2b61998510ea9dd054d118e856eadc49b2d
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014594"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019618"
 ---
-# <a name="microsoft-teams-shifts-wfm-connectors"></a>Microsoft Teams が WFM コネクタをシフトする  
+# <a name="production-ready-shifts-connectors"></a>本番対応の Shifts コネクタ  
 
-## <a name="workforce-management-connectors-wfm-for-firstline-workers"></a>ファーストライン ワーカー用の要員管理コネクタ (WFM) 
+Teams Shifts Workforce Management (WFM) コネクタは、運用対応、オープン ソース、コミュニティ駆動型の統合であり、ファーストラインワーカーに役立ちます。 Teams Shifts を使用したファーストライン ワーカーのデジタル変換のためのシームレスなエクスペリエンスと迅速なプロセスを提供します。 
 
-Teams シフト WFM コネクタは、Teams シフトによるファーストライン ワーカーのデジタル変換のためのシームレスなエクスペリエンスと迅速なプロセスを提供する、実稼働対応、オープン ソース、およびコミュニティ駆動型の統合です。 
+各コネクタは、組織への展開と統合に関する詳細なガイダンスを提供します。 完全なソース コードは GitHub リポジトリで使用できます。 詳細またはフォークを探索し、特定のニーズに合わせてカスタマイズできます。   
 
-各コネクタは、組織への展開と統合に関する詳細なガイダンスを提供します。 完全なソース コードは、GitHub リポジトリで入手できます。このリポジトリでは、特定のニーズに合わせて詳細に探索したり、フォークしたり、カスタマイズすることができます。
+このドキュメントでは、Teams Shifts WFM コネクタ、Kronos-to-Teams Shifts コネクタ、および JDA 間 Teams シフト コネクタの主な利点の概要を示します。
 
-## <a name="key-benefits-teams-shifts-wfm-connectors"></a>主な利点: Teams が WFM コネクタをシフトする
+## <a name="key-benefits-of-teams-shifts-wfm-connectors"></a>Teams Shifts WFM コネクタの主な利点
 
-* **プラグ アンド プレイ エクスペリエンス。** すべての Shifts WFM コネクタには、必要ARMサービスを Microsoft Azure でホストできる Azure 展開スクリプトが含まれています。 アプリを展開するためにコーディングは必要ありません。
+Teams Shifts WFM コネクタの主な利点は次のとおりです。
 
-* **実稼働対応のコード。** すべてのシフト コネクタは推奨されるセキュリティとインフラストラクチャのベスト プラクティスに準拠し、コミュニティから提出された変更はすべて、継続的に準拠するためにレビューされます。
+* **プラグ アンド プレイのエクスペリエンス:** すべての Shifts WFM コネクタには、Microsoft Azure ARM必要なすべてのサービスをホストできる Azure 展開スクリプトが含まれています。 アプリを展開するためにコーディングは必要ありません。
 
-* **カスタマイズ可能で拡張可能。**  すべての Shifts WFM コネクタは、すぐに使用するために展開できる状態ですが、独自のニーズに合わせて簡単にカスタマイズまたは拡張できるよう、コード ベースと展開スクリプト全体が用意されています。
+* **実稼働可能なコード:** すべての Shifts コネクタは、推奨されるセキュリティとインフラストラクチャのベスト プラクティスに準拠し、コミュニティが提出した変更はすべて確認され、継続的に準拠します。
 
-* **サポートに関する&ドキュメント。**  すべての Shifts WFM コネクタには、ソリューションのアーキテクチャ、展開、および構成の手順に関するエンドツーエンドのドキュメントが付属しています。 コネクタ リポジトリは監視されます。そのため、リポジトリの GitHub の問題追跡ツールを使用して、発生した問題、課題、または困難を報告してください。
+* **カスタマイズ可能で拡張可能:**  すべての Shifts WFM コネクタは、すぐに使用できるように展開できる状態ですが、コード ベースと展開スクリプト全体をすぐに利用できます。 独自のニーズに合わせて簡単にカスタマイズまたは拡張できます。
 
-* **シームレスな統合。** WFM ソリューションと Teams シフトの統合により、ファーストライン ワーカーは Teams シフト アプリを使用してスケジュールとシフト タイムを表示/管理し、Teams で提供されるその他すべての豊富なコラボレーション機能をモバイル デバイスやデスクトップから使用できます。コンテキストを別のアプリに切り替える必要が生じることなく、Teams で提供されます。
+* **サポートに関する&ドキュメント:**  すべての Shifts WFM コネクタには、ソリューションのアーキテクチャ、展開、および構成手順に関するエンドツーエンドのドキュメントが付属しています。 コネクタ リポジトリは監視され、リポジトリの GitHub Issues トラッカーを通じて発生する問題、課題、または困難を報告できます。
 
-**Teams でシフト ビューを開く**  
+* **シームレスな統合:** WFM ソリューションと Teams Shifts の統合により、ファーストラインワーカーは Teams Shifts アプリを使用してスケジュールとシフト時間を表示または管理し、Teams で提供されるその他の豊富なコラボレーション機能をモバイル デバイスまたはデスクトップから別のアプリに切り替えることなく使用できます。  
+
+**Teams でシフト ビューを開く** 
+
+Teams のシフト ビューを次の図に示します。 
+
 ![Teams でシフトを開く](../assets/images/teams-open-shifts-view.png)
 
-## <a name="kronos-to-teams-shifts-connector"></a>Kronos から Teams へのシフト コネクタ
+## <a name="kronos-to-teams-shifts-connector"></a>Kronos-to-Teams Shifts コネクタ
 
-オープン ソース コードを使用すると、Kronos Workforce Central Version 8.1 以上を Teams シフト (デスクトップ/モバイル Teams アプリ) と統合して、次のファーストライン ワーカーおよびマネージャー シナリオに対応できます。
+オープンソース コードを使用すると、Kronos Workforce Central Version 8.1 以上を、次のファーストライン ワーカーおよびマネージャー シナリオ用のデスクトップまたはモバイル Teams アプリなどの Teams Shifts と統合できます。
 
-1. スケジュールを表示します。
+* スケジュールを表示します。
 
-1. オープン シフトを公開して要求します。
+* オープン シフトを発行して要求します。
 
-1. スワップ シフト。
+* スワップ シフト。
 
-1. 要求のタイム オフ。
+* 要求の時間を指定します。
 
-1. シフトを提供します。
+* シフトを提供します。
 
-[GitHub で入手する]( https://aka.ms/KronosShiftsConnector)
+Kronos-to-Teams Shifts コネクタの展開の詳細については [、「Get it on GitHub」を参照してください](https://aka.ms/KronosShiftsConnector)。
 
 ## <a name="jda-to-teams-shifts-connector"></a>JDA から Teams へのシフト コネクタ
 
-オープン ソース コードを使用すると、JDA (BlueYonder) バージョン 17.2 以上を Teams シフト (デスクトップ/モバイル Teams アプリ) と統合して、次のファーストライン ワーカーおよびマネージャー シナリオに対応できます。
+オープンソース コードを使用すると、BlueYonder バージョン 17.2 以上などの JDA を、次のファーストライン ワーカーおよびマネージャー シナリオ用のデスクトップまたはモバイル Teams アプリなどの Teams シフトと統合できます。
 
-1. JDA でシフトを公開し、グループをスケジュールし、Teams で表示します。
+* JDA でシフトとスケジュール グループを発行し、Teams で表示します。
 
-1. シフト スワップの要求やタイム オフなど、豊富なスケジュールシナリオを有効にします。
+* シフト スワップの要求やタイム オフを含む、豊富なスケジュール設定シナリオを有効にします。
 
-1. シフト用 Microsoft [Graph API を使用してユーザーの可用性を設定します](/graph/api/resources/shift?view=graph-rest-beta) 。
+* Microsoft Graph API for [Shifts を使用してユーザーの可用性を設定します](/graph/api/resources/shift?view=graph-rest-beta&preserve-view=true)。
 
-[GitHub で入手する](https://aka.ms/JDAShiftsConnector)</br></br>
+投稿と提案の詳細については [、「Get it on GitHub」を参照してください](https://aka.ms/JDAShiftsConnector)。</br></br>
+
+## <a name="see-also"></a>関連項目
+
+> [!div class="nextstepaction"]
+> [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)

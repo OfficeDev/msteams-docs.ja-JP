@@ -2,13 +2,14 @@
 title: Microsoft Teams アプリのデバイスのアクセス許可を要求する
 keywords: teams アプリの機能のアクセス許可
 description: 通常、ユーザーの同意が必要なネイティブ機能へのアクセスを要求するためにアプリ マニフェストを更新する方法
+localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: e7c5f7ff477bc193924cdf11700c77ae620cd1c0
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: 452840c5809da32a79c231f85cd1de9f8746367a
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449437"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019854"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Microsoft Teams アプリのデバイスのアクセス許可を要求する
 
@@ -80,7 +81,7 @@ ms.locfileid: "50449437"
 
 | プロパティ      | 説明   |
 | --- | --- |
-| media         | カメラ、マイク、スピーカー、およびアクセス メディア ギャラリーを使用する権限。 |
+| メディア         | カメラ、マイク、スピーカー、およびアクセス メディア ギャラリーを使用する権限。 |
 | 地理位置情報   | ユーザーの場所を返すアクセス許可。      |
 | 通知 | ユーザー通知を送信するアクセス許可。      |
 | midi          | デジタル楽器から楽器デジタル インターフェイス (MIDI) 情報を送受信する権限。   |
@@ -116,7 +117,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 > * をサポート `camera` し `gallery` `microphone` 、selectMedia API を [**使用して有効になります**](/javascript/api/@microsoft/teams-js/media?view=msteams-client-js-latest#selectMedia_MediaInputs___error__SdkError__attachments__Media_______void_&preserve-view=true)。 1 [**つのイメージ キャプチャに captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) を使用します。
 > * getLocation `location` API を使用して [**サポートが有効になります**](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true)。 HTML5 地理位置情報 API は現在 Teams デスクトップ クライアントで完全にサポートされていないので、場所に使用 `getLocation API` する必要があります。
 
-次に例を示します。
+例:
  * ユーザーに自分の場所へのアクセスを求めるメッセージを表示するには、次のコマンドを呼び出す必要があります `getCurrentPosition()` 。
 
     ```Javascript

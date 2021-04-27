@@ -3,21 +3,23 @@ title: Microsoft Teams アプリ テンプレート
 description: Microsoft Teams プラットフォーム用のアプリ テンプレートのリンクと説明
 ms.topic: reference
 keywords: Microsoft Teams テンプレートのサンプル デモ
+localization_priority: Normal
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 58e7e1711ef4075841d1c3c41d184ad0e861b194
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 58cda9f400081a47bb9bebf20ba509ee3623dc0b
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696284"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020526"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 用のアプリ テンプレート
 
-アプリ テンプレートは、オープン ソースで、GitHub で利用できる Microsoft Teams 用の完全なアプリの例です。 各アプリ テンプレートには、組織用に展開してインストールするための詳細な手順が記載されています。 サンプル アプリも提供されているため、すぐにインストールして使用を開始できます。 完全なソースコードも利用できるので、詳細を調べたり、コードをフォークして特定のニーズに合わせて変更したりできます。
+アプリ テンプレートは、オープン ソースで、GitHub で利用できる Microsoft Teams 用の完全なアプリの例です。 各アプリ テンプレートには、組織用に展開してインストールするための詳細な手順が記載されています。 また、すぐにインストールして使用を開始できるサンプル アプリも提供します。 完全なソース コードも利用できます。これにより、詳細を確認したり、コードをフォークしたりして、特定の要件を満たして変更することができます。
 すべてのアプリテンプレートは [MIT ライセンス](https://github.com/OfficeDev/microsoft-teams-apps-eprescription/blob/master/LICENSE)の条件下で提供されます。
+
 > [!NOTE] 
-> ユーザーと組織のアプリ テンプレートから作成されたアプリをライセンスおよびサポートする必要があります。 Microsoft はライセンスとサポートについて責任を負いません。
+> ユーザーと組織のアプリ テンプレートから作成されたアプリをライセンスおよびサポートする必要があります。
 
 **&#9734; 新たにリリースされたアプリ テンプレートを示します。**
 
@@ -25,12 +27,12 @@ ms.locfileid: "51696284"
 
 * **クラウドに直接展開:** すべてのアプリ テンプレートには展開スクリプトが含まれており、必要なサービスをすべて Microsoft Azure または Power Platform にホストすることができます。 
 * **推奨サンプルコード:** アプリ テンプレートは、セキュリティとインフラストラクチャに関して推奨されるベスト プラクティスに準拠しています。 コミュニティから提出されたアプリ テンプレートの変更はすべて、適合性を確認するためにレビューされます。
-* **カスタマイズ可能かつ拡張可能:** すべてのアプリ テンプレートは最小限の構成で展開する準備ができていますが、コード ベース全体と展開スクリプトを提供しているため、独自のニーズに合わせて簡単にカスタマイズまたは拡張できます。
+* **カスタマイズ可能で拡張可能:** すべてのアプリ テンプレートは最小限の構成で展開しますが、コード ベーススクリプトと展開スクリプト全体が提供され、独自のニーズに合わせて簡単にカスタマイズまたは拡張できます。
 * **詳細なドキュメント:** すべてのアプリ テンプレートには、ソリューション アーキテクチャ、展開、構成の手順に関するエンドツーエンドのドキュメントが付属しています。  
 
 ## <a name="adoption-bot"></a>導入ボット 
 
-Adoption Bot は Power Virtual Agent for Teams (PVA) で構築されたユーザーケア チャット ボットです。 FAQPlus の PVA 版と考えることができます。 Adoption Bot は、Microsoft 365 と Teams に関する 100 以上の一般的な質問に回答しています。 既存のトピックの編集、独自のトピックの追加、および既存の FAQ の取り込みが可能です。 ユーザーが追加のヘルプを必要とする場合、導入ボットはそれらを専門家に接続したり、プレミアム フロー コネクタを使用してサービス チケットを開くまで拡張することができます。このボットは、独自のボットにインストールするか、導入ハブのようなカスタム アプリに [組み込む場合があります](https://github.com/akporzondek/adoption_hub)。
+導入ボットは、Power Virtual Agent for Teams PVA で構築されたユーザー ケア チャット ボットです。 これは、FAQ Plus の PVA バージョンと見なされます。 Adoption Bot は、Microsoft 365 と Teams に関する 100 以上の一般的な質問に回答しています。 既存のトピックの編集、独自のトピックの追加、および既存の FAQ の取り込みが可能です。 ユーザーが追加のヘルプを必要とする場合、Adoption Bot は専門家への接続や、プレミアム フロー コネクタを使用して拡張し、サービス チケットを開くことができます。 このボットは、自己インストールまたは導入ハブなどのカスタム アプリに組み[込まれる。](https://github.com/akporzondek/adoption_hub)
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot)
 
@@ -48,7 +50,7 @@ Adoption Bot は Power Virtual Agent for Teams (PVA) で構築されたユーザ
 
 ## <a name="appointment-manager"></a>予定マネージャー 
 
-Appointment Manager は、企業が Teams を経由して消費者とのバーチャルの予定を作成、管理、実施するための Teams アプリ テンプレートです。 消費者からの新規予定リクエストは Teams チャネルに表示され、チームのスタッフに素早く割り当てたり、割り当てし直したりすることができます。 予定リクエストは、カスタム タブを使用してチーム レベルまたは個人レベルで確認することができます。 すべての予定は Teams のオンライン会議に関連付けられているため、スタッフと消費者は簡単に予定された時間に会議に参加することができます。
+Appointment Manager は、企業が Teams を経由して消費者とのバーチャルの予定を作成、管理、実施するための Teams アプリ テンプレートです。 コンシューマーからの新しい予定要求は Teams チャネルに表示され、チーム内のスタッフにすばやく割り当て、再割り当てされます。 予定の要求は、カスタム タブを使用してチームレベルまたは個人レベルで表示されます。 すべての予定は Teams のオンライン会議に関連付けられているため、スタッフと消費者は簡単に予定された時間に会議に参加することができます。
 
 アプリ テンプレートは Microsoft Bookings と統合されており、簡単に予約管理ができます。 スケジュールされた予定は、自動的に割り当てられたスタッフのカレンダーに表示され、消費者は会議のリンクが埋め込まれたカスタマイズ可能なメール通知とアラームを受信することができます。
 
@@ -59,7 +61,7 @@ Appointment Manager は、企業が Teams を経由して消費者とのバー�
 
 ## <a name="ask-away"></a>Ask Away
 
-Ask Away は、ユーザーが Teams 内で Q&A (質問と回答) セッションを実行できるようにする [Microsoft Teams ボット](../bots/what-are-bots.md)です。 チーム メンバーは、Ask Away ボットを使用して、同僚が共有する質問を送信して賛成票を投じることができます。これにより、Q&A ホストは、チャネルまたはチャット内で最も重要な質問を簡単に収集できます。 ボットを使用して、Teams 会議でリアルタイムの Q&A セッションを実行でき、出席者はチャットを介してライブで質問を送信できます。
+Ask Away は [、ユーザーが質問](../bots/what-are-bots.md) と回答 (Q と呼ばれる) を Teams 内のセッション&できる Microsoft Teams ボットです。 チーム メンバーは、Ask Away ボットを使用して、同僚が共有する質問を送信して賛成票を投じることができます。これにより、Q&A ホストは、チャネルまたはチャット内で最も重要な質問を簡単に収集できます。 ボットは、Teams 会議でリアルタイムの Q&セッションを実行するために使用され、出席者はチャットを通じてライブで質問を送信できます。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-askaway)
 
@@ -71,7 +73,7 @@ Ask Away は、ユーザーが Teams 内で Q&A (質問と回答) セッショ�
 
 ## <a name="associate-insights"></a>アソシエイト インサイト
 
-アソシエイト インサイトは、現場担当者が顧客の意見、感情、認識を直接キャプチャして送信できるようにする [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) テンプレートです。 多くの場合、現場担当者は、一対一の連絡窓口で顧客と関わりを持つ最初の会社の代表者です。 収集されたデータは、製品の改善とカスタマー エクスペリエンスの向上のために、たとえば Power BI Teams タブを介して、ビジネスチームが共同で共有および使用できます。
+アソシエイト インサイトは、現場担当者が顧客の意見、感情、認識を直接キャプチャして送信できるようにする [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) テンプレートです。 多くの場合、現場担当者は、一対一の連絡窓口で顧客と関わりを持つ最初の会社の代表者です。 収集されたデータは、製品の改善とカスタマー エクスペリエンスの向上のために、Power BI Teams タブなどのビジネス チームによって共有され、共同で使用されます。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights)
 
@@ -88,23 +90,22 @@ Ask Away は、ユーザーが Teams 内で Q&A (質問と回答) セッショ�
 
 ## <a name="attendance"></a>勤怠
 
-勤怠アプリは、チームにピン留めすることができる [[Power Apps]](/powerapps/maker/canvas-apps/embed-teams-app) タブです。 これは、通常、学習環境やトレーニング環境などの設定で出欠を記録するように設計されています。 ユーザーは、過去 30 日間までの出席をマークまたは編集し、グループ全体または個々の出席者の要約された出席レポートを表示できます。
+出席アプリは、 [チームにピン](/powerapps/maker/canvas-apps/embed-teams-app) 留めされている [Power Apps] タブです。 学習環境やトレーニング環境などの設定でプレゼンスを記録するように設計されています。 ユーザーは、過去 30 日間までの出席をマークまたは編集し、グループ全体または個々の出席者の要約された出席レポートを表示できます。 チームの出席の詳細については [、「Get it on GitHub」を参照してください](https://github.com/OfficeDev/microsoft-teams-apps-attendance)。
 
-[GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-attendance)
+次の図は、出席アプリのデモを表示します。  
 
 ![勤怠アプリのデモ](../assets/images/attendance-app.png)
 
 ## <a name="book-a-room"></a>会議室予約
 
-会議室予約は、会議室をすばやく検索して、現在時刻から 30 分間 (既定)、60 分間、90 分間予約できる [Microsoft Teams ボット](../bots/what-are-bots.md)です。 会議室予約ボットは、個人の会話または一対一の会話を対象としています。
-
-[GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom)
+Book-a-room は [Microsoft Teams](../bots/what-are-bots.md) ボットであり、ユーザーは現在の時刻から 30 分、60 分、または 90 分の会議室をすばやく検索して予約できます。 既定の時間は 30 分です。 会議室予約ボットは、個人の会話または一対一の会話を対象としています。 Book-a-room アプリの詳細については [、「Get it on GitHub」を参照してください](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom)。  
+次の図は、Book-a-room デモを表示します。
 
 ![会議室予約のデモ](../assets/images/book-a-room.png)
 
 ## <a name="building-access"></a>Building Access
 
-Building Access は、施設の管理者が従業員が施設に滞在しているかどうかを管理、追跡、報告できるようにして、建物の占有しきい値と社会的距離の基準の管理をサポートする Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) ベースのアプリです。 Microsoft [Power Apps](/powerapps/powerapps-overview)、[Power Automate](/power-automate/getting-started)を使用して構築されたこのアプリは、Microsoft Teams と緊密に統合されており、組織が建物の準備状況を判断し、現場アクセスの適格基準を確立し、将来の計画のための分析情報を収集できるようにします。
+Building Access は Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) ベースのアプリで、施設のディレクターが従業員のオンサイトプレゼンスを管理、追跡、および報告することで、占有のしきい値と社会的な不備の規範を構築する管理をサポートします。 Microsoft [Power Apps](/powerapps/powerapps-overview)、[Power Automate](/power-automate/getting-started)を使用して構築されたこのアプリは、Microsoft Teams と緊密に統合されており、組織が建物の準備状況を判断し、現場アクセスの適格基準を確立し、将来の計画のための分析情報を収集できるようにします。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-buildingaccess)
 
@@ -119,7 +120,7 @@ Building Access は、施設の管理者が従業員が施設に滞在してい�
 
 ## <a name="celebrations"></a>Celebrations
 
-Celebrations は、チームメンバーがお互いの誕生日、記念日、その他の定期的なイベントを祝うのに役立つ Teams アプリです。 チーム メンバー全員の特別な日を思い出し、イベント作成時に選択されたすべてのチームに友好的なメッセージを送信して、チーム メンバーがその日に特別な気分になるようにします。
+お祝いは、チーム メンバーが互いの誕生日、記念日、その他の定期的なイベントを祝うのに役立つ Teams アプリです。 チーム メンバー全員の特別な日を思い出し、イベント作成時に選択されたすべてのチームに友好的なメッセージを送信して、チーム メンバーがその日に特別な気分になるようにします。
 
 このアプリでは、チームメンバー全員が簡単にイベントを追加および表示できるようにするためのインターフェイスが用意されています。また、イベントを共有するチームをユーザーが選択できるようにします。
 
@@ -127,9 +128,9 @@ Celebrations は、チームメンバーがお互いの誕生日、記念日、�
 
 ## <a name="checklist"></a>Checklist
 
-Checklist は、チャットやチャネルで共有チェックリストを作成することで、チームと共同作業を行うことができる、Microsoft Teams のカスタム [メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)アプリです。 このアプリは、デスクトップ、ブラウザー、iOS、Android のすべての Teams プラットフォーム クライアントでサポートされており、Microsoft365 サブスクリプションの一部として展開する準備ができています。  
+Checklist は、チャットやチャネルで共有チェックリストを作成することで、チームと共同作業を行うことができる、Microsoft Teams のカスタム [メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)アプリです。 このアプリは、デスクトップ ブラウザー、iOS、Android など、すべての Teams プラットフォーム クライアントでサポートされています。 アプリは、Microsoft 365 サブスクリプションの一部として展開する準備が整いました。  
 
-[GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-checklist-app )
+[GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-checklist-app)
 
 :::row:::
 :::column span="2":::
@@ -139,7 +140,7 @@ Checklist は、チャットやチャネルで共有チェックリストを作�
 
 ## <a name="classroom-drop-in"></a>Classroom ドロップイン 
 
-Classroom Drop-in は、Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) ベースのアプリで、システム リーダーがクラスチーム (仮想教室) を見つけて、必要に応じて指定されたドロップイン期間に自分自身や他のユーザーをそのクラスチームに追加することができます。 Microsoft [Power Apps](/powerapps/powerapps-overview) と [Power Automate](/power-automate/getting-started) を使用して構築されたアプリは、Microsoft Teams と深く統合されており、教育機関は、ビジネス要件に応じてクラスチームに関連する関係者へのアクセスを提供することで、ハイブリッドな学習環境での運用を最適化することができます。
+Classroom Drop-in は、システム リーダーがクラス チームを見つけ、仮想教室を意味し、必要に応じて指定されたドロップイン期間にこれらのクラス チームに自分自身または他のユーザーを追加できる、Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)ベースのアプリです。 Microsoft [Power Apps](/powerapps/powerapps-overview) と [Power Automate](/power-automate/getting-started) を使用して構築されたアプリは、Microsoft Teams と深く統合されており、教育機関は、ビジネス要件に応じてクラスチームに関連する関係者へのアクセスを提供することで、ハイブリッドな学習環境での運用を最適化することができます。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-classroom-dropin)
 
@@ -159,7 +160,7 @@ Classroom Drop-in は、Microsoft [Power Platform](https://powerapps.microsoft.c
 
 ## <a name="contact-group-lookup"></a>Contact Group Lookup
 
-Contact Group Lookup アプリは、組織の連絡先グループ (以前は、「配布リストまたはコミュニケーション グループ」と呼ばれていました) を作成、アクセス、および管理するための便利で有用なアプローチを提供します。 ユーザーは、すべての Teams 環境内で、グループ メンバーの表示とチャット、メンバー ステータスの表示、連絡先グループの選択したメンバーとのグループ チャットの作成をすばやく行うことができます。
+連絡先グループ参照アプリは、組織の連絡先グループ (以前は配布リストまたは通信グループと呼ばれる) の作成、アクセス、管理に便利で便利な方法を提供します。 ユーザーは、すべての Teams 環境内で、グループ メンバーの表示とチャット、メンバー ステータスの表示、連絡先グループの選択したメンバーとのグループ チャットの作成をすばやく行うことができます。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-app-contactgrouplookup)
 
@@ -176,7 +177,7 @@ Contact Group Lookup アプリは、組織の連絡先グループ (以前は、
 
 ## <a name="co-worker-appreciation"></a>同僚の感謝 
 
-Microsoft Teams の Co-worker Appreciation テンプレートを使用すると、ユーザーは Teams のコンテキストで同僚の業績を認識することができます。 共同作業者が同僚へのリワードを選択すると、受信者や他のチーム メンバーがチャネルの会話でタグ付けされ、チャネルのリワードの詳細についての通知を受け取ることができます。 アワードは Teams アプリに記録され、安全で携帯性に優れ、簡単に共有することができます。 これは、ランキングを備えた Open Badges アプリ テンプレートの PowerApps ベースのバージョンと考えることができます。
+Microsoft Teams の Co-worker Appreciation テンプレートを使用すると、ユーザーは Teams のコンテキストで同僚の業績を認識することができます。 共同作業者が同僚へのリワードを選択すると、受信者や他のチーム メンバーがチャネルの会話でタグ付けされ、チャネルのリワードの詳細についての通知を受け取ることができます。 アワードは Teams アプリに記録され、安全で携帯性に優れ、簡単に共有することができます。 これは、ランキングを使用して、PowerApps ベースのバージョンの Open Badges アプリ テンプレートと見なされます。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-coworker-appreciation)
 
@@ -184,7 +185,7 @@ Microsoft Teams の Co-worker Appreciation テンプレートを使用すると�
 
 ## <a name="crowdsourcer"></a>CrowdSourcer
 
-CrowdSourcer は、グループ メンバーから共同で調達された情報をチームに照会する [Microsoft Teams ボット](../bots/what-are-bots.md)です。 これは、参加者が楽しく役立つ情報リソースに積極的に参加して貢献できるようにしながら、よく寄せられる質問に回答するための優れた方法です。
+CrowdSourcer は、グループ メンバーから共同で調達された情報をチームに照会する [Microsoft Teams ボット](../bots/what-are-bots.md)です。 参加者が積極的に参加し、楽しく役立つ情報リソースに貢献できる一方で、よく寄せられる質問に答えるのに役立ちます。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-crowdsourcer-app)
 
@@ -192,9 +193,9 @@ CrowdSourcer は、グループ メンバーから共同で調達された情報
 
 ## <a name="custom-stickers"></a>カスタム ステッカー
 
-自己表現は健全なチーム文化の中核です。 このアプリ テンプレートは、ユーザーが Microsoft Teams 内で、カスタム ステッカーや GIF を使用できるようにする[メッセージング拡張機能](~/messaging-extensions/what-are-messaging-extensions.md)です。 このテンプレートは、簡単な Web ベースの構成エクスペリエンスを提供し、構成アクセス権を持つユーザーがエンド ユーザーに持たせたい GIF/ステッカー/画像をアップロードできるため、チーム全体で選択したステッカーのセットを使用できます。
+自己表現は健全なチーム文化の中核です。 このアプリ テンプレートは、ユーザーが Microsoft Teams 内で、カスタム ステッカーや GIF を使用できるようにする[メッセージング拡張機能](~/messaging-extensions/what-are-messaging-extensions.md)です。 このテンプレートは、構成アクセス権を持つユーザーがユーザーに必要な GIF、ステッカー、画像をアップロードできる簡単な Web ベースの構成エクスペリエンスを提供し、チーム全体で選択したステッカーのセットを使用できます。
 
-このアプリでは、ストレージや共有メカニズムとして SharePoint サイトや個々のチャネルにアクセスしなくても、チーム間で画像/GIF/ステッカーを簡単に共有できます。 たとえば、製品チームは、製品の画像や GIF をソーシャル メディア、マーケティング、販売チームとプログラムで簡単に共有できます。 新しい画像/GIF が利用可能になったときに、特定のチーム/個人への通知フローをトリガーすることで、このアプリを拡張することもできます。
+また、このアプリを使用すると、SharePoint サイトや個々のチャネルにストレージや共有メカニズムとしてアクセスすることなく、チーム間で画像、GIF、ステッカーを簡単に共有できます。 たとえば、製品チームは、製品の画像や GIF をソーシャル メディア、マーケティング、販売チームとプログラムで簡単に共有できます。 また、新しい画像や GIF が利用可能なときに、特定のチームまたは個人に通知フローをトリガーすることで、このアプリを拡張することもできます。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-stickers-app)
 
@@ -204,8 +205,9 @@ CrowdSourcer は、グループ メンバーから共同で調達された情報
 
 Employee Ideas アプリは、Azure ベースの Great Ideas アプリ テンプレートの PowerApps 版です。 このアプリでは、Teams ユーザーがアイデア キャンペーンの設定や構成を行うことができます。 アイデア キャンペーンとは、共通のテーマを中心にアイデアをグループ化するためのカテゴリーです。
 
-また、Teams ユーザーは次のようなアクティビティを行うことができます。
-* 従業員がアイデアごとに送信する必要がある標準的な送信フォームを設定します。 
+Teams ユーザーは、次のアクティビティを実行できます。
+
+* 従業員がアイデアごとに提出する必要がある標準提出フォームを構成します。 
 * キャンペーンのアイデアやリストを見直して管理します。
 * キャンペーンを変更、削除します。
 * アイデアのランキングをレビューします。
@@ -221,7 +223,7 @@ Employee Ideas アプリは、Azure ベースの Great Ideas アプリ テンプ
 
 ## <a name="e-prescriptions"></a>E-Prescriptions 
 
-E-Prescriptions は、患者に電子処方箋を発行するプロセスを自動化することにより、遠隔医療と仮想ケアを強化する [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) ベースのアプリです。 医療専門家は、Teams プラットフォーム内で直接、予定をすばやく確認し、電子処方箋を生成し、電子処方箋を添付した電子メールを患者に送信できます。
+E-Prescriptions は [、患者](/powerapps/maker/canvas-apps/embed-teams-app) に電子処方箋を発行するプロセスを自動化することで、遠隔医療と仮想ケアを強化する Power Apps ベースのアプリです。 医療専門家は、Teams プラットフォーム内で直接、予定をすばやく確認し、電子処方箋を生成し、電子処方箋を添付した電子メールを患者に送信できます。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-eprescription) 
 
@@ -238,7 +240,7 @@ E-Prescriptions は、患者に電子処方箋を発行するプロセスを自�
 
 ## <a name="employee-training"></a>Employee Training 
 
-従業員トレーニングは、主催者が組織の学習およびトレーニング イベントを簡単に公開、追跡、促進できるようにする Microsoft Teams アプリです。  このアプリを使用すると、イベント プランナーはイベント登録者にリマインダーと通知を送信できます。従業員は今後のイベントへの関心を示し、現在のイベントの最新情報を入手し、Teams メッセージング拡張機能を介して同僚とイベントの詳細を共有できます。
+従業員トレーニングは、組織の学習およびトレーニング イベントを簡単に発行、追跡、および促進できる Microsoft Teams アプリです。  アプリを使用すると、イベント プランナーは、イベント登録者にリマインダーと通知を送信し、従業員は今後のイベントへの関心を示し、現在のイベントに関する更新を行い、Teams メッセージング拡張機能を通じて同僚とイベントの詳細を共有できます。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-employeetraining)
 
@@ -255,7 +257,7 @@ E-Prescriptions は、患者に電子処方箋を発行するプロセスを自�
 
 ## <a name="expert-finder"></a>専門家検索
 
-専門家検索は、スキル、興味、教育属性に基づいて特定の組織メンバーを識別する [Microsoft Teams ボット](../bots/what-are-bots.md)です。 メンバーは、Azure Active Directory ユーザー プロファイルのキーワード検索と一致する組織内のエキスパートを見つけます。
+専門家検索は、スキル、興味、教育属性に基づいて特定の組織メンバーを識別する [Microsoft Teams ボット](../bots/what-are-bots.md)です。 メンバーは、Azure Active Directory ユーザー プロファイルのキーワード検索に一致する組織内の専門家を検索します。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-expertfinder)
 
@@ -263,7 +265,7 @@ E-Prescriptions は、患者に電子処方箋を発行するプロセスを自�
 
 ## <a name="faq-plus"></a>FAQ プラス
 
-会話型 Q&A ボットは、ユーザーからよく寄せられる質問に回答する簡単な方法です。 ただし、ほとんどのボットは、ボットに障害が発生したときにループ内に人間がいないため、意味のある方法でユーザーとやり取りできません。 FAQ ボットは フレンドリーな Q&A ボットですが、ボットが役立たないときには人間が介在するようにします。 ボットに質問をすることができ、知識ベースに含まれている場合、ボットは回答を返します。 そうでない場合、ボットはユーザーがクエリを送信できるようにします。クエリは、チーム内からの通知に基づいて行動することでサポートを提供するのに役立つ、事前に構成された専門家チームに投稿されます。
+会話型 Q&A ボットは、ユーザーからよく寄せられる質問に回答する簡単な方法です。 しかし、ほとんどのボットは、ボットが失敗してもループに人間がいないので、ユーザーと有意義なやり取りを行うのに失敗します。 FAQ ボットは フレンドリーな Q&A ボットですが、ボットが役立たないときには人間が介在するようにします。 ボットに質問をすることができ、知識ベースに含まれている場合、ボットは回答を返します。 そうでない場合、ボットはユーザーがクエリを送信できるようにします。クエリは、チーム内からの通知に基づいて行動することでサポートを提供するのに役立つ、事前に構成された専門家チームに投稿されます。
 
 > [!NOTE]
 > **FAQ プラス** の最新リリースは、専門家チームが以下を完了できるようにすることにより、改善された Q&A 解決をサポートします。
@@ -274,7 +276,7 @@ E-Prescriptions は、患者に電子処方箋を発行するプロセスを自�
 >
 > &#x2714; Q&A の改訂履歴を追跡します。
 >
-> &#x2714; [アダプティブ カード](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)として表示する追加の詳細を含む回答を構成します。
+> &#x2714; アダプティブ カードとして表示する追加の詳細を含む回答を [構成します](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)。
 >
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
 
@@ -282,11 +284,11 @@ E-Prescriptions は、患者に電子処方箋を発行するプロセスを自�
 
 ## <a name="get-support-app"></a>サポート アプリの取得
 
-Microsoft Teams を使用している組織では、Get Support App を使用することで、任意のユーザーセットが上司にサポートを要求できるようになります。 このアプリには、次のようなさまざまな機能が搭載されています。
--   Power App とは異なるカテゴリのサポートを要求する
--   どのユーザーが割り当てられたかを要求者に知らせるために送信される通知 
--   割り当てられた上司に、どのユーザーがサポートを必要としているか知らせるために送信される通知 
--   SharePoint と PowerBI での昇格とパターンの分析
+サポートの取得アプリは、Microsoft Teams を使用している組織によって使用されます。 このアプリには、次の機能が含まれています。
+* Power App からさまざまなカテゴリに関するサポートを要求する。
+* 誰が割り当てられたのか通知する通知を要求者に送信します。
+* 割り当てられた監督者に、支援が必要なユーザーを通知する通知。 
+* SharePoint および PowerBI.S でのエスカレーションとパターンの分析
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-app-get-support/)
 
@@ -362,7 +364,7 @@ Grow Your Skills アプリは、従業員が組織の補助的なプロジェク
 
 ## <a name="hr-support"></a>HR サポート
 
-HR サポート ボットはフレンドリーな Q&A ボットであり、サポートができない場合に HR チームのサポート プロフェッショナル/エキスパートをループに入れます。 ボットに質問をすることができ、知識ベースに含まれている場合、ボットは回答を返します。 そうでない場合、ボットはユーザーがクエリを送信できるようにします。クエリは、チーム内からの通知に基づいて行動することでサポートを提供するのに役立つ、事前に構成された専門家チームに投稿されます。 さらに、ボットは、質問で事前に構成されたタグを検索することにより、推奨される HR ポリシー/質問へのリンクを提案します。 これらのタイルは、クイックリファレンスとして関連するタブにもあります。 HR サポートは、軽量の QnA に適しています。また、組織内で新しいプロジェクトやイニシアチブを立ち上げるときに迅速なサポートを提供します。
+HR サポート ボットは、フレンドリーな Q&ボットで、サポート担当者または専門家がサポートできない場合に、人事チームからループに連れて行くボットです。 ボットに質問をすることができ、知識ベースに含まれている場合、ボットは回答を返します。 そうでない場合、ボットはユーザーがクエリを送信できるようにします。クエリは、チーム内からの通知に基づいて行動することでサポートを提供するのに役立つ、事前に構成された専門家チームに投稿されます。 さらに、ボットは、質問で事前に構成されたタグを検索して、推奨される人事ポリシーまたは質問へのリンクを提案します。 これらのタイルは、関連付けられたタブにクイック リファレンスとして表示されます。 HR サポートは、軽量の Q&A に対して機能し、組織で新しいプロジェクトやイニシアチブを立ち上げる際に迅速なサポートを提供します。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-hrsupport-app)
 
@@ -380,7 +382,7 @@ HR サポート ボットはフレンドリーな Q&A ボットであり、サ�
 
 ## <a name="incentives"></a>Incentives
 
-Incentives は、トレーニングや変更管理イニシアチブなどの指定されたアクティビティへのインセンティブ付き従業員の参加を管理および追跡する [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) テンプレートです。 管理者は、アプリを使用して、指定されたアクティビティを確立し、完了のためにポイントを割り当て、報酬に必要な適格ポイント レベルを指定します。 従業員は、アプリを使用して蓄積されたポイントを表示し、資格に達したら、償還可能な報酬を要求して請求します。
+インセンティブは、 [トレーニングや](/powerapps/maker/canvas-apps/embed-teams-app) 変更管理イニシアチブなど、指定されたアクティビティへのインセンティブを与えた従業員の参加を管理および追跡する Power Apps テンプレートです。 管理者は、アプリを使用して、指定されたアクティビティを確立し、完了のためにポイントを割り当て、報酬に必要な適格ポイント レベルを指定します。 従業員は、アプリを使用して蓄積されたポイントを表示し、資格に達したら、償還可能な報酬を要求して請求します。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-incentives)
 
@@ -418,7 +420,7 @@ Incident Reporter は、組織内のインシデントの管理を最適化す�
 
 Issue Reporting アプリは、従業員や管理者が課題を提起し、管理するための権限を付与するためのものです。 これは、問題を報告するための「問題報告アプリ」と、問題を管理するための「問題管理アプリ」の 2 つのアプリで構成されています。
 
-チーム管理者は、問題管理アプリを使用して、Microsoft Teams のメッセージやアプリで作成される Planner のタスク内のチャネルを含む、アプリのエクスペリエンスを構成します。 管理者は、このアプリを使用してテンプレート フォームを作成し、ユーザーが問題を報告した場合に詳細を収集します。 たとえば、問題テンプレート フォームのレビュー、編集、削除などがあります。 また、アプリを使ってチームの問題をレビューしたり、問題の履歴を報告したり、問題の解決方法を効率的に管理することができます。
+チーム管理者は、問題管理アプリを使用して、Microsoft Teams のメッセージやアプリで作成される Planner のタスク内のチャネルを含む、アプリのエクスペリエンスを構成します。 管理者は、このアプリを使用してテンプレート フォームを作成し、ユーザーが問題を報告した場合に詳細を収集します。 たとえば、問題テンプレート フォームのレビュー、編集、削除などがあります。 このアプリは、チームの問題を確認し、問題の履歴を報告し、問題の解決を効率的に管理するためにも使用されます。
 
 従業員は、問題報告アプリを使用して、問題とその解決に必要な詳細を記録します。 このアプリは、既存の問題を修正して解決し、個人やチームの問題を大局的に俯瞰するためにも使用されています。
 
@@ -428,7 +430,7 @@ Issue Reporting アプリは、従業員や管理者が課題を提起し、管�
 
 ## <a name="new-employee-onboarding"></a>New Employee Onboarding 
 
-New Employee Onboarding は、組織が新入社員教育で、従業員に一貫した高品質のオンボーディング エクスペリエンスを提供できるようにする Microsoft Teams と [SharePoint New Employee Onboarding が統合されたソリューション](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19)です。 このアプリは、人事チームと採用マネージャーがオリエンテーションと導入プロセス全体で関連情報を提供するために使用でき、新入社員がフィードバックを共有し、紹介を提供し、オンボーディング タスクを完了するために使用できます。
+New Employee Onboarding は、組織が新入社員教育で、従業員に一貫した高品質のオンボーディング エクスペリエンスを提供できるようにする Microsoft Teams と [SharePoint New Employee Onboarding が統合されたソリューション](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19)です。 このアプリは、人事チームや採用管理者がオリエンテーションと誘導プロセスを通じて関連情報を提供し、新入社員がフィードバックを共有し、紹介を提供し、オンボーディングタスクを完了するために使用されます。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-newemployeeonboarding)
 
@@ -462,7 +464,7 @@ New Employee Onboarding は、組織が新入社員教育で、従業員に一�
 
 ## <a name="poll"></a>Poll 
 
-Poll は、チャットまたはチャネルで投票をすばやく作成して送信し、チームの意見や好みを収集できるようにする Microsoft Teams のカスタム [メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)アプリです。 このアプリは、デスクトップ、ブラウザー、iOS、Android のすべての Teams プラットフォーム クライアントでサポートされており、Microsoft365 サブスクリプションの一部として展開する準備ができています。
+Poll は、チャットまたはチャネルで投票をすばやく作成して送信し、チームの意見や好みを収集できるようにする Microsoft Teams のカスタム [メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)アプリです。 このアプリは、デスクトップ、ブラウザー、iOS、Android など、すべての Teams プラットフォーム クライアントでサポートされ、Microsoft 365 サブスクリプションの一部として展開できる状態です。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-poll-app)
 
@@ -474,7 +476,7 @@ Poll は、チャットまたはチャネルで投票をすばやく作成して
 
 ## <a name="quick-responses"></a>クイック応答
 
-クイック応答は、ユーザーのよくある質問 (FAQ) に効果的に回答するための堅牢なソリューションを提供する Microsoft Teams アプリです。 各クエリに手動で継続的に情報を繰り返す代わりに、アプリは、Teams [メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)を介してインタラクティブなユーザー エクスペリエンスのための応答のライブラリを構築します。
+クイック応答は、ユーザーのよくある質問に効果的に回答するための堅牢なソリューションを提供する Microsoft Teams アプリです。 各クエリに手動で応答し、継続的に情報を繰り返す代わりに、アプリは Teams メッセージング拡張機能を使用して対話型ユーザー エクスペリエンスの応答ライブラリ [を構築します](../messaging-extensions/what-are-messaging-extensions.md)。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-quickresponses)
 
@@ -509,7 +511,7 @@ Rapid Assist は、Microsof t[Power Platform](https://powerapps.microsoft.com/bl
 
 ## <a name="reflect"></a>Reflect 
 
-Reflect は、チーム メンバーがチーム内の同僚やグループリーダーと感情的に幸福な状態を直接共有するための安全かつ包括的なリソースを提供する Microsoft Teams のカスタム [メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)アプリです。 このアプリは、チャネル、グループ、会議、一対一チャットで利用でき、チェックイン応答は、パブリック、プライベートから送信者、または完全に匿名に設定できます。
+Reflect は、チーム メンバーが Teams 内の同僚やグループ リーダーと直接、自分の心の健康状態を共有する安全で包括的なリソースを提供するカスタム Microsoft [Teams](../messaging-extensions/what-are-messaging-extensions.md) メッセージング拡張機能アプリです。 アプリはチャネル、グループ、会議、1:1 チャットで利用できます。チェックイン応答はパブリック、プライベートから送信者、または完全に匿名に設定されます。
 
 [GitHub で入手する](https://github.com/OfficeDev/Microsoft-Teams-App-Reflect)
 
@@ -562,7 +564,7 @@ Scrums for Channels は、ユーザーが Microsoft Teams 内のチャネルで�
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-scrumsforchannels)
 
 > [!NOTE]
-> グループ チャットでスクラム ミーティングを実施するには、[Scrums for Group Chat](#scrums-for-group-chat) アプリ テンプレートを参照してください。
+> グループ チャットでスクラム会議を実施するには [、「Scrums for Group Chat app template」を](#scrums-for-group-chat) 参照してください。
 
 :::row:::
   :::column span="2":::
@@ -578,7 +580,7 @@ Scrums for Channels は、ユーザーが Microsoft Teams 内のチャネルで�
 ## <a name="scrums-for-group-chat"></a>Scrums for Group Chat
 
 > [!NOTE]
-> Scrums Status アプリ テンプレートは更新され、Scrums for Group Chat になりました。
+> Scrums Status アプリ テンプレートが更新され、グループ チャットのスクラムになります。
 
 Scrums for Group Chat は、グループ チャットのメンバーが非同期スタンドアップ ミーティングを実行し、毎日の更新情報を簡単に共有できるようにする、サポート的なスクラム アシスタントです。 これにより、グループ チャットのすべてのメンバーがスクラムに貢献し、実行中のスクラムで他のメンバーが行った更新情報を表示できます。
 
@@ -596,9 +598,8 @@ Share Now アプリは、ユーザーがチーム環境内でコンテンツを�
 
 ## <a name="sharepoint-list-search"></a>SharePoint リスト検索
 
-Microsoft Teams でのコラボレーションでは、SharePoint リストのアイテム内に含まれる情報を参照することがよくあります。 問題のアイテムへのリンクを貼り付けるだけで、全員が会話からコンテキストを切り替え、必要な情報を見つけてから、会話を続けるために Teams に戻ることができます。 会話が続くと、通常、ユーザーは参照アイテムに何度も戻って新しいコメントを確認し、アイテムに含まれる情報の記憶を更新する必要があります。 このコンテキストの切り替えは、スムーズなコラボレーションへの障壁を生み出し、亀裂を通り抜ける物事のレシピです。
-
-このような問題を軽減するために、リスト検索アプリ テンプレートをお届けします。 何百万人ものユーザーが SharePoint を使用して、組織のコアワークフローの一部を強化しています。 ただし、リストを中心に共同作業を行うのは特に面倒です。 Microsoft Teams のリスト検索アプリ テンプレートを使用すると、ユーザーは SharePoint リスト アイテムの情報をチャットの会話内に直接挿入して、チャットにリンクを挿入するだけで発生するコンテキストの切り替えを軽減できます。 情報は読みやすい自動書式カードとして挿入され、ユーザーが会話に参加し続けるのに役立ちます。
+Microsoft Teams でのコラボレーションでは、SharePoint リストのアイテム内に含まれる情報を参照することがよくあります。 問題のアイテムへのリンクを貼り付けて、すべてのユーザーが会話からコンテキストを切り替え、必要な情報を見つけて、Teams に戻って会話を続行します。 会話が続く間、ユーザーは参照アイテムに何度も切り替えて、新しいコメントを確認し、アイテムに含まれる情報の思い出を更新する必要があります。 このコンテキスト切り替えによって、スムーズなコラボレーションの障壁が生まれる。
+この問題を解決するには、リスト検索アプリ テンプレートが使用されます。 多くのユーザーは、SharePoint を使用して、組織のコア ワークフローの一部に電力を供給します。 ただし、リストを中心に共同作業することは困難です。 Microsoft Teams のリスト検索アプリ テンプレートを使用すると、ユーザーは SharePoint リスト アイテムの情報をチャットの会話内に直接挿入して、チャットにリンクを挿入するだけで発生するコンテキストの切り替えを軽減できます。 この情報は、読みやすく自動書式設定されたカードとして挿入され、ユーザーが会話に参加し続けるのに役立ちます。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-list-search-app)
 
@@ -606,7 +607,7 @@ Microsoft Teams でのコラボレーションでは、SharePoint リストの�
 
 ## <a name="staff-check-ins"></a>Staff Check-ins
 
-Staff Check-ins は、[Power Apps](/powerapps/powerapps-overview) ベースのアプリであり、ビジネス担当者と現場担当者の間の監視コミュニケーションを可能にします。 スタッフは、タイムクリティカルな情報とステータスの更新情報を、スケジュール ベースまたはアドホック ベースで、Teams から直接簡単に提供できます。 このアプリは、リアルタイムの位置情報、写真、メモのほか、リマインダー通知と自動ワークフローをサポートしています。
+スタッフ チェックインは Power [Apps](/powerapps/powerapps-overview) ベースのアプリで、ビジネス担当者と現場担当者の間の監視通信を可能にしています。 スタッフは、タイムクリティカルな情報とステータスの更新情報を、スケジュール ベースまたはアドホック ベースで、Teams から直接簡単に提供できます。 アプリは、リアルタイムの場所、写真、メモ、リマインダー通知、自動化されたワークフローをサポートしています。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
 
@@ -614,7 +615,7 @@ Staff Check-ins は、[Power Apps](/powerapps/powerapps-overview) ベースの�
 
 ## <a name="survey"></a>Survey
 
-Survey は、チャットまたはチャネルで調査を作成してデータを収集し、実用的な洞察を得ることができる Microsoft Teams のカスタム [メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)アプリです。  このアプリは、デスクトップ、ブラウザー、iOS、Android のすべての Teams プラットフォーム クライアントでサポートされており、Microsoft365 サブスクリプションの一部として展開する準備ができています。  
+Survey は、チャットまたはチャネルで調査を作成してデータを収集し、実用的な洞察を得ることができる Microsoft Teams のカスタム [メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)アプリです。 このアプリは、デスクトップ、ブラウザー、iOS、Android など、すべての Teams プラットフォーム クライアントでサポートされ、Microsoft 365 サブスクリプションの一部として展開できる状態です。  
 
 [GitHub で入手する](https://github.com/OfficeDev/Microsoft-Teams-Survey-app)
 
@@ -646,7 +647,7 @@ Survey は、チャットまたはチャネルで調査を作成してデータ�
 
 ## <a name="virtual-rounding"></a>Virtual Rounding
 
-病院および緊急治療室のプロバイダーは、1 日に数十回、多くの場合数百 **ラウンドを** 行います。 患者に対するこれらの迅速なチェックは、患者がどのように行動しているかの状態チェックを行い、患者の懸念に確実な対処を行うことを目的としています。 回診は、患者が複数のタイプのプロバイダーによって監視されていることを確認するために必要不可欠な演習ですが、訪問のたびに、各プロバイダーで新しいマスクと新しい手袋のセットを使用しなければならないため、PPE の膨大な消耗につながります。 このアプリのテンプレートを使用すると、医療従事者は、プロバイダーと患者の間で Microsoft Teams の会議を介して、仮想的に簡単な回診を行うことができます。
+病院および緊急治療室のプロバイダーは、1 **日に多くのラウンドを** 行います。 患者に対するこれらの迅速なチェックは、患者がどのように行動しているかの状態チェックを行い、患者の懸念に確実な対処を行うことを目的としています。 丸めは、患者が複数の種類のプロバイダーによって監視されるのを確実にするための重要なプラクティスですが、各訪問ごとに、各プロバイダーからの新しいマスク、および新しいグローブセットが使用されるので、PPE の巨大なドレインを表します。 このアプリのテンプレートを使用すると、医療従事者は、プロバイダーと患者の間で Microsoft Teams の会議を介して、仮想的に簡単な回診を行うことができます。
 
 Virtual Rounding のソリューションは、Microsoft Health とライフ サイエンスの[ブログ記事](https://aka.ms/teamsvirtualrounding)でも参照できます。
 
@@ -673,7 +674,7 @@ Visitor Management アプリを使用すると、組織と従業員は、Microso
 
 ## <a name="workplace-awards"></a>Workplace Awards
 
-Workplace Awards は、現代の職場での認識を促進し、従業員の感謝の文化を促進するための前向きなフレームワークを提供する Teams アプリ テンプレートです。 このアプリを使用すると、従業員の報酬と表彰 (R&R) プログラムを設定および管理できます。このプログラムでは、従業員が同僚を簡単に指名して承認し、 R&R リーダーが提出された指名を表示し、賞を授与し、受領者を発表できます。
+Workplace Awards は、現代の職場での認識を促進し、従業員の感謝の文化を促進するための前向きなフレームワークを提供する Teams アプリ テンプレートです。 このアプリを使用すると、従業員が同僚を簡単に指名および承認できる R&R プログラムと呼ばれる従業員の報酬と認識をセットアップおよび管理し、R&R リーダーは、提出された指名を表示し、賞を与え、受信者を発表できます。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-workplaceawards)
 
@@ -688,4 +689,9 @@ Workplace Awards は、現代の職場での認識を促進し、従業員の感
 :::column-end:::
 :::row-end:::
 
-見たいアプリ テンプレートのアイデアがありますか? [ある場合はご連絡ください](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u)。
+アプリ テンプレートの詳細については、「アプリ テンプレート」 [を参照してください](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u)。
+
+## <a name="see-also"></a>関連項目
+
+> [!div class="nextstepaction"]
+> [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)

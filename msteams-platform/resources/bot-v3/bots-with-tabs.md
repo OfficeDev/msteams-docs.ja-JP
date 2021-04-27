@@ -3,13 +3,14 @@ title: ボットとタブを組み合わせる
 description: タブとボットを一緒に使用する方法について説明します。
 keywords: teams ボットのタブ開発
 ms.topic: conceptual
+localization_priority: Normal
 ms.date: 03/15/2018
-ms.openlocfilehash: d8ef669f55d5edbb9795fa2d34277bd2e2dccc7c
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: b33d0bfcae4b522fc9e0c7d17b3d082979a62647
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696599"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020626"
 ---
 # <a name="combine-bots-with-tabs"></a>ボットとタブを組み合わせる
 

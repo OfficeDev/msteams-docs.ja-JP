@@ -2,14 +2,15 @@
 title: メッセージング拡張機能の SSO サポート
 author: KirtiPereira
 description: メッセージング拡張機能の SSO サポートを有効にする方法
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: a5f75ef59a3d6fa3fe190b4dba4a1e5736a87562
-ms.sourcegitcommit: 0206ed48c6a287d14aec3739540194a91766f0a3
+ms.openlocfilehash: f7dc689da3f0e3e06b8f9c68836b6449c2ae9120
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51378347"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020703"
 ---
 # <a name="single-sign-on-sso-support-for-messaging-extensions"></a>メッセージング拡張機能のシングル サインオン (SSO) のサポート
  

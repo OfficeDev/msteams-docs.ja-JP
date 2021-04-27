@@ -3,13 +3,14 @@ title: ボット メッセージの形式
 description: ボット メッセージの書式設定の詳細について説明します。
 keywords: teams シナリオ チャネルの会話ボット メッセージ
 ms.topic: reference
+localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: 4eccc8af8f2cdad153998a13502df2a1baf9ceec
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 06037bd3fb23ace11eea763747dc64d763ac3c42
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696620"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020647"
 ---
 # <a name="message-formatting-for-bots"></a>ボットのメッセージの書式設定
 

@@ -2,13 +2,14 @@
 title: モバイルのタブ
 description: モバイルで動作するタブを設計する際のガイドラインについて説明します。
 ms.topic: conceptual
+localization_priority: Normal
 keywords: teams デザイン ガイドライン リファレンス フレームワーク 個人用アプリ モバイル タブ
-ms.openlocfilehash: 72d1cf4623a9f4c1b5c993f1477f755b51d9fe64
-ms.sourcegitcommit: 0e252159f53ff9b4452e0574b759bfe73cbf6c84
+ms.openlocfilehash: 6459d6af7899859f25b28587021e26ce6440fbef
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51762026"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020409"
 ---
 # <a name="tabs-on-mobile"></a>モバイルのタブ
 

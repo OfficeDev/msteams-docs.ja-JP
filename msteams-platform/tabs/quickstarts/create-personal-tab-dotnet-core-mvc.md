@@ -1,43 +1,44 @@
 ---
-title: ASP を使用して、[個人] タブを作成します。 NET Core MVC
+title: ASP を使用して個人用タブを作成します。 NET Core MVC
 author: laujan
-description: ASP を使用してカスタムの個人用タブを作成するためのクイックスタートガイド。 NET Core MVC。
+description: ASP を使用してカスタム個人用タブを作成するクイック スタート ガイド。 NET Core MVC。
+localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 7fcb0862647dec15bc93eecf9ce637d52892825c
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 3ec6b5c054384653e30e46cbffed4a2af6662c33
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47818914"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019567"
 ---
-# <a name="create-a-custom-personal-tab-with-asp-net-core-mvc"></a>ASP を使用して、カスタムの個人用タブを作成します。 NET Core MVC
+# <a name="create-a-custom-personal-tab-with-asp-net-core-mvc"></a>ASP を使用してカスタム個人用タブを作成します。 NET Core MVC
 
-このクイックスタートでは、C# と ASP を使用して、カスタムの個人用タブを作成する手順を順を追って説明します。 Net Core MVC。 また、 [Microsoft teams 用のアプリ Studio](~/concepts/build-and-test/app-studio-overview.md) を使用して、アプリマニフェストを完成させ、タブを teams に展開します。
+このクイック スタートでは、ユーザー設定と ASP を使用してカスタム個人用タブを作成C#説明します。 Net Core MVC。 また、App [Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) を使用してアプリ マニフェストを最終決定し、タブを Teams に展開します。
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
-## <a name="get-the-source-code"></a>ソースコードを取得する
+## <a name="get-the-source-code"></a>ソース コードを取得する
 
-コマンドプロンプトを開き、タブプロジェクト用の新しいディレクトリを作成します。 開始するための簡単なプロジェクトを提供しています。 ソースコードを取得するには、zip フォルダーをダウンロードして、ファイルを抽出するか、またはサンプルリポジトリを新しいディレクトリに複製します。
+コマンド プロンプトを開き、タブ プロジェクトの新しいディレクトリを作成します。 開始する簡単なプロジェクトを提供しました。 ソース コードを取得するには、zip フォルダーをダウンロードしてファイルを抽出するか、サンプル リポジトリを新しいディレクトリに複製します。
 
 ``` bash
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
 
-ソースコードを取得したら、Visual Studio を開き、[ **プロジェクトまたはソリューションを開く**] を選択します。 Tab アプリケーションディレクトリに移動し **、[参照] を開きます**。
+ソース コードを取得したら、[プロジェクト] を開Visual Studioプロジェクトまたはソリューションを **開く] を選択します**。 タブ アプリケーション ディレクトリに移動し **、PersonalTabMVC.sln を開きます**。
 
-アプリケーションをビルドして実行するには、 **F5**キーを押すか、[**デバッグ**] メニューの [**デバッグ開始**] を選択します。 ブラウザーで以下の Url に移動し、アプリケーションが正しく読み込まれたことを確認します。
+アプリケーションをビルドして実行するには **、F5** キーを押するか、[デバッグ] メニューから [ **デバッグ** の開始] **を選択** します。 ブラウザーで、以下の URL に移動して、アプリケーションが正しく読み込まれたか確認します。
 
 * `http://localhost:44335`
 * `http://localhost:44335/privacy`
 * `http://localhost:44335/tou`
 
-## <a name="review-the-source-code"></a>ソースコードを確認する
+## <a name="review-the-source-code"></a>ソース コードを確認する
 
 ### <a name="startupcs"></a>Startup.cs
 
-このプロジェクトは ASP から作成されました。 NET Core 2.2 Web Application の空のテンプレート (セットアップ時に *[HTTPS 用に構成する* ] チェックボックスがオン)。 MVC サービスは、依存関係の挿入フレームワークのメソッドによって登録され `ConfigureServices()` ます。 また、空のテンプレートでは、既定で静的コンテンツの提供が有効になっていないため、このメソッドには静的ファイルミドルウェアが追加され `Configure()` ます。
+このプロジェクトは ASP から作成されました。 NET Core 2.2 Web Application 空のテンプレートで、セットアップ時に *[Advanced - Configure for HTTPS]* チェック ボックスがオンになっています。 MVC サービスは、依存関係の挿入フレームワークのメソッドによって登録 `ConfigureServices()` されます。 さらに、空のテンプレートでは既定では静的コンテンツの配信が有効ではないので、静的ファイル ミドルウェアがメソッドに追加 `Configure()` されます。
 
 ``` csharp
 public void ConfigureServices(IServiceCollection services)
@@ -53,21 +54,21 @@ public void Configure(IApplicationBuilder app)
 
 ### <a name="wwwroot-folder"></a>wwwroot フォルダー
 
-ASP で。 NET Core、web ルートフォルダーはアプリケーションが静的ファイルを検索する場所です。
+ASP で。 NET Core、Web ルート フォルダーは、アプリケーションが静的ファイルを検索する場所です。
 
-### <a name="appmanifest-folder"></a>Appmanifest.xml フォルダー
+### <a name="appmanifest-folder"></a>AppManifest フォルダー
 
-このフォルダーには、次の必要なアプリパッケージファイルが含まれています。
+このフォルダーには、次の必須アプリ パッケージ ファイルが含まれています。
 
-* 192 x 192 ピクセルを測定する **フルカラーアイコン** 。
-* 32 x 32 ピクセルを測定する **透明のアウトラインアイコン** 。
-* アプリの属性を指定するファイルの **manifest.js** 。
+* 192 x 192 ピクセルのフル カラー アイコン。 
+* **32** x 32 ピクセルの透明なアウトライン アイコン。
+* アプリ **manifest.js** を指定するファイルのプロパティです。
 
-これらのファイルは、タブを Teams にアップロードする際に使用するために、アプリパッケージに圧縮する必要があります。 Microsoft Teams は、 `contentUrl` マニフェストで指定されたを読み込み、それを IFrame に埋め込んで、それをタブに表示します。
+これらのファイルは、Teams にタブをアップロードする場合に使用するアプリ パッケージに圧縮する必要があります。 Microsoft Teams は、指定したマニフェストを読み込み、IFrame に埋め込み、それをタブ `contentUrl` にレンダリングします。
 
 ### <a name="csproj"></a>.csproj
 
-Visual Studio の [ソリューションエクスプローラー] ウィンドウで、プロジェクトを右クリックし、[ **プロジェクトファイルの編集**] を選択します。 ファイルの末尾に、アプリケーションのビルド時に zip フォルダーを作成して更新するコードが表示されます。
+[ソリューション エクスプローラー Visual Studioでプロジェクトを右クリックし、[プロジェクト ファイルの編集] **を選択します**。 ファイルの下部には、アプリケーションのビルド時に zip フォルダーを作成および更新するコードが表示されます。
 
 ``` xml
 <PropertyGroup>
@@ -89,42 +90,42 @@ Visual Studio の [ソリューションエクスプローラー] ウィンド�
 
 ### <a name="models"></a>モデル
 
-*PersonalTab.cs*は、ユーザーが [*パーソナル] タブ*ビューでボタンを選択したときに、そのユーザーを*指定すると*、そのメッセージオブジェクトとメソッドを提供します。
+*PersonalTab.cs* は、ユーザーが PersonalTab ビューでボタンを選択すると *、PersonalTabController* から呼び出される Message オブジェクトとメソッド *を示* します。
 
 ### <a name="views"></a>ビュー
 
-#### <a name="home"></a>Home
+#### <a name="home"></a>ホーム
 
-.ASP. NET Core は、 *Index* というファイルをサイトの既定のホームページとして扱います。 ブラウザーの URL がサイトのルートを指している場合は、アプリケーションのホームページとして、 *cshtml* が表示されます。
+ASP。 NET Core は *、Index* と呼ばれるファイルをサイトの既定/ホーム ページとして扱います。 ブラウザーの URL がサイトのルートをポイントすると *、Index.cshtml* がアプリケーションのホーム ページとして表示されます。
 
 #### <a name="shared"></a>共有
 
-部分的なビューのマークアップ *_Layout* には、アプリケーションの全体的なページ構造と共有のビジュアル要素が含まれています。 Teams ライブラリを参照することもできます。
+部分ビュー マークアップ *_Layout.cshtml* には、アプリケーションの全体的なページ構造と共有ビジュアル要素が含まれます。 また、Teams ライブラリも参照します。
 
 ### <a name="controllers"></a>コントローラー
 
-コントローラーは、ViewBag プロパティを使用して、ビューに値を動的に転送します。
+コントローラーは ViewBag プロパティを使用して、値を Views に動的に転送します。
 
 [!INCLUDE [dotnet-update-personal-app](~/includes/tabs/dotnet-update-personal-app.md)]
 
 [!INCLUDE [dotnet-ngrok-intro](~/includes/tabs/dotnet-ngrok-intro.md)]
 
-* プロジェクトディレクトリのルートでコマンドプロンプトを開き、次のコマンドを実行します。
+* プロジェクト ディレクトリのルートでコマンド プロンプトを開き、次のコマンドを実行します。
 
 ``` bash
 ngrok http https://localhost:44345 -host-header="localhost:44345"
 ```
 
-* Ngrok は、インターネットからの要求をリッスンし、ポート44325上で実行されている場合にそれらをアプリケーションにルーティングします。  `https://y8rPrT2b.ngrok.io/` *Y8rPrT2b*は、ngrok alpha の数字の HTTPS URL に置き換えられる場所に似ているはずです。
+* Ngrok はインターネットからの要求をリッスンし、ポート 44325 で実行されているアプリケーションにルーティングします。  `https://y8rPrT2b.ngrok.io/` *y8rPrT2b* が ngrok の英数字 HTTPS URL に置き換えられる場所に似ている必要があります。
 
-* コマンドプロンプトは ngrok を実行したままにしておき、後で必要になるように URL を書き留めておきます。
+* ngrok を実行してコマンド プロンプトを保持し、URL をメモしてください。後で必要になります。
 
-* ブラウザーを開き、コマンドプロンプトウィンドウで提供された ngrok HTTPS URL を使用してコンテンツページにアクセスすることにより、 *ngrok* が実行されて正常に動作していることを確認します。
+* ブラウザーを開き、コマンド プロンプト ウィンドウで提供された ngrok HTTPS URL を介してコンテンツ ページに移動して *、ngrok* が正常に実行され、正常に動作されていることを確認します。
 
-> [! ヒントこのクイックスタートを完了するには、Visual Studio と ngrok の両方のアプリケーションを実行している必要があります。 Visual Studio でのアプリケーションの実行を停止する必要がある場合は、 **ngrok の実行を継続**してください。 Visual Studio で再起動すると、アプリケーションの要求のルーティングが続行され、再開されます。 Ngrok サービスを再起動する必要がある場合は、新しい URL を返し、その URL を使用するすべての場所を更新する必要があります。
+> [! ヒント] このクイック スタートを完了するには、アプリケーションVisual Studio ngrok の両方を実行する必要があります。 アプリケーションの実行を停止する必要がある場合は、Visual Studio **ngrok を実行し続ける必要があります**。 引き続きリッスンし、アプリケーションの要求がアプリケーションで再起動されると、アプリケーションの要求のルーティングが再開Visual Studio。 ngrok サービスを再起動する必要がある場合は、新しい URL が返され、その URL を使用する場所を更新する必要があります。
 
 ### <a name="run-your-application"></a>アプリケーションを実行する
 
-* Visual Studio で**F5**キーを押すか、アプリケーションの**デバッグ**メニューから [**デバッグ開始**] を選択します。
+* [Visual Studio **F5 キーを押** するか **、アプリケーションの** [デバッグ] メニューから [デバッグの開始] **を選択** します。
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]

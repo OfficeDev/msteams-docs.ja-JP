@@ -1,14 +1,15 @@
 ---
 title: カードの紹介
 description: カードと、ボット、コネクタ、メッセージング拡張機能でのカードの使い方について説明します。
+localization_priority: Normal
 ms.topic: conceptual
 keywords: コネクタ ボット カード メッセージング
-ms.openlocfilehash: c2fe0aea142a96643e33e16acc08bcfd8c33e92e
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: acf5dc95b742a433c092be9e293d589b5919bb4d
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696459"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020269"
 ---
 # <a name="cards"></a>カード
 

@@ -2,14 +2,15 @@
 title: タスク モジュールの送信アクションに応答する
 author: clearab
 description: メッセージング拡張機能アクション コマンドからタスク モジュール送信アクションに応答する方法について説明します。
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: af2bbbbe6ffff224f5b74c9b1472ba3cb21effc0
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 3ed682eadde410a545f73768943a51ef95123e49
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696218"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019833"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>タスク モジュールの送信アクションに応答する
 

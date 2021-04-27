@@ -2,13 +2,14 @@
 title: Microsoft 365 テナントを準備する
 description: Microsoft 365 の Teams の概要
 ms.topic: how-to
+localization_priority: Normal
 keywords: Microsoft 365 テナントTeams のアップロードの構成
-ms.openlocfilehash: 4fbe1dcc7ba202aff0b46c7fc50d9aebc0278c38
-ms.sourcegitcommit: 7b4f383b506d4bc68a1b5641d6e0f404edbfbc6d
+ms.openlocfilehash: 45d6dfb57fd2faa5bb303aac1dff86be142d0dc2
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "51946467"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019945"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Microsoft 365 テナントを準備する
 

@@ -2,14 +2,15 @@
 title: Webhook とコネクタとは
 author: clearab
 description: Webhook とコネクタによって Web サービスがどのように Teams クライアントに接続されるかについて説明します。
+localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 6a2453cb7d0c2d55a8df938849313f47702e5585
-ms.sourcegitcommit: 3fc7ad33e2693f07170c3cb1a0d396261fc5c619
-ms.translationtype: HT
+ms.openlocfilehash: 6ab1abc33ca7b0280892646bed52d9ee77a8c865
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "48796373"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52018363"
 ---
 # <a name="what-are-webhooks-and-connectors"></a>Webhook とコネクタとは
 

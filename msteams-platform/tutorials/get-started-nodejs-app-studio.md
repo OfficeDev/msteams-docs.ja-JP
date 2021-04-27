@@ -3,13 +3,14 @@ title: チュートリアル - アプリを使用して最初のアプリをNode
 description: Microsoft Teams アプリの作成を開始する方法については、Node.js。
 keywords: nodejs App Studio node.jsの開始方法
 ms.topic: tutorial
+localization_priority: Normal
 ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
-ms.openlocfilehash: 61be1056a07952c6cf166dbe183fa257ceaf7227
-ms.sourcegitcommit: 6ff8d1244ac386641ebf9401804b8df3854b02dc
+ms.openlocfilehash: ae1b8b2b5b671488ff6f86a3a3295f448ebb6006
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "50294762"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020962"
 ---
 # <a name="create-your-first-microsoft-teams-app-using-nodejs"></a>ユーザー設定を使用して最初の Microsoft Teams アプリをNode.js
 
@@ -135,7 +136,7 @@ ngrok http 3333 -host-header=localhost:3333
 > [!NOTE]
 > 上記のビルドと実行手順で別の [](#build-and-run-the-sample)ポートを使用している場合は、同じポート番号を使用して *ngrok トンネルをセットアップ* してください。
 > [!TIP]
-> 別のターミナル ウィンドウで *ngrok* を実行して、後で停止、再構築、再実行が必要になる可能性があるノード アプリを妨げることなく実行し続けるのが良い考えです。 *ngrok セッションは*、このウィンドウで有用なデバッグ情報を返します。
+> 別のターミナル ウィンドウで *ngrok* を実行して、後で停止、再構築、再実行が必要になるノード アプリを妨げることなく実行し続けるのをお考えください。 *ngrok セッションは*、このウィンドウで有用なデバッグ情報を返します。
 
 永続的な名前を許可する *有料バージョンの ngrok* があります。 無料版を使用する場合、アプリは開発マシンの現在のセッション中にのみ利用できます。 コンピューターがシャットダウンまたはスリープ状態になった場合、サービスは使用できなくなりました。 他のユーザーがテスト用にアプリを共有する場合は、このことを覚えておいてください。 サービスを再起動する必要がある場合は、新しいアドレスが返され、そのアドレスを使用する場所を更新する必要があります。
 

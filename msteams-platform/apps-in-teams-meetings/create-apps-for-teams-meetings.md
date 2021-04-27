@@ -4,13 +4,14 @@ author: laujan
 description: チーム会議用のアプリを作成する
 ms.topic: conceptual
 ms.author: lajanuar
+localization_priority: Normal
 keywords: teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: c9410e142c6831fa0aa1b1f5307d92d67739be0e
-ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
+ms.openlocfilehash: c733f89208e82c032f581109f9c3887f20c104b9
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "51885074"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52018377"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Teams 会議用のアプリを作成する
 

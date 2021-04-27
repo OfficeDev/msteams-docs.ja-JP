@@ -1,22 +1,25 @@
 ---
-title: SharePoint の Microsoft Teams タブを SPFx Web パーツとして追加する
+title: '[Teams] タブを SharePoint に追加する'
 author: laujan
-description: 既存の Teams タブを SharePoint Framework Web パーツとして SharePoint に展開する方法。
-keywords: teams タブの sharepoint フレームワーク開発
+description: SharePoint Framework Web パーツとして既存の Teams タブを SharePoint に展開する方法。
+keywords: teams タブ sharepoint framework 開発
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 2e5d1b01aa5f7566e25c7720d6a0539386226576
-ms.sourcegitcommit: 6caf503de5544fb8b9c8c6bef8eff4ff5a46068c
+ms.openlocfilehash: 08a4aef329d0e5e1d063f05959f0a589581c9c03
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "50270792"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020331"
 ---
-# <a name="adding-a-microsoft-teams-tab-in-sharepoint-as-an-spfx-web-part"></a>SharePoint の Microsoft Teams タブを SPFx Web パーツとして追加する
+# <a name="add-teams-tab-to-sharepoint"></a>[Teams] タブを SharePoint に追加する 
+
+SharePoint の [Microsoft Teams] タブを SPFx Web パーツとして追加すると、Microsoft Teams と SharePoint の豊富な統合エクスペリエンスを得られる可能性があります。 このドキュメントでは、Microsoft Teams サンプル アプリからタブを取り出し、SharePoint で使用する方法について説明します。 
 
 ## <a name="rich-integration-between-teams-and-sharepoint"></a>Teams と SharePoint の豊富な統合
 
-Teams と SharePoint Framework v の 11 月リリース 1.7、開発者には次の 2 つの強力な機能があります。
+Teams と SharePoint Framework v.1.7 の 11 月リリースでは、開発者には次の 2 つの強力な機能があります。
 
 <ul  class="panelContent cardsC">
 <li>
@@ -31,7 +34,7 @@ Teams と SharePoint Framework v の 11 月リリース 1.7、開発者には次
                     </div>
                     <div class="cardText">
                         <h3>SharePoint の Teams タブ</h3>
-                        <p>Teams アプリを SharePoint に取り込み、SharePoint で豊富なアプリ エクスペリエンスを作成します (この記事)。</p>
+                        <p>Teams アプリを Sharepoint に取り込み、SharePoint で豊富なアプリ エクスペリエンスを作成します (この記事)。</p>
                     </div>
                 </div>
             </div>
@@ -50,7 +53,7 @@ Teams と SharePoint Framework v の 11 月リリース 1.7、開発者には次
                     </div>
                     <div class="cardText">
                         <h3>Teams の SharePoint Framework</h3>
-                        <p>SharePoint Web パーツを Teams に持ち込み、SharePoint がホスティングを管理します。</p>
+                        <p>SharePoint Web パーツを Teams に持ち込み、SharePoint でホスティングを管理できます。</p>
                     </div>
                 </div>
             </div>
@@ -61,67 +64,90 @@ Teams と SharePoint Framework v の 11 月リリース 1.7、開発者には次
 
 ### <a name="teams-tabs-in-sharepoint"></a>SharePoint の Teams タブ
 
-SharePoint Framework v.1.7 では、開発者が Teams タブを使用して SharePoint でホストする機能をサポートしています。 SharePoint でホストされているタブも同様の "ページ全体" エクスペリエンスを得て、SharePoint サイトのコンテキストと使い慣れたものにしながら Teams タブのすべての機能を公開します。
+SharePoint Framework v.1.7 では、SharePoint で Teams タブをホストできます。 SharePoint でホストされているタブは、同様のフル ページ エクスペリエンスを取得し、SharePoint サイトのコンテキストとなじみを維持しながら Teams タブのすべての機能を公開します。
 
 ### <a name="sharepoint-framework-in-teams"></a>Teams の SharePoint Framework
 
-SharePoint Framework を使用して Microsoft Teams タブを実装することもできます。 SharePoint 開発者の場合、SharePoint Framework Web パーツは Azure などの外部サービスを必要とせずに SharePoint 内でホストされるので、Teams タブの開発プロセスが大幅に簡素化されます。 [Teams での SharePoint Framework の使用の詳細について説明します。](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+SharePoint Framework を使用して Microsoft Teams タブを実装することもできます。 SharePoint Framework Web パーツは、Azure などの外部サービスを必要とせずに SharePoint 内でホストされます。 SharePoint 開発者の場合、Teams タブの開発プロセスが大幅に簡略化されます。 Teams の SharePoint Framework の詳細については、「Teams で SharePoint Framework を使用する方法 [」を参照してください。](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
 
-## <a name="introduction"></a>はじめに
+## <a name="introduction"></a>概要
 
-次の手順では、Microsoft Teams サンプル アプリからタブを取り、SharePoint で使用する方法について説明します。 必要な統合作業に集中するために、Azure で既にホストされているタブを使用します。
+ここで使用するタブは、必要な統合作業に焦点を当て、Azure で既にホストされています。
 
-使用しているサンプル アプリは、Talent Management アプリケーションです。 チーム内のオープンポジションの候補の採用プロセスを管理します。 (アプリ自体は見栄えは良く見えますが、実際には何もしません。 実際の人材管理アプリケーションを作成するのではなく、Teams アプリの構築と Teams への読み込みに重点を置きたいと思っています。
+使用されているサンプル アプリは、Talent Management アプリケーションです。 チーム内のオープンポジションの候補者の採用プロセスを管理します。 サンプルの Teams アプリをビルドし、Teams に読み込む。 実際の人材管理アプリケーションを作成しない。
 
 ### <a name="benefits-of-this-approach"></a>このアプローチの利点
 
-- 既存の Teams タブを使用して SharePoint ユーザーにアクセスする
-- アプリ マニフェストを SharePoint アプリ カタログに直接アップロードします。 [Teams アプリケーション パッケージ](~/concepts/build-and-test/apps-package.md) が SharePoint でサポートされる
-- エンド ユーザーが他の SharePoint Web パーツと同様にページ上のタブを構成する
-- タブは、Teams [内で](~/tabs/how-to/access-teams-context.md) 実行する場合と同じ方法でコンテキストにアクセスできます。
+* 既存の Teams タブを使用して SharePoint ユーザーにリーチします。
+* アプリ マニフェストを SharePoint アプリ カタログに直接アップロードします。 [Teams アプリケーション パッケージ](~/concepts/build-and-test/apps-package.md) は SharePoint でサポートされています。
+* ユーザーは、他の SharePoint Web パーツと同じ方法でページのタブを構成します。
+* タブは、Teams 内で [実行](~/tabs/how-to/access-teams-context.md) する場合と同じように、そのコンテキストにアクセスできます。
 
-## <a name="step-1-testing-the-sample-app"></a>手順 1: サンプル アプリをテストする
+**SharePoint に Teams タブを追加するには**
 
-サンプル アプリ マニフェストは、ここからダウンロード [**してください**](https://github.com/MicrosoftDocs/msteams-docs/raw/master/msteams-platform/assets/downloads/TalentMgmt-Azure.zip)。
+Teams タブを SharePoint に追加するには、次の手順を実行します。
 
-Microsoft Teams で、左下の [ストア] アイコンをクリックし、左下の [カスタム アプリのアップロード] をクリックします。 アップロードするファイルは[ダウンロード] フォルダーにあります。このメソッドは、TalentMgmt-Azure.zip。 すべて問題ない場合は、人材管理アプリのインストール/同意画面が表示されます。 インストールするチームを選択し、[インストール] ボタンをクリックします。 これで、アプリを自由に試す必要があります。
+## <a name="1-test-the-sample-app"></a>1. サンプル アプリをテストする
 
-## <a name="step-2-using-the-teams-tab-in-sharepoint"></a>手順 2: SharePoint の [Teams] タブを使用する
+サンプル アプリ [マニフェストをダウンロードします](https://github.com/MicrosoftDocs/msteams-docs/raw/master/msteams-platform/assets/downloads/TalentMgmt-Azure.zip)。
 
-Teams アプリ パッケージをアップロードし、SharePoint アプリ カタログに展開するには、次に例 `https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` を示します `https://contoso.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` 。
+1. Microsoft Teams を開きます。
+1. サイド タブ **の左下にある** [アプリストア] アイコンを選択します。
+1. 左下 **の [カスタム アプリのアップロード** ] を選択します。 次の図は、対応する画面を表示します。  
 
-メッセージが表示されたら、"このソリューションを組織内のすべてのサイトで使用可能にする" を有効にします。
+    ![カスタム アプリをアップロードする](~/assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png)
 
-![SharePoint ビューのタブ](~/assets/images/tabs/tabs-in-sharepoint/image065.png)
+1. アップロードするファイルは、[ダウンロード] フォルダー **にあります** 。 このメソッドは、TalentMgmt-Azure.zip。 次の図は、対応する画面を表示します。
+ 
+    ![Azure の TalentMgmt](~/assets/images/tabs/tabs-in-sharepoint/talentmgmt-azure.png)
 
-サイトで、右上の歯車ボタンをクリックし、[ページの追加] をクリックして、新しいページを作成します。
+1. タレント管理アプリのインストール画面または同意画面が表示されます。 インストールするチームを選択します。 
+1. [インストール **] を** 選択し、アプリの実験を開始します。
 
-![Sharepoint ビュー](~/assets/images/tabs/tabs-in-sharepoint/image066.png)
+## <a name="2-use-teams-tab-in-sharepoint"></a>2. SharePoint の [Teams] タブを使用する
 
-SharePoint ページの作成エクスペリエンスが表示されます。 ページに「自分の Teams タブ」という名前を付け、
+1. アクセスして、Teams アプリ パッケージを SharePoint アプリ カタログにアップロードして展開します `https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` 。 たとえば、`https://contoso.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` などです。
 
-[+] ボタンを押して Web パーツ ツールボックスを開き、Teams タブ ("Contoso HR" という名前) を選択します。 Web パーツはアルファベット順に並べ替えされます。リストが長い場合は、検索バーを使用して検索できます。 これにより、Teams タブを含む Web パーツがキャンバスに作成されます。
+1. メッセージが表示されたら、[ **このソリューションを組織内のすべてのサイトで使用できる] を有効にします**。
+次の図は、対応する画面を表示します。
 
-![タブ ビュー](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
+   ![Sharepoint ビューのタブ](~/assets/images/tabs/tabs-in-sharepoint/image065.png)
 
-編集が完了したら、[発行] ボタンを押します。
+1. サイトで、右上の歯車ボタンを選択して新しいページを作成し、[ページの追加 **] を選択します**。
+次の図は、対応する画面を表示します。
 
-左側のナビゲーション バーでページをクイック参照するには、[ナビゲーションにページを追加] をクリックします。
+   ![Sharepoint ビュー](~/assets/images/tabs/tabs-in-sharepoint/image066.png)
 
-![Sharepoint イメージのタブ](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
+1. SharePoint ページの作成エクスペリエンスを確認できます。 ページの名前を **[My Teams] タブに設定します**。
 
-## <a name="step-3-explore-app-pages-in-sharepoint"></a>手順 3: SharePoint のアプリ ページを確認する
+1. ボタンを押して Web パーツ ツールボックスを開 `+` き、Contoso HR という名前の Teams タブ **を選択します**。 Web パーツはアルファベット順に並べ替えされます。 長いリストの場合は、検索バーを使用して検索できます。 これにより、Teams タブを含む Web パーツがキャンバスに作成されます。次の図は、タブ ビューを表示します。
 
-ページが公開された後は、Teams アプリを SharePoint 内のより完全な [エクスペリエンスに変える方法について説明します](/sharepoint/dev/spfx/web-parts/single-part-app-pages)。 これにより、現在のページがアプリ ページに変換されます。[Teams] タブでは、通常の SharePoint ページ レイアウトとページ全体のエクスペリエンスが表示されます。
+   ![タブ ビュー](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
 
-![Sharepoint のタブの画像](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
+1. 編集が **完了したら** 、[発行] ボタンを押します。
+
+1. [ **ナビゲーションにページを追加する** ] を選択して、左側のナビゲーション バーでページを簡単に参照できます。 次の図は、Sharepoint のタブを表示します。 
+
+   ![Sharepoint イメージのタブ](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
+
+## <a name="3-explore-app-pages-in-sharepoint"></a>3. SharePoint でアプリ ページを確認する
+
+ページが公開された後、Teams アプリを SharePoint 内のより完全 [なエクスペリエンスに変える方法について説明します](/sharepoint/dev/spfx/web-parts/single-part-app-pages)。 これにより、現在のページがアプリ ページに変換されます。通常の SharePoint ページ レイアウトと Teams タブの完全なページ エクスペリエンスが表示されます。 
+
+次の図は、Sharepoint での Teams アプリの完全なエクスペリエンスを ![ 表示します。](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
 
 ## <a name="code-sample"></a>コード サンプル
-| **サンプルの名前** | **説明** | **SPFx** |
+| **サンプル名** | **説明** | **SPFx** |
 |-----------------|-----------------|----------|
-| SPFx Web パーツ | タブ、チャネル、およびグループ用の SPFx Web パーツのサンプル。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group/spfx)
+| SPFx Web パーツ | SPFx Web パーツのタブ、チャネル、およびグループのサンプル。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group/spfx)
 
-## <a name="more-information"></a>詳細情報
+## <a name="see-also"></a>関連項目
 
-- [SharePoint Framework を使用した Microsoft Teams タブの作成: チュートリアル](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
-- [SharePoint Online での Single Part App Pages の使用](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
+> [!div class="nextstepaction"]
+> [SharePoint Framework を使用した Microsoft Teams タブの作成: チュートリアル](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+
+> [!div class="nextstepaction"]
+> [SharePoint Online での Single Part App Pages の使用](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
+
+> [!div class="nextstepaction"]
+> [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)

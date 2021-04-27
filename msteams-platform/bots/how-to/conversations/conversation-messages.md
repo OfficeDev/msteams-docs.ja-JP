@@ -3,13 +3,14 @@ title: ボットの会話内のメッセージ
 description: Microsoft Teams ボットと会話する方法について説明します。
 ms.topic: overview
 ms.author: anclear
+localization_priority: Normal
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: e3239d8ae7a9950e7b66d552fee2c739ca61d76b
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 5944cc299a8ad4bebdaf034d803919a54868e41f
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697238"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020927"
 ---
 # <a name="messages-in-bot-conversations"></a>ボットの会話内のメッセージ
 
@@ -249,7 +250,7 @@ async def on_members_added_activity(
 
 ## <a name="message-content"></a>メッセージの内容
 
-| フォーマット    | ユーザーからボットへ | ボットからユーザーへ | 備考                                                                                   |
+| フォーマット    | ユーザーからボットへ | ボットからユーザーへ | メモ                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | リッチ テキスト | ✔                | ✔                | ボットはリッチ テキスト、画像、カードを送信できます。 ユーザーは、リッチ テキストと画像をボットに送信できます。                                                                                        |
 | ピクチャ  | ✔                | ✔                | 最大 1024 × 1024 および 1 MB (PNG、JPEG、または GIF 形式)。 アニメーション GIF はサポートされていません。  |

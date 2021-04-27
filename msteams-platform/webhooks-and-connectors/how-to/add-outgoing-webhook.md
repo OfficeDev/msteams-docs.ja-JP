@@ -3,13 +3,14 @@ title: 送信 Webhook を使用して Microsoft Teams にカスタム ボット�
 description: 送信 Webhook を追加する方法について説明します。
 ms.topic: conceptual
 ms.author: lajanuar
+localization_priority: Normal
 keywords: teams タブ送信 webhook アクション可能メッセージ verify webhook
-ms.openlocfilehash: b7c587816a32e650009cdbfcd4dcf9028fb87392
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: cfa8bd550eaf1f198b83cdcc1ee699c75ac1d34d
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449543"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020212"
 ---
 # <a name="add-custom-bots-to-teams-with-outgoing-webhooks"></a>送信 Webhook を使用して Teams にカスタム ボットを追加する
 

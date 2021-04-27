@@ -1,20 +1,21 @@
 ---
 title: ボットにカード アクションを追加する
 description: Microsoft Teams でのカードアクションとボットでのカードアクションの使い方について説明します。
+localization_priority: Normal
 ms.topic: conceptual
 keywords: teams ボット カードアクション
-ms.openlocfilehash: f02e195f619fdfa2ebbc4b2ef00669a1cb5b38f6
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 84f47540cee99738204007fd107743f922552e60
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696025"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019539"
 ---
 # <a name="card-actions"></a>カードアクション
 
 Teams のボットとメッセージング拡張機能で使用されるカードは、次のアクティビティ ( ) の種類 [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) をサポートします。 これらのアクションは、コネクタ `potentialActions` と使用Office 365 コネクタ カードの場合とは異なります。
 
-| 種類 | Action |
+| 種類 | 操作 |
 | --- | --- |
 | `openUrl` | 既定のブラウザーで URL を開きます。 |
 | `messageBack` | ボットにメッセージとペイロードを送信し (ボタンをクリックしたユーザーまたはカードをタップしたユーザーから) チャット ストリームに別のメッセージを送信します。 |

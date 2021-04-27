@@ -1,13 +1,14 @@
 ---
 title: アプリをパッケージ化する
 description: テスト、アップロード、およびストア発行のために Microsoft Teams アプリをパッケージ化する方法について説明します。
+localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 222ea5459b3496c00b1186f15a68c3288ce419f7
-ms.sourcegitcommit: 35bc2a31b92f3f7c6524373108f095a870d9ad09
+ms.openlocfilehash: c8341f3d83b5e6610e44276d6732affa1d1c1e91
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "51922511"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020141"
 ---
 # <a name="create-an-app-package-for-your-microsoft-teams-app"></a>Microsoft Teams アプリのアプリ パッケージを作成する
 
@@ -42,7 +43,7 @@ Teams アプリ パッケージは、次のものを含む .zip ファイルで�
 
 Teams では、アイコンが自動的にトリミングされ、複数のシナリオで角が丸く、ボットのシナリオでは六角形が表示されます。 シンボルの周囲に 48 ピクセルのパディングを含めるので、詳細を失わずにこれらのトリミングを行います。
 
-:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Teams カラー アイコンの設計ガイダンス。" border="false":::
+:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Teams の色のアイコンとデザインのガイダンス。" border="false":::
 
 ### <a name="outline-icon"></a>アウトライン アイコン
 

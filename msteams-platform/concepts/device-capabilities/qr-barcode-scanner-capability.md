@@ -1,15 +1,17 @@
 ---
 title: QR コードまたはバーコード スキャナー機能を統合する
+author: Rajeshwari-v
 description: Teams JavaScript クライアント SDK を使用して QR またはバーコード スキャナー機能を活用する方法
 keywords: カメラ メディア QR コード qrcode バーコード バーコード スキャナー スキャン機能ネイティブ デバイスのアクセス許可
+localization_priority: Normal
 ms.topic: conceptual
-ms.author: lajanuar
-ms.openlocfilehash: 956d56c9d52785820f95ca2df323d61dcacc586b
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.author: surbhigupta
+ms.openlocfilehash: 579137f31dd929a6105dd7bcc2d46d84c145ef50
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696291"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020738"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>QR コードまたはバーコード スキャナー機能を統合する 
 
@@ -75,7 +77,7 @@ API は、ユーザーがさまざまな種類のバーコードをスキャン�
 
 Teams アプリでこれらのエラーを適切に処理する必要があります。 次の表に、エラー コードとエラーが生成される条件を示します。 
 
-|エラー コード |  エラー名     | Condition|
+|エラー コード |  エラー名     | 条件|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API は現在のプラットフォームではサポートされていません。|
 | **500** | INTERNAL_ERROR | 必要な操作の実行中に内部エラーが発生します。|

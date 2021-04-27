@@ -1,15 +1,17 @@
 ---
 title: メディア機能を統合する
+author: Rajeshwari-v
 description: Teams JavaScript クライアント SDK を使用してメディア機能を有効にする方法
 keywords: カメラ イメージ マイク機能ネイティブ デバイスのアクセス許可メディア
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 375d68c7c712b7a8d2f7114b47aae61c889b4197
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: 9e4ccf2dfd2c8743621ea44f340ca7a41e302adc
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449582"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020745"
 ---
 # <a name="integrate-media-capabilities"></a>メディア機能を統合する 
 
@@ -79,7 +81,7 @@ Teams アプリのエラーを処理するには [、API](#error-handling) 応�
 Teams アプリでこれらのエラーを適切に処理する必要があります。 次の表に、エラー コードとエラーが生成される条件を示します。 
 
 
-|エラー コード |  エラー名     | Condition|
+|エラー コード |  エラー名     | 条件|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API は現在のプラットフォームではサポートされていません。|
 | **404** | FILE_NOT_FOUND | 指定されたファイルが指定された場所に見つかりません。|

@@ -2,13 +2,14 @@
 title: アプリをテストおよびデバッグするためのセットアップの選択
 description: Microsoft Teams アプリのテストとデバッグのオプションについて説明します。
 keywords: チームがデバッグ アプリを実行する
+localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: fde8a5907e0815ff798a3acc316cba8336ab8704
-ms.sourcegitcommit: 5b3ba227c2e5e6f7a2c629961993f168da6a504d
+ms.openlocfilehash: 8b80f988ed44ed04492356366362b0221717b292
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "51634735"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019952"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Microsoft Teams アプリをテストおよびデバッグするセットアップを選択する
 
@@ -69,7 +70,7 @@ Microsoft Bot Framework に登録されているボットの場合は、ボッ�
 
 ## <a name="load-and-run-your-experience"></a>エクスペリエンスの読み込みと実行
 
-Microsoft Teams 内でエクスペリエンスを読み込み、実行するには、パッケージを作成して Teams にアップロードする必要があります。 詳細については、以下を参照してください。
+Microsoft Teams 内でエクスペリエンスを読み込み、実行するには、パッケージを作成して Teams にアップロードする必要があります。 詳しくは、以下を参照してください。
 
 * [Microsoft Teams アプリのパッケージを作成する](~/concepts/build-and-test/apps-package.md)
 * [Microsoft Teams でアプリをアップロードする](~/concepts/deploy-and-publish/apps-upload.md)

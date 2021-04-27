@@ -3,13 +3,14 @@ title: ボットを介してファイルを送受信する
 description: ボットを介してファイルを送受信する方法について説明します。
 keywords: teams ボット ファイルが受信を送信する
 ms.date: 05/20/2019
+localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: bc2cbaeedcc770f82e3fc1f6cfbbf1beda3948fd
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 7d5ea3434b10d60e20574ca6d1935943c687f4d7
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51996045"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020941"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>ボットを介してファイルを送受信する
 

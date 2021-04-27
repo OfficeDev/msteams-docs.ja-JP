@@ -3,14 +3,15 @@ title: はじめに - 最初のアプリを構築して実行する
 author: heath-hamilton
 description: "\"こんにちは!\" を表示する Microsoft Teams アプリを迅速に作成します。 Microsoft Teams のツールキットを使用したメッセージ。"
 ms.author: lajanuar
+localization_priority: Normal
 ms.date: 11/03/2020
 ms.topic: quickstart
-ms.openlocfilehash: 46a92f54cdbf68e28510c0bd4cc0b7018cfaae3c
-ms.sourcegitcommit: 55a4246e62d69d631a63bdd33de34f1b62cc0132
-ms.translationtype: HT
+ms.openlocfilehash: 1b34c3f3121e834abc8a8a92a8a0ac9a049c9e07
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "50093951"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020885"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app"></a>最初の Microsoft Teams アプリを構築して実行する
 

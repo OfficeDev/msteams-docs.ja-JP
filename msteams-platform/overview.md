@@ -3,14 +3,15 @@ title: Microsoft Teams プラットフォーム用のアプリをビルドする
 author: heath-hamilton
 description: 開発者がカスタム アプリを使用して Microsoft Teams の機能を拡張する方法の概要を確認します。
 ms.topic: overview
+localization_priority: Normal
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: b4f5d5fa3014d2acc5e4178a89c84ddb5a250132
-ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
+ms.openlocfilehash: 5009427fc3cdde11de45a55cb0f6216ae36b0d66
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596211"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019812"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Microsoft Teams のアプリを作成する
 

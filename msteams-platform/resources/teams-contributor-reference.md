@@ -1,72 +1,73 @@
 ---
-title: Microsoft Teams ドキュメントへの投稿
-description: Teams ドキュメントを作成して発行するための手順
+title: Microsoft Teams のドキュメントへの貢献
+description: Teams ドキュメントの作成と発行の手順
 author: laujan
 ms.author: lajanuar
+localization_priority: Normal
 ms.topic: contributor-guide
-ms.openlocfilehash: 18aae61a674cf9c4c94831f22149cd4b9e7ebeda
-ms.sourcegitcommit: 43e1be9d9e3651ce73a8d2139e44d75550a0ca60
+ms.openlocfilehash: a6742b8b994cc3752df923db75a3d7d77cbebd83
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "49366897"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019672"
 ---
-# <a name="contributing-to-microsoft-teams-documentation"></a>Microsoft Teams ドキュメントへの投稿
+# <a name="contributing-to-microsoft-teams-documentation"></a>Microsoft Teams のドキュメントへの貢献
 
-[Teams ドキュメント](/microsoftteams/platform/overview) は、 [Microsoft Docs](https://docs.microsoft.com/) 技術ドキュメントライブラリに含まれています。 コンテンツは、docsets と呼ばれるグループに整理され、それぞれが1つのエンティティとして管理する関連ドキュメントのグループを表します。 同じ docset の記事には、 *<span></span> microsoft.com* の後に同じ URL パス拡張があります。  たとえば、  `/docs.microsoft.com/microsoftteams/...`   は Teams docset ファイルパスの先頭です。 Teams の記事は  [MarkDown](#markdown-reference) 構文で記述され、 [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)でホストされます。
+[Teams のドキュメント](/microsoftteams/platform/overview) は [、Microsoft Docs](https://docs.microsoft.com/) のテクニカル ドキュメント ライブラリの一部です。 コンテンツは docsets と呼ばれるグループに編成され、それぞれが 1 つのエンティティとして管理される関連ドキュメントのグループを表します。 同じドキュメントセット内の記事は、docs .microsoft.com の後に同じ *<span></span> URL パス拡張子を持 microsoft.com。*  たとえば  `/docs.microsoft.com/microsoftteams/...`   、Teams ドキュメントセット ファイル パスの先頭です。 Teams の記事は  [MarkDown](#markdown-reference) 構文で記述され [、GitHub でホストされます](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)。
 
-## <a name="set-up-your-workspace"></a>ワークスペースの設定
-
-> [!div class="checklist"]
->
-> * [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)をインストールします。
-> * [Visual Studio code](https://code.visualstudio.com/) (VS コード) をインストールします。
-> * [ドキュメント作成パック](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack)を VS Code Marketplace から直接インストールする
-<br>&emsp;&emsp; や
+## <a name="set-up-your-workspace"></a>ワークスペースのセットアップ
 
 > [!div class="checklist"]
 >
-> * VS Code 内からのインストール:
+> * Git を [インストールします](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)。
+> * インストール [Visual Studioコード](https://code.visualstudio.com/) (VS Code)
+> * VS Code [Marketplace からドキュメントオーサ](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) リング パックを直接インストールする
+<br>&emsp;&emsp; または
 
-   1. サイドアクティビティバーで [ **extensions] アイコン** を選択するか、[ **表示 => extensions** ] コマンド (Ctrl + Shift + X) を使用して、 *Docs Authoring Pack* (Microsoft) を検索します。
-   1. [ **インストール** ] ボタンを選択します。
-   1. インストールが完了すると、[ **インストール** ] ボタンが [歯車の **管理** ] ボタンに変わります。
+> [!div class="checklist"]
+>
+> * VS Code 内からインストールします。
 
-## <a name="review-the-microsoft-docs-contributors-guide"></a>Microsoft Docs コントリビューターガイドを確認する
+   1. サイド アクティビティ **バーの [** 拡張機能] アイコンを選択するか、[表示 **] =>** [拡張機能] コマンド (Ctrl + Shift + X) を使用して、ドキュメントオーサリング パック (Microsoft) を *検索* します。
+   1. [インストール] **ボタンを選択** します。
+   1. インストールが完了すると、[インストール] **ボタンが** [歯車の管理] **ボタンに** 変わります。
 
-[投稿者ガイド](/contribute)は、Microsoft Docs platform で技術コンテンツを作成、発行、更新する方法を提供します。 「 [Docs Style」および「voice quick Start](/contribute/style-quick-start) *」も参照してください*。
+## <a name="review-the-microsoft-docs-contributors-guide"></a>Microsoft Docs コントリビューター ガイドを確認する
 
-## <a name="microsoft-writing-style-and-content-guides"></a>Microsoft の書き方、スタイル、およびコンテンツガイド
+投稿者 [向けガイドでは](/contribute) 、Microsoft Docs プラットフォームで技術的なコンテンツを作成、発行、更新するための指示を提供します。 *「ドキュメント スタイル*[と音声クイック スタート」も参照してください](/contribute/style-quick-start)。
 
-* **[Microsoft の書き方のスタイルガイド](/style-guide/welcome)** です。 このオンラインガイドをブラウザーの [ **お気に入り** ] メニューに追加することを検討してください。 これは、今日の技術的な執筆に関する包括的なリソースであり、音声とスタイルに対する Microsoft の先進のアプローチを反映しています。
+## <a name="microsoft-writing-style-and-content-guides"></a>Microsoft ライティング、スタイル、およびコンテンツ ガイド
 
-* **[開発者向けコンテンツを書く](/style-guide/developer-content/)**。 Teams 固有のコンテンツは、プログラミングの概念とプロセスについて基本的に理解している開発者を対象としています。 Microsoft の語調とスタイルを維持しながら、わかりやすく技術的に正確な情報を提供することが重要です。
+* **[Microsoft 書き込みスタイル ガイド](/style-guide/welcome)**. ブラウザーの [お気に入り] メニューにこのオンライン ガイド **を追加する方法を検討** してください。 これは、今日の技術的な執筆のための包括的なリソースであり、音声とスタイルに対する Microsoft の最新のアプローチを反映しています。
 
-* ステップ **[ごとの指示を記述](/style-guide/procedures-instructions/writing-step-by-step-instructions)** します。 適用された対話的なエクスペリエンスは、開発者が Microsoft の製品とテクノロジについて理解するのに便利な方法です。 複雑な手順や単純な手順をプログレッシブ形式で表現することは、自然でわかりやすいものです。
+* **[開発者向けコンテンツの作成](/style-guide/developer-content/)**。 Teams 固有のコンテンツは、プログラミングの概念とプロセスに関する基本的な理解を持つ開発者対象ユーザーを対象とします。 Microsoft のトーンとスタイルを維持しながら、技術的に正確な明確な情報を説得力のある方法で提供することが重要です。
+
+* **[ステップ バイ ステップの手順を記述します](/style-guide/procedures-instructions/writing-step-by-step-instructions)**。 適用された対話型エクスペリエンスは、開発者が Microsoft 製品とテクノロジについて学ぶのに最適な方法です。 プログレッシブ形式で複雑な手順や簡単な手順を提示する方法は、自然でユーザーフレンドリーです。
 
 ## <a name="markdown-reference"></a>MarkDown リファレンス
 
- Microsoft Docs ページは、MarkDown 構文で記述され、 [Markdig](https://github.com/lunet-io/markdig) エンジンで解析されます。 特定のタグと書式設定規則については、 *「* [Docs Markdown reference](/contribute/markdown-reference) 」を参照してください。
+ Microsoft Docs ページは MarkDown 構文で記述され [、Markdig](https://github.com/lunet-io/markdig) エンジンを介して解析されます。 特定 *のタグ*[と書式設定の規則については](/contribute/markdown-reference)、「Docs Markdown リファレンス」を参照してください。
 
-## <a name="file-paths"></a>ファイルパス
+## <a name="file-paths"></a>ファイル パス
 
-ドキュメントでハイパーリンクに有効なファイルパスを設定することは、特に相対パスを使用して他の docsets へのリンクを作成する場合には、課題になることがあります。  ファイルパスが正しくないか、無効な場合は、GitHub でのビルドは成功しません。
+ドキュメント内のハイパーリンクの有効なファイル パスを設定すると、特に相対パスを使用して他のドキュメントセットへのリンクを作成する場合は、問題になる可能性があります。  ファイル パスが正しくないか無効である場合、ビルドは GitHub で成功しません。
 
-ハイパーリンクとファイルパスの詳細については、 *「* [ドキュメントでのリンクの使用](/contribute/how-to-write-links)」を参照してください。
+ハイパーリンクとファイル パスの詳細については、「ドキュメントでリンクを使用[する」を参照してください](/contribute/how-to-write-links)。
 
 >[!IMPORTANT]
-> Teams のプラットフォーム docset *の一部* である記事を参照するには、次の手順を実行します。<br>
-> &emsp;&#x2714; には、スラッシュを先頭に付けずに相対パスを使用します。<br>
-> &emsp; Markdown ファイル拡張子が含まれている&#x2714;。<br>
->Ex:  **親ディレクトリ/ディレクトリ/パス名** : > `[Building an app for Microsoft Teams](../concepts/building-an-app.md)` <br><br>
-> Teams のプラットフォーム docset に含まれて *いない* Microsoft Docs library 記事を参照するには、次の手順を実行します。<br>
+> Teams プラットフォーム ドキュメントセットの *一部である* 記事を参照するには、次の情報を参照します。<br>
+> &emsp;&#x2714; 先頭スラッシュを付けずに相対パスを使用します。<br>
+> &emsp;&#x2714; Markdown ファイル拡張子を含めます。<br>
+>Ex:  **parent directory/directory/path-to-article.md** —> `[Building an app for Microsoft Teams](../concepts/building-an-app.md)` <br><br>
+> Teams プラットフォーム ドキュメントセットの一部ではない Microsoft Docs ライブラリの記事を参照するには、次の方法を使用します。<br>
 > &emsp;&#x2714; スラッシュで始まる相対パスを使用します。<br>
-> &emsp;&#x2714; ファイル拡張子は含めないでください。 <br> Ex:  **/docset/addressofflocation** — > `[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`<br><br>
-> GitHub など、Microsoft Docs ライブラリの外部にあるページを参照するには、完全なファイルパスを使用し `https` ます。<br>
+> &emsp;&#x2714;ファイル拡張子を含めることはできません。 <br> 例: **/docset/address-to-file-location —>**`[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`<br><br>
+> GitHub などの Microsoft Docs ライブラリの外部にあるページを参照するには、完全なファイル パス `https` を使用します。<br>
 
-## <a name="code-samples-and-snippets"></a>コードサンプルとスニペット
+## <a name="code-samples-and-snippets"></a>コード サンプルとスニペット
 
-コードサンプルは、開発者が Api と Sdk を正常に使用するのに役立つ重要な役割を果たします。 適切に表示されているコードサンプルは、説明テキストと説明情報だけではなく、どのように機能するかを伝えることができます。 コードサンプルは正確で簡潔で、ドキュメント化されている必要があります。また、最も重要なのは閲覧者フレンドリです。 読みやすいコードも理解しやすく、テスト、デバッグ、保守、変更、拡張が簡単です。 *「* [ドキュメントにコードを含める方法」を](/contribute/code-in-docs)参照してください。読みやすさのヒントについては、「[切削エッジ: ソースコードの読みやすさのヒント](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips) *」も参照* してください。
+コード サンプルは、開発者が API と SDK を正常に使用する上で重要な役割を果たします。 よく示されたコード サンプルは、説明的なテキストや指示情報だけでなく、物事の動作を明確に伝えます。 コード サンプルは、正確で簡潔で、十分に文書化され、最も重要なのは、読者に優しいコード サンプルである必要があります。 読みやすくするコードは、理解、テスト、デバッグ、保守、変更、拡張も簡単です。 *「*[ドキュメントにコードを含める方法」を参照してください](/contribute/code-in-docs)。読みやすさのヒントについては、「Edge [: Source Code Readability Tips」も参照してください](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips)。
 
 > [!div class="nextstepaction"]
-> [Microsoft Docs の更新プログラムと最新のアナウンスを入手する](/teamblog)
+> [Microsoft Docs の更新プログラムと最新のお知らせを取得する](/teamblog)

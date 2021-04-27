@@ -1,14 +1,15 @@
 ---
 title: Microsoft Teams 開発者のサポートとフィードバック
 description: Microsoft Teams 製品チームは、さまざまなフィードバックとサポート チャネルを通して開発者コミュニティに対応します。
+localization_priority: Normal
 ms.topic: reference
 keywords: チームフィードバック開発者の質問の問題連絡先サポート要求バグの投稿 コミュニティディスカッション
-ms.openlocfilehash: 49dfe06dd1e343b04e8c15c7cc3bdb6957946706
-ms.sourcegitcommit: 49d1ecda14042bf3f368b14c1971618fe979b914
+ms.openlocfilehash: 08fb6908eeb4a79e5da622e7bc698111e2eba46a
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "51034720"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020731"
 ---
 # <a name="microsoft-teams-developer-community-channels"></a>Microsoft Teams 開発者コミュニティ チャネル
 

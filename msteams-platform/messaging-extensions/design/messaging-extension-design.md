@@ -3,14 +3,15 @@ title: メッセージング拡張機能の設計
 description: Teams メッセージング拡張機能を設計し、Microsoft Teams UI キットを取得する方法について説明します。
 keywords: teams の設計ガイドラインは、メッセージング拡張機能のヒントのベスト プラクティスを参照します。
 author: heath-hamilton
+localization_priority: Normal
 ms.author: qinch
 ms.topic: conceptual
-ms.openlocfilehash: c616d8e3e7c40ae124f96cb80a42873f9aaa7865
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: e3e4197e461f6d13f0c45ba2ce8bfb93b01b5e0f
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697012"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020724"
 ---
 # <a name="designing-your-microsoft-teams-messaging-extension"></a>Microsoft Teams メッセージング拡張機能の設計
 
@@ -227,7 +228,7 @@ Teams カラー トークンを使用しない場合、デザインの拡張性�
    :::column-end:::
 :::row-end:::
 
-### <a name="actions"></a>操作
+### <a name="actions"></a>Actions
 
 :::row:::
    :::column span="":::

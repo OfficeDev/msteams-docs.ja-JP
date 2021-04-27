@@ -3,13 +3,14 @@ title: Microsoft Teams のボット
 author: clearab
 description: Microsoft Teams のボットの概要。
 ms.topic: overview
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 08777e6d678bd75b56072412af46e3eb974c3678
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 70240b7396fc5e7a77749dc4e7326bfb30ea4415
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696898"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020892"
 ---
 # <a name="bots-in-microsoft-teams"></a>Microsoft Teams のボット
 

@@ -3,13 +3,14 @@ title: ボットをデザインする
 description: Teams のボットをデザインして、Microsoft Teams UI Kit を取得するする方法をご紹介します。
 author: heath-hamilton
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 1323d1070d29a501a6a87812a666c3a08b76ae74
-ms.sourcegitcommit: 098d38dd947e87e69d289b99e807bea2d95c42f9
-ms.translationtype: HT
+ms.openlocfilehash: 2739bd4baaf68be90a62924601b0628c3d9b0f2c
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "49713595"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020134"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Microsoft Teams のボットをデザインする
 
@@ -216,7 +217,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="ボットのベスト プラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="例は、ボットのベスト プラクティスを示しています。" border="false":::
 
 #### <a name="dont-obscure-your-bots-features"></a>してはいけないこと: ボットの機能をぼかす
 
@@ -227,7 +228,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="ボットのベスト プラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="ボットのベスト プラクティスを示すサンプル。" border="false":::
 
 #### <a name="do-recognize-non-questions"></a>するべきこと: ノンクエスチョンを認識する
 
@@ -235,7 +236,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="ボットのベスト プラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="ボットのベスト プラクティスの例を示します。" border="false":::
 
 #### <a name="dont-miss-out-on-opportunities-to-delight"></a>してはいけないこと: 喜ぶチャンスを逃す
 
@@ -248,7 +249,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="ボットのベスト プラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="ボットのベスト プラクティスの例。" border="false":::
 
 #### <a name="do-provide-help"></a>するべきこと: ヘルプを用意する
 
@@ -256,7 +257,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="ボットのベスト プラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="例では、ボットのベスト プラクティスを表示します。" border="false":::
 
 #### <a name="dont-leave-users-stranded"></a>してはいけないこと: ユーザーを立ち往生させる
 
@@ -269,7 +270,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="ボットのベスト プラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="ボットのベスト プラクティスを表示する例。" border="false":::
 
 #### <a name="do-use-task-modules-or-tabs"></a>するべきこと: タスク モジュールやタブの使用
 
@@ -277,7 +278,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="ボットのベスト プラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="ボットのベスト プラクティスの例を参照してください。" border="false":::
 
 #### <a name="dont-make-multi-turn-interactions-tedious"></a>してはいけないこと: 複数回の対話を面倒にする
 
@@ -290,7 +291,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="ボットのベスト プラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="ボットのベスト プラクティスを示す例です。" border="false":::
 
 #### <a name="do-only-show-sensitive-info-in-a-personal-context"></a>するべきこと: 機密情報を個人的なコンテキストでのみ表示する
 
@@ -298,7 +299,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="ボットのベスト プラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="ボットのベスト プラクティスを示す図。" border="false":::
 
 #### <a name="dont-some-content-isnt-meant-to-be-seen-by-everyone"></a>してはいけないこと: すべてのユーザーが閲覧できないコンテンツがある
 

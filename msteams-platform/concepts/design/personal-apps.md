@@ -1,178 +1,179 @@
 ---
-title: 個人用アプリを設計する
-description: Teams personal app を設計し、Microsoft Teams UI キットを取得する方法について説明します。
+title: 個人用アプリをデザインする
+description: Teams 個人用アプリを設計し、Microsoft Teams UI キットを取得する方法について説明します。
 author: heath-hamilton
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 971071be9f345815f5461646d7970efdf05fd5c4
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: 8302f3768034014ef5a446effeee0603afe4a5f4
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49605021"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020759"
 ---
-# <a name="designing-your-personal-app-for-microsoft-teams"></a>Microsoft Teams 用の個人用アプリを設計する
+# <a name="designing-your-personal-app-for-microsoft-teams"></a>Microsoft Teams 用の個人用アプリの設計
 
-個人アプリは、ボット、プライベートワークスペース、またはその両方にすることができます。 アプリが複数のチャネルのタブとして構成されている場合は、コンテンツを作成または表示する場所のような機能をユーザーに提供することもあります。
+個人用アプリには、ボット、プライベート ワークスペース、または両方を指定できます。 コンテンツを作成または表示する場所のように機能する場合や、アプリが複数のチャネルのタブとして構成されている場合に、ユーザーが自分のコンテンツを一目で見る場合があります。
 
-アプリの設計をガイドするには、次の情報を参照して、ユーザーが Teams で個人アプリを追加、使用、および管理する方法について説明します。
+アプリの設計をガイドするために、次の情報は、Teams で個人アプリを追加、使用、および管理する方法を示しています。
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-Microsoft Teams UI キットでは、必要に応じて取得および変更できる要素を含む、アプリの総合的な設計ガイドラインを見つけることができます。 UI キットには、ここでは説明していないアクセシビリティや応答性の高いサイズ変更などの重要なトピックもあります。
+Microsoft Teams UI Kit には、必要に応じて取得および変更できる要素を含む、包括的な個人用アプリ設計ガイドラインがあります。 UI キットには、ここでは説明しないアクセシビリティや応答性のサイジングなどの重要なトピックも含まれています。
 
 > [!div class="nextstepaction"]
-> [Microsoft Teams UI Kit (Figma) を取得する](https://www.figma.com/community/file/916836509871353159)
+> [Microsoft Teams UI Kit (Figma) を入手する](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-personal-app"></a>個人用アプリを追加する
 
-Teams ストア (AppSource) またはアプリポップアップから個人用アプリを追加するには、Teams の左側にある [ **その他** ] アイコンを選択します (次の例を参照)。
+Teams ストア (AppSource) またはアプリ のフライアウトから個人用アプリを追加するには、Teamsの左側にある [その他] アイコンを選択します (次の例を参照)。
 
-:::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="例は、アプリのポップアップから個人用アプリを追加する方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="例は、アプリのフライアウトから個人用アプリを追加する方法を示しています。" border="false":::
 
-## <a name="use-a-personal-app-private-workspace"></a>個人用アプリを使用する (プライベートワークスペース)
+## <a name="use-a-personal-app-private-workspace"></a>個人用アプリを使用する (プライベート ワークスペース)
 
-プライベートワークスペースを使用すると、Teams を離れずに、中心となる場所で重要なアプリコンテンツを表示できます。
+プライベート ワークスペースを使用すると、Teams を離れることなく、中央の場所でユーザーにとって意味のあるアプリ コンテンツを表示できます。
 
-(実装メモ: プライベートワークスペースは、[ [*個人用] タブ*](../../build-your-first-app/build-personal-tab.md) の機能に基づいています。)
+(実装ノート: プライベート ワークスペースは個人用タブ [*機能に基づいて作成*](../../build-your-first-app/build-personal-tab.md) されます)。
 
-### <a name="anatomy-personal-app-private-workspace"></a>分析: 個人アプリ (プライベートワークスペース)
+### <a name="anatomy-personal-app-private-workspace"></a>Anatomy: 個人用アプリ (プライベート ワークスペース)
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="例は、個人用タブのコンポーネントの構造を示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="例は、個人用タブのコンポーネント構造を示しています。" border="false":::
 
 |カウンター|説明|
 |----------|-----------|
 |A|**アプリの属性**: アプリのロゴと名前。|
-|B|**タブ**: 個人用アプリのナビゲーションを提供します。 たとえば、[ **バージョン情報** ] タブまたは [ **ヘルプ** ] タブを含めます。|
-|C|**Popout view**: アプリのコンテンツを親ウィンドウからスタンドアロンの子ウィンドウにプッシュします。|
-|D|**[その他のメニュー]**: 追加のアプリ情報とオプションが含まれています。 (または、タブを **設定** することもできます)。|
+|B|**タブ**: 個人用アプリのナビゲーションを提供します。 たとえば、[概要] タブまたは **[ヘルプ]** タブ **を含** めることができます。|
+|C|**Popout ビュー**: 親ウィンドウからスタンドアロンの子ウィンドウにアプリコンテンツをプッシュします。|
+|D|**[その他]** メニュー: 追加のアプリ情報とオプションが含まれます。 (または、[設定] を **タブ** にすることもできます)。|
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="例は、個人用タブの構造の構造を示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="例は、個人用タブの構造構造を示しています。" border="false":::
 
 |カウンター|説明|
 |----------|-----------|
 |A|**タブ**: 個人用アプリのナビゲーションを提供します。|
-|1 |**iframe**: アプリのコンテンツを表示します。|
+|1|**iframe**: アプリのコンテンツを表示します。|
 
-### <a name="designing-with-ui-templates"></a>UI テンプレートを使用して設計する
+### <a name="designing-with-ui-templates"></a>UI テンプレートを使用した設計
 
-次の Teams UI テンプレートのいずれかを使用して、[個人用] タブの設計に役立てることができます。
+個人用タブを設計するには、次のいずれかの Teams UI テンプレートを使用します。
 
-* [リスト](../../concepts/design/design-teams-app-ui-templates.md#list): リストでは、関連するアイテムを scannable 形式で表示し、ユーザーがリスト全体または個々のアイテムに対してアクションを実行できるようにします。
-* [タスクボード](../../concepts/design/design-teams-app-ui-templates.md#task-board): タスクボード (かんばんボードまたはスイムレーンと呼ばれることもあります) は、多くの場合、作業項目またはチケットの状態を追跡するために使用されるカードのコレクションです。
-* [ダッシュボード](../../concepts/design/design-teams-app-ui-templates.md#dashboard): ダッシュボードは、データまたはコンテンツの概要を提供する複数のカードを含むキャンバスです。
-* [フォーム](../../concepts/design/design-teams-app-ui-templates.md#form): フォームは、構造化された方法でユーザー入力を収集、検証、および提出するためのものです。
-* [Empty state](../../concepts/design/design-teams-app-ui-templates.md#empty-state): 空の状態テンプレートは、サインイン、初回実行時のエクスペリエンス、エラーメッセージなど、多くのシナリオで使用できます。
-* [左](../../concepts/design/design-teams-app-ui-templates.md#left-nav)ナビゲーション: タブにいくつかのナビゲーションが必要な場合は、左側のナビゲーションテンプレートが役立ちます。 一般的に、タブナビゲーションは最小限にする必要があります。
+* [リスト](../../concepts/design/design-teams-app-ui-templates.md#list): リストは、関連するアイテムをスキャン可能な形式で表示し、ユーザーがリスト全体または個々のアイテムに対してアクションを実行できます。
+* [タスク ボード](../../concepts/design/design-teams-app-ui-templates.md#task-board): カンバン ボードやスイム レーンとも呼ばれるタスク ボードは、作業アイテムやチケットの状態を追跡するためによく使用されるカードのコレクションです。
+* [ダッシュボード](../../concepts/design/design-teams-app-ui-templates.md#dashboard): ダッシュボードは、データまたはコンテンツの概要を示す複数のカードを含むキャンバスです。
+* [フォーム](../../concepts/design/design-teams-app-ui-templates.md#form): フォームは、構造化された方法でユーザー入力を収集、検証、送信するためのフォームです。
+* [空の状態](../../concepts/design/design-teams-app-ui-templates.md#empty-state): 空の状態テンプレートは、サインイン、初回実行エクスペリエンス、エラー メッセージなど、多くのシナリオで使用できます。
+* [左ナビゲーション](../../concepts/design/design-teams-app-ui-templates.md#left-nav): 左側のナビゲーション テンプレートは、タブにナビゲーションが必要な場合に役立ちます。 一般に、タブ ナビゲーションは最小限に抑えます。
 
-## <a name="use-a-personal-app-bot"></a>個人アプリ (bot) を使用する
+## <a name="use-a-personal-app-bot"></a>個人用アプリ (ボット) の使用
 
-個人用アプリには、1対1の会話およびプライベート通知用の bot を含めることができます (たとえば、同僚がアートボードにコメントを投稿した場合)。 Bot は、指定したタブで使用できます。
+個人用アプリには、1 対 1 の会話とプライベート通知用のボットを含めできます (たとえば、同僚がアートボードにコメントを投稿する場合など)。 ボットは、指定したタブで使用できます。
 
-### <a name="anatomy-personal-app-bot"></a>分析: Personal app (bot)
+### <a name="anatomy-personal-app-bot"></a>解剖学: 個人用アプリ (ボット)
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="例は、パーソナル bot コンポーネントの分析を示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="例は、個人用ボット コンポーネントの構造を示しています。" border="false":::
 
 |カウンター|説明|
 |----------|-----------|
-|A|**Bot タブ**: たとえば、ボット会話や通知にアクセスするための [ **チャット** ] タブを含みます。|
-|B|**Bot メッセージ**: bot は、メッセージと通知をカード (アダプティブカードなど) 形式で送信することがよくあります。|
-|C|**新規作成ボックス**: bot にメッセージを送信するための入力フィールド。|
+|A|**[ボット]** タブ: たとえば、[チャット] タブ **を含** め、ボットの会話と通知にアクセスします。|
+|B|**ボット メッセージ**: ボットは、多くの場合、メッセージや通知をカード (アダプティブ カードなど) の形式で送信します。|
+|C|**[作成]** ボックス : ボットにメッセージを送信する入力フィールド。|
 
 ## <a name="best-practices"></a>ベスト プラクティス
 
 ### <a name="tab-priority"></a>タブの優先度
 
-#### <a name="do-show-the-most-relevant-content-in-the-first-tab"></a>実行: 最初のタブに最も関連のあるコンテンツを表示する
+#### <a name="do-show-the-most-relevant-content-in-the-first-tab"></a>Do: 最初のタブに最も関連性の高いコンテンツを表示する
 
-応答性の高いサイズに設定すると、右側のタブが切り捨てられるか、表示されなくなることがあります。
+応答性の高いサイズ設定では、右側のタブが切り捨てられたり、見えなくなる場合があります。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-do.png" alt-text="例は、個人用アプリのベストプラクティスを示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-do.png" alt-text="例は、個人用アプリのベスト プラクティスを示しています。" border="false":::
 
-#### <a name="dont-lead-with-secondary-content-or-metadata"></a>いいえ: セカンダリコンテンツまたはメタデータをリードします。
+#### <a name="dont-lead-with-secondary-content-or-metadata"></a>[しない] セカンダリ コンテンツまたはメタデータを含むリード
 
-標準的な web アプリと同様に、タブナビゲーションは、アプリの主要な機能を理解するために役立つ順序で実行する必要があります。
+標準の Web アプリと同様に、タブ ナビゲーションはアプリの主な機能を意味する順序で進む必要があります。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-dont.png" alt-text="例は、個人用アプリのベストプラクティスを示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-dont.png" alt-text="個人用アプリのベスト プラクティスの例。" border="false":::
 
 ### <a name="tab-hierarchy"></a>タブ階層
 
-#### <a name="do-tabs-should-be-of-equal-hierarchy-and-represent-key-app-pages"></a>Do: タブを同じ階層にして、主要なアプリページを表す必要があります。
+#### <a name="do-tabs-should-be-of-equal-hierarchy-and-represent-key-app-pages"></a>Do: タブは等しい階層で、主要なアプリ ページを表す必要があります
 
-タブでは、アプリの主要な機能とコンテンツを分類する必要があります。 応答性の高いサイズに設定すると、右側のコンテンツが切り捨てられるか、表示されなくなることがあります。
+タブは、アプリの主な機能とコンテンツを分類する必要があります。 応答性の高いサイズ設定では、右側のコンテンツが切り捨てられたり、見えなくなる可能性があります。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-do.png" alt-text="例は、個人用アプリのベストプラクティスを示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-do.png" alt-text="例は、個人用アプリのベスト プラクティスを示しています。" border="false":::
 
-#### <a name="dont-include-different-levels-of-hierarchy"></a>異なる階層のレベルを含めないでください。
+#### <a name="dont-include-different-levels-of-hierarchy"></a>[しない]: 階層の異なるレベルを含める
 
-コンテンツは、ユーザーが理解しやすくなる論理的な順序で実行する必要があります。 互いに密接な関係がある2つのタブがある場合は、1つのタブに結合することを検討してください。
+コンテンツは論理的な順序で進行し、ユーザーが意味を持つ必要があります。 密接に関連する 2 つのタブがある場合は、それらを 1 つのタブに組み合わせることを検討してください。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-dont.png" alt-text="例は、個人用アプリのベストプラクティスを示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-dont.png" alt-text="例では、個人用アプリのベスト プラクティスを表示します。" border="false":::
 
 ### <a name="first-run-experience"></a>初回実行時エクスペリエンス
 
-#### <a name="do-include-a-first-run-experience"></a>実行: 最初の実行環境を含める
+#### <a name="do-include-a-first-run-experience"></a>Do: 初回実行エクスペリエンスを含める
 
-個人用アプリを初めて使用するときは、少なくともようこそ画面が表示されている必要があります。 Bot の場合は、bot が実行できることを説明し、サインインボタンなどのクイック操作を提供します。
+個人用アプリを初めて使用する場合は、少なくともウェルカム 画面が表示される必要があります。 ボットの場合は、ボットが実行できる操作を説明し、サインイン ボタンなどのクイック アクションを提供します。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-do.png" alt-text="例は、個人用アプリのベストプラクティスを示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-do.png" alt-text="図は、個人用アプリのベスト プラクティスを示しています。" border="false":::
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-fre-do.png" alt-text="例は、個人用アプリのベストプラクティスを示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-fre-do.png" alt-text="個人用アプリのベスト プラクティスの図。" border="false":::
 
-#### <a name="dont-start-with-a-blank-screen"></a>いいえ: 空の画面で開始します
+#### <a name="dont-start-with-a-blank-screen"></a>[しない]: 空白の画面から開始する
 
-アプリを初めて実行したときに何も表示されない場合は、ユーザーが混乱する可能性があります。
+ユーザーがアプリを初めて実行した時に何も表示しない場合、ユーザーは混乱する可能性があります。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-dont.png" alt-text="例は、個人用アプリのベストプラクティスを示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-dont.png" alt-text="図は、個人用アプリのベスト プラクティスを表示します。" border="false":::
 
-### <a name="personalized-content"></a>個人用コンテンツ
+### <a name="personalized-content"></a>パーソナライズされたコンテンツ
 
-#### <a name="do-aggregate-app-content-relevant-to-a-user"></a>Do: ユーザーに関連するアプリコンテンツを集計する
+#### <a name="do-aggregate-app-content-relevant-to-a-user"></a>Do: ユーザーに関連するアプリ コンテンツを集約する
 
-個人のタブか bot かにかかわらず、アプリ内のユーザーのアクティビティのみに関連するコンテンツが表示されます。
+個人用タブでもボットでも、アプリ内のユーザーのアクティビティにのみ関連するコンテンツを表示します。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-do.png" alt-text="例は、個人用アプリのベストプラクティスを示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-do.png" alt-text="例では、個人用アプリのベスト プラクティスを示します。" border="false":::
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-do.png" alt-text="例は、個人用アプリのベストプラクティスを示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-do.png" alt-text="この例では、個人用アプリのベスト プラクティスを示します。" border="false":::
 
-#### <a name="dont-show-unrelated-or-overly-broad-content"></a>[しない]: 関連性のないコンテンツまたは過度に広いコンテンツを表示する
+#### <a name="dont-show-unrelated-or-overly-broad-content"></a>[しない]: 関連のないコンテンツまたは広いコンテンツを表示する
 
-個人コンテキストでは、ユーザーが所属していない teams のコンテンツは表示されません。 個人 bot コンテンツは、グループではなく個人に焦点を当てる必要があります。
+個人のコンテキストでは、ユーザーが参加しないチームのコンテンツを表示しない。 個人用ボットのコンテンツは、グループではなく、個人に焦点を当てる必要があります。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-dont.png" alt-text="例は、個人用アプリのベストプラクティスを示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-dont.png" alt-text="開示は、個人用アプリのベスト プラクティスの例です。" border="false":::
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-dont.png" alt-text="例は、個人用アプリのベストプラクティスを示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-dont.png" alt-text="サンプルは、個人用アプリのベスト プラクティスを示しています。" border="false":::
 
 ### <a name="complex-app-features"></a>複雑なアプリ機能
 
-#### <a name="do-allow-users-to-access-complex-features-in-a-browser"></a>Do: ブラウザーで複雑な機能にアクセスすることをユーザーに許可する
+#### <a name="do-allow-users-to-access-complex-features-in-a-browser"></a>Do: ユーザーがブラウザーの複雑な機能にアクセスするを許可する
 
-アプリは Teams のコアタスクに焦点を当てる必要がありますが、完全なスタンドアロンアプリをブラウザーで表示することもできます。
+アプリは Teams のコア タスクに集中する必要がありますが、完全なスタンドアロン アプリはブラウザーで表示できます。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-do.png" alt-text="例は、個人用アプリのベストプラクティスを示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-do.png" alt-text="サンプルは、個人用アプリのベスト プラクティスを示しています。" border="false":::
 
-#### <a name="dont-include-your-entire-app"></a>アプリ全体を含めないでください。
+#### <a name="dont-include-your-entire-app"></a>[しない]: アプリ全体を含める
 
-特に Teams 用のアプリを作成していない場合は、コラボレーションツールで意味を持たない機能が存在する可能性があります。
+Teams 専用のアプリを作成しない限り、おそらくコラボレーション ツールでは意味のない機能があります。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="例は、個人用アプリのベストプラクティスを示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="図は、個人用アプリのベスト プラクティスを示しています。" border="false":::
 
-## <a name="manage-a-personal-tab"></a>個人用タブを管理する
+## <a name="manage-a-personal-tab"></a>個人用タブの管理
 
-Teams の左側で、ユーザーは個人用アプリを右クリックして、他のアプリオプションを固定、削除、および構成できます。
+Teams の左側では、ユーザーは個人用アプリを右クリックして、他のアプリ オプションをピン留め、削除、および構成できます。
 
-:::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="例は、個人用アプリを管理するためのオプションを示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="例では、個人用アプリを管理するためのオプションを示します。" border="false":::
 
 ## <a name="learn-more"></a>詳細情報
 
-個人アプリの範囲によっては、次のような設計ガイドラインが役になることがあります。
+これらの他の設計ガイドラインは、個人用アプリの範囲に応じて役立つ場合があります。
 
-* [タブのデザイン](../../tabs/design/tabs.md)
-* [Bot のデザイン](../../bots/design/bots.md)
+* [タブの設計](../../tabs/design/tabs.md)
+* [ボットの設計](../../bots/design/bots.md)
 
-## <a name="validate-your-design"></a>設計を検証する
+## <a name="validate-your-design"></a>デザインを検証する
 
-アプリを AppSource に発行することを計画している場合は、一般的にアプリが送信中に失敗する原因となる設計上の問題について理解しておく必要があります。
+AppSource にアプリを公開する予定がある場合、アプリの提出時に失敗する原因となるデザイン上の問題を理解しておく必要があります。
 
 > [!div class="nextstepaction"]
-> [設計検証ガイドラインの確認](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)
+> [デザイン検証ガイドラインをチェックする](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

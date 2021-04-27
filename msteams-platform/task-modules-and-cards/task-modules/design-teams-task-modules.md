@@ -1,107 +1,108 @@
 ---
-title: タスクモジュールを設計する
+title: タスク モジュールをデザインする
 author: heath-hamilton
-description: Teams アプリのタスクモジュールを設計し、Microsoft Teams UI キットを取得する方法について説明します。
+description: Teams アプリのタスク モジュールを設計し、Microsoft Teams UI キットを取得する方法について説明します。
+localization_priority: Normal
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 41584ecf58ca7718290e58e5845549e4579dac64
-ms.sourcegitcommit: c102da958759c13aa9e0f81bde1cffb34a8bef34
+ms.openlocfilehash: 3502a705bfe1bf99a5dc0edff5c5a54265cc6ca1
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "49606415"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019546"
 ---
-# <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Microsoft Teams アプリのタスクモジュールを設計する
+# <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Microsoft Teams アプリのタスク モジュールの設計
 
-タスクモジュールを使用して、Teams アプリでモーダルポップアップエクスペリエンスを作成できます。 この機能を使用すると、リッチメディアと情報を表示したり、複雑なタスクを実行したりできます。
+タスク モジュールを使用して Teams アプリでモーダル ポップアップ エクスペリエンスを作成できます。 リッチ メディアと情報を表示したり、複雑なタスクを完了したりするには、この機能を使用します。
 
-:::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="例は、タスクモジュールを示しています。" border="false":::
+:::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="タスク モジュールの例を示します。" border="false":::
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-Microsoft Teams UI キットでは、必要に応じて取得および変更できる要素を含む、包括的なタスクモジュールデザインガイドラインを見つけることができます。
+必要に応じて取得および変更できる要素を含む、より包括的なタスク モジュール設計ガイドラインについては、Microsoft Teams UI Kit を参照してください。
 
 > [!div class="nextstepaction"]
-> [Microsoft Teams UI Kit (Figma) を取得する](https://www.figma.com/community/file/916836509871353159)
+> [Microsoft Teams UI Kit (Figma) を入手する](https://www.figma.com/community/file/916836509871353159)
 
-## <a name="open-a-task-module"></a>タスクモジュールを開く
+## <a name="open-a-task-module"></a>タスク モジュールを開く
 
-タスクモジュールは、アプリのほとんどすべての場所から起動できます。
+タスク モジュールは、アプリのほぼすべての場所から起動できます。
 
-* **Tab**: タスクモジュールは、タブまたは iframe 内の任意のリンクから起動できます。 ユーザーが相互作用に集中するシナリオで使用します。
-* **Bot**: タスクモジュールは、ボットメッセージ内のリンクから起動できます。
-* **アダプティブカード**: タスクモジュールは、ユーザーがボタンを選択したときに、アダプティブカード (メッセージング内線または bot が送信) から起動できます。
-* **メッセージング拡張機能 (アクションコマンド)**: メッセージング拡張機能を使用すると、メッセージのコンテンツに対して特定のアクションを実行できます。 アクションを選択すると、タスクモジュールが開きます。
-* **メッセージング拡張機能 (新規作成ボックスコンテキスト)**: [新規作成] ボックスでは、標準のポップアップではなく、タスクモジュールを開くためのメッセージング拡張機能をデザインできます。 フォームの入力など、複雑な対話のためのタスクモジュールを予約します。
+* **Tab**: タブ内の任意のリンクからタスク モジュールを起動できます。ユーザーが対話に集中するシナリオで使用します。
+* **ボット**: ボット メッセージ内のリンクからタスク モジュールを起動できます。
+* **アダプティブ カード**: ユーザーがボタンを選択すると、アダプティブ カード (メッセージング拡張機能またはボットによって送信される) からタスク モジュールを起動できます。
+* **メッセージング拡張機能 (アクション コマンド)**: メッセージング拡張機能を使用すると、メッセージ コンテンツに対して特定のアクションを実行できます。 アクションを選択すると、タスク モジュールが開きます。
+* **メッセージング拡張機能 (作成ボックス** コンテキスト) : 作成ボックスで、メッセージング拡張機能を設計して、一般的なフライアウトではなくタスク モジュールを開くことができます。 フォームの入力など、複雑な操作のためにタスク モジュールを予約します。
 
 ## <a name="anatomy"></a>構造
 
-:::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="タスクモジュールの UI 構造を示す図" border="false":::
+:::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="タスク モジュールの UI 構造を示す図。" border="false":::
 
-タスクモジュールは非常に柔軟なサーフェスです。 これらは、他の UI テンプレートを使用して、パートナーが作成したエクスペリエンスをホストするために、iframe を使用して構築できます。 これは、洗練された快適な作業に適しています。
+タスク モジュールは非常に柔軟なサーフェスです。 iframes を使用して構築し、他の UI テンプレートを引き込み、パートナーが構築したエクスペリエンスをホストできます。 これは、最も洗練されたエクスペリエンスに優先されます。
 
-また、 [アダプティブカード](../../task-modules-and-cards/cards/design-effective-cards.md) フレームワークを使用してビルドすることもできます。これは、一般的なシナリオ (フォームなど) をより簡単に実行する方法です。
+また、アダプティブ カード フレームワーク[](../../task-modules-and-cards/cards/design-effective-cards.md)を使用して構築することもできます。これは、一般的なシナリオ (フォームなど) をより簡単かつ迅速に実行できます。
 
 |カウンター|説明|
 |----------|-----------|
 |1|**アプリ アイコン**|
-|2 |**アプリ名**: アプリの完全な名前。|
-|3 |**ヘッダー**: ヘッダーをクリアで簡潔にします。 ユーザーが完了する必要のあるタスクについて説明します。
-|4 |**[閉じる] ボタン**: 挿入するアプリコンテンツをユーザーが検索できるようにします。|
-|5 |**iframe**: アプリコンテンツをホストする、応答性の高いスペース。|
-|6 |**アクション (オプション)**: アプリコンテンツに関連するボタン。|
+|2|**アプリ名**: アプリの完全な名前。|
+|3|**ヘッダー**: ヘッダーを明確かつ簡潔にします。 ユーザーが完了するタスクについて説明します。
+|4|**[閉じる**] ボタン: ユーザーが挿入するアプリ コンテンツを検索できます。|
+|5|**iframe**: アプリ コンテンツをホストするレスポンシブ スペース。|
+|6|**アクション (省略可能)**: アプリコンテンツに関連するボタン。|
 
-## <a name="designing-with-ui-templates"></a>UI テンプレートを使用して設計する
+## <a name="designing-with-ui-templates"></a>UI テンプレートを使用した設計
 
-タスクモジュール内の一般的なレイアウトにテンプレートを使用することを検討してください。 それぞれが、自分のシナリオに合わせて、またはカスタマイズしたブランド化された優れたデザインを作成するために、小さなコンポーネントで構成されています。
+タスク モジュール内の一般的なレイアウトにテンプレートを使用する方法を検討してください。 各コンポーネントは、小規模なコンポーネントで構成され、使い慣れた、またはシナリオやブランドの外観に合わせてカスタマイズできる、エレガントで応答性の高いデザインを作成します。
 
-* [リスト](../../concepts/design/design-teams-app-ui-templates.md#list): リストでは、関連するアイテムを scannable 形式で表示し、ユーザーがリスト全体または個々のアイテムに対してアクションを実行できるようにします。
-* [フォーム](../../concepts/design/design-teams-app-ui-templates.md#form): フォームは、構造化された方法でユーザー入力を収集、検証、および提出するためのものです。
-* [Empty state](../../concepts/design/design-teams-app-ui-templates.md#empty-state): 空の状態テンプレートは、サインイン、初回実行時のエクスペリエンス、エラーメッセージなど、多くのシナリオで使用できます。
+* [リスト](../../concepts/design/design-teams-app-ui-templates.md#list): リストは、関連するアイテムをスキャン可能な形式で表示し、ユーザーがリスト全体または個々のアイテムに対してアクションを実行できます。
+* [フォーム](../../concepts/design/design-teams-app-ui-templates.md#form): フォームは、構造化された方法でユーザー入力を収集、検証、送信するためのフォームです。
+* [空の状態](../../concepts/design/design-teams-app-ui-templates.md#empty-state): 空の状態テンプレートは、サインイン、初回実行エクスペリエンス、エラー メッセージなど、多くのシナリオで使用できます。
 
 ## <a name="examples"></a>例
 
-### <a name="list"></a>リスト
+### <a name="list"></a>一覧表示
 
-タスクモジュールでは、簡単にスキャンできるので、適切に作業できます。
+リストはスキャンが簡単なので、タスク モジュールでうまく機能します。
 
-:::image type="content" source="../../assets/images/task-module/list.png" alt-text="タスクモジュール内のリストの例です。" border="false":::
+:::image type="content" source="../../assets/images/task-module/list.png" alt-text="タスク モジュールのリストの例。" border="false":::
 
 ### <a name="form"></a>フォーム
 
-タスクモジュールは、連続したユーザー入力とインライン検証を含むフォームを表示するのに便利な場所です。 フォーム要素を埋め込む方法として、アダプティブカードを活用することができます。
+タスク モジュールは、シーケンシャル ユーザー入力とインライン検証を備え、フォームを表面化する最適な場所です。 フォーム要素を埋め込む方法としてアダプティブ カードを活用できます。
 
-:::image type="content" source="../../assets/images/task-module/form.png" alt-text="タスクモジュールのフォームの例" border="false":::
+:::image type="content" source="../../assets/images/task-module/form.png" alt-text="タスク モジュール内のフォームの例。" border="false":::
 
 ### <a name="sign-in"></a>サインイン
 
-一連のタスクモジュールを使用してフォーカスのあるサインインまたはサインアップフローを作成し、ユーザーが連続した手順を簡単に移動できるようにします。
+一連のタスク モジュールを使用して、フォーカスのあるサインインフローまたはサインアップ フローを作成し、ユーザーが順次ステップを簡単に移動できます。
 
-:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="タスクモジュールでのサインイン操作の例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="タスク モジュールでのサインイン エクスペリエンスの例。" border="false":::
 
 ### <a name="media"></a>メディア
 
-タスクモジュールにメディアコンテンツを埋め込んで、フォーカスのある表示環境を実現します。
+フォーカスされた表示エクスペリエンスのために、タスク モジュールにメディア コンテンツを埋め込む。
 
-:::image type="content" source="../../assets/images/task-module/media.png" alt-text="タスクモジュール内のメディアコンテンツの例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/media.png" alt-text="タスク モジュールのメディア コンテンツの例。" border="false":::
 
 ### <a name="empty-state"></a>空の状態
 
-ウェルカムメッセージ、エラーメッセージ、および成功メッセージに使用します。
+ウェルカム メッセージ、エラー メッセージ、成功メッセージに使用します。
 
-:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="タスクモジュール内の空の状態の例です。" border="false":::
+:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="タスク モジュールの空の状態の例。" border="false":::
 
 ### <a name="image-gallery"></a>イメージ ギャラリー
 
-Iframe 内にギャラリーカルーセルを埋め込みます。
+ギャラリーカルーセルを iframe に埋め込む。
 
-:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="タスクモジュール内のイメージギャラリーの例です。" border="false":::
+:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="タスク モジュールのイメージ ギャラリーの例。" border="false":::
 
-### <a name="poll"></a>間隔
+### <a name="poll"></a>Poll
 
-この例では、アダプティブカードから起動された投票結果を示します。
+次の使用例は、アダプティブ カードから起動されたポーリング結果を示しています。 ポーリングは、タスク モジュール内に配置できます。
 
-:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="タスクモジュール内の投票の例" border="false":::
+:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="タスク モジュールのポーリングの例。" border="false":::
 
 ## <a name="best-practices"></a>ベスト プラクティス
 
@@ -109,19 +110,19 @@ Iframe 内にギャラリーカルーセルを埋め込みます。
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="タスクモジュールのベストプラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="タスク モジュールのベスト プラクティスを示す例。" border="false":::
 
-#### <a name="do-use-one-task-module-at-a-time"></a>Do: 一度に1つのタスクモジュールを使用する
+#### <a name="do-use-one-task-module-at-a-time"></a>Do: 一度に 1 つのタスク モジュールを使用する
 
-目標は、すべてのタスクを完了した後にユーザーにフォーカスを移動することです。
+目標は、ユーザーが結局タスクを完了する作業に集中する方法です。
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="タスクモジュールのベストプラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="例は、タスク モジュールのベスト プラクティスを示しています。" border="false":::
 
-#### <a name="dont-pop-a-dialog-on-top-of-a-task-module"></a>[いいえ: タスクモジュールの上にダイアログを表示する]
+#### <a name="dont-pop-a-dialog-on-top-of-a-task-module"></a>[しない] タスク モジュールの上にダイアログを表示する
 
-これにより、unfocused で混乱したユーザー環境が作成されます。
+これにより、焦点が合わされ、わかりにくいユーザー エクスペリエンスが作成されます。
 
    :::column-end:::
 :::row-end:::
@@ -130,40 +131,40 @@ Iframe 内にギャラリーカルーセルを埋め込みます。
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="タスクモジュールのベストプラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="例は、タスク モジュールのベスト プラクティスを示しています。" border="false":::
 
-#### <a name="do-make-sure-the-content-is-responsive"></a>実行: コンテンツが応答していることを確認する
+#### <a name="do-make-sure-the-content-is-responsive"></a>Do: コンテンツの応答性を確認する
 
-タスクモジュールでホストされているアダプティブカードはモバイルデバイスで適切に表示されますが、iframe を使用してアプリコンテンツをホストする場合は、UI が応答可能であることと、デバイス間で適切に動作することを確認してください。
+タスク モジュールでホストされているアダプティブ カードはモバイル デバイスで適切にレンダリングされます。iframe を使用してアプリ コンテンツをホストする場合は、UI が応答性に優れた、デバイス間で適切に動作する必要があります。
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="タスクモジュールのベストプラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="例では、タスク モジュールのベスト プラクティスを表示します。" border="false":::
 
-#### <a name="dont-use-horizontal-scrollbars"></a>いいえ: 水平スクロールバーを使用します。
+#### <a name="dont-use-horizontal-scroll-bars"></a>[しない]: 水平方向のスクロール バーを使用する
 
-コンテンツを重視しすぎないようにすることをお勧めします。 スクロールが必要な場合は、水平方向にスクロールします。
+コンテンツに焦点を当て、長すぎずに維持するベスト プラクティスです。 スクロールが必要な場合は、水平方向ではなく垂直方向にスクロールします。
 
    :::column-end:::
 :::row-end:::
 
-### <a name="simplicity"></a>合理
+### <a name="simplicity"></a>シンプルさ
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="タスクモジュールのベストプラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="例では、タスク モジュールのベスト プラクティスを表示します。" border="false":::
 
-#### <a name="do-keep-it-short"></a>実行: 短時間で保持する
+#### <a name="do-keep-it-short"></a>Do: 短くする
 
-マルチステップウィザードは簡単に作成できますが、これは必ずしも必要であるとは限りません。 複数画面タスクモジュールは、受信メッセージが煩雑で、tempt ユーザーが終了するため、問題を発生させる可能性があります。 タスクが実際に関係している場合は、タスクモジュールではなく、完全な web ページにポップアウトします。
+マルチステップ ウィザードは簡単に作成できますが、必ずしも必要とは限りません。 複数画面のタスク モジュールは、受信メッセージが気を散らし、ユーザーが終了を思い出すので、問題になる可能性があります。 タスクが実際に関係している場合は、タスク モジュールの代わりに完全な Web ページにポップアウトします。
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="タスクモジュールのベストプラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="タスク モジュールのベスト プラクティスを示す図。" border="false":::
 
-#### <a name="dont-do-long-interactions"></a>いいえ: 長時間の操作を実行する
+#### <a name="dont-do-long-interactions"></a>[しない]: 長時間の対話操作を実行する
 
-相互作用を短くして、ポイントにするようにしてください。
+やり取りを短くしてポイントにしてください。
 
    :::column-end:::
 :::row-end:::
@@ -172,19 +173,19 @@ Iframe 内にギャラリーカルーセルを埋め込みます。
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="タスクモジュールのベストプラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="図は、タスク モジュールのベスト プラクティスを示しています。" border="false":::
 
-#### <a name="do-use-inline-error-messages"></a>Do: インラインエラーメッセージを使用する
+#### <a name="do-use-inline-error-messages"></a>Do: インライン エラー メッセージを使用する
 
-インラインエラー処理のガイドラインについては、「forms UI template」を参照してください。
+インライン エラー処理のガイドラインについては、フォーム UI テンプレートを参照してください。
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="タスクモジュールのベストプラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="図は、タスク モジュールのベスト プラクティスを示しています。" border="false":::
 
-#### <a name="dont-put-error-messages-in-dialogs"></a>[いいえ: ダイアログにエラーメッセージを表示する。
+#### <a name="dont-put-error-messages-in-dialogs"></a>[しない] ダイアログにエラー メッセージを表示する
 
-タスクモジュールの上部にあるダイアログにエラーメッセージを表示しないようにします。 これにより、わかりやすいユーザー環境が作成されます。
+タスク モジュールの上のダイアログにエラー メッセージを表示しません。 わかりにくいユーザー エクスペリエンスを作成します。
 
    :::column-end:::
 :::row-end:::

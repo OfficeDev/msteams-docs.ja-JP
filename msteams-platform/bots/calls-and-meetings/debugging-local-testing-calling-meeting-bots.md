@@ -2,14 +2,15 @@
 title: ローカルで呼び出しや会議用ボットのデバッグを行う
 description: ngrok を使用して、ローカル PC で通話とオンライン会議ボットを開発する方法について学習します。
 ms.topic: how-to
+localization_priority: Normal
 keywords: ローカル開発 ngrok トンネル
 ms.date: 11/18/2018
-ms.openlocfilehash: b764e41302ab569e40c9dacd374a31e6abb1d642
-ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
+ms.openlocfilehash: 0f29f77e5030a7dbef9e8f7cefae4e055b7cc5b5
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51654287"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020163"
 ---
 # <a name="develop-calling-and-online-meeting-bots-on-your-local-pc"></a>ローカル PC で通話およびオンライン会議ボットを開発する
 

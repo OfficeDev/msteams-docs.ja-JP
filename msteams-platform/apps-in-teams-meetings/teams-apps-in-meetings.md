@@ -4,13 +4,14 @@ author: laujan
 description: 参加者とユーザーの役割に基づく Teams 会議のアプリの概要
 ms.topic: overview
 ms.author: lajanuar
+localization_priority: Normal
 keywords: teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: 201fa58cc375440cf6c495028135e32fd51f740c
-ms.sourcegitcommit: ee8c4800da3b3569d80c6f3661a2f20aa1f2c5e2
+ms.openlocfilehash: 29a24b70921e51d63d804e7a3edd901f607d3148
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "51885081"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52018384"
 ---
 # <a name="apps-in-teams-meetings"></a>Teams 会議のアプリ
 

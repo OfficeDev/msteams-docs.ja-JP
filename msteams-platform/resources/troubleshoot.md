@@ -2,14 +2,15 @@
 title: アプリのトラブルシューティング
 description: Microsoft Teams 用アプリの構築中に問題やエラーのトラブルシューティングを行う
 keywords: teams アプリ開発のトラブルシューティング
+localization_priority: Normal
 ms.topic: troubleshooting
 ms.date: 07/09/2018
-ms.openlocfilehash: a870a19eac9295f841b44b3b0364c46ffbc2d1d5
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: ce45a75869e8b6694cd84c10f8fac1f9bd55bad4
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696508"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020430"
 ---
 # <a name="troubleshoot-your-microsoft-teams-app"></a>Microsoft Teams アプリのトラブルシューティング
 

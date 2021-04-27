@@ -1,49 +1,50 @@
 ---
-title: Node.js と Microsoft Teams 用のごみ箱のジェネレーターを使用して、カスタムのチャネルとグループタブを作成する
+title: Microsoft Teams のカスタム チャネルとグループ タブNode.js Yeoman Generator を作成する
 author: laujan
-description: Microsoft Teams 用のごみ箱のジェネレーターを使用して、チャネルおよびグループタブを作成するためのクイックスタートガイド。
+description: Microsoft Teams 用 Yeoman Generator を使用してチャネルとグループ タブを作成するクイック スタート ガイド。
+localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 77081f83c753f812032ccfebe2accd3cb8859f99
-ms.sourcegitcommit: e8dfcb167274e996395b77d65999991a18f2051a
+ms.openlocfilehash: 962a558014a3bc84010860082df6891bb48c7715
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "47818935"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020304"
 ---
-# <a name="create-a-custom-channel-and-group-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Node.js と Microsoft Teams 用のごみ箱のジェネレーターを使用して、カスタムのチャネルとグループタブを作成する
+# <a name="create-a-custom-channel-and-group-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Microsoft Teams 用のカスタム チャネルとグループ Node.js Yeoman Generator を使用して作成する
 
 >[!NOTE]
->このクイックスタートは、「Microsoft OfficeDev GitHub リポジトリにある [最初の Microsoft Teams アプリ](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki を構築する」に記載されている手順に従います。
+>このクイック スタートは、Microsoft OfficeDev GitHub リポジトリにある最初の Microsoft [Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki のビルドで説明されている手順に従います。
 
-このクイックスタートでは、Teams の [ [オマーン] ジェネレーター](https://github.com/OfficeDev/generator-teams/)を使用して、カスタムのチャネルとグループタブを作成する手順を順を追って説明します。
+このクイック スタートでは、Teams Yeoman ジェネレーターを使用してカスタム チャネルとグループ タブを作成 [する方法について説明します](https://github.com/OfficeDev/generator-teams/)。
 
 [!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
 
 **構成可能なタブまたは静的タブを作成しますか?**
 
-方向キーを使用して、[構成可能なタブ] を選択します。
+矢印キーを使用して、構成可能なタブを選択します。
 
-**タブに使用するスコープを決定します。**
+**Tab に使用するスコープは何ですか?**
 
-チームまたはグループチャット (あるいはその両方) を選択できます。
+チームチャットまたはグループ チャットを選択できます
 
-**このタブを SharePoint Online で使用できるようにしますか。(Y/n)** 
+**このタブを SharePoint Online で使用できますか?(Y/n)** 
 
-[ **N**] を選択します。
+**[n] を選択します**。
 
 >[!IMPORTANT]
->このクイックスタートで参照される path コンポーネントの **Defaulttabnametab**は、[ **既定のタブ名** ] と [word **] タブ**に入力した値です。
+>このクイック スタートで参照されるパス コンポーネント **yourDefaultTabNameTab** は、[既定のタブ名] のジェネレーターに入力した値に Tab という単語を加 **えた値です**。
 >
->例: defaulttabname: **MyTab**/  =>  **mytabtab/**
+>例: DefaultTabName: **MyTab**  =>  **/MyTabTab/**
 
-プロジェクトディレクトリで、次の場所に移動します。
+プロジェクト ディレクトリで、次の場所に移動します。
 
 ```bash
 ./src/app/scripts/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.tsx
 ```
 
-ここでは、タブロジックについて説明します。 メソッドを検索 `render()` し、次の `<div>` タグとコンテンツをコンテナーコードの先頭に追加し `<PanelBody>` ます。
+そこで、タブ ロジックを見つける必要があります。 メソッドを `render()` 見つけて、コンテナー コードの上部に `<div>` 次のタグとコンテンツを `<PanelBody>` 追加します。
 
 ```html
     <PanelBody>
@@ -53,39 +54,39 @@ ms.locfileid: "47818935"
     </PanelBody>
 ```
 
-更新したファイルを保存してください。
+更新されたファイルを保存してください。
 
-## <a name="build-and-run-your-application"></a>アプリケーションをビルドして実行する
+## <a name="build-and-run-your-application"></a>アプリケーションのビルドと実行
 
-プロジェクトディレクトリでコマンドプロンプトを開いて、次のタスクを完了します。
+プロジェクト ディレクトリでコマンド プロンプトを開き、次のタスクを完了します。
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
-[タブの構成] ページを表示するには、に移動 `https://localhost:3007/<yourDefaultAppNameTab>/config.html` します。 以下のように表示されます。
+タブ構成ページを表示するには、 に移動します `https://localhost:3007/<yourDefaultAppNameTab>/config.html` 。 以下のように表示されます。
 
 ![構成ページのスクリーンショット](~/assets/images/tab-images/configurationPage.png)
 
-## <a name="establish-a-secure-tunnel-to-your-tab"></a>タブへのセキュリティで保護されたトンネルの確立
+## <a name="establish-a-secure-tunnel-to-your-tab"></a>タブへのセキュリティで保護されたトンネルを確立する
 
-Microsoft Teams は完全なクラウドベースの製品であり、HTTPS エンドポイントを使用してクラウドからタブのコンテンツを利用できるようにする必要があります。 Teams ではローカルホスティングが許可されていません。そのため、タブをパブリック URL に公開するか、またはプロキシを使用して、ローカルポートをインターネットに接続する URL に公開する必要があります。
+Microsoft Teams は完全にクラウドベースの製品であり、HTTPS エンドポイントを使用してタブ コンテンツをクラウドから利用できる必要があります。 Teams ではローカル ホスティングが許可されていないので、タブをパブリック URL に発行するか、ローカル ポートをインターネットに接続する URL に公開するプロキシを使用する必要があります。
 
-タブ拡張機能をテストするには、このアプリケーションに組み込まれている [ngrok](https://ngrok.com/docs)を使用します。 Ngrok はリバースプロキシソフトウェアツールであり、ローカルで実行されている web サーバーの公開された HTTPS エンドポイントへのトンネルを作成します。 サーバーの web エンドポイントは、ローカルコンピューターの現在のセッション中に使用できるようになります。 コンピューターがシャットダウンされるかスリープ状態になると、サービスは使用できなくなります。
+タブ拡張機能をテストするには、このアプリケーションに組み込まれる [ngrok](https://ngrok.com/docs)を使用します。 Ngrok はリバース プロキシ ソフトウェア ツールで、ローカルで実行中の Web サーバーのパブリックに利用可能な HTTPS エンドポイントへのトンネルを作成します。 サーバーの Web エンドポイントは、ローカル コンピューター上の現在のセッション中に利用できます。 コンピューターがシャットダウンまたはスリープ状態になった場合、サービスは使用できなくなりました。
 
-コマンドプロンプトで、localhost を終了し、次のように入力します。
+コマンド プロンプトで localhost を終了し、次のコマンドを入力します。
 
 ```bash
 gulp ngrok-serve
 ```
 
 > [!IMPORTANT]
-> タブが Microsoft teams にアップロードされて正常に保存されると、タブギャラリーで表示し、[タブ] バーに追加して、ngrok トンネルセッションが終了するまでそれを操作することができます。 Ngrok セッションを再起動する場合は、新しい URL を使用してアプリを更新する必要があります。
+> タブが Microsoft チームにアップロードされ、正常に保存された後は、タブ ギャラリーでタブを表示し、タブ バーに追加し、ngrok トンネル セッションが終了するまで操作できます。 ngrok セッションを再起動する場合は、新しい URL でアプリを更新する必要があります。
 
 ## <a name="upload-your-application-to-teams"></a>アプリケーションを Teams にアップロードする
 
-- Microsoft Teams クライアントを開きます。 [Web ベースのバージョン](https://teams.microsoft.com)を使用する場合は、ブラウザーの[開発者ツール](~/tabs/how-to/developer-tools.md)を使用してフロントエンドコードを調べることができます。
-- 左側の [ *チーム* ] パネルで、 `...` 使用しているチームの横のメニューを選択して、タブのテストを行い、[ **チームの管理**] を選択します。
-- メインパネルで、タブバーから [ **アプリ** ] を選択し、ページの右下隅にある [ **カスタムアプリのアップロード** ] を選択します。
-- プロジェクトディレクトリを開き、 **./パッケージ** フォルダーを参照して、アプリパッケージの zip フォルダーを選択し、[ **開く**] を選択します。 タブが Teams にアップロードされます。
-- チームに戻り、タブを表示するチャネルを選択し、タブバーから [➕] を選択して、ギャラリーからタブを選択します。
-- タブを追加する手順に従います。[チャネル/グループ] タブには、カスタム構成ダイアログがあることに注意してください。
-- [ **保存** ] を選択すると、タブがチャネルのタブバーに追加されます。
+- Microsoft Teams クライアントを開きます。 Web ベースのバージョン [を使用する](https://teams.microsoft.com) 場合は、ブラウザーの開発者ツールを使用してフロントエンド コードを [検査できます](~/tabs/how-to/developer-tools.md)。
+- 左側の *[YourTeams]* パネルで、タブのテストに使用するチームの横にあるメニューを選択し、[チームの管理 `...` ] **を選択します**。
+- メイン パネルでタブ バーから **[アプリ**]を選択し、ページの右下隅にある [カスタム アプリのアップロード] を選択します。
+- プロジェクト ディレクトリを開き **、./package** フォルダーを参照し、アプリ パッケージの zip フォルダーを選択し、[開く] を選択 **します**。 タブが Teams にアップロードされます。
+- チームに戻り、タブを表示するチャネルを選択し、タブ バーから [➕] を選択し、ギャラリーからタブを選択します。
+- タブを追加するには、指示に従います。チャネル/グループ タブのカスタム構成ダイアログがあります。
+- [ **保存]** を選択すると、タブがチャネルのタブ バーに追加されます。

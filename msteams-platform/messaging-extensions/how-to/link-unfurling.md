@@ -2,14 +2,15 @@
 title: リンク展開
 author: clearab
 description: Microsoft Teams アプリでメッセージング拡張機能を使用してリンク解除を実行する方法。
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 628c5e760a4bc038443a20714e6960f1ffe8a2ad
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 2037e1e9a903cfe90d0dd8866722b0d10fa156b2
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696232"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019819"
 ---
 # <a name="link-unfurling"></a>リンク展開
 

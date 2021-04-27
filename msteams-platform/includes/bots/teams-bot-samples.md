@@ -1,3 +1,18 @@
+---
+title: Teams ボットのサンプル
+description: ボット フレームワークの Teams サンプルについて説明します
+localization_priority: Normal
+ms.topic: overview
+ms.author: surbhigupta12
+ms.openlocfilehash: 663d676b636711b42a4bf07bac7ff9a83b70a3d4
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020010"
+---
+## <a name="teams-bot-samples"></a>Teams ボットのサンプル
+
 ## <a name="code-sample"></a>コード サンプル
 
 機能を示す完全な作業サンプルについては、ボット フレームワーク用の次の Teams サンプルを参照してください。

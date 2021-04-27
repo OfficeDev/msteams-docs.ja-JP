@@ -1,99 +1,105 @@
 ---
-title: '[Teams で共有] ボタンを作成する'
-description: Web サイトの Teams 埋め込みボタンに共有を追加する方法
+title: '[Share-to-Teams の作成] ボタン'
+description: Web サイトの [Teams 埋め込み共有] ボタンを追加する方法
 ms.topic: reference
-keywords: Teams の共有と Teams 間の共有
-ms.openlocfilehash: 46091c957137cc871095ca6a57c0d61fa79d9458
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+localization_priority: Normal
+keywords: チーム間の共有
+ms.openlocfilehash: c77c4149c95685e17e8f789a9536b4d81e05d13f
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014335"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020824"
 ---
-# <a name="create-a-share-to-teams-button-for-your-website"></a>Web サイトの [Teams で共有] ボタンを作成する
+# <a name="create-share-to-teams-button"></a>[Share-to-Teams の作成] ボタン
 
->[!NOTE]
-> * Edge と Chrome のデスクトップ バージョンだけがサポートされます。
-> * Freemium またはゲスト アカウントの使用はサポートされていません。
+サードパーティの Web サイトでは、ランチャー スクリプトを使用して、Web ページに Share-to-Teams ボタンを埋め込む可能性があります。 選択すると、ポップアップ ウィンドウで Share-to-Teams エクスペリエンスが起動します。 これにより、コンテキストを切り替えることなく、任意のユーザーまたは Microsoft Teams チャネルへのリンクを直接共有できます。 このドキュメントでは、Web サイトの [Share-to-Teams] ボタンを作成して埋め込み、Web サイトのプレビューを作成し、教育向け Share-to-Teams を拡張する方法についてガイドします。
 
-サード パーティの Web サイトでは、ランチャー スクリプトを使用して、Teams への共有ボタンを Web ページに埋め込み、クリックするとポップアップ ウィンドウで Teams への共有エクスペリエンスを起動できます。 これにより、コンテキストを切り替えなくても、任意のユーザーまたは Microsoft Teams チャネルに直接リンクを共有できます。
+> [!NOTE]
+> * サポートされているのは、Edge と Chrome のデスクトップ バージョンのみです。
+> * Freemium アカウントまたはゲスト アカウントの使用はサポートされていません。  
 
-![Teams への共有ポップアップ](~/assets/images/share-to-teams-popup.png)
+次の図は、Share-to-Teams ポップアップ エクスペリエンスを表示します。
 
-## <a name="how-to-embed-a-share-to-teams-button"></a>[Teams に共有] ボタンを埋め込む方法
+![[チーム間の共有] ポップアップ](~/assets/images/share-to-teams-popup.png)
 
-最初に、Web ページにスクリプト `launcher.js` を追加する必要があります。
+## <a name="embed-a-share-to-teams-button"></a>[Teams への共有の埋め込み] ボタン
 
-```html
-<script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
-```
+1. Web ページ `launcher.js` にスクリプトを追加します。
 
-次に、クラス属性と属性で共有するリンクを含む HTML 要素を Web ページ `teams-share-button` に追加 `data-href` します。
+    ```html
+    <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
+    ```
 
-```html
-<div
-  class="teams-share-button"
-  data-href="https://<link-to-be-shared>">
-</div>
-```
+1. クラス属性と属性で共有するリンクを含む HTML 要素を Web ページ `teams-share-button` に追加 `data-href` します。
 
-これにより、Microsoft Teams アイコンが Web サイトに追加されます。
+    ```html
+    <div
+      class="teams-share-button"
+      data-href="https://<link-to-be-shared>">
+    </div>
+    ```
 
-![[Teams に共有] アイコン](~/assets/icons/share-to-teams-icon.png)
+    これを完了すると、Microsoft Teams アイコンが Web サイトに追加されます。 次の図は、Share-to-Teams アイコンを示しています。
 
-必要に応じて、[Teams に共有] ボタンに別のアイコン サイズが必要な場合は、属性を使用 `data-icon-px-size` します。
+    ![[Teams に共有] アイコン](~/assets/icons/share-to-teams-icon.png)
 
-```html
-<div
-  class="teams-share-button"
-  data-href="https://<link-to-be-shared>"
-  data-icon-px-size="64">
-</div>
-```
+1. または、[共有する Teams] ボタンに別のアイコン サイズが必要な場合は、属性を使用 `data-icon-px-size` します。
 
-共有するリンクからの URL プレビューが Teams で正しく表示されていないことが分かっている場合 (たとえば、リンクはユーザー認証を必要とします)、設定された属性を追加して URL プレビューを無効に `data-preview` できます `false` 。
+    ```html
+    <div
+      class="teams-share-button"
+      data-href="https://<link-to-be-shared>"
+      data-icon-px-size="64">
+    </div>
+    ```
+1. 共有リンクでユーザー認証が必要で、リンクから共有する URL プレビューが Teams でうまく表示されない場合は、に属性セットを追加して URL プレビューを `data-preview` 無効にできます `false` 。
 
-```html
-<div
-  class="teams-share-button"
-  data-href="https://<link-to-be-shared>"
-  data-preview="false">
-</div>
-```
+    ```html
+    <div
+      class="teams-share-button"
+      data-href="https://<link-to-be-shared>"
+      data-preview="false">
+    </div>
+    ```
 
-ページがコンテンツを動的にレンダリングする場合は、このメソッドを使用して、パイプライン内の適切な場所に [共有] ボタンを強制的 `shareToMicrosoftTeams.renderButtons()` にレンダリングできます。 
+1. ページがコンテンツを動的にレンダリングする場合は、このメソッドを使用して、パイプライン内の適切な場所で [共有] ボタンを強制的 `shareToMicrosoftTeams.renderButtons()` にレンダリングできます。 
 
-## <a name="crafting-your-website-preview"></a>Web サイト プレビューの作成
+## <a name="craft-your-website-preview"></a>Web サイトのプレビューを作成する
 
-Web サイトを Teams と共有すると、選択したチャネルに挿入されたカードに Web サイトのプレビューが含まれる。 共有する Web サイト (URL) に適切なメタデータを追加することで、このプレビューの動作を制御 `data-href` できます。 次の表に、必要なタグの概要を示します。 HTML の既定のバージョンまたは Open Graph バージョンを使用できます。
+Web サイトが Teams に共有されている場合、選択したチャネルに挿入されるカードには、Web サイトのプレビューが含まれる。 このプレビューの動作を制御するには、共有する Web サイト (URL など) に適切なメタ データが追加されます `data-href` 。  
 
-プレビューを表示するには、次の条件を実行する必要があります。
+**プレビューを表示するには**
 
-* サムネイル画像、またはタイトルと説明の両方を含める (最適な結果を得る場合は、3 つすべてが含まれます)。
-* 共有される URL は認証を必要とできません。 それでも共有できますが、プレビューは作成されません。
+* サムネイル 画像、または **Title と** Description の **両方を含める****必要があります**。 最適な結果を得る場合は、3 つすべてが含まれます。
+* 共有 URL は認証を必要とします。 認証が必要な場合は共有できますが、プレビューは作成されません。
 
-|値|メタ タグ| Open Graph|
+次の表に、必要なタグの概要を示します。
+
+|値|メタ タグ| グラフを開く|
 |----|----|----|
 |タイトル|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
 |説明|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
-|サムネイル画像| なし |`<meta property="og:image" content="http://example.com/image.jpg">`|
+|サムネイル 画像| none。 |`<meta property="og:image" content="http://example.com/image.jpg">`|
 
-## <a name="share-to-teams-for-education"></a>Teams for Education への共有
+HTML の既定のバージョン、または Open Graph バージョンのいずれかを使用できます。
 
-[Teams に共有] ボタンを使用する教師には、追加のオプションが表示されます `Create an Assignment` 。 これにより、共有リンクに基づいて選択したチームに割り当てを簡単に作成できます。
+## <a name="share-to-teams-for-education"></a>教育向け Teams への共有
 
-![Teams への共有ポップアップ](~/assets/images/share-to-teams-popup-edu.png)
+[チームに共有] ボタンを使用する教師の場合は、追加のオプションがあります `Create an Assignment` 。 これにより、共有リンクに基づいて、選択したチームで割り当てを簡単に作成できます。 次の図は、教育用の Share-to-Teams を表示します。 
 
-## <a name="full-launcherjs-definition"></a>完全launcher.js定義
+![Teams ポップアップ教育への共有](~/assets/images/share-to-teams-popup-edu.png)
+
+## <a name="full-launcherjs-definition"></a>完全なlauncher.js定義
 
 | プロパティ | HTML 属性 | 種類 | 既定値 | 説明 |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
 | href | `data-href` | 文字列 | 該当なし | 共有するコンテンツの href。 |
-| preview | `data-preview` | boolean (文字列として) | `true` | 共有するコンテンツのプレビューを表示するかどうか。 |
-| iconPxSize | `data-icon-px-size` | number (文字列) | `32` | レンダリングする [Share-to-Teams] ボタンのサイズ (ピクセル単位)。 |
-| msgText | `data-msg-text` | 文字列 | 該当なし | メッセージ作成ボックスのリンクの前に挿入される既定のテキスト (200 文字制限) |
-| assignInstr | `data-assign-instr` | 文字列 | 該当なし | 割り当ての "命令" フィールドに挿入される既定のテキスト (200 文字制限) |
-| assignTitle | `data-assign-title` | 文字列 | 該当なし | 割り当ての "タイトル" フィールドに挿入される既定のテキスト (50 文字制限) |
+| preview | `data-preview` | boolean (文字列として) | `true` | 共有するコンテンツのプレビューを表示するかどうかを指定します。 |
+| iconPxSize | `data-icon-px-size` | number (文字列として) | `32` | レンダリングする [Share-to-Teams] ボタンのサイズ (ピクセル単位)。 |
+| msgText | `data-msg-text` | 文字列 | 該当なし | メッセージ作成ボックスのリンクの前に挿入される既定のテキスト。 最大文字数は 200 文字です。 |
+| assignInstr | `data-assign-instr` | 文字列 | 該当なし | 割り当ての [命令] フィールドに挿入される既定のテキスト。 最大文字数は 200 文字です。 |
+| assignTitle | `data-assign-title` | 文字列 | 該当なし | 割り当ての [タイトル] フィールドに挿入される既定のテキスト。 最大文字数は 50 です。 |
 
 ### <a name="methods"></a>メソッド
 
@@ -101,17 +107,19 @@ Web サイトを Teams と共有すると、選択したチャネルに挿入さ
 
 `options` (省略可能): `{ elements?: HTMLElement[] }`
 
-現在ページ上のすべての共有ボタンをレンダリングします。 オプションのオブジェクトに要素のリストが指定されている場合、それらの要素 `options` は共有ボタンにレンダリングされます。
+現在、すべての共有ボタンがページにレンダリングされます。 省略可能な `options` オブジェクトに要素のリストが指定されている場合、それらの要素は共有ボタンにレンダリングされます。
 
-### <a name="setting-default-form-values"></a>既定のフォーム値の設定
+### <a name="set-default-form-values"></a>既定のフォーム値を設定する
 
-必要に応じて、[Teams に共有] フォームの次のフィールドの既定値を設定することもできます。
+[チームへの共有] フォームで、次のフィールドの既定値を設定できます。
 
-* このことを言う ( `msgText` )
-* 割り当て命令 ( `assignInstr` )
-* 割り当てタイトル ( `assignTitle` )
+* このことを言います。 `msgText`
+* 割り当て手順: `assignInstr`
+* 割り当てのタイトル: `assignTitle`
 
-#### <a name="example-default-form-values"></a>例: 既定のフォーム値
+#### <a name="example"></a>例
+
+ 既定のフォーム値は、次の例で指定します。
 
 ```html
 <span
@@ -122,3 +130,8 @@ Web サイトを Teams と共有すると、選択したチャネルに挿入さ
     data-assign-instr="Default Assignment Instructions"
 ></span>
 ```
+
+## <a name="see-also"></a>関連項目
+
+> [!div class="nextstepaction"]
+> [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)

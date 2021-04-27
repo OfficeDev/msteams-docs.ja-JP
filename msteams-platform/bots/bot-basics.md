@@ -1,17 +1,18 @@
 ---
-title: ボット アクティビティ ハンドラー
+title: ボットのアクティビティ ハンドラー
 author: clearab
 description: Teams のボット アクティビティ ハンドラーについて説明します。
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 22f4c3f3addcf87b3fb34a1b7b3d40d2092b8a44
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: da770d930ca6d00503c0102f1e683a60161636fd
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696431"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020191"
 ---
-# <a name="bot-activity-handlers"></a>ボット アクティビティ ハンドラー
+# <a name="bot-activity-handlers"></a>ボットのアクティビティ ハンドラー
 
 このドキュメントでは、ボットの動作に[](https://aka.ms/how-bots-work)関する記事を基に、ボット フレームワークのコア[ドキュメントを参照してください](https://aka.ms/azure-bot-service-docs)。 Microsoft Teams 用に開発されたボットとコア ボット フレームワークの主な違いは、Teams で提供される機能です。
 

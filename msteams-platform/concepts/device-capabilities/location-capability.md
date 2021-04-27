@@ -1,15 +1,17 @@
 ---
 title: 場所機能を統合する
+author: Rajeshwari-v
 description: Teams JavaScript クライアント SDK を使用して場所の機能を活用する方法
 keywords: 場所マップ機能ネイティブ デバイスのアクセス許可
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: de699d4edbf1c95f283cead9d12dcd2c98f8d3b9
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 98d37c4f34f638f129c07b012d98ec54c7c8e44f
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696858"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019861"
 ---
 # <a name="integrate-location-capabilities"></a>場所機能を統合する 
 
@@ -64,7 +66,7 @@ Teams アプリに場所機能を統合する主な利点は、Teams プラッ�
 
 Teams アプリでこれらのエラーを適切に処理する必要があります。 次の表に、エラー コードとエラーが生成される条件を示します。 
 
-|エラー コード |  エラー名     | Condition|
+|エラー コード |  エラー名     | 条件|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API は現在のプラットフォームではサポートされていません。|
 | **500** | INTERNAL_ERROR | 必要な操作の実行中に内部エラーが発生します。|

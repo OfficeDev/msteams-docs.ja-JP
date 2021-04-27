@@ -4,14 +4,15 @@ description: Microsoft Teams のボットでイベントを処理する方法に
 keywords: teams ボット イベント
 ms.date: 05/20/2019
 ms.topic: how-to
+localization_priority: Normal
 ms.author: lajanuar
 author: laujan
-ms.openlocfilehash: 0fdd30a8eed63ea83e15825b0bf097125b4b665d
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 5a7f7971d7f58af315222933f1c1f192868a4171
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696613"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020640"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>Microsoft Teams でのボット イベントの処理
 

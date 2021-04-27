@@ -3,14 +3,15 @@ title: 使い始める - メッセージング拡張機能を作成する
 author: heath-hamilton
 description: Microsoft Teams を使用して Microsoft Teams メッセージング拡張機能をすばやく作成Toolkit。
 ms.author: lajanuar
+localization_priority: Normal
 ms.date: 11/04/2020
 ms.topic: tutorial
-ms.openlocfilehash: 09e851820314efd3dc114b926a0111603cac18a4
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: f3b5bc9c749d5e5276c0c7af7ff92f4ff5a00d0b
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696879"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020871"
 ---
 # <a name="build-a-messaging-extension-for-microsoft-teams"></a>Microsoft Teams のメッセージング拡張機能を構築する
 
@@ -46,10 +47,10 @@ Microsoft Teams Toolkitは、メッセージング拡張機能に対して次の
 > [!TIP]
 > 以前に Teams アプリ プロジェクトを作成したことがない場合は、プロジェクトの詳細を[](../build-your-first-app/build-and-run.md)説明する手順に従うのが役に立つ場合があります。
 
-1. [Visual Studioコード] で、左側のアクティビティ バーで **[Microsoft Teams]** を選択し、[新しい Teams アプリの作成 :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: ] **を選択します**。
-1. メッセージが表示されたら、Microsoft 365 開発アカウントでサインインします。
+1. Visual Studio Code で、左側の [アクティビティ バー] で [**Microsoft Teams**] :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: を選択し、[**新しい Teams アプリを作成する**] を選択します。
+1. メッセージが表示されたら、Microsoft 365 開発アカウントを使用してサインインします。
 1. [機能 **の追加] 画面で** 、[メッセージング拡張機能] **、[次へ] の順** に **選択します**。
-1. Teams アプリの名前を入力します。 (これは、アプリの既定の名前であり、ローカル コンピューター上のアプリ プロジェクト ディレクトリの名前です)。
+1. Teams アプリの名前を入力します。 (これは、アプリの既定の名前であり、ローカル コンピューター上のアプリのプロジェクト ディレクトリの名前でもあります)。
 1. [メッセージング拡張機能 **の構成] 画面で** 、次の操作を行います。
     1. メッセージング拡張機能の **種類の [** 検索ベース] オプションのみを選択します。
     1. [新 **しいボットの作成] を選択し** 、[ **ボット登録の作成] を選択します**。 成功した場合、新しいボットの状態は **[** 登録済み] になります。
@@ -94,7 +95,7 @@ Teams を使用してプロジェクトを作成すると、アプリの構成�
 
 メッセージング拡張機能をホストする URL を設定し、検索を処理するように構成しました。 アプリを起動して実行する時間です。
 
-1. ターミナルで、アプリ プロジェクトのルート ディレクトリに移動して実行します `npm install` 。
+1. ターミナルで、アプリ プロジェクトのルート ディレクトリに移動し、`npm install` を実行します。
 1. `npm start` を実行します。
 
 成功した場合は、メッセージング拡張機能サービスがアクティビティをリッスン中であることを示す次のメッセージが表示されます `localhost` 。
@@ -123,7 +124,7 @@ Teams チャットでのメッセージング拡張機能の動作について�
 
 お疲れさまでした。 作成またはコマンド ボックスで外部コンテンツを検索するように設定されている基本的な Teams メッセージング拡張機能があります。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 完全に機能するメッセージング拡張機能を続行してビルドするには、次のページを参照してください。
 

@@ -2,14 +2,15 @@
 title: チュートリアル - Yeoman ジェネレーターを使用して最初のアプリを作成する
 description: Yeoman ジェネレーターを使用して Microsoft Teams アプリの構築を開始する方法について説明します。
 keywords: nodejs yeoman node.jsを開始する
+localization_priority: Normal
 ms.topic: tutorial
 ms.custom: scenarios:getting-started
-ms.openlocfilehash: 81cbdbfa213f415eebae9bb63d76c39599b56c01
-ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
+ms.openlocfilehash: 9efbe6f6e6502120f1afdadb9b538182f1406c56
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51654413"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52018433"
 ---
 # <a name="create-your-first-microsoft-teams-app-using-the-yeoman-generator"></a>Yeoman ジェネレーターを使用して最初の Microsoft Teams アプリを作成する
 
@@ -118,7 +119,7 @@ npm install generator-teams@preview --global
 
 ソリューションをビルドするには、コマンドを使用 `gulp build` します。 これにより、ソリューションがフォルダーに変換 `./dist` されます。 
 
-## <a name="run-your-app"></a>アプリを実行する
+## <a name="run-your-app"></a>アプリの実行
 
 アプリを実行するには、コマンドを使用 `gulp serve` します。 これにより、アプリをテストするためのローカル Web サーバーが構築され、開始されます。 また、プロジェクトにファイルを保存するたびに、このコマンドはアプリケーションを再構築します。 
 

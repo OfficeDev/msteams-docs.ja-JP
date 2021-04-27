@@ -1,19 +1,20 @@
 ---
 title: タスク モジュールとは
 author: clearab
-description: モーダル ポップアップ エクスペリエンスを追加して、Microsoft Teams アプリからユーザーに情報を収集または表示します。
+description: モーダル ポップアップ エクスペリエンスを追加して、Microsoft Teams アプリからユーザーに情報を収集または表示する
+localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 3920d3ae71857dcc7673c4c27449b71009c7f07e
-ms.sourcegitcommit: 5cb3453e918bec1173899e7591b48a48113cf8f0
+ms.openlocfilehash: 5472f07a8183e6f06ce6cb4fa2a9c048e083dcca
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "50449550"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019518"
 ---
 # <a name="what-are-task-modules"></a>タスク モジュールとは
 
-タスク モジュールを使用すると、Teams のアプリケーションでモーダル ポップアップ エクスペリエンスを作成することができます。 ポップアップ内では、独自のカスタム HTML/JavaScript コードを実行したり、YouTube や Microsoft Stream ビデオなどの -based ウィジェットを表示したり、アダプティブ カード `<iframe>` を [表示することができます](/adaptive-cards/)。 これらは特に、タスクの開始や完了、ビデオや Power BI ダッシュボードなどのリッチな情報の表示に役立ちます。 一般的にポップアップ エクスペリエンスは、タブや会話ベースのボット エクスペリエンスに比べて、より自然にユーザーがタスクを開始したり完了したりすることができるようになっています。
+タスク モジュールを使用すると、Teams アプリケーションでモーダル ポップアップ エクスペリエンスを作成することができます。 ポップアップ内では、独自のカスタム HTML/JavaScript コードを実行したり、YouTube や Microsoft Stream ビデオなどの -based ウィジェットを表示したり、アダプティブ カード `<iframe>` を [表示することができます](/adaptive-cards/)。 これらは特に、タスクの開始や完了、ビデオや Power BI ダッシュボードなどのリッチな情報の表示に役立ちます。 一般的にポップアップ エクスペリエンスは、タブや会話ベースのボット エクスペリエンスに比べて、より自然にユーザーがタスクを開始したり完了したりすることができるようになっています。
 
 タスク モジュールは、Microsoft Teams タブの基礎上に構築されます。基本的には、ポップアップ ウィンドウ内のタブです。 同じ SDK を使用します。タブを作成した場合は、タスク モジュールを作成する方法の 90% が既にあります。
 
@@ -61,10 +62,10 @@ ms.locfileid: "50449550"
 | `title` | string | アプリ名の下とアプリ アイコンの右側に表示されます。 |
 | `height` | number または string | これは、タスク モジュールの高さをピクセル単位で表す数値、または `small` 、 `medium` を指定できます `large` 。 [高さと幅の処理方法については、以下を参照してください](#task-module-sizing)。 |
 | `width` | number または string | これは、タスク モジュールの幅をピクセル単位で表す数値、または `small` 、 `medium` 、または を指定できます `large` 。 [高さと幅の処理方法については、以下を参照してください](#task-module-sizing)。 |
-| `url` | string | タスク モジュール内に読み込まれた `<iframe>` ページの URL。 URL のドメインは、アプリのマニフェスト内の [アプリの validDomains](~/resources/schema/manifest-schema.md#validdomains) 配列内にある必要があります。 |
+| `url` | 文字列 | タスク モジュール内に読み込まれた `<iframe>` ページの URL。 URL のドメインは、アプリのマニフェスト内の [アプリの validDomains](~/resources/schema/manifest-schema.md#validdomains) 配列内にある必要があります。 |
 | `card` | アダプティブ カードまたはアダプティブ カード ボット カードの添付ファイル | タスク モジュールに表示されるアダプティブ カードの JSON。 ボットから呼び出す場合は、Bot Framework オブジェクトでアダプティブ カード JSON を使用する必要 `attachment` があります。 タブからアダプティブ カードを使用します。 [例を次に示します。](#adaptive-card-or-adaptive-card-bot-card-attachment) |
-| `fallbackUrl` | string | クライアントがタスク モジュール機能をサポートしていない場合、この URL はブラウザー タブで開きます。 |
-| `completionBotId` | string | タスク モジュールとのユーザーの対話の結果を送信するボット アプリ ID を指定します。 指定した場合、ボットはイベント ペイロード `task/submit invoke` に JSON オブジェクトを含むイベントを受信します。 |
+| `fallbackUrl` | 文字列 | クライアントがタスク モジュール機能をサポートしていない場合、この URL はブラウザー タブで開きます。 |
+| `completionBotId` | 文字列 | タスク モジュールとのユーザーの対話の結果を送信するボット アプリ ID を指定します。 指定した場合、ボットはイベント ペイロード `task/submit invoke` に JSON オブジェクトを含むイベントを受信します。 |
 
 > [!NOTE]
 > タスク モジュール機能では、読み込む URL のドメインがアプリのマニフェストの配列 `validDomains` に含まれている必要があります。
@@ -211,7 +212,7 @@ CSS は次の値です。
 
 に関する情報を次に `APP_ID` 示します `BOT_APP_ID` 。
 
-| 値 | 型 | 必須 | 説明 |
+| 値 | 種類 | 必須 | 説明 |
 | --- | --- | --- | --- |
 | `APP_ID` | string | はい | タスク [モジュール](~/resources/schema/manifest-schema.md#id) を呼び出すアプリの ID。 マニフェスト [の validDomains 配列](~/resources/schema/manifest-schema.md#validdomains) には、URL に if の `APP_ID` `url` ドメイン `url` が含まれている必要があります。 (アプリ ID は、タブまたはボットからタスク モジュールが呼び出されると既に知られているので、そのモジュールは .) に含まれません `TaskInfo` 。 |
 | `BOT_APP_ID` | 文字列 | いいえ | for の値 `completionBotId` を指定すると、オブジェクトはメッセージを `result` 介して指定 `task/submit invoke` されたボットに送信されます。 `BOT_APP_ID` アプリのマニフェストでボットとして指定する必要があります。つまり、ボットに送信する必要があります。 |

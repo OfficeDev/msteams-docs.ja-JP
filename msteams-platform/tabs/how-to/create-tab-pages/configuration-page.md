@@ -3,14 +3,15 @@ title: 構成ページを作成する
 author: laujan
 description: 構成ページの作成方法
 keywords: teams タブ グループ チャネル構成可能
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 9407e4afc0b52f1b16f2d6b5a55e824f484a1870
-ms.sourcegitcommit: 3727fc58e84b6f1752612884c2e0b25e207fb56e
+ms.openlocfilehash: 0866d11442f79cee33d4454dbd4ed4d6b4b1a840
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "51382377"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019595"
 ---
 # <a name="create-a-configuration-page"></a>構成ページを作成する
 
@@ -112,7 +113,7 @@ ms.locfileid: "51382377"
 
 ### <a name="get-context-data-for-your-tab-settings"></a>タブ設定のコンテキスト データを取得する
 
-関連するコンテンツを表示するには、タブにコンテキスト情報が必要になる場合があります。 コンテキスト情報は、よりカスタマイズされたユーザー エクスペリエンスを提供することで、タブの魅力をさらに強化します。
+お使いのタブでは、関連するコンテンツを表示するためにコンテキスト情報が必要になる場合があります。 コンテキスト情報は、よりカスタマイズされたユーザー エクスペリエンスを提供することで、タブの魅力をさらに強化します。
 
 タブ構成に使用されるプロパティの詳細については、「Context [interface」を参照してください](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true)。 次の 2 つの方法でコンテキスト データ変数の値を収集します。
 
@@ -122,7 +123,7 @@ ms.locfileid: "51382377"
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>プレースホルダーを `configurationUrl`
 
-コンテキスト インターフェイスのプレースホルダーを基本に追加します `configurationUrl` 。 次に例を示します。
+コンテキスト インターフェイスのプレースホルダーを基本に追加します `configurationUrl` 。 例:
 
 ##### <a name="base-url"></a>ベース URL
 

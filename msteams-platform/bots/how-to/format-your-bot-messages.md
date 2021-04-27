@@ -1,17 +1,18 @@
 ---
-title: ボット メッセージの書式設定
+title: ボット メッセージの書式を設定する
 author: clearab
 description: ボット メッセージにリッチ書式を追加する
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 39b82e78e061653eaa3e3b66c10a611d005924bd
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: 7dc082f4b17e123c9fa000552f02fc913c66dcf7
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51697005"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020906"
 ---
-# <a name="format-your-bot-messages"></a>ボット メッセージの書式設定
+# <a name="format-your-bot-messages"></a>ボット メッセージの書式を設定する
 
 メッセージの書式設定を使用すると、ボット メッセージを最適に表示できます。 ボタン、テキスト、画像、オーディオ、ビデオなどの対話型要素を含む添付ファイルであるリッチ カードをボット メッセージに書式設定できます。
 

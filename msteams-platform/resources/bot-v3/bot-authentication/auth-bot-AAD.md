@@ -2,14 +2,15 @@
 title: Azure Active Directory を使用したボットの認証
 description: Teams での Azure AD認証とボットでの使用方法について説明します。
 keywords: teams 認証ボット AAD
+localization_priority: Normal
 ms.topic: conceptual
 ms.date: 03/01/2018
-ms.openlocfilehash: f772ef84282c3b8e1ee3e6aa96b47bf12caaa4dd
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: c3f2f7fe3eb6b10faef2b24b3212081a881d6f8f
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696683"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020689"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-bot"></a>Microsoft Teams ボットでユーザーを認証する
 

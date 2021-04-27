@@ -3,24 +3,25 @@ title: 会議拡張機能の設計
 author: heath-hamilton
 description: Teams 会議でアプリを設計し、Microsoft Teams UI キットを取得する方法について説明します。
 ms.author: lajanuar
+localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: e4e7bb05fbc9717a4eb8323302d1a10eac4c77dd
-ms.sourcegitcommit: f5ee3fa5ef6126d9bf845948d27d9067b3bbb994
+ms.openlocfilehash: 022ffdd7341f60a9c6732948a0914383ddb248a8
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "51596253"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52018475"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Microsoft Teams 会議拡張機能の設計
 
 アプリを作成して、会議の生産性を高めることができます。 たとえば、通話中にアンケートを完了したり、会議のフローを中断しない簡単なリマインダーを送信したりします。
 
-## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI キット
+## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
 必要に応じて取得および変更できる要素を含む、より包括的な設計ガイドラインについては、Microsoft Teams UI Kit を参照してください。
 
 > [!div class="nextstepaction"]
-> [Microsoft Teams UI キットの取得 (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Microsoft Teams UI Kit (Figma) を入手する](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-meeting-extension"></a>会議の拡張機能を追加する
 
@@ -69,7 +70,7 @@ ms.locfileid: "51596253"
 
 [会議内] タブは、会議中の共同作業を強化するキャンバスです。 出席者は、共有ビューまたは役割ベースのビューを使用して、会議ステージ外の専用スペースでアプリ コンテンツを表示および操作できます。
 
-### <a name="use-cases"></a>ユース ケース
+### <a name="use-cases"></a>使用例
 
 ユーザーは、[会議内] タブを使用して次の場合があります。
 
@@ -114,7 +115,7 @@ Iframe のコンテンツは垂直方向にスクロールする必要があり�
 
 会議中のダイアログが Teams 会議ステージに表示されます。 ユーザーの注意、確認、またはやり取りが必要ですが、微妙であり、会議を中断しません。 これらの使用は、軽くてタスク指向のシナリオに対して使用する必要があります。
 
-### <a name="use-cases"></a>ユース ケース
+### <a name="use-cases"></a>使用例
 
 会議中のダイアログは、参加者が次の操作を行うユーザー (会議の開催者など) によってトリガーされます。
 
@@ -348,7 +349,7 @@ Teams カラー トークンを使用しない場合、デザインの拡張性�
 
 ## <a name="validate-your-design"></a>デザインを検証する
 
-アプリを AppSource に発行する予定の場合は、申請中にアプリが失敗する一般的な設計上の問題を理解する必要があります。
+AppSource にアプリを公開する予定がある場合、アプリの提出時に失敗する原因となるデザイン上の問題を理解しておく必要があります。
 
 > [!div class="nextstepaction"]
-> [デザイン検証のガイドラインを確認する](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)
+> [デザイン検証ガイドラインをチェックする](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

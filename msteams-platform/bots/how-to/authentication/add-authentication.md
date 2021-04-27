@@ -3,13 +3,14 @@ title: Teams ボットに認証を追加する
 author: clearab
 description: Microsoft Teams のボットに OAuth 認証を追加する方法。
 ms.topic: how-to
+localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 71a24dad47b3686d207df3f4e3521bbe46508cb9
-ms.sourcegitcommit: e78c9f51c4538212c53bb6c6a45a09d994896f09
+ms.openlocfilehash: d54d7fadb13626bb38de3a907b966f026cc6c485
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "51585870"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020955"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Teams ボットに認証を追加する
 
@@ -65,7 +66,7 @@ Azure Bot Service が認証を処理する方法の詳細については、「 [
 
 1. Azure portal [**の左側の**][azure-portal]ナビゲーション パネルで、[リソースの作成 **] を選択します**。
 1. 検索ボックスに *「App Service Plan」と入力します*。 検索結果から **[App Service プラン** ] カードを選択します。
-1. **[作成]** を選択します。
+1. [**作成**] を選択します。
 1. 次の情報の入力を求めるメッセージが表示されます。
     1. **サブスクリプション**。 既存のサブスクリプションを使用できます。
     1. **リソース グループ**。 前に作成したグループを選択します。
@@ -74,7 +75,7 @@ Azure Bot Service が認証を処理する方法の詳細については、「 [
     1. **地域**. [ *米国西部]* またはアプリケーションに近い地域を選択します。
     1. **価格レベル**. [標準 *S1] が選択* されている必要があります。 これは既定値である必要があります。
     1. [レビューと **作成] ボタンを選択** します。 検証が渡されたというバナーが *表示されます*。
-    1. **[作成]** を選択します。 アプリ サービス プランの作成に数分かかる場合があります。 計画はリソース グループに一覧表示されます。
+    1. [**作成**] を選択します。 アプリ サービス プランの作成に数分かかる場合があります。 計画はリソース グループに一覧表示されます。
 
 ## <a name="create-the-bot-channels-registration"></a>ボット チャネルの登録を作成する
 
@@ -260,7 +261,7 @@ Microsoft App Id とアプリ パスワード (クライアント シークレ�
 
    ![auth-app-service](../../../assets/images/authentication/auth-bot-app-service.png)
 
-1. **[作成]** を選択します。
+1. [**作成**] を選択します。
 1. 展開が正常に完了した場合は、展開がサーバーに反映Visual Studio。 さらに、既定のブラウザーに、ボットの準備が完了した *というページが表示されます*。 URL は次に似ています `https://botteamsauth.azurewebsites.net/` 。 ファイルに保存します。
 1. ブラウザーで、Azure portal に [**移動します**][azure-portal]。
 1. リソース グループを確認すると、ボットが他のリソースと共に一覧表示されます。 次の図は、例です。

@@ -2,14 +2,15 @@
 title: テスト データを Microsoft 365 テスト テナントに追加する
 description: Microsoft Teams Apps のOfficeテストを成功に向け、365 開発者プログラムのサブスクリプションをセットアップする
 ms.topic: how-to
+localization_priority: Normal
 keywords: アプリ開発者プログラム チームのテスト
 ms.date: 11/01/2019
-ms.openlocfilehash: c702921b1c55570ca8e2869b95c00ae6ae4ebdf4
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: cc8125cdd8678c84aa6733b71d37adeee98abdd9
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696865"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020815"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>テスト データを Microsoft 365 テスト テナントに追加する
 
