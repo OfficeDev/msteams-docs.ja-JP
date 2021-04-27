@@ -3,52 +3,53 @@ title: ボットとのチャネルとグループの会話
 author: clearab
 description: チャネルまたはグループ チャットでボットのメッセージを送信、受信、および処理する方法。
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: e1379a62e3ef7d58efe52c3f91fd9e02b3c46ac9
-ms.sourcegitcommit: 79e6bccfb513d4c16a58ffc03521edcf134fa518
+ms.openlocfilehash: cbc82471ce31edaf733bde6951648af86842ab62
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "51696368"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52020934"
 ---
-# <a name="channel-and-group-chat-conversations-with-a-bot"></a><span data-ttu-id="e2c66-103">ボットとのチャネルチャットとグループ チャットの会話</span><span class="sxs-lookup"><span data-stu-id="e2c66-103">Channel and group chat conversations with a bot</span></span>
+# <a name="channel-and-group-chat-conversations-with-a-bot"></a><span data-ttu-id="ef0dd-103">ボットとのチャネルチャットとグループ チャットの会話</span><span class="sxs-lookup"><span data-stu-id="ef0dd-103">Channel and group chat conversations with a bot</span></span>
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-<span data-ttu-id="e2c66-104">チームまたはグループ チャットに Microsoft Teams ボットをインストールするには、ボットに `teams` スコープ `groupchat` を追加します。</span><span class="sxs-lookup"><span data-stu-id="e2c66-104">To install the Microsoft Teams bot in a team or group chat, add the `teams` or `groupchat` scope to your bot.</span></span> <span data-ttu-id="e2c66-105">これにより、会話のすべてのメンバーがボットと対話できるようになります。</span><span class="sxs-lookup"><span data-stu-id="e2c66-105">This allows all members of the conversation to interact with your bot.</span></span> <span data-ttu-id="e2c66-106">ボットをインストールすると、会話に関するメタデータ (会話メンバーの一覧など) にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="e2c66-106">After the bot is installed, it has access to metadata about the conversation, such as the list of conversation members.</span></span> <span data-ttu-id="e2c66-107">また、チームにインストールすると、ボットは、そのチームに関する詳細とチャネルの完全なリストにアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="e2c66-107">Also, when it is installed in a team, the bot has access to details about that team and the full list of channels.</span></span>
+<span data-ttu-id="ef0dd-104">チームまたはグループ チャットに Microsoft Teams ボットをインストールするには、ボットに `teams` スコープ `groupchat` を追加します。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-104">To install the Microsoft Teams bot in a team or group chat, add the `teams` or `groupchat` scope to your bot.</span></span> <span data-ttu-id="ef0dd-105">これにより、会話のすべてのメンバーがボットと対話できるようになります。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-105">This allows all members of the conversation to interact with your bot.</span></span> <span data-ttu-id="ef0dd-106">ボットをインストールすると、会話に関するメタデータ (会話メンバーの一覧など) にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-106">After the bot is installed, it has access to metadata about the conversation, such as the list of conversation members.</span></span> <span data-ttu-id="ef0dd-107">また、チームにインストールすると、ボットは、そのチームに関する詳細とチャネルの完全なリストにアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-107">Also, when it is installed in a team, the bot has access to details about that team and the full list of channels.</span></span>
 
-<span data-ttu-id="e2c66-108">グループまたはチャネル内のボットは、メッセージが言及されている場合にのみメッセージを受信します `@botname` 。</span><span class="sxs-lookup"><span data-stu-id="e2c66-108">Bots in a group or channel only receive messages when they are mentioned `@botname`.</span></span> <span data-ttu-id="e2c66-109">会話に送信された他のメッセージは受信しません。</span><span class="sxs-lookup"><span data-stu-id="e2c66-109">They do not receive any other messages sent to the conversation.</span></span>
+<span data-ttu-id="ef0dd-108">グループまたはチャネル内のボットは、メッセージが言及されている場合にのみメッセージを受信します `@botname` 。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-108">Bots in a group or channel only receive messages when they are mentioned `@botname`.</span></span> <span data-ttu-id="ef0dd-109">会話に送信された他のメッセージは受信しません。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-109">They do not receive any other messages sent to the conversation.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="e2c66-110">ボットは直接である必要 `@mentioned` があります。</span><span class="sxs-lookup"><span data-stu-id="e2c66-110">The bot must be `@mentioned` directly.</span></span> <span data-ttu-id="e2c66-111">チームまたはチャネルが言及された場合、またはボットからメッセージに返信しても、ボットはメッセージを受信@mentioningされません。</span><span class="sxs-lookup"><span data-stu-id="e2c66-111">Your bot does not receive a message when the team or channel is mentioned, or when someone replies to a message from your bot without @mentioning it.</span></span>
+> <span data-ttu-id="ef0dd-110">ボットは直接である必要 `@mentioned` があります。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-110">The bot must be `@mentioned` directly.</span></span> <span data-ttu-id="ef0dd-111">チームまたはチャネルが言及された場合、またはボットからメッセージに返信しても、ボットはメッセージを受信@mentioningされません。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-111">Your bot does not receive a message when the team or channel is mentioned, or when someone replies to a message from your bot without @mentioning it.</span></span>
 
-## <a name="design-guidelines"></a><span data-ttu-id="e2c66-112">デザインのガイドライン</span><span class="sxs-lookup"><span data-stu-id="e2c66-112">Design guidelines</span></span>
+## <a name="design-guidelines"></a><span data-ttu-id="ef0dd-112">デザインのガイドライン</span><span class="sxs-lookup"><span data-stu-id="ef0dd-112">Design guidelines</span></span>
 
-<span data-ttu-id="e2c66-113">個人用チャットとは異なり、グループ チャットやチャネルでは、ボットが簡単な概要を提供する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e2c66-113">Unlike personal chats, in group chats and channels, your bot must provide a quick introduction.</span></span> <span data-ttu-id="e2c66-114">これらのボットの設計ガイドラインに従う必要があります。</span><span class="sxs-lookup"><span data-stu-id="e2c66-114">You must follow these and more bot design guidelines.</span></span> <span data-ttu-id="e2c66-115">Teams でボットを設計する方法の詳細については、「チャネルとチャットでボットの会話を設計する方法」 [を参照してください](~/bots/design/bots.md)。</span><span class="sxs-lookup"><span data-stu-id="e2c66-115">For more information on how to design bots in Teams, see [how to design bot conversations in channels and chats](~/bots/design/bots.md).</span></span>
+<span data-ttu-id="ef0dd-113">個人用チャットとは異なり、グループ チャットやチャネルでは、ボットが簡単な概要を提供する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-113">Unlike personal chats, in group chats and channels, your bot must provide a quick introduction.</span></span> <span data-ttu-id="ef0dd-114">これらのボットの設計ガイドラインに従う必要があります。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-114">You must follow these and more bot design guidelines.</span></span> <span data-ttu-id="ef0dd-115">Teams でボットを設計する方法の詳細については、「チャネルとチャットでボットの会話を設計する方法」 [を参照してください](~/bots/design/bots.md)。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-115">For more information on how to design bots in Teams, see [how to design bot conversations in channels and chats](~/bots/design/bots.md).</span></span>
 
-<span data-ttu-id="e2c66-116">これで、新しい会話スレッドを作成し、チャネル内の異なる会話を簡単に管理できます。</span><span class="sxs-lookup"><span data-stu-id="e2c66-116">Now, you can create new conversation threads and easily manage different conversations in channels.</span></span>
+<span data-ttu-id="ef0dd-116">これで、新しい会話スレッドを作成し、チャネル内の異なる会話を簡単に管理できます。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-116">Now, you can create new conversation threads and easily manage different conversations in channels.</span></span>
 
-## <a name="create-new-conversation-threads"></a><span data-ttu-id="e2c66-117">新しいスレッドの作成</span><span class="sxs-lookup"><span data-stu-id="e2c66-117">Create new conversation threads</span></span>
+## <a name="create-new-conversation-threads"></a><span data-ttu-id="ef0dd-117">新しいスレッドの作成</span><span class="sxs-lookup"><span data-stu-id="ef0dd-117">Create new conversation threads</span></span>
 
-<span data-ttu-id="e2c66-118">ボットがチームにインストールされている場合は、既存のスレッドに返信するのではなく、新しいスレッドを作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e2c66-118">When your bot is installed in a team, you must create a new conversation thread rather than reply to an existing one.</span></span> <span data-ttu-id="e2c66-119">2 つの会話を区別することは困難な場合があります。</span><span class="sxs-lookup"><span data-stu-id="e2c66-119">At times it is difficult to differentiate between two conversations.</span></span> <span data-ttu-id="e2c66-120">スレッド化された会話の場合は、チャネルでさまざまな会話を整理して管理する方が簡単です。</span><span class="sxs-lookup"><span data-stu-id="e2c66-120">If the conversation is threaded, it is easier to organize and manage different conversations in channels.</span></span> <span data-ttu-id="e2c66-121">これは、プロアクティブ メッセージング [の形式です](~/bots/how-to/conversations/send-proactive-messages.md)。</span><span class="sxs-lookup"><span data-stu-id="e2c66-121">This is a form of [proactive messaging](~/bots/how-to/conversations/send-proactive-messages.md).</span></span>
+<span data-ttu-id="ef0dd-118">ボットがチームにインストールされている場合は、既存のスレッドに返信するのではなく、新しいスレッドを作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-118">When your bot is installed in a team, you must create a new conversation thread rather than reply to an existing one.</span></span> <span data-ttu-id="ef0dd-119">2 つの会話を区別することは困難な場合があります。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-119">At times it is difficult to differentiate between two conversations.</span></span> <span data-ttu-id="ef0dd-120">スレッド化された会話の場合は、チャネルでさまざまな会話を整理して管理する方が簡単です。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-120">If the conversation is threaded, it is easier to organize and manage different conversations in channels.</span></span> <span data-ttu-id="ef0dd-121">これは、プロアクティブ メッセージング [の形式です](~/bots/how-to/conversations/send-proactive-messages.md)。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-121">This is a form of [proactive messaging](~/bots/how-to/conversations/send-proactive-messages.md).</span></span>
 
-<span data-ttu-id="e2c66-122">次に、オブジェクトを使用してメンションを取得し、オブジェクトを使用して `entities` メッセージにメンションを追加 `Mention` できます。</span><span class="sxs-lookup"><span data-stu-id="e2c66-122">Next, you can retrieve mentions using the `entities` object and add mentions to your messages using the `Mention` object.</span></span>
+<span data-ttu-id="ef0dd-122">次に、オブジェクトを使用してメンションを取得し、オブジェクトを使用して `entities` メッセージにメンションを追加 `Mention` できます。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-122">Next, you can retrieve mentions using the `entities` object and add mentions to your messages using the `Mention` object.</span></span>
 
-## <a name="work-with-mentions"></a><span data-ttu-id="e2c66-123">メンションを使用する</span><span class="sxs-lookup"><span data-stu-id="e2c66-123">Work with mentions</span></span>
+## <a name="work-with-mentions"></a><span data-ttu-id="ef0dd-123">メンションを使用する</span><span class="sxs-lookup"><span data-stu-id="ef0dd-123">Work with mentions</span></span>
 
-<span data-ttu-id="e2c66-124">グループまたはチャネルからボットに送信されるメッセージには、@mentionに名前が含まれているメッセージが含まれる。</span><span class="sxs-lookup"><span data-stu-id="e2c66-124">Every message to your bot from a group or channel contains an @mention with its name in the message text.</span></span> <span data-ttu-id="e2c66-125">メッセージの解析でメッセージが処理@mention。</span><span class="sxs-lookup"><span data-stu-id="e2c66-125">Ensure that your message parsing handles @mention.</span></span> <span data-ttu-id="e2c66-126">ボットは、メッセージに記載されている他のユーザーを取得し、送信するメッセージにメンションを追加することもできます。</span><span class="sxs-lookup"><span data-stu-id="e2c66-126">Your bot can also retrieve other users mentioned in a message and add mentions to any messages it sends.</span></span>
+<span data-ttu-id="ef0dd-124">グループまたはチャネルからボットに送信されるメッセージには、@mentionに名前が含まれているメッセージが含まれる。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-124">Every message to your bot from a group or channel contains an @mention with its name in the message text.</span></span> <span data-ttu-id="ef0dd-125">メッセージの解析でメッセージが処理@mention。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-125">Ensure that your message parsing handles @mention.</span></span> <span data-ttu-id="ef0dd-126">ボットは、メッセージに記載されている他のユーザーを取得し、送信するメッセージにメンションを追加することもできます。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-126">Your bot can also retrieve other users mentioned in a message and add mentions to any messages it sends.</span></span>
 
-<span data-ttu-id="e2c66-127">また、ボットが受信したメッセージ@mentionsコンテンツから削除する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e2c66-127">You must also strip out the @mentions from the content of the message your bot receives.</span></span>
+<span data-ttu-id="ef0dd-127">また、ボットが受信したメッセージ@mentionsコンテンツから削除する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-127">You must also strip out the @mentions from the content of the message your bot receives.</span></span>
 
-### <a name="retrieve-mentions"></a><span data-ttu-id="e2c66-128">メンションの取得</span><span class="sxs-lookup"><span data-stu-id="e2c66-128">Retrieve mentions</span></span>
+### <a name="retrieve-mentions"></a><span data-ttu-id="ef0dd-128">メンションの取得</span><span class="sxs-lookup"><span data-stu-id="ef0dd-128">Retrieve mentions</span></span>
 
-<span data-ttu-id="e2c66-129">メンションはペイロード内のオブジェクトに返され、ユーザーの一意の ID と、指定したユーザーの `entities` 名前の両方が含まれます。</span><span class="sxs-lookup"><span data-stu-id="e2c66-129">Mentions are returned in the `entities` object in payload and contain both the unique ID of the user and the name of the user mentioned.</span></span> <span data-ttu-id="e2c66-130">メッセージのテキストには、次のようなメンションも含まれます `<at>@John Smith<at>` 。</span><span class="sxs-lookup"><span data-stu-id="e2c66-130">The text of the message also includes the mention, such as `<at>@John Smith<at>`.</span></span> <span data-ttu-id="e2c66-131">ただし、メッセージ内のテキストを使用して、ユーザーに関する情報を取得しない。</span><span class="sxs-lookup"><span data-stu-id="e2c66-131">However, do not rely on the text in the message to retrieve any information about the user.</span></span> <span data-ttu-id="e2c66-132">メッセージを送信するユーザーがメッセージを変更することができます。</span><span class="sxs-lookup"><span data-stu-id="e2c66-132">It is possible for the person sending the message to alter it.</span></span> <span data-ttu-id="e2c66-133">したがって、オブジェクトを使用 `entities` します。</span><span class="sxs-lookup"><span data-stu-id="e2c66-133">Therefore, use the `entities` object.</span></span>
+<span data-ttu-id="ef0dd-129">メンションはペイロード内のオブジェクトに返され、ユーザーの一意の ID と、指定したユーザーの `entities` 名前の両方が含まれます。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-129">Mentions are returned in the `entities` object in payload and contain both the unique ID of the user and the name of the user mentioned.</span></span> <span data-ttu-id="ef0dd-130">メッセージのテキストには、次のようなメンションも含まれます `<at>@John Smith<at>` 。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-130">The text of the message also includes the mention, such as `<at>@John Smith<at>`.</span></span> <span data-ttu-id="ef0dd-131">ただし、メッセージ内のテキストを使用して、ユーザーに関する情報を取得しない。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-131">However, do not rely on the text in the message to retrieve any information about the user.</span></span> <span data-ttu-id="ef0dd-132">メッセージを送信するユーザーがメッセージを変更することができます。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-132">It is possible for the person sending the message to alter it.</span></span> <span data-ttu-id="ef0dd-133">したがって、オブジェクトを使用 `entities` します。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-133">Therefore, use the `entities` object.</span></span>
 
-<span data-ttu-id="e2c66-134">メッセージ内のすべてのメンションを取得するには、Bot Builder SDK で関数を呼び出し、オブジェクトの `GetMentions` 配列を返 `Mention` します。</span><span class="sxs-lookup"><span data-stu-id="e2c66-134">You can retrieve all mentions in the message by calling the `GetMentions` function in the Bot Builder SDK, which returns an array of `Mention` objects.</span></span>
+<span data-ttu-id="ef0dd-134">メッセージ内のすべてのメンションを取得するには、Bot Builder SDK で関数を呼び出し、オブジェクトの `GetMentions` 配列を返 `Mention` します。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-134">You can retrieve all mentions in the message by calling the `GetMentions` function in the Bot Builder SDK, which returns an array of `Mention` objects.</span></span>
 
-<span data-ttu-id="e2c66-135">次のコードは、メンションを取得する例を示しています。</span><span class="sxs-lookup"><span data-stu-id="e2c66-135">The following code shows an example of retrieving mentions:</span></span>
+<span data-ttu-id="ef0dd-135">次のコードは、メンションを取得する例を示しています。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-135">The following code shows an example of retrieving mentions:</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="e2c66-136">C#</span><span class="sxs-lookup"><span data-stu-id="e2c66-136">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="ef0dd-136">C#</span><span class="sxs-lookup"><span data-stu-id="ef0dd-136">C#</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -66,7 +67,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="e2c66-137">TypeScript</span><span class="sxs-lookup"><span data-stu-id="e2c66-137">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="ef0dd-137">TypeScript</span><span class="sxs-lookup"><span data-stu-id="ef0dd-137">TypeScript</span></span>](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -82,7 +83,7 @@ this.onMessage(async (turnContext, next) => {
 });
 ```
 
-# <a name="json"></a>[<span data-ttu-id="e2c66-138">JSON</span><span class="sxs-lookup"><span data-stu-id="e2c66-138">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="ef0dd-138">JSON</span><span class="sxs-lookup"><span data-stu-id="ef0dd-138">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -124,7 +125,7 @@ this.onMessage(async (turnContext, next) => {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="e2c66-139">Python</span><span class="sxs-lookup"><span data-stu-id="e2c66-139">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="ef0dd-139">Python</span><span class="sxs-lookup"><span data-stu-id="ef0dd-139">Python</span></span>](#tab/python)
 
 ```python
 @staticmethod
@@ -139,20 +140,20 @@ def get_mentions(activity: Activity) -> List[Mention]:
 
 * * *
 
-### <a name="add-mentions-to-your-messages"></a><span data-ttu-id="e2c66-140">メッセージにメンションを追加する</span><span class="sxs-lookup"><span data-stu-id="e2c66-140">Add mentions to your messages</span></span>
+### <a name="add-mentions-to-your-messages"></a><span data-ttu-id="ef0dd-140">メッセージにメンションを追加する</span><span class="sxs-lookup"><span data-stu-id="ef0dd-140">Add mentions to your messages</span></span>
 
-<span data-ttu-id="e2c66-141">ボットは、チャネルに投稿されたメッセージで他のユーザーに言及できます。</span><span class="sxs-lookup"><span data-stu-id="e2c66-141">Your bot can mention other users in messages posted into channels.</span></span>
+<span data-ttu-id="ef0dd-141">ボットは、チャネルに投稿されたメッセージで他のユーザーに言及できます。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-141">Your bot can mention other users in messages posted into channels.</span></span>
 
-<span data-ttu-id="e2c66-142">オブジェクト `Mention` には、次の 2 つのプロパティを使用して設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e2c66-142">The `Mention` object has two properties that you must set using the following:</span></span>
+<span data-ttu-id="ef0dd-142">オブジェクト `Mention` には、次の 2 つのプロパティを使用して設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-142">The `Mention` object has two properties that you must set using the following:</span></span>
 
-* <span data-ttu-id="e2c66-143">メッセージ <at>の@username</at> にデータを含める。</span><span class="sxs-lookup"><span data-stu-id="e2c66-143">Include <at>@username</at> in the message text.</span></span>
-* <span data-ttu-id="e2c66-144">エンティティ コレクション内にメンション オブジェクトを含める。</span><span class="sxs-lookup"><span data-stu-id="e2c66-144">Include the mention object inside the entities collection.</span></span>
+* <span data-ttu-id="ef0dd-143">メッセージ <at>の@username</at> にデータを含める。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-143">Include <at>@username</at> in the message text.</span></span>
+* <span data-ttu-id="ef0dd-144">エンティティ コレクション内にメンション オブジェクトを含める。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-144">Include the mention object inside the entities collection.</span></span>
 
-<span data-ttu-id="e2c66-145">Bot Framework SDK には、メンションを作成するヘルパー メソッドとオブジェクトが含まれています。</span><span class="sxs-lookup"><span data-stu-id="e2c66-145">The Bot Framework SDK provides helper methods and objects to create mentions.</span></span>
+<span data-ttu-id="ef0dd-145">Bot Framework SDK には、メンションを作成するヘルパー メソッドとオブジェクトが含まれています。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-145">The Bot Framework SDK provides helper methods and objects to create mentions.</span></span>
 
-<span data-ttu-id="e2c66-146">次のコードは、メッセージにメンションを追加する例を示しています。</span><span class="sxs-lookup"><span data-stu-id="e2c66-146">The following code shows an example of adding mentions to your messages:</span></span>
+<span data-ttu-id="ef0dd-146">次のコードは、メッセージにメンションを追加する例を示しています。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-146">The following code shows an example of adding mentions to your messages:</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="e2c66-147">C#</span><span class="sxs-lookup"><span data-stu-id="e2c66-147">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="ef0dd-147">C#</span><span class="sxs-lookup"><span data-stu-id="ef0dd-147">C#</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -170,7 +171,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="e2c66-148">TypeScript</span><span class="sxs-lookup"><span data-stu-id="e2c66-148">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="ef0dd-148">TypeScript</span><span class="sxs-lookup"><span data-stu-id="ef0dd-148">TypeScript</span></span>](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -189,9 +190,9 @@ this.onMessage(async (turnContext, next) => {
 });
 ```
 
-# <a name="json"></a>[<span data-ttu-id="e2c66-149">JSON</span><span class="sxs-lookup"><span data-stu-id="e2c66-149">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="ef0dd-149">JSON</span><span class="sxs-lookup"><span data-stu-id="ef0dd-149">JSON</span></span>](#tab/json)
 
-<span data-ttu-id="e2c66-150">配列 `text` 内のオブジェクトのフィールドは、メッセージ `entities` フィールドの一部と一致している必要 `text` があります。</span><span class="sxs-lookup"><span data-stu-id="e2c66-150">The `text` field in the object in the `entities` array must match a portion of the message `text` field.</span></span> <span data-ttu-id="e2c66-151">指定しない場合、メンションは無視されます。</span><span class="sxs-lookup"><span data-stu-id="e2c66-151">If it does not, the mention is ignored.</span></span>
+<span data-ttu-id="ef0dd-150">配列 `text` 内のオブジェクトのフィールドは、メッセージ `entities` フィールドの一部と一致している必要 `text` があります。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-150">The `text` field in the object in the `entities` array must match a portion of the message `text` field.</span></span> <span data-ttu-id="ef0dd-151">指定しない場合、メンションは無視されます。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-151">If it does not, the mention is ignored.</span></span>
 
 ```json
 {
@@ -233,7 +234,7 @@ this.onMessage(async (turnContext, next) => {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="e2c66-152">Python</span><span class="sxs-lookup"><span data-stu-id="e2c66-152">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="ef0dd-152">Python</span><span class="sxs-lookup"><span data-stu-id="ef0dd-152">Python</span></span>](#tab/python)
 
 ```python
 async def _mention_activity(self, turn_context: TurnContext):
@@ -250,29 +251,29 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 * * *
 
-<span data-ttu-id="e2c66-153">これで、ボットが最初にインストールまたはグループまたはチームに追加された場合に、概要メッセージを送信できます。</span><span class="sxs-lookup"><span data-stu-id="e2c66-153">Now you can send an introduction message when your bot is first installed or added to a group or team.</span></span>
+<span data-ttu-id="ef0dd-153">これで、ボットが最初にインストールまたはグループまたはチームに追加された場合に、概要メッセージを送信できます。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-153">Now you can send an introduction message when your bot is first installed or added to a group or team.</span></span>
 
-## <a name="send-a-message-on-installation"></a><span data-ttu-id="e2c66-154">インストール時にメッセージを送信する</span><span class="sxs-lookup"><span data-stu-id="e2c66-154">Send a message on installation</span></span>
+## <a name="send-a-message-on-installation"></a><span data-ttu-id="ef0dd-154">インストール時にメッセージを送信する</span><span class="sxs-lookup"><span data-stu-id="ef0dd-154">Send a message on installation</span></span>
 
-<span data-ttu-id="e2c66-155">ボットが最初にグループまたはチームに追加された場合は、紹介メッセージを送信する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e2c66-155">When your bot is first added to the group or team, an introduction message must be sent.</span></span> <span data-ttu-id="e2c66-156">メッセージには、ボットの機能とボットの機能の使い方について簡単に説明する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e2c66-156">The message must provide a brief description of the bot's features and how to use them.</span></span> <span data-ttu-id="e2c66-157">eventType を使用して `conversationUpdate` イベントをサブスクライブする `teamMemberAdded` 必要があります。</span><span class="sxs-lookup"><span data-stu-id="e2c66-157">You must subscribe to the `conversationUpdate` event with the `teamMemberAdded` eventType.</span></span>  <span data-ttu-id="e2c66-158">イベントは、新しいチーム メンバーが追加された場合に送信されます。</span><span class="sxs-lookup"><span data-stu-id="e2c66-158">The event is sent when any new team member is added.</span></span> <span data-ttu-id="e2c66-159">追加された新しいメンバーがボットか確認します。</span><span class="sxs-lookup"><span data-stu-id="e2c66-159">Check if the new member added is the bot.</span></span> <span data-ttu-id="e2c66-160">詳細については、「ウェルカム [メッセージを新しいチーム メンバーに送信する」を参照してください](~/bots/how-to/conversations/send-proactive-messages.md)。</span><span class="sxs-lookup"><span data-stu-id="e2c66-160">For more information, see [sending a welcome message to a new team member](~/bots/how-to/conversations/send-proactive-messages.md).</span></span>
+<span data-ttu-id="ef0dd-155">ボットが最初にグループまたはチームに追加された場合は、紹介メッセージを送信する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-155">When your bot is first added to the group or team, an introduction message must be sent.</span></span> <span data-ttu-id="ef0dd-156">メッセージには、ボットの機能とボットの機能の使い方について簡単に説明する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-156">The message must provide a brief description of the bot's features and how to use them.</span></span> <span data-ttu-id="ef0dd-157">eventType を使用して `conversationUpdate` イベントをサブスクライブする `teamMemberAdded` 必要があります。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-157">You must subscribe to the `conversationUpdate` event with the `teamMemberAdded` eventType.</span></span>  <span data-ttu-id="ef0dd-158">イベントは、新しいチーム メンバーが追加された場合に送信されます。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-158">The event is sent when any new team member is added.</span></span> <span data-ttu-id="ef0dd-159">追加された新しいメンバーがボットか確認します。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-159">Check if the new member added is the bot.</span></span> <span data-ttu-id="ef0dd-160">詳細については、「ウェルカム [メッセージを新しいチーム メンバーに送信する」を参照してください](~/bots/how-to/conversations/send-proactive-messages.md)。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-160">For more information, see [sending a welcome message to a new team member](~/bots/how-to/conversations/send-proactive-messages.md).</span></span>
 
-<span data-ttu-id="e2c66-161">ボットが追加された場合、各チーム メンバーに個人メッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="e2c66-161">Send a personal message to each team member when the bot is added.</span></span> <span data-ttu-id="e2c66-162">これを行うには、チーム名簿を取得し、各ユーザーに直接メッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="e2c66-162">To do this, get the team roster and send each user a direct message.</span></span>
+<span data-ttu-id="ef0dd-161">ボットが追加された場合、各チーム メンバーに個人メッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-161">Send a personal message to each team member when the bot is added.</span></span> <span data-ttu-id="ef0dd-162">これを行うには、チーム名簿を取得し、各ユーザーに直接メッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-162">To do this, get the team roster and send each user a direct message.</span></span>
 
-<span data-ttu-id="e2c66-163">次の場合は、メッセージを送信しない。</span><span class="sxs-lookup"><span data-stu-id="e2c66-163">Do not send a message in the following cases:</span></span>
+<span data-ttu-id="ef0dd-163">次の場合は、メッセージを送信しない。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-163">Do not send a message in the following cases:</span></span>
 
-* <span data-ttu-id="e2c66-164">チームは大きい (たとえば、100 人を超えるメンバー) です。</span><span class="sxs-lookup"><span data-stu-id="e2c66-164">The team is large, for example, larger than 100 members.</span></span> <span data-ttu-id="e2c66-165">ボットはスパムと見なされ、追加したユーザーは苦情を受け取ることができます。</span><span class="sxs-lookup"><span data-stu-id="e2c66-165">Your bot can be seen as spam and the person who added it can get complaints.</span></span> <span data-ttu-id="e2c66-166">ウェルカム メッセージを見たすべてのユーザーに、ボットの価値提案を明確に伝える必要があります。</span><span class="sxs-lookup"><span data-stu-id="e2c66-166">You must clearly communicate your bot's value proposition to everyone who sees the welcome message.</span></span>
-* <span data-ttu-id="e2c66-167">ボットは、最初にチームに追加されるのではなく、グループまたはチャネルで最初に言及されます。</span><span class="sxs-lookup"><span data-stu-id="e2c66-167">Your bot is first mentioned in a group or channel instead of being first added to a team.</span></span>
-* <span data-ttu-id="e2c66-168">グループまたはチャネルの名前が変更されます。</span><span class="sxs-lookup"><span data-stu-id="e2c66-168">A group or channel is renamed.</span></span>
-* <span data-ttu-id="e2c66-169">チーム メンバーがグループまたはチャネルに追加されます。</span><span class="sxs-lookup"><span data-stu-id="e2c66-169">A team member is added to a group or channel.</span></span>
+* <span data-ttu-id="ef0dd-164">チームは大きい (たとえば、100 人を超えるメンバー) です。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-164">The team is large, for example, larger than 100 members.</span></span> <span data-ttu-id="ef0dd-165">ボットはスパムと見なされ、追加したユーザーは苦情を受け取ることができます。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-165">Your bot can be seen as spam and the person who added it can get complaints.</span></span> <span data-ttu-id="ef0dd-166">ウェルカム メッセージを見たすべてのユーザーに、ボットの価値提案を明確に伝える必要があります。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-166">You must clearly communicate your bot's value proposition to everyone who sees the welcome message.</span></span>
+* <span data-ttu-id="ef0dd-167">ボットは、最初にチームに追加されるのではなく、グループまたはチャネルで最初に言及されます。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-167">Your bot is first mentioned in a group or channel instead of being first added to a team.</span></span>
+* <span data-ttu-id="ef0dd-168">グループまたはチャネルの名前が変更されます。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-168">A group or channel is renamed.</span></span>
+* <span data-ttu-id="ef0dd-169">チーム メンバーがグループまたはチャネルに追加されます。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-169">A team member is added to a group or channel.</span></span>
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
-## <a name="see-also"></a><span data-ttu-id="e2c66-170">関連項目</span><span class="sxs-lookup"><span data-stu-id="e2c66-170">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ef0dd-170">関連項目</span><span class="sxs-lookup"><span data-stu-id="ef0dd-170">See also</span></span>
 
 > [!div class="nextstepaction"]
-> <span data-ttu-id="e2c66-171">[チームのコンテキストを取得します](~/bots/how-to/get-teams-context.md)。</span><span class="sxs-lookup"><span data-stu-id="e2c66-171">[Get teams context](~/bots/how-to/get-teams-context.md).</span></span>
+> <span data-ttu-id="ef0dd-171">[チームのコンテキストを取得します](~/bots/how-to/get-teams-context.md)。</span><span class="sxs-lookup"><span data-stu-id="ef0dd-171">[Get teams context](~/bots/how-to/get-teams-context.md).</span></span>
 
-## <a name="next-step"></a><span data-ttu-id="e2c66-172">次の手順</span><span class="sxs-lookup"><span data-stu-id="e2c66-172">Next step</span></span>
+## <a name="next-step"></a><span data-ttu-id="ef0dd-172">次の手順</span><span class="sxs-lookup"><span data-stu-id="ef0dd-172">Next step</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="e2c66-173">会話イベントにサブスクライブする</span><span class="sxs-lookup"><span data-stu-id="e2c66-173">Subscribe to conversation events</span></span>](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+> [<span data-ttu-id="ef0dd-173">会話イベントにサブスクライブする</span><span class="sxs-lookup"><span data-stu-id="ef0dd-173">Subscribe to conversation events</span></span>](~/bots/how-to/conversations/subscribe-to-conversation-events.md)

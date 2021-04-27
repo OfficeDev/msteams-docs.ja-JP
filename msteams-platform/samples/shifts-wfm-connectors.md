@@ -1,65 +1,76 @@
 ---
-title: Teams シフト コネクタ
-description: Teams の従業員管理シフト コネクタ
+title: 本番対応の Shifts コネクタ
+description: Workforce management Shifts connectors for Teams
 ms.topic: reference
 author: laujan
 ms.date: 03/09/2020
+localization_priority: Normal
 keywords: Microsoft Teams コネクタ kronos
 ms.author: lajanuar
-ms.openlocfilehash: 9d32c9e1aa3baba660440492df55bb00f677baa4
-ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
+ms.openlocfilehash: 94e0b2b61998510ea9dd054d118e856eadc49b2d
+ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "50014594"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52019618"
 ---
-# <a name="microsoft-teams-shifts-wfm-connectors"></a><span data-ttu-id="75356-104">Microsoft Teams が WFM コネクタをシフトする</span><span class="sxs-lookup"><span data-stu-id="75356-104">Microsoft Teams Shifts WFM connectors</span></span>  
+# <a name="production-ready-shifts-connectors"></a><span data-ttu-id="6a8c5-104">本番対応の Shifts コネクタ</span><span class="sxs-lookup"><span data-stu-id="6a8c5-104">Production-ready Shifts Connectors</span></span>  
 
-## <a name="workforce-management-connectors-wfm-for-firstline-workers"></a><span data-ttu-id="75356-105">ファーストライン ワーカー用の要員管理コネクタ (WFM)</span><span class="sxs-lookup"><span data-stu-id="75356-105">Workforce management connectors (WFM) for firstline workers</span></span> 
+<span data-ttu-id="6a8c5-105">Teams Shifts Workforce Management (WFM) コネクタは、運用対応、オープン ソース、コミュニティ駆動型の統合であり、ファーストラインワーカーに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-105">Teams Shifts Workforce management (WFM) connectors are production-ready, open-source, and community-driven integrations, useful for firstline workers.</span></span> <span data-ttu-id="6a8c5-106">Teams Shifts を使用したファーストライン ワーカーのデジタル変換のためのシームレスなエクスペリエンスと迅速なプロセスを提供します。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-106">They offer a seamless experience and quick process for the digital transformation of firstline workers with Teams Shifts.</span></span> 
 
-<span data-ttu-id="75356-106">Teams シフト WFM コネクタは、Teams シフトによるファーストライン ワーカーのデジタル変換のためのシームレスなエクスペリエンスと迅速なプロセスを提供する、実稼働対応、オープン ソース、およびコミュニティ駆動型の統合です。</span><span class="sxs-lookup"><span data-stu-id="75356-106">Teams Shifts WFM connectors are production-ready, open-source, and community-driven integrations that offer a seamless experience and quick process for the digital transformation of firstline workers with Teams Shifts.</span></span> 
+<span data-ttu-id="6a8c5-107">各コネクタは、組織への展開と統合に関する詳細なガイダンスを提供します。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-107">Each connector provides detailed guidance for deployment and integration to your organization.</span></span> <span data-ttu-id="6a8c5-108">完全なソース コードは GitHub リポジトリで使用できます。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-108">The complete source code is available in GitHub repository.</span></span> <span data-ttu-id="6a8c5-109">詳細またはフォークを探索し、特定のニーズに合わせてカスタマイズできます。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-109">You can explore in detail or fork, and customize to meet your specific needs.</span></span>   
 
-<span data-ttu-id="75356-107">各コネクタは、組織への展開と統合に関する詳細なガイダンスを提供します。</span><span class="sxs-lookup"><span data-stu-id="75356-107">Each connector provides detailed guidance for deployment and integration to your organization.</span></span> <span data-ttu-id="75356-108">完全なソース コードは、GitHub リポジトリで入手できます。このリポジトリでは、特定のニーズに合わせて詳細に探索したり、フォークしたり、カスタマイズすることができます。</span><span class="sxs-lookup"><span data-stu-id="75356-108">The complete source code is available in our GitHub repo where it can be explored in detail and/or forked and tailored to meet your specific needs.</span></span>
+<span data-ttu-id="6a8c5-110">このドキュメントでは、Teams Shifts WFM コネクタ、Kronos-to-Teams Shifts コネクタ、および JDA 間 Teams シフト コネクタの主な利点の概要を示します。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-110">This document gives an overview of key benefits of Teams Shifts WFM connectors, Kronos-to-Teams Shifts connector, and JDA-to-Teams Shifts connector.</span></span>
 
-## <a name="key-benefits-teams-shifts-wfm-connectors"></a><span data-ttu-id="75356-109">主な利点: Teams が WFM コネクタをシフトする</span><span class="sxs-lookup"><span data-stu-id="75356-109">Key benefits: Teams Shifts WFM connectors</span></span>
+## <a name="key-benefits-of-teams-shifts-wfm-connectors"></a><span data-ttu-id="6a8c5-111">Teams Shifts WFM コネクタの主な利点</span><span class="sxs-lookup"><span data-stu-id="6a8c5-111">Key benefits of Teams Shifts WFM connectors</span></span>
 
-* <span data-ttu-id="75356-110">**プラグ アンド プレイ エクスペリエンス。**</span><span class="sxs-lookup"><span data-stu-id="75356-110">**Plug and play experience.**</span></span> <span data-ttu-id="75356-111">すべての Shifts WFM コネクタには、必要ARMサービスを Microsoft Azure でホストできる Azure 展開スクリプトが含まれています。</span><span class="sxs-lookup"><span data-stu-id="75356-111">All Shifts WFM connectors include ARM Azure deployment scripts that allow you to host all necessary services in Microsoft Azure.</span></span> <span data-ttu-id="75356-112">アプリを展開するためにコーディングは必要ありません。</span><span class="sxs-lookup"><span data-stu-id="75356-112">No coding is required to deploy the apps.</span></span>
+<span data-ttu-id="6a8c5-112">Teams Shifts WFM コネクタの主な利点は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-112">Following are the key benefits of Teams Shifts WFM connectors:</span></span>
 
-* <span data-ttu-id="75356-113">**実稼働対応のコード。**</span><span class="sxs-lookup"><span data-stu-id="75356-113">**Production-ready code.**</span></span> <span data-ttu-id="75356-114">すべてのシフト コネクタは推奨されるセキュリティとインフラストラクチャのベスト プラクティスに準拠し、コミュニティから提出された変更はすべて、継続的に準拠するためにレビューされます。</span><span class="sxs-lookup"><span data-stu-id="75356-114">All  Shifts connectors conform to recommended security and infrastructure best practices and all community-submitted changes are reviewed to ensure continued conformance.</span></span>
+* <span data-ttu-id="6a8c5-113">**プラグ アンド プレイのエクスペリエンス:** すべての Shifts WFM コネクタには、Microsoft Azure ARM必要なすべてのサービスをホストできる Azure 展開スクリプトが含まれています。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-113">**Plug and play experience:** All Shifts WFM connectors include ARM Azure deployment scripts that allow you to host all necessary services in Microsoft Azure.</span></span> <span data-ttu-id="6a8c5-114">アプリを展開するためにコーディングは必要ありません。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-114">No coding is required to deploy the apps.</span></span>
 
-* <span data-ttu-id="75356-115">**カスタマイズ可能で拡張可能。**</span><span class="sxs-lookup"><span data-stu-id="75356-115">**Customizable and extensible.**</span></span> <span data-ttu-id="75356-116"> すべての Shifts WFM コネクタは、すぐに使用するために展開できる状態ですが、独自のニーズに合わせて簡単にカスタマイズまたは拡張できるよう、コード ベースと展開スクリプト全体が用意されています。</span><span class="sxs-lookup"><span data-stu-id="75356-116"> While all Shifts WFM connectors are ready to deploy for immediate use, we provide the entire code base and deployment scripts so that you can easily customize or extend them to fit your unique needs.</span></span>
+* <span data-ttu-id="6a8c5-115">**実稼働可能なコード:** すべての Shifts コネクタは、推奨されるセキュリティとインフラストラクチャのベスト プラクティスに準拠し、コミュニティが提出した変更はすべて確認され、継続的に準拠します。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-115">**Production-ready code:** All  Shifts connectors conform to the recommended security and infrastructure best practices and all community-submitted changes are reviewed to ensure continued conformance.</span></span>
 
-* <span data-ttu-id="75356-117">**サポートに関する&ドキュメント。**</span><span class="sxs-lookup"><span data-stu-id="75356-117">**Detailed documentation & support.**</span></span> <span data-ttu-id="75356-118"> すべての Shifts WFM コネクタには、ソリューションのアーキテクチャ、展開、および構成の手順に関するエンドツーエンドのドキュメントが付属しています。</span><span class="sxs-lookup"><span data-stu-id="75356-118"> All Shifts WFM connectors are accompanied by end-to-end documentation for solution architecture, deployment, and configuration steps.</span></span> <span data-ttu-id="75356-119">コネクタ リポジトリは監視されます。そのため、リポジトリの GitHub の問題追跡ツールを使用して、発生した問題、課題、または困難を報告してください。</span><span class="sxs-lookup"><span data-stu-id="75356-119">The connector repositories are monitored, so please report any issues, challenges or difficulties you encounter through the repo's GitHub Issues tracker.</span></span>
+* <span data-ttu-id="6a8c5-116">**カスタマイズ可能で拡張可能:**  すべての Shifts WFM コネクタは、すぐに使用できるように展開できる状態ですが、コード ベースと展開スクリプト全体をすぐに利用できます。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-116">**Customizable and extensible:**  While all Shifts WFM connectors are ready to deploy for immediate use, with the entire code base and deployment scripts readily available.</span></span> <span data-ttu-id="6a8c5-117">独自のニーズに合わせて簡単にカスタマイズまたは拡張できます。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-117">You can easily customize or extend them to fit your unique needs.</span></span>
 
-* <span data-ttu-id="75356-120">**シームレスな統合。**</span><span class="sxs-lookup"><span data-stu-id="75356-120">**Seamless integration.**</span></span> <span data-ttu-id="75356-121">WFM ソリューションと Teams シフトの統合により、ファーストライン ワーカーは Teams シフト アプリを使用してスケジュールとシフト タイムを表示/管理し、Teams で提供されるその他すべての豊富なコラボレーション機能をモバイル デバイスやデスクトップから使用できます。コンテキストを別のアプリに切り替える必要が生じることなく、Teams で提供されます。</span><span class="sxs-lookup"><span data-stu-id="75356-121">The integration between WFM solutions and Teams Shifts allows firstline workers to use the Teams Shifts app to view/manage their schedules and shift times, and use all the other rich collaboration features provided in Teams right from their mobile device or desktop without having to switch context to another app.</span></span>
+* <span data-ttu-id="6a8c5-118">**サポートに関する&ドキュメント:**  すべての Shifts WFM コネクタには、ソリューションのアーキテクチャ、展開、および構成手順に関するエンドツーエンドのドキュメントが付属しています。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-118">**Detailed documentation & support:**  All Shifts WFM connectors are accompanied by end-to-end documentation for solution architecture, deployment, and configuration steps.</span></span> <span data-ttu-id="6a8c5-119">コネクタ リポジトリは監視され、リポジトリの GitHub Issues トラッカーを通じて発生する問題、課題、または困難を報告できます。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-119">The connector repositories are monitored, so that you can report any issues, challenges or difficulties you encounter through the repo's GitHub Issues tracker.</span></span>
 
-<span data-ttu-id="75356-122">**Teams でシフト ビューを開く**</span><span class="sxs-lookup"><span data-stu-id="75356-122">**Open shifts view in Teams**</span></span>  
-<span data-ttu-id="75356-123">![Teams でシフトを開く](../assets/images/teams-open-shifts-view.png)</span><span class="sxs-lookup"><span data-stu-id="75356-123">![Open shifts in Teams](../assets/images/teams-open-shifts-view.png)</span></span>
+* <span data-ttu-id="6a8c5-120">**シームレスな統合:** WFM ソリューションと Teams Shifts の統合により、ファーストラインワーカーは Teams Shifts アプリを使用してスケジュールとシフト時間を表示または管理し、Teams で提供されるその他の豊富なコラボレーション機能をモバイル デバイスまたはデスクトップから別のアプリに切り替えることなく使用できます。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-120">**Seamless integration:** The integration between WFM solutions and Teams Shifts allows firstline workers to use the Teams Shifts app to view or manage their schedules and shift times, and use all the other rich collaboration features provided in Teams right from their mobile device or desktop without having to switch context to another app.</span></span>  
 
-## <a name="kronos-to-teams-shifts-connector"></a><span data-ttu-id="75356-124">Kronos から Teams へのシフト コネクタ</span><span class="sxs-lookup"><span data-stu-id="75356-124">Kronos-to-Teams Shifts connector</span></span>
+<span data-ttu-id="6a8c5-121">**Teams でシフト ビューを開く**</span><span class="sxs-lookup"><span data-stu-id="6a8c5-121">**Open shifts view in Teams**</span></span> 
 
-<span data-ttu-id="75356-125">オープン ソース コードを使用すると、Kronos Workforce Central Version 8.1 以上を Teams シフト (デスクトップ/モバイル Teams アプリ) と統合して、次のファーストライン ワーカーおよびマネージャー シナリオに対応できます。</span><span class="sxs-lookup"><span data-stu-id="75356-125">With open-source code, you can integrate Kronos Workforce Central Version 8.1 and above, with Teams Shifts (desktop/mobile Teams app) for the following firstline worker and manager scenarios:</span></span>
+<span data-ttu-id="6a8c5-122">Teams のシフト ビューを次の図に示します。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-122">The shifts view in Teams is shown in the following image:</span></span> 
 
-1. <span data-ttu-id="75356-126">スケジュールを表示します。</span><span class="sxs-lookup"><span data-stu-id="75356-126">View schedule.</span></span>
+![Teams でシフトを開く](../assets/images/teams-open-shifts-view.png)
 
-1. <span data-ttu-id="75356-127">オープン シフトを公開して要求します。</span><span class="sxs-lookup"><span data-stu-id="75356-127">Publish and request open shifts.</span></span>
+## <a name="kronos-to-teams-shifts-connector"></a><span data-ttu-id="6a8c5-124">Kronos-to-Teams Shifts コネクタ</span><span class="sxs-lookup"><span data-stu-id="6a8c5-124">Kronos-to-Teams Shifts connector</span></span>
 
-1. <span data-ttu-id="75356-128">スワップ シフト。</span><span class="sxs-lookup"><span data-stu-id="75356-128">Swap shifts.</span></span>
+<span data-ttu-id="6a8c5-125">オープンソース コードを使用すると、Kronos Workforce Central Version 8.1 以上を、次のファーストライン ワーカーおよびマネージャー シナリオ用のデスクトップまたはモバイル Teams アプリなどの Teams Shifts と統合できます。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-125">With open-source code, you can integrate Kronos Workforce Central Version 8.1 and above, with Teams Shifts such as, desktop or mobile Teams app for the following firstline worker and manager scenarios:</span></span>
 
-1. <span data-ttu-id="75356-129">要求のタイム オフ。</span><span class="sxs-lookup"><span data-stu-id="75356-129">Request time off.</span></span>
+* <span data-ttu-id="6a8c5-126">スケジュールを表示します。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-126">View schedule.</span></span>
 
-1. <span data-ttu-id="75356-130">シフトを提供します。</span><span class="sxs-lookup"><span data-stu-id="75356-130">Offer shifts.</span></span>
+* <span data-ttu-id="6a8c5-127">オープン シフトを発行して要求します。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-127">Publish and request open shifts.</span></span>
 
-[<span data-ttu-id="75356-131">GitHub で入手する</span><span class="sxs-lookup"><span data-stu-id="75356-131">Get it on GitHub</span></span>]( https://aka.ms/KronosShiftsConnector)
+* <span data-ttu-id="6a8c5-128">スワップ シフト。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-128">Swap shifts.</span></span>
 
-## <a name="jda-to-teams-shifts-connector"></a><span data-ttu-id="75356-132">JDA から Teams へのシフト コネクタ</span><span class="sxs-lookup"><span data-stu-id="75356-132">JDA-to-Teams Shifts connector</span></span>
+* <span data-ttu-id="6a8c5-129">要求の時間を指定します。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-129">Request time off.</span></span>
 
-<span data-ttu-id="75356-133">オープン ソース コードを使用すると、JDA (BlueYonder) バージョン 17.2 以上を Teams シフト (デスクトップ/モバイル Teams アプリ) と統合して、次のファーストライン ワーカーおよびマネージャー シナリオに対応できます。</span><span class="sxs-lookup"><span data-stu-id="75356-133">With open-source code, you can integrate JDA (BlueYonder) Version 17.2 and above, with Teams Shifts (desktop/mobile Teams app) for the following firstline worker and manager scenarios:</span></span>
+* <span data-ttu-id="6a8c5-130">シフトを提供します。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-130">Offer shifts.</span></span>
 
-1. <span data-ttu-id="75356-134">JDA でシフトを公開し、グループをスケジュールし、Teams で表示します。</span><span class="sxs-lookup"><span data-stu-id="75356-134">Publish shifts and schedule groups in JDA and view in Teams.</span></span>
+<span data-ttu-id="6a8c5-131">Kronos-to-Teams Shifts コネクタの展開の詳細については [、「Get it on GitHub」を参照してください](https://aka.ms/KronosShiftsConnector)。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-131">For more information on deployment of Kronos-to-Teams Shifts connector, see [Get it on GitHub](https://aka.ms/KronosShiftsConnector).</span></span>
 
-1. <span data-ttu-id="75356-135">シフト スワップの要求やタイム オフなど、豊富なスケジュールシナリオを有効にします。</span><span class="sxs-lookup"><span data-stu-id="75356-135">Enable rich scheduling scenarios, including requesting shift swaps and time off.</span></span>
+## <a name="jda-to-teams-shifts-connector"></a><span data-ttu-id="6a8c5-132">JDA から Teams へのシフト コネクタ</span><span class="sxs-lookup"><span data-stu-id="6a8c5-132">JDA-to-Teams Shifts connector</span></span>
 
-1. <span data-ttu-id="75356-136">シフト用 Microsoft [Graph API を使用してユーザーの可用性を設定します](/graph/api/resources/shift?view=graph-rest-beta) 。</span><span class="sxs-lookup"><span data-stu-id="75356-136">Set  user availability using the [Microsoft Graph API for Shifts](/graph/api/resources/shift?view=graph-rest-beta) .</span></span>
+<span data-ttu-id="6a8c5-133">オープンソース コードを使用すると、BlueYonder バージョン 17.2 以上などの JDA を、次のファーストライン ワーカーおよびマネージャー シナリオ用のデスクトップまたはモバイル Teams アプリなどの Teams シフトと統合できます。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-133">With open-source code, you can integrate JDA, such as BlueYonder Version 17.2 and above, with Teams Shifts  such as, desktop or mobile Teams app for the following firstline worker and manager scenarios:</span></span>
 
-[<span data-ttu-id="75356-137">GitHub で入手する</span><span class="sxs-lookup"><span data-stu-id="75356-137">Get it on GitHub</span></span>](https://aka.ms/JDAShiftsConnector)</br></br>
+* <span data-ttu-id="6a8c5-134">JDA でシフトとスケジュール グループを発行し、Teams で表示します。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-134">Publish shifts and schedule groups in JDA and view them in Teams.</span></span>
+
+* <span data-ttu-id="6a8c5-135">シフト スワップの要求やタイム オフを含む、豊富なスケジュール設定シナリオを有効にします。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-135">Enable rich scheduling scenarios, including requesting shift swaps and time off.</span></span>
+
+* <span data-ttu-id="6a8c5-136">Microsoft Graph API for [Shifts を使用してユーザーの可用性を設定します](/graph/api/resources/shift?view=graph-rest-beta&preserve-view=true)。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-136">Set user availability using the [Microsoft Graph API for Shifts](/graph/api/resources/shift?view=graph-rest-beta&preserve-view=true).</span></span>
+
+<span data-ttu-id="6a8c5-137">投稿と提案の詳細については [、「Get it on GitHub」を参照してください](https://aka.ms/JDAShiftsConnector)。</span><span class="sxs-lookup"><span data-stu-id="6a8c5-137">For more information on contribution and suggestion, see [Get it on GitHub](https://aka.ms/JDAShiftsConnector).</span></span></br></br>
+
+## <a name="see-also"></a><span data-ttu-id="6a8c5-138">関連項目</span><span class="sxs-lookup"><span data-stu-id="6a8c5-138">See also</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="6a8c5-139">Web アプリを統合する</span><span class="sxs-lookup"><span data-stu-id="6a8c5-139">Integrate web apps</span></span>](~/samples/integrate-web-apps-overview.md)

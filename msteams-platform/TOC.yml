@@ -238,7 +238,7 @@
           href: bots/calls-and-meetings/calls-meetings-bots-overview.md
         - name: リアルタイムのメディア通話と会議
           href: bots/calls-and-meetings/real-time-media-concepts.md
-        - name: 通話ボットを登録する
+        - name: 通話と会議のボットを登録する
           href: bots/calls-and-meetings/registering-calling-bot.md
         - name: 着信通知
           href: bots/calls-and-meetings/call-notifications.md
@@ -384,6 +384,8 @@
           href: graph-api/rsc/test-rsc-json-file.md
 - name: アプリを公開する
   items:
+    - name: 既定のインストール オプションを構成する
+      href: concepts/deploy-and-publish/add-default-install-scope.md
     - name: アプリの配信方法を選ぶ
       href: concepts/deploy-and-publish/overview.md
     - name: アプリ パッケージを作成する
