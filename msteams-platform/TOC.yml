@@ -46,6 +46,8 @@
       href: concepts/design/map-use-cases.md
 - name: Teams との統合
   items:
+    - name: 概要
+      href: samples/integrate-web-apps-overview.md
     - name: Web アプリ
       href: samples/integrating-web-apps.md
     - name: Power プラットフォーム アプリ
@@ -60,11 +62,11 @@
       href: samples/app-templates.md
     - name: 本番対応の Shifts コネクタ
       href: samples/shifts-wfm-connectors.md
-    - name: Moodle LMS をインストールする
+    - name: Moodle LMS のインストール
       href: resources/moodleInstructions.md
     - name: '[Teams で共有] ボタンを作成する'
       href: concepts/build-and-test/share-to-teams.md
-    - name: SharePoint に Teams タブを追加する
+    - name: 'SharePoint に [Teams] タブを追加する'
       href: tabs/how-to/tabs-in-sharepoint.md
     - name: ディープ リンクの作成
       href: concepts/build-and-test/deep-links.md
