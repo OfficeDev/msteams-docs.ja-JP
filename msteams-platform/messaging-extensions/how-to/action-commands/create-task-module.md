@@ -5,42 +5,42 @@ description: 最初の呼び出しアクションを処理し、アクション 
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 1245edba88dcd256f77c55cfe049ec2e846522c2
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f13b2e099fa04ac950491e0b1fbc2ed09345e651
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019847"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058629"
 ---
-# <a name="create-and-send-the-task-module"></a><span data-ttu-id="9f648-103">タスク モジュールの作成と送信</span><span class="sxs-lookup"><span data-stu-id="9f648-103">Create and send the task module</span></span>
+# <a name="create-and-send-the-task-module"></a><span data-ttu-id="ba7fb-103">タスク モジュールの作成と送信</span><span class="sxs-lookup"><span data-stu-id="ba7fb-103">Create and send the task module</span></span>
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-<span data-ttu-id="9f648-104">アダプティブ カードまたは埋め込み Web ビューを使用してタスク モジュールを作成できます。</span><span class="sxs-lookup"><span data-stu-id="9f648-104">You can create the task module using an Adaptive Card or an embedded web view.</span></span> <span data-ttu-id="9f648-105">タスク モジュールを作成するには、最初の呼び出し要求と呼ばれるプロセスを実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9f648-105">To create a task module, you must perform the process called the initial invoke request.</span></span> <span data-ttu-id="9f648-106">このドキュメントでは、最初の呼び出し要求、1:1 チャット、グループ チャット、チャネル (新しい投稿)、チャネル (スレッドへの返信)、およびコマンド ボックスからタスク モジュールが呼び出された場合のペイロード アクティビティ プロパティについて説明します。</span><span class="sxs-lookup"><span data-stu-id="9f648-106">This document covers the initial invoke request, payload activity properties when a task module is invoked from 1:1 chat, group chat, channel (new post), channel (reply to thread), and command box.</span></span> 
+<span data-ttu-id="ba7fb-104">アダプティブ カードまたは埋め込み Web ビューを使用してタスク モジュールを作成できます。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-104">You can create the task module using an Adaptive Card or an embedded web view.</span></span> <span data-ttu-id="ba7fb-105">タスク モジュールを作成するには、最初の呼び出し要求と呼ばれるプロセスを実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-105">To create a task module, you must perform the process called the initial invoke request.</span></span> <span data-ttu-id="ba7fb-106">このドキュメントでは、最初の呼び出し要求、1:1 チャット、グループ チャット、チャネル (新しい投稿)、チャネル (スレッドへの返信)、およびコマンド ボックスからタスク モジュールが呼び出された場合のペイロード アクティビティ プロパティについて説明します。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-106">This document covers the initial invoke request, payload activity properties when a task module is invoked from 1:1 chat, group chat, channel (new post), channel (reply to thread), and command box.</span></span> 
 > [!NOTE]
-> <span data-ttu-id="9f648-107">アプリ マニフェストで定義されたパラメーターをタスク モジュールに設定しない場合は、アダプティブ カードまたは埋め込み Web ビューを使用するユーザー用のタスク モジュールを作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9f648-107">If you are not populating the task module with parameters defined in the app manifest, you must create the task module for users with either an Adaptive Card or an embedded web view.</span></span>
+> <span data-ttu-id="ba7fb-107">アプリ マニフェストで定義されたパラメーターをタスク モジュールに設定しない場合は、アダプティブ カードまたは埋め込み Web ビューを使用するユーザー用のタスク モジュールを作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-107">If you are not populating the task module with parameters defined in the app manifest, you must create the task module for users with either an Adaptive Card or an embedded web view.</span></span>
 
-## <a name="the-initial-invoke-request"></a><span data-ttu-id="9f648-108">最初の呼び出し要求</span><span class="sxs-lookup"><span data-stu-id="9f648-108">The initial invoke request</span></span>
+## <a name="the-initial-invoke-request"></a><span data-ttu-id="ba7fb-108">最初の呼び出し要求</span><span class="sxs-lookup"><span data-stu-id="ba7fb-108">The initial invoke request</span></span>
 
-<span data-ttu-id="9f648-109">最初の呼び出し要求のプロセスで、サービスは型のオブジェクトを受け取り、アダプティブ カードまたは埋め込み Web ビューへの URL を含むオブジェクトで応答する `Activity` `composeExtension/fetchTask` `task` 必要があります。</span><span class="sxs-lookup"><span data-stu-id="9f648-109">In the process of the initial invoke request, your service receives an `Activity` object of type `composeExtension/fetchTask`, and you must respond with a `task` object containing either an Adaptive Card or a URL to the embedded web view.</span></span> <span data-ttu-id="9f648-110">ボットアクティビティの標準プロパティと共に、最初の呼び出しペイロードには次の要求メタデータが含まれます。</span><span class="sxs-lookup"><span data-stu-id="9f648-110">Along with the standard bot activity properties, the initial invoke payload contains the following request metadata:</span></span>
+<span data-ttu-id="ba7fb-109">最初の呼び出し要求のプロセスで、サービスは型のオブジェクトを受け取り、アダプティブ カードまたは埋め込み Web ビューへの URL を含むオブジェクトで応答する `Activity` `composeExtension/fetchTask` `task` 必要があります。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-109">In the process of the initial invoke request, your service receives an `Activity` object of type `composeExtension/fetchTask`, and you must respond with a `task` object containing either an Adaptive Card or a URL to the embedded web view.</span></span> <span data-ttu-id="ba7fb-110">ボットアクティビティの標準プロパティと共に、最初の呼び出しペイロードには次の要求メタデータが含まれます。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-110">Along with the standard bot activity properties, the initial invoke payload contains the following request metadata:</span></span>
 
-|<span data-ttu-id="9f648-111">プロパティ名</span><span class="sxs-lookup"><span data-stu-id="9f648-111">Property name</span></span>|<span data-ttu-id="9f648-112">用途</span><span class="sxs-lookup"><span data-stu-id="9f648-112">Purpose</span></span>|
+|<span data-ttu-id="ba7fb-111">プロパティ名</span><span class="sxs-lookup"><span data-stu-id="ba7fb-111">Property name</span></span>|<span data-ttu-id="ba7fb-112">用途</span><span class="sxs-lookup"><span data-stu-id="ba7fb-112">Purpose</span></span>|
 |---|---|
-|`type`| <span data-ttu-id="9f648-113">要求の種類。</span><span class="sxs-lookup"><span data-stu-id="9f648-113">Type of request.</span></span> <span data-ttu-id="9f648-114">この値は、 である必要があります `invoke` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-114">It must be `invoke`.</span></span> |
-|`name`| <span data-ttu-id="9f648-115">サービスに発行されるコマンドの種類。</span><span class="sxs-lookup"><span data-stu-id="9f648-115">Type of command that is issued to your service.</span></span> <span data-ttu-id="9f648-116">この値は、 である必要があります `composeExtension/fetchTask` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-116">It must be `composeExtension/fetchTask`.</span></span> |
-|`from.id`| <span data-ttu-id="9f648-117">要求を送信したユーザーの ID。</span><span class="sxs-lookup"><span data-stu-id="9f648-117">ID of the user that sent the request.</span></span> |
-|`from.name`| <span data-ttu-id="9f648-118">要求を送信したユーザーの名前。</span><span class="sxs-lookup"><span data-stu-id="9f648-118">Name of the user that sent the request.</span></span> |
-|`from.aadObjectId`| <span data-ttu-id="9f648-119">要求を送信したユーザーの Azure Active Directory オブジェクト ID。</span><span class="sxs-lookup"><span data-stu-id="9f648-119">Azure Active Directory object ID of the user that sent the request.</span></span> |
-|`channelData.tenant.id`| <span data-ttu-id="9f648-120">Azure Active Directory テナント ID。</span><span class="sxs-lookup"><span data-stu-id="9f648-120">Azure Active Directory tenant ID.</span></span> |
-|`channelData.channel.id`| <span data-ttu-id="9f648-121">チャネル ID (チャネルで要求が行われた場合)。</span><span class="sxs-lookup"><span data-stu-id="9f648-121">Channel ID (if the request was made in a channel).</span></span> |
-|`channelData.team.id`| <span data-ttu-id="9f648-122">チーム ID (チャネルで要求が行われた場合)。</span><span class="sxs-lookup"><span data-stu-id="9f648-122">Team ID (if the request was made in a channel).</span></span> |
-|`value.commandId` | <span data-ttu-id="9f648-123">呼び出されたコマンドの ID が含まれる。</span><span class="sxs-lookup"><span data-stu-id="9f648-123">Contains the ID of the command that was invoked.</span></span> |
-|`value.commandContext` | <span data-ttu-id="9f648-124">イベントをトリガーしたコンテキスト。</span><span class="sxs-lookup"><span data-stu-id="9f648-124">The context that triggered the event.</span></span> <span data-ttu-id="9f648-125">この値は、 である必要があります `compose` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-125">It must be `compose`.</span></span> |
-|`value.context.theme` | <span data-ttu-id="9f648-126">ユーザーのクライアント テーマは、埋め込み Web ビューの書式設定に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="9f648-126">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="9f648-127">は、または `default` `contrast` である必要があります `dark` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-127">It must be `default`, `contrast` or `dark`.</span></span> |
+|`type`| <span data-ttu-id="ba7fb-113">要求の種類。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-113">Type of request.</span></span> <span data-ttu-id="ba7fb-114">この値は、 である必要があります `invoke` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-114">It must be `invoke`.</span></span> |
+|`name`| <span data-ttu-id="ba7fb-115">サービスに発行されるコマンドの種類。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-115">Type of command that is issued to your service.</span></span> <span data-ttu-id="ba7fb-116">この値は、 である必要があります `composeExtension/fetchTask` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-116">It must be `composeExtension/fetchTask`.</span></span> |
+|`from.id`| <span data-ttu-id="ba7fb-117">要求を送信したユーザーの ID。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-117">ID of the user that sent the request.</span></span> |
+|`from.name`| <span data-ttu-id="ba7fb-118">要求を送信したユーザーの名前。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-118">Name of the user that sent the request.</span></span> |
+|`from.aadObjectId`| <span data-ttu-id="ba7fb-119">要求を送信したユーザーの Azure Active Directory オブジェクト ID。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-119">Azure Active Directory object ID of the user that sent the request.</span></span> |
+|`channelData.tenant.id`| <span data-ttu-id="ba7fb-120">Azure Active Directory テナント ID。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-120">Azure Active Directory tenant ID.</span></span> |
+|`channelData.channel.id`| <span data-ttu-id="ba7fb-121">チャネル ID (チャネルで要求が行われた場合)。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-121">Channel ID (if the request was made in a channel).</span></span> |
+|`channelData.team.id`| <span data-ttu-id="ba7fb-122">チーム ID (チャネルで要求が行われた場合)。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-122">Team ID (if the request was made in a channel).</span></span> |
+|`value.commandId` | <span data-ttu-id="ba7fb-123">呼び出されたコマンドの ID が含まれる。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-123">Contains the ID of the command that was invoked.</span></span> |
+|`value.commandContext` | <span data-ttu-id="ba7fb-124">イベントをトリガーしたコンテキスト。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-124">The context that triggered the event.</span></span> <span data-ttu-id="ba7fb-125">この値は、 である必要があります `compose` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-125">It must be `compose`.</span></span> |
+|`value.context.theme` | <span data-ttu-id="ba7fb-126">ユーザーのクライアント テーマは、埋め込み Web ビューの書式設定に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-126">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="ba7fb-127">は、または `default` `contrast` である必要があります `dark` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-127">It must be `default`, `contrast` or `dark`.</span></span> |
 
-### <a name="example"></a><span data-ttu-id="9f648-128">例</span><span class="sxs-lookup"><span data-stu-id="9f648-128">Example</span></span>
+### <a name="example"></a><span data-ttu-id="ba7fb-128">例</span><span class="sxs-lookup"><span data-stu-id="ba7fb-128">Example</span></span>
 
-<span data-ttu-id="9f648-129">最初の呼び出し要求のコードは、次の例で示されています。</span><span class="sxs-lookup"><span data-stu-id="9f648-129">The code for the initial invoke request is given in the following example:</span></span>
+<span data-ttu-id="ba7fb-129">最初の呼び出し要求のコードは、次の例で示されています。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-129">The code for the initial invoke request is given in the following example:</span></span>
 
 ```json
 {
@@ -70,27 +70,27 @@ ms.locfileid: "52019847"
   "name": "composeExtension/fetchTask"
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-11-chat"></a><span data-ttu-id="9f648-130">タスク モジュールが 1:1 チャットから呼び出された場合のペイロード アクティビティプロパティ</span><span class="sxs-lookup"><span data-stu-id="9f648-130">Payload activity properties when a task module is invoked from 1:1 chat</span></span> 
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-11-chat"></a><span data-ttu-id="ba7fb-130">タスク モジュールが 1:1 チャットから呼び出された場合のペイロード アクティビティプロパティ</span><span class="sxs-lookup"><span data-stu-id="ba7fb-130">Payload activity properties when a task module is invoked from 1:1 chat</span></span> 
 
-<span data-ttu-id="9f648-131">タスク モジュールが 1:1 チャットから呼び出された場合のペイロード アクティビティのプロパティは、次のように表示されます。</span><span class="sxs-lookup"><span data-stu-id="9f648-131">The payload activity properties when a task module is invoked from 1:1 chat are listed as follows:</span></span>
+<span data-ttu-id="ba7fb-131">タスク モジュールが 1:1 チャットから呼び出された場合のペイロード アクティビティのプロパティは、次のように表示されます。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-131">The payload activity properties when a task module is invoked from 1:1 chat are listed as follows:</span></span>
 
-|<span data-ttu-id="9f648-132">プロパティ名</span><span class="sxs-lookup"><span data-stu-id="9f648-132">Property name</span></span>|<span data-ttu-id="9f648-133">用途</span><span class="sxs-lookup"><span data-stu-id="9f648-133">Purpose</span></span>|
+|<span data-ttu-id="ba7fb-132">プロパティ名</span><span class="sxs-lookup"><span data-stu-id="ba7fb-132">Property name</span></span>|<span data-ttu-id="ba7fb-133">用途</span><span class="sxs-lookup"><span data-stu-id="ba7fb-133">Purpose</span></span>|
 |---|---|
-|`type`| <span data-ttu-id="9f648-134">要求の種類。</span><span class="sxs-lookup"><span data-stu-id="9f648-134">Type of request.</span></span> <span data-ttu-id="9f648-135">この値は、 である必要があります `invoke` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-135">It must be `invoke`.</span></span> |
-|`name`| <span data-ttu-id="9f648-136">サービスに発行されるコマンドの種類。</span><span class="sxs-lookup"><span data-stu-id="9f648-136">Type of command that is issued to your service.</span></span> <span data-ttu-id="9f648-137">この値は、 である必要があります `composeExtension/fetchTask` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-137">It must be `composeExtension/fetchTask`.</span></span> |
-|`from.id`| <span data-ttu-id="9f648-138">要求を送信したユーザーの ID。</span><span class="sxs-lookup"><span data-stu-id="9f648-138">ID of the user that sent the request.</span></span> |
-|`from.name`| <span data-ttu-id="9f648-139">要求を送信したユーザーの名前。</span><span class="sxs-lookup"><span data-stu-id="9f648-139">Name of the user that sent the request.</span></span> |
-|`from.aadObjectId`| <span data-ttu-id="9f648-140">要求を送信したユーザーの Azure Active Directory オブジェクト ID。</span><span class="sxs-lookup"><span data-stu-id="9f648-140">Azure Active Directory object ID of the user that sent the request.</span></span> |
-|`channelData.tenant.id`| <span data-ttu-id="9f648-141">Azure Active Directory テナント ID。</span><span class="sxs-lookup"><span data-stu-id="9f648-141">Azure Active Directory tenant ID.</span></span> |
-|`channelData.source.name`| <span data-ttu-id="9f648-142">タスク モジュールの呼び出し元のソース名。</span><span class="sxs-lookup"><span data-stu-id="9f648-142">The source name from where task module is invoked.</span></span> |
-|`ChannelData.legacy. replyToId`| <span data-ttu-id="9f648-143">このメッセージが返信であるメッセージの ID を取得または設定します。</span><span class="sxs-lookup"><span data-stu-id="9f648-143">Gets or sets the ID of the message to which this message is a reply.</span></span> |
-|`value.commandId` | <span data-ttu-id="9f648-144">呼び出されたコマンドの ID が含まれる。</span><span class="sxs-lookup"><span data-stu-id="9f648-144">Contains the ID of the command that was invoked.</span></span> |
-|`value.commandContext` | <span data-ttu-id="9f648-145">イベントをトリガーしたコンテキスト。</span><span class="sxs-lookup"><span data-stu-id="9f648-145">The context that triggered the event.</span></span> <span data-ttu-id="9f648-146">この値は、 である必要があります `compose` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-146">It must be `compose`.</span></span> |
-|`value.context.theme` | <span data-ttu-id="9f648-147">ユーザーのクライアント テーマは、埋め込み Web ビューの書式設定に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="9f648-147">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="9f648-148">は、または `default` `contrast` である必要があります `dark` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-148">It must be `default`, `contrast` or `dark`.</span></span> |
+|`type`| <span data-ttu-id="ba7fb-134">要求の種類。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-134">Type of request.</span></span> <span data-ttu-id="ba7fb-135">この値は、 である必要があります `invoke` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-135">It must be `invoke`.</span></span> |
+|`name`| <span data-ttu-id="ba7fb-136">サービスに発行されるコマンドの種類。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-136">Type of command that is issued to your service.</span></span> <span data-ttu-id="ba7fb-137">この値は、 である必要があります `composeExtension/fetchTask` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-137">It must be `composeExtension/fetchTask`.</span></span> |
+|`from.id`| <span data-ttu-id="ba7fb-138">要求を送信したユーザーの ID。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-138">ID of the user that sent the request.</span></span> |
+|`from.name`| <span data-ttu-id="ba7fb-139">要求を送信したユーザーの名前。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-139">Name of the user that sent the request.</span></span> |
+|`from.aadObjectId`| <span data-ttu-id="ba7fb-140">要求を送信したユーザーの Azure Active Directory オブジェクト ID。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-140">Azure Active Directory object ID of the user that sent the request.</span></span> |
+|`channelData.tenant.id`| <span data-ttu-id="ba7fb-141">Azure Active Directory テナント ID。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-141">Azure Active Directory tenant ID.</span></span> |
+|`channelData.source.name`| <span data-ttu-id="ba7fb-142">タスク モジュールの呼び出し元のソース名。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-142">The source name from where task module is invoked.</span></span> |
+|`ChannelData.legacy. replyToId`| <span data-ttu-id="ba7fb-143">このメッセージが返信であるメッセージの ID を取得または設定します。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-143">Gets or sets the ID of the message to which this message is a reply.</span></span> |
+|`value.commandId` | <span data-ttu-id="ba7fb-144">呼び出されたコマンドの ID が含まれる。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-144">Contains the ID of the command that was invoked.</span></span> |
+|`value.commandContext` | <span data-ttu-id="ba7fb-145">イベントをトリガーしたコンテキスト。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-145">The context that triggered the event.</span></span> <span data-ttu-id="ba7fb-146">この値は、 である必要があります `compose` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-146">It must be `compose`.</span></span> |
+|`value.context.theme` | <span data-ttu-id="ba7fb-147">ユーザーのクライアント テーマは、埋め込み Web ビューの書式設定に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-147">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="ba7fb-148">は、または `default` `contrast` である必要があります `dark` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-148">It must be `default`, `contrast` or `dark`.</span></span> |
 
-### <a name="example"></a><span data-ttu-id="9f648-149">例</span><span class="sxs-lookup"><span data-stu-id="9f648-149">Example</span></span>
+### <a name="example"></a><span data-ttu-id="ba7fb-149">例</span><span class="sxs-lookup"><span data-stu-id="ba7fb-149">Example</span></span>
 
-<span data-ttu-id="9f648-150">タスク モジュールが 1:1 チャットから呼び出された場合のペイロード アクティビティプロパティは、次の例で示されています。</span><span class="sxs-lookup"><span data-stu-id="9f648-150">The payload activity properties when a task module is invoked from 1:1 chat are given in the following example:</span></span>
+<span data-ttu-id="ba7fb-150">タスク モジュールが 1:1 チャットから呼び出された場合のペイロード アクティビティプロパティは、次の例で示されています。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-150">The payload activity properties when a task module is invoked from 1:1 chat are given in the following example:</span></span>
 
 ```json
 {
@@ -120,27 +120,27 @@ ms.locfileid: "52019847"
   "name": "composeExtension/fetchTask"
 }
 ```
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-group-chat"></a><span data-ttu-id="9f648-151">グループ チャットからタスク モジュールが呼び出された場合のペイロード アクティビティのプロパティ</span><span class="sxs-lookup"><span data-stu-id="9f648-151">Payload activity properties when a task module is invoked from a group chat</span></span> 
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-group-chat"></a><span data-ttu-id="ba7fb-151">グループ チャットからタスク モジュールが呼び出された場合のペイロード アクティビティのプロパティ</span><span class="sxs-lookup"><span data-stu-id="ba7fb-151">Payload activity properties when a task module is invoked from a group chat</span></span> 
 
-<span data-ttu-id="9f648-152">タスク モジュールがグループ チャットから呼び出された場合のペイロード アクティビティのプロパティは、次のように表示されます。</span><span class="sxs-lookup"><span data-stu-id="9f648-152">The payload activity properties when a task module is invoked from a group chat are listed as follows:</span></span>
+<span data-ttu-id="ba7fb-152">タスク モジュールがグループ チャットから呼び出された場合のペイロード アクティビティのプロパティは、次のように表示されます。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-152">The payload activity properties when a task module is invoked from a group chat are listed as follows:</span></span>
 
-|<span data-ttu-id="9f648-153">プロパティ名</span><span class="sxs-lookup"><span data-stu-id="9f648-153">Property name</span></span>|<span data-ttu-id="9f648-154">用途</span><span class="sxs-lookup"><span data-stu-id="9f648-154">Purpose</span></span>|
+|<span data-ttu-id="ba7fb-153">プロパティ名</span><span class="sxs-lookup"><span data-stu-id="ba7fb-153">Property name</span></span>|<span data-ttu-id="ba7fb-154">用途</span><span class="sxs-lookup"><span data-stu-id="ba7fb-154">Purpose</span></span>|
 |---|---|
-|`type`| <span data-ttu-id="9f648-155">要求の種類。</span><span class="sxs-lookup"><span data-stu-id="9f648-155">Type of request.</span></span> <span data-ttu-id="9f648-156">この値は、 である必要があります `invoke` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-156">It must be `invoke`.</span></span> |
-|`name`| <span data-ttu-id="9f648-157">サービスに発行されるコマンドの種類。</span><span class="sxs-lookup"><span data-stu-id="9f648-157">Type of command that is issued to your service.</span></span> <span data-ttu-id="9f648-158">この値は、 である必要があります `composeExtension/fetchTask` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-158">It must be `composeExtension/fetchTask`.</span></span> |
-|`from.id`| <span data-ttu-id="9f648-159">要求を送信したユーザーの ID。</span><span class="sxs-lookup"><span data-stu-id="9f648-159">ID of the user that sent the request.</span></span> |
-|`from.name`| <span data-ttu-id="9f648-160">要求を送信したユーザーの名前。</span><span class="sxs-lookup"><span data-stu-id="9f648-160">Name of the user that sent the request.</span></span> |
-|`from.aadObjectId`| <span data-ttu-id="9f648-161">要求を送信したユーザーの Azure Active Directory オブジェクト ID。</span><span class="sxs-lookup"><span data-stu-id="9f648-161">Azure Active Directory object ID of the user that sent the request.</span></span> |
-|`channelData.tenant.id`| <span data-ttu-id="9f648-162">Azure Active Directory テナント ID。</span><span class="sxs-lookup"><span data-stu-id="9f648-162">Azure Active Directory tenant ID.</span></span> |
-|`channelData.source.name`| <span data-ttu-id="9f648-163">タスク モジュールの呼び出し元のソース名。</span><span class="sxs-lookup"><span data-stu-id="9f648-163">The source name from where task module is invoked.</span></span> |
-|`ChannelData.legacy. replyToId`| <span data-ttu-id="9f648-164">このメッセージが返信であるメッセージの ID を取得または設定します。</span><span class="sxs-lookup"><span data-stu-id="9f648-164">Gets or sets the ID of the message to which this message is a reply.</span></span> |
-|`value.commandId` | <span data-ttu-id="9f648-165">呼び出されたコマンドの ID が含まれる。</span><span class="sxs-lookup"><span data-stu-id="9f648-165">Contains the ID of the command that was invoked.</span></span> |
-|`value.commandContext` | <span data-ttu-id="9f648-166">イベントをトリガーしたコンテキスト。</span><span class="sxs-lookup"><span data-stu-id="9f648-166">The context that triggered the event.</span></span> <span data-ttu-id="9f648-167">この値は、 である必要があります `compose` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-167">It must be `compose`.</span></span> |
-|`value.context.theme` | <span data-ttu-id="9f648-168">ユーザーのクライアント テーマは、埋め込み Web ビューの書式設定に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="9f648-168">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="9f648-169">は、または `default` `contrast` である必要があります `dark` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-169">It must be `default`, `contrast` or `dark`.</span></span> |
+|`type`| <span data-ttu-id="ba7fb-155">要求の種類。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-155">Type of request.</span></span> <span data-ttu-id="ba7fb-156">この値は、 である必要があります `invoke` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-156">It must be `invoke`.</span></span> |
+|`name`| <span data-ttu-id="ba7fb-157">サービスに発行されるコマンドの種類。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-157">Type of command that is issued to your service.</span></span> <span data-ttu-id="ba7fb-158">この値は、 である必要があります `composeExtension/fetchTask` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-158">It must be `composeExtension/fetchTask`.</span></span> |
+|`from.id`| <span data-ttu-id="ba7fb-159">要求を送信したユーザーの ID。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-159">ID of the user that sent the request.</span></span> |
+|`from.name`| <span data-ttu-id="ba7fb-160">要求を送信したユーザーの名前。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-160">Name of the user that sent the request.</span></span> |
+|`from.aadObjectId`| <span data-ttu-id="ba7fb-161">要求を送信したユーザーの Azure Active Directory オブジェクト ID。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-161">Azure Active Directory object ID of the user that sent the request.</span></span> |
+|`channelData.tenant.id`| <span data-ttu-id="ba7fb-162">Azure Active Directory テナント ID。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-162">Azure Active Directory tenant ID.</span></span> |
+|`channelData.source.name`| <span data-ttu-id="ba7fb-163">タスク モジュールの呼び出し元のソース名。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-163">The source name from where task module is invoked.</span></span> |
+|`ChannelData.legacy. replyToId`| <span data-ttu-id="ba7fb-164">このメッセージが返信であるメッセージの ID を取得または設定します。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-164">Gets or sets the ID of the message to which this message is a reply.</span></span> |
+|`value.commandId` | <span data-ttu-id="ba7fb-165">呼び出されたコマンドの ID が含まれる。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-165">Contains the ID of the command that was invoked.</span></span> |
+|`value.commandContext` | <span data-ttu-id="ba7fb-166">イベントをトリガーしたコンテキスト。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-166">The context that triggered the event.</span></span> <span data-ttu-id="ba7fb-167">この値は、 である必要があります `compose` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-167">It must be `compose`.</span></span> |
+|`value.context.theme` | <span data-ttu-id="ba7fb-168">ユーザーのクライアント テーマは、埋め込み Web ビューの書式設定に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-168">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="ba7fb-169">は、または `default` `contrast` である必要があります `dark` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-169">It must be `default`, `contrast` or `dark`.</span></span> |
 
-### <a name="example"></a><span data-ttu-id="9f648-170">例</span><span class="sxs-lookup"><span data-stu-id="9f648-170">Example</span></span>
+### <a name="example"></a><span data-ttu-id="ba7fb-170">例</span><span class="sxs-lookup"><span data-stu-id="ba7fb-170">Example</span></span>
 
-<span data-ttu-id="9f648-171">タスク モジュールがグループ チャットから呼び出された場合のペイロード アクティビティプロパティは、次の例で示されています。</span><span class="sxs-lookup"><span data-stu-id="9f648-171">The payload activity properties when a task module is invoked from a group chat are given in the following example:</span></span>
+<span data-ttu-id="ba7fb-171">タスク モジュールがグループ チャットから呼び出された場合のペイロード アクティビティプロパティは、次の例で示されています。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-171">The payload activity properties when a task module is invoked from a group chat are given in the following example:</span></span>
 
 ```json
 {
@@ -177,29 +177,29 @@ ms.locfileid: "52019847"
 }
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-new-post"></a><span data-ttu-id="9f648-172">チャネルからタスク モジュールが呼び出された場合のペイロード アクティビティ プロパティ (新しい投稿)</span><span class="sxs-lookup"><span data-stu-id="9f648-172">Payload activity properties when a task module is invoked from a channel (new post)</span></span> 
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-new-post"></a><span data-ttu-id="ba7fb-172">チャネルからタスク モジュールが呼び出された場合のペイロード アクティビティ プロパティ (新しい投稿)</span><span class="sxs-lookup"><span data-stu-id="ba7fb-172">Payload activity properties when a task module is invoked from a channel (new post)</span></span> 
 
-<span data-ttu-id="9f648-173">タスク モジュールがチャネル (新しい投稿) から呼び出された場合のペイロード アクティビティプロパティは、次のように表示されます。</span><span class="sxs-lookup"><span data-stu-id="9f648-173">The payload activity properties when a task module is invoked from a channel (new post) are listed as follows:</span></span>
+<span data-ttu-id="ba7fb-173">タスク モジュールがチャネル (新しい投稿) から呼び出された場合のペイロード アクティビティプロパティは、次のように表示されます。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-173">The payload activity properties when a task module is invoked from a channel (new post) are listed as follows:</span></span>
 
-|<span data-ttu-id="9f648-174">プロパティ名</span><span class="sxs-lookup"><span data-stu-id="9f648-174">Property name</span></span>|<span data-ttu-id="9f648-175">用途</span><span class="sxs-lookup"><span data-stu-id="9f648-175">Purpose</span></span>|
+|<span data-ttu-id="ba7fb-174">プロパティ名</span><span class="sxs-lookup"><span data-stu-id="ba7fb-174">Property name</span></span>|<span data-ttu-id="ba7fb-175">用途</span><span class="sxs-lookup"><span data-stu-id="ba7fb-175">Purpose</span></span>|
 |---|---|
-|`type`| <span data-ttu-id="9f648-176">要求の種類。</span><span class="sxs-lookup"><span data-stu-id="9f648-176">Type of request.</span></span> <span data-ttu-id="9f648-177">この値は、 である必要があります `invoke` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-177">It must be `invoke`.</span></span> |
-|`name`| <span data-ttu-id="9f648-178">サービスに発行されるコマンドの種類。</span><span class="sxs-lookup"><span data-stu-id="9f648-178">Type of command that is issued to your service.</span></span> <span data-ttu-id="9f648-179">この値は、 である必要があります `composeExtension/fetchTask` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-179">It must be `composeExtension/fetchTask`.</span></span> |
-|`from.id`| <span data-ttu-id="9f648-180">要求を送信したユーザーの ID。</span><span class="sxs-lookup"><span data-stu-id="9f648-180">ID of the user that sent the request.</span></span> |
-|`from.name`| <span data-ttu-id="9f648-181">要求を送信したユーザーの名前。</span><span class="sxs-lookup"><span data-stu-id="9f648-181">Name of the user that sent the request.</span></span> |
-|`from.aadObjectId`| <span data-ttu-id="9f648-182">要求を送信したユーザーの Azure Active Directory オブジェクト ID。</span><span class="sxs-lookup"><span data-stu-id="9f648-182">Azure Active Directory object ID of the user that sent the request.</span></span> |
-|`channelData.tenant.id`| <span data-ttu-id="9f648-183">Azure Active Directory テナント ID。</span><span class="sxs-lookup"><span data-stu-id="9f648-183">Azure Active Directory tenant ID.</span></span> |
-|`channelData.channel.id`| <span data-ttu-id="9f648-184">チャネル ID (チャネルで要求が行われた場合)。</span><span class="sxs-lookup"><span data-stu-id="9f648-184">Channel ID (if the request was made in a channel).</span></span> |
-|`channelData.team.id`| <span data-ttu-id="9f648-185">チーム ID (チャネルで要求が行われた場合)。</span><span class="sxs-lookup"><span data-stu-id="9f648-185">Team ID (if the request was made in a channel).</span></span> |
-|`channelData.source.name`| <span data-ttu-id="9f648-186">タスク モジュールの呼び出し元のソース名。</span><span class="sxs-lookup"><span data-stu-id="9f648-186">The source name from where task module is invoked.</span></span> |
-|`ChannelData.legacy. replyToId`| <span data-ttu-id="9f648-187">このメッセージが返信であるメッセージの ID を取得または設定します。</span><span class="sxs-lookup"><span data-stu-id="9f648-187">Gets or sets the ID of the message to which this message is a reply.</span></span> |
-|`value.commandId` | <span data-ttu-id="9f648-188">呼び出されたコマンドの ID が含まれる。</span><span class="sxs-lookup"><span data-stu-id="9f648-188">Contains the ID of the command that was invoked.</span></span> |
-|`value.commandContext` | <span data-ttu-id="9f648-189">イベントをトリガーしたコンテキスト。</span><span class="sxs-lookup"><span data-stu-id="9f648-189">The context that triggered the event.</span></span> <span data-ttu-id="9f648-190">この値は、 である必要があります `compose` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-190">It must be `compose`.</span></span> |
-|`value.context.theme` | <span data-ttu-id="9f648-191">ユーザーのクライアント テーマは、埋め込み Web ビューの書式設定に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="9f648-191">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="9f648-192">、、または `default` `contrast` である必要があります `dark` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-192">It must be `default`, `contrast`, or `dark`.</span></span> |
+|`type`| <span data-ttu-id="ba7fb-176">要求の種類。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-176">Type of request.</span></span> <span data-ttu-id="ba7fb-177">この値は、 である必要があります `invoke` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-177">It must be `invoke`.</span></span> |
+|`name`| <span data-ttu-id="ba7fb-178">サービスに発行されるコマンドの種類。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-178">Type of command that is issued to your service.</span></span> <span data-ttu-id="ba7fb-179">この値は、 である必要があります `composeExtension/fetchTask` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-179">It must be `composeExtension/fetchTask`.</span></span> |
+|`from.id`| <span data-ttu-id="ba7fb-180">要求を送信したユーザーの ID。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-180">ID of the user that sent the request.</span></span> |
+|`from.name`| <span data-ttu-id="ba7fb-181">要求を送信したユーザーの名前。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-181">Name of the user that sent the request.</span></span> |
+|`from.aadObjectId`| <span data-ttu-id="ba7fb-182">要求を送信したユーザーの Azure Active Directory オブジェクト ID。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-182">Azure Active Directory object ID of the user that sent the request.</span></span> |
+|`channelData.tenant.id`| <span data-ttu-id="ba7fb-183">Azure Active Directory テナント ID。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-183">Azure Active Directory tenant ID.</span></span> |
+|`channelData.channel.id`| <span data-ttu-id="ba7fb-184">チャネル ID (チャネルで要求が行われた場合)。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-184">Channel ID (if the request was made in a channel).</span></span> |
+|`channelData.team.id`| <span data-ttu-id="ba7fb-185">チーム ID (チャネルで要求が行われた場合)。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-185">Team ID (if the request was made in a channel).</span></span> |
+|`channelData.source.name`| <span data-ttu-id="ba7fb-186">タスク モジュールの呼び出し元のソース名。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-186">The source name from where task module is invoked.</span></span> |
+|`ChannelData.legacy. replyToId`| <span data-ttu-id="ba7fb-187">このメッセージが返信であるメッセージの ID を取得または設定します。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-187">Gets or sets the ID of the message to which this message is a reply.</span></span> |
+|`value.commandId` | <span data-ttu-id="ba7fb-188">呼び出されたコマンドの ID が含まれる。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-188">Contains the ID of the command that was invoked.</span></span> |
+|`value.commandContext` | <span data-ttu-id="ba7fb-189">イベントをトリガーしたコンテキスト。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-189">The context that triggered the event.</span></span> <span data-ttu-id="ba7fb-190">この値は、 である必要があります `compose` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-190">It must be `compose`.</span></span> |
+|`value.context.theme` | <span data-ttu-id="ba7fb-191">ユーザーのクライアント テーマは、埋め込み Web ビューの書式設定に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-191">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="ba7fb-192">、、または `default` `contrast` である必要があります `dark` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-192">It must be `default`, `contrast`, or `dark`.</span></span> |
 
-### <a name="example"></a><span data-ttu-id="9f648-193">例</span><span class="sxs-lookup"><span data-stu-id="9f648-193">Example</span></span>
+### <a name="example"></a><span data-ttu-id="ba7fb-193">例</span><span class="sxs-lookup"><span data-stu-id="ba7fb-193">Example</span></span>
 
-<span data-ttu-id="9f648-194">タスク モジュールがチャネル (新しい投稿) から呼び出された場合のペイロード アクティビティ プロパティは、次の例で示されています。</span><span class="sxs-lookup"><span data-stu-id="9f648-194">The payload activity properties when a task module is invoked from a channel (new post) are given in the following example:</span></span>
+<span data-ttu-id="ba7fb-194">タスク モジュールがチャネル (新しい投稿) から呼び出された場合のペイロード アクティビティ プロパティは、次の例で示されています。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-194">The payload activity properties when a task module is invoked from a channel (new post) are given in the following example:</span></span>
 
 ```json
 {
@@ -243,29 +243,29 @@ ms.locfileid: "52019847"
 }
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-reply-to-thread"></a><span data-ttu-id="9f648-195">チャネルからタスク モジュールが呼び出された場合のペイロード アクティビティ プロパティ (スレッドに返信)</span><span class="sxs-lookup"><span data-stu-id="9f648-195">Payload activity properties when a task module is invoked from a channel (reply to thread)</span></span> 
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-reply-to-thread"></a><span data-ttu-id="ba7fb-195">チャネルからタスク モジュールが呼び出された場合のペイロード アクティビティ プロパティ (スレッドに返信)</span><span class="sxs-lookup"><span data-stu-id="ba7fb-195">Payload activity properties when a task module is invoked from a channel (reply to thread)</span></span> 
 
-<span data-ttu-id="9f648-196">タスク モジュールがチャネルから呼び出された場合のペイロード アクティビティ プロパティ (スレッドへの返信) は、次のように表示されます。</span><span class="sxs-lookup"><span data-stu-id="9f648-196">The payload activity properties when a task module is invoked from a channel (reply to thread) are listed as follows:</span></span>
+<span data-ttu-id="ba7fb-196">タスク モジュールがチャネルから呼び出された場合のペイロード アクティビティ プロパティ (スレッドへの返信) は、次のように表示されます。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-196">The payload activity properties when a task module is invoked from a channel (reply to thread) are listed as follows:</span></span>
 
-|<span data-ttu-id="9f648-197">プロパティ名</span><span class="sxs-lookup"><span data-stu-id="9f648-197">Property name</span></span>|<span data-ttu-id="9f648-198">用途</span><span class="sxs-lookup"><span data-stu-id="9f648-198">Purpose</span></span>|
+|<span data-ttu-id="ba7fb-197">プロパティ名</span><span class="sxs-lookup"><span data-stu-id="ba7fb-197">Property name</span></span>|<span data-ttu-id="ba7fb-198">用途</span><span class="sxs-lookup"><span data-stu-id="ba7fb-198">Purpose</span></span>|
 |---|---|
-|`type`| <span data-ttu-id="9f648-199">要求の種類。</span><span class="sxs-lookup"><span data-stu-id="9f648-199">Type of request.</span></span> <span data-ttu-id="9f648-200">この値は、 である必要があります `invoke` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-200">It must be `invoke`.</span></span> |
-|`name`| <span data-ttu-id="9f648-201">サービスに発行されるコマンドの種類。</span><span class="sxs-lookup"><span data-stu-id="9f648-201">Type of command that is issued to your service.</span></span> <span data-ttu-id="9f648-202">この値は、 である必要があります `composeExtension/fetchTask` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-202">It must be `composeExtension/fetchTask`.</span></span> |
-|`from.id`| <span data-ttu-id="9f648-203">要求を送信したユーザーの ID。</span><span class="sxs-lookup"><span data-stu-id="9f648-203">ID of the user that sent the request.</span></span> |
-|`from.name`| <span data-ttu-id="9f648-204">要求を送信したユーザーの名前。</span><span class="sxs-lookup"><span data-stu-id="9f648-204">Name of the user that sent the request.</span></span> |
-|`from.aadObjectId`| <span data-ttu-id="9f648-205">要求を送信したユーザーの Azure Active Directory オブジェクト ID。</span><span class="sxs-lookup"><span data-stu-id="9f648-205">Azure Active Directory object ID of the user that sent the request.</span></span> |
-|`channelData.tenant.id`| <span data-ttu-id="9f648-206">Azure Active Directory テナント ID。</span><span class="sxs-lookup"><span data-stu-id="9f648-206">Azure Active Directory tenant ID.</span></span> |
-|`channelData.channel.id`| <span data-ttu-id="9f648-207">チャネル ID (チャネルで要求が行われた場合)。</span><span class="sxs-lookup"><span data-stu-id="9f648-207">Channel ID (if the request was made in a channel).</span></span> |
-|`channelData.team.id`| <span data-ttu-id="9f648-208">チーム ID (チャネルで要求が行われた場合)。</span><span class="sxs-lookup"><span data-stu-id="9f648-208">Team ID (if the request was made in a channel).</span></span> |
-|`channelData.source.name`| <span data-ttu-id="9f648-209">タスク モジュールの呼び出し元のソース名。</span><span class="sxs-lookup"><span data-stu-id="9f648-209">The source name from where task module is invoked.</span></span> |
-|`ChannelData.legacy. replyToId`| <span data-ttu-id="9f648-210">このメッセージが返信であるメッセージの ID を取得または設定します。</span><span class="sxs-lookup"><span data-stu-id="9f648-210">Gets or sets the ID of the message to which this message is a reply.</span></span> |
-|`value.commandId` | <span data-ttu-id="9f648-211">呼び出されたコマンドの ID が含まれる。</span><span class="sxs-lookup"><span data-stu-id="9f648-211">Contains the ID of the command that was invoked.</span></span> |
-|`value.commandContext` | <span data-ttu-id="9f648-212">イベントをトリガーしたコンテキスト。</span><span class="sxs-lookup"><span data-stu-id="9f648-212">The context that triggered the event.</span></span> <span data-ttu-id="9f648-213">この値は、 である必要があります `compose` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-213">It must be `compose`.</span></span> |
-|`value.context.theme` | <span data-ttu-id="9f648-214">ユーザーのクライアント テーマは、埋め込み Web ビューの書式設定に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="9f648-214">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="9f648-215">は、または `default` `contrast` である必要があります `dark` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-215">It must be `default`, `contrast` or `dark`.</span></span> |
+|`type`| <span data-ttu-id="ba7fb-199">要求の種類。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-199">Type of request.</span></span> <span data-ttu-id="ba7fb-200">この値は、 である必要があります `invoke` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-200">It must be `invoke`.</span></span> |
+|`name`| <span data-ttu-id="ba7fb-201">サービスに発行されるコマンドの種類。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-201">Type of command that is issued to your service.</span></span> <span data-ttu-id="ba7fb-202">この値は、 である必要があります `composeExtension/fetchTask` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-202">It must be `composeExtension/fetchTask`.</span></span> |
+|`from.id`| <span data-ttu-id="ba7fb-203">要求を送信したユーザーの ID。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-203">ID of the user that sent the request.</span></span> |
+|`from.name`| <span data-ttu-id="ba7fb-204">要求を送信したユーザーの名前。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-204">Name of the user that sent the request.</span></span> |
+|`from.aadObjectId`| <span data-ttu-id="ba7fb-205">要求を送信したユーザーの Azure Active Directory オブジェクト ID。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-205">Azure Active Directory object ID of the user that sent the request.</span></span> |
+|`channelData.tenant.id`| <span data-ttu-id="ba7fb-206">Azure Active Directory テナント ID。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-206">Azure Active Directory tenant ID.</span></span> |
+|`channelData.channel.id`| <span data-ttu-id="ba7fb-207">チャネル ID (チャネルで要求が行われた場合)。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-207">Channel ID (if the request was made in a channel).</span></span> |
+|`channelData.team.id`| <span data-ttu-id="ba7fb-208">チーム ID (チャネルで要求が行われた場合)。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-208">Team ID (if the request was made in a channel).</span></span> |
+|`channelData.source.name`| <span data-ttu-id="ba7fb-209">タスク モジュールの呼び出し元のソース名。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-209">The source name from where task module is invoked.</span></span> |
+|`ChannelData.legacy. replyToId`| <span data-ttu-id="ba7fb-210">このメッセージが返信であるメッセージの ID を取得または設定します。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-210">Gets or sets the ID of the message to which this message is a reply.</span></span> |
+|`value.commandId` | <span data-ttu-id="ba7fb-211">呼び出されたコマンドの ID が含まれる。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-211">Contains the ID of the command that was invoked.</span></span> |
+|`value.commandContext` | <span data-ttu-id="ba7fb-212">イベントをトリガーしたコンテキスト。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-212">The context that triggered the event.</span></span> <span data-ttu-id="ba7fb-213">この値は、 である必要があります `compose` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-213">It must be `compose`.</span></span> |
+|`value.context.theme` | <span data-ttu-id="ba7fb-214">ユーザーのクライアント テーマは、埋め込み Web ビューの書式設定に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-214">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="ba7fb-215">は、または `default` `contrast` である必要があります `dark` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-215">It must be `default`, `contrast` or `dark`.</span></span> |
 
-### <a name="example"></a><span data-ttu-id="9f648-216">例</span><span class="sxs-lookup"><span data-stu-id="9f648-216">Example</span></span>
+### <a name="example"></a><span data-ttu-id="ba7fb-216">例</span><span class="sxs-lookup"><span data-stu-id="ba7fb-216">Example</span></span>
 
-<span data-ttu-id="9f648-217">タスク モジュールがチャネルから呼び出された場合のペイロード アクティビティ プロパティ (スレッドへの返信) は、次の例で示されています。</span><span class="sxs-lookup"><span data-stu-id="9f648-217">The payload activity properties when a task module is invoked from a channel (reply to thread) are given in the following example:</span></span>
+<span data-ttu-id="ba7fb-217">タスク モジュールがチャネルから呼び出された場合のペイロード アクティビティ プロパティ (スレッドへの返信) は、次の例で示されています。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-217">The payload activity properties when a task module is invoked from a channel (reply to thread) are given in the following example:</span></span>
 
 ```json
 {
@@ -352,26 +352,26 @@ ms.locfileid: "52019847"
 }
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-command-box"></a><span data-ttu-id="9f648-218">タスク モジュールがコマンド ボックスから呼び出された場合のペイロード アクティビティ プロパティ</span><span class="sxs-lookup"><span data-stu-id="9f648-218">Payload activity properties when a task module is invoked from a command box</span></span> 
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-command-box"></a><span data-ttu-id="ba7fb-218">タスク モジュールがコマンド ボックスから呼び出された場合のペイロード アクティビティ プロパティ</span><span class="sxs-lookup"><span data-stu-id="ba7fb-218">Payload activity properties when a task module is invoked from a command box</span></span> 
 
-<span data-ttu-id="9f648-219">タスク モジュールがコマンド ボックスから呼び出された場合のペイロード アクティビティ プロパティは、次のように表示されます。</span><span class="sxs-lookup"><span data-stu-id="9f648-219">The payload activity properties when a task module is invoked from a command box are listed as follows:</span></span>
+<span data-ttu-id="ba7fb-219">タスク モジュールがコマンド ボックスから呼び出された場合のペイロード アクティビティ プロパティは、次のように表示されます。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-219">The payload activity properties when a task module is invoked from a command box are listed as follows:</span></span>
 
-|<span data-ttu-id="9f648-220">プロパティ名</span><span class="sxs-lookup"><span data-stu-id="9f648-220">Property name</span></span>|<span data-ttu-id="9f648-221">用途</span><span class="sxs-lookup"><span data-stu-id="9f648-221">Purpose</span></span>|
+|<span data-ttu-id="ba7fb-220">プロパティ名</span><span class="sxs-lookup"><span data-stu-id="ba7fb-220">Property name</span></span>|<span data-ttu-id="ba7fb-221">用途</span><span class="sxs-lookup"><span data-stu-id="ba7fb-221">Purpose</span></span>|
 |---|---|
-|`type`| <span data-ttu-id="9f648-222">要求の種類。</span><span class="sxs-lookup"><span data-stu-id="9f648-222">Type of request.</span></span> <span data-ttu-id="9f648-223">この値は、 である必要があります `invoke` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-223">It must be `invoke`.</span></span> |
-|`name`| <span data-ttu-id="9f648-224">サービスに発行されるコマンドの種類。</span><span class="sxs-lookup"><span data-stu-id="9f648-224">Type of command that is issued to your service.</span></span> <span data-ttu-id="9f648-225">この値は、 である必要があります `composeExtension/fetchTask` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-225">It must be `composeExtension/fetchTask`.</span></span> |
-|`from.id`| <span data-ttu-id="9f648-226">要求を送信したユーザーの ID。</span><span class="sxs-lookup"><span data-stu-id="9f648-226">ID of the user that sent the request.</span></span> |
-|`from.name`| <span data-ttu-id="9f648-227">要求を送信したユーザーの名前。</span><span class="sxs-lookup"><span data-stu-id="9f648-227">Name of the user that sent the request.</span></span> |
-|`from.aadObjectId`| <span data-ttu-id="9f648-228">要求を送信したユーザーの Azure Active Directory オブジェクト ID。</span><span class="sxs-lookup"><span data-stu-id="9f648-228">Azure Active Directory object ID of the user that sent the request.</span></span> |
-|`channelData.tenant.id`| <span data-ttu-id="9f648-229">Azure Active Directory テナント ID。</span><span class="sxs-lookup"><span data-stu-id="9f648-229">Azure Active Directory tenant ID.</span></span> |
-|`channelData.source.name`| <span data-ttu-id="9f648-230">タスク モジュールの呼び出し元のソース名。</span><span class="sxs-lookup"><span data-stu-id="9f648-230">The source name from where task module is invoked.</span></span> |
-|`value.commandId` | <span data-ttu-id="9f648-231">呼び出されたコマンドの ID が含まれる。</span><span class="sxs-lookup"><span data-stu-id="9f648-231">Contains the ID of the command that was invoked.</span></span> |
-|`value.commandContext` | <span data-ttu-id="9f648-232">イベントをトリガーしたコンテキスト。</span><span class="sxs-lookup"><span data-stu-id="9f648-232">The context that triggered the event.</span></span> <span data-ttu-id="9f648-233">この値は、 である必要があります `compose` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-233">It must be `compose`.</span></span> |
-|`value.context.theme` | <span data-ttu-id="9f648-234">ユーザーのクライアント テーマは、埋め込み Web ビューの書式設定に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="9f648-234">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="9f648-235">、、または `default` `contrast` である必要があります `dark` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-235">It must be `default`, `contrast`, or `dark`.</span></span> |
+|`type`| <span data-ttu-id="ba7fb-222">要求の種類。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-222">Type of request.</span></span> <span data-ttu-id="ba7fb-223">この値は、 である必要があります `invoke` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-223">It must be `invoke`.</span></span> |
+|`name`| <span data-ttu-id="ba7fb-224">サービスに発行されるコマンドの種類。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-224">Type of command that is issued to your service.</span></span> <span data-ttu-id="ba7fb-225">この値は、 である必要があります `composeExtension/fetchTask` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-225">It must be `composeExtension/fetchTask`.</span></span> |
+|`from.id`| <span data-ttu-id="ba7fb-226">要求を送信したユーザーの ID。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-226">ID of the user that sent the request.</span></span> |
+|`from.name`| <span data-ttu-id="ba7fb-227">要求を送信したユーザーの名前。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-227">Name of the user that sent the request.</span></span> |
+|`from.aadObjectId`| <span data-ttu-id="ba7fb-228">要求を送信したユーザーの Azure Active Directory オブジェクト ID。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-228">Azure Active Directory object ID of the user that sent the request.</span></span> |
+|`channelData.tenant.id`| <span data-ttu-id="ba7fb-229">Azure Active Directory テナント ID。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-229">Azure Active Directory tenant ID.</span></span> |
+|`channelData.source.name`| <span data-ttu-id="ba7fb-230">タスク モジュールの呼び出し元のソース名。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-230">The source name from where task module is invoked.</span></span> |
+|`value.commandId` | <span data-ttu-id="ba7fb-231">呼び出されたコマンドの ID が含まれる。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-231">Contains the ID of the command that was invoked.</span></span> |
+|`value.commandContext` | <span data-ttu-id="ba7fb-232">イベントをトリガーしたコンテキスト。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-232">The context that triggered the event.</span></span> <span data-ttu-id="ba7fb-233">この値は、 である必要があります `compose` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-233">It must be `compose`.</span></span> |
+|`value.context.theme` | <span data-ttu-id="ba7fb-234">ユーザーのクライアント テーマは、埋め込み Web ビューの書式設定に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-234">The user's client theme, useful for embedded web view formatting.</span></span> <span data-ttu-id="ba7fb-235">、、または `default` `contrast` である必要があります `dark` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-235">It must be `default`, `contrast`, or `dark`.</span></span> |
 
-### <a name="example"></a><span data-ttu-id="9f648-236">例</span><span class="sxs-lookup"><span data-stu-id="9f648-236">Example</span></span>
+### <a name="example"></a><span data-ttu-id="ba7fb-236">例</span><span class="sxs-lookup"><span data-stu-id="ba7fb-236">Example</span></span>
 
-<span data-ttu-id="9f648-237">タスク モジュールがコマンド ボックスから呼び出された場合のペイロード アクティビティ プロパティは、次の例で示されています。</span><span class="sxs-lookup"><span data-stu-id="9f648-237">The payload activity properties when a task module is invoked from a command box are given in the following example:</span></span>
+<span data-ttu-id="ba7fb-237">タスク モジュールがコマンド ボックスから呼び出された場合のペイロード アクティビティ プロパティは、次の例で示されています。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-237">The payload activity properties when a task module is invoked from a command box are given in the following example:</span></span>
 
 ```json
 {
@@ -414,11 +414,11 @@ ms.locfileid: "52019847"
 }
 ```
 
-### <a name="example"></a><span data-ttu-id="9f648-238">例</span><span class="sxs-lookup"><span data-stu-id="9f648-238">Example</span></span> 
+### <a name="example"></a><span data-ttu-id="ba7fb-238">例</span><span class="sxs-lookup"><span data-stu-id="ba7fb-238">Example</span></span> 
 
-<span data-ttu-id="9f648-239">次のコード セクションは、要求の例 `fetchTask` です。</span><span class="sxs-lookup"><span data-stu-id="9f648-239">The following code section is an example of `fetchTask` request:</span></span>
+<span data-ttu-id="ba7fb-239">次のコード セクションは、要求の例 `fetchTask` です。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-239">The following code section is an example of `fetchTask` request:</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="9f648-240">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="9f648-240">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="ba7fb-240">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="ba7fb-240">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -427,7 +427,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[<span data-ttu-id="9f648-241">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="9f648-241">JavaScript/Node.js</span></span>](#tab/javascript)
+# <a name="javascriptnodejs"></a>[<span data-ttu-id="ba7fb-241">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="ba7fb-241">JavaScript/Node.js</span></span>](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
@@ -437,7 +437,7 @@ class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[<span data-ttu-id="9f648-242">JSON</span><span class="sxs-lookup"><span data-stu-id="9f648-242">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="ba7fb-242">JSON</span><span class="sxs-lookup"><span data-stu-id="ba7fb-242">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -498,11 +498,11 @@ class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
 
 * * *
 
-## <a name="initial-invoke-request-from-a-message"></a><span data-ttu-id="9f648-243">メッセージからの最初の呼び出し要求</span><span class="sxs-lookup"><span data-stu-id="9f648-243">Initial invoke request from a message</span></span>
+## <a name="initial-invoke-request-from-a-message"></a><span data-ttu-id="ba7fb-243">メッセージからの最初の呼び出し要求</span><span class="sxs-lookup"><span data-stu-id="ba7fb-243">Initial invoke request from a message</span></span>
 
-<span data-ttu-id="9f648-244">ボットがメッセージから呼び出されると、最初の呼び出し要求のオブジェクトに、メッセージング拡張機能が呼び出されるメッセージの詳細が `value` 含まれている必要があります。</span><span class="sxs-lookup"><span data-stu-id="9f648-244">When your bot is invoked from a message,  the `value` object in the initial invoke request must contain the details of the message that your messaging extension is invoked from.</span></span> <span data-ttu-id="9f648-245">配列 `reactions` と配列は省略可能で、元のメッセージにリアクションやメンションがない場合は `mentions` 存在しません。</span><span class="sxs-lookup"><span data-stu-id="9f648-245">The `reactions` and `mentions` arrays are optional, and they are not present if there are no reactions or mentions in the original message.</span></span> <span data-ttu-id="9f648-246">次のセクションは、オブジェクトの例 `value` です。</span><span class="sxs-lookup"><span data-stu-id="9f648-246">The following section is an example of the `value` object:</span></span>
+<span data-ttu-id="ba7fb-244">ボットがメッセージから呼び出されると、最初の呼び出し要求のオブジェクトに、メッセージング拡張機能が呼び出されるメッセージの詳細が `value` 含まれている必要があります。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-244">When your bot is invoked from a message,  the `value` object in the initial invoke request must contain the details of the message that your messaging extension is invoked from.</span></span> <span data-ttu-id="ba7fb-245">配列 `reactions` と配列は省略可能で、元のメッセージにリアクションやメンションがない場合は `mentions` 存在しません。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-245">The `reactions` and `mentions` arrays are optional, and they are not present if there are no reactions or mentions in the original message.</span></span> <span data-ttu-id="ba7fb-246">次のセクションは、オブジェクトの例 `value` です。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-246">The following section is an example of the `value` object:</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="9f648-247">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="9f648-247">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="ba7fb-247">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="ba7fb-247">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -514,7 +514,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[<span data-ttu-id="9f648-248">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="9f648-248">JavaScript/Node.js</span></span>](#tab/javascript)
+# <a name="javascriptnodejs"></a>[<span data-ttu-id="ba7fb-248">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="ba7fb-248">JavaScript/Node.js</span></span>](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -526,7 +526,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[<span data-ttu-id="9f648-249">JSON</span><span class="sxs-lookup"><span data-stu-id="9f648-249">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="ba7fb-249">JSON</span><span class="sxs-lookup"><span data-stu-id="ba7fb-249">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -598,37 +598,37 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-## <a name="respond-to-the-fetchtask"></a><span data-ttu-id="9f648-250">fetchTask に応答する</span><span class="sxs-lookup"><span data-stu-id="9f648-250">Respond to the fetchTask</span></span>
+## <a name="respond-to-the-fetchtask"></a><span data-ttu-id="ba7fb-250">fetchTask に応答する</span><span class="sxs-lookup"><span data-stu-id="ba7fb-250">Respond to the fetchTask</span></span>
 
-<span data-ttu-id="9f648-251">アダプティブ カードまたは Web URL を持つオブジェクト、または単純な文字列メッセージを含むオブジェクトを使用して、呼び出し要求 `task` `taskInfo` に応答します。</span><span class="sxs-lookup"><span data-stu-id="9f648-251">Respond to the invoke request with a `task` object that contains either a `taskInfo` object with the Adaptive Card or web URL, or a simple string message.</span></span>
+<span data-ttu-id="ba7fb-251">アダプティブ カードまたは Web URL を持つオブジェクト、または単純な文字列メッセージを含むオブジェクトを使用して、呼び出し要求 `task` `taskInfo` に応答します。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-251">Respond to the invoke request with a `task` object that contains either a `taskInfo` object with the Adaptive Card or web URL, or a simple string message.</span></span>
 
-|<span data-ttu-id="9f648-252">プロパティ名</span><span class="sxs-lookup"><span data-stu-id="9f648-252">Property name</span></span>|<span data-ttu-id="9f648-253">用途</span><span class="sxs-lookup"><span data-stu-id="9f648-253">Purpose</span></span>|
+|<span data-ttu-id="ba7fb-252">プロパティ名</span><span class="sxs-lookup"><span data-stu-id="ba7fb-252">Property name</span></span>|<span data-ttu-id="ba7fb-253">用途</span><span class="sxs-lookup"><span data-stu-id="ba7fb-253">Purpose</span></span>|
 |---|---|
-|`type`| <span data-ttu-id="9f648-254">フォームを表示 `continue` するか、単純な `message` ポップアップを表示できます。</span><span class="sxs-lookup"><span data-stu-id="9f648-254">Can be either `continue` to present a form, or `message` for a simple popup.</span></span> |
-|`value`| <span data-ttu-id="9f648-255">フォーム `taskInfo` のオブジェクト、またはメッセージ `string` の a。</span><span class="sxs-lookup"><span data-stu-id="9f648-255">Either a `taskInfo` object for a form, or a `string` for a message.</span></span> |
+|`type`| <span data-ttu-id="ba7fb-254">フォームを表示 `continue` するか、単純な `message` ポップアップを表示できます。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-254">Can be either `continue` to present a form, or `message` for a simple popup.</span></span> |
+|`value`| <span data-ttu-id="ba7fb-255">フォーム `taskInfo` のオブジェクト、またはメッセージ `string` の a。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-255">Either a `taskInfo` object for a form, or a `string` for a message.</span></span> |
 
-<span data-ttu-id="9f648-256">taskInfo オブジェクトのスキーマは次の値です。</span><span class="sxs-lookup"><span data-stu-id="9f648-256">The schema for the taskInfo object is:</span></span>
+<span data-ttu-id="ba7fb-256">taskInfo オブジェクトのスキーマは次の値です。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-256">The schema for the taskInfo object is:</span></span>
 
-|<span data-ttu-id="9f648-257">プロパティ名</span><span class="sxs-lookup"><span data-stu-id="9f648-257">Property name</span></span>|<span data-ttu-id="9f648-258">用途</span><span class="sxs-lookup"><span data-stu-id="9f648-258">Purpose</span></span>|
+|<span data-ttu-id="ba7fb-257">プロパティ名</span><span class="sxs-lookup"><span data-stu-id="ba7fb-257">Property name</span></span>|<span data-ttu-id="ba7fb-258">用途</span><span class="sxs-lookup"><span data-stu-id="ba7fb-258">Purpose</span></span>|
 |---|---|
-|`title`| <span data-ttu-id="9f648-259">タスク モジュールのタイトル。</span><span class="sxs-lookup"><span data-stu-id="9f648-259">The title of the task module.</span></span>|
-|`height`| <span data-ttu-id="9f648-260">整数 (ピクセル単位) または 、 `small` 、 のいずれか `medium` である必要があります `large` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-260">It must be either an integer (in pixels), or `small`, `medium`, `large`.</span></span>|
-|`width`| <span data-ttu-id="9f648-261">整数 (ピクセル単位) または 、 `small` 、 のいずれか `medium` である必要があります `large` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-261">It must be either an integer (in pixels), or `small`, `medium`, `large`.</span></span>|
-|`card`| <span data-ttu-id="9f648-262">フォームを定義するアダプティブ カード (使用している場合)。</span><span class="sxs-lookup"><span data-stu-id="9f648-262">The adaptive card defining the form (if using one).</span></span>
-|`url`| <span data-ttu-id="9f648-263">埋め込み Web ビューとしてタスク モジュール内で開く URL。</span><span class="sxs-lookup"><span data-stu-id="9f648-263">The URL to be opened inside of the task module as an embedded web view.</span></span>|
-|`fallbackUrl`| <span data-ttu-id="9f648-264">クライアントがタスク モジュール機能をサポートしていない場合、この URL はブラウザー タブで開きます。</span><span class="sxs-lookup"><span data-stu-id="9f648-264">If a client does not support the task module feature, this URL is opened in a browser tab.</span></span> |
+|`title`| <span data-ttu-id="ba7fb-259">タスク モジュールのタイトル。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-259">The title of the task module.</span></span>|
+|`height`| <span data-ttu-id="ba7fb-260">整数 (ピクセル単位) または 、 `small` 、 のいずれか `medium` である必要があります `large` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-260">It must be either an integer (in pixels), or `small`, `medium`, `large`.</span></span>|
+|`width`| <span data-ttu-id="ba7fb-261">整数 (ピクセル単位) または 、 `small` 、 のいずれか `medium` である必要があります `large` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-261">It must be either an integer (in pixels), or `small`, `medium`, `large`.</span></span>|
+|`card`| <span data-ttu-id="ba7fb-262">フォームを定義するアダプティブ カード (使用している場合)。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-262">The adaptive card defining the form (if using one).</span></span>
+|`url`| <span data-ttu-id="ba7fb-263">埋め込み Web ビューとしてタスク モジュール内で開く URL。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-263">The URL to be opened inside of the task module as an embedded web view.</span></span>|
+|`fallbackUrl`| <span data-ttu-id="ba7fb-264">クライアントがタスク モジュール機能をサポートしていない場合、この URL はブラウザー タブで開きます。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-264">If a client does not support the task module feature, this URL is opened in a browser tab.</span></span> |
 
-### <a name="respond-to-the-fetchtask-with-an-adaptive-card"></a><span data-ttu-id="9f648-265">アダプティブ カードを使用して fetchTask に応答する</span><span class="sxs-lookup"><span data-stu-id="9f648-265">Respond to the fetchTask with an Adaptive Card</span></span>
+### <a name="respond-to-the-fetchtask-with-an-adaptive-card"></a><span data-ttu-id="ba7fb-265">アダプティブ カードを使用して fetchTask に応答する</span><span class="sxs-lookup"><span data-stu-id="ba7fb-265">Respond to the fetchTask with an Adaptive Card</span></span>
 
-<span data-ttu-id="9f648-266">アダプティブ カードを使用する場合は、アダプティブ カードを含むオブジェクトでオブジェクト `task` `value` に応答する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9f648-266">When using an adaptive card, you must respond with a `task` object with the `value` object containing an Adaptive Card.</span></span>
+<span data-ttu-id="ba7fb-266">アダプティブ カードを使用する場合は、アダプティブ カードを含むオブジェクトでオブジェクト `task` `value` に応答する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-266">When using an adaptive card, you must respond with a `task` object with the `value` object containing an Adaptive Card.</span></span>
 
-#### <a name="example"></a><span data-ttu-id="9f648-267">例</span><span class="sxs-lookup"><span data-stu-id="9f648-267">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="ba7fb-267">例</span><span class="sxs-lookup"><span data-stu-id="ba7fb-267">Example</span></span>
 
-<span data-ttu-id="9f648-268">次のコード セクションは、アダプティブ カードで `fetchTask` 応答する例です。</span><span class="sxs-lookup"><span data-stu-id="9f648-268">The following code section is an example to `fetchTask` response with an adaptive card:</span></span>
+<span data-ttu-id="ba7fb-268">次のコード セクションは、アダプティブ カードで `fetchTask` 応答する例です。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-268">The following code section is an example to `fetchTask` response with an adaptive card:</span></span>
 
-# <a name="cnet"></a>[<span data-ttu-id="9f648-269">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="9f648-269">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="ba7fb-269">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="ba7fb-269">C#/.NET</span></span>](#tab/dotnet)
 
-<span data-ttu-id="9f648-270">このサンプルでは、Bot Framework SDK に加えて [AdaptiveCards NuGet](https://www.nuget.org/packages/AdaptiveCards) パッケージを使用します。</span><span class="sxs-lookup"><span data-stu-id="9f648-270">This sample uses the [AdaptiveCards NuGet package](https://www.nuget.org/packages/AdaptiveCards) in addition to the Bot Framework SDK.</span></span>
+<span data-ttu-id="ba7fb-270">このサンプルでは、Bot Framework SDK に加えて [AdaptiveCards NuGet](https://www.nuget.org/packages/AdaptiveCards) パッケージを使用します。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-270">This sample uses the [AdaptiveCards NuGet package](https://www.nuget.org/packages/AdaptiveCards) in addition to the Bot Framework SDK.</span></span>
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -679,7 +679,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[<span data-ttu-id="9f648-271">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="9f648-271">JavaScript/Node.js</span></span>](#tab/javascript)
+# <a name="javascriptnodejs"></a>[<span data-ttu-id="ba7fb-271">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="ba7fb-271">JavaScript/Node.js</span></span>](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -727,7 +727,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[<span data-ttu-id="9f648-272">JSON</span><span class="sxs-lookup"><span data-stu-id="9f648-272">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="ba7fb-272">JSON</span><span class="sxs-lookup"><span data-stu-id="ba7fb-272">JSON</span></span>](#tab/json)
 
 ```json
  {
@@ -776,11 +776,11 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-### <a name="create-a-task-module-with-an-embedded-web-view"></a><span data-ttu-id="9f648-273">埋め込み Web ビューを使用してタスク モジュールを作成する</span><span class="sxs-lookup"><span data-stu-id="9f648-273">Create a task module with an embedded web view</span></span>
+### <a name="create-a-task-module-with-an-embedded-web-view"></a><span data-ttu-id="ba7fb-273">埋め込み Web ビューを使用してタスク モジュールを作成する</span><span class="sxs-lookup"><span data-stu-id="ba7fb-273">Create a task module with an embedded web view</span></span>
 
-<span data-ttu-id="9f648-274">埋め込み Web ビューを使用する場合は、読み込む Web フォームへの URL を含むオブジェクトを持つオブジェクトに応答 `task` `value` する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9f648-274">When using an embedded web view, you must respond with a `task` object with the `value` object containing the URL to the web form that you want to load.</span></span> <span data-ttu-id="9f648-275">読み込む URL のドメインは、アプリのマニフェストの配列 `validDomains` に含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="9f648-275">The domains of any URL you want to load must be included in the `validDomains` array in your app's manifest.</span></span> <span data-ttu-id="9f648-276">埋め込み Web ビューの構築の詳細については、タスク モジュールの [ドキュメントを参照してください](~/task-modules-and-cards/what-are-task-modules.md)。</span><span class="sxs-lookup"><span data-stu-id="9f648-276">For more information on building your embedded web view, see the [task module documentation](~/task-modules-and-cards/what-are-task-modules.md).</span></span> 
+<span data-ttu-id="ba7fb-274">埋め込み Web ビューを使用する場合は、読み込む Web フォームへの URL を含むオブジェクトを持つオブジェクトに応答 `task` `value` する必要があります。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-274">When using an embedded web view, you must respond with a `task` object with the `value` object containing the URL to the web form that you want to load.</span></span> <span data-ttu-id="ba7fb-275">読み込む URL のドメインは、アプリのマニフェストの配列 `validDomains` に含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-275">The domains of any URL you want to load must be included in the `validDomains` array in your app's manifest.</span></span> <span data-ttu-id="ba7fb-276">埋め込み Web ビューの構築の詳細については、タスク モジュールの [ドキュメントを参照してください](~/task-modules-and-cards/what-are-task-modules.md)。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-276">For more information on building your embedded web view, see the [task module documentation](~/task-modules-and-cards/what-are-task-modules.md).</span></span> 
 
-# <a name="cnet"></a>[<span data-ttu-id="9f648-277">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="9f648-277">C#/.NET</span></span>](#tab/dotnet)
+# <a name="cnet"></a>[<span data-ttu-id="ba7fb-277">C#/.NET</span><span class="sxs-lookup"><span data-stu-id="ba7fb-277">C#/.NET</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -812,7 +812,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# <a name="javascriptnodejs"></a>[<span data-ttu-id="9f648-278">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="9f648-278">JavaScript/Node.js</span></span>](#tab/javascript)
+# <a name="javascriptnodejs"></a>[<span data-ttu-id="ba7fb-278">JavaScript/Node.js</span><span class="sxs-lookup"><span data-stu-id="ba7fb-278">JavaScript/Node.js</span></span>](#tab/javascript)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -833,7 +833,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[<span data-ttu-id="9f648-279">JSON</span><span class="sxs-lookup"><span data-stu-id="9f648-279">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="ba7fb-279">JSON</span><span class="sxs-lookup"><span data-stu-id="ba7fb-279">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -852,15 +852,15 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-### <a name="request-to-install-your-conversational-bot"></a><span data-ttu-id="9f648-280">会話型ボットのインストールを要求する</span><span class="sxs-lookup"><span data-stu-id="9f648-280">Request to install your conversational bot</span></span>
+### <a name="request-to-install-your-conversational-bot"></a><span data-ttu-id="ba7fb-280">会話型ボットのインストールを要求する</span><span class="sxs-lookup"><span data-stu-id="ba7fb-280">Request to install your conversational bot</span></span>
 
-<span data-ttu-id="9f648-281">アプリに会話型ボットが含まれている場合は、会話にボットをインストールし、タスク モジュールを読み込む。</span><span class="sxs-lookup"><span data-stu-id="9f648-281">If the app contains a conversational bot, install the bot in the conversation and then load the task module.</span></span> <span data-ttu-id="9f648-282">ボットは、タスク モジュールの追加コンテキストを取得する場合に便利です。</span><span class="sxs-lookup"><span data-stu-id="9f648-282">The bot is useful to get additional context for the task module.</span></span> <span data-ttu-id="9f648-283">このシナリオの例は、名簿をフェッチして、ユーザー選択コントロールまたはチーム内のチャネルの一覧を設定します。</span><span class="sxs-lookup"><span data-stu-id="9f648-283">An example for this scenario is to fetch the roster to populate a people picker control or the list of channels in a team.</span></span>
+<span data-ttu-id="ba7fb-281">アプリに会話型ボットが含まれている場合は、会話にボットをインストールし、タスク モジュールを読み込む。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-281">If the app contains a conversational bot, install the bot in the conversation and then load the task module.</span></span> <span data-ttu-id="ba7fb-282">ボットは、タスク モジュールの追加コンテキストを取得する場合に便利です。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-282">The bot is useful to get additional context for the task module.</span></span> <span data-ttu-id="ba7fb-283">このシナリオの例は、名簿をフェッチして、ユーザー選択コントロールまたはチーム内のチャネルの一覧を設定します。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-283">An example for this scenario is to fetch the roster to populate a people picker control or the list of channels in a team.</span></span>
 
-<span data-ttu-id="9f648-284">メッセージング拡張機能が呼び出しを受信したら、ボットが現在のコンテキストにインストールされていることを確認して、フロー `composeExtension/fetchTask` を容易にしてください。</span><span class="sxs-lookup"><span data-stu-id="9f648-284">When the messaging extension receives the `composeExtension/fetchTask` invoke, check if the bot is installed in the current context to facilitate the flow.</span></span> <span data-ttu-id="9f648-285">たとえば、取得名簿呼び出しでフローを確認します。</span><span class="sxs-lookup"><span data-stu-id="9f648-285">For example, check the flow with a get roster call.</span></span> <span data-ttu-id="9f648-286">ボットがインストールされていない場合は、ユーザーにボットのインストールを要求するアクションを含むアダプティブ カードを返します。</span><span class="sxs-lookup"><span data-stu-id="9f648-286">If the bot is not installed, return an Adaptive Card with an action that requests the user to install the bot.</span></span> <span data-ttu-id="9f648-287">ユーザーは、チェックのためにその場所にアプリをインストールする権限を持っている必要があります。</span><span class="sxs-lookup"><span data-stu-id="9f648-287">The user must have the permission to install the apps in that location for checking.</span></span> <span data-ttu-id="9f648-288">アプリのインストールが失敗した場合、ユーザーは管理者に連絡するメッセージを受信します。</span><span class="sxs-lookup"><span data-stu-id="9f648-288">If the app installation is unsuccessful, the user receives a message to contact the administrator.</span></span>
+<span data-ttu-id="ba7fb-284">メッセージング拡張機能が呼び出しを受信したら、ボットが現在のコンテキストにインストールされていることを確認して、フロー `composeExtension/fetchTask` を容易にしてください。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-284">When the messaging extension receives the `composeExtension/fetchTask` invoke, check if the bot is installed in the current context to facilitate the flow.</span></span> <span data-ttu-id="ba7fb-285">たとえば、取得名簿呼び出しでフローを確認します。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-285">For example, check the flow with a get roster call.</span></span> <span data-ttu-id="ba7fb-286">ボットがインストールされていない場合は、ユーザーにボットのインストールを要求するアクションを含むアダプティブ カードを返します。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-286">If the bot is not installed, return an Adaptive Card with an action that requests the user to install the bot.</span></span> <span data-ttu-id="ba7fb-287">ユーザーは、チェックのためにその場所にアプリをインストールする権限を持っている必要があります。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-287">The user must have the permission to install the apps in that location for checking.</span></span> <span data-ttu-id="ba7fb-288">アプリのインストールが失敗した場合、ユーザーは管理者に連絡するメッセージを受信します。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-288">If the app installation is unsuccessful, the user receives a message to contact the administrator.</span></span>
 
-#### <a name="example"></a><span data-ttu-id="9f648-289">例</span><span class="sxs-lookup"><span data-stu-id="9f648-289">Example</span></span> 
+#### <a name="example"></a><span data-ttu-id="ba7fb-289">例</span><span class="sxs-lookup"><span data-stu-id="ba7fb-289">Example</span></span> 
 
-<span data-ttu-id="9f648-290">次のコード セクションは、応答の例です。</span><span class="sxs-lookup"><span data-stu-id="9f648-290">The following code section is an example of the response:</span></span>
+<span data-ttu-id="ba7fb-290">次のコード セクションは、応答の例です。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-290">The following code section is an example of the response:</span></span>
 
 ```json
 {
@@ -886,11 +886,11 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-<span data-ttu-id="9f648-291">会話型ボットのインストール後、別の呼び出しメッセージを受け `name = composeExtension/submitAction` 取ります `value.data.msteams.justInTimeInstall = true` 。</span><span class="sxs-lookup"><span data-stu-id="9f648-291">After the installation of conversational bot, it receives another invoke message with `name = composeExtension/submitAction`, and `value.data.msteams.justInTimeInstall = true`.</span></span>
+<span data-ttu-id="ba7fb-291">会話型ボットのインストール後、別の呼び出しメッセージを受け `name = composeExtension/submitAction` 取ります `value.data.msteams.justInTimeInstall = true` 。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-291">After the installation of conversational bot, it receives another invoke message with `name = composeExtension/submitAction`, and `value.data.msteams.justInTimeInstall = true`.</span></span>
 
-#### <a name="example"></a><span data-ttu-id="9f648-292">例</span><span class="sxs-lookup"><span data-stu-id="9f648-292">Example</span></span> 
+#### <a name="example"></a><span data-ttu-id="ba7fb-292">例</span><span class="sxs-lookup"><span data-stu-id="ba7fb-292">Example</span></span> 
 
-<span data-ttu-id="9f648-293">次のコード セクションは、呼び出しに対するタスク応答の例です。</span><span class="sxs-lookup"><span data-stu-id="9f648-293">The following code section is an example of the task response to the invoke:</span></span>
+<span data-ttu-id="ba7fb-293">次のコード セクションは、呼び出しに対するタスク応答の例です。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-293">The following code section is an example of the task response to the invoke:</span></span>
 
 ```json
 {
@@ -914,11 +914,11 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-<span data-ttu-id="9f648-294">呼び出しに対するタスク応答は、インストールされているボットのタスク応答と似ている必要があります。</span><span class="sxs-lookup"><span data-stu-id="9f648-294">The task response to the invoke must be similar to that of the installed bot.</span></span>
+<span data-ttu-id="ba7fb-294">呼び出しに対するタスク応答は、インストールされているボットのタスク応答と似ている必要があります。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-294">The task response to the invoke must be similar to that of the installed bot.</span></span>
 
-#### <a name="example"></a><span data-ttu-id="9f648-295">例</span><span class="sxs-lookup"><span data-stu-id="9f648-295">Example</span></span> 
+#### <a name="example"></a><span data-ttu-id="ba7fb-295">例</span><span class="sxs-lookup"><span data-stu-id="ba7fb-295">Example</span></span> 
 
-<span data-ttu-id="9f648-296">次のコード セクションは、アダプティブ カードを使用したアプリの just-in time インストールの例です。</span><span class="sxs-lookup"><span data-stu-id="9f648-296">The following code section is an example of just-in time installation of app with Adaptive card:</span></span> 
+<span data-ttu-id="ba7fb-296">次のコード セクションは、アダプティブ カードを使用したアプリの just-in time インストールの例です。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-296">The following code section is an example of just-in time installation of app with Adaptive card:</span></span> 
 
 ```csharp
 private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
@@ -937,21 +937,20 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 * * *
 
-## <a name="code-sample"></a><span data-ttu-id="9f648-297">コード サンプル</span><span class="sxs-lookup"><span data-stu-id="9f648-297">Code sample</span></span>
+## <a name="code-sample"></a><span data-ttu-id="ba7fb-297">コード サンプル</span><span class="sxs-lookup"><span data-stu-id="ba7fb-297">Code sample</span></span>
 
-| <span data-ttu-id="9f648-298">サンプルの名前</span><span class="sxs-lookup"><span data-stu-id="9f648-298">Sample Name</span></span>           | <span data-ttu-id="9f648-299">説明</span><span class="sxs-lookup"><span data-stu-id="9f648-299">Description</span></span> | <span data-ttu-id="9f648-300">.NET</span><span class="sxs-lookup"><span data-stu-id="9f648-300">.NET</span></span>    | <span data-ttu-id="9f648-301">Node.js</span><span class="sxs-lookup"><span data-stu-id="9f648-301">Node.js</span></span>   |   
+| <span data-ttu-id="ba7fb-298">サンプルの名前</span><span class="sxs-lookup"><span data-stu-id="ba7fb-298">Sample Name</span></span>           | <span data-ttu-id="ba7fb-299">説明</span><span class="sxs-lookup"><span data-stu-id="ba7fb-299">Description</span></span> | <span data-ttu-id="ba7fb-300">.NET</span><span class="sxs-lookup"><span data-stu-id="ba7fb-300">.NET</span></span>    | <span data-ttu-id="ba7fb-301">Node.js</span><span class="sxs-lookup"><span data-stu-id="ba7fb-301">Node.js</span></span>   |   
 |:---------------------|:--------------|:---------|:--------|
-|<span data-ttu-id="9f648-302">Teams メッセージング拡張機能アクション</span><span class="sxs-lookup"><span data-stu-id="9f648-302">Teams messaging extension action</span></span>| <span data-ttu-id="9f648-303">アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="9f648-303">Describes how to define action commands, create task module, and  respond to task module submit action.</span></span> |[<span data-ttu-id="9f648-304">View</span><span class="sxs-lookup"><span data-stu-id="9f648-304">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[<span data-ttu-id="9f648-305">View</span><span class="sxs-lookup"><span data-stu-id="9f648-305">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|<span data-ttu-id="9f648-306">Teams メッセージング拡張機能の検索</span><span class="sxs-lookup"><span data-stu-id="9f648-306">Teams messaging extension search</span></span>   |  <span data-ttu-id="9f648-307">検索コマンドを定義し、検索に応答する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="9f648-307">Describes how to define search commands and respond to searches.</span></span>        |[<span data-ttu-id="9f648-308">View</span><span class="sxs-lookup"><span data-stu-id="9f648-308">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[<span data-ttu-id="9f648-309">View</span><span class="sxs-lookup"><span data-stu-id="9f648-309">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|<span data-ttu-id="ba7fb-302">Teams メッセージング拡張機能アクション</span><span class="sxs-lookup"><span data-stu-id="ba7fb-302">Teams messaging extension action</span></span>| <span data-ttu-id="ba7fb-303">アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-303">Describes how to define action commands, create task module, and  respond to task module submit action.</span></span> |[<span data-ttu-id="ba7fb-304">View</span><span class="sxs-lookup"><span data-stu-id="ba7fb-304">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[<span data-ttu-id="ba7fb-305">View</span><span class="sxs-lookup"><span data-stu-id="ba7fb-305">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|<span data-ttu-id="ba7fb-306">Teams メッセージング拡張機能の検索</span><span class="sxs-lookup"><span data-stu-id="ba7fb-306">Teams messaging extension search</span></span>   |  <span data-ttu-id="ba7fb-307">検索コマンドを定義し、検索に応答する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="ba7fb-307">Describes how to define search commands and respond to searches.</span></span>        |[<span data-ttu-id="ba7fb-308">View</span><span class="sxs-lookup"><span data-stu-id="ba7fb-308">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[<span data-ttu-id="ba7fb-309">View</span><span class="sxs-lookup"><span data-stu-id="ba7fb-309">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## <a name="see-also"></a><span data-ttu-id="9f648-310">関連項目</span><span class="sxs-lookup"><span data-stu-id="9f648-310">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ba7fb-310">関連項目</span><span class="sxs-lookup"><span data-stu-id="ba7fb-310">See also</span></span>
+
+- [<span data-ttu-id="ba7fb-311">操作コマンドを定義する</span><span class="sxs-lookup"><span data-stu-id="ba7fb-311">Define action commands</span></span>](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+
+
+## <a name="next-step"></a><span data-ttu-id="ba7fb-312">次の手順</span><span class="sxs-lookup"><span data-stu-id="ba7fb-312">Next step</span></span>
 
 > [!div class="nextstepaction"] 
-> [<span data-ttu-id="9f648-311">操作コマンドを定義する</span><span class="sxs-lookup"><span data-stu-id="9f648-311">Define action commands</span></span>](~/messaging-extensions/how-to/action-commands/define-action-command.md)
-
-
-## <a name="next-step"></a><span data-ttu-id="9f648-312">次の手順</span><span class="sxs-lookup"><span data-stu-id="9f648-312">Next step</span></span>
-
-> [!div class="nextstepaction"] 
-> <span data-ttu-id="9f648-313">[[アクションに応答] コマンド](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)</span><span class="sxs-lookup"><span data-stu-id="9f648-313">[Respond to action command](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)</span></span>
+> <span data-ttu-id="ba7fb-313">[[アクションに応答] コマンド](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)</span><span class="sxs-lookup"><span data-stu-id="ba7fb-313">[Respond to action command](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)</span></span>
 
