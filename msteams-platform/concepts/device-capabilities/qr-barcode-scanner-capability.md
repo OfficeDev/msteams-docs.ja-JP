@@ -6,12 +6,12 @@ keywords: カメラ メディア QR コード qrcode バーコード バーコ�
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 579137f31dd929a6105dd7bcc2d46d84c145ef50
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: ede791a6cd566a0fc725a04e0b615ae1b8eeb0eb
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020738"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058342"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>QR コードまたはバーコード スキャナー機能を統合する 
 
@@ -110,8 +110,6 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 ## <a name="see-also"></a>関連項目
 
-> [!div class="nextstepaction"]
-> [Teams でのメディア機能の統合](mobile-camera-image-permissions.md)
+- [Teams でのメディア機能の統合](mobile-camera-image-permissions.md)
 
-> [!div class="nextstepaction"]
-> [Teams での場所機能の統合](location-capability.md)
+- [Teams での場所機能の統合](location-capability.md)

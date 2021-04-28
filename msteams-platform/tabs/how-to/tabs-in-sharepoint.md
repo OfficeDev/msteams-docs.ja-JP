@@ -1,19 +1,19 @@
 ---
-title: '[Teams] タブを SharePoint に追加する'
+title: SharePoint に [Teams] タブを追加する
 author: laujan
 description: SharePoint Framework Web パーツとして既存の Teams タブを SharePoint に展開する方法。
 keywords: teams タブ sharepoint framework 開発
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 08a4aef329d0e5e1d063f05959f0a589581c9c03
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: a2ea6c470f094a9d7b8617a210559e911f5f81c9
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020331"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058482"
 ---
-# <a name="add-teams-tab-to-sharepoint"></a>[Teams] タブを SharePoint に追加する 
+# <a name="add-teams-tab-to-sharepoint"></a>SharePoint に [Teams] タブを追加する 
 
 SharePoint の [Microsoft Teams] タブを SPFx Web パーツとして追加すると、Microsoft Teams と SharePoint の豊富な統合エクスペリエンスを得られる可能性があります。 このドキュメントでは、Microsoft Teams サンプル アプリからタブを取り出し、SharePoint で使用する方法について説明します。 
 
@@ -143,11 +143,8 @@ Teams タブを SharePoint に追加するには、次の手順を実行しま�
 
 ## <a name="see-also"></a>関連項目
 
-> [!div class="nextstepaction"]
-> [SharePoint Framework を使用した Microsoft Teams タブの作成: チュートリアル](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+- [SharePoint Framework を使用した Microsoft Teams タブの作成: チュートリアル](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
 
-> [!div class="nextstepaction"]
-> [SharePoint Online での Single Part App Pages の使用](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
+- [SharePoint Online での Single Part App Pages の使用](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
 
-> [!div class="nextstepaction"]
-> [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)
+- [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)

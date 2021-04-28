@@ -4,12 +4,12 @@ description: Microsoft 365 で Teams カスタム アプリをテストするプ
 ms.topic: how-to
 localization_priority: Normal
 keywords: テスト アプリをアップロードする Microsoft 365 テナント Teams を構成する
-ms.openlocfilehash: 8815e73c054cb75782660ef4afb3ae583b4f40fa
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: d95d65961b060ff1938d51c0f3fafc2b1e56fa7e
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019938"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058608"
 ---
 # <a name="test-your-app"></a>アプリのテスト
 
@@ -37,14 +37,11 @@ ms.locfileid: "52019938"
 
 ## <a name="see-also"></a>関連項目
 
-> [!div class="nextstepaction"]
-> [タブをデバッグする](~/tabs/how-to/developer-tools.md)
+- [タブをデバッグする](~/tabs/how-to/developer-tools.md)
  
-> [!div class="nextstepaction"]
-> [ボットのデバッグ](~/bots/how-to/debug/locally-with-an-ide.md)
+- [ボットのデバッグ](~/bots/how-to/debug/locally-with-an-ide.md)
 
-> [!div class="nextstepaction"]
-> [RSC のアクセス許可をテストする](~/graph-api/rsc/test-resource-specific-consent.md)
+- [RSC のアクセス許可をテストする](~/graph-api/rsc/test-resource-specific-consent.md)
 
 ## <a name="next-step"></a>次の手順
 

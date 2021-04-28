@@ -6,12 +6,12 @@ keywords: 場所マップ機能ネイティブ デバイスのアクセス許可
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 98d37c4f34f638f129c07b012d98ec54c7c8e44f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: d10f2df48ee5b75252508fbc51e5a31df9ea083f
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019861"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058370"
 ---
 # <a name="integrate-location-capabilities"></a>場所機能を統合する 
 
@@ -105,8 +105,6 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 
 ## <a name="see-also"></a>関連項目
 
-> [!div class="nextstepaction"]
-> [Teams でのメディア機能の統合](mobile-camera-image-permissions.md)
+- [Teams でのメディア機能の統合](mobile-camera-image-permissions.md)
 
-> [!div class="nextstepaction"]
-> [Teams に QR またはバーコード スキャナー機能を統合する](qr-barcode-scanner-capability.md)
+- [Teams に QR またはバーコード スキャナー機能を統合する](qr-barcode-scanner-capability.md)

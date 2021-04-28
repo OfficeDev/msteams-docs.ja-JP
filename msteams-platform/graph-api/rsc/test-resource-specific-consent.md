@@ -6,12 +6,12 @@ author: laujan
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: teams 承認 OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: ea764ec2cbca653221d7194d0759ac39f93ec802
-ms.sourcegitcommit: 9404c2e3a30887b9e17e0c89b12dd26fd9b8033e
+ms.openlocfilehash: 7f67df35954cd29810c387d05215eeec476a4ed4
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51654427"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058328"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Teams でリソース固有の同意のアクセス許可をテストする
 
@@ -85,6 +85,5 @@ API 呼び出しごとにアクセス許可コレクション全体を実行し�
 
 ## <a name="see-also"></a>関連項目
 
-> [!div class="nextstepaction"]
-> [Microsoft Graph API と Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
+- [Microsoft Graph API と Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
 

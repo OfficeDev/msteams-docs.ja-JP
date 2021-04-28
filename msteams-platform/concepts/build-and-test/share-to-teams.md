@@ -1,17 +1,17 @@
 ---
-title: '[Share-to-Teams の作成] ボタン'
+title: '[Teams で共有] ボタンを作成する'
 description: Web サイトの [Teams 埋め込み共有] ボタンを追加する方法
 ms.topic: reference
 localization_priority: Normal
 keywords: チーム間の共有
-ms.openlocfilehash: c77c4149c95685e17e8f789a9536b4d81e05d13f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: c8bbb371e2d68bf063c3aa5e02c7cf3ec911c0b8
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020824"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058475"
 ---
-# <a name="create-share-to-teams-button"></a>[Share-to-Teams の作成] ボタン
+# <a name="create-share-to-teams-button"></a>[Teams で共有] ボタンを作成する
 
 サードパーティの Web サイトでは、ランチャー スクリプトを使用して、Web ページに Share-to-Teams ボタンを埋め込む可能性があります。 選択すると、ポップアップ ウィンドウで Share-to-Teams エクスペリエンスが起動します。 これにより、コンテキストを切り替えることなく、任意のユーザーまたは Microsoft Teams チャネルへのリンクを直接共有できます。 このドキュメントでは、Web サイトの [Share-to-Teams] ボタンを作成して埋め込み、Web サイトのプレビューを作成し、教育向け Share-to-Teams を拡張する方法についてガイドします。
 
@@ -94,12 +94,12 @@ HTML の既定のバージョン、または Open Graph バージョンのいず
 
 | プロパティ | HTML 属性 | 種類 | 既定値 | 説明 |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
-| href | `data-href` | 文字列 | 該当なし | 共有するコンテンツの href。 |
+| href | `data-href` | string | 該当なし | 共有するコンテンツの href。 |
 | preview | `data-preview` | boolean (文字列として) | `true` | 共有するコンテンツのプレビューを表示するかどうかを指定します。 |
 | iconPxSize | `data-icon-px-size` | number (文字列として) | `32` | レンダリングする [Share-to-Teams] ボタンのサイズ (ピクセル単位)。 |
-| msgText | `data-msg-text` | 文字列 | 該当なし | メッセージ作成ボックスのリンクの前に挿入される既定のテキスト。 最大文字数は 200 文字です。 |
-| assignInstr | `data-assign-instr` | 文字列 | 該当なし | 割り当ての [命令] フィールドに挿入される既定のテキスト。 最大文字数は 200 文字です。 |
-| assignTitle | `data-assign-title` | 文字列 | 該当なし | 割り当ての [タイトル] フィールドに挿入される既定のテキスト。 最大文字数は 50 です。 |
+| msgText | `data-msg-text` | string | 該当なし | メッセージ作成ボックスのリンクの前に挿入される既定のテキスト。 最大文字数は 200 文字です。 |
+| assignInstr | `data-assign-instr` | string | 該当なし | 割り当ての [命令] フィールドに挿入される既定のテキスト。 最大文字数は 200 文字です。 |
+| assignTitle | `data-assign-title` | string | 該当なし | 割り当ての [タイトル] フィールドに挿入される既定のテキスト。 最大文字数は 50 です。 |
 
 ### <a name="methods"></a>メソッド
 
@@ -133,5 +133,4 @@ HTML の既定のバージョン、または Open Graph バージョンのいず
 
 ## <a name="see-also"></a>関連項目
 
-> [!div class="nextstepaction"]
-> [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)
+- [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)

@@ -4,12 +4,12 @@ description: Microsoft Graph API を使用して通話やオンライン会議�
 ms.topic: conceptual
 localization_priority: Normal
 keywords: 通話通話オーディオ ビデオ IVR 音声オンライン会議
-ms.openlocfilehash: 52a7e1e24fdc0a2c17264087e4f4461b7c43a50a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: d4cec30e110eed5f73929305cc43b84eed4d7524
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020170"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058314"
 ---
 # <a name="calls-and-online-meetings-bots"></a>通話とオンライン会議ボット
 
@@ -95,20 +95,19 @@ Teams ユーザーの観点から見ると、アドホック会議とスケジ�
 
 ## <a name="see-also"></a>関連項目
 
-> [!div class="nextstepaction"]
-> [Graph API リファレンス](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
-> [!div class="nextstepaction"]
-> [サンプル アプリ](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
-> [!div class="nextstepaction"]
-> [通話とオンライン会議をサポートするボットの登録](./registering-calling-bot.md)
-> [!div class="nextstepaction"]
-> [通話とオンライン会議ボットのグラフアクセス許可](./registering-calling-bot.md#add-graph-permissions)
-> [!div class="nextstepaction"]
-> [コンピューターで通話とオンライン会議ボットを開発する方法](./debugging-local-testing-calling-meeting-bots.md)
-> [!div class="nextstepaction"]
-> [アプリケーションホスト型メディア ボットの要件と考慮事項](./requirements-considerations-application-hosted-media-bots.md)
-> [!div class="nextstepaction"]
-> [着信通知の処理に関する技術情報](./call-notifications.md)
+- [Graph API リファレンス](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
+
+- [サンプル アプリ](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
+
+- [通話とオンライン会議をサポートするボットの登録](./registering-calling-bot.md)
+
+- [通話とオンライン会議ボットのグラフアクセス許可](./registering-calling-bot.md#add-graph-permissions)
+
+- [コンピューターで通話とオンライン会議ボットを開発する方法](./debugging-local-testing-calling-meeting-bots.md)
+
+- [アプリケーションホスト型メディア ボットの要件と考慮事項](./requirements-considerations-application-hosted-media-bots.md)
+
+- [着信通知の処理に関する技術情報](./call-notifications.md)
 
 ## <a name="next-step"></a>次の手順
 

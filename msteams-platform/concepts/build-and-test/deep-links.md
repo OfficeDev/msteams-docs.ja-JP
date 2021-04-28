@@ -4,12 +4,12 @@ description: ディープ リンクとアプリでの使用方法について説
 ms.topic: how-to
 localization_priority: Normal
 keywords: Teams ディープ リンク ディープリンク
-ms.openlocfilehash: 26423a52c1bd2f643a40222eafdb4b9c1087a1a1
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: fb681cc2dc07f8ae042fe57d6249e986fefa1b7b
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020836"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058335"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成 
 
@@ -224,5 +224,4 @@ Teams の組み込みスケジュール ダイアログへのディープ リン
 
 ## <a name="see-also"></a>関連項目
 
-> [!div class="nextstepaction"]
-> [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)
+- [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)

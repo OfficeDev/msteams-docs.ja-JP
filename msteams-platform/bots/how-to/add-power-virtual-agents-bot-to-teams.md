@@ -5,14 +5,14 @@ description: Teams プラットフォームでの Power Virtual Agents チャッ
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: d6d9f4292e22df7ca0f5841a2fc579b9e3b1d2f3
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: bd1528d06f9e9f4ca3a03f167ecb3c537977fb61
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020114"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058622"
 ---
-# <a name="add-power-virtual-agents-chatbot"></a>Power Virtual Agents チャットボットの追加 
+# <a name="add-power-virtual-agents-chatbot"></a>Power Virtual Agents チャットボットを追加する 
 
 Power Virtual Agents はコードなしガイド付きグラフィカル インターフェイス ソリューションで、チームのすべてのメンバーが Teams プラットフォームと簡単に統合できるリッチで会話型のチャットボットを作成できます。 Power Virtual Agents で作成されたコンテンツはすべて、Teams で自然にレンダリングされます。 Power Virtual Agents ボットは、Teams ネイティブ チャット キャンバスでユーザーと対話します。 IT 管理者、ビジネス アナリスト、ドメイン スペシャリスト、および熟練したアプリ開発者は、開発環境をセットアップすることなく、Teams のインテリジェント仮想エージェントを設計、開発、発行できます。 Web サービスを作成したり、ボット フレームワークに直接登録することができます。 
 
@@ -104,20 +104,16 @@ Teams のボットは、ボットとその機能に関する基本情報を提�
 Power Virtual Agents チャット ボットを Teams に追加するセットアップ プロセスは完了です。 これで、個人用チャットでボットとの会話を開始できます。
 
 ## <a name="see-also"></a>関連項目
-> [!div class="nextstepaction"]
-> [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
 
-> [!div class="nextstepaction"]
-> [Microsoft Power Virtual Agents を使用して Teams のチャットボットを作成します](../bot-features.md#bots-and-the-microsoft-power-virtual-agents)。  
+- [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
 
-> [!div class="nextstepaction"]
->  [Power Virtual Agents ポータル](https://powervirtualagents.microsoft.com)
+- [Microsoft Power Virtual Agents を使用して Teams のチャットボットを作成します](../bot-features.md#bots-and-the-microsoft-power-virtual-agents)。  
 
-> [!div class="nextstepaction"]
-> [Power Virtual Agents ボットを発行する](/power-virtual-agents/publication-fundamentals-publish-channels)
+- [Power Virtual Agents ポータル](https://powervirtualagents.microsoft.com)
 
-> [!div class="nextstepaction"]
-> [Microsoft Teams のセキュリティとコンプライアンス](/MicrosoftTeams/security-compliance-overview)。
+- [Power Virtual Agents ボットを発行する](/power-virtual-agents/publication-fundamentals-publish-channels)
+
+- [Microsoft Teams のセキュリティとコンプライアンス](/MicrosoftTeams/security-compliance-overview)。
 
 ## <a name="next-step"></a>次の手順
 

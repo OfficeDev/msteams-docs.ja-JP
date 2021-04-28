@@ -5,12 +5,12 @@ description: ユース ケースを理解する
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 748e40c712af7fb0095edd4f6ffe67ed253decec
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 9afb7ffb9ef6c07857f4452ce41a7b86782d50cd
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019868"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058664"
 ---
 # <a name="understand-your-use-cases"></a>ユース ケースを理解する
 
@@ -79,14 +79,11 @@ Microsoft Teams プラットフォームは、アプリで利用できるさま�
 
 ## <a name="see-also"></a>関連項目
 
-> [!div class="nextstepaction"]
-> [アプリの配信方法を選ぶ](../deploy-and-publish/overview.md)
+- [アプリの配信方法を選ぶ](../deploy-and-publish/overview.md)
 
-> [!div class="nextstepaction"]
-> [効果的なタブを設計する](../../tabs/design/tabs.md)
+- [効果的なタブを設計する](../../tabs/design/tabs.md)
 
-> [!div class="nextstepaction"]
-> [すばらしいボットを設計する](../../bots/design/bots.md)
+- [すばらしいボットを設計する](../../bots/design/bots.md)
 
 ## <a name="next-step"></a>次の手順
 

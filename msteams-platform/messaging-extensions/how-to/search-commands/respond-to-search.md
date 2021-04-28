@@ -4,12 +4,12 @@ author: clearab
 description: Microsoft Teams アプリのメッセージング拡張機能から検索コマンドに応答する方法。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 4dff59d0bd923618a3079c81cbb6f9e7aea2bab4
-ms.sourcegitcommit: dd2220f691029d043aaddfc7c229e332735acb1d
+ms.openlocfilehash: 044c6eebe9489ed404c9fa89b29c306cde8c7363
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "51996010"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058587"
 ---
 # <a name="respond-to-search-command"></a>検索コマンドに応答する
 
@@ -347,8 +347,7 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 
 ## <a name="see-also"></a>関連項目
 
-> [!div class="nextstepaction"]
-> [メッセージング拡張機能に構成を追加する](~/messaging-extensions/how-to/add-configuration-page.md)
+- [メッセージング拡張機能に構成を追加する](~/messaging-extensions/how-to/add-configuration-page.md)
  
 ## <a name="next-step"></a>次の手順
 

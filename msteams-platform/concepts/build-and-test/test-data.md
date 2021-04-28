@@ -5,12 +5,12 @@ ms.topic: how-to
 localization_priority: Normal
 keywords: アプリ開発者プログラム チームのテスト
 ms.date: 11/01/2019
-ms.openlocfilehash: cc8125cdd8678c84aa6733b71d37adeee98abdd9
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f224ad8b97cd5dd1a4349039824abaf551ef362e
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020815"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058468"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>テスト データを Microsoft 365 テスト テナントに追加する
 
@@ -256,12 +256,9 @@ Microsoft 365 開発者サブスクリプションを使用すると、テスト
 
 ## <a name="see-also"></a>関連項目
 
-> [!div class="nextstepaction"]
-> [タブをデバッグする](~/tabs/how-to/developer-tools.md)
+- [タブをデバッグする](~/tabs/how-to/developer-tools.md)
  
-> [!div class="nextstepaction"]
-> [ボットのデバッグ](~/bots/how-to/debug/locally-with-an-ide.md)
+- [ボットのデバッグ](~/bots/how-to/debug/locally-with-an-ide.md)
 
-> [!div class="nextstepaction"]
-> [RSC のアクセス許可をテストする](~/graph-api/rsc/test-resource-specific-consent.md)
+- [RSC のアクセス許可をテストする](~/graph-api/rsc/test-resource-specific-consent.md)
 

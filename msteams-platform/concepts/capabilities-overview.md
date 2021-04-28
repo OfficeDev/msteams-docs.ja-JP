@@ -6,12 +6,12 @@ ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: d1c6916c9433b15ddcd13e9128b25170dd990dd4
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f670f1f7b3db01f89fab4335c33f92e02cad1d9a
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019931"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058489"
 ---
 # <a name="understand-microsoft-teams-app-capabilities"></a>Microsoft Teams アプリの機能について
 
@@ -41,8 +41,8 @@ Teams アプリの開発に慣れ親しんだら、その基本的な基本を�
 
 ## <a name="see-also"></a>関連項目
 
-> [!div class="nextstepaction"]
-> [Teams 用アプリのビルド](../overview.md)
+- [Teams 用アプリのビルド](../overview.md)
+
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]

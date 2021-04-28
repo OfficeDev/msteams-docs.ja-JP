@@ -1,17 +1,17 @@
 ---
-title: 仮想アシスタントの作成
+title: 仮想アシスタントを作成する
 description: Microsoft Teams で使用する仮想アシスタント ボットとスキルを作成する方法
 localization_priority: Normal
 ms.topic: how-to
 keywords: teams 仮想アシスタント ボット
-ms.openlocfilehash: 65d9b90dacd6ca653ce22b7170651423a2ac9425
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 80a308050317e8a211b8f7a9e2dd459c1572af18
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019648"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058678"
 ---
-# <a name="create-virtual-assistant"></a>仮想アシスタントの作成 
+# <a name="create-virtual-assistant"></a>仮想アシスタントを作成する 
 
 Virtual Assistant は、ユーザー エクスペリエンス、組織のブランド化、および必要なデータを完全に制御しながら、堅牢な会話型ソリューションを作成できる Microsoft のオープン ソース テンプレートです。 Virtual [Assistant コア](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template) テンプレートは、ボット フレームワーク [SDK](https://github.com/microsoft/botframework-sdk)、言語理解 [(LUIS)](https://www.luis.ai/) [、QnA Maker](https://www.qnamaker.ai/)など、仮想アシスタントの構築に必要な Microsoft テクノロジをまとめる基本的な構成ブロックです。 また、スキル登録、リンクされたアカウント、ユーザーにシームレスな対話とエクスペリエンスを提供する基本的な会話の意図を含む重要な機能をまとめます。 さらに、テンプレート機能には、再利用可能な会話スキルの豊富な例が含 [まれます](https://microsoft.github.io/botframework-solutions/overview/skills)。  個々のスキルは、仮想アシスタント ソリューションに統合され、複数のシナリオを有効にします。 Bot Framework SDK を使用すると、スキルがソース コード形式で提示され、必要に応じてカスタマイズおよび拡張できます。 ボット フレームワークのスキルの詳細については [、「What is a Bot Framework skill」を参照してください](https://microsoft.github.io/botframework-solutions/overview/skills/)。 このドキュメントでは、組織の仮想アシスタントの実装に関する考慮事項、Teams に焦点を当てた仮想アシスタントの作成方法、関連する例、コード サンプル、および仮想アシスタントの制限事項について説明します。
 次の図は、仮想アシスタントの概要を表示します。
@@ -577,11 +577,8 @@ botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<pa
 
 ## <a name="see-also"></a>関連項目
 
-> [!div class="nextstepaction"]
-> [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)
+- [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)
 
-> [!div class="nextstepaction"]
-> [会議室予約](app-templates.md#book-a-room)
+- [会議室予約](app-templates.md#book-a-room)
 
-> [!div class="nextstepaction"]
-> [Microsoft Teams ボット](../bots/what-are-bots.md)
+- [Microsoft Teams ボット](../bots/what-are-bots.md)

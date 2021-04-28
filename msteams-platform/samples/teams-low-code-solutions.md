@@ -5,12 +5,12 @@ description: Teams で使用可能な Microsoft の低コードソリューシ�
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: c3fa4fb1792579a344596cbb080d96015292f7c4
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 78386c310ee4a82e5fdc6832f0cd288181674dbb
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020416"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058685"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Microsoft Teams 用の低コードカスタム アプリを作成する
 
@@ -83,5 +83,4 @@ Virtual Assistant は、ユーザー エクスペリエンス、組織のブラ�
 
 ## <a name="see-also"></a>関連項目
 
-> [!div class="nextstepaction"]
-> [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)
+- [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)

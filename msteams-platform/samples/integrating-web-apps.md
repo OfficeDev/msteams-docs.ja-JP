@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 localization_priority: Normal
 ms.topic: conceptual
 title: Web アプリ
-ms.openlocfilehash: 1f46c4a8b9457a00b5000e81c280759f584a50d2
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 0cc4c8bbecb51056e579478de64a5f4e73199674
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020423"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058692"
 ---
 # <a name="web-apps"></a>Web アプリ 
 
@@ -123,5 +123,4 @@ Webhook [よりも柔軟性](../bots/what-are-bots.md) が高い Teams アプリ
 
 ## <a name="see-also"></a>関連項目
 
-> [!div class="nextstepaction"]
-> [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)
+- [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)

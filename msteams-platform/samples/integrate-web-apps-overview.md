@@ -4,12 +4,12 @@ author: Rajeshwari-v
 description: Web アプリケーションとデバイス機能を Microsoft Teams アプリと統合する概要。
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 6493f493b2bfc67a23aebfb5142aff60cf0afe93
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 01977e22d79f7e39986367e647a2d48ea9b2905c
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020243"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058657"
 ---
 # <a name="integrate-web-apps"></a>Web アプリを統合する
 
@@ -45,7 +45,7 @@ Power Apps を使用すると、ビジネス データに接続し、組織の�
 
 Power Virtual Agent はコードなし、ガイド付きグラフィカル インターフェイス ソリューションです。 これは、Microsoft Power Platform と Bot Framework 上に構築されています。 チームのすべてのメンバーが、Teams プラットフォームと簡単に統合できる豊富な会話型チャットボットを作成および維持できます。 開発環境をセットアップしたり、Web サービスを作成したり、ボット フレームワークに直接登録したりすることなく、Teams 用のインテリジェント仮想エージェントを設計、開発、発行できます。
 
-### <a name="create-virtual-assistant"></a>仮想アシスタントの作成
+### <a name="create-virtual-assistant"></a>仮想アシスタントを作成する
 
 Virtual Assistant は、ユーザー エクスペリエンス、組織のブランド化、および必要なデータを完全に制御しながら、堅牢な会話型ソリューションを作成できる Microsoft のオープン ソース テンプレートです。 
 
@@ -79,41 +79,28 @@ Microsoft Teams プラットフォームは、組み込みのファースト パ
 
 ## <a name="see-also"></a>関連項目
 
-> [!div class="nextstepaction"]
-> [アプリの使用例を Teams プラットフォーム機能にマップする](~/concepts/design/map-use-cases.md)
+- [アプリの使用例を Teams プラットフォーム機能にマップする](~/concepts/design/map-use-cases.md)
 
-> [!div class="nextstepaction"]
-> [アプリのエントリ ポイントを決定する](~/concepts/extensibility-points.md)
+- [アプリのエントリ ポイントを決定する](~/concepts/extensibility-points.md)
 
-> [!div class="nextstepaction"]
-> [Web アプリを統合する](~/samples/integrating-web-apps.md)
+- [Web アプリを統合する](~/samples/integrating-web-apps.md)
 
-> [!div class="nextstepaction"]
-> [Microsoft Teams 用の低コードカスタム アプリを作成する](~/samples/teams-low-code-solutions.md)
+- [Microsoft Teams 用の低コードカスタム アプリを作成する](~/samples/teams-low-code-solutions.md)
 
-> [!div class="nextstepaction"]
-> [Power Virtual Agents チャットボットを追加する](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
+- [Power Virtual Agents チャットボットを追加する](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
 
-> [!div class="nextstepaction"]
-> [仮想アシスタントの作成](~/samples/virtual-assistant.md)
+- [仮想アシスタントの作成](~/samples/virtual-assistant.md)
 
-> [!div class="nextstepaction"]
-> [Microsoft Teams 用のアプリ テンプレート](~/samples/app-templates.md)
+- [Microsoft Teams 用のアプリ テンプレート](~/samples/app-templates.md)
 
-> [!div class="nextstepaction"]
-> [実稼働対応のシフト コネクタ](~/samples/shifts-wfm-connectors.md)
+- [実稼働対応のシフト コネクタ](~/samples/shifts-wfm-connectors.md)
 
-> [!div class="nextstepaction"]
-> [Moodle LMS のインストール](~/resources/moodleinstructions.md)
+- [Moodle LMS のインストール](~/resources/moodleinstructions.md)
 
-> [!div class="nextstepaction"]
-> [[Teams で共有] ボタンを作成する](~/concepts/build-and-test/share-to-teams.md)
+- [[Teams で共有] ボタンを作成する](~/concepts/build-and-test/share-to-teams.md)
 
-> [!div class="nextstepaction"]
-> [SharePoint に Teams タブを追加する](~/tabs/how-to/tabs-in-sharepoint.md)
+- [SharePoint に Teams タブを追加する](~/tabs/how-to/tabs-in-sharepoint.md)
 
-> [!div class="nextstepaction"]
-> [ディープ リンクの作成](~/concepts/build-and-test/deep-links.md)
+- [ディープ リンクの作成](~/concepts/build-and-test/deep-links.md)
 
-> [!div class="nextstepaction"]
-> [デバイス機能](~/concepts/device-capabilities/device-capabilities-overview.md)
+- [デバイス機能](~/concepts/device-capabilities/device-capabilities-overview.md)

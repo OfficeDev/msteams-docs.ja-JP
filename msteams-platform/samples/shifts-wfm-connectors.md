@@ -7,12 +7,12 @@ ms.date: 03/09/2020
 localization_priority: Normal
 keywords: Microsoft Teams コネクタ kronos
 ms.author: lajanuar
-ms.openlocfilehash: 94e0b2b61998510ea9dd054d118e856eadc49b2d
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: d17e3e18cfd39fec8117ce46aa99cb99da6927bc
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019618"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058699"
 ---
 # <a name="production-ready-shifts-connectors"></a>本番対応の Shifts コネクタ  
 
@@ -72,5 +72,4 @@ Kronos-to-Teams Shifts コネクタの展開の詳細については [、「Get 
 
 ## <a name="see-also"></a>関連項目
 
-> [!div class="nextstepaction"]
-> [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)
+- [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: c733f89208e82c032f581109f9c3887f20c104b9
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 741f39c2aca6e99fb7bdfaa1171de4e2bb1e7755
+ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52018377"
+ms.lasthandoff: 04/27/2021
+ms.locfileid: "52058349"
 ---
 # <a name="create-apps-for-teams-meetings"></a>Teams 会議用のアプリを作成する
 
@@ -324,7 +324,7 @@ API を使用して `userContext` 要求をルーティングするには [、�
 メッセージング拡張機能は、ユーザーが会議内ビューにいて、ユーザーが作成メッセージ拡張カードを投稿できる場合に期待通り動作します。 AppName in-meeting は、会議中の U バーのアプリ名を示すツールヒントです。
 
 > [!NOTE]
-> バージョン 1.9.0 [の Teams SDK](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) を使用してサイド パネルをアップロードします。前のバージョンではサイド パネルはサポートされていません。
+> バージョン 1.7.0 以前の [バージョン](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)ではサイド パネルがサポートされていないので、バージョン 1.7.0 以上の Teams SDK を使用します。
 
 #### <a name="in-meeting-dialog"></a>会議中ダイアログ
 
