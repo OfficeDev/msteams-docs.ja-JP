@@ -5,20 +5,20 @@
       href: overview.md
     - name: 新機能
       href: whats-new.md
-- name: 開始する
+- name: 作業の開始
   expanded: true
   items:
-    - name: 概要と前提条件
+    - name: 概要
       href: build-your-first-app/build-first-app-overview.md
     - name: '"Hello, World!" の作成 アプリ'
       href: build-your-first-app/build-and-run.md
-    - name: プライベート タブを作成する
+    - name: 個人用のタブを作成する
       href: build-your-first-app/build-personal-tab.md
     - name: '[チャネルとグループ] タブを作成する'
       href: build-your-first-app/build-channel-tab.md
-    - name: ボットを作成する
+    - name: 初めてのアプリ bot を作成する
       href: build-your-first-app/build-bot.md
-    - name: メッセージングの拡張機能を作成する
+    - name: 最初のメッセージング拡張機能のビルド
       href: build-your-first-app/build-messaging-extension.md
 - name: チュートリアルとコード サンプル
   items:
