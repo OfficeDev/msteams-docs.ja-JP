@@ -5,12 +5,12 @@ description: 最初の呼び出しアクションを処理し、アクション 
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: f13b2e099fa04ac950491e0b1fbc2ed09345e651
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: fbe90b3a3af8dbb053fdbaf6b4cd9b96344eaf00
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058629"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075592"
 ---
 # <a name="create-and-send-the-task-module"></a>タスク モジュールの作成と送信
 
@@ -946,7 +946,7 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## <a name="see-also"></a>関連項目
 
-- [操作コマンドを定義する](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+[操作コマンドを定義する](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 
 
 ## <a name="next-step"></a>次の手順

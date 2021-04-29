@@ -5,12 +5,12 @@ ms.topic: conceptual
 localization_priority: Normal
 keywords: teams publishs store office publishing AppSource ローカライズ言語
 ms.date: 05/15/2018
-ms.openlocfilehash: 8490230ad0b268d402a9ad7deb5f8b1e3f420f9d
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 6c63bd5c71934d0a3342b31bc10feda38b8ae0d1
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020850"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075746"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>Microsoft Teams アプリのローカライズ
 
@@ -132,3 +132,11 @@ Teams クライアントは、既定の言語文字列 -> ユーザーの言語�
 ## <a name="handling-localized-text-submissions-from-your-users"></a>ユーザーからのローカライズされたテキスト送信の処理
 
 アプリケーションのローカライズされたバージョンを提供する場合、ユーザーが同じ言語で応答する可能性が非常に高い可能性があります。 Teams はユーザー申請を既定の言語に変換しないので、アプリで処理する必要があります。 たとえば、ローカライズを指定した場合、ボットに対する応答は、既定の言語ではなく、コマンドのローカライズされたテキスト `commandList` になります。 アプリは適切に対応する必要があります。
+
+## <a name="code-sample"></a>コード サンプル
+
+| サンプルの名前 | 説明 | .NET |
+|-------------|-------------|------|
+| アプリのローカライズ | ボットとタブを使用した Microsoft Teams アプリのローカライズ。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
+
+

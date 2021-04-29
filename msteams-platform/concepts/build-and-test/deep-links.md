@@ -4,12 +4,12 @@ description: ディープ リンクとアプリでの使用方法について説
 ms.topic: how-to
 localization_priority: Normal
 keywords: Teams ディープ リンク ディープリンク
-ms.openlocfilehash: fb681cc2dc07f8ae042fe57d6249e986fefa1b7b
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 5ce9e4e1d86c6b4c040901fc9d6de10ff98a42e0
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058335"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075599"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成 
 
@@ -150,7 +150,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 ボット、コネクタ、またはメッセージング拡張機能カードでは、次のディープ リンク形式を使用できます。
 
-`https://teams.microsoft.com/I/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=<tenantid>&fileType=<filetype>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadid>&groupId=<groupId>`
+`https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=<tenantid>&fileType=<filetype>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadid>&groupId=<groupId>`
 
 クエリ パラメーターは次のとおりです。
 
@@ -222,6 +222,12 @@ Teams の組み込みスケジュール ダイアログへのディープ リン
 
 ボットとのこのディープ リンクを使用するには、カードのボタンで URL を対象として指定するか、[ `openUrl` アクションの種類] で [アクション] をタップします。
 
+## <a name="code-sample"></a>コード サンプル
+
+| サンプルの名前 | 説明 | .NET |
+|-------------|-------------|------|
+| Subentity ID を使用するディープ リンク | ボット チャットからサブエンティ ID を使用するタブへのディープリンクを示す Microsoft Teams サンプル アプリ。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp) |
+
 ## <a name="see-also"></a>関連項目
 
-- [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)
+[Web アプリを統合する](~/samples/integrate-web-apps-overview.md)

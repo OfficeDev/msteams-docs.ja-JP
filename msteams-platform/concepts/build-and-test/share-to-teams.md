@@ -4,12 +4,12 @@ description: Web サイトの [Teams 埋め込み共有] ボタンを追加す�
 ms.topic: reference
 localization_priority: Normal
 keywords: チーム間の共有
-ms.openlocfilehash: c8bbb371e2d68bf063c3aa5e02c7cf3ec911c0b8
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: d3e23c50cbaa38a53fa02c19cec69061478d9a57
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058475"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075648"
 ---
 # <a name="create-share-to-teams-button"></a>[Teams で共有] ボタンを作成する
 
@@ -133,4 +133,4 @@ HTML の既定のバージョン、または Open Graph バージョンのいず
 
 ## <a name="see-also"></a>関連項目
 
-- [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)
+[Web アプリを統合する](~/samples/integrate-web-apps-overview.md)

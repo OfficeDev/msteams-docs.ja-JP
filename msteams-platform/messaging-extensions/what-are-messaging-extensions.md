@@ -5,12 +5,12 @@ description: Microsoft Teams プラットフォームでのメッセージング
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: a5d30912d5cc580b6e85e19178c49d91811bc11f
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: ee59a7ad96572f5a8ebc6afedd2e0e8485169e5a
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058538"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075669"
 ---
 # <a name="messaging-extensions"></a>メッセージング拡張機能
 
@@ -77,7 +77,7 @@ Web サービスは、作成メッセージ領域に URL を貼り付けする�
 
 ## <a name="see-also"></a>関連項目
 
-- [メッセージング拡張機能を作成する](../build-your-first-app/build-messaging-extension.md)
+[メッセージング拡張機能を作成する](../build-your-first-app/build-messaging-extension.md)
 
 
 ## <a name="next-step"></a>次の手順

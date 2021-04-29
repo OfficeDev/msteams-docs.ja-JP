@@ -5,12 +5,12 @@ description: チャネルまたはグループ チャットでボットのメッ
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 7055042dfff4b633fdd570ce5d7318a17ac15cf6
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 2d7eece1fc74781456024f6dcb9414fefbadb8f4
+ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058594"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52075753"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>ボットとのチャネルチャットとグループ チャットの会話
 
@@ -270,7 +270,7 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 ## <a name="see-also"></a>関連項目
 
-- [チームのコンテキストを取得します](~/bots/how-to/get-teams-context.md)。
+[Teams コンテキストの取得](~/bots/how-to/get-teams-context.md)
 
 ## <a name="next-step"></a>次の手順
 

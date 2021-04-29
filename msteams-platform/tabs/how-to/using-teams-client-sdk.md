@@ -6,12 +6,12 @@ description: Microsoft Teams JavaScript クライアント SDK の概要。こ�
 localization_priority: Normal
 keywords: teams タブ グループ チャネル構成可能な静的 SDK JavaScript 個人用
 ms.topic: conceptual
-ms.openlocfilehash: 6d40f005e863e0ef5687b20beecfdaf03ee8becb
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: c3bbdf9b71618148faf9822aaf051b85aecf17fb
+ms.sourcegitcommit: 303fc214aa04757779a171337f31a6539f47fd03
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019560"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "52068725"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Microsoft Teams JavaScript クライアント SDK でタブやその他のホストされたエクスペリエンスを構築する
 
@@ -22,18 +22,20 @@ SDK は、次の Teams 機能を使用してアプリを開発する場合に役
 * [タブ](../../tabs/what-are-tabs.md)
 * [タスク モジュール](../../task-modules-and-cards/what-are-task-modules.md)
 
-たとえば、SDK を使用すると、Teams クライアントでユーザーが行ったテーマの変更にタブを対応できます。 [](../../build-your-first-app/build-personal-tab.md#3-update-the-tab-theme)
+たとえば、SDK を使用すると、Teams クライアントでユーザーが行ったテーマの変更にタブを対応できます。 [](../../build-your-first-app/build-personal-tab.md)
 
 ## <a name="getting-started"></a>はじめに
 
 開発の基本設定に応じて、次のいずれかを実行します。
 
-* [npm または Yarn を使用して SDK をインストールする](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)
-* [SDK の複製 (GitHub)](https://github.com/OfficeDev/microsoft-teams-library-js)
+
+* [npm または Yarn を使用して SDK をインストールする](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)
 
 ## <a name="common-sdk-functions"></a>一般的な SDK 関数
 
-一般的に使用される SDK 関数については、次の表を参照してください。 [SDK リファレンス ドキュメントは、より](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)包括的な情報を提供します。
+
+一般的に使用される SDK 関数については、次の表を参照してください。 [SDK リファレンス ドキュメントは、より](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)包括的な情報を提供します。
+
 
 ### <a name="basic-functions"></a>基本関数
 
