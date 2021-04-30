@@ -1,21 +1,21 @@
 ---
 title: ボットにカード アクションを追加する
-description: Microsoft Teams でのカードアクションとボットでのカードアクションの使い方について説明します。
+description: ボットでのカード アクションMicrosoft Teams、ボットでカードを使用する方法について説明します。
 localization_priority: Normal
 ms.topic: conceptual
 keywords: teams ボット カードアクション
-ms.openlocfilehash: 84f47540cee99738204007fd107743f922552e60
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 75dcd6e1de1968f021a1ebe66c6770c4f641c94d
+ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019539"
+ms.lasthandoff: 04/29/2021
+ms.locfileid: "52088795"
 ---
 # <a name="card-actions"></a>カードアクション
 
-Teams のボットとメッセージング拡張機能で使用されるカードは、次のアクティビティ ( ) の種類 [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) をサポートします。 これらのアクションは、コネクタ `potentialActions` と使用Office 365 コネクタ カードの場合とは異なります。
+ボットとメッセージング拡張機能で使用されるカードは、Teamsアクティビティ ( ) の種類 [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) をサポートします。 これらのアクションは、Connectors `potentialActions` から使用Office 365コネクタ カードとは異なります。
 
-| 種類 | 操作 |
+| Type | Action |
 | --- | --- |
 | `openUrl` | 既定のブラウザーで URL を開きます。 |
 | `messageBack` | ボットにメッセージとペイロードを送信し (ボタンをクリックしたユーザーまたはカードをタップしたユーザーから) チャット ストリームに別のメッセージを送信します。 |
@@ -24,12 +24,12 @@ Teams のボットとメッセージング拡張機能で使用されるカー�
 | `signin` | OAuth フローを開始し、ボットがセキュリティで保護されたサービスに接続できるようにします。 |
 
 > [!NOTE]
->* Teams では、前 `CardAction` の表にリストされていない種類はサポートされていません。
->* Teams では、このプロパティはサポート `potentialActions` されていません。
->* カードアクションは、Bot [](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) Framework/Azure Bot Service で推奨されるアクションとは異なります。 推奨されるアクションは Microsoft Teams ではサポートされていません。Teams ボット メッセージにボタンを表示する場合は、カードを使用します。
+>* Teams前の表 `CardAction` にリストされていない型はサポートされていません。
+>* Teamsプロパティはサポート `potentialActions` されていません。
+>* カードアクションは、Bot [](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) Framework/Azure Bot Service で推奨されるアクションとは異なります。 推奨されるアクションは、Microsoft Teamsボット メッセージにボタンを表示する場合Teamsカードを使用します。
 >* メッセージング拡張機能の一部としてカード アクションを使用している場合、カードがチャネルに送信されるまでアクションは機能しません (カードがメッセージの作成ボックスに入っている間は動作しません)。
 
-Teams ではアダプティブ [カードアクションもサポートされています](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)。これはアダプティブ カードでのみ使用されます。 これらのアクションは、この参照の最後にある独自のセクションに一覧表示されます。
+Teamsアダプティブ カード[アクションもサポートしています](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)。これはアダプティブ カードでのみ使用されます。 これらのアクションは、この参照の最後にある独自のセクションに一覧表示されます。
 
 ## <a name="openurl"></a>openUrl
 
@@ -52,7 +52,7 @@ Teams ではアダプティブ [カードアクションもサポートされて
 | プロパティ | 説明 |
 | --- | --- |
 | `title` | ボタン ラベルとして表示されます。 |
-| `displayText` | 省略可能。 アクションの実行時に、ユーザーがチャット ストリームにエコーします。 このテキストは *ボット* に送信されません。 |
+| `displayText` | 省略可能です。 アクションの実行時に、ユーザーがチャット ストリームにエコーします。 このテキストは *ボット* に送信されません。 |
 | `value` | アクションの実行時にボットに送信されます。 アクションのコンテキスト (一意の識別子や JSON オブジェクトなど) をエンコードできます。 |
 | `text` | アクションの実行時にボットに送信されます。 ボットの開発を簡略化するには、このプロパティを使用します。コードでは、ボット ロジックをディスパッチするために 1 つのトップ レベル プロパティをチェックできます。 |
 
@@ -223,11 +223,12 @@ OAuth フローを開始し、ボットがセキュリティで保護された�
 
 ## <a name="adaptive-cards-actions"></a>アダプティブ カードのアクション
 
-アダプティブ カードは、次の 3 種類のアクションをサポートします。
+アダプティブ カードは、次の 4 種類のアクションをサポートします。
 
 * [Action.OpenUrl](http://adaptivecards.io/explorer/Action.OpenUrl.html)
 * [Action.Submit](http://adaptivecards.io/explorer/Action.Submit.html)
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
+* [Action.Exeかわいい](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
 
 上記のアクションに加えて、アダプティブ カード ペイロードを変更して、オブジェクトのプロパティを使用して既存の Bot Framework アクション `Action.Submit` `msteams` `data` をサポートできます `Action.Submit` 。 以下のセクションでは、アダプティブ カードで既存の Bot Framework アクションを使用する方法について詳しく説明します。
 
@@ -241,7 +242,7 @@ OAuth フローを開始し、ボットがセキュリティで保護された�
 | プロパティ | 説明 |
 | --- | --- |
 | `type` | に設定する `messageBack` |
-| `displayText` | 省略可能。 アクションの実行時に、ユーザーがチャット ストリームにエコーします。 このテキストは *ボット* に送信されません。 |
+| `displayText` | 省略可能です。 アクションの実行時に、ユーザーがチャット ストリームにエコーします。 このテキストは *ボット* に送信されません。 |
 | `value` | アクションの実行時にボットに送信されます。 アクションのコンテキスト (一意の識別子や JSON オブジェクトなど) をエンコードできます。 |
 | `text` | アクションの実行時にボットに送信されます。 ボットの開発を簡略化するには、このプロパティを使用します。コードでは、ボット ロジックをディスパッチするために 1 つのトップ レベル プロパティをチェックできます。 |
 

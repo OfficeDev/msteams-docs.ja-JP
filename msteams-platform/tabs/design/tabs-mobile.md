@@ -4,32 +4,32 @@ description: モバイルで動作するタブを設計する際のガイドラ�
 ms.topic: conceptual
 localization_priority: Normal
 keywords: teams デザイン ガイドライン リファレンス フレームワーク 個人用アプリ モバイル タブ
-ms.openlocfilehash: cdcaddf5ba0fb18537e87daa4b459c7377225f76
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: b9f09ce2603ee2617b8b93ba2132b900c61f2c31
+ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075697"
+ms.lasthandoff: 04/29/2021
+ms.locfileid: "52088760"
 ---
 # <a name="tabs-on-mobile"></a>モバイルのタブ
 
-Teams モバイル チャネル、チャット、個人用アプリにタブを含めできます。
+モバイル チャネル、チャット、個人用Teamsにタブを含めできます。
 
 ## <a name="accessing-personal-tabs"></a>個人用タブへのアクセス
 
 アプリドロワーの個人用タブにアクセスできます。
 
-:::image type="content" source="../../assets/images/tabs/mobile-app-drawer.png" alt-text="Teams モバイル アプリの引き出しを示す図。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-app-drawer.png" alt-text="モバイル アプリの引き出Teamsを示す図。" border="false":::
 
 ## <a name="accessing-channel-tabs"></a>チャネル タブへのアクセス
 
 チャネルタブとグループ タブにアクセスするには、追加されたチャネルまたはチャットで [その他] ボタンを選択します。
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab.png" alt-text="Teams モバイル タブを示す図。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab.png" alt-text="モバイル タブのTeams図。" border="false":::
 
 ## <a name="design-considerations"></a>設計上の考慮事項
 
-モバイル プラットフォームを使用すると、アプリのコンテンツが主要な Teams ナビゲーションとは別に、すべての画面を取り上げ、アプリを臨場感のあるエクスペリエンスにできます。 Teams に合った臨場感のあるエクスペリエンスを作成するには、次のガイドラインに従います。
+モバイル プラットフォームを使用すると、アプリのコンテンツがメインのナビゲーションとは別に、すべての画面を取り上げ、アプリの臨場感Teamsできます。 ユーザーに合った臨場感のあるエクスペリエンスをTeamsガイドラインに従います。
 
 ### <a name="responsive-design"></a>レスポンシブ デザイン
 
@@ -41,33 +41,33 @@ Teams モバイル チャネル、チャット、個人用アプリにタブを�
 
 #### <a name="single-canvas"></a>単一のキャンバス
 
-これは、作業が行われる 1 つの大きな領域です。 Teams Wiki アプリは、このパターンに従います。 コンテンツを小さなコンポーネントに分けないアプリがある場合は、これは適しています。
+これは、作業が行われる 1 つの大きな領域です。 Wiki Teamsは、このパターンに従います。 コンテンツを小さなコンポーネントに分けないアプリがある場合は、これは適しています。
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab-single-canvas.png" alt-text="Teams モバイル単一キャンバス タブを示す図。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab-single-canvas.png" alt-text="モバイル単一のTeamsタブを示す図。" border="false":::
 
 #### <a name="list"></a>一覧表示
 
 リストは、大量のデータを並べ替え、フィルター処理する場合に最適で、最も重要な情報を一番上に保つことに最適です。 並べ替え可能な列を使用すると便利です。 省略記号メニューの下の各リスト アイテムにアクションを追加できます。
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab-list.png" alt-text="Teams モバイル リスト タブを示す図。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab-list.png" alt-text="[モバイル リスト] タブTeamsを示す図。" border="false":::
 
 #### <a name="grid"></a>グリッド
 
 グリッドは、視覚的な要素を表示する場合に便利です。 上部にフィルターまたは検索コントロールを含めるのに役立ちます。
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab-grid.png" alt-text="グリッド レイアウトの Teams モバイル タブを示す図。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab-grid.png" alt-text="グリッド レイアウトがTeamsモバイル タブを示す図。" border="false":::
 
 ### <a name="tabs-with-bots-on-mobile"></a>モバイル上のボットを含むタブ
 
 次の例は、タブとボットを持つ個人用アプリです。
 
-:::image type="content" source="../../assets/images/tabs/mobile-tab-with-bot.png" alt-text="タブとボットを持つモバイル Teams アプリの方法を示す図。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-tab-with-bot.png" alt-text="タブとボットを持つTeamsモバイル アプリの表示方法を示す図。" border="false":::
 
 ## <a name="ui-components"></a>UI コンポーネント
 
 ### <a name="color-palettes"></a>カラー パレット
 
-承認済みのニュートラル パレットを背景、通知、テキスト、ボタンに使用すると、アプリが Teams で自宅で使い分けるのに役立ちます。 Teams モバイルには 2 つの色のテーマ (明るいテーマと暗いテーマ) が用意されていますので、両方でアプリが優れたものに見えるのを確認すると良い考えです。
+承認済みのニュートラル パレットを背景、通知、テキスト、およびボタンに使用すると、アプリがユーザーの自宅で使いTeams。 モバイルTeams色のテーマが 2 つ (明るいと暗い) ので、両方でアプリが優れた外観を示すのは良い考えです。
 
 #### <a name="light-color"></a>明るい色
 
@@ -117,11 +117,11 @@ Teams モバイル チャネル、チャット、個人用アプリにタブを�
 
 ## <a name="developer-considerations"></a>開発者の考慮事項
 
-タブを含むアプリを構築する場合は、Android クライアントと iOS Microsoft Teams クライアントの両方でタブがどのように機能するのか検討 (およびテスト) する必要があります。 以下のセクションでは、考慮する必要がある主要なシナリオの一部について説明します。
+タブを含むアプリを構築する場合は、Android クライアントと iOS クライアントの両方でタブがどのように機能Microsoft Teamsがあります。 以下のセクションでは、考慮する必要がある主要なシナリオの一部について説明します。
 
 ### <a name="authentication"></a>認証
 
-モバイル クライアントで認証を機能するには、Teams JavaScript SDK を少なくともバージョン 1.4.1 にアップグレードする必要があります。
+モバイル クライアントで認証を機能するには、JavaScript SDK Teamsバージョン 1.4.1 以上にアップグレードする必要があります。
 
 ### <a name="low-bandwidth-and-intermittent-connections"></a>低帯域幅と断続的な接続
 
@@ -132,22 +132,30 @@ Teams モバイル チャネル、チャット、個人用アプリにタブを�
 
 ### <a name="testing-on-mobile-clients"></a>モバイル クライアントでのテスト
 
-さまざまなサイズと品質のモバイル デバイスでタブが適切に機能するを検証する必要があります。 Android デバイスの場合 [、DevTools](~/tabs/how-to/developer-tools.md) を使用して、実行中にタブをデバッグできます。 パフォーマンスの高いデバイスと低パフォーマンスデバイスの両方とタブレットでテストすることをお勧めします。
+さまざまなサイズと品質のモバイル デバイスでタブが適切に機能するを検証する必要があります。 Android デバイスの場合 [、DevTools](~/tabs/how-to/developer-tools.md) を使用して、実行中にタブをデバッグできます。 タブレットを含む、高パフォーマンスデバイスと低パフォーマンスデバイスの両方でテストすることをお勧めします。
 
 ### <a name="distribution"></a>配布
 
-Teams モバイル クライアントで適切に機能するには、Teams ストアに記載されているアプリがモバイルでの使用を承認されている必要があります。 タブの動作は、アプリが承認されるかどうかによって異なります。
+モバイル クライアントで適切にTeams機能するには、モバイル ストアに一覧表示されているアプリTeams必要があります。 タブの可用性と動作は、アプリが承認されたかどうかによって異なります。
 
-#### <a name="channel-and-group-tab-behavior"></a>チャネルとグループタブの動作
+#### <a name="apps-on-teams-store-approved-for-mobile"></a>モバイル用にTeamsストア上のアプリ
 
-* **承認時の動作**: アプリの構成を使用して Teams モバイル クライアントで開 `contentUrl` きます。
-* **承認されていない場合の動作**: アプリの構成を使用してデバイスの既定のブラウザーで開きます (ソース コードの関数にも含める `websiteUrl` 必要 `setSettings()` があります)。 ただし、ユーザーは、アプリの横にある [詳細] を選択し、[開く] を選択してアプリの構成をトリガーすることで、Teams モバイル クライアントでタブを読み込 `contentUrl` み続けることができます。
+次の表では、アプリがモバイル ストアに表示され、モバイルTeams承認された場合のタブの可用性と動作について説明します。
 
-#### <a name="personal-app-behavior"></a>個人用アプリの動作
+|機能   |モバイルの可用性   |モバイル動作|
+|----------|-----------|------------|
+|チャネル <br /> [グループ] タブ|はい|アプリの構成を使用Teamsモバイル クライアントのタブが開 `contentUrl` きます。|
+|個人用アプリ|はい|[個人用アプリ] タブの各タブが、Teamsを使用してモバイル クライアントに表示 `contentUrl` されます。|
 
-* **承認時の動作**: 個人用アプリの各タブは、それぞれの構成を使用して Teams モバイル クライアントに表示 `contentUrl` されます。
-* **承認されていない場合の動作**: 個人用アプリは Teams モバイル クライアントで使用できません。
+#### <a name="apps-on-teams-store-not-approved-for-mobile"></a>モバイルで承認Teamsアプリストアのアプリ
 
-#### <a name="non-teams-store-app-behavior"></a>Teams 以外のストア アプリの動作
+次の表では、アプリがモバイル ストアに表示されますが、モバイルでの使用がTeamsタブの可用性と動作について説明します。
+
+|機能   |モバイルの可用性|モバイル動作|
+|----------|-----------|------------|
+|[チャネルとグループ] タブ|はい|タブは、アプリの構成を使用して Teams モバイル クライアントではなく、デバイスの既定のブラウザーで開きます (ソース コードの関数にも含める `websiteUrl` 必要 `setSettings()` [があります](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest#functions))。 ただし、アプリの横にある [詳細] を選択し、[開く]を選択すると、Teams モバイルクライアントのタブが表示され、アプリの構成がトリガー `contentUrl` されます。|
+|個人用アプリ|なし|該当なし|
+
+#### <a name="apps-not-on-teams-store"></a>アプリがストアTeamsしない
 
 アプリをサイドロードする場合や、組織のアプリ カタログに発行する場合、タブの動作は、モバイル向け Microsoft によって承認された Teams ストア アプリと同じです。
