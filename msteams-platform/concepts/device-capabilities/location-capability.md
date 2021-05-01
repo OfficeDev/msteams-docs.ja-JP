@@ -1,40 +1,40 @@
 ---
 title: 場所機能を統合する
 author: Rajeshwari-v
-description: Teams JavaScript クライアント SDK を使用して場所の機能を活用する方法
+description: JavaScript クライアント SDK Teamsを使用して場所の機能を活用する方法
 keywords: 場所マップ機能ネイティブ デバイスのアクセス許可
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: d10f2df48ee5b75252508fbc51e5a31df9ea083f
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 55c3c6d82785b46580c3d8553d46a6e5e3a28fb4
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058370"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101780"
 ---
 # <a name="integrate-location-capabilities"></a>場所機能を統合する 
 
-このドキュメントでは、ネイティブ デバイスの位置情報機能を Teams アプリに統合する方法について説明します。  
+このドキュメントでは、ネイティブ デバイスの位置情報機能をアプリと統合する方法Teams説明します。  
 
-[アプリがユーザーのネイティブ デバイス](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)機能にアクセスするために必要なツールを提供する Microsoft Teams JavaScript クライアント SDK[を使用できます](native-device-permissions.md)。 [getLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true)や[showLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true)などの場所 API を使用して、アプリ内の機能を統合します。 
+JavaScript クライアント[SDK Microsoft Teams使用](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)できます。これは、アプリがユーザーのネイティブ デバイス機能にアクセスするために必要なツール[を提供します](native-device-permissions.md)。 [getLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true)や[showLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true)などの場所 API を使用して、アプリ内の機能を統合します。 
 
 ## <a name="advantages-of-integrating-location-capabilities"></a>場所機能を統合する利点
 
-Teams アプリに場所機能を統合する主な利点は、Teams プラットフォーム上の Web アプリ開発者が Microsoft Teams JavaScript クライアント SDK で位置情報機能を活用できるという利点です。 
+Teams アプリに場所の機能を統合する主な利点は、Teams プラットフォーム上の Web アプリ開発者が、Microsoft Teams JavaScript クライアント SDK で位置情報機能を活用できるという利点です。 
 
 次の例は、場所機能の統合がさまざまなシナリオでどのように使用されるのか示しています。
 * 工場では、監督者は、工場の近くで自分撮りを取得し、指定されたアプリを介して共有を求め、労働者の出席を追跡できます。 場所データもキャプチャされ、画像と共に送信されます。
 * 位置情報機能を使用すると、サービス プロバイダーの保守スタッフは、携帯電話の塔の本物の正常性データを管理と共有できます。 管理は、キャプチャされた位置情報とメンテナンス スタッフが提出したデータの不一致を比較できます。
 
-場所の機能を統合するには、アプリ マニフェスト ファイルを更新して API を呼び出す必要があります。 効果的な統合を行う場合は、場所[](#code-snippets)API を呼び出すコード スニペットについて理解している必要があります。 Teams アプリのエラーを処理するには [、API](#error-handling) 応答エラーについて理解することが重要です。
+場所の機能を統合するには、アプリ マニフェスト ファイルを更新して API を呼び出す必要があります。 効果的な統合を行う場合は、場所[](#code-snippets)API を呼び出すコード スニペットについて理解している必要があります。 API 応答エラーを理解して、アプリ[](#error-handling)内のエラーを処理することがTeamsです。
 
 > [!NOTE] 
-> 現在、場所の機能に対する Microsoft Teams のサポートは、モバイル クライアントでのみ使用できます。
+> 現在、Microsoft Teams機能のサポートはモバイル クライアントでのみ利用できます。
 
 ## <a name="update-manifest"></a>マニフェストの更新
 
-プロパティを追加し [ 、manifest.jsして](../../resources/schema/manifest-schema.md#devicepermissions) Teams アプリを更新 `devicePermissions` します `geolocation` 。 これにより、アプリは場所機能の使用を開始する前に、ユーザーに必要なアクセス許可を求めできます。
+プロパティを追加Teamsを[manifest.jsして](../../resources/schema/manifest-schema.md#devicepermissions)、ファイル上のアプリ `devicePermissions` のアプリを更新します `geolocation` 。 これにより、アプリは場所機能の使用を開始する前に、ユーザーに必要なアクセス許可を求めできます。
 
 ``` json
 "devicePermissions": [
@@ -43,7 +43,7 @@ Teams アプリに場所機能を統合する主な利点は、Teams プラッ�
 ```
 
 > [!NOTE]
-> 関連 **する Teams** API が開始されると、[アクセス許可の要求] プロンプトが自動的に表示されます。 詳細については、「デバイスのアクセス [許可を要求する」を参照してください](native-device-permissions.md)。
+> 要求 **のアクセス許可のプロンプト** は、関連する API が開始されるとTeams表示されます。 詳細については、「デバイスのアクセス [許可を要求する」を参照してください](native-device-permissions.md)。
 
 ## <a name="location-apis"></a>場所 API
 
@@ -56,21 +56,20 @@ Teams アプリに場所機能を統合する主な利点は、Teams プラッ�
 
 > [!NOTE]
 
-> `getLocation()`API は、次の入力[構成](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/locationprops?view=msteams-client-js-latest&preserve-view=true)と共に `allowChooseLocation` 提供されます `showMap` 。 <br/> 値が true `allowChooseLocation` の *場合*、ユーザーは任意の場所を選択できます。<br/>  値が false の *場合*、ユーザーは現在の場所を変更できません。<br/> 値が false の `showMap` *場合*、現在の場所はマップを表示せずにフェッチされます。 `showMap` true に設定 `allowChooseLocation` されている場合は無視 *されます*。 
-
+> `getLocation()`API は、次の入力[構成](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/locationprops?view=msteams-client-js-latest&preserve-view=true)と共に `allowChooseLocation` 提供されます `showMap` 。 <br/> 値が true `allowChooseLocation` の *場合*、ユーザーは任意の場所を選択できます。<br/>  値が false の *場合*、ユーザーは現在の場所を変更できません。<br/> 値が false の `showMap` *場合*、現在の場所はマップを表示せずにフェッチされます。 `showMap` true に設定 `allowChooseLocation` されている場合は無視 *されます*。
 
 **場所機能用の Web アプリ エクスペリエンス** 
  ![場所機能の Web アプリ エクスペリエンス](../../assets/images/tabs/location-capability.png)
 
 ## <a name="error-handling"></a>エラー処理
 
-Teams アプリでこれらのエラーを適切に処理する必要があります。 次の表に、エラー コードとエラーが生成される条件を示します。 
+これらのエラーは、アプリで適切に処理Teamsがあります。 次の表に、エラー コードとエラーが生成される条件を示します。 
 
 |エラー コード |  エラー名     | 条件|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API は現在のプラットフォームではサポートされていません。|
 | **500** | INTERNAL_ERROR | 必要な操作の実行中に内部エラーが発生します。|
-| **1000** | PERMISSION_DENIED |ユーザーが Teams アプリまたは Web アプリに対する場所のアクセス許可を拒否しました。|
+| **1000** | PERMISSION_DENIED |ユーザーは、アプリまたは web アプリTeams場所のアクセス許可を拒否しました。|
 | **4000** | INVALID_ARGUMENTS | API は、間違った引数または不十分な必須引数を使用して呼び出されます。|
 | **8000** | USER_ABORT |ユーザーが操作を取り消しました。|
 | **9000** | OLD_PLATFORM | ユーザーは、API の実装が存在しない古いプラットフォーム ビルドに存在します。 ビルドをアップグレードすると、問題が解決します。|
@@ -105,6 +104,5 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 
 ## <a name="see-also"></a>関連項目
 
-- [Teams でのメディア機能の統合](mobile-camera-image-permissions.md)
-
-- [Teams に QR またはバーコード スキャナー機能を統合する](qr-barcode-scanner-capability.md)
+* [メディア機能を統合Teams](mobile-camera-image-permissions.md)
+* [QR コードまたはバーコード スキャナー機能をアプリに統合Teams](qr-barcode-scanner-capability.md)

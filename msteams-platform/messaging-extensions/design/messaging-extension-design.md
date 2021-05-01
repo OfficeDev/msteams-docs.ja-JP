@@ -1,33 +1,33 @@
 ---
 title: メッセージング拡張機能の設計
-description: Teams メッセージング拡張機能を設計し、Microsoft Teams UI キットを取得する方法について説明します。
+description: メッセージング拡張機能を設計し、Teams UI キットを取得するMicrosoft Teams説明します。
 keywords: teams の設計ガイドラインは、メッセージング拡張機能のヒントのベスト プラクティスを参照します。
 author: heath-hamilton
 localization_priority: Normal
 ms.author: qinch
 ms.topic: conceptual
-ms.openlocfilehash: e3e4197e461f6d13f0c45ba2ce8bfb93b01b5e0f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 8b918c59910cbdc560fe415354d2c62c0fdd443c
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020724"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101577"
 ---
-# <a name="designing-your-microsoft-teams-messaging-extension"></a>Microsoft Teams メッセージング拡張機能の設計
+# <a name="designing-your-microsoft-teams-messaging-extension"></a>メッセージング拡張機能Microsoft Teams設計する
 
 メッセージング拡張機能は、アプリコンテンツを挿入したり、会話から離れることなくメッセージに作用するためのショートカットです。
-アプリの設計をガイドするために、次の情報は、Teams でユーザーがメッセージング拡張機能を追加、使用、および管理する方法を示しています。
+アプリの設計をガイドするために、次の情報は、ユーザーがメッセージング拡張機能を追加、使用、および管理する方法を説明し、Teams。
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-Microsoft Teams UI Kit には、必要に応じて取得および変更できる要素を含む、包括的なメッセージング拡張機能の設計ガイドラインがあります。
+必要に応じて取得および変更できる要素を含む、包括的なメッセージング拡張機能の設計ガイドラインについては、「UI キットMicrosoft Teams参照してください。
 
 > [!div class="nextstepaction"]
 > [Microsoft Teams UI Kit (Figma) を入手する](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-messaging-extension"></a>メッセージング拡張機能の追加
 
-メッセージング拡張機能は、次の Teams コンテキストに追加できます。
+メッセージング拡張機能は、次のコンテキストでTeamsできます。
 
 * Teams ストア (AppSource) から。
 * 作成ボックスの近くのチャネル、チャット、または会議 (前、中、および後)。 これらの場所の 1 つでメッセージング拡張機能を追加する場合は、そのコンテキストでのみ使用できます。
@@ -40,17 +40,17 @@ Microsoft Teams UI Kit には、必要に応じて取得および変更できる
 
 認証は必須ではありませんが、アプリがチケット追跡ツールのようなものである場合は、メッセージング拡張機能を使用するためにサインインするユーザーが必要な場合があります。
 
-Teams アプリ全体で一貫性を保つには、サインイン画面をカスタマイズできない。 シングル サインオン (SSO) 認証を使用する場合、ユーザーは自動的にサインインします。
+アプリ間で一Teams一貫性を保つには、サインイン画面をカスタマイズできない。 シングル サインオン (SSO) 認証を使用する場合、ユーザーは自動的にサインインします。
 
 :::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="例では、サインイン ボタンを使用してメッセージング拡張機能のセットアップ画面を表示します。" border="false":::
 
 ## <a name="types-of-messaging-extensions"></a>メッセージング拡張機能の種類
 
-メッセージング拡張機能には、検索コマンド、アクション コマンド、または両方を指定できます。 コマンドは、アプリの機能と Teams の使用例に適合する方法によって異なっています。
+メッセージング拡張機能には、検索コマンド、アクション コマンド、または両方を指定できます。 コマンドは、アプリの機能と、それらの機能がアプリケーションの使用Teamsに依存します。
 
 ### <a name="search-commands"></a>検索コマンド
 
-検索コマンドを使用すると、ユーザーはメッセージング拡張機能を使用して外部コンテンツをすばやく検索し、メッセージに挿入できます。 検索コマンドは、通常、作成ボックスで使用できます。 たとえば、Teams を離れることなく、コンテンツを共有することでディスカッションを開始または追加できます。
+検索コマンドを使用すると、ユーザーはメッセージング拡張機能を使用して外部コンテンツをすばやく検索し、メッセージに挿入できます。 検索コマンドは、通常、作成ボックスで使用できます。 たとえば、コンテンツを共有することで、ディスカッションを開始または追加Teams。
 
 :::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="例は、作成ボックスから起動された検索ベースのメッセージング拡張機能を示しています。" border="false":::
 
@@ -62,7 +62,7 @@ Teams アプリ全体で一貫性を保つには、サインイン画面をカ�
 
 ### <a name="action-commands"></a>操作コマンド
 
-アクション コマンドを使用すると、ユーザーは Teams 内の外部サービスでアクションをトリガーし、要求を処理できます。 たとえば、アプリで注文を追跡する場合、ユーザーはチャット内から同僚のメッセージの内容を使用して新しい注文を作成できます。
+アクション コマンドを使用すると、ユーザーは外部サービス内のアクションをトリガーし、要求を処理Teams。 たとえば、アプリで注文を追跡する場合、ユーザーはチャット内から同僚のメッセージの内容を使用して新しい注文を作成できます。
 
 アクション ベースのメッセージング拡張機能では、多くの場合、モーダル内でフォームまたは他の種類の構成を完了する必要があります。 これらのエクスペリエンスは、タスク モジュールで [作成できます](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)。
 
@@ -81,7 +81,7 @@ Teams アプリ全体で一貫性を保つには、サインイン画面をカ�
 追加すると、ユーザーはチャット メッセージまたはチャネル投稿の [その他] アイコンを選択して、拡張機能の :::image type="icon" source="../../assets/icons/teams-client-more.png"::: アクション コマンドを見つけることができます。 拡張機能が [使用状況に基づくその他 **のアクション] の下** に表示される場合があります。
 
 > [!NOTE]
-> Microsoft Teams モバイル プラットフォームでは、チャット メッセージまたはチャネル投稿からのその他のアクションのサポートは利用できません。 
+> チャット メッセージまたはチャネル投稿からのその他のアクションのサポートは、モバイル プラットフォームMicrosoft Teamsできません。 
 
 #### <a name="chat-message"></a>チャット メッセージ
 
@@ -161,6 +161,8 @@ Teams アプリ全体で一貫性を保つには、サインイン画面をカ�
 
 ## <a name="best-practices"></a>ベスト プラクティス
 
+これらの推奨事項を使用して、高品質のアプリ エクスペリエンスを作成します。
+
 ### <a name="setup-and-general-usage"></a>セットアップと一般的な使用方法
 
 :::row:::
@@ -177,7 +179,7 @@ SSO を使用すると、サインイン プロセスが簡単、高速、およ
 
 #### <a name="dont-take-users-away-from-the-conversation"></a>[しない]: ユーザーを会話から離す
 
-メッセージング拡張機能は、コンテキストの切り替えを減らすことが想定されるショートカットです。 拡張機能は、たとえば、Teams の外部の Web ページにユーザーを指示する必要があります。
+メッセージング拡張機能は、コンテキストの切り替えを減らすことが想定されるショートカットです。 拡張機能は、たとえば、ユーザーを外部の Web ページにTeams。
 
    :::column-end:::
 :::row-end:::
@@ -192,9 +194,9 @@ SSO を使用すると、サインイン プロセスが簡単、高速、およ
    :::column span="":::
 :::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="テンプレートの例。" border="false":::
 
-#### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>Do: 可能であれば、Teams が設計作業の一部を処理する
+#### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>Do: 可能Teams一部の設計作業を処理する
 
-使用例に合う場合は、検索ベースのメッセージング拡張機能の作成を検討してください。 Teams は、これらの種類の拡張機能を、組み込みのユーザー設定とアクセシビリティでレンダリングします。
+使用例に合う場合は、検索ベースのメッセージング拡張機能の作成を検討してください。 Teams、これらの種類の拡張機能を、組み込みのユーザー設定とアクセシビリティでレンダリングします。
 
    :::column-end:::
    :::column span="":::
@@ -213,9 +215,9 @@ SSO を使用すると、サインイン プロセスが簡単、高速、およ
    :::column span="":::
 :::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="例: それらを使用します。" border="false":::
 
-#### <a name="do-take-advantage-of-teams-color-tokens"></a>Do: Teams カラー トークンを活用する
+#### <a name="do-take-advantage-of-teams-color-tokens"></a>Do: 色トークンのTeams活用する
 
-各 Teams テーマには、独自の配色があります。 テーマの変更を自動的に処理するには、デザインでカラー <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">トークン (Fluent UI)</a> を使用します。
+各Teamsテーマには、独自の配色があります。 テーマの変更を自動的に処理するには、デザインでカラー <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">トークン (Fluent UI)</a> を使用します。
 
    :::column-end:::
    :::column span="":::
@@ -223,7 +225,7 @@ SSO を使用すると、サインイン プロセスが簡単、高速、およ
 
 #### <a name="dont-hard-code-color-values"></a>[しない] : ハード コードの色の値
 
-Teams カラー トークンを使用しない場合、デザインの拡張性が低く、管理に時間がかかっています。
+色トークンを使用しないTeamsデザインの拡張性が低く、管理に時間がかかる場合があります。
 
    :::column-end:::
 :::row-end:::
@@ -262,10 +264,3 @@ Teams カラー トークンを使用しない場合、デザインの拡張性�
 #### <a name="do-consider-zero-term-queries"></a>Do: ゼロ用語クエリを検討する
 
 たとえば、ユーザーが検索ボックスに何かを書き込む前に、アプリで最後に表示した情報を表示します。 会話にコンテンツを挿入する可能性があります。
-
-## <a name="validate-your-design"></a>デザインを検証する
-
-AppSource にアプリを公開する予定がある場合、アプリの提出時に失敗する原因となるデザイン上の問題を理解しておく必要があります。
-
-> [!div class="nextstepaction"]
-> [デザイン検証ガイドラインをチェックする](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

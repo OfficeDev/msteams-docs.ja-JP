@@ -1,24 +1,24 @@
 ---
-title: Teams ボットに認証を追加する
+title: 認証をボットにTeamsする
 author: clearab
-description: Microsoft Teams のボットに OAuth 認証を追加する方法。
+description: OAuth 認証をボットに追加する方法は、Microsoft Teams。
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: d54d7fadb13626bb38de3a907b966f026cc6c485
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 7f171a791a9ee557e4af2e7d1e1b053046bd9db5
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020955"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101489"
 ---
-# <a name="add-authentication-to-your-teams-bot"></a>Teams ボットに認証を追加する
+# <a name="add-authentication-to-your-teams-bot"></a>認証をボットにTeamsする
 
-メール サービスなど、ユーザーの代わりにリソースにアクセスできるボットを Microsoft Teams で作成する必要がある場合があります。
+メール サービスなど、ユーザーの代わりにリソースにアクセスMicrosoft Teamsボットを作成する必要がある場合があります。
 
 この記事では、OAuth 2.0 に基づいて Azure Bot Service v4 SDK 認証を使用する方法を示します。 これにより、ユーザーの資格情報に基づいて認証トークンを使用できるボットの開発が容易になります。 このすべてで重要なのは、後で **説明** する ID プロバイダーの使用です。
 
-OAuth 2.0 は、Azure Active Directory (Azure AD) および他の多くの ID プロバイダーが使用する認証および承認のオープン スタンダードです。 OAuth 2.0 の基本的な理解は、Teams での認証を操作する前提条件です。
+OAuth 2.0 は、Azure Active Directory (Azure AD) および他の多くの ID プロバイダーが使用する認証および承認のオープン スタンダードです。 OAuth 2.0 の基本的な理解は、認証を使用する場合の前提条件Teams。
 
 完全 [な仕様については、「OAuth 2 簡](https://aka.ms/oauth2-simplified) 体字」、OAuth [2.0](https://oauth.net/2/) を参照してください。
 
@@ -27,8 +27,8 @@ Azure Bot Service が認証を処理する方法の詳細については、「 [
 この記事では、以下について説明します。
 
 - **認証が有効なボットを作成する方法**。 [cs-auth-sample][teams-auth-bot-cs]を使用して、ユーザーサインイン資格情報と認証トークンの生成を処理します。
-- **ボットを Azure に展開し、ID プロバイダーに関連付ける方法**。 プロバイダーは、ユーザー サインイン資格情報に基づいてトークンを発行します。 ボットはトークンを使用して、認証が必要なメール サービスなどのリソースにアクセスできます。 詳細については  [、「Microsoft Teams 認証フロー for bots」を参照してください](auth-flow-bot.md)。
-- **Microsoft Teams 内でボットを統合する方法**。 ボットが統合された後は、サインインしてチャットでメッセージとメッセージを交換できます。
+- **ボットを Azure に展開し、ID プロバイダーに関連付ける方法**。 プロバイダーは、ユーザー サインイン資格情報に基づいてトークンを発行します。 ボットはトークンを使用して、認証が必要なメール サービスなどのリソースにアクセスできます。 詳細については、「ボット[Microsoft Teams認証フロー」を参照してください](auth-flow-bot.md)。
+- **ボットをアプリ内に統合するMicrosoft Teams。** ボットが統合された後は、サインインしてチャットでメッセージとメッセージを交換できます。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -71,7 +71,7 @@ Azure Bot Service が認証を処理する方法の詳細については、「 [
     1. **サブスクリプション**。 既存のサブスクリプションを使用できます。
     1. **リソース グループ**。 前に作成したグループを選択します。
     1. **Name**. サービス プランの名前を入力します。 たとえば  *、TeamsServicePlan です*。 名前はグループ内で一意である必要があります。
-    1. **オペレーティング システム**. *[Windows] または* 該当する OS を選択します。
+    1. **オペレーティング システム**. *[Windows* または該当する OS] を選択します。
     1. **地域**. [ *米国西部]* またはアプリケーションに近い地域を選択します。
     1. **価格レベル**. [標準 *S1] が選択* されている必要があります。 これは既定値である必要があります。
     1. [レビューと **作成] ボタンを選択** します。 検証が渡されたというバナーが *表示されます*。
@@ -89,14 +89,14 @@ Microsoft App Id とアプリ パスワード (クライアント シークレ�
 > [!NOTE]
 > [ボット チャネル登録] リソースには、米国西部を **選択** した場合でもグローバル地域が表示されます。 これは正常な動作です。
 
-詳細については [、「Create a bot for Teams」を参照してください](../create-a-bot-for-teams.md)。
+詳細については、「Create [a bot for Teams」 を参照してください](../create-a-bot-for-teams.md)。
 
 ## <a name="create-the-identity-provider"></a>ID プロバイダーを作成する
 
 認証に使用できる ID プロバイダーが必要です。
 この手順では、Azure プロバイダーを使用ADします。他の Azure ADサポートされている ID プロバイダーも使用できます。
 
-1. Azure portal [**の左側**][azure-portal]のナビゲーション パネルで **、[Azure Active Directory] を選択します**。
+1. Azure portal [**で、**][azure-portal]左側のナビゲーション パネルで 、[次 **へ]** を選択Azure Active Directory。
     > [!TIP]
     > この Azure AD リソースを作成して、アプリケーションから要求されたアクセス許可を委任する同意を得る必要があります。
     > テナントの作成方法については、「ポータルにアクセスしてテナントを作成 [する」を参照してください](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)。
@@ -104,7 +104,7 @@ Microsoft App Id とアプリ パスワード (クライアント シークレ�
 1. 右側のパネルで、左上の **[新規登録** ] タブを選択します。
 1. 次の情報の入力を求めるメッセージが表示されます。
    1. **Name**. アプリケーションの名前を入力します。 たとえば  *、BotTeamsIdentity を指定できます*。 名前は一意である必要があります。
-   1. アプリケーションの **[サポートされているアカウントの種類** ] を選択します。 任意の組織ディレクトリ (任意の Azure AD ディレクトリ - マルチテナント) および個人用 Microsoft アカウント *(Skype、Xbox など) で [アカウント] を選択します*。
+   1. アプリケーションの **[サポートされているアカウントの種類** ] を選択します。 任意 *の組織ディレクトリ (Any Azure AD ディレクトリ - Multitenant)* と個人用 Microsoft アカウント (Xbox など) で [アカウント] を選択します (Skype など)。
    1. リダイレクト **URI の場合**:<br/>
        &#x2713;Web を **選択します**。 <br/>
        &#x2713; URL をに設定します `https://token.botframework.com/.auth/web/redirect` 。
@@ -118,21 +118,23 @@ Microsoft App Id とアプリ パスワード (クライアント シークレ�
 1. 左側のパネルで、[証明書] & **を選択して** 、アプリケーションのクライアント シークレットを作成します。
 
    1. [ **クライアント シークレット] で**、[新しい&#x2795; **シークレット] を選択します**。
-   1. Teams のボット ID アプリなど、このアプリ用に作成する必要がある他のユーザーからこのシークレットを *識別するための説明を追加します*。
+   1. このアプリ用に作成する必要がある他のユーザーからこのシークレットを識別するための説明を追加します 。たとえば、ボット *ID* アプリは Teams。
    1. [ **有効期限] を選択** に設定します。
    1. **[追加]** を選択します。
    1. このページを離れる前に、 **シークレットを記録します**。 この値は、Azure アプリケーションをボットに登録するときに、後でクライアント AD使用します。
 
 ### <a name="configure-the-identity-provider-connection-and-register-it-with-the-bot"></a>ID プロバイダー接続を構成し、ボットに登録する
 
-注:Service Providers here-Azure v1 と Azure AD V2 には 2 ADがあります。  2 つのプロバイダー間の違いについては、[](https://docs.microsoft.com/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison)ここで要約しますが、一般に、V2 はボットのアクセス許可の変更に関して柔軟性を提供します。  グラフ API のアクセス許可はスコープ フィールドに一覧表示され、新しいアクセス許可が追加されるに合って、ボットはユーザーが次のサインインの新しいアクセス許可に同意できます。  V1 の場合、OAuth ダイアログで新しいアクセス許可を求めるには、ボットの同意をユーザーが削除する必要があります。 
+注:Service Providers here-Azure v1 と Azure AD V2 には 2 ADがあります。  2 つのプロバイダー間の違いについては、[](https://docs.microsoft.com/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison)ここで要約しますが、一般に、V2 はボットのアクセス許可の変更に関して柔軟性を提供します。  GraphAPI アクセス許可は [スコープ] フィールドに一覧表示され、新しいアクセス許可が追加されるに合って、ボットはユーザーが次のサインインで新しいアクセス許可に同意できます。  V1 の場合、OAuth ダイアログで新しいアクセス許可を求めるには、ボットの同意をユーザーが削除する必要があります。 
 
 #### <a name="azure-ad-v1"></a>Azure AD V1
 
 1. Azure portal [**で、**][azure-portal]ダッシュボードからリソース グループを選択します。
 1. ボット チャネル登録リンクを選択します。
-1. リソース ページで、[設定] を **選択します**。
-1. ページ **の下部近くの [OAuth 接続設定** ] で、[設定の追加] **を選択します**。
+1. リソース ページを開き、[構成] の下の [**構成]** **を設定。** 
+1. **[OAuth 接続の追加] を設定。**    
+次の図は、リソース ページで対応する選択内容を表示します。  
+![SampleAppDemoBot 構成](~/assets/images/authentication/sample-app-demo-bot-configuration.png)
 1. フォームに次のように入力します。
 
     1. **Name**. 接続の名前を入力します。 この名前は、ファイル内のボットで使用 `appsettings.json` します。 たとえば *、BotTeamsAuthADv1 .*
@@ -145,7 +147,7 @@ Microsoft App Id とアプリ パスワード (クライアント シークレ�
 
         - この組織ディレクトリ内の [アカウントのみ] *(Microsoft のみ - シングル* テナント) または任意の組織ディレクトリの [アカウント] *(Microsoft AAD ディレクトリ - マルチ* テナント) のいずれかを選択した場合は、AAD アプリ用に前に記録したテナント **ID** を入力します。 これは、認証できるユーザーに関連付けられたテナントになります。
 
-        - 組織ディレクトリで [アカウント] を選択した場合 (任意の AAD ディレクトリ - マルチ テナントアカウントと個人 Microsoft アカウント *(Skype、Xbox、Outlook など)* は、テナント ID の代わりに **共通** の単語を入力します。 それ以外の場合、AAD アプリは ID が選択されたテナントを通じて確認し、個人の Microsoft アカウントを除外します。
+        - 任意の組織ディレクトリで [アカウント] を選択した場合 (任意の AAD ディレクトリ - マルチ テナントアカウントと個人 Microsoft アカウント *(Skype、Xbox、Outlook など)* は、テナント ID の代わりに共通という単語を入力します。  それ以外の場合、AAD アプリは ID が選択されたテナントを通じて確認し、個人の Microsoft アカウントを除外します。
 
     h. [ **リソース URL]** に、 を入力します `https://graph.microsoft.com/` 。 これは、現在のコード サンプルでは使用されません。  
     i. [ **スコープ] は空白** のままにします。 次の図は、例です。
@@ -158,20 +160,23 @@ Microsoft App Id とアプリ パスワード (クライアント シークレ�
 
 1. Azure portal [**で、**][azure-portal]ダッシュボードからリソース グループを選択します。
 1. ボット チャネル登録リンクを選択します。
-1. リソース ページで、[設定] を **選択します**。
-1. ページ **の下部近くの [OAuth 接続設定** ] で、[設定の追加] **を選択します**。
+1. リソース ページを開き、[構成] の下の [**構成]** **を設定。** 
+1. **[OAuth 接続の追加] を設定。**  
+次の図は、リソース ページで対応する選択内容を表示します。        
+![SampleAppDemoBot 構成](~/assets/images/authentication/sample-app-demo-bot-configuration.png) 
+
 1. フォームに次のように入力します。
 
     1. **Name**. 接続の名前を入力します。 この名前は、ファイル内のボットで使用 `appsettings.json` します。 たとえば *BotTeamsAuthADv2*.
-    1. **サービス プロバイダー**。 [Azure **Active Directory v2] を選択します**。 これを選択すると、Azure AD固有のフィールドが表示されます。
+    1. **サービス プロバイダー**。 v2 **Azure Active Directoryを選択します**。 これを選択すると、Azure AD固有のフィールドが表示されます。
     1. **クライアント ID**。上記の手順で、Azure ID プロバイダー アプリに記録したアプリケーション (クライアント) ID を入力します。
     1. **クライアント シークレット**。 上記の手順で、Azure ID プロバイダー アプリに記録したシークレットを入力します。
-    1. **トークン Exchange の URL**。 空白のままにします。
+    1. **トークンExchange URL**。 空白のままにします。
     1. **テナント ID** は、Id プロバイダー アプリの作成時に選択されたサポートされているアカウントの種類に応じて、Azure ID アプリまたは共通の前に記録したディレクトリ **(テナント) ID** を入力します。 割り当てる値を決定するには、次の条件に従います。
 
         - この組織ディレクトリ内の [アカウントのみ] *(Microsoft のみ - シングル* テナント) または任意の組織ディレクトリの [アカウント] *(Microsoft AAD ディレクトリ - マルチ* テナント) のいずれかを選択した場合は、AAD アプリ用に前に記録したテナント **ID** を入力します。 これは、認証できるユーザーに関連付けられたテナントになります。
 
-        - 組織ディレクトリで [アカウント] を選択した場合 (任意の AAD ディレクトリ - マルチ テナントアカウントと個人 Microsoft アカウント *(Skype、Xbox、Outlook など)* は、テナント ID の代わりに **共通** の単語を入力します。 それ以外の場合、AAD アプリは ID が選択されたテナントを通じて確認し、個人の Microsoft アカウントを除外します。
+        - 任意の組織ディレクトリで [アカウント] を選択した場合 (任意の AAD ディレクトリ - マルチ テナントアカウントと個人 Microsoft アカウント *(Skype、Xbox、Outlook など)* は、テナント ID の代わりに共通という単語を入力します。  それ以外の場合、AAD アプリは ID が選択されたテナントを通じて確認し、個人の Microsoft アカウントを除外します。
 
     1. [ **スコープ]** に、このアプリケーションで必要なグラフのアクセス許可のスペースで区切られたリストを入力します。User.Read User.ReadBasic.All Mail.Read 
 
@@ -201,7 +206,7 @@ Microsoft App Id とアプリ パスワード (クライアント シークレ�
 
 1. [cs-auth-sample のクローンを作成します][teams-auth-bot-cs]。
 1. 起動Visual Studio。
-1. ツール バーの [ファイル] **-> [開>プロジェクト/** ソリューション] を選択し、ボット プロジェクトを開きます。
+1. ツール バーの [ファイル] **->を開く -> Project/ソリューション**] を選択し、ボット プロジェクトを開きます。
 1. [C#更新 **appsettings.js次のように** オンにします。
 
     - ボット `ConnectionName` チャネル登録に追加した ID プロバイダー接続の名前に設定します。 この例で使用した名前は *BotTeamsAuthADv1 です*。
@@ -252,7 +257,7 @@ Microsoft App Id とアプリ パスワード (クライアント シークレ�
 
 または、次のVisual Studioを実行できます。
 
-1. [Visual Studio *エクスプローラーで* 、プロジェクト名を選択したまま (または右クリック) します。
+1. [Visual Studio *エクスプローラーで*、プロジェクト名を選択したまま (または右クリック) します。
 1. ドロップダウン メニューで、[発行] を **選択します**。
 1. 表示されたウィンドウで、[新規] リンク **を選択** します。
 1. ダイアログ ウィンドウで、左側の **[App Service]** を選択し、右側 **の [新しい作成** ] を選択します。
@@ -269,13 +274,13 @@ Microsoft App Id とアプリ パスワード (クライアント シークレ�
     ![teams-bot-auth-app-service-group](../../../assets/images/authentication/auth-bot-app-service-in-group.png)
 
 1. リソース グループで、ボット チャネル登録名 (リンク) を選択します。
-1. 左側のパネルで、[設定] を **選択します**。
+1. 左側のパネルで、[次へ]**を設定。**
 1. [メッセージング **エンドポイント] ボックスに** 、上記で取得した URL を入力し、その後に `api/messages` . 次に例を示します `https://botteamsauth.azurewebsites.net/api/messages` 。
 1. 左上の **[保存** ] ボタンを選択します。
 
 ## <a name="test-the-bot-using-the-emulator"></a>エミュレーターを使用してボットをテストする
 
-まだ実行していない場合は [、Microsoft Bot Framework エミュレーターをインストールします](https://aka.ms/bot-framework-emulator-readme)。 「エミュレーター [を使用したデバッグ」も参照してください](https://aka.ms/bot-framework-emulator-debug-with-emulator)。
+まだ実行していない場合は、インストール[済みの](https://aka.ms/bot-framework-emulator-readme)Microsoft Bot Framework Emulator。 「エミュレーター [を使用したデバッグ」も参照してください](https://aka.ms/bot-framework-emulator-debug-with-emulator)。
 
 ボット サンプル ログインを機能するには、次に示すようにエミュレーターを構成する必要があります。
 
@@ -284,9 +289,9 @@ Microsoft App Id とアプリ パスワード (クライアント シークレ�
 ボットで認証が必要な場合は、次に示すようにエミュレーターを構成する必要があります。
 
 1. エミュレーターを起動します。
-1. エミュレーターで、左下の歯車&#9881;、右上の [ **エミュレーター** の設定] タブを選択します。
+1. エミュレーターで、左下の歯車&#9881;、右上の [エミュレーター]**設定を選択** します。
 1. [バージョン **1.0 認証トークンを使用する] のチェック ボックスをオンにします**。
-1. ngrok ツールへのローカル **パスを入力** します。 *ボット* フレームワーク エミュレーター / ngrok トンネリング統合 Wiki を [参照してください](https://github.com/Microsoft/BotFramework-Emulator/wiki/Tunneling-(ngrok))。 ツールの詳細については [、「ngrok」を参照してください](https://ngrok.com/)。
+1. ngrok ツールへのローカル **パスを入力** します。 *詳細については*、Bot Framework Emulator/ngrok トンネリング統合 Wiki を [参照してください](https://github.com/Microsoft/BotFramework-Emulator/wiki/Tunneling-(ngrok))。 ツールの詳細については [、「ngrok」を参照してください](https://ngrok.com/)。
 1. エミュレーターの起動時に **ngrok を実行してチェック ボックスをオンにします**。
 1. [保存] **ボタンを選択** します。
 
@@ -297,13 +302,13 @@ Microsoft App Id とアプリ パスワード (クライアント シークレ�
 
 認証メカニズムを構成した後、実際のボット テストを実行できます。  
 
-1. たとえば、コンピューターでボット サンプルをローカルで実行Visual Studio使用します。
+1. たとえば、コンピューターでボット サンプルをローカルで実行Visual Studio実行します。
 1. エミュレーターを起動します。
 1. [ボットを **開く] ボタンを** 選択します。
 1. ボットの **URL に**、ボットのローカル URL を入力します。 通常 `http://localhost:3978/api/messages` 、.
 1. Microsoft App **ID に、ボット** のアプリ ID を入力します `appsettings.json` 。
 1. Microsoft App **のパスワードで、** からボットのアプリ パスワードを入力 `appsettings.json` します。
-1. [接続 **] を選択します**。
+1. [Connect]**を選択します**。
 1. ボットが稼働した後、任意のテキストを入力してサインイン カードを表示します。
 1. **[サインイン]** ボタンを選択します。
 1. [開く URL の確認] にポップアップ **ダイアログが表示されます**。 これは、ボットのユーザー (ユーザー) が認証を許可するために使用されます。  
@@ -359,16 +364,16 @@ and when for these, and just reference that from here, along with the set of ste
 > サインインに問題がある場合は、前の手順で説明したように、もう一度接続をテストしてみてください。 これにより、認証トークンが再作成される可能性があります。
 > Azure のボット フレームワーク Web チャット クライアントでは、認証が正しく確立される前に何度かサインインする必要がある場合があります。
 
-## <a name="install-and-test-the-bot-in-teams"></a>Teams でボットをインストールしてテストする
+## <a name="install-and-test-the-bot-in-teams"></a>ボットをインストールしてテストTeams
 
 1. ボット プロジェクトで、フォルダーにファイルと共に `TeamsAppManifest` `manifest.json` フォルダーが含まれているか `outline.png` 確認 `color.png` します。
 1. ソリューション エクスプローラーで、フォルダーに移動 `TeamsAppManifest` します。 次の `manifest.json` 値を割り当て、編集します。
     1. ボット チャネル登録 **時に受信** したボット アプリ ID がに割り当てられているか確認 `id` します `botId` 。
     1. この値を割り `validDomains: [ "token.botframework.com" ]` 当てる。
 1. 、および **ファイルを** `manifest.json` 選択 `outline.png` して `color.png` 圧縮します。
-1. **Microsoft Teams を開きます**。
+1. [ファイル **Microsoft Teams] を開きます**。
 1. 左側のパネルで、下部にある [アプリ] アイコン **を選択します**。
-1. 右側のパネルの下部で、[カスタム アプリのアップロード **] を選択します**。
+1. 右側のパネルの下部で、カスタム アプリアップロード **選択します**。
 1. フォルダーに移動 `TeamsAppManifest` し、圧縮されたマニフェストをアップロードします。
 次のウィザードが表示されます。
 
@@ -381,10 +386,10 @@ and when for these, and just reference that from here, along with the set of ste
 1. [マニフェスト エディター **] タブを** 選択します。アップロードしたボットのアイコンが表示されます。
 1. また、ボットとメッセージを交換するために使用できるチャット リストに、連絡先として一覧表示されているボットを確認できる必要があります。
 
-### <a name="testing-the-bot-locally-in-teams"></a>Teams でボットをローカルでテストする
+### <a name="testing-the-bot-locally-in-teams"></a>ローカルでボットをテストTeams
 
-Microsoft Teams は完全にクラウドベースの製品です。HTTPS エンドポイントを使用してクラウドからアクセスするサービスはすべて利用できる必要があります。 そのため、ボット (サンプル) が Teams で動作するには、コードを選択したクラウドに発行するか、トンネリング ツールを介してローカルで実行中のインスタンスに外部からアクセス可能にする必要があります。 コンピューターで  [ローカルで開](https://ngrok.com/download)くポートの外部アドレス指定可能な URL を作成する ngrok をお勧めします。
-Microsoft Teams アプリをローカルで実行する準備として ngrok を設定するには、次の手順を実行します。
+Microsoft Teams完全にクラウドベースの製品である場合、HTTPS エンドポイントを使用してアクセスするサービスはすべてクラウドから利用できる必要があります。 したがって、ボット (サンプル) が Teams で動作するには、コードを選択したクラウドに発行するか、トンネリング ツールを介してローカルで実行中のインスタンスに外部からアクセス可能にする必要があります。 コンピューターで  [ローカルで開](https://ngrok.com/download)くポートの外部アドレス指定可能な URL を作成する ngrok をお勧めします。
+アプリをローカルで実行する準備として ngrok をMicrosoft Teamsするには、次の手順を実行します。
 
 1. ターミナル ウィンドウで、インストールしたディレクトリに移動 `ngrok.exe` します。 環境変数のパスを *ポイントする* 設定をお勧めします。
 1. たとえば、実行します `ngrok http 3978 --host-header=localhost:3978` 。 必要に応じてポート番号を置き換える。
@@ -393,14 +398,14 @@ Microsoft Teams アプリをローカルで実行する準備として ngrok を
     ![teams ボット アプリ認証接続文字列 adv1](../../../assets/images/authentication/auth-bot-ngrok-start.PNG).
 
 1. 転送 HTTPS アドレスをコピーします。 これは、次のようになります `https://dea822bf.ngrok.io/` 。
-1. 取得 `/api/messages` するには、追加 `https://dea822bf.ngrok.io/api/messages` します。 これは、 **コンピューター上でローカル** に実行され、Microsoft Teams のチャットで Web を使用して到達可能なボットのメッセージ エンドポイントです。
+1. 取得 `/api/messages` するには、追加 `https://dea822bf.ngrok.io/api/messages` します。 これは、**コンピューター上でローカル** に実行され、コンピューター内のチャットで web を使用して到達可能なボットのメッセージ エンドポイントMicrosoft Teams。
 1. 実行する最後の手順の 1 つは、展開されたボットのメッセージ エンドポイントを更新する方法です。 この例では、Azure にボットを展開しました。 次の手順を実行します。
     1. ブラウザーで Azure portal に [**移動します**][azure-portal]。
     1. ボット チャネル **登録を選択します**。
-    1. 左側のパネルで、[設定] を **選択します**。
+    1. 左側のパネルで、[次へ]**を設定。**
     1. 右側のパネルの [メッセージング **エンドポイント]** ボックスに、ngrok URL を入力します。この例では、 を入力します `https://dea822bf.ngrok.io/api/messages` 。
 1. たとえば、デバッグ モードでボットをローカルVisual Studio開始します。
-1. ボット フレームワーク ポータルのテスト Web チャットを使用して、ローカルで実行している間 **にボットをテストします**。 エミュレーターと同様に、このテストでは Teams 固有の機能にアクセスできません。
+1. ボット フレームワーク ポータルのテスト Web チャットを使用して、ローカルで実行している間 **にボットをテストします**。 エミュレーターと同様に、このテストでは、ユーザーが特定のTeamsにアクセスできません。
 1. 実行中のターミナル ウィンドウで、ボットと Web チャット クライアントの `ngrok` 間の HTTP トラフィックを確認できます。 より詳細なビューが必要な場合は、ブラウザー ウィンドウで、前 `http://127.0.0.1:4040` のターミナル ウィンドウから取得したと入力します。 次の図は、例です。
 
     ![認証ボット チーム ngrok テスト](../../../assets/images/authentication/auth-bot-teams-ngrok-testing.png).
@@ -413,7 +418,7 @@ Microsoft Teams アプリをローカルで実行する準備として ngrok を
 
 ### <a name="teamsappmanifestmanifestjson"></a>TeamsAppManifest/manifest.jsオン
 
-このマニフェストには、ボットに接続するために Microsoft Teams が必要とする情報が含まれています。  
+このマニフェストには、ボットに接続するために必要Microsoft Teams情報が含まれています。  
 
 ```json
 {
@@ -460,7 +465,7 @@ Microsoft Teams アプリをローカルで実行する準備として ngrok を
 }
 ```
 
-認証では、Teams の動作は、以下で説明する他のチャネルとは若干異なります。
+認証では、Teams説明したように、他のチャネルとは若干異なる動作をします。
 
 ### <a name="handling-invoke-activity"></a>Invoke アクティビティの処理
 

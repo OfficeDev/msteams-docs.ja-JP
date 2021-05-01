@@ -1,16 +1,16 @@
 ---
 title: ボットから送信されたメッセージを更新および削除する
 author: WashingtonKayaker
-description: Microsoft Teams ボットから送信されたメッセージを更新および削除する方法
+description: ボットから送信されたメッセージを更新およびMicrosoft Teamsする方法
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: f1e9c068f4ce89f0fd3aa4f5a174a3d3c4b67a77
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 90dc50fd2ec153813457f199ac029e17a0157502
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019987"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101535"
 ---
 # <a name="update-and-delete-messages-sent-from-your-bot"></a>ボットから送信されたメッセージを更新および削除する
 
@@ -58,7 +58,7 @@ update_result = await context.update_activity(new_activity)
 
 > [!NOTE]
 
-> 任意の Web プログラミング テクノロジで Teams アプリを開発し、ボット コネクタ サービス [REST API を直接呼び出します](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true)。 これを行うには、API 要求で [認証](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) セキュリティ手順を実装する必要があります。
+> Web プログラミング テクノロジTeamsアプリを開発し、ボット コネクタ サービス REST [API を直接呼び出します](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true)。 これを行うには、API 要求で [認証](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) セキュリティ手順を実装する必要があります。
 
 会話内の既存のアクティビティを更新するには、要求エンドポイントに含 `conversationId` `activityId` める必要があります。 このシナリオを完了するには、元の通話後に返されたアクティビティ ID をキャッシュする必要があります。
 
@@ -66,9 +66,9 @@ update_result = await context.update_activity(new_activity)
 PUT /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-| **要求と Responce** | **説明** |
+|要求 |応答 |
 |----|----|
-| アクティビティ[オブジェクト](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) | [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true)オブジェクト |
+| [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true)オブジェクト。 | [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true)オブジェクト。 |
 
 ---
 * * *
@@ -112,7 +112,7 @@ await turn_context.update_activity(updated_activity)
 # <a name="rest-api"></a>[REST API](#tab/rest)
 
 > [!NOTE]
-> 任意の Web プログラミング テクノロジで Teams アプリを開発し、ボット コネクタ サービス [REST API を直接呼び出します](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true)。 これを行うには、API 要求 [で認証](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) セキュリティ手順を実装する必要があります。
+> 任意の web プログラミング Teamsアプリを開発し、ボット コネクタ サービス[REST API を直接呼び出します](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true)。 これを行うには、API 要求 [で認証](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) セキュリティ手順を実装する必要があります。
 
 会話内の既存のアクティビティを更新するには、要求エンドポイントに含 `conversationId` `activityId` める必要があります。 このシナリオを完了するには、元の通話後に返されたアクティビティ ID をキャッシュする必要があります。
 
@@ -170,7 +170,7 @@ for each activity_id in _list:
 DELETE /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-| **要求と Responce** | **説明** |
+| **要求と応答** | **説明** |
 |----|----|
 | 該当なし | 操作の結果を示す HTTP 状態コード。 応答の本文には何も指定されていません。 |
 
@@ -180,11 +180,11 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 
 次のコード サンプルは、会話の基本を示しています。
 
-| **サンプルの名前** | **説明** | **.NET** | **Node.js** | **Python** |
+| **サンプル名** | **説明** | **.NET** | **Node.js** | **Python** |
 |----------------------|-----------------|--------|-------------|--------|
-| Teams での会話の基本  | メッセージの更新と削除を含む Teams での会話の基本を示します。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Teams での会話の基本  | メッセージの更新と削除を含むTeamsの基本を示します。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [Teams コンテキストの取得](~/bots/how-to/get-teams-context.md)
+> [コンテキストTeams取得](~/bots/how-to/get-teams-context.md)

@@ -4,12 +4,12 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 localization_priority: Normal
 keywords: チームの最新情報
-ms.openlocfilehash: 5193c77a33ea53007c5292af7c7c3c343a48be36
-ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
+ms.openlocfilehash: 94e8e573ac806fdfce0933129708be9bcdc82c45
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "52088788"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101395"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
@@ -22,8 +22,9 @@ ms.locfileid: "52088788"
 
 | **Date** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+|04/30/2021|アプリをストアに発行する方法に関する新Teamsガイダンス。|[アプリを Teams ストア](concepts/deploy-and-publish/appsource/publish.md)に発行Teams[検証ガイドライン](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
 | 04/29/2021 | New: アダプティブ カードのユニバーサル アクション。 | [アダプティブ カードのユニバーサル アクション](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
-|04/08/2021| アプリのカスタマイズ機能は、開発者プレビューで利用できます。|[デザイン チーム アプリの概要](concepts/design/design-teams-app-overview.md#app-customization)[、App studio の概要](concepts/build-and-test/app-studio-overview.md#connectors)、マニフェスト[スキーマ](resources/schema/manifest-schema-dev-preview.md) |
+|04/08/2021| アプリのカスタマイズ機能は、開発者プレビューで利用できます。|[アプリTeams、App](concepts/design/design-teams-app-overview.md#app-customization) [Studio の概要、マニフェスト](concepts/build-and-test/app-studio-overview.md#connectors)スキーマを[設計する](resources/schema/manifest-schema-dev-preview.md) |
 |03/18/2021|注意: Bot Framework SDK のバージョン 4.10 以上に更新します。廃止プロセスと廃止プロセスを開始しました `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` 。 | [チーム/チャット メンバーのボット API の変更](resources/team-chat-member-api-changes.md) |
 |03/05/2021|注意: タブには、エクスペリエンスを囲む余白がなくなりました。 タブ開発者は、アプリを確認して更新する必要があります。 | [タブ余白の削除](resources/removing-tab-margins.md) |
 |03/05/2021|既定のインストール スコープとグループ機能は、開発者プレビューに表示されます。| [既定のインストール スコープとグループ機能](concepts/deploy-and-publish/add-default-install-scope.md) |
@@ -44,7 +45,7 @@ ms.locfileid: "52088788"
 |08/06/2020|タブ SSO 認証のサポート|[[SSO の設定] タブMicrosoft Teamsする](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
 |07/27/2020 | Graphボットとメッセージの管理 (パブリック プレビュー)|[Microsoft Teams を使用して、プロアクティブ ボットのインストールとプロアクティブ メッセージングをGraph](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
 | 07/22/2020 |モバイル デバイス機能の更新。|[[デバイスのアクセス許可を要求する] Microsoft Teamsタブ](concepts/device-capabilities/native-device-permissions.md) |
-|07/20/2020|TeamsAppSource 申請のアプリ検証ツール。|[Teamsアプリ検証ツール](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)
+|07/20/2020|TeamsAppSource 申請のアプリ検証ツール。|[Teamsパッケージ検証ツール](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#validate-your-app-package)
 |07/15/2020|ユーザーの仮想アシスタントを作成Teams|[仮想アシスタントのMicrosoft Teams](samples/virtual-assistant.md)|
 |07/14/2020|ネイティブ読み込みインジケーターのドキュメントを表示する|[ネイティブ読み込みインジケーターの表示](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
 |07/01/2020|アプリの作成Teamsを開始Visual Studio Code Toolkit。|[アプリとアプリのMicrosoft Teams ToolkitをVisual Studio Code](toolkit/visual-studio-code-overview.md) |

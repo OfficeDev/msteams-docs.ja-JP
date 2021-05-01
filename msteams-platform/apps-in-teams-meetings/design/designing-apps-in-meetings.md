@@ -1,31 +1,31 @@
 ---
 title: 会議拡張機能の設計
 author: heath-hamilton
-description: Teams 会議でアプリを設計し、Microsoft Teams UI キットを取得する方法について説明します。
+description: 会議でアプリを設計し、Teams UI キットをMicrosoft Teamsする方法について学習します。
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 022ffdd7341f60a9c6732948a0914383ddb248a8
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 3f12ed711b14d2ea6d9fee541b98f20012d6cf21
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52018475"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101451"
 ---
-# <a name="designing-your-microsoft-teams-meeting-extension"></a>Microsoft Teams 会議拡張機能の設計
+# <a name="designing-your-microsoft-teams-meeting-extension"></a>会議の拡張機能Microsoft Teams設計する
 
 アプリを作成して、会議の生産性を高めることができます。 たとえば、通話中にアンケートを完了したり、会議のフローを中断しない簡単なリマインダーを送信したりします。
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-必要に応じて取得および変更できる要素を含む、より包括的な設計ガイドラインについては、Microsoft Teams UI Kit を参照してください。
+必要に応じて取得および変更できる要素を含む、より包括的な設計ガイドラインについては、「UI キットMicrosoft Teams参照してください。
 
 > [!div class="nextstepaction"]
 > [Microsoft Teams UI Kit (Figma) を入手する](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-meeting-extension"></a>会議の拡張機能を追加する
 
-会議の前と会議中に会議拡張機能を追加できます。 特定の会議のアプリを Teams ストア (AppSource) から直接追加することもできます。
+会議の前と会議中に会議拡張機能を追加できます。 また、特定の会議のアプリをアプリ ストア (AppSource) Teams追加することもできます。
 
 ### <a name="add-before-a-meeting"></a>会議の前に追加する
 
@@ -57,7 +57,7 @@ ms.locfileid: "52018475"
 
 ### <a name="designing-with-ui-templates"></a>UI テンプレートを使用した設計
 
-会議タブを設計するには、次のいずれかの Teams UI テンプレートを使用します。
+会議タブを設計するにはTeams UI テンプレートのいずれかを使用します。
 
 * [リスト](../../concepts/design/design-teams-app-ui-templates.md#list): リストは、関連するアイテムをスキャン可能な形式で表示し、ユーザーがリスト全体または個々のアイテムに対してアクションを実行できます。
 * [タスク ボード](../../concepts/design/design-teams-app-ui-templates.md#task-board): カンバン ボードやスイム レーンとも呼ばれるタスク ボードは、作業アイテムやチケットの状態を追跡するためによく使用されるカードのコレクションです。
@@ -113,7 +113,7 @@ Iframe のコンテンツは垂直方向にスクロールする必要があり�
 
 ## <a name="use-an-in-meeting-dialog"></a>会議内ダイアログの使用
 
-会議中のダイアログが Teams 会議ステージに表示されます。 ユーザーの注意、確認、またはやり取りが必要ですが、微妙であり、会議を中断しません。 これらの使用は、軽くてタスク指向のシナリオに対して使用する必要があります。
+会議中のダイアログは、会議ステージTeams表示されます。 ユーザーの注意、確認、またはやり取りが必要ですが、微妙であり、会議を中断しません。 これらの使用は、軽くてタスク指向のシナリオに対して使用する必要があります。
 
 ### <a name="use-cases"></a>使用例
 
@@ -167,6 +167,8 @@ Iframe のコンテンツは垂直方向にスクロールする必要があり�
 :::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="例の図は、会議後のタブを示しています。" border="false":::
 
 ## <a name="best-practices"></a>ベスト プラクティス
+
+これらの推奨事項を使用して、高品質のアプリ エクスペリエンスを作成します。
 
 ### <a name="interactions"></a>対話
 
@@ -245,7 +247,7 @@ Iframe のコンテンツは垂直方向にスクロールする必要があり�
 
 #### <a name="dont-left-or-center-align-actions"></a>[しない]: 左揃えまたは中央揃えアクション
 
-これは、ダイアログ内のコントロールの配置に関する標準的な Teams パターンから離れ、上部のダイアログボックスと競合する可能性があります。
+これは、ダイアログ内のコントロールTeamsの標準のパターンから離れ、上部のダイアログボックスと競合する可能性があります。
 
    :::column-end:::
 :::row-end:::
@@ -258,7 +260,7 @@ Iframe のコンテンツは垂直方向にスクロールする必要があり�
 
 #### <a name="do-scroll-vertically"></a>Do: 垂直方向にスクロールする
 
-ユーザーは Teams (および他の場所) での垂直スクロールを期待します。
+ユーザーは、 (および他の場所) Teams垂直スクロールを期待します。
 
    :::column-end:::
    :::column span="":::
@@ -266,7 +268,7 @@ Iframe のコンテンツは垂直方向にスクロールする必要があり�
 
 #### <a name="dont-scroll-horizontally"></a>[しない]: 水平方向にスクロールする
 
-Teams での水平方向のスクロールは予期しない動作です。 会議環境内の他のキャンバスは垂直方向にスクロールします。
+水平方向のスクロールは、このページで予期される動作Teams。 会議環境内の他のキャンバスは垂直方向にスクロールします。
 
    :::column-end:::
 :::row-end:::
@@ -298,9 +300,9 @@ Teams での水平方向のスクロールは予期しない動作です。 会�
    :::column span="":::
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="暗いテーマで会議の拡張機能を表示する例。" border="false":::
 
-#### <a name="do-use-teams-color-tokens"></a>Do: Teams カラー トークンを使用する
+#### <a name="do-use-teams-color-tokens"></a>Do: 色トークンTeams使用する
 
-Teams の会議は、ユーザーがディスカッションと共有コンテンツに集中できるよう、視覚的および認知的なノイズを減らすのに役立つダーク モード用に最適化されています。 カラー トークン <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">(Fluent UI) の使用について学習します</a>。
+Teamsは暗いモード用に最適化され、視覚的および認知的なノイズを軽減し、ユーザーがディスカッションと共有コンテンツに集中できます。 カラー トークン <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">(Fluent UI) の使用について学習します</a>。
 
    :::column-end:::
    :::column span="":::
@@ -308,7 +310,7 @@ Teams の会議は、ユーザーがディスカッションと共有コンテ�
 
 #### <a name="dont-hard-code-hex-values"></a>Don't: ハード コードの 16 進値
 
-Teams カラー トークンを使用しない場合、デザインの拡張性が低く、管理に時間がかかっています。
+色トークンを使用しないTeamsデザインの拡張性が低く、管理に時間がかかる場合があります。
 
    :::column-end:::
 :::row-end:::
@@ -346,10 +348,3 @@ Teams カラー トークンを使用しない場合、デザインの拡張性�
 
    :::column-end:::
 :::row-end:::
-
-## <a name="validate-your-design"></a>デザインを検証する
-
-AppSource にアプリを公開する予定がある場合、アプリの提出時に失敗する原因となるデザイン上の問題を理解しておく必要があります。
-
-> [!div class="nextstepaction"]
-> [デザイン検証ガイドラインをチェックする](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

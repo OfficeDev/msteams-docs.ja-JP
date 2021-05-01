@@ -6,16 +6,16 @@ keywords: teams タブ グループ チャネル構成可能静的
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 9dc6c73d877d9355c5d4a9653e0d8ed669fb347e
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 8dcaf47c527ce61e080d51a322b841dd8cf61cc3
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020381"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101836"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>タブのコンテンツ ページを作成する
 
-コンテンツ ページは、Teams クライアント内でレンダリングされる Web ページです。 通常、これらは次の一部です。
+コンテンツ ページは、クライアント内で表示されるTeamsです。 通常、これらは次の一部です。
 
 * 個人用スコープのカスタム タブ - このインスタンスでは、コンテンツ ページはユーザーが最初に表示するページです。
 * チャネル/グループ のカスタム タブ - ユーザーが適切なコンテキストでタブをピンで固定して構成すると、コンテンツ ページが表示されます。
@@ -23,13 +23,15 @@ ms.locfileid: "52020381"
 
 この記事では、コンテンツ ページをタブとして使用する方法について説明します。ただし、ここでのガイダンスの大部分は、コンテンツ ページがエンド ユーザーに提示される方法に関係なく適用されます。
 
-## <a name="tab-content-and-style-guidelines"></a>タブのコンテンツとスタイルのガイドライン
+## <a name="tab-content-and-design-guidelines"></a>タブのコンテンツとデザインのガイドライン
 
-タブの全体的な目的は、実用的な価値と明らかな目的を持つ有意義で魅力的なコンテンツへのアクセスを提供する必要があります。 これは、快適なスタイルを見送る必要があるという意味ではありません。タブデザインをクリーンにし、ナビゲーションを直感的に行い、コンテンツを没入感のあるものにすることで、混乱を最小限に抑えることに集中する必要があります。 タブと Microsoft Teams [アプリ承認プロセスの](~/tabs/design/tabs.md) ガイダンスを使用して、コンテンツと会話を [一度に表示する](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)
+タブの全体的な目的は、実用的な価値と明らかな目的を持つ有意義で魅力的なコンテンツへのアクセスを提供する必要があります。 これは、快適なスタイルを見送る必要があるという意味ではありません。タブデザインをクリーンにし、ナビゲーションを直感的に行い、コンテンツを没入感のあるものにすることで、混乱を最小限に抑えることに集中する必要があります。
 
-## <a name="integrate-your-code-with-teams"></a>コードを Teams と統合する
+詳細については、「タブデザインガイドライン[」](~/tabs/design/tabs.md)および「ストア検証[Microsoft Teams」を参照してください。](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
 
-Teams にページを表示するには [、Microsoft Teams JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) クライアント SDK を含め、ページの読み込み後に呼び `microsoftTeams.initialize()` 出しを含める必要があります。 ページと Teams クライアントが通信する方法は次の通りです。
+## <a name="integrate-your-code-with-teams"></a>コードとコードを統合Teams
+
+ページをページに表示するには、Teams [JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)クライアント SDK をMicrosoft Teamsし、ページの読み込み後に呼び出し `microsoftTeams.initialize()` を含める必要があります。 ページとクライアントが通信Teams方法は次の通り。
 
 ```html
 <!DOCTYPE html>
@@ -51,13 +53,13 @@ Teams にページを表示するには [、Microsoft Teams JavaScript](/javascr
 
 ## <a name="accessing-additional-content"></a>追加コンテンツへのアクセス
 
-### <a name="using-the-sdk-to-interact-with-teams"></a>SDK を使用した Teams の操作
+### <a name="using-the-sdk-to-interact-with-teams"></a>SDK を使用してユーザーと対話Teams
 
-[Teams クライアント JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md)には、コンテンツ ページの開発に役立つ機能が多数含まれています。
+この[Teams JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md)には、コンテンツ ページの開発に役立つ機能が多数含まれています。
 
 ### <a name="deep-links"></a>ディープ リンク
 
-Teams のエンティティへのディープ リンクを作成できます。 通常、これらは、タブ内のコンテンツと情報に移動するリンクを作成するために使用されます。「Microsoft [Teams でコンテンツと機能へのディープ リンクを作成する」を参照してください](~/concepts/build-and-test/deep-links.md)。
+Teams のエンティティへのディープ リンクを作成できます。 通常、これらは、タブ内のコンテンツと情報に移動するリンクを作成するために使用されます。「[コンテンツと機能へのディープ リンクを作成する」を参照Microsoft Teams。](~/concepts/build-and-test/deep-links.md)
 
 ### <a name="task-modules"></a>タスク モジュール
 
@@ -65,7 +67,7 @@ Teams のエンティティへのディープ リンクを作成できます。 
 
 ### <a name="valid-domains"></a>有効なドメイン
 
-タブで使用されているすべての URL ドメインがマニフェストの配列に含 `validDomains` まれているか確認 [します](~/concepts/build-and-test/apps-package.md)。 詳細については、マニフェスト スキーマ [リファレンスの validDomains](~/resources/schema/manifest-schema.md#validdomains) を参照してください。 ただし、タブのコア機能は Teams 内に存在し、Teams の外部には存在しません。
+タブで使用されているすべての URL ドメインがマニフェストの配列に含 `validDomains` まれているか確認 [します](~/concepts/build-and-test/apps-package.md)。 詳細については、マニフェスト スキーマ [リファレンスの validDomains](~/resources/schema/manifest-schema.md#validdomains) を参照してください。 ただし、タブのコア機能は、タブの外部ではなく、Teams内に存在Teams。
 
 ## <a name="reorder-static-personal-tabs"></a>静的な個人用タブの並べ替え
 
@@ -91,7 +93,7 @@ Teams のエンティティへのディープ リンクを作成できます。 
 
 ## <a name="show-a-native-loading-indicator"></a>ネイティブ読み込みインジケーターの表示
 
-マニフェスト スキーマ[v1.7](../../../resources/schema/manifest-schema.md)から、Web コンテンツ[](../../../resources/schema/manifest-schema.md#showloadingindicator)が Teams に読み込まれる場所 (タブ コンテンツ ページ、構成ページ、[](configuration-page.md)タブ内の[](removal-page.md)削除ページ、タスク モジュールなど) にネイティブ読み込みインジケーターを提供[できます](../../../task-modules-and-cards/task-modules/task-modules-tabs.md)。 [](#integrate-your-code-with-teams)
+マニフェスト スキーマ[v1.7](../../../resources/schema/manifest-schema.md)から、web コンテンツが Teams に読み込まれる場所 (タブ コンテンツ ページ、構成ページ[](#integrate-your-code-with-teams)、タブ内の[](configuration-page.md)削除ページ、タスク モジュール[](../../../task-modules-and-cards/task-modules/task-modules-tabs.md)など) にネイティブ読み込みインジケーターを提供できます。 [](../../../resources/schema/manifest-schema.md#showloadingindicator) [](removal-page.md)
 
 > [!NOTE]
 > 1. モバイル クライアントでの動作は、このマニフェスト プロパティでは構成できません。 モバイル クライアントは、コンテンツ ページと iframe ベースのタスク モジュール間で既定でネイティブ読み込みインジケーターを表示します。 モバイル上のこのインジケーターは、コンテンツの取得要求が行われたときに表示され、要求が完了するとすぐに却下されます。
@@ -101,8 +103,8 @@ Teams のエンティティへのディープ リンクを作成できます。 
 1. 読み込みインジケーターを表示するには、マニフェスト `"showLoadingIndicator": true` に追加します。 
 2. を呼び出す `microsoftTeams.initialize();` 必要があります。
 3. **オプション**。 画面に印刷する準備が整い、アプリケーションの残りのコンテンツを遅延読み込みする場合は、呼び出しによって読み込みインジケーターを手動で非表示にできます `microsoftTeams.appInitialization.notifyAppLoaded();`
-4. **必須です**。 最後に、アプリが `microsoftTeams.appInitialization.notifySuccess()` 正常に読み込まれたと Teams に通知する呼び出しを行います。 該当する場合、Teams は読み込みインジケーターを非表示にします。 30 秒以内に呼び出されない場合は、アプリがタイム アウトし、再試行オプション付きエラー画面が  `notifySuccess`  表示されます。
-5. アプリケーションの読み込みに失敗した場合は、Teams にエラー `microsoftTeams.appInitialization.notifyFailure(reason);` が発生したと知らせる呼び出しを行います。 次に、エラー画面がユーザーに表示されます。
+4. **必須です**。 最後に、アプリが `microsoftTeams.appInitialization.notifySuccess()` 正常に読み込まれたTeamsを呼び出して通知します。 Teams場合、読み込みインジケーターが非表示になります。 30 秒以内に呼び出されない場合は、アプリがタイム アウトし、再試行オプション付きエラー画面が  `notifySuccess`  表示されます。
+5. アプリケーションの読み込みに失敗した場合は、エラーが発生 `microsoftTeams.appInitialization.notifyFailure(reason);` Teamsを呼び出して確認できます。 次に、エラー画面がユーザーに表示されます。
 
 ```typescript
 ``

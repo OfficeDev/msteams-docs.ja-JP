@@ -1,31 +1,31 @@
 ---
 title: デスクトップと Web 用のタブの設計
-description: Teams タブ (デスクトップと Web) を設計し、Microsoft Teams UI キットを取得する方法について説明します。
+description: '[デスクトップ] タブ (Teams Web) を設計し、UI キットをMicrosoft Teamsする方法について説明します。'
 author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 840cb9f65f867358615ea006594433d8a1099111
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 9dc5489f4a6a4c6f0e1188250a9e2a9bc5793690
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019686"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101850"
 ---
-# <a name="designing-your-tab-for-microsoft-teams-desktop-and-web"></a>Microsoft Teams デスクトップと Web 用のタブの設計
+# <a name="designing-your-tab-for-microsoft-teams-desktop-and-web"></a>デスクトップと Web のタブMicrosoft Teamsデザインする
 
-タブは、コンテンツの大きなキャンバスです。 アプリの設計をガイドするために、次の情報では、Teams でタブを追加、使用、管理する方法について説明し、説明します。
+タブは、コンテンツの大きなキャンバスです。 アプリの設計をガイドするために、次の情報は、ユーザーがアプリのタブを追加、使用、および管理する方法をTeams。
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-必要に応じて取得および変更できる要素を含む、包括的なタブ設計ガイドラインについては、Microsoft Teams UI Kit を参照してください。 UI キットには、ここでは説明しないアクセシビリティや応答性のサイジングなどの重要なトピックも含まれています。
+必要に応じて取得および変更できる要素を含む、包括的なタブ設計ガイドラインについては、「UI キットMicrosoft Teams参照してください。 UI キットには、ここでは説明しないアクセシビリティや応答性のサイジングなどの重要なトピックも含まれています。
 
 > [!div class="nextstepaction"]
 > [Microsoft Teams UI Kit (Figma) を入手する](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-tab"></a>タブの追加
 
-タブは、Teams ストア (AppSource) または次のいずれかのコンテキストから追加できます。
+タブは、ストア (AppSource) Teams、または次のいずれかのコンテキストで追加できます。
 
 * チャット
 * チャネル
@@ -66,7 +66,7 @@ ms.locfileid: "52019686"
 
 ### <a name="designing-a-tab-setup-with-ui-templates"></a>UI テンプレートを使用したタブセットアップの設計
 
-タブセットアップエクスペリエンスを設計するには、次のいずれかの Teams UI テンプレートを使用します。
+次のいずれかの UI テンプレートを使用Teams、タブセットアップエクスペリエンスの設計に役立ちます。
 
 * [リスト](../../concepts/design/design-teams-app-ui-templates.md#list): リストは、関連するアイテムをスキャン可能な形式で表示し、ユーザーがリスト全体または個々のアイテムに対してアクションを実行できます。
 * [フォーム](../../concepts/design/design-teams-app-ui-templates.md#form): フォームは、構造化された方法でユーザー入力を収集、検証、送信するためのフォームです。
@@ -74,7 +74,7 @@ ms.locfileid: "52019686"
 
 ## <a name="view-a-tab"></a>タブを表示する
 
-タブは Teams のフルスクリーン Web エクスペリエンスを提供し、共同作業用のコンテンツ (タスク ボードやダッシュボードなど) と重要な情報を表示できます。
+タブは、タスク ボードやダッシュボードTeams重要な情報など、共同作業コンテンツを表示できる画面全体の Web エクスペリエンスを提供します。
 
 :::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="例では、タスク ボードを含むタブを示します。" border="false":::
 
@@ -91,7 +91,7 @@ ms.locfileid: "52019686"
 
 ### <a name="designing-a-tab-with-ui-templates"></a>UI テンプレートを使用したタブの設計
 
-タブ エクスペリエンスを設計するには、次のいずれかの Teams UI テンプレートを使用します。
+次のいずれかの UI テンプレートを使用Teams、タブ エクスペリエンスの設計に役立ちます。
 
 * [リスト](../../concepts/design/design-teams-app-ui-templates.md#list): リストは、関連するアイテムをスキャン可能な形式で表示し、ユーザーがリスト全体または個々のアイテムに対してアクションを実行できます。
 * [タスク ボード](../../concepts/design/design-teams-app-ui-templates.md#task-board): カンバン ボードやスイム レーンとも呼ばれるタスク ボードは、作業アイテムやチケットの状態を追跡するためによく使用されるカードのコレクションです。
@@ -130,7 +130,7 @@ ms.locfileid: "52019686"
 
 |カウンター|説明|
 |----------|-----------|
-|1|**設定**: (オプション) タブの追加後にタブの設定を変更できます。|
+|1|**設定**: (オプション) 追加後にタブの設定を変更できます。|
 |2|**名前** の変更 : ユーザーは、チームにとってより意味のある名前をタブに付けることができます。|
 |3|**[削除**] : チャネル、チャット、または会議からタブを削除します。|
 
@@ -144,6 +144,8 @@ ms.locfileid: "52019686"
 * **メッセージ**: タブへの深いリンクを含むメッセージがユーザーのアクティビティ [フィードに表示されます](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true)。
 
 ## <a name="best-practices"></a>ベスト プラクティス
+
+これらの推奨事項を使用して、高品質のアプリ エクスペリエンスを作成します。
 
 ### <a name="collaboration"></a>グループ作業
 
@@ -214,9 +216,9 @@ ms.locfileid: "52019686"
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="タブの表示方法を示す図。" border="false":::
 
-#### <a name="do-take-advantage-of-teams-color-tokens"></a>Do: Teams カラー トークンを活用する
+#### <a name="do-take-advantage-of-teams-color-tokens"></a>Do: 色トークンのTeams活用する
 
-各 Teams テーマには、独自の配色があります。 テーマの変更を自動的に処理するには、デザインでカラー <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">トークン (Fluent UI)</a> を使用します。
+各Teamsテーマには、独自の配色があります。 テーマの変更を自動的に処理するには、デザインでカラー <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">トークン (Fluent UI)</a> を使用します。
 
    :::column-end:::
    :::column span="":::
@@ -224,14 +226,7 @@ ms.locfileid: "52019686"
 
 #### <a name="dont-hard-code-color-values"></a>[しない] : ハード コードの色の値
 
-Teams カラー トークンを使用しない場合、デザインの拡張性が低く、管理に時間がかかっています。
+色トークンを使用しないTeamsデザインの拡張性が低く、管理に時間がかかる場合があります。
 
    :::column-end:::
 :::row-end:::
-
-## <a name="validate-your-design"></a>デザインを検証する
-
-AppSource にアプリを公開する予定がある場合、アプリの提出時に失敗する原因となるデザイン上の問題を理解しておく必要があります。
-
-> [!div class="nextstepaction"]
-> [デザイン検証ガイドラインをチェックする](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

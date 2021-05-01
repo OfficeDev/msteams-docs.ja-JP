@@ -5,12 +5,12 @@ keywords: ボットの会話メッセージング
 ms.topic: how-to
 localization_priority: Normal
 ms.date: 03/29/2018
-ms.openlocfilehash: 9e89e1171907929eebb9f9eb3809f4ab920583a4
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: c43ce8697e5b3b2748416c3382ad6e34feb42d2b
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019749"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101822"
 ---
 # <a name="formatting-bot-messages"></a>ボット メッセージの書式設定
 
@@ -18,7 +18,7 @@ ms.locfileid: "52019749"
 
 省略可能なプロパティを設定して、メッセージのテキスト コンテンツのレンダリング方法 [`TextFormat`](https://docs.microsoft.com/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) を制御できます。
 
-Microsoft Teams では、次の書式設定オプションがサポートされています。
+Microsoft Teamsは、次の書式設定オプションをサポートしています。
 
 | TextFormat 値 | 説明 |
 | --- | --- |
@@ -28,17 +28,17 @@ Microsoft Teams では、次の書式設定オプションがサポートされ�
 
 ## <a name="formatting-text-content"></a>テキスト コンテンツの書式設定
 
-Microsoft Teams では、Markdown タグと XML (HTML) 書式タグのサブセットがサポートされています。
+Microsoft Teamsは、Markdown および XML (HTML) 書式タグのサブセットをサポートします。
 
 現時点では、次の制限が適用されます。
 
 * テキスト専用メッセージはテーブルの書式設定をサポートしません
 
-カードの書式設定の詳細については [、「Teams カードリファレンス」を参照してください](~/task-modules-and-cards/cards/cards-reference.md)。
+カードの書式設定の詳細については、「カード リファレンス[」Teamsを参照してください](~/task-modules-and-cards/cards/cards-reference.md)。
 
 ### <a name="cross-platform-support"></a>クロスプラットフォームのサポート
 
-書式設定が Microsoft Teams でサポートされているすべてのプラットフォームで確実に機能するには、一部のスタイルが現在すべてのプラットフォームでサポートされていない点に注意してください。
+Microsoft Teams でサポートされているすべてのプラットフォームで書式設定が機能するには、一部のスタイルが現在すべてのプラットフォームでサポートされていない点に注意してください。
 
 | Style                     | テキスト専用メッセージ | カード (XML のみ) |
 |---------------------------|--------------------|------------------|
@@ -87,4 +87,4 @@ Microsoft Teams では、Markdown タグと XML (HTML) 書式タグのサブセ�
 | 事前に書式設定されたテキスト | `text` | `` `text` `` | `<pre>text</pre>` |
 | blockquote | <blockquote>テキスト</blockquote> | `>text` | `<blockquote>text</blockquote>` |
 | hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` | `<a href="https://www.bing.com/">Bing</a>` |
-| 画像リンク | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| 画像リンク | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |

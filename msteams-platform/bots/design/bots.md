@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 2739bd4baaf68be90a62924601b0628c3d9b0f2c
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: d2967abdc6c0055eca8c94ed4e4a7fdf1bdba322
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020134"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101696"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Microsoft Teams のボットをデザインする
 
@@ -197,9 +197,11 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 ## <a name="best-practices"></a>ベスト プラクティス
 
+これらの推奨事項を使用して、高品質のアプリ エクスペリエンスを作成します。
+
 ### <a name="content"></a>コンテンツ
 
-:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="ボットのベスト プラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="明確なペルサを確立するためのボットのベスト プラクティスを示す例。" border="false":::
 
 #### <a name="do-establish-a-clear-persona"></a>するべきこと: 明確なペルソナの設定
 
@@ -209,7 +211,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="ボットのベスト プラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="ボットが実行できる操作を明確に伝える例。" border="false":::
 
 #### <a name="do-clearly-convey-what-your-bot-can-do"></a>するべきこと: ボットにできることを明確に伝達する
 
@@ -217,7 +219,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="例は、ボットのベスト プラクティスを示しています。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="ボットの機能をあいまいにしない例。" border="false":::
 
 #### <a name="dont-obscure-your-bots-features"></a>してはいけないこと: ボットの機能をぼかす
 
@@ -228,7 +230,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="ボットのベスト プラクティスを示すサンプル。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="ボットを表示する例は、質問以外を認識する必要があります。" border="false":::
 
 #### <a name="do-recognize-non-questions"></a>するべきこと: ノンクエスチョンを認識する
 
@@ -236,7 +238,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="ボットのベスト プラクティスの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="単純なボット メッセージに対する不器用な応答を回避する必要がある例。" border="false":::
 
 #### <a name="dont-miss-out-on-opportunities-to-delight"></a>してはいけないこと: 喜ぶチャンスを逃す
 
@@ -249,7 +251,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="ボットのベスト プラクティスの例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="ボットを表示する例は、ユーザーがボットの使い方を理解するのに役立ちます。" border="false":::
 
 #### <a name="do-provide-help"></a>するべきこと: ヘルプを用意する
 
@@ -257,7 +259,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="例では、ボットのベスト プラクティスを表示します。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="ボットを表示する例では、ユーザーを立ち往生してはならない。" border="false":::
 
 #### <a name="dont-leave-users-stranded"></a>してはいけないこと: ユーザーを立ち往生させる
 
@@ -270,7 +272,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="ボットのベスト プラクティスを表示する例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="複雑な操作のためにボットでタスク モジュールまたはタブを使用できる例を示します。" border="false":::
 
 #### <a name="do-use-task-modules-or-tabs"></a>するべきこと: タスク モジュールやタブの使用
 
@@ -278,7 +280,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="ボットのベスト プラクティスの例を参照してください。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="ボットがマルチターン操作を回避する方法を示す例。" border="false":::
 
 #### <a name="dont-make-multi-turn-interactions-tedious"></a>してはいけないこと: 複数回の対話を面倒にする
 
@@ -291,7 +293,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="ボットのベスト プラクティスを示す例です。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="ボットが個人のコンテキストで個人情報のみを表示する方法を示す例。" border="false":::
 
 #### <a name="do-only-show-sensitive-info-in-a-personal-context"></a>するべきこと: 機密情報を個人的なコンテキストでのみ表示する
 
@@ -299,7 +301,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="ボットのベスト プラクティスを示す図。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="ボットがグループまたはユーザーに機密情報を表示しない方法を示す例。" border="false":::
 
 #### <a name="dont-some-content-isnt-meant-to-be-seen-by-everyone"></a>してはいけないこと: すべてのユーザーが閲覧できないコンテンツがある
 
@@ -308,17 +310,10 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
    :::column-end:::
 :::row-end:::
 
-## <a name="learn-more"></a>詳細情報
+## <a name="see-also"></a>関連項目
 
 以下のガイドラインは、ボット デザインに役立つ可能性があります。
 
 * [個人用アプリをデザインする](../../concepts/design/personal-apps.md)
 * [アダプティブ カードをデザインする](../../task-modules-and-cards/cards/design-effective-cards.md)
 * [タスク モジュールをデザインする](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
-
-## <a name="validate-your-design"></a>デザインを検証する
-
-AppSource にアプリを公開する予定がある場合、アプリの提出時に失敗する原因となるデザイン上の問題を理解しておく必要があります。
-
-> [!div class="nextstepaction"]
-> [デザイン検証ガイドラインをチェックする](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

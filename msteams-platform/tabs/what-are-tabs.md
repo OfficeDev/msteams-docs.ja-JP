@@ -5,19 +5,16 @@ description: Teams プラットフォームでのカスタム タブの概要
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 4ce17f4d26abfd4fe21b4ac05bb7269fa39a2f7a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 2cdd431a1c4a5a6b98688bba52d1979f7ced38d7
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020290"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101668"
 ---
-# <a name="what-are-microsoft-teams-tabs"></a>Microsoft Teams タブとは
+# <a name="what-are-microsoft-teams-tabs"></a>タブのMicrosoft Teamsは何ですか?
 
 タブとは、Microsoft Teams に組み込まれている Teams 対応 Web ページです。 これらは簡単な HTML <iFrame \> タブで、アプリ マニフェストで宣言されたドメインを指していて、チーム内のチャネル、グループ チャット、または個々のユーザー用の個人用アプリとして追加できます。 アプリにカスタム タブを含めて独自の Web コンテンツを Teams に埋め込んだり、Teams 固有の機能を Web コンテンツに追加したりできます。 *こちらを参照ください*[Teams JavaScript client SDK](/javascript/api/overview/msteams-client)。
-
-> [!NOTE]
-> Chrome 80 (2020 年初頭にリリース予定) では、新しい Cookie 値を紹介し、既定で Cookie ポリシーを設定します。 既定のブラウザーの動作を利用するのではなく、Cookie に対して使用する目的を設定することをお勧めします。 「[SameSite Cookie 属性 (2020 更新プログラム)](../resources/samesite-cookie-update.md)」を *参照してください*。
 
 Teams では、チャネル/グループ および 個人 の 2 種類のタブが利用可能です。 チャネル/グループ タブは、コンテンツをチャネルやグループのチャットに配信します。また、専用の Web ベースのコンテンツまわりに関する共同作業スペースを作成するのに優れた方法です。 [個人] タブは、個人を対象としたボットと共に、個人用アプリの一部であり、1 人のユーザーを対象としています。 簡単にアクセスできるように、左側のナビゲーション バーにピン留めすることができます。
 
@@ -54,29 +51,23 @@ Teams では、チャネル/グループ および 個人 の 2 種類のタブ�
 
 複数のチャネルまたはグループ タブ、およびアプリごとに最大 16 個の個人用タブを使用できます。
 
-## <a name="mobile-clients"></a>モバイル クライアント
+## <a name="mobile-considerations"></a>モバイルに関する考慮事項
 
-チャネルまたはグループ タブを Teams モバイル クライアントに表示する場合、構成にはプロパティの `setSettings()` 値が必要 `websiteUrl` です。 最適なユーザー エクスペリエンスを実現するには、タブ [を作成するときに](~/tabs/design/tabs-mobile.md) モバイル上のタブのガイダンスに従う必要があります。 [Appsource を介して配布されるアプリには](~/concepts/deploy-and-publish/appsource/publish.md)、モバイル クライアントに対する個別の承認プロセスがあります。 このようなアプリの既定の動作は次のとおりです。
+モバイル クライアントにチャネルまたはグループ タブを表示Teams場合、構成にはプロパティの `setSettings()` 値が必要 `websiteUrl` です。 最適なユーザー エクスペリエンスを実現するには、タブ [を作成するときに](~/tabs/design/tabs-mobile.md) モバイル上のタブのガイダンスに従う必要があります。 モバイル[ストアを通じて配布Teamsモバイル](~/concepts/deploy-and-publish/appsource/publish.md)クライアントに対する個別の承認プロセスがあります。 このようなアプリの既定の動作は次のとおりです。
 
-| **タブの種類** | **モバイル クライアント向けに最適化されている場合のアプリの動作** | **モバイル クライアント向けに最適化されていない場合のアプリの動作** |
-|:-----|:-----|:-----|
-| **静的タブまたは****個人用タブ**|モバイル クライアントの下部バーにアプリが表示されます。 Teams クライアント内のアプリ内 Web ビューでタブが開きます。 | アプリはモバイル クライアントに表示されません。 |
-| **構成可能なタブ** | タブは、 を使用して Teams クライアント内のアプリ内 Web ビューで開きます `contentUrl` 。 | [タブ] **を選択** すると、デバイスの既定の Web ブラウザー `websiteUrl` でコンテンツが開きます。 |
-
+| **アプリの機能** | **アプリが承認された場合の動作** | **アプリが承認されていない場合の動作** |
+| --- | --- | --- |
+| **個人用タブ** | モバイル クライアントの下部バーにアプリが表示されます。 タブは、クライアントTeams開きます。 | モバイル クライアントの下部バーにアプリが表示されません。 |
+| **チャネルタブとグループ タブ** | タブは、 を使用してクライアントTeams開きます `contentUrl` 。 | タブは、 を使用してクライアントの外部Teams開きます `websiteUrl` 。 |
 
 > [!NOTE]
 >
-> * [Teams で発行するために AppSource ](../concepts/deploy-and-publish/overview.md#publish-to-appsource) に送信されたアプリは、モバイルの応答性が自動的に評価されます。 クエリの場合は、ユーザーに問い合 teamsubm@microsoft.com。
-> * [AppSource を介](../concepts/deploy-and-publish/overview.md)して配布されていないすべてのアプリでは、タブは既定で Teams クライアント内のアプリ内 Web ビューで開き、個別の承認プロセスは必要ありません。
+> アプリの既定の動作は、アプリ ストアを通じて配布Teamsです。 既定では、すべてのタブがクライアントでTeamsされます。
+> モバイルに優しいアプリの評価を開始するには、アプリの詳細 teamsubm@microsoft.com 確認してください。
 
-> [!div class="nextstepaction"]
-> [詳細については、デバイスのアクセス許可の要求を参照してください](../concepts/device-capabilities/native-device-permissions.md)
+## <a name="see-also"></a>関連項目
 
-> [!div class="nextstepaction"]
-> [詳細: メディア機能の統合](../concepts/device-capabilities/mobile-camera-image-permissions.md)
-
-> [!div class="nextstepaction"]
-> [詳細: Teams に QR またはバーコード スキャナー機能を統合する](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
-
-> [!div class="nextstepaction"]
-> [詳細: Teams での場所機能の統合](../concepts/device-capabilities/location-capability.md)
+* [デバイスのアクセス許可を要求する](../concepts/device-capabilities/native-device-permissions.md)
+* [メディア機能を統合する](../concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [QR またはバーコード スキャナーを統合する](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
+* [場所機能を統合する](../concepts/device-capabilities/location-capability.md)

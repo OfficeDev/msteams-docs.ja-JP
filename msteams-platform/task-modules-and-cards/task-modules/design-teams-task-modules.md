@@ -1,26 +1,26 @@
 ---
 title: タスク モジュールをデザインする
 author: heath-hamilton
-description: Teams アプリのタスク モジュールを設計し、Microsoft Teams UI キットを取得する方法について説明します。
+description: アプリのタスク モジュールを設計し、Teams UI キットをMicrosoft Teamsする方法について学習します。
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 3502a705bfe1bf99a5dc0edff5c5a54265cc6ca1
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 347ce42c41706f698e2f8897a0518aae0850a275
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019546"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101731"
 ---
-# <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Microsoft Teams アプリのタスク モジュールの設計
+# <a name="designing-task-modules-for-your-microsoft-teams-app"></a>アプリ用のタスク モジュールMicrosoft Teamsする
 
-タスク モジュールを使用して Teams アプリでモーダル ポップアップ エクスペリエンスを作成できます。 リッチ メディアと情報を表示したり、複雑なタスクを完了したりするには、この機能を使用します。
+タスク モジュールを使用して、Teamsポップアップ エクスペリエンスを作成できます。 リッチ メディアと情報を表示したり、複雑なタスクを完了したりするには、この機能を使用します。
 
 :::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="タスク モジュールの例を示します。" border="false":::
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-必要に応じて取得および変更できる要素を含む、より包括的なタスク モジュール設計ガイドラインについては、Microsoft Teams UI Kit を参照してください。
+必要に応じて取得および変更できる要素を含む、より包括的なタスク モジュール設計ガイドラインについては、「UI キットMicrosoft Teams参照してください。
 
 > [!div class="nextstepaction"]
 > [Microsoft Teams UI Kit (Figma) を入手する](https://www.figma.com/community/file/916836509871353159)
@@ -74,7 +74,7 @@ ms.locfileid: "52019546"
 
 :::image type="content" source="../../assets/images/task-module/form.png" alt-text="タスク モジュール内のフォームの例。" border="false":::
 
-### <a name="sign-in"></a>サインイン
+### <a name="sign-in"></a>サインインする
 
 一連のタスク モジュールを使用して、フォーカスのあるサインインフローまたはサインアップ フローを作成し、ユーザーが順次ステップを簡単に移動できます。
 
@@ -106,11 +106,13 @@ ms.locfileid: "52019546"
 
 ## <a name="best-practices"></a>ベスト プラクティス
 
+これらの推奨事項を使用して、高品質のアプリ エクスペリエンスを作成します。
+
 ### <a name="usability"></a>使いやすさ
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="タスク モジュールのベスト プラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="タスク モジュールのベスト プラクティス (一度に 1 つのタスク モジュール) を表示する例。" border="false":::
 
 #### <a name="do-use-one-task-module-at-a-time"></a>Do: 一度に 1 つのタスク モジュールを使用する
 
@@ -118,7 +120,7 @@ ms.locfileid: "52019546"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="例は、タスク モジュールのベスト プラクティスを示しています。" border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="タスク モジュールのベスト プラクティスを表示する例 (タスク モジュールの上にダイアログを表示する)。" border="false":::
 
 #### <a name="dont-pop-a-dialog-on-top-of-a-task-module"></a>[しない] タスク モジュールの上にダイアログを表示する
 
@@ -131,7 +133,7 @@ ms.locfileid: "52019546"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="例は、タスク モジュールのベスト プラクティスを示しています。" border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="タスク モジュールのベスト プラクティスを示す例 (コンテンツが応答可能な状態を確認してください)。" border="false":::
 
 #### <a name="do-make-sure-the-content-is-responsive"></a>Do: コンテンツの応答性を確認する
 
@@ -139,7 +141,7 @@ ms.locfileid: "52019546"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="例では、タスク モジュールのベスト プラクティスを表示します。" border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="タスク モジュールのベスト プラクティスを示す例 (水平方向のスクロール バーを使用しない)。" border="false":::
 
 #### <a name="dont-use-horizontal-scroll-bars"></a>[しない]: 水平方向のスクロール バーを使用する
 
@@ -152,7 +154,7 @@ ms.locfileid: "52019546"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="例では、タスク モジュールのベスト プラクティスを表示します。" border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="タスク モジュールのベスト プラクティスを示す例 (短くする)。" border="false":::
 
 #### <a name="do-keep-it-short"></a>Do: 短くする
 
@@ -160,9 +162,9 @@ ms.locfileid: "52019546"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="タスク モジュールのベスト プラクティスを示す図。" border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="タスク モジュールのベスト プラクティスを示す例 (長い対話を行う必要があります)。" border="false":::
 
-#### <a name="dont-do-long-interactions"></a>[しない]: 長時間の対話操作を実行する
+#### <a name="dont-have-long-interactions"></a>Don't: 長い対話を行う
 
 やり取りを短くしてポイントにしてください。
 
@@ -173,7 +175,7 @@ ms.locfileid: "52019546"
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="図は、タスク モジュールのベスト プラクティスを示しています。" border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="タスク モジュールのベスト プラクティスを示す例 (インライン エラー メッセージを使用)。" border="false":::
 
 #### <a name="do-use-inline-error-messages"></a>Do: インライン エラー メッセージを使用する
 
@@ -181,7 +183,7 @@ ms.locfileid: "52019546"
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="図は、タスク モジュールのベスト プラクティスを示しています。" border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="タスク モジュールのベスト プラクティスを示す例 (ダイアログにエラー メッセージを表示する)。" border="false":::
 
 #### <a name="dont-put-error-messages-in-dialogs"></a>[しない] ダイアログにエラー メッセージを表示する
 

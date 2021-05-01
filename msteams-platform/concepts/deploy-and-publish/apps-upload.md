@@ -1,130 +1,64 @@
 ---
-title: カスタム アプリをアップロードする
-description: Microsoft Teams でアプリをアップロードする方法について説明します
+title: アップロードアプリを作成する
+description: アプリをアプリにサイドロードする方法についてMicrosoft Teams。 サイドローディングは、開発中にアプリをテストおよびデバッグする場合に一般的です。
 ms.topic: how-to
-localization_priority: Normal
-ms.author: lajanuar
-keywords: teams アプリのアップロード
-ms.openlocfilehash: 3fa6a3ef00cbb55b5c663891deaabcc908de95d5
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+author: KirtiPereira
+ms.author: surbhigupta
+ms.openlocfilehash: a82f7d6498db4cceb69f1b7f5ff53b1646371ce8
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020808"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101570"
 ---
-# <a name="upload-an-app-package-to-microsoft-teams"></a>Microsoft Teams にアプリ パッケージをアップロードする
+# <a name="upload-your-app-in-microsoft-teams"></a>アップロードでアプリをMicrosoft Teams
 
-Microsoft Teams でアプリ エクスペリエンスをテストするには、アプリを Teams にアップロードする必要があります。 アップロードすると、選択したチームにアプリが追加され、すべてのチーム メンバーがエンド ユーザーと同様に操作できます。
+組織または組織のMicrosoft Teamsストアに発行することなく、アプリをサイドロードTeamsできます。 これは、次のシナリオで理にかなっています。
 
-> [!NOTE]
-> ボットを使用して既存のアプリの更新されたパッケージをアップロードすると、会話ウィンドウで表示されるタブの変更が表示されない場合があります。 アプリは、クリーンな環境でアプリの飛び出しやテストを通じてアクセスできます。
+* 自分または他の開発者と一緒にアプリをローカルでテストおよびデバッグする場合。
+* 自分だけのアプリを構築しました (たとえば、ワークフローを自動化する場合など)。
+* 小さな一連のユーザー (作業グループなど) 用のアプリを構築しました。
 
-## <a name="create-your-upload-package"></a>アップロード パッケージを作成する
+## <a name="prerequisites"></a>前提条件
 
-開発および AppSource 申請では、アップロードできるパッケージを作成する必要があります。 パッケージには、エクスペリエンスを説明する情報が含まれている必要があります。 パッケージは、アプリケーション マニフェストとエクスペリエンスを一意に定義するアイコンを含む .zip ファイルです。
+* アプリ パッケージ[を作成し、](~/concepts/build-and-test/apps-package.md)[エラーを検証](https://dev.teams.microsoft.com/appvalidation.html)します。
+* [カスタム アプリのアップロードを有効](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading)にするには、Teams。
+* アプリが実行され、HTTP 経由でアクセス可能な状態にしてください。
 
-アップロード パッケージを作成するには、[「Microsoft Teams アプリのパッケージを作成する」](../build-and-test/apps-package.md)を参照してください。
+## <a name="upload-your-app"></a>アップロードアプリのインストール
 
-パッケージを作成した後、チームにアップロードします。 アップロードされたパッケージは、選択したチームのユーザーだけが使用できます。
+アプリのスコープの構成方法に応じて、チーム、チャット、会議、または個人用にアプリをサイドロードできます。
 
-## <a name="load-your-package-into-teams"></a>パッケージを Teams に読み込む
+1. 開発アカウントを使用Teamsクライアント[にMicrosoft 365します](~/build-your-first-app/build-and-run.md#prerequisites)。
+1. [アプリ **] を** 選択し **、アップロードを選択します**。
+1. アプリ パッケージファイルを.zipします。 インストール ダイアログが表示されます。
+:::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="アプリのインストール ダイアログの例Teamsスクリーンショット。":::
+1. アプリをアプリに追加Teams。
 
-パッケージを Teams にアップロードしてテストすることができます。
+## <a name="troubleshoot-upload-issues"></a>アップロードに関する問題のトラブルシューティング
 
-> [!NOTE]
-> アップロードを機能させるには、テナント管理者が最初に[アプリのアップロードを有効にする](/microsoftteams/admin-settings)必要があります。
+アプリがサイドロードに失敗した場合は、問題が解決するまで次の手順を実行します。
 
-アプリを Teams にアップロードするには、次の 2 つの方法があります。
+1. アプリ パッケージの作成手順に [戻ってください](../../concepts/build-and-test/apps-package.md)。
+1. [アプリ パッケージを再度検証](https://dev.teams.microsoft.com/appvalidation.html) します。
+1. アプリ マニフェストが最新のスキーマと一致する必要 [があります](../../resources/schema/manifest-schema.md)。
 
-* ストアを使用する
-* [アプリ] タブを使用する
+## <a name="access-your-app"></a>アプリにアクセスする
 
-## <a name="upload-your-package-into-a-team-or-conversation-using-the-store"></a>ストアを使用してチームまたは会話にパッケージをアップロードする
+Teamsアプリを開く方法がいくつか提供されています。 詳細については、「アプリに[アクセスする」を参照Teams。](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a)
 
-1. Teams の左下隅で、[ストア] アイコン **を選択** します。 [ストア] ページで、[カスタム アプリ **のアップロード] を選択します**。
+## <a name="update-your-app"></a>アプリを更新する
 
-  ![チームを表示する](../../assets/images/store-upload-a-custom-app2.png)
+コードを変更する場合は、アプリを再びサイドロードする必要はありません (これらは、リアルタイムでTeams反映されます)。 ただし、アプリの構成を変更する場合は、再インストールする必要があります。
 
-2. [開く **]** ダイアログで、アップロードするパッケージに移動し、[開く] を選択します。
+## <a name="remove-your-app"></a>アプリを削除する
 
-   ![追加メニュー](../../assets/images/NewappAddmenudropdown.png)
-
-アップロードされたパッケージは、同意ダイアログで指定されたチームまたは会話で使用できる必要があります。 アプリが表示されない場合、最も一般的な理由は、マニフェストのエラー、特にアプリ、ボット、メッセージング拡張機能の ID です。 アプリがスレッドのスコープに設定されていない場合、オプションは表示されません。
-
->[!NOTE]
-> 会話内のアプリは現在 [Developer Previewで](../../resources/dev-preview/developer-preview-intro.md)、Teams がそのモードで実行されていない場合、このオプションは表示されません。
-
-![アップロードされたボットのリストにあるボットの例](../../assets/images/botinlist.jpg)
-
-## <a name="upload-your-package-into-a-team-using-the-apps-tab"></a>[アプリ] タブを使用してパッケージをチームにアップロードする
-
-1. ターゲット チームで、[その他のオプション] ( **[&#8943;]** を **選択し、[** チームの管理] **を選択します**。
-
-   > [!NOTE]
-   > この機能を表示するには、チームの所有者である必要があります。または所有者がユーザーにアクセス権を与え、この機能に適したアプリの種類を追加する必要があります。
-
-2. [アプリ **] タブを** 選択し、右下 **の [カスタム アプリのアップロード** ] を選択します。
-
-   ![アップロード エントリ ポイント](../../assets/images/UploadACustomApp.png)
-
-3. コンピューターから .zip パッケージを選択します。
-
-4. アップロードしたアプリを一覧で確認できます。
-
-   ![アップロードされたボットのリストにあるボットの例](../../assets/images/botinlist.jpg)
-
-アプリが読み込めない場合、最も一般的な理由は、マニフェストのエラー、特にアプリ、ボット、メッセージング拡張機能の ID です。
-
-## <a name="access-your-uploaded-configurable-tab"></a>アップロードした構成可能なタブにアクセスする
-
-アプリにタブが含まれている場合、標準タブ ギャラリー フローを使用して、任意の会話またはチーム チャネルにユーザーをピン留めすることができます。
-
-1. チーム内のチャネルに移動します。 既存 **+** のタブの右側にタブを追加する場合に選択します。
-
-2. 表示されるギャラリーからタブを選択します。
-
-3. 同意プロンプトを受け入れます。
-
-4. 構成ページでタブを [構成し、[保存](../../tabs/how-to/create-tab-pages/configuration-page.md) ] を **選択します**。
-
-  ![使用可能なタブのギャラリーが表示された [タブの追加] ダイアログ ボックス](../../assets/images/tab_gallery.png)
-
-## <a name="access-your-uploaded-bot"></a>アップロードしたボットにアクセスする
-
-ボットをチームに追加した後は、ボットスコープの定義に応じて、チームチャネルの内側と外側の誰でもボットを使用できる必要があります。 すべてのチーム メンバーは、ボットがチームに追加されたことを示す投稿を [全般] チャネルに表示できます。
-
-Teams ボットの場合は、まずボットの名前を@mentioningしてボットを呼び出します。
-
-ボットと直接チャットをテストするには、アプリ ホームからアクセスするか、チャネルで@mention、新しいチャット ウィンドウで **検索します。**
-
-ボットを@mentionチャットで確認したり、[新しいチャット] ウィンドウでボットを検索したりして、ボットとの直接チャットをテストできます。
-
-## <a name="access-your-uploaded-connector"></a>アップロードしたコネクタにアクセスする
-
-アプリがチームや会話に読み込まれると、ユーザーは標準コネクタ ギャラリー フローを使用してコネクタを設定できます。
-
-1. チーム内のチャネルに移動します。 **[その他のオプション]** (*&#8943;*) を選び、**[コネクタ]** を選びます。
-
-2. 一番下にある **[サイドロード]** セクションから [コネクタ] を選びます。
-
-3. 構成ページでコネクタを [構成し、[保存](../../webhooks-and-connectors/how-to/connectors-creating.md) ] を **選択します**。
-
-  ![使用可能なタブのギャラリーが表示された [タブの追加] ダイアログ ボックス。](../../assets/images/connector_gallery.png)
-
-## <a name="access-your-uploaded-messaging-extension"></a>アップロードしたメッセージング拡張機能にアクセスする
-
-メッセージング拡張機能を使用してアップロードされたアプリが自動的に [作成] ボックスの **[その他のオプション]** (*&#8943;*) メニューに表示されます。
-
-![メッセージング拡張機能](../../assets/images/compose-extensions/cesampleapp.png)
-
-
-## <a name="remove-or-update-your-app"></a>アプリを削除または更新する
-
-アプリを削除するには、[Teams ボットの表示] ボックスの一覧でアプリ名の横にある **削除アイコン** を選択します。 マニフェスト情報を変更する場合は、まずアプリを削除してから、更新されたパッケージを追加します。「パッケージをチームに読み込む」 [を参照してください](#load-your-package-into-teams)。 サービスのコード変更では、マニフェストを再度アップロードする必要はありません。 ただし、コードの変更で URL の変更やボットの Microsoft アプリ ID などのマニフェストの更新が必要な場合は、マニフェストを再度アップロードする必要があります。
+アプリを削除するには、アプリのアイコンを右クリックし、[アンインストールTeams選択 **します**。
 
 > [!NOTE]
-> 個人用コンテキストからボットを完全に削除することはできません。 ボットが削除され、再度追加された場合は、ボットとの追加の通信が前の会話に追加されます。
+> 個人用ボットアクティビティを完全に削除できない。 アプリを削除してもう一度追加すると、ボットとの新しい通信が以前の会話に追加されます。
 
-## <a name="troubleshooting-notes"></a>トラブルシューティングに関する注意
+## <a name="next-step"></a>次の手順
 
-マニフェストの読み込みに失敗した場合は、「パッケージの作成」のすべての手順[](../../concepts/build-and-test/apps-package.md)に従い、スキーマに対してマニフェストを検証したのか確認[します](../../resources/schema/manifest-schema.md)。
+> [!div class="nextstepaction"]
+> [アプリをTeamsする](https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-us&rs=en-us&ad=us)

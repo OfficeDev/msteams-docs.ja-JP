@@ -1,21 +1,21 @@
 ---
 title: チュートリアル - C を使用して最初のアプリを作成する#
-description: Microsoft Teams アプリの作成を開始する方法については、C# .NET を使用します。
+description: アプリまたは .NET を使用してアプリMicrosoft TeamsをC#する方法について学習します。
 keywords: getting started .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 localization_priority: Normal
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 52af53d61215e41a885e21081a9f6148e81a0fdf
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: be6c5865da04125b159792364bbd80ac219d9fd9
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020228"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101857"
 ---
-# <a name="create-your-first-teams-app-using-c-or-net"></a>ユーザーまたは .NET を使用して最初C# Teams アプリを作成する
+# <a name="create-your-first-teams-app-using-c"></a>C を使用してTeamsアプリを作成する#
 
-このチュートリアルでは、ユーザーまたは .NET を使用して Microsoft Teams C#作成できます。 そのためには、次のことを行う必要があります。
+このチュートリアルでは、アプリを使用してアプリMicrosoft Teams作成C#。 そのためには、次のことを行う必要があります。
 
 * 環境を準備する
 * 前提条件の取得
@@ -62,13 +62,13 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 ```
 
 > [!TIP]
-> このリポジトリ [をフォーク](https://help.github.com/articles/fork-a-repo/) して [、](https://github.com/OfficeDev/Microsoft-Teams-Samples) 変更を GitHub に変更して保存できます。
+> このレ[ポをフォーク](https://help.github.com/articles/fork-a-repo/)して[変更](https://github.com/OfficeDev/Microsoft-Teams-Samples)を変更し、変更を保存GitHub。
 
 <a name="BuildRun"></a>
 
 ## <a name="build-and-run-the-sample"></a>サンプルの構築と実行
 
-リポジトリを複製した後、Visual Studio を使用して、サンプルの **Microsoft-Teams-Samples/samples/app-hello-world/csharp** ディレクトリからソリューション ファイル **Microsoft.Teams.Samples.HelloWorld.sln** を開きます。 次に、[ビルド] **メニューから [ソリューション** のビルド **] を** 選択します。 サンプルを実行するには **、F5 キーを押するか、[** デバッグ] メニューから [ **デバッグ** の開始] **を選択** します。
+リポジトリが複製された後、Visual Studioを使用して **Microsoft.Teams.サンプルの** **Microsoft-Teams-Samples/samples/app-hello-world/csharp** ディレクトリの Samples.HelloWorld.sln。 次に、[ビルド] **メニューから [ソリューション** のビルド **] を** 選択します。 サンプルを実行するには **、F5 キーを押するか、[** デバッグ] メニューから [ **デバッグ** の開始] **を選択** します。
 
 アプリが起動すると、ブラウザー ウィンドウが開き、アプリのルートが起動します。 次の URL に移動して、すべてのアプリ URL が読み込み中か確認できます。
 
@@ -84,9 +84,9 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 
 ## <a name="host-the-sample-app"></a>サンプル アプリをホストする
 
-Microsoft Teams のアプリは、1 つ以上の機能を提供する Web アプリケーションです。 Teams プラットフォームでアプリを読み込むには、アプリをインターネットで利用できる必要があります。 これを行うには、アプリをホストする必要があります。 Microsoft Azure で無料でホストするか、コンピューター上のローカル プロセスへのトンネルを作成します `ngrok` 。 アプリをホストした後、ルート URL (など) を `https://yourteamsapp.ngrok.io` メモします `https://yourteamsapp.azurewebsites.net` 。
+アプリはMicrosoft Teams 1 つ以上の機能を提供する Web アプリケーションです。 アプリをTeamsするには、アプリをインターネットで利用できる必要があります。 これを行うには、アプリをホストする必要があります。 無料でホストするかMicrosoft Azureを使用して、コンピューター上のローカル プロセスへのトンネルを作成できます `ngrok` 。 アプリをホストした後、ルート URL (など) を `https://yourteamsapp.ngrok.io` メモします `https://yourteamsapp.azurewebsites.net` 。
 
-### <a name="tunnel-using-ngrok"></a>ngrok を使用したトンネル
+### <a name="tunnel-using-ngrok"></a>Tunnel ngrok の使用
 
 クイック テストでは、コンピューターでアプリを実行し、Web エンドポイントを介してトンネルを作成できます。 [`ngrok`](https://ngrok.com) は、 などの Web アドレスを取得できる無料のツールです `https://d0ac14a5.ngrok.io` 。 ngrok [をダウンロードしてインストール](https://ngrok.com/download) し、それを自分の場所に追加できます `PATH` 。
 
@@ -108,9 +108,9 @@ ngrok http 44327 -host-header=localhost:44327
 
 ### <a name="host-in-azure"></a>Azure のホスト
 
-Microsoft Azure は、共有インフラストラクチャを使用して無料層で .NET アプリケーションをホストします。 これは、サンプルを実行するのに十分 `Hello World` です。 詳細については、「新しい無料の [Azure アカウントの作成」を参照してください](https://azure.microsoft.com/free/)。
+Microsoft Azure共有インフラストラクチャを使用して、.NET アプリケーションを無料層でホストします。 これは、サンプルを実行するのに十分 `Hello World` です。 詳細については、「新しい無料の [Azure アカウントの作成」を参照してください](https://azure.microsoft.com/free/)。
 
-Visual Studio Azure を含むさまざまなプロバイダーへのアプリ展開の組み込みのサポートがあります。
+Visual Studio Azure を含むさまざまなプロバイダーへのアプリ展開を組み込みサポートしています。
 
 <img width="530px" alt="Visual Studio" src="~/assets/images/get-started/publishtoazure1.png"/>
 
@@ -132,9 +132,9 @@ Visual Studio Azure を含むさまざまなプロバイダーへのアプリ展
 
 <img width="530px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png" />
 
-### <a name="test-your-bot-in-teams"></a>Teams でボットをテストする
+### <a name="test-your-bot-in-teams"></a>ボットをテストTeams
 
-これで、Teams でボットをテストできます。 アプリを登録して入力したチーム内のチャネルを選択します `@your-bot-name` 。 これはメンションと呼 **\@ ばれる.** ボットは、送信したメッセージに返信します。
+これで、ボットをテストして、Teams。 アプリを登録して入力したチーム内のチャネルを選択します `@your-bot-name` 。 これはメンションと呼 **\@ ばれる.** ボットは、送信したメッセージに返信します。
 
 <img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 

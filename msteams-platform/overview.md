@@ -1,41 +1,41 @@
 ---
-title: Microsoft Teams プラットフォーム用のアプリをビルドする
+title: アプリケーション プラットフォーム用のアプリMicrosoft Teamsする
 author: heath-hamilton
-description: 開発者がカスタム アプリを使用して Microsoft Teams の機能を拡張する方法の概要を確認します。
+description: 開発者がカスタム アプリを使用して機能を拡張Microsoft Teams概要を確認します。
 ms.topic: overview
 localization_priority: Normal
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: 5009427fc3cdde11de45a55cb0f6216ae36b0d66
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 69c36cf5f925bdb9802e7ec081a7765187a06128
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019812"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101843"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Microsoft Teams のアプリを作成する
 
-Microsoft Teams アプリは、重要な情報、一般的なツール、信頼できるプロセスを、ユーザーがますます収集、学習、作業する場所に提供します。
+Microsoft Teamsアプリは、重要な情報、一般的なツール、信頼できるプロセスを、人々がますます収集、学習、作業する場所に提供します。
 
-アプリは、ニーズに合わせて Teams を拡張する方法です。 Teams 用に新しいアプリを作成するか、既存のアプリを統合します。
+アプリは、ニーズに合わせてTeams拡張する方法です。 新しいアプリを作成し、Teamsアプリを統合します。
 
 > [!div class="nextstepaction"]
 > [ここから開始](build-your-first-app/build-first-app-overview.md)
 
-## <a name="what-are-teams-apps"></a>Teams アプリとは
+## <a name="what-are-teams-apps"></a>アプリとはTeamsですか?
 
-Teams アプリは、機能とエントリ[ポイントの組み](concepts/capabilities-overview.md)[合わせです](concepts/extensibility-points.md)。 たとえば、ユーザーはチャネル *(エントリ* ポイント) でアプリのボット(機能) とチャットできます。
+Teamsは、機能とエントリ ポイント[の組み](concepts/capabilities-overview.md)[合わせです](concepts/extensibility-points.md)。 たとえば、ユーザーはチャネル *(エントリ* ポイント) でアプリのボット(機能) とチャットできます。
 
-一部のアプリは単純 (通知の送信) ですが、複雑なアプリもあります (患者レコードの管理)。 アプリを計画する際は、Teams はコラボレーション ハブです。 最高の Teams アプリは、ユーザーが自分自身を表現し、より良い仕事を共にするのに役立ちます。
+一部のアプリは単純 (通知の送信) ですが、複雑なアプリもあります (患者レコードの管理)。 アプリを計画する場合は、Teamsハブに注意してください。 アプリの最適Teamsは、ユーザーが自分自身を表現し、より良く一緒に作業するのに役立ちます。
 
 :::row:::
    :::column span="":::
 
 ### <a name="tabs"></a>タブ
 
-**情報をより便利に取得する**: 場合によっては、見つけやすくする必要がある場合があります。 タブに重要な Web [ページを](tabs/what-are-tabs.md)表示し、Teams の静的コンテンツと動的コンテンツのフルスクリーン Web エクスペリエンスを提供します。
+**情報をより便利に取得する**: 場合によっては、見つけやすくする必要がある場合があります。 タブに重要な Web[ページを表示](tabs/what-are-tabs.md)します。このページでは、静的コンテンツと動的コンテンツのフルスクリーン Web エクスペリエンスを提供Teams。
 
-:::image type="content" source="assets/images/overview-tabs.png" alt-text="Teams クライアントでのタブの外観の概念的表現。" border="false":::
+:::image type="content" source="assets/images/overview-tabs.png" alt-text="クライアント内のタブの外観を概念Teamsします。" border="false":::
 
    :::column-end:::
 
@@ -43,9 +43,9 @@ Teams アプリは、機能とエントリ[ポイントの組み](concepts/capab
 
 ### <a name="bots"></a>ボット
 
-**単語をアクションに** 変換する: 会話は、多くの場合、何かをする必要があります (注文の生成、コードの確認、チケットの状態の確認など)。 ボット [は、Teams](bots/what-are-bots.md) の内部でこれらの種類のワークフローを開始できます。
+**単語をアクションに** 変換する: 会話は、多くの場合、何かをする必要があります (注文の生成、コードの確認、チケットの状態の確認など)。 ボット[は、](bots/what-are-bots.md)これらの種類のワークフローをワークフローの内部で開始Teams。
 
-:::image type="content" source="assets/images/overview-bots.png" alt-text="Teams クライアントでのボットの外観の概念表現。" border="false":::
+:::image type="content" source="assets/images/overview-bots.png" alt-text="クライアントでのボットの外観の概念Teamsします。" border="false":::
 
    :::column-end:::
 
@@ -59,7 +59,7 @@ Teams アプリは、機能とエントリ[ポイントの組み](concepts/capab
 
 **マルチタスクを容易にする**: メッセージング拡張機能 [を](messaging-extensions/what-are-messaging-extensions.md)使用すると、会話で外部情報をすばやく共有できます。 また、チャネル投稿のコンテンツに基づいてヘルプ チケットを作成するなどのメッセージに対して処理できます。
 
-:::image type="content" source="assets\images\overview-messaging.png" alt-text="Teams クライアントでのメッセージング拡張機能の外観の概念表現。" border="false":::
+:::image type="content" source="assets\images\overview-messaging.png" alt-text="クライアントでのメッセージング拡張機能の外観の概念Teamsします。" border="false":::
 
    :::column-end:::
 
@@ -67,9 +67,9 @@ Teams アプリは、機能とエントリ[ポイントの組み](concepts/capab
 
 ### <a name="webhooks"></a>Webhook
 
-**外部アプリと通信** する : [受信 Webhooks は](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) 、別のアプリから Teams チャネルに通知を自動的に送信する簡単な方法です。 送信 [Webhooks を使用して](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)、Web サービスにメッセージを送信@mention。
+**外部アプリと通信** する:[受信 Webhooks は](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks)、別のアプリから別のチャネルに通知を自動的に送信Teamsです。 送信 [Webhooks を使用して](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)、Web サービスにメッセージを送信@mention。
 
-:::image type="content" source="assets/images/overview-connectors.png" alt-text="Teams クライアントでのコネクタの外観の概念的表現。" border="false":::
+:::image type="content" source="assets/images/overview-connectors.png" alt-text="クライアントでのコネクタの外観の概念Teamsします。" border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -78,11 +78,11 @@ Teams アプリは、機能とエントリ[ポイントの組み](concepts/capab
 
    :::column span="":::
 
-### <a name="microsoft-graph-for-teams"></a>Microsoft Graph for Teams
+### <a name="microsoft-graph-for-teams"></a>Microsoft Graph Teams
 
-**Teams データの利用**: [Microsoft Graph API for Teams](https://docs.microsoft.com/graph/teams-concept-overview) では、アプリの機能の作成や強化に役立つチーム、チャネル、ユーザー、メッセージに関する情報にアクセスできます。
+**Teams** データを利用する : [microsoft Graph API for Teams](https://docs.microsoft.com/graph/teams-concept-overview)では、アプリの機能の作成や強化に役立つチーム、チャネル、ユーザー、メッセージに関する情報にアクセスできます。
 
-:::image type="content" source="assets/images/overview-graph.png" alt-text="Microsoft Graph API for Teams の概念表現。" border="false":::
+:::image type="content" source="assets/images/overview-graph.png" alt-text="Microsoft Graph API の概念Teams。" border="false":::
 
    :::column-end:::
 
@@ -95,7 +95,7 @@ Teams アプリは、機能とエントリ[ポイントの組み](concepts/capab
 
 ## <a name="start-building"></a>構築を開始する
 
-環境をセットアップし、簡単なアプリを作成することで、Teams の構築についてすぐに理解できます。
+環境をセットアップし、簡単なアプリTeamsを作成することで、アプリの構築にすばやく慣れ親しむ必要があります。
 
 > [!div class="nextstepaction"]
 > [初めてのアプリを構築する](build-your-first-app/build-first-app-overview.md)
@@ -111,7 +111,7 @@ Teams アプリは、機能とエントリ[ポイントの組み](concepts/capab
 
 ## <a name="integrate-with-teams"></a>Teams との統合
 
-既存の Web アプリ、サービス、またはシステムに関するユーザーが気に入る機能と、Teams の共同作業機能をブレンドします。
+既存の Web アプリ、サービス、またはシステムに関するユーザーが気に入る機能と、ユーザーの共同作業機能を組み合Teams。
 
 > [!div class="nextstepaction"]
 > [既存のアプリを統合する](samples/integrating-web-apps.md)
@@ -127,7 +127,7 @@ Teams アプリは、機能とエントリ[ポイントの組み](concepts/capab
 
 ## <a name="a-little-code-goes-a-long-way"></a>小さなコードは長い道のりを行く
 
-素晴らしい Teams アプリを構築するために、エキスパート プログラマである必要はなんらない。 いくつかの低コードソリューションのいずれかを試してみてください。
+素晴らしいアプリを構築するために専門家のプログラマである必要Teams。 いくつかの低コードソリューションのいずれかを試してみてください。
 
 > [!div class="nextstepaction"]
 > [低コード アプリを作成する](samples/teams-low-code-solutions.md)
@@ -143,7 +143,7 @@ Teams アプリは、機能とエントリ[ポイントの組み](concepts/capab
 
 ## <a name="get-ideas-for-your-app"></a>アプリのアイデアを取得する
 
-アプリ開発のインスピレーションをお探しですか? 高忠実度の概念モックを使用して、実際のシナリオと業界ソリューションのリストを参照して、Teams アプリがユーザーに役立つさまざまな方法を理解します。
+アプリ開発のインスピレーションをお探しですか? 高忠実度の概念モックを使用して、実際のシナリオと業界のソリューションの一覧を参照して、アプリがユーザーに役立つさまざまなTeamsを理解します。
 
 > [!div class="nextstepaction"]
 > [アプリのシナリオを見る](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
@@ -156,8 +156,8 @@ Teams アプリは、機能とエントリ[ポイントの組み](concepts/capab
 
 ## <a name="see-also"></a>関連項目
 
-* [Share-to-Teams ボタンを Web サイトに追加する](concepts/build-and-test/share-to-teams.md)
-* [Teams アプリを設計する](concepts/design/design-teams-app-overview.md)
-* [Microsoft Teams JavaScript クライアント SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
+* [Web サイトに [共有Teams] ボタンを追加する](concepts/build-and-test/share-to-teams.md)
+* [アプリをTeamsする](concepts/design/design-teams-app-overview.md)
+* [Microsoft TeamsJavaScript クライアント SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
 * JavaScript および[.NET](https://github.com/Microsoft/botbuilder-dotnet/)用[ボット フレームワーク](https://github.com/Microsoft/botbuilder-js)SDK
-* [Teams アプリを発行する](concepts/deploy-and-publish/overview.md)
+* [アプリをTeamsする](concepts/deploy-and-publish/apps-publish-overview.md)

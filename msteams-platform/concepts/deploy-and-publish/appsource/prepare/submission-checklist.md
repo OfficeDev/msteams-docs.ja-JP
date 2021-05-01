@@ -1,97 +1,197 @@
 ---
-title: ストア提出チェックリスト
-description: Microsoft Teams アプリを AppSource に発行する前に使用するチェックリスト
-ms.topic: reference
+title: ストア申請の準備
+description: ストアに一覧表示するアプリをMicrosoft Teamsする前の最後の手順について説明します。
+ms.topic: how-to
 localization_priority: Normal
-keywords: teams 発行ストア オフィス発行チェックリスト申請 Teams アプリ appsource 検証
-ms.openlocfilehash: 1e7698e143d313ce46b834eada608571e3280b8a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+author: heath-hamilton
+ms.author: surbhigupta
+ms.openlocfilehash: d46d21c3d984b5688c00857e485210b0f0fcf2c7
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020787"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101682"
 ---
-# <a name="prepare-for-appsource-submission"></a>AppSource 申請の準備  
+# <a name="prepare-your-microsoft-teams-store-submission"></a>ストア申請Microsoft Teams準備する
 
-AppSource に一覧表示するには、アプリが承認プロセスを通過する必要があります。 これは、Microsoft Teams グループが提供する無料のサービスで、アプリが説明に従って動作し、適切なすべてのメタデータを含み、エンド ユーザーにとって価値のあるコンテンツを提供します。 迅速な承認を実現するために、アプリが次の要件とガイドラインを満たしていることを確認します。
+アプリの設計、構築、テストMicrosoft Teamsしました。 これで、ユーザーがアプリを検出して使用を開始できるよう、リストを作成する準備ができました。
 
-* **配布方法:** アプリがストア プラットフォームでの公開を意図することを確認します。 AppSource [に発行](../../overview.md) せずにアプリを配布する他のオプションがあります。
-* **検証ポリシー:** アプリは、申請の前に、 [現在のすべての AppSource 検証ポリシーを渡](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) す必要があります。 
-  > [!NOTE] 
-  > Appsource 検証ポリシーは変更される可能性があります。
-* **モバイルの準備:** アプリはモバイル対応である必要があります。 アプリにタブが含まれている場合は、モバイル設計[](~/tabs/design/tabs-mobile.md)ガイドラインに従う必要があります。アプリはモバイル[](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment)OS (iOS と Android) でアップセルの要件を満たさなければならない必要があります。
-* **アプリの自己テスト:** マニフェスト検証ツールを使用 [してアプリをテストします](#teams-app-validation-tool)。
-* **アプリの詳細ページ:** アプリは、アプリの詳細ページチェックリスト  [と一致している必要があります](detail-page-checklist.md)。
-* **ヒントと頻繁に失敗するケース:** アプリの申請と承認時間を改善するために、リストされている [ヒント](frequently-failed-cases.md)  と頻繁に失敗したケースに特に注意してください。
-* **アプリ マニフェスト:** アプリ マニフェストのチェックリストに対して [アプリ マニフェストを確認します](app-manifest-checklist.md)。
-* **テストとデバッグ:** アプリを完全にテストしてデバッグ [したと確認します](../../../build-and-test/debug.md)。
-* **テストノート:** 検証用 [のテスト ノートを含める](#test-notes-for-validation)
-* **プライバシー ポリシー:** プライバシー ポリシー [、使用条件](#privacy-policy-terms-of-use-and-support-urls) 、およびサポート URL がガイドラインに従う必要があります。
+アプリをパートナー センターに [提出する前](/office/dev/store/use-partner-center-to-submit-to-appsource)に、次の手順を実行してください。
 
-上記のすべての要件を完了したら、パートナー センターから AppSource にパッケージを [提出します](/office/dev/store/use-partner-center-to-submit-to-appsource)。
+## <a name="validate-your-app-package"></a>アプリ パッケージの検証
 
-## <a name="teams-app-validation-tool"></a>Teams アプリ検証ツール
+アプリがテスト環境で動作している場合は、申請プロセス中に問題が発生しないようにアプリ パッケージを確認する必要があります。
 
-アプリ検証ツールは、アプリ検証ツール [と予備](#teams-app-validator) チェックリスト [で構成されます](#preliminary-checklist)。 このツールは [、AppSource](/office/dev/store/submit-to-appsource-via-partner-center) がアプリの申請を評価するために使用するのと同じテスト ケースをレプリケートします。 したがって、ソリューションを承認のために AppSource に提出する前に、すべてのテスト ケースに合格することが重要です。このツールは、Teams プラットフォーム内のいくつかの領域で確認できます。
+アプリMicrosoft Teamsツールを使用すると、パートナー センターに提出する前に問題を特定して修正できます。 このツールは、ストアの検証中に使用したのと同じテスト ケースに対して、アプリの構成を自動的にチェックします。
 
-> [!div class="checklist"]
->
-> * [**アプリ検証機能のホームページ**](https://dev.teams.microsoft.com/appvalidation.html)
-> * [**Teams Visual Studio コード ツールキット**](/toolkit/visual-studio-code-overview.md)
-> * [**App Studio**](../../../build-and-test/app-studio-overview.md)
+1. アプリ検証ツール[Microsoft Teamsに移動します](https://dev.teams.microsoft.com/appvalidation.html)。 (注: このツールは App [Studio でも使用](../../../build-and-test/app-studio-overview.md)できます。)
+1. アップロードテストを実行するには、アプリ パッケージをインストールします。
+1. [予備チェックリスト] **に移動し** 、自動化が困難なテスト ケースを確認します。
+1. [自動テストでエラーが](~/resources/schema/manifest-schema.md) 発生したり、チェックリストのすべての条件を満たしていない場合は、構成やアプリの一般的な問題を修正します。
 
-### <a name="teams-app-validator"></a>Teams アプリ検証機能
+## <a name="compile-testing-instructions"></a>テスト手順のコンパイル
 
-[ **検証]** ページでは、AppSource に申請する前にアプリ パッケージを確認できます。 アプリ パッケージをアップロードするだけで、検証ツールはマニフェスト関連のすべてのテスト ケースに対してアプリをチェックします。 失敗したテストごとに、エラーの修正に役立つドキュメント リンクが説明されています。
+テスト アカウント、資格情報、ライセンス キーなど、レビュー担当者がアプリをテストするのに役立つ手順とリソースを提供します。 手順は、パートナー センターに追加するか、一般に公開されている場所にアップロードSharePoint。
 
-![検証ツール](../../../../assets/images/validation-tool/validator.png)
+### <a name="feature-list"></a>機能一覧
 
-### <a name="preliminary-checklist"></a>予備チェックリスト
+アプリの機能に関する詳細な情報を、Teamsテストする手順を示します。
 
-自動化が困難なテスト シナリオでは、予備チェックリストで最も一般的に失敗したテスト ケースの 7 つが表示されます。
+### <a name="accounts"></a>アカウント
 
-![予備チェックリスト](../../../../assets/images/validation-tool/preliminary-checklist.png)
+アプリでライセンスまたはバックエンドセーフリストが必要な場合は、テスト アカウントを指定する必要があります。 テストを容易にするために、すべてのアカウントに事前入力されたデータが含まれる必要があります。
 
-## <a name="privacy-policy-terms-of-use-and-support-urls"></a>プライバシー ポリシー、使用条件、サポート URL
+アプリの機能によっては、以下の情報を提供する必要がある場合があります。
 
-### <a name="privacy-policy"></a>プライバシー ポリシー
+* 管理者アカウント (必須)
+* 管理者以外のアカウント (必須)
+* 最初の実行サインイン エクスペリエンスを適切にテストするために事前構成されていないアカウント (必須)
+* プレミアム機能またはアップグレードされた機能にアクセスできるアカウント (該当する場合)
+* 共有コンテキストで動作するアプリのコラボレーション エクスペリエンスをテストする同じテナント内の 2 つのアカウント (該当する場合)
 
-プライバシー ポリシーのガイドライン:
+### <a name="tenant-configurations"></a>テナント構成
 
-> [!div class="checklist"]
->
-> * プライバシー ポリシーは、アプリやすべてのサービスの全体的なポリシーに固有の場合があります。
-> * 一般的なプライバシー ポリシーを使用する場合は、Teams アプリと Web サイトを含めるには、「サービス」、"アプリケーション"、および "プラットフォーム" を参照する必要があります。
-> * ユーザー データストレージ、ユーザー データ保持、削除、およびセキュリティ制御の処理方法を含める必要があります。
-> * 連絡先情報が含まれる必要があります。
-> * リンクの破損、ベータ URL、ステージング URL は含めずにしてください。
+アプリを使用する Teamsテナントを構成する必要がある場合は、検証のためにこれらの手順と管理者アカウントと管理者以外のアカウントを含める必要があります。
 
-### <a name="terms-of-use"></a>利用規約
+### <a name="video-optional"></a>ビデオ (オプション)
 
-使用条件ステートメントは、アプリやアドインの提供に固有で適用可能である必要があります。
+Microsoft が機能を完全に理解できるよう、アプリの記録を提供します。
 
-### <a name="support-urls"></a>サポート URL
+## <a name="create-your-store-listing-details"></a>ストア登録情報の詳細を作成する
 
-サポート URL では、アプリに関する問題について連絡するために、認証またはログイン資格情報を必要としない必要があります。
+パートナー センター&#8212;[](https://partner.microsoft.com)に送信する情報 (名前、説明、アイコン、画像など)&#8212;は、Teams ストアとアプリの Microsoft AppSource リストになります。
 
-## <a name="test-notes-for-validation"></a>検証に関するテスト ノート
+ストアの登録情報は、アプリの第一印象である可能性があります。 アプリの利点、機能、ブランドを効果的に伝えるリストを使用してインストールを増やします。
 
-次の情報を含める必要があります。
+### <a name="specify-a-short-name"></a>短い名前を指定する
 
-* 少なくとも 2 つのログイン資格情報 、1 つの管理者と 1 つの管理者以外の資格情報を指定する必要があります。
+アプリの名前 (具体的には短い名前 [*)*](~/resources/schema/manifest-schema.md#name)は、ユーザーがストアでアプリを検出する方法において重要な役割を果たします。
 
-* 検証の目的で、提供するアカウントには、十分な事前入力データが必要です。
+:::row:::
 
-* エンタープライズ アプリ、サブスクリプションが必要なアプリ、または Office 365 テナント/ドメイン依存関係があるアプリの場合は、最初に実行するユーザー エクスペリエンスを検証するために、アプリ用に事前構成されていない同じドメインに 3 番目のアカウントを提供する必要があります。
+   :::column span="3":::
+      :::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="スクリーンショットの例は、アプリの短い名前がストアの登録情報に表示される場所を強調表示します。":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
 
-* アプリにプレミアム/アップグレードされた機能がある場合は、そのエクスペリエンスをテストするために必要なアクセス権を持つアカウントを提供する必要があります。
+:::row-end:::
 
-* テスト ノートを SharePoint にアップロードすることができます。 その場合は、ファイルへのパブリック リンクを指定してください。
+短い名前がストアの検証ガイドラインに [準拠している必要があります](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#11-app-name)。
 
-* **テスト アカウント**. アプリでライセンスアカウントのみを許可するか、バックエンドからセーフリストに登録できる場合は、テスト アカウントが必要です。 また、アプリでチーム/グループ のチャット スコープが許可されている場合は、チーム の共同作業シナリオを検証するために、同じテナント内の 2 つのテスト アカウントが必要です。
+### <a name="write-descriptions"></a>説明の書き込み
 
-* **統合手順**. テナント管理者による事前構成でアプリを使用する必要がある場合は、手順を含めるか、構成済みの管理者アカウントと管理者以外のアカウントを入力して検証します。 注: [365 Developer Program サブスクリプションOfficeサインアップ](https://developer.microsoft.com/microsoft-365/dev-program) できます。 これは 90 日間 *無料* で開発活動に使用する限り継続的に更新されます。
+アプリの短い説明と長い説明が必要です。
 
-* **Teams のアプリ機能に関する注意事項**: Teams 内でアプリが提供する機能の詳細と、各機能のテスト手順について説明します。
+#### <a name="short-description"></a>簡潔な説明
 
-* **アプリの機能を示すビデオ (オプション)**: 製品のビデオ録画を提供して、アプリの機能を完全に理解することができます。
+対象ユーザーに対して、元の、魅力的で、指示する必要があるアプリの簡潔な概要。 短い説明を 1 つの文に保つ。
+
+:::row:::
+
+   :::column span="3":::
+      :::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="スクリーンショットの例では、アプリの短い説明がストアの登録情報に表示される場所を強調表示します。":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
+
+:::row-end:::
+
+短い説明がストアの検証ガイドラインに [準拠している必要があります](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#431-short-description)。
+
+#### <a name="long-description"></a>詳しい説明
+
+長い説明では、アプリの主な機能、解決する問題、ターゲットユーザーを強調する説明を提供できます。 この説明は 4,000 文字までですが、ほとんどのユーザーは 300 ~ 500 語しか読み取りできません。
+
+:::row:::
+
+   :::column span="3":::
+      :::image type="content" source="~/assets/images/store-detail-page/LongDescription-02.png" alt-text="スクリーンショットの例では、アプリの長い説明がストア登録情報に表示される場所を強調表示します。":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
+
+:::row-end:::
+
+長い説明がストアの検証ガイドラインに [準拠している必要があります](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#432-long-description)。
+
+### <a name="adhere-to-icon-design-guidelines"></a>アイコンの設計ガイドラインに従う
+
+アイコンは、ユーザーがストアを閲覧するときに表示される主な要素の 1 つです。 アイコンは、アプリのブランドと目的を伝える一方で、ユーザーの要件にTeamsがあります。
+
+詳細については、「アプリ アイコンの[作成に関するガイダンスTeams参照してください](~/concepts/build-and-test/apps-package.md#app-icons)。
+
+### <a name="capture-screenshots"></a>スクリーンショットのキャプチャ
+
+スクリーンショットは、アプリ名、アイコン、説明を補完するアプリの目立つ視覚的なプレビューを提供します。
+
+:::row:::
+
+   :::column span="3":::
+      :::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="スクリーンショットの例では、アプリのスクリーンショットがストアの登録情報に表示される場所を強調表示します。":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
+
+:::row-end:::
+
+スクリーンショットについては、次の情報を覚えておいてください。
+
+* リストごとに最大 5 つのスクリーンショットを作成できます。
+* サポートされているファイルの種類には、PNG、JPEG、GIF が含まれます。
+* ディメンションは 1366x768 ピクセルである必要があります。
+* 最大サイズは 1,024 KB です。
+
+ベスト プラクティスについては、次のリソースを参照してください。
+
+* [Teamsの検証ガイドライン](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#44-screenshots)
+* [Microsoft アプリ ストアの効果的なイメージを作成する](/office/dev/store/craft-effective-appsource-store-images)
+
+### <a name="create-a-video"></a>ビデオを作成する
+
+リスト内のビデオは、ユーザーがアプリを使用する理由を伝える最も効果的な方法です。 ビデオで次の質問に対処する必要があります。
+
+* Whoアプリは何ですか?
+* アプリで解決できる問題は何ですか?
+* アプリの動作方法
+* アプリを使用して得るその他の利点は何ですか?
+
+#### <a name="best-practices-for-videos"></a>ビデオのベスト プラクティス
+
+* ビデオを 30 ~ 90 秒の間に保持します。
+* 品質を目指します。 リストでは、スクリーンショットの前にユーザーにビデオが表示されます。
+
+### <a name="select-a-category-for-your-app"></a>アプリのカテゴリを選択する
+
+申請中に、アプリの分類を求めるメッセージが表示されます。 次の表は、Teamsのカテゴリをパートナー センターに一覧表示するカテゴリ[にマップします](https://aka.ms/PartnerCenterHomePage)。
+
+| Teamsカテゴリ       | パートナー センターのカテゴリ  |
+|:---------------------|:---------------|
+| 分析と BI | 分析、データ可視化、BI |
+| 開発者と IT | 開発者ツール、IT 管理者 |
+| 教育 | 教育 |
+| 人事管理 | 人事と採用 |
+| 生産性 | コンテンツ管理、ファイルとドキュメント、生産性、トレーニングとチュートリアル、ユーティリティ |
+| プロジェクト管理 | コミュニケーション、Project管理、ワークフロー、およびビジネス管理 |
+| 販売とサポート | 顧客と連絡先の管理、カスタマー サポート、財務管理、営業およびマーケティング |
+| ソーシャルで楽しい | 画像とビデオ ギャラリー、ライフスタイル、ニュースと天気予報、ソーシャル、旅行、ナビゲーション |
+
+### <a name="localize-your-store-listing"></a>ストアの登録情報をローカライズする
+
+パートナー センターは、 [ローカライズされたストアの登録情報をサポートしています](https://docs.microsoft.com/office/dev/store/prepare-localized-solutions)。 詳細については、「アプリの登録[情報をローカライズするTeams」を参照してください](../../../../concepts/build-and-test/apps-localization.md)。
+
+## <a name="complete-publisher-verification"></a>完全なPublisher検証
+
+[Publisherストアに](/azure/active-directory/develop/publisher-verification-overview)一覧表示されているアプリTeams検証が必要です。詳細については、「よく寄せられる質問[」、](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions)アプリを[](/azure/active-directory/develop/mark-app-as-publisher-verified)発行元の検証済みとしてマークする方法、および発行元の検証の[トラブルシューティングを参照してください](/azure/active-directory/develop/troubleshoot-publisher-verification)。
+
+## <a name="complete-publisher-attestation"></a>完全なPublisher構成証明
+
+[Publisher一覧に](/microsoft-365-app-certification/docs/attestation)表示されるアプリTeams構成証明も必要です。 このプロセスには、潜在的な顧客がアプリの使用に関する情報に基づいた意思決定を行うのに役立つ、アプリのセキュリティ、データ処理、コンプライアンスプラクティスの自己評価が含まれます。
+
+> [!NOTE]
+> 新しいアプリを提出する場合は、アプリが Teams ストアに表示されるまで、Publisher 構成証明を正式にTeamsできます。 リストされているアプリを更新する場合は、検証Publisher最新バージョンのアプリを提出する前に、構成証明を完了してください。
+
+## <a name="next-step"></a>次の手順
+
+> [!div class="nextstepaction"]
+> [アプリを提出する](https://docs.microsoft.com/office/dev/store/add-in-submission-guide)
