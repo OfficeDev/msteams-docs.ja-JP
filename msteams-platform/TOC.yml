@@ -10,7 +10,7 @@
   items:
     - name: 概要
       href: build-your-first-app/build-first-app-overview.md
-    - name: '"Hello, World!" の作成 アプリ'
+    - name: '"Hello, World!" アプリの作成'
       href: build-your-first-app/build-and-run.md
     - name: 個人用のタブを作成する
       href: build-your-first-app/build-personal-tab.md
@@ -302,6 +302,18 @@
           href: task-modules-and-cards/cards/cards-actions.md
         - name: カード リファレンス
           href: task-modules-and-cards/cards/cards-reference.md
+        - name: アダプティブ カードのユニバーサル アクション
+          items:
+            - name: 概要
+              href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/overview.md
+            - name: アダプティブ カードのユニバーサル アクションの操作
+              href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-universal-actions-for-adaptive-cards.md
+            - name: ユーザー固有のビュー
+              href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/User-Specific-Views.md
+            - name: シーケンシャル ワークフロー
+              href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Sequential-Workflows.md
+            - name: 最新のカード
+              href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md
     - name: タスク モジュールを作成する
       items:
         - name: 概要
