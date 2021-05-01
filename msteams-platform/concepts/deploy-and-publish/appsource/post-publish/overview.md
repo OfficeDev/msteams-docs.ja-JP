@@ -1,59 +1,61 @@
 ---
-title: 発行済みアプリの保守とサポート
-description: アプリの公開後にすべきこと
-ms.topic: how-to
+title: 公開したアプリの保守およびサポート
+description: ストアがアプリ ストアと AppSource に一覧表示された後Teams考える必要があります。
+ms.topic: conceptual
 localization_priority: Normal
-keywords: teams post publish update certification app update manifest
-ms.openlocfilehash: 11c32ce61664f34a246905124b767e17d3c6f536
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+author: heath-hamilton
+ms.author: surbhigupta
+ms.openlocfilehash: 57b57e268a4f2eafc14d0372b8b8383e410a80d5
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020801"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101752"
 ---
-# <a name="maintain-and-support-your-published-app"></a><span data-ttu-id="5d771-104">公開したアプリの保守およびサポート</span><span class="sxs-lookup"><span data-stu-id="5d771-104">Maintain and support your published app</span></span> 
+# <a name="maintain-your-published-microsoft-teams-app"></a><span data-ttu-id="c0dba-103">公開済みアプリのMicrosoft Teamsする</span><span class="sxs-lookup"><span data-stu-id="c0dba-103">Maintain your published Microsoft Teams app</span></span>
 
-<span data-ttu-id="5d771-105">アプリが承認され、パブリック アプリ カタログに表示された後は、Microsoft 365 アプリ コンプライアンス プログラムを完了するか、Web サイトにダウンロード ボタンを追加することで、リーチを拡大できます。</span><span class="sxs-lookup"><span data-stu-id="5d771-105">After your app is approved and listed in the public app catalog, you can increase your reach by completing the Microsoft 365 App Compliance Program or by adding a download button on your website.</span></span>
+<span data-ttu-id="c0dba-104">アプリが Microsoft Teamsストアに表示された状態で、今後アプリを維持する方法について考え始め、ダウンロードと使用状況を増やします。</span><span class="sxs-lookup"><span data-stu-id="c0dba-104">With your app listed on the Microsoft Teams store, start thinking about how you'll maintain the app going forward and increase downloads and usage.</span></span>
 
-## <a name="microsoft-365-certified"></a><span data-ttu-id="5d771-106">Microsoft 365 認定</span><span class="sxs-lookup"><span data-stu-id="5d771-106">Microsoft 365 Certified</span></span>
+## <a name="publish-updates-to-your-app"></a><span data-ttu-id="c0dba-105">アプリに更新プログラムを発行する</span><span class="sxs-lookup"><span data-stu-id="c0dba-105">Publish updates to your app</span></span>
 
-<span data-ttu-id="5d771-107">[Microsoft 365 アプリ コンプライアンス プログラムは](./application-certification.md)、アプリのセキュリティとコンプライアンスに対する 3 層のアプローチです。</span><span class="sxs-lookup"><span data-stu-id="5d771-107">The [Microsoft 365 App Compliance Program](./application-certification.md), is a three tier approach to app security and compliance.</span></span> <span data-ttu-id="5d771-108">各層は、顧客のニーズに合わせて階層化されたプログラムを提供します。</span><span class="sxs-lookup"><span data-stu-id="5d771-108">Each tier builds upon the next – offering a layered program to meet your customer’s needs.</span></span> <span data-ttu-id="5d771-109">Teams アプリのセキュリティとコンプライアンスの姿勢の詳細については、コンプライアンス ページを [参照してください](https://docs.microsoft.com/microsoft-365-app-certification/teams/teams-apps)。</span><span class="sxs-lookup"><span data-stu-id="5d771-109">You can learn more about the security and compliance posture of Teams apps by visiting the [compliance page](https://docs.microsoft.com/microsoft-365-app-certification/teams/teams-apps).</span></span>
+<span data-ttu-id="c0dba-106">パートナー センターでは、アプリに変更 (新機能やメタデータなど) を送信できます。</span><span class="sxs-lookup"><span data-stu-id="c0dba-106">You can submit changes to your app (such as new features or even metadata) in Partner Center.</span></span> <span data-ttu-id="c0dba-107">これらの変更には、新しいレビュー プロセスが必要です。</span><span class="sxs-lookup"><span data-stu-id="c0dba-107">These changes requires a new review process.</span></span>
 
-## <a name="add-a-download-button-to-your-product-site"></a><span data-ttu-id="5d771-110">製品サイトに [ダウンロード] ボタンを追加する</span><span class="sxs-lookup"><span data-stu-id="5d771-110">Add a download button to your product site</span></span>
+<span data-ttu-id="c0dba-108">更新プログラムを発行する場合は、次の情報を確認してください。</span><span class="sxs-lookup"><span data-stu-id="c0dba-108">Ensure the following when publishing updates:</span></span>
 
-<span data-ttu-id="5d771-111">アプリが Microsoft Teams グローバル ストアにある場合は、Teams を起動し、ユーザーがアプリを追加する同意とインストール ダイアログを表示する Web サイトのリンクを生成できます。</span><span class="sxs-lookup"><span data-stu-id="5d771-111">If your app is in the Microsoft Teams global store, you can generate a link for your website that launches Teams and shows a consent and installation dialog for users to add the app.</span></span>
-<span data-ttu-id="5d771-112">形式は `https://teams.microsoft.com/l/app/<appId>` で、appID は、送信されたマニフェストで宣言する GUID です。</span><span class="sxs-lookup"><span data-stu-id="5d771-112">The format is:  `https://teams.microsoft.com/l/app/<appId>` where appID is the GUID they declare in the submitted manifest.</span></span>
-<span data-ttu-id="5d771-113">たとえば、`https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd` は、Trello をインストールするためのリンクになります。</span><span class="sxs-lookup"><span data-stu-id="5d771-113">Example: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd` is the link to install Trello.</span></span>
+* <span data-ttu-id="c0dba-109">アプリ ID を変更しない。</span><span class="sxs-lookup"><span data-stu-id="c0dba-109">Don't change your app ID.</span></span>
+* <span data-ttu-id="c0dba-110">アプリのバージョン番号を増やします。</span><span class="sxs-lookup"><span data-stu-id="c0dba-110">Increment your app's version number.</span></span>
+* <span data-ttu-id="c0dba-111">パートナー センターで、[新しいアプリの追加] **を選択して** 更新を行う必要があります。</span><span class="sxs-lookup"><span data-stu-id="c0dba-111">In Partner Center, don't select **Add a new app** to do the update.</span></span> <span data-ttu-id="c0dba-112">代わりにアプリのページに移動します。</span><span class="sxs-lookup"><span data-stu-id="c0dba-112">Go to your app's page instead.</span></span>
 
-## <a name="updating-your-existing-teams-app"></a><span data-ttu-id="5d771-114">既存の Teams アプリを更新する</span><span class="sxs-lookup"><span data-stu-id="5d771-114">Updating your existing Teams app</span></span>
+### <a name="app-updates-requiring-user-consent"></a><span data-ttu-id="c0dba-113">ユーザーの同意を必要とするアプリの更新</span><span class="sxs-lookup"><span data-stu-id="c0dba-113">App updates requiring user consent</span></span>
 
-* <span data-ttu-id="5d771-115">アプリを再送信する際に、*[新しいアプリの追加]* ボタンは使用しないでください。</span><span class="sxs-lookup"><span data-stu-id="5d771-115">Do not use the *Add a new app* button to resubmit your app.</span></span> <span data-ttu-id="5d771-116">代わりに、[概要] タブのアプリのタイルを使用します。</span><span class="sxs-lookup"><span data-stu-id="5d771-116">Use the tile for your app on the Overview tab instead.</span></span>
-* <span data-ttu-id="5d771-117">更新されたマニフェストの appId は、現在のマニフェストと同じであり、バージョンの番号もインクリメントされている必要があります。</span><span class="sxs-lookup"><span data-stu-id="5d771-117">The appId in the updated manifest should be the same as in the current manifest, with an incremented version number.</span></span>
-* <span data-ttu-id="5d771-118">アプリ名やマニフェスト内のメタデータなど、申請に変更を加えた場合は、マニフェストのバージョン番号を増やします。</span><span class="sxs-lookup"><span data-stu-id="5d771-118">Increment your version number in the manifest if you make any changes to your submission including app name or any metadata in the manifest.</span></span>
-* <span data-ttu-id="5d771-119">新しいレビューと検証プロセスを受けるには、更新された申請が必要です。</span><span class="sxs-lookup"><span data-stu-id="5d771-119">Updated submissions are required to undergo a new review and validation process.</span></span>
+<span data-ttu-id="c0dba-114">ユーザーがアプリをインストールする場合、アプリが機能するために必要なサービスと情報にアクセスするためのアクセス許可をアプリに付与する必要があります。</span><span class="sxs-lookup"><span data-stu-id="c0dba-114">When a user installs your app, they must give the app permission to access the services and information the app requires to function.</span></span> <span data-ttu-id="c0dba-115">ほとんどの場合、ユーザーはこれを行う必要があるだけで、アプリの新しいバージョンが自動的にインストールされます。</span><span class="sxs-lookup"><span data-stu-id="c0dba-115">In most cases, users only have to do this once and new versions of your app install automatically.</span></span>
 
-## <a name="app-updates-and-the-user-consent-flow"></a><span data-ttu-id="5d771-120">アプリの更新とユーザーの同意フロー</span><span class="sxs-lookup"><span data-stu-id="5d771-120">App updates and the user consent flow</span></span>
+<span data-ttu-id="c0dba-116">ただし、アプリに次の変更を加えた場合、既存のユーザーは更新プログラムをインストールするための別のアクセス許可要求を受け入れる必要があります。</span><span class="sxs-lookup"><span data-stu-id="c0dba-116">If you make any of the following changes to your app, however, your existing users must accept another permission request to install the update:</span></span>
 
-<span data-ttu-id="5d771-121">ユーザーがアプリケーションをインストールするとき、まず、アプリがジョブを実行するのに必要なサービスと情報へのアクセス許可をアプリに与えることに同意する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5d771-121">When a user installs your application one of the first things they do is consent to give the app permission to access the services and information that the app needs to do its job.</span></span> <span data-ttu-id="5d771-122">ほとんどの場合、アプリの更新を完了すると、新しいバージョンがエンド ユーザーに自動的に表示されます。</span><span class="sxs-lookup"><span data-stu-id="5d771-122">In most cases, after you complete an app update the new version will automatically appear for end users.</span></span> <span data-ttu-id="5d771-123">ただし、Teams アプリ マニフェストには[](../../../../resources/schema/manifest-schema.md)、完了するためにユーザーの受け入れを必要とする更新プログラムがいくつか含まれています。この同意動作を再トリガーできます。</span><span class="sxs-lookup"><span data-stu-id="5d771-123">However, there are some updates to the [Teams app manifest](../../../../resources/schema/manifest-schema.md) that require user acceptance to complete and can re-trigger this consent behavior:</span></span>
+* <span data-ttu-id="c0dba-117">ボットを追加または削除します。</span><span class="sxs-lookup"><span data-stu-id="c0dba-117">Add or remove a bot.</span></span>
+* <span data-ttu-id="c0dba-118">ボット ID を変更します。</span><span class="sxs-lookup"><span data-stu-id="c0dba-118">Change the bot ID.</span></span>
+* <span data-ttu-id="c0dba-119">ボットの一方通行通知構成を変更します。</span><span class="sxs-lookup"><span data-stu-id="c0dba-119">Modify a bot's one-way notification configuration.</span></span>
+* <span data-ttu-id="c0dba-120">ファイルのアップロードとダウンロードに関するボットのサポートを変更します。</span><span class="sxs-lookup"><span data-stu-id="c0dba-120">Modify a bot's support for uploading and downloading files.</span></span>
+* <span data-ttu-id="c0dba-121">メッセージング拡張機能を追加または削除します。</span><span class="sxs-lookup"><span data-stu-id="c0dba-121">Add or remove a messaging extension.</span></span>
+* <span data-ttu-id="c0dba-122">個人用タブを追加します。</span><span class="sxs-lookup"><span data-stu-id="c0dba-122">Add a personal tab.</span></span>
+* <span data-ttu-id="c0dba-123">[チャネルとグループ] タブを追加します。</span><span class="sxs-lookup"><span data-stu-id="c0dba-123">Add a channel and group tab.</span></span>
+* <span data-ttu-id="c0dba-124">コネクタを追加します。</span><span class="sxs-lookup"><span data-stu-id="c0dba-124">Add a connector.</span></span>
+* <span data-ttu-id="c0dba-125">アプリ登録 (Azure Azure Active Directory) にAD構成を変更します。</span><span class="sxs-lookup"><span data-stu-id="c0dba-125">Modify configurations related to your Azure Active Directory (Azure AD) app registration.</span></span> <span data-ttu-id="c0dba-126">詳細については、「」 を参照してください [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo) 。</span><span class="sxs-lookup"><span data-stu-id="c0dba-126">For more information, see [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).</span></span>
 
- >[!div class="checklist"]
->
-> * <span data-ttu-id="5d771-124">ボットが追加または削除されます。</span><span class="sxs-lookup"><span data-stu-id="5d771-124">A bot is added or removed.</span></span>
-> * <span data-ttu-id="5d771-125">既存のボットの一意の `botId` 値が変更されます。</span><span class="sxs-lookup"><span data-stu-id="5d771-125">An existing bot's unique `botId` value is changed.</span></span>
-> * <span data-ttu-id="5d771-126">既存のボットのブール値 `isNotificationOnly` が変更されます。</span><span class="sxs-lookup"><span data-stu-id="5d771-126">An existing bot's `isNotificationOnly` boolean value is changed.</span></span>
-> * <span data-ttu-id="5d771-127">既存のボットまたはブール値 `supportsFiles` `supportsCalling` が変更されます。</span><span class="sxs-lookup"><span data-stu-id="5d771-127">An existing bot's `supportsFiles` or `supportsCalling` boolean value is changed.</span></span>
-> * <span data-ttu-id="5d771-128">メッセージング拡張機能が `composeExtensions` 追加または削除されます。</span><span class="sxs-lookup"><span data-stu-id="5d771-128">A messaging extension `composeExtensions` is added or removed.</span></span>
-> * <span data-ttu-id="5d771-129">新しいコネクタが追加されます。</span><span class="sxs-lookup"><span data-stu-id="5d771-129">A new connector is added.</span></span>
-> * <span data-ttu-id="5d771-130">新しい静的タブまたは個人用タブが追加されます。</span><span class="sxs-lookup"><span data-stu-id="5d771-130">A new static or personal tab is added.</span></span>
-> * <span data-ttu-id="5d771-131">新しい構成可能なグループまたはチャネル タブが追加されます。</span><span class="sxs-lookup"><span data-stu-id="5d771-131">A new configurable group or channel tab is added.</span></span>
-> * <span data-ttu-id="5d771-132">内部のプロパティ `webApplicationInfo` が変更されます。</span><span class="sxs-lookup"><span data-stu-id="5d771-132">The properties inside `webApplicationInfo` are changed.</span></span> <span data-ttu-id="5d771-133">に対する変更 `webApplicationInfo` については、Teams スコープでのみ同意が必要です。</span><span class="sxs-lookup"><span data-stu-id="5d771-133">For changes to `webApplicationInfo`, consent is only required in the Teams scope.</span></span>
+## <a name="fix-issues-with-your-published-app"></a><span data-ttu-id="c0dba-127">発行済みアプリの問題を修正する</span><span class="sxs-lookup"><span data-stu-id="c0dba-127">Fix issues with your published app</span></span>
 
-### <a name="images-of-user-consent-flow"></a><span data-ttu-id="5d771-134">ユーザーの同意フローのイメージ:</span><span class="sxs-lookup"><span data-stu-id="5d771-134">Images of user consent flow:</span></span>
+<span data-ttu-id="c0dba-128">Microsoft は、アプリ ストアに一覧表示されているアプリで毎日自動化テストTeams実行します。</span><span class="sxs-lookup"><span data-stu-id="c0dba-128">Microsoft runs daily automation tests on apps listed on the Teams store.</span></span> <span data-ttu-id="c0dba-129">アプリに関する問題が特定された場合は、問題を再現する方法と問題を解決するための推奨事項に関する詳細なレポートをお客様に連絡します。</span><span class="sxs-lookup"><span data-stu-id="c0dba-129">If issues with your app are identified, we contact you with a detailed report on how to reproduce the issues and recommendations to resolve them.</span></span> <span data-ttu-id="c0dba-130">指定したタイムライン内で問題を解決できない場合は、アプリの登録情報がストアから削除される可能性があります。</span><span class="sxs-lookup"><span data-stu-id="c0dba-130">If you can't fix the problems within a stated timeline, your app listing may be removed from the store.</span></span>
 
-<span data-ttu-id="5d771-135">**コネクタを設定する** - この画面は Teams ユーザーにのみ表示されます。</span><span class="sxs-lookup"><span data-stu-id="5d771-135">**Set up a connector** —  This screen will appear only for Teams users.</span></span>
+## <a name="promote-your-app-on-another-site"></a><span data-ttu-id="c0dba-131">別のサイトでアプリを宣伝する</span><span class="sxs-lookup"><span data-stu-id="c0dba-131">Promote your app on another site</span></span>
 
-![同意フローのセットアップ コネクタ図](../../../../assets/images/connector-teams-consentflow.png)
+<span data-ttu-id="c0dba-132">アプリが Teams ストアに表示されている場合は、Teamsを起動し、アプリをインストールするダイアログを表示するリンクを作成できます。</span><span class="sxs-lookup"><span data-stu-id="c0dba-132">When your app is listed in the Teams store, you can create a link that launches Teams and displays a dialog to install your app.</span></span> <span data-ttu-id="c0dba-133">たとえば、製品のマーケティング ページにダウンロード ボタンを使用して、このリンクを含めできます。</span><span class="sxs-lookup"><span data-stu-id="c0dba-133">You could include this link, for example, with a download button on your product's marketing page.</span></span>
 
-<span data-ttu-id="5d771-137">**ユーザーの同意フロー** - この画面は、個人スコープとグループ スコープの両方で一般的です。</span><span class="sxs-lookup"><span data-stu-id="5d771-137">**User consent flow** - This screen is common for both personal and group scope.</span></span> <span data-ttu-id="5d771-138">ここでは、[組織の代理 **として同意する** ] チェック ボックスをオンにして、[同意する] を **選択します**。</span><span class="sxs-lookup"><span data-stu-id="5d771-138">Here, select the **Consent on behalf of your organization** checkbox and choose **Accept**.</span></span>
+<span data-ttu-id="c0dba-134">アプリ ID に追加された次の URL を使用してリンクを作成します `https://teams.microsoft.com/l/app/<your-app-id>` 。</span><span class="sxs-lookup"><span data-stu-id="c0dba-134">Create the link using the following URL appended with your app ID: `https://teams.microsoft.com/l/app/<your-app-id>`.</span></span>
 
-![アクセス許可の図](../../../../assets/images/user-consent-flow.png)
+## <a name="complete-microsoft-365-certification"></a><span data-ttu-id="c0dba-135">完全なMicrosoft 365認定</span><span class="sxs-lookup"><span data-stu-id="c0dba-135">Complete Microsoft 365 Certification</span></span>
+
+<span data-ttu-id="c0dba-136">[Microsoft 365認定は](/microsoft-365-app-certification/docs/certification)、サード パーティ製の Office アプリ またはアドインが Microsoft 365 エコシステムにインストールされている場合に、データとプライバシーが適切に保護され、保護されていることを保証します。</span><span class="sxs-lookup"><span data-stu-id="c0dba-136">[Microsoft 365 Certification](/microsoft-365-app-certification/docs/certification) offers assurances that data and privacy are adequately secured and protected when a third-party Office app or add-in is installed in your Microsoft 365 ecosystem.</span></span> <span data-ttu-id="c0dba-137">認定は、アプリが Microsoft テクノロジと互換性があり、クラウド アプリのセキュリティのベスト プラクティスに準拠しており、Microsoft によってサポートされていないことを確認します。</span><span class="sxs-lookup"><span data-stu-id="c0dba-137">Certification confirms that your app is compatible with Microsoft technologies, compliant with cloud app security best practices, and supported by Microsoft.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="c0dba-138">関連項目</span><span class="sxs-lookup"><span data-stu-id="c0dba-138">See also</span></span>
+
+* [<span data-ttu-id="c0dba-139">Microsoft Commercial Marketplace を通してアプリを収益化する</span><span class="sxs-lookup"><span data-stu-id="c0dba-139">Monetize your app through Microsoft Commercial Marketplace</span></span>](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)

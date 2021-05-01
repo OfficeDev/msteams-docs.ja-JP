@@ -1,153 +1,55 @@
 ---
-title: Teams ストアの申請プロセスについて
-description: Microsoft Teams アプリ ストアにアプリを発行する承認申請プロセスについて説明します。
+title: 概要 - アプリ Teams発行プロセスの概要
+description: パートナー センターにアプリを提出し、アプリをパートナー ストア (および AppSource) に発行Microsoft Teamsについて説明します。
 ms.topic: overview
-localization_priority: Normal
-keywords: teams publish store office publishing publish AppSource パートナー センター アカウント検証アプリ アカウントが対象アプリの申請を発行しない
-ms.openlocfilehash: 79584ae1eb0be24b4a66e2421f23dd694f8d610f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+author: heath-hamilton
+ms.author: surbhigupta
+ms.openlocfilehash: 7ae452e6fd013204b622e32fa8187cc69e0b26bf
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019896"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101759"
 ---
-# <a name="submit-your-app-to-appsource"></a><span data-ttu-id="e5d7f-104">アプリを AppSource に送信する</span><span class="sxs-lookup"><span data-stu-id="e5d7f-104">Submit your app to AppSource</span></span>
+# <a name="publish-your-app-to-the-microsoft-teams-store"></a><span data-ttu-id="86e19-103">アプリをアプリストアMicrosoft Teamsする</span><span class="sxs-lookup"><span data-stu-id="86e19-103">Publish your app to the Microsoft Teams store</span></span>
 
-## <a name="teams-app-submission"></a><span data-ttu-id="e5d7f-105">Teams アプリの申請</span><span class="sxs-lookup"><span data-stu-id="e5d7f-105">Teams app submission</span></span>
+<span data-ttu-id="86e19-104">アプリをアプリ内のストアに直接配布Microsoft Teams世界中の何百万人ものユーザーにリーチできます。</span><span class="sxs-lookup"><span data-stu-id="86e19-104">You can distribute your app directly to the store inside Microsoft Teams and reach millions of users around the world.</span></span> <span data-ttu-id="86e19-105">アプリがストアでも機能している場合は、潜在的な顧客に即座にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="86e19-105">If your app is also featured in the store, you can instantly reach potential customers.</span></span>
 
-<span data-ttu-id="e5d7f-106">アプリを AppSource に発行して、Microsoft Teams アプリ カタログと Web 上でアプリを [利用できます](https://appsource.microsoft.com)。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-106">Make your app available in the Microsoft Teams app catalog and on the web by publishing it to [AppSource](https://appsource.microsoft.com).</span></span> <span data-ttu-id="e5d7f-107">高レベルでは、AppSource にアプリを送信するプロセスは次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-107">At a high level, the process for submitting your app to AppSource is as follows:</span></span>
+<span data-ttu-id="86e19-106">また、Teamsストアに発行されたアプリは[、Microsoft AppSource](https://appsource.microsoft.com)に自動的に一覧表示されます。これは、アプリとソリューションのMicrosoft 365マーケットプレースです。</span><span class="sxs-lookup"><span data-stu-id="86e19-106">Apps published to the Teams store also automatically list on [Microsoft AppSource](https://appsource.microsoft.com), which is the official marketplace for Microsoft 365 apps and solutions.</span></span>
 
-1. <span data-ttu-id="e5d7f-108">設計ガイドラインに従ってアプリ [を開発します](~/concepts/design/understand-use-cases.md)。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-108">Develop your app by following the [design guidelines](~/concepts/design/understand-use-cases.md).</span></span> <span data-ttu-id="e5d7f-109">タブは、デスクトップと Web、モバイルの両方のタブ [設計ガイドラインに従う](~/tabs/design/tabs.md) 必要 [があります](~/tabs/design/tabs-mobile.md)。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-109">Tabs must follow the tab design guidelines for both, [desktop and web](~/tabs/design/tabs.md) and [mobile](~/tabs/design/tabs-mobile.md).</span></span> <span data-ttu-id="e5d7f-110">ボットは、ボットの設計 [ガイドラインに従う必要があります](~/bots/design/bots.md)。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-110">Bots must follow the [bot design guidelines](~/bots/design/bots.md).</span></span>
-1. <span data-ttu-id="e5d7f-111">アプリが Microsoft Teams のアプリ [検証ポリシーを満た](/legal/marketplace/certification-policies) している必要があります。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-111">Ensure your app meets the app [validation policies](/legal/marketplace/certification-policies) for Microsoft Teams.</span></span> 
-1. <span data-ttu-id="e5d7f-112">マニフェスト検証ツールを使用 [してアプリをテストします](prepare/submission-checklist.md#teams-app-validation-tool)。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-112">Test your app with the [Manifest validation tool](prepare/submission-checklist.md#teams-app-validation-tool).</span></span>
-1. <span data-ttu-id="e5d7f-113">パートナー センターで[開発者アカウント](/office/dev/store/open-a-developer-account)[を設定します](https://support.microsoft.com/help/4499930/partner-center-overview)。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-113">Set up a [developer account](/office/dev/store/open-a-developer-account) in [Partner Center](https://support.microsoft.com/help/4499930/partner-center-overview).</span></span> <span data-ttu-id="e5d7f-114">*「FAQ」*[セクションの「パートナー センター アカウントを作成する](#how-do-i-create-a-partner-center-account)方法」も参照してください。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-114">*See also* [How do I create a Partner Center account](#how-do-i-create-a-partner-center-account) in the FAQ section.</span></span>
-1. <span data-ttu-id="e5d7f-115">申請チェックリストに従って、アプリを申請 [用に準備します](prepare/submission-checklist.md)。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-115">Prepare your app for submission by following the [submission checklist](prepare/submission-checklist.md).</span></span>
-1. <span data-ttu-id="e5d7f-116">最も [失敗したテスト ケースを確認して、アプリ品質の承認を迅速に行います](prepare/frequently-failed-cases.md)。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-116">Review the [most failed test cases for a quicker app quality approval](prepare/frequently-failed-cases.md).</span></span>
-1. <span data-ttu-id="e5d7f-117">パートナー センターを通じて [AppSource にパッケージを送信します](/office/dev/store/use-partner-center-to-submit-to-appsource)。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-117">Submit your package to [AppSource through Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource).</span></span>
-1. <span data-ttu-id="e5d7f-118">パートナー センター ダッシュボードで承認プロセスを追跡します。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-118">Track the approval process on your Partner Center dashboard.</span></span> <span data-ttu-id="e5d7f-119">*「パートナー* [センターの概要」を参照してください](https://support.microsoft.com/help/4499930/partner-center-overview)。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-119">*See* [Partner Center Overview](https://support.microsoft.com/help/4499930/partner-center-overview).</span></span>
-1. <span data-ttu-id="e5d7f-120">申請後、発行済みアプリの保守と [サポートに関するガイダンスを確認します](post-publish/overview.md)。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-120">After submission, review the guidance for [Maintaining and supporting your published app](post-publish/overview.md).</span></span>
+## <a name="understand-the-publishing-process"></a><span data-ttu-id="86e19-107">発行プロセスについて</span><span class="sxs-lookup"><span data-stu-id="86e19-107">Understand the publishing process</span></span>
 
->[!NOTE]
->
->- <span data-ttu-id="e5d7f-121">Teams アプリはモバイル対応で、モバイル OS [](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment) (iOS と Android) ではアップセルの要件に準拠している必要があります。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-121">Your Teams app must be mobile-responsive and comply with [no upsell requirements](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment) on mobile OS (iOS and Android).</span></span> 
->- <span data-ttu-id="e5d7f-122">Teams アプリにボットが含まれている場合は、Bot Developer Framework Code of [Conduct に準拠する必要があります](https://aka.ms/bf-conduct)。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-122">If your Teams app contains a bot, you must comply with the Bot Developer Framework [Code of Conduct](https://aka.ms/bf-conduct).</span></span>
->- <span data-ttu-id="e5d7f-123">アプリに 365 Connector Office場合は、追加の用語が適用される場合があります。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-123">If your app contains an Office 365 Connector, additional terms may apply.</span></span> <span data-ttu-id="e5d7f-124">[「Connectors Developer Dashboard and App](https://aka.ms/connectorsdashboard) Developer [Agreement」を参照してください](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm)。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-124">See [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard) and [App Developer Agreement](https://sellerdashboard.microsoft.com/Assets/Content/Agreements/Office_Store_Seller_Agreement_20120927.htm).</span></span>
->- <span data-ttu-id="e5d7f-125">アプリを Government Community Cloud (GCC) ユーザーが利用し、ストア内のアプリの登録情報が重複しないようにするには、認証プロセスまたはフローでユーザーを特定し、GCC ユーザーの指定または予想されるコンテンツ URL にルーティングする必要があります。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-125">To make your app available for Government Community Cloud (GCC) users and to avoid duplicate app listings in the store, the auth process or flow must identify and route the user to the specified or expected content URL for GCC users.</span></span>
+:::row:::
+   :::column span="3":::
 
-## <a name="faqs--teams-apps-and-partner-account-verification-process-in-partner-center"></a><span data-ttu-id="e5d7f-126">FAQ - パートナー センターの Teams アプリとパートナー アカウントの確認プロセス</span><span class="sxs-lookup"><span data-stu-id="e5d7f-126">FAQs — Teams apps and Partner account verification process in Partner Center</span></span>
+<span data-ttu-id="86e19-108">アプリの準備が整ったと感じたら、アプリをアプリストアに表示するプロセスをTeamsできます。</span><span class="sxs-lookup"><span data-stu-id="86e19-108">When you feel your app is production ready, you can begin the process of getting it listed on the Teams store.</span></span>
 
-## <a name="how-do-i-create-a-partner-center-account"></a><span data-ttu-id="e5d7f-127">パートナー センター アカウントを作成する方法</span><span class="sxs-lookup"><span data-stu-id="e5d7f-127">How do I create a Partner Center account?</span></span>
+> [!TIP]
+> <span data-ttu-id="86e19-109">提出前の手順を密接に実行すると、Microsoft がアプリの発行を承認する可能性が高い可能性があります。</span><span class="sxs-lookup"><span data-stu-id="86e19-109">Following the pre-submission steps closely can increase the possibility that Microsoft approves your app for publishing.</span></span>
 
-<span data-ttu-id="e5d7f-128">パートナー センター アカウントを作成するには、次の 2 つの方法があります。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-128">There are two ways to create a Partner Center account:</span></span>
+1. <span data-ttu-id="86e19-110">[アプリがTeamsと](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)ストアの標準を満たTeams、ストアの検証ガイドラインを確認します。</span><span class="sxs-lookup"><span data-stu-id="86e19-110">[Review the Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) to make sure your app meets Teams app and store standards.</span></span>
+1. <span data-ttu-id="86e19-111">[パートナー センターの開発者アカウントを作成します](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)。</span><span class="sxs-lookup"><span data-stu-id="86e19-111">[Create a Partner Center developer account](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md).</span></span>
+1. <span data-ttu-id="86e19-112">[自動テストの実行](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)、テスト ノートのコンパイル、ストア登録情報の作成など、レビュー プロセスの迅速化に役立つ重要なタスクを含む、ストア申請を準備します。</span><span class="sxs-lookup"><span data-stu-id="86e19-112">[Prepare your store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md), which includes running automated tests, compiling test notes, creating a store listing, among other important tasks to help expedite the review process.</span></span>
+1. <span data-ttu-id="86e19-113">[パートナー センターからアプリ](https://docs.microsoft.com/office/dev/store/add-in-submission-guide) を提出します。</span><span class="sxs-lookup"><span data-stu-id="86e19-113">[Submit your app](https://docs.microsoft.com/office/dev/store/add-in-submission-guide) through Partner Center.</span></span>
+1. <span data-ttu-id="86e19-114">申請に失敗した場合は、Microsoft と直接作業して問題を解決し、 [アプリを再送信します](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)。</span><span class="sxs-lookup"><span data-stu-id="86e19-114">If your submission fails, work with Microsoft directly to [resolve the issues and resubmit your app](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md).</span></span>
 
-- <span data-ttu-id="e5d7f-129">パートナー センターを利用し、Microsoft ネットワークにアカウントを持ってない場合は、[パートナー センターの登録] ページ [を使用してアカウントを作成します](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment)。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-129">If you are new to Partner Center and don't have an account in the Microsoft network, create an account using the [Partner Center enrollment page](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).</span></span>
-- <span data-ttu-id="e5d7f-130">パートナー ネットワークに既に登録されている場合は、既存の登録ページを使用してパートナー センターに直接 [ アカウントを作成します](/office/dev/store/)。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-130">If you are already enrolled in the Partner Network, create an account directly in Partner Center using an [ existing enrollment page](/office/dev/store/).</span></span>
+   :::column-end:::
+   :::column span="1":::
 
-## <a name="what-if-i-cannot-find-my-office-store-account-in-partner-center"></a><span data-ttu-id="e5d7f-131">パートナー センターで自分のストア Officeが見つからな場合は、</span><span class="sxs-lookup"><span data-stu-id="e5d7f-131">What if I cannot find my Office Store account in Partner Center?</span></span>
+<br>
 
-<span data-ttu-id="e5d7f-132">パートナー センター [のサポート チケットを開](https://partner.microsoft.com/support/v2/?stage=1) き、ドロップダウン メニューから次の項目を選択します。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-132">Open a [Partner Center support ticket](https://partner.microsoft.com/support/v2/?stage=1) and select the following from the drop-down menus:</span></span>
+:::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="アプリ ストア発行プロセスTeamsを示す図。" border="false":::
 
-| <span data-ttu-id="e5d7f-133">メニュー</span><span class="sxs-lookup"><span data-stu-id="e5d7f-133">Menu</span></span> | <span data-ttu-id="e5d7f-134">オプション</span><span class="sxs-lookup"><span data-stu-id="e5d7f-134">Option</span></span> |
-| -------   | -------  |
-|<span data-ttu-id="e5d7f-135">カテゴリ</span><span class="sxs-lookup"><span data-stu-id="e5d7f-135">Category</span></span>| <span data-ttu-id="e5d7f-136">商用マーケットプレース</span><span class="sxs-lookup"><span data-stu-id="e5d7f-136">Commercial Marketplace</span></span>|
-| <span data-ttu-id="e5d7f-137">トピック</span><span class="sxs-lookup"><span data-stu-id="e5d7f-137">Topic</span></span> | <span data-ttu-id="e5d7f-138">一般的な Marketplace のヘルプと使い方に関する質問</span><span class="sxs-lookup"><span data-stu-id="e5d7f-138">General Marketplace Help and How-to questions</span></span> |
-| <span data-ttu-id="e5d7f-139">サブトピック</span><span class="sxs-lookup"><span data-stu-id="e5d7f-139">Subtopic</span></span>| <span data-ttu-id="e5d7f-140">Office アドイン</span><span class="sxs-lookup"><span data-stu-id="e5d7f-140">Office add-in</span></span> |
+   :::column-end:::
+:::row-end:::
 
-## <a name="where-can-i-get-support-for-my-partner-center-account-issues"></a><span data-ttu-id="e5d7f-141">パートナー センター アカウントの問題のサポートはどこで受け取れるのですか?</span><span class="sxs-lookup"><span data-stu-id="e5d7f-141">Where can I get support for my Partner Center account issues?</span></span>
+## <a name="see-also"></a><span data-ttu-id="86e19-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="86e19-116">See also</span></span>
 
-<span data-ttu-id="e5d7f-142">発行元 [のサポート ページにアクセスして](https://aka.ms/marketplacepublishersupport) 、問題のトピックを検索し、ガイダンスを見つける。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-142">Visit the [publishers support page](https://aka.ms/marketplacepublishersupport) to search for your issue topic and find guidance.</span></span> <span data-ttu-id="e5d7f-143">提供されたガイダンスが役に立たない場合は、パートナー センター [のサポート チケットを引き上げてください](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket)。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-143">If the provided guidance is not helpful, raise a [Partner Center support ticket](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket).</span></span>
+* [<span data-ttu-id="86e19-117">アプリ ストアMicrosoft 365発行する</span><span class="sxs-lookup"><span data-stu-id="86e19-117">Publishing to Microsoft 365 App Stores</span></span>](https://docs.microsoft.com/office/dev/store/)
+* [<span data-ttu-id="86e19-118">アップロードアプリTeamsする</span><span class="sxs-lookup"><span data-stu-id="86e19-118">Upload your Teams app</span></span>](~/concepts/deploy-and-publish/apps-upload.md)
+* [<span data-ttu-id="86e19-119">組織にTeamsアプリを発行する</span><span class="sxs-lookup"><span data-stu-id="86e19-119">Publish your Teams app to your org</span></span>](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
 
-## <a name="how-do-i-manage-my-office-store-account-in-partner-center"></a><span data-ttu-id="e5d7f-144">パートナー センターで自分のストア Officeを管理する方法</span><span class="sxs-lookup"><span data-stu-id="e5d7f-144">How do I manage my Office Store account in Partner Center?</span></span>
+## <a name="next-step"></a><span data-ttu-id="86e19-120">次の手順</span><span class="sxs-lookup"><span data-stu-id="86e19-120">Next step</span></span>
 
-<span data-ttu-id="e5d7f-145">ガイダンスについては [、「パートナー センター Officeストアの管理」アカウントを](/office/dev/store/manage-account-settings-and-profile) 参照してください。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-145">Visit the [Manage your Office Store account through Partner Center](/office/dev/store/manage-account-settings-and-profile) for guidance.</span></span>
-
-## <a name="how-do-i-add-my-phone-number-to-the-partner-profile-contact-section"></a><span data-ttu-id="e5d7f-146">パートナー プロファイル連絡先セクションに電話番号を追加する方法</span><span class="sxs-lookup"><span data-stu-id="e5d7f-146">How do I add my phone number to the partner profile contact section?</span></span>
-
-<span data-ttu-id="e5d7f-147">電話番号には、国コード、地域コード、電話番号の 3 つの部分があります。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-147">The phone number has three parts, country code, area code, and telephone number.</span></span> <span data-ttu-id="e5d7f-148">電話番号にエリア コードが含されていない場合は、2 番目のボックスを空のままにして、3 番目のボックスを完成します。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-148">If your phone number doesn't include an area code, then leave the second box empty, and complete the third box.</span></span>
-
-## <a name="how-do-i-manage-my-account-settings-and-partner-profile-in-partner-center"></a><span data-ttu-id="e5d7f-149">パートナー センターでアカウント設定とパートナー プロファイルを管理する方法</span><span class="sxs-lookup"><span data-stu-id="e5d7f-149">How do I manage my account settings and partner profile in Partner Center?</span></span>
-
-<span data-ttu-id="e5d7f-150">パートナー センター の [アカウント設定の管理に関する](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) ガイダンスについては、「アカウント設定とプロファイル情報の管理」ページをご覧ください。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-150">Visit the [Manage account settings and profile info](/windows/uwp/publish/manage-account-settings-and-profile#additional-settings-and-info) page for guidance on managing your Partner Center account settings.</span></span>
-
-## <a name="why-do-i-receive-the-message-this-account-is-not-publish-eligible-when-i-try-to-submit-my-add-in-through-partner-center"></a><span data-ttu-id="e5d7f-151">パートナー センターを通じてアドインを提出しようとするときに、「このアカウントは発行対象ではありません」というメッセージが表示される理由</span><span class="sxs-lookup"><span data-stu-id="e5d7f-151">Why do I receive the message, "This account is not publish eligible," when I try to submit my add-in through Partner Center?</span></span>
-
-<span data-ttu-id="e5d7f-152">アカウント検証の状態が保留中の場合、上記 [のエラー メッセージ](/partner-center/verification-responses) が表示されます。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-152">You receive the above error message when your [account verification status](/partner-center/verification-responses) is pending.</span></span> <span data-ttu-id="e5d7f-153">パートナー センター ダッシュボードでアカウント検証の状態を確認  [します](https://partner.microsoft.com/dashboard)。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-153">Check your account verification status in the Partner Center  [dashboard](https://partner.microsoft.com/dashboard).</span></span> <span data-ttu-id="e5d7f-154">[ **設定]** を選択し、ページ ヘッダー シェルの右上隅にある歯車アイコンを選択します。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-154">Select **Settings**, the gear icon in the upper-right corner of the page header shell.</span></span> <span data-ttu-id="e5d7f-155">[開発者 **設定] [**  =>  **アカウント**   =>  **アカウントの設定] を選択します**。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-155">Choose **Developer settings** => **Account**  => **Account settings**.</span></span>
-
-![パートナー センター のアカウント設定ページ](../../../assets/images/partner-center-accts-page.png)
-
-![パートナー センターの検証状態](../../../assets/images/partner-center-verification-status.png)
-
-<span data-ttu-id="e5d7f-158">電子メールの所有権、雇用の検証、ビジネス検証など、必要な各手順の状態がアカウント検証プロセスに表示されます。 </span><span class="sxs-lookup"><span data-stu-id="e5d7f-158">The status of each required step, such as **Email Ownership**, **Employment Verification**, and **Business Verification**, are displayed in the account verification process.</span></span> <span data-ttu-id="e5d7f-159">検証プロセスが完了すると、プロファイル ページの登録の確認状態が保留中から承認済み *に\*\*変わります*。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-159">After the verification process is complete, the verification status of your enrollment on the profile page changes from *pending* to *authorized*.</span></span> <span data-ttu-id="e5d7f-160">プロセス手順は表示されなくなりました。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-160">The process steps are no longer displayed.</span></span>
-
-![パートナー センターの検証エラー](../../../assets/images/partner-center-acct-verification-error.png)
-
-## <a name="what-is-verified-in-the-partner-center-account-verification-process-and-how-to-respond"></a><span data-ttu-id="e5d7f-162">パートナー センター のアカウント検証プロセスで確認される情報と対応方法</span><span class="sxs-lookup"><span data-stu-id="e5d7f-162">What is verified in the Partner Center account verification process and how to respond?</span></span>
-<span data-ttu-id="e5d7f-163">検証領域は、電子メールの所有権 **、雇用、** およびビジネスの **3\*\*\*\*つがあります**。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-163">There are three verification areas, **Email Ownership**, **Employment**, and **Business**.</span></span> <span data-ttu-id="e5d7f-164">検証プロセスの詳細については、「確認される処理と応答 [方法」を参照してください](/partner-center/verification-responses#what-is-verified-and-how-to-respond)。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-164">For more information on the verification process, see [What is verified and how to respond](/partner-center/verification-responses#what-is-verified-and-how-to-respond).</span></span>
-<span data-ttu-id="e5d7f-165">プライマリ連絡先、グローバル管理者、またはアカウント管理者の場合は、パートナー プロファイルに移動して検証の状態を監視し、進行状況を追跡します。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-165">If you are the primary contact, Global admin, or Account admin, go to your Partner Profile to monitor verification status and track the progress.</span></span>
-
-<span data-ttu-id="e5d7f-166">検証プロセスが完了すると、プロファイル ページの登録の確認状態が保留中から承認済み *に\*\*変わります*。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-166">After the verification process is complete, the verification status of your enrollment on the profile page changes from *pending* to *authorized*.</span></span> <span data-ttu-id="e5d7f-167">承認後、プロセスの手順とその状態はページで使用できなくなりました。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-167">After authorization, the process steps and their status are no longer available on the page.</span></span> <span data-ttu-id="e5d7f-168">プライマリ連絡先は、検証が完了した数営業日以内に Microsoft から電子メールを受信します。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-168">The primary contact receives an email from Microsoft within a few business days after the verification is complete.</span></span>
-
-## <a name="my-account-verification-status-has-not-advanced-beyond-email-ownership-in-the-partner-center-how-should-i-proceed"></a><span data-ttu-id="e5d7f-169">パートナー センターの [メールの所有権] を超えて、アカウントの検証の状態が進んだのではありません。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-169">My account Verification status has not advanced beyond Email Ownership in the Partner Center.</span></span> <span data-ttu-id="e5d7f-170">どのように進める必要がありますか?</span><span class="sxs-lookup"><span data-stu-id="e5d7f-170">How should I proceed?</span></span>
-
-<span data-ttu-id="e5d7f-171">電子メール **所有権の検証** プロセス中に、確認メールがプライマリ連絡先の電子メール アドレスに送信されます。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-171">During the **Email Ownership** verification process, a verification email is sent to the primary contact email address.</span></span> <span data-ttu-id="e5d7f-172">メインの連絡先の受信トレイで、microsoft **.com maccount@<span>の</span>** メールを確認します。件名の [アクションが必要です: Microsoft でメール アカウントを確認する] を *クリックします*。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-172">Check your primary contact inbox for an email from **maccount@<span>microsoft</span>.com** with the subject line *Action needed: Verify your email account with Microsoft*.</span></span> <span data-ttu-id="e5d7f-173">電子メールの検証プロセスを完了します。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-173">Complete the email verification process.</span></span> <span data-ttu-id="e5d7f-174">確認メールは、パートナー センターの [アカウント設定] ページに記載されているメール アドレスに送信されます。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-174">The verification email is sent to the email address listed on your account settings page in Partner Center.</span></span>
-
-> [!NOTE]
-> * <span data-ttu-id="e5d7f-175">電子メール検証リンクは 7 日間のみ有効です。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-175">The email verification link is only valid for seven days.</span></span> 
-> * <span data-ttu-id="e5d7f-176">パートナー プロファイル ページにアクセスし、[確認メールの再送信] リンクを選択すると、メールの再送信を **要求** できます。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-176">You can request us to resend the email by visiting your partner profile page and selecting the **Resend verification email** link.</span></span>
-> * <span data-ttu-id="e5d7f-177">メールを確実に受信するには、セキュリティで保護されたドメイン microsoft.com メールを安全に一覧表示し、迷惑メール フォルダーを確認します。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-177">To ensure that email is received, safe list the email from microsoft.com as a secure domain, and check your junk email folders.</span></span>
-
-## <a name="how-do-i-get-further-support-for-my-account-related-issues"></a><span data-ttu-id="e5d7f-178">アカウントに関連する問題のサポートを受け取る方法</span><span class="sxs-lookup"><span data-stu-id="e5d7f-178">How do I get further support for my account related issues?</span></span>
-
-<span data-ttu-id="e5d7f-179">サポート チケット [を作成するためのガイダンスと](/azure/marketplace/partner-center-portal/support) 手順については、「パートナー センターの商用マーケットプレース プログラムのサポート」ページをご覧ください。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-179">Visit the [Support for the Commercial Marketplace program in Partner Center](/azure/marketplace/partner-center-portal/support) page for guidance and steps to create a support ticket.</span></span>
-
-## <a name="ive-checked-my-mail-folders-and-havent-received-the-verification-email-what-must-i-do-next"></a><span data-ttu-id="e5d7f-180">メール フォルダーを確認し、確認メールを受信していない。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-180">I've checked my mail folders and haven't received the verification email.</span></span> <span data-ttu-id="e5d7f-181">次に何をする必要がありますか?</span><span class="sxs-lookup"><span data-stu-id="e5d7f-181">What must I do next?</span></span>
-
-<span data-ttu-id="e5d7f-182">以下の操作を試してください。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-182">Try the following:</span></span>
-* <span data-ttu-id="e5d7f-183">迷惑メールフォルダーまたはスパム フォルダーを確認します。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-183">Check your junk or spam folder.</span></span>
-* <span data-ttu-id="e5d7f-184">ブラウザー キャッシュをクリアし、パートナー センター アカウント ダッシュボードに移動し、[確認メールの再送信] リンクを選択して、確認メールを電子メール アドレスに再送信します。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-184">Clear the browser cache, go to your Partner Center account dashboard, and select the **Resend verification email** link to have the verification email resent to your email address.</span></span>
-* <span data-ttu-id="e5d7f-185">別のブラウザーから **[再送信確認メール** ] リンクにアクセスしてみてください。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-185">Try accessing the **Resend verification email** link from a different browser.</span></span>
-* <span data-ttu-id="e5d7f-186">IT 部門と一緒に作業して、確認メールが電子メール サーバーによってブロックされていないことを確認します。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-186">Work with your IT department to ensure that the verification emails are not blocked by the email server.</span></span>
-* <span data-ttu-id="e5d7f-187">サーバーのスパム フィルターを調整して、サーバーからのすべてのメールを許可または **maccount@microsoft。 <span></span>com**.</span><span class="sxs-lookup"><span data-stu-id="e5d7f-187">Adjust your server's spam filter to allow or safe-list all emails from **maccount@microsoft.<span></span>com**.</span></span>
-
-## <a name="how-long-does-the-employment-verification-process-usually-take"></a><span data-ttu-id="e5d7f-188">通常、雇用確認プロセスにはどのくらいの時間が必要ですか?</span><span class="sxs-lookup"><span data-stu-id="e5d7f-188">How long does the employment verification process usually take?</span></span>
-
-<span data-ttu-id="e5d7f-189">提出された詳細が正しい場合、雇用確認プロセスの完了には約 2 時間かかります。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-189">If all the submitted details are correct, the employment verification process takes around two hours to complete.</span></span>
-
-## <a name="how-long-does-the-business-verification-process-usually-take"></a><span data-ttu-id="e5d7f-190">ビジネス検証プロセスには通常どれくらいの時間が必要ですか?</span><span class="sxs-lookup"><span data-stu-id="e5d7f-190">How long does the business verification process usually take?</span></span>
-
-<span data-ttu-id="e5d7f-191">必要なすべてのドキュメントが提出された場合、ビジネス検証の完了には 1 日から 2 営業日かかります。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-191">If all the required documents are submitted, business verification takes one to two business days to complete.</span></span>
-
-## <a name="if-i-reach-out-to-the-support-team-will-my-ticket-be-expedited"></a><span data-ttu-id="e5d7f-192">サポート チームに連絡を取った場合、チケットは迅速に行いますか?</span><span class="sxs-lookup"><span data-stu-id="e5d7f-192">If I reach out to the support team, will my ticket be expedited?</span></span>
-
-<span data-ttu-id="e5d7f-193">サポート チケットは 1 週間で解決されます。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-193">Support tickets get resolved in a week.</span></span> <span data-ttu-id="e5d7f-194">サポート チケットを引き上げる際に提供されたメール ID に送信される更新プログラムを確認します。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-194">Check for updates sent to the email ID provided when raising the support ticket.</span></span>
-
-## <a name="my-issue-is-not-listed-here-are-there-other-pages-i-can-reference-for-partner-center-issues"></a><span data-ttu-id="e5d7f-195">ここでは、問題は一覧に表示されません。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-195">My issue is not listed here.</span></span> <span data-ttu-id="e5d7f-196">パートナー センターの問題に関して参照できるページは他にもありますか?</span><span class="sxs-lookup"><span data-stu-id="e5d7f-196">Are there other pages I can reference for Partner Center issues?</span></span>
-
-<span data-ttu-id="e5d7f-197">詳細については [、商用マーケットプレースのドキュメント](/azure/marketplace/) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-197">See the [commercial marketplace documentation](/azure/marketplace/) for more help.</span></span>
-
-## <a name="ive-created-a-support-ticket-it-has-been-7-business-days-and-i-havent-received-an-update-where-can-i-get-additional-help"></a><span data-ttu-id="e5d7f-198">サポート チケットを作成しました。7 営業日が過ごし、更新プログラムを受け取っていない。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-198">I've created a support ticket, it has been 7 business days, and I haven't received an update.</span></span> <span data-ttu-id="e5d7f-199">追加のヘルプはどこで受け取れるのですか?</span><span class="sxs-lookup"><span data-stu-id="e5d7f-199">Where can I get additional help?</span></span>
-
-<span data-ttu-id="e5d7f-200">次の詳細を含 **<teamsubm@microsoft.com>** むメールを送信します。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-200">Send an email to **<teamsubm@microsoft.com>** with the following details:</span></span>
-
-* <span data-ttu-id="e5d7f-201">**件名 :** パートナー センター アカウントの問題 (<App_Name>名を指定します)。</span><span class="sxs-lookup"><span data-stu-id="e5d7f-201">**Subject Line**: Partner Center Account Issue for <App_Name> (specify the name of your app).</span></span>
-* <span data-ttu-id="e5d7f-202">**メール本文**:</span><span class="sxs-lookup"><span data-stu-id="e5d7f-202">**Email body**:</span></span>
-    * <span data-ttu-id="e5d7f-203">サポート チケット番号</span><span class="sxs-lookup"><span data-stu-id="e5d7f-203">Support ticket number</span></span>
-    * <span data-ttu-id="e5d7f-204">販売者 ID</span><span class="sxs-lookup"><span data-stu-id="e5d7f-204">Your seller ID</span></span>
-    * <span data-ttu-id="e5d7f-205">問題のスクリーンショット (可能な場合)</span><span class="sxs-lookup"><span data-stu-id="e5d7f-205">A screenshot of the issue (if possible)</span></span>
-    
-## <a name="app-category-mapping"></a><span data-ttu-id="e5d7f-206">アプリ カテゴリのマッピング</span><span class="sxs-lookup"><span data-stu-id="e5d7f-206">App category mapping</span></span>
-
-| <span data-ttu-id="e5d7f-207">Teams カテゴリ</span><span class="sxs-lookup"><span data-stu-id="e5d7f-207">Teams Category</span></span>       | <span data-ttu-id="e5d7f-208">PC カテゴリ</span><span class="sxs-lookup"><span data-stu-id="e5d7f-208">PC Categories</span></span>  |
-|:---------------------|:---------------|
-| <span data-ttu-id="e5d7f-209">分析と BI</span><span class="sxs-lookup"><span data-stu-id="e5d7f-209">Analytics and BI</span></span> | <span data-ttu-id="e5d7f-210">分析、データ可視化、BI</span><span class="sxs-lookup"><span data-stu-id="e5d7f-210">Analytics, Data Visualization and BI</span></span> |
-| <span data-ttu-id="e5d7f-211">開発者と IT</span><span class="sxs-lookup"><span data-stu-id="e5d7f-211">Developer and IT</span></span> | <span data-ttu-id="e5d7f-212">開発者ツール、IT 管理者</span><span class="sxs-lookup"><span data-stu-id="e5d7f-212">Developer Tools, IT Admin</span></span> |
-| <span data-ttu-id="e5d7f-213">教育</span><span class="sxs-lookup"><span data-stu-id="e5d7f-213">Education</span></span> | <span data-ttu-id="e5d7f-214">教育</span><span class="sxs-lookup"><span data-stu-id="e5d7f-214">Education</span></span> |
-| <span data-ttu-id="e5d7f-215">人事管理</span><span class="sxs-lookup"><span data-stu-id="e5d7f-215">Human resources</span></span> | <span data-ttu-id="e5d7f-216">人事と採用</span><span class="sxs-lookup"><span data-stu-id="e5d7f-216">Human Resources and Recruiting</span></span> |
-| <span data-ttu-id="e5d7f-217">生産性</span><span class="sxs-lookup"><span data-stu-id="e5d7f-217">Productivity</span></span> | <span data-ttu-id="e5d7f-218">コンテンツ管理、ファイルとドキュメント、生産性、トレーニングとチュートリアル、ユーティリティ</span><span class="sxs-lookup"><span data-stu-id="e5d7f-218">Content Management, Files and documents, Productivity, Training and Tutorials, and Utilities</span></span> |
-| <span data-ttu-id="e5d7f-219">プロジェクト管理</span><span class="sxs-lookup"><span data-stu-id="e5d7f-219">Project management</span></span> | <span data-ttu-id="e5d7f-220">コミュニケーション、プロジェクト管理、ワークフロー、およびビジネス管理</span><span class="sxs-lookup"><span data-stu-id="e5d7f-220">Communication, Project Management, Workflow, and Business Management</span></span> |
-| <span data-ttu-id="e5d7f-221">販売とサポート</span><span class="sxs-lookup"><span data-stu-id="e5d7f-221">Sales and support</span></span> | <span data-ttu-id="e5d7f-222">顧客と連絡先の管理、カスタマー サポート、財務管理、営業およびマーケティング</span><span class="sxs-lookup"><span data-stu-id="e5d7f-222">Customer and Contact Management, Customer Support, Financial Management, Sales and Marketing</span></span> |
-| <span data-ttu-id="e5d7f-223">ソーシャルで楽しい</span><span class="sxs-lookup"><span data-stu-id="e5d7f-223">Social and fun</span></span> | <span data-ttu-id="e5d7f-224">画像とビデオ ギャラリー、ライフスタイル、ニュースと天気予報、ソーシャル、旅行、ナビゲーション</span><span class="sxs-lookup"><span data-stu-id="e5d7f-224">Image and Video Galleries, Lifestyle, News and Weather, Social, Travel, and Navigation</span></span> |
-
->
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="e5d7f-225">Microsoft Teams のアプリ検証ポリシーの詳細</span><span class="sxs-lookup"><span data-stu-id="e5d7f-225">Learn more about app validation policies for Microsoft Teams</span></span>](/legal/marketplace/certification-policies)
+> [<span data-ttu-id="86e19-121">ストアの検証ガイドラインを確認する</span><span class="sxs-lookup"><span data-stu-id="86e19-121">Review store validation guidelines</span></span>](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)

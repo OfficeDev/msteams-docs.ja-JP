@@ -1,97 +1,197 @@
 ---
-title: ストア提出チェックリスト
-description: Microsoft Teams アプリを AppSource に発行する前に使用するチェックリスト
-ms.topic: reference
+title: ストア申請の準備
+description: ストアに一覧表示するアプリをMicrosoft Teamsする前の最後の手順について説明します。
+ms.topic: how-to
 localization_priority: Normal
-keywords: teams 発行ストア オフィス発行チェックリスト申請 Teams アプリ appsource 検証
-ms.openlocfilehash: 1e7698e143d313ce46b834eada608571e3280b8a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+author: heath-hamilton
+ms.author: surbhigupta
+ms.openlocfilehash: d46d21c3d984b5688c00857e485210b0f0fcf2c7
+ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020787"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "52101682"
 ---
-# <a name="prepare-for-appsource-submission"></a><span data-ttu-id="48ee5-104">AppSource 申請の準備</span><span class="sxs-lookup"><span data-stu-id="48ee5-104">Prepare for AppSource submission</span></span>  
+# <a name="prepare-your-microsoft-teams-store-submission"></a><span data-ttu-id="51812-103">ストア申請Microsoft Teams準備する</span><span class="sxs-lookup"><span data-stu-id="51812-103">Prepare your Microsoft Teams store submission</span></span>
 
-<span data-ttu-id="48ee5-105">AppSource に一覧表示するには、アプリが承認プロセスを通過する必要があります。</span><span class="sxs-lookup"><span data-stu-id="48ee5-105">To be listed on AppSource, your app must go through an approval process.</span></span> <span data-ttu-id="48ee5-106">これは、Microsoft Teams グループが提供する無料のサービスで、アプリが説明に従って動作し、適切なすべてのメタデータを含み、エンド ユーザーにとって価値のあるコンテンツを提供します。</span><span class="sxs-lookup"><span data-stu-id="48ee5-106">This is a free service provided by the Microsoft Teams group that verifies that your app works as described, contains all appropriate metadata, and provides content that would be valuable to an end user.</span></span> <span data-ttu-id="48ee5-107">迅速な承認を実現するために、アプリが次の要件とガイドラインを満たしていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="48ee5-107">To help you achieve rapid approval, ensure your app meets the following requirements and guidelines:</span></span>
+<span data-ttu-id="51812-104">アプリの設計、構築、テストMicrosoft Teamsしました。</span><span class="sxs-lookup"><span data-stu-id="51812-104">You've designed, built, and tested your Microsoft Teams app.</span></span> <span data-ttu-id="51812-105">これで、ユーザーがアプリを検出して使用を開始できるよう、リストを作成する準備ができました。</span><span class="sxs-lookup"><span data-stu-id="51812-105">Now you're ready to list it so people can discover and start using your app.</span></span>
 
-* <span data-ttu-id="48ee5-108">**配布方法:** アプリがストア プラットフォームでの公開を意図することを確認します。</span><span class="sxs-lookup"><span data-stu-id="48ee5-108">**Distribution method:** Make sure your app is meant for publication on a store platform.</span></span> <span data-ttu-id="48ee5-109">AppSource [に発行](../../overview.md) せずにアプリを配布する他のオプションがあります。</span><span class="sxs-lookup"><span data-stu-id="48ee5-109">There are [other options](../../overview.md) to distribute your app without publishing to AppSource.</span></span>
-* <span data-ttu-id="48ee5-110">**検証ポリシー:** アプリは、申請の前に、 [現在のすべての AppSource 検証ポリシーを渡](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) す必要があります。</span><span class="sxs-lookup"><span data-stu-id="48ee5-110">**Validation policies:** Your app must pass all current [AppSource validation policies](https://docs.microsoft.com/legal/marketplace/certification-policies#1140-teams) before submission.</span></span> 
-  > [!NOTE] 
-  > <span data-ttu-id="48ee5-111">Appsource 検証ポリシーは変更される可能性があります。</span><span class="sxs-lookup"><span data-stu-id="48ee5-111">The Appsource validation policies are subject to change.</span></span>
-* <span data-ttu-id="48ee5-112">**モバイルの準備:** アプリはモバイル対応である必要があります。</span><span class="sxs-lookup"><span data-stu-id="48ee5-112">**Mobile readiness:** Your app must be mobile responsive.</span></span> <span data-ttu-id="48ee5-113">アプリにタブが含まれている場合は、モバイル設計[](~/tabs/design/tabs-mobile.md)ガイドラインに従う必要があります。アプリはモバイル[](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment)OS (iOS と Android) でアップセルの要件を満たさなければならない必要があります。</span><span class="sxs-lookup"><span data-stu-id="48ee5-113">If your app contains tabs, they must follow the [mobile design guidelines](~/tabs/design/tabs-mobile.md) and your app must comply with [no upsell requirements](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#-mobile-responsiveness-no-direct-upsell-or-payment) on mobile OS (iOS and Android).</span></span>
-* <span data-ttu-id="48ee5-114">**アプリの自己テスト:** マニフェスト検証ツールを使用 [してアプリをテストします](#teams-app-validation-tool)。</span><span class="sxs-lookup"><span data-stu-id="48ee5-114">**Self test your app:** Test your app using the [Manifest validation tool](#teams-app-validation-tool).</span></span>
-* <span data-ttu-id="48ee5-115">**アプリの詳細ページ:** アプリは、アプリの詳細ページチェックリスト  [と一致している必要があります](detail-page-checklist.md)。</span><span class="sxs-lookup"><span data-stu-id="48ee5-115">**App detail page:** Your app must align with the  [App detail page checklist](detail-page-checklist.md).</span></span>
-* <span data-ttu-id="48ee5-116">**ヒントと頻繁に失敗するケース:** アプリの申請と承認時間を改善するために、リストされている [ヒント](frequently-failed-cases.md)  と頻繁に失敗したケースに特に注意してください。</span><span class="sxs-lookup"><span data-stu-id="48ee5-116">**Tips and frequently failed cases:** Pay extra attention to the listed [Tips and frequently failed cases](frequently-failed-cases.md)  to improve your app submission and approval time.</span></span>
-* <span data-ttu-id="48ee5-117">**アプリ マニフェスト:** アプリ マニフェストのチェックリストに対して [アプリ マニフェストを確認します](app-manifest-checklist.md)。</span><span class="sxs-lookup"><span data-stu-id="48ee5-117">**App manifest:** Check your app manifest against the [App manifest checklist](app-manifest-checklist.md).</span></span>
-* <span data-ttu-id="48ee5-118">**テストとデバッグ:** アプリを完全にテストしてデバッグ [したと確認します](../../../build-and-test/debug.md)。</span><span class="sxs-lookup"><span data-stu-id="48ee5-118">**Testing and debugging:** Make certain that you have fully [tested and debugged your app](../../../build-and-test/debug.md).</span></span>
-* <span data-ttu-id="48ee5-119">**テストノート:** 検証用 [のテスト ノートを含める](#test-notes-for-validation)</span><span class="sxs-lookup"><span data-stu-id="48ee5-119">**Testing notes:** Include your [test notes for validation](#test-notes-for-validation)</span></span>
-* <span data-ttu-id="48ee5-120">**プライバシー ポリシー:** プライバシー ポリシー [、使用条件](#privacy-policy-terms-of-use-and-support-urls) 、およびサポート URL がガイドラインに従う必要があります。</span><span class="sxs-lookup"><span data-stu-id="48ee5-120">**Privacy policies:** Ensure your [privacy policy, terms of use and support URLs](#privacy-policy-terms-of-use-and-support-urls) follow our guidelines.</span></span>
+<span data-ttu-id="51812-106">アプリをパートナー センターに [提出する前](/office/dev/store/use-partner-center-to-submit-to-appsource)に、次の手順を実行してください。</span><span class="sxs-lookup"><span data-stu-id="51812-106">Before you submit your app to [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource), make sure you've done the following.</span></span>
 
-<span data-ttu-id="48ee5-121">上記のすべての要件を完了したら、パートナー センターから AppSource にパッケージを [提出します](/office/dev/store/use-partner-center-to-submit-to-appsource)。</span><span class="sxs-lookup"><span data-stu-id="48ee5-121">Once you have completed all of the above requirements, submit your package to AppSource through [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource).</span></span>
+## <a name="validate-your-app-package"></a><span data-ttu-id="51812-107">アプリ パッケージの検証</span><span class="sxs-lookup"><span data-stu-id="51812-107">Validate your app package</span></span>
 
-## <a name="teams-app-validation-tool"></a><span data-ttu-id="48ee5-122">Teams アプリ検証ツール</span><span class="sxs-lookup"><span data-stu-id="48ee5-122">Teams App Validation Tool</span></span>
+<span data-ttu-id="51812-108">アプリがテスト環境で動作している場合は、申請プロセス中に問題が発生しないようにアプリ パッケージを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="51812-108">While your app may be working in a test environment, you should check your app package to avoid running into issues during the submission process.</span></span>
 
-<span data-ttu-id="48ee5-123">アプリ検証ツールは、アプリ検証ツール [と予備](#teams-app-validator) チェックリスト [で構成されます](#preliminary-checklist)。</span><span class="sxs-lookup"><span data-stu-id="48ee5-123">The app validation tool consists of an [app validator](#teams-app-validator) and a [preliminary checklist](#preliminary-checklist).</span></span> <span data-ttu-id="48ee5-124">このツールは [、AppSource](/office/dev/store/submit-to-appsource-via-partner-center) がアプリの申請を評価するために使用するのと同じテスト ケースをレプリケートします。</span><span class="sxs-lookup"><span data-stu-id="48ee5-124">The tool replicates the same test cases used by [AppSource](/office/dev/store/submit-to-appsource-via-partner-center) to evaluate your app submission.</span></span> <span data-ttu-id="48ee5-125">したがって、ソリューションを承認のために AppSource に提出する前に、すべてのテスト ケースに合格することが重要です。このツールは、Teams プラットフォーム内のいくつかの領域で確認できます。</span><span class="sxs-lookup"><span data-stu-id="48ee5-125">Therefore,  it's crucial to pass all the test cases prior to submitting your solution to AppSource for approval.The tool can be found in several areas within the Teams platform:</span></span>
+<span data-ttu-id="51812-109">アプリMicrosoft Teamsツールを使用すると、パートナー センターに提出する前に問題を特定して修正できます。</span><span class="sxs-lookup"><span data-stu-id="51812-109">The Microsoft Teams app validation tool helps you identify and fix issues before submitting to Partner Center.</span></span> <span data-ttu-id="51812-110">このツールは、ストアの検証中に使用したのと同じテスト ケースに対して、アプリの構成を自動的にチェックします。</span><span class="sxs-lookup"><span data-stu-id="51812-110">The tool automatically checks your app's configurations against the same test cases used during store validation.</span></span>
 
-> [!div class="checklist"]
->
-> * [<span data-ttu-id="48ee5-126">**アプリ検証機能のホームページ**</span><span class="sxs-lookup"><span data-stu-id="48ee5-126">**App Validator homepage**</span></span>](https://dev.teams.microsoft.com/appvalidation.html)
-> * [<span data-ttu-id="48ee5-127">**Teams Visual Studio コード ツールキット**</span><span class="sxs-lookup"><span data-stu-id="48ee5-127">**Teams Visual Studio Code toolkit**</span></span>](/toolkit/visual-studio-code-overview.md)
-> * [<span data-ttu-id="48ee5-128">**App Studio**</span><span class="sxs-lookup"><span data-stu-id="48ee5-128">**App Studio**</span></span>](../../../build-and-test/app-studio-overview.md)
+1. <span data-ttu-id="51812-111">アプリ検証ツール[Microsoft Teamsに移動します](https://dev.teams.microsoft.com/appvalidation.html)。</span><span class="sxs-lookup"><span data-stu-id="51812-111">Go to the [Microsoft Teams app validation tool](https://dev.teams.microsoft.com/appvalidation.html).</span></span> <span data-ttu-id="51812-112">(注: このツールは App [Studio でも使用](../../../build-and-test/app-studio-overview.md)できます。)</span><span class="sxs-lookup"><span data-stu-id="51812-112">(Note: The tool is also available in [App Studio](../../../build-and-test/app-studio-overview.md).)</span></span>
+1. <span data-ttu-id="51812-113">アップロードテストを実行するには、アプリ パッケージをインストールします。</span><span class="sxs-lookup"><span data-stu-id="51812-113">Upload your app package to run the automated tests.</span></span>
+1. <span data-ttu-id="51812-114">[予備チェックリスト] **に移動し** 、自動化が困難なテスト ケースを確認します。</span><span class="sxs-lookup"><span data-stu-id="51812-114">Go to the **Preliminary checklist** and review the test cases that are difficult to automate.</span></span>
+1. <span data-ttu-id="51812-115">[自動テストでエラーが](~/resources/schema/manifest-schema.md) 発生したり、チェックリストのすべての条件を満たしていない場合は、構成やアプリの一般的な問題を修正します。</span><span class="sxs-lookup"><span data-stu-id="51812-115">[Fix issues with your configurations](~/resources/schema/manifest-schema.md) or app in general if the automated tests give you errors or you haven't met all the criteria in the checklist.</span></span>
 
-### <a name="teams-app-validator"></a><span data-ttu-id="48ee5-129">Teams アプリ検証機能</span><span class="sxs-lookup"><span data-stu-id="48ee5-129">Teams app validator</span></span>
+## <a name="compile-testing-instructions"></a><span data-ttu-id="51812-116">テスト手順のコンパイル</span><span class="sxs-lookup"><span data-stu-id="51812-116">Compile testing instructions</span></span>
 
-<span data-ttu-id="48ee5-130">[ **検証]** ページでは、AppSource に申請する前にアプリ パッケージを確認できます。</span><span class="sxs-lookup"><span data-stu-id="48ee5-130">The **Validate** page allows you to check your app package before submission to AppSource.</span></span> <span data-ttu-id="48ee5-131">アプリ パッケージをアップロードするだけで、検証ツールはマニフェスト関連のすべてのテスト ケースに対してアプリをチェックします。</span><span class="sxs-lookup"><span data-stu-id="48ee5-131">Simply upload your app package and the validation tool will check your app against all manifest-related test cases.</span></span> <span data-ttu-id="48ee5-132">失敗したテストごとに、エラーの修正に役立つドキュメント リンクが説明されています。</span><span class="sxs-lookup"><span data-stu-id="48ee5-132">For each failed test, the description provides a documentation link to help you fix the error.</span></span>
+<span data-ttu-id="51812-117">テスト アカウント、資格情報、ライセンス キーなど、レビュー担当者がアプリをテストするのに役立つ手順とリソースを提供します。</span><span class="sxs-lookup"><span data-stu-id="51812-117">Provide instructions and resources to help the reviewers test your app, including test accounts, credentials, and license keys.</span></span> <span data-ttu-id="51812-118">手順は、パートナー センターに追加するか、一般に公開されている場所にアップロードSharePoint。</span><span class="sxs-lookup"><span data-stu-id="51812-118">You can add instructions in Partner Center or upload them to a publicly available location on SharePoint.</span></span>
 
-![検証ツール](../../../../assets/images/validation-tool/validator.png)
+### <a name="feature-list"></a><span data-ttu-id="51812-119">機能一覧</span><span class="sxs-lookup"><span data-stu-id="51812-119">Feature list</span></span>
 
-### <a name="preliminary-checklist"></a><span data-ttu-id="48ee5-134">予備チェックリスト</span><span class="sxs-lookup"><span data-stu-id="48ee5-134">Preliminary checklist</span></span>
+<span data-ttu-id="51812-120">アプリの機能に関する詳細な情報を、Teamsテストする手順を示します。</span><span class="sxs-lookup"><span data-stu-id="51812-120">Provide details about your app's capabilities in Teams and steps for testing each one.</span></span>
 
-<span data-ttu-id="48ee5-135">自動化が困難なテスト シナリオでは、予備チェックリストで最も一般的に失敗したテスト ケースの 7 つが表示されます。</span><span class="sxs-lookup"><span data-stu-id="48ee5-135">For test scenarios that are difficult to automate, the preliminary checklist surfaces seven of the most commonly failed test cases.</span></span>
+### <a name="accounts"></a><span data-ttu-id="51812-121">アカウント</span><span class="sxs-lookup"><span data-stu-id="51812-121">Accounts</span></span>
 
-![予備チェックリスト](../../../../assets/images/validation-tool/preliminary-checklist.png)
+<span data-ttu-id="51812-122">アプリでライセンスまたはバックエンドセーフリストが必要な場合は、テスト アカウントを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="51812-122">You must provide test accounts if your app requires a license or backend safelisting.</span></span> <span data-ttu-id="51812-123">テストを容易にするために、すべてのアカウントに事前入力されたデータが含まれる必要があります。</span><span class="sxs-lookup"><span data-stu-id="51812-123">All accounts you provide must include pre-populated data to facilitate testing.</span></span>
 
-## <a name="privacy-policy-terms-of-use-and-support-urls"></a><span data-ttu-id="48ee5-137">プライバシー ポリシー、使用条件、サポート URL</span><span class="sxs-lookup"><span data-stu-id="48ee5-137">Privacy policy, terms of use and support URLs</span></span>
+<span data-ttu-id="51812-124">アプリの機能によっては、以下の情報を提供する必要がある場合があります。</span><span class="sxs-lookup"><span data-stu-id="51812-124">Depending on your app's features, you may need to provide all of the following:</span></span>
 
-### <a name="privacy-policy"></a><span data-ttu-id="48ee5-138">プライバシー ポリシー</span><span class="sxs-lookup"><span data-stu-id="48ee5-138">Privacy policy</span></span>
+* <span data-ttu-id="51812-125">管理者アカウント (必須)</span><span class="sxs-lookup"><span data-stu-id="51812-125">Admin account (required)</span></span>
+* <span data-ttu-id="51812-126">管理者以外のアカウント (必須)</span><span class="sxs-lookup"><span data-stu-id="51812-126">Non-admin account (required)</span></span>
+* <span data-ttu-id="51812-127">最初の実行サインイン エクスペリエンスを適切にテストするために事前構成されていないアカウント (必須)</span><span class="sxs-lookup"><span data-stu-id="51812-127">An account that isn't pre-configured in order to properly test the first-run sign-in experience (required)</span></span>
+* <span data-ttu-id="51812-128">プレミアム機能またはアップグレードされた機能にアクセスできるアカウント (該当する場合)</span><span class="sxs-lookup"><span data-stu-id="51812-128">An account with access to premium or upgraded features (if applicable)</span></span>
+* <span data-ttu-id="51812-129">共有コンテキストで動作するアプリのコラボレーション エクスペリエンスをテストする同じテナント内の 2 つのアカウント (該当する場合)</span><span class="sxs-lookup"><span data-stu-id="51812-129">Two accounts in the same tenant to test the collaboration experience for apps that work in shared contexts (if applicable)</span></span>
 
-<span data-ttu-id="48ee5-139">プライバシー ポリシーのガイドライン:</span><span class="sxs-lookup"><span data-stu-id="48ee5-139">Privacy policy guidelines:</span></span>
+### <a name="tenant-configurations"></a><span data-ttu-id="51812-130">テナント構成</span><span class="sxs-lookup"><span data-stu-id="51812-130">Tenant configurations</span></span>
 
-> [!div class="checklist"]
->
-> * <span data-ttu-id="48ee5-140">プライバシー ポリシーは、アプリやすべてのサービスの全体的なポリシーに固有の場合があります。</span><span class="sxs-lookup"><span data-stu-id="48ee5-140">The privacy policy can be specific to your app and/or an overall policy for all of your services.</span></span>
-> * <span data-ttu-id="48ee5-141">一般的なプライバシー ポリシーを使用する場合は、Teams アプリと Web サイトを含めるには、「サービス」、"アプリケーション"、および "プラットフォーム" を参照する必要があります。</span><span class="sxs-lookup"><span data-stu-id="48ee5-141">If you use a generic privacy policy, it must reference "services", "applications", and "platforms" to include your Teams app as well as your website.</span></span>
-> * <span data-ttu-id="48ee5-142">ユーザー データストレージ、ユーザー データ保持、削除、およびセキュリティ制御の処理方法を含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="48ee5-142">It must include how you handle user data storage, user data retention, deletion, and security controls.</span></span>
-> * <span data-ttu-id="48ee5-143">連絡先情報が含まれる必要があります。</span><span class="sxs-lookup"><span data-stu-id="48ee5-143">It must include your contact information.</span></span>
-> * <span data-ttu-id="48ee5-144">リンクの破損、ベータ URL、ステージング URL は含めずにしてください。</span><span class="sxs-lookup"><span data-stu-id="48ee5-144">It should not contain broken links, beta URLs, or staging URLs.</span></span>
+<span data-ttu-id="51812-131">アプリを使用する Teamsテナントを構成する必要がある場合は、検証のためにこれらの手順と管理者アカウントと管理者以外のアカウントを含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="51812-131">If you must configure a Teams tenant to use your app, include those instructions and admin and non-admin accounts for validation.</span></span>
 
-### <a name="terms-of-use"></a><span data-ttu-id="48ee5-145">利用規約</span><span class="sxs-lookup"><span data-stu-id="48ee5-145">Terms of use</span></span>
+### <a name="video-optional"></a><span data-ttu-id="51812-132">ビデオ (オプション)</span><span class="sxs-lookup"><span data-stu-id="51812-132">Video (optional)</span></span>
 
-<span data-ttu-id="48ee5-146">使用条件ステートメントは、アプリやアドインの提供に固有で適用可能である必要があります。</span><span class="sxs-lookup"><span data-stu-id="48ee5-146">Your terms of use statement should be specific and applicable to your app and/or add-in offering.</span></span>
+<span data-ttu-id="51812-133">Microsoft が機能を完全に理解できるよう、アプリの記録を提供します。</span><span class="sxs-lookup"><span data-stu-id="51812-133">Provide a recording of your app so that Microsoft can fully understand its functionality.</span></span>
 
-### <a name="support-urls"></a><span data-ttu-id="48ee5-147">サポート URL</span><span class="sxs-lookup"><span data-stu-id="48ee5-147">Support URLs</span></span>
+## <a name="create-your-store-listing-details"></a><span data-ttu-id="51812-134">ストア登録情報の詳細を作成する</span><span class="sxs-lookup"><span data-stu-id="51812-134">Create your store listing details</span></span>
 
-<span data-ttu-id="48ee5-148">サポート URL では、アプリに関する問題について連絡するために、認証またはログイン資格情報を必要としない必要があります。</span><span class="sxs-lookup"><span data-stu-id="48ee5-148">Your support URLs should not require authentication or login credential to contact you for any issues with your app.</span></span>
+<span data-ttu-id="51812-135">パートナー センター&#8212;[](https://partner.microsoft.com)に送信する情報 (名前、説明、アイコン、画像など)&#8212;は、Teams ストアとアプリの Microsoft AppSource リストになります。</span><span class="sxs-lookup"><span data-stu-id="51812-135">The information that you submit to [Partner Center](https://partner.microsoft.com)&#8212;including your name, descriptions, icons, and images&#8212;becomes the Teams store and Microsoft AppSource listing for your app.</span></span>
 
-## <a name="test-notes-for-validation"></a><span data-ttu-id="48ee5-149">検証に関するテスト ノート</span><span class="sxs-lookup"><span data-stu-id="48ee5-149">Test notes for validation</span></span>
+<span data-ttu-id="51812-136">ストアの登録情報は、アプリの第一印象である可能性があります。</span><span class="sxs-lookup"><span data-stu-id="51812-136">A store listing may be someone's first impression of your app.</span></span> <span data-ttu-id="51812-137">アプリの利点、機能、ブランドを効果的に伝えるリストを使用してインストールを増やします。</span><span class="sxs-lookup"><span data-stu-id="51812-137">Increase installations with a listing that effectively conveys your app's benefits, functionality, and brand.</span></span>
 
-<span data-ttu-id="48ee5-150">次の情報を含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="48ee5-150">Please include the following:</span></span>
+### <a name="specify-a-short-name"></a><span data-ttu-id="51812-138">短い名前を指定する</span><span class="sxs-lookup"><span data-stu-id="51812-138">Specify a short name</span></span>
 
-* <span data-ttu-id="48ee5-151">少なくとも 2 つのログイン資格情報 、1 つの管理者と 1 つの管理者以外の資格情報を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="48ee5-151">You must provide at least two login credentials, one admin and one non-admin.</span></span>
+<span data-ttu-id="51812-139">アプリの名前 (具体的には短い名前 [*)*](~/resources/schema/manifest-schema.md#name)は、ユーザーがストアでアプリを検出する方法において重要な役割を果たします。</span><span class="sxs-lookup"><span data-stu-id="51812-139">Your app's name (specifically, its [*short name*](~/resources/schema/manifest-schema.md#name)) plays a crucial role in how users discover it in the store.</span></span>
 
-* <span data-ttu-id="48ee5-152">検証の目的で、提供するアカウントには、十分な事前入力データが必要です。</span><span class="sxs-lookup"><span data-stu-id="48ee5-152">For verification purposes, the accounts you provide should have sufficient pre-populated data.</span></span>
+:::row:::
 
-* <span data-ttu-id="48ee5-153">エンタープライズ アプリ、サブスクリプションが必要なアプリ、または Office 365 テナント/ドメイン依存関係があるアプリの場合は、最初に実行するユーザー エクスペリエンスを検証するために、アプリ用に事前構成されていない同じドメインに 3 番目のアカウントを提供する必要があります。</span><span class="sxs-lookup"><span data-stu-id="48ee5-153">For enterprise apps, apps where a subscription is required, or apps where there is an Office 365 tenant/domain dependency, you must provide a third account in the same domain that is not pre-configured for your app so that we can validate the first-run user experience.</span></span>
+   :::column span="3":::
+      :::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="スクリーンショットの例は、アプリの短い名前がストアの登録情報に表示される場所を強調表示します。":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
 
-* <span data-ttu-id="48ee5-154">アプリにプレミアム/アップグレードされた機能がある場合は、そのエクスペリエンスをテストするために必要なアクセス権を持つアカウントを提供する必要があります。</span><span class="sxs-lookup"><span data-stu-id="48ee5-154">If your app has premium/upgraded features, an account with the necessary access must be provided to test that experience.</span></span>
+:::row-end:::
 
-* <span data-ttu-id="48ee5-155">テスト ノートを SharePoint にアップロードすることができます。</span><span class="sxs-lookup"><span data-stu-id="48ee5-155">You may choose to upload your test notes to SharePoint.</span></span> <span data-ttu-id="48ee5-156">その場合は、ファイルへのパブリック リンクを指定してください。</span><span class="sxs-lookup"><span data-stu-id="48ee5-156">If so, please provide a public link to the file.</span></span>
+<span data-ttu-id="51812-141">短い名前がストアの検証ガイドラインに [準拠している必要があります](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#11-app-name)。</span><span class="sxs-lookup"><span data-stu-id="51812-141">Make sure your short name adheres to the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#11-app-name).</span></span>
 
-* <span data-ttu-id="48ee5-157">**テスト アカウント**.</span><span class="sxs-lookup"><span data-stu-id="48ee5-157">**Test Accounts**.</span></span> <span data-ttu-id="48ee5-158">アプリでライセンスアカウントのみを許可するか、バックエンドからセーフリストに登録できる場合は、テスト アカウントが必要です。</span><span class="sxs-lookup"><span data-stu-id="48ee5-158">A test account is required if your app only allows licensed accounts or safelisting from the backend.</span></span> <span data-ttu-id="48ee5-159">また、アプリでチーム/グループ のチャット スコープが許可されている場合は、チーム の共同作業シナリオを検証するために、同じテナント内の 2 つのテスト アカウントが必要です。</span><span class="sxs-lookup"><span data-stu-id="48ee5-159">Also, if there is a team/group chat scope allowed in your app,  two test accounts in the same tenant are required to validate the team collaboration scenario.</span></span>
+### <a name="write-descriptions"></a><span data-ttu-id="51812-142">説明の書き込み</span><span class="sxs-lookup"><span data-stu-id="51812-142">Write descriptions</span></span>
 
-* <span data-ttu-id="48ee5-160">**統合手順**.</span><span class="sxs-lookup"><span data-stu-id="48ee5-160">**Integration steps**.</span></span> <span data-ttu-id="48ee5-161">テナント管理者による事前構成でアプリを使用する必要がある場合は、手順を含めるか、構成済みの管理者アカウントと管理者以外のアカウントを入力して検証します。</span><span class="sxs-lookup"><span data-stu-id="48ee5-161">If pre-configuration by a tenant admin is required to use the app, include the steps and/or provide configured admin and non-admin accounts for validation.</span></span> <span data-ttu-id="48ee5-162">注: [365 Developer Program サブスクリプションOfficeサインアップ](https://developer.microsoft.com/microsoft-365/dev-program) できます。</span><span class="sxs-lookup"><span data-stu-id="48ee5-162">Note: you can sign up for an [Office 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) subscription.</span></span> <span data-ttu-id="48ee5-163">これは 90 日間 *無料* で開発活動に使用する限り継続的に更新されます。</span><span class="sxs-lookup"><span data-stu-id="48ee5-163">It's *free* for 90 days and will continually renew as long as you're using it for development activity.</span></span>
+<span data-ttu-id="51812-143">アプリの短い説明と長い説明が必要です。</span><span class="sxs-lookup"><span data-stu-id="51812-143">You must have a short and long description of your app.</span></span>
 
-* <span data-ttu-id="48ee5-164">**Teams のアプリ機能に関する注意事項**: Teams 内でアプリが提供する機能の詳細と、各機能のテスト手順について説明します。</span><span class="sxs-lookup"><span data-stu-id="48ee5-164">**Notes regarding the app features in Teams**: Detail all of the capabilities the app offers within Teams and steps for testing each feature.</span></span>
+#### <a name="short-description"></a><span data-ttu-id="51812-144">簡潔な説明</span><span class="sxs-lookup"><span data-stu-id="51812-144">Short description</span></span>
 
-* <span data-ttu-id="48ee5-165">**アプリの機能を示すビデオ (オプション)**: 製品のビデオ録画を提供して、アプリの機能を完全に理解することができます。</span><span class="sxs-lookup"><span data-stu-id="48ee5-165">**Video showing the app functionality (Optional)**: You can provide a video recording of the product for us to fully understand the functionality of the app.</span></span>
+<span data-ttu-id="51812-145">対象ユーザーに対して、元の、魅力的で、指示する必要があるアプリの簡潔な概要。</span><span class="sxs-lookup"><span data-stu-id="51812-145">A concise summary of your app that should be original, engaging, and directed at your target audience.</span></span> <span data-ttu-id="51812-146">短い説明を 1 つの文に保つ。</span><span class="sxs-lookup"><span data-stu-id="51812-146">Keep the short description to one sentence.</span></span>
+
+:::row:::
+
+   :::column span="3":::
+      :::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="スクリーンショットの例では、アプリの短い説明がストアの登録情報に表示される場所を強調表示します。":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
+
+:::row-end:::
+
+<span data-ttu-id="51812-148">短い説明がストアの検証ガイドラインに [準拠している必要があります](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#431-short-description)。</span><span class="sxs-lookup"><span data-stu-id="51812-148">Make sure your short description adheres to the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#431-short-description).</span></span>
+
+#### <a name="long-description"></a><span data-ttu-id="51812-149">詳しい説明</span><span class="sxs-lookup"><span data-stu-id="51812-149">Long description</span></span>
+
+<span data-ttu-id="51812-150">長い説明では、アプリの主な機能、解決する問題、ターゲットユーザーを強調する説明を提供できます。</span><span class="sxs-lookup"><span data-stu-id="51812-150">The long description can provide a narrative that highlights your app's main features, the problems it solves, and its target audience.</span></span> <span data-ttu-id="51812-151">この説明は 4,000 文字までですが、ほとんどのユーザーは 300 ~ 500 語しか読み取りできません。</span><span class="sxs-lookup"><span data-stu-id="51812-151">While this description can be as long as 4,000 characters, most users will only read between 300-500 words.</span></span>
+
+:::row:::
+
+   :::column span="3":::
+      :::image type="content" source="~/assets/images/store-detail-page/LongDescription-02.png" alt-text="スクリーンショットの例では、アプリの長い説明がストア登録情報に表示される場所を強調表示します。":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
+
+:::row-end:::
+
+<span data-ttu-id="51812-153">長い説明がストアの検証ガイドラインに [準拠している必要があります](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#432-long-description)。</span><span class="sxs-lookup"><span data-stu-id="51812-153">Make sure your long description adheres to the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#432-long-description).</span></span>
+
+### <a name="adhere-to-icon-design-guidelines"></a><span data-ttu-id="51812-154">アイコンの設計ガイドラインに従う</span><span class="sxs-lookup"><span data-stu-id="51812-154">Adhere to icon design guidelines</span></span>
+
+<span data-ttu-id="51812-155">アイコンは、ユーザーがストアを閲覧するときに表示される主な要素の 1 つです。</span><span class="sxs-lookup"><span data-stu-id="51812-155">Icons are one of the main elements users see when browsing the store.</span></span> <span data-ttu-id="51812-156">アイコンは、アプリのブランドと目的を伝える一方で、ユーザーの要件にTeamsがあります。</span><span class="sxs-lookup"><span data-stu-id="51812-156">Your icons should communicate your app's brand and purpose while also adhering to Teams requirements.</span></span>
+
+<span data-ttu-id="51812-157">詳細については、「アプリ アイコンの[作成に関するガイダンスTeams参照してください](~/concepts/build-and-test/apps-package.md#app-icons)。</span><span class="sxs-lookup"><span data-stu-id="51812-157">For more information, see [guidance on creating Teams app icons](~/concepts/build-and-test/apps-package.md#app-icons).</span></span>
+
+### <a name="capture-screenshots"></a><span data-ttu-id="51812-158">スクリーンショットのキャプチャ</span><span class="sxs-lookup"><span data-stu-id="51812-158">Capture screenshots</span></span>
+
+<span data-ttu-id="51812-159">スクリーンショットは、アプリ名、アイコン、説明を補完するアプリの目立つ視覚的なプレビューを提供します。</span><span class="sxs-lookup"><span data-stu-id="51812-159">Screenshots provide a prominent visual preview of your app to complement your app name, icon, and descriptions.</span></span>
+
+:::row:::
+
+   :::column span="3":::
+      :::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="スクリーンショットの例では、アプリのスクリーンショットがストアの登録情報に表示される場所を強調表示します。":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
+
+:::row-end:::
+
+<span data-ttu-id="51812-161">スクリーンショットについては、次の情報を覚えておいてください。</span><span class="sxs-lookup"><span data-stu-id="51812-161">Remember the following about screenshots:</span></span>
+
+* <span data-ttu-id="51812-162">リストごとに最大 5 つのスクリーンショットを作成できます。</span><span class="sxs-lookup"><span data-stu-id="51812-162">You can have up to five screenshots per listing.</span></span>
+* <span data-ttu-id="51812-163">サポートされているファイルの種類には、PNG、JPEG、GIF が含まれます。</span><span class="sxs-lookup"><span data-stu-id="51812-163">Supported file types include PNG, JPEG, and GIF.</span></span>
+* <span data-ttu-id="51812-164">ディメンションは 1366x768 ピクセルである必要があります。</span><span class="sxs-lookup"><span data-stu-id="51812-164">Dimensions should be 1366x768 pixels.</span></span>
+* <span data-ttu-id="51812-165">最大サイズは 1,024 KB です。</span><span class="sxs-lookup"><span data-stu-id="51812-165">Maximum size of 1,024 KB.</span></span>
+
+<span data-ttu-id="51812-166">ベスト プラクティスについては、次のリソースを参照してください。</span><span class="sxs-lookup"><span data-stu-id="51812-166">For best practices, see the following resources:</span></span>
+
+* [<span data-ttu-id="51812-167">Teamsの検証ガイドライン</span><span class="sxs-lookup"><span data-stu-id="51812-167">Teams store validation guidelines</span></span>](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#44-screenshots)
+* [<span data-ttu-id="51812-168">Microsoft アプリ ストアの効果的なイメージを作成する</span><span class="sxs-lookup"><span data-stu-id="51812-168">Craft effective images for Microsoft app stores</span></span>](/office/dev/store/craft-effective-appsource-store-images)
+
+### <a name="create-a-video"></a><span data-ttu-id="51812-169">ビデオを作成する</span><span class="sxs-lookup"><span data-stu-id="51812-169">Create a video</span></span>
+
+<span data-ttu-id="51812-170">リスト内のビデオは、ユーザーがアプリを使用する理由を伝える最も効果的な方法です。</span><span class="sxs-lookup"><span data-stu-id="51812-170">A video in your listing can be the most effective way to communicate why people should use your app.</span></span> <span data-ttu-id="51812-171">ビデオで次の質問に対処する必要があります。</span><span class="sxs-lookup"><span data-stu-id="51812-171">You should address the following questions in a video:</span></span>
+
+* <span data-ttu-id="51812-172">Whoアプリは何ですか?</span><span class="sxs-lookup"><span data-stu-id="51812-172">Who is your app for?</span></span>
+* <span data-ttu-id="51812-173">アプリで解決できる問題は何ですか?</span><span class="sxs-lookup"><span data-stu-id="51812-173">What problems can your app solve?</span></span>
+* <span data-ttu-id="51812-174">アプリの動作方法</span><span class="sxs-lookup"><span data-stu-id="51812-174">How does your app work?</span></span>
+* <span data-ttu-id="51812-175">アプリを使用して得るその他の利点は何ですか?</span><span class="sxs-lookup"><span data-stu-id="51812-175">What other benefits do you get from using your app?</span></span>
+
+#### <a name="best-practices-for-videos"></a><span data-ttu-id="51812-176">ビデオのベスト プラクティス</span><span class="sxs-lookup"><span data-stu-id="51812-176">Best practices for videos</span></span>
+
+* <span data-ttu-id="51812-177">ビデオを 30 ~ 90 秒の間に保持します。</span><span class="sxs-lookup"><span data-stu-id="51812-177">Keep your video between 30-90 seconds.</span></span>
+* <span data-ttu-id="51812-178">品質を目指します。</span><span class="sxs-lookup"><span data-stu-id="51812-178">Aim for quality.</span></span> <span data-ttu-id="51812-179">リストでは、スクリーンショットの前にユーザーにビデオが表示されます。</span><span class="sxs-lookup"><span data-stu-id="51812-179">In a listing, users will see your video before screenshots.</span></span>
+
+### <a name="select-a-category-for-your-app"></a><span data-ttu-id="51812-180">アプリのカテゴリを選択する</span><span class="sxs-lookup"><span data-stu-id="51812-180">Select a category for your app</span></span>
+
+<span data-ttu-id="51812-181">申請中に、アプリの分類を求めるメッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="51812-181">During submission, you're asked to categorize your app.</span></span> <span data-ttu-id="51812-182">次の表は、Teamsのカテゴリをパートナー センターに一覧表示するカテゴリ[にマップします](https://aka.ms/PartnerCenterHomePage)。</span><span class="sxs-lookup"><span data-stu-id="51812-182">The following table maps Teams store categories to the categories listed in [Partner Center](https://aka.ms/PartnerCenterHomePage).</span></span>
+
+| <span data-ttu-id="51812-183">Teamsカテゴリ</span><span class="sxs-lookup"><span data-stu-id="51812-183">Teams categories</span></span>       | <span data-ttu-id="51812-184">パートナー センターのカテゴリ</span><span class="sxs-lookup"><span data-stu-id="51812-184">Partner Center categories</span></span>  |
+|:---------------------|:---------------|
+| <span data-ttu-id="51812-185">分析と BI</span><span class="sxs-lookup"><span data-stu-id="51812-185">Analytics and BI</span></span> | <span data-ttu-id="51812-186">分析、データ可視化、BI</span><span class="sxs-lookup"><span data-stu-id="51812-186">Analytics, Data Visualization and BI</span></span> |
+| <span data-ttu-id="51812-187">開発者と IT</span><span class="sxs-lookup"><span data-stu-id="51812-187">Developer and IT</span></span> | <span data-ttu-id="51812-188">開発者ツール、IT 管理者</span><span class="sxs-lookup"><span data-stu-id="51812-188">Developer Tools, IT Admin</span></span> |
+| <span data-ttu-id="51812-189">教育</span><span class="sxs-lookup"><span data-stu-id="51812-189">Education</span></span> | <span data-ttu-id="51812-190">教育</span><span class="sxs-lookup"><span data-stu-id="51812-190">Education</span></span> |
+| <span data-ttu-id="51812-191">人事管理</span><span class="sxs-lookup"><span data-stu-id="51812-191">Human resources</span></span> | <span data-ttu-id="51812-192">人事と採用</span><span class="sxs-lookup"><span data-stu-id="51812-192">Human Resources and Recruiting</span></span> |
+| <span data-ttu-id="51812-193">生産性</span><span class="sxs-lookup"><span data-stu-id="51812-193">Productivity</span></span> | <span data-ttu-id="51812-194">コンテンツ管理、ファイルとドキュメント、生産性、トレーニングとチュートリアル、ユーティリティ</span><span class="sxs-lookup"><span data-stu-id="51812-194">Content Management, Files and documents, Productivity, Training and Tutorials, and Utilities</span></span> |
+| <span data-ttu-id="51812-195">プロジェクト管理</span><span class="sxs-lookup"><span data-stu-id="51812-195">Project management</span></span> | <span data-ttu-id="51812-196">コミュニケーション、Project管理、ワークフロー、およびビジネス管理</span><span class="sxs-lookup"><span data-stu-id="51812-196">Communication, Project Management, Workflow, and Business Management</span></span> |
+| <span data-ttu-id="51812-197">販売とサポート</span><span class="sxs-lookup"><span data-stu-id="51812-197">Sales and support</span></span> | <span data-ttu-id="51812-198">顧客と連絡先の管理、カスタマー サポート、財務管理、営業およびマーケティング</span><span class="sxs-lookup"><span data-stu-id="51812-198">Customer and Contact Management, Customer Support, Financial Management, Sales and Marketing</span></span> |
+| <span data-ttu-id="51812-199">ソーシャルで楽しい</span><span class="sxs-lookup"><span data-stu-id="51812-199">Social and fun</span></span> | <span data-ttu-id="51812-200">画像とビデオ ギャラリー、ライフスタイル、ニュースと天気予報、ソーシャル、旅行、ナビゲーション</span><span class="sxs-lookup"><span data-stu-id="51812-200">Image and Video Galleries, Lifestyle, News and Weather, Social, Travel, and Navigation</span></span> |
+
+### <a name="localize-your-store-listing"></a><span data-ttu-id="51812-201">ストアの登録情報をローカライズする</span><span class="sxs-lookup"><span data-stu-id="51812-201">Localize your store listing</span></span>
+
+<span data-ttu-id="51812-202">パートナー センターは、 [ローカライズされたストアの登録情報をサポートしています](https://docs.microsoft.com/office/dev/store/prepare-localized-solutions)。</span><span class="sxs-lookup"><span data-stu-id="51812-202">Partner Center supports [localized store listings](https://docs.microsoft.com/office/dev/store/prepare-localized-solutions).</span></span> <span data-ttu-id="51812-203">詳細については、「アプリの登録[情報をローカライズするTeams」を参照してください](../../../../concepts/build-and-test/apps-localization.md)。</span><span class="sxs-lookup"><span data-stu-id="51812-203">For more information, see [how to localize your Teams app listing](../../../../concepts/build-and-test/apps-localization.md).</span></span>
+
+## <a name="complete-publisher-verification"></a><span data-ttu-id="51812-204">完全なPublisher検証</span><span class="sxs-lookup"><span data-stu-id="51812-204">Complete Publisher Verification</span></span>
+
+<span data-ttu-id="51812-205">[Publisherストアに](/azure/active-directory/develop/publisher-verification-overview)一覧表示されているアプリTeams検証が必要です。詳細については、「よく寄せられる質問[」、](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions)アプリを[](/azure/active-directory/develop/mark-app-as-publisher-verified)発行元の検証済みとしてマークする方法、および発行元の検証の[トラブルシューティングを参照してください](/azure/active-directory/develop/troubleshoot-publisher-verification)。</span><span class="sxs-lookup"><span data-stu-id="51812-205">[Publisher Verification](/azure/active-directory/develop/publisher-verification-overview) is required for Teams apps listed in the store.For more information, see [frequently asked questions](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions), [how to mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified), and [troubleshoot publisher verification](/azure/active-directory/develop/troubleshoot-publisher-verification).</span></span>
+
+## <a name="complete-publisher-attestation"></a><span data-ttu-id="51812-206">完全なPublisher構成証明</span><span class="sxs-lookup"><span data-stu-id="51812-206">Complete Publisher Attestation</span></span>
+
+<span data-ttu-id="51812-207">[Publisher一覧に](/microsoft-365-app-certification/docs/attestation)表示されるアプリTeams構成証明も必要です。</span><span class="sxs-lookup"><span data-stu-id="51812-207">[Publisher Attestation](/microsoft-365-app-certification/docs/attestation) is also required for Teams apps listed in the store.</span></span> <span data-ttu-id="51812-208">このプロセスには、潜在的な顧客がアプリの使用に関する情報に基づいた意思決定を行うのに役立つ、アプリのセキュリティ、データ処理、コンプライアンスプラクティスの自己評価が含まれます。</span><span class="sxs-lookup"><span data-stu-id="51812-208">The process includes completing a self-assessment of your app's security, data handling, and compliance practices that can help potential customers make informed decisions about using your app.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="51812-209">新しいアプリを提出する場合は、アプリが Teams ストアに表示されるまで、Publisher 構成証明を正式にTeamsできます。</span><span class="sxs-lookup"><span data-stu-id="51812-209">If you're submitting a new app, you can't officially complete Publisher Attestation until your app is listed on the Teams store.</span></span> <span data-ttu-id="51812-210">リストされているアプリを更新する場合は、検証Publisher最新バージョンのアプリを提出する前に、構成証明を完了してください。</span><span class="sxs-lookup"><span data-stu-id="51812-210">If you're updating a listed app, complete Publisher Attestation before you submit the latest version of the app for validation.</span></span>
+
+## <a name="next-step"></a><span data-ttu-id="51812-211">次の手順</span><span class="sxs-lookup"><span data-stu-id="51812-211">Next step</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="51812-212">アプリを提出する</span><span class="sxs-lookup"><span data-stu-id="51812-212">Submit your app</span></span>](https://docs.microsoft.com/office/dev/store/add-in-submission-guide)
