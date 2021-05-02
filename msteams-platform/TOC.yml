@@ -396,34 +396,32 @@
           href: graph-api/rsc/test-resource-specific-consent.md
         - name: リソース固有の同意 JSON テスト ファイル
           href: graph-api/rsc/test-rsc-json-file.md
-- name: アプリを公開する
+- name: アプリを配布する
   items:
-    - name: 既定のインストール オプションを構成する
-      href: concepts/deploy-and-publish/add-default-install-scope.md
-    - name: アプリの配信方法を選ぶ
-      href: concepts/deploy-and-publish/overview.md
+    - name: 概要
+      href: concepts/deploy-and-publish/apps-publish-overview.md
     - name: アプリ パッケージを作成する
       href: concepts/build-and-test/apps-package.md
-    - name: アプリをチームまたはユーザー用にアップロードする
+    - name: アプリをアップロードする
       href: concepts/deploy-and-publish/apps-upload.md
     - name: 組織にアプリを公開する
-      href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
-    - name: Teams ストアに公開する (AppSource)
+      href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+    - name: Teams ストアに公開する
       items:
-        - name: AppSource への提出について
+        - name: 概要
           href: concepts/deploy-and-publish/appsource/publish.md
-        - name: 提出前のチェックリスト
+        - name: デザイン検証ガイドラインのレビュー
+          href: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
+        - name: パートナー センター アカウントを作成する
+          href: concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md
+        - name: ストア送信を準備する
           href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
-        - name: アプリの詳細ページのチェックリスト
-          href: concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md
-        - name: アプリ マニフェストのチェックリスト
-          href: concepts/deploy-and-publish/appsource/prepare/app-manifest-checklist.md
-        - name: よく見られる失敗例
-          href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
-        - name: アプリの公開後にすべきこと
+        - name: アプリを送信する
+          href: /office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+        - name: ストア送信が失敗した場合の問題を解決する
+          href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
+        - name: 公開したアプリの保守およびサポート
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
-        - name: アプリケーション認定プログラム
-          href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
 - name: リソース
   items:
     - name: アプリ マニフェストのスキーマ
@@ -446,6 +444,8 @@
       href: resources/removing-tab-margins.md
     - name: SameSite Cookie 属性 (2020 更新プログラム)
       href: resources/samesite-cookie-update.md
+    - name: ストアでの送信でよく失敗するケース
+      href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
     - name: Teamsドキュメントへの関与
       href: resources/teams-contributor-reference.md
 - name: サポートとフィードバック

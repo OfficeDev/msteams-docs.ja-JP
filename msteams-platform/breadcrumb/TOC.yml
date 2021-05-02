@@ -1,18 +1,15 @@
 - name: Microsoft Teams
-  tocHref: /microsoftteams/
+  tocHref: /office/
   topicHref: /microsoftteams/
   items:
     - name: 開発者用プラットフォーム
-      tocHref: /microsoftteams/platform/
-      topicHref: /microsoftteams/platform/index
+      tocHref: /office/dev/store/
+      topicHref: /microsoftteams/platform/
       items:
-        - name: Microsoft Graph を使用したTeams データを使用する
-          tocHref: /microsoftteams/platform/graph-api/
-          topicHref: /microsoftteams/platform/graph-api/
+        - name: アプリを配布する
+          tocHref: /office/dev/store/checklist/
+          topicHref: /microsoftteams/platform//concepts/deploy-and-publish/
           items:
-            - name: 概要
-              tocHref: /microsoftteams/platform/graph-api/overview/
-              topicHref: /microsoftgraph/microsoft-graph-docs/concepts/teams-concept-overview
-            - name: 作業の開始
-              tocHref: /microsoftteams/platform/graph-api/get-started/
-              topicHref: /microsoftgraph/microsoft-graph-docs/concepts/toolkit/get-started/build-a-microsoft-teams-tab
+            - name: Teams ストアに公開する
+              tocHref: /office/dev/store/checklist/add-in-submission-guide/
+              topicHref: /microsoftteams/platform//concepts/deploy-and-publish/appsource/
