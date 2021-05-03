@@ -1,7 +1,7 @@
 ---
 title: リンク展開
 author: clearab
-description: Microsoft Teams アプリでメッセージング拡張機能を使用してリンク解除を実行する方法。
+description: アプリでメッセージング拡張機能を使用してリンクを開Microsoft Teams方法。
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
@@ -21,7 +21,7 @@ ms.locfileid: "52075718"
 > [!NOTE]
 > 現時点では、モバイル クライアントではリンクのリンク解除はサポートされていません。
 
-Azure DevOps メッセージング拡張機能では、リンク解除を使用して、作業項目を指すメッセージの作成領域に貼り付け先の URL を探します。 次の図では、ユーザーが Azure DevOps の作業項目の URL を貼り付け、メッセージング拡張機能がカードに解決されています。
+メッセージAzure DevOps拡張機能では、リンク解除を使用して、作業項目を指すメッセージ作成領域に貼り付け先の URL を探します。 次の図では、ユーザーが Azure DevOps で作業アイテムの URL を貼り付け、メッセージング拡張機能がカードに解決されています。
 
 ![リンクの分岐解除の例](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
@@ -34,7 +34,7 @@ Azure DevOps メッセージング拡張機能では、リンク解除を使用�
 
 ### <a name="add-link-unfurling-using-app-studio"></a>App Studio を使用してリンクの分岐を解除する
 
-1. Microsoft **Teams クライアントから App Studio** を開き、[マニフェスト エディター] **タブを選択** します。
+1. クライアント **から App Studio** をMicrosoft Teamsし、[マニフェスト エディター]**タブを選択** します。
 1. アプリ マニフェストを読み込む。
 1. [メッセージング **拡張機能] ページ** で、探すドメインを [メッセージ ハンドラー] セクション **に追加** します。 次の図は、プロセスを説明しています。
 
@@ -75,7 +75,7 @@ Azure DevOps メッセージング拡張機能では、リンク解除を使用�
 
 * [サムネイル カード](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [ヒーロー カード](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365 コネクタ カード](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Office 365コネクタ カード](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [アダプティブ カード](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
 ### <a name="example"></a>例

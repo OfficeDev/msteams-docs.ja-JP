@@ -15,11 +15,11 @@ ms.locfileid: "52101908"
 
 ストアの申請を準備した後、アプリを正式に提出して確認できます。
 
-## <a name="create-a-partner-center-account"></a>パートナー センター アカウントの作成
+## <a name="create-a-partner-center-account"></a>パートナー センター アカウントを作成する
 
 アプリをアプリストアと AppSource Teams発行するには、まず開発者アカウントを[設定する必要があります](https://docs.microsoft.com/office/dev/store/open-a-developer-account)。
 
-## <a name="submit-your-app"></a>アプリを提出する
+## <a name="submit-your-app"></a>アプリを送信する
 
 アプリを送信するには、次の手順に従ってストア [の申請手順を実行します](https://docs.microsoft.com/office/dev/store/add-in-submission-guide)。 新しい申請を作成する場合は、アプリを提出するTeamsします。
 
@@ -42,7 +42,7 @@ ms.locfileid: "52101908"
 
 アプリが申請に失敗した場合は、エラー レポートが表示され、修正および再送信の方法が分かっています。 Microsoft では、アプリの一覧を表示するためのホワイト グローブ サービスも提供しています。
 
-## <a name="faqs"></a>よく寄せられる質問
+## <a name="faqs"></a>FAQ
 
 ### <a name="how-do-i-create-a-partner-center-account"></a>パートナー センター アカウントを作成する方法
 

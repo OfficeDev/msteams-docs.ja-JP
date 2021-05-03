@@ -1,7 +1,7 @@
 ---
 title: メッセージング拡張機能の検索コマンドを定義する
 author: clearab
-description: Microsoft Teams アプリのメッセージング拡張機能検索コマンドを定義します。
+description: アプリのメッセージング拡張機能検索コマンドをMicrosoft Teamsします。
 ms.topic: conceptual
 ms.author: anclear
 ms.openlocfilehash: 19f1fdf7bd4efdbb0de11d1abad341ec24bc27bd
@@ -43,7 +43,7 @@ ms.locfileid: "51696810"
 
 **検索コマンドを作成するには**
 
-1. Microsoft **Teams クライアントから App Studio** を開き、[マニフェスト エディター] **タブを選択** します。
+1. クライアント **から App Studio** をMicrosoft Teamsし、[マニフェスト エディター]**タブを選択** します。
 1.  App Studio でアプリ パッケージを既に作成している **場合** は、一覧から選択します。 アプリ パッケージを作成していない場合は、既存のパッケージをインポートします。
 1. アプリ パッケージをインポートした後、[機能] **で [メッセージング拡張機能]** **を選択します**。 メッセージング拡張機能を設定するポップアップ ウィンドウが表示されます。
 1. ウィンドウ **で [セットアップ** ] を選択して、メッセージング拡張機能をアプリ エクスペリエンスに含めます。 次の図は、メッセージング拡張機能のセットアップ ページを表示します。 
@@ -82,7 +82,7 @@ ms.locfileid: "51696810"
 |`initialRun` | このプロパティを true に **設定すると**、ユーザーが UI でこのコマンドを選択するとすぐにこのコマンドを実行する必要があります。 | いいえ | 1.0 |
 | `context` | このプロパティは、検索アクションが使用できるコンテキストを定義する値のオプションの配列です。 使用可能な値: `message`、`compose`、`commandBox`。 既定値は `["compose", "commandBox"]` です。 | いいえ | 1.5 |
 
-Teams クライアントでユーザーに表示されるテキストを定義する検索パラメーターの詳細を追加する必要があります。
+検索クライアントでユーザーに表示されるテキストを定義する検索パラメーターの詳細を追加Teamsがあります。
 
 | プロパティ名 | 用途 | 必須ですか? | マニフェストの最小バージョン |
 |---|---|---|---|
@@ -126,8 +126,8 @@ Teams クライアントでユーザーに表示されるテキストを定義�
 
 | サンプルの名前           | 説明 | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Teams メッセージング拡張機能アクション| アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Teams メッセージング拡張機能の検索   |  検索コマンドを定義し、検索に応答する方法について説明します。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams拡張アクション| アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams拡張機能の検索   |  検索コマンドを定義し、検索に応答する方法について説明します。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>次の手順
 

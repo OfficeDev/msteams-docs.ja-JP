@@ -544,7 +544,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ![ユーザー属性ボット](../../../assets/images/messaging-extension/user-attribution-bots.png)
 
-Teams でユーザー属性を使用するには、Teams に送信されるペイロードにメンション `OnBehalfOf` `ChannelData` `Activity` エンティティを追加する必要があります。
+Teams でユーザー属性を使用するには、ユーザーに送信されるペイロードにメンション エンティティを追加 `OnBehalfOf` `ChannelData` `Activity` Teams。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet-1)
 
@@ -595,8 +595,8 @@ Teams でユーザー属性を使用するには、Teams に送信されるペ�
 
 | サンプルの名前           | 説明 | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Teams メッセージング拡張機能アクション| アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Teams メッセージング拡張機能の検索   |  検索コマンドを定義し、検索に応答する方法について説明します。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams拡張アクション| アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams拡張機能の検索   |  検索コマンドを定義し、検索に応答する方法について説明します。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>次のステップ
 

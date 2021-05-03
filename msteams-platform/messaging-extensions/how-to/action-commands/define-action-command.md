@@ -16,7 +16,7 @@ ms.locfileid: "52020717"
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-アクション コマンドを使用すると、Teams のタスク モジュールと呼ばれるモーダル ポップアップをユーザーに表示できます。 タスク モジュールは、情報を収集または表示し、対話を処理し、その情報を Teams に送信します。 このドキュメントでは、アクション コマンドの呼び出し場所の選択、タスク モジュールの作成、最終メッセージまたはカードの送信、アプリ スタジオを使用したアクション コマンドの作成、または手動での作成方法について説明します。 
+アクション コマンドを使用すると、ユーザーにタスク モジュールと呼ばれるモーダル ポップアップを表示Teams。 タスク モジュールは、情報を収集または表示し、対話を処理し、その情報をユーザーにTeams。 このドキュメントでは、アクション コマンドの呼び出し場所の選択、タスク モジュールの作成、最終メッセージまたはカードの送信、アプリ スタジオを使用したアクション コマンドの作成、または手動での作成方法について説明します。 
 
 アクション コマンドを作成する前に、次の要素を決定する必要があります。
 
@@ -45,7 +45,7 @@ ms.locfileid: "52020717"
 
 コマンドの呼び出し先を選択する以外に、ユーザーのタスク モジュールにフォームを設定する方法も選択する必要があります。 タスク モジュール内でレンダリングされるフォームを作成するには、次の 3 つのオプションがあります。   
 
-* **パラメーターの静的な一覧**: これは最も簡単な方法です。 アプリ マニフェストで Teams クライアントがレンダリングするパラメーターの一覧を定義できますが、この場合は書式設定を制御できません。
+* **パラメーターの静的な一覧**: これは最も簡単な方法です。 アプリ マニフェストで、クライアントがレンダリングするTeamsパラメーターの一覧を定義できますが、この場合は書式設定を制御できません。
 * **アダプティブ カード**: アダプティブ カードの使用を選択すると、UI の制御が向上しますが、使用可能なコントロールと書式設定オプションは制限されます。
 * **埋め込み Web ビュー**: カスタム Web ビューをタスク モジュールに埋め込み、UI とコントロールを完全に制御できます。 
 
@@ -71,7 +71,7 @@ ms.locfileid: "52020717"
 
 **アクション コマンドを作成するには**
 
-1. Microsoft **Teams クライアントから App Studio** を開き、[マニフェスト エディター] **タブを選択** します。
+1. クライアント **から App Studio** を開Microsoft Teams、[マニフェスト エディター]**タブを選択** します。
 1. App Studio でアプリ パッケージを既に作成している **場合** は、一覧からアプリ パッケージを選択します。 アプリ パッケージを作成していない場合は、既存のパッケージをインポートします。
 1. アプリ パッケージをインポートした後、[機能] で [ **メッセージング拡張機能]** **を選択します**。 メッセージング拡張機能を設定するポップアップ ウィンドウが表示されます。
 1. ウィンドウ **で [セットアップ** ] を選択して、メッセージング拡張機能をアプリ エクスペリエンスに含めます。 次の図は、メッセージング拡張機能のセットアップ ウィンドウを表示します。
@@ -87,7 +87,7 @@ ms.locfileid: "52020717"
 
    <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
 
-1. [Teams **の内部で外部サービスのアクションをトリガーするユーザーを許可する] を選択します**。 次の図は、アクション コマンドの選択を表示します。
+1. [外部 **サービス内でユーザーが外部サービス** でアクションをトリガー Teams] を選択します。 次の図は、アクション コマンドの選択を表示します。
 
     <img src="~/assets/images/messaging-extension/action-command-selection.png" alt="action command selection" width="500"/>
     
@@ -205,8 +205,8 @@ ms.locfileid: "52020717"
 
 | サンプルの名前           | 説明 | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Teams メッセージング拡張機能アクション| アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Teams メッセージング拡張機能の検索   |  検索コマンドを定義し、検索に応答する方法について説明します。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams拡張アクション| アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams拡張機能の検索   |  検索コマンドを定義し、検索に応答する方法について説明します。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>次の手順
 

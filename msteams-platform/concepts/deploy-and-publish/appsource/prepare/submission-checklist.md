@@ -1,5 +1,5 @@
 ---
-title: ストア申請の準備
+title: ストア送信を準備する
 description: ストアに一覧表示するアプリをMicrosoft Teamsする前の最後の手順について説明します。
 ms.topic: how-to
 localization_priority: Normal
@@ -194,4 +194,4 @@ Microsoft が機能を完全に理解できるよう、アプリの記録を提�
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [アプリを提出する](https://docs.microsoft.com/office/dev/store/add-in-submission-guide)
+> [アプリを送信する](https://docs.microsoft.com/office/dev/store/add-in-submission-guide)

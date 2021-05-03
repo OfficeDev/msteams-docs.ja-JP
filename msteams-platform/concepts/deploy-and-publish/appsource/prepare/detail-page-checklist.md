@@ -191,4 +191,4 @@ ms.locfileid: "52101430"
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [ストア申請の準備](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
+> [ストア送信を準備する](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)

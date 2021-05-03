@@ -18,7 +18,7 @@ ms.locfileid: "52019826"
 
 ## <a name="code-sample"></a>コード サンプル
 
-GitHub のサンプル プロジェクトの Teams Search Auth Config では、構成ページとボット サービス認証を含むメッセージング拡張機能を作成する方法を示します。 このサンプルでは、ユーザーがサインインした後に、検索要求を受け入れ、結果を返すメッセージ拡張機能を作成する方法も示しています。
+Teamsのサンプル プロジェクトの Auth Config のGitHub、構成ページとボット サービス認証を含むメッセージング拡張機能を作成する方法を示します。 このサンプルでは、ユーザーがサインインした後に、検索要求を受け入れ、結果を返すメッセージ拡張機能を作成する方法も示しています。
 
 | **サンプル名** | **説明** | **.NET** | **Node.js** | **Python** |
 |-----------------|-----------------|-------------|--------------|
@@ -27,4 +27,4 @@ GitHub のサンプル プロジェクトの Teams Search Auth Config では、�
 ## <a name="additional-code-sample"></a>追加のコード サンプル
 
 > [!div class="nextstepaction"]
-> [GitHub でボット フレームワークのサンプルを表示する](https://github.com/microsoft/BotBuilder-Samples)
+> [ボット フレームワークのサンプルを表示する GitHub](https://github.com/microsoft/BotBuilder-Samples)

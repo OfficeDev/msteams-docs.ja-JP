@@ -30,7 +30,7 @@ ms.locfileid: "52075592"
 |`name`| サービスに発行されるコマンドの種類。 この値は、 である必要があります `composeExtension/fetchTask` 。 |
 |`from.id`| 要求を送信したユーザーの ID。 |
 |`from.name`| 要求を送信したユーザーの名前。 |
-|`from.aadObjectId`| 要求を送信したユーザーの Azure Active Directory オブジェクト ID。 |
+|`from.aadObjectId`| Azure Active Directory送信したユーザーのオブジェクト ID を指定します。 |
 |`channelData.tenant.id`| Azure Active Directory テナント ID。 |
 |`channelData.channel.id`| チャネル ID (チャネルで要求が行われた場合)。 |
 |`channelData.team.id`| チーム ID (チャネルで要求が行われた場合)。 |
@@ -80,7 +80,7 @@ ms.locfileid: "52075592"
 |`name`| サービスに発行されるコマンドの種類。 この値は、 である必要があります `composeExtension/fetchTask` 。 |
 |`from.id`| 要求を送信したユーザーの ID。 |
 |`from.name`| 要求を送信したユーザーの名前。 |
-|`from.aadObjectId`| 要求を送信したユーザーの Azure Active Directory オブジェクト ID。 |
+|`from.aadObjectId`| Azure Active Directory送信したユーザーのオブジェクト ID を指定します。 |
 |`channelData.tenant.id`| Azure Active Directory テナント ID。 |
 |`channelData.source.name`| タスク モジュールの呼び出し元のソース名。 |
 |`ChannelData.legacy. replyToId`| このメッセージが返信であるメッセージの ID を取得または設定します。 |
@@ -130,7 +130,7 @@ ms.locfileid: "52075592"
 |`name`| サービスに発行されるコマンドの種類。 この値は、 である必要があります `composeExtension/fetchTask` 。 |
 |`from.id`| 要求を送信したユーザーの ID。 |
 |`from.name`| 要求を送信したユーザーの名前。 |
-|`from.aadObjectId`| 要求を送信したユーザーの Azure Active Directory オブジェクト ID。 |
+|`from.aadObjectId`| Azure Active Directory送信したユーザーのオブジェクト ID を指定します。 |
 |`channelData.tenant.id`| Azure Active Directory テナント ID。 |
 |`channelData.source.name`| タスク モジュールの呼び出し元のソース名。 |
 |`ChannelData.legacy. replyToId`| このメッセージが返信であるメッセージの ID を取得または設定します。 |
@@ -187,7 +187,7 @@ ms.locfileid: "52075592"
 |`name`| サービスに発行されるコマンドの種類。 この値は、 である必要があります `composeExtension/fetchTask` 。 |
 |`from.id`| 要求を送信したユーザーの ID。 |
 |`from.name`| 要求を送信したユーザーの名前。 |
-|`from.aadObjectId`| 要求を送信したユーザーの Azure Active Directory オブジェクト ID。 |
+|`from.aadObjectId`| Azure Active Directory送信したユーザーのオブジェクト ID を指定します。 |
 |`channelData.tenant.id`| Azure Active Directory テナント ID。 |
 |`channelData.channel.id`| チャネル ID (チャネルで要求が行われた場合)。 |
 |`channelData.team.id`| チーム ID (チャネルで要求が行われた場合)。 |
@@ -253,7 +253,7 @@ ms.locfileid: "52075592"
 |`name`| サービスに発行されるコマンドの種類。 この値は、 である必要があります `composeExtension/fetchTask` 。 |
 |`from.id`| 要求を送信したユーザーの ID。 |
 |`from.name`| 要求を送信したユーザーの名前。 |
-|`from.aadObjectId`| 要求を送信したユーザーの Azure Active Directory オブジェクト ID。 |
+|`from.aadObjectId`| Azure Active Directory送信したユーザーのオブジェクト ID を指定します。 |
 |`channelData.tenant.id`| Azure Active Directory テナント ID。 |
 |`channelData.channel.id`| チャネル ID (チャネルで要求が行われた場合)。 |
 |`channelData.team.id`| チーム ID (チャネルで要求が行われた場合)。 |
@@ -362,7 +362,7 @@ ms.locfileid: "52075592"
 |`name`| サービスに発行されるコマンドの種類。 この値は、 である必要があります `composeExtension/fetchTask` 。 |
 |`from.id`| 要求を送信したユーザーの ID。 |
 |`from.name`| 要求を送信したユーザーの名前。 |
-|`from.aadObjectId`| 要求を送信したユーザーの Azure Active Directory オブジェクト ID。 |
+|`from.aadObjectId`| Azure Active Directory送信したユーザーのオブジェクト ID を指定します。 |
 |`channelData.tenant.id`| Azure Active Directory テナント ID。 |
 |`channelData.source.name`| タスク モジュールの呼び出し元のソース名。 |
 |`value.commandId` | 呼び出されたコマンドの ID が含まれる。 |
@@ -628,7 +628,7 @@ taskInfo オブジェクトのスキーマは次の値です。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-このサンプルでは、Bot Framework SDK に加えて [AdaptiveCards NuGet](https://www.nuget.org/packages/AdaptiveCards) パッケージを使用します。
+このサンプルでは、Bot Framework SDK に[加NuGet AdaptiveCards](https://www.nuget.org/packages/AdaptiveCards)パッケージを使用します。
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -941,8 +941,8 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 | サンプルの名前           | 説明 | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Teams メッセージング拡張機能アクション| アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Teams メッセージング拡張機能の検索   |  検索コマンドを定義し、検索に応答する方法について説明します。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams拡張アクション| アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams拡張機能の検索   |  検索コマンドを定義し、検索に応答する方法について説明します。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="see-also"></a>関連項目
 
