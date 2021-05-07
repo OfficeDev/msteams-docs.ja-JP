@@ -1,21 +1,21 @@
 ---
 title: Teams でレートを制限してボットを最適化する
-description: Microsoft Teams のレート制限とベスト プラクティス
+description: データのレート制限とベスト プラクティスMicrosoft Teams
 ms.topic: conceptual
 localization_priority: Normal
 keywords: Teams ボットのレート制限
-ms.openlocfilehash: 23d75e7df021a5c746c4dd23d848ac085294c160
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 3b8f80efa50d2fbf44162aec13994b747b9bd7ac
+ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020899"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52230961"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Teams でレートを制限してボットを最適化する
 
 レート制限は、メッセージを特定の最大頻度に制限する方法です。 一般的な原則として、アプリケーションは投稿するメッセージの数を個々のチャットまたはチャネルの会話に制限する必要があります。 これにより、最適なエクスペリエンスが確保され、メッセージがユーザーにスパムとして表示されません。
 
-Microsoft Teams とそのユーザーを保護するために、ボット API は受信要求のレート制限を提供します。 この制限を超えるアプリは、エラー状態 `HTTP 429 Too Many Requests` を受け取る。 すべての要求は、メッセージの送信、チャネル列挙、名簿フェッチなど、同じレート制限ポリシーの対象です。
+ボット API はMicrosoft Teamsユーザーを保護するために、受信要求のレート制限を提供します。 この制限を超えるアプリは、エラー状態 `HTTP 429 Too Many Requests` を受け取る。 すべての要求は、メッセージの送信、チャネル列挙、名簿フェッチなど、同じレート制限ポリシーの対象です。
 
 レート制限の正確な値は変更される可能性があります。API が返される場合、アプリケーションは適切なバックオフ動作を実装する必要があります `HTTP 429 Too Many Requests` 。
 
@@ -80,7 +80,7 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
     }
 ```
 
-一時的な障害処理を使用して、バックオフと再試行 [を実行できます](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29)。 NuGet パッケージの取得とインストールに関するガイドラインについては、「一時的な障害処理アプリケーション ブロックをソリューションに追加する [」を参照してください](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN)。 一時的な [障害処理も参照してください](/azure/architecture/best-practices/transient-faults)。
+一時的な障害処理を使用して、バックオフと再試行 [を実行できます](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29)。 NuGet パッケージの取得とインストールに関するガイドラインについては、「一時的な障害処理アプリケーション ブロックをソリューションに追加する[」を参照してください](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN)。 一時的な [障害処理も参照してください](/azure/architecture/best-practices/transient-faults)。
 
 一時的な例外を検出する例を実行した後、指数バックオフの例を参照してください。 エラー時に再試行する代わりに指数バックオフを使用できます。
 
@@ -121,7 +121,7 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 >[!NOTE]
 > * 3600 秒と 1800 の操作のスレッド制限は、複数のボット メッセージが 1 人のユーザーに送信される場合にのみ適用されます。 
-> * テナントごとのアプリごとのグローバル制限は、1 秒あたり 30 要求 (RPS) です。 したがって、1 秒あたりのボット メッセージの総数がスレッドの制限を超えなけってはいけない。
+> * テナントごとのアプリごとのグローバル制限は、1 秒あたり 50 要求 (RPS) です。 したがって、1 秒あたりのボット メッセージの総数がスレッドの制限を超えなけってはいけない。
 > * サービス レベルでのメッセージの分割は、予想される RPS よりも高くなります。 制限への近付きが懸念される場合は、バックオフ戦略を [実装する必要があります](#backoff-example)。 このセクションで提供される値は、見積もり専用です。
 
 次の表に、スレッドごとのボットごとの制限を示します。

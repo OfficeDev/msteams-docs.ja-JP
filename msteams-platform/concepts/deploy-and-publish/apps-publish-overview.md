@@ -4,12 +4,12 @@ description: アプリを発行するためのオプションについてMicroso
 ms.topic: conceptual
 author: KirtiPereira
 ms.author: surbhigupta
-ms.openlocfilehash: 81a266d0bdaf2a65651dc1beca171b72cf1a20a6
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: b321fee132b23556dcc8299cdbbf6fb5d6ccd3cf
+ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101899"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52230912"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Microsoft Teams アプリを配布する
 
@@ -40,11 +40,11 @@ ms.locfileid: "52101899"
 
 詳細については、「publish [to the Teams」を参照してください](~/concepts/deploy-and-publish/appsource/publish.md)。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 * [Microsoft 365 アプリ コンプライアンス プログラム](/microsoft-365-app-certification/overview)
 
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [アプリ パッケージを作成する](~/concepts/build-and-test/apps-package.md)
+> [アプリの既定のインストール オプションを構成する](~/concepts/deploy-and-publish/add-default-install-scope.md)

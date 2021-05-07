@@ -6,20 +6,20 @@ ms.author: surbhigupta
 keywords: カメラ イメージ メディア マイク マイク QR コード qrcode バーコード バーコード スキャン スキャナーの場所マップ機能ネイティブ デバイスのアクセス許可
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: 7d214e5011abdc83d2f6b5b49c2261359259035e
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: d67b343e3e07d7aea79282ce02ef8247fcf77159
+ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020752"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52230898"
 ---
-# <a name="device-capabilities---overview"></a>デバイス機能 - 概要
+# <a name="device-capabilities"></a>デバイス機能
 
-Microsoft Teams プラットフォームは、組み込みのファースト パーティ エクスペリエンスと一致する開発者機能を継続的に強化しています。 強化された Teams プラットフォームを使用すると、パートナーは、カメラ、QR、バーコード スキャナー、フォト ギャラリー、マイク、場所などのデバイス機能を Web アプリと統合できます。 この統合により、アプリ開発の障壁が軽減され、開発サイクルが短縮され、開発者コミュニティの新しいシナリオや使用例が作成されます。
+Microsoft Teamsプラットフォームは、組み込みのファースト パーティ エクスペリエンスと一致する開発者機能を継続的に強化しています。 拡張されたTeamsプラットフォームを使用すると、パートナーはカメラ、QR、バーコード スキャナー、フォト ギャラリー、マイク、場所などのデバイス機能を Web アプリと統合できます。 この統合により、アプリ開発の障壁が軽減され、開発サイクルが短縮され、開発者コミュニティの新しいシナリオや使用例が作成されます。
 
 ## <a name="native-device-capabilities"></a>ネイティブ デバイスの機能
 
-モバイルデバイスまたはデスクトップ デバイスには、機能と呼ばれるカメラやマイクなどの組み込みデバイスがあります。 Microsoft Teams JavaScript クライアント SDK で利用できる専用 API を使用して、モバイルまたはデスクトップで次の [デバイス機能にアクセスできます](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)。
+モバイルデバイスまたはデスクトップ デバイスには、機能と呼ばれるカメラやマイクなどの組み込みデバイスがあります。 JavaScript クライアント SDK で使用できる専用 API を使用して、モバイルまたはデスクトップで次Microsoft Teams[アクセスできます](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)。
 * メディア機能 (次のような)
     * カメラ
     * マイク
@@ -27,15 +27,15 @@ Microsoft Teams プラットフォームは、組み込みのファースト パ
     * QR またはバーコード スキャナー
 * 場所
 
-デバイス機能にアクセスした後、それらを Teams プラットフォームと統合して、共同作業のエクスペリエンスを強化できます。 
+デバイス機能へのアクセスを取得した後、これらの機能を Teamsプラットフォームと統合して、共同作業のエクスペリエンスを向上できます。 
 
 ## <a name="request-device-permissions"></a>デバイスのアクセス許可を要求する
 
-[Microsoft Teams JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)クライアント SDK にあるツールを使用[](native-device-permissions.md)して、ネイティブ デバイス機能にアクセスするために必要なアクセス許可を要求します。 これらの機能へのアクセスは、最新の Web ブラウザーでは標準ですが、アプリ マニフェストを更新して使用している機能について Teams に通知する必要があります。 この更新プログラムを使用すると、アプリが Teams モバイル またはデスクトップ クライアントで実行されている間にアクセス許可を要求できます。
+[JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)クライアント SDK にMicrosoft Teamsツールを使用して、ネイティブ デバイス[](native-device-permissions.md)機能にアクセスするために必要なアクセス許可を要求します。 これらの機能へのアクセスは、最新の Web ブラウザーでは標準ですが、アプリ マニフェストを更新してTeams機能についてユーザーに通知する必要があります。 この更新プログラムを使用すると、モバイル クライアントまたはデスクトップ クライアントでアプリをTeamsアクセス許可を要求できます。
  
  ## <a name="integrate-device-capabilities"></a>デバイス機能の統合
 
-デバイス機能にアクセスした後、Teams メディア機能 API を使用[](mobile-camera-image-permissions.md)して、メディア機能を Teams プラットフォームと統合してユーザー エクスペリエンスを向上します。 これらの統合機能を使用すると、アプリは次の機能を使用できます。
+デバイス機能にアクセスした後、Teams メディア機能 API を使用して、メディア[](mobile-camera-image-permissions.md)機能を Teams プラットフォームに統合して、ユーザー エクスペリエンスを向上します。 これらの統合機能を使用すると、アプリは次の機能を使用できます。
 
 * 画像のキャプチャと共有
 * スキャナーコントロールを使用して QR またはバーコード [をスキャンする](qr-barcode-scanner-capability.md)

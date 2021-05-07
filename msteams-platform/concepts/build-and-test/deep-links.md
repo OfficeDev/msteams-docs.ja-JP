@@ -4,23 +4,23 @@ description: ディープ リンクとアプリでの使用方法について説
 ms.topic: how-to
 localization_priority: Normal
 keywords: Teams ディープ リンク ディープリンク
-ms.openlocfilehash: 5ce9e4e1d86c6b4c040901fc9d6de10ff98a42e0
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: a7d1490fb2066df1fdd8727b78a1a3047a91c53f
+ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075599"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52230954"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成 
 
-Teams 内で情報と機能へのリンクを作成できます。 ディープ リンクの作成が役立つシナリオは次のとおりです。
+情報と機能へのリンクは、Teams。 ディープ リンクの作成が役立つシナリオは次のとおりです。
 
 * アプリのいずれかのタブ内のコンテンツにユーザーを移動します。 たとえば、アプリには、重要なアクティビティをユーザーに通知するメッセージを送信するボットを作成できます。 ユーザーが通知をタップすると、深いリンクがタブに移動し、ユーザーがアクティビティの詳細を表示できます。
 * アプリは、必要なパラメーターを含むディープ リンクを事前に設定することで、チャットの作成や会議のスケジュール設定など、特定のユーザー タスクを自動化または簡素化します。 これにより、ユーザーが手動で情報を入力する必要がなくなります。
 
 > [!NOTE]
 >
-> ディープリンクは、コンテンツに移動する前にブラウザーを最初に起動します。 Teams エンティティのディープ リンクの動作は次のとおりです。
+> ディープリンクは、コンテンツに移動する前にブラウザーを最初に起動します。 エンティティ上のディープ リンクTeamsは次のとおりです。
 >
 > **タブ**:  
 > ✔ ディープリンクの URL に直接移動します。
@@ -70,7 +70,7 @@ Teams のエンティティへのディープ リンクを作成できます。 
 
 > [!NOTE]
 > ボットがディープ リンクを使用して `TextBlock` を含むメッセージを送信する場合、ユーザーがリンクを選択すると、新しいブラウザー タブが開きます。 これは、Chrome および Microsoft Teams デスクトップ アプリ (いずれも Linux で実行されています) で発生します。
-> ボットが同じディープ リンク URL を A に送信すると、ユーザーがリンクを選択すると、現在のブラウザー タブで `Action.OpenUrl` [Teams] タブが開きます。 新しいブラウザー タブが開かれません。
+> ボットが同じディープ リンク URL を a に送信すると、ユーザーがリンクを選択すると、現在Teamsタブで [詳細リンク] タブ `Action.OpenUrl` が開きます。 新しいブラウザー タブが開かれません。
 
 クエリ パラメーターは次のとおりです。
 
@@ -80,9 +80,9 @@ Teams のエンティティへのディープ リンクを作成できます。 
 | `entityId`&emsp; | タブの構成時に指定したタブ内のアイテムの [ID](~/tabs/how-to/create-tab-pages/configuration-page.md)です。|Tasklist123|
 | `entityWebUrl` または `subEntityWebUrl`&emsp; | クライアントがタブのレンダリングをサポートしていない場合に使用するフォールバック URL を含むオプションのフィールド。 | https://tasklist.example.com/123 または https://tasklist.example.com/list123/task456 |
 | `entityLabel` または `subEntityLabel`&emsp; | ディープ リンクを表示するときに使用するタブ内のアイテムのラベル。 | タスク リスト 123 または "タスク 456" |
-| `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| 次のフィールドを含む JSON オブジェクト</br></br> * タブ内のアイテムの ID。 </br></br> * タブ コンテキストから使用できる Microsoft Teams チャネル[ID。](~/tabs/how-to/access-teams-context.md) | 
+| `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| 次のフィールドを含む JSON オブジェクト</br></br> * タブ内のアイテムの ID。 </br></br> * タブ コンテキストMicrosoft Teams利用可能なチャネル ID を指定[します](~/tabs/how-to/access-teams-context.md)。 | 
 | `subEntityId`&emsp; | タブ内のアイテムの ID。 |Task456 |
-| `channelId`&emsp; | タブ コンテキストから使用できる Microsoft Teams チャネル[ID。](~/tabs/how-to/access-teams-context.md) このプロパティは、チームのスコープを持つ構成可能なタブでのみ使用 **できます**。 これは、個人用の範囲を持つ静的タブでは使用 **できません**。| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
+| `channelId`&emsp; | タブ Microsoft Teamsから使用できるチャネル ID を指定[します](~/tabs/how-to/access-teams-context.md)。 このプロパティは、チームのスコープを持つ構成可能なタブでのみ使用 **できます**。 これは、個人用の範囲を持つ静的タブでは使用 **できません**。| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 
 例:
 
@@ -102,13 +102,13 @@ Teams のエンティティへのディープ リンクを作成できます。 
 
 ### <a name="consuming-a-deep-link-from-a-tab"></a>タブからディープ リンクを使用する
 
-深いリンクに移動すると、Microsoft Teams はタブに移動し、Microsoft Teams JavaScript ライブラリを介してサブエンティティ ID が存在する場合に取得するメカニズムを提供します。
+ディープ リンクに移動すると、Microsoft Teams はタブに移動し、Microsoft Teams JavaScript ライブラリを介してサブエンティティ ID が存在する場合に取得するメカニズムを提供します。
 
 この呼び出しは、タブがディープ リンクを介して移動される場合、フィールドを含 [`microsoftTeams.getContext`](/javascript/api/@microsoft/teams-js#getcontext--context--context-----void-) `subEntityId` むコンテキストを返します。
 
 ## <a name="deep-linking-from-your-tab"></a>タブからのディープ リンクの設定
 
-タブから Teams のコンテンツにディープリンクできます。これは、タブが Teams の他のコンテンツ (チャネル、メッセージ、別のタブ、スケジュール 設定ダイアログを開くなど) にリンクする必要がある場合に便利です。 タブからディープリンクをトリガーするには、次のように呼び出す必要があります。
+タブから、Teamsにディープリンクできます。これは、タブがチャネル、メッセージ、別のタブ、スケジュール 設定ダイアログを開くなど、Teams 内の他のコンテンツにリンクする必要がある場合に便利です。 タブからディープリンクをトリガーするには、次のように呼び出す必要があります。
 
 ```Javascript
 microsoftTeams.executeDeepLink(/*deepLink*/);
@@ -159,7 +159,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 * `objectUrl`: ファイルのオブジェクト URL、 https://microsoft.sharepoint.com/teams/(filepath)
 * `baseUrl`: ファイルの基本 URL、 https://microsoft.sharepoint.com/teams
 * `serviceName`: サービスの名前、アプリ ID
-* `threadId`: threadId は、ファイルが保存されているチームのチーム ID です。 これはオプションであり、ユーザーの OneDrive フォルダーに格納されているファイルには設定できません。 threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
+* `threadId`: threadId は、ファイルが保存されているチームのチーム ID です。 これはオプションで、ユーザーのフォルダーに保存されているファイルに対してOneDriveできません。 threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
 * `groupId`: ファイルのグループ ID ae063b79-5315-4ddb-ba70-27328ba6c31e
 
 ファイルへのディープリンクのサンプル形式を次に示します。
@@ -178,13 +178,13 @@ threadId: = "19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype",
 groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 }
 ```
-## <a name="deep-links-for-sharepoint-framework-tabs"></a>SharePoint Framework タブのディープ リンク
+## <a name="deep-links-for-sharepoint-framework-tabs"></a>[詳細] タブSharePoint Frameworkリンク
 
 ボット、コネクタ、またはメッセージング拡張カードでは、次のディープ リンク形式を使用できます。 `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
 
 > [!NOTE]
-> ボットがディープ リンクを含む TextBlock メッセージを送信すると、ユーザーがリンクを選択すると、新しいブラウザー タブが開きます。 これは、Linux で実行されている Chrome および Microsoft Teams デスクトップ アプリで発生します。
-> ボットが同じディープ リンク URL を A に送信すると、ユーザーがリンクを選択すると、現在のブラウザーで `Action.OpenUrl` [Teams] タブが開きます。 新しいブラウザー タブは開きません。
+> ボットがディープ リンクを含む TextBlock メッセージを送信すると、ユーザーがリンクを選択すると、新しいブラウザー タブが開きます。 これは、Chrome および Linux でMicrosoft Teamsデスクトップ アプリで発生します。
+> ボットが同じディープ リンク URL を a に送信すると、ユーザーがリンクを選択すると、Teamsタブが現在のブラウザー `Action.OpenUrl` で開きます。 新しいブラウザー タブは開きません。
 
 クエリ パラメーターは次のとおりです。
 
@@ -201,7 +201,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 > [!NOTE]
 > この機能は現在、開発者プレビュー段階です。
 
-Teams の組み込みスケジュール ダイアログへのディープ リンクを作成できます。 これは、ユーザーが予定表を完了したり、関連するタスクをスケジュールしたりするのに役立つ場合に特に便利です。
+組み込みのスケジュール 設定ダイアログTeams深いリンクを作成できます。 これは、ユーザーが予定表を完了したり、関連するタスクをスケジュールしたりするのに役立つ場合に特に便利です。
 
 ### <a name="generating-a-deep-link-to-the-scheduling-dialog"></a>スケジュール設定ダイアログへのディープ リンクを作成する
 
@@ -224,10 +224,11 @@ Teams の組み込みスケジュール ダイアログへのディープ リン
 
 ## <a name="code-sample"></a>コード サンプル
 
-| サンプルの名前 | 説明 | .NET |
-|-------------|-------------|------|
-| Subentity ID を使用するディープ リンク | ボット チャットからサブエンティ ID を使用するタブへのディープリンクを示す Microsoft Teams サンプル アプリ。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp) |
+| サンプルの名前 | 説明 | C# |Node.js|
+|-------------|-------------|------|----|
+|Subentity ID を使用するディープ リンク  |Microsoft Teamsチャットからサブエンティ ID を使用するタブへのディープリンクを示すサンプル アプリを作成します。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)
+

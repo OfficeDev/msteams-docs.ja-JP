@@ -4,12 +4,12 @@ description: アプリ ストア (AppSource) に送信Teamsガイドラインに
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: b4b9260be2a92c3a9029acf89b2eadae60a8fc7a
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: df60cf9e4a173186fbacacc90621c2efb23ba17f
+ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101920"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52230926"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teamsの検証ガイドライン
 
@@ -31,6 +31,7 @@ ms.locfileid: "52101920"
 * アプリが Microsoft との公式パートナーシップの一部である場合は、アプリの名前が最初に指定されている必要があります (たとえば **、Contoso Connector for microsoft Microsoft Teams)。**
 * ストアまたは商用マーケットプレースの他のオファーに一覧表示されているアプリの名前をコピーしなけり。
 * 不適切な用語や軽蔑的な用語を含めずにしてください。 また、人種的または文化的に無神経な言語を含めずに名前を付けなければならない。
+* 一意である必要があります。 たとえば、同じ名前と機能を持つ異なる地域の複数のアプリを一覧表示することはできません。
 
 [「4.0 App package and store listing」も参照](#40-app-package-and-store-listing)
 
@@ -459,4 +460,4 @@ Teamsは、機能によって異なる妥当な時間枠内に対応する必要
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [パートナー センター アカウントの作成](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)
+> [パートナー センター アカウントを作成する](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)

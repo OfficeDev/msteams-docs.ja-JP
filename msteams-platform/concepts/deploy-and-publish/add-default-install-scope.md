@@ -4,18 +4,26 @@ description: アプリの既定のインストール オプションを指定す
 ms.topic: how-to
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 0afcce50a4779421016c23c4ec4e3d25cc3401d1
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 561a4f2910e703db5ffce6176f6177dfd661d2ce
+ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058615"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52230933"
 ---
-# <a name="add-a-default-install-scope-and-group-capability"></a>既定のインストール スコープとグループ機能を追加する
+# <a name="configure-default-install-options-for-your-microsoft-teams-app"></a>アプリの既定のインストール オプションをMicrosoft Teamsする
 
-アプリが Teams で複数のシナリオをサポートする場合は一般的ですが、特定の範囲と機能を念頭に置いて設計した可能性があります。 たとえば、アプリが主にチームまたはチャネルを使用する場合は、ストアでユーザーに表示される最初のインストール オプションが [チームに追加] である必要 **があります**。
+アプリは、アプリで複数のシナリオをサポートTeams一般的ですが、特定の範囲と機能を念頭に置いて設計した可能性があります。 たとえば、アプリが主にチームまたはチャネルを使用する場合は、ストアでユーザーに表示される最初のインストール オプションが [チームに追加] である必要 **があります**。
 
-![アプリの追加](../../assets/images/compose-extensions/addanapp.png)
+:::row:::
+   :::column span="2":::
+
+![アプリのドロップダウンの例を追加する](../../assets/images/compose-extensions/addanapp.png)
+
+   :::column-end:::
+   :::column span="2":::
+   :::column-end:::
+:::row-end:::
 
 アプリの主な機能がボットである場合は、ユーザーがアプリをチームにインストールするときにボットを既定の機能にすることもできます。
 
@@ -65,4 +73,4 @@ ms.locfileid: "52058615"
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [アプリの配信方法を選ぶ](overview.md)
+> [アプリ パッケージを作成する](~/concepts/build-and-test/apps-package.md)
