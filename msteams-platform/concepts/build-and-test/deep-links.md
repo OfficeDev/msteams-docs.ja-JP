@@ -4,12 +4,12 @@ description: ディープ リンクとアプリでの使用方法について説
 ms.topic: how-to
 localization_priority: Normal
 keywords: Teams ディープ リンク ディープリンク
-ms.openlocfilehash: a7d1490fb2066df1fdd8727b78a1a3047a91c53f
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: eadd576debaa63586597bd8c7dcb27fb14aa6fb1
+ms.sourcegitcommit: d272fce50af0fa3e2de0094522f294141cae511c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230954"
+ms.lasthandoff: 05/07/2021
+ms.locfileid: "52278153"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成 
 
@@ -46,7 +46,7 @@ Teams のエンティティへのディープ リンクを作成できます。 
 >[!NOTE]
 > 現在、shareDeepLinkは、モバイル プラットフォームでは機能しません。
 
-### <a name="showing-a-deep-link-to-an-item-within-your-tab"></a>タブ内のアイテムへのディープ リンクを表示する
+### <a name="show-a-deep-link-to-an-item-within-your-tab"></a>タブ内のアイテムへの深いリンクを表示する
 
 タブ内のアイテムへのディープ リンクを含むダイアログ ボックスを表示するには、`microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })` を呼び出します
 
@@ -56,7 +56,7 @@ Teams のエンティティへのディープ リンクを作成できます。 
 * `subEntityLabel`: ディープ リンクの表示に使用するアイテムのラベル。
 * `subEntityWebUrl`: クライアントがタブのレンダリングをサポートしていない場合に使用するフォールバック URL を含むオプションのフィールド。
 
-### <a name="generating-a-deep-link-to-your-tab"></a>タブへのディープ リンクを作成する
+### <a name="generate-a-deep-link-to-your-tab"></a>タブへのディープ リンクを生成する
 
 > [!NOTE]
 > 個人用タブにはスコープ `personal` が含まれていますが、チャネルタブとグループ タブはスコープ `team` を `group` 使用します。 構成可能なタブだけがコンテキスト オブジェクトに関連付けられている `channel` プロパティを持つため、2 つのタブの種類の構文はわずかに異なります。 タブ スコープ [の詳細](~/resources/schema/manifest-schema.md) については、マニフェスト リファレンスを参照してください。
@@ -100,7 +100,7 @@ Teams のエンティティへのディープ リンクを作成できます。 
 > var taskItemUrl = 'https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=' + encodedWebUrl + '&context=' + encodedContext;
 > ```
 
-### <a name="consuming-a-deep-link-from-a-tab"></a>タブからディープ リンクを使用する
+### <a name="consume-a-deep-link-from-a-tab"></a>タブからディープ リンクを使用する
 
 ディープ リンクに移動すると、Microsoft Teams はタブに移動し、Microsoft Teams JavaScript ライブラリを介してサブエンティティ ID が存在する場合に取得するメカニズムを提供します。
 
@@ -196,14 +196,14 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 例: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
 
-## <a name="linking-to-the-scheduling-dialog"></a>スケジュール設定ダイアログへのリンクの設定
+## <a name="deep-link-to-the-scheduling-dialog"></a>[スケジュール] ダイアログへのディープ リンク
 
 > [!NOTE]
 > この機能は現在、開発者プレビュー段階です。
 
 組み込みのスケジュール 設定ダイアログTeams深いリンクを作成できます。 これは、ユーザーが予定表を完了したり、関連するタスクをスケジュールしたりするのに役立つ場合に特に便利です。
 
-### <a name="generating-a-deep-link-to-the-scheduling-dialog"></a>スケジュール設定ダイアログへのディープ リンクを作成する
+### <a name="generate-a-deep-link-to-the-scheduling-dialog"></a>スケジュール ダイアログへの深いリンクを生成する
 
 ボット、コネクタ、またはメッセージング拡張カードで使用できるディープ リンクには、次の形式を使用します。 `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
@@ -222,13 +222,36 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ボットとのこのディープ リンクを使用するには、カードのボタンで URL を対象として指定するか、[ `openUrl` アクションの種類] で [アクション] をタップします。
 
+## <a name="deep-linking-to-an-audio-or-audio-video-call"></a>音声通話または音声ビデオ通話へのディープ リンク
+
+音声または *av* として、通話の種類と参加者を指定することで、1 人のユーザーまたはユーザーのグループに対して音声のみまたはオーディオ ビデオ通話を呼び出すディープ リンクを作成できます。 ディープ リンクが呼び出された後、呼び出しを行う前にTeamsデスクトップ クライアントから通話の確認を求めるメッセージが表示されます。 グループ呼び出しの場合は、同じディープリンク呼び出しで VoIP ユーザーのセットと PSTN ユーザーのセットを呼び出します。 
+
+ビデオ通話の場合、クライアントは確認を求め、通話のために発信者のビデオをオンにします。 通話の受信者は、音声のみまたは音声とビデオを通じて、通話通知ウィンドウで応答Teams選択できます。
+
+> [!NOTE]
+> このディープリンクは、会議の呼び出しには使用できません。
+
+### <a name="generate-a-deep-link-to-a-chat"></a>チャットへのディープ リンクを生成する
+
+| ディープ リンク | Format | 例 |
+|-----------|--------|---------|
+| 音声通話を行う | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; 、 &lt; user2&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com |
+| 音声およびビデオ通話を行う | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; 、 &lt; user2&video=true &gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true |
+|オプションのパラメーター ソースを使用して音声およびビデオ通話を行う | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withvideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true&source=demoApp |  
+| VoIP ユーザーと PSTN ユーザーの組み合わせに音声およびビデオ通話を行う | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; ,4: &lt; phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
+  
+クエリ パラメーターは次のとおりです。
+* `users`: 呼び出しの参加者を表すユーザー ID のコンマ区切りリスト。 現在、User ID フィールドは Azure AD UserPrincipalName (通常は電子メール アドレス) をサポートしています。PSTN 通話の場合は、pstn mri 4: phonenumber をサポートしています。 &lt; &gt;
+* `Withvideo`: これはオプションのパラメーターで、ビデオ通話に使用できます。 このパラメーターを設定すると、呼び出し元のカメラだけがオンにされます。 通話の受信者は、通話通知ウィンドウから音声通話または音声通話とビデオ通話に応答Teams選択できます。 
+* `Source`: これはオプションのパラメーターで、ディープリンクのソースを通知します。
+
 ## <a name="code-sample"></a>コード サンプル
 
 | サンプルの名前 | 説明 | C# |Node.js|
 |-------------|-------------|------|----|
 |Subentity ID を使用するディープ リンク  |Microsoft Teamsチャットからサブエンティ ID を使用するタブへのディープリンクを示すサンプル アプリを作成します。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)
 
