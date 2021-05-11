@@ -13,11 +13,11 @@ ms.locfileid: "52019532"
 ---
 # <a name="cards-reference"></a>カード リファレンス
 
-このドキュメントに記載されているカードは、Microsoft Teams のボットでサポートされています。 これらはボット フレームワークによって定義されたカードに基づいておりますが、Teams ではすべてのボット フレームワーク カードがサポートされるのではなく、一部の Teams カードが追加されています。 相違点は、このドキュメントの参照で呼び出されます。
+このドキュメントに記載されているカードは、ボットでサポートされているMicrosoft Teams。 これらは Bot Framework によって定義されたカードに基づいておりますが、Teams はボット フレームワーク カードの一部をサポートしているのではなく、一部の Teamsカードが追加されています。 相違点は、このドキュメントの参照で呼び出されます。
 
 ## <a name="card-examples"></a>カードの例
 
-カードの使用方法に関する追加情報については、Bot Builder SDK v3 のドキュメントを参照してください。 コード サンプルは、GitHub の Microsoft/BotBuilder-Samples リポジトリでも利用できます。
+カードの使用方法に関する追加情報については、Bot Builder SDK v3 のドキュメントを参照してください。 コード サンプルは、Microsoft/BotBuilder-Samples リポジトリ (microsoft/BotBuilder-Samples リポジトリ) GitHub。
 
 * .NET
   * [メッセージに添付ファイルとしてカードを追加する](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
@@ -46,13 +46,13 @@ ms.locfileid: "52019532"
 
 ### <a name="inline-card-images"></a>インライン カードの画像
 
-カードには、公開されている画像へのリンクを含め、インライン イメージを含めできます。 パフォーマンス上の目的で、パブリック コンテンツ配信ネットワーク (CDN) でイメージをホストすることを強くお勧めします。
+カードには、公開されている画像へのリンクを含め、インライン イメージを含めできます。 パフォーマンス上の目的で、パブリック コンテンツ配信ネットワーク (CDN) でイメージをホストすることを強くお勧CDN。
 
 画像のサイズは拡大または縮小され、縦横比を維持して画像領域をカバーします。 次に、カードの適切な縦横比を実現するために、中央から画像がトリミングされます。
 
 画像は、PNG、JPEG、または GIF 形式×最大 1024、×1024 である必要があります。アニメーション GIF はサポートされていません。
 
-| プロパティ | 種類  | 説明 |
+| プロパティ | 型  | 説明 |
 | --- | --- | --- |
 | url | URL | イメージの HTTPS URL。 |
 | alt | 文字列 | 画像のアクセス可能な説明。 |
@@ -81,8 +81,8 @@ ms.locfileid: "52019532"
 | ✔ | ✔ | ✖ | ✔ |
 
 > [!NOTE]
-> * Teams プラットフォームは、v1.2 以前のアダプティブ カード機能をサポートしています。
-> * メディア要素は、Teams プラットフォームのアダプティブ カード v1.2 では現在サポートされていません。
+> * Teamsプラットフォームは、v1.2 以前のアダプティブ カード機能をサポートしています。
+> * メディア要素は、現在、プラットフォーム上のアダプティブ カード v1.2 ではTeamsされていません。
 
 ### <a name="example-of-an-adaptive-card"></a>アダプティブ カードの例
 
@@ -240,7 +240,7 @@ ms.locfileid: "52019532"
 
 ### <a name="properties-of-a-hero-card"></a>ヒーロー カードのプロパティ
 
-| プロパティ | 種類  | 説明 |
+| プロパティ | 型  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。 |
 | サブタイトル | リッチ テキスト | カードのサブタイトル。 最大 2 行。|
@@ -301,7 +301,7 @@ ms.locfileid: "52019532"
 
 ### <a name="properties-of-a-list-card"></a>リスト カードのプロパティ
 
-| プロパティ | 種類  | 説明 |
+| プロパティ | 型  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。|
 | アイテム | リスト アイテムの配列 ||
@@ -363,7 +363,7 @@ ms.locfileid: "52019532"
 
 ## <a name="office-365-connector-card"></a>Office 365 コネクタ カード
 
-365 Officeカードは、ボット フレームワークではなく Teams でサポートされています。 このカードは、複数のセクション、フィールド、画像、およびアクションを含む柔軟なレイアウトを提供します。 Bot が使用できるように、このカードがコネクタ カードをカプセル化します。 コネクタ カードと O365 カードの違いについては、「Office [365 コネクタ カードに関するメモ」を参照してください](#notes-on-the-office-365-connector-card)。
+コネクタ Office 365はボット フレームワークではなく、Teamsでサポートされています。 このカードは、複数のセクション、フィールド、画像、およびアクションを含む柔軟なレイアウトを提供します。 Bot が使用できるように、このカードがコネクタ カードをカプセル化します。 コネクタ カードと O365 カードの違いについては、「コネクタ カードに関するOffice 365[を参照してください](#notes-on-the-office-365-connector-card)。
 
 ### <a name="support-for-office-365-connector-cards"></a>Office 365 コネクタ カードでのサポート
 
@@ -373,7 +373,7 @@ ms.locfileid: "52019532"
 
 ### <a name="properties-of-the-office-365-connector-card"></a>Office 365 コネクタ カードのプロパティ
 
-| プロパティ | 種類  | 説明 |
+| プロパティ | 型  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。 |
 | 概要 | リッチ テキスト | カードの概要。 最大 2 行。 |
@@ -382,7 +382,7 @@ ms.locfileid: "52019532"
 
 ### <a name="notes-on-the-office-365-connector-card"></a>Office 365 コネクタ カードに関する注意事項
 
-Office 365 コネクタ カードは、ActionCard アクションを含む Microsoft Teams で [正しく機能します](/outlook/actionable-messages/card-reference#actioncard-action)。
+Office 365カードは、ActionCard アクションなど、Microsoft Teamsで[適切に機能します](/outlook/actionable-messages/card-reference#actioncard-action)。
 
 コネクタからコネクタ カードを使用する場合とボットでコネクタ カードを使用する場合の重要な違いの 1 つは、カードアクションの処理です。
 
@@ -405,15 +405,15 @@ Office 365 コネクタ カードは、ActionCard アクションを含む Micro
 | `avatar` | 既定値。 `activityImage` は、円としてトリミングされます。 |
 | `article` | `activityImage` は四角形として表示され、縦横比が保持されます。 |
 
-コネクタ カードのプロパティに関するその他の詳細については、「アクション可能な [メッセージ カードリファレンス」を参照してください](/outlook/actionable-messages/card-reference)。 Microsoft Teams が現在サポートしていないコネクタ カードのプロパティは、次のとおりです。
+コネクタ カードのプロパティに関するその他の詳細については、「アクション可能な [メッセージ カードリファレンス」を参照してください](/outlook/actionable-messages/card-reference)。 現在サポートされていないコネクタ Microsoft Teamsのプロパティは次のとおりです。
 
 * `heroImage`
 * `hideOriginalBody`
-* `startGroup` Teams で常に `true` 扱われる
+* `startGroup`常に、次のように `true` 処理Teams
 * `originator`
 * `correlationId`
 
-### <a name="example-of-an-office-365-connector-card"></a>365 コネクタ Officeカードの例
+### <a name="example-of-an-office-365-connector-card"></a>コネクタ カードOffice 365例
 
 ```json
 {
@@ -478,7 +478,7 @@ Office 365 コネクタ カードは、ActionCard アクションを含む Micro
 
 ## <a name="receipt-card"></a>レシート カード
 
-Teams はレシート カードをサポートしています。 ボットがユーザーにレシートを提供できるカードです。 通常、税金や合計情報など、領収書に含めるアイテムの一覧が含まれます。
+Teamsカードをサポートしています。 ボットがユーザーにレシートを提供できるカードです。 通常、税金や合計情報など、領収書に含めるアイテムの一覧が含まれます。
 
 ### <a name="support-for-receipt-cards"></a>レシート カードのサポート
 
@@ -546,9 +546,9 @@ Teams はレシート カードをサポートしています。 ボットがユ
 
 ## <a name="signin-card"></a>サインイン カード
 
-Signin card を使用すると、ボットはユーザーにサインインを要求できます。 これは、ボット フレームワークで見つかった形式とは少し異なる形式で Teams でサポートされています。 Teams のサインイン カードはボット フレームワークのサインイン カードと似ていますが、Teams のサインイン カードでは 2 つのアクション `signin` のみサポートされます。 `openUrl`
+Signin card を使用すると、ボットはユーザーにサインインを要求できます。 これは、ボット フレームワークTeams少し異なる形式でサポートされています。 Teams のサインイン カードはボット フレームワークのサインイン カードに似ていますが、Teams のサインイン カードは 2 つのアクションのみをサポートしています。 `signin` `openUrl`
 
-サインイン アクションは、サインイン カードだけでなく、Teams のすべてのカードで使用できます。 認証の詳細については、「ボットの [Microsoft Teams 認証フロー」を参照してください](~/bots/how-to/authentication/auth-flow-bot.md)。
+サインイン アクションは、サインイン カードだけでなく、Teams のすべてのカードで使用できます。 認証の詳細については、「ボットMicrosoft Teams[認証フロー」を参照してください](~/bots/how-to/authentication/auth-flow-bot.md)。
 
 ### <a name="support-for-signin-cards"></a>サインイン カードのサポート
 
@@ -577,7 +577,7 @@ Signin card を使用すると、ボットはユーザーにサインインを�
 
 ### <a name="properties-of-a-thumbnail-card"></a>サムネイル カードのプロパティ
 
-| プロパティ | 種類  | 説明 |
+| プロパティ | 型  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。|
 | サブタイトル | リッチ テキスト | カードのサブタイトル。 最大 2 行。|
@@ -638,7 +638,7 @@ Signin card を使用すると、ボットはユーザーにサインインを�
 
 ## <a name="card-collections"></a>カード コレクション
 
-Teams はカード コレクションをサポートしています。
+Teams Card コレクションをサポートしています。
 
 カード コレクションには、 `builder.AttachmentLayout.carousel` と が含まれます `builder.AttachmentLayout.list` 。 これらのコレクションには、アダプティブ カード、ヒーロー カード、またはサムネイル カードが含まれる。
 
@@ -859,7 +859,7 @@ Teams はカード コレクションをサポートしています。
 
 ## <a name="cards-not-supported-in-teams"></a>Teams でサポートされていないカード
 
-次のカードはボット フレームワークによって実装されますが、Teams ではサポートされていません。
+次のカードは Bot Framework によって実装されますが、ボット フレームワークではTeams。
 
 * アニメーション カード
 * オーディオ カード

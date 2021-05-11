@@ -1,7 +1,7 @@
 ---
-title: 'クイック スタート: Microsoft Teams 用のユーザー設定Node.js Yeoman Generator を使用してカスタム個人用タブを作成する'
+title: 'クイック スタート: カスタム 個人用タブを作成し、Node.js Yeoman Generator を使用Microsoft Teams'
 author: laujan
-description: Microsoft Teams 用 Yeoman Generator を使用して個人用タブを作成するクイック スタート ガイド。
+description: Yeoman Generator を使用して個人用タブを作成するクイック スタート Microsoft Teams。
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
@@ -12,12 +12,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52019553"
 ---
-# <a name="quickstart-create-a-custom-personal-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>クイック スタート: Microsoft Teams 用のユーザー設定Node.js Yeoman Generator を使用してカスタム個人用タブを作成する
+# <a name="quickstart-create-a-custom-personal-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>クイック スタート: カスタム 個人用タブを作成し、Node.js Yeoman Generator を使用Microsoft Teams
 
 >[!NOTE]
->このクイック スタートは、Microsoft OfficeDev GitHub リポジトリにある最初の Microsoft [Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki のビルドで説明されている手順に従います。
+>このクイック スタートは、Microsoft OfficeDev Microsoft Teams リポジトリにあるビルド Your First [Microsoft Teams](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) App Wiki で説明されている手順にGitHubします。
 
-このクイック スタートでは、Teams Yeoman ジェネレーターを使用してカスタム個人用タブを作成 [する方法について説明します](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)。 また、アプリケーションをチームにアップロードします。
+このクイック スタートでは[、Yeoman](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)ジェネレーターを使用してカスタム個人用タブを作成Teams説明します。 また、アプリケーションをチームにアップロードします。
 
 [!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
 
@@ -111,7 +111,7 @@ ms.locfileid: "52019553"
 
 ## <a name="establish-a-secure-tunnel-to-your-tab"></a>タブへのセキュリティで保護されたトンネルを確立する
 
-Microsoft Teams は完全にクラウドベースの製品であり、HTTPS エンドポイントを使用してタブ コンテンツをクラウドから利用できる必要があります。 Teams ではローカル ホスティングが許可されていないので、タブをパブリック URL に発行するか、ローカル ポートをインターネットに接続する URL に公開するプロキシを使用する必要があります。
+Microsoft Teams完全にクラウドベースの製品であり、HTTPS エンドポイントを使用してタブ コンテンツをクラウドから利用できる必要があります。 Teamsローカル ホスティングは許可されていないので、タブをパブリック URL に発行するか、ローカル ポートをインターネットに接続する URL に公開するプロキシを使用する必要があります。
 
 タブ拡張機能をテストするには、このアプリケーションに組み込まれる [ngrok](https://ngrok.com/docs)を使用します。 Ngrok はリバース プロキシ ソフトウェア ツールで、ローカルで実行中の Web サーバーのパブリックに利用可能な HTTPS エンドポイントへのトンネルを作成します。 サーバーの Web エンドポイントは、ローカル コンピューター上の現在のセッション中に利用できます。 コンピューターがシャットダウンまたはスリープ状態になった場合、サービスは使用できなくなりました。
 
@@ -122,15 +122,15 @@ gulp ngrok-serve
 ```
 
 > [!IMPORTANT]
-> タブが *ngrok* 経由で Microsoft チームにアップロードされ、正常に保存されると、トンネル セッションが終了するまで Teams で表示できます。
+> タブが *ngrok* 経由で Microsoft チームにアップロードされ、正常に保存された後、トンネル セッションが終了するまで、Teamsで表示できます。
 
-## <a name="upload-your-application-to-teams"></a>アプリケーションを Teams にアップロードする
+## <a name="upload-your-application-to-teams"></a>アップロードを使用してアプリケーションをTeams
 
-- Microsoft Teams クライアントを開きます。 Web ベースのバージョン [を使用する](https://teams.microsoft.com) 場合は、ブラウザーの開発者ツールを使用してフロントエンド コードを [検査できます](~/tabs/how-to/developer-tools.md)。
+- クライアントを開Microsoft Teamsします。 Web ベースのバージョン [を使用する](https://teams.microsoft.com) 場合は、ブラウザーの開発者ツールを使用してフロントエンド コードを [検査できます](~/tabs/how-to/developer-tools.md)。
 - 左側の *[YourTeams]* パネルで、タブのテストに使用するチームの横にあるメニューを選択し、[チームの管理 `...` ] **を選択します**。
-- メイン パネルでタブ バーから **[アプリ**]を選択し、ページの右下隅にある [カスタム アプリのアップロード] を選択します。
-- プロジェクト ディレクトリを開き **、./package** フォルダーを参照し、zip フォルダーを選択して右クリックし、[開く] を選択 **します**。 タブが Teams にアップロードされます。
+- メイン パネルでタブ バーから **[** アプリ]を選択しアップロードの右下隅にあるカスタム アプリを選択します。
+- プロジェクト ディレクトリを開き **、./package** フォルダーを参照し、zip フォルダーを選択して右クリックし、[開く] を選択 **します**。 タブがアプリにアップロードTeams。
 
 ## <a name="view-your-personal-tabs"></a>個人用タブを表示する
 
-Teams クライアントの左上にあるナビゲーション バーで、メニューを選択し、一覧から `...` アプリを選択します。
+クライアントの左上にあるナビゲーション バーでTeamsメニューを選択し、一覧から `...` アプリを選択します。

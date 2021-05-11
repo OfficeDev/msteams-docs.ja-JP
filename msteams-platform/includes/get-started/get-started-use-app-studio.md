@@ -1,10 +1,10 @@
 ### <a name="use-app-studio-to-update-the-app-package"></a>App Studio を使用してアプリ パッケージを更新する
 
-App Studio は Teams ストアからインストールできる Teams アプリです。 アプリの作成と登録が簡略化されます。
+App Studio は、TeamsストアからインストールできるアプリTeamsです。 アプリの作成と登録が簡略化されます。
 
 アプリ パッケージを更新するには、次の手順を実行します。
 
-1. Teams に App Studio をインストールするには、左側のバーの下部にある [アプリ] アイコンを選択し **、App Studio を検索します**。
+1. App Studio をアプリ Teamsにインストールするには、左側のバーの下部にある [アプリ] アイコンを選択し **、App Studio を検索します**。
 
 <img  width="450px" alt="Finding App Studio in the Store View" src="~/assets/images/get-started/searchforAppStudio.png"/>
 
@@ -12,7 +12,7 @@ App Studio は Teams ストアからインストールできる Teams アプリ�
 
 <img  width="450px" alt="Installing App Studio" src="~/assets/images/get-started/InstallingAppStudio.png"/>
 
-3. Teams アプリのアプリ パッケージを作成するには、App Studio の **[マニフェスト エディター]** タブ **を選択します**。
+3. アプリのアプリ パッケージを作成するにはTeams App Studio の **[マニフェスト エディター]** タブ **を選択します**。
 
 <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
@@ -56,7 +56,7 @@ Build completed. Output in manifest folder
 
 #### <a name="tabs"></a>タブ
 
-Teams アプリにタブを追加する方法は簡単です。 サンプル アプリは既に複数のタブをサポートし、有効にできます。
+アプリにタブを追加Teamsです。 サンプル アプリは既に複数のタブをサポートし、有効にできます。
 
 ##### <a name="team-tab"></a>[チーム] タブ
 
@@ -138,23 +138,23 @@ Teams アプリにタブを追加する方法は簡単です。 サンプル ア
 
 7. 情報を入力した後、[保存] **を選択して** ダイアログ ボックスを閉じます。
 
-#### <a name="register-your-app-in-teams"></a>Teams にアプリを登録する
+#### <a name="register-your-app-in-teams"></a>アプリをアプリに登録Teams
 
-アプリの詳細を入力したら、次の手順を実行して Teams にアプリを登録します。
+アプリの詳細を入力したら、次の手順を実行してアプリをアプリに登録Teams。
 
-1. App **Studio のテストと配布** を使用して、Teams にアプリをインストールします。 
+1. App **Studio のテストと配布** を使用して、アプリをアプリにインストールTeams。 
 2. ボットのアプリ ID とパスワードを使用してホストされたアプリケーションを更新します。 サンプル アプリでは、ボットとメッセージング拡張機能の両方に同じアプリ ID とパスワードを使用します。 
 3. App Studio **の左側のウィンドウ****で 、[完了**] で [テストと配布] を選択します。
 
 <img  width="450px" alt="Testing your app" src="~/assets/images/get-started/Testanddistribute.png"/>
 
-4. アプリを Teams にアップロードするには、[テストと配布] **の下の [インストール** ] **ボタンを選択します**。
+4. アプリをアプリにアップロードするには、[テストTeams配布] の下にある **[** インストール]**ボタンを選択します**。
 
 <img  width="450px" alt="Adding a messaging extension dialog" src="~/assets/images/get-started/InstallingHelloWorld.png"/>
 
 5. [チームに **追加** ] セクションで **[検索] ボックスを選択** し、サンプル アプリを追加するチームを選択します。 テスト用に特別なチームを設定できます。
 6. ダイアログ ボックス **の下部** にある [インストール] ボタンを選択します。
 
-これで、アプリは Teams で利用できます。 ただし、ボットとメッセージング拡張機能は、ホストされているアプリケーション環境をアプリの ID とパスワードで更新するまで機能しません。
+アプリがアプリで使用Teams。 ただし、ボットとメッセージング拡張機能は、ホストされているアプリケーション環境をアプリの ID とパスワードで更新するまで機能しません。
 
 <img  width="450px" alt="The finished app" src="~/assets/images/get-started/Finishedhelloworld.png"/>

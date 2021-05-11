@@ -1,7 +1,7 @@
 ---
-title: Microsoft Teams Webhooks とコネクタを設計する
+title: Webhooks Microsoft Teamsコネクタの設計
 author: heath-hamilton
-description: Microsoft Teams の Webhooks とコネクタを設計するためのガイダンスとベスト プラクティス。
+description: Webhooks とコネクタを設計するためのガイダンスとベスト プラクティスは、Microsoft Teams。
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar

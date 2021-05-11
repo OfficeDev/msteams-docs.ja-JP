@@ -1,12 +1,12 @@
 ## <a name="prerequisites"></a>前提条件
 
-- このクイックスタートを完了するには、Microsoft 365 テナントと、[ *カスタムアプリをアップロードできるようにする* ] を有効にして構成したチームが必要です。 詳細については、「 [Microsoft 365 テナントを準備](~/concepts/build-and-test/prepare-your-o365-tenant.md)する」を参照してください。
-  - 現在 Microsoft 365 アカウントを持っていない場合は、 [Microsoft 開発者プログラム](https://developer.microsoft.com/en-us/microsoft-365/dev-program)を使用して無料のサブスクリプションにサインアップできます。 このサブスクリプションは、継続的な開発のために使用している限り、アクティブのままです。
+- このクイック スタートを完了するには、カスタム アプリのアップロードMicrosoft 365許可を有効にしたテナントとチーム *が必要* です。 詳細については、「Prepare [your Microsoft 365 テナント」を参照してください](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
+  - 現在アカウントをお持ちMicrosoft 365場合は、Microsoft Developer Program を通じて無料サブスクリプションに[サインアップできます](https://developer.microsoft.com/en-us/microsoft-365/dev-program)。 サブスクリプションは、継続的な開発に使用している限りアクティブなままです。
 
-- アプリ Studio を使用して、アプリケーションを Teams にインポートします。 アプリ **studio をインストール** するには、 ![ Teams アプリの左下隅にある [アプリストアアプリの選択] を選択 ](~/assets/images/tab-images/storeApp.png) して、アプリ studio を検索します。 タイルを見つけたら、それを選択して、[ポップアップウィンドウ] ダイアログボックスの [インストール] を選択します。
+- App Studio を使用して、アプリケーションをアプリケーションにインポートTeams。 App Studio をインストール **するには、アプリ** アプリの左下隅にある [アプリ ストア アプリ] を選択Teams App Studio ![ ](~/assets/images/tab-images/storeApp.png) を検索します。 タイルを見つけたら、タイルを選択し、ポップアップ ウィンドウ ダイアログ ボックスで [インストール] を選択します。
 
-また、このプロジェクトでは、開発環境に次のものがインストールされている必要があります。
+さらに、このプロジェクトでは、次のコードが開発環境にインストールされている必要があります。
 
-- 現在のバージョン **.NET コアクロスプラットフォーム開発** ワークロードがインストールされた VISUAL Studio IDE。 Visual Studio をまだお持ちでない場合は、最新の [Microsoft Visual Studio コミュニティ](https://visualstudio.microsoft.com/downloads) バージョンを無料でダウンロードしてインストールすることができます。
+- .NET CORE クロスVisual Studioワークロードがインストールされている IDE の現在 **の** バージョン。 まだインストールされていない場合はVisual Studio最新のバージョンを無料で[Microsoft Visual Studio Communityインストールできます](https://visualstudio.microsoft.com/downloads)。
 
-- [Ngrok](https://ngrok.com)リバースプロキシツール。 Ngrok を使用して、ローカルに使用可能な web サーバーの公開された HTTPS エンドポイントへのトンネルを作成します。 ここから [ダウンロード](https://ngrok.com/download)できます。
+- [ngrok](https://ngrok.com)リバース プロキシ ツール。 ngrok を使用して、ローカルで実行している Web サーバーのパブリックに利用可能な HTTPS エンドポイントへのトンネルを作成します。 こちらから [ダウンロードできます](https://ngrok.com/download)。

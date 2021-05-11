@@ -1,6 +1,6 @@
 ---
-title: Microsoft Teams タブでのタスク モジュールの使用
-description: Microsoft Teams クライアント SDK を使用して Teams タブからタスク モジュールを呼び出す方法について説明します。
+title: '[タスク モジュール] タブでのタスク Microsoft Teams使用する'
+description: クライアント SDK を使用してタスク モジュールTeamsタブからMicrosoft Teams説明します。
 localization_priority: Normal
 ms.topic: how-to
 keywords: タスク モジュールチームがクライアント SDK をタブする
@@ -13,9 +13,9 @@ ms.locfileid: "52019525"
 ---
 # <a name="using-task-modules-in-tabs"></a>タブでタスク モジュールを使用する
 
-タブにタスク モジュールを追加すると、データ入力が必要なワークフローに対するユーザー エクスペリエンスが大幅に簡素化されます。 タスク モジュールを使用すると、Teams 対応のポップアップで入力を収集できます。 この例の良い例は、Planner カードの編集です。タスク モジュールを使用して同様のエクスペリエンスを作成できます。
+タブにタスク モジュールを追加すると、データ入力が必要なワークフローに対するユーザー エクスペリエンスが大幅に簡素化されます。 タスク モジュールを使用すると、ユーザーが認識できるポップアップTeamsを収集できます。 この例の良い例は、Planner カードの編集です。タスク モジュールを使用して同様のエクスペリエンスを作成できます。
 
-タスク モジュール機能をサポートするために、Microsoft Teams クライアント SDK に 2 つの新しい [機能が追加されました](/javascript/api/overview/msteams-client)。
+タスク モジュール機能をサポートするために、次の 2 つの新しい機能がクライアント[SDK Microsoft Teams追加されました](/javascript/api/overview/msteams-client)。
 
 ```typescript
 microsoftTeams.tasks.startTask(
@@ -76,9 +76,9 @@ microsoftTeams.tasks.startTask(taskInfo, submitHandler);
 
 ### <a name="htmljavascript-taskinfourl"></a>HTML/JavaScript ( `TaskInfo.url` )
 
-ユーザーが入力した情報を検証したら、SDK 関数を呼び出します (以下、読みやすさの目的 `microsoftTeams.tasks.submitTask()` `submitTask()` で呼び出します)。 Teams でタスク モジュールを閉じるだけで、ほとんどの場合、オブジェクトまたは文字列を自分のタスク モジュールに渡す必要がある場合は、パラメーターを指定せずに `submitTask()` 呼び出します `submitHandler` 。
+ユーザーが入力した情報を検証したら、SDK 関数を呼び出します (以下、読みやすさの目的 `microsoftTeams.tasks.submitTask()` `submitTask()` で呼び出します)。 Teams がタスク モジュールを閉じるだけで、ほとんどの場合、オブジェクトまたは文字列を自分のタスク モジュールに渡す場合は、パラメーターを指定せずに呼び出 `submitTask()` します `submitHandler` 。
 
-結果を最初のパラメーターとして渡します。 Teams は場所 `submitHandler` を `err` 呼び出 `null` し `result` 、渡したオブジェクト/文字列になります `submitTask()` 。 パラメーターを使用して呼び出す場合は、文字列または文字列の配列を渡す必要があります。これにより、Teams は、結果を送信するアプリがタスク モジュールを呼び出したアプリと同じことを検証 `submitTask()` `result`  `appId` `appId` できます。
+結果を最初のパラメーターとして渡します。 Teamsが呼 `submitHandler` び出 `err` され、渡 `null` された `result` オブジェクト/文字列になります `submitTask()` 。 パラメーターを使用して呼び出す場合は、文字列の配列または配列を渡す必要があります `submitTask()` `result`  `appId` `appId` 。これにより、Teams は、結果を送信するアプリがタスク モジュールを呼び出したアプリと同じことを検証できます。
 
 ### <a name="adaptive-card-taskinfocard"></a>アダプティブ カード ( `TaskInfo.card` )
 

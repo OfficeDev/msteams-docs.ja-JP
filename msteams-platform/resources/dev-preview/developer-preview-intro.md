@@ -1,6 +1,6 @@
 ---
 title: Developer Preview
-description: Microsoft Teams のパブリック サーバーの機能Developer Preview説明します。
+description: パブリック サーバーの機能について説明Developer Preview Microsoft Teams
 ms.topic: conceptual
 localization_priority: Normal
 keywords: teams プレビュー開発者向け機能
@@ -11,12 +11,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52019721"
 ---
-# <a name="public-developer-preview-for-microsoft-teams"></a>Microsoft Teams のパブリック開発者プレビュー
+# <a name="public-developer-preview-for-microsoft-teams"></a>開発者向けパブリック プレビュー Microsoft Teams
 
 >[!NOTE]
 >プレビューに含まれる機能は完全ではない可能性があります。また、パブリック リリースで利用可能になる前に変更が加わる可能性があります。 これらは、テストおよび探索の目的でのみ提供されます。 これらは、実稼働アプリケーションでは使用できません。
 
-Developer Previewは、Microsoft Teams の未発表の機能への早期アクセスを提供する開発者向けの公開プログラムです。 これにより、Microsoft Teams アプリに潜在的に組み込まれる可能性がある機能について、今後の機能を確認してテストできます。 開発者プレビューの [機能](~/feedback.md) に関するフィードバックも歓迎します。 開発者プレビューは Microsoft Teams クライアントごとに有効になっているので、組織全体に影響を与える心配はありません。
+Developer Previewは、開発者向けの公開プログラムで、開発者は、開発中の未発表の機能に早期にアクセスMicrosoft Teams。 これにより、今後の機能を確認してテストし、アプリに潜在的に組み込Microsoft Teamsできます。 開発者プレビューの [機能](~/feedback.md) に関するフィードバックも歓迎します。 開発者プレビューはクライアントMicrosoft Teams有効になっているので、組織全体に影響を与える心配はありません。
 
 ## <a name="developer-preview-app-manifest"></a>開発者プレビュー アプリ マニフェスト
 
@@ -35,7 +35,7 @@ App Studio を使用してアプリ パッケージの開発者以外のプレ�
 デスクトップまたは Web クライアントでパブリック開発者プレビューを有効にするには、次の操作を行う必要があります。
 
 1. ここで説明するように、テナントの管理コンソールでアプリのアップロードを有効 [にします](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
-1. [Teams] メニューを表示するには、プロファイル (Teams インターフェイスの左上または左下) をクリックします。
+1. プロファイル (インターフェイスの右上または左下) をクリックしてTeamsメニュー Teamsします。
 1. [開発者プレビュー→について] を選択します。
 1. [開発者 **プレビューに切り替える] を選択します**。
 
@@ -44,7 +44,7 @@ App Studio を使用してアプリ パッケージの開発者以外のプレ�
 モバイル クライアントでパブリック開発者プレビューを有効にするには、次の操作を行う必要があります。
 
 1. ここで説明するように、テナントの管理コンソールでアプリのアップロードを有効 [にします](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
-1. 左上のハンバーガー メニューを開き、[設定] を **選択します**。
+1. 左上のハンバーガー メニューを開き、[次へ]**を設定。**
 1. [概要 **] を選択します**。
 1. [開発者プレビュー] トグルをクリックします。
 

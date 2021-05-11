@@ -1,6 +1,6 @@
 ---
 title: アプリのトラブルシューティング
-description: Microsoft Teams 用アプリの構築中に問題やエラーのトラブルシューティングを行う
+description: アプリの構築中に問題やエラーをトラブルシューティングMicrosoft Teams
 keywords: teams アプリ開発のトラブルシューティング
 localization_priority: Normal
 ms.topic: troubleshooting
@@ -12,13 +12,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020430"
 ---
-# <a name="troubleshoot-your-microsoft-teams-app"></a>Microsoft Teams アプリのトラブルシューティング
+# <a name="troubleshoot-your-microsoft-teams-app"></a>アプリのトラブルシューティングMicrosoft Teamsする
 
 ## <a name="troubleshooting-tabs"></a>タブのトラブルシューティング
 
 ### <a name="accessing-the-devtools"></a>DevTools へのアクセス
 
-ブラウザーで F12 (Windows) または Command-Option-I (MacOS の場合) を押すのと同様のエクスペリエンスを得る場合は、Teams クライアントで [DevTools](~/tabs/how-to/developer-tools.md) を開きます。
+Teams クライアントで[DevTools](~/tabs/how-to/developer-tools.md)を開き、ブラウザーで F12 (on Windows) または Command-Option-I (MacOS 上) を押すのと同様のエクスペリエンスを提供できます。
 
 ### <a name="blank-tab-screen"></a>空白のタブ画面
 
@@ -49,7 +49,7 @@ ms.locfileid: "52020430"
 
 ### <a name="cant-authenticate-the-user-or-display-your-auth-provider-in-your-tab"></a>ユーザーを認証できない、またはタブに認証プロバイダーを表示できない
 
-サイレント認証を行う場合をしない限り、Microsoft Teams JavaScript クライアント SDK によって提供される認証プロセス [に従う必要があります](/javascript/api/overview/msteams-client.md)。
+サイレント認証を行う場合をしない限り、JavaScript クライアント SDK で提供される認証[Microsoft Teams実行する必要があります](/javascript/api/overview/msteams-client.md)。
 
 > [!NOTE]
 >ドメインで開始および終了するには、すべての認証フローが必要です。これはマニフェストのオブジェクトに一 `validDomains` 覧表示する必要があります。
@@ -64,7 +64,7 @@ ms.locfileid: "52020430"
 
 ### <a name="cant-add-my-bot"></a>ボットを追加できない
 
-エンド ユーザーが読み込むには、Office 365 テナント管理者がアプリを有効にする必要があります。 場合によっては、Office 365 テナントに複数の SKU が関連付けられている可能性があります。ボットが任意で動作するには、すべての SKU で有効にする必要があります。 詳細 [については、「prepare your Office 365 テナント](~/concepts/build-and-test/prepare-your-o365-tenant.md) 」を参照してください。
+エンド ユーザーが読み込むには、Office 365テナント管理者がアプリを有効にする必要があります。 場合によっては、Office 365 テナントに複数の SKU が関連付けられている可能性があります。ボットが任意で動作するには、すべての SKU で有効にする必要があります。 詳細については[、「prepare your Office 365 テナント](~/concepts/build-and-test/prepare-your-o365-tenant.md)」を参照してください。
 
 ### <a name="cant-add-bot-as-a-member-of-a-team"></a>チームのメンバーとしてボットを追加できない
 
@@ -86,12 +86,12 @@ ms.locfileid: "52020430"
 
 マニフェストの読み取りエラーの一般的な理由:
 
-* JSON が無効です。 JSON 構文を自動的に検証[Visual Studioコード](https://code.visualstudio.com)Visual Studio [](https://www.visualstudio.com/vs/) IDE を使用します。
+* JSON が無効です。 JSON 構文を自動的に検証[する](https://code.visualstudio.com)[Visual Studio CodeまたはVisual Studio](https://www.visualstudio.com/vs/) IDE を使用します。
 * エンコードの問題。 ファイルUTF-8にmanifest.js *を使用* します。 その他のエンコード (特に BOM を使用) は読み取り可能ではない場合があります。
-* 不正な形式の .zip パッケージ。 ファイル *manifest.jsは* 、.zip ファイルのトップ レベルである必要があります。 既定の Mac ファイル圧縮では、サブディレクトリにmanifest.jsがオンになる可能性があり、Microsoft Teams では正しく読み込まれなかねない点に注意してください。
+* 不正な形式.zipパッケージ。 ファイル *manifest.jsは* 、ファイルのトップ レベルにある.zipがあります。 既定の Mac ファイル圧縮では、サブディレクトリにmanifest.jsがオンになる場合があり、このファイルは正しく読み込まれMicrosoft Teams。
 
 ### <a name="another-extension-with-same-id-exists"></a>同じ ID を持つ別の拡張機能が存在する
 
-同じ ID で更新されたパッケージを再アップロードする場合は、[アップロード] ボタンではなく、タブのテーブル行の末尾にある [置換] アイコン **を選択** します。
+同じ ID で更新されたパッケージを再アップロードする場合は、タブのテーブル行の末尾にある [置換] アイコンを [アップロード] ボタン **ではなく選択します**。
 
 更新されたパッケージを再アップロードしない場合は、ID が一意である必要があります。

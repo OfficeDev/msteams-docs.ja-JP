@@ -14,17 +14,17 @@ ms.locfileid: "52020177"
 ---
 # <a name="incoming-call-notifications"></a>着信通知
 
-[Microsoft Teams の通話と会議ボットを](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)登録する場合、URL を呼び出す Webhook について説明します。 この URL は、ボットへのすべての着信呼び出しの Webhook エンドポイントです。
+会議[の呼び出しと](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)会議ボットを登録するMicrosoft Teams URL を呼び出す Webhook について説明します。 この URL は、ボットへのすべての着信呼び出しの Webhook エンドポイントです。
 
 ## <a name="protocol-determination"></a>プロトコルの決定
 
-受信通知は、以前の Skype プロトコルとの互換性を保つレガシ形式で [提供されます](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)。 呼び出しを Microsoft Graph プロトコルに変換するには、ボットが通知が従来の形式であるかどうかを判断し、次の応答を提供する必要があります。
+受信通知は、以前のプロトコルと互換性を保つレガシ形式[でSkypeされます](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)。 呼び出しを Microsoft Graph プロトコルに変換するには、ボットが通知が従来の形式であるかどうかを判断し、次の応答を提供する必要があります。
 
 ```http
 HTTP/1.1 204 No Content
 ```
 
-ボットは通知を再度受信しますが、今回は Microsoft Graph プロトコルで受信します。
+ボットは通知を再び受信しますが、今回は Microsoft Graphされます。
 
 リアルタイム メディア プラットフォームの将来のリリースでは、アプリケーションがサポートするプロトコルを構成して、従来の形式で最初のコールバックを受信しないようにすることができます。
 
@@ -68,7 +68,7 @@ Authentication: Bearer <TOKEN>
 ]
 ```
 
-OAuth トークンは次の値を持ち、Skype によって署名されます。
+OAuth トークンは次の値を持ち、次の値で署名Skype。
 
 ```json
 {

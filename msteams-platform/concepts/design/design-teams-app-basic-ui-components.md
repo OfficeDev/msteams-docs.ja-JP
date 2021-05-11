@@ -1,7 +1,7 @@
 ---
 title: 基本的な Fluent UI コンポーネントを使用してアプリを設計する
 author: heath-hamilton
-description: Microsoft Teams アプリのビルドと Microsoft Teams UI キットの取得に一般的に使用されるプリミティブ UI コンポーネントについて説明します。
+description: アプリの作成や UI キットの取得にMicrosoft Teams一般的なプリミティブ UI コンポーネントMicrosoft Teams説明します。
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: reference
@@ -12,15 +12,15 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52019889"
 ---
-# <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>基本的な Fluent UI コンポーネントを使用した Microsoft Teams アプリの設計
+# <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>基本的な Fluent UI Microsoft Teamsを使用してアプリを設計する
 
-Teams アプリは、通常、次の基本的な Fluent UI コンポーネントを使用して構築されます。 これらのコンポーネントは、可能な限りフラットに設計され、さまざまな使用例、テーマ、画面サイズで機能します。
+Teamsアプリは、通常、次の基本的な Fluent UI コンポーネントを使用して構築されます。 これらのコンポーネントは、可能な限りフラットに設計され、さまざまな使用例、テーマ、画面サイズで機能します。
 
-このページの図は、Teams の既定 (明るい) テーマと暗いテーマでのコンポーネントの外観を示しています。
+このページの図は、既定の (明るい) テーマと暗いTeamsコンポーネントの外観を示しています。
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-Fluent <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">UI に基づいて</a>、Microsoft Teams UI キットには、Teams アプリの構築専用に設計されたコンポーネントとパターンが含まれています。 UI キットでは、ここに示すコンポーネントを直接デザインに挿入し、各コンポーネントの使い方の例を確認できます。
+Fluent <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">UI に基づいて</a>、Microsoft Teams UI キットには、アプリを構築するために特別に設計されたTeamsがあります。 UI キットでは、ここに示すコンポーネントを直接デザインに挿入し、各コンポーネントの使い方の例を確認できます。
 
 > [!div class="nextstepaction"]
 > [Microsoft Teams UI Kit (Figma) を入手する](https://www.figma.com/community/file/916836509871353159)
@@ -133,7 +133,7 @@ Fluent <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">UI
 
 ## <a name="other-resources"></a>その他のリソース
 
-ここに記載されている一部のコンポーネントと Microsoft Teams UI Kit のコード サンプルと実装の詳細を取得します。
+ここにリストされているコンポーネントと UI キットの一部のコード サンプルと実装Microsoft Teams取得します。
 
 > [!div class="nextstepaction"]
 > [コンポーネントを試す (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)

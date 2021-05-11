@@ -1,7 +1,7 @@
 ---
 title: タブの要件について
 author: laujan
-description: Microsoft Teams のすべてのタブは、これらの要件に従う必要があります。
+description: これらの要件にMicrosoft Teamsする必要があります。
 keywords: teams タブ グループ チャネル構成可能
 localization_priority: Normal
 ms.topic: conceptual
@@ -15,7 +15,7 @@ ms.locfileid: "52019581"
 ---
 # <a name="tab-requirements"></a>タブの要件
 
-Teams タブは、次の要件に従う必要があります。
+Teamsタブは、次の要件に従う必要があります。
 
 * X-Frame-Options または Content-Security-Policy HTTP 応答ヘッダーを使用して、タブ ページを iFrame で提供する必要があります。
   * ヘッダーの設定: `Content-Security-Policy: frame-ancestors teams.microsoft.com *.teams.microsoft.com *.skype.com`
@@ -28,10 +28,10 @@ Teams タブは、次の要件に従う必要があります。
 
 * ブラウザーは、Web ページが Web ページにサービスを提供したドメインとは異なるドメインに対して要求を行うのを防ぐ同一発生元ポリシーの制限に従います。 ただし、構成ページまたはコンテンツ ページを別のドメインまたはサブドメインにリダイレクトする必要がある場合があります。 クロスドメイン ナビゲーション ロジックを使用すると、Teams クライアントは、タブの読み込みまたは通信時に、アプリ マニフェストの静的な validDomains リストに対して原点を検証できます。
 
-* シームレスなエクスペリエンスを作成するには、Teams クライアントのテーマ、デザイン、意図に基づいてタブのスタイルを設定する必要があります。 通常、タブは、特定の必要性に対処し、小さな一連のタスクまたはタブのチャネルの場所に関連するデータのサブセットに焦点を当てするために構築されている場合に最適です。
+* シームレスなエクスペリエンスを作成するには、クライアントのテーマ、デザイン、および意図に基Teamsタブのスタイルを設定する必要があります。 通常、タブは、特定の必要性に対処し、小さな一連のタスクまたはタブのチャネルの場所に関連するデータのサブセットに焦点を当てするために構築されている場合に最適です。
 
-* コンテンツ ページ内で、スクリプト タグを使用して [Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) への参照を追加します。 ページの読み込み後に、 を呼び出します `microsoftTeams.initialize()` 。 ページを表示しない場合は、ページは表示されません。
+* コンテンツ ページ内で、スクリプト タグを使用Microsoft Teams [JavaScript クライアント SDK](/javascript/api/overview/msteams-client)への参照を追加します。 ページの読み込み後に、 を呼び出します `microsoftTeams.initialize()` 。 ページを表示しない場合は、ページは表示されません。
 
-* モバイル クライアントで認証を機能するには、Teams JavaScript SDK を少なくともバージョン 1.4.1 にアップグレードする必要があります。
+* モバイル クライアントで認証を機能するには、JavaScript SDK Teamsバージョン 1.4.1 以上にアップグレードする必要があります。
 
-* チャネルまたはグループ タブを Teams モバイル クライアントに表示する場合、構成にはプロパティの `setSettings()` 値が必要 `websiteUrl` です。
+* モバイル クライアントにチャネルまたはグループ タブを表示Teams場合、構成にはプロパティの `setSettings()` 値が必要 `websiteUrl` です。

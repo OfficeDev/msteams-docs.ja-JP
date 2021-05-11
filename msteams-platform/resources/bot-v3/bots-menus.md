@@ -1,6 +1,6 @@
 ---
 title: ボット メニューの追加
-description: Microsoft Teams でボットのメニューを作成する方法について説明します。
+description: ボットのメニューを作成する方法について説明Microsoft Teams
 keywords: teams ボット メニューの作成
 ms.topic: how-to
 localization_priority: Normal
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52019770"
 ---
-# <a name="add-a-bot-menu-in-microsoft-teams"></a>Microsoft Teams でボット メニューを追加する
+# <a name="add-a-bot-menu-in-microsoft-teams"></a>[ボット] メニューを [Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -22,7 +22,7 @@ ms.locfileid: "52019770"
 
 ユーザーがメニュー項目を選択すると、ボット メッセージのユーザー完了を支援するために、コマンド文字列がテキスト ボックスに挿入されます。
 
-## <a name="bot-menu-support-on-teams-mobile-app"></a>Teams モバイル アプリでのボット メニューのサポート
+## <a name="bot-menu-support-on-teams-mobile-app"></a>モバイル アプリでのボット メニュー Teamsサポート
 > [!NOTE] 
 > ボット メニューがモバイル デバイスに表示されない
 

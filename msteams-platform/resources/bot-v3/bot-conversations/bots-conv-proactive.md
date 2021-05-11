@@ -1,6 +1,6 @@
 ---
 title: プロアクティブ メッセージ
-description: ボットが Microsoft Teams で会話を開始できる方法について説明する
+description: ボットがチャットで会話を開始できるMicrosoft Teams
 ms.topic: conceptual
 localization_priority: Normal
 keywords: Teams シナリオのプロアクティブ メッセージング会話ボット
@@ -49,13 +49,13 @@ ms.locfileid: "52019791"
 
 * **何が起こったのですか。** 何が原因で通知が発生したのかを明確に示しています。
 * **何が起こったのか。** 通知を発生するために更新されたアイテム/物を明確にしてください。
-* **誰がやったか。** 通知の送信を引き起こしたアクションを実行したユーザー。
+* **Whoを行いました。** Whoが送信される原因となるアクションを実行しました。
 * **彼らが何を行うのか。** ユーザーが通知に基づいてアクションを取ることを容易にします。
 * **オプトアウトする方法。** ユーザーが追加の通知をオプトアウトするパスを指定する必要があります。
 
 ## <a name="obtain-necessary-user-information"></a>必要なユーザー情報を取得する
 
-ボットは、ユーザーの一意の *ID* とテナント ID を取得することで、個々の Microsoft Teams ユーザーとの新しい会話 *を作成できます。* これらの値は、次のいずれかの方法で取得できます。
+ボットは、ユーザーの一意の *ID* とテナント ID をMicrosoft Teamsして、個々のユーザーと新しい会話を *作成できます。* これらの値は、次のいずれかの方法で取得できます。
 
 * アプリ [がインストールされているチャネル](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) からチーム名簿を取得します。
 * ユーザーがチャネルでボットとやり取りするときにキャッシュ [します](~/resources/bot-v3/bot-conversations/bots-conv-channel.md)。
@@ -69,9 +69,9 @@ ms.locfileid: "52019791"
 
 場合によっては、以前にアプリをインストールしていない、またはアプリと対話していないユーザーにプロアクティブにメッセージを送る必要があるかもしれません。 たとえば、[社内コミュニケーター](~/samples/app-templates.md#company-communicator)を使用して、組織全体にメッセージを送信する必要があるとします。 このシナリオでは、Graph API を使用してユーザー向けアプリをプロアクティブにインストールし、インストール時にアプリが受け取るイベントから必要な値を `conversationUpdate` キャッシュできます。
 
-組織のアプリ カタログまたは Teams アプリ ストア内のアプリのみをインストールできます。
+インストールできるのは、組織のアプリ カタログまたはアプリ ストアTeamsのみです。
 
-詳細については [、Graph のドキュメントの](/graph/teams-proactive-messaging) 「ユーザー向けアプリのインストール」を参照してください。 .NET にも [サンプルがあります](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)。
+詳細については[、「ユーザー向けアプリ](/graph/teams-proactive-messaging)のインストール」Graphドキュメントを参照してください。 .NET にも [サンプルがあります](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)。
 
 ## <a name="examples"></a>例
 
@@ -109,7 +109,7 @@ POST /v3/conversations
 
 ### <a name="using-net"></a>.NET の使用
 
-この例では [、Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet パッケージを使用します。
+この例では[、Microsoft.Bot.Connector.Teams NuGet](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)します。
 
 ```csharp
 // Create or get existing chat conversation with user
@@ -160,7 +160,7 @@ bot.send(msg);
 
 ## <a name="creating-a-channel-conversation"></a>チャネル会話の作成
 
-チームが追加したボットは、チャネルに投稿して新しい返信チェーンを作成できます。 Teams SDK の Node.js使用している場合は、正しいアクティビティ ID と会話 ID を持つ完全に入力されたアドレス `startReplyChain()` を使用します。このツールを使用しているC#、以下の例を参照してください。
+チームが追加したボットは、チャネルに投稿して新しい返信チェーンを作成できます。 この SDK を使用しているNode.js Teams、正しいアクティビティ ID と会話 ID を持つ完全に入力されたアドレス `startReplyChain()` を提供します。このツールを使用しているC#、以下の例を参照してください。
 
 または、REST API を使用して、リソースに POST 要求を発行 [`/conversations`](https://docs.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) することもできます。
 

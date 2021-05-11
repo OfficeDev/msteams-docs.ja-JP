@@ -12,13 +12,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020212"
 ---
-# <a name="add-custom-bots-to-teams-with-outgoing-webhooks"></a>送信 Webhook を使用して Teams にカスタム ボットを追加する
+# <a name="add-custom-bots-to-teams-with-outgoing-webhooks"></a>送信 webhooks を使用してTeamsボットを追加する
 
 ## <a name="what-are-outgoing-webhooks-in-teams"></a>Teams での送信 Webhook とは
 
-Webhooks は、Teams を外部アプリと統合するための優れた方法です。 基本的に Webhook は、コールバック URL に送信される POST 要求です。 送信 Webhooks を使用すると、ユーザーは Microsoft Bot Framework 経由でボットを作成する完全なプロセスを実行せずに、Web サービスにメッセージ [を送信できます](https://dev.botframework.com/)。
+Webhooks は、外部アプリと統合するTeams優れた方法です。 基本的に Webhook は、コールバック URL に送信される POST 要求です。 送信 Webhooks を使用すると、ユーザーは web サービスを介してボットを作成する完全なプロセスを実行せずに、web サービスに[メッセージを送信Microsoft Bot Framework。](https://dev.botframework.com/)
 
-送信 Webhook は、TEAMS から JSON ペイロードを受け入れ可能な選択したサービスにデータを送信します。 送信 Webhook をチームに追加した後、ボットとして機能し、メンションを使用してチャネル内のメッセージを検索 **\@ します**。 外部 Web サービスに通知を送信し、カードや画像を含むリッチ メッセージで応答します。
+送信 Webhook は、JSON ペイロードを受けTeamsできる選択したサービスにデータを送信します。 送信 Webhook をチームに追加した後、ボットとして機能し、メンションを使用してチャネル内のメッセージを検索 **\@ します**。 外部 Web サービスに通知を送信し、カードや画像を含むリッチ メッセージで応答します。
 
 ## <a name="outgoing-webhook-key-features"></a>送信 Webhook の主な機能
 
@@ -58,8 +58,8 @@ Webhooks は、Teams を外部アプリと統合するための優れた方法�
 
 > [!NOTE]
 > * 複数選択リストをコンパクト なスタイルで表示する場合は、両方 `"isMultiSelect": true` `"style": true` を入力します。
-> * Teams で `compact` プロパティ `style` を選択する方法は、Microsoft Outlook でプロパティ `normal` を選択 `style` する場合と同じです。
-> * Webhooks は、365 Officeカードとアダプティブ カードのみをサポートします。
+> * [プロパティ `compact` の選択] `style` Teamsは、Microsoft のプロパティを選択する場合と同 `normal` `style` Outlook。
+> * Webhooks は、Office 365カードとアダプティブ カードのみをサポートします。
 
 コネクタ カードのアクションに関するその他の詳細については、「 **[アクション可能](/outlook/actionable-messages/card-reference#actions)** なメッセージ カードリファレンスのアクション」を参照してください。
 
@@ -83,18 +83,18 @@ Webhooks は、Teams を外部アプリと統合するための優れた方法�
 
 要求ヘッダーの認証には、"HMAC 03TCao0i55H1eVKUusZOTZRjtvYTs + mO41mPL + R1e1U =" という値を使用します。
 
-サービスが実際の Teams クライアントからのみ呼び出しを受信するために、Teams は HTTP ヘッダーに HMAC コードを提供 `hmac` します。 常に認証プロトコルにコードを含める。
+サービスが実際のクライアントからのみ呼び出しを受信Teams、http ヘッダー Teams HMAC コードを提供 `hmac` します。 常に認証プロトコルにコードを含める。
 
 コードでは、要求に含まれる HMAC 署名を常に検証する必要があります。
 
-* メッセージの要求本文から HMAC トークンを生成します。 ほとんどのプラットフォームでこれを行う標準的なライブラリがあります (「Crypto [for](https://nodejs.org/api/crypto.html#crypto_crypto) Node.js [Teams Webhook Sample](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) for C」を参照 \# )。 Microsoft Teams では、標準的な SHA256 HMAC 暗号化を使用します。 UTF8 で本文をバイト配列に変換する必要があります。
+* メッセージの要求本文から HMAC トークンを生成します。 ほとんどのプラットフォームでこれを行う標準的なライブラリがあります (「Crypto [for](https://nodejs.org/api/crypto.html#crypto_crypto) Node.js [Webhook](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) sample for C」を参照Teams参照 \# )。 Microsoft Teams SHA256 HMAC 暗号化を使用します。 UTF8 で本文をバイト配列に変換する必要があります。
 * Teams クライアントで送信 Webhook を登録したときに Teams によって提供されたセキュリティ トークンのバイト配列からハッシュを **計算** します。 「[送信 Webhook を作成する](#create-an-outgoing-webhook)」を参照してください。
 * UTF-8 エンコーディングを使用してハッシュを文字列に変換します。
 * 生成されたハッシュの文字列の値と、HTTP 要求で指定された値を比較します。
 
 ### <a name="3-create-a-method-to-send-a-success-or-failure-response"></a>3. 成功または失敗の応答を送信するメソッドを作成する
 
-送信 Webhook からの応答は、元のメッセージと同じ返信チェーンに表示されます。 ユーザーがクエリを実行すると、Microsoft Teams はサービスに対して同期 HTTP 要求を発行し、接続がタイム アウトして終了する前に、コードがメッセージに応答するために 5 秒を取得します。
+送信 Webhook からの応答は、元のメッセージと同じ返信チェーンに表示されます。 ユーザーがクエリを実行すると、Microsoft Teams はサービスに同期 HTTP 要求を発行し、接続が切れ、終了する前にコードがメッセージに応答するために 5 秒を取得します。
 
 ### <a name="example-response"></a>応答の例
 
@@ -113,15 +113,15 @@ Webhooks は、Teams を外部アプリと統合するための優れた方法�
 1. 表示されたポップアップ ウィンドウの必要なフィールドへの入力を行います。
 
 >* **名前** - Webhook のタイトルと @メンションのタップです。
->* **コールバック URL** - JSON ペイロードを受け入れ、Teams から POST 要求を受信する HTTPS エンドポイント。
+>* **コールバック URL** - JSON ペイロードを受け入れ、JSON ペイロードから POST 要求を受信する HTTPS エンドポイントTeams。
 >* **説明** - プロファイル カードとチーム レベルのアプリ ダッシュボードに表示される詳細な文字列。
 >* **Profile Picture** Webhook のオプションのアプリ アイコン。
 >* ポップアップ ウィンドウ **の右下** 隅から [作成] ボタンを選択すると、送信 Webhook が現在のチームのチャネルに追加されます。
->* 次のダイアログ ウィンドウには、Teams と指定された外部サービス間の呼び出しを認証するために使用されるハッシュ ベースのメッセージ認証コード [(HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) セキュリティ トークンが表示されます。
+>* 次のダイアログ ウィンドウには、ハッシュ ベースのメッセージ認証コード[(HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301)セキュリティ トークンが表示され、Teams と指定された外部サービス間の呼び出しを認証するために使用されます。
 >* 送信 Webhook は、URL が有効で、サーバー認証トークンとクライアント認証トークン (HMAC ハンドシェイクなど) が等しい場合にのみ、チームのユーザーが使用できます。
 
 ## <a name="code-sample"></a>コード サンプル
 |**サンプル名** | **説明** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| 送信 Webhook | Microsoft Teams **で使用するカスタム** ボットを作成するサンプル。| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
+| 送信 Webhook | カスタム ボット **を作成するサンプルを** 使用して、Microsoft Teams。| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 

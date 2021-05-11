@@ -1,6 +1,6 @@
 ---
 title: Teams アプリの SaaS プランを作成する
-description: サード パーティの Teams アプリ エクスペリエンスの一部として SaaS を提供するために必要な手順について説明します。
+description: サード パーティ製アプリ エクスペリエンスの一部として SaaS を提供するために必要なTeams説明します。
 keywords: teams アプリ SaaS がパートナー センターマーケットプレース ソフトウェア サービスを提供する
 author: laujan
 localization_priority: Normal
@@ -15,7 +15,7 @@ ms.locfileid: "52019922"
 ---
 # <a name="create-a-saas-offer-for-your-teams-app"></a>Teams アプリの SaaS プランを作成する
 
-サービスとしてのソフトウェア (SaaS) オファーをアプリ ソリューションに追加すると、クラウドベースのアプリを簡単に提供し、プラットフォーム間での自動アップグレードとアクセスの増加を提供することで、ユーザー エクスペリエンスを向上できます。 Microsoft Teams アプリは Teams 環境に自由にインストールできますが、アプリの完全な機能とスコープを体験するためにユーザーが SaaS サブスクリプションを購入する必要がある場合があります。 SaaS サブスクリプションは、クラウド サービス プロバイダーから購入するか、パートナー センターまたは商用マーケットプレースから直接 Teams アプリの収益化された SaaS サブスクリプションを作成できます。
+サービスとしてのソフトウェア (SaaS) オファーをアプリ ソリューションに追加すると、クラウドベースのアプリを簡単に提供し、プラットフォーム間での自動アップグレードとアクセスの増加を提供することで、ユーザー エクスペリエンスを向上できます。 Microsoft Teamsは Teams 環境に無料でインストールできますが、アプリの完全な機能とスコープを体験するためにユーザーが SaaS サブスクリプションを購入する必要がある場合があります。 SaaS サブスクリプションは、クラウド サービス プロバイダーから購入するか、パートナー センターまたは商用マーケットプレースから直接 Teams アプリの収益化された SaaS サブスクリプションを作成できます。
 
 ## <a name="getting-started-with-saas-offers"></a>SaaS オファーの使用を開始する
 
@@ -31,4 +31,4 @@ ms.locfileid: "52019922"
 | **FAQ: SaaS API UX クエリ** | エンド ユーザー エクスペリエンスに関する一般的なトピックに対する回答を見つける。| [ドキュメント](/azure/marketplace/partner-center-portal/saas-fulfillment-apis-faq) |
 
 > [!div class="nextstepaction"]
-> [Teams 管理者が組織のアプリを購入する方法について学習する](/MicrosoftTeams/purchase-third-party-apps)
+> [管理者がTeamsアプリを購入する方法](/MicrosoftTeams/purchase-third-party-apps)

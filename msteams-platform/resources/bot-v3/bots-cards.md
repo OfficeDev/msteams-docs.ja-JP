@@ -16,10 +16,10 @@ ms.locfileid: "52019784"
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-カード *は* 、短い情報や関連する情報のユーザー インターフェイス (UI) コンテナーです。 カードには複数のプロパティと添付ファイルを含めることができます。 Teams は、ボット、コネクタ、メッセージング拡張機能のカードをサポートします。 カード [の概要](~/task-modules-and-cards/what-are-cards.md) と Teams での使用方法については、「カード」を参照してください。
+カード *は* 、短い情報や関連する情報のユーザー インターフェイス (UI) コンテナーです。 カードには複数のプロパティと添付ファイルを含めることができます。 Teams、コネクタ、メッセージング拡張機能のサポート カードを使用します。 カード[の概要](~/task-modules-and-cards/what-are-cards.md)とカードの使い方については、「カードTeams」を参照してください。
 
 ボットは会話の一部としてカードを使用します。 詳細については [、「ボットの会話](~/resources/bot-v3/bot-conversations/bots-conversations.md) 」を参照してください。
 
-[Teams カードリファレンスには、](~/task-modules-and-cards/cards/cards-reference.md)ボットでサポートされているすべてのカードが一覧表示され、それらを使用する方法について説明します。
+[[Teamsカード参照] には](~/task-modules-and-cards/cards/cards-reference.md)、ボットでサポートされているすべてのカードが一覧表示され、それらを使用する方法について説明します。
 
 [カード アクションには](~/task-modules-and-cards/cards/cards-actions.md) 、カードでサポートされているすべてのアクションが一覧表示され、カードの使い方について説明します。

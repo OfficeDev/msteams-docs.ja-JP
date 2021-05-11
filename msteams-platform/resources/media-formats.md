@@ -1,6 +1,6 @@
 ---
 title: ボットでサポートされているメディア形式
-description: Microsoft Teams のボットは、オーディオおよびビデオ コンテンツに対して次のメディア形式のみをサポートしています。
+description: デバイス上のボットMicrosoft Teams、オーディオおよびビデオ コンテンツに対して以下のメディア形式のみをサポートします。
 ms.topic: reference
 localization_priority: Normal
 keywords: teams ボットのメディア形式
@@ -13,9 +13,9 @@ ms.locfileid: "52020612"
 ---
 # <a name="supported-media-formats-for-bots"></a>ボットでサポートされているメディア形式
 
-Microsoft Teams のボットは、オーディオおよびビデオ コンテンツに対して次のメディア形式のみをサポートしています。
+デバイス上のボットMicrosoft Teams、オーディオおよびビデオ コンテンツに対して次のメディア形式のみをサポートしています。
 
-| フォーマット | 詳細情報 |
+| Format | 詳細情報 |
 | --- | --- |
 | Vorbis | http://www.vorbis.com/ |
 | PCM_U8、PCM_S16LE、PCM_S32LE、PCM_F32LE、PCM_S16BE、PCM_S24BE、PCM_MULAW | https://wiki.multimedia.cx/?title=PCM |
@@ -31,4 +31,4 @@ Microsoft Teams のボットは、オーディオおよびビデオ コンテン
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [チームまたはチャット メンバーをフェッチする Teams ボット API の変更](~/resources/team-chat-member-api-changes.md)
+> [チームまたはチャット Teams取得するボット API の変更点](~/resources/team-chat-member-api-changes.md)

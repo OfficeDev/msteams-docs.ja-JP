@@ -1,6 +1,6 @@
 ---
-title: Microsoft Teams の通話と会議ボットを登録する
-description: Microsoft Teams の新しい音声/ビデオ通話ボットを登録する方法について説明します。
+title: 会議の通話と会議ボットを登録Microsoft Teams
+description: 新しい音声/ビデオ通話ボットを登録する方法についてMicrosoft Teams
 ms.topic: conceptual
 localization_priority: Normal
 keywords: ボットのオーディオ/ビデオ オーディオ ビデオ メディアを呼び出す
@@ -11,20 +11,20 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020149"
 ---
-# <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Microsoft Teams の通話と会議ボットを登録する
+# <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>会議の通話と会議ボットを登録Microsoft Teams
 
-音声通話またはビデオ通話やオンライン会議に参加するボットは、通常の Microsoft Teams ボットであり、ボットの登録に使用される追加機能は次のとおりです。
+音声またはビデオ通話とオンライン会議に参加するボットは、ボットの登録にMicrosoft Teams追加機能を備える通常のボットです。
 
-* 2 つの追加設定を含む Teams アプリ マニフェストの新しいバージョンがあります `supportsCalling` `supportsVideo` 。 これらの設定は、Teams アプリ [マニフェストの開発者プレビュー](../../resources/dev-preview/developer-preview-intro.md) バージョンに含まれています。
-* [Microsoft Graph のアクセス許可は](./registering-calling-bot.md#add-graph-permissions) 、ボットの Microsoft App ID 用に構成する必要があります。
-* Graph 呼び出しとオンライン会議 API のアクセス許可には、テナント管理者の同意が必要です。
+* 新しいバージョンのアプリ マニフェストTeams設定が 2 つ追加 `supportsCalling` されています `supportsVideo` 。 これらの設定は、アプリ マニフェスト[の](../../resources/dev-preview/developer-preview-intro.md)開発者プレビュー バージョンTeams含まれています。
+* [Microsoft Graphアクセス許可は](./registering-calling-bot.md#add-graph-permissions)、ボットの Microsoft App ID 用に構成する必要があります。
+* 電話Graphオンライン会議 API のアクセス許可には、テナント管理者の同意が必要です。
 
 ## <a name="new-manifest-settings"></a>新しいマニフェスト設定
 
-通話とオンライン会議ボットには、Teams でボットのオーディオまたはビデオを有効にする manifest.jsに次の 2 つの追加設定があります。
+通話とオンライン会議ボットには、manifest.jsでボットの音声またはビデオを有効にする次の 2 つの追加設定Teams。
 
-* `bots[0].supportsCalling`. 存在してに設定されている `true` 場合、Teams を使用すると、ボットは通話やオンライン会議に参加できます。
-* `bots[0].supportsVideo`. 存在してに設定されている場合 `true` 、Teams はボットがビデオをサポートしているのを知っています。
+* `bots[0].supportsCalling`. 存在し、に設定 `true` されている場合、Teamsボットが通話やオンライン会議に参加できます。
+* `bots[0].supportsVideo`. 存在してに設定されている `true` 場合は、Teamsがビデオをサポートしているという情報が表示されます。
 
 これらの値の呼び出しと会議ボットmanifest.jsスキーマの検証を IDE で適切に行う場合は、次のように属性を `$schema` 変更できます。
 
@@ -36,21 +36,21 @@ ms.locfileid: "52020149"
 
 ## <a name="create-new-bot-or-add-calling-capabilities"></a>新しいボットを作成するか、通話機能を追加する
 
-ボットの作成の詳細については [、「Create a bot for Teams」を参照してください](../how-to/create-a-bot-for-teams.md)。
+ボットの作成の詳細については、「ボット[を作成する」を参照Teams。](../how-to/create-a-bot-for-teams.md)
 
-**Teams 用の新しいボットを作成するには**
+**新しいボットを作成するには、Teams**
 
-1. 新しいボットを作成するには、このリンクを使用します `https://dev.botframework.com/bots/new` 。 または、ボット フレームワーク ポータルで [ボットの作成] ボタンを選択した場合は、Azure アカウントが必要な Microsoft Azure でボットを作成します。
-1. Teams チャネルを追加します。
-1. Teams チャネル **ページの [** 通話] タブを選択します。 [ **通話を有効にする**] を選択し、受信通知を受信する HTTPS URL を使用して **Webhook (通話用)** を更新します `https://contoso.com/teamsapp/api/calling` 。 詳細については、「チャネルの [構成」を参照してください](/bot-framework/portal-configure-channels)。
+1. 新しいボットを作成するには、このリンクを使用します `https://dev.botframework.com/bots/new` 。 または、ボット フレームワーク ポータルで [ボットの作成] ボタンを選択した場合は、azure アカウントが必要な Microsoft Azure でボットを作成します。
+1. 新しいチャネルTeamsします。
+1. [チャネル]**ページの**[呼び出しTeams選択します。 [ **通話を有効にする**] を選択し、受信通知を受信する HTTPS URL を使用して **Webhook (通話用)** を更新します `https://contoso.com/teamsapp/api/calling` 。 詳細については、「チャネルの [構成」を参照してください](/bot-framework/portal-configure-channels)。
 
-    ![Teams チャネル情報の構成](~/assets/images/calls-and-meetings/configure-msteams-channel.png)
+    ![チャネルTeams構成する](~/assets/images/calls-and-meetings/configure-msteams-channel.png)
 
 次のセクションでは、通話およびオンライン会議でサポートされているアプリケーションのアクセス許可の一覧を示します。
 
-## <a name="add-graph-permissions"></a>Graph アクセス許可の追加
+## <a name="add-graph-permissions"></a>アクセス許可Graph追加する
 
-Graph は、アプリがリソースに対して持つアクセスを制御するための詳細なアクセス許可を提供します。 アプリの要求を Graph に対するアクセス許可を決定します。 Graph 呼び出し API は、サインインしているユーザーが存在せずに実行されるアプリで使用されるアプリケーションのアクセス許可をサポートします。 テナント管理者は、アプリケーションのアクセス許可に同意する必要があります。
+このGraphは、アプリがリソースに対して持つアクセスを制御するための詳細なアクセス許可を提供します。 アプリ要求に対するアクセス許可Graph決定します。 呼びGraph API は、サインインしているユーザーが存在せずに実行されるアプリで使用されるアプリケーションのアクセス許可をサポートします。 テナント管理者は、アプリケーションのアクセス許可に同意する必要があります。
 
 ### <a name="application-permissions-for-calls"></a>呼び出しのアプリケーションのアクセス許可
 
@@ -78,7 +78,7 @@ Graph は、アプリがリソースに対して持つアクセスを制御す�
 
 ### <a name="assign-permissions"></a>アクセス許可の割り当て
 
-[Azure Active Directory (AAD) V1](/azure/active-directory/develop/azure-ad-endpoint-comparison)エンドポイントを使用する場合は[、Azure portal](https://aka.ms/aadapplist)を使用して事前にボットのアプリケーションアクセス許可を構成する必要があります。
+Azure portal を使用して、ボットのアプリケーションのアクセス許可を[](https://aka.ms/aadapplist)事前に構成する必要があります[(AAD) V1](/azure/active-directory/develop/azure-ad-endpoint-comparison)エンドポイントを使用する場合は、Azure Active Directoryを使用します。
 
 ### <a name="get-tenant-administrator-consent"></a>テナント管理者の同意を取得する
 

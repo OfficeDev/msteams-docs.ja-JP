@@ -34,7 +34,7 @@ ms.locfileid: "52018419"
 |Markdown のサポート|アクション可能なメッセージング カードのすべてのテキスト フィールドで、基本的な Markdown がサポートされています。 **カードには HTML マークアップを使用しないでください**。 HTML は無視され、プレーン テキストとして扱われます。|
 
 > [!Note]
-> Teams ボット、メッセージング拡張機能、受信 Webhook、および Bot Framework は、オープンなクロスカード プラットフォーム フレームワークであるアダプティブ カードをサポートします。 [Teams コネクタは現在](../../webhooks-and-connectors/how-to/connectors-creating.md) アダプティブ カードをサポートしていない。 ただし、アダプティブ カードを Teams チャネル [に](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) 投稿するフローを作成することもできます。
+> Teams、メッセージング拡張機能、受信 Webhook、および Bot Framework は、オープンなクロスカード プラットフォーム フレームワークであるアダプティブ カードをサポートします。 [Teamsアダプティブ カード](../../webhooks-and-connectors/how-to/connectors-creating.md)は現在サポートされていません。 ただし、アダプティブ カードを[チャネルに投稿](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/)するフローをTeamsできます。
 
 ## <a name="add-an-incoming-webhook-to-a-teams-channel"></a>Teams チャネルに受信 Webhook を追加する
 

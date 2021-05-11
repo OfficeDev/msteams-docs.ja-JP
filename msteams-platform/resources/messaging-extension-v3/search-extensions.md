@@ -95,7 +95,7 @@ ms.locfileid: "52019728"
 
 ほとんどの作業にはイベントが含まれるので、メッセージング拡張機能ウィンドウのすべての操作 `onQuery` を処理します。
 
-マニフェストでに設定した場合は、メッセージング拡張機能の [設定] メニュー項目を有効にし、また、 `canUpdateConfiguration` `true` を処理する必要 `onQuerySettingsUrl` があります `onSettingsUpdate` 。
+マニフェストでに設定した場合は、メッセージング拡張機能設定メニュー項目を有効にし、および `canUpdateConfiguration` `true` を処理する必要 `onQuerySettingsUrl` があります `onSettingsUpdate` 。
 
 ### <a name="handle-onquery-events"></a>onQuery イベントの処理
 
@@ -111,9 +111,9 @@ ms.locfileid: "52019728"
 
 ### <a name="handle-onquerysettingsurl-and-onsettingsupdate-events"></a>onQuerySettingsUrl イベントと onSettingsUpdate イベントの処理
 
-イベント `onQuerySettingsUrl` と `onSettingsUpdate` が一緒に機能し、[設定] **メニュー項目を** 有効にします。
+イベント `onQuerySettingsUrl` と `onSettingsUpdate` イベントが一緒に機能して、設定を有効にできます。
 
-![[設定] メニュー項目の場所のスクリーンショット](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
+![メニュー項目の場所設定スクリーンショット](~/assets/images/compose-extensions/compose-extension-settings-menu-item.png)
 
 構成ページの URL を返すハンドラー。構成ページが閉じると、返された状態を受け入れて `onQuerySettingsUrl` `onSettingsUpdate` 保存します。 (これは、次に示す 1 つのケースです。 `onQuery`*構成ページから* 応答を受け取らない)。
 
@@ -123,7 +123,7 @@ ms.locfileid: "52019728"
 
 ### <a name="receive-user-requests"></a>ユーザー要求の受信
 
-ユーザーがクエリを実行すると、Microsoft Teams はサービスに標準の Bot Framework オブジェクトを送信 `Activity` します。 サービスは、次の表に示すように、サポートされている型に設定されているロジックを `Activity` `type` `invoke` `name` `composeExtension` 実行する必要があります。
+ユーザーがクエリを実行すると、Microsoft Teams標準的な Bot Framework オブジェクトが送信 `Activity` されます。 サービスは、次の表に示すように、サポートされている型に設定されているロジックを `Activity` `type` `invoke` `name` `composeExtension` 実行する必要があります。
 
 標準のボット アクティビティ プロパティに加えて、ペイロードには次の要求メタデータが含まれます。
 
@@ -133,7 +133,7 @@ ms.locfileid: "52019728"
 |`name`| サービスに発行されるコマンドの種類。 現在、次の種類がサポートされています。 <br>`composeExtension/query` <br>`composeExtension/querySettingUrl` <br>`composeExtension/setting` <br>`composeExtension/selectItem` <br>`composeExtension/queryLink` |
 |`from.id`| 要求を送信したユーザーの ID。 |
 |`from.name`| 要求を送信したユーザーの名前。 |
-|`from.aadObjectId`| 要求を送信したユーザーの Azure Active Directory オブジェクト ID。 |
+|`from.aadObjectId`| Azure Active Directory送信したユーザーのオブジェクト ID を指定します。 |
 |`channelData.tenant.id`| Azure Active Directory テナント ID。 |
 |`channelData.channel.id`| チャネル ID (チャネルで要求が行われた場合)。 |
 |`channelData.team.id`| チーム ID (チャネルで要求が行われた場合)。 |
@@ -195,7 +195,7 @@ ms.locfileid: "52019728"
 
 ### <a name="receive-requests-from-links-inserted-into-the-compose-message-box"></a>作成メッセージ ボックスに挿入されたリンクから要求を受信する
 
-外部サービスの検索に代わる (または追加) として、作成メッセージ ボックスに挿入された URL を使用してサービスにクエリを実行し、カードを返します。 次のスクリーンショットでは、ユーザーが Azure DevOps の作業項目の URL に貼り付け、メッセージング拡張機能がカードに解決されました。
+外部サービスの検索に代わる (または追加) として、作成メッセージ ボックスに挿入された URL を使用してサービスにクエリを実行し、カードを返します。 下のスクリーンショットでは、ユーザーがメッセージング拡張機能がカードに解決したAzure DevOpsワーク アイテムの URL に貼り付けます。
 
 ![リンクの分岐解除の例](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
@@ -235,7 +235,7 @@ ms.locfileid: "52019728"
 
 ### <a name="respond-to-user-requests"></a>ユーザー要求に応答する
 
-ユーザーがクエリを実行すると、Microsoft Teams はサービスに同期 HTTP 要求を発行します。 その時点で、要求に対する HTTP 応答を提供する 5 秒のコードがあります。 この間、サービスは追加の参照、または要求を処理するために必要なその他のビジネス ロジックを実行できます。
+ユーザーがクエリを実行すると、Microsoft Teamsに同期 HTTP 要求が発行されます。 その時点で、要求に対する HTTP 応答を提供する 5 秒のコードがあります。 この間、サービスは追加の参照、または要求を処理するために必要なその他のビジネス ロジックを実行できます。
 
 サービスは、ユーザー クエリに一致する結果で応答する必要があります。 応答は、HTTP 状態コードと、次の本文を持つ有効 `200 OK` な application/json オブジェクトを示す必要があります。
 
@@ -254,25 +254,25 @@ ms.locfileid: "52019728"
 
 * [サムネイル カード](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [ヒーロー カード](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365 コネクタ カード](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Office 365コネクタ カード](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [アダプティブ カード](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
 概要については [、「カード](~/task-modules-and-cards/what-are-cards.md) 」を参照してください。
 
 サムネイルカードとヒーロー カードの種類を使用する方法については、「Add card and [card actions」を参照してください](~/task-modules-and-cards/cards/cards-actions.md)。
 
-365 コネクタ カードのOffice詳細については、「using [Office 365 Connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)」を参照してください。
+コネクタ カードの詳細については、「Office 365 コネクタ カードの使用Office 365[参照してください](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)。
 
-結果の一覧が Microsoft Teams UI に表示され、各アイテムのプレビューが表示されます。 プレビューは、次の 2 つの方法で生成されます。
+結果リストは、各アイテムのプレビュー Microsoft Teams UI に表示されます。 プレビューは、次の 2 つの方法で生成されます。
 
 * オブジェクト内 `preview` のプロパティを使用 `attachment` する。 添付 `preview` ファイルには、ヒーロー カードまたはサムネイル カードのみを指定できます。
 * 添付ファイルの基本 `title` 、 `text` および `image` プロパティから抽出されます。 これらは、プロパティが設定されていない `preview` 場合にのみ使用され、これらのプロパティを使用できます。
 
-アダプティブ または 365 コネクタ カードのプレビュー Officeプレビュー プロパティを設定するだけで、結果リストに表示できます。結果が既にヒーロー カードまたはサムネイル カードである場合、これは必要ありません。 プレビュー添付ファイルを使用する場合は、ヒーロー カードまたはサムネイル カードである必要があります。 preview プロパティを指定しない場合、カードのプレビューは失敗し、何も表示されません。
+プレビュー プロパティを設定するだけで、アダプティブ または Office 365 コネクタ カードのプレビューを結果リストに表示できます。結果が既にヒーロー カードまたはサムネイル カードである場合、これは必要ありません。 プレビュー添付ファイルを使用する場合は、ヒーロー カードまたはサムネイル カードである必要があります。 preview プロパティを指定しない場合、カードのプレビューは失敗し、何も表示されません。
 
 #### <a name="response-example"></a>応答の例
 
-次の使用例は、365 Connector と Adaptive の異なるカード形式を混在Office応答を示しています。 応答で 1 つのカード形式に固執する場合は、コレクション内の各要素のプロパティが、前述のようにヒーロー形式またはサムネイル形式でプレビューを明示的に定義する必要がある方法を示しています。 `preview` `attachments`
+次の使用例は、2 つの結果を持つ応答を示し、異なるカード形式 (コネクタとアダプティブOffice 365混在しています。 応答で 1 つのカード形式に固執する場合は、コレクション内の各要素のプロパティが、前述のようにヒーロー形式またはサムネイル形式でプレビューを明示的に定義する必要がある方法を示しています。 `preview` `attachments`
 
 ```json
 {
@@ -406,7 +406,7 @@ ms.locfileid: "52019728"
 
 ### <a name="default-query"></a>既定のクエリ
 
-マニフェストで設定すると、ユーザーが最初にメッセージング拡張機能を開くと、Microsoft Teams は "既定" クエリ `initialRun` `true` を発行します。 サービスは、事前に設定された結果のセットでこのクエリに応答できます。 これは、最近表示されたアイテム、お気に入り、またはユーザー入力に依存しないその他の情報を表示する場合に便利です。
+マニフェストで設定した場合、Microsoft Teamsが最初にメッセージング拡張機能を開くと、"既定" クエリ `initialRun` `true` が発行されます。 サービスは、事前に設定された結果のセットでこのクエリに応答できます。 これは、最近表示されたアイテム、お気に入り、またはユーザー入力に依存しないその他の情報を表示する場合に便利です。
 
 既定のクエリは、文字列値が . を持つパラメーターを除き、通常のユーザー クエリと `initialRun` 同じ構造を持っています `true` 。
 
@@ -435,7 +435,7 @@ ms.locfileid: "52019728"
 
 ## <a name="identify-the-user"></a>ユーザーを識別する
 
-サービスへのすべての要求には、要求を実行したユーザーの難読化された ID と、ユーザーの表示名と Azure Active Directory オブジェクト ID が含まれます。
+サービスへのすべての要求には、要求を実行したユーザーの難読化された ID と、ユーザーの表示名とオブジェクト ID Azure Active Directory含まれます。
 
 ```json
 "from": {
@@ -445,7 +445,7 @@ ms.locfileid: "52019728"
 },
 ```
 
-値 `id` と `aadObjectId` 値は、認証された Teams ユーザーの値である必要があります。 資格情報またはサービス内のキャッシュされた状態を参照するためのキーとして使用できます。 さらに、各要求にはユーザーの Azure Active Directory テナント ID が含まれます。この ID を使用して、ユーザーの組織を識別できます。 該当する場合、要求には、要求の発信元であるチームとチャネルの ID も含まれる。
+値 `id` と `aadObjectId` 値は、認証されたユーザーの値Teamsされます。 資格情報またはサービス内のキャッシュされた状態を参照するためのキーとして使用できます。 さらに、各要求には、Azure Active Directoryのテナント ID が含まれているので、ユーザーの組織を識別するために使用できます。 該当する場合、要求には、要求の発信元であるチームとチャネルの ID も含まれる。
 
 ## <a name="authentication"></a>認証
 
@@ -454,11 +454,11 @@ ms.locfileid: "52019728"
 シーケンスは次のとおりです。
 
 1. ユーザーがクエリを発行するか、既定のクエリがサービスに自動的に送信されます。
-2. サービスは、Teams ユーザー ID を検査して、ユーザーが最初に認証されたかどうかを確認します。
+2. サービスは、ユーザーが最初にユーザー ID を調Teamsチェックします。
 3. ユーザーが認証されていない場合は、認証 URL を含む推奨されるアクションを含む応答 `auth` `openUrl` を返します。
-4. Microsoft Teams クライアントは、指定された認証 URL を使用して Web ページをホストするポップアップ ウィンドウを起動します。
-5. ユーザーがサインインした後、ウィンドウを閉じて、Teams クライアントに "認証コード" を送信する必要があります。
-6. Teams クライアントは、手順 5 で渡された認証コードを含むクエリをサービスに再発行します。
+4. クライアントMicrosoft Teams、指定した認証 URL を使用して Web ページをホストするポップアップ ウィンドウを起動します。
+5. ユーザーがサインインした後、ウィンドウを閉じて、"認証コード" をクライアントにTeamsします。
+6. 次Teamsクライアントは、手順 5 で渡された認証コードを含むクエリをサービスに再発行します。
 
 サービスは、手順 6 で受信した認証コードが手順 5 の認証コードと一致することを確認する必要があります。 これにより、悪意のあるユーザーがサインイン フローのスプーフィングや侵害を試みない。 これにより、効果的に "ループを閉じる" と、セキュリティで保護された認証シーケンスが完了します。
 
@@ -490,9 +490,9 @@ ms.locfileid: "52019728"
 
 ### <a name="start-the-sign-in-flow"></a>サインイン フローを開始する
 
-サインイン エクスペリエンスは応答性が高く、ポップアップ ウィンドウ内に収まる必要があります。 メッセージの受け渡しを [使用する Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client)と統合する必要があります。
+サインイン エクスペリエンスは応答性が高く、ポップアップ ウィンドウ内に収まる必要があります。 メッセージの受け渡し[をMicrosoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client)と統合する必要があります。
 
-Microsoft Teams 内で実行されている他の埋め込みエクスペリエンスと同様に、ウィンドウ内のコードは最初に呼び出す必要があります `microsoftTeams.initialize()` 。 コードで OAuth フローを実行する場合は、Teams ユーザー ID をウィンドウに渡し、OAuth サインイン URL に渡します。
+他の埋め込みエクスペリエンスが Microsoft Teams内で実行されている場合と同様に、ウィンドウ内のコードは最初に呼び出す必要があります `microsoftTeams.initialize()` 。 コードで OAuth フローを実行する場合は、Teams ユーザー ID をウィンドウに渡し、OAuth サインイン URL に渡します。
 
 ### <a name="complete-the-sign-in-flow"></a>サインイン フローを完了する
 
@@ -501,7 +501,7 @@ Microsoft Teams 内で実行されている他の埋め込みエクスペリエ�
 1. セキュリティ コードを生成します。 (ランダムな数値を指定できます)。このコードをサービスにキャッシュし、サインイン フロー (OAuth 2.0 トークンなど) で取得した資格情報をキャッシュする必要があります。
 2. セキュリティ `microsoftTeams.authentication.notifySuccess` コードを呼び出して渡します。
 
-この時点で、ウィンドウが閉じ、コントロールが Teams クライアントに渡されます。 クライアントは、プロパティのセキュリティ コードと共に、元のユーザー クエリを再発行 `state` できます。 コードでは、セキュリティ コードを使用して、以前に格納された資格情報を参照して認証シーケンスを完了し、ユーザー要求を完了できます。
+この時点で、ウィンドウが閉じ、コントロールがクライアントにTeamsされます。 クライアントは、プロパティのセキュリティ コードと共に、元のユーザー クエリを再発行 `state` できます。 コードでは、セキュリティ コードを使用して、以前に格納された資格情報を参照して認証シーケンスを完了し、ユーザー要求を完了できます。
 
 #### <a name="reissued-request-example"></a>再発行された要求の例
 
@@ -556,7 +556,7 @@ Microsoft Teams 内で実行されている他の埋め込みエクスペリエ�
 
 ### <a name="net"></a>.NET
 
-.NET 用ボット ビルダー SDK を使用してクエリを受信および処理するには、受信アクティビティのアクションの種類を確認してから `invoke` [、NuGet パッケージ Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) のヘルパー メソッドを使用して、メッセージング拡張機能アクティビティかどうかを判断できます。
+ボット ビルダー SDK for .NET を使用してクエリを受信および処理するには、受信アクティビティのアクションの種類を確認してから、NuGet パッケージ `invoke` [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)のヘルパー メソッドを使用して、メッセージング拡張機能アクティビティかどうかを判断できます。
 
 #### <a name="example-code-in-net"></a>.NET のコード例
 

@@ -1,5 +1,5 @@
 ---
-title: ボットの Teams 固有のコンテキストを取得する
+title: ボットTeams特定のコンテキストを取得する
 author: laujan
 description: 会話の名簿、詳細、チャネル リストなど、ボットの Microsoft Team の特定のコンテキストを取得する方法。
 ms.topic: conceptual
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020015"
 ---
-# <a name="get-teams-specific-context-for-your-bot"></a>ボットの Teams 固有のコンテキストを取得する
+# <a name="get-teams-specific-context-for-your-bot"></a>ボットTeams特定のコンテキストを取得する
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
@@ -20,7 +20,7 @@ ms.locfileid: "52020015"
 
 ## <a name="fetch-the-roster-or-user-profile"></a>名簿またはユーザー プロファイルを取得する
 
-ボットは、Teams ユーザー ID や Azure Active Directory (AAD) 情報 (名前や objectId など) を含む、メンバーのリストとその基本的なユーザー プロファイルを照会できます。 この情報を使用して、ユーザー ID を関連付けできます。 たとえば、ユーザーが AAD 資格情報を使用してタブにログインしたかどうかを確認するには、チームのメンバーです。 会話メンバーを取得する場合、最小または最大のページ サイズは実装によって異なります。 50 未満のページ サイズは 50 として扱い、500 より大きい場合は 500 に制限されます。 ページ以外のバージョンを使用する場合でも、大規模なチームではこのバージョンは使用できません。 詳細については、「チームまたはチャット メンバーをフェッチする Teams Bot API への変更 [」を参照してください](~/resources/team-chat-member-api-changes.md)。
+ボットは、メンバーのリストとその基本的なユーザー プロファイル (Teams ユーザー ID や Azure Active Directory (AAD) 情報 (名前や objectId など) を照会できます。 この情報を使用して、ユーザー ID を関連付けできます。 たとえば、ユーザーが AAD 資格情報を使用してタブにログインしたかどうかを確認するには、チームのメンバーです。 会話メンバーを取得する場合、最小または最大のページ サイズは実装によって異なります。 50 未満のページ サイズは 50 として扱い、500 より大きい場合は 500 に制限されます。 ページ以外のバージョンを使用する場合でも、大規模なチームではこのバージョンは使用できません。 詳細については、「チームまたはチャット[メンバーをフェッチTeamsボット API の変更点」を参照してください](~/resources/team-chat-member-api-changes.md)。
 
 次のサンプル コードでは、ページ化されたエンドポイントを使用して、名簿をフェッチします。
 
@@ -123,11 +123,11 @@ Response body
 
 * * *
 
-名簿またはユーザー プロファイルを取得した後、1 つのメンバーの詳細を取得できます。 現在、チャットまたはチームの 1 人または複数のメンバーの情報を取得するには、Microsoft Teams ボット API を使用して、C#または TypeScript API 用に `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` 使用します。
+名簿またはユーザー プロファイルを取得した後、1 つのメンバーの詳細を取得できます。 現在、チャットまたはチームの 1 人または複数のメンバーの情報を取得するには、Microsoft Teamsまたは TypeScript API の C#ボット API を `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` 使用します。
 
 ## <a name="get-single-member-details"></a>単一のメンバーの詳細を取得する
 
-Teams ユーザー ID、UPN、または AAD オブジェクト ID を使用して、特定のユーザーの詳細を取得できます。
+ユーザー ID、UPN、または AAD オブジェクト ID を使用してTeamsユーザーの詳細を取得できます。
 
 次のサンプル コードは、単一のメンバーの詳細を取得するために使用されます。
 
@@ -207,7 +207,7 @@ Response body
 
 * * *
 
-1 人のメンバーの詳細を取得した後、チームの詳細を取得できます。 現時点では、チームの情報を取得するには、Microsoft Teams ボット API を使用して、C#または `TeamsInfo.GetMemberDetailsAsync` `TeamsInfo.getTeamDetails` TypeScript 用に使用します。
+1 人のメンバーの詳細を取得した後、チームの詳細を取得できます。 現時点では、チームの情報を取得するには、Microsoft Teamsまたは TypeScript のC# `TeamsInfo.GetMemberDetailsAsync` ボット API `TeamsInfo.getTeamDetails` を使用します。
 
 ## <a name="get-teams-details"></a>チームの詳細を取得する
 
@@ -282,7 +282,7 @@ Response body
 
 * * *
 
-チームの詳細を取得した後、チーム内のチャネルの一覧を取得できます。 現時点では、チーム内のチャネルの一覧の情報を取得するには、Microsoft Teams ボット API を使用して、C#または `TeamsInfo.GetTeamChannelsAsync` `TeamsInfo.getTeamChannels` TypeScript API に使用します。
+チームの詳細を取得した後、チーム内のチャネルの一覧を取得できます。 現時点では、チーム内のチャネルの一覧の情報を取得するには、Microsoft Teamsまたは TypeScript API 用C#ボット API を `TeamsInfo.GetTeamChannelsAsync` `TeamsInfo.getTeamChannels` 使用します。
 
 ## <a name="get-the-list-of-channels-in-a-team"></a>チーム内のチャネルの一覧を取得する
 

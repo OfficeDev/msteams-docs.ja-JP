@@ -15,7 +15,7 @@ ms.locfileid: "52019735"
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
-アクション ベースのメッセージング拡張機能を使用すると、ユーザーは Teams の内部で外部サービスでアクションをトリガーできます。
+アクション ベースのメッセージング拡張機能を使用すると、ユーザーは外部サービスの内部でアクションをトリガー Teams。
 
 ![メッセージング拡張機能カードの例](~/assets/images/compose-extensions/ceexample.png)
 
@@ -232,13 +232,13 @@ ms.locfileid: "52019735"
 
 ## <a name="collecting-input-from-users"></a>ユーザーからの入力の収集
 
-Teams のエンド ユーザーから情報を収集するには、3 つの方法があります。
+エンド ユーザーから情報を収集するには、次の 3 つのTeams。
 
 ### <a name="static-parameter-list"></a>静的パラメーター リスト
 
-このメソッドでは、「Create To Do」コマンドで上記のように、マニフェスト内のパラメーターの静的リストを定義する必要があります。 このメソッドを使用するには、 `fetchTask` マニフェストにパラメーターを設定し `false` 、パラメーターを定義します。
+このメソッドでは、上記の "Create To Do" コマンドに示すように、マニフェスト内のパラメーターの静的な一覧を定義To Doです。 このメソッドを使用するには、 `fetchTask` マニフェストにパラメーターを設定し `false` 、パラメーターを定義します。
 
-ユーザーが静的パラメーターを含むコマンドを選択すると、Teams はマニフェストで定義されたパラメーターを持つフォームをタスク モジュールに生成します。 送信時にボット `composeExtension/submitAction` に送信されます。 予想される応答 [のセットの詳細については](#responding-to-submit) 、「送信への応答」のトピックを参照してください。
+ユーザーが静的パラメーターを含むコマンドを選択すると、Teamsで定義されたパラメーターを持つフォームがタスク モジュールに生成されます。 送信時にボット `composeExtension/submitAction` に送信されます。 予想される応答 [のセットの詳細については](#responding-to-submit) 、「送信への応答」のトピックを参照してください。
 
 ### <a name="dynamic-input-using-an-adaptive-card"></a>アダプティブ カードを使用した動的入力
 
@@ -562,7 +562,7 @@ teamChatConnector.onComposeExtensionSubmitAction((
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-このサンプルでは [、Microsoft.Bot.Connector.Teams SDK (v3) を使用してこのフローを示します](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)。
+このサンプルでは[、Microsoft.Bot.Connector.Teams SDK (v3) を使用してこのフローを示します](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)。
 
 ```csharp
 public class MessagesController : ApiController

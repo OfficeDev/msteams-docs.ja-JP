@@ -1,6 +1,6 @@
 ---
-title: Microsoft Graph を使用して外部プラットフォーム メッセージを Teams にインポートする
-description: Microsoft Graph を使用して外部プラットフォームから Teams にメッセージをインポートする方法について説明します。
+title: Microsoft Graphを使用して外部プラットフォーム メッセージをインポートTeams
+description: Microsoft Graph を使用して外部プラットフォームからメッセージをインポートする方法についてTeams
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
@@ -15,7 +15,7 @@ ms.locfileid: "51403970"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Microsoft Graph を使用してサードパーティのプラットフォーム メッセージを Teams にインポートする
 
-Microsoft Graph を使用すると、ユーザーの既存のメッセージ履歴とデータを外部システムから Teams チャネルに移行できます。 Teams 内のサード パーティプラットフォーム メッセージング階層のレクリエーションを有効にすると、ユーザーはシームレスな方法で通信を続行し、中断することなく続行できます。
+Microsoft Graphを使用すると、ユーザーの既存のメッセージ履歴とデータを外部システムから別のチャネルにTeamsできます。 Teams 内のサード パーティプラットフォーム メッセージング階層のレクリエーションを有効にすると、ユーザーはシームレスな方法で通信を続行し、中断することなく続行できます。
 
 > [!NOTE] 
 > 今後、Microsoft は、インポートされるデータの量に基づいて、お客様またはお客様の顧客に追加料金の支払いを要求する場合があります。
@@ -36,13 +36,13 @@ Microsoft Graph を使用すると、ユーザーの既存のメッセージ履�
 
 ✔サード パーティのデータを確認して、移行するデータを決定します。  
 ✔サード パーティチャット システムから選択したデータを抽出します。  
-✔サードパーティのチャット構造を Teams 構造にマップします。  
+✔サード パーティのチャット構造を、他のユーザーのチャット構造Teamsします。  
 ✔移行に必要な形式にインポート データを変換します。  
 
 ### <a name="set-up-your-office-365-tenant"></a>Office 365 テナントのセットアップ
 
-✔インポート データOffice 365 テナントが存在することを確認します。 Teams の 365 テナントOffice設定の詳細については、「Prepare your  [Office 365 テナント」を参照してください](../../concepts/build-and-test/prepare-your-o365-tenant.md)。  
-✔チーム メンバーが Azure Active Directory (AAD) に存在するようにします。  詳細 *については、「Azure* Active Directory [に新しいユーザーを追加](/azure/active-directory/fundamentals/add-users-azure-active-directory) する」を参照してください。
+✔インポート データOffice 365テナントが存在することを確認します。 ユーザーのテナントを設定する方法Office 365については、「Teamsテナントを準備する」[をOffice 365してください](../../concepts/build-and-test/prepare-your-o365-tenant.md)。   
+✔チーム メンバーが (AAD) にAzure Active Directory確認します。  詳細については、「新 *しい*[ユーザーを新しいユーザーに追加する](/azure/active-directory/fundamentals/add-users-azure-active-directory)」を参照Azure Active Directory。
 
 ## <a name="step-one-create-a-team"></a>手順 1: チームを作成する
 
@@ -58,7 +58,7 @@ Microsoft Graph を使用すると、ユーザーの既存のメッセージ履�
 
 |ScopeName|DisplayName|説明|型|管理者の同意|対象のエンティティ/API|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|Microsoft Teams への移行の管理|Microsoft Teams への移行用のリソースの作成、管理|**アプリケーション専用**|**はい**|`POST /teams`|
+|`Teamwork.Migrate.All`|Microsoft Teams への移行の管理|ユーザーへの移行用のリソースの作成、管理Microsoft Teams|**アプリケーション専用**|**はい**|`POST /teams`|
 
 #### <a name="request-create-a-team-in-migration-state"></a>要求 (移行状態でチームを作成する)
 
@@ -102,7 +102,7 @@ Content-Location: /teams/{team-id}
 
 |ScopeName|DisplayName|説明|型|管理者の同意|対象のエンティティ/API|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|Microsoft Teams への移行の管理|Microsoft Teams への移行用のリソースの作成、管理|**アプリケーション専用**|**はい**|`POST /teams`|
+|`Teamwork.Migrate.All`|Microsoft Teams への移行の管理|ユーザーへの移行用のリソースの作成、管理Microsoft Teams|**アプリケーション専用**|**はい**|`POST /teams`|
 
 #### <a name="request-create-a-channel-in-migration-state"></a>要求 (移行状態でチャネルを作成する)
 
@@ -318,7 +318,7 @@ HTTP/1.1 204 NoContent
 
 ## <a name="step-five-add-team-members"></a>手順 5: チーム メンバーを追加する
 
-Teams UI または Microsoft Graph Add メンバー [API](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) を使用して、チームに [メンバーを追加](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true) できます。
+メンバーをチームに追加するには、次の UI または Microsoft Teams[メンバー API](https://support.microsoft.com/office/add-members-to-a-team-in-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9)をGraph[使用](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true)します。
 
 #### <a name="request-add-member"></a>要求 (メンバーの追加)
 
@@ -362,7 +362,7 @@ HTTP/1.1 204 No Content
 |チームメッセージとチャネル メッセージ|1:1 およびグループ チャット メッセージ|
 |元のメッセージの作成時刻|プライベート チャネル|
 |メッセージの一部としてのインライン イメージ|メンション|
-|SPO/OneDrive の既存のファイルへのリンク|リアクション|
+|SPO/OneDrive の既存のファイルへのOneDrive|リアクション|
 |リッチ テキストを含むメッセージ|ビデオ|
 |メッセージ返信チェーン|お知らせ|
 |高スループット処理|コード スニペット|
@@ -374,4 +374,4 @@ HTTP/1.1 204 No Content
 
 ## <a name="see-also"></a>関連項目
 > [!div class="nextstepaction"]
-> [Microsoft Graph と Teams の統合の詳細](/graph/teams-concept-overview)
+> [Microsoft GraphとTeams詳細](/graph/teams-concept-overview)

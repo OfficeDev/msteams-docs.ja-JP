@@ -119,4 +119,4 @@ var mediaPlatform = new MediaPlatformSettings
 
 - Ngrok 無料アカウント **は、エンドツーエンド** の暗号化を提供しません。 HTTPS データは ngrok URL で終了し、データ フローは ngrok から . `localhost` エンドツーエンドの暗号化が必要な場合は、有料の ngrok アカウントを検討してください。 セキュリティ [で保護されたエンドツーエンド トンネル](https://ngrok.com/docs#tls) をセットアップする手順については、「TLS トンネル」を参照してください。
 - ボットコールバック URL は動的なので、着信呼び出しのシナリオでは、ngrok エンドポイントを頻繁に更新する必要があります。 これを修正する 1 つの方法は、ボットとプラットフォームをポイントできる固定サブドメインを提供する有料の ngrok アカウントを使用する方法です。
-- Ngrok トンネルは Azure Service [Fabric でも使用できます](/azure/service-fabric/service-fabric-overview)。 これを行う方法の例については、「HueBot サンプル アプリ [」を参照してください](/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/LocalMediaSamples/HueBot/HueBot)。
+- Ngrok トンネルは Azure Service Fabric[と一緒に使用Service Fabric。](/azure/service-fabric/service-fabric-overview) これを行う方法の例については、「HueBot サンプル アプリ [」を参照してください](/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/LocalMediaSamples/HueBot/HueBot)。

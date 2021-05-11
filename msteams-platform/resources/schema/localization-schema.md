@@ -1,6 +1,6 @@
 ---
 title: ローカライズ ファイル JSON スキーマ参照
-description: Microsoft Teams のローカライズ ファイルでサポートされるローカライズ スキーマについて説明します。
+description: ローカライズ ファイルでサポートされているローカライズ スキーマについて説明Microsoft Teams
 ms.topic: reference
 localization_priority: Normal
 keywords: teams マニフェスト スキーマのローカライズ
@@ -14,7 +14,7 @@ ms.locfileid: "52019707"
 ---
 # <a name="reference-localization-file-json-schema"></a>リファレンス: ローカライズ ファイル JSON スキーマ
 
-Microsoft Teams ローカライズ ファイルには、クライアント言語の設定に基づいて提供される言語翻訳が記述されています。 ファイルは、 でホストされるスキーマに準拠している必要があります [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json) 。 詳細については、「アプリのローカライズ [」を参照してください](~/concepts/build-and-test/apps-localization.md)。
+ローカライズ Microsoft Teamsは、クライアント言語の設定に基づいて提供される言語翻訳について説明します。 ファイルは、 でホストされるスキーマに準拠している必要があります [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json) 。 詳細については、「アプリのローカライズ [」を参照してください](~/concepts/build-and-test/apps-localization.md)。
 
 ## <a name="sample"></a>サンプル
 
@@ -42,7 +42,7 @@ Microsoft Teams ローカライズ ファイルには、クライアント言語
 マニフェスト https:// JSON スキーマを参照する URL を指定します。
 
 > [!TIP]
-> マニフェストの先頭にスキーマを指定して、コード エディター IntelliSenseサポートを有効にしてください。 `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
+> マニフェストの先頭にスキーマを指定して、コード エディター IntelliSenseサポートを有効にしてください。`"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
 
 ## <a name="nameshort"></a>name.short
 

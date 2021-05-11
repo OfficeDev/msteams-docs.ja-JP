@@ -1,6 +1,6 @@
 ---
 title: Office 365 コネクタ
-description: Microsoft Teams の 365 コネクタOfficeを開始する方法について説明します。
+description: コネクタの使用を開始するOffice 365説明Microsoft Teams
 keywords: Teams o365 コネクタ
 localization_priority: Normal
 ms.topic: conceptual
@@ -12,32 +12,32 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52018398"
 ---
-# <a name="creating-office-365-connectors-for-microsoft-teams"></a>Microsoft Teams Office 365 コネクタの作成
+# <a name="creating-office-365-connectors-for-microsoft-teams"></a>ユーザー Office 365コネクタのMicrosoft Teams
 
->Microsoft Teams アプリを使用すると、既存の Office 365 コネクタを追加したり、Microsoft Teams に含める新しいコネクタを作成できます。 詳細については [、「独自のコネクタをビルド](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector) する」を参照してください。
+>アプリMicrosoft Teamsを使用すると、既存のコネクタコネクタをOffice 365したり、新しいコネクタをビルドして新しいコネクタにMicrosoft Teams。 詳細については [、「独自のコネクタをビルド](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector) する」を参照してください。
 
-## <a name="adding-a-connector-to-your-teams-app"></a>Teams アプリへのコネクタの追加
+## <a name="adding-a-connector-to-your-teams-app"></a>コネクタをアプリにTeamsする
 
-登録済みのコネクタを Teams アプリ パッケージの一部として配布できます。 スタンドアロン ソリューションとして、または Teams で使用[](~/concepts/extensibility-points.md)できるいくつかの機能の 1 つでも、AppSource[](~/concepts/deploy-and-publish/apps-publish.md)申請の一部としてコネクタをパッケージ化して発行したり、Teams 内でアップロードするためにユーザーに直接提供することもできます。 [](~/concepts/build-and-test/apps-package.md)
+登録済みのコネクタを Teams アプリ パッケージの一部として配布できます。 スタンドアロン ソリューションとしても、Teams でエクスペリエンスが有効にしている機能の 1 つでも、AppSource[](~/concepts/build-and-test/apps-package.md)申請[](~/concepts/deploy-and-publish/apps-publish.md)の一部としてコネクタをパッケージ化して発行したり、Teams 内でアップロードするためにユーザーに直接提供することもできます。 [](~/concepts/extensibility-points.md)
 
-コネクタを配布するには、コネクタ開発者ダッシュボードを使用して [登録する必要があります](https://outlook.office.com/connectors/home/login/#/publish)。 既定では、コネクタを登録すると、Outlook や Teams を含む、コネクタをサポートする Office 365 製品すべてでコネクタが動作すると想定されます。 そう _ではなく、Microsoft_ Teams でのみ動作するコネクタを作成する必要がある場合は、Microsoft Teams App Submissions で直接 [お問い合わせください](mailto:teamsubm@microsoft.com)。
+コネクタを配布するには、コネクタ開発者ダッシュボードを使用して [登録する必要があります](https://outlook.office.com/connectors/home/login/#/publish)。 既定では、コネクタが登録された後、コネクタは、コネクタとコネクタを含む、それらをサポートしているすべての Office 365 製品で動作OutlookとTeams。 そう _ではなく、コネクタ_ を作成する必要がある場合は、Microsoft Teams App Submissions で直接Microsoft Teams [問い合わせください](mailto:teamsubm@microsoft.com)。
 
 > [!IMPORTANT]
-> コネクタ開発者ダッシュボード **で [** 保存] を選択すると、コネクタが登録されます。 AppSource でコネクタを発行する場合は、「Microsoft Teams アプリを AppSource に発行する」の [手順に従います](~/concepts/deploy-and-publish/apps-publish.md)。 AppSource でアプリを発行するのではなく、組織にのみ直接配布する場合は、組織に発行[します。](#publish-connectors-for-your-organization) 組織にのみ発行する場合は、Connector ダッシュボードでそれ以上の操作は必要ありません。
+> コネクタ開発者ダッシュボード **で [** 保存] を選択すると、コネクタが登録されます。 AppSource でコネクタを発行する場合は、「アプリを AppSource に発行する」[のMicrosoft Teamsに従います](~/concepts/deploy-and-publish/apps-publish.md)。 AppSource でアプリを発行するのではなく、組織にのみ直接配布する場合は、組織に発行[します。](#publish-connectors-for-your-organization) 組織にのみ発行する場合は、Connector ダッシュボードでそれ以上の操作は必要ありません。
 
 ### <a name="integrating-the-configuration-experience"></a>構成エクスペリエンスの統合
 
-ユーザーは、Teams クライアントから離れることなく、コネクタ構成エクスペリエンス全体を完了します。 このエクスペリエンスを実現するために、Teams は構成ページを iframe 内に直接埋め込む必要があります。 操作のシーケンスは次のとおりです。
+ユーザーは、クライアントから離れることなく、コネクタ構成Teamsします。 このエクスペリエンスを実現するために、Teamsページを iframe に直接埋め込む必要があります。 操作のシーケンスは次のとおりです。
 
 1. ユーザーがコネクタをクリックして構成プロセスを開始します。
-2. Teams は構成エクスペリエンスを一行に読み込むでしょう。
+2. Teams構成エクスペリエンスを一行に読み込む必要があります。
 3. ユーザーは Web エクスペリエンスと対話して構成を完了します。
 4. ユーザーが "Save" を押すと、コード内のコールバックがトリガーされます。
 5. コードは、Webhook 設定を取得して保存イベントを処理します (以下に説明します)。 その後、後でイベントを投稿するために Webhook を保存する必要があります。
 
-既存の Web 構成エクスペリエンスを再利用したり、Teams で特別にホストする別のバージョンを作成することができます。 コードは次の必要があります。
+既存の Web 構成エクスペリエンスを再利用したり、別のバージョンを作成して、特にホストTeams。 コードは次の必要があります。
 
-1. Microsoft Teams JavaScript SDK を含める。 これにより、現在のユーザー/チャネル/チーム コンテキストの取得や認証フローの開始など、一般的な操作を実行するための API へのコード アクセスが可能になります。 `microsoftTeams.initialize()` を呼び出して SDK を初期化します。
+1. JavaScript SDK Microsoft Teams含める。 これにより、現在のユーザー/チャネル/チーム コンテキストの取得や認証フローの開始など、一般的な操作を実行するための API へのコード アクセスが可能になります。 `microsoftTeams.initialize()` を呼び出して SDK を初期化します。
 2. [ `microsoftTeams.settings.setValidityState(true)` 保存] ボタンを有効にする場合に呼び出します。 これは、選択やフィールドの更新など、有効なユーザー入力に対する応答として行う必要があります。
 3. ユーザーが `microsoftTeams.settings.registerOnSaveHandler()` [保存] をクリックすると呼び出されるイベント ハンドラーを登録します。
 4. コネクタ `microsoftTeams.settings.setSettings()` の設定を保存するために呼び出します。 ここに保存されているのは、ユーザーがコネクタの既存の構成を更新しようとすると、構成ダイアログに表示される操作です。
@@ -113,7 +113,7 @@ CSS を使用せずにコネクタ構成ページを作成するサンプル HTM
 | `contentUrl` | 呼び出し時にコードによって設定された構成ページの URL `setSettings()` |
 | `webhookUrl` | このコネクタ用に作成された Webhook URL。 Webhook URL を保持し、それを使用して構造化 JSON を POST してチャネルにカードを送信します。 は、アプリケーションが正常に返される場合にのみ返されます。 |
 | `appType` | 返される値には、Office 365 メール、Office 365 グループ、Microsoft Teams のそれぞれに対応する `mail`、`groups`、`teams` を指定できます。 |
-| `userObjectId` | これは、コネクタのセットアップを開始Office 365 ユーザーに対応する一意の ID です。 セキュリティで保護する必要があります。 この値は、構成をセットアップした Office 365 内のユーザーをサービス内のユーザーに関連付けるために使用できます。 |
+| `userObjectId` | これは、コネクタのセットアップを開始Office 365ユーザーに対応する一意の ID です。 セキュリティで保護する必要があります。 この値は、構成をセットアップした Office 365 内のユーザーをサービス内のユーザーに関連付けるために使用できます。 |
 
 上記の手順 2 でページの読み込みの一部としてユーザーを認証する[](~/tabs/how-to/authentication/auth-flow-tab.md)必要がある場合は、ページを埋め込むときにログインを統合する方法の詳細については、このリンクを参照してください。
 
@@ -136,7 +136,7 @@ CSS を使用せずにコネクタ構成ページを作成するサンプル HTM
 
 ### <a name="including-the-connector-in-your-manifest"></a>マニフェストにコネクタを含む
 
-自動生成された Teams アプリ マニフェストは、ポータルからダウンロードできます。 アプリをテストまたは発行する前に、次の操作を行う必要があります。
+自動生成されたアプリ マニフェストTeamsポータルからダウンロードできます。 アプリをテストまたは発行する前に、次の操作を行う必要があります。
 
 - [アイコンを 2 つ含めます](../../concepts/build-and-test/apps-package.md#app-icons)。
 - マニフェストの `icons` の部分を変更し、アイコンの URL ではなくアイコンのファイル名を参照するようにします。
@@ -194,7 +194,7 @@ CSS を使用せずにコネクタ構成ページを作成するサンプル HTM
 
 ![コネクタ ダイアログ ボックスの [アップロード済み] セクションのスクリーンショット](~/assets/images/connectors/connector_dialog_uploaded.png)
 
-構成機能を起動できるようになりました。 このフローは、ホストされたエクスペリエンスとして Microsoft Teams 内で完全に発生します。
+構成機能を起動できるようになりました。 このフローは、ホストされたエクスペリエンスとして、Microsoft Teams内で発生します。
 
 アクションが正しく `HttpPOST` 動作しているのを確認するには [、コネクタにメッセージを送信します](~/webhooks-and-connectors/how-to/connectors-using.md)。
 
@@ -216,5 +216,5 @@ CSS を使用せずにコネクタ構成ページを作成するサンプル HTM
 ## <a name="code-sample"></a>コード サンプル
 |**サンプル名** | **説明** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| コネクタ    | teams チャネルOffice 365 Connector 生成通知のサンプル。|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
+| コネクタ    | Teams チャネルOffice 365生成するコネクタのサンプル。|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
 | 汎用コネクタのサンプル |Webhook をサポートする任意のシステム用に簡単にカスタマイズできる汎用コネクタのサンプル コード。|  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|

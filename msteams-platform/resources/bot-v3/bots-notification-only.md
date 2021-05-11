@@ -1,6 +1,6 @@
 ---
 title: 通知のみのボット
-description: Microsoft Teams の通知専用ボットについて説明します。
+description: 通知専用ボットの機能について説明Microsoft Teams
 keywords: teams ボットの通知
 ms.topic: conceptual
 localization_priority: Normal
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52019763"
 ---
-# <a name="notification-only-bots-in-microsoft-teams"></a>Microsoft Teams の通知専用ボット
+# <a name="notification-only-bots-in-microsoft-teams"></a>アプリ内の通知専用ボットMicrosoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 

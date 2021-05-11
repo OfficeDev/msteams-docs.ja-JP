@@ -1,6 +1,6 @@
 ---
 title: チュートリアル - Yeoman ジェネレーターを使用して最初のアプリを作成する
-description: Yeoman ジェネレーターを使用して Microsoft Teams アプリの構築を開始する方法について説明します。
+description: Yeoman ジェネレーターを使用してアプリMicrosoft Teamsを開始する方法について学習します。
 keywords: nodejs yeoman node.jsを開始する
 localization_priority: Normal
 ms.topic: tutorial
@@ -12,12 +12,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52018433"
 ---
-# <a name="create-your-first-microsoft-teams-app-using-the-yeoman-generator"></a>Yeoman ジェネレーターを使用して最初の Microsoft Teams アプリを作成する
+# <a name="create-your-first-microsoft-teams-app-using-the-yeoman-generator"></a>Yeoman ジェネレーターをMicrosoft Teams最初のアプリを作成する
 
 > [!Note]
-> このチュートリアルは [、Teams Wiki の Yeoman ジェネレーターから提供されています](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)。
+> このチュートリアルは、Wiki の[Yeoman ジェネレーター Teamsです](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)。
 
-このチュートリアルでは、Microsoft Teams Yeoman ジェネレーターを使用して最初の Microsoft Teams アプリを作成する方法について説明します。 また、Yeoman ジェネレーターを使用して Teams をアップグレードするプロセスについて説明します。 このチュートリアルから始める前提条件は、アプリのサイドローディングを許可する Teams [アカウントを持っている必要があります](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
+このチュートリアルでは、Yeoman ジェネレーターを使用して、Microsoft TeamsアプリMicrosoft Teams説明します。 また、Yeoman ジェネレーターを使用してアプリケーションをアップグレードTeams手順を説明します。 このチュートリアルから始める前提条件は、アプリのサイドローディングをTeamsアカウント[を持っているという前提です](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
 
 ![yeoman ジェネレーター git](~/assets/yeoman-demo.gif)
 
@@ -31,7 +31,7 @@ Yeoman ジェネレーターの使用を開始する前に、コンピュータ�
 
 ### <a name="install-a-code-editor"></a>コード エディターのインストール
 
-コード エディターが必要です。 このドキュメントと画像の大部分は、コードの使用 [Visual Studio参照します](https://code.visualstudio.com)。 ただし、必要なテキスト エディターを自由に使用できます。
+コード エディターが必要です。 このドキュメントと画像の大部分は、このドキュメントを使用[Visual Studio Code。](https://code.visualstudio.com) ただし、必要なテキスト エディターを自由に使用できます。
 
 ### <a name="install-yeoman-and-gulp-cli"></a>Yeoman と Gulp CLI をインストールする
 
@@ -45,7 +45,7 @@ npm install yo gulp-cli --global
 
 ## <a name="install-the-generator"></a>ジェネレーターのインストール
 
-次のコマンドを使用して Teams Yeoman ジェネレーターをインストールします。
+次のコマンドTeams Yeoman ジェネレーターをインストールします。
 
 ```bash
 npm install generator-teams --global
@@ -93,13 +93,13 @@ npm install generator-teams@preview --global
    > [!NOTE]
    > このチュートリアルでは、Application Insights の使用をオプトアウトします。
 
-次の質問のセットは、以前に選択したアイテムに基づいて行います。 タブの場合は、名前を指定し、必要に応じてこのアプリを SharePoint Online Web パーツとして使用できる場合に選択する必要があります。 名前を指定すると、ジェネレーターはプロジェクトを生成し、すべての依存関係をインストールします。 これには 1 分または 2 分かかる場合があります。
+次の質問のセットは、以前に選択したアイテムに基づいて行います。 タブの場合は、名前を指定し、必要に応じて、このアプリをオンライン Web パーツとして使用SharePoint選択する必要があります。 名前を指定すると、ジェネレーターはプロジェクトを生成し、すべての依存関係をインストールします。 これには 1 分または 2 分かかる場合があります。
 
 ## <a name="add-some-code-to-your-tab"></a>タブにコードを追加する
 
-ジェネレーターが完了したら、お気に入りのコード エディターでソリューションを開くことができます。 1 分か 2 分で、コードの整理方法を理解します。 詳細については [、「Project Structure」のドキュメントを参照](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) してください。
+ジェネレーターが完了したら、お気に入りのコード エディターでソリューションを開くことができます。 1 分か 2 分で、コードの整理方法を理解します。 詳細については、「構造」[のドキュメントProject参照](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure)してください。
 
-タブがファイル内 `./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx` にあります。 これは、タブの TypeScript React ベースのクラスです。メソッドを `render()` 見つけて、コントロール内にコード行を追加して `<PanelBody>` 、次のようにします。
+タブがファイル内 `./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx` にあります。 これは、タブの typeScript Reactベースのクラスです。メソッドを `render()` 見つけて、コントロール内にコード行を追加して `<PanelBody>` 、次のようにします。
 
 ``` TypeScript
 <PanelBody>
@@ -115,7 +115,7 @@ npm install generator-teams@preview --global
 
 これで、プロジェクトをビルドできます。 これは、2 つの手順 (または 1 つの手順を参照) で行います。
 
-まず、Microsoft Teams にアップロードまたはサイドロードする Teams アプリ マニフェスト ファイルを作成する必要があります。 これは Gulp タスクによって実行されます `gulp manifest` 。 これにより、マニフェストが検証され、ディレクトリに zip ファイルが作成 `./package` されます。
+まず、アプリ マニフェスト ファイルをTeams、アプリ マニフェスト ファイルにアップロードまたはサイドロードする必要Microsoft Teams。 これは Gulp タスクによって実行されます `gulp manifest` 。 これにより、マニフェストが検証され、ディレクトリに zip ファイルが作成 `./package` されます。
 
 ソリューションをビルドするには、コマンドを使用 `gulp build` します。 これにより、ソリューションがフォルダーに変換 `./dist` されます。 
 
@@ -123,17 +123,17 @@ npm install generator-teams@preview --global
 
 アプリを実行するには、コマンドを使用 `gulp serve` します。 これにより、アプリをテストするためのローカル Web サーバーが構築され、開始されます。 また、プロジェクトにファイルを保存するたびに、このコマンドはアプリケーションを再構築します。 
 
-これで、タブがレンダリングされる `http://localhost:3007/myFirstAppTab/` のを確認するために参照できる必要があります。 ただし、まだ Microsoft Teams にはありません。
+これで、タブがレンダリングされる `http://localhost:3007/myFirstAppTab/` のを確認するために参照できる必要があります。 ただし、まだMicrosoft Teamsはありません。
 
 ![ブラウザーでサイトを表示する](~/assets/yeoman-images/teams-first-app-3.png)
 
-## <a name="run-your-app-in-microsoft-teams"></a>Microsoft Teams でアプリを実行する
+## <a name="run-your-app-in-microsoft-teams"></a>アプリをアプリで実行Microsoft Teams
 
-Microsoft Teams では、アプリを localhost でホストすることはできません。そのため、パブリック URL に発行するか、ngrok などのプロキシを使用する必要があります。
+Microsoft Teamsアプリを localhost でホストすることはできませんので、パブリック URL に公開するか、ngrok などのプロキシを使用する必要があります。
 
 良いニュースは、スキャフォールディングされたプロジェクトにこの組み込みがあります。 ngrok サービスを実行すると、一意のパブリック DNS エントリを使用してバックグラウンドで開始され、その一意の URL でマニフェストがパッケージ化され、その後とまったく同じ処理を実行 `gulp ngrok-serve` します `gulp serve` 。
 
-実行後、新しい Microsoft Teams チームを作成し、チーム名をクリックしてチームの設定に移動し、[アプリ] `gulp ngrok-serve` を選択 *します*。 右下隅に[カスタム アプリをアップロードする] リンクが表示されます。それを選択して、プロジェクト フォルダーとサブフォルダーを参照します `package` 。 そのフォルダー内の zip ファイルを選択し、[開く] を選択します。 これで、アプリは Microsoft Teams にサイドロードされます。
+実行後、新しいチームMicrosoft Teams作成し、チーム名をクリックしてチームの設定に移動し、[アプリ] `gulp ngrok-serve` を *選択します*。 右下にカスタム アプリのリンクが表示アップロード選択し、プロジェクト フォルダーとというサブフォルダーを参照します `package` 。 そのフォルダー内の zip ファイルを選択し、[開く] を選択します。 これで、アプリはアプリにサイドロードMicrosoft Teams。
 
 ![サイドロードされたアプリ](~/assets/yeoman-images/teams-first-app-4.png)
 
@@ -141,17 +141,17 @@ Microsoft Teams では、アプリを localhost でホストすることはで�
 
 ![[構成] タブ](~/assets/yeoman-images/teams-first-app-5.png)
 
-タブを選択し、指示に従って追加します。 カスタム構成ダイアログが表示され、ソースを編集できます。 [保存 *] を* 選択して、タブをチャネルに追加します。 完了したら、タブを Microsoft Teams 内に読み込む必要があります。
+タブを選択し、指示に従って追加します。 カスタム構成ダイアログが表示され、ソースを編集できます。 [保存 *] を* 選択して、タブをチャネルに追加します。 完了したら、タブを内部に読み込Microsoft Teams!
 
 ![teams でタブを実行する](~/assets/yeoman-images/teams-first-app-6.png)
 
-## <a name="upgrade-microsoft-teams"></a>Microsoft Teams のアップグレード
+## <a name="upgrade-microsoft-teams"></a>アップグレード Microsoft Teams
 
-Microsoft Teams Yeoman ジェネレーターを使用して、現在の Microsoft Teams バージョンを最新バージョンにアップグレードできます。
+Yeoman ジェネレーターを使用してMicrosoft Teamsバージョンを最新バージョンにアップグレードMicrosoft Teamsできます。
 
-**Microsoft Teams をアップグレードするには**
+**アップグレードするにはMicrosoft Teams**
 
-1. 次のコマンドを使用して、Teams の現在のバージョンを取得します。
+1. 次のコマンドを使用してTeamsのバージョンを取得します。
 
    ```PowerShell
     yo teams --version
@@ -167,13 +167,13 @@ Microsoft Teams Yeoman ジェネレーターを使用して、現在の Microsof
 
 4. ジェネレーターの一覧から目的のジェネレーターを選択します。
    > [!NOTE]
-   > スペース バーを使用して、使用可能なオプションから選択した Teams バージョンを選択またはクリアします。
+   > スペース バーを使用して、使用可能なオプションから選択したTeamsを選択または解除します。
 
     ![UseSpaceToSelectGenerators のイメージ](~/assets/images/Update-Teams/UseSpaceToSelectGenerators.png)
     
 
    > [!NOTE]
-   > Teams のインストールが完了するには数秒から数分かかります。
+   > インストールが完了するには、数秒からTeams分かかります。
 
 5. インストールが完了したら、次のコマンドを使用してインストールされているバージョンを確認します。
 
@@ -181,4 +181,4 @@ Microsoft Teams Yeoman ジェネレーターを使用して、現在の Microsof
     yo teams --version
    ```
    
-**おめでとう!最初の Microsoft Teams アプリをビルドして展開しました。Microsoft Teams もアップグレードしました。**
+**おめでとう!最初のアプリをビルドしてMicrosoft Teamsしました。また、アップグレードMicrosoft Teams。**
