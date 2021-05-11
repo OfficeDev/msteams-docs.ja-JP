@@ -1,11 +1,11 @@
 ---
-title: Teams でリソース固有の同意をテストする
-description: Postman を使用して Teams でリソース固有の同意をテストする方法
+title: リソース固有の同意をテストTeams
+description: Postman を使用してリソース固有の同意Teamsする方法
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
 ms.topic: how-to
-keywords: Teams 承認 OAuth SSO AAD rsc Postman Graph
+keywords: teams 承認 OAuth SSO AAD rsc Postman Graph
 ms.openlocfilehash: 7360a81108ac900fdf6d03217b667e257ff227fe
 ms.sourcegitcommit: 976e870cc925f61b76c3830ec04ba6e4bdfde32f
 ms.translationtype: MT
@@ -13,7 +13,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/27/2021
 ms.locfileid: "50014517"
 ---
-# <a name="test-rsc-postman-collection-json"></a><span data-ttu-id="fda37-104">RSC Postman コレクション JSON のテスト</span><span class="sxs-lookup"><span data-stu-id="fda37-104">Test RSC Postman collection JSON</span></span>
+# <a name="test-rsc-postman-collection-json"></a><span data-ttu-id="95ec3-104">テスト RSC Postman コレクション JSON</span><span class="sxs-lookup"><span data-stu-id="95ec3-104">Test RSC Postman collection JSON</span></span>
 
 ```json
 {
