@@ -12,28 +12,28 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/30/2021
 ms.locfileid: "52101745"
 ---
-# <a name="add-test-data-to-your-microsoft-365-test-tenant"></a><span data-ttu-id="cc2cb-104">テスト テナントにテスト データをMicrosoft 365する</span><span class="sxs-lookup"><span data-stu-id="cc2cb-104">Add test data to your Microsoft 365 test tenant</span></span>
+# <a name="add-test-data-to-your-microsoft-365-test-tenant"></a><span data-ttu-id="5d951-104">テスト テナントにテスト データをMicrosoft 365する</span><span class="sxs-lookup"><span data-stu-id="5d951-104">Add test data to your Microsoft 365 test tenant</span></span>
 
-<span data-ttu-id="cc2cb-105">開発者サブスクリプションを使用Microsoft Teamsサンプル データを使用してアプリMicrosoft 365できます。</span><span class="sxs-lookup"><span data-stu-id="cc2cb-105">You can test your Microsoft Teams app with sample data with a Microsoft 365 developer subscription.</span></span>
+<span data-ttu-id="5d951-105">開発者サブスクリプションを使用Microsoft Teamsサンプル データを使用してアプリMicrosoft 365できます。</span><span class="sxs-lookup"><span data-stu-id="5d951-105">You can test your Microsoft Teams app with sample data with a Microsoft 365 developer subscription.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="cc2cb-106">前提条件</span><span class="sxs-lookup"><span data-stu-id="cc2cb-106">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="5d951-106">前提条件</span><span class="sxs-lookup"><span data-stu-id="5d951-106">Prerequisites</span></span>
 
-1. <span data-ttu-id="cc2cb-107">[テスト テナントMicrosoft 365場合は、](/office/developer-program/office-365-developer-program)開発者プログラムに参加します。</span><span class="sxs-lookup"><span data-stu-id="cc2cb-107">[Join the Microsoft 365 Developer Program](/office/developer-program/office-365-developer-program), if you do not have a test tenant.</span></span>
-2. <span data-ttu-id="cc2cb-108">[開発者サブスクリプションのMicrosoft 365設定します](/office/developer-program/office-365-developer-program-get-started)。</span><span class="sxs-lookup"><span data-stu-id="cc2cb-108">[Set up a Microsoft 365 Developer Subscription](/office/developer-program/office-365-developer-program-get-started).</span></span>
-3. <span data-ttu-id="cc2cb-109">[ユーザー コンテンツ パックをインストールするには、Microsoft 365開発者サブスクリプションでサンプル データ パックを使用します](/office/developer-program/install-sample-packs)。</span><span class="sxs-lookup"><span data-stu-id="cc2cb-109">[Use sample data packs with your Microsoft 365 developer subscription to install the Users content pack](/office/developer-program/install-sample-packs).</span></span>
-4. <span data-ttu-id="cc2cb-110">[PowerShell モジュールTeamsインストールします](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)。</span><span class="sxs-lookup"><span data-stu-id="cc2cb-110">[Install the Teams PowerShell module](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).</span></span>
-5. <span data-ttu-id="cc2cb-111">[Azure AD PowerShell モジュールをインストールします](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true)。</span><span class="sxs-lookup"><span data-stu-id="cc2cb-111">[Install the Azure AD PowerShell module](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true).</span></span>
+1. <span data-ttu-id="5d951-107">[テスト テナントMicrosoft 365場合は、](/office/developer-program/office-365-developer-program)開発者プログラムに参加します。</span><span class="sxs-lookup"><span data-stu-id="5d951-107">[Join the Microsoft 365 Developer Program](/office/developer-program/office-365-developer-program), if you do not have a test tenant.</span></span>
+2. <span data-ttu-id="5d951-108">[開発者サブスクリプションのMicrosoft 365設定します](/office/developer-program/office-365-developer-program-get-started)。</span><span class="sxs-lookup"><span data-stu-id="5d951-108">[Set up a Microsoft 365 Developer Subscription](/office/developer-program/office-365-developer-program-get-started).</span></span>
+3. <span data-ttu-id="5d951-109">[ユーザー コンテンツ パックをインストールするには、Microsoft 365開発者サブスクリプションでサンプル データ パックを使用します](/office/developer-program/install-sample-packs)。</span><span class="sxs-lookup"><span data-stu-id="5d951-109">[Use sample data packs with your Microsoft 365 developer subscription to install the Users content pack](/office/developer-program/install-sample-packs).</span></span>
+4. <span data-ttu-id="5d951-110">[PowerShell モジュールTeamsインストールします](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)。</span><span class="sxs-lookup"><span data-stu-id="5d951-110">[Install the Teams PowerShell module](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).</span></span>
+5. <span data-ttu-id="5d951-111">[Azure AD PowerShell モジュールをインストールします](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true)。</span><span class="sxs-lookup"><span data-stu-id="5d951-111">[Install the Azure AD PowerShell module](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="cc2cb-112">スクリプトを実行するには、テナントにグローバル管理者のアクセス許可が必要です。</span><span class="sxs-lookup"><span data-stu-id="cc2cb-112">You must have global admin permissions in the tenant to run the scripts.</span></span>
+> <span data-ttu-id="5d951-112">スクリプトを実行するには、テナントにグローバル管理者のアクセス許可が必要です。</span><span class="sxs-lookup"><span data-stu-id="5d951-112">You must have global admin permissions in the tenant to run the scripts.</span></span>
 
-## <a name="allow-users-to-upload-apps"></a><span data-ttu-id="cc2cb-113">ユーザーにアプリのアップロードを許可する</span><span class="sxs-lookup"><span data-stu-id="cc2cb-113">Allow users to upload apps</span></span>
+## <a name="allow-users-to-upload-apps"></a><span data-ttu-id="5d951-113">ユーザーにアプリのアップロードを許可する</span><span class="sxs-lookup"><span data-stu-id="5d951-113">Allow users to upload apps</span></span>
 
-<span data-ttu-id="cc2cb-114">既定では、テナントにアプリをアップロード (サイドロード) できるのは、Teams管理者またはサービス管理者のみです。</span><span class="sxs-lookup"><span data-stu-id="cc2cb-114">By default, only global admins or Teams service admins can upload (sideload) apps in a tenant.</span></span> <span data-ttu-id="cc2cb-115">ユーザーが自分で使用するためにカスタム アプリをアップロードしたり、テストのためにチームにアップロードしたりすることもできます。</span><span class="sxs-lookup"><span data-stu-id="cc2cb-115">You can also allow users to upload custom apps for their own use or to teams for testing.</span></span> <span data-ttu-id="cc2cb-116">詳細については、「カスタム アプリ ポリシーと設定を管理する」を参照[Teams。](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings)</span><span class="sxs-lookup"><span data-stu-id="cc2cb-116">For more information, see [manage custom app policies and settings in Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings).</span></span>
+<span data-ttu-id="5d951-114">既定では、テナントにアプリをアップロード (サイドロード) できるのは、Teams管理者またはサービス管理者のみです。</span><span class="sxs-lookup"><span data-stu-id="5d951-114">By default, only global admins or Teams service admins can upload (sideload) apps in a tenant.</span></span> <span data-ttu-id="5d951-115">ユーザーが自分で使用するためにカスタム アプリをアップロードしたり、テストのためにチームにアップロードしたりすることもできます。</span><span class="sxs-lookup"><span data-stu-id="5d951-115">You can also allow users to upload custom apps for their own use or to teams for testing.</span></span> <span data-ttu-id="5d951-116">詳細については、「カスタム アプリ ポリシーと設定を管理する」を参照[Teams。](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings)</span><span class="sxs-lookup"><span data-stu-id="5d951-116">For more information, see [manage custom app policies and settings in Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings).</span></span>
 
-## <a name="create-teams-and-channels-for-testing"></a><span data-ttu-id="cc2cb-117">テスト用のチームとチャネルを作成する</span><span class="sxs-lookup"><span data-stu-id="cc2cb-117">Create teams and channels for testing</span></span>
+## <a name="create-teams-and-channels-for-testing"></a><span data-ttu-id="5d951-117">テスト用のチームとチャネルを作成する</span><span class="sxs-lookup"><span data-stu-id="5d951-117">Create teams and channels for testing</span></span>
 
-1. <span data-ttu-id="cc2cb-118">次のスニペットをファイルの **.xmlファイルとして** 保存し、ファイル パスをメモします。</span><span class="sxs-lookup"><span data-stu-id="cc2cb-118">Save the following snippet as a **.xml** file and note the file path.</span></span> <span data-ttu-id="cc2cb-119">この XML は、メンバーと共に作成されるチームとチャネルの構造を定義します。</span><span class="sxs-lookup"><span data-stu-id="cc2cb-119">This XML defines the structure of the team and channel that is created along with its members:</span></span>
+1. <span data-ttu-id="5d951-118">次のスニペットをファイルの **.xmlファイルとして** 保存し、ファイル パスをメモします。</span><span class="sxs-lookup"><span data-stu-id="5d951-118">Save the following snippet as a **.xml** file and note the file path.</span></span> <span data-ttu-id="5d951-119">この XML は、メンバーと共に作成されるチームとチャネルの構造を定義します。</span><span class="sxs-lookup"><span data-stu-id="5d951-119">This XML defines the structure of the team and channel that is created along with its members:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -147,7 +147,7 @@ ms.locfileid: "52101745"
     </Teams>
     ```
 
-2. <span data-ttu-id="cc2cb-120">次のスニペットを PowerShell スクリプト (.ps1) として保存し、保存した場所に注意してください。</span><span class="sxs-lookup"><span data-stu-id="cc2cb-120">Save the following snippet as a PowerShell script (.ps1) and note where you have saved it.</span></span> <span data-ttu-id="cc2cb-121">このスクリプトは、チームとチャネルを作成し、メンバーを追加する手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="cc2cb-121">This script executes the steps to create the team and channel, and add members to them:</span></span>
+2. <span data-ttu-id="5d951-120">次のスニペットを PowerShell スクリプト (.ps1) として保存し、保存した場所に注意してください。</span><span class="sxs-lookup"><span data-stu-id="5d951-120">Save the following snippet as a PowerShell script (.ps1) and note where you have saved it.</span></span> <span data-ttu-id="5d951-121">このスクリプトは、チームとチャネルを作成し、メンバーを追加する手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="5d951-121">This script executes the steps to create the team and channel, and add members to them:</span></span>
 
     ```powershell
     Param(
@@ -238,16 +238,16 @@ ms.locfileid: "52101745"
     }
     ```
 
-3. <span data-ttu-id="cc2cb-122">管理者モードWindows PowerShellセッションを開き、保存したスクリプトを実行します。</span><span class="sxs-lookup"><span data-stu-id="cc2cb-122">Open a Windows PowerShell session in Administrator mode, and run the script that you just saved.</span></span>
-4. <span data-ttu-id="cc2cb-123">資格情報の入力を求めるメッセージが表示されたら、開発者サブスクリプションに最初にサインアップするときに受け取ったグローバル管理者資格情報を入力します。</span><span class="sxs-lookup"><span data-stu-id="cc2cb-123">When you are prompted to provide the credentials, enter the Global Administrator credentials you received when you first signed up for your developer subscription.</span></span>
+3. <span data-ttu-id="5d951-122">管理者モードWindows PowerShellセッションを開き、保存したスクリプトを実行します。</span><span class="sxs-lookup"><span data-stu-id="5d951-122">Open a Windows PowerShell session in Administrator mode, and run the script that you just saved.</span></span>
+4. <span data-ttu-id="5d951-123">資格情報の入力を求めるメッセージが表示されたら、開発者サブスクリプションに最初にサインアップするときに受け取ったグローバル管理者資格情報を入力します。</span><span class="sxs-lookup"><span data-stu-id="5d951-123">When you are prompted to provide the credentials, enter the Global Administrator credentials you received when you first signed up for your developer subscription.</span></span>
 
     > [!Note]
-    > <span data-ttu-id="cc2cb-124">スクリプトの実行に数分かかるので、PowerShell セッションを閉じない。</span><span class="sxs-lookup"><span data-stu-id="cc2cb-124">Do not close your PowerShell session as the script takes several minutes to execute.</span></span> <span data-ttu-id="cc2cb-125">サブスクリプション内のユーザーを既定のコンテンツ パックで作成した内容から変更した場合、一部のユーザーはサブスクリプションに追加Teams。</span><span class="sxs-lookup"><span data-stu-id="cc2cb-125">If you have modified the users in your subscription from what is created in the default content pack, some users may not be added to Teams.</span></span> <span data-ttu-id="cc2cb-126">スクリプトを実行すると、成功または失敗したアクションが表示されます。</span><span class="sxs-lookup"><span data-stu-id="cc2cb-126">As the script executes it displays successful or failed actions.</span></span>
+    > <span data-ttu-id="5d951-124">スクリプトの実行に数分かかるので、PowerShell セッションを閉じない。</span><span class="sxs-lookup"><span data-stu-id="5d951-124">Do not close your PowerShell session as the script takes several minutes to execute.</span></span> <span data-ttu-id="5d951-125">サブスクリプション内のユーザーを既定のコンテンツ パックで作成した内容から変更した場合、一部のユーザーはサブスクリプションに追加Teams。</span><span class="sxs-lookup"><span data-stu-id="5d951-125">If you have modified the users in your subscription from what is created in the default content pack, some users may not be added to Teams.</span></span> <span data-ttu-id="5d951-126">スクリプトを実行すると、成功または失敗したアクションが表示されます。</span><span class="sxs-lookup"><span data-stu-id="5d951-126">As the script executes it displays successful or failed actions.</span></span>
 
-5. <span data-ttu-id="cc2cb-127">スクリプトの実行が完了したら、ユーザー アカウントの 1 つで Teams クライアントにサインインし、新しく作成したチームを表示できます。</span><span class="sxs-lookup"><span data-stu-id="cc2cb-127">After the script has finished execution, you can sign in to the Teams client with one of the user accounts and view the newly created teams.</span></span>
+5. <span data-ttu-id="5d951-127">スクリプトの実行が完了したら、ユーザー アカウントの 1 つで Teams クライアントにサインインし、新しく作成したチームを表示できます。</span><span class="sxs-lookup"><span data-stu-id="5d951-127">After the script has finished execution, you can sign in to the Teams client with one of the user accounts and view the newly created teams.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="cc2cb-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="cc2cb-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5d951-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="5d951-128">See also</span></span>
 
-* [<span data-ttu-id="cc2cb-129">タブをデバッグする</span><span class="sxs-lookup"><span data-stu-id="cc2cb-129">Debug your tab</span></span>](~/tabs/how-to/developer-tools.md) 
-* [<span data-ttu-id="cc2cb-130">ボットのデバッグ</span><span class="sxs-lookup"><span data-stu-id="cc2cb-130">Debug your bots</span></span>](~/bots/how-to/debug/locally-with-an-ide.md)
-* [<span data-ttu-id="cc2cb-131">RSC のアクセス許可をテストする</span><span class="sxs-lookup"><span data-stu-id="cc2cb-131">Test RSC permissions</span></span>](~/graph-api/rsc/test-resource-specific-consent.md)
+* [<span data-ttu-id="5d951-129">タブをデバッグする</span><span class="sxs-lookup"><span data-stu-id="5d951-129">Debug your tab</span></span>](~/tabs/how-to/developer-tools.md) 
+* [<span data-ttu-id="5d951-130">ボットのデバッグ</span><span class="sxs-lookup"><span data-stu-id="5d951-130">Debug your bots</span></span>](~/bots/how-to/debug/locally-with-an-ide.md)
+* [<span data-ttu-id="5d951-131">RSC のアクセス許可をテストする</span><span class="sxs-lookup"><span data-stu-id="5d951-131">Test RSC permissions</span></span>](~/graph-api/rsc/test-resource-specific-consent.md)

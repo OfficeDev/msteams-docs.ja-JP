@@ -1,7 +1,7 @@
 ---
 title: '[スタート] - [チャネルとグループ] タブを作成する'
 author: girliemac
-description: Microsoft Teams チャネルとグループ タブを Microsoft Teams チャネルとグループ タブを使用してすばやく作成Toolkit。
+description: '[チャネルとグループ] Microsoft Teamsを使用して、チャネルとグループ タブをすばやく作成Microsoft Teams Toolkit。'
 ms.author: timura
 ms.date: 03/22/2020
 ms.topic: tutorial
@@ -12,52 +12,52 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2021
 ms.locfileid: "52068753"
 ---
-# <a name="build-your-first-channel-and-group-tab-for-microsoft-teams"></a><span data-ttu-id="9605e-103">Microsoft Teams の最初のチャネルとグループ タブを作成する</span><span class="sxs-lookup"><span data-stu-id="9605e-103">Build your first channel and group tab for Microsoft Teams</span></span>
+# <a name="build-your-first-channel-and-group-tab-for-microsoft-teams"></a><span data-ttu-id="51c44-103">ユーザーの最初のチャネルとグループ タブをMicrosoft Teams</span><span class="sxs-lookup"><span data-stu-id="51c44-103">Build your first channel and group tab for Microsoft Teams</span></span>
 
-<span data-ttu-id="9605e-104">このチュートリアルでは、チーム チャネルまたはチャットのフルスクリーン ページであるグループタブとも呼ばれる基本的なチャネル タブを作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="9605e-104">This tutorial teaches you to build a basic *channel tab* also known as a *group tab*, which is a full-screen page for a team channel or chat.</span></span> <span data-ttu-id="9605e-105">また、この種のタブのいくつかの側面を構成することもできます。たとえば、タブの名前を変更して、個人用タブでは行えないチャネルにとって意味のあるものにすることもできます。</span><span class="sxs-lookup"><span data-stu-id="9605e-105">You can also configure some aspects of this kind of tab, for example, rename the tab so it's meaningful to their channel, which you cannot do in a Personal Tab.</span></span>
+<span data-ttu-id="51c44-104">このチュートリアルでは、チーム チャネルまたはチャットのフルスクリーン ページであるグループタブとも呼ばれる基本的なチャネル タブを作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="51c44-104">This tutorial teaches you to build a basic *channel tab* also known as a *group tab*, which is a full-screen page for a team channel or chat.</span></span> <span data-ttu-id="51c44-105">また、この種のタブのいくつかの側面を構成することもできます。たとえば、タブの名前を変更して、個人用タブでは行えないチャネルにとって意味のあるものにすることもできます。</span><span class="sxs-lookup"><span data-stu-id="51c44-105">You can also configure some aspects of this kind of tab, for example, rename the tab so it's meaningful to their channel, which you cannot do in a Personal Tab.</span></span>
 
-## <a name="what-youll-learn"></a><span data-ttu-id="9605e-106">学習する情報</span><span class="sxs-lookup"><span data-stu-id="9605e-106">What you'll learn</span></span>
+## <a name="what-youll-learn"></a><span data-ttu-id="51c44-106">学習する情報</span><span class="sxs-lookup"><span data-stu-id="51c44-106">What you'll learn</span></span>
 
-* <span data-ttu-id="9605e-107">Microsoft Teams を使用してアプリ プロジェクトを作成ToolkitコードVisual Studioします。</span><span class="sxs-lookup"><span data-stu-id="9605e-107">Create an app project using the Microsoft Teams Toolkit for Visual Studio Code.</span></span>
-* <span data-ttu-id="9605e-108">チャネル タブに関連するアプリの構成とスキャフォールディングについて理解します。</span><span class="sxs-lookup"><span data-stu-id="9605e-108">Understand the app configurations and scaffolding relevant to channel tabs.</span></span>
-* <span data-ttu-id="9605e-109">タブコンテンツとタブ構成を作成します。</span><span class="sxs-lookup"><span data-stu-id="9605e-109">Create tab content and tab configuration.</span></span>
-* <span data-ttu-id="9605e-110">テスト用にチームでアプリをビルドして実行します。</span><span class="sxs-lookup"><span data-stu-id="9605e-110">Build and run your app in teams for testing.</span></span>
+* <span data-ttu-id="51c44-107">アプリプロジェクトを作成するには、アプリのMicrosoft Teams ToolkitをVisual Studio Code。</span><span class="sxs-lookup"><span data-stu-id="51c44-107">Create an app project using the Microsoft Teams Toolkit for Visual Studio Code.</span></span>
+* <span data-ttu-id="51c44-108">チャネル タブに関連するアプリの構成とスキャフォールディングについて理解します。</span><span class="sxs-lookup"><span data-stu-id="51c44-108">Understand the app configurations and scaffolding relevant to channel tabs.</span></span>
+* <span data-ttu-id="51c44-109">タブコンテンツとタブ構成を作成します。</span><span class="sxs-lookup"><span data-stu-id="51c44-109">Create tab content and tab configuration.</span></span>
+* <span data-ttu-id="51c44-110">テスト用にチームでアプリをビルドして実行します。</span><span class="sxs-lookup"><span data-stu-id="51c44-110">Build and run your app in teams for testing.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="9605e-111">前提条件</span><span class="sxs-lookup"><span data-stu-id="9605e-111">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="51c44-111">前提条件</span><span class="sxs-lookup"><span data-stu-id="51c44-111">Prerequisites</span></span>
 
-<span data-ttu-id="9605e-112">簡単な Teams アプリをセットアップしてビルドする方法を理解してください。</span><span class="sxs-lookup"><span data-stu-id="9605e-112">Make sure that you understand how to set up and build a simple Teams app.</span></span> <span data-ttu-id="9605e-113">詳細については、「Hello, World!」アプリの最初の Microsoft Teams の作成 [に関するページをご覧ください](../build-your-first-app/build-and-run.md)。</span><span class="sxs-lookup"><span data-stu-id="9605e-113">For more information, see [create your first Microsoft Teams "Hello, World!" app](../build-your-first-app/build-and-run.md).</span></span>
+<span data-ttu-id="51c44-112">簡単なアプリをセットアップして構築する方法を理解Teamsしてください。</span><span class="sxs-lookup"><span data-stu-id="51c44-112">Make sure that you understand how to set up and build a simple Teams app.</span></span> <span data-ttu-id="51c44-113">詳細については[、「Hello, World!」アプリMicrosoft Teamsを作成するを参照してください](../build-your-first-app/build-and-run.md)。</span><span class="sxs-lookup"><span data-stu-id="51c44-113">For more information, see [create your first Microsoft Teams "Hello, World!" app](../build-your-first-app/build-and-run.md).</span></span>
 
-## <a name="1-create-your-app-project"></a><span data-ttu-id="9605e-114">1. アプリ プロジェクトを作成する</span><span class="sxs-lookup"><span data-stu-id="9605e-114">1. Create your app project</span></span>
+## <a name="1-create-your-app-project"></a><span data-ttu-id="51c44-114">1. アプリ プロジェクトを作成する</span><span class="sxs-lookup"><span data-stu-id="51c44-114">1. Create your app project</span></span>
 
-<span data-ttu-id="9605e-115">Microsoft Teams Toolkitは、アプリを構成し、チャネルタブとグループ タブに関連するスキャフォールディングを設定するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="9605e-115">The Microsoft Teams Toolkit helps you to configure your app and set up the scaffolding relevant to channel and group tabs.</span></span> <span data-ttu-id="9605e-116">また、基本的な構成ページと、"Hello, World!</span><span class="sxs-lookup"><span data-stu-id="9605e-116">It also contains a basic configuration page and content page that displays a "Hello, World!"</span></span> <span data-ttu-id="9605e-117">メッセージ。</span><span class="sxs-lookup"><span data-stu-id="9605e-117">message.</span></span>
+<span data-ttu-id="51c44-115">このMicrosoft Teams Toolkitは、アプリを構成し、チャネルタブとグループ タブに関連するスキャフォールディングを設定するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="51c44-115">The Microsoft Teams Toolkit helps you to configure your app and set up the scaffolding relevant to channel and group tabs.</span></span> <span data-ttu-id="51c44-116">また、基本的な構成ページと、"Hello, World!</span><span class="sxs-lookup"><span data-stu-id="51c44-116">It also contains a basic configuration page and content page that displays a "Hello, World!"</span></span> <span data-ttu-id="51c44-117">メッセージ。</span><span class="sxs-lookup"><span data-stu-id="51c44-117">message.</span></span>
 
-<span data-ttu-id="9605e-118">**アプリ プロジェクトを作成するには**</span><span class="sxs-lookup"><span data-stu-id="9605e-118">**To create your app project**</span></span>
+<span data-ttu-id="51c44-118">**アプリ プロジェクトを作成するには**</span><span class="sxs-lookup"><span data-stu-id="51c44-118">**To create your app project**</span></span>
 
-1. [コード] Visual Studio移動し、左側のアクティビティ バー **で [Microsoft Teams]** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: を選択します。
-1. <span data-ttu-id="9605e-120">要求されたら、Microsoft 365 開発アカウントでサインインします。</span><span class="sxs-lookup"><span data-stu-id="9605e-120">Sign in with your Microsoft 365 development account when prompted to do so.</span></span>
-1. <span data-ttu-id="9605e-121">[プロジェクトの **選択] 画面** で、[チャネルとグループ アプリ] の下の **[JS** (JavaScript)] **を選択します**。</span><span class="sxs-lookup"><span data-stu-id="9605e-121">On the **Select project** screen, select **JS** (JavaScript) under **Channel and group app**.</span></span>
-1. <span data-ttu-id="9605e-122">Teams アプリの名前を入力します。</span><span class="sxs-lookup"><span data-stu-id="9605e-122">Enter a name for your Teams app.</span></span> 
+1. [アクティビティ] Visual Studio Code左側の [アクティビティ バー **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: を選択します。
+1. <span data-ttu-id="51c44-120">開発アカウントでサインインMicrosoft 365求めるメッセージが表示されたら、そのアカウントを使用します。</span><span class="sxs-lookup"><span data-stu-id="51c44-120">Sign in with your Microsoft 365 development account when prompted to do so.</span></span>
+1. <span data-ttu-id="51c44-121">[プロジェクトの **選択] 画面** で、[チャネルとグループ アプリ] の下の **[JS** (JavaScript)] **を選択します**。</span><span class="sxs-lookup"><span data-stu-id="51c44-121">On the **Select project** screen, select **JS** (JavaScript) under **Channel and group app**.</span></span>
+1. <span data-ttu-id="51c44-122">Teams アプリの名前を入力します。</span><span class="sxs-lookup"><span data-stu-id="51c44-122">Enter a name for your Teams app.</span></span> 
 
     > [!NOTE]
-    > <span data-ttu-id="9605e-123">これは、アプリの既定の名前であり、ローカル コンピューター上のアプリ プロジェクト ディレクトリの名前です。</span><span class="sxs-lookup"><span data-stu-id="9605e-123">This is the default name for your app and also the name of the app project directory on your local machine.</span></span>
+    > <span data-ttu-id="51c44-123">これは、アプリの既定の名前であり、ローカル コンピューター上のアプリ プロジェクト ディレクトリの名前です。</span><span class="sxs-lookup"><span data-stu-id="51c44-123">This is the default name for your app and also the name of the app project directory on your local machine.</span></span>
 
-1. <span data-ttu-id="9605e-124">[グループ **] または [Teams チャネル] タブを選択します**。</span><span class="sxs-lookup"><span data-stu-id="9605e-124">Select **Group or Teams channel tab**.</span></span>
-1. <span data-ttu-id="9605e-125">画面 **の下部** にある [完了] を選択してプロジェクトを構成し、プロジェクトをローカル コンピューターに保存します。</span><span class="sxs-lookup"><span data-stu-id="9605e-125">Select **Finish** at the bottom of the screen to configure your project and save your project on your local machine.</span></span>  
+1. <span data-ttu-id="51c44-124">[**グループまたはチャネルTeams] タブを選択します**。</span><span class="sxs-lookup"><span data-stu-id="51c44-124">Select **Group or Teams channel tab**.</span></span>
+1. <span data-ttu-id="51c44-125">画面 **の下部** にある [完了] を選択してプロジェクトを構成し、プロジェクトをローカル コンピューターに保存します。</span><span class="sxs-lookup"><span data-stu-id="51c44-125">Select **Finish** at the bottom of the screen to configure your project and save your project on your local machine.</span></span>  
 
-## <a name="2-understand-your-app-project-components"></a><span data-ttu-id="9605e-126">2. アプリ プロジェクト コンポーネントについて</span><span class="sxs-lookup"><span data-stu-id="9605e-126">2. Understand your app project components</span></span>
+## <a name="2-understand-your-app-project-components"></a><span data-ttu-id="51c44-126">2. アプリ プロジェクト コンポーネントについて</span><span class="sxs-lookup"><span data-stu-id="51c44-126">2. Understand your app project components</span></span>
 
-<span data-ttu-id="9605e-127">ツールキットを使用してプロジェクトを作成すると、アプリの構成とスキャフォールディングの多くが自動的に設定されます。</span><span class="sxs-lookup"><span data-stu-id="9605e-127">Much of the app configurations and scaffolding are set up automatically when you create your project with the toolkit.</span></span> <span data-ttu-id="9605e-128">チャネル タブを作成する主要なコンポーネントを見てみ取ってみろ。</span><span class="sxs-lookup"><span data-stu-id="9605e-128">Let's look at the main components for building a channel tab.</span></span>
+<span data-ttu-id="51c44-127">ツールキットを使用してプロジェクトを作成すると、アプリの構成とスキャフォールディングの多くが自動的に設定されます。</span><span class="sxs-lookup"><span data-stu-id="51c44-127">Much of the app configurations and scaffolding are set up automatically when you create your project with the toolkit.</span></span> <span data-ttu-id="51c44-128">チャネル タブを作成する主要なコンポーネントを見てみ取ってみろ。</span><span class="sxs-lookup"><span data-stu-id="51c44-128">Let's look at the main components for building a channel tab.</span></span>
 
-* <span data-ttu-id="9605e-129">**アプリの構成**: ツールキット **で App Studio** を開き、アプリ構成を表示および更新します。</span><span class="sxs-lookup"><span data-stu-id="9605e-129">**App configurations**: Open **App Studio** in the toolkit to view and update your app configurations.</span></span>
-* <span data-ttu-id="9605e-130">**アプリのスキャフォール** ディング: アプリのスキャフォールディングは、Teams でチャネル タブをレンダリングするために必要なコンポーネントを提供します。</span><span class="sxs-lookup"><span data-stu-id="9605e-130">**App scaffolding**: The app scaffolding provides the components needed for rendering your channel tab in Teams.</span></span> <span data-ttu-id="9605e-131">ただし、ここでは次の作業に重点を置き、多くの作業を行います。</span><span class="sxs-lookup"><span data-stu-id="9605e-131">There's a lot you can work with, however, for now let's focus on the following:</span></span>
-  * <span data-ttu-id="9605e-132">プロジェクトのディレクトリにある `src/components` ファイル:</span><span class="sxs-lookup"><span data-stu-id="9605e-132">The files located in the `src/components` directory of your project:</span></span>
-    * <span data-ttu-id="9605e-133">`Tab.js` タブのコンテンツ ページをレンダリングします。</span><span class="sxs-lookup"><span data-stu-id="9605e-133">`Tab.js` for rendering your tab's content page.</span></span>
-    * <span data-ttu-id="9605e-134">`TabConfig.js` タブの構成ページをレンダリングします。</span><span class="sxs-lookup"><span data-stu-id="9605e-134">`TabConfig.js` for rendering your tab's configuration page.</span></span>
-  * <span data-ttu-id="9605e-135">プロジェクトのフロントエンド コンポーネントに事前に読み込まれた Microsoft Teams JavaScript クライアント SDK。</span><span class="sxs-lookup"><span data-stu-id="9605e-135">Microsoft Teams JavaScript client SDK, which comes pre-loaded in your project's front-end components.</span></span>
+* <span data-ttu-id="51c44-129">**アプリの構成**: ツールキット **で App Studio** を開き、アプリ構成を表示および更新します。</span><span class="sxs-lookup"><span data-stu-id="51c44-129">**App configurations**: Open **App Studio** in the toolkit to view and update your app configurations.</span></span>
+* <span data-ttu-id="51c44-130">**アプリのスキャフォール** ディング: アプリのスキャフォールディングは、チャネル タブのレンダリングに必要なコンポーネントを提供Teams。</span><span class="sxs-lookup"><span data-stu-id="51c44-130">**App scaffolding**: The app scaffolding provides the components needed for rendering your channel tab in Teams.</span></span> <span data-ttu-id="51c44-131">ただし、ここでは次の作業に重点を置き、多くの作業を行います。</span><span class="sxs-lookup"><span data-stu-id="51c44-131">There's a lot you can work with, however, for now let's focus on the following:</span></span>
+  * <span data-ttu-id="51c44-132">プロジェクトのディレクトリにある `src/components` ファイル:</span><span class="sxs-lookup"><span data-stu-id="51c44-132">The files located in the `src/components` directory of your project:</span></span>
+    * <span data-ttu-id="51c44-133">`Tab.js` タブのコンテンツ ページをレンダリングします。</span><span class="sxs-lookup"><span data-stu-id="51c44-133">`Tab.js` for rendering your tab's content page.</span></span>
+    * <span data-ttu-id="51c44-134">`TabConfig.js` タブの構成ページをレンダリングします。</span><span class="sxs-lookup"><span data-stu-id="51c44-134">`TabConfig.js` for rendering your tab's configuration page.</span></span>
+  * <span data-ttu-id="51c44-135">Microsoft TeamsJavaScript クライアント SDK は、プロジェクトのフロントエンド コンポーネントに事前に読み込まれます。</span><span class="sxs-lookup"><span data-stu-id="51c44-135">Microsoft Teams JavaScript client SDK, which comes pre-loaded in your project's front-end components.</span></span>
 
-## <a name="3-customize-your-tab-content-page"></a><span data-ttu-id="9605e-136">3. タブ コンテンツ ページをカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="9605e-136">3. Customize your tab content page</span></span>
+## <a name="3-customize-your-tab-content-page"></a><span data-ttu-id="51c44-136">3. タブ コンテンツ ページをカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="51c44-136">3. Customize your tab content page</span></span>
 
-1. <span data-ttu-id="9605e-137">組織に関連する情報を使用して、次のコード サンプルをコピーして変更します。</span><span class="sxs-lookup"><span data-stu-id="9605e-137">Copy and modify the following code sample with information that's relevant to your organization.</span></span> <span data-ttu-id="9605e-138">スニペットは次のように使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="9605e-138">You can also use the snippet as it is:</span></span>
+1. <span data-ttu-id="51c44-137">組織に関連する情報を使用して、次のコード サンプルをコピーして変更します。</span><span class="sxs-lookup"><span data-stu-id="51c44-137">Copy and modify the following code sample with information that's relevant to your organization.</span></span> <span data-ttu-id="51c44-138">スニペットは次のように使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="51c44-138">You can also use the snippet as it is:</span></span>
     ```JSX
     <div>
       <h1>Important Contacts</h1>
@@ -68,7 +68,7 @@ ms.locfileid: "52068753"
         </ul>
     </div>
     ```
-1. <span data-ttu-id="9605e-139">ディレクトリに移動 `src/components` し、ファイルを開 `Tab.js` きます。</span><span class="sxs-lookup"><span data-stu-id="9605e-139">Go to the `src/components` directory and open the `Tab.js` file.</span></span> <span data-ttu-id="9605e-140">次の例 `render()` に示すように、関数を見つけて `return()` コードを内部に貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="9605e-140">Locate the `render()` function and paste your code inside `return()` as shown in the following example:</span></span>
+1. <span data-ttu-id="51c44-139">ディレクトリに移動 `src/components` し、ファイルを開 `Tab.js` きます。</span><span class="sxs-lookup"><span data-stu-id="51c44-139">Go to the `src/components` directory and open the `Tab.js` file.</span></span> <span data-ttu-id="51c44-140">次の例 `render()` に示すように、関数を見つけて `return()` コードを内部に貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="51c44-140">Locate the `render()` function and paste your code inside `return()` as shown in the following example:</span></span>
     ```JavaScript
     render() {
 
@@ -86,18 +86,18 @@ ms.locfileid: "52068753"
         );
     }
     ```
-1. <span data-ttu-id="9605e-141">ディレクトリに移動し、次のコードでファイルを更新して、使用されているテーマで電子メール リンクを読みやすく `src/components` `App.css` します。</span><span class="sxs-lookup"><span data-stu-id="9605e-141">Go to the `src/components` directory and update the `App.css` file with the following code to make the email links easier to read in any theme that is used:</span></span>
+1. <span data-ttu-id="51c44-141">ディレクトリに移動し、次のコードでファイルを更新して、使用されているテーマで電子メール リンクを読みやすく `src/components` `App.css` します。</span><span class="sxs-lookup"><span data-stu-id="51c44-141">Go to the `src/components` directory and update the `App.css` file with the following code to make the email links easier to read in any theme that is used:</span></span>
     ```CSS
     a {
       color: inherit;
     }
     ```
 
-## <a name="4-customize-your-tab-configuration-page"></a><span data-ttu-id="9605e-142">4. タブ構成ページをカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="9605e-142">4. Customize your tab configuration page</span></span>
+## <a name="4-customize-your-tab-configuration-page"></a><span data-ttu-id="51c44-142">4. タブ構成ページをカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="51c44-142">4. Customize your tab configuration page</span></span>
 
-<span data-ttu-id="9605e-143">チャネルまたはチャットのすべてのタブには構成ページがあります。モーダルで、ユーザーがアプリを追加するときに少なくとも 1 つのセットアップ オプションが表示されます。</span><span class="sxs-lookup"><span data-stu-id="9605e-143">Every tab in a channel or chat has a configuration page, a modal with at least one setup option that displays when users add your app.</span></span> <span data-ttu-id="9605e-144">既定では、構成ページは、タブがインストールされているときにチャネルまたはチャットに通知する必要がある場合に、ユーザーに通知を求めるメッセージを表示します。</span><span class="sxs-lookup"><span data-stu-id="9605e-144">The configuration page by default asks users if they want to notify the channel or chat when the tab is installed.</span></span> <span data-ttu-id="9605e-145">カスタム コンテンツを追加することで、構成ページをカスタマイズできます。</span><span class="sxs-lookup"><span data-stu-id="9605e-145">You can customize the configuration page by adding custom content.</span></span>
+<span data-ttu-id="51c44-143">チャネルまたはチャットのすべてのタブには構成ページがあります。モーダルで、ユーザーがアプリを追加するときに少なくとも 1 つのセットアップ オプションが表示されます。</span><span class="sxs-lookup"><span data-stu-id="51c44-143">Every tab in a channel or chat has a configuration page, a modal with at least one setup option that displays when users add your app.</span></span> <span data-ttu-id="51c44-144">既定では、構成ページは、タブがインストールされているときにチャネルまたはチャットに通知する必要がある場合に、ユーザーに通知を求めるメッセージを表示します。</span><span class="sxs-lookup"><span data-stu-id="51c44-144">The configuration page by default asks users if they want to notify the channel or chat when the tab is installed.</span></span> <span data-ttu-id="51c44-145">カスタム コンテンツを追加することで、構成ページをカスタマイズできます。</span><span class="sxs-lookup"><span data-stu-id="51c44-145">You can customize the configuration page by adding custom content.</span></span>
 
-<span data-ttu-id="9605e-146">カスタム コンテンツを追加するには、ディレクトリからファイルを開き、次の例に示すようにプレースホルダー コンテンツ `TabConfig.js` `src/components` `return()` を内部で更新します。</span><span class="sxs-lookup"><span data-stu-id="9605e-146">To add custom content, open `TabConfig.js` file from the `src/components` directory and update the placeholder content inside `return()` as shown in the following example:</span></span>
+<span data-ttu-id="51c44-146">カスタム コンテンツを追加するには、ディレクトリからファイルを開き、次の例に示すようにプレースホルダー コンテンツ `TabConfig.js` `src/components` `return()` を内部で更新します。</span><span class="sxs-lookup"><span data-stu-id="51c44-146">To add custom content, open `TabConfig.js` file from the `src/components` directory and update the placeholder content inside `return()` as shown in the following example:</span></span>
 
   ```JavaScript
   return (
@@ -111,14 +111,14 @@ ms.locfileid: "52068753"
   ```
  
 > [!TIP]
-> <span data-ttu-id="9605e-147">ユーザーがアプリについて初めて読むので、このページでアプリに関する簡単な情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="9605e-147">Give a brief information about your app on this page since this would be the first time users are reading about it.</span></span> <span data-ttu-id="9605e-148">カスタム構成オプションや、タブ構成ページで一般的 [な](../tabs/how-to/authentication/auth-aad-sso.md)認証ワークフローを含めすることもできます。</span><span class="sxs-lookup"><span data-stu-id="9605e-148">You can also include custom configuration options or an [authentication workflow](../tabs/how-to/authentication/auth-aad-sso.md), which is common on tab configuration pages.</span></span>
+> <span data-ttu-id="51c44-147">ユーザーがアプリについて初めて読むので、このページでアプリに関する簡単な情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="51c44-147">Give a brief information about your app on this page since this would be the first time users are reading about it.</span></span> <span data-ttu-id="51c44-148">カスタム構成オプションや、タブ構成ページで一般的 [な](../tabs/how-to/authentication/auth-aad-sso.md)認証ワークフローを含めすることもできます。</span><span class="sxs-lookup"><span data-stu-id="51c44-148">You can also include custom configuration options or an [authentication workflow](../tabs/how-to/authentication/auth-aad-sso.md), which is common on tab configuration pages.</span></span>
 
-## <a name="5-customize-your-tab-name"></a><span data-ttu-id="9605e-149">5. タブ名をカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="9605e-149">5. Customize your tab name</span></span>
+## <a name="5-customize-your-tab-name"></a><span data-ttu-id="51c44-149">5. タブ名をカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="51c44-149">5. Customize your tab name</span></span>
 
-<span data-ttu-id="9605e-150">チャネル タブを追加すると、アプリ名が既定で表示されます (たとえば、 **ファースト** アプリ)。</span><span class="sxs-lookup"><span data-stu-id="9605e-150">When you add a channel tab, the app name displays by default, for example, **first-app**.</span></span> <span data-ttu-id="9605e-151">グループの共同作業のコンテキストで意味のある名前を指定できます 。たとえば、 **チーム** 連絡先:</span><span class="sxs-lookup"><span data-stu-id="9605e-151">You can also provide a name that makes more sense in the context of group collaboration, for example, **Team Contacts**:</span></span>
+<span data-ttu-id="51c44-150">チャネル タブを追加すると、アプリ名が既定で表示されます (たとえば、 **ファースト** アプリ)。</span><span class="sxs-lookup"><span data-stu-id="51c44-150">When you add a channel tab, the app name displays by default, for example, **first-app**.</span></span> <span data-ttu-id="51c44-151">グループの共同作業のコンテキストで意味のある名前を指定できます 。たとえば、 **チーム** 連絡先:</span><span class="sxs-lookup"><span data-stu-id="51c44-151">You can also provide a name that makes more sense in the context of group collaboration, for example, **Team Contacts**:</span></span>
 
-1. <span data-ttu-id="9605e-152">ディレクトリに移動 `src/components` し、ファイルを開 `TabConfig.js` きます。</span><span class="sxs-lookup"><span data-stu-id="9605e-152">Go to the `src/components` directory and open the `TabConfig.js` file.</span></span>
-1. <span data-ttu-id="9605e-153">次の例に示すように、既定で表示するタブ名を持 `suggestedDisplayName` つ `microsoftTeams.settings.setSettings` プロパティを追加します。</span><span class="sxs-lookup"><span data-stu-id="9605e-153">Add the `suggestedDisplayName` property with the tab name you want to display by default under `microsoftTeams.settings.setSettings` as shown in the following example:</span></span>
+1. <span data-ttu-id="51c44-152">ディレクトリに移動 `src/components` し、ファイルを開 `TabConfig.js` きます。</span><span class="sxs-lookup"><span data-stu-id="51c44-152">Go to the `src/components` directory and open the `TabConfig.js` file.</span></span>
+1. <span data-ttu-id="51c44-153">次の例に示すように、既定で表示するタブ名を持 `suggestedDisplayName` つ `microsoftTeams.settings.setSettings` プロパティを追加します。</span><span class="sxs-lookup"><span data-stu-id="51c44-153">Add the `suggestedDisplayName` property with the tab name you want to display by default under `microsoftTeams.settings.setSettings` as shown in the following example:</span></span>
 
   ```JavaScript
     microsoftTeams.settings.setSettings({
@@ -127,51 +127,51 @@ ms.locfileid: "52068753"
   });
   ```
 
-## <a name="6-build-and-run-your-app"></a><span data-ttu-id="9605e-154">6. アプリをビルドして実行する</span><span class="sxs-lookup"><span data-stu-id="9605e-154">6. Build and run your app</span></span>
+## <a name="6-build-and-run-your-app"></a><span data-ttu-id="51c44-154">6. アプリをビルドして実行する</span><span class="sxs-lookup"><span data-stu-id="51c44-154">6. Build and run your app</span></span>
 
-<span data-ttu-id="9605e-155">このチュートリアルでは、アプリをローカルでビルドして実行する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="9605e-155">This tutorial teaches you to build and run your app locally.</span></span> 
+<span data-ttu-id="51c44-155">このチュートリアルでは、アプリをローカルでビルドして実行する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="51c44-155">This tutorial teaches you to build and run your app locally.</span></span> 
 
-1. <span data-ttu-id="9605e-156">ターミナルのアプリ プロジェクトのルート ディレクトリに移動します。</span><span class="sxs-lookup"><span data-stu-id="9605e-156">Go to the root directory of your app project in Terminal.</span></span>
-1. <span data-ttu-id="9605e-157">`npm install` を実行します。</span><span class="sxs-lookup"><span data-stu-id="9605e-157">Run `npm install`.</span></span>
-1. <span data-ttu-id="9605e-158">`npm start` を実行します。</span><span class="sxs-lookup"><span data-stu-id="9605e-158">Run `npm start`.</span></span>
+1. <span data-ttu-id="51c44-156">ターミナルのアプリ プロジェクトのルート ディレクトリに移動します。</span><span class="sxs-lookup"><span data-stu-id="51c44-156">Go to the root directory of your app project in Terminal.</span></span>
+1. <span data-ttu-id="51c44-157">`npm install` を実行します。</span><span class="sxs-lookup"><span data-stu-id="51c44-157">Run `npm install`.</span></span>
+1. <span data-ttu-id="51c44-158">`npm start` を実行します。</span><span class="sxs-lookup"><span data-stu-id="51c44-158">Run `npm start`.</span></span>
 
-<span data-ttu-id="9605e-159">この情報は、ツールキットの `README` セクションにも表示されます。</span><span class="sxs-lookup"><span data-stu-id="9605e-159">This information is also present in the `README` section of the toolkit.</span></span>
-<span data-ttu-id="9605e-160">コンパイルが正常に完了 `https://localhost:3000` した後、 **アプリが実行されています。**</span><span class="sxs-lookup"><span data-stu-id="9605e-160">Your app is running on `https://localhost:3000` after the **Compiled successfully!**</span></span> <span data-ttu-id="9605e-161">メッセージがターミナルに表示されます。</span><span class="sxs-lookup"><span data-stu-id="9605e-161">message appears in the terminal.</span></span> 
+<span data-ttu-id="51c44-159">この情報は、ツールキットの `README` セクションにも表示されます。</span><span class="sxs-lookup"><span data-stu-id="51c44-159">This information is also present in the `README` section of the toolkit.</span></span>
+<span data-ttu-id="51c44-160">コンパイルが正常に完了 `https://localhost:3000` した後、 **アプリが実行されています。**</span><span class="sxs-lookup"><span data-stu-id="51c44-160">Your app is running on `https://localhost:3000` after the **Compiled successfully!**</span></span> <span data-ttu-id="51c44-161">メッセージがターミナルに表示されます。</span><span class="sxs-lookup"><span data-stu-id="51c44-161">message appears in the terminal.</span></span> 
 
-## <a name="7-sideload-your-app-in-teams"></a><span data-ttu-id="9605e-162">7. Teams でアプリをサイドロードする</span><span class="sxs-lookup"><span data-stu-id="9605e-162">7. Sideload your app in Teams</span></span>
+## <a name="7-sideload-your-app-in-teams"></a><span data-ttu-id="51c44-162">7. アプリをサイドロードTeams</span><span class="sxs-lookup"><span data-stu-id="51c44-162">7. Sideload your app in Teams</span></span>
 
-<span data-ttu-id="9605e-163">お使いのアプリは Teams でテストする準備ができています。</span><span class="sxs-lookup"><span data-stu-id="9605e-163">Your app is ready to test in Teams.</span></span> <span data-ttu-id="9605e-164">これを行うには、アプリのサイドローディングを許可するアカウントが必要です。</span><span class="sxs-lookup"><span data-stu-id="9605e-164">To do this, you must have an account that allows app sideloading.</span></span> 
+<span data-ttu-id="51c44-163">お使いのアプリは Teams でテストする準備ができています。</span><span class="sxs-lookup"><span data-stu-id="51c44-163">Your app is ready to test in Teams.</span></span> <span data-ttu-id="51c44-164">これを行うには、アプリのサイドローディングを許可するアカウントが必要です。</span><span class="sxs-lookup"><span data-stu-id="51c44-164">To do this, you must have an account that allows app sideloading.</span></span> 
 
-1. <span data-ttu-id="9605e-165">F5 キーを使用して、Visual Studioで Teams **Web クライアントを開** きます。</span><span class="sxs-lookup"><span data-stu-id="9605e-165">Open a Teams web client in Visual Studio Code with the **F5** key.</span></span>
-1. <span data-ttu-id="9605e-166">アプリ コンテンツを Teams に表示するには、次の手順に従って信頼できる ( `localhost` ) を追加します。</span><span class="sxs-lookup"><span data-stu-id="9605e-166">Add (`localhost`) as trustworthy by following these steps to enable your app content to display in Teams:</span></span>
+1. <span data-ttu-id="51c44-165">F5 キー Teamsを使用して、Visual Studio Code Web クライアント **を開** きます。</span><span class="sxs-lookup"><span data-stu-id="51c44-165">Open a Teams web client in Visual Studio Code with the **F5** key.</span></span>
+1. <span data-ttu-id="51c44-166">次の手順に従って信頼できる ( ) を追加し、アプリ コンテンツをアプリ コンテンツを次の手順 `localhost` で表示Teams。</span><span class="sxs-lookup"><span data-stu-id="51c44-166">Add (`localhost`) as trustworthy by following these steps to enable your app content to display in Teams:</span></span>
 
-   1. <span data-ttu-id="9605e-167">F5 キーで開いたのと同じブラウザー ウィンドウ (既定では Google Chrome) で新しいタブ **を開** きます。</span><span class="sxs-lookup"><span data-stu-id="9605e-167">Open a new tab in the same browser window (Google Chrome by default) which opened with the **F5** key.</span></span>
-   1. <span data-ttu-id="9605e-168">ページ `https://localhost:3000/tab` を開いて続行します。</span><span class="sxs-lookup"><span data-stu-id="9605e-168">Open `https://localhost:3000/tab` and proceed to the page.</span></span>
+   1. <span data-ttu-id="51c44-167">F5 キーで開いたのと同じブラウザー ウィンドウ (既定では Google Chrome) で新しいタブ **を開** きます。</span><span class="sxs-lookup"><span data-stu-id="51c44-167">Open a new tab in the same browser window (Google Chrome by default) which opened with the **F5** key.</span></span>
+   1. <span data-ttu-id="51c44-168">ページ `https://localhost:3000/tab` を開いて続行します。</span><span class="sxs-lookup"><span data-stu-id="51c44-168">Open `https://localhost:3000/tab` and proceed to the page.</span></span>
 
-1. <span data-ttu-id="9605e-169">[ **チームに追加] または** **[チャットに追加]** を選択し、Teams のモーダルからテストに使用できるチャネルまたはチャットを探します。</span><span class="sxs-lookup"><span data-stu-id="9605e-169">Select **Add to a team** or **Add to a chat** and locate a channel or chat you can use for testing from the modal in Teams.</span></span>
-1. <span data-ttu-id="9605e-170">[タブ **の設定] を選択します**。構成ページはモーダルで表示されます。</span><span class="sxs-lookup"><span data-stu-id="9605e-170">Select **Set up a tab**. The configuration page displays in a modal.</span></span>
+1. <span data-ttu-id="51c44-169">[**チームに追加] または**[チャット **に** 追加] を選択し、チャットのモーダルからテストに使用できるチャネルまたはチャットTeams。</span><span class="sxs-lookup"><span data-stu-id="51c44-169">Select **Add to a team** or **Add to a chat** and locate a channel or chat you can use for testing from the modal in Teams.</span></span>
+1. <span data-ttu-id="51c44-170">[タブ **の設定] を選択します**。構成ページはモーダルで表示されます。</span><span class="sxs-lookup"><span data-stu-id="51c44-170">Select **Set up a tab**. The configuration page displays in a modal.</span></span>
 
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="チャネル タブ構成ページのスクリーンショット。":::
 
-1. <span data-ttu-id="9605e-172">[保存 **] を** 選択してタブを構成します。次のコンテンツ ページが表示されます。</span><span class="sxs-lookup"><span data-stu-id="9605e-172">Select **Save** to configure the tab. The following content page appears:</span></span>
+1. <span data-ttu-id="51c44-172">[保存 **] を** 選択してタブを構成します。次のコンテンツ ページが表示されます。</span><span class="sxs-lookup"><span data-stu-id="51c44-172">Select **Save** to configure the tab. The following content page appears:</span></span>
 
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="静的コンテンツ ビューを含むチャネル タブのスクリーンショット。":::
 
-## <a name="see-also"></a><span data-ttu-id="9605e-174">関連項目</span><span class="sxs-lookup"><span data-stu-id="9605e-174">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="51c44-174">関連項目</span><span class="sxs-lookup"><span data-stu-id="51c44-174">See also</span></span>
 
-* [<span data-ttu-id="9605e-175">最初の Microsoft Teams アプリを構築して実行する</span><span class="sxs-lookup"><span data-stu-id="9605e-175">Build and run your first Microsoft Teams app</span></span>](../build-your-first-app/build-and-run.md) 
-* [<span data-ttu-id="9605e-176">Teams JavaScript client SDK</span><span class="sxs-lookup"><span data-stu-id="9605e-176">Teams JavaScript client SDK</span></span>](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
-* [<span data-ttu-id="9605e-177">Microsoft Teams デスクトップと Web 用のタブの設計</span><span class="sxs-lookup"><span data-stu-id="9605e-177">Designing your tab for Microsoft Teams desktop and web</span></span>](../tabs/design/tabs.md) 
-* [<span data-ttu-id="9605e-178">UI テンプレートを使用した Microsoft Teams アプリの設計</span><span class="sxs-lookup"><span data-stu-id="9605e-178">Designing your Microsoft Teams app with UI templates</span></span>](../concepts/design/design-teams-app-ui-templates.md) 
-* [<span data-ttu-id="9605e-179">モバイルのタブ</span><span class="sxs-lookup"><span data-stu-id="9605e-179">Tabs on mobile</span></span>](../tabs/design/tabs-mobile.md)
-* [<span data-ttu-id="9605e-180">タブのシングル サインオン (SSO) のサポート</span><span class="sxs-lookup"><span data-stu-id="9605e-180">Single sign-on (SSO) support for tabs</span></span>](../tabs/how-to/authentication/auth-aad-sso.md)
-* [<span data-ttu-id="9605e-181">Microsoft Teams API の概要</span><span class="sxs-lookup"><span data-stu-id="9605e-181">Microsoft Teams API overview</span></span>](https://docs.microsoft.com/graph/teams-concept-overview)
-* [<span data-ttu-id="9605e-182">Microsoft Teams 用のユーザー設定Node.js Yeoman Generator を使用してカスタム個人用タブを作成する</span><span class="sxs-lookup"><span data-stu-id="9605e-182">Create a custom personal tab with Node.js and the Yeoman Generator for Microsoft Teams</span></span>](../tabs/quickstarts/create-personal-tab-node-yeoman.md)
+* [<span data-ttu-id="51c44-175">最初の Microsoft Teams アプリを構築して実行する</span><span class="sxs-lookup"><span data-stu-id="51c44-175">Build and run your first Microsoft Teams app</span></span>](../build-your-first-app/build-and-run.md) 
+* [<span data-ttu-id="51c44-176">Teams JavaScript client SDK</span><span class="sxs-lookup"><span data-stu-id="51c44-176">Teams JavaScript client SDK</span></span>](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
+* [<span data-ttu-id="51c44-177">デスクトップと Web のタブMicrosoft Teamsデザインする</span><span class="sxs-lookup"><span data-stu-id="51c44-177">Designing your tab for Microsoft Teams desktop and web</span></span>](../tabs/design/tabs.md) 
+* [<span data-ttu-id="51c44-178">UI テンプレートをMicrosoft Teamsアプリを設計する</span><span class="sxs-lookup"><span data-stu-id="51c44-178">Designing your Microsoft Teams app with UI templates</span></span>](../concepts/design/design-teams-app-ui-templates.md) 
+* [<span data-ttu-id="51c44-179">モバイルのタブ</span><span class="sxs-lookup"><span data-stu-id="51c44-179">Tabs on mobile</span></span>](../tabs/design/tabs-mobile.md)
+* [<span data-ttu-id="51c44-180">タブのシングル サインオン (SSO) のサポート</span><span class="sxs-lookup"><span data-stu-id="51c44-180">Single sign-on (SSO) support for tabs</span></span>](../tabs/how-to/authentication/auth-aad-sso.md)
+* [<span data-ttu-id="51c44-181">Microsoft Teams API の概要</span><span class="sxs-lookup"><span data-stu-id="51c44-181">Microsoft Teams API overview</span></span>](https://docs.microsoft.com/graph/teams-concept-overview)
+* [<span data-ttu-id="51c44-182">カスタム個人用タブを作成し、Node.jsの Yeoman Generator を使用Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="51c44-182">Create a custom personal tab with Node.js and the Yeoman Generator for Microsoft Teams</span></span>](../tabs/quickstarts/create-personal-tab-node-yeoman.md)
 
-## <a name="next-step"></a><span data-ttu-id="9605e-183">次の手順</span><span class="sxs-lookup"><span data-stu-id="9605e-183">Next step</span></span>
-
-> [!div class="nextstepaction"]
-> [<span data-ttu-id="9605e-184">Bot を作成する</span><span class="sxs-lookup"><span data-stu-id="9605e-184">Build a bot</span></span>](../build-your-first-app/build-bot.md)
+## <a name="next-step"></a><span data-ttu-id="51c44-183">次の手順</span><span class="sxs-lookup"><span data-stu-id="51c44-183">Next step</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="9605e-185">メッセージングの拡張機能を作成する</span><span class="sxs-lookup"><span data-stu-id="9605e-185">Build a messaging extension</span></span>](../build-your-first-app/build-messaging-extension.md)
+> [<span data-ttu-id="51c44-184">Bot を作成する</span><span class="sxs-lookup"><span data-stu-id="51c44-184">Build a bot</span></span>](../build-your-first-app/build-bot.md)
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="51c44-185">メッセージングの拡張機能を作成する</span><span class="sxs-lookup"><span data-stu-id="51c44-185">Build a messaging extension</span></span>](../build-your-first-app/build-messaging-extension.md)
