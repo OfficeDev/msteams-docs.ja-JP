@@ -1,7 +1,7 @@
 ---
 title: メディア機能を統合する
 author: Rajeshwari-v
-description: Teams JavaScript クライアント SDK を使用してメディア機能を有効にする方法
+description: JavaScript クライアント SDK Teamsメディア機能を有効にする方法
 keywords: カメラ イメージ マイク機能ネイティブ デバイスのアクセス許可メディア
 ms.topic: conceptual
 localization_priority: Normal
@@ -15,25 +15,25 @@ ms.locfileid: "52058363"
 ---
 # <a name="integrate-media-capabilities"></a>メディア機能を統合する 
 
-このドキュメントでは、メディア機能を統合する方法について説明します。 この統合は、カメラやマイクなどのネイティブ デバイス機能と Teams **プラットフォームを** 組み合わせたものになります。  
+このドキュメントでは、メディア機能を統合する方法について説明します。 この統合により、カメラやマイクなどのネイティブ デバイス機能と、新しいプラットフォームTeamsされます。  
 
-アプリが [ユーザーのデバイスの](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)アクセス許可にアクセスするために必要なツールを提供する Microsoft Teams JavaScript クライアント SDK を [使用できます](native-device-permissions.md)。 適切なメディア機能 API を使用して、カメラやマイクなどのネイティブデバイス機能を Microsoft Teams モバイル アプリ内の Teams プラットフォームに統合し、より豊富なエクスペリエンスを構築します。 
+ユーザーのデバイス[Microsoft Teamsアクセス](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)するためにアプリに必要なツールを提供する JavaScript クライアント SDK を使用[できます](native-device-permissions.md)。 適切なメディア機能 API を使用して、カメラやマイクなどのネイティブデバイス機能を Microsoft Teams モバイル アプリ内の Teams プラットフォームに統合し、より豊富なエクスペリエンスを構築します。 
 
 ## <a name="advantage-of-integrating-media-capabilities"></a>メディア機能を統合する利点
 
-Teams アプリにデバイス機能を統合する主な利点は、ネイティブの Teams コントロールを活用して、ユーザーに豊富で没入感のあるエクスペリエンスを提供する方法です。
+Teams アプリにデバイス機能を統合する主な利点は、ネイティブ Teams コントロールを活用して、ユーザーに豊富で没入感のあるエクスペリエンスを提供する方法です。
 メディア機能を統合するには、アプリ マニフェスト ファイルを更新し、メディア機能 API を呼び出す必要があります。 
 
 効果的な統合を行う場合は、それぞれの[](#code-snippets)API を呼び出すコード スニペットについて理解している必要があります。ネイティブ メディア機能を使用できます。
 
-Teams アプリのエラーを処理するには [、API](#error-handling) 応答エラーについて理解することが重要です。
+API 応答エラーを理解して、アプリ[](#error-handling)内のエラーを処理することがTeamsです。
 
 > [!NOTE] 
-> 現在、メディア機能に対する Microsoft Teams のサポートは、モバイル クライアントでのみ使用できます。
+> 現在、Microsoft Teams機能のサポートはモバイル クライアントでのみ利用できます。
 
 ## <a name="update-manifest"></a>マニフェストの更新
 
-プロパティを追加し [ 、manifest.jsして](../../resources/schema/manifest-schema.md#devicepermissions) Teams アプリを更新 `devicePermissions` します `media` 。 これにより、ユーザーがカメラを使用して画像をキャプチャし始める前、ギャラリーを開いて添付ファイルとして送信する画像を選択するか、マイクを使用して会話を録音する前に、ユーザーに必要なアクセス許可を求めできます。
+プロパティを追加Teamsを[manifest.jsして](../../resources/schema/manifest-schema.md#devicepermissions)、ファイル上のアプリ `devicePermissions` のアプリを更新します `media` 。 これにより、ユーザーがカメラを使用して画像をキャプチャし始める前、ギャラリーを開いて添付ファイルとして送信する画像を選択するか、マイクを使用して会話を録音する前に、ユーザーに必要なアクセス許可を求めできます。
 
 ``` json
 "devicePermissions": [
@@ -42,7 +42,7 @@ Teams アプリのエラーを処理するには [、API](#error-handling) 応�
 ```
 
 > [!NOTE]
-> 関連 **する Teams** API が開始されると、[アクセス許可の要求] プロンプトが自動的に表示されます。 詳細については、「デバイスのアクセス許可 [を要求する」を参照してください](native-device-permissions.md)。
+> 要求 **のアクセス許可のプロンプト** は、関連する API が開始されるとTeams表示されます。 詳細については、「デバイスのアクセス許可 [を要求する」を参照してください](native-device-permissions.md)。
 
 ## <a name="media-capability-apis"></a>メディア機能 API
 
@@ -57,7 +57,7 @@ Teams アプリのエラーを処理するには [、API](#error-handling) 応�
   * カメラを介してドキュメント、ホワイトボード、名刺をスキャンします。
   
 > [!IMPORTANT]
-> * 、および API は、タスク モジュール、タブ、個人用アプリなど、複数の Teams サーフェス `selectMedia` `getMedia` `viewImages` から呼び出すことができます。 詳細については [、「Teams アプリのエントリ ポイント」を参照してください](../extensibility-points.md)。
+> * タスク モジュール、タブ、個人用アプリなど、Teams、API を複数のサーフェス `selectMedia` `getMedia` `viewImages` から呼び出すことができます。 詳細については、「アプリの[エントリ ポイント」をTeamsしてください](../extensibility-points.md)。
 > * `selectMedia` マイクとオーディオのプロパティをサポートするために API が拡張されました。
 
 デバイスのメディア機能を有効にするには、次の API セットを使用する必要があります。
@@ -71,14 +71,14 @@ Teams アプリのエラーを処理するには [、API](#error-handling) 応�
 
 
 **画像機能用の selectMedia API の Web アプリ エクスペリエンス** 
- ![Teams でのデバイス カメラとイメージのエクスペリエンス](../../assets/images/tabs/image-capability.png)
+ ![デバイス カメラとイメージ エクスペリエンス (Teams](../../assets/images/tabs/image-capability.png)
 
 **selectMedia API 用の Web アプリ エクスペリエンス (マイク機能用)** 
  ![マイク機能用の Web アプリ エクスペリエンス](../../assets/images/tabs/microphone-capability.png)
 
 ## <a name="error-handling"></a>エラー処理
 
-Teams アプリでこれらのエラーを適切に処理する必要があります。 次の表に、エラー コードとエラーが生成される条件を示します。 
+これらのエラーは、アプリで適切に処理Teamsがあります。 次の表に、エラー コードとエラーが生成される条件を示します。 
 
 
 |エラー コード |  エラー名     | 条件|
@@ -257,6 +257,6 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 
 ## <a name="see-also"></a>関連項目
 
-- [Teams に QR またはバーコード スキャナー機能を統合する](qr-barcode-scanner-capability.md)
+- [QR スキャナーまたはバーコード スキャナー機能をアプリに統合Teams](qr-barcode-scanner-capability.md)
 
-- [Teams での場所機能の統合](location-capability.md)
+- [場所の機能を統合Teams](location-capability.md)

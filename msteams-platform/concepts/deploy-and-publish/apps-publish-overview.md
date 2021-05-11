@@ -40,7 +40,7 @@ ms.locfileid: "52230912"
 
 詳細については、「publish [to the Teams」を参照してください](~/concepts/deploy-and-publish/appsource/publish.md)。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 * [Microsoft 365 アプリ コンプライアンス プログラム](/microsoft-365-app-certification/overview)
 

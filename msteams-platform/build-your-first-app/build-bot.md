@@ -1,7 +1,7 @@
 ---
 title: '[スタート] - ボットを作成する'
 author: girliemac
-description: Microsoft Teams ボットを使用して Microsoft Teams ボットをすばやく作成Toolkit。
+description: アプリを使用してMicrosoft Teamsボットをすばやく作成Microsoft Teams Toolkit。
 ms.author: timura
 ms.date: 04/14/2020
 ms.topic: tutorial
@@ -12,59 +12,59 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2021
 ms.locfileid: "52068631"
 ---
-# <a name="create-your-first-bot-for-teams"></a>Teams 用の最初のボットを作成する
+# <a name="create-your-first-bot-for-teams"></a>ユーザーの最初のボットを作成Teams
 
-このチュートリアルでは、基本的なボット アプリを構築する方法について説明します。 ボットは、Teams ユーザーと会話型インターフェイスを使用した Web アプリまたはサービス間の仲介として機能します。 ユーザーはボットとチャットして、情報をすばやく取得したり、サービスによって実行されるワークフローやタスクを開始できます。
+このチュートリアルでは、基本的なボット アプリを構築する方法について説明します。 ボットは、会話型インターフェイスを使用Teamsユーザーと Web アプリまたはサービスの間の仲介者として機能します。 ユーザーはボットとチャットして、情報をすばやく取得したり、サービスによって実行されるワークフローやタスクを開始できます。
 
 ## <a name="what-youll-learn"></a>学習する情報
 
-* Microsoft Teams を使用してアプリ プロジェクトとボットを作成し、ToolkitコードVisual Studioします。
-* ボットに関連する Teams アプリの構成について理解します。
+* アプリ プロジェクトとボットを作成するには、アプリ のMicrosoft Teams ToolkitをVisual Studio Code。
+* ボットにTeamsするアプリ構成の説明について説明します。
 * ローカル ホスト トンネリング ソリューションを使用してアプリをローカルでホストして実行します。
-* Teams でボットをサイドロードしてテストします。
+* アプリでボットをサイドロードしてテストTeams。
 
 ## <a name="prerequisites"></a>前提条件
 
-簡単な Teams アプリをセットアップしてビルドする方法を理解してください。 詳細については、「Hello, World!」アプリの最初の Microsoft Teams の作成 [に関するページをご覧ください](../build-your-first-app/build-and-run.md)。 
+簡単なアプリをセットアップしてビルドする方法を理解Teamsしてください。 詳細については[、「Hello, World!」アプリMicrosoft Teamsを作成するを参照してください](../build-your-first-app/build-and-run.md)。 
 
 ## <a name="1-create-your-app-project"></a>1. アプリ プロジェクトを作成する
 
-Microsoft Teams Toolkitは、アプリの次のコンポーネントをセットアップするのに役立ちます。 
+このMicrosoft Teams Toolkitは、アプリに対して次のコンポーネントをセットアップするのに役立ちます。 
 
 * **ボットに関連するアプリの構成** とスキャフォールディング
-*  Microsoft Azure Bot Service に自動的に登録されるボット
+* **ボット** サービスに自動的に登録Microsoft Azureボット
 
 **アプリ プロジェクトを作成するには**
 
 1. Visual Studio Code で、左側の [アクティビティ バー] で [**Microsoft Teams**] :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: を選択し、[**新しい Teams アプリを作成する**] を選択します。
 
-    :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-01.png" alt-text="Teams アプリケーションでアプリを作成する方法を示すスクリーンショットToolkit。":::
+    :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-01.png" alt-text="アプリをアプリで作成する方法を示すTeams Toolkit。":::
 
 1. メッセージが表示されたら、Microsoft 365 開発アカウントを使用してサインインします。 
 1. [プロジェクトの選択] 画面で、[会話ボット] を選択します。 
 
-    :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-02.png" alt-text="Teams サーバーで新しいボットを作成する方法を示すスクリーンショットToolkit。":::
+    :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-02.png" alt-text="新しいボットを作成する方法を示すスクリーンショットをTeams Toolkit。":::
 
 1. [プロジェクトの **構成] 画面** で、ボットの名前を入力します。 これは、アプリの既定の名前であり、ローカル コンピューター上のアプリ プロジェクト ディレクトリの名前です。
 1. 次 **の図に示すように、[ボット**  >  **登録の** 作成] を選択します。
 
-    :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-03.png" alt-text="Teams アプリケーションで新しいボットに名前を付けるToolkit。":::
+    :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-03.png" alt-text="新しいボットに名前を付ける方法を示すスクリーンショットをTeams Toolkit。":::
 
-    成功した場合、新しいボットの状態は **[** 登録済み] になります。 これで、ボットが Microsoft Azure Bot Service に自動的に登録されます。 
+    成功した場合、新しいボットの状態は **[** 登録済み] になります。 これで、ボットは自動的にボット サービスMicrosoft Azure登録されます。 
 
-    :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-04.png" alt-text="Teams サーバーに新しいボットを登録するToolkit。":::
+    :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-04.png" alt-text="新しいボットの登録を示すスクリーンショットをTeams Toolkit。":::
 
 1. 画面 **の下部** にある [完了] を選択し、プロジェクトをコンピューターに保存します。  
 
 ## <a name="2-understand-your-app-project-components"></a>2. アプリ プロジェクト コンポーネントについて
 
-Teams を使用してプロジェクトを作成すると、アプリの構成とスキャフォールディングの多くが自動的にToolkit。 ボットを構築する主なコンポーネントを見てみ取る:
+アプリの構成とスキャフォールディングの多くが、プロジェクトを作成するときに自動的に設定Teams Toolkit。 ボットを構築する主なコンポーネントを見てみ取る:
 
-:::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-05.png" alt-text="Teams のプロジェクト スキャフォールディングを示すスクリーンショットToolkit。":::
+:::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-05.png" alt-text="プロジェクトのスキャフォールディングを示すスクリーンショットをTeams Toolkit。":::
 
-別のチュートリアルでタブを作成した場合、ボットのアプリスキャフォールディングは異なります。 タブとは異なり、ボットの開発では、フロントエンド Web コンポーネントをビルドしたり、Teams JavaScript クライアント SDK を使用する必要は一切ない。  代わりに、スキャフォールディングは [Microsoft Bot Framework](https://dev.botframework.com/)を使用します。これは、Web、モバイル、およびもちろん Teams で動作するインテリジェントなエンタープライズ レベルのボットを構築するオープンソース SDK です。 
+別のチュートリアルでタブを作成した場合、ボットのアプリスキャフォールディングは異なります。 タブとは異なり、ボットの開発では、フロントエンド Web コンポーネントをビルドしたり、JavaScript クライアント SDK のTeams必要としたりすることはできません。  代わりに、スキャフォールディングは[Microsoft Bot Framework](https://dev.botframework.com/)を使用します。これは、Web、モバイル、およびもちろんモバイルで動作するインテリジェントなエンタープライズ レベルのボットを構築するオープンソース SDK Teams です。 
 
-プロジェクトのルート ディレクトリにあるファイルは、ボットが特定のメッセージに応答する方法など、ボットアクティビティを処理する Teams 固有の `botActivityHandler.js` ハンドラーです。 アプリのスキャフォールディングは、プロジェクトのルート ディレクトリにあるファイルを提供し、ボットが特定のメッセージに応答する方法などのボット アクティビティを処理する Teams 固有のハンドラー `botActivityHandler.js` です。
+プロジェクトのルート ディレクトリにあるファイルは、ボットが特定のメッセージに応答する方法など、ボットアクティビティを処理する Teams 固有のハンドラー `botActivityHandler.js` です。 アプリのスキャフォールディングは、プロジェクトのルート ディレクトリにあるファイルを提供し、ボットが特定のメッセージに応答する方法などのボット アクティビティを処理する Teams 固有のハンドラー `botActivityHandler.js` です。
 
 ## <a name="3-securely-expose-your-localhost-to-the-internet"></a>3. localhost をインターネットに安全に公開する
 
@@ -88,7 +88,7 @@ server.post('/api/messages', (req, res) => {
 
 1.  セットアップが完了したら、ターミナルを開いて実行します `ngrok http -host-header=rewrite 3978` 。 
 
-    次に、ngrok はポート 3978 でローカル ホストに転送するパブリックで安全な URL を提供します。Teams では HTTPS 接続が必要なので、次のスクリーンショットに示すように HTTPS URL をコピーします `https://287a4f4223bc.ngrok.io` 。 
+    ngrok は、ポート 3978 でローカル ホストに転送するパブリックで安全な URL を提供します。そのため、次のスクリーンショットに示すように、https URL をコピーします。Teams では HTTPS 接続が必要です `https://287a4f4223bc.ngrok.io` 。 
 
     :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-ngrok-06.png" alt-text="ngrok を使用した localhost のトンネリングを示すスクリーンショット。":::
 
@@ -96,17 +96,17 @@ server.post('/api/messages', (req, res) => {
 
 ## <a name="4-register-your-bot-endpoint"></a>4. ボット エンドポイントを登録する
 
-Teams でボットを使用するには、Azure Bot Service にボットを登録する必要があります。 これは、Teams アプリケーションを使用してアプリをセットアップするときに自動的にToolkit。
+ボットを使用するには、Teams Azure Bot Service に登録する必要があります。 これは、アプリを使用してアプリをセットアップするときに自動的にTeams Toolkit。
 
 引き続き、ボットに送信されるユーザー メッセージ (要求) を受信および処理するエンドポイント アドレスを指定する必要があります。 通常、URL は次のように表示されます `https://HOST_URL/api/messages` 。 この設定はツールキットですばやく構成できます。
 
-1. [Visual Studioコード] で **、[Microsoft Teams] を開Toolkit。**
+1. [Visual Studio Code]**を開** Microsoft Teams Toolkit。
 1. [**ボット]**  >  **[既存のボット登録] を選択し**、セットアップ時に作成したボットを選択します。 
 1. [ **ボット エンドポイント アドレス** ] フィールドに、ボットをホストしている ngrok URL を入力し、その URL `https://287a4f4223bc.ngrok.io` に `/api/messages` 追加します。
 
     :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-07.png" alt-text="ngrok を使用して localhost をトンネリングする方法を示すスクリーンショット。":::
 
-    エンドポイントを正しくセットアップした後、ボットは Teams のメッセージに応答できます。 
+    エンドポイントを正しく設定した後、ボットは Teamsメッセージに応答できます。 
 
 ## <a name="5-build-and-run-your-app"></a>5. アプリをビルドして実行する
 
@@ -119,14 +119,14 @@ Teams でボットを使用するには、Azure Bot Service にボットを登�
 
    `Bot/ME service listening at http://localhost:3978`
 
-## <a name="6-sideload-your-bot-in-teams"></a>6. Teams でボットをサイドロードする
+## <a name="6-sideload-your-bot-in-teams"></a>6. ボットをサイドロードTeams
 
-ボットを実行すると、Teams にインストールできます。
+ボットを実行している場合は、ボットをインストールTeams。
 
 > [!TIP]
-> 以前に Teams アプリをサイドロードし、問題が発生していない場合は、次の手順に [従います](../build-your-first-app/build-and-run.md#4-sideload-your-app-in-teams)。
+> 以前にアプリをサイドロードTeams問題が発生していない場合は、次の手順に[従います](../build-your-first-app/build-and-run.md#4-sideload-your-app-in-teams)。
 
-1. [Visual Studioコード] で **、F5** キーを選択して Teams Web クライアントを起動します。
+1. [Visual Studio Code **F5** キーを選択して、Web クライアントTeams起動します。
 1. [アプリのインストール] ダイアログで、[追加] **を選択します**。 
 
    > [!Note]
@@ -141,30 +141,30 @@ Teams でボットを使用するには、Azure Bot Service にボットを登�
 * 作成ボックスで、メッセージを送信 `Hello` します。
     ボットは次のようなメッセージで返信します。
 
-    :::image type="content" source="../assets/images/build-your-first-app/teams-client-bot.png" alt-text="ユーザーが Teams ボットに 「Hello」 と答え、応答を取得するスクリーンショット。":::
+    :::image type="content" source="../assets/images/build-your-first-app/teams-client-bot.png" alt-text="ユーザーがボットに 「Hello」 と答え、応答Teams示すスクリーンショット。":::
 
-    これで、ユーザーと 1 対 1 またはグループ設定 (チャネルとチャット) で通信できる基本的な Teams ボットを作成🎉
+    これで、ユーザーと 1 対 1 またはグループ設定 (チャネルとチャット) でユーザーと通信できる基本的な Teams ボットを作成しました🎉
 
 ## <a name="troubleshoot-your-bot"></a>ボットのトラブルシューティング
 
 このチュートリアルの完了に問題がある場合は、次の情報が役立つ場合があります。
 
-### <a name="bot-isnt-connected-to-teams"></a>ボットが Teams に接続されていない
+### <a name="bot-isnt-connected-to-teams"></a>ボットがデバイスに接続Teams
 
 
-アプリをインストールしたがボットが機能しない場合は、ボットが Azure Bot Service の Teams チャネルに接続 [されていることを確認 *します*](https://docs.microsoft.com/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true)。
+アプリをインストールしたがボットが機能しない場合は、ボットが Azure Bot Service のサービス チャネルに接続されていることを [Teams *してください*](https://docs.microsoft.com/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true)。
 
-これは Teams のチャネルと同じではないと理解することが重要です。 この場合、チャネルとは、Azure Bot Service がボットを Teams または別のサポートされている Microsoft またはサード パーティの通信アプリに接続 [する方法です](https://docs.microsoft.com/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0&preserve-view=true)。
+これは、チャネルと同じではないと理解することが重要Teams。 この場合、チャネルとは、Azure Bot Service がボットを他の microsoft またはサード パーティの通信アプリTeamsに接続する[方法です](https://docs.microsoft.com/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0&preserve-view=true)。
 
 ## <a name="see-also"></a>関連項目
 
 * [ボットの基本](../bots/bot-basics.md)
-* [Microsoft Teams の個人用タブを作成する](../build-your-first-app/build-personal-tab.md)
-* [Teams ボットがサンプルの 1 つで実行できるその他の操作を参照する](https://github.com/microsoft/BotBuilder-Samples#teams-samples)
+* [ユーザーの個人用タブを作成Microsoft Teams](../build-your-first-app/build-personal-tab.md)
+* [1 つのサンプルTeamsボットが実行できる他の操作を参照する](https://github.com/microsoft/BotBuilder-Samples#teams-samples)
 * [ボット会話の基本](../bots/how-to/conversations/conversation-basics.md)
 * [デザインのガイドライン](../bots/design/bots.md) 
 * [実稼働対応の UI テンプレート](../concepts/design/design-teams-app-ui-templates.md)
-* [Teams でのボット認証](../bots/how-to/authentication/auth-flow-bot.md)
+* [ボット認証 (Teams](../bots/how-to/authentication/auth-flow-bot.md)
 * [Microsoft Bot Framework](https://dev.botframework.com/)
 * [ツールキットなしでボットを作成する](../resources/bot-v3/bots-create.md)
 

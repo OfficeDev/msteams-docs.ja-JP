@@ -1,5 +1,5 @@
 ---
-title: アダプティブ カードのユニバーサル アクションを操作する
+title: アダプティブ カードのユニバーサル アクションの操作
 description: アダプティブ カードのユニバーサル アクションを操作します。
 ms.topic: conceptual
 localization_priority: Normal
@@ -10,7 +10,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/29/2021
 ms.locfileid: "52088873"
 ---
-# <a name="work-with-universal-actions-for-adaptive-cards"></a>アダプティブ カードのユニバーサル アクションを操作する
+# <a name="work-with-universal-actions-for-adaptive-cards"></a>アダプティブ カードのユニバーサル アクションの操作
 
 アダプティブ カードのユニバーサル アクションは、アダプティブ カード ベースのシナリオを、アダプティブ カードとアダプティブ カードの両方Teams実装Outlook。 このドキュメントでは、次の内容について説明します。
 

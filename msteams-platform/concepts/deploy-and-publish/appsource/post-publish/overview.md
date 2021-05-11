@@ -56,6 +56,6 @@ Microsoft は、アプリ ストアに一覧表示されているアプリで毎
 
 [Microsoft 365認定は](/microsoft-365-app-certification/docs/certification)、サード パーティ製の Office アプリ またはアドインが Microsoft 365 エコシステムにインストールされている場合に、データとプライバシーが適切に保護され、保護されていることを保証します。 認定は、アプリが Microsoft テクノロジと互換性があり、クラウド アプリのセキュリティのベスト プラクティスに準拠しており、Microsoft によってサポートされていないことを確認します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 [Microsoft Commercial Marketplace を通してアプリを収益化する](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)

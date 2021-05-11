@@ -62,7 +62,7 @@ ms.locfileid: "52101731"
 
 ## <a name="examples"></a>例
 
-### <a name="list"></a>一覧表示
+### <a name="list"></a>List
 
 リストはスキャンが簡単なので、タスク モジュールでうまく機能します。
 

@@ -25,7 +25,7 @@ ms.locfileid: "52101570"
 * [カスタム アプリのアップロードを有効](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading)にするには、Teams。
 * アプリが実行され、HTTP 経由でアクセス可能な状態にしてください。
 
-## <a name="upload-your-app"></a>アップロードアプリのインストール
+## <a name="upload-your-app"></a>アプリをアップロードする
 
 アプリのスコープの構成方法に応じて、チーム、チャット、会議、または個人用にアプリをサイドロードできます。
 

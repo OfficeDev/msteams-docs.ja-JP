@@ -1,6 +1,6 @@
 ---
 title: ボットの会話内のメッセージ
-description: Microsoft Teams ボットと会話する方法について説明します。
+description: ボットと会話する方法Microsoft Teamsします。
 ms.topic: overview
 ms.author: anclear
 localization_priority: Normal
@@ -14,15 +14,15 @@ ms.locfileid: "52058601"
 ---
 # <a name="messages-in-bot-conversations"></a>ボットの会話内のメッセージ
 
-会話内の各メッセージは、 `Activity` 型のオブジェクトです `messageType: message` 。 ユーザーがメッセージを送信すると、Teams はボットにメッセージを投稿します。 Teams は JSON オブジェクトをボットのメッセージング エンドポイントに送信します。 ボットはメッセージを調べて、その種類を特定し、それに応じて応答します。
+会話内の各メッセージは、 `Activity` 型のオブジェクトです `messageType: message` 。 ユーザーがメッセージを送信すると、Teamsボットにメッセージが投稿されます。 Teamsボットのメッセージング エンドポイントに JSON オブジェクトを送信します。 ボットはメッセージを調べて、その種類を特定し、それに応じて応答します。
 
-基本的な会話は、単一の REST API である Bot Framework コネクタを介して処理されます。 この API を使用すると、ボットは Teams や他のチャネルと通信できます。 ボット ビルダー SDK には、次の機能があります。
+基本的な会話は、単一の REST API である Bot Framework コネクタを介して処理されます。 この API を使用すると、ボットは他のチャネルTeams通信できます。 ボット ビルダー SDK には、次の機能があります。
 
 * Bot Framework コネクタに簡単にアクセスできます。
 * 会話のフローと状態を管理するための追加機能。
 * 自然言語処理 (NLP) などの認知サービスを組み込む簡単な方法。
 
-ボットは、このプロパティを使用して Teams からメッセージを受信し、ユーザーに単一または複数 `Text` のメッセージ応答を送信します。
+ボットはプロパティを使用Teamsメッセージを受信し、ユーザーに単一または複数のメッセージ `Text` 応答を送信します。
 
 ## <a name="receive-a-message"></a>メッセージを受信する
 
@@ -203,20 +203,20 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> メッセージの分割は、テキスト メッセージと添付ファイルが同じアクティビティ ペイロードで送信される場合に発生します。 このアクティビティは、Microsoft Teams によって個別のアクティビティに分割され、1 つはテキスト メッセージだけで、もう 1 つは添付ファイルで構成されます。 アクティビティが分割されている間、メッセージ ID は応答で受信されません。これは、メッセージを事前に更新または [削除するために使用](~/bots/how-to/update-and-delete-bot-messages.md) されます。 メッセージの分割に応じてではなく、個別のアクティビティを送信する方法をお勧めします。
+> メッセージの分割は、テキスト メッセージと添付ファイルが同じアクティビティ ペイロードで送信される場合に発生します。 このアクティビティは、テキスト メッセージMicrosoft Teams添付ファイルを持つ別のアクティビティに分割されます。 アクティビティが分割されている間、メッセージ ID は応答で受信されません。これは、メッセージを事前に更新または [削除するために使用](~/bots/how-to/update-and-delete-bot-messages.md) されます。 メッセージの分割に応じてではなく、個別のアクティビティを送信する方法をお勧めします。
 
 ユーザーとボットの間で送信されるメッセージには、メッセージ内の内部チャネル データが含まれます。 このデータを使用すると、ボットはチャネルで適切に通信できます。 ボット ビルダー SDK を使用すると、メッセージ構造を変更できます。
 
-## <a name="teams-channel-data"></a>Teams チャネル データ
+## <a name="teams-channel-data"></a>Teamsチャネル データ
 
-オブジェクト `channelData` には Teams 固有の情報が含まれているので、チームとチャネルの ID の決定的なソースです。 必要に応じて、これらの ID をローカル ストレージのキーとしてキャッシュして使用できます。 `TeamsActivityHandler`SDK では、オブジェクトから重要な情報を取り出して、簡単 `channelData` にアクセスできます。 ただし、オブジェクトから元のデータにいつでもアクセス `turnContext` できます。
+この `channelData` オブジェクトには、Teams固有の情報が含まれているので、チームとチャネルの ID の決定的なソースです。 必要に応じて、これらの ID をローカル ストレージのキーとしてキャッシュして使用できます。 `TeamsActivityHandler`SDK では、オブジェクトから重要な情報を取り出して、簡単 `channelData` にアクセスできます。 ただし、オブジェクトから元のデータにいつでもアクセス `turnContext` できます。
 
 オブジェクトは、チャネルの外部で行なうので、個人的な会話の `channelData` メッセージには含まれません。
 
 ボットに `channelData` 送信されるアクティビティの一般的なオブジェクトには、次の情報が含まれます。
 
-* `eventType`: チャネル変更イベントの場合にのみ渡される Teams イベント [の種類](~/bots/how-to/conversations/subscribe-to-conversation-events.md)です。
-* `tenant.id`: すべてのコンテキストで渡された Azure Active Directory テナント ID。
+* `eventType`: Teams変更イベントの場合にのみ渡されるイベント[の種類を指定します](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。
+* `tenant.id`: Azure Active Directoryで渡されるテナント ID を指定します。
 * `team`: チャネル コンテキストでのみ渡されます。個人チャットでは渡されない。
   * `id`: チャネルの GUID。
   * `name`: チーム名の変更イベントの場合にのみ渡された [チームの名前](~/bots/how-to/conversations/subscribe-to-conversation-events.md)です。
@@ -250,18 +250,18 @@ async def on_members_added_activity(
 
 ## <a name="message-content"></a>メッセージの内容
 
-| フォーマット    | ユーザーからボットへ | ボットからユーザーへ | メモ                                                                                   |
+| Format    | ユーザーからボットへ | ボットからユーザーへ | Notes                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | リッチ テキスト | ✔                | ✔                | ボットはリッチ テキスト、画像、カードを送信できます。 ユーザーは、リッチ テキストと画像をボットに送信できます。                                                                                        |
 | ピクチャ  | ✔                | ✔                | 最大 1024 × 1024 および 1 MB (PNG、JPEG、または GIF 形式)。 アニメーション GIF はサポートされていません。  |
-| カード     | ✖                | ✔                | サポートされているカード [については、「Teams カード](~/task-modules-and-cards/cards/cards-reference.md) リファレンス」を参照してください。 |
-| 絵文字    | ✖                | ✔                | Teams は現在、顔にニヤリと笑う U+1F600 など、UTF-16 による絵文字をサポートしています。 |
+| カード     | ✖                | ✔                | サポートされているカード[についてはTeamsカード](~/task-modules-and-cards/cards/cards-reference.md)リファレンスを参照してください。 |
+| 絵文字    | ✖                | ✔                | Teams、顔にニヤリと笑う U+1F600 など、UTF-16 による絵文字がサポートされています。 |
 
 プロパティを使用してメッセージに通知を追加 `Notification.Alert` することもできます。
 
 ## <a name="notifications-to-your-message"></a>メッセージへの通知
 
-通知は、新しいタスク、メンション、コメントについてユーザーに通知します。 これらのアラートは、ユーザーが作業している情報や、アクティビティ フィードに通知を挿入して表示する必要があるものに関連しています。 ボット メッセージから通知をトリガーするには、objects プロパティを `TeamsChannelData` true `Notification.Alert` に設定 *します*。 通知が発生するかどうかは、個々のユーザーの Teams 設定によって異なります。これらの設定を上書きすることはできません。 通知の種類は、バナー、またはバナーとメールの両方です。
+通知は、新しいタスク、メンション、コメントについてユーザーに通知します。 これらのアラートは、ユーザーが作業している情報や、アクティビティ フィードに通知を挿入して表示する必要があるものに関連しています。 ボット メッセージから通知をトリガーするには、objects プロパティを `TeamsChannelData` true `Notification.Alert` に設定 *します*。 通知が発生するかどうかは、個々のユーザーの設定によって異Teams、これらの設定を上書きすることはできません。 通知の種類は、バナー、またはバナーとメールの両方です。
 
 > [!NOTE]
 > [ **概要] フィールド** には、ユーザーからのテキストがフィードに通知メッセージとして表示されます。
@@ -347,7 +347,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 画像は、PNG、JPEG、または GIF 形式× 1024、1024、1 MB までです。 アニメーション GIF はサポートされていません。
 
-XML を使用して各イメージの高さと幅を指定します。 markdown では、イメージ サイズの既定値は 256 ×256 です。 例:
+XML を使用して各イメージの高さと幅を指定します。 markdown では、イメージ サイズの既定値は 256 ×256 です。 次に例を示します。
 
 * 使用: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>` .
 * 使用 `![Duck on a rock](http://aka.ms/Fo983c)` しない:
@@ -356,7 +356,7 @@ XML を使用して各イメージの高さと幅を指定します。 markdown 
 
 ## <a name="adaptive-cards"></a>アダプティブ カード
 
-アダプティブ カードはボットで作成し、Teams、Web サイトなどの複数のアプリに表示できます。 詳細については、「アダプティブ カード」 [を参照してください](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)。
+アダプティブ カードはボットで作成し、Teams、Web サイトなど、複数のアプリに表示できます。 詳細については、「アダプティブ カード」 [を参照してください](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)。
 
 次のコードは、単純なアダプティブ カードを送信する例を示しています。
 

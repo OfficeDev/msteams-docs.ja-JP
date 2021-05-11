@@ -14,7 +14,7 @@ ms.locfileid: "52020703"
 ---
 # <a name="single-sign-on-sso-support-for-messaging-extensions"></a>メッセージング拡張機能のシングル サインオン (SSO) のサポート
  
-シングル サインオンのサポートは、メッセージング拡張機能とリンク解除で利用できます。 メッセージング拡張機能でシングル サインオン (SSO) を有効にすると、認証トークンがサイレント モードで更新され、Microsoft Teams のサインイン資格情報を入力する必要がある回数が最小限に抑されます。
+シングル サインオンのサポートは、メッセージング拡張機能とリンク解除で利用できます。 メッセージング拡張機能でシングル サインオン (SSO) を有効にすると、認証トークンがサイレント モードで更新され、Microsoft Teams のサインイン資格情報を入力する必要がある回数が最小限に抑Microsoft Teams。
 
 このドキュメントでは、SSO を有効にして、必要に応じて認証トークンを保存する方法についてガイドします。
 
@@ -22,7 +22,7 @@ ms.locfileid: "52020703"
 
 メッセージング拡張機能とリンクの分岐解除に SSO を有効にする前提条件は次のとおりです。
 * Azure アカウントが [必要](https://azure.microsoft.com/en-us/free/) です。
-* AAD ポータルを使用してアプリを構成し、AAD ポータルを介してアプリを登録するで定義されているボットの Teams アプリケーション マニフェスト [を更新する必要があります](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal)。
+* AAD ポータルを使用してアプリを構成し、AAD ポータルを通じてアプリを登録するTeams定義されているボットの Teams アプリケーション マニフェスト[を更新する必要があります](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal)。
 
 > [!NOTE]
 > Azure アカウントの作成とアプリ マニフェストの更新の詳細については、「ボットのシングル サインオン [(SSO) サポート」を参照してください](../../bots/how-to/authentication/auth-aad-sso-bots.md)。

@@ -19,7 +19,7 @@ ms.locfileid: "52101794"
 
 ## <a name="resource-specific-permissions"></a>リソース固有のアクセス許可
 
-|アプリケーションのアクセス許可| Action |
+|アプリケーションのアクセス許可| アクション |
 | ----- | ----- |
 |TeamSettings.Read.Group | このチームの設定を取得します。|
 |TeamSettings.ReadWrite.Group|このチームの設定を更新します。|

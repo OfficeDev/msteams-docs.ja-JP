@@ -1,7 +1,7 @@
 ---
-title: Microsoft Teams アプリ開発のビルド オプション
+title: アプリ開発のビルド Microsoft Teamsオプション
 author: heath-hamilton
-description: すべての種類の Teams アプリをビルドするために使用できる SDK、ツール、API について説明します。
+description: すべての種類のアプリをビルドするために使用できる SDK、ツール、API についてTeamsします。
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
@@ -12,6 +12,6 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020843"
 ---
-# <a name="build-options-for-microsoft-teams-app-development"></a>Microsoft Teams アプリ開発のビルド オプション
+# <a name="build-options-for-microsoft-teams-app-development"></a>アプリ開発のビルド Microsoft Teamsオプション
 
 もうすぐです。。。

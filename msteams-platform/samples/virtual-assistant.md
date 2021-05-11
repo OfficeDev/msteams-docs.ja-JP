@@ -1,6 +1,6 @@
 ---
 title: 仮想アシスタントを作成する
-description: Microsoft Teams で使用する仮想アシスタント ボットとスキルを作成する方法
+description: 仮想アシスタント ボットとスキルを作成する方法をMicrosoft Teams
 localization_priority: Normal
 ms.topic: how-to
 keywords: teams 仮想アシスタント ボット
@@ -13,7 +13,7 @@ ms.locfileid: "52058678"
 ---
 # <a name="create-virtual-assistant"></a>仮想アシスタントを作成する 
 
-Virtual Assistant は、ユーザー エクスペリエンス、組織のブランド化、および必要なデータを完全に制御しながら、堅牢な会話型ソリューションを作成できる Microsoft のオープン ソース テンプレートです。 Virtual [Assistant コア](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template) テンプレートは、ボット フレームワーク [SDK](https://github.com/microsoft/botframework-sdk)、言語理解 [(LUIS)](https://www.luis.ai/) [、QnA Maker](https://www.qnamaker.ai/)など、仮想アシスタントの構築に必要な Microsoft テクノロジをまとめる基本的な構成ブロックです。 また、スキル登録、リンクされたアカウント、ユーザーにシームレスな対話とエクスペリエンスを提供する基本的な会話の意図を含む重要な機能をまとめます。 さらに、テンプレート機能には、再利用可能な会話スキルの豊富な例が含 [まれます](https://microsoft.github.io/botframework-solutions/overview/skills)。  個々のスキルは、仮想アシスタント ソリューションに統合され、複数のシナリオを有効にします。 Bot Framework SDK を使用すると、スキルがソース コード形式で提示され、必要に応じてカスタマイズおよび拡張できます。 ボット フレームワークのスキルの詳細については [、「What is a Bot Framework skill」を参照してください](https://microsoft.github.io/botframework-solutions/overview/skills/)。 このドキュメントでは、組織の仮想アシスタントの実装に関する考慮事項、Teams に焦点を当てた仮想アシスタントの作成方法、関連する例、コード サンプル、および仮想アシスタントの制限事項について説明します。
+Virtual Assistant は、ユーザー エクスペリエンス、組織のブランド化、および必要なデータを完全に制御しながら、堅牢な会話型ソリューションを作成できる Microsoft のオープン ソース テンプレートです。 Virtual [Assistant コア](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template) テンプレートは、ボット フレームワーク [SDK](https://github.com/microsoft/botframework-sdk)、言語理解 [(LUIS)](https://www.luis.ai/) [、QnA Maker](https://www.qnamaker.ai/)など、仮想アシスタントの構築に必要な Microsoft テクノロジをまとめる基本的な構成ブロックです。 また、スキル登録、リンクされたアカウント、ユーザーにシームレスな対話とエクスペリエンスを提供する基本的な会話の意図を含む重要な機能をまとめます。 さらに、テンプレート機能には、再利用可能な会話スキルの豊富な例が含 [まれます](https://microsoft.github.io/botframework-solutions/overview/skills)。  個々のスキルは、仮想アシスタント ソリューションに統合され、複数のシナリオを有効にします。 Bot Framework SDK を使用すると、スキルがソース コード形式で提示され、必要に応じてカスタマイズおよび拡張できます。 ボット フレームワークのスキルの詳細については [、「What is a Bot Framework skill」を参照してください](https://microsoft.github.io/botframework-solutions/overview/skills/)。 このドキュメントでは、組織の仮想アシスタントの実装に関する考慮事項、Teams に焦点を当てた仮想アシスタントを作成する方法、関連する例、コード サンプル、および仮想アシスタントの制限事項について説明します。
 次の図は、仮想アシスタントの概要を表示します。
 
 ![仮想アシスタントの概要図](../assets/images/bots/virtual-assistant/overview.png)
@@ -32,9 +32,9 @@ Virtual Assistant は、ユーザー エクスペリエンス、組織のブラ�
 
 ![中央チームはアシスタントを維持し、ビジネス機能チームはスキルを提供します](../assets/images/bots/virtual-assistant/business-functions.png)
 
-## <a name="create-a-teams-focused-virtual-assistant"></a>Teams に焦点を当てた仮想アシスタントを作成する
+## <a name="create-a-teams-focused-virtual-assistant"></a>ユーザーにフォーカスTeams仮想アシスタントを作成する
 
-Microsoft は、仮想アシスタント [Visual Studioスキルを構築](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate) する新しいテンプレートを公開しました。 このテンプレートVisual Studio、アクションを含む限られたリッチ カードをサポートするテキスト ベースのエクスペリエンスをベースにした仮想アシスタントを作成できます。 Microsoft Teams プラットフォーム機能とVisual Studio Teams アプリ エクスペリエンスを強化するために、基本テンプレートの機能が強化されました。 機能のいくつかには、豊富なアダプティブ カード、タスク モジュール、チームまたはグループ チャット、メッセージング拡張機能のサポートが含まれます。 Microsoft Teams への仮想アシスタントの拡張の詳細については、「チュートリアル: 仮想アシスタントを Microsoft Teams に拡張する」 [を参照してください](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/)。    
+Microsoft は、仮想アシスタント[Visual Studioスキルを構築](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate)する新しいテンプレートを公開しました。 このテンプレートVisual Studio、アクションを含む限られたリッチ カードをサポートするテキスト ベースのエクスペリエンスをベースにした仮想アシスタントを作成できます。 基本テンプレートを拡張Visual Studio、プラットフォームの機能Microsoft Teams、アプリ エクスペリエンスを向上Teams強化しました。 機能のいくつかには、豊富なアダプティブ カード、タスク モジュール、チームまたはグループ チャット、メッセージング拡張機能のサポートが含まれます。 仮想アシスタントを仮想アシスタントに拡張する方法のMicrosoft Teams、「チュートリアル: Extend your Virtual Assistant to [Microsoft Teams」 を参照してください](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/)。    
 次の図は、仮想アシスタント ソリューションの高レベル図を示しています。
 
 ![仮想アシスタント ソリューションの高レベルの図](../assets/images/bots/virtual-assistant/high-level-diagram.png)
@@ -223,7 +223,7 @@ Microsoft は、仮想アシスタント [Visual Studioスキルを構築](https
 
 ### <a name="handle-collaborative-app-scopes"></a>共同アプリのスコープを処理する
 
-Teams アプリは、1:1 チャット、グループ チャット、チャネルを含む複数のスコープに存在できます。 コア仮想アシスタント テンプレートは、1:1 チャット用に設計されています。 オンボーディング エクスペリエンスの一環として、仮想アシスタントはユーザーに名前を求め、ユーザーの状態を維持します。 オンボーディング エクスペリエンスはグループ チャットやチャネル スコープには適していないので、削除されています。
+Teamsは、1:1 チャット、グループ チャット、チャネルなど、複数のスコープに存在できます。 コア仮想アシスタント テンプレートは、1:1 チャット用に設計されています。 オンボーディング エクスペリエンスの一環として、仮想アシスタントはユーザーに名前を求め、ユーザーの状態を維持します。 オンボーディング エクスペリエンスはグループ チャットやチャネル スコープには適していないので、削除されています。
 
 スキルは、1:1 チャット、グループ チャット、チャネル会話など、複数の範囲のアクティビティを処理する必要があります。 これらのスコープがサポートされていない場合、スキルは適切なメッセージで応答する必要があります。
 
@@ -333,7 +333,7 @@ Teams アプリは、1:1 チャット、グループ チャット、チャネル
 
 ## <a name="example"></a>例
 
-次の例は、Book-a-room アプリ テンプレートを仮想アシスタント スキルに変換する方法を示しています。Book-a-room は、ユーザーが現在の時刻から 30 分、60 分、または 90 分の会議室をすばやく見つけて予約できる Microsoft Teams です。 既定の時間は 30 分です。 Book-a-room ボットのスコープは、個人用の o**r 1:1 の会話に対応します。 次の図は、部屋のスキルを持つ仮想 **アシスタントを表示** します。
+次の例は、Book-a-room アプリ テンプレートを仮想アシスタント スキルに変換する方法を示しています。Book-a-room は Microsoft Teams であり、ユーザーは現在の時刻から 30 分、60 分、または 90 分の会議室をすばやく見つけて予約できます。 既定の時間は 30 分です。 Book-a-room ボットのスコープは、個人用の o**r 1:1 の会話に対応します。 次の図は、部屋のスキルを持つ仮想 **アシスタントを表示** します。
 
 !["部屋を予約する" スキルを持つ仮想アシスタント](../assets/images/bots/virtual-assistant/book-a-room-skill.png)
 
@@ -341,7 +341,7 @@ Teams アプリは、1:1 チャット、グループ チャット、チャネル
 
 ### <a name="skill-manifest"></a>スキル マニフェスト
 
-スキル マニフェストは、スキルのメッセージング エンドポイント、ID、名前、その他の関連するメタデータを公開する JSON ファイルです。 このマニフェストは、Microsoft Teams でのアプリのサイドローディングに使用されるマニフェストとは異なります。 仮想アシスタントには、スキルを添付する入力としてこのファイルへのパスが必要です。 ボットの wwwroot フォルダーに次のマニフェストを追加しました。
+スキル マニフェストは、スキルのメッセージング エンドポイント、ID、名前、その他の関連するメタデータを公開する JSON ファイルです。 このマニフェストは、アプリのサイドローディングに使用されるマニフェストとは異Microsoft Teams。 仮想アシスタントには、スキルを添付する入力としてこのファイルへのパスが必要です。 ボットの wwwroot フォルダーに次のマニフェストを追加しました。
 
 ```bash
 botskills connect --remoteManifest "<url to skill's manifest>" ..
@@ -581,4 +581,4 @@ botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<pa
 
 - [会議室予約](app-templates.md#book-a-room)
 
-- [Microsoft Teams ボット](../bots/what-are-bots.md)
+- [Microsoft Teamsボット](../bots/what-are-bots.md)

@@ -1,7 +1,7 @@
 ---
 title: '[スタート] - [個人用] タブを作成する'
 author: girliemac
-description: Microsoft Teams を使用して Microsoft Teams の個人用タブをすばやく作成Toolkit。
+description: ユーザー設定を使用してMicrosoft Teams個人用タブをすばやく作成Microsoft Teams Toolkit。
 ms.author: timura
 ms.date: 03/16/2020
 ms.topic: tutorial
@@ -12,9 +12,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2021
 ms.locfileid: "52068586"
 ---
-# <a name="build-a-basic-personal-tab-for-microsoft-teams"></a>Microsoft Teams の基本的な個人用タブを作成する
+# <a name="build-a-basic-personal-tab-for-microsoft-teams"></a>ユーザーの基本的な個人用タブをMicrosoft Teams
 
-このチュートリアルでは、Microsoft Teams で基本的な個人用タブを作成する方法について説明します。 タブは、Teams で Web コンテンツをホストしてアプリ内の情報を表示する簡単な方法です。 タブは、個々のユーザーにプライベート ワークスペースを提供する個人用アプリの一般的な機能です。 個人用タブは、Teams の従来の Web エクスペリエンスに最も近いものです。 
+このチュートリアルでは、ユーザー設定で基本的な個人用タブを作成Microsoft Teams。 タブは、Web コンテンツをホストしてアプリ内の情報を表示する簡単なTeams。 タブは、個々のユーザーにプライベート ワークスペースを提供する個人用アプリの一般的な機能です。 個人用タブは、従来の Web エクスペリエンスに最も近Teams。 
 
 ## <a name="what-youll-learn"></a>学習する情報
 
@@ -24,19 +24,19 @@ ms.locfileid: "52068586"
 
 ## <a name="prerequisites"></a>前提条件
 
-簡単な Teams アプリをセットアップしてビルドする方法を理解してください。 詳細については、「Hello, World!」アプリの最初の Microsoft Teams の作成 [に関するページをご覧ください](../build-your-first-app/build-and-run.md)。
+簡単なアプリをセットアップして構築する方法を理解Teamsしてください。 詳細については[、「Hello, World!」アプリMicrosoft Teamsを作成するを参照してください](../build-your-first-app/build-and-run.md)。
 
 ## <a name="1-understand-your-app-project-components"></a>1. アプリ プロジェクト コンポーネントを理解する
 
-基本的な個人用タブを作成した後、生成されたアプリスキャフォールディングは、Teams で個人用タブをレンダリングするコンポーネントを提供します。 多くの作業が可能ですが、ここでは次の作業に重点を置いてください。 
+基本的な個人用タブを作成した後、生成されたアプリスキャフォールディングは、ユーザー設定で個人用タブをレンダリングするTeams。 多くの作業が可能ですが、ここでは次の作業に重点を置いてください。 
 
 * `Tab.js` ファイルをプロジェクト `src/components` のディレクトリに保存します。 これは、タブ コンテンツ ページのレンダリング用です。
-* プロジェクトのフロントエンド コンポーネントに事前に読み込まれている Microsoft Teams JavaScript クライアント SDK。
+* Microsoft Teamsプロジェクトのフロントエンド コンポーネントに事前に読み込まれている JavaScript クライアント SDK。
 
-ファイルの上部にあるセクションから分かるために、サンプル コードでは、ユーザー インターフェイスを構築するためにオープンソースの JavaScript ライブラリである `import` `Tabs.js` React を使用します。 [](https://reactjs.org/) 
+ファイルの上部にあるセクションから分かるために、サンプル コードでは、ユーザー インターフェイスを構築するためにReact JavaScript ライブラリである `import` `Tabs.js` React を使用します。 [](https://reactjs.org/) 
 
 > [!NOTE]
-> Teams 開発では React _を使用_ する必要はありませんが、このチュートリアルでは React について説明します。
+> このチュートリアルではReactを使用する必要はTeamsですが、このチュートリアルでは、次の方法についてReact。
 
 ## <a name="2-customize-your-tab-content-page"></a>2. タブ コンテンツ ページをカスタマイズする
 
@@ -79,17 +79,17 @@ ms.locfileid: "52068586"
     ```
 1. 変更内容を保存します。 
 
-   新しいコンテンツは、Teams のアプリのタブで表示できます。
+   アプリのタブで新しいコンテンツを表示できます。Teams。
 
    :::image type="content" source="../assets/images/build-your-first-app/personal-tab-tutorial-content.png" alt-text="静的コンテンツを含む個人用タブのスクリーンショット。":::
 
 ## <a name="3-update-your-tab-theme"></a>3. タブテーマを更新する
 
-タブに Teams のネイティブなテーマを設定することが重要です。 タブと Teams テーマをブレンドする必要があります。 通常、ユーザーは既定 (明るいテーマ、濃色テーマ、ハイ コントラスト テーマ) を好む。 前回のスクリーンショットで確認した場合と同様に、ユーザーが暗いテーマを使用している場合、タブには明るい背景が残ります。 これは推奨されるユーザー エクスペリエンスではありません。
+タブには、ネイティブなテーマを設定することが重要Teams。 タブとテーマをブレンドTeamsがあります。 通常、ユーザーは既定 (明るいテーマ、濃色テーマ、ハイ コントラスト テーマ) を好む。 前回のスクリーンショットで確認した場合と同様に、ユーザーが暗いテーマを使用している場合、タブには明るい背景が残ります。 これは推奨されるユーザー エクスペリエンスではありません。
 
-Teams JavaScript クライアント SDK は、アプリを認識し、クライアントのテーマの変更に対応できます。 これを行うには、次の手順を実行します。
+JavaScript Teams SDK を使用すると、アプリを認識し、クライアントのテーマの変更に対応できます。 これを行うには、次の手順を実行します。
 
-1. **構成済みの Teams クライアント テーマに関するコンテキストを取得する** ファイル `microsoftTeams.getContext()` 内の呼び出しは、構成済みのクライアント テーマ (暗いテーマなど) に関するコンテキスト `Tab.js` を提供します。 次のコードは、インターフェイスとその `context` プロパティにアクセスします。
+1. **構成済みのクライアント テーマに関するTeams取得する** ファイル `microsoftTeams.getContext()` 内の呼び出しは、構成済みのクライアント テーマ (暗いテーマなど) に関するコンテキスト `Tab.js` を提供します。 次のコードは、インターフェイスとその `context` プロパティにアクセスします。
 
     ```JavaScript
     componentDidMount(){
@@ -102,7 +102,7 @@ Teams JavaScript クライアント SDK は、アプリを認識し、クライ�
       });
     }
     ```
-1. **テーマ変更ハンドラーを作成する** プロパティを使用すると、アプリは Teams の周囲で何が起こっているのかを `context` しっかりと理解できます。 ただし、アプリは、ユーザーがテーマを更新しても、テーマを反映した外観を持つわけではありません。
+1. **テーマ変更ハンドラーを作成する** プロパティを手にして、アプリはアプリの周囲で何が起こっているかを `context` Teams。 ただし、アプリは、ユーザーがテーマを更新しても、テーマを反映した外観を持つわけではありません。
 
    テーマを使用してアプリの状態を更新するハンドラーが必要です。 ハンドラーを作成するには、呼び出しの直後に次のテーマ変更ハンドラーを挿入 `microsoftTeams.getContext()` します。
 
@@ -150,20 +150,20 @@ Teams JavaScript クライアント SDK は、アプリを認識し、クライ�
           }
         ```
 
-       Teams でタブを確認します。 外観が暗いテーマと密接に一致する。
+       [ページ] でタブTeams。 外観が暗いテーマと密接に一致する。
 
        :::image type="content" source="../assets/images/build-your-first-app/personal-tab-tutorial-updated-theme.png" alt-text="静的コンテンツ ビューを含む個人用タブのスクリーンショット。":::
 
 ## <a name="see-also"></a>関連項目
 
 * [Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
-* [Microsoft Teams デスクトップと Web 用のタブの設計](../tabs/design/tabs.md) 
+* [デスクトップと Web のタブMicrosoft Teamsデザインする](../tabs/design/tabs.md) 
 * [コンテキスト インターフェイス](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true)
-* [UI テンプレートを使用した Microsoft Teams アプリの設計](../concepts/design/design-teams-app-ui-templates.md) 
+* [UI テンプレートをMicrosoft Teamsアプリを設計する](../concepts/design/design-teams-app-ui-templates.md) 
 * [モバイルのタブ](../tabs/design/tabs-mobile.md)
 * [タブのシングル サインオン (SSO) のサポート](../tabs/how-to/authentication/auth-aad-sso.md)
 * [Microsoft Teams API の概要](https://docs.microsoft.com/graph/teams-concept-overview)
-* [Microsoft Teams 用のユーザー設定Node.js Yeoman Generator を使用してカスタム個人用タブを作成する](../tabs/quickstarts/create-personal-tab-node-yeoman.md)
+* [カスタム個人用タブを作成し、Node.jsの Yeoman Generator を使用Microsoft Teams](../tabs/quickstarts/create-personal-tab-node-yeoman.md)
 
 ## <a name="next-step"></a>次の手順
 

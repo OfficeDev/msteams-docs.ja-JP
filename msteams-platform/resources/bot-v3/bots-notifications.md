@@ -1,6 +1,6 @@
 ---
 title: ボット イベントの処理
-description: Microsoft Teams のボットでイベントを処理する方法について説明します。
+description: ボットでイベントを処理する方法について説明Microsoft Teams
 keywords: teams ボット イベント
 ms.date: 05/20/2019
 ms.topic: how-to
@@ -14,11 +14,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020640"
 ---
-# <a name="handle-bot-events-in-microsoft-teams"></a>Microsoft Teams でのボット イベントの処理
+# <a name="handle-bot-events-in-microsoft-teams"></a>ボット イベントを処理Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Microsoft Teams は、ボットがアクティブなスコープで発生する変更やイベントに関する通知をボットに送信します。 これらのイベントを使用して、次のようなサービス ロジックをトリガーできます。
+Microsoft Teams、ボットがアクティブなスコープで発生する変更やイベントに関する通知をボットに送信します。 これらのイベントを使用して、次のようなサービス ロジックをトリガーできます。
 
 * ボットをチームに追加するときにウェルカム メッセージをトリガーする
 * ボットがグループ チャットに追加された場合のグループ情報のクエリとキャッシュ
@@ -28,11 +28,11 @@ Microsoft Teams は、ボットがアクティブなスコープで発生する�
 
 各ボット イベントは、オブジェクト `Activity` 内の情報を定義 `messageType` するオブジェクトとして送信されます。 種類のメッセージについては、「 `message` メッセージの [送受信」を参照してください](~/resources/bot-v3/bot-conversations/bots-conversations.md)。
 
-Teams イベントとグループ イベント (通常は型からトリガーされる) には、オブジェクトの一部として渡される Teams イベント情報が追加されるため、イベント ハンドラーは Teams のペイロードと追加のイベント固有のメタデータを照会する `conversationUpdate` `channelData` `channelData` `eventType` 必要があります。
+Teamsイベントとグループ イベントは、通常は型からトリガーされ、オブジェクトの一部として渡される追加の Teams イベント情報を持つため、イベント ハンドラーは Teams および追加のイベント固有のメタデータのペイロードを照会する `conversationUpdate` `channelData` `channelData` `eventType` 必要があります。
 
 次の表に、ボットが受け取ってアクションを実行できるイベントの一覧を示します。
 
-|種類|Payload オブジェクト|Teams eventType |説明|範囲|
+|型|Payload オブジェクト|Teams eventType |説明|範囲|
 |---|---|---|---|---|
 | `conversationUpdate` |`membersAdded`| `teamMemberAdded`|[チームに追加されたメンバー](#team-member-or-bot-addition)| すべての |
 | `conversationUpdate` |`membersRemoved`| `teamMemberRemoved`|[メンバーがチームから削除された](#team-member-or-bot-removed)| `groupChat` & `team` |
@@ -49,7 +49,7 @@ Teams イベントとグループ イベント (通常は型からトリガー�
 
 ### <a name="bot-or-user-added-to-a-team"></a>チームに追加されたボットまたはユーザー
 
-ペイロード内のオブジェクトを含むイベントは、ボットがチームに追加された場合、またはボットが追加されたチームに新しいユーザーが追加された場合 `conversationUpdate` `membersAdded` に送信されます。 Microsoft Teams もオブジェクト `eventType.teamMemberAdded` に追加 `channelData` します。
+ペイロード内のオブジェクトを含むイベントは、ボットがチームに追加された場合、またはボットが追加されたチームに新しいユーザーが追加された場合 `conversationUpdate` `membersAdded` に送信されます。 Microsoft Teamsオブジェクトにも `eventType.teamMemberAdded` 追加 `channelData` されます。
 
 このイベントはどちらの場合も送信されますので、オブジェクトを解析して、追加がユーザーかボット自体かを `membersAdded` 判断する必要があります。 後者の場合、ベスト プラクティスは、ユーザーが[](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#best-practice-welcome-messages-in-teams)ボットが提供する機能をユーザーが理解できるよう、チャネルにウェルカム メッセージを送信する方法です。
 
@@ -228,7 +228,7 @@ bot.on('conversationUpdate', (msg) => {
 
 ## <a name="team-member-or-bot-removed"></a>チーム メンバーまたはボットが削除されました
 
-ペイロード内のオブジェクトを含むイベントは、ボットがチームから削除されたか、ボットが追加されたチームからユーザーが削除されると `conversationUpdate` `membersRemoved` 送信されます。 Microsoft Teams もオブジェクト `eventType.teamMemberRemoved` に追加 `channelData` します。 オブジェクトと同様に、ボットのアプリ ID のオブジェクトを解析して、削除された `membersAdded` `membersRemoved` ユーザーを特定する必要があります。
+ペイロード内のオブジェクトを含むイベントは、ボットがチームから削除されたか、ボットが追加されたチームからユーザーが削除されると `conversationUpdate` `membersRemoved` 送信されます。 Microsoft Teamsオブジェクトにも `eventType.teamMemberRemoved` 追加 `channelData` されます。 オブジェクトと同様に、ボットのアプリ ID のオブジェクトを解析して、削除された `membersAdded` `membersRemoved` ユーザーを特定する必要があります。
 
 ### <a name="schema-example-team-member-removed"></a>スキーマの例: チーム メンバーが削除されました
 
@@ -362,7 +362,7 @@ bot.on('conversationUpdate', (msg) => {
 
 ## <a name="channel-updates"></a>チャネルの更新
 
-チャネルが追加されたチームでチャネルが作成、名前変更、または削除されると、ボットに通知されます。 繰り返しますが、イベントが受信され、Teams 固有のイベント識別子がオブジェクトの一部として送信され、チャネル データはチャネルの GUID であり、チャネル名自体が `conversationUpdate` `channelData.eventType`  `channel.id` `channel.name` 含まれる。
+チャネルが追加されたチームでチャネルが作成、名前変更、または削除されると、ボットに通知されます。 繰り返しますが、イベントが受信され、Teams 固有のイベント識別子がオブジェクトの一部として送信され、チャネル データはチャネルの GUID であり、チャネル名自体が `conversationUpdate` `channelData.eventType` `channel.id` `channel.name` 含まれる。
 
 チャネル イベントは次のとおりです。
 

@@ -4,12 +4,12 @@ description: App Studio を使用して Microsoft Teams で優れたアプリの
 keywords: App Studio Teams の開始
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: aa55abb6a4acd4220c2988d1a42c2a2bddc89042
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 0e6a00921b3f24381758b13bd6042da18a3ac2c1
+ms.sourcegitcommit: 808a203fb963eeade3a8e32db88d64677e37df7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019966"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "52304034"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Microsoft Teams 用の App Studio を使用してアプリをすばやく開発する
 
@@ -56,9 +56,7 @@ App Studio の [マニフェスト エディター] タブでは、マニフェ�
 マニフェスト エディターの機能セクションでは、アプリの機能が定義され、各機能の詳細が表示されます。
 
 > [!NOTE]
-> アプリのカスタマイズ機能は現在、開発者プレビューでのみ利用できます。
-> 
-> ベスト プラクティスとして、アプリのユーザーとユーザーがアプリをカスタマイズするときに従うカスタマイズ ガイドラインを提供する必要があります。 詳細については [、「Microsoft Teams でのアプリのカスタマイズ」を参照してください](/MicrosoftTeams/customize-apps)。
+> ベスト プラクティスとして、アプリのユーザーとユーザーがアプリをカスタマイズするときに従うカスタマイズ ガイドラインを提供する必要があります。 詳細については、「アプリのカスタマイズ[」を参照Microsoft Teams。](/MicrosoftTeams/customize-apps)
 
 
 ##### <a name="tabs"></a>タブ
@@ -86,7 +84,7 @@ Bot Framework にボットをまだ登録していない場合は、*[Register]*
 このセクションでは、コネクタをアプリに追加することができます。 Office 365 コネクタが既に登録されている場合は、*[セットアップ]* を選択して、コネクタの名前と ID を入力します。 新しいコネクタが必要な場合は、*[登録]* をクリックして、ブラウザーでコネクタ開発者ダッシュボードに移動します。
 
 > [!NOTE]
-> アプリのカスタマイズにより、管理者はボット、メッセージング拡張機能、タブ、コネクタを介して読み込まれたアプリの外観を変更できます。 たとえば、Teams 管理者が Contoso から *Contoso Agent* にアプリの名前をカスタマイズすると、そのアプリは Contoso *Agent* という新しい名前でユーザーに表示されます。 ただし、チャットにコネクタを追加している間、一覧でコネクタは引き続きアプリの名前を Contoso として表示 *します*。
+> アプリのカスタマイズにより、管理者はボット、メッセージング拡張機能、タブ、コネクタを介して読み込まれたアプリの外観を変更できます。 たとえば、管理者Teams Contoso から *Contoso* *エージェント* にアプリの名前をカスタマイズすると、ユーザーに Contoso *Agent* という新しい名前が表示されます。 ただし、チャットにコネクタを追加している間、一覧でコネクタは引き続きアプリの名前を Contoso として表示 *します*。
 
 
 ##### <a name="messaging-extensions"></a>メッセージング拡張機能

@@ -192,5 +192,5 @@ var adaptiveCardResponse = JObject.FromObject(new
 
 ## <a name="see-also"></a>関連項目
 
-* [アダプティブ カードのユニバーサル アクションを操作する](Work-with-universal-actions-for-adaptive-cards.md)
+* [アダプティブ カードのユニバーサル アクションの操作](Work-with-universal-actions-for-adaptive-cards.md)
 * [最新のビュー](Up-To-Date-Views.md)

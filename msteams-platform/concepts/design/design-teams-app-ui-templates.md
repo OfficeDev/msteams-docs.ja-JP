@@ -1,7 +1,7 @@
 ---
 title: UI テンプレートを使用したアプリの設計
 author: heath-hamilton
-description: Microsoft Teams でよく見られる標準化された UI コンポーネント、レイアウト、パターンを使用して、アプリをより迅速に設計します。
+description: 標準化された UI コンポーネント、レイアウト、およびパターンを使用して、アプリを迅速に設計し、Microsoft Teams。
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: reference
@@ -12,9 +12,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020766"
 ---
-# <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>UI テンプレートを使用した Microsoft Teams アプリの設計
+# <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>UI テンプレートをMicrosoft Teamsアプリを設計する
 
-UI テンプレートを使用して、Microsoft Teams アプリをより迅速に設計します。 テンプレートは、一般的な Teams の使用例で動作する Fluent UI ベースのコンポーネントのコレクションで、ユーザーに最適なエクスペリエンスを把握する時間を広く提供します。
+UI テンプレートを使用Microsoft Teamsアプリを迅速に設計します。 テンプレートは、一般的な Teams の使用例で動作する Fluent UI ベースのコンポーネントのコレクションで、ユーザーに最適なエクスペリエンスを把握する時間が広がっています。
 
 ## <a name="getting-started-with-tools-and-samples"></a>ツールとサンプルの使用を開始する
 
@@ -22,31 +22,31 @@ UI テンプレートを使用して、Microsoft Teams アプリをより迅速�
 
 ### <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-Microsoft Teams UI キットからアプリ設計の UI テンプレートを取得します。これには、使用状況、解剖学、アクセシビリティ、ベスト プラクティスに関する広範な情報も含まれています。
+アプリ設計の UI テンプレートを Microsoft Teams UI キットから取得します。これには、使用状況、解剖学、アクセシビリティ、ベスト プラクティスに関する広範な情報も含まれています。
 
 > [!div class="nextstepaction"]
 > [UI キットを取得する (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="microsoft-teams-ui-library"></a>Microsoft Teams UI ライブラリ
+### <a name="microsoft-teams-ui-library"></a>Microsoft TeamsUI ライブラリ
 
-ブラウザーで個々の Teams UI テンプレートと関連コンポーネントを表示およびテストします。
+ブラウザーで UI テンプレートTeams関連するコンポーネントを個別に表示およびテストします。
 
 > [!div class="nextstepaction"]
 > [UI ライブラリ (プレイグラウンド) を試す](https://dev-int.teams.microsoft.com/storybook/main/index.html)
 
-これらのテンプレートと関連コンポーネントを Teams アプリ プロジェクトに直接インポートします。
+これらのテンプレートと関連コンポーネントをアプリ プロジェクトに直接Teamsインポートします。
 
 > [!div class="nextstepaction"]
 > [UI ライブラリを取得する (GitHub)](https://github.com/OfficeDev/microsoft-teams-ui-component-library)
 
 ### <a name="sample-app"></a>サンプル アプリ
 
-サンプル アプリをインストールして、Teams コンテキスト内での UI テンプレートの外観と動作を確認します。
+サンプル アプリをインストールして、UI テンプレートの外観と動作を各コンテキストTeamsします。
 
 > [!div class="nextstepaction"]
 > [サンプル アプリを取得する (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
-## <a name="list"></a>一覧表示
+## <a name="list"></a>List
 
 リストを使用して、関連するアイテムをスキャン可能な形式で表示し、ユーザーがリスト全体または個々のアイテムに対してアクションを実行できます。
 
@@ -59,7 +59,7 @@ Microsoft Teams UI キットからアプリ設計の UI テンプレートを取
 
 ## <a name="dashboard"></a>ダッシュボード
 
-ダッシュボードには、中央の場所 (Teams 個人用アプリまたはタブ) にさまざまな種類のコンテンツが表示されます。 ユーザーは、ダッシュボードに表示される機能の少なくとも一部をカスタマイズできる必要があります。
+ダッシュボードには、さまざまな種類のコンテンツが中央の場所に表示されます (Teamsまたはタブ)。 ユーザーは、ダッシュボードに表示される機能の少なくとも一部をカスタマイズできる必要があります。
 
 :::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="例は、ダッシュボード UI テンプレートを示しています。" border="false":::
 
@@ -77,14 +77,14 @@ Microsoft Teams UI キットからアプリ設計の UI テンプレートを取
 
 ### <a name="top-use-cases"></a>上位の使用例
 
-* サインイン
+* サインインする
 * ユーザー プロファイル
-* Settings
+* 設定
 * ユーザー入力コレクション
 
-## <a name="sign-in"></a>サインイン
+## <a name="sign-in"></a>サインインする
 
-さまざまな Teams コンテキストと ID プロバイダー用のアプリ サインイン フローを設計できます。 次の例では、シングル サインオン (SSO) を含み、最も簡単な認証エクスペリエンスをお勧めします。
+さまざまなコンテキストと ID プロバイダー用にアプリ Teamsフローを設計できます。 次の例では、シングル サインオン (SSO) を含み、最も簡単な認証エクスペリエンスをお勧めします。
 
 :::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="例は、サインイン UI テンプレートを示しています。" border="false":::
 
@@ -135,7 +135,7 @@ Microsoft Teams UI キットからアプリ設計の UI テンプレートを取
 
 ### <a name="top-use-cases"></a>上位の使用例
 
-* サインイン
+* サインインする
 * ウェルカム メッセージと初回実行エクスペリエンス
 * 成功メッセージ
 * エラー メッセージ
@@ -154,13 +154,13 @@ Microsoft Teams UI キットからアプリ設計の UI テンプレートを取
 
 ## <a name="left-nav"></a>左ナビゲーション
 
-左側のナビゲーションを使用して、[Teams] タブ内の複数のページを参照します。次の例では、左側のナビゲーションはチャネル リストとタブ コンテンツの間にあります。
+左側のナビゲーションを使用して、[ページ] タブ内の複数Teamsします。次の例では、左側のナビゲーションはチャネル リストとタブ コンテンツの間にあります。
 
 :::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="例は、左側のナビゲーション テンプレートを示しています。" border="false":::
 
 ### <a name="top-use-cases"></a>上位の使用例
 
-* Teams タブ内の複数のページを参照する
+* [ページ] タブ内の複数のページTeamsする
 * 複雑なアプリを複数のページに分割する
 
 ## <a name="breadcrumb"></a>Breadcrumb
@@ -188,7 +188,7 @@ Breadcrumbs は、アプリの階層を伝えるナビゲーション支援で�
 
 ## <a name="stage"></a>ステージ
 
-Stage は、ユーザーが別のアプリやブラウザーで開く代わりに、Teams でエンティティ (画像、ファイル、Web サイトなど) を開く方法を提供します。 ステージの主な使用例は表示です。サーフェスを複雑な操作に使用する必要があります。
+Stage は、ユーザーが別のアプリやブラウザーでエンティティを開く代わりに、Teams、ファイル、web サイトなど、エンティティを開く方法を提供します。 ステージの主な使用例は表示です。サーフェスを複雑な操作に使用する必要があります。
 
 (実装ノート: 大規模なタスク モジュールを使用してステージ [をビルド](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)します。)
 
@@ -196,5 +196,5 @@ Stage は、ユーザーが別のアプリやブラウザーで開く代わり�
 
 ### <a name="top-use-cases"></a>上位の使用例
 
-* 別のアプリまたはブラウザーの代わりに Teams でエンティティを開く
+* 別のアプリやブラウザーではなくTeamsでエンティティを開く
 * スポットライト メディアまたは他のコンテンツ

@@ -1,6 +1,6 @@
 ---
 title: プロアクティブ メッセージを送信する
-description: Microsoft Teams ボットでプロアクティブ メッセージを送信する方法について説明します。
+description: ボットでプロアクティブ メッセージを送信するMicrosoft Teamsします。
 ms.topic: conceptual
 ms.author: anclear
 localization_priority: Normal
@@ -22,7 +22,7 @@ ms.locfileid: "52020920"
 * 通知
 * 予定されたメッセージ
 
-ボットがユーザー、グループ チャット、またはチームにプロアクティブ メッセージを送信するには、そのボットにメッセージを送信するアクセス権が必要です。 グループ チャットまたはチームの場合、ボットを含むアプリを最初にその場所にインストールする必要があります。 必要に[応じて、チーム](#proactively-install-your-app-using-graph)に Microsoft Graph を使用してアプリをプロアクティブに[](/microsoftteams/teams-custom-app-policies-and-settings)インストールするか、アプリ ポリシーを使用してテナントのチームとユーザーにアプリをプッシュアウトできます。 ユーザーの場合、自分でアプリをインストールしているか、アプリがインストールされているチームのメンバーである必要があります。
+ボットがユーザー、グループ チャット、またはチームにプロアクティブ メッセージを送信するには、そのボットにメッセージを送信するアクセス権が必要です。 グループ チャットまたはチームの場合、ボットを含むアプリを最初にその場所にインストールする必要があります。 必要に[応じて、チーム](#proactively-install-your-app-using-graph)内の Microsoft Graph を使用してアプリをプロアクティブにインストールするか[](/microsoftteams/teams-custom-app-policies-and-settings)、アプリ ポリシーを使用してアプリをテナントのチームとユーザーにプッシュできます。 ユーザーの場合、自分でアプリをインストールしているか、アプリがインストールされているチームのメンバーである必要があります。
 
 プロアクティブ メッセージの送信は、通常のメッセージの送信とは異なります。 返信に使用 `turnContext` するアクティブはありません。 メッセージを送信する前に、会話を作成する必要があります。 たとえば、新しい 1 対 1 のチャットやチャネル内の新しい会話スレッドなどです。 プロアクティブ メッセージングでは、新しいグループ チャットやチーム内の新しいチャネルを作成することはできません。
 
@@ -35,7 +35,7 @@ ms.locfileid: "52020920"
 
 サンプル セクションのコード スニペット [は](#samples) 、1 対 1 の会話を作成するためのコード スニペットです。 1 対 1 の会話とグループまたはチャネルの両方の作業サンプルを完了するリンクについては、コード サンプルを [参照してください](#code-sample)。
 
-プロアクティブ メッセージを効果的に使用するには、「プロアクティブ [メッセージングのベスト プラクティス」を参照してください](#best-practices-for-proactive-messaging)。 特定のシナリオでは、Graph を [使用してアプリを事前にインストールする必要があります](#proactively-install-your-app-using-graph)。 サンプル セクションのコード スニペット [は](#samples) 、1 対 1 の会話を作成するためのコード スニペットです。 1 対 1 の会話とグループまたはチャネルの両方の完全な作業サンプルについては、コード サンプルを [参照してください](#code-sample)。
+プロアクティブ メッセージを効果的に使用するには、「プロアクティブ [メッセージングのベスト プラクティス」を参照してください](#best-practices-for-proactive-messaging)。 特定のシナリオでは、アプリを使用してアプリを事前にインストールする[必要Graph。](#proactively-install-your-app-using-graph) サンプル セクションのコード スニペット [は](#samples) 、1 対 1 の会話を作成するためのコード スニペットです。 1 対 1 の会話とグループまたはチャネルの両方の完全な作業サンプルについては、コード サンプルを [参照してください](#code-sample)。
 
 ## <a name="get-the-user-id-team-id-or-channel-id"></a>ユーザー ID、チーム ID、またはチャネル ID を取得する
 
@@ -93,11 +93,11 @@ SDK を使用している場合は、メソッドを使用し、メッセージ�
 
 * 何が起こったか: 通知の原因を明確に示します。
 * 結果は何でした: 通知を発生するために更新されたアイテムを明確にする必要があります。
-* 誰が、何をトリガーしたのか: 通知の送信を引き起こしたアクションを実行したユーザーまたはアクション。
+* Whoトリガーされたイベント:Who通知の送信を引き起こしたアクションを指定します。
 * ユーザーが応答で実行できる操作: 通知に基づいてユーザーが簡単にアクションを実行できます。
 * ユーザーがオプトアウトする方法: ユーザーが追加の通知をオプトアウトするパスを指定する必要があります。
 
-大規模なグループのユーザー (組織など) にメッセージを送信するには、Graph を使用してアプリを事前にインストールします。
+大規模なグループのユーザー (組織など) にメッセージを送信するには、アプリを事前にインストールGraph。
 
 ### <a name="scheduled-messages"></a>予定されたメッセージ
 
@@ -109,17 +109,17 @@ SDK を使用している場合は、メソッドを使用し、メッセージ�
 ## <a name="proactively-install-your-app-using-graph"></a>Graph を使用してアプリをプロアクティブにインストール
 
 > [!Note]
-> Graph を使用してアプリをプロアクティブにインストールする方法は、現在ベータ版です。
+> アプリを使用してアプリをプロアクティブにGraph現在ベータ版です。
 
-アプリを以前にインストールまたは操作していないユーザーにプロアクティブにメッセージを送信します。 たとえば、[社内コミュニケーター](~/samples/app-templates.md#company-communicator)を使用して、組織全体にメッセージを送信する必要があるとします。 この場合、Graph API を使用して、ユーザー向けアプリをプロアクティブにインストールできます。 インストール時にアプリが受け `conversationUpdate` 取ったイベントから必要な値をキャッシュします。
+アプリを以前にインストールまたは操作していないユーザーにプロアクティブにメッセージを送信します。 たとえば、[社内コミュニケーター](~/samples/app-templates.md#company-communicator)を使用して、組織全体にメッセージを送信する必要があるとします。 この場合、アプリ API を使用Graphユーザー向けアプリをプロアクティブにインストールできます。 インストール時にアプリが受け `conversationUpdate` 取ったイベントから必要な値をキャッシュします。
 
-組織のアプリ カタログまたは Teams アプリ ストア内のアプリのみをインストールできます。
+組織のアプリ カタログまたはアプリ ストア内のアプリTeamsインストールできます。
 
-Graph [ドキュメントの「ユーザー向けアプリ](/graph/api/userteamwork-post-installedapps) のインストール」と「Teams with Graph でのプロアクティブ ボットのインストールと [メッセージング」を参照してください](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)。 GitHub プラットフォームには[Microsoft .NET framework サンプル](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)もあります。
+詳細[については、Graph](/graph/api/userteamwork-post-installedapps)ドキュメントのユーザー向けアプリのインストールと、TeamsでのプロアクティブボットGraphを[参照してください](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)。 GitHub プラットフォームには[Microsoft .NET framework サンプル](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)もあります。
 
 ## <a name="samples"></a>サンプル
 
-次のコードは、Graph を使用してアプリをプロアクティブにインストールする簡単なコード サンプルを示しています。
+次のコードは、アプリを使用してアプリを事前にインストールする簡単なコード サンプルをGraph。
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -265,7 +265,7 @@ POST /v3/conversations
 
 ## <a name="code-sample"></a>コード サンプル
 
-次の表に、Teams アプリケーションに基本的な会話フローを組み込む簡単なコード サンプルと、Teams のチャネルで新しい会話スレッドを作成する方法を示します。
+次の表は、基本的な会話フローを Teams アプリケーションに組み込む簡単なコード サンプルと、Teams のチャネルで新しい会話スレッドを作成する方法を示Teams。
 
 | **サンプルの名前** | **説明** | **.NET** | **Node.js** | **Python** |
 |---------------|--------------|--------|-------------|--------|
@@ -280,5 +280,5 @@ POST /v3/conversations
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [**Teams のプロアクティブ メッセージング コードサンプル**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp) 
+> [**Teamsメッセージング コードのサンプルを確認する**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp) 
 > [ボット メッセージの書式設定](~/bots/how-to/format-your-bot-messages.md)

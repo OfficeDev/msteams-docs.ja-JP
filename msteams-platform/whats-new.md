@@ -4,12 +4,12 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 localization_priority: Normal
 keywords: チームの最新情報
-ms.openlocfilehash: b1a78166b64d6f3c9c8e2b097822d874591a956c
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: 449df27aaa28b0ba15c98efa78f93f74b8446920
+ms.sourcegitcommit: 20e623a82f9676dd036cf6a350dd480885e0ea2c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230884"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "52300571"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
@@ -27,9 +27,9 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 | **Date** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+|05/07/2021| チャットでの音声通話とビデオ通話のディープ リンク。 |[ディープ リンク](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call)
 |04/30/2021|アプリをストアに発行する方法に関する新Teamsガイダンス。|[アプリを Teams ストア](concepts/deploy-and-publish/appsource/publish.md)に発行Teams[検証ガイドライン](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
 |04/29/2021 | New: アダプティブ カードのユニバーサル アクション。 | [アダプティブ カードのユニバーサル アクション](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
-|04/08/2021| アプリのカスタマイズ機能は、開発者プレビューで利用できます。|[アプリTeams、App](concepts/design/design-teams-app-overview.md#app-customization) [Studio の概要、マニフェスト](concepts/build-and-test/app-studio-overview.md#connectors)スキーマを[設計する](resources/schema/manifest-schema-dev-preview.md) |
 |03/18/2021|注意: Bot Framework SDK のバージョン 4.10 以上に更新します。廃止プロセスと廃止プロセスを開始しました `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` 。 | [チーム/チャット メンバーのボット API の変更](resources/team-chat-member-api-changes.md) |
 |03/05/2021|注意: タブには、エクスペリエンスを囲む余白がなくなりました。 タブ開発者は、アプリを確認して更新する必要があります。 | [タブ余白の削除](resources/removing-tab-margins.md) |
 |03/05/2021|既定のインストール スコープとグループ機能は、開発者プレビューに表示されます。| [既定のインストール スコープとグループ機能](concepts/deploy-and-publish/add-default-install-scope.md) |
@@ -154,6 +154,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 | **Date** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+|04/08/2021| アプリのカスタマイズ機能は、開発者プレビューで利用できます。|[アプリTeams、App](concepts/design/design-teams-app-overview.md#app-customization) [Studio の概要、マニフェスト](concepts/build-and-test/app-studio-overview.md#connectors)スキーマを[設計する](resources/schema/manifest-schema-dev-preview.md) |
 |03/05/2021| タブのエクスペリエンスを囲む余白がなくなりました。 タブ開発者は、アプリを確認して更新する必要があります。 | [タブ余白の削除](resources/removing-tab-margins.md) |
 
 詳細については、「パブリック開発者[向けプレビュー」を参照Teams。](~/resources/dev-preview/developer-preview-intro.md)

@@ -1,14 +1,14 @@
 ## <a name="prerequisites"></a>前提条件
 
-- このクイック スタートを完了するには、365 テナントOffice、カスタム アプリのアップロードを許可するを有効にしたチーム *が必要* です。 詳細については、「Prepare [your Office 365 テナント」を参照してください](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
+- このクイック スタートを完了するには、カスタム アプリのアップロードOffice 365許可を有効にしたテナントとチーム *が必要* です。 詳細については、「Prepare [your Office 365 テナント」を参照してください](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
 
-  - 現在 365 アカウントをお持ちOffice場合は、Office 365 開発者プログラムを通じて無料サブスクリプションにサインアップできます。 サブスクリプションは、継続的な開発に使用している限りアクティブなままです。 「Welcome [to the Office 365 Developer Program」を参照してください](https://docs.microsoft.com/office/developer-program/microsoft-365-developer-program)。
+  - 現在アカウントをお持ちOffice 365場合は、開発者プログラムから無料サブスクリプションOffice 365できます。 サブスクリプションは、継続的な開発に使用している限りアクティブなままです。 「[開発者プログラムへようこそOffice 365」を参照してください](https://docs.microsoft.com/office/developer-program/microsoft-365-developer-program)。
 
 さらに、このプロジェクトでは、次のコードが開発環境にインストールされている必要があります。
 
-- 任意のテキスト エディターまたは IDE。 コードを無料でインストール [Visual Studio使用](https://code.visualstudio.com/download) できます。
+- 任意のテキスト エディターまたは IDE。 無料でインストール[して使用Visual Studio Code](https://code.visualstudio.com/download)できます。
 
-- [Node.js/npm](https://nodejs.org/en/). 最新の LTS バージョンを使用する必要があります。 ノード ノード パッケージ マネージャー (npm) は、インストール時にシステムにインストールNode.js。
+- [Node.js/npm](https://nodejs.org/en/). 最新の LTS バージョンを使用する必要があります。 ノード ノード パッケージ マネージャー (npm) がインストールされたシステムにインストールNode.js。
 
 - インストールが正常に完了したらNode.jsに次のように入力して [、Yeoman](https://yeoman.io/) パッケージと [gulp-cli](https://www.npmjs.com/package/gulp-cli) パッケージをインストールします。
 
@@ -16,7 +16,7 @@
 npm install yo gulp-cli --global
 ```
 
-- コマンド プロンプトに次のように入力して、Microsoft Teams Apps ジェネレーターをインストールします。
+- コマンド プロンプトにMicrosoft Teamsを入力して、アプリ ジェネレーターをインストールします。
 
 ```bash
 npm install generator-teams --global
@@ -44,7 +44,7 @@ yo teams
 
 現在、プロジェクト ディレクトリにいます。 Enter キーを押します。
 
-**Microsoft Teams アプリ プロジェクトのタイトル**
+**アプリ プロジェクトMicrosoft Teamsタイトル**
 
 これはアプリ パッケージ名であり、アプリ マニフェストと説明で使用されます。
 

@@ -2,7 +2,7 @@
 title: JavaScript クライアント SDK でタブやその他のホストされたエクスペリエンスを構築する
 author: heath-hamilton
 ms.author: surbhigupta
-description: Microsoft Teams JavaScript クライアント SDK の概要。これは、Microsoft Teams でホストされる Teams アプリ エクスペリエンスの構築に役立ちます。 <iframe>.
+description: JavaScript クライアント SDK Microsoft Teamsの概要。これは、JavaScript クライアント SDK でホストされるTeamsアプリ エクスペリエンスの構築に役立ちます。 <iframe>.
 localization_priority: Normal
 keywords: teams タブ グループ チャネル構成可能な静的 SDK JavaScript 個人用
 ms.topic: conceptual
@@ -13,18 +13,18 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2021
 ms.locfileid: "52068725"
 ---
-# <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Microsoft Teams JavaScript クライアント SDK でタブやその他のホストされたエクスペリエンスを構築する
+# <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>JavaScript クライアント SDK を使用してタブやその他のホストMicrosoft Teamsエクスペリエンスを構築する
 
-Microsoft Teams JavaScript クライアント SDK は、Teams でホストされたエクスペリエンスを作成するのに役立ちます。つまり、アプリ コンテンツを iframe に表示できます。
+JavaScript Microsoft Teams SDK を使用すると、Teams でホストされたエクスペリエンスを作成できます。つまり、アプリ のコンテンツを iframe に表示します。
 
-SDK は、次の Teams 機能を使用してアプリを開発する場合に役立ちます。
+SDK は、次の機能を使用してアプリを開発Teamsです。
 
 * [タブ](../../tabs/what-are-tabs.md)
 * [タスク モジュール](../../task-modules-and-cards/what-are-task-modules.md)
 
-たとえば、SDK を使用すると、Teams クライアントでユーザーが行ったテーマの変更にタブを対応できます。 [](../../build-your-first-app/build-personal-tab.md)
+たとえば、SDK は、ユーザーが[](../../build-your-first-app/build-personal-tab.md)クライアントで行ったテーマの変更にタブをTeamsできます。
 
-## <a name="getting-started"></a>はじめに
+## <a name="getting-started"></a>作業を開始する
 
 開発の基本設定に応じて、次のいずれかを実行します。
 
@@ -43,14 +43,14 @@ SDK は、次の Teams 機能を使用してアプリを開発する場合に役
 | -----     | -----     | -----    |
 | `microsoftTeams.initialize()` | SDK を初期化します。 この関数は、他の SDK 呼び出しの前に呼び出す必要があります。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#initialize-any-&preserve-view=true)|
 |`microsoftTeams.getContext(callback: (context: Context)`| ページが実行されている現在の状態を取得します。 コールバックは Context オブジェクトを **取得** します。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#getcontext--context--context-----void-&preserve-view=true)<br/>[context obj](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true)|
-| `microsoftTeams.initializeWithContext({contentUrl: string, websiteUrl: string})` | Teams ライブラリを初期化し、contentUrl と[](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)websiteUrl に応じてタブのフレーム コンテキストを設定します。 これにより、web サイトへの移動/再読み込み機能が正しい URL で動作します。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#initializewithframecontext-framecontext--------void--string---&preserve-view=true)|
+| `microsoftTeams.initializeWithContext({contentUrl: string, websiteUrl: string})` | コンテンツ ライブラリをTeamsし、contentUrl と websiteUrl[](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)に応じてタブのフレーム コンテキストを設定します。 これにより、web サイトへの移動/再読み込み機能が正しい URL で動作します。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#initializewithframecontext-framecontext--------void--string---&preserve-view=true)|
 | `microsoftTeams.setFrameContext({contentUrl: string, websiteUrl: string})` | contentUrl と[](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)websiteUrl に応じてタブのフレーム コンテキストを設定します。 これにより、web サイトへの移動/再読み込み機能が正しい URL で動作します。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#setframecontext-framecontext-&preserve-view=true)|
 | `microsoftTeams.registerFullScreenHandler(handler: (isFullScreen: boolean)` |ユーザーがタブのフルスクリーン/ウィンドウ ビューを切り替えたときに登録されるハンドラー。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#registerfullscreenhandler--isfullscreen--boolean-----void-&preserve-view=true)<br/>[boolean](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#registerFullScreenHandler__isFullScreen__boolean_____void_&preserve-view=true)|
-|`microsoftTeams.registerChangeSettingsHandler()` |ユーザーが有効な [設定] ボタンを選択してタブを再構成するときに登録されるハンドラー。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#registerchangesettingshandler-------void-&preserve-view=true)|
+|`microsoftTeams.registerChangeSettingsHandler()` |ユーザーが有効なボタンを選択した場合に登録 **設定、タブ** を再構成します。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#registerchangesettingshandler-------void-&preserve-view=true)|
 | `microsoftTeams.getTabInstances(callback: (tabInfo: TabInformation),tabInstanceParameters?: TabInstanceParameters,)` |アプリが所有するタブを取得します。 コールバックは **TabInformation オブジェクトを取得** します。 **TabInstanceParameters オブジェクト** はオプションのパラメーターです。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#gettabinstances--tabinfo--tabinformation-----void--tabinstanceparameters-&preserve-view=true)<br/>[tabInfo obj](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/tabinformation?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.getMruTabInstances(callback: (tabInfo: TabInformation),tabInstanceParameters?: TabInstanceParameters)`|ユーザーの最近使用したタブを取得します。 コールバックは **TabInformation オブジェクトを取得** します。 **TabInstanceParameters オブジェクト** はオプションのパラメーターです。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#getmrutabinstances--tabinfo--tabinformation-----void--tabinstanceparameters-&preserve-view=true)<br/>[tabInfo obj](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/tabinformation?view=msteams-client-js-latest&preserve-view=true)<br/>[tabInstance obj](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/tabinstanceparameters?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.shareDeepLink(deepLinkParameters: DeepLinkParameters)`|**DeepLinkParameters** オブジェクトを入力として受け取り、ユーザーがタブ内のコンテンツに移動するために使用できるディープ リンク ダイアログ *ボックスを共有します*。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#sharedeeplink-deeplinkparameters-&preserve-view=true)<br/>[deepLink obj](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/deeplinkparameters?view=msteams-client-js-latest&preserve-view=true)|
-|`microsoftTeams.executeDeepLink(deepLink: string, onComplete?: (status: boolean, reason?: string))`|必要な **deepLink** を入力として受け取り、ユーザーを URL に移動するか、Teams 内のアプリを開く、インストールするなどのクライアント アクション *をトリガーします*。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#executedeeplink-string---status--boolean--reason---string-----void-&preserve-view=true)|
+|`microsoftTeams.executeDeepLink(deepLink: string, onComplete?: (status: boolean, reason?: string))`|必要な **deepLink** を入力として受け取り、ユーザーを URL に移動するか、クライアントアクション (開く、インストールなど) をトリガーします。Teams。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#executedeeplink-string---status--boolean--reason---string-----void-&preserve-view=true)|
 |`microsoftTeams.navigateToTab(tabInstance: TabInstance, onComplete?: (status: boolean, reason?: string))`|**TabInstance オブジェクトを** 入力として受け取り、指定したタブ インスタンスに移動します。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#navigatetotab-tabinstance-&preserve-view=true)<br/>[tabInstance obj](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/tabinstance?view=msteams-client-js-latest&preserve-view=true)|
 
 ### <a name="authentication-namespace"></a>認証名前空間
@@ -66,8 +66,8 @@ SDK は、次の Teams 機能を使用してアプリを開発する場合に役
 | 関数  | 説明          | ドキュメント|
 | -----     | -----     | -----    |
 |`microsoftTeams.settings.setValidityState(validityState: boolean)`|初期値は false です。 有効状態 **が true の場合****は、[** 保存] または [削除] ボタンをアクティブにします。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest&preserve-view=true)|
-|`microsoftTeams.settings.getSettings(callback: (instanceSettings: Settings)`|現在のインスタンスの設定を取得します。 コールバックは Settings オブジェクトを **取得** します。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest&preserve-view=true)<br/>[settings obj](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/_settings?view=msteams-client-js-latest&preserve-view=true)|
-|`microsoftTeams.settings.setSettings(instanceSettings: Settings, onComplete?: (status: boolean, reason?: string)`|現在のインスタンスの設定を構成します。 有効な設定は Settings オブジェクト **によって定義** されます。|[function](/https://docs.microsoft.com/en-us/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest)<br/>[settings obj](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true)|
+|`microsoftTeams.settings.getSettings(callback: (instanceSettings: Settings)`|現在のインスタンスの設定を取得します。 コールバックは、**オブジェクトの設定** します。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest&preserve-view=true)<br/>[settings obj](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/_settings?view=msteams-client-js-latest&preserve-view=true)|
+|`microsoftTeams.settings.setSettings(instanceSettings: Settings, onComplete?: (status: boolean, reason?: string)`|現在のインスタンスの設定を構成します。 有効な設定は、オブジェクトによって **設定** されます。|[function](/https://docs.microsoft.com/en-us/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest)<br/>[settings obj](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.settings.registerOnSaveHandler(handler: (evt: SaveEvent)`|ユーザーが [保存] ボタンを選択すると **登録されるハンドラー** 。 このハンドラーは、コンテンツに電力を供給する基になるリソースを作成または更新するために使用する必要があります。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.settings.registerOnRemoveHandler(handler: (evt: RemoveEvent)`|ユーザーが [削除] ボタンを選択すると **登録されるハンドラー** 。 このハンドラーは、コンテンツに電力を供給する基になるリソースを削除するために使用する必要があります。|[function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest&preserve-view=true)|
 

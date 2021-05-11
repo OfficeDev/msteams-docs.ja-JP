@@ -42,7 +42,7 @@ Google Chrome バージョン 51 では、オプションの属性として SetC
 |Setting | 強制 | 値 |属性の指定 |
 | -------- | ----------- | --------|--------|
 | **Lax**  | Cookie は、ファースト パーティのコンテキストと HTTP GET 要求でのみ自動的に送信されます。 SameSite Cookie は、イメージや iframe の読み込み呼び出しなどのクロスサイト サブ要求では差し控えされますが、ユーザーがリンクに従って外部サイトから URL に移動すると送信されます。| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
-| **Strict** |ブラウザーは、ファースト パーティのコンテキスト要求 (Cookie を設定したサイトから発信された要求) の Cookie のみを送信します。 要求が現在の場所とは異なる URL から発信された場合、属性にタグ付けされた Cookie は `Strict` いずれも送信されません。| オプション |`Set-Cookie: key=value; SameSite=Strict`|
+| **Strict** |ブラウザーは、ファースト パーティのコンテキスト要求 (Cookie を設定したサイトから発信された要求) の Cookie のみを送信します。 要求が現在の場所とは異なる URL から発信された場合、属性にタグ付けされた Cookie は `Strict` いずれも送信されません。| 省略可能 |`Set-Cookie: key=value; SameSite=Strict`|
 | **なし** | Cookie は、ファースト パーティのコンテキストとクロスオリジン要求の両方で送信されます。ただし、値は明示的に設定する必要があります。すべてのブラウザー要求は HTTPS プロトコルに従い、暗号化された接続を必要とする属性 **`None`**  **`Secure`** を含める必要があります。 その要件に準拠しない Cookie は拒否 **されます**。 <br/>**両方の属性が一緒に必要です**。 HTTPS プロトコルを使用せずに指定した場合、または HTTPS プロトコルを使用しない場合、サード パーティ **`None`** **`Secure`**  Cookie は拒否されます。| オプションですが、設定されている場合は HTTPS プロトコルが必要です。 |`Set-Cookie: key=value; SameSite=None; Secure` |
 
 ## <a name="teams-implications-and-adjustments"></a>Teamsの影響と調整

@@ -1,7 +1,7 @@
 ---
 title: Microsoft Teams のボット
 author: clearab
-description: Microsoft Teams のボットの概要。
+description: このページのボットのMicrosoft Teams。
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
@@ -36,15 +36,15 @@ ms.locfileid: "52075662"
 
 さらに、ボットは会話型インターフェイスを持つアプリです。 テキスト、対話型カード、音声を使用してボットを操作できます。 ボットの動作は、会話がチャネルまたはグループ チャットの会話か、1 対 1 の会話かによって異なります。 会話はボット フレームワーク コネクタを介して処理されます。 詳細については、「会話の基本 [」を参照してください](~/bots/how-to/conversations/conversation-basics.md)。
 
-ボットには、関連するコンテンツにアクセスしてボットエクスペリエンスを強化するために、ユーザー プロファイルの詳細などのコンテキスト情報が必要です。 詳細については [、「Get Teams context 」を参照してください](~/bots/how-to/get-teams-context.md)。 
+ボットには、関連するコンテンツにアクセスしてボットエクスペリエンスを強化するために、ユーザー プロファイルの詳細などのコンテキスト情報が必要です。 詳細については、「get [Teams コンテキスト」を参照してください](~/bots/how-to/get-teams-context.md)。 
 
-Graph API または Teams ボット API を使用して、ボットを介してファイルを送受信することもできます。 詳細については、「ボットを介 [してファイルを送受信する」を参照してください](~/bots/how-to/bots-filesv4.md)。
+また、ボットを介して、API またはボット API を使用Graph受信Teamsできます。 詳細については、「ボットを介 [してファイルを送受信する」を参照してください](~/bots/how-to/bots-filesv4.md)。
 
-さらに、レート制限は、Teams アプリケーションに使用されるボットを最適化するために使用されます。 Microsoft Teams とそのユーザーを保護するために、ボット API は受信要求のレート制限を提供します。 詳細については、「Teams でのレート [制限を使用してボットを最適化する」を参照してください](~/bots/how-to/rate-limit.md)。
+さらに、レート制限は、アプリケーションで使用されるボットを最適化Teamsされます。 ボット API はMicrosoft Teamsユーザーを保護するために、受信要求のレート制限を提供します。 詳細については、「アプリのレート[制限を使用](~/bots/how-to/rate-limit.md)してボットを最適化する」を参照Teams。
 
-通話およびオンライン会議用の Microsoft Graph API を使用すると、Microsoft Teams アプリは音声とビデオを使用してユーザーと対話できます。 詳細については、「通話と [会議ボット」を参照してください](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)。 
+Microsoft Graph通話やオンライン会議の API を使用すると、Microsoft Teamsアプリは音声とビデオを使用してユーザーとやり取りできます。 詳細については、「通話と [会議ボット」を参照してください](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)。 
 
-Teams ボット API を使用して、チャットまたはチームの 1 つ以上のメンバーの情報を取得できます。 詳細については、「チームまたはチャット メンバーをフェッチする Teams ボット API の変更 [」を参照してください](~/resources/team-chat-member-api-changes.md)。
+ボット API Teams使用して、チャットまたはチームの 1 つ以上のメンバーの情報を取得できます。 詳細については、「チームまたはチャット[メンバーをフェッチTeamsボット API に対する変更点」を参照してください](~/resources/team-chat-member-api-changes.md)。
 
 ## <a name="see-also"></a>関連項目
 

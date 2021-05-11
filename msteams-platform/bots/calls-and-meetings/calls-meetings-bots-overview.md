@@ -1,6 +1,6 @@
 ---
 title: 通話とオンライン会議ボット
-description: Microsoft Graph API を使用して通話やオンライン会議を使用して、Microsoft Teams アプリが音声とビデオを使用してユーザーとやり取りする方法について説明します。
+description: 通話やオンライン会議Microsoft Teams、Microsoft Graph API を使用して、音声とビデオを使用してユーザーと対話する方法について説明します。
 ms.topic: conceptual
 localization_priority: Normal
 keywords: 通話通話オーディオ ビデオ IVR 音声オンライン会議
@@ -14,19 +14,19 @@ ms.locfileid: "52058314"
 # <a name="calls-and-online-meetings-bots"></a>通話とオンライン会議ボット
 
 > [!NOTE]
-> 通話とオンライン会議ボットのサポートは、現在、Microsoft Teams モバイル プラットフォームではサポートされていません。
+> 通話とオンライン会議ボットのサポートは、現在、モバイル プラットフォームMicrosoft Teamsサポートされていません。
 
-ボットは、リアルタイムの音声、ビデオ、画面共有を使用して Teams 通話や会議を操作できます。 通話 [およびオンライン会議用](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)の Microsoft Graph API を使用すると、Teams アプリは音声とビデオを使用してユーザーと対話してエクスペリエンスを強化できます。 これらの API を使用すると、次の新機能を追加できます。
+ボットは、リアルタイムの音声Teams、画面共有を使用して、通話や会議を操作できます。 [通話およびGraph会議](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)用の Microsoft Teams API を使用すると、音声とビデオを使用してユーザーと対話してエクスペリエンスを強化できます。 これらの API を使用すると、次の新機能を追加できます。
 
 * 対話型音声応答 (IVR)。
 * 呼び出し制御。
 * デスクトップとアプリの共有を含む、リアルタイムのオーディオストリームとビデオ ストリームへのアクセス。
 
-Teams アプリでこれらの Graph API を使用するには、ボットを作成し、追加情報とアクセス許可を指定します。
+これらの API を GraphアプリTeamsするには、ボットを作成し、追加の情報とアクセス許可を指定します。
 
-また、リアルタイム メディア プラットフォームを使用すると、ボットはリアルタイムの音声、ビデオ、画面共有を使用して Teams 通話や会議を操作できます。 音声通話またはビデオ通話やオンライン会議に参加するボットは、ボットの登録に使用される追加機能が少ない通常の Microsoft Teams ボットです。
+また、リアルタイム メディア プラットフォームを使用すると、ボットはリアルタイムの音声、ビデオ、および画面共有を使用して、Teams通話や会議を操作できます。 音声またはビデオ通話やオンライン会議に参加するボットは、ボットの登録に使用Microsoft Teams機能が少ない通常のボットです。
 
-Teams アプリ マニフェストには、2 つの追加設定と、ボットの Microsoft App ID に対する Graph アクセス許可、およびテナント管理者の同意が含まれています。このマニフェストを使用すると、ボット `supportsCalling` `supportsVideo` を登録できます。 Teams の呼び出しと会議ボットを登録する場合、Webhook URL (ボットへのすべての着信呼び出しの Webhook エンドポイント) が記載されています。 アプリケーションホスト型メディア ボットでは、オーディオおよびビデオ メディア ストリームにアクセスするために Microsoft.Graph.Communications.Calls.Media .NET ライブラリが必要であり、ボットは Azure の Windows Server マシンまたは Windows Server ゲスト オペレーティング システム (OS) に展開する必要があります。 Teams のボットは、オーディオおよびビデオ コンテンツの特定のメディア形式のセットのみをサポートします。
+2 Teams設定と、ボットの Microsoft App ID に対する Graph アクセス許可、およびテナント管理者の同意を含むアプリ マニフェストを使用すると、ボットを `supportsCalling` `supportsVideo` 登録できます。 Teams の通話と会議ボットを登録する場合、Webhook URL が記載されています。これは、ボットへのすべての着信呼び出しの Webhook エンドポイントです。 アプリケーションホスト型メディア ボットには、Microsoft が必要です。Graph。Communications.Calls.Media .NET ライブラリを使用してオーディオおよびビデオ メディア ストリームにアクセスし、ボットを Azure の Windows Server マシンまたは Windows Server ゲスト オペレーティング システム (OS) に展開する必要があります。 デバイス上のボットTeams、オーディオおよびビデオ コンテンツの特定のメディア形式のセットのみをサポートします。
 
 ここで、いくつかの主要な概念、用語、および規則を理解する必要があります。
 
@@ -42,7 +42,7 @@ Teams アプリ マニフェストには、2 つの追加設定と、ボット�
 
 ### <a name="audio-or-video-calls"></a>音声通話またはビデオ通話
 
-Teams の呼び出しには、オーディオまたはオーディオとビデオを使用できます。 音声通話またはビデオ通話の代わりに、呼び出しという用語が使用されます。
+オーディオまたはオーディオTeamsビデオの呼び出しは、完全に使用できます。 音声通話またはビデオ通話の代わりに、呼び出しという用語が使用されます。
 
 ### <a name="call-types"></a>通話の種類
 
@@ -52,8 +52,8 @@ Teams の呼び出しには、オーディオまたはオーディオとビデ�
 
 呼び出しに必要なさまざまな呼び出しの種類とアクセス許可を次に示します。
 
-* ユーザーは、ボットでピアツーピア呼び出しを開始したり、ボットを既存のマルチパーティ通話に招待することができます。 Teams ユーザー インターフェイスでマルチパーティ呼び出しがまだ有効になっていません。
-* ユーザーがボットとのピアツーピア呼び出しを開始するには、グラフのアクセス許可は必要ありません。 ボットがマルチパーティ通話に参加したり、ボットがユーザーとのピアツーピア通話を開始したりするには、追加のアクセス許可が必要です。
+* ユーザーは、ボットでピアツーピア呼び出しを開始したり、ボットを既存のマルチパーティ通話に招待することができます。 マルチパーティ呼び出しは、ユーザー インターフェイスでまだTeamsされていません。
+* Graphがボットとのピアツーピア呼び出しを開始する場合、アクセス許可は必要ありません。 ボットがマルチパーティ通話に参加したり、ボットがユーザーとのピアツーピア通話を開始したりするには、追加のアクセス許可が必要です。
 * 呼び出しはピアツーピアとして開始され、最終的にはマルチパーティ通話になります。 ボットが適切なアクセス許可を持っている場合、ボットは他のユーザーを招待してマルチパーティ呼び出しを開始できます。 ボットにグループ通話に参加するためのアクセス許可が付与されていない場合、参加者が別の参加者を呼び出しに追加した場合、ボットは呼び出しから削除されます。
 
 ### <a name="signals"></a>シグナル
@@ -69,7 +69,7 @@ Teams の呼び出しには、オーディオまたはオーディオとビデ�
 
 ### <a name="calls-and-online-meetings"></a>通話とオンライン会議
 
-Teams ユーザーの観点から見ると、アドホック会議とスケジュール設定の 2 種類のオンライン会議があります。 ボットの観点から見ると、両方のオンライン会議は同じです。 ボットでは、オンライン会議は、一連の参加者間のマルチパーティ通話であり、会議の座標が含まれます。 会議の座標は、会議に関連付けられた、会議などの会議のメタデータ `botId` `chatId` `joinUrl` `startTime` `endTime` です。
+ユーザーのTeams、アドホック会議とスケジュール設定の 2 種類のオンライン会議があります。 ボットの観点から見ると、両方のオンライン会議は同じです。 ボットでは、オンライン会議は、一連の参加者間のマルチパーティ通話であり、会議の座標が含まれます。 会議の座標は、会議に関連付けられた、会議などの会議のメタデータ `botId` `chatId` `joinUrl` `startTime` `endTime` です。
 
 ### <a name="real-time-media"></a>リアルタイム メディア
 
@@ -85,23 +85,23 @@ Teams ユーザーの観点から見ると、アドホック会議とスケジ�
 
     たとえば、ユーザーが **0** を押してオペレーターに到達した場合を知る。
 
-* **アプリケーションホスト型メディア**: ボットがメディアに直接アクセスするには、特定の Graph アクセス許可が必要です。 ボットにアクセス許可が付与された後[](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)、リアルタイム メディア ライブラリ、[およびグラフ](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/articles/index.html#graph-calling-sdk-and-stateful-client-builder)呼び出し SDK を使用すると、リッチでリアルタイムのメディアを構築し、ボットを呼び出すのに役立ちます。 アプリケーションによりホストされるボットは、Windows 環境でホストされる必要があります。 詳細については、「アプリケーションホスト [型メディア ボット」を参照してください](./requirements-considerations-application-hosted-media-bots.md)。
+* **アプリケーションホスト型メディア**: ボットがメディアに直接アクセスするには、特定のアクセス許可Graphがあります。 ボットにアクセス許可が付与された後[](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)、リアルタイム メディア ライブラリ、および SDK Graph呼び出し元は、リッチ[で](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/articles/index.html#graph-calling-sdk-and-stateful-client-builder)リアルタイムのメディアを構築し、ボットを呼び出すのに役立ちます。 アプリケーションによりホストされるボットは、Windows 環境でホストされる必要があります。 詳細については、「アプリケーションホスト [型メディア ボット」を参照してください](./requirements-considerations-application-hosted-media-bots.md)。
 
 ## <a name="code-sample"></a>コード サンプル
 
 | **サンプル名** | **説明** | **Graph** |
 |---------------|----------|--------|
-| グラフ通信 | Microsoft の通信プラットフォームとやり取りするための通信をグラフ化します。 | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
+| Graph通信 | Graph Microsoft の通信プラットフォームとやり取りするための通信を提供します。 | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
 
 ## <a name="see-also"></a>関連項目
 
-- [Graph API リファレンス](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
+- [GraphAPI リファレンス](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
 
 - [サンプル アプリ](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
 
 - [通話とオンライン会議をサポートするボットの登録](./registering-calling-bot.md)
 
-- [通話とオンライン会議ボットのグラフアクセス許可](./registering-calling-bot.md#add-graph-permissions)
+- [Graphおよびオンライン会議ボットのアクセス許可の設定](./registering-calling-bot.md#add-graph-permissions)
 
 - [コンピューターで通話とオンライン会議ボットを開発する方法](./debugging-local-testing-calling-meeting-bots.md)
 

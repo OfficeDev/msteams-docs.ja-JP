@@ -105,4 +105,4 @@ ms.locfileid: "52088914"
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [アダプティブ カードのユニバーサル アクションを操作する](Work-with-universal-actions-for-adaptive-cards.md)
+> [アダプティブ カードのユニバーサル アクションの操作](Work-with-universal-actions-for-adaptive-cards.md)

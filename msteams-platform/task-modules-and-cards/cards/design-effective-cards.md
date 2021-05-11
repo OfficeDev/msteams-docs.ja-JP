@@ -47,7 +47,7 @@ ms.locfileid: "52101738"
 
 :::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="アダプティブ カードのサムネイル カードの例を示します。" border="false":::
 
-### <a name="list"></a>一覧表示
+### <a name="list"></a>List
 
 ユーザーがリストからアイテムを選択するシナリオで使用しますが、項目に多くの説明は必要はありません。
 

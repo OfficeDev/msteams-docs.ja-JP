@@ -261,5 +261,5 @@ ms.locfileid: "52088889"
 
 ## <a name="see-also"></a>関連項目
 
-* [アダプティブ カードのユニバーサル アクションを操作する](Work-with-universal-actions-for-adaptive-cards.md)
+* [アダプティブ カードのユニバーサル アクションの操作](Work-with-universal-actions-for-adaptive-cards.md)
 * [ユーザー固有のビュー](User-Specific-Views.md)

@@ -1,6 +1,6 @@
 ---
 title: カード内のテキストの書式設定
-description: Microsoft Teams のカード テキストの書式設定について説明します。
+description: カードテキストの書式設定について説明Microsoft Teams
 keywords: teams ボット カードの形式
 localization_priority: Normal
 ms.topic: reference
@@ -12,23 +12,23 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2021
 ms.locfileid: "52068823"
 ---
-# <a name="format-cards-in-teams"></a>Teams でカードを書式設定する
+# <a name="format-cards-in-teams"></a>カードの書式を設定Teams
 
 カードの種類に応じて、Markdown または HTML を使用してリッチ テキスト書式をカードに追加できます。
 
 カードは、タイトルプロパティや字幕プロパティではなく、text プロパティでのみ書式設定をサポートします。 書式設定は、カードの種類に応じて XML (HTML) 書式のサブセットまたは Markdown を使用して指定できます。 現在および将来の開発では、Markdown 書式設定を使用したアダプティブ カードをお勧めします。
 
-書式設定のサポートはカードの種類によって異なりますが、カードのレンダリングはデスクトップとモバイル Teams クライアント、およびデスクトップ ブラウザーの Teams で若干異なる場合があります。
+書式設定のサポートはカードの種類によって異なります。また、カードのレンダリングはデスクトップ クライアントとモバイル Teams クライアント、およびデスクトップ ブラウザーの Teams によって若干異なる場合があります。
 
-任意の Teams カードにインライン イメージを含めできます。 イメージは、、、またはファイルとして書式設定され  `.png` `.jpg` `.gif` 、1024 px または 1 MB を超え×する必要があります。 アニメーション GIF は公式にはサポートされていません。 *「カード*[リファレンス」を参照してください。](./cards-reference.md#inline-card-images)
+インライン イメージは、任意のカードにTeamsできます。 イメージは、、、またはファイルとして書式設定され  `.png` `.jpg` `.gif` 、1024 px または 1 MB を超え×する必要があります。 アニメーション GIF は公式にはサポートされていません。 *「カード*[リファレンス」を参照してください。](./cards-reference.md#inline-card-images)
 
 ## <a name="formatting-cards-with-markdown"></a>Markdown を使用したカードの書式設定
 
-Teams で Markdown をサポートするカードの種類は次の 2 種類です。
+Markdown をサポートするカードの種類は次の 2 Teams。
 
 > [!div class="checklist"]
 > * **アダプティブ カード**: Markdown はアダプティブ カード フィールドおよび . `Textblock` `Fact.Title` `Fact.Value` アダプティブ カードでは HTML はサポートされていません。
-> * **O365 コネクタ カード**: マークダウンと制限付き HTML は、テキスト フィールドOffice 365 コネクタ カードでサポートされます。
+> * **O365 コネクタ カード**: マークダウンと制限付き HTML は、テキスト フィールドOffice 365コネクタ カードでサポートされます。
 
 # <a name="markdown-formatting-adaptive-cards"></a>[**Markdown の書式設定: アダプティブ カード**](#tab/adaptive-md)
 
@@ -59,9 +59,9 @@ Teams で Markdown をサポートするカードの種類は次の 2 種類で�
 
 ### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a>アダプティブ カードのモバイルとデスクトップの違い
 
-書式設定は、デスクトップとモバイル バージョンの Teams では少し異なります。
+書式設定は、デスクトップとモバイル バージョンの間で少し異Teams。
 
-デスクトップでは、アダプティブ カードの Markdown 書式は、Web ブラウザーと Teams クライアント アプリケーションの両方で次のように表示されます。
+デスクトップでは、アダプティブ カード Markdown の書式設定は、Web ブラウザーとクライアント アプリケーションの両方で次Teams表示されます。
 
 ![デスクトップ クライアントでのアダプティブ カードマークダウンの書式設定](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
@@ -75,7 +75,7 @@ Android では、アダプティブ カード マークダウンの書式設定�
 
 ### <a name="more-information-on-adaptive-cards"></a>アダプティブ カードの詳細
 
-[アダプティブ カードのテキスト機能](/adaptive-cards/create/textfeatures) このトピックで説明されている日付とローカライズ機能は、Teams ではサポートされていません。
+[アダプティブ カードのテキスト機能](/adaptive-cards/create/textfeatures)このトピックで説明する日付とローカライズ機能は、このトピックではTeams。
 
 ### <a name="formatting-sample-for-adaptive-cards"></a>アダプティブ カードの書式設定サンプル
 
@@ -118,7 +118,7 @@ Android では、アダプティブ カード マークダウンの書式設定�
 ボットとメッセージング拡張機能には [、TextBlock](https://adaptivecards.io/explorer/TextBlock.html) 要素と FactSet 要素のカード コンテンツ内にメンション [を含](https://adaptivecards.io/explorer/FactSet.html) めることはできません。
 
 > [!NOTE]
-> * [メディア要素](https://adaptivecards.io/explorer/Media.html) は、Teams プラットフォームのアダプティブ カード v1.2 では現在サポートされていません。
+> * [メディア要素](https://adaptivecards.io/explorer/Media.html)は、現在、プラットフォーム上のアダプティブ カード v1.2 ではTeamsされていません。
 > * チャネル &チームのメンションはボット メッセージではサポートされていません。
 
 #### <a name="constructing-mentions"></a>メンションの作成
@@ -126,7 +126,7 @@ Android では、アダプティブ カード マークダウンの書式設定�
 アダプティブ カードにメンションを含めるには、アプリに次の要素を含める必要があります。
 
 * `<at>username</at>` は、サポートされているアダプティブ カード要素に含まれます。
-* カード コンテンツ内のプロパティ内のオブジェクト 。このオブジェクトには、言及されているユーザーの Teams ユーザー `mention` `msteams` ID が含まれます。
+* カード コンテンツ内のプロパティ内のオブジェクトで、このオブジェクトには、Teams `mention` `msteams` のユーザー ID が含まれます。
 * これは `userId` 、ボット ID と特定のユーザーに固有です。 特定のユーザーを@mention使用できます。 ユーザー `userId` ID の取得に記載されているオプションのいずれかを使用して [取得できます](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id)。
 
 #### <a name="sample-adaptive-card-with-a-mention"></a>メンション付きアダプティブ カードのサンプル
@@ -310,7 +310,7 @@ iOS では、コネクタ カードの Markdown 書式は次のように表示�
 
 懸案事項:
 
-* Teams の iOS クライアントは、コネクタ カードで Markdown または HTML インライン イメージをレンダリングしない。
+* コネクタ カードの iOS クライアントTeams、Markdown または HTML インライン イメージはレンダリングされません。
 * ブロッククォートはインデントされますが、灰色の背景なしでレンダリングされます。
 
 Android では、コネクタ カードの Markdown 書式は次のように表示されます。
@@ -475,7 +475,7 @@ HTML タグは、ヒーロー カードやサムネイル カードなどの単�
 
 ### <a name="mobile-and-desktop-differences-for-simple-cards"></a>単純なカードのモバイルとデスクトップの違い
 
-デスクトップ プラットフォームとモバイル プラットフォームの解像度の違いにより、デスクトップとモバイル バージョンの Teams では書式設定が異なります。
+デスクトップ プラットフォームとモバイル プラットフォームの解像度の違いにより、デスクトップとモバイル バージョンの間で書式設定が異Teams。
 
 デスクトップでは、HTML の書式設定は次のように表示されます。
 
@@ -497,7 +497,7 @@ Android では太字や斜体のような文字の書式設定が正しく表示
 
 ### <a name="formatting-sample-for-html-formatting-in-simple-cards"></a>単純なカードの HTML 書式の書式設定サンプル
 
-これらのスクリーンショットは Teams AppStudio を使用して作成され、ヒーロー カードの text プロパティは次の文字列に設定されています。 このコードを変更することで、独自のカードの書式設定をテストできます。
+これらのスクリーンショットは、Teams AppStudio を使用して作成され、ヒーロー カードの text プロパティは次の文字列に設定されています。 このコードを変更することで、独自のカードの書式設定をテストできます。
 
 `<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
 

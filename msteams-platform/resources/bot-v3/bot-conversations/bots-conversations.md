@@ -1,6 +1,6 @@
 ---
 title: ボットを使用してメッセージを送受信する
-description: Microsoft Teams でボットを使用してメッセージを送受信する方法について説明します。
+description: ボットを使用してメッセージを送受信する方法について説明Microsoft Teams
 ms.topic: overview
 localization_priority: Normal
 keywords: teams ボット メッセージ
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020668"
 ---
-# <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>Microsoft Teams ボットと会話する
+# <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>ボットと会話Microsoft Teamsする
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -41,22 +41,22 @@ ms.locfileid: "52020668"
 
 各メッセージは `messageType: message` 型の `Activity` オブジェクトです。 ユーザーがメッセージを送信すると、Teams はそのメッセージをボットに投稿します。具体的には、ボットのメッセージング エンドポイントに JSON オブジェクトを送信します。 ボットはメッセージを調べて、その種類を特定し、それに応じて応答します。
 
-ボットは、イベント スタイルのメッセージもサポートします。 詳細については [、「Microsoft Teams でのボット イベントの処理](~/resources/bot-v3/bots-notifications.md) 」を参照してください。 音声は現在サポートされていません。
+ボットは、イベント スタイルのメッセージもサポートします。 詳細については[、「ボット イベントの処理」Microsoft Teams](~/resources/bot-v3/bots-notifications.md)を参照してください。 音声は現在サポートされていません。
 
 メッセージはほとんどの場合、すべてのスコープで同じですが、ボットが UI でアクセスされる方法と、知る必要があるシーンの背後での違いがあります。
 
-基本的な会話は、ボットが Teams や他のチャネルと通信するための単一の REST API である Bot Framework Connector を介して処理されます。 ボット ビルダー SDK は、この API への簡単なアクセス、会話のフローと状態を管理するための追加機能、自然言語処理 (NLP) などの認知サービスを組み込む簡単な方法を提供します。
+基本的な会話は、ボット フレームワーク コネクタ (1 つの REST API) を介して処理され、ボットが他のチャネルと通信Teamsできます。 ボット ビルダー SDK は、この API への簡単なアクセス、会話のフローと状態を管理するための追加機能、自然言語処理 (NLP) などの認知サービスを組み込む簡単な方法を提供します。
 
 ## <a name="message-content"></a>メッセージの内容
 
-ボットはリッチ テキスト、画像、カードを送信できます。 ユーザーは、リッチ テキストと画像をボットに送信できます。 ボットで処理できるコンテンツの種類は、ボットの [Microsoft Teams の設定] ページで指定できます。
+ボットはリッチ テキスト、画像、カードを送信できます。 ユーザーは、リッチ テキストと画像をボットに送信できます。 ボットで処理できるコンテンツの種類は、ボットの [Microsoft Teams設定] ページで指定できます。
 
-| フォーマット | ユーザーからボットへ  | ボットからユーザーへ |  メモ |
+| Format | ユーザーからボットへ  | ボットからユーザーへ |  Notes |
 | --- | :---: | :---: | --- |
 | リッチ テキスト | ✔ | ✔ |  |
 | ピクチャ | ✔ | ✔ | 最大 1024× 1024 および 1 MB (PNG、JPEG、または GIF 形式)。アニメーション GIF はサポートされていません |
-| カード | ✖ | ✔ | サポートされている [カードについては、「Teams カードリファレンス](~/task-modules-and-cards/cards/cards-reference.md) 」を参照してください。 |
-| 絵文字 | ✖ | ✔ | Teams は現在、UTF-16 を介して絵文字をサポートしています (顔を笑う場合は U+1F600 など) |
+| カード | ✖ | ✔ | サポートされている[カードTeamsカード リファレンス](~/task-modules-and-cards/cards/cards-reference.md)を参照してください。 |
+| 絵文字 | ✖ | ✔ | Teams UTF-16 経由で絵文字をサポートしています (たとえば、顔を笑う場合は U+1F600 など) |
 |
 
 ボット フレームワークでサポートされるボット操作の種類 (チーム内のボットが基づく) の詳細については、ボット ビルダー SDK [](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0&preserve-view=true) [for .NET](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0&preserve-view=true)およびボット ビルダー SDK for Node.jsのドキュメントの会話フローと関連する概念に関するボット フレームワーク[のドキュメントを参照](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0&preserve-view=true)してください。
@@ -66,7 +66,7 @@ ms.locfileid: "52020668"
 a の省略可能なプロパティを設定して、メッセージのテキスト コンテンツのレンダリング方法 [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0#customizing-a-message&preserve-view=true) `message` を制御できます。 ボット [メッセージでサポートされている](~/resources/bot-v3/bots-message-format.md) 書式設定の詳細については、「メッセージの書式設定」を参照してください。
 省略可能なプロパティを設定して、メッセージのテキスト コンテンツのレンダリング方法 [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet-create-messages?view=azure-bot-service-3.0#customizing-a-message&preserve-view=true) を制御できます。
 
-Teams がチームでテキストの書式設定をサポートする方法の詳細については、「ボット メッセージの [テキストの書式設定」を参照してください](~/resources/bot-v3/bots-text-formats.md)。
+チームでテキストの書式設定をTeamsする方法の詳細については、「ボット メッセージの[テキストの書式設定」を参照してください](~/resources/bot-v3/bots-text-formats.md)。
 
 メッセージ内のカードの書式設定の詳細については、「カードの書式設定」 [を参照してください](~/task-modules-and-cards/cards/cards-format.md)。
 
@@ -76,7 +76,7 @@ Teams がチームでテキストの書式設定をサポートする方法の�
 
 画像は、PNG、JPEG、または GIF 形式× 1024、1024、1 MB 以下の値を使用できます。アニメーション GIF はサポートされていません。
 
-XML を使用して、各イメージの高さと幅を指定することをお勧めします。 Markdown を使用する場合、画像サイズの既定値は 256 ×256 です。 例:
+XML を使用して、各イメージの高さと幅を指定することをお勧めします。 Markdown を使用する場合、画像サイズの既定値は 256 ×256 です。 次に例を示します。
 
 * `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>` を使う
 * 使用しない `![Duck on a rock](http://aka.ms/Fo983c)`
@@ -90,7 +90,7 @@ XML を使用して、各イメージの高さと幅を指定することをお�
 
 受信メッセージの場合、ボットは型の [`Activity`](/azure/bot-service/rest-api/bot-framework-rest-connector-activities?view=azure-bot-service-3.0&preserve-view=true) オブジェクトを受け取ります `messageType: message` 。 オブジェクトには、ボットに送信されるチャネル更新など、他の種類の情報を含めすることもできますが、この型はボットとユーザーの間 `Activity` [](~/resources/bot-v3/bots-notifications.md#channel-updates) `message` の通信を表します。
 
-ボットは、ユーザー メッセージ、ユーザー、メッセージのソース、Teams 情報に関するその他の情報を含むペイロード `Text` を受け取ります。 注:
+ボットは、ユーザー メッセージ、ユーザーに関するその他の情報、メッセージのソース、およびユーザー情報を含む `Text` ペイロードをTeamsします。 注:
 
 * `timestamp` 協定世界時 (UTC) のメッセージの日付と時刻
 * `localTimestamp` 送信者のタイム ゾーン内のメッセージの日付と時刻
@@ -154,16 +154,16 @@ XML を使用して、各イメージの高さと幅を指定することをお�
 > [!NOTE]
 > 受信メッセージのテキスト フィールドにメンションが含まれる場合があります。 適切にチェックして、それらのファイルを取り除く必要があります。 詳細については、「メンション」 [を参照してください](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#-mentions)。
 
-## <a name="teams-channel-data"></a>Teams チャネル データ
+## <a name="teams-channel-data"></a>Teamsチャネル データ
 
-オブジェクト `channelData` には Teams 固有の情報が含まれているので、チームとチャネルの ID の決定的なソースです。 これらの ID をキャッシュし、ローカル ストレージのキーとして使用する必要があります。
+このオブジェクトには、Teams固有の情報が含まれているので、チームとチャネルの ID の決定的 `channelData` なソースです。 これらの ID をキャッシュし、ローカル ストレージのキーとして使用する必要があります。
 
 オブジェクトは、チャネルの外部で行なうので、個人の会話 `channelData` のメッセージには含まれません。
 
 ボットに送信されるアクティビティの一般的な channelData オブジェクトには、次の情報が含まれます。
 
-* `eventType` Teams イベントの種類。チャネル変更イベントの場合 [にのみ渡される](~/resources/bot-v3/bots-notifications.md#channel-updates)
-* `tenant.id` Azure Active Directory テナント ID。すべてのコンテキストで渡される
+* `eventType`Teamsイベントの種類。チャネル変更イベントの場合[にのみ渡される](~/resources/bot-v3/bots-notifications.md#channel-updates)
+* `tenant.id`Azure Active Directory ID。すべてのコンテキストで渡される
 * `team` 個人チャットではなく、チャネル コンテキストでのみ渡されます。
   * `id` チャネルの GUID
   * `name` チームの名前。チームの名前変更イベントの場合 [にのみ渡されます](~/resources/bot-v3/bots-notifications.md#team-name-updates)
@@ -193,7 +193,7 @@ XML を使用して、各イメージの高さと幅を指定することをお�
 
 ### <a name="net-example"></a>.NET の例
 
-[Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet パッケージは、Teams 固有の情報にアクセスするプロパティを公開する特殊な `TeamsChannelData` オブジェクトを提供します。
+[Microsoft.Bot.Connector.Teams NuGet](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)パッケージには、特定の情報にアクセスするプロパティTeams `TeamsChannelData` が提供されます。
 
 ```csharp
 TeamsChannelData channelData = activity.GetChannelData<TeamsChannelData>();

@@ -1,26 +1,26 @@
 ---
 title: Developer Preview マニフェスト スキーマ参照
-description: Microsoft Teams のマニフェストでサポートされるスキーマについて説明します。
+description: マニフェストでサポートされているスキーマについて説明Microsoft Teams
 ms.topic: reference
 keywords: teams マニフェスト スキーマ Developer Preview
 localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: 1cfa25949024e03ef4c6e5737396e75aff8bd50b
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 05a1becbd021a67e2a843a8ddb5f58ea76cf444e
+ms.sourcegitcommit: 808a203fb963eeade3a8e32db88d64677e37df7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019700"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "52304020"
 ---
-# <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>Microsoft Teams の開発者プレビュー マニフェスト スキーマ
+# <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>開発者プレビュー マニフェスト スキーマ (Microsoft Teams
 
 > [!NOTE]
 > プログラム [Developer Preview](~/resources/dev-preview/developer-preview-intro.md) 参加方法の詳細については、「Developer Preview」を参照してください。
-> 開発者プレビューを使用していない場合は、このバージョンのマニフェストを使用する必要があります。 マニフェスト [のパブリック バージョンについては、「リファレンス: Microsoft Teams](~/resources/schema/manifest-schema.md) のマニフェスト スキーマ」を参照してください。
+> 開発者プレビューを使用していない場合は、このバージョンのマニフェストを使用する必要があります。 マニフェスト[のパブリック バージョンについては、「リファレンス: Microsoft Teams](~/resources/schema/manifest-schema.md)マニフェスト スキーマ」を参照してください。
 
-Microsoft Teams マニフェストでは、アプリを Microsoft Teams 製品に統合する方法について説明します。 マニフェストは、 でホストされるスキーマに準拠している必要があります [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) 。
+このMicrosoft Teamsマニフェストは、アプリが製品に統合する方法Microsoft Teamsします。 マニフェストは、 でホストされるスキーマに準拠している必要があります [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) 。
 
-利用可能な機能の詳細については、「Microsoft Teams のパブリック サーバーの [Developer Preview」を参照してください](~/resources/dev-preview/developer-preview-features.md)。
+利用可能な機能の詳細については、「パブリック サイトの機能」を参照Developer Preview[を参照Microsoft Teams。](~/resources/dev-preview/developer-preview-features.md)
 
 ## <a name="sample-full-manifest"></a>完全なマニフェストのサンプル
 
@@ -234,7 +234,7 @@ Microsoft Teams マニフェストでは、アプリを Microsoft Teams 製品�
 
 **必須** &ndash; Microsoft アプリ ID
 
-このアプリの Microsoft が生成した一意の識別子。 Microsoft Bot Framework 経由でボットを登録している場合、またはタブの Web アプリが既に Microsoft にサインインしている場合は、既に ID を持っている必要があります。ここに入力する必要があります。 それ以外の場合は、Microsoft アプリケーション登録ポータル[(My Applications)](https://apps.dev.microsoft.com)で新しい ID を生成し、ここに入力し、ボットを追加するときに再利用 [する必要があります](~/bots/how-to/create-a-bot-for-teams.md)。
+このアプリの Microsoft が生成した一意の識別子。 ボットを Microsoft Bot Framework 経由で登録している場合、またはタブの Web アプリが既に Microsoft にサインインしている場合は、既に ID を持っている必要があります。ここで入力する必要があります。 それ以外の場合は、Microsoft アプリケーション登録ポータル[(My Applications)](https://apps.dev.microsoft.com)で新しい ID を生成し、ここに入力し、ボットを追加するときに再利用 [する必要があります](~/bots/how-to/create-a-bot-for-teams.md)。
 
 ## <a name="packagename"></a>packageName
 
@@ -246,7 +246,7 @@ Microsoft Teams マニフェストでは、アプリを Microsoft Teams 製品�
 
 **Required**
 
-会社に関する情報を指定します。 AppSource に送信されたアプリ (以前は Officeストア) の場合、これらの値は AppSource エントリの情報と一致する必要があります。
+会社に関する情報を指定します。 AppSource に送信されたアプリ (以前Officeストア) の場合、これらの値は AppSource エントリの情報と一致する必要があります。
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
@@ -279,7 +279,7 @@ Microsoft Teams マニフェストでは、アプリを Microsoft Teams 製品�
 
 **Required**
 
-Teams エクスペリエンスのユーザーに表示されるアプリ エクスペリエンスの名前。 AppSource に送信されるアプリの場合、これらの値は AppSource エントリの情報と一致する必要があります。 の値 `short` と `full` 同じ値にしない必要があります。
+アプリ エクスペリエンスのユーザーに表示されるアプリ エクスペリエンスのTeamsします。 AppSource に送信されるアプリの場合、これらの値は AppSource エントリの情報と一致する必要があります。 の値 `short` と `full` 同じ値にしない必要があります。
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
@@ -303,7 +303,7 @@ Teams エクスペリエンスのユーザーに表示されるアプリ エク�
 
 **Required**
 
-Teams アプリ内で使用されるアイコン。 アイコン ファイルは、アップロード パッケージの一部として含める必要があります。
+アプリ内で使用Teamsアイコン。 アイコン ファイルは、アップロード パッケージの一部として含める必要があります。
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
@@ -329,10 +329,10 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 文字|✔|タブ https:// する際に使用する URL を指定します。|
-|`canUpdateConfiguration`|ブール値|||作成後に、タブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 既定値: `true`|
+|`canUpdateConfiguration`|Boolean|||作成後に、タブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 既定値: `true`|
 |`scopes`|列挙型の配列|1|✔|現在、構成可能なタブは、スコープ `team` とスコープ `groupchat` のみをサポートしています。 |
-|`sharePointPreviewImage`|String|2048||SharePoint で使用するタブ プレビュー イメージへの相対ファイル パス。 サイズは 1024x768 です。 |
-|`supportedSharePointHosts`|列挙型の配列|1||SharePoint でタブを使用する方法を定義します。 オプションは `sharePointFullPage` 次のとおりです。 `sharePointWebPart` |
+|`sharePointPreviewImage`|String|2048||タブ プレビュー イメージへの相対ファイル パスを使用して、SharePoint。 サイズは 1024x768 です。 |
+|`supportedSharePointHosts`|列挙型の配列|1||タブをタブで使用する方法を定義SharePoint。 オプションは `sharePointFullPage` 次のとおりです。 `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -346,7 +346,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |---|---|---|---|---|
 |`entityId`|String|64 文字|✔|タブが表示されるエンティティの一意の識別子。|
 |`name`|String|128 文字|✔|チャネル インターフェイスのタブの表示名。|
-|`contentUrl`|String|2048 文字|✔|Teams https:// 表示するエンティティ UI を示す URL を指定します。|
+|`contentUrl`|String|2048 文字|✔|この https:// キャンバスに表示するエンティティ UI を示すTeamsします。|
 |`websiteUrl`|String|2048 文字||ユーザー https:// ブラウザーで表示することを選択した場合に示す URL を指定します。|
 |`scopes`|列挙型の配列|1|✔|現在、静的タブはスコープのみをサポートしています。つまり、個人用エクスペリエンスの一部としてのみ `personal` プロビジョニングできます。|
 
@@ -380,7 +380,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 **Optional**
 
-ブロック `connectors` は、アプリOffice 365 コネクタを定義します。
+ブロック `connectors` は、アプリOffice 365コネクタを定義します。
 
 オブジェクトは、型のすべての要素を持つ配列 (最大 1 要素) です `object` 。 このブロックは、Connector を提供するソリューションにのみ必要です。
 
@@ -401,15 +401,15 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 オブジェクトは、型のすべての要素を持つ配列 (最大 1 要素) です `object` 。 このブロックは、メッセージング拡張機能を提供するソリューションにのみ必要です。
 
-|名前| 種類 | 最大サイズ | 必須 | 説明|
+|名前| 型 | 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`botId`|String|64|✔|ボット フレームワークに登録されているメッセージング拡張機能をバックするボットの一意の Microsoft アプリ ID。 これは、アプリ全体の ID と同じ [可能性があります](#id)。|
-|`canUpdateConfiguration`|ブール値|||メッセージング拡張機能の構成をユーザーが更新できるかどうかを示す値。 既定値は `false` です。|
+|`canUpdateConfiguration`|Boolean|||メッセージング拡張機能の構成をユーザーが更新できるかどうかを示す値。 既定値は `false` です。|
 |`commands`|オブジェクトの配列|10|✔|メッセージング拡張機能がサポートするコマンドの配列|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
-メッセージング拡張機能は、1 つ以上のコマンドを宣言する必要があります。 各コマンドは、UI ベースのエントリ ポイントからの潜在的な相互作用として Microsoft Teams に表示されます。 最大 10 のコマンドがあります。
+メッセージング拡張機能は、1 つ以上のコマンドを宣言する必要があります。 各コマンドは、MICROSOFT TEAMSエントリ ポイントからの潜在的な対話として表示されます。 最大 10 のコマンドがあります。
 
 各コマンド 項目は、次の構造を持つオブジェクトです。
 
@@ -419,9 +419,9 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |`type`|String|64 文字||コマンドの種類。 または `query` の 1 `action` つ。 既定値: `query`|
 |`title`|String|32 文字|✔|ユーザーフレンドリーなコマンド名|
 |`description`|String|128 文字||このコマンドの目的を示すためにユーザーに表示される説明|
-|`initialRun`|ブール値|||パラメーターを指定してコマンドを最初に実行するかどうかを示すブール値。 既定値: `false`|
+|`initialRun`|Boolean|||パラメーターを指定してコマンドを最初に実行するかどうかを示すブール値。 既定値: `false`|
 |`context`|文字列 (String) の配列|3||メッセージ拡張機能の呼び出し先を定義します。 `compose`、 の任意の `commandBox` 組み合 `message` わせ。 既定値は `["compose", "commandBox"]` です|
-|`fetchTask`|ブール値|||タスク モジュールを動的にフェッチする必要があるかどうかを示すブール値|
+|`fetchTask`|Boolean|||タスク モジュールを動的にフェッチする必要があるかどうかを示すブール値|
 |`taskInfo`|オブジェクト|||メッセージング拡張機能コマンドを使用するときにプリロードするタスク モジュールを指定する|
 |`taskInfo.title`|String|64||ダイアログの初期タイトル|
 |`taskInfo.width`|String|||ダイアログの幅 - ピクセル単位の数値または既定のレイアウト ('large'、'medium'、'small' など)|
@@ -479,7 +479,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 **Optional**
 
-AAD アプリ ID と Graph 情報を指定して、ユーザーが AAD アプリにシームレスにサインインするのに役立ちます。
+ユーザーが AAD アプリにシームレスにサインインGraphに役立つ AAD アプリ ID とユーザー情報を指定します。
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
@@ -490,7 +490,7 @@ AAD アプリ ID と Graph 情報を指定して、ユーザーが AAD アプリ
 
 **オプション** - 配列
 
-ブロック `configurableProperties` は、Teams 管理者がカスタマイズできるアプリのプロパティを定義します。 詳細については [、「Microsoft Teams でのアプリのカスタマイズ」を参照してください](/MicrosoftTeams/customize-apps)。
+この `configurableProperties` ブロックは、管理者がカスタマイズできるアプリTeams定義します。 詳細については、「アプリのカスタマイズ[」を参照Microsoft Teams。](/MicrosoftTeams/customize-apps)
 
 > [!NOTE]
 > 少なくとも 1 つのプロパティを定義する必要があります。 このブロックでは、最大 9 つのプロパティを定義できます。
@@ -500,10 +500,10 @@ AAD アプリ ID と Graph 情報を指定して、ユーザーが AAD アプリ
 * `name`: 管理者がアプリの表示名を変更できます。
 * `shortDescription`: 管理者がアプリの簡単な説明を変更できます。
 * `longDescription`: 管理者がアプリの詳細な説明を変更できます。
-* `smallImageUrl`: マニフェスト `outline` のブロック `icons` 内のプロパティです。
+* `smallImageUrl`: マニフェストの `outline` ブロック内 `icons` のプロパティです。
 * `largeImageUrl`: マニフェストの `color` ブロック内 `icons` のプロパティです。
 * `accentColor`: アウトライン アイコンと組み合わせて、背景として使用する色です。
-* `developerUrl`: 開発者の https:// の URL です。
+* `websiteUrl`: 開発者の https:// の URL です。
 * `privacyUrl`: 開発者の https:// の URL です。
 * `termsOfUseUrl`: 開発者の https:// の URL です。
 
@@ -529,6 +529,6 @@ AAD アプリ ID と Graph 情報を指定して、ユーザーが AAD アプリ
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`team`|string|||選択したインストール スコープが次の場合 `team` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
-|`groupchat`|文字列|||選択したインストール スコープが次の場合 `groupchat` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
-|`meetings`|文字列|||選択したインストール スコープが次の場合 `meetings` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
+|`groupchat`|string|||選択したインストール スコープが次の場合 `groupchat` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
+|`meetings`|string|||選択したインストール スコープが次の場合 `meetings` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
 

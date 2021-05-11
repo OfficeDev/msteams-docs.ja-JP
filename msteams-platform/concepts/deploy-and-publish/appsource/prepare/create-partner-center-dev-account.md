@@ -15,7 +15,7 @@ ms.locfileid: "52101894"
 
 アプリをパートナー ストアに発行Microsoft Teams、パートナー センターの開発者アカウント[を設定する必要があります](https://docs.microsoft.com/office/dev/store/open-a-developer-account)。 シナリオによっては、既存のアカウントを使用できる場合があります。
 
-## <a name="faq"></a>FAQ
+## <a name="faq"></a>よくあるご質問 (FAQ)
 
 パートナー センター アカウントの管理に関する一般的な質問に対する回答を取得します。
 

@@ -42,7 +42,7 @@ ms.locfileid: "52101908"
 
 アプリが申請に失敗した場合は、エラー レポートが表示され、修正および再送信の方法が分かっています。 Microsoft では、アプリの一覧を表示するためのホワイト グローブ サービスも提供しています。
 
-## <a name="faqs"></a>FAQ
+## <a name="faqs"></a>よく寄せられる質問
 
 ### <a name="how-do-i-create-a-partner-center-account"></a>パートナー センター アカウントを作成する方法
 

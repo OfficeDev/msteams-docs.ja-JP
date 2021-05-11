@@ -52,4 +52,4 @@ ms.locfileid: "52101759"
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [ストアの検証ガイドラインを確認する](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+> [デザイン検証ガイドラインのレビュー](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)

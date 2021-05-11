@@ -18,7 +18,7 @@ ms.locfileid: "52020647"
 
 省略可能なプロパティを設定して、メッセージのテキスト コンテンツのレンダリング方法 [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) を制御できます。
 
-Microsoft Teams では、次の書式設定オプションがサポートされています。
+Microsoft Teamsは、次の書式設定オプションをサポートしています。
 
 | TextFormat 値 | 説明 |
 | --- | --- |
@@ -28,7 +28,7 @@ Microsoft Teams では、次の書式設定オプションがサポートされ�
 
 ## <a name="formatting-text-content"></a>テキスト コンテンツの書式設定
 
-Microsoft Teams では、Markdown タグと XML (HTML) 書式タグのサブセットがサポートされています。
+Microsoft Teamsは、Markdown および XML (HTML) 書式タグのサブセットをサポートします。
 
 現時点では、次の制限が適用されます。
 
@@ -38,7 +38,7 @@ Microsoft Teams では、Markdown タグと XML (HTML) 書式タグのサブセ�
 
 ## <a name="cross-platform-support"></a>クロスプラットフォームのサポート
 
-書式設定が Microsoft Teams でサポートされているすべてのプラットフォームで確実に機能するには、一部のスタイルが現在すべてのプラットフォームでサポートされていない点に注意してください。
+Microsoft Teams でサポートされているすべてのプラットフォームで書式設定が機能するには、一部のスタイルが現在すべてのプラットフォームでサポートされていない点に注意してください。
 
 | Style                     | テキスト専用メッセージ | リッチ カード (XML のみ) |
 | ---                       | :---: | :---: |

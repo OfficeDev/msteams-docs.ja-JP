@@ -4,12 +4,12 @@ description: ディープ リンクとアプリでの使用方法について説
 ms.topic: how-to
 localization_priority: Normal
 keywords: Teams ディープ リンク ディープリンク
-ms.openlocfilehash: eadd576debaa63586597bd8c7dcb27fb14aa6fb1
-ms.sourcegitcommit: d272fce50af0fa3e2de0094522f294141cae511c
+ms.openlocfilehash: ccad5c6cc8daa513b12185efa2ed57e02438fd89
+ms.sourcegitcommit: 20e623a82f9676dd036cf6a350dd480885e0ea2c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2021
-ms.locfileid: "52278153"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "52300557"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成 
 
@@ -178,7 +178,7 @@ threadId: = "19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype",
 groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 }
 ```
-## <a name="deep-links-for-sharepoint-framework-tabs"></a>[詳細] タブSharePoint Frameworkリンク
+## <a name="deep-linking-for-sharepoint-framework-tabs"></a>タブの詳細SharePoint Frameworkリンク
 
 ボット、コネクタ、またはメッセージング拡張カードでは、次のディープ リンク形式を使用できます。 `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
 
@@ -196,7 +196,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 例: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
 
-## <a name="deep-link-to-the-scheduling-dialog"></a>[スケジュール] ダイアログへのディープ リンク
+## <a name="deep-linking-to-the-scheduling-dialog"></a>[スケジュール] ダイアログへのディープ リンク
 
 > [!NOTE]
 > この機能は現在、開発者プレビュー段階です。

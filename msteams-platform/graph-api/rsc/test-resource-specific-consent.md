@@ -1,6 +1,6 @@
 ---
-title: Teams でリソース固有の同意のアクセス許可をテストする
-description: Postman を使用して Teams でリソース固有の同意をテストする詳細
+title: リソース固有の同意のアクセス許可をテストTeams
+description: Postman を使用したリソース固有の同意Teamsテストする詳細
 localization_priority: Normal
 author: laujan
 ms.author: lajanuar
@@ -13,15 +13,15 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2021
 ms.locfileid: "52075620"
 ---
-# <a name="test-resource-specific-consent-permissions-in-teams"></a>Teams でリソース固有の同意のアクセス許可をテストする
+# <a name="test-resource-specific-consent-permissions-in-teams"></a>リソース固有の同意のアクセス許可をテストTeams
 
-リソース固有の同意 (RSC) は、Microsoft Teams と Graph API の統合であり、アプリで API エンドポイントを使用して組織内の特定のチームを管理できます。 詳細については、「リソース固有の [同意 (RSC) - Microsoft Teams Graph API」を参照してください](resource-specific-consent.md)。
+リソース固有の同意 (RSC) は、アプリが API エンドポイントを使用して組織内の特定のチームを管理Microsoft Teamsおよび Graph API 統合です。 詳細については、「リソース固有[の同意 (RSC) - Microsoft Teams Graph API 」を参照してください](resource-specific-consent.md)。
 
 > [!NOTE]
-> RSC アクセス許可をテストするには、Teams アプリ マニフェスト ファイルに、次のフィールドが設定された **webApplicationInfo** キーを含める必要があります。
+> RSC アクセス許可をテストするには、Teamsアプリ マニフェスト ファイルに、次のフィールドが設定された **webApplicationInfo** キーを含める必要があります。
 >
 > - **id**: Azure ADアプリ ID については、「Azure アプリ ポータルにアプリを登録する [」をADしてください](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)。
-> - **resource**: 任意の文字列で、「Teams アプリ マニフェストの更新  [」のメモを参照してください](resource-specific-consent.md#update-your-teams-app-manifest)。
+> - **resource**: 任意の文字列は、「アプリ マニフェストの更新 [」のTeams参照してください](resource-specific-consent.md#update-your-teams-app-manifest)。
 > - **アプリケーションのアクセス許可**: アプリの RSC アクセス許可については、「リソース固有の [アクセス許可」を参照してください](resource-specific-consent.md#resource-specific-permissions)。
 
 ```json
@@ -57,9 +57,9 @@ RSC アクセス許可が API 要求ペイロードによって付与されて�
 * `azureADAppId`: アプリの Azure AD ID。
 * `azureADAppSecret`: Azure ADパスワード。
 * `token_scope`: トークンを取得するには、スコープが必要です。 に値を設定します https://graph.microsoft.com/.default 。
-* `teamGroupId`: 次のように Teams クライアントからチーム グループ ID を取得できます。
+* `teamGroupId`: 次のように、チーム グループ ID をクライアントTeams取得できます。
 
-    1. Teams クライアントで、左側のナビゲーション バーから **[Teams]** を選択します。
+    1. クライアントで、Teams **バーから**[Teams] を選択します。
     2. ドロップダウン メニューからアプリがインストールされているチームを選択します。
     3. [その他 **のオプション]** アイコンを選択します (&#8943;)。
     4. [チーム **へのリンクを取得する] を選択します**。 

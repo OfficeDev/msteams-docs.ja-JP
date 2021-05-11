@@ -1,7 +1,7 @@
 ---
 title: ボットのコマンド メニューを作成する
 author: clearab
-description: Microsoft Teams ボットのコマンド メニューを作成する方法
+description: カスタム ボットのコマンド メニューをMicrosoft Teamsする方法
 ms.topic: how-to
 localization_priority: Normal
 ms.author: anclear
@@ -33,7 +33,7 @@ ms.locfileid: "52020913"
 
 **App Studio を使用してボットのコマンド メニューを作成するには**
 
-1. Teams を開き、左側 **のウィンドウ** から [アプリ] を選択します。 [アプリ **] ページで** App Studio を検索 **し、[開** く] を **選択します**。 
+1. [アプリTeams開き、左側 **のウィンドウから**[アプリ] を選択します。 [アプリ **] ページで** App Studio を検索 **し、[開** く] を **選択します**。 
    > [!NOTE]
    > App Studio をお持ち **ではない場合** は、ダウンロードできます。 詳細については [、「App Studio のインストール」を参照してください](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio)。
 
@@ -164,7 +164,7 @@ ms.locfileid: "52020913"
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
-Microsoft Bot Framework で **\@ 提供される静的** メソッドを使用して、メッセージ テキストのメンション部分を解析できます。 という名前のクラス `Activity` のメソッドです `RemoveRecipientMention` 。
+メッセージ テキストの **\@ メンション部分** を解析するには、メッセージ テキストに用意されている静的メソッドをMicrosoft Bot Framework。 という名前のクラス `Activity` のメソッドです `RemoveRecipientMention` 。
 
 メッセージ C#メンション部分を解析するコード **\@** は次のとおりです。
 

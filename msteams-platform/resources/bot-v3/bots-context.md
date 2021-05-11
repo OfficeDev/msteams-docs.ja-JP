@@ -1,6 +1,6 @@
 ---
-title: Microsoft Teams ボットのコンテキストを取得する
-description: Microsoft Teams でボットのコンテキストを取得する方法について説明します。
+title: ボットのコンテキストをMicrosoft Teamsする
+description: ボットのコンテキストを取得する方法について説明Microsoft Teams
 keywords: teams ボットのコンテキスト
 ms.topic: conceptual
 localization_priority: Normal
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020661"
 ---
-# <a name="get-context-for-your-microsoft-teams-bot"></a>Microsoft Teams ボットのコンテキストを取得する
+# <a name="get-context-for-your-microsoft-teams-bot"></a>ボットのコンテキストをMicrosoft Teamsする
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -20,13 +20,13 @@ ms.locfileid: "52020661"
 
 > [!NOTE]
 >
-> * Microsoft Teams 固有のボット API は、ボット ビルダー SDK の拡張機能を通じて最適にアクセスできます。
-> * Microsoft.bot.Connector.Teams NuGet パッケージC# .NET の場合は [、Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet パッケージをダウンロードしてください。
-> * 開発Node.js、Teams のボット ビルダー機能は Bot [Framework SDK](https://github.com/microsoft/botframework-sdk) v4.6 に組み込まれています。
+> * Microsoft Teams固有のボット API は、ボット ビルダー SDK の拡張機能を通じて最適にアクセスできます。
+> * Microsoft.bot.Connector.C#または .NET については[、Microsoft.Bot.Connector.Teams NuGet](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)してください。
+> * 開発Node.js、ボット フレームワーク SDK v4.6 Teams機能の[ボット ビルダーが](https://github.com/microsoft/botframework-sdk)組み込まれています。
 
 ## <a name="fetch-the-team-roster"></a>チーム名簿を取得する
 
-ボットは、チーム メンバーとその基本的なプロファイルの一覧を照会できます。 基本的なプロファイルには、Teams ユーザー ID、名前やオブジェクト ID などの Azure Active Directory (AAD) 情報が含まれます。 この情報を使用して、ユーザー ID を関連付けできます。 たとえば、AAD 資格情報を使用してタブにログインしたユーザーがチーム メンバーである場合に確認します。
+ボットは、チーム メンバーとその基本的なプロファイルの一覧を照会できます。 基本的なプロファイルには、Teams ID、Azure Active Directory ID などの AAD (AAD) 情報が含まれます。 この情報を使用して、ユーザー ID を関連付けできます。 たとえば、AAD 資格情報を使用してタブにログインしたユーザーがチーム メンバーである場合に確認します。
 
 ### <a name="rest-api-example"></a>REST API の例
 
@@ -167,7 +167,7 @@ Response body
 
 #### <a name="net-example"></a>.NET の例
 
-次の例では、.NET 用ボット ビルダー SDK の Teams 拡張機能からの呼び `FetchChannelList` [出しを使用します](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)。
+次の例では、ボット ビルダー SDK for .NET Teams拡張機能からの呼び `FetchChannelList` [出しを使用します](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)。
 
 ```csharp
 ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelList(activity.GetChannelData<TeamsChannelData>().Team.Id);
@@ -175,7 +175,7 @@ ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelL
 
 #### <a name="nodejs-example"></a>Node.js例
 
-次の例では、ボット ビルダー SDK の Teams 拡張機能からの呼び出しを使用 `fetchChannelList` Node.js。 [ ](https://www.npmjs.com/package/botbuilder-teams)
+次の例では、ボット ビルダー SDK Teams `fetchChannelList` [拡張機能からの呼び出しを使用Node.js。 ](https://www.npmjs.com/package/botbuilder-teams)
 
 ```javascript
 var teamId = session.message.sourceEvent.team.id;

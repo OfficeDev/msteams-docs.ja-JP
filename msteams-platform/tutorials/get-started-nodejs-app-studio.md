@@ -1,6 +1,6 @@
 ---
 title: チュートリアル - アプリを使用して最初のアプリをNode.js
-description: Microsoft Teams アプリの作成を開始する方法については、Node.js。
+description: アプリの作成を開始する方法Microsoft TeamsをNode.js。
 keywords: nodejs App Studio node.jsの開始方法
 ms.topic: tutorial
 localization_priority: Normal
@@ -12,9 +12,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/26/2021
 ms.locfileid: "52020962"
 ---
-# <a name="create-your-first-microsoft-teams-app-using-nodejs"></a>ユーザー設定を使用して最初の Microsoft Teams アプリをNode.js
+# <a name="create-your-first-microsoft-teams-app-using-nodejs"></a>アプリを使用してMicrosoft Teamsアプリを作成Node.js
 
-このチュートリアルでは、アプリを使用して Microsoft Teams アプリの作成を開始Node.js。
+このチュートリアルでは、アプリを使用してアプリの作成Microsoft Teams開始Node.js。
 
 [!include [prepare your environment](~/includes/prepare-environment.md)]
 
@@ -22,7 +22,7 @@ ms.locfileid: "52020962"
 
 ## <a name="download-and-host-your-app"></a>アプリをダウンロードしてホストする
 
-Teams で簡単な "hello world" アプリをダウンロードしてホストするには、次の手順に従います。
+次の手順に従って、シンプルな "hello world" アプリをダウンロードしてホストTeams。
 
 <a name="GetPrerequisites"></a>
 
@@ -32,7 +32,7 @@ Teams で簡単な "hello world" アプリをダウンロードしてホスト�
 
 - [Git](https://git-scm.com/downloads)
 - [Node.js NPM](https://nodejs.org/)
-- 任意のテキスト エディターまたは IDE を取得します。 コードを無料でインストール [Visual Studio使用](https://code.visualstudio.com/download) できます。
+- 任意のテキスト エディターまたは IDE を取得します。 無料でインストール[して使用Visual Studio Code](https://code.visualstudio.com/download)できます。
 
 インストール中に、追加、および PATH のオプションが表示される場合は `git` `node` `npm` `code` 、そのオプションを選択します。 便利です。
 
@@ -60,7 +60,7 @@ Local version 4.0.2
 
 gulp がインストールされていない (または正しいバージョンがインストールされている) 場合は、ターミナル ウィンドウで `npm install gulp` 実行します。
 
-コードをインストールしたVisual Studio、次のコマンドを実行してインストールを確認できます。
+インストール済みファイルをVisual Studio Code、次のコマンドを実行してインストールを確認できます。
 
 ```bash
 code --version
@@ -81,7 +81,7 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 ```
 
 > [!TIP]
-> 今後の [参照のために](https://help.github.com/articles/fork-a-repo/) [GitHub](https://github.com/OfficeDev/Microsoft-Teams-Samples) リポジトリへの変更を変更してチェックインする場合は、このリポジトリをフォークできます。
+> このレ[ポを](https://help.github.com/articles/fork-a-repo/)フォーク[すると](https://github.com/OfficeDev/Microsoft-Teams-Samples)、将来の参照のために変更を加え、GitHubを確認できます。
 
 <a name="BuildRun"></a>
 
@@ -121,7 +121,7 @@ hello-world アプリが起動すると、ターミナル `App started listening
 
 ### <a name="host-the-sample-app"></a>サンプル アプリをホストする
 
-Microsoft Teams のアプリは、1 つ以上の機能を公開する Web アプリケーションです。 Teams プラットフォームでアプリを読み込むには、アプリにインターネットからアクセスできる必要があります。 インターネットからアプリにアクセスするには、アプリを *ホストする* 必要があります。
+アプリケーション内のアプリMicrosoft Teams 1 つ以上の機能を公開する Web アプリケーションです。 アプリをTeamsするには、アプリにインターネットからアクセスできる必要があります。 インターネットからアプリにアクセスするには、アプリを *ホストする* 必要があります。
 
 ローカル テストでは、ローカル コンピューターでアプリを実行し、Web エンドポイントを使用してトンネルを作成できます。 [ngrok](https://ngrok.com) は無料のツールで、それを実行できます。 *ngrok を使用* すると、次のような Web アドレスを取得できます `https://d0ac14a5.ngrok.io` (この URL は単なる例です)。 環境に [合った](https://ngrok.com/download) *ngrok をダウンロード* してインストールできます。 必ず、このファイルを自分の場所に追加してください `PATH` 。
 
@@ -140,18 +140,18 @@ ngrok http 3333 -host-header=localhost:3333
 
 永続的な名前を許可する *有料バージョンの ngrok* があります。 無料版を使用する場合、アプリは開発マシンの現在のセッション中にのみ利用できます。 コンピューターがシャットダウンまたはスリープ状態になった場合、サービスは使用できなくなりました。 他のユーザーがテスト用にアプリを共有する場合は、このことを覚えておいてください。 サービスを再起動する必要がある場合は、新しいアドレスが返され、そのアドレスを使用する場所を更新する必要があります。
 
-アプリを Teams に登録するときに後で必要になるアプリの URL をメモしてください。 メモ帳は、この目的のために正常に動作します。
+アプリを App studio を使用してアプリを登録する際に、後で必要になるので、アプリの URL をメモTeamsしてください。 メモ帳この目的で正常に動作します。
 
 <a name="DeployToTeams"></a>
 
-## <a name="deploy-your-app-to-microsoft-teams"></a>アプリを Microsoft Teams に展開する
+## <a name="deploy-your-app-to-microsoft-teams"></a>アプリをアプリに展開Microsoft Teams
 
-この時点で、アプリはインターネット上でホストされますが、検索場所やアプリの呼び出し先を Teams にまだ伝える方法はありません。 これを行うには、アプリ パッケージを作成する必要があります。 これは、アプリ マニフェストと、Teams クライアントがアプリを適切に表示およびブランド化するために使用するアイコンを含むテキスト ファイルにすら及びしません。 このアプリ パッケージを手動で作成するか、アプリの登録プロセスを簡略化する Teams で実行されるツールである App Studio を使用できます。 App Studio は、アプリ パッケージを作成および更新する推奨される方法です。
+この時点で、アプリはインターネット上でホストされますが、Teams に検索場所やアプリの呼び出しを伝える方法はまだありません。 これを行うには、アプリ パッケージを作成する必要があります。 これは、アプリ マニフェストと、Teams クライアントがアプリを適切に表示およびブランド化するために使用するアイコンを含むテキスト ファイルにすら及びしません。 このアプリ パッケージを手動で作成するか、アプリを登録するプロセスを簡略化する Teams で実行されるツールである App Studio を使用できます。 App Studio は、アプリ パッケージを作成および更新する推奨される方法です。
 
 どちらの方法でも、次の値が必要です。
 
 - アプリがインターネット上で見つかる URL。
-- Teams がアプリのブランド化に使用するアイコン。 サンプルには、"src\static\images" にあるプレースホルダー アイコンが付属しています。 App Studio では、必要に応じて既定のアイコンも表示されます。
+- アプリのTeamsに使用するアイコン。 サンプルには、"src\static\images" にあるプレースホルダー アイコンが付属しています。 App Studio では、必要に応じて既定のアイコンも表示されます。
 
 [!include[Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
 
@@ -167,7 +167,7 @@ WEBSITE_NODE_DEFAULT_VERSION=8.9.4
 
 その方法は、アプリのホスト方法によって異なります。 環境変数を使用する重要な点は、これらの値は環境の一部であり、アプリのコードからアクセスできますが、サイトを構成するファイルを調べるサードパーティには公開されません。
 
-ngrok を使用してアプリを実行している場合は、いくつかのローカル環境変数を設定する必要があります。 これを行うには多くの方法がありますが、コードを使用している場合は、Visual Studio起動構成を [追加するのが最も簡単です](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations)。
+ngrok を使用してアプリを実行している場合は、いくつかのローカル環境変数を設定する必要があります。 これを行うには多くの方法がありますが、最も簡単な方法は、Visual Studio Code起動構成を[追加する方法です](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations)。
 
 ``` 
 {
@@ -190,11 +190,11 @@ ngrok を使用してアプリを実行している場合は、いくつかの�
 ここで、
 
 MICROSOFT_APP_IDとMICROSOFT_APP_PASSWORDは、ボットの ID とパスワードです。
-NODE_DEBUGコード デバッグ コンソールでボットで何が起こっているかVisual Studio表示されます。
+NODE_DEBUGデバッグ コンソールでボットで何が起こっているかVisual Studio Code表示されます。
 NODE_CONFIG_DIRリポジトリのルートにあるディレクトリをポイントします (既定では、アプリをローカルで実行すると、src フォルダーで検索されます)。
 
 > [!Note]
-> チュートリアルの前のバージョンから npm を停止していない場合は、Visual Studio コードで起動構成変数を正しく取得するために実行する `npm stop` 必要があります。
+> チュートリアルの前のバージョンから npm を停止していない場合は、起動構成変数を正しく取得Visual Studio Code実行 `npm stop` する必要があります。
 
 <a name="ConfigureTheAppTab"></a>
 
@@ -204,9 +204,9 @@ NODE_CONFIG_DIRリポジトリのルートにあるディレクトリをポイ�
 
 <img width="430px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png"/>
 
-### <a name="test-your-bot-in-teams"></a>Teams でボットをテストする
+### <a name="test-your-bot-in-teams"></a>ボットをテストTeams
 
-Teams でボットを操作できます。 アプリを登録したチーム内のチャネルを選択し、「」と入力し `@your-bot-name` 、その後にメッセージを入力します。 これはメンションと呼 **\@ ばれる.** ボットに送信したメッセージは、返信として返されます。
+これで、ボットと対話できます。Teams。 アプリを登録したチーム内のチャネルを選択し、「」と入力し `@your-bot-name` 、その後にメッセージを入力します。 これはメンションと呼 **\@ ばれる.** ボットに送信したメッセージは、返信として返されます。
 
 <img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png"/>
 

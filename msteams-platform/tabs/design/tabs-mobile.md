@@ -45,7 +45,7 @@ ms.locfileid: "52088760"
 
 :::image type="content" source="../../assets/images/tabs/mobile-tab-single-canvas.png" alt-text="モバイル単一のTeamsタブを示す図。" border="false":::
 
-#### <a name="list"></a>一覧表示
+#### <a name="list"></a>List
 
 リストは、大量のデータを並べ替え、フィルター処理する場合に最適で、最も重要な情報を一番上に保つことに最適です。 並べ替え可能な列を使用すると便利です。 省略記号メニューの下の各リスト アイテムにアクションを追加できます。
 

@@ -5,16 +5,16 @@ ms.topic: reference
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: 984a5de5b2c8e24f79269e62c3a7fd422ecce63f
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: eeffd97c5cbe62b66cab343bfe650b7f617ce9f2
+ms.sourcegitcommit: 808a203fb963eeade3a8e32db88d64677e37df7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101808"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "52304013"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>リファレンス: マニフェスト スキーマのMicrosoft Teams
 
-このTeamsマニフェストは、アプリが製品に統合する方法Microsoft Teamsします。 マニフェストは、 でホストされるスキーマに準拠している必要があります [`https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json) 。 以前のバージョン 1.0-1.4 もサポートされています (URL で "v1.x" を使用)。
+このTeamsマニフェストは、アプリが製品に統合する方法Microsoft Teamsします。 マニフェストは、 でホストされるスキーマに準拠している必要があります [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) 。 以前のバージョン 1.0-1.4 もサポートされています (URL で "v1.x" を使用)。
 
 次のスキーマ サンプルは、すべての機能拡張オプションを示しています。
 
@@ -22,8 +22,8 @@ ms.locfileid: "52101808"
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.9",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.10",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
   "packageName": "com.example.myapp",
@@ -282,7 +282,18 @@ ms.locfileid: "52101808"
     "meetings": "tab", 
     "team": "bot", 
     "groupchat": "bot"
-  }
+  },
+  "configurableProperties": [
+     "name",
+     "shortDescription",
+     "longDescription",
+     "smallImageUrl", 
+     "largeImageUrl", 
+     "accentColor",
+     "websiteUrl",
+     "privacyUrl",
+     "termsOfUseUrl"        
+  ]              
 }
 ```
 
@@ -298,7 +309,7 @@ ms.locfileid: "52101808"
 
 **必須** — 文字列
 
-このマニフェストが使用しているマニフェスト スキーマのバージョン。 1.9 である必要があります。
+このマニフェストが使用しているマニフェスト スキーマのバージョン。 1.10 である必要があります。
 
 ## <a name="version"></a>version
 
@@ -413,7 +424,7 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 |`scopes`|列挙型の配列|1|✔|現在、構成可能なタブは、スコープ `team` とスコープ `groupchat` のみをサポートしています。 |
 |`canUpdateConfiguration`|boolean|||作成後に、タブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 既定値: **true 。**|
 |`context` |列挙型の配列|6||タブが `contextItem` サポートされているスコープ [のセット](../../tabs/how-to/access-teams-context.md)です。 既定値: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
-|`sharePointPreviewImage`|文字列|2048||タブ プレビュー イメージへの相対ファイル パスを使用して、SharePoint。 サイズは 1024x768 です。 |
+|`sharePointPreviewImage`|string|2048||タブ プレビュー イメージへの相対ファイル パスを使用して、SharePoint。 サイズは 1024x768 です。 |
 |`supportedSharePointHosts`|列挙型の配列|1||タブを使用してタブを使用する方法をSharePoint。 オプションは `sharePointFullPage` 次のとおりです。 `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
@@ -427,10 +438,10 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`entityId`|string|64 文字|✔|タブが表示されるエンティティの一意の識別子。|
-|`name`|文字列|128 文字|✔|チャネル インターフェイスのタブの表示名。|
-|`contentUrl`|文字列||✔|この https:// キャンバスに表示するエンティティ UI を示すTeamsします。|
-|`websiteUrl`|文字列|||ユーザー https:// ブラウザーで表示することを選択した場合に示す URL を指定します。|
-|`searchUrl`|文字列|||ユーザー https:// 検索クエリを参照する URL を指定します。|
+|`name`|string|128 文字|✔|チャネル インターフェイスのタブの表示名。|
+|`contentUrl`|string||✔|この https:// キャンバスに表示するエンティティ UI を示すTeamsします。|
+|`websiteUrl`|string|||ユーザー https:// ブラウザーで表示することを選択した場合に示す URL を指定します。|
+|`searchUrl`|string|||ユーザー https:// 検索クエリを参照する URL を指定します。|
 |`scopes`|列挙型の配列|1|✔|現在、静的タブはスコープのみをサポートしています。つまり、個人用エクスペリエンスの一部としてのみ `personal` プロビジョニングできます。|
 |`context` | 列挙型の配列| 2|| タブが `contextItem` サポートされているスコープのセット。|
 
@@ -485,7 +496,7 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 文字|✔|コネクタ https:// する際に使用する URL を指定します。|
 |`scopes`|列挙型の配列|1|✔|Connector がチャネルのコンテキストでエクスペリエンスを提供するかどうか、または個々のユーザー () にスコープを設定したエクスペリエンスを提供するかどうかを `team` 指定します `personal` 。 現在、スコープ `team` だけがサポートされています。|
-|`connectorId`|文字列|64 文字|✔|コネクタ開発者ダッシュボードの ID に一致するコネクタの一 [意の識別子](https://aka.ms/connectorsdashboard)です。|
+|`connectorId`|string|64 文字|✔|コネクタ開発者ダッシュボードの ID に一致するコネクタの一 [意の識別子](https://aka.ms/connectorsdashboard)です。|
 
 ## <a name="composeextensions"></a>composeExtensions
 
@@ -504,7 +515,7 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 |`commands`|オブジェクトの配列|10|✔|メッセージング拡張機能がサポートするコマンドの配列|
 |`canUpdateConfiguration`|boolean|||メッセージング拡張機能の構成をユーザーが更新できるかどうかを示す値。 既定値: **false**|
 |`messageHandlers`|オブジェクトの配列|5||特定の条件が満たされた場合にアプリを呼び出すことができるハンドラーの一覧。|
-|`messageHandlers.type`|文字列|||メッセージ ハンドラーの種類。 `"link"` である必要があります。|
+|`messageHandlers.type`|string|||メッセージ ハンドラーの種類。 `"link"` である必要があります。|
 |`messageHandlers.value.domains`|文字列の配列|||リンク メッセージ ハンドラーが登録できるドメインの配列。|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -516,26 +527,26 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`id`|string|64 文字|✔|コマンドの ID。|
-|`title`|文字列|32 文字|✔|ユーザーフレンドリーなコマンド名。|
-|`type`|文字列|64 文字||コマンドの種類。 または `query` の 1 `action` つ。 既定: **クエリ** です。|
-|`description`|文字列|128 文字||このコマンドの目的を示すためにユーザーに表示される説明。|
+|`title`|string|32 文字|✔|ユーザーフレンドリーなコマンド名。|
+|`type`|string|64 文字||コマンドの種類。 または `query` の 1 `action` つ。 既定: **クエリ** です。|
+|`description`|string|128 文字||このコマンドの目的を示すためにユーザーに表示される説明。|
 |`initialRun`|boolean|||ブール値は、コマンドがパラメーターを使用して最初に実行されるかどうかを示します。 既定値は **false** です。|
 |`context`|文字列の配列|3||メッセージ拡張機能の呼び出し先を定義します。 `compose`、 の任意の `commandBox` 組み合 `message` わせ。 既定値は `["compose","commandBox"]` です。|
 |`fetchTask`|boolean|||タスク モジュールを動的にフェッチする必要があるかどうかを示すブール値。 既定値は **false** です。|
 |`taskInfo`|object|||メッセージング拡張機能コマンドを使用する場合に事前読み込みするタスク モジュールを指定します。|
-|`taskInfo.title`|文字列|64 文字||最初のダイアログ タイトル。|
-|`taskInfo.width`|文字列|||ダイアログの幅 - ピクセル単位の数値または既定のレイアウト ('large'、'medium'、または 'small' など)。|
-|`taskInfo.height`|文字列|||ダイアログの高さ - ピクセル単位の数値、または 'large'、'medium'、または 'small' などの既定のレイアウト。|
-|`taskInfo.url`|文字列|||初期 Webview URL。|
+|`taskInfo.title`|string|64 文字||最初のダイアログ タイトル。|
+|`taskInfo.width`|string|||ダイアログの幅 - ピクセル単位の数値または既定のレイアウト ('large'、'medium'、または 'small' など)。|
+|`taskInfo.height`|string|||ダイアログの高さ - ピクセル単位の数値、または 'large'、'medium'、または 'small' などの既定のレイアウト。|
+|`taskInfo.url`|string|||初期 Webview URL。|
 |`parameters`|オブジェクトの配列|5 つのアイテム|✔|コマンドが受け取るパラメーターの一覧。 最小: 1;最大: 5。|
-|`parameters.name`|文字列|64 文字|✔|クライアントに表示されるパラメーターの名前。 これは、ユーザー要求に含まれます。|
-|`parameters.title`|文字列|32 文字|✔|パラメーターのユーザーフレンドリーなタイトル。|
-|`parameters.description`|文字列|128 文字||このパラメーターの目的を説明するユーザーフレンドリーな文字列。|
-|`parameters.value`|文字列|512 文字||パラメーターの初期値。|
-|`parameters.inputType`|文字列|128 文字||タスク モジュールに表示されるコントロールの種類を定義します `fetchTask: true` 。 の 1 `text, textarea, number, date, time, toggle, choiceset` つ。|
+|`parameters.name`|string|64 文字|✔|クライアントに表示されるパラメーターの名前。 これは、ユーザー要求に含まれます。|
+|`parameters.title`|string|32 文字|✔|パラメーターのユーザーフレンドリーなタイトル。|
+|`parameters.description`|string|128 文字||このパラメーターの目的を説明するユーザーフレンドリーな文字列。|
+|`parameters.value`|string|512 文字||パラメーターの初期値。|
+|`parameters.inputType`|string|128 文字||タスク モジュールに表示されるコントロールの種類を定義します `fetchTask: true` 。 の 1 `text, textarea, number, date, time, toggle, choiceset` つ。|
 |`parameters.choices`|オブジェクトの配列|10 アイテム||の選択肢 `choiceset` オプションです。 の場合にのみ `parameter.inputType` 使用します `choiceset` 。|
-|`parameters.choices.title`|文字列|128 文字|✔|選択したタイトル。|
-|`parameters.choices.value`|文字列|512 文字|✔|Value of the choice.|
+|`parameters.choices.title`|string|128 文字|✔|選択したタイトル。|
+|`parameters.choices.value`|string|512 文字|✔|Value of the choice.|
 
 ## <a name="permissions"></a>permissions
 
@@ -584,7 +595,7 @@ Teams機能するために独自の sharepoint URL を必要とするアプリ�
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`id`|string|36 文字|✔|アプリの AAD アプリケーション ID。 この ID は GUID である必要があります。|
-|`resource`|文字列|2048 文字|✔|SSO の認証トークンを取得するためのアプリのリソース URL。 </br> **注:** SSO を使用していない場合は、エラー応答を回避するために、このフィールドにダミーの文字列値をアプリ マニフェストに https://notapplicable 入力してください。 |
+|`resource`|string|2048 文字|✔|SSO の認証トークンを取得するためのアプリのリソース URL。 </br> **注:** SSO を使用していない場合は、エラー応答を回避するために、このフィールドにダミーの文字列値をアプリ マニフェストに https://notapplicable 入力してください。 |
 |`applicationPermissions`|文字列の配列|128 文字||詳細なリソース [固有の同意を指定します](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)。|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
@@ -617,8 +628,8 @@ Teams機能するために独自の sharepoint URL を必要とするアプリ�
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`type`|string|32 文字|✔|通知の種類。 *以下を参照してください*。|
-|`description`|文字列|128 文字|✔|通知の簡単な説明。 *以下を参照してください*。|
-|`templateText`|文字列|128 文字|✔|例: "{actor} が作成したタスク {taskId} for you"|
+|`description`|string|128 文字|✔|通知の簡単な説明。 *以下を参照してください*。|
+|`templateText`|string|128 文字|✔|例: "{actor} が作成したタスク {taskId} for you"|
 
 ```json
 {
@@ -688,7 +699,28 @@ Teams機能するために独自の sharepoint URL を必要とするアプリ�
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`team`|string|||選択したインストール スコープが次の場合 `team` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
-|`groupchat`|文字列|||選択したインストール スコープが次の場合 `groupchat` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
-|`meetings`|文字列|||選択したインストール スコープが次の場合 `meetings` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
+|`groupchat`|string|||選択したインストール スコープが次の場合 `groupchat` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
+|`meetings`|string|||選択したインストール スコープが次の場合 `meetings` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
+
+## <a name="configurableproperties"></a>configurableProperties
+
+**オプション** - 配列
+
+この `configurableProperties` ブロックは、管理者がカスタマイズできるアプリTeams定義します。 詳細については、「アプリのカスタマイズ[」を参照Microsoft Teams。](/MicrosoftTeams/customize-apps)
+
+> [!NOTE]
+> 少なくとも 1 つのプロパティを定義する必要があります。 このブロックでは、最大 9 つのプロパティを定義できます。
+> ベスト プラクティスとして、アプリのユーザーとユーザーがアプリをカスタマイズするときに従うカスタマイズ ガイドラインを提供する必要があります。
+
+次のプロパティを定義できます。
+* `name`: 管理者がアプリの表示名を変更できます。
+* `shortDescription`: 管理者がアプリの簡単な説明を変更できます。
+* `longDescription`: 管理者がアプリの詳細な説明を変更できます。
+* `smallImageUrl`: マニフェストの `outline` ブロック内 `icons` のプロパティです。
+* `largeImageUrl`: マニフェストの `color` ブロック内 `icons` のプロパティです。
+* `accentColor`: アウトライン アイコンと組み合わせて、背景として使用する色です。
+* `websiteUrl`: 開発者の https:// の URL です。
+* `privacyUrl`: 開発者の https:// の URL です。
+* `termsOfUseUrl`: 開発者の https:// の URL です。
 
 
