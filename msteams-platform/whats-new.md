@@ -4,12 +4,12 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 localization_priority: Normal
 keywords: チームの最新情報
-ms.openlocfilehash: 449df27aaa28b0ba15c98efa78f93f74b8446920
-ms.sourcegitcommit: 20e623a82f9676dd036cf6a350dd480885e0ea2c
+ms.openlocfilehash: 5f159d68a9a10da2737e627ad630be6a1725d334
+ms.sourcegitcommit: 3475927e1c7964dc25c363d0d2026e5c898c97c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "52300571"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "52336511"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
@@ -27,7 +27,9 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 | **Date** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
-|05/07/2021| チャットでの音声通話とビデオ通話のディープ リンク。 |[ディープ リンク](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call)
+|05/10/2021| マニフェスト v1.10 がリリースされました。|[マニフェスト スキーマ](resources/schema/manifest-schema.md) |
+|05/10/2021| アプリのカスタマイズ機能。| [アプリのMicrosoft Teamsする](~/concepts/design/design-teams-app-overview.md#app-customization) |
+|05/07/2021| チャットでの音声通話とビデオ通話のディープ リンク。 |[ディープ リンク](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
 |04/30/2021|アプリをストアに発行する方法に関する新Teamsガイダンス。|[アプリを Teams ストア](concepts/deploy-and-publish/appsource/publish.md)に発行Teams[検証ガイドライン](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
 |04/29/2021 | New: アダプティブ カードのユニバーサル アクション。 | [アダプティブ カードのユニバーサル アクション](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |03/18/2021|注意: Bot Framework SDK のバージョン 4.10 以上に更新します。廃止プロセスと廃止プロセスを開始しました `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` 。 | [チーム/チャット メンバーのボット API の変更](resources/team-chat-member-api-changes.md) |
@@ -97,7 +99,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 | 05/20/2019 | アプリ マニフェストのローカライズ。 | [アプリのローカライズ](~/publishing/apps-localization.md) |
 | 05/20/2019 | メッセージアクション。 | [メッセージアクション](resources/messaging-extension-v3/create-extensions.md#action-type-message-extensions) |
 | 05/20/2019 | リンク解除 (カスタム URL プレビュー)。 | [リンク展開](messaging-extensions/how-to/link-unfurling.md)|
-| 05/06/2019 | ストア アプリのアプリケーション認定プログラム。 | [アプリケーション認定](~/publishing/application-certification.md) |
+| 05/06/2019 | ストア アプリのアプリケーション認定プログラム。 | [アプリケーション認定](~/concepts/deploy-and-publish/appsource/post-publish/overview.md#complete-microsoft-365-certification) |
 | 05/06/2019 | アプリ テンプレートが利用可能になります。 | [アプリ テンプレート](~/samples/app-templates.md) |
 | 04/23/2019 | アクション ベースのメッセージング拡張機能が利用可能になります。 | [アクション ベースのメッセージ拡張機能](~/concepts/messaging-extensions/create-extensions.md) |
 | 02/18/2019 | プライベート チャットへのディープ リンクの作成は、開発者のプレビューから外れ、利用できます。 | [チャットへのディープ リンクの設定](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
@@ -119,7 +121,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 | 11/11/2018 | ノード JS と .NET/C# の開始は、Teams で App Studio を使用するように更新され、Azure での Node ベースの Teams アプリのホスティングに新しいセクションが追加されました。 | [C#/.NET](~/get-started/get-started-dotnet-app-studio.md)と App Studio を使用して Microsoft Teams プラットフォームで始める 、 Node JS と[App Studio](~/get-started/get-started-nodejs-app-studio.md)を使用した Microsoft Teams プラットフォームの使用を開始する[、Azure](~/get-started/get-started-nodejs-in-azure.md)でノード Teams アプリをホストする|
 | 11/09/2018 | これで、ユーザー間のプライベート チャットへのディープ リンクを作成できます。 | [チャットへのディープ リンクの設定](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 2018 年 11 月 8 日 | SharePoint Framework 1.7 が出荷され、web パーツとして [Microsoft Teams] タブSharePoint Framework機能が追加されました。 | [[タブ] SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
-| 11/05/2018 | "タスク モジュール" 機能がリリースされました。 タスク モジュールを使用すると、ボットとタブの両方から、Teamsアプリケーションでモーダル ポップアップ エクスペリエンスを作成できます。 ポップアップ内では、独自のカスタム HTML/JavaScript コードを実行したり、YouTube や Microsoft Stream ビデオなどの -based ウィジェットを表示したり、アダプティブ カードを `<iframe>` [表示することができます](https://docs.microsoft.com/adaptive-cards/)。 | [タスク モジュールの概要](~/concepts/task-modules/task-modules-overview.md)、 [タブ内のタスク モジュール](~/concepts/task-modules/task-modules-tabs.md)、  [ボット内のタスク モジュール](~/concepts/task-modules/task-modules-bots.md) |
+| 11/05/2018 | タスク **モジュール機能** がリリースされました。 タスク モジュールを使用すると、ボットとタブの両方から、Teamsアプリケーションでモーダル ポップアップ エクスペリエンスを作成できます。 ポップアップ内では、独自のカスタム HTML/JavaScript コードを実行したり、YouTube や Microsoft Stream ビデオなどの -based ウィジェットを表示したり、アダプティブ カードを `<iframe>` [表示することができます](/adaptive-cards/)。 | [タスク モジュールの概要](~/concepts/task-modules/task-modules-overview.md)、 [タブ内のタスク モジュール](~/concepts/task-modules/task-modules-tabs.md)、  [ボット内のタスク モジュール](~/concepts/task-modules/task-modules-bots.md) |
 | 10/05/2018 | カードの書式設定情報が更新され、デスクトップ、iOS、Android クライアントでテストTeams。 | [カード](~/concepts/cards/cards.md)、 [カードの書式設定](~/concepts/cards/cards-format.md) |
 | 09/24/2018 | Microsoft Graph 用の通話とオンライン会議 API がベータ版にリリースされ、Teams アプリは音声とビデオを使用してユーザーと豊富なやり取りを行うことができます。 | [通話とオンライン会議](~/concepts/calls-and-meetings/registering-calling-bot.md)ボット [,](~/concepts/calls-and-meetings/real-time-media-concepts.md)リアルタイムメディアの概念 [,](~/concepts/calls-and-meetings/registering-calling-bot.md)呼び出しボットの登録 [,](~/concepts/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)デバッグとローカルテスト , [アプリケーション](~/concepts/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)ホスト型メディア , 着信通話通知 [の処理](~/concepts/calls-and-meetings/call-notifications.md) |
 | 09/11/2018 | タブ構成ページの高さが大幅に向上しました。 | [タブデザイン](tabs/design/tabs.md) |
@@ -127,10 +129,10 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 | 08/10/2018 | DevTools のクライアント サポート。| [デスクトップ クライアントMicrosoft Teams DevTools](~/resources/dev-preview/developer-preview-tools.md)|
 | 08/08/2018 | メッセージング拡張機能は複数のコマンドをサポートしています。 この機能は現在Developer Previewされ、すべてのユーザーにリリースされました。| [composeExtensions.commands](~/resources/schema/manifest-schema.md#composeextensionscommands)|
 | 08/07/2018 | コネクタでインライン構成がサポートされました。 Connectors のドキュメントも、わかりやすくするために改訂および拡張されました。| [コネクタ](~/concepts/connectors/connectors.md)|
-| 08/06/2018 | これで、ボットはファイルの送受信を行うことができます。| [ボットを介してファイルを送受信する](~/concepts/bots/bots-files.md)|
+| 08/06/2018 | これで、ボットはファイルの送受信を行うことができます。| [ボットを介してファイルを送受信する](~/bots/how-to/bots-filesv4.md)|
 | 07/23/2018 | アプリの再認定に関する情報が [発行] セクションに追加されました。 |[マニフェストのアクセス許可](resources/schema/manifest-schema.md#permissions)|
 | 07/16/2018 | タブ構成ページには、より多くの領域が割り当てられている。 | [タブ構成ページが大幅に高い](tabs/design/tabs.md)|
-| 07/12/2018 | ゲスト アクセスに関する情報。 | [Microsoft Teams でのゲスト アクセス](https://docs.microsoft.com/microsoftteams/guest-access#guest-access-overview)|
+| 07/12/2018 | ゲスト アクセスに関する情報。 | [Microsoft Teams でのゲスト アクセス](/microsoftteams/guest-access#guest-access-overview)|
 | 06/07/2018 | テナント アプリ カタログMicrosoft Teams情報が追加されました。 | [アプリをMicrosoft Teamsする](~/publishing/apps-publish.md)|
 | 05/29/2018 | アダプティブ カードは、Teams。 | [Teams でのアダプティブ カードのアクション](task-modules-and-cards/cards/cards-reference.md) |
 | 04/17/2018 | replyToID がペイロードに追加され、カード `Invoke` アクションが `MessageBack` 実行されます。 これは、カードアクションが送信されたメッセージを更新する必要がある場合に特に便利です。 | [カードアクション](~/concepts/cards/cards-actions.md)|
@@ -154,7 +156,6 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 | **Date** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
-|04/08/2021| アプリのカスタマイズ機能は、開発者プレビューで利用できます。|[アプリTeams、App](concepts/design/design-teams-app-overview.md#app-customization) [Studio の概要、マニフェスト](concepts/build-and-test/app-studio-overview.md#connectors)スキーマを[設計する](resources/schema/manifest-schema-dev-preview.md) |
 |03/05/2021| タブのエクスペリエンスを囲む余白がなくなりました。 タブ開発者は、アプリを確認して更新する必要があります。 | [タブ余白の削除](resources/removing-tab-margins.md) |
 
 詳細については、「パブリック開発者[向けプレビュー」を参照Teams。](~/resources/dev-preview/developer-preview-intro.md)

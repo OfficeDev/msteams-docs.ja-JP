@@ -5,16 +5,16 @@ ms.topic: reference
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: eeffd97c5cbe62b66cab343bfe650b7f617ce9f2
-ms.sourcegitcommit: 808a203fb963eeade3a8e32db88d64677e37df7a
+ms.openlocfilehash: c0b8b6f5baa163d2292227f7d361b6d12849edec
+ms.sourcegitcommit: 3475927e1c7964dc25c363d0d2026e5c898c97c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "52304013"
+ms.lasthandoff: 05/12/2021
+ms.locfileid: "52336518"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>リファレンス: マニフェスト スキーマのMicrosoft Teams
 
-このTeamsマニフェストは、アプリが製品に統合する方法Microsoft Teamsします。 マニフェストは、 でホストされるスキーマに準拠している必要があります [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) 。 以前のバージョン 1.0-1.4 もサポートされています (URL で "v1.x" を使用)。
+このTeamsマニフェストは、アプリが製品に統合する方法Microsoft Teamsします。 マニフェストは、 でホストされるスキーマに準拠している必要があります [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) 。 以前のバージョン 1.0、1.1,..., 1.6 もサポートされています (URL で "v1.x" を使用)。
 
 次のスキーマ サンプルは、すべての機能拡張オプションを示しています。
 
