@@ -1,23 +1,23 @@
 ---
-title: カスタム チャネルとグループ タブを作成し、Node.jsの Yeoman Generator を使用Microsoft Teams
+title: Node.jsとヨーマンジェネレータを使用したカスタムチャンネルとグループタブを作成Microsoft Teams
 author: laujan
-description: Yeoman Generator を使用してチャネルとグループ タブを作成するクイック スタート Microsoft Teams。
+description: Microsoft Teams用の Yeoman ジェネレータを使用してチャネルとグループ タブを作成するクイック スタート ガイドです。
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 962a558014a3bc84010860082df6891bb48c7715
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 559393884e3b8a4aad1787ea4ca8f9f4de54d151
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020304"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566647"
 ---
-# <a name="create-a-custom-channel-and-group-tab-with-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>カスタム チャネルとグループ タブを作成し、Node.jsの Yeoman Generator を使用Microsoft Teams
+# <a name="create-a-custom-channel-and-group-tab-using-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>Node.jsとYeoman ジェネレータを使用して、カスタムチャネルとグループタブを作成Microsoft Teams
 
 >[!NOTE]
->このクイック スタートは、Microsoft OfficeDev Microsoft Teams リポジトリにあるビルド Your First [Microsoft Teams](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) App Wiki で説明されている手順にGitHubします。
+>このクイック スタートは、Microsoft OfficeDev GitHub リポジトリにある[最初のMicrosoft Teams アプリ](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)Wiki で説明されている手順に従います。
 
-このクイック スタートでは[、Yeoman](https://github.com/OfficeDev/generator-teams/)ジェネレーターを使用してカスタム チャネルとグループ タブを作成Teams説明します。
+このクイック スタートでは、 [Yeoman ジェネレーター を](https://github.com/OfficeDev/generator-teams/)使用してカスタム チャネルとグループ タブを作成する方法Teamsします。
 
 [!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
 
@@ -25,26 +25,26 @@ ms.locfileid: "52020304"
 
 矢印キーを使用して、構成可能なタブを選択します。
 
-**Tab に使用するスコープは何ですか?**
+**Tab に使用するスコープを指定してください。**
 
-チームチャットまたはグループ チャットを選択できます
+チームチャットやグループチャットを選択できます。
 
-**このタブをオンラインで使用SharePointしますか?(Y/n)** 
+**このタブをオンラインで使用できるようにしますSharePoint?(Y/n)** 
 
-**[n] を選択します**。
+n を選択します。
 
 >[!IMPORTANT]
->このクイック スタートで参照されるパス コンポーネント **yourDefaultTabNameTab** は、[既定のタブ名] のジェネレーターに入力した値に Tab という単語を加 **えた値です**。
+>このクイック スタートで参照されているパス コンポーネント **の DefaultTabNameTab** は、ジェネレータで **[既定のタブ名]** に入力した値 **と、Tab** という語を使用して入力した値です。
 >
->例: DefaultTabName: **MyTab**  =>  **/MyTabTab/**
+>たとえば、デフォルトタブ名:**マイタブ**  =>  **/マイタブタブ/**
 
-プロジェクト ディレクトリで、次の場所に移動します。
+プロジェクト ディレクトリで、次のディレクトリに移動します。
 
 ```bash
 ./src/app/scripts/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.tsx
 ```
 
-そこで、タブ ロジックを見つける必要があります。 メソッドを `render()` 見つけて、コンテナー コードの上部に `<div>` 次のタグとコンテンツを `<PanelBody>` 追加します。
+そこでタブロジックを見つけることができます。 メソッドを探 `render()` し、次の `<div>` タグとコンテンツをコンテナー コードの先頭に追加 `<PanelBody>` します。
 
 ```html
     <PanelBody>
@@ -62,31 +62,36 @@ ms.locfileid: "52020304"
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
-タブ構成ページを表示するには、 に移動します `https://localhost:3007/<yourDefaultAppNameTab>/config.html` 。 以下のように表示されます。
+タブの構成ページを表示するには、 に移動 `https://localhost:3007/<yourDefaultAppNameTab>/config.html` します。 以下のように表示されます。
 
 ![構成ページのスクリーンショット](~/assets/images/tab-images/configurationPage.png)
 
-## <a name="establish-a-secure-tunnel-to-your-tab"></a>タブへのセキュリティで保護されたトンネルを確立する
+## <a name="establish-a-secure-tunnel-to-your-tab"></a>タブへの安全なトンネルを確立する
 
-Microsoft Teams完全にクラウドベースの製品であり、HTTPS エンドポイントを使用してタブ コンテンツをクラウドから利用できる必要があります。 Teamsローカル ホスティングは許可されていないので、タブをパブリック URL に発行するか、ローカル ポートをインターネットに接続する URL に公開するプロキシを使用する必要があります。
+Microsoft Teamsは完全にクラウドベースの製品であり、HTTPS エンドポイントを使用してクラウドからタブ コンテンツを利用できるようにする必要があります。 Teamsローカル ホスティングを許可しないため、タブをパブリック URL に公開するか、インターネットに接続する URL にローカル ポートを公開するプロキシを使用する必要があります。
 
-タブ拡張機能をテストするには、このアプリケーションに組み込まれる [ngrok](https://ngrok.com/docs)を使用します。 Ngrok はリバース プロキシ ソフトウェア ツールで、ローカルで実行中の Web サーバーのパブリックに利用可能な HTTPS エンドポイントへのトンネルを作成します。 サーバーの Web エンドポイントは、ローカル コンピューター上の現在のセッション中に利用できます。 コンピューターがシャットダウンまたはスリープ状態になった場合、サービスは使用できなくなりました。
+タブ拡張をテストするには、このアプリケーションに組み込まれている [ngrok](https://ngrok.com/docs)を使用します。 Ngrok はリバース プロキシ ソフトウェア ツールで、ローカルで実行されている Web サーバーの一般に公開されている HTTPS エンドポイントへのトンネルを作成します。 サーバーの Web エンドポイントは、ローカル コンピューター上の現在のセッション中に使用できます。 マシンがシャットダウンまたはスリープ状態になると、サービスは利用できなくなります。
 
-コマンド プロンプトで localhost を終了し、次のコマンドを入力します。
+コマンド プロンプトで localhost を終了し、次のように入力します。
 
 ```bash
 gulp ngrok-serve
 ```
 
 > [!IMPORTANT]
-> タブが Microsoft チームにアップロードされ、正常に保存された後は、タブ ギャラリーでタブを表示し、タブ バーに追加し、ngrok トンネル セッションが終了するまで操作できます。 ngrok セッションを再起動する場合は、新しい URL でアプリを更新する必要があります。
+> タブが Microsoft チームにアップロードされ、正常に保存された後、タブ ギャラリーで表示し、タブ バーに追加して、ngrok トンネル セッションが終了するまで操作できます。 ngrok セッションを再開する場合は、新しい URL でアプリを更新する必要があります。
 
-## <a name="upload-your-application-to-teams"></a>アップロードを使用してアプリケーションをTeams
+## <a name="upload-your-application-to-teams"></a>アプリケーションをTeamsにアップロードする
 
-- クライアントを開Microsoft Teamsします。 Web ベースのバージョン [を使用する](https://teams.microsoft.com) 場合は、ブラウザーの開発者ツールを使用してフロントエンド コードを [検査できます](~/tabs/how-to/developer-tools.md)。
-- 左側の *[YourTeams]* パネルで、タブのテストに使用するチームの横にあるメニューを選択し、[チームの管理 `...` ] **を選択します**。
-- メイン パネルでタブ バーから **[** アプリ]を選択しアップロードの右下隅にあるカスタム アプリを選択します。
-- プロジェクト ディレクトリを開き **、./package** フォルダーを参照し、アプリ パッケージの zip フォルダーを選択し、[開く] を選択 **します**。 タブがアプリにアップロードTeams。
-- チームに戻り、タブを表示するチャネルを選択し、タブ バーから [➕] を選択し、ギャラリーからタブを選択します。
-- タブを追加するには、指示に従います。チャネル/グループ タブのカスタム構成ダイアログがあります。
-- [ **保存]** を選択すると、タブがチャネルのタブ バーに追加されます。
+- Microsoft Teams クライアントを開きます。 Web ベースの [バージョン](https://teams.microsoft.com) を使用する場合は、ブラウザーの [開発者ツール](~/tabs/how-to/developer-tools.md)を使用してフロントエンド コードを検査できます。
+- 左側の *[YourTeams]* パネルで、 `...` タブのテストに使用しているチームの横にあるメニューを選択し、[ **チームの管理**]を選択します。
+- メインパネルでタブバーから **「アプリ**」を選択し、ページの右下隅にある **カスタムアプリアップロード** 選択します。
+- プロジェクト ディレクトリを開き **、./package** フォルダを参照し、アプリ パッケージの zip フォルダーを選択して 、[ **開く**] を選択します。 タブがTeamsにアップロードされます。
+- チームに戻り、タブを表示するチャンネルを選択し、タブバーから➕選択して、ギャラリーからタブを選択します。
+- タブを追加する手順に従います。チャンネル/グループタブにはカスタム設定ダイアログがあります。
+- [ **保存]** を選択すると、チャンネルのタブバーにタブが追加されます。
+
+## <a name="next-step"></a>次の手順
+
+> [!div class="nextstepaction"]
+> [ASP.NETCore を使用してカスタム チャネルとグループ タブを作成する](~/tabs/quickstarts/create-channel-group-tab-dotnet-core.md)

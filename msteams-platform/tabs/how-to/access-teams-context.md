@@ -4,27 +4,27 @@ description: タブにユーザー コンテクストを付与する方法を説
 localization_priority: Normal
 ms.topic: how-to
 keywords: チーム タブ ユーザー コンテキスト
-ms.openlocfilehash: 8e5a55c55c0249c5bf15eca011bfb8f604658d0a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 0d9224a941ae4f6a5ad125c93d5877ec49b6df28
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020402"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566867"
 ---
 # <a name="get-context-for-your-microsoft-teams-tab"></a>Microsoft Teams タブのコンテキストを取得する
 
-お使いのタブでは、関連するコンテンツを表示するためにコンテキスト情報が必要になる場合があります。
+タブには、関連するコンテンツを表示するためにコンテキスト情報が必要です。
 
-* ユーザー、チーム、会社に関する基本情報が必要な場合もあります。
-* ロケール情報やテーマ情報が必要な場合もあります。
-* お使いのタブは、このタブの中にあるものを識別する `entityId` または `subEntityId` を読む必要がある場合があります。
+* ユーザー、チーム、または会社に関する基本情報。
+* ロケールとテーマ情報。
+* `entityId` `subEntityId` このタブの内容を示す、または を読んでください。
 
 ## <a name="user-context"></a>ユーザー コンテキスト
 
-ユーザー、チーム、会社に関するコンテクストは、以下のような場合に特に役立ちます。
+ユーザー、チーム、または会社に関するコンテキストは、特に次のような場合に役立ちます。
 
-* アプリ内のリソースを作成したり、指定したユーザーやチームと関連付ける必要がある場合。
-* Azure Active Directory やその他の ID プロバイダーに対する認証フローを開始したいが、ユーザーにユーザー名の再入力を要求したくない場合。 (Microsoft Teams タブでの認証に関する詳細については、「[Microsoft Teams タブでユーザーを認証する](~/concepts/authentication/authentication.md)」を参照してください)。
+* アプリ内のリソースを作成または関連付けるには、指定したユーザーまたはチームを使用します。
+* Azure Active Directoryまたは他の ID プロバイダーに対して認証フローを開始し、ユーザーにユーザー名の再入力を要求しない。 [Microsoft Teams] タブでの認証の詳細については[、「Microsoft Teams タブでユーザーを認証する」を](~/concepts/authentication/authentication.md)参照してください。
 
 > [!IMPORTANT]
 > このユーザー情報は、スムーズなユーザー エクスペリエンスを提供するのに役立ちますが、身分証明書として使用するべきでは *ありません*。 たとえば、攻撃者が “悪いブラウザー” であなたのページをロードし、有害な情報や要求をレンダリングする可能性があります。
@@ -33,8 +33,8 @@ ms.locfileid: "52020402"
 
 コンテキスト情報には 2 つの方法でアクセスできます。
 
-* URL プレースホルダー値を挿入する
-* [Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) を使用する
+* URL プレースホルダ値を挿入します。
+* Microsoft Teams [JavaScript クライアント SDK](/javascript/api/overview/msteams-client)を使用します。
 
 ### <a name="getting-context-by-inserting-url-placeholder-values"></a>URL プレースホルダー値を挿入してコンテキストを取得する
 
@@ -48,23 +48,19 @@ ms.locfileid: "52020402"
 * {theme}: `default`、`dark`、`contrast` などの現在の UI テーマ。
 * {groupId}: タブが存在する Office 365 グループの ID です。
 * {tid}: 現在のユーザーの Azure AD テナント ID。
-* {locale}: ユーザーの現在のロケールを languageId-countryId として形式化したもの (例: en-us)。
+* {ロケール}: 言語として書式設定されたユーザーの現在のロケールId-国Id。 例えば、en-us。
 
 >[!NOTE]
 >以前の `{upn}` プレースホルダーは、現在では非推奨となっています。 後方互換性のため、現在は `{loginHint}` の同義語となっています。
 
-たとえば、タブ マニフェストで `configURL` 属性を設定する場合を仮定
+たとえば、タブ マニフェストで `configURL` 、属性を に設定するとします `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"` 。
 
-`"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"`
+* ユーザー名は 「user@example.com」 です。
+* 彼らの会社のテナントIDは'e2653c-etc'です。
+* id '00209384-etc' のOffice 365グループのメンバーです。
+* ユーザーはテーマを「暗」にTeams設定しました。
 
-また、サインインしたユーザーには以下の属性があります。
-
-* ユーザーネームは ‘user@example.com’。
-* 会社のテナント ID は ‘e2653c-etc’。
-* これらのユーザーは、ID ‘00209384-etc’ の Office 365 グループのメンバーです。
-* ユーザーは Teams のテーマを ‘ダーク’ に設定しています。
-
-タブを構成する場合、Teams はこの URL を呼び出します。
+ユーザーがタブを構成すると、Teamsは次の URL を呼び出します。
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
@@ -72,7 +68,7 @@ ms.locfileid: "52020402"
 
 [Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) を使用して `microsoftTeams.getContext(function(context) { /* ... */ })` を呼び出す方法でも、上記の情報を取得できます。
 
-このコンテキスト変数は、次の例のようになるはずです。
+コンテキスト変数は、次の例のようになります。
 
 ```json
 {
@@ -102,7 +98,7 @@ ms.locfileid: "52020402"
     "hostClientType": "The type of host client. Possible values are android, ios, web, desktop, rigel",
     "frameContext": "The context where tab URL is loaded (for example, content, task, setting, remove, sidePanel)",
     "sharepoint": "The SharePoint context is available only when hosted in SharePoint",
-    "tenantSKU": "The license type for the current user tenant",
+    "tenantSKU": "The license type for the current user tenant. Possible values are enterprise, free, edu, unknown",
     "userLicenseType": "The license type for the current user",
     "parentMessageId": "The parent message ID from which this task module is launched",
     "ringId": "The current ring ID",
@@ -121,12 +117,12 @@ ms.locfileid: "52020402"
 
 プライベート チャネルでコンテンツ ページが読み込まれると、チャネルのプライバシーを保護するために、`getContext` 呼び出しから受信するデータは暗号化されます。 コンテンツ ページがプライベート チャネルにある場合、次のフィールドが変更されます。 以下のいずれかの値を使用している場合は、`channelType` フィールドをチェックして、ページがプライベート チャネルでロードされているか判断し、適切に対応する必要があります。
 
-* `groupId` - プライベート チャンネルでは未定義
-* `teamId` - プライベート チャネルの threadId に設定
-* `teamName` - プライベート チャネルの名前に設定
-* `teamSiteUrl` - プライベート チャネルに固有の SharePoint サイトの URL に設定
-* `teamSitePath` - プライベート チャネルに固有の SharePoint サイトの特徴的なパスに設定
-* `teamSiteDomain` - プライベート チャネルに固有の SharePoint サイト ドメインの特徴的なドメインに設定
+* `groupId`: プライベート チャネルの未定義
+* `teamId`: プライベート チャネルのスレッド ID に設定します。
+* `teamName`: プライベート チャネルの名前に設定します。
+* `teamSiteUrl`: プライベート チャネル用に、個別の一意のSharePoint サイトの URL に設定します。
+* `teamSitePath`: プライベート チャネル用の個別の一意のSharePoint サイトのパスに設定します。
+* `teamSiteDomain`: プライベート チャネルの個別の一意SharePointサイト ドメインのドメインに設定します。
 
 > [!Note]
 >  teamSiteUrl は、標準的なチャネルにも有効に機能します。

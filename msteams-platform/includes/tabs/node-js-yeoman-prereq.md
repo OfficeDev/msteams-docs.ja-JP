@@ -1,85 +1,85 @@
 ## <a name="prerequisites"></a>前提条件
 
-- このクイック スタートを完了するには、カスタム アプリのアップロードOffice 365許可を有効にしたテナントとチーム *が必要* です。 詳細については、「Prepare [your Office 365 テナント」を参照してください](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
+- このクイック スタートを完了するには、Office 365テナントと、カスタム アプリの *アップロードを許可する* を有効にして構成されたチームが必要です。 詳細については[、「Office 365テナントの準備」を](~/concepts/build-and-test/prepare-your-o365-tenant.md)参照してください。
 
-  - 現在アカウントをお持ちOffice 365場合は、開発者プログラムから無料サブスクリプションOffice 365できます。 サブスクリプションは、継続的な開発に使用している限りアクティブなままです。 「[開発者プログラムへようこそOffice 365」を参照してください](https://docs.microsoft.com/office/developer-program/microsoft-365-developer-program)。
+  - 現在Office 365アカウントをお持ちの場合は、Office 365デベロッパープログラムを通じて無料のサブスクリプションにサインアップできます。 サブスクリプションは、継続的な開発に使用している限り、アクティブなままになります。 [「Office 365開発者プログラムへようこそ](/office/developer-program/microsoft-365-developer-program)」を参照してください。
 
-さらに、このプロジェクトでは、次のコードが開発環境にインストールされている必要があります。
+さらに、このプロジェクトでは、開発環境に次のインストールが必要です。
 
-- 任意のテキスト エディターまたは IDE。 無料でインストール[して使用Visual Studio Code](https://code.visualstudio.com/download)できます。
+- 任意のテキスト エディタまたは IDE。 [Visual Studio Code](https://code.visualstudio.com/download)を無料でインストールして使用できます。
 
-- [Node.js/npm](https://nodejs.org/en/). 最新の LTS バージョンを使用する必要があります。 ノード ノード パッケージ マネージャー (npm) がインストールされたシステムにインストールNode.js。
+- [Node.js/npm](https://nodejs.org/en/). 最新の LTS バージョンを使用する必要があります。 ノード パッケージ マネージャー (npm) は、Node.jsのインストールと共にシステムにインストールされます。
 
-- インストールが正常に完了したらNode.jsに次のように入力して [、Yeoman](https://yeoman.io/) パッケージと [gulp-cli](https://www.npmjs.com/package/gulp-cli) パッケージをインストールします。
+- Node.js正常にインストールできたら、コマンド プロンプトに次のように入力して [、Yeoman](https://yeoman.io/) と [gulp-cli](https://www.npmjs.com/package/gulp-cli) パッケージをインストールします。
 
-```bash
-npm install yo gulp-cli --global
-```
+    ```bash
+    npm install yo gulp-cli --global
+    ```
 
-- コマンド プロンプトにMicrosoft Teamsを入力して、アプリ ジェネレーターをインストールします。
+- コマンド プロンプトで次のように入力して、Microsoft Teams Apps ジェネレーターをインストールします。
 
-```bash
-npm install generator-teams --global
-```
+    ```bash
+    npm install generator-teams --global
+    ```
 
 ## <a name="generate-your-project"></a>プロジェクトを生成する
 
-- コマンド プロンプトを開き、タブ プロジェクトの新しいディレクトリを作成します。
+- コマンド プロンプトを開き、タブ プロジェクト用の新しいディレクトリを作成します。
 
-- ジェネレーターを起動するには、新しいディレクトリに移動し、次のコマンドを入力します。
+- ジェネレータを起動するには、新しいディレクトリに移動し、次のコマンドを入力します。
 
-```bash
-yo teams
-```
+    ```bash
+    yo teams
+    ```
 
-- 次に、アプリケーションのファイルで使用される一連の値manifest.js **します** 。
+- 次に、アプリケーションの **manifest.jsファイル** で使用される一連の値を指定します。
 
-![ジェネレーターの開くスクリーンショット](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
+    ![ジェネレータの開くスクリーンショット](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
-**ソリューション名は何ですか?**
+    **ソリューション名は何ですか?**
 
-これはプロジェクト名です。 Enter キーを押すと、候補の名前を受け入れできます。
+    これはプロジェクト名です。 Enter キーを押すと、候補名を受け入れることができます。
 
-**ファイルをどこに保存しますか?**
+    **ファイルをどこに保存しますか?**
 
-現在、プロジェクト ディレクトリにいます。 Enter キーを押します。
+    現在プロジェクト ディレクトリに入っています。 Enter キーを押します。
 
-**アプリ プロジェクトMicrosoft Teamsタイトル**
+    **Microsoft Teams アプリ プロジェクトのタイトル**
 
-これはアプリ パッケージ名であり、アプリ マニフェストと説明で使用されます。
+    これはアプリ パッケージ名で、アプリ マニフェストと説明で使用されます。
 
-**(会社) の名前(最大 32 文字)**
+    **あなたの(会社の)名前?(最大 32 文字)**
 
-会社名はアプリ マニフェストで使用されます。
+    会社名はアプリ マニフェストで使用されます。
 
-<br>**どのマニフェスト バージョンを使用しますか?**
+    **どのマニフェスト バージョンを使用しますか?**
 
-既定のスキーマを選択します。
+    既定のスキーマを選択します。
 
-**クイック スキャフォールディング(Y/n)**
+    **クイック足場?(Y/n)**
 
-既定値は yes です。 **n と入力** して Microsoft パートナー ID を入力します。
+    デフォルトは yes です。 **n** と入力して、マイクロソフト パートナー ID を入力します。
 
-**Microsoft パートナー ID をお持ちの場合は、Microsoft パートナー ID を入力してください。(スキップする場合は空白のままにする)**
+    **マイクロソフト パートナー ID をお持ちの場合は、その Id を入力してください。(スキップするには空白のままにします)**
 
-このフィールドは必須ではありません。既に Microsoft パートナー ネットワークに参加している場合にのみ [使用してください](https://partner.microsoft.com)。
+    このフィールドは必須ではなく、既に [Microsoft パートナー ネットワーク](https://partner.microsoft.com)に参加している場合にのみ使用してください。
 
-**プロジェクトに何を追加しますか?**
+    **プロジェクトに追加する項目を指定してください。**
 
-[( &ast; ) ] タブを選択します。
+    &ast;タブを選択します。
 
-**このソリューションをホストする URL**
+    **このソリューションをホストする URL?**
 
-既定では、ジェネレーターは Azure Web サイトの URL を提案します。 アプリをローカルでテストするだけなので、このクイック スタートを完了するために有効な URL は必要ありません。
+    既定では、ジェネレーターは Azure Web サイトの URL を提案します。 アプリをローカルでテストするだけなので、このクイック スタートを完了するために有効な URL は必要ありません。
 
-**テスト フレームワークと初期テストを含めるには?(y/N)**
+    **テスト フレームワークと初期テストを含めますか?(y/N)**
 
-この **プロジェクトの** テスト フレームワークを含めないを選択します。 既定値は yes です。 **n と入力します**。
+    このプロジェクトのテスト フレームワークを含 **めないように** 選択します。 デフォルトは yes です。 **n** と入力します。
 
-**テレメトリに Azure Applications Insights を使用しますか?(y/N)**
+    **テレメトリに Azure アプリケーションの洞察を使用しますか?(y/N)**
 
-Azure **Application** [Insights を含めないを選択します](/azure-docs/articles/azure-monitor/app/app-insights-overview.md)。 既定値は no です。 **n と入力します**。
+    Azure アプリケーション [インサイト](/azure-docs/articles/azure-monitor/app/app-insights-overview.md)を含 **まない** 場合に選択します。 デフォルトは no です。 **n** と入力します。
 
-**既定のタブ名 (最大 16 文字)?**
+    **デフォルトのタブ名(最大16文字)?**
 
-タブの名前を指定します。このタブ名は、ファイル/URL パス コンポーネントとしてプロジェクト全体で使用されます。
+    タブに名前を付けます。このタブ名は、プロジェクト全体でファイル/URL パスコンポーネントとして使用されます。

@@ -5,12 +5,12 @@ description: Webhook とコネクタによって Web サービスがどのよう
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 6ab1abc33ca7b0280892646bed52d9ee77a8c865
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: e36b73c0eaed5068311dae6c1ef8fdc073432334
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52018363"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566804"
 ---
 # <a name="what-are-webhooks-and-connectors"></a>Webhook とコネクタとは
 
@@ -22,7 +22,7 @@ Webhook とコネクタを使用すると、Web サービスを、Microsoft Team
 
 送信 Webhook はチーム単位で構成され、通常の Teams アプリの一部として扱うことはできません。 送信 Webhook は、大量の情報収集または情報交換を必要としないチーム固有のワークロードを完成させるのに最も適しています。
 
-「[送信 Webhook を作成する](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)」を参照してください。
+詳細については、「送信 [webhook の作成](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)」を参照してください。
 
 ## <a name="connectors"></a>コネクタ
 
@@ -32,10 +32,10 @@ Webhook とコネクタを使用すると、Web サービスを、Microsoft Team
 
 受信 Webhook は、最も簡単な種類のコネクタです。 チームのどのチャネルにおいても (チームに対して有効になっている場合)、適切に書式設定された JSON に対応し、そのチャネルにメッセージを挿入する HTTPS エンドポイントを公開することができます。 これは、チャネルをサービスにすばやく簡単に接続する方法であり、特定のチームの固有のシナリオで使用するのに最適です。 たとえば、アラート送信が行えるように、DevOps チャネルで受信 Webhook を作成し、ビルド、展開、監視サービスを構成することができます。
 
-「[受信 Webhook を作成する](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)」を参照してください。
+詳細については、「受信 [webhook の作成](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)」を参照してください。
 
 ### <a name="office-365-connectors"></a>Office 365 コネクタ
 
 Office 365 コネクタを使用すると、受信 Webhook のカスタム構成ページの作成ができ、Teams アプリの一部としてパッケージ化することができます。 その後、そのアプリを App Store など、より広範囲に配布することができます。 通常、Office 365 コネクタ カードを使用してメッセージを送信します。また、そのメッセージにカード アクションの制限一式を追加することもできます。 たとえば、天気のコネクタを使用すると、ユーザーが翌日の天気に関する更新を受信する場所と時刻を選択できるようになります。 Office 365 コネクタの構成はチャネルのレベルで行われますが、インストールはチームのレベルで行われます。
 
-「[Office 365 コネクタを作成する](~/webhooks-and-connectors/how-to/connectors-creating.md)」を参照してください。
+詳細については、「 [Office 365 コネクタの作成](~/webhooks-and-connectors/how-to/connectors-creating.md)」を参照してください。

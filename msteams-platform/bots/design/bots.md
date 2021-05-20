@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: d2967abdc6c0055eca8c94ed4e4a7fdf1bdba322
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: da289b37340f575eda8eb858b13810df48783728
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101696"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566146"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Microsoft Teams のボットをデザインする
 
@@ -33,7 +33,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 * Teams の左側にある **[詳細]** アイコンを選択してアプリのフライアウトを使用する。
 * 新規チャットや作成ボックスに@メンションを使用する (次の例ではグループ チャットでのやり方を示しています)。
 
-:::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="例では、@メンションを使用してグループ チャットにボットを追加する方法をご紹介します。" border="false":::
+    :::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="例では、@メンションを使用してグループ チャットにボットを追加する方法をご紹介します。" border="false":::
 
 ## <a name="introduce-a-bot"></a>ボットの導入
 
@@ -41,7 +41,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 ### <a name="welcome-message-in-a-one-on-one-chat"></a>1 対 1 のチャットでのウェルカム メッセージ
 
-個人的なコンテキストでは、ウェルカム メッセージはボットのトーンを決めるものです。 メッセージには、挨拶、ボットができること、対話方法の提案 (「...　について聞いてみてください」など) が含まれます。 可能であれば、これらの提案は、サインインしなくても保存された応答を返す必要があります。
+個人的なコンテキストでは、ウェルカム メッセージはボットのトーンを決めるものです。 メッセージには、案内応答、ボットができること、および対話方法に関するいくつかの提案が含まれます。 たとえば、「...」について私に尋ねてみてください。 可能であれば、これらの提案は、サインインしなくても保存された応答を返す必要があります。
 
 :::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="個人アプリでのボット導入例を示します。" border="false":::
 
@@ -61,14 +61,14 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 ### <a name="tours"></a>ツアー
 
-ウェルカム メッセージや "ヘルプ "コマンドのようなものにボットが応答する場合にツアーを含めることができます。 ボットにできることを説明するには、ツアーが最も効果的です。 必要に応じて、アプリのその他の機能を説明するのにも最適です (メッセージング拡張機能のスクリーンショットを掲載するなど)。
+ウェルカム メッセージや "ヘルプ "コマンドのようなものにボットが応答する場合にツアーを含めることができます。 ボットにできることを説明するには、ツアーが最も効果的です。 該当する場合は、アプリの他の機能を説明する場合にも適しています。 たとえば、メッセージング拡張機能のスクリーンショットを含めます。
 
 > [!IMPORTANT]
 > ログインしなくてもツアーに参加できることが必要です。
 
 #### <a name="one-on-one-chats"></a>1 対 1 のチャット
 
-個人用アプリでは、カルーセルでボットやお使いのアプリのその他の機能の概要を効果的に伝えることができます。 ユーザーがボットのコマンドを試すことができるボタンを含めることが推奨されます (例：**タスクを作成する**)。
+個人用アプリでは、カルーセルでボットやお使いのアプリのその他の機能の概要を効果的に伝えることができます。 ボタンを含めると、ユーザーはボットコマンドを試すことができます。 たとえば、 **タスクの作成**。
 
 :::image type="content" source="../../assets/images/bots/bot-tour-personal.png" alt-text="1 対 1 のチャットでのボット ツアーの例を示します。" border="false":::
 
@@ -134,7 +134,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 メッセージやクエリに応じて、相手がボットに何を求めているかをキャプチャする、意図の認識を目指してボットをデザインします。 意図は、メッセージやクエリを、アクションの影響を受ける 1 つ以上のデータ オブジェクトのある単一のアクションとして分類します。 
 
-次の例は、ボットに送信されるメッセージに含まれるユーザーの意図とデータの概要です。
+次の例では、ボットに送信されるメッセージのユーザーインテントとデータの概要を示します。
 
 :::row:::
    :::column span="":::
@@ -152,7 +152,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 ボットとのチャットでのユーザーの発言をご紹介します。 これは、さまざまな場所や組織でユーザーが増えていく中で、継続的で反復的な手順です。 Microsoft Language Understanding (LUIS) を使用して、ボットの言語認識や意図のマッピングを調節することができます。
 
-* [LUIS を理解する](https://docs.microsoft.com/azure/cognitive-services/luis/artificial-intelligence): LUIS が AI を使用してアプリのデータに自然言語理解 (NLU) を提供する方法をご紹介します。
+* [LUIS を理解する](/azure/cognitive-services/luis/artificial-intelligence): LUIS が AI を使用してアプリのデータに自然言語理解 (NLU) を提供する方法をご紹介します。
 * [LUIS との統合](https://www.luis.ai/): 機械学習モデルを作成する複雑な手順を通すことなく、ボットに自然言語機能を追加します。
 
 ## <a name="use-cases"></a>使用例
@@ -167,7 +167,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 ボットは、完全な要求や質問をサポートすることができますが、複数回の対話を処理することもできる必要があります。 次の手順の可能性を予測することで、ユーザーは (包括的な要求を作成することを想定するのではなく) 完全なタスク フローをより簡単に作成できます。
 
-次の例では、ボットはそれぞれのメッセージに対して、次にしたいことのオプションを応答します。
+次の例では、ボットは次に実行する必要があるオプションを使用して各メッセージに応答します。
 
 :::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="ボットとの複数回の対話を示す例。" border="false":::
 
@@ -175,7 +175,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 プロアクティブなメッセージングでは、ボットは個人、グループ チャット、またはチャネルに関連する通知を特定の頻度で送信するダイジェストのように機能します。 ボットは、ドキュメントに何か変更があった場合や、作業項目を閉じた場合に、メッセージを送信することができます。
 
-ユーザーが、ボットが別のチャネルでメッセージを送ってきたことをトースト通知で受け取る例を次に示します。
+次の例では、ボットが別のチャネルでメッセージを送信したというトースト通知をユーザーが取得します。
 
 :::image type="content" source="../../assets/images/bots/bot-proactive-message-toast.png" alt-text="ボットが他のチャネルからユーザーにプロアクティブにメッセージを送るトーストを示す例。" border="false":::
 
@@ -185,7 +185,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 ### <a name="use-tabs-with-bots"></a>ボットでタブを使用する
 
-タブがあることで、ボットをより使いやすくすることができます。 たとえば、ボットが作業項目を作成できる場合、それらのアイテムをタブ内の中心的な場所に表示できると良いでしょう。詳細については、[タブのデザイン](../../tabs/design/tabs.md) を参照してください。
+タブがあることで、ボットをより使いやすくすることができます。 たとえば、ボットが作業項目を作成できる場合、これらのすべての項目をタブ内の中央の場所に表示するとよいでしょう。詳細については、「 [タブのデザイン](../../tabs/design/tabs.md)」を参照してください。
 
 :::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="タブを使用してボットのコンテンツを整理する方法を示す例。" border="false":::
 
@@ -201,7 +201,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 ### <a name="content"></a>コンテンツ
 
-:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="明確なペルサを確立するためのボットのベスト プラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="明確なペルソナを確立するためのボットのベストプラクティスを示す例。" border="false":::
 
 #### <a name="do-establish-a-clear-persona"></a>するべきこと: 明確なペルソナの設定
 
@@ -211,7 +211,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="ボットが実行できる操作を明確に伝える例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="ボットでできることを明確に伝える例。" border="false":::
 
 #### <a name="do-clearly-convey-what-your-bot-can-do"></a>するべきこと: ボットにできることを明確に伝達する
 
@@ -219,7 +219,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="ボットの機能をあいまいにしない例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="ボットの機能をあいまいにしないようにする例。" border="false":::
 
 #### <a name="dont-obscure-your-bots-features"></a>してはいけないこと: ボットの機能をぼかす
 
@@ -230,7 +230,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="ボットを表示する例は、質問以外を認識する必要があります。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="ボットが質問以外を認識する例。" border="false":::
 
 #### <a name="do-recognize-non-questions"></a>するべきこと: ノンクエスチョンを認識する
 
@@ -238,7 +238,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="単純なボット メッセージに対する不器用な応答を回避する必要がある例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="単純なボット メッセージに対する不器用な応答を避ける必要があることを示す例。" border="false":::
 
 #### <a name="dont-miss-out-on-opportunities-to-delight"></a>してはいけないこと: 喜ぶチャンスを逃す
 
@@ -251,7 +251,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="ボットを表示する例は、ユーザーがボットの使い方を理解するのに役立ちます。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="ボットの例は、ユーザーがボットの使用方法を理解するのに役立ちます。" border="false":::
 
 #### <a name="do-provide-help"></a>するべきこと: ヘルプを用意する
 
@@ -259,7 +259,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="ボットを表示する例では、ユーザーを立ち往生してはならない。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="ボットがユーザーを孤立にすべきではないことを示す例。" border="false":::
 
 #### <a name="dont-leave-users-stranded"></a>してはいけないこと: ユーザーを立ち往生させる
 
@@ -272,7 +272,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="複雑な操作のためにボットでタスク モジュールまたはタブを使用できる例を示します。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="複雑な相互作用のためにボットでタスクモジュールまたはタブを使用できることを示す例。" border="false":::
 
 #### <a name="do-use-task-modules-or-tabs"></a>するべきこと: タスク モジュールやタブの使用
 
@@ -280,7 +280,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="ボットがマルチターン操作を回避する方法を示す例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="ボットがマルチターンの相互作用を回避する方法を示す例。" border="false":::
 
 #### <a name="dont-make-multi-turn-interactions-tedious"></a>してはいけないこと: 複数回の対話を面倒にする
 
@@ -301,7 +301,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="ボットがグループまたはユーザーに機密情報を表示しない方法を示す例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="ボットがグループや人に機密情報を公開しない方法を示す例。" border="false":::
 
 #### <a name="dont-some-content-isnt-meant-to-be-seen-by-everyone"></a>してはいけないこと: すべてのユーザーが閲覧できないコンテンツがある
 

@@ -1,22 +1,22 @@
 ---
-title: マニフェスト スキーマ参照
-description: アプリケーションのマニフェスト スキーマについてMicrosoft Teams
+title: マニフェスト スキーマリファレンス
+description: Microsoft Teamsのマニフェスト スキーマについて説明します。
 ms.topic: reference
 ms.author: lajanuar
 localization_priority: Normal
-keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: c0b8b6f5baa163d2292227f7d361b6d12849edec
-ms.sourcegitcommit: 3475927e1c7964dc25c363d0d2026e5c898c97c7
+keywords: チーム マニフェスト スキーマ
+ms.openlocfilehash: 6c7cd02480f78d19aed269b5d78d0c6f470621d2
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "52336518"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566447"
 ---
-# <a name="reference-manifest-schema-for-microsoft-teams"></a>リファレンス: マニフェスト スキーマのMicrosoft Teams
+# <a name="reference-manifest-schema-for-microsoft-teams"></a>リファレンス: Microsoft Teamsのマニフェスト スキーマ
 
-このTeamsマニフェストは、アプリが製品に統合する方法Microsoft Teamsします。 マニフェストは、 でホストされるスキーマに準拠している必要があります [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) 。 以前のバージョン 1.0、1.1,..., 1.6 もサポートされています (URL で "v1.x" を使用)。
+Teamsマニフェストは、アプリがMicrosoft Teams製品にどのように統合するかを示します。 マニフェストは、 でホストされているスキーマに準拠している必要があります [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) 。 以前のバージョン 1.0、1.1,..., 1.6 などもサポートされています (URL に "v1.x" を使用)。
 
-次のスキーマ サンプルは、すべての機能拡張オプションを示しています。
+次のスキーマ サンプルでは、すべての機能拡張オプションを示します。
 
 ## <a name="sample-full-manifest"></a>完全なマニフェストのサンプル
 
@@ -301,92 +301,92 @@ ms.locfileid: "52336518"
 
 ## <a name="schema"></a>$schema
 
-省略可能ですが、推奨される — string
+省略可能ですが推奨される文字列
 
-マニフェスト https:// JSON スキーマを参照する URL を指定します。
+マニフェストの JSON スキーマを参照する https:// URL。
 
-## <a name="manifestversion"></a>manifestVersion
+## <a name="manifestversion"></a>マニフェストバージョン
 
 **必須** — 文字列
 
-このマニフェストが使用しているマニフェスト スキーマのバージョン。 1.10 である必要があります。
+このマニフェストが使用しているマニフェスト スキーマのバージョン。 1.10 でなければなりません。
 
 ## <a name="version"></a>version
 
 **必須** — 文字列
 
-特定のアプリのバージョン。 マニフェストで何かを更新する場合は、バージョンもインクリメントする必要があります。 これにより、新しいマニフェストがインストールされた場合、既存のマニフェストが上書きされ、ユーザーは新しい機能を受け取ります。 このアプリがストアに送信された場合は、新しいマニフェストを再送信して再検証する必要があります。 アプリユーザーは、マニフェストが承認された後、数時間以内に新しい更新されたマニフェストを自動的に受信します。
+特定のアプリのバージョン。 マニフェスト内の何かを更新する場合は、バージョンもインクリメントする必要があります。 このようにして、新しいマニフェストをインストールすると、既存のマニフェストが上書きされ、ユーザーは新しい機能を受け取ります。 このアプリがストアに提出された場合、新しいマニフェストを再送信して再検証する必要があります。 アプリ ユーザーは、マニフェストが承認されてから数時間後に、更新された新しいマニフェストを自動的に受け取ります。
 
-アプリでアクセス許可の要求が変更された場合、ユーザーはアプリのアップグレードと再同意を求めるメッセージが表示されます。
+アプリがアクセス許可を要求する場合、ユーザーはアップグレードを要求され、アプリに再び同意するように求められます。
 
-このバージョンの文字列は [、semver](http://semver.org/) 標準 (MAJOR) に従う必要があります。MINOR。PATCH)。
+このバージョンの文字列は [、semver](http://semver.org/) 標準 (MAJOR.マイナー。パッチ)。
 
 ## <a name="id"></a>id
 
-**必須** — Microsoft アプリ ID
+**必須** — マイクロソフト のアプリ ID
 
-ID は、アプリの Microsoft が生成する一意の識別子です。 ボットが Microsoft で既にサインインしている場合は、Microsoft Bot Frameworkタブの Web アプリを使用して登録されている場合は、ID を持っています。 ここに ID を入力する必要があります。 それ以外の場合は、Microsoft アプリケーション登録ポータルで新しい ID [を生成する必要があります](https://aka.ms/appregistrations)。 ボットを追加する場合は、同じ ID を使用します。
+ID は、アプリの一意の Microsoft 生成識別子です。 ボットがMicrosoft Bot Frameworkを通じて登録されている場合、またはタブの Web アプリが既に Microsoft にサインインしている場合は、ID を取得できます。 ここに ID を入力する必要があります。 それ以外の場合は、 [Microsoft アプリケーション登録ポータル](https://aka.ms/appregistrations)で新しい ID を生成する必要があります。 ボットを追加する場合は、同じ ID を使用します。
 
 > [!NOTE]
-> AppSource で既存のアプリに更新プログラムを提出する場合は、マニフェスト内の ID を変更することはできません。
+> AppSource で既存のアプリに更新プログラムを送信する場合、マニフェストの ID を変更しないでください。
 
 ## <a name="developer"></a>developer
 
 **必須** — オブジェクト
 
-会社に関する情報を指定します。 アプリがストアに送信Teams、これらの値はストア登録情報の情報と一致している必要があります。 詳細については、「ストア発行ガイドラインTeams[を参照してください](~/concepts/deploy-and-publish/appsource/publish.md)。
+会社に関する情報を指定します。 Teams ストアに送信されたアプリの場合、これらの値はストア登録情報の情報と一致している必要があります。 詳細については、「[ストア公開のTeamsのガイドライン](~/concepts/deploy-and-publish/appsource/publish.md)」を参照してください。
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
 |`name`|32 文字|✔|開発者の表示名。|
-|`websiteUrl`|2048 文字|✔|開発者 https:// WEB サイトの URL を指定します。 このリンクは、ユーザーを会社または製品固有のランディング ページに移動する必要があります。|
-|`privacyUrl`|2048 文字|✔|開発者 https:// のプライバシー ポリシーの URL を指定します。|
-|`termsOfUseUrl`|2048 文字|✔|開発者 https:// の使用条件の URL を指定します。|
-|`mpnId`|10 文字| |**省略可能** アプリを構築するパートナー組織を識別する Microsoft パートナー ネットワーク ID。|
+|`websiteUrl`|2048 文字|✔|開発者の web サイトへの https:// URL。 このリンクをクリックすると、ユーザーは会社または製品固有のランディング ページに移動する必要があります。|
+|`privacyUrl`|2048 文字|✔|開発者のプライバシー ポリシーの https:// URL。|
+|`termsOfUseUrl`|2048 文字|✔|開発者の使用条件の https:// URL。|
+|`mpnId`|10 文字| |**オプション** アプリを構築するパートナー組織を識別するマイクロソフト パートナー ネットワーク ID。|
 
 ## <a name="name"></a>name
 
 **必須** — オブジェクト
 
-アプリ エクスペリエンスのユーザーに表示されるアプリ エクスペリエンスのTeamsします。 AppSource に送信されるアプリの場合、これらの値は AppSource エントリの情報と一致する必要があります。 の値と `short` 異 `full` なる値を指定する必要があります。
+Teams エクスペリエンスのユーザーに表示される、アプリ エクスペリエンスの名前。 AppSource に送信されたアプリの場合、これらの値は AppSource エントリの情報と一致する必要があります。 の値との値は `short` `full` 異なっている必要があります。
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
 |`short`|30 文字|✔|アプリの短い表示名。|
-|`full`|100 文字||完全なアプリ名が 30 文字を超える場合に使用されるアプリの完全な名前。|
+|`full`|100 文字||アプリの完全名は、アプリの完全名が 30 文字を超える場合に使用されます。|
 
 ## <a name="description"></a>説明
 
 **必須** — オブジェクト
 
-アプリをユーザーに説明します。 AppSource に送信されるアプリの場合、これらの値は AppSource エントリの情報と一致する必要があります。
+ユーザーにアプリを記述します。 AppSource に送信されたアプリの場合、これらの値は AppSource エントリの情報と一致する必要があります。
 
-説明がエクスペリエンスを正確に説明し、潜在的な顧客がエクスペリエンスの内容を理解するのに役立つ情報を提供します。 外部アカウントを使用する必要がある場合は、完全な説明に注意する必要があります。 の値と `short` 異 `full` なる値を指定する必要があります。 短い説明は、長い説明の中で繰り返し実行し、他のアプリ名を含めずに行う必要があります。
+説明が自分のエクスペリエンスを正確に説明し、潜在顧客がエクスペリエンスの内容を理解するのに役立つ情報を提供するようにします。 外部アカウントを使用する必要がある場合は、完全な説明を書き留める必要があります。 の値との値は `short` `full` 異なっている必要があります。 短い説明は、長い説明の中で繰り返してはならず、他のアプリ名を含めてはいけません。
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
-|`short`|80 文字|✔|スペースが制限されている場合に使用されるアプリ エクスペリエンスの簡単な説明。|
+|`short`|80 文字|✔|スペースが限られている場合に使用するアプリ エクスペリエンスの簡単な説明。|
 |`full`|4000 文字|✔|アプリの完全な説明。|
 
-## <a name="packagename"></a>packageName
+## <a name="packagename"></a>パッケージ名
 
-**省略** 可能 — 文字列
+**省略可能** — 文字列
 
-逆ドメイン表記のアプリの一意の識別子。たとえば、com.example.myapp などです。 最大長: 64 文字
+逆ドメイン表記でのアプリの一意の識別子。たとえば、com.example.myapp を使用します。 最大長: 64 文字
 
-## <a name="localizationinfo"></a>localizationInfo
+## <a name="localizationinfo"></a>ローカリゼーション情報
 
-**省略可能** — オブジェクト
+**オプション** — オブジェクト
 
-既定の言語の指定と、追加の言語ファイルへのポインターを許可します。 「ローカライズ」 [を参照してください](~/concepts/build-and-test/apps-localization.md)。
+既定の言語の指定と、追加の言語ファイルへのポインタを許可します。 詳細については、「 [ローカリゼーション](~/concepts/build-and-test/apps-localization.md)」を参照してください。
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
-|`defaultLanguageTag`||✔|このトップ レベルのマニフェスト ファイル内の文字列の言語タグ。|
+|`defaultLanguageTag`||✔|この最上位のマニフェスト ファイル内の文字列の言語タグ。|
 
-### <a name="localizationinfoadditionallanguages"></a>localizationInfo.additionalLanguages
+### <a name="localizationinfoadditionallanguages"></a>ローカリゼーション情報.追加言語
 
-追加の言語変換を指定するオブジェクトの配列。
+追加の言語翻訳を指定するオブジェクトの配列。
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
@@ -397,173 +397,172 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 
 **必須** — オブジェクト
 
-アプリ内で使用Teamsアイコン。 アイコン ファイルは、アップロード パッケージの一部として含める必要があります。 詳細については [、「アイコン](../../concepts/build-and-test/apps-package.md#app-icons) 」を参照してください。
+Teams アプリ内で使用されるアイコン。 アイコン ファイルは、アップロード パッケージの一部として含める必要があります。 詳細については [、アイコン](../../concepts/build-and-test/apps-package.md#app-icons) を参照してください。
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
 |`outline`|32 x 32 ピクセル|✔|透明な 32x32 PNG アウトライン アイコンへの相対ファイル パス。|
-|`color`|192 x 192 ピクセル|✔|フル カラーの 192x192 PNG アイコンへの相対ファイル パス。|
+|`color`|192 x 192 ピクセル|✔|フルカラーの 192x192 PNG アイコンへの相対ファイル パス。|
 
-## <a name="accentcolor"></a>accentColor
+## <a name="accentcolor"></a>アクセントカラー
 
-**省略** 可能 — HTML の 16 進カラー コード
+**オプション** — HTML 16 進数のカラーコード
 
-アウトライン アイコンと組み合わせて、背景として使用する色。
+アウトライン アイコンと共に、および背景として使用する色。
 
-値は、'#' で始まる有効な HTML カラー コードである必要があります `#4464ee` 。
+値は、たとえば '#' で始まる有効な HTML カラー コードである必要があります `#4464ee` 。
 
-## <a name="configurabletabs"></a>configurableTabs
+## <a name="configurabletabs"></a>構成可能なタブ
 
-**省略** 可能 — 配列
+**オプション** — 配列
 
-アプリ エクスペリエンスに、追加する前に追加の構成が必要なチーム チャネル タブ エクスペリエンスがある場合に使用します。 構成可能なタブは teams スコープでのみサポートされ、同じタブを複数回構成できます。 ただし、マニフェストで定義できるのは 1 回のみです。
-
-|名前| 型| 最大サイズ | 必須 | 説明|
-|---|---|---|---|---|
-|`configurationUrl`|string|2048 文字|✔|タブ https:// する際に使用する URL を指定します。|
-|`scopes`|列挙型の配列|1|✔|現在、構成可能なタブは、スコープ `team` とスコープ `groupchat` のみをサポートしています。 |
-|`canUpdateConfiguration`|boolean|||作成後に、タブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 既定値: **true 。**|
-|`context` |列挙型の配列|6||タブが `contextItem` サポートされているスコープ [のセット](../../tabs/how-to/access-teams-context.md)です。 既定値: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
-|`sharePointPreviewImage`|string|2048||タブ プレビュー イメージへの相対ファイル パスを使用して、SharePoint。 サイズは 1024x768 です。 |
-|`supportedSharePointHosts`|列挙型の配列|1||タブを使用してタブを使用する方法をSharePoint。 オプションは `sharePointFullPage` 次のとおりです。 `sharePointWebPart` |
-
-## <a name="statictabs"></a>staticTabs
-
-**省略** 可能 — 配列
-
-ユーザーが手動で追加せずに、既定で "ピン留め" できるタブのセットを定義します。 スコープ内で宣言された静的タブ `personal` は、常にアプリの個人用エクスペリエンスにピン留めされます。 スコープで宣言されている静的タブ `team` は現在サポートされていません。
-
-このアイテムは、型のすべての要素を持つ配列 (最大 16 要素) です `object` 。 このブロックは、静的タブ ソリューションを提供するソリューションにのみ必要です。
+アプリエクスペリエンスにチーム チャネル タブ エクスペリエンスがあり、追加前に追加の構成が必要な場合に使用します。 構成可能なタブはチームスコープでのみサポートされ、同じタブを複数回構成できます。 ただし、マニフェストで定義できるのは 1 回だけです。
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`entityId`|string|64 文字|✔|タブが表示されるエンティティの一意の識別子。|
+|`configurationUrl`|string|2048 文字|✔|タブの構成時に使用する https:// URL。|
+|`scopes`|列挙型の配列|1|✔|現在、構成可能なタブは `team` 、 および スコープのみをサポート `groupchat` します。 |
+|`canUpdateConfiguration`|boolean|||タブの構成のインスタンスを作成後にユーザーが更新できるかどうかを示す値。 デフォルト: **true**.|
+|`context` |列挙型の配列|6||`contextItem`[タブがサポートされている](../../tabs/how-to/access-teams-context.md)範囲のセット。 デフォルト: **[チャンネルタブ、プライベートチャットタブ、ミーティングチャットタブ、会議詳細タブ]**|
+|`sharePointPreviewImage`|string|2048||SharePointで使用するタブ プレビュー イメージへの相対ファイル パス。 サイズ 1024x768。 |
+|`supportedSharePointHosts`|列挙型の配列|1||SharePointでタブを使用できるようにする方法を定義します。 オプションは `sharePointFullPage` 、 `sharePointWebPart` |
+
+## <a name="statictabs"></a>静的タブ
+
+**オプション** — 配列
+
+ユーザーが手動で追加しなくても、既定で "固定" できるタブのセットを定義します。 スコープで宣言された静的タブ `personal` は、常にアプリの個人的なエクスペリエンスに固定されます。 スコープで宣言された静的タブ `team` は、現在サポートされていません。
+
+この項目は、型のすべての要素を持つ配列 (最大 16 個の要素) です `object` 。 このブロックは、静的タブ ソリューションを提供するソリューションにのみ必要です。
+
+|名前| 型| 最大サイズ | 必須 | 説明|
+|---|---|---|---|---|
+|`entityId`|string|64 文字|✔|タブが表示するエンティティの一意の識別子。|
 |`name`|string|128 文字|✔|チャネル インターフェイスのタブの表示名。|
-|`contentUrl`|string||✔|この https:// キャンバスに表示するエンティティ UI を示すTeamsします。|
-|`websiteUrl`|string|||ユーザー https:// ブラウザーで表示することを選択した場合に示す URL を指定します。|
-|`searchUrl`|string|||ユーザー https:// 検索クエリを参照する URL を指定します。|
-|`scopes`|列挙型の配列|1|✔|現在、静的タブはスコープのみをサポートしています。つまり、個人用エクスペリエンスの一部としてのみ `personal` プロビジョニングできます。|
-|`context` | 列挙型の配列| 2|| タブが `contextItem` サポートされているスコープのセット。|
+|`contentUrl`|string||✔|Teams キャンバスに表示されるエンティティ UI を指す https:// URL。|
+|`websiteUrl`|string|||ユーザーがブラウザーで表示することを選択した場合に指す https:// URL。|
+|`searchUrl`|string|||ユーザーの検索クエリの https:// URL を指します。|
+|`scopes`|列挙型の配列|1|✔|現在、静的タブはスコープのみをサポート `personal` するため、個人用エクスペリエンスの一部としてのみプロビジョニングできます。|
+|`context` | 列挙型の配列| 2|| `contextItem`タブがサポートされている範囲のセット。|
 
 > [!NOTE]
->  サード パーティの開発者は searchUrl 機能を使用できません。
-> 関連するコンテンツを表示したり、認証フローを開始したりするために、タブでコンテキストに依存する情報が必要な場合は、「Get context for [your Microsoft Teams 」を参照してください](../../tabs/how-to/access-teams-context.md)。
+>  searchUrl 機能は、サードパーティの開発者には使用できません。
+> タブで関連するコンテンツを表示したり、認証フローを作成したりするためにコンテキスト依存の情報が必要な場合は[、「Microsoft Teamsタブのコンテキストを取得する](../../tabs/how-to/access-teams-context.md)」を参照してください。
 
-## <a name="bots"></a>bots
+## <a name="bots"></a>ボット
 
-**省略** 可能 — 配列
+**オプション** — 配列
 
-既定のコマンド プロパティなどのオプションの情報と共に、ボット ソリューションを定義します。
+ボット ソリューションを、既定のコマンド プロパティなどのオプション情報と共に定義します。
 
-アイテムは、型のすべての要素を持つ配列 (現在、アプリごとにボットが 1 つしか許可されていない要素が最大 1 つ) &mdash; です `object` 。 このブロックは、ボット エクスペリエンスを提供するソリューションにのみ必要です。
+item は配列 (最大 1 つの要素のみ &mdash; アプリごとに許可される 1 つのボット) であり、すべての要素が type `object` . このブロックは、ボット エクスペリエンスを提供するソリューションにのみ必要です。
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`botId`|string|64 文字|✔|Bot Framework に登録された、ボット用の一意の Microsoft アプリ ID。 これは、アプリ全体の ID と同じ [可能性があります](#id)。|
+|`botId`|string|64 文字|✔|Bot Framework に登録された、ボット用の一意の Microsoft アプリ ID。 これは、 [全体的なアプリ ID](#id)と同じである可能性があります。|
 |`scopes`|列挙型の配列|3|✔|ボットがエクスペリエンスを提供するのは、`team` 内のチャネルのコンテキスでなのか、グループ チャット (`groupchat`) でなのか、あるいは個別のユーザーのみをエクスペリエンスの対象にする (`personal`) のかを指定します。 これらのオプションは非排他的です。|
-|`needsChannelSelector`|boolean|||ボットを特定のチャネルに追加するためのユーザー用ヒントをボットで使用するかどうかの説明。 既定値: **`false`**|
-|`isNotificationOnly`|boolean|||ボットが会話ボットではなく、一方向性の通知専用ボットなのかどうかを示します。 既定値: **`false`**|
-|`supportsFiles`|boolean|||パーソナル チャットでのファイルのアップロード/ダウンロード機能をボットでサポートするかどうかを示します。 既定値: **`false`**|
-|`supportsCalling`|boolean|||ボットがオーディオ通話をサポートする場所を示す値。 **重要**: このプロパティは現在実験的です。 実験的なプロパティは完全ではない可能性があります。また、完全に利用可能になる前に変更が加わる可能性があります。  これはテストと探索の目的でのみ提供され、実稼働アプリケーションでは使用できません。 既定値: **`false`**|
-|`supportsVideo`|boolean|||ボットがビデオ通話をサポートする場所を示す値。 **重要**: このプロパティは現在実験的です。 実験的なプロパティは完全ではない可能性があります。また、完全に利用可能になる前に変更が加わる可能性があります。  これはテストと探索の目的でのみ提供され、実稼働アプリケーションでは使用できません。 既定値: **`false`**|
+|`needsChannelSelector`|boolean|||ボットを特定のチャネルに追加するためのユーザー用ヒントをボットで使用するかどうかの説明。 デフォルト： **`false`**|
+|`isNotificationOnly`|boolean|||ボットが会話ボットではなく、一方向性の通知専用ボットなのかどうかを示します。 デフォルト： **`false`**|
+|`supportsFiles`|boolean|||パーソナル チャットでのファイルのアップロード/ダウンロード機能をボットでサポートするかどうかを示します。 デフォルト： **`false`**|
+|`supportsCalling`|boolean|||ボットがオーディオ呼び出しをサポートする場所を示す値。 **重要**: このプロパティは現在、実験的なものです。 実験プロパティは完全ではない可能性があり、完全に利用可能になる前に変更を受ける可能性があります。  テストと探索のみを目的として提供され、実稼働アプリケーションでは使用しないでください。 デフォルト： **`false`**|
+|`supportsVideo`|boolean|||ボットがビデオ通話をサポートする場所を示す値。 **重要**: このプロパティは現在、実験的なものです。 実験プロパティは完全ではない可能性があり、完全に利用可能になる前に変更を受ける可能性があります。  テストと探索のみを目的として提供され、実稼働アプリケーションでは使用しないでください。 デフォルト： **`false`**|
 
-### <a name="botscommandlists"></a>bots.commandLists
+### <a name="botscommandlists"></a>コマンドリスト
 
-ボットがユーザーに推奨できるコマンドのオプションの一覧。 オブジェクトは、型のすべての要素を持つ配列 (最大 2 つの要素) です。ボットがサポートするスコープごとに個別のコマンド リストを `object` 定義する必要があります。 詳細については [、「ボット メニュー](~/bots/how-to/create-a-bot-commands-menu.md) 」を参照してください。
+ボットがユーザーに推奨できるコマンドのリスト(オプション)。 オブジェクトは、型のすべての要素を持つ配列 (最大 2 つの要素) です `object` 。 詳細については [、「Bot メニュー](~/bots/how-to/create-a-bot-commands-menu.md) 」を参照してください。
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`items.scopes`|列挙型の配列|3|✔|コマンド リストが有効なスコープを指定します。 `team`、`personal`、`groupchat` の中から選択できます。|
-|`items.commands`|オブジェクトの配列|10|✔|ボットがサポートするコマンドの配列:<br>`title`: ボット コマンドの名前 (文字列、32)<br>`description`: コマンドの構文およびその構文の引数
-の簡単な説明または例 (文字列、128)|
+|`items.commands`|オブジェクトの配列|10|✔|ボットがサポートするコマンドの配列:<br>`title`: ボット コマンドの名前 (文字列、32)<br>`description`: コマンド構文とその引数の簡単な説明または例 (文字列、128)。|
 
-### <a name="botscommandlistscommands"></a>bots.commandLists.command
+### <a name="botscommandlistscommands"></a>コマンド
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|title|string|12 |✔|ボット コマンド名|
-|説明|string|128 文字|✔|単純なテキストの説明、またはコマンド構文とその引数の例。|
+|title|string|12 |✔|ボット コマンド名。|
+|説明|string|128 文字|✔|単純な説明、またはコマンド構文とその引数の例。|
 
 ## <a name="connectors"></a>コネクタ
 
-**省略** 可能 — 配列
+**オプション** — 配列
 
-ブロック `connectors` は、アプリOffice 365コネクタを定義します。
+`connectors`ブロックは、アプリのOffice 365コネクタを定義します。
 
-オブジェクトは、型のすべての要素を持つ配列 (最大 1 要素) です `object` 。 このブロックは、Connector を提供するソリューションにのみ必要です。
+オブジェクトは、型のすべての要素を持つ配列 (最大 1 要素) `object` です。 このブロックは、コネクタを提供するソリューションにのみ必要です。
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`configurationUrl`|string|2048 文字|✔|コネクタ https:// する際に使用する URL を指定します。|
-|`scopes`|列挙型の配列|1|✔|Connector がチャネルのコンテキストでエクスペリエンスを提供するかどうか、または個々のユーザー () にスコープを設定したエクスペリエンスを提供するかどうかを `team` 指定します `personal` 。 現在、スコープ `team` だけがサポートされています。|
-|`connectorId`|string|64 文字|✔|コネクタ開発者ダッシュボードの ID に一致するコネクタの一 [意の識別子](https://aka.ms/connectorsdashboard)です。|
+|`configurationUrl`|string|2048 文字|✔|コネクタの構成時に使用する https:// URL。|
+|`scopes`|列挙型の配列|1|✔|コネクタが、 のチャネルのコンテキストでのエクスペリエンスを提供 `team` するか、個々のユーザーに限定されたエクスペリエンス ( ) を提供するかを指定 `personal` します。 現在、スコープのみが `team` サポートされています。|
+|`connectorId`|string|64 文字|✔|コネクタ開発者ダッシュボード の ID と一致する [コネクタの](https://aka.ms/connectorsdashboard)一意の識別子。|
 
-## <a name="composeextensions"></a>composeExtensions
+## <a name="composeextensions"></a>コン成拡張
 
-**省略** 可能 — 配列
+**オプション** — 配列
 
 アプリのメッセージング拡張機能を定義します。
 
 > [!NOTE]
-> 機能の名前は、2017 年 11 月に "作成拡張機能" から "メッセージング拡張機能" に変更されましたが、既存の拡張機能が引き続き機能するように、マニフェスト名は変わりません。
+> 機能の名前は、2017 年 11 月に "拡張の構成" から "メッセージング拡張機能" に変更されましたが、マニフェスト名はそのまま残り、既存の拡張機能が機能し続けます。
 
-アイテムは、型のすべての要素を持つ配列 (最大 1 要素) です `object` 。 このブロックは、メッセージング拡張機能を提供するソリューションにのみ必要です。
+項目は、型のすべての要素を持つ配列 (最大 1 要素) `object` です。 このブロックは、メッセージング拡張機能を提供するソリューションにのみ必要です。
 
 |名前| 型 | 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`botId`|string|64|✔|ボット フレームワークに登録されているメッセージング拡張機能をバックするボットの一意の Microsoft アプリ ID。 これは、アプリ ID 全体と同じ可能性があります。|
-|`commands`|オブジェクトの配列|10|✔|メッセージング拡張機能がサポートするコマンドの配列|
+|`botId`|string|64|✔|Bot Framework に登録されているメッセージング拡張機能をサポートするボットの一意の Microsoft アプリ ID。 これは、アプリ ID 全体と同じである可能性があります。|
+|`commands`|オブジェクトの配列|10|✔|メッセージング拡張機能がサポートするコマンドの配列。|
 |`canUpdateConfiguration`|boolean|||メッセージング拡張機能の構成をユーザーが更新できるかどうかを示す値。 既定値: **false**|
-|`messageHandlers`|オブジェクトの配列|5||特定の条件が満たされた場合にアプリを呼び出すことができるハンドラーの一覧。|
+|`messageHandlers`|オブジェクトの配列|5||特定の条件が満たされた場合にアプリを呼び出すことを許可するハンドラーのリスト。|
 |`messageHandlers.type`|string|||メッセージ ハンドラーの種類。 `"link"` である必要があります。|
 |`messageHandlers.value.domains`|文字列の配列|||リンク メッセージ ハンドラーが登録できるドメインの配列。|
 
-### <a name="composeextensionscommands"></a>composeExtensions.commands
+### <a name="composeextensionscommands"></a>コンスタブスエクステンション.コマンド
 
-メッセージング拡張機能は、1 つ以上のコマンドを宣言する必要があります。 各コマンドは、MICROSOFT TEAMSエントリ ポイントからの潜在的な対話として表示されます。 最大 10 のコマンドがあります。
+メッセージング拡張機能は、1 つ以上のコマンドを宣言する必要があります。 各コマンドは、UI ベースのエントリ ポイントからの潜在的な操作としてMicrosoft Teamsに表示されます。 最大 10 個のコマンドがあります。
 
-各コマンド 項目は、次の構造を持つオブジェクトです。
+各コマンド項目は、次の構造を持つオブジェクトです。
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`id`|string|64 文字|✔|コマンドの ID。|
-|`title`|string|32 文字|✔|ユーザーフレンドリーなコマンド名。|
-|`type`|string|64 文字||コマンドの種類。 または `query` の 1 `action` つ。 既定: **クエリ** です。|
+|`title`|string|32 文字|✔|わかりやすいコマンド名。|
+|`type`|string|64 文字||コマンドの種類。 または の 1 つ `query` `action` デフォルト: **クエリ**.|
 |`description`|string|128 文字||このコマンドの目的を示すためにユーザーに表示される説明。|
-|`initialRun`|boolean|||ブール値は、コマンドがパラメーターを使用して最初に実行されるかどうかを示します。 既定値は **false** です。|
-|`context`|文字列の配列|3||メッセージ拡張機能の呼び出し先を定義します。 `compose`、 の任意の `commandBox` 組み合 `message` わせ。 既定値は `["compose","commandBox"]` です。|
+|`initialRun`|boolean|||ブール値は、コマンドが最初にパラメーターなしで実行されるかどうかを示します。 既定値は **false** です。|
+|`context`|文字列の配列|3||メッセージ拡張を呼び出すことができる場所を定義します。 、 、、を任意に組み合わせて `compose` `commandBox` `message` 使用できます。 既定値は `["compose","commandBox"]` です。|
 |`fetchTask`|boolean|||タスク モジュールを動的にフェッチする必要があるかどうかを示すブール値。 既定値は **false** です。|
-|`taskInfo`|object|||メッセージング拡張機能コマンドを使用する場合に事前読み込みするタスク モジュールを指定します。|
-|`taskInfo.title`|string|64 文字||最初のダイアログ タイトル。|
-|`taskInfo.width`|string|||ダイアログの幅 - ピクセル単位の数値または既定のレイアウト ('large'、'medium'、または 'small' など)。|
-|`taskInfo.height`|string|||ダイアログの高さ - ピクセル単位の数値、または 'large'、'medium'、または 'small' などの既定のレイアウト。|
-|`taskInfo.url`|string|||初期 Webview URL。|
-|`parameters`|オブジェクトの配列|5 つのアイテム|✔|コマンドが受け取るパラメーターの一覧。 最小: 1;最大: 5。|
-|`parameters.name`|string|64 文字|✔|クライアントに表示されるパラメーターの名前。 これは、ユーザー要求に含まれます。|
-|`parameters.title`|string|32 文字|✔|パラメーターのユーザーフレンドリーなタイトル。|
-|`parameters.description`|string|128 文字||このパラメーターの目的を説明するユーザーフレンドリーな文字列。|
-|`parameters.value`|string|512 文字||パラメーターの初期値。|
-|`parameters.inputType`|string|128 文字||タスク モジュールに表示されるコントロールの種類を定義します `fetchTask: true` 。 の 1 `text, textarea, number, date, time, toggle, choiceset` つ。|
-|`parameters.choices`|オブジェクトの配列|10 アイテム||の選択肢 `choiceset` オプションです。 の場合にのみ `parameter.inputType` 使用します `choiceset` 。|
+|`taskInfo`|object|||メッセージング拡張コマンドを使用する場合にプリロードするタスク・モジュールを指定します。|
+|`taskInfo.title`|string|64 文字||初期ダイアログ タイトル。|
+|`taskInfo.width`|string|||ダイアログ幅 - ピクセル単位の数値またはデフォルトのレイアウト ("大きい"、"中""、"小" など)|
+|`taskInfo.height`|string|||ダイアログの高さ - ピクセル単位の数値または既定のレイアウト ("大きい"、"中""、"小" など)|
+|`taskInfo.url`|string|||初期の Web ビュー URL。|
+|`parameters`|オブジェクトの配列|5項目|✔|コマンドが受け取るパラメーターのリスト。 最小: 1;最大: 5。|
+|`parameters.name`|string|64 文字|✔|クライアントに表示されるパラメータの名前。 これはユーザー要求に含まれます。|
+|`parameters.title`|string|32 文字|✔|パラメーターのわかりやすいタイトルです。|
+|`parameters.description`|string|128 文字||このパラメーターの目的を説明するわかりやすい文字列。|
+|`parameters.value`|string|512 文字||パラメータの初期値。|
+|`parameters.inputType`|string|128 文字||のタスク モジュールに表示されるコントロールの種類を定義 `fetchTask: true` します。 の 1 つ `text, textarea, number, date, time, toggle, choiceset` 。|
+|`parameters.choices`|オブジェクトの配列|10項目||の選択肢オプション `choiceset` です。 の場合にのみ `parameter.inputType` 使用 `choiceset` します。|
 |`parameters.choices.title`|string|128 文字|✔|選択したタイトル。|
 |`parameters.choices.value`|string|512 文字|✔|Value of the choice.|
 
 ## <a name="permissions"></a>permissions
 
-**省略** 可能 - 文字列の配列
+**オプション** — 文字列の配列
 
-アプリが要求するアクセス許可を指定する配列で、エンド ユーザーは拡張機能の実行 `string` 方法を知る必要があります。 次のオプションは、非排他的です。
+`string`アプリが要求するアクセス許可を指定する配列で、エンド ユーザーに拡張機能の実行方法を知ることができます。 次のオプションは非排他的です。
 
-* `identity`&emsp;ユーザー ID 情報が必要
-* `messageTeamMembers`&emsp;チーム メンバーに直接メッセージを送信するためのアクセス許可が必要
+* `identity`&emsp;ユーザー ID 情報が必要です。
+* `messageTeamMembers`&emsp;チーム メンバーにダイレクト メッセージを送信する権限が必要です。
 
-アプリの更新中にこれらのアクセス許可を変更すると、更新されたアプリの実行後にユーザーが同意プロセスを繰り返します。 詳細については [、「アプリの更新」](~/concepts/deploy-and-publish/appsource/post-publish/overview.md) を参照してください。
+アプリの更新中にこれらのアクセス許可を変更すると、更新されたアプリを実行した後、ユーザーは同意プロセスを繰り返します。 詳しくは、 [アプリの更新](~/concepts/deploy-and-publish/appsource/post-publish/overview.md) を参照してください。
 
-## <a name="devicepermissions"></a>devicePermissions
+## <a name="devicepermissions"></a>デバイスアクセス許可
 
-**省略** 可能 - 文字列の配列
+**オプション** — 文字列の配列
 
-アプリがアクセスを要求するユーザーのデバイス上のネイティブ機能を提供します。 オプションは、次のとおりです。
+アプリがアクセスを要求するユーザーのデバイスにネイティブ機能を提供します。 オプションは、次のとおりです。
 
 * `geolocation`
 * `media`
@@ -571,65 +570,65 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 * `midi`
 * `openExternal`
 
-## <a name="validdomains"></a>validDomains
+## <a name="validdomains"></a>有効なドメイン
 
-**省略** 可能です ( **必須の場合** は除く)
+**省略可能** な 、 **省略可能** な場合は必須です。
 
-アプリがクライアント内で読み込むと予想される Web サイトの有効なドメインTeamsします。 ドメインの一覧には、ワイルドカード (たとえば) を含めできます `*.example.com` 。 これは、ドメインの 1 つのセグメントと完全に一致します。一致する必要がある場合は、 `a.b.example.com` を使用します `*.*.example.com` 。 タブ構成またはコンテンツ UI で、タブ構成に使用するドメイン以外のドメインに移動する必要がある場合は、ここでそのドメインを指定する必要があります。
+アプリがTeams クライアント内で読み込むと想定している Web サイトの有効なドメインの一覧。 ドメインの一覧には、ワイルドカードを含めることができます `*.example.com` 。 これは、ドメインの 1 つのセグメントと完全に一致します。一致させる必要がある場合は `a.b.example.com` `*.*.example.com` 、 を使用します。 タブ構成またはコンテンツ UI がタブ構成の使用以外のドメインに移動する必要がある場合は、ここでそのドメインを指定する必要があります。
 
-サポート **する** ID プロバイダーのドメインをアプリに含める必要はありません。 たとえば、Google ID を使用して認証を行う場合は、accounts.google.com にリダイレクトする必要があります。ただし、accounts.google.com を含 accounts.google.com 必要があります `validDomains[]` 。
+アプリでサポートする ID プロバイダーのドメインを含める必要 **はありません** 。 たとえば、Google ID を使用して認証を行うには、accounts.google.com にリダイレクトする必要があります `validDomains[]` accounts.google.com。
 
-Teams機能するために独自の sharepoint URL を必要とするアプリには、有効なドメイン リストに "{teamsitedomain}" が含まれます。
+Teams、自分の sharepoint URL が正常に機能する必要があるアプリには、有効なドメイン リストに "{teamsitedomain}" が含まれます。
 
 > [!IMPORTANT]
-> 直接またはワイルドカードを使用して、コントロールの外部にあるドメインを追加しません。 たとえば、 `yourapp.onmicrosoft.com` 有効ですが、 `*.onmicrosoft.com` 無効です。
+> 直接またはワイルドカードを使用して、コントロールの外側にあるドメインを追加しないでください。 たとえば、 `yourapp.onmicrosoft.com` 有効なが、 `*.onmicrosoft.com` 無効です。
 
-オブジェクトは、型のすべての要素を持つ配列です `string` 。
+オブジェクトは、 type のすべての要素を持つ配列です `string` 。
 
-## <a name="webapplicationinfo"></a>webApplicationInfo
+## <a name="webapplicationinfo"></a>アプリケーション情報
 
-**省略可能** — オブジェクト
+**オプション** — オブジェクト
 
-ユーザーがアプリAzure Active Directoryシームレスにサインインするのに役立つ、アプリ ID と Microsoft Graph情報を提供します。 アプリが AAD に登録されている場合は、管理者が管理センターでアクセス許可を簡単に確認し、同意を与Teamsする必要があります。
+ユーザーがアプリにシームレスにサインインできるように、Azure Active Directory (AAD) アプリ ID と Microsoft Graph情報を提供します。 アプリが AAD に登録されている場合は、管理者が簡単にアクセス許可を確認し、管理センターで同意Teams付与できるように、アプリ ID を指定する必要があります。
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`id`|string|36 文字|✔|アプリの AAD アプリケーション ID。 この ID は GUID である必要があります。|
-|`resource`|string|2048 文字|✔|SSO の認証トークンを取得するためのアプリのリソース URL。 </br> **注:** SSO を使用していない場合は、エラー応答を回避するために、このフィールドにダミーの文字列値をアプリ マニフェストに https://notapplicable 入力してください。 |
-|`applicationPermissions`|文字列の配列|128 文字||詳細なリソース [固有の同意を指定します](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)。|
+|`resource`|string|2048 文字|✔|SSO の認証トークンを取得するためのアプリのリソース URL。 </br> **注:** SSO を使用していない場合は、エラー応答を避けるために、このフィールドにダミーの文字列値をアプリ マニフェストに入力してください https://notapplicable 。 |
+|`applicationPermissions`|文字列の配列|128 文字||詳細な [リソース固有の同意](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)を指定する :|
 
-## <a name="showloadingindicator"></a>showLoadingIndicator
+## <a name="showloadingindicator"></a>ショーローディングインジケータ
 
-**省略** 可能 - ブール型 (Boolean)
+**オプション** — ブール値
 
 アプリまたはタブの読み込み時に読み込みインジケーターを表示するかどうかを示します。 既定値は **false** です。
 >[!NOTE]
->アプリ マニフェストで true を選択した場合、ページを正しく読み込むには、「ネイティブ読み込みインジケーター ドキュメントを表示する」の説明に従って、タブとタスク モジュールのコンテンツ ページを `showLoadingIndicator` [変更](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) します。
+>アプリ マニフェストで true として選択した場合 `showLoadingIndicator` は、ページを正しく読み込むように、「 [ネイティブ読み込みインジケーター](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) ドキュメントを表示する」の説明に従って、タブとタスク モジュールのコンテンツ ページを変更します。
 
 
-## <a name="isfullscreen"></a>isFullScreen
+## <a name="isfullscreen"></a>フルスクリーン
 
- **省略** 可能 - ブール型 (Boolean)
+ **オプション** — ブール値
 
-タブ ヘッダー バーの付きまたはなしで個人用アプリがレンダリングされる場所を示します。 既定値は **false** です。
+タブ ヘッダー バーを使用するか、またはタブ ヘッダー バーを使用せずに、個人用アプリをレンダリングする場所を指定します。 既定値は **false** です。
 
 ## <a name="activities"></a>activities
 
-**省略可能** — オブジェクト
+**オプション** — オブジェクト
 
-アプリがユーザー アクティビティ フィードの投稿に使用するプロパティを定義します。
+ユーザーアクティビティフィードを投稿するためにアプリが使用するプロパティを定義します。
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`activityTypes`|オブジェクトの配列|128 アイテム| | アプリがユーザーアクティビティ フィードに投稿できるアクティビティの種類を指定します。|
+|`activityTypes`|オブジェクトの配列|128項目| | アプリがユーザーのアクティビティ フィードに投稿できるアクティビティの種類を指定します。|
 
-### <a name="activitiesactivitytypes"></a>activity.activityTypes
+### <a name="activitiesactivitytypes"></a>アクティビティ.アクティビティタイプ
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`type`|string|32 文字|✔|通知の種類。 *以下を参照してください*。|
 |`description`|string|128 文字|✔|通知の簡単な説明。 *以下を参照してください*。|
-|`templateText`|string|128 文字|✔|例: "{actor} が作成したタスク {taskId} for you"|
+|`templateText`|string|128 文字|✔|例: "{アクター} が作成したタスク {taskId}|
 
 ```json
 {
@@ -677,50 +676,50 @@ Teams機能するために独自の sharepoint URL を必要とするアプリ�
 
 ***
 
-## <a name="defaultinstallscope"></a>defaultInstallScope
+## <a name="defaultinstallscope"></a>デフォルトインストールスコープ
 
-**省略** 可能 - 文字列
+**省略可能** - 文字列
 
-既定では、このアプリに対して定義されているインストール スコープを指定します。 定義されたスコープは、ユーザーがアプリを追加しようとするときにボタンに表示されるオプションになります。 オプションは、次のとおりです。
+既定でこのアプリに対して定義されているインストール スコープを指定します。 定義されたスコープは、ユーザーがアプリを追加しようとしたときにボタンに表示されるオプションになります。 オプションは、次のとおりです。
 * `personal`
 * `team`
 * `groupchat`
 * `meetings`
 
-## <a name="defaultgroupcapability"></a>defaultGroupCapability
+## <a name="defaultgroupcapability"></a>分類の機能
 
-**省略可能** - オブジェクト
+**オプション** - オブジェクト
 
-グループ インストール スコープを選択すると、ユーザーがアプリをインストールするときに既定の機能が定義されます。 オプションは、次のとおりです。
+グループのインストール スコープが選択されると、ユーザーがアプリをインストールするときに既定の機能が定義されます。 オプションは、次のとおりです。
 * `team`
 * `groupchat`
 * `meetings`
  
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`team`|string|||選択したインストール スコープが次の場合 `team` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
-|`groupchat`|string|||選択したインストール スコープが次の場合 `groupchat` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
-|`meetings`|string|||選択したインストール スコープが次の場合 `meetings` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
+|`team`|string|||選択したインストールスコープが `team` の場合、このフィールドは使用可能なデフォルトの機能を指定します。 オプション : `tab` 、 `bot` 、 、 、 `connector`|
+|`groupchat`|string|||選択したインストールスコープが `groupchat` の場合、このフィールドは使用可能なデフォルトの機能を指定します。 オプション : `tab` 、 `bot` 、 、 、 `connector`|
+|`meetings`|string|||選択したインストールスコープが `meetings` の場合、このフィールドは使用可能なデフォルトの機能を指定します。 オプション : `tab` 、 `bot` 、 、 、 `connector`|
 
-## <a name="configurableproperties"></a>configurableProperties
+## <a name="configurableproperties"></a>構成可能なプロパティ
 
 **オプション** - 配列
 
-この `configurableProperties` ブロックは、管理者がカスタマイズできるアプリTeams定義します。 詳細については、「アプリのカスタマイズ[」を参照Microsoft Teams。](/MicrosoftTeams/customize-apps)
+`configurableProperties`このブロックは、管理者がカスタマイズできるアプリのプロパティTeams定義します。 詳細については、「 [Microsoft Teams でアプリをカスタマイズする](/MicrosoftTeams/customize-apps)」を参照してください。
 
 > [!NOTE]
-> 少なくとも 1 つのプロパティを定義する必要があります。 このブロックでは、最大 9 つのプロパティを定義できます。
+> 最低 1 つのプロパティを定義する必要があります。 このブロックには最大 9 つのプロパティを定義できます。
 > ベスト プラクティスとして、アプリのユーザーとユーザーがアプリをカスタマイズするときに従うカスタマイズ ガイドラインを提供する必要があります。
 
 次のプロパティを定義できます。
-* `name`: 管理者がアプリの表示名を変更できます。
-* `shortDescription`: 管理者がアプリの簡単な説明を変更できます。
-* `longDescription`: 管理者がアプリの詳細な説明を変更できます。
-* `smallImageUrl`: マニフェストの `outline` ブロック内 `icons` のプロパティです。
-* `largeImageUrl`: マニフェストの `color` ブロック内 `icons` のプロパティです。
-* `accentColor`: アウトライン アイコンと組み合わせて、背景として使用する色です。
-* `websiteUrl`: 開発者の https:// の URL です。
-* `privacyUrl`: 開発者の https:// の URL です。
-* `termsOfUseUrl`: 開発者の https:// の URL です。
+* `name`: 管理者がアプリの表示名を変更できるようにします。
+* `shortDescription`: 管理者がアプリの簡単な説明を変更できるようにします。
+* `longDescription`: 管理者がアプリの詳細な説明を変更できるようにします。
+* `smallImageUrl`: マニフェストの `outline` `icons` ブロック内のプロパティです。
+* `largeImageUrl`: マニフェストの `color` `icons` ブロック内のプロパティです。
+* `accentColor`: アウトライン アイコンの背景と組み合わせて使用する色です。
+* `websiteUrl`: 開発者のウェブサイトへの https:// URLです。
+* `privacyUrl`: 開発者のプライバシー ポリシーへの https:// URL です。
+* `termsOfUseUrl`: 開発者の利用規約の https:// URL です。
 
 

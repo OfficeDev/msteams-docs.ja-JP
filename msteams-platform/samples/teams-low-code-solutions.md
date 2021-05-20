@@ -1,85 +1,85 @@
 ---
-title: 低コードのカスタム アプリを作成Microsoft Teams
+title: Microsoft Teams用の低コードカスタム アプリを作成する
 author: laujan
-description: 利用可能な Microsoft Low および no code ソリューションを詳細にTeams
+description: Teams用の利用可能な Microsoft の低いコード ソリューションとコード ソリューションなしの詳細
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: d294bf335a7688584e52c22d2585f3db2ef1c788
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: a5615c5b70e21ea1bcade3dc46c6a2b5b3bc4f92
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075725"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566209"
 ---
-# <a name="create-low-code-custom-apps-for-microsoft-teams"></a>低コードのカスタム アプリを作成Microsoft Teams
+# <a name="create-low-code-custom-apps-for-microsoft-teams"></a>Microsoft Teams用の低コードカスタム アプリを作成する
 
-Microsoft Teams拡張可能でアダプティブです。 つまり、ユーザーの個別のニーズを満たすTeamsカスタム アプリケーションをビルドできます。 低コードのカスタム アプリは、時間を節約し、迅速なソリューションを提供し、ゼロから作成されたアプリよりも需要を満たします。 このドキュメントでは、Microsoft Power Platform、チャットボット、仮想アシスタントPower Virtual Agents概要を説明します。
+Microsoft Teamsは拡張可能で適応性があります。 つまり、ユーザーのニーズを満たすTeams用のカスタム アプリケーションを構築できます。 低コードカスタムアプリは、時間を節約し、迅速なソリューションを提供し、ゼロから作成されたアプリよりも需要を満たします。 このドキュメントでは、Microsoft パワー プラットフォーム、Power Virtual Agentsチャットボット、およびバーチャル アシスタントの概要を説明します。
 
-低コード プラットフォームは、ソフトウェア開発に直感的なアプローチを提供し、アプリケーションとプロセスを構築するためにコーディングをほとんどまたは全く必要とします。 開発者は、経験のない開発者がコーディングをほとんどまたは全くせずにカスタム アプリを簡単に構築し、プロの開発者がアプリを迅速に開発および展開できます。 これらのプラットフォームは、ビジュアル インターフェイス、バックエンド サービスへのコネクタ、およびアプリケーションのビルド、デバッグ、展開、および保守を行う組み込みのアプリ ライフサイクル管理システムで構成されます。 Microsoft Power Platform は、低コード属性を使用して互換性のあるアプリTeams迅速に構築するための革新的なゲートウェイです。
+低コード プラットフォームは、ソフトウェア開発に直感的なアプローチを提供し、アプリケーションやプロセスを構築するためにコーディングをほとんどまたはまったく必要としません。 経験のない開発者は、ほとんどまたはまったくコーディングなしで簡単にカスタム アプリを構築し、プロの開発者は、アプリを迅速に開発して展開することができます。 これらのプラットフォームは、ビジュアル インターフェイス、バックエンド サービスへのコネクタ、および組み込みのアプリケーション ライフサイクル管理システムで構成され、アプリケーションの構築、デバッグ、デプロイ、および保守を行います。 Microsoft Power Platform は、低いコード属性を使用してTeams互換性のあるアプリを迅速に構築するための革新的なゲートウェイです。
 
-## <a name="teams-and-microsoft-power-platform"></a>Teams Microsoft Power Platform
+## <a name="teams-and-microsoft-power-platform"></a>Teamsとマイクロソフトのパワープラットフォーム
 
-Microsoft Power Platform は、Power BI、Power Apps、Power Automate、以前は Microsoft Flow、Power Virtual Agents など、4 つの堅牢な Microsoft テクノロジを 1 つの強力なアプリケーション プラットフォームに組み合わせたものになります。 これらのテクノロジを使用すると、ソリューションの構築、プロセスの自動化、データの分析、統合環境内での仮想エージェントの作成が可能になります。
+Microsoft Power Platform は、Power BI、Power Apps、Power Automate、旧Microsoft Flow、Power Virtual Agentsなど、4 つの堅牢なマイクロソフト テクノロジを 1 つの強力なアプリケーション プラットフォームに組み合わせています。 これらのテクノロジーにより、統合された統合環境内で、ソリューションの構築、プロセスの自動化、データの分析、仮想エージェントの作成が可能になります。
 
-:::image type="content" source="../assets/images/power-platform-and-teams/ms-power-platform.png" alt-text="Power プラットフォーム サービス":::
+:::image type="content" source="../assets/images/power-platform-and-teams/ms-power-platform.png" alt-text="パワープラットフォームサービス":::
 
 > [!NOTE]
-> Microsoft Power Platform を使用して、アプリ ストアに発行するアプリを作成Teams必要があります。 Microsoft Power Platform アプリは、組織のアプリ ストアにのみ発行できます。
+> Microsoft Power プラットフォームを使用して、Teams アプリ ストアに公開するアプリを作成しないでください。 Microsoft Power プラットフォーム アプリは、組織のアプリ ストアにのみ発行できます。
 
 ### <a name="-teams-and-power-bi"></a>✔ TeamsとPower BI
 
-Microsoft Teams[](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/)の [Power BI] タブでは、Teams ワークスペースでのレポートのサポートが追加され、ユーザーは対話型[の Power BI](/power-bi/collaborate-share/service-embed-report-microsoft-teams)コンテンツを共有し、Teams チャネルやチャットで他のユーザー[と](/power-bi/collaborate-share/service-collaborate-microsoft-teams)共同作業できます。 パッケージ化されたアプリ[](/power-bi/collaborate-share/service-create-distribute-apps)コンテンツPower BI最初から作成し、アプリとして配布したり、アプリでテンプレート アプリ[を作成Power BI。](/connect-data/service-template-apps-create) さらに、新しいアプリをPower BI[して](https://go.microsoft.com/fwlink/?linkid=2143643)Teamsサービスエクスペリエンス全体をPower BIに持ち込Teams。
+[Microsoft TeamsのPower BIタブ](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/)では、Teamsワークスペースでレポートのサポートが追加され、ユーザーは[インタラクティブなPower BIコンテンツを共有](/power-bi/collaborate-share/service-embed-report-microsoft-teams)したり、Teamsチャンネルやチャット[で他のユーザーと共同作業](/power-bi/collaborate-share/service-collaborate-microsoft-teams)したりできます。 パッケージ化された[Power BIアプリ](/power-bi/collaborate-share/service-create-distribute-apps)コンテンツを最初から作成してアプリとして配布したり[、Power BI でテンプレート アプリを作成](/connect-data/service-template-apps-create)したりできます。 さらに、Teamsに基本的なPower BIサービスエクスペリエンス全体を持ち込む[には、Teamsの新しいPower BIアプリ](https://go.microsoft.com/fwlink/?linkid=2143643)を使用します。
 
 ### <a name="-teams-and-power-apps"></a>✔ TeamsとPower Apps
 
-この[Power Apps、](/powerapps/powerapps-overview)ビジネス データに接続し、組織のニーズに合わせてカスタマイズされたビジネス アプリを構築できます。  Power Appsキャンバス アプリを通じてビジネスの課題を解決するために、幅広いアプリ シナリオ[を有効にできます](/powerapps/maker/#canvas-apps)。 作成後、アプリをメーカー ポータルからエクスポートし、Power Appsに埋め込[Microsoft Teams。](/power-platform/admin/embed-app-teams)
+[Power Apps](/powerapps/powerapps-overview)を使用すると、ビジネス データに接続し、組織のニーズに合わせて調整されたビジネス アプリを構築できます。  Power Appsキャンバス アプリを通じてビジネス上の課題を解決するための幅広いアプリ シナリオ[を可能に](/powerapps/maker/#canvas-apps)します。 ビルド後、Power Appsメーカーポータルからアプリをエクスポートし[、Microsoft Teamsに埋め込むことができます](/power-platform/admin/embed-app-teams)。
 
-新しい[Power Apps](https://go.microsoft.com/fwlink/?linkid=2143374)アプリは、Teams内でアプリやワークフローを作成および編集する統合エクスペリエンスを提供Teams。 アプリをすばやく発行し、チーム メンバーに共有できます。 メンバーは、複数のアプリとサービスを切り替えなくてもアプリを使用できます。
+Teamsの新しい[Power Apps アプリ](https://go.microsoft.com/fwlink/?linkid=2143374)は、アプリ作成者がTeams内でアプリやワークフローを作成および編集するための統合エクスペリエンスを提供します。 チーム メンバーは、アプリを簡単に公開して共有できます。 メンバーは、複数のアプリとサービスを切り替えることなく、アプリを使用できます。
 
 ### <a name="-teams-and-power-automate"></a>✔ TeamsとPower Automate
 
-フローを[作成して、](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/)繰り返し作業タスクを、Teamsアプリを使用して、Teams Power Automate環境内で直接[自動化Teams。](/power-automate/flows-teams) アプリケーション内[の任意のメッセージからフローをトリガーし、Microsoft Teams](/power-automate/trigger-flow-teams-message)内でアダプティブ カード[をPower Automate。](/power-automate/create-adaptive-cards) さらに、フローを構築して、新しいアプリ内の新しいアプリMicrosoft TeamsにカスタマイズしてPower Apps[追加](https://go.microsoft.com/fwlink/?linkid=2143539)Teams。
+フローを作成すると、Teams環境内で繰[り返し作業タスク](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/)を直接自動化できます( [Teams のPower Automate アプリを](/power-automate/flows-teams)使用します)。 [Microsoft Teams内の任意のメッセージからフローをトリガー](/power-automate/trigger-flow-teams-message)し[、Power Automate内でアダプティブ カードを使用](/power-automate/create-adaptive-cards)できます。 さらに、フローを構築してカスタマイズし、Teamsの新しい[Power Apps アプリ](https://go.microsoft.com/fwlink/?linkid=2143539)内からMicrosoft Teamsにさらなる価値を追加できます。
 
 ### <a name="-teams-and-power-virtual-agents"></a>✔ TeamsとPower Virtual Agents
 
-[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)は、Microsoft Power Platform と Bot Framework 上に構築されたコードなし、ガイド付きグラフィカル インターフェイス ソリューションです。 この機能を使用すると、チームのすべてのメンバーが、リッチで会話形式のチャットボットを作成して維持し、チャット プラットフォームと簡単に統合Teamsできます。 Power Virtual Agentsで作成されたコンテンツはすべて、TeamsボットPower Virtual Agentsネイティブ チャット キャンバスでユーザーと対話Teams自然にレンダリングされます。 チャットボット[をPower Virtual Agentsポータル](/power-virtual-agents/publication-add-bot-to-microsoft-teams)TeamsしてPower Virtual Agents[できます](https://powervirtualagents.microsoft.com)。
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)は、Microsoft Power プラットフォームと Bot フレームワーク上に構築されたコードなしのガイド付きグラフィカル インターフェイス ソリューションです。 チームのすべてのメンバーが、Teams プラットフォームと簡単に統合できる、豊かで会話型のチャットボットを作成し、維持できるようになります。 Power Virtual Agentsで作成されたすべてのコンテンツは、Teamsで自然にレンダリングされ、ボットPower Virtual Agents Teamsネイティブチャットキャンバス内のユーザーと交流します。 [Power Virtual Agents ポータル](https://powervirtualagents.microsoft.com)を使用して[Power Virtual Agentsチャットボット](/power-virtual-agents/publication-add-bot-to-microsoft-teams)をTeamsに統合できます。
 
-会話[チャットボットを](https://aka.ms/pva-teams-docs)Power Virtual Agents、Teamsから簡単に会話チャットボットを作成、管理、発行するには、Teams。 ボットを組織内の他のユーザーと共有してチャットし、質問に対する回答を取得できます。
+Teamsの新しい[Power Virtual Agentsアプリ](https://aka.ms/pva-teams-docs)を使用して、会話型チャットボットをTeams内から簡単に作成、管理、公開できます。 ボットを組織内の他のユーザーと共有して、チャットを行い、質問に対する回答を得ることができます。
 
-### <a name="-virtual-assistant-for-teams"></a>✔ 仮想アシスタント for Teams
+### <a name="-virtual-assistant-for-teams"></a>Teams用✔バーチャルアシスタント
 
-Virtual Assistant は、ユーザー エクスペリエンス、組織のブランド化、および必要なデータを完全に制御しながら、堅牢な会話型ソリューションを作成できる Microsoft のオープン ソース テンプレートです。 仮想アシスタントは、仮想環境に[統合Teamsできます](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro)。 
+Virtual Assistant は、ユーザー エクスペリエンス、組織のブランド化、および必要なデータを完全に制御しながら、堅牢な会話ソリューションを作成できる Microsoft オープンソース テンプレートです。 仮想アシスタントを[設定して、Teams環境に統合](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro)することができます。 
 
-### <a name="-power-platform-learn-modules"></a>✔ Power Platform Learn モジュール
+### <a name="-power-platform-learn-modules"></a>✔パワープラットフォーム学習モジュール
 
 |  トピック  |  リンク  |
 |:---------|:----------------------|
-|Power BI|[Power BIメーカー向け](/learn/browse/?expanded=power-platform&products=power-bi&roles=maker)</br>[Power BI開発者向け](/learn/browse/?expanded=power-platform&products=power-bi&roles=developer)|
-|Power Apps|[Power Appsメーカー向け](/learn/browse/?products=power-apps&roles=maker)</br>[Power Apps開発者向け](/learn/browse/?products=power-apps)|
-|Power Automate|[Power Automateメーカー向け](/learn/browse/?expanded=power-platform&products=power-automate&roles=maker)</br>[Power Automate開発者向け](/learn/browse/?expanded=power-platform&products=power-automate&roles=developer)|
-|Power Virtual Agents|[Power Virtual Agents開発者向けツール](/learn/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
+|Power BI|[アプリメーカー向けのPower BI](/learn/browse/?expanded=power-platform&products=power-bi&roles=maker)</br>[開発者向けのPower BI](/learn/browse/?expanded=power-platform&products=power-bi&roles=developer)|
+|Power アプリ|[アプリメーカー向けのPower Apps](/learn/browse/?products=power-apps&roles=maker)</br>[開発者向けPower Apps](/learn/browse/?products=power-apps)|
+|Power Automate|[アプリメーカー向けのPower Automate](/learn/browse/?expanded=power-platform&products=power-automate&roles=maker)</br>[開発者向けPower Automate](/learn/browse/?expanded=power-platform&products=power-automate&roles=developer)|
+|Power Virtual Agents|[アプリメーカーと開発者向けのPower Virtual Agents](/learn/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
 
-### <a name="-project-oakdale-preview"></a>✔ Projectオークデール (プレビュー)
+### <a name="-project-oakdale-preview"></a>✔ Projectオークデール(プレビュー)
 
 > [!NOTE]
-> Project **の名前** がプロジェクト **Dataverse** に変更Teams。
+> Project **オークデール** は **、Teamsのプロジェクトデータバース** に名前が変更されます。
 
-[Project Oakdale](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180
-)は、新しい低コード データ プラットフォームで、近日公開Microsoft Teams。 これにより、開発者は Power Platform Teamsソリューションを直接作成Teams。 オークデールの詳細については、「Projectブログ」をTeams[をMicrosoft Projectしてください](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams)。
+[Projectオークデール](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180
+)は、Microsoft Teamsに近い新しい低コードデータプラットフォームです。 開発者は、Teams内で直接Teams Powerプラットフォームソリューションを作成できます。 Projectオークデールの詳細については[、「TeamsブログMicrosoft Projectオークデール](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams)」を参照してください。
 
-### <a name="-microsoft-blog-insights"></a>✔ブログの分析情報
+### <a name="-microsoft-blog-insights"></a>マイクロソフトブログの洞察を✔する
 
-[Oakdale のデータ プラットフォーム機能の詳細Projectする](https://powerapps.microsoft.com/blog/a-closer-look-at-data-platform-capabilities-in-project-oakdale/)
+[オークデールProjectにおけるデータ プラットフォーム機能の詳細](https://powerapps.microsoft.com/blog/a-closer-look-at-data-platform-capabilities-in-project-oakdale/)
 
-[お客様がリモート作業に適応Teams Power Platform と新しい更新プログラムを発表する](https://cloudblogs.microsoft.com/powerplatform/2020/05/19/announcing-power-platform-and-teams-updates-to-help-customers-adapt-to-remote-work/)
+[パワープラットフォームの発表と、お客様がリモート作業に適応できるようアップデートをTeams](https://cloudblogs.microsoft.com/powerplatform/2020/05/19/announcing-power-platform-and-teams-updates-to-help-customers-adapt-to-remote-work/)
 
-[Teamsは、デジタル ワークスペースを強化するために、低コード機能を使用して作業の未来を形成しています](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180)
+[Teamsは、デジタルワークスペースを強化するために低コード機能を使用して作業の未来を形作っています](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180)
 
-### <a name="-managing-power-platform-apps"></a>✔ Power Platform アプリの管理
+### <a name="-managing-power-platform-apps"></a>パワープラットフォームアプリの管理✔
 
 > [!div class="nextstepaction"]
-> [管理センターで Microsoft Power Platform アプリをMicrosoft Teamsする](/microsoftteams/manage-power-platform-apps)
+> [Microsoft Teams管理センターで Microsoft 電源プラットフォーム アプリを管理する](/microsoftteams/manage-power-platform-apps)
 
 ## <a name="see-also"></a>関連項目
 

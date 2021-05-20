@@ -1,63 +1,63 @@
 ---
-title: '[スタート] - [チャネルとグループ] タブを作成する'
+title: はじめに - チャネルとグループ タブを構築する
 author: girliemac
-description: '[チャネルとグループ] Microsoft Teamsを使用して、チャネルとグループ タブをすばやく作成Microsoft Teams Toolkit。'
+description: Microsoft Teams Toolkitを使用して、Microsoft Teamsチャネルとグループ タブをすばやく作成します。
 ms.author: timura
 ms.date: 03/22/2020
 ms.topic: tutorial
-ms.openlocfilehash: 868a471499bf2015196b7b741e340d070d0ed458
-ms.sourcegitcommit: 303fc214aa04757779a171337f31a6539f47fd03
+ms.openlocfilehash: ff9cfbfb7d099db52966f119add4ce8729929aa1
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52068753"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566069"
 ---
-# <a name="build-your-first-channel-and-group-tab-for-microsoft-teams"></a>ユーザーの最初のチャネルとグループ タブをMicrosoft Teams
+# <a name="build-your-first-channel-and-group-tab-for-microsoft-teams"></a>Microsoft Teamsの最初のチャンネルとグループタブを作成する
 
-このチュートリアルでは、チーム チャネルまたはチャットのフルスクリーン ページであるグループタブとも呼ばれる基本的なチャネル タブを作成する方法について説明します。 また、この種のタブのいくつかの側面を構成することもできます。たとえば、タブの名前を変更して、個人用タブでは行えないチャネルにとって意味のあるものにすることもできます。
+このチュートリアルでは、チーム チャネルまたはチャットの全画面表示ページである *グループ タブ* とも呼ばれる基本的な *チャネル タブ* を作成する方法について説明します。 この種類のタブの一部の要素を構成することもできます(たとえば、タブの名前を変更して、そのタブをチャネルに意味のあるものにすることもできます。
 
-## <a name="what-youll-learn"></a>学習する情報
+## <a name="what-youll-learn"></a>あなたが学ぶこと
 
-* アプリプロジェクトを作成するには、アプリのMicrosoft Teams ToolkitをVisual Studio Code。
-* チャネル タブに関連するアプリの構成とスキャフォールディングについて理解します。
-* タブコンテンツとタブ構成を作成します。
-* テスト用にチームでアプリをビルドして実行します。
+* Visual Studio CodeのMicrosoft Teams Toolkitを使用してアプリ プロジェクトを作成します。
+* チャンネルタブに関連するアプリの構成とスキャフォールディングについて理解する。
+* タブの内容とタブ構成を作成します。
+* テスト用のチームでアプリをビルドして実行します。
 
 ## <a name="prerequisites"></a>前提条件
 
-簡単なアプリをセットアップして構築する方法を理解Teamsしてください。 詳細については[、「Hello, World!」アプリMicrosoft Teamsを作成するを参照してください](../build-your-first-app/build-and-run.md)。
+簡単なTeams アプリを設定して構築する方法を理解していることを確認します。 詳細については、[最初のMicrosoft Teams "Hello, World!" アプリを作成する](../build-your-first-app/build-and-run.md)を参照してください。
 
 ## <a name="1-create-your-app-project"></a>1. アプリ プロジェクトを作成する
 
-このMicrosoft Teams Toolkitは、アプリを構成し、チャネルタブとグループ タブに関連するスキャフォールディングを設定するのに役立ちます。 また、基本的な構成ページと、"Hello, World! メッセージ。
+このMicrosoft Teams Toolkitは、アプリを構成し、チャンネルとグループのタブに関連するスキャフォールディングを設定するのに役立ちます。 また、基本的な構成ページとコンテンツ ページが含まれています。 メッセージ。
 
 **アプリ プロジェクトを作成するには**
 
-1. [アクティビティ] Visual Studio Code左側の [アクティビティ バー **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: を選択します。
-1. 開発アカウントでサインインMicrosoft 365求めるメッセージが表示されたら、そのアカウントを使用します。
-1. [プロジェクトの **選択] 画面** で、[チャネルとグループ アプリ] の下の **[JS** (JavaScript)] **を選択します**。
+1. Visual Studio Codeに移動し、 :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: 左側のアクティビティバーのMicrosoft Teamsを選択します。
+1. Microsoft 365開発アカウントでサインインするように求められたらサインインします。
+1. [**プロジェクトの選択**] 画面で、[**チャネルとグループ アプリ**] の下の **[JS** (JavaScript)] を選択します。
 1. Teams アプリの名前を入力します。 
 
     > [!NOTE]
-    > これは、アプリの既定の名前であり、ローカル コンピューター上のアプリ プロジェクト ディレクトリの名前です。
+    > これは、アプリの既定の名前であり、ローカル コンピューター上のアプリ プロジェクト ディレクトリの名前でもあります。
 
-1. [**グループまたはチャネルTeams] タブを選択します**。
-1. 画面 **の下部** にある [完了] を選択してプロジェクトを構成し、プロジェクトをローカル コンピューターに保存します。  
+1. [**グループ] タブまたは [チャンネル] タブTeams** 選択します。
+1. 画面の下部にある **[完了] を** 選択してプロジェクトを構成し、プロジェクトをローカル コンピューターに保存します。  
 
-## <a name="2-understand-your-app-project-components"></a>2. アプリ プロジェクト コンポーネントについて
+## <a name="2-understand-your-app-project-components"></a>2. アプリ プロジェクト コンポーネントを理解する
 
-ツールキットを使用してプロジェクトを作成すると、アプリの構成とスキャフォールディングの多くが自動的に設定されます。 チャネル タブを作成する主要なコンポーネントを見てみ取ってみろ。
+ツールキットを使用してプロジェクトを作成すると、アプリの構成とスキャフォールディングの多くが自動的に設定されます。 チャネル タブを作成するための主要なコンポーネントを見てみましょう。
 
-* **アプリの構成**: ツールキット **で App Studio** を開き、アプリ構成を表示および更新します。
-* **アプリのスキャフォール** ディング: アプリのスキャフォールディングは、チャネル タブのレンダリングに必要なコンポーネントを提供Teams。 ただし、ここでは次の作業に重点を置き、多くの作業を行います。
-  * プロジェクトのディレクトリにある `src/components` ファイル:
+* **アプリの構成**: **ツールキットでアプリスタジオ** を開き、アプリの構成を表示および更新します。
+* **アプリスキャフォールディング**: アプリスキャフォールディングは、Teamsでチャンネルタブをレンダリングするために必要なコンポーネントを提供します。 作業できる作業はたくさんありますが、ここでは次の点に焦点を当ててみましょう。
+  * プロジェクトのディレクトリにあるファイル `src/components` :
     * `Tab.js` タブのコンテンツ ページをレンダリングします。
-    * `TabConfig.js` タブの構成ページをレンダリングします。
-  * Microsoft TeamsJavaScript クライアント SDK は、プロジェクトのフロントエンド コンポーネントに事前に読み込まれます。
+    * `TabConfig.js` タブの設定ページをレンダリングします。
+  * Microsoft TeamsJavaScript クライアント SDK は、プロジェクトのフロントエンド コンポーネントにプリロードされます。
 
-## <a name="3-customize-your-tab-content-page"></a>3. タブ コンテンツ ページをカスタマイズする
+## <a name="3-customize-your-tab-content-page"></a>3. タブコンテンツページをカスタマイズする
 
-1. 組織に関連する情報を使用して、次のコード サンプルをコピーして変更します。 スニペットは次のように使用することもできます。
+1. 次のコード サンプルをコピーして、組織に関連する情報を使用して変更します。 スニペットを次のように使用することもできます。
     ```JSX
     <div>
       <h1>Important Contacts</h1>
@@ -68,7 +68,8 @@ ms.locfileid: "52068753"
         </ul>
     </div>
     ```
-1. ディレクトリに移動 `src/components` し、ファイルを開 `Tab.js` きます。 次の例 `render()` に示すように、関数を見つけて `return()` コードを内部に貼り付けます。
+    
+1. ディレクトリに移動 `src/components` し、ファイルを開きます `Tab.js` 。 次の `render()` 例に示すように、関数を探して、内部にコードを貼り付けます `return()` 。
     ```JavaScript
     render() {
 
@@ -86,18 +87,19 @@ ms.locfileid: "52068753"
         );
     }
     ```
-1. ディレクトリに移動し、次のコードでファイルを更新して、使用されているテーマで電子メール リンクを読みやすく `src/components` `App.css` します。
+    
+1. ディレクトリに移動 `src/components` し、 `App.css` 使用されているテーマで電子メールリンクを読みやすくするために、次のコードでファイルを更新します。
     ```CSS
     a {
       color: inherit;
     }
     ```
 
-## <a name="4-customize-your-tab-configuration-page"></a>4. タブ構成ページをカスタマイズする
+## <a name="4-customize-your-tab-configuration-page"></a>4. タブ設定ページをカスタマイズする
 
-チャネルまたはチャットのすべてのタブには構成ページがあります。モーダルで、ユーザーがアプリを追加するときに少なくとも 1 つのセットアップ オプションが表示されます。 既定では、構成ページは、タブがインストールされているときにチャネルまたはチャットに通知する必要がある場合に、ユーザーに通知を求めるメッセージを表示します。 カスタム コンテンツを追加することで、構成ページをカスタマイズできます。
+チャンネルまたはチャットの各タブには、ユーザーがアプリを追加したときに表示される設定オプションを少なくとも 1 つ備えたモーダルの設定ページがあります。 既定では、構成ページは、タブがインストールされたときにチャネルまたはチャットに通知するかどうかをユーザーに確認します。 カスタム コンテンツを追加して、構成ページをカスタマイズできます。
 
-カスタム コンテンツを追加するには、ディレクトリからファイルを開き、次の例に示すようにプレースホルダー コンテンツ `TabConfig.js` `src/components` `return()` を内部で更新します。
+カスタム コンテンツを追加するには、 `TabConfig.js` ディレクトリからファイルを開 `src/components` き、次の `return()` 例に示すように、内部のプレースホルダ コンテンツを更新します。
 
   ```JavaScript
   return (
@@ -111,62 +113,62 @@ ms.locfileid: "52068753"
   ```
  
 > [!TIP]
-> ユーザーがアプリについて初めて読むので、このページでアプリに関する簡単な情報を提供します。 カスタム構成オプションや、タブ構成ページで一般的 [な](../tabs/how-to/authentication/auth-aad-sso.md)認証ワークフローを含めすることもできます。
+> ユーザーが初めて読むので、このページでアプリに関する簡単な情報を提供します。 タブの設定ページで一般的なカスタム構成オプションまたは [認証ワークフロー](../tabs/how-to/authentication/auth-aad-sso.md)を含めることもできます。
 
 ## <a name="5-customize-your-tab-name"></a>5. タブ名をカスタマイズする
 
-チャネル タブを追加すると、アプリ名が既定で表示されます (たとえば、 **ファースト** アプリ)。 グループの共同作業のコンテキストで意味のある名前を指定できます 。たとえば、 **チーム** 連絡先:
+チャンネルタブを追加すると、デフォルトでアプリ名が表示されます(たとえば、 **ファーストアプリ**)。 グループの共同作業のコンテキストで、よりわかりやすい名前を指定 **することもできます。**
 
-1. ディレクトリに移動 `src/components` し、ファイルを開 `TabConfig.js` きます。
-1. 次の例に示すように、既定で表示するタブ名を持 `suggestedDisplayName` つ `microsoftTeams.settings.setSettings` プロパティを追加します。
+1. ディレクトリに移動 `src/components` し、ファイルを開きます `TabConfig.js` 。
+1. 次の `suggestedDisplayName` 例に示すように、既定で表示するタブ名を持つプロパティ `microsoftTeams.settings.setSettings` を追加します。
 
-  ```JavaScript
-    microsoftTeams.settings.setSettings({
-    "contentUrl": "https://localhost:3000/tab",
-    "suggestedDisplayName": "Team Contacts"
-  });
-  ```
+    ```JavaScript
+        microsoftTeams.settings.setSettings({
+        "contentUrl": "https://localhost:3000/tab",
+        "suggestedDisplayName": "Team Contacts"
+      });
+      ```
 
 ## <a name="6-build-and-run-your-app"></a>6. アプリをビルドして実行する
 
 このチュートリアルでは、アプリをローカルでビルドして実行する方法について説明します。 
 
-1. ターミナルのアプリ プロジェクトのルート ディレクトリに移動します。
+1. ターミナルでアプリ プロジェクトのルート ディレクトリに移動します。
 1. `npm install` を実行します。
 1. `npm start` を実行します。
 
-この情報は、ツールキットの `README` セクションにも表示されます。
-コンパイルが正常に完了 `https://localhost:3000` した後、 **アプリが実行されています。** メッセージがターミナルに表示されます。 
+この情報は、 `README` ツールキットのセクションにも表示されます。
+コンパイルが正常に完了 `https://localhost:3000` した後、アプリが実行 **されています。** メッセージが端末に表示されます。 
 
-## <a name="7-sideload-your-app-in-teams"></a>7. アプリをサイドロードTeams
+## <a name="7-sideload-your-app-in-teams"></a>7. Teamsでアプリをサイドロードする
 
-お使いのアプリは Teams でテストする準備ができています。 これを行うには、アプリのサイドローディングを許可するアカウントが必要です。 
+お使いのアプリは Teams でテストする準備ができています。 これを行うには、アプリのサイドロードを許可するアカウントが必要です。 
 
-1. F5 キー Teamsを使用して、Visual Studio Code Web クライアント **を開** きます。
-1. 次の手順に従って信頼できる ( ) を追加し、アプリ コンテンツをアプリ コンテンツを次の手順 `localhost` で表示Teams。
+1. **F5** キーを使用してVisual Studio CodeでTeams Web クライアントを開きます。
+1. 次 `localhost` の手順に従って、アプリのコンテンツをTeamsに表示できるようにして、信頼できるものとして ( ) を追加します。
 
-   1. F5 キーで開いたのと同じブラウザー ウィンドウ (既定では Google Chrome) で新しいタブ **を開** きます。
-   1. ページ `https://localhost:3000/tab` を開いて続行します。
+   1. **F5** キーで開いた同じブラウザー ウィンドウ (既定では Google Chrome) で新しいタブを開きます。
+   1. ページ `https://localhost:3000/tab` を開いて、ページに進みます。
 
-1. [**チームに追加] または**[チャット **に** 追加] を選択し、チャットのモーダルからテストに使用できるチャネルまたはチャットTeams。
-1. [タブ **の設定] を選択します**。構成ページはモーダルで表示されます。
+1. [**チームに追加**] または **[チャットに追加] を** 選択し、Teamsのモーダルからテストに使用できるチャネルまたはチャットを探します。
+1. [ **タブのセットアップ ] を** 選択します。構成ページはモーダルで表示されます。
 
-   :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="チャネル タブ構成ページのスクリーンショット。":::
+   :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="チャンネル タブの構成ページのスクリーンショット。":::
 
-1. [保存 **] を** 選択してタブを構成します。次のコンテンツ ページが表示されます。
+1. [ **保存] を** 選択してタブを構成します。次のコンテンツ ページが表示されます。
 
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="静的コンテンツ ビューを含むチャネル タブのスクリーンショット。":::
 
 ## <a name="see-also"></a>関連項目
 
 * [最初の Microsoft Teams アプリを構築して実行する](../build-your-first-app/build-and-run.md) 
-* [Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
-* [デスクトップと Web のタブMicrosoft Teamsデザインする](../tabs/design/tabs.md) 
-* [UI テンプレートをMicrosoft Teamsアプリを設計する](../concepts/design/design-teams-app-ui-templates.md) 
+* [Teams JavaScript client SDK](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
+* [デスクトップと Web Microsoft Teams用のタブの設計](../tabs/design/tabs.md) 
+* [UI テンプレートを使用したMicrosoft Teams アプリの設計](../concepts/design/design-teams-app-ui-templates.md) 
 * [モバイルのタブ](../tabs/design/tabs-mobile.md)
-* [タブのシングル サインオン (SSO) のサポート](../tabs/how-to/authentication/auth-aad-sso.md)
-* [Microsoft Teams API の概要](https://docs.microsoft.com/graph/teams-concept-overview)
-* [カスタム個人用タブを作成し、Node.jsの Yeoman Generator を使用Microsoft Teams](../tabs/quickstarts/create-personal-tab-node-yeoman.md)
+* [タブのシングル サインオン (SSO) サポート](../tabs/how-to/authentication/auth-aad-sso.md)
+* [Microsoft Teams API の概要](/graph/teams-concept-overview)
+* [Node.jsとヨーマンジェネレータを使用してカスタムパーソナルタブを作成Microsoft Teams](../tabs/quickstarts/create-personal-tab-node-yeoman.md)
 
 ## <a name="next-step"></a>次の手順
 

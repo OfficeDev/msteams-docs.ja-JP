@@ -1,40 +1,40 @@
 ---
 title: 場所機能を統合する
 author: Rajeshwari-v
-description: JavaScript クライアント SDK Teamsを使用して場所の機能を活用する方法
-keywords: 場所マップ機能ネイティブ デバイスのアクセス許可
+description: Teams JavaScript クライアント SDK を使用して位置情報機能を活用する方法
+keywords: 位置情報マップ機能 ネイティブ デバイスのアクセス許可
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 55c3c6d82785b46580c3d8553d46a6e5e3a28fb4
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: b85f19e74d0a8121dd290fc395c1018178437b3a
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101780"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566188"
 ---
 # <a name="integrate-location-capabilities"></a>場所機能を統合する 
 
-このドキュメントでは、ネイティブ デバイスの位置情報機能をアプリと統合する方法Teams説明します。  
+このドキュメントでは、ネイティブ デバイスの位置情報機能をTeams アプリに統合する方法について説明します。  
 
-JavaScript クライアント[SDK Microsoft Teams使用](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)できます。これは、アプリがユーザーのネイティブ デバイス機能にアクセスするために必要なツール[を提供します](native-device-permissions.md)。 [getLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true)や[showLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true)などの場所 API を使用して、アプリ内の機能を統合します。 
+[JavaScript クライアント SDK Microsoft Teams](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)使用すると、アプリがユーザーのネイティブ[デバイス機能](native-device-permissions.md)にアクセスするために必要なツールを提供します。 [getLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true)や[showLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true)などの場所 API を使用して、アプリ内の機能を統合します。 
 
-## <a name="advantages-of-integrating-location-capabilities"></a>場所機能を統合する利点
+## <a name="advantages-of-integrating-location-capabilities"></a>ロケーション機能を統合する利点
 
-Teams アプリに場所の機能を統合する主な利点は、Teams プラットフォーム上の Web アプリ開発者が、Microsoft Teams JavaScript クライアント SDK で位置情報機能を活用できるという利点です。 
+Teams アプリに位置情報機能を統合する主な利点は、Teams プラットフォーム上の Web アプリ開発者が、Microsoft Teams JavaScript クライアント SDK を使用して位置情報機能を活用できることです。 
 
-次の例は、場所機能の統合がさまざまなシナリオでどのように使用されるのか示しています。
-* 工場では、監督者は、工場の近くで自分撮りを取得し、指定されたアプリを介して共有を求め、労働者の出席を追跡できます。 場所データもキャプチャされ、画像と共に送信されます。
-* 位置情報機能を使用すると、サービス プロバイダーの保守スタッフは、携帯電話の塔の本物の正常性データを管理と共有できます。 管理は、キャプチャされた位置情報とメンテナンス スタッフが提出したデータの不一致を比較できます。
+次の例は、さまざまなシナリオで場所機能の統合がどのように使用されているかを示しています。
+* 工場では、スーパーバイザーは、工場の近くで自分撮りを取り、指定されたアプリを介してそれを共有するように求めることによって、労働者の出席を追跡することができます。 ロケーションデータもキャプチャされ、画像と一緒に送信されます。
+* 位置情報機能により、サービス プロバイダーの保守スタッフは、携帯電話塔の本物の正常性データを管理と共有できます。 管理は、キャプチャされた位置情報とメンテナンス スタッフが送信したデータの不一致を比較できます。
 
-場所の機能を統合するには、アプリ マニフェスト ファイルを更新して API を呼び出す必要があります。 効果的な統合を行う場合は、場所[](#code-snippets)API を呼び出すコード スニペットについて理解している必要があります。 API 応答エラーを理解して、アプリ[](#error-handling)内のエラーを処理することがTeamsです。
+位置情報機能を統合するには、アプリ マニフェスト ファイルを更新して API を呼び出す必要があります。 効果的な統合を行うには、場所 API を呼び出す [コード スニペット](#code-snippets) をよく理解している必要があります。 Teamsアプリのエラーを処理するには[、API 応答エラー](#error-handling)を理解しておくことが重要です。
 
 > [!NOTE] 
-> 現在、Microsoft Teams機能のサポートはモバイル クライアントでのみ利用できます。
+> 現在、位置情報の機能のMicrosoft Teamsサポートは、モバイル クライアントでのみ使用できます。
 
 ## <a name="update-manifest"></a>マニフェストの更新
 
-プロパティを追加Teamsを[manifest.jsして](../../resources/schema/manifest-schema.md#devicepermissions)、ファイル上のアプリ `devicePermissions` のアプリを更新します `geolocation` 。 これにより、アプリは場所機能の使用を開始する前に、ユーザーに必要なアクセス許可を求めできます。
+Teamsアプリ[のmanifest.js](../../resources/schema/manifest-schema.md#devicepermissions)を更新するには、プロパティを追加 `devicePermissions` して `geolocation` を指定します。 これにより、位置情報機能を使用する前に、アプリがユーザーに必要なアクセス許可を要求できます。
 
 ``` json
 "devicePermissions": [
@@ -43,40 +43,40 @@ Teams アプリに場所の機能を統合する主な利点は、Teams プラ�
 ```
 
 > [!NOTE]
-> 要求 **のアクセス許可のプロンプト** は、関連する API が開始されるとTeams表示されます。 詳細については、「デバイスのアクセス [許可を要求する」を参照してください](native-device-permissions.md)。
+> 関連するTeams API が開始されると、[**アクセス許可の要求**] プロンプトが自動的に表示されます。 詳細については、 [デバイスのアクセス許可の要求](native-device-permissions.md)を参照してください。
 
-## <a name="location-apis"></a>場所 API
+## <a name="location-apis"></a>ロケーション API
 
 デバイスの位置情報機能を有効にするには、次の API セットを使用する必要があります。
 
 | API      | 説明   |
 | --- | --- |
-|[getLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) | ユーザーの現在のデバイスの場所を指定するか、ネイティブの場所ピッカーを開き、ユーザーが選択した場所を返します。 |
-|[showLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#showLocation&preserve-view=true) | 地図上の場所を表示する |
+|[場所を取得します。](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) | ユーザーの現在のデバイスの場所を指定するか、ネイティブの場所ピッカーを開き、ユーザーが選択した場所を返します。 |
+|[ショーロケーション](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#showLocation&preserve-view=true) | 地図上に場所を表示します。 |
 
 > [!NOTE]
 
-> `getLocation()`API は、次の入力[構成](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/locationprops?view=msteams-client-js-latest&preserve-view=true)と共に `allowChooseLocation` 提供されます `showMap` 。 <br/> 値が true `allowChooseLocation` の *場合*、ユーザーは任意の場所を選択できます。<br/>  値が false の *場合*、ユーザーは現在の場所を変更できません。<br/> 値が false の `showMap` *場合*、現在の場所はマップを表示せずにフェッチされます。 `showMap` true に設定 `allowChooseLocation` されている場合は無視 *されます*。
+> `getLocation()`API は、次の[入力構成](/javascript/api/@microsoft/teams-js/locationprops?view=msteams-client-js-latest&preserve-view=true) `allowChooseLocation` と 、 と共に提供されます `showMap` 。 <br/> の値が `allowChooseLocation` *true* の場合、ユーザーは任意の場所を選択できます。<br/>  値が *false* の場合、ユーザーは現在の場所を変更できません。<br/> の値が `showMap` *false* の場合、現在の位置はマップを表示せずにフェッチされます。 `showMap``allowChooseLocation` *true* に設定されている場合は無視されます。
 
-**場所機能用の Web アプリ エクスペリエンス** 
- ![場所機能の Web アプリ エクスペリエンス](../../assets/images/tabs/location-capability.png)
+**位置情報機能** 
+ ![ の Web アプリ エクスペリエンス位置情報機能の Web アプリ エクスペリエンス](../../assets/images/tabs/location-capability.png)
 
 ## <a name="error-handling"></a>エラー処理
 
-これらのエラーは、アプリで適切に処理Teamsがあります。 次の表に、エラー コードとエラーが生成される条件を示します。 
+Teams アプリでこれらのエラーを適切に処理する必要があります。 次の表に、エラー コードとエラーが生成される条件を示します。 
 
 |エラー コード |  エラー名     | 条件|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API は現在のプラットフォームではサポートされていません。|
-| **500** | INTERNAL_ERROR | 必要な操作の実行中に内部エラーが発生します。|
-| **1000** | PERMISSION_DENIED |ユーザーは、アプリまたは web アプリTeams場所のアクセス許可を拒否しました。|
-| **4000** | INVALID_ARGUMENTS | API は、間違った引数または不十分な必須引数を使用して呼び出されます。|
-| **8000** | USER_ABORT |ユーザーが操作を取り消しました。|
-| **9000** | OLD_PLATFORM | ユーザーは、API の実装が存在しない古いプラットフォーム ビルドに存在します。 ビルドをアップグレードすると、問題が解決します。|
+| **500** | INTERNAL_ERROR | 必要な操作の実行中に内部エラーが発生しました。|
+| **1000** | PERMISSION_DENIED |Teams アプリまたは Web アプリに対するユーザーの場所のアクセス許可を拒否しました。|
+| **4000** | INVALID_ARGUMENTS | API が、間違った、または不十分な必須引数で呼び出されます。|
+| **8000** | USER_ABORT |ユーザーは操作をキャンセルしました。|
+| **9000** | OLD_PLATFORM | ユーザーは、API の実装が存在しない古いプラットフォームビルドに存在します。 ビルドをアップグレードすると、問題が解決するはずです。|
 
 ## <a name="code-snippets"></a>コード スニペット
 
-**`getLocation`場所を取得する API の呼び出し:**
+**API を呼び出 `getLocation` して場所を取得する:**
 
 ```javascript
 let locationProps = {"allowChooseLocation":true,"showMap":true};
@@ -89,7 +89,7 @@ microsoftTeams.location.getLocation(locationProps, (err: microsoftTeams.SdkError
 });
 ```
 
-**`showLocation`場所を表示する API の呼び出し:**
+**API を呼び出 `showLocation` して場所を表示します。**
 
 ```javascript
 let location = {"latitude":17,"longitude":17};
@@ -104,5 +104,5 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 
 ## <a name="see-also"></a>関連項目
 
-* [メディア機能を統合Teams](mobile-camera-image-permissions.md)
-* [QR コードまたはバーコード スキャナー機能をアプリに統合Teams](qr-barcode-scanner-capability.md)
+* [Teamsでのメディア機能の統合](mobile-camera-image-permissions.md)
+* [qr コードまたはバーコード スキャナー機能をTeamsに統合](qr-barcode-scanner-capability.md)

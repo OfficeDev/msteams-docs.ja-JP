@@ -2,16 +2,16 @@
 title: 受信 Webhook を使用して外部リクエストを Microsoft Teams に投稿する
 author: laujan
 description: Teams アプリに受信 Webhook を追加する方法
-keywords: teams タブ送信 Webhook
+keywords: チームタブの送信ウェブフック
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: bc4d768751d34ccf305ef99e126159123a83ef3f
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: bb2306cb57c069d3bed06702495da2775694643a
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52018419"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566818"
 ---
 # <a name="post-external-requests-to-teams-with-incoming-webhooks"></a>受信 Webhook を使用して外部リクエストを Teams に投稿する
 
@@ -27,19 +27,21 @@ ms.locfileid: "52018419"
 
 | 機能 | 説明 |
 | ------- | ----------- |
-|スコープ構成|受信 Webhook にはスコープが設定されており、チャネル レベルで構成されます (例: 送信 Webhook はチーム レベルで構成されます)。|
+|スコープ構成|受信 Webhook は、チャネル レベルでスコープと構成が行われます。 たとえば、送信 webhook はスコープが設定され、チーム レベルで構成されます。|
 |セキュリティで保護されたリソース定義|メッセージは JSON ペイロードとして書式設定されます。 この宣言メッセージング構造により、クライアントでコードが実行されることはないため、悪意のあるコードの挿入が防止されます。|
 |アクション可能なメッセージングのサポート|カード経由でメッセージを送信する場合は、**アクション可能なメッセージ カード** 形式を使用する必要があります。 アクション可能なメッセージ カードは、Teams を含むすべての Office 365 グループでサポートされています。 こちらは、「[従来の操作可能なメッセージ カード リファレンス](/outlook/actionable-messages/message-card-reference)」と「[メッセージ カードのプレイグラウンド](https://messagecardplayground.azurewebsites.net)」へのリンクです。|
 |独立した HTTPS メッセージングのサポート| カードは、明瞭で一貫した方法で情報を表示する優れた方法です。 HTTPS POST 要求を送信できるツールやフレームワークは、受信 Webhook を介して Teams にメッセージを送信できます。|
 |Markdown のサポート|アクション可能なメッセージング カードのすべてのテキスト フィールドで、基本的な Markdown がサポートされています。 **カードには HTML マークアップを使用しないでください**。 HTML は無視され、プレーン テキストとして扱われます。|
 
 > [!Note]
-> Teams、メッセージング拡張機能、受信 Webhook、および Bot Framework は、オープンなクロスカード プラットフォーム フレームワークであるアダプティブ カードをサポートします。 [Teamsアダプティブ カード](../../webhooks-and-connectors/how-to/connectors-creating.md)は現在サポートされていません。 ただし、アダプティブ カードを[チャネルに投稿](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/)するフローをTeamsできます。
+> Teamsボット、メッセージング拡張機能、受信 Webhook、および Bot Framework は、オープンクロスカード プラットフォーム フレームワークであるアダプティブ カードをサポートします。 [Teamsコネクタは現在、](../../webhooks-and-connectors/how-to/connectors-creating.md)アダプティブ カードをサポートしていません。 ただし、Teamsチャネルにアダプティブ カードをポストする[フロー](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/)を作成することはできます。
 
 ## <a name="add-an-incoming-webhook-to-a-teams-channel"></a>Teams チャネルに受信 Webhook を追加する
 
 > [!Important]  
 > チームの **[設定]** => **[メンバーのアクセス許可]** => **[Allow members to create, update, and remove connectors]** (メンバーがコネクタを作成、更新、削除することを許可する) が選択されている場合、すべてのチーム メンバーがコネクタの追加、変更、削除を行うことができます。
+
+**受信 Webhook を追加するには**
 
 1. Webhook を追加するチャネルに移動し、上部のナビゲーション バーから (&#8226;&#8226;&#8226;) *[その他のオプション]* を選択します。
 1. ドロップダウン メニューから **[コネクタ]** を選択し、**受信 Webhook** を検索します。
@@ -48,6 +50,8 @@ ms.locfileid: "52018419"
 1. **[完了]** ボタンを選択します。 Webhook が、チーム チャネルで利用できるようになります。
 
 ## <a name="remove-an-incoming-webhook-from-a-teams-channel"></a>Teams チャネルから受信 Webhook を削除する
+
+**受信した Webhook を削除するには**
 
 1. Webhook が追加されたチャネルに移動し、上部のナビゲーション バーから (&#8226;&#8226;&#8226;) *[その他のオプション]* を選択します。
 1. ドロップダウン メニューから **[コネクタ]** を選択します。
@@ -65,6 +69,6 @@ ms.locfileid: "52018419"
 * 構成ページを追加して、受信 Webhook を [O365 コネクタ](~/webhooks-and-connectors/how-to/connectors-creating.md)でラップする。
 * [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) への提出の一部としてコネクタをパッケージ化して公開する。
 
-## <a name="learn-more"></a>詳細情報
+## <a name="see-also"></a>関連項目
 
-* [コネクタと Webhook へのメッセージの送信](~/webhooks-and-connectors/how-to/connectors-using.md)
+[コネクタと Webhook へのメッセージの送信](~/webhooks-and-connectors/how-to/connectors-using.md)

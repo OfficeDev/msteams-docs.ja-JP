@@ -1,38 +1,38 @@
 ---
 title: カード内のテキストの書式設定
-description: カードテキストの書式設定について説明Microsoft Teams
-keywords: teams ボット カードの形式
+description: Microsoft Teamsでのカード テキストの書式設定について説明します。
+keywords: チームボットカード形式
 localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: d2806271f99af53139c76dcbd1090a96adcd0f31
-ms.sourcegitcommit: 303fc214aa04757779a171337f31a6539f47fd03
+ms.openlocfilehash: 848656097f2c865705cc0d91dece93049d8c6790
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52068823"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566584"
 ---
-# <a name="format-cards-in-teams"></a>カードの書式を設定Teams
+# <a name="format-cards-in-teams"></a>Teamsでカードをフォーマットする
 
-カードの種類に応じて、Markdown または HTML を使用してリッチ テキスト書式をカードに追加できます。
+カードの種類に応じて、マークダウンまたは HTML を使用して、リッチ テキスト形式を追加できます。
 
-カードは、タイトルプロパティや字幕プロパティではなく、text プロパティでのみ書式設定をサポートします。 書式設定は、カードの種類に応じて XML (HTML) 書式のサブセットまたは Markdown を使用して指定できます。 現在および将来の開発では、Markdown 書式設定を使用したアダプティブ カードをお勧めします。
+カードは、タイトルやサブタイトルのプロパティではなく、text プロパティの書式設定のみをサポートします。 フォーマットは、XML (HTML) フォーマットのサブセットを使用して指定することも、カードの種類に応じてマークダウンすることもできます。 現在および将来の開発のためにマークダウンフォーマットを使用してアダプティブカードをお勧めします。
 
-書式設定のサポートはカードの種類によって異なります。また、カードのレンダリングはデスクトップ クライアントとモバイル Teams クライアント、およびデスクトップ ブラウザーの Teams によって若干異なる場合があります。
+フォーマットのサポートはカードの種類によって異なり、カードのレンダリングはデスクトップとモバイル Teamsクライアントの間で若干異なる場合があり、デスクトップ ブラウザーでTeamsします。
 
-インライン イメージは、任意のカードにTeamsできます。 イメージは、、、またはファイルとして書式設定され  `.png` `.jpg` `.gif` 、1024 px または 1 MB を超え×する必要があります。 アニメーション GIF は公式にはサポートされていません。 *「カード*[リファレンス」を参照してください。](./cards-reference.md#inline-card-images)
+インライン画像は、任意のTeamsカードに含めることができます。 イメージは、 、または ファイルとしてフォーマットされ  `.png` `.jpg` `.gif` 、1024 × 1024 px または 1 MB を超えてはなりません。 アニメーション GIF は正式にはサポートされていません。 詳細については、 [カードリファレンス](./cards-reference.md#inline-card-images)を参照してください。
 
-## <a name="formatting-cards-with-markdown"></a>Markdown を使用したカードの書式設定
+## <a name="formatting-cards-with-markdown"></a>マークダウンを使用したカードのフォーマット
 
-Markdown をサポートするカードの種類は次の 2 Teams。
+Teamsでマークダウンをサポートするカードタイプは2つあります。
 
 > [!div class="checklist"]
-> * **アダプティブ カード**: Markdown はアダプティブ カード フィールドおよび . `Textblock` `Fact.Title` `Fact.Value` アダプティブ カードでは HTML はサポートされていません。
-> * **O365 コネクタ カード**: マークダウンと制限付き HTML は、テキスト フィールドOffice 365コネクタ カードでサポートされます。
+> * **アダプティブカード**: マークダウンはアダプティブカード `Textblock` フィールドおよび `Fact.Title` `Fact.Value` . アダプティブ カードでは、HTML はサポートされていません。
+> * **O365 コネクタ カード**: マークダウンと制限付き HTML は、テキスト フィールドのコネクタ カードOffice 365でサポートされています。
 
-# <a name="markdown-formatting-adaptive-cards"></a>[**Markdown の書式設定: アダプティブ カード**](#tab/adaptive-md)
+# <a name="markdown-formatting-adaptive-cards"></a>[**マークダウンのフォーマット: アダプティブカード**](#tab/adaptive-md)
 
- サポートされているスタイルは `Textblock` 、次 `Fact.Title` `Fact.Value` のとおりです。
+ でサポートされているスタイル `Textblock` `Fact.Title` は `Fact.Value` 、次のとおりです。
 
 | Style | 例 | Markdown |
 | --- | --- | --- |
@@ -42,40 +42,40 @@ Markdown をサポートするカードの種類は次の 2 Teams。
 | 順序付きリスト | <ol><li>テキスト</li><li>テキスト</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
 | Hyperlinks |[Bing](https://www.bing.com/)| ```[Title](url)``` |
 
-次の Markdown タグはサポートされていません。
+次のマークダウン タグはサポートされていません。
 
 * ヘッダー
 * テーブル
 * 画像
 * 書式設定済みのテキスト
-* Blockquotes
+* ブロッククォート
 
 > [!IMPORTANT]
-> アダプティブ カードは HTML の書式設定をサポートしていない。
+> アダプティブ カードは HTML 形式をサポートしていません。
 
 ### <a name="newlines-for-adaptive-cards"></a>アダプティブ カードの改行
 
-リストでは、改行に対 `\r` してエスケープ シーケンス `\n` またはエスケープ シーケンスを使用できます。 リスト `\n\n` で使用すると、リスト内の次の要素がインデントされます。 テキスト ブロック内の他の場所に改行が必要な場合は、 を使用します `\n\n` 。
+リストでは、改行に対して、 `\r` または `\n` エスケープ シーケンスを使用できます。 `\n\n`リスト内で使用すると、リスト内の次の要素がインデントされます。 テキストブロック内の他の場所に改行が必要な場合は、 `\n\n` を使用します。
 
-### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a>アダプティブ カードのモバイルとデスクトップの違い
+### <a name="mobile-and-desktop-differences-for-adaptive-cards"></a>アダプティブカードのモバイルとデスクトップの違い
 
-書式設定は、デスクトップとモバイル バージョンの間で少し異Teams。
+フォーマットは、デスクトップとモバイル版のTeamsの間で若干異なります。
 
-デスクトップでは、アダプティブ カード Markdown の書式設定は、Web ブラウザーとクライアント アプリケーションの両方で次Teams表示されます。
+デスクトップでは、アダプティブ カード マークダウンの書式設定は、Web ブラウザとTeams クライアント アプリケーションの両方で次のように表示されます。
 
-![デスクトップ クライアントでのアダプティブ カードマークダウンの書式設定](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
+![デスクトップ クライアントでのアダプティブ カード マークダウンの書式設定](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
-iOS では、アダプティブ カードのマークダウンの書式設定は次のように表示されます。
+iOS では、アダプティブ カード マークダウンの書式設定は次のように表示されます。
 
-![iOS でのアダプティブ カードマークダウンの書式設定](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
+![iOS でのアダプティブ カード マークダウンの書式設定](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
 
 Android では、アダプティブ カード マークダウンの書式設定は次のように表示されます。
 
-![Android のアダプティブ カード Markdown 書式設定](../../assets/images/cards/Adaptive-markdown-Android.png)
+![アンドロイドでアダプティブカードマークダウンフォーマット](../../assets/images/cards/Adaptive-markdown-Android.png)
 
-### <a name="more-information-on-adaptive-cards"></a>アダプティブ カードの詳細
+### <a name="more-information-on-adaptive-cards"></a>アダプティブカードの詳細
 
-[アダプティブ カードのテキスト機能](/adaptive-cards/create/textfeatures)このトピックで説明する日付とローカライズ機能は、このトピックではTeams。
+[アダプティブ カードのテキスト機能](/adaptive-cards/create/textfeatures)このトピックで説明する日付およびローカライズ機能は、Teamsではサポートされていません。
 
 ### <a name="formatting-sample-for-adaptive-cards"></a>アダプティブ カードの書式設定サンプル
 
@@ -111,25 +111,25 @@ Android では、アダプティブ カード マークダウンの書式設定�
 }
 ```
 
-### <a name="mention-support-within-adaptive-cards-v12"></a>アダプティブ カード v1.2 内でのサポートのメンション
+### <a name="mention-support-within-adaptive-cards-v12"></a>アダプティブカードv1.2内でのサポートについて言及
 
-カード ベースのメンションは、Web、デスクトップ、モバイル クライアントでサポートされています。 ボットおよびメッセージング拡張機能の応答に対して、アダプティブ カード本文内に @ メンションを追加できます。 カードに @ メンションを追加するには、チャネルとグループ チャットの会話でメッセージ ベースのメンションと同じ通知ロジックとレンダリングに [従います](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)。
+カードベースのメンションは、ウェブ、デスクトップ、モバイルクライアントでサポートされています。 ボットおよびメッセージング拡張機能の応答に対して、アダプティブ カード本体内に @ メンションを追加できます。 カードに @ メンションを追加するには、 [チャネルやグループチャットの会話で](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)メッセージベースのメンションと同じ通知ロジックとレンダリングを実行します。
 
-ボットとメッセージング拡張機能には [、TextBlock](https://adaptivecards.io/explorer/TextBlock.html) 要素と FactSet 要素のカード コンテンツ内にメンション [を含](https://adaptivecards.io/explorer/FactSet.html) めることはできません。
+ボットとメッセージング拡張機能には [、TextBlock](https://adaptivecards.io/explorer/TextBlock.html) 要素と [FactSet](https://adaptivecards.io/explorer/FactSet.html) 要素のカード コンテンツ内にメンションを含めることができます。
 
 > [!NOTE]
-> * [メディア要素](https://adaptivecards.io/explorer/Media.html)は、現在、プラットフォーム上のアダプティブ カード v1.2 ではTeamsされていません。
-> * チャネル &チームのメンションはボット メッセージではサポートされていません。
+> * [メディア要素](https://adaptivecards.io/explorer/Media.html)は、現在、Teamsプラットフォームのアダプティブ カード v1.2 ではサポートされていません。
+> * チャンネル & チームのメンションは、ボット メッセージではサポートされていません。
 
-#### <a name="constructing-mentions"></a>メンションの作成
+#### <a name="constructing-mentions"></a>メンションの構築
 
 アダプティブ カードにメンションを含めるには、アプリに次の要素を含める必要があります。
 
-* `<at>username</at>` は、サポートされているアダプティブ カード要素に含まれます。
-* カード コンテンツ内のプロパティ内のオブジェクトで、このオブジェクトには、Teams `mention` `msteams` のユーザー ID が含まれます。
-* これは `userId` 、ボット ID と特定のユーザーに固有です。 特定のユーザーを@mention使用できます。 ユーザー `userId` ID の取得に記載されているオプションのいずれかを使用して [取得できます](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id)。
+* `<at>username</at>` サポートされているアダプティブ カード要素で
+* `mention` `msteams` カード Teams コンテンツ内のプロパティ内のオブジェクト。
+* `userId`は、ボット ID と特定のユーザーに固有です。 特定のユーザーを@mentionするために使用できます。 `userId`ユーザー ID の[取得](/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id)に記載されているオプションの 1 つを使用して取得できます。
 
-#### <a name="sample-adaptive-card-with-a-mention"></a>メンション付きアダプティブ カードのサンプル
+#### <a name="sample-adaptive-card-with-a-mention"></a>言及付きのサンプルアダプティブカード
 
 ``` json
 {
@@ -160,18 +160,18 @@ Android では、アダプティブ カード マークダウンの書式設定�
 }
 ```
 
-### <a name="information-masking-in-adaptive-cards"></a>アダプティブ カードの情報マスキング
-Information masking プロパティを使用して、アダプティブ カード入力要素内のユーザーからのパスワードや機密情報などの特定の情報を [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) マスクします。 
+### <a name="information-masking-in-adaptive-cards"></a>アダプティブカードでの情報マスキング
+情報マスク プロパティを使用して、Adaptive カード入力要素内のユーザーからのパスワードや機密情報などの特定の情報をマスク [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) します。 
 
 > [!NOTE]
-> この機能はクライアント側の情報マスキングのみをサポートします。マスクされた入力テキストは、ボットの構成中に指定された https エンドポイント アドレスにクリア テキスト [として送信されます](../../build-your-first-app/build-bot.md)。 
+> この機能はクライアント側の情報マスキングのみをサポートし、マスクされた入力テキストは [、ボットの設定](../../build-your-first-app/build-bot.md)中に指定された https エンドポイントアドレスにクリアテキストで送信されます。 
 
 > [!NOTE]
-> information masking プロパティは現在、開発者プレビューでのみ使用できます。
+> 情報マスク プロパティは、現在、開発者プレビューでのみ使用できます。
 
-アダプティブ カードで情報をマスクするには、型に `isMasked` プロパティを追加 **し** `Input.Text` 、その値を true に設定 *します*。
+アダプティブ カードの情報をマスクするには、プロパティを `isMasked` **type** `Input.Text` に追加し、その値を *true* に設定します。
 
-#### <a name="sample-adaptive-card-with-masking-property"></a>マスキング プロパティを持つアダプティブ カードのサンプル
+#### <a name="sample-adaptive-card-with-masking-property"></a>マスク プロパティを使用したサンプル アダプティブ カード
 
 ```json
 {
@@ -184,16 +184,16 @@ Information masking プロパティを使用して、アダプティブ カー�
 
 次の図は、アダプティブ カードのマスキング情報の例です。
 
-![マスキング情報イメージ](../../assets/images/cards/masking-information-view.png)
+![マスキング情報画像](../../assets/images/cards/masking-information-view.png)
 
-### <a name="full-width-adaptive-card"></a>全幅アダプティブ カード
-このプロパティを使用 `msteams` すると、アダプティブ カードの幅を拡大し、追加のキャンバス領域を利用できます。 プロパティの使用方法については、次の例を参照してください。
+### <a name="full-width-adaptive-card"></a>全幅アダプティブカード
+`msteams`このプロパティを使用して、アダプティブ カードの幅を広げ、追加のキャンバススペースを利用できます。 プロパティの使用方法については、次の例を参照してください。
 
 #### <a name="constructing-full-width-cards"></a>全幅カードの作成
-全幅アダプティブ カードを作成するには、 `width` カード コンテンツのプロパティのオブジェクトをに `msteams` 設定する必要があります `Full` 。
-さらに、アプリには次の要素が含まれる必要があります。
+全幅アダプティブ カードを作成するには、 `width` `msteams` カード コンテンツのオブジェクトのプロパティを に設定する必要があります `Full` 。
+また、アプリには次の要素を含める必要があります。
 
-#### <a name="sample-adaptive-card-with-full-width"></a>全幅のアダプティブ カードのサンプル
+#### <a name="sample-adaptive-card-with-full-width"></a>全幅のサンプルアダプティブカード
 
 ``` json
 {
@@ -216,19 +216,19 @@ Information masking プロパティを使用して、アダプティブ カー�
 }
 ```
 
-全幅アダプティブ カードは、次のように表示されます。 ![ 全幅アダプティブ カード ビュー](../../assets/images/cards/full-width-adaptive-card.png)
+全幅アダプティブ カードは次のように表示されます。 ![](../../assets/images/cards/full-width-adaptive-card.png)
 
-プロパティを Full に設定していない場合、アダプティブ カードの既定のビューは次のとおりです。小幅アダプティブ カード `width`  ![ ビュー](../../assets/images/cards/small-width-adaptive-card.png)
+プロパティを `width` *[完全]* に設定していない場合、アダプティブ カードの既定のビューは次のようになります。 ![](../../assets/images/cards/small-width-adaptive-card.png)
 
-### <a name="typeahead-support"></a>Typeahead のサポート
+### <a name="typeahead-support"></a>タイプ先行サポート
 
-schema 要素内で、ユーザーにフィルター処理を求め、多数の選択肢を選択すると、タスクの完了が大幅 [`Input.Choiceset`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) に遅くなる可能性があります。 アダプティブ カード内の Typeahead サポートは、ユーザーが入力を入力する場合に入力の選択肢のセットを絞り込むかフィルター処理することで、入力の選択を簡略化できます。 
+schema [`Input.Choiceset`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) 要素内で、ユーザーにフィルター処理を依頼し、多数の選択肢を選択すると、タスクの完了が大幅に遅くなる可能性があります。 アダプティブカード内での Typeahead サポートは、ユーザーが入力を入力する際に入力選択肢のセットを絞り込んだりフィルタリングしたりすることで、入力の選択を簡素化できます。 
 
-#### <a name="enable-typeahead-in-adaptive-cards"></a>アダプティブ カードで typeahead を有効にする
+#### <a name="enable-typeahead-in-adaptive-cards"></a>アダプティブ カードでの入力を有効にする
 
-セット内で typeahead を有効 `Input.Choiceset` にし `style` 、 `filtered` 必ずに `isMultiSelect` に設定します `false` 。 
+に設定されている typeahead を有効に `Input.Choiceset` `style` `filtered` し、確実 `isMultiSelect` に `false` に設定するには 
 
-#### <a name="sample-adaptive-card-with-typeahead-support"></a>typeahead サポートを備えるアダプティブ カードのサンプル
+#### <a name="sample-adaptive-card-with-typeahead-support"></a>タイプ先行サポートを備えたサンプルアダプティブカード
 
 ``` json
 {
@@ -243,12 +243,12 @@ schema 要素内で、ユーザーにフィルター処理を求め、多数の�
 }
 ``` 
 
-### <a name="stage-view-for-images-in-adaptive-cards"></a>アダプティブ カードの画像のステージ ビュー
+### <a name="stage-view-for-images-in-adaptive-cards"></a>アダプティブカード内の画像のステージビュー
 
 > [!NOTE]
-> この機能は現在、開発者プレビューでのみ利用できます。
+> この機能は、現在、開発者プレビューでのみ使用できます。
  
-アダプティブ カードでは、このプロパティを使用して、ステージ ビューに画像を選択的 `msteams` に表示する機能を追加できます。 ユーザーが画像にカーソルを合わせると、展開アイコンが表示され、属性が `allowExpand` に設定されます `true` 。 プロパティの使用方法については、次の例を参照してください。
+Adaptive カードでは、このプロパティを使用 `msteams` して、ステージ ビューでイメージを選択的に表示する機能を追加できます。 ユーザーが画像の上にマウスを置くと、展開アイコンが表示され、属性 `allowExpand` が に設定されます `true` 。 プロパティの使用方法については、次の例を参照してください。
 
 ``` json
 {
@@ -267,21 +267,21 @@ schema 要素内で、ユーザーにフィルター処理を求め、多数の�
 }
 ```
 
-ユーザーが画像の上にマウス ポインターを置くと、画像の右上隅に展開アイコンが表示されます。展開可能なイメージを持つ ![ アダプティブ カード](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
+ユーザーが画像の上にマウスを移動すると、画像の右上隅に展開アイコンが表示されます: ![ 展開可能な画像を持つアダプティブ カード](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
 
-ユーザーが展開ボタンを選択すると、イメージがステージ ビューに表示されます。 ![ イメージはステージ ビューに展開されます。](../../assets/images/cards/adaptivecard-expand-image.png)
+ユーザーが展開ボタンを選択すると、画像がステージビューに表示されます: ![ 画像はステージビューに展開されます。](../../assets/images/cards/adaptivecard-expand-image.png)
 
-ステージ ビューでは、ユーザーは画像を拡大および縮小できます。 アダプティブ カードでこの機能を使用する必要があるイメージを選択できます。
-
-> [!NOTE]
-> 拡大および縮小機能は、アダプティブ カード内のイメージ要素 (画像の種類) にのみ適用されます。
+ステージビューでは、ユーザーは画像を拡大表示したりズームアウトしたりできます。 アダプティブ カード内の画像にこの機能を適用する必要がある画像を選択できます。
 
 > [!NOTE]
-> Teams モバイル アプリの場合、アダプティブ カードの画像のステージ ビュー機能は既定で利用できます。ユーザーは、属性が存在するかどうかに関係なく、画像をタップするだけでステージ ビューでアダプティブ カードイメージを表示できます。 `allowExpand`
+> 拡大/縮小機能は、アダプティブ カードのイメージ エレメント(イメージ タイプ)にのみ適用されます。
 
-# <a name="markdown-formatting-o365-connector-cards"></a>[**Markdown の書式設定: O365 コネクタ カード**](#tab/connector-md)
+> [!NOTE]
+> Teamsモバイルアプリでは、アダプティブカードの画像のステージビュー機能はデフォルトで利用可能であり、ユーザーはアトリビュートが存在するかどうかに関係なく、画像をタップするだけで、ステージビューでアダプティブカード画像を表示できます `allowExpand` 。
 
-コネクタ カードでは、マークダウンと HTML の書式設定が制限されています。 HTML サポートについては、最後のセクションで説明します。
+# <a name="markdown-formatting-o365-connector-cards"></a>[**マークダウンのフォーマット: O365 コネクタ カード**](#tab/connector-md)
+
+コネクタ カードは、限定的なマークダウンおよび HTML 形式をサポートします。 HTML サポートについては、最後のセクションで説明します。
 
 | Style | 例 | Markdown |
 | --- | --- | --- |
@@ -291,33 +291,33 @@ schema 要素内で、ユーザーにフィルター処理を求め、多数の�
 | 取り消し線 | ~~text~~ | `~~text~~` |
 | 順序なしリスト | <ul><li>テキスト</li><li>テキスト</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | 順序付きリスト | <ol><li>テキスト</li><li>テキスト</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
-| 事前に書式設定されたテキスト | `text` | ``preformatted text`` |
-| blockquote | >をブロッククォートする | `>blockquote text` |
+| 書式設定済みのテキスト | `text` | ``preformatted text`` |
+| blockquote | >ブロッククォートテキスト | `>blockquote text` |
 | hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
 | 画像リンク |![岩の上のアヒル](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
 
-コネクタ カードでは、改行はのためにレンダリングされますが `\n\n` 、for または `\n` `\r` .
+コネクタ カードでは、改行線は に対してレンダリング `\n\n` されますが、 または にはレンダリングされません `\n` `\r` 。
 
-### <a name="mobile-and-desktop-differences-for-connector-cards-using-markdown"></a>Markdown を使用したコネクタ カードのモバイルとデスクトップの違い
+### <a name="mobile-and-desktop-differences-for-connector-cards-using-markdown"></a>マークダウンを使用したコネクタカードのモバイルとデスクトップの違い
 
-デスクトップでは、コネクタ カードの Markdown 書式は次のように表示されます。
+デスクトップでは、コネクタ カードのマークダウンの書式は次のようになります。
 
-![デスクトップ クライアントでのコネクタ カードのマークダウンの書式設定](../../assets/images/cards/connector-desktop-markdown-combined.png)
+![デスクトップ クライアントのコネクタ カードのマークダウンの書式設定](../../assets/images/cards/connector-desktop-markdown-combined.png)
 
-iOS では、コネクタ カードの Markdown 書式は次のように表示されます。
+iOS では、コネクタ カードのマークダウンの書式は次のようになります。
 
-![iOS クライアントのコネクタ カードのマークダウンの書式設定](../../assets/images/cards/connector-iphone-markdown-combined-80.png)
+![iOS クライアントのコネクタ カードのマークダウン形式](../../assets/images/cards/connector-iphone-markdown-combined-80.png)
 
 懸案事項:
 
-* コネクタ カードの iOS クライアントTeams、Markdown または HTML インライン イメージはレンダリングされません。
-* ブロッククォートはインデントされますが、灰色の背景なしでレンダリングされます。
+* Teams用の iOS クライアントは、コネクタ カードにマークダウンまたは HTML インライン イメージをレンダリングしません。
+* ブロック引用符はインデントとしてレンダリングされますが、背景はグレーで表示されません。
 
-Android では、コネクタ カードの Markdown 書式は次のように表示されます。
+Android では、コネクタ カードのマークダウンの書式設定は次のようになります。
 
-![Android クライアントのコネクタ カードのマークダウンの書式設定](../../assets/images/cards/connector-android-markdown-combined.png)
+![Android クライアントのコネクタ カードのマークダウン形式](../../assets/images/cards/connector-android-markdown-combined.png)
 
-### <a name="formatting-example-for-markdown-connector-cards"></a>Markdown コネクタ カードの書式設定の例
+### <a name="formatting-example-for-markdown-connector-cards"></a>マークダウン コネクタ カードの書式設定例
 
 ``` json
 {
@@ -368,9 +368,9 @@ Android では、コネクタ カードの Markdown 書式は次のように表�
 
 ## <a name="formatting-cards-with-html"></a>HTML を使用したカードの書式設定
 
-# <a name="html-formatting-o365-connector-cards"></a>[**HTML の書式設定: O365 コネクタ カード**](#tab/connector-html)
+# <a name="html-formatting-o365-connector-cards"></a>[**HTML 形式: O365 コネクタ カード**](#tab/connector-html)
 
-コネクタ カードでは、マークダウンと HTML の書式設定が制限されています。 マークダウンについては、次のセクションで説明します。
+コネクタ カードは、限定的なマークダウンおよび HTML 形式をサポートします。 マークダウンについては、次のセクションで説明します。
 
 | Style | 例 | HTML |
 | --- | --- | --- |
@@ -380,31 +380,31 @@ Android では、コネクタ カードの Markdown 書式は次のように表�
 | 取り消し線 | ~~text~~ | `<strike>text</strike>` |
 | 順序なしリスト | <ul><li>テキスト</li><li>テキスト</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 順序付きリスト | <ol><li>テキスト</li><li>テキスト</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
-| 事前に書式設定されたテキスト | `text` | `<pre>text</pre>` |
+| 書式設定済みのテキスト | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>テキスト</blockquote> | `<blockquote>text</blockquote>` |
 | hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | 画像リンク | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
-コネクタ カードでは、タグを使用して改行が HTML でレンダリング `<p>` されます。
+コネクタ カードでは、タグを使用して改行が HTML でレンダリングされます `<p>` 。
 
-### <a name="mobile-and-desktop-differences-for-connector-cards-using-html"></a>HTML を使用したコネクタ カードのモバイルとデスクトップの違い
+### <a name="mobile-and-desktop-differences-for-connector-cards-using-html"></a>HTML を使用するコネクタ カードのモバイルとデスクトップの違い
 
-デスクトップでは、コネクタ カードの HTML 書式は次のように表示されます。
+デスクトップでは、コネクタ カードの HTML 形式は次のようになります。
 
-![デスクトップ クライアントのコネクタ カードの HTML 書式](../../assets/images/cards/Connector-desktop-html-combined.png)
+![デスクトップ クライアントのコネクタ カードの HTML 形式](../../assets/images/cards/Connector-desktop-html-combined.png)
 
-iOS では、HTML の書式設定は次のように表示されます。
+iOS では、HTML 形式は次のようになります。
 
-![iOS クライアントのコネクタ カードの HTML 書式](../../assets/images/cards/connector-iphone-html-combined-80.png)
+![iOS クライアントのコネクタ カードの HTML 形式](../../assets/images/cards/connector-iphone-html-combined-80.png)
 
 懸案事項:
 
-* インライン イメージは、コネクタ カードの Markdown または HTML を使用して iOS ではレンダリングされません。
-* 書式設定済みのテキストはレンダリングされますが、背景が灰色ではありません。
+* インライン イメージは、コネクタ カードでマークダウンまたは HTML を使用して iOS ではレンダリングされません。
+* 書式設定済みのテキストはレンダリングされますが、背景は灰色ではありません。
 
-Android では、HTML の書式設定は次のように表示されます。
+Android では、HTML 形式は次のようになります。
 
-![Android クライアントのコネクタ カードの HTML 書式](../../assets/images/cards/connector-android-html-combined.png)
+![Android クライアントのコネクタ カードの HTML 形式](../../assets/images/cards/connector-android-html-combined.png)
 
 ### <a name="formatting-sample-for-html-connector-cards"></a>HTML コネクタ カードの書式設定サンプル
 
@@ -456,9 +456,9 @@ Android では、HTML の書式設定は次のように表示されます。
 
 ```
 
-# <a name="html-formatting-hero-and-thumbnail-cards"></a>[**HTML の書式設定: ヒーローカードとサムネイル カード**](#tab/simple-html)
+# <a name="html-formatting-hero-and-thumbnail-cards"></a>[**HTML フォーマット: ヒーローカードとサムネイルカード**](#tab/simple-html)
 
-HTML タグは、ヒーロー カードやサムネイル カードなどの単純なカードでサポートされています。 Markdown はサポートされていません。
+HTML タグは、ヒーロー カードやサムネイル カードなどの単純なカードでサポートされています。 マークダウンはサポートされていません。
 
 | Style | 例 | HTML |
 | --- | --- | --- |
@@ -468,36 +468,36 @@ HTML タグは、ヒーロー カードやサムネイル カードなどの単�
 | 取り消し線 | ~~text~~ | `<strike>text</strike>` |
 | 順序なしリスト | <ul><li>テキスト</li><li>テキスト</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 順序付きリスト | <ol><li>テキスト</li><li>テキスト</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
-| 事前に書式設定されたテキスト | `text` | `<pre>text</pre>` |
+| 書式設定済みのテキスト | `text` | `<pre>text</pre>` |
 | blockquote | <blockquote>テキスト</blockquote> | `<blockquote>text</blockquote>` |
 | hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | 画像リンク |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
-### <a name="mobile-and-desktop-differences-for-simple-cards"></a>単純なカードのモバイルとデスクトップの違い
+### <a name="mobile-and-desktop-differences-for-simple-cards"></a>シンプルカードのモバイルとデスクトップの違い
 
-デスクトップ プラットフォームとモバイル プラットフォームの解像度の違いにより、デスクトップとモバイル バージョンの間で書式設定が異Teams。
+デスクトッププラットフォームとモバイルプラットフォームの解像度が異なるため、フォーマットはデスクトップバージョンとモバイル版のTeamsの間で異なります。
 
-デスクトップでは、HTML の書式設定は次のように表示されます。
+デスクトップでは、HTML 形式は次のように表示されます。
 
-![デスクトップ クライアントの HTML 書式](../../assets/images/cards/card-formatting-xml-desktop-v2.png)
+![デスクトップ クライアントでの HTML 形式の書式設定](../../assets/images/cards/card-formatting-xml-desktop-v2.png)
 
-iOS では、HTML 書式は次のように表示されます。
+iOS では、HTML 形式は次のように表示されます。
 
-![iOS クライアントの HTML 書式](../../assets/images/cards/card-formatting-xml-mobile-v2.png)
+![iOS クライアントでの HTML フォーマット](../../assets/images/cards/card-formatting-xml-mobile-v2.png)
 
 懸案事項:
 
-* 太字や斜体のような文字の書式設定は、iOS ではレンダリングされません。
+* 太字や斜体などの文字書式は iOS ではレンダリングされません。
 
-Android では、HTML の書式設定は次のように表示されます。
+Android では、HTML 形式は次のように表示されます。
 
-![Android クライアントでの HTML 書式](../../assets/images/cards/card-formatting-xml-android-60.png)
+![アンドロイドクライアントでのHTMLフォーマット](../../assets/images/cards/card-formatting-xml-android-60.png)
 
-Android では太字や斜体のような文字の書式設定が正しく表示されます。
+太字や斜体などの文字書式は、Android 上で正しく表示されます。
 
-### <a name="formatting-sample-for-html-formatting-in-simple-cards"></a>単純なカードの HTML 書式の書式設定サンプル
+### <a name="formatting-sample-for-html-formatting-in-simple-cards"></a>シンプルカードでの HTML フォーマットのサンプルの書式設定
 
-これらのスクリーンショットは、Teams AppStudio を使用して作成され、ヒーロー カードの text プロパティは次の文字列に設定されています。 このコードを変更することで、独自のカードの書式設定をテストできます。
+これらのスクリーンショットは、hero カードの text プロパティが次の文字列に設定されている AppStudio Teams使用して作成されました。 このコードを変更することで、独自のカードで書式設定をテストできます。
 
 `<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
 

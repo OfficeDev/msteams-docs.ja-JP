@@ -1,33 +1,33 @@
 ---
 title: メッセージング拡張機能を使用してアクションを開始する
-description: アクション ベースのメッセージング拡張機能を作成して、ユーザーが外部サービスをトリガーできる
+description: アクションベースのメッセージング拡張機能を作成して、ユーザーが外部サービスをトリガーできるようにする
 localization_priority: Normal
 ms.topic: how-to
-keywords: teams メッセージング拡張機能メッセージング拡張機能の検索
-ms.openlocfilehash: a3122dbaf79f57054cfec2e8aef2ed4f687338be
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+keywords: チーム メッセージング拡張機能のメッセージング拡張機能の検索
+ms.openlocfilehash: bfb3295726c355164f080c15e3759ea36a99d914
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019735"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566741"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>メッセージング拡張機能を使用してアクションを開始する
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
-アクション ベースのメッセージング拡張機能を使用すると、ユーザーは外部サービスの内部でアクションをトリガー Teams。
+アクションベースのメッセージング拡張機能を使用すると、ユーザーはTeams内部で外部サービスでアクションをトリガーできます。
 
-![メッセージング拡張機能カードの例](~/assets/images/compose-extensions/ceexample.png)
+![メッセージング拡張カードの例](~/assets/images/compose-extensions/ceexample.png)
 
-次のセクションでは、これを行う方法について説明します。
+次のセクションでは、この方法について説明します。
 
 [!include[Common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
-### <a name="action-type-message-extensions"></a>アクションの種類のメッセージ拡張機能
+### <a name="action-type-message-extensions"></a>アクションの種類のメッセージ拡張
 
-メッセージング拡張機能からアクションを開始するには、パラメーターを `type` に設定します `action` 。 次に、検索と作成コマンドを含むマニフェストの例を示します。 1 つのメッセージング拡張機能には、最大 10 の異なるコマンドを使用できます。 これには、複数の検索と複数のアクション ベースのコマンドの両方を含めできます。
+メッセージング拡張機能からアクションを開始するには、パラメーターを `type` `action` に設定します。 以下は、検索と作成コマンドを含むマニフェストの例です。 1 つのメッセージング拡張機能には、最大 10 種類のコマンドを使用できます。 これには、複数の検索と複数のアクション ベースのコマンドの両方を含めることができます。
 
-#### <a name="complete-app-manifest-example"></a>アプリ マニフェストの完全な例
+#### <a name="complete-app-manifest-example"></a>完全なアプリ マニフェストの例
 
 ```json
 {
@@ -130,11 +130,11 @@ ms.locfileid: "52019735"
 
 ### <a name="initiate-actions-from-messages"></a>メッセージからアクションを開始する
 
-メッセージの作成領域からアクションを開始する以外に、メッセージング拡張機能を使用してメッセージからアクションを開始することもできます。 これにより、メッセージの内容をボットに送信して処理し、必要に応じて送信の応答で説明されているメソッドを使用して、そのメッセージに返信 [できます](#responding-to-submit)。 返信は、ユーザーが送信する前に編集できるメッセージへの返信として挿入されます。 ユーザーは、オーバーフロー メニューからメッセージング拡張機能にアクセスし、次の `...` 図のように `Take action` 選択できます。
+メッセージ作成領域からアクションを開始するだけでなく、メッセージング拡張機能を使用してメッセージからアクションを開始することもできます。 これにより、処理のためにボットにメッセージの内容を送信し、必要に応じて、「 [送信の応答](#responding-to-submit)」で説明されている方法を使用して応答を返してそのメッセージに返信できます。 返信は、送信前にユーザーが編集できるメッセージへの返信として挿入されます。 ユーザーは、オーバーフロー メニューからメッセージング拡張機能にアクセス `...` し、 `Take action` 次の図のように選択できます。
 
-![メッセージからアクションを開始する例](~/assets/images/compose-extensions/messageextensions_messageaction.png)
+![メッセージからアクションを起こす例](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
-メッセージからメッセージング拡張機能を機能するには、次の例のように、アプリ マニフェスト内のメッセージング拡張機能のオブジェクトにパラメーターを追加 `context` `commands` する必要があります。 配列の有効な `context` 文字列は `"message"` 、、 `"commandBox"` 、および `"compose"` です。 既定値は `["compose", "commandBox"]` です。 パラメーターの [詳細については、「コマンド](#define-commands) の定義」セクションを参照 `context` してください。
+メッセージからメッセージング拡張機能を機能させるには、 `context` `commands` 次の例のように、アプリ マニフェストでメッセージング拡張機能のオブジェクトにパラメーターを追加する必要があります。 配列に有効な文字列 `context` は `"message"` `"commandBox"` 、 、および `"compose"` です。 既定値は `["compose", "commandBox"]` です。 パラメーターの詳細については、 [コマンドの定義](#define-commands) セクションを参照 `context` してください。
 
 ```json
 "composeExtensions": [
@@ -154,7 +154,7 @@ ms.locfileid: "52019735"
 
 ```
 
-以下は、ボットに送信される要求の一部として送信されるメッセージの詳細を含む `value` `composeExtension` オブジェクトの例です。
+以下は、 `value` リクエストの一部として送信されるメッセージの詳細を含むオブジェクトの `composeExtension` 例をボットに送信します。
 
 ```json
 {
@@ -226,25 +226,25 @@ ms.locfileid: "52019735"
 
 ### <a name="test-via-uploading"></a>アップロードによるテスト
 
-メッセージング拡張機能をテストするには、アプリをアップロードします。 詳細 [については、「チームでのアプリのアップロード」](~/concepts/deploy-and-publish/apps-upload.md) を参照してください。
+アプリをアップロードして、メッセージング拡張機能をテストできます。 詳しくは、 [チームでのアプリのアップロードを](~/concepts/deploy-and-publish/apps-upload.md)参照してください。
 
-メッセージング拡張機能を開くには、チャットまたはチャネルに移動します。 作成ボックス **で** [**その** 他の&#8943;] ボタンを選択し、メッセージング拡張機能を選択します。
+メッセージング拡張機能を開くには、チャットまたはチャネルのいずれかに移動します。 作成ボックスの [ **その他のオプション** ] (**&#8943;**) を選択し、メッセージング拡張機能を選択します。
 
 ## <a name="collecting-input-from-users"></a>ユーザーからの入力の収集
 
-エンド ユーザーから情報を収集するには、次の 3 つのTeams。
+Teamsでエンド ユーザーから情報を収集する方法は 3 つあります。
 
-### <a name="static-parameter-list"></a>静的パラメーター リスト
+### <a name="static-parameter-list"></a>静的パラメータリスト
 
-このメソッドでは、上記の "Create To Do" コマンドに示すように、マニフェスト内のパラメーターの静的な一覧を定義To Doです。 このメソッドを使用するには、 `fetchTask` マニフェストにパラメーターを設定し `false` 、パラメーターを定義します。
+このメソッドでは、上記の「To Do作成」コマンドに示すように、マニフェスト内のパラメーターの静的なリストを定義するだけです。 このメソッドを使用するには `fetchTask` 、必ずにマニフェスト `false` にパラメーターを定義するように設定します。
 
-ユーザーが静的パラメーターを含むコマンドを選択すると、Teamsで定義されたパラメーターを持つフォームがタスク モジュールに生成されます。 送信時にボット `composeExtension/submitAction` に送信されます。 予想される応答 [のセットの詳細については](#responding-to-submit) 、「送信への応答」のトピックを参照してください。
+ユーザーが静的パラメーターを持つコマンドを選択すると、マニフェストで定義されたパラメーターを使用して、タスク モジュールにフォームが生成Teams。 [Submit] を押すと `composeExtension/submitAction` 、ボットに送信されます。 予想される応答のセットの詳細については、「 [送信への応答」を](#responding-to-submit)参照してください。
 
-### <a name="dynamic-input-using-an-adaptive-card"></a>アダプティブ カードを使用した動的入力
+### <a name="dynamic-input-using-an-adaptive-card"></a>アダプティブカードを使用したダイナミック入力
 
-このメソッドでは、サービスは、エンド ユーザー入力を収集するカスタムアダプティブ カードを定義できます。 この方法では、マニフェスト `fetchTask` でパラメーター `true` を設定します。 コマンドに対して定義 `fetchTask` されている `true` 静的パラメーターに設定すると、無視されます。
+このメソッドでは、サービスはカスタム アダプティブ カードを定義してエンド ユーザー入力を収集できます。 この方法では、パラメーターを `fetchTask` `true` マニフェストに設定します。 `fetchTask` `true` コマンドに対して定義された静的パラメーターを設定すると、無視されることに注意してください。
 
-この方法では、サービスはイベントを受け取り、アダプティブ カード ベースのタスク モジュール応答で `composeExtension/fetchTask` [応答する必要があります](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)。 アダプティブ カードを使用した応答の例を次に示します。
+このメソッドでは、サービスはイベントを受信 `composeExtension/fetchTask` し、アダプティブ カード ベース [のタスク モジュール応答](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)で応答する必要があります。 アダプティブ カードの応答例を次に示します。
 
 ```json
 {
@@ -289,13 +289,13 @@ ms.locfileid: "52019735"
 }
 ```
 
-ユーザーがユーザー入力を取得する前に拡張機能を認証または構成する必要がある場合、ボットは認証/構成応答で応答することもできます。
+ボットは、ユーザーがユーザー入力を取得する前に、ユーザーが拡張機能を認証または構成する必要がある場合に、auth/config 応答で応答することもできます。
 
 ### <a name="dynamic-input-using-a-web-view"></a>Web ビューを使用した動的入力
 
-このメソッドでは、サービスに基づくウィジェットを表示して、カスタム UI を表示し、 `<iframe>` ユーザー入力を収集できます。 この方法では、マニフェスト `fetchTask` でパラメーター `true` を設定します。
+このメソッドでは、サービスは `<iframe>` 、任意のカスタム UI を表示し、ユーザー入力を収集するベースのウィジェットを表示できます。 この方法では、パラメーターを `fetchTask` `true` マニフェストに設定します。
 
-アダプティブ カード フローと同様に、サービスはイベントを送信し、URL ベースのタスク モジュール応答で応答 `fetchTask` [する必要があります](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)。 アダプティブ カードを使用した応答の例を次に示します。
+アダプティブ カード フローと同様に、サービスはイベントを送信 `fetchTask` し、URL ベースの [タスク モジュール応答](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)で応答する必要があります。 次に、アダプティブ カードを使用した応答の例を示します。
 
 ```json
 {
@@ -308,11 +308,11 @@ ms.locfileid: "52019735"
 }
 ```
 
-### <a name="request-to-install-your-conversational-bot"></a>会話型ボットのインストールを要求する
+### <a name="request-to-install-your-conversational-bot"></a>会話型ボットのインストールをリクエストする
 
-アプリに会話型ボットも含まれている場合は、タスク モジュールを読み込む前にボットが会話にインストールされていることを確認する必要がある場合があります。 これは、タスク モジュールの追加コンテキストを取得する必要がある状況で役立ちます。 たとえば、ユーザー選択コントロール、またはチーム内のチャネルの一覧を設定するために、名簿をフェッチする必要がある場合があります。
+アプリに会話型ボットも含まれている場合は、タスク モジュールを読み込む前に、ボットがスレッドにインストールされていることを確認する必要があります。 これは、タスクモジュールの追加コンテキストを取得する必要がある場合に役立ちます。 たとえば、ユーザー選択コントロールやチーム内のチャネルのリストを設定するために、名簿を取得する必要がある場合があります。
 
-このフローを容易にするために、メッセージング拡張機能が最初に呼び出しチェックを受け取り、ボットが現在のコンテキストにインストールされているのかを確認します (たとえば、名簿の呼び出しを試みてこれを実行 `composeExtension/fetchTask` できます)。 ボットがインストールされていない場合は、ユーザーにボットのインストールを要求するアクションを含むアダプティブ カードを返します。以下の例を参照してください。 この場合、ユーザーは、その場所にアプリをインストールするアクセス許可を持っている必要があります。できない場合は、管理者に連絡を求めるメッセージが表示されます。
+このフローを容易にするために、メッセージング拡張機能が最初に `composeExtension/fetchTask` 呼び出しチェックを受けたときに、ボットが現在のコンテキストにインストールされているかどうかを確認します。 たとえば、getroster 呼び出しを試みることでこれを実現できます( たとえば、ボットがインストールされていない場合は、ユーザーにボットのインストールを要求するアクションを含むアダプティブ カードを返します以下の例を参照してください)。 この場合、ユーザーはその場所にアプリをインストールする権限を持っている必要があります。管理者に連絡するように求めるメッセージが表示されます。
 
 応答の例を次に示します。
 
@@ -340,7 +340,7 @@ ms.locfileid: "52019735"
 }
 ```
 
-ユーザーがインストールを完了すると、ボットは別の呼び出しメッセージを受け `name = composeExtension/submitAction` 取ります `value.data.msteams.justInTimeInstall = true` 。
+ユーザーがインストールを完了すると、ボットは、 および と共に別の呼び出しメッセージを受け取ります `name = composeExtension/submitAction` `value.data.msteams.justInTimeInstall = true` 。
 
 呼び出しの例を次に示します。
 
@@ -366,25 +366,25 @@ ms.locfileid: "52019735"
 }
 ```
 
-ボットが既にインストールされている場合と同じタスク応答で、この呼び出しに応答する必要があります。
+ボットが既にインストールされている場合は、応答したタスクと同じタスク応答を使用して、この呼び出しに応答する必要があります。
 
 ## <a name="responding-to-submit"></a>送信への応答
 
-ユーザーが入力を完了すると、ボットはコマンド ID とパラメーター値が設定されたイベント `composeExtension/submitAction` を受け取ります。
+ユーザーが入力を入力すると、ボットは `composeExtension/submitAction` コマンド ID とパラメーター値が設定されたイベントを受け取ります。
 
-これらは、 に対する異なる期待される応答です `submitAction` 。
+これらは、 に対する予想される応答の違いです `submitAction` 。
 
 ### <a name="task-module-response"></a>タスク モジュールの応答
 
-これは、拡張機能が詳細を取得するためにダイアログを連鎖する必要がある場合に使用されます。 応答は、前述とまったく `fetchTask` 同じです。
+これは、拡張機能がダイアログをチェーンして詳細情報を取得する必要がある場合に使用されます。 応答は、前述のとおりです `fetchTask` 。
 
-### <a name="compose-extension-authconfig-response"></a>拡張機能の auth/config 応答の作成
+### <a name="compose-extension-authconfig-response"></a>拡張認証/構成応答の作成
 
-これは、拡張機能を続行するために認証または構成する必要がある場合に使用されます。 詳細 [については、「検索」](~/resources/messaging-extension-v3/search-extensions.md#authentication) セクションの「認証」セクションを参照してください。
+この機能は、拡張機能が認証または設定を続行する必要がある場合に使用されます。 詳細については、検索 [セクションの「認証」セクション](~/resources/messaging-extension-v3/search-extensions.md#authentication) を参照してください。
 
-### <a name="compose-extension-result-response"></a>拡張機能の結果の応答を作成する
+### <a name="compose-extension-result-response"></a>拡張結果応答の作成
 
-これは、コマンドの結果として、カードを作成ボックスに挿入するために使用されます。 これは、検索コマンドで使用される応答と同じですが、配列内のカードまたは 1 つの結果に制限されます。
+これは、コマンドの結果として、作成ボックスにカードを挿入するために使用されます。 これは検索コマンドで使用される応答と同じですが、配列内の 1 つのカードまたは 1 つの結果に制限されています。
 
 ```json
 {
@@ -434,19 +434,19 @@ ms.locfileid: "52019735"
 
 ### <a name="respond-with-an-adaptive-card-message-sent-from-a-bot"></a>ボットから送信されたアダプティブ カード メッセージで応答する
 
-送信アクションに応答するには、アダプティブ カードを含むメッセージをボットを使用してチャネルに挿入します。 ユーザーは、メッセージを送信する前にプレビューしたり、メッセージを編集したり操作したりすることもできます。 これは、アダプティブ カード応答を作成する前にユーザーから情報を収集する必要があるシナリオで非常に役立ちます。 次のシナリオは、チャネル メッセージに構成手順を含めずに、このフローを使用してポーリングを構成する方法を示しています。
+また、アダプティブ カードを含むメッセージをボットでチャネルに挿入することで、送信アクションに応答することもできます。 ユーザーは、送信する前にメッセージをプレビューし、メッセージを編集/操作することもできます。 これは、アダプティブ カード応答を作成する前にユーザーから情報を収集する必要があるシナリオで非常に便利です。 次のシナリオでは、このフローを使用して、チャネル メッセージに構成ステップを含めずにポーリングを構成する方法を示します。
 
-1. ユーザーがメッセージング拡張機能をクリックしてタスク モジュールをトリガーします。
-1. ユーザーはタスク モジュールを使用してポーリングを構成します。
-1. 構成タスク モジュールを送信した後、アプリはタスク モジュールで提供された情報を使用してアダプティブ カードを作成し、クライアントに応答 `botMessagePreview` として送信します。
-1. その後、ボットがチャネルに挿入する前に、アダプティブ カード メッセージをプレビューできます。 ボットがチャネルのメンバーではない場合は、クリックすると `Send` ボットが追加されます。
-1. アダプティブ カードを操作すると、メッセージを送信する前に変更されます。
+1. ユーザーは、タスク モジュールをトリガーするメッセージング拡張機能をクリックします。
+1. ユーザーは、タスク モジュールを使用してポーリングを構成します。
+1. 構成タスク モジュールを送信した後、アプリはタスク モジュールで提供される情報を使用してアダプティブ カードを作成し、 `botMessagePreview` クライアントに応答として送信します。
+1. ユーザーは、アダプティブ カード メッセージをプレビューしてから、ボットがチャネルに挿入します。 ボットがチャネルのメンバーでない場合は、クリック `Send` するとボットが追加されます。
+1. アダプティブ カードとやり取りすると、送信前にメッセージが変更されます。
 1. ユーザーがクリックすると `Send` 、ボットはメッセージをチャネルに投稿します。
 
-このフローを有効にするには、タスク モジュールは次の例のように応答する必要があります。これにより、プレビュー メッセージがユーザーに表示されます。
+このフローを有効にするには、タスク モジュールは、次の例のように応答する必要があります。
 
 >[!Note]
->アダプティブ `activityPreview` カードの添付ファイル `message` が 1 つのアクティビティを含む必要があります。
+>には `activityPreview` 、 `message` アダプティブ カードアタッチメントが 1 つ含まれているアクティビティが含まれている必要があります。
 
 ```json
 {
@@ -465,7 +465,7 @@ ms.locfileid: "52019735"
 }
 ```
 
-これで、メッセージ拡張機能は 2 種類の新しい種類の操作に応答する必要 `value.botMessagePreviewAction = "send"` があります `value.botMessagePreviewAction = "edit"` 。 次に、処理する必要 `value` があるオブジェクトの例を示します。
+メッセージ拡張機能は、2 つの新しい種類の対話に応答する必要 `value.botMessagePreviewAction = "send"` があります `value.botMessagePreviewAction = "edit"` 。 以下は、 `value` 処理する必要があるオブジェクトの例です。
 
 ```json
 {
@@ -496,7 +496,7 @@ ms.locfileid: "52019735"
 }
 ```
 
-要求に応答する場合は、ユーザーが既に送信した情報が入力された値で応答 `edit` `task` する必要があります。 要求に応答する場合は、確定したアダプティブ カードを含むチャネルに `send` メッセージを送信する必要があります。
+要求に応答 `edit` する場合は、 `task` ユーザーが既に送信した情報が入力された値を含む応答を返す必要があります。 要求に応答する `send` 場合は、最終的なアダプティブ カードを含むチャネルにメッセージを送信する必要があります。
 
 # <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
 
@@ -558,11 +558,9 @@ teamChatConnector.onComposeExtensionSubmitAction((
     });
 ```
 
-*「Bot* [Framework のサンプル」も参照してください](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)。
-
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-このサンプルでは[、Microsoft.Bot.Connector.Teams SDK (v3) を使用してこのフローを示します](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)。
+このサンプルでは、このフローを[使用して、SDK (v3) を使用してTeams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)を示します。
 
 ```csharp
 public class MessagesController : ApiController
@@ -713,3 +711,7 @@ public class MessagesController : ApiController
 
 }
 ```
+
+## <a name="see-also"></a>関連項目
+
+[ボット フレームワークのサンプル](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)

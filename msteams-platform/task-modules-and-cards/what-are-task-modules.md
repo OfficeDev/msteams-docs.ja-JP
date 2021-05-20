@@ -1,91 +1,93 @@
 ---
 title: タスク モジュールとは
 author: clearab
-description: モーダル ポップアップ エクスペリエンスを追加して、アプリからユーザーに情報を収集または表示Microsoft Teamsします。
+description: Microsoft Teamsアプリからユーザーに情報を収集または表示するためのモーダル ポップアップ エクスペリエンスを追加する
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 7c047c02167e143cc8536c1dfcff3a335b18c46e
-ms.sourcegitcommit: 20e623a82f9676dd036cf6a350dd480885e0ea2c
+ms.openlocfilehash: 23157e30ce25c2dfa1c21e7f5c4ddd4f735b660f
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "52300564"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566843"
 ---
-# <a name="what-are-task-modules"></a>タスク モジュールとは
+# <a name="task-modules"></a>タスク モジュール
 
-タスク モジュールを使用すると、Teams アプリケーションでモーダル ポップアップ エクスペリエンスを作成することができます。 ポップアップ内では、独自のカスタム HTML/JavaScript コードを実行したり、YouTube や Microsoft Stream ビデオなどの -based ウィジェットを表示したり、アダプティブ カード `<iframe>` を [表示することができます](/adaptive-cards/)。 これらは特に、タスクの開始や完了、ビデオや Power BI ダッシュボードなどのリッチな情報の表示に役立ちます。 一般的にポップアップ エクスペリエンスは、タブや会話ベースのボット エクスペリエンスに比べて、より自然にユーザーがタスクを開始したり完了したりすることができるようになっています。
+タスク モジュールを使用すると、Teams アプリケーションでモーダル ポップアップ エクスペリエンスを作成することができます。 ポップアップの内部では、独自のカスタム HTML/JavaScript コードを実行 `<iframe>` したり、YouTube や Microsoft Stream のビデオなどのベースのウィジェットを表示したり、 [アダプティブ カード](/adaptive-cards/)を表示したりできます。 これらは特に、タスクの開始や完了、ビデオや Power BI ダッシュボードなどのリッチな情報の表示に役立ちます。 一般的にポップアップ エクスペリエンスは、タブや会話ベースのボット エクスペリエンスに比べて、より自然にユーザーがタスクを開始したり完了したりすることができるようになっています。
 
-タスク モジュールは、タブの基礎Microsoft Teamsします。基本的には、ポップアップ ウィンドウ内のタブです。 同じ SDK を使用します。タブを作成した場合は、タスク モジュールを作成する方法の 90% が既にあります。
+タスクモジュールは、Microsoft Teamsタブの基礎に基づいて構築されます。これらは、基本的にポップアップウィンドウ内のタブです。 これらは同じ SDK を使用するため、タブを作成した場合は、タスク モジュールを作成する方法の 90% が既に存在します。
 
 タスク モジュールは次の 3 つの方法で呼び出すことができます。
 
-* **チャネルタブまたは個人用タブ。** タブ SDK Microsoft Teamsを使用して、タブのボタン、リンク、またはメニューからタスク モジュールを呼び出します。詳細については[、こちらを参照してください。](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
-* **ボット。** ボットから送信 [されたカード](~/task-modules-and-cards/cards/cards-reference.md) のボタン。 これは、ボットで何をしているのかを確認するためにチャネル内のすべてのユーザーを必要としない場合に特に便利です。 たとえば、チャネル内のユーザーに投票してもらう場合、投票中の記録が見えるのは好ましくありません。 [詳細については、こちらを参照してください。](~/task-modules-and-cards/task-modules/task-modules-bots.md)
-* **ディープ リンクTeamsの外部。** どこからでもタスク モジュールを呼び出す URL を作成できます。 [詳細については、こちらを参照してください。](#task-module-deep-link-syntax)
+* **チャンネルタブまたは個人用タブ**: Microsoft TeamsタブSDKを使用すると、タブ上のボタン、リンク、メニューからタスクモジュールを呼び出すことができます [。](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
+* **ボット**: ボットから送信された [カード](~/task-modules-and-cards/cards/cards-reference.md) のボタン。 これは、ボットで何をしているかを確認するためにチャネル内のすべてのユーザーが必要ない場合に特に便利です。 たとえば、チャネル内のユーザーに投票してもらう場合、投票中の記録が見えるのは好ましくありません。 [これについては、ここで詳しく説明します。](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+* **ディープリンクからTeamsの外**: どこからでもタスクモジュールを呼び出す URL を作成することもできます。 [これについては、ここで詳しく説明します。](#task-module-deep-link-syntax)
 
-## <a name="what-a-task-module-looks-like"></a>タスク モジュールの外観
+## <a name="task-module-looks-like"></a>タスクモジュールは次のようになります
 
-ボットから呼び出された場合のタスク モジュールの外観を次に示します (もちろん、色付き四角形と番号付き円はありません)。
+ボットから呼び出されたときのタスク モジュールは次のようになります (色付きの四角形と番号付きの円は除く)。
 
 ![タスク モジュールの例](~/assets/images/task-module/task-module-example.png)
 
-次に示す方法を示します。
+それを見てみましょう:
 
-1. アプリのアイコン[ `color` です](~/resources/schema/manifest-schema.md#icons)。
-2. アプリ[ `short` の名前です](~/resources/schema/manifest-schema.md#name)。
-3. TaskInfo オブジェクトのプロパティで指定 `title` されたタスク モジュール [のタイトル](#the-taskinfo-object)です。
-4. タスク モジュールの [閉じる/キャンセル] ボタン。 ユーザーがこれを押すと、アプリはここで説明するように `err` イベントを受信 [します](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-submitting-the-result-of-a-task-module)。 (**注:** 現在、タスク モジュールがボットから呼び出されると、このイベントを検出できない場合があります。
-5. 青い四角形は、TaskInfo オブジェクトのプロパティを使用して独自の Web ページを読み込む場合に Web ページ `url` が [表示される場所です](#the-taskinfo-object)。 詳細については、以下のタスク [モジュールのサイズ設定](#task-module-sizing) セクションを参照してください。
-6. TaskInfo オブジェクトのプロパティを介してアダプティブ カードを表示する場合は、パディングが追加されます。それ以外の場合は、これを自分 `card` [で処理する必要があります](#task-module-css-for-htmljavascript-task-modules)。 [](#the-taskinfo-object)
-7. アダプティブ カード ボタンがここに表示されます。 独自のページを使用している場合は、独自のボタンを作成する必要があります。
+1. アプリの[ `color` アイコン](~/resources/schema/manifest-schema.md#icons)。
+1. アプリの[ `short` 名前](~/resources/schema/manifest-schema.md#name)。
+1. TaskInfo オブジェクトのプロパティで指定された `title` [タスク](#the-taskinfo-object)モジュールのタイトル。
+1. タスク モジュールの閉じる/キャンセル ボタン。 ユーザーがこれを押すと、ここで説明するイベントがアプリに表示されます `err` 。 [](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-submitting-the-result-of-a-task-module)
+    > [!Note]
+    > 現在、タスク モジュールがボットから呼び出されたときに、このイベントを検出することはできません。
+1. 青い四角形は、 TaskInfo オブジェクトのプロパティを使用して独自の Web ページを読み込む場合に Web ページが表示される場所 `url` です。 [](#the-taskinfo-object) 詳細については、以下の [タスク モジュールのサイズ設定](#task-module-sizing) に関するセクションを参照してください。
+1. TaskInfo オブジェクトのプロパティを使用して Adaptive カードを表示する場合 `card` は、埋め込みが追加されます。 [](#the-taskinfo-object) [](#task-module-css-for-htmljavascript-task-modules)
+1. アダプティブ カード ボタンは、ここに表示されます。 独自のページを使用している場合は、独自のボタンを作成する必要があります。
 
-## <a name="overview-of-invoking-and-dismissing-task-modules"></a>タスク モジュールの呼び出しと終了の概要
+## <a name="overview-of-invoking-and-dismissing-task-modules"></a>タスク モジュールの呼び出しと消去の概要
 
-タスク モジュールは、タブ、ボット、またはディープ リンクから呼び出すことができます。また、1 つのタブに表示される機能は HTML またはアダプティブ カードのいずれかなので、呼び出し方法とユーザーの対話の結果に対処する方法に関して、柔軟性が大きいです。 次の表に、この動作の概要を示します。
+タスクモジュールはタブ、ボット、ディープリンクから呼び出し、HTMLまたはアダプティブカードのいずれかで表示されるため、どのように呼び出されるか、そしてユーザーの操作の結果にどのように対処するかという点で多くの柔軟性があります。 次の表は、このしくみを要約したものです。
 
-| **via... によって呼び出されます。** | **タスク モジュールは HTML/JavaScript です** | **タスク モジュールはアダプティブ カード** |
+| **を介して呼び出されます。** | **タスクモジュールはHTML/Javaスクリプトです** | **タスクモジュールはアダプティブカードです** |
 | --- | --- | --- |
-| **タブ内の JavaScript** | 1. オプションのコールバックTeamsクライアント SDK `tasks.startTask()` 関数を `submitHandler(err, result)` 使用する <br/><br/> 2. タスク モジュール コードで、ユーザーが終了したら、Teams SDK 関数をパラメーター `tasks.submitTask()` `result` として呼び出します。 でコールバック `submitHandler` を指定した `tasks.startTask()` 場合、Teamsパラメーターとして `result` 呼び出されます。<br/><br/> 3. 呼び出し時にエラーが発生した場合は、代わりに文字列 `tasks.startTask()` `submitHandler` で `err` 関数が呼び出されます。 <br/><br/> 4. 呼び出し時に指定することもできます 。その場合は、代わりにボット `completionBotId` `teams.startTask()` `result` に送信されます。 | 1. TaskInfo オブジェクトTeams、タスク モジュール ポップアップに表示するアダプティブ カードの JSON を含むクライアント SDK 関数を `tasks.startTask()` 呼び[](#the-taskinfo-object) `TaskInfo.card` 出します。 <br/><br/> 2. でコールバックを指定した場合、Teams は、呼び出し時にエラーが発生した場合、または右上の X を使用してタスク モジュール ポップアップを閉じる場合は、文字列で呼び出します `submitHandler` `tasks.startTask()` `err` `tasks.startTask()` 。 <br/><br/> 3. ユーザーが Action.Submit ボタンを押すと、そのオブジェクトがの値 `data` として返されます `result` 。 |
-| **ボット カード ボタン** | 1. ボット カード ボタンは、ボタンの種類に応じて、ディープ リンク URL またはメッセージの送信という 2 つの方法でタスク モジュールを呼び出 `task/fetch` します。 ディープ リンク URL の動作については、以下を参照してください。 <br/><br/> 2. ボタンのアクションが ( アダプティブ カードのボタンの種類) の場合、イベント (表紙の下の HTTP POST) がボットに送信され、ボットは `type` `task/fetch` HTTP `Action.Submit` `task/fetch invoke` 200 で POST に応答し [、TaskInfo](#the-taskinfo-object)オブジェクトのラッパーを含む応答本文に応答します。 これは、タスク/フェッチを介して [タスク モジュールを呼び出す方法で詳しく説明します](~/task-modules-and-cards/task-modules/task-modules-bots.md#invoking-a-task-module-via-taskfetch)。<br/><br/> 3. Teamsモジュールが表示されます。ユーザーが終了したら、オブジェクトをパラメーター Teams SDK `tasks.submitTask()` 関数 `result` を呼び出します。 <br/><br/> 4. ボットは、オブジェクト `task/submit invoke` を含むメッセージを受信 `result` します。 メッセージに応答するには、何もしない (タスクが正常に完了した) 方法、ポップアップ ウィンドウでユーザーにメッセージを表示する方法、または別のタスク モジュール ウィンドウを呼び出す方法 (ウィザードのようなエクスペリエンスの作成など) の 3 つの異なる方法があります `task/submit` 。 これら 3 つのオプションについては、task/submit に関する [詳細な説明で詳しく説明します](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit)。 | 1. Bot Framework カードのボタンと同様に、アダプティブ カード上のボタンは、タスク モジュールを呼び出す 2 つの方法 (ボタンを含むディープ リンク URL とボタンの使用) を `Action.openUrl` `task/fetch` サポートします `Action.Submit` 。 <br/><br/> 2. アダプティブ カードを使用するタスク モジュールは、HTML/JavaScript の場合と非常に似た動作をします (左を参照)。 主な違いは、アダプティブ カードを使用している場合は JavaScript が無いから、呼び出す方法がない点です `tasks.submitTask()` 。 代わりに、Teamsオブジェクトを取得し、ここで説明するように、イベントのペイロード `data` `Action.Submit` `task/submit` として返[します](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit)。 |
-| **ディープ リンク URL** <br/>[URL 構文](#task-module-deep-link-syntax) | 1. Teamsモジュールを呼び出します。ディープ リンクのパラメーターで指定 `<iframe>` された内部 `url` に表示される URL を指定します。 コールバック `submitHandler` はありません。 <br/><br/> 2. タスク モジュール内のページの JavaScript 内で、タブまたはボット カード ボタンから呼び出す場合と同じように、オブジェクトをパラメーターとして呼び出して閉じます `tasks.submitTask()` `result` 。 ただし、完了ロジックは若干異なります。 完了ロジックがクライアントに存在する場合 (つまり、ボットがない場合) にはコールバックが存在しないので、完了ロジックは呼び出しの前のコードに存在 `submitHandler` する必要があります `tasks.submitTask()` 。 呼び出しエラーは、コンソール経由でのみ報告されます。 ボットがある場合は、ディープ リンクでパラメーターを指定して、イベントを介して `completionBotId` `result` オブジェクトを送信 `task/submit` できます。 | 1. Teamsモジュールを呼び出します。アダプティブ カードの JSON カード本文は、ディープ リンクのパラメーターの URL エンコード `card` 値として指定されます。 <br/><br/> 2. ユーザーは、タスク モジュールの右上にある X をクリックするか、カードのボタンを押してタスク モジュール `Action.Submit` を閉じます。 呼び出す必要はありませんので、アダプティブ カード フィールドの値を送信するボット `submitHandler` が必要です。 ディープ リンクの `completionBotId` パラメーターを使用して、イベント経由でデータを送信するボットを指定 `task/submit invoke` します。 |
+| **タブ内の JavaScript** | 1. オプションのコールバック関数でTeamsクライアント SDK `tasks.startTask()` 関数を使用 `submitHandler(err, result)` します。 <br/><br/> 2. タスク モジュール コードで、ユーザーが終了したら、 `tasks.submitTask()` パラメーターとしてオブジェクトを使用して Teams SDK 関数を呼び出 `result` します。 `submitHandler`コールバックが で指定されている場合 `tasks.startTask()` 、Teamsはパラメーターとして呼び出 `result` します。<br/><br/> 3. 呼び出し時にエラーが発生した場合 `tasks.startTask()` `submitHandler` 、関数は `err` 代わりに文字列で呼び出されます。 <br/><br/> 4. `completionBotId` 呼び出し時にを指定することもできます `teams.startTask()` 。 `result` | 1. TaskInfo オブジェクトを使用してTeamsクライアント SDK 関数を呼び出 `tasks.startTask()` し、タスク[](#the-taskinfo-object) `TaskInfo.card` モジュールポップアップに表示する Adaptive カードの JSON を含めます。 <br/><br/> 2. `submitHandler` コールバックが で指定されている場合 `tasks.startTask()` 、Teams呼 `err` び出し時にエラーがあった `tasks.startTask()` 場合、またはユーザーが右上の X を使用してタスク モジュール ポップアップを閉じた場合に、文字列を使用してコールバックを呼び出します。 <br/><br/> 3. ユーザーが Action.Submit ボタンを押すと、その `data` オブジェクトがの値として返されます `result` 。 |
+| **ボット カード ボタン** | 1. ボットカードボタンは、ボタンの種類に応じて、ディープリンクURLまたはメッセージ送信の2つの方法でタスクモジュールを呼び出すことができます `task/fetch` 。 リンク URL の動作の詳細については、以下を参照してください。 <br/><br/> 2. ボタンのアクションが `type` `task/fetch` ( `Action.Submit` アダプティブ カードのボタンの種類) の場合 `task/fetch invoke` 、イベント (カバーの下の HTTP POST) がボットに送信され、ボットは HTTP 200 で POST に応答し、応答本文に [TaskInfo オブジェクト](#the-taskinfo-object)のラッパーを含む。 これは、 [タスク/フェッチを介してタスクモジュールを呼び出す方法](~/task-modules-and-cards/task-modules/task-modules-bots.md#invoking-a-task-module-through-taskfetch)で詳しく説明されています。<br/><br/> 3. Teamsタスクモジュールを表示します。ユーザーが終了したら、Teams SDK 関数を `tasks.submitTask()` パラメーターとしてオブジェクトを使用して呼び出 `result` します。 <br/><br/> 4. ボットは `task/submit invoke` 、オブジェクトを含むメッセージを受信 `result` します。 メッセージに応答するには、 `task/submit` 何もしない (タスクが正常に完了した) 、ポップアップ ウィンドウでユーザーにメッセージを表示する方法、または別のタスク モジュール ウィンドウを呼び出す (つまり、ウィザードのようなエクスペリエンスを作成する) という 3 つの方法があります。 これら 3 つのオプションについては、 [タスク/送信に関する詳細な説明](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit)で詳しく説明します。 | 1. Bot Framework カードのボタンと同様に、Adaptive カードのボタンはタスク モジュールを呼び出す 2 つの方法をサポートします: ボタン付きディープ リンク URL `Action.openUrl` と `task/fetch` ボタンを使用して `Action.Submit` 。 <br/><br/> 2. アダプティブカードを使用したタスクモジュールは、HTML/JavaScriptの場合と非常に似ています(左を参照)。 主な違いは、アダプティブカードを使用しているときにJavaScriptが存在しないため、呼び出す方法がなさ `tasks.submitTask()` 代わりに、Teamsは `data` 、ここで説明しているように、オブジェクトをから取得 `Action.Submit` し、イベントのペイロードとして返 `task/submit` [します](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit)。 |
+| **ディープリンクURL** <br/>[URL 構文](#task-module-deep-link-syntax) | 1. Teamsタスクモジュールを呼び出します。`<iframe>`ディープリンクのパラメータで指定された内部 `url` に表示されるURL。 `submitHandler`コールバックはありません。 <br/><br/> 2. タスクモジュールのページの JavaScript 内で、 `tasks.submitTask()` `result` タブやボットカードボタンから呼び出す場合と同じように、オブジェクトをパラメータとして閉じるように呼び出します。 ただし、完了ロジックは若干異なります。 完了ロジックがクライアント上にある場合 (つまり、ボットがない場合)、コールバックは存在 `submitHandler` しません `tasks.submitTask()` 。 呼び出しエラーはコンソールを介してのみ報告されます。 ボットがある場合は、 `completionBotId` ディープリンクでパラメータを指定して `result` 、イベントを介してオブジェクトを送信できます `task/submit` 。 | 1. Teamsタスクモジュールを呼び出します。アダプティブ カードの JSON カード本体は、ディープ リンクのパラメーターの URL エンコード値として指定 `card` されます。 <br/><br/> 2. タスクモジュールの右上にあるXをクリックするか、カードのボタンを押して、タスクモジュールを閉じます `Action.Submit` 。 `submitHandler`呼び出しが行ないため、Adaptive カード フィールドの値を送信するボットが必要です。 `completionBotId`ディープリンクのパラメータを使用して、イベントを介してデータを送信するボットを指定 `task/submit invoke` します。 |
 
-## <a name="the-taskinfo-object"></a>TaskInfo オブジェクト
+## <a name="the-taskinfo-object"></a>オブジェクト
 
-オブジェクト `TaskInfo` には、タスク モジュールのメタデータが含まれています。 オブジェクト定義は以下のとおりです。 ( **埋め** 込み iFrame 用) または (アダプティブ カード `url` 用) `card` を定義する必要があります。
+`TaskInfo`オブジェクトには、タスク モジュールのメタデータが含まれています。 オブジェクト定義は以下の通りです。  `url` 埋め込み iFrame または `card` アダプティブ カードのどちらかを定義する必要があります。
 
 | 属性 | 種類 | 説明 |
 | --- | --- | --- |
-| `title` | string | アプリ名の下とアプリ アイコンの右側に表示されます。 |
-| `height` | number または string | これは、タスク モジュールの高さをピクセル単位で表す数値、または `small` 、 `medium` を指定できます `large` 。 [高さと幅の処理方法については、以下を参照してください](#task-module-sizing)。 |
-| `width` | number または string | これは、タスク モジュールの幅をピクセル単位で表す数値、または `small` 、 `medium` 、または を指定できます `large` 。 [高さと幅の処理方法については、以下を参照してください](#task-module-sizing)。 |
-| `url` | string | タスク モジュール内に読み込まれた `<iframe>` ページの URL。 URL のドメインは、アプリのマニフェスト内の [アプリの validDomains](~/resources/schema/manifest-schema.md#validdomains) 配列内にある必要があります。 |
-| `card` | アダプティブ カードまたはアダプティブ カード ボット カードの添付ファイル | タスク モジュールに表示されるアダプティブ カードの JSON。 ボットから呼び出す場合は、Bot Framework オブジェクトでアダプティブ カード JSON を使用する必要 `attachment` があります。 タブからアダプティブ カードを使用します。 [例を次に示します。](#adaptive-card-or-adaptive-card-bot-card-attachment) |
-| `fallbackUrl` | string | クライアントがタスク モジュール機能をサポートしていない場合、この URL はブラウザー タブで開きます。 |
-| `completionBotId` | string | タスク モジュールとのユーザーの対話の結果を送信するボット アプリ ID を指定します。 指定した場合、ボットはイベント ペイロード `task/submit invoke` に JSON オブジェクトを含むイベントを受信します。 |
+| `title` | string | アプリ名の下、アプリアイコンの右側に表示されます。 |
+| `height` | number または string | これは、タスク モジュールの高さをピクセル単位で表す数値、または `small` `medium` 、、または を表す数値です `large` 。 [高さと幅の取り扱いについては、以下を参照](#task-module-sizing)してください。 |
+| `width` | number または string | これは、タスク モジュールの幅をピクセル単位で表す数値、または `small` `medium` 、、または を表す数値です `large` 。 [高さと幅の取り扱いについては、以下を参照](#task-module-sizing)してください。 |
+| `url` | string | タスク モジュール内に読み込まれたページ `<iframe>` の URL。 URL のドメインは、アプリのマニフェストのアプリの [validDomains 配列](~/resources/schema/manifest-schema.md#validdomains) に含まれる必要があります。 |
+| `card` | アダプティブ カードまたはアダプティブ カード ボット カードアタッチメント | タスク モジュールに表示されるアダプティブ カードの JSON。 ボットから呼び出す場合は、Bot Framework オブジェクトでアダプティブ カード JSON を使用する必要があります `attachment` 。 タブからは、アダプティブカードだけを使用します。 [例を次に示します。](#adaptive-card-or-adaptive-card-bot-card-attachment) |
+| `fallbackUrl` | string | クライアントがタスク モジュール機能をサポートしていない場合、この URL はブラウザー タブで開かれます。 |
+| `completionBotId` | string | ユーザーがタスク モジュールと対話した結果を送信するボット アプリ ID を指定します。 指定した場合、ボットは `task/submit invoke` イベントペイロード内の JSON オブジェクトを含むイベントを受け取ります。 |
 
 > [!NOTE]
-> タスク モジュール機能では、読み込む URL のドメインがアプリのマニフェストの配列 `validDomains` に含まれている必要があります。
+> タスク モジュール機能では、読み込む URL のドメインが `validDomains` アプリのマニフェストの配列に含まれている必要があります。
 
 ## <a name="task-module-sizing"></a>タスク モジュールのサイズ変更
 
-に整数を使用 `TaskInfo.width` `TaskInfo.height` し、高さと幅をピクセル単位で設定します。 ただし、チームのウィンドウのサイズと画面の解像度に応じて、縦横比 (幅/高さ) を維持しながら、比例して縮小されます。
+整数を使用 `TaskInfo.width` し、 `TaskInfo.height` 高さと幅をピクセル単位で設定します。 ただし、チームのウィンドウのサイズと画面の解像度によっては、縦横比 (幅/高さ) を維持しながら、比例して縮小されます。
 
-If and are , or the size of the red rectangle in the picture in the available `TaskInfo.width` `TaskInfo.height` `"small"` `"medium"` `"large"` space: 20%, 50%, 60% for and `width` 20%, 50%, 66% for `height` .
+`TaskInfo.width`と `TaskInfo.height` である場合 `"small"` 、 `"medium"` または `"large"` 上の図の赤い長方形のサイズは、利用可能なスペースの割合です:20%、50%、60% `width` と20%、50%、66%。 `height`
 
-タブから呼び出されるタスク モジュールは、動的にサイズを変更できます。 呼び `tasks.startTask()` 出し後、newSize オブジェクトの高さと幅のプロパティが TaskInfo 仕様 `tasks.updateTask(newSize)` (ex. `{ height: 'medium', width: 'medium' }`).
+タブから呼び出されたタスク モジュールのサイズを動的に変更できます。 呼び出し後 `tasks.startTask()` に `tasks.updateTask(newSize)` newSize オブジェクトの高さと幅のプロパティが TaskInfo 仕様 (例. `{ height: 'medium', width: 'medium' }`).
 
-## <a name="task-module-css-for-htmljavascript-task-modules"></a>HTML/JavaScript タスク モジュールのタスク モジュール CSS
+## <a name="task-module-css-for-htmljavascript-task-modules"></a>HTML/JavaScript タスクモジュールのタスクモジュール CSS
 
-HTML/JavaScript ベースのタスク モジュールは、ヘッダーの下のタスク モジュールの領域全体にアクセスできます。 多くの柔軟性を提供しますが、ヘッダー要素に合わせてエッジをパディングし、不要なスクロール バーを回避する場合は、適切な CSS を提供する必要があります。 いくつかの使用例の例を次に示します。
+HTML/JavaScript ベースのタスクモジュールは、ヘッダーの下にあるタスクモジュールの領域全体にアクセスできます。 これは非常に柔軟性がありますが、ヘッダー要素に合わせてエッジの周りにパディングを行い、不要なスクロールバーを避ける場合は、適切なCSSを提供する必要があります。 いくつかの使用例を次に示します。
 
-### <a name="example-1---youtube-video"></a>例 1 - YouTube ビデオ
+### <a name="example-1---youtube-video"></a>例 1 - YouTube 動画
 
-YouTube では、Web ページにビデオを埋め込む機能が提供されています。 単純なスタブ Web ページを使用すると、タスク モジュールで簡単に表示できます。
+YouTube では、Web ページに動画を埋め込むことができます。 単純なスタブ Web ページを使用すると、タスク モジュールでこれを簡単に表示できます。
 
-![YouTube ビデオ](~/assets/images/task-module/youtube-example.png)
+![ユーチューブ動画](~/assets/images/task-module/youtube-example.png)
 
-CSS を使用せずに、このページの HTML を次に示します。
+CSS を使用しないこのページの HTML は次のとおりです。
 
 ```html
 <!DOCTYPE html>
@@ -101,7 +103,7 @@ CSS を使用せずに、このページの HTML を次に示します。
 </html>
 ```
 
-CSS は次のように表示されます。
+CSS は次のようになります。
 
 ```css
 #embed-container iframe {
@@ -118,17 +120,17 @@ CSS は次のように表示されます。
 }
 ```
 
-### <a name="example-2---powerapp"></a>例 2 - PowerApp
+### <a name="example-2---powerapp"></a>例 2 - パワーアプリ
 
-PowerApp を埋め込む場合も、同じ方法を使用できます。 個々の PowerApp の高さ/幅がカスタマイズ可能なので、目的のプレゼンテーションを実現するために高さと幅を調整する必要がある場合があります。
+PowerApp を埋め込むのと同じアプローチを使用することもできます。 個々のPowerAppの高さ/幅はカスタマイズ可能であるため、必要なプレゼンテーションを実現するために高さと幅を調整する必要があります。
 
-![アセット管理 PowerApp](~/assets/images/task-module/powerapp-example.png)
+![資産管理パワーアプリ](~/assets/images/task-module/powerapp-example.png)
 
 ```html
 <iframe width="720" height="520" src="https://web.powerapps.com/webplayer/iframeapp?source=iframe&screenColor=rgba(104,101,171,1)&appId=/providers/Microsoft.PowerApps/apps/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"></iframe>
 ```
 
-CSS は次の値です。
+そして、CSSは次のとおりです。
 
 ```css
 #embed-container iframe {
@@ -145,11 +147,11 @@ CSS は次の値です。
 }
 ```
 
-## <a name="adaptive-card-or-adaptive-card-bot-card-attachment"></a>アダプティブ カードまたはアダプティブ カード ボット カードの添付ファイル
+## <a name="adaptive-card-or-adaptive-card-bot-card-attachment"></a>アダプティブ カードまたはアダプティブ カード ボット カードアタッチメント
 
-上記で説明したように、呼び出し方法によっては、アダプティブ カードまたはアダプティブ カード ボット カードの添付ファイル (これは、添付ファイル オブジェクトにラップされたアダプティブ カード) を使用する必要があります `card` 。
+上記で説明したように、どのように呼び出すかに応じて `card` 、アダプティブ カードまたはアダプティブ カード ボット カードアタッチメント (添付オブジェクトにラップされたアダプティブ カード) を使用する必要があります。
 
-タブから呼び出す場合は、アダプティブ カードを使用する必要があります。 非常に簡単な例を次に示します。
+タブから呼び出す場合は、アダプティブ カードを使用する必要があります。 次に、非常に簡単な例を示します。
 
 ```json
 {
@@ -169,7 +171,7 @@ CSS は次の値です。
 }
 ```
 
-ボットから呼び出す場合は、次の例のようにアダプティブ カード ボット カードの添付ファイルを使用する必要があります。
+ボットから呼び出す場合は、次の例のようにアダプティブ カード のボット カードアタッチメントを使用する必要があります。
 
 ```json
 {
@@ -192,36 +194,36 @@ CSS は次の値です。
 }
 ```
 
-アダプティブ カードを含むタスク モジュールをボットまたはタブから呼び出すかどうかを覚えておく必要があります。
+ボットまたはタブから Adaptive カードを含むタスク モジュールを呼び出すかどうかを覚えておく必要があります。
 
 ## <a name="task-module-deep-link-syntax"></a>タスク モジュールのディープ リンク構文
 
-タスク モジュールのディープ リンクは、他の 2 つの情報を含む [TaskInfo](#the-taskinfo-object) オブジェクトのシリアル化であり、必要に応じて `APP_ID` 次の情報を使用します `BOT_APP_ID` 。
+タスク モジュールのディープ リンクは、他の 2 つの情報を含む [TaskInfo オブジェクト](#the-taskinfo-object) のシリアル化 `APP_ID` であり、オプションで `BOT_APP_ID` :
 
 `https://teams.microsoft.com/l/task/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID`
 
 `https://teams.microsoft.com/l/task/APP_ID?card=<TaskInfo.card>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID`
 
-データ型 [および許容値については、TaskInfo](#the-taskinfo-object) オブジェクトを参照してください `<TaskInfo.url>` `<TaskInfo.card>` `<TaskInfo.height>` `<TaskInfo.width>` `<TaskInfo.title>` 。
+データ型および 、 、 、および の許容値については、 [TaskInfo オブジェクト](#the-taskinfo-object) `<TaskInfo.url>` を参照 `<TaskInfo.card>` `<TaskInfo.height>` `<TaskInfo.width>` `<TaskInfo.title>` してください。
 
 > [!TIP]
-> 特にパラメーター (JavaScript の関数など) を使用する場合は、必ず URL でディープ リンク `card` をエンコード[ `encodeURI()` してください](https://www.w3schools.com/jsref/jsref_encodeURI.asp)。
+> 特にパラメータを使用する場合は、ディープリンクをURLエンコードしてください `card` (例えば、JavaScriptの[ `encodeURI()` 関数](https://www.w3schools.com/jsref/jsref_encodeURI.asp))。
 
-に関する情報を次に `APP_ID` 示します `BOT_APP_ID` 。
+以下に記載の情報 `APP_ID` を示 `BOT_APP_ID` します。
 
 | 値 | 型 | 必須 | 説明 |
 | --- | --- | --- | --- |
-| `APP_ID` | string | はい | タスク [モジュール](~/resources/schema/manifest-schema.md#id) を呼び出すアプリの ID。 マニフェスト [の validDomains 配列](~/resources/schema/manifest-schema.md#validdomains) には、URL に if の `APP_ID` `url` ドメイン `url` が含まれている必要があります。 (アプリ ID は、タブまたはボットからタスク モジュールが呼び出されると既に知られているので、そのモジュールは .) に含まれません `TaskInfo` 。 |
-| `BOT_APP_ID` | 文字列 | いいえ | for の値 `completionBotId` を指定すると、オブジェクトはメッセージを `result` 介して指定 `task/submit invoke` されたボットに送信されます。 `BOT_APP_ID` アプリのマニフェストでボットとして指定する必要があります。つまり、ボットに送信する必要があります。 |
+| `APP_ID` | string | はい | タスク モジュールを呼び出すアプリの[ID。](~/resources/schema/manifest-schema.md#id) マニフェスト内の [validDomains 配列](~/resources/schema/manifest-schema.md#validdomains) には `APP_ID` `url` 、URL に存在する場合のドメインが含まれている必要があります `url` 。 (このアプリ ID は、タブまたはボットからタスク モジュールが呼び出されたときに既に認識されています `TaskInfo` 。 |
+| `BOT_APP_ID` | 文字列 | いいえ | の値 `completionBotId` が指定されている場合、 `result` オブジェクトはメッセージを介して `task/submit invoke` 指定されたボットに送信されます。 `BOT_APP_ID` アプリのマニフェストでボットとして指定する必要があります。 |
 
-有効な場合と同じであり、多くの場合、アプリがボットを持っている場合は、ボットがある場合はアプリ `APP_ID` の ID として使用する必要があります。 `BOT_APP_ID`
+それは有効であり `APP_ID` `BOT_APP_ID` 、同じであることに注意してください、そして多くの場合、アプリがボットを持っている場合、それをアプリのIDとして使用することをお勧めします(もしある場合)。
 
-## <a name="keyboard-and-accessibility-guidelines"></a>キーボードとアクセシビリティのガイドライン
+## <a name="keyboard-and-accessibility-guidelines"></a>キーボードとユーザー補助のガイドライン
 
-HTML/JavaScript ベースのタスク モジュールでは、アプリのタスク モジュールをキーボードで使用できる必要があります。 スクリーン リーダー プログラムは、キーボードを使用して移動する機能にも依存します。 実用的な問題として、これは次の 2 つのことを意味します。
+HTML/JavaScript ベースのタスクモジュールでは、アプリのタスクモジュールをキーボードで使用できるようにする責任があります。 スクリーン リーダー プログラムは、キーボードを使用して移動する機能にも依存します。 現実的な問題として、これは2つのことを意味します:
 
-1. HTML タグ [の tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) 属性を使用して、フォーカスできる要素と、シーケンシャル キーボード ナビゲーションに参加する場合と場所を制御します (通常は <kbd>Tab</kbd> キーと <kbd>Shift-Tab</kbd> キーを使用)。
-2. タスク モジュール <kbd>の JavaScript</kbd> の Esc キーを処理します。 これを行う方法を示すコード サンプルを次に示します。
+1. HTML タグの [tabindex 属性](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) を使用して、フォーカスを設定できる要素と、その要素が連続したキーボード ナビゲーションに参加するかどうか(通常は <kbd>Tab</kbd> キーと Shift キーを押しながら <kbd>Tab キーを</kbd> 押す)を制御します。
+2. タスク モジュールの JavaScript で <kbd>Esc</kbd> キーを処理します。 これを行う方法を示すコード サンプルを次に示します。
 
   ```javascript
   // Handle the Esc key
@@ -232,24 +234,17 @@ HTML/JavaScript ベースのタスク モジュールでは、アプリのタス
   }
   ```
 
-Microsoft Teamsタスク モジュール ヘッダーから HTML へのキーボード ナビゲーションが正しく動作し、その逆も同様です。
+Microsoft Teams、タスク モジュール ヘッダーから HTML にキーボード ナビゲーションが正しく動作し、その逆が正しく機能することを保証します。
 
 ## <a name="code-sample"></a>コード サンプル
 |**サンプル名** | **説明** | **.NET** | **Node.js**|
 |----------------|-----------------|--------------|----------------|
-|タスク モジュールのサンプル (Bots-V4) | タスク モジュールを作成するためのサンプル。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
-|タスク モジュールのサンプル (タブ + Bots-V3) | タスク モジュールを作成するためのサンプル。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
+|タスクモジュールのサンプル(Bots-V4) | タスクモジュールを作成するためのサンプルです。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
+|タスク モジュールのサンプル (タブ + ボット V3) | タスクモジュールを作成するためのサンプルです。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
 
+## <a name="see-also"></a>関連項目
 
-
-> [!div class="nextstepaction"]
-> [詳細については、デバイスのアクセス許可の要求を参照してください](../concepts/device-capabilities/native-device-permissions.md)
-
-> [!div class="nextstepaction"]
-> [詳細: メディア機能の統合](../concepts/device-capabilities/mobile-camera-image-permissions.md)
-
-> [!div class="nextstepaction"]
-> [詳細: QR またはバーコード スキャナー機能をアプリに統合Teams](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
-
-> [!div class="nextstepaction"]
-> [詳細: 場所の機能をネットワークに統合するTeams](../concepts/device-capabilities/location-capability.md)
+* [デバイスのアクセス許可を要求する](../concepts/device-capabilities/native-device-permissions.md)
+* [メディア機能を統合する](../concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [TeamsでQRまたはバーコードスキャナ機能を統合](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
+* [Teamsでの位置情報機能の統合](../concepts/device-capabilities/location-capability.md)

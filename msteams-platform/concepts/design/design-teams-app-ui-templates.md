@@ -1,200 +1,200 @@
 ---
 title: UI テンプレートを使用したアプリの設計
 author: heath-hamilton
-description: 標準化された UI コンポーネント、レイアウト、およびパターンを使用して、アプリを迅速に設計し、Microsoft Teams。
+description: Microsoft Teamsで一般的に見られる標準化された UI コンポーネント、レイアウト、パターンを使用して、アプリをより迅速に設計します。
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: d627ce3b29ffa071d0d7e238c572c7cb69fa4cd9
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 0cd5c6c4525e340f9aa53a78749211783880225a
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020766"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566020"
 ---
-# <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>UI テンプレートをMicrosoft Teamsアプリを設計する
+# <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>UI テンプレートを使用したMicrosoft Teams アプリの設計
 
-UI テンプレートを使用Microsoft Teamsアプリを迅速に設計します。 テンプレートは、一般的な Teams の使用例で動作する Fluent UI ベースのコンポーネントのコレクションで、ユーザーに最適なエクスペリエンスを把握する時間が広がっています。
+UI テンプレートを使用して、Microsoft Teams アプリをより迅速に設計します。 テンプレートは、一般的なTeamsのユースケースで動作する Fluent UI ベースのコンポーネントのコレクションであり、ユーザーにとって最適なエクスペリエンスを把握する時間が増えます。
 
-## <a name="getting-started-with-tools-and-samples"></a>ツールとサンプルの使用を開始する
+## <a name="getting-started-with-tools-and-samples"></a>ツールとサンプルの概要
 
 次のリソースは、UI テンプレートを使用してアプリを設計および開発するのに役立ちます。
 
 ### <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-アプリ設計の UI テンプレートを Microsoft Teams UI キットから取得します。これには、使用状況、解剖学、アクセシビリティ、ベスト プラクティスに関する広範な情報も含まれています。
+アプリデザイン用の UI テンプレートをMicrosoft Teams UI Kit から取得し、使用状況、解剖学、アクセシビリティ、ベスト プラクティスに関する広範な情報も含まれています。
 
 > [!div class="nextstepaction"]
-> [UI キットを取得する (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [UIキットを入手する(Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ### <a name="microsoft-teams-ui-library"></a>Microsoft TeamsUI ライブラリ
 
-ブラウザーで UI テンプレートTeams関連するコンポーネントを個別に表示およびテストします。
+ブラウザーで個々のTeams UI テンプレートおよび関連コンポーネントを表示およびテストします。
 
 > [!div class="nextstepaction"]
-> [UI ライブラリ (プレイグラウンド) を試す](https://dev-int.teams.microsoft.com/storybook/main/index.html)
+> [UIライブラリ(プレイグラウンド)を試してみてください](https://dev-int.teams.microsoft.com/storybook/main/index.html)
 
-これらのテンプレートと関連コンポーネントをアプリ プロジェクトに直接Teamsインポートします。
+これらのテンプレートと関連コンポーネントをTeams アプリ プロジェクトに直接インポートします。
 
 > [!div class="nextstepaction"]
 > [UI ライブラリを取得する (GitHub)](https://github.com/OfficeDev/microsoft-teams-ui-component-library)
 
 ### <a name="sample-app"></a>サンプル アプリ
 
-サンプル アプリをインストールして、UI テンプレートの外観と動作を各コンテキストTeamsします。
+サンプル アプリをインストールして、UI テンプレートの外観と動作をTeamsコンテキストで確認します。
 
 > [!div class="nextstepaction"]
 > [サンプル アプリを取得する (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
 ## <a name="list"></a>List
 
-リストを使用して、関連するアイテムをスキャン可能な形式で表示し、ユーザーがリスト全体または個々のアイテムに対してアクションを実行できます。
+リストを使用して、関連アイテムをスキャン可能な形式で表示し、ユーザーがリスト全体または個々のアイテムに対してアクションを実行できるようにします。
 
 :::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="例は、リスト UI テンプレートを示しています。" border="false":::
 
-### <a name="top-use-cases"></a>上位の使用例
+### <a name="top-use-cases"></a>トップユースケース
 
 * データの表示
-* アプリ コンテンツに関するコンテキスト アクション
+* アプリ コンテンツに対するコンテキスト アクション
 
 ## <a name="dashboard"></a>ダッシュボード
 
-ダッシュボードには、さまざまな種類のコンテンツが中央の場所に表示されます (Teamsまたはタブ)。 ユーザーは、ダッシュボードに表示される機能の少なくとも一部をカスタマイズできる必要があります。
+ダッシュボードには、さまざまな種類のコンテンツが一元的な場所 (個人用アプリまたはタブTeams) に表示されます。 ユーザーは、ダッシュボードに表示される内容の少なくとも一部をカスタマイズできる必要があります。
 
 :::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="例は、ダッシュボード UI テンプレートを示しています。" border="false":::
 
-### <a name="top-use-cases"></a>上位の使用例
+### <a name="top-use-cases"></a>トップユースケース
 
 * データの分析
 * レポートの指標
-* 異なる情報を 1 か所に整理する
+* 異なる情報を 1 か所にまとめる
 
 ## <a name="form"></a>フォーム
 
-フォームは、構造化された方法でユーザー入力を収集、検証、送信するために使用されます。 ユーザー エクスペリエンスを向上するには、入力フィールドの明確なラベル付けと論理グループ化が重要です。
+フォームは、構造化された方法でユーザー入力を収集、検証、および送信するために使用されます。 入力フィールドの明確なラベル付けと論理グループ化は、優れたユーザー エクスペリエンスにとって重要です。
 
 :::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="例は、フォーム UI テンプレートを示しています。" border="false":::
 
-### <a name="top-use-cases"></a>上位の使用例
+### <a name="top-use-cases"></a>トップユースケース
 
-* サインインする
+* サインイン
 * ユーザー プロファイル
 * 設定
 * ユーザー入力コレクション
 
-## <a name="sign-in"></a>サインインする
+## <a name="sign-in"></a>サインイン
 
-さまざまなコンテキストと ID プロバイダー用にアプリ Teamsフローを設計できます。 次の例では、シングル サインオン (SSO) を含み、最も簡単な認証エクスペリエンスをお勧めします。
+さまざまなTeams コンテキストと ID プロバイダーに対して、アプリのサインイン フローを設計できます。 次の例には、シングル サインオン (SSO) が含まれています。
 
-:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="例は、サインイン UI テンプレートを示しています。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="例は、UI テンプレートのサインを示しています。" border="false":::
 
-### <a name="top-use-case"></a>トップ の使用例
+### <a name="top-use-case"></a>トップユースケース
 
 * ユーザーの認証
 
-## <a name="task-board"></a>タスク ボード
+## <a name="task-board"></a>タスクボード
 
-タスク ボード (カンバン ボードまたはスイム レーンとも呼ばれる) は、作業アイテムやチケットの状態を追跡するためによく使用されるカードのコレクションです。 また、任意の種類のコンテンツをカテゴリに並べ替える場合にも使用できます。 列間でカードを編集および移動できます。
+タスク ボードは、かんばんボードまたはスイム レーンとも呼ばれ、作業項目やチケットの状態を追跡するためによく使用されるカードのコレクションです。 また、任意の種類のコンテンツをカテゴリに並べ替えるためにも使用できます。 列間でカードを編集したり移動したりできます。
 
 :::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="例は、タスク ボードの UI テンプレートを示しています。" border="false":::
 
-### <a name="top-use-cases"></a>上位の使用例
+### <a name="top-use-cases"></a>トップユースケース
 
-* プロジェクトの管理。 タスクの割り当てと追跡状態
-* ブレインストーミング。 さまざまなカテゴリにアイデアを追加する
-* 並べ替えの演習。 任意の種類の情報をバケットに整理する
+* Project管理: タスクの割り当てとステータスの追跡。
+* ブレーンストーミング: さまざまなカテゴリにアイデアを追加します。
+* 分類の練習: あらゆる種類の情報をバケットにまとめる。
 
 ## <a name="data-visualization"></a>データ可視化
 
-異なるカード サイズ (シングル、ダブル、フル) を使用して、データの視覚化を同じページで積み重ね、整理できます。 カードは、列のレイアウトに合わせて拡大縮小され、空白を入力します。
+異なるカード サイズ (シングル、ダブル、フル) を使用して、同じページ上のデータビジュアライゼーションをスタックして整理できます。 カードは列レイアウトに合わせて拡大縮小され、空白スペースに塗りつぶされます。
 
-:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="例は、データ可視化 UI テンプレートを示しています。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="例は、データ視覚化 UI テンプレートを示しています。" border="false":::
 
-### <a name="top-use-cases"></a>上位の使用例
+### <a name="top-use-cases"></a>トップユースケース
 
 * 複雑な情報を表示する
 * ダッシュボードの作成
 
 ## <a name="wizard"></a>ウィザード
 
-ウィザードは、ユーザーが複数の画面を介してタスク (セットアップ プロセスなど) を完了する方法を案内します。
+ウィザードは、ユーザーに対して、複数の画面をガイドして、1 つのタスク (セットアッププロセスなど) を完了します。
 
-:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="例は、ウィザードの UI テンプレートを示しています。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="例は、ウィザード UI テンプレートを示しています。" border="false":::
 
-### <a name="top-use-cases"></a>上位の使用例
+### <a name="top-use-cases"></a>トップユースケース
 
 * セットアップ
 * オンボード
-* 初回実行エクスペリエンス
+* 最初の実行エクスペリエンス
 
 ## <a name="empty-state"></a>空の状態
 
-空の状態テンプレートは、サインイン、初回実行エクスペリエンス、エラー メッセージなど、多くのシナリオで使用できます。 柔軟性が高く、次の設計で 1 つ、少数、またはすべてのコンポーネントを使用できます。
+空の状態テンプレートは、サインイン、初回実行エクスペリエンス、エラー メッセージなど、さまざまなシナリオで使用できます。 柔軟性が高く、次の設計の 1 つ、数個、またはすべてのコンポーネントを使用するように適応します。
 
 :::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="例は、空の状態 UI テンプレートを示しています。" border="false":::
 
-### <a name="top-use-cases"></a>上位の使用例
+### <a name="top-use-cases"></a>トップユースケース
 
-* サインインする
+* サインイン
 * ウェルカム メッセージと初回実行エクスペリエンス
 * 成功メッセージ
 * エラー メッセージ
 
 ## <a name="notification-bar"></a>通知バー
 
-通知バーは、ユーザーが即座にアクションを実行する必要が生じない、簡潔で重要なメッセージを表示するための専用の領域です。 特定の背景色とアイコンは、特定の種類のメッセージに関連付けられる (以下を参照)。
+通知バーは、ユーザーが直ちに操作を行う必要がない、簡潔で重要なメッセージを表示するための専用領域です。 特定の背景色とアイコンは、特定の種類のメッセージに関連付けられます(下記参照)。
 
 :::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="例は、通知バー テンプレートを示しています。" border="false":::
 
-### <a name="top-use-cases"></a>上位の使用例
+### <a name="top-use-cases"></a>トップユースケース
 
 * 重大なメッセージ、エラー、および警告
 * 成功メッセージ
 * 情報メッセージまたはプロモーション メッセージ
 
-## <a name="left-nav"></a>左ナビゲーション
+## <a name="left-nav"></a>左ナビ
 
-左側のナビゲーションを使用して、[ページ] タブ内の複数Teamsします。次の例では、左側のナビゲーションはチャネル リストとタブ コンテンツの間にあります。
+左側のナビゲーションを使用して、Teamsタブ内の複数のページを参照します。次の例では、左側のナビゲーションはチャネル リストとタブ コンテンツの間にあります。
 
-:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="例は、左側のナビゲーション テンプレートを示しています。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="例は、左のナビゲーション テンプレートを示しています。" border="false":::
 
-### <a name="top-use-cases"></a>上位の使用例
+### <a name="top-use-cases"></a>トップユースケース
 
-* [ページ] タブ内の複数のページTeamsする
-* 複雑なアプリを複数のページに分割する
+* Teamsタブ内の複数のページを参照します。
+* 複雑なアプリを複数のページに分割します。
 
 ## <a name="breadcrumb"></a>Breadcrumb
 
-Breadcrumbs は、アプリの階層を伝えるナビゲーション支援です。 ユーザーは、表示しているページが全体的なエクスペリエンスに適合する方法を理解し、その階層内の上位レベルへの 1 回のクリックアクセスを許可するのに役立ちます。
+階層リンクは、アプリの階層を伝えるナビゲーション補助です。 ユーザーは、表示しているページが全体的なエクスペリエンスにどのように適合するかを理解し、その階層の上位レベルにワンクリックでアクセスできるようにします。
 
-:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="例は、パンくずテンプレートを示しています。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="例は、階層リンク テンプレートを示しています。" border="false":::
 
-### <a name="top-use-cases"></a>上位の使用例
+### <a name="top-use-cases"></a>トップユースケース
 
-* コミュニケーション階層
+* 階層の通信
 * ナビゲーション
 
 ## <a name="toolbar"></a>ツール バー
 
-ツールバーは、コントロールのセットをグループ化するコンテナーです。
+ツールバーは、コントロールのセットをグループ化するためのコンテナです。
 
-:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="ツール バー テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="例は、ツールバー テンプレートを示しています。" border="false":::
 
-### <a name="top-use-cases"></a>上位の使用例
+### <a name="top-use-cases"></a>トップユースケース
 
-* アプリ コンテンツに関するコンテキスト アクション
+* アプリ コンテンツに対するコンテキスト アクション
 * コンテキスト フィルターと検索
-* ナビゲーションとパンくず
+* ナビゲーションと階層リンク
 
 ## <a name="stage"></a>ステージ
 
-Stage は、ユーザーが別のアプリやブラウザーでエンティティを開く代わりに、Teams、ファイル、web サイトなど、エンティティを開く方法を提供します。 ステージの主な使用例は表示です。サーフェスを複雑な操作に使用する必要があります。
+Stage では、別のアプリやブラウザーで開く代わりに、Teamsでエンティティ (画像、ファイル、Web サイトなど) を開くことができます。 ステージの主なユース ケースは表示です。サーフェスは複雑な相互作用には使用しないでください。
 
-(実装ノート: 大規模なタスク モジュールを使用してステージ [をビルド](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)します。)
+(実装ノート: 大きな [タスクモジュール](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)を使用してステージを構築します。
 
-:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="ステージ テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="例は、ステージテンプレートを示しています。" border="false":::
 
-### <a name="top-use-cases"></a>上位の使用例
+### <a name="top-use-cases"></a>トップユースケース
 
-* 別のアプリやブラウザーではなくTeamsでエンティティを開く
-* スポットライト メディアまたは他のコンテンツ
+* 別のアプリやブラウザーではなく、Teamsでエンティティを開きます。
+* スポットライトメディアやその他のコンテンツ。

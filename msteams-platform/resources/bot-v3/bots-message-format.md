@@ -1,46 +1,46 @@
 ---
-title: ボット メッセージの形式
+title: ボットメッセージ形式
 description: ボット メッセージの書式設定の詳細について説明します。
-keywords: teams シナリオ チャネルの会話ボット メッセージ
+keywords: チーム シナリオ チャネル会話ボット メッセージ
 ms.topic: reference
 localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: 06037bd3fb23ace11eea763747dc64d763ac3c42
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: a9566331b259ba77f6770ff6394e8a788769af5d
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020647"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566475"
 ---
 # <a name="message-formatting-for-bots"></a>ボットのメッセージの書式設定
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-省略可能なプロパティを設定して、メッセージのテキスト コンテンツのレンダリング方法 [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) を制御できます。
+オプションの [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) プロパティを設定して、メッセージのテキスト コンテンツの表示方法を制御できます。
 
-Microsoft Teamsは、次の書式設定オプションをサポートしています。
+Microsoft Teamsは、次の書式設定オプションをサポートします。
 
-| TextFormat 値 | 説明 |
+| テキスト書式の値 | 説明 |
 | --- | --- |
-| プレーン | テキストは、書式が適用されずに生テキストとして扱われる必要があります。 |
-| markdown | テキストは Markdown 書式設定として扱い、必要に応じてチャネルにレンダリングする必要があります。「サポート [されているスタイルのテキスト コンテンツ](#formatting-text-content) の書式設定」を参照してください。 |
-| xml | テキストは単純な XML マークアップです。「サポート [されているスタイルのテキスト コンテンツ](#formatting-text-content) の書式設定」を参照してください。 |
+| 平地 | テキストは、書式設定がまったく適用されていない未加工のテキストとして扱う必要があります。 |
+| markdown | テキストは Markdown フォーマットとして扱われ、必要に応じてチャネルにレンダリングされます。サポートされているスタイルの [テキストコンテンツの書式設定](#formatting-text-content) を参照してください。 |
+| xml | テキストは単純な XML マークアップです。サポートされているスタイルの [テキストコンテンツの書式設定](#formatting-text-content) を参照してください。 |
 
-## <a name="formatting-text-content"></a>テキスト コンテンツの書式設定
+## <a name="formatting-text-content"></a>テキストコンテンツの書式設定
 
-Microsoft Teamsは、Markdown および XML (HTML) 書式タグのサブセットをサポートします。
+Microsoft Teamsは、マークダウンおよび XML (HTML) 書式タグのサブセットをサポートします。
 
-現時点では、次の制限が適用されます。
+現在、以下の制限が適用されます。
 
-* テキスト専用メッセージはテーブルの書式設定をサポートしません
-* リッチ カードは、タイトルまたは字幕プロパティではなく、text プロパティの書式設定のみをサポートします。
-* リッチ カードは Markdown またはテーブルの書式設定をサポートしていない
+* テキストのみのメッセージは、表の書式設定をサポートしていません。
+* リッチ カードは、タイトルやサブタイトルのプロパティではなく、text プロパティの書式設定のみをサポートします。
+* リッチ カードは、マークダウンまたはテーブルの書式設定をサポートしていません。
 
-## <a name="cross-platform-support"></a>クロスプラットフォームのサポート
+## <a name="cross-platform-support"></a>クロスプラットフォームサポート
 
-Microsoft Teams でサポートされているすべてのプラットフォームで書式設定が機能するには、一部のスタイルが現在すべてのプラットフォームでサポートされていない点に注意してください。
+Microsoft Teamsでサポートされているすべてのプラットフォームで書式設定が機能するように、一部のスタイルは現在、すべてのプラットフォームでサポートされていない点に注意してください。
 
-| Style                     | テキスト専用メッセージ | リッチ カード (XML のみ) |
+| Style                     | テキストのみのメッセージ | リッチカード (XML のみ) |
 | ---                       | :---: | :---: |
 | bold                      | ✔ | ✖ |
 | italic                    | ✔ | ✔ |
@@ -49,7 +49,7 @@ Microsoft Teams でサポートされているすべてのプラットフォー�
 | 水平ルール           | ✖ | ✖ |
 | 順序なしリスト            | ✖ | ✔ |
 | 順序付きリスト              | ✖ | ✔ |
-| 事前に書式設定されたテキスト         | ✔ | ✔ |
+| 書式設定済みのテキスト         | ✔ | ✔ |
 | blockquote                | ✔ | ✔ |
 | hyperlink                 | ✔ | ✔ |
 | 画像リンク                | ✔ | ✖ |
@@ -58,7 +58,7 @@ Microsoft Teams でサポートされているすべてのプラットフォー�
 
 テキストの書式設定のサポートは、メッセージの種類やプラットフォームによって異なります。
 
-### <a name="text-only-messages"></a>テキスト専用メッセージ
+### <a name="text-only-messages"></a>テキストのみのメッセージ
 
 | Style                     | Desktop | iOS | Android |
 | ---                       | :---: | :---: | :---: |
@@ -69,11 +69,11 @@ Microsoft Teams でサポートされているすべてのプラットフォー�
 | 水平ルール           | ✖ | ✖ | ✖ |
 | 順序なしリスト            | ✔ | ✖ | ✖ |
 | 順序付きリスト              | ✔ | ✖ | ✖ |
-| 事前に書式設定されたテキスト         | ✔ | ✔ | ✔ |
+| 書式設定済みのテキスト         | ✔ | ✔ | ✔ |
 | blockquote                | ✔ | ✔ | ✔ |
 | hyperlink                 | ✔ | ✔ | ✔ |
 | 画像リンク                | ✔ | ✔ | ✔ |
 
 ### <a name="cards"></a>カード
 
-カードの [サポートについては、「カードの書式設定](~/task-modules-and-cards/cards/cards-format.md) 」を参照してください。
+詳しくは、カードの [カードのフォーマット](~/task-modules-and-cards/cards/cards-format.md) を参照してください。

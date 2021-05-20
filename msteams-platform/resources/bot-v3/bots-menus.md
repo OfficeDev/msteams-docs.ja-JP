@@ -1,34 +1,34 @@
 ---
-title: ボット メニューの追加
-description: ボットのメニューを作成する方法について説明Microsoft Teams
-keywords: teams ボット メニューの作成
+title: ボットメニューを追加する
+description: Microsoft Teamsでボットのメニューを作成する方法について説明します。
+keywords: チームボットメニュー作成
 ms.topic: how-to
 localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: f4190d0b21abbe00994e082000202b7bc65b917c
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: da6f36e1b7071b92f6411ab7d2afdccb795946b7
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019770"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566769"
 ---
-# <a name="add-a-bot-menu-in-microsoft-teams"></a>[ボット] メニューを [Microsoft Teams
+# <a name="add-a-bot-menu-in-microsoft-teams"></a>Microsoft Teamsでボットメニューを追加する
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-検出を支援し、ボットの機能についてユーザーを教育するために、ユーザーがボットを操作するたびに表示されるメニューを追加できます。 メニューにはコマンド テキストが表示され、使用例やコマンドの目的の説明などのヘルプ テキストも表示されます。
+ボットの機能を発見し、ユーザーを教育するために、ユーザーがボットとやり取りするたびに表示されるメニューを追加できるようになりました。 メニューにはコマンド テキストが表示され、使用例やコマンドの目的の説明などのヘルプ テキストも表示されます。
 
-![ボット メニューのスクリーンショット](~/assets/images/bots/bot-menus-bot-menu-sample.png)
+![ボットメニューのスクリーンショット](~/assets/images/bots/bot-menus-bot-menu-sample.png)
 
-ユーザーがメニュー項目を選択すると、ボット メッセージのユーザー完了を支援するために、コマンド文字列がテキスト ボックスに挿入されます。
+ユーザーがメニュー項目を選択すると、ボット メッセージのユーザーの完了を支援するために、コマンド文字列がテキスト ボックスに挿入されます。
 
 ## <a name="bot-menu-support-on-teams-mobile-app"></a>モバイル アプリでのボット メニュー Teamsサポート
 > [!NOTE] 
-> ボット メニューがモバイル デバイスに表示されない
+> ボットメニューはモバイルデバイスでは表示されません。
 
 ## <a name="app-manifest"></a>アプリ マニフェスト
 
-ボット メニューを作成するには、ボット セクションの下に新 [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) しいオブジェクトをアプリ マニフェストに追加します。 ボットがサポートするスコープごとに個別のコマンドを使用して個別のメニューを宣言できます (または) 各メニューは、最大 10 個のコマンド `personal` `groupChat` `team` をサポートします。
+ボット メニューを作成するには、ボット [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) セクションのアプリ マニフェストに新しいオブジェクトを追加します。 各メニューは、ボットがサポートするスコープごとに個別のコマンドで宣言できます ( `personal` `groupChat` , 、または ) `team` 各メニューは最大 10 個のコマンドをサポートします。
 
 ### <a name="manifest-excerpt---single-menu-for-both-scopes"></a>マニフェストの抜粋 - 両方のスコープの単一メニュー
 
@@ -118,6 +118,6 @@ ms.locfileid: "52019770"
 
 ## <a name="best-practices"></a>ベスト プラクティス
 
-* シンプルに保つ: ボット メニューは、ボットの主要な機能を提示することを目的とします。
-* 短くしてください:メニュー オプションは、極端に長く複雑な自然言語ステートメントである必要があります。単純なコマンドである必要があります。
-* 常に使用可能: ボット メニューのアクション/コマンドは、会話の状態やボットのダイアログに関係なく、常に呼び出し可能である必要があります。
+* シンプルにする: ボットメニューは、ボットの主要な機能を示すことを目的とします。
+* 短くする:メニューオプションは非常に長くて複雑な自然言語のステートメントであってはなりません - 彼らは簡単なコマンドでなければなりません。
+* 常に使用可能: ボットの会話の状態や、ボットが含まれるダイアログに関係なく、ボットメニューのアクション/コマンドは常に呼び出し可能である必要があります。

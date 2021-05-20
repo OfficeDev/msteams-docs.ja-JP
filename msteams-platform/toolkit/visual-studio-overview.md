@@ -1,112 +1,114 @@
 ---
-title: アプリとアプリのMicrosoft Teams ToolkitをVisual Studio
-description: アプリを使用して、アプリ内で直接素晴らしいカスタム Visual Studioを構築Microsoft Teams Toolkit
-keywords: teams visual studio ツールキット
+title: Microsoft Teams ToolkitとVisual Studioを使用してアプリを構築する
+description: Microsoft Teams Toolkitを使用して、Visual Studio内で優れたカスタム アプリを直接構築し始める
+keywords: チームビジュアルスタジオツールキット
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: bf8250e42bdf96073d729a19e921c400f242c67a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: eb94a8de0355283344ebe890a6fa3a3050e243ea
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020254"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52566552"
 ---
-# <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>アプリとアプリのTeams ToolkitをVisual Studio
+# <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>Teams ToolkitとVisual Studioを使用してアプリを構築する
 
 Microsoft Teams ツールキットを使用すると、Visual Studio 統合開発環境 (IDE) 内で直接カスタムの Teams アプリを構築できます。 Microsoft Teams ツールキットはプロセスをガイドし、Teams アプリの構築、デバッグ、起動に必要なすべてを提供します。
 
 ## <a name="prerequisites"></a>前提条件
 
-1. [開発者プレビューを有効にする](../resources/dev-preview/developer-preview-intro.md#enable-developer-preview)
+1. [開発者プレビューを有効に](../resources/dev-preview/developer-preview-intro.md#enable-developer-preview)する :
 
-1. T および web 開発 **<span>ASP.NE</span>モジュールが** インスタンスに追加Visual Studioします。 ワークロードとコンポーネントのドキュメントを追加または削除することで[、Visual Studioの手順に従って確認](/visualstudio/install/modify-visual-studio?view=vs-2019&preserve-view=true)できます。
+1. **<span>ASP.NE</span>T と Web 開発モジュール** がVisual Studioインスタンスに追加されていることを確認します。 ワークロードおよびコンポーネントのドキュメントを[追加または削除して、変更Visual Studio](/visualstudio/install/modify-visual-studio?view=vs-2019&preserve-view=true)の手順に従って確認できます。
 
-![visual studio asp.net モジュール](../assets/images/visual-studio-web-dev-module.png)
+![ビジュアルスタジオ asp.net モジュール](../assets/images/visual-studio-web-dev-module.png)
 
-3. アプリを Visual Studio から展開してテストする場合は、IIS (インターネット インフォメーション サービス) を開発環境にインストールする必要があります。 Visual Studio IIS は含まれていないので、既定のバージョン 7 構成Windows 10、Windows 8、Windowsには含まれません。ただし、Microsoft ダウンロード センターから最新バージョン[をダウンロードできます](https://www.microsoft.com/download/details.aspx?id=48264)。
+3. Visual Studioからアプリを展開してテストする場合は、開発環境に IIS (インターネット インフォメーション サービス) をインストールする必要があります。 Visual Studioには IIS は含まれておらず、既定のWindows 10、Windows 8、または Windows 7 の構成には含まれません。ただし、最新バージョンは Microsoft ダウンロード[センター](https://www.microsoft.com/download/details.aspx?id=48264)からダウンロードできます。
 
 ![IIS ダウンロード ページ ビュー](../assets/images/iis.png)
 
-## <a name="install-the-teams-toolkit"></a>サーバーをインストールTeams Toolkit
+## <a name="install-the-teams-toolkit"></a>Teams Toolkitをインストールする
 
-このMicrosoft Teams ToolkitはVisual Studio[マーケット](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.vsteamstemplate)プレースから、またはVisual Studio内の [拡張機能] メニューから直接ダウンロードVisual Studio。 
+Visual StudioのMicrosoft Teams Toolkitは [、Visual Studioマーケットプレース](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.vsteamstemplate)から、またはVisual Studio内の **拡張機能** メニューから直接ダウンロードできます。
 
 ## <a name="using-the-toolkit"></a>ツールキットの使用
 
-- [新しいプロジェクトをセットアップする](#set-up-a-new-teams-project)
+- [新しいプロジェクトを設定する](#set-up-a-new-teams-project)
 - [アプリを構成する](#configure-your-app)
 - [アプリをパッケージ化する](#package-your-app)
-- [アプリをアプリで実行Teams](#install-and-run-your-app-locally)
+- [Teamsでアプリを実行する](#install-and-run-your-app-locally)
 - [アプリを検証する](#validate-your-app)
 - [アプリを公開する](#publish-your-app-to-teams)
 
-## <a name="set-up-a-new-teams-project"></a>新しいプロジェクトをTeamsする
+## <a name="set-up-a-new-teams-project"></a>新しいTeams プロジェクトを設定する
 
-1. [新 **しいプロジェクトを作成する] を選択します**。
-1. [アプリ **Microsoft Teams選択し、[** 次へ] を **選択します**。
-1. [新しいプロジェクトの **構成]** 画面が表示され、新しいプロジェクト名、場所 **Project** ソリューション名を **選択できます**。
-1. [ソリューションとプロジェクトを **同じディレクトリに配置する] というラベルのボックスをオンにします**。
-1. [機能の追加] というラベル **の** 付いたポップアップ ウィンドウを使用すると、プロジェクトのセットアップに 1 つ以上の機能を選択できます。
-1. [次へ **] ボタン** を選択して構成プロセスを完了します。
-1. [機能の追加] というラベル **の** 付いたポップアップ ウィンドウを使用すると、選択した各機能のプロパティを選択できます。
-1. [**完了]** を選択すると、ランディング **ページ** Microsoft Teams Toolkitされます。
+1. [ **新しいプロジェクトの作成 ]** を選択します。
+1. [Microsoft Teams **アプリ] を** 選択し、[**次へ**] を選択します。
+1. [**新しいプロジェクトの構成]** 画面で **、[Project名**]、[**場所**]、および **[ソリューション名**] を選択します。
+1. [ **ソリューションとプロジェクトを同じディレクトリに配置]** というラベルの付いたチェック ボックスをオンにします。
+1. [ **機能の追加]** というラベルのポップアップ ウィンドウを使用すると、プロジェクトのセットアップに使用する 1 つ以上の機能を選択できます。
+1. [ **次へ** ] を選択して、構成プロセスを完了します。
+1. [ **機能の追加]** というラベルのポップアップ ウィンドウを使用すると、選択した各機能のプロパティを選択できます。
+1. [**完了] を** 選択すると **、Microsoft Teams Toolkit** ランディング ページに移動します。
 
 ## <a name="configure-your-app"></a>アプリを構成する
 
-このアプリの中核となるのは、Teams 3 つのコンポーネントです。
+その中核となるTeamsアプリには、次の 3 つのコンポーネントが含まれます。
 
-  1. ユーザー Microsoft Teamsアプリを操作するクライアント (Web、デスクトップ、モバイル) を指定します。
-  1. HTML タブ コンテンツやボットアダプティブ カードなど、Teamsに表示されるコンテンツの要求に応答するサーバー。
-  1. 次Teams [3 つのファイルで](/concepts/build-and-test/apps-package.md)構成されるアプリ パッケージです。
+  1. ユーザーがアプリを操作するクライアント (web、デスクトップ、モバイル) をMicrosoft Teams。
+  1. html タブコンテンツやボットアダプティブカードなど、Teamsに表示されるコンテンツの要求に応答するサーバー。
+  1. Teams アプリ パッケージは、次の 3 つのファイルで構成されます。
 
-  > [!div class="checklist"]
-  >
-  > - [manifest.js]
-  > - パブリック [または組織の](../resources/schema/manifest-schema.md#icons) アプリ カタログに表示するアプリの色アイコン
- > - アクティビティ[バーに](../resources/schema/manifest-schema.md#icons)表示するアウトライン Teamsアイコン。
+      > [!div class="checklist"]
+      >
+      > - 上のmanifest.js
+      > - アプリがパブリックまたは組織のアプリ カタログに表示される[色のアイコン](../resources/schema/manifest-schema.md#icons)
+      > - Teamsアクティビティ バーに表示する[アウトライン アイコン](../resources/schema/manifest-schema.md#icons)。
 
-アプリがインストールされている場合、Teams クライアントはマニフェスト ファイルを解析して、アプリの名前やサービスが配置されている URL など、必要な情報を特定します。
+アプリがインストールされると、Teams クライアントはマニフェスト ファイルを解析して、アプリの名前やサービスが配置されている URL などの必要な情報を判断します。
 
 > [!NOTE]
->まだ実行していない場合は、開発プロセスを続行するには、Microsoft 365またはアカウントにサインインする必要があります。
+>まだ行っていない場合は、Microsoft 365またはアカウントにサインインして開発プロセスを続行する必要があります。
 >
-> ユーザーアカウントをお持ちMicrosoft 365場合は、開発者プログラムのサブスクリプションMicrosoft 365[サインアップ](https://developer.microsoft.com/microsoft-365/dev-program)できます。 これは 90 日間 *無料* で開発活動に使用する限り継続的に更新されます。 Visual Studio *Enterprise* または *Professional* サブスクリプションをお持ちの場合、両方のプログラムには、無料の Microsoft 365 [開発者向けサブスクリプション](https://aka.ms/MyVisualStudioBenefits)が含まれています。これは、Visual Studio サブスクリプションの有効期間中はアクティブです。 「*Microsoft 365 開発者サブスクリプションを設定する*」[を参照してください](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started)。
+> Microsoft 365アカウントをお持ちの場合は[、Microsoft 365デベロッパー プログラム](https://developer.microsoft.com/microsoft-365/dev-program)のサブスクリプションにサインアップできます。 これは 90 日間 *無料* で開発活動に使用する限り継続的に更新されます。 Visual Studio *Enterprise* または *Professional* サブスクリプションをお持ちの場合、両方のプログラムには、無料の Microsoft 365 [開発者向けサブスクリプション](https://aka.ms/MyVisualStudioBenefits)が含まれています。これは、Visual Studio サブスクリプションの有効期間中はアクティブです。 詳細については、「 [Microsoft 365開発者サブスクリプションの設定](/office/developer-program/office-365-developer-program-get-started)」を参照してください。
 >
 
 ### <a name="configuration-steps"></a>構成の手順
 
-1. アプリを構成するには、ランディング **ページの**[Microsoft Teams Toolkit] で、[アプリ パッケージの編集 **] を選択します**。
-1. [自分の **環境] ドロップダウン** メニューから、[開発] を **選択します**。
-1. [アプリの詳細] **ページに移動** し、アプリのプロパティ フィールドを編集できます。
-1. [アプリの詳細] ページでフィールドを編集すると、最終的にアプリ パッケージの一部としてmanifest.jsファイルのコンテンツが更新されます。 [詳細情報](https://aka.ms/teams-toolkit-manifest)
+1. アプリを構成するには **、Microsoft Teams Toolkit** のランディング ページで、[**アプリ パッケージの編集**] を選択します。
+1. [ **マイ環境]** ドロップダウン メニューから [ **開発**] を選択します。
+1. **[アプリの詳細**] ページに移動して、アプリのプロパティ フィールドを編集できます。
+1. [アプリの詳細] ページのフィールドを編集すると、最終的にアプリ パッケージの一部として出荷されるファイル上のmanifest.jsの内容が更新されます。 [詳細情報](https://aka.ms/teams-toolkit-manifest)
 
 ## <a name="package-your-app"></a>アプリをパッケージ化する
 
-アプリの詳細 **ページを変更** したり、マニフェストを更新したり、アプリの .publish フォルダー内の **.env** ファイルを更新すると、アプリのファイルが自動的に **Development.zipされます。**  このDevelopment.zipには、3 つの必須ファイル (manifest.js **と 2** つのアイコン) [が含まれています](../concepts/build-and-test/apps-package.md#app-icons)。
+**アプリの詳細** ページを変更するか、アプリの .publish フォルダー内の **マニフェスト**、または **.env** ファイルを更新すると **、Development.zip** ファイルが自動的に生成されます。  Development.zip ファイルには **、manifest.js** と [2 つのアイコン](../concepts/build-and-test/apps-package.md#app-icons)という 3 つの必須ファイルが含まれています。
 
 ## <a name="install-and-run-your-app-locally"></a>アプリをローカルにインストールして実行する
 
-1. [ソリューション構成 **] ドロップダウン メニューの** [展開] を **選択します**。
+1. 次の図に示すように、[ **ソリューション構成]** ドロップダウン メニューから [ **展開** ] を選択します。
 
-![[ソリューション構成] メニュー](../assets/images/solution-configurations.png)
+    ![ソリューション構成メニュー](../assets/images/solution-configurations.png)
 
-2. [+ **IIS Express] ボタンTeams** します。
+2. [IIS Express **+ Teams]** ボタンを選択します。
 
-1. Teams起動し、アプリのインストールダイアログがクライアントに表示Teamsします。
+1. Teamsが起動し、アプリのインストールダイアログがTeamsクライアントに表示されます。
 
 ## <a name="validate-your-app"></a>アプリを検証する
 
-[ **検証]** ページでは、アプリを AppSource に提出する前にアプリ パッケージを確認できます。 マニフェスト パッケージをアップロードするだけで、検証ツールはアプリをマニフェスト関連のすべてのテスト ケースに対してチェックします。 失敗したテストごとに、エラーの修正に役立つドキュメント リンクが説明されています。 自動化が難しいテストについては、最も一般的な失敗したテスト ケースの予備チェックリストの詳細 7 と、完全な提出チェックリストへのリンクを示します。
+[ **検証]** ページでは、アプリを AppSource に提出する前にアプリ パッケージを確認できます。 マニフェスト パッケージをアップロードするだけで、検証ツールは、マニフェスト関連のすべてのテスト ケースに対してアプリをチェックします。 失敗した各テストについて、説明にエラーの修正に役立つドキュメント リンクが記載されています。 自動化が困難なテストの場合、 **暫定チェックリスト** の詳細 7 最も一般的な失敗したテスト ケースの詳細と、完全なサブミッション チェックリストへのリンク。
 
 ## <a name="publish-your-app-to-teams"></a>アプリを Teams に公開する
 
-✔ プロジェクトのホーム ページでは、チームにアプリをアップロードしたり、組織内のユーザー用に会社のカスタム アプリ ストアにアプリを提出したり、すべての Teams ユーザーのアプリ ソースにアプリを提出することができます。
+✔プロジェクトのホーム ページで、アプリをチームにアップロードしたり、組織のユーザー用に会社のカスタム アプリ ストアにアプリを提出したり、すべてのTeamsユーザーのアプリ ソースにアプリを送信したりできます。
 
-✔ IT 管理者がこれらの申請を確認します。
+✔ IT 管理者がこれらの提出を確認します。
 
-✔ [発行] ページに戻り、申請の状態を確認し、アプリが IT 管理者によって承認または却下された場合に確認できます。また、アプリに更新プログラムを送信したり、現在アクティブな申請を取り消したりすることもできます。
+✔ **[発行** ] ページに戻って、申請の状態を確認し、アプリが IT 管理者によって承認または拒否されたかどうかを確認できます。また、アプリの更新を送信したり、現在アクティブな提出をキャンセルしたりすることもできます。
+
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [次の手順: 発行済みアプリの保守とサポート](../concepts/deploy-and-publish/appsource/post-publish/overview.md)
+> [公開済みアプリの保守とサポート](../concepts/deploy-and-publish/appsource/post-publish/overview.md)
 >
