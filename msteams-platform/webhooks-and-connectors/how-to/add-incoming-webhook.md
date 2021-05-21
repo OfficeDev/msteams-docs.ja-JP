@@ -2,7 +2,7 @@
 title: 受信 Webhook を使用して外部リクエストを Microsoft Teams に投稿する
 author: laujan
 description: Teams アプリに受信 Webhook を追加する方法
-keywords: チームタブの送信ウェブフック
+keywords: teams タブ送信 Webhook
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
@@ -27,14 +27,14 @@ ms.locfileid: "52566818"
 
 | 機能 | 説明 |
 | ------- | ----------- |
-|スコープ構成|受信 Webhook は、チャネル レベルでスコープと構成が行われます。 たとえば、送信 webhook はスコープが設定され、チーム レベルで構成されます。|
+|スコープ構成|受信 Webhook はスコープ設定され、チャネル レベルで構成されます。 たとえば、送信 Webhook はスコープ設定され、チーム レベルで構成されます。|
 |セキュリティで保護されたリソース定義|メッセージは JSON ペイロードとして書式設定されます。 この宣言メッセージング構造により、クライアントでコードが実行されることはないため、悪意のあるコードの挿入が防止されます。|
 |アクション可能なメッセージングのサポート|カード経由でメッセージを送信する場合は、**アクション可能なメッセージ カード** 形式を使用する必要があります。 アクション可能なメッセージ カードは、Teams を含むすべての Office 365 グループでサポートされています。 こちらは、「[従来の操作可能なメッセージ カード リファレンス](/outlook/actionable-messages/message-card-reference)」と「[メッセージ カードのプレイグラウンド](https://messagecardplayground.azurewebsites.net)」へのリンクです。|
 |独立した HTTPS メッセージングのサポート| カードは、明瞭で一貫した方法で情報を表示する優れた方法です。 HTTPS POST 要求を送信できるツールやフレームワークは、受信 Webhook を介して Teams にメッセージを送信できます。|
 |Markdown のサポート|アクション可能なメッセージング カードのすべてのテキスト フィールドで、基本的な Markdown がサポートされています。 **カードには HTML マークアップを使用しないでください**。 HTML は無視され、プレーン テキストとして扱われます。|
 
 > [!Note]
-> Teamsボット、メッセージング拡張機能、受信 Webhook、および Bot Framework は、オープンクロスカード プラットフォーム フレームワークであるアダプティブ カードをサポートします。 [Teamsコネクタは現在、](../../webhooks-and-connectors/how-to/connectors-creating.md)アダプティブ カードをサポートしていません。 ただし、Teamsチャネルにアダプティブ カードをポストする[フロー](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/)を作成することはできます。
+> Teams、メッセージング拡張機能、受信 Webhook、および Bot Framework は、オープンなクロスカード プラットフォーム フレームワークであるアダプティブ カードをサポートします。 [Teamsアダプティブ カード](../../webhooks-and-connectors/how-to/connectors-creating.md)は現在サポートされていません。 ただし、アダプティブ カードを[チャネルに投稿](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/)するフローをTeamsできます。
 
 ## <a name="add-an-incoming-webhook-to-a-teams-channel"></a>Teams チャネルに受信 Webhook を追加する
 
@@ -51,7 +51,7 @@ ms.locfileid: "52566818"
 
 ## <a name="remove-an-incoming-webhook-from-a-teams-channel"></a>Teams チャネルから受信 Webhook を削除する
 
-**受信した Webhook を削除するには**
+**受信 Webhook を削除するには**
 
 1. Webhook が追加されたチャネルに移動し、上部のナビゲーション バーから (&#8226;&#8226;&#8226;) *[その他のオプション]* を選択します。
 1. ドロップダウン メニューから **[コネクタ]** を選択します。

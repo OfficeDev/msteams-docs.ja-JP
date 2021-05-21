@@ -1,7 +1,7 @@
 ---
-title: チュートリアル - C を使用して最初のアプリを作成します。#
-description: C# または .NET を使用してMicrosoft Teams アプリの構築を開始する方法について説明します。
-keywords: .net c# csharp の開始
+title: チュートリアル - C を使用して最初のアプリを作成する#
+description: アプリまたは .NET を使用してアプリMicrosoft TeamsをC#する方法について学習します。
+keywords: getting started .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 localization_priority: Normal
 ms.topic: tutorial
@@ -13,9 +13,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/19/2021
 ms.locfileid: "52566888"
 ---
-# <a name="create-your-first-teams-app-using-c"></a>C を使用して最初のTeams アプリを作成する#
+# <a name="create-your-first-teams-app-using-c"></a>C を使用してTeamsアプリを作成する#
 
-このチュートリアルでは、C# を使用してMicrosoft Teamsアプリを作成する方法について説明します。 そのためには、次のことを行う必要があります。
+このチュートリアルでは、アプリを使用してアプリMicrosoft Teams作成C#。 そのためには、次のことを行う必要があります。
 
 * 環境を準備する
 * 前提条件の取得
@@ -23,7 +23,7 @@ ms.locfileid: "52566888"
 * サンプルの構築と実行
 * サンプル アプリをホストする
 * ホストされたアプリの資格情報を更新する
-* アプリ タブを構成する
+* [アプリ] タブの構成
 
 [!include [prepare your environment](~/includes/prepare-environment.md)]
 
@@ -33,10 +33,10 @@ ms.locfileid: "52566888"
 
 このチュートリアルを完了するには、次のツールをインストールする必要があります。
 
-- [Git をインストールする](https://git-scm.com/downloads)
+- [Git のインストール](https://git-scm.com/downloads)
 - [Visual Studio のインストール](https://www.visualstudio.com/downloads/)
 
-無料のコミュニティ版のVisual Studioをインストールできます。 インストール中にパスに追加するオプションがある場合 `git` は、パスを選択します。 ターミナル ウィンドウで、次のコマンドを実行してインストールを確認 `git` します。
+無料のコミュニティ エディションの Visual Studio。 インストール中に、パスに追加するオプションがある `git` 場合は、パスを選択します。 ターミナル ウィンドウで、次のコマンドを実行してインストールを確認 `git` します。
 
 ```bash
 $ git --version
@@ -45,32 +45,32 @@ git version 2.17.1.windows.2
 ```
 
 > [!NOTE]
-> プラットフォーム上で適切なターミナルウィンドウを使用します。 これらの例では Git Bash を使用していますが、ほとんどのプラットフォームで実行できます。
+> プラットフォームで適切なターミナル ウィンドウを使用します。 これらの例では Git Bash を使用しますが、ほとんどのプラットフォームで実行できます。
 
-最新バージョンのVisual Studioを開き、更新プログラムをインストールします。
+最新バージョンの更新プログラムを開Visual Studio更新プログラムをインストールします。
 
-同じターミナル ウィンドウを使用して、このチュートリアルのコマンドを実行できます。
+このチュートリアルでは、同じターミナル ウィンドウを使用してコマンドを実行できます。
 
 <a name="DownloadSample"></a>
 
 ## <a name="download-the-sample"></a>サンプルをダウンロードする
 
-あなたは簡単な [こんにちは、世界で始めることができます!](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp) C# のサンプル。 ターミナル ウィンドウで、次のコマンドを実行して、サンプル リポジトリをコンピューターに複製します。
+簡単な Hello、 [World を使い始めよう!](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp) サンプルをC#。 ターミナル ウィンドウで、次のコマンドを実行して、サンプル リポジトリをコンピューターに複製します。
 
 ```bash
 git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 ```
 
 > [!TIP]
-> この[レポ](https://github.com/OfficeDev/Microsoft-Teams-Samples)[をフォーク](https://help.github.com/articles/fork-a-repo/)して変更を変更し、GitHubに保存することができます。
+> このレ[ポをフォーク](https://help.github.com/articles/fork-a-repo/)して[変更](https://github.com/OfficeDev/Microsoft-Teams-Samples)を変更し、変更を保存GitHub。
 
 <a name="BuildRun"></a>
 
 ## <a name="build-and-run-the-sample"></a>サンプルの構築と実行
 
-リポジトリの複製が作成されたら、Visual Studioを使用してソリューション ファイル **Microsoft.Teamsを開きます。サンプルの****マイクロソフトTeamsサンプル/サンプル/アプリ-hello-world/csharp** ディレクトリから.sln。 次に、[ビルド] メニューの **[ソリューションのビルド** ] **を選択** します。 サンプルを実行するには **、F5** キーを押すか、[**デバッグ**] メニューから **[デバッグの開始**] を選択します。
+リポジトリが複製された後、Visual Studioを使用して **Microsoft.Teams.サンプルの** **Microsoft-Teams-Samples/samples/app-hello-world/csharp** ディレクトリの Samples.HelloWorld.sln。 次に、[ビルド] **メニューから [ソリューション** のビルド **] を** 選択します。 サンプルを実行するには **、F5 キーを押するか、[** デバッグ] メニューから [ **デバッグ** の開始] **を選択** します。
 
-アプリが起動すると、起動したアプリのルートを示すブラウザー ウィンドウが開きます。 次の URL に移動して、すべてのアプリ URL が読み込まれているかどうかを確認できます。
+アプリが起動すると、ブラウザー ウィンドウが開き、アプリのルートが起動します。 次の URL に移動して、すべてのアプリ URL が読み込み中か確認できます。
 
 - `https://localhost:44327/`
 - `https://localhost:44327/hello`
@@ -80,37 +80,37 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 <a name="HostSample"></a>
 
 > [!Note]
-> エラーが表示された場合は、 `Could not find a part of the path … bin\roslyn\csc.exe` コマンドを使用してパッケージを更新 `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r` します。 詳細については、 [この「スタック オーバーフロー」の質問を](https://stackoverflow.com/questions/32780315)参照してください。
+> エラーが発生した場合は `Could not find a part of the path … bin\roslyn\csc.exe` 、コマンドを使用してパッケージを更新します `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r` 。 詳細については、「スタック オーバーフロー [」のこの質問を参照してください](https://stackoverflow.com/questions/32780315)。
 
 ## <a name="host-the-sample-app"></a>サンプル アプリをホストする
 
-Microsoft Teamsのアプリは、1 つ以上の機能を提供する Web アプリケーションです。 Teams プラットフォームでアプリを読み込むには、アプリがインターネット上で利用可能である必要があります。 これを行うには、アプリをホストする必要があります。 無料でホストMicrosoft Azure、または を使用してコンピュータ上のローカル プロセスへのトンネルを作成することができます `ngrok` 。 アプリをホストしたら、そのルート URL (または など) `https://yourteamsapp.ngrok.io` `https://yourteamsapp.azurewebsites.net` をメモします。
+アプリはMicrosoft Teams 1 つ以上の機能を提供する Web アプリケーションです。 アプリをTeamsするには、アプリをインターネットで利用できる必要があります。 これを行うには、アプリをホストする必要があります。 無料でホストするかMicrosoft Azureを使用して、コンピューター上のローカル プロセスへのトンネルを作成できます `ngrok` 。 アプリをホストした後、ルート URL (など) を `https://yourteamsapp.ngrok.io` メモします `https://yourteamsapp.azurewebsites.net` 。
 
-### <a name="tunnel-using-ngrok"></a>ngrok を使用したTunnel
+### <a name="tunnel-using-ngrok"></a>Tunnel ngrok の使用
 
-迅速なテストを行うために、コンピューターでアプリを実行し、Web エンドポイントを介してアプリへのトンネルを作成できます。 [`ngrok`](https://ngrok.com) は、Web アドレスを取得できる無料ツールです `https://d0ac14a5.ngrok.io` 。 ngrok [をダウンロードしてインストール](https://ngrok.com/download) し、それを `PATH` .
+クイック テストでは、コンピューターでアプリを実行し、Web エンドポイントを介してトンネルを作成できます。 [`ngrok`](https://ngrok.com) は、 などの Web アドレスを取得できる無料のツールです `https://d0ac14a5.ngrok.io` 。 ngrok [をダウンロードしてインストール](https://ngrok.com/download) し、それを自分の場所に追加できます `PATH` 。
 
-をインストールした後 `ngrok` 、新しいターミナル ウィンドウを開き、次のコマンドを実行してトンネルを作成します。
+インストール後、 `ngrok` 新しいターミナル ウィンドウを開き、次のコマンドを実行してトンネルを作成します。
 
 ```bash
 ngrok http 44327 -host-header=localhost:44327
 ```
 
-`Ngrok` インターネットからのリクエストをリッスンし、ポート 44327 で実行されているアプリにルーティングします。 確認するには、ブラウザーを開き、 `https://d0ac14a5.ngrok.io/hello` に移動してアプリの hello ページを読み込みます。 この URL の代わりに、コンソール セッションで表示される転送先アドレス `ngrok` を使用します。
+`Ngrok` インターネットからの要求をリッスンし、ポート 44327 で実行されているアプリにルーティングします。 確認するには、ブラウザーを開き、アプリの hello ページ `https://d0ac14a5.ngrok.io/hello` を読み込むに移動します。 この URL の代わりに、コンソール セッションに表示される転送 `ngrok` アドレスを使用します。
 
 > [!NOTE]
-> [ビルドと実行](#build-and-run-the-sample)の手順で別のポートを使用している場合は、トンネルをセットアップするのに同じポート番号を使用することを確認します `ngrok` 。
+> ビルドと実行の手順で別のポート[](#build-and-run-the-sample)を使用している場合は、同じポート番号を使用してトンネルをセットアップ `ngrok` してください。
 
 > [!TIP]
-> 別のターミナル ウィンドウで実行することをお勧めします `ngrok` 。 これは、 `ngrok` アプリに干渉することなく実行されないようにするために行われます。 アプリを停止、再構築、再実行する必要があります。 `ngrok`セッションは、このウィンドウでデバッグに役立つ情報を提供します。
+> 別のターミナル ウィンドウで実行 `ngrok` すると良い考えです。 これは、アプリに干渉 `ngrok` することなく実行を維持するために行われます。 アプリを停止、再構築、再実行する必要があります。 セッション `ngrok` は、このウィンドウで役立つデバッグ情報を提供します。
 
-アプリは、コンピューター上の現在のセッション中にのみ使用できます。 マシンがシャットダウンまたはスリープ状態になった場合、サービスは利用できなくなります。 テスト用のアプリを他のユーザーと共有する場合は、この点に注意してください。 サービスを再起動する必要がある場合は、アプリは新しいアドレスを返し、そのアドレスを使用するすべての場所を更新する必要があります。 有料版のの場合 `ngrok` 、この制限はありません。
+アプリは、コンピューター上の現在のセッション中にのみ使用できます。 コンピューターがシャットダウンまたはスリープ状態になった場合、サービスは使用できなくなりました。 テスト用アプリを他のユーザーと共有する場合は、このことを覚えておいてください。 サービスを再起動する必要がある場合、アプリは新しいアドレスを返し、そのアドレスを使用する場所を更新する必要があります。 有料版には `ngrok` 、この制限はありません。
 
-### <a name="host-in-azure"></a>Azure でホストする
+### <a name="host-in-azure"></a>Azure のホスト
 
-Microsoft Azureは、共有インフラストラクチャを使用して、無料のレベルで .NET アプリケーションをホストします。 この方法でサンプルを実行できます `Hello World` 。 詳細については、「 [無料の Azure アカウントを新しく作成する](https://azure.microsoft.com/free/)」を参照してください。
+Microsoft Azure共有インフラストラクチャを使用して、.NET アプリケーションを無料層でホストします。 これは、サンプルを実行するのに十分 `Hello World` です。 詳細については、「新しい無料の [Azure アカウントの作成」を参照してください](https://azure.microsoft.com/free/)。
 
-Visual Studioには、Azure を含むさまざまなプロバイダーへのアプリのデプロイが組み込まれています。
+Visual Studio Azure を含むさまざまなプロバイダーへのアプリ展開の組み込みのサポートがあります。
 
 <img width="530px" alt="Visual Studio" src="~/assets/images/get-started/publishtoazure1.png"/>
 
@@ -118,34 +118,34 @@ Visual Studioには、Azure を含むさまざまなプロバイダーへのア�
 
 ## <a name="update-the-credentials-for-your-hosted-app"></a>ホストされたアプリの資格情報を更新する
 
-サンプル アプリでは、テキスト ファイルに保存した値に設定する環境変数が必要です。
+サンプル アプリでは、テキスト ファイルに保存した値に環境変数を設定する必要があります。
 
-`appsettings.json` ファイルを開きます。 テキスト ファイルに保存したボット ID で **MicrosoftAppId** 値を更新します。 保存したボット **パスワードでアプリ パスワード** を更新します。
+`appsettings.json` ファイルを開きます。 テキスト ファイルに保存したボット ID で **MicrosoftAppId** 値を更新します。 保存した **ボット パスワードを使用して MicrosoftAppPassword** を更新します。
 
 <img width="560px" alt="Setting the keys" src="~/assets/images/get-started/get-started-net-azure-add-keys.png"/>
 
-これらの変更が行われた後、アプリを再構築します。 ngrok を使用している場合は、アプリをローカルで実行し、Azure でホストしている場合はアプリを再デプロイします。
+これらの変更が行われた後、アプリを再構築します。 ngrok を使用している場合は、アプリをローカルで実行し、Azure でホストしている場合は、アプリを再展開します。
 
-## <a name="configure-the-app-tab"></a>アプリ タブを構成する
+## <a name="configure-the-app-tab"></a>[アプリ] タブの構成
 
-チームにアプリをインストールしたら、コンテンツを表示するように構成する必要があります。 サンプル アプリをインストールしたチームのチャンネルに移動し **、[+]** ボタンを選択して新しいタブを追加します。**[タブの追加]** ボックスの一覧から **[Hello World]** を選択します。 このチャネルに表示するタブを選択できる構成ダイアログ ボックスが表示されます。 タブを選択し、[ **保存]** を選択すると `Hello World` 、タブがタブに読み込まれます。
+アプリをチームにインストールしたら、コンテンツを表示するアプリを構成する必要があります。 サンプル アプリをインストールしたチームのチャネルに移動し **、[+]** ボタンを選択して新しいタブを追加します。[ **タブの追加] リスト** から **[Hello World] を選択** します。 構成ダイアログ ボックスが表示され、このチャネルに表示するタブを選択できます。 タブを選択し、[タブを保存する] **を** `Hello World` 選択すると、タブが読み込まれます。
 
 <img width="530px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png" />
 
-### <a name="test-your-bot-in-teams"></a>Teamsでボットをテストする
+### <a name="test-your-bot-in-teams"></a>ボットをテストTeams
 
-これで、Teamsでボットをテストできます。 アプリを登録したチームのチャンネルを選択し、「 」と入力 `@your-bot-name` します。 これはメンションと呼 **\@ ばれます**。 ボットは、送信したメッセージに返信します。
+これで、ボットをテストして、Teams。 アプリを登録して入力したチーム内のチャネルを選択します `@your-bot-name` 。 これはメンションと呼 **\@ ばれる.** ボットは、送信したメッセージに返信します。
 
 <img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
 ### <a name="test-your-messaging-extension"></a>メッセージング拡張機能をテストする
 
-メッセージング拡張機能をテストするには、会話ビューの入力ボックスの下にある **[.]** を選択します。 **「ハローワールド」** アプリを使ったメニューが表示されます。 選択すると、ランダムなテキストのセットが表示されます。 ランダムテキストの 1 つを選択して、会話に挿入できます。
+メッセージング拡張機能をテストするには、会話ビューの入力ボックスの下にある **...** を選択します。 「Hello **World」アプリを含むメニュー** が表示されます。 選択すると、ランダムなテキストのセットが表示されます。 ランダムなテキストの 1 つを選択し、会話に挿入できます。
 
 <img width="530px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
 
 <img width="530px" alt="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
 
-ランダムテキストの 1 つを選択します。 独自のメッセージを使用してフォーマットされ、送信できる状態のカードが表示されます。
+ランダムなテキストのいずれかを選択します。 独自のメッセージを使用して送信する準備が整ったカードが表示されます。
 
 <img width="530px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />

@@ -4,12 +4,12 @@ description: Microsoft Teams で Office 365 コネクタを使用する方法に
 ms.topic: how-to
 localization_priority: Normal
 keywords: Teams o365 コネクタ
-ms.openlocfilehash: f9546b3550b3c53452c5856cfb87fdc6d71f2ad0
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 96092e4589f218a96f31ce05339b89acb82f1fd7
+ms.sourcegitcommit: 20764037458026e5870ee3975b966404103af650
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566524"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "52583737"
 ---
 # <a name="sending-messages-to-connectors-and-webhooks"></a>コネクタと Webhook にメッセージを送信する
 
@@ -141,7 +141,7 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
 
 ## <a name="setting-up-a-custom-incoming-webhook"></a>カスタム着信 Webhook の設定
 
-コネクタにシンプル カードを送信する方法を確認するには、次の手順に従います。
+コネクタに単純なカードを送信する方法を確認するには、次の手順を実行します。
 
 1. Microsoft Teams で、チャネル名の横にある [**その他のオプション**] (**&#8943;**) を選択し、[**コネクタ**] を選択します。
 1. コネクタのリストをスクロールして [**着信 Webhook**] を選択し、次に [**追加**] を選択します。
@@ -184,7 +184,7 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
 - [アイコンを 2 つ含めます](../../concepts/build-and-test/apps-package.md#app-icons)。
 - マニフェストの `icons` の部分を変更し、アイコンの URL ではなくアイコンのファイル名を参照するようにします。
 
-次のmanifest.jsファイルには、アプリのテストと提出に必要な基本要素が含まれています。
+ファイルのmanifest.jsには、アプリのテストと送信に必要な基本的な要素が含まれています。
 
 > [!NOTE]
 > 次の例の `id` と `connectorId` を、コネクタの GUID に置き換えます。
@@ -239,7 +239,7 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
 
 ### <a name="the-flow-for-sending-adaptive-cards-via-an-incoming-webhook-is-as-follows"></a>受信 Webhook を通して [アダプティブ カード](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card) を送信するためのフローは次のとおりです。
 
-1. Teams[でカスタム Webhook](#setting-up-a-custom-incoming-webhook)をセットアップします。</br></br>
+1. [カスタム Webhook をカスタム webhook](#setting-up-a-custom-incoming-webhook) Teams。
 1. アダプティブ カード JSON ファイルを作成します。
 
     ```json
@@ -272,7 +272,7 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
     > - `"contentType"` フィールドにはアダプティブカードの種類が設定されていることが必要です。
     > - `"content"` オブジェクトは、JSON で書式設定されたカードです。
 
-1. 郵便配達人とあなたの適応カードをテストします。
+1. Postman でアダプティブ カードをテストします。
 
 [Postman](https://www.postman.com) を使用して、受信 Webhook の設定時に作成した URL に POST 要求を送信することで、アダプティブカードをテストできます。 JSON ファイルを要求の本文に貼り付け、Teams でアダプティブ カード メッセージを表示します。
 
@@ -281,9 +281,9 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
 
 ## <a name="testing-your-connector"></a>コネクタをテストする
 
-コネクタをテストするには、他のアプリと同じ方法でコネクタをチームにアップロードします。 前のセクションと 2 つのアイコン ファイルで指示どおりに変更されたコネクタ開発者ダッシュボードのマニフェスト ファイルを使用して、.zip パッケージを作成できます。
+コネクタをテストするには、他のアプリと同じ方法でコネクタをチームにアップロードします。 前のセクションと 2 .zipの指示に応じて変更されたコネクタ開発者ダッシュボードのマニフェスト ファイルを使用して、新しいパッケージを作成できます。
 
-アプリをアップロードしたら、任意のチャネルからコネクタ リストを開きます。 下にスクロールして、[ **アップロード済み** ] セクションでアプリを確認します。
+アプリをアップロードしたら、任意のチャネルからコネクタ リストを開きます。 下にスクロールして、[アップロード] セクションにアプリ **を表示** します。
 
 ![コネクタ ダイアログ ボックスの [アップロード済み] セクションのスクリーンショット](~/assets/images/connectors/connector_dialog_uploaded.png)
 

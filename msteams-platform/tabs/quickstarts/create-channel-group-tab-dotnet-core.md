@@ -5,14 +5,14 @@ description: カスタム チャネルとグループ タブを作成するク�
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 8271e2d225d5ae3f6458b17b9595c4d23c3ca6c9
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f748335b621e9bc93272aaeb8d7e12ecc3ebbee0
+ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019574"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52580453"
 ---
-# <a name="create-a-custom-channel-and-group-tab-with-aspnet-core"></a>カスタム チャネルとグループ タブを作成するには、ASP.NET Core
+# <a name="create-a-custom-channel-and-group-tab-with-aspnetcore"></a>ASP.NETCore を使用してカスタム チャネルとグループ タブを作成する
 
 このクイック スタートでは、カスタム チャネル/グループ タブを作成し、[コア C#] ページ ASP.Net 作成します。 また、アプリ マニフェストをMicrosoft Teams、アプリ マニフェストにタブを展開するために App [Studio](~/concepts/build-and-test/app-studio-overview.md)をTeams。
 
@@ -100,9 +100,9 @@ ASP.NET Core Index と呼ばれるファイルをサイトの既定/ホーム �
 
 - プロジェクト ディレクトリのルートでコマンド プロンプトを開き、次のコマンドを実行します。
 
-```bash
-ngrok http https://localhost:44355 -host-header="localhost:44355"
-```
+    ```bash
+    ngrok http https://localhost:44355 -host-header="localhost:44355"
+    ```
 
 - Ngrok はインターネットからの要求をリッスンし、ポート 44355 で実行されているアプリケーションにルーティングします。 `https://y8rCgT2b.ngrok.io/` *y8rCgT2b* が ngrok の英数字 HTTPS URL に置き換えられる場所に似ている必要があります。
 
@@ -114,3 +114,7 @@ ngrok http https://localhost:44355 -host-header="localhost:44355"
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
 
+## <a name="next-step"></a>次の手順
+
+> [!div class="nextstepaction"]
+> [ASP.NETCore MVC を使用してカスタム チャネルとグループ タブを作成する](~/tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md)

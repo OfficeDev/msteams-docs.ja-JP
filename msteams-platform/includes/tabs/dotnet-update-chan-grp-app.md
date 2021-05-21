@@ -4,10 +4,10 @@
 
 - [共有] **フォルダーに** 移動し **、_Layout.cshtml** を開き、次の項目をタグに追加 `<head>` します。
 
-```html
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-<script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
-```
+    ```html
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    ```
 
 >[!IMPORTANT]
 >URL が最新バージョンを表していない可能性がある場合は、このページの URL をコピー/ `<script src="...">` 貼り付けは行う必要があります。 SDK の最新バージョンを取得するには、常に JavaScript API のMicrosoft Teams[に移動します](https://www.npmjs.com/package/@microsoft/teams-js)。
@@ -59,7 +59,7 @@
 >[!TIP]
 >このクイック スタートを完了するには、アプリケーションVisual Studio ngrok の両方を実行する必要があります。 アプリケーションの実行を停止する必要がある場合Visual Studio ngrok を実行 **し続ける必要があります**。 引き続きリッスンし、アプリケーションの要求がサーバーで再起動されると、アプリケーションの要求のルーティングVisual Studio。 ngrok サービスを再起動する必要がある場合は、新しい URL が返され、新しい URL でアプリケーションを更新する必要があります。
 
-## <a name="upload-your-tab-to-teams-with-app-studio"></a>アップロードを App Studio でTeamsに移動する
+## <a name="upload-your-tab-to-teams"></a>アップロードを開き、タブを開Teams
 
 >[!Note]
 > App Studio を使用して、ファイルmanifest.js **編集し**、完成したパッケージをアップロードしてファイルにTeams。 必要に応じて、ファイルmanifest.js **手動** で編集することもできます。 その場合は、必ずソリューションを再度ビルドして、アップロードする **ファイルtab.zip作成** してください。
@@ -70,9 +70,9 @@
 
 - マニフェスト エディター **で [既存のアプリの** インポート] タイルを選択して、タブのアプリ パッケージの更新を開始します。ソース コードには、部分的に完全なマニフェストが付属しています。 アプリ パッケージの名前は次 **tab.zip。** この情報は、次の場所に表示されます。
 
-```bash
-/bin/Debug/netcoreapp2.2/tab.zip
-```
+    ```bash
+    /bin/Debug/netcoreapp2.2/tab.zip
+    ```
 
 - アップロードtab.zipApp  Studio にアクセスします。
 
@@ -86,17 +86,19 @@
 
 #### <a name="details-app-details"></a>詳細: アプリの詳細
 
-- *[Id]* で [***Generate** _] を選択して、プレースホルダー ID をタブに必要な GUID に置き換えます。
+[アプリ *の詳細] セクションで、次の内容を実行* します。
 
-- [_Developer情報* は **、ngrok HTTPS** URL を使用して [Web サイトの URL] *フィールドを* 更新します。
+- *ID*: [ **生成] を** 選択して、プレースホルダー ID をタブに必要な GUID に置き換えます。
 
-- [*アプリ URL] で***、ngrok** HTTPS URL を使用して [プライバシーに関する声明] および [使用 **条件]** URL フィールド *を* 更新します。 URL の末尾 *に /privacy* パスと */tou* パスを含める必要があります。
+- *開発者情報*: *ngrok* **HTTPS URL** を使用して [Web サイトの URL] フィールドを更新します。
+
+- *アプリ URL :* プライバシーに関する声明 **と** 利用規約を更新して `https://<yourngrokurl>/privacy` 、>。  `https://<yourngrokurl>/tou`
 
 #### <a name="capabilities-tabs"></a>機能: タブ
 
 [タブ *] セクションで、次の設定を* 行います。
 
-- [チーム *タブ] で[* 追加] **を選択します**。
+- *[チーム] タブ*: [追加] **を選択します**。
 
 - [チーム] タブのポップアップ ウィンドウで、構成 *URL をに更新* します `https://<yourngrokurl>/tab` 。
 
@@ -104,9 +106,11 @@
 
 #### <a name="finish-domains-and-permissions"></a>完了: ドメインとアクセス許可
 
-[ドメイン *とアクセス許可*] セクションの[タブのドメイン] フィールドには、HTTPS プレフィックスを使用せずに ngrok URL を含む必要があります `<yourngrokurl>.ngrok.io/` 。
+[ドメイン *とアクセス許可] セクションで、次の設定を* 行います。
 
-#### <a name="test-and-distribute-test-and-distribute"></a>テストと配布: テストと配布
+- [ *タブのドメイン] フィールド* には、HTTPS プレフィックスなしの ngrok URL が含まれている必要があります `<yourngrokurl>.ngrok.io/` 。
+
+#### <a name="finish-test-and-distribute"></a>完了: テストと配布
 
 >[!IMPORTANT]
 >右側の **[説明** ] フィールドに、次の警告が表示されます。
@@ -117,7 +121,7 @@
 
 [テストと *配布] セクションで、次の設定を* 行います。
 
-- [**インストール**] を選択します。
+- **[インストール]** を選択します。
 
 - ポップアップ ウィンドウの [チームまたはチャットに追加] フィールドにチームを入力し、[インストール] を **選択します**。
 

@@ -13,18 +13,18 @@ ms.locfileid: "52566867"
 ---
 # <a name="get-context-for-your-microsoft-teams-tab"></a>Microsoft Teams タブのコンテキストを取得する
 
-タブには、関連するコンテンツを表示するためにコンテキスト情報が必要です。
+関連するコンテンツを表示するには、タブにコンテキスト情報が必要です。
 
 * ユーザー、チーム、または会社に関する基本情報。
-* ロケールとテーマ情報。
-* `entityId` `subEntityId` このタブの内容を示す、または を読んでください。
+* ロケールとテーマの情報。
+* 読み `entityId` 取 `subEntityId` り、またはこのタブ内の何を識別します。
 
 ## <a name="user-context"></a>ユーザー コンテキスト
 
-ユーザー、チーム、または会社に関するコンテキストは、特に次のような場合に役立ちます。
+ユーザー、チーム、または会社に関するコンテキストは、次の場合に特に役立ちます。
 
-* アプリ内のリソースを作成または関連付けるには、指定したユーザーまたはチームを使用します。
-* Azure Active Directoryまたは他の ID プロバイダーに対して認証フローを開始し、ユーザーにユーザー名の再入力を要求しない。 [Microsoft Teams] タブでの認証の詳細については[、「Microsoft Teams タブでユーザーを認証する」を](~/concepts/authentication/authentication.md)参照してください。
+* アプリ内のリソースを作成または指定したユーザーまたはチームに関連付ける。
+* ユーザーまたは他の id プロバイダー Azure Active Directoryに対して認証フローを開始し、ユーザーにユーザー名の再入力を要求する必要はありません。 [認証] タブ内での認証の詳細については、「Microsoft Teamsタブでユーザーを認証[する」をMicrosoft Teamsしてください](~/concepts/authentication/authentication.md)。
 
 > [!IMPORTANT]
 > このユーザー情報は、スムーズなユーザー エクスペリエンスを提供するのに役立ちますが、身分証明書として使用するべきでは *ありません*。 たとえば、攻撃者が “悪いブラウザー” であなたのページをロードし、有害な情報や要求をレンダリングする可能性があります。
@@ -33,8 +33,8 @@ ms.locfileid: "52566867"
 
 コンテキスト情報には 2 つの方法でアクセスできます。
 
-* URL プレースホルダ値を挿入します。
-* Microsoft Teams [JavaScript クライアント SDK](/javascript/api/overview/msteams-client)を使用します。
+* URL プレースホルダーの値を挿入します。
+* JavaScript クライアント[SDK Microsoft Teams使用します](/javascript/api/overview/msteams-client)。
 
 ### <a name="getting-context-by-inserting-url-placeholder-values"></a>URL プレースホルダー値を挿入してコンテキストを取得する
 
@@ -48,19 +48,19 @@ ms.locfileid: "52566867"
 * {theme}: `default`、`dark`、`contrast` などの現在の UI テーマ。
 * {groupId}: タブが存在する Office 365 グループの ID です。
 * {tid}: 現在のユーザーの Azure AD テナント ID。
-* {ロケール}: 言語として書式設定されたユーザーの現在のロケールId-国Id。 例えば、en-us。
+* {locale}: languageId-countryId として書式設定されたユーザーの現在のロケール。 たとえば、ja-us。
 
 >[!NOTE]
 >以前の `{upn}` プレースホルダーは、現在では非推奨となっています。 後方互換性のため、現在は `{loginHint}` の同義語となっています。
 
-たとえば、タブ マニフェストで `configURL` 、属性を に設定するとします `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"` 。
+たとえば、タブ マニフェストで属性を設定すると、サインインしているユーザーは `configURL` `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"` 次の属性を持つとします。
 
-* ユーザー名は 「user@example.com」 です。
-* 彼らの会社のテナントIDは'e2653c-etc'です。
-* id '00209384-etc' のOffice 365グループのメンバーです。
-* ユーザーはテーマを「暗」にTeams設定しました。
+* ユーザー名は 'user@example.com' です。
+* 会社のテナント ID は 'e2653c-etc' です。
+* id '00209384-etc' Office 365グループのメンバーです。
+* ユーザーが自分のテーマをTeamsに設定しました。
 
-ユーザーがタブを構成すると、Teamsは次の URL を呼び出します。
+タブを構成すると、Teams URL が呼び出されます。
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
@@ -117,12 +117,12 @@ ms.locfileid: "52566867"
 
 プライベート チャネルでコンテンツ ページが読み込まれると、チャネルのプライバシーを保護するために、`getContext` 呼び出しから受信するデータは暗号化されます。 コンテンツ ページがプライベート チャネルにある場合、次のフィールドが変更されます。 以下のいずれかの値を使用している場合は、`channelType` フィールドをチェックして、ページがプライベート チャネルでロードされているか判断し、適切に対応する必要があります。
 
-* `groupId`: プライベート チャネルの未定義
-* `teamId`: プライベート チャネルのスレッド ID に設定します。
-* `teamName`: プライベート チャネルの名前に設定します。
-* `teamSiteUrl`: プライベート チャネル用に、個別の一意のSharePoint サイトの URL に設定します。
-* `teamSitePath`: プライベート チャネル用の個別の一意のSharePoint サイトのパスに設定します。
-* `teamSiteDomain`: プライベート チャネルの個別の一意SharePointサイト ドメインのドメインに設定します。
+* `groupId`: プライベート チャネルの場合は未定義
+* `teamId`: プライベート チャネルの threadId に設定します。
+* `teamName`: プライベート チャネルの名前に設定する
+* `teamSiteUrl`: プライベート チャネル用の個別の一意のSharePointサイトの URL に設定します。
+* `teamSitePath`: プライベート チャネル用の個別の一意のSharePointパスに設定します。
+* `teamSiteDomain`: プライベート チャネル用の個別の一意のSharePointドメインに設定します。
 
 > [!Note]
 >  teamSiteUrl は、標準的なチャネルにも有効に機能します。

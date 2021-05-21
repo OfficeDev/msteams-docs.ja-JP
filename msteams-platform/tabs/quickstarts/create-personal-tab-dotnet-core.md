@@ -1,7 +1,7 @@
 ---
-title: ASP.NET Coreを含む個人用タブを作成する
+title: ユーザー設定で個人用タブを作成 ASP.NET Core
 author: laujan
-description: ASP.NET Coreを使用したカスタム 個人用タブの作成に関するクイック スタート ガイドです。
+description: ユーザー設定の個人用タブを作成するクイック スタート ASP.NET Core。
 ms.topic: quickstart
 localization_priority: Normal
 ms.author: lajanuar
@@ -14,21 +14,21 @@ ms.locfileid: "52566895"
 ---
 # <a name="create-a-personal-tab-using-aspnetcore"></a>ASP.NETCore を使用して個人用タブを作成する
 
-このクイック スタートでは、C# とコア Razor ページを ASP.Net カスタム 個人用タブを作成する手順を説明します。 アプリ マニフェストを完成させ、タブをTeamsするために展開する[Microsoft Teams用にアプリ スタジオ](~/concepts/build-and-test/app-studio-overview.md)も使用します。
+このクイック スタートでは、Core Razor ページを使用してカスタムの個人用タブC#作成 ASP.Net 説明します。 また、アプリ マニフェストをMicrosoft Teams、アプリ マニフェストにタブを展開するために App [Studio](~/concepts/build-and-test/app-studio-overview.md)をTeams。
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
 ## <a name="get-the-source-code"></a>ソース コードを取得する
 
-コマンド プロンプトを開き、タブ プロジェクト用の新しいディレクトリを作成します。 私たちは、あなたが始めるために簡単なプロジェクトを提供しました。 ソースコードを取得するには、zipフォルダをダウンロードしてファイルを抽出するか、サンプルリポジトリを新しいディレクトリに複製します。
+コマンド プロンプトを開き、タブ プロジェクトの新しいディレクトリを作成します。 開始する簡単なプロジェクトを提供しました。 ソース コードを取得するには、zip フォルダーをダウンロードしてファイルを抽出するか、サンプル リポジトリを新しいディレクトリに複製します。
 
 ```bash
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
 
-ソース コードを作成したら、Visual Studio開いて **[プロジェクトまたはソリューションを開く**] を選択します。 タブアプリケーションディレクトリに移動し、 **パーソナルタブ.sln** を開きます。
+ソース コードを取得したら、[プロジェクト] を開Visual Studioプロジェクトまたはソリューションを開 **く] を選択します**。 タブ アプリケーション ディレクトリに移動し **、PersonalTab.sln を開きます**。
 
-アプリケーションをビルドして実行するには **、F5 キー** を押すか、[**デバッグ**] メニューから **[デバッグの開始**] を選択します。 ブラウザで、以下の URL に移動して、アプリケーションが正しくロードされていることを確認します。
+アプリケーションをビルドして実行するには **、F5** キーを押するか、[デバッグ] メニューから [ **デバッグ** の開始] **を選択** します。 ブラウザーで、以下の URL に移動して、アプリケーションが正しく読み込まれているか確認します。
 
 - `http://localhost:44325/`
 - `http://localhost:44325/personal`
@@ -37,9 +37,9 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 
 ## <a name="review-the-source-code"></a>ソース コードを確認する
 
-### <a name="startupcs"></a>スタートアップ.cs
+### <a name="startupcs"></a>Startup.cs
 
-このプロジェクトは、セットアップ時に **[詳細設定 - HTTPS の構成]** チェック ボックスがオンになっている ASP.NET Core 2.2 Web アプリケーションの空のテンプレートから作成されました。 MVC サービスは、依存関係挿入フレームワークのメソッドによって登録されます `ConfigureServices()` 。 さらに、空のテンプレートでは、静的コンテンツの提供がデフォルトで有効になっていないため、静的ファイルミドルウェアがメソッドに追加 `Configure()` されます。
+このプロジェクトは、ASP.NET Core 2.2 Web アプリケーションの空のテンプレートから作成され、セットアップ時に [詳細設定 **- HTTPS** 用に構成] チェック ボックスがオンになっています。 MVC サービスは、依存関係の挿入フレームワークのメソッドによって登録 `ConfigureServices()` されます。 さらに、空のテンプレートでは既定では静的コンテンツの配信が有効ではないので、静的ファイル ミドルウェアがメソッドに追加 `Configure()` されます。
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -53,27 +53,27 @@ public void Configure(IApplicationBuilder app)
   }
 ```
 
-### <a name="wwwroot-folder"></a>フォルダ
+### <a name="wwwroot-folder"></a>wwwroot フォルダー
 
-ASP.NET Coreでは、Web ルート フォルダーは、アプリケーションが静的ファイルを検索する場所です。
+この ASP.NET Core Web ルート フォルダーは、アプリケーションが静的ファイルを検索する場所です。
 
-### <a name="indexcshtml"></a>インデックス.cshtml
+### <a name="indexcshtml"></a>Index.cshtml
 
-ASP.NET Coreは *、Index* という名前のファイルをサイトの既定のホーム ページとして扱います。 ブラウザの URL がサイトのルートを指している場合 **、Index.cshtml** はアプリケーションのホーム ページとして表示されます。
+ASP.NET Core Index と呼ばれるファイルをサイトの既定/ホーム ページとして扱います。 ブラウザーの URL がサイトのルートをポイントすると **、Index.cshtml** がアプリケーションのホーム ページとして表示されます。
 
-### <a name="appmanifest-folder"></a>アプリ マニフェスト フォルダー
+### <a name="appmanifest-folder"></a>AppManifest フォルダー
 
 このフォルダーには、次の必須アプリ パッケージ ファイルが含まれています。
 
-- 192 x 192 ピクセルの **フルカラーアイコン** です。
-- 32 x 32 ピクセルの **透明なアウトライン アイコン** 。
-- アプリ **の属性を指定するファイルのmanifest.js。**
+- 192 x 192 ピクセルのフル カラー アイコン。 
+- **32** x 32 ピクセルの透明なアウトライン アイコン。
+- アプリ **manifest.js** を指定するファイルのプロパティです。
 
-これらのファイルは、Teamsにタブをアップロードする際に使用するために、アプリ パッケージに圧縮する必要があります。 Microsoft Teams、マニフェストに指定した値を読み込 `contentUrl` み、それを <iframe に埋め込んで \> 、タブに表示します。
+これらのファイルは、タブをアプリ パッケージにアップロードする場合に使用するアプリ パッケージに圧縮するTeams。 Microsoft Teams指定したマニフェストを読み込み、それを iframe <に埋め込み、タブ `contentUrl` \> に表示します。
 
-### <a name="csproj"></a>csproj
+### <a name="csproj"></a>.csproj
 
-[ソリューション エクスプローラVisual Studio] ウィンドウで、プロジェクトを右クリックし **、[Project ファイルの編集**] を選択します。 ファイルの下部に、アプリケーションのビルド時に zip フォルダーを作成および更新するコードが表示されます。
+[ソリューション エクスプローラー Visual Studioで、プロジェクトを右クリックし、[ファイルの編集] Project **します**。 ファイルの下部には、アプリケーションのビルド時に zip フォルダーを作成および更新するコードが表示されます。
 
 ```xml
 <PropertyGroup>
@@ -103,22 +103,22 @@ ASP.NET Coreは *、Index* という名前のファイルをサイトの既定�
     ngrok http https://localhost:44325 -host-header="localhost:44325"
     ```
 
-- Ngrokはインターネットからのリクエストを聞き、ポート44325で実行されているときにアプリケーションにルーティングします。  `https://y8rPrT2b.ngrok.io/`*これは、y8rPrT2b* が ngrok の英数字 HTTPS URL に置き換えられる場所に似ているはずです。
+- Ngrok はインターネットからの要求をリッスンし、ポート 44325 で実行されているアプリケーションにルーティングします。  `https://y8rPrT2b.ngrok.io/` *y8rPrT2b* が ngrok の英数字 HTTPS URL に置き換えられる場所に似ている必要があります。
 
-- 必ず、コマンド プロンプトを ngrok で実行し、URL をメモしてください。
+- ngrok を実行してコマンド プロンプトを保持し、URL をメモしてください。後で必要になります。
 
-- **ngrok** が動作していることを確認するには、ブラウザを開き、コマンド プロンプト ウィンドウで指定された ngrok HTTPS URL を使用してコンテンツ ページに移動します。
+- ブラウザーを開き、コマンド プロンプト ウィンドウで提供された ngrok HTTPS URL を介してコンテンツ ページに移動して **、ngrok** が正常に実行され、正常に動作されていることを確認します。
 
 >[!TIP]
->このクイック スタートを完了するには、Visual Studioと ngrok の両方のアプリケーションを実行する必要があります。 アプリケーションを操作するためにVisual Studioでアプリケーションの実行を停止する必要がある場合は、 **ngrok を実行したまま** にします。 引き続きリッスンし、Visual Studioで再起動すると、アプリケーションの要求のルーティングを再開します。 ngrokサービスを再起動する必要がある場合は、新しいURLを返し、そのURLを使用するすべての場所を更新する必要があります。
+>このクイック スタートを完了するには、アプリケーションVisual Studio ngrok の両方を実行する必要があります。 アプリケーションの実行を停止する必要がある場合Visual Studio **ngrok を実行し続ける必要があります**。 引き続きリッスンし、アプリケーションの要求がサーバーで再起動されると、アプリケーションの要求のルーティングVisual Studio。 ngrok サービスを再起動する必要がある場合は、新しい URL が返され、その URL を使用する場所を更新する必要があります。
 
 ### <a name="run-your-application"></a>アプリケーションを実行する
 
-- **Visual Studio F5** キーを押すか、アプリケーションの **[デバッグ**] メニューから **[デバッグの開始**] を選択します。
+- [Visual Studio **F5 キーを押するか、****アプリケーションの**[デバッグ] メニューから [デバッグの開始]**を選択** します。
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
 
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [ASP.NETCore MVC を使用してカスタム 個人用タブを作成します。](~/tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md)
+> [ASP.NETCore MVC を使用してカスタム個人用タブを作成する](~/tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md)

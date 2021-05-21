@@ -1,7 +1,7 @@
 ---
-title: ボットメニューを追加する
-description: Microsoft Teamsでボットのメニューを作成する方法について説明します。
-keywords: チームボットメニュー作成
+title: ボット メニューの追加
+description: ボットのメニューを作成する方法について説明Microsoft Teams
+keywords: teams ボット メニューの作成
 ms.topic: how-to
 localization_priority: Normal
 ms.date: 05/20/2019
@@ -12,23 +12,23 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/19/2021
 ms.locfileid: "52566769"
 ---
-# <a name="add-a-bot-menu-in-microsoft-teams"></a>Microsoft Teamsでボットメニューを追加する
+# <a name="add-a-bot-menu-in-microsoft-teams"></a>[ボット] メニューを [Microsoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-ボットの機能を発見し、ユーザーを教育するために、ユーザーがボットとやり取りするたびに表示されるメニューを追加できるようになりました。 メニューにはコマンド テキストが表示され、使用例やコマンドの目的の説明などのヘルプ テキストも表示されます。
+検出を支援し、ボットの機能についてユーザーを教育するために、ユーザーがボットを操作するたびに表示されるメニューを追加できます。 メニューにはコマンド テキストが表示され、使用例やコマンドの目的の説明などのヘルプ テキストも表示されます。
 
-![ボットメニューのスクリーンショット](~/assets/images/bots/bot-menus-bot-menu-sample.png)
+![ボット メニューのスクリーンショット](~/assets/images/bots/bot-menus-bot-menu-sample.png)
 
-ユーザーがメニュー項目を選択すると、ボット メッセージのユーザーの完了を支援するために、コマンド文字列がテキスト ボックスに挿入されます。
+ユーザーがメニュー項目を選択すると、ボット メッセージのユーザー完了を支援するために、コマンド文字列がテキスト ボックスに挿入されます。
 
 ## <a name="bot-menu-support-on-teams-mobile-app"></a>モバイル アプリでのボット メニュー Teamsサポート
 > [!NOTE] 
-> ボットメニューはモバイルデバイスでは表示されません。
+> ボット メニューはモバイル デバイスに表示されません。
 
 ## <a name="app-manifest"></a>アプリ マニフェスト
 
-ボット メニューを作成するには、ボット [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) セクションのアプリ マニフェストに新しいオブジェクトを追加します。 各メニューは、ボットがサポートするスコープごとに個別のコマンドで宣言できます ( `personal` `groupChat` , 、または ) `team` 各メニューは最大 10 個のコマンドをサポートします。
+ボット メニューを作成するには、ボット セクションの下に新 [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) しいオブジェクトをアプリ マニフェストに追加します。 ボットがサポートするスコープごとに個別のコマンドを使用して個別のメニューを宣言できます ( 、、または ) 各メニューは、最大 10 個のコマンド `personal` `groupChat` `team` をサポートします。
 
 ### <a name="manifest-excerpt---single-menu-for-both-scopes"></a>マニフェストの抜粋 - 両方のスコープの単一メニュー
 
@@ -118,6 +118,6 @@ ms.locfileid: "52566769"
 
 ## <a name="best-practices"></a>ベスト プラクティス
 
-* シンプルにする: ボットメニューは、ボットの主要な機能を示すことを目的とします。
-* 短くする:メニューオプションは非常に長くて複雑な自然言語のステートメントであってはなりません - 彼らは簡単なコマンドでなければなりません。
-* 常に使用可能: ボットの会話の状態や、ボットが含まれるダイアログに関係なく、ボットメニューのアクション/コマンドは常に呼び出し可能である必要があります。
+* シンプルに保つ: ボット メニューは、ボットの主要な機能を提示することを目的とします。
+* 短くしてください:メニュー オプションは、極端に長く複雑な自然言語ステートメントである必要があります。単純なコマンドである必要があります。
+* 常に使用可能: ボット メニューのアクション/コマンドは、会話の状態やボットのダイアログに関係なく、常に呼び出し可能である必要があります。
