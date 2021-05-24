@@ -61,8 +61,12 @@
       href: samples/app-templates.md
     - name: 本番対応の Shifts コネクタ
       href: samples/shifts-wfm-connectors.md
-    - name: Moodle LMS のインストール
-      href: resources/moodleInstructions.md
+    - name: Moodle LMS
+      items:
+        - name: 概要
+          href: resources/moodle-overview.md
+        - name: Moodle LMS のインストール
+          href: resources/moodleInstructions.md
     - name: '[Teams で共有] ボタンを作成する'
       href: concepts/build-and-test/share-to-teams.md
     - name: 'SharePoint に [Teams] タブを追加する'
