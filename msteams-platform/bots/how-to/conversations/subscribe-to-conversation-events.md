@@ -5,64 +5,64 @@ description: ボットから会話イベントを処理するMicrosoft Teamsし�
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 23f58a0544b317f7532ff12bc7f30b6eb6cd670a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 7dfafbd02c53ea0fe7393d4e4f771a50ad2954d2
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020029"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630706"
 ---
-# <a name="conversation-events-in-your-teams-bot"></a><span data-ttu-id="10cf1-103">Teams ボットの会話イベント</span><span class="sxs-lookup"><span data-stu-id="10cf1-103">Conversation events in your Teams bot</span></span>
+# <a name="conversation-events-in-your-teams-bot"></a><span data-ttu-id="d8e85-103">Teams ボットの会話イベント</span><span class="sxs-lookup"><span data-stu-id="d8e85-103">Conversation events in your Teams bot</span></span>
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-<span data-ttu-id="10cf1-104">会話用のボットを構築するMicrosoft Teams、会話イベントを処理できます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-104">When building your conversational bots for Microsoft Teams, you can work with conversation events.</span></span> <span data-ttu-id="10cf1-105">Teamsボットがアクティブなスコープで発生する会話イベントの通知をボットに送信します。</span><span class="sxs-lookup"><span data-stu-id="10cf1-105">Teams sends notifications to your bot for conversation events that happen in scopes where your bot is active.</span></span> <span data-ttu-id="10cf1-106">これらのイベントをコードでキャプチャし、次のアクションを実行できます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-106">You can capture these events in your code and take the following actions:</span></span>
+<span data-ttu-id="d8e85-104">会話用のボットを構築するMicrosoft Teams、会話イベントを処理できます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-104">When building your conversational bots for Microsoft Teams, you can work with conversation events.</span></span> <span data-ttu-id="d8e85-105">Teamsボットがアクティブなスコープで発生する会話イベントの通知をボットに送信します。</span><span class="sxs-lookup"><span data-stu-id="d8e85-105">Teams sends notifications to your bot for conversation events that happen in scopes where your bot is active.</span></span> <span data-ttu-id="d8e85-106">これらのイベントをコードでキャプチャし、次のアクションを実行できます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-106">You can capture these events in your code and take the following actions:</span></span>
 
-* <span data-ttu-id="10cf1-107">ボットがチームに追加されると、ウェルカム メッセージをトリガーします。</span><span class="sxs-lookup"><span data-stu-id="10cf1-107">Trigger a welcome message when your bot is added to a team.</span></span>
-* <span data-ttu-id="10cf1-108">新しいチーム メンバーが追加または削除されると、ウェルカム メッセージをトリガーします。</span><span class="sxs-lookup"><span data-stu-id="10cf1-108">Trigger a welcome message when a new team member is added or removed.</span></span>
-* <span data-ttu-id="10cf1-109">チャネルの作成、名前の変更、または削除時に通知をトリガーします。</span><span class="sxs-lookup"><span data-stu-id="10cf1-109">Trigger a notification when a channel is created, renamed, or deleted.</span></span>
-* <span data-ttu-id="10cf1-110">ボット メッセージがユーザーに気に入った場合。</span><span class="sxs-lookup"><span data-stu-id="10cf1-110">When a bot message is liked by a user.</span></span>
+* <span data-ttu-id="d8e85-107">ボットがチームに追加されると、ウェルカム メッセージをトリガーします。</span><span class="sxs-lookup"><span data-stu-id="d8e85-107">Trigger a welcome message when your bot is added to a team.</span></span>
+* <span data-ttu-id="d8e85-108">新しいチーム メンバーが追加または削除されると、ウェルカム メッセージをトリガーします。</span><span class="sxs-lookup"><span data-stu-id="d8e85-108">Trigger a welcome message when a new team member is added or removed.</span></span>
+* <span data-ttu-id="d8e85-109">チャネルの作成、名前の変更、または削除時に通知をトリガーします。</span><span class="sxs-lookup"><span data-stu-id="d8e85-109">Trigger a notification when a channel is created, renamed, or deleted.</span></span>
+* <span data-ttu-id="d8e85-110">ボット メッセージがユーザーに気に入った場合。</span><span class="sxs-lookup"><span data-stu-id="d8e85-110">When a bot message is liked by a user.</span></span>
 
-## <a name="conversation-update-events"></a><span data-ttu-id="10cf1-111">会話の更新イベント</span><span class="sxs-lookup"><span data-stu-id="10cf1-111">Conversation update events</span></span>
+## <a name="conversation-update-events"></a><span data-ttu-id="d8e85-111">会話の更新イベント</span><span class="sxs-lookup"><span data-stu-id="d8e85-111">Conversation update events</span></span>
 
-<span data-ttu-id="10cf1-112">会話の更新イベントを使用して、通知の向上とボットの効果的なアクションを提供できます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-112">You can use conversation update events to provide better notifications and more effective bot actions.</span></span>
+<span data-ttu-id="d8e85-112">会話の更新イベントを使用して、通知の向上とボットの効果的なアクションを提供できます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-112">You can use conversation update events to provide better notifications and more effective bot actions.</span></span>
 
 > [!IMPORTANT]
-> * <span data-ttu-id="10cf1-113">いつでも新しいイベントを追加し、ボットがイベントの受信を開始できます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-113">You can add new events any time and your bot begins to receive them.</span></span>
-> * <span data-ttu-id="10cf1-114">予期しないイベントを受け取るボットを設計する必要があります。</span><span class="sxs-lookup"><span data-stu-id="10cf1-114">You must design your bot to receive unexpected events.</span></span>
-> * <span data-ttu-id="10cf1-115">ボット フレームワーク SDK を使用している場合、ボットは処理しないイベントに対して自動的 `200 - OK` に応答します。</span><span class="sxs-lookup"><span data-stu-id="10cf1-115">If you are using the Bot Framework SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.</span></span>
+> * <span data-ttu-id="d8e85-113">いつでも新しいイベントを追加し、ボットがイベントの受信を開始できます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-113">You can add new events any time and your bot begins to receive them.</span></span>
+> * <span data-ttu-id="d8e85-114">予期しないイベントを受け取るボットを設計する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d8e85-114">You must design your bot to receive unexpected events.</span></span>
+> * <span data-ttu-id="d8e85-115">ボット フレームワーク SDK を使用している場合、ボットは処理しないイベントに対して自動的 `200 - OK` に応答します。</span><span class="sxs-lookup"><span data-stu-id="d8e85-115">If you are using the Bot Framework SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.</span></span>
 
-<span data-ttu-id="10cf1-116">ボットは、次 `conversationUpdate` のいずれかの場合にイベントを受信します。</span><span class="sxs-lookup"><span data-stu-id="10cf1-116">A bot receives a `conversationUpdate` event in either of the following cases:</span></span>
+<span data-ttu-id="d8e85-116">ボットは、次 `conversationUpdate` のいずれかの場合にイベントを受信します。</span><span class="sxs-lookup"><span data-stu-id="d8e85-116">A bot receives a `conversationUpdate` event in either of the following cases:</span></span>
 
-* <span data-ttu-id="10cf1-117">ボットが会話に追加された場合。</span><span class="sxs-lookup"><span data-stu-id="10cf1-117">When bot has been added to a conversation.</span></span>
-* <span data-ttu-id="10cf1-118">他のメンバーは会話に追加または削除されます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-118">Other members are added to or removed from a conversation.</span></span>
-* <span data-ttu-id="10cf1-119">会話のメタデータが変更されました。</span><span class="sxs-lookup"><span data-stu-id="10cf1-119">Conversation metadata has changed.</span></span>
+* <span data-ttu-id="d8e85-117">ボットが会話に追加された場合。</span><span class="sxs-lookup"><span data-stu-id="d8e85-117">When bot has been added to a conversation.</span></span>
+* <span data-ttu-id="d8e85-118">他のメンバーは会話に追加または削除されます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-118">Other members are added to or removed from a conversation.</span></span>
+* <span data-ttu-id="d8e85-119">会話のメタデータが変更されました。</span><span class="sxs-lookup"><span data-stu-id="d8e85-119">Conversation metadata has changed.</span></span>
 
-<span data-ttu-id="10cf1-120">`conversationUpdate` イベントは、ボットが追加されているチームのメンバーシップの更新に関する情報を受信したときにボットに送信されます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-120">The `conversationUpdate` event is sent to your bot when it receives information on membership updates for teams where it has been added.</span></span> <span data-ttu-id="10cf1-121">また、個人の会話用に初めて追加された更新プログラムも受け取ります。</span><span class="sxs-lookup"><span data-stu-id="10cf1-121">It also receives an update when it has been added for the first time for personal conversations.</span></span>
+<span data-ttu-id="d8e85-120">`conversationUpdate` イベントは、ボットが追加されているチームのメンバーシップの更新に関する情報を受信したときにボットに送信されます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-120">The `conversationUpdate` event is sent to your bot when it receives information on membership updates for teams where it has been added.</span></span> <span data-ttu-id="d8e85-121">また、個人の会話用に初めて追加された更新プログラムも受け取ります。</span><span class="sxs-lookup"><span data-stu-id="d8e85-121">It also receives an update when it has been added for the first time for personal conversations.</span></span>
 
-<span data-ttu-id="10cf1-122">次の表に、スレッド更新イベントのTeams詳細を示します。</span><span class="sxs-lookup"><span data-stu-id="10cf1-122">The following table shows a list of Teams conversation update events with more details:</span></span>
+<span data-ttu-id="d8e85-122">次の表に、スレッド更新イベントのTeams詳細を示します。</span><span class="sxs-lookup"><span data-stu-id="d8e85-122">The following table shows a list of Teams conversation update events with more details:</span></span>
 
-| <span data-ttu-id="10cf1-123">実行されたアクション</span><span class="sxs-lookup"><span data-stu-id="10cf1-123">Action taken</span></span>        | <span data-ttu-id="10cf1-124">EventType</span><span class="sxs-lookup"><span data-stu-id="10cf1-124">EventType</span></span>         | <span data-ttu-id="10cf1-125">呼び出されるメソッド</span><span class="sxs-lookup"><span data-stu-id="10cf1-125">Method called</span></span>              | <span data-ttu-id="10cf1-126">説明</span><span class="sxs-lookup"><span data-stu-id="10cf1-126">Description</span></span>                | <span data-ttu-id="10cf1-127">範囲</span><span class="sxs-lookup"><span data-stu-id="10cf1-127">Scope</span></span> |
+| <span data-ttu-id="d8e85-123">実行されたアクション</span><span class="sxs-lookup"><span data-stu-id="d8e85-123">Action taken</span></span>        | <span data-ttu-id="d8e85-124">EventType</span><span class="sxs-lookup"><span data-stu-id="d8e85-124">EventType</span></span>         | <span data-ttu-id="d8e85-125">呼び出されるメソッド</span><span class="sxs-lookup"><span data-stu-id="d8e85-125">Method called</span></span>              | <span data-ttu-id="d8e85-126">説明</span><span class="sxs-lookup"><span data-stu-id="d8e85-126">Description</span></span>                | <span data-ttu-id="d8e85-127">範囲</span><span class="sxs-lookup"><span data-stu-id="d8e85-127">Scope</span></span> |
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-| <span data-ttu-id="10cf1-128">作成されたチャネル</span><span class="sxs-lookup"><span data-stu-id="10cf1-128">Channel created</span></span>     | <span data-ttu-id="10cf1-129">channelCreated</span><span class="sxs-lookup"><span data-stu-id="10cf1-129">channelCreated</span></span>    | <span data-ttu-id="10cf1-130">OnTeamsChannelCreatedAsync</span><span class="sxs-lookup"><span data-stu-id="10cf1-130">OnTeamsChannelCreatedAsync</span></span> | <span data-ttu-id="10cf1-131">[チャネルが作成されます](#channel-created)。</span><span class="sxs-lookup"><span data-stu-id="10cf1-131">[A channel is created](#channel-created).</span></span> | <span data-ttu-id="10cf1-132">チーム</span><span class="sxs-lookup"><span data-stu-id="10cf1-132">Team</span></span> |
-| <span data-ttu-id="10cf1-133">チャネルの名前が変更されました</span><span class="sxs-lookup"><span data-stu-id="10cf1-133">Channel renamed</span></span>     | <span data-ttu-id="10cf1-134">channelRenamed</span><span class="sxs-lookup"><span data-stu-id="10cf1-134">channelRenamed</span></span>    | <span data-ttu-id="10cf1-135">OnTeamsChannelRenamedAsync</span><span class="sxs-lookup"><span data-stu-id="10cf1-135">OnTeamsChannelRenamedAsync</span></span> | <span data-ttu-id="10cf1-136">[チャネルの名前が変更されます](#channel-renamed)。</span><span class="sxs-lookup"><span data-stu-id="10cf1-136">[A channel is renamed](#channel-renamed).</span></span> | <span data-ttu-id="10cf1-137">チーム</span><span class="sxs-lookup"><span data-stu-id="10cf1-137">Team</span></span> |
-| <span data-ttu-id="10cf1-138">チャネルが削除されました</span><span class="sxs-lookup"><span data-stu-id="10cf1-138">Channel deleted</span></span>     | <span data-ttu-id="10cf1-139">channelDeleted</span><span class="sxs-lookup"><span data-stu-id="10cf1-139">channelDeleted</span></span>    | <span data-ttu-id="10cf1-140">OnTeamsChannelDeletedAsync</span><span class="sxs-lookup"><span data-stu-id="10cf1-140">OnTeamsChannelDeletedAsync</span></span> | <span data-ttu-id="10cf1-141">[チャネルが削除されます](#channel-deleted)。</span><span class="sxs-lookup"><span data-stu-id="10cf1-141">[A channel is deleted](#channel-deleted).</span></span> | <span data-ttu-id="10cf1-142">チーム</span><span class="sxs-lookup"><span data-stu-id="10cf1-142">Team</span></span> |
-| <span data-ttu-id="10cf1-143">チャネルの復元</span><span class="sxs-lookup"><span data-stu-id="10cf1-143">Channel restored</span></span>    | <span data-ttu-id="10cf1-144">channelRestored</span><span class="sxs-lookup"><span data-stu-id="10cf1-144">channelRestored</span></span>    | <span data-ttu-id="10cf1-145">OnTeamsChannelRestoredAsync</span><span class="sxs-lookup"><span data-stu-id="10cf1-145">OnTeamsChannelRestoredAsync</span></span> | <span data-ttu-id="10cf1-146">[チャネルが復元されます](#channel-deleted)。</span><span class="sxs-lookup"><span data-stu-id="10cf1-146">[A channel is restored](#channel-deleted).</span></span> | <span data-ttu-id="10cf1-147">チーム</span><span class="sxs-lookup"><span data-stu-id="10cf1-147">Team</span></span> |
-| <span data-ttu-id="10cf1-148">追加されたメンバー</span><span class="sxs-lookup"><span data-stu-id="10cf1-148">Members added</span></span>   | <span data-ttu-id="10cf1-149">membersAdded</span><span class="sxs-lookup"><span data-stu-id="10cf1-149">membersAdded</span></span>   | <span data-ttu-id="10cf1-150">OnTeamsMembersAddedAsync</span><span class="sxs-lookup"><span data-stu-id="10cf1-150">OnTeamsMembersAddedAsync</span></span>   | <span data-ttu-id="10cf1-151">[メンバーが追加されます](#team-members-added)。</span><span class="sxs-lookup"><span data-stu-id="10cf1-151">[A member is added](#team-members-added).</span></span> | <span data-ttu-id="10cf1-152">すべて</span><span class="sxs-lookup"><span data-stu-id="10cf1-152">All</span></span> |
-| <span data-ttu-id="10cf1-153">削除されたメンバー</span><span class="sxs-lookup"><span data-stu-id="10cf1-153">Members removed</span></span> | <span data-ttu-id="10cf1-154">membersRemoved</span><span class="sxs-lookup"><span data-stu-id="10cf1-154">membersRemoved</span></span> | <span data-ttu-id="10cf1-155">OnTeamsMembersRemovedAsync</span><span class="sxs-lookup"><span data-stu-id="10cf1-155">OnTeamsMembersRemovedAsync</span></span> | <span data-ttu-id="10cf1-156">[メンバーが削除されます](#team-members-removed)。</span><span class="sxs-lookup"><span data-stu-id="10cf1-156">[A member is removed](#team-members-removed).</span></span> | <span data-ttu-id="10cf1-157">groupChat とチーム</span><span class="sxs-lookup"><span data-stu-id="10cf1-157">groupChat and team</span></span> |
-| <span data-ttu-id="10cf1-158">チームの名前が変更されました</span><span class="sxs-lookup"><span data-stu-id="10cf1-158">Team renamed</span></span>        | <span data-ttu-id="10cf1-159">teamRenamed</span><span class="sxs-lookup"><span data-stu-id="10cf1-159">teamRenamed</span></span>       | <span data-ttu-id="10cf1-160">OnTeamsTeamRenamedAsync</span><span class="sxs-lookup"><span data-stu-id="10cf1-160">OnTeamsTeamRenamedAsync</span></span>    | <span data-ttu-id="10cf1-161">[チームの名前が変更されました](#team-renamed)。</span><span class="sxs-lookup"><span data-stu-id="10cf1-161">[A team is renamed](#team-renamed).</span></span>       | <span data-ttu-id="10cf1-162">チーム</span><span class="sxs-lookup"><span data-stu-id="10cf1-162">Team</span></span> |
-| <span data-ttu-id="10cf1-163">チームが削除されました</span><span class="sxs-lookup"><span data-stu-id="10cf1-163">Team deleted</span></span>        | <span data-ttu-id="10cf1-164">teamDeleted</span><span class="sxs-lookup"><span data-stu-id="10cf1-164">teamDeleted</span></span>       | <span data-ttu-id="10cf1-165">OnTeamsTeamDeletedAsync</span><span class="sxs-lookup"><span data-stu-id="10cf1-165">OnTeamsTeamDeletedAsync</span></span>    | <span data-ttu-id="10cf1-166">[チームが削除されます](#team-deleted)。</span><span class="sxs-lookup"><span data-stu-id="10cf1-166">[A team is deleted](#team-deleted).</span></span>       | <span data-ttu-id="10cf1-167">チーム</span><span class="sxs-lookup"><span data-stu-id="10cf1-167">Team</span></span> |
-| <span data-ttu-id="10cf1-168">チームのアーカイブ</span><span class="sxs-lookup"><span data-stu-id="10cf1-168">Team archived</span></span>        | <span data-ttu-id="10cf1-169">teamArchived</span><span class="sxs-lookup"><span data-stu-id="10cf1-169">teamArchived</span></span>       | <span data-ttu-id="10cf1-170">OnTeamsTeamArchivedAsync</span><span class="sxs-lookup"><span data-stu-id="10cf1-170">OnTeamsTeamArchivedAsync</span></span>    | <span data-ttu-id="10cf1-171">[チームがアーカイブされます](#team-archived)。</span><span class="sxs-lookup"><span data-stu-id="10cf1-171">[A team is archived](#team-archived).</span></span>       | <span data-ttu-id="10cf1-172">チーム</span><span class="sxs-lookup"><span data-stu-id="10cf1-172">Team</span></span> |
-| <span data-ttu-id="10cf1-173">チームのアーカイブ解除</span><span class="sxs-lookup"><span data-stu-id="10cf1-173">Team unarchived</span></span>        | <span data-ttu-id="10cf1-174">teamUnarchived</span><span class="sxs-lookup"><span data-stu-id="10cf1-174">teamUnarchived</span></span>       | <span data-ttu-id="10cf1-175">OnTeamsTeamUnarchivedAsync</span><span class="sxs-lookup"><span data-stu-id="10cf1-175">OnTeamsTeamUnarchivedAsync</span></span>    | <span data-ttu-id="10cf1-176">[チームはアーカイブ解除されます](#team-unarchived)。</span><span class="sxs-lookup"><span data-stu-id="10cf1-176">[A team is unarchived](#team-unarchived).</span></span>       | <span data-ttu-id="10cf1-177">チーム</span><span class="sxs-lookup"><span data-stu-id="10cf1-177">Team</span></span> |
-| <span data-ttu-id="10cf1-178">チームの復元</span><span class="sxs-lookup"><span data-stu-id="10cf1-178">Team restored</span></span>        | <span data-ttu-id="10cf1-179">teamRestored</span><span class="sxs-lookup"><span data-stu-id="10cf1-179">teamRestored</span></span>      | <span data-ttu-id="10cf1-180">OnTeamsTeamRestoredAsync</span><span class="sxs-lookup"><span data-stu-id="10cf1-180">OnTeamsTeamRestoredAsync</span></span>    | [<span data-ttu-id="10cf1-181">チームが復元される</span><span class="sxs-lookup"><span data-stu-id="10cf1-181">A team is restored</span></span>](#team-restored)       | <span data-ttu-id="10cf1-182">チーム</span><span class="sxs-lookup"><span data-stu-id="10cf1-182">Team</span></span> |
+| <span data-ttu-id="d8e85-128">作成されたチャネル</span><span class="sxs-lookup"><span data-stu-id="d8e85-128">Channel created</span></span>     | <span data-ttu-id="d8e85-129">channelCreated</span><span class="sxs-lookup"><span data-stu-id="d8e85-129">channelCreated</span></span>    | <span data-ttu-id="d8e85-130">OnTeamsChannelCreatedAsync</span><span class="sxs-lookup"><span data-stu-id="d8e85-130">OnTeamsChannelCreatedAsync</span></span> | <span data-ttu-id="d8e85-131">[チャネルが作成されます](#channel-created)。</span><span class="sxs-lookup"><span data-stu-id="d8e85-131">[A channel is created](#channel-created).</span></span> | <span data-ttu-id="d8e85-132">チーム</span><span class="sxs-lookup"><span data-stu-id="d8e85-132">Team</span></span> |
+| <span data-ttu-id="d8e85-133">チャネルの名前が変更されました</span><span class="sxs-lookup"><span data-stu-id="d8e85-133">Channel renamed</span></span>     | <span data-ttu-id="d8e85-134">channelRenamed</span><span class="sxs-lookup"><span data-stu-id="d8e85-134">channelRenamed</span></span>    | <span data-ttu-id="d8e85-135">OnTeamsChannelRenamedAsync</span><span class="sxs-lookup"><span data-stu-id="d8e85-135">OnTeamsChannelRenamedAsync</span></span> | <span data-ttu-id="d8e85-136">[チャネルの名前が変更されます](#channel-renamed)。</span><span class="sxs-lookup"><span data-stu-id="d8e85-136">[A channel is renamed](#channel-renamed).</span></span> | <span data-ttu-id="d8e85-137">チーム</span><span class="sxs-lookup"><span data-stu-id="d8e85-137">Team</span></span> |
+| <span data-ttu-id="d8e85-138">チャネルが削除されました</span><span class="sxs-lookup"><span data-stu-id="d8e85-138">Channel deleted</span></span>     | <span data-ttu-id="d8e85-139">channelDeleted</span><span class="sxs-lookup"><span data-stu-id="d8e85-139">channelDeleted</span></span>    | <span data-ttu-id="d8e85-140">OnTeamsChannelDeletedAsync</span><span class="sxs-lookup"><span data-stu-id="d8e85-140">OnTeamsChannelDeletedAsync</span></span> | <span data-ttu-id="d8e85-141">[チャネルが削除されます](#channel-deleted)。</span><span class="sxs-lookup"><span data-stu-id="d8e85-141">[A channel is deleted](#channel-deleted).</span></span> | <span data-ttu-id="d8e85-142">チーム</span><span class="sxs-lookup"><span data-stu-id="d8e85-142">Team</span></span> |
+| <span data-ttu-id="d8e85-143">チャネルの復元</span><span class="sxs-lookup"><span data-stu-id="d8e85-143">Channel restored</span></span>    | <span data-ttu-id="d8e85-144">channelRestored</span><span class="sxs-lookup"><span data-stu-id="d8e85-144">channelRestored</span></span>    | <span data-ttu-id="d8e85-145">OnTeamsChannelRestoredAsync</span><span class="sxs-lookup"><span data-stu-id="d8e85-145">OnTeamsChannelRestoredAsync</span></span> | <span data-ttu-id="d8e85-146">[チャネルが復元されます](#channel-deleted)。</span><span class="sxs-lookup"><span data-stu-id="d8e85-146">[A channel is restored](#channel-deleted).</span></span> | <span data-ttu-id="d8e85-147">チーム</span><span class="sxs-lookup"><span data-stu-id="d8e85-147">Team</span></span> |
+| <span data-ttu-id="d8e85-148">追加されたメンバー</span><span class="sxs-lookup"><span data-stu-id="d8e85-148">Members added</span></span>   | <span data-ttu-id="d8e85-149">membersAdded</span><span class="sxs-lookup"><span data-stu-id="d8e85-149">membersAdded</span></span>   | <span data-ttu-id="d8e85-150">OnTeamsMembersAddedAsync</span><span class="sxs-lookup"><span data-stu-id="d8e85-150">OnTeamsMembersAddedAsync</span></span>   | <span data-ttu-id="d8e85-151">[メンバーが追加されます](#team-members-added)。</span><span class="sxs-lookup"><span data-stu-id="d8e85-151">[A member is added](#team-members-added).</span></span> | <span data-ttu-id="d8e85-152">すべて</span><span class="sxs-lookup"><span data-stu-id="d8e85-152">All</span></span> |
+| <span data-ttu-id="d8e85-153">削除されたメンバー</span><span class="sxs-lookup"><span data-stu-id="d8e85-153">Members removed</span></span> | <span data-ttu-id="d8e85-154">membersRemoved</span><span class="sxs-lookup"><span data-stu-id="d8e85-154">membersRemoved</span></span> | <span data-ttu-id="d8e85-155">OnTeamsMembersRemovedAsync</span><span class="sxs-lookup"><span data-stu-id="d8e85-155">OnTeamsMembersRemovedAsync</span></span> | <span data-ttu-id="d8e85-156">[メンバーが削除されます](#team-members-removed)。</span><span class="sxs-lookup"><span data-stu-id="d8e85-156">[A member is removed](#team-members-removed).</span></span> | <span data-ttu-id="d8e85-157">groupChat とチーム</span><span class="sxs-lookup"><span data-stu-id="d8e85-157">groupChat and team</span></span> |
+| <span data-ttu-id="d8e85-158">チームの名前が変更されました</span><span class="sxs-lookup"><span data-stu-id="d8e85-158">Team renamed</span></span>        | <span data-ttu-id="d8e85-159">teamRenamed</span><span class="sxs-lookup"><span data-stu-id="d8e85-159">teamRenamed</span></span>       | <span data-ttu-id="d8e85-160">OnTeamsTeamRenamedAsync</span><span class="sxs-lookup"><span data-stu-id="d8e85-160">OnTeamsTeamRenamedAsync</span></span>    | <span data-ttu-id="d8e85-161">[チームの名前が変更されました](#team-renamed)。</span><span class="sxs-lookup"><span data-stu-id="d8e85-161">[A team is renamed](#team-renamed).</span></span>       | <span data-ttu-id="d8e85-162">チーム</span><span class="sxs-lookup"><span data-stu-id="d8e85-162">Team</span></span> |
+| <span data-ttu-id="d8e85-163">チームが削除されました</span><span class="sxs-lookup"><span data-stu-id="d8e85-163">Team deleted</span></span>        | <span data-ttu-id="d8e85-164">teamDeleted</span><span class="sxs-lookup"><span data-stu-id="d8e85-164">teamDeleted</span></span>       | <span data-ttu-id="d8e85-165">OnTeamsTeamDeletedAsync</span><span class="sxs-lookup"><span data-stu-id="d8e85-165">OnTeamsTeamDeletedAsync</span></span>    | <span data-ttu-id="d8e85-166">[チームが削除されます](#team-deleted)。</span><span class="sxs-lookup"><span data-stu-id="d8e85-166">[A team is deleted](#team-deleted).</span></span>       | <span data-ttu-id="d8e85-167">チーム</span><span class="sxs-lookup"><span data-stu-id="d8e85-167">Team</span></span> |
+| <span data-ttu-id="d8e85-168">チームのアーカイブ</span><span class="sxs-lookup"><span data-stu-id="d8e85-168">Team archived</span></span>        | <span data-ttu-id="d8e85-169">teamArchived</span><span class="sxs-lookup"><span data-stu-id="d8e85-169">teamArchived</span></span>       | <span data-ttu-id="d8e85-170">OnTeamsTeamArchivedAsync</span><span class="sxs-lookup"><span data-stu-id="d8e85-170">OnTeamsTeamArchivedAsync</span></span>    | <span data-ttu-id="d8e85-171">[チームがアーカイブされます](#team-archived)。</span><span class="sxs-lookup"><span data-stu-id="d8e85-171">[A team is archived](#team-archived).</span></span>       | <span data-ttu-id="d8e85-172">チーム</span><span class="sxs-lookup"><span data-stu-id="d8e85-172">Team</span></span> |
+| <span data-ttu-id="d8e85-173">チームのアーカイブ解除</span><span class="sxs-lookup"><span data-stu-id="d8e85-173">Team unarchived</span></span>        | <span data-ttu-id="d8e85-174">teamUnarchived</span><span class="sxs-lookup"><span data-stu-id="d8e85-174">teamUnarchived</span></span>       | <span data-ttu-id="d8e85-175">OnTeamsTeamUnarchivedAsync</span><span class="sxs-lookup"><span data-stu-id="d8e85-175">OnTeamsTeamUnarchivedAsync</span></span>    | <span data-ttu-id="d8e85-176">[チームはアーカイブ解除されます](#team-unarchived)。</span><span class="sxs-lookup"><span data-stu-id="d8e85-176">[A team is unarchived](#team-unarchived).</span></span>       | <span data-ttu-id="d8e85-177">チーム</span><span class="sxs-lookup"><span data-stu-id="d8e85-177">Team</span></span> |
+| <span data-ttu-id="d8e85-178">チームの復元</span><span class="sxs-lookup"><span data-stu-id="d8e85-178">Team restored</span></span>        | <span data-ttu-id="d8e85-179">teamRestored</span><span class="sxs-lookup"><span data-stu-id="d8e85-179">teamRestored</span></span>      | <span data-ttu-id="d8e85-180">OnTeamsTeamRestoredAsync</span><span class="sxs-lookup"><span data-stu-id="d8e85-180">OnTeamsTeamRestoredAsync</span></span>    | [<span data-ttu-id="d8e85-181">チームが復元される</span><span class="sxs-lookup"><span data-stu-id="d8e85-181">A team is restored</span></span>](#team-restored)       | <span data-ttu-id="d8e85-182">チーム</span><span class="sxs-lookup"><span data-stu-id="d8e85-182">Team</span></span> |
 
-### <a name="channel-created"></a><span data-ttu-id="10cf1-183">作成されたチャネル</span><span class="sxs-lookup"><span data-stu-id="10cf1-183">Channel created</span></span>
+### <a name="channel-created"></a><span data-ttu-id="d8e85-183">作成されたチャネル</span><span class="sxs-lookup"><span data-stu-id="d8e85-183">Channel created</span></span>
 
-<span data-ttu-id="10cf1-184">作成されたチャネル イベントは、ボットがインストールされているチームで新しいチャネルが作成されるたびにボットに送信されます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-184">The channel created event is sent to your bot whenever a new channel is created in a team where your bot is installed.</span></span>
+<span data-ttu-id="d8e85-184">作成されたチャネル イベントは、ボットがインストールされているチームで新しいチャネルが作成されるたびにボットに送信されます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-184">The channel created event is sent to your bot whenever a new channel is created in a team where your bot is installed.</span></span>
 
-<span data-ttu-id="10cf1-185">次のコードは、チャネル作成イベントの例を示しています。</span><span class="sxs-lookup"><span data-stu-id="10cf1-185">The following code shows an example of channel created event:</span></span>
+<span data-ttu-id="d8e85-185">次のコードは、チャネル作成イベントの例を示しています。</span><span class="sxs-lookup"><span data-stu-id="d8e85-185">The following code shows an example of channel created event:</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="10cf1-186">C#</span><span class="sxs-lookup"><span data-stu-id="10cf1-186">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="d8e85-186">C#</span><span class="sxs-lookup"><span data-stu-id="d8e85-186">C#</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -72,7 +72,7 @@ protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo
 }
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="10cf1-187">TypeScript</span><span class="sxs-lookup"><span data-stu-id="10cf1-187">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="d8e85-187">TypeScript</span><span class="sxs-lookup"><span data-stu-id="d8e85-187">TypeScript</span></span>](#tab/typescript)
 
 <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
 
@@ -92,7 +92,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="json"></a>[<span data-ttu-id="10cf1-188">JSON</span><span class="sxs-lookup"><span data-stu-id="10cf1-188">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="d8e85-188">JSON</span><span class="sxs-lookup"><span data-stu-id="d8e85-188">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -130,7 +130,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="10cf1-189">Python</span><span class="sxs-lookup"><span data-stu-id="10cf1-189">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="d8e85-189">Python</span><span class="sxs-lookup"><span data-stu-id="d8e85-189">Python</span></span>](#tab/python)
 
 ```python
 async def on_teams_channel_created(
@@ -143,15 +143,15 @@ async def on_teams_channel_created(
     )
 ```
 
-* * *
+---
 
-### <a name="channel-renamed"></a><span data-ttu-id="10cf1-190">チャネルの名前が変更されました</span><span class="sxs-lookup"><span data-stu-id="10cf1-190">Channel renamed</span></span>
+### <a name="channel-renamed"></a><span data-ttu-id="d8e85-190">チャネルの名前が変更されました</span><span class="sxs-lookup"><span data-stu-id="d8e85-190">Channel renamed</span></span>
 
-<span data-ttu-id="10cf1-191">チャネルの名前が変更されたイベントは、ボットがインストールされているチームでチャネルの名前が変更されるたびにボットに送信されます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-191">The channel renamed event is sent to your bot whenever a channel is renamed in a team where your bot is installed.</span></span>
+<span data-ttu-id="d8e85-191">チャネルの名前が変更されたイベントは、ボットがインストールされているチームでチャネルの名前が変更されるたびにボットに送信されます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-191">The channel renamed event is sent to your bot whenever a channel is renamed in a team where your bot is installed.</span></span>
 
-<span data-ttu-id="10cf1-192">次のコードは、チャネルの名前が変更されたイベントの例を示しています。</span><span class="sxs-lookup"><span data-stu-id="10cf1-192">The following code shows an example of channel renamed event:</span></span>
+<span data-ttu-id="d8e85-192">次のコードは、チャネルの名前が変更されたイベントの例を示しています。</span><span class="sxs-lookup"><span data-stu-id="d8e85-192">The following code shows an example of channel renamed event:</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="10cf1-193">C#</span><span class="sxs-lookup"><span data-stu-id="10cf1-193">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="d8e85-193">C#</span><span class="sxs-lookup"><span data-stu-id="d8e85-193">C#</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -161,7 +161,7 @@ protected override async Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo
 }
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="10cf1-194">TypeScript</span><span class="sxs-lookup"><span data-stu-id="10cf1-194">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="d8e85-194">TypeScript</span><span class="sxs-lookup"><span data-stu-id="d8e85-194">TypeScript</span></span>](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -176,7 +176,7 @@ export class MyBot extends TeamsActivityHandler {
     }
 ```
 
-# <a name="json"></a>[<span data-ttu-id="10cf1-195">JSON</span><span class="sxs-lookup"><span data-stu-id="10cf1-195">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="d8e85-195">JSON</span><span class="sxs-lookup"><span data-stu-id="d8e85-195">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -214,7 +214,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="10cf1-196">Python</span><span class="sxs-lookup"><span data-stu-id="10cf1-196">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="d8e85-196">Python</span><span class="sxs-lookup"><span data-stu-id="d8e85-196">Python</span></span>](#tab/python)
 
 ```python
 async def on_teams_channel_renamed(
@@ -225,15 +225,15 @@ async def on_teams_channel_renamed(
     )
 ```
 
-* * *
+---
 
-### <a name="channel-deleted"></a><span data-ttu-id="10cf1-197">チャネルが削除されました</span><span class="sxs-lookup"><span data-stu-id="10cf1-197">Channel deleted</span></span>
+### <a name="channel-deleted"></a><span data-ttu-id="d8e85-197">チャネルが削除されました</span><span class="sxs-lookup"><span data-stu-id="d8e85-197">Channel deleted</span></span>
 
-<span data-ttu-id="10cf1-198">チャネル削除イベントは、ボットがインストールされているチームでチャネルが削除されるたびにボットに送信されます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-198">The channel deleted event is sent to your bot whenever a channel is deleted in a team where your bot is installed.</span></span>
+<span data-ttu-id="d8e85-198">チャネル削除イベントは、ボットがインストールされているチームでチャネルが削除されるたびにボットに送信されます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-198">The channel deleted event is sent to your bot whenever a channel is deleted in a team where your bot is installed.</span></span>
 
-<span data-ttu-id="10cf1-199">次のコードは、チャネル削除イベントの例を示しています。</span><span class="sxs-lookup"><span data-stu-id="10cf1-199">The following code shows an example of channel deleted event:</span></span>
+<span data-ttu-id="d8e85-199">次のコードは、チャネル削除イベントの例を示しています。</span><span class="sxs-lookup"><span data-stu-id="d8e85-199">The following code shows an example of channel deleted event:</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="10cf1-200">C#</span><span class="sxs-lookup"><span data-stu-id="10cf1-200">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="d8e85-200">C#</span><span class="sxs-lookup"><span data-stu-id="d8e85-200">C#</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -243,7 +243,7 @@ protected override async Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo
 }
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="10cf1-201">TypeScript</span><span class="sxs-lookup"><span data-stu-id="10cf1-201">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="d8e85-201">TypeScript</span><span class="sxs-lookup"><span data-stu-id="d8e85-201">TypeScript</span></span>](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -260,7 +260,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="json"></a>[<span data-ttu-id="10cf1-202">JSON</span><span class="sxs-lookup"><span data-stu-id="10cf1-202">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="d8e85-202">JSON</span><span class="sxs-lookup"><span data-stu-id="d8e85-202">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -298,7 +298,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="10cf1-203">Python</span><span class="sxs-lookup"><span data-stu-id="10cf1-203">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="d8e85-203">Python</span><span class="sxs-lookup"><span data-stu-id="d8e85-203">Python</span></span>](#tab/python)
 
 ```python
 async def on_teams_channel_deleted(
@@ -309,15 +309,15 @@ async def on_teams_channel_deleted(
     )
 ```
 
-* * *
+---
 
-### <a name="channel-restored"></a><span data-ttu-id="10cf1-204">チャネルの復元</span><span class="sxs-lookup"><span data-stu-id="10cf1-204">Channel restored</span></span>
+### <a name="channel-restored"></a><span data-ttu-id="d8e85-204">チャネルの復元</span><span class="sxs-lookup"><span data-stu-id="d8e85-204">Channel restored</span></span>
 
-<span data-ttu-id="10cf1-205">以前に削除されたチャネルがボットが既にインストールされているチームで復元されるたびに、チャネル復元イベントがボットに送信されます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-205">The channel restored event is sent to your bot whenever a channel that was previously deleted is restored in a team where your bot is already installed.</span></span>
+<span data-ttu-id="d8e85-205">以前に削除されたチャネルがボットが既にインストールされているチームで復元されるたびに、チャネル復元イベントがボットに送信されます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-205">The channel restored event is sent to your bot whenever a channel that was previously deleted is restored in a team where your bot is already installed.</span></span>
 
-<span data-ttu-id="10cf1-206">次のコードは、チャネル復元イベントの例を示しています。</span><span class="sxs-lookup"><span data-stu-id="10cf1-206">The following code shows an example of channel restored event:</span></span>
+<span data-ttu-id="d8e85-206">次のコードは、チャネル復元イベントの例を示しています。</span><span class="sxs-lookup"><span data-stu-id="d8e85-206">The following code shows an example of channel restored event:</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="10cf1-207">C#</span><span class="sxs-lookup"><span data-stu-id="10cf1-207">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="d8e85-207">C#</span><span class="sxs-lookup"><span data-stu-id="d8e85-207">C#</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsChannelRestoredAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -327,7 +327,7 @@ protected override async Task OnTeamsChannelRestoredAsync(ChannelInfo channelInf
 }
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="10cf1-208">TypeScript</span><span class="sxs-lookup"><span data-stu-id="10cf1-208">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="d8e85-208">TypeScript</span><span class="sxs-lookup"><span data-stu-id="d8e85-208">TypeScript</span></span>](#tab/typescript)
 
 <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
 
@@ -347,7 +347,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="json"></a>[<span data-ttu-id="10cf1-209">JSON</span><span class="sxs-lookup"><span data-stu-id="10cf1-209">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="d8e85-209">JSON</span><span class="sxs-lookup"><span data-stu-id="d8e85-209">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -385,7 +385,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="10cf1-210">Python</span><span class="sxs-lookup"><span data-stu-id="10cf1-210">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="d8e85-210">Python</span><span class="sxs-lookup"><span data-stu-id="d8e85-210">Python</span></span>](#tab/python)
 
 ```python
 async def on_teams_channel_restored(
@@ -398,15 +398,15 @@ async def on_teams_channel_restored(
     )
 ```
 
-* * *
+---
 
-### <a name="team-members-added"></a><span data-ttu-id="10cf1-211">チーム メンバーの追加</span><span class="sxs-lookup"><span data-stu-id="10cf1-211">Team members added</span></span>
+### <a name="team-members-added"></a><span data-ttu-id="d8e85-211">チーム メンバーの追加</span><span class="sxs-lookup"><span data-stu-id="d8e85-211">Team members added</span></span>
 
-<span data-ttu-id="10cf1-212">イベント `teamMemberAdded` が初めて会話に追加された場合、イベントはボットに送信されます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-212">The `teamMemberAdded` event is sent to your bot the first time it is added to a conversation.</span></span> <span data-ttu-id="10cf1-213">イベントは、ボットがインストールされているチームまたはグループ チャットに新しいユーザーが追加される度にボットに送信されます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-213">The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed.</span></span> <span data-ttu-id="10cf1-214">ID であるユーザー情報はボットに対して一意であり、特定のユーザーにメッセージを送信するなどのサービスで将来使用するためにキャッシュできます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-214">The user information that is ID is unique for your bot and can be cached for future use by your service, such as sending a message to a specific user.</span></span>
+<span data-ttu-id="d8e85-212">イベント `teamMemberAdded` が初めて会話に追加された場合、イベントはボットに送信されます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-212">The `teamMemberAdded` event is sent to your bot the first time it is added to a conversation.</span></span> <span data-ttu-id="d8e85-213">イベントは、ボットがインストールされているチームまたはグループ チャットに新しいユーザーが追加される度にボットに送信されます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-213">The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed.</span></span> <span data-ttu-id="d8e85-214">ID であるユーザー情報はボットに対して一意であり、特定のユーザーにメッセージを送信するなどのサービスで将来使用するためにキャッシュできます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-214">The user information that is ID is unique for your bot and can be cached for future use by your service, such as sending a message to a specific user.</span></span>
 
-<span data-ttu-id="10cf1-215">次のコードは、チーム メンバーがイベントを追加した例を示しています。</span><span class="sxs-lookup"><span data-stu-id="10cf1-215">The following code shows an example of team members added event:</span></span>
+<span data-ttu-id="d8e85-215">次のコードは、チーム メンバーがイベントを追加した例を示しています。</span><span class="sxs-lookup"><span data-stu-id="d8e85-215">The following code shows an example of team members added event:</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="10cf1-216">C#</span><span class="sxs-lookup"><span data-stu-id="10cf1-216">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="d8e85-216">C#</span><span class="sxs-lookup"><span data-stu-id="d8e85-216">C#</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded , TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -428,7 +428,7 @@ protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount
 }
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="10cf1-217">TypeScript</span><span class="sxs-lookup"><span data-stu-id="10cf1-217">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="d8e85-217">TypeScript</span><span class="sxs-lookup"><span data-stu-id="d8e85-217">TypeScript</span></span>](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -451,9 +451,9 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="json"></a>[<span data-ttu-id="10cf1-218">JSON</span><span class="sxs-lookup"><span data-stu-id="10cf1-218">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="d8e85-218">JSON</span><span class="sxs-lookup"><span data-stu-id="d8e85-218">JSON</span></span>](#tab/json)
 
-<span data-ttu-id="10cf1-219">これは、ボットがチームに追加された場合にボットが受信するメッセージです。</span><span class="sxs-lookup"><span data-stu-id="10cf1-219">This is the message your bot receives when the bot is added to a team.</span></span>
+<span data-ttu-id="d8e85-219">これは、ボットがチームに追加された場合にボットが受信するメッセージです。</span><span class="sxs-lookup"><span data-stu-id="d8e85-219">This is the message your bot receives when the bot is added to a team.</span></span>
 
 ```json
 {
@@ -492,7 +492,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-<span data-ttu-id="10cf1-220">これは、ボットが 1 対 1 のチャットに追加された場合にボットが受信するメッセージです。</span><span class="sxs-lookup"><span data-stu-id="10cf1-220">This is the message your bot receives when the bot is added to a one-to-one chat.</span></span>
+<span data-ttu-id="d8e85-220">これは、ボットが 1 対 1 のチャットに追加された場合にボットが受信するメッセージです。</span><span class="sxs-lookup"><span data-stu-id="d8e85-220">This is the message your bot receives when the bot is added to a one-to-one chat.</span></span>
 
 ```json
 {
@@ -529,7 +529,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="10cf1-221">Python</span><span class="sxs-lookup"><span data-stu-id="10cf1-221">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="d8e85-221">Python</span><span class="sxs-lookup"><span data-stu-id="d8e85-221">Python</span></span>](#tab/python)
 
 ```python
 async def on_teams_members_added(
@@ -542,18 +542,18 @@ async def on_teams_members_added(
     return
 ```
 
-* * *
+---
 
-### <a name="team-members-removed"></a><span data-ttu-id="10cf1-222">チーム メンバーが削除されました</span><span class="sxs-lookup"><span data-stu-id="10cf1-222">Team members removed</span></span>
+### <a name="team-members-removed"></a><span data-ttu-id="d8e85-222">チーム メンバーが削除されました</span><span class="sxs-lookup"><span data-stu-id="d8e85-222">Team members removed</span></span>
 
-<span data-ttu-id="10cf1-223">イベント `teamMemberRemoved` は、チームから削除された場合にボットに送信されます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-223">The `teamMemberRemoved` event is sent to your bot if it is removed from a team.</span></span> <span data-ttu-id="10cf1-224">イベントは、ボットがメンバーであるチームからユーザーが削除される度にボットに送信されます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-224">The event is sent to your bot every time any user is removed from a team where your bot is a member.</span></span> <span data-ttu-id="10cf1-225">削除された新しいメンバーがボット自体またはユーザーかどうかを確認するには、 `Activity` のオブジェクトを確認します `turnContext` 。</span><span class="sxs-lookup"><span data-stu-id="10cf1-225">To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`.</span></span>  <span data-ttu-id="10cf1-226">オブジェクトのフィールドがオブジェクトのフィールドと同じ場合、削除されたメンバーはボット、それ以外の場合は `Id` `MembersRemoved` `Id` `Recipient` ユーザーです。</span><span class="sxs-lookup"><span data-stu-id="10cf1-226">If the `Id` field of the `MembersRemoved` object is the same as the `Id` field of the `Recipient` object, then the member removed is the bot, else it is a user.</span></span> <span data-ttu-id="10cf1-227">ボットの一般的 `Id` な設定はです `28:<MicrosoftAppId>` 。</span><span class="sxs-lookup"><span data-stu-id="10cf1-227">The bot's `Id` generally is `28:<MicrosoftAppId>`.</span></span>
+<span data-ttu-id="d8e85-223">イベント `teamMemberRemoved` は、チームから削除された場合にボットに送信されます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-223">The `teamMemberRemoved` event is sent to your bot if it is removed from a team.</span></span> <span data-ttu-id="d8e85-224">イベントは、ボットがメンバーであるチームからユーザーが削除される度にボットに送信されます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-224">The event is sent to your bot every time any user is removed from a team where your bot is a member.</span></span> <span data-ttu-id="d8e85-225">削除された新しいメンバーがボット自体またはユーザーかどうかを確認するには、 `Activity` のオブジェクトを確認します `turnContext` 。</span><span class="sxs-lookup"><span data-stu-id="d8e85-225">To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`.</span></span>  <span data-ttu-id="d8e85-226">オブジェクトのフィールドがオブジェクトのフィールドと同じ場合、削除されたメンバーはボット、それ以外の場合は `Id` `MembersRemoved` `Id` `Recipient` ユーザーです。</span><span class="sxs-lookup"><span data-stu-id="d8e85-226">If the `Id` field of the `MembersRemoved` object is the same as the `Id` field of the `Recipient` object, then the member removed is the bot, else it is a user.</span></span> <span data-ttu-id="d8e85-227">ボットの一般的 `Id` な設定はです `28:<MicrosoftAppId>` 。</span><span class="sxs-lookup"><span data-stu-id="d8e85-227">The bot's `Id` generally is `28:<MicrosoftAppId>`.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="10cf1-228">ユーザーがテナントから完全に削除されると、 `membersRemoved conversationUpdate` イベントがトリガーされます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-228">When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.</span></span>
+> <span data-ttu-id="d8e85-228">ユーザーがテナントから完全に削除されると、 `membersRemoved conversationUpdate` イベントがトリガーされます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-228">When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.</span></span>
 
-<span data-ttu-id="10cf1-229">次のコードは、チーム メンバーが削除したイベントの例を示しています。</span><span class="sxs-lookup"><span data-stu-id="10cf1-229">The following code shows an example of team members removed event:</span></span>
+<span data-ttu-id="d8e85-229">次のコードは、チーム メンバーが削除したイベントの例を示しています。</span><span class="sxs-lookup"><span data-stu-id="d8e85-229">The following code shows an example of team members removed event:</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="10cf1-230">C#</span><span class="sxs-lookup"><span data-stu-id="10cf1-230">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="d8e85-230">C#</span><span class="sxs-lookup"><span data-stu-id="d8e85-230">C#</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsMembersRemovedAsync(IList<ChannelAccount> membersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -574,7 +574,7 @@ protected override async Task OnTeamsMembersRemovedAsync(IList<ChannelAccount> m
 }
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="10cf1-231">TypeScript</span><span class="sxs-lookup"><span data-stu-id="10cf1-231">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="d8e85-231">TypeScript</span><span class="sxs-lookup"><span data-stu-id="d8e85-231">TypeScript</span></span>](#tab/typescript)
 
 ```typescript
 
@@ -598,9 +598,9 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="json"></a>[<span data-ttu-id="10cf1-232">JSON</span><span class="sxs-lookup"><span data-stu-id="10cf1-232">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="d8e85-232">JSON</span><span class="sxs-lookup"><span data-stu-id="d8e85-232">JSON</span></span>](#tab/json)
 
-<span data-ttu-id="10cf1-233">次のペイロード例のオブジェクトは、グループ チャットではなくチームにメンバーを追加するか、新しい 1 対 1 の会話を `channelData` 開始します。</span><span class="sxs-lookup"><span data-stu-id="10cf1-233">The `channelData` object in the following payload example is based on adding a member to a team rather than a group chat, or initiating a new one-to-one conversation:</span></span>
+<span data-ttu-id="d8e85-233">次のペイロード例のオブジェクトは、グループ チャットではなくチームにメンバーを追加するか、新しい 1 対 1 の会話を `channelData` 開始します。</span><span class="sxs-lookup"><span data-stu-id="d8e85-233">The `channelData` object in the following payload example is based on adding a member to a team rather than a group chat, or initiating a new one-to-one conversation:</span></span>
 
 ```json
 {
@@ -641,7 +641,7 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 
-# <a name="python"></a>[<span data-ttu-id="10cf1-234">Python</span><span class="sxs-lookup"><span data-stu-id="10cf1-234">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="d8e85-234">Python</span><span class="sxs-lookup"><span data-stu-id="d8e85-234">Python</span></span>](#tab/python)
 
 ```python
 async def on_teams_members_removed(
@@ -654,15 +654,15 @@ async def on_teams_members_removed(
     return
 ```
 
-* * *
+---
 
-### <a name="team-renamed"></a><span data-ttu-id="10cf1-235">チームの名前が変更されました</span><span class="sxs-lookup"><span data-stu-id="10cf1-235">Team renamed</span></span>
+### <a name="team-renamed"></a><span data-ttu-id="d8e85-235">チームの名前が変更されました</span><span class="sxs-lookup"><span data-stu-id="d8e85-235">Team renamed</span></span>
 
-<span data-ttu-id="10cf1-236">ボットが含むチームの名前が変更された場合、ボットに通知されます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-236">Your bot is notified when the team it is in has been renamed.</span></span> <span data-ttu-id="10cf1-237">オブジェクトで `conversationUpdate` イベントを `eventType.teamRenamed` 受け取 `channelData` ります。</span><span class="sxs-lookup"><span data-stu-id="10cf1-237">It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object.</span></span>
+<span data-ttu-id="d8e85-236">ボットが含むチームの名前が変更された場合、ボットに通知されます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-236">Your bot is notified when the team it is in has been renamed.</span></span> <span data-ttu-id="d8e85-237">オブジェクトで `conversationUpdate` イベントを `eventType.teamRenamed` 受け取 `channelData` ります。</span><span class="sxs-lookup"><span data-stu-id="d8e85-237">It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object.</span></span>
 
-<span data-ttu-id="10cf1-238">次のコードは、チーム名が変更されたイベントの例を示しています。</span><span class="sxs-lookup"><span data-stu-id="10cf1-238">The following code shows an example of team renamed event:</span></span>
+<span data-ttu-id="d8e85-238">次のコードは、チーム名が変更されたイベントの例を示しています。</span><span class="sxs-lookup"><span data-stu-id="d8e85-238">The following code shows an example of team renamed event:</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="10cf1-239">C#</span><span class="sxs-lookup"><span data-stu-id="10cf1-239">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="d8e85-239">C#</span><span class="sxs-lookup"><span data-stu-id="d8e85-239">C#</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -672,7 +672,7 @@ protected override async Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnCo
 }
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="10cf1-240">TypeScript</span><span class="sxs-lookup"><span data-stu-id="10cf1-240">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="d8e85-240">TypeScript</span><span class="sxs-lookup"><span data-stu-id="d8e85-240">TypeScript</span></span>](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -688,7 +688,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[<span data-ttu-id="10cf1-241">JSON</span><span class="sxs-lookup"><span data-stu-id="10cf1-241">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="d8e85-241">JSON</span><span class="sxs-lookup"><span data-stu-id="d8e85-241">JSON</span></span>](#tab/json)
 
 ```json
 { 
@@ -723,7 +723,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="10cf1-242">Python</span><span class="sxs-lookup"><span data-stu-id="10cf1-242">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="d8e85-242">Python</span><span class="sxs-lookup"><span data-stu-id="d8e85-242">Python</span></span>](#tab/python)
 
 ```python
 async def on_teams_team_renamed(
@@ -734,15 +734,15 @@ async def on_teams_team_renamed(
     )
 ```
 
-* * *
+---
 
-### <a name="team-deleted"></a><span data-ttu-id="10cf1-243">チームが削除されました</span><span class="sxs-lookup"><span data-stu-id="10cf1-243">Team deleted</span></span>
+### <a name="team-deleted"></a><span data-ttu-id="d8e85-243">チームが削除されました</span><span class="sxs-lookup"><span data-stu-id="d8e85-243">Team deleted</span></span>
 
-<span data-ttu-id="10cf1-244">ボットが含むチームが削除された場合、ボットに通知されます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-244">Your bot is notified when the team it is in has been deleted.</span></span> <span data-ttu-id="10cf1-245">オブジェクトで `conversationUpdate` イベントを `eventType.teamDeleted` 受け取 `channelData` ります。</span><span class="sxs-lookup"><span data-stu-id="10cf1-245">It receives a `conversationUpdate` event with `eventType.teamDeleted` in the `channelData` object.</span></span>
+<span data-ttu-id="d8e85-244">ボットが含むチームが削除された場合、ボットに通知されます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-244">Your bot is notified when the team it is in has been deleted.</span></span> <span data-ttu-id="d8e85-245">オブジェクトで `conversationUpdate` イベントを `eventType.teamDeleted` 受け取 `channelData` ります。</span><span class="sxs-lookup"><span data-stu-id="d8e85-245">It receives a `conversationUpdate` event with `eventType.teamDeleted` in the `channelData` object.</span></span>
 
-<span data-ttu-id="10cf1-246">次のコードは、チームが削除したイベントの例を示しています。</span><span class="sxs-lookup"><span data-stu-id="10cf1-246">The following code shows an example of team deleted event:</span></span>
+<span data-ttu-id="d8e85-246">次のコードは、チームが削除したイベントの例を示しています。</span><span class="sxs-lookup"><span data-stu-id="d8e85-246">The following code shows an example of team deleted event:</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="10cf1-247">C#</span><span class="sxs-lookup"><span data-stu-id="10cf1-247">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="d8e85-247">C#</span><span class="sxs-lookup"><span data-stu-id="d8e85-247">C#</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsTeamDeletedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -751,7 +751,7 @@ protected override async Task OnTeamsTeamDeletedAsync(TeamInfo teamInfo, ITurnCo
 }
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="10cf1-248">TypeScript</span><span class="sxs-lookup"><span data-stu-id="10cf1-248">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="d8e85-248">TypeScript</span><span class="sxs-lookup"><span data-stu-id="d8e85-248">TypeScript</span></span>](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -765,7 +765,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[<span data-ttu-id="10cf1-249">JSON</span><span class="sxs-lookup"><span data-stu-id="10cf1-249">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="d8e85-249">JSON</span><span class="sxs-lookup"><span data-stu-id="d8e85-249">JSON</span></span>](#tab/json)
 
 ```json
 { 
@@ -800,7 +800,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="10cf1-250">Python</span><span class="sxs-lookup"><span data-stu-id="10cf1-250">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="d8e85-250">Python</span><span class="sxs-lookup"><span data-stu-id="d8e85-250">Python</span></span>](#tab/python)
 
 ```python
 async def on_teams_team_deleted(
@@ -810,15 +810,15 @@ async def on_teams_team_deleted(
     )
 ```
 
-* * *
+---
 
-### <a name="team-restored"></a><span data-ttu-id="10cf1-251">チームの復元</span><span class="sxs-lookup"><span data-stu-id="10cf1-251">Team restored</span></span>
+### <a name="team-restored"></a><span data-ttu-id="d8e85-251">チームの復元</span><span class="sxs-lookup"><span data-stu-id="d8e85-251">Team restored</span></span>
 
-<span data-ttu-id="10cf1-252">削除後にチームが復元された場合、ボットは通知を受け取ります。</span><span class="sxs-lookup"><span data-stu-id="10cf1-252">The bot receives a notification when a team is restored after being deleted.</span></span> <span data-ttu-id="10cf1-253">オブジェクトで `conversationUpdate` イベントを `eventType.teamrestored` 受け取 `channelData` ります。</span><span class="sxs-lookup"><span data-stu-id="10cf1-253">It receives a `conversationUpdate` event with `eventType.teamrestored` in the `channelData` object.</span></span>
+<span data-ttu-id="d8e85-252">削除後にチームが復元された場合、ボットは通知を受け取ります。</span><span class="sxs-lookup"><span data-stu-id="d8e85-252">The bot receives a notification when a team is restored after being deleted.</span></span> <span data-ttu-id="d8e85-253">オブジェクトで `conversationUpdate` イベントを `eventType.teamrestored` 受け取 `channelData` ります。</span><span class="sxs-lookup"><span data-stu-id="d8e85-253">It receives a `conversationUpdate` event with `eventType.teamrestored` in the `channelData` object.</span></span>
 
-<span data-ttu-id="10cf1-254">次のコードは、チームが復元したイベントの例を示しています。</span><span class="sxs-lookup"><span data-stu-id="10cf1-254">The following code shows an example of team restored event:</span></span>
+<span data-ttu-id="d8e85-254">次のコードは、チームが復元したイベントの例を示しています。</span><span class="sxs-lookup"><span data-stu-id="d8e85-254">The following code shows an example of team restored event:</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="10cf1-255">C#</span><span class="sxs-lookup"><span data-stu-id="10cf1-255">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="d8e85-255">C#</span><span class="sxs-lookup"><span data-stu-id="d8e85-255">C#</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsTeamrestoredAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -828,7 +828,7 @@ protected override async Task OnTeamsTeamrestoredAsync(TeamInfo teamInfo, ITurnC
 }
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="10cf1-256">TypeScript</span><span class="sxs-lookup"><span data-stu-id="10cf1-256">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="d8e85-256">TypeScript</span><span class="sxs-lookup"><span data-stu-id="d8e85-256">TypeScript</span></span>](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -844,7 +844,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[<span data-ttu-id="10cf1-257">JSON</span><span class="sxs-lookup"><span data-stu-id="10cf1-257">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="d8e85-257">JSON</span><span class="sxs-lookup"><span data-stu-id="d8e85-257">JSON</span></span>](#tab/json)
 
 ```json
 { 
@@ -879,7 +879,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="10cf1-258">Python</span><span class="sxs-lookup"><span data-stu-id="10cf1-258">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="d8e85-258">Python</span><span class="sxs-lookup"><span data-stu-id="d8e85-258">Python</span></span>](#tab/python)
 
 ```python
 async def on_teams_team_restored(
@@ -890,15 +890,15 @@ async def on_teams_team_restored(
     )
 ```
 
-* * *
+---
 
-### <a name="team-archived"></a><span data-ttu-id="10cf1-259">チームのアーカイブ</span><span class="sxs-lookup"><span data-stu-id="10cf1-259">Team archived</span></span>
+### <a name="team-archived"></a><span data-ttu-id="d8e85-259">チームのアーカイブ</span><span class="sxs-lookup"><span data-stu-id="d8e85-259">Team archived</span></span>
 
-<span data-ttu-id="10cf1-260">ボットは、インストールされているチームがアーカイブされる際に通知を受け取ります。</span><span class="sxs-lookup"><span data-stu-id="10cf1-260">The bot receives a notification when the team it is installed in is archived.</span></span> <span data-ttu-id="10cf1-261">オブジェクトで `conversationUpdate` イベントを `eventType.teamarchived` 受け取 `channelData` ります。</span><span class="sxs-lookup"><span data-stu-id="10cf1-261">It receives a `conversationUpdate` event with `eventType.teamarchived` in the `channelData` object.</span></span>
+<span data-ttu-id="d8e85-260">ボットは、インストールされているチームがアーカイブされる際に通知を受け取ります。</span><span class="sxs-lookup"><span data-stu-id="d8e85-260">The bot receives a notification when the team it is installed in is archived.</span></span> <span data-ttu-id="d8e85-261">オブジェクトで `conversationUpdate` イベントを `eventType.teamarchived` 受け取 `channelData` ります。</span><span class="sxs-lookup"><span data-stu-id="d8e85-261">It receives a `conversationUpdate` event with `eventType.teamarchived` in the `channelData` object.</span></span>
 
-<span data-ttu-id="10cf1-262">次のコードは、チーム アーカイブ イベントの例を示しています。</span><span class="sxs-lookup"><span data-stu-id="10cf1-262">The following code shows an example of team archived event:</span></span>
+<span data-ttu-id="d8e85-262">次のコードは、チーム アーカイブ イベントの例を示しています。</span><span class="sxs-lookup"><span data-stu-id="d8e85-262">The following code shows an example of team archived event:</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="10cf1-263">C#</span><span class="sxs-lookup"><span data-stu-id="10cf1-263">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="d8e85-263">C#</span><span class="sxs-lookup"><span data-stu-id="d8e85-263">C#</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsTeamArchivedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -908,7 +908,7 @@ protected override async Task OnTeamsTeamArchivedAsync(TeamInfo teamInfo, ITurnC
 }
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="10cf1-264">TypeScript</span><span class="sxs-lookup"><span data-stu-id="10cf1-264">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="d8e85-264">TypeScript</span><span class="sxs-lookup"><span data-stu-id="d8e85-264">TypeScript</span></span>](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -924,7 +924,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[<span data-ttu-id="10cf1-265">JSON</span><span class="sxs-lookup"><span data-stu-id="10cf1-265">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="d8e85-265">JSON</span><span class="sxs-lookup"><span data-stu-id="d8e85-265">JSON</span></span>](#tab/json)
 
 ```json
 { 
@@ -959,7 +959,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="10cf1-266">Python</span><span class="sxs-lookup"><span data-stu-id="10cf1-266">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="d8e85-266">Python</span><span class="sxs-lookup"><span data-stu-id="d8e85-266">Python</span></span>](#tab/python)
 
 ```python
 async def on_teams_team_archived(
@@ -970,16 +970,16 @@ async def on_teams_team_archived(
     )
 ```
 
-* * *
+---
 
 
-### <a name="team-unarchived"></a><span data-ttu-id="10cf1-267">チームのアーカイブ解除</span><span class="sxs-lookup"><span data-stu-id="10cf1-267">Team unarchived</span></span>
+### <a name="team-unarchived"></a><span data-ttu-id="d8e85-267">チームのアーカイブ解除</span><span class="sxs-lookup"><span data-stu-id="d8e85-267">Team unarchived</span></span>
 
-<span data-ttu-id="10cf1-268">ボットがインストールされているチームがアーカイブ解除された場合、ボットは通知を受け取ります。</span><span class="sxs-lookup"><span data-stu-id="10cf1-268">The bot receives a notification when the team it is installed in is unarchived.</span></span> <span data-ttu-id="10cf1-269">オブジェクトで `conversationUpdate` イベントを `eventType.teamUnarchived` 受け取 `channelData` ります。</span><span class="sxs-lookup"><span data-stu-id="10cf1-269">It receives a `conversationUpdate` event with `eventType.teamUnarchived` in the `channelData` object.</span></span>
+<span data-ttu-id="d8e85-268">ボットがインストールされているチームがアーカイブ解除された場合、ボットは通知を受け取ります。</span><span class="sxs-lookup"><span data-stu-id="d8e85-268">The bot receives a notification when the team it is installed in is unarchived.</span></span> <span data-ttu-id="d8e85-269">オブジェクトで `conversationUpdate` イベントを `eventType.teamUnarchived` 受け取 `channelData` ります。</span><span class="sxs-lookup"><span data-stu-id="d8e85-269">It receives a `conversationUpdate` event with `eventType.teamUnarchived` in the `channelData` object.</span></span>
 
-<span data-ttu-id="10cf1-270">次のコードは、チームのアーカイブ解除イベントの例を示しています。</span><span class="sxs-lookup"><span data-stu-id="10cf1-270">The following code shows an example of team unarchived event:</span></span>
+<span data-ttu-id="d8e85-270">次のコードは、チームのアーカイブ解除イベントの例を示しています。</span><span class="sxs-lookup"><span data-stu-id="d8e85-270">The following code shows an example of team unarchived event:</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="10cf1-271">C#</span><span class="sxs-lookup"><span data-stu-id="10cf1-271">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="d8e85-271">C#</span><span class="sxs-lookup"><span data-stu-id="d8e85-271">C#</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsTeamUnarchivedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -989,7 +989,7 @@ protected override async Task OnTeamsTeamUnarchivedAsync(TeamInfo teamInfo, ITur
 }
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="10cf1-272">TypeScript</span><span class="sxs-lookup"><span data-stu-id="10cf1-272">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="d8e85-272">TypeScript</span><span class="sxs-lookup"><span data-stu-id="d8e85-272">TypeScript</span></span>](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -1005,7 +1005,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[<span data-ttu-id="10cf1-273">JSON</span><span class="sxs-lookup"><span data-stu-id="10cf1-273">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="d8e85-273">JSON</span><span class="sxs-lookup"><span data-stu-id="d8e85-273">JSON</span></span>](#tab/json)
 
 ```json
 { 
@@ -1040,7 +1040,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="10cf1-274">Python</span><span class="sxs-lookup"><span data-stu-id="10cf1-274">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="d8e85-274">Python</span><span class="sxs-lookup"><span data-stu-id="d8e85-274">Python</span></span>](#tab/python)
 
 ```python
 async def on_teams_team_unarchived(
@@ -1051,24 +1051,24 @@ async def on_teams_team_unarchived(
     )
 ```
 
-* * *
+---
 
-<span data-ttu-id="10cf1-275">会話の更新イベントを処理したので、メッセージに対するさまざまな反応に対して発生するメッセージの反応イベントを理解できます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-275">Now that you have worked with the conversation update events, you can understand the message reaction events that occur for different reactions to a message.</span></span>
+<span data-ttu-id="d8e85-275">会話の更新イベントを処理したので、メッセージに対するさまざまな反応に対して発生するメッセージの反応イベントを理解できます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-275">Now that you have worked with the conversation update events, you can understand the message reaction events that occur for different reactions to a message.</span></span>
 
-## <a name="message-reaction-events"></a><span data-ttu-id="10cf1-276">メッセージの反応イベント</span><span class="sxs-lookup"><span data-stu-id="10cf1-276">Message reaction events</span></span>
+## <a name="message-reaction-events"></a><span data-ttu-id="d8e85-276">メッセージの反応イベント</span><span class="sxs-lookup"><span data-stu-id="d8e85-276">Message reaction events</span></span>
 
-<span data-ttu-id="10cf1-277">ユーザーがボットから送信されたメッセージに対する反応を追加または削除すると、イベント `messageReaction` が送信されます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-277">The `messageReaction` event is sent when a user adds or removes reactions to a message which was sent by your bot.</span></span> <span data-ttu-id="10cf1-278">メッセージ `replyToId` の ID を含み、テキスト形式 `Type` の反応の種類を指定します。</span><span class="sxs-lookup"><span data-stu-id="10cf1-278">The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format.</span></span> <span data-ttu-id="10cf1-279">反応の種類には、怒り、心、笑い、例えば、悲しい、驚くなどです。</span><span class="sxs-lookup"><span data-stu-id="10cf1-279">The types of reactions include angry, heart, laugh, like, sad, and surprised.</span></span> <span data-ttu-id="10cf1-280">このイベントには、元のメッセージの内容は含めされません。</span><span class="sxs-lookup"><span data-stu-id="10cf1-280">This event does not contain the contents of the original message.</span></span> <span data-ttu-id="10cf1-281">メッセージに対する処理の反応がボットにとって重要な場合は、メッセージを送信するときにメッセージを保存する必要があります。</span><span class="sxs-lookup"><span data-stu-id="10cf1-281">If processing reactions to your messages is important for your bot, you must store the messages when you send them.</span></span> <span data-ttu-id="10cf1-282">次の表に、イベントの種類とペイロード オブジェクトの詳細を示します。</span><span class="sxs-lookup"><span data-stu-id="10cf1-282">The following table provides more information about the event type and payload objects:</span></span>
+<span data-ttu-id="d8e85-277">ユーザーがボットから送信されたメッセージに対する反応を追加または削除すると、イベント `messageReaction` が送信されます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-277">The `messageReaction` event is sent when a user adds or removes reactions to a message which was sent by your bot.</span></span> <span data-ttu-id="d8e85-278">メッセージ `replyToId` の ID を含み、テキスト形式 `Type` の反応の種類を指定します。</span><span class="sxs-lookup"><span data-stu-id="d8e85-278">The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format.</span></span> <span data-ttu-id="d8e85-279">反応の種類には、怒り、心、笑い、例えば、悲しい、驚くなどです。</span><span class="sxs-lookup"><span data-stu-id="d8e85-279">The types of reactions include angry, heart, laugh, like, sad, and surprised.</span></span> <span data-ttu-id="d8e85-280">このイベントには、元のメッセージの内容は含めされません。</span><span class="sxs-lookup"><span data-stu-id="d8e85-280">This event does not contain the contents of the original message.</span></span> <span data-ttu-id="d8e85-281">メッセージに対する処理の反応がボットにとって重要な場合は、メッセージを送信するときにメッセージを保存する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d8e85-281">If processing reactions to your messages is important for your bot, you must store the messages when you send them.</span></span> <span data-ttu-id="d8e85-282">次の表に、イベントの種類とペイロード オブジェクトの詳細を示します。</span><span class="sxs-lookup"><span data-stu-id="d8e85-282">The following table provides more information about the event type and payload objects:</span></span>
 
-| <span data-ttu-id="10cf1-283">EventType</span><span class="sxs-lookup"><span data-stu-id="10cf1-283">EventType</span></span>       | <span data-ttu-id="10cf1-284">Payload オブジェクト</span><span class="sxs-lookup"><span data-stu-id="10cf1-284">Payload object</span></span>   | <span data-ttu-id="10cf1-285">説明</span><span class="sxs-lookup"><span data-stu-id="10cf1-285">Description</span></span>                                                             | <span data-ttu-id="10cf1-286">範囲</span><span class="sxs-lookup"><span data-stu-id="10cf1-286">Scope</span></span> |
+| <span data-ttu-id="d8e85-283">EventType</span><span class="sxs-lookup"><span data-stu-id="d8e85-283">EventType</span></span>       | <span data-ttu-id="d8e85-284">Payload オブジェクト</span><span class="sxs-lookup"><span data-stu-id="d8e85-284">Payload object</span></span>   | <span data-ttu-id="d8e85-285">説明</span><span class="sxs-lookup"><span data-stu-id="d8e85-285">Description</span></span>                                                             | <span data-ttu-id="d8e85-286">範囲</span><span class="sxs-lookup"><span data-stu-id="d8e85-286">Scope</span></span> |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| <span data-ttu-id="10cf1-287">messageReaction</span><span class="sxs-lookup"><span data-stu-id="10cf1-287">messageReaction</span></span> | <span data-ttu-id="10cf1-288">reactionsAdded</span><span class="sxs-lookup"><span data-stu-id="10cf1-288">reactionsAdded</span></span>   | <span data-ttu-id="10cf1-289">[ボット メッセージに追加された反応](#reactions-added-to-bot-message)。</span><span class="sxs-lookup"><span data-stu-id="10cf1-289">[Reactions added to bot message](#reactions-added-to-bot-message).</span></span>           | <span data-ttu-id="10cf1-290">すべて</span><span class="sxs-lookup"><span data-stu-id="10cf1-290">All</span></span>   |
-| <span data-ttu-id="10cf1-291">messageReaction</span><span class="sxs-lookup"><span data-stu-id="10cf1-291">messageReaction</span></span> | <span data-ttu-id="10cf1-292">reactionsRemoved</span><span class="sxs-lookup"><span data-stu-id="10cf1-292">reactionsRemoved</span></span> | <span data-ttu-id="10cf1-293">[ボット メッセージから削除された反応](#reactions-removed-from-bot-message)。</span><span class="sxs-lookup"><span data-stu-id="10cf1-293">[Reactions removed from bot message](#reactions-removed-from-bot-message).</span></span> | <span data-ttu-id="10cf1-294">すべて</span><span class="sxs-lookup"><span data-stu-id="10cf1-294">All</span></span> |
+| <span data-ttu-id="d8e85-287">messageReaction</span><span class="sxs-lookup"><span data-stu-id="d8e85-287">messageReaction</span></span> | <span data-ttu-id="d8e85-288">reactionsAdded</span><span class="sxs-lookup"><span data-stu-id="d8e85-288">reactionsAdded</span></span>   | <span data-ttu-id="d8e85-289">[ボット メッセージに追加された反応](#reactions-added-to-bot-message)。</span><span class="sxs-lookup"><span data-stu-id="d8e85-289">[Reactions added to bot message](#reactions-added-to-bot-message).</span></span>           | <span data-ttu-id="d8e85-290">すべて</span><span class="sxs-lookup"><span data-stu-id="d8e85-290">All</span></span>   |
+| <span data-ttu-id="d8e85-291">messageReaction</span><span class="sxs-lookup"><span data-stu-id="d8e85-291">messageReaction</span></span> | <span data-ttu-id="d8e85-292">reactionsRemoved</span><span class="sxs-lookup"><span data-stu-id="d8e85-292">reactionsRemoved</span></span> | <span data-ttu-id="d8e85-293">[ボット メッセージから削除された反応](#reactions-removed-from-bot-message)。</span><span class="sxs-lookup"><span data-stu-id="d8e85-293">[Reactions removed from bot message](#reactions-removed-from-bot-message).</span></span> | <span data-ttu-id="d8e85-294">すべて</span><span class="sxs-lookup"><span data-stu-id="d8e85-294">All</span></span> |
 
-### <a name="reactions-added-to-bot-message"></a><span data-ttu-id="10cf1-295">ボット メッセージに追加された反応</span><span class="sxs-lookup"><span data-stu-id="10cf1-295">Reactions added to bot message</span></span>
+### <a name="reactions-added-to-bot-message"></a><span data-ttu-id="d8e85-295">ボット メッセージに追加された反応</span><span class="sxs-lookup"><span data-stu-id="d8e85-295">Reactions added to bot message</span></span>
 
-<span data-ttu-id="10cf1-296">次のコードは、ボット メッセージに対する反応の例を示しています。</span><span class="sxs-lookup"><span data-stu-id="10cf1-296">The following code shows an example of reactions to a bot message:</span></span>
+<span data-ttu-id="d8e85-296">次のコードは、ボット メッセージに対する反応の例を示しています。</span><span class="sxs-lookup"><span data-stu-id="d8e85-296">The following code shows an example of reactions to a bot message:</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="10cf1-297">C#</span><span class="sxs-lookup"><span data-stu-id="10cf1-297">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="d8e85-297">C#</span><span class="sxs-lookup"><span data-stu-id="d8e85-297">C#</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnReactionsAddedAsync(IList<MessageReaction> messageReactions, ITurnContext<IMessageReactionActivity> turnContext, CancellationToken cancellationToken)
@@ -1082,7 +1082,7 @@ protected override async Task OnReactionsAddedAsync(IList<MessageReaction> messa
 }
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="10cf1-298">TypeScript</span><span class="sxs-lookup"><span data-stu-id="10cf1-298">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="d8e85-298">TypeScript</span><span class="sxs-lookup"><span data-stu-id="d8e85-298">TypeScript</span></span>](#tab/typescript)
 
 <!-- Verify -->
 
@@ -1107,7 +1107,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# <a name="json"></a>[<span data-ttu-id="10cf1-299">JSON</span><span class="sxs-lookup"><span data-stu-id="10cf1-299">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="d8e85-299">JSON</span><span class="sxs-lookup"><span data-stu-id="d8e85-299">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -1152,7 +1152,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="10cf1-300">Python</span><span class="sxs-lookup"><span data-stu-id="10cf1-300">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="d8e85-300">Python</span><span class="sxs-lookup"><span data-stu-id="d8e85-300">Python</span></span>](#tab/python)
 
 ```python
 async def on_reactions_added(
@@ -1173,13 +1173,13 @@ async def on_reactions_added(
     return
 ```
 
-* * *
+---
 
-### <a name="reactions-removed-from-bot-message"></a><span data-ttu-id="10cf1-301">ボット メッセージから削除されたリアクション</span><span class="sxs-lookup"><span data-stu-id="10cf1-301">Reactions removed from bot message</span></span>
+### <a name="reactions-removed-from-bot-message"></a><span data-ttu-id="d8e85-301">ボット メッセージから削除されたリアクション</span><span class="sxs-lookup"><span data-stu-id="d8e85-301">Reactions removed from bot message</span></span>
 
-<span data-ttu-id="10cf1-302">次のコードは、ボット メッセージから削除された反応の例を示しています。</span><span class="sxs-lookup"><span data-stu-id="10cf1-302">The following code shows an example of reactions removed from bot message:</span></span>
+<span data-ttu-id="d8e85-302">次のコードは、ボット メッセージから削除された反応の例を示しています。</span><span class="sxs-lookup"><span data-stu-id="d8e85-302">The following code shows an example of reactions removed from bot message:</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="10cf1-303">C#</span><span class="sxs-lookup"><span data-stu-id="10cf1-303">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="d8e85-303">C#</span><span class="sxs-lookup"><span data-stu-id="d8e85-303">C#</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> messageReactions, ITurnContext<IMessageReactionActivity> turnContext, CancellationToken cancellationToken)
@@ -1193,7 +1193,7 @@ protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> mes
 }
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="10cf1-304">TypeScript</span><span class="sxs-lookup"><span data-stu-id="10cf1-304">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="d8e85-304">TypeScript</span><span class="sxs-lookup"><span data-stu-id="d8e85-304">TypeScript</span></span>](#tab/typescript)
 
 <!-- Verify -->
 
@@ -1216,7 +1216,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="json"></a>[<span data-ttu-id="10cf1-305">JSON</span><span class="sxs-lookup"><span data-stu-id="10cf1-305">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="d8e85-305">JSON</span><span class="sxs-lookup"><span data-stu-id="d8e85-305">JSON</span></span>](#tab/json)
 
 ```json
 {
@@ -1261,7 +1261,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="10cf1-306">Python</span><span class="sxs-lookup"><span data-stu-id="10cf1-306">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="d8e85-306">Python</span><span class="sxs-lookup"><span data-stu-id="d8e85-306">Python</span></span>](#tab/python)
 
 ```python
 async def on_reactions_removed(
@@ -1282,22 +1282,22 @@ async def on_reactions_removed(
     return
 ```
 
-* * *
+---
 
-## <a name="installation-update-event"></a><span data-ttu-id="10cf1-307">インストール更新イベント</span><span class="sxs-lookup"><span data-stu-id="10cf1-307">Installation update event</span></span>
+## <a name="installation-update-event"></a><span data-ttu-id="d8e85-307">インストール更新イベント</span><span class="sxs-lookup"><span data-stu-id="d8e85-307">Installation update event</span></span>
 
-<span data-ttu-id="10cf1-308">ボットをスレッドに `installationUpdate` インストールすると、ボットはイベントを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="10cf1-308">The bot receives an `installationUpdate` event when you install a bot to a conversation thread.</span></span> <span data-ttu-id="10cf1-309">スレッドからボットをアンインストールすると、イベントもトリガーされます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-309">Uninstallation of the bot from the thread also triggers the event.</span></span> <span data-ttu-id="10cf1-310">ボットをインストールすると、イベント内のアクション フィールドが追加に設定され、ボットがアンインストールされた場合、アクションフィールドは削除に設定 *されます*。</span><span class="sxs-lookup"><span data-stu-id="10cf1-310">On installing a bot, the **action** field in the event is set to *add*, and when the bot is uninstalled the **action** field is set to *remove*.</span></span>
+<span data-ttu-id="d8e85-308">ボットをスレッドに `installationUpdate` インストールすると、ボットはイベントを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="d8e85-308">The bot receives an `installationUpdate` event when you install a bot to a conversation thread.</span></span> <span data-ttu-id="d8e85-309">スレッドからボットをアンインストールすると、イベントもトリガーされます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-309">Uninstallation of the bot from the thread also triggers the event.</span></span> <span data-ttu-id="d8e85-310">ボットをインストールすると、イベント内のアクション フィールドが追加に設定され、ボットがアンインストールされた場合、アクションフィールドは削除に設定 *されます*。</span><span class="sxs-lookup"><span data-stu-id="d8e85-310">On installing a bot, the **action** field in the event is set to *add*, and when the bot is uninstalled the **action** field is set to *remove*.</span></span>
  
 > [!NOTE]
-> <span data-ttu-id="10cf1-311">アプリケーションをアップグレードし、ボットを追加または削除すると、アクションによってイベントもトリガー `installationUpdate` されます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-311">When you upgrade an application, and then add or remove a bot, the action also triggers the `installationUpdate` event.</span></span> <span data-ttu-id="10cf1-312">ボット **を** 削除した場合、ボット *を追加したり* 、削除アップグレードを行った場合は、アクション フィールドは追加 *アップグレード* に設定されます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-312">The **action** field is set to *add-upgrade* if you add a bot or *remove-upgrade* if you remove a bot.</span></span> 
+> <span data-ttu-id="d8e85-311">アプリケーションをアップグレードし、ボットを追加または削除すると、アクションによってイベントもトリガー `installationUpdate` されます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-311">When you upgrade an application, and then add or remove a bot, the action also triggers the `installationUpdate` event.</span></span> <span data-ttu-id="d8e85-312">ボット **を** 削除した場合、ボット *を追加したり* 、削除アップグレードを行った場合は、アクション フィールドは追加 *アップグレード* に設定されます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-312">The **action** field is set to *add-upgrade* if you add a bot or *remove-upgrade* if you remove a bot.</span></span> 
 
 > [!IMPORTANT]
-> <span data-ttu-id="10cf1-313">インストール更新イベントは、現在開発者向けプレビューで、2021 年 3 月に一般提供 (GA) になります。</span><span class="sxs-lookup"><span data-stu-id="10cf1-313">Installation update events are in developer preview today and will be Generally Available (GA) in March 2021.</span></span> <span data-ttu-id="10cf1-314">インストール更新イベントを表示するには、Teams クライアントをパブリック開発者プレビューに移動し、アプリを個人またはチームまたはチャットに追加できます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-314">To see the installation update events, you can move your Teams client to public developer preview, and add your app personally or to a team or a chat.</span></span>
+> <span data-ttu-id="d8e85-313">インストール更新イベントは、現在開発者向けプレビューで、2021 年 3 月に一般提供 (GA) になります。</span><span class="sxs-lookup"><span data-stu-id="d8e85-313">Installation update events are in developer preview today and will be Generally Available (GA) in March 2021.</span></span> <span data-ttu-id="d8e85-314">インストール更新イベントを表示するには、Teams クライアントをパブリック開発者プレビューに移動し、アプリを個人またはチームまたはチャットに追加できます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-314">To see the installation update events, you can move your Teams client to public developer preview, and add your app personally or to a team or a chat.</span></span>
 
-### <a name="install-update-event"></a><span data-ttu-id="10cf1-315">更新イベントのインストール</span><span class="sxs-lookup"><span data-stu-id="10cf1-315">Install update event</span></span>
-<span data-ttu-id="10cf1-316">イベントを `installationUpdate` 使用して、インストール時にボットから導入メッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="10cf1-316">Use the `installationUpdate` event to send an introductory message from your bot on installation.</span></span> <span data-ttu-id="10cf1-317">このイベントは、プライバシーとデータ保持の要件を満たすのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-317">This event helps you to meet your privacy and data retention requirements.</span></span> <span data-ttu-id="10cf1-318">ボットがアンインストールされた場合は、ユーザーデータまたはスレッド データをクリーンアップして削除できます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-318">You can also clean up and delete user or thread data when the bot is uninstalled.</span></span>
+### <a name="install-update-event"></a><span data-ttu-id="d8e85-315">更新イベントのインストール</span><span class="sxs-lookup"><span data-stu-id="d8e85-315">Install update event</span></span>
+<span data-ttu-id="d8e85-316">イベントを `installationUpdate` 使用して、インストール時にボットから導入メッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="d8e85-316">Use the `installationUpdate` event to send an introductory message from your bot on installation.</span></span> <span data-ttu-id="d8e85-317">このイベントは、プライバシーとデータ保持の要件を満たすのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-317">This event helps you to meet your privacy and data retention requirements.</span></span> <span data-ttu-id="d8e85-318">ボットがアンインストールされた場合は、ユーザーデータまたはスレッド データをクリーンアップして削除できます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-318">You can also clean up and delete user or thread data when the bot is uninstalled.</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="10cf1-319">C#</span><span class="sxs-lookup"><span data-stu-id="10cf1-319">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="d8e85-319">C#</span><span class="sxs-lookup"><span data-stu-id="d8e85-319">C#</span></span>](#tab/dotnet)
 
 ```csharp
 protected override async Task
@@ -1311,7 +1311,7 @@ else
 } return; }
 ```
 
-<span data-ttu-id="10cf1-320">イベントをキャプチャする別の方法として、シナリオの追加または削除に専用のハンドラーを使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="10cf1-320">You can also use a dedicated handler for *add* or *remove* scenarios as an alternative method to capture an event.</span></span>
+<span data-ttu-id="d8e85-320">イベントをキャプチャする別の方法として、シナリオの追加または削除に専用のハンドラーを使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="d8e85-320">You can also use a dedicated handler for *add* or *remove* scenarios as an alternative method to capture an event.</span></span>
 
 ```csharp
 protected override async Task
@@ -1321,7 +1321,11 @@ turnContext, CancellationToken cancellationToken) {
 }
 ```
 
-# <a name="json"></a>[<span data-ttu-id="10cf1-321">JSON</span><span class="sxs-lookup"><span data-stu-id="10cf1-321">JSON</span></span>](#tab/json)
+# <a name="typescript"></a>[<span data-ttu-id="d8e85-321">TypeScript</span><span class="sxs-lookup"><span data-stu-id="d8e85-321">TypeScript</span></span>](#tab/typescript)
+
+<span data-ttu-id="d8e85-322">利用不可</span><span class="sxs-lookup"><span data-stu-id="d8e85-322">Not available</span></span>
+
+# <a name="json"></a>[<span data-ttu-id="d8e85-323">JSON</span><span class="sxs-lookup"><span data-stu-id="d8e85-323">JSON</span></span>](#tab/json)
 
 ```json
 { 
@@ -1375,15 +1379,20 @@ turnContext, CancellationToken cancellationToken) {
   "locale": "en" 
 }
 ```
-* * *
 
-## <a name="code-sample"></a><span data-ttu-id="10cf1-322">コード サンプル</span><span class="sxs-lookup"><span data-stu-id="10cf1-322">Code sample</span></span>
+# <a name="python"></a>[<span data-ttu-id="d8e85-324">Python</span><span class="sxs-lookup"><span data-stu-id="d8e85-324">Python</span></span>](#tab/python)
 
-| <span data-ttu-id="10cf1-323">**サンプル名**</span><span class="sxs-lookup"><span data-stu-id="10cf1-323">**Sample name**</span></span> | <span data-ttu-id="10cf1-324">**説明**</span><span class="sxs-lookup"><span data-stu-id="10cf1-324">**Description**</span></span> | <span data-ttu-id="10cf1-325">**.NET**</span><span class="sxs-lookup"><span data-stu-id="10cf1-325">**.NET**</span></span> | <span data-ttu-id="10cf1-326">**Node.js**</span><span class="sxs-lookup"><span data-stu-id="10cf1-326">**Node.js**</span></span> | <span data-ttu-id="10cf1-327">**Python**</span><span class="sxs-lookup"><span data-stu-id="10cf1-327">**Python**</span></span> |
+<span data-ttu-id="d8e85-325">利用不可</span><span class="sxs-lookup"><span data-stu-id="d8e85-325">Not available</span></span>
+
+---
+
+## <a name="code-sample"></a><span data-ttu-id="d8e85-326">コード サンプル</span><span class="sxs-lookup"><span data-stu-id="d8e85-326">Code sample</span></span>
+
+| <span data-ttu-id="d8e85-327">**サンプル名**</span><span class="sxs-lookup"><span data-stu-id="d8e85-327">**Sample name**</span></span> | <span data-ttu-id="d8e85-328">**説明**</span><span class="sxs-lookup"><span data-stu-id="d8e85-328">**Description**</span></span> | <span data-ttu-id="d8e85-329">**.NET**</span><span class="sxs-lookup"><span data-stu-id="d8e85-329">**.NET**</span></span> | <span data-ttu-id="d8e85-330">**Node.js**</span><span class="sxs-lookup"><span data-stu-id="d8e85-330">**Node.js**</span></span> | <span data-ttu-id="d8e85-331">**Python**</span><span class="sxs-lookup"><span data-stu-id="d8e85-331">**Python**</span></span> |
 |----------|-----------------|----------|
-| <span data-ttu-id="10cf1-328">会話ボット</span><span class="sxs-lookup"><span data-stu-id="10cf1-328">Conversation bot</span></span> | <span data-ttu-id="10cf1-329">ボットの会話イベントのサンプル コード。</span><span class="sxs-lookup"><span data-stu-id="10cf1-329">Sample code for bots conversation events.</span></span> | [<span data-ttu-id="10cf1-330">View</span><span class="sxs-lookup"><span data-stu-id="10cf1-330">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [<span data-ttu-id="10cf1-331">View</span><span class="sxs-lookup"><span data-stu-id="10cf1-331">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [<span data-ttu-id="10cf1-332">View</span><span class="sxs-lookup"><span data-stu-id="10cf1-332">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| <span data-ttu-id="d8e85-332">会話ボット</span><span class="sxs-lookup"><span data-stu-id="d8e85-332">Conversation bot</span></span> | <span data-ttu-id="d8e85-333">ボットの会話イベントのサンプル コード。</span><span class="sxs-lookup"><span data-stu-id="d8e85-333">Sample code for bots conversation events.</span></span> | [<span data-ttu-id="d8e85-334">View</span><span class="sxs-lookup"><span data-stu-id="d8e85-334">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [<span data-ttu-id="d8e85-335">View</span><span class="sxs-lookup"><span data-stu-id="d8e85-335">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [<span data-ttu-id="d8e85-336">View</span><span class="sxs-lookup"><span data-stu-id="d8e85-336">View</span></span>](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
-## <a name="next-step"></a><span data-ttu-id="10cf1-333">次の手順</span><span class="sxs-lookup"><span data-stu-id="10cf1-333">Next step</span></span>
+## <a name="next-step"></a><span data-ttu-id="d8e85-337">次の手順</span><span class="sxs-lookup"><span data-stu-id="d8e85-337">Next step</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="10cf1-334">プロアクティブ メッセージを送信する</span><span class="sxs-lookup"><span data-stu-id="10cf1-334">Send proactive messages</span></span>](~/bots/how-to/conversations/send-proactive-messages.md)
+> [<span data-ttu-id="d8e85-338">プロアクティブ メッセージを送信する</span><span class="sxs-lookup"><span data-stu-id="d8e85-338">Send proactive messages</span></span>](~/bots/how-to/conversations/send-proactive-messages.md)
