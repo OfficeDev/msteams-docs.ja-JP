@@ -4,12 +4,12 @@ description: 仮想アシスタント ボットとスキルを作成する方法
 localization_priority: Normal
 ms.topic: how-to
 keywords: teams 仮想アシスタント ボット
-ms.openlocfilehash: 072d9cb5742cd39101587cad32e3048bd36cc1d8
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: dea62a69a08c8d216a17dbd58558435f3cc623e8
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566874"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630734"
 ---
 # <a name="create-virtual-assistant"></a>仮想アシスタントを作成する 
 
@@ -411,7 +411,7 @@ Book-a-room ボットには、ユーザー用の 2 つの主なコマンドが�
 - `Book room`
 - `Manage Favorites`
 
-これら 2 つのコマンドを理解して、LUIS モデルを構築しました。 対応するシークレットを入力する必要があります `cognitivemodels.json` 。 対応する LUIS JSON ファイルは次のページ [で確認できます](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/blob/nebhagat/microsoft-teams-apps-bookaroom-skill/Deployment/Resources/LU/book-a-meeting.json)。
+これら 2 つのコマンドを理解して、LUIS モデルを構築しました。 対応するシークレットを入力する必要があります `cognitivemodels.json` 。 対応する LUIS JSON ファイルは次のページ [で確認できます](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/blob/nebhagat/microsoft-teams-apps-bookaroom-skill/Deployment/Resources/LU/en-us/book-a-meeting.json)。
 対応する `.lu` ファイルは、次のセクションに表示されます。
 
 ```
@@ -534,7 +534,7 @@ botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<pa
 カード アクションまたはタスク モジュールアクティビティを関連付けられたスキルに転送するには、スキルを埋め込む `skillId` 必要があります。
 `Book-a-room` ボット カードアクション、タスク モジュールのフェッチおよび送信アクション ペイロードは、パラメーターとして格納 `skillId` するために変更されます。 
 
-詳細については、この [ドキュメントのこの](https://msteams-captain.visualstudio.com/xGrowth%20App%20Templates/_wiki/wikis/xGrowth.wiki/88/Virtual-Assistant-for-MS-Teams?anchor=rich-cards) セクションを参照してください。
+詳細については、この [ドキュメントのこの](/microsoftteams/platform/samples/virtual-assistant#add-adaptive-cards-to-your-virtual-assistant) セクションを参照してください。
 
 ### <a name="handle-activities-from-group-chat-or-channel-scope"></a>グループ チャットまたはチャネル スコープからのアクティビティの処理
 
@@ -555,7 +555,7 @@ botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<pa
     }
 ```
 
-ボット フレームワーク ソリューション リポジトリの既存の [スキルを活用](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) したり、新しいスキルを最初から完全に作成することもできます。 新しいスキルを作成するには、「 [チュートリアル」を参照して新しいスキルを作成します](https://microsoft.github.io/botframework-solutions/overview/skills/)。 仮想アシスタントとスキル アーキテクチャのドキュメントについては[、「Virtual Assistant and skills architecture」を参照してください](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true)。  
+ボット フレームワーク ソリューション リポジトリの既存の [スキルを活用](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) したり、新しいスキルを最初から完全に作成することもできます。 新しいスキルを作成するには、「 [チュートリアル」を参照して新しいスキルを作成します](https://microsoft.github.io/botframework-solutions/overview/skills/)。 仮想アシスタントとスキル アーキテクチャのドキュメントについては[、「Virtual Assistant and skills architecture」を参照してください](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true)。  
 
 ## <a name="limitations-of-virtual-assistant"></a>仮想アシスタントの制限事項 
 
@@ -566,7 +566,7 @@ botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<pa
   * メッセージング拡張機能の構成は、個々のコマンドではなく、拡張機能全体に対してスコープ設定されます。 これにより、仮想アシスタントを通じて個々のスキルの構成が制限されます。
   * メッセージング拡張機能コマンドの ID には最大 [64](../resources/schema/manifest-schema.md#composeextensions) 文字の長さ、スキル情報の埋め込みには 37 文字が使用されます。 したがって、コマンド ID の更新された制約は 27 文字に制限されます。
 
-ボット フレームワーク ソリューション リポジトリの既存の [スキルを活用](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) したり、新しいスキルを最初から完全に作成することもできます。 以降のチュートリアルについては、こちらを参照 [してください](https://microsoft.github.io/botframework-solutions/overview/skills/)。 「Virtual Assistant [and skills](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) architecture」のドキュメントを参照してください。
+ボット フレームワーク ソリューション リポジトリの既存の [スキルを活用](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) したり、新しいスキルを最初から完全に作成することもできます。 以降のチュートリアルについては、こちらを参照 [してください](https://microsoft.github.io/botframework-solutions/overview/skills/)。 「Virtual Assistant [and skills](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) architecture」のドキュメントを参照してください。
 
 ## <a name="code-sample"></a>コード サンプル
 
@@ -578,8 +578,6 @@ botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<pa
 
 ## <a name="see-also"></a>関連項目
 
-- [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)
-
-- [会議室予約](app-templates.md#book-a-room)
-
-- [Microsoft Teamsボット](../bots/what-are-bots.md)
+* [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)
+* [会議室予約](app-templates.md#book-a-room)
+* [Microsoft Teamsボット](../bots/what-are-bots.md)

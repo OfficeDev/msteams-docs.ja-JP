@@ -5,12 +5,12 @@ description: チャネルまたはグループ チャットでボットのメッ
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 2d7eece1fc74781456024f6dcb9414fefbadb8f4
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: ef5cf8464fa0e93d5ea3840003a2b0c04a4a5ef5
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075753"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52631000"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>ボットとのチャネルチャットとグループ チャットの会話
 
@@ -18,10 +18,12 @@ ms.locfileid: "52075753"
 
 チームまたはグループ チャットMicrosoft Teamsボットをインストールするには、ボットに `teams` または `groupchat` スコープを追加します。 これにより、会話のすべてのメンバーがボットと対話できるようになります。 ボットをインストールすると、会話に関するメタデータ (会話メンバーの一覧など) にアクセスできます。 また、チームにインストールすると、ボットは、そのチームに関する詳細とチャネルの完全なリストにアクセスできます。
 
-グループまたはチャネル内のボットは、メッセージが言及されている場合にのみメッセージを受信します `@botname` 。 会話に送信された他のメッセージは受信しません。
+グループまたはチャネル内のボットは、グループまたはチャネルに関する情報が記載されている場合にのみ@botname。 会話に送信された他のメッセージは受信しません。 ボットは直接 @メンションされる必要があります。 チームまたはチャネルが言及された場合、またはボットからメッセージに返信しても、ボットはメッセージを受信@mentioningされません。
 
 > [!NOTE]
-> ボットは直接である必要 `@mentioned` があります。 チームまたはチャネルが言及された場合、またはボットからメッセージに返信しても、ボットはメッセージを受信@mentioningされません。
+> この機能は現在、パブリック開発者 [プレビューでのみ利用](../../../resources/dev-preview/developer-preview-intro.md) できます。
+>
+> リソース固有の同意 (RSC) を使用して、ボットは、インストールされているチーム内のすべてのチャネル メッセージを受信@mentioned。 詳細については [、「RSC を使用してすべてのチャネル メッセージを受信する」を参照してください](channel-messages-with-rsc.md)。
 
 ## <a name="design-guidelines"></a>デザインのガイドライン
 
@@ -37,7 +39,7 @@ ms.locfileid: "52075753"
 
 ## <a name="work-with-mentions"></a>メンションを使用する
 
-グループまたはチャネルからボットに送信されるメッセージには、@mentionに名前が含まれているメッセージが含まれる。 メッセージの解析でメッセージが処理@mention。 ボットは、メッセージに記載されている他のユーザーを取得し、送信するメッセージにメンションを追加することもできます。
+グループまたはチャネルからボットに送信されるメッセージには、@mentionに名前が含まれているメッセージが含まれる。 ボットは、メッセージに記載されている他のユーザーを取得し、送信するメッセージにメンションを追加することもできます。
 
 また、ボットが受信したメッセージ@mentionsコンテンツから削除する必要があります。
 

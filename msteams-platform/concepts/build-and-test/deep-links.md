@@ -4,12 +4,12 @@ description: ディープ リンクとアプリでの使用方法について説
 ms.topic: how-to
 localization_priority: Normal
 keywords: Teams ディープ リンク ディープリンク
-ms.openlocfilehash: 837d180b06f69b9be49d898c62b9ab8ee64d51d0
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: cd7735595f260431524edf1431ff22a1eeb361bc
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566055"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630146"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成 
 
@@ -78,7 +78,7 @@ Teams のエンティティへのディープ リンクを作成できます。 
 |:------------|:--------------|:---------------------|
 | `appId`&emsp; | マニフェストの ID。 |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
 | `entityId`&emsp; | タブの構成時に指定したタブ内のアイテムの [ID](~/tabs/how-to/create-tab-pages/configuration-page.md)です。|Tasklist123|
-| `entityWebUrl` または `subEntityWebUrl`&emsp; | クライアントがタブのレンダリングをサポートしていない場合に使用するフォールバック URL を含むオプションのフィールド。 | https://tasklist.example.com/123 または https://tasklist.example.com/list123/task456 |
+| `entityWebUrl` または `subEntityWebUrl`&emsp; | クライアントがタブのレンダリングをサポートしていない場合に使用するフォールバック URL を含むオプションのフィールド。 | `https://tasklist.example.com/123` または `https://tasklist.example.com/list123/task456` |
 | `entityLabel` または `subEntityLabel`&emsp; | ディープ リンクを表示するときに使用するタブ内のアイテムのラベル。 | タスク リスト 123 または "タスク 456" |
 | `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| 次のフィールドを含む JSON オブジェクト。</br></br> * タブ内のアイテムの ID。 </br></br> * タブ コンテキストMicrosoft Teams利用可能なチャネル ID を指定[します](~/tabs/how-to/access-teams-context.md)。 | 
 | `subEntityId`&emsp; | タブ内のアイテムの ID。 |Task456 |
@@ -156,8 +156,8 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 * `tenantId`: テナント ID の例、0d9b645f-597b-41f0-a2a3-ef103fbd91bb
 * `fileType`: docx、pptx、xlsx、pdf などのサポートされているファイルの種類
-* `objectUrl`: ファイルのオブジェクト URL、 https://microsoft.sharepoint.com/teams/(filepath)
-* `baseUrl`: ファイルの基本 URL、 https://microsoft.sharepoint.com/teams
+* `objectUrl`: ファイルのオブジェクト URL、 `https://microsoft.sharepoint.com/teams/(filepath)`
+* `baseUrl`: ファイルの基本 URL、 `https://microsoft.sharepoint.com/teams`
 * `serviceName`: サービスの名前、アプリ ID
 * `threadId`: threadId は、ファイルが保存されているチームのチーム ID です。 これはオプションで、ユーザーのフォルダーに保存されているファイルに対してOneDriveできません。 threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
 * `groupId`: ファイルのグループ ID ae063b79-5315-4ddb-ba70-27328ba6c31e
@@ -191,7 +191,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 * `appID`: マニフェスト ID **fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
 
 * `entityID`: タブの構成時に指定 [したアイテム ID](~/tabs/how-to/create-tab-pages/configuration-page.md)です。たとえば **、tasklist123**.
-* `entityWebUrl`: クライアントがタブのレンダリングをサポートしていない場合に使用するフォールバック URL を含むオプションのフィールド https://tasklist.example.com/123 。 https://tasklist.example.com/list123/task456
+* `entityWebUrl`: クライアントがタブのレンダリングをサポートしていない場合に使用するフォールバック URL を含むオプションのフィールド `https://tasklist.example.com/123` 。 `https://tasklist.example.com/list123/task456`
 * `entityName`: タブ内のアイテムのラベルで、ディープ リンクであるタスク リスト 123 またはタスク 456 を表示するときに使用します。
 
 例: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList

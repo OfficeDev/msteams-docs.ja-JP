@@ -5,12 +5,12 @@ description: アプリのタスク モジュールを設計し、Teams UI キッ
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 347ce42c41706f698e2f8897a0518aae0850a275
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 48e47a6c0bde0f0a3fefb8fcbfb362687ce58947
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101731"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629922"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>アプリ用のタスク モジュールMicrosoft Teamsする
 
@@ -37,20 +37,36 @@ ms.locfileid: "52101731"
 
 ## <a name="anatomy"></a>構造
 
+タスク モジュールは、ホストされたアプリ エクスペリエンスに柔軟なサーフェスを提供します。 これらは iframe (デスクトップ) または Webview (モバイル) を使用して構築されています。そのため、UI テンプレート (推奨) またはゼロからタスク モジュールを設計できます。
+
+また、アダプティブ カード フレームワークを [使用](../../task-modules-and-cards/cards/design-effective-cards.md) して構築することもできます。これは、一般的なシナリオ (フォームなど) を容易にする、より簡単で迅速な方法です。
+
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="タスク モジュールの UI 構造を示す図。" border="false":::
-
-タスク モジュールは非常に柔軟なサーフェスです。 iframes を使用して構築し、他の UI テンプレートを引き込み、パートナーが構築したエクスペリエンスをホストできます。 これは、最も洗練されたエクスペリエンスに優先されます。
-
-また、アダプティブ カード フレームワーク[](../../task-modules-and-cards/cards/design-effective-cards.md)を使用して構築することもできます。これは、一般的なシナリオ (フォームなど) をより簡単かつ迅速に実行できます。
 
 |カウンター|説明|
 |----------|-----------|
 |1|**アプリ アイコン**|
 |2|**アプリ名**: アプリの完全な名前。|
 |3|**ヘッダー**: ヘッダーを明確かつ簡潔にします。 ユーザーが完了するタスクについて説明します。
-|4|**[閉じる**] ボタン: ユーザーが挿入するアプリ コンテンツを検索できます。|
+|4|**[閉じる**] ボタン: タスク モジュールを閉じます。 アプリ コンテンツに未保存の変更は適用されません。|
 |5|**iframe**: アプリ コンテンツをホストするレスポンシブ スペース。|
 |6|**アクション (省略可能)**: アプリコンテンツに関連するボタン。|
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="モバイル上のタスク モジュールの UI 構造を示す図。" border="false":::
+
+|カウンター|説明|
+|----------|-----------|
+|1|**ヘッダー**: ヘッダーを明確かつ簡潔にします。 ユーザーが完了するタスクについて説明します。
+|2|**アプリ名**: アプリの完全な名前。|
+|3|**[閉じる**] ボタン: タスク モジュールを閉じます。 アプリ コンテンツに未保存の変更は適用されません。|
+|4|**webview**: アプリ コンテンツをホストするレスポンシブ スペース。|
+|5|**アクション (省略可能)**: アプリコンテンツに関連するボタン。|
+
+---
 
 ## <a name="designing-with-ui-templates"></a>UI テンプレートを使用した設計
 
@@ -66,43 +82,99 @@ ms.locfileid: "52101731"
 
 リストはスキャンが簡単なので、タスク モジュールでうまく機能します。
 
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/list.png" alt-text="タスク モジュールのリストの例。" border="false":::
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-list.png" alt-text="モバイル上のタスク モジュールのリストの例。" border="false":::
+
+---
 
 ### <a name="form"></a>フォーム
 
 タスク モジュールは、シーケンシャル ユーザー入力とインライン検証を備え、フォームを表面化する最適な場所です。 フォーム要素を埋め込む方法としてアダプティブ カードを活用できます。
 
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/form.png" alt-text="タスク モジュール内のフォームの例。" border="false":::
 
-### <a name="sign-in"></a>サインインする
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-form.png" alt-text="モバイル上のタスク モジュールのフォームの例。" border="false":::
+
+---
+
+### <a name="sign-in"></a>サインイン
 
 一連のタスク モジュールを使用して、フォーカスのあるサインインフローまたはサインアップ フローを作成し、ユーザーが順次ステップを簡単に移動できます。
 
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="タスク モジュールでのサインイン エクスペリエンスの例。" border="false":::
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-sign-in.png" alt-text="モバイル上のタスク モジュールでのサインイン エクスペリエンスの例。" border="false":::
+
+---
 
 ### <a name="media"></a>メディア
 
 フォーカスされた表示エクスペリエンスのために、タスク モジュールにメディア コンテンツを埋め込む。
 
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/media.png" alt-text="タスク モジュールのメディア コンテンツの例。" border="false":::
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-media.png" alt-text="モバイル上のタスク モジュールのメディア コンテンツの例。" border="false":::
+
+---
 
 ### <a name="empty-state"></a>空の状態
 
 ウェルカム メッセージ、エラー メッセージ、成功メッセージに使用します。
 
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="タスク モジュールの空の状態の例。" border="false":::
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-empty-state.png" alt-text="モバイル上のタスク モジュールの空の状態の例。" border="false":::
+
+---
 
 ### <a name="image-gallery"></a>イメージ ギャラリー
 
-ギャラリーカルーセルを iframe に埋め込む。
+ギャラリー カルーセルを iframe (デスクトップ) または Webview (モバイル) に埋め込む。
+
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
 
 :::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="タスク モジュールのイメージ ギャラリーの例。" border="false":::
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-image-gallery.png" alt-text="モバイル上のタスク モジュールのイメージ ギャラリーの例。" border="false":::
+
+---
 
 ### <a name="poll"></a>Poll
 
 次の使用例は、アダプティブ カードから起動されたポーリング結果を示しています。 ポーリングは、タスク モジュール内に配置できます。
 
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/poll.png" alt-text="タスク モジュールのポーリングの例。" border="false":::
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-poll.png" alt-text="モバイル上のタスク モジュールでのポーリングの例。" border="false":::
+
+---
 
 ## <a name="best-practices"></a>ベスト プラクティス
 
@@ -187,7 +259,7 @@ ms.locfileid: "52101731"
 
 #### <a name="dont-put-error-messages-in-dialogs"></a>[しない] ダイアログにエラー メッセージを表示する
 
-タスク モジュールの上のダイアログにエラー メッセージを表示しません。 わかりにくいユーザー エクスペリエンスを作成します。
+タスク モジュールの上のダイアログにエラー メッセージを表示しない。 わかりにくいユーザー エクスペリエンスを作成します。
 
    :::column-end:::
 :::row-end:::

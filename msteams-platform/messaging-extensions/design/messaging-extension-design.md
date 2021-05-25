@@ -6,12 +6,12 @@ author: heath-hamilton
 localization_priority: Normal
 ms.author: qinch
 ms.topic: conceptual
-ms.openlocfilehash: ed1f0f2eb2ce8d429a8a780bd2c4c4eb421d6d54
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: fd870d8e10ef74c36f8f6d145d48980f53e9303c
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566216"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52631073"
 ---
 # <a name="designing-your-microsoft-teams-messaging-extension"></a>メッセージング拡張機能Microsoft Teams設計する
 
@@ -29,12 +29,20 @@ ms.locfileid: "52566216"
 
 メッセージング拡張機能は、次のコンテキストでTeamsできます。
 
-* Teams ストア (AppSource) から。
+* ストアからTeamsします。
 * 作成ボックスの近くのチャネル、チャット、または会議 (前、中、および後)。 これらの場所の 1 つでメッセージング拡張機能を追加する場合は、そのコンテキストでのみ使用できます。
 
 次の例は、チャネルにメッセージング拡張機能を追加する方法を示しています。
 
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="例は、チャネルの作成ボックスの近くにメッセージング拡張機能を追加する方法を示しています。" border="false":::
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-add-in-channel.png" alt-text="例は、モバイル上のチャネルの作成ボックスの近くにメッセージング拡張機能を追加する方法を示しています。" border="false":::
+
+---
 
 ## <a name="set-up-a-messaging-extension"></a>メッセージング拡張機能を設定する
 
@@ -42,7 +50,15 @@ ms.locfileid: "52566216"
 
 アプリ間で一Teams一貫性を保つには、サインイン画面をカスタマイズできない。 シングル サインオン (SSO) 認証を使用する場合、ユーザーは自動的にサインインします。
 
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="例では、サインイン ボタンを使用してメッセージング拡張機能のセットアップ画面を表示します。" border="false":::
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-set-up.png" alt-text="例では、モバイルのサインイン ボタンを使用してメッセージング拡張機能のセットアップ画面を表示します。" border="false":::
+
+---
 
 ## <a name="types-of-messaging-extensions"></a>メッセージング拡張機能の種類
 
@@ -52,7 +68,15 @@ ms.locfileid: "52566216"
 
 検索コマンドを使用すると、ユーザーはメッセージング拡張機能を使用して外部コンテンツをすばやく検索し、メッセージに挿入できます。 検索コマンドは、通常、作成ボックスで使用できます。 たとえば、コンテンツを共有することで、ディスカッションを開始または追加Teams。
 
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="例は、作成ボックスから起動された検索ベースのメッセージング拡張機能を示しています。" border="false":::
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-search-command-type.png" alt-text="例は、モバイルの作成ボックスから起動された検索ベースのメッセージング拡張機能を示しています。" border="false":::
+
+---
 
 #### <a name="compose-box-layout-options"></a>作成ボックスのレイアウト オプション
 
@@ -72,9 +96,17 @@ ms.locfileid: "52566216"
 
 ### <a name="from-the-compose-box"></a>作成ボックスから
 
-追加すると、ユーザーは作成ボックスの下にあるアプリ アイコンを選択して、メッセージング拡張機能を開くことができます。 この例では、拡張機能には検索コマンドとアクション コマンドがあります。
+追加すると、ユーザーは作成ボックスの下にあるアプリ アイコンを選択して、メッセージング拡張機能を開くことができます。 これらの例では、拡張機能には検索コマンドとアクション コマンドがあります。
+
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
 
 :::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="例は、作成ボックスからメッセージング拡張機能を開く方法を示しています。" border="false":::
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-compose-box.png" alt-text="例は、モバイルの作成ボックスからメッセージング拡張機能を開く方法を示しています。" border="false":::
+
+---
 
 ### <a name="from-a-chat-message-or-channel-post"></a>チャット メッセージまたはチャネル投稿から
 
@@ -85,11 +117,18 @@ ms.locfileid: "52566216"
 
 #### <a name="chat-message"></a>チャット メッセージ
 
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="例は、チャット メッセージからメッセージング拡張機能を開く方法を示しています。" border="false":::
 
-#### <a name="channel-post"></a>チャネル投稿
+# <a name="mobile"></a>[モバイル](#tab/mobile)
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="例は、チャネル投稿からメッセージング拡張機能を開く方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-chat-post.png" alt-text="例は、モバイル上のチャット投稿からメッセージング拡張機能を開く方法を示しています。" border="false":::
+
+---
+':::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false"::': null
+':::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false"::': null
+---
 
 ## <a name="use-a-messaging-extension"></a>メッセージング拡張機能を使用する
 
@@ -99,21 +138,53 @@ ms.locfileid: "52566216"
 
 **1. メッセージング拡張機能を選択します**。 ユーザーは、作成ボックスから共有するコンテンツを検索できます。
 
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="例は、作成ボックスから挿入するコンテンツを検索しているユーザーを示しています。" border="false":::
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-search.png" alt-text="例は、モバイルの作成ボックスから挿入するコンテンツを検索するユーザーを示しています。" border="false":::
+
+---
 
 **2. コンテンツを挿入します**。 投稿後、他のユーザーはコンテンツに返信または選択して、アプリの詳細を表示できます。
 
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/insert-content-posted.png" alt-text="例は、チャネル会話にコンテンツを投稿するユーザーを示しています。" border="false":::
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-posted.png" alt-text="例は、モバイルでのチャネル会話にコンテンツを投稿するユーザーを示しています。" border="false":::
+
+---
 
 ### <a name="take-action-on-a-message"></a>メッセージに対してアクションを実行する
 
 **1. メッセージング拡張機能を選択します**。 アプリには、1 つ以上のアクション コマンドを含めできます。
 
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="例は、メッセージング拡張機能アクション コマンドを選択しているユーザーを示しています。" border="false":::
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-select-action-command.png" alt-text="例は、モバイルでメッセージング拡張機能アクション コマンドを選択しているユーザーを示しています。" border="false":::
+
+---
 
 **2. アクションを完了します**。 アプリは、メッセージ アクションによって送信されたコンテンツまたはデータを受信および処理できます。 これにより、ユーザーは会話を続け、次の例では、アプリに直接情報を入力する心配はありません。
 
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="メッセージに対してアクションを実行する方法の例。" border="false":::
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-complete-action-command.png" alt-text="モバイルでメッセージに対してアクションを実行する方法の例。" border="false":::
+
+---
 
 ### <a name="preview-links"></a>リンクのプレビュー
 
@@ -121,11 +192,27 @@ ms.locfileid: "52566216"
 
 **1. 作成ボックスに認識されたリンク** を貼り付けます。
 
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="例では、ユーザーがコンポスト ボックスにリンクを貼り付けする例を示します。" border="false":::
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-paste-preview-link.png" alt-text="例は、モバイルのコンポスト ボックスにリンクを貼り付けするユーザーを示しています。" border="false":::
+
+---
 
 **2. コンテンツを挿入します**。 アプリが作成ボックス内の URL を認識すると、リンクは、Web コンテンツのコンテンツリッチ プレビューを提供するカードとしてレンダリングされます。 (詳細 [については、「アダプティブ カードの設計ガイドライン](../../task-modules-and-cards/cards/design-effective-cards.md) 」を参照してください)。
 
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 :::image type="content" source="../../assets/images/messaging-extension/insert-preview-link.png" alt-text="例は、URL がアプリによって認識されるので、作成ボックスにリッチ コンテンツを含む方法を示しています。" border="false":::
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-preview-link.png" alt-text="例は、URL がアプリによって認識されるので、モバイルの作成ボックスにリッチ コンテンツを含む方法を示しています。" border="false":::
+
+---
 
 ## <a name="manage-a-messaging-extension"></a>メッセージング拡張機能の管理
 
@@ -136,6 +223,8 @@ ms.locfileid: "52566216"
 ### <a name="messaging-extension-in-the-compose-box"></a>作成ボックスのメッセージング拡張機能
 
 次の例は、作成ボックスから開いたメッセージング拡張機能です。
+
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
 
 :::image type="content" source="../../assets/images/messaging-extension/anatomy-compose.png" alt-text="作成ボックスのメッセージング拡張機能の UI 構造を示す図。" border="false":::
 
@@ -149,6 +238,21 @@ ms.locfileid: "52566216"
 |6|**[アクション コマンド] メニュー (オプション)**: アクション コマンドの一覧を表示します (指定した場合)。|
 |7|**アプリのコンテンツ**: 主に検索結果を表示します。 この例では、リスト レイアウトを使用しています (グリッド レイアウトは別のオプションです)。|
 |8|**アプリのロゴ**: アプリロゴのアウトライン アイコン。|
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-anatomy-compose.png" alt-text="モバイルの作成ボックスにメッセージング拡張機能の UI 構造を示す図。" border="false":::
+
+|カウンター|説明|
+|----------|-----------|
+|1|**アプリ名**: アプリの完全な名前。|
+|2|**[アクション コマンド] メニュー アイコン (オプション)**: メッセージング拡張機能のアクション コマンドの一覧を開きます (指定した場合)。
+|3|**[検索]** ボックス : ユーザーが挿入するアプリ コンテンツを検索できます。|
+|4|**タブ メニュー (オプション)**: 複数のコンテンツ カテゴリを提供します。|
+|5|**[アクション コマンド] メニュー (オプション)**: アクション コマンドの一覧を表示します (指定した場合)。|
+|6|**アプリのコンテンツ**: 主に検索結果を表示します。|
+
+---
 
 ### <a name="messaging-extension-management-menu"></a>メッセージング拡張機能の管理メニュー
 

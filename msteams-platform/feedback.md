@@ -4,12 +4,12 @@ description: 製品Microsoft Teamsチームは、さまざまなフィードバ�
 localization_priority: Normal
 ms.topic: reference
 keywords: チームフィードバック開発者の質問の問題連絡先サポート要求バグの投稿 コミュニティディスカッション
-ms.openlocfilehash: 0ced6a6e593f38e42833a81df9a22f4919b8c5bb
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b052b50bdafd542904bf3a9dfc6ee9d1ad5cf769
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566167"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630482"
 ---
 # <a name="microsoft-teams-developer-community-channels"></a>Microsoft Teamsコミュニティ チャネルの作成
 
@@ -24,7 +24,7 @@ Microsoft Teamsのコミュニティでは、Stack Overflow を使用して他�
 |  **ドキュメントの更新**           |     更新 **する記事** で [編集] を選択し、リポジトリのドキュメントにプルMicrosoft Teams [送信GitHubします](https://github.com/MicrosoftDocs/msteams-docs)。                                                                                                                                                           |
 |       **機能の提案**       |                                                                                                                                                                      UserVoice のフィードバック Microsoft Teams[に機能の提案を投稿します](https://microsoftteams.uservoice.com/forums/555103-public-preview/category/182881-developer-platform)。                                                                                                                                                                      |
 |       **一般的な質問**         |開発者プラットフォームに関する一般的な質問Microsoft TeamsヘルプにMicrosoft Teams Community[送信します](mailto:microsoftteamsdev@microsoft.com)。 ここで説明したチャネルに質問を投稿し、他の通信モードが適用できない場合にのみ電子メールを使用してください。                                                                                                                                                                      |
-|        **サンプル**         | サンプルに関する問題を各サンプル[リポジトリMicrosoft Teams送信](/microsoftteams/platform/tutorials/code-samples)します。|
+|        **サンプル**         | サンプルに関する問題を各サンプル[リポジトリMicrosoft Teams送信](https://github.com/OfficeDev/Microsoft-Teams-Samples)します。|
 |           **Tab SDK の問題または提案**          |         JavaScript ライブラリの SDK リポジトリに問題と[機能要求Microsoft Teams送信します](https://github.com/OfficeDev/microsoft-teams-library-js/issues)。 タグを `microsoft-teams` 使用して、スタック オーバーフローで SDK に関する質問を [投稿します](https://stackoverflow.com/questions/tagged/microsoft-teams)。                                                                                                                                                                            |
 
 ## <a name="product-support-channels"></a>製品サポート チャネル

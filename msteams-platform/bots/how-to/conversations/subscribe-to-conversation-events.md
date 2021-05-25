@@ -5,12 +5,12 @@ description: ボットから会話イベントを処理するMicrosoft Teamsし�
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 23f58a0544b317f7532ff12bc7f30b6eb6cd670a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 7dfafbd02c53ea0fe7393d4e4f771a50ad2954d2
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020029"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630706"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams ボットの会話イベント
 
@@ -143,7 +143,7 @@ async def on_teams_channel_created(
     )
 ```
 
-* * *
+---
 
 ### <a name="channel-renamed"></a>チャネルの名前が変更されました
 
@@ -225,7 +225,7 @@ async def on_teams_channel_renamed(
     )
 ```
 
-* * *
+---
 
 ### <a name="channel-deleted"></a>チャネルが削除されました
 
@@ -309,7 +309,7 @@ async def on_teams_channel_deleted(
     )
 ```
 
-* * *
+---
 
 ### <a name="channel-restored"></a>チャネルの復元
 
@@ -398,7 +398,7 @@ async def on_teams_channel_restored(
     )
 ```
 
-* * *
+---
 
 ### <a name="team-members-added"></a>チーム メンバーの追加
 
@@ -542,7 +542,7 @@ async def on_teams_members_added(
     return
 ```
 
-* * *
+---
 
 ### <a name="team-members-removed"></a>チーム メンバーが削除されました
 
@@ -654,7 +654,7 @@ async def on_teams_members_removed(
     return
 ```
 
-* * *
+---
 
 ### <a name="team-renamed"></a>チームの名前が変更されました
 
@@ -734,7 +734,7 @@ async def on_teams_team_renamed(
     )
 ```
 
-* * *
+---
 
 ### <a name="team-deleted"></a>チームが削除されました
 
@@ -810,7 +810,7 @@ async def on_teams_team_deleted(
     )
 ```
 
-* * *
+---
 
 ### <a name="team-restored"></a>チームの復元
 
@@ -890,7 +890,7 @@ async def on_teams_team_restored(
     )
 ```
 
-* * *
+---
 
 ### <a name="team-archived"></a>チームのアーカイブ
 
@@ -970,7 +970,7 @@ async def on_teams_team_archived(
     )
 ```
 
-* * *
+---
 
 
 ### <a name="team-unarchived"></a>チームのアーカイブ解除
@@ -1051,7 +1051,7 @@ async def on_teams_team_unarchived(
     )
 ```
 
-* * *
+---
 
 会話の更新イベントを処理したので、メッセージに対するさまざまな反応に対して発生するメッセージの反応イベントを理解できます。
 
@@ -1173,7 +1173,7 @@ async def on_reactions_added(
     return
 ```
 
-* * *
+---
 
 ### <a name="reactions-removed-from-bot-message"></a>ボット メッセージから削除されたリアクション
 
@@ -1282,7 +1282,7 @@ async def on_reactions_removed(
     return
 ```
 
-* * *
+---
 
 ## <a name="installation-update-event"></a>インストール更新イベント
 
@@ -1320,6 +1320,10 @@ turnContext, CancellationToken cancellationToken) {
 // TO:DO Installation workflow return;
 }
 ```
+
+# <a name="typescript"></a>[TypeScript](#tab/typescript)
+
+利用不可
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -1375,7 +1379,12 @@ turnContext, CancellationToken cancellationToken) {
   "locale": "en" 
 }
 ```
-* * *
+
+# <a name="python"></a>[Python](#tab/python)
+
+利用不可
+
+---
 
 ## <a name="code-sample"></a>コード サンプル
 

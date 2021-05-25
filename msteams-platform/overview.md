@@ -6,12 +6,12 @@ ms.topic: overview
 localization_priority: Normal
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: 8724b669476b11aa8cb1aca6d9586fc7ea42587d
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 645b8087b367dd3cc9f5efdd53c53974307ce65e
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566510"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630509"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Microsoft Teams のアプリを作成する
 
@@ -24,69 +24,124 @@ Microsoft Teamsアプリは、重要な情報、一般的なツール、信頼�
 
 ## <a name="what-are-teams-apps"></a>アプリとはTeamsですか?
 
-Teamsは、機能とエントリ ポイント[の組み](concepts/capabilities-overview.md)[合わせです](concepts/extensibility-points.md)。 たとえば、ユーザーはチャネル *(エントリ* ポイント) でアプリのボット(機能) とチャットできます。
+Teamsは機能の組み[合わせです](concepts/capabilities-overview.md)。 一部のアプリは単純 (通知の送信) ですが、複雑なアプリもあります (患者レコードの管理)。 アプリを計画する場合は、Teamsハブに注意してください。 アプリの最適Teamsは、ユーザーが自分自身を表現し、より良く一緒に作業するのに役立ちます。
 
-一部のアプリは単純 (通知の送信) ですが、複雑なアプリもあります (患者レコードの管理)。 アプリを計画する場合は、Teamsハブに注意してください。 アプリの最適Teamsは、ユーザーが自分自身を表現し、より良く一緒に作業するのに役立ちます。
+### <a name="personal-apps"></a>個人用アプリ
 
 :::row:::
-   :::column span="":::
+   :::column span="1":::
 
-### <a name="tabs"></a>タブ
-
-**情報をより便利に取得する**: 場合によっては、見つけやすくする必要がある場合があります。 タブに重要な Web[ページを表示](tabs/what-are-tabs.md)します。このページでは、静的コンテンツと動的コンテンツのフルスクリーン Web エクスペリエンスを提供Teams。
-
-:::image type="content" source="assets/images/overview-tabs.png" alt-text="クライアント内のタブの外観を概念Teamsします。" border="false":::
+**ユーザーの集中を** 支援 [](concepts/design/personal-apps.md)する: 個人用アプリは、ユーザーが自分のタスクに集中したり、重要なアクティビティを表示したりするのに役立つ専用のスペースまたはボットです。
 
    :::column-end:::
 
-   :::column span="":::
+   :::column span="3":::
 
-### <a name="bots"></a>ボット
-
-**単語をアクションに** 変換する: 会話は、多くの場合、何かをする必要があります (注文の生成、コードの確認、チケットの状態の確認など)。 ボット[は、](bots/what-are-bots.md)これらの種類のワークフローをワークフローの内部で開始Teams。
-
-:::image type="content" source="assets/images/overview-bots.png" alt-text="クライアントでのボットの外観の概念Teamsします。" border="false":::
+:::image type="content" source="assets/images/overview-personal-apps-2021.png" alt-text="クライアントでの個人用アプリの外観の概念Teamsします。" border="false":::
 
    :::column-end:::
 
 :::row-end:::
 
+### <a name="tabs"></a>タブ
+
+:::row:::
+   :::column span="1":::
+
+**共同作業の便利さ**: Web ベースのコンテンツをタブ [](tabs/what-are-tabs.md)に表示し、ユーザーが一緒に話し合って作業できます。
+
+   :::column-end:::
+
+   :::column span="3":::
+
+:::image type="content" source="assets/images/overview-channel-chat-apps-2021.png" alt-text="クライアント内のタブの外観を概念Teamsします。" border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+### <a name="bots"></a>ボット
+
+:::row:::
+   :::column span="1":::
+
+**単語をアクションに** 変換する: 会話は、多くの場合、何かをする必要があります (注文の生成、コードの確認、チケットの状態の確認など)。 ボット[は、](bots/what-are-bots.md)これらの種類のワークフローをワークフローの内部で開始Teams。
+
+   :::column-end:::
+
+   :::column span="3":::
+
+:::image type="content" source="assets/images/overview-bots-2021.png" alt-text="クライアントでのボットの外観の概念Teamsします。" border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+### <a name="messaging-extensions"></a>メッセージング拡張機能
+
+:::row:::
+
+   :::column span="1":::
+
+**マルチタスクを容易にする**: メッセージング拡張機能 [を](messaging-extensions/what-are-messaging-extensions.md)使用すると、会話で外部情報をすばやく共有できます。 また、チャネル投稿のコンテンツに基づいてヘルプ チケットを作成するなどのメッセージに対して処理できます。
+
+   :::column-end:::
+
+   :::column span="3":::
+
+:::image type="content" source="assets/images/overview-messaging-extensions-2021.png" alt-text="クライアントでのメッセージング拡張機能の外観の概念Teamsします。" border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="meeting-extensions"></a>ミーディング拡張機能
+
+:::row:::
+
+   :::column span="1":::
+
+**会議用アプリを作成する**: アプリを通話エクスペリエンスに組み込むTeams [があります](apps-in-teams-meetings/design/designing-apps-in-meetings.md)。
+
+   :::column-end:::
+
+   :::column span="3":::
+
+:::image type="content" source="assets/images/overview-meeting-extensions-2021.png" alt-text="会議の拡張機能がクライアントでどのような表示をTeamsします。" border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="webhooks-and-connectors"></a>Webhook とコネクタ
+
 :::row:::
 
    :::column span="":::
 
-### <a name="messaging-extensions"></a>メッセージング拡張機能
-
-**マルチタスクを容易にする**: メッセージング拡張機能 [を](messaging-extensions/what-are-messaging-extensions.md)使用すると、会話で外部情報をすばやく共有できます。 また、チャネル投稿のコンテンツに基づいてヘルプ チケットを作成するなどのメッセージに対して処理できます。
-
-:::image type="content" source="assets\images\overview-messaging.png" alt-text="クライアントでのメッセージング拡張機能の外観の概念Teamsします。" border="false":::
+**外部アプリと通信** する:[受信 Webhooks は](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks)、別のアプリから別のチャネルに通知を自動的に送信Teamsです。 送信 [Webhooks を使用して](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)、Web サービスにメッセージを送信@mention。
 
    :::column-end:::
 
    :::column span="":::
-
-### <a name="webhooks"></a>Webhook
-
-**外部アプリと通信** する:[受信 Webhooks は](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks)、別のアプリから別のチャネルに通知を自動的に送信Teamsです。 送信 [Webhooks を使用して](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)、Web サービスにメッセージを送信@mention。
 
 :::image type="content" source="assets/images/overview-connectors.png" alt-text="クライアントでのコネクタの外観の概念Teamsします。" border="false":::
 
    :::column-end:::
 :::row-end:::
 
+### <a name="microsoft-graph-for-teams"></a>Microsoft Graph Teams
+
 :::row:::
 
    :::column span="":::
 
-### <a name="microsoft-graph-for-teams"></a>Microsoft Graph Teams
-
-**Teams** データを利用する : [microsoft Graph API for Teams](/graph/teams-concept-overview)では、アプリの機能の作成や強化に役立つチーム、チャネル、ユーザー、メッセージに関する情報にアクセスできます。
-
-:::image type="content" source="assets/images/overview-graph.png" alt-text="Microsoft Graph API の概念Teams。" border="false":::
+**Teams** データを利用する : [Microsoft Graph API for Teams](/graph/teams-concept-overview)では、チーム、チャネル、ユーザー、メッセージに関する情報にアクセスし、アプリの機能 (リッチ通知など) の作成や強化に役立ちます。
 
    :::column-end:::
 
    :::column span="":::
+
+:::image type="content" source="assets/images/overview-graph.png" alt-text="Microsoft Graph API の概念Teams。" border="false":::
+
    :::column-end:::
 :::row-end:::
 

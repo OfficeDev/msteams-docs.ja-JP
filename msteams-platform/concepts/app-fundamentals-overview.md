@@ -5,12 +5,12 @@ description: プラットフォーム開発の基本的な概念Teams説明し�
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 6d0c22049e828426cfe963da6631b4c289566bf0
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 1ecae34c38950f16e49fc123f73bdc746c4b28cc
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058461"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630159"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Microsoft Teams開発の基本
 
@@ -35,9 +35,8 @@ Microsoft Teamsの基本は、カスタム アプリを作成する必要があ�
 
 ## <a name="see-also"></a>関連項目
 
-- [Web アプリとアプリを統合Teams](../samples/integrating-web-apps.md)
-
-- [最初のアプリをMicrosoft Teamsする](../build-your-first-app/build-first-app-overview.md)
+* [Web アプリとアプリを統合Teams](../samples/integrating-web-apps.md)
+* [最初のアプリをMicrosoft Teamsする](../build-your-first-app/build-first-app-overview.md)
 
 ## <a name="next-step"></a>次の手順
 

@@ -3,20 +3,26 @@ title: カスタム アプリの設計
 author: heath-hamilton
 description: アプリを設計するMicrosoft Teamsします。 リソースには、MICROSOFT TEAMS UI キット、ベスト プラクティス、例などがあります。
 localization_priority: Normal
-ms.author: lajanuar
+ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 2f21872bd8c37026528ff6fde282e8c433d5e052
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 19b8f8cbcbc52aa02ccd5d94f5bc4c088f2ae28a
+ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565117"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52644876"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>アプリのMicrosoft Teamsする
 
 :::image type="content" source="../../assets/images/design-guidelines-overview.png" alt-text="設計ガイドラインに関するMicrosoft Teams概念図。":::
 
 低コード ツールを使用しているデザイナー、製品マネージャー、開発者、メーカーなど、これらのガイドラインは、Microsoft Teams アプリに対して適切な設計上の意思決定を迅速に行うのに役立ちます。
+
+## <a name="creating-a-cohesive-experience"></a>一つ一つのエクスペリエンスを作成する
+
+アプリのTeamsは、従来の Web アプリの設計と同じですが、少し異なります。 効果的な設計では、アプリの固有の属性を強調しながら、アプリの機能やコンテキストTeams自然にフィットします。
+
+これらのガイドラインとリソースは、バランスを取る際に役立ちます。 アプリを設計するときに何を行い、何を回避Teams (タブ内の複数レベルのナビゲーションなど) が分かっています。
 
 ## <a name="teams-app-design-principles"></a>Teamsの設計原則
 
@@ -107,27 +113,9 @@ UI はわかりやすいので、見た目とトーンが快適で、ユーザ�
    :::column-end:::
 :::row-end:::
 
-## <a name="creating-a-cohesive-experience"></a>一つ一つのエクスペリエンスを作成する
-
-アプリのTeamsは、従来の Web アプリの設計と同じですが、少し異なります。 効果的な設計では、アプリの固有の属性を強調しながら、アプリの機能やコンテキストTeams自然にフィットします。
-
-これらのガイドラインとリソースは、バランスを取る際に役立ちます。 アプリを設計するときに何を行い、何を回避Teams (タブ内の複数レベルのナビゲーションなど) が分かっています。
-
-## <a name="planning-your-app"></a>アプリの計画
-
-高品質のアプリをTeamsするには、まずアプリが何を行うのか、ユーザーがアプリを使用すると思う方法を理解する必要があります。 まだ計画していない場合は、アプリを適切に計画 [するために少し時間を取ってください](../../concepts/extensibility-points.md)。
-
-## <a name="design-fundamentals"></a>デザインの基本事項
+## <a name="teams-design-system"></a>Teams設計システム
 
 レイアウト[、配色Teamsなど、](design-teams-app-fundamentals.md)アプリ設計の基本について学習します。
-
-## <a name="basic-fluent-ui-components-for-teams"></a>ユーザーの基本的な Fluent UI コンポーネントTeams
-
-Fluent UI に基づいて、使い慣れたインターフェイス[を作成するためのTeamsです](design-teams-app-basic-ui-components.md)。
-
-## <a name="ui-templates"></a>UI テンプレート
-
-一般的な使用例やワークフロー用のテンプレートを使用して、複雑で忠実[度Teamsをすばやく作成します](design-teams-app-ui-templates.md)。
 
 ## <a name="app-capabilities"></a>アプリの機能
 
@@ -138,17 +126,14 @@ Fluent UI に基づいて、使い慣れたインターフェイス[を作成す
 * [メッセージング拡張機能](../../messaging-extensions/design/messaging-extension-design.md)
 * [ボット](../../bots/design/bots.md)
 * [ミーディング拡張機能](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [タスク モジュール](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
-* [アダプティブ カード](../../task-modules-and-cards/cards/design-effective-cards.md)
 
-## <a name="app-customization"></a>アプリのカスタマイズ
+## <a name="ui-templates"></a>UI テンプレート
 
-管理者が組織Teamsに基づいてアプリをカスタマイズまたは再ブランド化する方法を理解します。 このカスタマイズは、マニフェスト スキーマで定義 `configurableProperties` する場合に有効になります。 詳細については、「アプリのカスタマイズ[」を参照Microsoft Teams。](/MicrosoftTeams/customize-apps)
+一般的な使用例やワークフロー用のテンプレートを使用して、複雑で忠実[度Teamsをすばやく作成します](design-teams-app-ui-templates.md)。
 
-> [!NOTE]
-> アプリのカスタマイズにより、管理者はボット、メッセージング拡張機能、タブ、コネクタを介して読み込まれたアプリの外観を変更できます。 たとえば、管理者Teams Contoso から *Contoso* *エージェント* にアプリの名前をカスタマイズすると、ユーザーに Contoso *Agent* という新しい名前が表示されます。 ただし、チャットにコネクタを追加している間、一覧でコネクタは引き続きアプリの名前を Contoso として表示 *します*。
-> 
-> ベスト プラクティスとして、アプリのユーザーとユーザーがアプリをカスタマイズするときに従うカスタマイズ ガイドラインを提供する必要があります。 詳細については、「アプリのカスタマイズ[」を参照Microsoft Teams。](/MicrosoftTeams/customize-apps)
+## <a name="basic-ui-components"></a>基本的な UI コンポーネント
+
+Fluent UI に基づいて、[](design-teams-app-basic-ui-components.md)これらの要素を使用して、最初からエクスペリエンスTeams作成できます。
 
 ## <a name="tools-and-samples"></a>ツールとサンプル
 
@@ -175,7 +160,7 @@ UI コンポーネントTeamsテンプレート、および必要に応じてド
 
 ### <a name="sample-app"></a>サンプル アプリ
 
-サンプル アプリをインストールして、UI テンプレートの外観と動作を各コンテキストTeamsします。
+サンプル アプリをアップロードして、アプリの外観と動作をクライアントで確認Teamsできます。
 
 > [!div class="nextstepaction"]
 > [サンプル アプリを取得する (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
@@ -186,7 +171,7 @@ UI コンポーネントTeamsテンプレート、および必要に応じてド
 
 ### <a name="fluent-ui-documentation"></a>Fluent UI のドキュメント
 
-ユーザー エクスペリエンスの構築に使用される Fluent UI ベースのコンポーネントのコード サンプルと実装Teams取得します。
+ユーザー エクスペリエンスの構築に使用される基本的な Fluent UI コンポーネントのコード サンプルと実装Teams取得します。
 
 > [!div class="nextstepaction"]
 > [UI Teams試す (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)

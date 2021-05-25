@@ -5,12 +5,12 @@ description: MVC を使用してカスタム チャネルとグループ タブ�
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: ea929edf5a281a4bb80a37b2d5c6e19c82fce6e4
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: bac406f22e9273b6cca5d1d5f576b03d295b875f
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52580463"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630356"
 ---
 # <a name="create-a-custom-channel-and-group-tab-with-aspnet-core-mvc"></a>MVC を使用してカスタム チャネルとグループ タブを ASP.NET Coreする
 
@@ -20,7 +20,7 @@ ms.locfileid: "52580463"
 
 ## <a name="get-the-source-code"></a>ソース コードを取得する
 
-コマンド プロンプトを開き、タブ プロジェクトの新しいディレクトリを作成します。 開始する簡単な [チャネル グループ タブ](https://github.com/OfficeDev/microsoft-teams-sample-tabs/ChannelGroupTabMVC) プロジェクトを提供しました。 ソース コードを取得するには、zip フォルダーをダウンロードしてファイルを抽出するか、サンプル リポジトリを新しいディレクトリに複製します。
+コマンド プロンプトを開き、タブ プロジェクトの新しいディレクトリを作成します。 開始する簡単な [チャネル グループ タブ](https://github.com/OfficeDev/microsoft-teams-sample-tabs/tree/master/ChannelGroupTabMVC) プロジェクトを提供しました。 ソース コードを取得するには、zip フォルダーをダウンロードしてファイルを抽出するか、サンプル リポジトリを新しいディレクトリに複製します。
 
 ```bash
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git

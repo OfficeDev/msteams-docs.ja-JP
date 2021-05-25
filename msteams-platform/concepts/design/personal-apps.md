@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: b3f08c39a7900b80fb46d167fae8d9e8bdbcc574
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 83fad746d71dd196f6efa6526f5c6c28ceac9e20
+ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101556"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52644898"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>アプリの個人用アプリを設計Microsoft Teams
 
@@ -39,14 +39,16 @@ Teams ストア (AppSource) またはアプリ のフライアウトから個人
 
 ### <a name="anatomy-personal-app-private-workspace"></a>Anatomy: 個人用アプリ (プライベート ワークスペース)
 
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="例は、個人用タブのコンポーネント構造を示しています。" border="false":::
 
 |カウンター|説明|
 |----------|-----------|
 |A|**アプリの属性**: アプリのロゴと名前。|
-|B|**タブ**: 個人用アプリのナビゲーションを提供します。 たとえば、[概要] タブまたは **[ヘルプ]** タブ **を含** めることができます。|
+|B|**タブ**: 個人用アプリのナビゲーションを提供します。|
 |C|**Popout ビュー**: 親ウィンドウからスタンドアロンの子ウィンドウにアプリコンテンツをプッシュします。|
-|D|**[その他]** メニュー: 追加のアプリ情報とオプションが含まれます。 (代わりに、タブ **設定** することもできます)。|
+|D|**[その他]** メニュー: 追加のアプリのオプションと情報が含まれます。 (代わりに、タブ **設定** することもできます)。|
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="例は、個人用タブの構造構造を示しています。" border="false":::
 
@@ -55,22 +57,44 @@ Teams ストア (AppSource) またはアプリ のフライアウトから個人
 |A|**タブ**: 個人用アプリのナビゲーションを提供します。|
 |1|**iframe**: アプリのコンテンツを表示します。|
 
-### <a name="designing-with-ui-templates"></a>UI テンプレートを使用した設計
+# <a name="mobile"></a>[モバイル](#tab/mobile)
 
-個人用タブを設計するには、次Teams UI テンプレートのいずれかを使用します。
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="例は、個人用タブのコンポーネント構造を示しています。" border="false":::
+
+|カウンター|説明|
+|----------|-----------|
+|A|**アプリの属性**: アプリ名。|
+|B|**タブ**: 個人用アプリのナビゲーションを提供します。|
+|C|**[その他]** メニュー: 追加のアプリのオプションと情報が含まれます。|
+|D|**プライマリ ナビゲーション**: アプリの他の主要な機能へのTeamsします。|
+
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="例は、個人用タブの構造構造を示しています。" border="false":::
+
+|カウンター|説明|
+|----------|-----------|
+|A|**タブ**: 個人用アプリのナビゲーションを提供します。|
+|1|**webview**: アプリのコンテンツを表示します。|
+
+---
+
+### <a name="designing-with-ui-templates-and-advanced-components"></a>UI テンプレートと高度なコンポーネントを使用した設計
+
+個人用タブを設計するには、Teamsテンプレートとコンポーネントのいずれかを使用します。
 
 * [リスト](../../concepts/design/design-teams-app-ui-templates.md#list): リストは、関連するアイテムをスキャン可能な形式で表示し、ユーザーがリスト全体または個々のアイテムに対してアクションを実行できます。
 * [タスク ボード](../../concepts/design/design-teams-app-ui-templates.md#task-board): カンバン ボードやスイム レーンとも呼ばれるタスク ボードは、作業アイテムやチケットの状態を追跡するためによく使用されるカードのコレクションです。
 * [ダッシュボード](../../concepts/design/design-teams-app-ui-templates.md#dashboard): ダッシュボードは、データまたはコンテンツの概要を示す複数のカードを含むキャンバスです。
 * [フォーム](../../concepts/design/design-teams-app-ui-templates.md#form): フォームは、構造化された方法でユーザー入力を収集、検証、送信するためのフォームです。
 * [空の状態](../../concepts/design/design-teams-app-ui-templates.md#empty-state): 空の状態テンプレートは、サインイン、初回実行エクスペリエンス、エラー メッセージなど、多くのシナリオで使用できます。
-* [左ナビゲーション](../../concepts/design/design-teams-app-ui-templates.md#left-nav): 左側のナビゲーション テンプレートは、タブにナビゲーションが必要な場合に役立ちます。 一般に、タブ ナビゲーションは最小限に抑えます。
+* [左ナビゲーション](~/concepts/design/design-teams-app-advanced-ui-components.md#left-nav): 左側のナビゲーション コンポーネントは、個人用アプリでナビゲーションが必要な場合に役立ちます。 一般に、ナビゲーションは最小限に抑えます。
 
 ## <a name="use-a-personal-app-bot"></a>個人用アプリ (ボット) の使用
 
 個人用アプリには、1 対 1 の会話とプライベート通知用のボットを含めできます (たとえば、同僚がアートボードにコメントを投稿する場合など)。 ボットは、指定したタブで使用できます。
 
 ### <a name="anatomy-personal-app-bot"></a>解剖学: 個人用アプリ (ボット)
+
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
 
 :::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="例は、個人用ボット コンポーネントの構造を示しています。" border="false":::
 
@@ -79,6 +103,19 @@ Teams ストア (AppSource) またはアプリ のフライアウトから個人
 |A|**[ボット]** タブ: たとえば、[チャット] タブ **を含** め、ボットの会話と通知にアクセスします。|
 |B|**ボット メッセージ**: ボットは、多くの場合、メッセージや通知をカード (アダプティブ カードなど) の形式で送信します。|
 |C|**[作成]** ボックス : ボットにメッセージを送信する入力フィールド。|
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="例は、個人用ボット コンポーネントの構造を示しています。" border="false":::
+
+|カウンター|説明|
+|----------|-----------|
+|A|**ボット エントリ ポイント**: ユーザーが個人用アプリのボット機能にアクセスするエントリ ポイント。|
+|B|**[戻る**] ボタン: ユーザーをプライベート ワークスペースに戻します。|
+|C|**ボット メッセージ**: ボットは、多くの場合、メッセージや通知をカード (アダプティブ カードなど) の形式で送信します。|
+|D|**[作成]** ボックス : ボットにメッセージを送信する入力フィールド。|
+
+---
 
 ## <a name="manage-a-personal-tab"></a>個人用タブの管理
 

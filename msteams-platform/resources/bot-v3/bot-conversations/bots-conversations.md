@@ -5,12 +5,12 @@ ms.topic: overview
 localization_priority: Normal
 keywords: teams ボット メッセージ
 ms.date: 05/20/2019
-ms.openlocfilehash: e1926afe42bca45eda5f39be1be8342452b3aa24
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: efa7658aef87650e360c79523ac1c282dc4814fd
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566496"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630461"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>ボットと会話Microsoft Teamsする
 
@@ -51,7 +51,7 @@ ms.locfileid: "52566496"
 
 ボットはリッチ テキスト、画像、カードを送信できます。 ユーザーは、リッチ テキストと画像をボットに送信できます。 ボットで処理できるコンテンツの種類は、ボットの [Microsoft Teams設定] ページで指定できます。
 
-| Format | ユーザーからボットへ  | ボットからユーザーへ |  備考 |
+| Format | ユーザーからボットへ  | ボットからユーザーへ |  Notes |
 | --- | :---: | :---: | --- |
 | リッチ テキスト | ✔ | ✔ |  |
 | ピクチャ | ✔ | ✔ | 最大 1024× 1024 および 1 MB (PNG、JPEG、または GIF 形式)。アニメーション GIF はサポートされていません。 |
@@ -88,7 +88,7 @@ XML を使用して、各イメージの高さと幅を指定することをお�
 * **個人用チャット** ユーザーは、チャット履歴で追加されたボットを選択するか、新しいチャットの [To:] ボックスに名前またはアプリ ID を入力するだけで、ボットとのプライベート会話で対話できます。
 * **チャネル** ボットがチームに追加されている場合は、チャネルにボット (&quot;@_botname_") を指定できます。 チャネル内のボットに対する追加の返信には、ボットのメンションが必要です。 これは、記載されていない返信には応答しない。
 
-受信メッセージの場合、ボットは型の [`Activity`](/azure/bot-service/rest-api/bot-framework-rest-connector-activities?view=azure-bot-service-3.0&preserve-view=true) オブジェクトを受け取ります `messageType: message` 。 オブジェクトには、ボットに送信されるチャネル更新など、他の種類の情報を含めすることもできますが、この型はボットとユーザーの間 `Activity` [](~/resources/bot-v3/bots-notifications.md#channel-updates) `message` の通信を表します。
+受信メッセージの場合、ボットは種類 [の Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) オブジェクトを受け取ります `messageType: message` 。 オブジェクトには、ボットに送信されるチャネル更新など、他の種類の情報を含めすることもできますが、この型はボットとユーザーの間 `Activity` [](~/resources/bot-v3/bots-notifications.md#channel-updates) `message` の通信を表します。
 
 ボットは、ユーザー メッセージ、ユーザーに関するその他の情報、メッセージのソース、およびユーザー情報を含む `Text` ペイロードをTeamsします。 注:
 

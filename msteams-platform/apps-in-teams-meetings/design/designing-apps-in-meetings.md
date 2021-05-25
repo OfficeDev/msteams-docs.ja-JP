@@ -5,12 +5,12 @@ description: 会議でアプリを設計し、Teams UI キットをMicrosoft Tea
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 0a888c333305e9caafcd0bac0e5549bf08ead424
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 33b11a6dfc759fabd54ca2fe2c68978a5d5d1475
+ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566027"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52644646"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>会議の拡張機能Microsoft Teams設計する
 
@@ -25,23 +25,33 @@ ms.locfileid: "52566027"
 
 ## <a name="add-a-meeting-extension"></a>会議の拡張機能を追加する
 
-会議の前と会議中に会議拡張機能を追加できます。 また、特定の会議のアプリをアプリ ストア (AppSource) Teams追加することもできます。
+ユーザーは、会議の前と会議中に会議拡張機能を追加できます。 また、特定の会議用のアプリを、その会議ストアから直接Teamsすることもできます。
 
 ### <a name="add-before-a-meeting"></a>会議の前に追加する
 
-会議の詳細で、[タブの追加 **] +** を選択してアプリの飛び出しを開き、会議に最適化されたアプリを検索します。
+会議の詳細で、ユーザーは [タブの追加 **] +** を選択してアプリの飛び出しを開き、会議用に最適化されたアプリを検索できます。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-before-meeting.png" alt-text="例は、会議の前に会議の内線情報を追加する方法を示しています。" border="false":::
 
 ### <a name="add-during-a-meeting"></a>会議中に追加する
 
-会議で、[その他の :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **アプリの追加] を選択し**、目的のアプリを選択します。
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
+会議では、ユーザーは [アプリの **追加**] を選択 :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **し**、必要なアプリを選択できます。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="例は、会議中に会議の内線情報を追加する方法を示しています。" border="false":::
 
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+会議では、ユーザーは [その他] **を選択** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: し、必要なアプリを選択できます。
+
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="例は、モバイルでの会議中に会議の内線情報を追加する方法を示しています。" border="false":::
+
+---
+
 ## <a name="before-a-meeting"></a>会議の前に
 
-会議の前に、タブにコンテンツを追加できます。次の例は、通話中に回答するアンケートの下書き質問を示しています。
+会議の前に、ユーザーはタブにコンテンツを追加できます。次の例は、通話中に回答するアンケートの下書き質問を示しています。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="例は、通話の前に会議の詳細でコンテンツをアプリする方法を示しています。" border="false":::
 
@@ -64,7 +74,7 @@ ms.locfileid: "52566027"
 * [ダッシュボード](../../concepts/design/design-teams-app-ui-templates.md#dashboard): ダッシュボードは、データまたはコンテンツの概要を示す複数のカードを含むキャンバスです。
 * [フォーム](../../concepts/design/design-teams-app-ui-templates.md#form): フォームは、構造化された方法でユーザー入力を収集、検証、送信するためのフォームです。
 * [空の状態](../../concepts/design/design-teams-app-ui-templates.md#empty-state): 空の状態テンプレートは、サインイン、初回実行エクスペリエンス、エラー メッセージなど、多くのシナリオで使用できます。
-* [左ナビゲーション](../../concepts/design/design-teams-app-ui-templates.md#left-nav): 左側のナビゲーション テンプレートは、タブにナビゲーションが必要な場合に役立ちます。 一般に、タブ ナビゲーションは最小限に抑えます。
+* [左ナビゲーション](../../concepts/design/design-teams-app-advanced-ui-components.md#left-nav): 左側のナビゲーション コンポーネントは、タブにナビゲーションが必要な場合に役立ちます。 一般に、ナビゲーションは最小限に抑えます。
 
 ## <a name="use-an-in-meeting-tab"></a>[会議内] タブを使用する
 
@@ -78,7 +88,15 @@ ms.locfileid: "52566027"
 * 会議参加者のポーリング、アンケート、またはタスク アイテムを作成します。
 * 会議に関連するメモを表示します。 たとえば、販売リードに関する情報です。
 
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 :::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="例は、会議内タブでポーリング コンテンツを表示する方法を示しています。" border="false":::
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="例は、モバイル上の会議内タブでポーリング コンテンツを表示する方法を示しています。" border="false":::
+
+---
 
 ### <a name="anatomy-in-meeting-tab"></a>解剖学: [会議中] タブ
 
@@ -124,7 +142,15 @@ Iframe のコンテンツは垂直方向にスクロールする必要があり�
 * 承認を送信する
 * アラームを取得する
 
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 :::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="例は、会議内ダイアログを使用する方法を示しています。" border="false":::
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="例は、モバイルで会議内ダイアログを使用する方法を示しています。" border="false":::
+
+---
 
 ### <a name="anatomy-in-meeting-dialog"></a>解剖学: 会議中のダイアログ
 

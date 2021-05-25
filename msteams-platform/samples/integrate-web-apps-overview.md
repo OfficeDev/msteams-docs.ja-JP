@@ -4,12 +4,12 @@ author: Rajeshwari-v
 description: Web アプリケーションとデバイス機能をアプリと統合するMicrosoft Teams概要。
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 01977e22d79f7e39986367e647a2d48ea9b2905c
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 5136c598a3640b5cce92969ea3468c42a7a801db
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058657"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630447"
 ---
 # <a name="integrate-web-apps"></a>Web アプリを統合する
 
@@ -37,7 +37,7 @@ ms.locfileid: "52058657"
 
 Microsoft Power プラットフォームは、1 つの強力なアプリケーション プラットフォームで、Power BI、Power Apps、Power Automate、Power Virtual Agentsなど、4 つの堅牢な Microsoft テクノロジを組み合わせたプラットフォームです。 これらのテクノロジを使用すると、ソリューションの構築、プロセスの自動化、データの分析、統合された統合環境内での仮想エージェントの作成が可能になります。
 
-### <a name="power-apps"></a>Power Apps
+### <a name="power-apps"></a>Power アプリ
 
 このPower Apps、ビジネス データに接続し、組織のニーズに合わせてカスタマイズされたビジネス アプリを構築できます。 Power Appsキャンバス アプリを通じてビジネスの課題を解決するために、さまざまなアプリ シナリオを有効にします。 アプリを構築した後、アプリをメーカー ポータルからエクスポートしPower Appsに埋め込Microsoft Teams。
 
@@ -79,28 +79,16 @@ Microsoft Teamsプラットフォームは、組み込みのファースト パ�
 
 ## <a name="see-also"></a>関連項目
 
-- [アプリの使用例をプラットフォームの機能Teamsマップする](~/concepts/design/map-use-cases.md)
-
-- [アプリのエントリ ポイントを決定する](~/concepts/extensibility-points.md)
-
-- [Web アプリを統合する](~/samples/integrating-web-apps.md)
-
-- [低コードのカスタム アプリを作成Microsoft Teams](~/samples/teams-low-code-solutions.md)
-
-- [Power Virtual Agents チャットボットを追加する](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
-
-- [仮想アシスタントの作成](~/samples/virtual-assistant.md)
-
-- [Microsoft Teams 用のアプリ テンプレート](~/samples/app-templates.md)
-
-- [実稼働対応のシフト コネクタ](~/samples/shifts-wfm-connectors.md)
-
-- [Moodle LMS のインストール](~/resources/moodleinstructions.md)
-
-- [[Teams で共有] ボタンを作成する](~/concepts/build-and-test/share-to-teams.md)
-
-- [SharePoint に Teams タブを追加する](~/tabs/how-to/tabs-in-sharepoint.md)
-
-- [ディープ リンクの作成](~/concepts/build-and-test/deep-links.md)
-
-- [デバイス機能](~/concepts/device-capabilities/device-capabilities-overview.md)
+* [アプリの使用例をプラットフォームの機能Teamsマップする](~/concepts/design/map-use-cases.md)
+* [アプリのエントリ ポイントを決定する](~/concepts/extensibility-points.md)
+* [Web アプリを統合する](~/samples/integrating-web-apps.md)
+* [低コードのカスタム アプリを作成Microsoft Teams](~/samples/teams-low-code-solutions.md)
+* [Power Virtual Agents チャットボットを追加する](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
+* [仮想アシスタントの作成](~/samples/virtual-assistant.md)
+* [Microsoft Teams 用のアプリ テンプレート](~/samples/app-templates.md)
+* [実稼働対応のシフト コネクタ](~/samples/shifts-wfm-connectors.md)
+* [Moodle LMS のインストール](~/resources/moodleinstructions.md)
+* [[Teams で共有] ボタンを作成する](~/concepts/build-and-test/share-to-teams.md)
+* [SharePoint に Teams タブを追加する](~/tabs/how-to/tabs-in-sharepoint.md)
+* [ディープ リンクの作成](~/concepts/build-and-test/deep-links.md)
+* [デバイス機能](~/concepts/device-capabilities/device-capabilities-overview.md)

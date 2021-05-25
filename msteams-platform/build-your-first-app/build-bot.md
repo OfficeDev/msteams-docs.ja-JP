@@ -5,12 +5,12 @@ description: アプリを使用してMicrosoft Teamsボットをすばやく作�
 ms.author: timura
 ms.date: 04/14/2020
 ms.topic: tutorial
-ms.openlocfilehash: 2cbd90b293e8ac8343febc7b3d23278d5bb5bf82
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: d54766d739ceaf585ab4a1e026f4a6e1150e3a2e
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565887"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630979"
 ---
 # <a name="create-your-first-bot-for-teams"></a>ユーザーの最初のボットを作成Teams
 
@@ -64,7 +64,7 @@ ms.locfileid: "52565887"
 
 別のチュートリアルでタブを作成した場合、ボットのアプリスキャフォールディングは異なります。 タブとは異なり、ボットの開発では、フロントエンド Web コンポーネントをビルドしたり、JavaScript クライアント SDK のTeams必要としたりすることはできません。  代わりに、スキャフォールディングは[Microsoft Bot Framework](https://dev.botframework.com/)を使用します。これは、Web、モバイル、およびもちろんモバイルで動作するインテリジェントなエンタープライズ レベルのボットを構築するオープンソース SDK Teams です。 
 
-プロジェクトのルート ディレクトリにあるファイルは、ボットが特定のメッセージに応答する方法など、ボットアクティビティを処理する Teams 固有のハンドラー `botActivityHandler.js` です。 アプリのスキャフォールディングは、プロジェクトのルート ディレクトリにあるファイルを提供します。ボットが特定のメッセージに応答する方法などのボット アクティビティを処理する Teams 固有のハンドラー `botActivityHandler.js` です。
+アプリのスキャフォールディングは、プロジェクトのルート ディレクトリにあるファイルを提供し、ボットが特定のメッセージに応答する方法などのボット アクティビティを処理する Teams 固有のハンドラーです `botActivityHandler.js` 。
 
 ## <a name="3-securely-expose-your-localhost-to-the-internet"></a>3. localhost をインターネットに安全に公開する
 

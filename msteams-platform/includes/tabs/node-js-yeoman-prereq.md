@@ -78,7 +78,7 @@
 
     **テレメトリに Azure Applications Insights を使用しますか?(y/N)**
 
-    Azure **Application** [Insights を含めないを選択します](/azure-docs/articles/azure-monitor/app/app-insights-overview.md)。 既定値は no です。 **n と入力します**。
+    Azure **Application** [Insights を含めないを選択します](/azure/azure-monitor/app/app-insights-overview)。 既定値は no です。 **n と入力します**。
 
     **既定のタブ名 (最大 16 文字)?**
 

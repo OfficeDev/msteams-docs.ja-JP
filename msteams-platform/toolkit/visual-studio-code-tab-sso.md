@@ -5,12 +5,12 @@ keywords: teams visual studio コード ツールキット タブ sso graph 認�
 localization_priority: Normal
 ms.topic: how-to
 ms.author: lajanuar
-ms.openlocfilehash: 11e642ce335dae4344f1c730b73763e9172fd76c
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b2ba9eb27d00f07ec46ddfe0c1cc13ed0864bbbc
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566832"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630993"
 ---
 # <a name="single-sign-on-authentication-with-teams-toolkit-and-visual-studio-code-for-tabs"></a>タブ用のシングル サインオンTeams ToolkitとVisual Studio Code認証
 
@@ -50,4 +50,4 @@ Azure アプリ登録のプロビジョニング方法の詳細については�
 
 ## <a name="see-also"></a>関連項目
 
-- [アプリとアプリのMicrosoft Teams ToolkitをVisual Studio Code](visual-studio-code-overview.md)
+[アプリとアプリのMicrosoft Teams ToolkitをVisual Studio Code](visual-studio-code-overview.md)

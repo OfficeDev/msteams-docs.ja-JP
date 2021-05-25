@@ -5,12 +5,12 @@ keywords: teams ボット カードの形式
 localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: 848656097f2c865705cc0d91dece93049d8c6790
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b52eb01f7d886f3d4b2f12c8209c181d43a31956
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566584"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630214"
 ---
 # <a name="format-cards-in-teams"></a>カードの書式を設定Teams
 
@@ -169,8 +169,6 @@ Information masking プロパティを使用して、アダプティブ カー�
 > [!NOTE]
 > information masking プロパティは現在、開発者プレビューでのみ使用できます。
 
-アダプティブ カードで情報をマスクするには、型に `isMasked` プロパティを追加 **し** `Input.Text` 、その値を true に設定 *します*。
-
 #### <a name="sample-adaptive-card-with-masking-property"></a>マスキング プロパティを持つアダプティブ カードのサンプル
 
 ```json
@@ -178,8 +176,7 @@ Information masking プロパティを使用して、アダプティブ カー�
     "type": "Input.Text",
     "id": "secretThing",
     "style": "password",
-    "isMasked": true
-  },
+},
 ```
 
 次の図は、アダプティブ カードのマスキング情報の例です。
@@ -218,7 +215,7 @@ Information masking プロパティを使用して、アダプティブ カー�
 
 全幅アダプティブ カードは、次のように表示されます。 ![ 全幅アダプティブ カード ビュー](../../assets/images/cards/full-width-adaptive-card.png)
 
-プロパティを Full に設定していない場合、アダプティブ カードの既定のビューは次のとおりです。小幅アダプティブ カード `width`  ![ ビュー](../../assets/images/cards/small-width-adaptive-card.png)
+プロパティを Full に設定していない場合、アダプティブ カードの既定のビューは次のように `width` 表示されます。小幅アダプティブカード ![ ビュー](../../assets/images/cards/small-width-adaptive-card.png)
 
 ### <a name="typeahead-support"></a>Typeahead のサポート
 
@@ -287,7 +284,7 @@ schema 要素内で、ユーザーにフィルター処理を求め、多数の�
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| ヘッダー (レベル 1 &ndash; 3) | **Text** | `### Text`|
+| ヘッダー (レベル 1 &ndash; 3) | **テキスト** | `### Text`|
 | 取り消し線 | ~~text~~ | `~~text~~` |
 | 順序なしリスト | <ul><li>テキスト</li><li>テキスト</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | 順序付きリスト | <ol><li>テキスト</li><li>テキスト</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -376,7 +373,7 @@ Android では、コネクタ カードの Markdown 書式は次のように表�
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| ヘッダー (レベル 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
+| ヘッダー (レベル 1 &ndash; 3) | **テキスト** | `<h3>Text</h3>` |
 | 取り消し線 | ~~text~~ | `<strike>text</strike>` |
 | 順序なしリスト | <ul><li>テキスト</li><li>テキスト</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 順序付きリスト | <ol><li>テキスト</li><li>テキスト</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -464,7 +461,7 @@ HTML タグは、ヒーロー カードやサムネイル カードなどの単�
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| ヘッダー (レベル 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
+| ヘッダー (レベル 1 &ndash; 3) | **テキスト** | `<h3>Text</h3>` |
 | 取り消し線 | ~~text~~ | `<strike>text</strike>` |
 | 順序なしリスト | <ul><li>テキスト</li><li>テキスト</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 順序付きリスト | <ol><li>テキスト</li><li>テキスト</li></ol> | `<ol><li>text</li><li>text</li></ol>` |

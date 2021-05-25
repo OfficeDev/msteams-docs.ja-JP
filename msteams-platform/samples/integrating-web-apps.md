@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 localization_priority: Normal
 ms.topic: conceptual
 title: Web アプリ
-ms.openlocfilehash: 6783a05079f876cf3c2475a0ad5ca0e1f6687fc4
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b7f530198a8e1c240e3cf4b227d786af94f6c89e
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566223"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630433"
 ---
 # <a name="web-apps"></a>Web アプリ 
 
@@ -110,7 +110,7 @@ Webhook[よりも柔軟性が](../bots/what-are-bots.md)高Teams、マルチス�
 
 ボットでは、個々のユーザーまたは **チャネルにプロ** アクティブ メッセージを送信することもできます。 プロアクティブ メッセージは、ボットに送信されるメッセージではなく、外部イベントによってトリガーされるプロプロンプトされていないメッセージです。 たとえば、ボットがインストールされている場合、または新しいユーザーがチャネルに参加するときに、ボットからウェルカム メッセージが送信されます。 
 
-プロアクティブ メッセージの送信には、Teams固有の識別子が必要です。 この情報は、名簿[](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)またはユーザー プロファイル データのフェッチ、[](../bots/how-to/conversations/subscribe-to-conversation-events.md)会話イベントのサブスクライブ、または Microsoft Graph[を使用して取得できます](/graph/teams-proactive-messaging)。
+プロアクティブ メッセージの送信には、Teams固有の識別子が必要です。 この情報は、名簿[](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)またはユーザー プロファイル データのフェッチ、[](../bots/how-to/conversations/subscribe-to-conversation-events.md)会話イベントのサブスクライブ、または Microsoft Graph[を使用して取得できます](/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?context=graph/context#proactive-messaging-in-teams)。
 
 過剰なメッセージを持つユーザーに迷惑メールを送信しない。 この機能Teamsサポートしている場合、ユーザーはアプリの通知設定を構成できます。   
 通知メッセージの例を次に示します。プロンプトされていないメッセージ **は送信しません**。

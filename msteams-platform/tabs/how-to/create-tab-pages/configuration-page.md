@@ -6,12 +6,12 @@ keywords: teams タブ グループ チャネル構成可能
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: aeab1cf96d1e875db79d9143fefd0e46348f585a
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b8300f268f74bed4fd1180b7a97c3b21ddda820a
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566685"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629964"
 ---
 # <a name="create-a-configuration-page"></a>構成ページを作成する
 
@@ -104,7 +104,7 @@ ms.locfileid: "52566685"
 1. イベント `microsoftTeams.settings.registerOnSaveHandler()` ハンドラーがトリガーされます。
 1. アプリ **の** 構成ページの [保存] ボタンが有効Teamsされます。
 
-構成ページ コードは、構成Teams満たされ、インストールが続行可能な場合に、ユーザーに通知します。 ユーザーが [保存] を **選択** すると、インターフェイスで定義されているパラメーター `settings.setSettings()` が設定 `Settings` されます。 詳細については、「設定[インターフェイス」を参照してください](/javascript/api/@microsoft/teams-js/_settings?view=msteams-client-js-latest&preserve-view=true)。 最後の手順で、コンテンツ URL が正常に解決されたことを示 `saveEvent.notifySuccess()` すために呼び出されます。
+構成ページ コードは、構成Teams満たされ、インストールが続行可能な場合に、ユーザーに通知します。 ユーザーが [保存] を **選択** すると、インターフェイスで定義されているパラメーター `settings.setSettings()` が設定 `Settings` されます。 詳細については、「設定[インターフェイス」を参照してください](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true)。 最後の手順で、コンテンツ URL が正常に解決されたことを示 `saveEvent.notifySuccess()` すために呼び出されます。
 
 >[!NOTE]
 >
@@ -115,7 +115,7 @@ ms.locfileid: "52566685"
 
 お使いのタブでは、関連するコンテンツを表示するためにコンテキスト情報が必要になる場合があります。 コンテキスト情報は、よりカスタマイズされたユーザー エクスペリエンスを提供することで、タブの魅力をさらに強化します。
 
-タブ構成に使用されるプロパティの詳細については、「Context [interface」を参照してください](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true)。 次の 2 つの方法でコンテキスト データ変数の値を収集します。
+タブ構成に使用されるプロパティの詳細については、「Context [interface」を参照してください](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true)。 次の 2 つの方法でコンテキスト データ変数の値を収集します。
 
 1. マニフェストに URL クエリ文字列プレースホルダーを挿入します `configurationURL` 。
 
@@ -158,7 +158,7 @@ document.write(getId());
 
 ### <a name="use-the-getcontext-function-to-retrieve-context"></a>関数を使用 `getContext()` してコンテキストを取得する
 
-この `microsoftTeams.getContext((context) => {})` 関数は、呼び出されると [コンテキスト インターフェイス](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) を取得します。 この関数を構成ページに追加して、コンテキスト値を取得します。
+この `microsoftTeams.getContext((context) => {})` 関数は、呼び出されると [コンテキスト インターフェイス](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) を取得します。 この関数を構成ページに追加して、コンテキスト値を取得します。
 
 ```html
 <!-- `userPrincipalName` will render in the span with the id "user". -->
@@ -197,4 +197,4 @@ microsoftTeams.settings.setSettings({
 
 ## <a name="mobile-clients"></a>モバイル クライアント
 
-チャネルまたはグループ タブをモバイル クライアントのTeamsする場合、構成にはプロパティの値 `setSettings()` が必要 `websiteUrl` です。 詳細については、「モバイルでの [タブのガイダンス」を参照してください](~/tabs/design/tabs-mobile.md)。
+チャネルまたはグループ タブをモバイル クライアントのTeamsする場合は、構成の値が `setSettings()` 必要です `websiteUrl` 。 詳細については、「モバイルでの [タブのガイダンス」を参照してください](~/tabs/design/tabs-mobile.md)。

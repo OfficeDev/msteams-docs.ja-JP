@@ -5,16 +5,16 @@ author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: baa17cd97ff4e2cad91615dced5c4e4cf5e533c8
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 38eb7e400de63beb0d2840ee573bbfd16299cfbd
+ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566881"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52644742"
 ---
-# <a name="designing-your-tab-for-microsoft-teams-desktop-and-web"></a>デスクトップと Web のタブMicrosoft Teamsデザインする
+# <a name="designing-your-tab-for-microsoft-teams"></a>ユーザーのタブを設計Microsoft Teams
 
-タブは、コンテンツの大きなキャンバスです。 アプリの設計をガイドするために、次の情報は、ユーザーがアプリのタブを追加、使用、および管理する方法をTeams。
+タブは、アプリ コンテンツの大きなキャンバスです。 アプリの設計をガイドするために、次の情報は、ユーザーがアプリのタブを追加、使用、および管理する方法をTeams。
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
@@ -31,19 +31,29 @@ ms.locfileid: "52566881"
 * チャネル
 * 会議 (会議の前、中、または後)
 
-次の例は、タブがチャネルに追加される方法を示しています。
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
+次の例は、ユーザーがチャネルにタブを追加する方法を示しています。
 
 :::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="例は、チャネルに追加されるタブを示しています。" border="false":::
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+ユーザーは、チャネル (下の例) で [その他] ボタンを選択するか、追加したチャットを選択してタブにアクセスできます。
+
+:::image type="content" source="../../assets/images/tabs/mobile-design-access-tab.png" alt-text="例は、チャネルに追加されるモバイル タブを示しています。" border="false":::
+
+---
 
 ## <a name="set-up-a-tab"></a>タブを設定する
 
 チャネル、チャット、または会議タブとしてアプリを追加する短いセットアップ プロセスがあります。エクスペリエンスは主にユーザーが行います。 たとえば、アプリの使い方とオプションの設定について説明できます。 ユーザーを認証する必要がある場合は、ここにサインイン 手順を含める必要があります。
 
-### <a name="tab-configuration-modal"></a>タブ構成モーダル
+### <a name="tab-configuration-dialog"></a>タブ構成ダイアログ
 
 :::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="例は、タブ構成モーダルを示しています。" border="false":::
 
-### <a name="anatomy-tab-configuration-modal"></a>構造: タブ構成モーダル
+### <a name="anatomy-tab-configuration-dialog"></a>構造: タブ構成ダイアログ
 
 :::image type="content" source="../../assets/images/tabs/test.png" alt-text="タブ構成モーダルの UI 構造を示す図。" border="false":::
 
@@ -51,10 +61,10 @@ ms.locfileid: "52566881"
 |----------|-----------|
 |1|**アプリのロゴ**: アプリのフルカラー アプリ ロゴ。|
 |2|**アプリ名**: アプリの完全な名前。|
-|3|**iframe**: アプリのコンテンツの応答性の高い領域。 たとえば、タブ設定や認証などです。|
-|4|**リンクについて**: アプリの詳細、アプリで必要なアクセス許可、プライバシー ポリシーと利用規約へのリンクなど、アプリに関する詳細を示すダイアログを開きます。
-|5|**[閉じる**] ボタン: モーダルを閉じます。|
-|6|**[チーム メンバーに通知する] オプション**: モーダルは、他のユーザーがタブを追加したと知らせる投稿を作成する場合に尋ねるメッセージを表示します。|
+|3|**iframe**: アプリのコンテンツのレスポンシブ スペース (タブ設定や認証など)。|
+|4|**リンクについて**: アプリの詳細、アプリで必要なアクセス許可、プライバシー ポリシーと利用規約へのリンクなど、アプリに関する詳細を示すダイアログを開きます。|
+|5|**[閉じる**] ボタン: ダイアログを閉じます。|
+|6|**[チーム メンバーに通知する] オプション**: ダイアログボックスは、ユーザーが他のユーザーにタブを追加したと知らせる投稿を作成する必要がある場合に、ユーザーに尋ねるメッセージを表示します。|
 |7|**[戻る**] ボタン: ダイアログが開いた場所に基づいて、前の手順に進みます。|
 |8|**[保存]** ボタン: タブのセットアップを完了します。|
 
@@ -76,9 +86,19 @@ ms.locfileid: "52566881"
 
 タブは、タスク ボードやダッシュボードTeams重要な情報など、共同作業コンテンツを表示できる画面全体の Web エクスペリエンスを提供します。
 
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 :::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="例では、タスク ボードを含むタブを示します。" border="false":::
 
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab.png" alt-text="例は、タスク ボードを持つモバイル タブを示しています。" border="false":::
+
+---
+
 ### <a name="anatomy-tab"></a>構造: タブ
+
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
 
 :::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="タブの UI 構造を示す図。" border="false":::
 
@@ -86,19 +106,31 @@ ms.locfileid: "52566881"
 |----------|-----------|
 |1|**タブ名**: タブのナビゲーション ラベル。|
 |2|**タブ オーバーフロー**: 名前の変更や削除などのタブ アクションを開きます。|
-|3|**タブ チャット**: 右側にチャット スレッドを開き、ユーザーがコンテンツの横で会話を行えます。|
-|4|**iframe**: タブのコンテンツを表示します。
+|3|**タブ チャット**: 右側にチャットを開き、ユーザーがコンテンツの横で会話を行えます。|
+|4|**iframe**: アプリのコンテンツを表示します。|
 
-### <a name="designing-a-tab-with-ui-templates"></a>UI テンプレートを使用したタブの設計
+# <a name="mobile"></a>[モバイル](#tab/mobile)
 
-次のいずれかの UI テンプレートを使用Teams、タブ エクスペリエンスの設計に役立ちます。
+:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="タブの UI 構造を示す図。" border="false":::
+
+|カウンター|説明|
+|----------|-----------|
+|1|**タブ名**: タブのナビゲーション ラベル。|
+|2|**タブ チャット**: ユーザーがコンテンツの横で会話を行えるチャットを開きます。|
+|3|**webview**: アプリのコンテンツを表示します。|
+
+---
+
+### <a name="designing-a-tab-with-ui-templates-and-advanced-components"></a>UI テンプレートと高度なコンポーネントを使用したタブの設計
+
+タブ エクスペリエンスの設計に役立Teams、次のいずれかのテンプレートとコンポーネントを使用します。
 
 * [リスト](../../concepts/design/design-teams-app-ui-templates.md#list): リストは、関連するアイテムをスキャン可能な形式で表示し、ユーザーがリスト全体または個々のアイテムに対してアクションを実行できます。
 * [タスク ボード](../../concepts/design/design-teams-app-ui-templates.md#task-board): カンバン ボードやスイム レーンとも呼ばれるタスク ボードは、作業アイテムやチケットの状態を追跡するためによく使用されるカードのコレクションです。
 * [ダッシュボード](../../concepts/design/design-teams-app-ui-templates.md#dashboard): ダッシュボードは、データまたはコンテンツの概要を示す複数のカードを含むキャンバスです。
 * [フォーム](../../concepts/design/design-teams-app-ui-templates.md#form): フォームは、構造化された方法でユーザー入力を収集、検証、送信するためのフォームです。
 * [空の状態](../../concepts/design/design-teams-app-ui-templates.md#empty-state): 空の状態テンプレートは、サインイン、初回実行エクスペリエンス、エラー メッセージなど、多くのシナリオで使用できます。
-* [左ナビゲーション](../../concepts/design/design-teams-app-ui-templates.md#left-nav): 左側のナビゲーション テンプレートは、タブにナビゲーションが必要な場合に役立ちます。 一般に、タブ ナビゲーションは最小限に抑えます。
+* [左ナビゲーション](../../concepts/design/design-teams-app-advanced-ui-components.md#left-nav): 左側のナビゲーション コンポーネントは、タブにナビゲーションが必要な場合に役立ちます。 一般に、タブ ナビゲーションは最小限に抑えます。
 
 ## <a name="use-a-tab-to-collaborate"></a>タブを使用して共同作業を行う
 
@@ -108,13 +140,29 @@ ms.locfileid: "52566881"
 
 ユーザーは、新しいタブを追加すると、チャネルまたはチャットに自動的に投稿できます。これにより、チーム メンバーに新しいコンテンツが通知され、タブへのリンクが提供されるだけでなく、ユーザーはタブについて話し始めできます。
 
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 :::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="例は、チャネル スレッドで説明されているタブを示しています。" border="false":::
 
-### <a name="side-by-side-discussion"></a>サイド バイ サイドディスカッション
+# <a name="mobile"></a>[モバイル](#tab/mobile)
 
-タブのコンテンツを表示している間、ユーザーは次に会話をすることができます。
+:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-channel.png" alt-text="例は、チャネル スレッドで説明されているモバイル タブを示しています。" border="false":::
+
+---
+
+### <a name="tab-chat"></a>タブ チャット
+
+ユーザーは、表示しているタブ コンテンツの横で会話を行えます。 デスクトップでは、チャットがアプリ コンテンツの横に開きます。
+
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
 
 :::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="例では、右側にチャットが開いているタブが表示されます。" border="false":::
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-side-chat.png" alt-text="例は、コンテキスト内のチャット領域を持つモバイル タブを示しています。" border="false":::
+
+---
 
 ### <a name="permissions-and-role-based-views"></a>アクセス許可と役割ベースのビュー
 
@@ -126,13 +174,29 @@ ms.locfileid: "52566881"
 
 ### <a name="anatomy-tab-menu"></a>構造: タブ メニュー
 
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 :::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="タブ メニューの UI 構造を示す図。" border="false":::
 
 |カウンター|説明|
 |----------|-----------|
 |1|**設定**: (オプション) 追加後にタブの設定を変更できます。|
-|2|**名前** の変更 : ユーザーは、チームにとってより意味のある名前をタブに付けることができます。|
+|2|**名前** の変更 : ユーザーは、タブにチャネル、チャット、または会議に意味のある名前を付けることができます。|
 |3|**[削除**] : チャネル、チャット、または会議からタブを削除します。|
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="../../assets/images/tabs/mobile-design-manage-tab-menu-anatomy.png" alt-text="モバイル タブ メニューの UI 構造を示す図。" border="false":::
+
+|カウンター|説明|
+|----------|-----------|
+|1|**ブラウザーで開く**: デバイスの既定のブラウザーでアプリを開きます。|
+|2|**[リンクの** コピー]: ユーザーは、タブへのリンクをコピーして共有できます。|
+|3|**設定**: (オプション) タブの設定を追加した後に変更します。|
+|4|**名前** の変更 : ユーザーは、タブにチャネル、チャット、または会議に意味のある名前を付けることができます。|
+|5|**削除**: チャネル、チャット、または会議からタブを削除します。|
+
+---
 
 ## <a name="tab-notifications-and-deep-linking"></a>タブ通知とディープ リンク
 

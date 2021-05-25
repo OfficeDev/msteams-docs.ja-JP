@@ -5,16 +5,16 @@ description: アプリの作成や UI キットの取得にMicrosoft Teams一般
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: fd6053b28bd56231d49c5830a00d40868a36509a
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: eec324a67cec0eb39cc98c0ab63ff71771ebbf11
+ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019889"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52644911"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>基本的な Fluent UI Microsoft Teamsを使用してアプリを設計する
 
-Teamsアプリは、通常、次の基本的な Fluent UI コンポーネントを使用して構築されます。 これらのコンポーネントは、可能な限りフラットに設計され、さまざまな使用例、テーマ、画面サイズで機能します。
+次の基本的な Fluent UI コンポーネントTeamsアプリを最初からビルドできます。 これらのコンポーネントは、可能な限りフラットに設計され、さまざまな使用例、テーマ、画面サイズで機能します。
 
 このページの図は、既定の (明るい) テーマと暗いTeamsコンポーネントの外観を示しています。
 

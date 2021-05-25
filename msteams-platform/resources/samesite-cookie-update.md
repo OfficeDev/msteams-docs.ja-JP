@@ -6,12 +6,12 @@ keywords: cookie 属性 samesite
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: cf28a28050d50b2b6b2601a3231cdad30211ab2c
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: c286e01b6e2477c1ab2b787852cde0fb789a80da
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566713"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629852"
 ---
 # <a name="microsoft-teams-and-the-samesite-cookie-attribute-2020-update"></a>Microsoft Teams SameSite cookie 属性 (2020 更新プログラム)
 
@@ -80,11 +80,8 @@ Android WebView は、Android アプリが Web コンテンツを表示できる
 ## <a name="see-also"></a>関連項目
 
 * [SameSite の例](https://github.com/GoogleChromeLabs/samesite-examples)
-
 * [SameSite Cookie のレシピ](https://web.dev/samesite-cookie-recipes/)
-
 * [既知の互換性のないクライアント]( https://www.chromium.org/updates/same-site/incompatible-clients)
-
 * [開発者: Get Ready for New SameSite=None;セキュリティで保護された Cookie 設定](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
 
 **OpenId Connect影響**<br>

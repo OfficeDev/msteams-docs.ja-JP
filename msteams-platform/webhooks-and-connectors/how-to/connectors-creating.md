@@ -5,16 +5,16 @@ keywords: Teams o365 コネクタ
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 04/19/2019
-ms.openlocfilehash: 9eaaedf88d907dd7a7422068ab5d20450345f0e7
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: ace546853d7dfe9773055288a0fc3471fe656652
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566811"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629824"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>ユーザー Office 365コネクタのMicrosoft Teams
 
->アプリMicrosoft Teamsを使用すると、既存のコネクタコネクタをOffice 365したり、新しいコネクタをビルドして新しいコネクタにMicrosoft Teams。 詳細については [、「独自のコネクタをビルド](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector) する」を参照してください。
+アプリMicrosoft Teamsを使用すると、既存のコネクタコネクタをOffice 365したり、新しいコネクタをビルドして新しいコネクタにMicrosoft Teams。 詳細については [、「独自のコネクタをビルド](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector) する」を参照してください。
 
 ## <a name="adding-a-connector-to-your-teams-app"></a>コネクタをアプリにTeamsする
 
@@ -104,7 +104,7 @@ CSS を使用せずにコネクタ構成ページを作成するサンプル HTM
 #### <a name="getsettings-response-properties"></a>`GetSettings()` 応答プロパティ
 
 >[!Note]
->ここでの呼び出しによって返されるパラメーターは、タブからこのメソッドを呼び出す場合とは異なります。また、ここに記載されているパラメーター `getSettings` とは異 [なります](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true)。
+>ここでの呼び出しによって返されるパラメーターは、タブからこのメソッドを呼び出す場合とは異なります。また、ここに記載されているパラメーター `getSettings` とは異 [なります](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true)。
 
 | パラメーター   | 詳細 |
 |-------------|---------|
@@ -185,6 +185,25 @@ CSS を使用せずにコネクタ構成ページを作成するサンプル HTM
   "accentColor": "#FFFFFF"
 }
 ```
+
+## <a name="disable-or-enable-connectors-in-teams"></a>デバイスでコネクタを無効または有効Teams
+
+PowerShell V2 Exchange Onlineモジュールは、最新の認証を使用し、多要素認証 (MFA) を使用して、Microsoft 365 のすべての Exchange 関連の PowerShell 環境に接続します。 管理者は、Exchange Online PowerShell を使用して、テナント全体または特定のグループ メールボックスのコネクタを無効にし、そのテナントまたはメールボックス内のすべてのユーザーに影響を与える可能性があります。 一部のユーザーに対して無効にし、他のユーザーに対して無効にはできません。 また、コネクタは既定で、テナントのGCCされます。
+
+テナント レベルの設定は、グループ レベルの設定より優先されます。 たとえば、管理者がグループのコネクタを有効にしてテナントで無効にした場合、グループのコネクタは無効になります。 クライアントでコネクタを有効にするにはTeams MFA のExchange Online[を使用して PowerShell](/docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true)に接続します。
+
+### <a name="commands-to-disable-or-enable-connectors"></a>コネクタを無効または有効にするコマンド
+
+**PowerShell でコマンドをExchange Onlineする**
+
+* テナントのコネクタを無効にするには、次のコマンドを実行します `Set-OrganizationConfig -ConnectorsEnabled:$false` 。
+* テナントのアクション可能なメッセージを無効にするには、次の操作を行います `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$false` 。
+* コネクタを有効にするには、Teamsコマンドを実行します。
+    * `Set-OrganizationConfig -ConnectorsEnabled:$true `
+    * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
+    * `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$true`
+
+PowerShell モジュール交換の詳細については [、「Set-OrganizationConfig」を参照してください](/docs.microsoft.com/powershell/module/exchange/Set-OrganizationConfig.md?view=exchange-ps&preserve-view=true)。 コネクタを有効または無効にするにはOutlookでアプリを[グループに接続Outlook。](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab?ui=en-us&rs=en-us&ad=us)
 
 ## <a name="testing-your-connector"></a>コネクタのテスト
 

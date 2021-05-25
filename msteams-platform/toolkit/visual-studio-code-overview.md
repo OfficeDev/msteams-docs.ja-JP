@@ -5,12 +5,12 @@ keywords: teams visual studio コード ツールキット
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: efd0962e9c4c0d64dbac47caf29b2e56907937b3
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: d51ccf3ed62e22fb417eec72d1f409b1b77b9da6
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566559"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629838"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>アプリとアプリのTeams ToolkitをVisual Studio Code
 
@@ -45,7 +45,7 @@ Microsoft Teams ツールキットを使用すると、Visual Studio Code 環境
 
 1. [Visual Studio Code] アイコンをTeamsします。 ![Teams アイコン](../assets/icons/favicon-16x16.png) ウィンドウの左側のアクティビティ バーから。
 1. コマンド メニュー **から [アプリ パッケージの** インポート] を選択します。
-1. アプリ パッケージの zip[ファイルTeams既存のファイルを](../concepts/build-and-test/apps-package.md)選択します。
+1. アプリ パッケージの zip ファイルTeams[既存のファイルを](/microsoftteams/platform/concepts/build-and-test/apps-package?view=msteams-client-js-latest&preserve-view=true)選択します。
 1. [発行パッケージ **の選択] ボタンを選択** します。 これで、ツールキットの構成タブにアプリの詳細が表示されます。
 1. [Visual Studio Code] で[ワークスペースにフォルダーを追加] を選択して、ソース コード ディレクトリをワークスペースに  ->  Visual Studio Codeします。
 
@@ -55,7 +55,7 @@ Microsoft Teams ツールキットを使用すると、Visual Studio Code 環境
 
   1. ユーザー Microsoft Teamsアプリを操作するクライアント (Web、デスクトップ、モバイル) を指定します。
   1. サーバーに表示されるコンテンツの要求に応答するTeams。 たとえば、HTML タブ コンテンツやボットアダプティブ カードなどです。
-  1. 次Teams [3 つのファイルで](/concepts/build-and-test/apps-package.md)構成されるアプリ パッケージです。
+  1. アプリ Teamsは、次の 3 つのファイルで構成されます。
 
       > [!div class="checklist"]
       >
@@ -83,7 +83,7 @@ Microsoft Teams ツールキットを使用すると、Visual Studio Code 環境
 
 ### <a name="enable-development-from-localhost"></a>localhost からの開発を有効にする
 
-HTTPS を使用して localhost でタブ ベースのアプリをデバッグする場合は、ブラウザーに対して、サービスを提供するアプリを信頼するように伝える必要があります <https://localhost> 。 <https://localhost:3000/tab> に移動します。 サイトが信頼されていないという警告が表示される場合は、続行するオプションを選択します。 これで、アプリはクライアントからアクセスTeams必要があります。
+HTTPS を使用して localhost でタブ ベースのアプリをデバッグする場合は、ブラウザーに対して、サービスを提供するアプリを信頼するように伝える必要があります `<https://localhost>` 。 `<https://localhost:3000/tab>` に移動します。 サイトが信頼されていないという警告が表示される場合は、続行するオプションを選択します。 これで、アプリはクライアントからアクセスTeams必要があります。
 
 ### <a name="run-your-app-in-teams"></a>アプリをアプリで実行Teams
 

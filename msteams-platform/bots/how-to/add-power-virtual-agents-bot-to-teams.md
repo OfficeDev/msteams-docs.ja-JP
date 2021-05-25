@@ -5,12 +5,12 @@ description: チャットボットをPower Virtual Agentsプラットフォー�
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 2a8f9c23eaa1acf2555b91cc4caf8d0f3298c114
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: a38b2447bba42e70d8a1c3c9dca5d92e41cfb77c
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566118"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52630594"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>Power Virtual Agents チャットボットを追加する 
 
@@ -101,15 +101,11 @@ App Studio は、Teamsアプリです。 アプリ ストアから App Studio �
 
 ## <a name="see-also"></a>関連項目
 
-- [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
-
-- [Microsoft アカウントを使用して、TeamsチャットボットをPower Virtual Agents。](../bot-features.md#bots-and-the-microsoft-power-virtual-agents)  
-
-- [Power Virtual Agents ポータル](https://powervirtualagents.microsoft.com)
-
-- [ボットをPower Virtual Agentsする](/power-virtual-agents/publication-fundamentals-publish-channels)
-
-- [セキュリティとコンプライアンスのMicrosoft Teams。](/MicrosoftTeams/security-compliance-overview)
+* [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
+* [Microsoft アカウントを使用して、TeamsチャットボットをPower Virtual Agents。](../bot-features.md#bots-and-the-microsoft-power-virtual-agents)  
+* [Power Virtual Agents ポータル](https://powervirtualagents.microsoft.com)
+* [ボットをPower Virtual Agentsする](/power-virtual-agents/publication-fundamentals-publish-channels)
+* [セキュリティとコンプライアンスのMicrosoft Teams。](/MicrosoftTeams/security-compliance-overview)
 
 ## <a name="next-step"></a>次の手順
 

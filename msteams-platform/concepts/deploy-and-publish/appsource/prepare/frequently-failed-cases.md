@@ -5,12 +5,12 @@ ms.topic: reference
 localization_priority: Normal
 ms.author: lajanuar
 keywords: アプリの申請に関するヒントが頻繁に失敗したケースの検証ガイドライン
-ms.openlocfilehash: 50bbd2af3b4c834e2ac4776e1fc7db1d8bf45173
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: b2d228b9fdd7ea7773c577c57df983667640dfdd
+ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565278"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52629999"
 ---
 # <a name="tips-for-a-successful-microsoft-teams-app-submission"></a>ヒントアプリの申請が成功Microsoft Teams確認する
 
@@ -157,8 +157,7 @@ ms.locfileid: "52565278"
 
   ![ヘルプ コマンドのサンプル](../../../../assets/images/faq/helpcommand.png)
 
-* **アダプティブ カードとタスク モジュールを使用してボットの応答を明確にし、操作可能にする** 
-[タスク モジュールを呼び出すボタンを備え、アダプティブ カードを使用すると、](/task-modules-and-cards/task-modules/task-modules-bots.md)ボットのユーザー エクスペリエンスが向上します。 これらのカードとボタンは、ユーザーがコマンドを入力するのとは対照的に、モバイル デバイスで使用する方が簡単です。 また、ボットの応答は、長いテキストを含むテキストである必要があります。 ボットは、会話型チャット ベースのユーザー インターフェイスと長いテキスト応答の代わりに、アダプティブ カードとタスク モジュールを使用する必要があります。
+* **アダプティブ カードとタスク モジュールを使用してボットの応答を明確にし、操作可能にする** タスク モジュールを呼び出すボタンを備え、アダプティブ カードを使用すると、ボットのユーザー エクスペリエンスが向上します。 これらのカードとボタンは、ユーザーがコマンドを入力するのとは対照的に、モバイル デバイスで使用する方が簡単です。 また、ボットの応答は、長いテキストを含むテキストである必要があります。 ボットは、会話型チャット ベースのユーザー インターフェイスと長いテキスト応答の代わりに、アダプティブ カードとタスク モジュールを使用する必要があります。
 
 * **すべてのスコープについて考える**. チャネルと個人の会話で言及 ( ) を行う場合は、ボットが適切な `@*botname*` 応答を提供します。 ボットが個人用スコープまたはチーム スコープ内で意味のあるコンテキストを提供しない場合は、マニフェストを使用してそのスコープを無効にします。 (マニフェスト スキーマ `bots` 参照のMicrosoft Teams[を参照してください](../../../../resources/schema/manifest-schema.md#bots))。
 
