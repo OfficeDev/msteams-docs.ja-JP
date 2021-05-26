@@ -4,12 +4,12 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 localization_priority: Normal
 keywords: チームの最新情報
-ms.openlocfilehash: 073776e7058ef2224b891158319fd816953d2c05
-ms.sourcegitcommit: d972953994e405c6afc42e4d4a76b48c6d4cfb5f
+ms.openlocfilehash: 50f8f9f24285a6678e34a97732992c3051b8e0a9
+ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52634696"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52651720"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
@@ -27,14 +27,14 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 | **Date** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
-|5/24/2021|モバイル パターンTeamsを使用して、アプリの設計ガイドラインを更新しました。|[アプリのTeamsする](~/concepts/design/design-teams-app-overview.md)
-|03/18/2021|注意: Bot Framework SDK の **バージョン 4.10** 以上に更新してください `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` 。 | [チーム/チャット メンバーのボット API の変更](resources/team-chat-member-api-changes.md) |
+|05/24/2021|モバイル パターンTeamsを使用して、アプリの設計ガイドラインを更新しました。|[アプリのTeamsする](~/concepts/design/design-teams-app-overview.md)
 |05/13/2021|mConnect と Skooler に関する情報を追加しました。|[Moodle ラーニング管理システム](resources/moodle-overview.md)
 |05/10/2021| マニフェスト v1.10 がリリースされました。|[マニフェスト スキーマ](resources/schema/manifest-schema.md) |
 |05/10/2021| 新しいアプリのカスタマイズ機能。| [組織でアプリをカスタマイズする](concepts/design/enable-app-customization.md) |
 |05/07/2021| チャットでの音声通話とビデオ通話のディープ リンク。 |[ディープ リンク](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
 |04/30/2021|アプリをストアに発行する方法に関する新Teamsガイダンス。|[アプリを Teams ストア](concepts/deploy-and-publish/appsource/publish.md)に発行Teams[検証ガイドライン](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
-| 04/29/2021 | New: アダプティブ カードのユニバーサル アクション。 | [アダプティブ カードのユニバーサル アクション](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|04/29/2021 | New: アダプティブ カードのユニバーサル アクション。 | [アダプティブ カードのユニバーサル アクション](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|04/08/2021| アプリのカスタマイズ機能は、開発者プレビューで利用できます。|[デザイン チーム アプリの概要](concepts/design/enable-app-customization.md)[、App studio の概要](concepts/build-and-test/app-studio-overview.md#connectors)、マニフェスト[スキーマ](resources/schema/manifest-schema-dev-preview.md) |
 |03/18/2021|注意: Bot Framework SDK のバージョン 4.10 以上に更新します。廃止プロセスと廃止プロセスを開始しました `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` 。 | [チーム/チャット メンバーのボット API の変更](resources/team-chat-member-api-changes.md) |
 |03/05/2021|注意: タブには、エクスペリエンスを囲む余白がなくなりました。 タブ開発者は、アプリを確認して更新する必要があります。 | [タブ余白の削除](resources/removing-tab-margins.md) |
 |03/05/2021|既定のインストール スコープとグループ機能は、開発者プレビューに表示されます。| [既定のインストール スコープとグループ機能](concepts/deploy-and-publish/add-default-install-scope.md) |
@@ -159,7 +159,10 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 | **Date** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+|05/25/2021| 更新された[Teams ToolkitとVisual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)[の](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview)Visual Studio。 | [アプリ開発Teams開始する](~/get-started/prerequisites.md) |
+|05/25/2021| 会議の詳細 API とリアルタイムの会議Teamsイベント | [Teams 会議用のアプリを作成する](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
 |05/25/2021| アプリを管理Teamsするための新しい開発者ポータルがTeamsされました。 | [開発者ポータル Teams](concepts/build-and-test/teams-developer-portal.md) |
+|05/25/2021| Together Mode 機能は、参加者を 1 つの仮想シーンに結合し、ビデオ ストリームを事前に決定されたシートに設定します。 | [一緒にモード](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021|ボットは、リソース固有の同意 (RSC) を使用してすべてのチャネル メッセージを受信できます。|[RSC、ボット会話の](~/bots/how-to/conversations/channel-messages-with-rsc.md)概要、[チャネルと](~/bots/how-to/conversations/conversation-basics.md)グループ[](~/bots/how-to/conversations/channel-and-group-conversations.md)の会話、開発者プレビュー マニフェスト スキーマを使用して[すべてのメッセージを受信する](~/resources/schema/manifest-schema-dev-preview.md) |
 |05/21/2021|タブリンクの分岐とステージ ビュー|[タブリンクの分岐とステージ ビュー](tabs/tabs-link-unfurling.md) |
 |03/05/2021| タブのエクスペリエンスを囲む余白がなくなりました。 タブ開発者は、アプリを確認して更新する必要があります。 | [タブ余白の削除](resources/removing-tab-margins.md) |

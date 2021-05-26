@@ -4,16 +4,23 @@ description: App Studio を使用して Microsoft Teams で優れたアプリの
 keywords: App Studio Teams の開始
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: 391086b85f0e68e1a864c3d4254bdbe62b5eaa1a
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: eda6835a1453f878476b3cc296ff2c0e5dc889a5
+ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565201"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52651713"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Microsoft Teams 用の App Studio を使用してアプリをすばやく開発する
 
 App Studio を使用すると、Microsoft Teams アプリの作成や統合を簡単に始めることができます。自分の組織用にカスタム アプリを開発する場合も、世界各地のチーム用に SaaS アプリケーションを開発する場合も、App Studio ではマニフェストの作成とアプリのパッケージングが合理化され、Card Editor や React 制御ライブラリなどの便利なツールが提供されます。
+
+> [!IMPORTANT]
+> App Studio は現在、次の種類の組織Teams使用できません。
+>
+> * Government Community Cloud (GCC)
+> * GCC High
+> * DoD
 
 ## <a name="installing-app-studio"></a>App Studio をインストールする
 

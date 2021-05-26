@@ -3,12 +3,12 @@ title: アダプティブ カードのユニバーサル アクションの概�
 description: アダプティブ カードのユニバーサル アクションの概要を簡単に説明します。
 ms.topic: overview
 localization_priority: Normal
-ms.openlocfilehash: f0adf3d1a01262ff9cbdf14128c9ffe088ae8072
-ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
+ms.openlocfilehash: 8bdbc488c68bf9bef79363f1a22d66e63ec32e08
+ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "52088914"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52649718"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>アダプティブ カードのユニバーサル アクション
 
@@ -51,7 +51,15 @@ ms.locfileid: "52088914"
 
 次の図は、アダプティブ カードのユニバーサル アクションを表TeamsとOutlook。
 
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-teams-outlook.jpg" alt-text="モバイルで同じカードをTeamsとOutlook":::
+
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="同じカードをTeamsとOutlook":::
+
+* * *
 
 ### <a name="user-specific-views"></a>ユーザー固有のビュー
 
@@ -61,7 +69,15 @@ ms.locfileid: "52088914"
 
 次の図は、チャット内の異なるユーザーが要件に基づいて異なるアクションを表示するチケット メッセージング拡張機能 (ME) の例を示しています。
 
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="モバイル ユーザー固有のビュー":::
+
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="ユーザー固有のビュー":::
+
+* * *
 
 詳細については、「ユーザー固有の [ビューのサンプル」を参照してください](User-Specific-Views.md)。
 
@@ -91,7 +107,7 @@ ms.locfileid: "52088914"
 
 ## <a name="adaptive-cards-and-the-new-universal-actions-model"></a>アダプティブ カードと新しいユニバーサル アクション モデル
 
-アダプティブ カードは、テキストやグラフィックスなどのコンテンツと、ユーザーが実行できるアクションの組み合わせです。 詳細については、「アダプティブ カード」 [を参照してください](http://adaptivecards.io/)。 アダプティブ カード用の新しいユニバーサル アクションを使用すると、プラットフォームやアプリケーション間でアダプティブ カードアクションを一般的に処理できます。 詳細については、「ユニバーサル アクション [モデル」を参照してください](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model)。
+アダプティブ カードは、テキストやグラフィックスなどのコンテンツと、ユーザーが実行できるアクションの組み合わせです。 詳細については、「アダプティブ カード」 [を参照してください](http://adaptivecards.io/)。 アダプティブ カード用の新しいユニバーサル アクションを使用すると、プラットフォームやアプリケーション間でアダプティブ カードアクションを一般的に処理できます。 詳細については、「ユニバーサル アクション [モデル」を参照してください](/adaptive-cards/authoring-cards/universal-action-model)。
 
 [アダプティブ カードのユニバーサル アクションの操作](Work-with-universal-actions-for-adaptive-cards.md) ドキュメントでは、ソリューションにユニバーサル アクション for アダプティブ カードの機能を使用する手順について説明します。
 

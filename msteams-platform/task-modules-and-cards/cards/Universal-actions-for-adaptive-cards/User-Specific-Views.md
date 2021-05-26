@@ -4,12 +4,12 @@ description: ユニバーサル アクションを使用したユーザー固有
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 696fc5ce25c79d749b301309bfe0c737e39ad294
-ms.sourcegitcommit: 9ef3b415cbba484c2201abe9c6927e08d974388e
+ms.openlocfilehash: cadf66082582cfd9009a0497b3eb5e58f0a2ef02
+ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52555445"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52649631"
 ---
 # <a name="user-specific-views"></a>ユーザー固有のビュー
 
@@ -17,7 +17,15 @@ ms.locfileid: "52555445"
 
 たとえば、Contoso の安全検査官である Megan は、インシデントを作成して Alex に割り当てる必要があります。 また、チーム内のすべてのユーザーがインシデントを認識する必要があります。 Megan は、アダプティブ カードのユニバーサル アクションを利用した Contoso インシデント レポート メッセージ拡張機能を使用します。
 
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="モバイル ユーザー固有のビュー":::
+
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="ユーザー固有のビュー":::
+
+* * *
 
 ## <a name="user-specific-views-for-adaptive-cards"></a>アダプティブ カードのユーザー固有のビュー
 

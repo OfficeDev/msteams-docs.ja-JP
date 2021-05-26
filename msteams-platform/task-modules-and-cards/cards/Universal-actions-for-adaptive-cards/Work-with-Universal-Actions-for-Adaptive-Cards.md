@@ -3,12 +3,12 @@ title: アダプティブ カードのユニバーサル アクションの操�
 description: アダプティブ カードのユニバーサル アクションを操作します。
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 8c260a4893d38ad365cbb3bdd5a7613a1b42654f
-ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
+ms.openlocfilehash: 4361f1c7774837b728c6382df4e62e00ea912e35
+ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "52088873"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52649700"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>アダプティブ カードのユニバーサル アクションの操作
 
@@ -52,7 +52,7 @@ ms.locfileid: "52088873"
 
 アダプティブ カードを作成する場合は、 に置 `Action.Submit` き換 `Action.Http` え、 に置き換える `Action.Execute` 必要があります。 のスキーマ `Action.Execute` は、 のスキーマと似ています `Action.Submit` 。
 
-詳細については、「かわいいスキーマ [ とAction.Exeを参照してください](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#actionexecute)。
+詳細については、「かわいいスキーマ [ とAction.Exeを参照してください](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)。
 
 これで、更新モデルを使用してアダプティブ カードを自動的に更新できます。
 
@@ -60,7 +60,7 @@ ms.locfileid: "52088873"
 
 アダプティブ カードを自動的に更新するには、型と配列のアクションを埋め込 `refresh` むプロパティ `Action.Execute` を定義 `userIds` します。
 
-詳細については、「スキーマと [プロパティの更新」を参照してください](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#refresh-mechanism)。
+詳細については、「スキーマと [プロパティの更新」を参照してください](/adaptive-cards/authoring-cards/universal-action-model#refresh-mechanism)。
 
 ## <a name="user-ids-in-refresh"></a>更新中のユーザー ID
 
@@ -72,7 +72,7 @@ ms.locfileid: "52088873"
 
 * UserIds プロパティが追加される理由は、Teamsのチャネルに多数のメンバーが含まれる可能性があるためです。 すべてのメンバーが同時にチャネルを表示している場合、無条件の自動更新により、ボットへの同時呼び出しが多数発生します。 これを回避するには、プロパティを常に含め、最大 `userIds` *60 (60)* のユーザー MRIs で自動更新を取得する必要があるユーザーを識別する必要があります。
 
-* アダプティブ カードの更新セクションの userId リストに追加する Teams 会話メンバーのユーザー MRIs をフェッチする方法の詳細については、「fetch roster or user [profile」を参照してください](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)。
+* アダプティブ カードの更新セクションの userId リストに追加する Teams 会話メンバーのユーザー MRIs をフェッチする方法の詳細については、「fetch roster or user [profile」を参照してください](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)。
 
 * ユーザーのTEAMSのサンプルは、`29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk`
 
@@ -85,9 +85,9 @@ ms.locfileid: "52088873"
 
 クライアント `Action.Execute` で実行されると、ボットに対して新しい種類の Invoke アクティビティ `adaptiveCard/action` が作成されます。
 
-詳細については、「一般的な呼 [び出しアクティビティの要求の形式とプロパティ」 `adaptiveCard/action` を参照してください](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#request-format)。
+詳細については、「一般的な呼 [び出しアクティビティの要求の形式とプロパティ」 `adaptiveCard/action` を参照してください](/adaptive-cards/authoring-cards/universal-action-model#request-format)。
 
-詳細については、「サポートされている応答の種類を持つ一般的な呼び出しアクティビティの [ `adaptiveCard/action` 応答の形式とプロパティ」を参照してください](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#response-format)。
+詳細については、「サポートされている応答の種類を持つ一般的な呼び出しアクティビティの [ `adaptiveCard/action` 応答の形式とプロパティ」を参照してください](/adaptive-cards/authoring-cards/universal-action-model#response-format)。
 
 次に、異なるプラットフォーム間で古いクライアントに下位互換性を適用し、アダプティブ カードを互換性のあるものにできます。
 
@@ -99,7 +99,13 @@ ms.locfileid: "52088873"
 
 アダプティブ カードと以前のバージョンの Teamsとの下位互換性を確保するには、プロパティを含め、その値を `fallback` に設定する必要があります `Action.Submit` 。 また、ボット コードは、 と の両方を処理する `Action.Execute` 必要があります `Action.Submit` 。
 
-詳細については、「下位互換性[」を参照Teams。](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#teams)
+詳細については、「下位互換性[」を参照Teams。](/adaptive-cards/authoring-cards/universal-action-model#teams)
+
+## <a name="code-sample"></a>コード サンプル
+
+|サンプルの名前 | 説明 | .NETCore |
+|----------------|-----------------|--------------|
+| Teamsボット | アダプティブ カードを使用して食品の注文を受け入れる簡単なボットを作成します。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)|
 
 ## <a name="see-also"></a>関連項目
 
