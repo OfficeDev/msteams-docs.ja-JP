@@ -89,30 +89,40 @@
   items:
     - name: 概要
       href: concepts/design/design-teams-app-overview.md
-    - name: デザインの基本事項
+    - name: プロセスの設計について理解する
+      href: concepts/design/design-teams-app-process.md
+    - name: システムをデザインする
       href: concepts/design/design-teams-app-fundamentals.md
-    - name: 基本的な UI コンポーネント
-      href: concepts/design/design-teams-app-basic-ui-components.md
+    - name: アプリの機能
+      items:
+        - name: アプリの構造を理解する
+          href: concepts/design/app-structure.md
+        - name: 個人用アプリ
+          href: concepts/design/personal-apps.md
+        - name: タブ
+          href: tabs/design/tabs.md
+        - name: ボット
+          href: bots/design/bots.md
+        - name: メッセージング拡張機能
+          href: messaging-extensions/design/messaging-extension-design.md
+        - name: ミーディング拡張機能
+          href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
     - name: UI テンプレート
       href: concepts/design/design-teams-app-ui-templates.md
-    - name: 個人用アプリ
-      href: concepts/design/personal-apps.md
-    - name: タブ
+    - name: UI コンポーネント
       items:
-        - name: デスクトップと Web
-          href: tabs/design/tabs.md
-        - name: モバイル
-          href: tabs/design/tabs-mobile.md
-    - name: メッセージング拡張機能
-      href: messaging-extensions/design/messaging-extension-design.md
-    - name: ボット
-      href: bots/design/bots.md
-    - name: ミーディング拡張機能
-      href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
-    - name: アダプティブ カード
-      href: task-modules-and-cards/cards/design-effective-cards.md
-    - name: タスク モジュール
-      href: task-modules-and-cards/task-modules/design-teams-task-modules.md
+        - name: 基本的な UI コンポーネント
+          href: concepts/design/design-teams-app-basic-ui-components.md
+        - name: 詳細な UI コンポーネント
+          href: concepts/design/design-teams-app-advanced-ui-components.md
+        - name: アダプティブ カード
+          href: task-modules-and-cards/cards/design-effective-cards.md
+        - name: タスク モジュール
+          href: task-modules-and-cards/task-modules/design-teams-task-modules.md
+        - name: アクティビティ フィード通知
+          href: concepts/design/activity-feed-notifications.md
+    - name: アプリのカスタマイズを有効にする
+      href: concepts/design/enable-app-customization.md
 - name: ツールと SDK
   items:
     - name: Visual Studio Code 用 Teams ツールキット
@@ -123,6 +133,8 @@
       href: 'https://github.com/pnp/generator-teams'
     - name: App Studio
       href: concepts/build-and-test/app-studio-overview.md
+    - name: Teams の開発者ポータル
+      href: concepts/build-and-test/teams-developer-portal.md
     - name: Teams JavaScript client SDK
       href: tabs/how-to/using-teams-client-sdk.md
     - name: ボットおよびメッセージング拡張機能用 Node.js Bot Framework (GitHub)
@@ -179,6 +191,8 @@
   items:
     - name: 概要
       href: tabs/what-are-tabs.md
+    - name: タブのリンクの展開とステージ ビュー
+      href: tabs/tabs-link-unfurling.md
     - name: タブの要件
       href: tabs/how-to/tab-requirements.md
     - name: クイックスタート
@@ -201,6 +215,8 @@
       href: tabs/how-to/create-tab-pages/configuration-page.md
     - name: 削除ページを作成する
       href: tabs/how-to/create-tab-pages/removal-page.md
+    - name: モバイルのタブ
+      href: tabs/design/tabs-mobile.md
     - name: タブのコンテキストを取得する
       href: tabs/how-to/access-teams-context.md
 - name: ボットを作成する
@@ -217,6 +233,9 @@
           href: bots/how-to/conversations/conversation-basics.md
         - name: ボットの会話内のメッセージ
           href: bots/how-to/conversations/conversation-messages.md
+          items:
+            - name: RSC のチャネル メッセージをすべて受信する
+              href: bots/how-to/conversations/channel-messages-with-rsc.md
         - name: ボットのコマンド メニューを作成する
           href: bots/how-to/create-a-bot-commands-menu.md
         - name: チャネルとグループ会話
