@@ -5,13 +5,13 @@ description: 開発者がカスタム アプリを使用して機能を拡張Mic
 ms.topic: overview
 localization_priority: Normal
 ms.author: lajanuar
-ms.date: 09/22/2020
-ms.openlocfilehash: 645b8087b367dd3cc9f5efdd53c53974307ce65e
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.date: 05/24/2021
+ms.openlocfilehash: 796353a4c556794a518a451e8a45989351729eb9
+ms.sourcegitcommit: 9cabeaed9baf96c8caeb1497f0bc37abdb787d22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630509"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52646524"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Microsoft Teams のアプリを作成する
 
@@ -20,7 +20,7 @@ Microsoft Teamsアプリは、重要な情報、一般的なツール、信頼�
 アプリは、ニーズに合わせてTeams拡張する方法です。 新しいアプリを作成し、Teamsアプリを統合します。
 
 > [!div class="nextstepaction"]
-> [ここから開始](build-your-first-app/build-first-app-overview.md)
+> [ここから開始](get-started/prerequisites.md)
 
 ## <a name="what-are-teams-apps"></a>アプリとはTeamsですか?
 
@@ -153,7 +153,7 @@ Teamsは機能の組み[合わせです](concepts/capabilities-overview.md)。 �
 環境をセットアップし、簡単なアプリTeamsを作成することで、アプリの構築にすばやく慣れ親しむ必要があります。
 
 > [!div class="nextstepaction"]
-> [初めてのアプリを構築する](build-your-first-app/build-first-app-overview.md)
+> [初めてのアプリを構築する](get-started/prerequisites.md)
 
    :::column-end:::
    :::column span="":::

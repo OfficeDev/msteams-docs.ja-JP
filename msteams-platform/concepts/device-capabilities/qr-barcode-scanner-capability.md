@@ -6,12 +6,12 @@ keywords: カメラ メディア QR コード qrcode バーコード バーコ�
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 2bd5c5c1cfaab4e2f03423f078c04b133331de1a
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 9b85de05bea8c9f704f4d8138b041b90e159b10f
+ms.sourcegitcommit: 9cabeaed9baf96c8caeb1497f0bc37abdb787d22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630531"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52646564"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>QR コードまたはバーコード スキャナー機能を統合する 
 
@@ -19,7 +19,7 @@ ms.locfileid: "52630531"
 
 バーコードは、視覚的で機械で読み取り可能な形式でデータを表す方法です。 バーコードには、バーとスペースの形式で、種類、サイズ、製造元、発生国などの製品に関する情報が含まれます。 コードは、ネイティブ デバイス カメラの光学スキャナーを使用して読み取ります。 より豊富な共同作業エクスペリエンスを実現するには、Teams プラットフォームで提供される QR またはバーコード スキャナー機能をアプリTeamsできます。   
 
-JavaScript クライアント[SDK Microsoft Teams使用](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)できます。これは、アプリがユーザーのネイティブ デバイス機能にアクセスするために必要なツール[を提供します](native-device-permissions.md)。 API を `scanBarCode` 使用して、スキャナー機能をアプリ内に統合します。 
+JavaScript クライアント[SDK Microsoft Teams使用](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)できます。これは、アプリがユーザーのネイティブ デバイス機能にアクセスするために必要なツール[を提供します](native-device-permissions.md)。 [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API を使用して、スキャナー機能をアプリ内に統合します。 
 
 ## <a name="advantage-of-integrating-qr-or-barcode-scanner-capability"></a>QR またはバーコード スキャナー機能を統合する利点
 
@@ -28,7 +28,7 @@ QR またはバーコード スキャナー機能の統合の利点は次のと�
 * この統合により、Web アプリ開発者は、Teams JavaScript クライアント SDK で QR またはバーコードスキャン機能Teams活用できます。
 * この機能を使用すると、ユーザーはスキャナー UI の中央にあるフレーム内の QR またはバーコードのみを配置する必要があります。コードは自動的にスキャンされます。 保存されたデータは、呼び出し元の Web アプリと共有されます。 これにより、長い製品コードや他の関連情報を手動で入力する際の不便や人的ミスを回避できます。
 
-QR またはバーコード スキャナー機能を統合するには、アプリ マニフェスト ファイルを更新して API を呼び出す必要 `scanBarCode` があります。 統合を効果的に行う場合は、ネイティブ[](#code-snippet)QR またはバーコード スキャナー機能を使用できる API を呼び出すコード スニペットについて理解している `scanBarCode` 必要があります。 API では、サポートされていないバーコード標準に対してエラーが発生します。
+QR またはバーコード スキャナー機能を統合するには、アプリ マニフェスト ファイルを更新し [、scanBarCode API を呼び出す必要](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) があります。 統合を効果的に行う場合は、ネイティブ[](#code-snippet)QR またはバーコード スキャナー機能を使用できる[scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API を呼び出すコード スニペットについて理解している必要があります。 API では、サポートされていないバーコード標準に対してエラーが発生します。
 API 応答エラーを理解して、アプリ[](#error-handling)内のエラーを処理することがTeamsです。
 
 > [!NOTE] 
@@ -49,26 +49,26 @@ API 応答エラーを理解して、アプリ[](#error-handling)内のエラー
 
 ## <a name="scanbarcode-api"></a>ScanBarCode API
 
-API は、ユーザーがさまざまな種類のバーコードをスキャンできるスキャナー コントロールを呼び出し、結果を `ScanBarCode` 文字列として返します。
+[scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API は、ユーザーがさまざまな種類のバーコードをスキャンできるスキャナー コントロールを呼び出し、結果を文字列として返します。
 
-バーコードスキャンエクスペリエンスをカスタマイズするために、オプションのバーコード構成が API への入力として渡 `ScanBarCode` されます。 を使用して、スキャンのタイム アウト間隔を秒で指定できます `timeOutIntervalInSec` 。 既定値は 30 秒で、最大値は 60 秒です。
+バーコードスキャンエクスペリエンスをカスタマイズするために、オプションの [バーコード構成](/javascript/api/@microsoft/teams-js/microsoftteams.media.barcodeconfig?view=msteams-client-js-latest&preserve-view=true) が [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API に入力として渡されます。 を使用して、スキャンのタイム アウト間隔を秒で指定できます `timeOutIntervalInSec` 。 既定値は 30 秒で、最大値は 60 秒です。
 
 **scanBarCode()** API は、次のバーコードの種類をサポートしています。
 
 | バーコードの種類 | Android でサポートされる | iOS でサポート |
 | ---------- | ---------- | ------------ |
-| Codebar | はい | いいえ |
-| コード 39 | はい | はい | 
-| コード 93 | はい | はい |
-| コード 128 | はい | はい |
-| EAN-13 | はい | はい |
-| EAN-8 | はい | はい |
+| Codebar | 必要 | いいえ |
+| コード 39 | はい | 必要 | 
+| コード 93 | はい | 必要 |
+| コード 128 | はい | 必要 |
+| EAN-13 | はい | 必要 |
+| EAN-8 | はい | 必要 |
 | ITF | いいえ | はい |
-| QR コード | はい | はい |
-| RSS の展開 | はい | いいえ |
-| RSS-14 | はい | いいえ |
-| UPC-A | はい | はい |
-| UPC-E | はい | はい |
+| QR コード | はい | 必要 |
+| RSS の展開 | 必要 | いいえ |
+| RSS-14 | 必要 | いいえ |
+| UPC-A | はい | 必要 |
+| UPC-E | はい | 必要 |
 
 **Web アプリエクスペリエンス `ScanBarCode`QR またはバーコード スキャナー機能の API QR** またはバーコード スキャナー機能の 
  ![ Web アプリ エクスペリエンス](../../assets/images/tabs/qr-barcode-scanner-capability.png)

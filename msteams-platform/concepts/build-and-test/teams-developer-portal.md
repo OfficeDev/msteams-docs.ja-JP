@@ -5,12 +5,12 @@ keywords: 開発者ポータル チームの開始
 localization_priority: Normal
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 857d2069c4f67bf15e1d3435af55a684a918df87
-ms.sourcegitcommit: d972953994e405c6afc42e4d4a76b48c6d4cfb5f
+ms.openlocfilehash: 5f3335470a442fc8a3c94e9563e21fea75c4ef4b
+ms.sourcegitcommit: c55b0d2a4c1f8945e49b0b7c0b08c0eb3da3d2be
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52635095"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52646334"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>開発者ポータルを使用してアプリを管理Microsoft Teams
 
@@ -79,8 +79,8 @@ ms.locfileid: "52635095"
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
 | *月次 R30* | 既定の使用状況メトリック。 UTC の 30 日間のローリング ウィンドウ内でアプリを使用した一意のアクティブ ユーザーの数が表示されます。 |
 | *毎日* | UTC で特定の日にアプリを使用した一意のアクティブ ユーザーの数を示します。 |
-| *履歴* | 過去 7 日間、30 日間、および 60 日間の月次および毎日の使用状況が表示されます。 |
-| *Latency* | 24 ~ 48 時間以内に、特定の日の使用状況が反映されます。 新しいアプリの使用状況は、表示に最大で 3 ~ 5 日かかる場合があります。|
+
+過去 7 日間、30 日間、および 60 日間の月次および毎日の使用状況が表示されます。 24 ~ 48 時間以内に、特定の日の使用状況が反映されます。 新しいアプリの使用状況は、表示に最大で 3 ~ 5 日かかる場合があります。
 
 ## <a name="use-tools-to-create-app-features"></a>ツールを使用してアプリ機能を作成する
 

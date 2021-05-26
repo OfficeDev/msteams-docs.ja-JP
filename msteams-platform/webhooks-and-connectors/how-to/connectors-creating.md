@@ -5,12 +5,12 @@ keywords: Teams o365 コネクタ
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 04/19/2019
-ms.openlocfilehash: ace546853d7dfe9773055288a0fc3471fe656652
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 1598b84fc1c36547aa4c814cdf03404a3833779e
+ms.sourcegitcommit: c55b0d2a4c1f8945e49b0b7c0b08c0eb3da3d2be
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629824"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52646325"
 ---
 # <a name="creating-office-365-connectors-for-microsoft-teams"></a>ユーザー Office 365コネクタのMicrosoft Teams
 
@@ -190,7 +190,7 @@ CSS を使用せずにコネクタ構成ページを作成するサンプル HTM
 
 PowerShell V2 Exchange Onlineモジュールは、最新の認証を使用し、多要素認証 (MFA) を使用して、Microsoft 365 のすべての Exchange 関連の PowerShell 環境に接続します。 管理者は、Exchange Online PowerShell を使用して、テナント全体または特定のグループ メールボックスのコネクタを無効にし、そのテナントまたはメールボックス内のすべてのユーザーに影響を与える可能性があります。 一部のユーザーに対して無効にし、他のユーザーに対して無効にはできません。 また、コネクタは既定で、テナントのGCCされます。
 
-テナント レベルの設定は、グループ レベルの設定より優先されます。 たとえば、管理者がグループのコネクタを有効にしてテナントで無効にした場合、グループのコネクタは無効になります。 クライアントでコネクタを有効にするにはTeams MFA のExchange Online[を使用して PowerShell](/docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true)に接続します。
+テナント レベルの設定は、グループ レベルの設定より優先されます。 たとえば、管理者がグループのコネクタを有効にしてテナントで無効にした場合、グループのコネクタは無効になります。 クライアントでコネクタを有効にするにはTeams MFA のExchange Online[を使用して PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true)に接続します。
 
 ### <a name="commands-to-disable-or-enable-connectors"></a>コネクタを無効または有効にするコマンド
 
@@ -203,7 +203,7 @@ PowerShell V2 Exchange Onlineモジュールは、最新の認証を使用し、
     * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
     * `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$true`
 
-PowerShell モジュール交換の詳細については [、「Set-OrganizationConfig」を参照してください](/docs.microsoft.com/powershell/module/exchange/Set-OrganizationConfig.md?view=exchange-ps&preserve-view=true)。 コネクタを有効または無効にするにはOutlookでアプリを[グループに接続Outlook。](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab?ui=en-us&rs=en-us&ad=us)
+PowerShell モジュール交換の詳細については [、「Set-OrganizationConfig」を参照してください](/powershell/module/exchange/Set-OrganizationConfig?view=exchange-ps&preserve-view=true)。 コネクタを有効または無効にするにはOutlookでアプリを[グループに接続Outlook。](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab?ui=en-us&rs=en-us&ad=us)
 
 ## <a name="testing-your-connector"></a>コネクタのテスト
 
