@@ -56,24 +56,21 @@ conceptualContent:
         - url: /microsoftteams/platform/concepts/capabilities-overview
           itemType: overview
           text: Teams アプリの機能
-        - url: /microsoftteams/platform/concepts/design/map-use-cases
-          itemType: overview
-          text: 使用例を他の機能Microsoft Teamsマップする
-        - url: /microsoftteams/platform/tutorials/get-started-nodejs-app-studio
-          itemType: how-to-guide
-          text: アプリを使用TeamsアプリをNode.js
-        - url: /microsoftteams/platform/tutorials/get-started-dotnet-app-studio
-          itemType: how-to-guide
-          text: C を使用Teamsアプリをビルドする#
         - url: /microsoftteams/platform/samples/teams-low-code-solutions
           itemType: how-to-guide
           text: Microsoft Power Platform で低Teamsアプリ、ボット、およびフローを構築する
+        - url: 'https://dev.teams.microsoft.com/home'
+          itemType: reference
+          text: Teams の開発者ポータル
         - url: /microsoftteams/platform/resources/schema/manifest-schema
           itemType: reference
           text: アプリのマニフェスト スキーマTeamsする
         - url: 'https://adoption.microsoft.com/extensibility-look-book/scenarios/'
           itemType: reference
-          text: アプリのビルド シナリオMicrosoft Teamsする
+          text: アプリのシナリオをTeamsする
+        - url: 'https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources'
+          itemType: reference
+          text: アプリのシナリオのTeams方法
     - title: 詳細
       links:
         - url: /learn/modules/intro-microsoft-teams-apps
