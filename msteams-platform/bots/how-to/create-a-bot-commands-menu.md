@@ -5,23 +5,28 @@ description: カスタム ボットのコマンド メニューをMicrosoft Team
 ms.topic: how-to
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: da87725fca6b4eeacd43f48f6946920251d772e9
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f89c564a2843aaee010774e6b262a96ce4d6530f
+ms.sourcegitcommit: c59d90ae03eae32996db49f162855965b55c52fe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020913"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52668838"
 ---
 # <a name="bot-command-menus"></a>ボット コマンド メニュー
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-> [!Note]
-> ボット メニューはモバイル クライアントには表示されません。
-
 ボットが応答できる一連のコア コマンドを定義するには、ボットのコマンドのドロップダウン リストを含むコマンド メニューを追加できます。 コマンドの一覧は、ボットと会話するときに、作成メッセージ領域のユーザーに表示されます。 一覧からコマンドを選択して、コマンド文字列をメッセージ作成ボックスに挿入し、[送信] を **選択します**。
 
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 ![ボット コマンド メニュー](./conversations/media/bot-menu-sample.png)
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+![モバイル ボットのコマンド メニュー](./conversations/media/mobile-bot-menu-sample.png)
+
+* * *
 
 ## <a name="create-a-command-menu-for-your-bot"></a>ボットのコマンド メニューを作成する
 

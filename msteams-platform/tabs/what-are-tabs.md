@@ -5,12 +5,12 @@ description: Teams プラットフォームでのカスタム タブの概要
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 21499a4e18acee369b4b1bda6184e4b14b6262ec
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 06454530ab2d0b7e993120f6696f3507a7352bf3
+ms.sourcegitcommit: 25c02757fe207cdff916ba63aa215f88e24e1d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629971"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52667413"
 ---
 # <a name="microsoft-teams-tabs"></a>Microsoft Teams のタブ
 
@@ -43,6 +43,12 @@ Teams では、チャネル/グループ および 個人 の 2 種類のタブ�
 
 ## <a name="understand-how-tabs-work"></a>タブの動作を理解する
 
+次のいずれかの方法を使用して、タブを作成できます。
+* [アプリ マニフェストでカスタム タブを宣言する](#declare-custom-tab-in-app-manifest)
+* [アダプティブ カードを使用してタブを作成する](#use-adaptive-card-to-build-tabs)
+
+### <a name="declare-custom-tab-in-app-manifest"></a>アプリ マニフェストでカスタム タブを宣言する
+
 カスタム タブは、アプリ パッケージのアプリ マニフェストで宣言されます。 アプリのタブとして含める Web ページごとに、URL と範囲を定義します。 また、[Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) をページに追加して、ページの読み込みが終了したら `microsoftTeams.initialize()` を呼び出す必要があります。 この操作を行うと、Teams にページが表示されるようになり、Teams 固有の情報 (たとえば、Teams クライアントが *濃色テーマ* を実行している場合) へのアクセスが出来、結果に基づいてアクションを実行できるようになります。
 
 チャネル/グループ または 個人 スコープ内でタブを表示するかどうかを選択した場合は、タブに <iframe 付き\>HTML[コンテンツ ページ](~/tabs/how-to/create-tab-pages/content-page.md)を表示する必要があります。個人 タブの場合、コンテンツ URL は`staticTabs`配列内の`contentUrl`プロパティによってTeams アプリのマニフェストに直接設定されます。 タブの内容は、すべてのユーザーに対して同じになります。
@@ -51,17 +57,24 @@ Teams では、チャネル/グループ および 個人 の 2 種類のタブ�
 
 複数のチャネルまたはグループ タブ、およびアプリごとに最大 16 個の個人用タブを使用できます。
 
-## <a name="mobile-considerations"></a>モバイルに関する考慮事項
+
+### <a name="use-adaptive-card-to-build-tabs"></a>アダプティブ カードを使用してタブを作成する
+
+従来の方法を使用してタブを開発する場合は、HTML、CSS の考慮事項など、ネイティブ、低速の読み込み時間、iFrame の制約、サーバーのメンテナンスとコストを考慮する必要があります。 アダプティブ カード タブは、新しい方法でタブを作成Teams。 iframe に Web コンテンツを埋め込む代わりに、アダプティブ カードをタブにレンダリングできます。フロントエンドはアダプティブ カードとしてレンダリングされる一方で、バックエンドにはボットが搭載されています。 ボットは、要求を受け入れ、レンダリングするアダプティブ カードで適切に応答する責任があります。
+
+## <a name="mobile-clients"></a>モバイル クライアント
 
 モバイル クライアントにチャネルまたはグループ タブを表示Teams場合、構成にはプロパティの `setSettings()` 値が必要 `websiteUrl` です。 最適なユーザー エクスペリエンスを実現するには、タブ [を作成するときに](~/tabs/design/tabs-mobile.md) モバイル上のタブのガイダンスに従う必要があります。 モバイル[ストアを通じて配布Teamsモバイル](~/concepts/deploy-and-publish/appsource/publish.md)クライアントに対する個別の承認プロセスがあります。 このようなアプリの既定の動作は次のとおりです。
 
 | **アプリの機能** | **アプリが承認された場合の動作** | **アプリが承認されていない場合の動作** |
 | --- | --- | --- |
-| **個人用タブ** | モバイル クライアントの下部バーにアプリが表示されます。 タブは、クライアントTeams開きます。 | モバイル クライアントの下部バーにアプリが表示されません。 |
+| **[個人] タブ** | モバイル クライアントの下部バーにアプリが表示されます。 タブは、クライアントTeams開きます。 | モバイル クライアントの下部バーにアプリが表示されません。 |
 | **チャネルタブとグループ タブ** | タブは、 を使用してクライアントTeams開きます `contentUrl` 。 | タブは、 を使用してクライアントの外部Teams開きます `websiteUrl` 。 |
 
 > [!NOTE]
->
+> [AppSource に送信されたアプリは、](../concepts/deploy-and-publish/overview.md#publish-to-appsource)モバイルの応答性Teams自動的に評価されます。 クエリの場合は、ユーザーに問い合 teamsubm@microsoft.com。
+> [AppSource を](../concepts/deploy-and-publish/overview.md)介して配布されていないすべてのアプリでは、タブは既定で Teams クライアント内のアプリ内 Web ビューで開き、個別の承認プロセスは必要ありません。
+> 
 > アプリの既定の動作は、アプリ ストアを通じて配布Teamsです。 既定では、すべてのタブがクライアントでTeamsされます。
 > モバイルに優しいアプリの評価を開始するには、アプリの詳細 teamsubm@microsoft.com 確認してください。
 

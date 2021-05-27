@@ -4,16 +4,44 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 localization_priority: Normal
 keywords: チームの最新情報
-ms.openlocfilehash: 50f8f9f24285a6678e34a97732992c3051b8e0a9
-ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
+ms.openlocfilehash: eb7252a8f3a48049de098c50b26f087df70e5b20
+ms.sourcegitcommit: c59d90ae03eae32996db49f162855965b55c52fe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52651720"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52668856"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
-一Microsoft Teams (GA) および開発者向けプレビューで使用できるプラットフォーム機能について説明します。
+Microsoft ビルド 2021 Microsoft Teams一般提供 (GA)、および開発者向けプレビューで導入されているプラットフォーム機能について説明します。
+
+## <a name="microsoft-build-2021"></a>Microsoft ビルド 2021
+
+# <a name="features-in-developer-preview"></a>[開発者プレビューの機能](#tab/devpreview)
+
+| **Date** | **機能** | **変更されたトピック** |
+| -------- | --------- | ------------------ |
+|05/26/2021| アダプティブ カードを使用してタブを作成します。 |[タブを作成する](tabs/how-to/build-adaptive-card-tabs.md)|
+|05/25/2021| 更新された[Teams ToolkitとVisual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)[の](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview)Visual Studio。 | [アプリ開発Teams開始する](~/get-started/prerequisites.md) |
+|05/25/2021| 会議の詳細 API とリアルタイムの会議Teamsイベント。 | [Teams 会議用のアプリを作成する](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
+|05/25/2021| アプリを管理Teamsするための新しい開発者ポータルがTeamsされました。 | [Teams の開発者ポータル](concepts/build-and-test/teams-developer-portal.md) |
+|05/25/2021| Together Mode 機能は、参加者を 1 つの仮想シーンに結合し、ビデオ ストリームを事前に決定されたシートに設定します。 | [一緒にモード](~/apps-in-teams-meetings/teams-together-mode.md) |
+|05/24/2021| ボットは、リソース固有の同意 (RSC) を使用してすべてのチャネル メッセージを受信できます。|[RSC、ボット会話の](~/bots/how-to/conversations/channel-messages-with-rsc.md)概要、[チャネルと](~/bots/how-to/conversations/conversation-basics.md)グループ[](~/bots/how-to/conversations/channel-and-group-conversations.md)の会話、開発者プレビュー マニフェスト スキーマを使用して[すべてのメッセージを受信する](~/resources/schema/manifest-schema-dev-preview.md) |
+|05/21/2021| タブは、リンク解除とステージ ビューをリンクします。 |[タブリンクの分岐とステージ ビュー](tabs/tabs-link-unfurling.md) |
+
+> [!NOTE]
+> 開発者プレビューで使用できる機能の詳細については、「開発者向けパブリック プレビュー」[を参照Teams。](~/resources/dev-preview/developer-preview-intro.md)
+
+# <a name="features-in-ga"></a>[GA の機能](#tab/GA)
+
+| **Date** | **機能** | **変更されたトピック** |
+| -------- | --------- | ------------------ |
+|04/29/2021 | アダプティブ カードのユニバーサル アクション。 | [アダプティブ カードのユニバーサル アクション](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|04/08/2021| アプリのカスタマイズ。|[デザイン チーム アプリの概要](concepts/design/enable-app-customization.md)[、App studio の概要](concepts/build-and-test/app-studio-overview.md#connectors)、マニフェスト[スキーマ](resources/schema/manifest-schema-dev-preview.md) |
+|03/29/2021 | カードの書式を設定Teams。 | [カードの書式を設定Teams](task-modules-and-cards/cards/cards-format.md) |
+|02/19/2021|場所の機能が追加されました。 <br/> 場所機能の情報は、デバイス機能の概要、ネイティブ デバイスのアクセス許可、メディア機能の統合、QR またはバーコード スキャナー機能ファイルに追加されます。|[概要](concepts/device-capabilities/device-capabilities-overview.md)、[デバイスのアクセス許可の要求](concepts/device-capabilities/native-device-permissions.md)、[メディア機能の統合](concepts/device-capabilities/mobile-camera-image-permissions.md)[、QR またはバーコード](concepts/device-capabilities/qr-barcode-scanner-capability.md)スキャナー機能の統合、[場所の統合機能](concepts/device-capabilities/location-capability.md) |
+
+---
 
 ## <a name="ga-features"></a>GA の機能
 
@@ -33,11 +61,11 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 |05/10/2021| 新しいアプリのカスタマイズ機能。| [組織でアプリをカスタマイズする](concepts/design/enable-app-customization.md) |
 |05/07/2021| チャットでの音声通話とビデオ通話のディープ リンク。 |[ディープ リンク](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
 |04/30/2021|アプリをストアに発行する方法に関する新Teamsガイダンス。|[アプリを Teams ストア](concepts/deploy-and-publish/appsource/publish.md)に発行Teams[検証ガイドライン](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
-|04/29/2021 | New: アダプティブ カードのユニバーサル アクション。 | [アダプティブ カードのユニバーサル アクション](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
-|04/08/2021| アプリのカスタマイズ機能は、開発者プレビューで利用できます。|[デザイン チーム アプリの概要](concepts/design/enable-app-customization.md)[、App studio の概要](concepts/build-and-test/app-studio-overview.md#connectors)、マニフェスト[スキーマ](resources/schema/manifest-schema-dev-preview.md) |
+|04/29/2021 | アダプティブ カードのユニバーサル アクション。 | [アダプティブ カードのユニバーサル アクション](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|04/08/2021| アプリのカスタマイズ機能。|[デザイン チーム アプリの概要](concepts/design/enable-app-customization.md)[、App studio の概要](concepts/build-and-test/app-studio-overview.md#connectors)、マニフェスト[スキーマ](resources/schema/manifest-schema-dev-preview.md) |
 |03/18/2021|注意: Bot Framework SDK のバージョン 4.10 以上に更新します。廃止プロセスと廃止プロセスを開始しました `TeamsInfo.getMembers` `TeamsInfo.GetMembersAsync` 。 | [チーム/チャット メンバーのボット API の変更](resources/team-chat-member-api-changes.md) |
 |03/05/2021|注意: タブには、エクスペリエンスを囲む余白がなくなりました。 タブ開発者は、アプリを確認して更新する必要があります。 | [タブ余白の削除](resources/removing-tab-margins.md) |
-|03/05/2021|既定のインストール スコープとグループ機能は、開発者プレビューに表示されます。| [既定のインストール スコープとグループ機能](concepts/deploy-and-publish/add-default-install-scope.md) |
+|03/05/2021|既定のインストール スコープとグループ機能。| [既定のインストール スコープとグループ機能](concepts/deploy-and-publish/add-default-install-scope.md) |
 |03/05/2021|個人用アプリのタブを並べ替えます。|[個人用アプリのチャット タブを並べ替える](tabs/how-to/create-tab-pages/content-page.md#reorder-static-personal-tabs)|
 |03/04/2021|アダプティブ カードの情報マスキング。| [アダプティブ カードの情報マスキング](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
 |02/19/2021|場所の機能が追加されました。 <br/> 場所機能の情報は、デバイス機能の概要、ネイティブ デバイスのアクセス許可、メディア機能の統合、QR またはバーコード スキャナー機能ファイルに追加されます。|[概要](concepts/device-capabilities/device-capabilities-overview.md)、[デバイスのアクセス許可の要求](concepts/device-capabilities/native-device-permissions.md)、[メディア機能の統合](concepts/device-capabilities/mobile-camera-image-permissions.md)[、QR またはバーコード](concepts/device-capabilities/qr-barcode-scanner-capability.md)スキャナー機能の統合、[場所の統合機能](concepts/device-capabilities/location-capability.md) |
@@ -105,7 +133,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 | 05/06/2019 | ストア アプリのアプリケーション認定プログラム。 | [アプリケーション認定](~/concepts/deploy-and-publish/appsource/post-publish/overview.md#complete-microsoft-365-certification) |
 | 05/06/2019 | アプリ テンプレートが利用可能になります。 | [アプリ テンプレート](~/samples/app-templates.md) |
 | 04/23/2019 | アクション ベースのメッセージング拡張機能が利用可能になります。 | [アクション ベースのメッセージ拡張機能](~/concepts/messaging-extensions/create-extensions.md) |
-| 02/18/2019 | プライベート チャットへのディープ リンクの作成は、開発者のプレビューから外れ、利用できます。 | [チャットへのディープ リンクの設定](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
+| 02/18/2019 | プライベート チャットへのディープ リンクの作成。 | [チャットへのディープ リンクの設定](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 01/23/2019 | タブ コンテキストでの SKU と licenceType 情報の表示。 | [タブ コンテキスト](~/concepts/tabs/tabs-context.md) |
 
 <br>
@@ -120,7 +148,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 | **Date** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
-| 2018 年 11 月 12 日 | グループ チャット内のタブは、リリース済みバージョンの Teamsで使用し、開発者プレビューから移動されました。 この作業の一環として、[タブ] セクションはわかりやすくするために再作業されています。| [構成可能なタブ](~/concepts/tabs/tabs-configurable.md) |
+| 2018 年 11 月 12 日 | グループ チャット内のタブは、リリースされたバージョンのグループ チャットでTeams。 この作業の一環として、[タブ] セクションはわかりやすくするために再作業されています。| [構成可能なタブ](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | ノード JS と .NET/C# の開始は、Teams で App Studio を使用するように更新され、Azure での Node ベースの Teams アプリのホスティングに新しいセクションが追加されました。 | [C#/.NET](~/get-started/get-started-dotnet-app-studio.md)と App Studio を使用して Microsoft Teams プラットフォームで始める 、 Node JS と[App Studio](~/get-started/get-started-nodejs-app-studio.md)を使用した Microsoft Teams プラットフォームの使用を開始する[、Azure](~/get-started/get-started-nodejs-in-azure.md)でノード Teams アプリをホストする|
 | 11/09/2018 | これで、ユーザー間のプライベート チャットへのディープ リンクを作成できます。 | [チャットへのディープ リンクの設定](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 2018 年 11 月 8 日 | SharePoint Framework 1.7 が出荷され、web パーツとして [Microsoft Teams] タブSharePoint Framework機能が追加されました。 | [[タブ] SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
@@ -130,7 +158,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 | 09/11/2018 | タブ構成ページの高さが大幅に向上しました。 | [タブデザイン](tabs/design/tabs.md) |
 | 08/15/2018 | アダプティブ カードは、アダプティブ カードでサポートTeams。|[Teams でのアダプティブ カードのアクション](task-modules-and-cards/cards/cards-reference.md#adaptive-card) |
 | 08/10/2018 | DevTools のクライアント サポート。| [デスクトップ クライアントMicrosoft Teams DevTools](~/resources/dev-preview/developer-preview-tools.md)|
-| 08/08/2018 | メッセージング拡張機能は複数のコマンドをサポートしています。 この機能は現在Developer Previewされ、すべてのユーザーにリリースされました。| [composeExtensions.commands](~/resources/schema/manifest-schema.md#composeextensionscommands)|
+| 08/08/2018 | メッセージング拡張機能は複数のコマンドをサポートしています。 | [composeExtensions.commands](~/resources/schema/manifest-schema.md#composeextensionscommands)|
 | 08/07/2018 | コネクタでインライン構成がサポートされました。 Connectors のドキュメントも、わかりやすくするために改訂および拡張されました。| [コネクタ](~/concepts/connectors/connectors.md)|
 | 08/06/2018 | これで、ボットはファイルの送受信を行うことができます。| [ボットを介してファイルを送受信する](~/bots/how-to/bots-filesv4.md)|
 | 07/23/2018 | アプリの再認定に関する情報が [発行] セクションに追加されました。 |[マニフェストのアクセス許可](resources/schema/manifest-schema.md#permissions)|
@@ -159,9 +187,10 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 | **Date** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+|05/26/2021|アダプティブ カードを使用してタブを作成する|[タブを作成する](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| 更新された[Teams ToolkitとVisual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)[の](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview)Visual Studio。 | [アプリ開発Teams開始する](~/get-started/prerequisites.md) |
 |05/25/2021| 会議の詳細 API とリアルタイムの会議Teamsイベント | [Teams 会議用のアプリを作成する](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
-|05/25/2021| アプリを管理Teamsするための新しい開発者ポータルがTeamsされました。 | [開発者ポータル Teams](concepts/build-and-test/teams-developer-portal.md) |
+|05/25/2021| アプリを管理Teamsするための新しい開発者ポータルがTeamsされました。 | [Teams の開発者ポータル](concepts/build-and-test/teams-developer-portal.md) |
 |05/25/2021| Together Mode 機能は、参加者を 1 つの仮想シーンに結合し、ビデオ ストリームを事前に決定されたシートに設定します。 | [一緒にモード](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021|ボットは、リソース固有の同意 (RSC) を使用してすべてのチャネル メッセージを受信できます。|[RSC、ボット会話の](~/bots/how-to/conversations/channel-messages-with-rsc.md)概要、[チャネルと](~/bots/how-to/conversations/conversation-basics.md)グループ[](~/bots/how-to/conversations/channel-and-group-conversations.md)の会話、開発者プレビュー マニフェスト スキーマを使用して[すべてのメッセージを受信する](~/resources/schema/manifest-schema-dev-preview.md) |
 |05/21/2021|タブリンクの分岐とステージ ビュー|[タブリンクの分岐とステージ ビュー](tabs/tabs-link-unfurling.md) |

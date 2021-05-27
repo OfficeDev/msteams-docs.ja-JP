@@ -4,16 +4,16 @@ description: Teams の Bot で使用できるすべてのカードとカード �
 localization_priority: Normal
 keywords: Bot のカード リファレンス
 ms.topic: reference
-ms.openlocfilehash: cab7f1659759f40beb1aba59531ee6c1a84662c1
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: d3f0904326f951475c8a0d3e17daf720d9aad489
+ms.sourcegitcommit: c59d90ae03eae32996db49f162855965b55c52fe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566860"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52668863"
 ---
 # <a name="cards-reference"></a>カード リファレンス
 
-このドキュメントに記載されているカードは、ボットでサポートされているMicrosoft Teams。 これらは Bot Framework によって定義されたカードに基づいておりますが、Teams はボット フレームワーク カードの一部をサポートしているのではなく、一部の Teamsカードが追加されています。 相違点は、このドキュメントの参照で呼び出されます。
+このドキュメントに記載されているカードは、ボットでサポートされているMicrosoft Teams。 これらは Bot Framework (BF) で定義されたカードに基づいておりますが、Teams ではすべてのボット フレームワーク カードがサポートされるのではなく、一部の Teams カードが追加されています。 相違点は、このドキュメントの参照で呼び出されます。
 
 ## <a name="card-examples"></a>カードの例
 

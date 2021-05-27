@@ -5,17 +5,17 @@ ms.topic: reference
 keywords: teams マニフェスト スキーマ Developer Preview
 localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: 333ed556ba8ba59c66f66d7eaa41dd0ea66dca0a
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: a5c75046b950484a897fa2720444899c4817989c
+ms.sourcegitcommit: 25c02757fe207cdff916ba63aa215f88e24e1d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629866"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52667419"
 ---
 # <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>開発者プレビュー マニフェスト スキーマ (Microsoft Teams
 
 > [!NOTE]
-> プログラム [Developer Preview](~/resources/dev-preview/developer-preview-intro.md) 参加方法の詳細については、「Developer Preview」を参照してください。
+> プログラムの詳細と参加方法については、「Developer Preview」 を [参照してください](~/resources/dev-preview/developer-preview-intro.md)。
 > 開発者プレビューを使用していない場合は、このバージョンのマニフェストを使用する必要があります。 マニフェスト[のパブリック バージョンについては、「リファレンス: Microsoft Teams](~/resources/schema/manifest-schema.md)マニフェスト スキーマ」を参照してください。
 
 このMicrosoft Teamsマニフェストは、アプリが製品に統合する方法Microsoft Teamsします。 マニフェストは、 でホストされるスキーマに準拠している必要があります [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) 。
@@ -73,6 +73,7 @@ ms.locfileid: "52629866"
       "entityId": "idForPage",
       "name": "Display name of tab",
       "contentUrl": "https://contoso.com/content?host=msteams",
+      "contentBotId": "Specifies to the app that tab is an Adaptive Card Tab. You can either provide the contentBotId or contentUrl.",
       "websiteUrl": "https://contoso.com/content",
       "scopes": [ "personal" ]
     }
@@ -350,7 +351,7 @@ ms.locfileid: "52629866"
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 文字|✔|タブ https:// する際に使用する URL を指定します。|
-|`canUpdateConfiguration`|ブール型|||作成後に、タブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 既定値: `true`|
+|`canUpdateConfiguration`|Boolean|||作成後に、タブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 既定値: `true`|
 |`scopes`|列挙型の配列|1|✔|現在、構成可能なタブは、スコープ `team` とスコープ `groupchat` のみをサポートしています。 |
 |`sharePointPreviewImage`|String|2048||タブ プレビュー イメージへの相対ファイル パスを使用して、SharePoint。 サイズは 1024x768 です。 |
 |`supportedSharePointHosts`|列挙型の配列|1||タブをタブで使用する方法を定義SharePoint。 オプションは `sharePointFullPage` 次のとおりです。 `sharePointWebPart` |
@@ -361,13 +362,17 @@ ms.locfileid: "52629866"
 
 ユーザーが手動で追加せずに、既定で "ピン留め" できるタブのセットを定義します。 スコープ内で宣言された静的タブ `personal` は、常にアプリの個人用エクスペリエンスにピン留めされます。 スコープで宣言されている静的タブ `team` は現在サポートされていません。
 
+staticTabs ブロックではなく、アダプティブ カードを使用してタブ `contentBotId` `contentUrl` **をレンダリング** します。
+
 オブジェクトは、型のすべての要素を持つ配列 (最大 16 要素) です `object` 。 このブロックは、静的タブ ソリューションを提供するソリューションにのみ必要です。
+
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`entityId`|String|64 文字|✔|タブが表示されるエンティティの一意の識別子。|
 |`name`|String|128 文字|✔|チャネル インターフェイスのタブの表示名。|
 |`contentUrl`|String|2048 文字|✔|この https:// キャンバスに表示するエンティティ UI を示すTeamsします。|
+|`contentBotId`|   | | | ボット Microsoft Teamsで指定されたアプリ ID を指定します。 |
 |`websiteUrl`|String|2048 文字||ユーザー https:// ブラウザーで表示することを選択した場合に示す URL を指定します。|
 |`scopes`|列挙型の配列|1|✔|現在、静的タブはスコープのみをサポートしています。つまり、個人用エクスペリエンスの一部としてのみ `personal` プロビジョニングできます。|
 
@@ -421,10 +426,10 @@ ms.locfileid: "52629866"
 
 オブジェクトは、型のすべての要素を持つ配列 (最大 1 要素) です `object` 。 このブロックは、メッセージング拡張機能を提供するソリューションにのみ必要です。
 
-|名前| 種類 | 最大サイズ | 必須 | 説明|
+|名前| 型 | 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`botId`|String|64|✔|ボット フレームワークに登録されているメッセージング拡張機能をバックするボットの一意の Microsoft アプリ ID。 これは、アプリ全体の ID と同じ [可能性があります](#id)。|
-|`canUpdateConfiguration`|ブール型|||メッセージング拡張機能の構成をユーザーが更新できるかどうかを示す値。 既定値は `false` です。|
+|`canUpdateConfiguration`|Boolean|||メッセージング拡張機能の構成をユーザーが更新できるかどうかを示す値。 既定値は `false` です。|
 |`commands`|オブジェクトの配列|10|✔|メッセージング拡張機能がサポートするコマンドの配列|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -439,9 +444,9 @@ ms.locfileid: "52629866"
 |`type`|String|64 文字||コマンドの種類。 または `query` の 1 `action` つ。 既定値: `query`|
 |`title`|String|32 文字|✔|ユーザーフレンドリーなコマンド名。|
 |`description`|String|128 文字||このコマンドの目的を示すためにユーザーに表示される説明。|
-|`initialRun`|ブール型|||パラメーターを指定してコマンドを最初に実行するかどうかを示すブール値。 既定値: `false`|
+|`initialRun`|Boolean|||パラメーターを指定してコマンドを最初に実行するかどうかを示すブール値。 既定値: `false`|
 |`context`|文字列 (String) の配列|3||メッセージ拡張機能の呼び出し先を定義します。 `compose`、 の任意の `commandBox` 組み合 `message` わせ。 既定値は `["compose", "commandBox"]` です|
-|`fetchTask`|ブール型|||タスク モジュールを動的にフェッチする必要があるかどうかを示すブール値。|
+|`fetchTask`|Boolean|||タスク モジュールを動的にフェッチする必要があるかどうかを示すブール値。|
 |`taskInfo`|オブジェクト|||メッセージング拡張機能コマンドを使用するときにプリロードするタスク モジュールを指定します。|
 |`taskInfo.title`|String|64||最初のダイアログ タイトル。|
 |`taskInfo.width`|String|||ダイアログの幅 - ピクセル単位の数値または既定のレイアウト ('large'、'medium'、または 'small' など)。|
@@ -550,6 +555,6 @@ ms.locfileid: "52629866"
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`team`|string|||選択したインストール スコープが次の場合 `team` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
-|`groupchat`|文字列|||選択したインストール スコープが次の場合 `groupchat` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
-|`meetings`|文字列|||選択したインストール スコープが次の場合 `meetings` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
+|`groupchat`|string|||選択したインストール スコープが次の場合 `groupchat` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
+|`meetings`|string|||選択したインストール スコープが次の場合 `meetings` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
 
