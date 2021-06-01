@@ -4,12 +4,12 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 localization_priority: Normal
 keywords: チームの最新情報
-ms.openlocfilehash: eb7252a8f3a48049de098c50b26f087df70e5b20
-ms.sourcegitcommit: c59d90ae03eae32996db49f162855965b55c52fe
+ms.openlocfilehash: 89cd0a0bd7d19aaaab1b40a4976b265b9aa04b5d
+ms.sourcegitcommit: 118f7261d313feeac5b398fef56a44bd90104b2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52668856"
+ms.lasthandoff: 05/31/2021
+ms.locfileid: "52709636"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
@@ -55,8 +55,9 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 | **Date** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
-|05/24/2021|モバイル パターンTeamsを使用して、アプリの設計ガイドラインを更新しました。|[アプリのTeamsする](~/concepts/design/design-teams-app-overview.md)
-|05/13/2021|mConnect と Skooler に関する情報を追加しました。|[Moodle ラーニング管理システム](resources/moodle-overview.md)
+|05/31/2021| 会話タブ | [タブ内のコンテンツに関する会話を開始および続行する](~/tabs/how-to/conversational-tabs.md) |
+|05/24/2021| モバイル パターンTeamsを使用して、アプリの設計ガイドラインを更新しました。|[アプリのTeamsする](~/concepts/design/design-teams-app-overview.md)
+|05/13/2021| mConnect と Skooler に関する情報を追加しました。|[Moodle ラーニング管理システム](resources/moodle-overview.md)
 |05/10/2021| マニフェスト v1.10 がリリースされました。|[マニフェスト スキーマ](resources/schema/manifest-schema.md) |
 |05/10/2021| 新しいアプリのカスタマイズ機能。| [組織でアプリをカスタマイズする](concepts/design/enable-app-customization.md) |
 |05/07/2021| チャットでの音声通話とビデオ通話のディープ リンク。 |[ディープ リンク](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
@@ -91,11 +92,11 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 |09/22/2020|開発の開始に関する新Teams。|[アプリの最初のTeamsを作成する](build-your-first-app/build-first-app-overview.md)|
 |09/18/2020|会議中のアプリのTeams (リリース プレビュー)。|[会議や会議Teamsアプリ](apps-in-teams-meetings/create-apps-for-teams-meetings.md)[のアプリをTeamsする](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |08/19/2020|Microsoft TeamsメッセージをインポートGraph。|[Microsoft Graph を使用してサードパーティのプラットフォーム メッセージを Teams にインポートする](graph-api/import-messages/import-external-messages-to-teams.md)
-| 08/12/2020 |受信 Webhook でのアダプティブ カードのサポートが GA に移動しました。|[受信 Webhook を使用してアダプティブ カードを送信する](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
+|08/12/2020 |受信 Webhook でのアダプティブ カードのサポートが GA に移動しました。|[受信 Webhook を使用してアダプティブ カードを送信する](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
 |08/10/2020|アプリを使用Teamsを構築するVisual Studio Toolkit。|[アプリとアプリのMicrosoft Teams ToolkitをVisual Studio Code](toolkit/visual-studio-overview.md) |
 |08/06/2020|タブ SSO 認証のサポート。|[[SSO の設定] タブMicrosoft Teamsする](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
 |07/27/2020 | Graphボットとメッセージの管理 (パブリック プレビュー)。|[Microsoft Teams を使用して、プロアクティブ ボットのインストールとプロアクティブ メッセージングをGraph](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
-| 07/22/2020 |モバイル デバイス機能の更新。|[[デバイスのアクセス許可を要求する] Microsoft Teamsタブ](concepts/device-capabilities/native-device-permissions.md) |
+|07/22/2020 |モバイル デバイス機能の更新。|[[デバイスのアクセス許可を要求する] Microsoft Teamsタブ](concepts/device-capabilities/native-device-permissions.md) |
 |07/20/2020|TeamsAppSource 申請のアプリ検証ツール。|[Teamsアプリ検証ツール](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 |07/15/2020|ユーザーの仮想アシスタントを作成Teams。|[仮想アシスタントのMicrosoft Teams](samples/virtual-assistant.md)|
 |07/14/2020|ネイティブ読み込みインジケーターのドキュメントを表示する。|[ネイティブ読み込みインジケーターの表示](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
@@ -104,7 +105,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 |06/05/2020| バージョン 1.7 に更新されたマニフェスト スキーマ。| [リファレンス: マニフェスト スキーマのMicrosoft Teams](resources/schema/manifest-schema.md)|
 |05/18/2020|アプリケーションとPower Virtual Agents統合Teams。|[チャットボットとPower Virtual Agentsを統合Microsoft Teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
 |04/01/2020|WFM システムを Shifts Connector と統合して、Teams。|[Microsoft TeamsWFM コネクタをシフトする](samples/shifts-wfm-connectors.md)
-| 03/24/2020 | 会話の 1 つのメンバーを取得するためのサポート、およびページメンバーの取得に関する追加のサポートが追加されました。 | [Teams のコンテキストをボット用に取得する](~/bots/how-to/get-teams-context.md) |
+|03/24/2020 | 会話の 1 つのメンバーを取得するためのサポート、およびページメンバーの取得に関する追加のサポートが追加されました。 | [Teams のコンテキストをボット用に取得する](~/bots/how-to/get-teams-context.md) |
 
 <br>
 
@@ -187,7 +188,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 | **Date** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
-|05/26/2021|アダプティブ カードを使用してタブを作成する|[タブを作成する](tabs/how-to/build-adaptive-card-tabs.md)|
+|05/26/2021|アダプティブ カードを使用してタブをビルドする|[タブを作成する](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| 更新された[Teams ToolkitとVisual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)[の](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview)Visual Studio。 | [アプリ開発Teams開始する](~/get-started/prerequisites.md) |
 |05/25/2021| 会議の詳細 API とリアルタイムの会議Teamsイベント | [Teams 会議用のアプリを作成する](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
 |05/25/2021| アプリを管理Teamsするための新しい開発者ポータルがTeamsされました。 | [Teams の開発者ポータル](concepts/build-and-test/teams-developer-portal.md) |

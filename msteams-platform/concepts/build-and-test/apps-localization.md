@@ -5,12 +5,12 @@ ms.topic: conceptual
 localization_priority: Normal
 keywords: teams publishs store office publishing AppSource ローカライズ言語
 ms.date: 05/15/2018
-ms.openlocfilehash: a55b8af97e5306843858e5844a017dd402ab3516
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 6dbdeb6d16c99aada23f8d74a92d958f9c29b69d
+ms.sourcegitcommit: 118f7261d313feeac5b398fef56a44bd90104b2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566048"
+ms.lasthandoff: 05/31/2021
+ms.locfileid: "52709629"
 ---
 # <a name="localization-for-microsoft-teams-apps"></a>アプリのローカライズMicrosoft Teamsする
 
@@ -137,8 +137,8 @@ Teams クライアントは、既定の言語文字列 -> ユーザーの言語�
 
 ## <a name="code-sample"></a>コード サンプル
 
-| サンプルの名前 | 説明 | .NET |
-|-------------|-------------|------|
-| アプリのローカライズ | Microsoft Teamsタブを使用してアプリのローカライズを行います。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
+| サンプルの名前 | 説明 | .NET | Node.js |
+|-------------|-------------|------|------|
+| アプリのローカライズ | Microsoft Teamsタブを使用してアプリのローカライズを行います。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
 
 
