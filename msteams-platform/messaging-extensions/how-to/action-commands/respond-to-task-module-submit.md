@@ -5,12 +5,12 @@ description: メッセージング拡張機能アクション コマンドから
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 3ed682eadde410a545f73768943a51ef95123e49
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: ae5171f45974e7977a45775facf6360d34a84f87
+ms.sourcegitcommit: e50cdeb6b7f481e12911b2bb74a8da22af0bffac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019833"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "52710642"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>タスク モジュールの送信アクションに応答する
 
@@ -26,7 +26,7 @@ ms.locfileid: "52019833"
 * [カードの](#respond-with-a-card-inserted-into-the-compose-message-area)応答 : ユーザーが操作できるカードまたはメッセージに挿入できるカードで応答できます。
 * [ボットからのアダプティブ カード](#bot-response-with-adaptive-card): アダプティブ カードを会話に直接挿入します。
 * [ユーザーに認証を要求します](~/messaging-extensions/how-to/add-authentication.md)。
-* [追加の構成を提供するユーザーを要求します](~/messaging-extensions/how-to/add-configuration-page.md)。
+* [追加の構成をユーザーに要求する]~//get-started/first-message-extension.md)。
 
 認証または構成の場合、ユーザーがプロセスを完了すると、元の呼び出しが Web サービスに再び戻されます。 次の表に、メッセージング拡張機能の呼び出し場所に基づいて使用できる応答 `commandContext` の種類を示します。 
 
@@ -584,7 +584,7 @@ Teams でユーザー属性を使用するには、ユーザーに送信され�
 
 次のセクションでは、Array 内のエンティティの説明を示 `OnBehalfOf` します。
 
-|Field|種類|説明|
+|フィールド|種類|説明|
 |:---|:---|:---|
 |`itemId`|整数|アイテムの識別について説明します。 その値は、 である必要があります `0` 。|
 |`mentionType`|String|"person" のメンションについて説明します。|

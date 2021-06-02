@@ -5,12 +5,12 @@ description: Teams ツールキットを使用して、Microsoft Teams のメッ
 ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
-ms.openlocfilehash: ad341c386cc9e1bf03cf6e25c0d8be8add0880c6
-ms.sourcegitcommit: 2c8b35899dd845acd66f1f927e40d99523c29a91
-ms.translationtype: HT
+ms.openlocfilehash: eaecb045993f8dfd21f4c2c4359a4a3388d659e6
+ms.sourcegitcommit: e50cdeb6b7f481e12911b2bb74a8da22af0bffac
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2021
-ms.locfileid: "52698112"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "52710649"
 ---
 # <a name="build-and-run-your-first-messaging-extension-for-microsoft-teams"></a>Microsoft Teams 用の最初のメッセージング拡張機能のビルド及び実行
 
@@ -166,6 +166,23 @@ Teams でアプリを正常に実行するには、アプリのサイドロー�
 展開では、アクティブな Azure サブスクリプションにリソースをプロビジョニングし、アプリケーションのバックエンドとフロントエンドのコードを Azure に展開 (アップロード) します。 バックエンドには、Azure App Service や Azure Bot Service など、さまざまな Azure のサービスが使用されています。
 
 </details>
+
+## <a name="add-a-configuration-page-to-your-messaging-extension"></a>メッセージング拡張機能に構成ページを追加する
+
+[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+
+## <a name="code-sample"></a>コード サンプル
+
+Teams上GitHubサンプル プロジェクトの検索 Auth Config では、構成ページとボット サービス認証を含むメッセージング拡張機能を作成する方法[を示します](https://github.com/microsoft/BotBuilder-Samples#teams-samples)。 このサンプルでは、ユーザーがサインインした後に、検索要求を受け入れ、結果を返すメッセージ拡張機能を作成する方法も示しています。
+
+| **サンプル名** | **説明** | **.NET** | **Node.js** | **Python** |
+|-----------------|-----------------|-------------|--------------|--------|
+| ボット ビルダー | メッセージング拡張機能を作成するには。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) | [View]( https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
+
+## <a name="additional-code-sample"></a>追加のコード サンプル
+
+> [!div class="nextstepaction"]
+> [ボット フレームワークのサンプルを表示する GitHub](https://github.com/OfficeDev/microsoft-teams-samples#messaging-extensions-samples-using-the-v4-sdk)
 
 ## <a name="next-steps"></a>次の手順
 
