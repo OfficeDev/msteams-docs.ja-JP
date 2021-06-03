@@ -5,95 +5,142 @@ keywords: teams visual studio コード ツールキット
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: d51ccf3ed62e22fb417eec72d1f409b1b77b9da6
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: bc97a78df5618c87dfc66fae179145acd749ad1f
+ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629838"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "52721823"
 ---
-# <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a><span data-ttu-id="b3fe5-104">アプリとアプリのTeams ToolkitをVisual Studio Code</span><span class="sxs-lookup"><span data-stu-id="b3fe5-104">Build apps with the Teams Toolkit and Visual Studio Code</span></span>
+# <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a><span data-ttu-id="41e13-104">アプリとアプリのTeams ToolkitをVisual Studio Code</span><span class="sxs-lookup"><span data-stu-id="41e13-104">Build apps with the Teams Toolkit and Visual Studio Code</span></span>
 
-<span data-ttu-id="b3fe5-105">Microsoft Teams ツールキットを使用すると、Visual Studio Code 環境内で直接カスタムの Teams アプリを構築できます。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-105">The Microsoft Teams Toolkit enables you to create custom Teams apps directly within the Visual Studio Code environment.</span></span> <span data-ttu-id="b3fe5-106">ツールキットはプロセスをガイドし、Teams アプリの構築、デバッグ、起動に必要なすべてを提供します。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-106">The toolkit guides you through the process and provides everything you need to build, debug, and launch your Teams app.</span></span>
+<span data-ttu-id="41e13-105">Visual Studio Code の Teams Toolkit は、開発者エクスペリエンスに対する "ゼロ構成" アプローチで、統合 ID、クラウド ストレージへのアクセス、Microsoft Graph からのデータ、および Azure および M365 の他のサービスを備えた Teams アプリを作成および展開するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="41e13-105">The Teams Toolkit for Visual Studio Code helps developers create and deploy Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and M365 with a “zero-configuration” approach to the developer experience.</span></span>  
 
-## <a name="installing-the-teams-toolkit"></a><span data-ttu-id="b3fe5-107">アプリケーションのインストールTeams Toolkit</span><span class="sxs-lookup"><span data-stu-id="b3fe5-107">Installing the Teams Toolkit</span></span>
+<span data-ttu-id="41e13-106">また、このツールキットは、Visual Studio CLI (と呼ばれる) として使用することもできます `teamsfx` 。</span><span class="sxs-lookup"><span data-stu-id="41e13-106">You also can use the toolkit with Visual Studio or as a CLI (called `teamsfx`).</span></span>
 
-<span data-ttu-id="b3fe5-108">このMicrosoft Teams ToolkitはVisual Studio Code[マーケット](https://aka.ms/teams-toolkit)プレースから、またはVisual Studio内の拡張機能として直接ダウンロードVisual Studio Code。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-108">The Microsoft Teams Toolkit for Visual Studio Code is available for download from the [Visual Studio Marketplace](https://aka.ms/teams-toolkit) or directly as an extension within Visual Studio Code.</span></span>
+## <a name="install-the-teams-toolkit-for-visual-studio-code"></a><span data-ttu-id="41e13-107">インストール用のTeams ToolkitをインストールVisual Studio Code</span><span class="sxs-lookup"><span data-stu-id="41e13-107">Install the Teams Toolkit for Visual Studio Code</span></span>
 
-> [!TIP]
-> <span data-ttu-id="b3fe5-109">インストール後、アクティビティ バーにTeams ToolkitがVisual Studio Code表示されます。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-109">After installation, you should see the Teams Toolkit in the Visual Studio Code activity bar.</span></span> <span data-ttu-id="b3fe5-110">表示されない場合は、アクティビティ バー内を右クリックし、[Microsoft Teams]を選択してツールキットをピン留めして簡単にアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-110">If not, right-click within the activity bar and select **Microsoft Teams** to pin the toolkit for easy access.</span></span>
+1. <span data-ttu-id="41e13-108">Visual Studio Code を開きます。</span><span class="sxs-lookup"><span data-stu-id="41e13-108">Open Visual Studio Code.</span></span>
+1. <span data-ttu-id="41e13-109">[拡張機能] ビューを選択します **(Ctrl + Shift +**  /   **>** X</span><span class="sxs-lookup"><span data-stu-id="41e13-109">Select the Extensions view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).</span></span>
+1. <span data-ttu-id="41e13-110">検索ボックスに「Teams Toolkit」_と入力します_。</span><span class="sxs-lookup"><span data-stu-id="41e13-110">In the search box, enter _Teams Toolkit_.</span></span>
+1. <span data-ttu-id="41e13-111">[インストール] ウィンドウの横にある緑色のインストール ボタンTeams Toolkit。</span><span class="sxs-lookup"><span data-stu-id="41e13-111">Select on the green install button next to the Teams Toolkit.</span></span>
 
-## <a name="using-the-toolkit"></a><span data-ttu-id="b3fe5-111">ツールキットの使用</span><span class="sxs-lookup"><span data-stu-id="b3fe5-111">Using the toolkit</span></span>
+<span data-ttu-id="41e13-112">また、マーケットプレースでTeams ToolkitをVisual Studio Code[できます](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)。</span><span class="sxs-lookup"><span data-stu-id="41e13-112">You also can find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).</span></span>
 
-- [<span data-ttu-id="b3fe5-112">新しいプロジェクトをセットアップする</span><span class="sxs-lookup"><span data-stu-id="b3fe5-112">Set up a new project</span></span>](#set-up-a-new-teams-project)
-- [<span data-ttu-id="b3fe5-113">既存のプロジェクトをインポートする</span><span class="sxs-lookup"><span data-stu-id="b3fe5-113">Import an existing project</span></span>](#import-an-existing-teams-app-project)
-- [<span data-ttu-id="b3fe5-114">アプリを構成する</span><span class="sxs-lookup"><span data-stu-id="b3fe5-114">Configure your app</span></span>](#configure-your-app)
-- [<span data-ttu-id="b3fe5-115">アプリをパッケージ化する</span><span class="sxs-lookup"><span data-stu-id="b3fe5-115">Package your app</span></span>](#package-your-app)
-- [<span data-ttu-id="b3fe5-116">アプリをローカルまたはローカルで実行Teams</span><span class="sxs-lookup"><span data-stu-id="b3fe5-116">Run your app locally or in Teams</span></span>](#run-your-app)
+<span data-ttu-id="41e13-113">次のツールは、必要に応じてVisual Studio Code拡張機能によってインストールされます。</span><span class="sxs-lookup"><span data-stu-id="41e13-113">The following tools will be installed by the Visual Studio Code extension when they are needed.</span></span>  <span data-ttu-id="41e13-114">既にインストールされている場合は、インストールされているバージョンが代わりに使用されます。</span><span class="sxs-lookup"><span data-stu-id="41e13-114">If already installed, the installed version will be used instead.</span></span>  <span data-ttu-id="41e13-115">Linux (WSL を含む) を使用する場合は、次のツールをインストールしてから使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="41e13-115">If using Linux (including WSL), you must install these tools before use:</span></span>
 
-## <a name="set-up-a-new-teams-project"></a><span data-ttu-id="b3fe5-117">新しいプロジェクトをTeamsする</span><span class="sxs-lookup"><span data-stu-id="b3fe5-117">Set up a new Teams project</span></span>
+- [<span data-ttu-id="41e13-116">Azure Functions コア ツール</span><span class="sxs-lookup"><span data-stu-id="41e13-116">Azure Functions Core Tools</span></span>](/azure/azure-functions/functions-run-local)
 
-1. <span data-ttu-id="b3fe5-118">ローカル環境でプロジェクトのワークスペースまたはフォルダーを作成します。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-118">Create a workspace or folder for your project in your local environment.</span></span>
-1. <span data-ttu-id="b3fe5-119">[Visual Studio Code] アイコンをTeamsします。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-119">In Visual Studio Code, select the Teams icon</span></span> ![Teams アイコン](../assets/icons/favicon-16x16.png) <span data-ttu-id="b3fe5-121">ウィンドウの左側のアクティビティ バーから。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-121">from the activity bar on the left side of the window.</span></span>
-1. <span data-ttu-id="b3fe5-122">[**コマンド メニューからMicrosoft Teams Toolkit** を開く] を選択します。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-122">Select **Open the Microsoft Teams Toolkit** from the command menu.</span></span>
-1. <span data-ttu-id="b3fe5-123">コマンド **メニューから [新Teamsアプリ** を作成する] を選択します。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-123">Select **Create a new Teams app** from the command menu.</span></span>
-1. <span data-ttu-id="b3fe5-124">プロンプトが表示されたら、ワークスペースの名前を入力します。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-124">When prompted, enter the name of the workspace .</span></span> <span data-ttu-id="b3fe5-125">これは、プロジェクトが存在するフォルダーの名前と、アプリの既定の名前の両方として使用されます。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-125">This will be used as both the name of the folder where your project will reside, and the default name of your app.</span></span>
-1. <span data-ttu-id="b3fe5-126">Enter **キーを** 押すと、[機能の追加 **] 画面が** 表示され、新しいアプリのプロパティが構成されます。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-126">Press **Enter** and you will arrive at the **Add capabilities** screen configure the properties for your new app.</span></span>
-1. <span data-ttu-id="b3fe5-127">[完了] **ボタンを** 選択して構成プロセスを完了します。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-127">Select the **Finish** button to complete the configuration process.</span></span>
+    <span data-ttu-id="41e13-117">Azure Functions Core Tools は、Azure でサービスを実行するときに必要な認証ヘルパーを含む、ローカル デバッグ実行時にバックエンド コンポーネントをローカルで実行するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="41e13-117">Azure Functions Core Tools is used to run any backend components locally during a local debug run, including the authentication helpers required when running your services in Azure.</span></span>  <span data-ttu-id="41e13-118">プロジェクト ディレクトリ内にインストールされます (npm を使用 `devDependencies` )。</span><span class="sxs-lookup"><span data-stu-id="41e13-118">It is installed within the project directory (using the npm `devDependencies`).</span></span>
 
-## <a name="import-an-existing-teams-app-project"></a><span data-ttu-id="b3fe5-128">既存のアプリ プロジェクトTeamsインポートする</span><span class="sxs-lookup"><span data-stu-id="b3fe5-128">Import an existing Teams app project</span></span>
+- [<span data-ttu-id="41e13-119">.NET SDK</span><span class="sxs-lookup"><span data-stu-id="41e13-119">.NET SDK</span></span>](/dotnet/core/install/)
 
-1. <span data-ttu-id="b3fe5-129">[Visual Studio Code] アイコンをTeamsします。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-129">In Visual Studio Code, select the Teams icon</span></span> ![Teams アイコン](../assets/icons/favicon-16x16.png) <span data-ttu-id="b3fe5-131">ウィンドウの左側のアクティビティ バーから。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-131">from the activity bar on the left side of the window.</span></span>
-1. <span data-ttu-id="b3fe5-132">コマンド メニュー **から [アプリ パッケージの** インポート] を選択します。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-132">Select **Import app package** from the command menu.</span></span>
-1. <span data-ttu-id="b3fe5-133">アプリ パッケージの zip ファイルTeams[既存のファイルを](/microsoftteams/platform/concepts/build-and-test/apps-package?view=msteams-client-js-latest&preserve-view=true)選択します。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-133">Choose your existing Teams [app package](/microsoftteams/platform/concepts/build-and-test/apps-package?view=msteams-client-js-latest&preserve-view=true) zip file.</span></span>
-1. <span data-ttu-id="b3fe5-134">[発行パッケージ **の選択] ボタンを選択** します。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-134">Choose the **Select publishing package** button.</span></span> <span data-ttu-id="b3fe5-135">これで、ツールキットの構成タブにアプリの詳細が表示されます。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-135">The configuration tab of the toolkit should now be populated with your app's details.</span></span>
-1. <span data-ttu-id="b3fe5-136">[Visual Studio Code] で[ワークスペースにフォルダーを追加] を選択して、ソース コード ディレクトリをワークスペースに  ->  Visual Studio Codeします。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-136">In Visual Studio Code, select **File** -> **Add Folder to Workspace** to add your source code directory to the Visual Studio Code workspace.</span></span>
+    <span data-ttu-id="41e13-120">.NET SDK は、ローカル デバッグと Azure Functions アプリの展開用にカスタマイズされたバインドをインストールするために使用されます。</span><span class="sxs-lookup"><span data-stu-id="41e13-120">The .NET SDK is used to install customized bindings for local debugging and Azure Functions app deployments.</span></span>  <span data-ttu-id="41e13-121">.NET 3.1 (以降) SDK をグローバルにインストールしていない場合は、ポータブル バージョンがインストールされます。</span><span class="sxs-lookup"><span data-stu-id="41e13-121">If you have not installed the .NET 3.1 (or later) SDK globally, the portable version will be installed.</span></span>
 
-## <a name="configure-your-app"></a><span data-ttu-id="b3fe5-137">アプリを構成する</span><span class="sxs-lookup"><span data-stu-id="b3fe5-137">Configure your app</span></span>
+- [<span data-ttu-id="41e13-122">ngrok</span><span class="sxs-lookup"><span data-stu-id="41e13-122">ngrok</span></span>](https://ngrok.com/download)
 
-<span data-ttu-id="b3fe5-138">このアプリの中核となるのは、Teams 3 つのコンポーネントです。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-138">At its core, the Teams app embraces three components:</span></span>
+    <span data-ttu-id="41e13-123">一部Teamsアプリ機能 (会話型ボット、メッセージング拡張機能、受信 Webhook) では、受信接続が必要です。</span><span class="sxs-lookup"><span data-stu-id="41e13-123">Some Teams app features (conversational bots, messaging extensions, and incoming webhooks) require inbound connections.</span></span>  <span data-ttu-id="41e13-124">開発システムをトンネル経由でTeamsする必要があります。</span><span class="sxs-lookup"><span data-stu-id="41e13-124">You need to expose your development system to Teams through a tunnel.</span></span>  <span data-ttu-id="41e13-125">タブのみを含むアプリでは、トンネルは必要ありません。</span><span class="sxs-lookup"><span data-stu-id="41e13-125">A tunnel is not required for apps that only include tabs.</span></span>  <span data-ttu-id="41e13-126">このパッケージは、(npm を使用して) プロジェクト ディレクトリ内にインストールされます `devDependencies` 。</span><span class="sxs-lookup"><span data-stu-id="41e13-126">This package is installed within the project directory (using npm `devDependencies`).</span></span>
 
-  1. <span data-ttu-id="b3fe5-139">ユーザー Microsoft Teamsアプリを操作するクライアント (Web、デスクトップ、モバイル) を指定します。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-139">The Microsoft Teams client (web, desktop or mobile) where users interact with your app.</span></span>
-  1. <span data-ttu-id="b3fe5-140">サーバーに表示されるコンテンツの要求に応答するTeams。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-140">A server that responds to requests for content that will be displayed in Teams.</span></span> <span data-ttu-id="b3fe5-141">たとえば、HTML タブ コンテンツやボットアダプティブ カードなどです。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-141">For example, HTML tab content or a bot adaptive card.</span></span>
-  1. <span data-ttu-id="b3fe5-142">アプリ Teamsは、次の 3 つのファイルで構成されます。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-142">A Teams app package consists of three files:</span></span>
+## <a name="use-the-teams-toolkit-for-visual-studio-code"></a><span data-ttu-id="41e13-127">次のTeams Toolkitを使用Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="41e13-127">Use the Teams Toolkit for Visual Studio Code</span></span>
+
+- [<span data-ttu-id="41e13-128">新しいプロジェクトをセットアップする</span><span class="sxs-lookup"><span data-stu-id="41e13-128">Set up a new project</span></span>](#set-up-a-new-teams-project)
+- [<span data-ttu-id="41e13-129">アプリを構成する</span><span class="sxs-lookup"><span data-stu-id="41e13-129">Configure your app</span></span>](#configure-your-app)
+- [<span data-ttu-id="41e13-130">アプリをローカルで実行する</span><span class="sxs-lookup"><span data-stu-id="41e13-130">Run your app locally</span></span>](#install-and-run-your-app-locally)
+- [<span data-ttu-id="41e13-131">アプリを公開する</span><span class="sxs-lookup"><span data-stu-id="41e13-131">Publish your app</span></span>](#publish-your-app-to-teams)
+
+## <a name="set-up-a-new-teams-project"></a><span data-ttu-id="41e13-132">新しいプロジェクトをTeamsする</span><span class="sxs-lookup"><span data-stu-id="41e13-132">Set up a new Teams project</span></span>
+
+<span data-ttu-id="41e13-133">このTeams Toolkitは、Azure Reactまたは M365 環境でホストされる SPFx Web パーツでホストされるアプリをSharePointできます。</span><span class="sxs-lookup"><span data-stu-id="41e13-133">The Teams Toolkit can create React apps that will be hosted in Azure or SPFx web parts that will be hosted on your M365 SharePoint environment.</span></span>  <span data-ttu-id="41e13-134">Azure でホストReact新しいアプリを作成するには、次の方法を実行します。</span><span class="sxs-lookup"><span data-stu-id="41e13-134">To create a new React app to be hosted on Azure:</span></span>
+
+1. <span data-ttu-id="41e13-135">Visual Studio Code を開きます。</span><span class="sxs-lookup"><span data-stu-id="41e13-135">Open Visual Studio code.</span></span>
+1. <span data-ttu-id="41e13-136">サイド バーの Teams アイコンを選択して、Teams ツールキットを開きます。</span><span class="sxs-lookup"><span data-stu-id="41e13-136">Open the Teams Toolkit by selecting the Teams icon in the sidebar:</span></span>
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Visual Studio Code サイド バーの Teams アイコン":::。
+
+1. <span data-ttu-id="41e13-138">**[新しいプロジェクトの作成]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="41e13-138">Select **Create New Project**.</span></span>
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project.png" alt-text="Teams ツールキットのサイド バーにある [新しいプロジェクトの作成] リンクの位置":::。
+
+1. <span data-ttu-id="41e13-140">**[新しい Teams アプリを作成]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="41e13-140">Select **Create a new Teams app**.</span></span>
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="[新しいプロジェクトの作成] のウィザードの開始":::。
+
+1. <span data-ttu-id="41e13-142">**[機能の選択]** 手順では、**[タブ]** 機能がすでに選択されています。</span><span class="sxs-lookup"><span data-stu-id="41e13-142">On the **Select capabilities** step, the **Tab** capability will already be selected.</span></span>  <span data-ttu-id="41e13-143">必要に応じて、[**ボットとメッセージング拡張機能\*\*\*\*] を選択することもできます**。</span><span class="sxs-lookup"><span data-stu-id="41e13-143">You can also optionally select **Bot** and **Messaging Extension**.</span></span>  <span data-ttu-id="41e13-144">**[OK]** を押します。</span><span class="sxs-lookup"><span data-stu-id="41e13-144">Press **OK**.</span></span>
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="新しいアプリに機能を追加する方法を示すスクリーンショット":::。
+
+1. <span data-ttu-id="41e13-146">**[フロントエンド ホストの種類]** 手順で、**[Azure]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="41e13-146">On the **Frontend hosting type** step, select **Azure**.</span></span>
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="新規アプリのホスティングを選択する方法を示すスクリーンショット":::。
+
+1. <span data-ttu-id="41e13-148">(省略可能)[クラウド **リソース] ステップ** で、アプリケーションで使用するクラウド リソースを選択します。</span><span class="sxs-lookup"><span data-stu-id="41e13-148">(Optional) On the **Cloud resources** step, select cloud resources that your application will use.</span></span>  <span data-ttu-id="41e13-149">CRUD (作成、読み取り、更新、削除) を選択して、テーブルまたは API SQLアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="41e13-149">You can select CRUD (create, read, update, delete) access to a SQL table or an API:</span></span>
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-cloud-resources.png" alt-text="新しいアプリにクラウド リソースを追加する方法を示すスクリーンショット":::。
+
+1. <span data-ttu-id="41e13-151">[プログラミング **言語] ステップで\*\*\*\*、JavaScript** または **TypeScript を選択できます**。</span><span class="sxs-lookup"><span data-stu-id="41e13-151">On the **Programming Language** step, you can choose **JavaScript** or **TypeScript**:</span></span>
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="プログラミング言語を選択する方法のスクリーンショット":::
+
+1. <span data-ttu-id="41e13-153">ワークスペース フォルダーを選択します。</span><span class="sxs-lookup"><span data-stu-id="41e13-153">Select a workspace folder.</span></span>  <span data-ttu-id="41e13-154">ワークスペース フォルダー内に、作成中のプロジェクト向けのフォルダーが作成されます。</span><span class="sxs-lookup"><span data-stu-id="41e13-154">A folder will be created within your workspace folder for the project you are creating.</span></span>
+
+1. <span data-ttu-id="41e13-155">`helloworld` のように、アプリに適した名前を入力します。</span><span class="sxs-lookup"><span data-stu-id="41e13-155">Enter a suitable name for your app, like `helloworld`.</span></span>  <span data-ttu-id="41e13-156">アプリの名前は、英数字のみで構成されている必要があります。</span><span class="sxs-lookup"><span data-stu-id="41e13-156">The name of the app must consist only of alphanumeric characters.</span></span>  <span data-ttu-id="41e13-157">**Enter** キーを押して続行します。</span><span class="sxs-lookup"><span data-stu-id="41e13-157">Press **Enter** to continue.</span></span>
+
+<span data-ttu-id="41e13-158">数秒後に Teams アプリが作成されます。</span><span class="sxs-lookup"><span data-stu-id="41e13-158">Your Teams app will be created within a few seconds.</span></span>  <span data-ttu-id="41e13-159">スキャフォールディング されたアプリには、シングル サインオンを処理するコードが含Azure Active Directory、Microsoft サービスへのアクセスGraph。</span><span class="sxs-lookup"><span data-stu-id="41e13-159">The scaffolded app contains code to handle single sign-on with Azure Active Directory and access to the Microsoft Graph.</span></span>  <span data-ttu-id="41e13-160">Azure リソースを選択した場合、それらのリソースのコードも使用できます。</span><span class="sxs-lookup"><span data-stu-id="41e13-160">If you selected Azure resources, then the code for those resources will also be available.</span></span>
+
+<span data-ttu-id="41e13-161">作成および発行プロセスの詳細についてはSPFxチュートリアルを参照[SPFxしてください](../get-started/first-app-spfx.md)。</span><span class="sxs-lookup"><span data-stu-id="41e13-161">For a walk-through of the SPFx creation and publication process, see the [SPFx tutorial](../get-started/first-app-spfx.md).</span></span>
+
+## <a name="configure-your-app"></a><span data-ttu-id="41e13-162">アプリを構成する</span><span class="sxs-lookup"><span data-stu-id="41e13-162">Configure your app</span></span>
+
+<span data-ttu-id="41e13-163">このアプリの中核となるのは、Teams 3 つのコンポーネントです。</span><span class="sxs-lookup"><span data-stu-id="41e13-163">At its core, the Teams app embraces three components:</span></span>
+
+  1. <span data-ttu-id="41e13-164">ユーザー Microsoft Teamsアプリを操作するクライアント (Web、デスクトップ、モバイル) を指定します。</span><span class="sxs-lookup"><span data-stu-id="41e13-164">The Microsoft Teams client (web, desktop or mobile) where users interact with your app.</span></span>
+  1. <span data-ttu-id="41e13-165">サーバーに表示されるコンテンツの要求に応答するTeams。</span><span class="sxs-lookup"><span data-stu-id="41e13-165">A server that responds to requests for content that will be displayed in Teams.</span></span> <span data-ttu-id="41e13-166">たとえば、HTML タブ コンテンツやボットアダプティブ カードなどです。</span><span class="sxs-lookup"><span data-stu-id="41e13-166">For example, HTML tab content or a bot adaptive card.</span></span>
+  1. <span data-ttu-id="41e13-167">アプリ Teamsは、次の 3 つのファイルで構成されます。</span><span class="sxs-lookup"><span data-stu-id="41e13-167">A Teams app package consists of three files:</span></span>
 
       > [!div class="checklist"]
       >
-      > - <span data-ttu-id="b3fe5-143">このmanifest.jsオンです。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-143">The manifest.json.</span></span> 
-      > - <span data-ttu-id="b3fe5-144">パブリック [または組織](../resources/schema/manifest-schema.md#icons) のアプリ カタログに表示するアプリの色アイコン。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-144">A [color icon](../resources/schema/manifest-schema.md#icons) for your app to display in the public or organization app catalog.</span></span>
-      > - <span data-ttu-id="b3fe5-145">アクティビティ[バーに](../resources/schema/manifest-schema.md#icons)表示するアウトライン Teamsアイコン。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-145">An [outline icon](../resources/schema/manifest-schema.md#icons) for display on the Teams activity bar.</span></span>
+      > - <span data-ttu-id="41e13-168">このmanifest.jsオンです。</span><span class="sxs-lookup"><span data-stu-id="41e13-168">The manifest.json.</span></span>
+      > - <span data-ttu-id="41e13-169">パブリック [または組織](../resources/schema/manifest-schema.md#icons) のアプリ カタログに表示するアプリの色アイコン。</span><span class="sxs-lookup"><span data-stu-id="41e13-169">A [color icon](../resources/schema/manifest-schema.md#icons) for your app to display in the public or organization app catalog.</span></span>
+      > - <span data-ttu-id="41e13-170">アクティビティ[バーに](../resources/schema/manifest-schema.md#icons)表示するアウトライン Teamsアイコン。</span><span class="sxs-lookup"><span data-stu-id="41e13-170">An [outline icon](../resources/schema/manifest-schema.md#icons) for display on the Teams activity bar.</span></span>
 
-<span data-ttu-id="b3fe5-146">アプリがインストールされている場合、Teams クライアントはマニフェスト ファイルを解析して、アプリの名前やサービスが配置されている URL など、必要な情報を特定します。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-146">When an app is installed, the Teams client parses the manifest file to determine needed information like the name of your app and the URL where the services are located.</span></span>
+<span data-ttu-id="41e13-171">マニフェストとアイコンは、プロジェクトにアップロードされる前にプロジェクトのフォルダー `.fx` にTeams。</span><span class="sxs-lookup"><span data-stu-id="41e13-171">The manifest and icons are stored in the `.fx` folder of your project prior to being uploaded to Teams.</span></span> <span data-ttu-id="41e13-172">アプリがインストールされている場合、Teams クライアントはマニフェスト ファイルを解析して、アプリの名前やサービスが配置されている URL など、必要な情報を特定します。</span><span class="sxs-lookup"><span data-stu-id="41e13-172">When an app is installed, the Teams client parses the manifest file to determine needed information like the name of your app and the URL where the services are located.</span></span>
 
-1. <span data-ttu-id="b3fe5-147">アプリを構成するには、アプリの **[Microsoft Teams Toolkit]** タブにVisual Studio Code。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-147">To configure your app, navigate to the **Microsoft Teams Toolkit** tab in Visual Studio Code.</span></span>
-1. <span data-ttu-id="b3fe5-148">[アプリ **パッケージの編集] を** 選択して、[ **アプリの詳細] ページを表示** します。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-148">Select **Edit app package** to view the **App details** page.</span></span>
-1. <span data-ttu-id="b3fe5-149">[アプリの詳細] ページでフィールドを編集すると、最終的にアプリ パッケージの一部としてmanifest.jsファイルのコンテンツが更新されます。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-149">Editing the fields in the App details page updates the contents of the manifest.json file that will ultimately ship as part of the app package.</span></span> <span data-ttu-id="b3fe5-150">詳細については、「App Studio マニフェスト [エディター」を参照してください。](https://aka.ms/teams-toolkit-manifest)</span><span class="sxs-lookup"><span data-stu-id="b3fe5-150">For more information, See [App Studio manifest editor](https://aka.ms/teams-toolkit-manifest)</span></span>
+1. <span data-ttu-id="41e13-173">アプリを構成するには、アプリの **[Teams Toolkit]** タブにVisual Studio Code。</span><span class="sxs-lookup"><span data-stu-id="41e13-173">To configure your app, navigate to the **Teams Toolkit** tab in Visual Studio Code.</span></span>
+1. <span data-ttu-id="41e13-174">[**マニフェスト エディター] セクション** の **[マニフェスト エディター Project** します。</span><span class="sxs-lookup"><span data-stu-id="41e13-174">Select **Manifest Editor** in the **Project** section.</span></span>
 
-## <a name="package-your-app"></a><span data-ttu-id="b3fe5-151">アプリをパッケージ化する</span><span class="sxs-lookup"><span data-stu-id="b3fe5-151">Package your app</span></span>
+<span data-ttu-id="41e13-175">[アプリの詳細] ページでフィールドを編集すると、最終的にアプリ パッケージの一部としてmanifest.jsファイルのコンテンツが更新されます。</span><span class="sxs-lookup"><span data-stu-id="41e13-175">Editing the fields in the App details page updates the contents of the manifest.json file that will ultimately ship as part of the app package.</span></span>
 
-<span data-ttu-id="b3fe5-152">アプリの .publish **フォルダー** でアプリの詳細ページ、マニフェスト、または **.env** ファイルを **変更** すると、アプリのファイルが自動的にDevelopment.zipされます。 </span><span class="sxs-lookup"><span data-stu-id="b3fe5-152">Modifying the **app details** page, **manifest**, or **.env** files in your app's  **.publish** folder will automatically generate your **Development.zip** file.</span></span> <span data-ttu-id="b3fe5-153">同じフォルダーに 2 [つのアイコン](../concepts/build-and-test/apps-package.md#app-icons) を含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-153">You'll need to include [two icons](../concepts/build-and-test/apps-package.md#app-icons) in that same folder.</span></span>
+## <a name="install-and-run-your-app-locally"></a><span data-ttu-id="41e13-176">アプリをローカルにインストールして実行する</span><span class="sxs-lookup"><span data-stu-id="41e13-176">Install and run your app locally</span></span>
 
-## <a name="install-and-run-your-app-locally"></a><span data-ttu-id="b3fe5-154">アプリをローカルにインストールして実行する</span><span class="sxs-lookup"><span data-stu-id="b3fe5-154">Install and run your app locally</span></span>
+<span data-ttu-id="41e13-177">アプリをローカルに構築して実行するには、以下のようにします。</span><span class="sxs-lookup"><span data-stu-id="41e13-177">To build and run your app locally:</span></span>
 
-## <a name="run-your-app"></a><span data-ttu-id="b3fe5-155">アプリの実行</span><span class="sxs-lookup"><span data-stu-id="b3fe5-155">Run your app</span></span>
+1. <span data-ttu-id="41e13-178">Visual Studio Code で、**F5** を押して、アプリケーションをデバッグ モードで実行します。</span><span class="sxs-lookup"><span data-stu-id="41e13-178">From Visual Studio Code, press **F5** to run your application in debug mode.</span></span>
 
-### <a name="install-and-run-your-app-locally"></a><span data-ttu-id="b3fe5-156">アプリをローカルにインストールして実行する</span><span class="sxs-lookup"><span data-stu-id="b3fe5-156">Install and run your app locally</span></span>
+   > <span data-ttu-id="41e13-179">アプリを初めて実行すると、すべての依存関係がダウンロードされ、アプリがビルドされます。</span><span class="sxs-lookup"><span data-stu-id="41e13-179">When you run the app for the first time, all dependencies are downloaded and the app is built.</span></span>  <span data-ttu-id="41e13-180">ビルドが完了すると、自動的にブラウザー ウィンドウが開きます。</span><span class="sxs-lookup"><span data-stu-id="41e13-180">A browser window automatically opens when the build is complete.</span></span>  <span data-ttu-id="41e13-181">この作業には 3 ～ 5 分かかります。</span><span class="sxs-lookup"><span data-stu-id="41e13-181">This can take 3-5 minutes to complete.</span></span>
 
-<span data-ttu-id="b3fe5-157">アプリをパッケージ **化してテストする** 方法の詳細な手順については、プロジェクトのホームページのビルドと実行のコンテンツを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-157">Refer to the **Build and Run** content in your project homepage for detailed instructions on how to package and test your app.</span></span> <span data-ttu-id="b3fe5-158">一般に、アプリのサーバーをインストールし、実行してからトンネリング ソリューションをセットアップし、Teams localhost から実行されているコンテンツにアクセスする必要があります。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-158">In general, you need to install your app's server, get it running, then setup a tunneling solution so that Teams can access content running from localhost.</span></span>
+   <span data-ttu-id="41e13-182">必要に応じて、ローカル証明書のインストールを求めるメッセージがツールキットに表示されます。</span><span class="sxs-lookup"><span data-stu-id="41e13-182">The toolkit will prompt you to install a local certificate if needed.</span></span> <span data-ttu-id="41e13-183">この証明書により、Teams は `https://localhost` からアプリケーションを読み込むことができます。</span><span class="sxs-lookup"><span data-stu-id="41e13-183">This certificate allows Teams to load your application from `https://localhost`.</span></span> <span data-ttu-id="41e13-184">以下のダイアログが表示されたら、「はい」を選択します。</span><span class="sxs-lookup"><span data-stu-id="41e13-184">Select yes when the following dialog appears:</span></span>
 
-### <a name="enable-development-from-localhost"></a><span data-ttu-id="b3fe5-159">localhost からの開発を有効にする</span><span class="sxs-lookup"><span data-stu-id="b3fe5-159">Enable development from localhost</span></span>
+   :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Teams がアプリケーションを localhost からロードできるようにするための SSL 証明書のインストールを求めるメッセージが表示される方法を示すスクリーンショット":::。
 
-<span data-ttu-id="b3fe5-160">HTTPS を使用して localhost でタブ ベースのアプリをデバッグする場合は、ブラウザーに対して、サービスを提供するアプリを信頼するように伝える必要があります `<https://localhost>` 。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-160">If you wish to debug your tab based app on localhost using HTTPS, you will need to tell your browser to trust the app being served from `<https://localhost>`.</span></span> <span data-ttu-id="b3fe5-161">`<https://localhost:3000/tab>` に移動します。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-161">Navigate to `<https://localhost:3000/tab>`.</span></span> <span data-ttu-id="b3fe5-162">サイトが信頼されていないという警告が表示される場合は、続行するオプションを選択します。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-162">If you see a warning indicating that the site isn't trusted, choose the option to proceed anyway.</span></span> <span data-ttu-id="b3fe5-163">これで、アプリはクライアントからアクセスTeams必要があります。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-163">Your app should now be accessible from the Teams client.</span></span>
+1. <span data-ttu-id="41e13-186">アプリケーションを実行するために Web ブラウザーが起動します。</span><span class="sxs-lookup"><span data-stu-id="41e13-186">Your web browser is started to run the application.</span></span> <span data-ttu-id="41e13-187">Microsoft Teams を開くようメッセージが表示されたら、「キャンセル」を選択してブラウザーに残ります。</span><span class="sxs-lookup"><span data-stu-id="41e13-187">If prompted to open Microsoft Teams, select Cancel to remain within the browser.</span></span> <span data-ttu-id="41e13-188">また、他の場合は、アプリケーションに切り替Teams表示される場合があります。</span><span class="sxs-lookup"><span data-stu-id="41e13-188">You may also be prompted to switch to the Teams application at other times.</span></span> <span data-ttu-id="41e13-189">このような場合は、Web アプリを選択します。</span><span class="sxs-lookup"><span data-stu-id="41e13-189">Select the web app when this happens.</span></span>
 
-### <a name="run-your-app-in-teams"></a><span data-ttu-id="b3fe5-164">アプリをアプリで実行Teams</span><span class="sxs-lookup"><span data-stu-id="b3fe5-164">Run your app in Teams</span></span>
+   :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="起動時に Web 版のチームを選択する方法を示すスクリーンショット":::
 
-<span data-ttu-id="b3fe5-165">前提条件:[開発者Teamsモードを有効にする](https://aka.ms/teams-toolkit-enable-devpreview)</span><span class="sxs-lookup"><span data-stu-id="b3fe5-165">Prerequisites: [Enable Teams developer preview mode](https://aka.ms/teams-toolkit-enable-devpreview)</span></span>
+1. <span data-ttu-id="41e13-191">サインインするように求めるメッセージが表示されることがあります。</span><span class="sxs-lookup"><span data-stu-id="41e13-191">You may be prompted to sign in.</span></span>  <span data-ttu-id="41e13-192">その場合は、M365 アカウントを使用してサインインします。</span><span class="sxs-lookup"><span data-stu-id="41e13-192">If so, sign in with your M365 account.</span></span>
+1. <span data-ttu-id="41e13-193">Teams へのアプリのインストールを促すメッセージが表示された場合は、**[追加]** を押してください。</span><span class="sxs-lookup"><span data-stu-id="41e13-193">When prompted to install the app onto Teams, press **Add**.</span></span>
 
-1. <span data-ttu-id="b3fe5-166">ウィンドウの左側にあるアクティビティ バーにVisual Studio Codeします。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-166">Navigate to the activity bar on the left side of the Visual Studio Code window.</span></span>
-1. <span data-ttu-id="b3fe5-167">[実行] **アイコンを** 選択して、[実行] ビュー **と [デバッグ] ビューを表示** します。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-167">Select the **Run** icon to display the **Run and Debug** view.</span></span>
-1. <span data-ttu-id="b3fe5-168">キーボード ショートカットを使用することもできます `Ctrl+Shift+D` 。</span><span class="sxs-lookup"><span data-stu-id="b3fe5-168">You can also use the keyboard shortcut `Ctrl+Shift+D`.</span></span>
+<span data-ttu-id="41e13-194">バックエンドとフロントエンドの両方が、アプリケーション デバッガー Visual Studio Codeされます。</span><span class="sxs-lookup"><span data-stu-id="41e13-194">Both the backend and frontend are hooked into the Visual Studio Code debugger.</span></span>  <span data-ttu-id="41e13-195">これにより、コード内の任意の場所にブレークポイントを設定し、状態を検査できます。</span><span class="sxs-lookup"><span data-stu-id="41e13-195">This allows you to set breakpoints anywhere in your code and inspect state.</span></span>  <span data-ttu-id="41e13-196">また、ブラウザー内でフロントエンド デバッグ ツール (開発者向けツールReactなど) を使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="41e13-196">You can also use any frontend debugging tools (such as the React Developer Tools) within the browser.</span></span>  <span data-ttu-id="41e13-197">デバッグの詳細については、Visual Studio Codeを[参照してください](https://code.visualstudio.com/Docs/editor/debugging)。</span><span class="sxs-lookup"><span data-stu-id="41e13-197">For more information about debugging in Visual Studio Code, review [the documentation](https://code.visualstudio.com/Docs/editor/debugging).</span></span>
 
-## <a name="next-step"></a><span data-ttu-id="b3fe5-169">次の手順</span><span class="sxs-lookup"><span data-stu-id="b3fe5-169">Next step</span></span>
+## <a name="publish-your-app-to-teams"></a><span data-ttu-id="41e13-198">アプリを Teams に公開する</span><span class="sxs-lookup"><span data-stu-id="41e13-198">Publish your app to Teams</span></span>
+
+<span data-ttu-id="41e13-199">他のユーザーがアプリを使用する前に、アプリを開発者ポータルに発行して、他のユーザー Teams。</span><span class="sxs-lookup"><span data-stu-id="41e13-199">Before it can be used by other people, you must publish your app to the Developer Portal for Teams.</span></span>
+
+1. <span data-ttu-id="41e13-200">アプリを発行するには、アプリの **[Teams Toolkit]** タブにVisual Studio Code。</span><span class="sxs-lookup"><span data-stu-id="41e13-200">To publish your app, navigate to the **Teams Toolkit** tab in Visual Studio Code.</span></span>
+1. <span data-ttu-id="41e13-201">[**発行] をTeams** セクションで **Project** します。</span><span class="sxs-lookup"><span data-stu-id="41e13-201">Select **Publish to Teams** in the **Project** section.</span></span>
+
+<span data-ttu-id="41e13-202">Azure ホスティングを使用する場合は、クラウドにプロビジョニングして展開している必要があります。</span><span class="sxs-lookup"><span data-stu-id="41e13-202">If using Azure hosting, you must have provisioned and deployed to the cloud.</span></span> <span data-ttu-id="41e13-203">文書の公開プロセスの詳細については、「SPFxチュートリアル」[をSPFxしてください](../get-started/first-app-spfx.md)。</span><span class="sxs-lookup"><span data-stu-id="41e13-203">For a walk-through of the SPFx publication process, see the [SPFx tutorial](../get-started/first-app-spfx.md).</span></span>
+
+## <a name="next-step"></a><span data-ttu-id="41e13-204">次の手順</span><span class="sxs-lookup"><span data-stu-id="41e13-204">Next step</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="b3fe5-170">発行済みアプリの保守とサポート</span><span class="sxs-lookup"><span data-stu-id="b3fe5-170">Maintaining and supporting your published app</span></span>](../concepts/deploy-and-publish/appsource/post-publish/overview.md)
+> [<span data-ttu-id="41e13-205">発行済みアプリの保守とサポート</span><span class="sxs-lookup"><span data-stu-id="41e13-205">Maintaining and supporting your published app</span></span>](../concepts/deploy-and-publish/appsource/post-publish/overview.md)
