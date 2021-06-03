@@ -70,7 +70,7 @@
           href: resources/moodleInstructions.md
     - name: '[Teams で共有] ボタンを作成する'
       href: concepts/build-and-test/share-to-teams.md
-    - name: 'SharePoint に [Teams] タブを追加する'
+    - name: SharePoint に Teams タブを追加する
       href: tabs/how-to/tabs-in-sharepoint.md
     - name: ディープ リンクの作成
       href: concepts/build-and-test/deep-links.md
@@ -202,12 +202,16 @@
           href: tabs/how-to/create-tab-pages/configuration-page.md
         - name: 削除ページを作成する
           href: tabs/how-to/create-tab-pages/removal-page.md
+        - name: モバイルのタブ
+          href: tabs/design/tabs-mobile.md
         - name: タブのコンテキストを取得する
           href: tabs/how-to/access-teams-context.md
         - name: アダプティブ カードを使用してタブをビルドする
           href: tabs/how-to/build-adaptive-card-tabs.md
         - name: タブのリンクの展開とステージ ビュー
           href: tabs/tabs-link-unfurling.md
+        - name: 会話タブを作成する
+          href: tabs/how-to/conversational-tabs.md
     - name: クイックスタート
       items:
         - name: Node.js を使った個人用タブ
@@ -289,8 +293,6 @@
           href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
     - name: 検索コマンド
       items:
-        - name: 構成ページを追加する
-          href: messaging-extensions/how-to/add-configuration-page.md
         - name: 検索コマンドを定義する
           href: messaging-extensions/how-to/search-commands/define-search-command.md
         - name: 検索コマンドに応答する

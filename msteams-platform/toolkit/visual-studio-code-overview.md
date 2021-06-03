@@ -5,49 +5,89 @@ keywords: teams visual studio コード ツールキット
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: d51ccf3ed62e22fb417eec72d1f409b1b77b9da6
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: bc97a78df5618c87dfc66fae179145acd749ad1f
+ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629838"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "52721823"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>アプリとアプリのTeams ToolkitをVisual Studio Code
 
-Microsoft Teams ツールキットを使用すると、Visual Studio Code 環境内で直接カスタムの Teams アプリを構築できます。 ツールキットはプロセスをガイドし、Teams アプリの構築、デバッグ、起動に必要なすべてを提供します。
+Visual Studio Code の Teams Toolkit は、開発者エクスペリエンスに対する "ゼロ構成" アプローチで、統合 ID、クラウド ストレージへのアクセス、Microsoft Graph からのデータ、および Azure および M365 の他のサービスを備えた Teams アプリを作成および展開するのに役立ちます。  
 
-## <a name="installing-the-teams-toolkit"></a>アプリケーションのインストールTeams Toolkit
+また、このツールキットは、Visual Studio CLI (と呼ばれる) として使用することもできます `teamsfx` 。
 
-このMicrosoft Teams ToolkitはVisual Studio Code[マーケット](https://aka.ms/teams-toolkit)プレースから、またはVisual Studio内の拡張機能として直接ダウンロードVisual Studio Code。
+## <a name="install-the-teams-toolkit-for-visual-studio-code"></a>インストール用のTeams ToolkitをインストールVisual Studio Code
 
-> [!TIP]
-> インストール後、アクティビティ バーにTeams ToolkitがVisual Studio Code表示されます。 表示されない場合は、アクティビティ バー内を右クリックし、[Microsoft Teams]を選択してツールキットをピン留めして簡単にアクセスできます。
+1. Visual Studio Code を開きます。
+1. [拡張機能] ビューを選択します **(Ctrl + Shift +**  /   **>** X
+1. 検索ボックスに「Teams Toolkit」_と入力します_。
+1. [インストール] ウィンドウの横にある緑色のインストール ボタンTeams Toolkit。
 
-## <a name="using-the-toolkit"></a>ツールキットの使用
+また、マーケットプレースでTeams ToolkitをVisual Studio Code[できます](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)。
+
+次のツールは、必要に応じてVisual Studio Code拡張機能によってインストールされます。  既にインストールされている場合は、インストールされているバージョンが代わりに使用されます。  Linux (WSL を含む) を使用する場合は、次のツールをインストールしてから使用する必要があります。
+
+- [Azure Functions コア ツール](/azure/azure-functions/functions-run-local)
+
+    Azure Functions Core Tools は、Azure でサービスを実行するときに必要な認証ヘルパーを含む、ローカル デバッグ実行時にバックエンド コンポーネントをローカルで実行するために使用されます。  プロジェクト ディレクトリ内にインストールされます (npm を使用 `devDependencies` )。
+
+- [.NET SDK](/dotnet/core/install/)
+
+    .NET SDK は、ローカル デバッグと Azure Functions アプリの展開用にカスタマイズされたバインドをインストールするために使用されます。  .NET 3.1 (以降) SDK をグローバルにインストールしていない場合は、ポータブル バージョンがインストールされます。
+
+- [ngrok](https://ngrok.com/download)
+
+    一部Teamsアプリ機能 (会話型ボット、メッセージング拡張機能、受信 Webhook) では、受信接続が必要です。  開発システムをトンネル経由でTeamsする必要があります。  タブのみを含むアプリでは、トンネルは必要ありません。  このパッケージは、(npm を使用して) プロジェクト ディレクトリ内にインストールされます `devDependencies` 。
+
+## <a name="use-the-teams-toolkit-for-visual-studio-code"></a>次のTeams Toolkitを使用Visual Studio Code
 
 - [新しいプロジェクトをセットアップする](#set-up-a-new-teams-project)
-- [既存のプロジェクトをインポートする](#import-an-existing-teams-app-project)
 - [アプリを構成する](#configure-your-app)
-- [アプリをパッケージ化する](#package-your-app)
-- [アプリをローカルまたはローカルで実行Teams](#run-your-app)
+- [アプリをローカルで実行する](#install-and-run-your-app-locally)
+- [アプリを公開する](#publish-your-app-to-teams)
 
 ## <a name="set-up-a-new-teams-project"></a>新しいプロジェクトをTeamsする
 
-1. ローカル環境でプロジェクトのワークスペースまたはフォルダーを作成します。
-1. [Visual Studio Code] アイコンをTeamsします。 ![Teams アイコン](../assets/icons/favicon-16x16.png) ウィンドウの左側のアクティビティ バーから。
-1. [**コマンド メニューからMicrosoft Teams Toolkit** を開く] を選択します。
-1. コマンド **メニューから [新Teamsアプリ** を作成する] を選択します。
-1. プロンプトが表示されたら、ワークスペースの名前を入力します。 これは、プロジェクトが存在するフォルダーの名前と、アプリの既定の名前の両方として使用されます。
-1. Enter **キーを** 押すと、[機能の追加 **] 画面が** 表示され、新しいアプリのプロパティが構成されます。
-1. [完了] **ボタンを** 選択して構成プロセスを完了します。
+このTeams Toolkitは、Azure Reactまたは M365 環境でホストされる SPFx Web パーツでホストされるアプリをSharePointできます。  Azure でホストReact新しいアプリを作成するには、次の方法を実行します。
 
-## <a name="import-an-existing-teams-app-project"></a>既存のアプリ プロジェクトTeamsインポートする
+1. Visual Studio Code を開きます。
+1. サイド バーの Teams アイコンを選択して、Teams ツールキットを開きます。
 
-1. [Visual Studio Code] アイコンをTeamsします。 ![Teams アイコン](../assets/icons/favicon-16x16.png) ウィンドウの左側のアクティビティ バーから。
-1. コマンド メニュー **から [アプリ パッケージの** インポート] を選択します。
-1. アプリ パッケージの zip ファイルTeams[既存のファイルを](/microsoftteams/platform/concepts/build-and-test/apps-package?view=msteams-client-js-latest&preserve-view=true)選択します。
-1. [発行パッケージ **の選択] ボタンを選択** します。 これで、ツールキットの構成タブにアプリの詳細が表示されます。
-1. [Visual Studio Code] で[ワークスペースにフォルダーを追加] を選択して、ソース コード ディレクトリをワークスペースに  ->  Visual Studio Codeします。
+    :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Visual Studio Code サイド バーの Teams アイコン":::。
+
+1. **[新しいプロジェクトの作成]** を選択します。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project.png" alt-text="Teams ツールキットのサイド バーにある [新しいプロジェクトの作成] リンクの位置":::。
+
+1. **[新しい Teams アプリを作成]** を選択します。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="[新しいプロジェクトの作成] のウィザードの開始":::。
+
+1. **[機能の選択]** 手順では、**[タブ]** 機能がすでに選択されています。  必要に応じて、[**ボットとメッセージング拡張機能****] を選択することもできます**。  **[OK]** を押します。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="新しいアプリに機能を追加する方法を示すスクリーンショット":::。
+
+1. **[フロントエンド ホストの種類]** 手順で、**[Azure]** を選択します。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="新規アプリのホスティングを選択する方法を示すスクリーンショット":::。
+
+1. (省略可能)[クラウド **リソース] ステップ** で、アプリケーションで使用するクラウド リソースを選択します。  CRUD (作成、読み取り、更新、削除) を選択して、テーブルまたは API SQLアクセスできます。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-cloud-resources.png" alt-text="新しいアプリにクラウド リソースを追加する方法を示すスクリーンショット":::。
+
+1. [プログラミング **言語] ステップで****、JavaScript** または **TypeScript を選択できます**。
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="プログラミング言語を選択する方法のスクリーンショット":::
+
+1. ワークスペース フォルダーを選択します。  ワークスペース フォルダー内に、作成中のプロジェクト向けのフォルダーが作成されます。
+
+1. `helloworld` のように、アプリに適した名前を入力します。  アプリの名前は、英数字のみで構成されている必要があります。  **Enter** キーを押して続行します。
+
+数秒後に Teams アプリが作成されます。  スキャフォールディング されたアプリには、シングル サインオンを処理するコードが含Azure Active Directory、Microsoft サービスへのアクセスGraph。  Azure リソースを選択した場合、それらのリソースのコードも使用できます。
+
+作成および発行プロセスの詳細についてはSPFxチュートリアルを参照[SPFxしてください](../get-started/first-app-spfx.md)。
 
 ## <a name="configure-your-app"></a>アプリを構成する
 
@@ -59,39 +99,46 @@ Microsoft Teams ツールキットを使用すると、Visual Studio Code 環境
 
       > [!div class="checklist"]
       >
-      > - このmanifest.jsオンです。 
+      > - このmanifest.jsオンです。
       > - パブリック [または組織](../resources/schema/manifest-schema.md#icons) のアプリ カタログに表示するアプリの色アイコン。
       > - アクティビティ[バーに](../resources/schema/manifest-schema.md#icons)表示するアウトライン Teamsアイコン。
 
-アプリがインストールされている場合、Teams クライアントはマニフェスト ファイルを解析して、アプリの名前やサービスが配置されている URL など、必要な情報を特定します。
+マニフェストとアイコンは、プロジェクトにアップロードされる前にプロジェクトのフォルダー `.fx` にTeams。 アプリがインストールされている場合、Teams クライアントはマニフェスト ファイルを解析して、アプリの名前やサービスが配置されている URL など、必要な情報を特定します。
 
-1. アプリを構成するには、アプリの **[Microsoft Teams Toolkit]** タブにVisual Studio Code。
-1. [アプリ **パッケージの編集] を** 選択して、[ **アプリの詳細] ページを表示** します。
-1. [アプリの詳細] ページでフィールドを編集すると、最終的にアプリ パッケージの一部としてmanifest.jsファイルのコンテンツが更新されます。 詳細については、「App Studio マニフェスト [エディター」を参照してください。](https://aka.ms/teams-toolkit-manifest)
+1. アプリを構成するには、アプリの **[Teams Toolkit]** タブにVisual Studio Code。
+1. [**マニフェスト エディター] セクション** の **[マニフェスト エディター Project** します。
 
-## <a name="package-your-app"></a>アプリをパッケージ化する
-
-アプリの .publish **フォルダー** でアプリの詳細ページ、マニフェスト、または **.env** ファイルを **変更** すると、アプリのファイルが自動的にDevelopment.zipされます。  同じフォルダーに 2 [つのアイコン](../concepts/build-and-test/apps-package.md#app-icons) を含める必要があります。
+[アプリの詳細] ページでフィールドを編集すると、最終的にアプリ パッケージの一部としてmanifest.jsファイルのコンテンツが更新されます。
 
 ## <a name="install-and-run-your-app-locally"></a>アプリをローカルにインストールして実行する
 
-## <a name="run-your-app"></a>アプリの実行
+アプリをローカルに構築して実行するには、以下のようにします。
 
-### <a name="install-and-run-your-app-locally"></a>アプリをローカルにインストールして実行する
+1. Visual Studio Code で、**F5** を押して、アプリケーションをデバッグ モードで実行します。
 
-アプリをパッケージ **化してテストする** 方法の詳細な手順については、プロジェクトのホームページのビルドと実行のコンテンツを参照してください。 一般に、アプリのサーバーをインストールし、実行してからトンネリング ソリューションをセットアップし、Teams localhost から実行されているコンテンツにアクセスする必要があります。
+   > アプリを初めて実行すると、すべての依存関係がダウンロードされ、アプリがビルドされます。  ビルドが完了すると、自動的にブラウザー ウィンドウが開きます。  この作業には 3 ～ 5 分かかります。
 
-### <a name="enable-development-from-localhost"></a>localhost からの開発を有効にする
+   必要に応じて、ローカル証明書のインストールを求めるメッセージがツールキットに表示されます。 この証明書により、Teams は `https://localhost` からアプリケーションを読み込むことができます。 以下のダイアログが表示されたら、「はい」を選択します。
 
-HTTPS を使用して localhost でタブ ベースのアプリをデバッグする場合は、ブラウザーに対して、サービスを提供するアプリを信頼するように伝える必要があります `<https://localhost>` 。 `<https://localhost:3000/tab>` に移動します。 サイトが信頼されていないという警告が表示される場合は、続行するオプションを選択します。 これで、アプリはクライアントからアクセスTeams必要があります。
+   :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Teams がアプリケーションを localhost からロードできるようにするための SSL 証明書のインストールを求めるメッセージが表示される方法を示すスクリーンショット":::。
 
-### <a name="run-your-app-in-teams"></a>アプリをアプリで実行Teams
+1. アプリケーションを実行するために Web ブラウザーが起動します。 Microsoft Teams を開くようメッセージが表示されたら、「キャンセル」を選択してブラウザーに残ります。 また、他の場合は、アプリケーションに切り替Teams表示される場合があります。 このような場合は、Web アプリを選択します。
 
-前提条件:[開発者Teamsモードを有効にする](https://aka.ms/teams-toolkit-enable-devpreview)
+   :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="起動時に Web 版のチームを選択する方法を示すスクリーンショット":::
 
-1. ウィンドウの左側にあるアクティビティ バーにVisual Studio Codeします。
-1. [実行] **アイコンを** 選択して、[実行] ビュー **と [デバッグ] ビューを表示** します。
-1. キーボード ショートカットを使用することもできます `Ctrl+Shift+D` 。
+1. サインインするように求めるメッセージが表示されることがあります。  その場合は、M365 アカウントを使用してサインインします。
+1. Teams へのアプリのインストールを促すメッセージが表示された場合は、**[追加]** を押してください。
+
+バックエンドとフロントエンドの両方が、アプリケーション デバッガー Visual Studio Codeされます。  これにより、コード内の任意の場所にブレークポイントを設定し、状態を検査できます。  また、ブラウザー内でフロントエンド デバッグ ツール (開発者向けツールReactなど) を使用することもできます。  デバッグの詳細については、Visual Studio Codeを[参照してください](https://code.visualstudio.com/Docs/editor/debugging)。
+
+## <a name="publish-your-app-to-teams"></a>アプリを Teams に公開する
+
+他のユーザーがアプリを使用する前に、アプリを開発者ポータルに発行して、他のユーザー Teams。
+
+1. アプリを発行するには、アプリの **[Teams Toolkit]** タブにVisual Studio Code。
+1. [**発行] をTeams** セクションで **Project** します。
+
+Azure ホスティングを使用する場合は、クラウドにプロビジョニングして展開している必要があります。 文書の公開プロセスの詳細については、「SPFxチュートリアル」[をSPFxしてください](../get-started/first-app-spfx.md)。
 
 ## <a name="next-step"></a>次の手順
 

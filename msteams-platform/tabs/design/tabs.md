@@ -1,18 +1,18 @@
 ---
-title: デスクトップと Web 用のタブの設計
-description: '[デスクトップ] タブ (Teams Web) を設計し、UI キットをMicrosoft Teamsする方法について説明します。'
+title: デスクトップ、Web、モバイルのデザイン タブ
+description: デスクトップ、Web、モバイル用のTeamsタブを設計し、UI キットのMicrosoft Teams説明します。
 author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 38eb7e400de63beb0d2840ee573bbfd16299cfbd
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: f1823a064cd182d0271aa97bef58ec724c7819b3
+ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644742"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "52721844"
 ---
-# <a name="designing-your-tab-for-microsoft-teams"></a>ユーザーのタブを設計Microsoft Teams
+# <a name="design-your-tab-for-microsoft-teams"></a>タブをデザインしてMicrosoft Teams
 
 タブは、アプリ コンテンツの大きなキャンバスです。 アプリの設計をガイドするために、次の情報は、ユーザーがアプリのタブを追加、使用、および管理する方法をTeams。
 
@@ -74,7 +74,7 @@ ms.locfileid: "52644742"
 
 :::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="例では、タブ認証画面を表示します。" border="false":::
 
-### <a name="designing-a-tab-setup-with-ui-templates"></a>UI テンプレートを使用したタブセットアップの設計
+### <a name="design-a-tab-setup-with-ui-templates"></a>UI テンプレートを使用してタブセットアップを設計する
 
 次のいずれかの UI テンプレートを使用Teams、タブセットアップエクスペリエンスの設計に役立ちます。
 
@@ -166,7 +166,7 @@ ms.locfileid: "52644742"
 
 ### <a name="permissions-and-role-based-views"></a>アクセス許可と役割ベースのビュー
 
-ユーザーのアクセス許可に応じて、タブエクスペリエンスが異なる場合があります。 たとえば、1 人のユーザーがサインインせずにタブにアクセスできます。 ただし、別のユーザーは署名する必要があります。また、若干異なるコンテンツが表示されます。
+ユーザーのアクセス許可に応じて、タブエクスペリエンスが異なる場合があります。 たとえば、1 人のユーザーがサインインせずにタブにアクセスできます。 ただし、別のユーザーはサインインして、少し異なるコンテンツを表示する必要があります。
 
 ## <a name="manage-a-tab"></a>タブの管理
 

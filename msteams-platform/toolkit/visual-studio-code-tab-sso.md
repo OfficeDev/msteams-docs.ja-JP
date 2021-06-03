@@ -5,14 +5,19 @@ keywords: teams visual studio コード ツールキット タブ sso graph 認�
 localization_priority: Normal
 ms.topic: how-to
 ms.author: lajanuar
-ms.openlocfilehash: b2ba9eb27d00f07ec46ddfe0c1cc13ed0864bbbc
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 2ef409a45b92240cced09d2d77793af33945589e
+ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630993"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "52721816"
 ---
 # <a name="single-sign-on-authentication-with-teams-toolkit-and-visual-studio-code-for-tabs"></a>タブ用のシングル サインオンTeams ToolkitとVisual Studio Code認証
+
+> [!IMPORTANT]
+> **このドキュメントでは、古いバージョンのバージョンのTeams Toolkit**
+>
+> 現在の情報については、前提条件を [読み](../get-started/prerequisites.md) 、新しいチュートリアルの 1 に従います。
 
 このMicrosoft Teams Toolkitを使用すると、タブ アプリのシングル サインオン (SSO) 認証を直接、Visual Studio Code。 このツールキットは、このプロセスをガイドし、Azure portal でのユーザー登録のプロビジョニングMicrosoft ID プラットフォーム含めて必要なすべてを提供します。
 

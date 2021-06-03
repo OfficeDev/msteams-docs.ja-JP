@@ -3,14 +3,14 @@ title: 使用を開始する - React を使用した初めての Teams アプリ
 author: adrianhall
 description: "\"こんにちは!\" を表示する Microsoft Teams アプリを迅速に作成します。 Microsoft Teams ツールキットおよび React を使用したメッセージ。"
 ms.author: adhal
-ms.date: 05/18/2021
+ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 4560e332834fec7b681a6b2babf3e881b5e472f7
-ms.sourcegitcommit: 2c8b35899dd845acd66f1f927e40d99523c29a91
-ms.translationtype: HT
+ms.openlocfilehash: 8c6a957dc01cfaac0f8463166a6647d6b18babed
+ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2021
-ms.locfileid: "52698138"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "52721837"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-react"></a>React を使用した最初の Microsoft Teams アプリのビルドと実行
 
@@ -124,8 +124,6 @@ Teams ツールキットでは、アプリをローカルで実行すること�
 
 この作業が完了すると、Teams クライアント内でアプリを読み込むことができます。  Teams の Web クライアントを使用することで、標準的な Web 開発環境で HTML、CSS、JavaScript のコードを確認することができます。
 
-[!INCLUDE [Adjust your browser launch settings](~/includes/get-started/browser-private-launch.md)]
-
 ### <a name="build-and-run-your-app-locally-in-visual-studio-code"></a>Visual Studio Code でアプリをローカルにビルドして実行する
 
 アプリをローカルに構築して実行するには、以下のようにします。
@@ -138,7 +136,7 @@ Teams ツールキットでは、アプリをローカルで実行すること�
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Teams がアプリケーションを localhost からロードできるようにするための SSL 証明書のインストールを求めるメッセージが表示される方法を示すスクリーンショット":::。
 
-1. アプリケーションを実行するために Web ブラウザーが起動します。 Microsoft Teams を開くようメッセージが表示されたら、「キャンセル」を選択してブラウザーに残ります。 メッセージが表示されたら、**[代わりに Web アプリケーションを使用する]** を選択します。
+1. Web ブラウザーがアプリの実行を開始します。 デスクトップを開くTeams場合は、[キャンセル] を **選択して** ブラウザーに残ります。 また、他の場合はデスクトップに切り替Teams表示される場合があります。この場合Teams Web アプリを選択します。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="起動時に Web 版のチームを選択する方法を示すスクリーンショット":::
 
