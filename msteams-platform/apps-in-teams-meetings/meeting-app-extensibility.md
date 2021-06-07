@@ -1,16 +1,16 @@
 ---
-title: 会議アプリの機能拡張
+title: 会議アプリ拡張性
 author: laujan
 description: 会議アプリの機能拡張を理解する
 ms.topic: conceptual
-ms.openlocfilehash: 96770a6a06d7a4478d8a00a7928c74b38d7b4b2c
-ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
+ms.openlocfilehash: 575952555bda288d791862140f7b40ce1792c868
+ms.sourcegitcommit: 45c66faef8145abb903ef7118b9fa914c12aba2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52649846"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "52736755"
 ---
-# <a name="meeting-app-extensibility"></a>会議アプリの機能拡張
+# <a name="meeting-app-extensibility"></a>会議アプリ拡張性
 
 Teamsの会議アプリの機能拡張は、次の概念に基づいて行います。
 
@@ -141,7 +141,7 @@ Teamsの会議アプリの機能拡張は、次の概念に基づいて行いま
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | 匿名ユーザー | 使用不可 | 使用不可 | 使用不可 | 会議チャットでの操作は許可されます。 | アダプティブ カードからの会議チャットでの操作は許可されます。 | 利用不可 |
 | テナント AAD の一部であるゲスト | 対話は許可されます。 作成、更新、削除は許可されません。 | 使用不可 | 使用不可 | 会議チャットでの操作は許可されます。 | アダプティブ カードからの会議チャットでの操作は許可されます。 | Available |
-| フェデレーション | 使用不可 | 使用不可 | 使用不可 | 使用不可 | 使用不可 | 使用不可 |
+| フェデレーション ユーザー。 詳細については、「標準以外の [ユーザー」を参照してください](/microsoftteams/non-standard-users)。 | 対話は許可されます。 作成、更新、削除は許可されません。 | 対話は許可されます。 取得、更新、および削除は許可されません。 | 利用不可 | 会議チャットでの操作は許可されます。 | アダプティブ カードからの会議チャットでの操作は許可されます。 | 利用不可 |
 
 ## <a name="see-also"></a>関連項目
 
@@ -153,4 +153,4 @@ Teamsの会議アプリの機能拡張は、次の概念に基づいて行いま
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [会議でのアプリの前提条件と API Teams参照](create-apps-for-teams-meetings.md)
+> [Teams 会議アプリへの前提条件と API リファレンス](create-apps-for-teams-meetings.md)

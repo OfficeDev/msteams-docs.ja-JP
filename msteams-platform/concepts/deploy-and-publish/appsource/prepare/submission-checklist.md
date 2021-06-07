@@ -5,12 +5,12 @@ ms.topic: how-to
 localization_priority: Normal
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 975d3ef8fc8bdc8d6d7c336cf3a61a3a42ef5315
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: c0f9c3328018884290c86a49b8026ce81022cd83
+ms.sourcegitcommit: 25539046d408c4270b988fd826d7cf1275f4b9dd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566034"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "52763109"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>ストア申請Microsoft Teams準備する
 
@@ -77,7 +77,7 @@ Microsoft が機能を完全に理解できるよう、アプリの記録を提�
 
 :::row-end:::
 
-短い名前がストアの検証ガイドラインに [準拠している必要があります](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#11-app-name)。
+短い名前がストアの検証ガイドラインに [準拠している必要があります](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-name)。
 
 ### <a name="write-descriptions"></a>説明の書き込み
 
@@ -97,7 +97,7 @@ Microsoft が機能を完全に理解できるよう、アプリの記録を提�
 
 :::row-end:::
 
-短い説明がストアの検証ガイドラインに [準拠している必要があります](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#431-short-description)。
+短い説明がストアの検証ガイドラインに [準拠している必要があります](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#short-description)。
 
 #### <a name="long-description"></a>詳しい説明
 
@@ -113,7 +113,7 @@ Microsoft が機能を完全に理解できるよう、アプリの記録を提�
 
 :::row-end:::
 
-長い説明がストアの検証ガイドラインに [準拠している必要があります](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#432-long-description)。
+長い説明がストアの検証ガイドラインに [準拠している必要があります](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#long-description)。
 
 ### <a name="adhere-to-icon-design-guidelines"></a>アイコンの設計ガイドラインに従う
 
@@ -144,7 +144,7 @@ Microsoft が機能を完全に理解できるよう、アプリの記録を提�
 
 ベスト プラクティスについては、次のリソースを参照してください。
 
-* [Teamsの検証ガイドライン](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#44-screenshots)
+* [Teamsの検証ガイドライン](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots)
 * [Microsoft アプリ ストアの効果的なイメージを作成する](/office/dev/store/craft-effective-appsource-store-images)
 
 ### <a name="create-a-video"></a>ビデオを作成する

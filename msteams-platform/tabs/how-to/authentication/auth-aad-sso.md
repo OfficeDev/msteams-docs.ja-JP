@@ -4,12 +4,12 @@ description: シングル サインオン (SSO) について説明します。
 ms.topic: how-to
 localization_priority: Normal
 keywords: teams 認証 SSO AAD シングル サインオン API
-ms.openlocfilehash: 65e8d5e5387ec727e9ce02967516d8672bf67931
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 681481d4d4f764c260729d37d7b5f5f2ce58d0ec
+ms.sourcegitcommit: d9274ac2f32880e861b206ac6ce29467d631177f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019609"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "52760882"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>タブのシングル サインオン (SSO) のサポート
 
@@ -56,10 +56,10 @@ SSO API は、Web コンテンツを [埋め込むタスク](../../../task-modul
 
 **AAD ポータルの概要に [アプリケーションを登録](https://azure.microsoft.com/features/azure-portal/) するには**
 
-1. [AAD アプリケーション ID を取得します](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)。
-2. アプリケーションが AAD エンドポイントに必要なアクセス許可を指定し、必要に応じてGraph。
-3. [デスクトップ、web、Teams](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources)アプリケーションのアクセス許可を付与します。
-4. [スコープのTeams] ボタンを選択し、開くパネルで [スコープ名] とaccess_as_user **を****入力** します。
+1. [AAD アプリケーション ID を取得します](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)。 
+1. アプリケーションが AAD エンドポイントに必要なアクセス許可を指定し、必要に応じてGraph。
+1. [デスクトップ、web、Teams](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources)アプリケーションのアクセス許可を付与します。
+1. [スコープのTeams] ボタンを選択し、開くパネルで [スコープ名] とaccess_as_user **を****入力** します。
 
 > [!NOTE]
 > 以下の重要な制限を知る必要があります。
@@ -71,35 +71,39 @@ SSO API は、Web コンテンツを [埋め込むタスク](../../../task-modul
 **AAD ポータルを使用してアプリを登録するには**
 
 1. AAD アプリ登録ポータルに [新しいアプリケーションを登録](https://go.microsoft.com/fwlink/?linkid=2083908) します。
-2. [新規 **登録] を選択します**。 [ **アプリケーションの登録] ページ** が表示されます。
-3. [アプリケーションの **登録] ページで** 、次の値を入力します。
+1. [新規 **登録] を選択します**。 [ **アプリケーションの登録] ページ** が表示されます。
+1. [アプリケーションの **登録] ページで** 、次の値を入力します。
     1. アプリの **[名前]** を入力します。
     2. [サポートされている **アカウントの種類] を選択し、[** 単一テナント] または [マルチテナント アカウントの種類] を選択します。 ¹
     * **[リダイレクト URI]** を空のままにします。
     3. **[登録]** を選択します。
-4. [概要] ページで、アプリケーション **(クライアント) ID をコピーして保存します**。 アプリケーション マニフェストを更新する際には、後でTeams必要があります。
-5. [**管理**] で [**API の公開**] を選択します。
-6. [設定 **] リンクを** 選択して、 の形式でアプリケーション ID URI を生成します `api://{AppID}` 。 2 つのスラッシュと GUID の間に、末尾にスラッシュ "/" が付加された完全修飾ドメイン名を挿入します。 ID 全体に . の形式が必要です `api://fully-qualified-domain-name.com/{AppID}` 。 ² たとえば `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` 、 . 完全修飾ドメイン名は、アプリが提供される人間が読み取り可能なドメイン名です。 ngrok などのトンネリング サービスを使用している場合は、ngrok サブドメインが変更されるたびにこの値を更新する必要があります。
-7. **[スコープの追加]** を選択します。 開くパネルで、[スコープ名] **access_as_user** を **入力します**。
-8. [同意 **できるWho] ボックスに、「****管理者とユーザー」と入力します**。
-9. スコープに適した値を使用して管理者とユーザーの同意のプロンプトを構成するための詳細をボックスに入力 `access_as_user` します。
+1. [概要] ページで、アプリケーション **(クライアント) ID をコピーして保存します**。 アプリケーション マニフェストを更新する際には、後でTeams必要があります。
+1. [**管理**] で [**API の公開**] を選択します。
+
+    > [!NOTE]
+    > ボットとタブを使用してアプリを作成する場合は、アプリケーション ID URI を次のように入力します `api://fully-qualified-domain-name.com/botid-{YourBotId}` 。
+
+1. [設定 **] リンクを** 選択して、 の形式でアプリケーション ID URI を生成します `api://{AppID}` 。 2 つのスラッシュと GUID の間に、末尾にスラッシュ "/" が付加された完全修飾ドメイン名を挿入します。 ID 全体に . の形式が必要です `api://fully-qualified-domain-name.com/{AppID}` 。 ² たとえば `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` 、 . 完全修飾ドメイン名は、アプリが提供される人間が読み取り可能なドメイン名です。 ngrok などのトンネリング サービスを使用している場合は、ngrok サブドメインが変更されるたびにこの値を更新する必要があります。
+1. **[スコープの追加]** を選択します。 開くパネルで、[スコープ名] **access_as_user** を **入力します**。
+1. [同意 **できるWho] ボックスに、「****管理者とユーザー」と入力します**。
+1. スコープに適した値を使用して管理者とユーザーの同意のプロンプトを構成するための詳細をボックスに入力 `access_as_user` します。
     * **管理者の同意タイトル:** チームはユーザーのプロフィールにアクセスできます。
     * **管理者の同意の** 説明: Teamsアプリの Web API を現在のユーザーとして呼び出す場合があります。
     * **ユーザーの同意タイトル**: Teamsにアクセスして、ユーザーに代わって要求を行うことができます。
     * **ユーザーの同意の説明: Teams** と同じ権限でこのアプリの API を呼び出す場合があります。
-10. **[状態]** が **[有効]** に設定されていることを確認してください。
-11. [スコープ **の追加] を** 選択して詳細を保存します。 テキスト フィールドの下に表示 **されるスコープ** 名のドメイン 部分は、前の手順で設定した **アプリケーション ID** URI と自動的に一致し、末尾に追加 `/access_as_user` する必要があります `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user` 。
-12. [承認済 **みクライアント アプリケーション** ] セクションで、アプリの Web アプリケーションに対して承認するアプリケーションを特定します。 [クライアント **アプリケーションの追加] を選択します**。 次の各クライアント ID を入力し、前の手順で作成した承認済みスコープを選択します。
+1. **[状態]** が **[有効]** に設定されていることを確認してください。
+1. [スコープ **の追加] を** 選択して詳細を保存します。 テキスト フィールドの下に表示 **されるスコープ** 名のドメイン 部分は、前の手順で設定した **アプリケーション ID** URI と自動的に一致し、末尾に追加 `/access_as_user` する必要があります `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user` 。
+1. [承認済 **みクライアント アプリケーション** ] セクションで、アプリの Web アプリケーションに対して承認するアプリケーションを特定します。 [クライアント **アプリケーションの追加] を選択します**。 次の各クライアント ID を入力し、前の手順で作成した承認済みスコープを選択します。
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264`モバイルTeamsデスクトップ アプリケーションの場合。
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346`web アプリケーションTeamsの場合。
-13. **[API のアクセス許可] に移動します**。 [**アクセス許可を**  >  **追加する] Graph** 委任されたアクセス許可を選択し、次のアクセス許可を API から  >  Graphします。
+1. **[API のアクセス許可] に移動します**。 [**アクセス許可を**  >  **追加する] Graph** 委任されたアクセス許可を選択し、次のアクセス許可を API から  >  Graphします。
     * User.Read は既定で有効になっています
     * メール
     * offline_access
     * OpenId
     * profile
 
-14. [認証] **に移動します**。
+1. [認証] **に移動します**。
 
     アプリに IT 管理者の同意が与えされていない場合、ユーザーはアプリを初めて使用する場合に同意する必要があります。
 
@@ -116,7 +120,7 @@ SSO API は、Web コンテンツを [埋め込むタスク](../../../task-modul
 >
 > * ¹ AAD アプリが Teams で認証要求を行うのと同じテナントに登録されている場合、ユーザーは同意を求めれなく、アクセス トークンがすぐ付与されます。 ユーザーは、AAD アプリが別のテナントに登録されている場合にのみ、これらのアクセス許可に同意します。
 > * ² カスタム ドメインが AAD に追加されていない場合は、ホスト名が既に所有されているドメインに基づいていなければならないというエラーが表示されます。 カスタム ドメインを AAD に追加して登録するには [、AAD](/azure/active-directory/fundamentals/add-custom-domain) にカスタム ドメイン名を追加する手順に従い、手順 5 を繰り返します。 このエラーは、テナントの管理者資格情報でサインインしていない場合Office 365できます。
-> * 返されるアクセス トークンでユーザー プリンシパル名 (UPN) を受信していない場合は、AAD でオプションの[](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims)クレームとして追加できます。
+> * 返されるアクセス トークンでユーザー プリンシパル名 (UPN) を受信していない場合は、AAD でオプションの[](/azure/active-directory/develop/active-directory-optional-claims)クレームとして追加できます。
 
 ### <a name="2-update-your-teams-application-manifest"></a>2. アプリケーション マニフェストTeams更新する
 
@@ -154,7 +158,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 ユーザー レベルのアクセス許可を呼び出し、追加のユーザーの同意が必要な場合は、追加の同意を付与するためのダイアログ `getAuthToken` がユーザーに表示されます。
 
-成功コールバックでアクセス トークンを受信した後、アクセス トークンをデコードして、そのトークンに関連付けられているクレームを表示できます。 必要に応じて、アクセス トークンを手動でコピーしてツールに貼り付[](https://jwt.ms/)けます (コンテンツを jwt.ms など)。 返されるアクセス トークンで UPN を受信していない場合は、AAD でオプションのクレーム [として](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims) 追加できます。
+成功コールバックでアクセス トークンを受信した後、アクセス トークンをデコードして、そのトークンに関連付けられているクレームを表示できます。 必要に応じて、アクセス トークンを手動でコピーしてツールに貼り付[](https://jwt.ms/)けます (コンテンツを jwt.ms など)。 返されるアクセス トークンで UPN を受信していない場合は、AAD でオプションのクレーム [として](/azure/active-directory/develop/active-directory-optional-claims) 追加できます。
 
 <p>
     <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>

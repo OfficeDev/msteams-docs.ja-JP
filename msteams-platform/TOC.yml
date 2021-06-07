@@ -202,8 +202,6 @@
           href: tabs/how-to/create-tab-pages/configuration-page.md
         - name: 削除ページを作成する
           href: tabs/how-to/create-tab-pages/removal-page.md
-        - name: モバイルのタブ
-          href: tabs/design/tabs-mobile.md
         - name: タブのコンテキストを取得する
           href: tabs/how-to/access-teams-context.md
         - name: アダプティブ カードを使用してタブをビルドする
