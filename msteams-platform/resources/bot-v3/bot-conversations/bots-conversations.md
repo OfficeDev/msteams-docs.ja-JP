@@ -81,7 +81,7 @@ XML を使用して、各イメージの高さと幅を指定することをお�
 * `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>` を使う
 * 使用しない `![Duck on a rock](http://aka.ms/Fo983c)`
 
-## <a name="receiving-messages&quot;></a>メッセージの受信
+## <a name="receiving-messages"></a>メッセージの受信
 
 宣言されているスコープに応じて、ボットは次のコンテキストでメッセージを受信できます。
 
