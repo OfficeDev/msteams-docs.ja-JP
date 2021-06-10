@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: teams マニフェスト スキーマ Developer Preview
 localization_priority: Normal
 ms.date: 05/20/2019
-ms.openlocfilehash: a5c75046b950484a897fa2720444899c4817989c
-ms.sourcegitcommit: 25c02757fe207cdff916ba63aa215f88e24e1d6f
+ms.openlocfilehash: c582a6af0505680b9843c86be7fc800fab12129d
+ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52667419"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "52853537"
 ---
 # <a name="developer-preview-manifest-schema-for-microsoft-teams"></a>開発者プレビュー マニフェスト スキーマ (Microsoft Teams
 
@@ -215,7 +215,7 @@ ms.locfileid: "52667419"
      "smallImageUrl", 
      "largeImageUrl", 
      "accentColor",
-     "websiteUrl",
+     "developerUrl",
      "privacyUrl",
      "termsOfUseUrl"        
   ],
@@ -351,7 +351,7 @@ ms.locfileid: "52667419"
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 文字|✔|タブ https:// する際に使用する URL を指定します。|
-|`canUpdateConfiguration`|Boolean|||作成後に、タブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 既定値: `true`|
+|`canUpdateConfiguration`|ブール値|||作成後に、タブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 既定値: `true`|
 |`scopes`|列挙型の配列|1|✔|現在、構成可能なタブは、スコープ `team` とスコープ `groupchat` のみをサポートしています。 |
 |`sharePointPreviewImage`|String|2048||タブ プレビュー イメージへの相対ファイル パスを使用して、SharePoint。 サイズは 1024x768 です。 |
 |`supportedSharePointHosts`|列挙型の配列|1||タブをタブで使用する方法を定義SharePoint。 オプションは `sharePointFullPage` 次のとおりです。 `sharePointWebPart` |
@@ -426,10 +426,10 @@ staticTabs ブロックではなく、アダプティブ カードを使用し�
 
 オブジェクトは、型のすべての要素を持つ配列 (最大 1 要素) です `object` 。 このブロックは、メッセージング拡張機能を提供するソリューションにのみ必要です。
 
-|名前| 型 | 最大サイズ | 必須 | 説明|
+|名前| 種類 | 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`botId`|String|64|✔|ボット フレームワークに登録されているメッセージング拡張機能をバックするボットの一意の Microsoft アプリ ID。 これは、アプリ全体の ID と同じ [可能性があります](#id)。|
-|`canUpdateConfiguration`|Boolean|||メッセージング拡張機能の構成をユーザーが更新できるかどうかを示す値。 既定値は `false` です。|
+|`canUpdateConfiguration`|ブール値|||メッセージング拡張機能の構成をユーザーが更新できるかどうかを示す値。 既定値は `false` です。|
 |`commands`|オブジェクトの配列|10|✔|メッセージング拡張機能がサポートするコマンドの配列|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -444,9 +444,9 @@ staticTabs ブロックではなく、アダプティブ カードを使用し�
 |`type`|String|64 文字||コマンドの種類。 または `query` の 1 `action` つ。 既定値: `query`|
 |`title`|String|32 文字|✔|ユーザーフレンドリーなコマンド名。|
 |`description`|String|128 文字||このコマンドの目的を示すためにユーザーに表示される説明。|
-|`initialRun`|Boolean|||パラメーターを指定してコマンドを最初に実行するかどうかを示すブール値。 既定値: `false`|
+|`initialRun`|ブール値|||パラメーターを指定してコマンドを最初に実行するかどうかを示すブール値。 既定値: `false`|
 |`context`|文字列 (String) の配列|3||メッセージ拡張機能の呼び出し先を定義します。 `compose`、 の任意の `commandBox` 組み合 `message` わせ。 既定値は `["compose", "commandBox"]` です|
-|`fetchTask`|Boolean|||タスク モジュールを動的にフェッチする必要があるかどうかを示すブール値。|
+|`fetchTask`|ブール値|||タスク モジュールを動的にフェッチする必要があるかどうかを示すブール値。|
 |`taskInfo`|オブジェクト|||メッセージング拡張機能コマンドを使用するときにプリロードするタスク モジュールを指定します。|
 |`taskInfo.title`|String|64||最初のダイアログ タイトル。|
 |`taskInfo.width`|String|||ダイアログの幅 - ピクセル単位の数値または既定のレイアウト ('large'、'medium'、または 'small' など)。|
@@ -516,22 +516,22 @@ staticTabs ブロックではなく、アダプティブ カードを使用し�
 
 **オプション** - 配列
 
-この `configurableProperties` ブロックは、管理者がカスタマイズできるアプリTeams定義します。 詳細については、「アプリのカスタマイズ[」を参照Microsoft Teams。](/MicrosoftTeams/customize-apps)
+この `configurableProperties` ブロックは、管理者がカスタマイズできるアプリTeams定義します。 詳細については、「アプリのカスタマイズを [有効にする」を参照してください](~/concepts/design/enable-app-customization.md)。
 
 > [!NOTE]
 > 少なくとも 1 つのプロパティを定義する必要があります。 このブロックでは、最大 9 つのプロパティを定義できます。
-> ベスト プラクティスとして、アプリのユーザーとユーザーがアプリをカスタマイズするときに従うカスタマイズ ガイドラインを提供する必要があります。 
 
 次のプロパティを定義できます。
-* `name`: 管理者がアプリの表示名を変更できます。
-* `shortDescription`: 管理者がアプリの簡単な説明を変更できます。
-* `longDescription`: 管理者がアプリの詳細な説明を変更できます。
-* `smallImageUrl`: マニフェストの `outline` ブロック内 `icons` のプロパティです。
-* `largeImageUrl`: マニフェストの `color` ブロック内 `icons` のプロパティです。
-* `accentColor`: アウトライン アイコンと組み合わせて、背景として使用する色です。
-* `websiteUrl`: 開発者の https:// の URL です。
-* `privacyUrl`: 開発者の https:// の URL です。
-* `termsOfUseUrl`: 開発者の https:// の URL です。
+
+* `name`: アプリの表示名。
+* `shortDescription`: アプリの簡単な説明です。
+* `longDescription`: アプリの詳細な説明。
+* `smallImageUrl`: アプリのアウトライン アイコン。
+* `largeImageUrl`: アプリの色アイコン。
+* `accentColor`: アウトライン アイコンと組み合わせて、背景として使用する色。
+* `developerUrl`: 開発者の Web サイトの HTTPS URL。
+* `privacyUrl`: 開発者のプライバシー ポリシーの HTTPS URL。
+* `termsOfUseUrl`: 開発者の使用条件の HTTPS URL。
 
 ## <a name="defaultinstallscope"></a>defaultInstallScope
 
@@ -557,4 +557,3 @@ staticTabs ブロックではなく、アダプティブ カードを使用し�
 |`team`|string|||選択したインストール スコープが次の場合 `team` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
 |`groupchat`|string|||選択したインストール スコープが次の場合 `groupchat` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
 |`meetings`|string|||選択したインストール スコープが次の場合 `meetings` 、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab` `bot` 、、または `connector` 。|
-

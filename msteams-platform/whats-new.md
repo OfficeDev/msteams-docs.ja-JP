@@ -4,12 +4,12 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 localization_priority: Normal
 keywords: チームの最新情報
-ms.openlocfilehash: d053c9c6d41788014ee0a1f252b0b65e1a30ecb8
-ms.sourcegitcommit: 45c66faef8145abb903ef7118b9fa914c12aba2a
+ms.openlocfilehash: 297e86925d4facfc0982ea67ce9b61e48adeb4d8
+ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "52736769"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "52853523"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
@@ -23,7 +23,6 @@ Microsoft ビルド 2021 Microsoft Teams一般提供 (GA)、および開発者�
 | -------- | --------- | ------------------ |
 |05/26/2021| アダプティブ カードを使用してタブを作成します。 |[タブを作成する](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| 更新された[Teams ToolkitとVisual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)[の](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview)Visual Studio。 | [アプリ開発Teams開始する](~/get-started/prerequisites.md) |
-|05/25/2021| 会議の詳細 API とリアルタイムの会議Teamsイベント。 | [Teams 会議用のアプリを作成する](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
 |05/25/2021| アプリを管理Teamsするための新しい開発者ポータルがTeamsされました。 | [Teams の開発者ポータル](concepts/build-and-test/teams-developer-portal.md) |
 |05/25/2021| Together Mode 機能は、参加者を 1 つの仮想シーンに結合し、ビデオ ストリームを事前に決定されたシートに設定します。 | [一緒にモード](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021| ボットは、リソース固有の同意 (RSC) を使用してすべてのチャネル メッセージを受信できます。|[RSC、ボット会話の](~/bots/how-to/conversations/channel-messages-with-rsc.md)概要、[チャネルと](~/bots/how-to/conversations/conversation-basics.md)グループ[](~/bots/how-to/conversations/channel-and-group-conversations.md)の会話、開発者プレビュー マニフェスト スキーマを使用して[すべてのメッセージを受信する](~/resources/schema/manifest-schema-dev-preview.md) |
@@ -196,7 +195,6 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 | -------- | --------- | ------------------ |
 |05/26/2021|アダプティブ カードを使用してタブをビルドする|[タブを作成する](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| 更新された[Teams ToolkitとVisual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)[の](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview)Visual Studio。 | [アプリ開発Teams開始する](~/get-started/prerequisites.md) |
-|05/25/2021| 会議の詳細 API とリアルタイムの会議Teamsイベント | [Teams 会議用のアプリを作成する](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
 |05/25/2021| アプリを管理Teamsするための新しい開発者ポータルがTeamsされました。 | [Teams の開発者ポータル](concepts/build-and-test/teams-developer-portal.md) |
 |05/25/2021| Together Mode 機能は、参加者を 1 つの仮想シーンに結合し、ビデオ ストリームを事前に決定されたシートに設定します。 | [一緒にモード](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021|ボットは、リソース固有の同意 (RSC) を使用してすべてのチャネル メッセージを受信できます。|[RSC、ボット会話の](~/bots/how-to/conversations/channel-messages-with-rsc.md)概要、[チャネルと](~/bots/how-to/conversations/conversation-basics.md)グループ[](~/bots/how-to/conversations/channel-and-group-conversations.md)の会話、開発者プレビュー マニフェスト スキーマを使用して[すべてのメッセージを受信する](~/resources/schema/manifest-schema-dev-preview.md) |

@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: d8427d23ba2caa73cecd173f6d1ef0d041252b3b
-ms.sourcegitcommit: e50cdeb6b7f481e12911b2bb74a8da22af0bffac
+ms.openlocfilehash: 75c29a1cf9c2897d7b419b45bfc1a4f0447c7aa3
+ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "52710628"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "52853530"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>リファレンス: マニフェスト スキーマのMicrosoft Teams
 
@@ -291,7 +291,7 @@ ms.locfileid: "52710628"
      "smallImageUrl", 
      "largeImageUrl", 
      "accentColor",
-     "websiteUrl",
+     "developerUrl",
      "privacyUrl",
      "termsOfUseUrl"        
   ]              
@@ -509,7 +509,7 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 
 アイテムは、型のすべての要素を持つ配列 (最大 1 要素) です `object` 。 このブロックは、メッセージング拡張機能を提供するソリューションにのみ必要です。
 
-|名前| 型 | 最大サイズ | 必須 | 説明|
+|名前| 種類 | 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`botId`|string|64|✔|ボット フレームワークに登録されているメッセージング拡張機能をバックするボットの一意の Microsoft アプリ ID。 これは、アプリ ID 全体と同じ可能性があります。|
 |`commands`|オブジェクトの配列|10|✔|メッセージング拡張機能がサポートするコマンドの配列。|
@@ -706,21 +706,19 @@ Teams機能するために独自の sharepoint URL を必要とするアプリ�
 
 **オプション** - 配列
 
-この `configurableProperties` ブロックは、管理者がカスタマイズできるアプリTeams定義します。 詳細については、「アプリのカスタマイズ[」を参照Microsoft Teams。](/MicrosoftTeams/customize-apps)
+この `configurableProperties` ブロックは、管理者がカスタマイズできるアプリTeams定義します。 詳細については、「アプリのカスタマイズを [有効にする」を参照してください](~/concepts/design/enable-app-customization.md)。
 
 > [!NOTE]
 > 少なくとも 1 つのプロパティを定義する必要があります。 このブロックでは、最大 9 つのプロパティを定義できます。
-> ベスト プラクティスとして、アプリのユーザーとユーザーがアプリをカスタマイズするときに従うカスタマイズ ガイドラインを提供する必要があります。
 
 次のプロパティを定義できます。
-* `name`: 管理者がアプリの表示名を変更できます。
-* `shortDescription`: 管理者がアプリの簡単な説明を変更できます。
-* `longDescription`: 管理者がアプリの詳細な説明を変更できます。
-* `smallImageUrl`: マニフェストの `outline` ブロック内 `icons` のプロパティです。
-* `largeImageUrl`: マニフェストの `color` ブロック内 `icons` のプロパティです。
-* `accentColor`: アウトライン アイコンと組み合わせて、背景として使用する色です。
-* `websiteUrl`: 開発者の https:// の URL です。
-* `privacyUrl`: 開発者の https:// の URL です。
-* `termsOfUseUrl`: 開発者の https:// の URL です。
 
-
+* `name`: アプリの表示名。
+* `shortDescription`: アプリの簡単な説明です。
+* `longDescription`: アプリの詳細な説明。
+* `smallImageUrl`: アプリのアウトライン アイコン。
+* `largeImageUrl`: アプリの色アイコン。
+* `accentColor`: アウトライン アイコンと組み合わせて、背景として使用する色。
+* `developerUrl`: 開発者の Web サイトの HTTPS URL。
+* `privacyUrl`: 開発者のプライバシー ポリシーの HTTPS URL。
+* `termsOfUseUrl`: 開発者の使用条件の HTTPS URL。
