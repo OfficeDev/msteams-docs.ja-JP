@@ -1,18 +1,18 @@
 ---
-title: アプリをカスタマイズする管理者を有効にする
+title: アプリのカスタマイズを有効にする
 author: heath-hamilton
 description: 管理者が組織Teamsアプリをカスタマイズする方法について説明します。
 localization_priority: Normal
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 1fba8bba86f1bf1b4bab754d0c01d03adb46dd4b
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 1b5e2670cdabc139ea945f3d0c5705d9262b5832
+ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631382"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "52853544"
 ---
-# <a name="enable-orgs-to-customize-your-microsoft-teams-app"></a>組織でアプリをカスタマイズMicrosoft Teamsする
+# <a name="enable-your-microsoft-teams-app-to-be-customized"></a>アプリMicrosoft Teamsカスタマイズを有効にする
 
 組織 (特に管理者Teams) が、アプリの一部の側面をカスタマイズMicrosoft Teamsできます。 次に示す例を示します。
 
