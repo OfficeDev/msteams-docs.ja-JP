@@ -4,12 +4,12 @@ description: 仮想アシスタント ボットとスキルを作成する方法
 localization_priority: Normal
 ms.topic: how-to
 keywords: teams 仮想アシスタント ボット
-ms.openlocfilehash: dea62a69a08c8d216a17dbd58558435f3cc623e8
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: a736dfc7a9a2f23389b2232b36beb800bc059ad5
+ms.sourcegitcommit: 4751ca40f36ed21ec743b14483b181adade6b904
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630734"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "52871847"
 ---
 # <a name="create-virtual-assistant"></a>仮想アシスタントを作成する 
 
@@ -570,10 +570,10 @@ botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<pa
 
 ## <a name="code-sample"></a>コード サンプル
 
-| **サンプル名** | **説明** | **C#** | **.NET** |
-|----------|-----------------|----------|------------------|
-| 更新された visual studio テンプレート | チームの機能をサポートするカスタマイズされたテンプレート。 | [View](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill) |
-| Book-a-room ボットのスキル コード | 移動中に会議室をすばやく見つけて予約できます。 |  | [View](https://github.com/nebhagat/msteams-virtual-assistant-dotnet) |
+| **サンプル名** | **説明** | **C#**  **.NET** |
+|----------|-----------------|---------------------------|
+| 更新された visual studio テンプレート | チームの機能をサポートするカスタマイズされたテンプレート。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-virtual-assistant/csharp) |
+| Book-a-room ボットのスキル コード | 移動中に会議室をすばやく見つけて予約できます。 | [View](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill) |
 
 
 ## <a name="see-also"></a>関連項目

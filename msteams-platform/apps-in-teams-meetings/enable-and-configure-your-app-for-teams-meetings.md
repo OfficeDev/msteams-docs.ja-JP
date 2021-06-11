@@ -3,12 +3,12 @@ title: 会議で使用するアプリを有効Teamsする
 author: laujan
 description: 会議で使用するアプリを有効Teamsする
 ms.topic: conceptual
-ms.openlocfilehash: 3484e82f3f51a9a92da6588234744c42a86b5730
-ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
+ms.openlocfilehash: 6542a8d1b4b8055d09585da4cf8c1194b5f293d7
+ms.sourcegitcommit: 4751ca40f36ed21ec743b14483b181adade6b904
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52651734"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "52871840"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>会議で使用するアプリを有効Teamsする
 
@@ -130,7 +130,7 @@ API を使用して要求を必要に応じてルーティングするには、�
 
 #### <a name="in-meeting-dialog-box"></a>[会議内] ダイアログ ボックス
 
-[会議中] ダイアログ ボックスを使用すると、会議中に参加者を引き付け、会議中に情報やフィードバックを収集できます。 API を [`NotificationSignal`](/graph/api/resources/notifications-api-overview?view=graph-rest-beta&preserve-view=true) 使用して、バブル通知をトリガーする必要があります。 通知要求ペイロードの一部として、表示するコンテンツがホストされている URL を含める。
+[会議中] ダイアログ ボックスを使用すると、会議中に参加者を引き付け、会議中に情報やフィードバックを収集できます。 API を [`NotificationSignal`](create-apps-for-teams-meetings.md#notificationsignal-api) 使用して、バブル通知をトリガーする必要があります。 通知要求ペイロードの一部として、表示するコンテンツがホストされている URL を含める。
 
 会議中のダイアログでは、タスク モジュールを使用することはできません。 タスク モジュールは、会議チャットでは呼び出されません。 外部リソース URL を使用して、会議にコンテンツ バブルを表示します。 このメソッドを使用 `submitTask` して、会議チャットでデータを送信できます。
 
