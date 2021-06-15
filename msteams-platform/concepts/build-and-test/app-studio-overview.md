@@ -4,12 +4,12 @@ description: App Studio を使用して Microsoft Teams で優れたアプリの
 keywords: App Studio Teams の開始
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: eda6835a1453f878476b3cc296ff2c0e5dc889a5
-ms.sourcegitcommit: 1cc1516e71441f6f3f82b35868e21ba9933333cd
+ms.openlocfilehash: a12a63af10f677050632f5493acb2d6089d46d78
+ms.sourcegitcommit: 64c1cf2a268ef101a519bc31d171618d0f6cd12a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52651713"
+ms.lasthandoff: 06/13/2021
+ms.locfileid: "52915098"
 ---
 # <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Microsoft Teams 用の App Studio を使用してアプリをすばやく開発する
 
@@ -65,7 +65,6 @@ App Studio の [マニフェスト エディター] タブでは、マニフェ�
 > [!NOTE]
 > ベスト プラクティスとして、アプリのユーザーとユーザーがアプリをカスタマイズするときに従うカスタマイズ ガイドラインを提供する必要があります。 詳細については、「アプリのカスタマイズ[」を参照Microsoft Teams。](/MicrosoftTeams/customize-apps)
 
-
 ##### <a name="tabs"></a>タブ
 
 * **チーム タブ。** チーム タブは、チャネルの一部となり、そこからチームの情報やリソースにすばやくアクセスできます。 たとえば、チャネルの Planner タブには 1 つのプランが含まれており、Power BI タブは特定のレポートにマッピングします。 ユーザーは関連するコンテキストにドリルダウンできますが、タブの外側には移動できません。たとえば、Power BI タブでは、その他の Power BI レポートへの移動を有効にすることはできませんが、メインの Power BI Web サイト内のレポートを起動する *[Web サイトに移動]* ボタンを有効にできます。
@@ -90,10 +89,6 @@ Bot Framework にボットをまだ登録していない場合は、**[Register]
 ##### <a name="connectors"></a>コネクタ
 
 このセクションでは、コネクタをアプリに追加することができます。 Office 365 コネクタが既に登録されている場合は、**[セットアップ]** を選択して、コネクタの名前と ID を入力します。 新しいコネクタが必要な場合は、**[登録]** をクリックして、ブラウザーでコネクタ開発者ダッシュボードに移動します。
-
-> [!NOTE]
-> アプリのカスタマイズにより、管理者はボット、メッセージング拡張機能、タブ、コネクタを介して読み込まれたアプリの外観を変更できます。 たとえば、管理者Teams Contoso から **Contoso** **エージェント** にアプリの名前をカスタマイズすると、ユーザーに Contoso **Agent** という新しい名前が表示されます。 ただし、チャットにコネクタを追加している間、一覧でコネクタは引き続きアプリの名前を Contoso として表示 **します**。
-
 
 ##### <a name="messaging-extensions"></a>メッセージング拡張機能
 
