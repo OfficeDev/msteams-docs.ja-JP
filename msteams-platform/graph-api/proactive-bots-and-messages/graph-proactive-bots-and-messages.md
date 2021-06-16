@@ -6,14 +6,14 @@ author: laujan
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Teams プロアクティブ メッセージング チャットのインストール Graph
-ms.openlocfilehash: 06b50e5ab8594c257959430383bab5e355af4e06
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: db36c64e557b90699bb09e77dc67ca4c9a8e5853
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566153"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949666"
 ---
-# <a name="proactive-installation-of-apps-using-graph-api-and-send-messages"></a>Graph API を使用したアプリの事前インストールとメッセージの送信
+# <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>API を使用してメッセージを送信Graphアプリのプロアクティブ インストール
 
 >[!IMPORTANT]
 > Microsoft GraphおよびMicrosoft Teamsパブリック プレビューは、早期アクセスとフィードバックのために利用できます。 このリリースでは広範なテストが実施されましたが、実稼働環境での使用を意図した製品ではありません。
@@ -189,7 +189,7 @@ GET https://graph.microsoft.com/beta/users/{user-id}/chats?$filter=installedApps
 
 ## <a name="see-also"></a>関連項目
 
-* [**Microsoft Teams のアプリのセットアップ ポリシーを管理する**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
+* [**アプリのセットアップ ポリシーを管理Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
 * [ユーザーにプロアクティブ通知を送信する SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
 
 ## <a name="view-additional-code-samples"></a>その他のコード サンプルを見る

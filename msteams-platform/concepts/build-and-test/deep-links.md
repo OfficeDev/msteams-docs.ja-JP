@@ -4,12 +4,12 @@ description: ディープ リンクとアプリでの使用方法について説
 ms.topic: how-to
 localization_priority: Normal
 keywords: Teams ディープ リンク ディープリンク
-ms.openlocfilehash: cd7735595f260431524edf1431ff22a1eeb361bc
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 07eb03f2e9686c26a917ab1f2d72fc0668e59107
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630146"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949680"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成 
 
@@ -178,6 +178,11 @@ threadId: = "19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype",
 groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 }
 ```
+
+## <a name="deep-linking-to-an-app"></a>アプリへのディープ リンク
+
+アプリがアプリストアに表示された後に、アプリのディープリンクTeamsします。 アプリを起動するリンクをTeams、アプリ ID に次の URL を追加します `https://teams.microsoft.com/l/app/<your-app-id>` 。 アプリをインストールするダイアログ ボックスが表示されます。 
+  
 ## <a name="deep-linking-for-sharepoint-framework-tabs"></a>タブの詳細SharePoint Frameworkリンク
 
 ボット、コネクタ、またはメッセージング拡張カードでは、次のディープ リンク形式を使用できます。 `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
@@ -233,7 +238,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ### <a name="generate-a-deep-link-to-a-call"></a>通話へのディープ リンクを生成する
 
-| ディープ リンク | Format | 例 |
+| ディープ リンク | フォーマット | 例 |
 |-----------|--------|---------|
 | 音声通話を行う | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; 、 &lt; user2&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com |
 | 音声およびビデオ通話を行う | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; 、 &lt; user2&video=true &gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true |

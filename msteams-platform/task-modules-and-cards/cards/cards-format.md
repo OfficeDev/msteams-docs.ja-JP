@@ -5,12 +5,12 @@ keywords: teams ボット カードの形式
 localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
-ms.openlocfilehash: b52eb01f7d886f3d4b2f12c8209c181d43a31956
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 6a420ca549cd5131afc50813b5c8267f28073e5b
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630214"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949764"
 ---
 # <a name="format-cards-in-teams"></a>カードの書式を設定Teams
 
@@ -242,9 +242,6 @@ schema 要素内で、ユーザーにフィルター処理を求め、多数の�
 
 ### <a name="stage-view-for-images-in-adaptive-cards"></a>アダプティブ カードの画像のステージ ビュー
 
-> [!NOTE]
-> この機能は現在、開発者プレビューでのみ利用できます。
- 
 アダプティブ カードでは、このプロパティを使用して、ステージ ビューに画像を選択的 `msteams` に表示する機能を追加できます。 ユーザーが画像にカーソルを合わせると、展開アイコンが表示され、属性が `allowExpand` に設定されます `true` 。 プロパティの使用方法については、次の例を参照してください。
 
 ``` json
@@ -284,7 +281,7 @@ schema 要素内で、ユーザーにフィルター処理を求め、多数の�
 | --- | --- | --- |
 | bold | **text** | `**text**` |
 | italic | *text* | `*text*` |
-| ヘッダー (レベル 1 &ndash; 3) | **テキスト** | `### Text`|
+| ヘッダー (レベル 1 &ndash; 3) | **Text** | `### Text`|
 | 取り消し線 | ~~text~~ | `~~text~~` |
 | 順序なしリスト | <ul><li>テキスト</li><li>テキスト</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | 順序付きリスト | <ol><li>テキスト</li><li>テキスト</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -373,7 +370,7 @@ Android では、コネクタ カードの Markdown 書式は次のように表�
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| ヘッダー (レベル 1 &ndash; 3) | **テキスト** | `<h3>Text</h3>` |
+| ヘッダー (レベル 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | 取り消し線 | ~~text~~ | `<strike>text</strike>` |
 | 順序なしリスト | <ul><li>テキスト</li><li>テキスト</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 順序付きリスト | <ol><li>テキスト</li><li>テキスト</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -461,7 +458,7 @@ HTML タグは、ヒーロー カードやサムネイル カードなどの単�
 | --- | --- | --- |
 | bold | **text** | `<strong>text</strong>` |
 | italic | *text* | `<em>text</em>` |
-| ヘッダー (レベル 1 &ndash; 3) | **テキスト** | `<h3>Text</h3>` |
+| ヘッダー (レベル 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | 取り消し線 | ~~text~~ | `<strike>text</strike>` |
 | 順序なしリスト | <ul><li>テキスト</li><li>テキスト</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 順序付きリスト | <ol><li>テキスト</li><li>テキスト</li></ol> | `<ol><li>text</li><li>text</li></ol>` |

@@ -4,12 +4,12 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 localization_priority: Normal
 keywords: チームの最新情報
-ms.openlocfilehash: 297e86925d4facfc0982ea67ce9b61e48adeb4d8
-ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
+ms.openlocfilehash: 86a39bc771873afb25d401534569498241b2daf1
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "52853523"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949659"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
@@ -24,7 +24,7 @@ Microsoft ビルド 2021 Microsoft Teams一般提供 (GA)、および開発者�
 |05/26/2021| アダプティブ カードを使用してタブを作成します。 |[タブを作成する](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| 更新された[Teams ToolkitとVisual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)[の](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview)Visual Studio。 | [アプリ開発Teams開始する](~/get-started/prerequisites.md) |
 |05/25/2021| アプリを管理Teamsするための新しい開発者ポータルがTeamsされました。 | [Teams の開発者ポータル](concepts/build-and-test/teams-developer-portal.md) |
-|05/25/2021| Together Mode 機能は、参加者を 1 つの仮想シーンに結合し、ビデオ ストリームを事前に決定されたシートに設定します。 | [一緒にモード](~/apps-in-teams-meetings/teams-together-mode.md) |
+|05/25/2021| カスタム 一緒にモードのシーン機能は、参加者を 1 つの仮想シーンに結合し、事前に決定されたシートにビデオ ストリームを設定します。 | [カスタム一緒にモードのシーン](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021| ボットは、リソース固有の同意 (RSC) を使用してすべてのチャネル メッセージを受信できます。|[RSC、ボット会話の](~/bots/how-to/conversations/channel-messages-with-rsc.md)概要、[チャネルと](~/bots/how-to/conversations/conversation-basics.md)グループ[](~/bots/how-to/conversations/channel-and-group-conversations.md)の会話、開発者プレビュー マニフェスト スキーマを使用して[すべてのメッセージを受信する](~/resources/schema/manifest-schema-dev-preview.md) |
 |05/21/2021| タブは、リンク解除とステージ ビューをリンクします。 |[タブリンクの分岐とステージ ビュー](tabs/tabs-link-unfurling.md) |
 
@@ -57,6 +57,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 | **Date** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+|06/09/2021| 属性付きアダプティブ カードのイメージのステージ `allowExpand` ビュー。 | [アダプティブ カードの画像のステージ ビュー](~/task-modules-and-cards/cards/cards-format.md) |
 |05/31/2021| 会話タブ。 | [タブ内のコンテンツに関する会話を開始および続行する](~/tabs/how-to/conversational-tabs.md) |
 |05/24/2021| モバイル パターンTeamsを使用して、アプリの設計ガイドラインを更新しました。|[アプリのTeamsする](~/concepts/design/design-teams-app-overview.md)
 |05/13/2021| mConnect と Skooler に関する情報を追加しました。|[Moodle ラーニング管理システム](resources/moodle-overview.md)
@@ -103,7 +104,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 |07/27/2020 | Graphボットとメッセージの管理 (パブリック プレビュー)。|[Microsoft Teams を使用して、プロアクティブ ボットのインストールとプロアクティブ メッセージングをGraph](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
 |07/22/2020 |モバイル デバイス機能の更新。|[[デバイスのアクセス許可を要求する] Microsoft Teamsタブ](concepts/device-capabilities/native-device-permissions.md) |
 |07/20/2020|TeamsAppSource 申請のアプリ検証ツール。|[Teamsアプリ検証ツール](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
-|07/15/2020|ユーザーの仮想アシスタントを作成Teams。|[仮想アシスタントのMicrosoft Teams](samples/virtual-assistant.md)|
+|07/15/2020|ユーザーの仮想アシスタントを作成Teams。|[Virtual Assistant Microsoft Teams](samples/virtual-assistant.md)|
 |07/14/2020|ネイティブ読み込みインジケーターのドキュメントを表示する。|[ネイティブ読み込みインジケーターの表示](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
 |07/01/2020|アプリの作成Teamsを開始Visual Studio Code Toolkit。|[アプリとアプリのMicrosoft Teams ToolkitをVisual Studio Code](toolkit/visual-studio-code-overview.md) |
 |07/01/2020|Web クライアントおよびデスクトップ クライアント用のタブ GA Teamsシングル サインオン。|[シングル Sign-On (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
@@ -196,7 +197,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 |05/26/2021|アダプティブ カードを使用してタブをビルドする|[タブを作成する](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| 更新された[Teams ToolkitとVisual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)[の](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview)Visual Studio。 | [アプリ開発Teams開始する](~/get-started/prerequisites.md) |
 |05/25/2021| アプリを管理Teamsするための新しい開発者ポータルがTeamsされました。 | [Teams の開発者ポータル](concepts/build-and-test/teams-developer-portal.md) |
-|05/25/2021| Together Mode 機能は、参加者を 1 つの仮想シーンに結合し、ビデオ ストリームを事前に決定されたシートに設定します。 | [一緒にモード](~/apps-in-teams-meetings/teams-together-mode.md) |
+|05/25/2021| カスタム 一緒にモードのシーン機能は、参加者を 1 つの仮想シーンに結合し、事前に決定されたシートにビデオ ストリームを設定します。 | [カスタム一緒にモードのシーン](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021|ボットは、リソース固有の同意 (RSC) を使用してすべてのチャネル メッセージを受信できます。|[RSC、ボット会話の](~/bots/how-to/conversations/channel-messages-with-rsc.md)概要、[チャネルと](~/bots/how-to/conversations/conversation-basics.md)グループ[](~/bots/how-to/conversations/channel-and-group-conversations.md)の会話、開発者プレビュー マニフェスト スキーマを使用して[すべてのメッセージを受信する](~/resources/schema/manifest-schema-dev-preview.md) |
 |05/21/2021|タブリンクの分岐とステージ ビュー|[タブリンクの分岐とステージ ビュー](tabs/tabs-link-unfurling.md) |
 |03/05/2021| タブのエクスペリエンスを囲む余白がなくなりました。 タブ開発者は、アプリを確認して更新する必要があります。 | [タブ余白の削除](resources/removing-tab-margins.md) |

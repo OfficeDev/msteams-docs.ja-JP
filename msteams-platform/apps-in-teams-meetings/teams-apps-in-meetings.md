@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: 1fdf3d55219d80d6953ffa0865b223dd626053f6
-ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
+ms.openlocfilehash: 69016f818a333cb4f7cecc252539e076838a0735
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52649665"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949652"
 ---
 # <a name="apps-for-teams-meetings"></a>会議のTeamsアプリ
 
@@ -25,13 +25,13 @@ ms.locfileid: "52649665"
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/nKAy5rNDus4]
 
-この記事では、会議アプリの機能拡張、API リファレンス、会議用アプリの有効化と構成、および会議の一緒にモードの概要をTeams。
+この記事では、会議アプリの機能拡張、API リファレンス、会議用アプリの有効化と構成、およびカスタムの Together Mode シーンの概要について説明します。Teams。
 
 会議の機能拡張機能を使用すると、会議のエクスペリエンスを向上できます。これにより、会議内でアプリを統合できます。 また、タブ、ボット、メッセージング拡張機能を統合できる会議のライフサイクルの異なるステージも含まれています。 会議機能拡張 API を使用すると、さまざまな参加者の役割とユーザーの種類を識別し、会議イベントを取得し、会議内ダイアログを生成できます。
 
 会議用Teamsを使用してアプリをカスタマイズするには、アプリ マニフェストを更新して Teams 会議のアプリを有効にし、会議のシナリオ用にアプリを構成することもできます。
 
-新しい Together Mode 機能により、ユーザーは、ボックスで区切ることなく、チームとの会議で 1 か所で共同作業を行えます。
+新しいカスタムの Together Mode シーン機能を使用すると、ユーザーは、ボックスで区切ることなく、チームとの会議で 1 か所で共同作業を行えます。
 
 ## <a name="see-also"></a>関連項目
 
@@ -39,10 +39,10 @@ ms.locfileid: "52649665"
 * [ボット](../bots/what-are-bots.md)
 * [メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)
 * [アプリをデザインする](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [会議でのアプリの前提条件と API Teams参照](create-apps-for-teams-meetings.md)
-* [一緒にモード](~/apps-in-teams-meetings/teams-together-mode.md)
+* [Teams 会議アプリへの前提条件と API リファレンス](create-apps-for-teams-meetings.md)
+* [カスタム一緒にモードのシーン](~/apps-in-teams-meetings/teams-together-mode.md)
 
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [会議アプリの機能拡張](meeting-app-extensibility.md)
+> [会議アプリ拡張性](meeting-app-extensibility.md)

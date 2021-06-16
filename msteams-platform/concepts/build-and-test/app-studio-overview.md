@@ -4,14 +4,17 @@ description: App Studio を使用して Microsoft Teams で優れたアプリの
 keywords: App Studio Teams の開始
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: a12a63af10f677050632f5493acb2d6089d46d78
-ms.sourcegitcommit: 64c1cf2a268ef101a519bc31d171618d0f6cd12a
+ms.openlocfilehash: c68a7a36212086c9c0929796cab66bc53f8cbb2b
+ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/13/2021
-ms.locfileid: "52915098"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "52949771"
 ---
-# <a name="quickly-develop-apps-with-app-studio-for-microsoft-teams"></a>Microsoft Teams 用の App Studio を使用してアプリをすばやく開発する
+# <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>App Studio を使用してアプリを管理Microsoft Teams
+
+> [!TIP]
+> **開発者ポータルを試してみてください**: App Studio が進化しました。 新しい開発者ポータルを使用して、Teamsアプリを構成、配布、[および管理します](https://dev.teams.microsoft.com/)。
 
 App Studio を使用すると、Microsoft Teams アプリの作成や統合を簡単に始めることができます。自分の組織用にカスタム アプリを開発する場合も、世界各地のチーム用に SaaS アプリケーションを開発する場合も、App Studio ではマニフェストの作成とアプリのパッケージングが合理化され、Card Editor や React 制御ライブラリなどの便利なツールが提供されます。
 
@@ -125,7 +128,7 @@ Teams の内部で確認するカードが既にある場合は、そのカー�
 ### <a name="react-control-library"></a>React 制御ライブラリ
 
 >[!Note]
-> このReactコントロール ライブラリは今後非推奨です。 以前は Stardust UI の代わりに [Fluent-UI](https://microsoft.github.io/fluent-ui-react/) 対応コントロールを使用する場合を検討してください。
+> このReactコントロール ライブラリは今後非推奨です。 以前は Stardust [UI Fluentとして、コントロールに](https://microsoft.github.io/fluent-ui-react/)対応するコントロールの使用を検討してください。
 
 Teams のベスト プラクティスに従ってアプリを作成するのは、アプリを Teams クライアントの操作環境にシームレスに適合する外観にするための優れた方法です。 この目的を達成するため、使用する UI コントロールは重要な要素となります。 一貫性のある UI を簡単に作成できるようにするため、App Studio には、Teams デザインの原則に準拠する UI コントロールのいくつかのカテゴリがあります。
 
