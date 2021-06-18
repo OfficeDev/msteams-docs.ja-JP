@@ -5,29 +5,29 @@ description: "\"こんにちは!\" を表示する Microsoft Teams アプリを�
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 6a9c7e008e2fb6d77c3314286b09d006bd468c37
-ms.sourcegitcommit: 25c02757fe207cdff916ba63aa215f88e24e1d6f
+ms.openlocfilehash: c336c97d477e7038cc41a5e593d71b0e98dc4643
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52667455"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994393"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>Blazor で最初のアプリをMicrosoft Teams実行する
 
 このチュートリアルでは、.NET/Blazor で新しい Microsoft Teams アプリを作成し、Microsoft クライアントから情報を取得するための簡単な個人用アプリを実装Graph。 (個人用 *アプリには、* 個々の使用を対象にした一連のタブが含まれます)。 チュートリアルでは、Teams アプリの構造、アプリをローカルで実行する方法、Azure にアプリを展開する方法について説明します。
 
-作成されたアプリには、現在のユーザーの基本的なユーザー情報が表示されます。  アクセス許可が付与された場合、アプリは現在のユーザーとして Microsoft Graphに接続して、完全なプロファイルを取得します。
+ビルドされたアプリは、現在のユーザーの基本的なユーザー情報を表示します。  許可が付与された場合、アプリは現在のユーザーとして Microsoft Graph に接続し、完全なプロフィールを取得します。
 
-## <a name="before-you-begin"></a>開始する前に
+## <a name="before-you-begin"></a>始める前に
 
-前提条件をインストールして、開発環境がセットアップされていることを確認 [する](prerequisites.md)
+[前提条件](prerequisites.md)をインストールして、開発環境が整っていることを確認する
 
 > [!div class="nextstepaction"]
 > [前提条件のインストール](prerequisites.md)
 
 ## <a name="create-your-project"></a>プロジェクトを作成する
 
-最初のプロジェクトTeams Toolkitを作成するには、次のコマンドを使用します。
+Teams ツールキットを使用して、最初のプロジェクトを作成します。
 
 # <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/vs)
 
@@ -41,7 +41,7 @@ ms.locfileid: "52667455"
 
 1. アプリケーション名と会社名を入力し、[作成] を **押します**。  アプリケーション名と会社名がエンド ユーザーに表示されます。
 
-1. アプリTeams数秒で作成されます。  プロジェクトを作成したら、M365 でシングル サインオンを設定します。
+1. 数秒後に Teams アプリが作成されます。  プロジェクトを作成したら、M365 でシングル サインオンを設定します。
 
    - [TeamsFx **Project**  >  **SSO 用**  >  **に構成する] を選択します**。
    - メッセージが表示されたら、M365 管理者アカウントにサインインします。
@@ -80,15 +80,15 @@ ms.locfileid: "52667455"
 
 ---
 
-## <a name="take-a-tour-of-the-source-code"></a>ソース コードのツアーに参加する
+## <a name="take-a-tour-of-the-source-code"></a>ソース コードのツアーを開始する
 
-このセクションをスキップする場合は、アプリを [ローカルで実行できます](#run-your-app-locally)。
+このセクションをスキップしたい場合は、[アプリをローカルで実行する](#run-your-app-locally)ことができます。
 
-プロジェクトをTeams Toolkitしたら、プロジェクト用の基本的な個人用アプリを構築するためのTeams。 プロジェクト のディレクトリとファイルは、2019 年 2019 年のソリューション エクスプローラー Visual Studio表示されます。
+Teams ツールキットでプロジェクトを構成すると、Teams 向けの基本的な個人用タブを構築するためのコンポーネントがあります。 プロジェクト のディレクトリとファイルは、2019 年 2019 年のソリューション エクスプローラー Visual Studio表示されます。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-file-layout.png" alt-text="2019 年に個人用アプリのアプリ プロジェクト ファイルをVisual Studioスクリーンショット。":::
 
-- アプリのアイコンは、PNG ファイルとして保存 `color.png` されます `outline.png` 。
+- アプリ アイコンは PNG ファイルとして `color.png` と `outline.png` に格納されます。
 - 開発者ポータルを通じて発行するアプリ マニフェストは、Teamsに格納されます `Properties/manifest.json` 。
 - 認証を支援するためにバックエンド `Controllers/BackendController.cs` コントローラーが用意されています。
 
@@ -101,50 +101,50 @@ ms.locfileid: "52667455"
 
 ## <a name="run-your-app-locally"></a>アプリをローカルで実行する
 
-Teams Toolkitアプリをローカルで実行できます。  これは、次に示す適切なインフラストラクチャを提供するために必要ないくつかのTeams構成されています。
+Teams ツールキットでは、アプリをローカルで実行することができます。  これは、Teams が予想する正しいインフラを提供するために必要ないくつかのパーツで構成されています。
 
-- アプリケーションがアプリケーションに登録Azure Active Directory。  このアプリケーションには、アプリが読み込まれる場所とアクセスするバックエンド リソースに関連付けられたアクセス許可があります。
+- Azure Active Directory を使用してアプリケーションを登録しました。  このアプリケーションには、アプリケーションが読み込まれる場所や、アクセスするバックエンド リソースに関連するアクセス許可があります。
 - Web API は 、認証タスクを支援するために (IIS Express 経由で) ホストされ、アプリとアプリ間のプロキシとして機能Azure Active Directory。  
-- アプリ マニフェストが生成され、開発者ポータルのアプリ マニフェストにTeams。  Teamsマニフェストを使用して、接続されているクライアントにアプリの読み込み先を指定します。
+- アプリのマニフェストは、Developer Portal for Teams で生成され存在します。  Teams はアプリ マニフェストを使用して、接続しているクライアントにアプリをロードする場所を伝達します。
 
-これが完了すると、アプリをクライアント内で読みTeamsできます。  標準の web Teams環境で HTML、CSS、JavaScript コードを表示するために、Web クライアントで使用します。
+この作業が完了すると、Teams クライアント内でアプリを読み込むことができます。  Teams の Web クライアントを使用することで、標準的な Web 開発環境で HTML、CSS、JavaScript のコードを確認することができます。
 
-アプリをローカルでビルドして実行するには、次のコマンドを実行します。
+アプリをローカルに構築して実行するには、以下のようにします。
 
-1. 次Visual Studio Code **F5 キーを押して**、デバッグ モードでアプリケーションを実行します。
+1. Visual Studio Code で、**F5** を押して、アプリケーションをデバッグ モードで実行します。
 
 1. 要求された場合は、ローカル デバッグ用の自己署名証明書 SSL 証明書をインストールします。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="ローカル ホストからアプリケーションを読み込むTeams SSL 証明書をインストールするプロンプトを示すスクリーンショット。":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Teams がアプリケーションを localhost からロードできるようにするための SSL 証明書のインストールを求めるメッセージが表示される方法を示すスクリーンショット":::。
 
-1. Teams Web ブラウザーに読み込まれ、サインインを求めるメッセージが表示されます。 ブラウザーを開くメッセージが表示Microsoft Teamsブラウザー内に残る場合は、[キャンセル] を選択します。 M365 アカウントでサインインします。
-1. アプリをインストールするように求めるメッセージが表示されたら、[Teams] を **押します**。
+1. Teams が Web ブラウザーに読み込まれ、サインインするようメッセージが表示されます。 Microsoft Teams を開くようメッセージが表示されたら、「キャンセル」を選択してブラウザーに残ります。 M365 アカウントでサインインします。
+1. Teams へのアプリのインストールを促すメッセージが表示された場合は、**[追加]** を押してください。
 
-これでアプリが表示されます。
+これでご使用のアプリが表示されます。
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/blazor-completed-app.png" alt-text="完成したアプリのスクリーンショット":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/blazor-completed-app.png" alt-text="完了したアプリのスクリーンショット":::
 
-通常のデバッグ アクティビティは、他の Web アプリケーション (ブレークポイントの設定など) と同様に実行できます。 アプリは、ホット リロードをサポートしています。  プロジェクト内のファイルを変更すると、ページが再読み込みされます。
+他の Web アプリケーションと同様に、通常のデバッグ作業を行うことができます (ブレークポイントの設定など)。 このアプリはホット リロードをサポートしています。  プロジェクト内のファイルを変更すると、ページが再読み込みされます。
 
 <!-- markdownlint-disable MD033 -->
 <details>
-<summary>デバッガーでアプリをローカルで実行するとどうなるかについて学習します。</summary>
+<summary>デバッガーでアプリをローカルに実行した場合に発生することを説明します。</summary>
 
-F5 キーを押すと、次のTeams Toolkit。
+F5 を押すと、以下のように Teams ツールキットが表示されます。
 
-1. アプリケーションを Azure Active Directory。
-1. アプリケーションに"サイド ローディング" を登録Microsoft Teams。
+1. Azure Active Directory を使用してアプリケーションを登録しました。
+1. Microsoft Teams で "サイド読み込み" 用にアプリケーションを登録しました。
 1. ローカルで実行されているアプリケーション バックエンドを開始しました。
-1. ローカルでホストされるアプリケーションフロントエンドを開始しました。
+1. アプリケーションのフロント エンドがローカルでホストされるようになりました。
 1. アプリケーションMicrosoft Teams読み込むようTeamsコマンドを使用して Web ブラウザーで開始します (URL はアプリケーション マニフェスト内に登録されます)。
 
 </details>
 
 <!-- markdownlint-disable MD033 -->
 <details>
-<summary>アプリをローカルで実行するときに一般的な問題をトラブルシューティングする方法について説明します。</summary>
+<summary>アプリをローカルで実行する場合の一般的な問題のトラブルシューティングを行う方法について説明します。</summary>
 
-アプリをアプリ側で正常にTeamsするには、アプリ側の読み込みをMicrosoft 365開発アカウントを持っている必要があります。 アカウントを開く方法の詳細については、「前提条件」を [参照してください](prerequisites.md#enable-sideloading)。
+アプリをアプリ側で正常にTeamsするには、アプリ側の読み込みをMicrosoft 365開発アカウントを持っている必要があります。 アカウント開設の詳細については、「[前提条件](prerequisites.md#enable-sideloading)」を参照してください。
 
 </details>
 
@@ -269,11 +269,14 @@ Visual Studio Azure App Service にアプリを展開すると、Web アプリ�
 
 ページの上部にある **[プレビュー] Teams** ボタンを使用して、アプリをアプリ内で起動Teams。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="see-also"></a>関連項目
 
-アプリを作成する他の方法Teamsします。
-
-- [アプリを使用TeamsアプリをReact](first-app-react.md)
-- [Web パーツTeamsアプリをSharePointする](first-app-spfx.md)(Azure は必須ではありません)
-- [会話型ボット アプリの作成](first-app-bot.md)
+- [React を使用して Teams アプリを作成する](first-app-react.md)
+- [Web パーツTeamsアプリをSharePointする](first-app-spfx.md)
+- [会話ボット アプリを作成する](first-app-bot.md)
 - [メッセージング拡張機能を作成する](first-message-extension.md)
+
+## <a name="next-step"></a>次の手順
+
+> [!div class="nextstepaction"]
+> [Web パーツTeamsアプリをSharePointする](first-app-spfx.md)

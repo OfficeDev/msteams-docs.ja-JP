@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 localization_priority: Normal
 Keywords: メッセージの送信、ユーザー ID の取得、チャネル ID の取得、会話 ID の取得
-ms.openlocfilehash: d2e9900e6c7d1f5ea5edfabe6dacb2f18b429b3f
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: 56411fe381a05318d0e12d6876cf26138baba42c
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949778"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994218"
 ---
 # <a name="send-proactive-messages"></a>プロアクティブ メッセージを送信する
 
@@ -67,9 +67,7 @@ ms.locfileid: "52949778"
 
 ## <a name="send-the-message"></a>メッセージを送信する
 
-正しいアドレス情報を取得したので、メッセージを送信することができます。 SDK を使用している場合は `continueConversation` メソッドを使用し、直接 API を呼び出すには `conversationId` と `tenantId` を使用します。 メッセージを正常に送信するには、`conversationParameters` を正しく設定する必要があります。 サンプル セクション [を参照](#samples) するか、コード サンプル セクションに記載されているサンプル [のいずれかを使用](#code-sample) します。
-
-SDK を使用している場合は、メソッドを使用し、メッセージを送信するために直接 API 呼び出しを行 `continueConversation` `conversationId` `tenantId` う必要があります。 メッセージを正常に送信するには、`conversationParameters` を正しく設定する必要があります。
+正しいアドレス情報を取得したので、メッセージを送信することができます。 SDK を使用している場合は、メソッドを使用し、直接 API 呼び出しを行 `continueConversation` `conversationId` `tenantId` う必要があります。 メッセージを正常に送信するには、`conversationParameters` を正しく設定する必要があります。 サンプル セクション [を参照](#samples) するか、コード サンプル セクションに記載されているサンプル [のいずれかを使用](#code-sample) します。
 
 プロアクティブ メッセージを送信したので、ユーザーとボット間の情報交換を向上するために、プロアクティブ メッセージを送信しながら、次のベスト プラクティスに従う必要があります。
 
@@ -115,7 +113,7 @@ SDK を使用している場合は、メソッドを使用し、メッセージ�
 
 組織のアプリ カタログまたは Teams アプリ ストア内のアプリのみをインストールできます。
 
-詳細[については、Graph](/graph/api/userteamwork-post-installedapps)ドキュメントのユーザー向けアプリのインストールと、TeamsでのプロアクティブボットGraphを[参照してください](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)。 GitHub プラットフォームには[Microsoft .NET framework サンプル](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)もあります。
+Graph [ドキュメントの「ユーザー向けアプリ](/graph/api/userteamwork-post-installedapps) のインストール」と「Teams with Graph でのプロアクティブ ボットのインストールと [メッセージング」を参照してください](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)。 GitHub プラットフォームには[Microsoft .NET framework サンプル](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)もあります。
 
 ## <a name="samples"></a>サンプル
 
@@ -280,8 +278,11 @@ POST /v3/conversations
 > [!div class="nextstepaction"]
 > [Teams のプロアクティブ メッセージング コード サンプル](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
 
+## <a name="see-also"></a>関連項目
+
+[**Teams のプロアクティブ メッセージング コード サンプル**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
+
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [**Teamsメッセージング コードのサンプルを確認する**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp) 
-> [ボット メッセージの書式設定](~/bots/how-to/format-your-bot-messages.md)
+> [ボット メッセージの書式を設定する](~/bots/how-to/format-your-bot-messages.md)

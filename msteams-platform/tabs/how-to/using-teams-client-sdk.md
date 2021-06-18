@@ -6,12 +6,12 @@ description: JavaScript クライアント SDK Microsoft Teamsの概要。これ
 localization_priority: Normal
 keywords: teams タブ グループ チャネル構成可能な静的 SDK JavaScript 個人用
 ms.topic: conceptual
-ms.openlocfilehash: 04c6bb9d7687a068375bce548588e6713fd57747
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: eaf89b230d9092b83de358352d0534e010cb9536
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630342"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994365"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>JavaScript クライアント SDK を使用してタブやその他のホストMicrosoft Teamsエクスペリエンスを構築する
 
@@ -58,6 +58,7 @@ SDK は、次の機能を使用してアプリを開発Teamsです。
 |`microsoftTeams.authentication.authenticate(authenticateParameters?: AuthenticateParameters)`|呼び出し元が提供するパラメーターを含む新しいウィンドウを開く認証要求を開始します。 オプションの入力値は **、AuthenticateParameters オブジェクトによって定義** されます。|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest&preserve-view=true)<br/>[auth obj](/javascript/api/@microsoft/teams-js/microsoftteams.authentication.authenticateparameters?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.authentication.notifySuccess(result?: string, callbackUrl?: string)`|要求が成功したという認証要求を開始したフレームに通知し、認証ウィンドウを閉じます。|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.authentication.notifyFailure(reason?: string, callbackUrl?: string)`|認証要求を開始したフレームに、要求が失敗したと通知し、認証ウィンドウを閉じます。|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest&preserve-view=true)|
+|`microsoftTeams.authentication.getAuthToken(authTokenRequest: AuthTokenRequest)`|アプリに代わって Azure ADトークンを発行する要求を送信します。 トークンの有効期限が切れていない場合は、キャッシュからトークンを取得できます。 それ以外の場合、要求は Azure ADトークンを取得するために送信されます。|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest#getAuthToken_AuthTokenRequest_&preserve-view=true)|
 
 ### <a name="settings-namespace"></a>設定名前空間
 

@@ -4,12 +4,12 @@ keywords: teams アプリの機能のアクセス許可
 description: 通常、ユーザーの同意が必要なネイティブ機能へのアクセスを要求するためにアプリ マニフェストを更新する方法
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: dd317da0b2c8e214f7a44d13ef69bf9fea2aad93
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 920ab47a60340fd9a14e4f5dfb2e39a8ad8f3a89
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630538"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994351"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>アプリのデバイスのアクセス許可をMicrosoft Teamsする
 
@@ -29,6 +29,9 @@ ms.locfileid: "52630538"
 * 短いビデオを記録して共有します。
 * オーディオ メモを録音し、後で使用するために保存します。
 * ユーザーの位置情報を使用して、関連する情報を表示します。
+
+> [!NOTE]
+> 現在、Teamsは、マルチ ウィンドウ アプリ、タブ、および会議のサイドパネルに対するデバイスのアクセス許可をサポートしていない。 
 
 ## <a name="access-device-permissions"></a>デバイスのアクセス許可にアクセスする
 
@@ -81,7 +84,7 @@ JavaScript [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=ms
 
 | プロパティ      | 説明   |
 | --- | --- |
-| media         | カメラ、マイク、スピーカー、およびアクセス メディア ギャラリーを使用する権限。 |
+| メディア         | カメラ、マイク、スピーカー、およびアクセス メディア ギャラリーを使用する権限。 |
 | 地理位置情報   | ユーザーの場所を返すアクセス許可。      |
 | 通知 | ユーザー通知を送信するアクセス許可。      |
 | midi          | デジタル楽器から楽器デジタル インターフェイス (MIDI) 情報を送受信する権限。   |
@@ -117,7 +120,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 > * をサポート `camera` し `gallery` `microphone` 、selectMedia API を [**使用して有効になります**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true)。 1 [**つのイメージ キャプチャに captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) を使用します。
 > * getLocation `location` API を使用して [**サポートが有効になります**](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true)。 HTML5 地理位置情報 API は現在、デスクトップ クライアントで完全にサポートされていないので、場所 `getLocation API` Teams必要があります。
 
-例:
+次に例を示します。
  * ユーザーに自分の場所へのアクセスを求めるメッセージを表示するには、次のコマンドを呼び出す必要があります `getCurrentPosition()` 。
 
     ```Javascript

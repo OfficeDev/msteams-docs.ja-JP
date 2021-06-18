@@ -5,12 +5,12 @@ description: Microsoft ツールとリソースを使用して効果的なアプ
 localization_priority: Normal
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 533d386db2aa784fc7de955f92f64d07789f0553
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 225859da18cb50741ab49c68d89bc318c6c9034c
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631388"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994211"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>アプリの設計プロセスMicrosoft Teamsする
 
@@ -62,7 +62,7 @@ UI キットには、必要に応じてコピーや変更が可能なテンプ�
 
 計画フェーズの後で、アプリの使用Teams合う機能を特定できます。 たとえば、事前にユーザーに通知する場合、ボットが適切な機能である可能性があります。
 
-UI キットには、ユーザーが通常、各機能を追加、設定、使用、および管理する方法を示す、事前に作成されたデザインがあります。 この情報は簡単に参照できますが、UI キットを使用すると、これらのデザインをコピーしてアプリのデザインに貼り付けることができます。
+UI キットには、ユーザーが通常、各機能を追加、設定、使用、管理する方法を示す、事前に構築されたデザインがあります。 この情報は簡単に参照できますが、UI キットを使用すると、これらのデザインをコピーしてアプリのデザインに貼り付けることができます。
 
 1. UI キットの左側のナビゲーションで、[アプリの機能] に **移動し** 、アプリに必要な機能を選択します。
 1. そのページから必要なデータをコピーして、アプリを設計します。<br />
@@ -70,7 +70,7 @@ UI キットには、ユーザーが通常、各機能を追加、設定、使�
 
 ## <a name="design-your-ux-flow"></a>UX フローを設計する
 
-基本的なアプリ設計が完了したら、UI キットから Teams UI テンプレートと基本的なコンポーネントをコピーすることで、必要なだけ (および迅速に) 変更および調整できます。
+基本的なアプリ設計が完了したら、UI キットから UI テンプレートと基本的なTeamsをコピーして、必要なだけ変更および調整できます。
 
 ### <a name="design-with-ui-templates"></a>UI テンプレートを使用した設計
 
@@ -82,7 +82,7 @@ UI テンプレートは、複雑で忠実度の高い設計で、一般的なTe
 
 ### <a name="design-with-basic-ui-components"></a>基本的な UI コンポーネントを使用した設計
 
-Fluent UI に基づいて、使い慣れたインターフェイスを作成するためのTeams要素です。 UI テンプレートに必要なものが不足している場合や、アプリを最初から設計する場合は、これらのコンポーネントを使用します。
+ユーザーインターフェイスFluent基づいて、使い慣れたインターフェイスを作成するためのTeams要素です。 UI テンプレートに必要なものが不足している場合や、アプリを最初から設計する場合は、これらのコンポーネントを使用します。
 
 1. UI キットの左側のナビゲーションで、[基本 **UI コンポーネント] に移動します**。
 1. アプリ設計に必要なコンポーネント (ボタンやトグルなど) をコピーします。
@@ -93,7 +93,7 @@ Fluent UI に基づいて、使い慣れたインターフェイスを作成す�
 
 ### <a name="build-with-ui-templates"></a>UI テンプレートを使用したビルド
 
-デザインで UI テンプレートを使用した場合は、Microsoft Teams UI ライブラリ (Fluent UI に基づく React コンポーネント ライブラリ) を使用してこれらのテンプレートを実装できます。
+デザインで UI テンプレートを使用した場合は、Microsoft Teams UI ライブラリ (React UI に基づく React コンポーネント ライブラリ) を使用してこれらのテンプレートをFluentできます。
 
 現時点では、UI キットに一覧表示されているすべてのテンプレートがライブラリで使用できる場合ではありません。
 
@@ -113,5 +113,6 @@ Fluent UI に基づいて、使い慣れたインターフェイスを作成す�
 
 アプリを起動したばかりか、実稼働可能なアプリに近い場合でも、次のリソースを定期的に確認することをお勧めします。
 
-* **Microsoft Teams検証** ガイドライン : すべてのアプリがTeamsする必要がある標準を提供します (ストアに一覧表示されているアプリだけではありません)。 詳細については、「ガイドライン」 [を参照してください](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)。
+* **Microsoft Teams検証** ガイドライン : ストアに表示されるアプリではなく、Teamsアプリが努力する必要がある標準を提供します。 詳細については、「ガイドライン」 [を参照してください](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)。
 * **デザインのベスト プラクティス**: これらのドキュメントと UI キットは、高品質のアプリを設計するためのベスト プラクティスを提供します。 たとえば、ボットを設計 [するためのベスト プラクティスを参照してください](~/bots/design/bots.md#best-practices)。
+

@@ -4,12 +4,12 @@ description: ボットMicrosoft Teamsの認証フローについて説明しま�
 keywords: teams 認証フロー ボット
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: f3bf73c105dc38e1cea515bfa7bb7d5324b02ce4
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 68ba2024d0e0f2f92a52e93614e4576dcde8dcbc
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565905"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994225"
 ---
 # <a name="authentication-flow-for-bots-in-microsoft-teams"></a>サーバー内のボットの認証フロー Microsoft Teams
 
@@ -28,7 +28,7 @@ Node.js および[OAuth 2.0](https://oauth.net/2/grant-types/authorization-code/
     > OAuth 2.0 承認コード付与フローは、クロスサイト要求フォージェリ攻撃を防止するために、一意のセッション トークンを含む認証要求内のパラメーターを `state` [呼び出します](https://en.wikipedia.org/wiki/Cross-site_request_forgery)。 この例では、ランダムに生成された GUID を使用します。
 4. ユーザーがサインイン *ボタンを選択* するとTeamsポップアップ ウィンドウが開き、スタート ページに移動します。
    > [!NOTE]
-   > ポップアップ ウィンドウのサイズは、URL の幅と高さのクエリ文字列パラメーターを使用して制御できます。 たとえば、width=500 と height=500 を追加すると、ポップアップ ウィンドウのサイズは 500x500 ピクセルになります。 Teamsは、指定されたピクセル サイズを持つポップアップ ウィンドウを表示します。最大で、メイン ウィンドウのサイズに対する割合です。
+   > ポップアップ ウィンドウのサイズは、URL の幅と高さのクエリ文字列パラメーターを使用して制御できます。 たとえば、width=600 と height=600 を追加すると、ポップアップ ウィンドウのサイズは 600x600 ピクセルになります。 ポップアップ ウィンドウの実際のサイズは、メイン ウィンドウ のサイズに対する割合Teams制限されます。 ウィンドウウィンドウTeams小さい場合、ポップアップ ウィンドウは指定したサイズより小さくて小さになります。
 
 5. スタート ページは、ユーザーを ID プロバイダーのエンドポイントにリダイレクト `authorize` します。 ([コードの表示](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/public/html/auth-start.html#L51-L56))
 6. プロバイダーのサイトで、ユーザーはサインインし、ボットへのアクセスを許可します。

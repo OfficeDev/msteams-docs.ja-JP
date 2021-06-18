@@ -5,12 +5,12 @@ description: Teams ツールキットを使用して、Microsoft Teams のメッ
 ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
-ms.openlocfilehash: eaecb045993f8dfd21f4c2c4359a4a3388d659e6
-ms.sourcegitcommit: e50cdeb6b7f481e12911b2bb74a8da22af0bffac
+ms.openlocfilehash: bf00897beec92c64fe9dd68ca76e35751b3c7aed
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "52710649"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994204"
 ---
 # <a name="build-and-run-your-first-messaging-extension-for-microsoft-teams"></a>Microsoft Teams 用の最初のメッセージング拡張機能のビルド及び実行
 
@@ -184,9 +184,7 @@ Teams上GitHubサンプル プロジェクトの検索 Auth Config では、構�
 > [!div class="nextstepaction"]
 > [ボット フレームワークのサンプルを表示する GitHub](https://github.com/OfficeDev/microsoft-teams-samples#messaging-extensions-samples-using-the-v4-sdk)
 
-## <a name="next-steps"></a>次の手順
-
-Teams アプリを作成する他の方法についてご紹介します。
+## <a name="see-also"></a>関連項目
 
 - [React を使用して Teams アプリを作成する](first-app-react.md)
 - [Blazor を使用して Teams アプリを作成する](first-app-blazor.md)

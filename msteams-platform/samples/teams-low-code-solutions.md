@@ -5,18 +5,18 @@ description: 利用可能な Microsoft Low および no code ソリューショ�
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 770657e34672a4314f6cbbc1e73951816f2efa1c
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 7c35002752a4cdd1481c7e23bf49d2777cbcb26d
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630664"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994085"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>低コードのカスタム アプリを作成Microsoft Teams
 
-Microsoft Teams拡張可能でアダプティブです。 つまり、ユーザーの個別のニーズを満たすTeamsカスタム アプリケーションをビルドできます。 低コードのカスタム アプリは、時間を節約し、迅速なソリューションを提供し、ゼロから作成されたアプリよりも需要を満たします。 このドキュメントでは、Microsoft Power Platform、チャットボット、仮想アシスタントPower Virtual Agents概要を説明します。
+Microsoft Teams拡張可能でアダプティブです。 つまり、ユーザーの個別のニーズを満たすTeamsカスタム アプリケーションをビルドできます。 低コードのカスタム アプリは、時間を節約し、迅速なソリューションを提供し、ゼロから作成されたアプリよりも需要を満たします。 このドキュメントでは、Microsoft Power Platform、チャットボット、およびPower Virtual Agentsの概要をVirtual Assistant。
 
-低コード プラットフォームは、ソフトウェア開発に直感的なアプローチを提供し、アプリケーションとプロセスを構築するためにコーディングをほとんどまたは全く必要とします。 開発者は、経験のない開発者がコーディングをほとんどまたは全くせずにカスタム アプリを簡単に構築し、プロの開発者がアプリを迅速に開発および展開できます。 これらのプラットフォームは、ビジュアル インターフェイス、バックエンド サービスへのコネクタ、およびアプリケーションのビルド、デバッグ、展開、および保守を行う組み込みのアプリ ライフサイクル管理システムで構成されます。 Microsoft Power Platform は、低コード属性を使用して互換性のあるアプリTeams迅速に構築するための革新的なゲートウェイです。
+低コード プラットフォームは、アプリケーションとプロセスを構築するためのコーディングを最小限または全く行うソフトウェア開発に対する直感的なアプローチを提供します。 開発者は、経験のない開発者がコーディングをほとんどまたは全くせずにカスタム アプリを簡単に構築し、プロの開発者がアプリを迅速に開発および展開できます。 これらのプラットフォームは、ビジュアル インターフェイス、バックエンド サービスへのコネクタ、およびアプリケーションのビルド、デバッグ、展開、および保守を行う組み込みのアプリ ライフサイクル管理システムで構成されます。 Microsoft Power Platform は、低コード属性を使用して互換性のあるアプリTeams迅速に構築するための革新的なゲートウェイです。
 
 ## <a name="teams-and-microsoft-power-platform"></a>Teams Microsoft Power Platform
 
@@ -47,9 +47,9 @@ Microsoft Teams[](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab
 
 会話[チャットボットを](https://aka.ms/pva-teams-docs)Power Virtual Agents、Teamsから簡単に会話チャットボットを作成、管理、発行するには、Teams。 ボットを組織内の他のユーザーと共有してチャットし、質問に対する回答を取得できます。
 
-### <a name="-virtual-assistant-for-teams"></a>✔ 仮想アシスタント for Teams
+### <a name="-virtual-assistant-for-teams"></a>✔ Virtual AssistantのTeams
 
-Virtual Assistant は、ユーザー エクスペリエンス、組織のブランド化、および必要なデータを完全に制御しながら、堅牢な会話型ソリューションを作成できる Microsoft のオープン ソース テンプレートです。 仮想アシスタントは、仮想環境に[統合Teamsできます](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro)。 
+Virtual Assistantは、ユーザー エクスペリエンス、組織のブランド化、および必要なデータを完全に制御しながら、堅牢な会話型ソリューションを作成できる Microsoft のオープン ソース テンプレートです。 仮想アシスタントは、仮想環境に[統合Teamsできます](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro)。 
 
 ### <a name="-power-platform-learn-modules"></a>✔ Power Platform Learn モジュール
 

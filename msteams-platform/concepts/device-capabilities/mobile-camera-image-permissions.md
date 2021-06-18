@@ -6,12 +6,12 @@ keywords: カメラ イメージ マイク機能ネイティブ デバイスの�
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 48566c6301141d8c7755482a1f5f5daec33449f3
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: e2d3c6e4b9e80d5b09cf597a29e7f3ba67355715
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630566"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994379"
 ---
 # <a name="integrate-media-capabilities"></a>メディア機能を統合する 
 
@@ -29,7 +29,8 @@ Teams アプリにデバイス機能を統合する主な利点は、ネイテ�
 API 応答エラーを理解して、アプリ[](#error-handling)内のエラーを処理することがTeamsです。
 
 > [!NOTE] 
-> 現在、Microsoft Teams機能のサポートはモバイル クライアントでのみ利用できます。
+> * 現在、Microsoft Teams機能のサポートはモバイル クライアントでのみ利用できます。    
+> * 現在、Teamsは、マルチ ウィンドウ アプリ、タブ、および会議のサイドパネルに対するデバイスのアクセス許可をサポートしていない。 
 
 ## <a name="update-manifest"></a>マニフェストの更新
 

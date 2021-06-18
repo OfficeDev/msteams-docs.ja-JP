@@ -5,12 +5,12 @@ description: Teams ツールキットを使用して、Microsoft Teams の会話
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: a2f1ccfa6cc708d655f3b9a54062ee39e8be14bd
-ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
+ms.openlocfilehash: e59980e7f33c326c16faefd412f9845e47f234e5
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "52721851"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994260"
 ---
 # <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>Microsoft Teams 用の会話型ボットをビルドする
 
@@ -160,11 +160,13 @@ Teams でアプリを正常に実行するには、アプリのサイドロー�
 
 </details>
 
-## <a name="next-steps"></a>次の手順
-
-Teams アプリを作成する他の方法についてご紹介します。
+## <a name="see-also"></a>関連項目
 
 - [React を使用して Teams アプリを作成する](first-app-react.md)
 - [Blazor を使用して Teams アプリを作成する](first-app-blazor.md)
 - [SharePoint Web パーツとして Teams アプリを作成する](first-app-spfx.md) (Azure は必要なし)
-- [メッセージング拡張機能を作成する](first-message-extension.md)
+
+## <a name="next-step"></a>次の手順
+
+> [!div class="nextstepaction"]
+> [メッセージング拡張機能を作成する](first-message-extension.md)

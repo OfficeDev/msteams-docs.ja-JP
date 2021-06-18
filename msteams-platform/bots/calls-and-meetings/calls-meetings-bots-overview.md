@@ -4,17 +4,14 @@ description: 通話やオンライン会議Microsoft Teams、Microsoft Graph API
 ms.topic: conceptual
 localization_priority: Normal
 keywords: 通話通話オーディオ ビデオ IVR 音声オンライン会議
-ms.openlocfilehash: d4cec30e110eed5f73929305cc43b84eed4d7524
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 02354bb37c564d2ad30a502c9a4a28d1f899c2b1
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058314"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994232"
 ---
 # <a name="calls-and-online-meetings-bots"></a>通話とオンライン会議ボット
-
-> [!NOTE]
-> 通話とオンライン会議ボットのサポートは、現在、モバイル プラットフォームMicrosoft Teamsサポートされていません。
 
 ボットは、リアルタイムの音声Teams、画面共有を使用して、通話や会議を操作できます。 [通話およびGraph会議](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)用の Microsoft Teams API を使用すると、音声とビデオを使用してユーザーと対話してエクスペリエンスを強化できます。 これらの API を使用すると、次の新機能を追加できます。
 
@@ -53,6 +50,10 @@ ms.locfileid: "52058314"
 呼び出しに必要なさまざまな呼び出しの種類とアクセス許可を次に示します。
 
 * ユーザーは、ボットでピアツーピア呼び出しを開始したり、ボットを既存のマルチパーティ通話に招待することができます。 マルチパーティ呼び出しは、ユーザー インターフェイスでまだTeamsされていません。
+
+    > [!NOTE]
+    > ボットへのユーザーが開始した呼び出しは、現在、モバイル プラットフォームMicrosoft Teamsサポートされていません。
+
 * Graphがボットとのピアツーピア呼び出しを開始する場合、アクセス許可は必要ありません。 ボットがマルチパーティ通話に参加したり、ボットがユーザーとのピアツーピア通話を開始したりするには、追加のアクセス許可が必要です。
 * 呼び出しはピアツーピアとして開始され、最終的にはマルチパーティ通話になります。 ボットが適切なアクセス許可を持っている場合、ボットは他のユーザーを招待してマルチパーティ呼び出しを開始できます。 ボットにグループ通話に参加するためのアクセス許可が付与されていない場合、参加者が別の参加者を呼び出しに追加した場合、ボットは呼び出しから削除されます。
 

@@ -5,12 +5,12 @@ description: アプリを計画Microsoft Teams、まずアプリが解決しよ�
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 7e91ddcab88243baf83f11fad59539845724fc78
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 918f9f906136d4acd466ce54922588ce34a7e4ef
+ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630762"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "52994099"
 ---
 # <a name="understand-your-use-cases"></a>ユース ケースを理解する
 
@@ -71,7 +71,7 @@ ms.locfileid: "52630762"
 
 ユーザーは、さまざまな方法でアプリを検出できます。 別のユーザーがコンテンツを共有するためにアプリを使用している場合は、アプリをインストールしているユーザーやアプリに導入される可能性があります。 より多くのユーザーにアプリを使用する場合は、すべてのユーザーに自己紹介する方法を探す必要があります。
 
-何よりも、誰もスパムを好きになんの気に入らないか覚えておいてください。 個人用メッセージとチャネル メッセージを使用してブラスト処理を行うのは、インストールを迅速に解除するための良い方法です。
+何よりも、スパムを好む人はいなことを覚えておいてください。 個人用メッセージとチャネル メッセージを使用してブラスト処理を行うのは、インストールを迅速に解除するための良い方法です。
 
 ## <a name="plan-for-the-future"></a>将来の計画
 

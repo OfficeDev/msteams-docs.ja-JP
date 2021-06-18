@@ -16,7 +16,11 @@ App Studio は、TeamsストアからインストールできるアプリTeams�
 
     <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
-    このサンプルには独自のマニフェストが付属し、プロジェクトのビルド時にアプリ パッケージをビルドするように設計されています。 .NET では、プロジェクトのルート ディレクトリVisual Studioコマンド ラインNode.js入力すると、この処理が実行 `gulp` されます。
+    このサンプルには独自のマニフェストが付属し、プロジェクトのビルド時にアプリ パッケージをビルドするように設計されています。 アプリ パッケージを .NET 上にビルドするには、次のVisual Studio。 このVisual Studio、manifest.jsファイルはマニフェストの下に **配置** されます `Microsoft.Teams.Samples.HelloWorld.Web` 。 この手順は、次の図で説明します。  
+    
+    <img  width="450px" alt="Build the app package on .NET with Visual Studio" src="~/assets/images/get-started/app-package-on-.NET-with-Visual-Studio.png"/>
+    
+    プロジェクトのルート ディレクトリのコマンド Node.js入力して、アプリ パッケージをビルド `gulp` できます。
 
     ```bash
     $ gulp
