@@ -6,19 +6,19 @@ author: laujan
 ms.author: lajanuar
 ms.topic: reference
 keywords: teams 承認 OAuth SSO AAD rsc Graph
-ms.openlocfilehash: 215b528310137da331b0aef6ab004e0448dbfadf
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 31e3dd0c33e548acd35d86492718875d45931d0b
+ms.sourcegitcommit: 60a8d314e4fb48f6789d79dbc2f69321aaff99d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994321"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "53022979"
 ---
 # <a name="resource-specific-consent-rsc"></a>リソース固有の同意 (RSC)
 
 > [!NOTE]
 > チャット スコープに対するリソース固有の同意は、パブリック開発者 [プレビューでのみ利用](../../resources/dev-preview/developer-preview-intro.md) できます。
 
-リソース固有の同意 (RSC) は、Microsoft Teams API と Microsoft Graph API の統合であり、アプリは API エンドポイントを使用して、組織内の特定のリソース (チームまたはチャット) を管理できます。 リソース固有の同意 (RSC) アクセス許可モデルを使用すると、チームの所有者とチャット所有者は、アプリケーションがチームのデータとチャットのデータにそれぞれアクセスしたり、変更したりするための同意を付与できます。 詳細で、Teams固有の RSC アクセス許可は、アプリケーションが特定のリソース内で実行できる操作を定義します。
+リソース固有の同意 (RSC) は、Microsoft Teams API と Microsoft Graph API の統合であり、アプリは API エンドポイントを使用して、組織内の特定のリソース (チームまたはチャット) を管理できます。 リソース固有の同意 (RSC) アクセス許可モデルを使用すると、チームの所有者とチャット所有者は、アプリケーションがチームのデータとチャットのデータにそれぞれアクセスしたり、変更したりするための同意を付与できます。 詳細な RSC アクセス許可は、アプリケーションが特定のリソース内で実行できる操作を定義します。
 
 ## <a name="resource-specific-permissions"></a>リソース固有のアクセス許可
 
@@ -29,17 +29,17 @@ ms.locfileid: "52994321"
 |TeamSettings.ReadWrite.Group|このチームの設定を更新します。|
 |ChannelSettings.Read.Group|このチームのチャネル名、チャネルの説明、チャネル設定を取得します。|
 |ChannelSettings.ReadWrite.Group|このチームのチャネル名、チャネルの説明、チャネル設定を更新します。|
-|Channel.Create.Group|このチームのチャネルを作成します。|
-|Channel.Delete.Group|このチームのチャネルを削除します。|
-|ChannelMessage.Read.Group |このチームのチャネル メッセージを取得します。|
+|Channel.Create.Group|このチームのチャネルを作成します。 |
+|Channel.Delete.Group|このチームのチャネルを削除します。 |
+|ChannelMessage.Read.Group |このチームのチャネル メッセージを取得します。 |
 |TeamsAppInstallation.Read.Group|このチームのインストール済みアプリの一覧を取得します。|
 |TeamsTab.Read.Group|このチームのタブの一覧を取得します。|
-|TeamsTab.Create.Group|このチームのタブを作成します。|
-|TeamsTab.ReadWrite.Group|このチームのタブを更新します。|
-|TeamsTab.Delete.Group|このチームのタブを削除します。|
-|TeamMember.Read.Group|このチームのメンバーを取得します。|
+|TeamsTab.Create.Group|このチームのタブを作成します。 |
+|TeamsTab.ReadWrite.Group|このチームのタブを更新します。 |
+|TeamsTab.Delete.Group|このチームのタブを削除します。 |
+|TeamMember.Read.Group|このチームのメンバーを取得します。 |
 
-詳細については、「リソース固有[のTeamsアクセス許可」を参照してください](/graph/permissions-reference#teams-resource-specific-consent-permissions)。
+詳細については、「チーム リソース固有の [同意のアクセス許可」を参照してください](/graph/permissions-reference#team-resource-specific-consent-permissions)。
 
 ### <a name="resource-specific-permissions-for-a-chat"></a>チャットのリソース固有のアクセス許可
 |アプリケーションのアクセス許可| アクション |

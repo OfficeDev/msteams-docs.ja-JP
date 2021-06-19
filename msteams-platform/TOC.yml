@@ -427,8 +427,10 @@
       items:
         - name: リソース固有の同意のアクセス許可をテストする
           href: graph-api/rsc/test-resource-specific-consent.md
-        - name: リソース固有の同意 JSON テスト ファイル
-          href: graph-api/rsc/test-rsc-json-file.md
+        - name: チーム JSON テスト ファイル向けリソース固有の同意
+          href: graph-api/rsc/test-team-rsc-json-file.md
+        - name: チャット JSON テスト ファイル向けリソース固有の同意
+          href: graph-api/rsc/test-chat-rsc-json-file.md
 - name: アプリを配布する
   items:
     - name: 概要
