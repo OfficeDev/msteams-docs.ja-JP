@@ -5,12 +5,12 @@ description: Teams ツールキットを使用して、Microsoft Teams のメッ
 ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
-ms.openlocfilehash: bf00897beec92c64fe9dd68ca76e35751b3c7aed
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: cb37bc97c3b9de8ce469728e4c1b0e09ba1c2942
+ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994204"
+ms.lasthandoff: 06/21/2021
+ms.locfileid: "53037636"
 ---
 # <a name="build-and-run-your-first-messaging-extension-for-microsoft-teams"></a>Microsoft Teams 用の最初のメッセージング拡張機能のビルド及び実行
 
@@ -97,7 +97,7 @@ CLI では、プロジェクトを作成するためのいくつかの質問を�
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-file-layout.png" alt-text="ボット プロジェクトのファイル レイアウト":::。
 
-ボット コードは `bot` ディレクトリに格納されています。  `bots/messageExtensionBot.js` は、メッセージング拡張機能の主な入力ポイントです。
+ボット コードは `bot` ディレクトリに格納されています。  `bot/messageExtensionBot.js` は、メッセージング拡張機能の主な入力ポイントです。
 
 > [!Tip]
 > Teams 内で最初のボットを統合する前に、Teams 外のボットに慣れておきましょう。  ボットの詳細については、[[Azure Bot Service]](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) のチュートリアルをご覧ください。

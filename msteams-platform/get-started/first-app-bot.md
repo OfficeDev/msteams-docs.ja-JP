@@ -5,12 +5,12 @@ description: Teams ツールキットを使用して、Microsoft Teams の会話
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: e59980e7f33c326c16faefd412f9845e47f234e5
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 68b266b1cf9d8f7e9b4b98611d3ba982a2e18a47
+ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994260"
+ms.lasthandoff: 06/21/2021
+ms.locfileid: "53037650"
 ---
 # <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>Microsoft Teams 用の会話型ボットをビルドする
 
@@ -89,7 +89,7 @@ CLI では、プロジェクトを作成するためのいくつかの質問を�
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/bot-file-layout.png" alt-text="ボット プロジェクトのファイル レイアウト":::。
 
-ボット コードは `bot` ディレクトリに格納されています。  `bots/teamsBot.js` はボットの主な入力ポイントで、ダイアログは `dialogs` ディレクトリに格納されます。
+ボット コードは `bot` ディレクトリに格納されています。  `bot/teamsBot.js` はボットの主な入力ポイントで、ダイアログは `dialogs` ディレクトリに格納されます。
 
 > [!Tip]
 > Teams 内で最初のボットを統合する前に、Teams 外のボットに慣れておきましょう。  ボットの詳細については、[[Azure Bot Service]](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) のチュートリアルをご覧ください。

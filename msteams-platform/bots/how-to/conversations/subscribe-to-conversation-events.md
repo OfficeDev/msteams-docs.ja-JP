@@ -5,12 +5,12 @@ description: ボットから会話イベントを処理するMicrosoft Teamsし�
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 7dfafbd02c53ea0fe7393d4e4f771a50ad2954d2
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 39d3a6d54b275fd6b9f28eb38b124435e9ba8bfd
+ms.sourcegitcommit: 3d02dfc13331b28cffba42b39560cfeb1503abe2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630706"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53049046"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams ボットの会話イベント
 
@@ -1385,6 +1385,24 @@ turnContext, CancellationToken cancellationToken) {
 利用不可
 
 ---
+
+## <a name="uninstall-behavior-for-personal-app-with-bot"></a>ボットを使用した個人用アプリのアンインストール動作
+
+> [!NOTE]
+> ボットを使用した個人用アプリのアンインストール動作は、現在パブリック開発者 [プレビューでのみ利用できます](../../../resources/dev-preview/developer-preview-intro.md)。
+
+アプリをアンインストールすると、ボットもアンインストールされます。 ユーザーがアプリにメッセージを送信すると、403 応答コードが表示されます。 ボットは、ボットによって投稿された新しいメッセージの 403 応答コードを受け取ります。 個人用スコープ内のボットのアンインストール後の動作と、Teams groupChat スコープが揃いました。 アプリのアンインストール後にメッセージを送受信することはできません。
+
+<img src="~/assets/images/bots/uninstallbot.png" alt="Uninstall event" width="900" height="900"/>
+
+## <a name="event-handling-for-install-and-uninstall-events"></a>インストール イベントとアンインストール イベントのイベント処理
+
+これらのインストール イベントとアンインストール イベントを使用する場合、ボットがイベントから予期しないイベントを受け取る際に例外をTeams。 これは、次の場合に発生します。
+
+* SDK を使用せずにボットをMicrosoft Bot Framework、その結果、ボットは予期しないイベントを受け取る場合に例外を与えます。
+* Microsoft Bot Framework SDK を使用してボットをビルドし、基本イベント ハンドルをオーバーライドして既定のイベント動作を変更します。
+
+将来いつでも新しいイベントを追加し、ボットがイベントを受け取り始めるのを知る必要があります。 そのため、予期しないイベントを受け取る可能性を設計する必要があります。 ボット フレームワーク SDK を使用している場合、ボットは処理を選択しないイベントに対して 200 - OK で自動的に応答します。
 
 ## <a name="code-sample"></a>コード サンプル
 

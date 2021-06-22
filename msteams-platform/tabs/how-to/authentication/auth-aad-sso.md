@@ -4,12 +4,12 @@ description: シングル サインオン (SSO) について説明します。
 ms.topic: how-to
 localization_priority: Normal
 keywords: teams 認証 SSO AAD シングル サインオン API
-ms.openlocfilehash: 681481d4d4f764c260729d37d7b5f5f2ce58d0ec
-ms.sourcegitcommit: d9274ac2f32880e861b206ac6ce29467d631177f
+ms.openlocfilehash: 1e26189a9a04991c2ad384e58f4fd6d68ca69b6d
+ms.sourcegitcommit: 3d02dfc13331b28cffba42b39560cfeb1503abe2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "52760882"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53049037"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>タブのシングル サインオン (SSO) のサポート
 
@@ -120,7 +120,7 @@ SSO API は、Web コンテンツを [埋め込むタスク](../../../task-modul
 >
 > * ¹ AAD アプリが Teams で認証要求を行うのと同じテナントに登録されている場合、ユーザーは同意を求めれなく、アクセス トークンがすぐ付与されます。 ユーザーは、AAD アプリが別のテナントに登録されている場合にのみ、これらのアクセス許可に同意します。
 > * ² カスタム ドメインが AAD に追加されていない場合は、ホスト名が既に所有されているドメインに基づいていなければならないというエラーが表示されます。 カスタム ドメインを AAD に追加して登録するには [、AAD](/azure/active-directory/fundamentals/add-custom-domain) にカスタム ドメイン名を追加する手順に従い、手順 5 を繰り返します。 このエラーは、テナントの管理者資格情報でサインインしていない場合Office 365できます。
-> * 返されるアクセス トークンでユーザー プリンシパル名 (UPN) を受信していない場合は、AAD でオプションの[](/azure/active-directory/develop/active-directory-optional-claims)クレームとして追加できます。
+> * 返されるアクセス トークンでユーザー プリンシパル名 (UPN) を受信していない場合は、AAD でオプションの [クレームとして追加](/azure/active-directory/develop/active-directory-optional-claims) できます。
 
 ### <a name="2-update-your-teams-application-manifest"></a>2. アプリケーション マニフェストTeams更新する
 
