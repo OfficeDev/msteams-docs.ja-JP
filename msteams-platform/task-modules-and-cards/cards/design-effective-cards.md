@@ -76,9 +76,19 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-list-card.png" alt-text="モバイルでのアダプティブ カードのリスト カードの例を示します。" border="false":::
 
 ---
+
+### <a name="digest"></a>Digest
+
 Use for news digests and round-up posts. Note: We recommend the thumbnail card for a single update or news item.
-':::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card." border="false"::': null
-':::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="Example shows an Adaptive Card digest card on mobile." border="false"::': null
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="Example shows an Adaptive Card digest card on mobile." border="false":::
+
 ---
 
 ### <a name="media"></a>メディア
