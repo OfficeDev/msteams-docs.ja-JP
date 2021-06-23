@@ -1,48 +1,48 @@
 ---
 title: 会議のTeamsアプリ
-author: laujan
+author: surbhigupta
 description: 参加者とユーザーの役割に基Teams会議でのアプリの概要
 ms.topic: overview
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: 69016f818a333cb4f7cecc252539e076838a0735
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: 0ba475e852b8dc673d33ac818077b3b0951ac5f9
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949652"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068573"
 ---
-# <a name="apps-for-teams-meetings"></a><span data-ttu-id="195bc-104">会議のTeamsアプリ</span><span class="sxs-lookup"><span data-stu-id="195bc-104">Apps for Teams meetings</span></span>
+# <a name="apps-for-teams-meetings"></a><span data-ttu-id="72c14-104">会議のTeamsアプリ</span><span class="sxs-lookup"><span data-stu-id="72c14-104">Apps for Teams meetings</span></span>
 
-<span data-ttu-id="195bc-105">会議では、包括的でアクティブなフォーラムで、共同作業、パートナーシップ、情報に基づいたコミュニケーション、共有フィードバックが可能になります。</span><span class="sxs-lookup"><span data-stu-id="195bc-105">Meetings enable collaboration, partnership, informed communication, and shared feedback in an inclusive and active forum.</span></span> <span data-ttu-id="195bc-106">会議アプリは、出席者の状態に応じて、会議前、会議中、会議後のアプリ エクスペリエンスを含む会議ライフサイクルの各ステージに対してユーザー エクスペリエンスを提供できます。</span><span class="sxs-lookup"><span data-stu-id="195bc-106">The meeting app can deliver a user experience for each stage of the meeting lifecycle including pre-meeting, in-meeting, and post-meeting app experience, depending on the attendee's status.</span></span>
+<span data-ttu-id="72c14-105">会議では、包括的でアクティブなフォーラムで、共同作業、パートナーシップ、情報に基づいたコミュニケーション、共有フィードバックが可能になります。</span><span class="sxs-lookup"><span data-stu-id="72c14-105">Meetings enable collaboration, partnership, informed communication, and shared feedback in an inclusive and active forum.</span></span> <span data-ttu-id="72c14-106">会議アプリは、出席者の状態に応じて、会議前、会議中、会議後のアプリ エクスペリエンスを含む会議ライフサイクルの各ステージに対してユーザー エクスペリエンスを提供できます。</span><span class="sxs-lookup"><span data-stu-id="72c14-106">The meeting app can deliver a user experience for each stage of the meeting lifecycle including pre-meeting, in-meeting, and post-meeting app experience, depending on the attendee's status.</span></span>
 
-<span data-ttu-id="195bc-107">ユーザーは、次に示すタブ ギャラリーを使用して会議中にアプリにアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="195bc-107">The users can access apps during meetings using the tab gallery, for example:</span></span>
+<span data-ttu-id="72c14-107">ユーザーは、次に示すタブ ギャラリーを使用して会議中にアプリにアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="72c14-107">The users can access apps during meetings using the tab gallery, for example:</span></span>
 
-* <span data-ttu-id="195bc-108">かんばんボードを事前に設定します。</span><span class="sxs-lookup"><span data-stu-id="195bc-108">Pre-stage a Kanban board.</span></span>
-* <span data-ttu-id="195bc-109">会議中の操作可能なダイアログを起動します。</span><span class="sxs-lookup"><span data-stu-id="195bc-109">Launch an in-meeting actionable dialog.</span></span>
-* <span data-ttu-id="195bc-110">会議後のアンケートを作成します。</span><span class="sxs-lookup"><span data-stu-id="195bc-110">Create a post-meeting survey.</span></span>
+* <span data-ttu-id="72c14-108">かんばんボードを事前に設定します。</span><span class="sxs-lookup"><span data-stu-id="72c14-108">Pre-stage a Kanban board.</span></span>
+* <span data-ttu-id="72c14-109">会議中の操作可能なダイアログを起動します。</span><span class="sxs-lookup"><span data-stu-id="72c14-109">Launch an in-meeting actionable dialog.</span></span>
+* <span data-ttu-id="72c14-110">会議後のアンケートを作成します。</span><span class="sxs-lookup"><span data-stu-id="72c14-110">Create a post-meeting survey.</span></span>
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/nKAy5rNDus4]
 
-<span data-ttu-id="195bc-111">この記事では、会議アプリの機能拡張、API リファレンス、会議用アプリの有効化と構成、およびカスタムの Together Mode シーンの概要について説明します。Teams。</span><span class="sxs-lookup"><span data-stu-id="195bc-111">This article provides an overview of meeting app extensibility, API references, enable and configure apps for meetings, and custom Together Mode scenes in Teams.</span></span>
+<span data-ttu-id="72c14-111">この記事では、会議アプリの機能拡張、API リファレンス、会議用アプリの有効化と構成、およびカスタムの Together Mode シーンの概要について説明します。Teams。</span><span class="sxs-lookup"><span data-stu-id="72c14-111">This article provides an overview of meeting app extensibility, API references, enable and configure apps for meetings, and custom Together Mode scenes in Teams.</span></span>
 
-<span data-ttu-id="195bc-112">会議の機能拡張機能を使用すると、会議のエクスペリエンスを向上できます。これにより、会議内でアプリを統合できます。</span><span class="sxs-lookup"><span data-stu-id="195bc-112">You can enhance your meeting experience by using the meeting extensibility feature, which enables you to integrate your apps within meetings.</span></span> <span data-ttu-id="195bc-113">また、タブ、ボット、メッセージング拡張機能を統合できる会議のライフサイクルの異なるステージも含まれています。</span><span class="sxs-lookup"><span data-stu-id="195bc-113">It also includes different stages of a meeting lifecycle, where you can integrate tabs, bots, and messaging extensions.</span></span> <span data-ttu-id="195bc-114">会議機能拡張 API を使用すると、さまざまな参加者の役割とユーザーの種類を識別し、会議イベントを取得し、会議内ダイアログを生成できます。</span><span class="sxs-lookup"><span data-stu-id="195bc-114">With meetings extensibility APIs, you can identify different participant roles and user types, get meeting events, generate in-meeting dialogs, and so on.</span></span>
+<span data-ttu-id="72c14-112">会議の機能拡張機能を使用すると、会議のエクスペリエンスを向上できます。これにより、会議内でアプリを統合できます。</span><span class="sxs-lookup"><span data-stu-id="72c14-112">You can enhance your meeting experience by using the meeting extensibility feature, which enables you to integrate your apps within meetings.</span></span> <span data-ttu-id="72c14-113">また、タブ、ボット、メッセージング拡張機能を統合できる会議のライフサイクルの異なるステージも含まれています。</span><span class="sxs-lookup"><span data-stu-id="72c14-113">It also includes different stages of a meeting lifecycle, where you can integrate tabs, bots, and messaging extensions.</span></span> <span data-ttu-id="72c14-114">会議機能拡張 API を使用すると、さまざまな参加者の役割とユーザーの種類を識別し、会議イベントを取得し、会議内ダイアログを生成できます。</span><span class="sxs-lookup"><span data-stu-id="72c14-114">With meetings extensibility APIs, you can identify different participant roles and user types, get meeting events, generate in-meeting dialogs, and so on.</span></span>
 
-<span data-ttu-id="195bc-115">会議用Teamsを使用してアプリをカスタマイズするには、アプリ マニフェストを更新して Teams 会議のアプリを有効にし、会議のシナリオ用にアプリを構成することもできます。</span><span class="sxs-lookup"><span data-stu-id="195bc-115">To customize Teams with apps for meetings, you can enable your apps for Teams meetings by updating your app manifest and you can also configure your apps for meeting scenarios.</span></span>
+<span data-ttu-id="72c14-115">会議用Teamsを使用してアプリをカスタマイズするには、アプリ マニフェストを更新して Teams 会議のアプリを有効にし、会議のシナリオ用にアプリを構成することもできます。</span><span class="sxs-lookup"><span data-stu-id="72c14-115">To customize Teams with apps for meetings, you can enable your apps for Teams meetings by updating your app manifest and you can also configure your apps for meeting scenarios.</span></span>
 
-<span data-ttu-id="195bc-116">新しいカスタムの Together Mode シーン機能を使用すると、ユーザーは、ボックスで区切ることなく、チームとの会議で 1 か所で共同作業を行えます。</span><span class="sxs-lookup"><span data-stu-id="195bc-116">The new custom Together Mode scenes feature enables users to collaborate in a meeting with their team in one place without being separated by boxes.</span></span>
+<span data-ttu-id="72c14-116">新しいカスタムの Together Mode シーン機能を使用すると、ユーザーは、ボックスで区切ることなく、チームとの会議で 1 か所で共同作業を行えます。</span><span class="sxs-lookup"><span data-stu-id="72c14-116">The new custom Together Mode scenes feature enables users to collaborate in a meeting with their team in one place without being separated by boxes.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="195bc-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="195bc-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="72c14-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="72c14-117">See also</span></span>
 
-* [<span data-ttu-id="195bc-118">Tab</span><span class="sxs-lookup"><span data-stu-id="195bc-118">Tab</span></span>](../tabs/what-are-tabs.md#understand-how-tabs-work)
-* [<span data-ttu-id="195bc-119">ボット</span><span class="sxs-lookup"><span data-stu-id="195bc-119">Bot</span></span>](../bots/what-are-bots.md)
-* [<span data-ttu-id="195bc-120">メッセージング拡張機能</span><span class="sxs-lookup"><span data-stu-id="195bc-120">Messaging extension</span></span>](../messaging-extensions/what-are-messaging-extensions.md)
-* [<span data-ttu-id="195bc-121">アプリをデザインする</span><span class="sxs-lookup"><span data-stu-id="195bc-121">Design your app</span></span>](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [<span data-ttu-id="195bc-122">Teams 会議アプリへの前提条件と API リファレンス</span><span class="sxs-lookup"><span data-stu-id="195bc-122">Prerequisites and API references for apps in Teams meetings</span></span>](create-apps-for-teams-meetings.md)
-* [<span data-ttu-id="195bc-123">カスタム一緒にモードのシーン</span><span class="sxs-lookup"><span data-stu-id="195bc-123">Custom Together Mode scenes</span></span>](~/apps-in-teams-meetings/teams-together-mode.md)
+* [<span data-ttu-id="72c14-118">Tab</span><span class="sxs-lookup"><span data-stu-id="72c14-118">Tab</span></span>](../tabs/what-are-tabs.md#understand-how-tabs-work)
+* [<span data-ttu-id="72c14-119">ボット</span><span class="sxs-lookup"><span data-stu-id="72c14-119">Bot</span></span>](../bots/what-are-bots.md)
+* [<span data-ttu-id="72c14-120">メッセージング拡張機能</span><span class="sxs-lookup"><span data-stu-id="72c14-120">Messaging extension</span></span>](../messaging-extensions/what-are-messaging-extensions.md)
+* [<span data-ttu-id="72c14-121">アプリをデザインする</span><span class="sxs-lookup"><span data-stu-id="72c14-121">Design your app</span></span>](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [<span data-ttu-id="72c14-122">Teams 会議アプリへの前提条件と API リファレンス</span><span class="sxs-lookup"><span data-stu-id="72c14-122">Prerequisites and API references for apps in Teams meetings</span></span>](create-apps-for-teams-meetings.md)
+* [<span data-ttu-id="72c14-123">カスタム一緒にモードのシーン</span><span class="sxs-lookup"><span data-stu-id="72c14-123">Custom Together Mode scenes</span></span>](~/apps-in-teams-meetings/teams-together-mode.md)
 
-## <a name="next-step"></a><span data-ttu-id="195bc-124">次の手順</span><span class="sxs-lookup"><span data-stu-id="195bc-124">Next step</span></span>
+## <a name="next-step"></a><span data-ttu-id="72c14-124">次の手順</span><span class="sxs-lookup"><span data-stu-id="72c14-124">Next step</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="195bc-125">会議アプリ拡張性</span><span class="sxs-lookup"><span data-stu-id="195bc-125">Meeting app extensibility</span></span>](meeting-app-extensibility.md)
+> [<span data-ttu-id="72c14-125">会議アプリ拡張性</span><span class="sxs-lookup"><span data-stu-id="72c14-125">Meeting app extensibility</span></span>](meeting-app-extensibility.md)

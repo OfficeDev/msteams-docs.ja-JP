@@ -1,30 +1,30 @@
 ---
 title: ボットTeams特定のコンテキストを取得する
-author: laujan
+author: surbhigupta
 description: 会話の名簿、詳細、チャネル リストなど、ボットの Microsoft Team の特定のコンテキストを取得する方法。
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 6a8f903fb2f3ed8120e31b7536b65f22fdf6d620
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: ccbc04cbc1b2eb3162e886cd77273a4a0c37a6ec
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630167"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068980"
 ---
-# <a name="get-teams-specific-context-for-your-bot"></a><span data-ttu-id="36940-103">ボットTeams特定のコンテキストを取得する</span><span class="sxs-lookup"><span data-stu-id="36940-103">Get Teams specific context for your bot</span></span>
+# <a name="get-teams-specific-context-for-your-bot"></a><span data-ttu-id="9d44a-103">ボットTeams特定のコンテキストを取得する</span><span class="sxs-lookup"><span data-stu-id="9d44a-103">Get Teams specific context for your bot</span></span>
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-<span data-ttu-id="36940-104">ボットは、インストールされているチームまたはチャットに関する追加のコンテキスト データにアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="36940-104">A bot can access additional context data about a team or chat where it is installed.</span></span> <span data-ttu-id="36940-105">この情報は、ボットの機能を強化し、よりカスタマイズされたエクスペリエンスを提供するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="36940-105">This information can be used to enrich the bot's functionality and provide a more personalized experience.</span></span>
+<span data-ttu-id="9d44a-104">ボットは、インストールされているチームまたはチャットに関する追加のコンテキスト データにアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="9d44a-104">A bot can access additional context data about a team or chat where it is installed.</span></span> <span data-ttu-id="9d44a-105">この情報は、ボットの機能を強化し、よりカスタマイズされたエクスペリエンスを提供するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="9d44a-105">This information can be used to enrich the bot's functionality and provide a more personalized experience.</span></span>
 
-## <a name="fetch-the-roster-or-user-profile"></a><span data-ttu-id="36940-106">名簿またはユーザー プロファイルを取得する</span><span class="sxs-lookup"><span data-stu-id="36940-106">Fetch the roster or user profile</span></span>
+## <a name="fetch-the-roster-or-user-profile"></a><span data-ttu-id="9d44a-106">名簿またはユーザー プロファイルを取得する</span><span class="sxs-lookup"><span data-stu-id="9d44a-106">Fetch the roster or user profile</span></span>
 
-<span data-ttu-id="36940-107">ボットは、メンバーのリストとその基本的なユーザー プロファイル (Teams ユーザー ID や Azure Active Directory (AAD) 情報 (名前や objectId など) を照会できます。</span><span class="sxs-lookup"><span data-stu-id="36940-107">Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Azure Active Directory (AAD) information, such as name and objectId.</span></span> <span data-ttu-id="36940-108">この情報を使用して、ユーザー ID を関連付けできます。</span><span class="sxs-lookup"><span data-stu-id="36940-108">You can use this information to correlate user identities.</span></span> <span data-ttu-id="36940-109">たとえば、ユーザーが AAD 資格情報を使用してタブにログインしたかどうかを確認するには、チームのメンバーです。</span><span class="sxs-lookup"><span data-stu-id="36940-109">For example, to check whether a user logged into a tab through AAD credentials, is a member of the team.</span></span> <span data-ttu-id="36940-110">会話メンバーを取得する場合、最小または最大のページ サイズは実装によって異なります。</span><span class="sxs-lookup"><span data-stu-id="36940-110">For get conversation members, minimum or maximum page size depends on the implementation.</span></span> <span data-ttu-id="36940-111">50 未満のページ サイズは 50 として扱い、500 より大きい場合は 500 に制限されます。</span><span class="sxs-lookup"><span data-stu-id="36940-111">Page size less than 50, are treated as 50, and greater than 500, are capped at 500.</span></span> <span data-ttu-id="36940-112">ページ以外のバージョンを使用する場合でも、大規模なチームではこのバージョンは使用できません。</span><span class="sxs-lookup"><span data-stu-id="36940-112">Even if you use the non-paged version, it is unreliable in large teams and must not be used.</span></span> <span data-ttu-id="36940-113">詳細については、「チームまたはチャット[メンバーをフェッチTeamsボット API の変更点」を参照してください](~/resources/team-chat-member-api-changes.md)。</span><span class="sxs-lookup"><span data-stu-id="36940-113">For more information, see [changes to Teams Bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).</span></span>
+<span data-ttu-id="9d44a-107">ボットは、メンバーのリストとその基本的なユーザー プロファイル (Teams ユーザー ID や Azure Active Directory (AAD) 情報 (名前や objectId など) を照会できます。</span><span class="sxs-lookup"><span data-stu-id="9d44a-107">Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Azure Active Directory (AAD) information, such as name and objectId.</span></span> <span data-ttu-id="9d44a-108">この情報を使用して、ユーザー ID を関連付けできます。</span><span class="sxs-lookup"><span data-stu-id="9d44a-108">You can use this information to correlate user identities.</span></span> <span data-ttu-id="9d44a-109">たとえば、ユーザーが AAD 資格情報を使用してタブにログインしたかどうかを確認するには、チームのメンバーです。</span><span class="sxs-lookup"><span data-stu-id="9d44a-109">For example, to check whether a user logged into a tab through AAD credentials, is a member of the team.</span></span> <span data-ttu-id="9d44a-110">会話メンバーを取得する場合、最小または最大のページ サイズは実装によって異なります。</span><span class="sxs-lookup"><span data-stu-id="9d44a-110">For get conversation members, minimum or maximum page size depends on the implementation.</span></span> <span data-ttu-id="9d44a-111">50 未満のページ サイズは 50 として扱い、500 より大きい場合は 500 に制限されます。</span><span class="sxs-lookup"><span data-stu-id="9d44a-111">Page size less than 50, are treated as 50, and greater than 500, are capped at 500.</span></span> <span data-ttu-id="9d44a-112">ページ以外のバージョンを使用する場合でも、大規模なチームではこのバージョンは使用できません。</span><span class="sxs-lookup"><span data-stu-id="9d44a-112">Even if you use the non-paged version, it is unreliable in large teams and must not be used.</span></span> <span data-ttu-id="9d44a-113">詳細については、「チームまたはチャット[メンバーをフェッチTeamsボット API の変更点」を参照してください](~/resources/team-chat-member-api-changes.md)。</span><span class="sxs-lookup"><span data-stu-id="9d44a-113">For more information, see [changes to Teams Bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).</span></span>
 
-<span data-ttu-id="36940-114">次のサンプル コードでは、ページ化されたエンドポイントを使用して、名簿をフェッチします。</span><span class="sxs-lookup"><span data-stu-id="36940-114">The following sample code uses the paged endpoint for fetching the roster:</span></span>
+<span data-ttu-id="9d44a-114">次のサンプル コードでは、ページ化されたエンドポイントを使用して、名簿をフェッチします。</span><span class="sxs-lookup"><span data-stu-id="9d44a-114">The following sample code uses the paged endpoint for fetching the roster:</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="36940-115">C#</span><span class="sxs-lookup"><span data-stu-id="36940-115">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="9d44a-115">C#</span><span class="sxs-lookup"><span data-stu-id="9d44a-115">C#</span></span>](#tab/dotnet)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -45,7 +45,7 @@ public class MyBot : TeamsActivityHandler
 }
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="36940-116">TypeScript</span><span class="sxs-lookup"><span data-stu-id="36940-116">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="9d44a-116">TypeScript</span><span class="sxs-lookup"><span data-stu-id="9d44a-116">TypeScript</span></span>](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -71,7 +71,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="36940-117">Python</span><span class="sxs-lookup"><span data-stu-id="36940-117">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="9d44a-117">Python</span><span class="sxs-lookup"><span data-stu-id="9d44a-117">Python</span></span>](#tab/python)
 
 ```python
 async def _show_members(
@@ -80,9 +80,9 @@ async def _show_members(
     members = await TeamsInfo.get_team_members(turn_context)
 ```
 
-# <a name="json"></a>[<span data-ttu-id="36940-118">JSON</span><span class="sxs-lookup"><span data-stu-id="36940-118">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="9d44a-118">JSON</span><span class="sxs-lookup"><span data-stu-id="9d44a-118">JSON</span></span>](#tab/json)
 
-<span data-ttu-id="36940-119">エンドポイントとして値を使用して、GET 要求を `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}` 直接 `serviceUrl` 発行できます。</span><span class="sxs-lookup"><span data-stu-id="36940-119">You can directly issue a GET request on `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}`, using the value of `serviceUrl` as the endpoint.</span></span> <span data-ttu-id="36940-120">値は安定 `serviceUrl` していますが、変更できます。</span><span class="sxs-lookup"><span data-stu-id="36940-120">The value of `serviceUrl` is stable but can change.</span></span> <span data-ttu-id="36940-121">新しいメッセージが届いた場合、ボットは保存されている値を確認する必要があります `serviceUrl` 。</span><span class="sxs-lookup"><span data-stu-id="36940-121">When a new message arrives, your bot must verify its stored value for `serviceUrl`.</span></span> <span data-ttu-id="36940-122">応答ペイロードは、ユーザーが正規ユーザーか匿名ユーザーかも示します。</span><span class="sxs-lookup"><span data-stu-id="36940-122">The response payload also indicates if the user is a regular or anonymous user.</span></span>
+<span data-ttu-id="9d44a-119">エンドポイントとして値を使用して、GET 要求を `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}` 直接 `serviceUrl` 発行できます。</span><span class="sxs-lookup"><span data-stu-id="9d44a-119">You can directly issue a GET request on `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}`, using the value of `serviceUrl` as the endpoint.</span></span> <span data-ttu-id="9d44a-120">値は安定 `serviceUrl` していますが、変更できます。</span><span class="sxs-lookup"><span data-stu-id="9d44a-120">The value of `serviceUrl` is stable but can change.</span></span> <span data-ttu-id="9d44a-121">新しいメッセージが届いた場合、ボットは保存されている値を確認する必要があります `serviceUrl` 。</span><span class="sxs-lookup"><span data-stu-id="9d44a-121">When a new message arrives, your bot must verify its stored value for `serviceUrl`.</span></span> <span data-ttu-id="9d44a-122">応答ペイロードは、ユーザーが正規ユーザーか匿名ユーザーかも示します。</span><span class="sxs-lookup"><span data-stu-id="9d44a-122">The response payload also indicates if the user is a regular or anonymous user.</span></span>
 
 ```http
 GET /v3/conversations/19:meeting_N2QzYTA3YmItYmMwOC00OTJmLThkYzMtZWMzZGU0NGIyZGI0@thread.v2/pagedmembers?pageSize=100&continuationToken=asdfasdfalkdsjfalksjdf
@@ -123,15 +123,15 @@ Response body
 
 * * *
 
-<span data-ttu-id="36940-123">名簿またはユーザー プロファイルを取得した後、1 つのメンバーの詳細を取得できます。</span><span class="sxs-lookup"><span data-stu-id="36940-123">After you fetch the roster or user profile, you can get details of a single member.</span></span> <span data-ttu-id="36940-124">現在、チャットまたはチームの 1 人または複数のメンバーの情報を取得するには、Microsoft Teamsまたは TypeScript API の C#ボット API を `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` 使用します。</span><span class="sxs-lookup"><span data-stu-id="36940-124">Currently, to retrieve information for one or more members of a chat or team, use the Microsoft Teams bot APIs `TeamsInfo.GetMembersAsync` for C# or `TeamsInfo.getMembers` for TypeScript APIs.</span></span>
+<span data-ttu-id="9d44a-123">名簿またはユーザー プロファイルを取得した後、1 つのメンバーの詳細を取得できます。</span><span class="sxs-lookup"><span data-stu-id="9d44a-123">After you fetch the roster or user profile, you can get details of a single member.</span></span> <span data-ttu-id="9d44a-124">現在、チャットまたはチームの 1 人または複数のメンバーの情報を取得するには、Microsoft Teamsまたは TypeScript API の C#ボット API を `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` 使用します。</span><span class="sxs-lookup"><span data-stu-id="9d44a-124">Currently, to retrieve information for one or more members of a chat or team, use the Microsoft Teams bot APIs `TeamsInfo.GetMembersAsync` for C# or `TeamsInfo.getMembers` for TypeScript APIs.</span></span>
 
-## <a name="get-single-member-details"></a><span data-ttu-id="36940-125">単一のメンバーの詳細を取得する</span><span class="sxs-lookup"><span data-stu-id="36940-125">Get single member details</span></span>
+## <a name="get-single-member-details"></a><span data-ttu-id="9d44a-125">単一のメンバーの詳細を取得する</span><span class="sxs-lookup"><span data-stu-id="9d44a-125">Get single member details</span></span>
 
-<span data-ttu-id="36940-126">ユーザー ID、UPN、または AAD オブジェクト ID を使用してTeamsユーザーの詳細を取得できます。</span><span class="sxs-lookup"><span data-stu-id="36940-126">You can also retrieve the details of a particular user using their Teams user ID, UPN, or AAD Object ID.</span></span>
+<span data-ttu-id="9d44a-126">ユーザー ID、UPN、または AAD オブジェクト ID を使用してTeamsユーザーの詳細を取得できます。</span><span class="sxs-lookup"><span data-stu-id="9d44a-126">You can also retrieve the details of a particular user using their Teams user ID, UPN, or AAD Object ID.</span></span>
 
-<span data-ttu-id="36940-127">次のサンプル コードは、単一のメンバーの詳細を取得するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="36940-127">The following sample code is used to get single member details:</span></span>
+<span data-ttu-id="9d44a-127">次のサンプル コードは、単一のメンバーの詳細を取得するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="9d44a-127">The following sample code is used to get single member details:</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="36940-128">C#</span><span class="sxs-lookup"><span data-stu-id="36940-128">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="9d44a-128">C#</span><span class="sxs-lookup"><span data-stu-id="9d44a-128">C#</span></span>](#tab/dotnet)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -143,7 +143,7 @@ public class MyBot : TeamsActivityHandler
 }
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="36940-129">TypeScript</span><span class="sxs-lookup"><span data-stu-id="36940-129">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="9d44a-129">TypeScript</span><span class="sxs-lookup"><span data-stu-id="9d44a-129">TypeScript</span></span>](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -160,7 +160,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="36940-130">Python</span><span class="sxs-lookup"><span data-stu-id="36940-130">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="9d44a-130">Python</span><span class="sxs-lookup"><span data-stu-id="9d44a-130">Python</span></span>](#tab/python)
 
 ```python
 async def _show_members(
@@ -169,11 +169,11 @@ async def _show_members(
     member = await TeamsInfo.get_member(turn_context, turn_context.activity.from_property.id)
 ```
 
-# <a name="json"></a>[<span data-ttu-id="36940-131">JSON</span><span class="sxs-lookup"><span data-stu-id="36940-131">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="9d44a-131">JSON</span><span class="sxs-lookup"><span data-stu-id="9d44a-131">JSON</span></span>](#tab/json)
 
-<span data-ttu-id="36940-132">エンドポイントとして値を使用して、GET 要求を `/v3/conversations/{conversationId}/members/{userId}` 直接 `serviceUrl` 発行できます。</span><span class="sxs-lookup"><span data-stu-id="36940-132">You can directly issue a GET request on `/v3/conversations/{conversationId}/members/{userId}`, using the value of `serviceUrl` as the endpoint.</span></span> <span data-ttu-id="36940-133">値は安定 `serviceUrl` していますが、変更できます。</span><span class="sxs-lookup"><span data-stu-id="36940-133">The value of `serviceUrl` is stable but can change.</span></span> <span data-ttu-id="36940-134">新しいメッセージが届いた場合、ボットは保存されている値を確認する必要があります `serviceUrl` 。</span><span class="sxs-lookup"><span data-stu-id="36940-134">When a new message arrives, your bot must verify its stored value for `serviceUrl`.</span></span> <span data-ttu-id="36940-135">これは、通常のユーザーと匿名ユーザーに使用できます。</span><span class="sxs-lookup"><span data-stu-id="36940-135">This can be used for regular users and anonymous users.</span></span>
+<span data-ttu-id="9d44a-132">エンドポイントとして値を使用して、GET 要求を `/v3/conversations/{conversationId}/members/{userId}` 直接 `serviceUrl` 発行できます。</span><span class="sxs-lookup"><span data-stu-id="9d44a-132">You can directly issue a GET request on `/v3/conversations/{conversationId}/members/{userId}`, using the value of `serviceUrl` as the endpoint.</span></span> <span data-ttu-id="9d44a-133">値は安定 `serviceUrl` していますが、変更できます。</span><span class="sxs-lookup"><span data-stu-id="9d44a-133">The value of `serviceUrl` is stable but can change.</span></span> <span data-ttu-id="9d44a-134">新しいメッセージが届いた場合、ボットは保存されている値を確認する必要があります `serviceUrl` 。</span><span class="sxs-lookup"><span data-stu-id="9d44a-134">When a new message arrives, your bot must verify its stored value for `serviceUrl`.</span></span> <span data-ttu-id="9d44a-135">これは、通常のユーザーと匿名ユーザーに使用できます。</span><span class="sxs-lookup"><span data-stu-id="9d44a-135">This can be used for regular users and anonymous users.</span></span>
 
-<span data-ttu-id="36940-136">通常のユーザーの応答サンプルを次に示します。</span><span class="sxs-lookup"><span data-stu-id="36940-136">The following is the response sample for regular user:</span></span>
+<span data-ttu-id="9d44a-136">通常のユーザーの応答サンプルを次に示します。</span><span class="sxs-lookup"><span data-stu-id="9d44a-136">The following is the response sample for regular user:</span></span>
 
 ```http
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc
@@ -191,7 +191,7 @@ Response body
 }
 ```
 
-<span data-ttu-id="36940-137">匿名ユーザーの応答サンプルを次に示します。</span><span class="sxs-lookup"><span data-stu-id="36940-137">The following is the response sample for anonymous user:</span></span>
+<span data-ttu-id="9d44a-137">匿名ユーザーの応答サンプルを次に示します。</span><span class="sxs-lookup"><span data-stu-id="9d44a-137">The following is the response sample for anonymous user:</span></span>
 
 ```http
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/<anonymous user id>"
@@ -207,15 +207,15 @@ Response body
 
 * * *
 
-<span data-ttu-id="36940-138">1 人のメンバーの詳細を取得した後、チームの詳細を取得できます。</span><span class="sxs-lookup"><span data-stu-id="36940-138">After you get details of a single member, you can get details of the team.</span></span> <span data-ttu-id="36940-139">現時点では、チームの情報を取得するには、Microsoft Teamsまたは TypeScript のC# `TeamsInfo.GetMemberDetailsAsync` ボット API `TeamsInfo.getTeamDetails` を使用します。</span><span class="sxs-lookup"><span data-stu-id="36940-139">Currently, to retrieve information for a team, use the Microsoft Teams bot APIs `TeamsInfo.GetMemberDetailsAsync` for C# or `TeamsInfo.getTeamDetails` for TypeScript.</span></span>
+<span data-ttu-id="9d44a-138">1 人のメンバーの詳細を取得した後、チームの詳細を取得できます。</span><span class="sxs-lookup"><span data-stu-id="9d44a-138">After you get details of a single member, you can get details of the team.</span></span> <span data-ttu-id="9d44a-139">現時点では、チームの情報を取得するには、Microsoft Teamsまたは TypeScript のC# `TeamsInfo.GetMemberDetailsAsync` ボット API `TeamsInfo.getTeamDetails` を使用します。</span><span class="sxs-lookup"><span data-stu-id="9d44a-139">Currently, to retrieve information for a team, use the Microsoft Teams bot APIs `TeamsInfo.GetMemberDetailsAsync` for C# or `TeamsInfo.getTeamDetails` for TypeScript.</span></span>
 
-## <a name="get-teams-details"></a><span data-ttu-id="36940-140">チームの詳細を取得する</span><span class="sxs-lookup"><span data-stu-id="36940-140">Get team's details</span></span>
+## <a name="get-teams-details"></a><span data-ttu-id="9d44a-140">チームの詳細を取得する</span><span class="sxs-lookup"><span data-stu-id="9d44a-140">Get team's details</span></span>
 
-<span data-ttu-id="36940-141">チームにインストールすると、ボットは AAD グループ ID を含むそのチームに関するメタデータを照会できます。</span><span class="sxs-lookup"><span data-stu-id="36940-141">When installed in a team, your bot can query for metadata about that team including the AAD group ID.</span></span>
+<span data-ttu-id="9d44a-141">チームにインストールすると、ボットは AAD グループ ID を含むそのチームに関するメタデータを照会できます。</span><span class="sxs-lookup"><span data-stu-id="9d44a-141">When installed in a team, your bot can query for metadata about that team including the AAD group ID.</span></span>
 
-<span data-ttu-id="36940-142">チームの詳細を取得するには、次のサンプル コードを使用します。</span><span class="sxs-lookup"><span data-stu-id="36940-142">The following sample code is used to get team's details:</span></span>
+<span data-ttu-id="9d44a-142">チームの詳細を取得するには、次のサンプル コードを使用します。</span><span class="sxs-lookup"><span data-stu-id="9d44a-142">The following sample code is used to get team's details:</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="36940-143">C#</span><span class="sxs-lookup"><span data-stu-id="36940-143">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="9d44a-143">C#</span><span class="sxs-lookup"><span data-stu-id="9d44a-143">C#</span></span>](#tab/dotnet)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -233,7 +233,7 @@ public class MyBot : TeamsActivityHandler
 }
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="36940-144">TypeScript</span><span class="sxs-lookup"><span data-stu-id="36940-144">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="9d44a-144">TypeScript</span><span class="sxs-lookup"><span data-stu-id="9d44a-144">TypeScript</span></span>](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -256,7 +256,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="36940-145">Python</span><span class="sxs-lookup"><span data-stu-id="36940-145">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="9d44a-145">Python</span><span class="sxs-lookup"><span data-stu-id="9d44a-145">Python</span></span>](#tab/python)
 
 ```python
 async def _show_details(self, turn_context: TurnContext):
@@ -265,9 +265,9 @@ async def _show_details(self, turn_context: TurnContext):
     await turn_context.send_activity(reply)
 ```
 
-# <a name="json"></a>[<span data-ttu-id="36940-146">JSON</span><span class="sxs-lookup"><span data-stu-id="36940-146">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="9d44a-146">JSON</span><span class="sxs-lookup"><span data-stu-id="9d44a-146">JSON</span></span>](#tab/json)
 
-<span data-ttu-id="36940-147">エンドポイントとして値を使用して、GET 要求を `/v3/teams/{teamId}` 直接 `serviceUrl` 発行できます。</span><span class="sxs-lookup"><span data-stu-id="36940-147">You can directly issue a GET request on `/v3/teams/{teamId}`, using the value of `serviceUrl` as the endpoint.</span></span> <span data-ttu-id="36940-148">値は安定 `serviceUrl` していますが、変更できます。</span><span class="sxs-lookup"><span data-stu-id="36940-148">The value of `serviceUrl` is stable but can change.</span></span> <span data-ttu-id="36940-149">新しいメッセージが届いた場合、ボットは保存されている値を確認する必要があります `serviceUrl` 。</span><span class="sxs-lookup"><span data-stu-id="36940-149">When a new message arrives, your bot must verify its stored value for `serviceUrl`.</span></span>
+<span data-ttu-id="9d44a-147">エンドポイントとして値を使用して、GET 要求を `/v3/teams/{teamId}` 直接 `serviceUrl` 発行できます。</span><span class="sxs-lookup"><span data-stu-id="9d44a-147">You can directly issue a GET request on `/v3/teams/{teamId}`, using the value of `serviceUrl` as the endpoint.</span></span> <span data-ttu-id="9d44a-148">値は安定 `serviceUrl` していますが、変更できます。</span><span class="sxs-lookup"><span data-stu-id="9d44a-148">The value of `serviceUrl` is stable but can change.</span></span> <span data-ttu-id="9d44a-149">新しいメッセージが届いた場合、ボットは保存されている値を確認する必要があります `serviceUrl` 。</span><span class="sxs-lookup"><span data-stu-id="9d44a-149">When a new message arrives, your bot must verify its stored value for `serviceUrl`.</span></span>
 
 ```http
 GET /v3/teams/19:ja0cu120i1jod12j@skype.net
@@ -282,19 +282,19 @@ Response body
 
 * * *
 
-<span data-ttu-id="36940-150">チームの詳細を取得した後、チーム内のチャネルの一覧を取得できます。</span><span class="sxs-lookup"><span data-stu-id="36940-150">After you get details of the team, you can get the list of channels in a team.</span></span> <span data-ttu-id="36940-151">現時点では、チーム内のチャネルの一覧の情報を取得するには、Microsoft Teamsまたは TypeScript API 用C#ボット API を `TeamsInfo.GetTeamChannelsAsync` `TeamsInfo.getTeamChannels` 使用します。</span><span class="sxs-lookup"><span data-stu-id="36940-151">Currently, to retrieve information for a list of channels in a team, use the Microsoft Teams bot APIs `TeamsInfo.GetTeamChannelsAsync` for C# or `TeamsInfo.getTeamChannels` for TypeScript APIs.</span></span>
+<span data-ttu-id="9d44a-150">チームの詳細を取得した後、チーム内のチャネルの一覧を取得できます。</span><span class="sxs-lookup"><span data-stu-id="9d44a-150">After you get details of the team, you can get the list of channels in a team.</span></span> <span data-ttu-id="9d44a-151">現時点では、チーム内のチャネルの一覧の情報を取得するには、Microsoft Teamsまたは TypeScript API 用C#ボット API を `TeamsInfo.GetTeamChannelsAsync` `TeamsInfo.getTeamChannels` 使用します。</span><span class="sxs-lookup"><span data-stu-id="9d44a-151">Currently, to retrieve information for a list of channels in a team, use the Microsoft Teams bot APIs `TeamsInfo.GetTeamChannelsAsync` for C# or `TeamsInfo.getTeamChannels` for TypeScript APIs.</span></span>
 
-## <a name="get-the-list-of-channels-in-a-team"></a><span data-ttu-id="36940-152">チーム内のチャネルの一覧を取得する</span><span class="sxs-lookup"><span data-stu-id="36940-152">Get the list of channels in a team</span></span>
+## <a name="get-the-list-of-channels-in-a-team"></a><span data-ttu-id="9d44a-152">チーム内のチャネルの一覧を取得する</span><span class="sxs-lookup"><span data-stu-id="9d44a-152">Get the list of channels in a team</span></span>
 
-<span data-ttu-id="36940-153">ボットは、チーム内のチャネルの一覧を照会できます。</span><span class="sxs-lookup"><span data-stu-id="36940-153">Your bot can query the list of channels in a team.</span></span>
+<span data-ttu-id="9d44a-153">ボットは、チーム内のチャネルの一覧を照会できます。</span><span class="sxs-lookup"><span data-stu-id="9d44a-153">Your bot can query the list of channels in a team.</span></span>
 
 > [!NOTE]
-> * <span data-ttu-id="36940-154">ローカライズを許可するために、既定の一般チャネル `null` の名前が返されます。</span><span class="sxs-lookup"><span data-stu-id="36940-154">The name of the default General channel is returned as `null` to allow for localization.</span></span>
-> * <span data-ttu-id="36940-155">General チャネルのチャネル ID は、常にチーム ID と一致します。</span><span class="sxs-lookup"><span data-stu-id="36940-155">The channel ID for the General channel always matches the team ID.</span></span>
+> * <span data-ttu-id="9d44a-154">ローカライズを許可するために、既定の一般チャネル `null` の名前が返されます。</span><span class="sxs-lookup"><span data-stu-id="9d44a-154">The name of the default General channel is returned as `null` to allow for localization.</span></span>
+> * <span data-ttu-id="9d44a-155">General チャネルのチャネル ID は、常にチーム ID と一致します。</span><span class="sxs-lookup"><span data-stu-id="9d44a-155">The channel ID for the General channel always matches the team ID.</span></span>
 
-<span data-ttu-id="36940-156">チーム内のチャネルの一覧を取得するには、次のサンプル コードを使用します。</span><span class="sxs-lookup"><span data-stu-id="36940-156">The following sample code is used to get the list of channels in a team:</span></span>
+<span data-ttu-id="9d44a-156">チーム内のチャネルの一覧を取得するには、次のサンプル コードを使用します。</span><span class="sxs-lookup"><span data-stu-id="9d44a-156">The following sample code is used to get the list of channels in a team:</span></span>
 
-# <a name="c"></a>[<span data-ttu-id="36940-157">C#</span><span class="sxs-lookup"><span data-stu-id="36940-157">C#</span></span>](#tab/dotnet)
+# <a name="c"></a>[<span data-ttu-id="9d44a-157">C#</span><span class="sxs-lookup"><span data-stu-id="9d44a-157">C#</span></span>](#tab/dotnet)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -308,7 +308,7 @@ public class MyBot : TeamsActivityHandler
 }
 ```
 
-# <a name="typescript"></a>[<span data-ttu-id="36940-158">TypeScript</span><span class="sxs-lookup"><span data-stu-id="36940-158">TypeScript</span></span>](#tab/typescript)
+# <a name="typescript"></a>[<span data-ttu-id="9d44a-158">TypeScript</span><span class="sxs-lookup"><span data-stu-id="9d44a-158">TypeScript</span></span>](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -328,7 +328,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# <a name="python"></a>[<span data-ttu-id="36940-159">Python</span><span class="sxs-lookup"><span data-stu-id="36940-159">Python</span></span>](#tab/python)
+# <a name="python"></a>[<span data-ttu-id="9d44a-159">Python</span><span class="sxs-lookup"><span data-stu-id="9d44a-159">Python</span></span>](#tab/python)
 
 ```python
 async def _show_channels(
@@ -339,9 +339,9 @@ async def _show_channels(
     await turn_context.send_activity(reply)
 ```
 
-# <a name="json"></a>[<span data-ttu-id="36940-160">JSON</span><span class="sxs-lookup"><span data-stu-id="36940-160">JSON</span></span>](#tab/json)
+# <a name="json"></a>[<span data-ttu-id="9d44a-160">JSON</span><span class="sxs-lookup"><span data-stu-id="9d44a-160">JSON</span></span>](#tab/json)
 
-<span data-ttu-id="36940-161">エンドポイントとして値を使用して、GET 要求を `/v3/teams/{teamId}/conversations` 直接 `serviceUrl` 発行できます。</span><span class="sxs-lookup"><span data-stu-id="36940-161">You can directly issue a GET request on `/v3/teams/{teamId}/conversations`, using the value of `serviceUrl` as the endpoint.</span></span> <span data-ttu-id="36940-162">値は安定 `serviceUrl` していますが、変更できます。</span><span class="sxs-lookup"><span data-stu-id="36940-162">The value of `serviceUrl` is stable but can change.</span></span> <span data-ttu-id="36940-163">新しいメッセージが届いた場合、ボットは保存されている値を確認する必要があります `serviceUrl` 。</span><span class="sxs-lookup"><span data-stu-id="36940-163">When a new message arrives, your bot must verify its stored value for `serviceUrl`.</span></span>
+<span data-ttu-id="9d44a-161">エンドポイントとして値を使用して、GET 要求を `/v3/teams/{teamId}/conversations` 直接 `serviceUrl` 発行できます。</span><span class="sxs-lookup"><span data-stu-id="9d44a-161">You can directly issue a GET request on `/v3/teams/{teamId}/conversations`, using the value of `serviceUrl` as the endpoint.</span></span> <span data-ttu-id="9d44a-162">値は安定 `serviceUrl` していますが、変更できます。</span><span class="sxs-lookup"><span data-stu-id="9d44a-162">The value of `serviceUrl` is stable but can change.</span></span> <span data-ttu-id="9d44a-163">新しいメッセージが届いた場合、ボットは保存されている値を確認する必要があります `serviceUrl` 。</span><span class="sxs-lookup"><span data-stu-id="9d44a-163">When a new message arrives, your bot must verify its stored value for `serviceUrl`.</span></span>
 
 ```http
 GET /v3/teams/19%3A033451497ea84fcc83d17ed7fb08a1b6%40thread.skype/conversations
@@ -368,7 +368,7 @@ Response body
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
-## <a name="next-step"></a><span data-ttu-id="36940-164">次の手順</span><span class="sxs-lookup"><span data-stu-id="36940-164">Next step</span></span>
+## <a name="next-step"></a><span data-ttu-id="9d44a-164">次の手順</span><span class="sxs-lookup"><span data-stu-id="9d44a-164">Next step</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="36940-165">ボットを介してファイルを送受信する</span><span class="sxs-lookup"><span data-stu-id="36940-165">Send and receive files through the bot</span></span>](~/bots/how-to/bots-filesv4.md)
+> [<span data-ttu-id="9d44a-165">ボットを介してファイルを送受信する</span><span class="sxs-lookup"><span data-stu-id="9d44a-165">Send and receive files through the bot</span></span>](~/bots/how-to/bots-filesv4.md)
