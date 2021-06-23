@@ -1,16 +1,16 @@
 ---
 title: ボットをローカルでテストおよびデバッグする
-author: clearab
+author: surbhigupta
 description: IDE を使用してボットをローカルでテストおよびデバッグする
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: af4b8d38b763d2266ec64fef0fe8c487b9120773
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 0c34d46069c52dfb51f828ed89298f50362ea021
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631014"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068989"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>ボットをローカルでテストおよびデバッグする
 
@@ -44,7 +44,7 @@ ngrok http <port> -host-header=localhost:<port>
 
 場合によっては、ボットをアプリとしてインストールせずにボットをテストする必要Teams。 ボットをテストする 2 つの方法を提供します。 アプリとしてインストールせずにボットをテストすると、ボットが利用可能で応答を確実に行うのに役立ちますが、ボットに追加した Microsoft Teams 機能の全幅をテストできません。 ボットを完全にテストする必要がある場合は、「アップロード [によるテスト」を参照してください](#test-by-uploading-to-teams)。
 
-### <a name="use-the-bot-emulator"></a>ボット エミュレーターの使用
+### <a name="use-the-bot-emulator"></a>ボット を使用Emulator
 
 このBot Framework Emulatorは、ボット開発者がボットをローカルまたはリモートでテストおよびデバッグできるデスクトップ アプリケーションです。 エミュレーターは、ボットとチャットし、ボットが送信および受信するメッセージを調べするのに役立ちます。 これは、ボットが使用可能で応答を確認する場合に役立ちます。 ただし、エミュレーターでは、ボットに追加した Teams 固有の機能をテストできません。また、ボットからの応答は、Teams でのレンダリング方法の正確な視覚的表現です。 これらのテストを行う必要がある場合は、ボットをアップロード [する方が最適です](#test-by-uploading-to-teams)。
 

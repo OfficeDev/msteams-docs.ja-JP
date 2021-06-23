@@ -1,16 +1,16 @@
 ---
 title: 'クイック スタート: カスタム 個人用タブを作成し、Node.js Yeoman Generator を使用Microsoft Teams'
-author: laujan
+author: surbhigupta
 description: Yeoman Generator を使用して個人用タブを作成するクイック スタート Microsoft Teams。
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 88ad05aacaed69d695bc918e3e8a44ec18e560ae
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 220d1018f174fc935a10311723a730ebc74ccc33
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566609"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069198"
 ---
 # <a name="create-a-custom-personal-tab-using-nodejs-and-the-yeoman-generator-for-microsoft-teams"></a>カスタム 個人用タブを作成するには、Node.js と Yeoman Generator を使用Microsoft Teams
 

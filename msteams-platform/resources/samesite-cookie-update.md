@@ -1,17 +1,17 @@
 ---
 title: Microsoft Teams SameSite cookie 属性 (2020 更新プログラム)
-author: laujan
+author: surbhigupta
 description: SameSite Cookie の属性について説明します。
 keywords: cookie 属性 samesite
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: c286e01b6e2477c1ab2b787852cde0fb789a80da
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 9e899cd7f4e8adcf55a39fc5cef434a7faa4b0ba
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629852"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068624"
 ---
 # <a name="microsoft-teams-and-the-samesite-cookie-attribute-2020-update"></a>Microsoft Teams SameSite cookie 属性 (2020 更新プログラム)
 
@@ -39,7 +39,7 @@ Google Chrome バージョン 51 では、オプションの属性として SetC
 
 2020 年 2 月にリリースされる予定の Chrome 80 では、新しい Cookie 値が導入され、既定で Cookie ポリシーが適用されます。 更新された SameSite 属性には、Strict、Lax、または None の *3 つの* 値を渡 *します*。  SameSite 属性を指定しない Cookie は、既定で `SameSite=Lax` .
 
-|設定 | 強制 | 値 |属性の指定 |
+|Setting | 強制 | 値 |属性の指定 |
 | -------- | ----------- | --------|--------|
 | **Lax**  | Cookie は、ファースト パーティのコンテキストと HTTP GET 要求でのみ自動的に送信されます。 SameSite Cookie は、イメージや iframe の読み込み呼び出しなどのクロスサイト サブ要求では差し控えされますが、ユーザーがリンクに従って外部サイトから URL に移動すると送信されます。| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Strict** |ブラウザーは、ファースト パーティのコンテキスト要求 (Cookie を設定したサイトから発信された要求) の Cookie のみを送信します。 要求が現在の場所とは異なる URL から発信された場合、属性にタグ付けされた Cookie は `Strict` いずれも送信されません。| 省略可能 |`Set-Cookie: key=value; SameSite=Strict`|
@@ -57,7 +57,7 @@ Google Chrome バージョン 51 では、オプションの属性として SetC
 ### <a name="tabs-task-modules-and-message-extensions"></a>タブ、タスク モジュール、およびメッセージ拡張機能
 
 * Teamsは、トップ レベルまたはファースト パーティのコンテキストで表示されるコンテンツを埋め `<iframes>` 込む場合に使用します。
-* タスク モジュールを使用すると、Teams アプリケーションでモーダル ポップアップ エクスペリエンスを作成することができます。 タブと同様に、現在のページ内にモーダル ウィンドウが開きます。
+* タスク モジュールを使用すると、Teams のアプリケーションでモーダル ポップアップ エクスペリエンスを作成することができます。 タブと同様に、現在のページ内にモーダル ウィンドウが開きます。
 * メッセージ拡張機能を使用すると、外部リソースからリッチコンテンツをチャット メッセージに挿入できます。
 
 埋め込みコンテンツで使用される Cookie は、サイトが . `<iframe>` さらに、ページ上のリモート リソースが、要求とタグ、外部フォント、および個人設定されたコンテンツで送信される Cookie に依存している場合は、それらのリソースがクロスサイトの使用状況 (フォールバックなど) のマークが付いているか、フォールバックが適切に設定されている必要があります。 `<img>` `<script>` `SameSite=None; Secure`

@@ -1,16 +1,16 @@
 ---
 title: メッセージング拡張機能
-author: clearab
+author: surbhigupta
 description: Microsoft Teams プラットフォームでのメッセージング拡張機能の概要
 localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: ee59a7ad96572f5a8ebc6afedd2e0e8485169e5a
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: 6bf4b9a3147e9916f2eac05a890fc8fc134799be
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075669"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069095"
 ---
 # <a name="messaging-extensions"></a>メッセージング拡張機能
 
@@ -33,7 +33,7 @@ ms.locfileid: "52075669"
 メッセージング拡張機能は、ホストする Web サービスとアプリ マニフェストで構成され、web サービスがクライアントで呼び出される場所をMicrosoft Teamsします。 Web サービスは、ボット フレームワークのメッセージング スキーマとセキュリティで保護された通信プロトコルを利用します。そのため、Web サービスをボット フレームワークにボットとして登録する必要があります。 
 
 > [!NOTE]
-> Web サービスを手動で作成することもできますが、 [ボット フレームワーク SDK を使用](https://github.com/microsoft/botframework) してプロトコルを操作します。
+> Web サービスを手動で作成することもできますが、 [ボット フレームワーク SDK を使用](https://github.com/microsoft/botframework-sdk) してプロトコルを操作します。
 
 アプリのアプリ マニフェストMicrosoft Teams、最大 10 個の異なるコマンドで 1 つのメッセージング拡張機能が定義されます。 各コマンドは、アクションや検索などの種類と、呼び出されたクライアント内の場所を定義します。 呼び出し場所は、メッセージ領域、コマンド バー、およびメッセージを作成します。 呼び出し時に、Web サービスは、関連するすべての情報を含む JSON ペイロードを含む HTTPS メッセージを受信します。 JSON ペイロードを使用して応答し、Teamsが次の対話を有効にすることを知る。 
 

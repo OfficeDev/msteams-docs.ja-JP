@@ -1,17 +1,17 @@
 ---
 title: タブ削除のページを作成する
-author: laujan
+author: surbhigupta
 description: タブの削除ページを作成する方法
 keywords: teams タブ グループ チャネル構成可能 削除
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: e1a1f38a2bcb3b5bc4bc54f469c8727e44d8695e
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 9f4e10bd8fd5b5c4caf8f5349e0952732821dd85
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566671"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069051"
 ---
 # <a name="modify-or-remove-a-channel-group-tab"></a>チャネル グループ タブの変更または削除
 
@@ -23,11 +23,11 @@ ms.locfileid: "52566671"
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`canUpdateConfiguration`|ブール型|||作成後に、タブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 既定値: `true`|
+|`canUpdateConfiguration`|Boolean|||作成後に、タブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 既定値: `true`|
 
 タブがチャネルまたはグループ チャットにアップロードされると、Teamsの右クリック ドロップダウン メニューが追加されます。使用可能なオプションは、次の設定によって決 `canUpdateConfiguration` まります。
 
-| `canUpdateConfiguration`| true   | false | 説明 |
+| `canUpdateConfiguration`| true   | false | description |
 | ----------------------- | :----: | ----- | ----------- |
 |     設定            |   √    |       |ページ `configurationUrl` が IFrame に再読み込みされ、ユーザーはタブを再構成できます。  |
 |     名前の変更              |   √    |   √   | ユーザーは、タブ バーに表示されるタブ名を変更できます。          |

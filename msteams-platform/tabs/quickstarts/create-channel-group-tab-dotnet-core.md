@@ -1,16 +1,16 @@
 ---
 title: '[チャネルとグループ] タブを作成 ASP.NET Coreする'
-author: laujan
+author: surbhigupta
 description: カスタム チャネルとグループ タブを作成するクイック スタート ガイドとグループ ASP.NET Core。
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 1004e40e28875524ea1f38a3f6b3c2c53330fec1
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 2f7906f1fb9874503cecabdeb607251daf863e97
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630371"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069120"
 ---
 # <a name="create-a-custom-channel-and-group-tab-with-aspnetcore"></a>ASP.NETCore を使用してカスタム チャネルとグループ タブを作成する
 

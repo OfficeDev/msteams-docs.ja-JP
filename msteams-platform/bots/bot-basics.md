@@ -1,16 +1,16 @@
 ---
 title: ボットのアクティビティ ハンドラー
-author: clearab
+author: surbhigupta
 description: ボット のアクティビティ ハンドラーについてTeams。
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: da770d930ca6d00503c0102f1e683a60161636fd
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 4ecc40abca84466887466ef6a25ab6e57a38328c
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020191"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069036"
 ---
 # <a name="bot-activity-handlers"></a>ボットのアクティビティ ハンドラー
 

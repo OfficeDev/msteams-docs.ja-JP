@@ -1,16 +1,16 @@
 ---
 title: メッセージング拡張機能アクション コマンドの定義
-author: clearab
+author: surbhigupta
 description: メッセージング拡張機能アクション コマンドの概要
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: f49e821ecb98659b4cfd68f93b37f1a8f611a9fb
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: b4420247d3a0c1116bd1aed09fa2edccf18ae902
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020717"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068928"
 ---
 # <a name="define-messaging-extension-action-commands"></a>メッセージング拡張機能アクション コマンドの定義
 

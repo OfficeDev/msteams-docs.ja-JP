@@ -1,14 +1,14 @@
 ---
 title: 会議で使用するアプリを有効Teamsする
-author: laujan
+author: surbhigupta
 description: 会議で使用するアプリを有効Teamsする
 ms.topic: conceptual
-ms.openlocfilehash: 6542a8d1b4b8055d09585da4cf8c1194b5f293d7
-ms.sourcegitcommit: 4751ca40f36ed21ec743b14483b181adade6b904
+ms.openlocfilehash: e31e241a61f40a8dc2b8a1221765bd4755d346ed
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "52871840"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068642"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>会議で使用するアプリを有効Teamsする
 

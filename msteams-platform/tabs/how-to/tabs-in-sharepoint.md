@@ -1,17 +1,17 @@
 ---
 title: SharePoint に [Teams] タブを追加する
-author: laujan
+author: surbhigupta
 description: 既存の [web パーツ] タブTeams、SharePoint Web パーツSharePoint Framework展開する方法。
 keywords: teams タブ sharepoint framework 開発
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c6c5668c0d937e0512d8a6dba366f7fd545b8a96
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 6720cf3fdc8a02d325bf775f4bf319b9d07ec17c
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630412"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068646"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>SharePoint に [Teams] タブを追加する 
 

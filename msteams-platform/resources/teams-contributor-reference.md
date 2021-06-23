@@ -1,20 +1,20 @@
 ---
 title: ドキュメントのMicrosoft Teamsする
 description: ドキュメントの作成と発行Teams手順
-author: laujan
+author: surbhigupta
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: contributor-guide
-ms.openlocfilehash: 52253bb096857e2cb883295c8ae6b58518506d9a
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 33296219b9d42b2ca26eb3c44df5c6429f5259ce
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566230"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069160"
 ---
 # <a name="contributing-to-microsoft-teams-documentation"></a>ドキュメントのMicrosoft Teamsする
 
-[Teamsドキュメントは](/microsoftteams/platform/overview)[、Microsoft Docs](https://docs.microsoft.com/)のテクニカル ドキュメント ライブラリの一部です。 コンテンツは docsets と呼ばれるグループに編成され、それぞれが 1 つのエンティティとして管理される関連ドキュメントのグループを表します。 同じドキュメントセット内の記事は、docs .microsoft.com の後に同じ *<span></span> URL パス拡張子を持 microsoft.com。*  たとえば、 `/docs.microsoft.com/microsoftteams/...` ドキュメントセット ファイル パスの先頭Teamsです。 Teams記事は[MarkDown](#markdown-reference)構文で記述され、この構文で[ホストGitHub。](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)
+[Teamsドキュメントは](/microsoftteams/platform/overview)[、Microsoft Docs](https://docs.microsoft.com)のテクニカル ドキュメント ライブラリの一部です。 コンテンツは docsets と呼ばれるグループに編成され、それぞれが 1 つのエンティティとして管理される関連ドキュメントのグループを表します。 同じドキュメントセット内の記事は、docs .microsoft.com の後に同じ *<span></span> URL パス拡張子を持 microsoft.com。*  たとえば、 `/docs.microsoft.com/microsoftteams/...` ドキュメントセット ファイル パスの先頭Teamsです。 Teams記事は[MarkDown](#markdown-reference)構文で記述され、この構文で[ホストGitHub。](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)
 
 ## <a name="set-up-your-workspace"></a>ワークスペースのセットアップ
 

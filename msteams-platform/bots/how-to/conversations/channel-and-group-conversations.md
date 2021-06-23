@@ -1,16 +1,16 @@
 ---
 title: ボットとのチャネルとグループの会話
-author: clearab
+author: surbhigupta
 description: チャネルまたはグループ チャットでボットのメッセージを送信、受信、および処理する方法。
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: ef5cf8464fa0e93d5ea3840003a2b0c04a4a5ef5
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 399f7d7487b4992e70d4ee515b26101e2b253a62
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631000"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069005"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>ボットとのチャネルチャットとグループ チャットの会話
 

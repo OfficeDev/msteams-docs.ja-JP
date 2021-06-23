@@ -2,16 +2,16 @@
 title: リソース固有の同意 (Teams
 description: リソース固有の同意について、Teams活用する方法について説明します。
 localization_priority: Normal
-author: laujan
+author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: teams 承認 OAuth SSO AAD rsc Graph
-ms.openlocfilehash: 31e3dd0c33e548acd35d86492718875d45931d0b
-ms.sourcegitcommit: 60a8d314e4fb48f6789d79dbc2f69321aaff99d1
+ms.openlocfilehash: f364371f7763235e64da71b91db9b16b41ddf389
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "53022979"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068551"
 ---
 # <a name="resource-specific-consent-rsc"></a>リソース固有の同意 (RSC)
 

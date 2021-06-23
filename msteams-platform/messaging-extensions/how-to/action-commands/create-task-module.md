@@ -1,16 +1,16 @@
 ---
 title: タスク モジュールの作成と送信
-author: clearab
+author: surbhigupta
 description: 最初の呼び出しアクションを処理し、アクション メッセージング拡張機能コマンドからタスク モジュールで応答する方法
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: fbe90b3a3af8dbb053fdbaf6b4cd9b96344eaf00
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: f3d34a4e574169aadf49180ee8b857c8ee2b60a8
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075592"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069064"
 ---
 # <a name="create-and-send-the-task-module"></a>タスク モジュールの作成と送信
 

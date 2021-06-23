@@ -1,14 +1,14 @@
 ---
 title: 会議アプリ拡張性
-author: laujan
+author: surbhigupta
 description: 会議アプリの機能拡張を理解する
 ms.topic: conceptual
-ms.openlocfilehash: 575952555bda288d791862140f7b40ce1792c868
-ms.sourcegitcommit: 45c66faef8145abb903ef7118b9fa914c12aba2a
+ms.openlocfilehash: 0daa3b1976754eff6fed057de0c3659b51506f96
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "52736755"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068632"
 ---
 # <a name="meeting-app-extensibility"></a>会議アプリ拡張性
 

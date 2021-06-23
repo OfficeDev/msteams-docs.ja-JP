@@ -1,17 +1,17 @@
 ---
 title: タブの余白を削除Microsoft Teams
-author: laujan
+author: surbhigupta
 description: タブ 余白を削除すると、開発者のエクスペリエンスが向上する方法について説明します。
 keywords: タブの余白の余白の削除
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: 78d97dca73e7fce2bf4b911f5ea4588525667378
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: b4b3fbbe7ed2e8356fcc9c49346d423707a6a264
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019714"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069169"
 ---
 # <a name="tab-margin-changes"></a>タブ余白の変更
 

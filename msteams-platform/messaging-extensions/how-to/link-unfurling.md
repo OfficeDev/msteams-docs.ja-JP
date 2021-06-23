@@ -1,16 +1,16 @@
 ---
 title: リンク展開
-author: clearab
+author: surbhigupta
 description: アプリでメッセージング拡張機能を使用してリンクを開Microsoft Teams方法。
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 726ba47d1290b4dc38bb2b90e5ce9fc8a3c5fb6b
-ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
+ms.openlocfilehash: 7713fe794c9d15453438cfe3e1bde0238bde9d8c
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "52853551"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068949"
 ---
 # <a name="link-unfurling"></a>リンク展開
 

@@ -1,17 +1,17 @@
 ---
 title: 受信 Webhook を使用して外部リクエストを Microsoft Teams に投稿する
-author: laujan
+author: surbhigupta
 description: Teams アプリに受信 Webhook を追加する方法
 keywords: teams タブ送信 Webhook
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: bb2306cb57c069d3bed06702495da2775694643a
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: acaf2c7ba8c9c6d34399b51f3c0ef9a1110c0fb4
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566818"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068936"
 ---
 # <a name="post-external-requests-to-teams-with-incoming-webhooks"></a>受信 Webhook を使用して外部リクエストを Teams に投稿する
 

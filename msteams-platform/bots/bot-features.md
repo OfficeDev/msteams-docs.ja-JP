@@ -1,16 +1,16 @@
 ---
 title: ボットと SDK
-author: clearab
+author: surbhigupta
 description: ボットと SDK は、Microsoft Teams。
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 2a77b629a645625398fccfd6a18eb1ed3f09844e
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: b1b8f18a457c45a7b0be6ccf6a1d7328d9c50027
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020184"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069023"
 ---
 # <a name="bots-and-sdks"></a>ボットと SDK
 
@@ -41,7 +41,7 @@ ms.locfileid: "52020184"
 
 ## <a name="bots-and-the-microsoft-power-virtual-agents"></a>ボットと Microsoft Power Virtual Agents
 
-[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)は、Microsoft Power プラットフォームとボット フレームワーク上に構築されたチャットボット サービスです。 Power Virtual Agent 開発プロセスでは、ガイド付き、コードなし、グラフィカル インターフェイスのアプローチを使用して、チーム メンバーがインテリジェントな仮想エージェントを簡単に作成および維持できます。 ポータルでチャットボットを作成[Power Virtual Agents、](https://powervirtualagents.microsoft.com)チャットボットとチャットボットを簡単に統合[Teams。](how-to/add-power-virtual-agents-bot-to-teams.md) 開始方法の詳細については、「ドキュメント」[をPower Virtual Agentsしてください](https://docs.microsoft.com/power-virtual-agents/)。
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)は、Microsoft Power プラットフォームとボット フレームワーク上に構築されたチャットボット サービスです。 Power Virtual Agent 開発プロセスでは、ガイド付き、コードなし、グラフィカル インターフェイスのアプローチを使用して、チーム メンバーがインテリジェントな仮想エージェントを簡単に作成および維持できます。 ポータルでチャットボットを作成[Power Virtual Agents、](https://powervirtualagents.microsoft.com)チャットボットとチャットボットを簡単に統合[Teams。](how-to/add-power-virtual-agents-bot-to-teams.md) 開始方法の詳細については、「ドキュメント」[をPower Virtual Agentsしてください](/power-virtual-agents)。
 
 ## <a name="bots-and-webhooks-and-connectors"></a>ボットと Webhooks とコネクタ
 

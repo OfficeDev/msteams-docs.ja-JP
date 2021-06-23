@@ -1,18 +1,18 @@
 ---
-title: 会話タブの作成
-author: laujan
+title: 会話タブを作成する
+author: surbhigupta
 description: チャネル タブの会話型サブエンティティ チャットを作成する
 keywords: teams タブ チャネル構成可能
 ms.topic: conceptual
 ms.author: lomeybur
-ms.openlocfilehash: 4171265a3ef4ad917661e258dd7305f82411c5ef
-ms.sourcegitcommit: 118f7261d313feeac5b398fef56a44bd90104b2f
+ms.openlocfilehash: 343cbe26ded2792489640ae3d86ec94c7c6db72b
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2021
-ms.locfileid: "52709653"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069227"
 ---
-# <a name="create-conversational-tabs"></a>会話タブの作成
+# <a name="create-conversational-tabs"></a>会話タブを作成する
 
 会話サブエンティティは、ユーザーがタブ全体 (エンティティとも呼ばれる) を議論する代わりに、特定のタスク、患者、販売機会などのサブエンティティに関する会話をタブ内で行う方法を提供します。 従来のチャネルまたは構成可能なタブを使用すると、ユーザーはタブに関する会話を行えますが、ユーザーは、より集中した会話を望む場合があります。 一元的なディスカッションを行うコンテンツが多すぎる場合や、時間の間にコンテンツが変更された場合に、より集中した会話の要件が発生し、表示されるコンテンツに関係ありません。 会話サブエンティティは、動的タブに対して、より集中した会話エクスペリエンスを提供します。
 

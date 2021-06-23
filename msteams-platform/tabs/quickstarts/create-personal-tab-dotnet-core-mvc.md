@@ -1,16 +1,16 @@
 ---
 title: ASP を使用して個人用タブを作成します。 NET Core MVC
-author: laujan
+author: surbhigupta
 description: ASP を使用してカスタム個人用タブを作成するクイック スタート ガイド。 NET Core MVC。
 localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 01418adb32335660bb20f74ecfaa0e7e27230c93
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: ac01ae64f44ccf3e06476d4412b16ac9a4730f6c
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566631"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069150"
 ---
 # <a name="create-a-custom-personal-tab-with-aspnet-core-mvc"></a>MVC を使用してカスタム個人用タブを ASP.NET Coreする
 

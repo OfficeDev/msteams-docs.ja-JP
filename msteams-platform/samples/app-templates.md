@@ -5,13 +5,13 @@ ms.topic: reference
 keywords: Microsoft Teams テンプレートのサンプル デモ
 localization_priority: Normal
 ms.author: lajanuar
-author: laujan
-ms.openlocfilehash: 8cfb066ee3c202fb8611a61bbde3058207a62a35
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+author: surbhigupta
+ms.openlocfilehash: 5ffb97e1e4afb95a594b4f0bc10a39ddf0d6bbc2
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566343"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069187"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 用のアプリ テンプレート
 
@@ -42,7 +42,7 @@ ms.locfileid: "52566343"
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-apps-champion-management)
 
-## <a name="adoption-tool--microsoft-365-learning-pathways-get-started-9734"></a>導入ツール- Microsoft 365ラーニング パスウェイ (はじめに) &#9734;
+## <a name="adoption-tool--microsoft-365-learning-pathways-get-started-9734"></a>導入ツール- Microsoft 365 ラーニングパス (はじめに) &#9734;
 
 アプリ はじめにテンプレートを使用すると、アプリの内部にMicrosoft 365学習経路の力をMicrosoft Teams。 このアプリ テンプレートを使用すると、特定のトレーニング ページや他のイントラネットアセットに簡単にアクセスし、コンテンツを直接読み込Teams。 また、会社のブランドに合わせてアプリ名やロゴを変更することもできます。
 

@@ -1,17 +1,17 @@
 ---
 title: Teams 会議アプリへの前提条件と API リファレンス
-author: laujan
+author: surbhigupta
 description: 会議のアプリをTeamsする
 ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: f42e827801e21bbd039f52dbb685d4559ae5cf81
-ms.sourcegitcommit: 37325179a532897fafbe827dcf9a7ca5fa5e7d0b
+ms.openlocfilehash: e6d1c442f77f4d271c43d866c819d65697262b6b
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "52853509"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068563"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Teams 会議アプリへの前提条件と API リファレンス
 
@@ -45,7 +45,7 @@ ms.locfileid: "52853509"
 
 次の表に、これらの API の一覧を示します。
 
-|API|説明|要求|移行元|
+|API|説明|要求|ソース|
 |---|---|----|---|
 |**GetUserContext**| この API を使用すると、コンテキスト情報を取得して、関連するコンテンツを [コンテンツ] タブTeamsできます。 |_**microsoftTeams.getContext( ( ) => { /*...*/ } )**_|Microsoft Teamsクライアント SDK|
 |**GetParticipant**| この API を使用すると、ボットは会議 ID と参加者 ID によって参加者情報を取得できます。 |**GET** _**/v1/meetings/{meetingId}/participants/{participantsId}?tenantId={tenantId}**_ |Microsoft Bot FrameworkSDK|

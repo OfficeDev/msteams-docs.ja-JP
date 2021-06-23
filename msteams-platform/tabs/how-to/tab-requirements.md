@@ -1,17 +1,17 @@
 ---
 title: タブの要件
-author: laujan
+author: surbhigupta
 description: これらの要件にMicrosoft Teamsする必要があります。
 keywords: teams タブ グループ チャネル構成可能
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 50d529697a80ca9ba78921009405f18fa021e802
-ms.sourcegitcommit: 45c66faef8145abb903ef7118b9fa914c12aba2a
+ms.openlocfilehash: a5d4b1a1c9b79d45d323acab7bfba2ba7ac2958d
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "52736762"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069211"
 ---
 # <a name="tab-requirements"></a>タブの要件
 

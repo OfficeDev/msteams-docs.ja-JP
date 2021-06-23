@@ -1,16 +1,16 @@
 ---
 title: 認証をボットにTeamsする
-author: clearab
+author: surbhigupta
 description: OAuth 認証をボットに追加する方法は、Microsoft Teams。
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 36cb6f3de6f97af1d01512175923b79f69f630ad
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 3e36d6166dcf3f835252fb2310b6672cb115d7d4
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566007"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069013"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>認証をボットにTeamsする
 
@@ -278,24 +278,24 @@ Microsoft App Id とアプリ パスワード (クライアント シークレ�
 1. [メッセージング **エンドポイント] ボックスに** 、上記で取得した URL を入力し、その後に `api/messages` . 次に例を示します `https://botteamsauth.azurewebsites.net/api/messages` 。
 1. 左上の **[保存** ] ボタンを選択します。
 
-## <a name="test-the-bot-using-the-emulator"></a>エミュレーターを使用してボットをテストする
+## <a name="test-the-bot-using-the-emulator"></a>アプリを使用してボットをテストEmulator
 
-まだ実行していない場合は、インストール[済みの](https://aka.ms/bot-framework-emulator-readme)Microsoft Bot Framework Emulator。 「エミュレーター [を使用したデバッグ」も参照してください](https://aka.ms/bot-framework-emulator-debug-with-emulator)。
+まだ実行していない場合は、インストール[済みの](https://aka.ms/bot-framework-emulator-readme)Microsoft Bot Framework Emulator。 「Debug [with the Emulator」も参照してください](https://aka.ms/bot-framework-emulator-debug-with-emulator)。
 
-ボット サンプル ログインを機能するには、エミュレーターを構成する必要があります。
+ボット サンプル ログインを機能するには、ボット サンプル ログインを構成するEmulator。
 
-### <a name="configure-the-emulator-for-authentication"></a>認証用にエミュレーターを構成する
+### <a name="configure-the-emulator-for-authentication"></a>認証のEmulator構成する
 
-ボットで認証が必要な場合は、エミュレーターを構成する必要があります。 構成するには、次の手順を行います。
+ボットで認証が必要な場合は、ボットを構成するEmulator。 構成するには、次の手順を行います。
 
-1. エミュレーターを起動します。
-1. エミュレーターで、左下の歯車&#9881;、右上の [エミュレーター]**設定を選択** します。
+1. 次のEmulator。
+1. 画面のEmulator、左下の歯車&#9881;、右上の **[Emulator 設定]** タブを選択します。
 1. [バージョン **1.0 認証トークンを使用する] のチェック ボックスをオンにします**。
 1. ngrok ツールへのローカル **パスを入力** します。 *詳細については*、Bot Framework Emulator/ngrok トンネリング統合 Wiki を [参照してください](https://github.com/Microsoft/BotFramework-Emulator/wiki/Tunneling-(ngrok))。 ツールの詳細については [、「ngrok」を参照してください](https://ngrok.com/)。
-1. エミュレーターの起動時に **ngrok を実行してチェック ボックスをオンにします**。
+1. **[ngrok を実行する] チェック ボックスをオンにして、Emulatorを起動します**。
 1. [保存] **ボタンを選択** します。
 
-ボットがサインイン カードを表示し、ユーザーがサインイン ボタンを選択すると、エミュレーターは、ユーザーが認証プロバイダーでサインインするために使用できるページを開きます。
+ボットがサインイン カードを表示し、ユーザーがサインイン ボタンを選択すると、Emulator は、ユーザーが認証プロバイダーでサインインするために使用できるページを開きます。
 ユーザーがそうすると、プロバイダーはユーザー トークンを生成し、ボットに送信します。 その後、ボットはユーザーに代わって行動できます。
 
 ### <a name="test-the-bot-locally"></a>ボットをローカルでテストする
@@ -303,7 +303,7 @@ Microsoft App Id とアプリ パスワード (クライアント シークレ�
 認証メカニズムを構成した後、実際のボット テストを実行できます。  
 
 1. たとえば、コンピューターでボット サンプルをローカルで実行Visual Studio実行します。
-1. エミュレーターを起動します。
+1. 次のEmulator。
 1. [ボットを **開く] ボタンを** 選択します。
 1. ボットの **URL に**、ボットのローカル URL を入力します。 通常 `http://localhost:3978/api/messages` 、.
 1. Microsoft App **ID に、ボット** のアプリ ID を入力します `appsettings.json` 。
@@ -314,7 +314,7 @@ Microsoft App Id とアプリ パスワード (クライアント シークレ�
 1. [開く URL の確認] にポップアップ **ダイアログが表示されます**。 これは、ボットのユーザー (ユーザー) が認証を許可するために使用されます。  
 1. **[確認]** を選択します。
 1. 確認された場合は、該当するユーザーのアカウントを選択します。
-1. エミュレーターに使用した構成に応じて、次のいずれかを取得します。
+1. アプリケーションに使用した構成に応Emulator、次のいずれかを取得します。
     1. **サインイン検証コードの使用**  
       &#x2713;検証コードを表示するウィンドウが開きます。  
       &#x2713;入力規則コードをコピーしてチャット ボックスに入力し、サインインを完了します。
@@ -405,7 +405,7 @@ Microsoft Teams完全にクラウドベースの製品である場合、HTTPS �
     1. 左側のパネルで、[次へ]**を設定。**
     1. 右側のパネルの [メッセージング **エンドポイント]** ボックスに、ngrok URL を入力します。この例では、 を入力します `https://dea822bf.ngrok.io/api/messages` 。
 1. たとえば、デバッグ モードでボットをローカルVisual Studio開始します。
-1. ボット フレームワーク ポータルのテスト Web チャットを使用して、ローカルで実行している間 **にボットをテストします**。 エミュレーターと同様に、このテストでは、ユーザーが特定のTeamsにアクセスできません。
+1. ボット フレームワーク ポータルのテスト Web チャットを使用して、ローカルで実行している間 **にボットをテストします**。 このテストEmulator、特定の機能にアクセスTeams許可されます。
 1. 実行中のターミナル ウィンドウで、ボットと Web チャット クライアントの `ngrok` 間の HTTP トラフィックを確認できます。 より詳細なビューが必要な場合は、ブラウザー ウィンドウで、前 `http://127.0.0.1:4040` のターミナル ウィンドウから取得したと入力します。 次の図は、例です。
 
     ![認証ボット チーム ngrok テスト](../../../assets/images/authentication/auth-bot-teams-ngrok-testing.png).

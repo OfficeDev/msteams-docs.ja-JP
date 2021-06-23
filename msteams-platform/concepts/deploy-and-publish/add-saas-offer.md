@@ -2,16 +2,16 @@
 title: Teams アプリの SaaS プランを作成する
 description: サード パーティ製アプリ エクスペリエンスの一部として SaaS を提供するために必要なTeams説明します。
 keywords: teams アプリ SaaS がパートナー センターマーケットプレース ソフトウェア サービスを提供する
-author: laujan
+author: surbhigupta
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: b588dc9df46fb47830c8e88fed4b0646206201f4
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: c2cff522c0089657c6a33a4e4c3b4dd176abda11
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019922"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068963"
 ---
 # <a name="create-a-saas-offer-for-your-teams-app"></a>Teams アプリの SaaS プランを作成する
 
@@ -24,7 +24,7 @@ ms.locfileid: "52019922"
 |**新しい SaaS オファーを作成する**|商用マーケットプレースで新しい SaaS オファーを作成および構成する方法。| [ドキュメント](/azure/marketplace/partner-center-portal/create-new-saas-offer)|
 |**SaaS アプリケーションの登録** | SaaS アプリケーションを Microsoft に登録する方法。| [ドキュメント](/azure/marketplace/partner-center-portal/pc-saas-registration)|
 |**SaaS オファーの作成: 開発者向けチェックリスト**| パートナー センターで SaaS オファーを作成するための詳細とガイダンス。| [ドキュメント](/azure/marketplace/partner-center-portal/offer-creation-checklist)|
-|**商用マーケットプレースの提供: ベスト プラクティス** |効果的な SaaS オファーを作成するためのインサイト。|[ドキュメント](/azure/marketplace/gtm-offer-listing-best-practices)|
+|**商用マーケットプレースの提供: ベスト プラクティス** |インサイト SaaS オファーの作成に関する情報を提供します。|[ドキュメント](/azure/marketplace/gtm-offer-listing-best-practices)|
 |**Microsoft SaaS フルフィルメント API (V2)** | 開発者が Microsoft で SaaS オファーを作成できる API について説明します。| [ドキュメント](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-api-v2) |
 |**SaaS フルフィルメント SDK の実装**| SaaS フルフィルメント API (v2) や Marketplace Metering Service API を含む SDK を有効にするために必要なコンポーネントを実装する方法。| [GitHub で入手する](https://github.com/Azure/Microsoft-commercial-marketplace-transactable-SaaS-offer-SDK/blob/master/docs/Installation-Instructions.md) |
 |**SaaS はサンプル コードを提供します**| SaaS オファー のコード サンプルと SDK をご覧ください。| [GitHub で入手する](https://github.com/Azure/Microsoft-commercial-marketplace-transactable-SaaS-offer-SDK)|

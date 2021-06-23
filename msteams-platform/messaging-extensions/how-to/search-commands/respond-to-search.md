@@ -1,15 +1,15 @@
 ---
 title: 検索コマンドに応答する
-author: clearab
+author: surbhigupta
 description: アプリ内のメッセージング拡張機能から検索コマンドに応答するMicrosoft Teamsします。
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 15b48b135f656feeb3cfb28ffbe12852ddb66359
-ms.sourcegitcommit: e50cdeb6b7f481e12911b2bb74a8da22af0bffac
+ms.openlocfilehash: 3d82c7be0a0bbe5cf0ef991a90b277de38fcf4d5
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "52710635"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53068941"
 ---
 # <a name="respond-to-search-command"></a>検索コマンドに応答する
 

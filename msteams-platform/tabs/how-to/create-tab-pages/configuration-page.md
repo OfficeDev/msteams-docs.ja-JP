@@ -1,17 +1,17 @@
 ---
 title: 構成ページを作成する
-author: laujan
+author: surbhigupta
 description: 構成ページの作成方法
 keywords: teams タブ グループ チャネル構成可能
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: b8300f268f74bed4fd1180b7a97c3b21ddda820a
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 041ef78fcc6e3f5203842e808949e86e8dd3aae4
+ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629964"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "53069218"
 ---
 # <a name="create-a-configuration-page"></a>構成ページを作成する
 
