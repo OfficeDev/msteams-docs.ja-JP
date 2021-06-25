@@ -22,13 +22,13 @@
       href: get-started/first-message-extension.md
 - name: チュートリアルとコード サンプル
   items:
-    - name: チュートリアル
+    - name: 概要
       href: tutorials/code-samples.md
-    - name: C# を使用してアプリを作成する
+    - name: C# または .NET を使用して初めてのアプリを構築する
       href: tutorials/get-started-dotnet-app-studio.md
-    - name: Node.js を使ってアプリを作成する
+    - name: Node.js を使用して初めてのアプリを構築する
       href: tutorials/get-started-nodejs-app-studio.md
-    - name: Yeoman ジェネレーターを使用してアプリを作成する
+    - name: Yeoman ジェネレーターを使用して初めてのアプリを構築する
       href: tutorials/get-started-yeoman.md
     - name: コード サンプル
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
@@ -395,9 +395,9 @@
       href: 'https://docs.microsoft.com/graph/toolkit/overview'
     - name: 作業の開始
       href: 'https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab'
-    - name: リソース固有の同意を有効にする
+    - name: リソース固有の同意
       href: graph-api/rsc/resource-specific-consent.md
-    - name: Graph API を使用したアプリの事前インストールとメッセージの送信
+    - name: Graph API を使用してメッセージを送信するアプリの事前インストール
       href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
     - name: サードパーティのメッセージをインポートする
       href: graph-api/import-messages/import-external-messages-to-teams.md
