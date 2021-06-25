@@ -6,12 +6,12 @@ keywords: Microsoft Teams テンプレートのサンプル デモ
 localization_priority: Normal
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 5ffb97e1e4afb95a594b4f0bc10a39ddf0d6bbc2
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 0976bd1c76217e883f91e45c772ec8d3acf4f740
+ms.sourcegitcommit: 261058171f1e3bbc822c5bcc0e9fba5a4de68000
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069187"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "53111179"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 用のアプリ テンプレート
 
@@ -679,6 +679,40 @@ Visitor Management アプリを使用すると、組織と従業員は、Microso
     ![訪問者到着通知](../assets/images/visitor-management-notify-host.png)
 :::column-end:::
 :::row-end:::
+
+## <a name="water-cooler-9734"></a>ウォーター クーラー &#9734;
+
+Water Cooler はカスタム Teams アプリで、企業チームがウォーター クーラーや休憩室で行う会話など、チームメイト間のカジュアルな会話を作成、招待、参加できます。 プロジェクト以外の新しいアナウンス、関心のあるトピック、現在のイベント、趣味に関する会話など、複数のシナリオでこのテンプレートを使用します。 アプリは、既存の会話を見つけたり、新しい会話を開始したりするために、誰でも簡単にインターフェイスを提供します。 これは、カスタムのターゲットコミュニケーション機能を構築するための基盤です。それ以外の場合は休憩中に交流する機会がない同僚間の相互作用を促進します。    
+
+[GitHub で入手する](https://github.com/microsoft/csapps-msteams-watercooler)     
+
+![ウォーター クーラー アプリスクリーン](../assets/images/appScreens.gif)    
+
+### <a name="key-features"></a>主な機能
+
+**Water Cooler Home Page**: チーム メンバーが特定のユーザーや関心のあるトピックと既存の会話でやり取りしている既存のルームを参照できます。 ホーム ページのアクティブ **な会話には、** ルーム名、短い説明、通話時間、およびルームイメージが表示されます。 
+
+![ウォーター クーラーのホーム ページ](../assets/images/home-page.png)
+
+**参加ルーム**: [ルームに参加 **] 機能を使用** して、進行中の会話にすぐに参加します。 [アクティブ **な会話から** 参加する] を選択して、ルームに参加します。
+
+![参加ルーム](../assets/images/joinRoom.gif)
+
+**ルームの作成**: ルーム作成 **機能を使用** して、すべての出席者が対話Teams通話やチャットを作成します。 会議室名、短い説明、最大 5 人の同僚を最初のグループとして指定し、提供された会議室イメージのセットから選択することで、簡単に部屋を作成できます。 
+
+![ルームの作成](../assets/images/createRoom.gif)
+
+**部屋の検索**: 検索ルーム機能 **を** 使用して、トピックに一致するキーワードや、進行中の会話の短い説明を検索します。
+
+![会話の検索](../assets/images/findConversation.gif)
+
+**出席者の招待**: 参加者の招待 **機能を使用** して、ルームの作成後に追加のユーザーを招待します。 これは、呼び出しTeams似ています。
+
+![出席者の招待](../assets/images/attendeeInvitation.gif)
+
+**アプリ バッジ**: 左側 **のメニューの [** ウォーター クーラー] アイコンには、アプリを使用している間に、アプリから表示されるアクティブな会話Teamsバッジが表示されます。 
+
+![アプリ バッジ](../assets/images/badge.gif)
 
 ## <a name="workplace-awards"></a>Workplace Awards
 

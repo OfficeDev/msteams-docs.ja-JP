@@ -5,28 +5,38 @@ keywords: nodejs App Studio node.jsの開始方法
 ms.topic: tutorial
 localization_priority: Normal
 ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
-ms.openlocfilehash: 46272671443e07432513b667af424b5c5be05f2e
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: bbb2e50592eaa8a69a2cd9abda6a17ba2aa0e6bc
+ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566542"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "53114522"
 ---
-# <a name="create-your-first-microsoft-teams-app-using-nodejs"></a>アプリを使用してMicrosoft Teamsアプリを作成Node.js
+# <a name="build-your-first-microsoft-teams-app-using-nodejs"></a>アプリを使用してMicrosoft TeamsアプリをNode.js
 
-このチュートリアルでは、アプリを使用してアプリの作成Microsoft Teams開始Node.js。
+このチュートリアルでは、アプリを使用して最初のアプリをMicrosoft Teamsする方法Node.js。 また、以下の手順を実行します。 
+
+1. [環境を準備する](#prepare-environment)
+1. [前提条件の取得](#GetPrerequisites)
+1. [サンプルをダウンロードする](#DownloadSample)
+1. [サンプルのビルドと実行](#BuildRun)
+1. [サンプル アプリをホストする](#HostSample)
+1. [ホストされたアプリの資格情報を更新する](#updatecredentials)
+1. [[アプリ] タブの構成](#ConfigureTheAppTab)
+
+<a name="prepare-environment"></a>
 
 [!include [prepare your environment](~/includes/prepare-environment.md)]
 
-<a name="DownloadAndHost"></a>
+<a name="GetPrerequisites"></a>
 
-## <a name="download-and-host-your-app"></a>アプリをダウンロードしてホストする
+### <a name="download-and-host-your-app"></a>アプリをダウンロードしてホストする
 
 次の手順に従って、シンプルな "hello world" アプリをダウンロードしてホストTeams。
 
 <a name="GetPrerequisites"></a>
 
-### <a name="get-prerequisites"></a>前提条件の取得
+## <a name="get-prerequisites"></a>前提条件の取得
 
 このチュートリアルを完了するには、次のツールが必要です。 まだインストールしていない場合は、これらのリンクからインストールできます。
 
@@ -34,7 +44,7 @@ ms.locfileid: "52566542"
 - [Node.js NPM](https://nodejs.org/)
 - 任意のテキスト エディターまたは IDE を取得します。 無料でインストール[して使用Visual Studio Code](https://code.visualstudio.com/download)できます。
 
-インストール中に、追加、および PATH のオプションが表示される場合は `git` `node` `npm` `code` 、そのオプションを選択します。 便利です。
+インストール中に、追加、および PATH のオプションが表示される場合は `git` `node` `npm` `code` 、オプションを選択します。 
 
 ターミナル ウィンドウで次のコマンドを実行して、ツールが使用可能な状態を確認します。
 
@@ -72,7 +82,7 @@ code --version
 
 <a name="DownloadSample"></a>
 
-### <a name="download-the-sample"></a>サンプルをダウンロードする
+## <a name="download-the-sample"></a>サンプルをダウンロードする
 
 シンプルな Hello, [World を提供しました。](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/nodejs) サンプルを使用して開始します。 ターミナル ウィンドウで、次のコマンドを実行して、サンプル リポジトリをローカル コンピューターに複製します。
 
@@ -85,9 +95,9 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 
 <a name="BuildRun"></a>
 
-### <a name="build-and-run-the-sample"></a>サンプルの構築と実行
+## <a name="build-and-run-the-sample"></a>サンプルの構築と実行
 
-リポジトリが複製された後、サンプルを保持するディレクトリに変更します。
+リポジトリが複製された後、ターミナルでディレクトリの変更コマンドを実行して、ディレクトリをサンプルに変更します。
 
 ```bash
 cd Microsoft-Teams-Samples/samples/app-hello-world/nodejs/
@@ -99,7 +109,7 @@ cd Microsoft-Teams-Samples/samples/app-hello-world/nodejs/
 npm install
 ```
 
-多くの依存関係がインストールされているのが表示されます。 完了したら、アプリを実行できます。
+多くの依存関係がインストールされているのが表示されます。 インストール後、次のコマンドを使用してアプリを実行できます。
 
 ```bash
 npm start
@@ -119,13 +129,13 @@ hello-world アプリが起動すると、ターミナル `App started listening
 
 <a name="HostSample"></a>
 
-### <a name="host-the-sample-app"></a>サンプル アプリをホストする
+## <a name="deploy-your-sample-app"></a>サンプル アプリの展開
 
 アプリケーション内のアプリMicrosoft Teams 1 つ以上の機能を公開する Web アプリケーションです。 アプリをTeamsするには、アプリにインターネットからアクセスできる必要があります。 インターネットからアプリにアクセスするには、アプリを *ホストする* 必要があります。
 
 ローカル テストでは、ローカル コンピューターでアプリを実行し、Web エンドポイントを使用してトンネルを作成できます。 [ngrok](https://ngrok.com) は無料のツールで、それを実行できます。 *ngrok を使用* すると、次のような Web アドレスを取得できます `https://d0ac14a5.ngrok.io` (この URL は単なる例です)。 環境に [合った](https://ngrok.com/download) *ngrok をダウンロード* してインストールできます。 必ず、このファイルを自分の場所に追加してください `PATH` 。
 
-インストールしたら、新しいターミナル ウィンドウを開き、次のコマンドを実行してトンネルを作成できます。 このサンプルではポート 3333 を使用します。
+インストール後、新しいターミナル ウィンドウを開き、次のコマンドを実行してトンネルを作成できます。 このサンプルではポート 3333 を使用します。
 
 ```bash
 ngrok http 3333 -host-header=localhost:3333
@@ -140,22 +150,51 @@ ngrok http 3333 -host-header=localhost:3333
 
 永続的な名前を許可する *有料バージョンの ngrok* があります。 無料版を使用する場合、アプリは開発マシンの現在のセッション中にのみ利用できます。 コンピューターがシャットダウンまたはスリープ状態になった場合、サービスは使用できなくなりました。 他のユーザーがテスト用にアプリを共有する場合は、このことを覚えておいてください。 サービスを再起動する必要がある場合は、新しいアドレスが返され、そのアドレスを使用する場所を更新する必要があります。
 
-アプリを App studio を使用してアプリを登録する際に、後で必要になるので、アプリの URL をメモTeamsしてください。 メモ帳この目的で正常に動作します。
+アプリの URL をメモします。 アプリをアプリ スタジオまたは開発者ポータルを使用してアプリをTeams後で必要になります。
 
 <a name="DeployToTeams"></a>
 
 ## <a name="deploy-your-app-to-microsoft-teams"></a>アプリをアプリに展開Microsoft Teams
 
-この時点で、アプリはインターネット上でホストされますが、Teams に検索場所やアプリの呼び出しを伝える方法はまだありません。 これを行うには、アプリ パッケージを作成する必要があります。 これは、アプリ マニフェストと、Teams クライアントがアプリを適切に表示およびブランド化するために使用するアイコンを含むテキスト ファイルにすら及びしません。 このアプリ パッケージを手動で作成するか、アプリを登録するプロセスを簡略化する Teams で実行されるツールである App Studio を使用できます。 App Studio は、アプリ パッケージを作成および更新する推奨される方法です。
+この時点で、アプリはインターネット上でホストされますが、Teams に検索場所やアプリの呼び出しを伝える方法はまだありません。 これを行うには、アプリ パッケージを作成する必要があります。 これは、アプリ マニフェストと、Teams クライアントがアプリを適切に表示およびブランド化するために使用するアイコンを含むテキスト ファイルにすら及びしません。 このアプリ パッケージを手動で作成するか、Teams で実行する App Studio または Developer Portal ツールを使用すると、アプリの登録プロセスが簡略化されます。 App Studio と Developer Portal は、アプリ パッケージを作成および更新するための推奨される方法です。
 
 どちらの方法でも、次の値が必要です。
 
 - アプリがインターネット上で見つかる URL。
 - アプリのTeamsに使用するアイコン。 サンプルには、"src\static\images" にあるプレースホルダー アイコンが付属しています。 App Studio では、必要に応じて既定のアイコンも表示されます。
 
-[!include[Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
+**アプリ パッケージを更新する**
 
-## <a name="update-your-hosted-app"></a>ホストされたアプリを更新する
+# <a name="app-studio"></a>[App Studio](#tab/AS)
+
+[!include [Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
+
+# <a name="developer-portal"></a>[開発者ポータル](#tab/DP)
+
+**開発者ポータル (プレビュー) をインストールするには、Teams**
+
+1. 左側の **バーの** 下部にある [アプリ] アイコンを選択し、[開発者ポータル] **を検索します**。
+
+    <img width="430px" alt="Screenshot of TDP" src="~/assets/images/Screen1.png"/>
+
+1. [開発者 **ポータル] を選択し** 、[開く] **を選択します**。
+
+    <img width="430px" alt="Screenshot of TDP Open" src="~/assets/images/screen2.png"/>
+
+1. [アプリ] タブを選択し、[ **既存のアプリのインポート] を選択します**。
+
+    <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/screen3.png"/>
+
+1. [Hello **World] を選択し** 、[インポート] **を選択します**。 **Hello World アプリ** は開発者ポータルにインポートされます。 
+
+    開発者ポータルを使用してアプリTeamsできます。 マニフェストは [配布] の下に表示されます。 マニフェストを使用して、アプリの機能、必要なリソース、その他の重要な属性を構成できます。 開発者ポータルを使用してアプリを構成する方法の詳細については、「開発者ポータル」[を参照Teamsしてください](../concepts/build-and-test/teams-developer-portal.md)。
+
+    <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
+
+---
+<a name="updatecredentials"></a>
+
+## <a name="update-the-credentials-for-your-hosted-app"></a>ホストされたアプリの資格情報を更新する
 
 サンプル アプリでは、前にメモした値に次の環境変数を設定する必要があります。
 
@@ -200,7 +239,7 @@ NODE_CONFIG_DIRリポジトリのルートにあるディレクトリをポイ�
 
 ## <a name="configure-the-app-tab"></a>[アプリ] タブの構成
 
-アプリをチームにインストールしたら、コンテンツを表示するためにアプリを構成する必要があります。 チーム内のチャネルに移動し **、[+]** ボタンをクリックして新しいタブを追加します。次に、[タブ `Hello World` の追加 **] リストから選択** できます。 その後、構成ダイアログが表示されます。 このダイアログでは、このチャネルに表示するタブを選択できます。 タブを選択してクリックすると、選択 `Save` したタブが読 `Hello World` み込まれたタブが表示されます。
+アプリをチームにインストールした後、コンテンツを表示するためにアプリを構成する必要があります。 チーム内のチャネルに移動し **、[+]** ボタンをクリックして新しいタブを追加します。次に、[タブ `Hello World` の追加 **] リストから選択** できます。 その後、構成ダイアログが表示されます。 このダイアログでは、このチャネルに表示するタブを選択できます。 タブを選択して [保存] を **クリック** すると、選択したタブが読 `Hello World` み込まれたタブが表示されます。
 
 <img width="430px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png"/>
 
@@ -216,10 +255,15 @@ NODE_CONFIG_DIRリポジトリのルートにあるディレクトリをポイ�
 
 メッセージング拡張機能をテストするには、会話ビューの入力ボックスの下にある 3 つのドットをクリックします。 メニューに「Hello **World」アプリが** 表示されます。 クリックすると、ランダムなテキストが多数表示されます。 任意の 1 つを選択すると、会話に挿入されます。
 
-<img width="430px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
+<img width="430px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu1.png" />
 
-<img width="430px" alt="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
+<img width="430px" alt="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result1.png" />
 
-ランダムなテキストのいずれかを選択すると、カードが書式設定され、下部に独自のメッセージを送信する準備ができているのが表示されます。
+ランダムなテキストのいずれかを選択すると、カードがフォーマットされ、下部に独自のメッセージを送信する準備ができているのが表示されます。
 
 <img width="430px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
+
+ ## <a name="see-also"></a>関連項目
+
+* [チュートリアルの概要](code-samples.md)
+* [コード サンプル](https://github.com/OfficeDev/Microsoft-Teams-Samples)

@@ -1,5 +1,8 @@
 ### <a name="use-app-studio-to-update-the-app-package"></a>App Studio を使用してアプリ パッケージを更新する
 
+> [!TIP]
+> **開発者ポータルを試してみてください**: App Studio はまもなく削除されます。 新しい開発者ポータルを使用して、Teamsアプリを構成、配布、[および管理します](https://dev.teams.microsoft.com/)。
+
 App Studio は、TeamsストアからインストールできるアプリTeamsです。 アプリの作成と登録が簡略化されます。
 
 アプリ パッケージを更新するには、次の手順を実行します。
@@ -16,11 +19,15 @@ App Studio は、TeamsストアからインストールできるアプリTeams�
 
     <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
-    このサンプルには独自のマニフェストが付属し、プロジェクトのビルド時にアプリ パッケージをビルドするように設計されています。 アプリ パッケージを .NET 上にビルドするには、次のVisual Studio。 このVisual Studio、manifest.jsファイルはマニフェストの下に **配置** されます `Microsoft.Teams.Samples.HelloWorld.Web` 。 この手順は、次の図で説明します。  
+
+    このサンプルには独自のマニフェストが付属し、プロジェクトのビルド時にアプリ パッケージをビルドするように設計されています。 .NET では、[マニフェスト] manifest.jsにある [マニフェスト] の [Visual Studioに配置できます ```Microsoft.Teams.Samples.HelloWorld.Web``` 。 このNode.js、プロジェクトのルート ディレクトリのコマンド ラインで `gulp` 入力します。
+
+     このVisual Studio、manifest.jsファイルはマニフェストの下に **配置** されます `Microsoft.Teams.Samples.HelloWorld.Web` 。 この手順は、次の図で説明します。  
     
     <img  width="450px" alt="Build the app package on .NET with Visual Studio" src="~/assets/images/get-started/app-package-on-.NET-with-Visual-Studio.png"/>
     
     プロジェクトのルート ディレクトリのコマンド Node.js入力して、アプリ パッケージをビルド `gulp` できます。
+
 
     ```bash
     $ gulp
@@ -44,11 +51,11 @@ App Studio は、TeamsストアからインストールできるアプリTeams�
 
     <img  width="450px" alt="Newly imported app view" src="~/assets/images/get-started/HelloWorldappdetails.png"/>
 
-次の図は、App Studio でインポートされたアプリ パッケージを示しています。
+    次の図は、App Studio でインポートされたアプリ パッケージを示しています。
 
-<img  width="450px" alt="Importing the app package" src="~/assets/images/get-started/Importinganapp2.png"/>
+    <img  width="450px" alt="Importing the app package" src="~/assets/images/get-started/Importinganapp2.png"/>
 
-マニフェスト エディターの左側には、手順の一覧があります。 右側には、各手順で入力する必要があるプロパティの一覧があります。 サンプル アプリの使用を開始すると、多くの情報が既に完了しています。 次の手順では、Hello World アプリのプロパティを更新できます。
+    マニフェスト エディターの左側には、手順の一覧があります。 右側には、各手順で入力する必要があるプロパティの一覧があります。 サンプル アプリの使用を開始すると、多くの情報が既に完了しています。 次の手順では、Hello World アプリのプロパティを更新できます。
 
 #### <a name="app-details"></a>アプリの詳細
 
@@ -68,7 +75,7 @@ App Studio は、TeamsストアからインストールできるアプリTeams�
 
 <img  width="450px" alt="Adding a Teams tab" src="~/assets/images/get-started/TeamTab.png"/>
 
-このサンプルでは、[チーム] タブに構成ページが表示されます。 タブ構成 **URL の ...** 記号 **を選択** し、ドロップダウン メニューから **[編集** ] を選択します。 URL を、アプリのホスティング時に使用した URL に置き換える必要がある `https://yourteamsapp.ngrok.io/configure` `yourteamsapp.ngrok.io` [場所に変更します](#host-the-sample-app)。
+このサンプルでは、[チーム] タブに構成ページが表示されます。 タブ構成 **URL の ...** 記号 **を選択** し、ドロップダウン メニューから **[編集** ] を選択します。 URL を、アプリのホスト時に使用した URL に置き換える `https://yourteamsapp.ngrok.io/configure` `yourteamsapp.ngrok.io` 必要がある場所に変更します。
 
 ##### <a name="personal-tabs"></a>[個人] タブ
 
@@ -159,6 +166,6 @@ App Studio は、TeamsストアからインストールできるアプリTeams�
 1. [チームに **追加** ] セクションで **[検索] ボックスを選択** し、サンプル アプリを追加するチームを選択します。 テスト用に特別なチームを設定できます。
 1. ダイアログ ボックス **の下部** にある [インストール] ボタンを選択します。
 
-アプリがアプリで使用Teams。 ただし、ボットとメッセージング拡張機能は、ホストされているアプリケーション環境をアプリの ID とパスワードで更新するまで機能しません。
+    アプリがアプリで使用Teams。 ただし、ボットとメッセージング拡張機能は、ホストされているアプリケーション環境をアプリの ID とパスワードで更新するまで機能しません。
 
-<img  width="450px" alt="The finished app" src="~/assets/images/get-started/Finishedhelloworld.png"/>
+    <img  width="450px" alt="The finished app" src="~/assets/images/get-started/Finishedhelloworld.png"/>

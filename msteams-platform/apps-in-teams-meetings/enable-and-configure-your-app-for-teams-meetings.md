@@ -3,12 +3,12 @@ title: 会議で使用するアプリを有効Teamsする
 author: surbhigupta
 description: 会議で使用するアプリを有効Teamsする
 ms.topic: conceptual
-ms.openlocfilehash: e31e241a61f40a8dc2b8a1221765bd4755d346ed
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 4b71673b683129ef00c01297ce14a677864d4eb4
+ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068642"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "53114187"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>会議で使用するアプリを有効Teamsする
 
@@ -79,11 +79,12 @@ ms.locfileid: "53068642"
 > * 現在、モバイル クライアントでは、会議中のダイアログ ボックスとタブである会議内エクスペリエンスはサポートされていません。 詳細については、「モバイル用の [タブを作成する際の](../tabs/design/tabs-mobile.md) モバイルタブのガイダンス」を参照してください。
 
 Teams会議は、組織に固有の共同作業エクスペリエンスを提供します。 さまざまな会議シナリオ用にアプリを構成する機会を提供します。 参加者の役割またはユーザーの種類に基づいて会議のエクスペリエンスを向上させるアプリを構成できます。 これで、次の会議シナリオで実行できるアクションを特定できます。
-* [事前会議](#pre-meeting)
-* [会議中](#in-meeting)
-* [会議後](#post-meeting)
 
-### <a name="pre-meeting"></a>事前会議
+* [会議の前](#before-a-meeting)
+* [会議中](#during-a-meeting)
+* [会議後](#after-a-meeting)
+
+### <a name="before-a-meeting"></a>会議の前
 
 会議の前に、ユーザーはタブ、ボット、メッセージング拡張機能を追加できます。 開催者と発表者の役割を持つユーザーは、会議にタブを追加できます。
 
@@ -113,7 +114,7 @@ Teams会議は、組織に固有の共同作業エクスペリエンスを提供
 > * ユーザー ロールに基づいて、アプリにはロール固有のエクスペリエンスを提供する機能があります。 たとえば、ポーリング アプリでは、開催者と発表者だけが新しいポーリングを作成できます。
 > * 会議の進行中に役割の割り当てを変更できます。 詳細については、「会議での[役割」をTeamsしてください](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)。
 
-### <a name="in-meeting"></a>会議中
+### <a name="during-a-meeting"></a>会議中
 
 会議中に、meetingSidePanel または会議内ダイアログ ボックスを使用して、アプリに固有のエクスペリエンスを構築できます。
 
@@ -138,19 +139,18 @@ API を使用して要求を必要に応じてルーティングするには、�
 > * ユーザーが Web ビューでアクションを実行した後に自動的に終了するには [、submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) 関数を呼び出す必要があります。 これは、アプリの申請に必要な要件です。 詳細については、「SDK タスク モジュール[Teamsを参照してください](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。
 > * アプリで匿名ユーザーをサポートする場合、最初の呼び出し要求ペイロードは、要求メタデータではなく、オブジェクト内の要求メタデータ `from.id` `from` に `from.aadObjectId` 依存する必要があります。 `from.id`はユーザー ID であり `from.aadObjectId` 、ユーザー Azure Active Directory (AAD) ID です。 詳細については、「タブでタスク [モジュールを使用する」を参照し](../task-modules-and-cards/task-modules/task-modules-tabs.md) 、 [タスク モジュールを作成して送信します](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
 
-#### <a name="share-to-stage"></a>ステージ間の共有
+#### <a name="shared-meeting-stage"></a>共有会議ステージ
 
 > [!NOTE]
 > * この機能は現在、開発者プレビュー [でのみ使用](../resources/dev-preview/developer-preview-intro.md) できます。
-> * この機能を使用するには、アプリが会議中の meetingSidePanel をサポートしている必要があります。
 
-この機能により、開発者はアプリを会議ステージに共有できます。 会議ステージへの共有を有効にすると、会議の参加者はリアルタイムで共同作業できます。
+共有会議ステージを使用すると、会議参加者はアプリ コンテンツをリアルタイムで操作し、共同作業できます。
 
 必要なコンテキストは `meetingStage` 、アプリ マニフェスト内です。 このための前提条件は、コンテキストを持 `meetingSidePanel` つ必要があります。 これにより **、meetingSidePanel** で共有が有効です。
 
 ![会議のエクスペリエンス中にステージに共有する](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
 
-この機能を有効にするために必要なマニフェストの変更は次のとおりです。
+共有会議ステージを有効にするには、次のようにアプリ マニフェストを構成します。
 
 ```json
 "configurableTabs": [
@@ -168,15 +168,17 @@ API を使用して要求を必要に応じてルーティングするには、�
   ]
 ```
 
-### <a name="post-meeting"></a>会議後
+共有会議ステージエクスペリエンス [を設計する方法を参照してください](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)。
 
-会議後と会議 [前の](#pre-meeting) 構成は同じです。
+### <a name="after-a-meeting"></a>会議後
+
+会議の後と前 [の構成は](#before-a-meeting) 同じです。
 
 ## <a name="code-sample"></a>コード サンプル
 
 |サンプルの名前 | 説明 | サンプル |
 |----------------|-----------------|--------------|----------------|-----------|
-| 会議アプリ | 会議トークン ジェネレーター アプリを使用してトークンを要求する方法を示します。このトークンは、各参加者が対話する公平な機会を得る機会を得る順番に生成されます。 これは、スクラム会議、Q&セッションなど、状況に役立ちます。 | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
+| 会議アプリ | 会議トークンジェネレーター アプリを使用してトークンを要求する方法を示します。これは、各参加者が会議に参加する公平な機会を得る機会を得る順番に生成されます。 これは、スクラム会議や Q セッションなど、&役立ちます。 | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
 
 ## <a name="see-also"></a>関連項目
 

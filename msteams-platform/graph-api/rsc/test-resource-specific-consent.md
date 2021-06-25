@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: teams 承認 OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: 92c6d5d96c103fb5e0da6afd91357b5887b2ba10
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 8f5b293557ef7de9e4d551c5ae2bd7216e6e3fc0
+ms.sourcegitcommit: 261058171f1e3bbc822c5bcc0e9fba5a4de68000
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069083"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "53111129"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>リソース固有の同意のアクセス許可をテストTeams
 
@@ -23,7 +23,7 @@ ms.locfileid: "53069083"
 > [!NOTE]
 > RSC アクセス許可をテストするには、Teamsアプリ マニフェスト ファイルに、次のフィールドが設定された **webApplicationInfo** キーを含める必要があります。
 >
-> - **id**: Azure ADアプリ ID については、「Azure アプリ ポータルにアプリを登録する [」をADしてください](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal)。
+> - **id**: Azure ADアプリ ID については、「Azure アプリ ポータルにアプリを登録する [」をADしてください](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)。
 > - **resource**: 任意の文字列は、「アプリ マニフェストの更新 [」のTeams参照してください](resource-specific-consent.md#update-your-teams-app-manifest)。
 > - **アプリケーションのアクセス許可**: アプリの RSC アクセス許可については、「リソース固有の [アクセス許可」を参照してください](resource-specific-consent.md#resource-specific-permissions)。
 

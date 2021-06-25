@@ -6,25 +6,26 @@ ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 localization_priority: Normal
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: eaa37f1ccb7944ee18bb62ae47882dc4a715b165
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 58e11312e61124bf09fcb55d2bcd0fc475e75a49
+ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566888"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "53114616"
 ---
-# <a name="create-your-first-teams-app-using-c"></a>C を使用してTeamsアプリを作成する#
+# <a name="build-your-first-teams-app-using-c"></a>C を使用してTeamsアプリをビルドする#
 
-このチュートリアルでは、アプリを使用してアプリMicrosoft Teams作成C#。 そのためには、次のことを行う必要があります。
+このチュートリアルでは、.NET またはアプリを使用して最初のアプリをMicrosoft Teamsする方法をC#。 また、以下の手順を実行します。
 
-* 環境を準備する
-* 前提条件の取得
-* サンプルをダウンロードする
-* サンプルの構築と実行
-* サンプル アプリをホストする
-* ホストされたアプリの資格情報を更新する
-* [アプリ] タブの構成
+1. [環境を準備する](#prepare-your-environment)
+1. [前提条件の取得](#GetPrerequisites)
+1. [サンプルをダウンロードする](#DownloadSample)
+1. [サンプルのビルドと実行](#BuildRun)
+1. [サンプル アプリをホストする](#hostsample)
+1. [ホストされたアプリの資格情報を更新する](#updatecredentials)
+1. [[アプリ] タブの構成](#configureapptab)
 
+<a name="prepare-your-environment"></a>
 [!include [prepare your environment](~/includes/prepare-environment.md)]
 
 <a name="GetPrerequisites"></a>
@@ -68,7 +69,13 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 
 ## <a name="build-and-run-the-sample"></a>サンプルの構築と実行
 
-リポジトリが複製された後、Visual Studioを使用して **Microsoft.Teams.サンプルの** **Microsoft-Teams-Samples/samples/app-hello-world/csharp** ディレクトリの Samples.HelloWorld.sln。 次に、[ビルド] **メニューから [ソリューション** のビルド **] を** 選択します。 サンプルを実行するには **、F5 キーを押するか、[** デバッグ] メニューから [ **デバッグ** の開始] **を選択** します。
+smaple は、複製後にビルドして実行できます。 
+
+**複製されたサンプルをビルドして実行するには**
+
+1. ソリューション ファイル **Microsoft.Teams を開きます。サンプルの** **Microsoft-Teams-Samples/samples/app-hello-world/csharp** ディレクトリの Samples.HelloWorld.sln。
+1. [ビルド **] メニューから [** ソリューションの **ビルド] を** 選択します。
+1. **F5 キーを選択** するか、[**デバッグ]** メニューから [デバッグの開始] を **選択** してサンプルを実行します。
 
 アプリが起動すると、ブラウザー ウィンドウが開き、アプリのルートが起動します。 次の URL に移動して、すべてのアプリ URL が読み込み中か確認できます。
 
@@ -77,14 +84,13 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 - `https://localhost:44327/first`
 - `https://localhost:44327/second`
 
-<a name="HostSample"></a>
-
 > [!Note]
 > エラーが発生した場合は `Could not find a part of the path … bin\roslyn\csc.exe` 、コマンドを使用してパッケージを更新します `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r` 。 詳細については、「スタック オーバーフロー [」のこの質問を参照してください](https://stackoverflow.com/questions/32780315)。
 
-## <a name="host-the-sample-app"></a>サンプル アプリをホストする
+<a name="hostsample"></a>
+## <a name="deploy-your-sample-app"></a>サンプル アプリの展開
 
-アプリはMicrosoft Teams 1 つ以上の機能を提供する Web アプリケーションです。 アプリをTeamsするには、アプリをインターネットで利用できる必要があります。 これを行うには、アプリをホストする必要があります。 無料でホストするかMicrosoft Azureを使用して、コンピューター上のローカル プロセスへのトンネルを作成できます `ngrok` 。 アプリをホストした後、ルート URL (など) を `https://yourteamsapp.ngrok.io` メモします `https://yourteamsapp.azurewebsites.net` 。
+アプリはMicrosoft Teams 1 つ以上の機能を提供する Web アプリケーションです。 アプリをTeamsするには、アプリをインターネットで利用できる必要があります。 これを行うには、アプリをホストする必要があります。 無料でホストするかMicrosoft Azureを使用して、コンピューター上のローカル プロセスへのトンネルを作成できます `ngrok` 。 アプリをホストした後、ルート URL (またはなど) をメモ `https://yourteamsapp.ngrok.io` します `https://yourteamsapp.azurewebsites.net` 。
 
 ### <a name="tunnel-using-ngrok"></a>Tunnel ngrok の使用
 
@@ -96,15 +102,18 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 ngrok http 44327 -host-header=localhost:44327
 ```
 
-`Ngrok` インターネットからの要求をリッスンし、ポート 44327 で実行されているアプリにルーティングします。 確認するには、ブラウザーを開き、アプリの hello ページ `https://d0ac14a5.ngrok.io/hello` を読み込むに移動します。 この URL の代わりに、コンソール セッションに表示される転送 `ngrok` アドレスを使用します。
+`Ngrok` インターネットからの要求に応答し、ポート 44327 で実行されているアプリにルーティングします。 
 
-> [!NOTE]
-> ビルドと実行の手順で別のポート[](#build-and-run-the-sample)を使用している場合は、同じポート番号を使用してトンネルをセットアップ `ngrok` してください。
+**応答を確認するには**
 
-> [!TIP]
-> 別のターミナル ウィンドウで実行 `ngrok` すると良い考えです。 これは、アプリに干渉 `ngrok` することなく実行を維持するために行われます。 アプリを停止、再構築、再実行する必要があります。 セッション `ngrok` は、このウィンドウで役立つデバッグ情報を提供します。
+1. ブラウザーを開き、`https://d0ac14a5.ngrok.io/hello` に移動します。 これにより、アプリの Hello ページが読み込まれる。
+1. 手順 1 で説明した URL の代わりに、コンソール セッションに表示される転送 `ngrok` アドレスを使用します。
+    > [!NOTE]
+    > ビルドと実行の手順で別のポート[](#build-and-run-the-sample)を使用している場合は、同じポート番号を使用してトンネルをセットアップ `ngrok` してください。
+    > [!TIP]
+    > 別のターミナル ウィンドウで実行 `ngrok` すると良い考えです。 これは、アプリに干渉 `ngrok` することなく実行を維持するために行われます。 アプリを停止、再構築、再実行する必要があります。 セッション `ngrok` は、このウィンドウで役立つデバッグ情報を提供します。
 
-アプリは、コンピューター上の現在のセッション中にのみ使用できます。 コンピューターがシャットダウンまたはスリープ状態になった場合、サービスは使用できなくなりました。 テスト用アプリを他のユーザーと共有する場合は、このことを覚えておいてください。 サービスを再起動する必要がある場合、アプリは新しいアドレスを返し、そのアドレスを使用する場所を更新する必要があります。 有料版には `ngrok` 、この制限はありません。
+    アプリは、コンピューター上の現在のセッション中にのみ使用できます。 コンピューターがシャットダウンまたはスリープ状態になった場合、サービスは使用できなくなりました。 テスト用アプリを他のユーザーと共有する場合は、このことを覚えておいてください。 サービスを再起動する必要がある場合、アプリは新しいアドレスを返し、そのアドレスを使用する場所を更新する必要があります。 有料版には `ngrok` 、この制限はありません。
 
 ### <a name="host-in-azure"></a>Azure のホスト
 
@@ -114,38 +123,87 @@ Visual Studio Azure を含むさまざまなプロバイダーへのアプリ展
 
 <img width="530px" alt="Visual Studio" src="~/assets/images/get-started/publishtoazure1.png"/>
 
+**アプリ パッケージを更新する**
+
+# <a name="app-studio"></a>[App Studio](#tab/AS)
+
 [!include [Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
 
+# <a name="developer-portal"></a>[開発者ポータル](#tab/DP)
+
+**開発者ポータル (プレビュー) をインストールするには、Teams**
+
+
+1. 左側の **バーの** 下部にある [アプリ] アイコンを選択し、[開発者ポータル] **を検索します**。
+
+    <img width="430px" alt="Screenshot of TDP" src="~/assets/images/Screen1.png"/>
+
+1. [開発者 **ポータル] を選択し** 、[開く] **を選択します**。
+
+    <img width="430px" alt="Screenshot of TDP Open" src="~/assets/images/screen2.png"/>
+
+1. [アプリ] タブを選択し、[ **既存のアプリのインポート] を選択します**。
+
+    <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/screen3.png"/>
+
+1. [Hello **World] を選択し** 、[インポート] **を選択します**。 **Hello World アプリ** は開発者ポータルにインポートされます。 
+
+    開発者ポータルを使用してアプリTeamsできます。 マニフェストは [配布] の下に表示されます。 マニフェストを使用して、アプリの機能、必要なリソース、その他の重要な属性を構成できます。 開発者ポータルを使用してアプリを構成する方法の詳細については、「開発者ポータル」[を参照Teamsしてください](../concepts/build-and-test/teams-developer-portal.md)。
+
+    <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
+---
+
+<a name="updatecredentials"></a>
 ## <a name="update-the-credentials-for-your-hosted-app"></a>ホストされたアプリの資格情報を更新する
 
 サンプル アプリでは、テキスト ファイルに保存した値に環境変数を設定する必要があります。
 
-`appsettings.json` ファイルを開きます。 テキスト ファイルに保存したボット ID で **MicrosoftAppId** 値を更新します。 保存した **ボット パスワードを使用して MicrosoftAppPassword** を更新します。
+**ホストされているアプリの資格情報を更新するには**
 
-<img width="560px" alt="Setting the keys" src="~/assets/images/get-started/get-started-net-azure-add-keys.png"/>
+1. `appsettings.json` ファイルを開きます。 
+1. テキスト ファイルに保存したボット ID で **MicrosoftAppId** 値を更新します。 
+1. 保存した **ボット パスワードを使用して MicrosoftAppPassword** を更新します。
 
-これらの変更が行われた後、アプリを再構築します。 ngrok を使用している場合は、アプリをローカルで実行し、Azure でホストしている場合は、アプリを再展開します。
+    <img width="560px" alt="Setting the keys" src="~/assets/images/get-started/get-started-net-azure-add-keys.png"/>
 
+    これらの変更が行われた後、アプリを再構築します。 ngrok を使用している場合は、アプリをローカルで実行し、Azure でホストしている場合は、アプリを再展開します。
+
+<a name="configureapptab"></a>
 ## <a name="configure-the-app-tab"></a>[アプリ] タブの構成
 
-アプリをチームにインストールしたら、コンテンツを表示するアプリを構成する必要があります。 サンプル アプリをインストールしたチームのチャネルに移動し **、[+]** ボタンを選択して新しいタブを追加します。[ **タブの追加] リスト** から **[Hello World] を選択** します。 構成ダイアログ ボックスが表示され、このチャネルに表示するタブを選択できます。 タブを選択し、[タブを保存する] **を** `Hello World` 選択すると、タブが読み込まれます。
+アプリをチームにインストールしたら、コンテンツを表示するためにアプリを構成する必要があります。 
 
-<img width="530px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png" />
+**アプリ タブを構成するには**
+
+1. サンプル アプリをインストールしたチームのチャネルに移動し **、[+]** ボタンを選択して新しいタブを追加します。
+1. [ **タブの追加] リスト** から **[Hello World] を選択** します。 構成ダイアログ ボックスが表示され、このチャネルに表示するタブを選択できます。 
+1. **[保存]** を選択します。 タブ `Hello World` はタブと一緒に読み込まれます。
+
+    <img width="530px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png" />
 
 ### <a name="test-your-bot-in-teams"></a>ボットをテストTeams
 
-これで、ボットをテストして、Teams。 アプリを登録して入力したチーム内のチャネルを選択します `@your-bot-name` 。 これはメンションと呼 **\@ ばれる.** ボットは、送信したメッセージに返信します。
+これで、ボットをテストできます。Teams。 
 
-<img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
+**ボットをテストするには**
+
+* アプリを登録して入力したチーム内のチャネルを選択します `@your-bot-name` 。 これはメンションと呼 **\@ ばれる.** ボットは、送信したメッセージに返信します。
+
+    <img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
 ### <a name="test-your-messaging-extension"></a>メッセージング拡張機能をテストする
 
 メッセージング拡張機能をテストするには、会話ビューの入力ボックスの下にある **...** を選択します。 「Hello **World」アプリを含むメニュー** が表示されます。 選択すると、ランダムなテキストのセットが表示されます。 ランダムなテキストの 1 つを選択し、会話に挿入できます。
 
-<img width="530px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
+<img width="530px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu1.png" />
 
-<img width="530px" alt="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
+<img width="530px" alt="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result1.png" />
 
 ランダムなテキストのいずれかを選択します。 独自のメッセージを使用して送信する準備が整ったカードが表示されます。
 
 <img width="530px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
+
+## <a name="see-also"></a>関連項目
+
+* [チュートリアルの概要](code-samples.md)
+* [コード サンプル](https://github.com/OfficeDev/Microsoft-Teams-Samples)

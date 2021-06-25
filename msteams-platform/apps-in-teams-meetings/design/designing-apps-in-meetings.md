@@ -5,12 +5,12 @@ description: 会議でアプリを設計し、Teams UI キットをMicrosoft Tea
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 33b11a6dfc759fabd54ca2fe2c68978a5d5d1475
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: 7196017f92bebb776d1b73680893ebfe3684a74c
+ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644646"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "53114310"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>会議の拡張機能Microsoft Teams設計する
 
@@ -49,7 +49,7 @@ ms.locfileid: "52644646"
 
 ---
 
-## <a name="before-a-meeting"></a>会議の前に
+## <a name="before-a-meeting"></a>会議の前
 
 会議の前に、ユーザーはタブにコンテンツを追加できます。次の例は、通話中に回答するアンケートの下書き質問を示しています。
 
@@ -80,7 +80,7 @@ ms.locfileid: "52644646"
 
 [会議内] タブは、会議中の共同作業を強化するキャンバスです。 出席者は、共有ビューまたは役割ベースのビューを使用して、会議ステージ外の専用スペースでアプリ コンテンツを表示および操作できます。
 
-### <a name="use-cases"></a>使用例
+### <a name="use-cases"></a>ユース ケース
 
 ユーザーは、[会議内] タブを使用して次の場合があります。
 
@@ -119,7 +119,11 @@ ms.locfileid: "52644646"
 
 ### <a name="scrolling"></a>スクロール
 
-Iframe のコンテンツは垂直方向にスクロールする必要があります。 スクロールしたコンテンツのみを表示できます (上または下に何も表示されません)。 スクロール バーは、iframe コンテンツの一部です。
+スクロールを許可する場合は、次のことを覚えておいてください。
+
+* iframe コンテンツ内のコンテンツは垂直方向にのみスクロールする必要があります。
+* ユーザーはスクロールしたコンテンツのみを表示する必要があります (上または下に何も表示されません)。 
+* スクロール バーは、iframe コンテンツの一部です。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-scrolling.png" alt-text="例は、会議内タブのスクロール方法を示しています。" border="false":::
 
@@ -133,7 +137,7 @@ Iframe のコンテンツは垂直方向にスクロールする必要があり�
 
 会議中のダイアログは、会議ステージTeams表示されます。 ユーザーの注意、確認、またはやり取りが必要ですが、微妙であり、会議を中断しません。 これらの使用は、軽くてタスク指向のシナリオに対して使用する必要があります。
 
-### <a name="use-cases"></a>使用例
+### <a name="use-cases"></a>ユース ケース
 
 会議中のダイアログは、参加者が次の操作を行うユーザー (会議の開催者など) によってトリガーされます。
 
@@ -175,7 +179,7 @@ Iframe のコンテンツは垂直方向にスクロールする必要があり�
 |4|**[閉じる]** ボタン: ダイアログを閉じます。|
 |5|**アクション文字列**: 通常、ダイアログを開始したユーザーを示します。|
 
-### <a name="responsive-behavior"></a>応答性の高い動作
+### <a name="responsive-behavior-in-meeting-dialogs"></a>応答性の高い動作: 会議中のダイアログ
 
 会議内のダイアログは、さまざまなシナリオを考慮してサイズが異なる場合があります。 パディングとコンポーネントのサイズは必ず維持してください。
 
@@ -186,7 +190,87 @@ Iframe のコンテンツは垂直方向にスクロールする必要があり�
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="例は、会議中のダイアログを表示します。幅: 最小--280 ピクセル (248 ピクセルの iframe)。Max---460 ピクセル (428 ピクセルの iframe)。高さ: 300 ピクセル (iframe)。" border="false":::
 
-## <a name="after-a-meeting"></a>会議の後
+## <a name="use-the-shared-meeting-stage"></a>共有会議ステージの使用
+
+共有会議ステージは、会議参加者がアプリ コンテンツをリアルタイムで操作し、共同作業するのに役立ちます。 たとえば、ユーザーは、ドキュメントの編集、ホワイトボードによるブレインストーミング、ダッシュボードのレビューに集中できます。
+
+会議ステージに共有されるアプリは、共有画面と同じ領域を占有します。 ステージは、すべての会議参加者の向きを変更します。
+
+### <a name="use-cases"></a>ユース ケース
+
+共有会議のステージは、共同作業と参加に関するすべてです。 開始に役立つシナリオの例を次に示します。
+
+:::row:::
+   :::column span="1":::
+
+**編集とレビュー**: ダッシュボードに飛び込み、通話中の全員と計画を立て込む。
+
+   :::column-end:::
+   :::column span="3":::
+
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review.png" alt-text="例は、共有会議ステージでレビュー中のダッシュボードを示しています。" border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="1":::
+
+**ホワイトボード:** 共有キャンバスで一緒に描画してアイデアを作成します。
+
+   :::column-end:::
+   :::column span="3":::
+
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-whiteboard.png" alt-text="例は、共有会議ステージのホワイトボードを示しています。" border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="1":::
+
+**クイズ**: 対話的な資料を使って知識をテストし、洞察を得る。
+
+   :::column-end:::
+   :::column span="3":::
+
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-quiz.png" alt-text="例では、共有会議ステージでクイズを表示します。" border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+### <a name="anatomy-shared-meeting-stage"></a>解剖学: 共有会議ステージ
+
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="イメージは、共有会議ステージの設計構造を示しています。" border="false":::
+
+|カウンター|説明|
+|----------|-----------|
+|1|**アプリ アイコン**: 強調表示されたアイコンは、アプリの会議中タブが開いている状態を示します。|
+|2|**[会議ステージに共有] ボタン**: アプリを会議ステージに共有するエントリ ポイント。 共有会議ステージを使用するアプリを構成した場合に表示されます。|
+|3|**iframe**: アプリのコンテンツを表示します。|
+|4|**[共有を停止する**] ボタン: 会議ステージへのアプリの共有を停止します。 共有を開始した参加者にのみ表示されます。|
+|5|**発表者の属性**: アプリを共有した参加者の名前を表示します。|
+
+### <a name="responsive-behavior-shared-meeting-stage"></a>応答性の高い動作: 共有会議ステージ
+
+会議ステージに共有されるアプリのサイズは、会議の状態と、ユーザーがウィンドウのサイズを変更する方法によって異なります。 ブラウザーと同様に、ナビゲーションとコントロールのパディングと応答性の高いレイアウトを維持します。
+
+* **サイド パネル**: ユーザーは、会議中にいつでもサイド パネルを開き、チャットしたり、名簿を表示したり、アプリ (つまり、会議内タブ) を使用することができます。 パネルが開いているときにステージが動的に再配置されます。
+* **ビデオとオーディオ のグリッド**: ビデオとオーディオ のグリッドは常に表示され、会議の参加者を表示できます。 ユーザーが会議で他のユーザーにスポットライトを当てたりピンを固定したりすると、参加者グリッドの高さまたは幅は、向きに応じて増加します。
+
+#### <a name="meeting-stage-without-side-panel"></a>会議ステージ (サイド パネルなし)
+
+サイド パネルが開いていない場合、会議ステージは既定で 994x678 ピクセルで、最小 792x382 ピクセルを指定できます。
+
+:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="サイド パネルを閉じた共有会議ステージの応答性を示す画像。" border="false":::
+
+#### <a name="meeting-stage-with-side-panel"></a>会議ステージ (サイド パネル付き)
+
+サイド パネルが開いている場合、会議ステージは既定で 918x540 ピクセルで、最小 472x382 ピクセルを指定できます。
+
+:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-with-side-panel.png" alt-text="サイド パネルを開いた状態で共有された会議ステージの応答性を示す画像。" border="false":::
+
+## <a name="after-a-meeting"></a>会議後
 
 会議の終了後に会議に戻り、アプリのコンテンツを表示できます。 この例では、会議開催者は **[Contoso]** タブで投票結果を確認できます (注: デザインの観点から、会議前と会議後のタブ エクスペリエンスの違いはありません)。
 
@@ -217,13 +301,32 @@ Iframe のコンテンツは垂直方向にスクロールする必要があり�
    :::column-end:::
 :::row-end:::
 
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-do.png" alt-text="フォーカス環境を作成する方法を示す例。" border="false":::
+
+#### <a name="do-create-a-focused-environment"></a>Do: フォーカス環境を作成する
+
+アプリのエクスペリエンスを会議のステージに対してスコープを設定することをお勧めします。 サイド パネルの会議内タブを、特定のシナリオのセカンダリプライベート ビューとして使用できます。
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-dont.png" alt-text="会議中に競合するサーフェスを含めない方法を示す例。" border="false":::
+
+#### <a name="dont-include-competing-surfaces"></a>[しない]: 競合するサーフェスを含める
+
+アプリは、ステージでの共同作業や会議中のダイアログへの応答など、ユーザーに一度に 1 つのサーフェスにのみ集中を求める必要があります。 (注: アプリがステージ上にある間は、他のアプリによってダイアログがトリガーされた状態を維持できない)。 
+
+   :::column-end:::
+:::row-end:::
+
 ### <a name="layout"></a>レイアウト
 
 :::row:::
    :::column span="":::
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-do.png" alt-text="1 列のダイアログ レイアウトを使用する方法を示す例。" border="false":::
 
-#### <a name="do-use-a-single-column-dialog-layout"></a>Do: 1 列のダイアログ レイアウトを使用する
+#### <a name="do-use-a-one-column-dialog"></a>Do: 1 列のダイアログを使用する
 
 ダイアログは会議ステージの中心にあるので、タスクの完了はユーザーの不満を避けるために迅速かつ簡単に行う必要があります。
 
@@ -242,7 +345,7 @@ Iframe のコンテンツは垂直方向にスクロールする必要があり�
    :::column span="":::
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-do.png" alt-text="1 列のタブ レイアウトを表示する例。" border="false":::
 
-#### <a name="do-use-a-single-column-tab-layout"></a>Do: 1 列のタブ レイアウトを使用する
+#### <a name="do-use-a-one-column-tab"></a>Do: 1 列のタブを使用する
 
 会議内タブの狭い性質を考えると、コンテンツを 1 つの列に表示することを強く推奨します。
 
@@ -278,23 +381,29 @@ Iframe のコンテンツは垂直方向にスクロールする必要があり�
    :::column-end:::
 :::row-end:::
 
-### <a name="scroll"></a>Scroll
+### <a name="scrolling"></a>スクロール
 
 :::row:::
    :::column span="":::
+
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-do.png" alt-text="会議内タブで垂直スクロールを表示する例。" border="false":::
+
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-scroll-do.png" alt-text="共有会議ステージで垂直スクロールを表示する例。" border="false":::
 
 #### <a name="do-scroll-vertically"></a>Do: 垂直方向にスクロールする
 
-ユーザーは、 (および他の場所) Teams垂直スクロールを期待します。
+ユーザーは、 (および他の場所) Teams垂直スクロールを期待します。 これは、ユーザーが x 軸と y 軸をパンできるホワイトボードなどのクリエイティブ なキャンバスがある場合は適用されません。
 
    :::column-end:::
    :::column span="":::
+
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-dont.png" alt-text="会議内タブに水平スクロールを表示する例。" border="false":::
+
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-scroll-dont.png" alt-text="共有会議ステージで水平スクロールを表示する例。" border="false":::
 
 #### <a name="dont-scroll-horizontally"></a>[しない]: 水平方向にスクロールする
 
-水平方向のスクロールは、このページで予期される動作Teams。 会議環境内の他のキャンバスは垂直方向にスクロールします。
+水平方向のスクロールは、(会議環境を含む) Teams予期される動作ではありません。
 
    :::column-end:::
 :::row-end:::
@@ -324,19 +433,25 @@ Iframe のコンテンツは垂直方向にスクロールする必要があり�
 
 :::row:::
    :::column span="":::
+
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="暗いテーマで会議の拡張機能を表示する例。" border="false":::
 
-#### <a name="do-use-teams-color-tokens"></a>Do: 色トークンTeams使用する
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-do.png" alt-text="暗いテーマで会議の拡張機能を表示する別の例。" border="false":::
 
-Teamsは暗いモード用に最適化され、視覚的および認知的なノイズを軽減し、ユーザーがディスカッションと共有コンテンツに集中できます。 カラー トークン <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">(Fluent UI) の使用について学習します</a>。
+#### <a name="do-focus-on-dark-theme"></a>Do: 暗いテーマに焦点を当てる
+
+Teams会議は暗いテーマに最適化され、視覚的および認知的なノイズを減らし、ユーザーがディスカッションと共有コンテンツに集中できます。 特定の種類のアプリ (ホワイトボードやドキュメント編集など) では、暗いキャンバスは必要ない場合があります。
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-dont.png" alt-text="既定の (明るい) テーマを持つ会議拡張機能を表示する例。" border="false":::
 
-#### <a name="dont-hard-code-hex-values"></a>Don't: ハード コードの 16 進値
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-dont.png" alt-text="会議のテーマと一致しない色で会議の拡張機能を表示する例。" border="false":::
 
-色トークンを使用しないTeamsデザインの拡張性が低く、管理に時間がかかる場合があります。
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-dont.png" alt-text="会議のテーマと一致しない色の会議拡張機能を示す別の例。" border="false":::
+
+#### <a name="dont-use-unfamiliar-colors"></a>[しない]: 見慣れない色を使用する
+
+会議環境と衝突する色が気を散らし、ユーザーのネイティブな表示が少Teams。 通話テーマのニュートラルTeams[含む、](https://developer.microsoft.com/fluentui#/styles/web/colors/products)カラー ランプの詳細について学習します。
 
    :::column-end:::
 :::row-end:::
@@ -374,3 +489,29 @@ Teamsは暗いモード用に最適化され、視覚的および認知的なノ
 
    :::column-end:::
 :::row-end:::
+
+### <a name="responsive-behavior"></a>応答性の高い動作
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-responsiveness-do.png" alt-text="会議拡張機能のサイズを適切に変更する方法を示す例。" border="false":::
+
+#### <a name="do-resize-and-scale-your-app-responsively"></a>Do: アプリのサイズ変更とスケーリングを迅速に行う
+
+アプリのコンテンツは、小さいウィンドウで動的にサイズを変更して凝縮する必要があります。 アプリのメイン ナビゲーションとフローティング コントロールを表示します。
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-responsiveness-dont.png" alt-text="会議拡張機能のサイズを適切に変更しない方法を示す例。" border="false":::
+
+#### <a name="dont-crop-or-clip-primary-ui-components"></a>[しない]: プライマリ UI コンポーネントをトリミングまたはクリップする
+
+画面外のナビゲーションとコントロールをフローティングし、スクロールして検索する必要がある場合、ユーザーにとって混乱を招く可能性があります。 アプリコンテンツが iframe に収まらない場合は、アプリのコンテンツを水平方向にスクロールしてはならない。
+
+   :::column-end:::
+:::row-end:::
+
+## <a name="next-step"></a>次の手順
+
+> [!div class="nextstepaction"]
+> [会議用にアプリを構成する](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)

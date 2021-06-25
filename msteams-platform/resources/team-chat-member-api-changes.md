@@ -6,12 +6,12 @@ keywords: bot framework apis チーム メンバー名簿
 localization_priority: Normal
 ms.topic: reference
 ms.author: ojchoudh
-ms.openlocfilehash: 333a29664f0d60e89039f906fce77e71054d486f
-ms.sourcegitcommit: 9ef3b415cbba484c2201abe9c6927e08d974388e
+ms.openlocfilehash: d2eb75a69100a6daaf3af3a021b9896c42abe5f1
+ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52555438"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "53114246"
 ---
 # <a name="teams-bot-api-changes-to-fetch-team-or-chat-members"></a>Teamsまたはチャット メンバーをフェッチするボット API の変更を確認する
 
@@ -72,4 +72,4 @@ ms.locfileid: "52555438"
     > `objectId` は、Bot Framework メッセージのオブジェクトで呼び出されたオブジェクトに一 `aadObjectId` `Activity` 致するに変更されます。 新しい API は、Bot Framework SDK のバージョン 4.8 以降で使用できます。 また、SDK 拡張機能 Bot Framework 3.x Teamsで使用することもできます。 一方 [、REST](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#get-single-member-details) エンドポイントを使用できます。
 
 * `TeamsInfo.GetMembersAsync` の `TeamsInfo.getMembers` C#、TypeScript または Node.jsは正式に非推奨です。 新しい API が利用可能な場合は、ボットを更新して使用する必要があります。 これは、これらの API が使用する [基になる REST API にも適用されます](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#tabpanel_CeZOj-G++Q_json)。
-* 2021 年後半には、ボットはチャットまたはチームのメンバーのプロパティを事前 `userPrincipalName` `email` に取得できません。 ボットは、ボットを取得Graphを使用する必要があります。 プロパティ `userPrincipalName` と `email` プロパティは、2021 年後半から新しい API から `GetConversationPagedMembers` 返されません。 ボットは、アクセス トークンGraphを使用して情報を取得する必要があります。 ボットがアクセス トークンを取得し、エンド ユーザーの同意プロセスを合理化し、簡素化しやすくする必要があります。
+* 2022 年後半には、ボットはチャットまたはチームのメンバーのプロパティを事前 `userPrincipalName` `email` に取得できません。 ボットは、ボットを取得Graphを使用する必要があります。 プロパティ `userPrincipalName` と `email` プロパティは、2022 年後半から新しい API から `GetConversationPagedMembers` 返されません。 ボットは、アクセス トークンGraphを使用して情報を取得する必要があります。 ボットがアクセス トークンを取得し、エンド ユーザーの同意プロセスを合理化し、簡素化しやすくする必要があります。
