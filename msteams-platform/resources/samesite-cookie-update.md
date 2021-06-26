@@ -1,81 +1,88 @@
 ---
-title: Microsoft Teams SameSite cookie 属性 (2020 更新プログラム)
-author: surbhigupta
+title: SameSite cookie 属性
+author: laujan
 description: SameSite Cookie の属性について説明します。
 keywords: cookie 属性 samesite
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: 9e899cd7f4e8adcf55a39fc5cef434a7faa4b0ba
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 34674ab58cc9808525d315cea3db464ddf11b4f9
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068624"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140566"
 ---
-# <a name="microsoft-teams-and-the-samesite-cookie-attribute-2020-update"></a>Microsoft Teams SameSite cookie 属性 (2020 更新プログラム)
+# <a name="samesite-cookie-attribute"></a>SameSite cookie 属性 
 
-## <a name="cookies-in-brief"></a>簡潔な Cookie
+Cookie は、Web サイトから送信され、Web ブラウザーによってコンピューターに保存されるテキスト文字列です。 これらは、認証と個人用設定に使用されます。 たとえば、Cookie はステートフルな情報を呼び出し、ユーザー設定を保持し、閲覧アクティビティを記録し、関連する広告を表示するために使用されます。 Cookie は常に特定のドメインにリンクされ、さまざまな関係者によってインストールされます。 
 
- Cookie は、Web サイトから送信され、Web ブラウザーによってコンピューターに保存されるテキスト文字列です。 通常、認証と個人用設定に使用されます。たとえば、ステートフルな情報の呼び出し、ユーザー設定の保持、閲覧アクティビティの記録、関連する広告の表示などです。 Cookie は常に特定のドメインにリンクされ、さまざまな関係者がインストールできます。 これらは、次のように分類されます。
+## <a name="types-of-cookies"></a>Cookie の種類
 
- |クッキー|範囲|
- | ------ | ------ |
- |**ファースト パーティ Cookie**|ファースト パーティ Cookie は、ユーザーがアクセスした Web サイトによって作成され、ショッピング カートアイテム、ログイン資格情報などのデータを保存するために使用されます。 たとえば、認証 Cookie、その他の分析。|
- |**第二者の Cookie**|第二者の Cookie は、技術的にはファースト パーティ Cookie と同じです。 違いは、データがデータパートナーシップ契約を介して第二者と共有される点です。 たとえば、分析[Microsoft Teamsレポートを作成します](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference)。 |
- |**サードパーティの Cookie**|サードパーティの Cookie は、ユーザーが明示的にアクセスしたドメイン以外のドメインによってインストールされ、主に追跡に使用されます。 たとえば、"Like" ボタン、広告配信、ライブ チャットなどです。|
+Cookie の種類と対応するスコープは次のとおりです。
 
-### <a name="cookies-and-http-requests"></a>Cookie と HTTP 要求
+|クッキー|範囲|
+| ------ | ------ |
+|ファースト パーティ Cookie|ファースト パーティ Cookie は、ユーザーがアクセスする Web サイトによって作成されます。 ショッピング カートアイテム、サインイン資格情報などのデータを保存するために使用されます。 たとえば、認証 Cookie、その他の分析。|
+|第二者の Cookie|第二者の Cookie は、技術的にはファースト パーティ Cookie と同じです。 違いは、データがデータパートナーシップ契約を通じて第二者と共有される点です。 たとえば、分析[Microsoft Teamsレポートを作成します](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference)。 |
+|サード パーティの Cookie|サード パーティ Cookie は、ユーザーが明示的にアクセスしたドメイン以外のドメインによってインストールされ、主に追跡に使用されます。 たとえば、 **ボタン、広告** 配信、ライブ チャットなどです。|
 
-SameSite の制限が導入される前に、Cookie がブラウザーに保存されている場合、Cookie はすべての *HTTP* Web 要求に接続され、Set-Cookie HTTP 応答ヘッダーによってサーバーに送信されました。 予想通り、そのパフォーマンスはクロスサイト要求フォージェリ (CSRF) 攻撃などのセキュリティの脆弱性を導入する可能性がありました。 *HTTP Cookie* [を参照してください](https://developer.mozilla.org/docs/Web/HTTP/Cookies)。 SameSite コンポーネントは、SetCookie ヘッダーの実装と管理を通じて、その露出を軽減しました。
+## <a name="cookies-and-http-requests"></a>Cookie と HTTP 要求
 
-### <a name="samesite-attribute-initial-release"></a>SameSite 属性: 初期リリース
+SameSite の制限が導入される前に、Cookie はブラウザーに保存されています。 これらはすべての HTTP Web 要求に接続され、HTTP 応答ヘッダーによって `Set Cookie` サーバーに送信されました。 このメソッドでは、CSRF 攻撃と呼ばれるクロス サイト要求フォージェリーなどのセキュリティの脆弱性が導入されました。 SameSite コンポーネントは、SetCookie ヘッダーの実装と管理を通じて露出を低減しました。
 
-Google Chrome バージョン 51 では、オプションの属性として SetCookie SameSite 仕様が *導入* されました。 ビルド 17672 から、Windows 10ブラウザーに SameSite cookie のサポートMicrosoft Edge[しました](https://blogs.windows.com/msedgedev/2018/05/17/samesite-cookies-microsoft-edge-internet-explorer/)。
+## <a name="samesite-cookie-attribute-initial-release"></a>SameSite cookie 属性: 初期リリース
 
-開発者は、SameSite cookie 属性を SetCookie ヘッダーに追加することをオプトアウトするか *、Lax* と Strict の 2 つの設定のいずれかを使用して追加 *できます*。 Anmplemented SameSite 属性は既定の状態と見なされました。
+Google Chrome バージョン 51 では、オプション `SetCookie SameSite` の属性として仕様が導入されました。 ビルド 17672 から、Windows 10ブラウザーに SameSite cookie のサポートMicrosoft Edge[しました](https://blogs.windows.com/msedgedev/2018/05/17/samesite-cookies-microsoft-edge-internet-explorer/)。
+
+SameSite cookie 属性をヘッダーに追加することをオプトアウトするか、Lax と Strict の 2 つの設定のいずれかを使用 `SetCookie` **して** 追加 **できます**。 Anmplemented SameSite 属性は既定の状態と見なされました。
 
 ## <a name="samesite-cookie-attribute-2020-release"></a>SameSite cookie 属性: 2020 リリース
 
-2020 年 2 月にリリースされる予定の Chrome 80 では、新しい Cookie 値が導入され、既定で Cookie ポリシーが適用されます。 更新された SameSite 属性には、Strict、Lax、または None の *3 つの* 値を渡 *します*。  SameSite 属性を指定しない Cookie は、既定で `SameSite=Lax` .
+2020 年 2 月にリリースされた Chrome 80 では、新しい Cookie 値が導入され、既定で Cookie ポリシーが適用されます。 更新された SameSite 属性には、Strict、Lax、または None の **3 つの** 値が渡 **されます**。  指定しない場合、Cookie SameSite 属性は既定で値 `SameSite=Lax` を取得します。    
+ 
+SameSite cookie 属性は次のとおりです。
 
 |Setting | 強制 | 値 |属性の指定 |
 | -------- | ----------- | --------|--------|
-| **Lax**  | Cookie は、ファースト パーティのコンテキストと HTTP GET 要求でのみ自動的に送信されます。 SameSite Cookie は、イメージや iframe の読み込み呼び出しなどのクロスサイト サブ要求では差し控えされますが、ユーザーがリンクに従って外部サイトから URL に移動すると送信されます。| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
-| **Strict** |ブラウザーは、ファースト パーティのコンテキスト要求 (Cookie を設定したサイトから発信された要求) の Cookie のみを送信します。 要求が現在の場所とは異なる URL から発信された場合、属性にタグ付けされた Cookie は `Strict` いずれも送信されません。| 省略可能 |`Set-Cookie: key=value; SameSite=Strict`|
-| **なし** | Cookie は、ファースト パーティのコンテキストとクロスオリジン要求の両方で送信されます。ただし、値は明示的に設定する必要があります。すべてのブラウザー要求は HTTPS プロトコルに従い、暗号化された接続を必要とする属性 **`None`**  **`Secure`** を含める必要があります。 その要件に準拠しない Cookie は拒否 **されます**。 <br/>**両方の属性が一緒に必要です**。 HTTPS プロトコルを使用せずに指定した場合、または HTTPS プロトコルを使用しない場合、サード パーティ **`None`** **`Secure`**  Cookie は拒否されます。| オプションですが、設定されている場合は HTTPS プロトコルが必要です。 |`Set-Cookie: key=value; SameSite=None; Secure` |
+| **Lax**  | Cookie は、ファースト パーティ **のコンテキストと** HTTP GET 要求でのみ自動的に送信されます。 SameSite Cookie は、イメージや iframe の読み込み呼び出しなど、クロス サイト のサブ要求で差し控えされます。 ユーザーが外部サイトから URL に移動するときに、たとえば、リンクに従って送信されます。| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
+| **Strict** |ブラウザーは、ファースト パーティのコンテキスト要求の Cookie のみを送信します。 これらは、Cookie を設定するサイトから発信された要求です。 要求が現在の場所とは異なる URL から発信された場合、属性にタグ付けされた Cookie は `Strict` 送信されません。| 省略可能 |`Set-Cookie: key=value; SameSite=Strict`|
+| **なし** | Cookie は、ファースト パーティコンテキストとクロスオリジン要求の両方で送信されます。ただし、値は明示的に設定する必要があります。すべてのブラウザー要求は HTTPS プロトコルに従い、暗号化された接続を必要とする属性 **`None`**  **`Secure`** を含める必要があります。 その要件に準拠しない Cookie は拒否 **されます**。 <br/>**両方の属性が一緒に必要です**。 HTTPS プロトコルを使用せずに指定した場合、または HTTPS プロトコルを使用しない場合、サード パーティの  **`None`** **`Secure`**  Cookie は拒否されます。| オプションですが、設定されている場合は HTTPS プロトコルが必要です。 |`Set-Cookie: key=value; SameSite=None; Secure` |
 
 ## <a name="teams-implications-and-adjustments"></a>Teamsの影響と調整
 
 1. Cookie に関連する SameSite 設定を有効にし、アプリと拡張機能が引き続き機能Teams。
 1. アプリや拡張機能が失敗した場合は、Chrome 80 リリースの前に必要な修正を行います。
-1. Microsoft の内部パートナーは、この問題に関する詳細やヘルプが必要な場合は、次のチームに参加できます <https://teams.microsoft.com/l/team/19%3A08b594cd465e4c0491fb751e823802e2%40thread.skype/conversations?groupId=4d6d04cd-dbf0-43c8-a2ff-f80dd38be034&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47> 。
+1. Microsoft の内部パートナーは、次のチームに参加して、この問題の詳細やヘルプを提供できます <https://teams.microsoft.com/l/team/19%3A08b594cd465e4c0491fb751e823802e2%40thread.skype/conversations?groupId=4d6d04cd-dbf0-43c8-a2ff-f80dd38be034&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47> 。
 
 > [!NOTE]
-> ベスト プラクティスとして、Cookie の目的に合った使用を反映するように SameSite 属性を常に設定することを推奨します。 既定のブラウザーの動作に依存しません。 詳細については[、「Developers: Get Ready for New SameSite=None」を参照してください。セキュリティで保護された Cookie 設定](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)。
+> Cookie の使用目的を反映するように SameSite 属性を設定する必要があります。 既定のブラウザーの動作に依存しません。 詳細については[、「Developers: Get Ready for New SameSite=None」を参照してください。セキュリティで保護された Cookie 設定](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)。
 
-### <a name="tabs-task-modules-and-message-extensions"></a>タブ、タスク モジュール、およびメッセージ拡張機能
+### <a name="tabs-task-modules-and-messaging-extensions"></a>タブ、タスク モジュール、メッセージング拡張機能
 
-* Teamsは、トップ レベルまたはファースト パーティのコンテキストで表示されるコンテンツを埋め `<iframes>` 込む場合に使用します。
+* Teamsは、トップ レベルまたはファースト パーティのコンテキストで表示されるコンテンツを埋め込 `<iframes>` む場合に使用します。
 * タスク モジュールを使用すると、Teams のアプリケーションでモーダル ポップアップ エクスペリエンスを作成することができます。 タブと同様に、現在のページ内にモーダル ウィンドウが開きます。
-* メッセージ拡張機能を使用すると、外部リソースからリッチコンテンツをチャット メッセージに挿入できます。
+* メッセージング拡張機能を使用すると、外部リソースからリッチコンテンツをチャット メッセージに挿入できます。
 
-埋め込みコンテンツで使用される Cookie は、サイトが . `<iframe>` さらに、ページ上のリモート リソースが、要求とタグ、外部フォント、および個人設定されたコンテンツで送信される Cookie に依存している場合は、それらのリソースがクロスサイトの使用状況 (フォールバックなど) のマークが付いているか、フォールバックが適切に設定されている必要があります。 `<img>` `<script>` `SameSite=None; Secure`
+埋め込みコンテンツで使用される Cookie は、サイトが . `<iframe>` さらに、ページ上のリモート リソースが、要求とタグ、外部フォント、および個人設定されたコンテンツで送信される Cookie に依存している場合は、それらのリソースがクロス サイトの使用状況 (フォールバックなど) のマークが付いているか、フォールバックが確実に実行されている必要があります。 `<img>` `<script>` `SameSite=None; Secure`
 
 ### <a name="authentication"></a>認証
 
-* タブに埋め込まれたコンテンツ ページの認証が必要な場合は、Web ベースの認証フローを使用する必要があります。
-* Web ベースの認証フローは、構成ページ、タスク モジュール、またはメッセージング拡張機能にも使用できます。
-* タスク モジュールを使用する必要がある会話型ボットには、Web ベースの認証フローを使用できます。
+次の場合は、Web ベースの認証フローを使用する必要があります。
 
-更新された SameSite の制限に従って、リンクが外部サイトから派生した場合、ブラウザーは既に認証された Web サイトに Cookie を追加しない。 認証 Cookie がクロスサイトの使用に対してマークされているのを確認するか、フォールバックが適切に行なう `SameSite=None; Secure` 必要があります。
+* タブに埋め込まれたコンテンツ ページ。
+* 構成ページ、タスク モジュール、およびメッセージング拡張機能。
+* タスク モジュールを使用した会話型ボット。
 
-### <a name="android-system-webview"></a>Android System WebView
+更新された SameSite の制限に従って、リンクが外部サイトから派生した場合、ブラウザーは既に認証された Web サイトに Cookie を追加しない。 認証 Cookie にクロス サイトの使用状況のマークが付けられているか、フォールバックが正しく `SameSite=None; Secure` 設定されている必要があります。
 
-Android WebView は、Android アプリが Web コンテンツを表示できる Chrome システム コンポーネントです。 新しい制限は Chrome 80 から始まる既定の制限になりますが、WebViews では直ちに適用されません。 これらは将来適用されます。 Android では、準備のために、ネイティブ アプリが CookeManager API を介して [直接 Cookie を設定できます](https://developer.android.com/reference/android/webkit/CookieManager)。
+## <a name="android-system-webview"></a>Android System WebView
 
-* ファースト パーティのコンテキストでのみ必要な Cookie の場合は、必要に応じて宣言するか `SameSite=Lax` `SameSite=Strict` 、または宣言する必要があります。
-* サードパーティのコンテキストで必要な Cookie の場合は、その Cookie がとして宣言されている必要があります `SameSite=None; Secure` 。
+Android WebView は、Android アプリが Web コンテンツを表示できる Chrome システム コンポーネントです。 新しい制限は既定ですが、Chrome 80 から始まるが、WebViews では直ちに適用されません。 これらは将来適用されます。 Android では、準備のために、ネイティブ アプリが CookieManager API を介して [直接 Cookie を設定できます](https://developer.android.com/reference/android/webkit/CookieManager)。
+
+> [!NOTE]     
+> * 必要に応じて、ファースト パーティ Cookie を宣言するか `SameSite=Lax` `SameSite=Strict` 、または宣言する必要があります。      
+> * サードパーティの Cookie をとして宣言する必要があります `SameSite=None; Secure` 。   
 
 ## <a name="see-also"></a>関連項目
 
@@ -83,6 +90,5 @@ Android WebView は、Android アプリが Web コンテンツを表示できる
 * [SameSite Cookie のレシピ](https://web.dev/samesite-cookie-recipes/)
 * [既知の互換性のないクライアント]( https://www.chromium.org/updates/same-site/incompatible-clients)
 * [開発者: Get Ready for New SameSite=None;セキュリティで保護された Cookie 設定](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
-
-**OpenId Connect影響**<br>
-[今後の SameSite Cookie の変更点 (ASP.NET と ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
+* [今後の SameSite Cookie の変更点 (ASP.NET と ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
+* [HTTP Cookie](https://developer.mozilla.org/docs/Web/HTTP/Cookies)

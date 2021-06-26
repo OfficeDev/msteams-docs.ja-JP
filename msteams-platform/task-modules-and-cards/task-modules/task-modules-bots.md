@@ -1,39 +1,41 @@
 ---
-title: ボットでのタスク モジュールMicrosoft Teamsする
-description: ボット フレームワーク カード、アダプティブ カード、ディープ Microsoft Teamsなど、ボットでタスク モジュールを使用する方法
+title: ボットでタスク モジュールMicrosoft Teamsする
+description: ボット フレームワーク カード、アダプティブ カード、ディープ Microsoft Teamsなど、ボットでタスク モジュールを使用する方法。
 localization_priority: Normal
 ms.topic: how-to
 keywords: タスク モジュールのチーム ボット
-ms.openlocfilehash: bfaf3dfe791c1736aeb418e2689e513908f04534
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 5d9aa2b651a4c99cee75aada62a4d1176a589d79
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566570"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140308"
 ---
-# <a name="using-task-modules-from-microsoft-teams-bots"></a>ボットからのタスク モジュールMicrosoft Teamsする
+# <a name="use-task-modules-from-bots"></a>ボットからのタスク モジュールの使用
 
-タスク モジュールは、アダプティブ カードMicrosoft Teamsボット フレームワーク カード (Hero、Thumbnail、および Office 365 コネクタ) のボタンを使用して、ボットから呼び出すことができます。 多くの場合、タスク モジュールは、開発者がボットの状態を追跡し、ユーザーがシーケンスを中断/取り消す必要がある複数の会話手順よりも優れたユーザー エクスペリエンスです。
+タスク モジュールは、ヒーロー、サムネイル、Microsoft Teams コネクタであるアダプティブ カードおよびボット フレームワーク カードのボタンを使用して、Office 365ボットから呼び出すことができます。 タスク モジュールは、多くの場合、複数の会話手順よりも優れたユーザー エクスペリエンスです。 ボットの状態を追跡し、ユーザーがシーケンスを中断またはキャンセルできます。
 
 タスク モジュールを呼び出す方法は 2 通りあります。
 
-* **新しい種類の呼び出しメッセージ `task/fetch` 。** Bot Framework カードのカード アクション、またはアダプティブ カードのカード アクションを使用すると、タスク モジュール (URL またはアダプティブ カード) がボットから動的に `invoke` [](~/task-modules-and-cards/cards/cards-actions.md#invoke) `Action.Submit` [](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) `task/fetch` フェッチされます。
-* **ディープ リンク URL。** タスク モジュール[のディープ リンク構文を](~/task-modules-and-cards/what-are-task-modules.md#task-module-deep-link-syntax)使用すると、Bot Framework カードのカード アクション、アダプティブ カードのカード アクションをそれぞれ `openUrl` [](~/task-modules-and-cards/cards/cards-actions.md#openurl) `Action.OpenUrl` [](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)使用できます。 ディープ リンク URL では、タスク モジュールの URL またはアダプティブ カードの本文が事前に明らかに知られているので、サーバーのラウンドトリップは避けます `task/fetch` 。
+* 新しい種類の呼び出しメッセージ : ボット フレームワーク カードのカード アクションを使用するか、アダプティブ カードのカード アクションを使用して、タスク モジュールが `task/fetch` `invoke` [](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke) `Action.Submit` [](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) `task/fetch` URL またはアダプティブ カードを使用して、ボットから動的にフェッチされます。
+* ディープ リンク URL:[](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax)タスク モジュールのディープ リンク構文を使用して、Bot Framework カードのカード アクションまたはアダプティブ カードのカード アクションをそれぞれ `openUrl` [](~/task-modules-and-cards/cards/cards-actions.md#action-type-openurl) `Action.OpenUrl` [](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)使用できます。 ディープ リンク URL を使用すると、タスク モジュールの URL またはアダプティブ カード本文は、 を基準にしたサーバーのラウンドトリップを回避することが既に知られています `task/fetch` 。
 
->[!IMPORTANT]
->安全な通信を確保するには、HTTPS `url` `fallbackUrl` 暗号化プロトコルを実装する必要があります。
+> [!IMPORTANT]
+> それぞれ `url` `fallbackUrl` 、HTTPS 暗号化プロトコルを実装する必要があります。
 
-## <a name="invoking-a-task-module-through-taskfetch"></a>タスク/フェッチによるタスク モジュールの呼び出し
+次のセクションでは、 を使用してタスク モジュールを呼び出す方法の詳細について説明します `task/fetch` 。
 
-カードアクションのオブジェクトが適切な方法で初期化されている場合 (以下で詳しく説明します)、ユーザーがボタンを押すと、メッセージがボット `value` `invoke` `Action.Submit` `invoke` に送信されます。 メッセージに対する HTTP 応答には、ラッパー オブジェクトに TaskInfo オブジェクトが埋め込まれているので、Teamsモジュールの表示に `invoke` 使用されます。 [](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)
+## <a name="invoke-a-task-module-using-taskfetch"></a>タスク/フェッチを使用してタスク モジュールを呼び出す
 
-![task/fetch request/response](~/assets/images/task-module/task-module-invoke-request-response.png)
+カードアクションのオブジェクトが初期化されると、ユーザーがボタンを選択すると、ボットに `value` `invoke` `Action.Submit` `invoke` メッセージが送信されます。 メッセージに対する HTTP 応答には、ラッパー オブジェクトに TaskInfo オブジェクトが埋め込まれているので、Teamsモジュールの表示に `invoke` 使用されます。 [](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object)
 
-各手順についてもう少し詳しく見てみます。
+![task/fetch 要求または応答](~/assets/images/task-module/task-module-invoke-request-response.png)
 
-1. 次の使用例は、"Buy" カードアクションを持つ Bot Framework Hero `invoke` [カードを示しています](~/task-modules-and-cards/cards/cards-actions.md#invoke)。 プロパティの値 `type` は、 `task/fetch` - オブジェクトの残りの `value` 部分は、好きなものは何でもできます。
+次の手順では、タスク/フェッチを使用してタスク モジュールを呼び出します。
+
+1. この画像は、カードの購入アクションを含む Bot Framework **ヒーロー カード** `invoke` [を示しています](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke)。 プロパティの値 `type` は、オブジェクトの残りの部分 `task/fetch` `value` が選択できます。
 1. ボットは HTTP `invoke` POST メッセージを受信します。
-1. ボットは応答オブジェクトを作成し、HTTP 200 応答コードを使用して POST 応答の本文に返します。 応答のスキーマについては、以下のタスク [/](#the-flexibility-of-tasksubmit)送信に関するディスカッションで説明しますが、今覚えておく必要がある重要な点は、HTTP 応答の本文にラッパー オブジェクトに埋め込まれた [TaskInfo オブジェクト](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object) が含まれていることです。 例:
+1. ボットは応答オブジェクトを作成し、HTTP 200 応答コードを使用して POST 応答の本文に返します。 応答のスキーマの詳細については [、「task/submit」を参照してください](#the-flexibility-of-tasksubmit)。 次のコードは、ラッパー オブジェクトに埋め込まれた [TaskInfo](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) オブジェクトを含む HTTP 応答の本文の例を示しています。
 
     ```json
     {
@@ -50,193 +52,166 @@ ms.locfileid: "52566570"
     }
     ```
 
-    ボット `task/fetch` のイベントとその応答は、概念的には、クライアント SDK `microsoftTeams.tasks.startTask()` の関数と似ています。
+    ボット `task/fetch` のイベントとその応答は、クライアント `microsoftTeams.tasks.startTask()` SDK の関数と似ています。
+
 1. Microsoft Teamsタスク モジュールを表示します。
 
-## <a name="submitting-the-result-of-a-task-module"></a>タスク モジュールの結果の送信
+次のセクションでは、タスク モジュールの結果の送信に関する詳細を説明します。
 
-ユーザーがタスク モジュールを終了すると、ボットに結果を送信し戻すのは、タブ[](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-submitting-the-result-of-a-task-module)の動作と似ていますが、いくつかの違いがあります。ここではも説明します。
+## <a name="submit-the-result-of-a-task-module"></a>タスク モジュールの結果を送信する
 
-* **HTML/JavaScript ( `TaskInfo.url` ) 。** ユーザーが入力した情報を検証したら、SDK 関数を呼び出します (以下、読みやすさの目的 `microsoftTeams.tasks.submitTask()` `submitTask()` で呼び出します)。 Teams がタスク モジュールを閉じるだけで、ほとんどの場合、オブジェクトまたは文字列を自分のタスク モジュールに渡す場合は、パラメーターを指定せずに呼び出 `submitTask()` します `submitHandler` 。 単に最初のパラメーターとして渡します `result` 。 Teams呼び `submitHandler` 出す : `err` は、渡した `null` `result` オブジェクト/文字列になります `submitTask()` 。 パラメーターを使用して呼び出す場合は、文字列の配列または配列を渡す必要があります `submitTask()` `result`  `appId` `appId` 。これにより、Teams は、結果を送信するアプリがタスク モジュールを呼び出したアプリと同じことを検証できます。 ボットは、以下の説明 `task/submit` を含む `result` メッセージを受信 [します](#payload-of-taskfetch-and-tasksubmit-messages)。
-* **アダプティブ カード ( `TaskInfo.card` ) 。** アダプティブ カード本文 (ユーザーが入力した場合) は、ユーザーがボタンを押すと、メッセージを介してボット `task/submit` に送信 `Action.Submit` されます。
+ユーザーがタスク モジュールを終了すると、結果をボットに送信し戻すのは、タブの動作と似ています。 詳細については、タスク [モジュールの結果を送信する例を参照してください](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-of-submitting-the-result-of-a-task-module)。 次のようにいくつかの違いがあります。
+
+* HTML または JavaScript : ユーザーが入力した値を検証したら、読みやすさを目的として、以下に示す SDK 関数 `TaskInfo.url` `microsoftTeams.tasks.submitTask()` `submitTask()` を呼び出します。 タスク モジュールを閉じTeamsパラメーターを指定せずに呼び出しできますが、オブジェクトまたは文字列を自分に `submitTask()` 渡す必要があります `submitHandler` 。 最初のパラメーターとして渡します `result` 。 Teams呼び `submitHandler` 出す `err` 、、、、に渡した `null` `result` オブジェクトまたは文字列です `submitTask()` 。 パラメーターを使用 `submitTask()` して呼び出 `result` す場合は、文字列または文字列の `appId` 配列を渡す必要 `appId` があります。 これにより、Teams送信するアプリがタスク モジュールを呼び出したアプリと同じことを検証できます。 ボットは、 を含む `task/submit` メッセージを受信 `result` します。 詳細については、「ペイロードと [メッセージ」 `task/fetch` を `task/submit` 参照してください](#payload-of-taskfetch-and-tasksubmit-messages)。
+* アダプティブ カード : ユーザーが入力したアダプティブ カード本文は、ユーザーがボタンを選択すると、メッセージを介してボット `TaskInfo.card` `task/submit` に送信 `Action.Submit` されます。
+
+次のセクションでは、 の柔軟性に関する詳細を示します `task/submit` 。
 
 ## <a name="the-flexibility-of-tasksubmit"></a>タスク/送信の柔軟性
 
-前のセクションでは、ユーザーがボットから呼び出されたタスク モジュールを終了すると、ボットは常にメッセージを受信する方法について説明 `task/submit invoke` しました。 開発者は、メッセージに応答するときに *いくつかのオプション* があります `task/submit` 。
+ユーザーがボットから呼び出されたタスク モジュールで終了すると、ボットは常にメッセージを受信 `task/submit invoke` します。 次のようにメッセージに応答する場合、いくつかの `task/submit` オプションがあります。
 
 | HTTP 本文の応答                      | シナリオ                                |
 | --------------------------------------- | --------------------------------------- |
-| なし (メッセージを `task/submit` 無視する) | 最も単純な応答は応答なしです。 ユーザーがタスク モジュールを使い終わったときにボットが応答する必要はありません。 |
-| <pre>{<br/>  "task": {<br/>    "type": "message",<br/>    "value": "Message text"<br/>  }<br/>}</pre> | Teamsポップアップ メッセージ ボックスに値 `value` が表示されます。 |
-| <pre>{<br/>  "task": {<br/>    "type": "continue",<br/>    "value": &lt;TaskInfo object&gt;<br/>  }<br/>}</pre> | ウィザード/マルチステップ エクスペリエンスでアダプティブ カードのシーケンスを一緒に "チェーン" できます。 _アダプティブ カードをシーケンスにチェーン化する方法は高度なシナリオであり、ここでは説明しません。ただしNode.jsサンプル アプリではサポートされ、その動作方法は、そのサンプル ファイルに [README.md されます](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs#implementation-notes)。_ |
+| メッセージを無視 `task/submit` しない | 最も単純な応答は応答なしです。 ユーザーがタスク モジュールを使い終わったときにボットが応答する必要はありません。 |
+| <pre>{<br/>  "task": {<br/>    "type": "message",<br/>    "value": "Message text"<br/>  }<br/>}</pre> | Teamsポップアップ メッセージ ボックス `value` に値を表示します。 |
+| <pre>{<br/>  "task": {<br/>    "type": "continue",<br/>    "value": &lt;TaskInfo object&gt;<br/>  }<br/>}</pre> | アダプティブ カードのシーケンスを、ウィザードまたはマルチステップ エクスペリエンスで一緒にチェーンできます。 |
+
+> [!NOTE]
+> アダプティブ カードをシーケンスにチェーン化する方法は、高度なシナリオです。 このNode.jsサンプル アプリがサポートしています。 詳細については、「タスク モジュール[のMicrosoft Teams」を参照Node.js。 ](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs#implementation-notes)
+
+次のセクションでは、ペイロードとメッセージの詳細 `task/fetch` について説明 `task/submit` します。
 
 ## <a name="payload-of-taskfetch-and-tasksubmit-messages"></a>タスク/フェッチおよびタスク/送信メッセージのペイロード
 
-このセクションでは、ボットがボットまたは Bot Framework オブジェクトを受信するときに受け取るスキーマ `task/fetch` `task/submit` を定義 `Activity` します。 重要なトップ レベルは、以下に表示されます。
+このセクションでは、ボットがボットまたは Bot Framework オブジェクトを受信するときに受け取るスキーマ `task/fetch` `task/submit` を定義 `Activity` します。 次の表に、ペイロードとメッセージのプロパティ `task/fetch` を示 `task/submit` します。
 
 | プロパティ | 説明                          |
 | -------- | ------------------------------------ |
-| `type`   | 常に `invoke`              |
-| `name`   | どちらか `task/fetch` または `task/submit` |
-| `value`  | 開発者定義のペイロード。 通常、オブジェクトの構造 `value` は、オブジェクトから送信されたデータをTeams。 ただし、この場合は、ボット フレームワーク ( ) とアダプティブ カードアクション ( ) の両方から動的フェッチ ( ) をサポートする必要があります。また、Teams をボットと通信する方法が必要です。 `task/fetch` `value` `Action.Submit` `data` `context` `value` / `data`<br/><br/>これを行うには、2 つを親オブジェクトに結合します。<br/><br/><pre>{<br/>  "context": {<br/>    "theme": "default" &vert; "dark" &vert; "contrast",<br/>  },<br/>  "data": [value field from Bot Framework card] &vert; [data field from Adaptive Card] <br/>}</pre>  |
+| `type`   | は常です `invoke` 。           |
+| `name`   | は、 `task/fetch` または `task/submit` です。 |
+| `value`  | 開発者定義のペイロードです。 オブジェクトの構造は、オブジェクトから送信される構造と `value` Teams。 ただし、この場合は異なります。 これは、Bot Framework (つまり) とアダプティブ カードアクションの両方からの動的フェッチのサポートが `task/fetch` `value` `Action.Submit` 必要です `data` 。 ボットに含まれているTeamsに加えて、ボットにメッセージを伝達 `context` する方法が `value` 必要です `data` 。<br/><br/>'value' と 'data' を親オブジェクトに結合します。<br/><br/><pre>{<br/>  "context": {<br/>    "theme": "default" &vert; "dark" &vert; "contrast",<br/>  },<br/>  "data": [value field from Bot Framework card] &vert; [data field from Adaptive Card] <br/>}</pre>  |
 
-## <a name="example-receiving-and-responding-to-taskfetch-and-tasksubmit-invoke-messages---nodejs"></a>例: タスク/フェッチおよびタスク/送信の呼び出しメッセージの受信と応答 - Node.js
+次のセクションでは、メッセージの受信と応答、およびメッセージの呼び出しの例を示 `task/fetch` `task/submit` Node.js。
 
-> [!NOTE]
-> 次のサンプル コードは、テクニカル プレビューとこの機能の最終リリースの間で変更されました。要求のスキーマは、前のセクションで説明した手順に `task/fetch` [従って変更されました](#payload-of-taskfetch-and-tasksubmit-messages)。 つまり、ドキュメントは正しくありませんが、実装は正しくありません。 変更された変更 `// for Technical Preview [...]` については、以下のコメントを参照してください。
+## <a name="example-of-taskfetch-and-tasksubmit-invoke-messages-in-nodejs-and-c"></a>タスク/フェッチとタスク/サブミットの呼び出しメッセージの例 (Node.js C)#
+
+# <a name="nodejs"></a>[Node.js](#tab/nodejs)
 
 ```typescript
-// Handle requests and responses for a "Custom Form" and an "Adaptive card" task module.
-// Assumes request is coming from an Adaptive card Action.Submit button that has a "taskModule" property indicating what to invoke
-private async onInvoke(event: builder.IEvent, cb: (err: Error, body: any, status?: number) => void): Promise<void> {
-    let invokeType = (event as any).name;
-    let invokeValue = (event as any).value;
-    if (invokeType === undefined) {
-        invokeType = null;
+handleTeamsTaskModuleFetch(context, taskModuleRequest) {
+    // Called when the user selects an options from the displayed HeroCard or
+    // AdaptiveCard.  The result is the action to perform.
+
+    const cardTaskFetchValue = taskModuleRequest.data.data;
+    var taskInfo = {}; // TaskModuleTaskInfo
+
+    if (cardTaskFetchValue === TaskModuleIds.YouTube) {
+        // Display the YouTube.html page
+        taskInfo.url = taskInfo.fallbackUrl = this.baseUrl + '/' + TaskModuleIds.YouTube + '.html';
+        this.setTaskInfo(taskInfo, TaskModuleUIConstants.YouTube);
+    } else if (cardTaskFetchValue === TaskModuleIds.CustomForm) {
+        // Display the CustomForm.html page, and post the form data back via
+        // handleTeamsTaskModuleSubmit.
+        taskInfo.url = taskInfo.fallbackUrl = this.baseUrl + '/' + TaskModuleIds.CustomForm + '.html';
+        this.setTaskInfo(taskInfo, TaskModuleUIConstants.CustomForm);
+    } else if (cardTaskFetchValue === TaskModuleIds.AdaptiveCard) {
+        // Display an AdaptiveCard to prompt user for text, and post it back via
+        // handleTeamsTaskModuleSubmit.
+        taskInfo.card = this.createAdaptiveCardAttachment();
+        this.setTaskInfo(taskInfo, TaskModuleUIConstants.AdaptiveCard);
     }
-    switch (invokeType) {
-        case "task/fetch": {
-            if (invokeValue !== undefined && invokeValue.data.taskModule === "customform") { // for Technical Preview, was invokeValue.taskModule
-                // Return the specified task module response to the bot
-                let fetchTemplate: any = {
-                    "task": {
-                        "type": "continue",
-                        "value": {
-                            "title": "Custom Form",
-                            "height": 510,
-                            "width": 430,
-                            "fallbackUrl": "https://contoso.com/teamsapp/customform",
-                            "url": "https://contoso.com/teamsapp/customform",
-                        }
-                    }
-                };
-                cb(null, fetchTemplate, 200);
-            };
-            if (invokeValue !== undefined && invokeValue.data.taskModule === "adaptivecard") { // for Technical Preview, was invokeValue.taskModule
-                let adaptiveCard = {
-                    "type": "AdaptiveCard",
-                    "body": [
-                        {
-                            "type": "TextBlock",
-                            "text": "Here is a ninja cat:"
-                        },
-                        {
-                            "type": "Image",
-                            "url": "http://adaptivecards.io/content/cats/1.png",
-                            "size": "Medium"
-                        }
-                    ],
-                    "version": "1.0"
-                };
-                // Return the specified task module response to the bot
-                let fetchTemplate: any = {
-                    "task": {
-                        "type": "continue",
-                        "value": {
-                            "title": "Ninja Cat",
-                            "height": "small",
-                            "width": "small",
-                            "card": {
-                                contentType: "application/vnd.microsoft.card.adaptive",
-                                content: adaptiveCard,
-                            }
-                        }
-                    }
-                };
-                cb(null, fetchTemplate, 200);
-            };
-            break;
+
+    return TaskModuleResponseFactory.toTaskModuleResponse(taskInfo);
+}
+
+async handleTeamsTaskModuleSubmit(context, taskModuleRequest) {
+    // Called when data is being returned from the selected option (see `handleTeamsTaskModuleFetch').
+
+    // Echo the users input back.  In a production bot, this is where you'd add behavior in
+    // response to the input.
+    await context.sendActivity(MessageFactory.text('handleTeamsTaskModuleSubmit: ' + JSON.stringify(taskModuleRequest.data)));
+
+    // Return TaskModuleResponse
+    return {
+        // TaskModuleMessageResponse
+        task: {
+            type: 'message',
+            value: 'Thanks!'
         }
-        case "task/submit": {
-            if (invokeValue.data !== undefined) {
-                // It's a valid task module response
-                let submitResponse: any = {
-                    "task": {
-                        "type": "message",
-                        "value": "Task complete!",
-                    }
-                };
-                cb(null, fetchTemplates.submitMessageResponse, 200)
-            }
-        }
-    }
+    };
+}
+
+setTaskInfo(taskInfo, uiSettings) {
+    taskInfo.height = uiSettings.height;
+    taskInfo.width = uiSettings.width;
+    taskInfo.title = uiSettings.title;
 }
 ```
 
-## <a name="example-receiving-and-responding-to-taskfetch-and-tasksubmit-invoke-messages---c"></a>例: タスク/フェッチおよびタスク/送信の呼び出しメッセージの受信と応答 - C#
-
-ボットC#、メッセージは、メッセージ `invoke` を処理する `HttpResponseMessage()` コントローラーによって処理 `Activity` されます。 要求 `task/fetch` と `task/submit` 応答は JSON です。 このC#、Node.js のように生の JSON を扱うのは便利ではないので、JSON とのシリアル化を処理するにはラッパー クラスが必要です。 Microsoft Teams [C# SDK](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)ではこれを直接サポートしていませんが、C# サンプル アプリでこれらの単純なラッパー クラスの外観[の例を確認できます](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Models/TaskModel.cs)。
-
-以下に、C# これらのラッパー クラス ( 、 、 ) を使用して処理およびメッセージを処理するコードの例を次に示します。サンプルから `task/fetch` `task/submit` `TaskInfo` `TaskEnvelope` 抜粋 [します](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Controllers/MessagesController.cs)。
+# <a name="c"></a>[C#](#tab/csharp)
 
 ```csharp
-private HttpResponseMessage HandleInvokeMessages(Activity activity)
+protected override Task<TaskModuleResponse> OnTeamsTaskModuleFetchAsync(ITurnContext<IInvokeActivity> turnContext, TaskModuleRequest taskModuleRequest, CancellationToken cancellationToken)
 {
-    var activityValue = activity.Value.ToString();
-    if (activity.Name == "task/fetch")
-    {
-        var action = Newtonsoft.Json.JsonConvert.DeserializeObject<Models.BotFrameworkCardValue<string>>(activityValue);
+    var asJobject = JObject.FromObject(taskModuleRequest.Data);
+    var value = asJobject.ToObject<CardTaskFetchValue<string>>()?.Data;
 
-        Models.TaskInfo taskInfo = GetTaskInfo(action.Data);
-        Models.TaskEnvelope taskEnvelope = new Models.TaskEnvelope
-        {
-            Task = new Models.Task()
-            {
-                Type = Models.TaskType.Continue,
-                TaskInfo = taskInfo
-            }
-        };
-        return Request.CreateResponse(HttpStatusCode.OK, taskEnvelope);
-    }
-    else if (activity.Name == "task/submit")
-    {
-        ConnectorClient connector = new ConnectorClient(new Uri(activity.ServiceUrl));
-        Activity reply = activity.CreateReply("Received = " + activity.Value.ToString());
-        connector.Conversations.ReplyToActivity(reply);
-    }
-    return new HttpResponseMessage(HttpStatusCode.Accepted);
-}
-
-// Helper function for building the TaskInfo object based on the incoming request
-private static Models.TaskInfo GetTaskInfo(string actionInfo)
-{
-    Models.TaskInfo taskInfo = new Models.TaskInfo();
-    switch (actionInfo)
+    var taskInfo = new TaskModuleTaskInfo();
+    switch (value)
     {
         case TaskModuleIds.YouTube:
-            taskInfo.Url = taskInfo.FallbackUrl = ApplicationSettings.BaseUrl + "/" + TaskModuleIds.YouTube;
+            taskInfo.Url = taskInfo.FallbackUrl = _baseUrl + "/" + TaskModuleIds.YouTube;
             SetTaskInfo(taskInfo, TaskModuleUIConstants.YouTube);
             break;
-        case TaskModuleIds.PowerApp:
-            taskInfo.Url = taskInfo.FallbackUrl = ApplicationSettings.BaseUrl + "/" + TaskModuleIds.PowerApp;
-            SetTaskInfo(taskInfo, TaskModuleUIConstants.PowerApp);
-            break;
         case TaskModuleIds.CustomForm:
-            taskInfo.Url = taskInfo.FallbackUrl = ApplicationSettings.BaseUrl + "/" + TaskModuleIds.CustomForm;
+            taskInfo.Url = taskInfo.FallbackUrl = _baseUrl + "/" + TaskModuleIds.CustomForm;
             SetTaskInfo(taskInfo, TaskModuleUIConstants.CustomForm);
             break;
         case TaskModuleIds.AdaptiveCard:
-            taskInfo.Card = AdaptiveCardHelper.GetAdaptiveCard();
+            taskInfo.Card = CreateAdaptiveCardAttachment();
             SetTaskInfo(taskInfo, TaskModuleUIConstants.AdaptiveCard);
             break;
         default:
             break;
     }
-    return taskInfo;
+
+    return Task.FromResult(taskInfo.ToTaskModuleResponse());
+}
+
+protected override async Task<TaskModuleResponse> OnTeamsTaskModuleSubmitAsync(ITurnContext<IInvokeActivity> turnContext, TaskModuleRequest taskModuleRequest, CancellationToken cancellationToken)
+{
+    var reply = MessageFactory.Text("OnTeamsTaskModuleSubmitAsync Value: " + JsonConvert.SerializeObject(taskModuleRequest));
+    await turnContext.SendActivityAsync(reply, cancellationToken);
+
+    return TaskModuleResponseFactory.CreateResponse("Thanks!");
+}
+
+private static void SetTaskInfo(TaskModuleTaskInfo taskInfo, UISettings uIConstants)
+{
+    taskInfo.Height = uIConstants.Height;
+    taskInfo.Width = uIConstants.Width;
+    taskInfo.Title = uIConstants.Title.ToString();
 }
 ```
 
-上記の例では示されていないのは、各ケースのオブジェクトの 、 、およびプロパティを設定する `SetTaskInfo()` `height` `width` `title` `TaskInfo` 関数です。 [SetTaskInfo() のソース コードを次に示します](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Controllers/MessagesController.cs)。
+---
 
-### <a name="bot-framework-card-actions-vs-adaptive-card-actionsubmit-actions"></a>Bot Framework カードアクションとアダプティブ カード Action.Submit アクション
+### <a name="bot-framework-card-actions-vs-adaptive-card-actionsubmit-actions"></a>Bot Framework カードアクションとアダプティブ カード アクション.Submit アクション
 
-Bot Framework カード アクションのスキーマは、アダプティブ カードアクションとは少し異 `Action.Submit` なります。 その結果、タスク モジュールを呼び出す方法も少し異なります。オブジェクトにはオブジェクトが含まれているので、カード内の他のプロパティに干渉 `data` `Action.Submit` `msteams` しません。 次の表に、それぞれの例を示します。
+Bot Framework カードアクションのスキーマはアダプティブ カード アクションとは異なります。また、タスク モジュールを呼び出す方法も `Action.Submit` 異なります。 オブジェクト `data` には `Action.Submit` オブジェクトが含まれているので、カード内の他の `msteams` プロパティに干渉しません。 次の表に、各カード アクションの例を示します。
 
-| Bot Framework カードアクション                              | アダプティブ カード Action.Submit アクション                     |
+| Bot Framework カードアクション                              | アダプティブ カード アクション.Submit アクション                     |
 | ------------------------------------------------------ | ------------------------------------------------------ |
 | <pre>{<br/>  "type": "invoke",<br/>  "title": "Buy",<br/>  "value": {<br/>    "type": "task/fetch",<br/>    &lt;...&gt;<br/>  }<br/>}</pre> | <pre>{<br/>  "type": "Action.Submit",<br/>  "id": "btnBuy",<br/>  "title": "Buy",<br/>  "data": {<br/>    &lt;...&gt;,<br/>    "msteams": {<br/>      "type": "task/fetch"<br/>    }<br/>  }<br/>}</pre>  |
 
+## <a name="code-sample"></a>コード サンプル
+
+|サンプルの名前 | 説明 | .NET | Node.js|
+|----------------|-----------------|--------------|----------------|
+|タスク モジュールのサンプル ボット-V4 | タスク モジュールを作成するためのサンプル。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
+
 ## <a name="see-also"></a>関連項目
 
-* [Microsoft Teams モジュールのサンプル コード — nodejs](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts)
-* [ボット フレームワークのサンプル](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)。
+* [Microsoft Teamsタスク モジュールのサンプル コードをNode.js](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts)
+* [ボット フレームワークのサンプル](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)

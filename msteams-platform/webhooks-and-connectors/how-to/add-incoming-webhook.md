@@ -1,74 +1,98 @@
 ---
-title: 受信 Webhook を使用して外部リクエストを Microsoft Teams に投稿する
-author: surbhigupta
-description: Teams アプリに受信 Webhook を追加する方法
+title: 受信 Webhook の作成
+author: laujan
+description: 受信 Webhook をアプリに追加し、Teams Webhook を使用して外部要求をTeamsする方法について説明します。
 keywords: teams タブ送信 Webhook
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: acaf2c7ba8c9c6d34399b51f3c0ef9a1110c0fb4
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 53fe9725148579325386fa4677bebb61fdb72c56
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068936"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140119"
 ---
-# <a name="post-external-requests-to-teams-with-incoming-webhooks"></a>受信 Webhook を使用して外部リクエストを Teams に投稿する
+# <a name="create-incoming-webhook"></a>受信 Webhook の作成
 
-## <a name="what-are-incoming-webhooks-in-teams"></a>Teams での受信 Webhook とは
-
-受信 Webhook は Teams の特別な種類のコネクタで、外部アプリがチーム チャネルでコンテンツを共有するためのシンプルな方法を提供し、時にはトラッキングや通知ツールとしても使用されます。 Teams は、投稿するメッセージと JSON ペイロードを通常カード形式で送信するための一意の URL を提供します。 カードは、ある 1 つのトピックに関連するコンテンツとアクションを含んだユーザー インターフェース (UI) コンテナであり、メッセージ データを一貫した方法で表示するための方法です。 Teams は、次の 3 つの機能でカードを使用します。
+受信 Webhook を使用すると、外部アプリがチャネル内のコンテンツTeamsできます。 これらの Webhook は、追跡および通知ツールとして使用されます。 これらは一意の URL を提供し、カード形式のメッセージを含む JSON ペイロードを送信します。 カードは、1 つのトピックに関連するコンテンツとアクションを含むユーザー インターフェイス コンテナーです。 Teams機能内でカードを使用します。
 
 * ボット
 * メッセージング拡張機能
 * コネクタ
 
-## <a name="incoming-webhook-key-features"></a>受信 Webhook の主な機能
+## <a name="key-features-of-incoming-webhook"></a>受信 Webhook の主な機能
+
+次の表に、受信 Webhook の機能と説明を示します。
 
 | 機能 | 説明 |
 | ------- | ----------- |
-|スコープ構成|受信 Webhook はスコープ設定され、チャネル レベルで構成されます。 たとえば、送信 Webhook はスコープ設定され、チーム レベルで構成されます。|
-|セキュリティで保護されたリソース定義|メッセージは JSON ペイロードとして書式設定されます。 この宣言メッセージング構造により、クライアントでコードが実行されることはないため、悪意のあるコードの挿入が防止されます。|
-|アクション可能なメッセージングのサポート|カード経由でメッセージを送信する場合は、**アクション可能なメッセージ カード** 形式を使用する必要があります。 アクション可能なメッセージ カードは、Teams を含むすべての Office 365 グループでサポートされています。 こちらは、「[従来の操作可能なメッセージ カード リファレンス](/outlook/actionable-messages/message-card-reference)」と「[メッセージ カードのプレイグラウンド](https://messagecardplayground.azurewebsites.net)」へのリンクです。|
-|独立した HTTPS メッセージングのサポート| カードは、明瞭で一貫した方法で情報を表示する優れた方法です。 HTTPS POST 要求を送信できるツールやフレームワークは、受信 Webhook を介して Teams にメッセージを送信できます。|
-|Markdown のサポート|アクション可能なメッセージング カードのすべてのテキスト フィールドで、基本的な Markdown がサポートされています。 **カードには HTML マークアップを使用しないでください**。 HTML は無視され、プレーン テキストとして扱われます。|
+|受信 Webhook を使用したアダプティブ カード|アダプティブ カードは、受信 Webhooks 経由で送信できます。 詳細については、「受信 [Webhooks を使用してアダプティブ カードを送信する」を参照してください](../../webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook)。|
+|アクション可能なメッセージングのサポート|アクション可能なメッセージ カードは、Teams を含むすべての Office 365 グループでサポートされています。 カードを介してメッセージを送信する場合は、操作可能なメッセージ カード形式を使用する必要があります。 詳細については、「従来の操作可能な [メッセージ カード参照と](/outlook/actionable-messages/message-card-reference) メッセージ カード [のプレイグラウンド」を参照してください](https://messagecardplayground.azurewebsites.net)。|
+|独立した HTTPS メッセージングのサポート|カードは、情報を明確に一貫して提供します。 HTTPS POST 要求を送信できる任意のツールまたはフレームワークは、受信 Webhook を介してTeamsにメッセージを送信できます。|
+|Markdown のサポート|アクション可能なメッセージング カードのすべてのテキスト フィールドで、基本的な Markdown がサポートされています。 カードで HTML マークアップを使用しない。 HTML は無視され、プレーン テキストとして扱われます。|
+|スコープ構成|受信 Webhook はスコープ設定され、チャネル レベルで構成されます。|
+|セキュリティで保護されたリソース定義|メッセージは JSON ペイロードとして書式設定されます。 この宣言型メッセージング構造は、悪意のあるコードの挿入を防止します。|
 
-> [!Note]
-> Teams、メッセージング拡張機能、受信 Webhook、および Bot Framework は、オープンなクロスカード プラットフォーム フレームワークであるアダプティブ カードをサポートします。 [Teamsアダプティブ カード](../../webhooks-and-connectors/how-to/connectors-creating.md)は現在サポートされていません。 ただし、アダプティブ カードを[チャネルに投稿](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/)するフローをTeamsできます。
+> [!NOTE]
+> * Teams、メッセージング拡張機能、受信 Webhook、およびボット フレームワークは、オープンクロスカード プラットフォーム フレームワークであるアダプティブ カードをサポートします。 現在、Teams[は](../../webhooks-and-connectors/how-to/connectors-creating.md)アダプティブ カードをサポートしていない。 ただし、アダプティブ カードを[チャネルに投稿](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/)するフローをTeamsできます。
+> * カードと Webhook の詳細については、「アダプティブ カード [と受信 Webhooks」を参照してください](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks)。
 
-## <a name="add-an-incoming-webhook-to-a-teams-channel"></a>Teams チャネルに受信 Webhook を追加する
+## <a name="create-incoming-webhook"></a>受信 Webhook の作成
 
-> [!Important]  
-> チームの **[設定]** => **[メンバーのアクセス許可]** => **[Allow members to create, update, and remove connectors]** (メンバーがコネクタを作成、更新、削除することを許可する) が選択されている場合、すべてのチーム メンバーがコネクタの追加、変更、削除を行うことができます。
+**受信 Webhook を新しいチャネルにTeamsするには**
 
-**受信 Webhook を追加するには**
+1. Webhook を追加するチャネルに移動し、上部の &#8226;&#8226;&#8226; から [その他 **の** オプション] を選択します。
+1. ドロップダウン **メニューから [** コネクタ] を選択します。
 
-1. Webhook を追加するチャネルに移動し、上部のナビゲーション バーから (&#8226;&#8226;&#8226;) *[その他のオプション]* を選択します。
-1. ドロップダウン メニューから **[コネクタ]** を選択し、**受信 Webhook** を検索します。
-1. **[構成]** ボタンを選択し、名前を入力し、オプションで Webhook 用の画像アバターをアップロードします。
-1. ダイアログ ウィンドウに、チャネルにマッピングされる一意の URL が表示されます。 **URL をコピーして保存した** ことをご確認ください (URL は外部サービスに提供する必要があります)。
-1. **[完了]** ボタンを選択します。 Webhook が、チーム チャネルで利用できるようになります。
+    ![コネクタの選択](~/assets/images/connectors.png)
 
-## <a name="remove-an-incoming-webhook-from-a-teams-channel"></a>Teams チャネルから受信 Webhook を削除する
+1. 受信 **Webhook を検索し、[** 追加] を **選択します**。
+1. [ **構成]** を選択し、名前を指定し、必要に応じて webhook の画像をアップロードします。
 
-**受信 Webhook を削除するには**
+    ![[構成] ボタン](~/assets/images/configure.png)
 
-1. Webhook が追加されたチャネルに移動し、上部のナビゲーション バーから (&#8226;&#8226;&#8226;) *[その他のオプション]* を選択します。
-1. ドロップダウン メニューから **[コネクタ]** を選択します。
-1. 左側にある **[管理]** で、**[構成]** を選択します。
-1. *[number Configured]* (構成されている数) を選択すると、現在のコネクタの一覧が表示されます。
-1. 削除するコネクタの横にある **[管理]** を選択します。
-1. **[削除]** ボタンを選択すると、*[構成の削除]* ダイアログ ボックスが表示されます。
-1. 必要に応じて、**[削除]** ボタンを選択する前に、ダイアログ ボックスのフィールドとチェックボックスに入力を行います。 Webhook が、チーム チャネルから削除されます。
+1. ダイアログ ウィンドウには、チャネルにマップされる一意の URL が表示されます。 Webhook URL をコピーして保存し、ユーザーに情報を送信Microsoft Teamsし、[完了] を **選択します**。
 
-## <a name="distribution"></a>配布
+    ![一意の URL](~/assets/images/url.png)
 
-受信 Webhook の配布には、次の 3 つのオプションがあります。
+Webhook は、webhook チャネルTeamsできます。
 
-* チームに受信 Webhook を直接セットアップする。
-* 構成ページを追加して、受信 Webhook を [O365 コネクタ](~/webhooks-and-connectors/how-to/connectors-creating.md)でラップする。
-* [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) への提出の一部としてコネクタをパッケージ化して公開する。
+> [!NOTE]
+> [Teams] で、[設定メンバーのアクセス許可] [コネクタの作成、更新、および削除をメンバーに許可する] を選択して、チーム メンバーがコネクタを追加、変更、または削除できます  >    >  。
+
+## <a name="remove-incoming-webhook"></a>受信 Webhook の削除
+
+**受信 Webhook をチャネルからTeamsするには**
+
+1. チャネルに移動します。
+1. 上部 &#8226;&#8226;&#8226; **バーから [その他のオプション** ] を選択します。
+1. ドロップダウン **メニューから [** コネクタ] を選択します。
+1. 左側の [管理] で **、[構成** 済み] を **選択します**。
+1. [構成 **< *済みの 1*>] を** 選択して、現在のコネクタの一覧を表示します。
+
+    ![構成済みの Webhook](~/assets/images/configured.png)
+
+1. 削除 **するコネクタ** の横にある [管理] を選択します。
+
+    ![Webhook の管理](~/assets/images/manage.png)
+
+1. [削除 **] を選択します**。
+
+    ![Webhook を削除する](~/assets/images/remove.png)
+
+    [ **構成の削除]** ダイアログ ボックスが表示されます。
+
+    ![構成の削除](~/assets/images/removeconfiguration.png)
+
+1. ダイアログ ボックスのフィールドとチェック ボックスを入力し、[削除] を **選択します**。
+
+    ![最終的な削除](~/assets/images/finalremove.png)
+
+    webhook は、チャネルからTeamsされます。
 
 ## <a name="see-also"></a>関連項目
 
-[コネクタと Webhook へのメッセージの送信](~/webhooks-and-connectors/how-to/connectors-using.md)
+* [送信 Webhook の作成](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+* [Office 365 コネクタを作成する](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* [メッセージを作成して送信する](~/webhooks-and-connectors/how-to/connectors-using.md)

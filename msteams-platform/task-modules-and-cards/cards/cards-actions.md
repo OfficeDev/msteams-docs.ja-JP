@@ -4,38 +4,51 @@ description: ボットでのカード アクションMicrosoft Teams、ボット
 localization_priority: Normal
 ms.topic: conceptual
 keywords: teams ボット カードアクション
-ms.openlocfilehash: b9276c7197070df43ba447707e6fa4d3d4098591
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 1b20ca8003ab74c5dd2860e754024ae64ff94527
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566853"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140090"
 ---
 # <a name="card-actions"></a>カードアクション
 
-ボットとメッセージング拡張機能で使用されるカードは、Teamsアクティビティ ( ) の種類 [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) をサポートします。 これらのアクションは、Connectors `potentialActions` から使用Office 365コネクタ カードとは異なります。
+ボットとメッセージング拡張機能で使用されるカードは、Teamsアクティビティの種類をサポート [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) します。
+
+> [!NOTE]
+> コネクタ `CardAction` と使用する `potentialActions` 場合Office 365コネクタ カードのアクションは異なります。
 
 | 型 | アクション |
 | --- | --- |
 | `openUrl` | 既定のブラウザーで URL を開きます。 |
-| `messageBack` | ボタンをクリックしたユーザーまたはカードをタップしたユーザーからボットにメッセージとペイロードを送信し、別のメッセージをチャット ストリームに送信します。 |
-| `imBack`| ボタンをクリックしたユーザーまたはカードをタップしたユーザーからボットにメッセージを送信します。 このメッセージ (ユーザーからボットへ) は、すべての会話参加者に表示されます。 |
-| `invoke` | ボタンをクリックしたユーザーまたはカードをタップしたユーザーから、ボットにメッセージとペイロードを送信します。 このメッセージは表示されません。 |
+| `messageBack` | ボタンを選択したユーザーまたはカードをタップしたユーザーから、ボットにメッセージとペイロードを送信します。 チャット ストリームに別のメッセージを送信します。 |
+| `imBack`| ボタンを選択したユーザーまたはカードをタップしたユーザーからボットにメッセージを送信します。 ユーザーからボットへのこのメッセージは、すべての会話参加者に表示されます。 |
+| `invoke` | ボタンを選択したユーザーまたはカードをタップしたユーザーから、ボットにメッセージとペイロードを送信します。 このメッセージは表示されません。 |
 | `signin` | OAuth フローを開始し、ボットがセキュリティで保護されたサービスに接続できるようにします。 |
 
 > [!NOTE]
 >* Teams前の表 `CardAction` にリストされていない型はサポートされていません。
 >* Teamsプロパティはサポート `potentialActions` されていません。
->* カードアクションは、Bot [](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) Framework/Azure Bot Service で推奨されるアクションとは異なります。 推奨されるアクションは、Microsoft Teamsボット メッセージにボタンを表示する場合Teamsカードを使用します。
->* メッセージング拡張機能の一部としてカード アクションを使用している場合、カードがチャネルに送信されるまでアクションは機能しません。 カードがメッセージボックスの作成中に機能しません。
+>* カードアクションは、Bot Framework [または](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) Azure Bot Service で推奨されるアクションとは異なります。 推奨されるアクションは、Microsoft Teams。 ボット メッセージにボタンを表示する場合Teamsカードを使用します。
+>* メッセージング拡張機能の一部としてカード アクションを使用している場合、カードがチャネルに送信されるまでアクションは機能しません。 カードがメッセージの作成ボックスにある間、アクションは機能しません。
 
-Teamsアダプティブ カード[アクションもサポートしています](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)。これはアダプティブ カードでのみ使用されます。 これらのアクションは、この参照の最後にある独自のセクションに一覧表示されます。
+## <a name="action-type-openurl"></a>アクションの種類 openUrl
 
-## <a name="openurl"></a>openUrl
+`openUrl` action type は、既定のブラウザーで起動する URL を指定します。
 
-このアクションの種類は、既定のブラウザーで起動する URL を指定します。 ボットは、クリックされたボタンに関する通知を受け取らない点に注意してください。
+> [!NOTE]
+> ボットは、どのボタンが選択されたのか通知を受け取らない。
 
-フィールド `value` には、完全で適切に形成された URL が含まれている必要があります。
+を `openUrl` 使用すると、次のプロパティを使用してアクションを作成できます。
+
+| プロパティ | 説明 |
+| --- | --- |
+| `title` | ボタン ラベルとして表示されます。 |
+| `value` | このフィールドには、完全で適切に形成された URL が含まれている必要があります。 |
+
+# <a name="json"></a>[JSON](#tab/json)
+
+次のコードは、JSON のアクション `openUrl` の種類の例を示しています。
 
 ```json
 {
@@ -45,18 +58,50 @@ Teamsアダプティブ カード[アクションもサポートしています]
 }
 ```
 
-## <a name="messageback"></a>messageBack
+# <a name="c"></a>[C#](#tab/csharp)
+
+次のコードは、アクションの種類の `openUrl` 例を示C#。
+
+```csharp
+var button = new CardAction()
+{
+    Type = ActionTypes.OpenUrl,
+    Title = "Tabs in Teams",
+    Value = "https://docs.microsoft.com/en-us/microsoftteams/platform/"
+};
+```
+
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
+
+次のコードは `openUrl` 、JavaScript のアクションの種類の例を示しています。
+
+```javascript
+CardFactory.actions([
+{
+    type: 'openUrl',
+    title: 'Tabs in Teams',
+    value: 'https://docs.microsoft.com/en-us/microsoftteams/platform/'
+}])
+```
+
+---
+
+## <a name="action-type-messageback"></a>アクションの種類 messageBack
 
 を `messageBack` 使用すると、次のプロパティを使用して完全にカスタマイズされたアクションを作成できます。
 
 | プロパティ | 説明 |
 | --- | --- |
 | `title` | ボタン ラベルとして表示されます。 |
-| `displayText` | 省略可能。 アクションの実行時に、ユーザーがチャット ストリームにエコーします。 このテキストは *ボット* に送信されません。 |
+| `displayText` | 省略可能。 アクションの実行時にチャット ストリーム内のユーザーが使用します。 このテキストはボットに送信されません。 |
 | `value` | アクションの実行時にボットに送信されます。 アクションのコンテキスト (一意の識別子や JSON オブジェクトなど) をエンコードできます。 |
-| `text` | アクションの実行時にボットに送信されます。 ボットの開発を簡略化するには、このプロパティを使用します。コードでは、ボット ロジックをディスパッチするために 1 つのトップ レベル プロパティをチェックできます。 |
+| `text` | アクションの実行時にボットに送信されます。 ボットの開発を簡略化するには、このプロパティを使用します。 コードは、ボット ロジックをディスパッチするために、1 つのトップ レベル プロパティをチェックできます。 |
 
-柔軟性は、コードが単に使用しないだけで、表示されるユーザー メッセージを履歴に残すのを選択 `messageBack` できないという意味です `displayText` 。
+柔軟性は、コードが使用しないだけで、表示されるユーザー メッセージを履歴 `messageBack` に残せないという意味です `displayText` 。
+
+# <a name="json"></a>[JSON](#tab/json)
+
+次のコードは、JSON のアクション `messageBack` の種類の例を示しています。
 
 ```json
 {
@@ -74,9 +119,43 @@ Teamsアダプティブ カード[アクションもサポートしています]
 
 プロパティ `value` には、シリアル化された JSON 文字列または JSON オブジェクトを指定できます。
 
+# <a name="c"></a>[C#](#tab/csharp)
+
+次のコードは、アクションの種類の `messageBack` 例を示C#。
+
+```csharp
+var button = new CardAction()
+{
+    Type = ActionTypes.MessageBack,
+    Title = "My MessageBack button",
+    DisplayText = "I clicked this button",
+    Text = "User just clicked the MessageBack button",
+    Value = "{\"property\": \"propertyValue\" }"
+};
+```
+
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
+
+次のコードは `messageBack` 、JavaScript のアクションの種類の例を示しています。
+
+```javascript
+CardFactory.actions([
+{
+    type: 'messageBack',
+    title: "My MessageBack button",
+    displayText: "I clicked this button",
+    text: "User just clicked the MessageBack button",
+    value: {property: "propertyValue" }
+}])
+```
+
+---
+
 ### <a name="inbound-message-example"></a>受信メッセージの例
 
 `replyToId` には、カード アクションが送信されたメッセージの ID が含まれる。 メッセージを更新する場合に使用します。
+
+次のコードは、受信メッセージの例を示しています。
 
 ```json
 {
@@ -124,11 +203,23 @@ Teamsアダプティブ カード[アクションもサポートしています]
 }
 ```
 
-## <a name="imback"></a>imBack
+## <a name="action-type-imback"></a>アクションの種類 imBack
 
-このアクションは、ユーザーが通常のチャット メッセージに入力した場合と同様に、ボットへの戻りメッセージをトリガーします。 チャネル内のユーザーと他のすべてのユーザーには、そのボタンの応答が表示されます。
+アクションは、ユーザーが通常のチャット メッセージに入力した場合と同様に、ボットへの戻り `imBack` メッセージをトリガーします。 ユーザーとチャネル内の他のすべてのユーザーは、ボタンの応答を確認できます。
 
-フィールド `value` には、チャットにエコーされたテキスト文字列が含まれている必要があります。そのため、ボットに送信されます。 これは、目的のロジックを実行するためにボットで処理するメッセージ テキストです。 注: このフィールドは単純な文字列です。書式設定や非表示文字のサポートはありません。
+を `imBack` 使用すると、次のプロパティを使用してアクションを作成できます。
+
+| プロパティ | 説明 |
+| --- | --- |
+| `title` | ボタン ラベルとして表示されます。 |
+| `value` | このフィールドには、チャットで使用されるテキスト文字列が含まれている必要があります。そのため、ボットに返送されます。 これは、必要なロジックを実行するためにボットで処理するメッセージ テキストです。 |
+
+> [!NOTE]
+> フィールド `value` は単純な文字列です。 書式設定や非表示の文字はサポートされていません。
+
+# <a name="json"></a>[JSON](#tab/json)
+
+次のコードは、JSON のアクション `imBack` の種類の例を示しています。
 
 ```json
 {
@@ -138,11 +229,50 @@ Teamsアダプティブ カード[アクションもサポートしています]
 }
 ```
 
-## <a name="invoke"></a>invoke
+# <a name="c"></a>[C#](#tab/csharp)
+
+次のコードは、アクションの種類の `imBack` 例を示C#。
+
+```csharp
+var button = new CardAction()
+{
+    Type = ActionTypes.ImBack,
+    Title = "More",
+    Value = "Show me more"
+};
+```
+
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
+
+次のコードは `imBack` 、JavaScript のアクションの種類の例を示しています。
+
+```javascript
+CardFactory.actions([
+{
+    type: "imBack",
+    title: "More",
+    value: "Show me more"
+}])
+```
+
+---
+
+## <a name="action-type-invoke"></a>アクションの種類の呼び出し
 
 この `invoke` アクションは、タスク モジュールの呼び出 [しに使用されます](~/task-modules-and-cards/task-modules/task-modules-bots.md)。
 
-アクション `invoke` には、次の 3 つのプロパティ `type` が `title` 含まれる。 `value` この `value` プロパティには、文字列、文字列化された JSON オブジェクト、または JSON オブジェクトを含めできます。
+アクション `invoke` には、3 つのプロパティ `type` 、、 `title` およびが含まれる `value` 。
+
+を `invoke` 使用すると、次のプロパティを使用してアクションを作成できます。
+
+| プロパティ | 説明 |
+| --- | --- |
+| `title` | ボタン ラベルとして表示されます。 |
+| `value` | このプロパティには、文字列、文字列化された JSON オブジェクト、または JSON オブジェクトを含めできます。 |
+
+# <a name="json"></a>[JSON](#tab/json)
+
+次のコードは、JSON のアクション `invoke` の種類の例を示しています。
 
 ```json
 {
@@ -154,9 +284,14 @@ Teamsアダプティブ カード[アクションもサポートしています]
 }
 ```
 
-ユーザーがボタンをクリックすると、ボットは追加の情報を `value` 含むオブジェクトを受信します。 アクティビティの種類は ( ) の `invoke` 代わりに使用されます `message` `activity.Type == "invoke"` 。
+ユーザーがボタンを選択すると、ボットは追加の情報 `value` を含むオブジェクトを受け取ります。
 
-### <a name="example-invoke-button-definition-net"></a>例: ボタン定義の呼び出し (.NET)
+> [!NOTE]
+> アクティビティの種類は `invoke` 、 の代 `message` わりにです `activity.Type == "invoke"` 。
+
+# <a name="c"></a>[C#](#tab/csharp)
+
+次のコードは、アクションの種類の `invoke` 例を示C#。
 
 ```csharp
 var button = new CardAction()
@@ -167,9 +302,28 @@ var button = new CardAction()
 };
 ```
 
-### <a name="example-incoming-invoke-message"></a>例: 受信呼び出しメッセージ
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
+
+次のコードは、アクションの種類の例 `invoke` を示Node.js。
+
+```javascript
+CardFactory.actions([
+{
+    type: "invoke",
+    title: "Option 1",
+    value: {
+        option: "opt1"
+    }
+}])
+```
+
+---
+
+### <a name="example-of-incoming-invoke-message"></a>受信呼び出しメッセージの例
 
 Top-level `replyToId` プロパティには、カードアクションが送信されたメッセージの ID が含まれる。 メッセージを更新する場合に使用します。
+
+次のコードは、受信呼び出しメッセージの例を示しています。
 
 ```json
 {
@@ -217,9 +371,51 @@ Top-level `replyToId` プロパティには、カードアクションが送信�
 }
 ```
 
-## <a name="signin"></a>signin
+## <a name="action-type-signin"></a>アクションの種類の signin
 
-OAuth フローを開始し、ボットがセキュリティで保護されたサービスに接続できるようにします。詳細については、ボットの認証フロー [を参照してください](~/bots/how-to/authentication/auth-flow-bot.md)。
+`signin` アクションの種類は、ボットがセキュリティで保護されたサービスに接続できる OAuth フローを開始します。 詳細については、「ボットの [認証フロー」を参照してください](~/bots/how-to/authentication/auth-flow-bot.md)。
+
+Teamsアダプティブ カード[でのみ使用されるアダプティブ](#adaptive-cards-actions)カード アクションもサポートしています。
+
+# <a name="json"></a>[JSON](#tab/json)
+
+次のコードは、JSON のアクション `signin` の種類の例を示しています。
+
+```json
+{
+"type": "signin",
+"title": "Click me for signin",
+"value": "https://signin.com"
+}
+```
+
+# <a name="c"></a>[C#](#tab/csharp)
+
+次のコードは、アクションの種類の `signin` 例を示C#。
+
+```csharp
+var button = new CardAction()
+{
+    Type = ActionTypes.Signin,
+    Title = "Click me for signin",
+    Value = "https://signin.com"
+};
+```
+
+# <a name="javascriptnodejs"></a>[JavaScript/Node.js](#tab/javascript)
+
+次のコードは `signin` 、JavaScript のアクションの種類の例を示しています。
+
+```javascript
+CardFactory.actions([
+{
+    type: "signin",
+    title: "Click me for signin",
+    value: "https://signin.com"
+}])
+```
+
+---
 
 ## <a name="adaptive-cards-actions"></a>アダプティブ カードのアクション
 
@@ -230,23 +426,26 @@ OAuth フローを開始し、ボットがセキュリティで保護された�
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
 * [Action.Exeかわいい](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
 
-上記のアクションに加えて、アダプティブ カード ペイロードを変更して、オブジェクトのプロパティを使用して既存の Bot Framework アクション `Action.Submit` `msteams` `data` をサポートできます `Action.Submit` 。 以下のセクションでは、アダプティブ カードで既存の Bot Framework アクションを使用する方法について詳しく説明します。
+アダプティブ カードペイロードを変更して、オブジェクトのプロパティを使用して既存の Bot Framework アクション `Action.Submit` `msteams` を `data` サポートすることができます `Action.Submit` 。 次のセクションでは、アダプティブ カードで既存の Bot Framework アクションを使用する方法の詳細について説明します。
 
 > [!NOTE]
-> Bot Framework アクションを使用してデータに追加しても、アダプティブ カード タスク `msteams` モジュールでは機能しません。
+> `msteams`Bot Framework アクションを使用してデータに追加しても、アダプティブ カード タスク モジュールでは機能しません。
 
 ### <a name="adaptive-cards-with-messageback-action"></a>messageBack アクションを含むアダプティブ カード
 
-アダプティブ カードに `messageBack` アクションを含めるには、オブジェクトに次の詳細を含 `msteams` める必要があります。 必要に応じて、オブジェクトに追加の非表示プロパティ `data` を含めることができます。
+アダプティブ カードに `messageBack` アクションを含めるには、オブジェクトに次の詳細を含 `msteams` める必要があります。
+
+> [!NOTE]
+> 必要に応じて、オブジェクトに追加の非表示 `data` プロパティを含めることができます。
 
 | プロパティ | 説明 |
 | --- | --- |
-| `type` | に設定する `messageBack` |
-| `displayText` | 省略可能。 アクションの実行時に、ユーザーがチャット ストリームにエコーします。 このテキストは *ボット* に送信されません。 |
+| `type` | に設定します `messageBack` 。 |
+| `displayText` | 省略可能。 アクションの実行時にチャット ストリーム内のユーザーが使用します。 このテキストはボットに送信されません。 |
 | `value` | アクションの実行時にボットに送信されます。 アクションのコンテキスト (一意の識別子や JSON オブジェクトなど) をエンコードできます。 |
-| `text` | アクションの実行時にボットに送信されます。 ボットの開発を簡略化するには、このプロパティを使用します。コードでは、ボット ロジックをディスパッチするために 1 つのトップ レベル プロパティをチェックできます。 |
+| `text` | アクションの実行時にボットに送信されます。 ボットの開発を簡略化するには、このプロパティを使用します。 コードは、ボット ロジックをディスパッチするために、1 つのトップ レベル プロパティをチェックできます。 |
 
-#### <a name="example"></a>例
+次のコードは、アクションを含むアダプティブ カードの例を示 `messageBack` しています。
 
 ```json
 {
@@ -265,14 +464,17 @@ OAuth フローを開始し、ボットがセキュリティで保護された�
 
 ### <a name="adaptive-cards-with-imback-action"></a>imBack アクションを使用したアダプティブ カード
 
-アダプティブ カードに `imBack` アクションを含めるには、オブジェクトに次の詳細を含 `msteams` める必要があります。 必要に応じて、オブジェクトに追加の非表示プロパティ `data` を含めることができます。
+アダプティブ カードで `imBack` アクションを含めるには、オブジェクトに次の詳細を含 `msteams` める必要があります。
+
+> [!NOTE]
+> 必要に応じて、オブジェクトに追加の非表示 `data` プロパティを含めることができます。
 
 | プロパティ | 説明 |
 | --- | --- |
-| `type` | に設定する `imBack` |
-| `value` | チャットでエコーバックする必要がある文字列 |
+| `type` | に設定します `imBack` 。 |
+| `value` | チャットでエコーバックする必要がある文字列。 |
 
-#### <a name="example"></a>例
+次のコードは、アクションを含むアダプティブ カードの例を示 `imBack` しています。
 
 ```json
 {
@@ -289,14 +491,17 @@ OAuth フローを開始し、ボットがセキュリティで保護された�
 
 ### <a name="adaptive-cards-with-signin-action"></a>Signin アクションを使用したアダプティブ カード
 
-アダプティブ カードに `signin` アクションを含めるには、オブジェクトに次の詳細を含 `msteams` める必要があります。 必要に応じて、オブジェクトに追加の非表示プロパティ `data` を含めることができます。
+アダプティブ カードに `signin` アクションを含めるには、オブジェクトに次の詳細を含 `msteams` める必要があります。
+
+> [!NOTE]
+> 必要に応じて、オブジェクトに追加の非表示 `data` プロパティを含めることができます。
 
 | プロパティ | 説明 |
 | --- | --- |
 | `type` | に設定します `signin` 。 |
-| `value` | リダイレクト先の URL に設定します。  |
+| `value` | リダイレクトする URL に設定します。  |
 
-#### <a name="example"></a>例
+次のコードは、アクションを含むアダプティブ カードの例を示 `signin` しています。
 
 ```json
 {
@@ -312,15 +517,18 @@ OAuth フローを開始し、ボットがセキュリティで保護された�
 ```
 
 ### <a name="adaptive-cards-with-invoke-action"></a>アクションを呼び出すアダプティブ カード
- 
-アダプティブ カードに `invoke` アクションを含めるには、オブジェクトに次の詳細を含 `msteams` める必要があります。 必要に応じて、オブジェクトに追加の非表示プロパティ `data` を含めることができます。
+
+アダプティブ カードで `invoke` アクションを含めるには、オブジェクトに次の詳細を含 `msteams` める必要があります。
+
+> [!NOTE]
+> 必要に応じて、オブジェクトに追加の非表示 `data` プロパティを含めることができます。
 
 | プロパティ | 説明 |
 | --- | --- |
-| `type` | に設定する `task/fetch` |
-| `data` | 値を設定する  |
+| `type` | に設定します `task/fetch` 。 |
+| `data` | 値を設定します。  |
 
-#### <a name="example"></a>例
+次のコードは、アクションを含むアダプティブ カードの例を示 `invoke` しています。
 
 ```json
 {
@@ -334,7 +542,7 @@ OAuth フローを開始し、ボットがセキュリティで保護された�
 }
 ```
 
-#### <a name="example-2-with-additional-payload-data"></a>例 2 (追加のペイロード データを含む)
+次のコードは、追加のペイロード データを含むアクションを含むアダプティブ `invoke` カードの例を示しています。
 
 ```json
 {
@@ -348,3 +556,12 @@ OAuth フローを開始し、ボットがセキュリティで保護された�
   }
 }
 ```
+
+## <a name="see-also"></a>関連項目
+
+[カード リファレンス](./cards-reference.md)
+
+## <a name="next-step"></a>次の手順
+
+> [!div class="nextstepaction"]
+> [アダプティブ カードのユニバーサル アクション](../cards/Universal-actions-for-adaptive-cards/Overview.md)

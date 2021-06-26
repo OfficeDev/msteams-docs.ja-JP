@@ -4,16 +4,16 @@ description: タブにユーザー コンテクストを付与する方法を説
 localization_priority: Normal
 ms.topic: how-to
 keywords: チーム タブ ユーザー コンテキスト
-ms.openlocfilehash: 0d9224a941ae4f6a5ad125c93d5877ec49b6df28
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 29f574ae924ddde52b63590aba3fcc06a3d446af
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566867"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140279"
 ---
-# <a name="get-context-for-your-microsoft-teams-tab"></a>Microsoft Teams タブのコンテキストを取得する
+# <a name="get-context-for-your-tab"></a>タブのコンテキストを取得する
 
-関連するコンテンツを表示するには、タブにコンテキスト情報が必要です。
+関連するコンテンツを表示するには、コンテキスト情報が必要です。
 
 * ユーザー、チーム、または会社に関する基本情報。
 * ロケールとテーマの情報。
@@ -24,51 +24,51 @@ ms.locfileid: "52566867"
 ユーザー、チーム、または会社に関するコンテキストは、次の場合に特に役立ちます。
 
 * アプリ内のリソースを作成または指定したユーザーまたはチームに関連付ける。
-* ユーザーまたは他の id プロバイダー Azure Active Directoryに対して認証フローを開始し、ユーザーにユーザー名の再入力を要求する必要はありません。 [認証] タブ内での認証の詳細については、「Microsoft Teamsタブでユーザーを認証[する」をMicrosoft Teamsしてください](~/concepts/authentication/authentication.md)。
+* 認証フローは、Azure Active Directory (AAD) または他の ID プロバイダーから開始し、ユーザーがユーザー名を再入力する必要はありません。 詳細については、「ユーザー認証」[タブでユーザーを認証するMicrosoft Teams参照してください](~/concepts/authentication/authentication.md)。
 
 > [!IMPORTANT]
-> このユーザー情報は、スムーズなユーザー エクスペリエンスを提供するのに役立ちますが、身分証明書として使用するべきでは *ありません*。 たとえば、攻撃者が “悪いブラウザー” であなたのページをロードし、有害な情報や要求をレンダリングする可能性があります。
+> このユーザー情報は、スムーズなユーザー エクスペリエンスを提供するのに役立ちますが、ID の証明として使用することはできません。 たとえば、攻撃者はブラウザーにページを読み込み、有害な情報や要求を表示する可能性があります。
 
-## <a name="accessing-context"></a>コンテキストにアクセスする
+## <a name="access-context-information"></a>コンテキスト情報にアクセスする
 
 コンテキスト情報には 2 つの方法でアクセスできます。
 
 * URL プレースホルダーの値を挿入します。
 * JavaScript クライアント[SDK Microsoft Teams使用します](/javascript/api/overview/msteams-client)。
 
-### <a name="getting-context-by-inserting-url-placeholder-values"></a>URL プレースホルダー値を挿入してコンテキストを取得する
+### <a name="get-context-by-inserting-url-placeholder-values"></a>URL プレースホルダー値を挿入してコンテキストを取得する
 
-構成やコンテンツ URL では、プレースホルダーを使用します。 Microsoft Teams では、実際の構成やコンテンツ URL を決定する際に、プレースホルダーを該当する値で置き換えます。 使用可能なプレースホルダーには、[コンテキスト](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) オブジェクトのすべてのフィールドが含まれます。 一般的なプレースホルダーは次のとおりです。
+構成やコンテンツ URL では、プレースホルダーを使用します。 Microsoft Teams では、実際の構成やコンテンツ URL を決定する際に、プレースホルダーを該当する値で置き換えます。 使用可能なプレースホルダーには、コンテキスト オブジェクトのすべてのフィールド [が含](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) まれます。 一般的なプレースホルダーは次のとおりです。
 
 * {entityId}: 最初の [タブの構成](~/tabs/how-to/create-tab-pages/configuration-page.md) 時に、このタブのアイテムに与えた ID。
-* {subEntityId}: このタブ _内部_ の特定のアイテム向けの [ディープ リンク](~/concepts/build-and-test/deep-links.md) を生成する場合に指定した ID。これは、エンティティ内の特定の状態に復元するために使用します。たとえば、特定のコンテンツにスクロールしたり、アクティブにしたりします。
-* {loginHint}: Azure AD へのログインのヒントに適した値。これは通常、ホーム テナントでの現在のユーザーのログイン名。
-* {userPrincipalName}: 現在のテナントで、現在のユーザーのユーザー プリンシパル名。
-* {userObjectId}: 現在のテナント内の現在のユーザーの Azure AD オブジェクト ID。
-* {theme}: `default`、`dark`、`contrast` などの現在の UI テーマ。
-* {groupId}: タブが存在する Office 365 グループの ID です。
-* {tid}: 現在のユーザーの Azure AD テナント ID。
+* {subEntityId}: このタブ内の特定のアイテムの[](~/concepts/build-and-test/deep-links.md)ディープ リンクを生成するときに指定した ID。これは、エンティティ内の特定の状態に復元するために使用する必要があります。たとえば、特定のコンテンツにスクロールしたり、アクティブ化したりします。
+* {loginHint}: AAD のログイン ヒントとして適した値。 これは通常、ホーム テナントの現在のユーザーのログイン名です。
+* {userPrincipalName}: 現在のテナント内の現在のユーザーのユーザー プリンシパル名。
+* {userObjectId}: 現在のテナント内の現在のユーザーの AAD オブジェクト ID。
+* {theme}: 現在のユーザー インターフェイス (UI) テーマ (例: `default` `dark` 、 、 または `contrast` )
+* {groupId}: タブがOffice 365グループの ID。
+* {tid}: 現在のユーザーの AAD テナント ID。
 * {locale}: languageId-countryId として書式設定されたユーザーの現在のロケール。 たとえば、ja-us。
 
->[!NOTE]
->以前の `{upn}` プレースホルダーは、現在では非推奨となっています。 後方互換性のため、現在は `{loginHint}` の同義語となっています。
+> [!NOTE]
+> 以前の `{upn}` プレースホルダーは、現在では非推奨となっています。 後方互換性のため、現在は `{loginHint}` の同義語となっています。
 
-たとえば、タブ マニフェストで属性を設定すると、サインインしているユーザーは `configURL` `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"` 次の属性を持つとします。
+たとえば、タブ マニフェストで属性を設定すると、サインインしているユーザー `configURL` `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"` には次の属性があります。
 
-* ユーザー名は 'user@example.com' です。
-* 会社のテナント ID は 'e2653c-etc' です。
-* id '00209384-etc' Office 365グループのメンバーです。
-* ユーザーが自分のテーマをTeamsに設定しました。
+* ユーザー名は user@example.com **です**。
+* 会社のテナント ID は **e2653c-etc です**。
+* これらは id **00209384-etc Office 365グループのメンバーです**。
+* ユーザーがテーマを暗Teams設定 **しました**。
 
-タブを構成すると、Teams URL が呼び出されます。
+タブを構成すると、次Teams URL が呼び出されます。
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
-### <a name="getting-context-by-using-the-microsoft-teams-javascript-library"></a>Microsoft Teams のJavaScript ライブラリを使用したコンテキストの取得
+### <a name="get-context-by-using-the-microsoft-teams-javascript-library"></a>JavaScript ライブラリを使用してコンテキストMicrosoft Teams取得する
 
 [Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) を使用して `microsoftTeams.getContext(function(context) { /* ... */ })` を呼び出す方法でも、上記の情報を取得できます。
 
-コンテキスト変数は、次の例のようになります。
+次のコードは、コンテキスト変数の例を示しています。
 
 ```json
 {
@@ -110,12 +110,12 @@ ms.locfileid: "52566867"
 }
 ```
 
-## <a name="retrieving-context-in-private-channels"></a>プライベート チャネルでのコンテキストの取得
+## <a name="retrieve-context-in-private-channels"></a>プライベート チャネルでのコンテキストの取得
 
 > [!Note]
 > プライベート チャネルは、現在、開発者のプライベートなプレビューです。
 
-プライベート チャネルでコンテンツ ページが読み込まれると、チャネルのプライバシーを保護するために、`getContext` 呼び出しから受信するデータは暗号化されます。 コンテンツ ページがプライベート チャネルにある場合、次のフィールドが変更されます。 以下のいずれかの値を使用している場合は、`channelType` フィールドをチェックして、ページがプライベート チャネルでロードされているか判断し、適切に対応する必要があります。
+コンテンツ ページがプライベート チャネルに読み込まれると、通話から受け取ったデータは、チャネルのプライバシーを保護するために難読 `getContext` 化されます。 コンテンツ ページがプライベート チャネルにある場合、次のフィールドが変更されます。
 
 * `groupId`: プライベート チャネルの場合は未定義
 * `teamId`: プライベート チャネルの threadId に設定します。
@@ -124,11 +124,33 @@ ms.locfileid: "52566867"
 * `teamSitePath`: プライベート チャネル用の個別の一意のSharePointパスに設定します。
 * `teamSiteDomain`: プライベート チャネル用の個別の一意のSharePointドメインに設定します。
 
+ページでこれらの値を使用する場合は、フィールドをチェックして、ページがプライベート チャネルに読み込まれているかどうかを判断し、適切に `channelType` 対応する必要があります。
+
 > [!Note]
->  teamSiteUrl は、標準的なチャネルにも有効に機能します。
+> `teamSiteUrl` 標準チャネルでも動作します。
 
-## <a name="theme-change-handling"></a>テーマ変更時の対応
+## <a name="handle-theme-change"></a>テーマの変更を処理する
 
-`microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })` の呼び出しにより、テーマが変更された場合に通知されるようにアプリを登録することができます。
+呼び出してテーマが変更された場合に通知するアプリを登録できます `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })` 。
 
-関数の `theme` 引数は、`default`、`dark`、`contrast` のいずれかの値を持つ文字列になります。
+関数 `theme` の引数は、、 、または の値を持つ `default` `dark` 文字列です `contrast` 。
+
+## <a name="see-also"></a>関連項目
+
+* [タブデザインのガイドライン](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Teamsタブ](~/tabs/what-are-tabs.md)
+* [前提条件](~/tabs/how-to/tab-requirements.md)
+* [プライベート タブを作成する](~/tabs/how-to/create-personal-tab.md)
+* [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
+* [コンテンツ ページを作成する](~/tabs/how-to/create-tab-pages/content-page.md)
+* [構成ページを作成する](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [タブの削除ページを作成する](~/tabs/how-to/create-tab-pages/removal-page.md)
+* [モバイルのタブ](~/tabs/design/tabs-mobile.md)
+* [タブのリンクの展開とステージ ビュー](~/tabs/tabs-link-unfurling.md)
+* [会話タブを作成する](~/tabs/how-to/conversational-tabs.md)
+* [タブ余白の変更](~/resources/removing-tab-margins.md)
+
+## <a name="next-step"></a>次の手順
+
+> [!div class="nextstepaction"]
+> [アダプティブ カードを使用してタブをビルドする](~/tabs/how-to/build-adaptive-card-tabs.md)

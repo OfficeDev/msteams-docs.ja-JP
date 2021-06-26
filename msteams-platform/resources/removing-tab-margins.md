@@ -6,12 +6,12 @@ keywords: タブの余白の余白の削除
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: b4b3fbbe7ed2e8356fcc9c49346d423707a6a264
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 086ce3a375416291a64e3222e698d7e363a651e6
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069169"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140573"
 ---
 # <a name="tab-margin-changes"></a>タブ余白の変更
 
@@ -54,3 +54,18 @@ Microsoft Teamsを使用するアプリは、この変更の影響を受ける�
 > * すべてのタブには、個人用タブ、(グループ) チャット タブ、会議タブ、チャネル タブなど、余白が削除されています。
 > * この変更をオプトインまたはオプトアウトする方法はありません。 すべてのタブに適用されます。
 > * この変更は、UI を囲む余白Microsoft Teamsに依存するタブに影響を与える可能性があります。
+
+## <a name="see-also"></a>関連項目
+
+* [Teamsタブ](~/tabs/what-are-tabs.md)
+* [前提条件](~/tabs/how-to/tab-requirements.md)
+* [プライベート タブを作成する](~/tabs/how-to/create-personal-tab.md)
+* [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
+* [コンテンツ ページを作成する](~/tabs/how-to/create-tab-pages/content-page.md)
+* [構成ページを作成する](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [タブの削除ページを作成する](~/tabs/how-to/create-tab-pages/removal-page.md)
+* [モバイルのタブ](~/tabs/design/tabs-mobile.md)
+* [タブのコンテキストを取得する](~/tabs/how-to/access-teams-context.md)
+* [アダプティブ カードを使用してタブをビルドする](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [タブのリンクの展開とステージ ビュー](~/tabs/tabs-link-unfurling.md)
+* [会話タブを作成する](~/tabs/how-to/conversational-tabs.md)

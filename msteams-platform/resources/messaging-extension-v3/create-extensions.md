@@ -4,12 +4,12 @@ description: アクション ベースのメッセージング拡張機能を作
 localization_priority: Normal
 ms.topic: how-to
 keywords: teams メッセージング拡張機能メッセージング拡張機能の検索
-ms.openlocfilehash: bfb3295726c355164f080c15e3759ea36a99d914
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 5604d86f05bad42bf3a00f611711afc34beedf42
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566741"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140370"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>メッセージング拡張機能を使用してアクションを開始する
 
@@ -244,7 +244,7 @@ ms.locfileid: "52566741"
 
 このメソッドでは、サービスは、エンド ユーザー入力を収集するカスタムアダプティブ カードを定義できます。 この方法では、マニフェスト `fetchTask` でパラメーター `true` を設定します。 コマンドに対して定義 `fetchTask` されている `true` 静的パラメーターに設定すると、無視されます。
 
-この方法では、サービスはイベントを受け取り、アダプティブ カード ベースのタスク モジュール応答で `composeExtension/fetchTask` [応答する必要があります](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)。 アダプティブ カードを使用した応答の例を次に示します。
+このメソッドでは、サービスはイベントを受信し、アダプティブ カード ベースのタスク モジュール応答 `composeExtension/fetchTask` [で応答します](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object)。 アダプティブ カードを使用した応答の例を次に示します。
 
 ```json
 {
@@ -295,7 +295,7 @@ ms.locfileid: "52566741"
 
 このメソッドでは、サービスに基づくウィジェットを表示して、カスタム UI を表示し、 `<iframe>` ユーザー入力を収集できます。 この方法では、マニフェスト `fetchTask` でパラメーター `true` を設定します。
 
-アダプティブ カード フローと同様に、サービスはイベントを送信し、URL ベースのタスク モジュール応答で応答 `fetchTask` [する必要があります](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object)。 アダプティブ カードを使用した応答の例を次に示します。
+アダプティブ カード フローと同様に、サービスはイベントを送信し、URL ベースのタスク モジュール `fetchTask` 応答 [で応答します](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object)。 アダプティブ カードを使用した応答の例を次に示します。
 
 ```json
 {

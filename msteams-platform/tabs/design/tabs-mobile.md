@@ -3,16 +3,31 @@ title: モバイルのタブ
 description: モバイルでタブを実装するための開発者Microsoft Teams説明します。
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 41ba96b64bd31f3b226aeba72969bc44c1ae8955
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 612084a1ff4258da16dc00f9b5a6844eead57f54
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630657"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140293"
 ---
 # <a name="tabs-on-mobile"></a>モバイルのタブ
 
-タブを含む Microsoft Teams アプリを構築する場合は、Android クライアントと iOS クライアントの両方でタブがどのように機能Microsoft Teamsがあります。 以下のセクションでは、考慮する必要がある主要なシナリオの一部について説明します。
+タブを含む Microsoft Teamsアプリを構築する場合は、Android クライアントと iOS クライアントの両方でタブがどのように機能Microsoft Teamsがあります。 この記事では、考慮する必要がある主要なシナリオの一部について説明します。
+
+モバイル クライアントにチャネルまたはグループ タブを表示Teams場合、構成にはプロパティの `setSettings()` 値が必要 `websiteUrl` です。 最適なユーザー エクスペリエンスを実現するには、タブを作成する際に、この記事のモバイルタブのガイダンスに従う必要があります。
+
+モバイル[ストアを通じて配布Teamsモバイル](~/concepts/deploy-and-publish/appsource/publish.md)クライアントに対する個別の承認プロセスがあります。 このようなアプリの既定の動作は次のとおりです。
+
+| **アプリの機能** | **アプリが承認された場合の動作** | **アプリが承認されていない場合の動作** |
+| --- | --- | --- |
+| **[個人] タブ** | モバイル クライアントの下部バーにアプリが表示されます。 タブは、クライアントTeams開きます。 | モバイル クライアントの下部バーにアプリが表示されません。 |
+| **チャネルタブとグループ タブ** | タブは、 を使用してクライアントTeams開きます `contentUrl` 。 | タブは、 を使用してクライアントの外部Teams開きます `websiteUrl` 。 |
+
+> [!NOTE]
+> * アプリをアプリに[公開するために AppSource](https://appsource.microsoft.com)に送信Teams、モバイルの応答性が自動的に評価されます。 クエリの場合は、ユーザーに問い合 teamsubm@microsoft.com。
+> * AppSource を介して配布されていないすべてのアプリでは、タブは既定で Teams クライアント内のアプリ内 Web ビューで開き、個別の承認プロセスは必要ありません。
+> * アプリの既定の動作は、アプリ ストアを通じて配布Teamsです。 既定では、すべてのタブがクライアントでTeamsされます。
+> * モバイルに優しいアプリの評価を開始するには、アプリの詳細 teamsubm@microsoft.com 確認してください。
 
 ## <a name="authentication"></a>認証
 
@@ -20,11 +35,11 @@ ms.locfileid: "52630657"
 
 ## <a name="low-bandwidth-and-intermittent-connections"></a>低帯域幅と断続的な接続
 
-モバイル クライアントは、低帯域幅と断続的な接続で定期的に機能する必要があります。 アプリは、ユーザーにコンテキスト メッセージを提供することで、タイムアウトを適切に処理する必要があります。 また、長時間実行されるプロセスに対してユーザーにフィードバックを提供するユーザー進行状況インジケーターも必要です。
+モバイル クライアントは、低帯域幅と断続的な接続で機能します。 アプリは、ユーザーにコンテキスト メッセージを提供することで、タイムアウトを適切に処理する必要があります。 また、進行状況インジケーターを使用して、長時間実行されるプロセスに対するフィードバックをユーザーに提供する必要があります。
 
 ## <a name="testing-on-mobile-clients"></a>モバイル クライアントでのテスト
 
-さまざまなサイズと品質のモバイル デバイスでタブが適切に機能するを検証する必要があります。 Android デバイスの場合 [、DevTools](~/tabs/how-to/developer-tools.md) を使用して、実行中にタブをデバッグできます。 タブレットを含む、高パフォーマンスデバイスと低パフォーマンスデバイスの両方でテストすることをお勧めします。
+さまざまなサイズと品質のモバイル デバイスでタブが適切に機能するを検証する必要があります。 Android デバイスの場合 [、DevTools を使用して](~/tabs/how-to/developer-tools.md) 、実行中にタブをデバッグできます。 タブレットを含む高パフォーマンスデバイスと低パフォーマンスデバイスの両方でテストをお勧めします。
 
 ## <a name="distribution"></a>配布
 
@@ -45,7 +60,7 @@ ms.locfileid: "52630657"
 
 | 機能 | モバイルの可用性 | モバイル動作 |
 |----------|-----------|------------|
-|[チャネルとグループ] タブ|はい|タブは、アプリの構成を使用して Teams モバイル クライアントではなく、デバイスの既定のブラウザーで開きます。これは、ソース コードの関数にも含める `websiteUrl` 必要 `setSettings()` [があります](/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest#functions&preserve-view=true)。 ただし、アプリの横にある [詳細] を選択し、[開く]を選択すると、Teams モバイルクライアントのタブが表示され、アプリの構成がトリガー `contentUrl` されます。|
+|[チャネルとグループ] タブ|はい|タブは、アプリの構成を使用して Teams モバイル クライアントではなく、デバイスの既定のブラウザーで開きます。これは、ソース コードの関数にも含める `websiteUrl` 必要 `setSettings()` [があります](/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest#functions&preserve-view=true)。 ただし、ユーザーは、アプリの横にある [詳細Teams] を選択し、[開く] を選択してアプリの構成をトリガーすることで、モバイル クライアントのタブを表示 `contentUrl` できます。|
 |個人用アプリ|なし|該当なし|
 
 ### <a name="apps-not-on-teams-store"></a>アプリがストアTeamsしない
@@ -55,3 +70,19 @@ ms.locfileid: "52630657"
 ## <a name="see-also"></a>関連項目
 
 * [タブデザインのガイドライン](~/tabs/design/tabs.md)
+* [Teamsタブ](~/tabs/what-are-tabs.md)
+* [前提条件](~/tabs/how-to/tab-requirements.md)
+* [プライベート タブを作成する](~/tabs/how-to/create-personal-tab.md)
+* [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
+* [コンテンツ ページを作成する](~/tabs/how-to/create-tab-pages/content-page.md)
+* [構成ページを作成する](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [タブの削除ページを作成する](~/tabs/how-to/create-tab-pages/removal-page.md)
+* [アダプティブ カードを使用してタブをビルドする](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [タブのリンクの展開とステージ ビュー](~/tabs/tabs-link-unfurling.md)
+* [会話タブを作成する](~/tabs/how-to/conversational-tabs.md)
+* [タブ余白の変更](~/resources/removing-tab-margins.md)
+
+## <a name="next-step"></a>次の手順
+
+> [!div class="nextstepaction"]
+> [タブのコンテキストを取得する](~/tabs/how-to/access-teams-context.md)

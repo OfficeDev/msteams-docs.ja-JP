@@ -1,23 +1,61 @@
 ---
-title: コネクタと Webhook にメッセージを送信する
+title: メッセージを作成して送信する
+author: laujan
 description: Microsoft Teams で Office 365 コネクタを使用する方法について説明します。
 ms.topic: how-to
 localization_priority: Normal
 keywords: Teams o365 コネクタ
-ms.openlocfilehash: 96092e4589f218a96f31ce05339b89acb82f1fd7
-ms.sourcegitcommit: 20764037458026e5870ee3975b966404103af650
+ms.openlocfilehash: e396d0048831634f683b6df925853464698fb96a
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "52583737"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140533"
 ---
-# <a name="sending-messages-to-connectors-and-webhooks"></a>コネクタと Webhook にメッセージを送信する
+# <a name="create-and-send-messages"></a>メッセージを作成して送信する
 
-Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信するには、Webhook URL に JSON ペイロードを投稿します。 通常、このペイロードは [Office 365 コネクタ カード](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)の形式になります。
+アクション可能なメッセージを作成し、受信 Webhook または受信コネクタを介してOffice 365できます。
 
-この JSON を使用して、テキスト入力、複数選択、または日付と時刻の選択など、リッチな入力を含むカードを作成することもできます。 カードを生成して Webhook URL への投稿を行うコードは、いずれのホステッド サービスでも実行できます。 これらのカードは、操作可能なメッセージの一部として定義されています。また、Teams ボットやメッセージング拡張機能で使用される[カード](~/task-modules-and-cards/what-are-cards.md)でもサポートされます。
+## <a name="create-actionable-messages"></a>アクション可能なメッセージを作成する
 
-### <a name="example-connector-message"></a>コネクタ メッセージの例
+アクション可能なメッセージには、カードに表示される 3 つのボタンが含まれます。 各ボタンは、入力型、テキスト フィールド、日付選択リスト、または複数選択肢リストを持つアクションを使用して、メッセージのプロパティ `potentialAction` `ActionCard` で定義されます。 各 `ActionCard` アクションには、たとえば、関連付けられたアクションがあります `HttpPOST` 。
+
+コネクタ カードは、次の操作をサポートします。
+
+- `ActionCard`: 1 つ以上の入力型と関連付けられたアクションを表示します。
+- `HttpPOST`: POST 要求を URL に送信します。
+- `OpenUri`: 別のブラウザーまたはアプリで URI を開き、必要に応じてオペレーティング システムに基づいて異なる URI を対象とします。
+
+`ActionCard` アクションでは、次の 3 つの入力の種類がサポートされています。
+
+- `TextInput`: 1 行または複数行のテキスト フィールドで、オプションの長さ制限があります。
+- `DateInput`: オプションのタイム セレクターを含む日付セレクター。
+- `MultichoiceInput`: 1 つの選択または複数の選択を提供する選択肢の列挙リストです。
+
+`MultichoiceInput` では、最初にすべて展開した状態でリストを表示するかどうかを制御する `style` プロパティがサポートされています。 既定値は、 `style` 次の値によって `isMultiSelect` 異なります。
+
+| `isMultiSelect` | `style` 既定 |
+| --- | --- |
+| `false` または指定なし | `compact` |
+| `true` | `expanded` |
+
+コンパクト なスタイルで複数選択リストを表示するには、 と の両方を指定する `"isMultiSelect": true` 必要があります `"style": true` 。
+
+コネクタ カードのアクションの詳細については、「Actions」を [参照してください](/outlook/actionable-messages/card-reference#actions)。
+
+> [!NOTE]
+> * Microsoft Teams で `style` プロパティに `compact` を指定することは、Microsoft Outlook で `style` プロパティに `normal` を指定することと同じです。
+> * HttpPOST アクションでは、ベアラー トークンは要求に含まれています。 このトークンには、アクションを実行した Office 365 ユーザーの Azure AD ID が含まれています。
+
+## <a name="send-a-message-through-incoming-webhook-or-office-365-connector"></a>受信 Webhook または受信コネクタを介してOffice 365する
+
+受信 Webhook または受信コネクタを介してメッセージをOffice 365するには、JSON ペイロードを Webhook URL に投稿します。 このペイロードは、コネクタ カードの形式Office 365[必要があります](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)。
+
+また、この JSON を使用して、テキスト入力、複数選択、日付と時刻の選択などのリッチ入力を含むカードを作成できます。 カードを生成し、Webhook URL に投稿するコードは、ホストされている任意のサービスで実行できます。 これらのカードは、アクション可能なメッセージの一部として定義され、カード[](~/task-modules-and-cards/what-are-cards.md)でサポートされ、Teams拡張機能で使用されます。
+
+### <a name="example-of-connector-message"></a>コネクタ メッセージの例
+
+コネクタ メッセージの例は次のとおりです。
 
 ```json
 {
@@ -103,55 +141,17 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
 }
 ```
 
-このメッセージは、チャネルに次のカードを生成します。
+このメッセージは、チャネルに次のカードを提供します。
 
-![コネクタ カードのスクリーンショット](~/assets/images/connectors/connector_message.png)
+![コネクタ カードのスクリーンショット](~/assets/images/connectorcard.png)
 
-## <a name="creating-actionable-messages"></a>操作可能なメッセージの作成
+## <a name="send-messages-using-curl-and-powershell"></a>cURL と PowerShell を使用してメッセージを送信する
 
-前のセクションの例では、3 つのボタンがカードに表示されています。 各ボタンは、`ActionCard` アクションを使用して `potentialAction` プロパティに定義されています。それぞれには、入力の種類 (テキスト フィールド、日付の選択、または複数選択リスト) が含まれています。 それぞれの `ActionCard` アクションには、`HttpPOST` など、関連付けられたアクションがあります。
+# <a name="curl"></a>[cURL](#tab/cURL)
 
-コネクタ カードでは、3 種類のアクションがサポートされています。
+**cURL を使用して Webhook にメッセージを投稿するには**
 
-- `ActionCard` 1 つまたは複数の入力の種類と、関連付けられたアクションを示します
-- `HttpPOST` POST 要求を URL に送信します
-- `OpenUri` URI を別のブラウザーまたはアプリで開きます。必要に応じて、オペレーティング システムに基づいて異なる URI をターゲットにします。
-
-`ActionCard` アクションでは、次の 3 つの入力の種類がサポートされています。
-
-- `TextInput` 単一行または複数行の、オプションとして長さ制限が付いたテキスト フィールド
-- `DateInput` オプションとして時間選択が付いた、日付選択
-- `MultichoiceInput` 1つまたは複数の選択を行える、選択肢を列挙したリスト
-
-`MultichoiceInput` では、最初にすべて展開した状態でリストを表示するかどうかを制御する `style` プロパティがサポートされています。 `style` の既定値は、`isMultiSelect`の値によって決まります。
-
-| `isMultiSelect` | `style` 既定 |
-| --- | --- |
-| `false` または指定なし | `compact` |
-| `true` | `expanded` |
-
-複数選択リストを最初はコンパクトなスタイルで表示させる場合は、`"isMultiSelect": true` と `"style": true` の両方を指定する必要があります。
-
-コネクタ カード アクションの詳細については、アクション可能メッセージ カードの参考資料の [**アクション**] (/outlook/actionable-messages/card-reference#actions) を参照してください。
-
-> [!NOTE]
-> Microsoft Teams で `style` プロパティに `compact` を指定することは、Microsoft Outlook で `style` プロパティに `normal` を指定することと同じです。
-> 
-> HttpPOST アクションでは、ベアラー トークンは要求に含まれています。 このトークンには、アクションを実行した Office 365 ユーザーの Azure AD ID が含まれています。
-
-## <a name="setting-up-a-custom-incoming-webhook"></a>カスタム着信 Webhook の設定
-
-コネクタに単純なカードを送信する方法を確認するには、次の手順を実行します。
-
-1. Microsoft Teams で、チャネル名の横にある [**その他のオプション**] (**&#8943;**) を選択し、[**コネクタ**] を選択します。
-1. コネクタのリストをスクロールして [**着信 Webhook**] を選択し、次に [**追加**] を選択します。
-1. Webhook の名前を入力し、Webhook からのデータと関連づける画像を更新し、[**作成**] を選択します。
-1. Webhook をクリップボードにコピーして保存します。 Microsoft Teams に情報を送信するには、Webhook URL が必要です。
-1. [**完了**] を選択します。
-
-### <a name="post-a-message-to-the-webhook-using-curl"></a>cURL を使用してメッセージを Webhook に投稿する
-
-次の手順では、[cURL](https://curl.haxx.se/) を使用します。 これが既にインストールされており、基本的な使用方法に精通しているものみなします。
+1. を使用して cURL をインストールします https://curl.haxx.se/ 。
 
 1. コマンド ラインから、次の cURL コマンドを入力します。
 
@@ -165,12 +165,16 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
    curl.exe -H "Content-Type:application/json" -d "{'text':'Hello World'}" <YOUR WEBHOOK URL>
    ```
 
-1. POST が成功すると、単に "**1**" という `curl` の出力が表示されます。
-1. Microsoft Team クライアントを確認します。 チームに新しいカードが投稿されるはずです。
+    > [!NOTE]
+    > POST が成功した場合は、単純な **1** 出力を表示する必要があります `curl` 。
 
-### <a name="post-a-message-to-the-webhook-using-powershell"></a>PowerShell を使用して Webhook にメッセージを投稿します。
+1. 新しいMicrosoft Teamsのクライアントを確認します。
 
-次の手順では、PowerShell を使用します。 これが既にインストールされており、基本的な使用方法に精通しているものみなします。
+# <a name="powershell"></a>[PowerShell](#tab/PowerShell)
+
+ 前提条件: PowerShell のインストールとその基本的な使用方法に関する知識。
+
+**PowerShell を使用して Webhook にメッセージを投稿するには**
 
 1. PowerShell プロンプトで次のコマンドを入力します。
 
@@ -178,69 +182,26 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
    Invoke-RestMethod -Method post -ContentType 'Application/Json' -Body '{"text":"Hello World!"}' -Uri <YOUR WEBHOOK URL>
    ```
 
-1. POST が成功すると、単に "**1**" という `Invoke-RestMethod` の出力が表示されます。
-1. Webhook URL に関連付けられている Microsoft Teams チャネルを確認します。 チャネルに新しいカードが投稿されているはずです。
+    > [!NOTE]
+    > POST が成功した場合は、単純な **1** 出力を表示する必要があります `Invoke-RestMethod` 。
 
-- [アイコンを 2 つ含めます](../../concepts/build-and-test/apps-package.md#app-icons)。
-- マニフェストの `icons` の部分を変更し、アイコンの URL ではなくアイコンのファイル名を参照するようにします。
+1. Webhook URL に関連付けられている Microsoft Teams チャネルを確認します。 チャネルに投稿された新しいカードを確認できます。 コネクタを使用してアプリをテストまたは発行する前に、次の操作を行う必要があります。
 
-ファイルのmanifest.jsには、アプリのテストと送信に必要な基本的な要素が含まれています。
+    - [アイコンを 2 つ含めます](../../concepts/build-and-test/apps-package.md#app-icons)。
+    - マニフェストの `icons` 部分を URL ではなくアイコンのファイル名に変更します。
 
-> [!NOTE]
-> 次の例の `id` と `connectorId` を、コネクタの GUID に置き換えます。
-
-#### <a name="example-manifestjson-with-connector"></a>コネクタを使用した manifest.json の例
-
-```json
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.5",
-  "id": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
-  "version": "1.0",
-  "packageName": "com.sampleapp",
-  "developer": {
-    "name": "Publisher",
-    "websiteUrl": "https://www.microsoft.com",
-    "privacyUrl": "https://www.microsoft.com",
-    "termsOfUseUrl": "https://www.microsoft.com"
-  },
-  "description": {
-    "full": "This is a small sample app we made for you! This app has samples of all capabilities Microsoft Teams supports.",
-    "short": "This is a small sample app we made for you!"
-  },
-  "icons": {
-    "outline": "sampleapp-outline.png",
-    "color": "sampleapp-color.png"
-  },
-  "connectors": [
-    {
-      "connectorId": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
-      "scopes": [
-        "team"
-      ]
-    }
-  ],
-  "name": {
-    "short": "Sample App",
-    "full": "Sample App"
-  },
-  "accentColor": "#FFFFFF",
-  "needsIdentity": "true"
-}
-```
+---
 
 ## <a name="send-adaptive-cards-using-an-incoming-webhook"></a>受信 Webhook を使用してアダプティブ カードを送信する
 
 > [!NOTE]
->
-> ✔ `Action.Submit` 以外のすべてのネイティブのアダプティブ カード スキーマ要素は、完全にサポートされます。
->
-> ✔ サポートされているアクションは [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html)、[**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html)、および [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html) です。
+> * ネイティブのアダプティブ カード スキーマ要素 (ただし `Action.Submit` 、 を除く) はすべて完全にサポートされています。
+> * サポートされているアクションは [**、Action.OpenURL、Action.ShowCard、**](https://adaptivecards.io/explorer/Action.OpenUrl.html)[**および Action.ToggleVisibility です**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)。 [](https://adaptivecards.io/explorer/Action.ShowCard.html)
 
-### <a name="the-flow-for-sending-adaptive-cards-via-an-incoming-webhook-is-as-follows"></a>受信 Webhook を通して [アダプティブ カード](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card) を送信するためのフローは次のとおりです。
+**受信 Webhook を介してアダプティブ カードを送信するには**
 
-1. [カスタム Webhook をカスタム webhook](#setting-up-a-custom-incoming-webhook) Teams。
-1. アダプティブ カード JSON ファイルを作成します。
+1. [カスタム Webhook をカスタム webhook](/add-incoming-webhook.md) Teams。
+1. 次のコードを使用してアダプティブ カード JSON ファイルを作成します。
 
     ```json
     {
@@ -265,37 +226,28 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
     }
     ```
 
-    > [!div class="checklist"]
-    >
-    > - `"type"` フィールドは `"message"` であることが必要です。
-    > - `"attachments"` 配列には、カード オブジェクトのセットが含まれています。
-    > - `"contentType"` フィールドにはアダプティブカードの種類が設定されていることが必要です。
-    > - `"content"` オブジェクトは、JSON で書式設定されたカードです。
+    アダプティブ カード JSON ファイルのプロパティは次のとおりです。
 
-1. Postman でアダプティブ カードをテストします。
+    * `"type"` フィールドは `"message"` であることが必要です。
+    * `"attachments"` 配列には、カード オブジェクトのセットが含まれています。
+    * フィールド `"contentType"` はアダプティブ カードの種類に設定する必要があります。
+    * `"content"` オブジェクトは、JSON で書式設定されたカードです。
 
-[Postman](https://www.postman.com) を使用して、受信 Webhook の設定時に作成した URL に POST 要求を送信することで、アダプティブカードをテストできます。 JSON ファイルを要求の本文に貼り付け、Teams でアダプティブ カード メッセージを表示します。
+1. Postman でアダプティブ カードをテストする:
 
->[!TIP]
-> テストの Post 要求の本文には、アダプティブ カード コードの [サンプルとテンプレート](https://adaptivecards.io/samples) を使用できます。
+    * Postman を使用して [アダプティブ カードをテスト](https://www.postman.com) し、受信 Webhook をセットアップするために作成された POST 要求を URL に送信します。
+    * 要求の本文に JSON ファイルを貼り付け、アダプティブ カード メッセージを [アダプティブ カード] Teams。
 
-## <a name="testing-your-connector"></a>コネクタをテストする
-
-コネクタをテストするには、他のアプリと同じ方法でコネクタをチームにアップロードします。 前のセクションと 2 .zipの指示に応じて変更されたコネクタ開発者ダッシュボードのマニフェスト ファイルを使用して、新しいパッケージを作成できます。
-
-アプリをアップロードしたら、任意のチャネルからコネクタ リストを開きます。 下にスクロールして、[アップロード] セクションにアプリ **を表示** します。
-
-![コネクタ ダイアログ ボックスの [アップロード済み] セクションのスクリーンショット](~/assets/images/connectors/connector_dialog_uploaded.png)
-
-構成機能を起動できるようになりました。 このフローは、ポップアップ ウィンドウを通してすべて Microsoft Teams 内で行われる点に注意してください。 現在、この動作は、ここで作成したコネクタの構成機能とは異なります。Microsoft では、構成機能の共通化に取り組んでいます。
-
-`HttpPOST` アクションが正常に動作していることを確認するには、[カスタム着信 Webhook](#setting-up-a-custom-incoming-webhook) を使用します。
+> [!TIP]
+> アダプティブ カード のコード [サンプルとテンプレートを使用して](https://adaptivecards.io/samples) POST 要求の本文をテストします。
 
 ## <a name="rate-limiting-for-connectors"></a>コネクタのレート制限
 
-アプリケーション レートの制限は、コネクタまたは着信 Webhook がチャネルで発生させることが許可されているトラフィックを制御します。 Teams は、固定レート ウィンドウと増分カウンター (秒単位で測定) を使用して、要求を追跡します。  要求が多すぎる場合は、ウィンドウが更新されるまで (つまり固定レートの期間中)、クライアント接続が制限されます。
+アプリケーション レートの制限は、コネクタまたは受信 Webhook がチャネルで生成できるトラフィックを制御します。 Teamsレート ウィンドウと増分カウンターを使用して、数秒で測定された要求を追跡します。 1 秒間に 4 つ以上の要求が行われた場合、固定レートの期間ウィンドウが更新されるまで、クライアント接続が調整されます。
 
-### <a name="transactions-per-second-thresholds"></a>**1 秒あたりのトランザクションのしきい値**
+### <a name="transactions-per-second-thresholds"></a>1 秒あたりのトランザクションのしきい値
+
+次の表に、時間ベースのトランザクションの詳細を示します。
 
 | 時間 (秒)  | 許可される最大要求数  |
 |---|---|
@@ -305,7 +257,10 @@ Office 365 コネクタまたは着信 Webhook 経由でメッセージを送信
 | 7200 | 150  |
 | 86400  | 1800  |
 
-次のような[指数バックオフを使用した再試行ロジック](/azure/architecture/patterns/retry)は、要求が 1 秒以内に制限を超えてしまうケースで、レート制限を緩和します。 レート制限を避けるために、[HTTP 429 応答](../../bots/how-to/rate-limit.md#handle-http-429-responses)を参照してください。
+指数 [バックオフによる再試行ロジック](/azure/architecture/patterns/retry) は、要求が 1 秒以内に制限を超える場合のレート制限を軽減できます。 ベスト [プラクティスに従](../../bots/how-to/rate-limit.md) って、レート制限に達しないようにします。
+
+> [!NOTE]
+> 指数 [バックオフによる再試行ロジック](/azure/architecture/patterns/retry) は、要求が 1 秒以内に制限を超える場合のレート制限を軽減できます。 レート制限を避けるために、[HTTP 429 応答](../../bots/how-to/rate-limit.md#handle-http-429-responses)を参照してください。
 
 ```csharp
 // Please note that response body needs to be extracted and read 
@@ -322,9 +277,11 @@ try
     }
 }
 ```
- 
-これらの制限は、大量のメッセージがコネクタからチャネルに送信されることを減らすために設定されており、エンドユーザーのために最適な操作性を確保するためのものです。
+
+これらの制限は、コネクタによるチャネルの spamming を減らすために設定され、ユーザーに最適なエクスペリエンスを保証します。
 
 ## <a name="see-also"></a>関連項目
 
-[Office 365コネクタ - Microsoft Teams](/connectors/teams/)
+* [Office 365コネクタのMicrosoft Teams](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* [受信 Webhook の作成](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [送信 Webhook の作成](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
