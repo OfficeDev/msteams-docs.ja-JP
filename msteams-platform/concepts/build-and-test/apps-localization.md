@@ -1,94 +1,110 @@
 ---
-title: アプリのローカライズ
+title: アプリをローカライズする
 description: アプリのローカライズに関する考慮事項Microsoft Teamsします。
 ms.topic: conceptual
 localization_priority: Normal
 keywords: teams publishs store office publishing AppSource ローカライズ言語
 ms.date: 05/15/2018
-ms.openlocfilehash: 6dbdeb6d16c99aada23f8d74a92d958f9c29b69d
-ms.sourcegitcommit: 118f7261d313feeac5b398fef56a44bd90104b2f
+ms.openlocfilehash: c73188bb24960b9ef0706955d09d23b618c04e5c
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2021
-ms.locfileid: "52709629"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140041"
 ---
-# <a name="localization-for-microsoft-teams-apps"></a><span data-ttu-id="8189a-104">アプリのローカライズMicrosoft Teamsする</span><span class="sxs-lookup"><span data-stu-id="8189a-104">Localization for Microsoft Teams apps</span></span>
+# <a name="localize-your-app"></a><span data-ttu-id="e81b8-104">アプリをローカライズする</span><span class="sxs-lookup"><span data-stu-id="e81b8-104">Localize your app</span></span>
 
-<span data-ttu-id="8189a-105">アプリをローカライズするMicrosoft Teams、次の点を考慮する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8189a-105">When localizing your Microsoft Teams app, you must consider the following:</span></span>
+<span data-ttu-id="e81b8-105">アプリをローカライズするには、次の要素Microsoft Teams必要があります。</span><span class="sxs-lookup"><span data-stu-id="e81b8-105">You must consider the following factors to localize your Microsoft Teams app:</span></span>
 
-1. <span data-ttu-id="8189a-106">ユーザー Teamsストアの登録情報 (該当する場合)。</span><span class="sxs-lookup"><span data-stu-id="8189a-106">Your Teams store listing (if applicable).</span></span>
-1. <span data-ttu-id="8189a-107">アプリ マニフェスト内のエンド ユーザー向け文字列。</span><span class="sxs-lookup"><span data-stu-id="8189a-107">The end-user facing strings in your app manifest.</span></span> <span data-ttu-id="8189a-108">ボット コマンドの例です。</span><span class="sxs-lookup"><span data-stu-id="8189a-108">For example bot commands.</span></span>
-1. <span data-ttu-id="8189a-109">ユーザーから送信されたローカライズされたテキストへの応答。</span><span class="sxs-lookup"><span data-stu-id="8189a-109">Responding to localized text submitted from your users.</span></span>
+1. <span data-ttu-id="e81b8-106">[AppSource リストをローカライズします](#localize-your-appsource-listing)。</span><span class="sxs-lookup"><span data-stu-id="e81b8-106">[Localize your AppSource listing](#localize-your-appsource-listing).</span></span>
+1. <span data-ttu-id="e81b8-107">[アプリ マニフェスト内の文字列をローカライズします](#localize-strings-in-your-app-manifest)。</span><span class="sxs-lookup"><span data-stu-id="e81b8-107">[Localize strings in your app manifest](#localize-strings-in-your-app-manifest).</span></span> 
+1. <span data-ttu-id="e81b8-108">[ユーザーからのローカライズされたテキスト送信を処理します](#handle-localized-text-submissions-from-your-users)。</span><span class="sxs-lookup"><span data-stu-id="e81b8-108">[Handle localized text submissions from your users](#handle-localized-text-submissions-from-your-users).</span></span>
 
-## <a name="localizing-your-appsource-listing"></a><span data-ttu-id="8189a-110">AppSource リストのローカライズ</span><span class="sxs-lookup"><span data-stu-id="8189a-110">Localizing your AppSource listing</span></span>
+## <a name="localize-your-appsource-listing"></a><span data-ttu-id="e81b8-109">AppSource リストをローカライズする</span><span class="sxs-lookup"><span data-stu-id="e81b8-109">Localize your AppSource listing</span></span>
 
-<span data-ttu-id="8189a-111">ストアに発行する場合は、AppSource リストのローカライズがまだサポートされていないことに注意する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8189a-111">If you're publishing to the store, you need to be aware that localizing your AppSource listing is not yet supported.</span></span> <span data-ttu-id="8189a-112">ただし、アプリ ストアでのローカライズされたリストのサポートに備えて、リスティングに追加の言語を追加できます。</span><span class="sxs-lookup"><span data-stu-id="8189a-112">However, in preparation for support for localized listings in the app store you can add additional languages to your listing.</span></span> <span data-ttu-id="8189a-113">現在、登録情報のパートナー センターで指定した既定[](/office/dev/store/submit-to-appsource-via-partner-center)の (英語) 言語情報だけが、アプリの[AppSource Web](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1)サイトの一覧に表示されます。</span><span class="sxs-lookup"><span data-stu-id="8189a-113">Currently only the default (English) language information you provide in [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) for your listing will appear in the [AppSource website](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) listing for your app.</span></span>
+<span data-ttu-id="e81b8-110">アプリをストアに発行する場合は、AppSource リストのローカライズがまだサポートされていないことに注意する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e81b8-110">If you are publishing the app to the store, you must be aware that localizing your AppSource listing is not yet supported.</span></span> <span data-ttu-id="e81b8-111">アプリ ストアでローカライズされたリストをサポートするには、リスティングに追加の言語を追加できます。</span><span class="sxs-lookup"><span data-stu-id="e81b8-111">To support localized listings in the app store, you can add additional languages to your listing.</span></span> <span data-ttu-id="e81b8-112">登録情報のパートナー センターで[](/office/dev/store/submit-to-appsource-via-partner-center)指定した既定の言語情報は、アプリの[AppSource Web](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1)サイトの一覧に表示されます。</span><span class="sxs-lookup"><span data-stu-id="e81b8-112">The default language information you provide in [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) for your listing appears in the [AppSource website](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) listing for your app.</span></span> <span data-ttu-id="e81b8-113">現在、既定の言語は英語です。</span><span class="sxs-lookup"><span data-stu-id="e81b8-113">Currently, the default language is English.</span></span>
 
-### <a name="example-of-configuring-localization"></a><span data-ttu-id="8189a-114">ローカライズの構成例</span><span class="sxs-lookup"><span data-stu-id="8189a-114">Example of configuring localization</span></span>
+### <a name="configure-localization"></a><span data-ttu-id="e81b8-114">ローカライズの構成</span><span class="sxs-lookup"><span data-stu-id="e81b8-114">Configure localization</span></span>
 
-<span data-ttu-id="8189a-115">アプリの追加の言語を構成するには、 [パートナー](/office/dev/store/submit-to-appsource-via-partner-center)センターで、英語とアプリの追加言語の両方を選択します。</span><span class="sxs-lookup"><span data-stu-id="8189a-115">To configure an additional language for your app, in [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center), select both English and the additional language of the app.</span></span> <span data-ttu-id="8189a-116">次の例では、フランス語を使用します。</span><span class="sxs-lookup"><span data-stu-id="8189a-116">French is used in this example:</span></span>
+<span data-ttu-id="e81b8-115">アプリの追加の言語を構成するには、 [パートナー](/office/dev/store/submit-to-appsource-via-partner-center)センターで、英語とアプリの追加言語の両方を選択します。</span><span class="sxs-lookup"><span data-stu-id="e81b8-115">To configure an additional language for your app, in [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center), select both English and the additional language of the app.</span></span> <span data-ttu-id="e81b8-116">次の例では、フランス語を追加の言語として使用します。</span><span class="sxs-lookup"><span data-stu-id="e81b8-116">French is used as an additional language in the following example:</span></span>
 
-1. <span data-ttu-id="8189a-117">英語を追加する</span><span class="sxs-lookup"><span data-stu-id="8189a-117">Add English language</span></span>
-    * <span data-ttu-id="8189a-118">アプリ名を入力します。</span><span class="sxs-lookup"><span data-stu-id="8189a-118">Fill in the app name.</span></span>
-    * <span data-ttu-id="8189a-119">アプリの簡単な説明を英語で入力します。</span><span class="sxs-lookup"><span data-stu-id="8189a-119">Fill in a short description of the app in English.</span></span>
-    * <span data-ttu-id="8189a-120">アプリの長い説明を英語で入力します。</span><span class="sxs-lookup"><span data-stu-id="8189a-120">Fill in the long description of the app in English.</span></span>
-    * <span data-ttu-id="8189a-121">長い説明では、「このアプリは"フランス語"で利用可能です」という行も追加してください。</span><span class="sxs-lookup"><span data-stu-id="8189a-121">In the long description, please also add the line “This app is available in “French”.</span></span>
-    * <span data-ttu-id="8189a-122">アップロード UI のイメージを確認します (英語)。</span><span class="sxs-lookup"><span data-stu-id="8189a-122">Upload the images of your app UI (in English).</span></span>
-2. <span data-ttu-id="8189a-123">フランス語を追加する</span><span class="sxs-lookup"><span data-stu-id="8189a-123">Add French language</span></span>
-    * <span data-ttu-id="8189a-124">アプリ名を入力します。</span><span class="sxs-lookup"><span data-stu-id="8189a-124">Fill in the app name.</span></span>
-    * <span data-ttu-id="8189a-125">フランス語でアプリの簡単な説明を入力します。</span><span class="sxs-lookup"><span data-stu-id="8189a-125">Fill in a short description of the app in French.</span></span>
-    * <span data-ttu-id="8189a-126">フランス語でアプリの長い説明を入力します。</span><span class="sxs-lookup"><span data-stu-id="8189a-126">Fill in the long description of the app in French.</span></span>
-    * <span data-ttu-id="8189a-127">アップロード UI のイメージを確認します (フランス語)。</span><span class="sxs-lookup"><span data-stu-id="8189a-127">Upload the images of your app UI (in French).</span></span>
+1. <span data-ttu-id="e81b8-117">英語を追加する</span><span class="sxs-lookup"><span data-stu-id="e81b8-117">Add English language</span></span>
+    * <span data-ttu-id="e81b8-118">アプリ名を入力します。</span><span class="sxs-lookup"><span data-stu-id="e81b8-118">Enter the app name.</span></span>
+    * <span data-ttu-id="e81b8-119">アプリの簡単な説明を英語で入力します。</span><span class="sxs-lookup"><span data-stu-id="e81b8-119">Enter a short description of the app in English.</span></span>
+    * <span data-ttu-id="e81b8-120">アプリの長い説明を英語で入力します。</span><span class="sxs-lookup"><span data-stu-id="e81b8-120">Enter the long description of the app in English.</span></span>
+    * <span data-ttu-id="e81b8-121">長い説明で、「このアプリ **はフランス語で使用できます。」と入力します**。</span><span class="sxs-lookup"><span data-stu-id="e81b8-121">In the long description, enter: **This app is available in French**.</span></span>
+    * <span data-ttu-id="e81b8-122">アップロード UI のイメージを確認します (英語)。</span><span class="sxs-lookup"><span data-stu-id="e81b8-122">Upload the images of your app UI (in English).</span></span>
+2. <span data-ttu-id="e81b8-123">フランス語を追加する</span><span class="sxs-lookup"><span data-stu-id="e81b8-123">Add French language</span></span>
+    * <span data-ttu-id="e81b8-124">アプリ名を入力します。</span><span class="sxs-lookup"><span data-stu-id="e81b8-124">Enter the app name.</span></span>
+    * <span data-ttu-id="e81b8-125">アプリの簡単な説明をフランス語で入力します。</span><span class="sxs-lookup"><span data-stu-id="e81b8-125">Enter a short description of the app in French.</span></span>
+    * <span data-ttu-id="e81b8-126">アプリの長い説明をフランス語で入力します。</span><span class="sxs-lookup"><span data-stu-id="e81b8-126">Enter the long description of the app in French.</span></span>
+    * <span data-ttu-id="e81b8-127">アップロード UI のイメージを確認します (フランス語)。</span><span class="sxs-lookup"><span data-stu-id="e81b8-127">Upload the images of your app UI (in French).</span></span>
 
-<span data-ttu-id="8189a-128">英語でアップロードする画像は、AppSource で使用されるイメージです。</span><span class="sxs-lookup"><span data-stu-id="8189a-128">The images you upload with the English language will be the ones used in AppSource.</span></span>
+<span data-ttu-id="e81b8-128">英語でアップロードする画像は、AppSource で使用されます。</span><span class="sxs-lookup"><span data-stu-id="e81b8-128">The images that you upload with the English language are used in AppSource.</span></span>
 
-## <a name="localizing-the-strings-in-your-app-manifest"></a><span data-ttu-id="8189a-129">アプリ マニフェスト内の文字列のローカライズ</span><span class="sxs-lookup"><span data-stu-id="8189a-129">Localizing the strings in your app manifest</span></span>
+## <a name="localize-strings-in-your-app-manifest"></a><span data-ttu-id="e81b8-129">アプリ マニフェスト内の文字列をローカライズする</span><span class="sxs-lookup"><span data-stu-id="e81b8-129">Localize strings in your app manifest</span></span>
 
-<span data-ttu-id="8189a-130">アプリを適切にローカライズMicrosoft Teamsするには、アプリ スキーマ v1.5 以上を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8189a-130">You must use the Microsoft Teams app schema v1.5+ to properly localize your app.</span></span> <span data-ttu-id="8189a-131">これを行うには、manifest.json ファイルの属性を ' に設定し `$schema` https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json 、'manifestVersion' プロパティを '1.7' に更新します。</span><span class="sxs-lookup"><span data-stu-id="8189a-131">You can do this by setting the `$schema` attribute in your manifest.json file to 'https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json' and updating the 'manifestVersion' property to '1.7'.</span></span>
+<span data-ttu-id="e81b8-130">アプリをローカライズするには、Microsoft Teamsスキーマ以降を使用 `v1.5` する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e81b8-130">You must use the Microsoft Teams app schema `v1.5` and later to localize your app.</span></span> <span data-ttu-id="e81b8-131">この操作を行うには、manifest.jsの属性をファイルに設定し、プロパティをバージョン (この場合) `$schema` **https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json** `manifestVersion` `$schema` に `1.5` 更新します。</span><span class="sxs-lookup"><span data-stu-id="e81b8-131">You can do this by setting the `$schema` attribute in your manifest.json file to **https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json** or higher and updating the `manifestVersion` property to `$schema` version (`1.5` in this case).</span></span> 
 
-### <a name="example-manifestjson-change"></a><span data-ttu-id="8189a-132">変更時manifest.js例</span><span class="sxs-lookup"><span data-stu-id="8189a-132">Example manifest.json change</span></span>
+<span data-ttu-id="e81b8-132">アプリケーションでサポートされている `localizationInfo` 既定の言語でプロパティを追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e81b8-132">You must add the `localizationInfo` property with the default language that your application supports.</span></span> <span data-ttu-id="e81b8-133">既定の言語は、ユーザーのクライアント設定が追加の言語と一致しない場合、最終的なフォールバック言語として使用されます。</span><span class="sxs-lookup"><span data-stu-id="e81b8-133">The default language is used as the final fallback language if the user's client settings do not match with any of your additional languages.</span></span>
+
+### <a name="example-manifestjson-change"></a><span data-ttu-id="e81b8-134">変更時manifest.js例</span><span class="sxs-lookup"><span data-stu-id="e81b8-134">Example manifest.json change</span></span>
+
+<span data-ttu-id="e81b8-135">次のmanifest.jsは、アプリケーションでサポートされている既定の言語でプロパティを追加 `localizationInfo` するのに役立ちます `additionalLanguages` 。</span><span class="sxs-lookup"><span data-stu-id="e81b8-135">The following manifest.json helps to add the `localizationInfo` property with the default language that your application supports along with `additionalLanguages`:</span></span>
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json",
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
+  "localizationInfo": {
+        "defaultLanguageTag": "en",
+        "additionalLanguages": [
+            {
+                "languageTag": "es-mx",
+                "file": "es-mx.json"
+            }
+        ]
+    }
   ...
 }
 ```
 
-<span data-ttu-id="8189a-133">次に、アプリケーションでサポートされている既定の言語で 'localizationInfo' プロパティを追加します。</span><span class="sxs-lookup"><span data-stu-id="8189a-133">You will then want to add the 'localizationInfo' property with the default language that your application supports.</span></span> <span data-ttu-id="8189a-134">ユーザーのクライアント設定が追加の言語と一致しない場合は、既定の言語が最終的なフォールバック言語として使用されます。</span><span class="sxs-lookup"><span data-stu-id="8189a-134">The default language is used as the final fallback language if the user's client settings do not match any of your additional languages.</span></span>
+### <a name="example-localization-json-change"></a><span data-ttu-id="e81b8-136">ローカライズ .json の変更例</span><span class="sxs-lookup"><span data-stu-id="e81b8-136">Example localization .json change</span></span>
 
-### <a name="example-manifestjson-change"></a><span data-ttu-id="8189a-135">変更時manifest.js例</span><span class="sxs-lookup"><span data-stu-id="8189a-135">Example manifest.json change</span></span>
+<span data-ttu-id="e81b8-137">ローカライズ .json の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="e81b8-137">Following is an example for localization .json:</span></span>
 
 ```json
 {
-  ...
-  "localizationInfo": {
-    "defaultLanguageTag": "en"
-  }
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json",
+  "manifestVersion": "1.5",
+  "name.short": "Localización",
+  "name.full": "Aplicación de localización",
   ...
 }
 ```
 
-<span data-ttu-id="8189a-136">マニフェスト内のすべてのユーザー向け文字列の翻訳を含む追加の .json ファイルを提供できます。</span><span class="sxs-lookup"><span data-stu-id="8189a-136">You can provide additional .json files with translations of all the user facing strings in your manifest.</span></span> <span data-ttu-id="8189a-137">これらのファイルは、ローカライズ ファイル [JSON](../../resources/schema/localization-schema.md) スキーマに準拠している必要があります。マニフェストの 'localizationInfo' プロパティに追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8189a-137">These files must adhere to the [Localization file JSON schema](../../resources/schema/localization-schema.md) and they must be added to the 'localizationInfo' property of your manifest.</span></span> <span data-ttu-id="8189a-138">各ファイルは、クライアントが適切な文字列を選択するためにTeams言語タグに関連付けされます。</span><span class="sxs-lookup"><span data-stu-id="8189a-138">Each file correlates to a language tag which the Teams client uses to choose the appropriate strings.</span></span> <span data-ttu-id="8189a-139">言語タグの形式を使用しますが、目的の言語をサポートしているすべての地域を対象とする部分を省略 <language> - <region> <region> することが推奨されます。</span><span class="sxs-lookup"><span data-stu-id="8189a-139">The language tag takes the form of <language>-<region> but it is recommended to omit the <region> portion to target all regions that support the desired language.</span></span>
 
-<span data-ttu-id="8189a-140">Teams クライアントは、既定の言語文字列 -> ユーザーの言語のみ -> ユーザーの言語 + ユーザーの地域文字列という順序で文字列を適用します。</span><span class="sxs-lookup"><span data-stu-id="8189a-140">The Teams client will apply the strings in this order: default language strings -> user's language only strings -> user's language + user's region strings.</span></span>
+<span data-ttu-id="e81b8-138">マニフェスト内のすべてのユーザー向け文字列の翻訳を含む追加の .json ファイルを提供できます。</span><span class="sxs-lookup"><span data-stu-id="e81b8-138">You can provide additional .json files with translations of all the user facing strings in your manifest.</span></span> <span data-ttu-id="e81b8-139">これらのファイルは、ローカライズ ファイル JSON スキーマに準拠している [必要があります](../../resources/schema/localization-schema.md) 。マニフェストの `localizationInfo` プロパティに追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e81b8-139">These files must adhere to the [Localization file JSON schema](../../resources/schema/localization-schema.md) and they must be added to the `localizationInfo` property of your manifest.</span></span> <span data-ttu-id="e81b8-140">各ファイルは言語タグに関連付け、Teamsを使用して適切な文字列を選択します。</span><span class="sxs-lookup"><span data-stu-id="e81b8-140">Each file correlates to a language tag, which the Teams client uses to select the appropriate strings.</span></span> <span data-ttu-id="e81b8-141">言語タグの形式を使用しますが、目的の言語をサポートしているすべての地域を対象とする部分 `<language>-<region>` `<region>` を省略できます。</span><span class="sxs-lookup"><span data-stu-id="e81b8-141">The language tag takes the form of `<language>-<region>` but you can omit the `<region>` portion to target all regions that support the desired language.</span></span>
 
-<span data-ttu-id="8189a-141">たとえば、'fr' (フランス語、すべての地域) の既定の言語と、'en' (英語、すべての地域) と 'en-gb' (英語、英国) の追加言語ファイルを指定します。</span><span class="sxs-lookup"><span data-stu-id="8189a-141">For example, you provide a default language of 'fr' (French, all regions), and additional language files for 'en' (English, all regions) and 'en-gb' (English, Great Britain).</span></span> <span data-ttu-id="8189a-142">ユーザーの言語が 'en-gb' に設定されている場合:</span><span class="sxs-lookup"><span data-stu-id="8189a-142">If the user's language is set to 'en-gb':</span></span>
+<span data-ttu-id="e81b8-142">Teams クライアントは、既定の言語文字列 -> ユーザーの言語のみ -> ユーザーの言語 + ユーザーの地域文字列の順序で文字列を適用します。</span><span class="sxs-lookup"><span data-stu-id="e81b8-142">The Teams client applies the strings in the following order: default language strings -> user's language only strings -> user's language + user's region strings.</span></span>
 
-1. <span data-ttu-id="8189a-143">クライアントTeams'fr' 文字列を受け取り、それらを 'en' 文字列で上書きします。</span><span class="sxs-lookup"><span data-stu-id="8189a-143">The Teams client will take the 'fr' strings overwrite them with the 'en' strings.</span></span>
-2. <span data-ttu-id="8189a-144">'en-gb' 文字列で上書きします。</span><span class="sxs-lookup"><span data-stu-id="8189a-144">Overwrite those with the 'en-gb' strings.</span></span>
+<span data-ttu-id="e81b8-143">たとえば、'fr' (フランス語、すべての地域) の既定の言語と、'en' (英語、すべての地域) と 'en-gb' (英語、英国) の追加言語ファイルを指定すると、ユーザーの言語は 'en-gb' に設定されます。</span><span class="sxs-lookup"><span data-stu-id="e81b8-143">For example, you provide a default language of 'fr' (French, all regions), and additional language files for 'en' (English, all regions) and 'en-gb' (English, Great Britain), the user's language is set to 'en-gb'.</span></span> <span data-ttu-id="e81b8-144">次の変更は、言語の選択に基づいて行います。</span><span class="sxs-lookup"><span data-stu-id="e81b8-144">The following changes take place based on the language selection:</span></span>
 
-<span data-ttu-id="8189a-145">ユーザーの言語が 'en-ca' に設定されている場合:</span><span class="sxs-lookup"><span data-stu-id="8189a-145">If the user's language is set to 'en-ca':</span></span> 
+1. <span data-ttu-id="e81b8-145">クライアントTeams'fr' 文字列を受け取り、'en' 文字列で上書きします。</span><span class="sxs-lookup"><span data-stu-id="e81b8-145">The Teams client takes the 'fr' strings and overwrite them with the 'en' strings.</span></span>
+1. <span data-ttu-id="e81b8-146">'en' 文字列を 'en-gb' 文字列で上書きします。</span><span class="sxs-lookup"><span data-stu-id="e81b8-146">Overwrite the 'en' strings with the 'en-gb' strings.</span></span>
 
-1. <span data-ttu-id="8189a-146">クライアントTeams'fr' 文字列を受け取り、それらを 'en' 文字列で上書きします。</span><span class="sxs-lookup"><span data-stu-id="8189a-146">The Teams client will take the 'fr' strings overwrite them with the 'en' strings.</span></span>
-2. <span data-ttu-id="8189a-147">'en-ca' ローカライズは指定されていないので、'en' ローカライズが使用されます。</span><span class="sxs-lookup"><span data-stu-id="8189a-147">Since no 'en-ca' localization is supplied, the 'en' localizations will be used.</span></span>
+<span data-ttu-id="e81b8-147">ユーザーの言語が 'en-ca' に設定されている場合、言語の選択に基づいて次の変更が行います。</span><span class="sxs-lookup"><span data-stu-id="e81b8-147">If the user's language is set to 'en-ca', the following changes take place based on the language selection:</span></span> 
 
-<span data-ttu-id="8189a-148">ユーザーの言語が 'es-es' に設定されている場合、Teams クライアントは 'fr' 文字列を受け取り、どの言語ファイルでも上書きしません。</span><span class="sxs-lookup"><span data-stu-id="8189a-148">If the user's language is set to 'es-es', the Teams client will take the 'fr' strings and will not override them with any of the language files.</span></span>
+1. <span data-ttu-id="e81b8-148">クライアントTeams'fr' 文字列を受け取り、'en' 文字列で上書きします。</span><span class="sxs-lookup"><span data-stu-id="e81b8-148">The Teams client takes the 'fr' strings and overwrite them with the 'en' strings.</span></span>
+1. <span data-ttu-id="e81b8-149">'en-ca' ローカライズは指定されていないので、'en' ローカライズが使用されます。</span><span class="sxs-lookup"><span data-stu-id="e81b8-149">Since no 'en-ca' localization is supplied, the 'en\` localizations are used.</span></span>
 
-<span data-ttu-id="8189a-149">したがって、マニフェストに言語専用のトップ レベルの翻訳 ('en-us' ではなく'en') を提供し、それらを必要とする少数の文字列に対して地域レベルのオーバーライドのみを提供する方が強く推奨されます。</span><span class="sxs-lookup"><span data-stu-id="8189a-149">Therefore, it is strongly recommended to provide top-level, language-only translations in your manifest ('en' instead of 'en-us') and only provide region-level overrides for the few strings that need them.</span></span>
+<span data-ttu-id="e81b8-150">ユーザーの言語が 'es-es' に設定されている場合、クライアントは 'fr' Teamsを受け取る。</span><span class="sxs-lookup"><span data-stu-id="e81b8-150">If the user's language is set to 'es-es', the Teams client takes the 'fr' strings.</span></span> <span data-ttu-id="e81b8-151">このTeamsクライアントは、言語ファイルの文字列を上書きしません。'es' または 'es-es' 変換が提供されていない。</span><span class="sxs-lookup"><span data-stu-id="e81b8-151">The Teams client does not override the strings with any of the language files as no 'es' or 'es-es' translation is provided.</span></span>
 
-### <a name="example-manifestjson-change"></a><span data-ttu-id="8189a-150">変更時manifest.js例</span><span class="sxs-lookup"><span data-stu-id="8189a-150">Example manifest.json change</span></span>
+<span data-ttu-id="e81b8-152">したがって、マニフェストにトップ レベルの言語翻訳のみを提供する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e81b8-152">Therefore, you must provide top level, language only translations in your manifest.</span></span> <span data-ttu-id="e81b8-153">たとえば、'en-us' の代わりに 'en' を使用します。</span><span class="sxs-lookup"><span data-stu-id="e81b8-153">For example, 'en' instead of 'en-us'.</span></span> <span data-ttu-id="e81b8-154">地域レベルのオーバーライドは、必要な少数の文字列にのみ指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e81b8-154">You must provide region level overrides only for the few strings that need them.</span></span> 
+
+### <a name="example-manifestjson-change"></a><span data-ttu-id="e81b8-155">変更時manifest.js例</span><span class="sxs-lookup"><span data-stu-id="e81b8-155">Example manifest.json change</span></span>
+
+<span data-ttu-id="e81b8-156">変更manifest.js次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="e81b8-156">The manifest.json change is shown in the following example:</span></span>
 
 ```json
 {
@@ -114,7 +130,9 @@ ms.locfileid: "52709629"
 }
 ```
 
-### <a name="example-localization-json-file"></a><span data-ttu-id="8189a-151">ローカライズ .json ファイルの例</span><span class="sxs-lookup"><span data-stu-id="8189a-151">Example localization .json file</span></span>
+### <a name="example-localization-json-file"></a><span data-ttu-id="e81b8-157">ローカライズ .json ファイルの例</span><span class="sxs-lookup"><span data-stu-id="e81b8-157">Example localization .json file</span></span>
+
+ <span data-ttu-id="e81b8-158">変更localization.js次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="e81b8-158">The localization.json change is shown in the following example:</span></span>
 
 ```json
 {
@@ -131,14 +149,13 @@ ms.locfileid: "52709629"
 }
 ```
 
-## <a name="handling-localized-text-submissions-from-your-users"></a><span data-ttu-id="8189a-152">ユーザーからのローカライズされたテキスト送信の処理</span><span class="sxs-lookup"><span data-stu-id="8189a-152">Handling localized text submissions from your users</span></span>
+## <a name="handle-localized-text-submissions-from-your-users"></a><span data-ttu-id="e81b8-159">ユーザーからのローカライズされたテキスト送信を処理する</span><span class="sxs-lookup"><span data-stu-id="e81b8-159">Handle localized text submissions from your users</span></span>
 
-<span data-ttu-id="8189a-153">アプリケーションのローカライズされたバージョンを提供する場合、ユーザーが同じ言語で応答する可能性が非常に高い可能性があります。</span><span class="sxs-lookup"><span data-stu-id="8189a-153">If your provide localized versions of your application it is very likely that your users will respond with the same language.</span></span> <span data-ttu-id="8189a-154">Teams提出を既定の言語に変換し戻す必要はないので、アプリで処理する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8189a-154">Teams does not translate the user submissions back to the default language, so your app will need to handle that.</span></span> <span data-ttu-id="8189a-155">たとえば、ローカライズを指定した場合、ボットに対する応答は、既定の言語ではなく、コマンドのローカライズされたテキスト `commandList` になります。</span><span class="sxs-lookup"><span data-stu-id="8189a-155">For example, if you provide a localized `commandList`, the responses to your bot will be the localized text of the command, not the default language.</span></span> <span data-ttu-id="8189a-156">アプリは適切に対応する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8189a-156">Your app will need to respond appropriately.</span></span>
+<span data-ttu-id="e81b8-160">アプリケーションのローカライズされたバージョンを提供する場合、ユーザーは同じ言語で応答します。</span><span class="sxs-lookup"><span data-stu-id="e81b8-160">If your provide localized versions of your application, the users respond with the same language.</span></span> <span data-ttu-id="e81b8-161">ユーザー Teams既定の言語に変換されないので、アプリはローカライズされた言語の応答を処理する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e81b8-161">As Teams does not translate the user submissions back to the default language, your app must handle the localized language responses.</span></span> <span data-ttu-id="e81b8-162">たとえば、ローカライズされた言語を指定した場合、ボットに対する応答はコマンドのローカライズされたテキストで、既定の言語 `commandList` ではありません。</span><span class="sxs-lookup"><span data-stu-id="e81b8-162">For example, if you provide a localized `commandList`, the responses to your bot are the localized text of the command, not the default language.</span></span> <span data-ttu-id="e81b8-163">アプリは適切に対応する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e81b8-163">Your app must respond appropriately.</span></span>
 
-## <a name="code-sample"></a><span data-ttu-id="8189a-157">コード サンプル</span><span class="sxs-lookup"><span data-stu-id="8189a-157">Code sample</span></span>
+## <a name="code-sample"></a><span data-ttu-id="e81b8-164">コード サンプル</span><span class="sxs-lookup"><span data-stu-id="e81b8-164">Code sample</span></span>
 
-| <span data-ttu-id="8189a-158">サンプルの名前</span><span class="sxs-lookup"><span data-stu-id="8189a-158">Sample name</span></span> | <span data-ttu-id="8189a-159">説明</span><span class="sxs-lookup"><span data-stu-id="8189a-159">Description</span></span> | <span data-ttu-id="8189a-160">.NET</span><span class="sxs-lookup"><span data-stu-id="8189a-160">.NET</span></span> | <span data-ttu-id="8189a-161">Node.js</span><span class="sxs-lookup"><span data-stu-id="8189a-161">Node.js</span></span> |
+| <span data-ttu-id="e81b8-165">サンプルの名前</span><span class="sxs-lookup"><span data-stu-id="e81b8-165">Sample name</span></span> | <span data-ttu-id="e81b8-166">説明</span><span class="sxs-lookup"><span data-stu-id="e81b8-166">Description</span></span> | <span data-ttu-id="e81b8-167">.NET</span><span class="sxs-lookup"><span data-stu-id="e81b8-167">.NET</span></span> | <span data-ttu-id="e81b8-168">Node.js</span><span class="sxs-lookup"><span data-stu-id="e81b8-168">Node.js</span></span> |
 |-------------|-------------|------|------|
-| <span data-ttu-id="8189a-162">アプリのローカライズ</span><span class="sxs-lookup"><span data-stu-id="8189a-162">App Localization</span></span> | <span data-ttu-id="8189a-163">Microsoft Teamsタブを使用してアプリのローカライズを行います。</span><span class="sxs-lookup"><span data-stu-id="8189a-163">Microsoft Teams app localization using bot and tab.</span></span> | [<span data-ttu-id="8189a-164">View</span><span class="sxs-lookup"><span data-stu-id="8189a-164">View</span></span>](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[<span data-ttu-id="8189a-165">View</span><span class="sxs-lookup"><span data-stu-id="8189a-165">View</span></span>](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
-
+| <span data-ttu-id="e81b8-169">アプリのローカライズ</span><span class="sxs-lookup"><span data-stu-id="e81b8-169">App Localization</span></span> | <span data-ttu-id="e81b8-170">Microsoft Teamsタブを使用してアプリのローカライズを行います。</span><span class="sxs-lookup"><span data-stu-id="e81b8-170">Microsoft Teams app localization using bot and tab.</span></span> | [<span data-ttu-id="e81b8-171">View</span><span class="sxs-lookup"><span data-stu-id="e81b8-171">View</span></span>](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[<span data-ttu-id="e81b8-172">View</span><span class="sxs-lookup"><span data-stu-id="e81b8-172">View</span></span>](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
 

@@ -1,0 +1,46 @@
+### YamlMime:Tutorial
+title: プロアクティブ メッセージの送信
+metadata:
+  title: プロアクティブ メッセージの送信
+  description: このシナリオでは、プロアクティブ メッセージを送信する方法について説明します。
+  audience: Developer
+  level: Beginner
+  ms.date: 06/23/2021
+  ms.topic: interactive-tutorial
+  nextTutorialHref: ./bots/how-to/conversations/send-proactive-messages.md
+  nextTutorialTitle: プロアクティブ メッセージを送信する
+  ms.custom: mvc
+  ms.openlocfilehash: 844e4c0ed85159f8ae7b080dff073e0d70f38748
+  ms.sourcegitcommit: 0fe60b3fd406a5768b18977df53d1f4c665e5300
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 06/25/2021
+  ms.locfileid: "53133452"
+items:
+- durationInMinutes: 1
+  content: "プロアクティブ メッセージとは、ユーザーからの要求に応答しないボットから送信されるメッセージです。 これには、次のようなメッセージが含まれます。\n - ウェルカム メッセージ\n - 通知\n - 予定されたメッセージ\n \nこのステップ バイ ステップ ガイドは、ボットからプロアクティブ メッセージを送信するのに役立ちます。 次の出力が表示されます。\n\n* チャットでのプロアクティブな hello メッセージ        \n![チャットでの積極的なこんにちは](~/assets/images/proactive-scenario/proactive-helo.png)\n\n* アダプティブ カードのプロアクティブな hello メッセージ    \n![アダプティブ カードでのプロアクティブな hello](~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png) \n"
+- title: 前提条件
+  durationInMinutes: 2
+  content: "次の手順をインストールしてください。    \n\n* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/).\n* [ASP.NET Web 開発](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.301-windows-x64-installer)、または[.NET Core クロス](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-3.1.410-windows-x64-installer)プラットフォーム開発ワークロード。\n* [ngrok](https://ngrok.com/download): 最小限の労力でローカル開発サーバーをインターネットに公開できるクロスプラットフォーム アプリケーション。\n* [開発者テナントの無料Teams取得します](https://developer.microsoft.com/en-us/microsoft-365/dev-program)。\n"
+- title: ローカル環境のセットアップ
+  durationInMinutes: 3
+  content: "1.  サンプル コード [(Zip ファイル](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/assets/downloads/SendProactiveMessages.zip) ) をダウンロードし、ファイルを抽出します。\n1.  抽出したファイルに移動し **、[ProactiveBot.csproj] をダブルクリックします**。 ソリューションは、次のVisual Studio。\n1.  [Visual Studioプロジェクト (**ProactiveBot**) を右クリックし、[ビルド] を選択 **してソリューションを** ビルドします。\n\n    ![Proactivebot プロジェクト](~/assets/images/proactive-scenario/proactivebot-project.png)\n\n    <br>\n\n    <details>\n\n    <summary><b>トラブルシューティング</b></summary>\n\n    [パッケージを検索 **できません] エラーが表示される場合は** 、次の手順を実行します。\n\n    1.  [ツール]**に**  >  **移動**  >  **NuGet パッケージ マネージャーパッケージ マネージャー 設定。**\n    1.  表示される **[オプション]** ウィンドウで、[パッケージ ソース] **NuGet パッケージ マネージャー**  >  **を選択します**。\n    1.  **[追加]** を選択します。\n    1.  [**名前 nuget.org****ソース]** フィールドに「名前 **https://api.nuget.org/v3/index.json** 」と **入力** します。\n    1.  [更新] と **[OK] を選択します**。 \n    1.  プロジェクトを再構築します。\n    <br>\n\n    </details>\n    \n1. 解凍して ngrok をインストールします。\n   * Windows: [ファイル] を **ダブルクリックngrok.zip。**\n   * Linux または OS X: ターミナルから ngrok を解凍し、コマンドを実行 `unzip /path/to/ngrok.zip` します。\n1. コマンド ラインから ngrok を実行し、次の引数を指定します。\n\n    `ngrok http 3978 --host-header=localhost`  \n    \n1. 次の手順で ngrok ベース URL として参照するために、ngrok URL (画像で強調表示されている場合) をコピーします。 \n\n    ![ngrok ベース URL](~/assets/images/proactive-scenario/ngrok-base-url.png)   \n"
+- title: アプリの作成とインストールTeamsする
+  durationInMinutes: 5
+  content: "1. [App Studio Teams >**に移動** し、ダウンロード **AppManifest.zipコード**(Zip ファイル) で使用できるファイルをインポートします。\n\n    ![App Studio インポート アプリ](~/assets/images/proactive-scenario/app-studio-import-app.png) \n\n1. [ボット **のセットアップ**  >  **] を選択します**。\n\n    ![ボットのセットアップ](~/assets/images/proactive-scenario/bot-setup.png)  \n\n1. 表示される **[ボットの** セットアップ] ウィンドウで、**名前**(プロアクティブ メッセージ デモなど) と入力し、[個人用] を選択し、[ボットの作成] を選択してボットを作成します。 \n\n    ![ボット ID の作成](~/assets/images/proactive-scenario/create-bot-id.png)   \n\n1. **/api/messages を** ngrok ベース URL (コピーした) に追加し、ボット エンドポイント アドレス **として設定します**。 URL は次のように表示されます `https://yourngrokdomain.ngrok.io/api/messages` 。\n\n    ![ボット エンドポイント のアドレス](~/assets/images/proactive-scenario/bot-endpoint-address.png)\n\n1. 変更が有効にするまで数秒待ちます。     \n\n    > 時間が長い場合は、[ **タブ] を選択** し、[ボット] **セクションを選択して** 強制的に更新します。\n    \n1. [新 **しいパスワードの生成]** を選択して、新しいアプリ パスワードを生成してコピーします。 \n\n    ![アプリのパスワードを生成する](~/assets/images/proactive-scenario/generate-app-password.png)\n\n1. [ファイル] にVisual Studio、ファイルのappsettings.js **開** きます。  パスワードをの値として貼り付けます `MicrosoftAppPassword` 。    \n1. [App **Studio] に移動** し、アプリ ID をコピーします。 \n\n    ![アプリ ID の生成](~/assets/images/proactive-scenario/generate-app-id.png)\n\n1. [ファイル] にVisual Studio、ファイルのappsettings.js **開** きます。  アプリ ID をの値として貼り付けます `MicrosoftAppId` 。 次 `appsettings.json` の設定値があります。    \n\n    ![Appsetting の値](~/assets/images/proactive-scenario/app-setting-values.png)\n\n1. **F5 キーを押** するか **、IIS Express を選択して** コードを実行します。\n\n    ![コードの実行](~/assets/images/proactive-scenario/run-code.png)\n\n    対応するプロアクティブ メッセージのサンプルが表示されます。  \n\n    ![プロアクティブ メッセージのサンプル](~/assets/images/proactive-scenario/proactive-message-sample.png)\n\n1. [インストールの **テストと配布] に**  >  **移動して**、同じアプリを再度インストールします。\n\n    ![アプリのインストール](~/assets/images/proactive-scenario/install-app.png)   \n\n1. URL を [http://localhost:3978/api/notify](http://localhost:3978/api/notify) 選択して、チャットでプロアクティブな hello メッセージを取得します。\n\n    ![送信されるプロアクティブ メッセージ](~/assets/images/proactive-scenario/result.png)\n\n1. [次へ] Teams。 インストールが成功すると、ボットからプロアクティブな hello メッセージを受信します。          \n\n    ![チャットでの積極的なこんにちは](~/assets/images/proactive-scenario/proactive-helo.png)    \n"
+- title: プロアクティブ メッセージにアダプティブ カードを追加する
+  durationInMinutes: 10
+  content: "1. このVisual Studio、デバッグ プロセスを停止します。\n\n    ![デバッグの停止](~/assets/images/proactive-scenario/stop-debug.png)\n\n1. [依存関係] を **右クリックし、[** パッケージ **の管理NuGet選択します**。\n\n    ![アダプティブ カード パッケージの追加1](~/assets/images/proactive-scenario/add-adaptive-card-package1.png)\n\n1. [**プロNuGet Bot] で**、[**参照**] を選択してアダプティブ カード **を検索します**。 **[インストール]** を選択します。 \n\n    ![アダプティブ カード パッケージの追加2](~/assets/images/proactive-scenario/add-adaptive-card-package2.png)\n\n1. **NotifyController.cs** ファイルを開き、既存のコードを次のコードに置き換え、アダプティブ カード `BotCallback` メッセージを送信します。     \n    \n   ```csharp\n   private async Task BotCallback(ITurnContext turnContext, CancellationToken cancellationToken)\n    {\n                AdaptiveCard card = new AdaptiveCard(new AdaptiveSchemaVersion(1, 0));\n\n                card.Body.Add(new AdaptiveTextBlock()\n                {\n                    Text = \"Proactive Hello\",\n                    Size = AdaptiveTextSize.ExtraLarge\n                });\n\n                card.Body.Add(new AdaptiveImage()\n                {\n                    Url = new Uri(\"http://adaptivecards.io/content/cats/1.png\")\n                });\n\n                Attachment attachment = new Attachment()\n                {\n                    ContentType = AdaptiveCard.ContentType,\n                    Content = card\n                };\n\n                await turnContext.SendActivityAsync(MessageFactory.Attachment(attachment));\n    }\n   ```\n\n1. 赤い線にカーソルを合わせると **、AdaptiveCards** を使用してエラーを解決します。 \n\n    ![エラーの解決](~/assets/images/proactive-scenario/resolve-error.png)  \n\n1. **F5** キーを押してコードを実行します。 \n1. [アプリのTeamsアンインストール] に移動します。 \n    \n    ![アプリのアンインストール](~/assets/images/proactive-scenario/uninstall-app.png) \n\n1. イベントを取得するには、同じアプリを再 `conversationUpdate` インストールします。   \n\n1. アダプティブ カード [http://localhost:3978/api/notify](http://localhost:3978/api/notify) でプロアクティブな hello メッセージを取得するには、URL を選択します。     \n"
+- title: 完全なチャレンジ
+  durationInMinutes: 3
+  content: >
+    このようなことを思い付い出しましたか? アダプティブ カードのプロアクティブな hello メッセージの表示方法は次の通りです。
+
+
+    ![アダプティブ カードでのプロアクティブな hello](~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png)
+- content: >-
+    シナリオが完了しました。
+
+    * 通知を毎日送信したり、ユーザーからのフィードバックを定期的に要求することができます。
+
+    * 調整の制限を処理して、複数の通知を回避します。

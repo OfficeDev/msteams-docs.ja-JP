@@ -6,32 +6,34 @@ keywords: teams タブ グループ チャネル構成可能静的
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: abb073cee4a9417ee4a9f095acdbe18c5e6d7713
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: d1ec2c0381ba371393a03cda69ffc44a5f49924e
+ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068524"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "53140202"
 ---
-# <a name="create-a-content-page-for-your-tab"></a><span data-ttu-id="e7360-104">タブのコンテンツ ページを作成する</span><span class="sxs-lookup"><span data-stu-id="e7360-104">Create a content page for your tab</span></span>
+# <a name="create-a-content-page-for-your-tab"></a><span data-ttu-id="3f2f8-104">タブのコンテンツ ページを作成する</span><span class="sxs-lookup"><span data-stu-id="3f2f8-104">Create a content page for your tab</span></span>
 
-<span data-ttu-id="e7360-105">コンテンツ ページは、クライアント内で表示されるTeamsです。</span><span class="sxs-lookup"><span data-stu-id="e7360-105">A content page is a webpage that is rendered within the Teams client.</span></span> <span data-ttu-id="e7360-106">通常、これらは次の一部です。</span><span class="sxs-lookup"><span data-stu-id="e7360-106">Typically these are part of:</span></span>
+<span data-ttu-id="3f2f8-105">コンテンツ ページは、クライアント内で表示されるTeamsです。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-105">A content page is a webpage that is rendered within the Teams client.</span></span> <span data-ttu-id="3f2f8-106">これらは、次の一部です。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-106">These are part of:</span></span>
 
-* <span data-ttu-id="e7360-107">個人用スコープのカスタム タブ: この例では、コンテンツ ページはユーザーが最初に見つけ入るページです。</span><span class="sxs-lookup"><span data-stu-id="e7360-107">A personal-scoped custom tab: In this instance the content page is the first page the user encounters.</span></span>
-* <span data-ttu-id="e7360-108">チャネル/グループ のカスタム タブ: ユーザーが適切なコンテキストでタブをピンで固定して構成すると、コンテンツ ページが表示されます。</span><span class="sxs-lookup"><span data-stu-id="e7360-108">A channel/group custom tab: After the user pins and configures the tab in the appropriate context, the content page is displayed.</span></span>
-* <span data-ttu-id="e7360-109">タスク [モジュール](~/task-modules-and-cards/what-are-task-modules.md): コンテンツ ページを作成し、タスク モジュール内に Web ビューとして埋め込む。</span><span class="sxs-lookup"><span data-stu-id="e7360-109">A [task module](~/task-modules-and-cards/what-are-task-modules.md): You can create a content page and embed it as a webview inside a task module.</span></span> <span data-ttu-id="e7360-110">モーダル ポップアップ内にページが表示されます。</span><span class="sxs-lookup"><span data-stu-id="e7360-110">The page will be rendered inside the modal popup.</span></span>
+* <span data-ttu-id="3f2f8-107">個人用スコープのカスタム タブ: この場合、コンテンツ ページはユーザーが最初に表示するページです。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-107">A personal-scoped custom tab: In this case, the content page is the first page the user encounters.</span></span>
+* <span data-ttu-id="3f2f8-108">チャネルまたはグループのカスタム タブ: コンテンツ ページは、ユーザーがピンで固定され、適切なコンテキストでタブを構成した後に表示されます。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-108">A channel or group custom tab: The content page is displayed after the user pins and configures the tab in the appropriate context.</span></span>
+* <span data-ttu-id="3f2f8-109">タスク [モジュール](~/task-modules-and-cards/what-are-task-modules.md): コンテンツ ページを作成し、タスク モジュール内に Web ビューとして埋め込む。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-109">A [task module](~/task-modules-and-cards/what-are-task-modules.md): You can create a content page and embed it as a webview inside a task module.</span></span> <span data-ttu-id="3f2f8-110">ページはモーダル ポップアップ内でレンダリングされます。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-110">The page is rendered inside the modal pop-up.</span></span>
 
-<span data-ttu-id="e7360-111">この記事では、コンテンツ ページをタブとして使用する方法について説明します。ただし、ここでのガイダンスの大部分は、コンテンツ ページがエンド ユーザーに提示される方法に関係なく適用されます。</span><span class="sxs-lookup"><span data-stu-id="e7360-111">This article is specific to using content pages as tabs; however the majority of the guidance here would apply regardless of how the content page is presented to the end-user.</span></span>
+<span data-ttu-id="3f2f8-111">この記事では、コンテンツ ページをタブとして使用する方法について説明します。ただし、ここでのガイダンスの大部分は、コンテンツ ページがユーザーに提示される方法に関係なく適用されます。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-111">This article is specific to using content pages as tabs; however the majority of the guidance here applies regardless of how the content page is presented to the user.</span></span>
 
-## <a name="tab-content-and-design-guidelines"></a><span data-ttu-id="e7360-112">タブのコンテンツとデザインのガイドライン</span><span class="sxs-lookup"><span data-stu-id="e7360-112">Tab content and design guidelines</span></span>
+## <a name="tab-content-and-design-guidelines"></a><span data-ttu-id="3f2f8-112">タブのコンテンツとデザインのガイドライン</span><span class="sxs-lookup"><span data-stu-id="3f2f8-112">Tab content and design guidelines</span></span>
 
-<span data-ttu-id="e7360-113">タブの全体的な目的は、実用的な価値と明らかな目的を持つ有意義で魅力的なコンテンツへのアクセスを提供する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e7360-113">Your tab's overall objective should be to provide access to meaningful and engaging content that has a practical value and an evident purpose.</span></span> <span data-ttu-id="e7360-114">これは、快適なスタイルを見送る必要があるという意味ではありません。タブデザインをクリーンにし、ナビゲーションを直感的に行い、コンテンツを没入感のあるものにすることで、混乱を最小限に抑えることに集中する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e7360-114">That does not mean that you should forego a pleasing style, but you should focus on minimizing clutter by making your tab design clean, navigation intuitive, and content immersive.</span></span>
+<span data-ttu-id="3f2f8-113">タブの全体的な目的は、実用的な価値と明らかな目的を持つ有意義で魅力的なコンテンツへのアクセスを提供します。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-113">Your tab's overall objective is to provide access to meaningful and engaging content that has practical value and an evident purpose.</span></span> <span data-ttu-id="3f2f8-114">タブデザインをクリーンにし、直感的にナビゲーションし、コンテンツを没入感のあるものに集中する必要があります。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-114">You must focus on making your tab design clean, navigation intuitive, and content immersive.</span></span>
 
-<span data-ttu-id="e7360-115">詳細については、「タブデザインガイドライン[」](~/tabs/design/tabs.md)および「ストア検証[Microsoft Teams」を参照してください。](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)</span><span class="sxs-lookup"><span data-stu-id="e7360-115">For more information, see the [tab design guidelines](~/tabs/design/tabs.md) and [Microsoft Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)</span></span>
+<span data-ttu-id="3f2f8-115">詳細については、「タブデザイン[ガイドライン」](~/tabs/design/tabs.md)および「ストアMicrosoft Teams[ガイドライン」を参照してください](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-115">For more information, see [tab design guidelines](~/tabs/design/tabs.md) and [Microsoft Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).</span></span>
 
-## <a name="integrate-your-code-with-teams"></a><span data-ttu-id="e7360-116">コードとコードを統合Teams</span><span class="sxs-lookup"><span data-stu-id="e7360-116">Integrate your code with Teams</span></span>
+## <a name="integrate-your-code-with-teams"></a><span data-ttu-id="3f2f8-116">コードとコードを統合Teams</span><span class="sxs-lookup"><span data-stu-id="3f2f8-116">Integrate your code with Teams</span></span>
 
-<span data-ttu-id="e7360-117">ページをページに表示するには、Teams [JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)クライアント SDK をMicrosoft Teamsし、ページの読み込み後に呼び出し `microsoftTeams.initialize()` を含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="e7360-117">For your page to display in Teams, you must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) and include a call to `microsoftTeams.initialize()` after your page loads.</span></span> <span data-ttu-id="e7360-118">ページとクライアントが通信Teams方法は次の通り。</span><span class="sxs-lookup"><span data-stu-id="e7360-118">That is how your page and the Teams client communicate:</span></span>
+<span data-ttu-id="3f2f8-117">ページをページに表示するには、Teams [JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)クライアント SDK をMicrosoft Teamsし、ページの読み込み後に呼び出し `microsoftTeams.initialize()` を含める必要があります。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-117">For your page to display in Teams, you must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) and include a call to `microsoftTeams.initialize()` after your page loads.</span></span> 
+
+<span data-ttu-id="3f2f8-118">次のコードは、ページとクライアントが通信する方法のTeams示しています。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-118">The following code provides an example of how your page and the Teams client communicate:</span></span>
 
 ```html
 <!DOCTYPE html>
@@ -51,64 +53,47 @@ ms.locfileid: "53068524"
 </body>
 ```
 
-## <a name="accessing-additional-content"></a><span data-ttu-id="e7360-119">追加コンテンツへのアクセス</span><span class="sxs-lookup"><span data-stu-id="e7360-119">Accessing additional content</span></span>
+## <a name="access-additional-content"></a><span data-ttu-id="3f2f8-119">追加のコンテンツにアクセスする</span><span class="sxs-lookup"><span data-stu-id="3f2f8-119">Access additional content</span></span>
 
-### <a name="using-the-sdk-to-interact-with-teams"></a><span data-ttu-id="e7360-120">SDK を使用してユーザーと対話Teams</span><span class="sxs-lookup"><span data-stu-id="e7360-120">Using the SDK to interact with Teams</span></span>
+<span data-ttu-id="3f2f8-120">SDK を使用して Teams を操作し、ディープ リンクを作成し、タスク モジュールを使用し、URL ドメインが配列に含まれているか確認することで、追加のコンテンツにアクセス `validDomains` できます。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-120">You can access additional content by using the SDK to interact with Teams, creating deep links, using task modules, and verifying if URL domains are included in the `validDomains` array.</span></span>
 
-<span data-ttu-id="e7360-121">この[Teams JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md)には、コンテンツ ページの開発に役立つ機能が多数含まれています。</span><span class="sxs-lookup"><span data-stu-id="e7360-121">The [Teams client JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md) provides many additional functions you may find useful while developing your content page.</span></span>
+### <a name="use-the-sdk-to-interact-with-teams"></a><span data-ttu-id="3f2f8-121">SDK を使用してアプリを操作Teams</span><span class="sxs-lookup"><span data-stu-id="3f2f8-121">Use the SDK to interact with Teams</span></span>
 
-### <a name="deep-links"></a><span data-ttu-id="e7360-122">ディープ リンク</span><span class="sxs-lookup"><span data-stu-id="e7360-122">Deep links</span></span>
+<span data-ttu-id="3f2f8-122">この[Teams JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md)には、コンテンツ ページの開発に役立つ機能が多数含まれています。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-122">The [Teams client JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md) provides many additional functions that you can find useful while developing your content page.</span></span>
 
-<span data-ttu-id="e7360-123">Teams のエンティティへのディープ リンクを作成できます。</span><span class="sxs-lookup"><span data-stu-id="e7360-123">You can create deep links to entities in Teams.</span></span> <span data-ttu-id="e7360-124">通常、これらは、タブ内のコンテンツと情報に移動するリンクを作成するために使用されます。詳細については、「コンテンツと機能[へのディープ リンク](~/concepts/build-and-test/deep-links.md)を作成する」を参照Microsoft Teams。</span><span class="sxs-lookup"><span data-stu-id="e7360-124">Typically, these are used to create links that navigate to content and information within your tab. For more information, see [Create deep links to content and features in Microsoft Teams](~/concepts/build-and-test/deep-links.md).</span></span>
+### <a name="deep-links"></a><span data-ttu-id="3f2f8-123">ディープ リンク</span><span class="sxs-lookup"><span data-stu-id="3f2f8-123">Deep links</span></span>
 
-### <a name="task-modules"></a><span data-ttu-id="e7360-125">タスク モジュール</span><span class="sxs-lookup"><span data-stu-id="e7360-125">Task Modules</span></span>
+<span data-ttu-id="3f2f8-124">Teams のエンティティへのディープ リンクを作成できます。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-124">You can create deep links to entities in Teams.</span></span> <span data-ttu-id="3f2f8-125">これらは、タブ内のコンテンツと情報に移動するリンクを作成するために使用されます。詳細については、「コンテンツと機能[へのディープ リンク](~/concepts/build-and-test/deep-links.md)を作成する」を参照Teams。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-125">These are used to create links that navigate to content and information within your tab. For more information, see [create deep links to content and features in Teams](~/concepts/build-and-test/deep-links.md).</span></span>
 
-<span data-ttu-id="e7360-126">タスク モジュールは、タブからトリガーできるモーダル ポップアップのようなエクスペリエンスです。通常、コンテンツ ページでは、複数のページを介してユーザーを移動する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e7360-126">A task module is a modal popup-like experience that you can trigger from your tab. Typically in a content page you do not want to navigate your user through multiple pages.</span></span> <span data-ttu-id="e7360-127">代わりに、タスク モジュールを使用して、追加情報の収集、リスト内のアイテムの詳細の表示、またはユーザーに追加情報を提示する必要があるその他の時間を表示するためのフォームを提示します。</span><span class="sxs-lookup"><span data-stu-id="e7360-127">Instead, you will use task modules to present forms for gathering additional information, displaying the details of an item in a list, or any other time you need to present the user with additional information.</span></span> <span data-ttu-id="e7360-128">タスク モジュール自体は、追加のコンテンツ ページでも、アダプティブ カードを使用して完全に作成することもできます。</span><span class="sxs-lookup"><span data-stu-id="e7360-128">The task modules themselves can be additional content pages, or created completely using Adaptive Cards.</span></span> <span data-ttu-id="e7360-129">詳細については [、「タブでのタスク モジュールの使用](~/task-modules-and-cards/task-modules/task-modules-tabs.md) 」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e7360-129">See [Using task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md) for complete information.</span></span>
+### <a name="task-modules"></a><span data-ttu-id="3f2f8-126">タスク モジュール</span><span class="sxs-lookup"><span data-stu-id="3f2f8-126">Task modules</span></span>
 
-### <a name="valid-domains"></a><span data-ttu-id="e7360-130">有効なドメイン</span><span class="sxs-lookup"><span data-stu-id="e7360-130">Valid Domains</span></span>
+<span data-ttu-id="3f2f8-127">タスク モジュールは、タブからトリガーできるモーダル ポップアップ エクスペリエンスです。コンテンツ ページでは、タスク モジュールを使用して、追加の情報を収集したり、リスト内のアイテムの詳細を表示したり、追加情報をユーザーに提示したりするためにフォームを表示できます。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-127">A task module is a modal pop-up experience that you can trigger from your tab. In a content page, you can use task modules to present forms for gathering additional information, displaying the details of an item in a list, or presenting the user with additional information.</span></span> <span data-ttu-id="3f2f8-128">タスク モジュール自体は、追加のコンテンツ ページでも、アダプティブ カードを使用して完全に作成することもできます。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-128">The task modules themselves can be additional content pages, or created completely using Adaptive Cards.</span></span> <span data-ttu-id="3f2f8-129">詳細については、「タブでのタスク [モジュールの使用」を参照してください](~/task-modules-and-cards/task-modules/task-modules-tabs.md)。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-129">For more information, see [using task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).</span></span>
 
-<span data-ttu-id="e7360-131">タブで使用されているすべての URL ドメインがマニフェストの配列に含 `validDomains` まれているか確認 [します](~/concepts/build-and-test/apps-package.md)。</span><span class="sxs-lookup"><span data-stu-id="e7360-131">Ensure that the all URL domains used in your tabs are included in the `validDomains` array in your [manifest](~/concepts/build-and-test/apps-package.md).</span></span> <span data-ttu-id="e7360-132">詳細については、マニフェスト スキーマ [リファレンスの validDomains](~/resources/schema/manifest-schema.md#validdomains) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e7360-132">For more information, see [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema reference.</span></span> <span data-ttu-id="e7360-133">ただし、タブのコア機能は、タブの外部ではなく、Teams内に存在Teams。</span><span class="sxs-lookup"><span data-stu-id="e7360-133">However, be mindful that the core functionality of your tab exists within Teams and not outside of Teams.</span></span>
+### <a name="valid-domains"></a><span data-ttu-id="3f2f8-130">有効なドメイン</span><span class="sxs-lookup"><span data-stu-id="3f2f8-130">Valid domains</span></span>
 
-## <a name="reorder-static-personal-tabs"></a><span data-ttu-id="e7360-134">静的な個人用タブの並べ替え</span><span class="sxs-lookup"><span data-stu-id="e7360-134">Reorder static personal tabs</span></span>
-
-<span data-ttu-id="e7360-135">マニフェスト バージョン 1.7 から、開発者は個人用アプリ内のすべてのタブを再配置できます。</span><span class="sxs-lookup"><span data-stu-id="e7360-135">Starting with manifest version 1.7, developers can rearrange all tabs in their personal app.</span></span> <span data-ttu-id="e7360-136">特に、開発者はボット チャットタブを移動できます。これは常に既定で最初の位置に、個人用アプリのタブ ヘッダー内の任意の場所に移動できます。</span><span class="sxs-lookup"><span data-stu-id="e7360-136">In particular, a developer can move the *bot chat* tab, which always defaults to the first position, anywhere in the personal app tab header.</span></span> <span data-ttu-id="e7360-137">2 つの予約済みタブ entityId キーワード、会話 *、およびについて* 宣言 *しました*。</span><span class="sxs-lookup"><span data-stu-id="e7360-137">We’ve declared two reserved tab entityId keywords, *conversations* and *about*.</span></span>
-
-<span data-ttu-id="e7360-138">個人用スコープを持つボットを *作成* すると、既定では個人用アプリの最初のタブ位置に表示されます。</span><span class="sxs-lookup"><span data-stu-id="e7360-138">If you create a bot with a *personal* scope, it will show up in the first tab position in a personal app by default.</span></span> <span data-ttu-id="e7360-139">別の位置に移動する場合は、予約キーワードである会話を使用して静的タブ オブジェクトをマニフェストに追加する必要 *があります*。</span><span class="sxs-lookup"><span data-stu-id="e7360-139">If you wish to move it to another position, you must add a static tab object to your manifest with the reserved keyword, *conversations*.</span></span> <span data-ttu-id="e7360-140">[ *会話* ] タブは、配列に [会話] タブを追加した場所に基づいて *Web* またはデスクトップに表示 `staticTabs` されます。</span><span class="sxs-lookup"><span data-stu-id="e7360-140">The *conversation* tab appears on web or desktop based on where you add the *conversation* tab in the `staticTabs` array.</span></span> 
-
-```json
-{
-   "staticTabs":[
-      {
-         
-      },
-      {
-         "entityId":"conversations",
-         "scopes":[
-            "personal"
-         ]
-      }
-   ]
-}
-```
-
-## <a name="show-a-native-loading-indicator"></a><span data-ttu-id="e7360-141">ネイティブ読み込みインジケーターの表示</span><span class="sxs-lookup"><span data-stu-id="e7360-141">Show a native loading indicator</span></span>
-
-<span data-ttu-id="e7360-142">マニフェスト スキーマ[v1.7](../../../resources/schema/manifest-schema.md)から、Web コンテンツ[](../../../resources/schema/manifest-schema.md#showloadingindicator)がアプリケーションに読み込まれる場所を問Teams。</span><span class="sxs-lookup"><span data-stu-id="e7360-142">Starting with [manifest schema v1.7](../../../resources/schema/manifest-schema.md), you can provide a [native loading indicator](../../../resources/schema/manifest-schema.md#showloadingindicator) wherever your web content is loaded in Teams.</span></span> <span data-ttu-id="e7360-143">たとえば、タブ[コンテンツ ページ、](#integrate-your-code-with-teams)[構成ページ、](configuration-page.md)[削除ページ](removal-page.md)、タブ[内のタスク モジュールなどです](../../../task-modules-and-cards/task-modules/task-modules-tabs.md)。</span><span class="sxs-lookup"><span data-stu-id="e7360-143">For example, [tab content page](#integrate-your-code-with-teams), [configuration page](configuration-page.md), [removal page](removal-page.md), and [task modules in tabs](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).</span></span>
+<span data-ttu-id="3f2f8-131">タブで使用されている URL ドメインすべてがマニフェストの配列に含 `validDomains` まれているか確認 [します](~/concepts/build-and-test/apps-package.md)。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-131">Ensure that all URL domains used in your tabs are included in the `validDomains` array in your [manifest](~/concepts/build-and-test/apps-package.md).</span></span> <span data-ttu-id="3f2f8-132">詳細については、マニフェスト スキーマ [リファレンスの validDomains](~/resources/schema/manifest-schema.md#validdomains) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-132">For more information, see [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema reference.</span></span>
 
 > [!NOTE]
-> * <span data-ttu-id="e7360-144">モバイル クライアントでの動作は、このマニフェスト プロパティでは構成できません。</span><span class="sxs-lookup"><span data-stu-id="e7360-144">The behavior on mobile clients is not configurable through this manifest property.</span></span> <span data-ttu-id="e7360-145">モバイル クライアントは、コンテンツ ページと iframe ベースのタスク モジュール間で既定でネイティブ読み込みインジケーターを表示します。</span><span class="sxs-lookup"><span data-stu-id="e7360-145">Mobile clients show a native loading indicator by default across content pages and iframe-based task modules.</span></span> <span data-ttu-id="e7360-146">モバイル上のこのインジケーターは、コンテンツの取得要求が行われたときに表示され、要求が完了するとすぐに却下されます。</span><span class="sxs-lookup"><span data-stu-id="e7360-146">This indicator on mobile is shown when a request is made to fetch content and gets dismissed as soon as the request gets completed.</span></span>
-> * <span data-ttu-id="e7360-147">アプリ マニフェストで指定した場合は、すべてのタブ構成、コンテンツ、および削除ページとすべての iframe ベースのタスク モジュールは、以下の必須プロトコルに従う  `"showLoadingIndicator : true`  必要があります。</span><span class="sxs-lookup"><span data-stu-id="e7360-147">If you indicate  `"showLoadingIndicator : true`  in your app manifest, then all tab configuration, content, and removal pages and all iframe-based task modules must follow the mandatory protocol, below:</span></span>
+> <span data-ttu-id="3f2f8-133">タブのコア機能は、Teamsの外部ではなく、Teams。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-133">The core functionality of your tab exists within Teams and not outside of Teams.</span></span>
 
-<span data-ttu-id="e7360-148">**読み込みインジケーターを表示する**</span><span class="sxs-lookup"><span data-stu-id="e7360-148">**To show the loading indicator**</span></span>
+## <a name="show-a-native-loading-indicator"></a><span data-ttu-id="3f2f8-134">ネイティブ読み込みインジケーターの表示</span><span class="sxs-lookup"><span data-stu-id="3f2f8-134">Show a native loading indicator</span></span>
 
-* <span data-ttu-id="e7360-149">マニフェスト `"showLoadingIndicator": true` に追加します。</span><span class="sxs-lookup"><span data-stu-id="e7360-149">Add `"showLoadingIndicator": true` to your manifest.</span></span> 
-* <span data-ttu-id="e7360-150">を呼び出す `microsoftTeams.initialize();` 必要があります。</span><span class="sxs-lookup"><span data-stu-id="e7360-150">Remember to call `microsoftTeams.initialize();`.</span></span>
-* <span data-ttu-id="e7360-151">**オプション**: 画面に印刷する準備が整い、アプリケーションのコンテンツの残りの部分を遅延読み込みする場合は、呼び出しによって読み込みインジケーターを手動で非表示にできます `microsoftTeams.appInitialization.notifyAppLoaded();`</span><span class="sxs-lookup"><span data-stu-id="e7360-151">**Optional**: If you're ready to print to the screen and wish to lazy load the rest of your application's content, you can manually hide the loading indicator by calling `microsoftTeams.appInitialization.notifyAppLoaded();`</span></span>
-* <span data-ttu-id="e7360-152">**必須 :** 最後に、アプリが正常に読み込Teamsを呼び出して通知 `microsoftTeams.appInitialization.notifySuccess()` します。</span><span class="sxs-lookup"><span data-stu-id="e7360-152">**Mandatory**: Finally, call `microsoftTeams.appInitialization.notifySuccess()` to notify Teams that your app has successfully loaded.</span></span> <span data-ttu-id="e7360-153">Teams場合、読み込みインジケーターが非表示になります。</span><span class="sxs-lookup"><span data-stu-id="e7360-153">Teams will then hide the loading indicator if applicable.</span></span> <span data-ttu-id="e7360-154">30 秒以内に呼び出されない場合は、アプリがタイム アウトし、再試行オプション付きエラー画面が  `notifySuccess`  表示されます。</span><span class="sxs-lookup"><span data-stu-id="e7360-154">If  `notifySuccess`  is not called within 30 seconds, it will be assumed that your app timed out and an error screen with a retry option will appear.</span></span>
-* <span data-ttu-id="e7360-155">アプリケーションの読み込みに失敗した場合は、エラーが発生 `microsoftTeams.appInitialization.notifyFailure(reason);` Teamsを呼び出して確認できます。</span><span class="sxs-lookup"><span data-stu-id="e7360-155">If your application fails to load, you can call `microsoftTeams.appInitialization.notifyFailure(reason);` to let Teams know there was an error.</span></span> <span data-ttu-id="e7360-156">次に、エラー画面がユーザーに表示されます。</span><span class="sxs-lookup"><span data-stu-id="e7360-156">An error screen will then be shown to the user:</span></span>
+<span data-ttu-id="3f2f8-135">マニフェスト スキーマ [v1.7](../../../resources/schema/manifest-schema.md)から、ネイティブ読み込みインジケーター [を指定できます](../../../resources/schema/manifest-schema.md#showloadingindicator)。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-135">Starting with [manifest schema v1.7](../../../resources/schema/manifest-schema.md), you can provide a [native loading indicator](../../../resources/schema/manifest-schema.md#showloadingindicator).</span></span> <span data-ttu-id="3f2f8-136">たとえば、タブ[コンテンツ ページ、](#integrate-your-code-with-teams)[構成ページ、](configuration-page.md)[削除ページ](removal-page.md)、タブ[内のタスク モジュールなどです](../../../task-modules-and-cards/task-modules/task-modules-tabs.md)。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-136">For example, [tab content page](#integrate-your-code-with-teams), [configuration page](configuration-page.md), [removal page](removal-page.md), and [task modules in tabs](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).</span></span>
+
+> [!NOTE]
+> * <span data-ttu-id="3f2f8-137">モバイル クライアントでの動作は、ネイティブ読み込みインジケーター プロパティでは構成できません。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-137">The behavior on mobile clients is not configurable through the native loading indicator property.</span></span> <span data-ttu-id="3f2f8-138">モバイル クライアントは、コンテンツ ページと iframe ベースのタスク モジュール全体で既定でこのインジケーターを表示します。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-138">Mobile clients show this indicator by default across content pages and iframe-based task modules.</span></span> <span data-ttu-id="3f2f8-139">モバイル上のこのインジケーターは、コンテンツの取得要求が行われたときに表示され、要求が完了するとすぐに却下されます。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-139">This indicator on mobile is shown when a request is made to fetch content and gets dismissed as soon as the request gets completed.</span></span>
+
+<span data-ttu-id="3f2f8-140">アプリ マニフェストで指定する場合は、すべてのタブ構成、コンテンツ、および削除ページとすべての iframe ベースのタスク モジュールは、次の手順 `showLoadingIndicator : true`  に従う必要があります。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-140">If you indicate `showLoadingIndicator : true`  in your app manifest, then all tab configuration, content, and removal pages and all iframe-based task modules must follow these steps:</span></span>
+
+<span data-ttu-id="3f2f8-141">**読み込みインジケーターを表示する**</span><span class="sxs-lookup"><span data-stu-id="3f2f8-141">**To show the loading indicator**</span></span>
+
+1. <span data-ttu-id="3f2f8-142">マニフェスト `"showLoadingIndicator": true` に追加します。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-142">Add `"showLoadingIndicator": true` to your manifest.</span></span>
+1. <span data-ttu-id="3f2f8-143">`microsoftTeams.initialize();` を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-143">Call `microsoftTeams.initialize();`.</span></span>
+1. <span data-ttu-id="3f2f8-144">必須の **手順として、** アプリが正常に読み込まれたTeamsを呼び出して通知 `microsoftTeams.appInitialization.notifySuccess()` します。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-144">As a **mandatory** step, call `microsoftTeams.appInitialization.notifySuccess()` to notify Teams that your app has successfully loaded.</span></span> <span data-ttu-id="3f2f8-145">Teams場合は、読み込みインジケーターを非表示にしてください。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-145">Teams then hides the loading indicator, if applicable.</span></span> <span data-ttu-id="3f2f8-146">30 秒以内に呼び出されない場合は、アプリがタイム アウトし、再試行オプションが設定されたエラー画面 `notifySuccess`  が表示されます。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-146">If `notifySuccess`  is not called within 30 seconds, it is assumed that your app timed out and an error screen with a retry option appears.</span></span>
+1. <span data-ttu-id="3f2f8-147">**必要に** 応じて、画面に印刷する準備が整い、アプリケーションの残りのコンテンツを遅延読み込みする場合は、呼び出しによって読み込みインジケーターを手動で非表示にできます `microsoftTeams.appInitialization.notifyAppLoaded();` 。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-147">**Optionally**, if you are ready to print to the screen and wish to lazy load the rest of your application's content, you can manually hide the loading indicator by calling `microsoftTeams.appInitialization.notifyAppLoaded();`.</span></span>
+1. <span data-ttu-id="3f2f8-148">アプリケーションの読み込みに失敗した場合は、エラーが発生 `microsoftTeams.appInitialization.notifyFailure(reason);` Teamsを呼び出して確認できます。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-148">If your application fails to load, you can call `microsoftTeams.appInitialization.notifyFailure(reason);` to let Teams know there was an error.</span></span> <span data-ttu-id="3f2f8-149">エラー画面がユーザーに表示されます。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-149">An error screen is shown to the user.</span></span> <span data-ttu-id="3f2f8-150">次のコードは、アプリケーションエラーの理由の例を示しています。</span><span class="sxs-lookup"><span data-stu-id="3f2f8-150">The following code provides an example of application failure reasons:</span></span>
 
     ```typescript
-    ``
     /* List of failure reasons */
     export const enum FailedReason {
         AuthFailed = "AuthFailed",
@@ -116,4 +101,23 @@ ms.locfileid: "53068524"
         Other = "Other"
     }
     ```
-    >
+
+## <a name="see-also"></a><span data-ttu-id="3f2f8-151">関連項目</span><span class="sxs-lookup"><span data-stu-id="3f2f8-151">See also</span></span>
+
+* [<span data-ttu-id="3f2f8-152">Teamsタブ</span><span class="sxs-lookup"><span data-stu-id="3f2f8-152">Teams tabs</span></span>](~/tabs/what-are-tabs.md)
+* [<span data-ttu-id="3f2f8-153">前提条件</span><span class="sxs-lookup"><span data-stu-id="3f2f8-153">Prerequisites</span></span>](~/tabs/how-to/tab-requirements.md)
+* [<span data-ttu-id="3f2f8-154">プライベート タブを作成する</span><span class="sxs-lookup"><span data-stu-id="3f2f8-154">Create a personal tab</span></span>](~/tabs/how-to/create-personal-tab.md)
+* <span data-ttu-id="3f2f8-155">[[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)</span><span class="sxs-lookup"><span data-stu-id="3f2f8-155">[Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)</span></span>
+* [<span data-ttu-id="3f2f8-156">コンテンツ ページを作成する</span><span class="sxs-lookup"><span data-stu-id="3f2f8-156">Create a content page</span></span>](~/tabs/how-to/create-tab-pages/content-page.md)
+* [<span data-ttu-id="3f2f8-157">タブの削除ページを作成する</span><span class="sxs-lookup"><span data-stu-id="3f2f8-157">Create a removal page for your tab</span></span>](~/tabs/how-to/create-tab-pages/removal-page.md)
+* [<span data-ttu-id="3f2f8-158">モバイルのタブ</span><span class="sxs-lookup"><span data-stu-id="3f2f8-158">Tabs on mobile</span></span>](~/tabs/design/tabs-mobile.md)
+* [<span data-ttu-id="3f2f8-159">タブのコンテキストを取得する</span><span class="sxs-lookup"><span data-stu-id="3f2f8-159">Get context for your tab</span></span>](~/tabs/how-to/access-teams-context.md)
+* [<span data-ttu-id="3f2f8-160">アダプティブ カードを使用してタブをビルドする</span><span class="sxs-lookup"><span data-stu-id="3f2f8-160">Build tabs with Adaptive Cards</span></span>](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [<span data-ttu-id="3f2f8-161">タブのリンクの展開とステージ ビュー</span><span class="sxs-lookup"><span data-stu-id="3f2f8-161">Tabs link unfurling and Stage View</span></span>](~/tabs/tabs-link-unfurling.md)
+* [<span data-ttu-id="3f2f8-162">会話タブを作成する</span><span class="sxs-lookup"><span data-stu-id="3f2f8-162">Create conversational tabs</span></span>](~/tabs/how-to/conversational-tabs.md)
+* [<span data-ttu-id="3f2f8-163">タブ余白の変更</span><span class="sxs-lookup"><span data-stu-id="3f2f8-163">Tab margin changes</span></span>](~/resources/removing-tab-margins.md)
+
+## <a name="next-step"></a><span data-ttu-id="3f2f8-164">次の手順</span><span class="sxs-lookup"><span data-stu-id="3f2f8-164">Next step</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="3f2f8-165">構成ページを作成する</span><span class="sxs-lookup"><span data-stu-id="3f2f8-165">Create a configuration page</span></span>](~/tabs/how-to/create-tab-pages/configuration-page.md)
