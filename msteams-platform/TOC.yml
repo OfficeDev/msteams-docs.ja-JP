@@ -192,42 +192,30 @@
   items:
     - name: 概要
       href: tabs/what-are-tabs.md
-    - name: タブを作成する
-      items:
-        - name: タブの要件
-          href: tabs/how-to/tab-requirements.md
-        - name: コンテンツ ページを作成する
-          href: tabs/how-to/create-tab-pages/content-page.md
-        - name: 構成ページを作成する
-          href: tabs/how-to/create-tab-pages/configuration-page.md
-        - name: 削除ページを作成する
-          href: tabs/how-to/create-tab-pages/removal-page.md
-        - name: モバイルのタブ
-          href: tabs/design/tabs-mobile.md
-        - name: タブのコンテキストを取得する
-          href: tabs/how-to/access-teams-context.md
-        - name: アダプティブ カードを使用してタブをビルドする
-          href: tabs/how-to/build-adaptive-card-tabs.md
-        - name: タブのリンクの展開とステージ ビュー
-          href: tabs/tabs-link-unfurling.md
-        - name: 会話タブを作成する
-          href: tabs/how-to/conversational-tabs.md
-        - name: タブ余白の変更
-          href: resources/removing-tab-margins.md
-    - name: クイックスタート
-      items:
-        - name: Node.js を使った個人用タブ
-          href: tabs/quickstarts/create-personal-tab-node-yeoman.md
-        - name: C#/ASP.NET Core を使った個人用タブ
-          href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-        - name: C#/ASP.NET Core MVC を使った個人用タブ
-          href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-        - name: Node.js を使ったチャネル タブ
-          href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
-        - name: C#/ASP.NET Core を使ったチャネル タブ
-          href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
-        - name: C#/ASP.NET Core MVC を使ったチャネル タブ
-          href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
+    - name: 前提条件
+      href: tabs/how-to/tab-requirements.md
+    - name: プライベート タブを作成する
+      href: tabs/how-to/create-personal-tab.md
+    - name: '[チャネルの作成] タブ'
+      href: tabs/how-to/create-channel-group-tab.md
+    - name: コンテンツ ページを作成する
+      href: tabs/how-to/create-tab-pages/content-page.md
+    - name: 構成ページを作成する
+      href: tabs/how-to/create-tab-pages/configuration-page.md
+    - name: 削除ページを作成する
+      href: tabs/how-to/create-tab-pages/removal-page.md
+    - name: モバイルのタブ
+      href: tabs/design/tabs-mobile.md
+    - name: タブのコンテキストを取得する
+      href: tabs/how-to/access-teams-context.md
+    - name: アダプティブ カードを使用してタブをビルドする
+      href: tabs/how-to/build-adaptive-card-tabs.md
+    - name: タブのリンクの展開とステージ ビュー
+      href: tabs/tabs-link-unfurling.md
+    - name: 会話タブを作成する
+      href: tabs/how-to/conversational-tabs.md
+    - name: タブ余白の変更
+      href: resources/removing-tab-margins.md
 - name: ボットを作成する
   items:
     - name: 概要
@@ -251,8 +239,11 @@
           href: bots/how-to/conversations/channel-and-group-conversations.md
         - name: Teams ボットの会話イベント
           href: bots/how-to/conversations/subscribe-to-conversation-events.md
-        - name: プロアクティブ メッセージを送信する
+        - name: プロアクティブ メッセージ
           href: bots/how-to/conversations/send-proactive-messages.md
+          items:
+            - name: ステップ バイ ステップのガイド
+              href: sbs-send-proactive.yml
         - name: ボット メッセージの書式を設定する
           href: bots/how-to/format-your-bot-messages.md
         - name: ボット メッセージの更新および削除
@@ -317,26 +308,28 @@
   items:
     - name: 概要
       href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    - name: 受信 Webhook を作成する
-      href: webhooks-and-connectors/how-to/add-incoming-webhook.md
     - name: 送信 Webhook を作成する
       href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
-    - name: Office 365 コネクタを作成する
+    - name: 受信 Webhook を作成する
+      href: webhooks-and-connectors/how-to/add-incoming-webhook.md
+    - name: Office 365 コネクタの作成
       href: webhooks-and-connectors/how-to/connectors-creating.md
-    - name: コネクタと Webhook にメッセージを送信する
+    - name: メッセージを作成して送信する
       href: webhooks-and-connectors/how-to/connectors-using.md
 - name: カードとタスク モジュールを作成する
   items:
+    - name: 概要
+      href: task-modules-and-cards/cards-and-task-modules.md
     - name: カードを作成する
       items:
         - name: 概要
           href: task-modules-and-cards/what-are-cards.md
-        - name: カードのテキストを書式設定する
-          href: task-modules-and-cards/cards/cards-format.md
-        - name: カード アクションへの追加と応答
-          href: task-modules-and-cards/cards/cards-actions.md
-        - name: カード リファレンス
+        - name: カードの種類
           href: task-modules-and-cards/cards/cards-reference.md
+        - name: Microsoft Teams のカードの書式設定
+          href: task-modules-and-cards/cards/cards-format.md
+        - name: カード アクション
+          href: task-modules-and-cards/cards/cards-actions.md
         - name: アダプティブ カードのユニバーサル アクション
           items:
             - name: 概要
@@ -353,6 +346,8 @@
       items:
         - name: 概要
           href: task-modules-and-cards/what-are-task-modules.md
+        - name: タスク モジュールを呼び出して閉じる
+          href: task-modules-and-cards/task-modules/invoking-task-modules.md
         - name: タブでタスク モジュールを使用する
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
         - name: ボットでタスク モジュールを使用する
@@ -477,13 +472,13 @@
       items:
         - name: アプリをローカライズする
           href: concepts/build-and-test/apps-localization.md
-        - name: ローカリゼーション JSON スキーマ
+        - name: JSON スキーマの参照のローカライズ
           href: resources/schema/localization-schema.md
-    - name: SameSite Cookie 属性 (2020 更新プログラム)
+    - name: SameSite Cookie 属性
       href: resources/samesite-cookie-update.md
     - name: ストアでの送信でよく失敗するケース
       href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
-    - name: Teamsドキュメントへの関与
+    - name: Teams ドキュメントに投稿する
       href: resources/teams-contributor-reference.md
 - name: サポートとフィードバック
   href: feedback.md
