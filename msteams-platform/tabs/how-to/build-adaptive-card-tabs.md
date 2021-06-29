@@ -4,12 +4,12 @@ author: KirtiPereira
 description: アダプティブ カードを使用してタブを作成する
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: c551ae748805ddc380fb3213b67f704c73060a2f
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 4359b20d5839b86955082b7a5da8db262e13600c
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140286"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179903"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>アダプティブ カードを使用してタブをビルドする
 
@@ -416,16 +416,9 @@ ms.locfileid: "53140286"
 
 * [アダプティブ カード](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
 * [Teamsタブ](~/tabs/what-are-tabs.md)
-* [前提条件](~/tabs/how-to/tab-requirements.md)
 * [プライベート タブを作成する](~/tabs/how-to/create-personal-tab.md)
 * [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
-* [コンテンツ ページを作成する](~/tabs/how-to/create-tab-pages/content-page.md)
-* [構成ページを作成する](~/tabs/how-to/create-tab-pages/configuration-page.md)
-* [タブの削除ページを作成する](~/tabs/how-to/create-tab-pages/removal-page.md)
 * [モバイルのタブ](~/tabs/design/tabs-mobile.md)
-* [タブのコンテキストを取得する](~/tabs/how-to/access-teams-context.md)
-* [会話タブを作成する](~/tabs/how-to/conversational-tabs.md)
-* [タブ余白の変更](~/resources/removing-tab-margins.md)
 
 ## <a name="next-step"></a>次の手順
 

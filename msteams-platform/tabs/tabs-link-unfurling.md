@@ -4,12 +4,12 @@ author: Rajeshwari-v
 description: リンクのリンクを解除し、ステージ ビューを開き、アプリでタブをピン留Microsoft Teamsします。
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 1495bba765d149d23156b136be85f39d07c2d94b
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: b54eb5942d19749b39bb9bb504dd8645f5655ef3
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140174"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179945"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>タブのリンクの展開とステージ ビュー
 
@@ -141,16 +141,8 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 * [メッセージング拡張機能リンクの分岐解除](~/messaging-extensions/how-to/link-unfurling.md)
 * [Teamsタブ](~/tabs/what-are-tabs.md)
-* [前提条件](~/tabs/how-to/tab-requirements.md)
 * [プライベート タブを作成する](~/tabs/how-to/create-personal-tab.md)
 * [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
-* [コンテンツ ページを作成する](~/tabs/how-to/create-tab-pages/content-page.md)
-* [構成ページを作成する](~/tabs/how-to/create-tab-pages/configuration-page.md)
-* [タブの削除ページを作成する](~/tabs/how-to/create-tab-pages/removal-page.md)
-* [モバイルのタブ](~/tabs/design/tabs-mobile.md)
-* [タブのコンテキストを取得する](~/tabs/how-to/access-teams-context.md)
-* [アダプティブ カードを使用してタブをビルドする](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [タブ余白の変更](~/resources/removing-tab-margins.md)
 
 ## <a name="next-step"></a>次の手順
 

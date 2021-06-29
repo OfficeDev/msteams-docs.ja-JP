@@ -5,12 +5,12 @@ description: "\"こんにちは!\" を表示する Microsoft Teams アプリを�
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: c336c97d477e7038cc41a5e593d71b0e98dc4643
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: f40331ed06a401d60092e884add2cfa747c3ebdc
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994393"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179952"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>Blazor で最初のアプリをMicrosoft Teams実行する
 
@@ -111,7 +111,7 @@ Teams ツールキットでは、アプリをローカルで実行すること�
 
 アプリをローカルに構築して実行するには、以下のようにします。
 
-1. Visual Studio Code で、**F5** を押して、アプリケーションをデバッグ モードで実行します。
+1. 次Visual Studio **F5 キーを押** して、デバッグ モードでアプリケーションを実行します。
 
 1. 要求された場合は、ローカル デバッグ用の自己署名証明書 SSL 証明書をインストールします。
 
@@ -228,7 +228,7 @@ Visual Studio Azure App Service にアプリを展開すると、Web アプリ�
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments3.png" alt-text="基本情報の選択":::
 
-1. マニフェスト内には、URL の一部としてリスト `locahost:XXXXX` される場所が複数あります。  すべてのオカレンスを `{{azure_app_url}}` (中かっこを含む) に置き換えてください。
+1. マニフェスト内には、URL の一部としてリスト `localhost:XXXXX` される場所が複数あります。  すべてのオカレンスを `{{azure_app_url}}` (中かっこを含む) に置き換えてください。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments4.png" alt-text="環境の基本情報を調整する":::
 

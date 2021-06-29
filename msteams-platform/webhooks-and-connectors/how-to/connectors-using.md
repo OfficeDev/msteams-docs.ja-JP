@@ -5,12 +5,12 @@ description: Microsoft Teams で Office 365 コネクタを使用する方法に
 ms.topic: how-to
 localization_priority: Normal
 keywords: Teams o365 コネクタ
-ms.openlocfilehash: e396d0048831634f683b6df925853464698fb96a
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 8835e43ed74a8da5ad3b3b4358b259d63068b469
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140533"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179896"
 ---
 # <a name="create-and-send-messages"></a>メッセージを作成して送信する
 
@@ -200,7 +200,7 @@ ms.locfileid: "53140533"
 
 **受信 Webhook を介してアダプティブ カードを送信するには**
 
-1. [カスタム Webhook をカスタム webhook](/add-incoming-webhook.md) Teams。
+1. [カスタム Webhook をカスタム webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) Teams。
 1. 次のコードを使用してアダプティブ カード JSON ファイルを作成します。
 
     ```json
@@ -251,7 +251,7 @@ ms.locfileid: "53140533"
 
 | 時間 (秒)  | 許可される最大要求数  |
 |---|---|
-| 1   | 4  |  
+| 1    | 4   |  
 | 30   | 60  |  
 | 3600   | 100  |
 | 7200 | 150  |

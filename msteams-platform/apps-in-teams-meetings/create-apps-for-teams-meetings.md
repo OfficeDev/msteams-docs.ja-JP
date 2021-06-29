@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: da67b447644242caccf5f3a7cfe8d9435286787c
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: dbab038c6e006003fb4525c6d58ea8a151e9592d
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53139992"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179700"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Teams 会議アプリへの前提条件と API リファレンス
 
@@ -262,6 +262,19 @@ POST /v3/conversations/{conversationId}/activities
 
 会議の詳細 API を使用すると、アプリは静的な会議のメタデータを取得できます。 これらは、動的に変更されないデータ ポイントです。
 API はボット サービスを通じて利用できます。
+#### <a name="pre-requisite"></a>前提条件
+会議の詳細 API を使用する前に、必要な RSC アクセス許可を取得する必要があります。 アプリ マニフェストには、次の webApplicationInfo が必要です。
+
+# <a name="json"></a>[JSON](#tab/json)
+
+```"webApplicationInfo": {
+    "id": "<bot id>",
+    "resource": "https://RscPermission",
+    "applicationPermissions": [
+      "OnlineMeeting.ReadBasic.Chat"
+    ]
+  }
+ ```
 
 #### <a name="query-parameter"></a>クエリ パラメーター
 
@@ -337,6 +350,20 @@ GET /v1/meetings/{meetingId}
 ユーザーはリアルタイムの会議イベントを受信できます。 アプリが会議に関連付けられるとすぐに、実際の会議の開始時刻と会議の終了時刻がボットと共有されます。
 
 会議の実際の開始時刻と終了時刻は、スケジュールされた開始時刻と終了時刻とは異なります。 会議の詳細 API はスケジュールされた開始時刻と終了時刻を提供し、イベントは実際の開始時刻と終了時刻を提供します。
+
+#### <a name="pre-requisite"></a>前提条件
+会議の開始イベントと終了イベントを正常に受信するには、アプリ マニフェストに次の webApplicationInfo が必要です。
+
+# <a name="json"></a>[JSON](#tab/json)
+
+```"webApplicationInfo": {
+    "id": "<bot id>",
+    "resource": "https://RscPermission",
+    "applicationPermissions": [
+      "OnlineMeeting.ReadBasic.Chat"
+    ]
+  }
+ ```
 
 ### <a name="example-of-meeting-start-event-payload"></a>会議の開始イベント ペイロードの例
 
@@ -488,6 +515,7 @@ public class MeetingStartEndEventValue
 | 会議の機能拡張 | Microsoft Teams渡しに関する会議機能拡張サンプル。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | 会議コンテンツ バブル ボット | Microsoft Teamsでコンテンツ バブル ボットを操作するための会議機能拡張サンプルを作成します。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
 | MeetingSidePanel | Microsoft Teamsのサイド パネルを操作するための会議機能拡張サンプルを作成します。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
+| 会議の [詳細] タブ | Microsoft Teamsの詳細タブで iteracting の会議機能拡張サンプルを作成します。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 
 ## <a name="see-also"></a>関連項目
 

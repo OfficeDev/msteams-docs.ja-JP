@@ -5,20 +5,24 @@ description: Teams プラットフォームでのカスタム タブの概要
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 1564d7410cd0ce18d27afbbb3729cc30cfcfc4f6
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: bde45728a957bee3aa06752328943fe13d1fa3fe
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140161"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179923"
 ---
 # <a name="microsoft-teams-tabs"></a>Microsoft Teams のタブ
 
 タブとは、Microsoft Teams に組み込まれている Teams 対応 Web ページです。 これらは簡単な HTML <iFrame \> タブで、アプリ マニフェストで宣言されたドメインを指していて、チーム内のチャネル、グループ チャット、または個々のユーザー用の個人用アプリとして追加できます。 アプリにカスタム タブを含めて独自の Web コンテンツを Teams に埋め込んだり、Teams 固有の機能を Web コンテンツに追加したりできます。 詳細については[、「JavaScript クライアント SDK Teamsを参照してください](/javascript/api/overview/msteams-client)。
 
+次の図は、個人用タブを示しています。
+
+![[個人] タブ](../assets/images/tabs/personaltab.png)
+
 次の図は、Contoso チャネル タブを示しています。
 
-![チャネルタブまたはグループタブと個人用タブ](../assets/images/tabs/tabs.png)
+![チャネルまたはグループのタブ](../assets/images/tabs/tabs.png)
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/Jw6i7Mkt0dg]
 

@@ -4,12 +4,12 @@ description: タブにユーザー コンテクストを付与する方法を説
 localization_priority: Normal
 ms.topic: how-to
 keywords: チーム タブ ユーザー コンテキスト
-ms.openlocfilehash: 29f574ae924ddde52b63590aba3fcc06a3d446af
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 8c91cf5a65f13d9f58f6ae8aa2678266c37338c8
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140279"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179728"
 ---
 # <a name="get-context-for-your-tab"></a>タブのコンテキストを取得する
 
@@ -139,16 +139,8 @@ ms.locfileid: "53140279"
 
 * [タブデザインのガイドライン](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Teamsタブ](~/tabs/what-are-tabs.md)
-* [前提条件](~/tabs/how-to/tab-requirements.md)
 * [プライベート タブを作成する](~/tabs/how-to/create-personal-tab.md)
 * [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
-* [コンテンツ ページを作成する](~/tabs/how-to/create-tab-pages/content-page.md)
-* [構成ページを作成する](~/tabs/how-to/create-tab-pages/configuration-page.md)
-* [タブの削除ページを作成する](~/tabs/how-to/create-tab-pages/removal-page.md)
-* [モバイルのタブ](~/tabs/design/tabs-mobile.md)
-* [タブのリンクの展開とステージ ビュー](~/tabs/tabs-link-unfurling.md)
-* [会話タブを作成する](~/tabs/how-to/conversational-tabs.md)
-* [タブ余白の変更](~/resources/removing-tab-margins.md)
 
 ## <a name="next-step"></a>次の手順
 

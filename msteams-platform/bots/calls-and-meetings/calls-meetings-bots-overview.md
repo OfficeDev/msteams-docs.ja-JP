@@ -4,12 +4,12 @@ description: 通話やオンライン会議Microsoft Teams、Microsoft Graph API
 ms.topic: conceptual
 localization_priority: Normal
 keywords: 通話通話オーディオ ビデオ IVR 音声オンライン会議
-ms.openlocfilehash: 02354bb37c564d2ad30a502c9a4a28d1f899c2b1
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: d23b069d1f728cc54941f90e531d01acae6ab989
+ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994232"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53179910"
 ---
 # <a name="calls-and-online-meetings-bots"></a>通話とオンライン会議ボット
 
@@ -93,6 +93,7 @@ ms.locfileid: "52994232"
 | **サンプル名** | **説明** | **Graph** |
 |---------------|----------|--------|
 | Graph通信 | Graph Microsoft の通信プラットフォームとやり取りするための通信を提供します。 | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
+| 通話と会議ボット | このサンプル アプリでは、ボットが通話の作成、会議への参加、通話の転送を行う方法を説明します。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
 
 ## <a name="see-also"></a>関連項目
 
