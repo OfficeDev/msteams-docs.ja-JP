@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: dbab038c6e006003fb4525c6d58ea8a151e9592d
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 3a3b2fc13f67d2ca3b061a165248fa2458058441
+ms.sourcegitcommit: f62634c59b697107e5bb3c38867b21007d328b1e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179700"
+ms.locfileid: "53196237"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Teams 会議アプリへの前提条件と API リファレンス
 
@@ -262,18 +262,19 @@ POST /v3/conversations/{conversationId}/activities
 
 会議の詳細 API を使用すると、アプリは静的な会議のメタデータを取得できます。 これらは、動的に変更されないデータ ポイントです。
 API はボット サービスを通じて利用できます。
-#### <a name="pre-requisite"></a>前提条件
-会議の詳細 API を使用する前に、必要な RSC アクセス許可を取得する必要があります。 アプリ マニフェストには、次の webApplicationInfo が必要です。
 
-# <a name="json"></a>[JSON](#tab/json)
+#### <a name="prerequisite"></a>前提条件
 
-```"webApplicationInfo": {
+会議の詳細 API を使用するには、RSC アクセス許可を取得する必要があります。 アプリ マニフェストのプロパティを構成するには、次の例を使用 `webApplicationInfo` します。
+
+```json
+"webApplicationInfo": {
     "id": "<bot id>",
     "resource": "https://RscPermission",
     "applicationPermissions": [
       "OnlineMeeting.ReadBasic.Chat"
     ]
-  }
+}
  ```
 
 #### <a name="query-parameter"></a>クエリ パラメーター
@@ -351,18 +352,18 @@ GET /v1/meetings/{meetingId}
 
 会議の実際の開始時刻と終了時刻は、スケジュールされた開始時刻と終了時刻とは異なります。 会議の詳細 API はスケジュールされた開始時刻と終了時刻を提供し、イベントは実際の開始時刻と終了時刻を提供します。
 
-#### <a name="pre-requisite"></a>前提条件
-会議の開始イベントと終了イベントを正常に受信するには、アプリ マニフェストに次の webApplicationInfo が必要です。
+### <a name="prerequisite"></a>前提条件
 
-# <a name="json"></a>[JSON](#tab/json)
+アプリ マニフェストには、会議の開始 `webApplicationInfo` イベントと終了イベントを受信するプロパティが必要です。 マニフェストを構成するには、次の例を使用します。
 
-```"webApplicationInfo": {
+```json
+"webApplicationInfo": {
     "id": "<bot id>",
     "resource": "https://RscPermission",
     "applicationPermissions": [
       "OnlineMeeting.ReadBasic.Chat"
     ]
-  }
+}
  ```
 
 ### <a name="example-of-meeting-start-event-payload"></a>会議の開始イベント ペイロードの例

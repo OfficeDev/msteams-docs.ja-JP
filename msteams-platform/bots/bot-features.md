@@ -1,33 +1,38 @@
 ---
 title: ボットと SDK
 author: surbhigupta
-description: ボットと SDK は、Microsoft Teams。
+description: ボットを構築するためのツールと SDK Microsoft Teams概要。
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: b1b8f18a457c45a7b0be6ccf6a1d7328d9c50027
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: c346d7b7a1c720e651a847fb8a650fc549689654
+ms.sourcegitcommit: f62634c59b697107e5bb3c38867b21007d328b1e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069023"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53196244"
 ---
 # <a name="bots-and-sdks"></a>ボットと SDK
 
-このページで動作するボットをMicrosoft Teams、次のいずれかを使用できます。
-* SDK に基Microsoft Bot Frameworkボット。
-* Power Virtual Agentsチャットボット サービス。
-* Webhooks とコネクタ。
+次のいずれかのツールまたは機能を使用して、Microsoft Teamsで動作するボットを作成できます。
 
-## <a name="bots-and-the-microsoft-bot-framework"></a>ボットとMicrosoft Bot Framework
+* [Microsoft Bot FrameworkSDK](#bots-with-the-microsoft-bot-framework)
+* [Power Virtual Agents](#bots-with-power-virtual-agents)
+* [Virtual Assistant](~/samples/virtual-assistant.md)
+* [Webhook とコネクタ](#bots-with-webhooks-and-connectors)
 
-ボットTeamsは、次の 3 つの要素で構成されます。
+## <a name="bots-with-the-microsoft-bot-framework"></a>ボットとMicrosoft Bot Framework
 
-* お客様がホストし、公開している Web サービス。
-* Bot Framework へのボットの登録。
-* アプリ マニフェストを含む Teams アプリ パッケージ。 これは、ユーザーがボット サービス経由でルーティングTeamsクライアントをインストールして Web サービスに接続する方法です。
+ボットTeams、次の要素で構成されます。
 
-ボット [フレームワークは、](https://dev.botframework.com/) カスタム スクリプト、C#、Python、および JavaScript をJavaボットを作成するために使用される豊富な SDK です。 ボット フレームワークに基づくボットが既に存在する場合は、ボットフレームワークで動作Microsoft Teams。 SDK を利用C#またはNode.jsを使用 [します](/microsoftteams/platform/#pivot=sdk-tools)。 これらのパッケージは、基本的な Bot Builder SDK のクラスとメソッドを次のように拡張します。
+* ユーザーがホストする一般にアクセス可能な Web サービス。
+* Web サービスのボット フレームワーク登録。
+* クライアントTeams Web サービスに接続するTeamsアプリ パッケージ。
+
+> [!TIP]
+> 開発者ポータルを使用して、Web サービスをボット フレームワークに登録し、アプリ構成を指定します。 詳細については、「開発者ポータルでアプリを管理する」[を参照Teams。](~/concepts/build-and-test/teams-developer-portal.md)
+
+ボット [フレームワークは、](https://dev.botframework.com/) カスタム スクリプト、C#、Python、および JavaScript をJavaボットを作成するために使用される豊富な SDK です。 ボット フレームワークに基づくボットが既に存在する場合は、ボットフレームワークで動作するボットを簡単にTeams。 SDK を利用C#またはNode.jsを使用 [します](/microsoftteams/platform/#pivot=sdk-tools)。 これらのパッケージは、基本的な Bot Builder SDK のクラスとメソッドを次のように拡張します。
 
 * コネクタ カードのような特殊なカードOffice 365使用します。
 * アクティビティTeams固有のチャネル データを設定します。
@@ -36,14 +41,11 @@ ms.locfileid: "53069023"
 > [!IMPORTANT]
 > 任意の web プログラミング Teamsアプリを開発し[、Bot Framework REST API を直接呼び出](/bot-framework/rest-api/bot-framework-rest-overview)します。 ただし、すべてのケースでトークン処理を実行する必要があります。
 
-> [!TIP]
-> TeamsApp Studio を使用すると、アプリ マニフェストを作成および構成し、ボット フレームワークで Web サービスをボットとして登録できます。 また、React 制御ライブラリと、対話型カードのビルダーも用意されています。 詳細については、「アプリ Studio[の使用Teams」を参照してください](~/concepts/build-and-test/app-studio-overview.md)。
-
-## <a name="bots-and-the-microsoft-power-virtual-agents"></a>ボットと Microsoft Power Virtual Agents
+## <a name="bots-with-power-virtual-agents"></a>ボットとPower Virtual Agents
 
 [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)は、Microsoft Power プラットフォームとボット フレームワーク上に構築されたチャットボット サービスです。 Power Virtual Agent 開発プロセスでは、ガイド付き、コードなし、グラフィカル インターフェイスのアプローチを使用して、チーム メンバーがインテリジェントな仮想エージェントを簡単に作成および維持できます。 ポータルでチャットボットを作成[Power Virtual Agents、](https://powervirtualagents.microsoft.com)チャットボットとチャットボットを簡単に統合[Teams。](how-to/add-power-virtual-agents-bot-to-teams.md) 開始方法の詳細については、「ドキュメント」[をPower Virtual Agentsしてください](/power-virtual-agents)。
 
-## <a name="bots-and-webhooks-and-connectors"></a>ボットと Webhooks とコネクタ
+## <a name="bots-with-webhooks-and-connectors"></a>Webhooks とコネクタを持つボット
 
 Webhooks とコネクタは、ボットを Web サービスに接続します。 Webhooks とコネクタを使用すると、ワークフローや他の簡単なコマンドの作成など、基本的な操作を行う簡単なボットを作成できます。 これらは、作成したチームでのみ使用できます。会社のワークフローに固有の単純なプロセスを対象とします。 詳細については [、「webhooks とコネクタについて」を参照してください](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)。
 
