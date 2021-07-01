@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: 3a3b2fc13f67d2ca3b061a165248fa2458058441
-ms.sourcegitcommit: f62634c59b697107e5bb3c38867b21007d328b1e
+ms.openlocfilehash: 38a7a5fdf9794fb95b4141f2c73e8282a9bf8601
+ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53196237"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "53211591"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Teams 会議アプリへの前提条件と API リファレンス
 
@@ -124,7 +124,7 @@ export class MyBot extends TeamsActivityHandler {
 GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 ```
 
-* * *
+---
 
 API の JSON 応答 `GetParticipant` 本文は次の形式です。
 
@@ -276,7 +276,7 @@ API はボット サービスを通じて利用できます。
     ]
 }
  ```
-
+ 
 #### <a name="query-parameter"></a>クエリ パラメーター
 
 会議の詳細 API には、次のクエリ パラメーターが含まれています。

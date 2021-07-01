@@ -6,12 +6,12 @@ ms.author: surbhigupta
 keywords: カメラ イメージ メディア マイク マイク QR コード qrcode バーコード バーコード スキャン スキャナーの場所マップ機能ネイティブ デバイスのアクセス許可
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: 8df8341e8996e4bf380575ac59e05325da16bd0d
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 069bd27057784076b3b701d013ead209ec6fa3a9
+ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566195"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "53211584"
 ---
 # <a name="device-capabilities"></a>デバイス機能
 
@@ -41,3 +41,5 @@ Microsoft Teamsプラットフォームは、組み込みのファースト パ�
 * スキャナー コントロールを使用して QR またはバーコード [をスキャンします](qr-barcode-scanner-capability.md)。
 * マイクを介してオーディオを録音します。
 * 場所ピッカーを使用 [して場所を共有します](location-capability.md)。
+
+また、ユーザーが Web アプリ エクスペリエンス[](people-picker-capability.md)Teamsユーザーを検索および選択できるユーザー選択コントロールを統合することもできます。

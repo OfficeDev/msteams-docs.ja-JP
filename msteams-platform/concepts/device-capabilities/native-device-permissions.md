@@ -4,12 +4,12 @@ keywords: teams アプリの機能のアクセス許可
 description: 通常、ユーザーの同意が必要なネイティブ機能へのアクセスを要求するためにアプリ マニフェストを更新する方法
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: 920ab47a60340fd9a14e4f5dfb2e39a8ad8f3a89
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: 37312912b4901cd31feeb9b0ee9bc76a3e03826a
+ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994351"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "53211619"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>アプリのデバイスのアクセス許可をMicrosoft Teamsする
 
@@ -19,6 +19,7 @@ ms.locfileid: "52994351"
 > * モバイル アプリにメディア機能をMicrosoft Teamsするには、「メディア機能の統合[」を参照してください](mobile-camera-image-permissions.md)。
 > * モバイル アプリに QR またはバーコード スキャナー機能を統合するには、「Microsoft Teams QR またはバーコード スキャナー機能をモバイル アプリに統合する」[を参照Teams。](qr-barcode-scanner-capability.md)
 > * モバイル アプリ内で場所の機能を統合するにはMicrosoft Teams機能の[統合に関するページを参照してください](location-capability.md)。
+> * ユーザー選択機能をモバイル アプリ内Microsoft Teams統合するには、「ユーザー選択機能の統合」を参照[Teams。](people-picker-capability.md)
 
 ## <a name="native-device-permissions"></a>ネイティブ デバイスのアクセス許可
 
@@ -68,7 +69,7 @@ JavaScript [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=ms
 
 ## <a name="specify-permissions"></a>アクセス許可を指定する
 
-アプリケーションで使用する 5 つのプロパティのどちらを追加して指定して、アプリ `manifest.json` `devicePermissions` を更新します。
+アプリケーションで使用する次の 5 つのプロパティを追加して指定して、アプリ `manifest.json` `devicePermissions` を更新します。
 
 ``` json
 "devicePermissions": [
@@ -120,7 +121,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 > * をサポート `camera` し `gallery` `microphone` 、selectMedia API を [**使用して有効になります**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true)。 1 [**つのイメージ キャプチャに captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) を使用します。
 > * getLocation `location` API を使用して [**サポートが有効になります**](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true)。 HTML5 地理位置情報 API は現在、デスクトップ クライアントで完全にサポートされていないので、場所 `getLocation API` Teams必要があります。
 
-次に例を示します。
+例:
  * ユーザーに自分の場所へのアクセスを求めるメッセージを表示するには、次のコマンドを呼び出す必要があります `getCurrentPosition()` 。
 
     ```Javascript
@@ -190,7 +191,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 > [!NOTE]
 > ネイティブ デバイスのアクセス許可に同意すると、現在のログイン _セッションでのみ有効_ です。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [メディア機能を統合Teams](mobile-camera-image-permissions.md)
@@ -200,3 +201,6 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 > [!div class="nextstepaction"]
 > [場所の機能を統合Teams](location-capability.md)
+
+> [!div class="nextstepaction"]
+> [ユーザー選択機能をユーザー選択機能にTeams](people-picker-capability.md)

@@ -4,12 +4,12 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 localization_priority: Normal
 keywords: チームの最新情報
-ms.openlocfilehash: 61b302b198a9dabdd597388e111eda6b03f7331b
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 1319b209bcc2543afa901bfbbf0ad33000b9d805
+ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140300"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "53211598"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
@@ -56,8 +56,9 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 <summary><b>2021</b></summary>
 
-| **Date** | **メモ** | **変更されたトピック** |
+| **Date** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+|06/28/2021|ユーザー選択機能を統合します。|[ユーザー選択機能の統合](concepts/device-capabilities/people-picker-capability.md)|  
 |06/25/2021| プロアクティブ メッセージを送信する手順ガイドが導入されました。 | [プロアクティブ メッセージを送信する手順ガイド](sbs-send-proactive.yml) |
 |06/09/2021| 属性付きアダプティブ カードのイメージのステージ `allowExpand` ビュー。 | [アダプティブ カードの画像のステージ ビュー](~/task-modules-and-cards/cards/cards-format.md) |
 |05/31/2021| 会話タブ。 | [タブ内のコンテンツに関する会話を開始および続行する](~/tabs/how-to/conversational-tabs.md) |
@@ -91,7 +92,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
   
 <summary><b>2020</b></summary>
 
-| **Date** | **メモ** | **変更されたトピック** |
+| **Date** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
 |11/30/2020|ID プラットフォームとタブTeams Toolkit Visual Studio Code統合。|[タブ用のシングル サインオンTeams ToolkitとVisual Studio Code認証](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Teamsバージョン 1.8 に更新されたアプリ マニフェスト。|[リファレンス: マニフェスト スキーマのMicrosoft Teams](resources/schema/manifest-schema.md)|
@@ -125,7 +126,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
   
 <summary><b>2019</b></summary>
 
-| **Date** | **メモ** | **変更されたトピック** |
+| **Date** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
 | 12/26/2019 | ボットに送信されるペイロード内のパラメーターは暗号化されなくなったため、この値を使用してこれらのメッセージへのディープリンク `replyToId` を作成できます。 メッセージ ペイロードには、パラメーターに暗号化された値が含まれます `legacy.replyToId` 。  |
 | 11/05/2019 | JavaScript SDK を使用したシングル サインオンTeams使用します。 | [シングル サインオン](tabs/how-to/authentication/auth-aad-sso.md) |
@@ -155,7 +156,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 <summary><b>2018</b></summary>
 
-| **Date** | **メモ** | **変更されたトピック** |
+| **Date** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
 | 2018 年 11 月 12 日 | グループ チャット内のタブは、リリースされたバージョンのグループ チャットでTeams。 この作業の一環として、[タブ] セクションはわかりやすくするために再作業されています。| [構成可能なタブ](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | ノード JS と .NET/C# の開始は、Teams で App Studio を使用するように更新され、Azure での Node ベースの Teams アプリのホスティングに新しいセクションが追加されました。 | [C#/.NET](~/get-started/get-started-dotnet-app-studio.md)と App Studio を使用して Microsoft Teams プラットフォームで始める 、 Node JS と[App Studio](~/get-started/get-started-nodejs-app-studio.md)を使用した Microsoft Teams プラットフォームの使用を開始する[、Azure](~/get-started/get-started-nodejs-in-azure.md)でノード Teams アプリをホストする|
@@ -175,7 +176,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 | 07/12/2018 | ゲスト アクセスに関する情報。 | [Microsoft Teams でのゲスト アクセス](/microsoftteams/guest-access#guest-access-overview)|
 | 06/07/2018 | テナント アプリ カタログMicrosoft Teams情報が追加されました。 | [アプリをMicrosoft Teamsする](~/publishing/apps-publish.md)|
 | 05/29/2018 | アダプティブ カードは、Teams。 | [Teams でのアダプティブ カードのアクション](task-modules-and-cards/cards/cards-reference.md) |
-| 04/17/2018 | replyToID がペイロードに追加され、カード `Invoke` アクションが `MessageBack` 実行されます。 これは、カードアクションが送信されたメッセージを更新する必要がある場合に特に便利です。 | [カードアクション](~/concepts/cards/cards-actions.md)|
+| 04/17/2018 | replyToID がペイロードに追加され、カード `Invoke` アクションが `MessageBack` 実行されます。 これは、カードアクションが送信されたメッセージを更新する必要がある場合に特に便利です。 | [カード アクション](~/concepts/cards/cards-actions.md)|
 | 04/12/2018 | このトピックは、プログラミング インターフェイスとこのドキュメント セットTeams変更を追跡するために追加されました。 | [新機能](~/whats-new.md)|
 | 04/10/2018 | パスでテナント ID を一貫して使用する認証 URL を変更しました。 | [タブの認証フロー](~/concepts/authentication/auth-flow-tab.md) [、AAD タブ認証](~/concepts/authentication/auth-tab-AAD.md)|
 | 04/06/2018 | コマンド ボックスの使用に関する設計ガイドラインを追加しました。 |[[コマンド] ボックス](~/resources/design/framework/command-box.md)|
@@ -194,7 +195,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 開発者プレビューは、リリースされていないプラットフォーム機能に早期にアクセスできるTeamsプログラムです。  
 
-| **Date** | **メモ** | **変更されたトピック** |
+| **Date** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
 |06/23/2021| 会議の詳細 API とリアルタイムの会議Teamsイベント。 | [Teams 会議用のアプリを作成する](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-details-api) |
 |06/21/2021|ボットを使用した個人用アプリのアンインストール動作 | [ボットを使用して個人用アプリの動作更新プログラムをアンインストールする](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|

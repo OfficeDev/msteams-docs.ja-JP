@@ -5,17 +5,17 @@ description: JavaScript クライアント SDK Teamsを使用して場所の機�
 keywords: 場所マップ機能ネイティブ デバイスのアクセス許可
 ms.topic: conceptual
 localization_priority: Normal
-ms.author: lajanuar
-ms.openlocfilehash: 47fd11c918725b3195636f972ba37cbdde0c4a60
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.author: surbhigupta
+ms.openlocfilehash: 3e6c4bda9a1a0024380cb295cd280db1d630f019
+ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630748"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "53211612"
 ---
 # <a name="integrate-location-capabilities"></a>場所機能を統合する 
 
-このドキュメントでは、ネイティブ デバイスの位置情報機能をアプリと統合する方法Teams説明します。  
+ネイティブ デバイスの位置情報機能は、アプリと統合Teamsできます。  
 
 JavaScript クライアント[SDK Microsoft Teams使用](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)できます。これは、アプリがユーザーのネイティブ デバイス機能にアクセスするために必要なツール[を提供します](native-device-permissions.md)。 [getLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true)や[showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true)などの場所 API を使用して、アプリ内の機能を統合します。 
 
@@ -34,7 +34,7 @@ Teams アプリに場所の機能を統合する主な利点は、Teams プラ�
 
 ## <a name="update-manifest"></a>マニフェストの更新
 
-プロパティを追加Teamsを[manifest.jsして](../../resources/schema/manifest-schema.md#devicepermissions)、ファイル上のアプリ `devicePermissions` のアプリを更新します `geolocation` 。 これにより、アプリは場所機能の使用を開始する前に、ユーザーに必要なアクセス許可を求めできます。
+プロパティを追加Teamsを[manifest.jsして](../../resources/schema/manifest-schema.md#devicepermissions)、ファイル上のアプリ `devicePermissions` のアプリを更新します `geolocation` 。 これにより、アプリは場所機能の使用を開始する前に、ユーザーに必要なアクセス許可を求めできます。 アプリ マニフェストの更新プログラムは次のとおりです。
 
 ``` json
 "devicePermissions": [
@@ -57,23 +57,11 @@ Teams アプリに場所の機能を統合する主な利点は、Teams プラ�
 > [!NOTE]
 > `getLocation()`API は、次の入力[構成](/javascript/api/@microsoft/teams-js/locationprops?view=msteams-client-js-latest&preserve-view=true)と共に `allowChooseLocation` 提供されます `showMap` 。 <br/> 値が true `allowChooseLocation` の *場合*、ユーザーは任意の場所を選択できます。<br/>  値が false の *場合*、ユーザーは現在の場所を変更できません。<br/> 値が false の `showMap` *場合*、現在の場所はマップを表示せずにフェッチされます。 `showMap` true に設定 `allowChooseLocation` されている場合は無視 *されます*。
 
-**場所機能用の Web アプリ エクスペリエンス** 
- ![場所機能の Web アプリ エクスペリエンス](../../assets/images/tabs/location-capability.png)
+次の図は、場所機能の Web アプリ エクスペリエンスを示しています。
 
-## <a name="error-handling"></a>エラー処理
+![場所機能の Web アプリ エクスペリエンス](../../assets/images/tabs/location-capability.png)
 
-これらのエラーは、アプリで適切に処理Teamsがあります。 次の表に、エラー コードとエラーが生成される条件を示します。 
-
-|エラー コード |  エラー名     | 条件|
-| --------- | --------------- | -------- |
-| **100** | NOT_SUPPORTED_ON_PLATFORM | API は現在のプラットフォームではサポートされていません。|
-| **500** | INTERNAL_ERROR | 必要な操作の実行中に内部エラーが発生します。|
-| **1000** | PERMISSION_DENIED |ユーザーは、アプリまたは web アプリTeams場所のアクセス許可を拒否しました。|
-| **4000** | INVALID_ARGUMENTS | API は、間違った引数または不十分な必須引数を使用して呼び出されます。|
-| **8000** | USER_ABORT |ユーザーが操作を取り消しました。|
-| **9000** | OLD_PLATFORM | ユーザーは、API の実装が存在しない古いプラットフォーム ビルドに存在します。 ビルドをアップグレードすると、問題が解決します。|
-
-## <a name="code-snippets"></a>コード スニペット
+### <a name="code-snippets"></a>コード スニペット
 
 **`getLocation`場所を取得する API の呼び出し:**
 
@@ -101,7 +89,21 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 });
 ```
 
+## <a name="error-handling"></a>エラー処理
+
+これらのエラーは、アプリで適切に処理Teamsがあります。 次の表に、エラー コードとエラーが生成される条件を示します。 
+
+|エラー コード |  エラー名     | Condition|
+| --------- | --------------- | -------- |
+| **100** | NOT_SUPPORTED_ON_PLATFORM | API は現在のプラットフォームではサポートされていません。|
+| **500** | INTERNAL_ERROR | 必要な操作の実行中に内部エラーが発生します。|
+| **1000** | PERMISSION_DENIED |ユーザーは、アプリまたは web アプリTeams場所のアクセス許可を拒否しました。|
+| **4000** | INVALID_ARGUMENTS | API は、間違った引数または不十分な必須引数を使用して呼び出されます。|
+| **8000** | USER_ABORT |ユーザーが操作を取り消しました。|
+| **9000** | OLD_PLATFORM | ユーザーは、API の実装が存在しない古いプラットフォーム ビルドに存在します。 ビルドをアップグレードすると、問題が解決します。|
+
 ## <a name="see-also"></a>関連項目
 
 * [メディア機能を統合Teams](mobile-camera-image-permissions.md)
 * [QR コードまたはバーコード スキャナー機能をアプリに統合Teams](qr-barcode-scanner-capability.md)
+* [ユーザー選択機能をユーザー選択機能にTeams](people-picker-capability.md)

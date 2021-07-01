@@ -6,16 +6,14 @@ keywords: カメラ メディア QR コード qrcode バーコード バーコ�
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 9b85de05bea8c9f704f4d8138b041b90e159b10f
-ms.sourcegitcommit: 9cabeaed9baf96c8caeb1497f0bc37abdb787d22
+ms.openlocfilehash: 4e34e75a6b439c67c831352e07344fd2cf011543
+ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52646564"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "53211577"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>QR コードまたはバーコード スキャナー機能を統合する 
-
-このドキュメントでは、QR またはバーコード スキャナー機能を統合する方法についてガイドします。 
 
 バーコードは、視覚的で機械で読み取り可能な形式でデータを表す方法です。 バーコードには、バーとスペースの形式で、種類、サイズ、製造元、発生国などの製品に関する情報が含まれます。 コードは、ネイティブ デバイス カメラの光学スキャナーを使用して読み取ります。 より豊富な共同作業エクスペリエンスを実現するには、Teams プラットフォームで提供される QR またはバーコード スキャナー機能をアプリTeamsできます。   
 
@@ -36,7 +34,7 @@ API 応答エラーを理解して、アプリ[](#error-handling)内のエラー
 
 ## <a name="update-manifest"></a>マニフェストの更新
 
-プロパティを追加Teamsを[manifest.jsして](../../resources/schema/manifest-schema.md#devicepermissions)、ファイル上のアプリ `devicePermissions` のアプリを更新します `media` 。 これにより、QR またはバーコード スキャナー機能の使用を開始する前に、アプリでユーザーに必要なアクセス許可を求めできます。
+プロパティを追加Teamsを[manifest.jsして](../../resources/schema/manifest-schema.md#devicepermissions)、ファイル上のアプリ `devicePermissions` のアプリを更新します `media` 。 これにより、QR またはバーコード スキャナー機能の使用を開始する前に、アプリでユーザーに必要なアクセス許可を求めできます。 アプリ マニフェストの更新プログラムは次のとおりです。
 
 ``` json
 "devicePermissions": [
@@ -57,27 +55,28 @@ API 応答エラーを理解して、アプリ[](#error-handling)内のエラー
 
 | バーコードの種類 | Android でサポートされる | iOS でサポート |
 | ---------- | ---------- | ------------ |
-| Codebar | 必要 | いいえ |
-| コード 39 | はい | 必要 | 
-| コード 93 | はい | 必要 |
-| コード 128 | はい | 必要 |
-| EAN-13 | はい | 必要 |
-| EAN-8 | はい | 必要 |
+| Codebar | はい | いいえ |
+| コード 39 | はい | はい | 
+| コード 93 | はい | はい |
+| コード 128 | はい | はい |
+| EAN-13 | はい | はい |
+| EAN-8 | はい | はい |
 | ITF | いいえ | はい |
-| QR コード | はい | 必要 |
-| RSS の展開 | 必要 | いいえ |
-| RSS-14 | 必要 | いいえ |
-| UPC-A | はい | 必要 |
-| UPC-E | はい | 必要 |
+| QR コード | はい | はい |
+| RSS の展開 | はい | いいえ |
+| RSS-14 | はい | いいえ |
+| UPC-A | はい | はい |
+| UPC-E | はい | はい |
 
-**Web アプリエクスペリエンス `ScanBarCode`QR またはバーコード スキャナー機能の API QR** またはバーコード スキャナー機能の 
- ![ Web アプリ エクスペリエンス](../../assets/images/tabs/qr-barcode-scanner-capability.png)
+次の図は、QR またはバーコード スキャナー機能の Web アプリ エクスペリエンスを示しています。
+
+![Qr またはバーコード スキャナー機能の Web アプリ エクスペリエンス](../../assets/images/tabs/qr-barcode-scanner-capability.png)
 
 ## <a name="error-handling"></a>エラー処理
 
 これらのエラーは、アプリで適切に処理Teamsがあります。 次の表に、エラー コードとエラーが生成される条件を示します。 
 
-|エラー コード |  エラー名     | 条件|
+|エラー コード |  エラー名     | Condition|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API は現在のプラットフォームではサポートされていません。|
 | **500** | INTERNAL_ERROR | 必要な操作の実行中に内部エラーが発生します。|
@@ -112,3 +111,5 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 * [メディア機能を統合Teams](mobile-camera-image-permissions.md)
 * [場所の機能を統合Teams](location-capability.md)
+* [ユーザー選択機能をユーザー選択機能にTeams](people-picker-capability.md)
+
