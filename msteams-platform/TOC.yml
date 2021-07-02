@@ -86,6 +86,8 @@
           href: concepts/device-capabilities/qr-barcode-scanner-capability.md
         - name: 場所機能を統合する
           href: concepts/device-capabilities/location-capability.md
+        - name: ユーザー ピッカー機能を統合する
+          href: concepts/device-capabilities/people-picker-capability.md
 - name: アプリをデザインする
   items:
     - name: 概要
