@@ -8,28 +8,26 @@
 - name: 作業の開始
   expanded: true
   items:
+    - name: 概要
+      href: get-started/code-samples.md
     - name: 前提条件
       href: get-started/prerequisites.md
-    - name: 個人用アプリ (React) を作成する
+    - name: React を使用して初めてのアプリを構築する
       href: get-started/first-app-react.md
-    - name: 個人用アプリ (Blazor) を作成する
+    - name: Blazor を使用して初めてのアプリを構築する
       href: get-started/first-app-blazor.md
-    - name: 個人用アプリ (SPFx) を作成する
+    - name: SPFx を使用して初めてのアプリを構築する
       href: get-started/first-app-spfx.md
-    - name: 会話ボットを作成する
-      href: get-started/first-app-bot.md
-    - name: メッセージングの拡張機能を作成する
-      href: get-started/first-message-extension.md
-- name: チュートリアルとコード サンプル
-  items:
-    - name: 概要
-      href: tutorials/code-samples.md
     - name: C# または .NET を使用して初めてのアプリを構築する
-      href: tutorials/get-started-dotnet-app-studio.md
+      href: get-started/get-started-dotnet-app-studio.md
     - name: Node.js を使用して初めてのアプリを構築する
-      href: tutorials/get-started-nodejs-app-studio.md
+      href: get-started/get-started-nodejs-app-studio.md
     - name: Yeoman ジェネレーターを使用して初めてのアプリを構築する
-      href: tutorials/get-started-yeoman.md
+      href: get-started/get-started-yeoman.md
+    - name: 初めての会話型ボットを構築する
+      href: get-started/first-app-bot.md
+    - name: 初めてのメッセージング拡張機能を構築する
+      href: get-started/first-message-extension.md
     - name: コード サンプル
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: アプリの基本事項
@@ -44,36 +42,6 @@
       href: concepts/design/understand-use-cases.md
     - name: ユース ケースを Teams アプリの機能にマッピング
       href: concepts/design/map-use-cases.md
-- name: Teams との統合
-  items:
-    - name: 概要
-      href: samples/integrate-web-apps-overview.md
-    - name: Web アプリ
-      href: samples/integrating-web-apps.md
-    - name: Power プラットフォーム アプリ
-      items:
-        - name: 概要
-          href: samples/teams-low-code-solutions.md
-        - name: Power Virtual Agents チャットボットを追加する
-          href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
-        - name: 仮想アシスタントを作成する
-          href: samples/virtual-assistant.md
-    - name: Microsoft Teams 用のアプリ テンプレート
-      href: samples/app-templates.md
-    - name: 本番対応の Shifts コネクタ
-      href: samples/shifts-wfm-connectors.md
-    - name: Moodle LMS
-      items:
-        - name: 概要
-          href: resources/moodle-overview.md
-        - name: Moodle LMS のインストール
-          href: resources/moodleInstructions.md
-    - name: '[Teams で共有] ボタンを作成する'
-      href: concepts/build-and-test/share-to-teams.md
-    - name: SharePoint に Teams タブを追加する
-      href: tabs/how-to/tabs-in-sharepoint.md
-    - name: ディープ リンクの作成
-      href: concepts/build-and-test/deep-links.md
     - name: デバイス機能
       items:
         - name: 概要
@@ -468,6 +436,36 @@
           href: resources/schema/manifest-schema-dev-preview.md
         - name: 機能
           href: resources/dev-preview/developer-preview-features.md
+- name: Teams との統合
+  items:
+    - name: 概要
+      href: samples/integrate-web-apps-overview.md
+    - name: Web アプリ
+      href: samples/integrating-web-apps.md
+    - name: Power プラットフォーム アプリ
+      items:
+        - name: 概要
+          href: samples/teams-low-code-solutions.md
+        - name: Power Virtual Agents チャットボットを追加する
+          href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
+        - name: 仮想アシスタントを作成する
+          href: samples/virtual-assistant.md
+    - name: Microsoft Teams 用のアプリ テンプレート
+      href: samples/app-templates.md
+    - name: 本番対応の Shifts コネクタ
+      href: samples/shifts-wfm-connectors.md
+    - name: Moodle LMS
+      items:
+        - name: 概要
+          href: resources/moodle-overview.md
+        - name: Moodle LMS のインストール
+          href: resources/moodleInstructions.md
+    - name: '[Teams で共有] ボタンを作成する'
+      href: concepts/build-and-test/share-to-teams.md
+    - name: SharePoint に Teams タブを追加する
+      href: tabs/how-to/tabs-in-sharepoint.md
+    - name: ディープ リンクの作成
+      href: concepts/build-and-test/deep-links.md
 - name: リソース
   items:
     - name: ローカリゼーション
