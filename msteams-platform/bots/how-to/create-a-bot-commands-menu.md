@@ -5,12 +5,12 @@ description: カスタム ボットのコマンド メニューをMicrosoft Team
 ms.topic: how-to
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 0b8793666e6478e69698c355fb9209d2ca5f5d1e
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 4ee8c48b2f3b10c8924b0e81dae0a0c1f6014414
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068995"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254315"
 ---
 # <a name="bot-command-menus"></a>ボット コマンド メニュー
 
@@ -44,7 +44,7 @@ ms.locfileid: "53068995"
 
     ![App Studio](./conversations/media/AppStudio.png)
 
-2. **App Studio で、[** マニフェスト エディター]**タブを選択** します。既存のアプリ パッケージをお持ちではない場合は、既存のアプリを作成またはインポートできます。 詳細については、「アプリ パッケージの [更新」を参照してください](~/tutorials/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package)。
+2. **App Studio で、[** マニフェスト エディター]**タブを選択** します。既存のアプリ パッケージをお持ちではない場合は、既存のアプリを作成またはインポートできます。 詳細については、「アプリ パッケージの [更新」を参照してください](~/get-started/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package)。
 
 3. マニフェスト エディターの左側のウィンドウ **で** 、[機能] セクションで **[ボット** ] **を選択します**。
 

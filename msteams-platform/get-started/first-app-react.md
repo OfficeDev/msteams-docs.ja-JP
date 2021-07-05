@@ -5,22 +5,22 @@ description: "\"こんにちは!\" を表示する Microsoft Teams アプリを�
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: edd7cf8048dd89156b4b91afecb329d91baf3f53
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: c257bcd805a6b7b38ab657cb31cad961df1c4704
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994115"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254322"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-react"></a>React を使用した最初の Microsoft Teams アプリのビルドと実行
 
-このチュートリアルでは、React で新しい Microsoft Teams アプリを作成し、Microsoft Graph から情報を引き出すシンプルな個人用アプリを実装します。 たとえば、個人用アプリ *には、* 個々の使用を対象にした一連のタブが含まれます。 チュートリアルでは、Teams アプリの構造、アプリをローカルで実行する方法、Azure にアプリを展開する方法について説明します。
+このチュートリアルでは、React で新しい Microsoft Teams アプリを作成し、Microsoft Graph から情報を取得する簡単な個人用アプリを実装する方法について説明します。 たとえば、個人用アプリ *には、* 個別に使用するタブのセットが含まれます。 チュートリアルでは、Teams アプリの構造、アプリをローカルで実行する方法、Azure にアプリを展開する方法について説明します。
 
 ビルドされたアプリは、現在のユーザーの基本的なユーザー情報を表示します。 許可が付与された場合、アプリは現在のユーザーとして Microsoft Graph に接続し、完全なプロフィールを取得します。
 
 ## <a name="before-you-begin"></a>始める前に
 
-前提条件をインストールして、開発環境がセットアップされていることを確認 [します](prerequisites.md)。
+前提条件をインストールして、開発環境がセットアップされていることを確認します。
 
 > [!div class="nextstepaction"]
 > [前提条件のインストール](prerequisites.md)
@@ -32,7 +32,7 @@ Teams ツールキットを使用して、最初のプロジェクトを作成�
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
 1. Visual Studio Code を開きます。
-1. サイド バーの Teams アイコンを選択して、Teams ツールキットを開きます。
+1. 次のTeams Toolkitを開き、サイドバー Teamsアイコンを選択します。
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Visual Studio Code サイド バーの Teams アイコン":::。
 
@@ -44,19 +44,19 @@ Teams ツールキットを使用して、最初のプロジェクトを作成�
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="[新しいプロジェクトの作成] のウィザードの開始":::。
 
-1. [機能 **の選択] ステップ** で、[ **タブ] 機能** が既に選択されています。 **[OK]** を押します。
+1. [機能 **の選択] セクション** で、[タブ] **が選択** されているを複数選択し **、[OK] を選択します**。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="新しいアプリに機能を追加する方法を示すスクリーンショット":::。
 
-1. **[フロントエンド ホストの種類]** 手順で、**[Azure]** を選択します。
+1. **[Frontend ホスティングの種類] セクションで****、[Azure] を選択します**。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="新規アプリのホスティングを選択する方法を示すスクリーンショット":::。
 
-1. **クラウド リソース** 手順で **[OK]** を押します。  このチュートリアルでは、追加のクラウド リソースは必要ありません。
+1. [クラウド リソース **] セクションで****、[OK] を選択します**。  このチュートリアルでは、追加のクラウド リソースは必要ありません。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-cloud-resources.png" alt-text="新しいアプリにクラウド リソースを追加する方法を示すスクリーンショット":::。
 
-1. **プログラミング言語** の手順で、**[JavaScript]** を選択します。
+1. [プログラミング **言語] セクションで****、[JavaScript] を選択します**。
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="プログラミング言語を選択する方法のスクリーンショット":::
 
@@ -64,7 +64,7 @@ Teams ツールキットを使用して、最初のプロジェクトを作成�
 
 1. `helloworld` のように、アプリに適した名前を入力します。 アプリの名前は、英数字のみで構成されている必要があります。  **Enter** キーを押して続行します。
 
-アプリTeams数秒で作成されます。
+   アプリTeams数秒で作成されます。
 
 # <a name="command-line"></a>[コマンド ライン](#tab/cli)
 
@@ -77,14 +77,13 @@ teamsfx new
 CLI では、プロジェクトを作成するためのいくつかの質問を行います。 各質問には、矢印キーを使用してオプションを選択する方法など、回答方法が示されます。 質問に答えた後、**Enter** キーを押して選択を確認します。
 
 1. **[新しい Teams アプリを作成]** を選択します。
-1. **[タブ]** 機能を選択します。
-1. **Azure** フロントエンド ホスティングを選択します。
-1. クラウド リソースは選択しないでください。
+1. タブ機能 **を選択** します。
+1. **Azure** フロントエンド ホスティングを選択します。 クラウド リソースは選択しないでください。
 1. プログラミング言語として **[JavaScript]** を選択します。
 1. **Enter** キーを押して、既定のワークスペース フォルダーを選択します。
 1. `helloworld` のように、アプリに適した名前を入力します。  アプリの名前は、英数字のみで構成されている必要があります。
 
-すべての質問に回答すると、プロジェクトが作成されます。
+   すべての質問に答えた後、プロジェクトが作成されます。
 
 ---
 
@@ -92,7 +91,7 @@ CLI では、プロジェクトを作成するためのいくつかの質問を�
 
 このセクションをスキップしたい場合は、[アプリをローカルで実行する](#run-your-app-locally)ことができます。
 
-Teams ツールキットでプロジェクトを構成すると、Teams 向けの基本的な個人用タブを構築するためのコンポーネントがあります。 プロジェクトのディレクトリとファイルには、Visual Studio Code の [エクスプローラー] 領域に表示されます。
+プロジェクトをTeams Toolkitした後、プロジェクト用の基本的な個人用アプリを構築するためのTeams。 プロジェクトのディレクトリとファイルには、Visual Studio Code の [エクスプローラー] 領域に表示されます。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/react-app-project.png" alt-text="Visual Studio Code で個人用アプリ向けのアプリのプロジェクト ファイルを表示したスクリーンショット。":::
 
@@ -122,7 +121,7 @@ Teams ツールキットでは、アプリをローカルで実行すること�
 - アプリのフロントエンドを構成する HTML、CSS、JavaScript のリソースは、ローカル サービスでホストされています。 これは、`https://localhost:3000` でアクセスできます。
 - アプリのマニフェストは、Developer Portal for Teams で生成され存在します。  Teams はアプリ マニフェストを使用して、接続しているクライアントにアプリをロードする場所を伝達します。
 
-この作業が完了すると、Teams クライアント内でアプリを読み込むことができます。  Teams の Web クライアントを使用することで、標準的な Web 開発環境で HTML、CSS、JavaScript のコードを確認することができます。
+その後、アプリをクライアント内で読みTeamsできます。  Teams の Web クライアントを使用することで、標準的な Web 開発環境で HTML、CSS、JavaScript のコードを確認することができます。
 
 ### <a name="build-and-run-your-app-locally-in-visual-studio-code"></a>Visual Studio Code でアプリをローカルにビルドして実行する
 
@@ -140,7 +139,7 @@ Teams ツールキットでは、アプリをローカルで実行すること�
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="起動時に Web 版のチームを選択する方法を示すスクリーンショット":::
 
-1. サインインするように求めるメッセージが表示されることがあります。  その場合は、M365 アカウントを使用してサインインします。
+1. メッセージが表示されたら、M365 アカウントでサインインします。
 1. Teams へのアプリのインストールを促すメッセージが表示された場合は、**[追加]** を押してください。
 
 これでアプリが表示されます。
@@ -153,13 +152,13 @@ Teams ツールキットでは、アプリをローカルで実行すること�
 <details>
 <summary>デバッガーでアプリをローカルに実行した場合に発生することを説明します。</summary>
 
-F5 を押すと、以下のように Teams ツールキットが表示されます。
+**F5** キーを押すと、次のTeams Toolkit。
 
-1. Azure Active Directory を使用してアプリケーションを登録しました。
-1. Teams でアプリを *サイドロード* しました。
-1. [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start) を使用して、アプリケーション バックエンドのローカルでの実行を開始しました。
-1. アプリケーションのフロント エンドがローカルでホストされるようになりました。
-1. アプリケーションMicrosoft Teams読み込むよう指示するコマンドを使用して web ブラウザーでTeamsを開始しました `https://localhost:3000/tab` 。 これは、アプリケーション マニフェストに登録されている URL です。
+* アプリケーションをアプリケーションに登録Azure Active Directory。
+* *アプリをサイド* ロードTeams。
+* Azure Function Core Tools を使用してローカルで実行されている [アプリケーション バックエンドを開始します](/azure/azure-functions/functions-run-local?#start)。
+* ローカルでホストされているアプリケーションフロントエンドを開始します。
+* アプリケーションMicrosoft Teams読み込む側に指示するコマンドTeams Web ブラウザーで開始します `https://localhost:3000/tab` 。 これは、アプリケーション マニフェストに登録されている URL です。
 
 </details>
 
@@ -179,24 +178,19 @@ Teams でアプリを正常に実行するには、アプリのサイドロー�
 
 展開前は、このアプリケーションは以下のようにローカルで動作しています。
 
-1. バックエンドは、**Azure Functions Core Tools** を使用して実行します。
-1. アプリケーションの HTTP エンドポイントは、Microsoft Teams がアプリケーションを読み込む場所でローカルに実行されます。
+* バックエンドは、**Azure Functions Core Tools** を使用して実行します。
+* アプリケーションの HTTP エンドポイントは、Microsoft Teams がアプリケーションを読み込む場所でローカルに実行されます。
 
 展開には、アクティブな Azure サブスクリプションでリソースをプロビジョニングし、アプリケーションのバックエンド コードとフロントエンド コードを Azure に展開またはアップロードする必要があります。
 
-1. 構成されている場合、バックエンドでは、Azure App Service や Azure App Service などのさまざまな Azure サービスを使用Azure Storage。
-1. フロントエンド アプリケーションは、静的な Web ホスティング用に構成された Azure Storage アカウントに展開されます。
+* 構成されている場合、バックエンドでは、Azure App Service や Azure App Service などのさまざまな Azure サービスを使用Azure Storage。
+* フロントエンド アプリケーションは、静的な Web ホスティング用に構成された Azure Storage アカウントに展開されます。
 
 </details>
 
 ## <a name="see-also"></a>関連項目
 
-- [Blazor を使用して Teams アプリを作成する](first-app-blazor.md)
-- [SharePoint Web パーツとして Teams アプリを作成する](first-app-spfx.md) (Azure は必要なし)
-- [会話ボット アプリを作成する](first-app-bot.md)
-- [メッセージング拡張機能を作成する](first-message-extension.md)
-
-## <a name="next-step"></a>次の手順
-
-> [!div class="nextstepaction"]
-> [Blazor を使用して Teams アプリを作成する](first-app-blazor.md)
+* [チュートリアルの概要](code-samples.md)
+* [会話ボット アプリを作成する](first-app-bot.md)
+* [メッセージング拡張機能を作成する](first-message-extension.md)
+* [コード サンプル](https://github.com/OfficeDev/Microsoft-Teams-Samples)

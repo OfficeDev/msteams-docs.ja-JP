@@ -4,21 +4,21 @@ description: ボットでのカード アクションMicrosoft Teams、ボット
 localization_priority: Normal
 ms.topic: conceptual
 keywords: teams ボット カードアクション
-ms.openlocfilehash: 1b20ca8003ab74c5dd2860e754024ae64ff94527
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 4af152f6179785687d4fd7371d202c56e1aee170
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140090"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254203"
 ---
-# <a name="card-actions"></a>カードアクション
+# <a name="card-actions"></a>カード アクション
 
 ボットとメッセージング拡張機能で使用されるカードは、Teamsアクティビティの種類をサポート [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) します。
 
 > [!NOTE]
 > コネクタ `CardAction` と使用する `potentialActions` 場合Office 365コネクタ カードのアクションは異なります。
 
-| 型 | アクション |
+| Type | Action |
 | --- | --- |
 | `openUrl` | 既定のブラウザーで URL を開きます。 |
 | `messageBack` | ボタンを選択したユーザーまたはカードをタップしたユーザーから、ボットにメッセージとペイロードを送信します。 チャット ストリームに別のメッセージを送信します。 |
@@ -93,7 +93,7 @@ CardFactory.actions([
 | プロパティ | 説明 |
 | --- | --- |
 | `title` | ボタン ラベルとして表示されます。 |
-| `displayText` | 省略可能。 アクションの実行時にチャット ストリーム内のユーザーが使用します。 このテキストはボットに送信されません。 |
+| `displayText` | 省略可能です。 アクションの実行時にチャット ストリーム内のユーザーが使用します。 このテキストはボットに送信されません。 |
 | `value` | アクションの実行時にボットに送信されます。 アクションのコンテキスト (一意の識別子や JSON オブジェクトなど) をエンコードできます。 |
 | `text` | アクションの実行時にボットに送信されます。 ボットの開発を簡略化するには、このプロパティを使用します。 コードは、ボット ロジックをディスパッチするために、1 つのトップ レベル プロパティをチェックできます。 |
 
@@ -441,7 +441,7 @@ CardFactory.actions([
 | プロパティ | 説明 |
 | --- | --- |
 | `type` | に設定します `messageBack` 。 |
-| `displayText` | 省略可能。 アクションの実行時にチャット ストリーム内のユーザーが使用します。 このテキストはボットに送信されません。 |
+| `displayText` | 省略可能です。 アクションの実行時にチャット ストリーム内のユーザーが使用します。 このテキストはボットに送信されません。 |
 | `value` | アクションの実行時にボットに送信されます。 アクションのコンテキスト (一意の識別子や JSON オブジェクトなど) をエンコードできます。 |
 | `text` | アクションの実行時にボットに送信されます。 ボットの開発を簡略化するには、このプロパティを使用します。 コードは、ボット ロジックをディスパッチするために、1 つのトップ レベル プロパティをチェックできます。 |
 
@@ -533,7 +533,7 @@ CardFactory.actions([
 ```json
 {
   "type": "Action.Submit",
-  "title": "submit"
+  "title": "submit",
   "data": {
     "msteams": {
         "type": "task/fetch"

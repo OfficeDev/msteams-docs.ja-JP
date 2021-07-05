@@ -5,20 +5,20 @@ description: カスタム タブを作成する方法については、SharePoin
 ms.author: zhenyasa
 ms.date: 05/19/2021
 ms.topic: quickstart
-ms.openlocfilehash: 7bbbf7ae1d74a9094af5bc6ca4b3ac797ba05d5d
-ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
+ms.openlocfilehash: 4df2bb71837af520a2d2500a45b8605e5fae08b2
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2021
-ms.locfileid: "53037664"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254224"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-sharepoint-framework-spfx"></a>アプリで最初のアプリをビルドMicrosoft Teams実行する (SharePoint Framework) (SPFx)
 
-このチュートリアルでは、単純な個人用アプリを実装Microsoft Teams (SharePoint Framework) SPFx新しいアプリを作成します。 (個人用 *アプリには、* 個々の使用を対象にした一連のタブが含まれます)。チュートリアルでは、Teams アプリの構造、アプリをローカルで実行する方法、およびアプリを SharePoint に展開する方法について説明します。
+このチュートリアルでは、単純な個人用アプリを実装する新Microsoft TeamsアプリSharePoint Framework SPFx作成する方法について説明します。 たとえば、個人用アプリ *には、* 個別に使用するタブのセットが含まれます。 チュートリアルでは、Teams アプリの構造、アプリをローカルで実行する方法、アプリを SharePoint に展開する方法について説明します。
 
-## <a name="before-you-begin"></a>始める前に
+## <a name="before-you-begin"></a>はじめに
 
-[前提条件](prerequisites.md)をインストールして、開発環境が整っていることを確認する
+前提条件をインストールして、開発環境がセットアップされていることを確認します。
 
 > [!div class="nextstepaction"]
 > [前提条件のインストール](prerequisites.md)
@@ -34,7 +34,7 @@ Teams ツールキットを使用して、最初のプロジェクトを作成�
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
 1. Visual Studio Code を開きます。
-1. サイド バーの Teams アイコンを選択して、Teams ツールキットを開きます。
+1. サイドバーのTeamsアイコンを選択して、ウィンドウを開Teams Toolkit。
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="Visual Studio Code サイド バーの Teams アイコン":::。
 
@@ -46,15 +46,15 @@ Teams ツールキットを使用して、最初のプロジェクトを作成�
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="[新しいプロジェクトの作成] のウィザードの開始":::。
 
-1. **[機能の選択]** 手順では、**[タブ]** 機能がすでに選択されています。  **[OK]** を押します。
+1. [機能の **選択] セクションで** 、[タブ] を選択 **し、[OK]** を **選択します**。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="新しいアプリに機能を追加する方法を示すスクリーンショット":::。
 
-1. Frontend **ホスティングの種類の手順で**、[SharePoint Framework **] (SPFx) を選択します**。
+1. **[Frontend ホスティングの種類] セクション** で、[SharePoint Framework **] (SPFx) を選択します**。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="新規アプリのホスティングを選択する方法を示すスクリーンショット":::。
 
-1. [フレームワーク]**ステップで**、[設定]**をReact。**
+1. [フレームワーク **] セクションで**、[フレームワーク]**をReact。**
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-which-framework.png" alt-text="Select Framework":::
 
@@ -68,7 +68,7 @@ Teams ツールキットを使用して、最初のプロジェクトを作成�
 
 1. `helloworld` のように、アプリに適した名前を入力します。  アプリの名前は、英数字のみで構成されている必要があります。  **Enter** キーを押して続行します。
 
-数秒後に Teams アプリが作成されます。
+   数秒後に Teams アプリが作成されます。
 
 # <a name="command-line"></a>[コマンド ライン](#tab/cli)
 
@@ -81,7 +81,7 @@ teamsfx new
 CLI では、プロジェクトを作成するためのいくつかの質問を行います。  各質問には、回答方法 (矢印キーで選択肢を選択するなど) が記載されています。  質問に答えた後、**Enter** キーを押して選択を確認します。
 
 1. **[新しい Teams アプリを作成]** を選択します。
-1. **[タブ]** 機能を選択します。
+1. [タブ **] を選択します**。
 1. [SharePoint Framework **(SPFx)** フロントエンド ホスティング] を選択します。
 1. [フレームワーク **React** 選択します。
 1. Web **パーツ名の Enter** **キーを押します**。
@@ -90,7 +90,7 @@ CLI では、プロジェクトを作成するためのいくつかの質問を�
 1. **Enter** キーを押して、既定のワークスペース フォルダーを選択します。
 1. `helloworld` のように、アプリに適した名前を入力します。  アプリの名前は、英数字のみで構成されている必要があります。
 
-すべての質問に答えると、プロジェクトが作成されます。
+   すべての質問に回答すると、プロジェクトが作成されます。
 
 ---
 
@@ -100,7 +100,7 @@ CLI では、プロジェクトを作成するためのいくつかの質問を�
 
 このセクションをスキップしたい場合は、[アプリをローカルで実行する](#run-your-app-locally)ことができます。
 
-プロジェクトをTeams Toolkitしたら、コンポーネントを使用して、Teams 内でホストされているユーザー用の基本的な個人用アプリをSharePoint Framework。  プロジェクトのディレクトリとファイルには、Visual Studio Code の [エクスプローラー] 領域に表示されます。
+プロジェクトをTeams Toolkitした後、プロジェクト内でホストされている Teamsの基本的な個人用アプリを構築するコンポーネントがSharePoint Framework。  プロジェクトのディレクトリとファイルには、Visual Studio Code の [エクスプローラー] 領域に表示されます。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/app-project-files-spfx.png" alt-text="Visual Studio Code で個人用アプリ向けのアプリのプロジェクト ファイルを表示したスクリーンショット。":::
 
@@ -125,21 +125,21 @@ Teams Toolkitを使用すると、アプリをローカルでホストし、ワ�
 
 アプリをローカルに構築して実行するには、以下のようにします。
 
-1. [Visual Studio Code F5]**を押します**。
+1. [Visual Studio Code F5 キー **を押** します。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-debug-local.png" alt-text="ローカル ワークベンチでアプリをSPFxする方法を示すスクリーンショット。":::
 
    > [!NOTE]
    > アプリを初めて実行すると、すべての依存関係がダウンロードされ、アプリがビルドされます。  ビルドが完了すると、ブラウザー ウィンドウが自動的に開SharePointワークベンチが読み込まれます。  この作業には 3 ～ 5 分かかります。
 
-   ワークベンチがSharePointしたら。
+   ワークベンチのSharePointが読み込まれます。
 
    >[!NOTE]
    > ツールキットでは、必要に応じてローカル証明書をインストールするようメッセージが表示されます。 この証明書により、Teams は `https://localhost` からアプリケーションを読み込むことができます。 以下のダイアログが表示されたら、「はい」を選択します。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Teams がアプリケーションを localhost からロードできるようにするための SSL 証明書のインストールを求めるメッセージが表示される方法を示すスクリーンショット":::。
 
-1. [Web パーツの追加 **]** (+) アイコンのいずれかを押して、Web パーツを追加します。
+1. [Web **パーツとアイコンの追加] を** 選択して Web パーツを追加します。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-workbench-addpart.png" alt-text="ポップアップで実行されているSPFxを示すスクリーンショットを示し、Web パーツを表示します。":::
 
@@ -147,10 +147,10 @@ Teams Toolkitを使用すると、アプリをローカルでホストし、ワ�
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-workbench-addpart2.png" alt-text="ポップアップと一緒にSPFxワークベンチで Web パーツの選択を追加する方法を示すスクリーンショット。":::
 
-アプリが実行されている必要があります。  通常のデバッグ アクティビティは、他の web パーツ (ブレークポイントの設定など) と同様SPFx実行できます。
+   アプリが実行されている必要があります。  通常のデバッグ アクティビティは、他の web パーツ (ブレークポイントの設定など) と同様SPFx実行できます。
 
-> [!TIP]
-> ブラウザー ウィンドウの render メソッドにブレークポイントを配置し `SPFx/src/webparts/{webpart}/{webpart}.ts` 、再読み込みしてみてください。 VS Codeコード内のブレークポイントで停止します。
+   > [!TIP]
+   > ブラウザー ウィンドウの render メソッドにブレークポイントを配置し `SPFx/src/webparts/{webpart}/{webpart}.ts` 、再読み込みしてみてください。 VS Codeコード内のブレークポイントで停止します。
 
 ## <a name="deploy-your-app-to-sharepoint"></a>アプリをアプリに展開SharePoint
 
@@ -164,13 +164,13 @@ Teams Toolkitを使用すると、アプリをローカルでホストし、ワ�
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="プロビジョニング コマンドを示すスクリーンショット":::
 
-1. 右下隅のダイアログを見て、進行状況を監視できます。  数秒後に、次の通知が表示されます。
+   右下隅のダイアログを見て、進行状況を監視できます。  数秒後に、次の通知が表示されます。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/provision-complete.png" alt-text="プロビジョニング完了ダイアログを示すスクリーンショット。":::
 
 1. プロビジョニングが完了したら、[クラウドに **展開する] を選択します**。
 
-1. 現在、自動展開は使用できません。  手動でビルドして展開するように求めるダイアログが表示されます。 [**ビルド] パッケージをSharePoint押します**。
+1. 現在、自動展開は使用できません。  手動でビルドして展開するように求めるダイアログが表示されます。 [**ビルド とパッケージSharePoint選択します**。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/build-sharepoint-package.png" alt-text="[Sharepoint パッケージのビルド] ダイアログのスクリーンショット":::
 
@@ -203,11 +203,11 @@ Teams Toolkitを使用すると、アプリをローカルでホストし、ワ�
 
 1. M365 管理コンソールにログインし、アプリ カタログSharePoint移動します。
 
-   - を `https://admin.microsoft.com/AdminPortal/Home` 開きます。
-   - [**管理センター] で**、**管理センター** SharePoint選択します。
-   - サイドバー メニュー **から [その他の** 機能] を選択します。
-   - [アプリ **] で [開く** ] **を押します**。
-   - [アプリ **カタログ] を選択します**。
+   1. を `https://admin.microsoft.com/AdminPortal/Home` 開きます。
+   1. [**管理センター] で**、**管理センター** SharePoint選択します。
+   1. サイドバー メニュー **から [その他の** 機能] を選択します。
+   1. [アプリ **] で [開く** ] **を押します**。
+   1. [アプリ **カタログ] を選択します**。
 
 1. [アプリ **の配布] を選択SharePoint。**
 
@@ -215,34 +215,30 @@ Teams Toolkitを使用すると、アプリをローカルでホストし、ワ�
 
 1. [アップロード]**を選択します**。
 
-1. [ファイル **の選択] を押します**。
+1. [ファイル **の選択] を選択します**。
 
-1. プロジェクト内 `{project}.sppkg` のフォルダーにあるファイル `SPFx/sharepoint/solution` を探します。  [開 **く] を押します**。
+1. プロジェクト内 `{project}.sppkg` のフォルダー内 `SPFx/sharepoint/solution` のファイルを見つける。 [**開く**]を選択します。
 
-1. **[OK]** を押します。
+1. [**OK**] を選択します。
 
-1. 展開SharePoint自動的に開始されます。  [ **組織内のすべてのサイトでこのソリューション** を使用できる] チェック ボックスをオンにし、[展開] を **押します**。
+1. 展開SharePoint自動的に開始されます。 [この **ソリューションを組織内のすべてのサイト** で使用できる] が選択されているのを確認します。 次に、[展開] **を選択します**。
 
 1. [ファイル] **タブを選択** します。
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-appcatalog-filestab.png" alt-text="[アプリ カタログ] の [ファイル] タブSharePoint選択します。":::
 
-1. 展開したパッケージを選択し、[同期] を押 **してリボンTeams** をクリックします。
+1. 展開したパッケージを選択し、右上隅から [同期 **Teamsを選択** します。
 
     > [!Note]
     > 同期プロセスTeams数分かかる場合があります。  ブラウザーの右側に、アプリが正常に同期されたことを示すメッセージが表示Teams。
 
-アプリケーションを開Teams (またはサインイン時 `https://teams.microsoft.com` )。  サイドバーのトリプルドットを押し、[すべてのアプリ] **を選択します**。  アプリは、組織カテゴリ用 **に構築されたアプリに配置** されます。  そこからアプリを追加できます。
+   アプリケーションを開Teams (またはサインイン時 `https://teams.microsoft.com` )。  サイドバーのトリプルドットを押し、[すべてのアプリ] **を選択します**。  アプリは、組織カテゴリ用 **に構築されたアプリに配置** されます。  そこからアプリを追加できます。
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="アプリ内のアプリを示すスクリーンショットTeams":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="アプリ内のアプリを示すスクリーンショットTeams":::
 
 ## <a name="see-also"></a>関連項目
 
-- [React を使用して Teams アプリを作成する](first-app-react.md)
-- [Blazor を使用して Teams アプリを作成する](first-app-blazor.md)
-- [メッセージング拡張機能を作成する](first-message-extension.md)
-
-## <a name="next-step"></a>次の手順
-
-> [!div class="nextstepaction"]
-> [会話ボット アプリを作成する](first-app-bot.md)
+* [チュートリアルの概要](code-samples.md)
+* [会話ボット アプリを作成する](first-app-bot.md)
+* [メッセージング拡張機能を作成する](first-message-extension.md)
+* [コード サンプル](https://github.com/OfficeDev/Microsoft-Teams-Samples)

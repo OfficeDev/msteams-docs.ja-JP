@@ -5,23 +5,23 @@ description: アプリ開発の開始と環境Microsoft Teamsする方法につ�
 ms.author: adhal
 ms.date: 05/24/2021
 ms.topic: quickstart
-ms.openlocfilehash: 7310d54322b6cbfd24e30eef37ea63a7969c001c
-ms.sourcegitcommit: 99b1f151e4e36a86c6a5d2ccbde01bf45b61f526
+ms.openlocfilehash: 4796d37aa0ef904805fbfe2956f9e1d49960bfe9
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2021
-ms.locfileid: "53037643"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254267"
 ---
 # <a name="prerequisites-get-started-with-microsoft-teams-app-development"></a>前提条件: アプリ開発Microsoft Teams開始する
 
-最初のアプリを作成Teams、いくつかのツールをインストールして、開発環境をセットアップする必要があります。
+最初のアプリの作成を開始するTeams、いくつかのツールをインストールして、開発環境をセットアップする必要があります。
 
 ## <a name="install-required-tools"></a>必要なツールのインストール
 
 必要なツールの一部は、アプリのビルド方法によってTeamsがあります。
 
 - [Node.js](https://nodejs.org/en/download/) (最新の v14 LTS リリースを使用する)
-- 開発者向けツールを使用したブラウザー (Microsoft Edge [(推奨](https://www.microsoft.com/edge)) や Google [Chrome など](https://www.google.com/chrome/))
+- 開発者ツール (推奨) や[](https://www.microsoft.com/edge)Google [Chrome](https://www.google.com/chrome/)などのMicrosoft Edgeブラウザー
 - JavaScript、TypeScript、または SharePoint Framework (SPFx) を使用して開発する場合は、Visual Studio Code[バージョン](https://code.visualstudio.com/download)1.55 以降をインストールします。  
 - .NET を使用して開発している場合は[、2019 Visual Studioインストールします](https://visualstudio.com/download)。 必ず、ASP.NET **Web 開発ワークロードまたは** **.NET Core クロス** プラットフォーム開発ワークロードをインストールします。
 
@@ -35,9 +35,9 @@ ms.locfileid: "53037643"
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
 1. Visual Studio Code を開きます。
-1. [拡張機能] ビューを選択します **(Ctrl + Shift +**  /   **>** X
+1. [拡張機能 **] ビューを選択** します **(Ctrl + Shift + X**  /  **の場合は 、2** つ以上の拡張子を>**します**)。
 1. 検索ボックスに「Teams Toolkit」**と入力します**。
-1. [インストール] ウィンドウの横にある緑色のインストール ボタンTeams Toolkit。
+1. [インストール **] の** 横にある [インストール] をTeams Toolkit。
 
 また、マーケットプレースでTeams ToolkitをVisual Studio Code[できます](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)。
 
@@ -64,9 +64,8 @@ ms.locfileid: "53037643"
 1. 2019 Visual Studioを開きます。
 1. [拡張機能 **の管理**  >  **] を選択します**。
 1. 検索ボックスに「Teams Toolkit」**と入力します**。
-1. 拡張機能を選択Teams Toolkitし、[ダウンロード] を **選択します**。
-
-拡張機能はダウンロードできます。 2019 Visual Studio閉じて、拡張機能をインストールします。
+1. 拡張機能を選択Teams Toolkitし、[ダウンロード] を **選択します**。 拡張機能がダウンロードされます。
+1. 2019 Visual Studio閉じて、拡張機能をインストールします。
 
 # <a name="command-line"></a>[コマンド ライン](#tab/cli)
 
@@ -114,12 +113,12 @@ Microsoft のデータをGraphする場合は、Microsoft データベース エ
 
 ## <a name="enable-sideloading"></a>サイドローディングを有効にする
 
-開発中は、アプリを配布せずにアプリTeams読み込む必要があります。 これは"サイドローディング" と呼ばれる。
+開発中は、アプリを配布せずにアプリTeams読み込む必要があります。 これはサイドローディングと呼ばれる。
 
-1. アプリ アカウントをお持Teams、アプリをサイドロードできるアプリを次Teams。
+アプリ アカウントをお持Teams、アプリをサイドロードできるアプリを次Teams。
 
-    1. クライアントで、[Teams] を **選択します**。
-    1. カスタム アプリを作成する **アップロード探します**。
+1. クライアントで、[Teams] を **選択します**。
+1. カスタム **アプリアップロードを選択します**。
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/upload-custom-app-closeup.png" alt-text="カスタム アプリをアップロードTeams場所を示す図。":::
 
@@ -132,13 +131,12 @@ Microsoft のデータをGraphする場合は、Microsoft データベース エ
 
 1. 開発者プログラムの[Microsoft 365に移動します](https://developer.microsoft.com/microsoft-365/dev-program)。
 1. [今 **すぐ参加] を** 選択し、画面の指示に従います。
-1. ようこそ画面にアクセスすると **、[E5 サブスクリプションの設定] を選択します**。
+1. ようこそ画面で **、[E5 サブスクリプションの設定] を選択します**。
 1. 管理者アカウントを設定します。 完了すると、次のような画面が表示されます。
 
     :::image type="content" source="~/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="開発者プログラムにサインアップした後に表示されるMicrosoft 365例。":::
 
-1. セットアップしTeams管理者アカウントを使用してサインインします。
-1. カスタム アプリ オプションのアップロード **確認** します。
+1. セットアップしTeams管理者アカウントを使用してサインインします。 カスタム アプリ オプションのアップロード **確認** します。
 
 ## <a name="get-a-free-azure-account"></a>無料の Azure アカウントを取得する
 
@@ -149,7 +147,7 @@ Microsoft のデータをGraphする場合は、Microsoft データベース エ
 次の 2 つのアカウントにアクセスできる必要があります。
 
 - アカウントMicrosoft 365資格情報。 これは、アカウントにサインインするために使用するアカウントTeams。 開発者プログラム のテナントMicrosoft 365場合、これはプログラムの登録時に設定した管理者アカウントです。
-- - Azure 資格情報。 これは、Azure Portal へのアクセスと、アプリをサポートする新しいクラウド リソースのプロビジョニングに使用するアカウントです。
+- Azure 資格情報。 これは、Azure Portal へのアクセスと、アプリをサポートする新しいクラウド リソースのプロビジョニングに使用するアカウントです。
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
@@ -162,16 +160,16 @@ Microsoft のデータをGraphする場合は、Microsoft データベース エ
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/account-commands.png" alt-text="サインインに使用する [アカウント] セクションの場所。":::
 
-1. サインイン プロセスは、通常の Web ブラウザーの使用を開始します。 M365 アカウントのサインイン プロセスを完了します。 ブラウザーを閉じて、ブラウザーに戻るメッセージが表示Visual Studio Code。
+    サインイン プロセスは、通常の Web ブラウザーの使用を開始します。 M365 アカウントのサインイン プロセスを完了します。 プロンプトが表示されたら、ブラウザーを閉じて、ブラウザーに戻Visual Studio Code。
 1. データ内のTeams Toolkitに戻Visual Studio Code。
 1. [Azure **にサインインする] を選択します**。
 
     > [!TIP]
     > Azure Account 拡張機能がインストールされ、同じアカウントを使用している場合は、この手順を省略できます。 他の拡張機能で使用しているアカウントと同じアカウントを使用します。
 
-1. サインイン プロセスは、通常の Web ブラウザーの使用を開始します。  Azure アカウントのサインイン プロセスを完了します。 ブラウザーを閉じて、ブラウザーに戻るメッセージが表示Visual Studio Code。
+1. サインイン プロセスは、通常の Web ブラウザーの使用を開始します。  Azure アカウントのサインイン プロセスを完了します。 プロンプトが表示されたら、ブラウザーを閉じて、ブラウザーに戻Visual Studio Code。
 
-完了すると、 **サイドバーの [ACCOUNTS]** セクションには、使用可能な Azure サブスクリプションの数と共に、2 つのアカウントが個別に表示されます。 使用可能な Azure サブスクリプションが少なくとも 1 つ用意されている必要があります。 サインインしていない場合は、サインアウトして別のアカウントを使用します。
+    完了すると、 **サイドバーの [ACCOUNTS]** セクションには、使用可能な Azure サブスクリプションの数と共に、2 つのアカウントが個別に表示されます。 使用可能な Azure サブスクリプションが少なくとも 1 つ用意されている必要があります。 サインインしていない場合は、サインアウトして別のアカウントを使用します。
 
 # <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/vs)
 
@@ -195,20 +193,21 @@ Visual Studio 2019 では、必要に応じて各サービスにログインす�
 
     サインイン プロセスは、通常の Web ブラウザーの使用を開始します。 Azure アカウントのサインイン プロセスを完了します。 ブラウザーを閉じるときにメッセージが表示されます。
 
-アカウント ログインは、ユーザーと TeamsFx CLI Visual Studio Code共有されます。
+    アカウント ログインは、ユーザーと TeamsFx CLI Visual Studio Code共有されます。
 
----
 
-開発環境が構成されたので、最初のアプリを作成、ビルド、およびTeamsできます。
+
+    開発環境が構成されたので、最初のアプリを作成、ビルド、およびTeamsできます。
 
 ## <a name="see-also"></a>関連項目
 
-- [Blazor を使用してTeamsアプリを作成する](first-app-blazor.md)
-- [アプリを使用してTeamsアプリをSharePoint Frameworkする (SPFx)](first-app-spfx.md)
-- [会話ボット アプリを作成する](first-app-bot.md)
-- [メッセージング拡張機能を作成する](first-message-extension.md)
-
-## <a name="next-step"></a>次の手順
-
-> [!div class="nextstepaction"]
-> [アプリを使用してTeamsアプリをReact](first-app-react.md)
+* [チュートリアルの概要](code-samples.md) 
+* [アプリを使用してアプリを作成React](first-app-react.md)
+* [Blazor を使用してアプリを作成する](first-app-blazor.md)
+* [アプリを使用してアプリを作成SPFx](first-app-spfx.md)
+* [C# を使用してアプリを作成する](get-started-dotnet-app-studio.md)
+* [Node.js を使ってアプリを作成する](get-started-nodejs-app-studio.md)
+* [Yeoman ジェネレーターを使用してアプリを作成する](get-started-yeoman.md)
+* [会話ボット アプリを作成する](first-app-bot.md)
+* [メッセージング拡張機能を作成する](first-message-extension.md)
+* [コード サンプル](https://github.com/OfficeDev/Microsoft-Teams-Samples)

@@ -5,22 +5,22 @@ description: "\"こんにちは!\" を表示する Microsoft Teams アプリを�
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: f40331ed06a401d60092e884add2cfa747c3ebdc
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: c14f55d014af120cab88044d31ee8600017e3c57
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179952"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254308"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>Blazor で最初のアプリをMicrosoft Teams実行する
 
-このチュートリアルでは、.NET/Blazor で新しい Microsoft Teams アプリを作成し、Microsoft クライアントから情報を取得するための簡単な個人用アプリを実装Graph。 (個人用 *アプリには、* 個々の使用を対象にした一連のタブが含まれます)。 チュートリアルでは、Teams アプリの構造、アプリをローカルで実行する方法、Azure にアプリを展開する方法について説明します。
+このチュートリアルでは、.NET/Blazor で新しい Microsoft Teams アプリを作成し、Microsoft Graph から情報を取得するための簡単な個人用アプリを実装する方法について説明します。 たとえば、個人用アプリ *には、* 個別に使用するタブのセットが含まれます。 チュートリアルでは、Teams アプリの構造、アプリをローカルで実行する方法、Azure にアプリを展開する方法について説明します。
 
 ビルドされたアプリは、現在のユーザーの基本的なユーザー情報を表示します。  許可が付与された場合、アプリは現在のユーザーとして Microsoft Graph に接続し、完全なプロフィールを取得します。
 
 ## <a name="before-you-begin"></a>始める前に
 
-[前提条件](prerequisites.md)をインストールして、開発環境が整っていることを確認する
+前提条件をインストールして、開発環境がセットアップされていることを確認します。
 
 > [!div class="nextstepaction"]
 > [前提条件のインストール](prerequisites.md)
@@ -35,16 +35,16 @@ Teams ツールキットを使用して、最初のプロジェクトを作成�
 
 1. [新 **しいプロジェクトを作成する] を選択します**。
 
-1. [アプリ **Microsoft Teams選択し、[** 次へ] を **押します**。  テンプレートを見つけるのに役立つには、プロジェクトの種類 **を使用** Microsoft Teams。
+1. [アプリ **Microsoft Teams選択し、[** 次へ] を **選択します**。  テンプレートを見つけるのに役立つには、プロジェクトの種類 **を使用** Microsoft Teams。
 
-1. プロジェクトとソリューションに良い名前を付け、[次へ] を **押します**。
+1. 名前を入力し、[次へ] を **選択します**。
 
-1. アプリケーション名と会社名を入力し、[作成] を **押します**。  アプリケーション名と会社名がエンド ユーザーに表示されます。
+1. アプリケーション名と会社名を入力します。
 
-1. 数秒後に Teams アプリが作成されます。  プロジェクトを作成したら、M365 でシングル サインオンを設定します。
+1. **[作成]** を選択します。  アプリケーション名と会社名がエンド ユーザーに表示されます。 数秒後に Teams アプリが作成されます。  プロジェクトが作成された後、M365 でシングル サインオンを設定します。
 
-   - [TeamsFx **Project**  >  **SSO 用**  >  **に構成する] を選択します**。
-   - メッセージが表示されたら、M365 管理者アカウントにサインインします。
+   1. [TeamsFx **Project**  >  **SSO 用**  >  **に構成する] を選択します**。
+   1. メッセージが表示されたら、M365 管理者アカウントにサインインします。
 
 # <a name="command-line"></a>[コマンド ライン](#tab/cli)
 
@@ -70,13 +70,13 @@ Teams ツールキットを使用して、最初のプロジェクトを作成�
    dotnet new teamsapp --shortName my-teams-app --companyName "My Company"
    ```
 
-1. スキャフォールディングが完了したら、プロジェクトを次の展開Teams構成します。
+1. スキャフォールディングが完了した後、次の手順にTeams構成します。
 
    ``` bash
    teamsfx init
    ```
 
-これで、デバッグ用にソリューションをVisual Studio開く必要があります。
+   これで、デバッグ用にソリューションをVisual Studio開く必要があります。
 
 ---
 
@@ -84,7 +84,7 @@ Teams ツールキットを使用して、最初のプロジェクトを作成�
 
 このセクションをスキップしたい場合は、[アプリをローカルで実行する](#run-your-app-locally)ことができます。
 
-Teams ツールキットでプロジェクトを構成すると、Teams 向けの基本的な個人用タブを構築するためのコンポーネントがあります。 プロジェクト のディレクトリとファイルは、2019 年 2019 年のソリューション エクスプローラー Visual Studio表示されます。
+プロジェクトをTeams Toolkitした後、プロジェクト用の基本的な個人用アプリを構築するためのTeams。 プロジェクト のディレクトリとファイルは、2019 年 2019 年のソリューション エクスプローラー Visual Studio表示されます。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-file-layout.png" alt-text="2019 年に個人用アプリのアプリ プロジェクト ファイルをVisual Studioスクリーンショット。":::
 
@@ -107,36 +107,39 @@ Teams ツールキットでは、アプリをローカルで実行すること�
 - Web API は 、認証タスクを支援するために (IIS Express 経由で) ホストされ、アプリとアプリ間のプロキシとして機能Azure Active Directory。  
 - アプリのマニフェストは、Developer Portal for Teams で生成され存在します。  Teams はアプリ マニフェストを使用して、接続しているクライアントにアプリをロードする場所を伝達します。
 
-この作業が完了すると、Teams クライアント内でアプリを読み込むことができます。  Teams の Web クライアントを使用することで、標準的な Web 開発環境で HTML、CSS、JavaScript のコードを確認することができます。
+その後、アプリをクライアント内で読みTeamsできます。  Teams の Web クライアントを使用することで、標準的な Web 開発環境で HTML、CSS、JavaScript のコードを確認することができます。
 
 アプリをローカルに構築して実行するには、以下のようにします。
 
-1. 次Visual Studio **F5 キーを押** して、デバッグ モードでアプリケーションを実行します。
+
+1. 次Visual Studio Code **F5** キーを押して、アプリケーションをデバッグ モードで実行します。
+
 
 1. 要求された場合は、ローカル デバッグ用の自己署名証明書 SSL 証明書をインストールします。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Teams がアプリケーションを localhost からロードできるようにするための SSL 証明書のインストールを求めるメッセージが表示される方法を示すスクリーンショット":::。
 
 1. Teams が Web ブラウザーに読み込まれ、サインインするようメッセージが表示されます。 Microsoft Teams を開くようメッセージが表示されたら、「キャンセル」を選択してブラウザーに残ります。 M365 アカウントでサインインします。
-1. Teams へのアプリのインストールを促すメッセージが表示された場合は、**[追加]** を押してください。
 
-これでご使用のアプリが表示されます。
+1. アプリをインストールするように求めるメッセージが表示されたら、[Teams] を **選択します**。
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/blazor-completed-app.png" alt-text="完了したアプリのスクリーンショット":::
+   これでご使用のアプリが表示されます。
 
-他の Web アプリケーションと同様に、通常のデバッグ作業を行うことができます (ブレークポイントの設定など)。 このアプリはホット リロードをサポートしています。  プロジェクト内のファイルを変更すると、ページが再読み込みされます。
+   :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-completed-app.png" alt-text="完了したアプリのスクリーンショット":::
+
+   デバッグ アクティビティは、ブレークポイントの設定などの他の Web アプリケーションである場合と同様に実行できます。 このアプリはホット リロードをサポートしています。  プロジェクト内のファイルを変更すると、ページが再読み込みされます。
 
 <!-- markdownlint-disable MD033 -->
 <details>
 <summary>デバッガーでアプリをローカルに実行した場合に発生することを説明します。</summary>
 
-F5 を押すと、以下のように Teams ツールキットが表示されます。
+**F5** キーを押すと、次のTeams Toolkit。
 
-1. Azure Active Directory を使用してアプリケーションを登録しました。
-1. Microsoft Teams で "サイド読み込み" 用にアプリケーションを登録しました。
-1. ローカルで実行されているアプリケーション バックエンドを開始しました。
-1. アプリケーションのフロント エンドがローカルでホストされるようになりました。
-1. アプリケーションMicrosoft Teams読み込むようTeamsコマンドを使用して Web ブラウザーで開始します (URL はアプリケーション マニフェスト内に登録されます)。
+1. アプリケーションをアプリケーションに登録Azure Active Directory。
+1. アプリケーションを"サイド ローディング" に登録Microsoft Teams。
+1. ローカルで実行されているアプリケーション バックエンドを開始します。
+1. ローカルでホストされているアプリケーションフロントエンドを開始します。
+1. アプリケーションMicrosoft Teams読み込むよう指示するコマンドTeams Web ブラウザーで開始します (URL はアプリケーション マニフェスト内に登録されます)。
 
 </details>
 
@@ -150,7 +153,10 @@ F5 を押すと、以下のように Teams ツールキットが表示されま�
 
 ## <a name="deploy-your-app-to-azure"></a>アプリを Azure に展開する
 
-展開は 2 つの手順で構成されます。  まず、必要なクラウド リソース (プロビジョニングとも呼ばれる) が作成され、アプリを構成するコードが作成されたクラウド リソースにコピーされます。
+展開は、次の 2 つの手順で構成されます。 
+
+1. 必要なクラウド リソースが作成されます。 これはプロビジョニングとも呼ばれる。
+1. コーディングを開始し、作成したクラウド リソースにアプリをコピーします。
 
 > **プレビュー**
 >
@@ -158,15 +164,15 @@ F5 を押すと、以下のように Teams ツールキットが表示されま�
 
 ## <a name="provision-and-deploy-your-app-to-azure-app-service"></a>アプリのプロビジョニングと Azure App Service への展開
 
-1. ソリューション エクスプローラーで、プロジェクト ノードを右クリックし、[発行] を **選択します**(または、[ビルド発行 **] メニュー項目**  >  **を** 使用します)。
+1. ソリューション エクスプローラーで、プロジェクト ノードを右クリックし、[発行] を **選択します**。 [発行のビルド]**メニュー項目**  >  **を** 使用することもできます。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish1.png" alt-text="プロジェクトの発行操作を選択する":::
 
-1. [発行]**ウィンドウで****、[Azure] を選択します**。  [次 **へ] を押します**。
+1. [発行 **] ウィンドウで****、[Azure] と [次** へ] を **選択します**。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish2.png" alt-text="発行ターゲットとして Azure を選択する":::
 
-1. [Azure **App Service] (Windows) を選択します**。  [次 **へ] を押します**。
+1. [Azure **App Service] (Windows) を選択し、[次へ]** を **選択します**。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish3.png" alt-text="発行ターゲットとして Azure App Service を選択する":::
 
@@ -174,7 +180,7 @@ F5 を押すと、以下のように Teams ツールキットが表示されま�
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish4.png" alt-text="新しいインスタンスを作成します。":::
 
-1. [アプリ **サービスの作成 (Windows)** ダイアログボックスに、[名前] 、[サブスクリプション名]  、[**リソース** グループ]、および [ホスティング プラン] エントリ フィールドが設定されます。 App Service が既に実行されている場合は、既存の設定が選択されます。  新しいリソース グループとホスティング プランを作成することを選択できます (推奨)。  準備ができたら、[作成] を **選択します**。
+1. [アプリ **サービスの作成 (Windows)** ダイアログボックスに、[名前] 、[サブスクリプション名]  、[**リソース** グループ]、および [ホスティング プラン] エントリ フィールドが設定されます。 App Service が既に実行されている場合は、既存の設定が選択されます。  新しいリソース グループとホスティング プランを作成できます。  準備ができたら、[作成] を **選択します**。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish5.png" alt-text="ホスティング プランとサブスクリプションの選択":::
 
@@ -182,7 +188,7 @@ F5 を押すと、以下のように Teams ツールキットが表示されま�
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish6.png" alt-text="新しいインスタンスを選択します。":::
 
-1. [展開モード **] の** 横にある [編集] (鉛筆) アイコン **を押** し、[自己格納 **型] を選択します**。
+1. [展開モード **] の** 横にある [編集] (鉛筆) アイコン **を選択** し、[自己格納 **型] を選択します**。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish8.png" alt-text="[自己格納型展開モード] を選択します。":::
 
@@ -190,13 +196,15 @@ F5 を押すと、以下のように Teams ツールキットが表示されま�
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish7.png" alt-text="アプリをアプリ サービスに発行する":::
 
-Visual Studio Azure App Service にアプリを展開すると、Web アプリがブラウザーに読み込まれます。  URL `/tab` の末尾に追加して、ページを表示します。
+   Visual Studio Azure App Service にアプリを展開すると、Web アプリがブラウザーに読み込まれます。  URL `/tab` の末尾に追加して、ページを表示します。
 
-プロジェクトのプロパティ [ **発行] ウィンドウ** には、サイトの URL などの詳細が表示されます。 サイト URL をメモします。
+   プロジェクトのプロパティ [ **発行] ウィンドウ** には、サイトの URL などの詳細が表示されます。 サイト URL をメモします。
 
 ## <a name="create-an-environment-for-your-app"></a>アプリの環境を作成する
 
-アプリのタブTeams環境を使用して読み込む場所を管理する開発者 **ポータル** です。  環境を作成するには、次の方法を実行します。
+アプリのタブTeams環境を使用して読み込む場所を管理する開発者 **ポータル** です。  
+
+**環境を作成するには、次の方法を実行します。**
 
 1. 開発者ポータル[を開Teams。](https://dev.teams.microsoft.com)  M365 管理アカウントでサインインします。
 
@@ -210,11 +218,11 @@ Visual Studio Azure App Service にアプリを展開すると、Web アプリ�
 
 1. [最初 **の環境を作成する] を選択します**。
 
-1. 環境の名前を入力し、[追加] を **押します**。たとえば、_実稼働 ._
+1. 環境の名前を入力し、[追加] を **選択します**。 たとえば、`_Production_` などです。
 
-1. 新しく作成した環境が選択されている場合は、[最初の **環境変数を作成する] を押します**。
+1. [最初 **の環境変数を作成する] を選択します**。
 
-1. [名前 `azure_app_url` ] に入力 **します**。  Azure サイトの URL (なし) を Value `https://` として入力 **します**。
+1. [名前 `azure_app_url` ] に入力 **します**。  値を指定せずに Azure サイトの URL `https://` を **入力します**。
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments2.png" alt-text="環境変数の作成":::
 
@@ -222,17 +230,17 @@ Visual Studio Azure App Service にアプリを展開すると、Web アプリ�
 
 ## <a name="update-the-app-manifest"></a>アプリ マニフェストを更新します。
 
-アプリ マニフェストが URL からタブを読み込 `localhost` み中です。  このセクションでは、アプリ マニフェストを調整して、作成した環境内にリストされている URL からタブを読み込む。
+アプリ マニフェストは、URL からタブを読み込 `localhost` む。  このセクションでは、作成した環境内にリストされている URL からタブを読み込むアプリ マニフェストを構成します。
 
 1. サイドバーで、[基本情報] **を選択します**。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments3.png" alt-text="基本情報の選択":::
 
-1. マニフェスト内には、URL の一部としてリスト `localhost:XXXXX` される場所が複数あります。  すべてのオカレンスを `{{azure_app_url}}` (中かっこを含む) に置き換えてください。
+1. マニフェスト内には、URL の一部としてリスト `locahost:XXXXX` される場所が複数あります。  中かっこを含む `{{azure_app_url}}` 、すべての出現箇所を置き換える。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments4.png" alt-text="環境の基本情報を調整する":::
 
-1. 完了したら、[保存] **を押します**。
+1. 完了したら、[保存] を **選択します**。
 
 1. サイドバーで、[機能] **を選択します**。
 
@@ -247,9 +255,9 @@ Visual Studio Azure App Service にアプリを展開すると、Web アプリ�
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments7.png" alt-text="個人用タブ URL の編集":::
 
-1. [ **更新] を押します**。
+1. **[更新]** を選択します。
 
-1. **[保存]** を押します。
+1. **[保存]** を選択します。
 
 1. サイドバーで、[シングル サインオン **] を選択します**。
 
@@ -257,26 +265,21 @@ Visual Studio Azure App Service にアプリを展開すると、Web アプリ�
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments8.png" alt-text="シングル サインオンアプリケーション ID URI の編集":::
 
-1. **[保存]** を押します。
+1. **[保存]** を選択します。
 
-1. サイドバーで[ドメイン] **を押します**。
+1. サイドバーで、[ドメイン] **を選択します**。
 
-1. [ドメイン **の追加] を押します**。
+1. [**ドメインの追加**] を選択します。
 
-1. 有効なドメインとしてリストされていない場合は、有効なドメインとして追加し、[追加] `{{azure_app_url}}` を **押します**。
+1. 有効なドメインとしてリストされていない場合は、有効なドメインとして追加し、[追加] `{{azure_app_url}}` を **選択します**。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments9.png" alt-text="ドメインの追加":::
 
-ページの上部にある **[プレビュー] Teams** ボタンを使用して、アプリをアプリ内で起動Teams。
+   ページの上部にある **[プレビュー] Teams** を使用して、アプリをアプリ内で起動Teams。
 
 ## <a name="see-also"></a>関連項目
 
-- [React を使用して Teams アプリを作成する](first-app-react.md)
-- [Web パーツTeamsアプリをSharePointする](first-app-spfx.md)
-- [会話ボット アプリを作成する](first-app-bot.md)
-- [メッセージング拡張機能を作成する](first-message-extension.md)
-
-## <a name="next-step"></a>次の手順
-
-> [!div class="nextstepaction"]
-> [Web パーツTeamsアプリをSharePointする](first-app-spfx.md)
+* [チュートリアルの概要](code-samples.md)
+* [会話ボット アプリを作成する](first-app-bot.md)
+* [メッセージング拡張機能を作成する](first-message-extension.md)
+* [コード サンプル](https://github.com/OfficeDev/Microsoft-Teams-Samples)

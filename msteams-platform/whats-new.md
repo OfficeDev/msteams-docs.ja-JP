@@ -4,47 +4,16 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 localization_priority: Normal
 keywords: チームの最新情報
-ms.openlocfilehash: 1319b209bcc2543afa901bfbbf0ad33000b9d805
-ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
+ms.openlocfilehash: a18e602dea253f552dbcfffe7eb6620bba3bba67
+ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "53211598"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "53254196"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
-Microsoft ビルド 2021 Microsoft Teams一般提供 (GA)、および開発者向けプレビューで導入されているプラットフォーム機能について説明します。
-
-## <a name="microsoft-build-2021"></a>Microsoft ビルド 2021
-
-# <a name="features-in-developer-preview"></a>[開発者プレビューの機能](#tab/devpreview)
-
-| **Date** | **機能** | **変更されたトピック** |
-| -------- | --------- | ------------------ |
-|06/16/2021| チャットに対するリソース固有の同意。 |[リソース固有の同意](graph-api/rsc/resource-specific-consent.md)、[リソースに固有](graph-api/rsc/test-resource-specific-consent.md)の同意のアクセス許可をテストするTeams|
-|05/26/2021| アダプティブ カードを使用してタブを作成します。 |[タブを作成する](tabs/how-to/build-adaptive-card-tabs.md)|
-|05/25/2021| 更新された[Teams ToolkitとVisual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)[の](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview)Visual Studio。 | [アプリ開発Teams開始する](~/get-started/prerequisites.md) |
-|05/25/2021| アプリを管理Teamsするための新しい開発者ポータルがTeamsされました。 | [Teams の開発者ポータル](concepts/build-and-test/teams-developer-portal.md) |
-|05/25/2021| カスタム 一緒にモードのシーン機能は、参加者を 1 つの仮想シーンに結合し、事前に決定されたシートにビデオ ストリームを設定します。 | [カスタム一緒にモードのシーン](~/apps-in-teams-meetings/teams-together-mode.md) |
-|05/24/2021| ボットは、リソース固有の同意 (RSC) を使用してすべてのチャネル メッセージを受信できます。|[RSC、ボット会話の](~/bots/how-to/conversations/channel-messages-with-rsc.md)概要、[チャネルと](~/bots/how-to/conversations/conversation-basics.md)グループ[](~/bots/how-to/conversations/channel-and-group-conversations.md)の会話、開発者プレビュー マニフェスト スキーマを使用して[すべてのメッセージを受信する](~/resources/schema/manifest-schema-dev-preview.md) |
-|05/21/2021| タブは、リンク解除とステージ ビューをリンクします。 |[タブリンクの分岐とステージ ビュー](tabs/tabs-link-unfurling.md) |
-
-> [!NOTE]
-> 開発者プレビューで使用できる機能の詳細については、「開発者向けパブリック プレビュー」[を参照Teams。](~/resources/dev-preview/developer-preview-intro.md)
-
-# <a name="features-in-ga"></a>[GA の機能](#tab/GA)
-
-| **Date** | **機能** | **変更されたトピック** |
-| -------- | --------- | ------------------ |
-|04/29/2021 | アダプティブ カードのユニバーサル アクション。 | [アダプティブ カードのユニバーサル アクション](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
-|04/29/2021 | アダプティブ カードのユーザー固有のビュー。 | [ユーザー固有のビュー](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/User-Specific-Views.md) |
-|04/29/2021 | アダプティブ カードのシーケンシャル ワークフロー。 | [シーケンシャル ワークフロー](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Sequential-Workflows.md) |
-|04/29/2021 | 最新のカード。 | [最新のカード](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Up-To-Date-Views.md) |
-|04/08/2021| アプリのカスタマイズ。|[デザイン チーム アプリの概要](concepts/design/enable-app-customization.md)[、App studio の概要](concepts/build-and-test/app-studio-overview.md#connectors)、マニフェスト[スキーマ](resources/schema/manifest-schema-dev-preview.md) |
-|03/29/2021 | カードの書式を設定Teams。 | [カードの書式を設定Teams](task-modules-and-cards/cards/cards-format.md) |
-|02/19/2021|場所の機能が追加されました。 <br/> 場所機能の情報は、デバイス機能の概要、ネイティブ デバイスのアクセス許可、メディア機能の統合、QR またはバーコード スキャナー機能ファイルに追加されます。|[概要](concepts/device-capabilities/device-capabilities-overview.md)、[デバイスのアクセス許可の要求](concepts/device-capabilities/native-device-permissions.md)、[メディア機能の統合](concepts/device-capabilities/mobile-camera-image-permissions.md)[、QR またはバーコード](concepts/device-capabilities/qr-barcode-scanner-capability.md)スキャナー機能の統合、[場所の統合機能](concepts/device-capabilities/location-capability.md) |
-
----
+一Microsoft Teams (GA) および開発者向けプレビューで使用できるプラットフォーム機能について説明します。
 
 ## <a name="ga-features"></a>GA の機能
 
@@ -58,7 +27,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 | **Date** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
-|06/28/2021|ユーザー選択機能を統合します。|[ユーザー選択機能の統合](concepts/device-capabilities/people-picker-capability.md)|  
+|06/28/2021|ユーザー選択機能を統合します。|[ユーザー ピッカー機能を統合する](concepts/device-capabilities/people-picker-capability.md)|  
 |06/25/2021| プロアクティブ メッセージを送信する手順ガイドが導入されました。 | [プロアクティブ メッセージを送信する手順ガイド](sbs-send-proactive.yml) |
 |06/09/2021| 属性付きアダプティブ カードのイメージのステージ `allowExpand` ビュー。 | [アダプティブ カードの画像のステージ ビュー](~/task-modules-and-cards/cards/cards-format.md) |
 |05/31/2021| 会話タブ。 | [タブ内のコンテンツに関する会話を開始および続行する](~/tabs/how-to/conversational-tabs.md) |
