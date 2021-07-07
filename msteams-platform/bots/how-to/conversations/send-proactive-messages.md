@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 localization_priority: Normal
 Keywords: メッセージの送信、ユーザー ID の取得、チャネル ID の取得、会話 ID の取得
-ms.openlocfilehash: 443988cc70f009ab657a1a29a91e8989dfed4f43
-ms.sourcegitcommit: 656a1de9e23e0ad90dddcb93a2bbfcc63848a856
+ms.openlocfilehash: 5c169e8ef7735b42233bef9992de3540a6fbbee1
+ms.sourcegitcommit: a6253e89cb8c8c34d45b06e08c9668daeebc30a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53130196"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "53300299"
 ---
 # <a name="proactive-messages"></a>プロアクティブ メッセージ
 
@@ -117,7 +117,7 @@ ms.locfileid: "53130196"
 
 ## <a name="samples"></a>サンプル
 
-次のコードは、アプリを使用してアプリを事前にインストールする簡単なコード サンプルをGraph。
+次のコードは、プロアクティブ メッセージを送信する方法を示しています。
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -272,6 +272,7 @@ POST /v3/conversations
 |---------------|--------------|--------|-------------|--------|
 | Teams での会話の基本  | 1 対 1 のプロアクティブ メッセージの送信など、Teams での会話の基本をご紹介します。| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
 | チャネルで新しいスレッドを開始する | チャネルで新しいスレッドを作成する方法をご紹介します。 | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
+| アプリのプロアクティブ インストールとプロアクティブ通知の送信 | このサンプルでは、ユーザーに対してアプリのプロアクティブ インストールを使用し、Microsoft の API を呼び出してプロアクティブ通知Graph示します。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
 
 ### <a name="additional-code-sample"></a>追加のコード サンプル
 
