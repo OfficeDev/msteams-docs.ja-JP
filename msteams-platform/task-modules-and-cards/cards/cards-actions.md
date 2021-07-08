@@ -424,7 +424,7 @@ CardFactory.actions([
 * [Action.OpenUrl](http://adaptivecards.io/explorer/Action.OpenUrl.html)
 * [Action.Submit](http://adaptivecards.io/explorer/Action.Submit.html)
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
-* [Action.Exeかわいい](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
+* [Action.Execute](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
 
 アダプティブ カードペイロードを変更して、オブジェクトのプロパティを使用して既存の Bot Framework アクション `Action.Submit` `msteams` を `data` サポートすることができます `Action.Submit` 。 次のセクションでは、アダプティブ カードで既存の Bot Framework アクションを使用する方法の詳細について説明します。
 
