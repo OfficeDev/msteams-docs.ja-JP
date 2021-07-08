@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: 38a7a5fdf9794fb95b4141f2c73e8282a9bf8601
-ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
+ms.openlocfilehash: bc13fa7b8c3af9a7c48463eab7198e908164ffbe
+ms.sourcegitcommit: 0a775ae12419f3bc7484e557f4b4ae815bab64ec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "53211591"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53333688"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Teams 会議アプリへの前提条件と API リファレンス
 
@@ -72,7 +72,7 @@ API `GetParticipant` を使用すると、ボットは会議 ID と参加者 ID 
 
 `GetParticipant`API には、次のクエリ パラメーターが含まれています。
 
-|値|型|必須|説明|
+|値|Type|必須|説明|
 |---|---|----|---|
 |**meetingId**| String | はい | 会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。|
 |**participantId**| String | はい | 参加者 ID はユーザー ID です。 これは、Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO から参加者 ID を取得する方法をお勧めします。 |
@@ -87,7 +87,7 @@ API `GetParticipant` を使用すると、ボットは会議 ID と参加者 ID 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-  TeamsMeetingParticipant participant = GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
+  TeamsMeetingParticipant participant = await TeamsInfo.GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourParticipantTenantId").ConfigureAwait(false);
   TeamsChannelAccount member = participant.User;
   MeetingParticipantInfo meetingInfo = participant.Meeting;
   ConversationAccount conversation = participant.Conversation;
@@ -154,7 +154,7 @@ API の JSON 応答 `GetParticipant` 本文は次の形式です。
 
 #### <a name="response-codes"></a>応答コード
 
-`GetParticipant`API には、次の応答コードが含まれています。
+`GetParticipant`API は、次の応答コードを返します。
 
 |応答コード|説明|
 |---|---|
@@ -162,7 +162,6 @@ API の JSON 応答 `GetParticipant` 本文は次の形式です。
 | **200** | 参加者情報が正常に取得されます。|
 | **401** | アプリは無効なトークンで応答します。|
 | **404** | 会議の有効期限が切れているか、参加者が見つかりません。|
-| **500** | 会議が終了した後、会議の有効期限が切れている (60 日を超える) か、参加者が自分の役割に基づいてアクセス許可を持っていません。|
 
 ### <a name="notificationsignal-api"></a>NotificationSignal API
 
@@ -178,7 +177,7 @@ API の JSON 応答 `GetParticipant` 本文は次の形式です。
 
 `NotificationSignal`API には、次のクエリ パラメーターが含まれています。
 
-|値|型|必須|説明|
+|値|Type|必須|説明|
 |---|---|----|---|
 |**conversationId**| String | はい | 会話識別子は、ボット呼び出しの一部として使用できます。 |
 
@@ -197,15 +196,7 @@ API の JSON 応答 `GetParticipant` 本文は次の形式です。
 
 ```csharp
 Activity activity = MessageFactory.Text("This is a meeting signal test");
-
-activity.ChannelData = new TeamsChannelData
-  {
-    Notification = new NotificationInfo()
-                    {
-                        AlertInMeeting = true,
-                        ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
-                    }
-  };
+activity.TeamsNotifyUser(true, "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID");
 await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```
 
@@ -281,7 +272,7 @@ API はボット サービスを通じて利用できます。
 
 会議の詳細 API には、次のクエリ パラメーターが含まれています。
 
-|値|型|必須|説明|
+|値|Type|必須|説明|
 |---|---|----|---|
 |**meetingId**| String | はい | 会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。 |
 
@@ -292,7 +283,7 @@ API はボット サービスを通じて利用できます。
 # <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
-var connectorClient = parameters.TurnContext.TurnState.Get<IConnectorClient>();
+var connectorClient = turnContext.TurnState.Get<IConnectorClient>();
 var creds = connectorClient.Credentials as AppCredentials;
 var bearerToken = await creds.GetTokenAsync().ConfigureAwait(false);
 var request = new HttpRequestMessage(HttpMethod.Get, new Uri(new Uri(connectorClient.BaseUri.OriginalString), $"v1/meetings/{meetingId}"));

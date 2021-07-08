@@ -6,12 +6,12 @@ keywords: Microsoft Teams テンプレートのサンプル デモ
 localization_priority: Normal
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 0976bd1c76217e883f91e45c772ec8d3acf4f740
-ms.sourcegitcommit: 261058171f1e3bbc822c5bcc0e9fba5a4de68000
+ms.openlocfilehash: 72bb5506e552dfa3d35426e99a7ee74088ef41f6
+ms.sourcegitcommit: 0a775ae12419f3bc7484e557f4b4ae815bab64ec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "53111179"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53333695"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 用のアプリ テンプレート
 
@@ -286,9 +286,9 @@ E-Prescriptions は[](/powerapps/maker/canvas-apps/embed-teams-app)、Power Apps
 
 Get Support app は、管理者からサポートを要求する任意のMicrosoft Teamsを有効にするために、管理者を使用している組織によって使用されます。 このアプリには、次の機能が含まれています。
 * Power App からさまざまなカテゴリに関するサポートを要求する。
-* 誰が割り当てられたのか通知する通知を要求者に送信します。
+* 誰が割り当てられているか通知する通知を要求者に送信します。
 * 割り当てられた監督者に、支援が必要なユーザーを通知する通知。 
-* ユーザーと PowerBI.S のエスカレーションSharePointパターンを分析します。
+* ユーザーとユーザーのエスカレーションとパターンSharePoint分析Power BI。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-app-get-support/)
 

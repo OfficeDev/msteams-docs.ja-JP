@@ -6,22 +6,22 @@ keywords: bot framework apis チーム メンバー名簿
 localization_priority: Normal
 ms.topic: reference
 ms.author: ojchoudh
-ms.openlocfilehash: d2eb75a69100a6daaf3af3a021b9896c42abe5f1
-ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
+ms.openlocfilehash: 9c6444967d330d27a415ac596a3858c05c49236e
+ms.sourcegitcommit: b1f9162a0bbcd276064ae9e4f1e8bccc06cb7035
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "53114246"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53328066"
 ---
 # <a name="teams-bot-api-changes-to-fetch-team-or-chat-members"></a>Teamsまたはチャット メンバーをフェッチするボット API の変更を確認する
 
 >[!NOTE]
 > API および API の `TeamsInfo.getMembers` 廃止 `TeamsInfo.GetMembersAsync` プロセスが開始されました。 最初は、1 分間に 5 回の要求に大きく調整され、チームごとに最大 10K のメンバーが返されます。 これにより、チームのサイズが大きくなって完全な名簿が返されません。
-> Bot Framework SDK のバージョン 4.10 以上に更新し、ページ分割された API エンドポイントまたは単一ユーザー `TeamsInfo.GetMemberAsync` API に切り替える必要があります。 これは、古い SDK がメンバーのAdded イベント中にこれらの API を呼び出すので、これらの API を直接使用していない場合でも、ボット [にも適用](../bots/how-to/conversations/subscribe-to-conversation-events.md#team-members-added) されます。 今後の変更の一覧を表示するには、「API の変更」 [を参照してください](team-chat-member-api-changes.md#api-changes)。 
+> Bot Framework SDK のバージョン 4.10 以上に更新し、ページ分割された API エンドポイントまたは単一ユーザー `TeamsInfo.GetMemberAsync` API に切り替える必要があります。 これは、古い SDK がメンバーのAdded イベント中にこれらの API を呼び出すので、これらの API を直接使用していない場合でも、ボット [にも適用](../bots/how-to/conversations/subscribe-to-conversation-events.md#team-members-added) されます。 今後の変更の一覧を表示するには、「API の変更」 [を参照してください](team-chat-member-api-changes.md#api-changes)。
 
-現在、チャットまたはチームの 1 人または複数のメンバーの情報を取得するボット開発者は、C# または TypeScript または Node.js API の Microsoft Teams ボット `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` API を使用します。 詳細については、「フェッチ名 [簿またはユーザー プロファイル」を参照してください](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)。 これらの API にはいくつかの欠点があります。
+現在、チャットまたはチームの 1 人または複数のメンバーの情報を取得する場合は[、C#](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)または TypeScript または Node.js API の Microsoft Teams ボット `TeamsInfo.GetMembersAsync` API `TeamsInfo.getMembers` を使用できます。 詳細については、「フェッチ名 [簿またはユーザー プロファイル」を参照してください](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)。
 
-現在、チャットまたはチームの 1 人または複数のメンバーの情報を取得する場合は[、C#](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)または TypeScript または Node.js API の Microsoft Teams ボット `TeamsInfo.GetMembersAsync` API `TeamsInfo.getMembers` を使用できます。 これらの API には、次のような欠点があります。
+これらの API には、次のような欠点があります。
 
 * 大規模なチームの場合、パフォーマンスが低下し、タイムアウトが発生する可能性が高く、2017 年初めにリリースされたチームの最大Teams大きくなった。 メンバー リスト全体を返す場合、API 呼び出しが大規模なチームに戻るのに長い時間がかかるので、呼び出しが一般的にアウトし、もう一度やり直す必要 `GetMembersAsync` `getMembers` があります。
 * 1 人のユーザーのプロファイルの詳細を取得するのは困難です。1 人のユーザーのプロファイル情報を取得するには、メンバー リスト全体を取得してから、必要なプロファイルを検索する必要があります。 ボット フレームワーク SDK には、より簡単なヘルパー関数がありますが、効率的ではありません。

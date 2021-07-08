@@ -5,12 +5,12 @@ description: 各コンポーネントで使用される UI コンポーネント
 ms.author: surbhigupta
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: ae1c2793586dc638d56051e105482aac92e01091
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: 6f2bd9cd237751adb15db45bbd6e3cdfea35ce09
+ms.sourcegitcommit: b1f9162a0bbcd276064ae9e4f1e8bccc06cb7035
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644930"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53328080"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>高度な UI Microsoft Teamsを使用したアプリの設計
 
@@ -18,7 +18,7 @@ ms.locfileid: "52644930"
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-Fluent <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">UI に基づいて</a>、Microsoft Teams UI キットには、アプリを構築するために特別に設計されたTeamsがあります。 UI キットでは、ここに示すコンポーネントを直接デザインに挿入し、各コンポーネントの使い方の例を確認できます。
+UI に<a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a>キットには、Microsoft Teamsアプリを構築するために特別に設計されたコンポーネントとTeamsがあります。 UI キットでは、ここに示すコンポーネントを直接デザインに挿入し、各コンポーネントの使い方の例を確認できます。
 
 > [!div class="nextstepaction"]
 > [Microsoft Teams UI Kit (Figma) を入手する](https://www.figma.com/community/file/916836509871353159)
@@ -83,14 +83,14 @@ Breadcrumbs は、アプリの階層を伝えるナビゲーション支援で�
 
 ## <a name="stage"></a>ステージ
 
-Stage は、ユーザーが別のアプリやブラウザーでエンティティを開く代わりに、Teams、ファイル、web サイトなど、エンティティを開く方法を提供します。 ステージの主な使用例は表示です。サーフェスを複雑な操作に使用する必要があります。
+ステージを使用すると、ユーザーはコンテキストを切り替えることなく、画像、ファイル、web サイトなど、コンテンツを大規模なTeams表示できます。 ステージは、主にコンテンツを表示する目的です。 複雑な対話にはステージを使用しない。
 
-(実装ノート: 大規模なタスク モジュールを使用してステージ [をビルド](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)します。)
+ステージを実装する方法について [学習します](~/tabs/tabs-link-unfurling.md)。
 
 ### <a name="top-use-cases"></a>上位の使用例
 
-* 別のアプリやブラウザーではなくTeamsでエンティティを開く
-* スポットライト メディアまたは他のコンテンツ
+* 別のアプリまたはブラウザーではなく、Teams内の大きなサーフェスにコンテンツを表示する
+* スポットライト メディアまたは他のリッチ コンテンツ
 
 # <a name="desktop"></a>[デスクトップ](#tab/desktop)
 
