@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: bc13fa7b8c3af9a7c48463eab7198e908164ffbe
-ms.sourcegitcommit: 0a775ae12419f3bc7484e557f4b4ae815bab64ec
+ms.openlocfilehash: 2dce62aaf94e68c14183f0d91e5ba823f2ef3d7e
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/08/2021
-ms.locfileid: "53333688"
+ms.locfileid: "53335348"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Teams 会議アプリへの前提条件と API リファレンス
 
@@ -45,11 +45,11 @@ ms.locfileid: "53333688"
 
 ## <a name="meeting-apps-api-references"></a>会議アプリ API の参照
 
-新しい会議の機能は、会議のエクスペリエンスを変革する API を提供します。 この新しい機能を使用すると、会議のライフサイクル内でアプリを構築したり、既存のアプリを統合することができます。 API を使用すると、アプリで会議を認識できます。 会議のエクスペリエンスを強化するために使用する API を選択できます。
+新しい会議の機能は、会議のエクスペリエンスを変革する API を提供します。 会議のライフサイクル内にアプリを構築したり、既存のアプリを統合したりできます。 API を使用すると、アプリで会議を認識できます。 会議のエクスペリエンスを強化するために使用する API を選択できます。
 
 次の表に、これらの API の一覧を示します。
 
-|API|説明|要求|ソース|
+|API|内容|要求|ソース|
 |---|---|----|---|
 |**GetUserContext**| この API を使用すると、コンテキスト情報を取得して、関連するコンテンツを [コンテンツ] タブTeamsできます。 |_**microsoftTeams.getContext( ( ) => { /*...*/ } )**_|Microsoft Teamsクライアント SDK|
 |**GetParticipant**| この API を使用すると、ボットは会議 ID と参加者 ID によって参加者情報を取得できます。 |**GET** _**/v1/meetings/{meetingId}/participants/{participantsId}?tenantId={tenantId}**_ |Microsoft Bot FrameworkSDK|
@@ -72,7 +72,7 @@ API `GetParticipant` を使用すると、ボットは会議 ID と参加者 ID 
 
 `GetParticipant`API には、次のクエリ パラメーターが含まれています。
 
-|値|Type|必須|説明|
+|Value|Type|必須|説明|
 |---|---|----|---|
 |**meetingId**| String | はい | 会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。|
 |**participantId**| String | はい | 参加者 ID はユーザー ID です。 これは、Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO から参加者 ID を取得する方法をお勧めします。 |
@@ -156,7 +156,7 @@ API の JSON 応答 `GetParticipant` 本文は次の形式です。
 
 `GetParticipant`API は、次の応答コードを返します。
 
-|応答コード|説明|
+|応答コード|内容|
 |---|---|
 | **403** | アプリは参加者情報の取得を許可されません。 これは最も一般的なエラー応答であり、アプリが会議にインストールされていない場合にトリガーされます。 たとえば、テナント管理者によってアプリが無効になっている場合や、ライブ サイトの移行中にブロックされている場合などです。|
 | **200** | 参加者情報が正常に取得されます。|
@@ -177,7 +177,7 @@ API の JSON 応答 `GetParticipant` 本文は次の形式です。
 
 `NotificationSignal`API には、次のクエリ パラメーターが含まれています。
 
-|値|Type|必須|説明|
+|Value|Type|必須|説明|
 |---|---|----|---|
 |**conversationId**| String | はい | 会話識別子は、ボット呼び出しの一部として使用できます。 |
 
@@ -239,7 +239,7 @@ POST /v3/conversations/{conversationId}/activities
 
 `NotificationSignal`API には、次の応答コードが含まれています。
 
-|応答コード|説明|
+|応答コード|内容|
 |---|---|
 | **201** | シグナルを含むアクティビティが正常に送信されます。 |
 | **401** | アプリは無効なトークンで応答します。 |
@@ -272,7 +272,7 @@ API はボット サービスを通じて利用できます。
 
 会議の詳細 API には、次のクエリ パラメーターが含まれています。
 
-|値|Type|必須|説明|
+|Value|Type|必須|説明|
 |---|---|----|---|
 |**meetingId**| String | はい | 会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。 |
 

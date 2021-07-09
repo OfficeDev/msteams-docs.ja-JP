@@ -5,12 +5,12 @@ ms.topic: conceptual
 localization_priority: Normal
 keywords: アプリケーションホスト型メディア Windows サーバー azure vm
 ms.date: 11/16/2018
-ms.openlocfilehash: 731cc53573d5c2b65eaed36d75793901fde86e54
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: a66296951dd2f704d531840f79a4c4b955af6bdf
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020057"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335362"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>アプリケーションホスト型メディア ボットの要件と考慮事項
 
@@ -60,6 +60,9 @@ ms.locfileid: "52020057"
 ## <a name="scalability-and-performance-considerations"></a>スケーラビリティとパフォーマンスに関する検討事項
 
 アプリケーションホスト型メディア ボットには、次のスケーラビリティとパフォーマンスに関する考慮事項が必要です。
+- アプリケーションホスト型メディア ボットでは、メッセージング ボットよりも多くのコンピューティングおよびネットワーク (帯域幅) 容量が必要であり、運用コストが大幅に高くなる可能性があります。 リアルタイムのメディア ボット開発者は、ボットのスケーラビリティを慎重に測定し、ボットが管理できる以上の同時呼び出しを受け入れなかねない必要があります。 ビデオが有効なボットは、CPU コアごとに 1 つまたは 2 つの同時メディア セッションのみを維持できる場合があります ("raw" RGB24 または NV12 ビデオ形式を使用している場合)。
+- リアルタイム メディア プラットフォームでは、現在、VM で使用可能なグラフィックス処理ユニット (GPU) を利用して H.264 ビデオ エンコード/デコードをオフロードできません。 代わりに、ビデオエンコードとデコードは CPU 上のソフトウェアで行われます。 GPU が使用可能な場合、ボットが 3D グラフィックス エンジンを使用している場合など、ボットは独自のグラフィックス レンダリングに利用できます。
+- リアルタイム メディア ボットをホストする VM インスタンスには、少なくとも 2 つの CPU コアが必要です。 Azure では、Dv2 シリーズ仮想マシンをお勧めします。 他の Azure VM の種類では、4 つの仮想 CPU (vCPU) を持つシステムが必要な最小サイズです。 Azure VM の種類の詳細については、Azure のドキュメントを [参照してください](/azure/virtual-machines/windows/sizes-general)。 
 
 ## <a name="code-sample"></a>コード サンプル
 

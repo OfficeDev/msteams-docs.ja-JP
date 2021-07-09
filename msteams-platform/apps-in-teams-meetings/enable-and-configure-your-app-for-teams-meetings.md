@@ -3,12 +3,12 @@ title: 会議で使用するアプリを有効Teamsする
 author: surbhigupta
 description: 会議で使用するアプリを有効Teamsする
 ms.topic: conceptual
-ms.openlocfilehash: c123cc5cf15a7d0af64e2de16e96a673a2e4435c
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 16112b75e109702f1f0be6d335b8d407d35211b5
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53139971"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335369"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>会議で使用するアプリを有効Teamsする
 
@@ -61,22 +61,17 @@ ms.locfileid: "53139971"
 |---|---|
 | **channelTab** | チーム チャネルのヘッダー内のタブ。 |
 | **privateChatTab** | チームまたは会議のコンテキストではなく、一連のユーザー間のグループ チャットのヘッダーにあるタブ。 |
-| **meetingChatTab** | スケジュールされた会議のコンテキスト内の一連のユーザー間のグループ チャットのヘッダー内のタブ。 |
-| **meetingDetailsTab** | 予定表の会議の詳細ビューのヘッダーにあるタブ。 |
+| **meetingChatTab** | スケジュールされた会議のコンテキスト内の一連のユーザー間のグループ チャットのヘッダー内のタブ。 meetingChatTab または **meetingDetailsTab** のいずれかを指定すると、アプリがモバイルで動作します。  |
+| **meetingDetailsTab** | 予定表の会議の詳細ビューのヘッダーにあるタブ。 meetingChatTab または **meetingDetailsTab** のいずれかを指定すると、アプリがモバイルで動作します。  |
 | **meetingSidePanel** | 統合バー (U バー) を介して開いた会議内パネル。 |
-| **meetingStage** | meetingSidePanel のアプリを会議ステージに共有できます。 |
-
-> [!NOTE]
-> `Context` プロパティは現在、モバイル クライアントではサポートされていません。
+| **meetingStage** | meetingSidePanel のアプリを会議ステージに共有できます。 このタブはモバイルではサポートされていません。 |
 
 会議でアプリを有効Teams、会議の前、会議中、会議の後にアプリを構成する必要があります。
 
 ## <a name="configure-your-app-for-meeting-scenarios"></a>会議シナリオ用にアプリを構成する
 
 > [!NOTE]
-> * タブ ギャラリーにアプリを表示するには、構成可能なタブとグループ チャット スコープをサポートする必要があります。
-> * モバイル クライアントは、会議の開催前と開催後のステージでのみタブをサポートします。
-> * 現在、モバイル クライアントでは、会議中のダイアログ ボックスとタブである会議内エクスペリエンスはサポートされていません。 詳細については、「モバイル用の [タブを作成する際の](../tabs/design/tabs-mobile.md) モバイルタブのガイダンス」を参照してください。
+> タブ ギャラリーにアプリを表示するには、構成可能なタブとグループ チャット スコープをサポートする必要があります。
 
 Teams会議は、組織に固有の共同作業エクスペリエンスを提供します。 さまざまな会議シナリオ用にアプリを構成する機会を提供します。 参加者の役割またはユーザーの種類に基づいて会議のエクスペリエンスを向上させるアプリを構成できます。 これで、次の会議シナリオで実行できるアクションを特定できます。
 

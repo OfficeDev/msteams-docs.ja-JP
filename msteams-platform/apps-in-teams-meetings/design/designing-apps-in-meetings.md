@@ -5,12 +5,12 @@ description: 会議でアプリを設計し、Teams UI キットをMicrosoft Tea
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 7196017f92bebb776d1b73680893ebfe3684a74c
-ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
+ms.openlocfilehash: a08e5a850a62b0cf73661d00e07e55e46abce32f
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "53114310"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335411"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>会議の拡張機能Microsoft Teams設計する
 
@@ -37,13 +37,13 @@ ms.locfileid: "53114310"
 
 # <a name="desktop"></a>[デスクトップ](#tab/desktop)
 
-会議では、ユーザーは [アプリの **追加**] を選択 :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **し**、必要なアプリを選択できます。
+会議で、ユーザーは [アプリの **追加]** を選択 :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **し**、必要なアプリを選択できます。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="例は、会議中に会議の内線情報を追加する方法を示しています。" border="false":::
 
 # <a name="mobile"></a>[モバイル](#tab/mobile)
 
-会議では、ユーザーは [その他] **を選択** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: し、必要なアプリを選択できます。
+デスクトップにアプリを追加した後、アプリを選択し、[その他] を選択して会議でアプリを使用 **できます** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: 。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="例は、モバイルでの会議中に会議の内線情報を追加する方法を示しています。" border="false":::
 
@@ -80,7 +80,7 @@ ms.locfileid: "53114310"
 
 [会議内] タブは、会議中の共同作業を強化するキャンバスです。 出席者は、共有ビューまたは役割ベースのビューを使用して、会議ステージ外の専用スペースでアプリ コンテンツを表示および操作できます。
 
-### <a name="use-cases"></a>ユース ケース
+### <a name="use-cases"></a>使用例
 
 ユーザーは、[会議内] タブを使用して次の場合があります。
 
@@ -107,9 +107,9 @@ ms.locfileid: "53114310"
 |1|**アプリ アイコン (選択):** 16 ピクセルの透明なアプリ ロゴ。|
 |2|**アプリ名**|
 |3|**ヘッダー**: アプリ名が含まれます。|
-|4|**[閉じる]** ボタン: タブを閉じます。フッターのアクションではなく、常に右上の閉じるアイコンを使用します。|
-|5|**通知バー**: エラー通知はヘッダーの直下に表示され、iframe コンテンツを 20 ピクセル下にプッシュします。|
-|6|**iframe**: アプリのコンテンツを表示します。|
+|4 |**[閉じる]** ボタン: タブを閉じます。フッターのアクションではなく、常に右上の閉じるアイコンを使用します。|
+|5 |**通知バー**: エラー通知はヘッダーの直下に表示され、iframe コンテンツを 20 ピクセル下にプッシュします。|
+|6 |**iframe**: アプリのコンテンツを表示します。|
 
 ### <a name="spacing"></a>Spacing
 
@@ -137,7 +137,7 @@ ms.locfileid: "53114310"
 
 会議中のダイアログは、会議ステージTeams表示されます。 ユーザーの注意、確認、またはやり取りが必要ですが、微妙であり、会議を中断しません。 これらの使用は、軽くてタスク指向のシナリオに対して使用する必要があります。
 
-### <a name="use-cases"></a>ユース ケース
+### <a name="use-cases"></a>使用例
 
 会議中のダイアログは、参加者が次の操作を行うユーザー (会議の開催者など) によってトリガーされます。
 
@@ -176,8 +176,8 @@ ms.locfileid: "53114310"
 |1|**アバター**: 会議内ダイアログを開始するユーザー。|
 |2|**アプリ アイコン**|
 |3|**アプリ名**|
-|4|**[閉じる]** ボタン: ダイアログを閉じます。|
-|5|**アクション文字列**: 通常、ダイアログを開始したユーザーを示します。|
+|4 |**[閉じる]** ボタン: ダイアログを閉じます。|
+|5 |**アクション文字列**: 通常、ダイアログを開始したユーザーを示します。|
 
 ### <a name="responsive-behavior-in-meeting-dialogs"></a>応答性の高い動作: 会議中のダイアログ
 
@@ -196,7 +196,7 @@ ms.locfileid: "53114310"
 
 会議ステージに共有されるアプリは、共有画面と同じ領域を占有します。 ステージは、すべての会議参加者の向きを変更します。
 
-### <a name="use-cases"></a>ユース ケース
+### <a name="use-cases"></a>使用例
 
 共有会議のステージは、共同作業と参加に関するすべてです。 開始に役立つシナリオの例を次に示します。
 
@@ -248,8 +248,8 @@ ms.locfileid: "53114310"
 |1|**アプリ アイコン**: 強調表示されたアイコンは、アプリの会議中タブが開いている状態を示します。|
 |2|**[会議ステージに共有] ボタン**: アプリを会議ステージに共有するエントリ ポイント。 共有会議ステージを使用するアプリを構成した場合に表示されます。|
 |3|**iframe**: アプリのコンテンツを表示します。|
-|4|**[共有を停止する**] ボタン: 会議ステージへのアプリの共有を停止します。 共有を開始した参加者にのみ表示されます。|
-|5|**発表者の属性**: アプリを共有した参加者の名前を表示します。|
+|4 |**[共有を停止する**] ボタン: 会議ステージへのアプリの共有を停止します。 共有を開始した参加者にのみ表示されます。|
+|5 |**発表者の属性**: アプリを共有した参加者の名前を表示します。|
 
 ### <a name="responsive-behavior-shared-meeting-stage"></a>応答性の高い動作: 共有会議ステージ
 

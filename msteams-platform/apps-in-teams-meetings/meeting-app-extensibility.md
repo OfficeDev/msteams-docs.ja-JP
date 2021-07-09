@@ -3,12 +3,12 @@ title: 会議アプリ拡張性
 author: surbhigupta
 description: 会議アプリの機能拡張を理解する
 ms.topic: conceptual
-ms.openlocfilehash: 0daa3b1976754eff6fed057de0c3659b51506f96
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 1b9cc381879a12d5c9d26711dde93e308d3e4231
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068632"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335395"
 ---
 # <a name="meeting-app-extensibility"></a>会議アプリ拡張性
 
@@ -32,8 +32,7 @@ Teamsの会議アプリの機能拡張は、次の概念に基づいて行いま
 > タブを会議に統合している場合、アプリはタブのシングル サインオン (SSO) 認証フロー Teamsに従[う必要があります](../tabs/how-to/authentication/auth-aad-sso.md)。
 
 > [!NOTE]
-> * モバイル クライアントは、会議の開催前と開催後のステージでのみタブをサポートします。 現在、会議中のダイアログとパネルである会議中のエクスペリエンスは、モバイルでは使用できません。
-> * アプリは、プライベートスケジュールされた会議でのみサポートされます。
+> アプリは、プライベートスケジュールされた会議でのみサポートされます。
 
 #### <a name="pre-meeting-app-experience"></a>会議前アプリのエクスペリエンス
 
@@ -48,39 +47,83 @@ Teamsの会議アプリの機能拡張は、次の概念に基づいて行いま
 
 1. タブ ギャラリーで、追加するアプリを選択し、必要に応じて手順に従います。 アプリはタブとしてインストールされます。
 
-    ![会議前タブ ビュー](../assets/images/apps-in-meetings/PreMeetingTab.png)
-
     > [!NOTE]
     > * 既存の会議の [会議チャット] タブ **を使用して** タブを追加することもできます。
     > * 10 件を超えるポーリングまたはアンケートがある場合、タブ レイアウトは整理された状態である必要があります。
+
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
+![会議前タブ ビュー](../assets/images/apps-in-meetings/PreMeetingTab.png)
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+デスクトップまたは Web 上の既存の会議にタブを追加すると、会議の詳細の [その他] セクションにある会議前のエクスペリエンスで同じアプリを確認できます。
+
+<img src="../assets/images/apps-in-meetings/mobilepremeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
+
+---
 
 #### <a name="in-meeting-app-experience"></a>会議中のアプリ エクスペリエンス
 
 会議中のアプリ エクスペリエンスを使用すると、アプリと会議内ダイアログ ボックスを使用して、会議中に参加者を参加できます。 会議アプリは、会議ウィンドウの上部バーで会議内タブとしてホストされます。会議の参加者に対してアクション可能なコンテンツを紹介するには、会議内ダイアログ ボックスを使用します。 詳細については、「会議のアプリを[作成する」をTeamsしてください](create-apps-for-teams-meetings.md)。
 
+モバイルの場合、会議アプリは、会議内>省略 &#x25CF;&#x25CF;&#x25CF; アプリから利用できます。 [アプリ **] を** 選択して、会議で利用可能なすべてのアプリを表示します。
+
 **会議中にタブを使用するには**
 
-1. 会議に入った後、チャット ウィンドウの上部バーから、使用するアプリを選択します。 アプリは、サイド パネルTeams会議内の会議に表示されます。
+1. [次へ] Teams。
+1. 予定表で、タブを使用する会議を選択します。
+1. 会議に入った後、チャット ウィンドウの上部バーから、必要なアプリを選択します。
+    アプリは、サイド パネルTeams会議内の会議に表示されます。
 1. [会議内] ダイアログ ボックスで、フィードバックとして応答を入力します。
 
-    ![ダイアログ ボックス ビュー](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
 
-    > [!NOTE]
-    > * アプリは、クライアント SDK Teamsを利用して、 にアクセスし、エクスペリエンス `meetingId` `userMri` `frameContext` を適切にレンダリングできます。
-    > * 会議中のダイアログ ボックスが正常にレンダリングされると、結果が正常にダウンロードされたことを通知されます。
-    > * アプリ マニフェストは、表示する場所を指定します。 コンテキスト フィールドは、この目的のために使用されます。 また、指定された設計ガイドラインに従って、共有トレイエクスペリエンスの一部になれ得る。
+![ダイアログ ボックス ビュー](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
 
-    次の図は、会議中のサイド パネルを示しています。
+# <a name="mobile"></a>[モバイル](#tab/mobile)
 
-    ![会議中のサイド パネル](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+会議に参加し、デスクトップまたは Web からアプリを追加すると、アプリはモバイル 会議Teams [アプリ] セクションに **表示** されます。 [アプリ **] を** 選択してアプリの一覧を表示します。 ユーザーは、任意のアプリをアプリの会議内サイド パネルとして起動できます。
+
+[会議内] ダイアログ ボックスが表示され、フィードバックとして応答を入力できます。
+
+<img src="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt="Mobile dialog box view" width="200"/>
+
+> [!NOTE]
+> アプリがモバイルで動作するには、アプリ マニフェストを変更する必要があります。
+
+---
+
+> [!NOTE]
+> * アプリは、クライアント SDK Teamsを利用して、 にアクセスし、エクスペリエンス `meetingId` `userMri` `frameContext` を適切にレンダリングできます。
+> * 会議中のダイアログ ボックスが正常にレンダリングされると、結果が正常にダウンロードされたことを通知します。
+> * アプリ マニフェストは、表示する場所を指定します。 コンテキスト フィールドは、この目的のために使用されます。 また、指定された設計ガイドラインに従って、共有トレイ エクスペリエンスの一部です。
+
+次の図は、会議中のサイド パネルを示しています。
+
+![会議中のサイド パネル](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+
+次の表に、アプリが承認され、承認されていない場合のアプリの動作を示します。
+
+|アプリの機能 | アプリが承認されている | アプリが承認されていない |
+|---|---|---|
+| 会議の機能拡張 | アプリは会議に表示されます。 | アプリは、モバイル クライアントの会議には表示されません。 |
 
 #### <a name="post-meeting-app-experience"></a>会議後のアプリ エクスペリエンス
 
-会議後のアプリ エクスペリエンスを使用すると、アンケートのアンケート結果やフィードバックなどの会議の結果を表示できます。 Select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> をクリックしてタブを追加し、開催者と出席者がアクションを実行する必要がある会議のメモと結果を取得します。
+会議後のアプリ エクスペリエンスを使用すると、アンケートのアンケート結果やフィードバックなど、会議の結果を表示できます。 Select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> をクリックしてタブを追加し、会議メモを取得し、開催者と出席者がアクションを実行する必要がある結果を取得します。
 
 次の図は **、[Contoso]** タブを表示し、会議の出席者から受け取ったポーリングとフィードバックの結果を示します。
 
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
 ![会議ビューの投稿](../assets/images/apps-in-meetings/PostMeeting.png)
+
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+<img src="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt="Mobile post meeting view" width="200"/>
+
+---
 
 > [!NOTE]
 > 10 件を超えるポーリングまたはアンケートがある場合は、タブ レイアウトを整理する必要があります。
@@ -146,7 +189,7 @@ Teamsの会議アプリの機能拡張は、次の概念に基づいて行いま
 ## <a name="see-also"></a>関連項目
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
-* [ボット](../bots/what-are-bots.md)
+* [Bot](../bots/what-are-bots.md)
 * [メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)
 * [アプリをデザインする](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 

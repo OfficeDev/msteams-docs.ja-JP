@@ -4,12 +4,12 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 localization_priority: Normal
 keywords: チームの最新情報
-ms.openlocfilehash: a18e602dea253f552dbcfffe7eb6620bba3bba67
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: b9ef7cbe1a7fa1a673a60375bab893a86c2dbf6b
+ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254196"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "53335355"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
@@ -27,6 +27,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 | **Date** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+|07/08/2021|会議アプリの機能拡張は、モバイルで利用できます。 モバイル クライアントは、会議中にアプリをサポートします。 |[会議アプリ拡張性](apps-in-teams-meetings/meeting-app-extensibility.md)|
 |06/28/2021|ユーザー選択機能を統合します。|[ユーザー ピッカー機能を統合する](concepts/device-capabilities/people-picker-capability.md)|  
 |06/25/2021| プロアクティブ メッセージを送信する手順ガイドが導入されました。 | [プロアクティブ メッセージを送信する手順ガイド](sbs-send-proactive.yml) |
 |06/09/2021| 属性付きアダプティブ カードのイメージのステージ `allowExpand` ビュー。 | [アダプティブ カードの画像のステージ ビュー](~/task-modules-and-cards/cards/cards-format.md) |
