@@ -162,6 +162,9 @@ App Studio は、TeamsストアからインストールできるアプリTeams�
 1. アプリをアプリにアップロードするには、[テストTeams配布] の [**インストール**]**ボタンを選択します**。
 
     <img  width="450px" alt="Adding a messaging extension dialog" src="~/assets/images/get-started/InstallingHelloWorld.png"/>
+    
+    > [!NOTE]
+    > アプリをサイドロードできない場合は、カスタム アプリのアップロードを有効 [にしたかどうかを確認します](#prepare-your-development-environment)。
 
 1. [チームに **追加** ] セクションで **[検索] ボックスを選択** し、サンプル アプリを追加するチームを選択します。 テスト用に特別なチームを設定できます。
 1. ダイアログ ボックス **の下部** にある [インストール] ボタンを選択します。
