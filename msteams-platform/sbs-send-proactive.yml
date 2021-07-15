@@ -8,17 +8,17 @@ metadata:
   ms.date: 06/23/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: ./bots/how-to/conversations/send-proactive-messages.md
-  nextTutorialTitle: プロアクティブ メッセージを送信する
+  nextTutorialTitle: プロアクティブ メッセージの詳細
   ms.custom: mvc
-  ms.openlocfilehash: 844e4c0ed85159f8ae7b080dff073e0d70f38748
-  ms.sourcegitcommit: 0fe60b3fd406a5768b18977df53d1f4c665e5300
+  ms.openlocfilehash: 4a6a30bd038c5117024c67a7786995391351e0fe
+  ms.sourcegitcommit: 7f9b3c1654536a88015f1b11b6c8a0f612b111c4
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 06/25/2021
-  ms.locfileid: "53133452"
+  ms.lasthandoff: 07/14/2021
+  ms.locfileid: "53434467"
 items:
 - durationInMinutes: 1
-  content: "プロアクティブ メッセージとは、ユーザーからの要求に応答しないボットから送信されるメッセージです。 これには、次のようなメッセージが含まれます。\n - ウェルカム メッセージ\n - 通知\n - 予定されたメッセージ\n \nこのステップ バイ ステップ ガイドは、ボットからプロアクティブ メッセージを送信するのに役立ちます。 次の出力が表示されます。\n\n* チャットでのプロアクティブな hello メッセージ        \n![チャットでの積極的なこんにちは](~/assets/images/proactive-scenario/proactive-helo.png)\n\n* アダプティブ カードのプロアクティブな hello メッセージ    \n![アダプティブ カードでのプロアクティブな hello](~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png) \n"
+  content: "プロアクティブ メッセージとは、ユーザーからの要求に応答しないボットから送信されるメッセージです。 これには、次のようなメッセージが含まれます。\n - ウェルカム メッセージ\n - 通知\n - 予定されたメッセージ\n \nこのステップ バイ ステップ ガイドは、ボットからプロアクティブ メッセージを送信するのに役立ちます。 次の出力が表示されます。\n\n* チャットでのプロアクティブな hello メッセージ        \n![チャットでの積極的なこんにちは](~/assets/images/proactive-scenario/proactive-helo.png)\n\n* アダプティブ カードとしてのプロアクティブな hello メッセージ    \n![アダプティブ カードでのプロアクティブな hello](~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png) \n"
 - title: 前提条件
   durationInMinutes: 2
   content: "次の手順をインストールしてください。    \n\n* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/).\n* [ASP.NET Web 開発](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.301-windows-x64-installer)、または[.NET Core クロス](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-3.1.410-windows-x64-installer)プラットフォーム開発ワークロード。\n* [ngrok](https://ngrok.com/download): 最小限の労力でローカル開発サーバーをインターネットに公開できるクロスプラットフォーム アプリケーション。\n* [開発者テナントの無料Teams取得します](https://developer.microsoft.com/en-us/microsoft-365/dev-program)。\n"
