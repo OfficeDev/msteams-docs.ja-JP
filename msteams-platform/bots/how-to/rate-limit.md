@@ -4,12 +4,12 @@ description: データのレート制限とベスト プラクティスMicrosoft
 ms.topic: conceptual
 localization_priority: Normal
 keywords: Teams ボットのレート制限
-ms.openlocfilehash: 3b8f80efa50d2fbf44162aec13994b747b9bd7ac
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: 41070bec7905c7003afb917aedcdd08495418602
+ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230961"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "53428696"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Teams でレートを制限してボットを最適化する
 
@@ -51,7 +51,7 @@ catch (HttpOperationException ex)
 応答を `HTTP 429` 処理した後、一時的な例外を検出する例を確認できます。
 
 > [!NOTE]
-> エラー コード **429** の再入力に加えて、エラー コード **412、502、****および 504** も再試行する必要があります。 
+> エラー コード **429 の** 再試行に加えて、エラー コード **412、502、****および 504** も再試行する必要があります。 
 
 ## <a name="detect-transient-exceptions-example"></a>一時的な例外の検出の例
 
@@ -128,12 +128,12 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 | シナリオ | 期間 (秒) | 許可される操作の最大数 |
 | --- | --- | --- |
-| 会話に送信する | 1 | 7 |
-| 会話に送信する | 2 | 8 |
+| 会話に送信する | 1 | 7  |
+| 会話に送信する | 2 | 8  |
 | 会話に送信する | 30 | 60 |
 | 会話に送信する | 3600 | 1800 |
-| 会話を作成する | 1 | 7 |
-| 会話を作成する | 2 | 8 |
+| 会話を作成する | 1 | 7  |
+| 会話を作成する | 2 | 8  |
 | 会話を作成する | 30 | 60 |
 | 会話を作成する | 3600 | 1800 |
 | 会話メンバーを取得する| 1 | 14  |

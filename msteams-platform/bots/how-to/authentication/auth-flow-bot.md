@@ -4,12 +4,12 @@ description: ボットMicrosoft Teamsの認証フローについて説明しま�
 keywords: teams 認証フロー ボット
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: 68ba2024d0e0f2f92a52e93614e4576dcde8dcbc
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: fdce053ce837bb9a244712a63515194d05adb3a8
+ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994225"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "53428703"
 ---
 # <a name="authentication-flow-for-bots-in-microsoft-teams"></a>サーバー内のボットの認証フロー Microsoft Teams
 
@@ -52,10 +52,10 @@ Node.js および[OAuth 2.0](https://oauth.net/2/grant-types/authorization-code/
 
 ボット認証プロセスを示すサンプル コード:
 
-| **サンプル名** | **説明** | **Node.js** | **.NET** | **Python** |
+| **サンプルの名前** | **説明** | **Node.js** | **.NET** | **Python** |
 |-----------------|----------------|--------------|----------|-----------|
-| Teams認証 | このサンプルでは、アプリでの認証Microsoft Teams示します。 | [View](https://github.com/OfficeDev/microsoft-teams-sample-auth-node) | | |
-| ボット認証 | このサンプルでは、ボットランナリングで認証を使用する方法をMicrosoft Teams | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth)
+| Teams認証 | このサンプルでは、アプリでの認証Microsoft Teams示します。 | [表示](https://github.com/OfficeDev/microsoft-teams-sample-auth-node) | | |
+| ボット認証 | このサンプルでは、アプリで実行されているボットで認証を使用する方法をMicrosoft Teams | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/46.teams-auth) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth)
 
 ## <a name="see-also"></a>関連項目
 

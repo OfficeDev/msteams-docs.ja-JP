@@ -4,12 +4,12 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 localization_priority: Normal
 keywords: チームの最新情報
-ms.openlocfilehash: b9ef7cbe1a7fa1a673a60375bab893a86c2dbf6b
-ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
+ms.openlocfilehash: 00b100ad634c1155446ab0b908c13b6b6eb3038c
+ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53335355"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "53428710"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
@@ -169,7 +169,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 | -------- | --------- | ------------------ |
 |06/23/2021| 会議の詳細 API とリアルタイムの会議Teamsイベント。 | [Teams 会議用のアプリを作成する](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-details-api) |
 |06/21/2021|ボットを使用した個人用アプリのアンインストール動作 | [ボットを使用して個人用アプリの動作更新プログラムをアンインストールする](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
-|06/16/2021| チャットに対するリソース固有の同意。 |[リソース固有の同意](graph-api/rsc/resource-specific-consent.md)、[リソースに固有](graph-api/rsc/test-resource-specific-consent.md)の同意のアクセス許可をテストするTeams|  
+|06/16/2021| チャットに対するリソース固有の同意。 |[リソース固有の同意](graph-api/rsc/resource-specific-consent.md)、[リソース固有](graph-api/rsc/test-resource-specific-consent.md)の同意のアクセス許可をテストするTeams|  
 |05/26/2021|アダプティブ カードを使用してタブをビルドする|[タブを作成する](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| 更新された[Teams ToolkitとVisual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)[の](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview)Visual Studio。 | [アプリ開発Teams開始する](~/get-started/prerequisites.md) |
 |05/25/2021| アプリを管理Teamsするための新しい開発者ポータルがTeamsされました。 | [Teams の開発者ポータル](concepts/build-and-test/teams-developer-portal.md) |
