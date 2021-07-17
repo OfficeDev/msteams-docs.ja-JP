@@ -2,12 +2,12 @@
 title: カスタム 一緒にモード のシーン
 description: カスタムの Together Mode シーンを使用する
 ms.topic: conceptual
-ms.openlocfilehash: 9b65a0ff32c2f895cd0330f49d985ba48369dccf
-ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
+ms.openlocfilehash: 74405041c6d90c2ef502a2c52570650daebb3526
+ms.sourcegitcommit: d354ab3cda83e6cd8bb9f03bc0fa2d1c1a61a6ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53335376"
+ms.lasthandoff: 07/16/2021
+ms.locfileid: "53463325"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Teams でのカスタム Together モードのシーン
 
@@ -38,7 +38,7 @@ ms.locfileid: "53335376"
 * シーン内のシーンとシートの定義。
 * Microsoft Developer アカウントを持ち、開発者ポータルと App Studio Microsoft Teams[を](../concepts/build-and-test/teams-developer-portal.md)理解してください。
 * [アプリのサイドローディングの概念](../concepts/deploy-and-publish/apps-upload.md)。
-* 管理者がカスタム アプリに対するアクセス許可をアップロードし **、** アプリセットアップポリシーと会議ポリシーの一部としてすべてのフィルターを選択する権限を付与します。
+* 管理者がカスタム アプリに対するアクセス許可をアップロードし [**、**](../concepts/deploy-and-publish/apps-upload.md)アプリセットアップポリシーと会議ポリシーの一部としてすべてのフィルターを選択する権限を付与します。
 
 ## <a name="best-practices"></a>ベスト プラクティス
 
@@ -140,9 +140,10 @@ Microsoft には、シーンを構築できる Scene スタジオがあります
 1. [**保存] を** 選択し **、[Teams]** を選択して、シーンをすばやくテストMicrosoft Teams。
 
     >[!NOTE]
-    > 作成したシーンを削除するには、トップ バー **の [シーンの** 削除] を選択します。
+    > * [アプリ **で表示Teams** すると、Microsoft Teams開発者ポータルの [アプリ] ページで表示できるアプリがTeamsされます。
+    > * [ビュー **] を選択Teams、** アプリ パッケージが自動的に作成され、appmanifest.jsに表示されます。 前に説明したように、これは抽象化されますが、メニューから [アプリ] に移動すると、自動的に作成された **アプリ** パッケージにアクセスできます。
+    > * 作成したシーンを削除するには、トップ バー **の [シーンの** 削除] を選択します。
 
-1. [ビューの **表示] ダイアログ** Teamsで、[プレビュー] を **選択Teams。**
 1. 表示されるダイアログ ボックスで、[追加] を **選択します**。
 
     テスト会議を作成し、カスタムの Together Mode シーンを起動することで、シーンをテストまたはアクセスできます。 詳細については、「Custom [Together Mode scenes をアクティブ化する」を参照してください](#activate-custom-together-mode-scenes)。
@@ -150,9 +151,7 @@ Microsoft には、シーンを構築できる Scene スタジオがあります
     ![カスタムの一緒にモードのシーンを起動する](../assets/images/apps-in-meetings/launchtogethermode.png)
 
     >[!NOTE]
-    > * [プレビュー **] を** 選択すると、Microsoft Teams開発者ポータルの [アプリ] ページで表示できるアプリTeams作成されます。
-    > * [プレビュー **] を** 選択すると、アプリ パッケージが自動的に作成され、appmanifest.jsに表示されます。 前に説明したように、これは抽象化されますが、メニューから [アプリ] に移動すると、自動的に作成された **アプリ** パッケージにアクセスできます。
-    > * その後、カスタムの Together Mode シーン ギャラリーでシーンを表示できます。
+    > * シーンは、カスタムの Together Mode シーン ギャラリーで表示できます。
 
 1. 必要に応じて、[保存] ドロップダウンメニューから [共有] を選択して共有可能なリンクを作成し、他のユーザーが使用するシーンを簡単に配布できます。 このリンクを開くと、ユーザーのシーンがインストールされ、使用を開始できます。
 

@@ -5,12 +5,12 @@ ms.topic: conceptual
 localization_priority: Normal
 keywords: teams publishs store office publishing AppSource ローカライズ言語
 ms.date: 05/15/2018
-ms.openlocfilehash: c73188bb24960b9ef0706955d09d23b618c04e5c
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 5410d6f829c3fec9b5d631452e459bd276df472e
+ms.sourcegitcommit: c145d52b2d4daa7655e6c3ddfa739fa1beeb8d6a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140041"
+ms.lasthandoff: 07/16/2021
+ms.locfileid: "53455214"
 ---
 # <a name="localize-your-app"></a>アプリをローカライズする
 
@@ -22,7 +22,7 @@ ms.locfileid: "53140041"
 
 ## <a name="localize-your-appsource-listing"></a>AppSource リストをローカライズする
 
-アプリをストアに発行する場合は、AppSource リストのローカライズがまだサポートされていないことに注意する必要があります。 アプリ ストアでローカライズされたリストをサポートするには、リスティングに追加の言語を追加できます。 登録情報のパートナー センターで[](/office/dev/store/submit-to-appsource-via-partner-center)指定した既定の言語情報は、アプリの[AppSource Web](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1)サイトの一覧に表示されます。 現在、既定の言語は英語です。
+アプリをストアに発行する場合は、AppSource リストのローカライズがまだサポートされていないことに注意する必要があります。 アプリ ストアでローカライズされたリストをサポートするには、リスティングに追加の言語を追加できます。 登録情報のパートナー センターで[](/office/dev/store/submit-to-appsource-via-partner-center)指定した既定の言語情報は、アプリの[AppSource Web](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1 "AppSource は、チームのすべてのニーズに対応する 1 つの場所です。チャット、会議、通話、ファイル、ツールなど、すべての情報をまとめ、チームワークを高めることができます。")サイトの一覧に表示されます。 現在、既定の言語は英語です。
 
 ### <a name="configure-localization"></a>ローカライズの構成
 
@@ -157,5 +157,5 @@ Teams クライアントは、既定の言語文字列 -> ユーザーの言語�
 
 | サンプルの名前 | 説明 | .NET | Node.js |
 |-------------|-------------|------|------|
-| アプリのローカライズ | Microsoft Teamsタブを使用してアプリのローカライズを行います。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
+| アプリのローカライズ | Microsoft Teamsタブを使用してアプリのローカライズを行います。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
 

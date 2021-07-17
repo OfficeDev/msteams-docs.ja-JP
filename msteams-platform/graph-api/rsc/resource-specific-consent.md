@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: teams 承認 OAuth SSO AAD rsc Graph
-ms.openlocfilehash: 4573140e33bffb0daafbdc9f929b5afd49231af8
-ms.sourcegitcommit: 6e4d2c8e99426125f7b72b9640ee4a4b4f374401
+ms.openlocfilehash: ce4076ff8cb9945f3b7dd1a7e809391292ec314a
+ms.sourcegitcommit: c145d52b2d4daa7655e6c3ddfa739fa1beeb8d6a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "53114421"
+ms.lasthandoff: 07/16/2021
+ms.locfileid: "53455221"
 ---
 # <a name="resource-specific-consent"></a>リソース固有の同意
 
@@ -26,7 +26,7 @@ ms.locfileid: "53114421"
 
 ### <a name="resource-specific-permissions-for-a-team"></a>チームのリソース固有のアクセス許可
 
-|アプリケーションのアクセス許可| アクション |
+|アプリケーションのアクセス許可| 操作 |
 | ----- | ----- |
 |TeamSettings.Read.Group | このチームの設定を取得します。|
 |TeamSettings.ReadWrite.Group|このチームの設定を更新します。|
@@ -48,7 +48,7 @@ ms.locfileid: "53114421"
 
 次の表に、チャットのリソース固有のアクセス許可を示します。
 
-|アプリケーションのアクセス許可| アクション |
+|アプリケーションのアクセス許可| 操作 |
 | ----- | ----- |
 | ChatSettings.Read.Chat         | このチャットの設定を取得します。                                    |
 | ChatSettings.ReadWrite.Chat    | このチャットの設定を更新します。                          |
@@ -138,10 +138,10 @@ ID プラットフォームからアクセス トークンを取得するには�
 
 RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣言されます。 次の [値を使用して、WebApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) キーをアプリ マニフェストに追加します。
 
-|Name| 型 | 説明|
+|名前| 種類 | 説明|
 |---|---|---|
-|`id` |String |AAD アプリ ID。 詳細については [、「AAD ポータルにアプリを登録する」を参照してください](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)。|
-|`resource`|String| このフィールドは RSC で操作を行う必要がありますが、エラー応答を回避するには、値を追加して値を指定する必要があります。任意の文字列が実行します。|
+|`id` |文字列 |AAD アプリ ID。 詳細については [、「AAD ポータルにアプリを登録する」を参照してください](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)。|
+|`resource`|文字列| このフィールドは RSC で操作を行う必要がありますが、エラー応答を回避するには、値を追加して値を指定する必要があります。任意の文字列が実行します。|
 |`applicationPermissions`|文字列の配列|アプリの RSC アクセス許可。 詳細については、「リソース固有 [のアクセス許可」を参照してください](resource-specific-consent.md#resource-specific-permissions)。|
 
 >
@@ -158,7 +158,7 @@ RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣
     "applicationPermissions": [
       "TeamSettings.Read.Group",
       "ChannelMessage.Read.Group",
-      "TeamSettings.Edit.Group",
+      "TeamSettings.ReadWrite.Group",
       "ChannelSettings.ReadWrite.Group",
       "Channel.Create.Group",
       "Channel.Delete.Group",
@@ -242,9 +242,9 @@ RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣
 
 ## <a name="code-sample"></a>コード サンプル
 
-| **サンプル名** | **説明** | **.NET** |**Node.js** |
+| **サンプルの名前** | **説明** | **.NET** |**Node.js** |
 |-----------------|-----------------|----------------|----------------|
-| Resource-Specific同意 (RSC) | RSC を使用して API Graph呼び出します。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|
+| Resource-Specific同意 (RSC) | RSC を使用して API Graph呼び出します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|
 
 ## <a name="see-also"></a>関連項目
  
