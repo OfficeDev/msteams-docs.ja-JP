@@ -6,12 +6,12 @@ keywords: タブの余白の余白の削除
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: 5fab0e0145288718adb7eb96f8f103f75527ec58
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 4bbf7bce62e24c61d23e7fa90f1ccd3e6c5a3371
+ms.sourcegitcommit: 1c4eaccee16dc63a1f2b5d7da2893d68f9c1533a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179742"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "53534601"
 ---
 # <a name="tab-margin-changes"></a>タブ余白の変更
 
@@ -26,7 +26,7 @@ ms.locfileid: "53179742"
 ## <a name="timelines"></a>タイムライン
 
 * 2021 年 3 月 5 日 - パブリック Developer Preview で [余白が削除されました](~/resources/dev-preview/developer-preview-intro.md)。
-* 2021 年 6 月 15 日 - 実稼働環境で余白が削除されます。
+* 2021 年 7 月 31 日 - 実稼働環境で余白が削除されます。
 
 ## <a name="guidelines"></a>ガイドライン
 
