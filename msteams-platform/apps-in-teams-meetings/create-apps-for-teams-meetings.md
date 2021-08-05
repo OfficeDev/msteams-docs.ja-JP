@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: 2dce62aaf94e68c14183f0d91e5ba823f2ef3d7e
-ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
+ms.openlocfilehash: 21189d09be19152f6580e4d3a75766c3bb6cbfcf
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53335348"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726846"
 ---
 # <a name="prerequisites-and-api-references-for-apps-in-teams-meetings"></a>Teams 会議アプリへの前提条件と API リファレンス
 
@@ -49,7 +49,7 @@ ms.locfileid: "53335348"
 
 次の表に、これらの API の一覧を示します。
 
-|API|内容|要求|ソース|
+|API|説明|要求|ソース|
 |---|---|----|---|
 |**GetUserContext**| この API を使用すると、コンテキスト情報を取得して、関連するコンテンツを [コンテンツ] タブTeamsできます。 |_**microsoftTeams.getContext( ( ) => { /*...*/ } )**_|Microsoft Teamsクライアント SDK|
 |**GetParticipant**| この API を使用すると、ボットは会議 ID と参加者 ID によって参加者情報を取得できます。 |**GET** _**/v1/meetings/{meetingId}/participants/{participantsId}?tenantId={tenantId}**_ |Microsoft Bot FrameworkSDK|
@@ -72,7 +72,7 @@ API `GetParticipant` を使用すると、ボットは会議 ID と参加者 ID 
 
 `GetParticipant`API には、次のクエリ パラメーターが含まれています。
 
-|Value|Type|必須|説明|
+|値|型|必須|説明|
 |---|---|----|---|
 |**meetingId**| String | はい | 会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。|
 |**participantId**| String | はい | 参加者 ID はユーザー ID です。 これは、Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO から参加者 ID を取得する方法をお勧めします。 |
@@ -156,7 +156,7 @@ API の JSON 応答 `GetParticipant` 本文は次の形式です。
 
 `GetParticipant`API は、次の応答コードを返します。
 
-|応答コード|内容|
+|応答コード|説明|
 |---|---|
 | **403** | アプリは参加者情報の取得を許可されません。 これは最も一般的なエラー応答であり、アプリが会議にインストールされていない場合にトリガーされます。 たとえば、テナント管理者によってアプリが無効になっている場合や、ライブ サイトの移行中にブロックされている場合などです。|
 | **200** | 参加者情報が正常に取得されます。|
@@ -177,7 +177,7 @@ API の JSON 応答 `GetParticipant` 本文は次の形式です。
 
 `NotificationSignal`API には、次のクエリ パラメーターが含まれています。
 
-|Value|Type|必須|説明|
+|値|型|必須|説明|
 |---|---|----|---|
 |**conversationId**| String | はい | 会話識別子は、ボット呼び出しの一部として使用できます。 |
 
@@ -239,7 +239,7 @@ POST /v3/conversations/{conversationId}/activities
 
 `NotificationSignal`API には、次の応答コードが含まれています。
 
-|応答コード|内容|
+|応答コード|説明|
 |---|---|
 | **201** | シグナルを含むアクティビティが正常に送信されます。 |
 | **401** | アプリは無効なトークンで応答します。 |
@@ -272,7 +272,7 @@ API はボット サービスを通じて利用できます。
 
 会議の詳細 API には、次のクエリ パラメーターが含まれています。
 
-|Value|Type|必須|説明|
+|値|型|必須|説明|
 |---|---|----|---|
 |**meetingId**| String | はい | 会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。 |
 
@@ -401,7 +401,7 @@ GET /v1/meetings/{meetingId}
     "value": { 
         "MeetingType": "Scheduled", 
         "Title": "Meeting Start/End Event", 
-        "Id":"meeting id", 
+        "Id": "meeting id", 
         "JoinUrl": "url" 
         "StartTime": "2021-04-29T16:17:17.4388966Z" 
     }, 
@@ -465,7 +465,13 @@ GET /v1/meetings/{meetingId}
 
 ボットはハンドラーを介してイベントを受け取 `OnEventActivityAsync` ります。
 
-json ペイロードを逆シリアル化するために、会議のメタデータを取得するためにモデル オブジェクトが導入されます。 会議のメタデータは、イベント ペイロード `value` 内のプロパティに存在します。 model `MeetingStartEndEventvalue` オブジェクトが作成され、メンバー変数はイベント ペイロード内のプロパティの `value` キーに対応します。
+json ペイロードを逆シリアル化するために、会議のメタデータを取得するためにモデル オブジェクトが導入されます。 会議のメタデータは、イベント ペイロード `value` 内のプロパティに存在します。 model `MeetingStartEndEventvalue` オブジェクトが作成され、メンバー変数はイベント ペイロード内のプロパティの `value` キーに対応します。     
+      
+> [!NOTE]      
+> * から会議 ID を取得します `turnContext.ChannelData` 。    
+> * 会議 ID として会話 ID を使用しない。     
+> * 会議イベントペイロードから会議 ID を使用しない `turncontext.activity.value` 。 
+      
 
 次のコードは、会議の開始イベントと終了イベントのメタデータをキャプチャする方法 `MeetingType` `Title` `Id` `JoinUrl` `StartTime` `EndTime` を示しています。
 
@@ -504,10 +510,10 @@ public class MeetingStartEndEventValue
 
 |サンプルの名前 | 説明 | .NET | Node.js |
 |----------------|-----------------|--------------|--------------|
-| 会議の機能拡張 | Microsoft Teams渡しに関する会議機能拡張サンプル。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-| 会議コンテンツ バブル ボット | Microsoft Teamsでコンテンツ バブル ボットを操作するための会議機能拡張サンプルを作成します。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| MeetingSidePanel | Microsoft Teamsのサイド パネルを操作するための会議機能拡張サンプルを作成します。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| 会議の [詳細] タブ | Microsoft Teamsの詳細タブで iteracting の会議機能拡張サンプルを作成します。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+| 会議の機能拡張 | Microsoft Teams渡しに関する会議機能拡張サンプル。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| 会議コンテンツ バブル ボット | Microsoft Teamsでコンテンツ バブル ボットを操作するための会議機能拡張サンプルを作成します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
+| MeetingSidePanel | Microsoft Teamsのサイド パネルを操作するための会議機能拡張サンプルを作成します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
+| 会議の [詳細] タブ | Microsoft Teamsの詳細タブで iteracting の会議機能拡張サンプルを作成します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 
 ## <a name="see-also"></a>関連項目
 

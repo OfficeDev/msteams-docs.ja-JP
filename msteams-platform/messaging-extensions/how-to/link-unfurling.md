@@ -5,12 +5,12 @@ description: アプリでメッセージング拡張機能を使用してリン�
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 7713fe794c9d15453438cfe3e1bde0238bde9d8c
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 3f3fca5483fb3828f4e3957d0d22dc1e361f7ffb
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068949"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726930"
 ---
 # <a name="link-unfurling"></a>リンク展開
 
@@ -78,6 +78,8 @@ ms.locfileid: "53068949"
 * [ヒーロー カード](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
 * [Office 365コネクタ カード](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [アダプティブ カード](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
+
+プレビュー プロパティを使用して、アダプティブ カードまたは Office 365 コネクタ カードのプレビューを結果リストに表示できます。 結果が既にヒーロー カードまたはサムネイル カードである場合、preview プロパティは必要ありません。 プレビュー添付ファイルを使用する場合は、ヒーロー カードまたはサムネイル カードである必要があります。 preview プロパティを指定しない場合、カードのプレビューは失敗し、何も表示されません。
 
 ### <a name="example"></a>例
 

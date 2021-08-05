@@ -6,12 +6,12 @@ ms.author: surbhigupta
 keywords: カメラ イメージ メディア マイク マイク QR コード qrcode バーコード バーコード スキャン スキャナーの場所マップ機能ネイティブ デバイスのアクセス許可
 localization_priority: Normal
 ms.topic: overview
-ms.openlocfilehash: 069bd27057784076b3b701d013ead209ec6fa3a9
-ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
+ms.openlocfilehash: e1ee7f81c5280baafb1325a5c6537f9fa00f53ad
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "53211584"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726937"
 ---
 # <a name="device-capabilities"></a>デバイス機能
 
@@ -43,3 +43,4 @@ Microsoft Teamsプラットフォームは、組み込みのファースト パ�
 * 場所ピッカーを使用 [して場所を共有します](location-capability.md)。
 
 また、ユーザーが Web アプリ エクスペリエンス[](people-picker-capability.md)Teamsユーザーを検索および選択できるユーザー選択コントロールを統合することもできます。
+

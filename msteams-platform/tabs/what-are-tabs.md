@@ -5,12 +5,12 @@ description: Teams プラットフォームでのカスタム タブの概要
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: bde45728a957bee3aa06752328943fe13d1fa3fe
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: ac217ba140edd87bcf0ff8f58829cd8bedede52a
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179923"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726860"
 ---
 # <a name="microsoft-teams-tabs"></a>Microsoft Teams のタブ
 
@@ -76,6 +76,10 @@ ms.locfileid: "53179923"
 チャネルタブまたはグループ タブの場合は、追加の構成ページを作成することもできます。 このページでは、通常、URL クエリ文字列パラメーターを使用して、そのコンテキストに適したコンテンツを読み込むコンテンツ ページ URL を構成できます。 これは、チャネルまたはグループ タブを複数のチームまたはグループ チャットに追加できるためです。 以降のインストールごとに、ユーザーはタブを構成でき、必要に応じてエクスペリエンスを調整できます。 ユーザーがタブを追加または構成すると、URL は、ユーザー インターフェイス (UI) に表示されるタブTeams関連付けます。 タブを構成すると、その URL に追加のパラメーターが追加されます。 たとえば、[ページ] タブをAzure Boardsすると、構成ページでタブが読み込まれるボードを選択できます。 構成ページの URL は、アプリ マニフェストの `configurableTabs` 配列の `configurationUrl` プロパティで指定します。
 
 複数のチャネルまたはグループ タブ、およびアプリごとに最大 16 の個人用タブを使用できます。
+
+### <a name="tools-you-can-use-to-build-tabs"></a>タブの作成に使用できるツール
+* [Teams Toolkit Stuido コードの詳細](../toolkit/visual-studio-code-overview.md)
+* [Teams Toolkit Stuido の詳細](../toolkit/visual-studio-overview.md)
 
 ## <a name="see-also"></a>関連項目
 

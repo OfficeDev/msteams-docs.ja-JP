@@ -3,12 +3,12 @@ title: 会議で使用するアプリを有効Teamsする
 author: surbhigupta
 description: 会議で使用するアプリを有効Teamsする
 ms.topic: conceptual
-ms.openlocfilehash: 16112b75e109702f1f0be6d335b8d407d35211b5
-ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
+ms.openlocfilehash: 69ff70c7dedb1c05728cb4ac8ed797dd6c6df959
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53335369"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726867"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>会議で使用するアプリを有効Teamsする
 
@@ -113,7 +113,7 @@ Teams会議は、組織に固有の共同作業エクスペリエンスを提供
 
 会議中に、meetingSidePanel または会議内ダイアログ ボックスを使用して、アプリに固有のエクスペリエンスを構築できます。
 
-#### <a name="meetingsidepanel"></a>meetingSidePanel
+#### <a name="meeting-sidepanel"></a>サイドパネルの会議
 
 meetingSidePanel を使用すると、会議のエクスペリエンスをカスタマイズして、開催者と発表者が異なる一連のビューとアクションを持つ事が可能です。 アプリ マニフェストで、コンテキスト配列に meetingSidePanel を追加する必要があります。 会議およびすべてのシナリオで、アプリは幅 320 ピクセルの会議内タブに表示されます。 詳細については [、「FrameContext インターフェイス」を参照してください](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)。
 
@@ -173,7 +173,7 @@ API を使用して要求を必要に応じてルーティングするには、�
 
 |サンプルの名前 | 説明 | サンプル |
 |----------------|-----------------|--------------|----------------|-----------|
-| 会議アプリ | 会議トークンジェネレーター アプリを使用してトークンを要求する方法を示します。これは、各参加者が会議に参加する公平な機会を得る機会を得る順番に生成されます。 これは、スクラム会議や Q セッションなど、&役立ちます。 | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
+| 会議アプリ | 会議トークンジェネレーター アプリを使用してトークンを要求する方法を示します。これは、各参加者が会議に参加する公平な機会を得る機会を得る順番に生成されます。 これは、スクラム会議や Q セッションなど、&役立ちます。 | [表示](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
 
 ## <a name="see-also"></a>関連項目
 

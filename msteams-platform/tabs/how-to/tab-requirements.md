@@ -6,12 +6,12 @@ keywords: teams タブ グループ チャネル構成可能
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8566bb0457db76e4639593dcd67a0442749c0a31
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 9babab566085c13089400e4e035f2c481295d0c4
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179938"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726832"
 ---
 # <a name="prerequisites"></a>前提条件
 
@@ -39,10 +39,18 @@ Teamsは、次の前提条件に従う必要があります。
 
 * [MS Teams] タブでは、自己署名証明書を使用するイントラネット Web サイトを読み込む機能はサポートされていません。
 
+## <a name="tools-you-can-use-to-build-tabs"></a>タブの作成に使用できるツール
+* [Visual Studio Code 用 Teams ツールキット](../../toolkit/visual-studio-code-overview.md)
+* [Visual Studio 用 Teams ツールキット](../../toolkit/visual-studio-overview.md)
+
 ## <a name="see-also"></a>関連項目
 
 * [Teamsタブ](~/tabs/what-are-tabs.md)
-* [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
+* [React を使用して初めてのアプリを構築する](../../get-started/first-app-react.md)
+* [Blazor を使用して初めてのアプリを構築する](../../get-started/first-app-blazor.md)
+* [SPFx を使用して初めてのアプリを構築する](../../get-started/first-app-spfx.md)
+* [初めての会話型ボットを構築する](../../get-started/first-app-bot.md)
+* [最初のメッセージ拡張機能を作成する](../../get-started/first-message-extension.md)
 * [モバイルのタブ](~/tabs/design/tabs-mobile.md)
 
 ## <a name="next-step"></a>次の手順

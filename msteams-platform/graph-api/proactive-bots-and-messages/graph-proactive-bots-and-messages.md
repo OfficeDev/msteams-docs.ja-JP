@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Teams プロアクティブ メッセージング チャットのインストール Graph
-ms.openlocfilehash: 0f59a74cc24b7d80dd3afd4aa4369a47d56e4d59
-ms.sourcegitcommit: a6253e89cb8c8c34d45b06e08c9668daeebc30a3
+ms.openlocfilehash: a118d8aae91603dd4368ca644745b186a47a6176
+ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2021
-ms.locfileid: "53300306"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "53726839"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Graph API を使用してメッセージを送信するアプリの事前インストール
 
@@ -31,7 +31,7 @@ ms.locfileid: "53300306"
 
 ボットがユーザーに事前にメッセージを送る前に、個人用アプリまたはユーザーがメンバーであるチームにインストールする必要があります。 アプリをインストールしていない、または以前に操作したユーザーに事前にメッセージを送信する必要がある場合があります。 たとえば、組織内のすべてのユーザーに重要な情報をメッセージする必要があります。 このようなシナリオでは、Microsoft Graph API を使用して、ユーザー向けボットを事前にインストールできます。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>アクセス許可
 
 Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true)リソースの種類のアクセス許可は、Microsoft Teams プラットフォーム内のすべてのユーザー (個人用) スコープまたはチーム (チャネル) スコープのアプリのインストール ライフサイクルを管理するのに役立ちます。
 
@@ -74,7 +74,7 @@ Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation
     **HTTP GET** 要求:
 
     ```http
-        GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
+    GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
     ```
 
     要求は、アプリのカタログ生成アプリ ID であるオブジェクト `teamsApp` `id` を返す必要があります。 これは、アプリ マニフェストで指定した ID とはTeamsです。
@@ -192,10 +192,9 @@ Content-Type: application/json
 
 ## <a name="code-sample"></a>コード サンプル
 
-| **サンプルの名前** | **説明** | **.NET** | **Node.js** |
-|---------------|--------------|--------|-------------|--------|
-| アプリのプロアクティブ インストールとプロアクティブ通知の送信 | このサンプルでは、ユーザーに対してアプリのプロアクティブ インストールを使用し、Microsoft の API を呼び出してプロアクティブ通知Graph示します。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
-
+| **サンプル名** | **Description** | **.NET** | **Node.js** |
+|---------------|--------------|--------|-------------|
+| アプリのプロアクティブ インストールとプロアクティブ通知の送信 | このサンプルでは、ユーザーに対してアプリのプロアクティブ インストールを使用し、Microsoft の API を呼び出してプロアクティブ通知Graph示します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
 ## <a name="see-also"></a>関連項目
 
 * [**アプリのセットアップ ポリシーを管理Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
