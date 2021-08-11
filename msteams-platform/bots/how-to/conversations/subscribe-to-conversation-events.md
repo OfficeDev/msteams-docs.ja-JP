@@ -5,12 +5,12 @@ description: ボットから会話イベントを処理するMicrosoft Teamsし�
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 39d3a6d54b275fd6b9f28eb38b124435e9ba8bfd
-ms.sourcegitcommit: 3d02dfc13331b28cffba42b39560cfeb1503abe2
+ms.openlocfilehash: c50409720bdb700295934171d8a2a3474205adb59e8397dcc64a01b9aec23fa3
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53049046"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703628"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams ボットの会話イベント
 
@@ -48,12 +48,12 @@ ms.locfileid: "53049046"
 | チャネルの名前が変更されました     | channelRenamed    | OnTeamsChannelRenamedAsync | [チャネルの名前が変更されます](#channel-renamed)。 | チーム |
 | チャネルが削除されました     | channelDeleted    | OnTeamsChannelDeletedAsync | [チャネルが削除されます](#channel-deleted)。 | チーム |
 | チャネルの復元    | channelRestored    | OnTeamsChannelRestoredAsync | [チャネルが復元されます](#channel-deleted)。 | チーム |
-| 追加されたメンバー   | membersAdded   | OnTeamsMembersAddedAsync   | [メンバーが追加されます](#team-members-added)。 | すべて |
+| メンバーが追加されました   | membersAdded   | OnTeamsMembersAddedAsync   | [メンバーが追加されます](#team-members-added)。 | すべて |
 | 削除されたメンバー | membersRemoved | OnTeamsMembersRemovedAsync | [メンバーが削除されます](#team-members-removed)。 | groupChat とチーム |
-| チームの名前が変更されました        | teamRenamed       | OnTeamsTeamRenamedAsync    | [チームの名前が変更されました](#team-renamed)。       | チーム |
+| チャットの名前が変更されました        | teamRenamed       | OnTeamsTeamRenamedAsync    | [チームの名前が変更されました](#team-renamed)。       | チーム |
 | チームが削除されました        | teamDeleted       | OnTeamsTeamDeletedAsync    | [チームが削除されます](#team-deleted)。       | チーム |
-| チームのアーカイブ        | teamArchived       | OnTeamsTeamArchivedAsync    | [チームがアーカイブされます](#team-archived)。       | チーム |
-| チームのアーカイブ解除        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [チームはアーカイブ解除されます](#team-unarchived)。       | チーム |
+| チームがアーカイブされました        | teamArchived       | OnTeamsTeamArchivedAsync    | [チームがアーカイブされます](#team-archived)。       | チーム |
+| チームのアーカイブが解除されました        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [チームはアーカイブ解除されます](#team-unarchived)。       | チーム |
 | チームの復元        | teamRestored      | OnTeamsTeamRestoredAsync    | [チームが復元される](#team-restored)       | チーム |
 
 ### <a name="channel-created"></a>作成されたチャネル
@@ -656,7 +656,7 @@ async def on_teams_members_removed(
 
 ---
 
-### <a name="team-renamed"></a>チームの名前が変更されました
+### <a name="team-renamed"></a>チャットの名前が変更されました
 
 ボットが含むチームの名前が変更された場合、ボットに通知されます。 オブジェクトで `conversationUpdate` イベントを `eventType.teamRenamed` 受け取 `channelData` ります。
 
@@ -892,7 +892,7 @@ async def on_teams_team_restored(
 
 ---
 
-### <a name="team-archived"></a>チームのアーカイブ
+### <a name="team-archived"></a>チームがアーカイブされました
 
 ボットは、インストールされているチームがアーカイブされる際に通知を受け取ります。 オブジェクトで `conversationUpdate` イベントを `eventType.teamarchived` 受け取 `channelData` ります。
 
@@ -973,7 +973,7 @@ async def on_teams_team_archived(
 ---
 
 
-### <a name="team-unarchived"></a>チームのアーカイブ解除
+### <a name="team-unarchived"></a>チームのアーカイブが解除されました
 
 ボットがインストールされているチームがアーカイブ解除された場合、ボットは通知を受け取ります。 オブジェクトで `conversationUpdate` イベントを `eventType.teamUnarchived` 受け取 `channelData` ります。
 
@@ -1406,11 +1406,11 @@ turnContext, CancellationToken cancellationToken) {
 
 ## <a name="code-sample"></a>コード サンプル
 
-| **サンプル名** | **説明** | **.NET** | **Node.js** | **Python** |
+| **サンプルの名前** | **説明** | **.NET** | **Node.js** | **Python** |
 |----------|-----------------|----------|
-| 会話ボット | ボットの会話イベントのサンプル コード。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| 会話ボット | ボットの会話イベントのサンプル コード。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [プロアクティブ メッセージを送信する](~/bots/how-to/conversations/send-proactive-messages.md)

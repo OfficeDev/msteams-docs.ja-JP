@@ -6,12 +6,12 @@ keywords: teams タブ グループ チャネル構成可能
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6f79480fb3ec6eb50de622e0b67b70e021d8cce7
-ms.sourcegitcommit: a6253e89cb8c8c34d45b06e08c9668daeebc30a3
+ms.openlocfilehash: f3781cdf8be3bf39480511258616c1e5dc5dedc107910480a3b02758fa28610c
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2021
-ms.locfileid: "53300313"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708361"
 ---
 # <a name="create-a-configuration-page"></a>構成ページを作成する
 
@@ -123,7 +123,7 @@ ms.locfileid: "53300313"
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>プレースホルダーを `configurationUrl`
 
-コンテキスト インターフェイスのプレースホルダーを基本に追加します `configurationUrl` 。 次に例を示します。
+コンテキスト インターフェイスのプレースホルダーを基本に追加します `configurationUrl` 。 例:
 
 ##### <a name="base-url"></a>ベース URL
 
@@ -208,7 +208,7 @@ microsoftTeams.settings.setSettings({
 * [コンテンツ ページを作成する](~/tabs/how-to/create-tab-pages/content-page.md)
 * [モバイルのタブ](~/tabs/design/tabs-mobile.md)
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [タブの削除ページを作成する](~/tabs/how-to/create-tab-pages/removal-page.md)

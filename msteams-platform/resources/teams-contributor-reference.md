@@ -1,18 +1,18 @@
 ---
-title: ドキュメントにTeamsする
+title: Teams ドキュメントに投稿する
 description: ドキュメントの作成と発行Teams手順
 author: surbhigupta
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: contributor-guide
-ms.openlocfilehash: a567b0462397780650d6173df9dae1b340a06f97
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: d09f946926f7377b65910c7bccce7cef8e30ef739afa31b94c83354cffbd7c27
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140516"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708057"
 ---
-# <a name="contribute-to-teams-documentation"></a>ドキュメントにTeamsする
+# <a name="contribute-to-teams-documentation"></a>Teams ドキュメントに投稿する
 
 Teamsドキュメントは **、Microsoft Docs** のテクニカル ドキュメント ライブラリの一部です。 コンテンツは docsets と呼ばれるグループに編成され、それぞれが 1 つのエンティティとして管理される関連ドキュメントのグループを表します。 同じドキュメントセット内の記事の URL パスの拡張子は、同じ **docs.microsoft.com。** たとえば、 `/docs.microsoft.com/microsoftteams/...` ドキュメントセット ファイル パスの先頭Teamsです。 Teams記事は Markdown 構文で記述され、この構文でホストGitHub。
 
@@ -79,7 +79,7 @@ Teamsドキュメントは **、Microsoft Docs** のテクニカル ドキュメ
 * [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)
 
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [Microsoft Docs の更新プログラムと最新のお知らせを取得する](/teamblog)

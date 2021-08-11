@@ -6,12 +6,12 @@ keywords: teams タブ グループ チャネル構成可能
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 9babab566085c13089400e4e035f2c481295d0c4
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: 36d5a6ee785779c8ba186a00ec80519a189ac278e7ec2298bba82fb53f0a848a
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726832"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57701801"
 ---
 # <a name="prerequisites"></a>前提条件
 
@@ -53,7 +53,7 @@ Teamsは、次の前提条件に従う必要があります。
 * [最初のメッセージ拡張機能を作成する](../../get-started/first-message-extension.md)
 * [モバイルのタブ](~/tabs/design/tabs-mobile.md)
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [プライベート タブを作成する](~/tabs/how-to/create-personal-tab.md)

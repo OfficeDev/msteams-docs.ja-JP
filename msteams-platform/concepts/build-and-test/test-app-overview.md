@@ -4,12 +4,12 @@ description: カスタム アプリをテストするプロセスTeams説明し�
 ms.topic: how-to
 localization_priority: Normal
 keywords: テスト アプリMicrosoft 365アップロードTeamsテナントを構成する
-ms.openlocfilehash: 37f917727aba1a0f9828434b1519b4bb787df7aa
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: e33a1adb9ebc11f8bd1ece8f5fe43fc78e60b11883551fbd0ee3dfae237737cf
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631007"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707690"
 ---
 # <a name="test-your-app"></a>アプリのテスト
 
@@ -41,7 +41,7 @@ ms.locfileid: "52631007"
 * [ボットのデバッグ](~/bots/how-to/debug/locally-with-an-ide.md)
 * [RSC のアクセス許可をテストする](~/graph-api/rsc/test-resource-specific-consent.md)
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [Microsoft 365 テナントを準備する](~/concepts/build-and-test/prepare-your-o365-tenant.md)

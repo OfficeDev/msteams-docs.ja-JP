@@ -1,19 +1,19 @@
 ---
-title: ユーザー選択機能の統合
+title: ユーザー ピッカー機能を統合する
 author: Rajeshwari-v
 description: JavaScript クライアント SDK Teamsを使用してユーザー選択機能を統合する方法
 keywords: ユーザー選択コントロール
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 8399eeb1a088e4b60c466d51c223b9405ebf1711
-ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
+ms.openlocfilehash: 1d8840853c6fce808b1ec5f13ad95c099698de3ebb37f3613a14c64b4a11d3f8
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "53211637"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702786"
 ---
-# <a name="integrate-people-picker-capability"></a>ユーザー選択機能の統合 
+# <a name="integrate-people-picker-capability"></a>ユーザー ピッカー機能を統合する 
 
 [ユーザー選択] は、ユーザーを検索して選択するコントロールです。 これは、プラットフォームで使用できるネイティブTeamsです。 ネイティブのユーザー選択Teamsコントロールを Web アプリと統合できます。 単一または複数の選択、および構成 (チャット、チャネル、組織全体での検索の制限など) を選択できます。
 
@@ -44,10 +44,10 @@ API の説明は次のとおりです。
 
 |構成パラメーター|種類|説明| 既定値|
 |-----|------|--------------|------|
-|`title`| String| これはオプションのパラメーターです。 ユーザー選択コントロールのタイトルを設定します。 | ユーザーを選択する|
-|`setSelected`|String| これはオプションのパラメーターです。 事前に選択するユーザーの AAD の ID を渡す必要があります。 このパラメーターは、ユーザー選択コントロールの起動中にユーザーを事前に選択します。 1 つの選択の場合、最初の有効なユーザーだけが、残りのユーザーを無視して事前設定されます。 |Null| 
-|`openOrgWideSearchInChatOrChannel`|Boolean | これはオプションのパラメーターです。 true に設定すると、アプリがチャットやチャネルに追加された場合でも、組織全体のスコープでユーザー選択を起動します。 |False|
-|`singleSelect`|Boolean|これはオプションのパラメーターです。 true に設定すると、選択を 1 人のユーザーにのみ制限するユーザー選択を起動します。 |False|
+|`title`| 文字列| これはオプションのパラメーターです。 ユーザー選択コントロールのタイトルを設定します。 | ユーザーを選択する|
+|`setSelected`|文字列| これはオプションのパラメーターです。 事前に選択するユーザーの AAD の ID を渡す必要があります。 このパラメーターは、ユーザー選択コントロールの起動中にユーザーを事前に選択します。 1 つの選択の場合、最初の有効なユーザーだけが、残りのユーザーを無視して事前設定されます。 |Null| 
+|`openOrgWideSearchInChatOrChannel`|ブール値 | これはオプションのパラメーターです。 true に設定すると、アプリがチャットやチャネルに追加された場合でも、組織全体のスコープでユーザー選択を起動します。 |正しくない|
+|`singleSelect`|ブール値|これはオプションのパラメーターです。 true に設定すると、選択を 1 人のユーザーにのみ制限するユーザー選択を起動します。 |正しくない|
 
 次の図は、サンプル Web アプリでのユーザー選択機能のエクスペリエンスを示しています。
 
@@ -82,7 +82,7 @@ API の説明は次のとおりです。
 
 Web アプリでエラーを適切に処理する必要があります。 次の表に、エラー コードとエラーが生成される条件を示します。 
 
-|エラー コード |  エラー名     | Condition|
+|エラー コード |  エラー名     | 条件|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API は現在のプラットフォームではサポートされていません。|
 | **500** | INTERNAL_ERROR | ユーザー選択の起動中に内部エラーが発生しました。|

@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 localization_priority: Normal
 ms.topic: conceptual
 title: Web アプリ
-ms.openlocfilehash: b7f530198a8e1c240e3cf4b227d786af94f6c89e
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 4a25649a8a791efc3f33572da203e36c7f39cb11f64676218f3a3f240da956c1
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630433"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708330"
 ---
 # <a name="web-apps"></a>Web アプリ 
 
@@ -86,6 +86,9 @@ Azure Active Directory (AD) は、ユーザーの ID プロバイダー Teams。
 
 Teamsサード パーティ製アプリ向け Azure ADシングル サインオン (SSO) メカニズムがあります。 また、OIDC と呼ばれる OAuth や Open ID などの標準を使用して、他の ID プロバイダー Connectガイダンスを提供します。
 
+> [!IMPORTANT]
+> 現在、サード パーティ製アプリは Government Community Cloud (GCC) で利用できますが、GCC-High国防総省 (DOD) では使用できません。 サード パーティ製アプリは、既定では無効になっています。GCC。 アプリのサード パーティ製アプリを有効GCC、[アプリのアクセス](/microsoftteams/teams-app-permission-policies)許可ポリシーの管理とアプリの管理に[関するページをご覧ください](/microsoftteams/manage-apps)。
+
 このSharePointでは、SSO のみを使用できます。また、SSO を別のアプリで使用する場合は、別の Azure AD ID を追加することはできません。この ID はアプリの SharePoint です。
 
 認証の詳細[については、「Teams」 を参照してください](../concepts/authentication/authentication.md)。
@@ -94,7 +97,7 @@ Teamsサード パーティ製アプリ向け Azure ADシングル サインオ�
 
 ***統合シナリオ**: スタンドアロン アプリ、コラボレーション アプリ*
 
-アプリをアプリ[Teamsネイティブに](../concepts/design/understand-use-cases.md)するための設計ガイドラインに従Teams。 既存のアプリ コンテンツを [アプリ] タブTeamsできません。アプリの設計の詳細については[、「Fluent Design System」を参照してください](https://fluentsite.z22.web.core.windows.net/)。
+アプリをアプリ[Teamsネイティブに](../concepts/design/understand-use-cases.md)するための設計ガイドラインに従Teams。 既存のアプリ コンテンツを [アプリ] タブTeamsできません。アプリの設計の詳細については、「アプリの設計」[をFluent Design System。](https://fluentsite.z22.web.core.windows.net/)
 
 ## <a name="maximize-deep-linking"></a>ディープ リンクを最大化する
 

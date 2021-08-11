@@ -4,12 +4,12 @@ description: パブリック サーバーの機能について説明Developer Pr
 ms.topic: conceptual
 localization_priority: Normal
 keywords: teams プレビュー開発者向け機能
-ms.openlocfilehash: f19268afd81fe9fa7ae2116740e7b9d4ff8225cb
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: ddf935279d5298caa032df7f109369bdc4b798ef51206f5cc688846061fd6720
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52019721"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703962"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>開発者向けパブリック プレビュー Microsoft Teams
 

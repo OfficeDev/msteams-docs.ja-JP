@@ -5,12 +5,12 @@ description: メッセージング拡張機能の SSO サポートを有効に�
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 02d08506a07e955693531908f4f3cf16573a02c0
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 3e965ed19e603bf888b107ca9ecda01aa81af192a020c41cfd26eb9bb905fd53
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566202"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705746"
 ---
 # <a name="single-sign-on-sso-support-for-messaging-extensions"></a>メッセージング拡張機能のシングル サインオン (SSO) のサポート
  

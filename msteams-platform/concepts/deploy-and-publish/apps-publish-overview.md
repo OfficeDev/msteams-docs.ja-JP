@@ -4,12 +4,12 @@ description: アプリを発行するためのオプションについてMicroso
 ms.topic: conceptual
 author: KirtiPereira
 ms.author: surbhigupta
-ms.openlocfilehash: b321fee132b23556dcc8299cdbbf6fb5d6ccd3cf
-ms.sourcegitcommit: 60561c7cd189c9d6fa5e09e0f2b6c24476f2dff5
+ms.openlocfilehash: c5dc026627ba912e0beebb9321c664f0a5af4ccf38905eb969226da8103b9a4a
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52230912"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57701986"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Microsoft Teams アプリを配布する
 
@@ -19,13 +19,16 @@ ms.locfileid: "52230912"
 
 個人的な使用、チームとの共同作業、テストとデバッグのためにアプリをサイドロードします。 この種の配布では、正式なレビュー プロセスは必要ない。
 
+> [!IMPORTANT]
+> 現在、サイドローディング アプリは Government Community Cloud (GCC) で使用できますが、GCC-Highおよび国防総省 (DOD) では使用できません。
+
 詳細については、「アプリを[アプリにアップロードする」を参照Teams。](apps-upload.md)
 
 ## <a name="publish-your-app-to-your-org"></a>組織にアプリを発行する
 
 組織のユーザーがアプリを利用できます。この種類の配布には、管理者Teams承認が必要です。
 
-詳細については、「管理センター[でアプリ](https://docs.microsoft.com/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json)を管理する」をTeamsしてください。
+詳細については、「管理センター[でアプリ](/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json)を管理する」をTeamsしてください。
 
 ### <a name="government-community-cloud-gcc-organizations"></a>Government Community Cloud (GCC) 組織
 
@@ -44,7 +47,7 @@ ms.locfileid: "52230912"
 
 * [Microsoft 365 アプリ コンプライアンス プログラム](/microsoft-365-app-certification/overview)
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [アプリの既定のインストール オプションを構成する](~/concepts/deploy-and-publish/add-default-install-scope.md)

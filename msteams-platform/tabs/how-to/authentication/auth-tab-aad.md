@@ -4,12 +4,12 @@ description: 認証の詳細Teamsタブで使用する方法について説明�
 ms.topic: how-to
 localization_priority: Normal
 keywords: teams 認証タブ AAD
-ms.openlocfilehash: 138575ab28280f167c0627731c8219eccb07b7d9
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 69b05edd2cb0106ccf951490c36e2268f947af418a50dd9cc53fe7ec1b3e1311
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52629985"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707788"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>[ユーザーの認証] タブでMicrosoft Teamsする
 
@@ -159,6 +159,6 @@ if (hashParams["error"]) {
 
 Azure 認証を使用したタブ認証プロセスを示すサンプル AD。
 
-| **サンプル名** | **説明** | **.NET** | **Node.js** |
+| **サンプルの名前** | **description** | **.NET** | **Node.js** |
 |-----------------|-----------------|-------------|
-| Microsoft Teamsタブ認証 | Azure を使用したタブ認証プロセスAD。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) |
+| Microsoft Teamsタブ認証 | Azure を使用したタブ認証プロセスAD。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) |

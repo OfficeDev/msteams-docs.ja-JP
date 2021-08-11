@@ -5,12 +5,12 @@ ms.topic: conceptual
 localization_priority: Normal
 keywords: 呼び出し通知コールバック地域アフィニティ
 ms.date: 04/02/2019
-ms.openlocfilehash: 06068c13d27598b9a7b5e70181c69f9efb2c0afb
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: 5c24aa83b26999070f65978fce9b19139f2445955acb8f5aa7b5c0a46255c927
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020177"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705046"
 ---
 # <a name="incoming-call-notifications"></a>着信通知
 
@@ -91,7 +91,7 @@ OAuth トークンは次の値を持ち、次の値で署名Skype。
 
 詳細については、「受信要求 [の検証」を参照してください](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs)。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [アプリケーションホスト型メディア ボットの要件と考慮事項](~/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)

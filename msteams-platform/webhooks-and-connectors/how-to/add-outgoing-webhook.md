@@ -6,12 +6,12 @@ ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
 keywords: teams タブ送信 webhook アクション可能メッセージ verify webhook
-ms.openlocfilehash: c02ff5388e47ba40056afcc1fcf5e8d7ad4437e8
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 8dabf78cd27f0f59bd8ce617eb83ded24ecc3dc92478e7233bf8f8bb6a2a4e19
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140338"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704320"
 ---
 # <a name="create-outgoing-webhook"></a>送信 Webhook の作成
 
@@ -28,7 +28,7 @@ ms.locfileid: "53140338"
 |標準の HTTP メッセージ交換|応答は元の要求メッセージと同じチェーンに表示され、リッチ テキスト、画像、カード、絵文字など、任意の Bot Framework メッセージ コンテンツを含めできます。 送信 Webhooks はカードを使用することができますが、 を除き、カードアクションを使用することはできません `openURL` 。|
 | Teams API メソッドのサポート|送信 Webhooks は HTTP POST を Web サービスに送信し、応答を取得します。 チーム内のチャネルの名簿やリストの取得など、他の API にはアクセスできません。|
 
-## <a name="create-outgoing-webhooks"></a>送信 Webhooks の作成
+## <a name="create-outgoing-webhooks"></a>送信 Webhook を作成する
 
 送信 Webhook を作成し、カスタム ボットをユーザー設定にTeams。
 
@@ -48,7 +48,7 @@ ms.locfileid: "53140338"
 
 1. [ **送信 Webhook の作成] を選択します**。
 
-    ![送信 Webhooks の作成](~/assets/images/outgoingwebhook3.png)
+    ![送信 Webhook を作成する](~/assets/images/outgoingwebhook3.png)
 
 1. [送信 Webhook の作成] **ページに次の詳細を入力** します。
 
@@ -57,7 +57,7 @@ ms.locfileid: "53140338"
     * **説明**: プロファイル カードとチーム レベルのアプリ ダッシュボードに表示される詳細な文字列。
     * **プロファイル画像**: Webhook のアプリ アイコン (省略可能)。
 
-1. **[作成]** を選択します。 送信 Webhook は、現在のチームのチャネルに追加されます。
+1. [**作成**] を選択します。 送信 Webhook は、現在のチームのチャネルに追加されます。
 
     ![送信 Webhook の作成](~/assets/images/outgoingwebhook.png)
 
@@ -215,9 +215,9 @@ var responseMsg = JSON.stringify({
 
 ## <a name="code-sample"></a>コード サンプル
 
-|**サンプル名** | **説明** | **.NET** | **Node.js** |
+|**サンプルの名前** | **説明** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| 送信 Webhooks | カスタム ボットを作成するサンプルを使用して、Microsoft Teams。| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
+| 送信 Webhooks | カスタム ボットを作成するサンプルを使用して、Microsoft Teams。| [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 
 ## <a name="see-also"></a>関連項目
 * [受信 Webhook の作成](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)

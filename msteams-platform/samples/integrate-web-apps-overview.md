@@ -4,17 +4,17 @@ author: Rajeshwari-v
 description: Web アプリケーションとデバイス機能をアプリと統合するMicrosoft Teams概要。
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 5136c598a3640b5cce92969ea3468c42a7a801db
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 125139abceb01218766dba1cd8d6c95850abd1272583e37e148aabebe68b778a
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630447"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707303"
 ---
 # <a name="integrate-web-apps"></a>Web アプリを統合する
 
 既存の Web アプリケーションの機能を新しいプラットフォームに統合することで、充実したユーザー エクスペリエンスMicrosoft Teamsできます。 アプリをアプリ[Teamsネイティブに](~/concepts/design/understand-use-cases.md)するための設計ガイドラインに従Teams。
-このドキュメントでは、Web アプリケーションを Teams、Power プラットフォームと統合して Power アプリ、Power Virtual Agents、Virtual Assistant、アプリ テンプレート、シフト コネクタ、Moodle LM Teams S を作成し、web サイトの共有ボタンを作成し、SharePoint で Microsoft Teams タブを追加し、ディープ リンクを作成し、デバイス機能を統合するための前提条件について説明します。
+このドキュメントでは、Web アプリケーションを Teams、Power プラットフォームと統合して Power アプリ、Power Virtual Agents、Virtual Assistant、アプリ テンプレート、シフト コネクタ、Moodle LMS を作成し、web サイトの共有と Teams ボタンを作成し、SharePoint で Microsoft Teams タブを追加し、ディープ リンクを作成し、デバイス機能を統合するための前提条件について説明します。
 
 ## <a name="prerequisites"></a>前提条件   
 
@@ -37,7 +37,7 @@ ms.locfileid: "52630447"
 
 Microsoft Power プラットフォームは、1 つの強力なアプリケーション プラットフォームで、Power BI、Power Apps、Power Automate、Power Virtual Agentsなど、4 つの堅牢な Microsoft テクノロジを組み合わせたプラットフォームです。 これらのテクノロジを使用すると、ソリューションの構築、プロセスの自動化、データの分析、統合された統合環境内での仮想エージェントの作成が可能になります。
 
-### <a name="power-apps"></a>Power アプリ
+### <a name="power-apps"></a>Power Apps
 
 このPower Apps、ビジネス データに接続し、組織のニーズに合わせてカスタマイズされたビジネス アプリを構築できます。 Power Appsキャンバス アプリを通じてビジネスの課題を解決するために、さまざまなアプリ シナリオを有効にします。 アプリを構築した後、アプリをメーカー ポータルからエクスポートしPower Appsに埋め込Microsoft Teams。
 
@@ -47,7 +47,7 @@ Power Virtual Agent はコードなし、ガイド付きグラフィカル イ�
 
 ### <a name="create-virtual-assistant"></a>仮想アシスタントを作成する
 
-Virtual Assistant は、ユーザー エクスペリエンス、組織のブランド化、および必要なデータを完全に制御しながら、堅牢な会話型ソリューションを作成できる Microsoft のオープン ソース テンプレートです。 
+Virtual Assistantは、ユーザー エクスペリエンス、組織のブランド化、および必要なデータを完全に制御しながら、堅牢な会話型ソリューションを作成できる Microsoft のオープン ソース テンプレートです。 
 
 ## <a name="app-templates"></a>アプリ テンプレート
 
@@ -59,7 +59,7 @@ TeamsShifts Work Force Management コネクタは、運用対応、オープン�
 
 ## <a name="install-moodle-lms"></a>Moodle LMS のインストール
 
-Moodle は、一般的なオープン ソース学習管理システム (LMS) です。 この機能は現在、Microsoft Teams。 この統合により、教育者と教師は、Moodle コースを中心に共同作業を行い、成績と課題に関する質問をし、通知を直接通知Teams。
+Moodle は、一般的なオープン ソース ラーニング管理システム (LMS) です。 この機能は現在、Microsoft Teams。 この統合により、教育者と教師は、Moodle コースを中心に共同作業を行い、成績と課題に関する質問をし、通知を直接通知Teams。
 
 ## <a name="create-a-share-to-teams-button-for-your-website"></a>Web サイトの [Teams で共有] ボタンを作成する
 

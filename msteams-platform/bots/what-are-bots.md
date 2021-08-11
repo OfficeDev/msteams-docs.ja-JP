@@ -5,16 +5,19 @@ description: このページのボットのMicrosoft Teams。
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 655684ef4f2a93d3f9c3858e3bf5a84eab4bd43c
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 94540e4d9edd3cb41c249563d50780448d4e08dbe285967eaaece715930a29be
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068967"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706232"
 ---
 # <a name="bots-in-microsoft-teams"></a>Microsoft Teams のボット
 
 チャットボットまたは会話型ボットとも呼ばれるボットは、顧客サービスやサポート スタッフなど、ユーザーが実行する簡単で繰り返し自動化されたタスクを実行するアプリです。 日常的に使用されるボットの例としては、天気に関する情報を提供するボット、夕食の予約、旅行情報の提供などのボットがあります。 ボットの対話は、簡単な質問と回答、またはサービスへのアクセスを提供する複雑な会話です。
+
+> [!IMPORTANT]
+> 現在、ボットは Government Community Cloud (GCC) で使用できますが、GCC-High国防総省 (DOD) では使用できません。
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/zSIysk0yL0Q]
 
@@ -50,7 +53,7 @@ Microsoft Graph通話やオンライン会議の API を使用すると、Micros
 
 [Teams のボットを作成する](~/bots/how-to/create-a-bot-for-teams.md)
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [ボットと SDK](~/bots/bot-features.md)

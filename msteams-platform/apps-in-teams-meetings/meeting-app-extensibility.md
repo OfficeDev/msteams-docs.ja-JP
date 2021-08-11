@@ -3,12 +3,12 @@ title: 会議アプリ拡張性
 author: surbhigupta
 description: 会議アプリの機能拡張を理解する
 ms.topic: conceptual
-ms.openlocfilehash: 01f1d7ce6675e65b9310eab7b04fd83a129f28cb
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: 44c7397d94d98af5cbc9df4f291bd7cc037b5df832715dcaa943edee543f3b09
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726881"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702258"
 ---
 # <a name="meeting-app-extensibility"></a>会議アプリ拡張性
 
@@ -171,6 +171,9 @@ Teamsの会議アプリの機能拡張は、次の概念に基づいて行いま
     > [!NOTE]
     > ユーザー Teams、他の組織との会議やチャットをホストするときにアプリを追加できます。 ユーザーは、ユーザーが他の組織がホストする会議やチャットに参加するときに、外部ユーザーが共有するアプリを使用できます。 ホスティング ユーザーの組織のデータ ポリシーと、そのユーザーの組織が共有するサード パーティ製アプリのデータ共有プラクティスが有効になります。
 
+    > [!IMPORTANT]
+    > 現在、サード パーティ製アプリは Government Community Cloud (GCC) で利用できますが、GCC-High国防総省 (DOD) では使用できません。 サード パーティ製アプリは、既定では無効になっています。GCC。 アプリのサード パーティ製アプリを有効GCC、[アプリのアクセス](/microsoftteams/teams-app-permission-policies)許可ポリシーの管理とアプリの管理に[関するページをご覧ください](/microsoftteams/manage-apps)。
+
 * **匿名**: 匿名ユーザーは AAD ID を持ち、テナントとフェデレーションされません。 匿名の参加者は外部ユーザーと同じですが、その ID は会議に投影されません。 匿名ユーザーは、会議ウィンドウでアプリにアクセスできない。 匿名ユーザーを開催者にすることはできませんが、発表者または出席者を指定できます。
 
     > [!NOTE]
@@ -193,7 +196,7 @@ Teamsの会議アプリの機能拡張は、次の概念に基づいて行いま
 * [メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)
 * [アプリをデザインする](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [Teams 会議アプリへの前提条件と API リファレンス](create-apps-for-teams-meetings.md)

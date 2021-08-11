@@ -4,12 +4,12 @@ description: シングル サインオン (SSO) について説明します。
 ms.topic: how-to
 localization_priority: Normal
 keywords: teams 認証 SSO AAD シングル サインオン API
-ms.openlocfilehash: 1e26189a9a04991c2ad384e58f4fd6d68ca69b6d
-ms.sourcegitcommit: 3d02dfc13331b28cffba42b39560cfeb1503abe2
+ms.openlocfilehash: f51f34f103682207551d1b53d47a763f7c3b464085b6806c1241c1e14636bc06
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53049037"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57701902"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>タブのシングル サインオン (SSO) のサポート
 
@@ -44,7 +44,8 @@ ms.locfileid: "53049037"
 6. トークンは JavaScript を使用してタブ アプリケーションで解析され、ユーザーのメール アドレスなどの必要な情報を抽出します。
 
 > [!NOTE]
-> この API は、電子メール、プロファイル、および OpenId であるユーザー レベル API の制限されたセット `getAuthToken()` offline_access有効です。 または など、他のスコープGraphには使用 `User.Read` されません `Mail.Read` 。 推奨される回避策については、その他の[スコープGraph参照してください](#apps-that-require-additional-graph-scopes)。
+> この API は、電子メール、プロファイル、および OpenId であるユーザー レベル API の制限されたセット `getAuthToken()` offline_access有効です。 または など、他のスコープGraphには使用 `User.Read` されません `Mail.Read` 。 推奨される回避策については、「アクセス トークンを[取得する」を](#get-an-access-token-with-graph-permissions)参照Graphしてください。
+
 
 SSO API は、Web コンテンツを [埋め込むタスク](../../../task-modules-and-cards/what-are-task-modules.md) モジュールでも機能します。
 
@@ -64,7 +65,7 @@ SSO API は、Web コンテンツを [埋め込むタスク](../../../task-modul
 > [!NOTE]
 > 以下の重要な制限を知る必要があります。
 >
-> * API のアクセス許可Graphユーザー レベルのアクセス許可 (電子メール、プロファイル、offline_access OpenId) だけがサポートされます。 その他のスコープ (Graphアクセスできる必要がある場合は、推奨 `User.Read` `Mail.Read` される回避策を[参照してください](#apps-that-require-additional-graph-scopes)。
+> * API のアクセス許可Graphユーザー レベルのアクセス許可 (電子メール、プロファイル、offline_access OpenId) だけがサポートされます。 その他のスコープ (Graphなど) にアクセスする必要がある場合は、「アクセス トークンを取得する」を参照Graph `User.Read` `Mail.Read` [してください](#get-an-access-token-with-graph-permissions)。
 > * アプリケーションのドメイン名は、AAD アプリケーションに登録したドメイン名と同じ名前にすることが重要です。
 > * 現在、アプリごとに複数のドメインはサポートされていません。
 
@@ -166,19 +167,17 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 ## <a name="code-sample"></a>コード サンプル
 
-|**サンプル名**|**説明**|**C#**|**Node.js**|
+|**サンプルの名前**|**説明**|**C#**|**Node.js**|
 |---------------|---------------|------|--------------|
-| タブ SSO |Microsoft Teamsのサンプル アプリ Azure AD SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs)、 </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
+| タブ SSO |Microsoft Teamsのサンプル アプリ Azure AD SSO| [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs)、 </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
 
 ## <a name="known-limitations"></a>既知の制限
 
-### <a name="apps-that-require-additional-graph-scopes"></a>追加のスコープを必要とするGraphアプリ
+### <a name="get-an-access-token-with-graph-permissions"></a>アクセス許可を使用してアクセス トークンGraphする
 
-SSO の現在の実装では、メール、プロファイル、offline_access、OpenId などのユーザー レベルのアクセス許可に対する同意のみを付与し、User.Read や Mail.Read などの他の API には同意しません。 アプリがスコープをさらにGraph場合は、次のセクションで有効にする回避策を示します。
+SSO の現在の実装では、ユーザー レベルのアクセス許可に対する同意のみを付与します。このアクセス許可は、ユーザーの呼び出しGraphできません。 Graph 呼び出しに必要なアクセス許可 (スコープ) を取得するには、SSO ソリューションがカスタム Web サービスを実装して、Teams JavaScript SDK から取得したトークンを必要なスコープを含むトークンと交換する必要があります。 これは、AAD の代理フローを使用 [して実行されます](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)。
 
 #### <a name="tenant-admin-consent"></a>テナント管理者の同意
-
-最も簡単な方法は、組織の代わりにテナント管理者に事前同意を得る方法です。 つまり、ユーザーはこれらのスコープに同意する必要が無く、AAD の代理フローを使用してトークン サーバー側を自由に交換 [できます](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)。 この回避策は、社内の業務用アプリケーションでは受け入れ可能ですが、テナント管理者の承認に依存できないサードパーティの開発者には十分ではありません。
 
 テナント管理者として組織に代わって同意する簡単な方法は、 を参照する方法です `https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>` 。
 

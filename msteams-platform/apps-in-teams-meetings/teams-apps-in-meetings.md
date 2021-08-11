@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: 0ba475e852b8dc673d33ac818077b3b0951ac5f9
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: f86e6fe359b5c3cdf76372e82a4faa0403d529bfd94d473e7f924e449826aa29
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068573"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702139"
 ---
 # <a name="apps-for-teams-meetings"></a>会議のTeamsアプリ
 
@@ -36,13 +36,13 @@ ms.locfileid: "53068573"
 ## <a name="see-also"></a>関連項目
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
-* [ボット](../bots/what-are-bots.md)
+* [Bot](../bots/what-are-bots.md)
 * [メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)
 * [アプリをデザインする](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 * [Teams 会議アプリへの前提条件と API リファレンス](create-apps-for-teams-meetings.md)
 * [カスタム一緒にモードのシーン](~/apps-in-teams-meetings/teams-together-mode.md)
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [会議アプリ拡張性](meeting-app-extensibility.md)

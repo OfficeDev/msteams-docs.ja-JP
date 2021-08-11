@@ -4,24 +4,24 @@ description: ユニバーサル アクションを使用したシーケンシャ
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: f36e65133572569cd01de1053044336c810656f3
-ms.sourcegitcommit: 999f5c607671e088ea8a461fa7dbb63f8d61c39b
+ms.openlocfilehash: d7628987e4258ef4fe4f42d751cc48ed947439dd9b38a6c30769b58e8b6e7e85
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52649648"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705523"
 ---
 # <a name="sequential-workflows"></a>シーケンシャル ワークフロー
 
-アダプティブ カードは、ユーザーの操作でアダプティブ カードが更新され、ユーザー入力が必要な一連のカードをユーザーが進行できるシーケンシャル ワークフローをサポートします。 これは、ボット開発者がユーザーの操作に応答してアダプティブ カードを返す `Action.Execute` 方法でサポートされます。
+アダプティブ カードは、ユーザーの操作で更新されるシーケンシャル ワークフローをサポートします。 シーケンシャル ワークフローを使用すると、アダプティブ カードはユーザーの操作で更新され、ユーザーはユーザー入力を必要とする一連のカードを進めできます。 `Action.Execute` シーケンシャル ワークフローがサポートされています。これにより、ボット開発者はユーザーの操作に応じてアダプティブ カードを返す事が可能です。
 
-たとえば、カフェテリアがチームまたはチャネルの注文を受け取るシナリオを考えます。 食べ物、飲み物など、さまざまなアイテムに対するユーザーの選択を順番に `Action.Execute` 記録できます。 また、ボット開発者が定義したロジックに基いて、カードを行き来できます。 <br/>
+たとえば、カフェテリアがチームまたはチャネルの注文を受け取るシナリオを考えます。 食べ物や飲み物など、さまざまなアイテムに対するユーザーの選択を順番 `Action.Execute` に記録できます。 また、ボット開発者が定義したロジックに基いて、カードを行き来できます。 <br/>
 
 次の図は、シーケンシャル ワークフローを示しています。
 
 <img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential Workflow" width="400"/>
 
-ユーザーは、他のユーザーのカードを変更せずにワークフローを進めできます。 これは、シーケンシャル アダプティブ カードを使用してクイズを実行する場合にも役立ちます。 次の図に示すように、ユーザーはワークフローの異なる段階にいて、カードの状態が異なります。
+ユーザーは、他のユーザーのカードを変更せずにワークフローを進めできます。 このワークフローは、シーケンシャル アダプティブ カードを使用してクイズを実行する場合にも役立ちます。 次の図は、異なるユーザーがワークフローの異なる段階とカードの状態を示しています。
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="ケータリング ボットの状態":::
 
@@ -123,14 +123,16 @@ var adaptiveCardResponse = JObject.FromObject(new
  });
 ```
 
-## <a name="code-sample"></a>コード サンプル
+## <a name="code-samples"></a>コード サンプル
 
-|サンプルの名前 | 説明 | .NETCore |
-|----------------|-----------------|--------------|
-| Teamsボット | アダプティブ カードを使用して食品の注文を受け入れる簡単なボットを作成します。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)|
+|サンプルの名前 | 説明 | .NETCore | Node.js |
+|----------------|-----------------|--------------|--------------|
+| Teams ケータリング ボット | アダプティブ カードを使用して、食品の注文を受け入れるボットを作成します。 |[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| まだ利用できません。 |
+| シーケンシャル ワークフローアダプティブ カード | シーケンシャル ワークフロー、ユーザー固有のビュー、最新のアダプティブ カードをボットに実装する方法を示します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+
 
 ## <a name="see-also"></a>関連項目
 
-* [アダプティブ カードのアクション (Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
+* [Teams でのアダプティブ カードのアクション](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [ボットの機能](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [アダプティブ カードのユニバーサル アクションの操作](Work-with-universal-actions-for-adaptive-cards.md)

@@ -6,12 +6,12 @@ keywords: teams タブ グループ チャネル構成可能 削除
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 97f5dfdd8cd9e5e19ec26c345ac960a04a108ab3
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 5cfe79bc026f7326f258b994540958aab0a83c29f08846447d2b5859f10794dd
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179714"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706787"
 ---
 # <a name="create-a-removal-page"></a>削除ページを作成する
 
@@ -27,7 +27,7 @@ ms.locfileid: "53179714"
 
 タブがチャネルまたはグループ チャットにアップロードされると、Teamsの右クリック ドロップダウン メニューが追加されます。使用可能なオプションは、設定によって決 `canUpdateConfiguration` まります。 次の表に、設定の詳細を示します。
 
-| `canUpdateConfiguration`| true   | false | description |
+| `canUpdateConfiguration`| true   | false | 説明 |
 | ----------------------- | :----: | ----- | ----------- |
 |     設定            |   √    |       |ページ `configurationUrl` が IFrame に再読み込みされ、ユーザーはタブを再構成できます。 |
 |     名前の変更              |   √    |   √   | ユーザーは、タブ バーに表示されるタブ名を変更できます。          |
@@ -98,7 +98,7 @@ ms.locfileid: "53179714"
 * [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
 * [構成ページを作成する](~/tabs/how-to/create-tab-pages/configuration-page.md)
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [モバイルのタブ](~/tabs/design/tabs-mobile.md)

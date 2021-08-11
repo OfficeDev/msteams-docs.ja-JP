@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: teams 承認 OAuth SSO AAD rsc Graph
-ms.openlocfilehash: ce4076ff8cb9945f3b7dd1a7e809391292ec314a
-ms.sourcegitcommit: c145d52b2d4daa7655e6c3ddfa739fa1beeb8d6a
+ms.openlocfilehash: c2fd0a335d992eb026ae1b61c186830d25217d52491c997a9a2baf1dc58152e0
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2021
-ms.locfileid: "53455221"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707626"
 ---
 # <a name="resource-specific-consent"></a>リソース固有の同意
 
@@ -26,7 +26,7 @@ ms.locfileid: "53455221"
 
 ### <a name="resource-specific-permissions-for-a-team"></a>チームのリソース固有のアクセス許可
 
-|アプリケーションのアクセス許可| 操作 |
+|アプリケーションのアクセス許可| Action |
 | ----- | ----- |
 |TeamSettings.Read.Group | このチームの設定を取得します。|
 |TeamSettings.ReadWrite.Group|このチームの設定を更新します。|
@@ -48,7 +48,7 @@ ms.locfileid: "53455221"
 
 次の表に、チャットのリソース固有のアクセス許可を示します。
 
-|アプリケーションのアクセス許可| 操作 |
+|アプリケーションのアクセス許可| Action |
 | ----- | ----- |
 | ChatSettings.Read.Chat         | このチャットの設定を取得します。                                    |
 | ChatSettings.ReadWrite.Chat    | このチャットの設定を更新します。                          |

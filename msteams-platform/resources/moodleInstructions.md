@@ -6,12 +6,12 @@ ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 54f4fec4e240f866c686ed715bd5093a319a2a48
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: e5f33fa9146d0abb735e9f76aeaecea2dbdd230efe81251f9b7dcaf5700a907a
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069174"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706007"
 ---
 # <a name="install-moodle-lms"></a>Moodle LMS のインストール
 
@@ -108,7 +108,7 @@ PowerShell スクリプトを使用して、Azure ADアプリケーションと�
     1. 抽出したフォルダーを開きます。
     1. ファイルを右クリックし、[ `Moodle-AzureAD-Script.ps1` プロパティ] を **選択します**。
     1. [プロパティ **] ウィンドウの**[全般] タブで、ウィンドウの下部にあるセキュリティ属性の横にあるチェック `Unblock` ボックスをオンにします。
-    1. **[OK]** を選択します。
+    1. **[OK]** をクリックします。
     1. ディレクトリ パスを抽出したフォルダーにコピーします。
 
 1. 管理者として PowerShell を実行します。
@@ -240,7 +240,7 @@ PowerShell スクリプトを使用して、Azure ADアプリケーションと�
 
 1. [ボット **エンドポイント] フィールド** に、コピーした URL を貼り付け、単語メッセージを *webhook に変更します*。  URL は次のように表示する必要があります。 `https://botname.azurewebsites.net/api/webhook`
 
-1. [変更 **の保存] を選択します**。
+1. [**変更を保存**] を選択します。
 
 1. 変更を保存した後、[**チーム**] タブ設定戻り、[マニフェスト ファイルのダウンロード] ボタンを選択し、さらに使用するためにアプリ マニフェスト パッケージをコンピューターに保存します。
 

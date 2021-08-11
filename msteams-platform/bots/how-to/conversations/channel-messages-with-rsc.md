@@ -1,17 +1,17 @@
 ---
-title: RSC を使用してすべてのチャネル メッセージを受信する
+title: RSC のチャネル メッセージをすべて受信する
 author: surbhigupta12
 description: RSC アクセス許可を持つすべてのチャネル メッセージを受信する
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 833bdbc015cf852fcd899ce4e75f742448b89978
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 8ddbb3cd7ffa8f02caea2fb0e1e74abb9b64ffe94bb34b8a09561e744cea25b5
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631413"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705889"
 ---
-# <a name="receive-all-channel-messages-with-rsc"></a>RSC を使用してすべてのチャネル メッセージを受信する
+# <a name="receive-all-channel-messages-with-rsc"></a>RSC のチャネル メッセージをすべて受信する
 
 > [!NOTE]
 > この機能は現在、パブリック開発者 [プレビューでのみ利用](../../../resources/dev-preview/developer-preview-intro.md) できます。

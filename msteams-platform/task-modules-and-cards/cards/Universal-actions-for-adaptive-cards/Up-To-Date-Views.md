@@ -4,25 +4,25 @@ description: ユニバーサル ボットを使用した最新のビューのサ
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 2027d07961929fb40e7afc3ee268e1267b235a02
-ms.sourcegitcommit: 1256639fa424e3833b44207ce847a245824d48e6
+ms.openlocfilehash: 83cb86bc4b9b8b3a8cfc48cfbb761cf71c8417267731f3cbfc44f077ca5e99b8
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "52088889"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707421"
 ---
 # <a name="up-to-date-cards"></a>最新のカード
 
-アダプティブ カードでは、更新とメッセージの編集を組み合わせて、ユーザーに最新の情報を提供Teams。 これにより、サービスに変更がある場合と同様に、ユーザー固有のビューを動的に最新の状態に更新できます。 たとえば、プロジェクト管理カードまたはチケット カードの場合は、コメントとタスクの状態を更新できます。 承認の場合、最新の状態が反映され、差別化された情報とアクションも提供されます。
+アダプティブ カードでユーザーに最新情報を提供できます。 更新とメッセージの編集を組み合わせて、Teams。 サービスに変更がある場合と同様に、ユーザー固有のビューを最新の状態に動的に更新します。 たとえば、プロジェクト管理カードやチケット カードの場合は、コメントとタスクの状態を更新します。 承認の場合、最新の状態が反映され、区別された情報とアクションも提供されます。
 
 たとえば、ユーザーは、スレッド内にアセット承認要求をTeamsできます。 Alex は承認要求を作成し、それを Megan と Nestor に割り当てる。 承認要求を作成する 2 つの部分を次に示します。
 
-* アダプティブ カードのプロパティを使用して、ユーザー `refresh` 固有のビューを利用できます。
+* アダプティブ カードのプロパティを使用して、ユーザー `refresh` 固有のビューを適用できます。
 ユーザー固有のビューを使用すると、一連のユーザーに [承認] または [拒否] ボタンを含むカードを表示し、他のユーザーにこれらのボタンのないカードを表示できます。
 
-* カードの状態を常に更新するために、Teams編集メカニズムを利用できます。 たとえば、承認が行うごとに、ボットはすべてのユーザーに対してメッセージ編集をトリガーできます。 このボット メッセージの編集は、更新されたユーザー固有のカードでボットが応答できる、すべての自動更新ユーザーに対する呼び出し `adaptiveCard/action` 要求をトリガーします。
+* カードの状態を常に更新するには、Teams編集メカニズムを使用できます。 たとえば、承認ごとにボットは、すべてのユーザーに対してメッセージの編集をトリガーできます。 このボット メッセージの編集は、更新されたユーザー固有のカードでボットが応答できる、すべての自動更新ユーザーに対する呼び出し `adaptiveCard/action` 要求をトリガーします。
 
-詳細については、「ボット メッセージの [編集方法」を参照してください](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards)。
+詳細については、「ボット メッセージの [編集方法」を参照してください](/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards)。
 
 ## <a name="approval-base-card"></a>承認ベース カード
 
@@ -110,9 +110,9 @@ ms.locfileid: "52088889"
 }
 ```
 
-承認要求への関与に応じて、ユーザーに表示される 2 つの役割を次に示します。
+承認要求に応じてユーザーに表示される 2 つの役割を次に示します。
 
-* 承認ベース カード: 承認者リストの一部ではなく、まだ要求を承認または拒否していないユーザーに表示され、アダプティブ カード JSON のプロパティのリストの一部ではありません `userIds` `refresh` 。
+* 承認基本カード: 承認者リストの一部ではなく、要求がまだ承認または拒否されていないユーザーに表示され、アダプティブ カード JSON のプロパティのリストの一部 `userIds` `refresh` ではありません。
 * [承認] または **[** 拒否] ボタンを持つ承認カード: 承認者リストの一部であるユーザーとアダプティブ カード JSON のプロパティの一覧 `userIds` `refresh` に表示されます。
 
 **資産承認要求を送信するには**
@@ -123,8 +123,8 @@ ms.locfileid: "52088889"
 
     :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-1.png" alt-text="ユーザー固有のビュー":::
 
-4. Nestor は、電源が **入った [承認** ] ボタンを選択します `Action.Execute` 。 ボットは、応答 `adaptiveCard/action` でアダプティブ カードを返す呼び出し要求を取得します。
-5. ボットは、Megan の承認が保留されている間に Nestor が要求を承認したという更新されたカードでメッセージ編集をトリガーします。
+4. Nestor は [承認]**ボタンを選択** します。 `Action.Execute` ボットは、応答 `adaptiveCard/action` でアダプティブ カードを返す呼び出し要求を取得します。
+5. ボットは、更新されたカードでメッセージ編集をトリガーします。これは、Megan の承認が保留されている間に Nestor が要求を承認したとします。
 6. ボット メッセージの編集では、Megan の自動更新がトリガーされ、更新されたユーザー固有のカードが表示され、Nestor は要求を承認しましたが、[承認]または[拒否] ボタンも表示されます。 Nestor のユーザーの MRI は、手順 4 と 5 のこのアダプティブ カード JSON のプロパティのリストから `userIds` `refresh` 削除されます。 これで、自動更新は Megan でのみトリガーされます。
 
     :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-2.png" alt-text="最新のユーザー固有のビュー":::
@@ -258,6 +258,12 @@ ms.locfileid: "52088889"
   ]
 }
 ```
+
+## <a name="code-sample"></a>コード サンプル
+
+|サンプルの名前 | 説明 | .NETCore | Node.js |
+|----------------|-----------------|--------------|--------------|
+| シーケンシャル ワークフローアダプティブ カード | シーケンシャル ワークフロー、ユーザー固有のビュー、最新のアダプティブ カードをボットに実装する方法を示します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>関連項目
 

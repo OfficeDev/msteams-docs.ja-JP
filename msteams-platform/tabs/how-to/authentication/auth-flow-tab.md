@@ -4,12 +4,12 @@ description: タブの認証フローについて説明する
 ms.topic: conceptual
 localization_priority: Normal
 keywords: teams 認証フロー タブ
-ms.openlocfilehash: 1282c149beba0ff5b424585f566a703f48234fa2
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: ccafd5b14e95e2cf319dcf53263e747e0bd67dd062c724ba9c8b736ec6c547db
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566692"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705228"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Microsoft Teamsの認証フロー
 
@@ -49,9 +49,9 @@ Teams の他のアプリケーション認証フローと同様に、スター�
 
 タブ認証プロセスを示すサンプル コード:
 
-| **サンプル名** | **説明** | **C#** | **Node.js** |
+| **サンプルの名前** | **説明** | **C#** | **Node.js** |
 |-----------------|-----------------|-------------|------------|
-| Teamsタブ認証 | AAD を使用したタブの認証プロセス。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
+| Teamsタブ認証 | AAD を使用したタブの認証プロセス。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
 
 ## <a name="more-details"></a>詳細情報
 

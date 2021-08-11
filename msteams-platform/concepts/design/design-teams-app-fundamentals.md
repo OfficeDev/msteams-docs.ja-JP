@@ -5,12 +5,12 @@ author: heath-hamilton
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: 0af2a22200e62be9289f167b0306c9769366e46a
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 3c625f66912b9b45d820a663dfc6846aa1de7356cb77f5a800112fbedc615de1
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630843"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704001"
 ---
 # <a name="microsoft-teams-app-design-system"></a>Microsoft Teamsデザイン システム
 
@@ -60,10 +60,10 @@ ms.locfileid: "52630843"
 
       アプリのプライマリ アイコンは、ユーザーにブランドを伝えるのに長いTeamsがあります。 アイコンのデザインを正しい方法で取得する[](../../concepts/build-and-test/apps-package.md)方法は、アプリをアプリストアに発行Teams重要です。
 
-      アプリ全体で Fluent UI アイコンを使用することもできます。
+      また、アプリ全体Fluent UI アイコンを使用することもできます。
 
-      * <a href="https://www.figma.com/community/file/836835755999342788" target="_blank">最新の Fluent アイコン セットを取得する (Figma)</a>
-      * [アイコンの実装 (Fluent UI)](https://developer.microsoft.com/fluentui#/styles/web/icons)
+      * <a href="https://www.figma.com/community/file/836835755999342788" target="_blank">最新のアイコン セットFluent取得する (Figma)</a>
+      * [アイコンを実装する (Fluent UI)](https://developer.microsoft.com/fluentui#/styles/web/icons)
 
    :::column-end:::
    :::column span="1":::

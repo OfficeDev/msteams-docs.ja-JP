@@ -4,12 +4,12 @@ description: カードと、ボット、コネクタ、メッセージング拡�
 localization_priority: Normal
 keywords: コネクタ ボット カード メッセージング
 ms.topic: overview
-ms.openlocfilehash: f895423e5755dd85a7618b8907c4c3b0acbc3cf4
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 5fce5983e5197bfde37d2c92d427e8135b294d422eb019ef207eeb7f0e5be9f3
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140545"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706633"
 ---
 # <a name="cards"></a>カード
 
@@ -67,7 +67,7 @@ Teamsは、次の 3 つの異なる場所でカードを使用します。
 * [カードの書式を設定Teams](~/task-modules-and-cards/cards/cards-format.md)
 * [アダプティブ カードの設計](~/task-modules-and-cards/cards/design-effective-cards.md)
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [カードの種類](~/task-modules-and-cards/cards/cards-reference.md)

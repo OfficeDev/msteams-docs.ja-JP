@@ -5,12 +5,12 @@ ms.topic: conceptual
 localization_priority: Normal
 keywords: アプリケーションホスト型メディア Windows サーバー azure vm
 ms.date: 11/16/2018
-ms.openlocfilehash: a66296951dd2f704d531840f79a4c4b955af6bdf
-ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
+ms.openlocfilehash: 20f4327ee967cdc75b72eb5525b684c0fb61acb3c90fb96c26eeb23d815fe4e0
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53335362"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702831"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>アプリケーションホスト型メディア ボットの要件と考慮事項
 
@@ -68,10 +68,10 @@ ms.locfileid: "53335362"
 
 アプリケーションホスト型メディア ボットのサンプルは次のとおりです。
 
-| **サンプル名** | **説明** | **Graph** |
+| **サンプルの名前** | **説明** | **Graph** |
 |------------|-------------|-----------|
-| ローカル メディアのサンプル | さまざまなローカル メディア シナリオを示すサンプル。 | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
-| リモート メディアのサンプル | さまざまなリモート メディア シナリオを示すサンプル。 | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
+| ローカル メディアのサンプル | さまざまなローカル メディア シナリオを示すサンプル。 | [表示](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
+| リモート メディアのサンプル | さまざまなリモート メディア シナリオを示すサンプル。 | [表示](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
 
 ## <a name="see-also"></a>関連項目
 
@@ -87,7 +87,7 @@ ms.locfileid: "53335362"
 - [サンプル アプリケーション](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples)
 - [Graph SDK ドキュメントの呼び出し](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [サポートされているメディア形式](~/resources/media-formats.md)

@@ -4,12 +4,12 @@ description: Microsoft Teams のカード アクションと、ボットでの�
 localization_priority: Normal
 ms.topic: conceptual
 keywords: チーム ボット カード アクション
-ms.openlocfilehash: 4af152f6179785687d4fd7371d202c56e1aee170
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
-ms.translationtype: HT
+ms.openlocfilehash: b7c6641078d835ec92975924aaf64da1573757211413da99184bd86c9465b53e
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254203"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705329"
 ---
 # <a name="card-actions"></a>カード アクション
 

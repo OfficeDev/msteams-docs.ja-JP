@@ -5,12 +5,12 @@ description: アプリ開発の開始と環境Microsoft Teamsする方法につ�
 ms.author: adhal
 ms.date: 05/24/2021
 ms.topic: quickstart
-ms.openlocfilehash: 4796d37aa0ef904805fbfe2956f9e1d49960bfe9
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: 82b4c6b54286f70672fecd0f5dd059cf7f47036821b078d502ba9cae73dc5498
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254267"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703152"
 ---
 # <a name="prerequisites-get-started-with-microsoft-teams-app-development"></a>前提条件: アプリ開発Microsoft Teams開始する
 
@@ -30,7 +30,7 @@ ms.locfileid: "53254267"
 
 ## <a name="install-the-teams-toolkit"></a>サーバーをインストールTeams Toolkit
 
-このTeams Toolkitは、アプリのクラウド リソースをプロビジョニングおよび展開するツール、アプリ ストアに発行するツールを使用して開発プロセスを簡略化Teams役立ちます。 このツールキットは、Visual Studio Code、Visual Studio CLI (呼び出し) として使用できます `teamsfx` 。
+このTeams Toolkitは、アプリのクラウド リソースをプロビジョニングおよび展開するツール、アプリ ストアに発行するツールを使用して開発プロセスを簡略化Teams役立ちます。 このツールキットは、Visual Studio Code、Visual Studio CLI (呼び出し) として使用できます `teamsfx` 。 詳細については[、「Teams Toolkit」、Visual Studio Code Teams Toolkit](../toolkit/visual-studio-code-overview.md) [Teamsfx](../toolkit/visual-studio-overview.md) CLI ツールVisual Studio[を参照してください](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli)。
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 

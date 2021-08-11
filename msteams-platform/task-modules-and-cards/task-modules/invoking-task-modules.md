@@ -1,17 +1,17 @@
 ---
-title: タスク モジュールの呼び出しと終了
+title: タスク モジュールを呼び出して閉じる
 description: タスク モジュールを呼び出して閉じる。
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: a23d5cee3f13967772a4b58ed973bf08906e36a6
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 88544199007b92b2f29d99153cde7bca760a44f3c92c7ce710cdd8db4ebff986
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140779"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706646"
 ---
-# <a name="invoke-and-dismiss-task-modules"></a>タスク モジュールの呼び出しと終了
+# <a name="invoke-and-dismiss-task-modules"></a>タスク モジュールを呼び出して閉じる
 
 タスク モジュールは、タブ、ボット、またはディープ リンクから呼び出すことができます。 応答は、HTML、JavaScript、またはアダプティブ カードのいずれかです。 タスク モジュールの呼び出し方法と、ユーザーの操作の応答に対処する方法に関して、多くの柔軟性があります。 次の表に、この動作の概要を示します。
 
@@ -229,8 +229,8 @@ Microsoft Teamsタスク モジュール ヘッダーから HTML へのキーボ
 
 |サンプルの名前 | 説明 | .NET | Node.js|
 |----------------|-----------------|--------------|----------------|
-|タスク モジュールのサンプル ボット-V4 | タスク モジュールを作成するためのサンプル。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
-|タスク モジュールのサンプル タブとボット-V3 | タスク モジュールを作成するためのサンプル。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
+|タスク モジュールのサンプル ボット-V4 | タスク モジュールを作成するためのサンプル。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
+|タスク モジュールのサンプル タブとボット-V3 | タスク モジュールを作成するためのサンプル。 |[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
 
 ## <a name="see-also"></a>関連項目
 
@@ -239,7 +239,7 @@ Microsoft Teamsタスク モジュール ヘッダーから HTML へのキーボ
 * [QR スキャナーまたはバーコード スキャナー機能をアプリに統合Teams](~/concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [場所の機能を統合Teams](~/concepts/device-capabilities/location-capability.md)
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [タブでタスク モジュールを使用する](~/task-modules-and-cards/task-modules/task-modules-tabs.md)

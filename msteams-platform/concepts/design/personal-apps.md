@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 83fad746d71dd196f6efa6526f5c6c28ceac9e20
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: 4a176f5c2b35ef21567d7d4096183f4ac503d98ad4adb905245a6dee570f5f99
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644898"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705782"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>アプリの個人用アプリを設計Microsoft Teams
 

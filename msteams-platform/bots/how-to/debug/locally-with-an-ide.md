@@ -5,12 +5,12 @@ description: IDE を使用してボットをローカルでテストおよびデ
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 0c34d46069c52dfb51f828ed89298f50362ea021
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 5774833806940fcd4a2cc771687ecfcd9126c835582f71c21f26b92314a1df40
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068989"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706313"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>ボットをローカルでテストおよびデバッグする
 

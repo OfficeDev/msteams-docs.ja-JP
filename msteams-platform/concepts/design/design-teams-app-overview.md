@@ -5,12 +5,12 @@ description: アプリを設計するMicrosoft Teamsします。 リソースに
 localization_priority: Normal
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 19b8f8cbcbc52aa02ccd5d94f5bc4c088f2ae28a
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: f05bf979a5c0f75cfa009bc5b105fa5233447c20c1f98874221ad2b0761690aa
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644876"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705036"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>アプリのMicrosoft Teamsする
 
@@ -133,7 +133,7 @@ UI はわかりやすいので、見た目とトーンが快適で、ユーザ�
 
 ## <a name="basic-ui-components"></a>基本的な UI コンポーネント
 
-Fluent UI に基づいて、[](design-teams-app-basic-ui-components.md)これらの要素を使用して、最初からエクスペリエンスTeams作成できます。
+これらの要素はFluent UI に基づいて、[](design-teams-app-basic-ui-components.md)ユーザーエクスペリエンスをゼロから作成Teams要素です。
 
 ## <a name="tools-and-samples"></a>ツールとサンプル
 
@@ -169,14 +169,14 @@ UI コンポーネントTeamsテンプレート、および必要に応じてド
 
 詳細については、次のいずれかのリソースを試してください。
 
-### <a name="fluent-ui-documentation"></a>Fluent UI のドキュメント
+### <a name="fluent-ui-documentation"></a>FluentUI のドキュメント
 
-ユーザー エクスペリエンスの構築に使用される基本的な Fluent UI コンポーネントのコード サンプルと実装Teams取得します。
+エクスペリエンスの構築に使用される基本的な UI Fluentコード サンプルと実装の詳細をTeamsします。
 
 > [!div class="nextstepaction"]
-> [UI Teams試す (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)
+> [UI Teamsを試す (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)
 
-### <a name="adaptive-cards-designer"></a>アダプティブ カード デザイナー
+### <a name="adaptive-cards-designer"></a>アダプティブ カード デザイナー。
 
 Web ベースのツールでアダプティブ カードを設計します。
 

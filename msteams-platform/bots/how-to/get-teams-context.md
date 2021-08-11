@@ -5,12 +5,12 @@ description: 会話の名簿、詳細、チャネル リストなど、ボット
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: ccbc04cbc1b2eb3162e886cd77273a4a0c37a6ec
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 4e3717b5931b673fa52c82b54d9c79380d9ae8d8907c8c2cf51f46499386cb28
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068980"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706272"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>ボットTeams特定のコンテキストを取得する
 
@@ -368,7 +368,7 @@ Response body
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [ボットを介してファイルを送受信する](~/bots/how-to/bots-filesv4.md)

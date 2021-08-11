@@ -5,16 +5,16 @@ description: 標準化された UI コンポーネント、レイアウト、お
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: 5026554070396dcc55390496b6754961e8e037bc
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: 7d46829be50e6c88dc7629376437878a4b5fecf93d82e805a12093c96b3677ba
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644858"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702891"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>UI テンプレートをMicrosoft Teamsアプリを設計する
 
-UI テンプレートを使用Microsoft Teamsアプリを迅速に設計します。 テンプレートは、一般的な Teams の使用例で動作する Fluent UI ベースのコンポーネントのコレクションで、ユーザーに最適なエクスペリエンスを把握する時間が広がっています。
+UI テンプレートを使用Microsoft Teamsアプリを迅速に設計します。 テンプレートは、Fluent UI ベースのコンポーネントのコレクションで、Teams の一般的な使用例全体で機能し、ユーザーに最適なエクスペリエンスを把握する時間を広く提供します。
 
 ## <a name="getting-started-with-tools-and-samples"></a>ツールとサンプルの使用を開始する
 
@@ -91,7 +91,7 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 
 ### <a name="top-use-cases"></a>上位の使用例
 
-* サインイン
+* サインインする
 * ウェルカム メッセージと初回実行エクスペリエンス
 * 成功メッセージ
 * エラー メッセージ
@@ -127,7 +127,7 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 
 ### <a name="top-use-cases"></a>上位の使用例
 
-* サインイン
+* サインインする
 * ユーザー プロファイル
 * 設定
 * ユーザー入力コレクション
@@ -161,7 +161,7 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 
 ---
 
-## <a name="sign-in"></a>サインイン
+## <a name="sign-in"></a>サインインする
 
 さまざまなコンテキストと ID プロバイダー用にアプリ Teamsフローを設計できます。 次の例では、シングル サインオン (SSO) を含み、最も簡単な認証エクスペリエンスをお勧めします。
 

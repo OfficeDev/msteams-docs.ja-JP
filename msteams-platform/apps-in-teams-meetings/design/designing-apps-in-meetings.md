@@ -5,12 +5,12 @@ description: 会議でアプリを設計し、Teams UI キットをMicrosoft Tea
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: a08e5a850a62b0cf73661d00e07e55e46abce32f
-ms.sourcegitcommit: 3560ee1619e3ab6483a250f1d7f2ceb69353b2dc
+ms.openlocfilehash: 621fbb1e3da7ef9083229acf93b05c72cc528bf2ec813529d93025e1a54d79c6
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "53335411"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702494"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>会議の拡張機能Microsoft Teams設計する
 
@@ -80,7 +80,7 @@ ms.locfileid: "53335411"
 
 [会議内] タブは、会議中の共同作業を強化するキャンバスです。 出席者は、共有ビューまたは役割ベースのビューを使用して、会議ステージ外の専用スペースでアプリ コンテンツを表示および操作できます。
 
-### <a name="use-cases"></a>使用例
+### <a name="use-cases"></a>ユース ケース
 
 ユーザーは、[会議内] タブを使用して次の場合があります。
 
@@ -137,7 +137,7 @@ ms.locfileid: "53335411"
 
 会議中のダイアログは、会議ステージTeams表示されます。 ユーザーの注意、確認、またはやり取りが必要ですが、微妙であり、会議を中断しません。 これらの使用は、軽くてタスク指向のシナリオに対して使用する必要があります。
 
-### <a name="use-cases"></a>使用例
+### <a name="use-cases"></a>ユース ケース
 
 会議中のダイアログは、参加者が次の操作を行うユーザー (会議の開催者など) によってトリガーされます。
 
@@ -196,7 +196,7 @@ ms.locfileid: "53335411"
 
 会議ステージに共有されるアプリは、共有画面と同じ領域を占有します。 ステージは、すべての会議参加者の向きを変更します。
 
-### <a name="use-cases"></a>使用例
+### <a name="use-cases"></a>ユース ケース
 
 共有会議のステージは、共同作業と参加に関するすべてです。 開始に役立つシナリオの例を次に示します。
 
@@ -511,7 +511,7 @@ Teams会議は暗いテーマに最適化され、視覚的および認知的な
    :::column-end:::
 :::row-end:::
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [会議用にアプリを構成する](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)

@@ -4,15 +4,15 @@ description: カードテキストの書式設定について説明Microsoft Tea
 keywords: teams ボット カードの形式
 localization_priority: Normal
 ms.topic: reference
-ms.date: 03/29/2018
-ms.openlocfilehash: 877a16f884e91138dc656434438a5fe1dd2ffd6e
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.date: 06/25/2021
+ms.openlocfilehash: b972fd24be56423a4dce9ba9cb55c0cb44038e81b1859697ac36ecccda4d0283
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140640"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706174"
 ---
-# <a name="format-cards-in-microsoft-teams"></a>カードの書式を設定Microsoft Teams
+# <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams のカードの書式設定
 
 カードにリッチ テキストの書式設定を追加する 2 つの方法を次に示します。
 * [Markdown](#format-cards-with-markdown)
@@ -526,5 +526,5 @@ Android で太字や斜体などの文字の書式設定が正しく表示され
 
 ## <a name="see-also"></a>関連項目
 
-* [カードアクション](./cards-actions.md)
+* [カード アクション](./cards-actions.md)
 * [タスク モジュール](~/task-modules-and-cards/cards/cards-format.md)

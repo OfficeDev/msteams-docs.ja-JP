@@ -5,12 +5,12 @@ keywords: teams ボット ファイルが受信を送信する
 ms.date: 05/20/2019
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: 7d5ea3434b10d60e20574ca6d1935943c687f4d7
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+ms.openlocfilehash: f6d738bfe3456ad9434512fd84d7e65d6062e57076656a57592cdf6a3f23790e
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020941"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708113"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>ボットを介してファイルを送受信する
 
@@ -321,11 +321,11 @@ private async Task SendFileCardAsync(ITurnContext turnContext, string filename, 
 
 次のコード サンプルは、ファイルの同意を取得し、ボットからファイルをTeamsする方法を示しています。
 
-|**サンプル名** | **説明** | **.NET** | **Javascript** | **Python**|
+|**サンプルの名前** | **説明** | **.NET** | **Javascript** | **Python**|
 |----------------|-----------------|--------------|----------------|-----------|
-| ファイルのアップロード | ファイルの同意を取得し、ボットからファイルをTeamsする方法を示します。 また、ボットに送信されたファイルを受信する方法も示します。 | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/56.teams-file-upload) |
+| ファイルのアップロード | ファイルの同意を取得し、ボットからファイルをTeamsする方法を示します。 また、ボットに送信されたファイルを受信する方法も示します。 | [表示](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/56.teams-file-upload) | [表示](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/56.teams-file-upload) | [表示](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/56.teams-file-upload) |
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [Teams でレートを制限してボットを最適化する](~/bots/how-to/rate-limit.md)

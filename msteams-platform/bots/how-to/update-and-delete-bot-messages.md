@@ -5,12 +5,12 @@ description: ボットから送信されたメッセージを更新およびMicr
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 90dc50fd2ec153813457f199ac029e17a0157502
-ms.sourcegitcommit: 25c9ad27f99682caaa7347840578b118c63b8f69
+ms.openlocfilehash: 8f1738894aa5580f62b91fa44edf06d54fcc99f7786bae33ffc8cc7b95669fcc
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "52101535"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706093"
 ---
 # <a name="update-and-delete-messages-sent-from-your-bot"></a>ボットから送信されたメッセージを更新および削除する
 
@@ -180,11 +180,11 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 
 次のコード サンプルは、会話の基本を示しています。
 
-| **サンプル名** | **説明** | **.NET** | **Node.js** | **Python** |
+| **サンプルの名前** | **説明** | **.NET** | **Node.js** | **Python** |
 |----------------------|-----------------|--------|-------------|--------|
-| Teams での会話の基本  | メッセージの更新と削除を含むTeamsの基本を示します。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Teams での会話の基本  | メッセージの更新と削除を含むTeamsの基本を示します。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [コンテキストTeams取得](~/bots/how-to/get-teams-context.md)

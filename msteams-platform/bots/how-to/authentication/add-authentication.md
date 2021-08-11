@@ -5,12 +5,12 @@ description: OAuth 認証をボットに追加する方法は、Microsoft Teams�
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 3e36d6166dcf3f835252fb2310b6672cb115d7d4
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 76ea98feb27640ffb7b310ca097e5e7a810ac1aed31b8bf0d8aa2e09d73d341a
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069013"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703754"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>認証をボットにTeamsする
 

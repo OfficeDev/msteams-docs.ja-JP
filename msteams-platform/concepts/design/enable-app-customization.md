@@ -5,16 +5,19 @@ description: 管理者が組織Teamsアプリをカスタマイズする方法�
 localization_priority: Normal
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: bf1b43629c87dd4123520c634772e5dea14e0bb5
-ms.sourcegitcommit: 64c1cf2a268ef101a519bc31d171618d0f6cd12a
+ms.openlocfilehash: 8d7cad42bcb8e6892c25c3c24b50f938624e665a50274395bad00c07f0f1576c
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/13/2021
-ms.locfileid: "52915084"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703601"
 ---
 # <a name="enable-your-microsoft-teams-app-to-be-customized"></a>アプリMicrosoft Teamsカスタマイズを有効にする
 
 顧客が管理センターでアプリのMicrosoft TeamsをカスタマイズTeamsできます。 この機能は、アプリ ストアに発行されたアプリTeamsされます。 組織用に公開されたサイドロードされたアプリとアプリはカスタマイズできません。
+
+> [!IMPORTANT]
+> 現在、サイドローディング アプリは Government Community Cloud (GCC) で使用できますが、GCC-Highおよび国防総省 (DOD) では使用できません。
 
 この機能のいくつかの考えられる例は次のとおりです。
 

@@ -5,12 +5,12 @@ description: カスタム ボットのコマンド メニューをMicrosoft Team
 ms.topic: how-to
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 4ee8c48b2f3b10c8924b0e81dae0a0c1f6014414
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: 978c34a950669386464037850601878a98c191c50710cc62c556f4104ad325e6
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254315"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704092"
 ---
 # <a name="bot-command-menus"></a>ボット コマンド メニュー
 
@@ -212,7 +212,7 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 > [!NOTE]
 > マニフェストからコマンドを削除する場合は、変更を実装するためにアプリを再展開する必要があります。 一般に、マニフェストに対する変更を行う場合は、アプリを再展開する必要があります。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [チャネルとグループ会話](~/bots/how-to/conversations/channel-and-group-conversations.md)

@@ -1,26 +1,26 @@
 ---
-title: 基本的な Fluent UI コンポーネントを使用してアプリを設計する
+title: 基本的な UI コンポーネントを使用Fluentアプリを設計する
 author: heath-hamilton
 description: アプリの作成や UI キットの取得にMicrosoft Teams一般的なプリミティブ UI コンポーネントMicrosoft Teams説明します。
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: eec324a67cec0eb39cc98c0ab63ff71771ebbf11
-ms.sourcegitcommit: 4224c44d169b1a289cbf1d3353de6bc6de7c7ea8
+ms.openlocfilehash: e58a64014be2b576f8ca16d707e315fa8056f9b717ae8dd976f80c544c57ba31
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52644911"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704167"
 ---
-# <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>基本的な Fluent UI Microsoft Teamsを使用してアプリを設計する
+# <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>基本的な UI Microsoft Teamsを使用Fluentアプリを設計する
 
-次の基本的な Fluent UI コンポーネントTeamsアプリを最初からビルドできます。 これらのコンポーネントは、可能な限りフラットに設計され、さまざまな使用例、テーマ、画面サイズで機能します。
+次の基本的な UI Teamsを使用して、アプリを最初からFluentできます。 これらのコンポーネントは、可能な限りフラットに設計され、さまざまな使用例、テーマ、画面サイズで機能します。
 
 このページの図は、既定の (明るい) テーマと暗いTeamsコンポーネントの外観を示しています。
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-Fluent <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">UI に基づいて</a>、Microsoft Teams UI キットには、アプリを構築するために特別に設計されたTeamsがあります。 UI キットでは、ここに示すコンポーネントを直接デザインに挿入し、各コンポーネントの使い方の例を確認できます。
+UI に<a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a>キットには、Microsoft Teamsアプリを構築するために特別に設計されたコンポーネントとTeamsがあります。 UI キットでは、ここに示すコンポーネントを直接デザインに挿入し、各コンポーネントの使い方の例を確認できます。
 
 > [!div class="nextstepaction"]
 > [Microsoft Teams UI Kit (Figma) を入手する](https://www.figma.com/community/file/916836509871353159)
@@ -123,7 +123,7 @@ Fluent <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">UI
 
 ## <a name="toggle"></a>Toggle
 
-注: Fluent UI では、トグルはチェック ボックスの種類です。
+注: UI Fluentトグルは、一種のチェック ボックスです。
 
 :::image type="content" source="../../assets/images/components/toggle.png" alt-text="例は、トグル UI コンポーネントを示しています。" border="false":::
 

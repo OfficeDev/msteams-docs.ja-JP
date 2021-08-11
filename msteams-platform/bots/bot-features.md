@@ -5,12 +5,12 @@ description: ボットを構築するためのツールと SDK Microsoft Teams�
 ms.topic: overview
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: c346d7b7a1c720e651a847fb8a650fc549689654
-ms.sourcegitcommit: f62634c59b697107e5bb3c38867b21007d328b1e
+ms.openlocfilehash: e34d89b0ea8aaeb533899309cfb8fdf34d4ceb4994a6e87db398cc3dfc577abd
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53196244"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707100"
 ---
 # <a name="bots-and-sdks"></a>ボットと SDK
 
@@ -112,9 +112,9 @@ Microsoft Teams のボットは、1 対 1 の会話、グループ チャット�
 
 |サンプルの名前 | 説明 | .NETCore | Node.js |
 |----------------|-----------------|--------------|----------------|
-| Teams 会話ボット | メッセージングおよび会話イベントの処理。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
+| Teams 会話ボット | メッセージングおよび会話イベントの処理。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [ボットのアクティビティ ハンドラー](~/bots/bot-basics.md)

@@ -5,12 +5,12 @@ keywords: teams visual studio コード ツールキット タブ sso graph 認�
 localization_priority: Normal
 ms.topic: how-to
 ms.author: lajanuar
-ms.openlocfilehash: 2ef409a45b92240cced09d2d77793af33945589e
-ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
+ms.openlocfilehash: 9854ac7dff400a5ef9b4695eab2f1679966043ac5fe5b65a2df5d4c5c7c6da8b
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "52721816"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707408"
 ---
 # <a name="single-sign-on-authentication-with-teams-toolkit-and-visual-studio-code-for-tabs"></a>タブ用のシングル サインオンTeams ToolkitとVisual Studio Code認証
 

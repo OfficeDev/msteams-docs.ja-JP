@@ -4,14 +4,14 @@ description: ボット フレームワーク カード、アダプティブ カ�
 localization_priority: Normal
 ms.topic: how-to
 keywords: タスク モジュールのチーム ボット
-ms.openlocfilehash: 5d9aa2b651a4c99cee75aada62a4d1176a589d79
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 7a4c5b0a3986f5a6a59064a05bcbc68587955effca0ea7fab80a7097a9732b6f
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140308"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57701875"
 ---
-# <a name="use-task-modules-from-bots"></a>ボットからのタスク モジュールの使用
+# <a name="use-task-modules-from-bots"></a>ボットでタスク モジュールを使用する
 
 タスク モジュールは、ヒーロー、サムネイル、Microsoft Teams コネクタであるアダプティブ カードおよびボット フレームワーク カードのボタンを使用して、Office 365ボットから呼び出すことができます。 タスク モジュールは、多くの場合、複数の会話手順よりも優れたユーザー エクスペリエンスです。 ボットの状態を追跡し、ユーザーがシーケンスを中断またはキャンセルできます。
 
@@ -209,7 +209,7 @@ Bot Framework カードアクションのスキーマはアダプティブ カ�
 
 |サンプルの名前 | 説明 | .NET | Node.js|
 |----------------|-----------------|--------------|----------------|
-|タスク モジュールのサンプル ボット-V4 | タスク モジュールを作成するためのサンプル。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
+|タスク モジュールのサンプル ボット-V4 | タスク モジュールを作成するためのサンプル。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
 
 ## <a name="see-also"></a>関連項目
 

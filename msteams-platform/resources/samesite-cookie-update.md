@@ -1,19 +1,19 @@
 ---
-title: SameSite cookie 属性
+title: SameSite Cookie 属性
 author: laujan
 description: SameSite Cookie の属性について説明します。
 keywords: cookie 属性 samesite
 ms.topic: reference
 localization_priority: Normal
 ms.author: lomeybur
-ms.openlocfilehash: 34674ab58cc9808525d315cea3db464ddf11b4f9
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: 78ac367ee550650fb9994676a8083a1b201a06086582161daba6ea4311d0aaeb
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140566"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708337"
 ---
-# <a name="samesite-cookie-attribute"></a>SameSite cookie 属性 
+# <a name="samesite-cookie-attribute"></a>SameSite Cookie 属性 
 
 Cookie は、Web サイトから送信され、Web ブラウザーによってコンピューターに保存されるテキスト文字列です。 これらは、認証と個人用設定に使用されます。 たとえば、Cookie はステートフルな情報を呼び出し、ユーザー設定を保持し、閲覧アクティビティを記録し、関連する広告を表示するために使用されます。 Cookie は常に特定のドメインにリンクされ、さまざまな関係者によってインストールされます。 
 
@@ -89,6 +89,6 @@ Android WebView は、Android アプリが Web コンテンツを表示できる
 * [SameSite の例](https://github.com/GoogleChromeLabs/samesite-examples)
 * [SameSite Cookie のレシピ](https://web.dev/samesite-cookie-recipes/)
 * [既知の互換性のないクライアント]( https://www.chromium.org/updates/same-site/incompatible-clients)
-* [開発者: Get Ready for New SameSite=None;セキュリティで保護された Cookie 設定](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
-* [今後の SameSite Cookie の変更点 (ASP.NET と ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
+* [Developers: Get Ready for New SameSite=None; Secure Cookie Settings](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
+* [ASP.NET および ASP.NET Core での今後の SameSite Cookie の変更点](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
 * [HTTP Cookie](https://developer.mozilla.org/docs/Web/HTTP/Cookies)

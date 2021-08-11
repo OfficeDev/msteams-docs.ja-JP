@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 localization_priority: Normal
 keyword: conversations basics messages
-ms.openlocfilehash: a0c00d093827221968714aad88c35efa00660d82
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: 886c2764c2d8dceecb0f6a0e960b3487d9360c3682e46c9a8098f6fb8a2876bf
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630986"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705862"
 ---
 # <a name="conversation-basics"></a>会話の基本
 
@@ -39,7 +39,7 @@ ms.locfileid: "52630986"
 
 ボットは、ユーザーにプロアクティブ メッセージを送信することもできます。 プロアクティブ メッセージとは、ユーザーからの要求に応答しないボットから送信されるメッセージです。 ボタン、テキスト、画像、オーディオ、ビデオなどの対話型要素を含むリッチ カードをボット メッセージに書式設定できます。 ボットは、メッセージをデータの静的スナップショットとしてではなく、送信後に動的に更新できます。 ボット フレームワークのメソッドを使用してメッセージを削除 `DeleteActivity` することもできます。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [ボットの会話内のメッセージ](~/bots/how-to/conversations/conversation-messages.md)

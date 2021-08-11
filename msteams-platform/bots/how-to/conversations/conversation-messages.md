@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 localization_priority: Normal
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 5b23e3b2548e3d0eab98fae73d37316063fe60c1
-ms.sourcegitcommit: a732789190f59ec1f3699e8ad2f06387e8fe1458
+ms.openlocfilehash: 49e6af7ef71d0794210e554d8d8b42fe714fbe592d3ca7de43c7996283f54a2c
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "52058601"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707551"
 ---
 # <a name="messages-in-bot-conversations"></a>ボットの会話内のメッセージ
 
@@ -250,7 +250,7 @@ async def on_members_added_activity(
 
 ## <a name="message-content"></a>メッセージの内容
 
-| Format    | ユーザーからボットへ | ボットからユーザーへ | Notes                                                                                   |
+| フォーマット    | ユーザーからボットへ | ボットからユーザーへ | Notes                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | リッチ テキスト | ✔                | ✔                | ボットはリッチ テキスト、画像、カードを送信できます。 ユーザーは、リッチ テキストと画像をボットに送信できます。                                                                                        |
 | ピクチャ  | ✔                | ✔                | 最大 1024 × 1024 および 1 MB (PNG、JPEG、または GIF 形式)。 アニメーション GIF はサポートされていません。  |
@@ -347,7 +347,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 画像は、PNG、JPEG、または GIF 形式× 1024、1024、1 MB までです。 アニメーション GIF はサポートされていません。
 
-XML を使用して各イメージの高さと幅を指定します。 markdown では、イメージ サイズの既定値は 256 ×256 です。 次に例を示します。
+XML を使用して各イメージの高さと幅を指定します。 markdown では、イメージ サイズの既定値は 256 ×256 です。 例:
 
 * 使用: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>` .
 * 使用 `![Duck on a rock](http://aka.ms/Fo983c)` しない:
@@ -405,7 +405,7 @@ XML を使用して各イメージの高さと幅を指定します。 markdown 
 
 |サンプルの名前 | 説明 | .NETCore | Node.js | Python |
 |----------------|-----------------|--------------|----------------|-----------|
-| Teams 会話ボット | メッセージングおよび会話イベントの処理。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Teams 会話ボット | メッセージングおよび会話イベントの処理。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## <a name="see-also"></a>関連項目
 
@@ -413,7 +413,7 @@ XML を使用して各イメージの高さと幅を指定します。 markdown 
 
 - [会話イベントにサブスクライブする](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [ボット コマンド メニュー](~/bots/how-to/create-a-bot-commands-menu.md)

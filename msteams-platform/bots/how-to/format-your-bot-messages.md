@@ -5,12 +5,12 @@ description: ボット メッセージにリッチ書式を追加する
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 56a34edee372cc6c5bcc5808015783f04867f141
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: fba55b6b08785d375f80923133d3af70434cbaf57adf8feaf4e9f50f478f5e61
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068983"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705602"
 ---
 # <a name="format-your-bot-messages"></a>ボット メッセージの書式を設定する
 
@@ -84,7 +84,7 @@ Teamsマークダウンタグと XML 書式タグまたは HTML 書式タグの�
 
 カードのサポートについては、「カードの書式設定 [」を参照してください](~/task-modules-and-cards/cards/cards-format.md)。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [ボット メッセージの更新および削除](~/bots/how-to/update-and-delete-bot-messages.md)

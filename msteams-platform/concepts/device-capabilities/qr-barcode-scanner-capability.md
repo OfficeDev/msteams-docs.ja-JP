@@ -6,12 +6,12 @@ keywords: カメラ メディア QR コード qrcode バーコード バーコ�
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 4e34e75a6b439c67c831352e07344fd2cf011543
-ms.sourcegitcommit: 059d22c436ee9b07a61561ff71e03e1c23ff40b8
+ms.openlocfilehash: ab346c9bf3a2359ce33a5ec73b743d9b340a71b3c27b9555a6978a00c3ca1e8f
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "53211577"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702772"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>QR コードまたはバーコード スキャナー機能を統合する 
 
@@ -55,17 +55,17 @@ API 応答エラーを理解して、アプリ[](#error-handling)内のエラー
 
 | バーコードの種類 | Android でサポートされる | iOS でサポート |
 | ---------- | ---------- | ------------ |
-| Codebar | はい | いいえ |
+| Codebar | 必要 | いいえ |
 | コード 39 | はい | はい | 
-| コード 93 | はい | はい |
-| コード 128 | はい | はい |
+| コード 93 | はい | 必要 |
+| コード 128 | はい | 必要 |
 | EAN-13 | はい | はい |
-| EAN-8 | はい | はい |
+| EAN-8 | はい | 必要 |
 | ITF | いいえ | はい |
-| QR コード | はい | はい |
-| RSS の展開 | はい | いいえ |
-| RSS-14 | はい | いいえ |
-| UPC-A | はい | はい |
+| QR コード | はい | 必要 |
+| RSS の展開 | 必要 | いいえ |
+| RSS-14 | 必要 | いいえ |
+| UPC-A | はい | 必要 |
 | UPC-E | はい | はい |
 
 次の図は、QR またはバーコード スキャナー機能の Web アプリ エクスペリエンスを示しています。
@@ -76,7 +76,7 @@ API 応答エラーを理解して、アプリ[](#error-handling)内のエラー
 
 これらのエラーは、アプリで適切に処理Teamsがあります。 次の表に、エラー コードとエラーが生成される条件を示します。 
 
-|エラー コード |  エラー名     | Condition|
+|エラー コード |  エラー名     | 条件|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API は現在のプラットフォームではサポートされていません。|
 | **500** | INTERNAL_ERROR | 必要な操作の実行中に内部エラーが発生します。|

@@ -5,12 +5,12 @@ description: カスタム タブを作成する方法については、SharePoin
 ms.author: zhenyasa
 ms.date: 05/19/2021
 ms.topic: quickstart
-ms.openlocfilehash: 4df2bb71837af520a2d2500a45b8605e5fae08b2
-ms.sourcegitcommit: 9d63611974ba8a7e7f19ceea35e50189a2e90434
+ms.openlocfilehash: 25f4a815add4a5712883976b9899131fb108046d75f813517c8261c3cca8e5af
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "53254224"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706961"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-sharepoint-framework-spfx"></a>アプリで最初のアプリをビルドMicrosoft Teams実行する (SharePoint Framework) (SPFx)
 
@@ -219,7 +219,7 @@ Teams Toolkitを使用すると、アプリをローカルでホストし、ワ�
 
 1. プロジェクト内 `{project}.sppkg` のフォルダー内 `SPFx/sharepoint/solution` のファイルを見つける。 [**開く**]を選択します。
 
-1. [**OK**] を選択します。
+1. **[OK]** をクリックします。
 
 1. 展開SharePoint自動的に開始されます。 [この **ソリューションを組織内のすべてのサイト** で使用できる] が選択されているのを確認します。 次に、[展開] **を選択します**。
 

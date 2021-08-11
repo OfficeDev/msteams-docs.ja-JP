@@ -3,12 +3,12 @@ title: モバイルのタブ
 description: モバイルでタブを実装するための開発者Microsoft Teams説明します。
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 5053160f2456a5d1c5f68cb74ea3ccc5c5eabca5
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: e63bfc6b88e77b4dc0f05916dbf13fd5e8c2e199764b78961426ff9601de37e6
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179721"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704943"
 ---
 # <a name="tabs-on-mobile"></a>モバイルのタブ
 
@@ -51,8 +51,8 @@ ms.locfileid: "53179721"
 
 |機能   |モバイルの可用性   |モバイル動作|
 |----------|-----------|------------|
-|チャネル <br /> [グループ] タブ|はい|アプリの構成を使用Teamsモバイル クライアントのタブが開 `contentUrl` きます。|
-|個人用アプリ|はい|[個人用アプリ] タブの各タブが、Teamsを使用してモバイル クライアントに表示 `contentUrl` されます。|
+|チャネル <br /> [グループ] タブ|必要|アプリの構成を使用Teamsモバイル クライアントのタブが開 `contentUrl` きます。|
+|個人用アプリ|必要|[個人用アプリ] タブの各タブが、Teamsを使用してモバイル クライアントに表示 `contentUrl` されます。|
 
 ### <a name="apps-on-teams-store-not-approved-for-mobile"></a>モバイルで承認Teamsアプリストアのアプリ
 
@@ -74,7 +74,7 @@ ms.locfileid: "53179721"
 * [プライベート タブを作成する](~/tabs/how-to/create-personal-tab.md)
 * [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [タブのコンテキストを取得する](~/tabs/how-to/access-teams-context.md)

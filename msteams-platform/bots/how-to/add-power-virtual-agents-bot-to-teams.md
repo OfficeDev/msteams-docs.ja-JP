@@ -5,12 +5,12 @@ description: チャットボットをPower Virtual Agentsプラットフォー�
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 2aa8cc510033768b68cf01cbb5b0327bffe13154
-ms.sourcegitcommit: f62634c59b697107e5bb3c38867b21007d328b1e
+ms.openlocfilehash: ed788fe2acdd2425a435ea7ad608e461c1b4d306a89d7fe3b57eee054b94e69e
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53196251"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705309"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>Power Virtual Agents チャットボットを追加する 
 
@@ -107,7 +107,7 @@ App Studio は、Teamsアプリです。 アプリ ストアから App Studio �
 * [ボットをPower Virtual Agentsする](/power-virtual-agents/publication-fundamentals-publish-channels)
 * [セキュリティとコンプライアンスのMicrosoft Teams。](/MicrosoftTeams/security-compliance-overview)
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [仮想アシスタントを作成する](~/samples/virtual-assistant.md)

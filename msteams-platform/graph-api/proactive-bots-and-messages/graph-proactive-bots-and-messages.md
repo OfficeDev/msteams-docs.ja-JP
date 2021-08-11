@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Teams プロアクティブ メッセージング チャットのインストール Graph
-ms.openlocfilehash: a118d8aae91603dd4368ca644745b186a47a6176
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: bb25987b7b7547a6db459d587e7960bc9f2df231a5be1fe7899a26eee4cf2557
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726839"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708050"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Graph API を使用してメッセージを送信するアプリの事前インストール
 
@@ -192,7 +192,7 @@ Content-Type: application/json
 
 ## <a name="code-sample"></a>コード サンプル
 
-| **サンプル名** | **Description** | **.NET** | **Node.js** |
+| **サンプル名** | **説明** | **.NET** | **Node.js** |
 |---------------|--------------|--------|-------------|
 | アプリのプロアクティブ インストールとプロアクティブ通知の送信 | このサンプルでは、ユーザーに対してアプリのプロアクティブ インストールを使用し、Microsoft の API を呼び出してプロアクティブ通知Graph示します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
 ## <a name="see-also"></a>関連項目

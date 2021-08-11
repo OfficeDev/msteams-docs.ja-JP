@@ -4,16 +4,16 @@ description: Web サイトの [埋め込みTeamsに共有を追加する方法
 ms.topic: reference
 localization_priority: Normal
 keywords: 共有Teams共有Teams
-ms.openlocfilehash: d3e23c50cbaa38a53fa02c19cec69061478d9a57
-ms.sourcegitcommit: d90c5dafea09e2893dea8da46ee49516bbaa04b0
+ms.openlocfilehash: 721f86f1995423b083550d443790b4fdc01910243c63c9eaa8e679cc140083a3
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52075648"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57707717"
 ---
 # <a name="create-share-to-teams-button"></a>[Teams で共有] ボタンを作成する
 
-サードパーティの Web サイトでは、ランチャー スクリプトを使用して、Web ページに Share-to-Teamsボタンを埋め込む可能性があります。 選択すると、ポップアップ ウィンドウで Share-to-Teamsエクスペリエンスが起動します。 これにより、コンテキストを切り替えることなく、任意のユーザーまたはMicrosoft Teamsにリンクを直接共有できます。 このドキュメントでは、Web サイト用に Share-to-Teams ボタンを作成して埋め込み、Web サイトのプレビューを作成し、教育向け Share-to-Teams を拡張する方法についてガイドします。
+サードパーティの Web サイトでは、ランチャー スクリプトを使用して、Web ページに Share-to-Teamsボタンを埋め込む可能性があります。 選択すると、ポップアップ ウィンドウで Share-to-Teamsエクスペリエンスが起動します。 これにより、コンテキストを切り替えることなく、任意のユーザーまたはMicrosoft Teamsにリンクを直接共有できます。 このドキュメントでは、Web サイト用に Share-to-Teams ボタンを作成して埋め込み、Web サイトのプレビューを作成し、Share-to-Microsoft Teams for Education を拡張する方法についてガイドします。
 
 > [!NOTE]
 > * サポートされているのは、Edge と Chrome のデスクトップ バージョンのみです。
@@ -84,7 +84,7 @@ Web サイトが web サイトと共有Teams、選択したチャネルに挿入
 
 html 既定のバージョンまたは Open Graph使用できます。
 
-## <a name="share-to-teams-for-education"></a>教育向けTeams共有
+## <a name="share-to-teams-for-education"></a>共有するMicrosoft Teams for Education
 
 [共有して共有する] ボタンをTeams教師の場合は、 に追加のオプションがあります `Create an Assignment` 。 これにより、共有リンクに基づいて、選択したチームで割り当てを簡単に作成できます。 次の図は、教育のための共有Teamsを表示します。 
 
@@ -92,7 +92,7 @@ html 既定のバージョンまたは Open Graph使用できます。
 
 ## <a name="full-launcherjs-definition"></a>完全なlauncher.js定義
 
-| プロパティ | HTML 属性 | 型 | 既定値 | 説明 |
+| プロパティ | HTML 属性 | 種類 | 既定値 | 説明 |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
 | href | `data-href` | string | 該当なし | 共有するコンテンツの href。 |
 | preview | `data-preview` | boolean (文字列として) | `true` | 共有するコンテンツのプレビューを表示するかどうかを指定します。 |

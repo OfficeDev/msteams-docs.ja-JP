@@ -6,12 +6,12 @@ description: JavaScript クライアント SDK Microsoft Teamsの概要。これ
 localization_priority: Normal
 keywords: teams タブ グループ チャネル構成可能な静的 SDK JavaScript 個人用
 ms.topic: conceptual
-ms.openlocfilehash: eaf89b230d9092b83de358352d0534e010cb9536
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: d1bcf9fd853d1b0e93c99ae62ad32f462fc98ed4eee1796e7ae5510ad02a8909
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994365"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704936"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>JavaScript クライアント SDK を使用してタブやその他のホストMicrosoft Teamsエクスペリエンスを構築する
 
@@ -24,7 +24,7 @@ SDK は、次の機能を使用してアプリを開発Teamsです。
 
 たとえば、SDK は、ユーザーが[](../../build-your-first-app/build-personal-tab.md#3-update-your-tab-theme)クライアントで行ったテーマの変更にタブをTeamsできます。
 
-## <a name="getting-started"></a>作業を開始する
+## <a name="getting-started"></a>はじめに
 
 開発の基本設定に応じて、次のいずれかを実行します。
 

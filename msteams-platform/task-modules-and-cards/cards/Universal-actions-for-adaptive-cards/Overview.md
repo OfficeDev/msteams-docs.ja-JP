@@ -3,12 +3,12 @@ title: アダプティブ カードのユニバーサル アクションの概�
 description: アダプティブ カードのユニバーサル アクションの概要を簡単に説明します。
 ms.topic: overview
 localization_priority: Normal
-ms.openlocfilehash: f8980743954c4dff2ced464bc599439c7519cefe
-ms.sourcegitcommit: d1d1143e285cac5f23590ccba5389616d08f94b3
+ms.openlocfilehash: 20231245af5a1fe479277558367e6265f4391ff0925dfcf96288912470b09b38
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "52781619"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57706365"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>アダプティブ カードのユニバーサル アクション
 
@@ -118,7 +118,7 @@ ms.locfileid: "52781619"
 * [アダプティブ カード @ Microsoft ビルド 2020](https://youtu.be/hEBhwB72Qn4?t=1393)
 * [アダプティブ カード @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460)
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [アダプティブ カードのユニバーサル アクションの操作](Work-with-universal-actions-for-adaptive-cards.md)

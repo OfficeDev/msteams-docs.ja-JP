@@ -4,12 +4,12 @@ description: Teams の Bot で使用できるすべてのカードとカード �
 localization_priority: Normal
 keywords: Bot のカード リファレンス
 ms.topic: reference
-ms.openlocfilehash: d3b84344eccee7c2595b0e978c72d7e331b198cb
-ms.sourcegitcommit: b1f9162a0bbcd276064ae9e4f1e8bccc06cb7035
+ms.openlocfilehash: 4c386b3e237f89345bf94bc8cfa23d7e46477de21da0e7a99eb63663b19446af
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53328073"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705512"
 ---
 # <a name="types-of-cards"></a>カードの種類
 
@@ -447,7 +447,7 @@ Office 365コネクタ カードは、アクションなど、Microsoft Teamsで
 
 コネクタからコネクタ カードを使用する場合とボットでコネクタ カードを使用する場合の重要な違いは、カードアクションの処理です。 次の表に、相違点の一覧を示します。
 
-| Connector | Bot |
+| コネクタ | Bot |
 | --- | --- |
 | エンドポイントは、HTTP POST を介してカード ペイロードを受け取ります。 | アクション `HttpPOST` は、アクション ID と本文のみをボットに送信 `invoke` するアクティビティをトリガーします。|
 
@@ -705,7 +705,7 @@ Teamsのサインイン カードは、ボット フレームワークのサイ�
 }
 ```
 
-### <a name="additional-information"></a>ページの先頭へ
+### <a name="additional-information"></a>追加情報
 
 以下の Bot Framework リファレンスを参照してください。
 

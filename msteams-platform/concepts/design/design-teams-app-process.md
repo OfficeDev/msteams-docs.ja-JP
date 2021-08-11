@@ -5,12 +5,12 @@ description: Microsoft ツールとリソースを使用して効果的なアプ
 localization_priority: Normal
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 225859da18cb50741ab49c68d89bc318c6c9034c
-ms.sourcegitcommit: 14409950307b135265c8582408be5277b35131dd
+ms.openlocfilehash: f4d406426cdadd946e3579cec85e8c5c8133c2b5206a00fc1e32a29a2442b7cd
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "52994211"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57704497"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>アプリの設計プロセスMicrosoft Teamsする
 

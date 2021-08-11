@@ -4,12 +4,12 @@ description: データのレート制限とベスト プラクティスMicrosoft
 ms.topic: conceptual
 localization_priority: Normal
 keywords: Teams ボットのレート制限
-ms.openlocfilehash: 41070bec7905c7003afb917aedcdd08495418602
-ms.sourcegitcommit: e327c9766dfa05abb468cdc71319e3cba7c6c79f
+ms.openlocfilehash: 1ee98af7704baa066ad6ca7adbf0997879454a3c58e83d62ea4f5a2f17c20c36
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "53428696"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57705609"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Teams でレートを制限してボットを最適化する
 
@@ -169,7 +169,7 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 | 会話を取得する | 1 | 28 |
 | 会話を取得する | 2 | 32 |
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [通話と会議のボット](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)

@@ -4,12 +4,12 @@ description: アプリ ストア (AppSource) に送信Teamsガイドラインに
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 79cdc032ee1e7479f7737e5dc71f8f01bb024da8
-ms.sourcegitcommit: 25539046d408c4270b988fd826d7cf1275f4b9dd
+ms.openlocfilehash: 818fe6c9123e6a43788c650542b9e0aed6aeed90e0c78c72ae08f4d4f53d060a
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "52763116"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703608"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teamsの検証ガイドライン
 
@@ -355,7 +355,7 @@ Teamsは、機能によって異なる妥当な時間枠内に対応する必要
 
 アダプティブ カードは、ボット メッセージを表示することを強くお勧めします。 カードは軽量で、1 ~ 3 つのアクションのみを含める必要があります。 より多くのコンテンツを表示する必要がある場合は、タスク モジュールまたはタブの使用を検討してください。
 
-詳細については、以下のリソースを参照してください。
+詳細については、次のリソースを参照してください。
 
 * [アダプティブ カードをデザインする](~/task-modules-and-cards/cards/design-effective-cards.md)
 * [カード リファレンス](~/task-modules-and-cards/cards/cards-reference.md#types-of-cards)
@@ -429,7 +429,7 @@ Teamsは、機能によって異なる妥当な時間枠内に対応する必要
 
 アプリで Microsoft Graphによって提供されるアクティビティ フィード API を使用[している場合は](/graph/teams-send-activityfeednotifications)、次のガイドラインに準拠してください。
 
-### <a name="general"></a>全般
+### <a name="general"></a>一般
 
 * アプリ構成で指定された通知トリガーはすべて、アプリで通知を受け取る必要があります。
 * 通知は、アプリ用に構成されたサポートされている言語ごとにローカライズする必要があります。
@@ -455,7 +455,7 @@ Teamsは、機能によって異なる妥当な時間枠内に対応する必要
 
 アプリは、動的広告、バナー広告、メッセージ内の広告を含む広告を表示しなけり。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [パートナー センター アカウントを作成する](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)

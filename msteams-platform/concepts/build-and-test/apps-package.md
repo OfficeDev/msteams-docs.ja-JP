@@ -3,12 +3,12 @@ title: アプリをパッケージ化する
 description: テスト、アップロード、およびストア発行Microsoft Teamsアプリをパッケージ化する方法について学習します。
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 219e2d5341707ed51b7e0a3a8077f93df9eac640
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: fc489f6f00a267cde3ca5fdc8852240ad2f07f4dcc7912cba9550728fdcd9402
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52565215"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57703901"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>アプリ パッケージMicrosoft Teams作成する
 
@@ -92,7 +92,7 @@ Teamsアイコンが自動的にトリミングされ、複数のシナリオで
 
 :::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<代替テキスト>" border="false":::
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 アプリの配布方法を選択します。
 

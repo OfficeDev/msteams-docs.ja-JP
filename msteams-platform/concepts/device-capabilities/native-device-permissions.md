@@ -4,12 +4,12 @@ keywords: teams アプリの機能のアクセス許可
 description: 通常、ユーザーの同意が必要なネイティブ機能へのアクセスを要求するためにアプリ マニフェストを更新する方法
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: 420b874770a4ad506dbedd575600f333a51ad5c0
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: a8c7e2f198a13823aaa44034e11f4bb9b1d3bb0957d9a838a675a05fbfc83705
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726951"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702826"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>アプリのデバイスのアクセス許可をMicrosoft Teamsする
 
@@ -121,7 +121,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 > * をサポート `camera` し `gallery` `microphone` 、selectMedia API を [**使用して有効になります**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true)。 1 [**つのイメージ キャプチャに captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) を使用します。
 > * getLocation `location` API を使用して [**サポートが有効になります**](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true)。 HTML5 地理位置情報 API は現在、デスクトップ クライアントで完全にサポートされていないので、場所 `getLocation API` Teams必要があります。
 
-次に例を示します。
+例:
  * ユーザーに自分の場所へのアクセスを求めるメッセージを表示するには、次のコマンドを呼び出す必要があります `getCurrentPosition()` 。
 
     ```Javascript
@@ -193,7 +193,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 ## <a name="code-sample"></a>コード サンプル
 
-| **サンプル名** | **Description** | **Node.js** |
+| **サンプル名** | **説明** | **Node.js** |
 |---------------|--------------|--------|
 |デバイス アクセス許可 | デバイスMicrosoft Teamsを示すタブ サンプル アプリを使用する |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
 
