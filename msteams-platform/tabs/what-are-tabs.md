@@ -5,16 +5,19 @@ description: Teams プラットフォームでのカスタム タブの概要
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: ac217ba140edd87bcf0ff8f58829cd8bedede52a
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: 890b1fb71a7b139aedec6869a734611578a78ceaaaf1510661529430ee7b9f26
+ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726860"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "57823222"
 ---
 # <a name="microsoft-teams-tabs"></a>Microsoft Teams のタブ
 
 タブとは、Microsoft Teams に組み込まれている Teams 対応 Web ページです。 これらは簡単な HTML <iFrame \> タブで、アプリ マニフェストで宣言されたドメインを指していて、チーム内のチャネル、グループ チャット、または個々のユーザー用の個人用アプリとして追加できます。 アプリにカスタム タブを含めて独自の Web コンテンツを Teams に埋め込んだり、Teams 固有の機能を Web コンテンツに追加したりできます。 詳細については[、「JavaScript クライアント SDK Teamsを参照してください](/javascript/api/overview/msteams-client)。
+
+> [!IMPORTANT]
+> 現在、カスタム タブは、Government Community Cloud (GCC)、GCC-High、および国防総省 (DOD) で使用できます。
 
 次の図は、個人用タブを示しています。
 
@@ -78,7 +81,7 @@ ms.locfileid: "53726860"
 複数のチャネルまたはグループ タブ、およびアプリごとに最大 16 の個人用タブを使用できます。
 
 ### <a name="tools-you-can-use-to-build-tabs"></a>タブの作成に使用できるツール
-* [Teams Toolkit Stuido コードの詳細](../toolkit/visual-studio-code-overview.md)
+* [Visual Studio Code 用 Teams ツールキット](../toolkit/visual-studio-code-overview.md)
 * [Teams Toolkit Stuido の詳細](../toolkit/visual-studio-overview.md)
 
 ## <a name="see-also"></a>関連項目

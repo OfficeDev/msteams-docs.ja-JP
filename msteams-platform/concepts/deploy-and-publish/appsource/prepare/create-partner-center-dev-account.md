@@ -4,18 +4,18 @@ description: アプリをアプリ ストアに発行Microsoft Teamsパートナ
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: ac31ff3d46a87814edfe2b7ec789d183e9c02e2f
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: ef506b092a06e0c4668ff36aefeddfbafb93c5d5625a4871ce7082c4c6564fea
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566041"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708655"
 ---
 # <a name="create-a-partner-center-developer-account"></a>パートナー センターの開発者アカウントを作成する
 
 アプリをパートナー ストアに発行Microsoft Teams、パートナー センターの開発者アカウント[を設定する必要があります](/office/dev/store/open-a-developer-account)。 シナリオによっては、既存のアカウントを使用できる場合があります。
 
-## <a name="faq"></a>FAQ
+## <a name="faq"></a>よくあるご質問 (FAQ)
 
 パートナー センター アカウントの管理に関する一般的な質問に対する回答を取得します。
 
@@ -217,7 +217,7 @@ ms.locfileid: "52566041"
 
 </details>
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [ストア送信を準備する](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)

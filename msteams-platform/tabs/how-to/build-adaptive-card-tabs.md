@@ -4,17 +4,16 @@ author: KirtiPereira
 description: アダプティブ カードを使用してタブを作成する
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 4ec3cab39fa8383b89a5f9574cf8a7f864abd341
-ms.sourcegitcommit: ec79bbbc3a8daa1ad96de809fc6d17367e8f0c6b
+ms.openlocfilehash: 8f1b8bbc27a2b10d8e4fbca8e87c75eeb29c8c36efacd6eb3cf921295e27b88b
+ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "53726853"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "57823229"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>アダプティブ カードを使用してタブをビルドする
 
 > [!IMPORTANT]
-> * この機能はパブリック [Developer Preview](~/resources/dev-preview/developer-preview-intro.md) デスクトップとモバイルでサポートされています。 Web ブラウザーでのサポートは近日公開予定です。
 > * アダプティブ カード付きタブは現在、個人用アプリとしてのみサポートされています。
 
 従来のメソッドを使用してタブを開発する場合、次の問題が発生する可能性があります。
@@ -38,7 +37,6 @@ ms.locfileid: "53726853"
 
 * ボット開発、[アダプティブ カード](../../bots/what-are-bots.md)、[および](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)タスク モジュール[](../../task-modules-and-cards/task-modules/task-modules-bots.md)に精通Teams。
 * 開発に必要なTeamsボットを作成します。
-* Be in [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
 
 ## <a name="changes-to-app-manifest"></a>アプリ マニフェストの変更点
 
@@ -424,7 +422,7 @@ ms.locfileid: "53726853"
 
 ## <a name="code-sample"></a>コード サンプル
 
-|**サンプルの名前** | **Description** |**.NET** | **Node.js** |
+|**サンプルの名前** | **説明** |**.NET** | **Node.js** |
 |----------------|-----------------|--------------|--------------|
 | [アダプティブ カードの表示] Teamsタブ | Microsoft Teamsタブのサンプル コードで、アダプティブ カードを表示する方法を示Teams。 |[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
 

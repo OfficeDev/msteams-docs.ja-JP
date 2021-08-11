@@ -4,12 +4,12 @@ description: 開発者向けプラットフォームのサンプル アプリケ
 localization_priority: Normal
 ms.topic: reference
 keywords: Microsoft Teamsサンプル
-ms.openlocfilehash: 09369123f23fc76b5e8c9fe3d5e89df56763d21f
-ms.sourcegitcommit: 10380fc80d7f281d2892b3514f87d1bd05180496
+ms.openlocfilehash: 05884025f91377764d65242d501314c3798d3a73a430e103de885692c1e2ee63
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "53373915"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709592"
 ---
 # <a name="overview"></a>概要
 

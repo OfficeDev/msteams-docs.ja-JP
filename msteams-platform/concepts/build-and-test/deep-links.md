@@ -4,12 +4,12 @@ description: ディープ リンクとアプリでの使用方法について説
 ms.topic: how-to
 localization_priority: Normal
 keywords: Teams ディープ リンク ディープリンク
-ms.openlocfilehash: 07eb03f2e9686c26a917ab1f2d72fc0668e59107
-ms.sourcegitcommit: 9f499908437655d6ebdc6c4b3c3603ee220315b7
+ms.openlocfilehash: 2f382e3612b0df026a12b8b37fdbbc278df6ecf8fe8e0c67582c3486eb91c5be
+ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "52949680"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "57823215"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成 
 
@@ -241,20 +241,20 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 | ディープ リンク | フォーマット | 例 |
 |-----------|--------|---------|
 | 音声通話を行う | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; 、 &lt; user2&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com |
-| 音声およびビデオ通話を行う | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; 、 &lt; user2&video=true &gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true |
-|オプションのパラメーター ソースを使用して音声およびビデオ通話を行う | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; , &lt; user2&&gt; withvideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true&source=demoApp |  
+| 音声およびビデオ通話を行う | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; 、 &lt; user2&Video=true &gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true |
+|オプションのパラメーター ソースを使用して音声およびビデオ通話を行う | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; 、 &lt; user2&&gt; withVideo=true&=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true&source=demoApp |  
 | VoIP ユーザーと PSTN ユーザーの組み合わせに音声およびビデオ通話を行う | https://teams.microsoft.com/l/call/0/0?users=&lt;user1 &gt; ,4: &lt; phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
   
 クエリ パラメーターは次のとおりです。
 * `users`: 呼び出しの参加者を表すユーザー ID のコンマ区切りリスト。 現在、User ID フィールドは Azure AD UserPrincipalName (通常は電子メール アドレス) をサポートしています。PSTN 通話の場合は、pstn mri 4: phonenumber をサポートしています。 &lt; &gt;
-* `Withvideo`: これはオプションのパラメーターで、ビデオ通話に使用できます。 このパラメーターを設定すると、呼び出し元のカメラだけがオンにされます。 通話の受信者は、通話通知ウィンドウから音声通話または音声通話とビデオ通話に応答Teams選択できます。 
+* `withVideo`: これはオプションのパラメーターで、ビデオ通話に使用できます。 このパラメーターを設定すると、呼び出し元のカメラだけがオンにされます。 通話の受信者は、通話通知ウィンドウから音声通話または音声通話とビデオ通話に応答Teams選択できます。 
 * `Source`: これはオプションのパラメーターで、ディープリンクのソースを通知します。
 
 ## <a name="code-sample"></a>コード サンプル
 
 | サンプルの名前 | 説明 | C# |Node.js|
 |-------------|-------------|------|----|
-|Subentity ID を使用するディープ リンク  |Microsoft Teamsチャットからサブエンティ ID を使用するタブへのディープリンクを示すサンプル アプリを作成します。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
+|Subentity ID を使用するディープ リンク  |Microsoft Teamsチャットからサブエンティ ID を使用するタブへのディープリンクを示すサンプル アプリを作成します。|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
 ## <a name="see-also"></a>関連項目
 

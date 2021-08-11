@@ -6,12 +6,12 @@ keywords: Teams o365 コネクタ
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 28a2b35e868baf34e35a11a00e10b30b0f09c236
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: e52402e841b675de7d0c19302b8c8090bcb90cef27ac61e8ac3d6dd69a0bb076
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179756"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709326"
 ---
 # <a name="create-office-365-connectors"></a>Office 365 コネクタの作成
 
@@ -250,6 +250,9 @@ PowerShell モジュール交換の詳細については [、「Set-Organization
 1. 検索ボックスに、チーム名またはチャネル名を入力します。
 1. ダイアログ **ウィンドウの右下隅** にあるドロップダウン メニューから [コネクタのセットアップ] を選択します。
 
+> [!IMPORTANT]
+> 現在、カスタム コネクタは、Government Community Cloud (GCC)、GCC-High、および国防総省 (DOD) では使用できません。
+
 コネクタは、「その他のオプション コネクタ &#9679;&#9679;&#9679; > チームのすべてのコネクタ」のセクション  >    >    >  で使用できます。 このセクションまでスクロールするか、コネクタ アプリを検索して移動できます。 コネクタを構成または変更するには、[構成] を **選択します**。
 
 ## <a name="distribute-webhook-and-connector"></a>Webhook とコネクタの配布
@@ -262,10 +265,10 @@ PowerShell モジュール交換の詳細については [、「Set-Organization
 
 次の表に、サンプル名とその説明を示します。
 
-|**サンプル名** | **説明** | **.NET** | **Node.js** |
+|**サンプルの名前** | **説明** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| コネクタ    | サンプル Office 365 チャネルへの通知を生成するコネクタTeamsします。|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
-| 汎用コネクタのサンプル |Webhook をサポートする任意のシステム用にカスタマイズしやすい汎用コネクタのサンプル コード。|  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
+| コネクタ    | サンプル Office 365 チャネルへの通知を生成するコネクタTeamsします。|   [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
+| 汎用コネクタのサンプル |Webhook をサポートする任意のシステム用にカスタマイズしやすい汎用コネクタのサンプル コード。|  | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
 
 ## <a name="see-also"></a>関連項目
 

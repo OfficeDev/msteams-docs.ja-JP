@@ -2,12 +2,12 @@
 title: カスタム 一緒にモード のシーン
 description: カスタムの Together Mode シーンを使用する
 ms.topic: conceptual
-ms.openlocfilehash: 74405041c6d90c2ef502a2c52570650daebb3526
-ms.sourcegitcommit: d354ab3cda83e6cd8bb9f03bc0fa2d1c1a61a6ce
+ms.openlocfilehash: 24b350341c7503569504bffa41f715ff87caa7db49cd890482688353e7f0493f
+ms.sourcegitcommit: 569ff24cc41c46d886b913a916401b18e0eb1439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2021
-ms.locfileid: "53463325"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "57823236"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Teams でのカスタム Together モードのシーン
 
@@ -155,12 +155,12 @@ Microsoft には、シーンを構築できる Scene スタジオがあります
 
 1. 必要に応じて、[保存] ドロップダウンメニューから [共有] を選択して共有可能なリンクを作成し、他のユーザーが使用するシーンを簡単に配布できます。 このリンクを開くと、ユーザーのシーンがインストールされ、使用を開始できます。
 
-1. プレビュー後、アプリの申請の手順に従って、Teamsをアプリとして出荷できます。
+1. プレビュー後、シーンをアプリとして配布するには、Teams デベロッパー センターの [アプリ] セクションにTeamsします。 そこからアプリ パッケージをダウンロードするか、組織に直接発行できます。
 
     >[!NOTE]
     > この手順では、設計されたシーンに対して、シーン パッケージとは異なるアプリ パッケージが必要です。 自動的に作成されるアプリ パッケージは、開発者センターの [アプリ] セクションTeams表示されます。
 
-1. 必要に応じて、[保存] ドロップダウン メニューから[エクスポート]を選択して、シーン パッケージを取得できます。 シーン .zipファイルがダウンロードされます。
+1. 必要に応じて、[保存] ドロップダウン メニューから[エクスポート] を選択して、シーン パッケージを保存できます。 シーン .zipファイルがダウンロードされます。
 
     ![シーンをエクスポートする](../assets/images/apps-in-meetings/build-a-scene.png)
 

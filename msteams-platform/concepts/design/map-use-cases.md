@@ -5,12 +5,12 @@ description: アプリの使用例がエクスペリエンス内でどのよう�
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: b374f0ca81402effb548c1cfcb90ed3d316360f1
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: 82b7c4cf29eb6b5d31c55dbc420a3c2c6c3038dfa710ba6257fc5486a97713bf
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068558"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709553"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>使用例をアプリの機能Teamsマップする
 
@@ -26,7 +26,7 @@ ms.locfileid: "53068558"
 * アプリはスコープ間で存在できます。
 * メッセージング拡張機能などのアプリ機能は、スコープ間でユーザーをフォローします。
 * ユーザーは、多くの場合、アプリを他のユーザーやチャネルTeamsを必要とします。
-* ゲスト ユーザーは、ユーザーまたはチャネルで公開Teamsアクセスできます。
+* ゲストは、ユーザーまたはチャネルで公開Teamsアクセスできます。
 
 次の内容に応じて、アプリの個人用スコープとチームスコープまたはチャネル スコープを選択できます。
 
@@ -104,4 +104,4 @@ ms.locfileid: "53068558"
 
 ## <a name="see-also"></a>関連項目
 
-[Microsoft Teams のアプリを作成する](../../overview.md)
+[最初のアプリをMicrosoft Teamsする](~/get-started/code-samples.md#build-your-first-microsoft-teams-app-overview)

@@ -4,12 +4,12 @@ description: アプリをアプリにサイドロードする方法についてM
 ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
-ms.openlocfilehash: a54068ffd57a5d622cad72267c049cee69b18d58
-ms.sourcegitcommit: 2c8b35899dd845acd66f1f927e40d99523c29a91
+ms.openlocfilehash: 86b085f55c66b7ce9937665bdd20b04841344e924610237bf2e592d867d0b632
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "52684650"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708711"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>アップロードでアプリをMicrosoft Teams
 
@@ -18,6 +18,9 @@ ms.locfileid: "52684650"
 * 自分または他の開発者と一緒にアプリをローカルでテストおよびデバッグする場合。
 * 自分だけのアプリを構築しました。 たとえば、ワークフローを自動化します。
 * 作業グループなどの小さなユーザー セット用のアプリを構築しました。
+
+> [!IMPORTANT]
+> 現在、サイドローディング アプリは Government Community Cloud (GCC) で使用できますが、GCC-Highおよび国防総省 (DOD) では使用できません。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -58,7 +61,7 @@ Teamsアプリを開く方法がいくつか提供されています。 詳細�
 > [!NOTE]
 > 個人用ボットアクティビティを完全に削除できない。 アプリを削除してもう一度追加すると、ボットとの新しい通信が以前の会話に追加されます。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [アプリをTeamsする](https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-us&rs=en-us&ad=us)

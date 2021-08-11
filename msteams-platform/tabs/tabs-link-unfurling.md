@@ -4,12 +4,12 @@ author: Rajeshwari-v
 description: リンクのリンクを解除し、ステージ ビューを開き、アプリでタブをピン留Microsoft Teamsします。
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: b54eb5942d19749b39bb9bb504dd8645f5655ef3
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: a76bf6f5d97114655893dd80ebf0de81fc242ea4d6b444516565b952aab883fe
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179945"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57708678"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>タブのリンクの展開とステージ ビュー
 
@@ -131,11 +131,11 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 | プロパティ名 | 種類 | 文字数 | 説明 |
 |:-----------|:---------|:------------|:-----------------------|
-| `entityId` | String | 64 | このプロパティは、タブが表示されるエンティティの一意の識別子です。 これは必須フィールドです。|
-| `name` | String | 128 | このプロパティは、チャネル インターフェイスのタブの表示名です。 この入力フィールドは省略できます。|
-| `contentUrl` | String | 2048 | このプロパティは、https:// キャンバスに表示するエンティティ UI をポイントするTeamsです。 これは必須フィールドです。|
-| `websiteUrl?` | String | 2048 | ユーザーがブラウザーで表示 https:// 場合、このプロパティは参照先の URL です。 これは必須フィールドです。|
-| `removeUrl?` | String | 2048 | このプロパティは、https:// を削除するときに表示される UI を示す URL です。これはオプションのフィールドです。|
+| `entityId` | 文字列 | 64 | このプロパティは、タブが表示されるエンティティの一意の識別子です。 これは必須フィールドです。|
+| `name` | 文字列 | 128 | このプロパティは、チャネル インターフェイスのタブの表示名です。 この入力フィールドは省略できます。|
+| `contentUrl` | 文字列 | 2048 | このプロパティは、https:// キャンバスに表示するエンティティ UI をポイントするTeamsです。 これは必須フィールドです。|
+| `websiteUrl?` | 文字列 | 2048 | ユーザーがブラウザーで表示 https:// 場合、このプロパティは参照先の URL です。 これは必須フィールドです。|
+| `removeUrl?` | 文字列 | 2048 | このプロパティは、https:// を削除するときに表示される UI を示す URL です。これはオプションのフィールドです。|
 
 ## <a name="see-also"></a>関連項目
 
@@ -144,7 +144,7 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 * [プライベート タブを作成する](~/tabs/how-to/create-personal-tab.md)
 * [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [会話タブを作成する](~/tabs/how-to/conversational-tabs.md)

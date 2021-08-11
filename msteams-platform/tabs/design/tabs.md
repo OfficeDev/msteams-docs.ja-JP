@@ -5,12 +5,12 @@ author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: f1823a064cd182d0271aa97bef58ec724c7819b3
-ms.sourcegitcommit: 33a43c61f27ae750776616b2cf90159455d8ba6c
+ms.openlocfilehash: f6ff2799b5f300eded89ff24b75114a7ba0fa79b330a543e684e99127dc89e4c
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "52721844"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709447"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>タブをデザインしてMicrosoft Teams
 
@@ -60,13 +60,13 @@ ms.locfileid: "52721844"
 |カウンター|説明|
 |----------|-----------|
 |1|**アプリのロゴ**: アプリのフルカラー アプリ ロゴ。|
-|2|**アプリ名**: アプリの完全な名前。|
+|2|**アプリ名**: アプリのフル ネーム|
 |3|**iframe**: アプリのコンテンツのレスポンシブ スペース (タブ設定や認証など)。|
-|4|**リンクについて**: アプリの詳細、アプリで必要なアクセス許可、プライバシー ポリシーと利用規約へのリンクなど、アプリに関する詳細を示すダイアログを開きます。|
-|5|**[閉じる**] ボタン: ダイアログを閉じます。|
-|6|**[チーム メンバーに通知する] オプション**: ダイアログボックスは、ユーザーが他のユーザーにタブを追加したと知らせる投稿を作成する必要がある場合に、ユーザーに尋ねるメッセージを表示します。|
-|7|**[戻る**] ボタン: ダイアログが開いた場所に基づいて、前の手順に進みます。|
-|8|**[保存]** ボタン: タブのセットアップを完了します。|
+|4 |**リンクについて**: アプリの詳細、アプリで必要なアクセス許可、プライバシー ポリシーと利用規約へのリンクなど、アプリに関する詳細を示すダイアログを開きます。|
+|5 |**[閉じる**] ボタン: ダイアログを閉じます。|
+|6 |**[チーム メンバーに通知する] オプション**: ダイアログボックスは、ユーザーが他のユーザーにタブを追加したと知らせる投稿を作成する必要がある場合に、ユーザーに尋ねるメッセージを表示します。|
+|7 |**[戻る**] ボタン: ダイアログが開いた場所に基づいて、前の手順に進みます。|
+|8 |**[保存]** ボタン: タブのセットアップを完了します。|
 
 ### <a name="tab-authentication-with-single-sign-on"></a>シングル サインオンを使用したタブ認証
 
@@ -107,7 +107,7 @@ ms.locfileid: "52721844"
 |1|**タブ名**: タブのナビゲーション ラベル。|
 |2|**タブ オーバーフロー**: 名前の変更や削除などのタブ アクションを開きます。|
 |3|**タブ チャット**: 右側にチャットを開き、ユーザーがコンテンツの横で会話を行えます。|
-|4|**iframe**: アプリのコンテンツを表示します。|
+|4 |**iframe**: アプリのコンテンツを表示します。|
 
 # <a name="mobile"></a>[モバイル](#tab/mobile)
 
@@ -193,8 +193,8 @@ ms.locfileid: "52721844"
 |1|**ブラウザーで開く**: デバイスの既定のブラウザーでアプリを開きます。|
 |2|**[リンクの** コピー]: ユーザーは、タブへのリンクをコピーして共有できます。|
 |3|**設定**: (オプション) タブの設定を追加した後に変更します。|
-|4|**名前** の変更 : ユーザーは、タブにチャネル、チャット、または会議に意味のある名前を付けることができます。|
-|5|**削除**: チャネル、チャット、または会議からタブを削除します。|
+|4 |**名前** の変更 : ユーザーは、タブにチャネル、チャット、または会議に意味のある名前を付けることができます。|
+|5 |**削除**: チャネル、チャット、または会議からタブを削除します。|
 
 ---
 
@@ -211,7 +211,7 @@ ms.locfileid: "52721844"
 
 品質の高いアプリ エクスペリエンスを作成するには、次の推奨事項を使用します。
 
-### <a name="collaboration"></a>グループ作業
+### <a name="collaboration"></a>コラボレーション
 
 :::row:::
    :::column span="":::
@@ -280,15 +280,15 @@ ms.locfileid: "52721844"
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="タブの表示方法を示す図。" border="false":::
 
-#### <a name="do-take-advantage-of-teams-color-tokens"></a>Do: 色トークンのTeams活用する
+#### <a name="do-take-advantage-of-teams-color-tokens"></a>実行: Teams のカラー トークンを活用する
 
-各Teamsテーマには、独自の配色があります。 テーマの変更を自動的に処理するには、デザインでカラー <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">トークン (Fluent UI)</a> を使用します。
+各 Teams テーマには独自の配色があります。 テーマの変更を自動的に処理するには、デザインで<a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">カラー トークン (Fluent UI)</a> を使用します。
 
    :::column-end:::
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="タブの表示方法を示す図。" border="false":::
 
-#### <a name="dont-hard-code-color-values"></a>[しない] : ハード コードの色の値
+#### <a name="dont-hard-code-color-values"></a>Don't: 色の値をハードコード化しないでください
 
 色トークンを使用しないTeamsデザインの拡張性が低く、管理に時間がかかる場合があります。
 

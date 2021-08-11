@@ -4,12 +4,12 @@ description: ユーザー トークンを取得する方法について説明し
 keywords: トークン、ユーザー トークン、ボットの SSO サポート
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: a43c2a46561149ff97d039a3ba8fe9f4472e2073
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 30a92de9f7d5ad9615ef2f86244b8607a47cea356030ebfb93ed3c1ffcb127a8
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566095"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57709608"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>ボットのシングル サインオン (SSO) のサポート
 
@@ -83,7 +83,7 @@ AAD ポータルを介してアプリを登録する手順は、タブ SSO フ�
     >
     > 次の重要な制限に注意する必要があります。
     >
-    > * 電子メール、プロファイル、Graph OpenId などのユーザー レベルの API アクセス許可offline_accessのみサポートされます。 その他の Microsoft Graphスコープ (Graphなど) にアクセスする必要がある場合は、 `User.Read` `Mail.Read` 推奨される回避策を[参照してください](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-graph-scopes)。
+    > * 電子メール、プロファイル、Graph OpenId などのユーザー レベルの API アクセス許可offline_accessのみサポートされます。 その他の Microsoft Graph スコープ (Graphなど) へのアクセスが必要な場合は、「アクセス トークンを取得する」を参照Graph `User.Read` `Mail.Read` [してください](../../../tabs/how-to/authentication/auth-aad-sso.md#get-an-access-token-with-graph-permissions)。
     > * アプリケーションのドメイン名は、AAD アプリケーションに登録したドメイン名と同じである必要があります。
     > * アプリごとに複数のドメインは現在サポートされていません。
     > * ドメインを使用するアプリケーションは一般的であり、セキュリティ リスクである可能性があるため `azurewebsites.net` 、サポートされていません。
@@ -301,6 +301,6 @@ is `turnContext.activity.value` of type [TokenExchangeInvokeRequest](/dotnet/api
 4. プロファイル イメージを使用してマニフェストを圧縮し、そのマニフェストをTeams。
 
 ## <a name="code-sample"></a>コード サンプル
-|**サンプル名** | **説明** |**.NET** | 
+|**サンプルの名前** | **説明** |**.NET** | 
 |----------------|-----------------|--------------|
-|ボット フレームワーク SDK | ボット フレームワーク SDK を使用するサンプル。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore)|
+|ボット フレームワーク SDK | ボット フレームワーク SDK を使用するサンプル。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore)|
