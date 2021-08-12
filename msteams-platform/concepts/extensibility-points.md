@@ -5,12 +5,12 @@ description: ユーザーが Teams でアプリを発見し、使用できる場
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 144fccc1d8a8dabb75cefdbf261dfe1c53f4a068
-ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
+ms.openlocfilehash: 9a98cbebd1ada8708b75256ebff1d93b0f528251b6250524d79bac45f59fb9f8
+ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "53585943"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "57702761"
 ---
 # <a name="entry-points-for-teams-apps"></a>Teams アプリのエントリー ポイント
 
@@ -50,7 +50,7 @@ ms.locfileid: "53585943"
 [Teamsの設計ガイドライン](../concepts/design/design-teams-app-overview.md) <br>
 [最初のアプリをMicrosoft Teamsする](../build-your-first-app/build-first-app-overview.md)
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [使用例を理解する](../concepts/design/understand-use-cases.md)
