@@ -5,12 +5,12 @@ description: 最初の呼び出しアクションを処理し、アクション 
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: f3d34a4e574169aadf49180ee8b857c8ee2b60a8
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: c93b660e3187328f022be5108456d9e1064cd557
+ms.sourcegitcommit: 1c4eaccee16dc63a1f2b5d7da2893d68f9c1533a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53069064"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "53534608"
 ---
 # <a name="create-and-send-the-task-module"></a>タスク モジュールの作成と送信
 
@@ -120,6 +120,7 @@ ms.locfileid: "53069064"
   "name": "composeExtension/fetchTask"
 }
 ```
+
 ## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-group-chat"></a>グループ チャットからタスク モジュールが呼び出された場合のペイロード アクティビティのプロパティ 
 
 タスク モジュールがグループ チャットから呼び出された場合のペイロード アクティビティのプロパティは、次のように表示されます。
@@ -174,6 +175,48 @@ ms.locfileid: "53069064"
     }
   },
   "name": "composeExtension/fetchTask"
+}
+```
+
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-meeting-chat"></a>タスク モジュールが会議チャットから呼び出された場合のペイロード アクティビティのプロパティ
+
+タスク モジュールが会議チャットから呼び出された場合のペイロード アクティビティのプロパティは、次の例で示されています。
+
+```json
+{
+   "type": "invoke",
+   "id": "f:4d271f11-4eed-622f-e820-6d82bf91692f",
+   "channelId": "msteams",
+   "from": {
+      "id": "29:1yLsdbTM1UjxqqD8cjduNUCI1jm8xZaH3lx9u5JQ04t2bknuTCkP45TXdfROTOWk1LzN1AqTgFZUEqHIVGn_qUA",
+      "name": "MOD Administrator",
+      "aadObjectId": "ef16aa89-5b26-4a2c-aebb-761b551577c0"
+   },
+   "conversation": {
+      "tenantId": "c9f9aafd-64ac-4f38-8e05-12feba3fb090",
+      "id": "19:meeting_NTk4ZDY4ZmYtOWEzZS00OTRkLThhY2EtZmUzZmUzMDQyM2M0@thread.v2",
+      "name": "Test meeting"
+   },   
+   "channelData": {
+      "tenant": {
+         "id": "c9f9aafd-64ac-4f38-8e05-12feba3fb090"
+      },
+      "source": {
+         "name": "compose"
+      },
+      "meeting": {
+         "id": "MCMxOTptZWV0aW5nX05UazRaRFk0Wm1ZdE9XRXpaUzAwT1RSa0xUaGhZMkV0Wm1VelptVXpNRFF5TTJNMEB0aHJlYWQudjIjMA=="
+      }
+   },
+   "value": {
+      "commandId": "Test",
+      "commandContext": "compose",
+      "requestId": "c46a6b53573f42b5bc801716e5ccc960",
+      "context": {
+         "theme": "default"
+      }
+   },
+   "name": "composeExtension/fetchTask",
 }
 ```
 
@@ -941,8 +984,8 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 | サンプルの名前           | 説明 | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Teams拡張アクション| アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Teams拡張機能の検索   |  検索コマンドを定義し、検索に応答する方法について説明します。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams拡張アクション| アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams拡張機能の検索   |  検索コマンドを定義し、検索に応答する方法について説明します。        |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="see-also"></a>関連項目
 

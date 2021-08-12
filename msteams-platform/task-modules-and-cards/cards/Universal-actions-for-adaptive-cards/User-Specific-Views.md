@@ -4,12 +4,12 @@ description: ユニバーサル アクションを使用したユーザー固有
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
-ms.openlocfilehash: 97d0aed313efebbdc55a1a6a96338f03a7d6f531359bfc198713bae4e006b3ef
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 00d6c8e5109fdd9cdf83662f9585a9a2d9e7fd86
+ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708665"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "53585985"
 ---
 # <a name="user-specific-views"></a>ユーザー固有のビュー
 

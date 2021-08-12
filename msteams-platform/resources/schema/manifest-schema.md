@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 localization_priority: Normal
 keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: f1f40a3cc28410fe41f114ac749f06124fbbc1f850a02771bfe67ba40c77aae3
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: b072bf34bcb242571cfd45237cd92d118efefa8c
+ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708029"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "53586055"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>リファレンス: マニフェスト スキーマのMicrosoft Teams
 
@@ -356,7 +356,7 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 |`short`|30 文字|✔|アプリの短い表示名。|
 |`full`|100 文字||完全なアプリ名が 30 文字を超える場合に使用されるアプリの完全な名前。|
 
-## <a name="description"></a>説明
+## <a name="description"></a>description
 
 **必須**—object
 
@@ -482,7 +482,7 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |title|string|12 |✔|ボット コマンド名。|
-|説明|string|128 文字|✔|単純なテキストの説明、またはコマンド構文とその引数の例。|
+|description|string|128 文字|✔|単純なテキストの説明、またはコマンド構文とその引数の例。|
 
 ## <a name="connectors"></a>コネクタ
 
