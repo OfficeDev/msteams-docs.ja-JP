@@ -5,12 +5,12 @@ description: プラットフォーム開発の基本的な概念Teams説明し�
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 7ffdfbb735f2c7c6cf5cbcf0f1e7f2134f92f613989cd3f8eac84f22cd73543e
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 57c2cdbf4900de58166bbf4f75191943aeeb1db1
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706079"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345580"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Microsoft Teams開発の基本
 
@@ -33,12 +33,16 @@ Microsoft Teamsの基本は、カスタム アプリを作成する必要があ�
 
 [使用例をマップするには、](../concepts/design/map-use-cases.md) 一般的なシナリオとアプリの機能を選択する方法について説明します。 アプリを共有し、外部システム内のアイテムで共同作業を行う情報が提供されます。 ワークフローを開始し、ユーザーに通知を送信する方法も説明します。 開始する場所、ユーザーとのソーシャルを取得する方法、会話型ボット、複数の機能の組み合わせに関するその他のヒントを取得します。
 
+## <a name="integrate-device-capabilities"></a>デバイス機能の統合
+
+Microsoft Teamsプラットフォームは、組み込みのファースト パーティ エクスペリエンスと一致する開発者機能を継続的に強化しています。 拡張された Teams プラットフォームを使用すると、パートナーは、Microsoft Teams JavaScript クライアント SDK で利用できる専用 API を使用して、カメラ、QR またはバーコード スキャナー、フォト ギャラリー、マイク、場所などのネイティブ デバイス機能にアクセスして統合できます。 
+
 ## <a name="see-also"></a>関連項目
 
 * [Web アプリとアプリを統合Teams](../samples/integrating-web-apps.md)
 * [最初のアプリをMicrosoft Teamsする](../build-your-first-app/build-first-app-overview.md) 
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [アプリTeamsについて](capabilities-overview.md)

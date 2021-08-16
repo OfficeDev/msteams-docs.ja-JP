@@ -5,18 +5,21 @@ ms.topic: conceptual
 keywords: teams ボットの開発
 localization_priority: Normal
 ms.date: 05/20/2018
-ms.openlocfilehash: 674576efccb2916b8a82ae27310d8fe49909a782
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: dd32439c74daf55c89d0e34614a073a36a5ffa1e
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566755"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345684"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>ボットを他のアプリMicrosoft Teamsする
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
 インテリジェント ボットを構築して接続し、チャットを通Microsoft Teamsユーザーと対話します。 または、簡単なコマンド ベースのボットを提供して、より広範なアプリ エクスペリエンスを提供する "コマンドライン" インターフェイスTeams提供します。 通知専用ボットを作成して、ユーザーに関連する情報をチャネルまたはダイレクト メッセージで直接プッシュできます。 既存の Bot Framework ベースのボットを持ち込み、Teams固有のサポートを追加して、エクスペリエンスを向上させる方法も可能です。
+
+> [!IMPORTANT]
+> 現在、ボットは Government Community Cloud (GCC) で使用できますが、GCC-High国防総省 (DOD) では使用できません。
 
 ![ユーザーを支援するボットの例](~/assets/images/bot_example.png)
 

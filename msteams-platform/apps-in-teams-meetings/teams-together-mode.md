@@ -2,12 +2,12 @@
 title: カスタム 一緒にモード のシーン
 description: カスタムの Together Mode シーンを使用する
 ms.topic: conceptual
-ms.openlocfilehash: b10f5506012dd3b204187dde1ef5e45d2e4bb3536ea9106f2643b0d846fbe640
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: d19f99ab55654eab03d56de8a001484bb518a7f2
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702167"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345270"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Teams でのカスタム Together モードのシーン
 
@@ -155,7 +155,7 @@ Microsoft には、シーンを構築できる Scene スタジオがあります
 
 1. 必要に応じて、[保存] ドロップダウンメニューから [共有] を選択して共有可能なリンクを作成し、他のユーザーが使用するシーンを簡単に配布できます。 このリンクを開くと、ユーザーのシーンがインストールされ、使用を開始できます。
 
-1. プレビュー後、シーンをアプリとして配布するには、Teams デベロッパー センターの [アプリ] セクションにTeamsします。 そこから、アプリ パッケージをダウンロードするか、直接組織に発行できます。
+1. プレビュー後、シーンをアプリとして配布するには、Teams デベロッパー センターの [アプリ] セクションにTeamsします。 そこからアプリ パッケージをダウンロードするか、組織に直接発行できます。
 
     >[!NOTE]
     > この手順では、設計されたシーンに対して、シーン パッケージとは異なるアプリ パッケージが必要です。 自動的に作成されるアプリ パッケージは、開発者センターの [アプリ] セクションTeams表示されます。

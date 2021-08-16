@@ -6,12 +6,12 @@ keywords: カメラ メディア QR コード qrcode バーコード バーコ�
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: ab346c9bf3a2359ce33a5ec73b743d9b340a71b3c27b9555a6978a00c3ca1e8f
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 02332ad1f0805bfc4972333086e48552761a48a8
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702772"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345256"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>QR コードまたはバーコード スキャナー機能を統合する 
 
@@ -55,17 +55,17 @@ API 応答エラーを理解して、アプリ[](#error-handling)内のエラー
 
 | バーコードの種類 | Android でサポートされる | iOS でサポート |
 | ---------- | ---------- | ------------ |
-| Codebar | 必要 | いいえ |
+| Codebar | はい | いいえ |
 | コード 39 | はい | はい | 
-| コード 93 | はい | 必要 |
-| コード 128 | はい | 必要 |
+| コード 93 | はい | はい |
+| コード 128 | はい | はい |
 | EAN-13 | はい | はい |
-| EAN-8 | はい | 必要 |
+| EAN-8 | はい | はい |
 | ITF | いいえ | はい |
-| QR コード | はい | 必要 |
-| RSS の展開 | 必要 | いいえ |
-| RSS-14 | 必要 | いいえ |
-| UPC-A | はい | 必要 |
+| QR コード | はい | はい |
+| RSS の展開 | はい | いいえ |
+| RSS-14 | はい | いいえ |
+| UPC-A | はい | はい |
 | UPC-E | はい | はい |
 
 次の図は、QR またはバーコード スキャナー機能の Web アプリ エクスペリエンスを示しています。
@@ -111,5 +111,5 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 * [メディア機能を統合Teams](mobile-camera-image-permissions.md)
 * [場所の機能を統合Teams](location-capability.md)
-* [ユーザー選択機能をユーザー選択機能にTeams](people-picker-capability.md)
+* [[ユーザー選択] を [ユーザー選択] Teams](people-picker-capability.md)
 

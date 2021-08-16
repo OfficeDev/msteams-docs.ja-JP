@@ -4,12 +4,12 @@ keywords: teams アプリの機能のアクセス許可
 description: 通常、ユーザーの同意が必要なネイティブ機能へのアクセスを要求するためにアプリ マニフェストを更新する方法
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: a8c7e2f198a13823aaa44034e11f4bb9b1d3bb0957d9a838a675a05fbfc83705
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 5ebd762abf04b977e04e960e102ada9bf586fea3
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702826"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345608"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>アプリのデバイスのアクセス許可をMicrosoft Teamsする
 
@@ -19,7 +19,6 @@ ms.locfileid: "57702826"
 > * モバイル アプリにメディア機能をMicrosoft Teamsするには、「メディア機能の統合[」を参照してください](mobile-camera-image-permissions.md)。
 > * モバイル アプリに QR またはバーコード スキャナー機能を統合するには、「Microsoft Teams QR またはバーコード スキャナー機能をモバイル アプリに統合する」[を参照Teams。](qr-barcode-scanner-capability.md)
 > * モバイル アプリ内で場所の機能を統合するにはMicrosoft Teams機能の[統合に関するページを参照してください](location-capability.md)。
-> * ユーザー選択機能をモバイル アプリ内Microsoft Teams統合するには、「ユーザー選択機能の統合」を参照[Teams。](people-picker-capability.md)
 
 ## <a name="native-device-permissions"></a>ネイティブ デバイスのアクセス許可
 
@@ -85,7 +84,7 @@ JavaScript [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=ms
 
 | プロパティ      | 説明   |
 | --- | --- |
-| メディア         | カメラ、マイク、スピーカー、およびアクセス メディア ギャラリーを使用する権限。 |
+| media         | カメラ、マイク、スピーカー、およびアクセス メディア ギャラリーを使用する権限。 |
 | 地理位置情報   | ユーザーの場所を返すアクセス許可。      |
 | 通知 | ユーザー通知を送信するアクセス許可。      |
 | midi          | デジタル楽器から楽器デジタル インターフェイス (MIDI) 情報を送受信する権限。   |
@@ -195,7 +194,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 | **サンプル名** | **説明** | **Node.js** |
 |---------------|--------------|--------|
-|デバイス アクセス許可 | デバイスMicrosoft Teamsを示すタブ サンプル アプリを使用する |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
+|デバイス アクセス許可 | デバイスMicrosoft Teamsを示すタブ サンプル アプリを使用する |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
 
 ## <a name="next-steps"></a>次の手順
 
@@ -208,5 +207,3 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 > [!div class="nextstepaction"]
 > [場所の機能を統合Teams](location-capability.md)
 
-> [!div class="nextstepaction"]
-> [ユーザー選択機能をユーザー選択機能にTeams](people-picker-capability.md)

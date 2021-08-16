@@ -4,12 +4,12 @@ description: ユーザー トークンを取得する方法について説明し
 keywords: トークン、ユーザー トークン、ボットの SSO サポート
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 30a92de9f7d5ad9615ef2f86244b8607a47cea356030ebfb93ed3c1ffcb127a8
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: f1d9a905ffb8239ecd3398e7db8ee593c6cbfba7
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709608"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345663"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>ボットのシングル サインオン (SSO) のサポート
 
@@ -303,4 +303,4 @@ is `turnContext.activity.value` of type [TokenExchangeInvokeRequest](/dotnet/api
 ## <a name="code-sample"></a>コード サンプル
 |**サンプルの名前** | **説明** |**.NET** | 
 |----------------|-----------------|--------------|
-|ボット フレームワーク SDK | ボット フレームワーク SDK を使用するサンプル。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore)|
+|ボット フレームワーク SDK | ボット フレームワーク SDK を使用するサンプル。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore)|

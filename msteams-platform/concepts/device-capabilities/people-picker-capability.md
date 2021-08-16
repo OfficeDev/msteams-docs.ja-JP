@@ -1,35 +1,35 @@
 ---
-title: ユーザー ピッカー機能を統合する
+title: '[ユーザー選択の統合]'
 author: Rajeshwari-v
-description: JavaScript クライアント SDK Teamsを使用してユーザー選択機能を統合する方法
+description: JavaScript クライアント SDK Teamsを使用して People Picker コントロールを統合する方法
 keywords: ユーザー選択コントロール
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 1d8840853c6fce808b1ec5f13ad95c099698de3ebb37f3613a14c64b4a11d3f8
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 7afc856705bdf6e9495e2063356428d07e25c21a
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702786"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345291"
 ---
-# <a name="integrate-people-picker-capability"></a>ユーザー ピッカー機能を統合する 
+# <a name="integrate-people-picker"></a>[ユーザー選択の統合]  
 
 [ユーザー選択] は、ユーザーを検索して選択するコントロールです。 これは、プラットフォームで使用できるネイティブTeamsです。 ネイティブのユーザー選択Teamsコントロールを Web アプリと統合できます。 単一または複数の選択、および構成 (チャット、チャネル、組織全体での検索の制限など) を選択できます。
 
-Web アプリ内Microsoft Teamsユーザー選択機能を統合する API を提供する[JavaScript](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)クライアント SDK を `selectPeople` 使用できます。 
+JavaScript クライアント SDK [Microsoft Teamsを](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)使用して、Web アプリ内に `selectPeople` People Picker を統合する API を提供します。 
 
-## <a name="advantages-of-integrating-people-picker-capability"></a>ユーザー選択機能を統合する利点
+## <a name="advantages-of-integrating-the-native-people-picker"></a>ネイティブの People Picker を統合する利点 
 
-* People Picker コントロールは、タスク モジュール、Teams、チャネル、会議タブ、個人用アプリなど、すべてのユーザー 選択サーフェスで機能します。
+* ユーザー選択コントロールは、タスク モジュールTeams、チャネル、会議タブ、個人用アプリなど、すべてのユーザー のサーフェスで機能します。
 * このコントロールを使用すると、チャット、チャネル、または組織全体のユーザーを検索して選択できます。
-*  ユーザー選択機能は、タスクの割り当て、タグ付け、ユーザーへの通知に関するシナリオに役立ちます。 
+* ユーザー選択ウィンドウは、タスクの割り当て、タグ付け、ユーザーへの通知に関するシナリオに役立ちます。 
 * この簡単に利用できるコントロールは、Web アプリで使用できます。 このようなコントロールを独自に構築する労力と時間を大幅に節約できます。
 
 ユーザー選択コントロールを `selectPeople` アプリに統合するには、API を呼び出Teamsがあります。 効果的な統合を行う場合は、API を呼び出 [すコード スニペット](#code-snippet) について理解している必要があります。 Web アプリのエラーを処理するには [、API](#error-handling) 応答エラーについて理解することが重要です。
 
 > [!NOTE] 
-> 現在、Microsoft Teamsユーザー選択機能のサポートはモバイル クライアントでのみ利用できます。
+> 現在、Microsoft Teamsユーザー選択のサポートはモバイル クライアントでのみ利用できます。
 
 ## <a name="selectpeople-api"></a>`selectPeople` API 
 
@@ -44,14 +44,14 @@ API の説明は次のとおりです。
 
 |構成パラメーター|種類|説明| 既定値|
 |-----|------|--------------|------|
-|`title`| 文字列| これはオプションのパラメーターです。 ユーザー選択コントロールのタイトルを設定します。 | ユーザーを選択する|
-|`setSelected`|文字列| これはオプションのパラメーターです。 事前に選択するユーザーの AAD の ID を渡す必要があります。 このパラメーターは、ユーザー選択コントロールの起動中にユーザーを事前に選択します。 1 つの選択の場合、最初の有効なユーザーだけが、残りのユーザーを無視して事前設定されます。 |Null| 
-|`openOrgWideSearchInChatOrChannel`|ブール値 | これはオプションのパラメーターです。 true に設定すると、アプリがチャットやチャネルに追加された場合でも、組織全体のスコープでユーザー選択を起動します。 |正しくない|
-|`singleSelect`|ブール値|これはオプションのパラメーターです。 true に設定すると、選択を 1 人のユーザーにのみ制限するユーザー選択を起動します。 |正しくない|
+|`title`| String| これはオプションのパラメーターです。 ユーザー選択コントロールのタイトルを設定します。 | ユーザーを選択する|
+|`setSelected`|String| これはオプションのパラメーターです。 事前に選択するユーザーの AAD の ID を渡す必要があります。 このパラメーターは、ユーザー選択コントロールの起動中にユーザーを事前に選択します。 1 つの選択の場合、最初の有効なユーザーだけが、残りのユーザーを無視して事前設定されます。 |Null| 
+|`openOrgWideSearchInChatOrChannel`|ブール値 | これはオプションのパラメーターです。 true に設定すると、アプリがチャットやチャネルに追加された場合でも、組織全体のスコープでユーザー選択を起動します。 |不正解|
+|`singleSelect`|ブール値|これはオプションのパラメーターです。 true に設定すると、選択を 1 人のユーザーにのみ制限するユーザー選択を起動します。 |不正解|
 
-次の図は、サンプル Web アプリでのユーザー選択機能のエクスペリエンスを示しています。
+次の図は、サンプル Web アプリでの People Picker のエクスペリエンスを示しています。
 
-![ユーザー選択機能の Web アプリ エクスペリエンス](../../assets/images/tabs/people-picker-control-capability.png)
+![ユーザー選択の Web アプリ エクスペリエンス](../../assets/images/tabs/people-picker-control-capability.png)
 
 ### <a name="code-snippet"></a>コード スニペット
 

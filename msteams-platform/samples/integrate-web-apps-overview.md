@@ -4,12 +4,12 @@ author: Rajeshwari-v
 description: Web アプリケーションとデバイス機能をアプリと統合するMicrosoft Teams概要。
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 125139abceb01218766dba1cd8d6c95850abd1272583e37e148aabebe68b778a
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: dd9498fe60d4e97b41072b78b5134f2fbc3af174
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707303"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345768"
 ---
 # <a name="integrate-web-apps"></a>Web アプリを統合する
 
@@ -37,7 +37,7 @@ ms.locfileid: "57707303"
 
 Microsoft Power プラットフォームは、1 つの強力なアプリケーション プラットフォームで、Power BI、Power Apps、Power Automate、Power Virtual Agentsなど、4 つの堅牢な Microsoft テクノロジを組み合わせたプラットフォームです。 これらのテクノロジを使用すると、ソリューションの構築、プロセスの自動化、データの分析、統合された統合環境内での仮想エージェントの作成が可能になります。
 
-### <a name="power-apps"></a>Power Apps
+### <a name="power-apps"></a>Power アプリ
 
 このPower Apps、ビジネス データに接続し、組織のニーズに合わせてカスタマイズされたビジネス アプリを構築できます。 Power Appsキャンバス アプリを通じてビジネスの課題を解決するために、さまざまなアプリ シナリオを有効にします。 アプリを構築した後、アプリをメーカー ポータルからエクスポートしPower Appsに埋め込Microsoft Teams。
 
@@ -77,6 +77,10 @@ Microsoft Teams と SharePoint の間の豊富な統合エクスペリエンス�
 
 Microsoft Teamsプラットフォームは、組み込みのファースト パーティ エクスペリエンスと一致する開発者機能を継続的に強化しています。 拡張された Teams プラットフォームを使用すると、パートナーは、Microsoft Teams JavaScript クライアント SDK で利用できる専用 API を使用して、カメラ、QR またはバーコード スキャナー、フォト ギャラリー、マイク、場所などのネイティブ デバイス機能にアクセスして統合できます。 
 
+## <a name="integrate-people-picker"></a>[ユーザー選択の統合]
+
+ユーザーが Web アプリ エクスペリエンスTeamsユーザーを検索および選択できる、ネイティブユーザー選択コントロールを統合できます。
+
 ## <a name="see-also"></a>関連項目
 
 * [アプリの使用例をプラットフォームの機能Teamsマップする](~/concepts/design/map-use-cases.md)
@@ -92,3 +96,4 @@ Microsoft Teamsプラットフォームは、組み込みのファースト パ�
 * [SharePoint に Teams タブを追加する](~/tabs/how-to/tabs-in-sharepoint.md)
 * [ディープ リンクの作成](~/concepts/build-and-test/deep-links.md)
 * [デバイス機能](~/concepts/device-capabilities/device-capabilities-overview.md)
+* [ユーザー選択コントロール](~/concepts/device-capabilities/people-picker-capability.md)

@@ -4,12 +4,12 @@ description: データのレート制限とベスト プラクティスMicrosoft
 ms.topic: conceptual
 localization_priority: Normal
 keywords: Teams ボットのレート制限
-ms.openlocfilehash: 1ee98af7704baa066ad6ca7adbf0997879454a3c58e83d62ea4f5a2f17c20c36
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: d113cc0236de78a34211b9348105916740189d81
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705609"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345594"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Teams でレートを制限してボットを最適化する
 
@@ -63,20 +63,23 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
         // List of error codes to retry on
         List<int> transientErrorStatusCodes = new List<int>() { 429 };
 
-        public bool IsTransient(Exception ex)
-        {
-            if (ex.Message.Contains("429"))
-                return true;
+        public static bool IsTransient(Exception ex)
+          {
+              if (ex.Message.Contains("429"))
+                  return true;
 
-            var httpOperationException = ex as HttpOperationException;
-            if (httpOperationException != null)
-            {
-                return httpOperationException.Response != null &&
-                        transientErrorStatusCodes.Contains((int)httpOperationException.Response.StatusCode);
-            }
-
-            return false;
-        }
+              HttpResponseMessageWrapper? response = null;
+              if (ex is HttpOperationException httpOperationException)
+              {
+                  response = httpOperationException.Response;
+              }
+              else
+              if (ex is ErrorResponseException errorResponseException)
+              {
+                  response = errorResponseException.Response;
+              }
+              return response != null && transientErrorStatusCodes.Contains((int)response.StatusCode);
+          }
     }
 ```
 
@@ -128,20 +131,20 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 | シナリオ | 期間 (秒) | 許可される操作の最大数 |
 | --- | --- | --- |
-| 会話に送信する | 1 | 7  |
-| 会話に送信する | 2 | 8  |
+| 会話に送信する | 1  | 7  |
+| 会話に送信する | 2  | 8  |
 | 会話に送信する | 30 | 60 |
 | 会話に送信する | 3600 | 1800 |
-| 会話を作成する | 1 | 7  |
-| 会話を作成する | 2 | 8  |
+| 会話を作成する | 1  | 7  |
+| 会話を作成する | 2  | 8  |
 | 会話を作成する | 30 | 60 |
 | 会話を作成する | 3600 | 1800 |
-| 会話メンバーを取得する| 1 | 14  |
-| 会話メンバーを取得する| 2 | 16  |
+| 会話メンバーを取得する| 1  | 14  |
+| 会話メンバーを取得する| 2  | 16  |
 | 会話メンバーを取得する| 30 | 120 |
 | 会話メンバーを取得する| 3600 | 3600 |
-| 会話を取得する | 1 | 14  |
-| 会話を取得する | 2 | 16  |
+| 会話を取得する | 1  | 14  |
+| 会話を取得する | 2  | 16  |
 | 会話を取得する | 30 | 120 |
 | 会話を取得する | 3600 | 3600 |
 
@@ -158,18 +161,18 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 | シナリオ | 期間 (秒) | 許可される操作の最大数 |
 | --- | --- | --- |
-| 会話に送信する | 1 | 14  |
-| 会話に送信する | 2 | 16  |
-| 会話を作成する | 1 | 14  |
-| 会話を作成する | 2 | 16  |
-| 会話を作成する| 1 | 14  |
-| 会話を作成する| 2 | 16  |
-| 会話メンバーを取得する| 1 | 28 |
-| 会話メンバーを取得する| 2 | 32 |
-| 会話を取得する | 1 | 28 |
-| 会話を取得する | 2 | 32 |
+| 会話に送信する | 1  | 14  |
+| 会話に送信する | 2  | 16  |
+| 会話を作成する | 1  | 14  |
+| 会話を作成する | 2  | 16  |
+| 会話を作成する| 1  | 14  |
+| 会話を作成する| 2  | 16  |
+| 会話メンバーを取得する| 1  | 28 |
+| 会話メンバーを取得する| 2  | 32 |
+| 会話を取得する | 1  | 28 |
+| 会話を取得する | 2  | 32 |
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [通話と会議のボット](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)

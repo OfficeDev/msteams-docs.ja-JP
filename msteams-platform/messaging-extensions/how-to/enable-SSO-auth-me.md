@@ -5,12 +5,12 @@ description: メッセージング拡張機能の SSO サポートを有効に�
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 3e965ed19e603bf888b107ca9ecda01aa81af192a020c41cfd26eb9bb905fd53
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 656c17612c74ee55b870fd2e7e13dea60e6ed2f8
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705746"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345242"
 ---
 # <a name="single-sign-on-sso-support-for-messaging-extensions"></a>メッセージング拡張機能のシングル サインオン (SSO) のサポート
  
@@ -21,7 +21,7 @@ ms.locfileid: "57705746"
 ## <a name="prerequisites"></a>前提条件
 
 メッセージング拡張機能とリンクの分岐解除に SSO を有効にする前提条件は次のとおりです。
-* Azure アカウントが [必要](https://azure.microsoft.com/en-us/free/) です。
+* Azure アカウントが [必要](https://azure.microsoft.com/free/) です。
 * AAD ポータルを使用してアプリを構成し、AAD ポータルを通じてアプリを登録するTeams定義されているボットの Teams アプリケーション マニフェスト[を更新する必要があります](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal)。
 
 > [!NOTE]

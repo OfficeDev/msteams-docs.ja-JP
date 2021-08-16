@@ -4,12 +4,12 @@ description: アプリをアプリにサイドロードする方法についてM
 ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
-ms.openlocfilehash: 86b085f55c66b7ce9937665bdd20b04841344e924610237bf2e592d867d0b632
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 93df0d92ce6912888dd1932be3295ca92fa5a967
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708711"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345263"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>アップロードでアプリをMicrosoft Teams
 
@@ -61,7 +61,7 @@ Teamsアプリを開く方法がいくつか提供されています。 詳細�
 > [!NOTE]
 > 個人用ボットアクティビティを完全に削除できない。 アプリを削除してもう一度追加すると、ボットとの新しい通信が以前の会話に追加されます。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [アプリをTeamsする](https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-us&rs=en-us&ad=us)

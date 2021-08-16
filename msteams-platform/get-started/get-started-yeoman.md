@@ -5,12 +5,12 @@ keywords: nodejs yeoman node.jsを開始する
 localization_priority: Normal
 ms.topic: tutorial
 ms.custom: scenarios:getting-started
-ms.openlocfilehash: fb37e49ad4cfe3b705832a1a5e419de56a859f43b601e5c8d7c026b120f37ab0
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 696c98be0b091cb937194140f5606c774447baff
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703202"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345179"
 ---
 # <a name="build-your-first-microsoft-teams-app-using-the-yeoman-generator"></a>Yeoman ジェネレーターを使用Microsoft Teamsアプリをビルドする
 
@@ -82,7 +82,7 @@ npm init yo teams@preview
 
     ![アイテムの選択](~/assets/yeoman-images/teams-first-app-2.png)
 
-1. 手順 2 で選択した項目に基づいて表示される次のフォローアップ質問のセットに応答します。
+1. 手順 3 で選択したアイテムに基づいて表示される次のフォローアップの質問に応答します。
 1. ソリューションをホストする場所の URL を入力します。 
 
    > [!NOTE]

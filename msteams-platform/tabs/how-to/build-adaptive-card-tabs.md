@@ -4,17 +4,16 @@ author: KirtiPereira
 description: アダプティブ カードを使用してタブを作成する
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 6b969461669f9edb7d7f3e216b3b91dd700881b34de17389f8a43348b09830f8
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 31954b046c550d34155bc7a9ec66cfc61b74ecf4
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705086"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345573"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>アダプティブ カードを使用してタブをビルドする
 
 > [!IMPORTANT]
-> * この機能はパブリック [Developer Preview](~/resources/dev-preview/developer-preview-intro.md) デスクトップとモバイルでサポートされています。 Web ブラウザーでのサポートは近日公開予定です。
 > * アダプティブ カード付きタブは現在、個人用アプリとしてのみサポートされています。
 
 従来のメソッドを使用してタブを開発する場合、次の問題が発生する可能性があります。
@@ -36,9 +35,8 @@ ms.locfileid: "57705086"
 
 アダプティブ カードを使用してタブを作成する前に、次の条件を実行する必要があります。
 
-* ボット開発、[アダプティブ カード](../../bots/what-are-bots.md)、[および](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)タスク モジュール[](../../task-modules-and-cards/task-modules/task-modules-bots.md)に精通Teams。
+* ボット開発、[アダプティブ カード](../../bots/what-are-bots.md)、[および](https://adaptivecards.io/)タスク モジュール[](../../task-modules-and-cards/task-modules/task-modules-bots.md)に精通Teams。
 * 開発に必要なTeamsボットを作成します。
-* Be in [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
 
 ## <a name="changes-to-app-manifest"></a>アプリ マニフェストの変更点
 
@@ -426,7 +424,7 @@ ms.locfileid: "57705086"
 
 |**サンプルの名前** | **説明** |**.NET** | **Node.js** |
 |----------------|-----------------|--------------|--------------|
-| [アダプティブ カードの表示] Teamsタブ | Microsoft Teamsタブのサンプル コードで、アダプティブ カードを表示する方法を示Teams。 |[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
+| [アダプティブ カードの表示] Teamsタブ | Microsoft Teamsタブのサンプル コードで、アダプティブ カードを表示する方法を示Teams。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>関連項目
 
@@ -436,7 +434,7 @@ ms.locfileid: "57705086"
 * [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
 * [モバイルのタブ](~/tabs/design/tabs-mobile.md)
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [タブのリンクの展開とステージ ビュー](~/tabs/tabs-link-unfurling.md)
