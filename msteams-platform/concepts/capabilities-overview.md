@@ -6,12 +6,12 @@ ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: 7cb2d042c1b666b6047aa910f3e797e2a59a396d2fd87a37f06fadc04e989d85
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: e0f7a57fb125450593fd63c412278e1030c51d42
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707125"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345691"
 ---
 # <a name="understand-microsoft-teams-app-capabilities"></a>アプリMicrosoft Teamsについて
 
@@ -69,7 +69,7 @@ Government Community Cloudは、商用環境の政府に焦点を当てたコピ
 [ユーザー向けアプリをTeams](../overview.md) 
 [最初のアプリをMicrosoft Teamsする](../build-your-first-app/build-first-app-overview.md)
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [Teams アプリのエントリ ポイント](../concepts/extensibility-points.md)

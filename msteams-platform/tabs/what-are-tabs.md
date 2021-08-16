@@ -5,12 +5,12 @@ description: Teams プラットフォームでのカスタム タブの概要
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: f7fa2ab75aa81740d1e5a3b9680c9290a57d296e346262044094965750f2d5ae
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: bafaa54bd4c7b01fcdebae48ccf9a88adfe03a3b
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707456"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345712"
 ---
 # <a name="microsoft-teams-tabs"></a>Microsoft Teams のタブ
 
@@ -81,7 +81,7 @@ ms.locfileid: "57707456"
 複数のチャネルまたはグループ タブ、およびアプリごとに最大 16 の個人用タブを使用できます。
 
 ### <a name="tools-you-can-use-to-build-tabs"></a>タブの作成に使用できるツール
-* [Teams Toolkit Stuido コードの詳細](../toolkit/visual-studio-code-overview.md)
+* [Visual Studio Code 用 Teams ツールキット](../toolkit/visual-studio-code-overview.md)
 * [Teams Toolkit Stuido の詳細](../toolkit/visual-studio-overview.md)
 
 ## <a name="see-also"></a>関連項目
@@ -91,7 +91,7 @@ ms.locfileid: "57707456"
 * [QR またはバーコード スキャナーを統合する](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [場所機能を統合する](../concepts/device-capabilities/location-capability.md)
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [前提条件](~/tabs/how-to/tab-requirements.md)

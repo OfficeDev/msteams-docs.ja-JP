@@ -6,12 +6,12 @@ keywords: カメラ イメージ マイク機能ネイティブ デバイスの�
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 41132cacc23628e0d585eaeae634eef263a62030443a362bf38075a2534ab544
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 74ebeee5392272021f2a9977709fc0b1df2a50b1
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704967"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345733"
 ---
 # <a name="integrate-media-capabilities"></a>メディア機能を統合する 
 
@@ -254,5 +254,5 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 
 * [QR スキャナーまたはバーコード スキャナー機能をアプリに統合Teams](qr-barcode-scanner-capability.md)
 * [場所の機能を統合Teams](location-capability.md)
-* [ユーザー選択機能をユーザー選択機能にTeams](people-picker-capability.md)
+* [[ユーザー選択] を [ユーザー選択] Teams](people-picker-capability.md)
 

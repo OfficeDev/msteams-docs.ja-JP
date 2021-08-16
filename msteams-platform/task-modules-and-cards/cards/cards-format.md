@@ -5,12 +5,12 @@ keywords: teams ボット カードの形式
 localization_priority: Normal
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: b972fd24be56423a4dce9ba9cb55c0cb44038e81b1859697ac36ecccda4d0283
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: e62d79b6bd07031800116bc3295ce55a06e3bc86
+ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706174"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "58345719"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams のカードの書式設定
 
@@ -45,8 +45,8 @@ ms.locfileid: "57706174"
 | --- | --- | --- |
 | 太字 | **Bold** | ```**Bold**``` |
 | 斜体 | _Italic_ | ```_Italic_``` |
-| 記号付きリスト | <ul><li>テキスト</li><li>テキスト</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
-| 番号付きリスト | <ol><li>テキスト</li><li>テキスト</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
+| 記号付きリスト | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
+| 番号付きリスト | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
 | Hyperlinks |[Bing](https://www.bing.com/)| ```[Title](url)``` |
 
 次の Markdown タグはサポートされていません。
@@ -297,10 +297,10 @@ schema 要素内で、ユーザーにフィルター処理を求め、サイズ�
 | --- | --- | --- |
 | 太字 | **text** | `**text**` |
 | 斜体 | *text* | `*text*` |
-| ヘッダー (レベル 1 &ndash; 3) | **Text** | `### Text`|
+| ヘッダー (レベル 1 &ndash; 3) | **テキスト** | `### Text`|
 | 取り消し線 | ~~text~~ | `~~text~~` |
-| 記号付きリスト | <ul><li>テキスト</li><li>テキスト</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
-| 番号付きリスト | <ol><li>テキスト</li><li>テキスト</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
+| 記号付きリスト | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
+| 番号付きリスト | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
 | 書式設定済みのテキスト | `text` | ``preformatted text`` |
 | Blockquote | >をブロッククォートする | `>blockquote text` |
 | Hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
@@ -395,12 +395,12 @@ O365 Connector カードと簡易カードの場合、Teamsとモバイル バ�
 | --- | --- | --- |
 | 太字 | **text** | `<strong>text</strong>` |
 | 斜体 | *text* | `<em>text</em>` |
-| ヘッダー (レベル 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
+| ヘッダー (レベル 1 &ndash; 3) | **テキスト** | `<h3>Text</h3>` |
 | 取り消し線 | ~~text~~ | `<strike>text</strike>` |
-| 記号付きリスト | <ul><li>テキスト</li><li>テキスト</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
-| 番号付きリスト | <ol><li>テキスト</li><li>テキスト</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
+| 記号付きリスト | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
+| 番号付きリスト | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
 | 書式設定済みのテキスト | `text` | `<pre>text</pre>` |
-| Blockquote | <blockquote>テキスト</blockquote> | `<blockquote>text</blockquote>` |
+| Blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
 | Hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | 画像リンク | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
@@ -485,12 +485,12 @@ HTML タグは、ヒーロー カードやサムネイル カードなどの単�
 | --- | --- | --- |
 | 太字 | **text** | `<strong>text</strong>` |
 | 斜体 | *text* | `<em>text</em>` |
-| ヘッダー (レベル 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
+| ヘッダー (レベル 1 &ndash; 3) | **テキスト** | `<h3>Text</h3>` |
 | 取り消し線 | ~~text~~ | `<strike>text</strike>` |
-| 記号付きリスト | <ul><li>テキスト</li><li>テキスト</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
-| 番号付きリスト | <ol><li>テキスト</li><li>テキスト</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
+| 記号付きリスト | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
+| 番号付きリスト | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
 | 書式設定済みのテキスト | `text` | `<pre>text</pre>` |
-| Blockquote | <blockquote>テキスト</blockquote> | `<blockquote>text</blockquote>` |
+| Blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
 | Hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
 | 画像リンク |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
