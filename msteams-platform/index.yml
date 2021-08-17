@@ -125,7 +125,7 @@ conceptualContent:
         - url: 'https://docs.microsoft.com/en-us/teamblog/'
           itemType: whats-new
           text: お知らせ
-    - title: Communityヘルプ
+    - title: ヘルプ
       links:
         - url: /microsoftteams/platform/feedback
           itemType: overview

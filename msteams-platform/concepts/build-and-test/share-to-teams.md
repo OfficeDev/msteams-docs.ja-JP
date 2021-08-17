@@ -4,12 +4,12 @@ description: Web サイトの [埋め込みTeamsに共有を追加する方法
 ms.topic: reference
 localization_priority: Normal
 keywords: 共有Teams共有Teams
-ms.openlocfilehash: 721f86f1995423b083550d443790b4fdc01910243c63c9eaa8e679cc140083a3
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 4bbf29bb355726b519975bec5d6fad3419b81ce3
+ms.sourcegitcommit: 09067fb9886323f144384254c41e93469c433382
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707717"
+ms.lasthandoff: 08/16/2021
+ms.locfileid: "58358623"
 ---
 # <a name="create-share-to-teams-button"></a>[Teams で共有] ボタンを作成する
 
@@ -40,7 +40,7 @@ ms.locfileid: "57707717"
     </div>
     ```
 
-    これを完了すると、Microsoft Teamsアイコンが Web サイトに追加されます。 次の図は、Share-to-Teamsアイコンを示しています。
+    これを完了すると、Microsoft Teamsアイコンが Web サイトに追加されます。 次の図は、[共有間] アイコンTeams示しています。
 
     ![[共有Teams] アイコン](~/assets/icons/share-to-teams-icon.png)
 
@@ -63,7 +63,7 @@ ms.locfileid: "57707717"
     </div>
     ```
 
-1. ページがコンテンツを動的にレンダリングする場合は、このメソッドを使用して、パイプライン内の適切な場所で [共有] ボタンを強制的 `shareToMicrosoftTeams.renderButtons()` にレンダリングできます。 
+1. ページがコンテンツを動的にレンダリングする場合は、このメソッドを使用して、パイプライン内の適切な場所で `shareToMicrosoftTeams.renderButtons()` **Share** を強制的にレンダリングできます。
 
 ## <a name="craft-your-website-preview"></a>Web サイトのプレビューを作成する
 
@@ -82,7 +82,7 @@ Web サイトが web サイトと共有Teams、選択したチャネルに挿入
 |説明|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
 |サムネイル 画像| none。 |`<meta property="og:image" content="http://example.com/image.jpg">`|
 
-html 既定のバージョンまたは Open Graph使用できます。
+HTML の既定のバージョンまたは Open Graph使用できます。
 
 ## <a name="share-to-teams-for-education"></a>共有するMicrosoft Teams for Education
 
@@ -98,8 +98,8 @@ html 既定のバージョンまたは Open Graph使用できます。
 | preview | `data-preview` | boolean (文字列として) | `true` | 共有するコンテンツのプレビューを表示するかどうかを指定します。 |
 | iconPxSize | `data-icon-px-size` | number (文字列として) | `32` | レンダリングする Share-to-Teamsボタンのサイズ (ピクセル単位)。 |
 | msgText | `data-msg-text` | string | 該当なし | メッセージ作成ボックスのリンクの前に挿入される既定のテキスト。 最大文字数は 200 文字です。 |
-| assignInstr | `data-assign-instr` | string | 該当なし | 割り当ての [命令] フィールドに挿入される既定のテキスト。 最大文字数は 200 文字です。 |
-| assignTitle | `data-assign-title` | string | 該当なし | 割り当ての [タイトル] フィールドに挿入される既定のテキスト。 最大文字数は 50 です。 |
+| assignInstr | `data-assign-instr` | string | 該当なし | 割り当て "命令" フィールドに挿入される既定のテキスト。 最大文字数は 200 文字です。 |
+| assignTitle | `data-assign-title` | string | 該当なし | 割り当て "Title" フィールドに挿入される既定のテキスト。 最大文字数は 50 です。 |
 
 ### <a name="methods"></a>メソッド
 
