@@ -1,3 +1,5 @@
+- name: Microsoft Teams のテクニカル ドキュメンテーション
+  href: /microsoftteams/platform
 - name: 概要
   expanded: true
   items:
@@ -54,8 +56,6 @@
           href: concepts/device-capabilities/qr-barcode-scanner-capability.md
         - name: 場所機能を統合する
           href: concepts/device-capabilities/location-capability.md
-        - name: ユーザー ピッカー機能を統合する
-          href: concepts/device-capabilities/people-picker-capability.md
 - name: アプリをデザインする
   items:
     - name: 概要
@@ -436,8 +436,6 @@
           href: resources/dev-preview/developer-preview-intro.md
         - name: マニフェスト スキーマ
           href: resources/schema/manifest-schema-dev-preview.md
-        - name: 機能
-          href: resources/dev-preview/developer-preview-features.md
 - name: Teams との統合
   items:
     - name: 概要
@@ -468,6 +466,8 @@
       href: tabs/how-to/tabs-in-sharepoint.md
     - name: ディープ リンクの作成
       href: concepts/build-and-test/deep-links.md
+    - name: ユーザー ピッカーを統合する
+      href: concepts/device-capabilities/people-picker-capability.md
 - name: リソース
   items:
     - name: ローカリゼーション
