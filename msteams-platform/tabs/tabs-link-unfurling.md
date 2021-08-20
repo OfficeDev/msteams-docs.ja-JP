@@ -4,12 +4,12 @@ author: Rajeshwari-v
 description: リンクのリンクを解除し、ステージ ビューを開き、アプリでタブをピン留Microsoft Teamsします。
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: f465530dcc53ff3b0174f5b78ebf2240665a7d9e
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 74f385476887ab14d9b3eac12bfb8e0735b295d5
+ms.sourcegitcommit: 77edcd5072b35fddc02a9ca7a379c6b1a0157722
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345277"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "58398677"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>タブのリンクの展開とステージ ビュー
 
@@ -131,11 +131,18 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 | プロパティ名 | 種類 | 文字数 | 説明 |
 |:-----------|:---------|:------------|:-----------------------|
-| `entityId` | String | 64 | このプロパティは、タブが表示されるエンティティの一意の識別子です。 これは必須フィールドです。|
-| `name` | String | 128 | このプロパティは、チャネル インターフェイスのタブの表示名です。 この入力フィールドは省略できます。|
-| `contentUrl` | String | 2048 | このプロパティは、https:// キャンバスに表示するエンティティ UI をポイントするTeamsです。 これは必須フィールドです。|
-| `websiteUrl?` | String | 2048 | ユーザーがブラウザーで表示 https:// 場合、このプロパティは参照先の URL です。 これは必須フィールドです。|
-| `removeUrl?` | String | 2048 | このプロパティは、https:// を削除するときに表示される UI を示す URL です。これはオプションのフィールドです。|
+| `entityId` | 文字列 | 64 | このプロパティは、タブが表示されるエンティティの一意の識別子です。 これは必須フィールドです。|
+| `name` | 文字列 | 128 | このプロパティは、チャネル インターフェイスのタブの表示名です。 この入力フィールドは省略できます。|
+| `contentUrl` | 文字列 | 2048 | このプロパティは、https:// キャンバスに表示するエンティティ UI をポイントするTeamsです。 これは必須フィールドです。|
+| `websiteUrl?` | 文字列 | 2048 | ユーザーがブラウザーで表示 https:// 場合、このプロパティは参照先の URL です。 これは必須フィールドです。|
+| `removeUrl?` | 文字列 | 2048 | このプロパティは、https:// を削除するときに表示される UI を示す URL です。これはオプションのフィールドです。|
+
+## <a name="code-sample"></a>コード サンプル
+
+| サンプルの名前 | 説明 | C# |Node.js|
+|-------------|-------------|------|----|
+|ステージ ビューのタブ |Microsoft Teamsでタブをデモンストレーションするタブ サンプル アプリを作成します。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
+    
 
 ## <a name="see-also"></a>関連項目
 

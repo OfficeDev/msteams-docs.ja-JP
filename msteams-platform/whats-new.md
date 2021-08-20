@@ -4,16 +4,19 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 localization_priority: Normal
 keywords: チームの最新情報
-ms.openlocfilehash: 53ffa86fae41cc35c080a92067cfcb6c59f9657e
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: d8b92b2e534d868dd475356f1b765626d80eb146
+ms.sourcegitcommit: 77edcd5072b35fddc02a9ca7a379c6b1a0157722
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345747"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "58398660"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
 一Microsoft Teams (GA) および開発者向けプレビューで使用できるプラットフォーム機能について説明します。
+
+> [!IMPORTANT]
+> RSS フィードのダウンロード フィードTeamsして、プラットフォームの最新の更新プログラムを[ ![ 取得できます](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)。 詳細については、「RSS フィードの [構成」を参照してください](#get-latest-updates)。
 
 ## <a name="ga-features"></a>GA の機能
 
@@ -25,7 +28,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 <summary><b>2021</b></summary>
 
-| **Date** | **メモ** | **変更されたトピック** |
+| **日付** | **メモ** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
 |08/12/2021|アダプティブ カードを使用してタブをビルドする|[アダプティブ カードを使用してタブをビルドする](tabs/how-to/build-adaptive-card-tabs.md)|
 |08/04/2021| タブのエクスペリエンスを囲む余白がなくなりました。  | [タブ余白の削除](resources/removing-tab-margins.md) |
@@ -63,7 +66,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
   
 <summary><b>2020</b></summary>
 
-| **Date** | **メモ** | **変更されたトピック** |
+| **日付** | **メモ** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
 |11/30/2020|ID プラットフォームとタブTeams Toolkit Visual Studio Code統合。|[タブ用のシングル サインオンTeams ToolkitとVisual Studio Code認証](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Teamsバージョン 1.8 に更新されたアプリ マニフェスト。|[リファレンス: マニフェスト スキーマのMicrosoft Teams](resources/schema/manifest-schema.md)|
@@ -97,7 +100,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
   
 <summary><b>2019</b></summary>
 
-| **Date** | **メモ** | **変更されたトピック** |
+| **日付** | **メモ** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
 | 12/26/2019 | ボットに送信されるペイロード内のパラメーターは暗号化されなくなったため、この値を使用してこれらのメッセージへのディープリンク `replyToId` を作成できます。 メッセージ ペイロードには、パラメーターに暗号化された値が含まれます `legacy.replyToId` 。  |
 | 11/05/2019 | JavaScript SDK を使用したシングル サインオンTeams使用します。 | [シングル サインオン](tabs/how-to/authentication/auth-aad-sso.md) |
@@ -127,7 +130,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 <summary><b>2018</b></summary>
 
-| **Date** | **メモ** | **変更されたトピック** |
+| **日付** | **メモ** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
 | 2018 年 11 月 12 日 | グループ チャット内のタブは、リリースされたバージョンのグループ チャットでTeams。 この作業の一環として、[タブ] セクションはわかりやすくするために再作業されています。| [構成可能なタブ](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | ノード JS と .NET/C# の開始は、Teams で App Studio を使用するように更新され、Azure での Node ベースの Teams アプリのホスティングに新しいセクションが追加されました。 | [C#/.NET](~/get-started/get-started-dotnet-app-studio.md)と App Studio を使用して Microsoft Teams プラットフォームで始める 、 Node JS と[App Studio](~/get-started/get-started-nodejs-app-studio.md)を使用した Microsoft Teams プラットフォームの使用を開始する[、Azure](~/get-started/get-started-nodejs-in-azure.md)でノード Teams アプリをホストする|
@@ -166,7 +169,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 開発者プレビューは、リリースされていないプラットフォーム機能に早期にアクセスできるTeamsプログラムです。  
 
-| **Date** | **メモ** | **変更されたトピック** |
+| **日付** | **メモ** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
 |06/23/2021| 会議の詳細 API とリアルタイムの会議Teamsイベント。 | [Teams 会議用のアプリを作成する](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-details-api) |
 |06/21/2021|ボットを使用した個人用アプリのアンインストール動作 | [ボットを使用して個人用アプリの動作更新プログラムをアンインストールする](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
@@ -186,3 +189,20 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 ## <a name="submit-your-feedback"></a>フィードバックを送信する
 
 開発者にTeams、バグのファイル、機能要求の提出、投稿をお勧めしています。 利用可能なチャネルを通じてフィードバックを [送信できます](feedback.md)。
+
+## <a name="get-latest-updates"></a>最新の更新プログラムを取得する
+
+RSS フィードを構成することでTeamsプラットフォームの更新プログラムを[取得できます](/microsoftteams/platform/feed.atom)。
+
+**RSS フィードを構成するには**
+
+1. Microsoft Teams を開きます。
+1. 左側 **のTeams** ウィンドウから [新しいウィンドウ] を選択します。
+1. チーム内のチャネルを選択します。
+1. [省略記号 &#x25CF;&#x25CF;&#x25CF; 選択し、ドロップダウン リストから [コネクタ] **を選択します**。
+1. 表示される **[コネクタ** ] **ダイアログ ボックスで** RSS を検索します。
+1. [構成 **] を選択します**。
+1. [RSS 接続の名前 **を入力する] に名前を入力します**。
+1. [RSS **https://aka.ms/TeamsPlatformUpdates** フィード **のアドレス] に入力します**。
+1. [ダイジェスト頻度] ドロップダウン リストからフィード **の頻度を** 選択します。
+1. **[保存]** を選択します。

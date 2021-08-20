@@ -5,12 +5,12 @@ description: Teams プラットフォームでのカスタム タブの概要
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: bafaa54bd4c7b01fcdebae48ccf9a88adfe03a3b
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 5a884be8133129ea98abf2557e529c3c88657d15
+ms.sourcegitcommit: 77edcd5072b35fddc02a9ca7a379c6b1a0157722
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345712"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "58398649"
 ---
 # <a name="microsoft-teams-tabs"></a>Microsoft Teams のタブ
 
@@ -82,7 +82,7 @@ ms.locfileid: "58345712"
 
 ### <a name="tools-you-can-use-to-build-tabs"></a>タブの作成に使用できるツール
 * [Visual Studio Code 用 Teams ツールキット](../toolkit/visual-studio-code-overview.md)
-* [Teams Toolkit Stuido の詳細](../toolkit/visual-studio-overview.md)
+* [Visual Studio 用 Teams ツールキット](../toolkit/visual-studio-overview.md)
 
 ## <a name="see-also"></a>関連項目
 
