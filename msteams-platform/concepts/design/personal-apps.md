@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-ms.openlocfilehash: 4a176f5c2b35ef21567d7d4096183f4ac503d98ad4adb905245a6dee570f5f99
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 52029fedc39270c029cea8a85f6b45988c2340d9
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705782"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408623"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>アプリの個人用アプリを設計Microsoft Teams
 
@@ -27,37 +27,19 @@ ms.locfileid: "57705782"
 
 ## <a name="add-a-personal-app"></a>個人用アプリを追加する
 
-Teams ストア (AppSource) またはアプリ のフライアウトから個人用アプリを追加するには、Teams の左側にある [その他] アイコンを選択します (次の例を参照)。
+ユーザーは、Teams ストアまたはアプリ のフライアウトから個人用アプリを追加するには、Teamsの左側にある [詳細] アイコンを選択します (次の例を参照)。
 
 :::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="例は、アプリのフライアウトから個人用アプリを追加する方法を示しています。" border="false":::
 
 ## <a name="use-a-personal-app-private-workspace"></a>個人用アプリを使用する (プライベート ワークスペース)
 
-プライベート ワークスペースを使用すると、アプリのコンテンツを一か国間で表示することなく、一Teams。
+プライベート ワークスペースを使用すると、ユーザーはアプリのコンテンツを一か国間で表示することなく、一Teams。
 
 (実装ノート: プライベート ワークスペースは個人用タブ [*機能に基づいて作成*](../../build-your-first-app/build-personal-tab.md) されます)。
 
 ### <a name="anatomy-personal-app-private-workspace"></a>Anatomy: 個人用アプリ (プライベート ワークスペース)
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="例は、個人用タブのコンポーネント構造を示しています。" border="false":::
-
-|カウンター|説明|
-|----------|-----------|
-|A|**アプリの属性**: アプリのロゴと名前。|
-|B|**タブ**: 個人用アプリのナビゲーションを提供します。|
-|C|**Popout ビュー**: 親ウィンドウからスタンドアロンの子ウィンドウにアプリコンテンツをプッシュします。|
-|D|**[その他]** メニュー: 追加のアプリのオプションと情報が含まれます。 (代わりに、タブ **設定** することもできます)。|
-
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="例は、個人用タブの構造構造を示しています。" border="false":::
-
-|カウンター|説明|
-|----------|-----------|
-|A|**タブ**: 個人用アプリのナビゲーションを提供します。|
-|1|**iframe**: アプリのコンテンツを表示します。|
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+#### <a name="mobile"></a>モバイル
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="例は、個人用タブのコンポーネント構造を示しています。" border="false":::
 
@@ -75,9 +57,25 @@ Teams ストア (AppSource) またはアプリ のフライアウトから個人
 |A|**タブ**: 個人用アプリのナビゲーションを提供します。|
 |1|**webview**: アプリのコンテンツを表示します。|
 
----
+#### <a name="desktop"></a>デスクトップ
 
-### <a name="designing-with-ui-templates-and-advanced-components"></a>UI テンプレートと高度なコンポーネントを使用した設計
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="例は、個人用タブのコンポーネント構造を示しています。" border="false":::
+
+|カウンター|説明|
+|----------|-----------|
+|A|**アプリの属性**: アプリのロゴと名前。|
+|B|**タブ**: 個人用アプリのナビゲーションを提供します。|
+|C|**Popout ビュー**: 親ウィンドウからスタンドアロンの子ウィンドウにアプリコンテンツをプッシュします。|
+|D|**[その他]** メニュー: 追加のアプリのオプションと情報が含まれます。 (代わりに、タブ **設定** することもできます)。|
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="例は、個人用タブの構造構造を示しています。" border="false":::
+
+|カウンター|説明|
+|----------|-----------|
+|A|**タブ**: 個人用アプリのナビゲーションを提供します。|
+|1|**iframe**: アプリのコンテンツを表示します。|
+
+### <a name="design-with-ui-templates-and-advanced-components"></a>UI テンプレートと高度なコンポーネントを使用して設計する
 
 個人用タブを設計するには、Teamsテンプレートとコンポーネントのいずれかを使用します。
 
@@ -90,21 +88,11 @@ Teams ストア (AppSource) またはアプリ のフライアウトから個人
 
 ## <a name="use-a-personal-app-bot"></a>個人用アプリ (ボット) の使用
 
-個人用アプリには、1 対 1 の会話とプライベート通知用のボットを含めできます (たとえば、同僚がアートボードにコメントを投稿する場合など)。 ボットは、指定したタブで使用できます。
+個人用アプリには、1 対 1 の会話とプライベート通知用のボットを含めできます (たとえば、同僚がアートボードにコメントを投稿する場合など)。 ユーザーは、指定したタブでボットを操作します。
 
 ### <a name="anatomy-personal-app-bot"></a>解剖学: 個人用アプリ (ボット)
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="例は、個人用ボット コンポーネントの構造を示しています。" border="false":::
-
-|カウンター|説明|
-|----------|-----------|
-|A|**[ボット]** タブ: たとえば、[チャット] タブ **を含** め、ボットの会話と通知にアクセスします。|
-|B|**ボット メッセージ**: ボットは、多くの場合、メッセージや通知をカード (アダプティブ カードなど) の形式で送信します。|
-|C|**[作成]** ボックス : ボットにメッセージを送信する入力フィールド。|
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+#### <a name="mobile"></a>モバイル
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="例は、個人用ボット コンポーネントの構造を示しています。" border="false":::
 
@@ -115,11 +103,19 @@ Teams ストア (AppSource) またはアプリ のフライアウトから個人
 |C|**ボット メッセージ**: ボットは、多くの場合、メッセージや通知をカード (アダプティブ カードなど) の形式で送信します。|
 |D|**[作成]** ボックス : ボットにメッセージを送信する入力フィールド。|
 
----
+#### <a name="desktop"></a>デスクトップ
+
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="例は、個人用ボット コンポーネントの構造を示しています。" border="false":::
+
+|カウンター|説明|
+|----------|-----------|
+|A|**[ボット]** タブ: たとえば、[チャット] タブ **を含** め、ボットの会話と通知にアクセスします。|
+|B|**ボット メッセージ**: ボットは、多くの場合、メッセージや通知をカード (アダプティブ カードなど) の形式で送信します。|
+|C|**[作成]** ボックス : ボットにメッセージを送信する入力フィールド。|
 
 ## <a name="manage-a-personal-tab"></a>個人用タブの管理
 
-ユーザーは、アプリのTeamsを右クリックして、他のアプリ オプションをピン留め、削除、構成できます。
+ユーザーは、Teamsの左側で個人用アプリを右クリックして、他のアプリ オプションをピン留め、削除、および構成できます。
 
 :::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="例では、個人用アプリを管理するためのオプションを示します。" border="false":::
 

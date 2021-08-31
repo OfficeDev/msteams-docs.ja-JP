@@ -4,12 +4,12 @@ description: アプリ ストア (AppSource) に送信Teamsガイドラインに
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 818fe6c9123e6a43788c650542b9e0aed6aeed90e0c78c72ae08f4d4f53d060a
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 3902c714970ed6e7214e4345dcbe162f28d26487
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703608"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408540"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teamsの検証ガイドライン
 
@@ -199,6 +199,11 @@ Teamsは、機能によって異なる妥当な時間枠内に対応する必要
   * "...を操作Microsoft Teams。
   * "...内Microsoft Teams。
   * "...for Microsoft Teams。
+  * "...と統合Microsoft Teams。
+  * "...用に構築されます。."
+  * "...用に開発されました。"
+  * "...用に設計されています。."。
+
 
 **してはいけないこと**
 
@@ -209,15 +214,8 @@ Teamsは、機能によって異なる妥当な時間枠内に対応する必要
 * 入力ミス、文法上のエラー、不要な大文字を含める (たとえば、**ユーザー** ではなく **ユーザー)。**
 * AppSource へのリンクを含める。
 * 認定された Microsoft パートナーである場合を限り、次の言語を使用します。
-  * "...と統合Microsoft Teams"
-  * "...と統合されます。."
-  * "......" 用に構築されています。
-  * "...に構築されています。."
-  * "...で実行されます。."
-  * "...によって有効になります。."
   * "...の認定を受けています。
-  * ".....用に開発されました。
-  * "......" 用に設計されています。
+  * "...によって動力を与えられた..."
 
 ### <a name="screenshots"></a>スクリーンショット
 
@@ -429,7 +427,7 @@ Teamsは、機能によって異なる妥当な時間枠内に対応する必要
 
 アプリで Microsoft Graphによって提供されるアクティビティ フィード API を使用[している場合は](/graph/teams-send-activityfeednotifications)、次のガイドラインに準拠してください。
 
-### <a name="general"></a>一般
+### <a name="general"></a>全般
 
 * アプリ構成で指定された通知トリガーはすべて、アプリで通知を受け取る必要があります。
 * 通知は、アプリ用に構成されたサポートされている言語ごとにローカライズする必要があります。
@@ -455,7 +453,7 @@ Teamsは、機能によって異なる妥当な時間枠内に対応する必要
 
 アプリは、動的広告、バナー広告、メッセージ内の広告を含む広告を表示しなけり。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [パートナー センター アカウントを作成する](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)

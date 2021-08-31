@@ -6,19 +6,21 @@ author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: teams 承認 OAuth SSO AAD rsc Graph
-ms.openlocfilehash: c2fd0a335d992eb026ae1b61c186830d25217d52491c997a9a2baf1dc58152e0
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: c013153470b4be54df82fa313b5d2f8dca16fe9a
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707626"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58528951"
 ---
 # <a name="resource-specific-consent"></a>リソース固有の同意
 
 > [!NOTE]
 > チャット スコープに対するリソース固有の同意は、パブリック開発者 [プレビューでのみ利用](../../resources/dev-preview/developer-preview-intro.md) できます。
 
-リソース固有の同意 (RSC) は、Microsoft Teams と Microsoft Graph API の統合であり、アプリは API エンドポイントを使用して、組織内のチームまたはチャットのいずれかの特定のリソースを管理できます。 RSC アクセス許可モデルを使用すると、チームの所有者とチャットの所有者は、アプリケーションがチームのデータとチャットのデータにそれぞれアクセスおよび変更するための同意を付与できます。
+リソース固有の同意 (RSC) は、Microsoft Teams と Microsoft Graph API の統合であり、アプリは API エンドポイントを使用して、組織内のチームまたはチャットのいずれかの特定のリソースを管理できます。 RSC アクセス許可モデルを使用すると、チームの所有者とチャットの所有者は、アプリケーションがチームのデータとチャットのデータにそれぞれアクセスおよび変更するための同意を付与できます。 
+
+**注:** チャットに会議または通話が関連付けられている場合は、関連する RSC アクセス許可がそれらのリソースにも適用されます。
 
 ## <a name="resource-specific-permissions"></a>リソース固有のアクセス許可
 
@@ -60,7 +62,9 @@ ms.locfileid: "57707626"
 | TeamsTab.Delete.Chat           | このチャットのタブを削除します。                                      |
 | TeamsTab.ReadWrite.Chat        | このチャットのタブを管理します。                                      |
 | TeamsAppInstallation.Read.Chat | このチャットにインストールされているアプリを取得します。                   |
-| OnlineMeeting.ReadBasic.Chat   | このチャットに関連付けられた会議の名前、スケジュール、開催者、参加リンクなどの基本的なプロパティを取得します。 |
+| OnlineMeeting.ReadBasic.Chat   | このチャットに関連付けられた会議の名前、スケジュール、開催者、参加リンク、開始/終了通知などの基本的なプロパティを読み取る。 |
+| Calls.AccessMedia.Chat         | このチャットまたは会議に関連付けられた通話でメディア ストリームにアクセスします。                                    |
+| Calls.JoinGroupCalls.Chat         | このチャットまたは会議に関連付けられた通話に参加します。                                    |
 
 詳細については、「チャット リソース [固有の同意のアクセス許可」を参照してください](/graph/permissions-reference#chat-resource-specific-consent-permissions)。
 
@@ -140,8 +144,8 @@ RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣
 
 |名前| 種類 | 説明|
 |---|---|---|
-|`id` |文字列 |AAD アプリ ID。 詳細については [、「AAD ポータルにアプリを登録する」を参照してください](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)。|
-|`resource`|文字列| このフィールドは RSC で操作を行う必要がありますが、エラー応答を回避するには、値を追加して値を指定する必要があります。任意の文字列が実行します。|
+|`id` |String |AAD アプリ ID。 詳細については [、「AAD ポータルにアプリを登録する」を参照してください](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)。|
+|`resource`|String| このフィールドは RSC で操作を行う必要がありますが、エラー応答を回避するには、値を追加して値を指定する必要があります。任意の文字列が実行します。|
 |`applicationPermissions`|文字列の配列|アプリの RSC アクセス許可。 詳細については、「リソース固有 [のアクセス許可」を参照してください](resource-specific-consent.md#resource-specific-permissions)。|
 
 >
@@ -156,19 +160,19 @@ RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣
     "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
     "resource": "https://RscBasedStoreApp",
     "applicationPermissions": [
-      "TeamSettings.Read.Group",
-      "ChannelMessage.Read.Group",
-      "TeamSettings.ReadWrite.Group",
-      "ChannelSettings.ReadWrite.Group",
-      "Channel.Create.Group",
-      "Channel.Delete.Group",
-      "TeamsApp.Read.Group",
-      "TeamsTab.Read.Group",
-      "TeamsTab.Create.Group",
-      "TeamsTab.ReadWrite.Group",
-      "TeamsTab.Delete.Group",
-      "Member.Read.Group",
-      "Owner.Read.Group"
+        "TeamSettings.Read.Group",
+        "TeamSettings.ReadWrite.Group",
+        "ChannelSettings.Read.Group",
+        "ChannelSettings.ReadWrite.Group",
+        "Channel.Create.Group",
+        "Channel.Delete.Group",
+        "ChannelMessage.Read.Group",
+        "TeamsAppInstallation.Read.Group",
+        "TeamsTab.Read.Group",
+        "TeamsTab.Create.Group",
+        "TeamsTab.ReadWrite.Group",
+        "TeamsTab.Delete.Group",
+        "TeamMember.Read.Group"
     ]
   }
 ```
@@ -180,17 +184,19 @@ RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣
     "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
     "resource": "https://RscBasedStoreApp",
     "applicationPermissions": [
-      "ChatSettings.Read.Chat",
-      "ChatSettings.ReadWrite.Chat",
-      "ChatMessage.Read.Chat",
-      "ChatMember.Read.Chat",
-      "Chat.Manage.Chat",
-      "TeamsTab.Read.Chat",
-      "TeamsTab.Create.Chat",
-      "TeamsTab.Delete.Chat",
-      "TeamsTab.ReadWrite.Chat",
-      "TeamsAppInstallation.Read.Chat",
-      "OnlineMeeting.ReadBasic.Chat"
+        "ChatSettings.Read.Chat",
+        "ChatSettings.ReadWrite.Chat",
+        "ChatMessage.Read.Chat",
+        "ChatMember.Read.Chat",
+        "Chat.Manage.Chat",
+        "TeamsTab.Read.Chat",
+        "TeamsTab.Create.Chat",
+        "TeamsTab.Delete.Chat",
+        "TeamsTab.ReadWrite.Chat",
+        "TeamsAppInstallation.Read.Chat",
+        "OnlineMeeting.ReadBasic.Chat",
+        "Calls.AccessMedia.Chat",
+        "Calls.JoinGroupCalls.Chat"
     ]
   }
 ```
@@ -244,7 +250,7 @@ RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣
 
 | **サンプルの名前** | **説明** | **.NET** |**Node.js** |
 |-----------------|-----------------|----------------|----------------|
-| Resource-Specific同意 (RSC) | RSC を使用して API Graph呼び出します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|
+| Resource-Specific同意 (RSC) | RSC を使用して API Graph呼び出します。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|
 
 ## <a name="see-also"></a>関連項目
  

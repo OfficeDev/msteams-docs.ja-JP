@@ -5,12 +5,12 @@ description: 各コンポーネントで使用される UI コンポーネント
 ms.author: surbhigupta
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: a23cd05947ac2d9d4e8117420bf2e2c11613e430989613bf2d267e5c892bf39c
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 90dcf95cfde1d7c6c2878da7a10d8b3b0245de3f
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703503"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408693"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>高度な UI Microsoft Teamsを使用したアプリの設計
 
@@ -32,15 +32,13 @@ Breadcrumbs は、アプリの階層を伝えるナビゲーション支援で�
 * コミュニケーション階層
 * ナビゲーション
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="例は、デスクトップ上のパンくずテンプレートを示しています。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+### <a name="mobile"></a>モバイル
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="例は、モバイル上のパンくずテンプレートを示しています。" border="false":::
 
----
+### <a name="desktop"></a>デスクトップ
+
+:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="例は、デスクトップ上のパンくずテンプレートを示しています。" border="false":::
 
 ## <a name="left-nav"></a>左ナビゲーション
 
@@ -51,15 +49,13 @@ Breadcrumbs は、アプリの階層を伝えるナビゲーション支援で�
 * [ページ] タブ内の複数Teams参照します。
 * 複雑なアプリを複数のページに分割します。
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="例は、デスクトップ上の左側のナビゲーション テンプレートを示しています。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+### <a name="mobile"></a>モバイル
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="例は、モバイル上の左ナビゲーション テンプレートを示しています。" border="false":::
 
----
+### <a name="desktop"></a>デスクトップ
+
+:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="例は、デスクトップ上の左側のナビゲーション テンプレートを示しています。" border="false":::
 
 ## <a name="notification-bar"></a>通知バー
 
@@ -71,15 +67,13 @@ Breadcrumbs は、アプリの階層を伝えるナビゲーション支援で�
 * 成功メッセージ
 * 情報メッセージまたはプロモーション メッセージ
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="例は、デスクトップ上の通知バーの UI テンプレートを示しています。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+### <a name="mobile"></a>モバイル
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="例では、モバイルの通知バー UI テンプレートを表示します。" border="false":::
 
----
+### <a name="desktop"></a>デスクトップ
+
+:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="例は、デスクトップ上の通知バーの UI テンプレートを示しています。" border="false":::
 
 ## <a name="stage"></a>ステージ
 
@@ -92,19 +86,17 @@ Breadcrumbs は、アプリの階層を伝えるナビゲーション支援で�
 * 別のアプリまたはブラウザーではなく、Teams内の大きなサーフェスにコンテンツを表示する
 * スポットライト メディアまたは他のリッチ コンテンツ
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="例は、デスクトップ上のステージ テンプレートを示しています。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+### <a name="mobile"></a>モバイル
 
 アプリは、アダプティブ カード、共有リンク、またはビジュアル コンポーネント (グラフなど) からステージを起動できます。
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-stage.png" alt-text="例は、モバイル上のステージ テンプレートを示しています。" border="false":::
 
----
+### <a name="desktop"></a>デスクトップ
 
-## <a name="toolbar"></a>ツール バー
+:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="例は、デスクトップ上のステージ テンプレートを示しています。" border="false":::
+
+## <a name="toolbar"></a>ツールバー
 
 ツールバーは、コントロールのセットをグループ化するコンテナーです。
 
@@ -114,12 +106,10 @@ Breadcrumbs は、アプリの階層を伝えるナビゲーション支援で�
 * コンテキスト フィルターと検索
 * ナビゲーションとパンくず
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="例は、デスクトップ上のツール バー テンプレートを示しています。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+### <a name="mobile"></a>モバイル
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="例は、モバイルのツール バー テンプレートを示しています。" border="false":::
 
----
+### <a name="desktop"></a>デスクトップ
+
+:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="例は、デスクトップ上のツール バー テンプレートを示しています。" border="false":::

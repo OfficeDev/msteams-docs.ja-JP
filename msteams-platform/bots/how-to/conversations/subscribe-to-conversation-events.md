@@ -5,12 +5,12 @@ description: ボットから会話イベントを処理するMicrosoft Teamsし�
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: c50409720bdb700295934171d8a2a3474205adb59e8397dcc64a01b9aec23fa3
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 94bbb43110e45c9ab84c686f8fc8e2ade19d6998
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703628"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58529001"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams ボットの会話イベント
 
@@ -1289,12 +1289,10 @@ async def on_reactions_removed(
 ボットをスレッドに `installationUpdate` インストールすると、ボットはイベントを受け取ります。 スレッドからボットをアンインストールすると、イベントもトリガーされます。 ボットをインストールすると、イベント内のアクション フィールドが追加に設定され、ボットがアンインストールされた場合、アクションフィールドは削除に設定 *されます*。
  
 > [!NOTE]
-> アプリケーションをアップグレードし、ボットを追加または削除すると、アクションによってイベントもトリガー `installationUpdate` されます。 ボット **を** 削除した場合、ボット *を追加したり* 、削除アップグレードを行った場合は、アクション フィールドは追加 *アップグレード* に設定されます。 
-
-> [!IMPORTANT]
-> インストール更新イベントは、現在開発者向けプレビューで、2021 年 3 月に一般提供 (GA) になります。 インストール更新イベントを表示するには、Teams クライアントをパブリック開発者プレビューに移動し、アプリを個人またはチームまたはチャットに追加できます。
+> アプリケーションをアップグレードし、ボットを追加または削除すると、アクションによってイベントもトリガー `installationUpdate` されます。 ボット **を** 削除した場合、ボット *を追加したり* 、削除アップグレードを行った場合は、アクション フィールドは追加 *アップグレード* に設定されます。
 
 ### <a name="install-update-event"></a>更新イベントのインストール
+
 イベントを `installationUpdate` 使用して、インストール時にボットから導入メッセージを送信します。 このイベントは、プライバシーとデータ保持の要件を満たすのに役立ちます。 ボットがアンインストールされた場合は、ユーザーデータまたはスレッド データをクリーンアップして削除できます。
 
 # <a name="c"></a>[C#](#tab/dotnet)
@@ -1323,7 +1321,7 @@ turnContext, CancellationToken cancellationToken) {
 
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
-利用不可
+使用不可
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -1382,7 +1380,7 @@ turnContext, CancellationToken cancellationToken) {
 
 # <a name="python"></a>[Python](#tab/python)
 
-利用不可
+使用不可
 
 ---
 
@@ -1408,9 +1406,9 @@ turnContext, CancellationToken cancellationToken) {
 
 | **サンプルの名前** | **説明** | **.NET** | **Node.js** | **Python** |
 |----------|-----------------|----------|
-| 会話ボット | ボットの会話イベントのサンプル コード。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| 会話ボット | ボットの会話イベントのサンプル コード。 | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [プロアクティブ メッセージを送信する](~/bots/how-to/conversations/send-proactive-messages.md)

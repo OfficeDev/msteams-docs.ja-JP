@@ -5,16 +5,16 @@ description: 会議でアプリを設計し、Teams UI キットをMicrosoft Tea
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: 621fbb1e3da7ef9083229acf93b05c72cc528bf2ec813529d93025e1a54d79c6
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 7da7d6c23f0f66fd73e976fb92d1883f9befd0d2
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702494"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58528916"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>会議の拡張機能Microsoft Teams設計する
 
-アプリを作成して、会議の生産性を高めることができます。 たとえば、通話中にアンケートを完了したり、会議のフローを中断しない簡単なリマインダーを送信したりします。
+アプリを作成して、会議の生産性を高めることができます。 たとえば、会議中にアンケートを完了したり、会議のフローを中断しない簡単なリマインダーを送信したりします。
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
@@ -35,23 +35,21 @@ ms.locfileid: "57702494"
 
 ### <a name="add-during-a-meeting"></a>会議中に追加する
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+#### <a name="mobile"></a>モバイル
+
+アプリが追加された後 (デスクトップなど)、ユーザーは [その他] を選択して会議でアプリに **アクセスできます** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: 。
+
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="例は、モバイルでの会議中に会議の内線情報を追加する方法を示しています。" border="false":::
+
+#### <a name="desktop"></a>デスクトップ
 
 会議で、ユーザーは [アプリの **追加]** を選択 :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **し**、必要なアプリを選択できます。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="例は、会議中に会議の内線情報を追加する方法を示しています。" border="false":::
 
-# <a name="mobile"></a>[モバイル](#tab/mobile)
-
-デスクトップにアプリを追加した後、アプリを選択し、[その他] を選択して会議でアプリを使用 **できます** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: 。
-
-:::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="例は、モバイルでの会議中に会議の内線情報を追加する方法を示しています。" border="false":::
-
----
-
 ## <a name="before-a-meeting"></a>会議の前
 
-会議の前に、ユーザーはタブにコンテンツを追加できます。次の例は、通話中に回答するアンケートの下書き質問を示しています。
+会議の前に、アプリはタブ内のユーザーが利用できます。次の例は、会議中にユーザーが回答するアンケートの下書き質問を示しています。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="例は、通話の前に会議の詳細でコンテンツをアプリする方法を示しています。" border="false":::
 
@@ -65,7 +63,7 @@ ms.locfileid: "57702494"
 |2|**タブ オーバーフロー**: 名前の変更や削除などのタブ アクションを開きます。|
 |3|**iframe**: アプリのコンテンツを表示します。|
 
-### <a name="designing-with-ui-templates"></a>UI テンプレートを使用した設計
+### <a name="design-with-ui-templates"></a>UI テンプレートを使用した設計
 
 会議タブを設計するにはTeams UI テンプレートのいずれかを使用します。
 
@@ -80,7 +78,7 @@ ms.locfileid: "57702494"
 
 [会議内] タブは、会議中の共同作業を強化するキャンバスです。 出席者は、共有ビューまたは役割ベースのビューを使用して、会議ステージ外の専用スペースでアプリ コンテンツを表示および操作できます。
 
-### <a name="use-cases"></a>ユース ケース
+### <a name="use-cases"></a>使用例
 
 ユーザーは、[会議内] タブを使用して次の場合があります。
 
@@ -88,15 +86,13 @@ ms.locfileid: "57702494"
 * 会議参加者のポーリング、アンケート、またはタスク アイテムを作成します。
 * 会議に関連するメモを表示します。 たとえば、販売リードに関する情報です。
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="例は、会議内タブでポーリング コンテンツを表示する方法を示しています。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+#### <a name="mobile"></a>モバイル
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="例は、モバイル上の会議内タブでポーリング コンテンツを表示する方法を示しています。" border="false":::
 
----
+#### <a name="desktop"></a>デスクトップ
+
+:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="例は、会議内タブでポーリング コンテンツを表示する方法を示しています。" border="false":::
 
 ### <a name="anatomy-in-meeting-tab"></a>解剖学: [会議中] タブ
 
@@ -137,7 +133,7 @@ ms.locfileid: "57702494"
 
 会議中のダイアログは、会議ステージTeams表示されます。 ユーザーの注意、確認、またはやり取りが必要ですが、微妙であり、会議を中断しません。 これらの使用は、軽くてタスク指向のシナリオに対して使用する必要があります。
 
-### <a name="use-cases"></a>ユース ケース
+### <a name="use-cases"></a>使用例
 
 会議中のダイアログは、参加者が次の操作を行うユーザー (会議の開催者など) によってトリガーされます。
 
@@ -146,15 +142,13 @@ ms.locfileid: "57702494"
 * 承認を送信する
 * アラームを取得する
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="例は、会議内ダイアログを使用する方法を示しています。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+### <a name="mobile"></a>モバイル
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="例は、モバイルで会議内ダイアログを使用する方法を示しています。" border="false":::
 
----
+### <a name="desktop"></a>デスクトップ
+
+:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="例は、会議内ダイアログを使用する方法を示しています。" border="false":::
 
 ### <a name="anatomy-in-meeting-dialog"></a>解剖学: 会議中のダイアログ
 
@@ -186,24 +180,24 @@ ms.locfileid: "57702494"
 * **Width**: ダイアログの iframe の幅は、サポートされているサイズ範囲内の任意の場所で指定できます。
 * **Height**: ダイアログの iframe の高さは、サポートされているサイズ範囲内の任意の場所で指定できます。 アプリのコンテンツが最大の高さを超えた場合は、ユーザーが垂直方向にスクロールすることもできます。
 
-実装するには、キーを使用して幅と高さを指定 [`externalResourceUrl`](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#notificationsignal-api) します。
+実装するには、キーを使用して幅と高さを指定 [`externalResourceUrl`](~/apps-in-teams-meetings/API-references.md#notificationsignal-api) します。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="例は、会議中のダイアログを表示します。幅: 最小--280 ピクセル (248 ピクセルの iframe)。Max---460 ピクセル (428 ピクセルの iframe)。高さ: 300 ピクセル (iframe)。" border="false":::
 
 ## <a name="use-the-shared-meeting-stage"></a>共有会議ステージの使用
 
-共有会議ステージは、会議参加者がアプリ コンテンツをリアルタイムで操作し、共同作業するのに役立ちます。 たとえば、ユーザーは、ドキュメントの編集、ホワイトボードによるブレインストーミング、ダッシュボードのレビューに集中できます。
+共有会議ステージは、会議参加者がアプリ コンテンツをリアルタイムで操作し、共同作業するのに役立ちます。 たとえば、ユーザーは会議に集中して、ドキュメントの編集、ホワイトボードによるブレインストーミング、ダッシュボードのレビューを行います。
 
 会議ステージに共有されるアプリは、共有画面と同じ領域を占有します。 ステージは、すべての会議参加者の向きを変更します。
 
-### <a name="use-cases"></a>ユース ケース
+### <a name="use-cases"></a>使用例
 
 共有会議のステージは、共同作業と参加に関するすべてです。 開始に役立つシナリオの例を次に示します。
 
 :::row:::
    :::column span="1":::
 
-**編集とレビュー**: ダッシュボードに飛び込み、通話中の全員と計画を立て込む。
+**編集とレビュー**: 会議のすべてのユーザーと一緒にダッシュボードと計画に取り組む。
 
    :::column-end:::
    :::column span="3":::
@@ -296,7 +290,7 @@ ms.locfileid: "57702494"
 
 #### <a name="dont-introduce-unnecessary-elements"></a>[しない]: 不要な要素を導入する
 
-複数の操作を含む単一の会議内ダイアログは、通話の邪魔になる可能性があります。
+複数の操作を含む 1 つの会議内ダイアログは、会議の邪魔になる可能性があります。
 
    :::column-end:::
 :::row-end:::
@@ -511,7 +505,7 @@ Teams会議は暗いテーマに最適化され、視覚的および認知的な
    :::column-end:::
 :::row-end:::
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [会議用にアプリを構成する](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)

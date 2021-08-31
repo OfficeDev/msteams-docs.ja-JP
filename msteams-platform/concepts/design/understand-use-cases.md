@@ -5,12 +5,12 @@ description: アプリを計画Microsoft Teams、まずアプリが解決しよ�
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 5171ce800c09c31486cfddcffcca7069ed81f0bf8d913876acaaaef4144d7bf7
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 6669492c25cb3701f5c937b3f99e39d411fbc4a4
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703174"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408545"
 ---
 # <a name="understand-your-use-cases"></a>ユース ケースを理解する
 
@@ -77,14 +77,7 @@ ms.locfileid: "57703174"
 
 ユーザーが現在のソリューションで使用する新しい機能を特定します。 アプリに追加する新機能のロードマップがある場合、設計とアーキテクチャに影響が及ぼす可能性があります。
 
-## <a name="see-also"></a>関連項目
-
-* [アプリの配信方法を選ぶ](../deploy-and-publish/apps-publish-overview.md)
-* [デザイン タブ](../../tabs/design/tabs.md)
-* [デザイン ボット](../../bots/design/bots.md)
-* [最初のアプリをMicrosoft Teamsする](../build-your-first-app/build-first-app-overview.md)
-
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [使用例のマップ](../../concepts/design/map-use-cases.md)

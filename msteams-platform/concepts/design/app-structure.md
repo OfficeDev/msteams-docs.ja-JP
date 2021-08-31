@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 2e053186355b583e456e73c6443f5d8c043157a9ae0a09941a86a3aabd7978c5
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: eb7e26a726313c366765f3ee4fd36aebc064ca78
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706703"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408581"
 ---
 # <a name="understand-the-microsoft-teams-app-structure"></a>アプリ構造Microsoft Teams理解する
 
@@ -30,19 +30,17 @@ ms.locfileid: "57706703"
 
 ***サポートされているスコープ**: 個人用*
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-キャンバスは iframe なので、エクスペリエンスを完全にカスタマイズできます。
-
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-desktop.png" alt-text="開発者がデスクトップ上の個人用アプリ用にカスタマイズTeamsフロントエンド領域を示す概念的なイメージ。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+### <a name="mobile"></a>モバイル
 
 キャンバスは Web ビューなので、エクスペリエンスを完全にカスタマイズできます。
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-mobile.png" alt-text="開発者がモバイル上の個人用アプリ用にカスタマイズTeamsフロントエンド領域を示す概念的なイメージ。" border="false":::
 
----
+### <a name="desktop"></a>デスクトップ
+
+キャンバスは iframe なので、エクスペリエンスを完全にカスタマイズできます。
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-desktop.png" alt-text="開発者がデスクトップ上の個人用アプリ用にカスタマイズTeamsフロントエンド領域を示す概念的なイメージ。" border="false":::
 
 ## <a name="tabs"></a>タブ
 
@@ -50,19 +48,17 @@ ms.locfileid: "57706703"
 
 ***サポートされているスコープ**: チャネル、チャット、会議*
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-キャンバスは iframe なので、エクスペリエンスを完全にカスタマイズできます。
-
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-desktop.png" alt-text="開発者がデスクトップ上のタブ用にカスタマイズTeamsフロントエンド領域を示す概念イメージ。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+### <a name="mobile"></a>モバイル
 
 キャンバスは Web ビューなので、エクスペリエンスを完全にカスタマイズできます。
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-mobile.png" alt-text="開発者がモバイル上のタブ用にカスタマイズTeamsフロントエンド領域を示す概念的なイメージ。" border="false":::
 
----
+### <a name="desktop"></a>デスクトップ
+
+キャンバスは iframe なので、エクスペリエンスを完全にカスタマイズできます。
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-desktop.png" alt-text="開発者がデスクトップ上のタブ用にカスタマイズTeamsフロントエンド領域を示す概念イメージ。" border="false":::
 
 ## <a name="bots"></a>ボット
 
@@ -70,15 +66,13 @@ ms.locfileid: "57706703"
 
 ***サポートされているスコープ**: 個人用、チャネル、チャット、会議*
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-desktop.png" alt-text="開発者がデスクトップ上のボット用にカスタマイズTeamsフロントエンド領域を示す概念的なイメージ。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+### <a name="mobile"></a>モバイル
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-mobile.png" alt-text="開発者がモバイル上のボット用にカスタマイズTeamsフロントエンド領域を示す概念的なイメージ。" border="false":::
 
----
+### <a name="desktop"></a>デスクトップ
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-bots-desktop.png" alt-text="開発者がデスクトップ上のボット用にカスタマイズTeamsフロントエンド領域を示す概念的なイメージ。" border="false":::
 
 ## <a name="messaging-extensions"></a>メッセージング拡張機能
 
@@ -86,15 +80,13 @@ ms.locfileid: "57706703"
 
 ***サポートされているスコープ**: 個人用、チャネル、チャット、会議*
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-desktop.png" alt-text="開発者がデスクトップ上のメッセージング拡張機能用にカスタマイズTeamsフロントエンド領域を示す概念的なイメージ。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+### <a name="mobile"></a>モバイル
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-mobile.png" alt-text="開発者がモバイル上のメッセージング拡張機能用にカスタマイズTeamsフロントエンド領域を示す概念的なイメージ。" border="false":::
 
----
+### <a name="desktop"></a>デスクトップ
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-messaging-exetensions-desktop.png" alt-text="開発者がデスクトップ上のメッセージング拡張機能用にカスタマイズTeamsフロントエンド領域を示す概念的なイメージ。" border="false":::
 
 ## <a name="meeting-extensions"></a>ミーディング拡張機能
 
@@ -102,16 +94,14 @@ ms.locfileid: "57706703"
 
 ***サポートされているスコープ**: 会議、チャット*
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-サーフェスは iframe であり、エクスペリエンスをカスタマイズできますが、会議中にこれらのアプリは暗いテーマを使用し、狭いという念頭に置いておきます。
-
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-desktop.png" alt-text="開発者がデスクトップ上の会議拡張機能用にカスタマイズTeamsフロントエンド領域を示す概念的なイメージ。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+### <a name="mobile"></a>モバイル
 
 サーフェスは Web ビューで、エクスペリエンスをカスタマイズできますが、会議中にこれらのアプリは暗いテーマを使用することを念頭に置いておきます。
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-mobile.png" alt-text="開発者がモバイルでの会議拡張機能用にカスタマイズTeamsフロントエンド領域を示す概念的なイメージ。" border="false":::
 
----
+### <a name="desktop"></a>デスクトップ
+
+サーフェスは iframe であり、エクスペリエンスをカスタマイズできますが、会議中にこれらのアプリは暗いテーマを使用し、狭いという念頭に置いておきます。
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-desktop.png" alt-text="開発者がデスクトップ上の会議拡張機能用にカスタマイズTeamsフロントエンド領域を示す概念的なイメージ。" border="false":::

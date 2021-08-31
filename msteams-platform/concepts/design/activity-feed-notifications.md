@@ -5,24 +5,24 @@ description: アプリのアクティビティ フィード通知を設計し、
 localization_priority: Normal
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 4a2b5510c2e5d0b26897593bbf0fdc0dc493b46ead3be669ff8b72d7cc3970eb
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 7bc5527a4ac849ab6a46692da85b051f86606f92
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705150"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408553"
 ---
 # <a name="designing-activity-feed-notifications-for-your-microsoft-teams-app"></a>アプリのアクティビティ フィード通知をMicrosoft Teamsする
 
 アクティビティ フィードは、ユーザーが自分の通知にアクセスする画面Microsoft Teams。 フィードは過去 4 週間の通知を保持します。
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/activity-feed/desktop-overview.png" alt-text="例では、アクティビティ フィードに表示されるアプリ通知Teams示します。" border="false":::
-
 # <a name="mobile"></a>[モバイル](#tab/mobile)
 
 :::image type="content" source="../../assets/images/activity-feed/mobile-overview.png" alt-text="例は、モバイルのアクティビティ フィードのTeamsアプリ通知を示しています。" border="false":::
+
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
+:::image type="content" source="../../assets/images/activity-feed/desktop-overview.png" alt-text="例では、アクティビティ フィードに表示されるアプリ通知Teams示します。" border="false":::
 
 ---
 
@@ -53,6 +53,15 @@ ms.locfileid: "57705150"
 
 各アクティビティは、システム通知を生成します。 表示される内容は、ユーザーが通知設定で構成する内容によって異なります。 ユーザーは、オペレーティング システムに基づいて通知スタイルを選択できます。
 
+# <a name="mobile"></a>[モバイル](#tab/mobile)
+
+:::image type="content" source="../../assets/images/activity-feed/mobile-related-system-notifications.png" alt-text="Android および iOS Teamsアクティビティ フィード カードのバリアント。" border="false":::
+
+|カウンター|説明|
+|----------|-----------|
+|1|Android|
+|2|iOS|
+
 # <a name="desktop"></a>[デスクトップ](#tab/desktop)
 
 :::image type="content" source="../../assets/images/activity-feed/related-system-notifications.png" alt-text="さまざまなオペレーティング システムTeamsアクティビティ カードのバリアント。" border="false":::
@@ -63,18 +72,9 @@ ms.locfileid: "57705150"
 |2|Windows|
 |3|Mac|
 
-# <a name="mobile"></a>[モバイル](#tab/mobile)
-
-:::image type="content" source="../../assets/images/activity-feed/mobile-related-system-notifications.png" alt-text="Android および iOS Teamsアクティビティ フィード カードのバリアント。" border="false":::
-
-|カウンター|説明|
-|----------|-----------|
-|1|Android|
-|2|iOS|
-
 ---
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [アクティビティ フィード通知の実装](/graph/teams-send-activityfeednotifications)

@@ -266,12 +266,14 @@
   items:
     - name: 概要
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
-    - name: 会議アプリ拡張性
+    - name: 統合された会議アプリ
       href: apps-in-teams-meetings/meeting-app-extensibility.md
-    - name: Teams 会議アプリへの前提条件と API リファレンス
+    - name: Teams 会議でのアプリの前提条件
       href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
     - name: 会議用アプリを有効にして構成する
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+    - name: 会議アプリ API リファレンス
+      href: apps-in-teams-meetings/API-references.md
     - name: Teams でのカスタム Together モードのシーン
       href: apps-in-teams-meetings/teams-together-mode.md
 - name: Webhook とコネクタを作成する
@@ -346,6 +348,8 @@
           href: bots/how-to/authentication/add-authentication.md
         - name: SSO 認証を利用する
           href: bots/how-to/authentication/auth-aad-sso-bots.md
+        - name: SSO を使用したボットのステップ バイ ステップ ガイド
+          href: sbs-bots-with-sso.yml
     - name: メッセージング拡張機能
       items:
         - name: メッセージング拡張機能に認証を追加する

@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: teams 承認 OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: 8dd206abd4724bd5e23217504ff45edcc580d492e7af9f10ca46d70d64488cc9
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 629d798e600a3a9a9ba1cbd7fd75bdc8de13a507
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708085"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58528944"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>リソース固有の同意のアクセス許可をテストTeams
 
@@ -30,45 +30,46 @@ ms.locfileid: "57708085"
 ## <a name="example-for-a-team"></a>チームの例
 ```json
 "webApplicationInfo":{
-      "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
-      "resource":"https://AnyString",
-      "applicationPermissions":[
-         "Channel.Create.Group",
-         "Channel.Delete.Group",
-         "ChannelMessage.Read.Group",
-         "ChannelSettings.Read.Group",
-         "ChannelSettings.Edit.Group",
-         "Member.Read.Group",
-         "Owner.Read.Group",
-         "TeamsApp.Read.Group",
-         "TeamsTab.Read.Group",
-         "TeamsTab.Create.Group",
-         "TeamsTab.Edit.Group",
-         "TeamsTab.Delete.Group",
-         "TeamSettings.Read.Group",
-         "TeamSettings.Edit.Group"
-      ]
+    "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource":"https://AnyString",
+    "applicationPermissions":[
+        "TeamSettings.Read.Group",
+        "TeamSettings.ReadWrite.Group",
+        "ChannelSettings.Read.Group",
+        "ChannelSettings.ReadWrite.Group",
+        "Channel.Create.Group",
+        "Channel.Delete.Group",
+        "ChannelMessage.Read.Group",
+        "TeamsAppInstallation.Read.Group",
+        "TeamsTab.Read.Group",
+        "TeamsTab.Create.Group",
+        "TeamsTab.ReadWrite.Group",
+        "TeamsTab.Delete.Group",
+        "TeamMember.Read.Group"
+    ]
    }
 ```
 
 ## <a name="example-for-a-chat"></a>チャットの例
 ```json
 "webApplicationInfo":{
-      "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
-      "resource":"https://AnyString",
-      "applicationPermissions":[
-          "ChatSettings.Read.Chat",
-          "ChatSettings.ReadWrite.Chat",
-          "ChatMessage.Read.Chat",
-          "ChatMember.Read.Chat",
-          "Chat.Manage.Chat",
-          "TeamsTab.Read.Chat",
-          "TeamsTab.Create.Chat",
-          "TeamsTab.Delete.Chat",
-          "TeamsTab.ReadWrite.Chat",
-          "TeamsAppInstallation.Read.Chat",
-          "OnlineMeeting.ReadBasic.Chat"
-      ]
+    "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource":"https://AnyString",
+    "applicationPermissions":[
+        "ChatSettings.Read.Chat",
+        "ChatSettings.ReadWrite.Chat",
+        "ChatMessage.Read.Chat",
+        "ChatMember.Read.Chat",
+        "Chat.Manage.Chat",
+        "TeamsTab.Read.Chat",
+        "TeamsTab.Create.Chat",
+        "TeamsTab.Delete.Chat",
+        "TeamsTab.ReadWrite.Chat",
+        "TeamsAppInstallation.Read.Chat",
+        "OnlineMeeting.ReadBasic.Chat",
+        "Calls.AccessMedia.Chat",
+        "Calls.JoinGroupCalls.Chat"
+    ]
    }
 ```
 
@@ -77,6 +78,8 @@ ms.locfileid: "57708085"
 
 >[!NOTE]
 >アプリがチームスコープとチャット スコープの両方でのインストールをサポートすることを意図している場合は、チームとチャットの両方のアクセス許可を同じマニフェストで指定できます `applicationPermissions` 。
+
+>アプリが通話/メディア API にアクセスすることを意図している場合は、Azure Bot Service の AAD アプリ `webApplicationInfo.Id` ID [である必要があります](/graph/cloud-communications-get-started#register-a-bot)。
 
 ## <a name="test-added-rsc-permissions-to-a-team-using-the-postman-app"></a>Postman アプリを使用してチームに追加された RSC アクセス許可をテストする
 

@@ -4,12 +4,12 @@ keywords: teams アプリの機能のアクセス許可
 description: 通常、ユーザーの同意が必要なネイティブ機能へのアクセスを要求するためにアプリ マニフェストを更新する方法
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: 5ebd762abf04b977e04e960e102ada9bf586fea3
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 27e70b0a8300d85138cb06d58160e32e3e308143
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345608"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408573"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>アプリのデバイスのアクセス許可をMicrosoft Teamsする
 
@@ -24,6 +24,7 @@ ms.locfileid: "58345608"
 
 ネイティブ デバイス機能にアクセスするには、デバイスのアクセス許可を要求する必要があります。 デバイスのアクセス許可は、タブ、タスク モジュール、メッセージング拡張機能など、すべてのアプリ構成で同様に機能します。 ユーザーは、デバイスのアクセス許可を管理するために、Teamsのアクセス許可ページに移動する必要があります。
 デバイスの機能にアクセスすると、次のような、Teamsプラットフォームで豊富なエクスペリエンスを構築できます。
+
 * 画像をキャプチャして表示します。
 * QR またはバーコードをスキャンします。
 * 短いビデオを記録して共有します。
@@ -31,7 +32,7 @@ ms.locfileid: "58345608"
 * ユーザーの位置情報を使用して、関連する情報を表示します。
 
 > [!NOTE]
-> 現在、Teamsは、マルチ ウィンドウ アプリ、タブ、および会議のサイドパネルに対するデバイスのアクセス許可をサポートしていない。 
+> 現在、Teamsは、マルチウィンドウ アプリ、タブ、および会議サイド パネルのデバイスのアクセス許可をサポートしています。
 
 ## <a name="access-device-permissions"></a>デバイスのアクセス許可にアクセスする
 
@@ -39,21 +40,12 @@ JavaScript [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=ms
 
 これらの機能へのアクセスは、最新の Web ブラウザーでは標準ですが、アプリ マニフェストを更新Teams機能についてユーザーに通知する必要があります。 この更新プログラムを使用すると、デスクトップ クライアントでアプリを実行している間にアクセス許可をTeamsできます。
 
-> [!NOTE] 
+> [!NOTE]
 > 現在、Microsoft Teams機能と QR バーコード スキャナー機能のサポートはモバイル クライアントでのみ利用できます。
 
 ## <a name="manage-permissions"></a>権限の管理
 
 ユーザーは、[特定のアプリに対するアクセス許可を許可Teams拒否する]を選択して、デバイスのアクセス許可をユーザー設定で管理できます。
- 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-1. アプリを開Teamsします。
-1. ウィンドウの右上隅にあるプロファイル アイコンを選択します。
-1. ドロップダウン **設定**  >  **から [** アクセス許可] を選択します。
-1. 目的の設定を選択します。
-
-   ![[デバイスのアクセス許可] デスクトップ設定画面](../../assets/images/tabs/device-permissions.png)
 
 # <a name="mobile"></a>[モバイル](#tab/mobile)
 
@@ -63,6 +55,15 @@ JavaScript [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=ms
 1. 目的の設定を選択します。
 
     ![[デバイスのアクセス許可] モバイル設定画面](../../assets/images/tabs/MobilePermissions.png)
+
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
+1. アプリを開Teamsします。
+1. ウィンドウの右上隅にあるプロファイル アイコンを選択します。
+1. ドロップダウン **設定**  >  **から [** アクセス許可] を選択します。
+1. 目的の設定を選択します。
+
+   ![[デバイスのアクセス許可] デスクトップ設定画面](~/assets/images/tabs/device-permissions.png)
 
 ---
 
@@ -120,7 +121,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 > * をサポート `camera` し `gallery` `microphone` 、selectMedia API を [**使用して有効になります**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true)。 1 [**つのイメージ キャプチャに captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) を使用します。
 > * getLocation `location` API を使用して [**サポートが有効になります**](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true)。 HTML5 地理位置情報 API は現在、デスクトップ クライアントで完全にサポートされていないので、場所 `getLocation API` Teams必要があります。
 
-例:
+次に例を示します。
  * ユーザーに自分の場所へのアクセスを求めるメッセージを表示するには、次のコマンドを呼び出す必要があります `getCurrentPosition()` 。
 
     ```Javascript
@@ -147,9 +148,6 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
     Notification.requestPermission(function(result) { /* ... */ });
     ```
 
-
-
-
 * カメラを使用するか、フォト ギャラリーにアクセスするには、Teamsにアクセス許可を求めるメッセージが表示されます `selectMedia()` 。
 
     ```JavaScript
@@ -173,15 +171,16 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
       /* ... *
     /});
     ```
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-   ![タブ デスクトップ デバイスのアクセス許可のプロンプト](~/assets/images/tabs/device-permissions-prompt.png)
 
 # <a name="mobile"></a>[モバイル](#tab/mobile)
 
    ![タブ モバイル デバイスのアクセス許可のプロンプト](../../assets/images/tabs/MobileLocationPermission.png)
 
-* * * 
+# <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
+   ![タブ デスクトップ デバイスのアクセス許可のプロンプト](~/assets/images/tabs/device-permissions-prompt.png)
+
+---
 
 ## <a name="permission-behavior-across-login-sessions"></a>ログイン セッション間のアクセス許可の動作
 
@@ -206,4 +205,3 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 > [!div class="nextstepaction"]
 > [場所の機能を統合Teams](location-capability.md)
-

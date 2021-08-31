@@ -5,12 +5,12 @@ description: 標準化された UI コンポーネント、レイアウト、お
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: reference
-ms.openlocfilehash: 7d46829be50e6c88dc7629376437878a4b5fecf93d82e805a12093c96b3677ba
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 6405c8a35b9d80c0a7fbcb9d28ae5e1a637a2ea6
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702891"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408683"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>UI テンプレートをMicrosoft Teamsアプリを設計する
 
@@ -56,15 +56,13 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 * レポートの指標
 * 異なる情報を 1 か所に整理する
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="例は、デスクトップ上のダッシュボード UI テンプレートを示しています。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+### <a name="mobile"></a>モバイル
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-dashboard.png" alt-text="例は、モバイルでのダッシュボード UI テンプレートを示しています。" border="false":::
 
----
+### <a name="desktop"></a>デスクトップ
+
+:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="例は、デスクトップ上のダッシュボード UI テンプレートを示しています。" border="false":::
 
 ## <a name="data-visualization"></a>データ可視化
 
@@ -75,15 +73,13 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 * 複雑な情報を表示する
 * ダッシュボードの作成
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="例は、デスクトップ上のデータ可視化 UI テンプレートを示しています。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+### <a name="mobile"></a>モバイル
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="例は、モバイルでのデータ可視化 UI テンプレートを示しています。" border="false":::
 
----
+### <a name="desktop"></a>デスクトップ
+
+:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="例は、デスクトップ上のデータ可視化 UI テンプレートを示しています。" border="false":::
 
 ## <a name="empty-state"></a>空の状態
 
@@ -91,22 +87,20 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 
 ### <a name="top-use-cases"></a>上位の使用例
 
-* サインインする
+* サインイン
 * ウェルカム メッセージと初回実行エクスペリエンス
 * 成功メッセージ
 * エラー メッセージ
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="例は、デスクトップ上の空の状態 UI テンプレートを示しています。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+### <a name="mobile"></a>モバイル
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-empty-state.png" alt-text="例は、モバイル上の空の状態 UI テンプレートを示しています。" border="false":::
 
----
+### <a name="desktop"></a>デスクトップ
 
-## <a name="filter"></a>Filter
+:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="例は、デスクトップ上の空の状態 UI テンプレートを示しています。" border="false":::
+
+## <a name="filter"></a>フィルター
 
 フィルターを使用すると、選択した条件に基づいて表示される情報を減らします。 コンテンツを整理するテーブル、リスト、カード、その他のコンポーネントを含むフィルターを含めできます。
 
@@ -127,22 +121,20 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 
 ### <a name="top-use-cases"></a>上位の使用例
 
-* サインインする
+* サインイン
 * ユーザー プロファイル
 * 設定
 * ユーザー入力コレクション
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="例は、デスクトップ上のフォーム UI テンプレートを示しています。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+### <a name="mobile"></a>モバイル
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-form.png" alt-text="例は、モバイルでのフォーム UI テンプレートを示しています。" border="false":::
 
----
+### <a name="desktop"></a>デスクトップ
 
-## <a name="list"></a>List
+:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="例は、デスクトップ上のフォーム UI テンプレートを示しています。" border="false":::
+
+## <a name="list"></a>リスト
 
 リストを使用して、関連するアイテムをスキャン可能な形式で表示し、ユーザーがリスト全体または個々のアイテムに対してアクションを実行できます。
 
@@ -151,17 +143,15 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 * データの表示
 * アプリ コンテンツに関するコンテキスト アクション
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="例は、デスクトップ上のリスト UI テンプレートを示しています。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+### <a name="mobile"></a>モバイル
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-list.png" alt-text="例は、モバイルのリスト UI テンプレートを示しています。" border="false":::
 
----
+### <a name="desktop"></a>デスクトップ
 
-## <a name="sign-in"></a>サインインする
+:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="例は、デスクトップ上のリスト UI テンプレートを示しています。" border="false":::
+
+## <a name="sign-in"></a>サインイン
 
 さまざまなコンテキストと ID プロバイダー用にアプリ Teamsフローを設計できます。 次の例では、シングル サインオン (SSO) を含み、最も簡単な認証エクスペリエンスをお勧めします。
 
@@ -169,15 +159,13 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 
 * ユーザーの認証
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="例は、デスクトップ上の UI テンプレートのサインインを示しています。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+### <a name="mobile"></a>モバイル
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-sign-in.png" alt-text="例は、モバイルでのサインイン UI テンプレートを示しています。" border="false":::
 
----
+### <a name="desktop"></a>デスクトップ
+
+:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="例は、デスクトップ上の UI テンプレートのサインインを示しています。" border="false":::
 
 ## <a name="settings"></a>設定
 
@@ -199,15 +187,13 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 * ブレインストーミング。 さまざまなカテゴリにアイデアを追加する
 * 並べ替えの演習。 任意の種類の情報をバケットに整理する
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="例は、デスクトップ上のタスク ボード UI テンプレートを示しています。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+### <a name="mobile"></a>モバイル
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-task-board.png" alt-text="例は、モバイル上のタスク ボード UI テンプレートを示しています。" border="false":::
 
----
+### <a name="desktop"></a>デスクトップ
+
+:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="例は、デスクトップ上のタスク ボード UI テンプレートを示しています。" border="false":::
 
 ## <a name="wizard"></a>ウィザード
 
@@ -219,12 +205,10 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 * オンボード
 * 初回実行エクスペリエンス
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="例では、デスクトップにウィザード UI テンプレートを表示します。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+### <a name="mobile"></a>モバイル
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-wizard.png" alt-text="例は、モバイルでのウィザード UI テンプレートを示しています。" border="false":::
 
----
+### <a name="desktop"></a>デスクトップ
+
+:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="例では、デスクトップにウィザード UI テンプレートを表示します。" border="false":::

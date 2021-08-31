@@ -5,12 +5,12 @@ description: アプリ開発の開始と環境Microsoft Teamsする方法につ�
 ms.author: adhal
 ms.date: 05/24/2021
 ms.topic: quickstart
-ms.openlocfilehash: 82b4c6b54286f70672fecd0f5dd059cf7f47036821b078d502ba9cae73dc5498
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 58326e81f7fe68f67b4c054b9a615696276cc610
+ms.sourcegitcommit: bab08a3a4934f06457a0882bd55ccefc6708682b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703152"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "58822228"
 ---
 # <a name="prerequisites-get-started-with-microsoft-teams-app-development"></a>前提条件: アプリ開発Microsoft Teams開始する
 
@@ -97,6 +97,7 @@ npm グローバル キャッシュを PATH に追加してください。 こ�
 アプリ開発用のブラウザー ツールをインストールします。 たとえば、アプリがアプリを使用して作成されている場合React開発者ツールReact使用できます。
 
 - [ReactChrome の開発者向けツール](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+- [Reactエッジの開発者向けツール](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil)
 
 Azure に格納されているデータにアクセスする場合、または Azure のアプリ用にクラウドベースのバックエンドを展開Teams、次のツールをインストールします。
 

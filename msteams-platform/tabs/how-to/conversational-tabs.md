@@ -5,12 +5,12 @@ description: チャネル タブの会話型サブエンティティ チャッ�
 keywords: teams タブ チャネル構成可能
 ms.topic: conceptual
 ms.author: lomeybur
-ms.openlocfilehash: 6c2574453f00735d4441c389648df375fc1d01046d2c8f558b470efe4f3392ca
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: dffd4eb468167561735dbc292a400416c9bb11af
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705107"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58529008"
 ---
 # <a name="create-conversational-tabs"></a>会話タブを作成する
 
@@ -89,6 +89,12 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 };
 ```
 
+## <a name="code-sample"></a>コード サンプル
+
+| サンプルの名前 | 説明 | C# |Node.js|
+|-------------|-------------|------|----|
+|[会話の作成] タブ| Microsoft Teams作成タブを示すタブ サンプル アプリを作成します。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+
 ## <a name="see-also"></a>関連項目
 
 * [Teamsタブ](~/tabs/what-are-tabs.md)
@@ -97,7 +103,7 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 * [モバイルのタブ](~/tabs/design/tabs-mobile.md)
 * [アダプティブ カードを使用してタブをビルドする](~/tabs/how-to/build-adaptive-card-tabs.md)
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [タブ余白の変更](~/resources/removing-tab-margins.md)

@@ -4,12 +4,12 @@ description: ユーザー トークンを取得する方法について説明し
 keywords: トークン、ユーザー トークン、ボットの SSO サポート
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: f1d9a905ffb8239ecd3398e7db8ee593c6cbfba7
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: ffa13e8a9f4014f0ed3e89f32b1eafed74fea76b
+ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345663"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "58528797"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>ボットのシングル サインオン (SSO) のサポート
 
@@ -145,7 +145,7 @@ OAuth 接続を使用して Azure ポータルを更新するには、次の手�
 
 **webApplicationInfo** は、次の要素の親です。
 
-* **id** - アプリケーションのクライアント ID。 これは、アプリケーションを AAD に登録する一部として取得したアプリケーション ID です。
+* **id** - アプリケーションのクライアント ID。 これは、アプリケーションを AAD に登録する一部として取得したアプリケーション ID です。 このアプリケーション ID を複数のアプリと共有Teamsしてください。 使用するアプリケーション マニフェストごとに新しい AAD アプリを作成します `webApplicationInfo` 。
 * **resource** - アプリケーションのドメインとサブドメイン。 これは、AAD ポータルからアプリを登録するで作成するときに登録したプロトコルを含む、同じ `api://` `scope` URI [です](#register-your-app-through-the-aad-portal)。 リソースにパスを `access_as_user` 含めなけれ。 この URI のドメイン部分は、アプリケーション マニフェストの URL で使用されるドメインとサブドメインTeams必要があります。
 
 ### <a name="add-the-code-to-request-and-receive-a-bot-token"></a>ボット トークンを要求および受信するコードを追加する
