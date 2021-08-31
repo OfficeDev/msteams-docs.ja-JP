@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: teams 承認 OAuth SSO AAD rsc Graph
-ms.openlocfilehash: c013153470b4be54df82fa313b5d2f8dca16fe9a
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: 1dcb12c7e76671867ec632f02177565dee212fc4
+ms.sourcegitcommit: bab08a3a4934f06457a0882bd55ccefc6708682b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528951"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "58822214"
 ---
 # <a name="resource-specific-consent"></a>リソース固有の同意
 
@@ -43,6 +43,7 @@ ms.locfileid: "58528951"
 |TeamsTab.ReadWrite.Group|このチームのタブを更新します。 |
 |TeamsTab.Delete.Group|このチームのタブを削除します。 |
 |TeamMember.Read.Group|このチームのメンバーを取得します。 |
+|TeamsActivity.Send.Group|このチームのユーザーのアクティビティ フィードに新しい通知を作成します。 |
 
 詳細については、「チーム リソース固有 [の同意のアクセス許可」を参照してください](/graph/permissions-reference#teams-resource-specific-consent-permissions)。
 
@@ -65,6 +66,7 @@ ms.locfileid: "58528951"
 | OnlineMeeting.ReadBasic.Chat   | このチャットに関連付けられた会議の名前、スケジュール、開催者、参加リンク、開始/終了通知などの基本的なプロパティを読み取る。 |
 | Calls.AccessMedia.Chat         | このチャットまたは会議に関連付けられた通話でメディア ストリームにアクセスします。                                    |
 | Calls.JoinGroupCalls.Chat         | このチャットまたは会議に関連付けられた通話に参加します。                                    |
+| TeamsActivity.Send.Chat         | このチャットのユーザーのアクティビティ フィードに新しい通知を作成します。 |
 
 詳細については、「チャット リソース [固有の同意のアクセス許可」を参照してください](/graph/permissions-reference#chat-resource-specific-consent-permissions)。
 
@@ -172,7 +174,8 @@ RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣
         "TeamsTab.Create.Group",
         "TeamsTab.ReadWrite.Group",
         "TeamsTab.Delete.Group",
-        "TeamMember.Read.Group"
+        "TeamMember.Read.Group",
+        "TeamsActivity.Send.Group"
     ]
   }
 ```
@@ -196,7 +199,8 @@ RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣
         "TeamsAppInstallation.Read.Chat",
         "OnlineMeeting.ReadBasic.Chat",
         "Calls.AccessMedia.Chat",
-        "Calls.JoinGroupCalls.Chat"
+        "Calls.JoinGroupCalls.Chat",
+        "TeamsActivity.Send.Chat"
     ]
   }
 ```
