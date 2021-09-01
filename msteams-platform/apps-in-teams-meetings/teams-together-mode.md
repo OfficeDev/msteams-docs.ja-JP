@@ -2,17 +2,14 @@
 title: カスタム 一緒にモード のシーン
 description: カスタムの Together Mode シーンを使用する
 ms.topic: conceptual
-ms.openlocfilehash: 9a0ef7eb2d6a014aaf831a0e1765d4b4ca44b8c6
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: 32b7cb32eb3f422641dbf28e635e39d978bad002
+ms.sourcegitcommit: 68f5411f5989ac706b6a4a7b2884296e145fe7c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528835"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "58849441"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Teams でのカスタム Together モードのシーン
-
-> [!NOTE]
-> この機能は現在、パブリック開発者 [プレビューでのみ利用](../resources/dev-preview/developer-preview-intro.md) できます。
 
 ユーザー設定の一緒にモード Microsoft Teams、次のアクションで臨場感のある魅力的な会議環境を提供します。
 

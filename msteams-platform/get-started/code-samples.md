@@ -4,12 +4,12 @@ description: 開発者向けプラットフォームのサンプル アプリケ
 localization_priority: Normal
 ms.topic: reference
 keywords: Microsoft Teamsサンプル
-ms.openlocfilehash: 05884025f91377764d65242d501314c3798d3a73a430e103de885692c1e2ee63
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: c261aebc327d09265db8831c2b7a8549f30a34fe
+ms.sourcegitcommit: 68f5411f5989ac706b6a4a7b2884296e145fe7c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57709592"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "58849427"
 ---
 # <a name="overview"></a>概要
 
@@ -45,7 +45,11 @@ ms.locfileid: "57709592"
 
 アプリに必要な機能に応じて、適切な開発ツールセットが必要です。
 
-|アプリの機能|ユーザーの操作|推奨されるツール|SDK |テクノロジ スタック| |--------|-------------||--------||--------||--------| |タブ|フルスクリーンの埋め込み Web エクスペリエンス。 |VS Code拡張子Teams Toolkit、または YoTeams (Yeoman Generator) |[Teams SDK |](/javascript/api/overview/msteams-client)Web テクノロジ全般、HTML、CSS、JavaScript | |ボット |メンバーと会話するチャット ボット。 |VS Code拡張子Teams Toolkit、または YoTeams (Yeoman Generator) |[Bot Framework SDK](https://dev.botframework.com/) |Node.js、C#、または Python の| |メッセージング拡張機能|会話に外部コンテンツを挿入したり、メッセージに対してアクションを実行したりするショートカット。 |VS Code拡張子Teams Toolkit、または YoTeams (Yeoman Generator) |[Bot Framework SDK](https://dev.botframework.com/) |Node.js、C#、または Python の|
+| アプリの機能 | ユーザーの操作 | 推奨されるツール | SDK | テクノロジ スタック |
+|--------|-------------|--------|--------|--------|
+| タブ | フルスクリーンの埋め込み Web エクスペリエンス。 | VS Code拡張子Teams Toolkit、または YoTeams (Yeoman Generator) | [Teams SDK](/javascript/api/overview/msteams-client) | Web テクノロジ全般、HTML、CSS、JavaScript |
+| ボット | メンバーと会話するチャット ボット。 | VS Code拡張子Teams Toolkit、または YoTeams (Yeoman Generator) | [Bot Framework SDK](https://dev.botframework.com/) | Node.js、C#、または Python |
+| メッセージング拡張機能 | 会話に外部コンテンツを挿入したり、メッセージに対してアクションを実行したりするショートカット。 | VS Code拡張子Teams Toolkit、または YoTeams (Yeoman Generator) | [Bot Framework SDK](https://dev.botframework.com/) | Node.js、C#、または Python |
 
 [スタート] セクションでは、これらの特定のスタックの使用に限定されませんが、推奨されるツール セットと一般的に使用されるテクノロジ (Teams 拡張子を持つ Visual Studio Code、タブの場合は React.js、ボットやメッセージング拡張機能の場合は Node.js など) について説明します。
 
