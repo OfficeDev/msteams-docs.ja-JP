@@ -4,12 +4,12 @@ description: Teams のアダプティブ カードをデザインして、Micros
 localization_priority: Priority
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: ca7c38f112808f98ae1555e91f794f032e880c862a697e1218953d40cbb410aa
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 28a6b794b9ebae88f8895013f945cbf3b4a91e87
+ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708522"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "58408658"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Microsoft Teams のアプリのアダプティブ カードの設計
 
@@ -39,145 +39,139 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 私たちの最大のカードです。画像がストーリーのほぼ全容を伝える記事やシナリオの共有に使用します。
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="アダプティブ カードのヒーロー カードの例を示します。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+#### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-hero-card.png" alt-text="モバイルでのアダプティブ カード ヒーロー カードの例を示します。" border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="アダプティブ カードのヒーロー カードの例を示します。" border="false":::
 
 ### <a name="thumbnail"></a>サムネイル
 
 単純な、アクション可能なメッセージを送信するために使用します。
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="アダプティブ カードのサムネイル カードの例を示します。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+#### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-thumbnail-card.png" alt-text="モバイルでのアダプティブ カードのサムネイル カードの例を示します。" border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="アダプティブ カードのサムネイル カードの例を示します。" border="false":::
 
 ### <a name="list"></a>リスト
 
 ユーザーにリストから項目を選択してもらいたいが、項目に多くの説明は必要ないシナリオで使用します。
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="アダプティブ カードのリスト カードの例を示します。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+#### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-list-card.png" alt-text="モバイルでのアダプティブ カードのリスト カードの例を示します。" border="false":::
 
----
-Use for news digests and round-up posts. Note: We recommend the thumbnail card for a single update or news item.
-':::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card." border="false"::': null
-':::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="Example shows an Adaptive Card digest card on mobile." border="false"::': null
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="アダプティブ カードのリスト カードの例を示します。" border="false":::
+
+### <a name="digest"></a>Digest
+
+ニュース ダイジェストと切り上げ投稿に使用します。 注: 単一の更新またはニュース アイテムに使用するサムネイル カードをお勧めします。
+
+#### <a name="mobile"></a>Mobile
+
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="モバイルでのアダプティブ カードのダイジェスト カードの例を示します。" border="false":::
+
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="アダプティブ カードのダイジェスト カードの例を示します。" border="false":::
 
 ### <a name="media"></a>メディア
 
 オーディオやビデオなどのテキストとメディアを組み合わせたい場合に使用します。
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="アダプティブ カードのメディア カードの例を示します。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+#### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-media-card.png" alt-text="モバイルでのアダプティブ カードのメディア カードの例を示します。" border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="アダプティブ カードのメディア カードの例を示します。" border="false":::
 
 ### <a name="people"></a>連絡先
 
 タスクに関係するユーザーを効率的に伝える場合に最適です。
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="アダプティブ カードの連絡先カードの例を示します。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+#### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-people-card.png" alt-text="モバイルでのアダプティブ カードの連絡先カードの例を示します。" border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="アダプティブ カードの連絡先カードの例を示します。" border="false":::
 
 ### <a name="request-ticket"></a>要求チケット
 
 ユーザーから簡単な入力を取得して、タスクまたはチケットを自動的に作成するために使用します。
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="アダプティブ カードの要求チケット カードの例を示します。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+#### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-request-ticket-card.png" alt-text="モバイルでのアダプティブ カードの要求チケット カードの例を示します。" border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="アダプティブ カードの要求チケット カードの例を示します。" border="false":::
 
 ### <a name="image-set"></a>イメージ
 
 複数の画像サムネイルを送信するために使用します。
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="アダプティブ カードの画像セット カードの例を示します。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+#### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-image-set-card.png" alt-text="モバイルでのアダプティブ カードの画像セット カードの例を示します。" border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="アダプティブ カードの画像セット カードの例を示します。" border="false":::
 
 ### <a name="action-set"></a>アクション セット
 
 ユーザーにボタンを選択してもらい、同じカードから追加のユーザー入力を収集する場合に使用します。
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="アダプティブ カードのアクション セット カードの例を示します。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+#### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-action-set-card.png" alt-text="モバイルでのアダプティブ カードのアクション セット カードの例を示します。" border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="アダプティブ カードのアクション セット カードの例を示します。" border="false":::
 
 ### <a name="choice-set"></a>選択肢セット
 
 ユーザーから複数の入力を収集するために使用します。
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="アダプティブ カードの選択肢セット カードの例を示します。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+#### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-choice-set-card.png" alt-text="モバイルでのアダプティブ カードの選択肢セット カードの例を示します。" border="false":::
 
----
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="アダプティブ カードの選択肢セット カードの例を示します。" border="false":::
 
 ## <a name="anatomy"></a>構造
 
 アダプティブ カードの柔軟性は高いです。 ただし、少なくとも、すべてのカードに次のコンポーネントを含めることをお勧めします。
 
-# <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="アダプティブ カードの構造の例を示しています。" border="false":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
+#### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-anatomy.png" alt-text="モバイルでのアダプティブ カードの構造の例を示しています。" border="false":::
 
----
+|カウンター|説明|
+|----------|-----------|
+|A|**ヘッダー**: ヘッダーを明確かつ簡潔にします。|
+|B|**本文のコピー**: ヘッダーに含めるには長すぎるか、ヘッダーに含めるほど重要ではない詳細を伝えます。|
+|C|**プライマリ アクション**: ベスト プラクティスとして、1 ~ 3 個のプライマリ アクションを含めます。 グループには最大 6 個のコントロールを指定できます。|
+
+#### <a name="desktop"></a>Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="アダプティブ カードの構造の例を示しています。" border="false":::
 
 |カウンター|説明|
 |----------|-----------|
