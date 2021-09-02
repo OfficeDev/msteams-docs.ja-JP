@@ -4,12 +4,12 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 localization_priority: Normal
 keywords: チームの最新情報
-ms.openlocfilehash: 6b050fad93f39a983166a7cba48379664cae040b
-ms.sourcegitcommit: 68f5411f5989ac706b6a4a7b2884296e145fe7c4
+ms.openlocfilehash: c1c5bb12f4d3599a47cac7727eeeaef1a64a090b
+ms.sourcegitcommit: 642228e6df65488f302ca4d2cf3d9c5168e81910
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "58849434"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "58862321"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
@@ -28,9 +28,9 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 <summary><b>2021</b></summary>
 
-| **日付** | **メモ** | **変更されたトピック** |
+| **日付** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
-|08/31/2021| カスタム 一緒にモードのシーン機能は、参加者を 1 つの仮想シーンに結合し、事前に決定されたシートにビデオ ストリームを設定します。 | [カスタム一緒にモードのシーン](~/apps-in-teams-meetings/teams-together-mode.md) |
+|08/30/2021| カスタム 一緒にモードのシーン機能は、参加者を 1 つの仮想シーンに結合し、事前に決定されたシートにビデオ ストリームを設定します。 | [カスタム一緒にモードのシーン](~/apps-in-teams-meetings/teams-together-mode.md) |
 |08/25/2021| シングル サインオン (SSO) を使用してTeamsボットを作成する手順ガイドが導入されました。 | [SSO を使用してボットを作成する手順Teamsガイド](sbs-bots-with-sso.yml) |
 |08/19/2021| ボットをスレッドにインストールするときに受信したインストール更新イベント。 | [インストール更新イベント](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event) |
 |08/12/2021|アダプティブ カードを使用してタブをビルドする|[アダプティブ カードを使用してタブをビルドする](tabs/how-to/build-adaptive-card-tabs.md)|
@@ -69,7 +69,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
   
 <summary><b>2020</b></summary>
 
-| **日付** | **メモ** | **変更されたトピック** |
+| **日付** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
 |11/30/2020|ID プラットフォームとタブTeams Toolkit Visual Studio Code統合。|[タブ用のシングル サインオンTeams ToolkitとVisual Studio Code認証](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Teamsバージョン 1.8 に更新されたアプリ マニフェスト。|[リファレンス: マニフェスト スキーマのMicrosoft Teams](resources/schema/manifest-schema.md)|
@@ -103,7 +103,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
   
 <summary><b>2019</b></summary>
 
-| **日付** | **メモ** | **変更されたトピック** |
+| **日付** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
 | 12/26/2019 | ボットに送信されるペイロード内のパラメーターは暗号化されなくなったため、この値を使用してこれらのメッセージへのディープリンク `replyToId` を作成できます。 メッセージ ペイロードには、パラメーターに暗号化された値が含まれます `legacy.replyToId` 。  |
 | 11/05/2019 | JavaScript SDK を使用したシングル サインオンTeams使用します。 | [シングル サインオン](tabs/how-to/authentication/auth-aad-sso.md) |
@@ -133,7 +133,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 <summary><b>2018</b></summary>
 
-| **日付** | **メモ** | **変更されたトピック** |
+| **日付** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
 | 2018 年 11 月 12 日 | グループ チャット内のタブは、リリースされたバージョンのグループ チャットでTeams。 この作業の一環として、[タブ] セクションはわかりやすくするために再作業されています。| [構成可能なタブ](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | ノード JS と .NET/C# の開始は、Teams で App Studio を使用するように更新され、Azure での Node ベースの Teams アプリのホスティングに新しいセクションが追加されました。 | [C#/.NET](~/get-started/get-started-dotnet-app-studio.md)と App Studio を使用して Microsoft Teams プラットフォームで始める 、 Node JS と[App Studio](~/get-started/get-started-nodejs-app-studio.md)を使用した Microsoft Teams プラットフォームの使用を開始する[、Azure](~/get-started/get-started-nodejs-in-azure.md)でノード Teams アプリをホストする|
@@ -172,7 +172,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 開発者プレビューは、リリースされていないプラットフォーム機能に早期にアクセスできるTeamsプログラムです。  
 
-| **日付** | **メモ** | **変更されたトピック** |
+| **日付** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
 |06/23/2021| 会議の詳細 API とリアルタイムの会議Teamsイベント。 | [Teams 会議用のアプリを作成する](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
 |06/21/2021|ボットを使用した個人用アプリのアンインストール動作 | [ボットを使用して個人用アプリの動作更新プログラムをアンインストールする](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|

@@ -4,12 +4,12 @@ description: ディープ リンクとアプリでの使用方法について説
 ms.topic: how-to
 localization_priority: Normal
 keywords: Teams ディープ リンク ディープリンク
-ms.openlocfilehash: abe1b96d6761887248d4e34db466a18cbf71905e
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 03b827585bacb292cf44274d7cdbcf337ca83935
+ms.sourcegitcommit: 642228e6df65488f302ca4d2cf3d9c5168e81910
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345698"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "58862328"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成 
 
@@ -156,13 +156,18 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 * `tenantId`: テナント ID の例、0d9b645f-597b-41f0-a2a3-ef103fbd91bb
 * `fileType`: docx、pptx、xlsx、pdf などのサポートされているファイルの種類
-* `objectUrl`: ファイルのオブジェクト URL、 `https://microsoft.sharepoint.com/teams/(filepath)`
-* `baseUrl`: ファイルの基本 URL、 `https://microsoft.sharepoint.com/teams`
-* `serviceName`: サービスの名前、アプリ ID
+* `objectUrl`: ファイルのオブジェクト URL。 形式は `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext` です。 たとえば、`https://microsoft.sharepoint.com/teams/(filepath)` のように指定します。
+* `baseUrl`: ファイルの基本 URL。 形式は `https://{tenantName}.sharepoint.com/sites/{TeamName}` です。 たとえば、`https://microsoft.sharepoint.com/teams` のように指定します。
+* `serviceName`: サービスの名前、アプリ ID。 たとえば、teams。
 * `threadId`: threadId は、ファイルが保存されているチームのチーム ID です。 これはオプションで、ユーザーのフォルダーに保存されているファイルに対してOneDriveできません。 threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
-* `groupId`: ファイルのグループ ID ae063b79-5315-4ddb-ba70-27328ba6c31e
+* `groupId`: ファイルのグループ ID ae063b79-5315-4ddb-ba70-27328ba6c31e 
 
-ファイルへのディープリンクのサンプル形式を次に示します。
+> [!NOTE]
+> チャネルから `threadId` URL `groupId` を表示および表示できます。  
+
+ボット、コネクタ、またはメッセージング拡張カードでは、次のディープ リンク形式が使用されます。 `https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=<tenantid>&fileType=<filetype>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadid>&groupId=<groupId>`
+
+次の形式例は、ファイルへのディープリンクを示しています。
 
 `https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80 ?tenantId=0d9b645f-597b-41f0-a2a3-ef103fbd91bb&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
 
