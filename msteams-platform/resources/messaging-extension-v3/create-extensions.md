@@ -1,15 +1,15 @@
 ---
 title: メッセージング拡張機能を使用してアクションを開始する
 description: アクション ベースのメッセージング拡張機能を作成して、ユーザーが外部サービスをトリガーできる
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: teams メッセージング拡張機能メッセージング拡張機能の検索
-ms.openlocfilehash: 5604d86f05bad42bf3a00f611711afc34beedf42
-ms.sourcegitcommit: 4d9d1542e04abacfb252511c665a7229d8bb7162
+ms.openlocfilehash: f028a26693eef03686ad6ad57423b30d4d861934
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "53140370"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156519"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>メッセージング拡張機能を使用してアクションを開始する
 

@@ -3,15 +3,15 @@ title: チームおよびチャット メンバーのボット API の変更
 author: ojasvichoudhary
 description: チームとチャットのメンバーを取得するために使用されるボット API に対する今後の変更と進行中の変更について説明します。
 keywords: bot framework apis チーム メンバー名簿
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: reference
 ms.author: ojchoudh
-ms.openlocfilehash: 25d3bdc5c25caec323ab1b45566b485e2c9df9fe78cb0b91f3546fcde7183e02
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 464283c145bf8b6cff6ac65db74c9e7b97c2d04b
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705123"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156491"
 ---
 # <a name="teams-bot-api-changes-to-fetch-team-or-chat-members"></a>Teamsまたはチャット メンバーをフェッチするボット API の変更を確認する
 
