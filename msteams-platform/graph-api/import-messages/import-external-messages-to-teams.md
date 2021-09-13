@@ -1,17 +1,17 @@
 ---
 title: Microsoft Graphを使用して外部プラットフォーム メッセージをインポートTeams
 description: Microsoft Graph を使用して外部プラットフォームからメッセージをインポートする方法についてTeams
-localization_priority: Normal
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams import messages api graph microsoft migrate migration post
-ms.openlocfilehash: 17e68db9803e00d3dfb8743ba3b371753508fb5a3471317c25d7a42c8027c248
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 9c5f45120a1e6d52409360d54a54096554ca86b4
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704404"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156921"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Microsoft Graph を使用してサードパーティのプラットフォーム メッセージを Teams にインポートする
 
@@ -372,8 +372,8 @@ HTTP/1.1 204 No Content
 |元のメッセージの作成時刻|プライベート チャネル|
 |メッセージの一部としてのインライン イメージ|メンション|
 |SPO または SPO の既存のファイルへのOneDrive|リアクション|
-|リッチ テキストを含むメッセージ|ビデオ|
-|メッセージ返信チェーン|お知らせ|
+|リッチ テキストを含むメッセージ|動画|
+|メッセージ返信チェーン|Announcements|
 |高スループット処理|コード スニペット|
 ||ステッカー|
 ||絵文字|

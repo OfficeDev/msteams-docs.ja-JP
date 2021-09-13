@@ -1,15 +1,15 @@
 ---
 title: アプリ コードのサンプル
 description: 開発者向けプラットフォームのサンプル アプリケーションのMicrosoft Teams説明
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: reference
 keywords: Microsoft Teamsサンプル
-ms.openlocfilehash: c261aebc327d09265db8831c2b7a8549f30a34fe
-ms.sourcegitcommit: 68f5411f5989ac706b6a4a7b2884296e145fe7c4
+ms.openlocfilehash: 34c914898f7ae83022f1278bc11cc33ac5084ba5
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "58849427"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156567"
 ---
 # <a name="overview"></a>概要
 

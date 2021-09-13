@@ -4,12 +4,13 @@ description: アプリをアプリ ストアに発行Microsoft Teamsパートナ
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: ef506b092a06e0c4668ff36aefeddfbafb93c5d5625a4871ce7082c4c6564fea
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: none
+ms.openlocfilehash: 9a650326be832a5961a45ac4b7e418f29d073ea0
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708655"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156816"
 ---
 # <a name="create-a-partner-center-developer-account"></a>パートナー センターの開発者アカウントを作成する
 
@@ -194,7 +195,7 @@ ms.locfileid: "57708655"
 
 次の詳細を含む <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a> メールを送信します。
 
-* **件名 :** パートナー センター アカウントの問題 *<your app name>*
+* **件名 :** アプリ名のパートナー センター *アカウントの問題*。
 * **メール本文**:
     * サポート チケット番号。
     * 販売者 ID。
@@ -217,7 +218,7 @@ ms.locfileid: "57708655"
 
 </details>
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [ストア送信を準備する](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)

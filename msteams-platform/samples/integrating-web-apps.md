@@ -3,15 +3,15 @@ author: heath-hamilton
 description: 既存の Web アプリとアプリを統合するためのベスト プラクティスMicrosoft Teams
 ms.author: v-heha
 ms.date: 08/26/2020
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 title: Web アプリ
-ms.openlocfilehash: ba34241186484bb838ba3f61e5ca55914115a1f1
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 24b48dabdf5fa472ce6e50fc891ba3df85405772
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345761"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156278"
 ---
 # <a name="web-apps"></a>Web アプリ 
 
@@ -38,7 +38,7 @@ Web アプリを適切に統合することで、Teamsのソーシャル機能�
 |操作のショートカットと拡張機能  |[メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)  |
 |チャットボット  |[ボット](../bots/what-are-bots.md) |
 |チャネル通知  |[ボット](../bots/what-are-bots.md)<br/>[受信 Webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)<br/>[Office 365 コネクタ](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
-|メッセージ外部サービス  |[ボット](../bots/what-are-bots.md)<br/>[送信 Webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
+|メッセージ外部サービス  |[ボット](../bots/what-are-bots.md)<br/>[送信 Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
 |モーダル  |[タスク モジュール](../task-modules-and-cards/what-are-task-modules.md)  |
 |コンテンツが豊富なカード  |[アダプティブ カード](../task-modules-and-cards/what-are-cards.md)  |
 

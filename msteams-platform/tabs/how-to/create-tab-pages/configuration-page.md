@@ -3,15 +3,15 @@ title: 構成ページを作成する
 author: surbhigupta
 description: 構成ページの作成方法
 keywords: teams タブ グループ チャネル構成可能
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 67b4a0ae121acfe53b99dbc56d47dda27f2bf1a5
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: cb69a23a3f8446c3f9b78cffbe0dc88d686c4a8a
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528790"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156221"
 ---
 # <a name="create-a-configuration-page"></a>構成ページを作成する
 
@@ -123,7 +123,7 @@ ms.locfileid: "58528790"
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>プレースホルダーを `configurationUrl`
 
-コンテキスト インターフェイスのプレースホルダーを基本に追加します `configurationUrl` 。 次に例を示します。
+コンテキスト インターフェイスのプレースホルダーを基本に追加します `configurationUrl` 。 例:
 
 ##### <a name="base-url"></a>ベース URL
 

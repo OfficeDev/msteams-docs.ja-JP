@@ -3,13 +3,13 @@ title: ユーザー固有のビュー
 description: ユニバーサル アクションを使用したユーザー固有のビューのサンプル
 author: surbhigupta12
 ms.topic: conceptual
-localization_priority: Normal
-ms.openlocfilehash: 00d6c8e5109fdd9cdf83662f9585a9a2d9e7fd86
-ms.sourcegitcommit: 6a41c529a423c81a184c7a79125dbaaed0179788
+ms.localizationpriority: medium
+ms.openlocfilehash: d607250d0d34367c097cdfd25050e4180f72eeda
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "53585985"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156287"
 ---
 # <a name="user-specific-views"></a>ユーザー固有のビュー
 

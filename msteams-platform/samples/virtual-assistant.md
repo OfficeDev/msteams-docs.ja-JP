@@ -1,15 +1,15 @@
 ---
 title: 仮想アシスタントを作成する
 description: アプリで使用Virtual Assistantボットとスキルを作成するMicrosoft Teams
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: teams 仮想アシスタント ボット
-ms.openlocfilehash: aec0b731b73607cd8f881509ab77da7b8fd35f21c121b97220fdd5019fc53df2
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 47258b55cd00452b33c09da6a5d5403ba1f0aa2c
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708392"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156269"
 ---
 # <a name="create-virtual-assistant"></a>仮想アシスタントを作成する 
 
@@ -463,7 +463,7 @@ Book-a-room ボットには、ユーザー用の 2 つの主なコマンドが�
 ```
 
 この方法では、ボットに関連付けられたコマンドVirtual Assistant、またはボットに関連付けられたコマンドとして識別されるユーザーが発行したコマンドは、このスキル `book room` `manage favorites` `Book-a-room` に転送されます。
-一方、ボットは、入力が完全ではない場合、これらのコマンドを理解するために LUIS モデル `Book-a-room room` を使用する必要があります。 例: `I want to manage my favorite rooms`。
+一方、ボットは、入力が完全ではない場合、これらのコマンドを理解するために LUIS モデル `Book-a-room room` を使用する必要があります。 (例: `I want to manage my favorite rooms`)。
 
 ### <a name="multi-language-support"></a>多言語サポート
 

@@ -3,14 +3,14 @@ title: 個人用アプリをデザインする
 description: 個人用アプリを設計し、Teams UI キットをMicrosoft Teamsする方法について学習します。
 author: heath-hamilton
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 52029fedc39270c029cea8a85f6b45988c2340d9
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: ae75a79ebc6293b99e7e4db310cfb0545ce5037a
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408623"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156930"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>アプリの個人用アプリを設計Microsoft Teams
 
@@ -57,9 +57,9 @@ ms.locfileid: "58408623"
 |A|**タブ**: 個人用アプリのナビゲーションを提供します。|
 |1|**webview**: アプリのコンテンツを表示します。|
 
-#### <a name="desktop"></a>デスクトップ
+#### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="例は、個人用タブのコンポーネント構造を示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="次の使用例は、個人用タブのコンポーネント構造を示しています。" border="false":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -68,7 +68,7 @@ ms.locfileid: "58408623"
 |C|**Popout ビュー**: 親ウィンドウからスタンドアロンの子ウィンドウにアプリコンテンツをプッシュします。|
 |D|**[その他]** メニュー: 追加のアプリのオプションと情報が含まれます。 (代わりに、タブ **設定** することもできます)。|
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="例は、個人用タブの構造構造を示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="次の使用例は、個人用タブの構造構造を示しています。" border="false":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -103,7 +103,7 @@ ms.locfileid: "58408623"
 |C|**ボット メッセージ**: ボットは、多くの場合、メッセージや通知をカード (アダプティブ カードなど) の形式で送信します。|
 |D|**[作成]** ボックス : ボットにメッセージを送信する入力フィールド。|
 
-#### <a name="desktop"></a>デスクトップ
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="例は、個人用ボット コンポーネントの構造を示しています。" border="false":::
 

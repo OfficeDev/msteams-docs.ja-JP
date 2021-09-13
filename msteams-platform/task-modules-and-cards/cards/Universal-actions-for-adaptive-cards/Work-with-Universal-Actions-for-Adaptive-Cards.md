@@ -2,13 +2,13 @@
 title: アダプティブ カードのユニバーサル アクションの操作
 description: アダプティブ カードのユニバーサル アクションを操作します。
 ms.topic: conceptual
-localization_priority: Normal
-ms.openlocfilehash: 0c3b07d630452abe945e43e7a9dfdced00e22f35324b2e9c7768b6bca5a0d065
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: medium
+ms.openlocfilehash: b732308586d89f378b50056d7c98884a2990fb11
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57701967"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156480"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>アダプティブ カードのユニバーサル アクションの操作
 

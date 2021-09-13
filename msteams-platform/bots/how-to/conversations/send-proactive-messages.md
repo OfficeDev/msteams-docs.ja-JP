@@ -3,14 +3,14 @@ title: プロアクティブ メッセージを送信する
 description: ボットでプロアクティブ メッセージを送信するMicrosoft Teamsします。
 ms.topic: conceptual
 ms.author: anclear
-localization_priority: Normal
+ms.localizationpriority: medium
 Keywords: メッセージの送信、ユーザー ID の取得、チャネル ID の取得、会話 ID の取得
-ms.openlocfilehash: 5a999769879c8661d16b79f885b463166be557903a6448c709eb06ed16e49345
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 43fd90e292c51d81e6f4ad51610b72acb245160e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705701"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156861"
 ---
 # <a name="proactive-messages"></a>プロアクティブ メッセージ
 
@@ -283,7 +283,7 @@ POST /v3/conversations
 
 [**Teams のプロアクティブ メッセージング コード サンプル**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [ボット メッセージの書式を設定する](~/bots/how-to/format-your-bot-messages.md)

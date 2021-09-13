@@ -3,14 +3,14 @@ title: ボットのアクティビティ ハンドラー
 author: surbhigupta
 description: ボット のアクティビティ ハンドラーについてTeams。
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 51199edcd28ea9f4521c4d0a19c7872b3e1a852e092dd949a9d6490e395c2ab1
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: d9d9dee13a59a0727bf3bc7889f6e0fc2acd06f1
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705694"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156167"
 ---
 # <a name="bot-activity-handlers"></a>ボットのアクティビティ ハンドラー
 
@@ -218,7 +218,7 @@ Teamsアクティビティ ハンドラーは、Microsoft Bot Frameworkアクテ
 
 ボット アクティビティ ハンドラーについて理解し、会話と受信または送信するメッセージに応じてボットの動作が異なる方法を確認します。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [会話の基本](~/bots/how-to/conversations/conversation-basics.md)

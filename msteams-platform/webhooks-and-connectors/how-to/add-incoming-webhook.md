@@ -1,17 +1,17 @@
 ---
-title: 受信 Webhook の作成
+title: 受信 Webhook を作成する
 author: laujan
 description: 受信 Webhook をアプリに追加し、Teams Webhook を使用して外部要求をTeamsする方法について説明します。
 keywords: teams タブ送信 Webhook
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c5f90da64fe846e6579bc47de2edcd900d6ee6ba3a640788fba440734f55b7ec
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: c07456288a26e3152a552644b704e2c6e6de38cc
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705357"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156038"
 ---
 # <a name="create-incoming-webhook"></a>受信 Webhook の作成
 
@@ -93,6 +93,6 @@ Webhook は、webhook チャネルTeamsできます。
 
 ## <a name="see-also"></a>関連項目
 
-* [送信 Webhook の作成](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+* [送信 Webhook を作成する](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Office 365 コネクタを作成する](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [メッセージを作成して送信する](~/webhooks-and-connectors/how-to/connectors-using.md)

@@ -4,12 +4,13 @@ author: KirtiPereira
 description: アダプティブ カードを使用してタブを作成する
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 31954b046c550d34155bc7a9ec66cfc61b74ecf4
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.localizationpriority: none
+ms.openlocfilehash: 902b57145a2ba0919e810e6785f077e626949970
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345573"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156999"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>アダプティブ カードを使用してタブをビルドする
 
@@ -424,7 +425,7 @@ ms.locfileid: "58345573"
 
 |**サンプルの名前** | **説明** |**.NET** | **Node.js** |
 |----------------|-----------------|--------------|--------------|
-| [アダプティブ カードの表示] Teamsタブ | Microsoft Teamsタブのサンプル コードで、アダプティブ カードを表示する方法を示Teams。 |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
+| [アダプティブ カードの表示] Teamsタブ | Microsoft Teamsタブのサンプル コードで、アダプティブ カードを表示する方法を示Teams。 |[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>関連項目
 

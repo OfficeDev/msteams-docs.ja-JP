@@ -4,12 +4,13 @@ description: アプリ ストア (AppSource) に送信Teamsガイドラインに
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 3902c714970ed6e7214e4345dcbe162f28d26487
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.localizationpriority: none
+ms.openlocfilehash: 43cd037eb6f14dee4ee58cd34b1db834478ae3f5
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408540"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156056"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teamsの検証ガイドライン
 

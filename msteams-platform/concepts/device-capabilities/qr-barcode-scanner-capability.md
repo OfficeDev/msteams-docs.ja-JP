@@ -3,15 +3,15 @@ title: QR コードまたはバーコード スキャナー機能を統合する
 author: Rajeshwari-v
 description: JavaScript クライアント SDK Teams QR またはバーコード スキャナー機能を活用する方法
 keywords: カメラ メディア QR コード qrcode バーコード バーコード スキャナー スキャン機能ネイティブ デバイスのアクセス許可
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 02332ad1f0805bfc4972333086e48552761a48a8
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 470360fcc489248806d746587344c7a19c91145c
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345256"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156572"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>QR コードまたはバーコード スキャナー機能を統合する 
 
@@ -55,7 +55,7 @@ API 応答エラーを理解して、アプリ[](#error-handling)内のエラー
 
 | バーコードの種類 | Android でサポートされる | iOS でサポート |
 | ---------- | ---------- | ------------ |
-| Codebar | はい | いいえ |
+| Codebar | はい | なし |
 | コード 39 | はい | はい | 
 | コード 93 | はい | はい |
 | コード 128 | はい | はい |
@@ -63,8 +63,8 @@ API 応答エラーを理解して、アプリ[](#error-handling)内のエラー
 | EAN-8 | はい | はい |
 | ITF | いいえ | はい |
 | QR コード | はい | はい |
-| RSS の展開 | はい | いいえ |
-| RSS-14 | はい | いいえ |
+| RSS の展開 | はい | なし |
+| RSS-14 | はい | なし |
 | UPC-A | はい | はい |
 | UPC-E | はい | はい |
 
@@ -76,7 +76,7 @@ API 応答エラーを理解して、アプリ[](#error-handling)内のエラー
 
 これらのエラーは、アプリで適切に処理Teamsがあります。 次の表に、エラー コードとエラーが生成される条件を示します。 
 
-|エラー コード |  エラー名     | 条件|
+|エラー コード |  エラー名     | Condition|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API は現在のプラットフォームではサポートされていません。|
 | **500** | INTERNAL_ERROR | 必要な操作の実行中に内部エラーが発生します。|

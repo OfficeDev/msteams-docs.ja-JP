@@ -4,14 +4,14 @@ author: Rajeshwari-v
 description: JavaScript クライアント SDK Teamsを使用して場所の機能を活用する方法
 keywords: 場所マップ機能ネイティブ デバイスのアクセス許可
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 2caf0f9e631990211eea4e94b58b4ec8399fb3d5
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: ac3227d963baea6f55da81596f2003fd865f32b1
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345656"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156924"
 ---
 # <a name="integrate-location-capabilities"></a>場所機能を統合する 
 
@@ -93,7 +93,7 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 
 これらのエラーは、アプリで適切に処理Teamsがあります。 次の表に、エラー コードとエラーが生成される条件を示します。 
 
-|エラー コード |  エラー名     | 条件|
+|エラー コード |  エラー名     | Condition|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API は現在のプラットフォームではサポートされていません。|
 | **500** | INTERNAL_ERROR | 必要な操作の実行中に内部エラーが発生します。|

@@ -3,14 +3,14 @@ title: 認証をボットにTeamsする
 author: surbhigupta
 description: OAuth 認証をボットに追加する方法は、Microsoft Teams。
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 76ea98feb27640ffb7b310ca097e5e7a810ac1aed31b8bf0d8aa2e09d73d341a
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 3612e194b0e05526bbe38dc66a2b75037a003eed
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703754"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156161"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>認証をボットにTeamsする
 
@@ -66,7 +66,7 @@ Azure Bot Service が認証を処理する方法の詳細については、「 [
 
 1. Azure portal [**の左側の**][azure-portal]ナビゲーション パネルで、[リソースの作成 **] を選択します**。
 1. 検索ボックスに *「App Service Plan」と入力します*。 検索結果から **[App Service プラン** ] カードを選択します。
-1. [**作成**] を選択します。
+1. **[作成]** を選択します。
 1. 次の情報の入力を求めるメッセージが表示されます。
     1. **サブスクリプション**。 既存のサブスクリプションを使用できます。
     1. **リソース グループ**。 前に作成したグループを選択します。
@@ -75,7 +75,7 @@ Azure Bot Service が認証を処理する方法の詳細については、「 [
     1. **地域**. [ *米国西部]* またはアプリケーションに近い地域を選択します。
     1. **価格レベル**. [標準 *S1] が選択* されている必要があります。 これは既定値である必要があります。
     1. [レビューと **作成] ボタンを選択** します。 検証が渡されたというバナーが *表示されます*。
-    1. [**作成**] を選択します。 アプリ サービス プランの作成に数分かかる場合があります。 計画はリソース グループに一覧表示されます。
+    1. **[作成]** を選択します。 アプリ サービス プランの作成に数分かかる場合があります。 計画はリソース グループに一覧表示されます。
 
 ## <a name="create-the-bot-channels-registration"></a>ボット チャネルの登録を作成する
 
@@ -266,7 +266,7 @@ Microsoft App Id とアプリ パスワード (クライアント シークレ�
 
     ![auth-app-service](../../../assets/images/authentication/auth-bot-app-service.png)
 
-1. [**作成**] を選択します。
+1. **[作成]** を選択します。
 1. 展開が正常に完了した場合は、展開がサーバーに反映Visual Studio。 さらに、既定のブラウザーに、ボットの準備が完了した *というページが表示されます*。 URL は次に似ています `https://botteamsauth.azurewebsites.net/` 。 ファイルに保存します。
 1. ブラウザーで、Azure portal に [**移動します**][azure-portal]。
 1. リソース グループを確認すると、ボットが他のリソースと共に一覧表示されます。 次の図は、例です。
@@ -414,7 +414,7 @@ Microsoft Teams完全にクラウドベースの製品である場合、HTTPS �
 > ngrok を停止して再起動すると、URL が変更されます。 プロジェクトで ngrok を使用するには、使用している機能に応じて、すべての URL 参照を更新する必要があります。
  
 
-## <a name="additional-information"></a>追加情報
+## <a name="additional-information"></a>ページの先頭へ
 
 ### <a name="teamsappmanifestmanifestjson"></a>TeamsAppManifest/manifest.jsオン
 

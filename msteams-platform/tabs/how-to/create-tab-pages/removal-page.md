@@ -3,15 +3,15 @@ title: タブ削除のページを作成する
 author: surbhigupta
 description: タブの削除ページを作成する方法
 keywords: teams タブ グループ チャネル構成可能 削除
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 5cfe79bc026f7326f258b994540958aab0a83c29f08846447d2b5859f10794dd
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: b519b4ff7251979f97affb0c567f0e9813142b6e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706787"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156290"
 ---
 # <a name="create-a-removal-page"></a>削除ページを作成する
 
@@ -21,7 +21,7 @@ ms.locfileid: "57706787"
 
 この **manifest.jsタブ** の機能を定義します。 tab instance プロパティは、ユーザーが作成後にタブを変更または再構成できるかどうかを示すブール値 `canUpdateConfiguration` を取得します。 次の表に、プロパティの詳細を示します。
 
-|名前| 型| 最大サイズ | 必須 | 説明|
+|Name| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`canUpdateConfiguration`|Boolean|||作成後に、タブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 既定値は `true` です。 |
 
@@ -98,7 +98,7 @@ ms.locfileid: "57706787"
 * [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
 * [構成ページを作成する](~/tabs/how-to/create-tab-pages/configuration-page.md)
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [モバイルのタブ](~/tabs/design/tabs-mobile.md)

@@ -2,14 +2,14 @@
 title: タブを使用したタブAzure Active Directory
 description: 認証の詳細Teamsタブで使用する方法について説明します。
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams 認証タブ AAD
-ms.openlocfilehash: 69b05edd2cb0106ccf951490c36e2268f947af418a50dd9cc53fe7ec1b3e1311
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 6bd963a0ff6eee8b239693904fdf30798fd192d0
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707788"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156095"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>[ユーザーの認証] タブでMicrosoft Teamsする
 
@@ -52,7 +52,7 @@ microsoftTeams.authentication.authenticate({
 });
 ```
 
-### <a name="notes"></a>Notes
+### <a name="notes"></a>注意事項
 
 * 渡す URL `microsoftTeams.authentication.authenticate()` は、認証フローの開始ページです。 この例では、 `/tab-auth/simple-start` です。 これは、Azure AD [アプリケーション登録ポータルで登録したAD一致する必要があります](https://apps.dev.microsoft.com)。
 
@@ -91,7 +91,7 @@ microsoftTeams.getContext(function (context) {
 
 ユーザーが承認を完了すると、ユーザーはアプリで指定したコールバック ページにリダイレクトされます `/tab-auth/simple-end` 。
 
-### <a name="notes"></a>Notes
+### <a name="notes"></a>注意事項
 
 * 認証 [要求と URL の作成に](~/tabs/how-to/access-teams-context.md) 関するヘルプについては、「ユーザー コンテキスト情報の取得」を参照してください。 たとえば、Azure AD サインインの値としてユーザーのログイン名を使用できます。つまり、ユーザーが入力する必要が少ない `login_hint` 場合があります。 攻撃者が悪意のあるブラウザーにページを読み込み、必要な情報を提供する可能性がある場合は、このコンテキストを ID の証明として直接使用する必要があります。
 * タブ コンテキストはユーザーに関する有用な情報を提供しますが、この情報を使用して、タブ コンテンツ URL への URL パラメーターとして取得するか、Microsoft Teams クライアント SDK で関数を呼び出す場合でも、ユーザーを認証しません。 `microsoftTeams.getContext()` 悪意のあるアクターが、独自のパラメーターを使用してタブ コンテンツ URL を呼び出し、Microsoft Teams を偽装する Web ページが iframe にタブ コンテンツ URL を読み込み、独自のデータを関数に返す可能性があります。 `getContext()` 使用する前に、タブ コンテキスト内の ID 関連情報をヒントとして扱い、検証する必要があります。
@@ -136,7 +136,7 @@ if (hashParams["error"]) {
 
 このコードは、ヘルパー関数を使用して Azure ADキーと値のペア `window.location.hash` を `getHashParameters()` 解析します。 認証フローの開始時点で指定した値と同じ値が見つけられる場合は、呼び出してタブにアクセス トークンを返します。それ以外の場合は、 でエラーを報告します `access_token` `state` `notifySuccess()` `notifyFailure()` 。
 
-### <a name="notes"></a>Notes
+### <a name="notes"></a>注意事項
 
 `NotifyFailure()` 次の定義済みのエラー理由があります。
 
@@ -159,6 +159,6 @@ if (hashParams["error"]) {
 
 Azure 認証を使用したタブ認証プロセスを示すサンプル AD。
 
-| **サンプルの名前** | **description** | **.NET** | **Node.js** |
+| **サンプルの名前** | **説明** | **.NET** | **Node.js** |
 |-----------------|-----------------|-------------|
 | Microsoft Teamsタブ認証 | Azure を使用したタブ認証プロセスAD。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) |

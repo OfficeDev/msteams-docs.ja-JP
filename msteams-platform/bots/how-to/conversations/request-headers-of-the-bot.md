@@ -2,13 +2,13 @@
 title: ボットの要求ヘッダーにテナント ID と会話 ID を送信する
 description: ボットの要求ヘッダーにテナント ID と会話 ID を送信する方法について説明します。
 ms.topic: conceptual
-localization_priority: Normal
-ms.openlocfilehash: a775c09589f59a6d487bf403544afccd5b59f797ac12cf60a9deb1fc2de16644
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: medium
+ms.openlocfilehash: bdfe224824fb7fd42fdc8ea93dc7d492bc731218
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706672"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156341"
 ---
 # <a name="send-tenant-id-and-conversation-id-to-the-request-headers-of-the-bot"></a>ボットの要求ヘッダーにテナント ID と会話 ID を送信する
 

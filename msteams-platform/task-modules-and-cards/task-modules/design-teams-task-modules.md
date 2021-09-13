@@ -2,15 +2,15 @@
 title: タスク モジュールをデザインする
 author: heath-hamilton
 description: アプリのタスク モジュールを設計し、Teams UI キットをMicrosoft Teamsする方法について学習します。
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 9248fba30726511d025e71957c0d9f2bac4c9866
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: 8edcc24d5fca7ba7e8260d2cc20ee8c6d7282af2
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408616"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156476"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>アプリ用のタスク モジュールMicrosoft Teamsする
 
@@ -53,7 +53,7 @@ ms.locfileid: "58408616"
 |4 |**webview**: アプリ コンテンツをホストするレスポンシブ スペース。|
 |5 |**アクション (省略可能)**: アプリコンテンツに関連するボタン。|
 
-### <a name="desktop"></a>デスクトップ
+### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="タスク モジュールの UI 構造を示す図。" border="false":::
 
@@ -84,7 +84,7 @@ ms.locfileid: "58408616"
 
 :::image type="content" source="../../assets/images/task-module/mobile-list.png" alt-text="モバイル上のタスク モジュールのリストの例。" border="false":::
 
-#### <a name="desktop"></a>デスクトップ
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/task-module/list.png" alt-text="タスク モジュールのリストの例。" border="false":::
 
@@ -96,7 +96,7 @@ ms.locfileid: "58408616"
 
 :::image type="content" source="../../assets/images/task-module/mobile-form.png" alt-text="モバイル上のタスク モジュールのフォームの例。" border="false":::
 
-#### <a name="desktop"></a>デスクトップ
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/task-module/form.png" alt-text="タスク モジュール内のフォームの例。" border="false":::
 
@@ -108,7 +108,7 @@ ms.locfileid: "58408616"
 
 :::image type="content" source="../../assets/images/task-module/mobile-sign-in.png" alt-text="モバイル上のタスク モジュールでのサインイン エクスペリエンスの例。" border="false":::
 
-#### <a name="desktop"></a>デスクトップ
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="タスク モジュールでのサインイン エクスペリエンスの例。" border="false":::
 
@@ -120,7 +120,7 @@ ms.locfileid: "58408616"
 
 :::image type="content" source="../../assets/images/task-module/mobile-media.png" alt-text="モバイル上のタスク モジュールのメディア コンテンツの例。" border="false":::
 
-#### <a name="desktop"></a>デスクトップ
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/task-module/media.png" alt-text="タスク モジュールのメディア コンテンツの例。" border="false":::
 
@@ -132,7 +132,7 @@ ms.locfileid: "58408616"
 
 :::image type="content" source="../../assets/images/task-module/mobile-empty-state.png" alt-text="モバイル上のタスク モジュールの空の状態の例。" border="false":::
 
-#### <a name="desktop"></a>デスクトップ
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="タスク モジュールの空の状態の例。" border="false":::
 
@@ -144,7 +144,7 @@ ms.locfileid: "58408616"
 
 :::image type="content" source="../../assets/images/task-module/mobile-image-gallery.png" alt-text="モバイル上のタスク モジュールのイメージ ギャラリーの例。" border="false":::
 
-##### <a name="desktop"></a>デスクトップ
+##### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="タスク モジュールのイメージ ギャラリーの例。" border="false":::
 
@@ -156,7 +156,7 @@ ms.locfileid: "58408616"
 
 :::image type="content" source="../../assets/images/task-module/mobile-poll.png" alt-text="モバイル上のタスク モジュールでのポーリングの例。" border="false":::
 
-#### <a name="desktop"></a>デスクトップ
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/task-module/poll.png" alt-text="タスク モジュールのポーリングの例。" border="false":::
 

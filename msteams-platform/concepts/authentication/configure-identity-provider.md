@@ -2,14 +2,14 @@
 title: OAuth 2.0 ID プロバイダーの構成
 description: Azure プロバイダーを中心に ID プロバイダーを構成する方法についてAD
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams 認証 AAD oauth IDENTITY プロバイダー
-ms.openlocfilehash: f41e03717c24095b527adc471a89f8aee5de3a3ddba8773376fca49ee12bbbcc
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: a7630dce11e052eadf39e5bd695bae1b8411f33d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705567"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156652"
 ---
 # <a name="configure-identity-providers"></a>ID プロバイダーを構成する
 

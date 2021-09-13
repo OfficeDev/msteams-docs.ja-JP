@@ -3,15 +3,15 @@ title: アプリの機能を理解する
 author: heath-hamilton
 description: Teams機能の説明
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: e0f7a57fb125450593fd63c412278e1030c51d42
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: a10c991c374392afca0ce793c0c34ea3fc0ca611
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345691"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156329"
 ---
 # <a name="understand-microsoft-teams-app-capabilities"></a>アプリMicrosoft Teamsについて
 

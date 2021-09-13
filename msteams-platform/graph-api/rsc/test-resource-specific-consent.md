@@ -1,17 +1,17 @@
 ---
 title: リソース固有の同意のアクセス許可をテストTeams
 description: Postman を使用したリソース固有の同意Teamsテストする詳細
-localization_priority: Normal
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: teams 承認 OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: 89b9dceebfd0732fb29fe497edc000249d073aab
-ms.sourcegitcommit: bab08a3a4934f06457a0882bd55ccefc6708682b
+ms.openlocfilehash: 66fff68e69f90f49e07cdd87266830f93cb0be2e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "58822221"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156173"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>リソース固有の同意のアクセス許可をテストTeams
 

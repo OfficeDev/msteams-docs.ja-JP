@@ -3,14 +3,14 @@ title: Teams アプリのエントリー ポイント
 author: heath-hamilton
 description: ユーザーが Teams でアプリを発見し、使用できる場所を説明します。
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 9a98cbebd1ada8708b75256ebff1d93b0f528251b6250524d79bac45f59fb9f8
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: a23b447a07e0664875acbf9bf75f170a24a51dc2
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702761"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156571"
 ---
 # <a name="entry-points-for-teams-apps"></a>Teams アプリのエントリー ポイント
 
@@ -50,7 +50,7 @@ ms.locfileid: "57702761"
 [Teamsの設計ガイドライン](../concepts/design/design-teams-app-overview.md) <br>
 [最初のアプリをMicrosoft Teamsする](../build-your-first-app/build-first-app-overview.md)
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [使用例を理解する](../concepts/design/understand-use-cases.md)

@@ -2,15 +2,15 @@
 title: メッセージング拡張機能に認証を追加する
 author: surbhigupta
 description: メッセージング拡張機能に認証を追加する方法
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d1ebde822e1a0216edaa1b85ac6142234ae34b78
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: c486ddcdda8ea23dc562f17ef42b3fc26a2c73c5
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068919"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156524"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>メッセージング拡張機能に認証を追加する
 
@@ -134,8 +134,8 @@ ms.locfileid: "53068919"
 ```
 
 ## <a name="code-sample"></a>コード サンプル
-|**サンプル名** | **説明** |**.NET** | **Node.js**|
+|**サンプルの名前** | **説明** |**.NET** | **Node.js**|
 |----------------|-----------------|--------------|----------------|
-|メッセージング拡張機能 - auth と config | 構成ページを持ち、検索要求を受け入れ、ユーザーがサインインした後に結果を返すメッセージング拡張機能。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
+|メッセージング拡張機能 - auth と config | 構成ページを持ち、検索要求を受け入れ、ユーザーがサインインした後に結果を返すメッセージング拡張機能。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[表示](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
 
  

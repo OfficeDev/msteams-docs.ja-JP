@@ -2,14 +2,14 @@
 title: アプリのデバイスのアクセス許可をMicrosoft Teamsする
 keywords: teams アプリの機能のアクセス許可
 description: 通常、ユーザーの同意が必要なネイティブ機能へのアクセスを要求するためにアプリ マニフェストを更新する方法
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 27e70b0a8300d85138cb06d58160e32e3e308143
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: 33a0fc390dc2123ccb77901acb7967b1b9732e77
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408573"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156599"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>アプリのデバイスのアクセス許可をMicrosoft Teamsする
 
@@ -85,7 +85,7 @@ JavaScript [Microsoft Teams SDK](/javascript/api/overview/msteams-client?view=ms
 
 | プロパティ      | 説明   |
 | --- | --- |
-| media         | カメラ、マイク、スピーカー、およびアクセス メディア ギャラリーを使用する権限。 |
+| メディア         | カメラ、マイク、スピーカー、およびアクセス メディア ギャラリーを使用する権限。 |
 | 地理位置情報   | ユーザーの場所を返すアクセス許可。      |
 | 通知 | ユーザー通知を送信するアクセス許可。      |
 | midi          | デジタル楽器から楽器デジタル インターフェイス (MIDI) 情報を送受信する権限。   |
@@ -121,7 +121,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 > * をサポート `camera` し `gallery` `microphone` 、selectMedia API を [**使用して有効になります**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true)。 1 [**つのイメージ キャプチャに captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) を使用します。
 > * getLocation `location` API を使用して [**サポートが有効になります**](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true)。 HTML5 地理位置情報 API は現在、デスクトップ クライアントで完全にサポートされていないので、場所 `getLocation API` Teams必要があります。
 
-次に例を示します。
+例:
  * ユーザーに自分の場所へのアクセスを求めるメッセージを表示するには、次のコマンドを呼び出す必要があります `getCurrentPosition()` 。
 
     ```Javascript
@@ -193,7 +193,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 | **サンプル名** | **説明** | **Node.js** |
 |---------------|--------------|--------|
-|デバイス アクセス許可 | デバイスMicrosoft Teamsを示すタブ サンプル アプリを使用する |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
+|デバイス アクセス許可 | デバイスMicrosoft Teamsを示すタブ サンプル アプリを使用する |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
 
 ## <a name="next-steps"></a>次の手順
 

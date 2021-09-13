@@ -2,15 +2,15 @@
 title: メッセージング拡張機能
 author: surbhigupta
 description: Microsoft Teams プラットフォームでのメッセージング拡張機能の概要
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 9f222e8b4baa60433e2fb7298cc94f53b180c05a83107cbd1bfd374fec1481a5
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 383b376757c1c0922776d8285449460b879ce274
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706048"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156644"
 ---
 # <a name="messaging-extensions"></a>メッセージング拡張機能
 
@@ -80,7 +80,7 @@ Web サービスは、作成メッセージ領域に URL を貼り付けする�
 [メッセージング拡張機能を作成する](../build-your-first-app/build-messaging-extension.md)
 
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [アクション メッセージング拡張機能のコマンドを定義する](~/messaging-extensions/how-to/action-commands/define-action-command.md)

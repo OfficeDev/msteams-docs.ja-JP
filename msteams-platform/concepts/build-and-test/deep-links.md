@@ -2,14 +2,14 @@
 title: ディープ リンクの作成
 description: ディープ リンクとアプリでの使用方法について説明する
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Teams ディープ リンク ディープリンク
-ms.openlocfilehash: 03b827585bacb292cf44274d7cdbcf337ca83935
-ms.sourcegitcommit: 642228e6df65488f302ca4d2cf3d9c5168e81910
+ms.openlocfilehash: e61f926e36d379cb6a69816922cca7a8f3a3d17f
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "58862328"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156708"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成 
 
@@ -259,7 +259,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 | サンプルの名前 | 説明 | C# |Node.js|
 |-------------|-------------|------|----|
-|Subentity ID を使用するディープ リンク  |Microsoft Teamsチャットからサブエンティ ID を使用するタブへのディープリンクを示すサンプル アプリを作成します。|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
+|Subentity ID を使用するディープ リンク  |Microsoft Teamsチャットからサブエンティ ID を使用するタブへのディープリンクを示すサンプル アプリを作成します。|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
 ## <a name="see-also"></a>関連項目
 

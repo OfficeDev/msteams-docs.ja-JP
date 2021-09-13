@@ -3,15 +3,15 @@ title: Office 365 コネクタの作成
 author: laujan
 description: コネクタの使用を開始するOffice 365説明Microsoft Teams
 keywords: Teams o365 コネクタ
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: ee9a00473a7d871e0c69f27a44ca6c7c23eadcbf
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 39c2533f112f5cb3c72446ad8a5638687dd3db2e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345740"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156041"
 ---
 # <a name="create-office-365-connectors"></a>Office 365 コネクタの作成
 
@@ -267,11 +267,11 @@ PowerShell モジュール交換の詳細については [、「Set-Organization
 
 |**サンプルの名前** | **説明** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| コネクタ    | サンプル Office 365 チャネルへの通知を生成するコネクタTeamsします。|   [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
+| コネクタ    | サンプル Office 365 チャネルへの通知を生成するコネクタTeamsします。|   [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
 | 汎用コネクタのサンプル |Webhook をサポートする任意のシステム用にカスタマイズしやすい汎用コネクタのサンプル コード。|  | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
 
 ## <a name="see-also"></a>関連項目
 
 * [メッセージを作成して送信する](~/webhooks-and-connectors/how-to/connectors-using.md)
-* [受信 Webhook の作成](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [受信 Webhook を作成する](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Office 365 コネクタを作成する](~/webhooks-and-connectors/how-to/connectors-creating.md)

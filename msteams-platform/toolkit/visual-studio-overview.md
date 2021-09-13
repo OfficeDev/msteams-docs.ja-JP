@@ -2,15 +2,15 @@
 title: アプリとアプリのTeams ToolkitをVisual Studio
 description: アプリを使用して、アプリ内で直接素晴らしいカスタム Visual Studioを構築Microsoft Teams Toolkit
 keywords: teams visual studio ツールキット
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: johmil
-ms.openlocfilehash: f72b8d723b5511e6e68a94617e256e280ce2ed50ee33544ccb3c8c237ddd9832
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 4f7da132f8cc63c65936c7c879226b04c87b3beb
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57701812"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156053"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>アプリとアプリのTeams ToolkitをVisual Studio
 
@@ -87,7 +87,7 @@ Teams[開発者](https://dev.teams.microsoft.com/home)ポータルでは、チ�
 - これらの送信内容は、IT 管理者によって審査されます。
 - [発行] ページ **に戻り** 、申請の状態を確認し、アプリが IT 管理者によって承認または却下された場合に確認できます。また、アプリに更新プログラムを送信したり、現在アクティブな申請を取り消したりすることもできます。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [Blazor で最初のアプリをMicrosoft Teams実行する](../get-started/first-app-blazor.md)

@@ -3,14 +3,14 @@ title: チャットボットPower Virtual Agentsを追加Teams
 author: surbhigupta
 description: チャットボットをPower Virtual Agentsプラットフォームに統合Teamsする
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: ed788fe2acdd2425a435ea7ad608e461c1b4d306a89d7fe3b57eee054b94e69e
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 5a4aa24ceb5a73be56cfd069b02ca7b980d17055
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705309"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156870"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>Power Virtual Agents チャットボットを追加する 
 
@@ -107,7 +107,7 @@ App Studio は、Teamsアプリです。 アプリ ストアから App Studio �
 * [ボットをPower Virtual Agentsする](/power-virtual-agents/publication-fundamentals-publish-channels)
 * [セキュリティとコンプライアンスのMicrosoft Teams。](/MicrosoftTeams/security-compliance-overview)
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [仮想アシスタントを作成する](~/samples/virtual-assistant.md)

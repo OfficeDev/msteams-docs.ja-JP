@@ -3,14 +3,14 @@ title: 会議拡張機能の設計
 author: heath-hamilton
 description: 会議でアプリを設計し、Teams UI キットをMicrosoft Teamsする方法について学習します。
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 7da7d6c23f0f66fd73e976fb92d1883f9befd0d2
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: 8b06dbbe7eba948800e9c35934798d4a6545108e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528916"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156404"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>会議の拡張機能Microsoft Teams設計する
 
@@ -41,7 +41,7 @@ ms.locfileid: "58528916"
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="例は、モバイルでの会議中に会議の内線情報を追加する方法を示しています。" border="false":::
 
-#### <a name="desktop"></a>デスクトップ
+#### <a name="desktop"></a>Desktop
 
 会議で、ユーザーは [アプリの **追加]** を選択 :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **し**、必要なアプリを選択できます。
 
@@ -90,7 +90,7 @@ ms.locfileid: "58528916"
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="例は、モバイル上の会議内タブでポーリング コンテンツを表示する方法を示しています。" border="false":::
 
-#### <a name="desktop"></a>デスクトップ
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="例は、会議内タブでポーリング コンテンツを表示する方法を示しています。" border="false":::
 
@@ -146,7 +146,7 @@ ms.locfileid: "58528916"
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="例は、モバイルで会議内ダイアログを使用する方法を示しています。" border="false":::
 
-### <a name="desktop"></a>デスクトップ
+### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="例は、会議内ダイアログを使用する方法を示しています。" border="false":::
 

@@ -2,15 +2,15 @@
 title: アプリケーションホスト型メディア ボットの要件と考慮事項
 description: アプリケーションホスト型メディア ボットの作成に関連する重要な要件と考慮事項をMicrosoft Teams。
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: アプリケーションホスト型メディア Windows サーバー azure vm
 ms.date: 11/16/2018
-ms.openlocfilehash: 20f4327ee967cdc75b72eb5525b684c0fb61acb3c90fb96c26eeb23d815fe4e0
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: e8f776b647beda2745a7bdbc03794e491a942b54
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57702831"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156864"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>アプリケーションホスト型メディア ボットの要件と考慮事項
 
@@ -87,7 +87,7 @@ ms.locfileid: "57702831"
 - [サンプル アプリケーション](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples)
 - [Graph SDK ドキュメントの呼び出し](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [サポートされているメディア形式](~/resources/media-formats.md)

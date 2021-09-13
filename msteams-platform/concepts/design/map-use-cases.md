@@ -3,14 +3,14 @@ title: 使用例をアプリの機能Teamsマップする
 author: surbhigupta
 description: アプリの使用例がエクスペリエンス内でどのように機能Teamsします。
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 77e8db5e0d0e4738cf479ccfddb9766507f7170c
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: d9c52acc1562cb2dcfdcd9b0c58e4d4001699c9c
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345552"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156296"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>使用例をアプリの機能Teamsマップする
 

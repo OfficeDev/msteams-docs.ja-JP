@@ -2,15 +2,15 @@
 title: メッセージング拡張機能アクション コマンドの定義
 author: surbhigupta
 description: メッセージング拡張機能アクション コマンドの概要
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: b4420247d3a0c1116bd1aed09fa2edccf18ae902
-ms.sourcegitcommit: 623d81eb079d1842813265746a5fe0fe6311b196
+ms.openlocfilehash: d9e2e482ed15c99613bbd786ab685a0b388de502
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "53068928"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156035"
 ---
 # <a name="define-messaging-extension-action-commands"></a>メッセージング拡張機能アクション コマンドの定義
 
@@ -125,9 +125,9 @@ ms.locfileid: "53068928"
 |---|---|---|---|
 | `id` | このプロパティは、このコマンドに割り当てる一意の ID です。 ユーザー要求には、この ID が含まれます。 | はい | 1.0 |
 | `title` | このプロパティはコマンド名です。 この値は UI に表示されます。 | はい | 1.0 |
-| `type` | このプロパティは、 である必要があります `action` 。 | いいえ | 1.4 |
-| `fetchTask` | このプロパティは、タスク モジュールのアダプティブ カードまたは埋め込み Web ビュー、およびパラメーターの静的リストまたは Web ビューを読み込むときにに設定 `true` `false` されます `taskInfo` 。 | いいえ | 1.4 |
-| `context` | このプロパティは、メッセージング拡張機能の呼び出し先を定義する値の任意の配列です。 使用可能な値: `message`、`compose`、`commandBox`。 既定値は `["compose", "commandBox"]` です。 | いいえ | 1.5 |
+| `type` | このプロパティは、 である必要があります `action` 。 | なし | 1.4 |
+| `fetchTask` | このプロパティは、タスク モジュールのアダプティブ カードまたは埋め込み Web ビュー、およびパラメーターの静的リストまたは Web ビューを読み込むときにに設定 `true` `false` されます `taskInfo` 。 | なし | 1.4 |
+| `context` | このプロパティは、メッセージング拡張機能の呼び出し先を定義する値の任意の配列です。 使用可能な値: `message`、`compose`、`commandBox`。 既定値は `["compose", "commandBox"]` です。 | なし | 1.5 |
 
 静的なパラメーターの一覧を使用している場合は、次のパラメーターも追加する必要があります。
 
@@ -145,9 +145,9 @@ ms.locfileid: "53068928"
 |---|---|---|---|
 |`taskInfo`|メッセージング拡張機能コマンドを使用するときにプリロードするタスク モジュールを指定します。 | いいえ | 1.4 |
 |`taskInfo.title`|初期タスク モジュールのタイトル。 |いいえ | 1.4 |
-|`taskInfo.width`|タスク モジュールの幅 (ピクセル単位の数値または既定のレイアウトなど) `large` `medium` `small` |いいえ | 1.4 |
-|`taskInfo.height`|タスク モジュールの高さ (ピクセル単位の数値または既定のレイアウトなど) `large` `medium` `small`|いいえ | 1.4 |
-|`taskInfo.url`|初期 Web ビューの URL。|いいえ | 1.4 | 
+|`taskInfo.width`|タスク モジュールの幅 (ピクセル単位の数値または既定のレイアウトなど) `large` `medium` `small` |なし | 1.4 |
+|`taskInfo.height`|タスク モジュールの高さ (ピクセル単位の数値または既定のレイアウトなど) `large` `medium` `small`|なし | 1.4 |
+|`taskInfo.url`|初期 Web ビューの URL。|なし | 1.4 | 
 
 #### <a name="app-manifest-example"></a>アプリ マニフェストの例
 
@@ -205,8 +205,8 @@ ms.locfileid: "53068928"
 
 | サンプルの名前           | 説明 | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Teams拡張アクション| アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Teams拡張機能の検索   |  検索コマンドを定義し、検索に応答する方法について説明します。        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams拡張アクション| アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams拡張機能の検索   |  検索コマンドを定義し、検索に応答する方法について説明します。        |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>次の手順
 

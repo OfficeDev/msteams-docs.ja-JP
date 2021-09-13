@@ -3,13 +3,13 @@ title: RSC のチャネル メッセージをすべて受信する
 author: surbhigupta12
 description: RSC アクセス許可を持つすべてのチャネル メッセージを受信する
 ms.topic: conceptual
-localization_priority: Normal
-ms.openlocfilehash: 1499bf4c78edd67af531e3fe8fa47ddfe196a923
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.localizationpriority: medium
+ms.openlocfilehash: ea247d7718b76f1e48bbb2c9839606dcb5cbab51
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528902"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156050"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>RSC のチャネル メッセージをすべて受信する
 
@@ -84,7 +84,7 @@ ms.locfileid: "58528902"
 
 | サンプルの名前 | 説明 | C# |Node.js|
 |-------------|-------------|------|----|
-|RSC アクセス許可を持つチャネル メッセージ| Microsoft Teams、ボットが RSC を使用してすべてのチャネル メッセージを受信する方法を示すサンプル アプリ@mentioned。|  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) |    [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |
+|RSC アクセス許可を持つチャネル メッセージ| Microsoft Teams、ボットが RSC を使用してすべてのチャネル メッセージを受信する方法を示すサンプル アプリ@mentioned。|  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) |    [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |
 
 ## <a name="see-also"></a>関連項目
 

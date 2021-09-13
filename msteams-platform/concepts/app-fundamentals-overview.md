@@ -3,14 +3,14 @@ title: アプリ開発の基本の概要
 author: heath-hamilton
 description: プラットフォーム開発の基本的な概念Teams説明します。
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 57c2cdbf4900de58166bbf4f75191943aeeb1db1
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: c31df4411f30d8de4c082d8889aa68d5e6ecf654
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345580"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156828"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Microsoft Teams開発の基本
 

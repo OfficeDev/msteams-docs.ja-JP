@@ -5,12 +5,13 @@ description: チャネル タブの会話型サブエンティティ チャッ�
 keywords: teams タブ チャネル構成可能
 ms.topic: conceptual
 ms.author: lomeybur
-ms.openlocfilehash: dffd4eb468167561735dbc292a400416c9bb11af
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.localizationpriority: none
+ms.openlocfilehash: a0dae824f27edfac6eea64ffe72fc112e46a71d7
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58529008"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156993"
 ---
 # <a name="create-conversational-tabs"></a>会話タブを作成する
 
@@ -93,7 +94,7 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 | サンプルの名前 | 説明 | C# |Node.js|
 |-------------|-------------|------|----|
-|[会話の作成] タブ| Microsoft Teams作成タブを示すタブ サンプル アプリを作成します。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+|[会話の作成] タブ| Microsoft Teams作成タブを示すタブ サンプル アプリを作成します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 
 ## <a name="see-also"></a>関連項目
 

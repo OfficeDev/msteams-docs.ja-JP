@@ -5,18 +5,19 @@ description: カスタム タブを作成する方法については、SharePoin
 ms.author: zhenyasa
 ms.date: 05/19/2021
 ms.topic: quickstart
-ms.openlocfilehash: 25f4a815add4a5712883976b9899131fb108046d75f813517c8261c3cca8e5af
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: none
+ms.openlocfilehash: 8197f92e27889c00eae7a75860301890522e5bab
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706961"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156559"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-sharepoint-framework-spfx"></a>アプリで最初のアプリをビルドMicrosoft Teams実行する (SharePoint Framework) (SPFx)
 
 このチュートリアルでは、単純な個人用アプリを実装する新Microsoft TeamsアプリSharePoint Framework SPFx作成する方法について説明します。 たとえば、個人用アプリ *には、* 個別に使用するタブのセットが含まれます。 チュートリアルでは、Teams アプリの構造、アプリをローカルで実行する方法、アプリを SharePoint に展開する方法について説明します。
 
-## <a name="before-you-begin"></a>はじめに
+## <a name="before-you-begin"></a>始める前に
 
 前提条件をインストールして、開発環境がセットアップされていることを確認します。
 
@@ -219,7 +220,7 @@ Teams Toolkitを使用すると、アプリをローカルでホストし、ワ�
 
 1. プロジェクト内 `{project}.sppkg` のフォルダー内 `SPFx/sharepoint/solution` のファイルを見つける。 [**開く**]を選択します。
 
-1. **[OK]** をクリックします。
+1. **[OK]** を選択します。
 
 1. 展開SharePoint自動的に開始されます。 [この **ソリューションを組織内のすべてのサイト** で使用できる] が選択されているのを確認します。 次に、[展開] **を選択します**。
 

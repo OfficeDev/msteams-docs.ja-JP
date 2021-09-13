@@ -3,14 +3,14 @@ title: 基本的な UI コンポーネントを使用Fluentアプリを設計す
 author: heath-hamilton
 description: アプリの作成や UI キットの取得にMicrosoft Teams一般的なプリミティブ UI コンポーネントMicrosoft Teams説明します。
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: e58a64014be2b576f8ca16d707e315fa8056f9b717ae8dd976f80c544c57ba31
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: b905a95f35abb083b5c8bba7c096e1012adb223d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704167"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156596"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>基本的な UI Microsoft Teamsを使用Fluentアプリを設計する
 
@@ -61,7 +61,7 @@ UI に<a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Flu
 
 :::image type="content" source="../../assets/images/components/dialog.png" alt-text="例は、ダイアログ UI コンポーネントを示しています。" border="false":::
 
-## <a name="dropdown"></a>Dropdown
+## <a name="dropdown"></a>ドロップダウン
 
 :::image type="content" source="../../assets/images/components/dropdown.png" alt-text="例は、ドロップダウン UI コンポーネントを示しています。" border="false":::
 
@@ -121,7 +121,7 @@ UI に<a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Flu
 
 :::image type="content" source="../../assets/images/components/toast.png" alt-text="トースト UI コンポーネントの例を示します。" border="false":::
 
-## <a name="toggle"></a>Toggle
+## <a name="toggle"></a>表示/非表示
 
 注: UI Fluentトグルは、一種のチェック ボックスです。
 

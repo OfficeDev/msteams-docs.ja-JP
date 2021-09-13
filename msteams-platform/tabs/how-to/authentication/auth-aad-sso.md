@@ -2,14 +2,14 @@
 title: タブのシングル サインオンのサポート
 description: シングル サインオン (SSO) について説明します。
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams 認証 SSO AAD シングル サインオン API
-ms.openlocfilehash: 6ce6a3605656c205897dadb714bab28a69964158
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: eddbc681155d1fea03ca2c362f5519c4d2542887
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528976"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156608"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>タブのシングル サインオン (SSO) のサポート
 
@@ -170,7 +170,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 |**サンプルの名前**|**説明**|**C#**|**Node.js**|
 |---------------|---------------|------|--------------|
-| タブ SSO |Microsoft Teamsのサンプル アプリ Azure AD SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs)、 </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
+| タブ SSO |Microsoft Teamsのサンプル アプリ Azure AD SSO| [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs)、 </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
 
 ## <a name="known-limitations"></a>既知の制限
 

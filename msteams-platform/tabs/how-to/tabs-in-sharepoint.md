@@ -3,15 +3,15 @@ title: SharePoint に [Teams] タブを追加する
 author: surbhigupta
 description: 既存の [web パーツ] タブTeams、SharePoint Web パーツSharePoint Framework展開する方法。
 keywords: teams タブ sharepoint framework 開発
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8410b0734845e6bc6a79fa58a3ee5c89228ef927ee111cdfa10285daff4c062f
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 6561164f177277e76b80e3c33ee57b9383bbd527
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704526"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156411"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>SharePoint に [Teams] タブを追加する 
 
@@ -70,7 +70,7 @@ SharePoint Framework v.1.7 では、TeamsタブをホストSharePoint。 SharePo
 
 また、タブを使用してMicrosoft Teamsを実装SharePoint Framework。 SharePoint Framework Web パーツは、Azure などのSharePointサービスを必要とせずに、Web パーツ内でホストされます。 開発者SharePoint、これにより、タブの開発プロセスが大幅にTeamsされます。 詳細については、SharePoint FrameworkのTeamsを使用する方法をSharePoint Framework[をTeams。](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
 
-## <a name="introduction"></a>概要
+## <a name="introduction"></a>はじめに
 
 ここで使用するタブは、必要な統合作業に焦点を当て、Azure で既にホストされています。
 

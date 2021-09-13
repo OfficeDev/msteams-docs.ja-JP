@@ -3,14 +3,14 @@ title: ボットを作成する
 description: アプリでボットを作成する方法についてMicrosoft Teams
 ms.topic: how-to
 keywords: teams ボットの作成
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 12/07/2018
-ms.openlocfilehash: 67aa3e2cfd1950dced84785a9f6f35cfd4d5ff85
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: d258f9e6713e6bb3d68aa19ef8a3b36d44dd3a07
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566776"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156635"
 ---
 # <a name="create-a-bot"></a>ボットを作成する
 

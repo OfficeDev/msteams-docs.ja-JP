@@ -3,14 +3,14 @@ title: UI テンプレートを使用したアプリの設計
 author: heath-hamilton
 description: 標準化された UI コンポーネント、レイアウト、およびパターンを使用して、アプリを迅速に設計し、Microsoft Teams。
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 6405c8a35b9d80c0a7fbcb9d28ae5e1a637a2ea6
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: ef1fbe41c7618518dab64c25b3ac17eaf8f925d1
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408683"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156936"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>UI テンプレートをMicrosoft Teamsアプリを設計する
 
@@ -60,7 +60,7 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-dashboard.png" alt-text="例は、モバイルでのダッシュボード UI テンプレートを示しています。" border="false":::
 
-### <a name="desktop"></a>デスクトップ
+### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="例は、デスクトップ上のダッシュボード UI テンプレートを示しています。" border="false":::
 
@@ -77,7 +77,7 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="例は、モバイルでのデータ可視化 UI テンプレートを示しています。" border="false":::
 
-### <a name="desktop"></a>デスクトップ
+### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="例は、デスクトップ上のデータ可視化 UI テンプレートを示しています。" border="false":::
 
@@ -96,7 +96,7 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-empty-state.png" alt-text="例は、モバイル上の空の状態 UI テンプレートを示しています。" border="false":::
 
-### <a name="desktop"></a>デスクトップ
+### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="例は、デスクトップ上の空の状態 UI テンプレートを示しています。" border="false":::
 
@@ -130,7 +130,7 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-form.png" alt-text="例は、モバイルでのフォーム UI テンプレートを示しています。" border="false":::
 
-### <a name="desktop"></a>デスクトップ
+### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="例は、デスクトップ上のフォーム UI テンプレートを示しています。" border="false":::
 
@@ -147,7 +147,7 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-list.png" alt-text="例は、モバイルのリスト UI テンプレートを示しています。" border="false":::
 
-### <a name="desktop"></a>デスクトップ
+### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="例は、デスクトップ上のリスト UI テンプレートを示しています。" border="false":::
 
@@ -163,7 +163,7 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-sign-in.png" alt-text="例は、モバイルでのサインイン UI テンプレートを示しています。" border="false":::
 
-### <a name="desktop"></a>デスクトップ
+### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="例は、デスクトップ上の UI テンプレートのサインインを示しています。" border="false":::
 
@@ -191,7 +191,7 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-task-board.png" alt-text="例は、モバイル上のタスク ボード UI テンプレートを示しています。" border="false":::
 
-### <a name="desktop"></a>デスクトップ
+### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="例は、デスクトップ上のタスク ボード UI テンプレートを示しています。" border="false":::
 
@@ -209,6 +209,6 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-wizard.png" alt-text="例は、モバイルでのウィザード UI テンプレートを示しています。" border="false":::
 
-### <a name="desktop"></a>デスクトップ
+### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="例では、デスクトップにウィザード UI テンプレートを表示します。" border="false":::

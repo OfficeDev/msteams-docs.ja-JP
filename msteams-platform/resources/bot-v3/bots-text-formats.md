@@ -3,14 +3,14 @@ title: 会話でサポートされるテキストの書式設定
 description: ボットの会話でのテキストの書式設定のサポートについて説明します。
 keywords: ボットの会話メッセージング
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 03/29/2018
-ms.openlocfilehash: dfb91e18a2ad895ae5b48c905046a22449304fc6
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: 466b2383230ce0cf8086ba4a3dd45a5488ed24b2
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566748"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156107"
 ---
 # <a name="formatting-bot-messages"></a>ボット メッセージの書式設定
 
@@ -40,7 +40,7 @@ Microsoft Teamsは、Markdown および XML (HTML) 書式タグのサブセッ�
 
 Microsoft Teams でサポートされているすべてのプラットフォームで書式設定が機能するには、一部のスタイルが現在すべてのプラットフォームでサポートされていない点に注意してください。
 
-| Style                     | テキスト専用メッセージ | カード (XML のみ) |
+| スタイル                     | テキスト専用メッセージ | カード (XML のみ) |
 |---------------------------|--------------------|------------------|
 | bold                      | ✔                  | ✖                |
 | italic                    | ✔                  | ✔                |
@@ -60,7 +60,7 @@ Microsoft Teams でサポートされているすべてのプラットフォー�
 
 #### <a name="text-only-messages"></a>テキスト専用メッセージ
 
-| Style                     | Desktop | iOS | Android |
+| スタイル                     | Desktop | iOS | Android |
 |---------------------------|---------|-----|---------|
 | bold                      | ✔       | ✔   | ✔       |
 | italic                    | ✔       | ✔   | ✔       |
@@ -76,15 +76,15 @@ Microsoft Teams でサポートされているすべてのプラットフォー�
 
 ### <a name="examples-of-text-formatting"></a>テキストの書式設定の例
 
-| Style | 例 | Markdown | XML (HTML) |
+| スタイル | 例 | Markdown | XML (HTML) |
 | --- | --- | --- | --- |
 | bold | **text** | `**text**` | `<strong>text</strong>` |
 | italic | *text* | `*text*` | `<em>text</em>` |
 | ヘッダー (レベル 1 &ndash; 3) | **Text** | `### Text` | `<h3>Text</h3>` |
 | 取り消し線 | ~~text~~ | `~~text~~` | `<strike>text</strike>` |
-| 順序なしリスト | <ul><li>テキスト</li><li>テキスト</li></ul> | `* text`<br>`* text` | `<ul><li>text</li><li>text</li></ul>` |
-| 順序付きリスト | <ol><li>テキスト</li><li>テキスト</li></ol> | `1. text`<br>`2. text` | `<ol><li>text</li><li>text</li></ol>` |
+| 順序なしリスト | <ul><li>text</li><li>text</li></ul> | `* text`<br>`* text` | `<ul><li>text</li><li>text</li></ul>` |
+| 順序付きリスト | <ol><li>text</li><li>text</li></ol> | `1. text`<br>`2. text` | `<ol><li>text</li><li>text</li></ol>` |
 | 事前に書式設定されたテキスト | `text` | `` `text` `` | `<pre>text</pre>` |
-| blockquote | <blockquote>テキスト</blockquote> | `>text` | `<blockquote>text</blockquote>` |
+| blockquote | <blockquote>text</blockquote> | `>text` | `<blockquote>text</blockquote>` |
 | hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` | `<a href="https://www.bing.com/">Bing</a>` |
 | 画像リンク | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |

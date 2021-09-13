@@ -1,15 +1,15 @@
 ---
 title: '[タスク モジュール] タブでタスク Microsoft Teams使用する'
 description: クライアント SDK を使用して、Teamsタブからタスク モジュールMicrosoft Teams説明します。
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: タスク モジュールチームがクライアント SDK をタブする
-ms.openlocfilehash: 3fe0a20d751b1eb08d70385648be1283a9d9b0c32e5849626df4abd36ba5bdce
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 0f6c1569a1aa18921df4635bdbaab505526c1e2e
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703584"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156687"
 ---
 # <a name="use-task-modules-in-tabs"></a>タブでタスク モジュールを使用する
 
@@ -137,7 +137,7 @@ function validateForm() {
 
 [タスク モジュールを呼び出して閉じる](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [ボットからのタスク モジュールの使用](~/task-modules-and-cards/task-modules/task-modules-bots.md)

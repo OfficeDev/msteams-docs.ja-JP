@@ -3,15 +3,15 @@ title: Moodle LMS のインストール
 description: アプリの Moodle 統合アプリをインストールして構成するMicrosoft Teams
 keywords: TeamsMoodle アプリ統合プラグイン
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: e5f33fa9146d0abb735e9f76aeaecea2dbdd230efe81251f9b7dcaf5700a907a
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: bdf5ea5b6f08c638bd00a69df59ae2e25b76b0ad
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706007"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156101"
 ---
 # <a name="install-moodle-lms"></a>Moodle LMS のインストール
 
@@ -108,7 +108,7 @@ PowerShell スクリプトを使用して、Azure ADアプリケーションと�
     1. 抽出したフォルダーを開きます。
     1. ファイルを右クリックし、[ `Moodle-AzureAD-Script.ps1` プロパティ] を **選択します**。
     1. [プロパティ **] ウィンドウの**[全般] タブで、ウィンドウの下部にあるセキュリティ属性の横にあるチェック `Unblock` ボックスをオンにします。
-    1. **[OK]** をクリックします。
+    1. **[OK]** を選択します。
     1. ディレクトリ パスを抽出したフォルダーにコピーします。
 
 1. 管理者として PowerShell を実行します。
@@ -228,7 +228,7 @@ PowerShell スクリプトを使用して、Azure ADアプリケーションと�
 
 リソースが Azure への展開を完了したら、メッセージング エンドポイントMicrosoft 365を構成する必要があります。 Azure でボットからエンドポイントを取得する必要があります。
 
-1. [Azure portal](https://portal.azure.com) にサインインします。
+1. [Azure portal](https://portal.azure.com)にサインインします。
 
 1. 左側のウィンドウで、[リソース グループ **] を** 選択し、ボットの展開中に使用または作成したリソース グループを選択します。
 

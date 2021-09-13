@@ -2,14 +2,14 @@
 title: '[Teams で共有] ボタンを作成する'
 description: Web サイトの [埋め込みTeamsに共有を追加する方法
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: 共有Teams共有Teams
-ms.openlocfilehash: 4bbf29bb355726b519975bec5d6fad3419b81ce3
-ms.sourcegitcommit: 09067fb9886323f144384254c41e93469c433382
+ms.openlocfilehash: 0d0fb0d7baf18038cfe87b648d2550bbd20b593a
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2021
-ms.locfileid: "58358623"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156149"
 ---
 # <a name="create-share-to-teams-button"></a>[Teams で共有] ボタンを作成する
 
@@ -78,7 +78,7 @@ Web サイトが web サイトと共有Teams、選択したチャネルに挿入
 
 |値|メタ タグ| 開くGraph|
 |----|----|----|
-|タイトル|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
+|役職|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
 |説明|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
 |サムネイル 画像| none。 |`<meta property="og:image" content="http://example.com/image.jpg">`|
 
@@ -92,13 +92,13 @@ HTML の既定のバージョンまたは Open Graph使用できます。
 
 ## <a name="full-launcherjs-definition"></a>完全なlauncher.js定義
 
-| プロパティ | HTML 属性 | 種類 | 既定値 | 説明 |
+| プロパティ | HTML 属性 | 型 | 既定値 | 説明 |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
-| href | `data-href` | string | 該当なし | 共有するコンテンツの href。 |
+| href | `data-href` | 文字列 | 該当なし | 共有するコンテンツの href。 |
 | preview | `data-preview` | boolean (文字列として) | `true` | 共有するコンテンツのプレビューを表示するかどうかを指定します。 |
 | iconPxSize | `data-icon-px-size` | number (文字列として) | `32` | レンダリングする Share-to-Teamsボタンのサイズ (ピクセル単位)。 |
 | msgText | `data-msg-text` | string | 該当なし | メッセージ作成ボックスのリンクの前に挿入される既定のテキスト。 最大文字数は 200 文字です。 |
-| assignInstr | `data-assign-instr` | string | 該当なし | 割り当て "命令" フィールドに挿入される既定のテキスト。 最大文字数は 200 文字です。 |
+| assignInstr | `data-assign-instr` | 文字列 | 該当なし | 割り当て "命令" フィールドに挿入される既定のテキスト。 最大文字数は 200 文字です。 |
 | assignTitle | `data-assign-title` | string | 該当なし | 割り当て "Title" フィールドに挿入される既定のテキスト。 最大文字数は 50 です。 |
 
 ### <a name="methods"></a>メソッド

@@ -2,15 +2,15 @@
 title: アプリの設計プロセス
 author: heath-hamilton
 description: Microsoft ツールとリソースを使用して効果的なアプリを設計する方法とMicrosoft Teams取得します。
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: f4d406426cdadd946e3579cec85e8c5c8133c2b5206a00fc1e32a29a2442b7cd
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 34401bf53196601b8836012fa4c96296510472a8
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704497"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156939"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>アプリの設計プロセスMicrosoft Teamsする
 

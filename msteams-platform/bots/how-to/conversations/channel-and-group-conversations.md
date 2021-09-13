@@ -3,14 +3,14 @@ title: ボットとのチャネルとグループの会話
 author: surbhigupta
 description: チャネルまたはグループ チャットでボットのメッセージを送信、受信、および処理する方法。
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 8ff89cf88bf56a905bdf507e1bc6e4ebbbd691f70d94289c8e206024c5657fa9
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: ea8de08de966b9ed15e02f5ead8e33e06c6da68f
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708414"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156155"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>ボットとのチャネルチャットとグループ チャットの会話
 
@@ -148,7 +148,7 @@ def get_mentions(activity: Activity) -> List[Mention]:
 
 オブジェクト `Mention` には、次の 2 つのプロパティを使用して設定する必要があります。
 
-* メッセージ <at>の@username</at> にデータを含める。
+* メッセージ *の@username* にデータを含める。
 * エンティティ コレクション内にメンション オブジェクトを含める。
 
 Bot Framework SDK には、メンションを作成するヘルパー メソッドとオブジェクトが含まれています。
@@ -274,7 +274,7 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 [コンテキストTeams取得](~/bots/how-to/get-teams-context.md)
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [会話イベントにサブスクライブする](~/bots/how-to/conversations/subscribe-to-conversation-events.md)

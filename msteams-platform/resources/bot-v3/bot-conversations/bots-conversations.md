@@ -2,15 +2,15 @@
 title: ボットを使用してメッセージを送受信する
 description: ボットを使用してメッセージを送受信する方法について説明Microsoft Teams
 ms.topic: overview
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams ボット メッセージ
 ms.date: 05/20/2019
-ms.openlocfilehash: efa7658aef87650e360c79523ac1c282dc4814fd
-ms.sourcegitcommit: e1fe46c574cec378319814f8213209ad3063b2c3
+ms.openlocfilehash: c82f96c42992f49f61d19c2bf5c6a19283e8ee95
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52630461"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156640"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>ボットと会話Microsoft Teamsする
 
@@ -51,7 +51,7 @@ ms.locfileid: "52630461"
 
 ボットはリッチ テキスト、画像、カードを送信できます。 ユーザーは、リッチ テキストと画像をボットに送信できます。 ボットで処理できるコンテンツの種類は、ボットの [Microsoft Teams設定] ページで指定できます。
 
-| Format | ユーザーからボットへ  | ボットからユーザーへ |  Notes |
+| フォーマット | ユーザーからボットへ  | ボットからユーザーへ |  注意事項 |
 | --- | :---: | :---: | --- |
 | リッチ テキスト | ✔ | ✔ |  |
 | ピクチャ | ✔ | ✔ | 最大 1024× 1024 および 1 MB (PNG、JPEG、または GIF 形式)。アニメーション GIF はサポートされていません。 |
@@ -79,9 +79,9 @@ a の省略可能なプロパティを設定して、メッセージのテキス
 XML を使用して、各イメージの高さと幅を指定することをお勧めします。 Markdown を使用する場合、画像サイズの既定値は 256 ×256 です。 例:
 
 * `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>` を使う
-* 使用しない `![Duck on a rock](http://aka.ms/Fo983c)`
+* `![Duck on a rock](http://aka.ms/Fo983c)` を使用しないでください
 
-## <a name="receiving-messages"></a>メッセージの受信
+## <a name="receiving-messages&quot;></a>メッセージの受信
 
 宣言されているスコープに応じて、ボットは次のコンテキストでメッセージを受信できます。
 

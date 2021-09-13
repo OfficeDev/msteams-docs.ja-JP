@@ -10,12 +10,13 @@ metadata:
   nextTutorialHref: bots/how-to/authentication/auth-aad-sso-bots.md
   nextTutorialTitle: ボット認証の詳細
   ms.custom: mvc
-  ms.openlocfilehash: 1b95b4010ce1c3b1340c1ddb4357645383c93497
-  ms.sourcegitcommit: b83e1ade63869be10e4fcdc963d6bab7c5311a5b
+  ms.localizationpriority: none
+  ms.openlocfilehash: 631caa72700165172619fc7a80a6cff2ad6e072f
+  ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 08/26/2021
-  ms.locfileid: "58538161"
+  ms.lasthandoff: 09/12/2021
+  ms.locfileid: "59156236"
 items:
 - durationInMinutes: 1
   content: "Teamsボットは、顧客サービスなど、ユーザーが繰り返し自動化されたタスクを実行する会話型ボットです。 ユーザーは、繰り返しタスクを実行するために資格情報を複数回使用してサインインする必要があります。 シングル サインオン (SSO) 認証方法は、Azure Active Directory (AAD) で認証トークンをサイレント モードで更新します。 これにより、ユーザーがサインイン資格情報を入力する必要がある回数が削減されます。 \n\nボットの動作は、関連する会話に応じて異なります。\n\n* チャネルチャットとグループ チャット会話のボットでは、ユーザーがボット@mention必要があります。\n* 1 対 1 の会話の場合、ボットを @メンションする必要はありません。 ユーザーが送信したメッセージはすべてボットにルーティングされます。\n\nこのステップ バイ ステップ ガイドは、SSO 認証を有効にしたボットを作成するのに役立ちます。 次の出力が表示されます。\n\n![ボットにサインインしたモバイル](~/assets/images/bots/sbs-desktop-mobile.png)\n"
@@ -101,7 +102,7 @@ items:
 
         | Field | 値または説明 |
         | ----- | ----- |
-        | 名前 | 新しい接続設定の名前を入力します。 ボット サービス コードの設定で名前を使用できます。 |
+        | Name | 新しい接続設定の名前を入力します。 ボット サービス コードの設定で名前を使用できます。 |
         | Service Provider | **[V2 Azure Active Directory] を選択します**。 |
         | クライアント ID | 以前に Microsoft App **ID として保存されています**。 |
         | クライアント シークレット | 以前はクライアント シークレット ID **の** 値として保存されています。 |

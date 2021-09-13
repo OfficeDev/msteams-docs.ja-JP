@@ -2,14 +2,14 @@
 title: ボットのシングル サインオンのサポート
 description: ユーザー トークンを取得する方法について説明します。 現在、ボット開発者は、OAuth カードのサポートを受け取ってサインイン カードまたは Azure ボット サービスを使用できます。
 keywords: トークン、ユーザー トークン、ボットの SSO サポート
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: ffa13e8a9f4014f0ed3e89f32b1eafed74fea76b
-ms.sourcegitcommit: 95e0c767ca0f2a51c4a7ca87700ce50b7b154b7c
+ms.openlocfilehash: a3b150ee27eeb387c71191e74b6765dd5a93b148
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "58528797"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156356"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>ボットのシングル サインオン (SSO) のサポート
 
@@ -303,4 +303,4 @@ is `turnContext.activity.value` of type [TokenExchangeInvokeRequest](/dotnet/api
 ## <a name="code-sample"></a>コード サンプル
 |**サンプルの名前** | **説明** |**.NET** | 
 |----------------|-----------------|--------------|
-|ボット フレームワーク SDK | ボット フレームワーク SDK を使用するサンプル。 |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore)|
+|ボット フレームワーク SDK | ボット フレームワーク SDK を使用するサンプル。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore)|

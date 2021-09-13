@@ -3,14 +3,14 @@ title: ボットと SDK
 author: surbhigupta
 description: ボットを構築するためのツールと SDK Microsoft Teams概要。
 ms.topic: overview
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: e34d89b0ea8aaeb533899309cfb8fdf34d4ceb4994a6e87db398cc3dfc577abd
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 395338cf394412b031f2b1f21fccb9587be84df5
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707100"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156164"
 ---
 # <a name="bots-and-sdks"></a>ボットと SDK
 
@@ -114,7 +114,7 @@ Microsoft Teams のボットは、1 対 1 の会話、グループ チャット�
 |----------------|-----------------|--------------|----------------|
 | Teams 会話ボット | メッセージングおよび会話イベントの処理。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [ボットのアクティビティ ハンドラー](~/bots/bot-basics.md)

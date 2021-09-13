@@ -2,15 +2,15 @@
 title: '[チャネルまたはグループ] タブを作成する'
 author: laujan
 description: Yeoman Generator を使用してチャネルとグループ タブを作成するクイック スタート Microsoft Teams。
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: fedaf3ec639917110e16c666734fa3eedbcda18e
-ms.sourcegitcommit: 85a52119df6c4cb4536572e6d2e7407f0e5e8a23
+ms.openlocfilehash: 5f63a5217ad5da5ec82ab5b3abb5b8f7142ecf1d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53179996"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156227"
 ---
 # <a name="create-a-channel-or-group-tab"></a>[チャネルまたはグループ] タブを作成する
 
@@ -199,7 +199,7 @@ gulp build
     gulp serve
     ```
 
-1. 次の図に示すように、ブラウザーに入力し、タブ名に置き換え、アプリケーションのホーム ページ `http://localhost:3007/<yourDefaultAppNameTab>/` **<yourDefaultAppNameTab>** を表示します。
+1. ブラウザー `http://localhost:3007/<yourDefaultAppNameTab>/` に入力し、次の図に示すように **、DefaultAppNameTab** をタブ名に置き換え、アプリケーションのホーム ページを表示します。
 
     ![ホーム ページのスクリーンショット](~/assets/images/tab-images/homePage.png)
 

@@ -4,12 +4,13 @@ description: ストアの申請に関する問題のトラブルシューティ�
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: a18aff23b8523bc91485835c991cc6608deb8eae93ce175ff3403e699dc6c5e5
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: none
+ms.openlocfilehash: 39ab797bf87638e107f55e8b83d002372a4261f5
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705560"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156807"
 ---
 # <a name="resolve-issues-if-your-microsoft-teams-store-submission-fails"></a>ストアの申請に失敗した場合Microsoft Teamsを解決する
 
@@ -83,7 +84,7 @@ Microsoft が提供するコンシェルジュ検証サービスは、開発者�
 
 <summary><b>アプリはベータテスト中です。発行プロセスの時間を節約するためにアプリを提出できますか?</b></summary>
 
-ちがいます。 Microsoft は、実稼働対応アプリのみを検証します。
+いいえ。 Microsoft は、実稼働対応アプリのみを検証します。
 
 <br>
 
@@ -93,7 +94,7 @@ Microsoft が提供するコンシェルジュ検証サービスは、開発者�
 
 <summary><b>パートナー センターで初めてアプリ teamsubm@microsoft.com する前に、メールの連絡先を確認できますか?</b></summary>
 
-ちがいます。 Microsoft は、パートナー センターで初めてアプリを提出するまで、アプリの検証を開始しない。
+いいえ。 Microsoft は、パートナー センターで初めてアプリを提出するまで、アプリの検証を開始しない。
 
 <br>
 

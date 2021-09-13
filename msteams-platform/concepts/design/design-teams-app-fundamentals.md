@@ -2,15 +2,15 @@
 title: アプリを設計する - デザイン システムについて
 description: レイアウト、配色など、Microsoft Teamsアプリの設計の基本について説明します。
 author: heath-hamilton
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: 3c625f66912b9b45d820a663dfc6846aa1de7356cb77f5a800112fbedc615de1
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: cfcba2da5560e54fb260fd29f817404a68a4d8cd
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704001"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156945"
 ---
 # <a name="microsoft-teams-app-design-system"></a>Microsoft Teamsデザイン システム
 
@@ -73,7 +73,7 @@ ms.locfileid: "57704001"
    :::column-end:::
 :::row-end:::
 
-## <a name="type"></a>種類
+## <a name="type"></a>型
 
 :::row:::
 

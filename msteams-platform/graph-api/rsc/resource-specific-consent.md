@@ -1,17 +1,17 @@
 ---
 title: リソース固有の同意を有効Teams
 description: リソース固有の同意について、Teams活用する方法について説明します。
-localization_priority: Normal
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: teams 承認 OAuth SSO AAD rsc Graph
-ms.openlocfilehash: 1dcb12c7e76671867ec632f02177565dee212fc4
-ms.sourcegitcommit: bab08a3a4934f06457a0882bd55ccefc6708682b
+ms.openlocfilehash: 256bdf29079f9a8f3085c63f7e072414c4bd3ce3
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "58822214"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156651"
 ---
 # <a name="resource-specific-consent"></a>リソース固有の同意
 
@@ -144,7 +144,7 @@ ID プラットフォームからアクセス トークンを取得するには�
 
 RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣言されます。 次の [値を使用して、WebApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) キーをアプリ マニフェストに追加します。
 
-|名前| 種類 | 説明|
+|Name| 型 | 説明|
 |---|---|---|
 |`id` |String |AAD アプリ ID。 詳細については [、「AAD ポータルにアプリを登録する」を参照してください](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)。|
 |`resource`|String| このフィールドは RSC で操作を行う必要がありますが、エラー応答を回避するには、値を追加して値を指定する必要があります。任意の文字列が実行します。|
@@ -254,7 +254,7 @@ RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣
 
 | **サンプルの名前** | **説明** | **.NET** |**Node.js** |
 |-----------------|-----------------|----------------|----------------|
-| Resource-Specific同意 (RSC) | RSC を使用して API Graph呼び出します。 | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|
+| Resource-Specific同意 (RSC) | RSC を使用して API Graph呼び出します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|
 
 ## <a name="see-also"></a>関連項目
  

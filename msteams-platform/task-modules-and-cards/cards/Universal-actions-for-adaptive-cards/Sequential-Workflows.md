@@ -3,13 +3,13 @@ title: シーケンシャル ワークフロー
 description: ユニバーサル アクションを使用したシーケンシャル ワークフローのサンプル
 author: surbhigupta12
 ms.topic: conceptual
-localization_priority: Normal
-ms.openlocfilehash: d7628987e4258ef4fe4f42d751cc48ed947439dd9b38a6c30769b58e8b6e7e85
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: medium
+ms.openlocfilehash: c3065080a0a470104fa2b7c06c9b0c8105a829a6
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705523"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156484"
 ---
 # <a name="sequential-workflows"></a>シーケンシャル ワークフロー
 

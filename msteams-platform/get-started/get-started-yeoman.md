@@ -2,15 +2,15 @@
 title: チュートリアル - Yeoman ジェネレーターを使用して最初のアプリを作成する
 description: Yeoman ジェネレーターを使用してアプリMicrosoft Teamsを開始する方法について学習します。
 keywords: nodejs yeoman node.jsを開始する
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: tutorial
 ms.custom: scenarios:getting-started
-ms.openlocfilehash: 696c98be0b091cb937194140f5606c774447baff
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 90bd997de1e5bbfc92e366d466c156f052cbe3bf
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345179"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156531"
 ---
 # <a name="build-your-first-microsoft-teams-app-using-the-yeoman-generator"></a>Yeoman ジェネレーターを使用Microsoft Teamsアプリをビルドする
 

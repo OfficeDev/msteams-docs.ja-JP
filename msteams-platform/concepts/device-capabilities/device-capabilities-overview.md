@@ -4,14 +4,14 @@ author: Rajeshwari-v
 description: ネイティブ デバイス機能の概要。
 ms.author: surbhigupta
 keywords: カメラ イメージ メディア マイク マイク QR コード qrcode バーコード バーコード スキャン スキャナーの場所マップ機能ネイティブ デバイスのアクセス許可
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 4b09d4d81301aa8fc125da98a3633dc79e05d3d1
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 6b1fcb436dc77c1859c81010c1d1eb5adcc3773a
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345726"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156927"
 ---
 # <a name="device-capabilities"></a>デバイス機能
 
@@ -25,7 +25,7 @@ Microsoft Teamsプラットフォームは、組み込みのファースト パ�
     * マイク
     * ギャラリー
     * QR またはバーコード スキャナー
-* Location
+* 場所
 
 デバイス機能へのアクセスを取得した後、これらの機能を Teamsプラットフォームと統合して、共同作業のエクスペリエンスを向上できます。 
 

@@ -2,15 +2,15 @@
 title: アプリをローカライズする
 description: アプリのローカライズに関する考慮事項Microsoft Teamsします。
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams publishs store office publishing AppSource ローカライズ言語
 ms.date: 05/15/2018
-ms.openlocfilehash: 403314eb732aef0a0813dc56c37cd3c34eecafd3754a74a4946a70f33d9fbde7
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 7d9b805f54d4040ff83b0fd0e704dd349a025fa4
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705574"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156603"
 ---
 # <a name="localize-your-app"></a>アプリをローカライズする
 

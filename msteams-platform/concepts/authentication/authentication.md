@@ -2,14 +2,14 @@
 title: アプリ ユーザーの認証
 description: アプリでの認証Teamsおよびアプリで使用する方法について説明します。
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Teams 認証 OAuth SSO AAD
-ms.openlocfilehash: 73d85fed57caff410e2f4986f208b868c228777deade8a5a2a0a1ce0e35d7cd3
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 40d5659251b1faff087c6ee6458800ede2a5c840
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57705595"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156681"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>ユーザーを認証Microsoft Teams
 
@@ -46,7 +46,7 @@ OAuthPrompt の使用の詳細については、以下を参照してくださ�
 | **サンプルの名前** | **説明** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
 | ボット認証 | このサンプルは、ボットで認証を開始する方法を示Microsoft Teams。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
-| タブ、ボット、メッセージング拡張機能 (ME) SSO | このサンプルでは、Tab、Bot、ME - 検索、アクション、linkunfurl の SSO を示します。 |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | 利用不可 |
+| タブ、ボット、メッセージング拡張機能 (ME) SSO | このサンプルでは、Tab、Bot、ME - 検索、アクション、linkunfurl の SSO を示します。 |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | 使用不可 |
 
 
 ## <a name="configure-the-identity-provider"></a>ID プロバイダーを構成する

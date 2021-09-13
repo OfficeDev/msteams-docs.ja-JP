@@ -5,12 +5,13 @@ description: Teams ツールキットを使用して、Microsoft Teams の会話
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
-ms.openlocfilehash: 2b39dc51c1c175e738b88376a298df82f25a582a
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.localizationpriority: none
+ms.openlocfilehash: f9f35f5b4e639c6568ad3c1eccfc750d3bd9b853
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345642"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156563"
 ---
 # <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>Microsoft Teams 用の会話型ボットをビルドする
 
@@ -19,7 +20,7 @@ ms.locfileid: "58345642"
 > [!IMPORTANT]
 > 現在、ボットは Government Community Cloud (GCC) で使用できますが、GCC-High国防総省 (DOD) では使用できません。
 
-## <a name="before-you-begin"></a>はじめに
+## <a name="before-you-begin"></a>始める前に
 
 前提条件をインストールして、開発環境がセットアップされていることを確認します。
 

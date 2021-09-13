@@ -3,14 +3,14 @@ title: メッセージを作成して送信する
 author: laujan
 description: Microsoft Teams で Office 365 コネクタを使用する方法について説明します。
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Teams o365 コネクタ
-ms.openlocfilehash: afef216c7ef6f6813dc1ece807fa917a801687eb060f2711be7df3c2cb42ac12
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 6d10a173079fb31db303e98bfaf0800ff048a187
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703134"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156996"
 ---
 # <a name="create-and-send-messages"></a>メッセージを作成して送信する
 
@@ -283,5 +283,5 @@ try
 ## <a name="see-also"></a>関連項目
 
 * [Office 365コネクタのMicrosoft Teams](~/webhooks-and-connectors/how-to/connectors-creating.md)
-* [受信 Webhook の作成](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
-* [送信 Webhook の作成](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+* [受信 Webhook を作成する](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [送信 Webhook を作成する](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)

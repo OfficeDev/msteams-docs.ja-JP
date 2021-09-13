@@ -3,14 +3,14 @@ title: ボットをデザインする
 description: Teams のボットをデザインして、Microsoft Teams UI Kit を取得するする方法をご紹介します。
 author: heath-hamilton
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: a52aa742d51ab637b850d8c55b15ab1305566e35
-ms.sourcegitcommit: 306b6e8cb3aac8bfda10ef3999467a797d64539d
+ms.openlocfilehash: feeb80a0cd96172431e7682835e3f078cdd7983c
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "58408672"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156684"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Microsoft Teams のボットをデザインする
 
@@ -38,7 +38,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::image type="content" source="../../assets/images/bots/mobile-access-bot-chat-at-mention.png" alt-text="例は、グループ チャット内のモバイル ボットにアクセスする方法を、グループ チャットを使用@mention。" border="false":::
 
-### <a name="desktop"></a>デスクトップ
+### <a name="desktop"></a>Desktop
 
 ユーザーは、次のいずれかの方法でボットを追加できます。
 
@@ -60,7 +60,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-personal-welcome.png" alt-text="例は、モバイル上の個人用アプリでのボットの概要を示しています。" border="false":::
 
-#### <a name="desktop"></a>デスクトップ
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="個人アプリでのボット導入例を示します。" border="false":::
 
@@ -72,7 +72,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-group-welcome.png" alt-text="例は、モバイルでの共同作業コンテキストでのボットの紹介を示しています。" border="false":::
 
-#### <a name="desktop"></a>デスクトップ
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/bots/bot-group-welcome.png" alt-text="共同作業コンテキストでのボット導入例を示します。" border="false":::
 
@@ -86,7 +86,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-sso-example.png" alt-text="例では、モバイルのサインイン ボタンを持つボットを示しています。" border="false":::
 
-#### <a name="desktop"></a>デスクトップ
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/bots/bot-sso-example.png" alt-text="サインイン ボタンのあるボットの例を示します。" border="false":::
 
@@ -105,7 +105,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-tour-personal.png" alt-text="例は、モバイルでの 1 対 1 のチャットでのボット ツアーを示しています。" border="false":::
 
-#### <a name="desktop"></a>デスクトップ
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/bots/bot-tour-personal.png" alt-text="1 対 1 のチャットでのボット ツアーの例を示します。" border="false":::
 
@@ -117,7 +117,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-tour-channel.png" alt-text="例は、モバイル上のチャネルでのボット ツアーを示しています。" border="false":::
 
-#### <a name="desktop"></a>デスクトップ
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/bots/bot-tour-channel.png" alt-text="チャネルでのボット ツアーの例を示します。" border="false":::
 
@@ -148,7 +148,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 |4 |**チャット バブル**: ボットの会話は、Teams のメッセージング フレームワークを使用しています。|
 |5 |**アダプティブ カード**: ボットの応答にアダプティブ カードが含まれる場合、カードはチャット バブルの全幅を取ります。|
 
-#### <a name="desktop"></a>デスクトップ
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/bots/bot-anatomy.png" alt-text="ボットの構造的な例を示します。" border="false":::
 
@@ -223,7 +223,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-simple-query.png" alt-text="例は、モバイル上のボットとの簡単なクエリ操作を示しています。" border="false":::
 
-#### <a name="desktop"></a>デスクトップ
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/bots/bot-simple-query.png" alt-text="ボットとの単純なクエリの対話を示す例。" border="false":::
 
@@ -237,7 +237,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-multi-turn.png" alt-text="例は、モバイル上のボットとのマルチターン操作を示しています。" border="false":::
 
-#### <a name="desktop"></a>デスクトップ
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="ボットとの複数回の対話を示す例。" border="false":::
 
@@ -255,7 +255,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-proactive-message.png" alt-text="例は、モバイルでボットのプロアクティブ メッセージを見ているユーザーを示しています。" border="false":::
 
-#### <a name="desktop"></a>デスクトップ
+#### <a name="desktop"></a>Desktop
 
 次の例では、ボットが別のチャネルでメッセージを送信したというトースト通知をユーザーが取得します。
 
@@ -273,7 +273,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::image type="content" source="../../assets/images/bots/mobile-bot-with-tab.png" alt-text="例は、タブがモバイルでのボット コンテンツの整理に役立つ方法を示しています。" border="false":::
 
-#### <a name="desktop"></a>デスクトップ
+#### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="タブを使用してボットのコンテンツを整理する方法を示す例。" border="false":::
 

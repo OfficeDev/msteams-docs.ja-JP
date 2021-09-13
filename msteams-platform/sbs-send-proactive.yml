@@ -10,12 +10,13 @@ metadata:
   nextTutorialHref: ./bots/how-to/conversations/send-proactive-messages.md
   nextTutorialTitle: プロアクティブ メッセージの詳細
   ms.custom: mvc
-  ms.openlocfilehash: f242afca853e2ae5c01f2fa999775a5100ad04d0e0e8c9695b47a1f7f932ad9f
-  ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+  ms.localizationpriority: none
+  ms.openlocfilehash: 70f1803644dbed01efe4d9fa3f60483ae01837b1
+  ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 08/07/2021
-  ms.locfileid: "57704821"
+  ms.lasthandoff: 09/12/2021
+  ms.locfileid: "59156233"
 items:
 - durationInMinutes: 1
   content: "プロアクティブ メッセージとは、ユーザーからの要求に応答しないボットから送信されるメッセージです。 これには、次のようなメッセージが含まれます。\n - ウェルカム メッセージ\n - 通知\n - 予定されたメッセージ\n \nこのステップ バイ ステップ ガイドは、ボットからプロアクティブ メッセージを送信するのに役立ちます。 次の出力が表示されます。\n\n* チャットでのプロアクティブな hello メッセージ        \n![チャットでの積極的なこんにちは](~/assets/images/proactive-scenario/proactive-helo.png)\n\n* アダプティブ カードとしてのプロアクティブな hello メッセージ    \n![アダプティブ カードでのプロアクティブな hello](~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png) \n"

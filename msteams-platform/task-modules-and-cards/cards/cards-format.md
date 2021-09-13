@@ -2,15 +2,15 @@
 title: カード内のテキストの書式設定
 description: カードテキストの書式設定について説明Microsoft Teams
 keywords: teams ボット カードの形式
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: e62d79b6bd07031800116bc3295ce55a06e3bc86
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: abbdc0d1fa77744ae061e5430c4450d0e7cf83c7
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345719"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156483"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams のカードの書式設定
 
@@ -41,7 +41,7 @@ ms.locfileid: "58345719"
 
  次の表に、、 、およびのサポート `Textblock` されているスタイル `Fact.Title` を示します `Fact.Value` 。
 
-| Style | 例 | Markdown |
+| スタイル | 例 | Markdown |
 | --- | --- | --- |
 | 太字 | **Bold** | ```**Bold**``` |
 | 斜体 | _Italic_ | ```_Italic_``` |
@@ -293,11 +293,11 @@ schema 要素内で、ユーザーにフィルター処理を求め、サイズ�
 
 コネクタ カードでは、マークダウンと HTML の書式設定が制限されています。
 
-| Style | 例 | Markdown |
+| スタイル | 例 | Markdown |
 | --- | --- | --- |
 | 太字 | **text** | `**text**` |
 | 斜体 | *text* | `*text*` |
-| ヘッダー (レベル 1 &ndash; 3) | **テキスト** | `### Text`|
+| ヘッダー (レベル 1 &ndash; 3) | **Text** | `### Text`|
 | 取り消し線 | ~~text~~ | `~~text~~` |
 | 記号付きリスト | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | 番号付きリスト | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
@@ -391,11 +391,11 @@ O365 Connector カードと簡易カードの場合、Teamsとモバイル バ�
 
 コネクタ カードでは、マークダウンと HTML の書式設定が制限されています。
 
-| Style | 例 | HTML |
+| スタイル | 例 | HTML |
 | --- | --- | --- |
 | 太字 | **text** | `<strong>text</strong>` |
 | 斜体 | *text* | `<em>text</em>` |
-| ヘッダー (レベル 1 &ndash; 3) | **テキスト** | `<h3>Text</h3>` |
+| ヘッダー (レベル 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | 取り消し線 | ~~text~~ | `<strike>text</strike>` |
 | 記号付きリスト | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 番号付きリスト | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
@@ -481,11 +481,11 @@ Android では、次の図に示すように HTML 書式が表示されます。
 
 HTML タグは、ヒーロー カードやサムネイル カードなどの単純なカードでサポートされます。 Markdown はサポートされていません。
 
-| Style | 例 | HTML |
+| スタイル | 例 | HTML |
 | --- | --- | --- |
 | 太字 | **text** | `<strong>text</strong>` |
 | 斜体 | *text* | `<em>text</em>` |
-| ヘッダー (レベル 1 &ndash; 3) | **テキスト** | `<h3>Text</h3>` |
+| ヘッダー (レベル 1 &ndash; 3) | **Text** | `<h3>Text</h3>` |
 | 取り消し線 | ~~text~~ | `<strike>text</strike>` |
 | 記号付きリスト | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
 | 番号付きリスト | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |

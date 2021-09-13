@@ -4,12 +4,13 @@ author: Rajeshwari-v
 description: Web アプリケーションとデバイス機能をアプリと統合するMicrosoft Teams概要。
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: dd9498fe60d4e97b41072b78b5134f2fbc3af174
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.localizationpriority: none
+ms.openlocfilehash: 83252b1f93b0c148bafaea4a911ea758e0ec9c14
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345768"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156690"
 ---
 # <a name="integrate-web-apps"></a>Web アプリを統合する
 
@@ -37,7 +38,7 @@ ms.locfileid: "58345768"
 
 Microsoft Power プラットフォームは、1 つの強力なアプリケーション プラットフォームで、Power BI、Power Apps、Power Automate、Power Virtual Agentsなど、4 つの堅牢な Microsoft テクノロジを組み合わせたプラットフォームです。 これらのテクノロジを使用すると、ソリューションの構築、プロセスの自動化、データの分析、統合された統合環境内での仮想エージェントの作成が可能になります。
 
-### <a name="power-apps"></a>Power アプリ
+### <a name="power-apps"></a>Power Apps
 
 このPower Apps、ビジネス データに接続し、組織のニーズに合わせてカスタマイズされたビジネス アプリを構築できます。 Power Appsキャンバス アプリを通じてビジネスの課題を解決するために、さまざまなアプリ シナリオを有効にします。 アプリを構築した後、アプリをメーカー ポータルからエクスポートしPower Appsに埋め込Microsoft Teams。
 
@@ -77,7 +78,7 @@ Microsoft Teams と SharePoint の間の豊富な統合エクスペリエンス�
 
 Microsoft Teamsプラットフォームは、組み込みのファースト パーティ エクスペリエンスと一致する開発者機能を継続的に強化しています。 拡張された Teams プラットフォームを使用すると、パートナーは、Microsoft Teams JavaScript クライアント SDK で利用できる専用 API を使用して、カメラ、QR またはバーコード スキャナー、フォト ギャラリー、マイク、場所などのネイティブ デバイス機能にアクセスして統合できます。 
 
-## <a name="integrate-people-picker"></a>[ユーザー選択の統合]
+## <a name="integrate-people-picker"></a>ユーザー ピッカーを統合する
 
 ユーザーが Web アプリ エクスペリエンスTeamsユーザーを検索および選択できる、ネイティブユーザー選択コントロールを統合できます。
 

@@ -2,14 +2,14 @@
 title: ボットでサポートされているメディア形式
 description: デバイス上のボットMicrosoft Teams、オーディオおよびビデオ コンテンツに対して以下のメディア形式のみをサポートします。
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams ボットのメディア形式
-ms.openlocfilehash: a7279af1154a7d6aa66200146adcff5216b63b03a62229e2af908e8b9b8c9d07
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: da134568cb714580ad4f67b993d5ee467db39710
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57703111"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156696"
 ---
 # <a name="supported-media-formats-for-bots"></a>ボットでサポートされているメディア形式
 
@@ -28,7 +28,7 @@ ms.locfileid: "57703111"
 | Opus | http://opus-codec.org/ |
 | MP4 | https://en.wikipedia.org/wiki/MPEG-4 |
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [チームまたはチャット Teams取得するボット API の変更点](~/resources/team-chat-member-api-changes.md)

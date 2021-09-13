@@ -3,14 +3,14 @@ title: ボット メッセージの形式
 description: ボット メッセージの書式設定の詳細について説明します。
 keywords: teams シナリオ チャネルの会話ボット メッセージ
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: a9566331b259ba77f6770ff6394e8a788769af5d
-ms.sourcegitcommit: 51e4a1464ea58c254ad6bd0317aca03ebf6bf1f6
+ms.openlocfilehash: e737cd42d2aa00e3e4f302b4917fef67adaa5645
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52566475"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156607"
 ---
 # <a name="message-formatting-for-bots"></a>ボットのメッセージの書式設定
 
@@ -40,7 +40,7 @@ Microsoft Teamsは、Markdown および XML (HTML) 書式タグのサブセッ�
 
 Microsoft Teams でサポートされているすべてのプラットフォームで書式設定が機能するには、一部のスタイルが現在すべてのプラットフォームでサポートされていない点に注意してください。
 
-| Style                     | テキスト専用メッセージ | リッチ カード (XML のみ) |
+| スタイル                     | テキスト専用メッセージ | リッチ カード (XML のみ) |
 | ---                       | :---: | :---: |
 | bold                      | ✔ | ✖ |
 | italic                    | ✔ | ✔ |
@@ -60,7 +60,7 @@ Microsoft Teams でサポートされているすべてのプラットフォー�
 
 ### <a name="text-only-messages"></a>テキスト専用メッセージ
 
-| Style                     | Desktop | iOS | Android |
+| スタイル                     | Desktop | iOS | Android |
 | ---                       | :---: | :---: | :---: |
 | bold                      | ✔ | ✔ | ✔ |
 | italic                    | ✔ | ✔ | ✔ |

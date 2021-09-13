@@ -4,14 +4,14 @@ author: laujan
 description: SameSite Cookie の属性について説明します。
 keywords: cookie 属性 samesite
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 78ac367ee550650fb9994676a8083a1b201a06086582161daba6ea4311d0aaeb
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 100bfa29cd8d193e73473bf32834885283f6ba2d
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708337"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156756"
 ---
 # <a name="samesite-cookie-attribute"></a>SameSite Cookie 属性 
 
@@ -46,7 +46,7 @@ SameSite cookie 属性は次のとおりです。
 |Setting | 強制 | 値 |属性の指定 |
 | -------- | ----------- | --------|--------|
 | **Lax**  | Cookie は、ファースト パーティ **のコンテキストと** HTTP GET 要求でのみ自動的に送信されます。 SameSite Cookie は、イメージや iframe の読み込み呼び出しなど、クロス サイト のサブ要求で差し控えされます。 ユーザーが外部サイトから URL に移動するときに、たとえば、リンクに従って送信されます。| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
-| **Strict** |ブラウザーは、ファースト パーティのコンテキスト要求の Cookie のみを送信します。 これらは、Cookie を設定するサイトから発信された要求です。 要求が現在の場所とは異なる URL から発信された場合、属性にタグ付けされた Cookie は `Strict` 送信されません。| 省略可能 |`Set-Cookie: key=value; SameSite=Strict`|
+| **Strict** |ブラウザーは、ファースト パーティのコンテキスト要求の Cookie のみを送信します。 これらは、Cookie を設定するサイトから発信された要求です。 要求が現在の場所とは異なる URL から発信された場合、属性にタグ付けされた Cookie は `Strict` 送信されません。| オプション |`Set-Cookie: key=value; SameSite=Strict`|
 | **なし** | Cookie は、ファースト パーティコンテキストとクロスオリジン要求の両方で送信されます。ただし、値は明示的に設定する必要があります。すべてのブラウザー要求は HTTPS プロトコルに従い、暗号化された接続を必要とする属性 **`None`**  **`Secure`** を含める必要があります。 その要件に準拠しない Cookie は拒否 **されます**。 <br/>**両方の属性が一緒に必要です**。 HTTPS プロトコルを使用せずに指定した場合、または HTTPS プロトコルを使用しない場合、サード パーティの  **`None`** **`Secure`**  Cookie は拒否されます。| オプションですが、設定されている場合は HTTPS プロトコルが必要です。 |`Set-Cookie: key=value; SameSite=None; Secure` |
 
 ## <a name="teams-implications-and-adjustments"></a>Teamsの影響と調整
@@ -61,7 +61,7 @@ SameSite cookie 属性は次のとおりです。
 ### <a name="tabs-task-modules-and-messaging-extensions"></a>タブ、タスク モジュール、メッセージング拡張機能
 
 * Teamsは、トップ レベルまたはファースト パーティのコンテキストで表示されるコンテンツを埋め込 `<iframes>` む場合に使用します。
-* タスク モジュールを使用すると、Teams のアプリケーションでモーダル ポップアップ エクスペリエンスを作成することができます。 タブと同様に、現在のページ内にモーダル ウィンドウが開きます。
+* タスク モジュールを使用すると、Teams アプリケーションでモーダル ポップアップ エクスペリエンスを作成することができます。 タブと同様に、現在のページ内にモーダル ウィンドウが開きます。
 * メッセージング拡張機能を使用すると、外部リソースからリッチコンテンツをチャット メッセージに挿入できます。
 
 埋め込みコンテンツで使用される Cookie は、サイトが . `<iframe>` さらに、ページ上のリモート リソースが、要求とタグ、外部フォント、および個人設定されたコンテンツで送信される Cookie に依存している場合は、それらのリソースがクロス サイトの使用状況 (フォールバックなど) のマークが付いているか、フォールバックが確実に実行されている必要があります。 `<img>` `<script>` `SameSite=None; Secure`

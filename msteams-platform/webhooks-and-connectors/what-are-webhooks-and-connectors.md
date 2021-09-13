@@ -2,21 +2,21 @@
 title: Webhook とコネクタ
 author: clearab
 description: Webhook とコネクタによって Web サービスがどのように Teams クライアントに接続されるかについて説明します。
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 199f1e8a82f067cbd8124553481ed54693d241f1c3a50c085b32203b89f4f63d
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 525d6e17400f9dd7b819f50d3c1ca89f155efca8
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708637"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156987"
 ---
 # <a name="webhooks-and-connectors"></a>Webhook とコネクタ
 
 Webhooks とコネクタは、Web サービスをチャネルやチームに接続するのに役立Microsoft Teams。 Webhooks は、ユーザー定義の HTTP コールバックで、ユーザーチャネルで行ったアクションについてユーザーに通知Microsoft Teamsします。 これは、アプリがリアルタイム データを取得する方法です。 コネクタを使用すると、ユーザーは Web サービスから通知とメッセージをサブスクライブして受け取ることができます。 サービスの HTTPS エンドポイントを公開して、カード形式でメッセージを投稿します。
 
-## <a name="outgoing-webhooks"></a>送信 Webhooks
+## <a name="outgoing-webhooks"></a>Webhookの送信
 
 Webhooks は、Teamsアプリとの統合に役立ちます。 送信 Webhooks を使用すると、チャネルから Web サービスにテキスト メッセージを送信できます。 送信 Webhook を構成した後、ユーザーは送信 Webhook を@mention Web サービスにメッセージを送信できます。 サービスは、テキストまたはカードを使用してメッセージに 10 秒以内に応答します。
 
@@ -44,11 +44,11 @@ Office 365コネクタを使用すると、受信 Webhook 用のカスタム構�
 
 ## <a name="see-also"></a>関連項目
 
-* [受信 Webhook の作成](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [受信 Webhook を作成する](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Office 365 コネクタを作成する](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [メッセージを作成して送信する](~/webhooks-and-connectors/how-to/connectors-using.md)
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [送信 Webhook の作成](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+> [送信 Webhook を作成する](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)

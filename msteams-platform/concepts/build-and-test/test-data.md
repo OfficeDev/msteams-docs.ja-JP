@@ -2,15 +2,15 @@
 title: テスト テナントにテスト データをMicrosoft 365する
 description: アプリのテストOffice 365成功する開発者プログラムサブスクリプションをMicrosoft Teamsする
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: アプリ開発者プログラム チームのテスト
 ms.date: 11/01/2019
-ms.openlocfilehash: 44947f39e89ab36760968b72cda81cee4ea9798cbb111021c29ef5c035574b9e
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: fd5f5d1d372a5ddaaa48ed1e971268d28553d5f4
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707114"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156825"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>テスト テナントにテスト データをMicrosoft 365する
 
@@ -29,7 +29,7 @@ ms.locfileid: "57707114"
 
 ## <a name="allow-users-to-upload-apps"></a>ユーザーにアプリのアップロードを許可する
 
-既定では、テナントにアプリをアップロード (サイドロード) できるのは、Teams管理者またはサービス管理者のみです。 ユーザーが自分で使用するためにカスタム アプリをアップロードしたり、テストのためにチームにアップロードしたりすることもできます。 詳細については、「カスタム アプリ ポリシーと設定を管理する」を参照[Teams。](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings)
+既定では、テナントにアプリをアップロード (サイドロード) できるのは、Teams管理者またはサービス管理者のみです。 ユーザーが自分で使用するためにカスタム アプリをアップロードしたり、テストのためにチームにアップロードしたりすることもできます。 詳細については、「カスタム アプリ ポリシーと設定を管理する」を参照[Teams。](/microsoftteams/teams-custom-app-policies-and-settings)
 
 ## <a name="create-teams-and-channels-for-testing"></a>テスト用のチームとチャネルを作成する
 

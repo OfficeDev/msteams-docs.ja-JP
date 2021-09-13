@@ -2,14 +2,14 @@
 title: Microsoft 365 テナントを準備する
 description: Microsoft 365 の Teams の概要
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: Microsoft 365 テナントTeams のアップロードの構成
-ms.openlocfilehash: 1cc22c1315084f7ffb96ba091b19f33ed4467077590eee6e0294762a32d0f586
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 83d45d567c11ff26b5c788371cd4a676f9c3ca2c
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57704428"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156152"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Microsoft 365 テナントを準備する
 
@@ -27,7 +27,7 @@ Microsoft 365購読者は、次のいずれかの計画Microsoft Teamsアプリ�
 
 ## <a name="create-your-development-environment"></a>開発環境の作成
 
-ユーザーアカウントをお持ちMicrosoft 365場合は、開発者プログラムのサブスクリプションにMicrosoft 365[必要](https://developer.microsoft.com/microsoft-365/dev-program)があります。 サブスクリプションは 90 日間無料で、開発アクティビティに使用している限り更新を続行します。 ユーザーがサブスクリプションをVisual Studio EnterpriseまたはProfessional場合、両方のプログラムに無料の開発者サブスクリプションMicrosoft 365[含まれます](https://aka.ms/MyVisualStudioBenefits)。 サブスクリプションがアクティブである限りVisual Studioアクティブです。 詳細については、「開発者向けサブスクリプション[のセットアップ」Microsoft 365参照してください](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started)。
+ユーザーアカウントをお持ちMicrosoft 365場合は、開発者プログラムのサブスクリプションにMicrosoft 365[必要](https://developer.microsoft.com/microsoft-365/dev-program)があります。 サブスクリプションは 90 日間無料で、開発アクティビティに使用している限り更新を続行します。 ユーザーがサブスクリプションをVisual Studio EnterpriseまたはProfessional場合、両方のプログラムに無料の開発者サブスクリプションMicrosoft 365[含まれます](https://aka.ms/MyVisualStudioBenefits)。 サブスクリプションがアクティブである限りVisual Studioアクティブです。 詳細については、「開発者向けサブスクリプション[のセットアップ」Microsoft 365参照してください](/office/developer-program/office-365-developer-program-get-started)。
 
 ## <a name="enable-teams-for-your-organization"></a>組織Teamsを有効にする
 
@@ -59,9 +59,9 @@ Microsoft 365購読者は、次のいずれかの計画Microsoft Teamsアプリ�
 
     ![アップロードアプリ ビュー](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
 
-これらの設定の操作方法の詳細については、「Teams[](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings)のカスタム アプリ ポリシーと設定を管理する」および「Teams でアプリセットアップ ポリシー[を管理する」を参照してください](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies)。
+これらの設定の操作方法の詳細については、「Teams[](/microsoftteams/teams-custom-app-policies-and-settings)のカスタム アプリ ポリシーと設定を管理する」および「Teams でアプリセットアップ ポリシー[を管理する」を参照してください](/microsoftteams/teams-app-setup-policies)。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"] 
 > [テスト セットアップの選択](~/concepts/build-and-test/debug.md)

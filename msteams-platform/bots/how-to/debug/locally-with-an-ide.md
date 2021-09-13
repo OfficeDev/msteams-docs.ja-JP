@@ -3,14 +3,14 @@ title: ボットをローカルでテストおよびデバッグする
 author: surbhigupta
 description: IDE を使用してボットをローカルでテストおよびデバッグする
 ms.topic: overview
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 5774833806940fcd4a2cc771687ecfcd9126c835582f71c21f26b92314a1df40
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: a143830ad32b42e9613011b3f08cfb9afd838f26
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706313"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156448"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>ボットをローカルでテストおよびデバッグする
 

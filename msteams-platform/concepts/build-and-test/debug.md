@@ -2,14 +2,14 @@
 title: アプリをテストおよびデバッグするためのセットアップの選択
 description: アプリのテストとデバッグのMicrosoft Teams説明します。
 keywords: チームがデバッグ アプリを実行する
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 5d358e7f37972f1b0954f2c4c5f6a892aeff8d8f4f08b4be22d4ae0215acbebe
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: c20f10fc0f3fb7265921ded2bf412271695bbcd9
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57707317"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156047"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>アプリをテストおよびデバッグするセットアップMicrosoft Teamsする
 
@@ -70,12 +70,12 @@ Microsoft Teams完全にクラウドベースの製品である場合、アク�
 
 ## <a name="load-and-run-your-experience"></a>エクスペリエンスの読み込みと実行
 
-アプリ内でエクスペリエンスを読み込Microsoft Teamsするには、パッケージを作成し、パッケージをアプリにアップロードTeams。 詳細については、以下を参照してください。
+アプリ内でエクスペリエンスを読み込Microsoft Teamsするには、パッケージを作成し、パッケージをアプリにアップロードTeams。 詳しくは、次のトピックを参照してください。
 
 * [アプリのパッケージをMicrosoft Teamsします](~/concepts/build-and-test/apps-package.md)。
 * [アップロードでアプリをMicrosoft Teams。](~/concepts/deploy-and-publish/apps-upload.md)
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"] 
 > [テスト データを環境に追加する](~/concepts/build-and-test/test-data.md)

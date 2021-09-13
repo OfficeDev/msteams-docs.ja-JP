@@ -3,14 +3,14 @@ title: Teams ドキュメントに投稿する
 description: ドキュメントの作成と発行Teams手順
 author: surbhigupta
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: contributor-guide
-ms.openlocfilehash: d09f946926f7377b65910c7bccce7cef8e30ef739afa31b94c83354cffbd7c27
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 28fe69d59757bf53ddd105fde403d625d5faf419
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708057"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156693"
 ---
 # <a name="contribute-to-teams-documentation"></a>Teams ドキュメントに投稿する
 
@@ -79,7 +79,7 @@ Teamsドキュメントは **、Microsoft Docs** のテクニカル ドキュメ
 * [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)
 
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [Microsoft Docs の更新プログラムと最新のお知らせを取得する](/teamblog)

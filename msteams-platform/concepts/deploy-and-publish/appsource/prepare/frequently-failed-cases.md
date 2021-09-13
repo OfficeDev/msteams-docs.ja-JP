@@ -2,15 +2,15 @@
 title: アプリの申請に関するヒントと頻繁に失敗するケース
 description: ストアの申請に成功するためのヒントとTeams提出が失敗する一般的な理由について説明します
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: アプリの申請に関するヒントが頻繁に失敗したケースの検証ガイドライン
-ms.openlocfilehash: 91ae68562d93e4ad8770d5251671c3fa756aa0b15482b4495fe016a01e068707
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 99e5a55e4c3cfb63766d4b0ba72a2cc2824bc823
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706576"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156813"
 ---
 # <a name="tips-for-a-successful-microsoft-teams-app-submission"></a>ヒントアプリの申請が成功Microsoft Teams確認する
 

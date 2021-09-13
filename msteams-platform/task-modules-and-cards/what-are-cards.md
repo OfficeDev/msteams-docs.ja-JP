@@ -1,15 +1,15 @@
 ---
 title: カード
 description: カードと、ボット、コネクタ、メッセージング拡張機能でのカードの使い方について説明します。
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: コネクタ ボット カード メッセージング
 ms.topic: overview
-ms.openlocfilehash: 5fce5983e5197bfde37d2c92d427e8135b294d422eb019ef207eeb7f0e5be9f3
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 345e37a9af00c2f3300cc76f4b44b83cc47d0392
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706633"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156879"
 ---
 # <a name="cards"></a>カード
 
@@ -67,7 +67,7 @@ Teamsは、次の 3 つの異なる場所でカードを使用します。
 * [カードの書式を設定Teams](~/task-modules-and-cards/cards/cards-format.md)
 * [アダプティブ カードの設計](~/task-modules-and-cards/cards/design-effective-cards.md)
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [カードの種類](~/task-modules-and-cards/cards/cards-reference.md)

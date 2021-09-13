@@ -3,15 +3,15 @@ title: コンテンツ ページを作成する
 author: surbhigupta
 description: コンテンツ ページを作成する方法
 keywords: teams タブ グループ チャネル構成可能静的
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: f6f673420de73d786ddee95b4da7870750f3e6851a80f6ad71b1e606d650ba60
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.openlocfilehash: 1f83f1c46e637a73b52373740d21e32d3eb387e7
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57708309"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156029"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>タブのコンテンツ ページを作成する
 
@@ -109,7 +109,7 @@ Teams のエンティティへのディープ リンクを作成できます。 
 * [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
 * [コンテンツ ページを作成する](~/tabs/how-to/create-tab-pages/content-page.md)
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [構成ページを作成する](~/tabs/how-to/create-tab-pages/configuration-page.md)

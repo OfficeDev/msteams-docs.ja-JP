@@ -4,12 +4,13 @@ description: パートナー センターにアプリを提出し、アプリを
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: a7c46f6dc537d7cfad7c176582df1305c3f0bc056a78996e013757a3eff7e013
-ms.sourcegitcommit: 3ab1cbec41b9783a7abba1e0870a67831282c3b5
+ms.localizationpriority: none
+ms.openlocfilehash: 5f401e940b5c3f4c4d47ae4fcb77142809a2ff01
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "57706074"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156810"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>アプリをアプリストアMicrosoft Teamsする
 
@@ -30,7 +31,7 @@ ms.locfileid: "57706074"
 1. [アプリがTeamsと](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)ストアの標準を満たTeams、ストアの検証ガイドラインを確認します。
 1. [パートナー センターの開発者アカウントを作成します](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)。
 1. [自動テストの実行](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)、テスト ノートのコンパイル、ストア登録情報の作成など、レビュー プロセスの迅速化に役立つ重要なタスクを含む、ストア申請を準備します。
-1. [パートナー センターからアプリ](https://docs.microsoft.com/office/dev/store/add-in-submission-guide) を提出します。
+1. [パートナー センターからアプリ](/office/dev/store/add-in-submission-guide) を提出します。
 1. 申請に失敗した場合は、Microsoft と直接作業して問題を解決し、 [アプリを再送信します](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)。
 
    :::column-end:::
@@ -45,11 +46,11 @@ ms.locfileid: "57706074"
 
 ## <a name="see-also"></a>関連項目
 
-* [アプリ ストアMicrosoft 365発行する](https://docs.microsoft.com/office/dev/store/)
+* [アプリ ストアMicrosoft 365発行する](/office/dev/store/)
 * [アップロードアプリTeamsする](~/concepts/deploy-and-publish/apps-upload.md)
 * [組織にTeamsアプリを発行する](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [デザイン検証ガイドラインのレビュー](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)

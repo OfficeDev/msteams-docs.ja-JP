@@ -1,19 +1,19 @@
 ---
-title: '[ユーザー選択の統合]'
+title: ユーザー ピッカーを統合する
 author: Rajeshwari-v
 description: JavaScript クライアント SDK Teamsを使用して People Picker コントロールを統合する方法
 keywords: ユーザー選択コントロール
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 7afc856705bdf6e9495e2063356428d07e25c21a
-ms.sourcegitcommit: 2c4c77dc8344f2fab8ed7a3f7155f15f0dd6a5ce
+ms.openlocfilehash: 5f686b247397c89a5a1ab8fe80ac9e97017ea051
+ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "58345291"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "59156595"
 ---
-# <a name="integrate-people-picker"></a>[ユーザー選択の統合]  
+# <a name="integrate-people-picker"></a>ユーザー ピッカーを統合する  
 
 [ユーザー選択] は、ユーザーを検索して選択するコントロールです。 これは、プラットフォームで使用できるネイティブTeamsです。 ネイティブのユーザー選択Teamsコントロールを Web アプリと統合できます。 単一または複数の選択、および構成 (チャット、チャネル、組織全体での検索の制限など) を選択できます。
 
@@ -42,12 +42,12 @@ API の説明は次のとおりです。
 
 `selectPeople`API には、次の入力構成が付属しています。
 
-|構成パラメーター|種類|説明| 既定値|
+|構成パラメーター|型|説明| 既定値|
 |-----|------|--------------|------|
 |`title`| String| これはオプションのパラメーターです。 ユーザー選択コントロールのタイトルを設定します。 | ユーザーを選択する|
 |`setSelected`|String| これはオプションのパラメーターです。 事前に選択するユーザーの AAD の ID を渡す必要があります。 このパラメーターは、ユーザー選択コントロールの起動中にユーザーを事前に選択します。 1 つの選択の場合、最初の有効なユーザーだけが、残りのユーザーを無視して事前設定されます。 |Null| 
-|`openOrgWideSearchInChatOrChannel`|ブール値 | これはオプションのパラメーターです。 true に設定すると、アプリがチャットやチャネルに追加された場合でも、組織全体のスコープでユーザー選択を起動します。 |不正解|
-|`singleSelect`|ブール値|これはオプションのパラメーターです。 true に設定すると、選択を 1 人のユーザーにのみ制限するユーザー選択を起動します。 |不正解|
+|`openOrgWideSearchInChatOrChannel`|ブール値 | これはオプションのパラメーターです。 true に設定すると、アプリがチャットやチャネルに追加された場合でも、組織全体のスコープでユーザー選択を起動します。 |False|
+|`singleSelect`|ブール値|これはオプションのパラメーターです。 true に設定すると、選択を 1 人のユーザーにのみ制限するユーザー選択を起動します。 |False|
 
 次の図は、サンプル Web アプリでの People Picker のエクスペリエンスを示しています。
 
@@ -82,7 +82,7 @@ API の説明は次のとおりです。
 
 Web アプリでエラーを適切に処理する必要があります。 次の表に、エラー コードとエラーが生成される条件を示します。 
 
-|エラー コード |  エラー名     | 条件|
+|エラー コード |  エラー名     | Condition|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API は現在のプラットフォームではサポートされていません。|
 | **500** | INTERNAL_ERROR | ユーザー選択の起動中に内部エラーが発生しました。|
