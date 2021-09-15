@@ -4,12 +4,12 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: チームの最新情報
-ms.openlocfilehash: 8ef06dc5c2d6461b4867150ec8fec773f225b058
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: ba12e7f450cc45f005567a5148d8f7b88a5fe77d
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156293"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360663"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
@@ -30,6 +30,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 | **日付** | **メモ** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+|09/08/2021|会議ステージは GA で利用できます。|[会議で使用するアプリを有効Teamsする](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
 |08/30/2021| カスタム 一緒にモードのシーン機能は、参加者を 1 つの仮想シーンに結合し、事前に決定されたシートにビデオ ストリームを設定します。 | [カスタム一緒にモードのシーン](~/apps-in-teams-meetings/teams-together-mode.md) |
 |08/25/2021| シングル サインオン (SSO) を使用してTeamsボットを作成する手順ガイドが導入されました。 | [SSO を使用してボットを作成する手順Teamsガイド](sbs-bots-with-sso.yml) |
 |08/19/2021| ボットをスレッドにインストールするときに受信したインストール更新イベント。 | [インストール更新イベント](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event) |
@@ -207,4 +208,4 @@ RSS フィードを構成することでTeamsプラットフォームの更新�
 1. [RSS 接続の名前 **を入力する] に名前を入力します**。
 1. [RSS **https://aka.ms/TeamsPlatformUpdates** フィード **のアドレス] に入力します**。
 1. [ダイジェスト頻度] ドロップダウン リストからフィード **の頻度を** 選択します。
-1. **[保存]** を選択します。
+1. [**保存**] を選択します。

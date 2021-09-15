@@ -6,12 +6,12 @@ ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
 ms.localizationpriority: none
-ms.openlocfilehash: 3154e800ab72e610fb2a4fd20756cbbe3e908606
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d014ba82f8e499b8b38f1dbc13a9ee68ef29f1c9
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156564"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360655"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-blazor"></a>Blazor で最初のアプリをMicrosoft Teams実行する
 
@@ -30,8 +30,6 @@ ms.locfileid: "59156564"
 
 Teams ツールキットを使用して、最初のプロジェクトを作成します。
 
-# <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/vs)
-
 1. 2019 Visual Studioを開きます。
 
 1. [新 **しいプロジェクトを作成する] を選択します**。
@@ -46,38 +44,6 @@ Teams ツールキットを使用して、最初のプロジェクトを作成�
 
    1. [TeamsFx **Project**  >  **SSO 用**  >  **に構成する] を選択します**。
    1. メッセージが表示されたら、M365 管理者アカウントにサインインします。
-
-# <a name="command-line"></a>[コマンド ライン](#tab/cli)
-
-1. ターミナルを開き、プロジェクトを作成するディレクトリを選択します。
-
-1. 次 `dotnet new -i` のコマンドからテンプレートをインストールNuGet。
-
-   ``` bash
-   dotnet new --install Microsoft.TeamsFx.VisualStudio.ProjectTemplates::0.1.43-beta
-   ```
-
-   これを行う必要があるのは、初めて、またはテンプレートを更新する場合のみです。 この[NuGet](https://www.nuget.org/packages/Microsoft.TeamsFx.VisualStudio.ProjectTemplates/)の最新バージョンを確認します。
-
-1. ディレクトリを作成します。
-
-   ``` bash
-   mkdir helloworld
-   ```
-
-1. 新 `dotnet new` しいプロジェクトを作成するには、次のコマンドを実行します。
-
-   ``` bash
-   dotnet new teamsapp --shortName my-teams-app --companyName "My Company"
-   ```
-
-1. スキャフォールディングが完了した後、次の手順にTeams構成します。
-
-   ``` bash
-   teamsfx init
-   ```
-
-   これで、デバッグ用にソリューションをVisual Studio開く必要があります。
 
 ---
 
@@ -169,7 +135,7 @@ Teams ツールキットでは、アプリをローカルで実行すること�
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish1.png" alt-text="プロジェクトの発行操作を選択する":::
 
-1. [発行 **] ウィンドウで****、[Azure] と [次** へ] を **選択します**。
+1. [発行]**ウィンドウで****[Azure] を選択し、[次** へ] を **選択します**。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish2.png" alt-text="発行ターゲットとして Azure を選択する":::
 
@@ -219,7 +185,7 @@ Teams ツールキットでは、アプリをローカルで実行すること�
 
 1. [最初 **の環境を作成する] を選択します**。
 
-1. 環境の名前を入力し、[追加] を **選択します**。 たとえば、`_Production_` などです。
+1. 環境の名前を入力し、[追加] を **選択します**。 たとえば、「 `_Production_` 」のように入力します。
 
 1. [最初 **の環境変数を作成する] を選択します**。
 
@@ -258,7 +224,7 @@ Teams ツールキットでは、アプリをローカルで実行すること�
 
 1. **[更新]** を選択します。
 
-1. **[保存]** を選択します。
+1. [**保存**] を選択します。
 
 1. サイドバーで、[シングル サインオン **] を選択します**。
 
@@ -266,7 +232,7 @@ Teams ツールキットでは、アプリをローカルで実行すること�
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments8.png" alt-text="シングル サインオンアプリケーション ID URI の編集":::
 
-1. **[保存]** を選択します。
+1. [**保存**] を選択します。
 
 1. サイドバーで、[ドメイン] **を選択します**。
 

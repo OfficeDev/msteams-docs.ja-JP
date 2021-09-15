@@ -5,12 +5,12 @@ description: アプリを設計するMicrosoft Teamsします。 リソースに
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 56a988b174739fbbf14f17d5454943a9081358ed
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: f2e0043162081ba85e328182257d79161fb7875d
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156942"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360469"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>アプリのMicrosoft Teamsする
 
@@ -33,7 +33,7 @@ Teamsアプリは、ユーザーが一緒に達成するのに役立ちます。
 
 ### <a name="collaborative"></a>共同作業
 
-Teamsアプリは、ユーザーが一緒に達成するのに役立ちます。 設計をガイドするには、次の原則を使用します。
+Teamsアプリは、ユーザー間で協調的で共有されたアクティビティを通じてコラボレーションを促進します。
 
    :::column-end:::
    :::column span="":::
@@ -91,7 +91,7 @@ UI はわかりやすいので、見た目とトーンが快適で、ユーザ�
 
 ### <a name="responsive"></a>速い
 
-アプリはデバイスであり、画面に依存しない。
+アプリは、デバイスと画面に依存しないです。
 
    :::column-end:::
 :::row-end:::

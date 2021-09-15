@@ -5,16 +5,16 @@ description: 利用可能な Microsoft Low および no code ソリューショ�
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 1ad2b98855f822e0329d32701035f045aea8b601
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 77e3f3cbd8e5de53748b64b5006df259b2164e4f
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156275"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360670"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>低コードのカスタム アプリを作成Microsoft Teams
 
-Microsoft Teams拡張可能でアダプティブです。 つまり、ユーザーの個別のニーズを満たすTeamsカスタム アプリケーションをビルドできます。 低コードのカスタム アプリは、時間を節約し、迅速なソリューションを提供し、ゼロから作成されたアプリよりも需要を満たします。 このドキュメントでは、Microsoft Power Platform、チャットボット、およびPower Virtual Agentsの概要をVirtual Assistant。
+Microsoft Teams拡張可能でアダプティブです。 つまり、ユーザーの個別のニーズを満たすTeamsカスタム アプリケーションをビルドできます。 低コードのカスタム アプリは、時間を節約し、迅速なソリューションを提供し、ゼロから作成されたアプリと同じ需要を満たします。 このドキュメントでは、Microsoft Power Platform、チャットボット、およびPower Virtual Agentsの概要をVirtual Assistant。
 
 低コード プラットフォームは、アプリケーションとプロセスを構築するためのコーディングを最小限または全く行うソフトウェア開発に対する直感的なアプローチを提供します。 開発者は、経験のない開発者がコーディングをほとんどまたは全くせずにカスタム アプリを簡単に構築し、プロの開発者がアプリを迅速に開発および展開できます。 これらのプラットフォームは、ビジュアル インターフェイス、バックエンド サービスへのコネクタ、およびアプリケーションのビルド、デバッグ、展開、および保守を行う組み込みのアプリ ライフサイクル管理システムで構成されます。 Microsoft Power Platform は、低コード属性を使用して互換性のあるアプリTeams迅速に構築するための革新的なゲートウェイです。
 
@@ -53,10 +53,10 @@ Virtual Assistantは、ユーザー エクスペリエンス、組織のブラ�
 
 ### <a name="-power-platform-learn-modules"></a>✔ Power Platform Learn モジュール
 
-|  トピック  |  Links  |
+|  トピック  |  リンク  |
 |:---------|:----------------------|
 |Power BI|[Power BIメーカー向け](/learn/browse/?expanded=power-platform&products=power-bi&roles=maker)</br>[Power BI開発者向け](/learn/browse/?expanded=power-platform&products=power-bi&roles=developer)|
-|Power Apps|[Power Appsメーカー向け](/learn/browse/?products=power-apps&roles=maker)</br>[Power Apps開発者向け](/learn/browse/?products=power-apps)|
+|Power アプリ|[Power Appsメーカー向け](/learn/browse/?products=power-apps&roles=maker)</br>[Power Apps開発者向け](/learn/browse/?products=power-apps)|
 |Power Automate|[Power Automateメーカー向け](/learn/browse/?expanded=power-platform&products=power-automate&roles=maker)</br>[Power Automate開発者向け](/learn/browse/?expanded=power-platform&products=power-automate&roles=developer)|
 |Power Virtual Agents|[Power Virtual Agents開発者向けツール](/learn/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
 

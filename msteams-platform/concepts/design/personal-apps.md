@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: ae75a79ebc6293b99e7e4db310cfb0545ce5037a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 2f55661c7941422eb4067023eed46b05d1b757ea
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156930"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360719"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>アプリの個人用アプリを設計Microsoft Teams
 
@@ -39,7 +39,7 @@ ms.locfileid: "59156930"
 
 ### <a name="anatomy-personal-app-private-workspace"></a>Anatomy: 個人用アプリ (プライベート ワークスペース)
 
-#### <a name="mobile"></a>モバイル
+#### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="例は、個人用タブのコンポーネント構造を示しています。" border="false":::
 
@@ -92,7 +92,7 @@ ms.locfileid: "59156930"
 
 ### <a name="anatomy-personal-app-bot"></a>解剖学: 個人用アプリ (ボット)
 
-#### <a name="mobile"></a>モバイル
+#### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="例は、個人用ボット コンポーネントの構造を示しています。" border="false":::
 

@@ -1,26 +1,26 @@
 ---
-title: 使用を開始する - 最初の会話型ボットのビルド
+title: 開始する - 最初のボットをビルドする
 author: adrianhall
-description: Teams ツールキットを使用して、Microsoft Teams の会話ボットを作成します。
+description: アプリを使用してMicrosoft TeamsボットをTeams Toolkit。
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
 ms.localizationpriority: none
-ms.openlocfilehash: f9f35f5b4e639c6568ad3c1eccfc750d3bd9b853
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 7e41de915e63b509da1db5b1cbe8e018be4d586d
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156563"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360606"
 ---
-# <a name="build-your-first-conversational-bot-for-microsoft-teams"></a>Microsoft Teams 用の会話型ボットをビルドする
+# <a name="build-your-first-bot-for-microsoft-teams"></a>最初のボットをビルドして、Microsoft Teams
 
 このチュートリアルでは、Teams ボット アプリを構築し、実行し、展開する方法を学びます。 ボットは、Teams ユーザーと Web サービスの間を仲介する役割を果たします。 ユーザーは、ボットとチャットすることで、情報を素早く入手したり、ワークフローを開始したり、Web サービスに可能なすべてのことができます。 
 
 > [!IMPORTANT]
 > 現在、ボットは Government Community Cloud (GCC) で使用できますが、GCC-High国防総省 (DOD) では使用できません。
 
-## <a name="before-you-begin"></a>始める前に
+## <a name="before-you-begin"></a>はじめに
 
 前提条件をインストールして、開発環境がセットアップされていることを確認します。
 
@@ -93,7 +93,7 @@ CLI では、プロジェクトを作成するためのいくつかの質問を�
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/bot-file-layout.png" alt-text="ボット プロジェクトのファイル レイアウト":::。
 
-ボット コードは `bot` ディレクトリに格納されています。  `bot/teamsBot.js` はボットの主な入力ポイントで、ダイアログは `dialogs` ディレクトリに格納されます。
+ボット コードは `bot` ディレクトリに格納されています。  ボット `bot/teamsBot.js` の主要なエントリ ポイントです。
 
 > [!Tip]
 > Teams 内で最初のボットを統合する前に、Teams 外のボットに慣れておきましょう。  ボットの詳細については、[[Azure Bot Service]](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) のチュートリアルをご覧ください。
@@ -104,7 +104,6 @@ Teams ツールキットでは、アプリをローカルでホストするこ�
 
 - M365 テナント内に Azure Active Directory アプリケーションが登録されています。
 - アプリのマニフェストを Teams の開発者センターに送信します。
-- API は Azure Functions Core Tools を使用してローカルで実行され、アプリをサポートします。
 - [ngrok](https://ngrok.io) がインストールされ、Teams とボット コードの間のトンネルを指定するために使用されます。
 
 アプリをローカルに構築して実行するには、以下のようにします。
@@ -120,9 +119,9 @@ Teams ツールキットでは、アプリをローカルでホストするこ�
 1. サインインするように求めるメッセージが表示されることがあります。  その場合は、M365 アカウントを使用してサインインします。
 1. アプリをインストールするように求めるメッセージが表示されたら、[Teams] を **選択します**。
 
-   アプリが読み込まれた後、ボットとのチャット セッションに直接アクセスします。  `intro` を入力すると紹介カードが表示され、`show` を入力すると Microsoft Graph からユーザーの詳細情報が表示されます。  (これには追加で許可の承認が必要です)。
+   アプリが読み込まれた後、ボットとのチャット セッションに直接アクセスします。  入力して導入 `welcome` カードを表示し、アダプティブ `learn` カードとボット コマンドのドキュメントを参照できます。 
 
-   デバッグは通常通りに動作します。実際にお試しください。 `bot/dialogs/rootDialog.js` ファイルを開き、`triggerCommand(...)` メソッドを探します。  既定のケースにブレークポイントを設定します。  次に、テキストを入力します。
+   デバッグは通常通りに動作します。実際にお試しください。 `bot/teamsBot.js` ファイルを開き、`onMessage()` メソッドを探します。  任意の場合にブレークポイントを設定します。  次に、テキストを入力します。
 
 <!-- markdownlint-disable MD033 -->
 <details>
@@ -132,7 +131,6 @@ Teams ツールキットでは、アプリをローカルでホストするこ�
 
 1. アプリケーションをアプリケーションに登録Azure Active Directory。
 1. アプリケーションを"サイド ローディング" に登録Microsoft Teams。
-1. Azure Function Core Tools を使用してローカルで実行されている [アプリケーション バックエンドを開始します](/azure/azure-functions/functions-run-local?#start)。
 1. アプリと通信Teams ngrok トンネルを開始します。
 1. アプリケーションMicrosoft Teams読み込むようTeamsコマンドを使用して開始します。
 
@@ -160,7 +158,6 @@ Teams でアプリを正常に実行するには、アプリのサイドロー�
 
 展開前は、このアプリケーションは以下のようにローカルで動作しています。
 
-1. バックエンドは、_Azure Functions Core Tools_ を使用して実行します。
 1. アプリケーションの HTTP エンドポイントは、Microsoft Teams がアプリケーションを読み込む場所でローカルに実行されます。
 
    展開では、アクティブな Azure サブスクリプションにリソースをプロビジョニングし、アプリケーションのバックエンドとフロントエンドのコードを Azure に展開 (アップロード) します。 バックエンドには、Azure App Service や Azure Bot Service など、さまざまな Azure のサービスが使用されています。

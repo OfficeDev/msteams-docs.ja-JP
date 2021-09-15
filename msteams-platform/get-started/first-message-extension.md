@@ -6,12 +6,12 @@ ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
 ms.localizationpriority: none
-ms.openlocfilehash: 52352d23533b80c9df5422f87e58d318987b6e95
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 39659b6c58b61f8b8880bd277effba1c8f9d115e
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156556"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360686"
 ---
 # <a name="build-and-run-your-first-messaging-extension-for-microsoft-teams"></a>Microsoft Teams 用の最初のメッセージング拡張機能のビルド及び実行
 
@@ -22,7 +22,7 @@ Teams **メッセージング拡張機能** には、以下の 2 種類があり
 - [検索コマンド](../messaging-extensions/how-to/search-commands/define-search-command.md)を使用すると、外部システムを検索し、その検索結果をカード形式でメッセージに挿入できます。
 - [操作コマンド](../messaging-extensions/how-to/action-commands/define-action-command.md)を使用すると、情報を収集または表示するためのモーダル ポップアップをユーザーに表示し、対話を処理した後 Teams に情報を送り返すことができます。
 
-## <a name="before-you-begin"></a>始める前に
+## <a name="before-you-begin"></a>はじめに
 
 前提条件をインストールして、開発環境がセットアップされていることを確認します。
 
@@ -122,11 +122,15 @@ Teams ツールキットでは、アプリをローカルでホストするこ�
 
 1. [ **追加] を** 選択して、アプリをアカウントに追加します。
 
-   アプリが読み込まれた後、検索ダイアログに直接移動します。
+   アプリが読み込まれたら、サンプル機能を使用できます。作成領域の 3 つのドットからメッセージ拡張機能を起動し、検索バーから npm パッケージを検索できます。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-completed-app.png" alt-text="検索ベースのメッセージング拡張機能の動作":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/search-message-extension.png" alt-text="検索ベースのメッセージング拡張機能の動作":::
+   
+   また、メッセージ拡張インスタンスの一番上の行にある検索バーから @を試Teams npm パッケージを検索することもできます。
+    :::image type="content" source="../assets/images/teams-toolkit-v2/msgext-teams-search-bar.png" alt-text="検索ベースのメッセージング拡張機能の動作":::
 
-   検索ボックスにテキストを入力し、オプションを選択します。  入力ボックスにアダプティブ カードが追加されます。
+   検索ボックスにテキストを入力し、オプションのいずれかを選択すると、検索結果のアダプティブ カードを作成して送信できます。
+    :::image type="content" source="../assets/images/teams-toolkit-v2/msgext-adptive-card.png" alt-text="検索ベースのメッセージング拡張機能の動作":::
 
 <!-- markdownlint-disable MD033 -->
 <details>

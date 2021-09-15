@@ -6,18 +6,18 @@ ms.author: zhenyasa
 ms.date: 05/19/2021
 ms.topic: quickstart
 ms.localizationpriority: none
-ms.openlocfilehash: 8197f92e27889c00eae7a75860301890522e5bab
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 36aa779db0c45ab3724673cb0030a97cceef6a78
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156559"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360814"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-sharepoint-framework-spfx"></a>アプリで最初のアプリをビルドMicrosoft Teams実行する (SharePoint Framework) (SPFx)
 
 このチュートリアルでは、単純な個人用アプリを実装する新Microsoft TeamsアプリSharePoint Framework SPFx作成する方法について説明します。 たとえば、個人用アプリ *には、* 個別に使用するタブのセットが含まれます。 チュートリアルでは、Teams アプリの構造、アプリをローカルで実行する方法、アプリを SharePoint に展開する方法について説明します。
 
-## <a name="before-you-begin"></a>始める前に
+## <a name="before-you-begin"></a>はじめに
 
 前提条件をインストールして、開発環境がセットアップされていることを確認します。
 
@@ -105,11 +105,16 @@ CLI では、プロジェクトを作成するためのいくつかの質問を�
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/app-project-files-spfx.png" alt-text="Visual Studio Code で個人用アプリ向けのアプリのプロジェクト ファイルを表示したスクリーンショット。":::
 
-ツールキットは、セットアップ時に追加した機能に基づいて、プロジェクト ディレクトリにスキャフォールディングを自動的に作成します。 Teams ツールキットは、`.fx` ディレクトリにアプリの状態を保持します。  このディレクトリの他の項目の間では、以下のようになります。
+ツールキットは、セットアップ時に追加した機能に基づいて、プロジェクト ディレクトリにスキャフォールディングを自動的に作成します。 Teams ツールキットは、`.fx` ディレクトリにアプリの状態を保持します。 
 
-- アプリ アイコンは PNG ファイルとして `color.png` と `outline.png` に格納されます。
-- 開発者ポータルに発行するアプリ マニフェストは、Teamsに格納されます `manifest.source.json` 。
-- プロジェクト作成時に選択した設定が `settings.json` に保存されます。
+- プロジェクト作成時に選択した設定が `.fx/settings.json` に保存されます。
+- プロジェクトの状態はに格納されます `.fx/env.*.json` 。
+
+また、Teams情報がディレクトリに格納 `appPackage` されます。
+
+- アプリ アイコンは PNG ファイルとして `appPackage/color.png` と `appPackage/outline.png` に格納されます。
+- 開発者ポータルに発行するアプリ マニフェストは、Teamsに格納されます `appPackage/manifest.source.json` 。
+
 
 Webpart プロジェクトでSPFxしたので、次のファイルは UI に関連します。
 
@@ -220,7 +225,7 @@ Teams Toolkitを使用すると、アプリをローカルでホストし、ワ�
 
 1. プロジェクト内 `{project}.sppkg` のフォルダー内 `SPFx/sharepoint/solution` のファイルを見つける。 [**開く**]を選択します。
 
-1. **[OK]** を選択します。
+1. **[OK]** をクリックします。
 
 1. 展開SharePoint自動的に開始されます。 [この **ソリューションを組織内のすべてのサイト** で使用できる] が選択されているのを確認します。 次に、[展開] **を選択します**。
 

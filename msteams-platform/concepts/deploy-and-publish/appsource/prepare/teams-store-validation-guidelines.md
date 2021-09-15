@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: none
-ms.openlocfilehash: 43cd037eb6f14dee4ee58cd34b1db834478ae3f5
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: ed3dd7abd877a91fce1c321f0f6c68d91fd1b1e3
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156056"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360476"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teamsの検証ガイドライン
 
@@ -303,7 +303,6 @@ Teamsは、機能によって異なる妥当な時間枠内に対応する必要
 * 個人用コンテキストのタブは、アプリの共有インスタンスからコンテンツを集約する場合があります。
 * タブは、他のテーマにTeamsする必要があります。 ユーザーがテーマを変更すると、アプリのテーマは選択内容を反映する必要があります。
 * タブでは、Teams フォント、タイプ ランプ、カラー パレット、グリッド システム、モーション、音声トーンなど、Teams スタイルのコンポーネントを使用する必要があります。
-* [プロパティ] タブを **設定する必要** があります。
 * タブは、Teamsナビゲーション、ダイアログの位置と使用、情報階層など、操作の設計に従う必要があります。
 * iframe のタブ コンテンツには、コア機能を模倣する機能Teams含めずにしてください。 たとえば、ボット、メッセージング拡張機能、通話、会議などです。
 

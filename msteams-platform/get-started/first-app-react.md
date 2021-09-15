@@ -6,12 +6,12 @@ ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
 ms.localizationpriority: none
-ms.openlocfilehash: cfe3dc5f303de9035b363f1e3b8224456ff6588e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 468f1bdaa5f27cf6a57ebab8e447d0003c3e3d81
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156560"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360539"
 ---
 # <a name="build-and-run-your-first-microsoft-teams-app-with-react"></a>React を使用した最初の Microsoft Teams アプリのビルドと実行
 
@@ -45,7 +45,7 @@ Teams ツールキットを使用して、最初のプロジェクトを作成�
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="[新しいプロジェクトの作成] のウィザードの開始":::。
 
-1. [機能 **の選択] セクション** で、[タブ] **が選択** されているを複数選択し **、[OK] を選択します**。
+1. [機能 **の選択] セクションで** 、[ **タブ** ] が選択されているのを確認し **、[OK] を選択します**。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="新しいアプリに機能を追加する方法を示すスクリーンショット":::。
 
@@ -96,11 +96,15 @@ CLI では、プロジェクトを作成するためのいくつかの質問を�
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/react-app-project.png" alt-text="Visual Studio Code で個人用アプリ向けのアプリのプロジェクト ファイルを表示したスクリーンショット。":::
 
-ツールキットは、セットアップ時に追加した機能に基づいて、プロジェクト ディレクトリにスキャフォールディングを自動的に作成します。 Teams ツールキットは、`.fx` ディレクトリにアプリの状態を保持します。  このディレクトリの他の項目の間では、以下のようになります。
+ツールキットは、セットアップ時に追加した機能に基づいて、プロジェクト ディレクトリにスキャフォールディングを自動的に作成します。 Teams ツールキットは、`.fx` ディレクトリにアプリの状態を保持します。 
 
-- アプリ アイコンは PNG ファイルとして `color.png` と `outline.png` に格納されます。
-- Developer Portal for Teams に公開するアプリのマニフェストは `manifest.source.json` に格納されています。
-- プロジェクト作成時に選択した設定が `settings.json` に保存されます。
+- プロジェクト作成時に選択した設定が `.fx/settings.json` に保存されます。
+- プロジェクトの状態はに格納されます `.fx/env.*.json` 。
+
+また、Teams情報がディレクトリに格納 `appPackage` されます。
+
+- アプリ アイコンは PNG ファイルとして `appPackage/color.png` と `appPackage/outline.png` に格納されます。
+- 開発者ポータルに発行するアプリ マニフェストは、Teamsに格納されます `appPackage/manifest.source.json` 。
 
 セットアップ時にタブ機能を選択したため、Teams ツールキットは基本的なタブに必要なコードをすべて `tabs` ディレクトリに格納します。 このディレクトリの中には、いくつかの重要なファイルがあります。
 
@@ -118,7 +122,7 @@ Teams ランタイムでは、プライバシー通知、利用規約、構成�
 Teams ツールキットでは、アプリをローカルで実行することができます。  これは、Teams が予想する正しいインフラを提供するために必要ないくつかのパーツで構成されています。
 
 - Azure Active Directory を使用してアプリケーションを登録しました。  このアプリケーションには、アプリケーションが読み込まれる場所や、アクセスするバックエンド リソースに関連するアクセス許可があります。
-- 認証タスクを支援する Web API がホストされ、アプリと Azure Active Directory の間のプロキシとして機能します。  これは、Azure Functions Core Tools によって実行されます。  これは、URL `https://localhost:5000` でアクセスできます。
+- 認証タスクを支援する Web API がホストされ、アプリと Azure Active Directory の間のプロキシとして機能します。 これは、URL `https://localhost:5000` でアクセスできます。
 - アプリのフロントエンドを構成する HTML、CSS、JavaScript のリソースは、ローカル サービスでホストされています。 これは、`https://localhost:3000` でアクセスできます。
 - アプリのマニフェストは、Developer Portal for Teams で生成され存在します。  Teams はアプリ マニフェストを使用して、接続しているクライアントにアプリをロードする場所を伝達します。
 
@@ -131,6 +135,9 @@ Teams ツールキットでは、アプリをローカルで実行すること�
 1. Visual Studio Code で、**F5** を押して、アプリケーションをデバッグ モードで実行します。
 
    > アプリを初めて実行すると、すべての依存関係がダウンロードされ、アプリがビルドされます。  ビルドが完了すると、自動的にブラウザー ウィンドウが開きます。  この作業には 3 ～ 5 分かかります。
+
+   ローカルで初めて実行する場合は、ローカル デバッグ用の証明書をインストールするように求めるメッセージが表示されます。 [続行] をクリックします。
+     :::image type="content" source="../assets/images/teams-toolkit-v2/certificate-prompt.png" alt-text="Teams がアプリケーションを localhost からロードできるようにするための SSL 証明書のインストールを求めるメッセージが表示される方法を示すスクリーンショット":::。
 
    必要にToolkitローカル証明書のインストールを求めるメッセージが表示されます。 この証明書により、Teams は `https://localhost` からアプリケーションを読み込むことができます。 以下のダイアログが表示されたら、「はい」を選択します。
 

@@ -6,12 +6,12 @@ ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 1ed26ed6869858a3818c7356c3f9b9f59103f616
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 15b08078e15c8ed5ef23d6d9f78d2fc14da02440
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156555"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360731"
 ---
 # <a name="build-your-first-teams-app-using-c"></a>C を使用してTeamsアプリをビルドする#
 
@@ -69,7 +69,7 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 
 ## <a name="build-and-run-the-sample"></a>サンプルの構築と実行
 
-smaple は、複製後にビルドして実行できます。 
+サンプルは、複製後にビルドして実行できます。 
 
 **複製されたサンプルをビルドして実行するには**
 
@@ -177,7 +177,7 @@ Visual Studio Azure を含むさまざまなプロバイダーへのアプリ展
 
 1. サンプル アプリをインストールしたチームのチャネルに移動し **、[+]** ボタンを選択して新しいタブを追加します。
 1. [ **タブの追加] リスト** から **[Hello World] を選択** します。 構成ダイアログ ボックスが表示され、このチャネルに表示するタブを選択できます。 
-1. **[保存]** を選択します。 タブ `Hello World` はタブと一緒に読み込まれます。
+1. [**保存**] を選択します。 タブ `Hello World` はタブと一緒に読み込まれます。
 
     <img width="530px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png" />
 

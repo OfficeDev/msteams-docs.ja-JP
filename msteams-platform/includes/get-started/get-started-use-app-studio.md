@@ -1,7 +1,7 @@
 ### <a name="use-app-studio-to-update-the-app-package"></a>App Studio を使用してアプリ パッケージを更新する
 
 > [!TIP]
-> **開発者ポータルを試してみてください**: App Studio はまもなく削除されます。 新しい開発者ポータルを使用して、Teamsアプリを構成、配布、[および管理します](https://dev.teams.microsoft.com/)。
+> **開発者ポータルを試してみてください**: App Studio が進化しました。 新しい開発者ポータルを使用して、Teamsアプリを構成、配布、[および管理します](https://dev.teams.microsoft.com/)。
 
 App Studio は、TeamsストアからインストールできるアプリTeamsです。 アプリの作成と登録が簡略化されます。
 
@@ -20,9 +20,9 @@ App Studio は、TeamsストアからインストールできるアプリTeams�
     <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
 
-    このサンプルには独自のマニフェストが付属し、プロジェクトのビルド時にアプリ パッケージをビルドするように設計されています。 .NET では、[マニフェスト] manifest.jsにある [マニフェスト] の [Visual Studioに配置できます ```Microsoft.Teams.Samples.HelloWorld.Web``` 。 このNode.js、プロジェクトのルート ディレクトリのコマンド ラインで `gulp` 入力します。
+    このサンプルには独自のマニフェストが付属し、プロジェクトのビルド時にアプリ パッケージをビルドするように設計されています。 .NET では、manifest.json ファイルを [マニフェスト] の [Visual Studioに配置できます ```Microsoft.Teams.Samples.HelloWorld.Web``` 。 このNode.js、プロジェクトのルート ディレクトリのコマンド ラインで `gulp` 入力します。
 
-     このVisual Studio、manifest.jsファイルはマニフェストの下に **配置** されます `Microsoft.Teams.Samples.HelloWorld.Web` 。 この手順は、次の図で説明します。  
+     このVisual Studio、manifest.json ファイルは [マニフェスト] の下に **配置** されます `Microsoft.Teams.Samples.HelloWorld.Web` 。 この手順は、次の図で説明します。  
     
     <img  width="450px" alt="Build the app package on .NET with Visual Studio" src="~/assets/images/get-started/app-package-on-.NET-with-Visual-Studio.png"/>
     

@@ -4,12 +4,12 @@ author: surbhigupta
 description: 会議で使用するアプリを有効Teamsする
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 1695b3e63a08935abd2db264ff171ebdf1d49fc3
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a3c84667e5d526c00e5c1df0035995c53401ab00
+ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156401"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59360483"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>会議で使用するアプリを有効Teamsする
 
@@ -50,9 +50,6 @@ ms.locfileid: "59156401"
     }
   ]
 ```
-
-> [!NOTE]
-> `meetingStage` は現在、開発者 [プレビューでのみ使用](../resources/dev-preview/developer-preview-intro.md) できます。
 
 ### <a name="context-property"></a>Context プロパティ
 
@@ -108,7 +105,7 @@ Teams会議は、組織に共同作業のエクスペリエンスを提供しま
 
 会議中に、または会議内のダイアログ ボックスを使用して、アプリ `meetingSidePanel` に固有のエクスペリエンスを構築できます。
 
-#### <a name="meeting-sidepanel"></a>サイドパネルの会議
+#### <a name="meeting-sidepanel"></a>Meeting SidePanel
 
 開催者と発表者が異なる一連のビューとアクションを持つ会議のエクスペリエンス `meetingSidePanel` をカスタマイズできます。 アプリ マニフェストで、コンテキスト配列 `meetingSidePanel` に追加する必要があります。 会議およびすべてのシナリオで、アプリは幅 320 ピクセルの会議内タブに表示されます。 詳細については [、「FrameContext インターフェイス」を参照してください](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)。
 
@@ -130,9 +127,6 @@ API を使用して `userContext` 要求をルーティングするには、「S
 > * アプリで匿名ユーザーをサポートする場合、最初の呼び出し要求ペイロードは、要求メタデータではなく、オブジェクト内の要求メタデータに `from.id` `from` `from.aadObjectId` 依存する必要があります。 `from.id`はユーザー ID であり `from.aadObjectId` 、ユーザー Azure Active Directory (AAD) ID です。 詳細については、「タブでタスク [モジュールを使用する」を参照し](../task-modules-and-cards/task-modules/task-modules-tabs.md) 、 [タスク モジュールを作成して送信します](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
 
 #### <a name="shared-meeting-stage"></a>共有会議ステージ
-
-> [!NOTE]
-> この機能は現在、開発者プレビュー [でのみ使用](../resources/dev-preview/developer-preview-intro.md) できます。
 
 共有会議ステージを使用すると、会議参加者はアプリ コンテンツをリアルタイムで操作し、共同作業できます。
 
@@ -166,9 +160,10 @@ API を使用して `userContext` 要求をルーティングするには、「S
 
 ## <a name="code-sample"></a>コード サンプル
 
-|サンプルの名前 | 説明 | サンプル |
-|----------------|-----------------|--------------|----------------|-----------|
-| 会議アプリ | 会議トークン ジェネレーター アプリを使用してトークンを要求する方法を示します。 トークンが順番に生成され、各参加者が会議に参加する公平な機会を得る。 このトークンは、スクラム会議や Q セッションなど、&役立ちます。 | [表示](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
+|サンプルの名前 | 説明 | C# | Node.js |
+|----------------|-----------------|--------------|----------------|
+| 会議アプリ | 会議トークン ジェネレーター アプリを使用してトークンを要求する方法を示します。 トークンが順番に生成され、各参加者が会議に参加する公平な機会を得る。 このトークンは、スクラム会議や Q セッションなど、&役立ちます。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+|会議ステージのサンプル | コラボレーション用の会議ステージにタブを表示するサンプル アプリ | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 
 ## <a name="see-also"></a>関連項目
 
