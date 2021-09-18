@@ -4,12 +4,12 @@ description: タブにユーザー コンテクストを付与する方法を説
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: チーム タブ ユーザー コンテキスト
-ms.openlocfilehash: d0cdb107ef57c705589e225f1441a48caf427e5d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 187e3dda7aacee2ddaaaca6b5c5dbc8686ac5575
+ms.sourcegitcommit: 762cd3ed9054c6c19825498fc0edd50cd99634da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157002"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "59439698"
 ---
 # <a name="get-context-for-your-tab"></a>タブのコンテキストを取得する
 
@@ -137,7 +137,7 @@ ms.locfileid: "59157002"
 
 ## <a name="see-also"></a>関連項目
 
-* [タブデザインのガイドライン](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [タブデザインのガイドライン](../../tabs/design/tabs.md)
 * [Teamsタブ](~/tabs/what-are-tabs.md)
 * [プライベート タブを作成する](~/tabs/how-to/create-personal-tab.md)
 * [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
