@@ -81,12 +81,12 @@ XML を使用して、各イメージの高さと幅を指定することをお�
 * `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>` を使う
 * `![Duck on a rock](http://aka.ms/Fo983c)` を使用しないでください
 
-## <a name="receiving-messages&quot;></a>メッセージの受信
+## <a name="receiving-messages"></a>メッセージの受信
 
 宣言されているスコープに応じて、ボットは次のコンテキストでメッセージを受信できます。
 
 * **個人用チャット** ユーザーは、チャット履歴で追加されたボットを選択するか、新しいチャットの [To:] ボックスに名前またはアプリ ID を入力するだけで、ボットとのプライベート会話で対話できます。
-* **チャネル** ボットがチームに追加されている場合は、チャネルにボット (&quot;@_botname_") を指定できます。 チャネル内のボットに対する追加の返信には、ボットのメンションが必要です。 これは、記載されていない返信には応答しない。
+* **チャネル** ボットがチームに追加されている場合は、チャネルにボット ("@_botname_") を指定できます。 チャネル内のボットに対する追加の返信には、ボットのメンションが必要です。 これは、記載されていない返信には応答しない。
 
 受信メッセージの場合、ボットは種類 [の Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) オブジェクトを受け取ります `messageType: message` 。 オブジェクトには、ボットに送信されるチャネル更新など、他の種類の情報を含めすることもできますが、この型はボットとユーザーの間 `Activity` [](~/resources/bot-v3/bots-notifications.md#channel-updates) `message` の通信を表します。
 
