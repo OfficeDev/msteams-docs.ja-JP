@@ -3,12 +3,12 @@ title: アダプティブ カードのユニバーサル アクションの概�
 description: アダプティブ カードのユニバーサル アクションの概要を簡単に説明します。
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: e007f6b1f30e9bb1fe05e48272d598300a7942ae
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: ba957456e2926e11b021f6a2577706cef7fb5ad7
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156487"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475714"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>アダプティブ カードのユニバーサル アクション
 
@@ -19,7 +19,7 @@ ms.locfileid: "59156487"
 このドキュメントでは、ユニバーサル アクション モデルを使用して、プラットフォームやアプリケーション間でアダプティブ カードを操作するユーザー エクスペリエンスを強化する方法を理解するのに役立ちます。
 
 > [!NOTE]
-> アダプティブ カードのユニバーサル アクションのサポートは、ボットから送信されたカードでのみ使用できます。 新規作成ボックスとリンク解除カードを介して送信されるカードのサポートは、近日公開予定です。
+> アダプティブ カード v1.4 のユニバーサル アクションのサポートは、ボットから送信されたカードでのみ使用できます。 新規作成ボックスとリンク解除カードを介して送信されるカードのサポートは、近日公開予定です。
 
 ## <a name="enhance-user-experiences-with-universal-actions-for-adaptive-cards"></a>アダプティブ カードのユニバーサル アクションを使用してユーザー エクスペリエンスを強化する
 

@@ -4,12 +4,12 @@ description: ディープ リンクとアプリでの使用方法について説
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Teams ディープ リンク ディープリンク
-ms.openlocfilehash: e61f926e36d379cb6a69816922cca7a8f3a3d17f
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a9d3ec021de52f4ae9d5b17eab9306d1c7974280
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156708"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475777"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成 
 
@@ -218,6 +218,9 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 ボット、コネクタ、またはメッセージング拡張カードで使用できるディープ リンクには、次の形式を使用します。 `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
 例: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
+
+> [!NOTE]
+> 検索パラメーターでは、空白 ( `+` ) の代りシグナルはサポートされていません ` ` 。 たとえば、スペースの URI エンコード コードが返されるのは良いことですが、 `%20` `?subject=test%20subject` 悪 `?subject=test+subject` いことを確認してください。
 
 クエリ パラメーターは次のとおりです。
 

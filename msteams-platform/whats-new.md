@@ -4,12 +4,12 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: チームの最新情報
-ms.openlocfilehash: ba12e7f450cc45f005567a5148d8f7b88a5fe77d
-ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
+ms.openlocfilehash: 4d664213b3a2a62a6ac99ef5f93ca276bfed9268
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59360663"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475742"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
@@ -30,7 +30,9 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 | **日付** | **メモ** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
-|09/08/2021|会議ステージは GA で利用できます。|[会議で使用するアプリを有効Teamsする](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
+|09/21/2021|Teams、ボットと受信 Webhook のユーザーメンションで AAD オブジェクト ID と UPN をサポートしています。 | [Microsoft Teams のカードの書式設定](task-modules-and-cards/cards/cards-format.md)|
+|08/16/2021| アダプティブ カードの入力検証 (すべての機能の場合は v1.3) とユニバーサル アクション (ボット送信カードの場合は v1.4) のサポート。 |[入力検証](/adaptive-cards/authoring-cards/input-validation)、 [アダプティブ カードのユニバーサル アクション v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|08/09/2021|会議ステージは GA で利用できます。|[会議で使用するアプリを有効Teamsする](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
 |08/30/2021| カスタム 一緒にモードのシーン機能は、参加者を 1 つの仮想シーンに結合し、事前に決定されたシートにビデオ ストリームを設定します。 | [カスタム一緒にモードのシーン](~/apps-in-teams-meetings/teams-together-mode.md) |
 |08/25/2021| シングル サインオン (SSO) を使用してTeamsボットを作成する手順ガイドが導入されました。 | [SSO を使用してボットを作成する手順Teamsガイド](sbs-bots-with-sso.yml) |
 |08/19/2021| ボットをスレッドにインストールするときに受信したインストール更新イベント。 | [インストール更新イベント](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event) |
@@ -47,7 +49,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 |05/10/2021| 新しいアプリのカスタマイズ機能。| [組織でアプリをカスタマイズする](concepts/design/enable-app-customization.md) |
 |05/07/2021| チャットでの音声通話とビデオ通話のディープ リンク。 |[ディープ リンク](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
 |04/30/2021|アプリをストアに発行する方法に関する新Teamsガイダンス。|[アプリを Teams ストア](concepts/deploy-and-publish/appsource/publish.md)に発行Teams[検証ガイドライン](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
-|04/29/2021 | アダプティブ カードのユニバーサル アクション。 | [アダプティブ カードのユニバーサル アクション](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|04/29/2021 | アダプティブ カード v1.4 のユニバーサル アクションのサポート。 | [アダプティブ カードのユニバーサル アクション](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |04/29/2021 | ユーザー固有のビュー。 | [ユーザー固有のビュー](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/User-Specific-Views.md) |
 |04/29/2021 | シーケンシャル ワークフロー。 | [シーケンシャル ワークフロー](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Sequential-Workflows.md) |
 |04/29/2021 | 最新のカード。 | [最新のカード](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Up-To-Date-Views.md) |

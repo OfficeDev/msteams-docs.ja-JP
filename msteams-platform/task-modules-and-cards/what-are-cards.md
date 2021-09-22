@@ -4,12 +4,12 @@ description: カードと、ボット、コネクタ、メッセージング拡�
 ms.localizationpriority: medium
 keywords: コネクタ ボット カード メッセージング
 ms.topic: overview
-ms.openlocfilehash: 345e37a9af00c2f3300cc76f4b44b83cc47d0392
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 50e8aa690d4de4dc5464a7e42dbc017e87afe35a
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156879"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475798"
 ---
 # <a name="cards"></a>カード
 
@@ -58,9 +58,13 @@ Teamsは、次の 3 つの異なる場所でカードを使用します。
 
 > [!NOTE]
 > * ネイティブのアダプティブ カード スキーマ要素 (ただし `Action.Submit` 、 を除く) はすべて完全にサポートされています。
-> * サポートされているアクションは [**、Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html) [**、Action.ShowCard、Action.ToggleVisibility、**](https://adaptivecards.io/explorer/Action.ShowCard.html)およびAction.Exe [**です**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)。 [](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)
+> * サポートされているアクションは、Action.OpenURL、Action.ShowCard、Action.ToggleVisibility、[**および Action.Execute です**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)。 [](https://adaptivecards.io/explorer/Action.OpenUrl.html) [](https://adaptivecards.io/explorer/Action.ShowCard.html) [](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)
 
 受信 Webhook を使用したアダプティブ カードを使用すると、アダプティブ カードの豊富で柔軟な機能を使用できます。 Web サービスから受信 Webhooks を使用Teamsデータを送信します。
+
+## <a name="support-for-aad-object-id-and-upn-in-user-mention"></a>ユーザーメンションでの AAD オブジェクト ID と UPN のサポート 
+
+アダプティブ カードを使用したボットは、既存の ID に加えて、AAD オブジェクト ID やユーザー原則名 (UPN) などのユーザーメンション ID をサポートします。 受信 Webhooks は、AAD オブジェクト ID と UPN を持つアダプティブ カードでのユーザーメンションのサポートを開始します。
 
 ## <a name="see-also"></a>関連項目
 

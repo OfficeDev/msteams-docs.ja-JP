@@ -5,12 +5,12 @@ description: Webhook とコネクタによって Web サービスがどのよう
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 525d6e17400f9dd7b819f50d3c1ca89f155efca8
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 3b7dd6b907ec1af0467c40bda53422cc75e503bc
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156987"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475759"
 ---
 # <a name="webhooks-and-connectors"></a>Webhook とコネクタ
 

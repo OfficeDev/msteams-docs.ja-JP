@@ -4,12 +4,12 @@ description: アプリでの認証Teamsおよびアプリで使用する方法�
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Teams 認証 OAuth SSO AAD
-ms.openlocfilehash: 40d5659251b1faff087c6ee6458800ede2a5c840
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 9bcb5eb42cc22185684933caae210c5630414a4c
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156681"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475770"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>ユーザーを認証Microsoft Teams
 
@@ -54,3 +54,4 @@ OAuthPrompt の使用の詳細については、以下を参照してくださ�
 アプリの認証フローに関係なく、ID プロバイダーがアプリと通信Teamsします。 ほとんどのサンプルとチュートリアルでは、主に ID プロバイダーとして AAD を使用します。 ただし、概念は ID プロバイダーに関係なく適用されます。
 
 詳細については、「ID プロバイダー [の構成」を参照してください](~/concepts/authentication/configure-identity-provider.md)。
+

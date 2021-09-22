@@ -5,12 +5,12 @@ keywords: teams ボット カードの形式
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: abbdc0d1fa77744ae061e5430c4450d0e7cf83c7
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 8afbd5f4904a378a4433965c128136fa8b39590d
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156483"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475821"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams のカードの書式設定
 
@@ -31,7 +31,7 @@ ms.locfileid: "59156483"
 次のカードの種類では、マークダウンの書式設定がサポートTeams。
 
 * アダプティブ カード: Markdown はアダプティブ カード フィールドおよび `Textblock` `Fact.Title` `Fact.Value` . アダプティブ カードでは HTML はサポートされていません。
-* O365 コネクタ カード: テキスト フィールドの O365 コネクタ カードでは、マークダウンと制限付き HTML がサポートされています。
+* Office 365コネクタ カード: マークダウンと制限付き HTML は、テキスト フィールドOffice 365コネクタ カードでサポートされます。
 
 リスト内の改行に対して、アダプティブ カードの改行を使用するか、エスケープ `\r` `\n` シーケンスを使用できます。 アダプティブ カード用のデスクトップとモバイル バージョンの書式Teams異なります。 カード ベースのメンションは、Web クライアント、デスクトップ クライアント、モバイル クライアントでサポートされています。 information masking プロパティを使用すると、アダプティブ カード入力要素内のユーザーからのパスワードや機密情報などの特定の情報を `Input.Text` マスクできます。 アダプティブ カードの幅は、オブジェクトを使用して展開 `width` できます。 アダプティブ カード内で typeahead サポートを有効にし、ユーザーが入力を入力すると、入力の選択肢のセットをフィルター処理できます。 このプロパティを使用 `msteams` して、ステージ ビューに画像を選択的に表示する機能を追加できます。
 
@@ -116,14 +116,14 @@ Android では、アダプティブ カード マークダウンの書式設定�
 }
 ```
 
-### <a name="mention-support-within-adaptive-cards-v12"></a>アダプティブ カード v1.2 内でのサポートのメンション
+### <a name="mention-support-within-adaptive-cards"></a>アダプティブ カード内でのサポートのメンション 
 
 ボットおよびメッセージング拡張機能@mentionsアダプティブ カード本文内に追加できます。 カードに@mentionsするには、チャネルおよびグループ チャットの会話でメッセージ ベースのメンションと同じ通知ロジックとレンダリング [に従います](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)。
 
 ボットとメッセージング拡張機能には [、TextBlock](https://adaptivecards.io/explorer/TextBlock.html) 要素と FactSet 要素のカード コンテンツ内にメンション [を含](https://adaptivecards.io/explorer/FactSet.html) めることはできません。
 
 > [!NOTE]
-> * [メディア要素](https://adaptivecards.io/explorer/Media.html)は、現在、プラットフォーム上のアダプティブ カード v1.2 ではTeamsされていません。
+> * [メディア要素](https://adaptivecards.io/explorer/Media.html)は、現在、プラットフォーム上のアダプティブ カードTeamsされていません。
 > * チャネルとチームのメンションはボット メッセージではサポートされていません。
 
 アダプティブ カードにメンションを含めるには、アプリに次の要素を含める必要があります。
@@ -164,6 +164,130 @@ Android では、アダプティブ カード マークダウンの書式設定�
   }
 }
 ```
+
+### <a name="aad-object-id-and-upn-in-user-mention"></a>ユーザーメンションの AAD オブジェクト ID と UPN 
+
+Teamsプラットフォームでは、既存のメンション ID に加えて、AAD オブジェクト ID とユーザー原則名 (UPN) を使用してユーザーにメンションできます。 受信 Webhook を使用したアダプティブ カードとコネクタを備えるボットは、2 つのユーザーメンション ID をサポートします。 
+
+次の表に、新しくサポートされるユーザーメンション ID について説明します。
+
+|IDs  | サポート機能 |   説明 | 例 |
+|----------|--------|---------------|---------|
+| AAD オブジェクト ID | ボット、コネクタ |  AAD ユーザーのオブジェクト ID |  49c4641c-ab91-4248-aebb-6a7de286397b |
+| UPN | ボット、コネクタ | AAD ユーザーの UPN | john.smith@microsoft.com |
+
+#### <a name="user-mention-in-bots-with-adaptive-cards"></a>アダプティブ カードを使用したボットでのユーザーメンション 
+
+ボットは、既存の ID に加えて、AAD オブジェクト ID と UPN を使用してユーザーメンションをサポートします。 2 つの新しい ID のサポートは、テキスト メッセージ、アダプティブ カード本文、およびメッセージング拡張機能応答のボットで利用できます。 ボットは、会話とシナリオでメンションの ID をサポート `invoke` します。 ユーザーは、ID に関連付@mentioned通知を受け取ります。 
+
+> [!NOTE]
+> ボットのアダプティブ カードを使用したユーザーメンションでは、スキーマの更新と UI/UX の変更は必要ありません。
+
+##### <a name="example"></a>例 
+
+アダプティブ カードを使用したボットでのユーザーのメンションの例を次に示します。
+
+```json 
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0",
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Hi <at>Adele UPN</at>, <at>Adele AAD</at>"
+    }
+  ],
+  "msteams": {
+    "entities": [
+      {
+        "type": "mention",
+        "text": "<at>Adele UPN</at>",
+        "mentioned": {
+          "id": "AdeleV@contoso.onmicrosoft.com",
+          "name": "Adele Vance"
+        }
+      },
+      {
+        "type": "mention",
+        "text": "<at>Adele AAD</at>",
+        "mentioned": {
+          "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd",
+          "name": "Adele Vance"
+        }
+      }
+    ]
+  }
+}
+```
+
+次の図は、ボットのアダプティブ カードを使用したユーザーのメンションを示しています。
+
+![アダプティブ カードを使用したボットでのユーザーメンション](~/assets/images/authentication/user-mention-in-bot.png)
+
+#### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>アダプティブ カードを使用した受信 Webhook でのユーザーメンション 
+
+受信 Webhooks は、AAD オブジェクト ID と UPN を持つアダプティブ カードのユーザーメンションをサポートし始める。
+
+> [!NOTE]    
+> * AAD オブジェクト ID と UPN をサポートする受信 Webhook のスキーマでユーザーメンションを有効にする。 
+> * AAD オブジェクト ID と UPN を使用したユーザーメンションでは、UI/UX の変更は必要ありません。      
+> * ユーザーメンションを含む受信 Webhook のアクティビティ フィード通知は、今後のリリースで利用できます。
+
+##### <a name="example"></a>例 
+
+受信 Webhook でのユーザーのメンションの例を次に示します。
+
+```json
+{
+    "type": "message",
+    "attachments": [
+        {
+        "contentType": "application/vnd.microsoft.card.adaptive",
+        "content": {
+            "type": "AdaptiveCard",
+            "body": [
+                {
+                    "type": "TextBlock",
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "text": "Sample Adaptive Card with User Mention"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Hi <at>Adele UPN</at>, <at>Adele AAD</at>"
+                }
+            ],
+            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+            "version": "1.0",
+            "msteams": {
+                "entities": [
+                    {
+                        "type": "mention",
+                        "text": "<at>Adele UPN</at>",
+                        "mentioned": {
+                          "id": "AdeleV@contoso.onmicrosoft.com",
+                          "name": "Adele Vance"
+                        }
+                      },
+                      {
+                        "type": "mention",
+                        "text": "<at>Adele AAD</at>",
+                        "mentioned": {
+                          "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd",
+                          "name": "Adele Vance"
+                        }
+                      }
+                ]
+            }
+        }
+    }]
+}
+```
+
+次の図は、受信 Webhook でのユーザーの言及を示しています。
+
+![受信 Webhook でのユーザーのメンション](~/assets/images/authentication/user-mention-in-incoming-webhook.png)
 
 ### <a name="information-masking-in-adaptive-cards"></a>アダプティブ カードの情報マスキング
 
@@ -289,7 +413,7 @@ schema 要素内で、ユーザーにフィルター処理を求め、サイズ�
 > * 拡大および縮小機能は、アダプティブ カードの画像の種類である画像要素にのみ適用されます。
 > * モバイル Teamsでは、アダプティブ カードの画像のステージ ビュー機能が既定で使用できます。 ユーザーは、属性が存在するかどうかに関係なく、画像をタップするだけでステージ ビューでアダプティブ カードイメージ `allowExpand` を表示できます。
 
-# <a name="markdown-format-for-o365-connector-cards"></a>[O365 コネクタ カードのマークダウン形式](#tab/connector-md)
+# <a name="markdown-format-for-office-365-connector-cards"></a>[コネクタ カードのマークOffice 365形式](#tab/connector-md)
 
 コネクタ カードでは、マークダウンと HTML の書式設定が制限されています。
 
@@ -382,12 +506,12 @@ Android では、次の図に示すように、コネクタ カードのマー�
 
 次のカードの種類は、HTML 形式をサポートTeams。
 
-* O365 コネクタ カード: 制限付きマークダウンと HTML の書式設定は、コネクタ カードOffice 365サポートされています。
+* Office 365コネクタ カード: 制限付きマークダウンと HTML の書式設定は、コネクタ カードOffice 365サポートされています。
 * ヒーロー カードとサムネイル カード: HTML タグは、ヒーロー カードやサムネイル カードなどの単純なカードでサポートされます。
 
-O365 Connector カードと簡易カードの場合、Teamsとモバイル バージョンの書式は異なります。 このセクションでは、コネクタ カードと簡易カードの HTML 形式の例を参照できます。
+書式設定は、デスクトップとモバイル バージョンのコネクタ カードと単純なTeams Office 365異なります。 このセクションでは、コネクタ カードと簡易カードの HTML 形式の例を参照できます。
 
-# <a name="html-format-for-o365-connector-cards"></a>[O365 コネクタ カードの HTML 形式](#tab/connector-html)
+# <a name="html-format-for-office-365-connector-cards"></a>[コネクタ カードの HTML Office 365形式](#tab/connector-html)
 
 コネクタ カードでは、マークダウンと HTML の書式設定が制限されています。
 

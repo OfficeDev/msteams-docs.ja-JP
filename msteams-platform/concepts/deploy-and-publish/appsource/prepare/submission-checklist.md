@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: f02eb250925ce262ad78e5be1edbe42f4b9469e5
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 2453a8541a168db2c8417b8a3d80985c95efa12a
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156215"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475784"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>ストア申請Microsoft Teams準備する
 
@@ -22,16 +22,21 @@ ms.locfileid: "59156215"
 
 アプリがテスト環境で動作している場合は、申請プロセス中に問題が発生しないようにアプリ パッケージを確認する必要があります。
 
-アプリMicrosoft Teamsツールを使用すると、パートナー センターに提出する前に問題を特定して修正できます。 このツールは、ストアの検証中に使用したのと同じテスト ケースに対して、アプリの構成を自動的にチェックします。
+アプリMicrosoft Teamsツールを使用すると、パートナー センターに提出する前に問題を解決できます。 このツールは、ストアの検証中に使用されるテスト ケースに対して、アプリの構成を自動的にチェックします。
 
 1. アプリ検証ツール[Microsoft Teamsに移動します](https://dev.teams.microsoft.com/appvalidation.html)。 (注: このツールは App [Studio でも使用](../../../build-and-test/app-studio-overview.md)できます。)
 1. アップロードテストを実行するには、アプリ パッケージをインストールします。
 1. [予備チェックリスト] **に移動し** 、自動化が困難なテスト ケースを確認します。
-1. [自動テストでエラーが](~/resources/schema/manifest-schema.md) 発生したり、チェックリストのすべての条件を満たしていない場合は、構成やアプリの一般的な問題を修正します。
+1. [構成またはアプリ全般の問題](~/resources/schema/manifest-schema.md) を修正します。 これらの問題は、自動テストでエラーが発生した場合、またはチェックリストのすべての条件を満たしていない場合に発生します。
 
 ## <a name="compile-testing-instructions"></a>テスト手順のコンパイル
 
-テスト アカウント、資格情報、ライセンス キーなど、レビュー担当者がアプリをテストするのに役立つ手順とリソースを提供します。 手順は、パートナー センターに追加するか、一般に公開されている場所にアップロードSharePoint。
+レビュー担当者がアプリをテストするのに役立つ手順とリソースを提供します。
+* テスト アカウント
+* 資格情報
+* ライセンス キー
+
+手順は、パートナー センターに追加するか、一般に公開されている場所にアップロードSharePoint。
 
 ### <a name="feature-list"></a>機能一覧
 
@@ -39,13 +44,13 @@ ms.locfileid: "59156215"
 
 ### <a name="accounts"></a>アカウント
 
-アプリでライセンスまたはバックエンドセーフリストが必要な場合は、テスト アカウントを指定する必要があります。 テストを容易にするために、すべてのアカウントに事前入力されたデータが含まれる必要があります。
+アプリでライセンスまたはバックエンドセーフリストが必要な場合は、テスト アカウントを提供します。 テストに役立つデータを事前に入力して提供するアカウントはすべて含める必要があります。
 
-アプリの機能によっては、以下の情報を提供する必要がある場合があります。
+アプリの機能によっては、次のすべてのアカウントの提供が必要な場合があります。
 
 * 管理者アカウント (必須)
 * 管理者以外のアカウント (必須)
-* 最初の実行サインイン エクスペリエンスを適切にテストするために事前構成されていないアカウント (必須)
+* 最初の実行サインイン エクスペリエンスを適切にテストするように事前構成されていないアカウント (必須)
 * プレミアム機能またはアップグレードされた機能にアクセスできるアカウント (該当する場合)
 * 共有コンテキストで動作するアプリのコラボレーション エクスペリエンスをテストする同じテナント内の 2 つのアカウント (該当する場合)
 
@@ -81,11 +86,11 @@ Microsoft が機能を完全に理解できるよう、アプリの記録を提�
 
 ### <a name="write-descriptions"></a>説明の書き込み
 
-アプリの短い説明と長い説明が必要です。
+アプリの簡潔な説明と詳しい説明が備わっている必要があります。
 
 #### <a name="short-description"></a>簡潔な説明
 
-対象ユーザーに対して、元の、魅力的で、指示する必要があるアプリの簡潔な概要。 短い説明を 1 つの文に保つ。
+対象ユーザーに対して、元の、魅力的で、指示する必要があるアプリの簡潔な概要。 簡潔な説明を 1 文にまとめる。
 
 :::row:::
 
@@ -101,7 +106,13 @@ Microsoft が機能を完全に理解できるよう、アプリの記録を提�
 
 #### <a name="long-description"></a>詳しい説明
 
-長い説明では、アプリの主な機能、解決する問題、ターゲットユーザーを強調する説明を提供できます。 この説明は 4,000 文字までですが、ほとんどのユーザーは 300 ~ 500 語しか読み取りできません。
+長い説明では、アプリを強調する説明を提供できます。
+
+* 主な機能
+* 解決する問題
+* 対象となる読者
+
+この説明は 4,000 文字にもなりますが、ほとんどのユーザーは 300 から 500 文字程度しか読みません。
 
 :::row:::
 
@@ -123,7 +134,7 @@ Microsoft が機能を完全に理解できるよう、アプリの記録を提�
 
 ### <a name="capture-screenshots"></a>スクリーンショットのキャプチャ
 
-スクリーンショットは、アプリ名、アイコン、説明を補完するアプリの目立つ視覚的なプレビューを提供します。
+スクリーンショットは、アプリ名、アイコン、説明を補完するために、アプリの視覚的なプレビューを提供します。
 
 :::row:::
 
@@ -135,35 +146,39 @@ Microsoft が機能を完全に理解できるよう、アプリの記録を提�
 
 :::row-end:::
 
-スクリーンショットについては、次の情報を覚えておいてください。
+スクリーンショットに関する次のベスト プラクティスを覚えておいてください。
 
-* リストごとに最大 5 つのスクリーンショットを作成できます。
-* サポートされているファイルの種類には、PNG、JPEG、GIF が含まれます。
-* ディメンションは 1366x768 ピクセルである必要があります。
-* 最大サイズは 1,024 KB です。
+* スクリーンショットは、1 つの一覧につき 5 枚まで設定できます。
+* サポートされているファイルの種類は、PNG、JPEG、GIF です。
+* 寸法は 1366×768 ピクセルである必要があります。
+* 最大サイズは 1,024KB です。
 
 ベスト プラクティスについては、次のリソースを参照してください。
 
-* [Teamsの検証ガイドライン](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots)
+* [Teamsストアの検証ガイドライン](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots)
 * [Microsoft アプリ ストアの効果的なイメージを作成する](/office/dev/store/craft-effective-appsource-store-images)
 
 ### <a name="create-a-video"></a>ビデオを作成する
 
-リスト内のビデオは、ユーザーがアプリを使用する理由を伝える最も効果的な方法です。 ビデオで次の質問に対処する必要があります。
+リスト内のビデオは、ユーザーがアプリを使用する理由を伝える最も効果的な方法です。 ビデオで次の質問に対処します。
 
 * Whoアプリは何ですか?
 * アプリで解決できる問題は何ですか?
 * アプリの動作方法
 * アプリを使用して得るその他の利点は何ですか?
 
+YouTube または Vimeo ビデオの URL を追加できます。
+
 #### <a name="best-practices-for-videos"></a>ビデオのベスト プラクティス
 
-* ビデオを 30 ~ 90 秒の間に保持します。
+* ビデオを 60 ~ 90 秒の間に保持します。
 * 品質を目指します。 リストでは、スクリーンショットの前にユーザーにビデオが表示されます。
+* 製品の価値をストーリー形式で伝えます。
+* 製品の動作を示します。
 
 ### <a name="select-a-category-for-your-app"></a>アプリのカテゴリを選択する
 
-申請中に、アプリの分類を求めるメッセージが表示されます。 次の表は、Teamsのカテゴリをパートナー センターに一覧表示するカテゴリ[にマップします](https://aka.ms/PartnerCenterHomePage)。
+申請中に、アプリの分類を求めるメッセージが表示されます。 次の表は、ストア Teamsパートナー センターに一覧表示されているカテゴリに[マップします](https://aka.ms/PartnerCenterHomePage)。
 
 | Teamsカテゴリ       | パートナー センターのカテゴリ  |
 |:---------------------|:---------------|
@@ -173,7 +188,7 @@ Microsoft が機能を完全に理解できるよう、アプリの記録を提�
 | 人事管理 | 人事と採用 |
 | 生産性 | コンテンツ管理、ファイルとドキュメント、生産性、トレーニングとチュートリアル、ユーティリティ |
 | プロジェクト管理 | コミュニケーション、Project管理、ワークフロー、およびビジネス管理 |
-| 販売とサポート | 顧客と連絡先の管理、カスタマー サポート、財務管理、営業およびマーケティング |
+| 販売とサポート | 顧客と連絡先の管理、顧客サポート、財務管理、および販売とマーケティング |
 | ソーシャルで楽しい | 画像とビデオ ギャラリー、ライフスタイル、ニュースと天気予報、ソーシャル、旅行、ナビゲーション |
 
 ### <a name="localize-your-store-listing"></a>ストアの登録情報をローカライズする
@@ -182,11 +197,11 @@ Microsoft が機能を完全に理解できるよう、アプリの記録を提�
 
 ## <a name="complete-publisher-verification"></a>完全なPublisher検証
 
-[Publisherストアに](/azure/active-directory/develop/publisher-verification-overview)一覧表示されているアプリTeams検証が必要です。 詳細については、「よく寄せられる質問[」、](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions)アプリを[](/azure/active-directory/develop/mark-app-as-publisher-verified)発行元の検証済みとしてマークする方法、および発行元の検証の[トラブルシューティングを参照してください](/azure/active-directory/develop/troubleshoot-publisher-verification)。
+[Publisherストアに](/azure/active-directory/develop/publisher-verification-overview)一覧表示されているアプリTeams検証が必要です。 詳細については、[よくある質問](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions)、[アプリを発行元の確認済みとしてマークする方法](/azure/active-directory/develop/mark-app-as-publisher-verified)、[発行元の確認のトラブルシューティング](/azure/active-directory/develop/troubleshoot-publisher-verification)を参照してください。
 
 ## <a name="complete-publisher-attestation"></a>完全なPublisher構成証明
 
-[Publisher一覧に](/microsoft-365-app-certification/docs/attestation)表示されるアプリTeams構成証明も必要です。 このプロセスには、潜在的な顧客がアプリの使用に関する情報に基づいた意思決定を行うのに役立つ、アプリのセキュリティ、データ処理、コンプライアンスプラクティスの自己評価が含まれます。
+[Publisherストアに](/microsoft-365-app-certification/docs/attestation)一覧表示されているアプリTeams構成証明も必要です。 このプロセスには、アプリのセキュリティ、データ処理、コンプライアンスプラクティスの自己評価の完了が含まれます。 このプロセスは、潜在的な顧客がアプリの使用に関する情報に基づいた意思決定を行う際に役立ちます。
 
 > [!NOTE]
 > 新しいアプリを提出する場合は、アプリが Teams ストアに表示されるまで、Publisher 構成証明を正式にTeamsできます。 リストされているアプリを更新する場合は、検証Publisher最新バージョンのアプリを提出する前に、構成証明を完了してください。

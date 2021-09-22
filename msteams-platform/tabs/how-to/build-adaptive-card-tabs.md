@@ -5,12 +5,12 @@ description: アダプティブ カードを使用してタブを作成する
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 902b57145a2ba0919e810e6785f077e626949970
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 8a43efabbd9c40537854450581a4e7d996086fc5
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156999"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475588"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>アダプティブ カードを使用してタブをビルドする
 
@@ -106,7 +106,8 @@ ms.locfileid: "59156999"
 アダプティブ カード タブとボット間の通信は、アクティビティを通じて行 `invoke` われます。 各 `invoke` アクティビティには、対応する名前 **があります**。 各要求を区別するには、各アクティビティの名前を使用します。 `tab/fetch` この `tab/submit` セクションで説明するアクティビティを示します。
 
 > [!NOTE]
-> ボットはサービス URL に対してすべての応答を [送信する必要があります](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true)。 サービス URL は、受信ペイロードの一部として受信 `activity` されます。
+> * ボットはサービス URL に対してすべての応答を [送信する必要があります](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true)。 サービス URL は、受信ペイロードの一部として受信 `activity` されます。
+> * 呼び出しペイロード のサイズが 80 kb に増加しました。
 
 ### <a name="fetch-adaptive-card-to-render-to-a-tab"></a>タブにレンダリングするアダプティブ カードのフェッチ
 

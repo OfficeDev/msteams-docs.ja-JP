@@ -4,12 +4,12 @@ description: ユーザー トークンを取得する方法について説明し
 keywords: トークン、ユーザー トークン、ボットの SSO サポート
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: a3b150ee27eeb387c71191e74b6765dd5a93b148
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: e3f4c7a1c803baba2687e3803a820dc351f9ca33
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156356"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475732"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>ボットのシングル サインオン (SSO) のサポート
 
@@ -31,7 +31,7 @@ Azure Active Directory (AAD) のシングル サインオン認証では、ユ�
     >* ボット トークンは、すべてのアクティブなユーザーのエンドポイントから受信されます。
     >* SSO をサポートするには、アプリを個人用のスコープにインストールする必要があります。
 
-1. 現在のユーザーが初めてボット アプリケーションを使用している場合は、ユーザーに次のいずれかの操作を要求する要求プロンプトが表示されます。
+1. 現在のユーザーが初めてボット アプリケーションを使用している場合は、要求プロンプトが表示され、ユーザーに次のいずれかの操作を要求します。
     * 必要に応じて同意を提供します。
     * 2 要素認証などのステップ アップ認証を処理します。
 
@@ -92,7 +92,7 @@ AAD ポータルを介してアプリを登録する手順は、タブ SSO フ�
 
 OAuth 接続を使用して Azure ポータルを更新するには、次の手順を実行します。
 
-1. Azure Portal で、[アプリの登録] **に移動します**。
+1. Azure portal で、[アプリの登録 **] に移動します**。
 
 2. [API の **アクセス許可] に移動します**。 [**アクセス許可を追加する]** Graph委任されたアクセス許可] を選択し、次のアクセス許可を Microsoft Graph  >    >  API に追加します。
     * User.Read (既定で有効)
@@ -101,13 +101,13 @@ OAuth 接続を使用して Azure ポータルを更新するには、次の手�
     * OpenId
     * profile
 
-3. Azure Portal で、[ボット チャネル登録 **] に移動します**。
+3. Azure ポータルで [**、AzureBot に移動します。**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
+4. 左側の **ウィンドウで** [構成] を選択します。
+5. **[OAuth 接続の追加] を設定。**
 
-4. 左側 **設定** を選択し **、[OAuth** 接続] セクション **の**[設定の設定します。
+    ![SSOBotHandle2 ビュー](~/assets\Contosoairlines123.png)
 
-    ![SSOBotHandle2 ビュー](../../../assets/images/bots/bots-vuSSOBotHandle2-settings.png)
-
-5. [新しい接続設定] フォームを完了するには **、次の手順を実行** します。
+6. [新しい接続設定] フォームを完了するには **、次の手順を実行** します。
 
     >[!NOTE]
     > **AAD アプリケーション** では暗黙的な付与が必要になる場合があります。
@@ -118,7 +118,7 @@ OAuth 接続を使用して Azure ポータルを更新するには、次の手�
     4. Token Exchange **URL の** 場合は、「Update your Teams アプリケーション マニフェスト」で定義されているスコープ値 [を使用します](#update-your-teams-application-manifest-for-your-bot)。 トークンのExchange URL は、この AAD アプリケーションが SSO 用に構成されていることを SDK に示します。
     5. [テナント **ID] ボックスに** 「共通」と *入力します*。
     6. AAD **アプリケーションのダウンストリーム** API へのアクセス許可を指定するときに構成されたスコープを追加します。 クライアント ID とクライアント シークレットが提供されている場合、トークン ストアは、定義されたアクセス許可を持つグラフ トークンのトークンを交換します。
-    7. **[保存]** を選択します。
+    7. [**保存**] を選択します。
 
     ![VuSSOBotConnection 設定ビュー](../../../assets/images/bots/bots-vuSSOBotConnection-settings.png)
 

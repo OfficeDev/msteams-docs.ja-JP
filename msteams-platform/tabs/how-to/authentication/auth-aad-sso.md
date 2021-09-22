@@ -4,12 +4,12 @@ description: シングル サインオン (SSO) について説明します。
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams 認証 SSO AAD シングル サインオン API
-ms.openlocfilehash: eddbc681155d1fea03ca2c362f5519c4d2542887
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 1901ce16f99b7708bfc289f86440ce240148ada9
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156608"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475686"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>タブのシングル サインオン (SSO) のサポート
 
@@ -67,6 +67,7 @@ SSO API は、Web コンテンツを [埋め込むタスク](../../../task-modul
 > * API のアクセス許可Graphユーザー レベルのアクセス許可 (電子メール、プロファイル、offline_access OpenId) だけがサポートされます。 その他のスコープ (Graphなど) にアクセスする必要がある場合は、「アクセス トークンを取得する」を参照Graph `User.Read` `Mail.Read` [してください](#get-an-access-token-with-graph-permissions)。
 > * アプリケーションのドメイン名は、AAD アプリケーションに登録したドメイン名と同じ名前にすることが重要です。
 > * 現在、アプリごとに複数のドメインはサポートされていません。
+> * ユーザーは、新しい `accessTokenAcceptedVersion` アプリケーション `v2` に対して設定する必要があります。
 
 **AAD ポータルを使用してアプリを登録するには**
 

@@ -4,12 +4,12 @@ description: Teams の Bot で使用できるすべてのカードとカード �
 ms.localizationpriority: medium
 keywords: Bot のカード リファレンス
 ms.topic: reference
-ms.openlocfilehash: 424b21bb0d8b1d7a3aeb08cc9d6c521579bc7cc1
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 2768b1b156ecd86a6bcc2a7b8b42448db3eeeaae
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156888"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475595"
 ---
 # <a name="types-of-cards"></a>カードの種類
 
@@ -59,10 +59,10 @@ ms.locfileid: "59156888"
 
 ## <a name="features-that-support-different-card-types"></a>さまざまな種類のカードをサポートする機能
 
-| カードの種類 | ボット | メッセージ拡張機能のプレビュー | メッセージ拡張機能の結果 | タスク モジュール | Webhookの送信 | 受信 Webhooks | O365 コネクタ |
+| カードの種類 | ボット | メッセージ拡張機能のプレビュー | メッセージ拡張機能の結果 | タスク モジュール | Webhookの送信 | 受信 Webhooks | Office 365 コネクタ |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | アダプティブ カード | ✔ | ✖ | ✔ | ✔ | ✔ | ✔ | ✖ |
-| O365 コネクタ カード | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
+| Office 365コネクタ カード | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
 | ヒーロー カード | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
 | サムネイル カード | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
 | リスト カード | ✔ | ✖ | ✖ | ✖ | ✔ | ✔ | ✖ |
@@ -70,11 +70,14 @@ ms.locfileid: "59156888"
 | サインイン カード | ✔ | ✖ | ✖ | ✖ | ✖ | ✖ | ✖ |
 
 > [!NOTE]
-> 受信 Webhooks のアダプティブ カードでは、ネイティブのアダプティブ カード スキーマ要素 (ただし、 を除く) `Action.Submit` はすべて完全にサポートされます。 サポートされているアクションは [**、Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html) [**、Action.ShowCard、Action.ToggleVisibility、**](https://adaptivecards.io/explorer/Action.ShowCard.html)およびAction.Exe [**です**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)。 [](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)
+> 受信 Webhooks のアダプティブ カードでは、ネイティブのアダプティブ カード スキーマ要素 (ただし、 を除く) `Action.Submit` はすべて完全にサポートされます。 サポートされているアクションは、Action.OpenURL、Action.ShowCard、Action.ToggleVisibility、[**および Action.Execute です**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)。 [](https://adaptivecards.io/explorer/Action.OpenUrl.html) [](https://adaptivecards.io/explorer/Action.ShowCard.html) [](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)
 
 ## <a name="common-properties-for-all-cards"></a>すべてのカードの共通プロパティ
 
 すべてのカードに適用できる一般的なプロパティを確認できます。
+
+> [!NOTE]
+> 複数のアクションを持つヒーロー カードとサムネイル カードは、カルーセル レイアウト内の複数のカードに自動的に分割されます。
 
 ### <a name="inline-card-images"></a>インライン カードの画像
 
@@ -86,7 +89,7 @@ ms.locfileid: "59156888"
 
 次の表に、インライン カード イメージのプロパティを示します。
 
-| プロパティ | 型  | 説明 |
+| プロパティ | 種類  | 説明 |
 | --- | --- | --- |
 | url | URL | イメージの HTTPS URL。 |
 | alt | 文字列 | 画像のアクセス可能な説明。 |
@@ -110,7 +113,7 @@ ms.locfileid: "59156888"
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/J12lKt717Ws]
 
-アダプティブ カードは、テキスト、音声、画像、ボタン、および入力フィールドの任意の組み合わせを含むカスタマイズ可能なカードです。 詳細については [、「Adaptive Cards v1.2.0」を参照してください](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0)。
+アダプティブ カードは、テキスト、音声、画像、ボタン、および入力フィールドの任意の組み合わせを含むカスタマイズ可能なカードです。 詳細については、「アダプティブ カード」 [を参照してください](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07)。
 
 ### <a name="support-for-adaptive-cards"></a>アダプティブ カードのサポート
 
@@ -121,7 +124,8 @@ ms.locfileid: "59156888"
 | ✔ | ✔ | ✖ | ✔ |
 
 > [!NOTE]
-> * Teamsプラットフォームは、アダプティブ カード機能の v1.2 以前をサポートしています。
+> * Teamsは、ボットから送信されたカードおよびアクション ベースのメッセージング拡張機能に対して、v1.4 以前のアダプティブ カード機能をサポートしています。
+> * Teamsは、ユーザーが送信するカード (検索ベースのメッセージング拡張機能とリンクの分岐解除)、タブ、タスク モジュールなど、他の機能に対応するアダプティブ カード機能の v1.3 以前をサポートしています。
 > * 正または破壊的なアクションのスタイル設定は、プラットフォーム上のアダプティブ カードではTeamsされません。
 > * メディア要素は、現在、プラットフォーム上のアダプティブ カードTeamsされていません。
 
@@ -289,7 +293,7 @@ ms.locfileid: "59156888"
 
 次の表に、ヒーロー カードのプロパティを示します。
 
-| プロパティ | 型  | 説明 |
+| プロパティ | 種類  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。 |
 | サブタイトル | リッチ テキスト | カードのサブタイトル。 最大 2 行。|
@@ -356,7 +360,7 @@ ms.locfileid: "59156888"
 
 次の表に、リスト カードのプロパティを示します。
 
-| プロパティ | 型  | 説明 |
+| プロパティ | 種類  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。|
 | アイテム | リスト アイテムの配列 | カードに適用可能なアイテムのセット。|
@@ -434,7 +438,7 @@ ms.locfileid: "59156888"
 
 次の表に、コネクタ カードのプロパティOffice 365示します。
 
-| プロパティ | 型  | 説明 |
+| プロパティ | 種類  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。 |
 | 概要 | リッチ テキスト | カードの概要。 最大 2 行。 |
@@ -651,7 +655,7 @@ Teamsのサインイン カードは、ボット フレームワークのサイ�
 
 次の表に、サムネイル カードのプロパティを示します。
 
-| プロパティ | 型  | 説明 |
+| プロパティ | 種類  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。|
 | サブタイトル | リッチ テキスト | カードのサブタイトル。 最大 2 行。|
@@ -705,7 +709,7 @@ Teamsのサインイン カードは、ボット フレームワークのサイ�
 }
 ```
 
-### <a name="additional-information"></a>ページの先頭へ
+### <a name="additional-information"></a>その他の情報
 
 以下の Bot Framework リファレンスを参照してください。
 
