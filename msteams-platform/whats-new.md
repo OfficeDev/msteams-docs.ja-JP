@@ -4,12 +4,12 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: チームの最新情報
-ms.openlocfilehash: 4d664213b3a2a62a6ac99ef5f93ca276bfed9268
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: 7bc3aebbe0acdbef410beb18041d1ac998216ebe
+ms.sourcegitcommit: e1e37cfbecba3a6b382f19379996cc423cd99dac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475742"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "59485769"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
@@ -30,7 +30,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 | **日付** | **メモ** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
-|09/21/2021|Teams、ボットと受信 Webhook のユーザーメンションで AAD オブジェクト ID と UPN をサポートしています。 | [Microsoft Teams のカードの書式設定](task-modules-and-cards/cards/cards-format.md)|
+|09/21/2021|Teams、ボットと受信 Webhook のユーザーメンションで AAD オブジェクト ID と UPN をサポートしています。 |[AAD オブジェクト ID と UPN in user mention](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown), [Cards- Overview](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
 |08/16/2021| アダプティブ カードの入力検証 (すべての機能の場合は v1.3) とユニバーサル アクション (ボット送信カードの場合は v1.4) のサポート。 |[入力検証](/adaptive-cards/authoring-cards/input-validation)、 [アダプティブ カードのユニバーサル アクション v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |08/09/2021|会議ステージは GA で利用できます。|[会議で使用するアプリを有効Teamsする](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
 |08/30/2021| カスタム 一緒にモードのシーン機能は、参加者を 1 つの仮想シーンに結合し、事前に決定されたシートにビデオ ストリームを設定します。 | [カスタム一緒にモードのシーン](~/apps-in-teams-meetings/teams-together-mode.md) |

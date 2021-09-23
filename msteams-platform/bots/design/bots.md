@@ -3,21 +3,21 @@ title: ボットをデザインする
 description: Teams のボットをデザインして、Microsoft Teams UI Kit を取得するする方法をご紹介します。
 author: heath-hamilton
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: feeb80a0cd96172431e7682835e3f078cdd7983c
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
-ms.translationtype: MT
+ms.openlocfilehash: f2f0fb7e3ed57ebfdbbe3c8cd20b654c600d9623
+ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156684"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "59475826"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Microsoft Teams のボットをデザインする
 
 ボットは、特定のタスクを実行する会話型アプリです。 <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot Framework</a> をベースに、ボットはユーザーと通信し、ユーザーの質問に答え、変更などのイベントをプロアクティブに通知します。 ボットは、連絡を取るのに最適な方法です。
 
 > [!IMPORTANT]
-> ボットは、Government Community Cloud (GCC) 環境では使用できますが、GCC国防総省 (DoD) 環境では使用できません。
+> ボットは、Government Community Cloud (GCC) 環境では使用できますが、GCC High や米国国防総省 (DOD) 環境では使用できません。
 
 アプリのデザインに役立てるために、次の情報では、Teams でユーザーがどのようにボットを追加、使用、管理できるかを説明、図解しています。
 
@@ -34,13 +34,13 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 ### <a name="mobile"></a>モバイル
 
-ユーザーは、デスクトップに追加されたボットにアクセスし、@mention。
+ユーザーは、@メンションを使用してデスクトップに追加されたボットにアクセスできます。
 
-:::image type="content" source="../../assets/images/bots/mobile-access-bot-chat-at-mention.png" alt-text="例は、グループ チャット内のモバイル ボットにアクセスする方法を、グループ チャットを使用@mention。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-access-bot-chat-at-mention.png" alt-text="例では、@メンションを使用してグループ チャットのモバイル ボットにアクセスする方法をご紹介します。" border="false":::
 
 ### <a name="desktop"></a>Desktop
 
-ユーザーは、次のいずれかの方法でボットを追加できます。
+ユーザーは、次の方法のいずれかでボットを追加できます。
 
 * Teams ストアから。
 * Teams の左側にある **[詳細]** アイコンを選択してアプリのフライアウトを使用する。
@@ -54,23 +54,23 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 ### <a name="welcome-message-in-a-one-on-one-chat"></a>1 対 1 のチャットでのウェルカム メッセージ
 
-個人的なコンテキストでは、ウェルカム メッセージはボットのトーンを決めるものです。 メッセージには、案内応答、ボットが実行できる操作、操作方法に関する提案が含まれます。 たとえば、「...」について質問してみてください。 可能であれば、これらの提案は、サインインしなくても保存された応答を返す必要があります。
+個人的なコンテキストでは、ウェルカム メッセージはボットのトーンを決めるものです。 メッセージには、挨拶、ボットができること、対話方法の提案が含まれます。 たとえば、「... について聞いてみてください」などです。 可能であれば、これらの提案は、サインインしなくても保存された応答を返す必要があります。
 
 #### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-personal-welcome.png" alt-text="例は、モバイル上の個人用アプリでのボットの概要を示しています。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-personal-welcome.png" alt-text="モバイルの個人アプリでのボット導入例を示します。" border="false":::
 
 #### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="個人アプリでのボット導入例を示します。" border="false":::
 
-### <a name="welcome-message-in-channels-and-group-chats"></a>チャネルとグループ チャットのウェルカム メッセージ
+### <a name="welcome-message-in-channels-and-group-chats"></a>チャネルやグループ チャットでのウェルカム メッセージ
 
-ボットの概要は、チャネルやグループ チャットで個人のスペース (個人用アプリなど) と比較して少し異なっている必要があります。 実生活では、大勢の人がいる部屋に入った場合に、既にいる人を歓迎するのではなく、自己紹介をするはずです。 その考え方は、ボットのデザインにも生かされています。
+チャネルやグループ チャットでのボットの紹介は、個人用スペース (個人用アプリなど) とは多少異なる必要があります。 実生活では、大勢の人がいる部屋に入った場合に、既にいる人を歓迎するのではなく、自己紹介をするはずです。 その考え方は、ボットのデザインにも生かされています。
 
 #### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-group-welcome.png" alt-text="例は、モバイルでの共同作業コンテキストでのボットの紹介を示しています。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-group-welcome.png" alt-text="モバイルの共同作業コンテキストでのボット導入例を示します。" border="false":::
 
 #### <a name="desktop"></a>Desktop
 
@@ -84,7 +84,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 #### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-sso-example.png" alt-text="例では、モバイルのサインイン ボタンを持つボットを示しています。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-sso-example.png" alt-text="モバイルでサインイン ボタンのあるボットの例を示します。" border="false":::
 
 #### <a name="desktop"></a>Desktop
 
@@ -92,18 +92,18 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 ### <a name="tours"></a>ツアー
 
-ウェルカム メッセージや "ヘルプ "コマンドのようなものにボットが応答する場合にツアーを含めることができます。 ボットにできることを説明するには、ツアーが最も効果的です。 該当する場合は、アプリの他の機能を説明する場合にも最適です。 たとえば、メッセージング拡張機能のスクリーンショットを含めます。
+ウェルカム メッセージや "ヘルプ "コマンドのようなものにボットが応答する場合にツアーを含めることができます。 ボットにできることを説明するには、ツアーが最も効果的です。 必要に応じて、アプリのその他の機能を説明するのにも最適です。 たとえば、メッセージング拡張機能のスクリーンショットなどです。
 
 > [!IMPORTANT]
 > ログインしなくてもツアーに参加できることが必要です。
 
 ### <a name="one-on-one-chats"></a>1 対 1 のチャット
 
-個人用アプリでは、カルーセルでボットやお使いのアプリのその他の機能の概要を効果的に伝えることができます。 ボタンを含めて、ユーザーがボット コマンドを試すのをお勧めします。 たとえば、タスク **を作成します**。
+個人用アプリでは、カルーセルでボットやお使いのアプリのその他の機能の概要を効果的に伝えることができます。 ユーザーがボットのコマンドを試すことができるボタンを含めることが推奨されます。 たとえば、「**タスクを作成する**」などです。
 
 #### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-tour-personal.png" alt-text="例は、モバイルでの 1 対 1 のチャットでのボット ツアーを示しています。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-tour-personal.png" alt-text="モバイルの 1 対 1 のチャットでのボット ツアーの例を示します。" border="false":::
 
 #### <a name="desktop"></a>Desktop
 
@@ -115,7 +115,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 #### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-tour-channel.png" alt-text="例は、モバイル上のチャネルでのボット ツアーを示しています。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-tour-channel.png" alt-text="モバイルのチャネルでのボット ツアーの例を示します。" border="false":::
 
 #### <a name="desktop"></a>Desktop
 
@@ -138,15 +138,15 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 #### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-anatomy.png" alt-text="例は、モバイル ボットの構造構造を示しています。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-anatomy.png" alt-text="モバイル ボットの構造的な例を示します。" border="false":::
 
 |カウンター|説明|
 |----------|-----------|
 |1|**アプリ名とアイコン**|
 |2|**[チャット] タブ**: ボットと会話するための空間を開きます (個人用アプリのみ該当)。|
 |3|**[カスタム] タブ**: アプリに関連するその他のコンテンツを開きます。|
-|4 |**チャット バブル**: ボットの会話は、Teams のメッセージング フレームワークを使用しています。|
-|5 |**アダプティブ カード**: ボットの応答にアダプティブ カードが含まれる場合、カードはチャット バブルの全幅を取ります。|
+|4|**チャット バブル**: ボットの会話は、Teams のメッセージング フレームワークを使用しています。|
+|5|**アダプティブ カード**: ボットの応答にアダプティブ カードが含まれる場合、カードはチャット バブルの幅いっぱいに表示されます。|
 
 #### <a name="desktop"></a>Desktop
 
@@ -157,10 +157,10 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 |1|**アプリ名とアイコン**|
 |2|**[チャット] タブ**: ボットと会話するための空間を開きます (個人用アプリのみ該当)。|
 |3|**[カスタム] タブ**: アプリに関連するその他のコンテンツを開きます。|
-|4 |**[バージョン情報] タブ**: アプリの基本情報を表示します。|
-|5 |**チャット バブル**: ボットの会話は、Teams のメッセージング フレームワークを使用しています。|
-|6 |**アダプティブ カード**: ボットの応答にアダプティブ カードが含まれる場合、カードはチャット バブルの全幅を取ります。|
-|7 |**コマンド メニュー**: ボットの標準コマンド (ユーザーによる定義) を表示します。|
+|4|**[バージョン情報] タブ**: アプリの基本情報を表示します。|
+|5|**チャット バブル**: ボットの会話は、Teams のメッセージング フレームワークを使用しています。|
+|6|**アダプティブ カード**: ボットの応答にアダプティブ カードが含まれる場合、カードはチャット バブルの幅いっぱいに表示されます。|
+|7|**コマンド メニュー**: ボットの標準コマンド (ユーザーによる定義) を表示します。|
 
 ### <a name="command-menu"></a>コマンド メニュー
 
@@ -192,7 +192,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 メッセージやクエリに応じて、相手がボットに何を求めているかをキャプチャする、意図の認識を目指してボットをデザインします。 意図は、メッセージやクエリを、アクションの影響を受ける 1 つ以上のデータ オブジェクトのある単一のアクションとして分類します。 
 
-次の例では、ボットに送信されるメッセージのユーザーの意図とデータの概要を示します。
+次の例は、ボットに送信されるメッセージに含まれるユーザーの意図とデータの概要です。
 
 :::row:::
    :::column span="":::
@@ -221,7 +221,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 #### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-simple-query.png" alt-text="例は、モバイル上のボットとの簡単なクエリ操作を示しています。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-simple-query.png" alt-text="モバイルでのボットとの単純なクエリの対話を示す例。" border="false":::
 
 #### <a name="desktop"></a>Desktop
 
@@ -231,11 +231,11 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 ボットは、完全な要求や質問をサポートすることができますが、複数回の対話を処理することもできる必要があります。 次の手順の可能性を予測することで、ユーザーは (包括的な要求を作成することを想定するのではなく) 完全なタスク フローをより簡単に作成できます。
 
-次の例では、ボットは各メッセージに応答し、次に実行する可能性のある処理のオプションを指定します。
+次の例では、ボットはそれぞれのメッセージに対して、次にしたいことのオプションを応答します。
 
 #### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-multi-turn.png" alt-text="例は、モバイル上のボットとのマルチターン操作を示しています。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-multi-turn.png" alt-text="モバイルでのボットとの複数回の対話を示す例。" border="false":::
 
 #### <a name="desktop"></a>Desktop
 
@@ -247,17 +247,17 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 #### <a name="mobile"></a>モバイル
 
-次の例では、ボットが別のチャネルでメッセージを送信したという通知をユーザーが取得します。
+ユーザーが、ボットが別のチャネルでメッセージを送ってきたことをについて通知を受け取る例を次に示します。
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-proactive-message-toast.png" alt-text="例は、モバイル上の別のチャネルからユーザーに事前にメッセージを送信するボットのトーストを示しています。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-proactive-message-toast.png" alt-text="モバイルでボットが他のチャネルからユーザーにプロアクティブにメッセージを送るトーストを示す例。" border="false":::
 
 そのチャネルでは、ユーザーはボットからのメッセージを読むことができます。
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-proactive-message.png" alt-text="例は、モバイルでボットのプロアクティブ メッセージを見ているユーザーを示しています。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-proactive-message.png" alt-text="モバイルでユーザーがボットのプロアクティブなメッセージを見ている様子を示す例。" border="false":::
 
 #### <a name="desktop"></a>Desktop
 
-次の例では、ボットが別のチャネルでメッセージを送信したというトースト通知をユーザーが取得します。
+ユーザーが、ボットが別のチャネルでメッセージを送ってきたことをトースト通知で受け取る例を次に示します。
 
 :::image type="content" source="../../assets/images/bots/bot-proactive-message-toast.png" alt-text="ボットが他のチャネルからユーザーにプロアクティブにメッセージを送るトーストを示す例。" border="false":::
 
@@ -267,11 +267,11 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 ### <a name="use-tabs-with-bots"></a>ボットでタブを使用する
 
-個人用アプリでは、タブはボットが実行できる機能を補完できます。 たとえば、ボットが作業項目を作成できる場合は、タブ内の中央の場所にそれらのすべてのアイテムを表示すると便利です。タブの設計 [の詳細については、以下を参照してください](../../tabs/design/tabs.md)。
+個人用アプリでは、タブはボットが実行可能な機能を補完できます。 たとえば、ボットが作業項目を作成できる場合、それらのアイテムをタブ内の中心的な場所に表示できると便利です。詳細については、[タブのデザイン](../../tabs/design/tabs.md) を参照してください。
 
 #### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/bots/mobile-bot-with-tab.png" alt-text="例は、タブがモバイルでのボット コンテンツの整理に役立つ方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/bots/mobile-bot-with-tab.png" alt-text="モバイルでタブを使用してボットのコンテンツを整理する方法を示す例。" border="false":::
 
 #### <a name="desktop"></a>Desktop
 
@@ -287,9 +287,9 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 これらの推奨事項を使用して、高品質のアプリ エクスペリエンスを作成します。
 
-### <a name="content"></a>コンテンツ
+### <a name="content"></a>Content
 
-:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="明確なペルサを確立するためのボットのベスト プラクティスを示す例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="明確なペルソナを設定するためのボットのベスト プラクティスを示す例。" border="false":::
 
 #### <a name="do-establish-a-clear-persona"></a>するべきこと: 明確なペルソナの設定
 
@@ -299,7 +299,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="ボットが実行できる操作を明確に伝える例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="ボットにできることを明確に伝達することを示す例。" border="false":::
 
 #### <a name="do-clearly-convey-what-your-bot-can-do"></a>するべきこと: ボットにできることを明確に伝達する
 
@@ -307,18 +307,18 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="ボットの機能をあいまいにしない例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="ボットの機能をぼかさないことを示す例。" border="false":::
 
 #### <a name="dont-obscure-your-bots-features"></a>してはいけないこと: ボットの機能をぼかす
 
-第一印象は大切です。 何の変哲もないサインイン メッセージが表示されると、ユーザーは混乱したり疑ったりするでしょう。
+第一印象が大切です。何の変哲もないサインイン メッセージが表示されると、ユーザーは混乱したり疑ったりするでしょう。
 
    :::column-end:::
 :::row-end:::
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="ボットを表示する例は、質問以外を認識する必要があります。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="ボットはノンクエスチョンを認識する必要があることを示す例。" border="false":::
 
 #### <a name="do-recognize-non-questions"></a>するべきこと: ノンクエスチョンを認識する
 
@@ -326,7 +326,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="単純なボット メッセージに対する不器用な応答を回避する必要がある例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="シンプルなボット メッセージに対する不自然な応答を回避する必要があることを示す例。" border="false":::
 
 #### <a name="dont-miss-out-on-opportunities-to-delight"></a>してはいけないこと: 喜ぶチャンスを逃す
 
@@ -339,7 +339,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="ボットを表示する例は、ユーザーがボットの使い方を理解するのに役立ちます。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="ボットは、ユーザーがボットの使用方法を理解するためサポートを行う必要があることを示す例。" border="false":::
 
 #### <a name="do-provide-help"></a>するべきこと: ヘルプを用意する
 
@@ -347,7 +347,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="ボットを表示する例では、ユーザーを立ち往生してはならない。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="ボットがユーザーを立ち往生させてはいけないことを示す例。" border="false":::
 
 #### <a name="dont-leave-users-stranded"></a>してはいけないこと: ユーザーを立ち往生させる
 
@@ -360,7 +360,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="複雑な操作のためにボットでタスク モジュールまたはタブを使用できる例を示します。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="ボットで複雑な対話をするためにタスク モジュールやタブを使用できることを示す例。" border="false":::
 
 #### <a name="do-use-task-modules-or-tabs"></a>するべきこと: タスク モジュールやタブの使用
 
@@ -368,7 +368,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="ボットがマルチターン操作を回避する方法を示す例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="ボットでは複数回の対話を回避する必要があることを示す例。" border="false":::
 
 #### <a name="dont-make-multi-turn-interactions-tedious"></a>してはいけないこと: 複数回の対話を面倒にする
 
@@ -381,7 +381,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="ボットが個人のコンテキストで個人情報のみを表示する方法を示す例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="ボットは個人的なコンテキストで個人情報のみを表示する必要があることを示す例。" border="false":::
 
 #### <a name="do-only-show-sensitive-info-in-a-personal-context"></a>するべきこと: 機密情報を個人的なコンテキストでのみ表示する
 
@@ -389,7 +389,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="ボットがグループまたはユーザーに機密情報を表示しない方法を示す例。" border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="ボットがグループやユーザーに機密情報を公開してはいけないことを示す例。" border="false":::
 
 #### <a name="dont-some-content-isnt-meant-to-be-seen-by-everyone"></a>してはいけないこと: すべてのユーザーが閲覧できないコンテンツがある
 
