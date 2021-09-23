@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: 0ba25480dc253f0ef757411a8e658b547b4090ef
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: e3392e92965d03c33cd07ae5b65d607d3f86aa5d
+ms.sourcegitcommit: d6917d41233a530dc5fd564a67d24731edeb50f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156408"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "59487481"
 ---
 # <a name="prerequisites-for-apps-in-teams-meetings"></a>Teams 会議でのアプリの前提条件
 
@@ -73,7 +73,7 @@ ms.locfileid: "59156408"
 > * 会議の開催者がいつでも役割を変更できるので、参加者の役割をキャッシュしない。
 > * Teams現在、API の 350 を超える参加者の大規模な配布リストまたは名簿サイズはサポート `GetParticipant` されていません。
 
-API `GetParticipant` を使用すると、ボットは会議 ID と参加者 ID によって参加者情報を取得できます。 API には、クエリ パラメーター、例、および応答コードが含まれています。
+API `GetParticipant` を使用すると、ボットは会議 ID と参加者 ID によって参加者情報を取得できます。 API には、クエリ パラメーター、例、および応答コードが含まれています。 API は、プライベートのスケジュールされた会議または定期的な会議と、スケジュールされた会議または定期的な会議のチャネルの両方でサポートされます。 
 
 #### <a name="query-parameters"></a>クエリ パラメーター
 
@@ -305,7 +305,7 @@ if (response.Content != null)
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
-使用不可
+利用不可
 
 # <a name="json"></a>[JSON](#tab/json)
 
