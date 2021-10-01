@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: e35393a2696ace22068e34566c3dad4a3109bd73
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6fce2deb5dc482a1f348739e6090d4623996df27
+ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156768"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "60017339"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Microsoft Teams のアプリを作成する
 
@@ -94,7 +94,7 @@ Teamsは機能の組み[合わせです](concepts/capabilities-overview.md)。 �
    :::column-end:::
 :::row-end:::
 
-### <a name="meeting-extensions"></a>ミーディング拡張機能
+### <a name="meeting-extensions"></a>ミーティング拡張機能
 
 :::row:::
 
@@ -208,13 +208,6 @@ Teamsは機能の組み[合わせです](concepts/capabilities-overview.md)。 �
 
    :::column-end:::
 :::row-end:::
-
-## <a name="integrate-teams-in-your-external-app"></a>外部Teamsにアプリを統合する
-このページでは、アプリを構築することで、独自のエクスペリエンスをMicrosoft TeamsにTeamsしています。 このモデルを元に戻し、Teamsその他の通信機能を独自の外部アプリ エクスペリエンスに統合する場合は[、「Azure Communication Services」を参照してください](/azure/communication-services/overview)。 Azure Communication Services は、独自のカスタム アプリケーションに通信を統合するのに役立つ REST API とクライアント ライブラリ SDK を備え、クラウドベースのサービスです。 UI ライブラリの助けを借Teams呼び出しとチャットReact、汎用またはカスタム スタイルの Web コンポーネントを[埋め込みできます](https://azure.github.io/communication-ui-library/)。
-
-Azure Communication Services アプリケーションでは、パブリック プレビュー[](/azure/communication-services/concepts/teams-interop)機能を使用して、Teamsと相互運用し、カスタム アプリケーションが匿名で会議に参加Teamsできます。 たとえば、ビデオ通話をモバイル バンキング アプリケーションに統合し、エンド ユーザーがモバイル 銀行を使用して銀行の従業員と事実上会Microsoft Teams。 
-
-また、ユーザー ID Microsoft 365統合して、ビデオと PSTN 通話をユーザーに代わって埋め込む外部アプリケーションをTeamsできます。 過去に SDK [](/skype-sdk/appsdk/skypeappsdk) Skype for Business使用した場合は、Azure Communication Services の一部としてこれらの機能を置き換えとしてお勧めします。
 
 ## <a name="see-also"></a>関連項目
 

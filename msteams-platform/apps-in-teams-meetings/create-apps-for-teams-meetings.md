@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: e3392e92965d03c33cd07ae5b65d607d3f86aa5d
-ms.sourcegitcommit: d6917d41233a530dc5fd564a67d24731edeb50f1
+ms.openlocfilehash: 56219323f6106619a9dd4f1b26289ecf86d297f3
+ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "59487481"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "60017318"
 ---
 # <a name="prerequisites-for-apps-in-teams-meetings"></a>Teams 会議でのアプリの前提条件
 
@@ -290,22 +290,13 @@ API を使用 `Meeting Details` するには、RSC アクセス許可を取得�
 # <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
-var connectorClient = turnContext.TurnState.Get<IConnectorClient>();
-var creds = connectorClient.Credentials as AppCredentials;
-var bearerToken = await creds.GetTokenAsync().ConfigureAwait(false);
-var request = new HttpRequestMessage(HttpMethod.Get, new Uri(new Uri(connectorClient.BaseUri.OriginalString), $"v1/meetings/{meetingId}"));
-request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
-HttpResponseMessage response = await (connectorClient as ServiceClient<ConnectorClient>).HttpClient.SendAsync(request, CancellationToken.None).ConfigureAwait(false);
-string content;
-if (response.Content != null)
-{
-    content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-}
+MeetingInfo result = await TeamsInfo.GetMeetingInfoAsync(turnContext);
+await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
 ```
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
-利用不可
+使用不可
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -479,24 +470,27 @@ JSON ペイロードを逆シリアル化するために、会議のメタデー
 > * 会議 ID として会話 ID を使用しない。     
 > * 会議イベントペイロードから会議 ID を使用しない `turncontext.activity.value` 。 
       
-次のコードは、会議の開始イベントと終了イベントのメタデータをキャプチャする方法 `MeetingType` `Title` `Id` `JoinUrl` `StartTime` `EndTime` を示しています。
+次のコードは、会議の開始/終了イベントのメタデータをキャプチャする方法を `MeetingType` `Title` `Id` `JoinUrl` `StartTime` `EndTime` 示しています。
+
+会議の開始イベント
 
 ```csharp
 protected override async Task OnEventActivityAsync(
 ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {
-    // Event Name is either 'application/vnd.microsoft.meetingStart' or 'application/vnd.microsoft.meetingEnd'
-    var meetingEventName = turnContext.Activity.Name;
-    // Value contains meeting information (ex: meeting type, start time, etc).
-    var meetingEventInfo = turnContext.Activity.Value as JObject; 
-    var meetingEventInfoObject =
-meetingEventInfo.ToObject<MeetingStartEndEventValue>();
-    // Create a very simple adaptive card with meeting information
-var attachmentCard = createMeetingStartOrEndEventAttachment(meetingEventName,
-meetingEventInfoObject);
-    await turnContext.SendActivityAsync(MessageFactory.Attachment(attachmentCard));
+    await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
 }
 ```
+
+会議の終了イベント
+
+```csharp
+protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+{
+    await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
+}
+```
+
 * パラメーター 、 `meetingId` および `userId` 会議 API URL `tenantId` を持つ。 パラメーターは、クライアント SDK およびボット アクティビティTeams使用できます。 また、タブ SSO 認証を使用して、ユーザー ID とテナント ID の信頼 [できる情報を取得できます](../tabs/how-to/authentication/auth-aad-sso.md)。
 
 * 認証トークンを生成するボット登録と ID を `GetParticipant` API に登録します。 詳細については、「ボットの登録 [と ID」を参照してください](../build-your-first-app/build-bot.md)。

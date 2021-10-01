@@ -5,12 +5,12 @@ description: Web アプリケーションとデバイス機能をアプリと統
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 83252b1f93b0c148bafaea4a911ea758e0ec9c14
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 7d4056a23f126d636de3920d02a316440e51564e
+ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156690"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "60017311"
 ---
 # <a name="integrate-web-apps"></a>Web アプリを統合する
 
@@ -38,7 +38,7 @@ ms.locfileid: "59156690"
 
 Microsoft Power プラットフォームは、1 つの強力なアプリケーション プラットフォームで、Power BI、Power Apps、Power Automate、Power Virtual Agentsなど、4 つの堅牢な Microsoft テクノロジを組み合わせたプラットフォームです。 これらのテクノロジを使用すると、ソリューションの構築、プロセスの自動化、データの分析、統合された統合環境内での仮想エージェントの作成が可能になります。
 
-### <a name="power-apps"></a>Power Apps
+### <a name="power-apps"></a>Power アプリ
 
 このPower Apps、ビジネス データに接続し、組織のニーズに合わせてカスタマイズされたビジネス アプリを構築できます。 Power Appsキャンバス アプリを通じてビジネスの課題を解決するために、さまざまなアプリ シナリオを有効にします。 アプリを構築した後、アプリをメーカー ポータルからエクスポートしPower Appsに埋め込Microsoft Teams。
 
@@ -81,6 +81,13 @@ Microsoft Teamsプラットフォームは、組み込みのファースト パ�
 ## <a name="integrate-people-picker"></a>ユーザー ピッカーを統合する
 
 ユーザーが Web アプリ エクスペリエンスTeamsユーザーを検索および選択できる、ネイティブユーザー選択コントロールを統合できます。
+
+## <a name="integrate-teams-in-your-external-app"></a>外部Teamsにアプリを統合する
+アプリを構築することで、独自のエクスペリエンスMicrosoft Teams埋め込Teamsできます。 このモデルを元に戻し、Teamsその他の通信機能を独自の外部アプリ エクスペリエンスに統合する場合は[、「Azure Communication Services」を参照してください](/azure/communication-services/overview)。 Azure Communication Services は、独自のカスタム アプリケーションに通信を統合するのに役立つ REST API とクライアント ライブラリ SDK を備え、クラウドベースのサービスです。 UI ライブラリの助けを借Teams呼び出しとチャットReact、汎用またはカスタム スタイルの Web コンポーネントを[埋め込みできます](https://azure.github.io/communication-ui-library/)。
+
+Azure Communication Services アプリケーションでは、パブリック プレビュー[](/azure/communication-services/concepts/teams-interop)機能を使用して、Teamsと相互運用し、カスタム アプリケーションが匿名で会議に参加Teamsできます。 たとえば、ビデオ通話をモバイル バンキング アプリケーションに統合し、エンド ユーザーがモバイル 銀行を使用して銀行の従業員と事実上会Microsoft Teams。 
+
+また、ユーザー ID Microsoft 365統合して、ビデオと PSTN 通話をユーザーに代わって埋め込む外部アプリケーションをTeamsできます。 過去に SDK [](/skype-sdk/appsdk/skypeappsdk) Skype for Business使用した場合は、Azure Communication Services の一部としてこれらの機能を置き換えとしてお勧めします。
 
 ## <a name="see-also"></a>関連項目
 

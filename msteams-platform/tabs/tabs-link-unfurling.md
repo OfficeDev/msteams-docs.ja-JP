@@ -5,12 +5,12 @@ description: リンクのリンクを解除し、ステージ ビューを開き
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 4444830d47345908445d62bdd276e8706a0c1a03
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: cc77667a8782f2f519d6dc3e6af74949a9dcbed2
+ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156747"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "60017304"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>タブのリンクの展開とステージ ビュー
 
@@ -104,10 +104,10 @@ ms.locfileid: "59156747"
 
 ### <a name="syntax"></a>構文
 
-ディープリンク構文を次に示します。  
- 
-https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":""[contentUrl]","websiteUrl":"[websiteUrl]","name":"[name]"}
+ディープリンク構文を次に示します。 
 
+https://teams.microsoft.com/l/stage/{appId}/0?context={\"contentUrl \" : \" "[contentUrl]" \" , \" websiteUrl : \" \" "[websiteUrl]" \" , 名前 : Contoso \" \" \" \" }
+ 
 ### <a name="examples"></a>例
 
 ユーザーが URL を入力すると、アダプティブ カードにリンク解除されます。

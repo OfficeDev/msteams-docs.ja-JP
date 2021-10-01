@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: d1fa68cc4ae69e8a35c0d812192bb5c15a7cf130
-ms.sourcegitcommit: 211f2eaa05494a11b8c2a050d7f1a9ca1c1c78a8
+ms.openlocfilehash: 99b41d9caaf2fb37d9721c67555fdbd3d8684fa6
+ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "59491682"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "60017325"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>リファレンス: マニフェスト スキーマのMicrosoft Teams
 
@@ -368,7 +368,7 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 |`short`|30 文字|✔|アプリの短い表示名。|
 |`full`|100 文字||完全なアプリ名が 30 文字を超える場合に使用されるアプリの完全な名前。|
 
-## <a name="description"></a>説明
+## <a name="description"></a>description
 
 **必須**—object
 
@@ -419,7 +419,7 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 
 ## <a name="accentcolor"></a>accentColor
 
-**省略** 可能 —HTML の 16 進カラー コード
+**必須**—HTML の 16 進カラー コード
 
 アウトライン アイコンの背景として使用する色。
 
@@ -435,7 +435,7 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 文字|✔|タブ https:// する際に使用する URL を指定します。|
 |`scopes`|列挙型の配列|1|✔|現在、構成可能なタブは、スコープ `team` とスコープ `groupchat` のみをサポートしています。 |
-|`canUpdateConfiguration`|boolean|||作成後に、タブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 既定値: **true 。**|
+|`canUpdateConfiguration`|ブール値|||作成後に、タブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 既定値: **true 。**|
 |`context` |列挙型の配列|6 ||タブが `contextItem` サポートされているスコープ [のセット](../../tabs/how-to/access-teams-context.md)です。 既定値: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||タブ プレビュー イメージへの相対ファイル パスを使用して、SharePoint。 サイズは 1024x768 です。 |
 |`supportedSharePointHosts`|列挙型の配列|1||タブを使用してタブを使用する方法をSharePoint。 オプションは `sharePointFullPage` 次のとおりです。 `sharePointWebPart` |
@@ -474,11 +474,11 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 |---|---|---|---|---|
 |`botId`|string|64 文字|✔|Bot Framework に登録された、ボット用の一意の Microsoft アプリ ID。 ID は、アプリ全体の ID と [同じにできます](#id)。|
 |`scopes`|列挙型の配列|3|✔|ボットがエクスペリエンスを提供するのは、`team` 内のチャネルのコンテキスでなのか、グループ チャット (`groupchat`) でなのか、あるいは個別のユーザーのみをエクスペリエンスの対象にする (`personal`) のかを指定します。 これらのオプションは非排他的です。|
-|`needsChannelSelector`|boolean|||ボットがユーザー ヒントを使用して特定のチャネルにボットを追加するかどうかを説明します。 既定値: **`false`**|
-|`isNotificationOnly`|boolean|||ボットが会話ボットではなく、一方向性の通知専用ボットなのかどうかを示します。 既定値: **`false`**|
-|`supportsFiles`|boolean|||パーソナル チャットでのファイルのアップロード/ダウンロード機能をボットでサポートするかどうかを示します。 既定値: **`false`**|
-|`supportsCalling`|boolean|||ボットがオーディオ通話をサポートする場所を示す値。 **重要**: このプロパティは現在実験的です。 実験的なプロパティは完全ではない可能性があります。また、完全に利用可能になる前に変更が加わる可能性があります。  このプロパティはテストと探索の目的でのみ提供され、実稼働アプリケーションでは使用できません。 既定値: **`false`**|
-|`supportsVideo`|boolean|||ボットがビデオ通話をサポートする場所を示す値。 **重要**: このプロパティは現在実験的です。 実験的なプロパティは完全ではない可能性があります。また、完全に利用可能になる前に変更が加わる可能性があります。  このプロパティはテストと探索の目的でのみ提供され、実稼働アプリケーションでは使用できません。 既定値: **`false`**|
+|`needsChannelSelector`|ブール値|||ボットがユーザー ヒントを使用して特定のチャネルにボットを追加するかどうかを説明します。 既定値: **`false`**|
+|`isNotificationOnly`|ブール値|||ボットが会話ボットではなく、一方向性の通知専用ボットなのかどうかを示します。 既定値: **`false`**|
+|`supportsFiles`|ブール値|||パーソナル チャットでのファイルのアップロード/ダウンロード機能をボットでサポートするかどうかを示します。 既定値: **`false`**|
+|`supportsCalling`|ブール値|||ボットがオーディオ通話をサポートする場所を示す値。 **重要**: このプロパティは現在実験的です。 実験的なプロパティは完全ではない可能性があります。また、完全に利用可能になる前に変更が加わる可能性があります。  このプロパティはテストと探索の目的でのみ提供され、実稼働アプリケーションでは使用できません。 既定値: **`false`**|
+|`supportsVideo`|ブール値|||ボットがビデオ通話をサポートする場所を示す値。 **重要**: このプロパティは現在実験的です。 実験的なプロパティは完全ではない可能性があります。また、完全に利用可能になる前に変更が加わる可能性があります。  このプロパティはテストと探索の目的でのみ提供され、実稼働アプリケーションでは使用できません。 既定値: **`false`**|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
@@ -494,7 +494,7 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |title|string|12 |✔|ボット コマンド名。|
-|説明|string|128 文字|✔|単純なテキストの説明、またはコマンド構文とその引数の例。|
+|description|string|128 文字|✔|単純なテキストの説明、またはコマンド構文とその引数の例。|
 
 ## <a name="connectors"></a>コネクタ
 
@@ -525,7 +525,7 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 |---|---|---|---|---|
 |`botId`|string|64|✔|ボット フレームワークに登録されているメッセージング拡張機能をバックするボットの一意の Microsoft アプリ ID。 ID は、アプリ全体の ID と同じにできます。|
 |`commands`|オブジェクトの配列|10|✔|メッセージング拡張機能がサポートするコマンドの配列。|
-|`canUpdateConfiguration`|boolean|||メッセージング拡張機能の構成をユーザーが更新できるかどうかを示す値。 既定値: **false**|
+|`canUpdateConfiguration`|ブール値|||メッセージング拡張機能の構成をユーザーが更新できるかどうかを示す値。 既定値: **false**|
 |`messageHandlers`|オブジェクトの配列|5||特定の条件が満たされた場合にアプリを呼び出すことができるハンドラーの一覧。|
 |`messageHandlers.type`|string|||メッセージ ハンドラーの種類。 `"link"` である必要があります。|
 |`messageHandlers.value.domains`|文字列の配列|||リンク メッセージ ハンドラーが登録できるドメインの配列。|
@@ -542,9 +542,9 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 |`title`|string|32 文字|✔|ユーザーフレンドリーなコマンド名。|
 |`type`|string|64 文字||コマンドの種類。 または `query` の 1 `action` つ。 既定: **クエリ** です。|
 |`description`|string|128 文字||このコマンドの目的を示すためにユーザーに表示される説明。|
-|`initialRun`|boolean|||ブール値は、コマンドがパラメーターを使用して最初に実行されるかどうかを示します。 既定値は **false** です。|
+|`initialRun`|ブール値|||ブール値は、コマンドがパラメーターを使用して最初に実行されるかどうかを示します。 既定値は **false** です。|
 |`context`|文字列の配列|3||メッセージ拡張機能の呼び出し先を定義します。 `compose`、 の任意の `commandBox` 組み合 `message` わせ。 既定値は `["compose","commandBox"]` です。|
-|`fetchTask`|boolean|||タスク モジュールを動的にフェッチする必要があるかどうかを示すブール値。 既定値は **false** です。|
+|`fetchTask`|ブール値|||タスク モジュールを動的にフェッチする必要があるかどうかを示すブール値。 既定値は **false** です。|
 |`taskInfo`|object|||メッセージング拡張機能コマンドを使用する場合に事前読み込みするタスク モジュールを指定します。|
 |`taskInfo.title`|string|64 文字||最初のダイアログ タイトル。|
 |`taskInfo.width`|string|||ダイアログの幅 - ピクセル単位の数値または既定のレイアウト ('large'、'medium'、または 'small' など)。|
