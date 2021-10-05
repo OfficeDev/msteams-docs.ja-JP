@@ -4,12 +4,12 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: チームの最新情報
-ms.openlocfilehash: a0970151a4d4a9849362cc71d30de3936c50c20b
-ms.sourcegitcommit: 5c0da4f6f24b8ef33da1d235988061546dd324a5
+ms.openlocfilehash: 13e749352662872d0b457085cc919b2357e9c348
+ms.sourcegitcommit: 93ed5629650b417a191c5d8867645a198fe45e4e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/05/2021
-ms.locfileid: "60119658"
+ms.locfileid: "60127288"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
@@ -30,9 +30,11 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 | **日付** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+|10/05/2021| 管理者がTeams表示を許可するまで、アプリを非表示にしてください。 | [管理者がTeamsするまでアプリを非表示にする](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) 
 |10/05/2021|モバイル向けアプリTeams計画する|[モバイル向けレスポンシブ タブTeams計画する](concepts/design/plan-responsive-tabs-for-teams-mobile.md)|
 |10/04/2021| アプリを管理Teamsするための新しい開発者ポータルがTeamsされました。 | [Teams の開発者ポータル](concepts/build-and-test/teams-developer-portal.md) |
 |09/21/2021|Teams、ボットと受信 Webhook のユーザーメンションで AAD オブジェクト ID と UPN をサポートしています。 |[AAD オブジェクト ID と UPN in user mention](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown), [Cards- Overview](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
+|09/08/2021|会議ステージは GA で利用できます。|[会議で使用するアプリを有効Teamsする](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
 |08/16/2021| アダプティブ カードの入力検証 (すべての機能の場合は v1.3) とユニバーサル アクション (ボット送信カードの場合は v1.4) のサポート。 |[入力検証](/adaptive-cards/authoring-cards/input-validation)、 [アダプティブ カードのユニバーサル アクション v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |08/09/2021|会議ステージは GA で利用できます。|[会議で使用するアプリを有効Teamsする](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
 |08/30/2021| カスタム 一緒にモードのシーン機能は、参加者を 1 つの仮想シーンに結合し、事前に決定されたシートにビデオ ストリームを設定します。 | [カスタム一緒にモードのシーン](~/apps-in-teams-meetings/teams-together-mode.md) |

@@ -5,16 +5,16 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: 99b41d9caaf2fb37d9721c67555fdbd3d8684fa6
-ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
+ms.openlocfilehash: ae77a84c52fb3f9934d1d499fd59f517758019d6
+ms.sourcegitcommit: 93ed5629650b417a191c5d8867645a198fe45e4e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "60017325"
+ms.lasthandoff: 10/05/2021
+ms.locfileid: "60127260"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>リファレンス: マニフェスト スキーマのMicrosoft Teams
 
-このTeamsマニフェストは、アプリが製品に統合する方法Microsoft Teamsします。 マニフェストは、 でホストされるスキーマに準拠している必要があります [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json) 。 以前のバージョン 1.0、1.1,...,、1.6 もサポートされています (URL で "v1.x" を使用)。
+このTeamsマニフェストは、アプリが製品に統合する方法Microsoft Teamsします。 マニフェストは、 でホストされるスキーマに準拠している必要があります [`https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json) 。 以前のバージョン 1.0、1.1,...,、1.11 もサポートされています (URL で "v1.x" を使用)。
 各バージョンで行われた変更の詳細については、「マニフェスト変更 [ログ」を参照してください](https://github.com/OfficeDev/microsoft-teams-app-schema/releases)。
 
 次のスキーマ サンプルは、すべての機能拡張オプションを示しています。
@@ -23,8 +23,8 @@ ms.locfileid: "60017325"
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.10",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.11",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
   "packageName": "com.example.myapp",
@@ -290,6 +290,8 @@ ms.locfileid: "60017325"
       }
     ]
   },
+  "defaultBlockUntilAdminAction": true,
+  "publisherDocsUrl": "https://website.com/app-info",
   "defaultInstallScope": "meetings",
   "defaultGroupCapability": {
     "meetings": "tab", 
@@ -521,7 +523,7 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 
 アイテムは、型のすべての要素を持つ配列 (最大 1 つの要素) です `object` 。 このブロックは、メッセージング拡張機能を提供するソリューションにのみ必要です。
 
-|名前| 種類 | 最大サイズ | 必須 | 説明|
+|名前| 型 | 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`botId`|string|64|✔|ボット フレームワークに登録されているメッセージング拡張機能をバックするボットの一意の Microsoft アプリ ID。 ID は、アプリ全体の ID と同じにできます。|
 |`commands`|オブジェクトの配列|10|✔|メッセージング拡張機能がサポートするコマンドの配列。|
@@ -628,7 +630,7 @@ Teams機能するために独自の url をSharePointするアプリには、有
 > [!NOTE]
 > `isFullScreen`タブとストア アプリSharePointでのみ動作します。
 
-## <a name="activities"></a>アクティビティ
+## <a name="activities"></a>activities
 
 **省略** 可能な —object
 
@@ -737,3 +739,17 @@ Teams機能するために独自の url をSharePointするアプリには、有
 * `developerUrl`: 開発者の Web サイトの HTTPS URL。
 * `privacyUrl`: 開発者のプライバシー ポリシーの HTTPS URL。
 * `termsOfUseUrl`: 開発者の使用条件の HTTPS URL。
+
+## <a name="defaultblockuntiladminaction"></a>defaultBlockUntilAdminAction
+
+**省略** 可能な —boolean
+ 
+プロパティ `defaultBlockUntilAdminAction` が true に **設定されている場合**、管理者が許可するまで、アプリは既定でユーザーから非表示になります。 true に **設定すると**、アプリは、すべてのテナントとエンド ユーザーに対して非表示になります。 テナント管理者は、管理者センターでアプリをTeamsし、アプリを許可またはブロックするアクションを実行できます。 既定値は **false** です。
+
+## <a name="publisherdocsurl"></a>publisherDocsUrl
+
+**省略** 可能 - 文字列
+
+**最大サイズ** - 128 文字
+
+プロパティはに依存します `defaultBlockUntilAdminAction` 。 プロパティが true に設定されている場合は、既定でブロックされているアプリを許可する前に、管理者がガイドラインを取得する情報ページに `defaultBlockUntilAdminAction` HTTPS URL `publisherDocsUrl` を提供します。
