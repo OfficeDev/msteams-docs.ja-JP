@@ -5,12 +5,12 @@ description: プラットフォーム開発の基本的な概念Teams説明し�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: c31df4411f30d8de4c082d8889aa68d5e6ecf654
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6756152ee90c741c7f475fc5153c4b27f9a3bf84
+ms.sourcegitcommit: 5c0da4f6f24b8ef33da1d235988061546dd324a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156828"
+ms.lasthandoff: 10/05/2021
+ms.locfileid: "60119651"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Microsoft Teams開発の基本
 
@@ -32,6 +32,9 @@ Microsoft Teamsの基本は、カスタム アプリを作成する必要があ�
 ## <a name="map-your-use-cases-to-teams-app-capabilities"></a>使用例をアプリの機能Teamsマップする
 
 [使用例をマップするには、](../concepts/design/map-use-cases.md) 一般的なシナリオとアプリの機能を選択する方法について説明します。 アプリを共有し、外部システム内のアイテムで共同作業を行う情報が提供されます。 ワークフローを開始し、ユーザーに通知を送信する方法も説明します。 開始する場所、ユーザーとのソーシャルを取得する方法、会話型ボット、複数の機能の組み合わせに関するその他のヒントを取得します。
+
+## <a name="plan-responsive-tabs-for-teams-mobile"></a>モバイル向けレスポンシブ タブTeams計画する
+[モバイルの応答性の高いタブTeams、](../concepts/design/plan-responsive-tabs-for-teams-mobile.md)モバイル向けアプリの計画に役立つ一般的なシナリオTeamsします。 ドキュメント ガイドでは、モバイル上のアプリを戦略化する方法について示します。 また、さまざまなサッジとさまざまな種類のアプリについてTeamsできます。
 
 ## <a name="integrate-device-capabilities"></a>デバイス機能の統合
 
