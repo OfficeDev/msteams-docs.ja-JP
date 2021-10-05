@@ -5,12 +5,12 @@ description: OAuth 認証をボットに追加する方法は、Microsoft Teams�
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 3612e194b0e05526bbe38dc66a2b75037a003eed
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 0fe330fe9eb6689998ff02df9403f00112379c66
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156161"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096648"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>認証をボットにTeamsする
 
@@ -207,7 +207,7 @@ Microsoft App Id とアプリ パスワード (クライアント シークレ�
 1. [cs-auth-sample のクローンを作成します][teams-auth-bot-cs]。
 1. 起動Visual Studio。
 1. ツール バーの [ファイル] **->を開く -> Project/ソリューション**] を選択し、ボット プロジェクトを開きます。
-1. [C#更新 **appsettings.js次のように** オンにします。
+1. [アプリ **C#.json を次のように** 更新します。
 
     - ボット `ConnectionName` チャネル登録に追加した ID プロバイダー接続の名前に設定します。 この例で使用した名前は *BotTeamsAuthADv1 です*。
     - ボット `MicrosoftAppId` チャネル **登録時に** 保存したボット アプリ ID に設定します。
@@ -382,13 +382,30 @@ and when for these, and just reference that from here, along with the set of ste
 1. **[チームに追加]** ボタンを選択します。
 1. 次のウィンドウで、ボットを使用するチームを選択します。
 1. [ボットの **セットアップ] ボタンを選択** します。
-1. 左側のパネルで 3 つのドット (&#x25cf;&#x25cf;&#x25cf;) を選択します。 次に **、[App Studio] アイコンを** 選択します。
-1. [マニフェスト エディター **] タブを** 選択します。アップロードしたボットのアイコンが表示されます。
-1. また、ボットとメッセージを交換するために使用できるチャット リストに、連絡先として一覧表示されているボットを確認できる必要があります。
+
+アプリ スタジオまたは開発者ポータルを使用してボットをテストできます。
+
+> [!NOTE]
+>  App Studio は間もなく奪われる予定です。 新しい開発者ポータルを使用して、Teamsアプリを構成、配布、[および管理します](https://dev.teams.microsoft.com/)。
+
+# <a name="app-studio"></a>[App Studio](#tab/AS)
+
+11. 左側のパネルで 3 つのドット (●●●) を選択します。 次に、[App Studio] アイコンを選択します。
+12. [マニフェスト エディター **] タブを** 選択します。アップロードしたボットのアイコンが表示されます。
+13. また、ボットとメッセージを交換するために使用できるチャット リストに、連絡先として一覧表示されているボットを確認できる必要があります。
+ 
+# <a name="developer-portal"></a>[開発者ポータル](#tab/DP)
+
+11. [開発者ポータル **[] に移動します](https://dev.teams.microsoft.com/)**。
+12. 左側の **パネルで** [アプリ] を選択します。 次に、[アプリ **のインポート] を選択します**。
+13. [アプリ **の機能] を選択し** 、[ボット] **を選択します**。 アップロードしたボットのアイコンを確認できます。
+14. また、ボットとメッセージを交換するために使用できるチャット リストに、連絡先として一覧表示されたボットを確認できます。
+
+---
 
 ### <a name="testing-the-bot-locally-in-teams"></a>ローカルでボットをテストTeams
 
-Microsoft Teams完全にクラウドベースの製品である場合、HTTPS エンドポイントを使用してアクセスするサービスはすべてクラウドから利用できる必要があります。 したがって、ボット (サンプル) が Teams で動作するには、コードを選択したクラウドに発行するか、トンネリング ツールを介してローカルで実行中のインスタンスに外部からアクセス可能にする必要があります。 コンピューターで  [ローカルで開](https://ngrok.com/download)くポートの外部アドレス指定可能な URL を作成する ngrok をお勧めします。
+Microsoft Teams完全にクラウドベースの製品である場合、HTTPS エンドポイントを使用してアクセスするサービスはすべてクラウドから利用できる必要があります。 したがって、ボット (サンプル) が Teams で動作するには、コードを選択したクラウドに発行するか、トンネリング ツールを介してローカルで実行中のインスタンスに外部からアクセス可能にする必要があります。 コンピューターで [ローカルで開](https://ngrok.com/download)くポートの外部アドレス指定可能な URL を作成する ngrok をお勧めします。
 アプリをローカルで実行する準備として ngrok をMicrosoft Teamsするには、次の手順を実行します。
 
 1. ターミナル ウィンドウで、インストールしたディレクトリに移動 `ngrok.exe` します。 環境変数のパスを *ポイントする* 設定をお勧めします。
@@ -416,7 +433,7 @@ Microsoft Teams完全にクラウドベースの製品である場合、HTTPS �
 
 ## <a name="additional-information"></a>ページの先頭へ
 
-### <a name="teamsappmanifestmanifestjson"></a>TeamsAppManifest/manifest.jsオン
+### <a name="teamsappmanifestmanifestjson"></a>TeamsAppManifest/manifest.json
 
 このマニフェストには、ボットに接続するためにMicrosoft Teams情報が含まれています。  
 

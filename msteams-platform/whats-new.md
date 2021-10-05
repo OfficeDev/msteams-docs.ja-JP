@@ -4,12 +4,12 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: チームの最新情報
-ms.openlocfilehash: 7bc3aebbe0acdbef410beb18041d1ac998216ebe
-ms.sourcegitcommit: e1e37cfbecba3a6b382f19379996cc423cd99dac
+ms.openlocfilehash: d456e4892cdbd93d9dde51f64972c836724c4f1b
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "59485769"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096543"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
@@ -28,8 +28,9 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 <summary><b>2021</b></summary>
 
-| **日付** | **メモ** | **変更されたトピック** |
+| **日付** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+|10/04/2021| アプリを管理Teamsするための新しい開発者ポータルがTeamsされました。 | [Teams の開発者ポータル](concepts/build-and-test/teams-developer-portal.md) |
 |09/21/2021|Teams、ボットと受信 Webhook のユーザーメンションで AAD オブジェクト ID と UPN をサポートしています。 |[AAD オブジェクト ID と UPN in user mention](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown), [Cards- Overview](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
 |08/16/2021| アダプティブ カードの入力検証 (すべての機能の場合は v1.3) とユニバーサル アクション (ボット送信カードの場合は v1.4) のサポート。 |[入力検証](/adaptive-cards/authoring-cards/input-validation)、 [アダプティブ カードのユニバーサル アクション v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |08/09/2021|会議ステージは GA で利用できます。|[会議で使用するアプリを有効Teamsする](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
@@ -72,7 +73,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
   
 <summary><b>2020</b></summary>
 
-| **日付** | **メモ** | **変更されたトピック** |
+| **日付** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
 |11/30/2020|ID プラットフォームとタブTeams Toolkit Visual Studio Code統合。|[タブ用のシングル サインオンTeams ToolkitとVisual Studio Code認証](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Teamsバージョン 1.8 に更新されたアプリ マニフェスト。|[リファレンス: マニフェスト スキーマのMicrosoft Teams](resources/schema/manifest-schema.md)|
@@ -106,7 +107,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
   
 <summary><b>2019</b></summary>
 
-| **日付** | **メモ** | **変更されたトピック** |
+| **日付** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
 | 12/26/2019 | ボットに送信されるペイロード内のパラメーターは暗号化されなくなったため、この値を使用してこれらのメッセージへのディープリンク `replyToId` を作成できます。 メッセージ ペイロードには、パラメーターに暗号化された値が含まれます `legacy.replyToId` 。  |
 | 11/05/2019 | JavaScript SDK を使用したシングル サインオンTeams使用します。 | [シングル サインオン](tabs/how-to/authentication/auth-aad-sso.md) |
@@ -136,7 +137,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 <summary><b>2018</b></summary>
 
-| **日付** | **メモ** | **変更されたトピック** |
+| **日付** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
 | 2018 年 11 月 12 日 | グループ チャット内のタブは、リリースされたバージョンのグループ チャットでTeams。 この作業の一環として、[タブ] セクションはわかりやすくするために再作業されています。| [構成可能なタブ](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | ノード JS と .NET/C# の開始は、Teams で App Studio を使用するように更新され、Azure での Node ベースの Teams アプリのホスティングに新しいセクションが追加されました。 | [C#/.NET](~/get-started/get-started-dotnet-app-studio.md)と App Studio を使用して Microsoft Teams プラットフォームで始める 、 Node JS と[App Studio](~/get-started/get-started-nodejs-app-studio.md)を使用した Microsoft Teams プラットフォームの使用を開始する[、Azure](~/get-started/get-started-nodejs-in-azure.md)でノード Teams アプリをホストする|
@@ -175,13 +176,12 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 開発者プレビューは、リリースされていないプラットフォーム機能に早期にアクセスできるTeamsプログラムです。  
 
-| **日付** | **メモ** | **変更されたトピック** |
+| **日付** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
 |06/23/2021| 会議の詳細 API とリアルタイムの会議Teamsイベント。 | [Teams 会議用のアプリを作成する](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
 |06/21/2021|ボットを使用した個人用アプリのアンインストール動作 | [ボットを使用して個人用アプリの動作更新プログラムをアンインストールする](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| チャットに対するリソース固有の同意。 |[リソース固有の同意](graph-api/rsc/resource-specific-consent.md)、[リソース固有](graph-api/rsc/test-resource-specific-consent.md)の同意のアクセス許可をテストするTeams|
 |05/25/2021| 更新された[Teams ToolkitとVisual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)[の](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview)Visual Studio。 | [アプリ開発Teams開始する](~/get-started/prerequisites.md) |
-|05/25/2021| アプリを管理Teamsするための新しい開発者ポータルがTeamsされました。 | [Teams の開発者ポータル](concepts/build-and-test/teams-developer-portal.md) |
 |05/24/2021|ボットは、リソース固有の同意 (RSC) を使用してすべてのチャネル メッセージを受信できます。|[RSC、ボット会話の](~/bots/how-to/conversations/channel-messages-with-rsc.md)概要、[チャネルと](~/bots/how-to/conversations/conversation-basics.md)グループ[](~/bots/how-to/conversations/channel-and-group-conversations.md)の会話、開発者プレビュー マニフェスト スキーマを使用して[すべてのメッセージを受信する](~/resources/schema/manifest-schema-dev-preview.md) |
 |05/21/2021|タブリンクの分岐とステージ ビュー|[タブリンクの分岐とステージ ビュー](tabs/tabs-link-unfurling.md) |
 
@@ -210,4 +210,4 @@ RSS フィードを構成することでTeamsプラットフォームの更新�
 1. [RSS 接続の名前 **を入力する] に名前を入力します**。
 1. [RSS **https://aka.ms/TeamsPlatformUpdates** フィード **のアドレス] に入力します**。
 1. [ダイジェスト頻度] ドロップダウン リストからフィード **の頻度を** 選択します。
-1. [**保存**] を選択します。
+1. **[保存]** を選択します。

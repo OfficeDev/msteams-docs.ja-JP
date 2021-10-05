@@ -5,12 +5,12 @@ description: アプリのメッセージング拡張機能検索コマンドをM
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 88153523db6bd3f4957d03a0603e3b4cbdd02266
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d87936832e3d302be295e14bbf952379a41aa694
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156643"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096600"
 ---
 # <a name="define-messaging-extension-search-commands"></a>メッセージング拡張機能の検索コマンドを定義する
 
@@ -38,9 +38,17 @@ ms.locfileid: "59156643"
 
 検索コマンドをアプリ マニフェストに追加するには、アプリ マニフェスト JSON のトップ レベルに新しいオブジェクト `composeExtension` を追加する必要があります。 検索コマンドは、App Studio の助けを借りて追加するか、手動で追加できます。
 
-### <a name="create-a-search-command-using-app-studio"></a>App Studio を使用して検索コマンドを作成する
+### <a name="create-a-search-command"></a>検索コマンドの作成 
 
-検索コマンドを作成する前提条件は、メッセージング拡張機能を既に作成している必要があります。 メッセージング拡張機能を作成する方法の詳細については、「Create [a messaging extension 」を参照してください](~/messaging-extensions/how-to/create-messaging-extension.md)。
+** App Studio** または Developer Portal を使用して検索コマンド **を作成できます**。
+
+> [!NOTE]
+>  App Studio は間もなく奪われる予定です。 新しい開発者ポータルを使用して、Teamsアプリを構成、配布、[および管理します](https://dev.teams.microsoft.com/)。
+
+# <a name="app-studio"></a>[App Studio](#tab/AS)
+
+> [!NOTE]
+> 検索コマンドを作成する前提条件は、メッセージング拡張機能を既に作成している必要があります。 メッセージング拡張機能を作成する方法の詳細については、「Create [a messaging extension 」を参照してください](~/messaging-extensions/how-to/create-messaging-extension.md)。
 
 **検索コマンドを作成するには**
 
@@ -70,15 +78,58 @@ ms.locfileid: "59156643"
 
 1. 検索パラメーターを追加し、[保存] を **選択します**。
 
+# <a name="developer-portal"></a>[開発者ポータル](#tab/DP)
+
+**開発者ポータルを使用して検索コマンドを作成するには**
+
+1. [開発者ポータル **[] に移動します](https://dev.teams.microsoft.com/)**。
+    
+   <img src="~/assets/images/tdp/tdp_home_1.png" alt="Screenshot of TDP" width="500"/>
+    
+1. [アプリ] に **移動します**。
+    
+    <img width="500px" alt="Screenshot of TDP Open" src="~/assets/images/tdp/screen2.png"/>
+    
+1. 開発者ポータルでアプリ パッケージを既に作成している **場合は**、一覧からアプリ パッケージを選択します。 アプリ パッケージを作成していない場合は、[既存のアプリのインポート **] を選択します**。
+
+    <img width="500px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
+
+1. [アプリの **機能] に移動します**。  
+
+    <img width="500px" alt="TDP messaging extension" src="~/assets/images/tdp/tdp-me.png"/>
+
+1. [アプリ **の機能] から [メッセージング拡張機能****] を選択します**。 メッセージング拡張機能を設定するポップアップ ウィンドウが表示されます。
+    
+   <img width="500px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-app-me.png"/>
+
+1. [ **メッセージ拡張機能 ID] の** ドロップダウン リストからメッセージ拡張ボットを選択し **、[** 保存] を **選択します**。
+
+    <img width="500px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
+
+1. [コマンド **の追加] を選択します**。 コマンドを追加するポップアップ ウィンドウが表示されます。
+
+    <img width="500px" alt="TDP messaging extension command" src="~/assets/images/tdp/tdp-me-add-command.png"/>
+
+1. [検索 **ベース] を選択して** コマンドを検索し、コマンド フィールドを入力します。
+
+    <img width="500px" alt="TDP messaging extension search command" src="~/assets/images/tdp/tdp-me-search-command.png"/>
+
+1. パラメーター フィールドを入力し、[保存] を **選択します**。
+
+    <img width="500px" alt="TDP messaging extension search parameter" src="~/assets/images/tdp/tdp-me-search-parameter.png"/>
+
+---
+
+
 ### <a name="create-a-search-command-manually"></a>手動で検索コマンドを作成する 
 
 メッセージング拡張機能検索コマンドをアプリ マニフェストに手動で追加するには、次のパラメーターをオブジェクトの配列 `composeExtension.commands` に追加する必要があります。
 
 | プロパティ名 | 用途 | 必須 | マニフェストの最小バージョン |
 |---|---|---|---|
-| `id` | このプロパティは、検索コマンドに割り当てる一意の ID です。 ユーザー要求には、この ID が含まれます。 | はい | 1.0 |
-| `title` | このプロパティはコマンド名です。 この値は、ユーザー インターフェイス (UI) に表示されます。 | はい | 1.0 |
-| `description` | このプロパティは、このコマンドの動作を示すヘルプ テキストです。 この値は UI に表示されます。 | はい | 1.0 |
+| `id` | このプロパティは、検索コマンドに割り当てる一意の ID です。 ユーザー要求には、この ID が含まれます。 | 必要 | 1.0 |
+| `title` | このプロパティはコマンド名です。 この値は、ユーザー インターフェイス (UI) に表示されます。 | 必要 | 1.0 |
+| `description` | このプロパティは、このコマンドの動作を示すヘルプ テキストです。 この値は UI に表示されます。 | 必要 | 1.0 |
 | `type` | このプロパティは、 である必要があります `query` 。 | いいえ | 1.4 |
 |`initialRun` | このプロパティを true に **設定すると**、ユーザーが UI でこのコマンドを選択するとすぐにこのコマンドを実行する必要があります。 | いいえ | 1.0 |
 | `context` | このプロパティは、検索アクションが使用できるコンテキストを定義する値のオプションの配列です。 使用可能な値: `message`、`compose`、`commandBox`。 既定値は `["compose", "commandBox"]` です。 | いいえ | 1.5 |
@@ -87,10 +138,10 @@ ms.locfileid: "59156643"
 
 | プロパティ名 | 用途 | 必須ですか? | マニフェストの最小バージョン |
 |---|---|---|---|
-| `parameters` | このプロパティは、コマンドのパラメーターの静的リストを定義します。 | なし | 1.0 |
-| `parameter.name` | このプロパティは、パラメーターの名前を表します。 これは、ユーザー要求でサービスに送信されます。 | はい | 1.0 |
-| `parameter.description` | このプロパティは、パラメーターの目的または指定する必要がある値の例を示します。 この値は UI に表示されます。 | はい | 1.0 |
-| `parameter.title` | このプロパティは、短いユーザーフレンドリーなパラメーターのタイトルまたはラベルです。 | はい | 1.0 |
+| `parameters` | このプロパティは、コマンドのパラメーターの静的リストを定義します。 | いいえ | 1.0 |
+| `parameter.name` | このプロパティは、パラメーターの名前を表します。 これは、ユーザー要求でサービスに送信されます。 | 必要 | 1.0 |
+| `parameter.description` | このプロパティは、パラメーターの目的または指定する必要がある値の例を示します。 この値は UI に表示されます。 | 必要 | 1.0 |
+| `parameter.title` | このプロパティは、短いユーザーフレンドリーなパラメーターのタイトルまたはラベルです。 | 必要 | 1.0 |
 | `parameter.inputType` | このプロパティは、必要な入力の種類に設定されます。 可能な値 `text` には `textarea` 、、 `number` 、 、 、 、 `date` `time` が含まれます `toggle` 。 既定値は に設定されています `text` 。 | いいえ | 1.4 |
 
 #### <a name="example"></a>例

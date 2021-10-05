@@ -5,12 +5,12 @@ description: メッセージング拡張機能アクション コマンドの概
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d9e2e482ed15c99613bbd786ab685a0b388de502
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 8049100e8b72d1e1b7145f8427c6f7e94b5e8af6
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156035"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096668"
 ---
 # <a name="define-messaging-extension-action-commands"></a>メッセージング拡張機能アクション コマンドの定義
 
@@ -66,6 +66,13 @@ ms.locfileid: "59156035"
 
 ### <a name="create-an-action-command-using-app-studio"></a>App Studio を使用してアクション コマンドを作成する
 
+** App Studio** または Developer Portal を使用してアクション コマンド **を作成できます**。
+
+> [!NOTE]
+>  App Studio は間もなく奪われる予定です。 新しい開発者ポータルを使用して、Teamsアプリを構成、配布、[および管理します](https://dev.teams.microsoft.com/)。
+
+# <a name="app-studio"></a>[App Studio](#tab/AS)
+
 > [!NOTE]
 > アクション コマンドを作成する前提条件は、メッセージング拡張機能を既に作成している必要があります。 メッセージング拡張機能を作成する方法の詳細については、「Create [a messaging extension 」を参照してください](~/messaging-extensions/how-to/create-messaging-extension.md)。
 
@@ -117,26 +124,76 @@ ms.locfileid: "59156035"
 1. **[保存]** を選択します。
 1. パラメーターを追加するには、[パラメーター] セクション **の [追加** ] ボタン **を選択** します。
 
+# <a name="developer-portal"></a>[開発者ポータル](#tab/DP)
+
+**開発者ポータルを使用してアクション コマンドを作成するには**
+
+1. [開発者ポータル **[] に移動します](https://dev.teams.microsoft.com/)**。
+    
+      ![TDP のスクリーンショット](~/assets/images/tdp/tdp_home_1.png)
+
+1. [アプリ] に **移動します**。
+    
+    <img width="500px" alt="Screenshot of TDP Open" src="~/assets/images/tdp/screen2.png"/>
+    
+1. 開発者ポータルでアプリ パッケージを **既に作成** している場合は、一覧からアプリ パッケージを選択します。 使用しない場合は、[既存 **のアプリをインポートする] を選択します**。
+
+    <img width="500px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
+
+1. [アプリの **機能] に移動します**。 
+
+    <img width="500px" alt="TDP messaging extension" src="~/assets/images/tdp/tdp-me.png"/>
+
+1. [アプリ **の機能] から [メッセージング拡張機能****] を選択します**。 メッセージング拡張機能を設定するポップアップ ウィンドウが表示されます。
+    
+   <img width="500px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-app-me.png"/>
+ 
+1. [ **メッセージング拡張機能 ID] の** ドロップダウン リストからメッセージ拡張機能ボットを選択し **、[** 保存] を **選択します**。
+
+    <img width="500px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
+
+1. [コマンド **の追加] を選択します**。 コマンドを追加するポップアップ ウィンドウが表示されます。
+
+    <img width="500px" alt="TDP messaging extension command" src="~/assets/images/tdp/tdp-me-add-command.png"/>
+
+1. アクション ベースとしてコマンドの種類を選択 **して** 、メッセージング拡張機能を構成します。 [動的 **パラメーター] を選択** して、動的アクション コマンドを作成します。
+
+    <img width="500px" alt="TDP messaging extension dynamic action command" src="~/assets/images/tdp/tdp-me-action-command-dynamic.png"/>
+
+1. 静的アクション **コマンドを作成するには、[** 静的パラメーター] を選択します。   
+
+    <img width="500px" alt="TDP messaging extension static action command" src="~/assets/images/tdp/tdp-me-action-command-static.png"/>
+
+1. コマンド フィールドを入力します。 
+
+    <img width="500px" alt="TDP messaging extension action command" src="~/assets/images/tdp/tdp-me-action-command.png"/>  
+
+1. パラメーター フィールドを入力し、[保存] を **選択します**。
+
+    <img width="500px" alt="TDP messaging extension action parameter" src="~/assets/images/tdp/tdp-me-action-parameter.png"/>
+ 
+---
+
 ### <a name="create-an-action-command-manually"></a>アクション コマンドを手動で作成する
 
 アクション ベースのメッセージング拡張機能コマンドをアプリ マニフェストに手動で追加するには、次のパラメーターをオブジェクトの `composeExtension.commands` 配列に追加する必要があります。
 
 | プロパティ名 | 用途 | 必須 | マニフェストの最小バージョン |
 |---|---|---|---|
-| `id` | このプロパティは、このコマンドに割り当てる一意の ID です。 ユーザー要求には、この ID が含まれます。 | はい | 1.0 |
-| `title` | このプロパティはコマンド名です。 この値は UI に表示されます。 | はい | 1.0 |
-| `type` | このプロパティは、 である必要があります `action` 。 | なし | 1.4 |
-| `fetchTask` | このプロパティは、タスク モジュールのアダプティブ カードまたは埋め込み Web ビュー、およびパラメーターの静的リストまたは Web ビューを読み込むときにに設定 `true` `false` されます `taskInfo` 。 | なし | 1.4 |
-| `context` | このプロパティは、メッセージング拡張機能の呼び出し先を定義する値の任意の配列です。 使用可能な値: `message`、`compose`、`commandBox`。 既定値は `["compose", "commandBox"]` です。 | なし | 1.5 |
+| `id` | このプロパティは、このコマンドに割り当てる一意の ID です。 ユーザー要求には、この ID が含まれます。 | 必要 | 1.0 |
+| `title` | このプロパティはコマンド名です。 この値は UI に表示されます。 | 必要 | 1.0 |
+| `type` | このプロパティは、 である必要があります `action` 。 | いいえ | 1.4 |
+| `fetchTask` | このプロパティは、タスク モジュールのアダプティブ カードまたは埋め込み Web ビュー、およびパラメーターの静的リストまたは Web ビューを読み込むときにに設定 `true` `false` されます `taskInfo` 。 | いいえ | 1.4 |
+| `context` | このプロパティは、メッセージング拡張機能の呼び出し先を定義する値の任意の配列です。 使用可能な値: `message`、`compose`、`commandBox`。 既定値は `["compose", "commandBox"]` です。 | いいえ | 1.5 |
 
 静的なパラメーターの一覧を使用している場合は、次のパラメーターも追加する必要があります。
 
 | プロパティ名 | 用途 | 必須ですか? | マニフェストの最小バージョン |
 |---|---|---|---|
 | `parameters` | このプロパティは、コマンドのパラメーターの静的な一覧を示します。 の場合にのみ `fetchTask` 使用します `false` 。 | いいえ | 1.0 |
-| `parameter.name` | このプロパティは、パラメーターの名前を表します。 これは、ユーザー要求でサービスに送信されます。 | はい | 1.0 |
-| `parameter.description` | このプロパティは、パラメーターの目的または指定する必要がある値の例を示します。 この値は UI に表示されます。 | はい | 1.0 |
-| `parameter.title` | このプロパティは、短いユーザーフレンドリーなパラメーターのタイトルまたはラベルです。 | はい | 1.0 |
+| `parameter.name` | このプロパティは、パラメーターの名前を表します。 これは、ユーザー要求でサービスに送信されます。 | 必要 | 1.0 |
+| `parameter.description` | このプロパティは、パラメーターの目的または指定する必要がある値の例を示します。 この値は UI に表示されます。 | 必要 | 1.0 |
+| `parameter.title` | このプロパティは、短いユーザーフレンドリーなパラメーターのタイトルまたはラベルです。 | 必要 | 1.0 |
 | `parameter.inputType` | このプロパティは、必要な入力の種類に設定されます。 指定できる値には `text` `textarea` 、、 `number` 、 、 、 `date` 、 `time` が含まれます `toggle` 。 既定値は に設定されます `text` 。 | いいえ | 1.4 |
 
 埋め込み Web ビューを使用している場合は、ボットを直接呼び出さずに、必要に応じてオブジェクトを追加して Web ビュー `taskInfo` をフェッチできます。 このオプションを選択した場合の動作は、静的なパラメーターの一覧を使用する動作と似ています。 ボットとの最初のやり取りが [タスク モジュール送信アクションに応答しているという場合](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)。 オブジェクトを使用している場合 `taskInfo` は、パラメーターをに設定 `fetchTask` する必要があります `false` 。
@@ -145,9 +202,9 @@ ms.locfileid: "59156035"
 |---|---|---|---|
 |`taskInfo`|メッセージング拡張機能コマンドを使用するときにプリロードするタスク モジュールを指定します。 | いいえ | 1.4 |
 |`taskInfo.title`|初期タスク モジュールのタイトル。 |いいえ | 1.4 |
-|`taskInfo.width`|タスク モジュールの幅 (ピクセル単位の数値または既定のレイアウトなど) `large` `medium` `small` |なし | 1.4 |
-|`taskInfo.height`|タスク モジュールの高さ (ピクセル単位の数値または既定のレイアウトなど) `large` `medium` `small`|なし | 1.4 |
-|`taskInfo.url`|初期 Web ビューの URL。|なし | 1.4 | 
+|`taskInfo.width`|タスク モジュールの幅 (ピクセル単位の数値または既定のレイアウトなど) `large` `medium` `small` |いいえ | 1.4 |
+|`taskInfo.height`|タスク モジュールの高さ (ピクセル単位の数値または既定のレイアウトなど) `large` `medium` `small`|いいえ | 1.4 |
+|`taskInfo.url`|初期 Web ビューの URL。|いいえ | 1.4 | 
 
 #### <a name="app-manifest-example"></a>アプリ マニフェストの例
 

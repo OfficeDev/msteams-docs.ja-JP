@@ -4,12 +4,12 @@ description: アプリでの認証Teamsおよびアプリで使用する方法�
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Teams 認証 OAuth SSO AAD
-ms.openlocfilehash: 9bcb5eb42cc22185684933caae210c5630414a4c
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: a49c209b3f421006b2a75f314fb0cbe4a591d86c
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475770"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096711"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>ユーザーを認証Microsoft Teams
 
@@ -41,7 +41,7 @@ OAuthPrompt の使用の詳細については、以下を参照してくださ�
 
 ## <a name="code-sample"></a>コード サンプル
 
-ボット認証 v3 SDK サンプルを提供します。
+Bot Framework v4 認証サンプル。
 
 | **サンプルの名前** | **説明** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|

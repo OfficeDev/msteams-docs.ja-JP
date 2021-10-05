@@ -5,12 +5,12 @@ ms.topic: conceptual
 keywords: teams ボットの開発
 ms.localizationpriority: medium
 ms.date: 05/20/2018
-ms.openlocfilehash: 939a4b2830d14b0b1a82f09d361e56d5651a1592
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: afa83478ee478d74dbdedb5cd805719fc8434070
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156113"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096550"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>ボットを他のアプリMicrosoft Teamsする
 
@@ -52,7 +52,7 @@ SDK 拡張機能は、ボット ビルダー SDK を含む依存関係をイン�
 > [!IMPORTANT]
 > 他の web プログラミング テクノロジTeamsアプリを開発し[、Bot Framework REST API](/bot-framework/rest-api/bot-framework-rest-overview)を直接呼び出できますが、すべてのトークン処理を自分で実行する必要があります。
 
-*Teams App Studio を* 使用すると、アプリ マニフェストを作成および構成し、ボット フレームワーク ボットを作成できます。 また、React 制御ライブラリと、対話型カードのビルダーも用意されています。
+*Teams App Studio を* 使用すると、アプリ マニフェストを作成および構成し、ボット フレームワーク ボットを作成できます。 また、React 制御ライブラリと、対話型カードのビルダーも用意されています。 
 
 ## <a name="outgoing-webhooks"></a>送信 Webhook
 

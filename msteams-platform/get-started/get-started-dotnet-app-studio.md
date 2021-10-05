@@ -6,12 +6,12 @@ ms.custom: scenarios:getting-started; languages:ASP.NET,C#
 ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 15b08078e15c8ed5ef23d6d9f78d2fc14da02440
-ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
+ms.openlocfilehash: 9e830b6681797fcac032c2345a56163e634c446c
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59360731"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096694"
 ---
 # <a name="build-your-first-teams-app-using-c"></a>C を使用してTeamsアプリをビルドする#
 
@@ -125,32 +125,35 @@ Visual Studio Azure を含むさまざまなプロバイダーへのアプリ展
 
 **アプリ パッケージを更新する**
 
+> [!NOTE]
+>  App Studio は間もなく奪われる予定です。 新しい開発者ポータルを使用して、Teamsアプリを構成、配布、[および管理します](https://dev.teams.microsoft.com/)。
+
 # <a name="app-studio"></a>[App Studio](#tab/AS)
 
 [!include [Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
 
 # <a name="developer-portal"></a>[開発者ポータル](#tab/DP)
 
-**開発者ポータル (プレビュー) をインストールするには、Teams**
+**開発者ポータル (プレビュー) でアプリ パッケージを構成するには、Teams**
 
 
-1. 左側の **バーの** 下部にある [アプリ] アイコンを選択し、[開発者ポータル] **を検索します**。
+1. 1.開発者ポータル **[に移動します](https://dev.teams.microsoft.com/)**。
 
-    <img width="430px" alt="Screenshot of TDP" src="~/assets/images/Screen1.png"/>
+     <img width="600px" alt="Screenshot of TDP" src="~/assets/images/tdp/tdp_home_1.png"/>
 
-1. [開発者 **ポータル] を選択し** 、[開く] **を選択します**。
+1. [アプリ] に **移動します**。
 
-    <img width="430px" alt="Screenshot of TDP Open" src="~/assets/images/screen2.png"/>
+    <img width="600px" alt="Open Apps" src="~/assets/images/tdp/screen2.png"/>
 
-1. [アプリ] タブを選択し、[ **既存のアプリのインポート] を選択します**。
+1. [既存 **のアプリをインポートする] を選択します**。
 
-    <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/screen3.png"/>
+    <img width="600px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
 
 1. [Hello **World] を選択し** 、[インポート] **を選択します**。 **Hello World アプリ** は開発者ポータルにインポートされます。 
 
     開発者ポータルを使用してアプリTeamsできます。 マニフェストは [配布] の下に表示されます。 マニフェストを使用して、アプリの機能、必要なリソース、その他の重要な属性を構成できます。 開発者ポータルを使用してアプリを構成する方法の詳細については、「開発者ポータル」[を参照Teamsしてください](../concepts/build-and-test/teams-developer-portal.md)。
 
-    <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
+    <img width="600px" alt="Screenshot of configure tdp" src="~/assets/images/tdp/Screen4.png"/>
 ---
 
 <a name="updatecredentials"></a>
@@ -177,7 +180,7 @@ Visual Studio Azure を含むさまざまなプロバイダーへのアプリ展
 
 1. サンプル アプリをインストールしたチームのチャネルに移動し **、[+]** ボタンを選択して新しいタブを追加します。
 1. [ **タブの追加] リスト** から **[Hello World] を選択** します。 構成ダイアログ ボックスが表示され、このチャネルに表示するタブを選択できます。 
-1. [**保存**] を選択します。 タブ `Hello World` はタブと一緒に読み込まれます。
+1. **[保存]** を選択します。 タブ `Hello World` はタブと一緒に読み込まれます。
 
     <img width="530px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png" />
 

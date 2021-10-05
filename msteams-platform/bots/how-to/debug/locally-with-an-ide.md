@@ -5,12 +5,12 @@ description: IDE を使用してボットをローカルでテストおよびデ
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: a143830ad32b42e9613011b3f08cfb9afd838f26
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: c07d1a9eb8a28b328a1a60ba299f05d39b460fbe
+ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156448"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "60096557"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>ボットをローカルでテストおよびデバッグする
 
@@ -20,8 +20,11 @@ ms.locfileid: "59156448"
 
 ボットをテストする最も包括的な方法は、アプリ パッケージを作成し、アプリ パッケージをアプリ パッケージにアップロードTeams。 これは、すべてのスコープでボットで使用できる完全な機能をテストする唯一の方法です。
 
+> [!NOTE]
+>  App Studio は間もなく奪われる予定です。 新しい開発者ポータルを使用して、Teamsアプリを構成、配布、[および管理します](https://dev.teams.microsoft.com/)。
+
 アプリをアップロードするには、次の 2 つの方法があります。
-* [App Studio を使用します](~/concepts/build-and-test/app-studio-overview.md)。
+* 開発者ポータル [または](https://dev.teams.microsoft.com/) [App Studio を使用します](~/concepts/build-and-test/app-studio-overview.md)。
 * [アプリ パッケージを手動で作成](~/concepts/build-and-test/apps-package.md) し、アプリ [をアップロードします](~/concepts/deploy-and-publish/apps-upload.md)。
 
 > [!NOTE]
