@@ -44,6 +44,8 @@
       href: concepts/design/understand-use-cases.md
     - name: ユース ケースを Teams アプリの機能にマッピング
       href: concepts/design/map-use-cases.md
+    - name: Teams モバイルの応答タブを計画する
+      href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
     - name: デバイス機能
       items:
         - name: 概要
