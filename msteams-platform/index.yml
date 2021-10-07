@@ -4,7 +4,7 @@ summary: カスタム アプリの作成に役立つドキュメント、サン�
 brand: teams
 metadata:
   title: Microsoft Teamsプラットフォーム開発者向けドキュメント
-  description: Microsoft Teams 開発者プラットフォームでは、開発者が簡単に独自のアプリとサービスを統合して、生産性を向上させ、迅速に意思決定を行い、(コンテキストの切り替えを減らして) フォーカスを示し、既存のコンテンツとワークフロー関連のコラボレーションを作成できます。 .
+  description: Microsoft Teams 開発者向けプラットフォームを使用すると、開発者は独自のアプリとサービスを簡単に統合して生産性を向上させ、意思決定を迅速に行い、コンテキスト切り替えを減らし、既存のコンテンツやワークフローに関するコラボレーションを作成できます。
   ms.service: msteams
   ms.topic: hub-page
   ms.collection: collection
@@ -13,6 +13,9 @@ metadata:
   ms.date: 05/29/2020
 highlightedContent:
   items:
+    - title: 新機能
+      itemType: whats-new
+      url: /microsoftteams/platform/whats-new
     - title: "新しい開発Teams? \U0001F680ここから始める!"
       itemType: get-started
       url: /microsoftteams/platform/overview
@@ -34,43 +37,9 @@ highlightedContent:
     - title: チュートリアルとコード サンプル
       itemType: sample
       url: /microsoftteams/platform/get-started/code-samples
-    - title: 新機能
-      itemType: whats-new
-      url: /microsoftteams/platform/whats-new
 conceptualContent:
   title: ガイドとリソース
   items:
-    - title: 対象ユーザー
-      links:
-        - url: 'https://developer.microsoft.com/microsoft-teams'
-          itemType: concept
-          text: 開発者
-        - url: /microsoftteams/microsoft-teams
-          itemType: concept
-          text: IT 担当者
-        - url: 'https://support.microsoft.com/en-us/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-US&rs=en-US&ad=US#PickTab=Basics'
-          itemType: concept
-          text: エンド ユーザー
-    - title: 参照
-      links:
-        - url: /microsoftteams/platform/concepts/capabilities-overview
-          itemType: overview
-          text: Teams アプリの機能
-        - url: /microsoftteams/platform/samples/teams-low-code-solutions
-          itemType: how-to-guide
-          text: Microsoft Power Platform で低Teamsアプリ、ボット、およびフローを構築する
-        - url: 'https://dev.teams.microsoft.com/home'
-          itemType: reference
-          text: Teams の開発者ポータル
-        - url: /microsoftteams/platform/resources/schema/manifest-schema
-          itemType: reference
-          text: アプリのマニフェスト スキーマTeamsする
-        - url: 'https://adoption.microsoft.com/extensibility-look-book/scenarios/'
-          itemType: reference
-          text: アプリのシナリオをTeamsする
-        - url: 'https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources'
-          itemType: reference
-          text: アプリのシナリオのTeams方法
     - title: 詳細
       links:
         - url: /learn/modules/intro-microsoft-teams-apps
@@ -91,11 +60,48 @@ conceptualContent:
         - url: /learn/modules/msteams-webhooks-connectors/
           itemType: learn
           text: Connect Web サービスをチャネルとチームに提供する Webhook および Office 365 コネクタ
+    - title: 機能
+      links:
+        - url: /microsoftteams/platform/tabs/what-are-tabs
+          itemType: overview
+          text: タブ
+        - url: /microsoftteams/platform/bots/what-are-bots
+          itemType: overview
+          text: ボット
+        - url: /microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
+          itemType: overview
+          text: メッセージング拡張機能
+        - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
+          itemType: overview
+          text: 会議のTeamsアプリ
+        - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
+          itemType: concept
+          text: カードとタスク モジュール
+        - url: /microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors
+          itemType: overview
+          text: Webhook とコネクタ
+    - title: 参照
+      links:
+        - url: /microsoftteams/platform/concepts/authentication/authentication
+          itemType: concept
+          text: ユーザー認証と SSO
+        - url: /microsoftteams/platform/samples/teams-low-code-solutions
+          itemType: how-to-guide
+          text: Microsoft Power Platform で低Teamsアプリ、ボット、およびフローを構築する
+        - url: 'https://dev.teams.microsoft.com/home'
+          itemType: reference
+          text: Teams の開発者ポータル
+        - url: /microsoftteams/platform/resources/schema/manifest-schema
+          itemType: reference
+          text: アプリのマニフェスト スキーマTeamsする
+        - url: 'https://adoption.microsoft.com/extensibility-look-book/scenarios/'
+          itemType: reference
+          text: アプリのシナリオをTeamsする
+        - url: 'https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources'
+          itemType: reference
+          text: アプリのシナリオのTeams方法
     - title: 統合
       links:
-        - url: /microsoftteams/platform/samples/integrating-web-apps
-          itemType: concept
-          text: Web アプリを統合する
         - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
           itemType: how-to-guide
           text: チャットボットPower Virtual Agents統合する
@@ -114,7 +120,7 @@ conceptualContent:
         - url: /microsoftteams/platform/samples/shifts-wfm-connectors
           itemType: reference
           text: 運用対応のシフト コネクタを統合する
-    - title: 接続
+    - title: Community
       links:
         - url: 'https://developer.microsoft.com/microsoft-teams/blogs/'
           itemType: overview
@@ -125,14 +131,23 @@ conceptualContent:
         - url: 'https://docs.microsoft.com/en-us/teamblog/'
           itemType: whats-new
           text: お知らせ
-    - title: ヘルプ
-      links:
         - url: /microsoftteams/platform/feedback
           itemType: overview
           text: Microsoft Teams開発者Community応答
         - url: /microsoftteams/platform/resources/teams-contributor-reference
           itemType: overview
           text: ドキュメントにMicrosoft Teamsする
+    - title: 対象ユーザー
+      links:
+        - url: 'https://developer.microsoft.com/microsoft-teams'
+          itemType: concept
+          text: 開発者
+        - url: /microsoftteams/microsoft-teams
+          itemType: concept
+          text: IT 担当者
+        - url: 'https://support.microsoft.com/en-us/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-US&rs=en-US&ad=US#PickTab=Basics'
+          itemType: concept
+          text: エンド ユーザー
 tools:
   title: SDK とツール
   items:
