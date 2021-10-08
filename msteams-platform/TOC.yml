@@ -1,14 +1,14 @@
 - name: Microsoft Teams のテクニカル ドキュメンテーション
   href: /microsoftteams/platform
 - name: 概要
-  expanded: true
+  expanded: false
   items:
     - name: Microsoft Teams のアプリを作成する
       href: overview.md
     - name: 新機能
       href: whats-new.md
 - name: 作業の開始
-  expanded: true
+  expanded: false
   items:
     - name: 概要
       href: get-started/code-samples.md

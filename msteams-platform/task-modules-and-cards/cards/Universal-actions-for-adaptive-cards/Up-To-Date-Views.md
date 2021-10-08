@@ -4,12 +4,12 @@ description: ユニバーサル ボットを使用した最新のビューのサ
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: b58f214d707f05664e35ddfebb5a265e806a7e70
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 96f87f8795fdd2fed2276b2d67e58d1c394b05f6
+ms.sourcegitcommit: d0f1333d5dc5aede963dc59cfb1c2eca70aaf521
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156600"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "60238238"
 ---
 # <a name="up-to-date-cards"></a>最新のカード
 
@@ -22,7 +22,7 @@ ms.locfileid: "59156600"
 
 * カードの状態を常に更新するには、Teams編集メカニズムを使用できます。 たとえば、承認ごとにボットは、すべてのユーザーに対してメッセージの編集をトリガーできます。 このボット メッセージの編集は、更新されたユーザー固有のカードでボットが応答できる、すべての自動更新ユーザーに対する呼び出し `adaptiveCard/action` 要求をトリガーします。
 
-詳細については、「ボット メッセージの [編集方法」を参照してください](/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards)。
+詳細については、「ボット メッセージの [編集方法」を参照してください](/microsoftteams/platform/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards)。
 
 ## <a name="approval-base-card"></a>承認ベース カード
 
