@@ -4,12 +4,12 @@ description: Teams のアダプティブ カードをデザインして、Micros
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 0a8964de024b01237632db1214ce24fdd5b6bd29
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: bf0119f8cab7eeaf15745b27b6117063b108f8f8
+ms.sourcegitcommit: c883f9675f3d392e3d77329c97b8e2c4cb26b695
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156885"
+ms.lasthandoff: 10/09/2021
+ms.locfileid: "60249804"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Microsoft Teams のアプリのアダプティブ カードの設計
 
@@ -119,7 +119,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="アダプティブ カードの要求チケット カードの例を示します。" border="false":::
 
-### <a name="image-set"></a>イメージ
+### <a name="imageset"></a>ImageSet
 
 複数の画像サムネイルを送信するために使用します。
 
@@ -131,7 +131,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="アダプティブ カードの画像セット カードの例を示します。" border="false":::
 
-### <a name="action-set"></a>アクション セット
+### <a name="actionset"></a>ActionSet
 
 ユーザーにボタンを選択してもらい、同じカードから追加のユーザー入力を収集する場合に使用します。
 
@@ -143,7 +143,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="アダプティブ カードのアクション セット カードの例を示します。" border="false":::
 
-### <a name="choice-set"></a>選択肢セット
+### <a name="choiceset"></a>ChoiceSet
 
 ユーザーから複数の入力を収集するために使用します。
 
@@ -181,9 +181,477 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 ## <a name="best-practices"></a>ベスト プラクティス
 
-これらの推奨事項を使用して、高品質のアプリ エクスペリエンスを作成します。
+狭い画面用に設計されたカードは、広い画面でも適切に拡大縮小します（逆は当てはまりません）。 また、ユーザーがデスクトップ上でのみカードを表示しない場合も想定する必要があります。
 
-### <a name="primary-and-secondary-actions"></a>プライマリとセカンダリ
+### <a name="column-layouts"></a>列レイアウト
+
+[`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) を使用して、カードのコンテンツをテーブルまたはグリッドにフォーマットします。 列の幅の書式設定には、いくつかのオプションがあります。 これらのガイドラインは、各ガイドラインをいつ使用するのか理解するのに役立ちます。
+
+* `"width": "auto"`: `ColumnSet` の各列のサイズを変更して、その列に含めるアプリのコンテンツに合わせます。
+   * **Do**: 幅が異なるコンテンツがあり、特定の列に優先順位を付ける必要がない場合に使用します。
+   * **Do**: 既定ではテキストは折り返されないため、`TextBlock` ごとに `"wrap": true`を設定します。
+   * **Don't**: すべての列コンテナに `"width": "auto"` を設定します。 たとえば、入力とボタンが並んでいる場合、一部の画面でボタンが途切れる可能性があります。 代わりに、常に完全に表示する必要があるボタンやその他のコンテンツを含む列に `auto` を設定します。
+* `"width": "stretch"`: 使用可能な `ColumnSet` 幅に基づいて列のサイズを変更します。 複数の列が `"stretch"` の値を使用する場合、それらは使用可能な幅を等しく共有します。
+   * **Do**: 他のすべての列の幅が静的な場合は、1 つの列で使用します。 たとえば、1 つの列にすべて 50 ピクセル幅のサムネイル画像があるとします。
+* `"width": "<number>"`: 使用可能な `ColumnSet` 幅の比率を使用して列のサイズを変更します。 たとえば、3 つの列を `"width": "1"`、`"width": "4"`、および `"width": "5"` で設定した場合、列は使用可能な幅の 10、40、および 50 パーセントを占めます。
+* `"width": "<number>px"`: 特定のピクセル幅に列のサイズを設定します。 この方法は、テーブルを作成するときに役立ちます。
+   * **Do**: 表示しているものの幅を変更する必要がない場合に使用します (たとえば、数値やパーセンテージ)。
+   * **Don't**: 誤ってカードが表示できる幅を超えています。 使用可能な画面幅はデバイスによって異なることに注意してください。 また、Teams mobile では、Teams デスクトップのような水平スクロールはサポートしていません。
+
+#### <a name="example-knowing-when-to-stretch-columns"></a>例: 列を拡大するタイミングを知る
+
+# <a name="design"></a>[デザイン](#tab/design)
+
+**Do**: この画面では、カードの下部に 2 つの列があります。 入力コンポーネントの幅は `stretch` に設定され、**[選択]** ボタンの幅は `auto` に設定されています。 これにより、ボタンが完全に表示されたままになります。
+
+:::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="画像は、アダプティブ カードで列の幅を設定する方法を示しています。":::
+
+**Don't**: この画面では、両方の列で `width` が `auto` に設定されています。 これにより、右側の **[選択]** ボタンが入力と比較してわずかに切り取られます。
+
+:::image type="content" source="~/assets/images/adaptive-cards/width-auto-dont.png" alt-text="画像は、アダプティブ カードで列幅を設定しない方法を示しています。":::
+
+# <a name="code"></a>[コード](#tab/code)
+
+従うべき設計例を実装するためのコードは次のとおりです。
+
+```json
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.2",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "I wasn't able to identify the type of expense. Select from the list:",
+      "wrap": true,
+      "id": "typePrompt",
+      "spacing": "Medium",
+      "size": "Medium"
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "type": "Action.Submit",
+          "title": "Phone Bill",
+          "data": {
+            "msteams": {
+              "type": "messageBack",
+              "displayText": "Phone Bill",
+              "action": "Phone Bill"
+            },
+            "action": "Phone Bill"
+          }
+        },
+        {
+          "type": "Action.Submit",
+          "title": "Taxi and Other Transportation",
+          "data": {
+            "msteams": {
+              "type": "messageBack",
+              "displayText": "Taxi and Other Transportation",
+              "action": "Taxi and Other Transportation"
+            },
+            "action": "Taxi and Other Transportation"
+          }
+        },
+        {
+          "type": "Action.Submit",
+          "title": "Entertainment_misc",
+          "data": {
+            "msteams": {
+              "type": "messageBack",
+              "displayText": "Entertainment_misc",
+              "action": "Entertainment_misc"
+            },
+            "action": "Entertainment_misc"
+          }
+        },
+        {
+          "type": "Action.Submit",
+          "title": "Car Rental",
+          "data": {
+            "msteams": {
+              "type": "messageBack",
+              "displayText": "Car Rental",
+              "action": "Car Rental"
+            },
+            "action": "Car Rental"
+          }
+        },
+        {
+          "type": "Action.Submit",
+          "title": "Airfare",
+          "data": {
+            "msteams": {
+              "type": "messageBack",
+              "displayText": "Airfare",
+              "action": "Airfare"
+            },
+            "action": "Airfare"
+          }
+        }
+      ],
+      "spacing": "Medium"
+    },
+    {
+      "type": "TextBlock",
+      "text": "     ",
+      "wrap": true
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "Input.ChoiceSet",
+              "choices": [
+                {
+                  "title": "Meals",
+                  "value": "Meals"
+                },
+                {
+                  "title": "Parking/Tolls",
+                  "value": "Parking/Tolls"
+                },
+                {
+                  "title": "Accomodation",
+                  "value": "Accomodation"
+                },
+                {
+                  "title": "Fuel-Gas/Petrol/Diesel",
+                  "value": "Fuel-Gas/Petrol/Diesel"
+                },
+                {
+                  "title": "Hotel",
+                  "value": "Hotel"
+                },
+                {
+                  "title": "Meals - Employees Only",
+                  "value": "Meals - Employees Only"
+                },
+                {
+                  "title": "Accomodations",
+                  "value": "Accomodations"
+                },
+                {
+                  "title": "Misc.Expenses",
+                  "value": "Misc.Expenses"
+                },
+                {
+                  "title": "Please Categorize",
+                  "value": "Please Categorize"
+                }
+              ],
+              "placeholder": "All",
+              "id": "expenseTypes",
+              "value": "Meals - Employees Only"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "ActionSet",
+              "actions": [
+                {
+                  "type": "Action.Submit",
+                  "title": "Select",
+                  "data": {
+                    "msteams": {
+                      "type": "messageBack",
+                      "displayText": "Select",
+                      "action": "applyType"
+                    },
+                    "action": "applyType"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "spacing": "ExtraLarge"
+    }
+  ]
+}
+```
+
+---
+
+#### <a name="example-using-fewer-columns"></a>例: 使用する列の数を減らす
+
+**Do**: レイアウトは、列数が少ないモバイルでより適切に表示される傾向があります。
+
+:::image type="content" source="~/assets/images/adaptive-cards/column-amount-do.png" alt-text="画像は、アダプティブ カードの適切な列数を示しています。":::
+
+**Don't**: 使用する列が多すぎると、モバイルでカードのコンテンツが乱雑になる可能性があります。
+
+:::image type="content" source="~/assets/images/adaptive-cards/column-amount-dont.png" alt-text="画像は、列が多すぎるとアダプティブ カードのレイアウトに悪影響を与える可能性があることを示しています。":::
+
+#### <a name="example-fixed-width-has-its-place"></a>例: 固定幅を使用した方が良い場合もあります。
+
+# <a name="design"></a>[デザイン](#tab/design)
+
+表示しているサイズを変更する必要がない場合は、列を特定のピクセル幅に設定します。 この例では、50 ピクセルのサイズの左側の列を示していますが、サムネイルの横の説明ではカードの長さを伸ばしています
+
+:::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="画像は、アダプティブ カードで列幅を設定する方法を示しています。":::
+
+# <a name="code"></a>[コード](#tab/code)
+
+設計例を実装するためのコードは次のとおりです。
+
+```json
+{
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Pick up where you left off?",
+      "weight": "bolder"
+    },
+    {
+      "type": "ColumnSet",
+      "spacing": "medium",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "50px",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://unsplash.it/80?image=1083",
+              "size": "medium"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Silver Star Mountain Range"
+            },
+            {
+              "type": "TextBlock",
+              "text": "Maps",
+              "isSubtle": true,
+              "spacing": "none"
+            }
+          ]
+        }
+      ],
+      "selectAction": {
+        "type": "Action.OpenUrl",
+        "url": "https://www.msn.com"
+      }
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "50px",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://unsplash.it/80?image=1082",
+              "size": "medium"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "style": "emphasis",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Kitchen Remodel for Homes"
+            },
+            {
+              "type": "TextBlock",
+              "text": "With EMPHASIS",
+              "isSubtle": true,
+              "spacing": "none"
+            }
+          ]
+        }
+      ],
+      "selectAction": {
+        "type": "Action.OpenUrl",
+        "url": "https://www.AdaptiveCards.io"
+      }
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "50px",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://unsplash.it/80?image=1080",
+              "size": "medium"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "The Witcher: A Series"
+            },
+            {
+              "type": "TextBlock",
+              "text": "Netflix",
+              "isSubtle": true,
+              "spacing": "none"
+            }
+          ]
+        }
+      ],
+      "selectAction": {
+        "type": "Action.OpenUrl",
+        "url": "https://www.outlook.com"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.OpenUrl",
+      "title": "Resume all",
+      "url": "ms-cortana:resume-all"
+    },
+    {
+      "type": "Action.OpenUrl",
+      "title": "More activities",
+      "url": "ms-cortana:more-activities"
+    }
+  ]
+}
+```
+
+---
+
+### <a name="text"></a>テキスト
+
+[`TextBlock`](https://adaptivecards.io/explorer/TextBlock.html)、[`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html)、または [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) のいずれを使用している場合でも、`wrap` プロパティを `true` に設定して、モバイルでカードのテキストが切り捨てられないようにします。
+
+#### <a name="example-making-sure-text-doesnt-truncate"></a>例: テキストが切り捨てられないことを確認する
+
+# <a name="design"></a>[デザイン](#tab/design)
+
+**Do**: この画面では、カードの `wrap` プロパティが `true` に設定されています。 これにより、テキストを任意の画面サイズに合わせることができます。
+
+:::image type="content" source="~/assets/images/adaptive-cards/text-wrap-true.png" alt-text="画像は、アダプティブ カードでテキストを折り返す方法を示しています。":::
+
+**Don't**: この画面では、カードは `wrap` プロパティを使用していないため、モバイル画面ではテキストが途切れます。
+
+:::image type="content" source="~/assets/images/adaptive-cards/text-wrap-false.png" alt-text="画像は、アダプティブ カードでテキストを折り返さないとどうなるかを示しています。":::
+
+# <a name="code"></a>[コード](#tab/code)
+
+従うべき設計例を実装するためのコードは次のとおりです。
+
+```json
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "What cuisine do you want?"
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "myColor",
+      "style": "compact",
+      "isMultiSelect": false,
+      "value": "1",
+      "choices": [
+        {
+          "title": "Chineese",
+          "value": "1"
+        },
+        {
+          "title": "Indian",
+          "value": "2"
+        },
+        {
+          "title": "Italian",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "Select the dishes that you like?"
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "myColor2",
+      "style": "expanded",
+      "wrap" : true,
+      "isMultiSelect": false,
+      "value": "1",
+      "choices": [
+        {
+          "title": "Cauliflower with potatoes sautéed with garam masala",
+          "wrap" : true,
+          "value": "1"
+        },
+        {
+          "title": "Patties of potato mixed with some vegetables fried",
+          "wrap" : true,
+          "value": "2"
+        },
+        {
+          "title": "Green capsicum with potatoes sautéed with cumin seeds",
+          "wrap" : true,
+          "value": "3"
+        }
+      ]
+    }
+  ]
+}
+```
+
+---
+
+### <a name="containers"></a>Containers
+
+`Container` を使用すると、関連する要素のセットをグループ化できます。
+
+* **Do**: `style` プロパティを使用してコンテナを強調します。
+* **Do**: `selectAction` プロパティを使用して、アクションをコンテナ内の他の要素に関連付けます。
+* **Do**: `Action.ToggleVisibility` プロパティを使用して、要素のグループを折りたたみ可能にします。
+* **Don't**: 前述以外の理由でコンテナを使用しないでください。
+
+### <a name="images"></a>画像
+
+カードに画像を含めるときは、これらのガイドラインに従ってください。
+
+* **Do**: ピクセル化を回避するために高 DPI 画面の画像を設計します。 100 x100 ピクセルの画像を 50 x 50 ピクセルで表示する方が、その逆よりも良い方法です。
+* **Do**: 画像の正確なサイズを制御する必要がある場合は、`width` プロパティと `height` プロパティを使用します。
+* **Don't**: 画像にパディングを含めないでください。 これは通常、望ましくない間隔とレイアウトの問題を引き起こします。
+* 背景色について:
+   * **Do**: 透明な背景を使用して、画像が Teams のテーマに適応するようにします。 
+   * **Don't**: 特定の色をユーザーに表示する必要がない限り、固定の背景色を含めないでください。
+   * **Don't**: 読みやすさを損なう背景色を `TextBlock` に追加しないでください。 たとえば、背景が暗い場合は明るいテキスト カラーを使用します。その逆も同様です。
+
+### <a name="actions"></a>Actions
 
 :::row:::
    :::column span="":::
