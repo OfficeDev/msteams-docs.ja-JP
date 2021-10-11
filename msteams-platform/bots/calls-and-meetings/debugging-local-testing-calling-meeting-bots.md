@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: ローカル開発 ngrok トンネル
 ms.date: 11/18/2018
-ms.openlocfilehash: f09457e920a08b1f56973c349209dc07fc539db3
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 2b3da582f6529fd676ae8964acb09a038e39162a
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156389"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260659"
 ---
 # <a name="develop-calling-and-online-meeting-bots-on-your-local-pc"></a>ローカル PC で通話およびオンライン会議ボットを開発する
 
@@ -119,4 +119,6 @@ var mediaPlatform = new MediaPlatformSettings
 
 - Ngrok 無料アカウント **は、エンドツーエンド** の暗号化を提供しません。 HTTPS データは ngrok URL で終了し、データ フローは ngrok から . `localhost` エンドツーエンドの暗号化が必要な場合は、有料の ngrok アカウントを検討してください。 セキュリティ [で保護されたエンドツーエンド トンネル](https://ngrok.com/docs#tls) をセットアップする手順については、「TLS トンネル」を参照してください。
 - ボットコールバック URL は動的なので、着信呼び出しのシナリオでは、ngrok エンドポイントを頻繁に更新する必要があります。 これを修正する 1 つの方法は、ボットとプラットフォームをポイントできる固定サブドメインを提供する有料の ngrok アカウントを使用する方法です。
-- Ngrok トンネルは Azure Service Fabric[と一緒に使用Service Fabric。](/azure/service-fabric/service-fabric-overview) これを行う方法の例については、「HueBot サンプル アプリ [」を参照してください](/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/LocalMediaSamples/HueBot/HueBot)。
+- Ngrok トンネルは Azure Service Fabric[と一緒に使用Service Fabric。](/azure/service-fabric/service-fabric-overview) これを行う方法の例については、「HueBot サンプル アプリ [」を参照してください](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples/HueBot/HueBot)。
+
+ 

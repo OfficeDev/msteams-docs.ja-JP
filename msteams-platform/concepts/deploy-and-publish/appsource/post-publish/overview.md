@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 82f85543fcf579f656704bc6c0faa47a322c2707
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: ef4ccb10dbfecd10610ef30971ddd43285c0cb0e
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156604"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260633"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>公開済みアプリのMicrosoft Teamsする
 
@@ -28,7 +28,7 @@ ms.locfileid: "59156604"
 
 ### <a name="app-updates-requiring-user-consent"></a>ユーザーの同意を必要とするアプリの更新
 
-ユーザーがアプリをインストールする場合、アプリが機能するために必要なサービスと情報にアクセスするためのアクセス許可をアプリに付与する必要があります。 ほとんどの場合、ユーザーはこれを行う必要があるだけで、アプリの新しいバージョンが自動的にインストールされます。
+ユーザーがアプリをインストールする場合、アプリが機能するために必要なサービスと情報にアクセスするためのアクセス許可をアプリに付与する必要があります。 ほとんどの場合、ユーザーはこれを一度実行し、アプリの新しいバージョンが自動的にインストールされる必要があります。
 
 ただし、アプリに次の変更を加えた場合、既存のユーザーは更新プログラムをインストールするための別のアクセス許可要求を受け入れる必要があります。
 

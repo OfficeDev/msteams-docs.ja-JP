@@ -5,12 +5,12 @@ description: App Studio を使用してメッセージング拡張機能Microsof
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 61bfed969b981bd5000bdb6eca0bbd77196e8086
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6b7de5b5178d893e391b0e97a699f1cba029d59d
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156439"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260647"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>App Studio を使用してメッセージングの拡張機能を作成する
 
@@ -42,7 +42,8 @@ Web サービスの作成、アプリ パッケージの作成、ボット フ�
 
 ## <a name="register-your-web-service-with-the-bot-framework"></a>Web サービスを Bot Framework に登録する
 
-メッセージング拡張機能は、ボット フレームワークのメッセージング スキーマとセキュリティで保護された通信プロトコルを利用します。まだ Web サービスを持ってない場合は、ボット フレームワークに Web サービスを登録する必要があります。 Microsoft App Id (これを Teams の内部からボット ID と参照し、作業している可能性のある他のアプリ ID から識別します)、ボット フレームワークを使用した登録のメッセージング エンドポイントがメッセージング拡張機能で使用され、要求を受信して応答します。 既存の登録を使用している場合は、登録チャネルを有効[Microsoft Teamsしてください](/azure/bot-service/bot-service-manage-channels.md?view=azure-bot-service-4.0&preserve-view=true)。
+メッセージング拡張機能は、ボット フレームワークのメッセージング スキーマとセキュリティで保護された通信プロトコルを利用します。まだ Web サービスを持ってない場合は、ボット フレームワークに Web サービスを登録する必要があります。 Microsoft App Id (これを Teams の内部からボット ID と参照し、作業している可能性のある他のアプリ ID から識別します)、ボット フレームワークを使用した登録のメッセージング エンドポイントがメッセージング拡張機能で使用され、要求を受信して応答します。 既存の登録を使用している場合は、登録チャネルを有効[Microsoft Teamsしてください](/azure/bot-service/bot-service-manage-channels.md?preserve-view=true&view=azure-bot-service-4.0)。
+
 
 クイック スタートの 1 つを実行するか、使用可能なサンプルの 1 つから開始する場合は、Web サービスの登録に関するガイドが表示されます。 サービスを手動で登録する場合は、3 つのオプションがあります。 Azure サブスクリプションを使用せずに登録する場合は、ボット フレームワークによって提供される簡略化された OAuth 認証フローを利用できます。 作成後に登録を Azure に移行できます。
 
@@ -85,7 +86,7 @@ Web サービスの作成、アプリ パッケージの作成、ボット フ�
 | プロパティ名 | 用途 | 必須 |
 |---|---|---|
 | `botId` | Bot Framework に登録された、ボット用の一意の Microsoft アプリ ID。 通常、これはアプリ全体の ID と同Teamsがあります。 | はい |
-| `canUpdateConfiguration` | メニュー **設定** を有効にします。 | いいえ |
+| `canUpdateConfiguration` | メニュー **設定** を有効にします。 | 不要 |
 | `commands` | このメッセージング拡張機能がサポートするコマンドの配列。 コマンドは 10 に制限されています。 | はい |
 
 #### <a name="define-your-commands"></a>コマンドの定義

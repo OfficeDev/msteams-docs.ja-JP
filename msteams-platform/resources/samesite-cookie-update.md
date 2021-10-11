@@ -6,12 +6,12 @@ keywords: cookie 属性 samesite
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 100bfa29cd8d193e73473bf32834885283f6ba2d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: e4f2eff887b84d54de9b59becc850bad8f42a42a
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156756"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260652"
 ---
 # <a name="samesite-cookie-attribute"></a>SameSite Cookie 属性 
 

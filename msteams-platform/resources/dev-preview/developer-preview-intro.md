@@ -4,12 +4,12 @@ description: パブリック サーバーの機能について説明Developer Pr
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams プレビュー開発者向け機能
-ms.openlocfilehash: 975dc5b29fce984b9c8321ee9b8fc9fa3d53b822
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 8cf3f4faf4387aba6ea6238b0469bae840aba87f
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156702"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260624"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>開発者向けパブリック プレビュー Microsoft Teams
 
@@ -20,7 +20,7 @@ Developer Previewは、開発者向けの公開プログラムで、開発者は
 
 ## <a name="developer-preview-app-manifest"></a>開発者プレビュー アプリ マニフェスト
 
-開発者プレビューで有効になっている多くの機能では、アプリ マニフェスト JSON ファイルを変更する必要があります。 これを行うには、開発者プレビュー マニフェスト スキーマ[](~/resources/schema/manifest-schema-dev-preview.md)を使用する必要があります このスキーマを使用する場合は[、App Studio](~/concepts/build-and-test/app-studio-overview.md)を使用してこれらの変更を加え、テスト用にアプリをアップロードすることはできません。 アプリをアップロードするには、アプリ バーのアイコンをクリックし、 を `More apps` 選択する必要があります `Upload a custom app link` 。 このメソッドを使用すると、圧縮されたバージョンのアプリ パッケージのみをアップロードできます。
+開発者プレビューで有効になっている多くの機能では、アプリ マニフェスト JSON ファイルを変更する必要があります。 これを行うには、開発者プレビュー マニフェスト スキーマ [を使用する必要があります](~/resources/schema/manifest-schema-dev-preview.md)。 このスキーマを使用する場合は [、App Studio](~/concepts/build-and-test/app-studio-overview.md) を使用してこれらの変更を加え、アプリを使用してテスト用にアプリをアップロードすることはできません。 アプリをアップロードするには、アプリ バーのアイコンをクリックし、 を `More apps` 選択する必要があります `Upload a custom app link` 。 このメソッドを使用すると、圧縮されたバージョンのアプリ パッケージのみをアップロードできます。
 
 App Studio を使用してアプリ パッケージの開発者以外のプレビュー部分を作成し、そのパッケージをエクスポートし、ファイルを手動で編集して、使用する開発者プレビュー機能を追加すると便利です `manifest.json` 。 開発者プレビュー機能をファイルに追加すると、パッケージを App Studio に再 `manifest.json` インポートできない。
 

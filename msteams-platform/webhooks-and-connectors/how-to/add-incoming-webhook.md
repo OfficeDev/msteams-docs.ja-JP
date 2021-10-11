@@ -6,12 +6,12 @@ keywords: teams タブ送信 Webhook
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c07456288a26e3152a552644b704e2c6e6de38cc
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 546ca7643ee64412dab6c383e4090dd631a643c8
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156038"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260702"
 ---
 # <a name="create-incoming-webhook"></a>受信 Webhook の作成
 
@@ -29,7 +29,7 @@ ms.locfileid: "59156038"
 | ------- | ----------- |
 |受信 Webhook を使用したアダプティブ カード|アダプティブ カードは、受信 Webhooks 経由で送信できます。 詳細については、「受信 [Webhooks を使用してアダプティブ カードを送信する」を参照してください](../../webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook)。|
 |アクション可能なメッセージングのサポート|アクション可能なメッセージ カードは、Teams を含むすべての Office 365 グループでサポートされています。 カードを介してメッセージを送信する場合は、操作可能なメッセージ カード形式を使用する必要があります。 詳細については、「従来の操作可能な [メッセージ カード参照と](/outlook/actionable-messages/message-card-reference) メッセージ カード [のプレイグラウンド」を参照してください](https://messagecardplayground.azurewebsites.net)。|
-|独立した HTTPS メッセージングのサポート|カードは、情報を明確に一貫して提供します。 HTTPS POST 要求を送信できる任意のツールまたはフレームワークは、受信 Webhook を介してTeamsにメッセージを送信できます。|
+|独立した HTTPS メッセージングのサポート|カードは、情報を明確に一貫して提供します。 HTTPS POST 要求を送信できるツールまたはフレームワークは、受信 Webhook を介してTeamsにメッセージを送信できます。|
 |Markdown のサポート|アクション可能なメッセージング カードのすべてのテキスト フィールドで、基本的な Markdown がサポートされています。 カードで HTML マークアップを使用しない。 HTML は無視され、プレーン テキストとして扱われます。|
 |スコープ構成|受信 Webhook はスコープ設定され、チャネル レベルで構成されます。|
 |セキュリティで保護されたリソース定義|メッセージは JSON ペイロードとして書式設定されます。 この宣言型メッセージング構造は、悪意のあるコードの挿入を防止します。|

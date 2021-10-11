@@ -5,16 +5,16 @@ ms.topic: conceptual
 author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: d53bab5e951f64876f1d97d5e90b3788a206aa67
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 308d0722928111c1a9d6e6afa44e3c261dd59a3d
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156819"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260619"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Microsoft Teams アプリを配布する
 
-アプリは、Microsoft Teams、チーム、組織、または使用するユーザーに提供できます。 配布方法は、ユーザーのニーズ、ビジネスおよび技術的要件、アプリの目標など、いくつかの要因によって異なります。
+アプリは、Microsoft Teams、チーム、組織、または使用するユーザーに提供できます。 配布方法は、ユーザーのニーズ、ビジネス、技術的要件、アプリの目標など、いくつかの要因によって異なります。
 
 ## <a name="upload-your-app-in-teams"></a>アップロードアプリをアプリにTeams
 

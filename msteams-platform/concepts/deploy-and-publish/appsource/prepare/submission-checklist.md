@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: a01d08e4d1892109395a541522a0bb12e1a9c2e2
-ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
+ms.openlocfilehash: 8ff8282ae54612c0e1eee1d353777e5dae0b7990
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "60096564"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260541"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>ストア申請Microsoft Teams準備する
 
@@ -23,7 +23,7 @@ ms.locfileid: "60096564"
 アプリがテスト環境で動作している場合は、申請プロセス中に問題が発生しないようにアプリ パッケージを確認する必要があります。
 
 > [!NOTE]
->  App Studio は間もなく奪われる予定です。 新しい開発者ポータルを使用して、Teamsアプリを構成、配布、[および管理する](https://dev.teams.microsoft.com/)
+>  App Studio は間もなく非推奨になります。 新しい開発者ポータルを使用して、Teamsアプリを構成、配布、[および管理する](https://dev.teams.microsoft.com/)
 
 アプリMicrosoft Teamsツールを使用すると、パートナー センターに提出する前に問題を特定して修正できます。 このツールは、ストアの検証中に使用したのと同じテスト ケースに対して、アプリの構成を自動的にチェックします。
 
@@ -51,7 +51,7 @@ ms.locfileid: "60096564"
 
 アプリでライセンスまたはバックエンドセーフリストが必要な場合は、テスト アカウントを提供します。 テストに役立つデータを事前に入力して提供するアカウントはすべて含める必要があります。
 
-アプリの機能によっては、次のすべてのアカウントの提供が必要な場合があります。
+アプリの機能によっては、次のすべてのアカウントを提供する必要があります。
 
 * 管理者アカウント (必須)
 * 管理者以外のアカウント (必須)

@@ -3,12 +3,12 @@ title: アプリをパッケージ化する
 description: テスト、アップロード、およびストア発行Microsoft Teamsアプリをパッケージ化する方法について学習します。
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: bcffc581ab832dfa51d0b772f466b92dea731ccf
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 926d6051024ae6e9a5f3d857bdb97fa02f56e8db
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156741"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260674"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>アプリ パッケージMicrosoft Teams作成する
 
@@ -21,7 +21,7 @@ ms.locfileid: "59156741"
 
 アプリ マニフェスト ファイルは、パッケージのトップ レベルに名前が付けられている必要があります `manifest.json` 。 
 
-ストアに発行するTeams、マニフェストが最新のスキーマを[参照してください。](~/resources/schema/manifest-schema.md)
+ストアに発行するTeams、マニフェストが最新のスキーマを参照している必要[があります](~/resources/schema/manifest-schema.md)。
 
 ## <a name="app-icons"></a>アプリのアイコン
 
@@ -34,7 +34,7 @@ ms.locfileid: "59156741"
 
 ### <a name="color-icon"></a>色アイコン
 
-アイコンの色バージョンは、ほとんどのシナリオで表示Teams 192x192 ピクセルである必要があります。 アイコン 記号 (96x96 ピクセル) は任意の色を指定できますが、単色または完全に透明な四角形の背景に位置する必要があります。
+アイコンのカラー バージョンは、ほとんどの Teams シナリオで表示され、192x192 ピクセルである必要があります。 アイコン 記号 (96x96 ピクセル) は任意の色を指定できますが、単色または完全に透明な四角形の背景に位置する必要があります。
 
 Teamsアイコンが自動的にトリミングされ、複数のシナリオで角が丸く、ボットのシナリオでは六角形が表示されます。 詳細を失わずにシンボルをトリミングするには、シンボルの周囲に 48 ピクセルのパディングを含める必要があります。
 
