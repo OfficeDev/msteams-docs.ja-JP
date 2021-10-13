@@ -5,12 +5,12 @@ description: メッセージング拡張機能アクション コマンドから
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 79687dd98f8d88e365ae1528b36806d3ffc559d3
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: cab33a36862ed027f9c110eccaac43d4e4aff20e
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157044"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291640"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>タスク モジュールの送信アクションに応答する
 
@@ -221,7 +221,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ## <a name="respond-to-initial-submit-action"></a>最初の送信アクションに応答する
 
-タスク モジュールは、ボットがチャネルに送信するカードのプレビューで最初 `composeExtension/submitAction` のメッセージに応答する必要があります。 ユーザーは、送信する前にカードを確認し、ボットがインストールされていない場合は会話にボットをインストールしてみてください。
+タスク モジュールは、ボットがチャネルに送信するカードのプレビューで最初 `composeExtension/submitAction` のメッセージに応答する必要があります。 ユーザーは、送信する前にカードを確認し、ボットがインストールされていない場合は、会話にボットをインストールしてみてください。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -405,7 +405,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="respond-to-botmessagepreview-send"></a>botMessagePreview 送信に応答する
 
-ユーザーが [送信] を選択 **すると**、呼び出しを `composeExtension/submitAction` 受信します `value.botMessagePreviewAction = send` 。 Web サービスでは、アダプティブ カードを含むプロアクティブ メッセージを作成して会話に送信し、呼び出しに返信する必要があります。
+ユーザーが [送信] を選択 **すると**、呼び出しを `composeExtension/submitAction` 受信します `value.botMessagePreviewAction = send` 。 Web サービスは、アダプティブ カードを使用してプロアクティブ メッセージを作成して会話に送信し、呼び出しに返信する必要があります。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -584,7 +584,7 @@ Teams でユーザー属性を使用するには、ユーザーに送信され�
 
 次のセクションでは、Array 内のエンティティの説明を示 `OnBehalfOf` します。
 
-|Field|種類|説明|
+|フィールド|種類|説明|
 |:---|:---|:---|
 |`itemId`|整数|アイテムの識別について説明します。 その値は、 である必要があります `0` 。|
 |`mentionType`|String|"person" のメンションについて説明します。|

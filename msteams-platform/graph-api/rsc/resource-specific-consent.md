@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: teams 承認 OAuth SSO AAD rsc Graph
-ms.openlocfilehash: 256bdf29079f9a8f3085c63f7e072414c4bd3ce3
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: abd56787c89fde44f7cc4c72f0f59e66b05af9aa
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156651"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291633"
 ---
 # <a name="resource-specific-consent"></a>リソース固有の同意
 
@@ -75,11 +75,11 @@ ms.locfileid: "59156651"
 
 ## <a name="enable-rsc-in-your-application"></a>アプリケーションで RSC を有効にする
 
-1. [AAD ポータルで同意設定を構成します](#configure-consent-settings-in-the-aad-portal)。
+1. [ポータルで同意設定をAADします](#configure-consent-settings-in-the-aad-portal)。
     1. [チーム内の RSC のグループ所有者の同意設定を構成します](#configure-group-owner-consent-settings-for-rsc-in-a-team)。
     1. [チャットで RSC のユーザー同意設定を構成します](#configure-user-consent-settings-for-rsc-in-a-chat)。
-1. [AAD ポータルを使用Microsoft ID プラットフォームアプリをアプリに登録します](#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)。
-1. [AAD ポータルでアプリケーションのアクセス許可を確認します](#review-your-application-permissions-in-the-aad-portal)。
+1. [ポータルを使用してアプリMicrosoft ID プラットフォームをAADします](#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)。
+1. [ポータルでアプリケーションのアクセス許可をAADします](#review-your-application-permissions-in-the-aad-portal)。
 1. [ID プラットフォームからアクセス トークンを取得します](#obtain-an-access-token-from-the-microsoft-identity-platform)。
 1. [アプリ マニフェストTeams更新します](#update-your-teams-app-manifest)。
 1. [アプリをアプリに直接インストールTeams。](#sideload-your-app-in-teams)
@@ -87,7 +87,7 @@ ms.locfileid: "59156651"
     1. [チームに追加された RSC アクセス許可をアプリで確認します](#check-your-app-for-added-rsc-permissions-in-a-team)。
     1. [チャットで追加された RSC アクセス許可をアプリで確認します](#check-your-app-for-added-rsc-permissions-in-a-chat)。
 
-## <a name="configure-consent-settings-in-the-aad-portal"></a>AAD ポータルで同意設定を構成する
+## <a name="configure-consent-settings-in-the-aad-portal"></a>ポータルで同意の設定AADする
 
 ### <a name="configure-group-owner-consent-settings-for-rsc-in-a-team"></a>チームで RSC のグループ所有者の同意設定を構成する
 
@@ -113,30 +113,30 @@ Azure portal 内でユーザーの [同意を直接](/azure/active-directory/man
 
 さらに、PowerShell を使用してユーザーの同意を有効または無効にしたり [、PowerShell](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-powershell)を使用してユーザーの同意を構成するで説明されている手順に従います。
 
-## <a name="register-your-app-with-microsoft-identity-platform-using-the-aad-portal"></a>AAD ポータルを使用Microsoft ID プラットフォームアプリをアプリに登録する
+## <a name="register-your-app-with-microsoft-identity-platform-using-the-aad-portal"></a>ポータルを使用してアプリMicrosoft ID プラットフォームをAADする
 
-AAD ポータルは、アプリを登録および構成する中央プラットフォームを提供します。 ID プラットフォームと統合し、Microsoft のサービス API を呼び出すには、アプリを AAD ポータルGraph必要があります。 詳細については、「アプリケーションを [ID プラットフォームに登録する」を参照してください](/graph/auth-register-app-v2)。
+このAADは、アプリを登録および構成する中心的なプラットフォームを提供します。 ID プラットフォームと統合し、Microsoft AAD API を呼び出すには、アプリを Graphする必要があります。 詳細については、「アプリケーションを [ID プラットフォームに登録する」を参照してください](/graph/auth-register-app-v2)。
 
 > [!WARNING]
-> AAD アプリ ID を複数のアプリ間で共有Teams必要があります。 1 つのアプリと AAD アプリの間に 1:1 Teamsが必要です。 同じ AAD アプリ ID にTeams複数のアプリをインストールしようとすると、インストールまたは実行時にエラーが発生します。
+> 複数AADアプリ間でアプリ ID を共有Teams必要があります。 1 つのアプリとアプリの間に 1:1 TeamsがAADがあります。 同じアプリ ID に関連Teams複数のアプリをインストールしようとすると、インストールAAD実行時にエラーが発生します。
 
-## <a name="review-your-application-permissions-in-the-aad-portal"></a>AAD ポータルでアプリケーションのアクセス許可を確認する
+## <a name="review-your-application-permissions-in-the-aad-portal"></a>ポータルでアプリケーションのアクセス許可をAADする
 
 1. [ホーム アプリの **登録**  >  **] ページに移動し**、RSC アプリを選択します。
 1. 左側 **のウィンドウから [API の** アクセス許可] を選択し、アプリの [構成済み **アクセス許可]** の一覧を表示します。 アプリで RSC 呼び出しGraph場合は、そのページのすべてのアクセス許可を削除します。 アプリで RSC 以外の呼び出しを行う場合は、必要に応じてこれらのアクセス許可を保持します。
 
 > [!IMPORTANT]
-> AAD ポータルを使用して RSC アクセス許可を要求することはできません。 RSC アクセス許可は現在、Teams クライアントにインストールされている Teams アプリケーション専用であり、Teams アプリ マニフェスト (JSON) ファイルで宣言されています。
+> RSC AADを要求する場合は、このポータルを使用できません。 RSC アクセス許可は現在、Teams クライアントにインストールされている Teams アプリケーション専用であり、Teams アプリ マニフェスト (JSON) ファイルで宣言されています。
 
 ## <a name="obtain-an-access-token-from-the-microsoft-identity-platform"></a>サーバーからアクセス トークンを取得Microsoft ID プラットフォーム
 
-API 呼びGraphするには、ID プラットフォームからアプリのアクセス トークンを取得する必要があります。 アプリが ID プラットフォームからトークンを取得するには、そのトークンを AAD ポータルに登録する必要があります。 アクセス トークンには、アプリとアプリに付与されているアクセス許可に関する情報が含まれています。このアクセス許可は、Microsoft Graph を通じて利用できるリソースと API に対応するものです。
+API 呼びGraphするには、ID プラットフォームからアプリのアクセス トークンを取得する必要があります。 アプリが ID プラットフォームからトークンを取得するには、そのトークンをポータルに登録するAADがあります。 アクセス トークンには、アプリとアプリに付与されているアクセス許可に関する情報が含まれています。このアクセス許可は、Microsoft Graph を通じて利用できるリソースと API に対応するものです。
 
-ID プラットフォームからアクセス トークンを取得するには、AAD 登録プロセスの次の値が必要です。
+ID プラットフォームからアクセス トークンを取得するには、AAD登録プロセスから次の値が必要です。
 
 - アプリ **登録ポータルによって** 割り当てられたアプリケーション ID。 アプリがシングル サインオン (SSO) をサポートしている場合は、アプリと SSO に同じアプリケーション ID を使用する必要があります。
 - クライアント **シークレット/パスワード、** または証明書である公開キーまたは秘密キー **のペア** です。 ネイティブ アプリの場合、これは必須ではありません。
-- AAD **から応答** を受信するアプリのリダイレクト URI または返信 URL。
+- アプリ **のリダイレクト URI** または返信 URL で、アプリから応答を受信AAD。
 
 詳細については、「ユーザーに [代わってアクセス権を取得](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token&preserve-view=true) する」および「ユーザーなしで [アクセスを取得する」を参照してください](/graph/auth-v2-service)。
 
@@ -144,9 +144,9 @@ ID プラットフォームからアクセス トークンを取得するには�
 
 RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣言されます。 次の [値を使用して、WebApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) キーをアプリ マニフェストに追加します。
 
-|Name| 型 | 説明|
+|名前| 種類 | 説明|
 |---|---|---|
-|`id` |String |AAD アプリ ID。 詳細については [、「AAD ポータルにアプリを登録する」を参照してください](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)。|
+|`id` |String |ユーザー AADアプリ ID。 詳細については、「アプリを[ポータルに登録する」をAADしてください](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)。|
 |`resource`|String| このフィールドは RSC で操作を行う必要がありますが、エラー応答を回避するには、値を追加して値を指定する必要があります。任意の文字列が実行します。|
 |`applicationPermissions`|文字列の配列|アプリの RSC アクセス許可。 詳細については、「リソース固有 [のアクセス許可」を参照してください](resource-specific-consent.md#resource-specific-permissions)。|
 
@@ -225,7 +225,7 @@ RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣
 1. [Teams] で、左端 **Teams** ウィンドウから [プロパティ] を選択します。
 1. アプリをインストールするチームを選択します。
 1. そのチームの省略 &#x25CF;&#x25CF;&#x25CF; を選択します。
-1. [ **チーム] ドロップダウン メニューから [チーム** へのリンクを取得する] を選択します。
+1. [チーム **] ドロップダウン メニューから [チームへの** リンクを取得する] を選択します。
 1. [チームへのリンク **を取得する** ] ポップアップ ダイアログ ボックスから groupId **値をコピー** して保存します。
 1. エクスプローラーにサインイン **Graphします**。
 1. このエンドポイント **に GET** 呼び出し `https://graph.microsoft.com/beta/teams/{teamGroupId}/permissionGrants` を行います。 応答 `clientAppId` のフィールドは、アプリ マニフェスト `webApplicationInfo.id` で指定されたTeamsマップされます。

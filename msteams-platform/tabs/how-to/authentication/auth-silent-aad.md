@@ -4,21 +4,21 @@ description: サイレント認証について説明します
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams 認証 SSO サイレント AAD
-ms.openlocfilehash: 02078775ef3349ae5bb35e999e0f65587ab943d1
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: fef5a52d836ce906e9fe835f29bcee1bef9088d7
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156092"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291626"
 ---
 # <a name="silent-authentication"></a>サイレント認証
 
 > [!NOTE]
 > モバイル クライアントでタブで認証を機能するには、JavaScript SDK の 1.4.1 以上のバージョンを使用Teamsしてください。
 
-Azure Active Directory (AAD) のサイレント認証では、ユーザーがサインイン資格情報を入力する回数を最小限に抑え、認証トークンをサイレント 更新します。 シングル サインオンの真のサポートについては、SSO のドキュメント [を参照してください](~/tabs/how-to/authentication/auth-aad-sso.md)。
+Azure Active Directory (AAD) のサイレント認証は、ユーザーがサインイン資格情報を入力する回数を最小限に抑え、認証トークンをサイレント 更新します。 シングル サインオンの真のサポートについては、SSO のドキュメント [を参照してください](~/tabs/how-to/authentication/auth-aad-sso.md)。
 
-コードを完全にクライアント側に保持する場合は [、JavaScript](/azure/active-directory/develop/active-directory-authentication-libraries) の AAD 認証ライブラリを使用して、AAD アクセス トークンをサイレント モードで取得できます。 ユーザーが最近サインインした場合、ポップアップ ダイアログ ボックスは表示されます。
+コードを完全にクライアント側に保持する場合は、JavaScript の[AAD](/azure/active-directory/develop/active-directory-authentication-libraries)認証ライブラリを使用して、AAD アクセス トークンをサイレント モードで取得できます。 ユーザーが最近サインインした場合、ポップアップ ダイアログ ボックスは表示されます。
 
 このライブラリADAL.js AngularJS アプリケーション用に最適化されているにもかかわらず、純粋な JavaScript シングル ページ アプリケーションでも動作します。
 
@@ -27,13 +27,13 @@ Azure Active Directory (AAD) のサイレント認証では、ユーザーがサ
 
 ## <a name="how-silent-authentication-works"></a>サイレント認証の仕組み
 
-このADAL.jsは、OAuth 2.0 暗黙的な付与フロー用の非表示の iframe を作成します。 ただし、ライブラリは 、サインイン ページを表示AD表示しないので、 `prompt=none` 指定します。 ユーザーがサインインまたはアプリケーションへのアクセス許可を必要とするためにユーザーの操作が必要な場合、AAD はアプリに報告するエラーADAL.jsすぐに返します。 この時点で、アプリは必要に応じてサインイン ボタンを表示できます。
+このADAL.jsは、OAuth 2.0 暗黙的な付与フロー用の非表示の iframe を作成します。 ただし、ライブラリは 、 `prompt=none` サインイン ページAzure AD表示しないので、指定します。 ユーザーがサインインまたはアプリケーションへのアクセス許可を必要とするためにユーザーの操作が必要な場合、AAD はアプリに報告するエラーADAL.jsすぐに返します。 この時点で、アプリは必要に応じてサインイン ボタンを表示できます。
 
 ## <a name="how-to-do-silent-authentication"></a>サイレント認証を実行する方法
 
 この記事のコードは、認証サンプル ノードTeamsサンプル アプリTeams[から来ます](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)。
 
-[AAD を使用してサイレント認証と簡単な認証構成可能](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) タブを開始し、指示に従ってローカル コンピューターでサンプルを実行します。
+[サイレント認証と簡単な認証構成可能タブは](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp)、AADを使用して開始し、指示に従ってローカル コンピューターでサンプルを実行します。
 
 ### <a name="include-and-configure-adal"></a>ADAL を含めるおよび構成する
 
@@ -55,7 +55,7 @@ Azure Active Directory (AAD) のサイレント認証では、ユーザーがサ
 
 ### <a name="get-the-user-context"></a>ユーザー コンテキストの取得
 
-タブのコンテンツ ページで、現在のユーザーのサインイン ヒントを取得 `microsoftTeams.getContext()` するために呼び出します。 これは、AAD の呼び出しで loginHint として使用されます。
+タブのコンテンツ ページで、現在のユーザーのサインイン ヒントを取得 `microsoftTeams.getContext()` するために呼び出します。 これは、ログインの呼び出しで loginHint として使用AAD。
 
 ```javascript
 // Set up extra query parameters for ADAL
@@ -105,7 +105,7 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 
 ### <a name="process-the-return-value"></a>戻り値を処理する
 
-ADAL.jsコールバック ページで呼び出すことによって、AAD からの `AuthenticationContext.handleWindowCallback(hash)` 結果を解析します。
+ADAL.jsコールバック ページで呼び出すことによって、AADの `AuthenticationContext.handleWindowCallback(hash)` 結果を解析します。
 
 有効なユーザーを持ち、電話をかけられているか、メイン タブのコンテンツ ページ `microsoftTeams.authentication.notifySuccess()` `microsoftTeams.authentication.notifyFailure()` に状態を報告してください。
 
@@ -124,10 +124,10 @@ if (authContext.isCallback(window.location.hash)) {
 
 ### <a name="handle-sign-out-flow"></a>サインアウト フローの処理
 
-AAD Auth のサインアウト フローを処理するには、次のコードを使用します。
+次のコードを使用して、Auth でサインアウト フロー AADします。
 
 > [!NOTE]
-> タブまたはボットTeamsログアウトが完了すると、現在のセッションもクリアされます。
+> タブまたはボットからTeamsすると、現在のセッションがクリアされます。
 
 ```javascript
 function logout() {

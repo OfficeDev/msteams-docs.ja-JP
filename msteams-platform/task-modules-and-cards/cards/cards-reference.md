@@ -4,12 +4,12 @@ description: Teams の Bot で使用できるすべてのカードとカード �
 ms.localizationpriority: medium
 keywords: Bot のカード リファレンス
 ms.topic: reference
-ms.openlocfilehash: 2768b1b156ecd86a6bcc2a7b8b42448db3eeeaae
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: adb8695ad6a7057cea5e95b1760addd27c3713e9
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475595"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291661"
 ---
 # <a name="types-of-cards"></a>カードの種類
 

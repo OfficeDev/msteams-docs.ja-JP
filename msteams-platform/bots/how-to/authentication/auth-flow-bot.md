@@ -4,12 +4,12 @@ description: ボットMicrosoft Teamsの認証フローについて説明しま�
 keywords: teams 認証フロー ボット
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: afaffa47058b994aa3241797db9b03a32a1b69fe
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: f62725e87239cedcaa585b7c5da6a627e70d74cd
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156353"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291654"
 ---
 # <a name="authentication-flow-for-bots-in-microsoft-teams"></a>サーバー内のボットの認証フロー Microsoft Teams
 
@@ -25,7 +25,7 @@ Node.js および[OAuth 2.0](https://oauth.net/2/grant-types/authorization-code/
 3. ボットは、認証フローの開始ページへの URL を作成し、アクションを使用してユーザーにカードを送信 `signin` します。 ([コードの表示](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L160-L190))</br>
     Teams の他のアプリケーション認証フローと同様に、スタート ページは、リスト上のドメインと、ログイン後のリダイレクト ページと同じドメインに含 `validDomains` める必要があります。
     > [!IMPORTANT] 
-    > OAuth 2.0 承認コード付与フローは、クロスサイト要求フォージェリ攻撃を防止するために、一意のセッション トークンを含む認証要求内のパラメーターを `state` [呼び出します](https://en.wikipedia.org/wiki/Cross-site_request_forgery)。 この例では、ランダムに生成された GUID を使用します。
+    > OAuth 2.0 承認コード付与フローは、クロスサイト要求フォージェリ攻撃を防止するために一意のセッション トークンを含む認証要求のパラメーターを呼び出 `state` [します](https://en.wikipedia.org/wiki/Cross-site_request_forgery)。 この例では、ランダムに生成された GUID を使用します。
 4. ユーザーがサインイン *ボタンを選択* するとTeamsポップアップ ウィンドウが開き、スタート ページに移動します。
    > [!NOTE]
    > ポップアップ ウィンドウのサイズは、URL の幅と高さのクエリ文字列パラメーターを使用して制御できます。 たとえば、width=600 と height=600 を追加すると、ポップアップ ウィンドウのサイズは 600x600 ピクセルになります。 ポップアップ ウィンドウの実際のサイズは、メイン ウィンドウ のサイズに対する割合Teams制限されます。 ウィンドウウィンドウTeams小さい場合、ポップアップ ウィンドウは指定したサイズより小さくて小さになります。

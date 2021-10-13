@@ -3,17 +3,17 @@ title: タブのシングル サインオンのサポート
 description: シングル サインオン (SSO) について説明します。
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: teams 認証 SSO AAD シングル サインオン API
-ms.openlocfilehash: 1901ce16f99b7708bfc289f86440ce240148ada9
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+keywords: teams 認証 SSO AADシングル サインオン API
+ms.openlocfilehash: e0dbef26be829980d04278d748298414bc17c473
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475686"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291717"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>タブのシングル サインオン (SSO) のサポート
 
-ユーザーは、Microsoft Teams、学校、または Microsoft アカウントを通じて、Office 365、Outlookにサインインします。 シングル サインオンでデスクトップまたはモバイル クライアント上の [Teams] タブまたはタスク モジュールを承認することで利用できます。 ユーザーが一度サインインした場合、自動的にサインインしている別のデバイスでもう一度サインインする必要はありません。 また、アクセス トークンは、パフォーマンスと読み込み時間を改善するために指定されています。
+ユーザーは、Office 365、Outlook である仕事、学校、または Microsoft アカウントを通じて Microsoft Teams にサインインし、デスクトップまたはモバイル クライアントでシングル サインオンを許可して Teams タブまたはタスク モジュールを承認できます。 ユーザーが 1 回サインインした場合、自動的にサインインしている別のデバイスでもう一度サインインする必要はありません。 また、アクセス トークンは、パフォーマンスと読み込み時間を改善するために指定されています。
 
 > [!NOTE]
 > **Teams SSO をサポートするモバイル クライアント バージョン**  
@@ -38,8 +38,8 @@ ms.locfileid: "59475686"
 
 1. タブでは、JavaScript 呼び出しが `getAuthToken()`に対してなされます。 `getAuthToken()`タブ Teamsアクセス トークンを取得する必要があります。
 2. 現在のユーザーが初めてタブ アプリケーションを使用している場合、同意が必要な場合は、同意を求める要求プロンプトが表示されます。 または、2 要素認証などのステップアップ認証を処理する要求プロンプトがあります。
-3. Teamsユーザーに対して、Azure Active Directory (AAD) エンドポイントからタブ アクセス トークンを要求します。
-4. AAD は、タブ アクセス トークンをアプリケーションのTeamsします。
+3. Teamsユーザーの Azure Active Directory (AAD) エンドポイントからタブ アクセス トークンを要求します。
+4. AADアプリケーションにタブ アクセス トークンをTeamsします。
 5. Teamsによって返される結果オブジェクトの一部としてタブ アクセス トークンをタブに送信 `getAuthToken()` します。
 6. トークンは JavaScript を使用してタブ アプリケーションで解析され、ユーザーのメール アドレスなどの必要な情報を抽出します。
 
@@ -52,12 +52,12 @@ SSO API は、Web コンテンツを [埋め込むタスク](../../../task-modul
 
 このセクションでは、SSO を使用する [Teams] タブの作成に関連するタスクについて説明します。 これらのタスクは言語とフレームワークに依存しないタスクです。
 
-### <a name="1-create-your-aad-application"></a>1. AAD アプリケーションを作成する
+### <a name="1-create-your-aad-application"></a>1. アプリケーションをAADする
 
-**AAD ポータルの概要に [アプリケーションを登録](https://azure.microsoft.com/features/azure-portal/) するには**
+**アプリケーションをポータルの概要に [AADするには](https://azure.microsoft.com/features/azure-portal/)**
 
-1. [AAD アプリケーション ID を取得します](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)。 
-1. アプリケーションが AAD エンドポイントに必要なアクセス許可を指定し、必要に応じてGraph。
+1. アプリケーション[ID AAD取得します](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)。 
+1. アプリケーションで必要なアクセス許可を、AAD必要に応じてGraph。
 1. [デスクトップ、web、Teams](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources)アプリケーションのアクセス許可を付与します。
 1. [スコープのTeams] ボタンを選択し、開くパネルで [スコープ名] とaccess_as_user **を****入力** します。
 
@@ -65,13 +65,13 @@ SSO API は、Web コンテンツを [埋め込むタスク](../../../task-modul
 > 以下の重要な制限を知る必要があります。
 >
 > * API のアクセス許可Graphユーザー レベルのアクセス許可 (電子メール、プロファイル、offline_access OpenId) だけがサポートされます。 その他のスコープ (Graphなど) にアクセスする必要がある場合は、「アクセス トークンを取得する」を参照Graph `User.Read` `Mail.Read` [してください](#get-an-access-token-with-graph-permissions)。
-> * アプリケーションのドメイン名は、AAD アプリケーションに登録したドメイン名と同じ名前にすることが重要です。
+> * アプリケーションのドメイン名は、アプリケーションに登録したドメイン名と同AADです。
 > * 現在、アプリごとに複数のドメインはサポートされていません。
 > * ユーザーは、新しい `accessTokenAcceptedVersion` アプリケーション `v2` に対して設定する必要があります。
 
-**AAD ポータルを使用してアプリを登録するには**
+**アプリをポータルから登録するにはAADする**
 
-1. AAD アプリ登録ポータルに [新しいアプリケーションを登録](https://go.microsoft.com/fwlink/?linkid=2083908) します。
+1. 新しいアプリケーションをアプリ登録[ポータルAAD登録](https://go.microsoft.com/fwlink/?linkid=2083908)します。
 1. [新規 **登録] を選択します**。 [ **アプリケーションの登録] ページ** が表示されます。
 1. [アプリケーションの **登録] ページで** 、次の値を入力します。
     1. アプリの **[名前]** を入力します。
@@ -121,9 +121,9 @@ SSO API は、Web コンテンツを [埋め込むタスク](../../../task-modul
 
 > [!NOTE]
 >
-> * ¹ AAD アプリが Teams で認証要求を行うのと同じテナントに登録されている場合、ユーザーは同意を求めれなく、アクセス トークンがすぐ付与されます。 ユーザーは、AAD アプリが別のテナントに登録されている場合にのみ、これらのアクセス許可に同意します。
-> * ² カスタム ドメインが AAD に追加されていない場合は、ホスト名が既に所有されているドメインに基づいていなければならないというエラーが表示されます。 カスタム ドメインを AAD に追加して登録するには [、AAD](/azure/active-directory/fundamentals/add-custom-domain) にカスタム ドメイン名を追加する手順に従い、手順 5 を繰り返します。 このエラーは、テナントの管理者資格情報でサインインしていない場合Office 365できます。
-> * 返されるアクセス トークンでユーザー プリンシパル名 (UPN) を受信していない場合は、AAD でオプションの [クレームとして追加](/azure/active-directory/develop/active-directory-optional-claims) できます。
+> * ¹ AAD アプリが Teams で認証要求を行うのと同じテナントに登録されている場合、ユーザーは同意を求めれなく、アクセス トークンがすぐ付与されます。 ユーザーは、アプリが別のテナントにAAD場合にのみ、これらのアクセス許可に同意します。
+> * ² カスタム ドメインが AAD に追加されていない場合は、ホスト名が既に所有されているドメインに基づいていなければならないというエラーが表示されます。 カスタム ドメインを AADして登録するには、カスタム ドメイン名を[](/azure/active-directory/fundamentals/add-custom-domain)追加して AAD手順に従い、手順 5 を繰り返します。 このエラーは、テナントの管理者資格情報でサインインしていない場合Office 365できます。
+> * 返されるアクセス トークンでユーザー プリンシパル名 (UPN) を受け取らない場合は、そのユーザー[](/azure/active-directory/develop/active-directory-optional-claims)プリンシパル名をオプションのクレームとして追加AAD。
 
 ### <a name="2-update-your-teams-application-manifest"></a>2. アプリケーション マニフェストTeams更新する
 
@@ -139,12 +139,12 @@ SSO API は、Web コンテンツを [埋め込むタスク](../../../task-modul
 * **WebApplicationInfo** は、次の要素の親です。
 
 > [!div class="checklist"]
-> * **id** - アプリケーションのクライアント ID。 これは、Azure アプリケーションへのアプリケーションの登録の一環として取得したアプリケーション ID AD。
+> * **id** - アプリケーションのクライアント ID。 これは、アプリケーションをアプリケーションに登録する一部として取得したアプリケーション ID Azure AD。
 >* **resource** - アプリケーションのドメインとサブドメイン。 これは、手順 6 で作成するときに登録したのと同じ URI (プロトコルを含む `api://` ) `scope` です。 リソースにパスを `access_as_user` 含めなけれ。 この URI のドメイン部分は、アプリケーション マニフェストの URL で使用されるサブドメインを含むドメインTeams必要があります。
 
 > [!NOTE]
 >
->* AAD アプリのリソースは、通常、サイト URL のルートと appID (たとえば) です `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` 。 この値は、要求が同じドメインから送信されるのを確認するためにも使用されます。 タブの `contentURL` リソース プロパティと同じドメインが使用されます。
+>* アプリのリソースはAADサイト URL のルートであり、appID (など) です `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` 。 この値は、要求が同じドメインから送信されるのを確認するためにも使用されます。 タブの `contentURL` リソース プロパティと同じドメインが使用されます。
 >* フィールドを実装するには、マニフェスト バージョン 1.5 以上を使用する必要 `webApplicationInfo` があります。
 
 ### <a name="3-get-an-access-token-from-your-client-side-code"></a>3. クライアント側コードからアクセス トークンを取得する
@@ -161,7 +161,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 ユーザー レベルのアクセス許可を呼び出し、ユーザーの同意が必要な場合は、同意を許可する `getAuthToken` ダイアログがユーザーに表示されます。
 
-成功コールバックでアクセス トークンを受信した後、アクセス トークンをデコードして、そのトークンのクレームを表示します。 必要に応じて、アクセス トークンを手動でコピーしてツールに貼り付[jwt.ms。](https://jwt.ms/) 返されるアクセス トークンで UPN を受信していない場合は、AAD でオプションのクレーム [として](/azure/active-directory/develop/active-directory-optional-claims) 追加します。 詳細については、「アクセス トークン [」を参照してください](/azure/active-directory/develop/access-tokens)。
+成功コールバックでアクセス トークンを受信した後、アクセス トークンをデコードして、そのトークンのクレームを表示します。 必要に応じて、アクセス トークンを手動でコピーしてツールに貼り付[jwt.ms。](https://jwt.ms/) 返されるアクセス トークンで UPN を受け取らない場合は、その UPN をオプションのクレームとして追加AAD。 [](/azure/active-directory/develop/active-directory-optional-claims) 詳細については、「アクセス トークン [」を参照してください](/azure/active-directory/develop/access-tokens)。
 
 <p>
     <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
@@ -171,13 +171,13 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 |**サンプルの名前**|**説明**|**C#**|**Node.js**|
 |---------------|---------------|------|--------------|
-| タブ SSO |Microsoft Teamsのサンプル アプリ Azure AD SSO| [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs)、 </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
+| タブ SSO |Microsoft Teams SSO のタブのサンプル Azure ADアプリ| [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs)、 </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
 
 ## <a name="known-limitations"></a>既知の制限
 
 ### <a name="get-an-access-token-with-graph-permissions"></a>アクセス許可を使用してアクセス トークンGraphする
 
-SSO の現在の実装では、ユーザー レベルのアクセス許可に対する同意のみを付与します。このアクセス許可は、ユーザーの呼び出しGraphできません。 Graph 呼び出しに必要なアクセス許可 (スコープ) を取得するには、SSO ソリューションがカスタム Web サービスを実装して、Teams JavaScript SDK から取得したトークンを必要なスコープを含むトークンと交換する必要があります。 これは、AAD の代理フローを使用 [して実行されます](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)。
+SSO の現在の実装では、ユーザー レベルのアクセス許可に対する同意のみを付与します。このアクセス許可は、ユーザーの呼び出しGraphできません。 Graph 呼び出しに必要なアクセス許可 (スコープ) を取得するには、SSO ソリューションがカスタム Web サービスを実装して、Teams JavaScript SDK から取得したトークンを必要なスコープを含むトークンと交換する必要があります。 これは、AADの代理フロー[を使用して実行されます](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow)。
 
 #### <a name="tenant-admin-consent"></a>テナント管理者の同意
 
@@ -185,22 +185,22 @@ SSO の現在の実装では、ユーザー レベルのアクセス許可に対
 
 #### <a name="ask-for-consent-using-the-auth-api"></a>Auth API を使用して同意を求める
 
-スコープを使用Graphもう 1 つの方法は、既存の Web ベースの Azure 認証アプローチを使用して同意ダイアログ[を表示ADです](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page)。 この方法では、Azure の [同意] ダイアログ AD表示されます。
+スコープを使用Graphもう 1 つの方法は、既存の Web ベースの認証方法を使用して同意ダイアログ[をAzure ADです](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page)。 この方法では、同意ダイアログ ボックスAzure AD表示されます。
 
 **Auth API を使用して追加の同意を求めるには**
 
-1. 他の API へのアクセスを取得するには `getAuthToken()` 、AAD [on-behalf-Graph of](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) flow を使用してサーバー側で交換する必要があります。 この交換に v2 Graphエンドポイントを使用してください。
-2. Exchange が失敗した場合、AAD は無効な付与例外を返します。 通常、2 つのエラー メッセージの 1 つ、 `invalid_grant` または `interaction_required` .
-3. 交換が失敗した場合は、同意を求める必要があります。 ユーザーに他の同意を許可するユーザー インターフェイス (UI) を表示します。 この UI には、AAD 認証 API を使用して AAD 同意ダイアログ ボックスをトリガーする [ボタンが含まれる必要があります](~/concepts/authentication/auth-silent-aad.md)。
-4. AAD からより多くの同意を求める場合は、クエリ文字列パラメーターに AAD を含める必要があります。それ以外の場合、AAD は他のスコープを求 `prompt=consent` めしません。 [](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context)
+1. 他の API へのアクセスを取得するには、フロー AADを使用して取得したトークンをサーバー側 `getAuthToken()` Graph必要があります。 [](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) この交換に v2 Graphエンドポイントを使用してください。
+2. Exchange が失敗した場合、AAD無効な付与例外が返されます。 通常、2 つのエラー メッセージの 1 つ、 `invalid_grant` または `interaction_required` .
+3. 交換が失敗した場合は、同意を求める必要があります。 ユーザーに他の同意を許可するユーザー インターフェイス (UI) を表示します。 この UI には、認証 API を使用してAAD同意ダイアログ ボックスをトリガーする[ボタンAAD必要があります](~/concepts/authentication/auth-silent-aad.md)。
+4. AAD からより多くの同意を求める場合は、AAD にクエリ文字列パラメーターを含める必要があります。それ以外の場合、AAD は他のスコープを求めずに行います `prompt=consent` 。 [](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context)
     * 代わりに `?scope={scopes}`
     * これを使用する `?prompt=consent&scope={scopes}`
     * メール.Read や User.Read など、ユーザーに求めるすべてのスコープ `{scopes}` が含まれるか確認します。
 5. ユーザーにより多くのアクセス許可が付与された後、これらの他の API へのアクセスを取得するために、フローの代理を再試行します。
 
-### <a name="non-aad-authentication"></a>AAD 以外の認証
+### <a name="non-aad-authentication"></a>非認証AAD認証
 
-上記の認証ソリューションは、ID プロバイダーとして AAD をサポートするアプリとサービスでのみ機能します。 AAD ベース以外のサービスを使用して認証するアプリは、ポップアップ ベースの Web 認証フローを引き続き [使用する必要があります](~/concepts/authentication.md)。
+上記の認証ソリューションは、ID プロバイダーとして認証をサポートするアプリAADにのみ機能します。 非ユーザー ベースのサービスを使用して認証AADするアプリは、ポップアップ ベースの Web 認証フローを引き続[き使用する必要があります](~/concepts/authentication.md)。
 
 > [!NOTE]
-> SSO は、AAD B2C テナント内の顧客所有アプリでサポートされます。
+> SSO は、B2C テナント内の顧客所有AADサポートされます。

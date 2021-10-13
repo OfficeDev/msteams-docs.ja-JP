@@ -5,12 +5,12 @@ description: メッセージング拡張機能アクション コマンドの概
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 8049100e8b72d1e1b7145f8427c6f7e94b5e8af6
-ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
+ms.openlocfilehash: 6f4dd3b68d1012b2abc6534fedaddcd76a2a9538
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "60096668"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291675"
 ---
 # <a name="define-messaging-extension-action-commands"></a>メッセージング拡張機能アクション コマンドの定義
 
@@ -66,10 +66,10 @@ ms.locfileid: "60096668"
 
 ### <a name="create-an-action-command-using-app-studio"></a>App Studio を使用してアクション コマンドを作成する
 
-** App Studio** または Developer Portal を使用してアクション コマンド **を作成できます**。
+アクション コマンドは **、App Studio または開発者ポータルを使用****して作成できます**。
 
 > [!NOTE]
->  App Studio は間もなく奪われる予定です。 新しい開発者ポータルを使用して、Teamsアプリを構成、配布、[および管理します](https://dev.teams.microsoft.com/)。
+> App Studio は間もなく非推奨になります。 新しい開発者ポータルを使用して、Teamsアプリを構成、配布、[および管理します](https://dev.teams.microsoft.com/)。
 
 # <a name="app-studio"></a>[App Studio](#tab/AS)
 
@@ -121,7 +121,7 @@ ms.locfileid: "60096668"
 
     <img src="~/assets/images/messaging-extension/action-command-invoke-location.png" alt="action command invoke location" width="500"/>
 
-1. **[保存]** を選択します。
+1. [**保存**] を選択します。
 1. パラメーターを追加するには、[パラメーター] セクション **の [追加** ] ボタン **を選択** します。
 
 # <a name="developer-portal"></a>[開発者ポータル](#tab/DP)
@@ -180,8 +180,8 @@ ms.locfileid: "60096668"
 
 | プロパティ名 | 用途 | 必須 | マニフェストの最小バージョン |
 |---|---|---|---|
-| `id` | このプロパティは、このコマンドに割り当てる一意の ID です。 ユーザー要求には、この ID が含まれます。 | 必要 | 1.0 |
-| `title` | このプロパティはコマンド名です。 この値は UI に表示されます。 | 必要 | 1.0 |
+| `id` | このプロパティは、このコマンドに割り当てる一意の ID です。 ユーザー要求には、この ID が含まれます。 | はい | 1.0 |
+| `title` | このプロパティはコマンド名です。 この値は UI に表示されます。 | はい | 1.0 |
 | `type` | このプロパティは、 である必要があります `action` 。 | いいえ | 1.4 |
 | `fetchTask` | このプロパティは、タスク モジュールのアダプティブ カードまたは埋め込み Web ビュー、およびパラメーターの静的リストまたは Web ビューを読み込むときにに設定 `true` `false` されます `taskInfo` 。 | いいえ | 1.4 |
 | `context` | このプロパティは、メッセージング拡張機能の呼び出し先を定義する値の任意の配列です。 使用可能な値: `message`、`compose`、`commandBox`。 既定値は `["compose", "commandBox"]` です。 | いいえ | 1.5 |
@@ -191,9 +191,9 @@ ms.locfileid: "60096668"
 | プロパティ名 | 用途 | 必須ですか? | マニフェストの最小バージョン |
 |---|---|---|---|
 | `parameters` | このプロパティは、コマンドのパラメーターの静的な一覧を示します。 の場合にのみ `fetchTask` 使用します `false` 。 | いいえ | 1.0 |
-| `parameter.name` | このプロパティは、パラメーターの名前を表します。 これは、ユーザー要求でサービスに送信されます。 | 必要 | 1.0 |
-| `parameter.description` | このプロパティは、パラメーターの目的または指定する必要がある値の例を示します。 この値は UI に表示されます。 | 必要 | 1.0 |
-| `parameter.title` | このプロパティは、短いユーザーフレンドリーなパラメーターのタイトルまたはラベルです。 | 必要 | 1.0 |
+| `parameter.name` | このプロパティは、パラメーターの名前を表します。 これは、ユーザー要求でサービスに送信されます。 | はい | 1.0 |
+| `parameter.description` | このプロパティは、パラメーターの目的または指定する必要がある値の例を示します。 この値は UI に表示されます。 | はい | 1.0 |
+| `parameter.title` | このプロパティは、短いユーザーフレンドリーなパラメーターのタイトルまたはラベルです。 | はい | 1.0 |
 | `parameter.inputType` | このプロパティは、必要な入力の種類に設定されます。 指定できる値には `text` `textarea` 、、 `number` 、 、 、 `date` 、 `time` が含まれます `toggle` 。 既定値は に設定されます `text` 。 | いいえ | 1.4 |
 
 埋め込み Web ビューを使用している場合は、ボットを直接呼び出さずに、必要に応じてオブジェクトを追加して Web ビュー `taskInfo` をフェッチできます。 このオプションを選択した場合の動作は、静的なパラメーターの一覧を使用する動作と似ています。 ボットとの最初のやり取りが [タスク モジュール送信アクションに応答しているという場合](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)。 オブジェクトを使用している場合 `taskInfo` は、パラメーターをに設定 `fetchTask` する必要があります `false` 。

@@ -4,18 +4,29 @@ description: カードと、ボット、コネクタ、メッセージング拡�
 ms.localizationpriority: medium
 keywords: コネクタ ボット カード メッセージング
 ms.topic: overview
-ms.openlocfilehash: 50e8aa690d4de4dc5464a7e42dbc017e87afe35a
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: 9ddfada39f6170e7fc81092028747230b87e35e3
+ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475798"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "60291612"
 ---
 # <a name="cards"></a>カード
 
 カードは、短い情報や関連する情報のユーザー インターフェイス (UI) コンテナーです。 カードには複数のプロパティと添付ファイルを含め、ボタンを含め、カードアクション [をトリガーできます](~/task-modules-and-cards/cards/cards-actions.md)。 カードを使用して、情報をグループに整理し、ユーザーに情報の特定の部分を操作する機会を与える。
 
-Teams のボットは、アダプティブ カード、ヒーロー カード、リスト カード、Office 365 コネクタ カード、レシート カード、サインイン カード、サムネイル カード、カード コレクションの種類をサポートします。 カードの種類に応じて、Markdown または HTML を使用してリッチ テキスト書式をカードに追加できます。 ボットとメッセージング拡張機能で使用されるカードは、Microsoft Teams、 で、これらのカードアクションに追加して `openUrl` `messageBack` `imBack` `invoke` 応答します `signin` 。
+次の種類のTeamsのボットがサポートされています。
+ 
+- アダプティブ カード
+- ヒーロー カード
+- リスト カード
+- Office 365コネクタ カード
+- レシート カード
+- サインイン カード
+- サムネイル カード
+- カード コレクション
+
+カードの種類に応じて、Markdown または HTML を使用してリッチ テキスト書式をカードに追加できます。 ボットとメッセージング拡張機能で使用されるカードは、Microsoft Teams、 で、これらのカードアクションに追加して `openUrl` `messageBack` `imBack` `invoke` 応答します `signin` 。
 
 Teamsは、次の 3 つの異なる場所でカードを使用します。
 
@@ -62,9 +73,9 @@ Teamsは、次の 3 つの異なる場所でカードを使用します。
 
 受信 Webhook を使用したアダプティブ カードを使用すると、アダプティブ カードの豊富で柔軟な機能を使用できます。 Web サービスから受信 Webhooks を使用Teamsデータを送信します。
 
-## <a name="support-for-aad-object-id-and-upn-in-user-mention"></a>ユーザーメンションでの AAD オブジェクト ID と UPN のサポート 
+## <a name="support-for-aad-object-id-and-upn-in-user-mention"></a>ユーザーメンションAADオブジェクト ID と UPN のサポート 
 
-アダプティブ カードを使用したボットは、既存の ID に加えて、AAD オブジェクト ID やユーザー原則名 (UPN) などのユーザーメンション ID をサポートします。 受信 Webhooks は、AAD オブジェクト ID と UPN を持つアダプティブ カードでのユーザーメンションのサポートを開始します。
+アダプティブ カードを使用したボットは、既存の ID に加えて、AAD オブジェクト ID やユーザー原則名 (UPN) などのユーザーメンション ID をサポートします。 受信 Webhooks は、アダプティブ カードのユーザーメンションをサポートし始め、AADオブジェクト ID と UPN を使用します。
 
 ## <a name="see-also"></a>関連項目
 
