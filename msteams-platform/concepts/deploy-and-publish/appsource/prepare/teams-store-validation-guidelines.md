@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 00feea2fe76d346a0313a9677d5a0493771586dd
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: e0d2edea9cdfcdba2cc7c65c15085903bd0d483c
+ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475707"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "60260534"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams ストア検証ガイドライン
 
@@ -84,7 +84,7 @@ Microsoft Azure Bot Service を使用するアプリ (ボットやメッセー�
 * **サインイン、サインアウト、サインアップのエクスペリエンス**:
   * 外部アカウントまたはサービスに依存するアプリでは、シンプルでわかりやすいサインイン、サインアウト、およびサインアップ エクスペリエンスを提供する必要があります。
   * ユーザーがサインアウトする場合は、アプリからのみサインアウトし、Teams にはサインインしたままにする必要があります。
-* **コンテンツ共有エクスペリエンス**: Teams チャネルでコンテンツを共有するために外部サービスを使用した認証を必要とするアプリは、外部サービスでその機能がサポートされている場合、コンテンツを切断または共有解除する方法をヘルプ ドキュメント (または同様のリソース) で明示する必要があります。 これは、コンテンツの共有を解除する機能が、Teams アプリに存在する必要があるということではありません。
+* **コンテンツ共有エクスペリエンス**: Teams チャネルでコンテンツを共有するために外部サービスを使用した認証を必要とするアプリは、外部サービスでその機能がサポートされている場合、コンテンツを切断または共有解除する方法をヘルプ ドキュメント (または同様のリソース) で明示する必要があります。これは、コンテンツの共有を解除する機能が、Teams アプリに存在する必要があるということではありません。
 
 #### <a name="government-community-cloud-listings"></a>Government Community Cloud の一覧表示
 
@@ -148,7 +148,7 @@ Teams アプリ マニフェストは、アプリの構成を定義します。
 
 * マニフェストは、最新のマニフェスト スキーマに適合している必要があります。 詳細については、「[マニフェストのリファレンス](~/resources/schema/manifest-schema.md)」を参照してください。
 * アプリにボットやメッセージング拡張機能が含まれている場合、マニフェストは、ボット名、ロゴ、プライバシー ポリシーのリンク、サービス使用条件のリンクなど、ボット フレームワーク メタデータと一致している必要があります。
-* アプリが Azure Active Directory (Azure AD) を認証に使用する場合は、マニフェストに Azure AD Application (クライアント) ID を含めます。 詳細については、「[マニフェストのリファレンス](~/resources/schema/manifest-schema.md#webapplicationinfo)」を参照してください。
+* アプリが Azure Active Directory (Azure AD) を認証に使用する場合は、マニフェストに Azure AD Application (クライアント) ID を含めます。詳細については、「[マニフェストのリファレンス](~/resources/schema/manifest-schema.md#webapplicationinfo)」を参照してください。
 
 ### <a name="app-icons"></a>アプリのアイコン
 
