@@ -5,12 +5,12 @@ keywords: 開発者ポータル チームの開始
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 84f3e5724adf3256fff3086158345fc3777513bb
-ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
+ms.openlocfilehash: 41aade2eaedee2095e60288a7e4021897bb1a3fa
+ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "60096576"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "60378913"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>開発者ポータルを使用してアプリを管理Microsoft Teams
 
@@ -118,3 +118,7 @@ ms.locfileid: "60096576"
 * **シーン スタジオ**: 会議 [のカスタム一](~/apps-in-teams-meetings/teams-together-mode.md)緒にモード のTeamsします。
 * **アダプティブ カード エディター**: アプリに含めるアダプティブ カードを作成およびプレビューします。
 * **Microsoft ID プラットフォーム管理**: アプリを Azure Active Directory (Azure AD) に登録して、ユーザーがサインインして API へのアクセスを提供します。
+
+## <a name="see-also"></a>関連項目
+
+[SaaS オファーをアプリにMicrosoft Teamsする](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

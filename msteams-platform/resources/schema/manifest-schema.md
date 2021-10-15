@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: ae77a84c52fb3f9934d1d499fd59f517758019d6
-ms.sourcegitcommit: 93ed5629650b417a191c5d8867645a198fe45e4e
+ms.openlocfilehash: 2b23c0378acd82d8f54f419a61699d65bd685709
+ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2021
-ms.locfileid: "60127260"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "60378892"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>リファレンス: マニフェスト スキーマのMicrosoft Teams
 
@@ -298,7 +298,7 @@ ms.locfileid: "60127260"
     "team": "bot", 
     "groupchat": "bot"
   },
-  "configurableProperties": [
+ "configurableProperties": {
      "name",
      "shortDescription",
      "longDescription",
@@ -308,7 +308,7 @@ ms.locfileid: "60127260"
      "developerUrl",
      "privacyUrl",
      "termsOfUseUrl"        
-  ]              
+  }
 }
 ```
 
@@ -370,7 +370,7 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 |`short`|30 文字|✔|アプリの短い表示名。|
 |`full`|100 文字||完全なアプリ名が 30 文字を超える場合に使用されるアプリの完全な名前。|
 
-## <a name="description"></a>description
+## <a name="description"></a>説明
 
 **必須**—object
 
@@ -496,7 +496,7 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |title|string|12 |✔|ボット コマンド名。|
-|description|string|128 文字|✔|単純なテキストの説明、またはコマンド構文とその引数の例。|
+|説明|string|128 文字|✔|単純なテキストの説明、またはコマンド構文とその引数の例。|
 
 ## <a name="connectors"></a>コネクタ
 
@@ -523,7 +523,7 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 
 アイテムは、型のすべての要素を持つ配列 (最大 1 つの要素) です `object` 。 このブロックは、メッセージング拡張機能を提供するソリューションにのみ必要です。
 
-|名前| 型 | 最大サイズ | 必須 | 説明|
+|名前| 種類 | 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`botId`|string|64|✔|ボット フレームワークに登録されているメッセージング拡張機能をバックするボットの一意の Microsoft アプリ ID。 ID は、アプリ全体の ID と同じにできます。|
 |`commands`|オブジェクトの配列|10|✔|メッセージング拡張機能がサポートするコマンドの配列。|
@@ -604,11 +604,11 @@ Teams機能するために独自の url をSharePointするアプリには、有
 
 **省略** 可能な —object
 
-ユーザーがアプリAzure Active Directoryシームレスにサインインするのに役立つ、アプリ ID と Microsoft Graph情報を提供します。 アプリが AAD に登録されている場合は、アプリ ID を指定する必要があります。 管理者は、管理者センターでアクセス許可を簡単に確認し、Teamsを許可できます。
+ユーザーがアプリAzure Active DirectoryシームレスAADを支援するために、アプリ ID と Microsoft Graph情報を提供します。 アプリがアプリに登録されているAAD、アプリ ID を指定する必要があります。 管理者は、管理者センターでアクセス許可を簡単に確認し、Teamsを許可できます。
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`id`|string|36 文字|✔|アプリの AAD アプリケーション ID。 この ID は GUID である必要があります。|
+|`id`|string|36 文字|✔|AADのアプリケーション ID を指定します。 この ID は GUID である必要があります。|
 |`resource`|string|2048 文字|✔|SSO の認証トークンを取得するためのアプリのリソース URL。 </br> **注:** SSO を使用していない場合は、エラー応答を回避するために、このフィールドにダミーの文字列値をアプリ マニフェストに https://notapplicable 入力してください。 |
 |`applicationPermissions`|文字列の配列|128 文字||詳細なリソース [固有の同意を指定します](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)。|
 
@@ -732,7 +732,7 @@ Teams機能するために独自の url をSharePointするアプリには、有
 
 * `name`: アプリの表示名。
 * `shortDescription`: アプリの簡単な説明です。
-* `longDescription`: アプリの詳細な説明。
+* `longDescription`: アプリの長い説明。
 * `smallImageUrl`: アプリのアウトライン アイコン。
 * `largeImageUrl`: アプリの色アイコン。
 * `accentColor`: 使用する色とアウトライン アイコンの背景。

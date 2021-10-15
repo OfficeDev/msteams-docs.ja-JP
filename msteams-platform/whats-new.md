@@ -4,12 +4,12 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: チームの最新情報
-ms.openlocfilehash: 61f11363246bd250df1dc03e3cd2bb9638d53c73
-ms.sourcegitcommit: c883f9675f3d392e3d77329c97b8e2c4cb26b695
+ms.openlocfilehash: 691f37f2b68cb83f23ba7acd4078dda5adfaa221
+ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2021
-ms.locfileid: "60249781"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "60378920"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
@@ -28,13 +28,13 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 <summary><b>2021</b></summary>
 
-| **日付** | **メモ** | **変更されたトピック** |
+| **日付** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
 |10/08/2021|アダプティブ カードを設計するための新しいベスト プラクティス。|[アプリのアダプティブ カードTeamsする](task-modules-and-cards/cards/design-effective-cards.md)|
 |10/05/2021| 管理者がTeams表示を許可するまで、アプリを非表示にしてください。 | [管理者がTeamsするまでアプリを非表示にする](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) 
 |10/05/2021|モバイル向けアプリTeams計画する|[Teams モバイルの応答タブを計画する](concepts/design/plan-responsive-tabs-for-teams-mobile.md)|
 |10/04/2021| アプリを管理Teamsするための新しい開発者ポータルがTeamsされました。 | [Teams の開発者ポータル](concepts/build-and-test/teams-developer-portal.md) |
-|09/21/2021|Teams、ボットと受信 Webhook のユーザーメンションで AAD オブジェクト ID と UPN をサポートしています。 |[AAD オブジェクト ID と UPN in user mention](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown), [Cards- Overview](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
+|09/21/2021|TeamsボットAAD受信 Webhooks のユーザー メンションでオブジェクト ID と UPN をサポートしています。 |[AADメンションのオブジェクト ID](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown)と UPN の設定 、[カード - 概要](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
 |09/08/2021|会議ステージは GA で利用できます。|[会議で使用するアプリを有効Teamsする](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
 |08/16/2021| アダプティブ カードの入力検証 (すべての機能の場合は v1.3) とユニバーサル アクション (ボット送信カードの場合は v1.4) のサポート。 |[入力検証](/adaptive-cards/authoring-cards/input-validation)、 [アダプティブ カードのユニバーサル アクション v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |08/09/2021|会議ステージは GA で利用できます。|[会議で使用するアプリを有効Teamsする](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
@@ -42,15 +42,15 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 |08/25/2021| シングル サインオン (SSO) を使用してTeamsボットを作成する手順ガイドが導入されました。 | [SSO を使用してボットを作成する手順Teamsガイド](sbs-bots-with-sso.yml) |
 |08/19/2021| ボットをスレッドにインストールするときに受信したインストール更新イベント。 | [インストール更新イベント](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event) |
 |08/12/2021|アダプティブ カードを使用してタブをビルドする|[アダプティブ カードを使用してタブをビルドする](tabs/how-to/build-adaptive-card-tabs.md)|
-|08/04/2021| タブのエクスペリエンスを囲む余白がなくなりました。  | [タブ余白の削除](resources/removing-tab-margins.md) |
-|07/08/2021|会議アプリの機能拡張は、モバイルで利用できます。 モバイル クライアントは、会議中にアプリをサポートします。 |[会議アプリ拡張性](apps-in-teams-meetings/meeting-app-extensibility.md)|
+|08/04/2021|タブのエクスペリエンスを囲む余白がなくなりました。  | [タブ余白の削除](resources/removing-tab-margins.md) |
+|07/08/2021|Teamsは、会議でアプリのサポートを追加します。 |[会議アプリ拡張性](apps-in-teams-meetings/meeting-app-extensibility.md)|
 |06/28/2021|ユーザー選択機能を統合します。|[ユーザー ピッカー機能を統合する](concepts/device-capabilities/people-picker-capability.md)|  
 |06/25/2021| プロアクティブ メッセージを送信する手順ガイドが導入されました。 | [プロアクティブ メッセージを送信する手順ガイド](sbs-send-proactive.yml) |
 |06/09/2021| 属性付きアダプティブ カードのイメージのステージ `allowExpand` ビュー。 | [アダプティブ カードの画像のステージ ビュー](~/task-modules-and-cards/cards/cards-format.md) |
 |05/31/2021| 会話タブ。 | [タブ内のコンテンツに関する会話を開始および続行する](~/tabs/how-to/conversational-tabs.md) |
 |05/24/2021| モバイル パターンTeamsを使用して、アプリの設計ガイドラインを更新しました。|[アプリのTeamsする](~/concepts/design/design-teams-app-overview.md)
 |05/13/2021| mConnect と Skooler に関する情報を追加しました。|[Moodle ラーニング管理システム](resources/moodle-overview.md)
-|05/10/2021| マニフェスト v1.10 がリリースされました。|[マニフェスト スキーマ](resources/schema/manifest-schema.md) |
+|05/10/2021| アプリ マニフェスト v1.10 がリリースされました。|[マニフェスト スキーマ](resources/schema/manifest-schema.md) |
 |05/10/2021| 新しいアプリのカスタマイズ機能。| [組織でアプリをカスタマイズする](concepts/design/enable-app-customization.md) |
 |05/07/2021| チャットでの音声通話とビデオ通話のディープ リンク。 |[ディープ リンク](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
 |04/30/2021|アプリをストアに発行する方法に関する新Teamsガイダンス。|[アプリを Teams ストア](concepts/deploy-and-publish/appsource/publish.md)に発行Teams[検証ガイドライン](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
@@ -77,7 +77,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
   
 <summary><b>2020</b></summary>
 
-| **日付** | **メモ** | **変更されたトピック** |
+| **日付** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
 |11/30/2020|ID プラットフォームとタブTeams Toolkit Visual Studio Code統合。|[タブ用のシングル サインオンTeams ToolkitとVisual Studio Code認証](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Teamsバージョン 1.8 に更新されたアプリ マニフェスト。|[リファレンス: マニフェスト スキーマのMicrosoft Teams](resources/schema/manifest-schema.md)|
@@ -111,7 +111,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
   
 <summary><b>2019</b></summary>
 
-| **日付** | **メモ** | **変更されたトピック** |
+| **日付** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
 | 12/26/2019 | ボットに送信されるペイロード内のパラメーターは暗号化されなくなったため、この値を使用してこれらのメッセージへのディープリンク `replyToId` を作成できます。 メッセージ ペイロードには、パラメーターに暗号化された値が含まれます `legacy.replyToId` 。  |
 | 11/05/2019 | JavaScript SDK を使用したシングル サインオンTeams使用します。 | [シングル サインオン](tabs/how-to/authentication/auth-aad-sso.md) |
@@ -141,7 +141,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 <summary><b>2018</b></summary>
 
-| **日付** | **メモ** | **変更されたトピック** |
+| **日付** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
 | 2018 年 11 月 12 日 | グループ チャット内のタブは、リリースされたバージョンのグループ チャットでTeams。 この作業の一環として、[タブ] セクションはわかりやすくするために再作業されています。| [構成可能なタブ](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | ノード JS と .NET/C# の開始は、Teams で App Studio を使用するように更新され、Azure での Node ベースの Teams アプリのホスティングに新しいセクションが追加されました。 | [C#/.NET](~/get-started/get-started-dotnet-app-studio.md)と App Studio を使用して Microsoft Teams プラットフォームで始める 、 Node JS と[App Studio](~/get-started/get-started-nodejs-app-studio.md)を使用した Microsoft Teams プラットフォームの使用を開始する[、Azure](~/get-started/get-started-nodejs-in-azure.md)でノード Teams アプリをホストする|
@@ -163,7 +163,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 | 05/29/2018 | アダプティブ カードは、Teams。 | [Teams でのアダプティブ カードのアクション](task-modules-and-cards/cards/cards-reference.md) |
 | 04/17/2018 | replyToID がペイロードに追加され、カード `Invoke` アクションが `MessageBack` 実行されます。 これは、カードアクションが送信されたメッセージを更新する必要がある場合に特に便利です。 | [カード アクション](~/concepts/cards/cards-actions.md)|
 | 04/12/2018 | このトピックは、プログラミング インターフェイスとこのドキュメント セットTeams変更を追跡するために追加されました。 | [新機能](~/whats-new.md)|
-| 04/10/2018 | パスでテナント ID を一貫して使用する認証 URL を変更しました。 | [タブの認証フロー](~/concepts/authentication/auth-flow-tab.md) [、AAD タブ認証](~/concepts/authentication/auth-tab-AAD.md)|
+| 04/10/2018 | パスでテナント ID を一貫して使用する認証 URL を変更しました。 | [タブ 、タブ認証](~/concepts/authentication/auth-flow-tab.md)の[AADフロー](~/concepts/authentication/auth-tab-AAD.md)|
 | 04/06/2018 | コマンド ボックスの使用に関する設計ガイドラインを追加しました。 |[[コマンド] ボックス](~/resources/design/framework/command-box.md)|
 | 04/02/2018 | ボットを使用してアプリの通知を送信する。 |[通知のみのボット](~/concepts/bots/bots-notification-only.md)|
 | 03/27/2018 | プロアクティブ メッセージングのドキュメントを拡張しました。 |[会話の開始](./concepts/bots/bot-conversations/bots-conv-proactive.md)|
@@ -180,8 +180,9 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 開発者プレビューは、リリースされていないプラットフォーム機能に早期にアクセスできるTeamsプログラムです。  
 
-| **日付** | **メモ** | **変更されたトピック** |
+| **日付** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+|10/14/2021 | トランザクション可能な SaaS Teamsを使用して、アプリを収益化します。 | [SaaS オファーをアプリにTeamsします](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)。 |
 |06/23/2021| 会議の詳細 API とリアルタイムの会議Teamsイベント。 | [Teams 会議用のアプリを作成する](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
 |06/21/2021|ボットを使用した個人用アプリのアンインストール動作 | [ボットを使用して個人用アプリの動作更新プログラムをアンインストールする](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| チャットに対するリソース固有の同意。 |[リソース固有の同意](graph-api/rsc/resource-specific-consent.md)、[リソース固有](graph-api/rsc/test-resource-specific-consent.md)の同意のアクセス許可をテストするTeams|
@@ -214,4 +215,4 @@ RSS フィードを構成することでTeamsプラットフォームの更新�
 1. [RSS 接続の名前 **を入力する] に名前を入力します**。
 1. [RSS **https://aka.ms/TeamsPlatformUpdates** フィード **のアドレス] に入力します**。
 1. [ダイジェスト頻度] ドロップダウン リストからフィード **の頻度を** 選択します。
-1. **[保存]** を選択します。
+1. [**保存**] を選択します。

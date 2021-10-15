@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: e0d2edea9cdfcdba2cc7c65c15085903bd0d483c
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: e54581a809cd72257ad7c285f9c36acc0691f922
+ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260534"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "60378899"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams ストア検証ガイドライン
 
@@ -108,6 +108,9 @@ iOS 版または Android 版 Teams で実行するアプリは、以下のガイ
 * アプリにアカウントが必要な場合は、ユーザーが無料でアカウントに登録できる必要があります。 **無料版** または **無料アカウント** という用語の使用は禁止されています。
 * アカウントが無期限に有効か、期間限定であるかを決定することができますが、アカウントが期限切れになると、支払いの必要性を示す UI、テキスト、リンクが表示されない可能性があります。
 * アプリのプライバシー ポリシーと使用条件のページにも、商用の UI またはストアへのリンクがないことが必要です。
+
+> [!NOTE]
+> Teams ストアのリストには、アプリのサブスクリプション プランや購入ライセンスを含めることができます。 詳細については、「[アプリに SaaS オファーを含める](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)」を参照してください。
 
 ## <a name="general-functionality-and-performance"></a>一般的な機能とパフォーマンス
 
