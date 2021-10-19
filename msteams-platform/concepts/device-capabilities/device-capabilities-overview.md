@@ -6,16 +6,18 @@ ms.author: surbhigupta
 keywords: カメラ イメージ メディア マイク マイク QR コード qrcode バーコード バーコード スキャン スキャナーの場所マップ機能ネイティブ デバイスのアクセス許可
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 6b1fcb436dc77c1859c81010c1d1eb5adcc3773a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 8e8c7d7920d3a00d3414226296d9baf3dc209be2
+ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156927"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "60496194"
 ---
 # <a name="device-capabilities"></a>デバイス機能
 
 Microsoft Teamsプラットフォームは、組み込みのファースト パーティ エクスペリエンスと一致する開発者機能を継続的に強化しています。 拡張されたTeamsプラットフォームを使用すると、パートナーはカメラ、QR、バーコード スキャナー、フォト ギャラリー、マイク、場所などのデバイス機能を Web アプリと統合できます。 この統合により、アプリ開発の障壁が軽減され、開発サイクルが短縮され、開発者コミュニティの新しいシナリオや使用例が作成されます。
+
+ブラウザーでは、デバイスのアクセス許可が異なります。 詳細については、「ブラウザー デバイス [のアクセス許可」を参照してください](browser-device-permissions.md)。
 
 ## <a name="native-device-capabilities"></a>ネイティブ デバイスの機能
 
@@ -25,7 +27,7 @@ Microsoft Teamsプラットフォームは、組み込みのファースト パ�
     * マイク
     * ギャラリー
     * QR またはバーコード スキャナー
-* 場所
+* Location
 
 デバイス機能へのアクセスを取得した後、これらの機能を Teamsプラットフォームと統合して、共同作業のエクスペリエンスを向上できます。 
 
@@ -43,5 +45,3 @@ Microsoft Teamsプラットフォームは、組み込みのファースト パ�
 * 場所ピッカーを使用 [して場所を共有します](location-capability.md)。
 
 また、ユーザーが Web アプリ エクスペリエンス[](people-picker-capability.md)Teamsユーザーを検索および選択できるユーザー選択コントロールを統合することもできます。
-
-

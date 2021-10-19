@@ -4,12 +4,12 @@ keywords: teams アプリの機能のアクセス許可
 description: 通常、ユーザーの同意が必要なネイティブ機能へのアクセスを要求するためにアプリ マニフェストを更新する方法
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 33a0fc390dc2123ccb77901acb7967b1b9732e77
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 84c866ddaae371b2c0e40defcbb1cef7c1194f0d
+ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156599"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "60496208"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>アプリのデバイスのアクセス許可をMicrosoft Teamsする
 
@@ -32,7 +32,8 @@ ms.locfileid: "59156599"
 * ユーザーの位置情報を使用して、関連する情報を表示します。
 
 > [!NOTE]
-> 現在、Teamsは、マルチウィンドウ アプリ、タブ、および会議サイド パネルのデバイスのアクセス許可をサポートしています。
+> * 現在、Teamsは、マルチウィンドウ アプリ、タブ、および会議サイド パネルのデバイスのアクセス許可をサポートしています。    
+> * ブラウザーでは、デバイスのアクセス許可が異なります。 詳細については、「ブラウザー デバイス [のアクセス許可」を参照してください](browser-device-permissions.md)。
 
 ## <a name="access-device-permissions"></a>デバイスのアクセス許可にアクセスする
 

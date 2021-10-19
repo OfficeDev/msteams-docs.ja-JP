@@ -4,12 +4,12 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: チームの最新情報
-ms.openlocfilehash: 3f32691f13632a695c04f7d1007c78b16040a611
-ms.sourcegitcommit: fdfe0cf5bb72ceecf667d02190bb36a51a22934f
+ms.openlocfilehash: 3e2c7a2002192b7d752602f33865aafb12a8239f
+ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/19/2021
-ms.locfileid: "60483486"
+ms.locfileid: "60496215"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
@@ -183,6 +183,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 | **日付** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+|10/19/2021|ブラウザーのデバイスのアクセス許可。| [ブラウザーのデバイスのアクセス許可](concepts/device-capabilities/browser-device-permissions.md) |
 |10/14/2021 | トランザクション可能な SaaS Teamsを使用して、アプリを収益化します。 | [SaaS オファーをアプリにTeamsします](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)。 |
 |06/23/2021| 会議の詳細 API とリアルタイムの会議Teamsイベント。 | [Teams 会議用のアプリを作成する](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
 |06/21/2021|ボットを使用した個人用アプリのアンインストール動作 | [ボットを使用して個人用アプリの動作更新プログラムをアンインストールする](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|

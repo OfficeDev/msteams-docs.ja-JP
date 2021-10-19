@@ -6,12 +6,12 @@ keywords: カメラ イメージ マイク機能ネイティブ デバイスの�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 907409b9fec308b118e8e323b91fe6d740abf85e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a6c69aa266eb337f6936cd78ecc1128ffcf95855
+ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156176"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "60496201"
 ---
 # <a name="integrate-media-capabilities"></a>メディア機能を統合する 
 
@@ -28,11 +28,12 @@ API 応答エラーを理解して、アプリ[](#error-handling)内のエラー
 
 > [!NOTE] 
 > * 現在、Microsoft Teams機能のサポートはモバイル クライアントでのみ利用できます。   
-> * 現在、Teamsは、マルチ ウィンドウ アプリ、タブ、および会議のサイドパネルに対するデバイスのアクセス許可をサポートしていない。    
+> * 現在、Teamsは、マルチ ウィンドウ アプリ、タブ、および会議のサイドパネルに対するデバイスのアクセス許可をサポートしていない。   
+> * ブラウザーでは、デバイスのアクセス許可が異なります。 詳細については、「ブラウザー デバイス [のアクセス許可」を参照してください](browser-device-permissions.md)。 
 
 ## <a name="update-manifest"></a>マニフェストの更新
 
-プロパティを追加Teamsを[manifest.jsして](../../resources/schema/manifest-schema.md#devicepermissions)、ファイル上のアプリ `devicePermissions` のアプリを更新します `media` 。 これにより、ユーザーがカメラを使用して画像をキャプチャし始める前、ギャラリーを開いて添付ファイルとして送信する画像を選択するか、マイクを使用して会話を録音する前に、ユーザーに必要なアクセス許可を求めできます。 アプリ マニフェストの更新プログラムは次のとおりです。
+プロパティをTeams指定して、[アプリ manifest.json](../../resources/schema/manifest-schema.md#devicepermissions)ファイル `devicePermissions` を更新します `media` 。 これにより、ユーザーがカメラを使用して画像をキャプチャし始める前、ギャラリーを開いて添付ファイルとして送信する画像を選択するか、マイクを使用して会話を録音する前に、ユーザーに必要なアクセス許可を求めできます。 アプリ マニフェストの更新プログラムは次のとおりです。
 
 ``` json
 "devicePermissions": [
@@ -80,7 +81,7 @@ API 応答エラーを理解して、アプリ[](#error-handling)内のエラー
 
 これらのエラーは、アプリで適切に処理Teamsがあります。 次の表に、エラー コードとエラーが生成される条件を示します。 
 
-|エラー コード |  エラー名     | Condition|
+|エラー コード |  エラー名     | 条件|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API は現在のプラットフォームではサポートされていません。|
 | **404** | FILE_NOT_FOUND | 指定されたファイルが指定された場所に見つかりません。|

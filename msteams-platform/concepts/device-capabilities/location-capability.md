@@ -6,12 +6,12 @@ keywords: 場所マップ機能ネイティブ デバイスのアクセス許可
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: ac3227d963baea6f55da81596f2003fd865f32b1
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: e2c1d48087e21250d5e2c7582ee3f5309590225a
+ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156924"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "60496145"
 ---
 # <a name="integrate-location-capabilities"></a>場所機能を統合する 
 
@@ -34,7 +34,7 @@ Teams アプリに場所の機能を統合する主な利点は、Teams プラ�
 
 ## <a name="update-manifest"></a>マニフェストの更新
 
-プロパティを追加Teamsを[manifest.jsして](../../resources/schema/manifest-schema.md#devicepermissions)、ファイル上のアプリ `devicePermissions` のアプリを更新します `geolocation` 。 これにより、アプリは場所機能の使用を開始する前に、ユーザーに必要なアクセス許可を求めできます。 アプリ マニフェストの更新プログラムは次のとおりです。
+プロパティをTeams指定して、[アプリ manifest.json](../../resources/schema/manifest-schema.md#devicepermissions)ファイル `devicePermissions` を更新します `geolocation` 。 これにより、アプリは場所機能の使用を開始する前に、ユーザーに必要なアクセス許可を求めできます。 アプリ マニフェストの更新プログラムは次のとおりです。
 
 ``` json
 "devicePermissions": [
@@ -43,7 +43,8 @@ Teams アプリに場所の機能を統合する主な利点は、Teams プラ�
 ```
 
 > [!NOTE]
-> 要求 **のアクセス許可のプロンプト** は、関連する API が開始されるとTeams表示されます。 詳細については、「デバイスのアクセス [許可を要求する」を参照してください](native-device-permissions.md)。
+> * 要求 **のアクセス許可のプロンプト** は、関連する API が開始されるとTeams表示されます。 詳細については、「デバイスのアクセス [許可を要求する」を参照してください](native-device-permissions.md)。    
+> * ブラウザーでは、デバイスのアクセス許可が異なります。 詳細については、「ブラウザー デバイス [のアクセス許可」を参照してください](browser-device-permissions.md)。   
 
 ## <a name="location-apis"></a>場所 API
 
@@ -93,7 +94,7 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 
 これらのエラーは、アプリで適切に処理Teamsがあります。 次の表に、エラー コードとエラーが生成される条件を示します。 
 
-|エラー コード |  エラー名     | Condition|
+|エラー コード |  エラー名     | 条件|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API は現在のプラットフォームではサポートされていません。|
 | **500** | INTERNAL_ERROR | 必要な操作の実行中に内部エラーが発生します。|
