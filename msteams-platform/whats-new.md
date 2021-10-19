@@ -4,12 +4,12 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: チームの最新情報
-ms.openlocfilehash: 691f37f2b68cb83f23ba7acd4078dda5adfaa221
-ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
+ms.openlocfilehash: 3f32691f13632a695c04f7d1007c78b16040a611
+ms.sourcegitcommit: fdfe0cf5bb72ceecf667d02190bb36a51a22934f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "60378920"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "60483486"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
@@ -30,6 +30,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 | **日付** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+|10/18/2021|タブリンクの分岐とステージ ビュー|[タブリンクの分岐とステージ ビュー](tabs/tabs-link-unfurling.md) |
 |10/08/2021|アダプティブ カードを設計するための新しいベスト プラクティス。|[アプリのアダプティブ カードTeamsする](task-modules-and-cards/cards/design-effective-cards.md)|
 |10/05/2021| 管理者がTeams表示を許可するまで、アプリを非表示にしてください。 | [管理者がTeamsするまでアプリを非表示にする](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) 
 |10/05/2021|モバイル向けアプリTeams計画する|[Teams モバイルの応答タブを計画する](concepts/design/plan-responsive-tabs-for-teams-mobile.md)|
@@ -188,7 +189,6 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 |06/16/2021| チャットに対するリソース固有の同意。 |[リソース固有の同意](graph-api/rsc/resource-specific-consent.md)、[リソース固有](graph-api/rsc/test-resource-specific-consent.md)の同意のアクセス許可をテストするTeams|
 |05/25/2021| 更新された[Teams ToolkitとVisual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)[の](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview)Visual Studio。 | [アプリ開発Teams開始する](~/get-started/prerequisites.md) |
 |05/24/2021|ボットは、リソース固有の同意 (RSC) を使用してすべてのチャネル メッセージを受信できます。|[RSC、ボット会話の](~/bots/how-to/conversations/channel-messages-with-rsc.md)概要、[チャネルと](~/bots/how-to/conversations/conversation-basics.md)グループ[](~/bots/how-to/conversations/channel-and-group-conversations.md)の会話、開発者プレビュー マニフェスト スキーマを使用して[すべてのメッセージを受信する](~/resources/schema/manifest-schema-dev-preview.md) |
-|05/21/2021|タブリンクの分岐とステージ ビュー|[タブリンクの分岐とステージ ビュー](tabs/tabs-link-unfurling.md) |
 
 詳細については、「パブリック開発者[向けプレビュー」を参照Teams。](~/resources/dev-preview/developer-preview-intro.md)
 
