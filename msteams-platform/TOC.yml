@@ -52,6 +52,8 @@
           href: concepts/device-capabilities/device-capabilities-overview.md
         - name: デバイスのアクセス許可を要求する
           href: concepts/device-capabilities/native-device-permissions.md
+        - name: ブラウザーのデバイスのアクセス許可
+          href: concepts/device-capabilities/browser-device-permissions.md
         - name: メディア機能を統合する
           href: concepts/device-capabilities/mobile-camera-image-permissions.md
         - name: QR コードまたはバーコード スキャナー機能を統合する
