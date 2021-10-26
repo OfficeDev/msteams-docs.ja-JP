@@ -5,14 +5,14 @@ description: モバイルでアプリを作成するための計画Teamsガイ�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: a2c8c601ef2c007c112f1e0e5309f0aa90fce106
-ms.sourcegitcommit: 5c0da4f6f24b8ef33da1d235988061546dd324a5
+ms.openlocfilehash: 5ad636f494e57706b280980905e197f03707e379
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2021
-ms.locfileid: "60123898"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566149"
 ---
-# <a name="plan-responsive-tabs-for-teams-mobile"></a>モバイル向けレスポンシブ タブTeams計画する
+# <a name="plan-responsive-tabs-for-teams-mobile"></a>Teams モバイルの応答タブを計画する
 
  Teamsプラットフォームは、モバイルとデスクトップでアプリを構築する機会を提供します。 アプリユーザーは、デスクトップまたはモバイルのどちらか、または両方を好む場合があります。 ユーザーはデスクトップでデータを準備できますが、モバイルを使用してより多くのデータを使用して共有できます。 アプリを構築する鍵は、ユーザーのニーズを理解し、満たします。 ボット、メッセージング拡張機能、コネクタなど、デスクトップとモバイルでシームレスに動作する機能があります。 ただし、タブとタスク モジュールを構築するには、モバイルで Web エクスペリエンスをホストするTeams必要があります。 モバイルでレスポンシブ Web ページを計画するドキュメント ガイドTeamsです。
 
@@ -183,6 +183,6 @@ ms.locfileid: "60123898"
 次の設計と検証のガイドラインは、アプリの範囲に応じて役立ちます。
 
 * [タブの設計](../../tabs/design/tabs.md)
-* [ボットの設計](../../bots/design/bots.md)
+* [ボットをデザインする](../../bots/design/bots.md)
 * [タスク モジュールをデザインする](../..//task-modules-and-cards/task-modules/design-teams-task-modules.md)
 * [ガイドラインの検証](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)

@@ -5,12 +5,12 @@ description: ボットから会話イベントを処理するMicrosoft Teamsし�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: e9dc8649cde02b2d19feaca001b55795c671cecb
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6dbefee88b1af763d02b3647d21bdc44da9541ec
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156984"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566254"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams ボットの会話イベント
 
@@ -229,7 +229,7 @@ async def on_teams_channel_renamed(
 
 ### <a name="channel-deleted"></a>チャネルが削除されました
 
-チャネル削除イベントは、ボットがインストールされているチームでチャネルが削除されるたびにボットに送信されます。
+チャネル削除イベントは、ボットがインストールされているチームでチャネルが削除されるたびに、ボットに送信されます。
 
 次のコードは、チャネル削除イベントの例を示しています。
 
@@ -313,7 +313,7 @@ async def on_teams_channel_deleted(
 
 ### <a name="channel-restored"></a>チャネルの復元
 
-以前に削除されたチャネルがボットが既にインストールされているチームで復元されるたびに、チャネル復元イベントがボットに送信されます。
+以前に削除されたチャネルが、ボットが既にインストールされているチームで復元されるたびに、チャネル復元イベントがボットに送信されます。
 
 次のコードは、チャネル復元イベントの例を示しています。
 
@@ -658,7 +658,7 @@ async def on_teams_members_removed(
 
 ### <a name="team-renamed"></a>チャットの名前が変更されました
 
-ボットが含むチームの名前が変更された場合、ボットに通知されます。 オブジェクトで `conversationUpdate` イベントを `eventType.teamRenamed` 受け取 `channelData` ります。
+チームの名前が変更された場合、ボットに通知されます。 オブジェクトで `conversationUpdate` イベントを `eventType.teamRenamed` 受け取 `channelData` ります。
 
 次のコードは、チーム名が変更されたイベントの例を示しています。
 
@@ -738,7 +738,7 @@ async def on_teams_team_renamed(
 
 ### <a name="team-deleted"></a>チームが削除されました
 
-ボットが含むチームが削除された場合、ボットに通知されます。 オブジェクトで `conversationUpdate` イベントを `eventType.teamDeleted` 受け取 `channelData` ります。
+チームが削除された場合、ボットに通知されます。 オブジェクトで `conversationUpdate` イベントを `eventType.teamDeleted` 受け取 `channelData` ります。
 
 次のコードは、チームが削除したイベントの例を示しています。
 
@@ -894,7 +894,7 @@ async def on_teams_team_restored(
 
 ### <a name="team-archived"></a>チームがアーカイブされました
 
-ボットは、インストールされているチームがアーカイブされる際に通知を受け取ります。 オブジェクトで `conversationUpdate` イベントを `eventType.teamarchived` 受け取 `channelData` ります。
+チームがインストールおよびアーカイブされた場合、ボットは通知を受け取ります。 オブジェクトで `conversationUpdate` イベントを `eventType.teamarchived` 受け取 `channelData` ります。
 
 次のコードは、チーム アーカイブ イベントの例を示しています。
 
@@ -975,7 +975,7 @@ async def on_teams_team_archived(
 
 ### <a name="team-unarchived"></a>チームのアーカイブが解除されました
 
-ボットがインストールされているチームがアーカイブ解除された場合、ボットは通知を受け取ります。 オブジェクトで `conversationUpdate` イベントを `eventType.teamUnarchived` 受け取 `channelData` ります。
+チームがインストールされ、アーカイブ解除された場合、ボットは通知を受け取ります。 オブジェクトで `conversationUpdate` イベントを `eventType.teamUnarchived` 受け取 `channelData` ります。
 
 次のコードは、チームのアーカイブ解除イベントの例を示しています。
 
@@ -1321,7 +1321,7 @@ turnContext, CancellationToken cancellationToken) {
 
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
-使用不可
+利用不可
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -1380,7 +1380,7 @@ turnContext, CancellationToken cancellationToken) {
 
 # <a name="python"></a>[Python](#tab/python)
 
-使用不可
+利用不可
 
 ---
 

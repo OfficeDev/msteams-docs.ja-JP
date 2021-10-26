@@ -5,12 +5,12 @@ description: ボット メッセージにリッチ書式を追加する
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 1c5c4fc9190712e042398882ae95d31673fc0f37
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 7a8bcc272163a14836fb4b7324cd7ba617bb5409
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156447"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566226"
 ---
 # <a name="format-your-bot-messages"></a>ボット メッセージの書式を設定する
 
@@ -42,7 +42,7 @@ Teamsマークダウンタグと XML 書式タグまたは HTML 書式タグの�
 
 一部のスタイルは現在、すべてのプラットフォームでサポートされていません。 次の表に、テキスト専用メッセージとリッチ カードでサポートされているスタイルとスタイルの一覧を示します。
 
-| スタイル                     | テキスト専用メッセージ | リッチ カード - XML のみ |
+| Style                     | テキスト専用メッセージ | リッチ カード - XML のみ |
 | ---                       | :---: | :---: |
 | 太字                      | ✔ | ✖ |
 | 斜体                    | ✔ | ✔ |
@@ -64,9 +64,9 @@ Teamsマークダウンタグと XML 書式タグまたは HTML 書式タグの�
 
 ### <a name="text-only-messages"></a>テキスト専用メッセージ
 
-次の表に、デスクトップ、iOS、Android でサポートされているスタイルとスタイルの一覧を示します。
+次の表に、デスクトップ、iOS、Android でサポートされているスタイルの一覧を示します。
 
-| スタイル                     | Desktop | iOS | Android |
+| Style                     | Desktop | iOS | Android |
 | ---                       | :---: | :---: | :---: |
 | 太字                      | ✔ | ✔ | ✔ |
 | 斜体                    | ✔ | ✔ | ✔ |

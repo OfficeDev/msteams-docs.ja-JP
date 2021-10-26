@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
 Keywords: メッセージの送信、ユーザー ID の取得、チャネル ID の取得、会話 ID の取得
-ms.openlocfilehash: 43fd90e292c51d81e6f4ad51610b72acb245160e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 3069e42904cc7fcb51286cd229108793caaf4360
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156861"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566282"
 ---
 # <a name="proactive-messages"></a>プロアクティブ メッセージ
 
@@ -90,8 +90,8 @@ ms.locfileid: "59156861"
 プロアクティブ メッセージングを使用して通知を送信するには、ユーザーが通知に基づいて一般的なアクションを実行するための明確なパスを持っている必要があります。 ユーザーが通知を受け取った理由を明確に理解してください。 良好な通知メッセージには、通常、次のものが含まれます。
 
 * 何が起こったか: 通知の原因を明確に示します。
-* 結果は何でした: 通知を発生するために更新されたアイテムを明確にする必要があります。
-* Whoトリガーされたイベント:Who通知の送信を引き起こしたアクションを指定します。
+* 結果は何でした: 明確である必要があります。通知を取得するために更新されるアイテムは何ですか。
+* Who、またはトリガーされたWho、または何がアクションを実行したのか、通知が送信されました。
 * ユーザーが応答で実行できる操作: 通知に基づいてユーザーが簡単にアクションを実行できます。
 * ユーザーがオプトアウトする方法: ユーザーが追加の通知をオプトアウトするパスを指定する必要があります。
 

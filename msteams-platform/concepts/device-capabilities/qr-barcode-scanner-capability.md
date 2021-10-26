@@ -6,12 +6,12 @@ keywords: カメラ メディア QR コード qrcode バーコード バーコ�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 470360fcc489248806d746587344c7a19c91145c
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a3ec2b8735c0d1a9a234fba6a34e7040d819fc9b
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156572"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566359"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>QR コードまたはバーコード スキャナー機能を統合する 
 
@@ -34,7 +34,7 @@ API 応答エラーを理解して、アプリ[](#error-handling)内のエラー
 
 ## <a name="update-manifest"></a>マニフェストの更新
 
-プロパティを追加Teamsを[manifest.jsして](../../resources/schema/manifest-schema.md#devicepermissions)、ファイル上のアプリ `devicePermissions` のアプリを更新します `media` 。 これにより、QR またはバーコード スキャナー機能の使用を開始する前に、アプリでユーザーに必要なアクセス許可を求めできます。 アプリ マニフェストの更新プログラムは次のとおりです。
+プロパティをTeams指定して、[アプリ manifest.json](../../resources/schema/manifest-schema.md#devicepermissions)ファイル `devicePermissions` を更新します `media` 。 これにより、QR またはバーコード スキャナー機能の使用を開始する前に、アプリでユーザーに必要なアクセス許可を求めできます。 アプリ マニフェストの更新プログラムは次のとおりです。
 
 ``` json
 "devicePermissions": [
@@ -55,7 +55,7 @@ API 応答エラーを理解して、アプリ[](#error-handling)内のエラー
 
 | バーコードの種類 | Android でサポートされる | iOS でサポート |
 | ---------- | ---------- | ------------ |
-| Codebar | はい | なし |
+| Codebar | はい | いいえ |
 | コード 39 | はい | はい | 
 | コード 93 | はい | はい |
 | コード 128 | はい | はい |
@@ -63,8 +63,8 @@ API 応答エラーを理解して、アプリ[](#error-handling)内のエラー
 | EAN-8 | はい | はい |
 | ITF | いいえ | はい |
 | QR コード | はい | はい |
-| RSS の展開 | はい | なし |
-| RSS-14 | はい | なし |
+| RSS の展開 | はい | いいえ |
+| RSS-14 | はい | いいえ |
 | UPC-A | はい | はい |
 | UPC-E | はい | はい |
 
@@ -76,7 +76,7 @@ API 応答エラーを理解して、アプリ[](#error-handling)内のエラー
 
 これらのエラーは、アプリで適切に処理Teamsがあります。 次の表に、エラー コードとエラーが生成される条件を示します。 
 
-|エラー コード |  エラー名     | Condition|
+|エラー コード |  エラー名     | 条件|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API は現在のプラットフォームではサポートされていません。|
 | **500** | INTERNAL_ERROR | 必要な操作の実行中に内部エラーが発生します。|

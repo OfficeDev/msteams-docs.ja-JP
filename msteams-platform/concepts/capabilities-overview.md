@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 09/22/2020
-ms.openlocfilehash: a10c991c374392afca0ce793c0c34ea3fc0ca611
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: eae30ddfd735730208c4f1ac47cfd5ec2a8c2c88
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156329"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566296"
 ---
 # <a name="understand-microsoft-teams-app-capabilities"></a>アプリMicrosoft Teamsについて
 
@@ -37,7 +37,7 @@ ms.locfileid: "59156329"
 ## <a name="always-consider-your-user"></a>ユーザーを常に考慮する
 
 アプリ開発に関するTeams理解すると、その基本的な基礎を理解できます。 特定の機能を構築する方法は複数あると理解しています。 このようなシナリオでは、ユーザーによりネイティブなエクスペリエンスを提供する方法を検討してください。
-たとえば、アプリ内のタブとして構築されたフォームでユーザー入力を収集できます。 また、ビューを切り替え、ユーザーの作業フローを中断することなく、タスク モジュールを使用してこれを実行できます。 ユーザーの通常の作業フローから最も逸脱しない拡張ポイントを選択することが重要です。
+たとえば、アプリ内のタブとして構築されたフォームでユーザー入力を収集できます。 また、ビューを切り替えてユーザーのワークフローを中断することなく、タスク モジュールを使用してこれを実行できます。 ユーザーの通常のワークフローからの偏差を最も少ない拡張ポイントを選択することが重要です。
 
 ## <a name="government-community-cloud-gcc"></a>Government Community Cloud (GCC)
 
@@ -57,7 +57,7 @@ Government Community Cloudは、商用環境の政府に焦点を当てたコピ
 | カスタム メッセージング拡張機能 | ❌ | ❌ | ❌ |
 | カスタム コネクタ | ❌ | ❌ | ❌ |
 
-次の一覧は、機能GCC、GCC、DOD の可用性を識別するのに役立ちます。
+次の一覧は、機能の GCC、GCC-高、DOD の可用性を識別するのに役立ちます。
 
 * サード パーティ製アプリについては [、「Web アプリと会議](../samples/integrating-web-apps.md) アプリの機能拡張」 [を参照してください](../apps-in-teams-meetings/meeting-app-extensibility.md)。
 * ボットについては[、「Teams](../get-started/first-app-bot.md)用の最初の会話型ボットの構築、Teams ボットの設計[、Microsoft Teams](../bots/design/bots.md)アプリへの[](../resources/bot-v3/bots-overview.md)ボットの追加、Teams でのボットの追加[」をご覧ください](../bots/what-are-bots.md)。

@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 8ef68f351e8d0d7ee39dfc5ae3816337fc592920
-ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
+ms.openlocfilehash: 5d2855493b4863232655ef808191f671cf784289
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "60017332"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566240"
 ---
 # <a name="messages-in-bot-conversations"></a>ボットの会話内のメッセージ
 
@@ -206,7 +206,7 @@ async def on_members_added_activity(
 * `team`: チャネル コンテキストでのみ渡されます。個人チャットでは渡されない。
   * `id`: チャネルの GUID。
   * `name`: チーム名の変更イベントの場合にのみ渡された [チームの名前](~/bots/how-to/conversations/subscribe-to-conversation-events.md)です。
-* `channel`: ボットが言及されている場合、またはボットが追加されたチームのチャネル内のイベントに対して、チャネル コンテキストでのみ渡されます。
+* `channel`: ボットが言及されている場合、またはボットが追加されたチーム内のチャネルのイベントに対して、チャネル コンテキストでのみ渡されます。
   * `id`: チャネルの GUID。
   * `name`: チャネル変更イベントの場合にのみ渡 [されるチャネル名](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。
 * `channelData.teamsTeamId`: 非推奨です。 このプロパティは、下位互換性のためにのみ含まれます。
@@ -236,7 +236,7 @@ async def on_members_added_activity(
 
 ## <a name="message-content"></a>メッセージの内容
 
-| フォーマット    | ユーザーからボットへ | ボットからユーザーへ | 備考                                                                                   |
+| フォーマット    | ユーザーからボットへ | ボットからユーザーへ | メモ                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | リッチ テキスト | ✔                | ✔                | ボットはリッチ テキスト、画像、カードを送信できます。 ユーザーは、リッチ テキストと画像をボットに送信できます。                                                                                        |
 | ピクチャ  | ✔                | ✔                | 最大 1024 × 1024 および 1 MB (PNG、JPEG、または GIF 形式)。 アニメーション GIF はサポートされていません。  |
@@ -333,7 +333,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 画像は、PNG、JPEG、または GIF 形式× 1024、1024、1 MB までです。 アニメーション GIF はサポートされていません。
 
-XML を使用して各イメージの高さと幅を指定します。 markdown では、イメージ サイズの既定値は 256 ×256 です。 次に例を示します。
+XML を使用して各イメージの高さと幅を指定します。 markdown では、イメージ サイズの既定値は 256 ×256 です。 例:
 
 * 使用: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>` .
 * 使用 `![Duck on a rock](http://aka.ms/Fo983c)` しない:

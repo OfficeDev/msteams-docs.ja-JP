@@ -5,12 +5,12 @@ description: Microsoft Teams プラットフォームでのメッセージング
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 383b376757c1c0922776d8285449460b879ce274
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6df54db100a5a903493cdc20aa805e5e339ab8f1
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156644"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566142"
 ---
 # <a name="messaging-extensions"></a>メッセージング拡張機能
 
@@ -19,6 +19,9 @@ ms.locfileid: "59156644"
 次の図は、メッセージング拡張機能が呼び出される場所を表示します。
 
 ![メッセージング拡張機能の呼び出し場所](~/assets/images/messaging-extension-invoke-locations.png)
+
+> [!NOTE]
+> @mentioning作成ボックスでは、メッセージ拡張機能がサポートされなくなりました。
 
 ## <a name="scenarios-where-messaging-extensions-are-used"></a>メッセージング拡張機能が使用されるシナリオ
 

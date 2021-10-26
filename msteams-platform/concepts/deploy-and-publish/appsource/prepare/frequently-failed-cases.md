@@ -5,12 +5,12 @@ ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: アプリの申請に関するヒントが頻繁に失敗したケースの検証ガイドライン
-ms.openlocfilehash: 99e5a55e4c3cfb63766d4b0ba72a2cc2824bc823
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: b080bc49c60e70fda66bf45b3f04a79241f8a57f
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156813"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566310"
 ---
 # <a name="tips-for-a-successful-microsoft-teams-app-submission"></a>ヒントアプリの申請が成功Microsoft Teams確認する
 
@@ -82,7 +82,7 @@ ms.locfileid: "59156813"
 
 認証の詳細については、以下を参照してください。
 
-* [認証に関するドキュメント](../../../authentication/authentication.md)
+* [認証ドキュメント](../../../authentication/authentication.md)
 * [ノードのボット認証サンプル](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
 * [Node のタブ認証サンプル](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
 * [タブ/ボット認証 (C#/.NET)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
@@ -192,7 +192,7 @@ ms.locfileid: "59156813"
 #### <a name="avoid-welcome-message-spamming"></a>ウェルカム メッセージの spamming を避ける
 
 * **ボットによるチャネル メッセージ**。 別の新しいチャット投稿を作成してユーザーに迷惑メールを送信しない。 同じスレッドに返信を含む単一のスレッド投稿を作成します。
-* **ボットによる個人用チャット**。 複数のメッセージを送信しない。 完全な情報を含む 1 つのメッセージを送信します。 同じウェルカム メッセージを一定の間隔で繰り返す操作は許可されません。また、spamming と見なされます。
+* **ボットによる個人用チャット**。 複数のメッセージを送信しない。 完全な情報を含む 1 件のメッセージを送信してください。 同じウェルカム メッセージを一定の間隔で繰り返す操作は許可されません。また、spamming と見なされます。
 
 #### <a name="notification-only-bot-welcome-messages"></a>通知専用ボットのウェルカム メッセージ
 
@@ -211,7 +211,7 @@ ms.locfileid: "59156813"
 
 ### <a name="9989-mobile-responsiveness-no-direct-upsell-or-payment"></a>&#9989;の応答性、ダイレクト アップセルや支払いなし
 
-* タスク モジュールのタブ、アダプティブ カード、ボット メッセージ、コンテンツは、さまざまなモバイル デバイス画面サイズに対応している必要があります。
+* タスク モジュール内のタブ、アダプティブ カード、ボット メッセージ、およびコンテンツは、さまざまなモバイル デバイス画面サイズに対応している必要があります。
 * iOS をサポートするアプリは、最新バージョンの iOS をiPadデバイスで完全に機能している必要があります。
 * ユーザーがモバイル OS (Android、iOS) で Teams アプリから他のコンテンツ、アプリ、アドインを購入または取得できるオンライン ストアへのアプリ内購入、試用版、有料版のオファー、またはリンクへの直接参照を含めずにしてください。
 * アドインの iOS バージョンまたは Android バージョンでは、ユーザーに支払いを求める他のアプリ、アドイン、または Web サイトへの UI や言語、リンクを表示しなけってはなりません。

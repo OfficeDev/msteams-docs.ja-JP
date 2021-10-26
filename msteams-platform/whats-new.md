@@ -4,12 +4,12 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: チームの最新情報
-ms.openlocfilehash: 3e2c7a2002192b7d752602f33865aafb12a8239f
-ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
+ms.openlocfilehash: 385dd74cddc9c09a861c1bfb214c1d393bae77a1
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "60496215"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566373"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
@@ -30,6 +30,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 | **日付** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+|10/20/2021| 会議の詳細 API とリアルタイムの会議Teamsイベント。 | [Teams 会議用のアプリを作成する](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
 |10/18/2021|タブリンクの分岐とステージ ビュー|[タブリンクの分岐とステージ ビュー](tabs/tabs-link-unfurling.md) |
 |10/08/2021|アダプティブ カードを設計するための新しいベスト プラクティス。|[アプリのアダプティブ カードTeamsする](task-modules-and-cards/cards/design-effective-cards.md)|
 |10/05/2021| 管理者がTeams表示を許可するまで、アプリを非表示にしてください。 | [管理者がTeamsするまでアプリを非表示にする](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) 
@@ -185,7 +186,6 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 | -------- | --------- | ------------------ |
 |10/19/2021|ブラウザーのデバイスのアクセス許可。| [ブラウザーのデバイスのアクセス許可](concepts/device-capabilities/browser-device-permissions.md) |
 |10/14/2021 | トランザクション可能な SaaS Teamsを使用して、アプリを収益化します。 | [SaaS オファーをアプリにTeamsします](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)。 |
-|06/23/2021| 会議の詳細 API とリアルタイムの会議Teamsイベント。 | [Teams 会議用のアプリを作成する](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
 |06/21/2021|ボットを使用した個人用アプリのアンインストール動作 | [ボットを使用して個人用アプリの動作更新プログラムをアンインストールする](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| チャットに対するリソース固有の同意。 |[リソース固有の同意](graph-api/rsc/resource-specific-consent.md)、[リソース固有](graph-api/rsc/test-resource-specific-consent.md)の同意のアクセス許可をテストするTeams|
 |05/25/2021| 更新された[Teams ToolkitとVisual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)[の](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview)Visual Studio。 | [アプリ開発Teams開始する](~/get-started/prerequisites.md) |
@@ -216,4 +216,4 @@ RSS フィードを構成することでTeamsプラットフォームの更新�
 1. [RSS 接続の名前 **を入力する] に名前を入力します**。
 1. [RSS **https://aka.ms/TeamsPlatformUpdates** フィード **のアドレス] に入力します**。
 1. [ダイジェスト頻度] ドロップダウン リストからフィード **の頻度を** 選択します。
-1. [**保存**] を選択します。
+1. **[保存]** を選択します。

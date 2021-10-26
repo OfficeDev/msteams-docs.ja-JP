@@ -436,7 +436,6 @@
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
         - name: アプリに SaaS オファーを含める
           href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-- name: リソース
 - name: アプリ マニフェスト
   items:
     - name: アプリ マニフェストのスキーマ

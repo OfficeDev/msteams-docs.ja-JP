@@ -4,12 +4,12 @@ description: アプリで使用Virtual Assistantボットとスキルを作成�
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: teams 仮想アシスタント ボット
-ms.openlocfilehash: 1231520278f97fc48ad53937af80c127021bd9c2
-ms.sourcegitcommit: 25a88715d9b06b2afeac14de86177bb34161b0cf
+ms.openlocfilehash: d53f20169d989821e01422f4427827feeaaadbc9
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60266635"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566247"
 ---
 # <a name="create-virtual-assistant"></a>仮想アシスタントを作成する 
 
@@ -42,7 +42,7 @@ Microsoft は、仮想アシスタント[Visual Studioスキルを構築](https:
 
 ### <a name="add-adaptive-cards-to-your-virtual-assistant"></a>アダプティブ カードをアプリに追加Virtual Assistant
 
-要求を適切にディスパッチするには、Virtual Assistant適切な LUIS モデルとそれに関連付けられている対応するスキルを識別する必要があります。 ただし、スキルに関連付けられた LUIS モデルがカード アクション テキスト用にトレーニングされている場合、ディスパッチ機構をカード アクション アクティビティに使用することはできません。 カード アクション のテキストは、固定された定義済みのキーワードであり、ユーザーからのコメントはありません。
+要求を適切にディスパッチするには、Virtual Assistant適切な LUIS モデルとそれに関連付けられている対応するスキルを識別する必要があります。 ただし、スキルに関連付けられた LUIS モデルはカード アクション テキスト用にトレーニングされるので、ディスパッチ機構をカード アクション アクティビティに使用することはできません。 カード アクション のテキストは、固定された定義済みのキーワードであり、ユーザーからのコメントはありません。
 
 この欠点は、カード アクション ペイロードにスキル情報を埋め込む方法によって解決されます。 すべてのスキルは、カード `skillId` アクションの  `value` フィールドに埋め込む必要があります。 各カード アクション アクティビティに関連するスキル情報が含まれるか確認し、Virtual Assistant情報をディスパッチに利用できる必要があります。
 
@@ -70,7 +70,7 @@ Microsoft は、仮想アシスタント[Visual Studioスキルを構築](https:
     };
 ```
 
-次に `SkillCardActionData` 、カード アクション ペイロードからVirtual Assistantテンプレートのクラス `skillId` を紹介します。
+次に `SkillCardActionData` 、カード アクション ペイロードから抽出Virtual Assistantテンプレート `skillId` 内のクラスが導入されます。
 カード アクション ペイロードから抽出  `skillId` するコード スニペットを次のセクションに示します。
 
 ```csharp
@@ -263,7 +263,7 @@ Teamsは、1:1 チャット、グループ チャット、チャネルなど、�
                 "id": "searchQuery",
                 "context": [ "compose", "commandBox" ],
                 "description": "Test command to run query",
-    ....
+    ....   
 ```
 
 対応するVirtual Assistantマニフェスト ファイル コード スニペットを次のセクションに示します。
@@ -277,7 +277,7 @@ Teamsは、1:1 チャット、グループ チャット、チャネルなど、�
                 "id": "searchQuery:<skill_id>",
                 "context": [ "compose", "commandBox" ],
                 "description": "Test command to run query",
-    ....
+    .... 
 ```
 
 コマンドがユーザーによって呼び出されると、Virtual Assistant はコマンド ID を解析して関連付けられたスキルを識別し、コマンド ID から余分な接尾辞を削除してアクティビティを更新し、対応するスキルに転送できます。 `:<skill_id>` スキルのコードは、余分な接尾辞を処理する必要はありません。 したがって、スキル間のコマンドの ID 間の競合は回避されます。 この方法では、作成 **、commandBox、** メッセージなど、すべてのコンテキスト内のすべてのスキルの検索コマンドとアクション コマンドは、Virtual Assistant。 

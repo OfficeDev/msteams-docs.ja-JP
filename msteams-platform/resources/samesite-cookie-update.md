@@ -6,12 +6,12 @@ keywords: cookie 属性 samesite
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: e4f2eff887b84d54de9b59becc850bad8f42a42a
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: b5f66a9f3e542b5abff96c695c3da488773d10cb
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260652"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566128"
 ---
 # <a name="samesite-cookie-attribute"></a>SameSite Cookie 属性 
 
@@ -43,7 +43,7 @@ SameSite cookie 属性をヘッダーに追加することをオプトアウト�
  
 SameSite cookie 属性は次のとおりです。
 
-|Setting | 強制 | 値 |属性の指定 |
+|Setting | 強制 | Value |属性の指定 |
 | -------- | ----------- | --------|--------|
 | **Lax**  | Cookie は、ファースト パーティ **のコンテキストと** HTTP GET 要求でのみ自動的に送信されます。 SameSite Cookie は、イメージや iframe の読み込み呼び出しなど、クロス サイト のサブ要求で差し控えされます。 ユーザーが外部サイトから URL に移動するときに、たとえば、リンクに従って送信されます。| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Strict** |ブラウザーは、ファースト パーティのコンテキスト要求の Cookie のみを送信します。 これらは、Cookie を設定するサイトから発信された要求です。 要求が現在の場所とは異なる URL から発信された場合、属性にタグ付けされた Cookie は `Strict` 送信されません。| オプション |`Set-Cookie: key=value; SameSite=Strict`|

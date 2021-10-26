@@ -5,12 +5,12 @@ description: プラットフォーム開発の基本的な概念Teams説明し�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 6756152ee90c741c7f475fc5153c4b27f9a3bf84
-ms.sourcegitcommit: 5c0da4f6f24b8ef33da1d235988061546dd324a5
+ms.openlocfilehash: f94a53c8aec4ca158745853d31ab7f2b8db2bd40
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2021
-ms.locfileid: "60119651"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566380"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Microsoft Teams開発の基本
 
@@ -18,7 +18,7 @@ Microsoft Teamsの基本は、カスタム アプリを作成する必要があ�
 
 ## <a name="capabilities-and-entry-points"></a>機能とエントリ ポイント
 
-アプリを複数のTeams拡張できます。 アプリを拡張するには、共同作業スペースで動作する主要な機能とエントリ ポイントを理解する必要があります。 アプリを構築する拡張機能ポイントを試してみろ。 重要なアプリ プロジェクト コンポーネントは、アプリ ページを正しく構成するのに役立ちます。 Teamsは、複数の[機能とエントリ ポイント](../concepts/capabilities-overview.md)[を持つ可能性があります](../concepts/extensibility-points.md)。
+アプリを複数のTeams拡張できます。 アプリを拡張するには、すべてのコア機能と、共同作業スペースで機能するエントリ ポイントを理解する必要があります。 アプリを構築する拡張機能ポイントを試してみろ。 重要なアプリ プロジェクト コンポーネントは、アプリ ページを正しく構成するのに役立ちます。 Teamsは、複数の[機能とエントリ ポイント](../concepts/capabilities-overview.md)[を持つ可能性があります](../concepts/extensibility-points.md)。
 
 ## <a name="understand-your-use-cases"></a>ユース ケースを理解する
 
@@ -33,7 +33,7 @@ Microsoft Teamsの基本は、カスタム アプリを作成する必要があ�
 
 [使用例をマップするには、](../concepts/design/map-use-cases.md) 一般的なシナリオとアプリの機能を選択する方法について説明します。 アプリを共有し、外部システム内のアイテムで共同作業を行う情報が提供されます。 ワークフローを開始し、ユーザーに通知を送信する方法も説明します。 開始する場所、ユーザーとのソーシャルを取得する方法、会話型ボット、複数の機能の組み合わせに関するその他のヒントを取得します。
 
-## <a name="plan-responsive-tabs-for-teams-mobile"></a>モバイル向けレスポンシブ タブTeams計画する
+## <a name="plan-responsive-tabs-for-teams-mobile"></a>Teams モバイルの応答タブを計画する
 [モバイルの応答性の高いタブTeams、](../concepts/design/plan-responsive-tabs-for-teams-mobile.md)モバイル向けアプリの計画に役立つ一般的なシナリオTeamsします。 ドキュメント ガイドでは、モバイル上のアプリを戦略化する方法について示します。 また、さまざまなサッジとさまざまな種類のアプリについてTeamsできます。
 
 ## <a name="integrate-device-capabilities"></a>デバイス機能の統合

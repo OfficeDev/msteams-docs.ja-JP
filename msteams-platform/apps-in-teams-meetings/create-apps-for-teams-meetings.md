@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: 56219323f6106619a9dd4f1b26289ecf86d297f3
-ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
+ms.openlocfilehash: 2cd0012a36d3cc941ebcf7e83a4156c9780149a6
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "60017318"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566135"
 ---
 # <a name="prerequisites-for-apps-in-teams-meetings"></a>Teams 会議でのアプリの前提条件
 
@@ -79,7 +79,7 @@ API `GetParticipant` を使用すると、ボットは会議 ID と参加者 ID 
 
 `GetParticipant`API には、次のクエリ パラメーターが含まれています。
 
-|値|型|必須|説明|
+|Value|Type|必須|説明|
 |---|---|----|---|
 |**meetingId**| String | はい | 会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。|
 |**participantId**| String | はい | 参加者 ID はユーザー ID です。 これは、Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO から参加者 ID を取得する方法をお勧めします。 |
@@ -184,7 +184,7 @@ API を使用すると、ユーザー ボット チャット用の既存の会�
 
 `NotificationSignal`API には、次のクエリ パラメーターが含まれています。
 
-|値|型|必須|説明|
+|Value|Type|必須|説明|
 |---|---|----|---|
 |**conversationId**| String | はい | 会話識別子は、ボット呼び出しの一部として使用できます。 |
 
@@ -215,7 +215,7 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 replyActivity.channelData = {
     notification: {
         alertInMeeting: true,
-        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID’
+        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID'
     }
 };
 await context.sendActivity(replyActivity);
@@ -279,7 +279,7 @@ API を使用 `Meeting Details` するには、RSC アクセス許可を取得�
 
 `Meeting Details`API には、次のクエリ パラメーターが含まれています。
 
-|値|型|必須|説明|
+|Value|Type|必須|説明|
 |---|---|----|---|
 |**meetingId**| String | はい | 会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。 |
 
@@ -296,7 +296,7 @@ await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
-使用不可
+利用不可
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -333,9 +333,6 @@ API の JSON 応答 `Meeting Details` 本文は次のとおりです。
 ```
 
 ## <a name="real-time-teams-meeting-events"></a>リアルタイムの会議Teamsイベント
-
-> [!NOTE]
-> この機能は現在、パブリック開発者 [プレビューでのみ利用](../resources/dev-preview/developer-preview-intro.md) できます。
 
 ユーザーはリアルタイムの会議イベントを受信できます。 アプリが会議に関連付けられるとすぐに、実際の会議の開始時刻と会議の終了時刻がボットと共有されます。
 

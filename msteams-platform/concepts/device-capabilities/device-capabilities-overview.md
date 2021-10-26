@@ -6,12 +6,12 @@ ms.author: surbhigupta
 keywords: カメラ イメージ メディア マイク マイク QR コード qrcode バーコード バーコード スキャン スキャナーの場所マップ機能ネイティブ デバイスのアクセス許可
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 8e8c7d7920d3a00d3414226296d9baf3dc209be2
-ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
+ms.openlocfilehash: 9c08b727808f33ad128709ce15ecab2ecc3602b3
+ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "60496194"
+ms.lasthandoff: 10/25/2021
+ms.locfileid: "60566268"
 ---
 # <a name="device-capabilities"></a>デバイス機能
 
@@ -21,15 +21,15 @@ Microsoft Teamsプラットフォームは、組み込みのファースト パ�
 
 ## <a name="native-device-capabilities"></a>ネイティブ デバイスの機能
 
-モバイルデバイスまたはデスクトップ デバイスには、機能と呼ばれるカメラやマイクなどの組み込みデバイスがあります。 JavaScript クライアント SDK で使用できる専用 API を使用して、モバイルまたはデスクトップで次Microsoft Teams[アクセスできます](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)。
+モバイルまたはデスクトップには、機能と呼ばれるカメラやマイクなどの組み込みのデバイスがあります。 JavaScript クライアント SDK で使用できる専用 API を使用して、モバイルまたはデスクトップで次Microsoft Teams[アクセスできます](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)。
 * メディア機能 (次のような)
     * カメラ
     * マイク
     * ギャラリー
     * QR またはバーコード スキャナー
-* Location
+* 場所
 
-デバイス機能へのアクセスを取得した後、これらの機能を Teamsプラットフォームと統合して、共同作業のエクスペリエンスを向上できます。 
+デバイス機能へのアクセスを取得した後、それらを Teamsプラットフォームと統合して、共同作業のエクスペリエンスを向上できます。 
 
 ## <a name="request-device-permissions"></a>デバイスのアクセス許可を要求する
 
@@ -37,7 +37,7 @@ Microsoft Teamsプラットフォームは、組み込みのファースト パ�
  
  ## <a name="integrate-device-capabilities"></a>デバイス機能の統合
 
-デバイス機能にアクセスした後、Teams メディア機能 API を使用して、メディア[](mobile-camera-image-permissions.md)機能を Teams プラットフォームに統合して、ユーザー エクスペリエンスを向上します。 これらの統合機能を使用すると、アプリは次の機能を使用できます。
+デバイス機能にアクセスした後、Teams メディア機能 API を使用して、[](mobile-camera-image-permissions.md)メディア機能を Teams プラットフォームに統合して、ユーザー エクスペリエンスを向上します。 これらの統合機能を使用すると、アプリは次の機能を使用できます。
 
 * 画像をキャプチャして共有します。
 * スキャナー コントロールを使用して QR またはバーコード [をスキャンします](qr-barcode-scanner-capability.md)。
