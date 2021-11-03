@@ -5,12 +5,12 @@ description: アプリのアクティビティ フィード通知を設計し、
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 552541e17422d20297d857a4273ec807d11e6928
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d566def261d6fd1177fed46c31466d248c8e5e3b
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156804"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719918"
 ---
 # <a name="designing-activity-feed-notifications-for-your-microsoft-teams-app"></a>アプリのアクティビティ フィード通知をMicrosoft Teamsする
 
@@ -35,9 +35,9 @@ ms.locfileid: "59156804"
 |1|**アバター**: アクティビティを開始したユーザーを示します。|
 |2|**[アクティビティの種類/アプリ] アイコン**: アクティビティの種類を示します。 アプリ通知の場合、行アイコンはアプリ アイコンに置き換わります。|
 |3|**タイトル (最初の行): Actor + Reason**: *Actor*: アクティビティを開始したユーザーまたはアプリの名前。 *理由*: アクティビティについて説明します。|
-|4 |**タイムスタンプ**: アクティビティが発生した日時を示します。|
-|5 |**場所 (2 行目)**: アクティビティが 2 行目で発生した場所Teams。|
-|6 |**第 3 の情報 (3 行目)**: オプション。 プレビュー テキストまたは追加情報を表示します。|
+|4|**タイムスタンプ**: アクティビティが発生した日時を示します。|
+|5|**場所 (2 行目)**: アクティビティが 2 行目で発生した場所Teams。|
+|6 |**テキスト プレビュー (3 行目)**: 通知の開始から切り捨てられた行を表示します。|
 
 ## <a name="types-of-activity-feed-notification-cards"></a>アクティビティ フィード通知カードの種類
 

@@ -5,12 +5,12 @@ description: アプリの使用例がエクスペリエンス内でどのよう�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: bb5f15d1b8d6b7b04c78bdd3110f97891c0a6165
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: c424b2c03f71449c5c43adc345ed0197eb6ef247
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566289"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720387"
 ---
 # <a name="map-your-use-cases-to-teams-app-capabilities"></a>使用例をアプリの機能Teamsマップする
 
@@ -60,7 +60,7 @@ ms.locfileid: "60566289"
 
 ## <a name="initiate-workflows-and-processes"></a>ワークフローとプロセスの開始
 
-場合によっては、外部システムでプロセスまたはワークフローを簡単に開始する方法が必要な場合があります。
+場合によっては、外部システムでプロセスまたはワークフローを開始する簡単な方法が必要な場合があります。
 
 * **メッセージング拡張機能アクション コマンド**: メッセージからトリガーし、ユーザーはメッセージの内容をすばやく Web サービスに送信できます。
 
@@ -94,9 +94,9 @@ ms.locfileid: "60566289"
 
 タブは埋め込み Web ページです。 SPA で実行できる操作は、このページのタブで行Teams。 スコープに注意を払う必要があります。 グループタブとチャネル タブは共有エクスペリエンス用で、個人用タブは個人的なエクスペリエンス用です。 チームの一覧が [チャネル] タブに表示され、自分のリストが個人用タブに表示されます。
 
-## <a name="start-small"></a>小さく開始する
+## <a name="initiate-small"></a>小さい開始
 
-どこから始めるのか分からないでしょうか? 利用可能なオプションの素晴らしい種類に少し圧倒された感じ? アプリのコア機能を選択し、そこで開始する必要があります。 Teams のさまざまなコンテキストを通じて情報の流れを感じたら、より複雑な対話を描く方が簡単です。
+開始する場所が分からないでしょうか? 利用可能なオプションの素晴らしい種類に少し圧倒された感じ? アプリのコア機能を選択し、そこで開始する必要があります。 Teams のさまざまなコンテキストを通じて情報の流れを感じたら、より複雑な対話を描く方が簡単です。
 
 ## <a name="put-it-all-together"></a>すべてまとめる
 
@@ -104,4 +104,4 @@ ms.locfileid: "60566289"
 
 ## <a name="see-also"></a>関連項目
 
-[最初のアプリをMicrosoft Teamsする](~/get-started/code-samples.md#build-your-first-microsoft-teams-app-overview)
+[最初のアプリをMicrosoft Teamsする](../../get-started/get-started-overview.md)

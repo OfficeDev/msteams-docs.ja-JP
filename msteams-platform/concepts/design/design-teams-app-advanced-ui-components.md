@@ -5,12 +5,12 @@ description: 各コンポーネントで使用される UI コンポーネント
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: a1b9c90b77457e8ff4a478befa36830da0407343
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 2e35b83e66e26155b847ad7cb914c1970397676b
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156948"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719848"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>高度な UI Microsoft Teamsを使用したアプリの設計
 
@@ -75,11 +75,11 @@ Breadcrumbs は、アプリの階層を伝えるナビゲーション支援で�
 
 :::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="例は、デスクトップ上の通知バーの UI テンプレートを示しています。" border="false":::
 
-## <a name="stage"></a>ステージ
+## <a name="stage-view"></a>ステージ ビュー
 
-ステージを使用すると、ユーザーはコンテキストを切り替えることなく、画像、ファイル、web サイトなど、コンテンツを大規模なTeams表示できます。 ステージは、主にコンテンツを表示する目的です。 複雑な対話にはステージを使用しない。
+ステージ ビューを使用すると、ユーザーはコンテキストを切り替えることなく、画像、ファイル、または web サイトのようなコンテンツを大規模なTeams表示できます。 このコンポーネントは、主にコンテンツを表示する目的です。 複雑なやり取りには使用しない。
 
-ステージを実装する方法について [学習します](~/tabs/tabs-link-unfurling.md)。
+ステージ ビューを実装する [方法を参照してください](~/tabs/tabs-link-unfurling.md)。
 
 ### <a name="top-use-cases"></a>上位の使用例
 

@@ -5,12 +5,12 @@ description: Teams プラットフォームでのカスタム タブの概要
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: a4ad7c0d832f7a4c71c3749053333298086dcd28
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6f18760670f81bea0e0c2bad6da9f15bd1982f0f
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156492"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719841"
 ---
 # <a name="microsoft-teams-tabs"></a>Microsoft Teams のタブ
 
@@ -38,7 +38,7 @@ ms.locfileid: "59156492"
 
 個人用タブ [、チャネル](~/tabs/how-to/create-tab-pages/content-page.md) またはグループ タブ、またはタスク モジュールの一部としてコンテンツ ページを作成できます。 Microsoft Teams[](~/tabs/how-to/create-tab-pages/configuration-page.md)アプリを構成し、チャネルまたはグループ チャット タブ、メッセージング拡張機能、または Office 365 Connector を構成する構成ページを作成できます。 ユーザーがインストール後にタブを再構成し、アプリケーション [のタブ削除ページ](~/tabs/how-to/create-tab-pages/removal-page.md) を作成できます。 タブを含むTeamsアプリをビルドする場合は、Android クライアントと[iOS](~/tabs/design/tabs-mobile.md)クライアントの両方でタブがどのように機能Teamsがあります。 タブは、 [基本情報、](~/tabs/how-to/access-teams-context.md) ロケール、テーマ情報を使用してコンテキストを取得する必要があります。また、タブ内の情報 `entityId` `subEntityId` を識別する必要があります。
 
-アダプティブ カードを使用してタブを構築し、ボットTeams別のバックエンドを不要にすることで、すべてのアプリ機能を一元化できます。 [ステージ ビュー](~/tabs/tabs-link-unfurling.md)は、新しい UI コンポーネントで、画面全体で開いたコンテンツをTeamsタブとしてピン留めできます。既存の[リンク解除](~/tabs/tabs-link-unfurling.md)サービスが更新され、アダプティブ カードとチャット サービスを使用して URL をタブに変換するために使用されます。 会話型[](~/tabs/how-to/conversational-tabs.md)のサブエンティティを使用して会話タブを作成できます。ユーザーは、タブ全体を議論する代わりに、特定のタスク、患者、販売機会などのサブエンティティに関する会話をタブで行えます。タブ余白を[変更して、](~/resources/removing-tab-margins.md)アプリを構築する際の開発者のエクスペリエンスを向上できます。
+アダプティブ カードを使用してタブを構築し、ボットTeams別のバックエンドを不要にすることで、すべてのアプリ機能を一元化できます。 [ステージ ビュー](~/tabs/tabs-link-unfurling.md)は、新しい UI コンポーネントで、画面全体で開いたコンテンツをTeamsタブとしてピン留めできます。既存の[リンクの分岐](~/tabs/tabs-link-unfurling.md)解除サービスが更新され、アダプティブ カードとチャット サービスを使用して URL をタブに変換するために使用されます。 会話型[](~/tabs/how-to/conversational-tabs.md)のサブエンティティを使用して会話タブを作成できます。ユーザーは、タブ全体を議論する代わりに、特定のタスク、患者、販売機会などのサブエンティティに関する会話をタブで行えます。タブ余白を[変更して、](~/resources/removing-tab-margins.md)アプリを構築する際の開発者のエクスペリエンスを向上できます。
 
 ## <a name="tab-features"></a>タブ機能
 

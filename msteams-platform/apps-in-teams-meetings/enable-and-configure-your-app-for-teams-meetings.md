@@ -4,12 +4,12 @@ author: surbhigupta
 description: 会議で使用するアプリを有効Teamsする
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: a3c84667e5d526c00e5c1df0035995c53401ab00
-ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
+ms.openlocfilehash: 7f6f1454f92fcc223c8511a05aa5e43133c3f828
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59360483"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720212"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>会議で使用するアプリを有効Teamsする
 
@@ -97,6 +97,7 @@ Teams会議は、組織に共同作業のエクスペリエンスを提供しま
 会議チャットで、キーを入力し **@** 、[ボットの取得 **] を選択します**。
 
 > [!NOTE]
+> * コンテンツ バブルは、ユーザーがアクセスできるアダプティブ カードまたはカードを会議チャットに同時に投稿します。 これにより、会議または会議アプリが最小化Teamsユーザーに役立ちます。
 > * ユーザー ID は、Tabs SSO を使用して [確認する必要があります](../tabs/how-to/authentication/auth-aad-sso.md)。 認証後、アプリは API を使用してユーザー ロールを取得 `GetParticipant` できます。
 > * ユーザー ロールに基づいて、アプリにはロール固有のエクスペリエンスを提供する機能があります。 たとえば、ポーリング アプリでは、開催者と発表者だけが新しいポーリングを作成できます。
 > * 会議の進行中に役割の割り当てを変更できます。 詳細については、「会議での[役割」をTeamsしてください](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)。

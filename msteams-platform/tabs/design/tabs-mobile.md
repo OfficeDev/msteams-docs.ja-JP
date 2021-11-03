@@ -3,12 +3,12 @@ title: モバイルのタブ
 description: モバイルでタブを実装するための開発者Microsoft Teams説明します。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: bc853c995e0a580a2a2580caa8d7c420f7d9680e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 2b540369b2da9fb0d6eae5d6fd8ddf121992147d
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156230"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719855"
 ---
 # <a name="tabs-on-mobile"></a>モバイルのタブ
 
@@ -60,7 +60,7 @@ ms.locfileid: "59156230"
 
 | 機能 | モバイルの可用性 | モバイル動作 |
 |----------|-----------|------------|
-|[チャネルとグループ] タブ|はい|タブは、アプリの構成を使用して Teams モバイル クライアントではなく、デバイスの既定のブラウザーで開きます。これは、ソース コードの関数にも含める `websiteUrl` 必要 `setSettings()` [があります](/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest#functions&preserve-view=true)。 ただし、ユーザーは、アプリの横にある [詳細Teams] を選択し、[開く] を選択してアプリの構成をトリガーすることで、モバイル クライアントのタブを表示 `contentUrl` できます。|
+|[チャネルとグループ] タブ|はい|タブは、アプリの構成を使用して Teams モバイル クライアントではなく、デバイスの既定のブラウザーで開きます。これは、ソース コードの関数にも含める `websiteUrl` 必要 `setSettings()` [があります](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk#settings-namespace)。 ただし、ユーザーは、アプリの横にある [詳細Teams] を選択し、[開く] を選択してアプリの構成をトリガーすることで、モバイル クライアントのタブを表示 `contentUrl` できます。|
 |個人用アプリ|なし|該当なし|
 
 ### <a name="apps-not-on-teams-store"></a>アプリがストアTeamsしない

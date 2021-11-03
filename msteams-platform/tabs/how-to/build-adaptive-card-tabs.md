@@ -5,12 +5,12 @@ description: アダプティブ カードを使用してタブを作成する
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 8a43efabbd9c40537854450581a4e7d996086fc5
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: 09e5a6133ac4c2b33dbf6ffae273e8107a4c67ce
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475588"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720331"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>アダプティブ カードを使用してタブをビルドする
 
@@ -36,7 +36,7 @@ ms.locfileid: "59475588"
 
 アダプティブ カードを使用してタブを作成する前に、次の条件を実行する必要があります。
 
-* ボット開発、[アダプティブ カード](../../bots/what-are-bots.md)、[および](https://adaptivecards.io/)タスク モジュール[](../../task-modules-and-cards/task-modules/task-modules-bots.md)に精通Teams。
+* ボット開発、[アダプティブ カード](../../bots/what-are-bots.md)、[および](https://adaptivecards.io/)タスク[](../../task-modules-and-cards/task-modules/task-modules-bots.md)モジュールについて詳しくTeams。
 * 開発に必要なTeamsボットを作成します。
 
 ## <a name="changes-to-app-manifest"></a>アプリ マニフェストの変更点
@@ -343,7 +343,7 @@ ms.locfileid: "59475588"
     > [!NOTE]
     > アプリ のロゴは、アプリ マニフェスト `icon` で定義されているプロパティを使用して提供されます。 タブ認証応答本文で返されるプロパティでロゴが定義された後に表示されるタイトル `title` 。 
 
-1. **[サインイン]** を選びます。 認証応答本文のプロパティに指定されている認証 URL `value` **に** リダイレクトされます。
+1. [**サインイン**] を選びます。 認証応答本文のプロパティに指定されている認証 URL `value` **に** リダイレクトされます。
 1. ポップアップ ウィンドウが表示されます。 このポップアップ ウィンドウは、認証 URL を使用して Web ページをホストします。
 1. サインインした後、ウィンドウを閉じます。 認証 **コードが** クライアントにTeamsされます。
 1. 次Teamsクライアントは、ホストされた Web ページによって提供される認証コードを含む、サービスへの要求 `tab/fetch` を再発行します。

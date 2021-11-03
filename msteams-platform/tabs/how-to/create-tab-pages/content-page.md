@@ -6,12 +6,12 @@ keywords: teams タブ グループ チャネル構成可能静的
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 1f83f1c46e637a73b52373740d21e32d3eb387e7
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: e85e643179bf3c1c8b9aa3951f560e1f85dad0bc
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156029"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720314"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>タブのコンテンツ ページを作成する
 
@@ -83,7 +83,7 @@ Teams のエンティティへのディープ リンクを作成できます。 
 > [!NOTE]
 > * モバイル クライアントでの動作は、ネイティブ読み込みインジケーター プロパティでは構成できません。 モバイル クライアントは、コンテンツ ページと iframe ベースのタスク モジュール全体で既定でこのインジケーターを表示します。 モバイル上のこのインジケーターは、コンテンツの取得要求が行われたときに表示され、要求が完了するとすぐに却下されます。
 
-アプリ マニフェストで指定する場合は、すべてのタブ構成、コンテンツ、および削除ページとすべての iframe ベースのタスク モジュールは、次の手順 `showLoadingIndicator : true`  に従う必要があります。
+アプリ マニフェストで指定する場合は、すべてのタブ構成、コンテンツ、削除ページ、およびすべての iframe ベースのタスク モジュールは、次の `showLoadingIndicator : true`  手順に従う必要があります。
 
 **読み込みインジケーターを表示する**
 
@@ -107,7 +107,6 @@ Teams のエンティティへのディープ リンクを作成できます。 
 * [Teamsタブ](~/tabs/what-are-tabs.md)
 * [プライベート タブを作成する](~/tabs/how-to/create-personal-tab.md)
 * [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
-* [コンテンツ ページを作成する](~/tabs/how-to/create-tab-pages/content-page.md)
 
 ## <a name="next-step"></a>次の手順
 

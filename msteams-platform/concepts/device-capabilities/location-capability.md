@@ -6,12 +6,12 @@ keywords: 場所マップ機能ネイティブ デバイスのアクセス許可
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: e2c1d48087e21250d5e2c7582ee3f5309590225a
-ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
+ms.openlocfilehash: 66cd0c4f1b0d095551db79f7ed928477124e326b
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "60496145"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719792"
 ---
 # <a name="integrate-location-capabilities"></a>場所機能を統合する 
 
@@ -102,6 +102,12 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 | **4000** | INVALID_ARGUMENTS | API は、間違った引数または不十分な必須引数を使用して呼び出されます。|
 | **8000** | USER_ABORT |ユーザーが操作を取り消しました。|
 | **9000** | OLD_PLATFORM | ユーザーは、API の実装が存在しない古いプラットフォーム ビルドに存在します。 ビルドをアップグレードすると、問題が解決します。|
+
+### <a name="code-sample"></a>コード サンプル
+
+|サンプルの名前 | 説明 | C# | Node.js | 
+|----------------|-----------------|--------------|--------------|
+| アプリ のチェックインの現在の場所 | ユーザーは現在の場所をチェックインし、以前のすべての場所のチェックインを表示できます。| [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/nodejs) |
 
 ## <a name="see-also"></a>関連項目
 

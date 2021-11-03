@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: e54581a809cd72257ad7c285f9c36acc0691f922
-ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
+ms.openlocfilehash: 96bcb97fbb6189a657c9ac2aea167aaaa7f74592
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "60378899"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720226"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams ストア検証ガイドライン
 
@@ -191,7 +191,7 @@ Teams アプリ マニフェストは、アプリの構成を定義します。
 
 **するべきこと**
 
-* [Markdown](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) を使用して説明を書式設定する。
+* Markdown を使用して説明を書式設定する。
 * 積極的な語り口で、ユーザーに直接語りかける。 たとえば、「*あなたは、... ができるようになります*」などです。
 * 箇条書きで機能を一覧表示することで、説明に目を通しやすくなります。
 * ユーザーがアプリをインストールする前に、一覧や関連資料に記載されている機能、特徴、成果物などに対する制限、条件、例外を明確に説明する。 アプリがサポートする Teams 機能は、一覧に記載されているコア機能に関連するものである必要があります。

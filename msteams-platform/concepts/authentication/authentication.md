@@ -4,19 +4,19 @@ description: アプリでの認証Teamsおよびアプリで使用する方法�
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Teams 認証 OAuth SSO AAD
-ms.openlocfilehash: fc10fe795dd278eec2da12b38915a27465a2df9d
-ms.sourcegitcommit: cbc6e8f363b4e80b6cbee098508f9f8affbfac09
+ms.openlocfilehash: 1705e85843fbe8d75af978da8baff081b58c6ca1
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2021
-ms.locfileid: "60221860"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720309"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>ユーザーを認証Microsoft Teams
 
 > [!Note]
 > モバイル クライアントでの Web ベース認証には、JavaScript クライアント SDK のバージョン 1.4.1 以降Teams必要です。
 
-Azure Active Directory (AAD) で保護されたユーザー情報にアクセスし、Facebook や Twitter のようなサービスからデータにアクセスするために、アプリはそれらのプロバイダーとの信頼できる接続を確立します。 アプリがユーザー スコープで Microsoft Graph API を使用する場合は、適切な認証トークンを取得するためにユーザーを認証します。
+Azure Active Directory (AAD) によって保護されたユーザー情報にアクセスし、Facebook や Twitter のようなサービスからデータにアクセスするために、アプリはそれらのプロバイダーとの信頼できる接続を確立します。 アプリがユーザー スコープで Microsoft Graph API を使用する場合は、適切な認証トークンを取得するためにユーザーを認証します。
 
 このTeams、アプリには 2 つの異なる認証フローがあります。 タブ、構成ページ、またはタスク モジュールに[](~/tabs/how-to/create-tab-pages/content-page.md)埋め込まれたコンテンツ ページで、従来の Web ベース認証フローを実行します。 アプリに会話ボットが含まれている場合、OAuthPrompt フロー (およびオプションの Azure Bot Framework のトークン サービス) を使用して、会話の一部としてユーザーを認証することができます。
 
@@ -26,8 +26,8 @@ Azure Active Directory (AAD) で保護されたユーザー情報にアクセス
 
 * [スレッド ボットに認証Teams、](~/bots/how-to/authentication/add-authentication.md)会話型ボットで Web ベースの認証フローを使用する方法について説明します。
 * [タブでの認証フロー](~/tabs/how-to/authentication/auth-flow-tab.md)では、Teams でのタブ認証の仕組みを説明しています。 これは、タブに使用される一般的な Web ベース認証フローを示しています。
-* [タブ内の AAD 認証では](~/tabs/how-to/authentication/auth-tab-AAD.md)、アプリ内のタブ内から AAD に接続するTeams。
-* [サイレント認証 AAD は、AAD](~/tabs/how-to/authentication/auth-silent-AAD.md) を使用してアプリのサインインまたは同意のプロンプトを減らす方法について説明します。
+* [AADの認証では](~/tabs/how-to/authentication/auth-tab-AAD.md)、アプリ内のタブ内から AADに接続する方法について説明Teams。
+* [サイレント認証AAD、](~/tabs/how-to/authentication/auth-silent-AAD.md)アプリでサインインまたは同意のプロンプトを減らす方法について説明AAD。
 * [.Net または C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) [JavaScript または ](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) Node.jsは、Web ベース認証のサンプルを提供します。
 
 ## <a name="the-oauthprompt-flow-for-conversational-bots"></a>会話ボットの OAuthPrompt フロー
@@ -41,7 +41,7 @@ OAuthPrompt の使用の詳細については、以下を参照してくださ�
 
 ## <a name="code-sample"></a>コード サンプル
 
-Bot Framework v4 認証サンプル。
+ボット認証 v3 SDK サンプルを提供します。
 
 | **サンプルの名前** | **説明** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
@@ -51,7 +51,10 @@ Bot Framework v4 認証サンプル。
 
 ## <a name="configure-the-identity-provider"></a>ID プロバイダーを構成する
 
-アプリの認証フローに関係なく、ID プロバイダーがアプリと通信Teamsします。 ほとんどのサンプルとチュートリアルでは、主に ID プロバイダーとして AAD を使用します。 ただし、概念は ID プロバイダーに関係なく適用されます。 
+アプリの認証フローに関係なく、ID プロバイダーがアプリと通信Teamsします。 ほとんどのサンプルとチュートリアルでは、主に id プロバイダー AADを使用します。 ただし、概念は ID プロバイダーに関係なく適用されます。 
 
 詳細については、「ID プロバイダー [の構成」を参照してください](~/concepts/authentication/configure-identity-provider.md)。
 
+## <a name="third-party-cookies-on-ios"></a>iOS 上のサード パーティ Cookie
+
+iOS 14 の更新後、Apple は既定ですべてのアプリのサードパーティ [Cookie](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) アクセスをブロックしました。 したがって、チャネルタブまたはチャット タブおよび個人用アプリの認証にサードパーティの Cookie を利用するアプリは、iOS クライアント上で認証ワークフローをTeamsされません。 プライバシーとセキュリティの要件に準拠するには、トークン ベースのシステムに移動するか、ユーザー認証ワークフローにファースト パーティ Cookie を使用する必要があります。

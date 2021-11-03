@@ -6,12 +6,12 @@ keywords: teams タブ グループ チャネル構成可能
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: cb69a23a3f8446c3f9b78cffbe0dc88d686c4a8a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 48137f7e922ac0b504d7b88465adb42edd3ba4e4
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156221"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720191"
 ---
 # <a name="create-a-configuration-page"></a>構成ページを作成する
 
@@ -90,11 +90,11 @@ ms.locfileid: "59156221"
 
 構成ページ **で [灰色の選択****]** または [赤の選択] ボタンを選択して、タブコンテンツを灰色または赤のアイコンで表示します。
 
-次の図は、灰色のアイコンでタブ コンテンツを表示します。
+次の図は、灰色のアイコンが選択された **タブ コンテンツ** を表示します。
 
 <img src="~/assets/images/tab-images/configure-tab-with-gray.png" alt="Configure tab with select gray" width="400"/>
 
-次の図は、赤いアイコンでタブ コンテンツを表示します。
+次の図は、赤いアイコンが選択された **タブ コンテンツ** を表示します。
 
 <img src="~/assets/images/tab-images/configure-tab-with-red.png" alt="Configure tab with select red" width="400"/>
 

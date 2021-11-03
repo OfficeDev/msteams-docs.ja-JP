@@ -5,20 +5,17 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
-ms.openlocfilehash: e408d1e96b0abe2493d9c801ab947da702b749da
-ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
+ms.openlocfilehash: 72dbbfe62e6f5f975a09b7c0538e0847520670d9
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "60378953"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719799"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>SaaS オファーをアプリにMicrosoft Teamsする
 
 :::row:::
    :::column span="3":::
-
-> [!NOTE]
-> この機能は現在、パブリック開発者 [プレビューでのみ利用](~/resources/dev-preview/developer-preview-intro.md) できます。
 
 取引可能なサービスとしてのソフトウェア (SaaS) オファーを使用すると、Teams ストアの登録情報からサブスクリプション プランを直接販売することで、Teams Teams アプリを収益化できます。 たとえば、誰もがストアにアクセスできる無料アプリを持っているとします。 これで、より多くの機能が必要なユーザーに対して、プレミアムプランとエンタープライズ プランを提供できます。
 

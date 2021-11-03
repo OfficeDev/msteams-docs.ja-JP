@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 8ff8282ae54612c0e1eee1d353777e5dae0b7990
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: 617c7d962dc27964c28af74b73c252b08a39f307
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260541"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720352"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>ストア申請Microsoft Teams準備する
 
@@ -27,9 +27,7 @@ ms.locfileid: "60260541"
 
 アプリMicrosoft Teamsツールを使用すると、パートナー センターに提出する前に問題を特定して修正できます。 このツールは、ストアの検証中に使用したのと同じテスト ケースに対して、アプリの構成を自動的にチェックします。
 
-1. 開発者ポータル[Microsoft Teamsアプリ検証ツールに](https://dev.teams.microsoft.com/validation)移動します。 
-    > [!NOTE]
-    > アプリ検証ツールは [、App Studio でも使用できます](../../../build-and-test/app-studio-overview.md)。
+1. アプリ検証ツール[Microsoft Teamsに移動します](https://dev.teams.microsoft.com/appvalidation.html)。 (注: このツールは App [Studio でも使用](../../../build-and-test/app-studio-overview.md)できます。)
 1. アップロードテストを実行するには、アプリ パッケージをインストールします。
 1. [予備チェックリスト] **に移動し** 、自動化が困難なテスト ケースを確認します。
 1. [構成またはアプリ全般の問題](~/resources/schema/manifest-schema.md) を修正します。 これらの問題は、自動テストでエラーが発生した場合、またはチェックリストのすべての条件を満たしていない場合に発生します。

@@ -5,22 +5,35 @@ ms.topic: overview
 ms.localizationpriority: medium
 ms.author: surbhigupta
 author: KirtiPereira
-ms.openlocfilehash: eb45c741bc60bea3466edeb6abe3f21b4453bec8
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: c653e8a27da47ab38b4209eee5a57d3cf00ab1a9
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156281"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719778"
 ---
 # <a name="moodle-learning-management-system"></a>Moodle ラーニング管理システム
 
-Moodle は、世界最大のオープン ソース学習管理システムです。 このアプリは、学生がコンテンツに参加するための堅牢なクイズツール、採点されたディスカッション、さまざまな課題の種類を含む貴重な機能を通じて、教育者がコースを作成し、整理するのに役立ちます。  
+Moodle は、世界最大のオープン ソース学習管理システムです。 
+
+このアプリは、教育者が次のような貴重な機能を通じてコースを作成および整理するのに役立ちます。
+* 堅牢なクイズ ツール 
+* 採点されたディスカッション
+* 学生がコンテンツに取り組むさまざまな課題の種類  
  
-Moodle は、次のMicrosoft Teams。 Teamsは、リアルタイムのコラボレーション、チームワーク、生産性のハブです。 Office 365、数百のアプリ、チャット、および最大 300 人の参加者のライブ会議機能とのシームレスな統合により、Teams は、教職員と学生がどこにいっても、より効率的に一緒に作業できます。 
+Moodle は、次のMicrosoft Teams。 Teamsは、リアルタイムのコラボレーション、チームワーク、生産性のハブです。 最大 300 人のOffice 365、数百のアプリ、チャット、ライブ会議機能とのシームレスな統合。 Teamsは、教職員と学生がどこにいっても、より効率的に一緒に働く能力を提供します。 
  
-さらに、Moodle プラグインMicrosoft 365、教職員と学生に包括的なエクスペリエンスを提供することで、Moodle を補完します。 Microsoft 365 Moodle プラグインを使用すると、サイト管理者は Office 365 と Moodle の間でユーザーを同期し、ユーザーの照合を自動化し、コースを Microsoft Teams とファイル リポジトリに同期し、OneNote 割り当てを接続し、Office ドキュメントを埋め込めます。  
+Microsoft 365Moodle プラグインは、教職員と学生に包括的なエクスペリエンスを提供することで、Moodle を補完します。 Moodle Microsoft 365を使用すると、サイト管理者は次のユーザーを同期できます。
+
+* Office 365と Moodle
+* ユーザーの照合を自動化する
+* コースとファイル リポジトリMicrosoft Teams同期する
+* Connect OneNote割り当て
+* ドキュメントOffice埋め込み
  
-さらに、mConnect by Skooler や Microsoft 365 Moodle Plugins などの Microsoft Teams アプリは、ムードルを Teams に統合し、教職員と学生は、リアルタイムのコミュニケーションとコラボレーションを行い、Moodle の独自の機能を活用することで、両方の世界を最高の状態にできます。
+Microsoft Teams mConnect by Skooler や Microsoft 365 Moodle Plugins などのアプリは、Moodle をTeams。
+
+教職員と学生は、リアルタイムのコミュニケーションとコラボレーションで、Moodle の独自の機能を活用できます。
 
 ## <a name="mconnect-app-by-skooler"></a>skooler による mConnect アプリ
 

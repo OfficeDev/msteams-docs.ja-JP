@@ -1,26 +1,25 @@
 ---
 title: サーバーを使用したボットAzure Active Directory
-description: Azure AD認証Teamsボットで使用する方法について説明します。
-keywords: teams 認証ボット AAD
+description: ユーザー Azure AD認証Teamsボットで使用する方法について説明します。
+keywords: teams 認証ボットAAD
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 03/01/2018
-ms.openlocfilehash: c3f2f7fe3eb6b10faef2b24b3212081a881d6f8f
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 1f13e561e94029f007ff055627f335d00ee1c441
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156520"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720072"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-bot"></a>ボットでユーザーをMicrosoft Teamsする
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Teams アプリ内で使用するサービスは多数あるので、サービスにアクセスするには認証と承認が必要です。 サービスには、Facebook、Twitter、およびもちろんTeams。 ユーザーはTeamsを使用して、ユーザー プロファイル情報を Azure Active Directory (Azure AD) にGraph。 この記事では、この情報にアクセスするために Azure ADを使用した認証に焦点を当てる。
+Teams アプリ内で使用するサービスは多く、それらのサービスの大部分では、アクセスを取得するために認証と承認が必要です。 サービスには、Facebook、Twitter、およびTeams。 ユーザーはTeamsを使用して、ユーザー プロファイル情報を Azure Active Directory (Azure AD) にGraph。 このトピックでは、アクセスを取得するためにAzure AD認証に焦点を当てします。
+OAuth 2.0 は、ユーザーや他の多くのサービス プロバイダーが使用する認証Azure AD標準です。 OAuth 2.0 について理解は、認証と認証の操作を行うTeams前提条件Azure AD。 次の例では、OAuth 2.0 暗黙的な付与フローを使用して、最終的に Azure AD および Microsoft のプロファイル情報を読み取Graph。
 
-OAuth 2.0 は、Azure および他の多くのサービス プロバイダーが使用する認証AD標準です。 OAuth 2.0 を理解する必要があります認証を操作するには、Teams Azure AD。 次の例では、OAuth 2.0 暗黙的な許可フローを使用して、最終的に Azure AD および Microsoft Graph からユーザーのプロファイル情報を読み取る目的で使用します。
-
-この記事で説明する認証フローは、タブで Web ベースの認証フローを使用できる点と、ボットがコードから駆動する認証を必要とする点を除き、タブの認証フローと非常に似ています。 この記事の概念は、モバイル プラットフォームから認証を実装する場合にも役立ちます。
+このトピックで説明する認証フローは、タブで Web ベースの認証フローを使用できる点と、ボットがコードから駆動する認証を必要とする点を除き、タブに似ています。 このトピックの概念は、モバイル プラットフォームから認証を実装する場合にも役立ちます。
 
 ボットの認証フローの概要については、「ボットの認証フロー [」を参照してください](~/resources/bot-v3/bot-authentication/auth-flow-bot.md)。
 
@@ -30,7 +29,7 @@ ID プロバイダーとして[OAuth](~/concepts/authentication/configure-identi
 
 ## <a name="initiate-authentication-flow"></a>認証フローの開始
 
-認証フローは、ユーザー アクションによってトリガーされる必要があります。 これは、ブラウザーのポップアップ ブロックをトリガーし、ユーザーを混乱させる可能性が高いので、認証ポップアップを自動的に開く必要があります。
+認証フローは、ユーザー アクションによってトリガーされる必要があります。 ブラウザーのポップアップ ブロックをトリガーし、ユーザーを混乱させる可能性がある場合は、認証ポップアップを自動的に開かれません。
 
 ## <a name="add-ui-to-start-authentication"></a>認証を開始するための UI の追加
 
@@ -65,7 +64,7 @@ protected async promptForAction(session: builder.Session): Promise<void> {
 
 検証とモバイル サポートについては、「ボットの [認証フロー」を参照してください](~/resources/bot-v3/bot-authentication/auth-flow-bot.md)。
 
-認証リダイレクト URL のドメインをマニフェストのセクション [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) に必ず追加してください。 そうしない場合、ログイン ポップアップは表示されません。
+認証リダイレクト URL のドメインをマニフェストのセクション [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) に必ず追加してください。 サインインしない場合、ポップアップは表示されません。
 
 ## <a name="showing-user-profile-information"></a>ユーザー プロファイル情報の表示
 

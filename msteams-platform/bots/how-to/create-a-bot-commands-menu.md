@@ -5,12 +5,12 @@ description: カスタム ボットのコマンド メニューをMicrosoft Team
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: f29261a1d22f7629ffe17b444b42af6f5df1e792
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: af987ae2fa538ffb785e782f191c674132440311
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156451"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720107"
 ---
 # <a name="bot-command-menus"></a>ボット コマンド メニュー
 
@@ -44,7 +44,7 @@ ms.locfileid: "59156451"
 
     ![App Studio](./conversations/media/AppStudio.png)
 
-2. **App Studio で、[** マニフェスト エディター]**タブを選択** します。既存のアプリ パッケージをお持ちではない場合は、既存のアプリを作成またはインポートできます。 詳細については、「アプリ パッケージの [更新」を参照してください](~/get-started/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package)。
+2. **App Studio で、[** マニフェスト エディター]**タブを選択** します。既存のアプリ パッケージをお持ちではない場合は、既存のアプリを作成またはインポートできます。 詳細については、「アプリ パッケージの [更新」を参照してください](~/get-started/deploy-csharp-app-studio.md)。
 
 3. マニフェスト エディターの左側のウィンドウ **で** 、[機能] セクションで **[ボット** ] **を選択します**。
 
@@ -60,7 +60,7 @@ ms.locfileid: "59156451"
 
     ![App Studio の [新しいコマンド] メニュー ボタン](./conversations/media/AppStudio-NewCommandMenu.png)
 
-### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>ボットのコマンド メニューを作成するには、[オン] をManifest.jsします。
+### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Manifest.json を編集してボットのコマンド メニューを作成する
 
 コマンド メニューを作成するもう 1 つの方法は、ボットソース コードの開発中にマニフェスト ファイルに直接作成することです。 このメソッドを使用するには、次の点に従います。
 

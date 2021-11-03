@@ -5,12 +5,12 @@ description: メッセージング拡張機能アクション コマンドの概
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 6f4dd3b68d1012b2abc6534fedaddcd76a2a9538
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: d3876d0fc5d58b54ececaabb9e88da0a6e355b47
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291675"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720142"
 ---
 # <a name="define-messaging-extension-action-commands"></a>メッセージング拡張機能アクション コマンドの定義
 
@@ -121,58 +121,8 @@ ms.locfileid: "60291675"
 
     <img src="~/assets/images/messaging-extension/action-command-invoke-location.png" alt="action command invoke location" width="500"/>
 
-1. [**保存**] を選択します。
+1. **[保存]** を選択します。
 1. パラメーターを追加するには、[パラメーター] セクション **の [追加** ] ボタン **を選択** します。
-
-# <a name="developer-portal"></a>[開発者ポータル](#tab/DP)
-
-**開発者ポータルを使用してアクション コマンドを作成するには**
-
-1. [開発者ポータル **[] に移動します](https://dev.teams.microsoft.com/)**。
-    
-      ![TDP のスクリーンショット](~/assets/images/tdp/tdp_home_1.png)
-
-1. [アプリ] に **移動します**。
-    
-    <img width="500px" alt="Screenshot of TDP Open" src="~/assets/images/tdp/screen2.png"/>
-    
-1. 開発者ポータルでアプリ パッケージを **既に作成** している場合は、一覧からアプリ パッケージを選択します。 使用しない場合は、[既存 **のアプリをインポートする] を選択します**。
-
-    <img width="500px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
-
-1. [アプリの **機能] に移動します**。 
-
-    <img width="500px" alt="TDP messaging extension" src="~/assets/images/tdp/tdp-me.png"/>
-
-1. [アプリ **の機能] から [メッセージング拡張機能****] を選択します**。 メッセージング拡張機能を設定するポップアップ ウィンドウが表示されます。
-    
-   <img width="500px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-app-me.png"/>
- 
-1. [ **メッセージング拡張機能 ID] の** ドロップダウン リストからメッセージ拡張機能ボットを選択し **、[** 保存] を **選択します**。
-
-    <img width="500px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
-
-1. [コマンド **の追加] を選択します**。 コマンドを追加するポップアップ ウィンドウが表示されます。
-
-    <img width="500px" alt="TDP messaging extension command" src="~/assets/images/tdp/tdp-me-add-command.png"/>
-
-1. アクション ベースとしてコマンドの種類を選択 **して** 、メッセージング拡張機能を構成します。 [動的 **パラメーター] を選択** して、動的アクション コマンドを作成します。
-
-    <img width="500px" alt="TDP messaging extension dynamic action command" src="~/assets/images/tdp/tdp-me-action-command-dynamic.png"/>
-
-1. 静的アクション **コマンドを作成するには、[** 静的パラメーター] を選択します。   
-
-    <img width="500px" alt="TDP messaging extension static action command" src="~/assets/images/tdp/tdp-me-action-command-static.png"/>
-
-1. コマンド フィールドを入力します。 
-
-    <img width="500px" alt="TDP messaging extension action command" src="~/assets/images/tdp/tdp-me-action-command.png"/>  
-
-1. パラメーター フィールドを入力し、[保存] を **選択します**。
-
-    <img width="500px" alt="TDP messaging extension action parameter" src="~/assets/images/tdp/tdp-me-action-parameter.png"/>
- 
----
 
 ### <a name="create-an-action-command-manually"></a>アクション コマンドを手動で作成する
 

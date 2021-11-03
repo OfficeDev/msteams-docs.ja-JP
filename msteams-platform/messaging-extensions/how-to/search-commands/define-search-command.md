@@ -5,12 +5,12 @@ description: アプリのメッセージング拡張機能検索コマンドをM
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: aaea89aa14e556dfa00e81e8ec72fe5fb4bbe744
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 0842b47a688de210dbfb197e886dce7fed21dce5
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566366"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720128"
 ---
 # <a name="define-messaging-extension-search-commands"></a>メッセージング拡張機能の検索コマンドを定義する
 
@@ -38,17 +38,9 @@ ms.locfileid: "60566366"
 
 検索コマンドをアプリ マニフェストに追加するには、アプリ マニフェスト JSON のトップ レベルに新しいオブジェクト `composeExtension` を追加する必要があります。 検索コマンドは、App Studio の助けを借りて追加するか、手動で追加できます。
 
-### <a name="create-a-search-command"></a>検索コマンドの作成 
+### <a name="create-a-search-command-using-app-studio"></a>App Studio を使用して検索コマンドを作成する
 
-** App Studio** または Developer Portal を使用して検索コマンド **を作成できます**。
-
-> [!NOTE]
->  App Studio は間もなく奪われる予定です。 新しい開発者ポータルを使用して、Teamsアプリを構成、配布、[および管理します](https://dev.teams.microsoft.com/)。
-
-# <a name="app-studio"></a>[App Studio](#tab/AS)
-
-> [!NOTE]
-> 検索コマンドを作成する前提条件は、メッセージング拡張機能を既に作成している必要があります。 メッセージング拡張機能を作成する方法の詳細については、「Create [a messaging extension 」を参照してください](~/messaging-extensions/how-to/create-messaging-extension.md)。
+検索コマンドを作成する前提条件は、メッセージング拡張機能を既に作成している必要があります。 メッセージング拡張機能を作成する方法の詳細については、「Create [a messaging extension 」を参照してください](~/messaging-extensions/how-to/create-messaging-extension.md)。
 
 **検索コマンドを作成するには**
 
@@ -77,49 +69,6 @@ ms.locfileid: "60566366"
     <img src="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt="search command invoke location selection]" width="500"/>
 
 1. 検索パラメーターを追加し、[保存] を **選択します**。
-
-# <a name="developer-portal"></a>[開発者ポータル](#tab/DP)
-
-**開発者ポータルを使用して検索コマンドを作成するには**
-
-1. [開発者ポータル **[] に移動します](https://dev.teams.microsoft.com/)**。
-    
-   <img src="~/assets/images/tdp/tdp_home_1.png" alt="Screenshot of TDP" width="500"/>
-    
-1. [アプリ] に **移動します**。
-    
-    <img width="500px" alt="Screenshot of TDP Open" src="~/assets/images/tdp/screen2.png"/>
-    
-1. 開発者ポータルでアプリ パッケージを既に作成している **場合は**、一覧からアプリ パッケージを選択します。 アプリ パッケージを作成していない場合は、[既存のアプリのインポート **] を選択します**。
-
-    <img width="500px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
-
-1. [アプリの **機能] に移動します**。  
-
-    <img width="500px" alt="TDP messaging extension" src="~/assets/images/tdp/tdp-me.png"/>
-
-1. [アプリ **の機能] から [メッセージング拡張機能****] を選択します**。 メッセージング拡張機能を設定するポップアップ ウィンドウが表示されます。
-    
-   <img width="500px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-app-me.png"/>
-
-1. [ **メッセージ拡張機能 ID] の** ドロップダウン リストからメッセージ拡張ボットを選択し **、[** 保存] を **選択します**。
-
-    <img width="500px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
-
-1. [コマンド **の追加] を選択します**。 コマンドを追加するポップアップ ウィンドウが表示されます。
-
-    <img width="500px" alt="TDP messaging extension command" src="~/assets/images/tdp/tdp-me-add-command.png"/>
-
-1. [検索 **ベース] を選択して** コマンドを検索し、コマンド フィールドを入力します。
-
-    <img width="500px" alt="TDP messaging extension search command" src="~/assets/images/tdp/tdp-me-search-command.png"/>
-
-1. パラメーター フィールドを入力し、[保存] を **選択します**。
-
-    <img width="500px" alt="TDP messaging extension search parameter" src="~/assets/images/tdp/tdp-me-search-parameter.png"/>
-
----
-
 
 ### <a name="create-a-search-command-manually"></a>手動で検索コマンドを作成する 
 

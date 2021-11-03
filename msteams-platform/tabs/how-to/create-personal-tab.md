@@ -5,12 +5,12 @@ description: Yeoman Generator を使用して個人用タブを作成するク�
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 03ac2ede55f15f683267fe207538073fa8582f8a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 8048f317fa0e22353d58b6363271b281a6f3849e
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156224"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60719939"
 ---
 # <a name="create-a-personal-tab"></a>プライベート タブを作成する
 
@@ -66,7 +66,7 @@ Yeoman ジェネレーターを使用してカスタム[個人用Teams作成で�
     yo teams
     ```
 
-1. 次に、アプリケーションのファイルファイルで使用される一連の値manifest.js **指定** します。
+1. 次に、アプリケーションの manifest.json ファイルで使用される一連の **値を指定** します。
 
     ![ジェネレーターの開くスクリーンショット](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -136,7 +136,7 @@ Yeoman ジェネレーターを使用してカスタム[個人用Teams作成で�
 
     **タブに Azure AD のシングルサインオン サポートが必要ですか?**
 
-    タブ **に** Azure ADシングル サインオン のサポートを含めないを選択します。既定値ははい、n と **入力します**。
+    [**シングル** サインオンのサポートAzure AD含めない] を選択します。既定値ははい、n と **入力します**。
 
     > [!IMPORTANT]
     > パス コンポーネント **yourDefaultTabNameTab** は、ジェネレータで既定のタブ名にTab という単語を加えた値 **です**。
@@ -147,7 +147,7 @@ Yeoman ジェネレーターを使用してカスタム[個人用Teams作成で�
 
 **このアプリケーションに個人用タブを追加するには、コンテンツ ページを作成し、既存のファイルを更新します。**
 
-1. コード エディターで、新しい HTML ファイルを lpersonal.htm **作成** し、次のマークアップを追加します。
+1. コード エディターで、新しい HTML ファイルを作成し **personal.html** マークアップを追加します。
 
     ```html
     <!DOCTYPE html>
@@ -169,13 +169,13 @@ Yeoman ジェネレーターを使用してカスタム[個人用Teams作成で�
     </html>
     ```
 
-1. 次 **personal.htmアプリケーション** の Web フォルダーに **l** を保存します。
+1. アプリケーション **personal.html** の Web **フォルダーに次** の場所に保存します。
 
     ```bash
     ./src/app/web/<yourDefaultTabNameTab>/personal.html
     ```
 
-1. コード **manifest.jsで、** 次の場所から [オン] を開きます。
+1. コード **エディターで次の場所から manifest.json** を開きます。
 
     ```bash
     ./src/manifest/manifest.json/
@@ -195,7 +195,7 @@ Yeoman ジェネレーターを使用してカスタム[個人用Teams作成で�
 
 1. **contentURL パス コンポーネント** **yourDefaultTabNameTab を** 実際のタブ名で更新します。
 
-1. ファイルに更新されたmanifest.js **を保存** します。
+1. 更新された **manifest.json ファイルを保存** します。
 
 1. IFrame でコンテンツ ページを提供するには、コード エディターで次のパスから **Tab.ts** を開きます。
 
@@ -221,9 +221,9 @@ Yeoman ジェネレーターを使用してカスタム[個人用Teams作成で�
 
 - 192 x 192 ピクセルのフル カラー アイコン。 
 - **32** x 32 ピクセルの透明なアウトライン アイコン。
-- アプリ **manifest.js** を指定するファイルのプロパティです。
+- アプリ **の属性を指定する manifest.json** ファイル。
 
-パッケージは、ファイル上のファイルのmanifest.jsを検証し、./package ディレクトリに zip フォルダーを生成する **gulp タスクを使用して作成されます**。 コマンド プロンプトで、次のコマンドを入力します。
+パッケージは、manifest.json ファイルを検証し、./package ディレクトリに zip フォルダーを生成する **gulp タスクを使用して作成されます**。 コマンド プロンプトで、次のコマンドを入力します。
 
 ```bash
 gulp manifest
@@ -364,7 +364,7 @@ ASP.NET Core Index と呼ばれるファイルをサイトの既定またはホ�
 
 - 192 x 192 ピクセルのフル カラー アイコン。 
 - **32** x 32 ピクセルの透明なアウトライン アイコン。
-- アプリ **manifest.js** を指定するファイルのプロパティです。
+- アプリ **の属性を指定する manifest.json** ファイル。
 
 これらのファイルは、タブをアプリ パッケージにアップロードする場合に使用するアプリ パッケージに圧縮するTeams。 Microsoft Teams指定したマニフェストを読み込み、それを iframe <埋め込み、それをタブ `contentUrl` \> に表示します。
 
@@ -439,7 +439,7 @@ Microsoft Teamsはクラウドベースの製品であり、HTTPS エンドポ�
 ### <a name="upload-your-tab-with-app-studio-for-teams"></a>アップロード App Studio を使用してタブを開Teams
 
 > [!NOTE]
-> **App Studio** を使用すると、ファイル上のmanifest.js **を編集** し、完成したパッケージをファイルにアップロードTeams。 また、手動で編集することもできます **manifest.jsをオンにしてください**。 その場合は、ソリューションを再度ビルドして、アップロードする **Tab.zip作成してください** 。
+> **App Studio** を使用すると **、manifest.json** ファイルを編集し、完成したパッケージをアップロードして、Teams。 **manifest.json を手動で編集することもできます**。 その場合は、ソリューションを再度ビルドして、アップロードする **Tab.zip作成してください** 。
 
 **App Studio でタブをアップロードするには**
 
@@ -461,7 +461,7 @@ Microsoft Teamsはクラウドベースの製品であり、HTTPS エンドポ�
 
 マニフェスト エディターのウェルカム ページの新しくインポートしたタブのタイルを選択します。
 
-マニフェスト エディターの左側には、手順の一覧があります。 マニフェスト エディターの右側には、各手順の値を持つ必要があるプロパティの一覧があります。 この情報の多くが、ユーザーのmanifest.js **によって** 提供されますが、更新する必要があるフィールドがあります。
+マニフェスト エディターの左側には、手順の一覧があります。 マニフェスト エディターの右側には、各手順の値を持つ必要があるプロパティの一覧があります。 情報の多くが **manifest.json** によって提供されますが、更新する必要があるフィールドがあります。
 
 ##### <a name="details-app-details"></a>詳細: アプリの詳細
 
@@ -588,7 +588,7 @@ public void Configure(IApplicationBuilder app)
 
 * 192 x 192 ピクセルのフル カラー アイコン。 
 * **32** x 32 ピクセルの透明なアウトライン アイコン。
-* アプリ **manifest.js** を指定するファイルのプロパティです。
+* アプリ **の属性を指定する manifest.json** ファイル。
 
 これらのファイルは、タブをアプリ パッケージにアップロードする場合に使用するアプリ パッケージに圧縮するTeams。 Microsoft Teams指定したマニフェストを読み込み、IFrame に埋め込み、タブ `contentUrl` にレンダリングします。
 
@@ -680,6 +680,70 @@ public void Configure(IApplicationBuilder app)
    ]
 }
 ```
+
+## <a name="add-registeronfocused-api-for-tabs-or-personal-apps"></a>タブ `registerOnFocused` または個人用アプリの API を追加する
+
+`registerOnFocused`SDK API を使用すると、ユーザーがキーボードを使用してTeams。 Ctrl キー、Shift キー、F6 キーを使用して、個人用アプリに戻り、タブまたは個人用アプリにフォーカスを維持できます。 たとえば、個人用アプリから移動して何かを検索し、個人用アプリに戻すか、Ctrl + F6 を使用して必要な場所を移動できます。 
+
+次のコードは、フォーカスをタブまたは個人用アプリに返す必要がある場合の SDK のハンドラー定義 `registerFocusEnterHandler` の例を示しています。
+
+```csharp
+export function registerFocusEnterHandler(handler: (navigateForward: boolean) => void): 
+void {
+  HandlersPrivate.focusEnterHandler = handler;
+  handler && sendMessageToParent('registerHandler', ['focusEnter']);
+}
+function handleFocusEnter(navigateForward: boolean): void
+ {
+  if (HandlersPrivate.focusEnterHandler)
+   {
+    HandlersPrivate.focusEnterHandler(navigateForward);
+  }
+}
+```
+
+ハンドラーがキーワードでトリガーされると、ハンドラーはというパラメーターを受け取るコールバック関数 `focusEnter` `registerFocusEnterHandler` `focusEnterHandler` で呼び出されます `navigateForward` 。 値は `navigateForward` 、イベントの種類を決定します。 これは Ctrl + F6 によってのみ呼び出 `focusEnterHandler` され、タブ キーでは呼び出されません。   
+次に示すキーは、Teams内の移動イベントに役立ちます。    
+* Forward イベント -> Ctrl + F6 キー
+* Backward イベント -> Ctrl + Shift + F6 キー
+
+```csharp
+case 'focusEnter':     
+this.registerFocusEnterHandler((navigateForward: boolean = true) => {
+this.sdkWindowMessageHandler.sendRequestMessage(this.frame, this.constants.SdkMessageTypes.focusEnter, [navigateForward]);
+// Set focus on iframe or webview
+if (this.frame && this.frame.sourceElem) {
+  this.frame.sourceElem.focus();
+}
+return true;
+});
+}
+
+// callback function to be passed to the handler
+private focusEnterHandler: (navigateForward: boolean) => boolean;
+
+// function that gets invoked after handler is registered.
+private registerFocusEnterHandler(focusEnterHandler: (navigateForward: boolean) => boolean): void {
+this.focusEnterHandler = focusEnterHandler;
+this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
+}
+```
+
+### <a name="personal-app"></a>個人用アプリ
+
+:::image type="content" source="../../assets/images/personal-apps/registerfocus.png" alt-text="例は、registerOnFocussed API を追加するためのオプションを示しています" border="false":::
+
+#### <a name="personal-app---forward-event"></a>個人用アプリ - 転送イベント
+
+:::image type="content" source="../../assets/images/personal-apps/registerfocus-forward-event.png" alt-text="例は、registerOnFocussed API の前方移動を追加するためのオプションを示しています" border="false":::
+
+#### <a name="personal-app---backward-event"></a>個人用アプリ - 下位イベント
+
+:::image type="content" source="../../assets/images/personal-apps/registerfocus-backward-event.png" alt-text="例では、registerOnFocussed API の後方移動を追加するためのオプションを示しています" border="false":::
+
+### <a name="tab"></a>Tab
+
+:::image type="content" source="../../assets/images/personal-apps/registerfocus-tab.png" alt-text="例は、tab に registerOnFocussed API を追加するためのオプションを示しています" border="false":::
 
 ## <a name="see-also"></a>関連項目
 

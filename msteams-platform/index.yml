@@ -120,7 +120,7 @@ conceptualContent:
         - url: /microsoftteams/platform/samples/shifts-wfm-connectors
           itemType: reference
           text: 運用対応のシフト コネクタを統合する
-    - title: Community
+    - title: コミュニティ
       links:
         - url: 'https://developer.microsoft.com/microsoft-teams/blogs/'
           itemType: overview
@@ -130,7 +130,7 @@ conceptualContent:
           text: Microsoft Teamsの呼び出し
         - url: 'https://docs.microsoft.com/en-us/teamblog/'
           itemType: whats-new
-          text: お知らせ
+          text: Announcements
         - url: /microsoftteams/platform/feedback
           itemType: overview
           text: Microsoft Teams開発者Community応答
@@ -149,7 +149,7 @@ conceptualContent:
           itemType: concept
           text: エンド ユーザー
 tools:
-  title: SDK とツール
+  title: ツールと SDK
   items:
     - title: Microsoft Teams Toolkitの拡張子Visual Studio Code
       imageSrc: /media/logos/logo_vs-code.svg
@@ -157,6 +157,12 @@ tools:
     - title: Microsoft Teams Toolkitの拡張子Visual Studio
       imageSrc: /media/logos/logo_vs-ide.svg
       url: /microsoftteams/platform/toolkit/visual-studio-overview
+    - title: 開発者ポータル
+      imageSrc: ./assets/icons/devp-logo.png
+      url: /microsoftteams/platform/concepts/build-and-test/teams-developer-portal
+    - title: Microsoft Graph SDK
+      imageSrc: ./assets/icons/graph-icon-1.png
+      url: 'https://docs.microsoft.com/graph/sdks/sdks-overview'
     - title: タブやその他のホストされたエクスペリエンス用の JavaScript クライアント SDK
       imageSrc: ./assets/icons/logo_js.png
       url: /microsoftteams/platform/tabs/how-to/using-teams-client-sdk
@@ -166,12 +172,6 @@ tools:
     - title: ボットおよびメッセージング拡張機能用 .NET Bot Framework SDK
       imageSrc: ./assets/icons/logo_net.png
       url: 'https://github.com/Microsoft/botbuilder-dotnet/'
-    - title: Microsoft Graph SDK
-      imageSrc: ./assets/icons/graph-icon-1.png
-      url: 'https://docs.microsoft.com/graph/sdks/sdks-overview'
-    - title: Microsoft Teams App Studio
-      imageSrc: ./assets/icons/AppStudioIcon.png
-      url: /microsoftteams/platform/concepts/build-and-test/app-studio-overview
     - title: Yeoman ジェネレーター (Microsoft Teams
       imageSrc: ./assets/icons/Yeoman.png
       url: 'https://github.com/OfficeDev/generator-teams'

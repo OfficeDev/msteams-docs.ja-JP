@@ -6,12 +6,12 @@ keywords: Teams o365 コネクタ
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 39c2533f112f5cb3c72446ad8a5638687dd3db2e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d2f245b63d58c8de775786304026a41fd65081e3
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156041"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720205"
 ---
 # <a name="create-office-365-connectors"></a>Office 365 コネクタの作成
 
@@ -19,9 +19,9 @@ ms.locfileid: "59156041"
 
 ## <a name="add-a-connector-to-teams-app"></a>コネクタをアプリにTeamsする
 
-AppSource[申請の](~/concepts/build-and-test/apps-package.md)[一部](~/concepts/deploy-and-publish/apps-publish.md)としてコネクタをパッケージ化して発行できます。 登録されたコネクタは、アプリ パッケージの一部としてTeamsできます。 アプリのエントリ ポイントの詳細については、「Teams機能」[を参照してください](~/concepts/extensibility-points.md)。 また、パッケージをユーザーに直接提供して、アプリ内でアップロードTeams。
+パッケージを作成し[](~/concepts/build-and-test/apps-package.md)[、AppSource](~/concepts/deploy-and-publish/apps-publish.md)申請の一部としてコネクタを発行できます。 登録されたコネクタは、アプリ パッケージの一部としてTeamsできます。 アプリのエントリ ポイントの詳細については、「Teams機能」[を参照してください](~/concepts/extensibility-points.md)。 また、パッケージをユーザーに直接提供して、アプリ内でアップロードTeams。
 
-コネクタを配布するには、Connectors Developer [Dashboard を使用して登録する必要があります](https://outlook.office.com/connectors/home/login/#/publish)。 コネクタが登録されている場合は、アプリケーションをサポートしているすべての Office 365 製品で動作OutlookとTeams。 この問題が当てはめず、アプリ申請メールで動作するコネクタのみを作成するMicrosoft Teams:Microsoft Teams[に連絡してください](mailto:teamsubm@microsoft.com)。
+コネクタを配布するには、Connectors Developer [Dashboard を使用して登録する必要があります](https://aka.ms/connectorsdashboard)。 コネクタが登録されている場合は、アプリケーションをサポートしているすべての Office 365 製品で動作OutlookとTeams。 この問題が当てはめず、アプリ申請メールで動作するコネクタのみを作成するMicrosoft Teams:Microsoft Teams[に連絡してください](mailto:teamsubm@microsoft.com)。
 
 > [!IMPORTANT]
 > コネクタ開発者ダッシュボードで [保存] を **選択** すると、コネクタが登録されます。 AppSource でコネクタを発行する場合は、「アプリを AppSource に発行する」のMicrosoft Teams[に従います](~/concepts/deploy-and-publish/apps-publish.md)。 AppSource でアプリを発行しない場合は、組織に直接配布します。 組織 [のコネクタを発行した後](#publish-connectors-for-the-organization)、コネクタ ダッシュボードでそれ以上の操作は必要ありません。
@@ -158,12 +158,12 @@ AppSource[申請の](~/concepts/build-and-test/apps-package.md)[一部](~/concep
 1. [アイコンを 2 つ含めます](../../concepts/build-and-test/apps-package.md#app-icons)。
 1. マニフェストの `icons` 部分を変更して、URL ではなくアイコンのファイル名を含める。
 
-ファイルのmanifest.jsには、アプリのテストと送信に必要な要素が含まれています。
+次の manifest.json ファイルには、アプリのテストと送信に必要な要素が含まれています。
 
 > [!NOTE]
 > 次 `id` の `connectorId` 例では、コネクタの GUID に置き換え、使用します。
 
-#### <a name="example-of-manifestjson-with-connector"></a>コネクタを使用manifest.jsの例
+#### <a name="example-of-manifestjson-with-connector"></a>コネクタ付き manifest.json の例
 
 ```json
 {

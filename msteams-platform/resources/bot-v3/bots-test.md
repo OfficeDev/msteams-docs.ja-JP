@@ -5,12 +5,12 @@ keywords: teams ボットのテスト
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 03/20/2019
-ms.openlocfilehash: 7d888d84434927cc22b4331ec51a01fb8905f555
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 71d70aef3adeb3d351223e918aec21d0d2dea440
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156443"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720121"
 ---
 # <a name="test-and-debug-your-microsoft-teams-bot"></a>ボットのテストとデバッグMicrosoft Teamsする
 
@@ -22,7 +22,7 @@ ms.locfileid: "59156443"
 
 ボットをテストする最も包括的な方法は、アプリ パッケージを作成し、アプリ パッケージをアプリ パッケージにアップロードTeams。 これは、すべてのスコープでボットで使用できる完全な機能をテストする唯一の方法です。
 
-アプリをアップロードするには、2 つの方法があります。 App Studio を使用[して支援することもできます](~/concepts/build-and-test/app-studio-overview.md)し、アプリ パッケージ[](~/concepts/build-and-test/apps-package.md)を手動で作成してアプリ[をアップロードすることもできます](~/concepts/deploy-and-publish/apps-upload.md)。 マニフェストを変更してアプリを再アップロードする必要がある場合は、変更された[](#deleting-a-bot-from-teams)アプリ パッケージをアップロードする前にボットを削除する必要があります。
+アプリをアップロードするには、2 つの方法があります。 App Studio を使用[するか](~/concepts/build-and-test/app-studio-overview.md)、手動でアプリ パッケージ[を作成してアプリ](~/concepts/build-and-test/apps-package.md)[をアップロードできます](~/concepts/deploy-and-publish/apps-upload.md)。 マニフェストを変更してアプリを再アップロードする必要がある場合は、変更された[](#deleting-a-bot-from-teams)アプリ パッケージをアップロードする前にボットを削除する必要があります。
 
 ## <a name="debug-your-bot-locally"></a>ボットをローカルでデバッグする
 
@@ -32,24 +32,24 @@ ms.locfileid: "59156443"
 ngrok http <port> -host-header=localhost:<port>
 ```
 
-アプリ マニフェストで ngrok によって提供される https エンドポイントを使用します。 コマンド ウィンドウを閉じて再起動すると、新しい URL が取得され、その URL も使用するにはボット エンドポイント アドレスを更新する必要があります。
+アプリ マニフェストで ngrok によって提供される https エンドポイントを使用します。 コマンド ウィンドウを閉じて再起動すると、新しい URL が取得され、その URL も使用するためにボット エンドポイント アドレスを更新する必要があります。
 
 ## <a name="testing-your-bot-without-uploading-to-teams"></a>ボットにアップロードせずにボットをテストTeams
 
-場合によっては、ボットをアプリとしてインストールせずにボットをテストする必要Teams。 これを行う 2 つの方法を以下に示します。 アプリとしてインストールせずにボットをテストすると、ボットが利用可能で応答を確実に行うのに役立ちますが、ボットに追加した Microsoft Teams 機能の全幅をテストできません。 ボットを完全にテストする必要がある場合は、アップロードによるテストの手順 [に従ってください](#test-by-uploading-to-teams)。
+場合によっては、ボットをアプリとしてインストールせずにボットをテストする必要Teams。 テストには 2 つの方法があります。 アプリとしてインストールせずにボットをテストすると、ボットが利用可能で応答を確実に行うのに役立ちますが、ボットに追加した Microsoft Teams 機能の全幅をテストできません。 ボットを完全にテストする必要がある場合は、アップロードによるテストの [手順に従います](#test-by-uploading-to-teams)。
 
 ### <a name="use-the-bot-emulator"></a>ボット を使用Emulator
 
-このBot Framework Emulatorは、ボット開発者がボットをローカルまたはリモートでテストおよびデバッグできるデスクトップ アプリケーションです。 エミュレーターを使用すると、ボットとチャットし、ボットが送信および受信するメッセージを検査できます。 これは、ボットが使用可能で応答を確認する場合に役立ちますが、エミュレーターでは、ボットに追加した Teams 固有の機能をテストしたり、ボットからの応答を Teams で表示する方法を正確に視覚的に表現したりできません。 これらのテストを行う必要がある場合は、ボットをアップロード [する方が最適です](#test-by-uploading-to-teams)。
+このBot Framework Emulatorは、ボット開発者がボットをローカルまたはリモートでテストおよびデバッグできるデスクトップ アプリケーションです。 エミュレーターを使用すると、ボットとチャットし、ボットが送信および受信するメッセージを検査できます。 これは、ボットが使用可能で応答を確認する場合に役立ちますが、エミュレーターでは、ボットに追加した Teams 固有の機能をテストしたり、ボットからの応答を Teams で表示する方法を正確に視覚的に表現したりできません。 これらのテストを行う必要がある場合は、ボットをアップロード [する方が最適ではありません](#test-by-uploading-to-teams)。
 
 詳細については、Bot Framework Emulatorを参照[してください](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&preserve-view=true)。
 
-### <a name="talk-to-your-bot-directly-by-id"></a>Id でボットに直接話す
+### <a name="talk-to-your-bot-directly-by-id"></a>ボットと ID で直接話す
 
 >[!Important]
->Id によってボットと話すのは、テスト目的のみを目的とします。
+>ID でボットと話すのは、テスト目的のみを目的とします。
 
-ボットの ID を使用して、ボットとの会話を開始できます。これを行う 2 つの方法を以下に示します。 これらの方法のいずれかを使用してボットを追加した場合、チャネル会話では対応できません。また、タブやメッセージング拡張機能などの他の Microsoft Teams アプリ機能を利用することはできません。
+ボットとの会話を開始するには、その ID を使用します。 これを行う 2 つの方法を以下に示します。 これらの方法のいずれかを使用してボットが追加された場合、チャネルの会話では対応できません。また、タブやメッセージング拡張機能などの他の Microsoft Teams アプリ機能を利用できません。
 
 1. ボットの [[ボット ダッシュボード]](https://dev.botframework.com/bots)ページの [チャネル]**で、[ボット** に追加] を選択 **Microsoft Teams。** Microsoft Teamsボットとの個人用チャットで起動します。
 2. ボットのアプリ ID を次の場所から直接参照Microsoft Teams。
@@ -76,13 +76,13 @@ ngrok http <port> -host-header=localhost:<port>
 
 ## <a name="removing-a-bot-from-a-team"></a>チームからボットを削除する
 
-ユーザーは、チーム ビューでボットリストのごみ箱アイコンを選択して、ボットを削除できます。 これは、そのチームの使用からボットを削除するだけである点に注意してください。個々のユーザーは引き続き個人のコンテキストで対話できます。
+ユーザーは、チーム ビューでボットリストのごみ箱アイコンを選択して、ボットを削除できます。 これは、そのチームの使用からボットを削除するだけ、個々のユーザーが個人的なコンテキストで対話できる点に注意してください。
 
 個人用コンテキストのボットを無効にしたり、ユーザーが削除したりすることはできません。ユーザーがボットを完全に削除Teams。
 
 ## <a name="disabling-a-bot-in-teams"></a>アプリでボットを無効Teams
 
-ボットのメッセージ受信を停止するには、ボット ダッシュボードに移動し、ボット チャネルMicrosoft Teamsします。 [有効にする **] オプションをMicrosoft Teams** します。 これにより、ユーザーはボットを操作できませんが、検出可能であり、ユーザーは引き続きチームに追加できます。
+ボットのメッセージ受信を停止するには、ボット ダッシュボードに移動し、ボット チャネルMicrosoft Teamsします。 [有効にする **] オプションをMicrosoft Teams** します。 これにより、ユーザーはボットを操作できませんが、検出可能であり、ユーザーはチームに追加できます。
 
 ## <a name="deleting-a-bot-from-teams"></a>ボットをユーザーから削除Teams
 

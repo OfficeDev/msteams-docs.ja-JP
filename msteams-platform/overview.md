@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 6fce2deb5dc482a1f348739e6090d4623996df27
-ms.sourcegitcommit: 329447310013a2672216793dab79145b24ef2cd2
+ms.openlocfilehash: fcec0e01f6f9d635896ef14eb4efee5e56f9e761
+ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "60017339"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60720114"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Microsoft Teams のアプリを作成する
 
@@ -20,7 +20,7 @@ Microsoft Teamsアプリは、重要な情報、一般的なツール、信頼�
 アプリは、ニーズに合わせてTeams拡張する方法です。 新しいアプリを作成し、Teamsアプリを統合します。
 
 > [!div class="nextstepaction"]
-> [ここから開始](get-started/prerequisites.md)
+> [ここから開始](get-started/get-started-overview.md)
 
 ## <a name="what-are-teams-apps"></a>アプリとはTeamsですか?
 
@@ -94,7 +94,7 @@ Teamsは機能の組み[合わせです](concepts/capabilities-overview.md)。 �
    :::column-end:::
 :::row-end:::
 
-### <a name="meeting-extensions"></a>ミーティング拡張機能
+### <a name="meeting-extensions"></a>ミーディング拡張機能
 
 :::row:::
 
@@ -153,7 +153,7 @@ Teamsは機能の組み[合わせです](concepts/capabilities-overview.md)。 �
 環境をセットアップし、簡単なアプリTeamsを作成することで、アプリの構築にすばやく慣れ親しむ必要があります。
 
 > [!div class="nextstepaction"]
-> [初めてのアプリを構築する](get-started/prerequisites.md)
+> [初めてのアプリを構築する](get-started/get-started-overview.md)
 
    :::column-end:::
    :::column span="":::
