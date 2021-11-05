@@ -10,26 +10,18 @@
 - name: 作業の開始
   expanded: false
   items:
-    - name: 概要
-      href: get-started/code-samples.md
-    - name: 前提条件
-      href: get-started/prerequisites.md
-    - name: React を使用して初めてのアプリを構築する
-      href: get-started/first-app-react.md
+    - name: 概要を開始する
+      href: get-started/get-started-overview.md
+    - name: JavaScript を使用して初めてのアプリを構築する
+      href: sbs-gs-javascript.yml
     - name: Blazor を使用して初めてのアプリを構築する
-      href: get-started/first-app-blazor.md
+      href: sbs-gs-blazor.yml
     - name: SPFx を使用して初めてのアプリを構築する
-      href: get-started/first-app-spfx.md
+      href: sbs-gs-spfx.yml
     - name: C# または .NET を使用して初めてのアプリを構築する
-      href: get-started/get-started-dotnet-app-studio.md
+      href: sbs-gs-csharp.yml
     - name: Node.js を使用して初めてのアプリを構築する
-      href: get-started/get-started-nodejs-app-studio.md
-    - name: Yeoman ジェネレーターを使用して初めてのアプリを構築する
-      href: get-started/get-started-yeoman.md
-    - name: 初めての会話型ボットを構築する
-      href: get-started/first-app-bot.md
-    - name: 初めてのメッセージング拡張機能を構築する
-      href: get-started/first-message-extension.md
+      href: sbs-gs-nodejs.yml
     - name: コード サンプル
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: アプリの基本事項
