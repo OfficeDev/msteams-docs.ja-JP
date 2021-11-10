@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: 9ac6e87a8f85d0e8d73c6bf58dd705a55f887f43
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 9f5e1ce756dbe465e90e18e6db178b0386ae6d2b
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720233"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887700"
 ---
 # <a name="prerequisites-for-apps-in-teams-meetings"></a>Teams 会議でのアプリの前提条件
 
@@ -51,13 +51,14 @@ ms.locfileid: "60720233"
 > [!NOTE]
 > Teams会議 _のサイド_ パネルで SSO が機能する JavaScript SDK (バージョン : 1.10 以降)。
 
+## <a name="next-step"></a>次のステップ
+
+> [!div class="nextstepaction"]
+> [会議アプリ API リファレンス](API-references.md)
+
 ## <a name="see-also"></a>関連項目
 
 * [会議中のダイアログの設計ガイドライン](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teamsの認証フロー](../tabs/how-to/authentication/auth-flow-tab.md)
 * [会議のTeamsアプリ](teams-apps-in-meetings.md)
-
-## <a name="next-step"></a>次の手順
-
-> [!div class="nextstepaction"]
-> [会議アプリ API リファレンス](API-references.md)
+* [Teamsまたはチャット メンバーをフェッチするボット API の変更を確認する](~/resources/team-chat-member-api-changes.md)

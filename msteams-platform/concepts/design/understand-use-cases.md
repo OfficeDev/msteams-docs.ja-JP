@@ -1,16 +1,16 @@
 ---
 title: アプリの使用例について
 author: heath-hamilton
-description: アプリを計画Microsoft Teams、まずアプリが解決しようとしている問題を理解する必要があります。
+description: アプリを計画し、ユーザーとその必要性を理解し、アプリが解決するユーザーの問題を理解し、ユーザー認証とオンボーディング エクスペリエンスを計画する
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 6257475dfdb80128fbfc857bb760306583ad16ee
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 835e40e2c93387ee7db9fab7eb1f8c56951019c9
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720156"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888420"
 ---
 # <a name="understand-your-use-cases"></a>ユース ケースを理解する
 
@@ -77,7 +77,11 @@ ms.locfileid: "60720156"
 
 ユーザーが現在のソリューションで使用する新しい機能を特定します。 アプリに追加する新機能のロードマップがある場合、設計とアーキテクチャに影響が及ぼす可能性があります。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [使用例のマップ](../../concepts/design/map-use-cases.md)
+
+## <a name="see-also"></a>関連項目
+
+[デバイス機能](~/concepts/device-capabilities/device-capabilities-overview.md)

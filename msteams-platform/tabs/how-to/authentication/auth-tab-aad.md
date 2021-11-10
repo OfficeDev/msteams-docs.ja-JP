@@ -4,12 +4,12 @@ description: 認証の詳細Teamsタブで使用する方法について説明�
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams 認証タブAAD
-ms.openlocfilehash: 96ceb632f4cd619ecc17864b5cd2fb5a665022cd
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: a15d3c78d471bbcc510da019558faa45e3b76241
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291703"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889350"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>[ユーザーの認証] タブでMicrosoft Teamsする
 
@@ -52,7 +52,7 @@ microsoftTeams.authentication.authenticate({
 });
 ```
 
-### <a name="notes"></a>備考
+### <a name="notes"></a>メモ
 
 * 渡す URL `microsoftTeams.authentication.authenticate()` は、認証フローの開始ページです。 この例では、 `/tab-auth/simple-start` です。 これは、アプリケーション登録ポータルで登録[したAzure AD一致する必要があります](https://apps.dev.microsoft.com)。
 
@@ -91,7 +91,7 @@ microsoftTeams.getContext(function (context) {
 
 ユーザーが承認を完了すると、ユーザーはアプリで指定したコールバック ページにリダイレクトされます `/tab-auth/simple-end` 。
 
-### <a name="notes"></a>備考
+### <a name="notes"></a>メモ
 
 * 認証 [要求と URL の作成に](~/tabs/how-to/access-teams-context.md) 関するヘルプについては、「ユーザー コンテキスト情報の取得」を参照してください。 たとえば、ユーザーのログイン名を、Azure ADサインインの値として使用できます。つまり、ユーザーが入力する必要が少ない `login_hint` 場合があります。 攻撃者が悪意のあるブラウザーにページを読み込み、必要な情報を提供する可能性がある場合は、このコンテキストを ID の証明として直接使用する必要があります。
 * タブ コンテキストはユーザーに関する有用な情報を提供しますが、この情報を使用して、タブ コンテンツ URL への URL パラメーターとして取得するか、Microsoft Teams クライアント SDK で関数を呼び出す場合でも、ユーザーを認証しません。 `microsoftTeams.getContext()` 悪意のあるアクターが、独自のパラメーターを使用してタブ コンテンツ URL を呼び出し、Microsoft Teams を偽装する Web ページが iframe にタブ コンテンツ URL を読み込み、独自のデータを関数に返す可能性があります。 `getContext()` 使用する前に、タブ コンテキスト内の ID 関連情報をヒントとして扱い、検証する必要があります。
@@ -136,7 +136,7 @@ if (hashParams["error"]) {
 
 このコードは、ヘルパー関数を使用して、Azure ADキーと値のペア `window.location.hash` を `getHashParameters()` 解析します。 認証フローの開始時点で指定した値と同じ値が見つけられる場合は、呼び出してタブにアクセス トークンを返します。それ以外の場合は、 でエラーを報告します `access_token` `state` `notifySuccess()` `notifyFailure()` 。
 
-### <a name="notes"></a>備考
+### <a name="notes"></a>メモ
 
 `NotifyFailure()` 次の定義済みのエラー理由があります。
 
@@ -162,3 +162,11 @@ if (hashParams["error"]) {
 | **サンプルの名前** | **description** | **.NET** | **Node.js** |
 |-----------------|-----------------|-------------|
 | Microsoft Teamsタブ認証 | タブ認証プロセスは、Azure AD。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) |
+
+## <a name="see-also"></a>関連項目
+
+* [ユーザー認証を計画する](../../../concepts/design/understand-use-cases.md#provide-authentication)
+* [Microsoft Teams 用のタブを設計する](~/tabs/design/tabs.md)
+* [サイレント認証](~/tabs/how-to/authentication/auth-silent-aad.md)
+* [メッセージング拡張機能に認証を追加する](~/messaging-extensions/how-to/add-authentication.md)
+* [ボットのシングル サインオン (SSO) のサポート](~/bots/how-to/authentication/auth-aad-sso-bots.md)

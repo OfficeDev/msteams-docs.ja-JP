@@ -1,17 +1,17 @@
 ---
 title: 会話タブを作成する
 author: surbhigupta
-description: チャネル タブの会話サブエンティ チャットを作成する
+description: コード サンプルを使用して会話を管理するために、チャネル タブの会話サブエンティ チャットを作成する方法について学習します。
 keywords: teams タブ チャネル構成可能
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: none
-ms.openlocfilehash: 7426ca8d994a9009b05e5a3eece05d4938f07f80
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 63f6310faa4bec78f246857cbd7c1368acee8edf
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720373"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889364"
 ---
 # <a name="create-conversational-tabs"></a>会話タブを作成する
 
@@ -96,6 +96,11 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 |-------------|-------------|------|----|
 |[会話の作成] タブ| Microsoft Teams作成タブを示すタブ サンプル アプリを作成します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 
+## <a name="next-step"></a>次のステップ
+
+> [!div class="nextstepaction"]
+> [タブ余白の変更](~/resources/removing-tab-margins.md)
+
 ## <a name="see-also"></a>関連項目
 
 * [Teamsタブ](~/tabs/what-are-tabs.md)
@@ -103,8 +108,3 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 * [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
 * [モバイルのタブ](~/tabs/design/tabs-mobile.md)
 * [アダプティブ カードを使用してタブをビルドする](~/tabs/how-to/build-adaptive-card-tabs.md)
-
-## <a name="next-step"></a>次の手順
-
-> [!div class="nextstepaction"]
-> [タブ余白の変更](~/resources/removing-tab-margins.md)

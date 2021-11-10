@@ -5,12 +5,12 @@ description: このページのボットのMicrosoft Teams。
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: a5702afcc4e87486d23f363e2e7ec0476f597a71
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 17f6e34cbed0980b379e317db976a46c0cf9fc3f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156335"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887853"
 ---
 # <a name="bots-in-microsoft-teams"></a>Microsoft Teams のボット
 
@@ -49,11 +49,15 @@ Microsoft Graph通話やオンライン会議の API を使用すると、Micros
 
 ボット API Teams使用して、チャットまたはチームの 1 つ以上のメンバーの情報を取得できます。 詳細については、「チームまたはチャット[メンバーをフェッチTeamsボット API に対する変更点」を参照してください](~/resources/team-chat-member-api-changes.md)。
 
-## <a name="see-also"></a>関連項目
-
-[Teams のボットを作成する](~/bots/how-to/create-a-bot-for-teams.md)
-
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [ボットと SDK](~/bots/bot-features.md)
+
+## <a name="see-also"></a>関連項目
+
+* [Teams のボットを作成する](~/bots/how-to/create-a-bot-for-teams.md)
+* [会議の通話と会議ボットを登録Microsoft Teams](~/bots/calls-and-meetings/registering-calling-bot.md)
+* [認証をボットにTeamsする](~/bots/how-to/authentication/add-authentication.md)
+* [ボットのアクティビティ ハンドラー](~/bots/bot-basics.md)
+* [Teams ボットの会話イベント](~/bots/how-to/conversations/subscribe-to-conversation-events.md)

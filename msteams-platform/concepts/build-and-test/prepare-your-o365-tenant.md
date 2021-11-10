@@ -4,12 +4,12 @@ description: Microsoft 365 の Teams の概要
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Microsoft 365 テナントTeams のアップロードの構成
-ms.openlocfilehash: 83d45d567c11ff26b5c788371cd4a676f9c3ca2c
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 2b7da66460df12efd1e3c5bd45a9dfa6572e4b4c
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156152"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888154"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Microsoft 365 テナントを準備する
 
@@ -61,8 +61,11 @@ Microsoft 365購読者は、次のいずれかの計画Microsoft Teamsアプリ�
 
 これらの設定の操作方法の詳細については、「Teams[](/microsoftteams/teams-custom-app-policies-and-settings)のカスタム アプリ ポリシーと設定を管理する」および「Teams でアプリセットアップ ポリシー[を管理する」を参照してください](/microsoftteams/teams-app-setup-policies)。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"] 
 > [テスト セットアップの選択](~/concepts/build-and-test/debug.md)
 
+## <a name="see-also"></a>関連項目
+
+[テスト テナントにテスト データをMicrosoft 365する](~/concepts/build-and-test/test-data.md)

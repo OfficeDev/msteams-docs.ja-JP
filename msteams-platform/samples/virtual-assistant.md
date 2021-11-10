@@ -1,24 +1,24 @@
 ---
 title: 仮想アシスタントを作成する
-description: アプリで使用Virtual Assistantボットとスキルを作成するMicrosoft Teams
+description: アダプティブ カードなどの機能を使用Virtual AssistantコードMicrosoft Teamsスニペットを使用して、アプリのボットを作成する方法について説明します。中断、タスク モジュール要求、共同アプリ スコープ、およびメッセージ拡張機能の処理。スキル マニフェストを使用する。複数の言語、クレーム検証、LUIS 統合、およびモードのサポート。
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: teams 仮想アシスタント ボット
-ms.openlocfilehash: d53f20169d989821e01422f4427827feeaaadbc9
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 2082e160387bd6ad80fa526e3dab39b385a6e955
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566247"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889231"
 ---
-# <a name="create-virtual-assistant"></a>仮想アシスタントを作成する 
+# <a name="create-virtual-assistant"></a>仮想アシスタントを作成する
 
 Virtual Assistantは、ユーザー エクスペリエンス、組織のブランド化、および必要なデータを完全に制御しながら、堅牢な会話型ソリューションを作成できる Microsoft のオープン ソース テンプレートです。 Virtual Assistant [](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template)コア テンプレートは、ボット[フレームワーク SDK、](https://github.com/microsoft/botframework-sdk)言語理解[(LUIS)、QnA](https://www.luis.ai/)Maker など、Virtual Assistant を構築するために必要な Microsoft テクノロジをまとめる基本的なビルド ブロック[です](https://www.qnamaker.ai/)。 また、スキル登録、リンクされたアカウント、ユーザーにシームレスな対話とエクスペリエンスを提供する基本的な会話の意図を含む重要な機能をまとめます。 さらに、テンプレート機能には、再利用可能な会話スキルの豊富な例が含 [まれます](https://microsoft.github.io/botframework-solutions/overview/skills)。  個々のスキルは、複数のシナリオを有効Virtual Assistantソリューションに統合されています。 Bot Framework SDK を使用すると、スキルがソース コード形式で提示され、必要に応じてカスタマイズおよび拡張できます。 ボット フレームワークのスキルの詳細については [、「What is a Bot Framework skill」を参照してください](https://microsoft.github.io/botframework-solutions/overview/skills/)。 このドキュメントでは、Virtual Assistant 実装に関する考慮事項、Teams に焦点を当てた Virtual Assistant の作成方法、関連する例、コード サンプル、および Virtual Assistant の制限事項について説明します。
 次の図は、仮想アシスタントの概要を表示します。
 
 ![Virtual Assistant概要図](../assets/images/bots/virtual-assistant/overview.png)
 
-テキスト メッセージアクティビティは、ディスパッチ モデルを使用して、Virtual Assistantによって関連付けられたスキル[にルーティング](/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=cs&preserve-view=true)されます。 
+テキスト メッセージアクティビティは、ディスパッチ モデルを使用して、Virtual Assistantによって関連付けられたスキル[にルーティング](/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=cs&preserve-view=true)されます。
 
 ## <a name="implementation-considerations"></a>実装に関する考慮事項
 
@@ -29,7 +29,7 @@ Virtual Assistantは、ユーザー エクスペリエンス、組織のブラ�
 * 既存のアプリケーションはカスタマイズ可能で、組織が所有し、組織のスキルにVirtual Assistant。
 * 中央の従業員エクスペリエンス チームは、既存のアプリのカスタマイズに影響を与える可能性があります。 また、既存のアプリケーションをエクスペリエンスのスキルとして統合するために必要Virtual Assistant提供します。
 
-次の図は、ユーザーのビジネス機能をVirtual Assistant。 
+次の図は、ユーザーのビジネス機能をVirtual Assistant。
 
 ![中央チームはアシスタントを維持し、ビジネス機能チームはスキルを提供します](../assets/images/bots/virtual-assistant/business-functions.png)
 

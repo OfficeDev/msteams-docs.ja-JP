@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: 2b23c0378acd82d8f54f419a61699d65bd685709
-ms.sourcegitcommit: ece03efbb0e9d1fea5bd01c9c05a2bc232c1a1c3
+ms.openlocfilehash: e542378a45262312978d0d091439938907b974ac
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "60378892"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888287"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>リファレンス: マニフェスト スキーマのMicrosoft Teams
 
@@ -370,7 +370,7 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 |`short`|30 文字|✔|アプリの短い表示名。|
 |`full`|100 文字||完全なアプリ名が 30 文字を超える場合に使用されるアプリの完全な名前。|
 
-## <a name="description"></a>説明
+## <a name="description"></a>description
 
 **必須**—object
 
@@ -496,7 +496,7 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |title|string|12 |✔|ボット コマンド名。|
-|説明|string|128 文字|✔|単純なテキストの説明、またはコマンド構文とその引数の例。|
+|description|string|128 文字|✔|単純なテキストの説明、またはコマンド構文とその引数の例。|
 
 ## <a name="connectors"></a>コネクタ
 
@@ -523,7 +523,7 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 
 アイテムは、型のすべての要素を持つ配列 (最大 1 つの要素) です `object` 。 このブロックは、メッセージング拡張機能を提供するソリューションにのみ必要です。
 
-|名前| 種類 | 最大サイズ | 必須 | 説明|
+|名前| 型 | 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`botId`|string|64|✔|ボット フレームワークに登録されているメッセージング拡張機能をバックするボットの一意の Microsoft アプリ ID。 ID は、アプリ全体の ID と同じにできます。|
 |`commands`|オブジェクトの配列|10|✔|メッセージング拡張機能がサポートするコマンドの配列。|
@@ -723,7 +723,7 @@ Teams機能するために独自の url をSharePointするアプリには、有
 
 **オプション** - 配列
 
-この `configurableProperties` ブロックは、管理者がカスタマイズできるアプリTeams定義します。 詳細については、「アプリのカスタマイズを [有効にする」を参照してください](~/concepts/design/enable-app-customization.md)。
+この `configurableProperties` ブロックは、管理者がカスタマイズできるアプリTeams定義します。 詳細については、「アプリのカスタマイズを [有効にする」を参照してください](~/concepts/design/enable-app-customization.md)。 アプリのカスタマイズ機能は、カスタム アプリまたは LOB アプリではサポートされていません。
 
 > [!NOTE]
 > 少なくとも 1 つのプロパティを定義する必要があります。 このブロックでは、最大 9 つのプロパティを定義できます。
@@ -744,7 +744,8 @@ Teams機能するために独自の url をSharePointするアプリには、有
 
 **省略** 可能な —boolean
  
-プロパティ `defaultBlockUntilAdminAction` が true に **設定されている場合**、管理者が許可するまで、アプリは既定でユーザーから非表示になります。 true に **設定すると**、アプリは、すべてのテナントとエンド ユーザーに対して非表示になります。 テナント管理者は、管理者センターでアプリをTeamsし、アプリを許可またはブロックするアクションを実行できます。 既定値は **false** です。
+プロパティ `defaultBlockUntilAdminAction` が true に **設定されている場合**、管理者が許可するまで、アプリは既定でユーザーから非表示になります。 true に **設定すると**、アプリは、すべてのテナントとエンド ユーザーに対して非表示になります。 テナント管理者は、管理者センターでアプリをTeamsし、アプリを許可またはブロックするアクションを実行できます。 既定値は **false** です。 既定のアプリ ブロックの詳細については、「管理者が承認[するまでアプリTeams非表示にする」を参照してください](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves)。
+
 
 ## <a name="publisherdocsurl"></a>publisherDocsUrl
 
@@ -753,3 +754,11 @@ Teams機能するために独自の url をSharePointするアプリには、有
 **最大サイズ** - 128 文字
 
 プロパティはに依存します `defaultBlockUntilAdminAction` 。 プロパティが true に設定されている場合は、既定でブロックされているアプリを許可する前に、管理者がガイドラインを取得する情報ページに `defaultBlockUntilAdminAction` HTTPS URL `publisherDocsUrl` を提供します。
+
+## <a name="see-also"></a>関連項目
+
+* [アプリ構造Microsoft Teams理解する](~/concepts/design/app-structure.md)
+* [アプリのカスタマイズを有効にする](~/concepts/design/enable-app-customization.md)
+* [アプリをローカライズする](~/concepts/build-and-test/apps-localization.md)
+* [メディア機能を統合する](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [Developer Preview マニフェスト スキーマ参照 - Teams](~/resources/schema/manifest-schema-dev-preview.md)

@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Web アプリ
-ms.openlocfilehash: 24b48dabdf5fa472ce6e50fc891ba3df85405772
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 60eab032e35ebb823161d5e32f27e2bdf3bb4ab2
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156278"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889210"
 ---
 # <a name="web-apps"></a>Web アプリ 
 
@@ -82,14 +82,14 @@ Web アプリを適切に統合することで、Teamsのソーシャル機能�
 
 ***統合シナリオ**: スタンドアロン アプリ、コラボレーション アプリ、SharePoint*
 
-Azure Active Directory (AD) は、ユーザーの ID プロバイダー Teams。 アプリで別の ID プロバイダーを使用する場合は、ID マッピングの演習を実行するか、Azure の ID プロバイダーと組み合わせるAD。
+Azure Active Directory (AD) は、ユーザーの ID プロバイダー Teams。 アプリで別の ID プロバイダーを使用する場合は、ID マッピングの演習を行う必要があります。または id マッピングと組み合わせるAzure AD。
 
-Teamsサード パーティ製アプリ向け Azure ADシングル サインオン (SSO) メカニズムがあります。 また、OIDC と呼ばれる OAuth や Open ID などの標準を使用して、他の ID プロバイダー Connectガイダンスを提供します。
+Teamsサード パーティ製アプリ向けシングル サインオン (SSO) Azure AD機能が備え付けされています。 また、OIDC と呼ばれる OAuth や Open ID などの標準を使用して、他の ID プロバイダー Connectガイダンスを提供します。
 
 > [!IMPORTANT]
 > 現在、サード パーティ製アプリは Government Community Cloud (GCC) で利用できますが、GCC-High国防総省 (DOD) では使用できません。 サード パーティ製アプリは、既定では無効になっています。GCC。 アプリのサード パーティ製アプリを有効GCC、[アプリのアクセス](/microsoftteams/teams-app-permission-policies)許可ポリシーの管理とアプリの管理に[関するページをご覧ください](/microsoftteams/manage-apps)。
 
-このSharePointでは、SSO のみを使用できます。また、SSO を別のアプリで使用する場合は、別の Azure AD ID を追加することはできません。この ID はアプリの SharePoint です。
+このSharePointでは、SSO のみを使用できます。また、別のアプリで SSO を使用する場合は、別の Azure AD ID を追加することはできません。この ID はアプリのSharePointです。
 
 認証の詳細[については、「Teams」 を参照してください](../concepts/authentication/authentication.md)。
 
@@ -111,11 +111,11 @@ Teamsサード パーティ製アプリ向け Azure ADシングル サインオ�
 
 Webhook[よりも柔軟性が](../bots/what-are-bots.md)高Teams、マルチスレッドの会話にアプリで[ボットを使用します](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)。
 
-ボットでは、個々のユーザーまたは **チャネルにプロ** アクティブ メッセージを送信することもできます。 プロアクティブ メッセージは、ボットに送信されるメッセージではなく、外部イベントによってトリガーされるプロプロンプトされていないメッセージです。 たとえば、ボットがインストールされている場合、または新しいユーザーがチャネルに参加するときに、ボットからウェルカム メッセージが送信されます。 
+ボットでは、個々のユーザーまたは **チャネルにプロ** アクティブ メッセージを送信することもできます。 プロアクティブ メッセージは、ボットに送信されるメッセージではなく、外部イベントによってトリガーされるプロプロンプトされていないメッセージです。 たとえば、ボットがインストールされている場合、または新しいユーザーがチャネルに参加するときに、ボットからウェルカム メッセージが送信されます。
 
 プロアクティブ メッセージの送信には、Teams固有の識別子が必要です。 この情報は、名簿[](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)またはユーザー プロファイル データのフェッチ、[](../bots/how-to/conversations/subscribe-to-conversation-events.md)会話イベントのサブスクライブ、または Microsoft Graph[を使用して取得できます](/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?context=graph/context#proactive-messaging-in-teams)。
 
-過剰なメッセージを持つユーザーに迷惑メールを送信しない。 この機能Teamsサポートしている場合、ユーザーはアプリの通知設定を構成できます。   
+過剰なメッセージを持つユーザーに迷惑メールを送信しない。 この機能Teamsサポートしている場合、ユーザーはアプリの通知設定を構成できます。
 通知メッセージの例を次に示します。プロンプトされていないメッセージ **は送信しません**。
 
 ## <a name="use-sharepoint-for-file-and-data-storage"></a>ファイルSharePointストレージに使用する
@@ -126,4 +126,8 @@ Webhook[よりも柔軟性が](../bots/what-are-bots.md)高Teams、マルチス�
 
 ## <a name="see-also"></a>関連項目
 
-[Web アプリを統合する](~/samples/integrate-web-apps-overview.md)
+* [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)
+* [低コードおよびコードなしソリューションのMicrosoft Teams](~/samples/teams-low-code-solutions.md)
+* [[Teams で共有] ボタンを作成する](../concepts/build-and-test/share-to-teams.md)
+* [SameSite cookie 属性](~/resources/samesite-cookie-update.md)
+* [チャットボットPower Virtual Agents統合](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)

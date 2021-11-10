@@ -1,15 +1,15 @@
 ---
 title: アプリの既定のインストール オプションを構成する
-description: アプリの既定のインストール オプションを指定する方法について説明します。
+description: 共有スコープのアプリの既定のインストール オプションと既定の機能を指定する方法について説明します。
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 48f12faca9d8f67ec78e08736f16f8ad5a43dcd2
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: ad59f6645e0d302e973647f9ff63b2898362f6ee
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156822"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889091"
 ---
 # <a name="configure-default-install-options-for-your-microsoft-teams-app"></a>アプリの既定のインストール オプションをMicrosoft Teamsする
 
@@ -70,7 +70,7 @@ ms.locfileid: "59156822"
 > [!NOTE]
 > 詳細については、「アプリ マニフェスト スキーマ [」を参照してください](~/resources/schema/manifest-schema.md)。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [アプリ パッケージを作成する](~/concepts/build-and-test/apps-package.md)

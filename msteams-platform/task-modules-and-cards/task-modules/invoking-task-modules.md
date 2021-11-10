@@ -1,15 +1,15 @@
 ---
 title: タスク モジュールを呼び出して閉じる
-description: タスク モジュールを呼び出して閉じる。
+description: コード サンプルを使用したタスク モジュール、タスク情報オブジェクト、タスク モジュールのサイズ変更、タスク モジュールのディープ リンク構文の呼び出しと却下について説明します。
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: ab6425ae90c04e142e5d69f4a41ff49358731a23
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 226548dca8001fecce4cd784a7411d4ca5841e5e
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156475"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887533"
 ---
 # <a name="invoke-and-dismiss-task-modules"></a>タスク モジュールを呼び出して閉じる
 
@@ -32,7 +32,7 @@ ms.locfileid: "59156475"
 | `title` | string | この属性は、アプリ名の下とアプリ アイコンの右側に表示されます。 |
 | `height` | number または string | この属性には、タスク モジュールの高さをピクセル単位で表す数値、または `small` 、 `medium` 、 を指定できます `large` 。 詳細については、「タスク モジュールの [サイズ変更」を参照してください](#task-module-sizing)。 |
 | `width` | number または string | この属性には、タスク モジュールの幅をピクセル単位で表す数値、または `small` 、 `medium` 、 を指定できます `large` 。 詳細については、「タスク モジュールの [サイズ変更」を参照してください](#task-module-sizing)。 |
-| `url` | 文字列 | この属性は、タスク モジュール内に読み込まれるページ `<iframe>` の URL です。 URL のドメインは、アプリのマニフェスト内の [アプリの validDomains](~/resources/schema/manifest-schema.md#validdomains) 配列内にある必要があります。 |
+| `url` | string | この属性は、タスク モジュール内に読み込まれるページ `<iframe>` の URL です。 URL のドメインは、アプリのマニフェスト内の [アプリの validDomains](~/resources/schema/manifest-schema.md#validdomains) 配列内にある必要があります。 |
 | `card` | アダプティブ カードまたはアダプティブ カード ボット カードの添付ファイル | この属性は、アダプティブ カードがタスク モジュールに表示される JSON です。 ユーザーがボットから呼び出す場合は、Bot Framework オブジェクトでアダプティブ カード JSON を使用 `attachment` します。 タブから、ユーザーはアダプティブ カードを使用する必要があります。 詳細については、「アダプティブ カード [またはアダプティブ カード ボット カードの添付ファイル」を参照してください。](#adaptive-card-or-adaptive-card-bot-card-attachment) |
 | `fallbackUrl` | string | この属性は、クライアントがタスク モジュール機能をサポートしていない場合、ブラウザー タブで URL を開きます。 |
 | `completionBotId` | string | この属性は、ユーザーがタスク モジュールとやり取りした結果を送信するボット アプリ ID を指定します。 指定した場合、ボットはイベント ペイロード `task/submit invoke` に JSON オブジェクトを含むイベントを受信します。 |
@@ -229,14 +229,14 @@ Microsoft Teamsタスク モジュール ヘッダーから HTML へのキーボ
 |タスク モジュールのサンプル ボット-V4 | タスク モジュールを作成するためのサンプル。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
 |タスク モジュールのサンプル タブとボット-V3 | タスク モジュールを作成するためのサンプル。 |[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
 
+## <a name="next-step"></a>次のステップ
+
+> [!div class="nextstepaction"]
+> [タブでタスク モジュールを使用する](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
+
 ## <a name="see-also"></a>関連項目
 
 * [デバイスのアクセス許可を要求する](~/concepts/device-capabilities/native-device-permissions.md)
 * [メディア機能を統合する](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
 * [QR スキャナーまたはバーコード スキャナー機能をアプリに統合Teams](~/concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [場所の機能を統合Teams](~/concepts/device-capabilities/location-capability.md)
-
-## <a name="next-step"></a>次の手順
-
-> [!div class="nextstepaction"]
-> [タブでタスク モジュールを使用する](~/task-modules-and-cards/task-modules/task-modules-tabs.md)

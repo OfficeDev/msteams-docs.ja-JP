@@ -1,15 +1,15 @@
 ---
 title: アプリの概要をテストする
-description: カスタム アプリをテストするプロセスTeams説明しますMicrosoft 365
+description: カスタム アプリをテストおよびデバッグするプロセスTeams説明しますMicrosoft 365
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: テスト アプリMicrosoft 365アップロードTeamsテナントを構成する
-ms.openlocfilehash: 045159133b53b83e256eea9bab09f71e45bf02cf
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 9cbb650fc248d12fc310cc8b1aaaded7b9a87140
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156212"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889266"
 ---
 # <a name="test-your-app"></a>アプリのテスト
 
@@ -35,13 +35,13 @@ ms.locfileid: "59156212"
 
 テスト テナントにテスト データMicrosoft 365追加します。 詳細については、「テスト データをテスト テナントに追加する[Office 365、](~/concepts/build-and-test/test-data.md)テスト データのアップロードを開始する前に、すべての前提条件を完了する」を参照してください。
 
+## <a name="next-step"></a>次のステップ
+
+> [!div class="nextstepaction"]
+> [Microsoft 365 テナントを準備する](~/concepts/build-and-test/prepare-your-o365-tenant.md)
+
 ## <a name="see-also"></a>関連項目
 
 * [タブをデバッグする](~/tabs/how-to/developer-tools.md)
 * [ボットのデバッグ](~/bots/how-to/debug/locally-with-an-ide.md)
 * [RSC のアクセス許可をテストする](~/graph-api/rsc/test-resource-specific-consent.md)
-
-## <a name="next-step"></a>次の手順
-
-> [!div class="nextstepaction"]
-> [Microsoft 365 テナントを準備する](~/concepts/build-and-test/prepare-your-o365-tenant.md)

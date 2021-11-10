@@ -1,16 +1,17 @@
 ---
 title: アダプティブ カード タブの作成
 author: KirtiPereira
-description: アダプティブ カードを使用してタブを作成する
+description: アクティビティの呼び出し、タスク モジュールのワークフローの理解、認証など、コード例を含むアダプティブ カードを使用してタブを構築する方法について説明します。
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 09e5a6133ac4c2b33dbf6ffae273e8107a4c67ce
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+keywords: アダプティブ カード個人用アプリ認証データ フロー
+ms.openlocfilehash: ba8a28a25665370420b05de64d8302d8ef160687
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720331"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887561"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>アダプティブ カードを使用してタブをビルドする
 
@@ -428,6 +429,11 @@ ms.locfileid: "60720331"
 |----------------|-----------------|--------------|--------------|
 | [アダプティブ カードの表示] Teamsタブ | Microsoft Teamsタブのサンプル コードで、アダプティブ カードを表示する方法を示Teams。 |[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
 
+## <a name="next-step"></a>次のステップ
+
+> [!div class="nextstepaction"]
+> [タブのリンクの展開とステージ ビュー](~/tabs/tabs-link-unfurling.md)
+
 ## <a name="see-also"></a>関連項目
 
 * [アダプティブ カード](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
@@ -435,8 +441,3 @@ ms.locfileid: "60720331"
 * [プライベート タブを作成する](~/tabs/how-to/create-personal-tab.md)
 * [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
 * [モバイルのタブ](~/tabs/design/tabs-mobile.md)
-
-## <a name="next-step"></a>次の手順
-
-> [!div class="nextstepaction"]
-> [タブのリンクの展開とステージ ビュー](~/tabs/tabs-link-unfurling.md)

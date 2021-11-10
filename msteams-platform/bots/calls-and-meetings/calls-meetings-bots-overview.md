@@ -1,15 +1,15 @@
 ---
 title: 通話とオンライン会議ボット
-description: 通話やオンライン会議Microsoft Teams、Microsoft Graph API を使用して、音声とビデオを使用してユーザーと対話する方法について説明します。
+description: 通話やオンライン会議Microsoft Teams Microsoft Graph API を使用して音声とビデオを使用してユーザーと対話する方法と、リアルタイム のメディア ストリームについて学習する方法について説明します。
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: 通話通話オーディオ ビデオ IVR 音声オンライン会議
-ms.openlocfilehash: e94cb425f7931582067bc3439e890b74b64e0f51
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: 通話通話オーディオ ビデオ IVR 音声オンライン会議リアルタイム メディア ストリーム ボット
+ms.openlocfilehash: 17464683c8a5f6aa515d67be721968d56d1d2fb7
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156876"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889147"
 ---
 # <a name="calls-and-online-meetings-bots"></a>通話とオンライン会議ボット
 
@@ -95,23 +95,17 @@ ms.locfileid: "59156876"
 | Graph通信 | Graph Microsoft の通信プラットフォームとやり取りするための通信を提供します。 | [表示](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
 | 通話と会議ボット | このサンプル アプリでは、ボットが通話の作成、会議への参加、通話の転送を行う方法を説明します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
 
-## <a name="see-also"></a>関連項目
-
-- [GraphAPI リファレンス](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
-
-- [サンプル アプリ](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
-
-- [通話とオンライン会議をサポートするボットの登録](./registering-calling-bot.md)
-
-- [Graphおよびオンライン会議ボットのアクセス許可の設定](./registering-calling-bot.md#add-graph-permissions)
-
-- [コンピューターで通話とオンライン会議ボットを開発する方法](./debugging-local-testing-calling-meeting-bots.md)
-
-- [アプリケーションホスト型メディア ボットの要件と考慮事項](./requirements-considerations-application-hosted-media-bots.md)
-
-- [着信通知の処理に関する技術情報](./call-notifications.md)
-
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [リアルタイムのメディア通話と会議](~/bots/calls-and-meetings/real-time-media-concepts.md)
+
+## <a name="see-also"></a>関連項目
+
+- [GraphAPI リファレンス](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
+- [サンプル アプリ](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
+- [通話とオンライン会議をサポートするボットの登録](./registering-calling-bot.md)
+- [Graphおよびオンライン会議ボットのアクセス許可の設定](./registering-calling-bot.md#add-graph-permissions)
+- [コンピューターで通話とオンライン会議ボットを開発する方法](./debugging-local-testing-calling-meeting-bots.md)
+- [アプリケーションホスト型メディア ボットの要件と考慮事項](./requirements-considerations-application-hosted-media-bots.md)
+- [着信通知の処理に関する技術情報](./call-notifications.md)

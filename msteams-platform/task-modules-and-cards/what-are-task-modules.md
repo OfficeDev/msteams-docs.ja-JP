@@ -5,12 +5,12 @@ description: モーダル ポップアップ エクスペリエンスを追加�
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: a82552f43456aa1ddee0b68f13a8c5435165ed64
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 0b726712ccbf954238c5102afa81d8ed412217fe
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156750"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888301"
 ---
 # <a name="task-modules"></a>タスク モジュール
 
@@ -50,11 +50,11 @@ ms.locfileid: "59156750"
 6. TaskInfo オブジェクトのプロパティを使用してアダプティブ カードを表示する場合 `card` [は](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) 、パディングが追加されます。 詳細については、「HTML または JavaScript タスク モジュールの [タスク モジュール CSS」を参照してください](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-css-for-html-or-javascript-task-modules)。
 7. [サインアップ] を選択すると、アダプティブ カード ボタン **がレンダリングされます**。 独自のページを使用する場合は、独自のボタンを作成します。
 
-## <a name="see-also"></a>関連項目
-
-[カード](~/task-modules-and-cards/what-are-cards.md)
-
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [タスク モジュールを呼び出して閉じる](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
+
+## <a name="see-also"></a>関連項目
+
+[カード](~/task-modules-and-cards/what-are-cards.md)

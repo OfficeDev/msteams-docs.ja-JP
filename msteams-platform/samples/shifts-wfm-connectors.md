@@ -1,24 +1,24 @@
 ---
 title: 本番対応の Shifts コネクタ
-description: Workforce management Shifts connectors for Teams
+description: kronos-to-Teams Shifts コネクタや JDA-to-Teams Shifts コネクタなど、Teams 用の Workforce management Shifts コネクタを使用する利点について説明します。
 ms.topic: reference
 author: surbhigupta
 ms.date: 03/09/2020
 ms.localizationpriority: medium
 keywords: Microsoft Teams コネクタ kronos
 ms.author: lajanuar
-ms.openlocfilehash: f734bc4491826f5afee4147b55fdbc10b69fd433
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 063957556c13d5325eaf00ab8cd80017c0821e3c
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156272"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889224"
 ---
 # <a name="production-ready-shifts-connectors"></a>本番対応の Shifts コネクタ  
 
-TeamsShifts Workforce Management (WFM) コネクタは、運用対応、オープン ソース、コミュニティ駆動型の統合であり、ファーストライン ワーカーに役立ちます。 シームレスなエクスペリエンスと迅速なプロセスを提供し、シフトを使用したファーストラインワーカーのデジタルTeams提供します。 
+TeamsShifts Workforce Management (WFM) コネクタは、運用対応、オープン ソース、コミュニティ駆動型の統合であり、ファーストライン ワーカーに役立ちます。 シームレスなエクスペリエンスと迅速なプロセスを提供し、シフトを使用したファーストラインワーカーのデジタルTeams提供します。
 
-各コネクタは、組織への展開と統合に関する詳細なガイダンスを提供します。 完全なソース コードは、リポジトリGitHubできます。 詳細またはフォークを探索し、特定のニーズに合わせてカスタマイズできます。   
+各コネクタは、組織への展開と統合に関する詳細なガイダンスを提供します。 完全なソース コードは、リポジトリGitHubできます。 詳細またはフォークを探索し、特定のニーズに合わせてカスタマイズできます。
 
 このドキュメントでは、Teams Shifts WFM コネクタ、Kronos-to-Teams Shifts コネクタ、および JDA から Teams Shifts コネクタの主な利点の概要を説明します。
 

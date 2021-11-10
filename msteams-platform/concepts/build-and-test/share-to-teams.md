@@ -1,15 +1,15 @@
 ---
 title: '[Teams で共有] ボタンを作成する'
-description: Web サイトの [埋め込みTeamsに共有を追加する方法
+description: コード サンプルを使用して、Web サイトTeams埋め込みボタンに共有を追加する方法について学習します。
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: 共有Teams共有Teams
-ms.openlocfilehash: 0d0fb0d7baf18038cfe87b648d2550bbd20b593a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 0f9425ae28312aeb9700d260d9ac2cf208351d4c
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156149"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889287"
 ---
 # <a name="create-share-to-teams-button"></a>[Teams で共有] ボタンを作成する
 
@@ -78,7 +78,7 @@ Web サイトが web サイトと共有Teams、選択したチャネルに挿入
 
 |値|メタ タグ| 開くGraph|
 |----|----|----|
-|役職|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
+|Title|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
 |説明|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
 |サムネイル 画像| none。 |`<meta property="og:image" content="http://example.com/image.jpg">`|
 
@@ -94,11 +94,11 @@ HTML の既定のバージョンまたは Open Graph使用できます。
 
 | プロパティ | HTML 属性 | 型 | 既定値 | 説明 |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
-| href | `data-href` | 文字列 | 該当なし | 共有するコンテンツの href。 |
+| href | `data-href` | string | 該当なし | 共有するコンテンツの href。 |
 | preview | `data-preview` | boolean (文字列として) | `true` | 共有するコンテンツのプレビューを表示するかどうかを指定します。 |
 | iconPxSize | `data-icon-px-size` | number (文字列として) | `32` | レンダリングする Share-to-Teamsボタンのサイズ (ピクセル単位)。 |
 | msgText | `data-msg-text` | string | 該当なし | メッセージ作成ボックスのリンクの前に挿入される既定のテキスト。 最大文字数は 200 文字です。 |
-| assignInstr | `data-assign-instr` | 文字列 | 該当なし | 割り当て "命令" フィールドに挿入される既定のテキスト。 最大文字数は 200 文字です。 |
+| assignInstr | `data-assign-instr` | string | 該当なし | 割り当て "命令" フィールドに挿入される既定のテキスト。 最大文字数は 200 文字です。 |
 | assignTitle | `data-assign-title` | string | 該当なし | 割り当て "Title" フィールドに挿入される既定のテキスト。 最大文字数は 50 です。 |
 
 ### <a name="methods"></a>メソッド

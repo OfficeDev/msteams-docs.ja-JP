@@ -1,17 +1,17 @@
 ---
 title: 構成ページを作成する
 author: surbhigupta
-description: 構成ページの作成方法
+description: コンテキスト データの取得、プレースホルダーの挿入、コード例を使用した認証など、設定用のチャネルまたはグループ チャットを構成する構成ページを作成する方法について説明します。
 keywords: teams タブ グループ チャネル構成可能
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 48137f7e922ac0b504d7b88465adb42edd3ba4e4
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 76381e717f0955ade16c0965a0448a1854822fe8
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720191"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888021"
 ---
 # <a name="create-a-configuration-page"></a>構成ページを作成する
 
@@ -200,6 +200,11 @@ microsoftTeams.settings.setSettings({
 
 チャネルまたはグループ タブをモバイル クライアントのTeamsする場合は、構成の値が `setSettings()` 必要です `websiteUrl` 。 詳細については、「モバイルでの [タブのガイダンス」を参照してください](~/tabs/design/tabs-mobile.md)。
 
+## <a name="next-step"></a>次のステップ
+
+> [!div class="nextstepaction"]
+> [タブの削除ページを作成する](~/tabs/how-to/create-tab-pages/removal-page.md)
+
 ## <a name="see-also"></a>関連項目
 
 * [Teamsタブ](~/tabs/what-are-tabs.md)
@@ -207,8 +212,3 @@ microsoftTeams.settings.setSettings({
 * [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
 * [コンテンツ ページを作成する](~/tabs/how-to/create-tab-pages/content-page.md)
 * [モバイルのタブ](~/tabs/design/tabs-mobile.md)
-
-## <a name="next-step"></a>次の手順
-
-> [!div class="nextstepaction"]
-> [タブの削除ページを作成する](~/tabs/how-to/create-tab-pages/removal-page.md)

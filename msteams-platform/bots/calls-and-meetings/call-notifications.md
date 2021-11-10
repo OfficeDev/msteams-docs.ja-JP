@@ -1,16 +1,16 @@
 ---
 title: 着信通知
-description: 着信からの通知の処理に関する詳細な技術情報
+description: 着信呼び出しからの通知の処理、コード サンプルを使用した呼び出しのリダイレクトと認証に関する詳細な技術情報について説明します。
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: 呼び出し通知コールバック地域アフィニティ
 ms.date: 04/02/2019
-ms.openlocfilehash: eb05499b32a0e62b9aa5b073770632c081b8526a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d1d0371f714f64d2f64dbcb9512be77318cf1fb5
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156158"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889161"
 ---
 # <a name="incoming-call-notifications"></a>着信通知
 
@@ -91,7 +91,7 @@ OAuth トークンは次の値を持ち、次の値で署名Skype。
 
 詳細については、「受信要求 [の検証」を参照してください](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs)。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [アプリケーションホスト型メディア ボットの要件と考慮事項](~/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)

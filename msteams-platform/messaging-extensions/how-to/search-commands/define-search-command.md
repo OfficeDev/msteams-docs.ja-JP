@@ -1,16 +1,16 @@
 ---
 title: メッセージング拡張機能の検索コマンドを定義する
 author: surbhigupta
-description: アプリのメッセージング拡張機能検索コマンドをMicrosoft Teamsします。
+description: アプリのメッセージング拡張機能の検索コマンドMicrosoft Teams、アプリ マニフェストを使用して検索コマンドを作成し、コード例とサンプルを手動で使用する方法について説明します。
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 0842b47a688de210dbfb197e886dce7fed21dce5
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 104d5762aa3933d63764b2c703fad366cf190a0e
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720128"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889385"
 ---
 # <a name="define-messaging-extension-search-commands"></a>メッセージング拡張機能の検索コマンドを定義する
 
@@ -70,7 +70,7 @@ ms.locfileid: "60720128"
 
 1. 検索パラメーターを追加し、[保存] を **選択します**。
 
-### <a name="create-a-search-command-manually"></a>手動で検索コマンドを作成する 
+### <a name="create-a-search-command-manually"></a>手動で検索コマンドを作成する
 
 メッセージング拡張機能検索コマンドをアプリ マニフェストに手動で追加するには、次のパラメーターをオブジェクトの配列 `composeExtension.commands` に追加する必要があります。
 
@@ -79,23 +79,23 @@ ms.locfileid: "60720128"
 | `id` | このプロパティは、検索コマンドに割り当てる一意の ID です。 ユーザー要求には、この ID が含まれます。 | はい | 1.0 |
 | `title` | このプロパティはコマンド名です。 この値は、ユーザー インターフェイス (UI) に表示されます。 | はい | 1.0 |
 | `description` | このプロパティは、このコマンドの動作を示すヘルプ テキストです。 この値は UI に表示されます。 | はい | 1.0 |
-| `type` | このプロパティは、 である必要があります `query` 。 | いいえ | 1.4 |
-|`initialRun` | このプロパティを true に **設定すると**、ユーザーが UI でこのコマンドを選択するとすぐにこのコマンドを実行する必要があります。 | いいえ | 1.0 |
-| `context` | このプロパティは、検索アクションが使用できるコンテキストを定義する値のオプションの配列です。 使用可能な値: `message`、`compose`、`commandBox`。 既定値は `["compose", "commandBox"]` です。 | いいえ | 1.5 |
+| `type` | このプロパティは、 である必要があります `query` 。 | 不要 | 1.4 |
+|`initialRun` | このプロパティを true に **設定すると**、ユーザーが UI でこのコマンドを選択するとすぐにこのコマンドを実行する必要があります。 | 不要 | 1.0 |
+| `context` | このプロパティは、検索アクションが使用できるコンテキストを定義する値のオプションの配列です。 使用可能な値: `message`、`compose`、`commandBox`。 既定値は `["compose", "commandBox"]` です。 | 不要 | 1.5 |
 
 検索クライアントでユーザーに表示されるテキストを定義する検索パラメーターの詳細を追加Teamsがあります。
 
 | プロパティ名 | 用途 | 必須ですか? | マニフェストの最小バージョン |
 |---|---|---|---|
-| `parameters` | このプロパティは、コマンドのパラメーターの静的リストを定義します。 | いいえ | 1.0 |
+| `parameters` | このプロパティは、コマンドのパラメーターの静的リストを定義します。 | 不要 | 1.0 |
 | `parameter.name` | このプロパティは、パラメーターの名前を表します。 これは、ユーザー要求でサービスに送信されます。 | はい | 1.0 |
 | `parameter.description` | このプロパティは、パラメーターの目的または指定する必要がある値の例を示します。 この値は UI に表示されます。 | はい | 1.0 |
 | `parameter.title` | このプロパティは、短いユーザーフレンドリーなパラメーターのタイトルまたはラベルです。 | はい | 1.0 |
-| `parameter.inputType` | このプロパティは、必要な入力の種類に設定されます。 可能な値 `text` には `textarea` 、、 `number` 、 、 、 、 `date` `time` が含まれます `toggle` 。 既定値は に設定されています `text` 。 | いいえ | 1.4 |
+| `parameter.inputType` | このプロパティは、必要な入力の種類に設定されます。 可能な値 `text` には `textarea` 、、 `number` 、 、 、 、 `date` `time` が含まれます `toggle` 。 既定値は に設定されています `text` 。 | 不要 | 1.4 |
 
 #### <a name="example"></a>例
 
-次のセクションでは、検索コマンドを定義するオブジェクトの単純 `composeExtensions` なアプリ マニフェストの例を示します。 
+次のセクションでは、検索コマンドを定義するオブジェクトの単純 `composeExtensions` なアプリ マニフェストの例を示します。
 
 ```json
 {
@@ -130,7 +130,7 @@ ms.locfileid: "60720128"
 |Teams拡張アクション| アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams拡張機能の検索   |  検索コマンドを定義し、検索に応答する方法について説明します。        |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [検索コマンドに応答します](~/messaging-extensions/how-to/search-commands/respond-to-search.md)。

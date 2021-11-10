@@ -1,15 +1,15 @@
 ---
 title: サイレント認証
-description: サイレント認証について説明します
+description: サイレント認証、シングル サインオン、タブのAzure Active Directory説明します。
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: teams 認証 SSO サイレント AAD
-ms.openlocfilehash: fef5a52d836ce906e9fe835f29bcee1bef9088d7
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+keywords: teams 認証 SSO サイレント AAD タブ
+ms.openlocfilehash: 2b3981ce43f09cc05bb2cb3837a90c0a92ef6deb
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291626"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888028"
 ---
 # <a name="silent-authentication"></a>サイレント認証
 
@@ -27,7 +27,7 @@ Azure Active Directory (AAD) のサイレント認証は、ユーザーがサイ
 
 ## <a name="how-silent-authentication-works"></a>サイレント認証の仕組み
 
-このADAL.jsは、OAuth 2.0 暗黙的な付与フロー用の非表示の iframe を作成します。 ただし、ライブラリは 、 `prompt=none` サインイン ページAzure AD表示しないので、指定します。 ユーザーがサインインまたはアプリケーションへのアクセス許可を必要とするためにユーザーの操作が必要な場合、AAD はアプリに報告するエラーADAL.jsすぐに返します。 この時点で、アプリは必要に応じてサインイン ボタンを表示できます。
+このADAL.jsは、OAuth 2.0 暗黙的な付与フロー用の非表示の iframe を作成します。 ただし、ライブラリは 、 `prompt=none` サインイン ページAzure AD表示しないので、指定します。 ユーザーがサインインまたはアプリケーションへのアクセス許可を必要とするためにユーザーの操作が必要な場合、AAD はアプリに報告するエラーADAL.jsすぐに返します。 この時点で、必要に応じてアプリにサインイン ボタンを表示できます。
 
 ## <a name="how-to-do-silent-authentication"></a>サイレント認証を実行する方法
 
@@ -135,3 +135,6 @@ localStorage.clear();
 window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 }
 ```
+## <a name="see-also"></a>関連項目
+
+[ID プロバイダーが ID プロバイダーを使用AAD](~/concepts/authentication/configure-identity-provider.md)

@@ -4,12 +4,12 @@ description: ディープ リンクとアプリでの使用方法について説
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Teams ディープ リンク ディープリンク
-ms.openlocfilehash: fbf4d933db63ee634000bb5fc277c385fc3cfa44
-ms.sourcegitcommit: 31dc5dfac6e7d0c6f33795190a55bb5c741eb32a
+ms.openlocfilehash: 0d1ad5b74c434a20a1e2d7f55e970e5811c34890
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2021
-ms.locfileid: "60223049"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889154"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成 
 
@@ -140,7 +140,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 クエリ パラメーターは次のとおりです。
 
-* `users`: チャットの参加者を表すユーザー ID のコンマ区切りリストです。 アクションを実行するユーザーは、常に参加者として含まれます。 現在、User ID フィールドは、電子メール アドレスADなど、UserPrincipalName の Azure ADをサポートしています。
+* `users`: チャットの参加者を表すユーザー ID のコンマ区切りリストです。 アクションを実行するユーザーは、常に参加者として含まれます。 現在、User ID フィールドは、メール Azure ADなど、UserPrincipalName の名前をサポートしています。
 * `topicName`: 3 人以上のユーザーとのチャットの場合、チャットの表示名のオプション フィールド。 このフィールドを指定しない場合、チャットの表示名は参加者の名前に基づいて行います。
 * `message`: チャットが下書き状態の間に現在のユーザーの作成ボックスに挿入するメッセージ テキストのオプション フィールド。
 
@@ -226,7 +226,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 クエリ パラメーターは次のとおりです。
 
-* `attendees`: 会議の出席者を表すユーザー ID のオプションのコンマ区切りリスト。 アクションを実行するユーザーは、会議の開催者です。 [ユーザー ID] フィールドは現在、Azure AD UserPrincipalName (通常は電子メール アドレス) のみをサポートしています。
+* `attendees`: 会議の出席者を表すユーザー ID のオプションのコンマ区切りリスト。 アクションを実行するユーザーは、会議の開催者です。 [ユーザー ID] フィールドは現在、UserPrincipalName のAzure AD、通常は電子メール アドレスのみをサポートしています。
 * `startTime`: イベントのオプションの開始時刻です。 これは *、2018-03-12T23:55:25+02:00* など、長い [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)形式である必要があります。
 * `endTime`: イベントのオプションの終了時刻 (ISO 8601 形式)。
 * `subject`: 会議の件名の省略可能なフィールドです。
@@ -245,6 +245,9 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 > [!NOTE]
 > このディープリンクは、会議の呼び出しには使用できません。
+
+> [!NOTE]
+> 現在、通話するディープリンクは、モバイル デバイスTeamsサポートされていません。
 
 ### <a name="generate-a-deep-link-to-a-call"></a>通話へのディープ リンクを生成する
 
@@ -268,5 +271,5 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ## <a name="see-also"></a>関連項目
 
-[Web アプリを統合する](~/samples/integrate-web-apps-overview.md)
-
+* [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)
+* [Moodle LMS](~/resources/moodleinstructions.md)

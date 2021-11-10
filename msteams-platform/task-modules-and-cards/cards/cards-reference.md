@@ -4,12 +4,12 @@ description: Teams の Bot で使用できるすべてのカードとカード �
 ms.localizationpriority: medium
 keywords: Bot のカード リファレンス
 ms.topic: reference
-ms.openlocfilehash: adb8695ad6a7057cea5e95b1760addd27c3713e9
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: 03aa96d0007129946f54ac250f339b74462fd8ec
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291661"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889126"
 ---
 # <a name="types-of-cards"></a>カードの種類
 
@@ -89,7 +89,7 @@ ms.locfileid: "60291661"
 
 次の表に、インライン カード イメージのプロパティを示します。
 
-| プロパティ | 種類  | 説明 |
+| プロパティ | 型  | 説明 |
 | --- | --- | --- |
 | url | URL | イメージの HTTPS URL。 |
 | alt | 文字列 | 画像のアクセス可能な説明。 |
@@ -293,7 +293,7 @@ ms.locfileid: "60291661"
 
 次の表に、ヒーロー カードのプロパティを示します。
 
-| プロパティ | 種類  | 説明 |
+| プロパティ | 型  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。 |
 | サブタイトル | リッチ テキスト | カードのサブタイトル。 最大 2 行。|
@@ -360,7 +360,7 @@ ms.locfileid: "60291661"
 
 次の表に、リスト カードのプロパティを示します。
 
-| プロパティ | 種類  | 説明 |
+| プロパティ | 型  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。|
 | アイテム | リスト アイテムの配列 | カードに適用可能なアイテムのセット。|
@@ -438,7 +438,7 @@ ms.locfileid: "60291661"
 
 次の表に、コネクタ カードのプロパティOffice 365示します。
 
-| プロパティ | 種類  | 説明 |
+| プロパティ | 型  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。 |
 | 概要 | リッチ テキスト | カードの概要。 最大 2 行。 |
@@ -655,7 +655,7 @@ Teamsのサインイン カードは、ボット フレームワークのサイ�
 
 次の表に、サムネイル カードのプロパティを示します。
 
-| プロパティ | 種類  | 説明 |
+| プロパティ | 型  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。|
 | サブタイトル | リッチ テキスト | カードのサブタイトル。 最大 2 行。|
@@ -953,3 +953,5 @@ Teamsのサインイン カードは、ボット フレームワークのサイ�
 
 * [タスク モジュール](~/task-modules-and-cards/what-are-task-modules.md)
 * [カードの書式設定](~/task-modules-and-cards/cards/cards-format.md)
+* [最新のカード](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
+* [アダプティブ カードのユニバーサル アクションの操作](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)

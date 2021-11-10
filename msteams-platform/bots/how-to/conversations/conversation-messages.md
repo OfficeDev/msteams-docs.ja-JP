@@ -1,16 +1,16 @@
 ---
 title: ボットの会話内のメッセージ
-description: ボットと会話する方法Microsoft Teamsします。
+description: ボットと会話する方法についてMicrosoft Teamsします。 コード サンプルをTeamsチャネル データ、メッセージへの通知、ピクチャ メッセージ、アダプティブ カードについて学習します。
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 5d2855493b4863232655ef808191f671cf784289
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: d417d0cc737b088a5f04ac8a45c834cd83bbbde5
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566240"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889336"
 ---
 # <a name="messages-in-bot-conversations"></a>ボットの会話内のメッセージ
 
@@ -393,13 +393,14 @@ XML を使用して各イメージの高さと幅を指定します。 markdown 
 |----------------|-----------------|--------------|----------------|-----------|
 | Teams 会話ボット | メッセージングおよび会話イベントの処理。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
-## <a name="see-also"></a>関連項目
-
-- [プロアクティブ メッセージを送信する](~/bots/how-to/conversations/send-proactive-messages.md)
-
-- [会話イベントにサブスクライブする](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
-
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [ボット コマンド メニュー](~/bots/how-to/create-a-bot-commands-menu.md)
+
+## <a name="see-also"></a>関連項目
+
+* [プロアクティブ メッセージを送信する](~/bots/how-to/conversations/send-proactive-messages.md)
+* [会話イベントにサブスクライブする](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+* [ボットを介してファイルを送受信する](~/bots/how-to/bots-filesv4.md)
+* [ボットの要求ヘッダーにテナント ID と会話 ID を送信する](~/bots/how-to/conversations/request-headers-of-the-bot.md)

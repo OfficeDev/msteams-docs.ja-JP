@@ -4,12 +4,12 @@ description: アプリでの認証Teamsおよびアプリで使用する方法�
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Teams 認証 OAuth SSO AAD
-ms.openlocfilehash: 1705e85843fbe8d75af978da8baff081b58c6ca1
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: b2f8dc18afac3b088c1ec05812a3a39e2b378182
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720309"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889074"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>ユーザーを認証Microsoft Teams
 
@@ -58,3 +58,9 @@ OAuthPrompt の使用の詳細については、以下を参照してくださ�
 ## <a name="third-party-cookies-on-ios"></a>iOS 上のサード パーティ Cookie
 
 iOS 14 の更新後、Apple は既定ですべてのアプリのサードパーティ [Cookie](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) アクセスをブロックしました。 したがって、チャネルタブまたはチャット タブおよび個人用アプリの認証にサードパーティの Cookie を利用するアプリは、iOS クライアント上で認証ワークフローをTeamsされません。 プライバシーとセキュリティの要件に準拠するには、トークン ベースのシステムに移動するか、ユーザー認証ワークフローにファースト パーティ Cookie を使用する必要があります。
+
+## <a name="see-also"></a>関連項目
+
+* [Microsoft Teamsの認証フロー](~/tabs/how-to/authentication/auth-flow-tab.md)
+* [ボットのシングル サインオンのサポート](~/bots/how-to/authentication/auth-aad-sso-bots.md)
+* [メッセージング拡張機能に認証を追加する](~/messaging-extensions/how-to/add-authentication.md)

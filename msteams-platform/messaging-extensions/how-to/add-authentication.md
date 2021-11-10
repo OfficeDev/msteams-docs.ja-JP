@@ -1,16 +1,16 @@
 ---
 title: メッセージング拡張機能に認証を追加する
 author: surbhigupta
-description: メッセージング拡張機能に認証を追加する方法
+description: コード例とサンプルを使用してメッセージング拡張機能に認証を追加する方法について説明します。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 85353608e062d30529d67184716f65c3e2de1863
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 2d8bcb6896d1a97e6350b397e725afad2e8961a9
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719862"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889406"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>メッセージング拡張機能に認証を追加する
 
@@ -138,4 +138,6 @@ ms.locfileid: "60719862"
 |----------------|-----------------|--------------|----------------|
 |メッセージング拡張機能 - auth と config | 構成ページを持ち、検索要求を受け入れ、ユーザーがサインインした後に結果を返すメッセージング拡張機能。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[表示](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
 
- 
+## <a name="see-also"></a>関連項目
+
+[メッセージング拡張機能のシングル サインオン (SSO) のサポート](~/messaging-extensions/how-to/enable-sso-auth-me.md)

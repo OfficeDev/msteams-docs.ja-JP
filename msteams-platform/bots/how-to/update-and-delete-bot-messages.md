@@ -1,16 +1,16 @@
 ---
 title: ボットから送信されたメッセージを更新および削除する
 author: WashingtonKayaker
-description: ボットから送信されたメッセージを更新およびMicrosoft Teamsする方法
+description: さまざまな環境で、およびコード サンプルを使用して REST API を使用して、Microsoft Teamsボットから送信されたメッセージを更新および削除する方法について説明します。
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 2db2ad28da41fd464f82ce5836acc8202f118923
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: b92eb5c566df1d23b0228a218afa546160a3bb91
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156338"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889343"
 ---
 # <a name="update-and-delete-messages-sent-from-your-bot"></a>ボットから送信されたメッセージを更新および削除する
 
@@ -184,7 +184,7 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 |----------------------|-----------------|--------|-------------|--------|
 | Teams での会話の基本  | メッセージの更新と削除を含むTeamsの基本を示します。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [コンテキストTeams取得](~/bots/how-to/get-teams-context.md)

@@ -1,16 +1,17 @@
 ---
 title: 会話イベント
 author: WashingtonKayaker
-description: ボットから会話イベントを処理するMicrosoft Teamsします。
+description: コード サンプルを使用して、Microsoft Teams ボットからの会話イベント、チャネル イベントの更新、チーム メンバー イベント、およびメッセージの反応イベントを処理する方法。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 6dbefee88b1af763d02b3647d21bdc44da9541ec
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+keywords: イベント ボット チャネル メッセージの反応の会話
+ms.openlocfilehash: bc99091e3eac4a35514cbab4327082223edffa40
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566254"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888280"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams ボットの会話イベント
 
@@ -1321,7 +1322,7 @@ turnContext, CancellationToken cancellationToken) {
 
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
-利用不可
+使用できません
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -1380,7 +1381,7 @@ turnContext, CancellationToken cancellationToken) {
 
 # <a name="python"></a>[Python](#tab/python)
 
-利用不可
+使用不可
 
 ---
 
@@ -1408,7 +1409,7 @@ turnContext, CancellationToken cancellationToken) {
 |----------|-----------------|----------|
 | 会話ボット | ボットの会話イベントのサンプル コード。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [プロアクティブ メッセージを送信する](~/bots/how-to/conversations/send-proactive-messages.md)

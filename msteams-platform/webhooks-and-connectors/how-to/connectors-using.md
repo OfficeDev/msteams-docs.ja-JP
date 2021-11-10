@@ -5,12 +5,12 @@ description: Microsoft Teams で Office 365 コネクタを使用する方法に
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Teams o365 コネクタ
-ms.openlocfilehash: 6d10a173079fb31db303e98bfaf0800ff048a187
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 46a0bc8ad797d5fc856e44fe662faf208cb7b5bb
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156996"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887393"
 ---
 # <a name="create-and-send-messages"></a>メッセージを作成して送信する
 
@@ -251,7 +251,7 @@ ms.locfileid: "59156996"
 
 | 時間 (秒)  | 許可される最大要求数  |
 |---|---|
-| 1   | 4   |  
+| 1   | 4  |  
 | 30   | 60  |  
 | 3600   | 100  |
 | 7200 | 150  |
@@ -285,3 +285,5 @@ try
 * [Office 365コネクタのMicrosoft Teams](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [受信 Webhook を作成する](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [送信 Webhook を作成する](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+* [ボット メッセージのTeams制限](~/bots/how-to/rate-limit.md)
+* [アダプティブ カードを使用してタブをビルドする](~/tabs/how-to/build-adaptive-card-tabs.md)

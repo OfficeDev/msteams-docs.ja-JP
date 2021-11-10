@@ -1,16 +1,16 @@
 ---
 title: アプリとアプリのTeams ToolkitをVisual Studio
-description: アプリを使用して、アプリ内で直接素晴らしいカスタム Visual Studioを構築Microsoft Teams Toolkit
+description: このアプリを使用して、ユーザー内で直接、Visual Studioカスタム アプリをMicrosoft Teams Toolkit。 アプリの構成方法については、Visual Studioアプリを検証し、アプリと開発者ポータルVisual Studio発行します。
 keywords: teams visual studio ツールキット
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: johmil
-ms.openlocfilehash: 4f7da132f8cc63c65936c7c879226b04c87b3beb
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: af4f4c1511460e79a99d437dbcc75e2c748d1506
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156053"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888014"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>アプリとアプリのTeams ToolkitをVisual Studio
 
@@ -55,7 +55,7 @@ Microsoft Teams ツールキットを使用すると、Visual Studio 統合開�
 
     > [!div class="checklist"]
     >
-    > - [manifest.js]
+    > - manifest.json
     > - パブリック [または組織](../resources/schema/manifest-schema.md#icons) のアプリ カタログに表示するアプリの色アイコン。
     > - アクティビティ[バーに](../resources/schema/manifest-schema.md#icons)表示するアウトライン Teamsアイコン。
 
@@ -87,7 +87,7 @@ Teams[開発者](https://dev.teams.microsoft.com/home)ポータルでは、チ�
 - これらの送信内容は、IT 管理者によって審査されます。
 - [発行] ページ **に戻り** 、申請の状態を確認し、アプリが IT 管理者によって承認または却下された場合に確認できます。また、アプリに更新プログラムを送信したり、現在アクティブな申請を取り消したりすることもできます。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [Blazor で最初のアプリをMicrosoft Teams実行する](../get-started/first-app-blazor.md)

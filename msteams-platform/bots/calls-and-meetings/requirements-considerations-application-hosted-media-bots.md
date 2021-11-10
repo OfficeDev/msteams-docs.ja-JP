@@ -1,16 +1,16 @@
 ---
 title: アプリケーションホスト型メディア ボットの要件と考慮事項
-description: アプリケーションホスト型メディア ボットの作成に関連する重要な要件と考慮事項をMicrosoft Teams。
+description: コード例とサンプルを使用したアプリケーションホスト型メディア ボットの作成に関連する重要な要件と考慮事項、スケーラビリティとパフォーマンスに関する考慮事項Microsoft Teams理解します。
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: アプリケーションホスト型メディア Windows サーバー azure vm
 ms.date: 11/16/2018
-ms.openlocfilehash: e8f776b647beda2745a7bdbc03794e491a942b54
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 0597e99b1933270ee4ee85d1adc18378da3c3114
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156864"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887414"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>アプリケーションホスト型メディア ボットの要件と考慮事項
 
@@ -73,6 +73,11 @@ ms.locfileid: "59156864"
 | ローカル メディアのサンプル | さまざまなローカル メディア シナリオを示すサンプル。 | [表示](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
 | リモート メディアのサンプル | さまざまなリモート メディア シナリオを示すサンプル。 | [表示](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
 
+## <a name="next-step"></a>次のステップ
+
+> [!div class="nextstepaction"]
+> [サポートされているメディア形式](~/resources/media-formats.md)
+
 ## <a name="see-also"></a>関連項目
 
 - [GraphSDK ドキュメントの呼び出し](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
@@ -86,8 +91,3 @@ ms.locfileid: "59156864"
 
 - [サンプル アプリケーション](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples)
 - [Graph SDK ドキュメントの呼び出し](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
-
-## <a name="next-step"></a>次の手順
-
-> [!div class="nextstepaction"]
-> [サポートされているメディア形式](~/resources/media-formats.md)

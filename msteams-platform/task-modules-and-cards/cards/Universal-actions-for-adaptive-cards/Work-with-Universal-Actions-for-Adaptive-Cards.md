@@ -1,14 +1,14 @@
 ---
 title: アダプティブ カードのユニバーサル アクションの操作
-description: アダプティブ カードのユニバーサル アクションを操作します。
+description: コード サンプルを使用して、アダプティブ カードのスキーマ for UniversalActions、Refresh モデル、下位互換性など、アダプティブ カードのユニバーサル アクションを操作する方法について説明します。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: b732308586d89f378b50056d7c98884a2990fb11
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 488385d560f3f372be8149631eb1a04a3642f65f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156480"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888364"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>アダプティブ カードのユニバーサル アクションの操作
 
@@ -112,3 +112,5 @@ ms.locfileid: "59156480"
 
 * [Teams でのアダプティブ カードのアクション](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [ボットの機能](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
+* [シーケンシャル ワークフロー](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md)
+* [最新のカード](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)

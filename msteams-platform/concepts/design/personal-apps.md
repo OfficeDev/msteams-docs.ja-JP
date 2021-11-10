@@ -1,16 +1,17 @@
 ---
 title: 個人用アプリをデザインする
-description: 個人用アプリを設計し、Teams UI キットをMicrosoft Teamsする方法について学習します。
+description: Teams 個人用アプリを設計し、Microsoft Teams UI キットを取得し、モバイルおよびデスクトップ エクスペリエンス用のダッシュボード、フォーム、タスク ボードなどのコンポーネントを作成する方法について説明します。 個人用アプリを開発するためのベスト プラクティスについて説明します。
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 2f55661c7941422eb4067023eed46b05d1b757ea
-ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
+keywords: ui kit 個人用アプリ Webview ナビゲーション ボット タブ iframe ダッシュボード フォーム テンプレート
+ms.openlocfilehash: 44196ee6b1d91754e29b62dd3f6c6e40b3246602
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59360719"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888161"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>アプリの個人用アプリを設計Microsoft Teams
 
@@ -20,10 +21,10 @@ ms.locfileid: "59360719"
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-必要に応じて取得および変更できる要素を含む、包括的な個人用アプリ設計ガイドラインについては、「UI キットMicrosoft Teams参照してください。 UI キットには、ここでは説明しないアクセシビリティや応答性のサイジングなどの重要なトピックも含まれています。
+必要に応じて取得および変更できる要素を含む、包括的な個人用アプリ設計ガイドラインについては、「UI キットMicrosoft Teams参照してください。 UI キットには、アクセシビリティやレスポンシブ サイズ設定など、ここでは取り上げていない重要なトピックも含まれています。
 
 > [!div class="nextstepaction"]
-> [Microsoft Teams UI Kit (Figma) を入手する](https://www.figma.com/community/file/916836509871353159)
+> [Microsoft Teams UI キット (Figma) を入手する](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="add-a-personal-app"></a>個人用アプリを追加する
 
@@ -39,7 +40,7 @@ ms.locfileid: "59360719"
 
 ### <a name="anatomy-personal-app-private-workspace"></a>Anatomy: 個人用アプリ (プライベート ワークスペース)
 
-#### <a name="mobile"></a>Mobile
+#### <a name="mobile"></a>モバイル
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="例は、個人用タブのコンポーネント構造を示しています。" border="false":::
 
@@ -57,7 +58,7 @@ ms.locfileid: "59360719"
 |A|**タブ**: 個人用アプリのナビゲーションを提供します。|
 |1|**webview**: アプリのコンテンツを表示します。|
 
-#### <a name="desktop"></a>Desktop
+#### <a name="desktop"></a>デスクトップ
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="次の使用例は、個人用タブのコンポーネント構造を示しています。" border="false":::
 
@@ -79,9 +80,9 @@ ms.locfileid: "59360719"
 
 個人用タブを設計するには、Teamsテンプレートとコンポーネントのいずれかを使用します。
 
-* [リスト](../../concepts/design/design-teams-app-ui-templates.md#list): リストは、関連するアイテムをスキャン可能な形式で表示し、ユーザーがリスト全体または個々のアイテムに対してアクションを実行できます。
-* [タスク ボード](../../concepts/design/design-teams-app-ui-templates.md#task-board): カンバン ボードやスイム レーンとも呼ばれるタスク ボードは、作業アイテムやチケットの状態を追跡するためによく使用されるカードのコレクションです。
-* [ダッシュボード](../../concepts/design/design-teams-app-ui-templates.md#dashboard): ダッシュボードは、データまたはコンテンツの概要を示す複数のカードを含むキャンバスです。
+* [リスト](../../concepts/design/design-teams-app-ui-templates.md#list): リストは、関連するアイテムをスキャン可能な形式で表示し、ユーザーがリスト全体または個々のアイテムに対してアクションを実行できるようにします。
+* [タスク ボード](../../concepts/design/design-teams-app-ui-templates.md#task-board): かんばんボードまたはスイム レーンと呼ばれることもあるタスク ボードは、作業項目またはチケットのステータスを追跡するためによく使用されるカードのコレクションです。
+* [ダッシュボード](../../concepts/design/design-teams-app-ui-templates.md#dashboard): ダッシュボードは、データまたはコンテンツの概要を提供する複数のカードを含むキャンバスです。
 * [フォーム](../../concepts/design/design-teams-app-ui-templates.md#form): フォームは、構造化された方法でユーザー入力を収集、検証、送信するためのフォームです。
 * [空の状態](../../concepts/design/design-teams-app-ui-templates.md#empty-state): 空の状態テンプレートは、サインイン、初回実行エクスペリエンス、エラー メッセージなど、多くのシナリオで使用できます。
 * [左ナビゲーション](~/concepts/design/design-teams-app-advanced-ui-components.md#left-nav): 左側のナビゲーション コンポーネントは、個人用アプリでナビゲーションが必要な場合に役立ちます。 一般に、ナビゲーションは最小限に抑えます。
@@ -92,7 +93,7 @@ ms.locfileid: "59360719"
 
 ### <a name="anatomy-personal-app-bot"></a>解剖学: 個人用アプリ (ボット)
 
-#### <a name="mobile"></a>Mobile
+#### <a name="mobile"></a>モバイル
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="例は、個人用ボット コンポーネントの構造を示しています。" border="false":::
 

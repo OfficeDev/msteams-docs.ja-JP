@@ -5,12 +5,12 @@ description: Microsoft ツールとリソースを使用して効果的なアプ
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 34401bf53196601b8836012fa4c96296510472a8
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 1b9d425f57cf1fa49aac41b4d21a0bf4befb3407
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156939"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889098"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>アプリの設計プロセスMicrosoft Teamsする
 
@@ -116,3 +116,6 @@ UI テンプレートは、複雑で忠実度の高い設計で、一般的なTe
 * **Microsoft Teams検証** ガイドライン : ストアに表示されるアプリではなく、Teamsアプリが努力する必要がある標準を提供します。 詳細については、「ガイドライン」 [を参照してください](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)。
 * **デザインのベスト プラクティス**: これらのドキュメントと UI キットは、高品質のアプリを設計するためのベスト プラクティスを提供します。 たとえば、ボットを設計 [するためのベスト プラクティスを参照してください](~/bots/design/bots.md#best-practices)。
 
+## <a name="see-also"></a>関連項目
+
+[アクティビティ フィード通知の設計](~/concepts/design/activity-feed-notifications.md)

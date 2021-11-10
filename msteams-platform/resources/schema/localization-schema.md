@@ -1,25 +1,25 @@
 ---
 title: JSON スキーマの参照のローカライズ
-description: ローカライズ ファイルでサポートされているローカライズ スキーマについて説明Microsoft Teams
+description: スキーマの例を使用して、ローカライズ ファイルでサポートされるローカライズ Microsoft Teamsを説明します。
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams マニフェスト スキーマのローカライズ
 ms.date: 05/20/2019
-ms.openlocfilehash: 7b9853772996764e185ed4de44683df9f5f57711
-ms.sourcegitcommit: 6573881f7e69d8e5ec8861f54df84e7d519f0511
+ms.openlocfilehash: 46a17e488d9c8c5598eab3ff53a9322a80f606ca
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "60096536"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887881"
 ---
 # <a name="localize-json-schema-reference"></a>JSON スキーマの参照のローカライズ
 
-ローカライズ Microsoft Teamsは、クライアント言語の設定に基づいて提供される言語の翻訳について説明します。 ファイルは、 でホストされるスキーマに準拠している必要があります [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json) 。 
+ローカライズ Microsoft Teamsは、クライアント言語の設定に基づいて提供される言語の翻訳について説明します。 ファイルは、 でホストされるスキーマに準拠している必要があります [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json) 。
 
 > [!TIP]
 > マニフェストの先頭にスキーマを指定して、コード エディターからのサポートを有効にするか、同様 `IntelliSense` のサポートを行います。 `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",`
 
-## <a name="example"></a>例 
+## <a name="example"></a>例
 
 ローカライズ JSON スキーマの例は次のとおりです。
 
@@ -37,9 +37,6 @@ ms.locfileid: "60096536"
   "bots[0].commandLists[0].commands[0].description": "Rechercher la documentation Teams pertinente"
 }
 ```
-
-> [!NOTE]
->  App Studio は間もなく奪われる予定です。 新しい開発者ポータルを使用して、Teamsアプリを構成、配布、[および管理します](https://dev.teams.microsoft.com/)。
 
 スキーマは、次のプロパティを定義します。
 

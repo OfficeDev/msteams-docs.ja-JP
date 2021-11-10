@@ -1,16 +1,17 @@
 ---
 title: ボットTeams特定のコンテキストを取得する
 author: surbhigupta
-description: 会話の名簿、詳細、チャネル リストなど、ボットの Microsoft Team の特定のコンテキストを取得する方法。
+description: 会話名簿、単一メンバー、またはチームの詳細、チャネル リスト、コード サンプルなど、ボットの Microsoft Team の特定のコンテキストを取得する方法。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 8baf33c7c66ebee69248306cd9273c33b6123db3
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: ボット コンテキスト名簿ユーザー プロファイル チャネル リスト
+ms.openlocfilehash: eb935515e4f130e57cf634dd9716306cce9f3a05
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156981"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888245"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>ボットTeams特定のコンテキストを取得する
 
@@ -20,7 +21,7 @@ ms.locfileid: "59156981"
 
 ## <a name="fetch-the-roster-or-user-profile"></a>名簿またはユーザー プロファイルを取得する
 
-ボットは、メンバーのリストとその基本的なユーザー プロファイル (Teams ユーザー ID や Azure Active Directory (AAD) 情報 (名前や objectId など) を照会できます。 この情報を使用して、ユーザー ID を関連付けできます。 たとえば、ユーザーが AAD 資格情報を使用してタブにログインしたかどうかを確認するには、チームのメンバーです。 会話メンバーを取得する場合、最小または最大のページ サイズは実装によって異なります。 50 未満のページ サイズは 50 として扱い、500 より大きい場合は 500 に制限されます。 ページ以外のバージョンを使用する場合でも、大規模なチームではこのバージョンは使用できません。 詳細については、「チームまたはチャット[メンバーをフェッチTeamsボット API の変更点」を参照してください](~/resources/team-chat-member-api-changes.md)。
+ボットは、Teams ユーザー ID や Azure Active Directory (AAD) 情報 (名前や objectId など) を含む、メンバーのリストとその基本的なユーザー プロファイルを照会できます。 この情報を使用して、ユーザー ID を関連付けできます。 たとえば、ユーザーが資格情報を使用してタブにログインAAD確認するには、チームのメンバーです。 会話メンバーを取得する場合、最小または最大のページ サイズは実装によって異なります。 50 未満のページ サイズは 50 として扱い、500 より大きい場合は 500 に制限されます。 ページ以外のバージョンを使用する場合でも、大規模なチームではこのバージョンは使用できません。 詳細については、「チームまたはチャット[メンバーをフェッチTeamsボット API の変更点」を参照してください](~/resources/team-chat-member-api-changes.md)。
 
 次のサンプル コードでは、ページ化されたエンドポイントを使用して、名簿をフェッチします。
 
@@ -127,7 +128,7 @@ Response body
 
 ## <a name="get-single-member-details"></a>単一のメンバーの詳細を取得する
 
-ユーザー ID、UPN、または AAD オブジェクト ID を使用してTeamsユーザーの詳細を取得できます。
+ユーザー ID、UPN、またはオブジェクト ID を使用して、特定のTeams詳細を取得AADできます。
 
 次のサンプル コードは、単一のメンバーの詳細を取得するために使用されます。
 
@@ -211,7 +212,7 @@ Response body
 
 ## <a name="get-teams-details"></a>チームの詳細を取得する
 
-チームにインストールすると、ボットは AAD グループ ID を含むそのチームに関するメタデータを照会できます。
+チームにインストールすると、ボットはグループ ID を含むそのチームに関するメタデータAADできます。
 
 チームの詳細を取得するには、次のサンプル コードを使用します。
 
@@ -368,7 +369,7 @@ Response body
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [ボットを介してファイルを送受信する](~/bots/how-to/bots-filesv4.md)

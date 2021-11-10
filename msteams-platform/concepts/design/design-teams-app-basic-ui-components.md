@@ -1,16 +1,17 @@
 ---
 title: 基本的な UI コンポーネントを使用Fluentアプリを設計する
 author: heath-hamilton
-description: アプリの作成や UI キットの取得にMicrosoft Teams一般的なプリミティブ UI コンポーネントMicrosoft Teams説明します。
+description: アプリの作成や UI キットの取得にMicrosoft Teams一般的なプリミティブ UI コンポーネントMicrosoft Teams説明します。 パンくず、カード、カルーセル、ドロップダウン、coachmark、ピッカー、ピボット、トグル、ツールヒントなどのコンポーネントについて説明します。
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: b905a95f35abb083b5c8bba7c096e1012adb223d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: UI コンポーネント Fluent kit Breadcrumb ボタン カード カルーセル ドロップダウン coachmark ピッカー ピボット トグル ヒント
+ms.openlocfilehash: af5d7b63ebdca96f0e9563049e4cc22d00f1f45a
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156596"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887498"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>基本的な UI Microsoft Teamsを使用Fluentアプリを設計する
 

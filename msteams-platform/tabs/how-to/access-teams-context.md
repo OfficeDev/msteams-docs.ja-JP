@@ -4,12 +4,12 @@ description: タブにユーザー コンテクストを付与する方法を説
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: チーム タブ ユーザー コンテキスト
-ms.openlocfilehash: 187e3dda7aacee2ddaaaca6b5c5dbc8686ac5575
-ms.sourcegitcommit: 762cd3ed9054c6c19825498fc0edd50cd99634da
+ms.openlocfilehash: 5a85aaf23089cbe8215c64b7cc342ee3577510bd
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "59439698"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887540"
 ---
 # <a name="get-context-for-your-tab"></a>タブのコンテキストを取得する
 
@@ -27,7 +27,7 @@ ms.locfileid: "59439698"
 * 認証フローは、Azure Active Directory (AAD) または他の ID プロバイダーから開始し、ユーザーがユーザー名を再入力する必要はありません。 詳細については、「ユーザー認証」[タブでユーザーを認証するMicrosoft Teams参照してください](~/concepts/authentication/authentication.md)。
 
 > [!IMPORTANT]
-> このユーザー情報は、スムーズなユーザー エクスペリエンスを提供するのに役立ちますが、ID の証明として使用することはできません。 たとえば、攻撃者はブラウザーにページを読み込み、有害な情報や要求を表示する可能性があります。
+> このユーザー情報は、スムーズなユーザー エクスペリエンスを提供するのに役立ちますが、ID の証明として使用することはできません。  たとえば、攻撃者はブラウザーにページを読み込み、有害な情報や要求を表示する可能性があります。
 
 ## <a name="access-context-information"></a>コンテキスト情報にアクセスする
 
@@ -42,12 +42,12 @@ ms.locfileid: "59439698"
 
 * {entityId}: 最初の [タブの構成](~/tabs/how-to/create-tab-pages/configuration-page.md) 時に、このタブのアイテムに与えた ID。
 * {subEntityId}: このタブ内の特定のアイテムの[](~/concepts/build-and-test/deep-links.md)ディープ リンクを生成するときに指定した ID。これは、エンティティ内の特定の状態に復元するために使用する必要があります。たとえば、特定のコンテンツにスクロールしたり、アクティブ化したりします。
-* {loginHint}: AAD のログイン ヒントとして適した値。 これは通常、ホーム テナントの現在のユーザーのログイン名です。
+* {loginHint}: ユーザーのログイン ヒントとして適したAAD。 これは通常、ホーム テナントの現在のユーザーのログイン名です。
 * {userPrincipalName}: 現在のテナント内の現在のユーザーのユーザー プリンシパル名。
-* {userObjectId}: 現在のテナント内の現在のユーザーの AAD オブジェクト ID。
+* {userObjectId}: 現在AAD現在のユーザーのオブジェクト ID を指定します。
 * {theme}: 現在のユーザー インターフェイス (UI) テーマ (例: `default` `dark` 、 、 または `contrast` )
 * {groupId}: タブがOffice 365グループの ID。
-* {tid}: 現在のユーザーの AAD テナント ID。
+* {tid}: 現在AADのテナント ID を指定します。
 * {locale}: languageId-countryId として書式設定されたユーザーの現在のロケール。 たとえば、ja-us。
 
 > [!NOTE]
@@ -135,14 +135,15 @@ ms.locfileid: "59439698"
 
 関数 `theme` の引数は、、 、または の値を持つ `default` `dark` 文字列です `contrast` 。
 
+## <a name="next-step"></a>次のステップ
+
+> [!div class="nextstepaction"]
+> [アダプティブ カードを使用してタブをビルドする](~/tabs/how-to/build-adaptive-card-tabs.md)
+
 ## <a name="see-also"></a>関連項目
 
 * [タブデザインのガイドライン](../../tabs/design/tabs.md)
 * [Teamsタブ](~/tabs/what-are-tabs.md)
 * [プライベート タブを作成する](~/tabs/how-to/create-personal-tab.md)
 * [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
-
-## <a name="next-step"></a>次の手順
-
-> [!div class="nextstepaction"]
-> [アダプティブ カードを使用してタブをビルドする](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [タブでタスク モジュールを使用する](~/task-modules-and-cards/task-modules/task-modules-tabs.md)

@@ -1,14 +1,14 @@
 ---
 title: アダプティブ カードのユニバーサル アクションの概要
-description: アダプティブ カードのユニバーサル アクションの概要を簡単に説明します。
+description: ユーザー固有のビュー、シーケンシャル ワークフローのサポートなど、デスクトップ環境およびモバイル環境向けユニバーサル アクション for アダプティブ カードの概要
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: ba957456e2926e11b021f6a2577706cef7fb5ad7
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: c294e235074bd6a2c9ae148c20e355a9c86325c5
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475714"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889357"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>アダプティブ カードのユニバーサル アクション
 
@@ -111,14 +111,14 @@ ms.locfileid: "59475714"
 
 まず、クイック スタート ガイドを使用してシナリオを更新し [、ユニバーサル](Work-with-universal-actions-for-adaptive-cards.md) アクションを活用します。
 
+## <a name="next-step"></a>次のステップ
+
+> [!div class="nextstepaction"]
+> [アダプティブ カードのユニバーサル アクションの操作](Work-with-universal-actions-for-adaptive-cards.md)
+
 ## <a name="see-also"></a>関連項目
 
 * [ボットについて](~/bots/what-are-bots.md)
 * [アダプティブ カードの概要](~/task-modules-and-cards/what-are-cards.md)
 * [アダプティブ カード @ Microsoft ビルド 2020](https://youtu.be/hEBhwB72Qn4?t=1393)
 * [アダプティブ カード @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460)
-
-## <a name="next-step"></a>次の手順
-
-> [!div class="nextstepaction"]
-> [アダプティブ カードのユニバーサル アクションの操作](Work-with-universal-actions-for-adaptive-cards.md)

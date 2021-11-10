@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams publishs store office publishing AppSource ローカライズ言語
 ms.date: 05/15/2018
-ms.openlocfilehash: 7d9b805f54d4040ff83b0fd0e704dd349a025fa4
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 50dc306a5a06dd7a73a47fbcf94a8a70aa5d6aa6
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156603"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887554"
 ---
 # <a name="localize-your-app"></a>アプリをローカライズする
 
@@ -44,13 +44,13 @@ ms.locfileid: "59156603"
 
 ## <a name="localize-strings-in-your-app-manifest"></a>アプリ マニフェスト内の文字列をローカライズする
 
-アプリをローカライズするには、Microsoft Teamsスキーマ以降を使用 `v1.5` する必要があります。 この操作を行うには、manifest.jsの属性をファイルに設定し、プロパティをバージョン (この場合) `$schema` **https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json** `manifestVersion` `$schema` に `1.5` 更新します。 
+アプリをローカライズするには、Microsoft Teamsスキーマ以降を使用 `v1.5` する必要があります。 これを行うには、manifest.json ファイルの属性を以上に設定し、プロパティをバージョン (この場合) に `$schema` **https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json** `manifestVersion` `$schema` `1.5` 更新します。 
 
 アプリケーションでサポートされている `localizationInfo` 既定の言語でプロパティを追加する必要があります。 既定の言語は、ユーザーのクライアント設定が追加の言語と一致しない場合、最終的なフォールバック言語として使用されます。
 
-### <a name="example-manifestjson-change"></a>変更時manifest.js例
+### <a name="example-manifestjson-change"></a>manifest.json の変更例
 
-次のmanifest.jsは、アプリケーションでサポートされている既定の言語でプロパティを追加 `localizationInfo` するのに役立ちます `additionalLanguages` 。
+次の manifest.json は、アプリケーションでサポートされている既定の言語でプロパティを追加するのに `localizationInfo` 役立ちます `additionalLanguages` 。
 
 ```json
 {
@@ -102,9 +102,9 @@ Teams クライアントは、既定の言語文字列 -> ユーザーの言語�
 
 したがって、マニフェストにトップ レベルの言語翻訳のみを提供する必要があります。 たとえば、'en-us' の代わりに 'en' を使用します。 地域レベルのオーバーライドは、必要な少数の文字列にのみ指定する必要があります。 
 
-### <a name="example-manifestjson-change"></a>変更時manifest.js例
+### <a name="example-manifestjson-change"></a>manifest.json の変更例
 
-変更manifest.js次の例に示します。
+manifest.json の変更を次の例に示します。
 
 ```json
 {
@@ -132,7 +132,7 @@ Teams クライアントは、既定の言語文字列 -> ユーザーの言語�
 
 ### <a name="example-localization-json-file"></a>ローカライズ .json ファイルの例
 
- 変更localization.js次の例に示します。
+ localization.json の変更を次の例に示します。
 
 ```json
 {
@@ -159,3 +159,6 @@ Teams クライアントは、既定の言語文字列 -> ユーザーの言語�
 |-------------|-------------|------|------|
 | アプリのローカライズ | Microsoft Teamsタブを使用してアプリのローカライズを行います。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
 
+## <a name="see-also"></a>関連項目
+
+[JSON スキーマの参照のローカライズ](~/resources/schema/localization-schema.md)

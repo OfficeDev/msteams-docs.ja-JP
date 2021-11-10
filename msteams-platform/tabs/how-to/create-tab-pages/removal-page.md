@@ -6,12 +6,12 @@ keywords: teams タブ グループ チャネル構成可能 削除
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: b519b4ff7251979f97affb0c567f0e9813142b6e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a94578a065d1514d74d33638485be26b27c77718
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156290"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889238"
 ---
 # <a name="create-a-removal-page"></a>削除ページを作成する
 
@@ -19,15 +19,15 @@ ms.locfileid: "59156290"
 
 ## <a name="enable-your-tab-to-be-reconfigured-after-installation"></a>インストール後にタブを再構成する
 
-この **manifest.jsタブ** の機能を定義します。 tab instance プロパティは、ユーザーが作成後にタブを変更または再構成できるかどうかを示すブール値 `canUpdateConfiguration` を取得します。 次の表に、プロパティの詳細を示します。
+**manifest.json は**、タブの機能と機能を定義します。 tab instance プロパティは、ユーザーが作成後にタブを変更または再構成できるかどうかを示すブール値 `canUpdateConfiguration` を取得します。 次の表に、プロパティの詳細を示します。
 
-|Name| 型| 最大サイズ | 必須 | 説明|
+|名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`canUpdateConfiguration`|Boolean|||作成後に、タブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 既定値は `true` です。 |
 
 タブがチャネルまたはグループ チャットにアップロードされると、Teamsの右クリック ドロップダウン メニューが追加されます。使用可能なオプションは、設定によって決 `canUpdateConfiguration` まります。 次の表に、設定の詳細を示します。
 
-| `canUpdateConfiguration`| true   | false | 説明 |
+| `canUpdateConfiguration`| true   | false | description |
 | ----------------------- | :----: | ----- | ----------- |
 |     設定            |   √    |       |ページ `configurationUrl` が IFrame に再読み込みされ、ユーザーはタブを再構成できます。 |
 |     名前の変更              |   √    |   √   | ユーザーは、タブ バーに表示されるタブ名を変更できます。          |
@@ -91,14 +91,14 @@ ms.locfileid: "59156290"
 > * Teamsが呼び **出** されていない場合でも、5 秒後に [削除] ボタンを有効にします `setValidityState()` 。
 > * ユーザーが [削除] を選択するとTeamsが完了したかどうかに関係なく、30 秒後にタブが削除されます。
 
+## <a name="next-step"></a>次のステップ
+
+> [!div class="nextstepaction"]
+> [モバイルのタブ](~/tabs/design/tabs-mobile.md)
+
 ## <a name="see-also"></a>関連項目
 
 * [Teamsタブ](~/tabs/what-are-tabs.md)
 * [プライベート タブを作成する](~/tabs/how-to/create-personal-tab.md)
 * [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
 * [構成ページを作成する](~/tabs/how-to/create-tab-pages/configuration-page.md)
-
-## <a name="next-step"></a>次の手順
-
-> [!div class="nextstepaction"]
-> [モバイルのタブ](~/tabs/design/tabs-mobile.md)

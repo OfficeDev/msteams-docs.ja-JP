@@ -5,12 +5,12 @@ description: ボットを構築するためのツールと SDK Microsoft Teams�
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 8c05fecc656264b3e7e98839c65bab2c9eda0952
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: d6a1ce32fce03ada547cf769ff5a634f9d6f01de
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566345"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888427"
 ---
 # <a name="bots-and-sdks"></a>ボットと SDK
 
@@ -118,7 +118,15 @@ Microsoft Teams のボットは、1 対 1 の会話、グループ チャット�
 |----------------|-----------------|--------------|----------------|
 | Teams 会話ボット | メッセージングおよび会話イベントの処理。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [ボットのアクティビティ ハンドラー](~/bots/bot-basics.md)
+
+## <a name="see-also"></a>関連項目
+
+* [通話と会議のボット](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+* [ボットの会話](~/bots/how-to/conversations/conversation-basics.md)
+* [ボット コマンド メニュー](~/bots/how-to/create-a-bot-commands-menu.md)
+* [サーバー内のボットの認証フロー Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)
+* [ボットでタスク モジュールを使用する](~/task-modules-and-cards/task-modules/task-modules-bots.md)

@@ -1,15 +1,15 @@
 ---
 title: 会議で使用するアプリを有効Teamsする
 author: surbhigupta
-description: 会議で使用するアプリを有効Teamsする
+description: Teams 会議やさまざまな会議シナリオ用のアプリの有効化と構成、アプリ マニフェストの更新、会議内ダイアログ、共有会議ステージ、会議サイドパネルなどの機能の構成
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 7f6f1454f92fcc223c8511a05aa5e43133c3f828
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 62423d92537cc6cb2d0f8f409d8e50b492fa00fd
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720212"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887714"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>会議で使用するアプリを有効Teamsする
 
@@ -62,7 +62,7 @@ ms.locfileid: "60720212"
 | **meetingChatTab** | スケジュールされた会議の一連のユーザー間のグループ チャットのヘッダー内のタブ。 meetingChatTab または **meetingDetailsTab** のいずれかを指定すると、アプリがモバイルで動作します。  |
 | **meetingDetailsTab** | 予定表の会議の詳細ビューのヘッダーにあるタブ。 meetingChatTab または **meetingDetailsTab** のいずれかを指定すると、アプリがモバイルで動作します。  |
 | **meetingSidePanel** | 統合バー (U バー) を介して開いた会議内パネル。 |
-| **meetingStage** | アプリを会議 `meetingSidePanel` ステージに共有できます。 モバイルではこのアプリを使用することはできません。 |
+| **meetingStage** | アプリを会議 `meetingSidePanel` ステージに共有できます。 このアプリは、モバイル クライアントまたはルーム クライアントTeamsできません。 |
 
 会議でアプリを有効Teams、会議の前、会議中、会議の後にアプリを構成する必要があります。
 
@@ -170,3 +170,4 @@ API を使用して `userContext` 要求をルーティングするには、「S
 
 * [会議中のダイアログの設計ガイドライン](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teamsの認証フロー](../tabs/how-to/authentication/auth-flow-tab.md)
+* [Microsoft サービス経由で会議にアプリを追加Graph](/graph/api/chat-post-installedapps.md)

@@ -1,17 +1,17 @@
 ---
 title: Microsoft Graphを使用して、アクティブボットのインストールとメッセージングを承認Teams
-description: インプリTeamsプロアクティブ メッセージングについて説明します。
+description: プロアクティブ メッセージングについて、Teams実装する方法について説明します。 コード サンプルを使用してプロアクティブ アプリのインストールとメッセージングを有効にする方法について説明します。
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Teams プロアクティブ メッセージング チャットのインストール Graph
-ms.openlocfilehash: 7d08097155ba69715508998ef4d2d9d50807b2ff
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a3b7ffd24f7601c8247f1f11c6fe1a562d9cd847
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156647"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888007"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Graph API を使用してメッセージを送信するアプリの事前インストール
 
@@ -42,14 +42,14 @@ Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation
 
 これらのアクセス許可を使用するには、次の値で [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) キーをアプリ マニフェストに追加する必要があります。
 
-* **id**: Azure Active Directory (AAD) アプリ ID。
+* **id**: アプリ id Azure Active Directory (AAD) アプリ ID。
 * **resource**: アプリのリソース URL。
 
 > [!NOTE]
 >
 > * インストールは他のユーザー向けなので、ボットにはアプリケーションが必要であり、ユーザーが委任したアクセス許可は必要ではありません。
 >
-> * AAD テナント管理者は、アプリケーション [に明示的にアクセス許可を付与する必要があります](/graph/security-authorization#grant-permissions-to-an-application)。 アプリケーションにアクセス許可が付与された後、AAD テナントのすべてのメンバーが付与されたアクセス許可を取得します。
+> * テナントAADは、アプリケーション[に明示的にアクセス許可を付与する必要があります](/graph/security-authorization#grant-permissions-to-an-application)。 アプリケーションにアクセス許可が付与された後、テナントのすべてのAADアクセス許可を取得します。
 
 ## <a name="enable-proactive-app-installation-and-messaging"></a>プロアクティブ アプリのインストールとメッセージングを有効にする
 
@@ -195,12 +195,13 @@ Content-Type: application/json
 | **サンプル名** | **説明** | **.NET** | **Node.js** |
 |---------------|--------------|--------|-------------|
 | アプリのプロアクティブ インストールとプロアクティブ通知の送信 | このサンプルでは、ユーザーに対してアプリのプロアクティブ インストールを使用し、Microsoft の API を呼び出してプロアクティブ通知Graph示します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
-## <a name="see-also"></a>関連項目
-
-* [**アプリのセットアップ ポリシーを管理Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
-* [ユーザーにプロアクティブ通知を送信する SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
 
 ## <a name="additional-code-samples"></a>追加のコード サンプル
 >
 > [!div class="nextstepaction"]
 > [**Teams のプロアクティブ メッセージング コード サンプル**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
+
+## <a name="see-also"></a>関連項目
+
+* [**アプリのセットアップ ポリシーを管理Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
+* [ユーザーにプロアクティブ通知を送信する SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)

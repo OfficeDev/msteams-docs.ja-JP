@@ -1,15 +1,15 @@
 ---
 title: リアルタイムのメディア通話とオンライン会議 (Microsoft Teams
-description: リアルタイムの音声およびビデオ通話やオンライン会議を行うボットを構築する上での重要な概念を理解します。
+description: リアルタイムの音声およびビデオ通話やオンライン会議を行うボットを構築する上での重要な概念を理解します。 メディア セッション、フレーム レート、オーディオ/ビデオ形式、および開発者リソースへの参照について説明します。
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: オーディオ ストリーム ビデオ ストリーム オーディオ/ビデオ通話会議リアルタイム メディア アプリケーションホスト型メディア サービスホスト型メディア
-ms.openlocfilehash: 5c7fce3e8d584781037b5d1169706c9f197e3a96
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: bff216848262412a05de8794bb716eb6a3f4c75a
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156867"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889063"
 ---
 # <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>リアルタイムのメディア通話と会議と会議Microsoft Teams
 
@@ -65,7 +65,11 @@ ms.locfileid: "59156867"
 
 アプリケーションホスト型メディア ボットでは、.NET またはサーバー C#サーバー Windows必要です。 詳細については、「アプリケーションホスト型メディア ボットの要件と考慮事項 [」を参照してください](requirements-considerations-application-hosted-media-bots.md#c-or-net-and-windows-server-for-development)。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [通話ボットを登録する](~/bots/calls-and-meetings/registering-calling-bot.md)
+
+## <a name="see-also"></a>関連項目
+
+[ボットでサポートされているメディア形式](~/resources/media-formats.md)

@@ -5,12 +5,12 @@ description: 標準化された UI コンポーネント、レイアウト、お
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: ef1fbe41c7618518dab64c25b3ac17eaf8f925d1
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d84d03af2ce1428b7c75a232690e9f1e2fa6112f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156936"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887804"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>UI テンプレートをMicrosoft Teamsアプリを設計する
 
@@ -100,7 +100,7 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 
 :::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="例は、デスクトップ上の空の状態 UI テンプレートを示しています。" border="false":::
 
-## <a name="filter"></a>フィルター
+## <a name="filter"></a>Filter
 
 フィルターを使用すると、選択した条件に基づいて表示される情報を減らします。 コンテンツを整理するテーブル、リスト、カード、その他のコンポーネントを含むフィルターを含めできます。
 
@@ -212,3 +212,9 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 ### <a name="desktop"></a>Desktop
 
 :::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="例では、デスクトップにウィザード UI テンプレートを表示します。" border="false":::
+
+## <a name="see-also"></a>関連項目
+
+* [基本的な UI コンポーネントを使用Fluentアプリを設計する](~/concepts/design/design-teams-app-basic-ui-components.md)
+* [高度な UI Microsoft Teamsを使用したアプリの設計](~/concepts/design/design-teams-app-advanced-ui-components.md)
+* [ボット メッセージの書式を設定する](~/bots/how-to/format-your-bot-messages.md)

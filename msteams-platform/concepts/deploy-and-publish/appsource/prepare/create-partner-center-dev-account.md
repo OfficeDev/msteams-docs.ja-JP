@@ -1,22 +1,22 @@
 ---
 title: パートナー センターの開発者アカウントを作成する
-description: アプリをアプリ ストアに発行Microsoft Teamsパートナー センターの開発者アカウントが必要です。
+description: アプリをパートナー ストアに発行するためのパートナー センター開発者アカウントを作成Microsoft Teamsします。
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 9a650326be832a5961a45ac4b7e418f29d073ea0
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a6570c2f3a6a054457ff3f64a65ae4c2398db93a
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156816"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889420"
 ---
 # <a name="create-a-partner-center-developer-account"></a>パートナー センターの開発者アカウントを作成する
 
 アプリをパートナー ストアに発行Microsoft Teams、パートナー センターの開発者アカウント[を設定する必要があります](/office/dev/store/open-a-developer-account)。 シナリオによっては、既存のアカウントを使用できる場合があります。
 
-## <a name="faq"></a>よくあるご質問 (FAQ)
+## <a name="faq"></a>FAQ
 
 パートナー センター アカウントの管理に関する一般的な質問に対する回答を取得します。
 
@@ -218,7 +218,7 @@ ms.locfileid: "59156816"
 
 </details>
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [ストア送信を準備する](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)

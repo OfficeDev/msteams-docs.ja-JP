@@ -6,12 +6,12 @@ keywords: Microsoft Teams テンプレートのサンプル デモ
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 4fefbee5a1310e9aa1c92b31a21f6132e04546d7
-ms.sourcegitcommit: 25a88715d9b06b2afeac14de86177bb34161b0cf
+ms.openlocfilehash: e99b6c347ce23b8d58bc8e632c8345ce6b09598f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60266642"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889196"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 用のアプリ テンプレート
 
@@ -123,6 +123,7 @@ New Employee Onboarding は、組織が新入社員教育で、従業員に一�
 
 ## <a name="see-also"></a>関連項目
 
-[Web アプリを統合する](~/samples/integrate-web-apps-overview.md)
-
-
+* [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)
+* [アプリMicrosoft Teamsについて](../concepts/capabilities-overview.md)
+* [アプリの個人用アプリを設計Microsoft Teams](../concepts/design/personal-apps.md)
+* [デザイン システム](../concepts/design/design-teams-app-fundamentals.md)

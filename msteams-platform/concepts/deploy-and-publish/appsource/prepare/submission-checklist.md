@@ -1,16 +1,17 @@
 ---
 title: ストア送信を準備する
-description: ストアに一覧表示するアプリをMicrosoft Teamsする前の最後の手順について説明します。
+description: ストアに一覧表示するアプリをMicrosoft Teamsする前の最後の手順について説明します。 アプリ パッケージの検証、テスト手順のコンパイル、ストア登録情報の詳細の作成について説明します。
 ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 617c7d962dc27964c28af74b73c252b08a39f307
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+keywords: 申請ストア配布アプリ パッケージのガイドラインのローカライズの検証
+ms.openlocfilehash: 08155408e68869b76f814788afcb408afd1a72a9
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720352"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889168"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>ストア申請Microsoft Teams準備する
 
@@ -209,7 +210,11 @@ YouTube または Vimeo ビデオの URL を追加できます。
 > [!NOTE]
 > 新しいアプリを提出する場合は、アプリが Teams ストアに表示されるまで、Publisher 構成証明を正式にTeamsできます。 リストされているアプリを更新する場合は、検証Publisher最新バージョンのアプリを提出する前に、構成証明を完了してください。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [アプリを送信する](/office/dev/store/add-in-submission-guide)
+
+## <a name="see-also"></a>関連項目
+
+[ストアの申請に失敗した場合Microsoft Teamsを解決する](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)

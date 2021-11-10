@@ -1,15 +1,15 @@
 ---
 title: '[タスク モジュール] タブでタスク Microsoft Teams使用する'
-description: クライアント SDK を使用して、Teamsタブからタスク モジュールMicrosoft Teams説明します。
+description: 各タブからタスク モジュールを呼び出し、Teams SDK を使用して結果を送信するMicrosoft Teams説明します。 コード サンプルが含まれています。
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: タスク モジュールチームがクライアント SDK をタブする
-ms.openlocfilehash: 0f6c1569a1aa18921df4635bdbaab505526c1e2e
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 618775644b43f16a6de49f7bc2fa92a512b73591
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156687"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888560"
 ---
 # <a name="use-task-modules-in-tabs"></a>タブでタスク モジュールを使用する
 
@@ -133,11 +133,11 @@ function validateForm() {
 |----------------|-----------------|--------------|----------------|
 |タスク モジュールのサンプル タブとボット-V3 | タスク モジュールを作成するためのサンプル。 |[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
 
-## <a name="see-also"></a>関連項目
-
-[タスク モジュールを呼び出して閉じる](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
-
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [ボットからのタスク モジュールの使用](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+
+## <a name="see-also"></a>関連項目
+
+[タスク モジュールを呼び出して閉じる](~/task-modules-and-cards/task-modules/invoking-task-modules.md)

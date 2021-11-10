@@ -3,16 +3,16 @@ title: ボットでタスク モジュールMicrosoft Teamsする
 description: ボット フレームワーク カード、アダプティブ カード、ディープ Microsoft Teamsなど、ボットでタスク モジュールを使用する方法。
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: タスク モジュールのチーム ボット
-ms.openlocfilehash: a548f0d0ae3853f447ba55409bf9edbecced4e60
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+keywords: タスク モジュール チームボット ディープ リンクアダプティブ カード
+ms.openlocfilehash: c46b647ca9fa446db6ae51ae6d33dbabdef18296
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156882"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888308"
 ---
 # <a name="use-task-modules-from-bots"></a>ボットでタスク モジュールを使用する
-
+ 
 タスク モジュールは、ヒーロー、サムネイル、Microsoft Teams コネクタであるアダプティブ カードおよびボット フレームワーク カードのボタンを使用して、Office 365ボットから呼び出すことができます。 タスク モジュールは、多くの場合、複数の会話手順よりも優れたユーザー エクスペリエンスです。 ボットの状態を追跡し、ユーザーがシーケンスを中断またはキャンセルできます。
 
 タスク モジュールを呼び出す方法は 2 通りあります。

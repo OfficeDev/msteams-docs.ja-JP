@@ -1,16 +1,16 @@
 ---
 title: テスト テナントにテスト データをMicrosoft 365する
-description: アプリのテストOffice 365成功する開発者プログラムサブスクリプションをMicrosoft Teamsする
+description: コード スニペットを使用Office 365アプリのテストを成功Microsoft Teams開発者プログラム のサブスクリプションをセットアップする
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: アプリ開発者プログラム チームのテスト
 ms.date: 11/01/2019
-ms.openlocfilehash: fd5f5d1d372a5ddaaa48ed1e971268d28553d5f4
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: f0a7c823d8f590fe1b207c6bb1037be6825b03a6
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156825"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888413"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>テスト テナントにテスト データをMicrosoft 365する
 
@@ -22,7 +22,7 @@ ms.locfileid: "59156825"
 2. [開発者サブスクリプションのMicrosoft 365設定します](/office/developer-program/office-365-developer-program-get-started)。
 3. [ユーザー コンテンツ パックをインストールするには、Microsoft 365開発者サブスクリプションでサンプル データ パックを使用します](/office/developer-program/install-sample-packs)。
 4. [PowerShell モジュールTeamsインストールします](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)。
-5. [Azure AD PowerShell モジュールをインストールします](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true)。
+5. [PowerShell モジュールAzure ADインストールします](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true)。
 
 > [!NOTE]
 > スクリプトを実行するには、テナントにグローバル管理者のアクセス許可が必要です。

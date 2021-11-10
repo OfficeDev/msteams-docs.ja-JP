@@ -1,15 +1,15 @@
 ---
 title: アプリをテストおよびデバッグするためのセットアップの選択
-description: アプリのテストとデバッグのMicrosoft Teams説明します。
-keywords: チームがデバッグ アプリを実行する
+description: ローカルおよびクラウドホスト環境でアプリをテストMicrosoft Teamsデバッグするためのオプションについて説明します。
+keywords: teams run debug apps local cloud-hosted host
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: c20f10fc0f3fb7265921ded2bf412271695bbcd9
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: b6cc4bcebcfe5d859ba0a9c6c935287ee8944d06
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156047"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889075"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>アプリをテストおよびデバッグするセットアップMicrosoft Teamsする
 
@@ -19,7 +19,7 @@ Microsoft Teamsには 1 つ以上の機能が含まれているので、それ�
 * **ローカルでホストされる** Teams : これには、トンネリング ソフトウェアでアプリをローカルで実行 [](~/concepts/build-and-test/apps-package.md)し、アプリに [](~/concepts/deploy-and-publish/apps-upload.md)アップロードするパッケージを作成Teams。 これにより、アプリをクライアント内で簡単に実行Teamsできます。
 * **クラウド ホスト型のTeams:** これは、アプリの実稼働レベルのサポートをTeamsします。 外部からアクセス可能なサーバーまたはクラウド プロバイダーにソリューションをアップロードし、ソリューションにアップロードする[](~/concepts/build-and-test/apps-package.md)パッケージを作成Teams。 [](~/concepts/deploy-and-publish/apps-upload.md)
 
-独自のコンピューターからエクスペリエンスを実行して、ローカルまたはローカルのテストTeamsします。 これにより、統合された開発環境内でコンパイルおよび実行し、ブレークポイントやステップ デバッグなどの手法を活用できます。 
+独自のコンピューターからエクスペリエンスを実行して、ローカルまたはローカルのテストTeamsします。 これにより、統合された開発環境内でコンパイルおよび実行し、ブレークポイントやステップ デバッグなどの手法を活用できます。
 
 > [!NOTE]
 > 実稼働規模のデバッグとテストでは、独自のプロセスを通じてテスト、ステージング、および展開をサポートするために、独自の会社のガイドラインに従う必要があります。
@@ -54,7 +54,7 @@ Microsoft Teams完全にクラウドベースの製品である場合、アク�
 > [!NOTE]
 > ngrok を停止して再起動すると、URL が変更されます。
 
-使用している機能に基づいてプロジェクトで ngrok を使用するには、この URL エンドポイントを使用するには、コード、構成、および manifest.json ファイル内のすべての URL 参照を置き換える必要があります。
+使用している機能に基づいてプロジェクトで ngrok を使用するには、コード、構成、マニフェスト.json ファイル内のすべての URL 参照を置き換え、この URL エンドポイントを使用する必要があります。
 
 サーバーに登録されているボットMicrosoft Bot Framework、ボットのメッセージング エンドポイントを更新して、この新しい ngrok エンドポイントを使用します。 たとえば、`https://2d1224fb.ngrok.io/api/messages` などです。 ボット フレームワーク ポータルの [テスト チャット] ウィンドウでボット応答をテストすることで、ngrok が動作しているのを検証できます。 繰り返しますが、エミュレーターと同様に、このテストでは、ユーザーが特定のTeamsにアクセスできません。
 
@@ -70,13 +70,16 @@ Microsoft Teams完全にクラウドベースの製品である場合、アク�
 
 ## <a name="load-and-run-your-experience"></a>エクスペリエンスの読み込みと実行
 
-アプリ内でエクスペリエンスを読み込Microsoft Teamsするには、パッケージを作成し、パッケージをアプリにアップロードTeams。 詳しくは、次のトピックを参照してください。
+アプリ内でエクスペリエンスを読み込Microsoft Teamsするには、パッケージを作成し、パッケージをアプリにアップロードTeams。 詳細については、以下を参照してください。
 
 * [アプリのパッケージをMicrosoft Teamsします](~/concepts/build-and-test/apps-package.md)。
 * [アップロードでアプリをMicrosoft Teams。](~/concepts/deploy-and-publish/apps-upload.md)
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"] 
 > [テスト データを環境に追加する](~/concepts/build-and-test/test-data.md)
 
+## <a name="see-also"></a>関連項目
+
+[ボットをローカルでテストおよびデバッグする](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally)

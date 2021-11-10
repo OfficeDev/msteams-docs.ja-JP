@@ -6,12 +6,12 @@ keywords: teams タブ送信 Webhook
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 546ca7643ee64412dab6c383e4090dd631a643c8
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: c0d0ad53f95a009b9b5629b1ec7b74a1a9886b92
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260702"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888315"
 ---
 # <a name="create-incoming-webhook"></a>受信 Webhook の作成
 
@@ -96,3 +96,5 @@ Webhook は、webhook チャネルTeamsできます。
 * [送信 Webhook を作成する](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Office 365 コネクタを作成する](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [メッセージを作成して送信する](~/webhooks-and-connectors/how-to/connectors-using.md)
+* [[Teams で共有] ボタンを作成する](../../concepts/build-and-test/share-to-teams.md#create-share-to-teams-button)
+* [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)

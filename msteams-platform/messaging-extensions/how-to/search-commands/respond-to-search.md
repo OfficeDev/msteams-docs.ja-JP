@@ -1,16 +1,16 @@
 ---
 title: 検索コマンドに応答する
 author: surbhigupta
-description: アプリ内のメッセージング拡張機能から検索コマンドに応答するMicrosoft Teamsします。
+description: コード例とサンプルを使用して、Microsoft Teams拡張機能から検索コマンドに応答する方法について説明します。
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 23c4e6d2db9396fc03ed2a75ccc09052f1130423
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 46c5d1ef47d9c31552efac00baef347baf3c7470
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156032"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889378"
 ---
 # <a name="respond-to-search-command"></a>検索コマンドに応答する
 
@@ -346,14 +346,11 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 |Teams拡張アクション| アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams拡張機能の検索   |  検索コマンドを定義し、検索に応答する方法について説明します。        |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## <a name="see-also"></a>関連項目
-
-[メッセージング拡張機能に構成を追加する](~/get-started/first-message-extension.md)
-
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [メッセージング拡張機能に認証を追加する](~/messaging-extensions/how-to/add-authentication.md)
 
+## <a name="see-also"></a>関連項目
 
-
+[メッセージング拡張機能に構成を追加する](~/get-started/first-message-extension.md)

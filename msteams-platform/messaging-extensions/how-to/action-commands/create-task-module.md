@@ -1,19 +1,19 @@
 ---
 title: タスク モジュールの作成と送信
 author: surbhigupta
-description: 最初の呼び出しアクションを処理し、アクション メッセージング拡張機能コマンドからタスク モジュールで応答する方法
+description: 最初の呼び出しアクションを処理し、コード例とサンプルを使用してアクション メッセージング拡張機能コマンドからタスク モジュールで応答する方法について説明します。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 891608b2346e09570ba88ee2b868177e1aca619c
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: b30388e88505e9d0049da5271187c06c68efd5f5
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156044"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889182"
 ---
 # <a name="create-and-send-the-task-module"></a>タスク モジュールの作成と送信
-
+ 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 アダプティブ カードまたは埋め込み Web ビューを使用してタスク モジュールを作成できます。 タスク モジュールを作成するには、最初の呼び出し要求と呼ばれるプロセスを実行する必要があります。 このドキュメントでは、最初の呼び出し要求、1:1 チャット、グループ チャット、チャネル (新しい投稿)、チャネル (スレッドへの返信)、およびコマンド ボックスからタスク モジュールが呼び出された場合のペイロード アクティビティ プロパティについて説明します。 
@@ -987,13 +987,11 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 |Teams拡張アクション| アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams拡張機能の検索   |  検索コマンドを定義し、検索に応答する方法について説明します。        |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## <a name="see-also"></a>関連項目
-
-[操作コマンドを定義する](~/messaging-extensions/how-to/action-commands/define-action-command.md)
-
-
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"] 
 > [[アクションに応答] コマンド](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
+## <a name="see-also"></a>関連項目
+
+[操作コマンドを定義する](~/messaging-extensions/how-to/action-commands/define-action-command.md)

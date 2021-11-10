@@ -1,14 +1,15 @@
 ---
 title: モバイルのタブ
-description: モバイルでタブを実装するための開発者Microsoft Teams説明します。
+description: モバイルでのタブの実装Microsoft Teams、認証、低帯域幅接続、モバイル クライアントでのテスト、配布などについて学習します。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b540369b2da9fb0d6eae5d6fd8ddf121992147d
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+keywords: アプリのモバイル タブ チャネル グループ認証の配布
+ms.openlocfilehash: d2b1190ee5bb7122557aa64fb18065f542291f3a
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719855"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888434"
 ---
 # <a name="tabs-on-mobile"></a>モバイルのタブ
 
@@ -67,14 +68,15 @@ ms.locfileid: "60719855"
 
 アプリをサイドロードする場合や、組織のアプリ カタログに発行する場合、タブの動作は、モバイル向け Microsoft によって承認された Teams ストア アプリと同じです。
 
+## <a name="next-step"></a>次のステップ
+
+> [!div class="nextstepaction"]
+> [タブのコンテキストを取得する](~/tabs/how-to/access-teams-context.md)
+
 ## <a name="see-also"></a>関連項目
 
 * [タブデザインのガイドライン](~/tabs/design/tabs.md)
 * [Teamsタブ](~/tabs/what-are-tabs.md)
 * [プライベート タブを作成する](~/tabs/how-to/create-personal-tab.md)
 * [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
-
-## <a name="next-step"></a>次の手順
-
-> [!div class="nextstepaction"]
-> [タブのコンテキストを取得する](~/tabs/how-to/access-teams-context.md)
+* [モバイルの計画Teams - Teams](~/concepts/design/plan-responsive-tabs-for-teams-mobile.md)

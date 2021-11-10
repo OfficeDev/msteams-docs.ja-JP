@@ -5,12 +5,12 @@ author: surbhigupta
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: contributor-guide
-ms.openlocfilehash: 28fe69d59757bf53ddd105fde403d625d5faf419
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: d9b696af2fe493c24de54afd8587f8aea70584d1
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156693"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889245"
 ---
 # <a name="contribute-to-teams-documentation"></a>Teams ドキュメントに投稿する
 
@@ -69,6 +69,11 @@ Teamsドキュメントは **、Microsoft Docs** のテクニカル ドキュメ
 
 コード サンプルは、API と SDK を効果的に使用する重要な役割を果たします。 よく提示されたコード サンプルは、説明的なテキストや指示情報だけでなく、物事の動作を明確に伝えます。 コード サンプルは、正確で簡潔で、十分に文書化され、読者に優しい必要があります。 読みやすくするコードは、理解、テスト、デバッグ、保守、変更、拡張が容易である必要があります。 詳細については、「ドキュメントに [コードを含める方法」を参照してください](/contribute/code-in-docs)。
 
+## <a name="next-step"></a>次のステップ
+
+> [!div class="nextstepaction"]
+> [Microsoft Docs の更新プログラムと最新のお知らせを取得する](/teamblog)
+
 ## <a name="see-also"></a>関連項目
 
 * [Microsoft Docs](/)
@@ -77,9 +82,3 @@ Teamsドキュメントは **、Microsoft Docs** のテクニカル ドキュメ
 * [最先端 : ソース コードの読みやすさヒント](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips)
 * [Teamsドキュメント](/microsoftteams/platform/overview)
 * [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)
-
-
-## <a name="next-step"></a>次の手順
-
-> [!div class="nextstepaction"]
-> [Microsoft Docs の更新プログラムと最新のお知らせを取得する](/teamblog)

@@ -1,16 +1,16 @@
 ---
 title: ボット メッセージの書式を設定する
 author: surbhigupta
-description: ボット メッセージにリッチ書式を追加する
+description: 取り消し線、順序付きリスト、ハイパーリンク、画像リンクなど、ボット メッセージに豊富な書式を追加します。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 7a8bcc272163a14836fb4b7324cd7ba617bb5409
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 3116b13f524279d4cca88fe649602d14d3542bbc
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566226"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887428"
 ---
 # <a name="format-your-bot-messages"></a>ボット メッセージの書式を設定する
 
@@ -84,7 +84,7 @@ Teamsマークダウンタグと XML 書式タグまたは HTML 書式タグの�
 
 カードのサポートについては、「カードの書式設定 [」を参照してください](~/task-modules-and-cards/cards/cards-format.md)。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [ボット メッセージの更新および削除](~/bots/how-to/update-and-delete-bot-messages.md)

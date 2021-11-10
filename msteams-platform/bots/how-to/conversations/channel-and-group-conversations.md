@@ -1,16 +1,16 @@
 ---
 title: ボットとのチャネルとグループの会話
 author: surbhigupta
-description: チャネルまたはグループ チャットでボットのメッセージを送信、受信、および処理する方法。
+description: チャネルまたはグループ チャットでボットのメッセージを送信、受信、および処理する方法。 コード サンプルを使用した設計ガイドライン、会話スレッドの作成、@mentionsについて説明します。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: ea8de08de966b9ed15e02f5ead8e33e06c6da68f
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: ab856bb7d07e23d9dc6d6fed318313262779b79f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156155"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889315"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>ボットとのチャネルチャットとグループ チャットの会話
 
@@ -270,11 +270,11 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
-## <a name="see-also"></a>関連項目
-
-[コンテキストTeams取得](~/bots/how-to/get-teams-context.md)
-
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [会話イベントにサブスクライブする](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+
+## <a name="see-also"></a>関連項目
+
+[コンテキストTeams取得](~/bots/how-to/get-teams-context.md)

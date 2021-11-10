@@ -2,16 +2,16 @@
 title: JavaScript クライアント SDK でタブやその他のホストされたエクスペリエンスを構築する
 author: heath-hamilton
 ms.author: surbhigupta
-description: JavaScript クライアント SDK Microsoft Teamsの概要。これは、JavaScript クライアント SDK でホストされるTeamsアプリ エクスペリエンスの構築に役立ちます。 <iframe>.
+description: JavaScript クライアント SDK Microsoft Teamsの概要。これは、JavaScript クライアント SDK でホストされるTeamsアプリ エクスペリエンスの構築に役立ちます。 <iframe>. これには、基本的な機能、認証名前空間、および設定名前空間が含まれます。
 ms.localizationpriority: medium
 keywords: teams タブ グループ チャネル構成可能な静的 SDK JavaScript 個人用
 ms.topic: conceptual
-ms.openlocfilehash: ae1192a7221300fc702093d64c97b31bb990d2e9
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 5c4a42e78a234616a0b88ef241c63b98fb7a0265
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156753"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887545"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>JavaScript クライアント SDK を使用してタブやその他のホストMicrosoft Teamsエクスペリエンスを構築する
 
@@ -58,7 +58,7 @@ SDK は、次の機能を使用してアプリを開発Teamsです。
 |`microsoftTeams.authentication.authenticate(authenticateParameters?: AuthenticateParameters)`|呼び出し元が提供するパラメーターを含む新しいウィンドウを開く認証要求を開始します。 オプションの入力値は **、AuthenticateParameters オブジェクトによって定義** されます。|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest&preserve-view=true)<br/>[auth obj](/javascript/api/@microsoft/teams-js/microsoftteams.authentication.authenticateparameters?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.authentication.notifySuccess(result?: string, callbackUrl?: string)`|要求が成功したという認証要求を開始したフレームに通知し、認証ウィンドウを閉じます。|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.authentication.notifyFailure(reason?: string, callbackUrl?: string)`|認証要求を開始したフレームに、要求が失敗したと通知し、認証ウィンドウを閉じます。|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest&preserve-view=true)|
-|`microsoftTeams.authentication.getAuthToken(authTokenRequest: AuthTokenRequest)`|アプリに代わって Azure ADトークンを発行する要求を送信します。 トークンの有効期限が切れていない場合は、キャッシュからトークンを取得できます。 それ以外の場合、要求は Azure ADトークンを取得するために送信されます。|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest#getAuthToken_AuthTokenRequest_&preserve-view=true)|
+|`microsoftTeams.authentication.getAuthToken(authTokenRequest: AuthTokenRequest)`|アプリに代わってAzure ADトークンを発行する要求を送信します。 トークンの有効期限が切れていない場合は、キャッシュからトークンを取得できます。 それ以外の場合は、新しいトークンを取得Azure AD要求が送信されます。|[function](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest#getAuthToken_AuthTokenRequest_&preserve-view=true)|
 
 ### <a name="settings-namespace"></a>設定名前空間
 

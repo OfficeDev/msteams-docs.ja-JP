@@ -1,17 +1,17 @@
 ---
 title: デバイス機能 - 概要
 author: Rajeshwari-v
-description: ネイティブ デバイス機能の概要。
+description: カメラ、画像、メディア、マイク、マイク、QR コードなどのネイティブ デバイス機能の概要。
 ms.author: surbhigupta
 keywords: カメラ イメージ メディア マイク マイク QR コード qrcode バーコード バーコード スキャン スキャナーの場所マップ機能ネイティブ デバイスのアクセス許可
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 9c08b727808f33ad128709ce15ecab2ecc3602b3
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 51f09880d638e1da48233aa2b6ff396f9908fa23
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566268"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889140"
 ---
 # <a name="device-capabilities"></a>デバイス機能
 

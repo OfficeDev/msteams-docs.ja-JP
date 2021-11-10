@@ -1,15 +1,15 @@
 ---
 title: アプリのデバイスのアクセス許可をMicrosoft Teamsする
-keywords: teams アプリの機能のアクセス許可
-description: 通常、ユーザーの同意が必要なネイティブ機能へのアクセスを要求するためにアプリ マニフェストを更新する方法
+keywords: teams アプリ機能アクセス許可 デバイスネイティブ スキャン QR バーコード イメージ オーディオ ビデオ
+description: 通常、ユーザーの同意が必要なネイティブ機能 (スキャン QR、バーコード、画像、オーディオ、ビデオ機能など) へのアクセスを要求するためにアプリ マニフェストを更新する方法
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 84c866ddaae371b2c0e40defcbb1cef7c1194f0d
-ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
+ms.openlocfilehash: 185552c213d6313ea6c8b50af72a0220d9abe7fc
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "60496208"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889119"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>アプリのデバイスのアクセス許可をMicrosoft Teamsする
 

@@ -6,12 +6,12 @@ keywords: teams タブ グループ チャネル構成可能静的
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: e85e643179bf3c1c8b9aa3951f560e1f85dad0bc
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: a3db1f535532fb00589cdff408e04d7addba234e
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720314"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888385"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>タブのコンテンツ ページを作成する
 
@@ -102,13 +102,15 @@ Teams のエンティティへのディープ リンクを作成できます。 
     }
     ```
 
-## <a name="see-also"></a>関連項目
-
-* [Teamsタブ](~/tabs/what-are-tabs.md)
-* [プライベート タブを作成する](~/tabs/how-to/create-personal-tab.md)
-* [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
-
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [構成ページを作成する](~/tabs/how-to/create-tab-pages/configuration-page.md)
+
+## <a name="see-also"></a>関連項目
+ 
+* [Teamsタブ](~/tabs/what-are-tabs.md)
+* [プライベート タブを作成する](~/tabs/how-to/create-personal-tab.md)
+* [タブのリンクの展開とステージ ビュー](~/tabs/tabs-link-unfurling.md)
+* [構成ページを作成する](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [Microsoft Teams タブの DevTools](~/tabs/how-to/developer-tools.md)

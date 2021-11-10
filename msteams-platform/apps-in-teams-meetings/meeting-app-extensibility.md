@@ -1,15 +1,15 @@
 ---
 title: 統合された会議アプリ
 author: surbhigupta
-description: 統合会議アプリの理解
+description: 会議のライフサイクル、デスクトップおよびモバイル環境での会議ライフサイクル全体でのユーザーの会議エクスペリエンスの構築、参加者の役割、ユーザーの種類について説明します。 さらに、会議のライフサイクルでのボットとメッセージング拡張機能の統合について説明します。
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 15a43721e8f5091f0a0bb3b69f781f1472b8e681
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 920c0ee23ffeb2ea7943579254a115bf2d82fea3
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720184"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887728"
 ---
 # <a name="unified-meetings-apps"></a>統合された会議アプリ
 
@@ -197,9 +197,14 @@ Teams会議アプリは、次の概念に基づいて行います。
 
 | ユーザーの種類 | タブ | ボット | メッセージング拡張機能 | アダプティブ カード | タスク モジュール | 会議中ダイアログ | 会議ステージ | 
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| 匿名ユーザー | 使用不可 | 使用不可 | 使用不可 | 会議チャットでの操作は許可されます。 | アダプティブ カードからの会議チャットでの操作は許可されます。 | 使用不可 | 会議ステージでアプリを表示および操作できます |
+| 匿名ユーザー | 使用不可 | 使用不可 | 使用不可 | 会議チャットでの操作は許可されます。 | アダプティブ カードからの会議チャットでの操作は許可されます。 | 使用できません | 会議ステージでアプリを表示および操作できます |
 | ゲスト、テナント の一部AAD | 対話は許可されます。 作成、更新、および削除は許可されません。 | 使用不可 | 使用不可 | 会議チャットでの操作は許可されます。 | アダプティブ カードからの会議チャットでの操作は許可されます。 | 使用可能 | 会議のステージでアプリを開始、表示、操作できます |
 | フェデレーション ユーザーの詳細については、「標準以外の [ユーザー」を参照してください](/microsoftteams/non-standard-users)。 | 対話は許可されます。 作成、更新、および削除は許可されません。 | 対話は許可されます。 取得、更新、削除は許可されません。 | 使用不可 | 会議チャットでの操作は許可されます。 | アダプティブ カードからの会議チャットでの操作は許可されます。 | 使用不可 | 会議のステージでアプリを開始、表示、操作できます |
+
+## <a name="next-step"></a>次のステップ
+
+> [!div class="nextstepaction"]
+> [Teams 会議アプリへの前提条件と API リファレンス](create-apps-for-teams-meetings.md)
 
 ## <a name="see-also"></a>関連項目
 
@@ -207,8 +212,3 @@ Teams会議アプリは、次の概念に基づいて行います。
 * [Bot](../bots/what-are-bots.md)
 * [メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)
 * [アプリをデザインする](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-
-## <a name="next-step"></a>次の手順
-
-> [!div class="nextstepaction"]
-> [Teams 会議アプリへの前提条件と API リファレンス](create-apps-for-teams-meetings.md)

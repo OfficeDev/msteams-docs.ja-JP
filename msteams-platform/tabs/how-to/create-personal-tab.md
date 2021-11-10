@@ -1,16 +1,17 @@
 ---
 title: プライベート タブを作成する
 author: laujan
-description: Yeoman Generator を使用して個人用タブを作成するクイック スタート Microsoft Teams。
+description: Yeoman Generator、ASP.NET Core、または ASP.NET Core MVC を使用して個人用タブを作成し、Node.js を使用して Microsoft Teams を使用し、アプリ マニフェストを更新するクイック スタート ガイド。
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 8048f317fa0e22353d58b6363271b281a6f3849e
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+keywords: yeoman ASP.NET MVC パッケージ appmanifest 会話ドメインアクセス許可ストア
+ms.openlocfilehash: 98f72b41e13c9b06f00a1b32a1fb52bb6b82fd2e
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719939"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888042"
 ---
 # <a name="create-a-personal-tab"></a>プライベート タブを作成する
 
@@ -745,14 +746,14 @@ this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
 
 :::image type="content" source="../../assets/images/personal-apps/registerfocus-tab.png" alt-text="例は、tab に registerOnFocussed API を追加するためのオプションを示しています" border="false":::
 
+## <a name="next-step"></a>次のステップ
+
+> [!div class="nextstepaction"]
+> [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
+
 ## <a name="see-also"></a>関連項目
 
 * [Teamsタブ](~/tabs/what-are-tabs.md)
 * [モバイルのタブ](~/tabs/design/tabs-mobile.md)
 * [アダプティブ カードを使用してタブをビルドする](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [会話タブを作成する](~/tabs/how-to/conversational-tabs.md)
-
-## <a name="next-step"></a>次の手順
-
-> [!div class="nextstepaction"]
-> [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)

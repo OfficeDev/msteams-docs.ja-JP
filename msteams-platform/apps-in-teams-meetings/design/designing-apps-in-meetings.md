@@ -1,16 +1,17 @@
 ---
 title: 会議拡張機能の設計
 author: heath-hamilton
-description: 会議でアプリを設計し、Teams UI キットをMicrosoft Teamsする方法について学習します。
+description: Teams 会議でアプリを設計し、Microsoft Teams UI キット、会議内タブと使用例、応答性の高い動作と共有会議ステージ、テーマとナビゲーションを取得する方法について学習します。
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 5597752ad8698e45c33ec7e116cd684f22ff98a3
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+keywords: UI キット テンプレート会議内応答動作共有会議ステージ
+ms.openlocfilehash: 39d0ef00d6a012726f2a3645f3d8e2bf00ebaf33
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475700"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887846"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>会議の拡張機能Microsoft Teams設計する
 
@@ -67,12 +68,12 @@ ms.locfileid: "59475700"
 
 会議タブを設計するにはTeams UI テンプレートのいずれかを使用します。
 
-* [リスト](../../concepts/design/design-teams-app-ui-templates.md#list): リストは、関連するアイテムをスキャン可能な形式で表示し、ユーザーがリスト全体または個々のアイテムに対してアクションを実行できます。
-* [タスク ボード](../../concepts/design/design-teams-app-ui-templates.md#task-board): カンバン ボードやスイム レーンとも呼ばれるタスク ボードは、作業アイテムやチケットの状態を追跡するためによく使用されるカードのコレクションです。
-* [ダッシュボード](../../concepts/design/design-teams-app-ui-templates.md#dashboard): ダッシュボードは、データまたはコンテンツの概要を示す複数のカードを含むキャンバスです。
+* [リスト](../../concepts/design/design-teams-app-ui-templates.md#list): リストは、関連するアイテムをスキャン可能な形式で表示し、ユーザーがリスト全体または個々のアイテムに対してアクションを実行できるようにします。
+* [タスク ボード](../../concepts/design/design-teams-app-ui-templates.md#task-board): かんばんボードまたはスイム レーンと呼ばれることもあるタスク ボードは、作業項目またはチケットのステータスを追跡するためによく使用されるカードのコレクションです。
+* [ダッシュボード](../../concepts/design/design-teams-app-ui-templates.md#dashboard): ダッシュボードは、データまたはコンテンツの概要を提供する複数のカードを含むキャンバスです。
 * [フォーム](../../concepts/design/design-teams-app-ui-templates.md#form): フォームは、構造化された方法でユーザー入力を収集、検証、送信するためのフォームです。
 * [空の状態](../../concepts/design/design-teams-app-ui-templates.md#empty-state): 空の状態テンプレートは、サインイン、初回実行エクスペリエンス、エラー メッセージなど、多くのシナリオで使用できます。
-* [左ナビゲーション](../../concepts/design/design-teams-app-advanced-ui-components.md#left-nav): 左側のナビゲーション コンポーネントは、タブにナビゲーションが必要な場合に役立ちます。 一般に、ナビゲーションは最小限に抑えます。
+* [左ナビゲーション](../../concepts/design/design-teams-app-advanced-ui-components.md#left-nav): タブにナビゲーションが必要な場合は、左側のナビゲーション コンポーネントが役立ちます。 一般に、ナビゲーションは最小限に抑えます。
 
 ## <a name="use-an-in-meeting-tab"></a>[会議内] タブを使用する
 
@@ -103,7 +104,7 @@ ms.locfileid: "59475700"
 |1|**アプリ アイコン (選択)**: 16 ピクセルの透明なアプリ ロゴ。|
 |2|**アプリ名**|
 |3|**ヘッダー**: アプリ名が含まれます。|
-|4 |**[閉じる]** ボタン: タブを閉じます。フッターのアクションではなく、常に右上の閉じるアイコンを使用します。|
+|4|**[閉じる]** ボタン: タブを閉じます。フッターのアクションではなく、常に右上の閉じるアイコンを使用します。|
 |5|**通知バー**: エラー通知はヘッダーの直下に表示され、iframe コンテンツを 20 ピクセル下にプッシュします。|
 |6 |**iframe**: アプリのコンテンツを表示します。|
 
@@ -170,7 +171,7 @@ ms.locfileid: "59475700"
 |1|**アバター**: 会議内ダイアログを開始するユーザー。|
 |2|**アプリ アイコン**|
 |3|**アプリ名**|
-|4 |**[閉じる]** ボタン: ダイアログを閉じます。|
+|4|**[閉じる]** ボタン: ダイアログを閉じます。|
 |5|**アクション文字列**: 通常、ダイアログを開始したユーザーを示します。|
 
 ### <a name="responsive-behavior-in-meeting-dialogs"></a>応答性の高い動作: 会議中のダイアログ
@@ -191,7 +192,7 @@ ms.locfileid: "59475700"
 会議ステージに共有されるアプリは、共有画面と同じ領域を占有します。 ステージは、すべての会議参加者の向きを変更します。
 
 > [!NOTE]
-> 現在、アプリがデスクトップ上のステージに共有されている場合は、モバイル会議のユーザーにのみ表示されます。
+> 会議のすべてのユーザーは、デスクトップから共有するときにアプリを表示できます。 ただし、モバイルからステージにアプリを共有する機能は現在利用できません。
  
 ### <a name="use-cases"></a>使用例
 
@@ -245,7 +246,7 @@ ms.locfileid: "59475700"
 |1|**アプリ アイコン**: 強調表示されたアイコンは、アプリの会議中タブが開いている状態を示します。|
 |2|**[会議ステージに共有] ボタン**: アプリを会議ステージに共有するエントリ ポイント。 共有会議ステージを使用するアプリを構成した場合に表示されます。|
 |3|**iframe**: アプリのコンテンツを表示します。|
-|4 |**[共有を停止する**] ボタン: 会議ステージへのアプリの共有を停止します。 共有を開始した参加者にのみ表示されます。|
+|4|**[共有を停止する**] ボタン: 会議ステージへのアプリの共有を停止します。 共有を開始した参加者にのみ表示されます。|
 |5|**発表者の属性**: アプリを共有した参加者の名前を表示します。|
 
 ### <a name="responsive-behavior-shared-meeting-stage"></a>応答性の高い動作: 共有会議ステージ
@@ -508,7 +509,7 @@ Teams会議は暗いテーマに最適化され、視覚的および認知的な
    :::column-end:::
 :::row-end:::
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [会議用にアプリを構成する](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)

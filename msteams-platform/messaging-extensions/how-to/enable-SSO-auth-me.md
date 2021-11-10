@@ -1,16 +1,16 @@
 ---
 title: メッセージング拡張機能の SSO サポート
 author: KirtiPereira
-description: メッセージング拡張機能の SSO サポートを有効にする方法
+description: コード サンプルを使用してメッセージング拡張機能の SSO サポートを有効にする方法について説明します。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: fb9f323b81ff6e42e0ae78bc2bb476b629bfb206
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: cccd27f5507125d0525c5a2d180379dad213dcae
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720058"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889392"
 ---
 # <a name="single-sign-on-support-for-messaging-extensions"></a>メッセージング拡張機能のシングル サインオンのサポート
  
@@ -119,4 +119,3 @@ ms.locfileid: "60720058"
 * [メッセージング拡張機能に認証を追加する](add-authentication.md)
 * [ボットに SSO を使用する](../../bots/how-to/authentication/auth-aad-sso-bots.md)
 * [リンク展開](link-unfurling.md)
-

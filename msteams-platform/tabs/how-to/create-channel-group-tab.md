@@ -1,16 +1,16 @@
 ---
 title: '[チャネルまたはグループ] タブを作成する'
 author: laujan
-description: Yeoman Generator を使用してチャネルとグループ タブを作成するクイック スタート Microsoft Teams。
+description: コード例を使用したソース コードの確認など、Yeoman Generator Microsoft Teamsを使用してチャネルとグループ タブを作成するクイック スタート ガイド。
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
-ms.openlocfilehash: 5f63a5217ad5da5ec82ab5b3abb5b8f7142ecf1d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 94e26c1edbc6f8a92cad6c5b4b19c422cb09bc70
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156227"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887449"
 ---
 # <a name="create-a-channel-or-group-tab"></a>[チャネルまたはグループ] タブを作成する
 
@@ -66,7 +66,7 @@ You can create a custom channel or group tab using the you can create a custom c
     yo teams
     ```
 
-1. 次に、アプリケーションのファイルファイルで使用される一連の値manifest.js **指定** します。
+1. 次に、アプリケーションの manifest.json ファイルで使用される一連の **値を指定** します。
 
     ![ジェネレーターの開くスクリーンショット](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -136,7 +136,7 @@ You can create a custom channel or group tab using the you can create a custom c
 
     **タブに Azure AD のシングルサインオン サポートが必要ですか?**
 
-    タブ **に** Azure ADシングル サインオン のサポートを含めないを選択します。既定値ははい、n と **入力します**。
+    [**シングル** サインオンのサポートAzure AD含めない] を選択します。既定値ははい、n と **入力します**。
 
     **このタブをオンラインで使用SharePointしますか?(Y/n)**
 
@@ -175,9 +175,9 @@ You can create a custom channel or group tab using the you can create a custom c
 
 - 192 x 192 ピクセルのフル カラー アイコン。 
 - **32** x 32 ピクセルの透明なアウトライン アイコン。
-- アプリ **manifest.js** を指定するファイルのプロパティです。
+- アプリ **の属性を指定する manifest.json** ファイル。
 
-パッケージは、ファイル上のファイルのmanifest.jsを検証し、./package ディレクトリに zip フォルダーを生成する **gulp タスクを使用して作成されます**。 コマンド プロンプトで、次のコマンドを入力します。
+パッケージは、manifest.json ファイルを検証し、./package ディレクトリに zip フォルダーを生成する **gulp タスクを使用して作成されます**。 コマンド プロンプトで、次のコマンドを入力します。
 
 ```bash
 gulp manifest
@@ -320,7 +320,7 @@ ASP.NET Core Index と呼ばれるファイルをサイトの既定またはホ�
 
 - 192 x 192 ピクセルのフル カラー アイコン。 
 - **32** x 32 ピクセルの透明なアウトライン アイコン。
-- アプリ **manifest.js** を指定するファイルのプロパティです。
+- アプリ **の属性を指定する manifest.json** ファイル。
 
 これらのファイルは、タブをアプリ パッケージにアップロードする場合に使用するアプリ パッケージに圧縮するTeams。 ユーザーがタブの追加または更新を選択すると、Microsoft Teamsがマニフェストに読み込み、IFrame に埋め込み、タブに `configurationUrl` 表示されます。
 
@@ -435,7 +435,7 @@ Microsoft Teamsはクラウドベースの製品であり、HTTPS エンドポ�
 ### <a name="upload-your-tab-for-teams"></a>アップロードのタブを開Teams
 
 > [!NOTE]
-> App Studio を使用すると、ファイル上のmanifest.js **を編集** し、完成したパッケージをファイルにアップロードTeams。 また、手動でファイルのmanifest.js **編集** することもできます。 その場合は、ソリューションを再度ビルドして、アップロードする **tab.zip作成してください** 。
+> App Studio を使用すると **、manifest.json** ファイルを編集し、完成したパッケージをアップロードしてTeams。 manifest.json ファイルを **手動で編集** することもできます。 その場合は、ソリューションを再度ビルドして、アップロードする **tab.zip作成してください** 。
 
 **App Studio でタブをアップロードするには**
 
@@ -457,7 +457,7 @@ Microsoft Teamsはクラウドベースの製品であり、HTTPS エンドポ�
 
 マニフェスト エディターのウェルカム ページの右側のパネルで、新しくインポートしたタブのタイルを選択します。
 
-マニフェスト エディターの左側に手順の一覧が表示され、右側には、各手順の値が必要なプロパティの一覧が表示されます。 この情報の多くが、ユーザーのmanifest.js **によって** 提供されますが、更新する必要があるフィールドがあります。
+マニフェスト エディターの左側に手順の一覧が表示され、右側には、各手順の値が必要なプロパティの一覧が表示されます。 情報の多くが **manifest.json** によって提供されますが、更新する必要があるフィールドがあります。
 
 ##### <a name="details-app-details"></a>詳細: アプリの詳細
 
@@ -574,7 +574,7 @@ public void Configure(IApplicationBuilder app)
 
 - 192 x 192 ピクセルのフル カラー アイコン。 
 - **32** x 32 ピクセルの透明なアウトライン アイコン。
-- アプリ **manifest.js** を指定するファイルのプロパティです。
+- アプリ **の属性を指定する manifest.json** ファイル。
 
 これらのファイルは、タブをアプリ パッケージにアップロードする場合に使用するアプリ パッケージに圧縮するTeams。
 
@@ -636,14 +636,15 @@ public void Configure(IApplicationBuilder app)
 
 ---
 
+## <a name="next-step"></a>次のステップ
+
+> [!div class="nextstepaction"]
+> [コンテンツ ページを作成する](~/tabs/how-to/create-tab-pages/content-page.md)
+
 ## <a name="see-also"></a>関連項目
 
 * [Teamsタブ](~/tabs/what-are-tabs.md)
 * [プライベート タブを作成する](~/tabs/how-to/create-personal-tab.md)
 * [モバイルのタブ](~/tabs/design/tabs-mobile.md)
 * [アダプティブ カードを使用してタブをビルドする](~/tabs/how-to/build-adaptive-card-tabs.md)
-
-## <a name="next-step"></a>次の手順
-
-> [!div class="nextstepaction"]
-> [コンテンツ ページを作成する](~/tabs/how-to/create-tab-pages/content-page.md)
+* [削除ページを作成する](~/tabs/how-to/create-tab-pages/removal-page.md)

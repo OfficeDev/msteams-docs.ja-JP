@@ -6,12 +6,12 @@ keywords: タブの余白の余白の削除
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 79c4d887a028d9da722325985f9bbd62740e3781
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 5540354405c87d829245dfb01629aa8f06a5e93d
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157005"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888077"
 ---
 # <a name="tab-margin-changes"></a>タブ余白の変更
 
@@ -27,7 +27,7 @@ ms.locfileid: "59157005"
 
 タブ余白の削除は、タブをTeamsアプリに影響します。 このような場合は、必要なタブ デザインの周囲に余白を追加できます。 実稼働環境のアプリデザインには、追加のパディング効果があります。つまり、タブによって提供される余白Teams余白が提供されます。ただし、余分なパディングは一時的なだけであり、数週間で消え、アプリが提供するパディングだけが残されます。
 
-## <a name="faq"></a>よくあるご質問 (FAQ)
+## <a name="faq"></a>FAQ
 
 **ヘッダー バーやタスク バーなどのアプリクロムがデザインの端に触れても問題ないか。**
 

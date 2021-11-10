@@ -1,16 +1,17 @@
 ---
 title: 概要 - アプリの配布
-description: アプリを発行するためのオプションについてMicrosoft Teamsします。
+description: アプリの公開、アプリのアップロード、Microsoft Teamsのオプションについて説明GCC。
 ms.topic: conceptual
 author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 308d0722928111c1a9d6e6afa44e3c261dd59a3d
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+keywords: アプリのアップロード gcc の発行を展開する
+ms.openlocfilehash: 0436388365c2d7fc355c3f8cb40a9f05283124b8
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260619"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889189"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Microsoft Teams アプリを配布する
 
@@ -44,11 +45,11 @@ ms.locfileid: "60260619"
 
 詳細については、「publish [to the Teams」を参照してください](~/concepts/deploy-and-publish/appsource/publish.md)。
 
-## <a name="see-also"></a>関連項目
-
-* [Microsoft 365 アプリ コンプライアンス プログラム](/microsoft-365-app-certification/overview)
-
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [アプリの既定のインストール オプションを構成する](~/concepts/deploy-and-publish/add-default-install-scope.md)
+
+## <a name="see-also"></a>関連項目
+
+* [Microsoft 365 アプリ コンプライアンス プログラム](/microsoft-365-app-certification/overview)

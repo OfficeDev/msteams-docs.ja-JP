@@ -1,15 +1,15 @@
 ---
 title: タブの認証フロー
-description: タブの認証フローについて説明する
+description: タブの認証フローについて説明し、OAuth AADコード サンプルを提供します。
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams 認証フロー タブ
-ms.openlocfilehash: 625d3ac7e20b4d3dbdef0c44ed3b49e6d36a6fe8
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: 0b58e0182714921745fa911cc747aa1c314d3df2
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291647"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888448"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Microsoft Teamsの認証フロー
 

@@ -1,15 +1,15 @@
 ---
 title: Teams でレートを制限してボットを最適化する
-description: データのレート制限とベスト プラクティスMicrosoft Teams
+description: コード例を使用して、スレッドごとのボットごとの制限とすべてのボットの制限ごとのボットのレート制限の処理について説明します。 さらに、アプリのレート制限のベスト プラクティスMicrosoft Teams。
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Teams ボットのレート制限
-ms.openlocfilehash: f1e874c5e3db572c5f3111f0a5e6f8a4c6f3d87d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 1be6377a6d7497b4f1b53f034eb631547dcf4a5c
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156344"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889294"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Teams でレートを制限してボットを最適化する
 
@@ -140,11 +140,11 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 | 会話を作成する | 30 | 60 |
 | 会話を作成する | 3600 | 1800 |
 | 会話メンバーを取得する| 1 | 14  |
-| 会話メンバーを取得する| 2 | 16  |
+| 会話メンバーを取得する| 2 | 16 |
 | 会話メンバーを取得する| 30 | 120 |
 | 会話メンバーを取得する| 3600 | 3600 |
 | 会話を取得する | 1 | 14  |
-| 会話を取得する | 2 | 16  |
+| 会話を取得する | 2 | 16 |
 | 会話を取得する | 30 | 120 |
 | 会話を取得する | 3600 | 3600 |
 
@@ -162,18 +162,17 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 | シナリオ | 期間 (秒) | 許可される操作の最大数 |
 | --- | --- | --- |
 | 会話に送信する | 1 | 14  |
-| 会話に送信する | 2 | 16  |
+| 会話に送信する | 2 | 16 |
 | 会話を作成する | 1 | 14  |
-| 会話を作成する | 2 | 16  |
+| 会話を作成する | 2 | 16 |
 | 会話を作成する| 1 | 14  |
-| 会話を作成する| 2 | 16  |
+| 会話を作成する| 2 | 16 |
 | 会話メンバーを取得する| 1 | 28 |
 | 会話メンバーを取得する| 2 | 32 |
 | 会話を取得する | 1 | 28 |
 | 会話を取得する | 2 | 32 |
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [通話と会議のボット](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
-

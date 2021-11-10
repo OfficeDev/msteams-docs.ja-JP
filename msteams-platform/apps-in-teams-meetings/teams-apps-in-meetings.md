@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: b84975296b443ad71fb78042729f225a31ba9afe
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: c6a872f9e43f5394a3d10ef5bf3ab8f2650ca9b4
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156398"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887693"
 ---
 # <a name="apps-for-teams-meetings"></a>会議のTeamsアプリ
 
@@ -37,16 +37,16 @@ ms.locfileid: "59156398"
 
 新しいカスタムの Together Mode シーン機能を使用すると、ユーザーはチームとの会議で 1 か所で共同作業できます。
 
-## <a name="see-also"></a>関連項目
-
-* [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
-* [Bot](../bots/what-are-bots.md)
-* [メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)
-* [アプリをデザインする](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [Teams 会議アプリへの前提条件と API リファレンス](create-apps-for-teams-meetings.md)
-* [カスタム一緒にモードのシーン](~/apps-in-teams-meetings/teams-together-mode.md)
-
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [会議アプリ拡張性](meeting-app-extensibility.md)
+
+## <a name="see-also"></a>関連項目
+
+* [Teams 会議アプリへの前提条件と API リファレンス](create-apps-for-teams-meetings.md)
+* [会議の拡張機能Microsoft Teams設計する](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [会議アプリ API 参照 - Teams](~/apps-in-teams-meetings/api-references.md)
+* [カスタム一緒にモードのシーン](~/apps-in-teams-meetings/teams-together-mode.md)
+* [会議で使用するアプリを有効Teamsする](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+* [会議のライフサイクル](meeting-app-extensibility.md#meeting-lifecycle)

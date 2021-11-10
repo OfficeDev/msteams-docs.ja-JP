@@ -1,16 +1,16 @@
 ---
 title: 開発者ポータルでアプリを管理する
-description: 開発者ポータルを使用してアプリを管理する方法について説明Microsoft Teams。
+description: 開発者ポータルを使用してアプリを構成、配布、および管理する方法についてMicrosoft Teams。
 keywords: 開発者ポータル チームの開始
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: c8a31f55131fb594a8d47c05e40533512e7de689
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 598ee5fae79ff7c4c4a4c1096d1d234ecab89629
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720394"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888553"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>開発者ポータルを使用してアプリを管理Microsoft Teams
 

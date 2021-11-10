@@ -1,16 +1,16 @@
 ---
 title: ボットを介してファイルを送受信する
-description: ボットを介してファイルを送受信する方法について説明します。
+description: ボットを介してファイルを送受信する方法、Graph API をすべての Teams スコープに使用する方法、コード例とサンプルを使用して Teams ボット API を使用する方法について説明します。
 keywords: teams ボット ファイルが受信を送信する
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: cb82643ad55439ac12d707d9fff0378afa99e363
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: a65db945c5d32586c648bb2aeec9d1ad7b08112f
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156350"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889175"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>ボットを介してファイルを送受信する
 
@@ -325,7 +325,7 @@ private async Task SendFileCardAsync(ITurnContext turnContext, string filename, 
 |----------------|-----------------|--------------|----------------|-----------|
 | ファイルのアップロード | ファイルの同意を取得し、ボットからファイルをTeamsする方法を示します。 また、ボットに送信されたファイルを受信する方法も示します。 | [表示](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/56.teams-file-upload) | [表示](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/56.teams-file-upload) | [表示](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/56.teams-file-upload) |
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [Teams でレートを制限してボットを最適化する](~/bots/how-to/rate-limit.md)

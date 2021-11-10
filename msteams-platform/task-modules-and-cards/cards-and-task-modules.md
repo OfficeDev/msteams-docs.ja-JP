@@ -1,15 +1,15 @@
 ---
 title: カードとタスク モジュール
-description: カードとタスク モジュール。
+description: アダプティブ カード、ヒーロー カード、サムネイル カードなど、Teamsボットでサポートされているカードの種類について説明します。 チャネル、ボット、またはディープ リンクでのカードアクションとタスク モジュールの呼び出しについて学習します。
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 89185baa9900f2c8dbef62ab9a2fc85242fc49a1
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: b154f82b1148760f3dbb6f1b92f914fa7222977d
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719834"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888273"
 ---
 # <a name="cards-and-task-modules"></a>カードとタスク モジュール
 
@@ -21,14 +21,16 @@ ms.locfileid: "60719834"
 
 * アダプティブ カード
 * ヒーロー カード
-* リスト カード 
+* リスト カード
 * Office 365コネクタ カード
 * レシート カード
 * サインイン カード
 * サムネイル カード
 * カード コレクション
 
-カードの種類に応じて、XML または HTML の書式設定または Markdown のサブセットを使用して、カード テキストを書式設定できます。 次のカードアクションを追加して対応できます。
+カードの種類に応じて、XML または HTML の書式設定または Markdown のサブセットを使用して、カード テキストを書式設定できます。
+
+次のカードアクションを追加して対応できます。
 * URL を開く
 * ボットにメッセージとペイロードを送信する
 * OAuth フローの開始

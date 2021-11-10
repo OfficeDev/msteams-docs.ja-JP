@@ -5,12 +5,12 @@ keywords: teams ボット カードの形式
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 8afbd5f4904a378a4433965c128136fa8b39590d
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: 526b20146c81ba10ef026412adc111fe33a01814
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475821"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887610"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams のカードの書式設定
 
@@ -41,7 +41,7 @@ ms.locfileid: "59475821"
 
  次の表に、、 、およびのサポート `Textblock` されているスタイル `Fact.Title` を示します `Fact.Value` 。
 
-| スタイル | 例 | Markdown |
+| Style | 例 | Markdown |
 | --- | --- | --- |
 | 太字 | **Bold** | ```**Bold**``` |
 | 斜体 | _Italic_ | ```_Italic_``` |
@@ -165,20 +165,20 @@ Android では、アダプティブ カード マークダウンの書式設定�
 }
 ```
 
-### <a name="aad-object-id-and-upn-in-user-mention"></a>ユーザーメンションの AAD オブジェクト ID と UPN 
+### <a name="aad-object-id-and-upn-in-user-mention"></a>AADユーザーメンションのオブジェクト ID と UPN 
 
-Teamsプラットフォームでは、既存のメンション ID に加えて、AAD オブジェクト ID とユーザー原則名 (UPN) を使用してユーザーにメンションできます。 受信 Webhook を使用したアダプティブ カードとコネクタを備えるボットは、2 つのユーザーメンション ID をサポートします。 
+Teamsでは、既存のメンション ID に加えて、AAD オブジェクト ID とユーザー原則名 (UPN) を使用してユーザーに言及できます。 受信 Webhook を使用したアダプティブ カードとコネクタを備えるボットは、2 つのユーザーメンション ID をサポートします。 
 
 次の表に、新しくサポートされるユーザーメンション ID について説明します。
 
 |IDs  | サポート機能 |   説明 | 例 |
 |----------|--------|---------------|---------|
-| AAD オブジェクト ID | ボット、コネクタ |  AAD ユーザーのオブジェクト ID |  49c4641c-ab91-4248-aebb-6a7de286397b |
-| UPN | ボット、コネクタ | AAD ユーザーの UPN | john.smith@microsoft.com |
+| AAD ID | ボット、コネクタ |  AADのオブジェクト ID を指定する |  49c4641c-ab91-4248-aebb-6a7de286397b |
+| UPN | ボット、コネクタ | AADの UPN | john.smith@microsoft.com |
 
 #### <a name="user-mention-in-bots-with-adaptive-cards"></a>アダプティブ カードを使用したボットでのユーザーメンション 
 
-ボットは、既存の ID に加えて、AAD オブジェクト ID と UPN を使用してユーザーメンションをサポートします。 2 つの新しい ID のサポートは、テキスト メッセージ、アダプティブ カード本文、およびメッセージング拡張機能応答のボットで利用できます。 ボットは、会話とシナリオでメンションの ID をサポート `invoke` します。 ユーザーは、ID に関連付@mentioned通知を受け取ります。 
+ボットは、既存の ID に加えて、AADオブジェクト ID と UPN を使用してユーザーメンションをサポートします。 2 つの新しい ID のサポートは、テキスト メッセージ、アダプティブ カード本文、およびメッセージング拡張機能応答のボットで利用できます。 ボットは、会話とシナリオでメンションの ID をサポート `invoke` します。 ユーザーは、ID に関連付@mentioned通知を受け取ります。 
 
 > [!NOTE]
 > ボットのアダプティブ カードを使用したユーザーメンションでは、スキーマの更新と UI/UX の変更は必要ありません。
@@ -227,11 +227,11 @@ Teamsプラットフォームでは、既存のメンション ID に加えて�
 
 #### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>アダプティブ カードを使用した受信 Webhook でのユーザーメンション 
 
-受信 Webhooks は、AAD オブジェクト ID と UPN を持つアダプティブ カードのユーザーメンションをサポートし始める。
+受信 Webhooks は、アダプティブ カードのユーザーメンションをサポートし始め、AAD UPN を使用します。
 
 > [!NOTE]    
-> * AAD オブジェクト ID と UPN をサポートする受信 Webhook のスキーマでユーザーメンションを有効にする。 
-> * AAD オブジェクト ID と UPN を使用したユーザーメンションでは、UI/UX の変更は必要ありません。      
+> * 受信 Webhook のスキーマでユーザーのメンションを有効にして、オブジェクト ID AAD UPN をサポートします。 
+> * UI/UX の変更は、ユーザーがオブジェクト ID と UPN を使用AADには必要ありません。      
 > * ユーザーメンションを含む受信 Webhook のアクティビティ フィード通知は、今後のリリースで利用できます。
 
 ##### <a name="example"></a>例 
@@ -417,7 +417,7 @@ schema 要素内で、ユーザーにフィルター処理を求め、サイズ�
 
 コネクタ カードでは、マークダウンと HTML の書式設定が制限されています。
 
-| スタイル | 例 | Markdown |
+| Style | 例 | Markdown |
 | --- | --- | --- |
 | 太字 | **text** | `**text**` |
 | 斜体 | *text* | `*text*` |
@@ -515,7 +515,7 @@ Android では、次の図に示すように、コネクタ カードのマー�
 
 コネクタ カードでは、マークダウンと HTML の書式設定が制限されています。
 
-| スタイル | 例 | HTML |
+| Style | 例 | HTML |
 | --- | --- | --- |
 | 太字 | **text** | `<strong>text</strong>` |
 | 斜体 | *text* | `<em>text</em>` |
@@ -605,7 +605,7 @@ Android では、次の図に示すように HTML 書式が表示されます。
 
 HTML タグは、ヒーロー カードやサムネイル カードなどの単純なカードでサポートされます。 Markdown はサポートされていません。
 
-| スタイル | 例 | HTML |
+| Style | 例 | HTML |
 | --- | --- | --- |
 | 太字 | **text** | `<strong>text</strong>` |
 | 斜体 | *text* | `<em>text</em>` |
@@ -651,4 +651,6 @@ Android で太字や斜体などの文字の書式設定が正しく表示され
 ## <a name="see-also"></a>関連項目
 
 * [カード アクション](./cards-actions.md)
+* [ボットでタスク モジュールを使用する](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [タスク モジュール](~/task-modules-and-cards/cards/cards-format.md)
+* [ボット メッセージの書式を設定する](~/bots/how-to/format-your-bot-messages.md)

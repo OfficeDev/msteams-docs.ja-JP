@@ -4,12 +4,12 @@ description: Microsoft Teams のカード アクションと、ボットでの�
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: チーム ボット カード アクション
-ms.openlocfilehash: fb1ff1df6e91c17efd5a01123935fb03f0a0ed98
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 3509ab49f8e2031176743a9330ee3b6757b70277
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156479"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889329"
 ---
 # <a name="card-actions"></a>カード アクション
 
@@ -556,12 +556,14 @@ CardFactory.actions([
   }
 }
 ```
-
-## <a name="see-also"></a>関連項目
-
-[カード リファレンス](./cards-reference.md)
-
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [アダプティブ カードのユニバーサル アクション](../cards/Universal-actions-for-adaptive-cards/Overview.md)
+
+## <a name="see-also"></a>関連項目
+
+* [カード リファレンス](./cards-reference.md)
+* [ボットでタスク モジュールを使用する](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+* [ボットのアダプティブ カード](../../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
+* [アダプティブ カードのユニバーサル アクション](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md)

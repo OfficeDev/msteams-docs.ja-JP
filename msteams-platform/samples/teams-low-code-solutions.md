@@ -1,16 +1,16 @@
 ---
 title: 低コードのカスタム アプリを作成Microsoft Teams
 author: surbhigupta
-description: 利用可能な Microsoft Low および no code ソリューションを詳細にTeams
+description: Microsoft Power Platform で使用可能な Microsoft の低コードソリューションとコード Teamsについて説明します。 ソリューション (Power Apps、Power Automate、Virtual Assistantなど) について学習します。
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 77e3f3cbd8e5de53748b64b5006df259b2164e4f
-ms.sourcegitcommit: 72de146d11e81fd9777374dd3915ad290fd07d82
+ms.openlocfilehash: bd5a36505e028739edde9645c5eb3e1b8355dc5e
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59360670"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887895"
 ---
 # <a name="create-low-code-custom-apps-for-microsoft-teams"></a>低コードのカスタム アプリを作成Microsoft Teams
 
@@ -56,7 +56,7 @@ Virtual Assistantは、ユーザー エクスペリエンス、組織のブラ�
 |  トピック  |  リンク  |
 |:---------|:----------------------|
 |Power BI|[Power BIメーカー向け](/learn/browse/?expanded=power-platform&products=power-bi&roles=maker)</br>[Power BI開発者向け](/learn/browse/?expanded=power-platform&products=power-bi&roles=developer)|
-|Power アプリ|[Power Appsメーカー向け](/learn/browse/?products=power-apps&roles=maker)</br>[Power Apps開発者向け](/learn/browse/?products=power-apps)|
+|Power Apps|[Power Appsメーカー向け](/learn/browse/?products=power-apps&roles=maker)</br>[Power Apps開発者向け](/learn/browse/?products=power-apps)|
 |Power Automate|[Power Automateメーカー向け](/learn/browse/?expanded=power-platform&products=power-automate&roles=maker)</br>[Power Automate開発者向け](/learn/browse/?expanded=power-platform&products=power-automate&roles=developer)|
 |Power Virtual Agents|[Power Virtual Agents開発者向けツール](/learn/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
 

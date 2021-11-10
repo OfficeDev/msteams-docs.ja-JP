@@ -6,18 +6,18 @@ keywords: カメラ メディア QR コード qrcode バーコード バーコ�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: a3ec2b8735c0d1a9a234fba6a34e7040d819fc9b
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: c21408ccbca6cd12d37d2066cf50f3468b669012
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566359"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888000"
 ---
-# <a name="integrate-qr-or-barcode-scanner-capability"></a>QR コードまたはバーコード スキャナー機能を統合する 
+# <a name="integrate-qr-or-barcode-scanner-capability"></a>QR コードまたはバーコード スキャナー機能を統合する
 
 バーコードは、視覚的で機械で読み取り可能な形式でデータを表す方法です。 バーコードには、バーとスペースの形式で、種類、サイズ、製造元、発生国などの製品に関する情報が含まれます。 コードは、ネイティブ デバイス カメラの光学スキャナーを使用して読み取ります。 より豊富な共同作業エクスペリエンスを実現するには、Teams プラットフォームで提供される QR またはバーコード スキャナー機能をアプリTeamsできます。   
 
-JavaScript クライアント[SDK Microsoft Teams使用](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)できます。これは、アプリがユーザーのネイティブ デバイス機能にアクセスするために必要なツール[を提供します](native-device-permissions.md)。 [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API を使用して、スキャナー機能をアプリ内に統合します。 
+JavaScript クライアント[SDK Microsoft Teams使用](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)できます。これは、アプリがユーザーのネイティブ デバイス機能にアクセスするために必要なツール[を提供します](native-device-permissions.md)。 [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API を使用して、スキャナー機能をアプリ内に統合します。
 
 ## <a name="advantage-of-integrating-qr-or-barcode-scanner-capability"></a>QR またはバーコード スキャナー機能を統合する利点
 
@@ -55,16 +55,16 @@ API 応答エラーを理解して、アプリ[](#error-handling)内のエラー
 
 | バーコードの種類 | Android でサポートされる | iOS でサポート |
 | ---------- | ---------- | ------------ |
-| Codebar | はい | いいえ |
+| Codebar | はい | 不要 |
 | コード 39 | はい | はい | 
 | コード 93 | はい | はい |
 | コード 128 | はい | はい |
 | EAN-13 | はい | はい |
 | EAN-8 | はい | はい |
-| ITF | いいえ | はい |
+| ITF | 不要 | はい |
 | QR コード | はい | はい |
-| RSS の展開 | はい | いいえ |
-| RSS-14 | はい | いいえ |
+| RSS の展開 | はい | 不要 |
+| RSS-14 | はい | 不要 |
 | UPC-A | はい | はい |
 | UPC-E | はい | はい |
 
@@ -112,4 +112,3 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 * [メディア機能を統合Teams](mobile-camera-image-permissions.md)
 * [場所の機能を統合Teams](location-capability.md)
 * [[ユーザー選択] を [ユーザー選択] Teams](people-picker-capability.md)
-

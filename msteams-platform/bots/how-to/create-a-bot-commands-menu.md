@@ -1,16 +1,17 @@
 ---
 title: ボットのコマンド メニューを作成する
 author: surbhigupta
-description: カスタム ボットのコマンド メニューをMicrosoft Teamsする方法
+description: コード サンプルを使用して、ボットのコマンド メニュー Microsoft Teams作成する方法について説明します。
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: af987ae2fa538ffb785e782f191c674132440311
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+keywords: コマンド メニューでメッセージの会話を作成@mention
+ms.openlocfilehash: bf9b6963b482a335175e5a9c75b6c928104ead26
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720107"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888238"
 ---
 # <a name="bot-command-menus"></a>ボット コマンド メニュー
 
@@ -38,7 +39,7 @@ ms.locfileid: "60720107"
 
 **App Studio を使用してボットのコマンド メニューを作成するには**
 
-1. [アプリTeams開き、左側 **のウィンドウから**[アプリ] を選択します。 [アプリ **] ページで** App Studio を検索 **し、[開** く] を **選択します**。 
+1. [アプリTeams開き、左側 **のウィンドウから**[アプリ] を選択します。 [アプリ **] ページで** App Studio を検索 **し、[開** く] を **選択します**。
    > [!NOTE]
    > App Studio をお持ち **ではない場合** は、ダウンロードできます。 詳細については [、「App Studio のインストール」を参照してください](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio)。
 
@@ -212,7 +213,7 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 > [!NOTE]
 > マニフェストからコマンドを削除する場合は、変更を実装するためにアプリを再展開する必要があります。 一般に、マニフェストに対する変更を行う場合は、アプリを再展開する必要があります。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [チャネルとグループ会話](~/bots/how-to/conversations/channel-and-group-conversations.md)

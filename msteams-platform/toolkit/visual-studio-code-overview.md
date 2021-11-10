@@ -5,12 +5,12 @@ keywords: teams visual studio コード ツールキット
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 4425ea5ac6daa400d33497e031cf37639cd2722a
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: f2bb0d5dbd999a5d935c051d854bd94b21ce3f19
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156089"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60889322"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>アプリとアプリのTeams ToolkitをVisual Studio Code
 
@@ -99,7 +99,7 @@ Visual Studio Code の Teams Toolkit は、開発者エクスペリエンスに�
 
       > [!div class="checklist"]
       >
-      > - このmanifest.jsオンです。
+      > - manifest.json。
       > - パブリック [または組織](../resources/schema/manifest-schema.md#icons) のアプリ カタログに表示するアプリの色アイコン。
       > - アクティビティ[バーに](../resources/schema/manifest-schema.md#icons)表示するアウトライン Teamsアイコン。
 
@@ -108,7 +108,7 @@ Visual Studio Code の Teams Toolkit は、開発者エクスペリエンスに�
 1. アプリを構成するには、アプリの **[Teams Toolkit]** タブにVisual Studio Code。
 1. [**マニフェスト エディター] セクション** の **[マニフェスト エディター Project** します。
 
-[アプリの詳細] ページでフィールドを編集すると、最終的にアプリ パッケージの一部としてmanifest.jsファイルのコンテンツが更新されます。
+[アプリの詳細] ページでフィールドを編集すると、最終的にアプリ パッケージの一部として出荷される manifest.json ファイルの内容が更新されます。
 
 ## <a name="install-and-run-your-app-locally"></a>アプリをローカルにインストールして実行する
 
@@ -140,7 +140,12 @@ Visual Studio Code の Teams Toolkit は、開発者エクスペリエンスに�
 
 Azure ホスティングを使用する場合は、クラウドにプロビジョニングして展開している必要があります。 文書の公開プロセスの詳細については、「SPFxチュートリアル」[をSPFxしてください](../get-started/first-app-spfx.md)。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [発行済みアプリの保守とサポート](../concepts/deploy-and-publish/appsource/post-publish/overview.md)
+
+## <a name="see-also"></a>関連項目
+
+* [アプリとアプリのTeams ToolkitをVisual Studio](~/toolkit/visual-studio-overview.md)
+* [JavaScript クライアント SDK を使用してタブやその他のホストMicrosoft Teamsエクスペリエンスを構築する](~/tabs/how-to/using-teams-client-sdk.md)

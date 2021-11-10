@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: fcec0e01f6f9d635896ef14eb4efee5e56f9e761
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 878b6fd22373edb8f9cbbf28c15c8d5dd10ee3e0
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720114"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60888035"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Microsoft Teams のアプリを作成する
 
@@ -211,8 +211,6 @@ Teamsは機能の組み[合わせです](concepts/capabilities-overview.md)。 �
 
 ## <a name="see-also"></a>関連項目
 
-* [Web サイトに [共有Teams] ボタンを追加する](concepts/build-and-test/share-to-teams.md)
-* [アプリをTeamsする](concepts/design/design-teams-app-overview.md)
-* [Microsoft TeamsJavaScript クライアント SDK](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
-* JavaScript および[.NET](https://github.com/Microsoft/botbuilder-dotnet/)用[ボット フレームワーク](https://github.com/Microsoft/botbuilder-js)SDK
-* [アプリをTeamsする](concepts/deploy-and-publish/apps-publish-overview.md)
+* [アプリの基本事項](~/concepts/app-fundamentals-overview.md)
+* [アプリをTeamsする](~/concepts/design/design-teams-app-process.md)
+* [使用例をアプリの機能Teamsマップする](~/concepts/design/map-use-cases.md)
