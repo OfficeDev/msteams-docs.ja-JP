@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
-ms.openlocfilehash: 72dbbfe62e6f5f975a09b7c0538e0847520670d9
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 868c41ad0df976fec60b9f579b8447a310344d9a
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719799"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912233"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>SaaS オファーをアプリにMicrosoft Teamsする
 
@@ -57,13 +57,13 @@ ms.locfileid: "60719799"
 
 SaaS フルフィルメント API との統合は、アプリの収益化にTeamsです。 これらの API は、ユーザーが購入したサブスクリプション プランのライフサイクルを管理するのに役立ちます。
 
-詳細な手順と API リファレンスについては [、SaaS フルフィルメント API のドキュメントを参照してください](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-api-v2)。 一般に、サブスクリプションの購入後に API を使用して次の手順を実装します。
+詳細な手順と API リファレンスについては [、SaaS フルフィルメント API のドキュメントを参照してください](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-apis)。 一般に、サブスクリプションの購入後に API を使用して次の手順を実装します。
 
-1.  ランディング ページ [*への URL を介*](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-api-v2#purchased-but-not-yet-activated-pendingfulfillmentstart) して購入識別トークンを受け取ります。
+1. ランディング ページ [*への URL を介*](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-life-cycle#purchased-but-not-yet-activated-pendingfulfillmentstart) して購入識別トークンを受け取ります。
 
-1.  トークンを使用してサブスクリプションの詳細を取得します。
+1. トークンを使用してサブスクリプションの詳細を取得します。
 
-1.  サブスクリプションがアクティブ化されている商用マーケットプレースに通知します。
+1. サブスクリプションがアクティブ化されている商用マーケットプレースに通知します。
 
 ### <a name="best-practices-for-implementing-subscription-management"></a>サブスクリプション管理を実装するためのベスト プラクティス
 

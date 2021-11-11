@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: e542378a45262312978d0d091439938907b974ac
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 8032228dd9032c0465a9d408b0c78700bdc2341e
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888287"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912207"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>リファレンス: マニフェスト スキーマのMicrosoft Teams
 
@@ -298,7 +298,7 @@ ms.locfileid: "60888287"
     "team": "bot", 
     "groupchat": "bot"
   },
- "configurableProperties": {
+ "configurableProperties": [
      "name",
      "shortDescription",
      "longDescription",
@@ -308,6 +308,9 @@ ms.locfileid: "60888287"
      "developerUrl",
      "privacyUrl",
      "termsOfUseUrl"        
+ ],
+  "subscriptionOffer": {
+    "offerId": "publisherId.offerId"
   }
 }
 ```
@@ -746,7 +749,6 @@ Teams機能するために独自の url をSharePointするアプリには、有
  
 プロパティ `defaultBlockUntilAdminAction` が true に **設定されている場合**、管理者が許可するまで、アプリは既定でユーザーから非表示になります。 true に **設定すると**、アプリは、すべてのテナントとエンド ユーザーに対して非表示になります。 テナント管理者は、管理者センターでアプリをTeamsし、アプリを許可またはブロックするアクションを実行できます。 既定値は **false** です。 既定のアプリ ブロックの詳細については、「管理者が承認[するまでアプリTeams非表示にする」を参照してください](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves)。
 
-
 ## <a name="publisherdocsurl"></a>publisherDocsUrl
 
 **省略** 可能 - 文字列
@@ -754,6 +756,16 @@ Teams機能するために独自の url をSharePointするアプリには、有
 **最大サイズ** - 128 文字
 
 プロパティはに依存します `defaultBlockUntilAdminAction` 。 プロパティが true に設定されている場合は、既定でブロックされているアプリを許可する前に、管理者がガイドラインを取得する情報ページに `defaultBlockUntilAdminAction` HTTPS URL `publisherDocsUrl` を提供します。
+
+## <a name="subscriptionoffer"></a>subscriptionOffer
+
+**省略可能** - オブジェクト
+
+アプリに関連付けられている SaaS オファーを指定します。
+
+|名前| 型| 最大サイズ | 必須 | 説明|
+|---|---|---|---|---|
+|`offerId`| string | 2,048 文字 | ✔ | パートナー センターで検索できる、Publisher ID とオファー ID を含む一意[の識別子](https://partner.microsoft.com/dashboard)です。 文字列の書式を設定する必要があります `publisherId.offerId` 。|
 
 ## <a name="see-also"></a>関連項目
 

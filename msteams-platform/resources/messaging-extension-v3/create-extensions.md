@@ -4,12 +4,12 @@ description: アクション ベースのメッセージング拡張機能を作
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: teams メッセージング拡張機能メッセージング拡張機能の検索
-ms.openlocfilehash: 56dcf316eb430b9745856469eaf837ffe7c0bc00
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 76948946e3a194bfdde4518a0e9d9d4dc2428729
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720380"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912228"
 ---
 # <a name="initiate-actions-with-messaging-extensions"></a>メッセージング拡張機能を使用してアクションを開始する
 
@@ -106,11 +106,12 @@ ms.locfileid: "60720380"
           "description": "Reassign a todo item",
           "title": "Reassign a todo item",
           "type": "action",
-          "fetchTask": true,
+          "fetchTask": false,
           "parameters": [
             {
               "name": "Name",
               "title": "Title"
+              "inputType": "text"
             }
           ]
         }

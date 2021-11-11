@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams apps 会議 ユーザー参加者ロール api usercontext 通知シグナル クエリ
-ms.openlocfilehash: 29e0e797b3b55dd3fa25071929072957c8d43fd8
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 1906561e51791db993e652f837e6064df3b570d5
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887707"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912198"
 ---
 # <a name="meeting-apps-api-references"></a>会議アプリ API リファレンス
 
@@ -23,7 +23,7 @@ ms.locfileid: "60887707"
 
 次の表に、API の一覧を示します。
 
-|API|説明|要求|ソース|
+|API|[説明]|要求|ソース|
 |---|---|----|---|
 |**GetUserContext**| この API を使用すると、コンテキスト情報を取得して、関連するコンテンツを [コンテンツ] タブTeamsできます。 |_**microsoftTeams.getContext( ( ) => { /*...*/ } )**_|Microsoft Teamsクライアント SDK|
 |**GetParticipant**| この API を使用すると、ボットは会議 ID と参加者 ID によって参加者情報を取得できます。 |**GET** _**/v1/meetings/{meetingId}/participants/{participantsId}?tenantId={tenantId}**_ |Microsoft Bot FrameworkSDK|
@@ -138,7 +138,7 @@ API の JSON 応答 `GetParticipant` 本文は次の形式です。
 
 `GetParticipant`API は、次の応答コードを返します。
 
-|応答コード|説明|
+|応答コード|[説明]|
 |---|---|
 | **403** | 参加者情報の取得がアプリと共有されていない。 アプリが会議にインストールされていない場合、最も一般的なエラー応答 403 がトリガーされます。 テナント管理者がライブ サイトの移行中にアプリを無効またはブロックすると、403 エラー応答がトリガーされます。 |
 | **200** | 参加者情報が正常に取得されます。|
@@ -221,7 +221,7 @@ POST /v3/conversations/{conversationId}/activities
 
 `NotificationSignal`API には、次の応答コードが含まれています。
 
-|応答コード|説明|
+|応答コード|[説明]|
 |---|---|
 | **201** | シグナルを含むアクティビティが正常に送信されます。 |
 | **401** | アプリは無効なトークンで応答します。 |
@@ -476,8 +476,3 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 
 * [Teamsの認証フロー](../tabs/how-to/authentication/auth-flow-tab.md)
 * [会議のTeamsアプリ](teams-apps-in-meetings.md)
-
-## <a name="next-steps"></a>次の手順
-
-> [!div class="nextstepaction"]
-> [会議で使用するアプリを有効Teamsする](enable-and-configure-your-app-for-teams-meetings.md)

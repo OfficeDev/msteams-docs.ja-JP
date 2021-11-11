@@ -4,17 +4,17 @@ keywords: teams アプリの機能のアクセス許可
 description: Web クライアントのアプリに対するデバイスのアクセス許可のサポートを安全に取り戻す
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: b2e83ca784e5459edfd80a3862610ebab2f8df30
-ms.sourcegitcommit: ce956267b620f807e15e6d2df7afa022ffacc22f
+ms.openlocfilehash: 32ccdc732fb05b82ab36b631c5e35f25f8c6c7dc
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "60496240"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912186"
 ---
 # <a name="device-permissions-for-the-browser"></a>ブラウザーのデバイスのアクセス許可
 
 > [!NOTE]
-> ブラウザーでのデバイスのアクセス許可の処理方法の変更は、現在パブリック開発者 [プレビューでのみ利用](../../resources/dev-preview/developer-preview-intro.md) できます。 この変更は、2022 年 1 月 21 日までに一般に利用可能になります (GA)。
+> ブラウザーでのデバイスのアクセス許可の処理方法の変更は、現在パブリック開発者 [プレビューでのみ利用](../../resources/dev-preview/developer-preview-intro.md) できます。 この変更は、2022 年 2 月 1 日までに一般提供 (GA) される予定です。
 
 カメラやマイク へのアクセスなど、デバイスのアクセス許可を必要とするアプリケーションでは、Web ブラウザーのアプリ レベルごとにユーザーが手動で同意を付与する必要があります。 以前は、ブラウザーは、これらのアクセス許可の付与方法を処理しましたが、これらのアクセス許可は現在、Microsoft Teams。 これは、ブラウザーでこれらのアクセス許可が必要な場合にアプリケーションを設計する方法に影響します。
 

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: 9f5e1ce756dbe465e90e18e6db178b0386ae6d2b
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 6838471befd48c439caf9cfbf81589f3bdf75a79
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887700"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912194"
 ---
 # <a name="prerequisites-for-apps-in-teams-meetings"></a>Teams 会議でのアプリの前提条件
 
@@ -54,7 +54,7 @@ ms.locfileid: "60887700"
 ## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
-> [会議アプリ API リファレンス](API-references.md)
+> [会議で使用するアプリを有効Teamsする](enable-and-configure-your-app-for-teams-meetings.md)
 
 ## <a name="see-also"></a>関連項目
 

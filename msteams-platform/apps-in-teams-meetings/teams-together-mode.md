@@ -3,12 +3,12 @@ title: カスタム 一緒にモード のシーン
 description: カスタムの Together Mode シーンを使用する
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 051924aa8a8f02c6e9a075639014e4fc3290d8c0
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: ad33262e5e836badcaf3135138770a241f51f9c6
+ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887631"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "60912242"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Teams でのカスタム Together モードのシーン
 
@@ -242,6 +242,6 @@ Scene.json とイメージは、シートの正確な位置を示します。 �
 
 ## <a name="see-also"></a>関連項目
 
-[会議のTeamsアプリ](teams-apps-in-meetings.md) 
-[通話と会議ボット](~/bots/calls-and-meetings/calls-meetings-bots-overview.md) 
-[リアルタイムのメディア通話と会議と会議Microsoft Teams](~/bots/calls-and-meetings/real-time-media-concepts.md)
+* [会議のTeamsアプリ](teams-apps-in-meetings.md)
+* [通話と会議ボット ](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+* [リアルタイムのメディア通話と会議と会議Microsoft Teams](~/bots/calls-and-meetings/real-time-media-concepts.md)
