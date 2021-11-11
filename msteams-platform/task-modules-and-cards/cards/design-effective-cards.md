@@ -4,12 +4,12 @@ description: Teams のアダプティブ カードをデザインして、Micros
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: bf0119f8cab7eeaf15745b27b6117063b108f8f8
-ms.sourcegitcommit: c883f9675f3d392e3d77329c97b8e2c4cb26b695
+ms.openlocfilehash: b016df98d57b9a3f5fe03e6cf26b31ad2d7b8db9
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2021
-ms.locfileid: "60249804"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887965"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Microsoft Teams のアプリのアダプティブ カードの設計
 
@@ -679,3 +679,11 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 #### <a name="do-be-concise"></a>Do: 簡潔にしてください
 
 スレッドに複数のカードを送信するのは簡単ですが、スクロールしてカードが見えなくなると、役に立たなくなります。 必須項目にのみ制限するようにしてください。 これは、ユーザーが "ノイズ" と認識する内容に対する許容度が低いチャネルでは特に当てはまります。
+
+## <a name="see-also"></a>関連項目
+
+* [カードとタスク モジュール](~/task-modules-and-cards/cards-and-task-modules.md)
+* [カードとタスク モジュールは、Teams ボットでサポートされています](~/task-modules-and-cards/what-are-task-modules.md)
+* [アダプティブ カードのユニバーサル アクションの操作](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)
+* [タスク モジュールの送信アクションに応答する](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+* [ユーザー固有のビュー](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/user-specific-views.md)
