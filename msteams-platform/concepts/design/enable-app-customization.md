@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
 keywords: アクセント カラー ブランドアプリの承認を非表示にする
-ms.openlocfilehash: 2061b638034a0b6359f1853163c49f7d696381c6
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+ms.openlocfilehash: 1487a1a44991143b93b87bf47bdb93180d97cb8c
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912214"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948615"
 ---
 # <a name="customize-your-teams-app"></a>アプリをTeamsする
 
@@ -53,6 +53,6 @@ ms.locfileid: "60912214"
 
 ## <a name="see-also"></a>関連項目
 
-* [アプリ マニフェストのスキーマ](/MicrosoftTeams/manifest-schema)
+* [アプリ マニフェストのスキーマ](/microsoftteams/platform/resources/schema/manifest-schema)
 * [管理センターでアプリTeamsカスタマイズする](/MicrosoftTeams/customize-apps)
 

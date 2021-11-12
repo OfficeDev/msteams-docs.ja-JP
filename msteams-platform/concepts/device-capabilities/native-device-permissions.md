@@ -4,12 +4,12 @@ keywords: teams アプリ機能アクセス許可 デバイスネイティブ �
 description: 通常、ユーザーの同意が必要なネイティブ機能 (スキャン QR、バーコード、画像、オーディオ、ビデオ機能など) へのアクセスを要求するためにアプリ マニフェストを更新する方法
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 185552c213d6313ea6c8b50af72a0220d9abe7fc
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 04518d8620ce95d5d3ca72c86684ff0208b1333f
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889119"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948433"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>アプリのデバイスのアクセス許可をMicrosoft Teamsする
 
@@ -122,7 +122,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 > * をサポート `camera` し `gallery` `microphone` 、selectMedia API を [**使用して有効になります**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true)。 1 [**つのイメージ キャプチャに captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) を使用します。
 > * getLocation `location` API を使用して [**サポートが有効になります**](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true)。 HTML5 地理位置情報 API は現在、デスクトップ クライアントで完全にサポートされていないので、場所 `getLocation API` Teams必要があります。
 
-例:
+以下に例を示します。
  * ユーザーに自分の場所へのアクセスを求めるメッセージを表示するには、次のコマンドを呼び出す必要があります `getCurrentPosition()` 。
 
     ```Javascript
@@ -192,17 +192,16 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 ## <a name="code-sample"></a>コード サンプル
 
-| **サンプル名** | **説明** | **Node.js** |
+| **サンプル名** | **Description** | **Node.js** |
 |---------------|--------------|--------|
 |デバイス アクセス許可 | デバイスMicrosoft Teamsを示すタブ サンプル アプリを使用する |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [メディア機能を統合Teams](mobile-camera-image-permissions.md)
 
-> [!div class="nextstepaction"]
-> [QR スキャナーまたはバーコード スキャナー機能をアプリに統合Teams](qr-barcode-scanner-capability.md)
+## <a name="see-also"></a>関連項目
 
-> [!div class="nextstepaction"]
-> [場所の機能を統合Teams](location-capability.md)
+* [QR スキャナーまたはバーコード スキャナー機能をアプリに統合Teams](qr-barcode-scanner-capability.md)
+* [場所の機能を統合Teams](location-capability.md)

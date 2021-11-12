@@ -6,17 +6,17 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: power platform power apps people picker deep link virtual agent assistant share-to-Teams
-ms.openlocfilehash: 54f5345f44c35abbefabba642899a92d515e0aa2
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 77daf673fd20c82803b0498487d04fe5232c28ef
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889217"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948580"
 ---
 # <a name="integrate-web-apps"></a>Web アプリを統合する
 
 既存の Web アプリケーションの機能を新しいプラットフォームに統合することで、充実したユーザー エクスペリエンスMicrosoft Teamsできます。 アプリをアプリ[Teamsネイティブに](~/concepts/design/understand-use-cases.md)するための設計ガイドラインに従Teams。
-このドキュメントでは、Web アプリケーションを Teams、Power プラットフォームと統合して Power アプリ、Power Virtual Agents、Virtual Assistant、アプリ テンプレート、シフト コネクタ、Moodle LMS を作成し、web サイトの共有と Teams ボタンを作成し、SharePoint で Microsoft Teams タブを追加し、ディープ リンクを作成し、デバイス機能を統合するための前提条件について説明します。
+このドキュメントでは、Web アプリケーションを Teams、Power プラットフォームと統合して Power アプリ、Power Virtual Agents、Virtual Assistant、アプリ テンプレート、シフト コネクタ、Moodle LMS を作成し、Web サイトの Share-to-Teams ボタンを作成するための前提条件の概要を示し、Microsoft Teams タブをSharePoint、ディープ リンクの作成、デバイス機能の統合を行います。
 
 ## <a name="prerequisites"></a>前提条件   
 
@@ -55,9 +55,9 @@ Virtual Assistantは、ユーザー エクスペリエンス、組織のブラ�
 
 アプリ テンプレートを使用して、組織のニーズに合わせてカスタム作成アプリを作成できます。 これらは、コミュニティによって駆動され、オープンソースMicrosoft Teams、およびアプリで利用可能な、製品向けアプリGitHub。 各テンプレートには、組織のアプリを展開およびインストールする詳細な手順が含まれている。 すぐにインストールして使用を開始できるすぐに使用できるアプリケーションが提供されます。 
 
-## <a name="teams-shifts-work-force-management-connectors"></a>TeamsShifts Work Force Management コネクタ
+## <a name="teams-shifts-work-force-management-connectors"></a>Teams Shifts Work Force Management コネクタ
 
-TeamsShifts Work Force Management コネクタは、運用対応、オープンソース、コミュニティ駆動型の統合です。 シームレスなエクスペリエンスと迅速なプロセスを提供し、シフトを使用したファーストラインワーカーのデジタルTeams提供します。
+Teams Shifts Work Force Management コネクタは、運用対応、オープンソース、コミュニティ駆動型の統合です。 シームレスなエクスペリエンスと迅速なプロセスを提供し、シフトを使用したファーストラインワーカーのデジタルTeams提供します。
 
 ## <a name="install-moodle-lms"></a>Moodle LMS のインストール
 
@@ -94,7 +94,7 @@ Azure Communication Services アプリケーションでは、パブリック �
 
 * [アプリの使用例をプラットフォームの機能Teamsマップする](~/concepts/design/map-use-cases.md)
 * [アプリのエントリ ポイントを決定する](~/concepts/extensibility-points.md)
-* [Web アプリを統合する](~/samples/integrating-web-apps.md)
+* [統合のTeams検討事項](~/samples/integrating-web-apps.md)
 * [低コードのカスタム アプリを作成Microsoft Teams](~/samples/teams-low-code-solutions.md)
 * [Power Virtual Agents チャットボットを追加する](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
 * [仮想アシスタントの作成](~/samples/virtual-assistant.md)

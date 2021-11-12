@@ -5,12 +5,12 @@ description: モバイルでアプリを作成するための計画Teamsガイ�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: 5ad636f494e57706b280980905e197f03707e379
-ms.sourcegitcommit: 781e7b82240075e9d1f55e97f3f1dcbba82a5e4d
+ms.openlocfilehash: 60aab6b9c81dbc28fbbfe0d9a985b42c22ddee47
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2021
-ms.locfileid: "60566149"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948398"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>Teams モバイルの応答タブを計画する
 
@@ -185,4 +185,4 @@ ms.locfileid: "60566149"
 * [タブの設計](../../tabs/design/tabs.md)
 * [ボットをデザインする](../../bots/design/bots.md)
 * [タスク モジュールをデザインする](../..//task-modules-and-cards/task-modules/design-teams-task-modules.md)
-* [ガイドラインの検証](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+* [ストアの検証ガイドライン](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)

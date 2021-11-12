@@ -4,12 +4,12 @@ description: リアルタイムの音声およびビデオ通話やオンライ�
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: オーディオ ストリーム ビデオ ストリーム オーディオ/ビデオ通話会議リアルタイム メディア アプリケーションホスト型メディア サービスホスト型メディア
-ms.openlocfilehash: bff216848262412a05de8794bb716eb6a3f4c75a
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: e35ce08bc0efed328687f7aacf311cf94c3e8830
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889063"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948552"
 ---
 # <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>リアルタイムのメディア通話と会議と会議Microsoft Teams
 
@@ -65,7 +65,7 @@ ms.locfileid: "60889063"
 
 アプリケーションホスト型メディア ボットでは、.NET またはサーバー C#サーバー Windows必要です。 詳細については、「アプリケーションホスト型メディア ボットの要件と考慮事項 [」を参照してください](requirements-considerations-application-hosted-media-bots.md#c-or-net-and-windows-server-for-development)。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [通話ボットを登録する](~/bots/calls-and-meetings/registering-calling-bot.md)

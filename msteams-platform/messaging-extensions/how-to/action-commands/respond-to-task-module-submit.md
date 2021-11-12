@@ -5,12 +5,12 @@ description: コード サンプルを使用して、プロアクティブ メ�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: ac74fb4536f5e7b36e40982cf13a7cf4edfa1644
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: e660a7fb289e8047316d8d1405c09df65bc5c8ca
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889413"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948412"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>タスク モジュールの送信アクションに応答する
 
@@ -586,7 +586,7 @@ Teams でユーザー属性を使用するには、ユーザーに送信され�
 
 次のセクションでは、Array 内のエンティティの説明を示 `OnBehalfOf` します。
 
-|Field|種類|説明|
+|フィールド|種類|説明|
 |:---|:---|:---|
 |`itemId`|整数|アイテムの識別について説明します。 その値は、 である必要があります `0` 。|
 |`mentionType`|String|"person" のメンションについて説明します。|

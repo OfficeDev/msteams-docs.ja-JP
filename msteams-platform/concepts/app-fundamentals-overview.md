@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: エントリ ポイントの拡張性の使用例デバイスの機能
-ms.openlocfilehash: 63a11c949a56bf024632efc7cad5ef38ce918c2b
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: fcb5da4fd7feac225b67341d6fe22187dd30a713
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889273"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948426"
 ---
 # <a name="microsoft-teams-app-development-fundamentals"></a>Microsoft Teams開発の基本
 
@@ -41,12 +41,12 @@ Microsoft Teamsの基本は、カスタム アプリを作成する必要があ�
 
 Microsoft Teamsプラットフォームは、組み込みのファースト パーティ エクスペリエンスと一致する開発者機能を継続的に強化しています。 拡張された Teams プラットフォームを使用すると、パートナーは、Microsoft Teams JavaScript クライアント SDK で利用できる専用 API を使用して、カメラ、QR またはバーコード スキャナー、フォト ギャラリー、マイク、場所などのネイティブ デバイス機能にアクセスして統合できます。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [アプリTeamsについて](capabilities-overview.md)
 
 ## <a name="see-also"></a>関連項目
 
-* [Web アプリとアプリを統合Teams](../samples/integrating-web-apps.md)
+* [統合のTeams検討事項](../samples/integrating-web-apps.md)
 * [最初のアプリをMicrosoft Teamsする](../build-your-first-app/build-first-app-overview.md)

@@ -5,12 +5,12 @@ description: Microsoft Teams プラットフォームでのメッセージング
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 1ef83dd8dc87b54f7ec02e110565b9ecb0a14667
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 1448cb334521b6937ab87514c35e2b628a3e8106
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889371"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948559"
 ---
 # <a name="messaging-extensions"></a>メッセージング拡張機能
 
@@ -78,14 +78,12 @@ Web サービスは、作成メッセージ領域に URL を貼り付けする�
 | アクションベースのコマンドを使用したメッセージング拡張機能 | このサンプルは、アクション ベースのメッセージング拡張機能を構築する方法を示しています。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
 | 検索ベースのコマンドを使用したメッセージング拡張機能 | このサンプルは、検索ベースのメッセージング拡張機能を構築する方法を示しています。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [アクション メッセージング拡張機能のコマンドを定義する](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 
-> [!div class="nextstepaction"]
-> [検索メッセージング拡張機能のコマンドを定義する](~/messaging-extensions/how-to/search-commands/define-search-command.md)
-
 ## <a name="see-also"></a>関連項目
 
+* [検索メッセージング拡張機能のコマンドを定義する](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 * [メッセージング拡張機能を作成する](../build-your-first-app/build-messaging-extension.md)

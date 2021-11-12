@@ -6,12 +6,12 @@ keywords: teams タブ グループ チャネル構成可能
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6b2233307d457e3f41e7eccd49bd6e099d593a9f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 72fd6e291d282787ad406e2677c2e3ef58a4fe47
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888056"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948608"
 ---
 # <a name="prerequisites"></a>前提条件
 
@@ -43,7 +43,7 @@ Teamsは、次の前提条件に従う必要があります。
 * [Visual Studio Code 用 Teams ツールキット](../../toolkit/visual-studio-code-overview.md)
 * [Visual Studio 用 Teams ツールキット](../../toolkit/visual-studio-overview.md)
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [プライベート タブを作成する](~/tabs/how-to/create-personal-tab.md)
@@ -51,7 +51,7 @@ Teamsは、次の前提条件に従う必要があります。
 ## <a name="see-also"></a>関連項目
 
 * [Teamsタブ](~/tabs/what-are-tabs.md)
-* [React を使用して初めてのアプリを構築する](../../get-started/first-app-react.md)
+* [JavaScript を使用して初めてのアプリを構築する](../../get-started/first-app-react.md)
 * [Blazor を使用して初めてのアプリを構築する](../../get-started/first-app-blazor.md)
 * [SPFx を使用して初めてのアプリを構築する](../../get-started/first-app-spfx.md)
 * [モバイルのタブ](~/tabs/design/tabs-mobile.md)

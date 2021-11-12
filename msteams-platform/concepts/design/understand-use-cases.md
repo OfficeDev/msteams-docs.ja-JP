@@ -5,12 +5,12 @@ description: アプリを計画し、ユーザーとその必要性を理解し�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 835e40e2c93387ee7db9fab7eb1f8c56951019c9
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 93ab668a4ac317228186508eb721f1900add0de8
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888420"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948390"
 ---
 # <a name="understand-your-use-cases"></a>ユース ケースを理解する
 
@@ -77,7 +77,7 @@ ms.locfileid: "60888420"
 
 ユーザーが現在のソリューションで使用する新しい機能を特定します。 アプリに追加する新機能のロードマップがある場合、設計とアーキテクチャに影響が及ぼす可能性があります。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [使用例のマップ](../../concepts/design/map-use-cases.md)

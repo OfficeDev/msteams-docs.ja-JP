@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: 統合のTeams検討事項
-ms.openlocfilehash: cf60c1c30697fd503dcc935f35f32e9281a89cdd
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+ms.openlocfilehash: c60a51775459e47116ac0cc33086c21ce26b5fe3
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912256"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948573"
 ---
 # <a name="considerations-for-teams-integration"></a>統合のTeams検討事項 
 
@@ -48,7 +48,7 @@ Web アプリを適切に統合することで、Teamsのソーシャル機能�
 
 既存のアプリケーションのすべての機能をアプリケーションに統合Teams、特に大規模なアプリでは、強制的または不自然なユーザー エクスペリエンスが発生します。 最も影響の大きな機能と、より自然に機能と統合する機能からTeams。 ユーザーがメイン アプリを起動し、一連の機能にアクセスできます。
 
-**アプリとアプリを統合するための前提条件Teams** アプリとアプリを統合するための前提条件は次Teams。 
+**アプリとアプリを統合するための前提条件** Teams アプリとアプリを統合するための前提条件を次にTeams。 
 
 1. [アプリの使用例をプラットフォームの機能Teamsマップします](../concepts/design/map-use-cases.md)。
 1. [アプリのエントリ ポイントを決定します](../concepts/extensibility-points.md)。 個人の使用、共同作業、または両方の目的ですか?

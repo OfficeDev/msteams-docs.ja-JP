@@ -5,12 +5,12 @@ description: コード例とサンプルを使用してメッセージング拡�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 2d8bcb6896d1a97e6350b397e725afad2e8961a9
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 808ff41c848864bfd86d12fe0dc236e249fa3157
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889406"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948629"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>メッセージング拡張機能に認証を追加する
 

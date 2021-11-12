@@ -5,12 +5,12 @@ description: 個人および共有アプリ エクスペリエンスでのチー
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 1bfaed5ec9c2ef1bec9dc3699dbb5914be213a44
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 2dd2670787c3da9140b5798db3e7d28b30271f70
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889080"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948419"
 ---
 # <a name="entry-points-for-teams-apps"></a>Teams アプリのエントリー ポイント
 
@@ -45,12 +45,12 @@ ms.locfileid: "60889080"
 
 * [**タブ**](~/tabs/what-are-tabs.md) は、それを見ているユーザーにとって意味のある、フルスクリーンの埋め込み Web エクスペリエンスを提供します。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [使用例を理解する](../concepts/design/understand-use-cases.md)
 
 ## <a name="see-also"></a>関連項目
 
-[Teamsの設計ガイドライン](../concepts/design/design-teams-app-overview.md) <br>
-[最初のアプリをMicrosoft Teamsする](../build-your-first-app/build-first-app-overview.md)
+* [Teamsの設計ガイドライン](../concepts/design/design-teams-app-overview.md) <br>
+* [最初のアプリをMicrosoft Teamsする](../build-your-first-app/build-first-app-overview.md)

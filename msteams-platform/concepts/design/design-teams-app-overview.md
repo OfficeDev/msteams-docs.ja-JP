@@ -5,12 +5,12 @@ description: アプリを設計するMicrosoft Teamsします。 リソースに
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 59af1528941b06d6a951ee8dd38e663c1b492624
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 20626290af2ae94eb9f3913d7063ba8d8b207bda
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888140"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948566"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>アプリのMicrosoft Teamsする
 
@@ -139,14 +139,14 @@ UI はわかりやすいので、見た目とトーンが快適で、ユーザ�
 
 次のツールは、デザイナーと開発者が始めるのに役立ちます。
 
-### <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
+### <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI キット
 
 UI コンポーネントTeamsテンプレート、および必要に応じてドラッグ、ドロップ、および変更できる例を含むアプリを設計します。 UI キットには、さまざまなシナリオでのアプリの外観と動作に関する包括的なTeams含まれています。
 
 > [!div class="nextstepaction"]
 > [UI キットを取得する (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="microsoft-teams-ui-library"></a>Microsoft TeamsUI ライブラリ
+### <a name="microsoft-teams-ui-library"></a>Microsoft Teams UI ライブラリ
 
 ブラウザーで UI テンプレートTeams関連するコンポーネントを個別に表示およびテストします。
 
@@ -169,7 +169,7 @@ UI コンポーネントTeamsテンプレート、および必要に応じてド
 
 詳細については、次のいずれかのリソースを試してください。
 
-### <a name="fluent-ui-documentation"></a>FluentUI のドキュメント
+### <a name="fluent-ui-documentation"></a>Fluent UI ドキュメント
 
 エクスペリエンスの構築に使用される基本的な UI Fluentコード サンプルと実装の詳細をTeamsします。
 

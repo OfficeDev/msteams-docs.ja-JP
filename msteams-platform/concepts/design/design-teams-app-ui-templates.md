@@ -5,12 +5,12 @@ description: 標準化された UI コンポーネント、レイアウト、お
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: d84d03af2ce1428b7c75a232690e9f1e2fa6112f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 78c8854771c72280014489259ebda829d5915be2
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887804"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948447"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>UI テンプレートをMicrosoft Teamsアプリを設計する
 
@@ -20,14 +20,14 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 
 次のリソースは、UI テンプレートを使用してアプリを設計および開発するのに役立ちます。
 
-### <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
+### <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI キット
 
 アプリ設計の UI テンプレートを Microsoft Teams UI キットから取得します。これには、使用状況、解剖学、アクセシビリティ、ベスト プラクティスに関する広範な情報も含まれています。
 
 > [!div class="nextstepaction"]
 > [UI キットを取得する (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-### <a name="microsoft-teams-ui-library"></a>Microsoft TeamsUI ライブラリ
+### <a name="microsoft-teams-ui-library"></a>Microsoft Teams UI ライブラリ
 
 ブラウザーで UI テンプレートTeams関連するコンポーネントを個別に表示およびテストします。
 
@@ -123,7 +123,7 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 
 * サインイン
 * ユーザー プロファイル
-* 設定
+* Settings
 * ユーザー入力コレクション
 
 ### <a name="mobile"></a>モバイル
@@ -167,7 +167,7 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 
 :::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="例は、デスクトップ上の UI テンプレートのサインインを示しています。" border="false":::
 
-## <a name="settings"></a>設定
+## <a name="settings"></a>Settings
 
 設定は、ユーザーがアプリで自分の設定を構成できる画面です。 (注: 設定は基本的な UI コンポーネント[のコンテナーです](~/concepts/design/design-teams-app-basic-ui-components.md)。)
 

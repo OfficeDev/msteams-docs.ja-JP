@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 09/22/2020
 keywords: tabss bots メッセージング拡張機能 webhooks コネクタ gcc
-ms.openlocfilehash: e4db8bde75d2d396ada5c0789b8cc06731701443
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 4e5d5e17984fd38f3d5c3d511784a2d8a9d955fe
+ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888147"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60948405"
 ---
 # <a name="understand-microsoft-teams-app-capabilities"></a>アプリMicrosoft Teamsについて
 
@@ -65,12 +65,12 @@ Government Community Cloudは、商用環境の政府に焦点を当てたコピ
 * サイドローディング アプリについては[、「Teams](../concepts/design/enable-app-customization.md)アプリをカスタマイズする、Microsoft Teams アプリを配布[](../concepts/deploy-and-publish/apps-publish-overview.md)する、アップロード アプリをカスタマイズする」を参照[Teams。](../concepts/deploy-and-publish/apps-upload.md)
 * カスタム コネクタについては、「create [Office 365 コネクタ」を参照Teams。](../webhooks-and-connectors/how-to/connectors-creating.md)
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [Teams アプリのエントリ ポイント](../concepts/extensibility-points.md)
 
 ## <a name="see-also"></a>関連項目
 
-[ユーザー向けアプリをTeams](../overview.md) 
-[最初のアプリをMicrosoft Teamsする](../build-your-first-app/build-first-app-overview.md)
+* [アプリのビルド Teams](../overview.md)
+* [最初のアプリをMicrosoft Teamsする](../build-your-first-app/build-first-app-overview.md)
