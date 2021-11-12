@@ -6,12 +6,12 @@ keywords: Microsoft Teams テンプレートのサンプル デモ
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: e99b6c347ce23b8d58bc8e632c8345ce6b09598f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: ca4c96e5615a49f5e641c2fd9e7c96d800172040
+ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889196"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949601"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 用のアプリ テンプレート
 

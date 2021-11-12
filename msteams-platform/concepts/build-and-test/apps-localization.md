@@ -5,16 +5,16 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams publishs store office publishing AppSource ローカライズ言語
 ms.date: 05/15/2018
-ms.openlocfilehash: 50dc306a5a06dd7a73a47fbcf94a8a70aa5d6aa6
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 82174caf6154e78a3cae80640c0b9d1d7fe00a68
+ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887554"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949573"
 ---
 # <a name="localize-your-app"></a>アプリをローカライズする
 
-アプリをローカライズするには、次の要素Microsoft Teams必要があります。
+アプリをローカライズするには、次の要素Microsoft Teamsしてください。
 
 1. [AppSource リストをローカライズします](#localize-your-appsource-listing)。
 1. [アプリ マニフェスト内の文字列をローカライズします](#localize-strings-in-your-app-manifest)。 

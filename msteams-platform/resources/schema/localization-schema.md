@@ -5,12 +5,12 @@ ms.topic: reference
 ms.localizationpriority: medium
 keywords: teams マニフェスト スキーマのローカライズ
 ms.date: 05/20/2019
-ms.openlocfilehash: 46a17e488d9c8c5598eab3ff53a9322a80f606ca
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 4b26c1d67a26a27e4c3c1738d508d81d67e74763
+ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887881"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949594"
 ---
 # <a name="localize-json-schema-reference"></a>JSON スキーマの参照のローカライズ
 
@@ -40,10 +40,10 @@ ms.locfileid: "60887881"
 
 スキーマは、次のプロパティを定義します。
 
-|プロパティ|型|最大の長さ|説明|
+|プロパティ|型|最大の長さ|[説明]|
 |---------------|--------|---------|------------------|
 |`$schema`|URI|該当なし|マニフェスト https:// JSON スキーマを参照する URL を指定します。|
-|`name.short`|String|30|アプリ マニフェストの対応する文字列を、ここに指定した値に置き換わります。|
+|`name.short`|文字列|30|アプリ マニフェストの対応する文字列を、ここに指定した値に置き換わります。|
 |`name.full`|文字列|100|アプリ マニフェストの対応する文字列を、ここに指定した値に置き換わります。|
 |`description.short`|String|80|アプリ マニフェストの対応する文字列を、ここに指定した値に置き換わります。|
 |`description.full`|String|4000|アプリ マニフェストの対応する文字列を、ここに指定した値に置き換わります。|
@@ -53,11 +53,11 @@ ms.locfileid: "60887881"
 |`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.title`|String|32|アプリ マニフェストの対応する文字列を、ここで指定した値に置き換えます。|
 |`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.description`|String|128|アプリ マニフェストの対応する文字列を、ここで指定した値に置き換えます。|
 |`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.title`|String|32|アプリ マニフェストの対応する文字列を、ここに指定した値に置き換わります。|
-|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.description`|String|128|アプリ マニフェストの対応する文字列を、ここで指定した値に置き換えます。|
+|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.description`|文字列|128|アプリ マニフェストの対応する文字列を、ここで指定した値に置き換えます。|
 |`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.value`|String|512|アプリ マニフェストの対応する文字列を、ここに指定した値に置き換わります。|
-|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.choices\\[[0-9]\\]\\.title`|String|128|アプリ マニフェストの対応する文字列を、ここで指定した値に置き換えます。|
-|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.taskInfo\\.title`|String|64|アプリ マニフェストの対応する文字列を、ここで指定した値に置き換えます。|
+|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.choices\\[[0-9]\\]\\.title`|文字列|128|アプリ マニフェストの対応する文字列を、ここで指定した値に置き換えます。|
+|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.taskInfo\\.title`|文字列|64|アプリ マニフェストの対応する文字列を、ここで指定した値に置き換えます。|
 
 ## <a name="see-also"></a>関連項目
 
-> [アプリをローカライズする](~/concepts/build-and-test/apps-localization.md)
+[アプリをローカライズする](~/concepts/build-and-test/apps-localization.md)

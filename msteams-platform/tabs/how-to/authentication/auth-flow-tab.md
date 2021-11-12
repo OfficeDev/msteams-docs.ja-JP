@@ -4,18 +4,18 @@ description: タブの認証フローについて説明し、OAuth AADコード 
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams 認証フロー タブ
-ms.openlocfilehash: 0b58e0182714921745fa911cc747aa1c314d3df2
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 2d054ef841bf4f05be4e662d77b999c654670f45
+ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888448"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949650"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Microsoft Teamsの認証フロー
 
 > [!NOTE]
 > モバイル クライアントでタブで認証を機能するには、JavaScript SDK の 1.4.1 以上のバージョンを使用Microsoft Teams必要があります。  
-> TeamsSDK は、認証フロー用に個別のウィンドウを起動します。 属性を `SameSite` **Lax に設定します**。 Teamsクライアントまたは以前のバージョンの Chrome または Safari は `SameSite` サポートされていません =None。
+> Teams SDK は、認証フロー用に個別のウィンドウを起動します。 属性を `SameSite` **Lax に設定します**。 Teamsクライアントまたは以前のバージョンの Chrome または Safari は `SameSite` サポートされていません =None。
 
 OAuth 2.0 は、Azure Active Directory (AAD) および他の多くの ID プロバイダーが使用する認証と承認のオープン標準です。 OAuth 2.0 の基本的な理解は、認証を使用する場合の前提条件Teams。 詳細については、「正式な仕様よりも簡単に実行できる [OAuth 2](https://aaronparecki.com/oauth-2-simplified/) 簡略化」 [を参照してください](https://oauth.net/2/)。 タブとボットの認証フローは異なります。タブは Web サイトに似ているため、OAuth 2.0 を直接使用できます。 ボットの動作はいくつかの方法が異なりますが、コア概念は同じです。
 
@@ -53,7 +53,7 @@ Teams の他のアプリケーション認証フローと同様に、スター�
 |-----------------|-----------------|-------------|------------|
 | Teamsタブ認証 | タブを使用したタブの認証AAD。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
 
-## <a name="more-details"></a>詳細情報
+## <a name="see-also"></a>関連項目
 
 ユーザー設定を使用したタブ認証の詳細な実装AADを参照してください。
 

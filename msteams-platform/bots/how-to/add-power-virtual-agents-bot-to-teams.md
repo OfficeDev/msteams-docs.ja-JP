@@ -5,12 +5,12 @@ description: チャットボットを Power Virtual Agentsプラットフォー�
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: c8f2f61157d1a08dcf7410b86a2f8bda221a6c50
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: bba50757f02a33f1eb83240041c73f104921ee00
+ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887582"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949671"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>Power Virtual Agents チャットボットを追加する 
 
@@ -99,15 +99,17 @@ App Studio は、Teamsアプリです。 アプリ ストアから App Studio �
 1. **チャットを開始する**   
 チャット ボットをチャット ボットに追加Power Virtual Agentsセットアップ プロセスTeams完了です。 これで、個人用チャットでボットとの会話を開始できます。
 
-## <a name="see-also"></a>関連項目
-
-* [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
-* [Microsoft アカウントを使用して、TeamsチャットボットをPower Virtual Agents。](../bot-features.md#bots-with-power-virtual-agents)  
-* [Power Virtual Agents ポータル](https://powervirtualagents.microsoft.com)
-* [ボットをPower Virtual Agentsする](/power-virtual-agents/publication-fundamentals-publish-channels)
-* [セキュリティとコンプライアンスのMicrosoft Teams。](/MicrosoftTeams/security-compliance-overview)
-
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [仮想アシスタントを作成する](~/samples/virtual-assistant.md)
+
+## <a name="see-also"></a>関連項目
+
+* [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
+* [Microsoft Power Virtual Agent を使用してTeams用のチャット ボットを作成する](../bot-features.md#bots-with-power-virtual-agents) 
+* [Power Virtual Agents ポータル](https://powervirtualagents.microsoft.com)
+* [ボットをPower Virtual Agentsする](/power-virtual-agents/publication-fundamentals-publish-channels)
+* [Microsoft Teams のセキュリティとコンプライアンス](/MicrosoftTeams/security-compliance-overview)
+
+
