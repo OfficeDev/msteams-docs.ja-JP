@@ -1,16 +1,17 @@
 ---
 title: デスクトップ、Web、およびモバイル用のデザイン タブ
-description: デスクトップ、Web、およびモバイル用の Teams タブを設計する方法を学び、Microsoft Teams UI キットを入手します。
+description: デスクトップ、Web、およびモバイル用の Teams タブを設計する方法を学び、Microsoft Teams UI キットを入手します。 タブの機能と外観、ユーザー認証の構築、タブ通知、タブでのディープ リンクについて説明します。
 author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 99588b35e5de0a4d6c06e5d1353af312429081cc
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+keywords: UI キット管理タブ セットアップ シングルサインオン sso ディープ リンク 役割ベースのビュー スレッド ディスカッション
+ms.openlocfilehash: 42f5a76c0499b3f50d90608d1f08e701caa13984
+ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475630"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "60887923"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Microsoft Teams 用のタブを設計する
 
@@ -62,9 +63,9 @@ Teams ストア (AppSource) から、または次のいずれかのコンテキ�
 |3|**iframe**: アプリのコンテンツ(タブ設定や認証など) のレスポンシブなスペース。|
 |4|**リンクについて**: 完全な説明、アプリに必要な権限、プライバシー ポリシーとサービス使用条件へのリンクなど、アプリに関する詳細情報を表示するダイアログを開きます。|
 |5|**[閉じる] ボタン**: ダイアログを閉じます。|
-|6|**[チーム メンバーに通知する] オプション**: このダイアログは、タブを追加したことを他の人に知らせる投稿を作成するかどうかをユーザーに確認します。|
-|7|**[戻る] ボタン**: ダイアログが開いた場所に基づいて、ひとつ前の手順に移動します。|
-|8|**[保存]** ボタン: タブ セットアップを完了します。|
+|6 |**[チーム メンバーに通知する] オプション**: このダイアログは、タブを追加したことを他の人に知らせる投稿を作成するかどうかをユーザーに確認します。|
+|7 |**[戻る] ボタン**: ダイアログが開いた場所に基づいて、ひとつ前の手順に移動します。|
+|8 |**[保存]** ボタン: タブ セットアップを完了します。|
 
 ### <a name="tab-authentication-with-single-sign-on"></a>シングル サインオンを使用したタブ認証
 
@@ -282,3 +283,7 @@ Teams カラー トークンを使用しない場合、デザインの拡張性�
 
    :::column-end:::
 :::row-end:::
+
+## <a name="see-also"></a>関連項目
+
+[タブ余白の変更](~/resources/removing-tab-margins.md)
