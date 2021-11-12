@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
 keywords: 申請ストア配布アプリ パッケージのガイドラインのローカライズの検証
-ms.openlocfilehash: 08155408e68869b76f814788afcb408afd1a72a9
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 4da374d9ced3231437aef278c7c90c68fc0c19de
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889168"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949069"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>ストア申請Microsoft Teams準備する
 
@@ -210,7 +210,7 @@ YouTube または Vimeo ビデオの URL を追加できます。
 > [!NOTE]
 > 新しいアプリを提出する場合は、アプリが Teams ストアに表示されるまで、Publisher 構成証明を正式にTeamsできます。 リストされているアプリを更新する場合は、検証Publisher最新バージョンのアプリを提出する前に、構成証明を完了してください。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [アプリを送信する](/office/dev/store/add-in-submission-guide)

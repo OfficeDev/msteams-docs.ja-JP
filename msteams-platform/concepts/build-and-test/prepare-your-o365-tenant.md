@@ -4,12 +4,12 @@ description: Microsoft 365 の Teams の概要
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Microsoft 365 テナントTeams のアップロードの構成
-ms.openlocfilehash: 2b7da66460df12efd1e3c5bd45a9dfa6572e4b4c
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: c1f6a3009a3622c9ba46f2f03024ab696d03d979
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888154"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949034"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Microsoft 365 テナントを準備する
 
@@ -52,7 +52,7 @@ Microsoft 365購読者は、次のいずれかの計画Microsoft Teamsアプリ�
 
 4. カスタム **アップロードを On** の位置に **切り替** える。
 
-5. **[保存]** を選択します。 テスト テナントは、カスタム アプリのサイドローディングを許可できます。
+5. [**保存**] を選択します。 テスト テナントは、カスタム アプリのサイドローディングを許可できます。
 
     > [!Note]
     > サイドローディングがアクティブになるには、最大 24 時間かかる場合があります。 暫定的には、アップロードを **使用してアプリ \<your tenant>** をテストできます。 アプリのパッケージ .zipをアップロードするには、「カスタム アプリのアップロード [」を参照してください](/microsoftteams/upload-custom-apps#upload)。
@@ -61,7 +61,7 @@ Microsoft 365購読者は、次のいずれかの計画Microsoft Teamsアプリ�
 
 これらの設定の操作方法の詳細については、「Teams[](/microsoftteams/teams-custom-app-policies-and-settings)のカスタム アプリ ポリシーと設定を管理する」および「Teams でアプリセットアップ ポリシー[を管理する」を参照してください](/microsoftteams/teams-app-setup-policies)。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"] 
 > [テスト セットアップの選択](~/concepts/build-and-test/debug.md)

@@ -5,12 +5,12 @@ description: Webhook とコネクタによって Web サービスがどのよう
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 3b7dd6b907ec1af0467c40bda53422cc75e503bc
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: 6530462d3b0fe23ae6703dd059bba59d72f321b8
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475759"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949055"
 ---
 # <a name="webhooks-and-connectors"></a>Webhook とコネクタ
 
@@ -42,13 +42,14 @@ Office 365コネクタを使用すると、受信 Webhook 用のカスタム構�
 
 アクション可能なメッセージを使用すると、ユーザーはメール クライアントを離れることなくアクションを実行できます。ユーザーエンゲージメントが向上します。 Web Office 365受信 Webhook を使用すると、JSON ペイロードを Webhook URL に投稿することでメッセージを送信できます。
 
+## <a name="next-step"></a>次の手順
+
+> [!div class="nextstepaction"]
+> [送信 Webhook を作成する](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+
 ## <a name="see-also"></a>関連項目
 
 * [受信 Webhook を作成する](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Office 365 コネクタを作成する](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [メッセージを作成して送信する](~/webhooks-and-connectors/how-to/connectors-using.md)
 
-## <a name="next-step"></a>次の手順
-
-> [!div class="nextstepaction"]
-> [送信 Webhook を作成する](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)

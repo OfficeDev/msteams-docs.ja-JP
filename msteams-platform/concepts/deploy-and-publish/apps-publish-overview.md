@@ -6,12 +6,12 @@ author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: アプリのアップロード gcc の発行を展開する
-ms.openlocfilehash: 0436388365c2d7fc355c3f8cb40a9f05283124b8
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 6a4cb297c7f78ef09796adb3793ee1848236fdb6
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889189"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949111"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Microsoft Teams アプリを配布する
 
@@ -45,11 +45,11 @@ ms.locfileid: "60889189"
 
 詳細については、「publish [to the Teams」を参照してください](~/concepts/deploy-and-publish/appsource/publish.md)。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [アプリの既定のインストール オプションを構成する](~/concepts/deploy-and-publish/add-default-install-scope.md)
 
 ## <a name="see-also"></a>関連項目
 
-* [Microsoft 365 アプリ コンプライアンス プログラム](/microsoft-365-app-certification/overview)
+[Microsoft 365 アプリ コンプライアンス プログラム](/microsoft-365-app-certification/overview)

@@ -4,12 +4,12 @@ description: 認証の詳細Teamsタブで使用する方法について説明�
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams 認証タブAAD
-ms.openlocfilehash: a15d3c78d471bbcc510da019558faa45e3b76241
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 1c3c5a69d7b42589a104755968a6d6949efbcca2
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889350"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949041"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>[ユーザーの認証] タブでMicrosoft Teamsする
 

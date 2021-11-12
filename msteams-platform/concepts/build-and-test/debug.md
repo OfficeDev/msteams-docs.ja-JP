@@ -4,12 +4,12 @@ description: ローカルおよびクラウドホスト環境でアプリをテ�
 keywords: teams run debug apps local cloud-hosted host
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: b6cc4bcebcfe5d859ba0a9c6c935287ee8944d06
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 2c28090d82737d5231ed68a2fd3ef6896d701022
+ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889075"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60949020"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>アプリをテストおよびデバッグするセットアップMicrosoft Teamsする
 
@@ -75,7 +75,7 @@ Microsoft Teams完全にクラウドベースの製品である場合、アク�
 * [アプリのパッケージをMicrosoft Teamsします](~/concepts/build-and-test/apps-package.md)。
 * [アップロードでアプリをMicrosoft Teams。](~/concepts/deploy-and-publish/apps-upload.md)
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"] 
 > [テスト データを環境に追加する](~/concepts/build-and-test/test-data.md)
