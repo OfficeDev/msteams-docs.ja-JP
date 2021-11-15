@@ -4,21 +4,18 @@ author: surbhigupta12
 description: RSC アクセス許可を持つすべてのチャネル メッセージを受信する
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: ea247d7718b76f1e48bbb2c9839606dcb5cbab51
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6c509475a94d7f161dd6fb26c46ecb669c4059a1
+ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156050"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "60960230"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>RSC のチャネル メッセージをすべて受信する
 
-> [!NOTE]
-> この機能は現在、パブリック開発者 [プレビューでのみ利用](../../../resources/dev-preview/developer-preview-intro.md) できます。
+リソース固有の同意 (RSC) アクセス許可モデルは、もともと api 用に開発Teams Graphボット シナリオに拡張されています。
 
-リソース固有の同意 (RSC) アクセス許可モデルは、もともと api 用に開発されたTeams Graphボット シナリオに拡張されました。
-
-現在、ボットはユーザー チャネル メッセージを受信できるのは、ユーザー チャネル メッセージが@mentioned。 RSC を使用すると、ボットがチーム内の標準チャネル間でユーザー メッセージを受信する同意をチームの所有者に要求@mentioned。 この機能は、アプリで有効になっている RSC のマニフェストでアクセス許可 `ChannelMessage.Read.Group` をTeamsします。 構成後、チームの所有者はアプリのインストール プロセス中に同意を付与できます。
+RSC を使用すると、ボットがチーム内の標準チャネル間でユーザー メッセージを受信する同意をチームの所有者に要求@mentioned。 この機能は、アプリで有効になっている RSC のマニフェストでアクセス許可 `ChannelMessage.Read.Group` をTeamsします。 構成後、チームの所有者はアプリのインストール プロセス中に同意を付与できます。
 
 アプリで RSC を有効にする方法の詳細については、「リソース固有の同意」を参照[Teams。](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#update-your-teams-app-manifest)
 
@@ -26,15 +23,19 @@ ms.locfileid: "59156050"
 
 `ChannelMessage.Read.Group`RSC アクセス許可はボットに拡張されます。 ユーザーの同意を得た場合、このアクセス許可を使用すると、グラフ アプリケーションは会話内のすべてのメッセージを取得し、ボットはメッセージを読み取ることなくすべてのチャネル @mentioned。
 
+> [!NOTE]
+> * すべてのメッセージ データにアクセスするTeamsサービスは、チャネルやチャットGraphアーカイブ されたデータへのアクセスを提供する api を使用する必要があります。
+> * ボットは、チーム内のユーザーの魅力的なエクスペリエンスを構築および強化するために、RSC アクセス許可を適切に使用する必要があります。または、ユーザーがストアの承認 `ChannelMessage.Read.Group` に合格しない必要があります。 アプリの説明には、ボットが読み取ったデータを使用する方法が含まれる必要があります。
+> * `ChannelMessage.Read.Group`大量の顧客データを抽出する方法として、RSC アクセス許可をボットで使用することはできません。 
+
 ## <a name="update-app-manifest"></a>アプリ マニフェストの更新
 
 ボットがすべてのチャネル メッセージを受信するには、プロパティで指定されたアクセス許可Teamsアプリ マニフェストで RSC を `ChannelMessage.Read.Group` 構成する必要 `webApplicationInfo` があります。
-
 ![アプリ マニフェストの更新](~/bots/how-to/conversations/Media/appmanifest.png)
 
 オブジェクトの例を次に示 `webApplicationInfo` します。
 
-* **id**: Azure Active Directory (AAD) アプリ ID。 これは、ボット ID と同じものにできます。
+* **id**: アプリ id Azure Active Directory (AAD) アプリ ID。 これは、ボット ID と同じものにできます。
 * **resource**: 任意の文字列。 このフィールドは RSC で操作を行う必要がありますが、エラー応答を回避するには、値を追加する必要があります。
 * **applicationPermissions**: アプリの RSC アクセス許可を指定 `ChannelMessage.Read.Group` する必要があります。 詳細については、「リソース固有 [のアクセス許可」を参照してください](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions)。
 
@@ -50,7 +51,7 @@ ms.locfileid: "59156050"
   }
 ```
 
-## <a name="sideload-in-a-team-to-test"></a>テストするチームのサイドロード
+## <a name="sideload-in-a-team"></a>チームのサイドロード
 
 テストするチームにサイドロードするには、RSC を持つチーム内のすべてのチャネル メッセージが、次の情報を取得せずに受信@mentioned。
 

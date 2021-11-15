@@ -4,22 +4,22 @@ description: マニフェスト ファイルのサンプルと、アプリケー
 ms.topic: reference
 keywords: teams マニフェスト スキーマ Developer Preview
 ms.localizationpriority: medium
-ms.date: 05/20/2019
-ms.openlocfilehash: f1b3a7d3d002f9aec698509b36bc72b4421eb138
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.date: 11/15/2021
+ms.openlocfilehash: a5543ce8c8e5f7d232704caa5cdb4eb8a507264a
+ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888546"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "60960223"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>リファレンス: パブリック開発者プレビュー マニフェスト スキーマ (Microsoft Teams
 
 開発者プレビューを有効にする方法については、「開発者向けパブリック プレビュー」[を参照Microsoft Teams。](~/resources/dev-preview/developer-preview-intro.md)
 
 > [!NOTE]
-> 開発者プレビュー機能を使用していない場合は、代わりに GA 機能の [アプリ マニフェストを](~/resources/schema/manifest-schema.md) 使用します。
+> Outlook および Office で[Teams](../../m365-apps/overview.md)個人用タブやメッセージング拡張機能を実行するなどの開発者プレビュー機能を使用していない場合は、代わりに[GA](~/resources/schema/manifest-schema.md)機能のアプリ マニフェストを使用します。
 
-このMicrosoft Teamsマニフェストは、アプリが製品に統合する方法Microsoft Teamsします。 マニフェストは、 でホストされるスキーマに準拠している必要があります [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) 。
+このMicrosoft Teamsは、アプリがプラットフォームに統合される方法Microsoft Teamsします。 マニフェストは、 でホストされるスキーマに準拠している必要があります [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json) 。
 
 ## <a name="sample-full-manifest"></a>完全なマニフェストのサンプル
 
@@ -236,13 +236,13 @@ ms.locfileid: "60888546"
 
 *省略可能ですが、推奨* &ndash; 文字列
 
-マニフェスト https:// JSON スキーマを参照する URL を指定します。
+マニフェスト `https://` の JSON スキーマを参照する URL。
 
 ## <a name="manifestversion"></a>manifestVersion
 
 **必須** &ndash; 文字列
 
-このマニフェストが使用しているマニフェスト スキーマのバージョン。 "devPreview" である必要があります。
+このマニフェストが使用しているマニフェスト スキーマのバージョン。 アプリ `m365DevPreview` で実行中のアプリをプレビュー [Teams場合](../../m365-apps/overview.md)にのみOffice使用Outlook。 それ以外の場合は、 `devPreview` 他のすべてのプレビュー機能Teams使用します。
 
 ## <a name="version"></a>version
 
@@ -310,7 +310,7 @@ ms.locfileid: "60888546"
 |`short`|30 文字|✔|アプリの短い表示名。|
 |`full`|100 文字||完全なアプリ名が 30 文字を超える場合に使用されるアプリの完全な名前。|
 
-## <a name="description"></a>description
+## <a name="description"></a>説明
 
 **必須**
 
@@ -352,10 +352,10 @@ ms.locfileid: "60888546"
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`configurationUrl`|String|2048 文字|✔|タブ https:// する際に使用する URL を指定します。|
-|`canUpdateConfiguration`|Boolean|||作成後に、タブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 既定値: `true`|
+|`configurationUrl`|文字列|2048 文字|✔|タブ https:// する際に使用する URL を指定します。|
+|`canUpdateConfiguration`|ブール値|||作成後に、タブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 既定値: `true`|
 |`scopes`|列挙型の配列|1|✔|現在、構成可能なタブは、スコープ `team` とスコープ `groupchat` のみをサポートしています。 |
-|`sharePointPreviewImage`|String|2048||タブ プレビュー イメージへの相対ファイル パスを使用して、SharePoint。 サイズは 1024x768 です。 |
+|`sharePointPreviewImage`|文字列|2048||タブ プレビュー イメージへの相対ファイル パスを使用して、SharePoint。 サイズは 1024x768 です。 |
 |`supportedSharePointHosts`|列挙型の配列|1||タブをタブで使用する方法を定義SharePoint。 オプションは `sharePointFullPage` 次のとおりです。 `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
@@ -372,10 +372,10 @@ staticTabs ブロックではなく、アダプティブ カードを使用し�
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`entityId`|String|64 文字|✔|タブが表示されるエンティティの一意の識別子。|
-|`name`|String|128 文字|✔|チャネル インターフェイスのタブの表示名。|
-|`contentUrl`|String|2048 文字|✔|この https:// キャンバスに表示するエンティティ UI を示すTeamsします。|
+|`name`|文字列|128 文字|✔|チャネル インターフェイスのタブの表示名。|
+|`contentUrl`|文字列|2048 文字|✔|この https:// キャンバスに表示するエンティティ UI を示すTeamsします。|
 |`contentBotId`|   | | | ボット Microsoft Teamsで指定されたアプリ ID を指定します。 |
-|`websiteUrl`|String|2048 文字||ユーザー https:// ブラウザーで表示することを選択した場合に示す URL を指定します。|
+|`websiteUrl`|文字列|2048 文字||ユーザー https:// ブラウザーで表示することを選択した場合に示す URL を指定します。|
 |`scopes`|列挙型の配列|1|✔|現在、静的タブはスコープのみをサポートしています。つまり、個人用エクスペリエンスの一部としてのみ `personal` プロビジョニングできます。|
 
 ## <a name="bots"></a>bots
@@ -413,7 +413,7 @@ staticTabs ブロックではなく、アダプティブ カードを使用し�
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`configurationUrl`|String|2048 文字|✔|コネクタ https:// する際に使用する URL を指定します。|
+|`configurationUrl`|文字列|2048 文字|✔|コネクタ https:// する際に使用する URL を指定します。|
 |`connectorId`|String|64 文字|✔|コネクタ開発者ダッシュボードの ID に一致するコネクタの一 [意の識別子](https://aka.ms/connectorsdashboard)です。|
 |`scopes`|列挙型の配列|1|✔|Connector がチャネルのコンテキストでエクスペリエンスを提供するかどうか、または個々のユーザー () にスコープを設定したエクスペリエンスを提供するかどうかを `team` 指定します `personal` 。 現在、スコープ `team` だけがサポートされています。|
 
@@ -430,8 +430,8 @@ staticTabs ブロックではなく、アダプティブ カードを使用し�
 
 |名前| 型 | 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`botId`|String|64|✔|ボット フレームワークに登録されているメッセージング拡張機能をバックするボットの一意の Microsoft アプリ ID。 これは、アプリ全体の ID と同じ [可能性があります](#id)。|
-|`canUpdateConfiguration`|Boolean|||メッセージング拡張機能の構成をユーザーが更新できるかどうかを示す値。 既定値は `false` です。|
+|`botId`|文字列|64|✔|ボット フレームワークに登録されているメッセージング拡張機能をバックするボットの一意の Microsoft アプリ ID。 これは、アプリ全体の ID と同じ [可能性があります](#id)。|
+|`canUpdateConfiguration`|ブール値|||メッセージング拡張機能の構成をユーザーが更新できるかどうかを示す値。 既定値は `false` です。|
 |`commands`|オブジェクトの配列|10|✔|メッセージング拡張機能がサポートするコマンドの配列|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -444,27 +444,27 @@ staticTabs ブロックではなく、アダプティブ カードを使用し�
 |---|---|---|---|---|
 |`id`|String|64 文字|✔|コマンドの ID。|
 |`type`|String|64 文字||コマンドの種類。 または `query` の 1 `action` つ。 既定値: `query`|
-|`title`|String|32 文字|✔|ユーザーフレンドリーなコマンド名。|
-|`description`|String|128 文字||このコマンドの目的を示すためにユーザーに表示される説明。|
-|`initialRun`|Boolean|||パラメーターを指定してコマンドを最初に実行するかどうかを示すブール値。 既定値: `false`|
-|`context`|文字列 (String) の配列|3||メッセージ拡張機能の呼び出し先を定義します。 `compose`、 の任意の `commandBox` 組み合 `message` わせ。 既定値は `["compose", "commandBox"]` です|
-|`fetchTask`|Boolean|||タスク モジュールを動的にフェッチする必要があるかどうかを示すブール値。|
+|`title`|文字列|32 文字|✔|ユーザーフレンドリーなコマンド名。|
+|`description`|文字列|128 文字||このコマンドの目的を示すためにユーザーに表示される説明。|
+|`initialRun`|ブール値|||パラメーターを指定してコマンドを最初に実行するかどうかを示すブール値。 既定値: `false`|
+|`context`|文字列 (String) の配列|3||メッセージング拡張機能の呼び出し先を定義します。 `compose`、 の任意の `commandBox` 組み合 `message` わせ。 既定値は `["compose", "commandBox"]` です|
+|`fetchTask`|ブール値|||タスク モジュールを動的にフェッチする必要があるかどうかを示すブール値。|
 |`taskInfo`|オブジェクト|||メッセージング拡張機能コマンドを使用するときにプリロードするタスク モジュールを指定します。|
-|`taskInfo.title`|String|64||最初のダイアログ タイトル。|
-|`taskInfo.width`|String|||ダイアログの幅 - ピクセル単位の数値または既定のレイアウト ('large'、'medium'、または 'small' など)。|
-|`taskInfo.height`|String|||ダイアログの高さ - ピクセル単位の数値、または 'large'、'medium'、または 'small' などの既定のレイアウト。|
-|`taskInfo.url`|String|||初期 Webview URL。|
+|`taskInfo.title`|文字列|64||最初のダイアログ タイトル。|
+|`taskInfo.width`|文字列|||ダイアログの幅 - ピクセル単位の数値または既定のレイアウト ('large'、'medium'、または 'small' など)。|
+|`taskInfo.height`|文字列|||ダイアログの高さ - ピクセル単位の数値、または 'large'、'medium'、または 'small' などの既定のレイアウト。|
+|`taskInfo.url`|文字列|||初期 Webview URL。|
 |`messageHandlers`|オブジェクトの配列|5||特定の条件が満たされた場合にアプリを呼び出すことができるハンドラーの一覧。 ドメインもに一覧表示する必要があります `validDomains` 。|
-|`messageHandlers.type`|String|||メッセージ ハンドラーの種類。 `"link"` である必要があります。|
+|`messageHandlers.type`|文字列|||メッセージ ハンドラーの種類。 `"link"` である必要があります。|
 |`messageHandlers.value.domains`|文字列 (String) の配列|||リンク メッセージ ハンドラーが登録できるドメインの配列。|
 |`parameters`|オブジェクトの配列|5|✔|コマンドが受け取るパラメーターの一覧。 最小: 1;最大: 5|
 |`parameter.name`|String|64 文字|✔|クライアントに表示されるパラメーターの名前。 これは、ユーザー要求に含まれます。|
-|`parameter.title`|String|32 文字|✔|パラメーターのユーザーフレンドリーなタイトル。|
-|`parameter.description`|String|128 文字||このパラメーターの目的を説明するユーザーフレンドリーな文字列。|
-|`parameter.inputType`|String|128 文字||タスク モジュールに表示されるコントロールの種類を定義します `fetchTask: true` 。 、 `text` `textarea` 、 、 、 、 の `number` `date` `time` `toggle` 1 `choiceset` つ。|
+|`parameter.title`|文字列|32 文字|✔|パラメーターのユーザーフレンドリーなタイトル。|
+|`parameter.description`|文字列|128 文字||このパラメーターの目的を説明するユーザーフレンドリーな文字列。|
+|`parameter.inputType`|文字列|128 文字||タスク モジュールに表示されるコントロールの種類を定義します `fetchTask: true` 。 、 `text` `textarea` 、 、 、 、 の `number` `date` `time` `toggle` 1 `choiceset` つ。|
 |`parameter.choices`|オブジェクトの配列|10||の選択肢 `choiceset` オプションです。 の場合にのみ `parameter.inputType` 使用します `choiceset` 。|
-|`parameter.choices.title`|String|128||選択したタイトル。|
-|`parameter.choices.value`|String|512||Value of the choice.|
+|`parameter.choices.title`|文字列|128||選択したタイトル。|
+|`parameter.choices.value`|文字列|512||Value of the choice.|
 
 ## <a name="permissions"></a>アクセス許可
 
@@ -510,8 +510,8 @@ staticTabs ブロックではなく、アダプティブ カードを使用し�
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`id`|String|36 文字|✔|Azure ADのアプリケーション ID を指定します。 この ID は GUID である必要があります。|
-|`resource`|String|2048 文字|✔|SSO の認証トークンを取得するためのアプリのリソース URL。|
+|`id`|文字列|36 文字|✔|Azure ADのアプリケーション ID を指定します。 この ID は GUID である必要があります。|
+|`resource`|文字列|2048 文字|✔|SSO の認証トークンを取得するためのアプリのリソース URL。|
 |`applicationPermissions`|配列|最大 100 アイテム|✔|アプリケーションのリソースのアクセス許可。|
 
 ## <a name="configurableproperties"></a>configurableProperties

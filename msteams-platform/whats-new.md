@@ -4,12 +4,12 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: チームの最新情報
-ms.openlocfilehash: ad3d18365eb513576379706d4bddd02efa71d96e
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 370a23392c8b6233802b9faa0cc1edb9a6215e73
+ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720177"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "60960161"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
@@ -30,6 +30,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 | **日付** | **注** | **変更されたトピック** |
 | -------- | --------- | ----------------|
+|11/13/2021|ボットは、リソース固有の同意 (RSC) を使用してすべてのチャネル メッセージを受信できます。|[RSC、ボット会話の](~/bots/how-to/conversations/channel-messages-with-rsc.md)概要 [、](~/bots/how-to/conversations/conversation-basics.md)チャネルとグループの会話で [すべてのメッセージを受信する](~/bots/how-to/conversations/channel-and-group-conversations.md)|
 |10/28/2021 | トランザクション可能な SaaS Teamsを使用して、アプリを収益化します。| [SaaS オファーをアプリにTeamsする](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)|
 |10/25/2021| ステップ バイ ステップ ガイドの新Microsoft Teams手順を使用して、開発者向けドキュメントの Get started モジュールを更新しました。| [最初のアプリのTeamsする](get-started/get-started-overview.md)|
 |10/21/2021| タブまたは `registerOnFocused` 個人用アプリ用の API を追加します。 |[タブ `registerOnFocused` または個人用アプリの API を追加する](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps)|
@@ -95,14 +96,14 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 |08/06/2020|タブ SSO 認証のサポート。|[[SSO の設定] タブMicrosoft Teamsする](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
 |07/27/2020 | Graphボットとメッセージの管理 (パブリック プレビュー)。|[Microsoft Teams を使用して、プロアクティブ ボットのインストールとプロアクティブ メッセージングをGraph](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
 |07/22/2020 |モバイル デバイス機能の更新。|[[デバイスのアクセス許可を要求する] Microsoft Teamsタブ](concepts/device-capabilities/native-device-permissions.md) |
-|07/20/2020|TeamsAppSource 申請のアプリ検証ツール。|[Teamsアプリ検証ツール](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
+|07/20/2020|Teams AppSource 申請用アプリ検証ツール。|[Teamsアプリ検証ツール](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 |07/15/2020|ユーザーの仮想アシスタントを作成Teams。|[Virtual Assistant Microsoft Teams](samples/virtual-assistant.md)|
 |07/14/2020|ネイティブ読み込みインジケーターのドキュメントを表示する。|[ネイティブ読み込みインジケーターの表示](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
 |07/01/2020|アプリの作成Teamsを開始Visual Studio Code Toolkit。|[アプリとアプリのMicrosoft Teams ToolkitをVisual Studio Code](toolkit/visual-studio-code-overview.md) |
 |07/01/2020|Web クライアントおよびデスクトップ クライアント用のタブ GA Teamsシングル サインオン。|[シングル Sign-On (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
 |06/05/2020| バージョン 1.7 に更新されたマニフェスト スキーマ。| [リファレンス: マニフェスト スキーマのMicrosoft Teams](resources/schema/manifest-schema.md)|
 |05/18/2020|アプリケーションとPower Virtual Agents統合Teams。|[チャットボットとPower Virtual Agentsを統合Microsoft Teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
-|04/01/2020|WFM システムを Shifts Connector と統合して、Teams。|[Microsoft TeamsWFM コネクタをシフトする](samples/shifts-wfm-connectors.md)
+|04/01/2020|WFM システムを Shifts Connector と統合して、Teams。|[Microsoft Teams WFM コネクタをシフトする](samples/shifts-wfm-connectors.md)
 |03/24/2020 | 会話の 1 つのメンバーを取得するためのサポート、およびページメンバーの取得に関する追加のサポートが追加されました。 | [Teams のコンテキストをボット用に取得する](~/bots/how-to/get-teams-context.md) |
 
 <br>
@@ -186,6 +187,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 | **日付** | **注** | **変更されたトピック** |
 | -------- | --------- | ------------------ |
+|11/15/2021|個人用タブとメッセージング拡張機能は、OutlookおよびOffice|[複数のTeamsアプリを拡張Microsoft 365](m365-apps/overview.md)
 |10/28/2021|ボットは、リソース固有の同意 (RSC) を使用してすべてのチャネル メッセージを受信できます。|[RSC、ボット会話の](~/bots/how-to/conversations/channel-messages-with-rsc.md)概要、[チャネルと](~/bots/how-to/conversations/conversation-basics.md)グループ[](~/bots/how-to/conversations/channel-and-group-conversations.md)の会話、開発者プレビュー マニフェスト スキーマを使用して[すべてのメッセージを受信する](~/resources/schema/manifest-schema-dev-preview.md)|
 |10/19/2021|ブラウザーのデバイスのアクセス許可。| [ブラウザーのデバイスのアクセス許可](concepts/device-capabilities/browser-device-permissions.md)|
 |06/21/2021|ボットを使用した個人用アプリのアンインストール動作。| [ボットを使用して個人用アプリの動作更新プログラムをアンインストールする](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
@@ -216,4 +218,4 @@ RSS フィードを構成することでTeamsプラットフォームの更新�
 1. [RSS 接続の名前 **を入力する] に名前を入力します**。
 1. [RSS **https://aka.ms/TeamsPlatformUpdates** フィード **のアドレス] に入力します**。
 1. [ダイジェスト頻度] ドロップダウン リストからフィード **の頻度を** 選択します。
-1. **[保存]** を選択します。
+1. [**保存**] を選択します。

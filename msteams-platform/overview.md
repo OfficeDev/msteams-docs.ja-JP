@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 878b6fd22373edb8f9cbbf28c15c8d5dd10ee3e0
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: adf95bb9eca4f6cd5ac07385212b1fd388a47079
+ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888035"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "60960237"
 ---
 # <a name="build-apps-for-microsoft-teams"></a>Microsoft Teams のアプリを作成する
 
@@ -208,6 +208,13 @@ Teamsは機能の組み[合わせです](concepts/capabilities-overview.md)。 �
 
    :::column-end:::
 :::row-end:::
+
+## <a name="test-your-app-running-across-microsoft-365"></a>アプリが複数のアプリで実行Microsoft 365
+
+JavaScript クライアント SDK v2 プレビュー Teams他の高使用率で実行Microsoft 365アプリMicrosoft Teamsプレビューできます。
+
+> [!div class="nextstepaction"]
+> [アプリを拡張する](m365-apps/overview.md)
 
 ## <a name="see-also"></a>関連項目
 
