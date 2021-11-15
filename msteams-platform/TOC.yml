@@ -442,7 +442,7 @@
   items:
     - name: 概要
       href: samples/integrate-web-apps-overview.md
-    - name: Web アプリ
+    - name: Teams 統合に関する考慮事項
       href: samples/integrating-web-apps.md
     - name: Power プラットフォーム アプリ
       items:
