@@ -104,6 +104,8 @@
       href: concepts/build-and-test/teams-developer-portal.md
     - name: Teams JavaScript client SDK
       href: tabs/how-to/using-teams-client-sdk.md
+    - name: Teams JavaScript client SDK v2 プレビュー
+      href: m365-apps/using-teams-client-sdk-preview.md
     - name: ボットおよびメッセージング拡張機能用 Node.js Bot Framework (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-js'
     - name: ボットおよびメッセージング拡張機能用 .NET Bot Framework (GitHub)
@@ -368,6 +370,16 @@
       href: graph-api/import-messages/import-external-messages-to-teams.md
     - name: コード サンプル
       href: 'https://github.com/OfficeDev/microsoft-teams-samples#graph-apis'
+- name: アプリを Microsoft 365 全体に拡張する
+  items:
+    - name: 概要
+      href: m365-apps/overview.md
+    - name: 前提条件
+      href: m365-apps/prerequisites.md
+    - name: 'Office と Outlook の [Teams パーソナル] タブを有効にする'
+      href: m365-apps/extend-m365-teams-personal-tab.md
+    - name: Outlook の Teams メッセージングの拡張機能を有効にする
+      href: m365-apps/extend-m365-teams-message-extension.md
 - name: アプリのテスト
   items:
     - name: 概要
@@ -480,8 +492,6 @@
           href: resources/schema/localization-schema.md
     - name: SameSite Cookie 属性
       href: resources/samesite-cookie-update.md
-    - name: ストアでの送信でよく失敗するケース
-      href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
     - name: Teams ドキュメントに投稿する
       href: resources/teams-contributor-reference.md
 - name: サポートとフィードバック
