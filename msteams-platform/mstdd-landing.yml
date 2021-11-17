@@ -1,0 +1,103 @@
+### YamlMime:Landing
+title: Microsoft Teams開発者向けドキュメント
+summary: 開発者向けドキュメントのMicrosoft Teamsへようこそ。 Microsoft Teamsアプリは、重要な情報、一般的なツール、信頼できるプロセスを、人々がますます収集、学習、作業する場所に提供します。
+metadata:
+  title: Microsoft Teams開発者向けドキュメント
+  description: ユーザー向けアプリの構築Teams
+  ms.date: 11/10/2021
+  ms.topic: landing-page
+  ms.openlocfilehash: 2389ccf6df9670b173d74c7b5c40baed48a20349
+  ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/16/2021
+  ms.locfileid: "61041745"
+landingContent:
+- title: 最新の情報を確認する
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 個人用タブとメッセージング拡張機能は、OutlookとOfficeで実行されます (プレビュー)
+      url: ~/m365-apps/overview.md
+    - text: リソース固有の同意 (RSC) を使用してボットがすべてのチャネル メッセージを受信できます
+      url: ~/bots/how-to/conversations/channel-messages-with-rsc.md
+    - text: トランザクション可能な SaaS Teamsでアプリを収益化する
+      url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+    - text: 低コードのカスタム アプリを作成する
+      url: ~/samples/teams-low-code-solutions.md
+- title: チュートリアル
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: プロアクティブ メッセージ
+      url: ~/bots/how-to/conversations/send-proactive-messages.md
+    - text: ボットへの認証の追加
+      url: ~/bots/how-to/authentication/add-authentication.md
+  - linkListType: tutorial
+    links:
+    - text: プロアクティブ メッセージのステップ バイ ステップ ガイド
+      url: ~/sbs-send-proactive.yml
+    - text: ボットに認証を追加する手順ガイド
+      url: ~/sbs-bots-with-sso.yml
+- title: 概要
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: アプリの構築の開始
+      url: ../msteams-platform/get-started/get-started-overview.md
+  - linkListType: tutorial
+    links:
+    - text: JavaScript を使用してアプリをビルドする
+      url: sbs-gs-javascript.yml
+    - text: Blazor でアプリをビルドする
+      url: sbs-gs-blazor.yml
+    - text: アプリをビルドする方法SPFx
+      url: sbs-gs-spfx.yml
+    - text: アプリをビルドするC# .NET
+      url: sbs-gs-csharp.yml
+    - text: アプリをビルドするNode.js
+      url: sbs-gs-nodejs.yml
+- title: アプリのビルド Teams
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Microsoft Teams のアプリを作成する
+      url: ../msteams-platform/overview.md
+    - text: アプリの基本事項
+      url: ~/concepts/app-fundamentals-overview.md
+    - text: アプリをデザインする
+      url: ~/concepts/design/design-teams-app-overview.md
+  - linkListType: whats-new
+    links:
+    - text: 新機能
+      url: ../msteams-platform/whats-new.md
+- title: アプリの機能を構築する
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: タブを作成する
+      url: ~/tabs/what-are-tabs.md
+    - text: ボットを作成する
+      url: ~/bots/what-are-bots.md
+    - text: メッセージ拡張機能の作成
+      url: ~/messaging-extensions/what-are-messaging-extensions.md
+    - text: Teams 会議用のアプリを作成する
+      url: ~/apps-in-teams-meetings/teams-apps-in-meetings.md
+    - text: Webhook とコネクタを作成する
+      url: ~/webhooks-and-connectors/what-are-webhooks-and-connectors.md
+    - text: カードとタスク モジュールを作成する
+      url: ~/task-modules-and-cards/cards-and-task-modules.md
+    - text: アプリ マニフェスト
+      url: ../msteams-platform/resources/schema/manifest-schema.md
+- title: 発行と配布
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Distribution
+      url: ~/concepts/deploy-and-publish/apps-publish-overview.md
+    - text: '[ストアにTeamsする]'
+      url: ~/concepts/deploy-and-publish/appsource/publish.md
+    - text: ストアの検証ガイドライン
+      url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
+    - text: 公開したアプリの保守およびサポート
+      url: ~/concepts/deploy-and-publish/appsource/post-publish/overview.md

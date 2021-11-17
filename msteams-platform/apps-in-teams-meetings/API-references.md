@@ -1,17 +1,17 @@
 ---
 title: 会議アプリ API リファレンス
 author: surbhigupta
-description: 例とコード サンプルを使用して会議アプリ API 参照を識別する
+description: 例とコード サンプルを使用して会議アプリ API 参照を特定する
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams apps 会議 ユーザー参加者ロール api usercontext 通知シグナル クエリ
-ms.openlocfilehash: 1906561e51791db993e652f837e6064df3b570d5
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+ms.openlocfilehash: ba7996e0c33823c3f296d18350ea33421c844c68
+ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912198"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "61041630"
 ---
 # <a name="meeting-apps-api-references"></a>会議アプリ API リファレンス
 
@@ -23,11 +23,11 @@ ms.locfileid: "60912198"
 
 次の表に、API の一覧を示します。
 
-|API|[説明]|要求|ソース|
+|API|説明|要求|ソース|
 |---|---|----|---|
 |**GetUserContext**| この API を使用すると、コンテキスト情報を取得して、関連するコンテンツを [コンテンツ] タブTeamsできます。 |_**microsoftTeams.getContext( ( ) => { /*...*/ } )**_|Microsoft Teamsクライアント SDK|
-|**GetParticipant**| この API を使用すると、ボットは会議 ID と参加者 ID によって参加者情報を取得できます。 |**GET** _**/v1/meetings/{meetingId}/participants/{participantsId}?tenantId={tenantId}**_ |Microsoft Bot FrameworkSDK|
-|**NotificationSignal** | この API を使用すると、ユーザー ボット チャット用の既存の会話通知 API を使用して配信される会議信号を提供できます。 これにより、会議中のダイアログ ボックスを表示するユーザー アクションに基づいて信号を送信できます。 |**POST** _**/v3/conversation/{conversationId}/activities**_|Microsoft Bot FrameworkSDK|
+|**GetParticipant**| この API を使用すると、ボットは会議 ID と参加者 ID によって参加者情報を取得できます。 |**GET** _**/v1/meetings/{meetingId}/participants/{participantsId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
+|**NotificationSignal** | この API を使用すると、ユーザー ボット チャット用の既存の会話通知 API を使用して配信される会議信号を提供できます。 これにより、会議中のダイアログ ボックスを表示するユーザー アクションに基づいて信号を送信できます。 |**POST** _**/v3/conversation/{conversationId}/activities**_|Microsoft Bot Framework SDK|
 |**会議の詳細** | この API を使用すると、静的な会議のメタデータを取得できます。 |**GET** _**/v1/meetings/{meetingId}**_| ボット SDK |
 
 次の表に、API の Bot Framework SDK メソッドを示します。
@@ -40,13 +40,13 @@ ms.locfileid: "60912198"
 
 ## <a name="getusercontext-api"></a>GetUserContext API
 
-タブ コンテンツのコンテキスト情報を特定して取得するには[、「get context for your Teams タブ」を参照してください](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library)。`meetingId`は、会議コンテキストで実行するときにタブで使用され、応答ペイロードに追加されます。
+タブ コンテンツのコンテキスト情報を識別して取得するには[、「Teams](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library)タブのコンテキストを取得する」を参照してください。会議コンテキストで実行するときにタブで使用され、応答ペイロードに追加されます。 `meetingId`
 
 ## <a name="getparticipant-api"></a>GetParticipant API
 
 > [!NOTE]
 > * 会議の開催者がいつでも役割を変更できるので、参加者の役割をキャッシュしない。
-> * Teams現在、API の 350 を超える参加者の大規模な配布リストまたは名簿サイズはサポート `GetParticipant` されていません。
+> * Teams現在、350 人を超える参加者の大規模配布リストまたは名簿サイズはサポートされていません。 `GetParticipant`API。
 
 API `GetParticipant` を使用すると、ボットは会議 ID と参加者 ID によって参加者情報を取得できます。 API には、クエリ パラメーター、例、および応答コードが含まれています。
 
@@ -56,9 +56,9 @@ API `GetParticipant` を使用すると、ボットは会議 ID と参加者 ID 
 
 |値|型|必須|説明|
 |---|---|----|---|
-|**meetingId**| String | はい | 会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。|
-|**participantId**| String | はい | 参加者 ID はユーザー ID です。 これは、Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO から参加者 ID を取得する方法をお勧めします。 |
-|**tenantId**| String | はい | テナントユーザーにはテナント ID が必要です。 これは、Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO からテナント ID を取得する方法をお勧めします。 | 
+|**meetingId**| 文字列 | はい | 会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。|
+|**participantId**| 文字列 | はい | 参加者 ID はユーザー ID です。 これは、Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO から参加者 ID を取得する方法をお勧めします。 |
+|**tenantId**| 文字列 | はい | テナントユーザーにはテナント ID が必要です。 これは、Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO からテナント ID を取得する方法をお勧めします。 | 
 
 ### <a name="example"></a>例
 
@@ -138,7 +138,7 @@ API の JSON 応答 `GetParticipant` 本文は次の形式です。
 
 `GetParticipant`API は、次の応答コードを返します。
 
-|応答コード|[説明]|
+|応答コード|説明|
 |---|---|
 | **403** | 参加者情報の取得がアプリと共有されていない。 アプリが会議にインストールされていない場合、最も一般的なエラー応答 403 がトリガーされます。 テナント管理者がライブ サイトの移行中にアプリを無効またはブロックすると、403 エラー応答がトリガーされます。 |
 | **200** | 参加者情報が正常に取得されます。|
@@ -221,7 +221,7 @@ POST /v3/conversations/{conversationId}/activities
 
 `NotificationSignal`API には、次の応答コードが含まれています。
 
-|応答コード|[説明]|
+|応答コード|説明|
 |---|---|
 | **201** | シグナルを含むアクティビティが正常に送信されます。 |
 | **401** | アプリは無効なトークンで応答します。 |
@@ -256,7 +256,7 @@ API はボット サービスを通じて利用できます。
 
 |値|型|必須|説明|
 |---|---|----|---|
-|**meetingId**| String | はい | 会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。 |
+|**meetingId**| 文字列 | はい | 会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。 |
 
 ### <a name="example"></a>例
 
@@ -271,7 +271,7 @@ await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
-使用不可
+使用できません
 
 # <a name="json"></a>[JSON](#tab/json)
 
