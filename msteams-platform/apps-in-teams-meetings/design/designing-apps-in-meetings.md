@@ -6,12 +6,12 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: UI キット テンプレート会議内応答動作共有会議ステージ
-ms.openlocfilehash: 39d0ef00d6a012726f2a3645f3d8e2bf00ebaf33
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: d66dc257ae26a17519468cf11d1d0b5593ba9d33
+ms.sourcegitcommit: 3dd69ae18bca8dd2e0666d09746a4012cd8c8e42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887846"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "61051197"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>会議の拡張機能Microsoft Teams設計する
 
@@ -36,7 +36,7 @@ ms.locfileid: "60887846"
 
 ### <a name="add-during-a-meeting"></a>会議中に追加する
 
-#### <a name="mobile"></a>モバイル
+#### <a name="mobile"></a>Mobile
 
 アプリが追加された後 (デスクトップなど)、ユーザーは [その他] を選択して会議でアプリに **アクセスできます** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: 。
 
@@ -87,7 +87,7 @@ ms.locfileid: "60887846"
 * 会議参加者のポーリング、アンケート、またはタスク アイテムを作成します。
 * 会議に関連するメモを表示します。 たとえば、販売リードに関する情報です。
 
-#### <a name="mobile"></a>モバイル
+#### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="例は、モバイル上の会議内タブでポーリング コンテンツを表示する方法を示しています。" border="false":::
 
@@ -143,7 +143,7 @@ ms.locfileid: "60887846"
 * 承認を送信する
 * アラームを取得する
 
-### <a name="mobile"></a>モバイル
+### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="例は、モバイルで会議内ダイアログを使用する方法を示しています。" border="false":::
 
@@ -192,7 +192,7 @@ ms.locfileid: "60887846"
 会議ステージに共有されるアプリは、共有画面と同じ領域を占有します。 ステージは、すべての会議参加者の向きを変更します。
 
 > [!NOTE]
-> 会議のすべてのユーザーは、デスクトップから共有するときにアプリを表示できます。 ただし、モバイルからステージにアプリを共有する機能は現在利用できません。
+> 会議のすべてのユーザーは、デスクトップから共有するときにアプリを表示できます。 現時点では、モバイル ユーザーは、会議ステージにアプリ のコンテンツを共有できない。
  
 ### <a name="use-cases"></a>使用例
 
@@ -509,7 +509,7 @@ Teams会議は暗いテーマに最適化され、視覚的および認知的な
    :::column-end:::
 :::row-end:::
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [会議用にアプリを構成する](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
