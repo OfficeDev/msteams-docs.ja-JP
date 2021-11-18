@@ -4,12 +4,12 @@ description: アダプティブ カード、ヒーロー カード、サムネ�
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: b154f82b1148760f3dbb6f1b92f914fa7222977d
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 08128a81c913134c8c2e7d5b124c796661636b85
+ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888273"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "61061973"
 ---
 # <a name="cards-and-task-modules"></a>カードとタスク モジュール
 
@@ -22,7 +22,7 @@ ms.locfileid: "60888273"
 * アダプティブ カード
 * ヒーロー カード
 * リスト カード
-* Office 365コネクタ カード
+* Office 365 コネクタ カード
 * レシート カード
 * サインイン カード
 * サムネイル カード
@@ -35,6 +35,7 @@ ms.locfileid: "60888273"
 * ボットにメッセージとペイロードを送信する
 * OAuth フローの開始
 
+アダプティブ カードの先行入力 [コントロール](~/task-modules-and-cards/cards/dynamic-search.md) を使用して、大規模なデータセット内で動的な検索エクスペリエンスを提供できます。 また、選択肢の数に制限がある範囲内で先行型静的検索を実行できます。 タスク モジュールは、チャネルまたは個人用のタブ、ボット、またはディープ リンクで呼び出します。 データ入力を必要とするワークフローに対するユーザーエクスペリエンスは、ユーザーのタブにタスク モジュールを追加することで改善できます。アダプティブ カードとボット フレームワーク カードのTeamsを使用して、タスク モジュールをボットから呼び出します。
 タスク モジュールは、チャネルまたは個人用のタブ、ボット、またはディープ リンクで呼び出します。 データ入力を必要とするワークフローに対するユーザーエクスペリエンスは、ユーザーのタブにタスク モジュールを追加することで改善できます。アダプティブ カードとボット フレームワーク カードのTeamsを使用して、タスク モジュールをボットから呼び出します。
 
 ## <a name="see-also"></a>関連項目

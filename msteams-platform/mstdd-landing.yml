@@ -6,12 +6,12 @@ metadata:
   description: ユーザー向けアプリの構築Teams
   ms.date: 11/10/2021
   ms.topic: landing-page
-  ms.openlocfilehash: 9d08880e0cb4d1788d0a88f5f3b38cc71bdfc396
-  ms.sourcegitcommit: 3dd69ae18bca8dd2e0666d09746a4012cd8c8e42
+  ms.openlocfilehash: 0d60a1c4611511d56938a3d4bd7e2d6bdce2f033
+  ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
   ms.translationtype: MT
   ms.contentlocale: ja-JP
   ms.lasthandoff: 11/17/2021
-  ms.locfileid: "61051190"
+  ms.locfileid: "61061952"
 landingContent:
 - title: 最新の情報を確認する
   linkLists:
@@ -19,6 +19,8 @@ landingContent:
     links:
     - text: 個人用タブとメッセージング拡張機能は、OutlookとOfficeで実行されます (プレビュー)
       url: ~/m365-apps/overview.md
+    - text: アダプティブ カードでの Typeahead 検索
+      url: ~/task-modules-and-cards/cards/dynamic-search.md
     - text: リソース固有の同意 (RSC) を使用してボットがすべてのチャネル メッセージを受信できます
       url: ~/bots/how-to/conversations/channel-messages-with-rsc.md
     - text: トランザクション可能な SaaS Teamsでアプリを収益化する

@@ -4,12 +4,12 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: チームの最新情報
-ms.openlocfilehash: baca6a204c183f421479be7e69f426ef74ca901f
-ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
+ms.openlocfilehash: f980c31389408e51ddc44337db1c5b8a93f1ff1c
+ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2021
-ms.locfileid: "61041697"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "61061980"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
@@ -22,9 +22,9 @@ ms.locfileid: "61041697"
 
 | 日付 | Update | ここで検索する  |
 | --- | --- | --- |
+| 11/17/2021| デスクトップユーザーとモバイル ユーザーの静的および動的な typeahead 検索。| • アダプティブ カードの Typeahead 検索>カード> [ビルド カードとタスク モジュール](task-modules-and-cards/cards/dynamic-search.md) </br> • カードとタスク モジュールを>アダプティブ カード>先>検索の概要[](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • カードとタスク モジュールの作成> > [とタスク モジュールの概要](task-modules-and-cards/cards-and-task-modules.md)|
 | 11/15/2021 | 個人用タブとメッセージング拡張機能は、OutlookとOfficeで実行されます (プレビュー) | [複数のTeamsアプリを拡張Microsoft 365](~/m365-apps/overview.md) |
-| 11/13/2021| ボットは、リソース固有の同意 (RSC) を使用してすべてのチャネル メッセージを受信できます。 | • ボットの会話>ボット>メッセージ> [RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md)ですべてのチャネル メッセージを受信する </br> • ボットの会話>ボット> [ボットの会話の概要を構築する](~/bots/how-to/conversations/conversation-basics.md) </br> • チャネルとグループ>ボット> [ボットの会話を構築する](~/bots/how-to/conversations/channel-and-group-conversations.md) |
-|
+| 11/13/2021| ボットは、リソース固有の同意 (RSC) を使用してすべてのチャネル メッセージを受信できます。 | • ボットの会話>ボット>メッセージ> [RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md)ですべてのチャネル メッセージを受信する </br> • ボットの会話>ボットの会話> [ボットを構築する](~/bots/how-to/conversations/conversation-basics.md) </br> • チャネルとグループ>ボット> [ボットの会話を構築する](~/bots/how-to/conversations/channel-and-group-conversations.md) |
 
 ## <a name="ga-features"></a>GA の機能
 
@@ -38,6 +38,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 | **日付** | **更新** | **ここで検索する** |
 | -------- | --------- | ----------------|
+| 11/17/2021| デスクトップユーザーとモバイル ユーザーの静的および動的な typeahead 検索。| • アダプティブ カードの Typeahead 検索>カード> [ビルド カードとタスク モジュール](task-modules-and-cards/cards/dynamic-search.md) </br> • カードとタスク モジュールを>アダプティブ カード>先>検索の概要[](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • カードとタスク モジュールの作成> > [とタスク モジュールの概要](task-modules-and-cards/cards-and-task-modules.md)|
 | 11/13/2021| ボットは、リソース固有の同意 (RSC) を使用してすべてのチャネル メッセージを受信できます。 | • ボットの会話>ボット>メッセージ> [RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md)ですべてのチャネル メッセージを受信する </br> • ボットの会話>ボット> [ボットの会話の概要を構築する](~/bots/how-to/conversations/conversation-basics.md) </br> • チャネルとグループ>ボット> [ボットの会話を構築する](~/bots/how-to/conversations/channel-and-group-conversations.md) |
 |10/28/2021 | トランザクション可能な SaaS Teamsを使用して、アプリを収益化します。| アプリを配布>発行する Teamsストア> [SaaS](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)オファーをアプリにTeamsする |
 |10/25/2021| ステップ バイ ステップ ガイドの新Microsoft Teams手順を使用して、開発者向けドキュメントの Get started モジュールを更新しました。| スタート>[最初のアプリをTeamsする](get-started/get-started-overview.md) |

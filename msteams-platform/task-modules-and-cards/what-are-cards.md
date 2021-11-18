@@ -4,12 +4,12 @@ description: カードと、ボット、コネクタ、メッセージング拡�
 ms.localizationpriority: medium
 keywords: コネクタ ボット カード メッセージング
 ms.topic: overview
-ms.openlocfilehash: a6e7f706d114422e99668b6a123dd3feb2cf886c
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 1f443dd72acd263901d39311465a368fbeb59f1b
+ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888294"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "61061959"
 ---
 # <a name="cards"></a>カード
 
@@ -20,7 +20,7 @@ ms.locfileid: "60888294"
 - アダプティブ カード
 - ヒーロー カード
 - リスト カード
-- Office 365コネクタ カード
+- Office 365 コネクタ カード
 - レシート カード
 - サインイン カード
 - サムネイル カード
@@ -63,6 +63,10 @@ Teamsは、次の 3 つの異なる場所でカードを使用します。
 * コネクタ カード: コネクタ コネクタの一Office 365されます。
 * 単純なカード: サムネイルカードやヒーロー カードなど、ボット フレームワークから使用されます。
 
+### <a name="type-ahead-search-in-adaptive-cards"></a>アダプティブ カードでの先行入力検索  
+
+アダプティブ カードに入力コントロールとして追加された先行検索を入力[](~/task-modules-and-cards/cards/dynamic-search.md)すると、動的に読み込まれたデータセットからの動的検索エクスペリエンスが有効になります。 また、ユーザーは、選択肢の数が限られているリスト内で先行入力静的検索を実行できます。 モバイル クライアントとデスクトップ クライアントは、動的検索エクスペリエンスを先取りするタイプをサポートします。 
+
 ### <a name="adaptive-cards-and-incoming-webhooks"></a>アダプティブ カードと受信 Webhooks
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/y5pbJI43Zvg]
@@ -77,7 +81,7 @@ Teamsは、次の 3 つの異なる場所でカードを使用します。
 
 アダプティブ カードを使用したボットは、既存の ID に加えて、AAD オブジェクト ID やユーザー原則名 (UPN) などのユーザーメンション ID をサポートします。 受信 Webhooks は、アダプティブ カードのユーザーメンションをサポートし始め、AADオブジェクト ID と UPN を使用します。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [カードの種類](~/task-modules-and-cards/cards/cards-reference.md)
