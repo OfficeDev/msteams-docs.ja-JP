@@ -5,12 +5,12 @@ keywords: teams visual studio ツールキット
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: johmil
-ms.openlocfilehash: af4f4c1511460e79a99d437dbcc75e2c748d1506
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: e4caacc495fdd7510575a373f33db129c08bad87
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888014"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075473"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio"></a>アプリとアプリのTeams ToolkitをVisual Studio
 
@@ -86,8 +86,3 @@ Teams[開発者](https://dev.teams.microsoft.com/home)ポータルでは、チ�
 
 - これらの送信内容は、IT 管理者によって審査されます。
 - [発行] ページ **に戻り** 、申請の状態を確認し、アプリが IT 管理者によって承認または却下された場合に確認できます。また、アプリに更新プログラムを送信したり、現在アクティブな申請を取り消したりすることもできます。
-
-## <a name="next-step"></a>次のステップ
-
-> [!div class="nextstepaction"]
-> [Blazor で最初のアプリをMicrosoft Teams実行する](../get-started/first-app-blazor.md)

@@ -5,12 +5,12 @@ description: Teams プラットフォームでのカスタム タブの概要
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: d84a0a293ad4c0de507dfc56078db4d214649b1d
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: ea777a615358467f12a6f98c5e06fc5dd14b7418
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887400"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075431"
 ---
 # <a name="microsoft-teams-tabs"></a>Microsoft Teams のタブ
 
@@ -26,11 +26,6 @@ ms.locfileid: "60887400"
 次の図は、Contoso チャネル タブを示しています。
 
 ![チャネルまたはグループのタブ](../assets/images/tabs/tabs.png)
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/Jw6i7Mkt0dg]
-
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/T2a8yJC3VcQ]
 
 タブを操作する前に実行する必要がある前提条件は少なからずある。
 
@@ -84,7 +79,7 @@ ms.locfileid: "60887400"
 * [Visual Studio Code 用 Teams ツールキット](../toolkit/visual-studio-code-overview.md)
 * [Visual Studio 用 Teams ツールキット](../toolkit/visual-studio-overview.md)
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [前提条件](~/tabs/how-to/tab-requirements.md)

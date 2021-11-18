@@ -3,12 +3,12 @@ title: カスタム 一緒にモード のシーン
 description: カスタムの Together Mode シーンを使用する
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: ad33262e5e836badcaf3135138770a241f51f9c6
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+ms.openlocfilehash: 3820a711dfa759e3ad9429efd6b848cbe47e4623
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912242"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075459"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Teams でのカスタム Together モードのシーン
 
@@ -17,8 +17,6 @@ ms.locfileid: "60912242"
 * ユーザーを集め、ビデオを有効にしてください。 
 * 参加者をデジタルで 1 つの仮想シーンに結合します。 
 * 参加者のビデオ ストリームを、シーン作成者によって設計および固定された事前に決定されたシートに配置します。
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
 
 カスタムの Together Mode シーンでは、シーンはアーティファクトです。 シーンは、Microsoft Scene studio を使用してシーン開発者によって作成されます。 考え出されたシーンの設定では、参加者はビデオ ストリームを持つシートを持っています。 これらのシートでビデオがレンダリングされます。 このようなアプリのエクスペリエンスが明確な場合は、シーンのみアプリをお勧めします。
 

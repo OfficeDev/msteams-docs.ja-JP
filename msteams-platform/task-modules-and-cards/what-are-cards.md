@@ -4,12 +4,12 @@ description: カードと、ボット、コネクタ、メッセージング拡�
 ms.localizationpriority: medium
 keywords: コネクタ ボット カード メッセージング
 ms.topic: overview
-ms.openlocfilehash: 1f443dd72acd263901d39311465a368fbeb59f1b
-ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
+ms.openlocfilehash: 0a33cab35db2873df9ee8b93b4a0cbd2f616ace0
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "61061959"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075445"
 ---
 # <a name="cards"></a>カード
 
@@ -54,8 +54,6 @@ Teamsは、次の 3 つの異なる場所でカードを使用します。
 
 ## <a name="adaptive-cards"></a>アダプティブ カード
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/J12lKt717Ws]
-
 [アダプティブ カード](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)は、ボット、Cortana、Outlook、および Windows を含む Microsoft 製品の新しいクロス製品仕様です。 これらは、新しいカード開発に推奨されるTeamsです。 アダプティブ カード チームの一般的な情報については、「アダプティブ カード [の概要」を参照してください](/adaptive-cards)。 アダプティブ カードは、既存のヒーロー カード、Office 365カードを使用する任意の場所で使用できます。
 
 アダプティブ カードに加えて、Teams 2 種類のカードがサポートされています。
@@ -68,8 +66,6 @@ Teamsは、次の 3 つの異なる場所でカードを使用します。
 アダプティブ カードに入力コントロールとして追加された先行検索を入力[](~/task-modules-and-cards/cards/dynamic-search.md)すると、動的に読み込まれたデータセットからの動的検索エクスペリエンスが有効になります。 また、ユーザーは、選択肢の数が限られているリスト内で先行入力静的検索を実行できます。 モバイル クライアントとデスクトップ クライアントは、動的検索エクスペリエンスを先取りするタイプをサポートします。 
 
 ### <a name="adaptive-cards-and-incoming-webhooks"></a>アダプティブ カードと受信 Webhooks
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/y5pbJI43Zvg]
 
 > [!NOTE]
 > * ネイティブのアダプティブ カード スキーマ要素 (ただし `Action.Submit` 、 を除く) はすべて完全にサポートされています。

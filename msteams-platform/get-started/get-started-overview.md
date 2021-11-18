@@ -4,12 +4,12 @@ description: 開発者向けドキュメントの概要Microsoft Teams概要
 ms.localizationpriority: medium
 ms.topic: reference
 keywords: Microsoft Teamsサンプル
-ms.openlocfilehash: 0b2ded130bf68f1db8715c8ff6e10336db6aeb2c
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: ee986f04ca760fbf9090f7dda94e1378261db7df
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720090"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075480"
 ---
 # <a name="get-started"></a>開始する
 
@@ -53,9 +53,6 @@ Yeoman ワークフローを既に理解している場合は [、YoTeams Yeoman
 > [JavaScript を使用Teamsアプリをビルドするには、次のReact](../sbs-gs-javascript.yml)
 
 > [!div class="nextstepaction"]
-> [Blazor でTeamsアプリを構築する](../sbs-gs-blazor.yml)
-
-> [!div class="nextstepaction"]
 > [アプリを使用TeamsアプリをSPFx](../sbs-gs-spfx.yml)
 
 > [!div class="nextstepaction"]
@@ -63,4 +60,3 @@ Yeoman ワークフローを既に理解している場合は [、YoTeams Yeoman
 
 > [!div class="nextstepaction"]
 > [アプリを使用TeamsアプリをNode.js](../sbs-gs-nodejs.yml)
-

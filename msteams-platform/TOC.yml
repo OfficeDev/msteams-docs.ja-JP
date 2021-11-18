@@ -14,8 +14,6 @@
       href: get-started/get-started-overview.md
     - name: JavaScript を使用して初めてのアプリを構築する
       href: sbs-gs-javascript.yml
-    - name: Blazor を使用して初めてのアプリを構築する
-      href: sbs-gs-blazor.yml
     - name: SPFx を使用して初めてのアプリを構築する
       href: sbs-gs-spfx.yml
     - name: C# または .NET を使用して初めてのアプリを構築する

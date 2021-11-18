@@ -5,17 +5,14 @@ description: アダプティブ カードの Input.ChoiceSet コントロール�
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: ef77d35bc92726ac0d9d0264585a32249dbeb75b
-ms.sourcegitcommit: d247a03ff53f058f11b94958473ae2e8962f2984
+ms.openlocfilehash: 95041b1a24ac083329a809b8a5989d77e2430e26
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "61062074"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075584"
 ---
-# <a name="typeahead-search-in-adaptive-cards"></a>アダプティブ カードの Typeahead 検索  
-
-> [!NOTE]
-> 現時点では、この機能はパブリック開発者 [プレビューでのみ利用](~/resources/dev-preview/developer-preview-intro.md) できます。
+# <a name="typeahead-search-in-adaptive-cards"></a>アダプティブ カードの Typeahead 検索
 
 アダプティブ カードの Typeahead 検索機能により、コンポーネントでの検索エクスペリエンスが強化 `input.choiceset` されます。 検索フィールドにテキストを入力する選択肢の一覧を提供します。 Typeahead 検索とアダプティブ カードを組み込み、データを検索および選択できます。
 
@@ -301,3 +298,6 @@ John は、Xbox 小売店で働くストアの従業員です。 ストアはボ
 ```
 
 ## <a name="see-also"></a>関連項目
+
+* [アダプティブ カードのユニバーサル アクション](Universal-actions-for-adaptive-cards/Overview.md)
+* [タスク モジュール](../what-are-task-modules.md)

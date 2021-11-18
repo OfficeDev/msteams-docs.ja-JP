@@ -5,12 +5,12 @@ description: このページのボットのMicrosoft Teams。
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 17f6e34cbed0980b379e317db976a46c0cf9fc3f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: c02fe1508261c1392472f87e7266e38fed7c12b1
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887853"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075608"
 ---
 # <a name="bots-in-microsoft-teams"></a>Microsoft Teams のボット
 
@@ -18,8 +18,6 @@ ms.locfileid: "60887853"
 
 > [!IMPORTANT]
 > 現在、ボットは Government Community Cloud (GCC) で使用できますが、GCC-High国防総省 (DOD) では使用できません。
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/zSIysk0yL0Q]
 
 会話ボットを使用すると、ユーザーは、テキスト、対話型カード、タスク モジュールで Web サービスとのやり取りができるようになります。
 
@@ -49,7 +47,7 @@ Microsoft Graph通話やオンライン会議の API を使用すると、Micros
 
 ボット API Teams使用して、チャットまたはチームの 1 つ以上のメンバーの情報を取得できます。 詳細については、「チームまたはチャット[メンバーをフェッチTeamsボット API に対する変更点」を参照してください](~/resources/team-chat-member-api-changes.md)。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [ボットと SDK](~/bots/bot-features.md)

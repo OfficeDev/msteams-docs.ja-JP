@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: c6a872f9e43f5394a3d10ef5bf3ab8f2650ca9b4
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 0ae8a3b5f080258e870e4b21c91071de6aac4fd5
+ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887693"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "61075452"
 ---
 # <a name="apps-for-teams-meetings"></a>会議のTeamsアプリ
 
@@ -22,8 +22,6 @@ ms.locfileid: "60887693"
 * かんばんボードを事前に設定します。
 * 会議中の操作可能なダイアログを起動します。
 * 会議後のアンケートを作成します。
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/nKAy5rNDus4]
 
 次の図は、会議アプリの機能拡張のアイデアを示しています。
 
@@ -37,7 +35,7 @@ ms.locfileid: "60887693"
 
 新しいカスタムの Together Mode シーン機能を使用すると、ユーザーはチームとの会議で 1 か所で共同作業できます。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [会議アプリ拡張性](meeting-app-extensibility.md)
