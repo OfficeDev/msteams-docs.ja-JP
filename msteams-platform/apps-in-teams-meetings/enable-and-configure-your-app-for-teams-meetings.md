@@ -4,12 +4,12 @@ author: surbhigupta
 description: Teams 会議やさまざまな会議シナリオ用のアプリの有効化と構成、アプリ マニフェストの更新、会議内ダイアログ、共有会議ステージ、会議サイドパネルなどの機能の構成
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 17add35ef0b2d2cbb3ce2e6658d11d6d58dd8d2d
-ms.sourcegitcommit: db529cdf7e9195fa45b9065c50f5381770cc3711
+ms.openlocfilehash: cea1c22bc33e8dcbcc66200c6c1ae73d525ddc19
+ms.sourcegitcommit: 4c00801f39982e7765907f9d56e6ff7d7a1eb1e3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "60912221"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "61156601"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>会議で使用するアプリを有効Teamsする
 
@@ -166,7 +166,11 @@ API を使用して `userContext` 要求をルーティングするには、「S
 | 会議アプリ | 会議トークン ジェネレーター アプリを使用してトークンを要求する方法を示します。 トークンが順番に生成され、各参加者が会議に参加する公平な機会を得る。 このトークンは、スクラム会議や Q セッションなど、&役立ちます。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 |会議ステージのサンプル | コラボレーション用の会議ステージにタブを表示するサンプル アプリ | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 
-## <a name="next-step"></a>次のステップ
+## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
+
+ステップ バイ[ステップ ガイドに従って](../sbs-meeting-token-generator.yml)、会議で会議トークンを生成Teamsします。
+
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [会議アプリ API リファレンス](API-references.md)
@@ -175,4 +179,3 @@ API を使用して `userContext` 要求をルーティングするには、「S
 
 * [会議中のダイアログの設計ガイドライン](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teamsの認証フロー](../tabs/how-to/authentication/auth-flow-tab.md)
-* [Microsoft サービス経由で会議にアプリを追加Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http)
