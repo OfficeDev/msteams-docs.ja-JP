@@ -5,12 +5,12 @@ description: コード サンプルを使用して、プロアクティブ メ�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: e660a7fb289e8047316d8d1405c09df65bc5c8ca
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: fba79695458374e80cfe604377fd7d7c5e05a2ff
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948412"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178286"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>タスク モジュールの送信アクションに応答する
 
@@ -21,12 +21,12 @@ ms.locfileid: "60948412"
 
 応答するオプションは次のとおりです。
 
-* 応答なし: 送信アクションを使用して、外部システムでプロセスをトリガーし、長時間実行されているプロセスに役立つフィードバックをユーザーに提供し、フィードバックを交互に提供する場合に選択します。 たとえば、プロアクティブ なメッセージでフィードバックを [送信できます](~/bots/how-to/conversations/send-proactive-messages.md)。
+* 応答なし: 送信アクションを使用して、外部システムでプロセスをトリガーし、ユーザーにフィードバックを提供しない。 長時間実行されるプロセスやフィードバックを交互に提供する場合に便利です。 たとえば、プロアクティブ なメッセージでフィードバックを [送信できます](~/bots/how-to/conversations/send-proactive-messages.md)。
 * [別のタスク モジュール](#respond-with-another-task-module): 複数ステップの操作の一環として、追加のタスク モジュールで応答できます。
 * [カードの](#respond-with-a-card-inserted-into-the-compose-message-area)応答 : ユーザーが操作できるカードまたはメッセージに挿入できるカードで応答できます。
 * [ボットからのアダプティブ カード](#bot-response-with-adaptive-card): アダプティブ カードを会話に直接挿入します。
 * [ユーザーに認証を要求します](~/messaging-extensions/how-to/add-authentication.md)。
-* [追加の構成をユーザーに要求する]~//get-started/first-message-extension.md)。
+* [追加の構成を提供するユーザーを要求します](~/get-started/first-message-extension.md)。
 
 認証または構成の場合、ユーザーがプロセスを完了すると、元の呼び出しが Web サービスに再び戻されます。 次の表に、メッセージング拡張機能の呼び出し場所に基づいて使用できる応答 `commandContext` の種類を示します。 
 

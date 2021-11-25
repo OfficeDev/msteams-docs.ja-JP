@@ -6,12 +6,12 @@ keywords: teams タブ送信 Webhook
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c0d0ad53f95a009b9b5629b1ec7b74a1a9886b92
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 7ce63a8456eaa0b15bd03999dd06c202ee689113
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888315"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178301"
 ---
 # <a name="create-incoming-webhook"></a>受信 Webhook の作成
 
@@ -35,7 +35,7 @@ ms.locfileid: "60888315"
 |セキュリティで保護されたリソース定義|メッセージは JSON ペイロードとして書式設定されます。 この宣言型メッセージング構造は、悪意のあるコードの挿入を防止します。|
 
 > [!NOTE]
-> * Teams、メッセージング拡張機能、受信 Webhook、およびボット フレームワークは、オープンクロスカード プラットフォーム フレームワークであるアダプティブ カードをサポートします。 現在、Teams[は](../../webhooks-and-connectors/how-to/connectors-creating.md)アダプティブ カードをサポートしていない。 ただし、アダプティブ カードを[チャネルに投稿](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/)するフローをTeamsできます。
+> * Teams、メッセージング拡張機能、受信 Webhook、およびボット フレームワークはアダプティブ カードをサポートします。 アダプティブ カードは、オープン クロス カード プラットフォーム フレームワークであり、Windows、Android、iOS など、すべてのプラットフォームで使用できます。 現在、Teams[は](../../webhooks-and-connectors/how-to/connectors-creating.md)アダプティブ カードをサポートされていません。 ただし、アダプティブ カードを[チャネルに投稿](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/)するフローをTeamsできます。
 > * カードと Webhook の詳細については、「アダプティブ カード [と受信 Webhooks」を参照してください](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks)。
 
 ## <a name="create-incoming-webhook"></a>受信 Webhook の作成

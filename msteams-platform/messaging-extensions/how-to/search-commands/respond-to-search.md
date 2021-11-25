@@ -5,12 +5,12 @@ description: コード例とサンプルを使用して、Microsoft Teams拡張�
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 46c5d1ef47d9c31552efac00baef347baf3c7470
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: aac38b2578463a97704b18c854a07ec78e1d4948
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889378"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178280"
 ---
 # <a name="respond-to-search-command"></a>検索コマンドに応答する
 
@@ -98,22 +98,27 @@ Teamsは、次のカードの種類をサポートしています。
 
 * [サムネイル カード](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [ヒーロー カード](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365コネクタ カード](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Office 365 コネクタ カード](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [アダプティブ カード](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
 カードの理解と概要を把握するには、カード [の概要を参照してください](~/task-modules-and-cards/what-are-cards.md)。
 
 サムネイルカードとヒーロー カードの種類を使用する方法については、「Add [card and card actions」を参照してください](~/task-modules-and-cards/cards/cards-actions.md)。
 
-コネクタ カードの詳細については、「Office 365 コネクタ カードの使用[」Office 365参照してください](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)。
+コネクタ カードの詳細については、「Office 365 コネクタ カードの[使用」をOffice 365参照してください](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)。
+
 
 結果リストは、各アイテムのプレビュー Microsoft Teams UI に表示されます。 プレビューは、次の 2 つの方法で生成されます。
 
 * オブジェクト内 `preview` のプロパティを使用 `attachment` する。 添付 `preview` ファイルには、ヒーロー カードまたはサムネイル カードのみを指定できます。
-* 添付ファイルの基本 `title` 、 `text` および `image` プロパティから抽出されます。 これらは、プロパティが設定されていない `preview` 場合にのみ使用され、これらのプロパティを使用できます。
-* [ヒーロー] または [サムネイル] カードボタンとタップアクション (呼び出しを除く) は、プレビュー カードではサポートされません。
+* オブジェクトの基本 `title` 、および `text` プロパティ `image` から抽出 `attachment` します。 基本プロパティは、プロパティが指定 `preview` されていない場合にのみ使用されます。
 
-プレビュー プロパティを使用して、アダプティブ カードまたは Office 365 コネクタ カードのプレビューを結果リストに表示できます。 結果が既にヒーロー カードまたはサムネイル カードである場合、preview プロパティは必要ありません。 プレビュー添付ファイルを使用する場合は、ヒーロー カードまたはサムネイル カードである必要があります。 preview プロパティを指定しない場合、カードのプレビューは失敗し、何も表示されません。
+ヒーロー カードまたはサムネイル カードの場合、呼び出しアクションを除き、ボタンやタップなどの他のアクションはプレビュー カードではサポートされません。
+
+アダプティブ カードまたは Ofiice 365 Connector カードを送信するには、プレビューを含める必要があります。 プロパティ `preview` は、ヒーロー カードまたはサムネイル カードである必要があります。 オブジェクトで preview プロパティを指定しない場合 `attachment` 、プレビューは生成されません。
+
+ヒーロー カードとサムネイル カードの場合は、プレビュー プロパティを指定する必要が生じ、既定でプレビューが生成されます。 次の使用例は、メッセージング拡張機能にリンクを貼り付けするときにリンクの分岐解除機能を表示します。  
+![リンクのリンク解除](~/assets/images/messaging-extension/link-unfurl.gif)
 
 ### <a name="response-example"></a>応答の例
 
@@ -312,6 +317,76 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 
 * * *
 
+### <a name="enable-and-handle-tap-actions"></a>タップ操作を有効にして処理する
+
+# <a name="cnet"></a>[C#/.NET](#tab/dotnet)
+
+```csharp
+protected override Task<MessagingExtensionResponse> OnTeamsMessagingExtensionSelectItemAsync(ITurnContext<IInvokeActivity> turnContext, JObject query, CancellationToken cancellationToken)
+{
+    // The Preview card's Tap should have a Value property assigned, this will be returned to the bot in this event. 
+    var (packageId, version, description, projectUrl, iconUrl) = query.ToObject<(string, string, string, string, string)>();
+
+    var card = new ThumbnailCard
+    {
+        Title = "Card Select Item",
+        Subtitle = description
+    };
+
+    var attachment = new MessagingExtensionAttachment
+    {
+        ContentType = ThumbnailCard.ContentType,
+        Content = card,
+    };
+
+    return Task.FromResult(new MessagingExtensionResponse
+    {
+        ComposeExtension = new MessagingExtensionResult
+        {
+            Type = "result",
+            AttachmentLayout = "list",
+            Attachments = new List<MessagingExtensionAttachment> { attachment }
+        }
+    });
+}
+```
+
+# <a name="typescriptnodejs"></a>[TypeScript/Node.js](#tab/typescript)
+
+```typescript
+async handleTeamsMessagingExtensionSelectItem(context, obj) {
+        return {
+            composeExtension: {
+                  type: 'result',
+                  attachmentLayout: 'list',
+                  attachments: [CardFactory.thumbnailCard(obj.Item3)]
+            }
+        };
+    } 
+```
+
+# <a name="json"></a>[JSON](#tab/json)
+
+```json
+{
+    "name": "composeExtension/selectItem",
+    "type": "invoke",
+    "value": {
+        "Item1": "Package_Name",
+        "Item2": "Version",
+        "Item3": "Package Description"
+    },
+    .
+    .
+    .
+}
+```
+
+* * *
+
+> [!NOTE]
+> `OnTeamsMessagingExtensionSelectItemAsync` モバイル チーム アプリケーションではトリガーされません。
+
 ## <a name="default-query"></a>既定のクエリ
 
 マニフェストで設定した場合、Microsoft Teamsが最初にメッセージング拡張機能を開くと、既定のクエリ `initialRun` `true` が発行されます。  サービスは、事前に設定された結果のセットでこのクエリに応答できます。 これは、検索コマンドで認証または構成が必要な場合、最近表示されたアイテム、お気に入り、またはユーザー入力に依存しないその他の情報を表示する場合に便利です。
@@ -346,7 +421,7 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 |Teams拡張アクション| アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams拡張機能の検索   |  検索コマンドを定義し、検索に応答する方法について説明します。        |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [メッセージング拡張機能に認証を追加する](~/messaging-extensions/how-to/add-authentication.md)

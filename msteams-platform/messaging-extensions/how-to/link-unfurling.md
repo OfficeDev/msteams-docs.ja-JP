@@ -5,12 +5,12 @@ description: アプリ マニフェストを使用して、またはコード例
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: f702ac2600dbfb3c8fd2992c41cc1c72754252ca
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 98926d386d55250d72815a918c3f180c4a8421de
+ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889399"
+ms.lasthandoff: 11/25/2021
+ms.locfileid: "61178294"
 ---
 # <a name="link-unfurling"></a>リンク展開
 
@@ -40,6 +40,7 @@ ms.locfileid: "60889399"
 1. [メッセージング **拡張機能] ページ** で、探すドメインを [メッセージ ハンドラー] セクション **に追加** します。 次の図は、プロセスを説明しています。
 
     ![App Studio の [メッセージ ハンドラー] セクション](~/assets/images/link-unfurling.png)
+
     
 ### <a name="add-link-unfurling-manually"></a>リンクの手動でのリンク解除の追加
 
@@ -76,10 +77,10 @@ ms.locfileid: "60889399"
 
 * [サムネイル カード](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [ヒーロー カード](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365コネクタ カード](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Office 365 コネクタ カード](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [アダプティブ カード](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-プレビュー プロパティを使用して、アダプティブ カードまたは Office 365 コネクタ カードのプレビューを結果リストに表示できます。 結果が既にヒーロー カードまたはサムネイル カードである場合、preview プロパティは必要ありません。 プレビュー添付ファイルを使用する場合は、ヒーロー カードまたはサムネイル カードである必要があります。 preview プロパティを指定しない場合、カードのプレビューは失敗し、何も表示されません。
+詳細については、「Action type [invoke」を参照してください](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke)。
 
 ### <a name="example"></a>例
 
