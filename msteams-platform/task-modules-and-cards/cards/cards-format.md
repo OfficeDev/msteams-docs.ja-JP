@@ -5,12 +5,12 @@ keywords: teams ボット カードの形式
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 526b20146c81ba10ef026412adc111fe33a01814
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 409ba9c0d96712ff3f5cfc40b64b406ce57818b8
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887610"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216231"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams のカードの書式設定
 
@@ -31,7 +31,7 @@ ms.locfileid: "60887610"
 次のカードの種類では、マークダウンの書式設定がサポートTeams。
 
 * アダプティブ カード: Markdown はアダプティブ カード フィールドおよび `Textblock` `Fact.Title` `Fact.Value` . アダプティブ カードでは HTML はサポートされていません。
-* Office 365コネクタ カード: マークダウンと制限付き HTML は、テキスト フィールドOffice 365コネクタ カードでサポートされます。
+* Office 365 コネクタ カード: マークダウンと制限付き HTML は、テキスト フィールドOffice 365コネクタ カードでサポートされています。
 
 リスト内の改行に対して、アダプティブ カードの改行を使用するか、エスケープ `\r` `\n` シーケンスを使用できます。 アダプティブ カード用のデスクトップとモバイル バージョンの書式Teams異なります。 カード ベースのメンションは、Web クライアント、デスクトップ クライアント、モバイル クライアントでサポートされています。 information masking プロパティを使用すると、アダプティブ カード入力要素内のユーザーからのパスワードや機密情報などの特定の情報を `Input.Text` マスクできます。 アダプティブ カードの幅は、オブジェクトを使用して展開 `width` できます。 アダプティブ カード内で typeahead サポートを有効にし、ユーザーが入力を入力すると、入力の選択肢のセットをフィルター処理できます。 このプロパティを使用 `msteams` して、ステージ ビューに画像を選択的に表示する機能を追加できます。
 
@@ -165,7 +165,7 @@ Android では、アダプティブ カード マークダウンの書式設定�
 }
 ```
 
-### <a name="aad-object-id-and-upn-in-user-mention"></a>AADユーザーメンションのオブジェクト ID と UPN 
+### <a name="aad-object-id-and-upn-in-user-mention"></a>AADメンションのオブジェクト ID と UPN の設定 
 
 Teamsでは、既存のメンション ID に加えて、AAD オブジェクト ID とユーザー原則名 (UPN) を使用してユーザーに言及できます。 受信 Webhook を使用したアダプティブ カードとコネクタを備えるボットは、2 つのユーザーメンション ID をサポートします。 
 
@@ -392,7 +392,7 @@ schema 要素内で、ユーザーにフィルター処理を求め、サイズ�
             "msTeams": {
               "allowExpand": true
             }
-          },
+          }
      ],
     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
     "version": "1.2"
@@ -506,7 +506,7 @@ Android では、次の図に示すように、コネクタ カードのマー�
 
 次のカードの種類は、HTML 形式をサポートTeams。
 
-* Office 365コネクタ カード: 制限付きマークダウンと HTML の書式設定は、コネクタ カードOffice 365サポートされています。
+* Office 365 コネクタ カード: 制限付きマークダウンと HTML 書式は、コネクタ カードOffice 365サポートされています。
 * ヒーロー カードとサムネイル カード: HTML タグは、ヒーロー カードやサムネイル カードなどの単純なカードでサポートされます。
 
 書式設定は、デスクトップとモバイル バージョンのコネクタ カードと単純なTeams Office 365異なります。 このセクションでは、コネクタ カードと簡易カードの HTML 形式の例を参照できます。

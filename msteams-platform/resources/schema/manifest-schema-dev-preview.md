@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: teams マニフェスト スキーマ Developer Preview
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: a5543ce8c8e5f7d232704caa5cdb4eb8a507264a
-ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
+ms.openlocfilehash: 2e88f6716621443be09eddb4f458e1e5f3f61d6d
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "60960223"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216189"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>リファレンス: パブリック開発者プレビュー マニフェスト スキーマ (Microsoft Teams
 
@@ -63,8 +63,19 @@ ms.locfileid: "60960223"
   "configurableTabs": [
     {
       "configurationUrl": "https://contoso.com/teamstab/configure",
+      "scopes": [
+        "team",
+        "groupchat"
+      ],
       "canUpdateConfiguration": true,
-      "scopes": [ "team", "groupchat" ]
+      "context":[
+        "channelTab",
+        "privateChatTab",
+        "meetingChatTab",
+        "meetingDetailsTab",
+        "meetingSidePanel",
+        "meetingStage"
+      ]
     }
   ],
   "staticTabs": [
@@ -352,10 +363,11 @@ ms.locfileid: "60960223"
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`configurationUrl`|文字列|2048 文字|✔|タブ https:// する際に使用する URL を指定します。|
+|`configurationUrl`|String|2048 文字|✔|タブ https:// する際に使用する URL を指定します。|
 |`canUpdateConfiguration`|ブール値|||作成後に、タブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 既定値: `true`|
 |`scopes`|列挙型の配列|1|✔|現在、構成可能なタブは、スコープ `team` とスコープ `groupchat` のみをサポートしています。 |
-|`sharePointPreviewImage`|文字列|2048||タブ プレビュー イメージへの相対ファイル パスを使用して、SharePoint。 サイズは 1024x768 です。 |
+|`context` |列挙型の配列|6 ||タブが `contextItem` サポートされているスコープ [のセット](../../tabs/how-to/access-teams-context.md)です。 既定値: `channelTab` `privateChatTab` `meetingChatTab` 、、、、 `meetingDetailsTab` `meetingSidePanel` `meetingStage` です。|
+|`sharePointPreviewImage`|String|2048||タブ プレビュー イメージへの相対ファイル パスを使用して、SharePoint。 サイズは 1024x768 です。 |
 |`supportedSharePointHosts`|列挙型の配列|1||タブをタブで使用する方法を定義SharePoint。 オプションは `sharePointFullPage` 次のとおりです。 `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
@@ -372,10 +384,10 @@ staticTabs ブロックではなく、アダプティブ カードを使用し�
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`entityId`|String|64 文字|✔|タブが表示されるエンティティの一意の識別子。|
-|`name`|文字列|128 文字|✔|チャネル インターフェイスのタブの表示名。|
-|`contentUrl`|文字列|2048 文字|✔|この https:// キャンバスに表示するエンティティ UI を示すTeamsします。|
+|`name`|String|128 文字|✔|チャネル インターフェイスのタブの表示名。|
+|`contentUrl`|String|2048 文字|✔|この https:// キャンバスに表示するエンティティ UI を示すTeamsします。|
 |`contentBotId`|   | | | ボット Microsoft Teamsで指定されたアプリ ID を指定します。 |
-|`websiteUrl`|文字列|2048 文字||ユーザー https:// ブラウザーで表示することを選択した場合に示す URL を指定します。|
+|`websiteUrl`|String|2048 文字||ユーザー https:// ブラウザーで表示することを選択した場合に示す URL を指定します。|
 |`scopes`|列挙型の配列|1|✔|現在、静的タブはスコープのみをサポートしています。つまり、個人用エクスペリエンスの一部としてのみ `personal` プロビジョニングできます。|
 
 ## <a name="bots"></a>bots
@@ -413,7 +425,7 @@ staticTabs ブロックではなく、アダプティブ カードを使用し�
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`configurationUrl`|文字列|2048 文字|✔|コネクタ https:// する際に使用する URL を指定します。|
+|`configurationUrl`|String|2048 文字|✔|コネクタ https:// する際に使用する URL を指定します。|
 |`connectorId`|String|64 文字|✔|コネクタ開発者ダッシュボードの ID に一致するコネクタの一 [意の識別子](https://aka.ms/connectorsdashboard)です。|
 |`scopes`|列挙型の配列|1|✔|Connector がチャネルのコンテキストでエクスペリエンスを提供するかどうか、または個々のユーザー () にスコープを設定したエクスペリエンスを提供するかどうかを `team` 指定します `personal` 。 現在、スコープ `team` だけがサポートされています。|
 
@@ -428,9 +440,9 @@ staticTabs ブロックではなく、アダプティブ カードを使用し�
 
 オブジェクトは、型のすべての要素を持つ配列 (最大 1 要素) です `object` 。 このブロックは、メッセージング拡張機能を提供するソリューションにのみ必要です。
 
-|名前| 型 | 最大サイズ | 必須 | 説明|
+|名前| 種類 | 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`botId`|文字列|64|✔|ボット フレームワークに登録されているメッセージング拡張機能をバックするボットの一意の Microsoft アプリ ID。 これは、アプリ全体の ID と同じ [可能性があります](#id)。|
+|`botId`|String|64|✔|ボット フレームワークに登録されているメッセージング拡張機能をバックするボットの一意の Microsoft アプリ ID。 これは、アプリ全体の ID と同じ [可能性があります](#id)。|
 |`canUpdateConfiguration`|ブール値|||メッセージング拡張機能の構成をユーザーが更新できるかどうかを示す値。 既定値は `false` です。|
 |`commands`|オブジェクトの配列|10|✔|メッセージング拡張機能がサポートするコマンドの配列|
 
@@ -444,27 +456,27 @@ staticTabs ブロックではなく、アダプティブ カードを使用し�
 |---|---|---|---|---|
 |`id`|String|64 文字|✔|コマンドの ID。|
 |`type`|String|64 文字||コマンドの種類。 または `query` の 1 `action` つ。 既定値: `query`|
-|`title`|文字列|32 文字|✔|ユーザーフレンドリーなコマンド名。|
-|`description`|文字列|128 文字||このコマンドの目的を示すためにユーザーに表示される説明。|
+|`title`|String|32 文字|✔|ユーザーフレンドリーなコマンド名。|
+|`description`|String|128 文字||このコマンドの目的を示すためにユーザーに表示される説明。|
 |`initialRun`|ブール値|||パラメーターを指定してコマンドを最初に実行するかどうかを示すブール値。 既定値: `false`|
 |`context`|文字列 (String) の配列|3||メッセージング拡張機能の呼び出し先を定義します。 `compose`、 の任意の `commandBox` 組み合 `message` わせ。 既定値は `["compose", "commandBox"]` です|
 |`fetchTask`|ブール値|||タスク モジュールを動的にフェッチする必要があるかどうかを示すブール値。|
 |`taskInfo`|オブジェクト|||メッセージング拡張機能コマンドを使用するときにプリロードするタスク モジュールを指定します。|
-|`taskInfo.title`|文字列|64||最初のダイアログ タイトル。|
-|`taskInfo.width`|文字列|||ダイアログの幅 - ピクセル単位の数値または既定のレイアウト ('large'、'medium'、または 'small' など)。|
-|`taskInfo.height`|文字列|||ダイアログの高さ - ピクセル単位の数値、または 'large'、'medium'、または 'small' などの既定のレイアウト。|
-|`taskInfo.url`|文字列|||初期 Webview URL。|
+|`taskInfo.title`|String|64||最初のダイアログ タイトル。|
+|`taskInfo.width`|String|||ダイアログの幅 - ピクセル単位の数値または既定のレイアウト ('large'、'medium'、または 'small' など)。|
+|`taskInfo.height`|String|||ダイアログの高さ - ピクセル単位の数値、または 'large'、'medium'、または 'small' などの既定のレイアウト。|
+|`taskInfo.url`|String|||初期 Webview URL。|
 |`messageHandlers`|オブジェクトの配列|5||特定の条件が満たされた場合にアプリを呼び出すことができるハンドラーの一覧。 ドメインもに一覧表示する必要があります `validDomains` 。|
-|`messageHandlers.type`|文字列|||メッセージ ハンドラーの種類。 `"link"` である必要があります。|
+|`messageHandlers.type`|String|||メッセージ ハンドラーの種類。 `"link"` である必要があります。|
 |`messageHandlers.value.domains`|文字列 (String) の配列|||リンク メッセージ ハンドラーが登録できるドメインの配列。|
 |`parameters`|オブジェクトの配列|5|✔|コマンドが受け取るパラメーターの一覧。 最小: 1;最大: 5|
 |`parameter.name`|String|64 文字|✔|クライアントに表示されるパラメーターの名前。 これは、ユーザー要求に含まれます。|
-|`parameter.title`|文字列|32 文字|✔|パラメーターのユーザーフレンドリーなタイトル。|
-|`parameter.description`|文字列|128 文字||このパラメーターの目的を説明するユーザーフレンドリーな文字列。|
-|`parameter.inputType`|文字列|128 文字||タスク モジュールに表示されるコントロールの種類を定義します `fetchTask: true` 。 、 `text` `textarea` 、 、 、 、 の `number` `date` `time` `toggle` 1 `choiceset` つ。|
+|`parameter.title`|String|32 文字|✔|パラメーターのユーザーフレンドリーなタイトル。|
+|`parameter.description`|String|128 文字||このパラメーターの目的を説明するユーザーフレンドリーな文字列。|
+|`parameter.inputType`|String|128 文字||タスク モジュールに表示されるコントロールの種類を定義します `fetchTask: true` 。 、 `text` `textarea` 、 、 、 、 の `number` `date` `time` `toggle` 1 `choiceset` つ。|
 |`parameter.choices`|オブジェクトの配列|10||の選択肢 `choiceset` オプションです。 の場合にのみ `parameter.inputType` 使用します `choiceset` 。|
-|`parameter.choices.title`|文字列|128||選択したタイトル。|
-|`parameter.choices.value`|文字列|512||Value of the choice.|
+|`parameter.choices.title`|String|128||選択したタイトル。|
+|`parameter.choices.value`|String|512||Value of the choice.|
 
 ## <a name="permissions"></a>アクセス許可
 
@@ -510,8 +522,8 @@ staticTabs ブロックではなく、アダプティブ カードを使用し�
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`id`|文字列|36 文字|✔|Azure ADのアプリケーション ID を指定します。 この ID は GUID である必要があります。|
-|`resource`|文字列|2048 文字|✔|SSO の認証トークンを取得するためのアプリのリソース URL。|
+|`id`|String|36 文字|✔|Azure ADのアプリケーション ID を指定します。 この ID は GUID である必要があります。|
+|`resource`|String|2048 文字|✔|SSO の認証トークンを取得するためのアプリのリソース URL。|
 |`applicationPermissions`|配列|最大 100 アイテム|✔|アプリケーションのリソースのアクセス許可。|
 
 ## <a name="configurableproperties"></a>configurableProperties

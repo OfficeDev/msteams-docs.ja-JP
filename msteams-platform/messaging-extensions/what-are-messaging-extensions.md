@@ -5,12 +5,12 @@ description: Microsoft Teams プラットフォームでのメッセージング
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 1448cb334521b6937ab87514c35e2b628a3e8106
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: baef9ac9bb15b3b2efd7b05b36966c5e6d30083c
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948559"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216224"
 ---
 # <a name="messaging-extensions"></a>メッセージング拡張機能
 
@@ -74,9 +74,10 @@ Web サービスは、作成メッセージ領域に URL を貼り付けする�
 ## <a name="code-sample"></a>コード サンプル
 
 | **サンプルの名前** | **説明** | **.NET** | **Node.js** | **Python** |
-|------------|-------------|----------------|------------|
+|------------|-------------|----------------|------------|------------|
 | アクションベースのコマンドを使用したメッセージング拡張機能 | このサンプルは、アクション ベースのメッセージング拡張機能を構築する方法を示しています。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
 | 検索ベースのコマンドを使用したメッセージング拡張機能 | このサンプルは、検索ベースのメッセージング拡張機能を構築する方法を示しています。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
+|タスクのスケジュールに関するメッセージング拡張機能アクション|このサンプルは、メッセージング拡張機能アクション コマンドからタスクをスケジュールし、スケジュールされた日時にリマインダー カードを取得する方法を示しています。|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)|
 
 ## <a name="next-step"></a>次の手順
 

@@ -6,12 +6,12 @@ keywords: teams タブ グループ チャネル構成可能
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 76381e717f0955ade16c0965a0448a1854822fe8
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 6e182c305950188e316c290e2c3d3fd5732adcf4
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888021"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216217"
 ---
 # <a name="create-a-configuration-page"></a>構成ページを作成する
 
@@ -108,6 +108,7 @@ ms.locfileid: "60888021"
 
 >[!NOTE]
 >
+>* タイムアウト前に保存操作 (RegisterOnSaveHandler へのコールバック) を完了するには、30 秒かかります。 タイムアウト後に、汎用的なエラー メッセージが表示されます。
 >* 使用して保存ハンドラーを登録する場合は、コールバックを呼び出す必要があります。または構成の `microsoftTeams.settings.registerOnSaveHandler()` `saveEvent.notifySuccess()` `saveEvent.notifyFailure()` 結果を示す必要があります。
 >* 保存ハンドラーを登録しない場合、ユーザーが [保存] を選択すると、呼び `saveEvent.notifySuccess()` 出しが自動的に **行われます**。
 
@@ -184,7 +185,7 @@ document.write(getId());
 
 ユーザーがチャネルまたはグループ タブを変更、再構成、または名前を変更できるマニフェストのプロパティを `canUpdateConfiguration` `true` に設定します。また、アプリに削除オプション ページを含め、構成でプロパティの値を設定して、タブが削除されるとコンテンツに何が起こるかを `removeUrl` 示  `setSettings()` します。 ユーザーは個人用タブをアンインストールできますが、変更することはできません。 詳細については、「タブの [削除ページを作成する」を参照してください](~/tabs/how-to/create-tab-pages/removal-page.md)。
 
-`setSettings()`Microsoft Teams削除ページの構成:
+Microsoft Teams `setSettings()` の構成ページ:
 
 ```javascript
 microsoftTeams.settings.setSettings({
@@ -200,7 +201,7 @@ microsoftTeams.settings.setSettings({
 
 チャネルまたはグループ タブをモバイル クライアントのTeamsする場合は、構成の値が `setSettings()` 必要です `websiteUrl` 。 詳細については、「モバイルでの [タブのガイダンス」を参照してください](~/tabs/design/tabs-mobile.md)。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [タブの削除ページを作成する](~/tabs/how-to/create-tab-pages/removal-page.md)

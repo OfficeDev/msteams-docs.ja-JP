@@ -4,12 +4,12 @@ description: タブにユーザー コンテクストを付与する方法を説
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: チーム タブ ユーザー コンテキスト
-ms.openlocfilehash: 5a85aaf23089cbe8215c64b7cc342ee3577510bd
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 336173f1c3a59e0dde6989fd21f60077c897c9df
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887540"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216105"
 ---
 # <a name="get-context-for-your-tab"></a>タブのコンテキストを取得する
 
@@ -24,7 +24,9 @@ ms.locfileid: "60887540"
 ユーザー、チーム、または会社に関するコンテキストは、次の場合に特に役立ちます。
 
 * アプリ内のリソースを作成または指定したユーザーまたはチームに関連付ける。
-* 認証フローは、Azure Active Directory (AAD) または他の ID プロバイダーから開始し、ユーザーがユーザー名を再入力する必要はありません。 詳細については、「ユーザー認証」[タブでユーザーを認証するMicrosoft Teams参照してください](~/concepts/authentication/authentication.md)。
+* 認証フローは、Azure Active Directory (AAD) または他の ID プロバイダーから開始し、ユーザーがユーザー名を再入力する必要はありません。 
+
+詳細については、「ユーザーを認証[する」を参照Microsoft Teams。](~/concepts/authentication/authentication.md)
 
 > [!IMPORTANT]
 > このユーザー情報は、スムーズなユーザー エクスペリエンスを提供するのに役立ちますが、ID の証明として使用することはできません。  たとえば、攻撃者はブラウザーにページを読み込み、有害な情報や要求を表示する可能性があります。
@@ -48,7 +50,7 @@ ms.locfileid: "60887540"
 * {theme}: 現在のユーザー インターフェイス (UI) テーマ (例: `default` `dark` 、 、 または `contrast` )
 * {groupId}: タブがOffice 365グループの ID。
 * {tid}: 現在AADのテナント ID を指定します。
-* {locale}: languageId-countryId として書式設定されたユーザーの現在のロケール。 たとえば、ja-us。
+* {locale}: languageId-countryId(ja-us) として書式設定されたユーザーの現在のロケール。
 
 > [!NOTE]
 > 以前の `{upn}` プレースホルダーは、現在では非推奨となっています。 後方互換性のため、現在は `{loginHint}` の同義語となっています。
@@ -106,7 +108,8 @@ ms.locfileid: "60887540"
     "isCallingAllowed": "Indicates if calling is allowed for the current logged in user",
     "isPSTNCallingAllowed": "Indicates if PSTN calling is allowed for the current logged in user",
     "meetingId": "The meeting ID used by tab when running in meeting context",
-    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel"
+    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel",
+    "isMultiWindow": "The indication whether the tab is in a pop out window"
 }
 ```
 
@@ -115,7 +118,9 @@ ms.locfileid: "60887540"
 > [!Note]
 > プライベート チャネルは、現在、開発者のプライベートなプレビューです。
 
-コンテンツ ページがプライベート チャネルに読み込まれると、通話から受け取ったデータは、チャネルのプライバシーを保護するために難読 `getContext` 化されます。 コンテンツ ページがプライベート チャネルにある場合、次のフィールドが変更されます。
+コンテンツ ページがプライベート チャネルに読み込まれると、通話から受け取ったデータは、チャネルのプライバシーを保護するために難読 `getContext` 化されます。 
+
+コンテンツ ページがプライベート チャネルにある場合、次のフィールドが変更されます。
 
 * `groupId`: プライベート チャネルの場合は未定義
 * `teamId`: プライベート チャネルの threadId に設定します。
@@ -135,7 +140,7 @@ ms.locfileid: "60887540"
 
 関数 `theme` の引数は、、 、または の値を持つ `default` `dark` 文字列です `contrast` 。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [アダプティブ カードを使用してタブをビルドする](~/tabs/how-to/build-adaptive-card-tabs.md)

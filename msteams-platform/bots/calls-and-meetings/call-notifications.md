@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: 呼び出し通知コールバック地域アフィニティ
 ms.date: 04/02/2019
-ms.openlocfilehash: d1d0371f714f64d2f64dbcb9512be77318cf1fb5
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 75c6b33db6431901665b71674cb4f4fd93248c12
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889161"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216091"
 ---
 # <a name="incoming-call-notifications"></a>着信通知
 
@@ -39,7 +39,8 @@ HTTP/1.1 302 Found
 Location: your-new-location
 ```
 
-ボットが応答 API を使用して着信呼び出しに応答 [できます](https://developer.microsoft.com/graph/docs/api-reference/beta/api/call_answer) 。 この特定の呼び `callbackUri` 出しを処理するを指定できます。 これは、呼び出しが特定のパーティションによって処理され、この情報を適切なインスタンスにルーティングするために埋め込むステートフル インスタンスに `callbackUri` 役立ちます。
+ボットが応答 API を使用して着信呼び出しに応答 [できます](/graph/api/call-answer?view=graph-rest-1.0&tabs=http&preserve-view=true) 。 この特定の呼び `callbackUri` 出しを処理するを指定できます。 これは、呼び出しが特定のパーティションによって処理され、この情報を適切なインスタンスにルーティングするために埋め込むステートフル インスタンスに `callbackUri` 役立ちます。
+
 
 次のセクションでは、Webhook に投稿されたトークンを調によるコールバックの認証の詳細を示します。
 
@@ -91,7 +92,7 @@ OAuth トークンは次の値を持ち、次の値で署名Skype。
 
 詳細については、「受信要求 [の検証」を参照してください](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs)。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [アプリケーションホスト型メディア ボットの要件と考慮事項](~/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)

@@ -4,12 +4,12 @@ author: surbhigupta
 description: Teams 会議やさまざまな会議シナリオ用のアプリの有効化と構成、アプリ マニフェストの更新、会議内ダイアログ、共有会議ステージ、会議サイドパネルなどの機能の構成
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: cea1c22bc33e8dcbcc66200c6c1ae73d525ddc19
-ms.sourcegitcommit: 4c00801f39982e7765907f9d56e6ff7d7a1eb1e3
+ms.openlocfilehash: e9411306b1d3016008cfcf3699c8b154506418a7
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "61156601"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216081"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>会議で使用するアプリを有効Teamsする
 
@@ -129,13 +129,22 @@ API を使用して `userContext` 要求をルーティングするには、「S
 
 #### <a name="shared-meeting-stage"></a>共有会議ステージ
 
-共有会議ステージを使用すると、会議参加者はアプリ コンテンツをリアルタイムで操作し、共同作業できます。
+> [!NOTE]
+> 現時点では、この機能はパブリック開発者 [プレビューでのみ利用](../resources/dev-preview/developer-preview-intro.md) できます。
 
-必要なコンテキストは `meetingStage` 、アプリ マニフェスト内です。 前提条件は、コンテキストを持ち `meetingSidePanel` 、共有 **を有効** にしている場合です `meetingSidePanel` 。
+共有会議ステージを使用すると、会議参加者はアプリ コンテンツをリアルタイムで操作し、共同作業できます。 次の方法で、共同作業の会議ステージにアプリを共有できます。
 
-![会議のエクスペリエンス中にステージに共有する](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
+* [アプリ全体を共有し、](#share-entire-app-to-stage)クライアントで [共有からステージへ] ボタンを使用Teamsします。
+* [アプリの特定の部分を共有し、](#share-specific-parts-of-the-app-to-stage)クライアント SDK で API を使用Teamsします。
 
-共有会議ステージを有効にするには、アプリ マニフェストを次のように構成します。
+##### <a name="share-entire-app-to-stage"></a>アプリ全体をステージに共有する
+
+参加者は、アプリ側パネルの [共有からステージへの共有] ボタンを使用して、アプリ全体を共同作業の会議ステージに共有できます。
+
+
+<img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
+
+アプリ全体をステージ間で共有するには、アプリ マニフェストでフレーム コンテキストとして構成 `meetingStage` `meetingSidePanel` する必要があります。 例:
 
 ```json
 "configurableTabs": [
@@ -153,7 +162,16 @@ API を使用して `userContext` 要求をルーティングするには、「S
   ]
 ```
 
-共有会議ステージエクスペリエンス [を設計する方法を参照してください](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)。
+詳細については、「アプリ マニフェスト [」を参照してください](../resources/schema/manifest-schema-dev-preview.md#configurabletabs)。
+
+##### <a name="share-specific-parts-of-the-app-to-stage"></a>アプリの特定の部分をステージに共有する
+
+参加者は、共有を使用して API をステージ化することで、アプリの特定の部分を共同作業の会議ステージに共有できます。 API は、クライアント SDK 内Teamsアプリ側パネルから呼び出されます。
+
+
+<img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
+
+アプリの特定の部分をステージ間で共有するには、クライアント SDK ライブラリで関連する API をTeamsする必要があります。 詳細については [、「API リファレンス」を参照してください](API-references.md)。
 
 ### <a name="after-a-meeting"></a>会議後
 
@@ -179,3 +197,5 @@ API を使用して `userContext` 要求をルーティングするには、「S
 
 * [会議中のダイアログの設計ガイドライン](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teamsの認証フロー](../tabs/how-to/authentication/auth-flow-tab.md)
+* [共有会議ステージエクスペリエンスの設計ガイドライン](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [Microsoft サービス経由で会議にアプリを追加Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)

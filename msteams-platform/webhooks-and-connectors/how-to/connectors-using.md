@@ -5,12 +5,12 @@ description: Microsoft Teams で Office 365 コネクタを使用する方法に
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Teams o365 コネクタ
-ms.openlocfilehash: 46a0bc8ad797d5fc856e44fe662faf208cb7b5bb
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 49f14862870fae216de1a6d810eacd4b23c81540
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887393"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216196"
 ---
 # <a name="create-and-send-messages"></a>メッセージを作成して送信する
 
@@ -18,7 +18,7 @@ ms.locfileid: "60887393"
 
 ## <a name="create-actionable-messages"></a>アクション可能なメッセージを作成する
 
-アクション可能なメッセージには、カードに表示される 3 つのボタンが含まれます。 各ボタンは、入力型、テキスト フィールド、日付選択リスト、または複数選択肢リストを持つアクションを使用して、メッセージのプロパティ `potentialAction` `ActionCard` で定義されます。 各 `ActionCard` アクションには、たとえば、関連付けられたアクションがあります `HttpPOST` 。
+アクション可能なメッセージには、カードに表示される 6 つのボタンが含まれます。 各ボタンは、入力型、テキスト フィールド、日付選択リスト、または複数選択肢リストを持つアクションを使用して、メッセージのプロパティ `potentialAction` `ActionCard` で定義されます。 各 `ActionCard` アクションには、たとえば、関連付けられたアクションがあります `HttpPOST` 。
 
 コネクタ カードは、次の操作をサポートします。
 
@@ -287,3 +287,4 @@ try
 * [送信 Webhook を作成する](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [ボット メッセージのTeams制限](~/bots/how-to/rate-limit.md)
 * [アダプティブ カードを使用してタブをビルドする](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Microsoft Teams のカードの書式設定](~/task-modules-and-cards/cards/cards-format.md)

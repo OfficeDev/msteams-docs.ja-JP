@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: アダプティブ カード個人用アプリ認証データ フロー
-ms.openlocfilehash: ba8a28a25665370420b05de64d8302d8ef160687
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 27cd42b7477019a09af0c23e8a3559d2cc540305
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887561"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216098"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>アダプティブ カードを使用してタブをビルドする
 
@@ -155,7 +155,7 @@ ms.locfileid: "60887561"
                 },
                 {
                     "card": adaptiveCard2,
-                }
+                },
                 {
                     "card": adaptiveCard3
                 }  
@@ -429,7 +429,7 @@ ms.locfileid: "60887561"
 |----------------|-----------------|--------------|--------------|
 | [アダプティブ カードの表示] Teamsタブ | Microsoft Teamsタブのサンプル コードで、アダプティブ カードを表示する方法を示Teams。 |[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [タブのリンクの展開とステージ ビュー](~/tabs/tabs-link-unfurling.md)

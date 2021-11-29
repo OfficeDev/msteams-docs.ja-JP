@@ -4,12 +4,12 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: 最新の更新プログラムと機能をチームに提供する
-ms.openlocfilehash: d5c84010937478788ddc5836b53906b120cdbf4e
-ms.sourcegitcommit: 4c00801f39982e7765907f9d56e6ff7d7a1eb1e3
+ms.openlocfilehash: 9b4593fc2a0affb2e6e529a55cf51c05daca69aa
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "61156615"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216112"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
@@ -22,6 +22,7 @@ ms.locfileid: "61156615"
 
 | 日付 | Update | ここで検索する  |
 | --- | --- | --- |
+|11/29/2021|会議ステージを共有する対話型モード。|[共有会議ステージ](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage)、[会議アプリ API 参照、](apps-in-teams-meetings/API-references.md)[開発者プレビュー マニフェスト スキーマ](resources/schema/manifest-schema-dev-preview.md)|
 | 11/24/2021| 会議トークンを生成するステップ バイ ステップ ガイドが導入されました。 | 会議のアプリTeams作成> 会議用アプリを有効にして構成する > 手順ガイドを使用して、会議トークンを作成[Teams](sbs-meeting-token-generator.yml)|
 | 11/17/2021| ストアのMicrosoft Teamsガイドラインが更新されました|[ストアの検証ガイドライン](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
 | 11/17/2021| デスクトップユーザーとモバイル ユーザーの静的および動的な typeahead 検索。| • アダプティブ カードの Typeahead 検索>カード> [ビルド カードとタスク モジュール](task-modules-and-cards/cards/dynamic-search.md) </br> • カードとタスク モジュールを>アダプティブ カード>先>検索の概要[](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • カードとタスク モジュールの作成> > [とタスク モジュールの概要](task-modules-and-cards/cards-and-task-modules.md)|
@@ -204,7 +205,8 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 | **日付** | **更新** | **ここで検索する** |
 | -------- | --------- | ------------------ |
-| 11/15/2021 | 個人用タブとメッセージング拡張機能は、OutlookおよびOffice | [複数のTeamsアプリを拡張Microsoft 365](~/m365-apps/overview.md) |
+|11/29/2021|会議ステージを共有する対話型モード。|[共有会議ステージ](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage)、[会議アプリ API 参照、](apps-in-teams-meetings/API-references.md)[開発者プレビュー マニフェスト スキーマ](resources/schema/manifest-schema-dev-preview.md)|
+|11/15/2021| 個人用タブとメッセージング拡張機能は、OutlookおよびOffice | [複数のTeamsアプリを拡張Microsoft 365](~/m365-apps/overview.md) |
 |10/28/2021|ボットは、リソース固有の同意 (RSC) を使用してすべてのチャネル メッセージを受信できます。| • ボットの会話>ボット>ボットの会話> [RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md)ですべてのメッセージを受信する </br> • ボットの会話>ボット> [の概要を構築する](~/bots/how-to/conversations/conversation-basics.md) </br> • チャネルとグループ>ボット> [ボットの会話を構築する](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • アプリ マニフェスト >開発者向けプレビュー > [マニフェスト スキーマ](~/resources/schema/manifest-schema-dev-preview.md) |
 |10/19/2021|ブラウザーのデバイスのアクセス許可。| アプリの基本>ブラウザー> [デバイスのアクセス許可を使用する](concepts/device-capabilities/browser-device-permissions.md) |
 |06/21/2021|ボットを使用した個人用アプリのアンインストール動作。| ボットの会話>ボット>ボットを使用して個人用アプリで動作更新 [プログラムをアンインストールする](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|

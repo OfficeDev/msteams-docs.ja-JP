@@ -4,12 +4,12 @@ description: ディープ リンクとアプリでの使用方法について説
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: Teams ディープ リンク ディープリンク
-ms.openlocfilehash: 0d1ad5b74c434a20a1e2d7f55e970e5811c34890
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 112331c30e48ce9f151a79142c8bbec20990e03c
+ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889154"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "61216182"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成 
 
@@ -188,7 +188,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ## <a name="deep-linking-to-an-app"></a>アプリへのディープ リンク
 
-アプリがアプリストアに表示された後に、アプリのディープリンクTeamsします。 アプリを起動するリンクをTeams、アプリ ID に次の URL を追加します `https://teams.microsoft.com/l/app/<your-app-id>` 。 アプリをインストールするダイアログ ボックスが表示されます。 
+アプリがアプリストアに表示された後に、アプリのディープリンクTeamsします。 アプリを起動するリンクをTeams、アプリ ID を次の URL に追加します `https://teams.microsoft.com/l/app/<your-app-id>` 。 アプリをインストールするダイアログ ボックスが表示されます。 
   
 ## <a name="deep-linking-for-sharepoint-framework-tabs"></a>タブの詳細SharePoint Frameworkリンク
 
