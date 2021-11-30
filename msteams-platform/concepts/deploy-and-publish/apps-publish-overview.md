@@ -2,20 +2,28 @@
 title: 概要 - アプリの配布
 description: アプリの公開、アプリのアップロード、Microsoft Teamsのオプションについて説明GCC。
 ms.topic: conceptual
-author: KirtiPereira
+author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: アプリのアップロード gcc の発行を展開する
-ms.openlocfilehash: 6a4cb297c7f78ef09796adb3793ee1848236fdb6
-ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
+ms.openlocfilehash: 567abdb058f3618236840c993a0ab1a4d638c016
+ms.sourcegitcommit: 660273bc6833ab84ba7550e6b374ea6e3780459d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949111"
+ms.lasthandoff: 11/30/2021
+ms.locfileid: "61233499"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Microsoft Teams アプリを配布する
 
 アプリは、Microsoft Teams、チーム、組織、または使用するユーザーに提供できます。 配布方法は、ユーザーのニーズ、ビジネス、技術的要件、アプリの目標など、いくつかの要因によって異なります。
+
+## <a name="configure-default-install-options"></a>既定のインストール オプションを構成する
+
+既定のインストール オプションを構成します。 たとえば、アプリの主な機能がボットの場合は、ユーザーがアプリをチームにインストールするときにボットを既定の機能にすることもできます。
+
+## <a name="create-your-app-package"></a>アプリ パッケージを作成する
+
+アプリを配布Microsoft Teams、有効なアプリ パッケージが必要です。  アプリ パッケージは、アプリ マニフェストとアプリ アイコンを含 **む** **zip ファイルです**。
 
 ## <a name="upload-your-app-in-teams"></a>アップロードアプリをアプリにTeams
 
