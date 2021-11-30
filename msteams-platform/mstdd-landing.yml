@@ -4,20 +4,27 @@ summary: 開発者向けドキュメントのMicrosoft Teamsへようこそ。 M
 metadata:
   title: Microsoft Teams開発者向けドキュメント
   description: ユーザー向けアプリの構築Teams
-  ms.date: 11/10/2021
+  ms.service: service
+  ms.subservice: subservice
   ms.topic: landing-page
-  ms.openlocfilehash: 39b4f4de53d5cae2e01e5e6217fa3e05361e347c
-  ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+  ms.collection: collection
+  author: surbhigupta12
+  ms.author: msauthor
+  ms.date: 11/10/2021
+  ms.openlocfilehash: 219966cbb2398239c7875620be55e79f3f9800e7
+  ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/29/2021
-  ms.locfileid: "61216175"
+  ms.lasthandoff: 11/30/2021
+  ms.locfileid: "61227829"
 landingContent:
 - title: 最新の情報を確認する
   linkLists:
   - linkListType: concept
     links:
-    - text: 会議ステージを共有する対話型モード
+    - text: Teams ToolkitのVisual Studio Code (プレビュー)
+      url: ~/toolkit/teams-toolkit-fundamentals.md
+    - text: 会議ステージを共有する対話型モード (プレビュー)
       url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage
     - text: Microsoft Teams ストア検証ガイドライン
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
@@ -45,6 +52,8 @@ landingContent:
       url: ~/sbs-send-proactive.yml
     - text: ボットに認証を追加する手順ガイド
       url: ~/sbs-bots-with-sso.yml
+    - text: 会議トークンを生成するためのステップ バイ ステップ ガイド
+      url: ~/sbs-meeting-token-generator.yml
 - title: 作業の開始
   linkLists:
   - linkListType: get-started
