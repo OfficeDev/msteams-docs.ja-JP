@@ -5,18 +5,23 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: ef4ccb10dbfecd10610ef30971ddd43285c0cb0e
-ms.sourcegitcommit: c04a1a792773a9d5c61169c5702d94a8c478ad1c
+ms.openlocfilehash: b62dd1050dead3174738d5f72a5b667d928128b4
+ms.sourcegitcommit: 5df8c1013005305996e8ded3538e2b5845352720
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "60260633"
+ms.lasthandoff: 12/01/2021
+ms.locfileid: "61246086"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>公開済みアプリのMicrosoft Teamsする
 
 アプリが Microsoft Teamsストアに表示された状態で、今後アプリを維持する方法について考え始め、ダウンロードと使用状況を増やします。
 
 ## <a name="publish-updates-to-your-app"></a>アプリに更新プログラムを発行する
+
+> [!NOTE]
+> Teamsが進化しました。
+> 
+> 以前は、アプリ タイルで省略記号を選択してリンクをコピーしました。 更新されたストア エクスペリエンスTeams、アプリの [詳細] タブから同じ情報にアクセスできます。 この更新プログラムは、2022 年 3 月 1 日までに一般提供 (GA) される予定です。
 
 パートナー センターでは、アプリに変更 (新機能やメタデータなど) を送信できます。 これらの変更には、新しいレビュー プロセスが必要です。
 
@@ -29,7 +34,6 @@ ms.locfileid: "60260633"
 ### <a name="app-updates-requiring-user-consent"></a>ユーザーの同意を必要とするアプリの更新
 
 ユーザーがアプリをインストールする場合、アプリが機能するために必要なサービスと情報にアクセスするためのアクセス許可をアプリに付与する必要があります。 ほとんどの場合、ユーザーはこれを一度実行し、アプリの新しいバージョンが自動的にインストールされる必要があります。
-
 ただし、アプリに次の変更を加えた場合、既存のユーザーは更新プログラムをインストールするための別のアクセス許可要求を受け入れる必要があります。
 
 * ボットを追加または削除します。
@@ -40,7 +44,7 @@ ms.locfileid: "60260633"
 * 個人用タブを追加します。
 * [チャネルとグループ] タブを追加します。
 * コネクタを追加します。
-* アプリ登録 (Azure Azure Active Directory) にAD構成を変更します。 詳細については、「」 を参照してください [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo) 。
+* アプリの登録に関連する構成Azure Active Directory (Azure AD) を変更します。 詳細については、[`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo) を参照してください。
 
 ## <a name="fix-issues-with-your-published-app"></a>発行済みアプリの問題を修正する
 

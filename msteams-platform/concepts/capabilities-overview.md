@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 09/22/2020
 keywords: tabss bots メッセージング拡張機能 webhooks コネクタ gcc
-ms.openlocfilehash: 4e5d5e17984fd38f3d5c3d511784a2d8a9d955fe
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 9b60556fce448eeecb1f3b96460ea53c8abd5be5
+ms.sourcegitcommit: 5df8c1013005305996e8ded3538e2b5845352720
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948405"
+ms.lasthandoff: 12/01/2021
+ms.locfileid: "61246079"
 ---
 # <a name="understand-microsoft-teams-app-capabilities"></a>アプリMicrosoft Teamsについて
 
@@ -43,6 +43,11 @@ ms.locfileid: "60948405"
 ## <a name="government-community-cloud-gcc"></a>Government Community Cloud (GCC)
 
 Government Community Cloudは、商用環境の政府に焦点を当てたコピーです。 国防総省 (DOD) と連邦の請負業者は、厳しいサイバーセキュリティとコンプライアンス要件を満たす必要があります。 このために、DOD GCC-High連邦の請負業者のニーズを満たすために作成されたサービスです。 GCC-High DOD クラウドのコピーですが、独自の主権環境に存在します。 DOD クラウドは国防総省専用に構築されています。
+
+> [!NOTE]
+> Teamsが進化しました。
+> 
+> 以前は、タイルの省略記号を選択して LOB アプリが更新されました。 更新されたストア エクスペリエンスTeams、管理センターにログインして LOB アプリ[を更新Teamsできます](https://admin.teams.microsoft.com)。
 
 次の表に、Teams、GCC-High、DOD のGCC機能と可用性を示します。
 

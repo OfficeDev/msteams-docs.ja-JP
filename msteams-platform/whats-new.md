@@ -4,12 +4,12 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: 最新の更新プログラムと機能をチームに提供する
-ms.openlocfilehash: 5aa0d3c29f8a9e5e2d5c80cb0d7fa1b59418c784
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+ms.openlocfilehash: 85fef2df07d74bbf30e02fae5934c550de41bf01
+ms.sourcegitcommit: 5df8c1013005305996e8ded3538e2b5845352720
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61227853"
+ms.lasthandoff: 12/01/2021
+ms.locfileid: "61246072"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
@@ -22,6 +22,7 @@ ms.locfileid: "61227853"
 
 | 日付 | Update | ここで検索する  |
 | --- | --- | --- |
+| 11/30/2021 | 更新された 3.0.0 の更新プログラムSPFx手順ガイドを使用して最初のアプリTeams Toolkitビルドします。 | まず、>[を使用して最初のアプリをビルドSPFx](sbs-gs-spfx.yml) |
 | 11/30/2021 | Visual Studio Code 用 Teams ツールキット | 基本機能の> Teams Toolkitツール[Visual Studio Code > Teams Toolkit SDK](toolkit/teams-toolkit-fundamentals.md) |
 | 11/29/2021 |会議ステージを共有する対話型モード。|• 共有会議ステージTeams会議>[アプリを構築する](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • 会議アプリ API 参照Teams会議>[アプリを構築する](apps-in-teams-meetings/API-references.md) </br> • アプリ マニフェスト >開発者向けプレビュー > [開発者プレビュー マニフェスト スキーマ](resources/schema/manifest-schema-dev-preview.md)|
 | 11/24/2021 | 会議トークンを生成するステップ バイ ステップ ガイドが導入されました。 | 会議のアプリTeams作成> 会議用アプリを有効にして構成する > 手順ガイドを使用して、会議トークンを作成[Teams](sbs-meeting-token-generator.yml)|
