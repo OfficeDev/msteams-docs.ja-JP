@@ -4,12 +4,12 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: 最新の更新プログラムと機能をチームに提供する
-ms.openlocfilehash: 85fef2df07d74bbf30e02fae5934c550de41bf01
-ms.sourcegitcommit: 5df8c1013005305996e8ded3538e2b5845352720
+ms.openlocfilehash: 9138e0b73ce6b96a6e3bd4d087294785280c6383
+ms.sourcegitcommit: 49cff75a7621f8a191fedbf3b92f10b1db321e71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/01/2021
-ms.locfileid: "61246072"
+ms.locfileid: "61246707"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
@@ -22,6 +22,7 @@ ms.locfileid: "61246072"
 
 | 日付 | Update | ここで検索する  |
 | --- | --- | --- |
+|12/01/2021 | 新しいストア アイコンの導入 | • アプリの機能>設計>アプリの設計Microsoft Teams [](concepts/design/personal-apps.md)</br> • 高度な UI >を使用>アプリMicrosoft Teams UI コンポーネントを[設計する](concepts/design/design-teams-app-advanced-ui-components.md) |
 | 11/30/2021 | 更新された 3.0.0 の更新プログラムSPFx手順ガイドを使用して最初のアプリTeams Toolkitビルドします。 | まず、>[を使用して最初のアプリをビルドSPFx](sbs-gs-spfx.yml) |
 | 11/30/2021 | Visual Studio Code 用 Teams ツールキット | 基本機能の> Teams Toolkitツール[Visual Studio Code > Teams Toolkit SDK](toolkit/teams-toolkit-fundamentals.md) |
 | 11/29/2021 |会議ステージを共有する対話型モード。|• 共有会議ステージTeams会議>[アプリを構築する](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • 会議アプリ API 参照Teams会議>[アプリを構築する](apps-in-teams-meetings/API-references.md) </br> • アプリ マニフェスト >開発者向けプレビュー > [開発者プレビュー マニフェスト スキーマ](resources/schema/manifest-schema-dev-preview.md)|
@@ -43,6 +44,7 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 
 | **日付** | **更新** | **ここで検索する** |
 | -------- | --------- | ----------------|
+|12/01/2021 | 新しいストア アイコンの導入 | • アプリの機能>設計>アプリの設計Microsoft Teams [](concepts/design/personal-apps.md)</br> • 高度な UI >を使用>アプリMicrosoft Teams UI コンポーネントを[設計する](concepts/design/design-teams-app-advanced-ui-components.md) |
 | 11/24/2021| 会議トークンを生成するステップ バイ ステップ ガイドが導入されました。 | 会議のアプリTeams作成> 会議用アプリを有効にして構成する > 手順ガイドを使用して、会議トークンを作成[Teams](sbs-meeting-token-generator.yml)|
 |11/17/2021| ストアのMicrosoft Teamsガイドラインが更新されました|[ストアの検証ガイドライン](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
 |11/17/2021| デスクトップユーザーとモバイル ユーザーの静的および動的な typeahead 検索。| • アダプティブ カードの Typeahead 検索>カード> [ビルド カードとタスク モジュール](task-modules-and-cards/cards/dynamic-search.md) </br> • カードとタスク モジュールを>アダプティブ カード>先>検索の概要[](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • カードとタスク モジュールの作成> > [とタスク モジュールの概要](task-modules-and-cards/cards-and-task-modules.md)|
