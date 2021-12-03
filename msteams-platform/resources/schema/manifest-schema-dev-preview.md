@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: teams マニフェスト スキーマ Developer Preview
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: 2e88f6716621443be09eddb4f458e1e5f3f61d6d
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: 58a3e5bd240aa835a2f1d1c593d5c46e9dfcf2a4
+ms.sourcegitcommit: 96a4a118d31dcb3c273f880e282042f38757f5f7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216189"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "61285536"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>リファレンス: パブリック開発者プレビュー マニフェスト スキーマ (Microsoft Teams
 
@@ -63,18 +63,8 @@ ms.locfileid: "61216189"
   "configurableTabs": [
     {
       "configurationUrl": "https://contoso.com/teamstab/configure",
-      "scopes": [
-        "team",
-        "groupchat"
-      ],
       "canUpdateConfiguration": true,
-      "context":[
-        "channelTab",
-        "privateChatTab",
-        "meetingChatTab",
-        "meetingDetailsTab",
-        "meetingSidePanel",
-        "meetingStage"
+      "scopes": [ "team", "groupchat" ]"context":[
       ]
     }
   ],
@@ -321,7 +311,7 @@ ms.locfileid: "61216189"
 |`short`|30 文字|✔|アプリの短い表示名。|
 |`full`|100 文字||完全なアプリ名が 30 文字を超える場合に使用されるアプリの完全な名前。|
 
-## <a name="description"></a>説明
+## <a name="description"></a>description
 
 **必須**
 
