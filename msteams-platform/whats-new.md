@@ -4,12 +4,12 @@ description: アプリ内のすべての新しい開発者機能について説�
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: 最新の更新プログラムと機能をチームに提供する
-ms.openlocfilehash: 9138e0b73ce6b96a6e3bd4d087294785280c6383
-ms.sourcegitcommit: 49cff75a7621f8a191fedbf3b92f10b1db321e71
+ms.openlocfilehash: 180d1f02353b0a04a89b16e040be0927f568f916
+ms.sourcegitcommit: 696b0f86cd32f20d4d4201e4c415e31f6c103a77
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2021
-ms.locfileid: "61246707"
+ms.lasthandoff: 12/07/2021
+ms.locfileid: "61323283"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>アプリの開発者向けの新機能Microsoft Teams
 
@@ -23,14 +23,7 @@ ms.locfileid: "61246707"
 | 日付 | Update | ここで検索する  |
 | --- | --- | --- |
 |12/01/2021 | 新しいストア アイコンの導入 | • アプリの機能>設計>アプリの設計Microsoft Teams [](concepts/design/personal-apps.md)</br> • 高度な UI >を使用>アプリMicrosoft Teams UI コンポーネントを[設計する](concepts/design/design-teams-app-advanced-ui-components.md) |
-| 11/30/2021 | 更新された 3.0.0 の更新プログラムSPFx手順ガイドを使用して最初のアプリTeams Toolkitビルドします。 | まず、>[を使用して最初のアプリをビルドSPFx](sbs-gs-spfx.yml) |
-| 11/30/2021 | Visual Studio Code 用 Teams ツールキット | 基本機能の> Teams Toolkitツール[Visual Studio Code > Teams Toolkit SDK](toolkit/teams-toolkit-fundamentals.md) |
-| 11/29/2021 |会議ステージを共有する対話型モード。|• 共有会議ステージTeams会議>[アプリを構築する](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • 会議アプリ API 参照Teams会議>[アプリを構築する](apps-in-teams-meetings/API-references.md) </br> • アプリ マニフェスト >開発者向けプレビュー > [開発者プレビュー マニフェスト スキーマ](resources/schema/manifest-schema-dev-preview.md)|
-| 11/24/2021 | 会議トークンを生成するステップ バイ ステップ ガイドが導入されました。 | 会議のアプリTeams作成> 会議用アプリを有効にして構成する > 手順ガイドを使用して、会議トークンを作成[Teams](sbs-meeting-token-generator.yml)|
-| 11/17/2021 | ストアのMicrosoft Teamsガイドラインが更新されました| アプリを配布>ストアTeams検証>[に発行する](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
-| 11/17/2021| デスクトップユーザーとモバイル ユーザーの静的および動的な typeahead 検索。| • アダプティブ カードの Typeahead 検索>カード> [ビルド カードとタスク モジュール](task-modules-and-cards/cards/dynamic-search.md) </br> • カードとタスク モジュールを>アダプティブ カード>先>検索の概要[](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • カードとタスク モジュールの作成> > [とタスク モジュールの概要](task-modules-and-cards/cards-and-task-modules.md)|
-| 11/15/2021 | 個人用タブとメッセージング拡張機能は、OutlookとOfficeで実行されます (プレビュー) | [複数のTeamsアプリを拡張Microsoft 365](~/m365-apps/overview.md) |
-| 11/13/2021| ボットは、リソース固有の同意 (RSC) を使用してすべてのチャネル メッセージを受信できます。 | • ボットの会話>ボット>メッセージ> [RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md)ですべてのチャネル メッセージを受信する </br> • ボットの会話>ボットの会話> [ボットを構築する](~/bots/how-to/conversations/conversation-basics.md) </br> • チャネルとグループ>ボット> [ボットの会話を構築する](~/bots/how-to/conversations/channel-and-group-conversations.md) |
+|
 
 ## <a name="ga-features"></a>GA の機能
 
@@ -210,7 +203,6 @@ Microsoft Teamsすべてのアプリ開発者が利用できるプラットフ�
 | **日付** | **更新** | **ここで検索する** |
 | -------- | --------- | ------------------ |
 | 11/30/2021 | Visual Studio Code 用 Teams ツールキット | 基本機能の> Teams Toolkitツール[Visual Studio Code > Teams Toolkit SDK](toolkit/teams-toolkit-fundamentals.md) |
-|11/29/2021|会議ステージを共有する対話型モード。|• 共有会議ステージTeams会議>[アプリを構築する](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • 会議アプリ API 参照Teams会議>[アプリを構築する](apps-in-teams-meetings/API-references.md) </br> • アプリ マニフェスト >開発者向けプレビュー > [開発者プレビュー マニフェスト スキーマ](resources/schema/manifest-schema-dev-preview.md)|
 |11/15/2021| 個人用タブとメッセージング拡張機能は、OutlookおよびOffice | [複数のTeamsアプリを拡張Microsoft 365](~/m365-apps/overview.md) |
 |10/28/2021|ボットは、リソース固有の同意 (RSC) を使用してすべてのチャネル メッセージを受信できます。| • ボットの会話>ボット>ボットの会話> [RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md)ですべてのメッセージを受信する </br> • ボットの会話>ボット> [の概要を構築する](~/bots/how-to/conversations/conversation-basics.md) </br> • チャネルとグループ>ボット> [ボットの会話を構築する](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • アプリ マニフェスト >開発者向けプレビュー > [マニフェスト スキーマ](~/resources/schema/manifest-schema-dev-preview.md) |
 |10/19/2021|ブラウザーのデバイスのアクセス許可。| アプリの基本>ブラウザー> [デバイスのアクセス許可を使用する](concepts/device-capabilities/browser-device-permissions.md) |

@@ -1,51 +1,55 @@
 ---
 title: ボットのシングル サインオンのサポート
-description: ユーザー トークンを取得する方法について説明します。 現在、ボット開発者は、OAuth カードのサポートを受け取ってサインイン カードまたは Azure ボット サービスを使用できます。
+description: ユーザー トークンを取得する方法について説明します。 現在、ボット開発者は、OAuth カードのサポートにサインイン カードまたは Azure ボット サービスを使用できます。
 keywords: トークン、ユーザー トークン、ボットの SSO サポート、アクセス許可、Microsoft Graph、AAD
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 55f1185dfca79a2457e563bcf5ebbc035859a7f2
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: b33bb933d8f4cdfc3bdc4ba04082d992021decbb
+ms.sourcegitcommit: 696b0f86cd32f20d4d4201e4c415e31f6c103a77
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887867"
+ms.lasthandoff: 12/07/2021
+ms.locfileid: "61323373"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>ボットのシングル サインオン (SSO) のサポート
 
-Azure Active Directory (AAD) のシングル サインオン認証では、ユーザーがサインイン資格情報を入力する必要がある回数を最小限に抑え、認証トークンをサイレント 更新します。 ユーザーがアプリの使用に同意すると、別のデバイスでもう一度同意する必要はありません。自動的にサインインできます。 このフローは、Microsoft Teams SSO サポート[のフローと](../../../tabs/how-to/authentication/auth-aad-sso.md)似ていますが、ボットがトークンを要求して応答を受け[](#request-a-bot-token)取る方法のプロトコルに[違いがあります](#receive-the-bot-token)。
+Azure Active Directory (AAD) のシングル サインオン認証は、ユーザーがサインイン資格情報を入力する必要がある回数を最小限に抑えるために、認証トークンをサイレント モードで更新します。 ユーザーがアプリの使用に同意した場合は、自動的にサインインしている別のデバイスで再度同意する必要はありません。 タブとボットには、SSO のサポートのための同様のフローがあります。 ただし、ボット [はトークンを要求](#request-a-bot-token) し [、別のプロトコルで](#receive-the-bot-token) 応答を受信します。
 
 >[!NOTE]
 > OAuth 2.0 は、ユーザーや他の多くの ID プロバイダーが使用する認証と承認AAD標準です。 OAuth 2.0 の基本的な理解は、認証を使用する場合の前提条件Teams。
 
 ## <a name="bot-sso-at-runtime"></a>実行時のボット SSO
 
+次の図は、ボットでの SSO のフローを示しています。
+
 ![実行時の図でのボット SSO](../../../assets/images/bots/bots-sso-diagram.png)
 
-認証およびボット アプリケーション トークンを取得するには、次の手順を実行します。
+次の手順は、認証およびボット アプリケーション トークンの使用に役立ちます。
 
-1. ボットが、`tokenExchangeResource`プロパティを含む OAuthCard でメッセージを送信します。 ボット アプリケーションTeamsトークンを取得する必要があります。 ユーザーは、アクティブなすべてのユーザー エンドポイントでメッセージを受信します。
+1. ボットは、ボット アプリケーションのTeamsを取得するために含まれる OAuthCard を使用してメッセージ `tokenExchangeResource` を送信します。 ユーザーは、アクティブなすべてのユーザー エンドポイントでメッセージを受信します。
 
-    > [!NOTE]
-    >* ユーザーは、一度に複数のアクティブなエンドポイントを持つ可能性があります。
-    >* ボット トークンは、すべてのアクティブなユーザーのエンドポイントから受信されます。
-    >* SSO をサポートするには、アプリを個人用のスコープにインストールする必要があります。
+   > [!NOTE]
+   >
+   > * ユーザーは、一度に複数のアクティブなエンドポイントを持つ可能性があります。
+   > * ボット トークンは、すべてのアクティブなユーザーのエンドポイントから受信されます。
+   > * SSO をサポートするには、アプリを個人用のスコープにインストールする必要があります。
 
-1. 現在のユーザーが初めてボット アプリケーションを使用している場合は、要求プロンプトが表示され、ユーザーに次のいずれかの操作を要求します。
-    * 必要に応じて同意を提供します。
+
+1. 現在のユーザーが初めてボット アプリケーションを使用している場合は、次のいずれかの操作を行う要求プロンプトがユーザーに表示されます。
+    * 必要に応じて同意をしてください。
     * 2 要素認証などのステップ アップ認証を処理します。
 
 1. Teamsユーザーのボット アプリケーション トークンをAADエンドポイントから要求します。
 
 1. AADアプリケーションにボット アプリケーション トークンを送信Teamsします。
 
-1. Teamsサインイン **/tokenExchange** という名前の呼び出しアクティビティによって返される値オブジェクトの一部として、トークンをボットに送信します。
+1. Teamsサインイン **/tokenExchange** を使用して呼び出しによって返される値オブジェクトの一部として、トークンをボットに送信します。
   
 1. ボット アプリケーションの解析されたトークンは、ユーザーのメール アドレスなど、必要な情報を提供します。
   
 ## <a name="develop-an-sso-teams-bot"></a>SSO サーバー ボットTeamsする
   
-SSO ボットを開発するには、次の手順Teamsします。
+次の手順では、SSO ボットを開発Teamsします。
 
 1. [ポータルからアプリを登録AADします](#register-your-app-through-the-aad-portal)。
 1. [ボットのTeamsアプリケーション マニフェストを更新します](#update-your-teams-application-manifest-for-your-bot)。
@@ -53,74 +57,152 @@ SSO ボットを開発するには、次の手順Teamsします。
 
 ### <a name="register-your-app-through-the-aad-portal"></a>アプリを登録するには、AADポータルを使用します。
 
-アプリをポータルから登録する手順は、AAD SSO フロー[に似ています](../../../tabs/how-to/authentication/auth-aad-sso.md)。 アプリを登録するには、次の手順を実行します。
+アプリをポータルから登録する手順は、AAD SSO フロー[に似ています](../../../tabs/how-to/authentication/auth-aad-sso.md)。 次の手順では、アプリを登録する方法について説明します。
 
 1. アプリ登録ポータルで新[しいAzure Active Directoryを登録](https://go.microsoft.com/fwlink/?linkid=2083908)します。
-2. [新規 **登録] を選択します**。 [ **アプリケーションの登録] ページ** が表示されます。
-3. [アプリケーションの **登録] ページで** 、次の値を入力します。
-    1. アプリの **[名前]** を入力します。
-    2. [サポートされている **アカウントの種類] を選択し、[** 単一テナント] または [マルチテナント アカウントの種類] を選択します。
 
-        > [!NOTE]
-        >
-        > AAD アプリが Teams で認証要求を行っているのと同じテナントに登録されている場合、ユーザーは同意を求めではなく、アクセス トークンが付与されます。 ただし、アプリが別のテナントに登録されている場合、ユーザーはアクセス許可AAD同意する必要があります。
+1. [新規 **登録] を選択します**。 [ **アプリケーションの登録] ページ** が表示されます。
 
-    3. **[登録]** を選択します。
-4. [概要] ページで、アプリケーション **(クライアント) ID をコピーして保存します**。 後でアプリケーション マニフェストを更新するときにTeams必要です。
-5. [**管理**] で [**API の公開**] を選択します。 
+    ![新規登録](~/assets/images/authentication/SSO-bots-auth/app-registration.png)
+
+1. [アプリケーションの **登録] で、** 次の手順を実行します。
+
+   > [!NOTE]
+   >
+   > AAD アプリが Teams で認証要求を行っているのと同じテナントに登録されている場合、ユーザーは同意を求めではなく、アクセス トークンが付与されます。 ただし、アプリが別のテナントに登録されている場合、ユーザーはアクセス許可AAD同意する必要があります。
+
+    * アプリ **の [名前** ] を入力します。
+    * [ **サポートされているアカウントの種類 ]**(シングル テナントやマルチテナントなど) を選択します。
+    * **[登録]** を選択します。
+
+    ![アプリケーションを登録する](~/assets/images/authentication/SSO-bots-auth/register-application.png)
+
+1. [概要] ページに移動します。
+1. アプリケーション (クライアント **) ID の値をコピーします**。
+1. [ **管理]** で **、[API の公開] に移動します。**
+
+
+   > [!TIP] 
+   > アプリ マニフェストを後で更新するには、 **アプリケーション (クライアント) ID 値を保存** します。
+
 
    > [!IMPORTANT]
-    > * スタンドアロン ボットを作成する場合は、アプリケーション ID URI を次のように入力します `api://botid-{YourBotId}` 。 ここで **YourBotId** は、アプリケーション ID AADです。
-    > * ボットとタブを使用してアプリを作成する場合は、アプリケーション ID URI を次のように入力します `api://fully-qualified-domain-name.com/botid-{YourBotId}` 。
+   > * スタンドアロン ボットを作成する場合は、アプリケーション ID URI を次のように入力します `api://botid-{YourBotId}` 。 ここで **YourBotId** は、アプリケーション ID AADです。
+   > * ボットとタブを使用してアプリを作成する場合は、アプリケーション ID URI を次のように入力します `api://fully-qualified-domain-name.com/botid-{YourBotId}` 。
 
-5. アプリケーションで必要なアクセス許可を、AAD Microsoft エンドポイントに対して選択Graph。
-6. [デスクトップ、web、Teams](/azure/active-directory/develop/v2-permissions-and-consent)アプリケーションのアクセス許可を付与します。
-7. **[スコープの追加]** を選択します。
-8. 開くパネルで、スコープ名を入力してクライアント `access_as_user` アプリ **を追加します**。
+1. アプリケーションで必要なアクセス許可を、AAD Microsoft エンドポイントに対して選択Graph。
+1. [デスクトップ、web、Teams](/azure/active-directory/develop/v2-permissions-and-consent)アプリケーションのアクセス許可を付与します。
+1. **[スコープの追加]** を選択します。
+1. プロンプトが表示されるパネルで、スコープ `access_as_user` 名として **入力します**。
 
-    >[!NOTE]
-    > クライアント アプリのaccess_as_userに使用される "管理者とユーザー" スコープは、"管理者とユーザー" です。
-    >
-    > 次の重要な制限に注意する必要があります。
-    >
-    > * 電子メール、プロファイル、Graph OpenId などのユーザー レベルの API アクセス許可offline_accessのみサポートされます。 その他の Microsoft Graph スコープ (Graphなど) へのアクセスが必要な場合は、「アクセス トークンを取得する」を参照Graph `User.Read` `Mail.Read` [してください](../../../tabs/how-to/authentication/auth-aad-sso.md#get-an-access-token-with-graph-permissions)。
-    > * アプリケーションのドメイン名は、アプリケーションに登録したドメイン名と同AADがあります。
-    > * アプリごとに複数のドメインは現在サポートされていません。
-    > * ドメインを使用するアプリケーションは一般的であり、セキュリティ リスクである可能性があるため `azurewebsites.net` 、サポートされていません。
+   >[!NOTE]
+   > クライアント アプリのaccess_as_userに使用される "管理者とユーザー" スコープは、"管理者とユーザー" です。
+   >
+   > 次の重要な制限に注意する必要があります。
+   >
+   > * 電子メール、プロファイル、Graph OpenId などのユーザー レベルの API アクセス許可offline_accessのみサポートされます。 その他の Microsoft Graph スコープ (Graphなど) へのアクセスが必要な場合は、「アクセス トークンを取得する」を参照Graph `User.Read` `Mail.Read` [してください](../../../tabs/how-to/authentication/auth-aad-sso.md#get-an-access-token-with-graph-permissions)。
+   > * アプリケーションのドメイン名は、アプリケーションに登録したドメイン名と同AADがあります。
+   > * アプリごとに複数のドメインは現在サポートされていません。
+   > * ドメインを使用するアプリケーションは一般的であり、セキュリティ リスクである可能性があるため `azurewebsites.net` 、サポートされていません。
+
+1. [同意 **できるWho] で、「****管理者とユーザー」と入力します**。
+1. 次の詳細を入力して、スコープに適した値で管理者とユーザーの同意のプロンプトを構成 `access_as_user` します。
+    * **管理者の同意表示名**: Teamsのプロファイルにアクセスできるユーザー。
+    * **管理者の同意の** 説明: Teamsアプリの Web API を現在のユーザーとして呼び出す場合があります。
+    * **ユーザーの同意表示名**: Teamsにアクセスして、ユーザーに代わって要求を行うことができます。
+    * **ユーザーの同意の** 説明: Teamsと同じ権限でこのアプリの API を呼び出す場合があります。
+
+    ![管理者とユーザー](~/assets/images/authentication/SSO-bots-auth/add-a-scope.png)
+
+1. 状態が [有効] に設定 **されている必要があります**。
+
+    ![State](~/assets/images/authentication/SSO-bots-auth/enabled-state.png)
+
+1. [スコープ **の追加] を** 選択して詳細を保存します。 表示されるスコープ名の **ドメイン部分** は、前の手順で設定した **アプリケーション ID** URI と自動的に一致し、末尾に追加 `/access_as_user` する必要があります `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user` 。
+
+1. [承認済 **みクライアント アプリケーション**] で、アプリの Web アプリケーションに対して承認するアプリケーションを特定します。
+1. [クライアント **アプリケーションの追加] を選択します**。
+
+    ![クライアント アプリケーション](~/assets/images/authentication/SSO-bots-auth/add-client-application.png)
+
+1. 次の各クライアント ID を入力し、前の手順で作成した承認済みスコープを選択します。
+    * `1fec8e78-bce4-4aaf-ab1b-5451cc387264`モバイルTeamsデスクトップ アプリケーションの場合。
+    * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346`web アプリケーションTeamsの場合。
+
+    ![クライアント ID](~/assets/images/authentication/SSO-bots-auth/add-client-id.png)
+
+1. [認証] に **移動します**。
+1. [ **プラットフォーム構成] で、[** プラットフォームの **追加] を選択します**。
+
+    ![platform](~/assets/images/authentication/SSO-bots-auth/platform-configuration.png)
+
+1. **[Web]** を選びます。
+
+    ![プラットフォームの構成](~/assets/images/authentication/SSO-bots-auth/configure-platform.png)
+
+1. アプリの **リダイレクト URI** を入力します。
+
+   >[!NOTE]
+   > この URI は完全修飾ドメイン名である必要があります。 また、認証応答が送信される API ルートも続きます。 次のサンプルを実行している場合Teams URI はです `https://token.botframework.com/.auth/web/redirect` 。 詳細については [、「OAuth 2.0 承認コード フロー」を参照してください](/azure/active-directory/develop/v2-oauth2-auth-code-flow)。
+
+    ![リダイレクト uris](~/assets/images/authentication/SSO-bots-auth/configure-web.png)
+
+1. 必要な **API アクセス許可を追加します**。
+    * 左側 **の平面から [API の** アクセス許可] を選択します。
+    * [ **プラットフォームの追加]** を選択して、アプリが必要とするユーザーが委任したアクセス許可をダウンストリーム API (User.Read など) に追加します。
+
+1. 次の手順は、暗黙的な付与を有効にするのに役立ちます。
+    * 左側の **ウィンドウから** [認証] を選択します。
+    * [アクセス トークンと ID **トークン****] チェック ボックスを** オンにします。
+    
+    ![許可フロー](~/assets/images/authentication/SSO-bots-auth/grant-flow.png)
+    
+    * [保存 **] を** 選択して変更を保存します。
+
+#### <a name="update-manifest-in-azure-portal"></a>Azure portal でマニフェストを更新する
+
+次の手順では、Azure portal でボット マニフェストを更新する方法について説明します。
+
+1. 左側 **のウィンドウから** [マニフェスト] を選択します。
+1. 構成項目が **"accessTokenAcceptedVersion": 2 に設定されている必要があります**。 指定しない場合は、値を **2 に変更します**。
+
+    ![マニフェストの更新](~/assets/images/bots/update-manifest.png)
+
+
+   >[!NOTE]
+   > 既にボットをテストしている場合は、Teamsアプリからサインアウトして、ボットからサインアウトするTeams。 次に、もう一度サインインして、この変更を表示します。
+
+1. **[保存]** を選択します。
 
 #### <a name="update-the-azure-portal-with-the-oauth-connection"></a>OAuth 接続を使用して Azure ポータルを更新する
 
-OAuth 接続を使用して Azure ポータルを更新するには、次の手順を実行します。
+次の手順では、OAuth 接続を使用して Azure portal を更新します。
 
-1. Azure portal で、[アプリの登録 **] に移動します**。
+1. Azure ポータルで [**、AzureBot に移動します。**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
+1. 左側のウィンドウ **の [** 構成] に移動します。
+1. **[OAuth 接続の追加] を設定。**
 
-2. [API の **アクセス許可] に移動します**。 [**アクセス許可を追加する]** Graph委任されたアクセス許可] を選択し、次のアクセス許可を Microsoft Graph  >    >  API に追加します。
-    * User.Read (既定で有効)
-    * メール
-    * offline_access
-    * OpenId
-    * profile
+    ![構成設定](~/assets/images/authentication/SSO-bots-auth/auth-setting2.png)
 
-3. Azure ポータルで [**、AzureBot に移動します。**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
-4. 左側の **ウィンドウで** [構成] を選択します。
-5. **[OAuth 接続の追加] を設定。**
+1. 次の手順では、[新しい接続設定] **フォームに入力** します。
 
-    ![SSOBotHandle2 ビュー](~/assets\Contosoairlines123.png)
+   >[!NOTE]
+   > **暗黙的な付与** は、アプリケーションでAADがあります。
 
-6. [新しい接続設定] フォームを完了するには **、次の手順を実行** します。
+    * [新 **しい接続** 設定] **ページに「名前」と入力** します。
 
     >[!NOTE]
-    > **暗黙的な付与** は、アプリケーションでAADがあります。
+    > Name **は** 、実行時にボット SSO の手順 *5* でボット サービス コード [の設定を参照します](#bot-sso-at-runtime)。
 
-    1. [新しい **接続設定]** ページ **に名前を入力** します。 これは、実行時にボット SSO の手順 *5* でボット サービス コードの設定 [内で参照される名前です](#bot-sso-at-runtime)。
-    2. [サービス **プロバイダー] ドロップダウン** から、[v2] **Azure Active Directory選択します**。
-    3. アプリケーションのクライアント ID やクライアントシークレットなどのクライアント資格情報をAADします。
-    4. Token Exchange **URL の** 場合は、「Update your Teams アプリケーション マニフェスト」で定義されているスコープ値 [を使用します](#update-your-teams-application-manifest-for-your-bot)。 トークンのExchange URL は、このアプリケーションが SSO 用にAADされていることを SDK に示します。
-    5. [テナント **ID] ボックスに** 「共通」と *入力します*。
-    6. アプリケーションの **ダウンストリーム API への** アクセス許可を指定するときに構成されたスコープAADします。 クライアント ID とクライアント シークレットが提供されている場合、トークン ストアは、定義されたアクセス許可を持つグラフ トークンのトークンを交換します。
-    7. **[保存]** を選択します。
-
-    ![VuSSOBotConnection 設定ビュー](../../../assets/images/bots/bots-vuSSOBotConnection-settings.png)
+    * [サービス **プロバイダー] ドロップダウン** から、[v2] **Azure Active Directory選択します**。
+    * クライアント アプリケーションのクライアント IDや **クライアント** シークレットなどのクライアント資格情報をAADします。
+    * Token Exchange **URL の** 場合は、「Update your Teams アプリケーション マニフェスト」で定義されているスコープ値 [を使用します](#update-your-teams-application-manifest-for-your-bot)。 トークンのExchange URL は、このアプリケーションが SSO 用にAADされていることを SDK に示します。
+    * テナント ID **に、共通** と *入力します*。
+    * アプリケーションの **ダウンストリーム API への** アクセス許可を指定するときに構成されたスコープAADします。 クライアント ID とクライアント シークレットが提供されている場合、トークン ストアは、定義されたアクセス許可を持つグラフ トークンのトークンを交換します。
+    * **[保存]** を選択します。
+    * **[適用]** を選択します。
+   
+    ![接続設定](~/assets/images/authentication/Bot-connection-setting.png)
 
 ### <a name="update-your-teams-application-manifest-for-your-bot"></a>ボットのTeamsアプリケーション マニフェストを更新する
 
@@ -145,8 +227,8 @@ OAuth 接続を使用して Azure ポータルを更新するには、次の手�
 
 **webApplicationInfo** は、次の要素の親です。
 
-* **id** - アプリケーションのクライアント ID。 これは、アプリケーションをアプリケーションに登録する一部として取得したアプリケーション ID AAD。 このアプリケーション ID を複数のアプリと共有Teamsしてください。 使用するアプリケーション マニフェストAAD新しいアプリを作成します `webApplicationInfo` 。
-* **resource** - アプリケーションのドメインとサブドメイン。 これは、アプリを作成するときに登録したプロトコルを含む、同じ URI です。アプリの登録は、AAD `api://` `scope` [ポータルから行います](#register-your-app-through-the-aad-portal)。 リソースにパスを `access_as_user` 含めなけれ。 この URI のドメイン部分は、アプリケーション マニフェストの URL で使用されるドメインとサブドメインTeams必要があります。
+* **id** - アプリケーションのクライアント ID。 アプリケーションの登録の一環として取得したアプリケーション ID は、AAD。 このアプリケーション ID を複数のアプリと共有Teams。 使用するアプリケーション マニフェストAAD新しいアプリを作成します `webApplicationInfo` 。
+* **resource** - アプリケーションのドメインとサブドメイン。 これは、アプリを作成するときに登録したプロトコルを含む、同じ URI です。アプリを登録するには、AAD `api://` `scope` [ポータルをAADします](#register-your-app-through-the-aad-portal)。 リソースにパスを `access_as_user` 含めない。 この URI のドメイン部分は、アプリケーション マニフェストの URL で使用されるドメインとサブドメインTeams必要があります。
 
 ### <a name="add-the-code-to-request-and-receive-a-bot-token"></a>ボット トークンを要求および受信するコードを追加する
 
@@ -159,13 +241,13 @@ OAuth 接続を使用して Azure ポータルを更新するには、次の手�
 
 ユーザーが初めてアプリケーションを使用し、ユーザーの同意が必要な場合は、次のダイアログ ボックスが表示され、同意エクスペリエンスが続行されます。
 
-![[同意] ダイアログ ボックス](../../../assets/images/bots/bots-consent-dialogbox.png)
+![[同意] ダイアログ ボックス](~/assets/images/authentication/SSO-bots-auth/bot-consent-box.png)
 
 ユーザーが **[続行する]** を選択すると、次のイベントが発生します。
 
-* ボットがサインイン ボタンを定義している場合、ボットのサインイン フローは、メッセージ ストリームの OAuth カード ボタンからのサインイン フローと同様にトリガーされます。 開発者は、ユーザーの同意が必要なアクセス許可を決定する必要があります。 この方法は、 を超えるアクセス許可を持つトークンが必要な場合にお勧めします `openId` 。 たとえば、グラフ リソース用にトークンを交換する場合です。
+* ボットがサインイン ボタンを定義している場合、ボットのサインイン フローはアクティブ化され、メッセージ ストリームの OAuth カード ボタンからのサインイン フローに似ています。 開発者は、ユーザーの同意が必要なアクセス許可を決定する必要があります。 この方法は、 を超えるアクセス許可を持つトークンが必要な場合にお勧めします `openId` 。 たとえば、グラフ リソース用にトークンを交換する場合です。
 
-* ボットが OAuth カードにサインイン ボタンを提供していない場合は、最小限のアクセス許可セットに対してユーザーの同意が必要です。 このトークンは、基本認証やユーザーの電子メール アドレスの取得に役立ちます。
+* ボットが OAuth カードにサインイン ボタンを提供しない場合、一連の最小限のアクセス許可のためにユーザーの同意が必要です。 このトークンは、基本認証やユーザーの電子メール アドレスの取得に役立ちます。
 
 ##### <a name="c-token-request-without-a-sign-in-button"></a>C#ボタンを使用せずにトークン要求を実行する
 
@@ -276,7 +358,7 @@ is `turnContext.activity.value` of type [TokenExchangeInvokeRequest](/dotnet/api
     }
     ```
 
-6. a を `TokenExchangeInvokeResponse` 持 `status` つ `200` 場合、クライアントは OAuth カードを表示しない。 通常の [フロー イメージを参照してください](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true)。 その他の `status` 場合、または受信されていない場合、クライアントはユーザーに `TokenExchangeInvokeResponse` OAuth カードを表示します。 フォールバック フロー [イメージを参照してください](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true)。 これにより、ユーザーの同意のようなエラーやアンメット依存関係が発生した場合に、SSO フローが通常の OAuthCard フローに戻ります。
+6. a `TokenExchangeInvokeResponse` を持 `status` つ `200` 場合、クライアントは OAuth カードを表示しない。 通常の [フロー イメージを参照してください](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true)。 その他の `status` 場合、または受信されていない場合、クライアントはユーザーに `TokenExchangeInvokeResponse` OAuth カードを表示します。 フォールバック フロー [イメージを参照してください](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true)。 ユーザーの同意のようなエラーや依存関係が未解決の場合、このアクティビティによって SSO フローが通常の OAuthCard フローに戻ります。
 
 
 ### <a name="update-the-auth-sample"></a>auth サンプルを更新する
@@ -303,4 +385,4 @@ is `turnContext.activity.value` of type [TokenExchangeInvokeRequest](/dotnet/api
 ## <a name="code-sample"></a>コード サンプル
 |**サンプルの名前** | **説明** |**.NET** | 
 |----------------|-----------------|--------------|
-|ボット フレームワーク SDK | ボット フレームワーク SDK を使用するサンプル。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore)|
+|ボット フレームワーク SDK | ボット フレームワーク SDK を使用するサンプル。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|

@@ -4,12 +4,12 @@ description: シングル サインオン (SSO) について説明します。
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams 認証 SSO AADシングル サインオン API
-ms.openlocfilehash: 96916d526dba7a6ff7b019fb070b53943b3c216c
-ms.sourcegitcommit: 345d713a680c0e0978d7f82c0330c1fd0d6b3e7b
+ms.openlocfilehash: 3e941e905f2c75825c502f67f49bb4cec5e601fa
+ms.sourcegitcommit: 696b0f86cd32f20d4d4201e4c415e31f6c103a77
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2021
-ms.locfileid: "61151898"
+ms.lasthandoff: 12/07/2021
+ms.locfileid: "61323290"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>タブのシングル サインオン (SSO) のサポート
 
@@ -55,13 +55,6 @@ SSO API は、Web コンテンツを [埋め込むタスク](../../../task-modul
 このセクションでは、SSO を使用する [Teams] タブの作成に関連するタスクについて説明します。 これらのタスクは言語とフレームワークに依存しないタスクです。
 
 ### <a name="1-create-your-aad-application"></a>1. アプリケーションをAADする
-
-**アプリケーションをポータルの概要に [AADするには](https://azure.microsoft.com/features/azure-portal/)**
-
-1. アプリケーション[ID AAD取得します](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)。 
-1. アプリケーションで必要なアクセス許可を、AAD必要に応じてGraph。
-1. [デスクトップ、web、Teams](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources)アプリケーションのアクセス許可を付与します。
-1. [スコープのTeams] ボタンを選択し、開くパネルで [スコープ名] とaccess_as_user **を****入力** します。
 
 > [!NOTE]
 > 以下の重要な制限を知る必要があります。
