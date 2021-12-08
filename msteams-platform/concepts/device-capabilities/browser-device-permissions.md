@@ -4,12 +4,12 @@ keywords: teams アプリの機能のアクセス許可
 description: Web クライアントのアプリに対するデバイスのアクセス許可のサポートを安全に取り戻す
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: 8ace96ea1e9582c6087d0f551dc021e69a4a8de2
-ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
+ms.openlocfilehash: df0b45af341d936496b3b4cd4314f47f62f2bd3d
+ms.sourcegitcommit: a01d22a29e13e19331936e332ab7fbe6ffb1d718
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2021
-ms.locfileid: "61041721"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "61348350"
 ---
 # <a name="device-permissions-for-the-browser"></a>ブラウザーのデバイスのアクセス許可
 
@@ -39,6 +39,13 @@ Teamsでデバイスのアクセス許可を必要とするアプリでは、ユ
 
 </br>
 <img src="../../assets/images/tabs/enable-access.png" alt="Enable camera access" width="800"/>
+
+## <a name="code-sample"></a>コード サンプル
+
+|サンプルの名前 | 説明 | Node.js |
+|----------------|-----------------|--------------|
+| ブラウザーのタブ デバイスのアクセス許可 | サンプル コードは、ブラウザーのデバイスのアクセス許可を表示する方法を示しています。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
+
 
 ## <a name="see-also"></a>関連項目
 

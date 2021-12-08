@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
-ms.openlocfilehash: c66a7aad6b56ca5be50ffa20384bb648a3750ba5
-ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
+ms.openlocfilehash: 711f40ad24a0d714f4555ceb134009d6810b947f
+ms.sourcegitcommit: a01d22a29e13e19331936e332ab7fbe6ffb1d718
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949664"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "61348357"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>SaaS オファーをアプリにMicrosoft Teamsする
 
@@ -96,6 +96,9 @@ Teams ストアでアプリのサブスクリプション プランの購入が�
 ## <a name="create-your-saas-offer"></a>SaaS オファーを作成する
 
 SaaS フルフィルメント API を統合し、ユーザーがサブスクリプションを管理できるランディング ページを構築したら、取引可能な SaaS プランを公式に作成、テスト、発行します。
+
+> [!IMPORTANT]
+> Teamsは、SaaS プランの **ユーザー単位**(ユーザー/月およびユーザー/年) の価格モデルのみをサポートしています。 詳細については [、「SaaS 価格モデル」を参照してください](/azure/marketplace/plan-saas-offer#saas-pricing-models)。
 
 ### <a name="create-the-offer"></a>オファーを作成する
 
