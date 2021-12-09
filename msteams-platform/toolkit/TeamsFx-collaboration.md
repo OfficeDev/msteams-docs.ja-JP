@@ -6,12 +6,12 @@ ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: bb58e7f54fe3ad75b2a52148540119ae5dbbc9e6
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+ms.openlocfilehash: 42949c9cdd3cb8e117925f170b2ab44e3bda1a1d
+ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61228000"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391681"
 ---
 # <a name="collaborate-on-teams-project-using-teams-toolkit"></a>プロジェクトを使用Teams共同作業Teams Toolkit
 
@@ -82,9 +82,7 @@ Teams Toolkitコラボレーション機能がサポートされ、開発者 (�
       4. [アプリの登録 [Azure Active Directory]](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)**に移動** し、左側のパネルから [アプリの登録] を選択し、アプリAADします。
       5. [アプリのAAD] ページで、左側の **パネルから [所有者**] を選択します。
       6. 共同作業者を検索して削除します。
-    
 
-1. コラボレーション機能は Azure でホストされるプロジェクトのみをサポートSPFxホストされているプロジェクトは今後サポートされる予定です。
 
 1. プロジェクトに追加された共同作業者は、通知を受け取る必要があります。 Project所有者は、オフラインで共同作業者に通知する必要があります。
 

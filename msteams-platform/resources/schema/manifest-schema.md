@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: 57936f553d07d984f819c8af84c6a9bfd0a1f26f
-ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
+ms.openlocfilehash: 7847aa123687605a94cb2c83819b1ef8b67f8b65
+ms.sourcegitcommit: 0aa50ade5a044385eceff5e6b62333a78a1f8968
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "61178245"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61392373"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>リファレンス: マニフェスト スキーマのMicrosoft Teams
 
@@ -440,7 +440,7 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 文字|✔|タブ https:// する際に使用する URL を指定します。|
 |`scopes`|列挙型の配列|1|✔|現在、構成可能なタブは、スコープ `team` とスコープ `groupchat` のみをサポートしています。 |
-|`canUpdateConfiguration`|ブール値|||作成後に、タブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 既定値: **true 。**|
+|`canUpdateConfiguration`|boolean|||作成後に、タブの構成のインスタンスをユーザーが更新できるかどうかを示す値。 既定値: **true 。**|
 |`context` |列挙型の配列|6 ||タブが `contextItem` サポートされているスコープ [のセット](../../tabs/how-to/access-teams-context.md)です。 既定値: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||タブ プレビュー イメージへの相対ファイル パスを使用して、SharePoint。 サイズは 1024x768 です。 |
 |`supportedSharePointHosts`|列挙型の配列|1||タブを使用してタブを使用する方法をSharePoint。 オプションは `sharePointFullPage` 次のとおりです。 `sharePointWebPart` |
@@ -480,10 +480,10 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 |`botId`|string|64 文字|✔|Bot Framework に登録された、ボット用の一意の Microsoft アプリ ID。 ID は、アプリ全体の ID と [同じにできます](#id)。|
 |`scopes`|列挙型の配列|3|✔|ボットがエクスペリエンスを提供するのは、`team` 内のチャネルのコンテキスでなのか、グループ チャット (`groupchat`) でなのか、あるいは個別のユーザーのみをエクスペリエンスの対象にする (`personal`) のかを指定します。 これらのオプションは非排他的です。|
 |`needsChannelSelector`|ブール値|||ボットがユーザー ヒントを使用して特定のチャネルにボットを追加するかどうかを説明します。 既定値: **`false`**|
-|`isNotificationOnly`|ブール値|||ボットが会話ボットではなく、一方向性の通知専用ボットなのかどうかを示します。 既定値: **`false`**|
-|`supportsFiles`|ブール値|||パーソナル チャットでのファイルのアップロード/ダウンロード機能をボットでサポートするかどうかを示します。 既定値: **`false`**|
-|`supportsCalling`|ブール値|||ボットがオーディオ通話をサポートする場所を示す値。 **重要**: このプロパティは現在実験的です。 実験的なプロパティは完全ではない可能性があります。また、完全に利用可能になる前に変更が加わる可能性があります。  このプロパティはテストと探索の目的でのみ提供され、実稼働アプリケーションでは使用できません。 既定値: **`false`**|
-|`supportsVideo`|ブール値|||ボットがビデオ通話をサポートする場所を示す値。 **重要**: このプロパティは現在実験的です。 実験的なプロパティは完全ではない可能性があります。また、完全に利用可能になる前に変更が加わる可能性があります。  このプロパティはテストと探索の目的でのみ提供され、実稼働アプリケーションでは使用できません。 既定値: **`false`**|
+|`isNotificationOnly`|boolean|||ボットが会話ボットではなく、一方向性の通知専用ボットなのかどうかを示します。 既定値: **`false`**|
+|`supportsFiles`|boolean|||パーソナル チャットでのファイルのアップロード/ダウンロード機能をボットでサポートするかどうかを示します。 既定値: **`false`**|
+|`supportsCalling`|boolean|||ボットがオーディオ通話をサポートする場所を示す値。 **重要**: このプロパティは現在実験的です。 実験的なプロパティは完全ではない可能性があります。また、完全に利用可能になる前に変更が加わる可能性があります。  このプロパティはテストと探索の目的でのみ提供され、実稼働アプリケーションでは使用できません。 既定値: **`false`**|
+|`supportsVideo`|boolean|||ボットがビデオ通話をサポートする場所を示す値。 **重要**: このプロパティは現在実験的です。 実験的なプロパティは完全ではない可能性があります。また、完全に利用可能になる前に変更が加わる可能性があります。  このプロパティはテストと探索の目的でのみ提供され、実稼働アプリケーションでは使用できません。 既定値: **`false`**|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
@@ -526,7 +526,7 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 
 アイテムは、型のすべての要素を持つ配列 (最大 1 つの要素) です `object` 。 このブロックは、メッセージング拡張機能を提供するソリューションにのみ必要です。
 
-|名前| 種類 | 最大サイズ | 必須 | 説明|
+|名前| 型 | 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`botId`|string|64|✔|ボット フレームワークに登録されているメッセージング拡張機能をバックするボットの一意の Microsoft アプリ ID。 ID は、アプリ全体の ID と同じにできます。|
 |`commands`|オブジェクトの配列|10|✔|メッセージング拡張機能がサポートするコマンドの配列。|
@@ -547,7 +547,7 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 |`title`|string|32 文字|✔|ユーザーフレンドリーなコマンド名。|
 |`type`|string|64 文字||コマンドの種類。 または `query` の 1 `action` つ。 既定: **クエリ** です。|
 |`description`|string|128 文字||このコマンドの目的を示すためにユーザーに表示される説明。|
-|`initialRun`|ブール値|||ブール値は、コマンドがパラメーターを使用して最初に実行されるかどうかを示します。 既定値は **false** です。|
+|`initialRun`|boolean|||ブール値は、コマンドがパラメーターを使用して最初に実行されるかどうかを示します。 既定値は **false** です。|
 |`context`|文字列の配列|3||メッセージ拡張機能の呼び出し先を定義します。 `compose`、 の任意の `commandBox` 組み合 `message` わせ。 既定値は `["compose","commandBox"]` です。|
 |`fetchTask`|ブール値|||タスク モジュールを動的にフェッチする必要があるかどうかを示すブール値。 既定値は **false** です。|
 |`taskInfo`|object|||メッセージング拡張機能コマンドを使用する場合に事前読み込みするタスク モジュールを指定します。|
@@ -565,7 +565,7 @@ ID は、アプリの Microsoft が生成する一意の識別子です。 ボ�
 |`parameters.choices.title`|string|128 文字|✔|選択したタイトル。|
 |`parameters.choices.value`|string|512 文字|✔|Value of the choice.|
 
-## <a name="permissions"></a>アクセス許可
+## <a name="permissions"></a>permissions
 
 **省略** 可能 —文字列の配列
 
@@ -633,7 +633,7 @@ Teams機能するために独自の url をSharePointするアプリには、有
 > [!NOTE]
 > `isFullScreen`タブとストア アプリSharePointでのみ動作します。
 
-## <a name="activities"></a>アクティビティ
+## <a name="activities"></a>activities
 
 **省略** 可能な —object
 
@@ -755,7 +755,7 @@ Teams機能するために独自の url をSharePointするアプリには、有
 
 **最大サイズ** - 128 文字
 
-プロパティはに依存します `defaultBlockUntilAdminAction` 。 プロパティが true に設定されている場合は、既定でブロックされているアプリを許可する前に、管理者がガイドラインを取得する情報ページに `defaultBlockUntilAdminAction` HTTPS URL `publisherDocsUrl` を提供します。
+これは、既定でブロックされているアプリを許可する前に、管理者がガイドラインを取得する情報ページへの `publisherDocsUrl` HTTPS URL です。 また、テナント管理者に役立つアプリに関する指示や情報を提供するためにも使用できます。
 
 ## <a name="subscriptionoffer"></a>subscriptionOffer
 

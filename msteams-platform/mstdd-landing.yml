@@ -11,12 +11,12 @@ metadata:
   author: surbhigupta12
   ms.author: msauthor
   ms.date: 11/10/2021
-  ms.openlocfilehash: babeb1470a5488d6dd31f0d905b64220cbc66a87
-  ms.sourcegitcommit: 96a4a118d31dcb3c273f880e282042f38757f5f7
+  ms.openlocfilehash: bf0225a26d5d6a65fa3e3ae9e357eeaded27c819
+  ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 12/03/2021
-  ms.locfileid: "61285557"
+  ms.lasthandoff: 12/09/2021
+  ms.locfileid: "61391660"
 landingContent:
 - title: 最新の情報を確認する
   linkLists:
@@ -46,6 +46,8 @@ landingContent:
       url: ~/bots/how-to/conversations/send-proactive-messages.md
     - text: ボットへの認証の追加
       url: ~/bots/how-to/authentication/add-authentication.md
+    - text: 会議用アプリを有効にして構成する
+      url: ~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   - linkListType: tutorial
     links:
     - text: プロアクティブ メッセージのステップ バイ ステップ ガイド
@@ -54,7 +56,11 @@ landingContent:
       url: ~/sbs-bots-with-sso.yml
     - text: 会議トークンを生成するためのステップ バイ ステップ ガイド
       url: ~/sbs-meeting-token-generator.yml
-- title: 作業の開始
+    - text: 会議サイド パネルを作成するための手順ガイド
+      url: ~/sbs-meetings-sidepanel.yml
+    - text: 会議ステージ ビューのステップ バイ ステップ ガイド
+      url: ~/sbs-meetings-stage-view.yml
+- title: 概要
   linkLists:
   - linkListType: get-started
     links:

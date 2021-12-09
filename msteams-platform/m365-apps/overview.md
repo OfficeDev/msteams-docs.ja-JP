@@ -3,12 +3,13 @@ title: 複数のTeamsアプリを拡張Microsoft 365 (プレビュー)
 description: アプリ エクスペリエンスTeams他の使用率の高い領域に拡張Microsoft 365
 ms.date: 11/15/2021
 ms.topic: overview
-ms.openlocfilehash: 97bbec718d2bff33cfca99bf2cedaae9533fbd92
-ms.sourcegitcommit: 660273bc6833ab84ba7550e6b374ea6e3780459d
+ms.custom: m365apps
+ms.openlocfilehash: 23251d06c38df847a98d27bbc7010b76681a4ea9
+ms.sourcegitcommit: 239807b74aa222452559509d49c4f2808cd9c9ca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61233506"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391333"
 ---
 # <a name="extend-teams-apps-across-microsoft-365"></a>複数のTeamsアプリを拡張Microsoft 365
 
@@ -19,14 +20,14 @@ Microsoft Office および Outlook で実行されている Teams アプリを�
 
 このプレビューでは、次の機能を使用できます。
 
-- 既存のTeams[をデスクトップ](/microsoftteams/platform/tabs/how-to/create-personal-tab)Outlook Web 用に拡張し、ホーム (Microsoft Office) に office.com。
+- 既存の個人用Teams[をデスクトップ](/microsoftteams/platform/tabs/how-to/create-personal-tab)Outlook Web 上のユーザーに拡張し、Office on the web (office.com)。
 - 既存のTeams[ベース](/microsoftteams/platform/messaging-extensions/how-to/search-commands/define-search-command)のメッセージング拡張機能をデスクトップおよび web Outlookに拡張します。
 
 フィードバックや問題については、開発者コミュニティ チャネルに関連するMicrosoft Teams[を使用します](/microsoftteams/platform/feedback)。
 
 ## <a name="teams-personal-tabs-in-office-and-outlook"></a>Teamsの個人用タブをOfficeおよびOutlook
 
-このプレビューを使用すると、Teams 個人用タブ アプリケーションを Outlook デスクトップと web の両方で実行し、Microsoft Office Windows ホーム (office.com) で実行 office.com。
+このプレビューを使用すると、Teams 個人用タブ アプリケーションを拡張して、Outlook Windows デスクトップと web の Outlook と web の両方で実行し、Office on the web。
 
 ユーザーにサイドローディングTeams、個人用タブは、インストールされているアプリの 1 つとして、OutlookおよびOffice。
 

@@ -4,12 +4,12 @@ author: surbhigupta
 description: Teams 会議やさまざまな会議シナリオ用のアプリの有効化と構成、アプリ マニフェストの更新、会議内ダイアログ、共有会議ステージ、会議サイドパネルなどの機能の構成
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: e9411306b1d3016008cfcf3699c8b154506418a7
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: 21cbe3c038644ec3d28e4fbd68e91d0b0212eca0
+ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216081"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391667"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>会議で使用するアプリを有効Teamsする
 
@@ -127,52 +127,6 @@ API を使用して `userContext` 要求をルーティングするには、「S
 > * ユーザーが Web ビューでアクションを実行した後に自動的に終了するには [、submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) 関数を呼び出す必要があります。 これは、アプリの申請に必要な要件です。 詳細については、「SDK タスク モジュール[Teamsを参照してください](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。
 > * アプリで匿名ユーザーをサポートする場合、最初の呼び出し要求ペイロードは、要求メタデータではなく、オブジェクト内の要求メタデータに `from.id` `from` `from.aadObjectId` 依存する必要があります。 `from.id`はユーザー ID であり `from.aadObjectId` 、ユーザー Azure Active Directory (AAD) ID です。 詳細については、「タブでタスク [モジュールを使用する」を参照し](../task-modules-and-cards/task-modules/task-modules-tabs.md) 、 [タスク モジュールを作成して送信します](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
 
-#### <a name="shared-meeting-stage"></a>共有会議ステージ
-
-> [!NOTE]
-> 現時点では、この機能はパブリック開発者 [プレビューでのみ利用](../resources/dev-preview/developer-preview-intro.md) できます。
-
-共有会議ステージを使用すると、会議参加者はアプリ コンテンツをリアルタイムで操作し、共同作業できます。 次の方法で、共同作業の会議ステージにアプリを共有できます。
-
-* [アプリ全体を共有し、](#share-entire-app-to-stage)クライアントで [共有からステージへ] ボタンを使用Teamsします。
-* [アプリの特定の部分を共有し、](#share-specific-parts-of-the-app-to-stage)クライアント SDK で API を使用Teamsします。
-
-##### <a name="share-entire-app-to-stage"></a>アプリ全体をステージに共有する
-
-参加者は、アプリ側パネルの [共有からステージへの共有] ボタンを使用して、アプリ全体を共同作業の会議ステージに共有できます。
-
-
-<img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
-
-アプリ全体をステージ間で共有するには、アプリ マニフェストでフレーム コンテキストとして構成 `meetingStage` `meetingSidePanel` する必要があります。 例:
-
-```json
-"configurableTabs": [
-    {
-      "configurationUrl": "https://contoso.com/teamstab/configure",
-      "canUpdateConfiguration": true,
-      "scopes": [
-        "groupchat"
-      ],
-      "context":[
-        "meetingSidePanel",
-        "meetingStage"
-     ]
-    }
-  ]
-```
-
-詳細については、「アプリ マニフェスト [」を参照してください](../resources/schema/manifest-schema-dev-preview.md#configurabletabs)。
-
-##### <a name="share-specific-parts-of-the-app-to-stage"></a>アプリの特定の部分をステージに共有する
-
-参加者は、共有を使用して API をステージ化することで、アプリの特定の部分を共同作業の会議ステージに共有できます。 API は、クライアント SDK 内Teamsアプリ側パネルから呼び出されます。
-
-
-<img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
-
-アプリの特定の部分をステージ間で共有するには、クライアント SDK ライブラリで関連する API をTeamsする必要があります。 詳細については [、「API リファレンス」を参照してください](API-references.md)。
-
 ### <a name="after-a-meeting"></a>会議後
 
 会議の後と前の [構成は](#before-a-meeting) 同じです。
@@ -183,10 +137,13 @@ API を使用して `userContext` 要求をルーティングするには、「S
 |----------------|-----------------|--------------|----------------|
 | 会議アプリ | 会議トークン ジェネレーター アプリを使用してトークンを要求する方法を示します。 トークンが順番に生成され、各参加者が会議に参加する公平な機会を得る。 このトークンは、スクラム会議や Q セッションなど、&役立ちます。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 |会議ステージのサンプル | コラボレーション用の会議ステージにタブを表示するサンプル アプリ | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
+|会議のサイド パネル | 会議サイド パネルに議題を追加する方法を示すサンプル アプリ | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
 
-## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
+## <a name="step-by-step-guides"></a>ステップ バイ ステップ ガイド
 
-ステップ バイ[ステップ ガイドに従って](../sbs-meeting-token-generator.yml)、会議で会議トークンを生成Teamsします。
+* ステップ バイ [ステップ ガイドに従って](../sbs-meeting-token-generator.yml)、**会議で会議** トークンを生成Teamsします。
+* ステップ バイ [ステップ ガイドに従って](../sbs-meetings-sidepanel.yml)、会議で **meetingSidePanel** をTeamsします。
+* ステップ バイ[ステップ ガイドに従って](../sbs-meetings-stage-view.yml)、会議の会議で会議ステージ ビューをTeamsします。
 
 ## <a name="next-step"></a>次の手順
 

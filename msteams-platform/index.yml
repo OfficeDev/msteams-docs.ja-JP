@@ -85,6 +85,9 @@ conceptualContent:
           text: Webhook とコネクタ
     - title: 参照
       links:
+        - url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer
+          itemType: concept
+          text: トランザクション可能な SaaS Teamsでアプリを収益化する
         - url: /microsoftteams/platform/concepts/authentication/authentication
           itemType: concept
           text: ユーザー認証と SSO
@@ -123,7 +126,7 @@ conceptualContent:
         - url: /microsoftteams/platform/samples/shifts-wfm-connectors
           itemType: reference
           text: 運用対応のシフト コネクタを統合する
-    - title: Community
+    - title: コミュニティ
       links:
         - url: 'https://developer.microsoft.com/microsoft-teams/blogs/'
           itemType: overview
@@ -133,7 +136,7 @@ conceptualContent:
           text: Microsoft Teamsの呼び出し
         - url: 'https://docs.microsoft.com/en-us/teamblog/'
           itemType: whats-new
-          text: Announcements
+          text: お知らせ
         - url: /microsoftteams/platform/feedback
           itemType: overview
           text: Microsoft Teams開発者Community応答

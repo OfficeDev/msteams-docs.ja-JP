@@ -5,12 +5,12 @@ ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: a6570c2f3a6a054457ff3f64a65ae4c2398db93a
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: eab34d853c4aa10ea3c03b5c669464390e9288eb
+ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889420"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391674"
 ---
 # <a name="create-a-partner-center-developer-account"></a>パートナー センターの開発者アカウントを作成する
 
@@ -135,16 +135,6 @@ ms.locfileid: "60889420"
 
 <details>
 
-<summary><b>アカウント関連の問題に対するサポートを受け取る方法</b></summary>
-
-詳細 [については、「パートナー センターの商用マーケットプレース プログラムのサポート」を](/azure/marketplace/partner-center-portal/support) 参照してください。
-
-<br>
-
-</details>
-
-<details>
-
 <summary><b>メール フォルダーを確認し、確認メールを受信していない。次に何をする必要がありますか?</b></summary>
 
 以下の操作を試してください。
@@ -218,7 +208,7 @@ ms.locfileid: "60889420"
 
 </details>
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [ストア送信を準備する](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)

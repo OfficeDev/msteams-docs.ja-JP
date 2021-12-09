@@ -3,12 +3,13 @@ title: 複数のユーザー Teamsメッセージ拡張機能を拡張Microsoft 
 description: 検索ベースのメッセージング拡張機能を更新して、Teamsで実行する方法をOutlook
 ms.date: 11/15/2021
 ms.topic: tutorial
-ms.openlocfilehash: 6adde57b6c5f59d28234afaacc721fba3812bd24
-ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
+ms.custom: m365apps
+ms.openlocfilehash: 9a8fc4135a2238d1402e25ef31ad7ebb918475b8
+ms.sourcegitcommit: 239807b74aa222452559509d49c4f2808cd9c9ca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "60960337"
+ms.lasthandoff: 12/09/2021
+ms.locfileid: "61391358"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>複数のユーザー Teamsメッセージ拡張機能を拡張Microsoft 365
 
@@ -42,7 +43,9 @@ ms.locfileid: "60960337"
 
 既存のメッセージング拡張機能がある場合は、アプリ マニフェストでアプリ ID をテストおよび更新するために、実稼働プロジェクトのコピーまたはブランチを作成し、新しい識別子 (実稼働アプリ ID とは異なる) を使用します。
 
-このチュートリアルを完了するためにサンプル コードを使用する場合は[、「Teams](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search)メッセージング拡張機能検索サンプル」のセットアップ手順に従って、ボットをすばやくビルドして登録します。
+このチュートリアルを完了するためにサンプル コードを使用する場合は、Teams メッセージング拡張機能検索サンプルのセットアップ手順に従って[、Microsoft Teams](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search)検索ベースのメッセージング拡張機能をすばやく構築します。 または[、TeamsJS SDK v2](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2/NPM-search-connector-M365)プレビュー用に更新された同じ Teams メッセージング拡張機能検索サンプルから開始し、Outlook でメッセージング拡張機能のプレビュー[に進みます](#preview-your-message-extension-in-outlook)。 更新されたサンプルは、開発ビュー サンプル NPM Search Connector Teams Toolkit *内*  >    >  **でも使用できます**。
+
+:::image type="content" source="images/toolkit-search-sample.png" alt-text="NPM 検索コネクタのサンプル (Teams Toolkit":::
 
 ## <a name="update-the-app-manifest"></a>アプリ マニフェストを更新します。
 
