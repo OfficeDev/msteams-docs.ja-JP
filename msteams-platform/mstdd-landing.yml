@@ -11,12 +11,12 @@ metadata:
   author: surbhigupta12
   ms.author: msauthor
   ms.date: 11/10/2021
-  ms.openlocfilehash: bf0225a26d5d6a65fa3e3ae9e357eeaded27c819
-  ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
+  ms.openlocfilehash: 22d603225eb3dacc15b6491ea2daede0fdcfc690
+  ms.sourcegitcommit: 0aa50ade5a044385eceff5e6b62333a78a1f8968
   ms.translationtype: MT
   ms.contentlocale: ja-JP
   ms.lasthandoff: 12/09/2021
-  ms.locfileid: "61391660"
+  ms.locfileid: "61392366"
 landingContent:
 - title: 最新の情報を確認する
   linkLists:
@@ -56,7 +56,7 @@ landingContent:
       url: ~/sbs-bots-with-sso.yml
     - text: 会議トークンを生成するためのステップ バイ ステップ ガイド
       url: ~/sbs-meeting-token-generator.yml
-    - text: 会議サイド パネルを作成するための手順ガイド
+    - text: 会議のサイドパネルを作成するためのステップ バイ ステップ ガイド
       url: ~/sbs-meetings-sidepanel.yml
     - text: 会議ステージ ビューのステップ バイ ステップ ガイド
       url: ~/sbs-meetings-stage-view.yml

@@ -8,21 +8,21 @@ metadata:
   ms.date: 12/06/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-  nextTutorialTitle: 詳しくは、会議のアプリを有効にして構成Teamsください。
+  nextTutorialTitle: 会議用アプリを有効にして構成する方法の詳細
   ms.custom: mvc
   ms.localizationpriority: none
-  ms.openlocfilehash: c1f91362016665028888384e5b0f19a8c930d126
-  ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
+  ms.openlocfilehash: 85e4de036e10ef9d37ce96620a68548957a6373a
+  ms.sourcegitcommit: 0aa50ade5a044385eceff5e6b62333a78a1f8968
   ms.translationtype: MT
   ms.contentlocale: ja-JP
   ms.lasthandoff: 12/09/2021
-  ms.locfileid: "61392068"
+  ms.locfileid: "61392485"
 items:
 - durationInMinutes: 1
-  content: "会議 `meetingSidePanel` 中のエクスペリエンスが向上します。 オーガナイザーと発表者がさまざまなビューとアクションのセットを持つ場合に役立ちます。\n\nこのステップ バイ ステップ ガイドでは、サイド パネル アプリ **を実装して** 議題を追加および発行する方法について説明します。\n\n**会議の開催者の操作 `meetingSidePanel`**\n\n* **新しい議題項目の追加**: 新しい議題ポイントを追加する準備を提供します。\n* **追加**: サイド パネルの議題リストにテキスト入力 **として議題を** 追加します。\n* **議題の公開**: 議題リストを会議チャットに送信します。 \n\n次の出力が表示されます。\n\n ![トークン](~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png)\n"
+  content: "会議 `meetingSidePanel` 中のエクスペリエンスが向上します。 オーガナイザーと発表者がさまざまなビューとアクションのセットを持つ場合に役立ちます。\n\nこのステップ バイ ステップ ガイドでは、サイド パネル アプリ **を実装して** 議題を追加および発行する方法について説明します。\n\n**会議開催者による会議のサイドパネルのやり取り**\n\n* **新しい議題項目の追加**: 新しい議題ポイントを追加する準備を提供します。\n* **追加**: サイド パネルの議題リストにテキスト入力 **として議題を** 追加します。\n* **議題の公開**: 議題リストを会議チャットに送信します。 \n\n次の出力が表示されます。\n\n ![トークン](~/assets/images/meetings-side-panel/sidepanelondesktopmobile.png)\n"
 - title: 前提条件
   durationInMinutes: 1
-  content: "次のツールをインストールし、開発環境をセットアップしてください。  \n\n* [.NET Core SDK](https://dotnet.microsoft.com/download) バージョン 3.1\n* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)\n* [nodejs](https://nodejs.org/en/download/) LTS バージョン 10.21.0 以降\n* [ngrok](https://ngrok.com/download) の最新バージョン (devbox テストの場合のみ) または同等のトンネリング ソリューション\n* [Microsoft Teams](https://teams.microsoft.com/)アカウントを使用する\n* [リアルタイムで](https://docs.microsoft.com/en-us/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) 議題を更新する SignalR\n\n> [!NOTE]\n> サイド パネルをサポートしていないバージョンとして[、Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)のバージョン 1.7.0 以降を使用します。\n"
+  content: "次のツールをインストールし、開発環境をセットアップしてください。  \n\n* [.NET Core SDK](https://dotnet.microsoft.com/download) バージョン 3.1\n* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)\n* [nodejs](https://nodejs.org/en/download/) LTS バージョン 10.21.0 以降\n* [ngrok](https://ngrok.com/download) の最新バージョン (devbox テストの場合のみ) または同等のトンネリング ソリューション\n* [Microsoft Teams](https://teams.microsoft.com/)アカウントを使用する\n* [リアルタイムで](https://docs.microsoft.com/en-us/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc) 議題を更新する SignalR\n\n> [!NOTE]\n> 以前のバージョンでは会議のサイドパネルがサポートされていないので[、Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)のバージョン 1.7.0 以降を使用します。\n"
 - title: ローカル環境のセットアップ
   durationInMinutes: 1
   content: "リポジトリ `Microsoft-Teams-Samples` をローカル リポジトリに複製GitHub。  \n\n 1. サンプル[Microsoft Teams開きます](https://github.com/OfficeDev/Microsoft-Teams-Samples)。\n 1. [コード **] を選択します**。\n 1. ドロップダウン メニューから、[デスクトップで開く]**をGitHubします**。\n\n    ![リポジトリの複製](~/assets/images/meetings-side-panel/clonerepository1.png)\n\n 1. [複製 **] を選択します**。 \n"
@@ -40,7 +40,7 @@ items:
   content: "**2019 またはコマンド ラインを使用してサービスVisual Studio実行するには**\n\n# <a name=\"visual-studio-2019\"></a>[Visual Studio 2019](#tab/vs2019)\n\n   1. **2019 Visual Studioを起動します**。\n   1. [ファイルを **開**  >  **く]**  >  **Project/ソリューション に移動します**。\n\n      ![ファイルを開く](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)\n\n   1. **csharp** **フォルダーから [SidePanel.sln** ファイル] を選択します。\n\n      ![ソリューション ファイル](~/assets/images/meetings-side-panel/Tokenfileready.png)\n\n   1. F5 **キーを押** してプロジェクトを実行します。\n\n   1. 次の **ダイアログが表示** される場合は、[はい] を選択します。\n\n      ![信頼証明書](~/assets/images/meeting-token-generator/meeting-token-generator-certificate.png)\n\n      Web ページが開き、ボット **の準備ができました! というメッセージが表示されます**。\n\n      ![アプリの準備完了](~/assets/images/meetings-side-panel/appisready.png) \n\n    \n# <a name=\"command-line\"></a>[コマンド ライン](#tab/cli)\n\nコマンド プロンプト **ウィンドウ>で、>** サイド パネル>のサンプルに移動し、次のコマンドを入力します。\n\n```bash\ndotnet run\n```\n\n![Dotnet](~/assets/images/meetings-side-panel/dotnetruncmd.png)\n  \n"
 - title: 会議のサイドパネル アプリを会議に追加Teams
   durationInMinutes: 1
-  content: "**会議を作成してTeamsサイドパネル アプリを追加するには**\n\n1. 複製されたリポジトリで、[サイド パネル] または [マニフェスト] **> csharp >移動します**。\n\n1. Manifest フォルダー.zipファイルを含むフォルダーを **作成** します。 \n   * manifest.json\n   * icon-outline.png\n   * icon-color.png\n\n   ![Zip ファイル](~/assets/images/meetings-side-panel/zipfile.png) \n\n1. 少数の発表者と出席者との会議を作成します。\n\n1. 会議を作成したら、会議の詳細ページに移動し、[アプリの追加 **] を選択します**。\n\n   ![アプリの追加](~/assets/images/meetings-side-panel/addanapp.png) \n\n1. 開くポップアップで、[アプリの管理] **を選択します**。\n\n   ![アプリを管理する](~/assets/images/meeting-token-generator/meeting-token-generator-manageappsimage.png)\n\n1. カスタム **アプリアップロードを選択します**。 \n\n   ![アップロードカスタム アプリ](~/assets/images/meetings-side-panel/uploadcustomapp.png)\n\n1. [ **開く** ] を選択して.zip作成したファイルを **アップロード** します。\n\n   ![Zip ファイルの選択](~/assets/images/meetings-side-panel/selectzip.png)\n\n1. **[追加]** を選択します。\n\n   ![アプリを追加する](~/assets/images/meetings-side-panel/addtheapp.png)\n\n   [ **アプリの管理]** セクションには、アプリケーションの一覧が表示されます。\n\n   ![アプリの管理のアプリ](~/assets/images/meetings-side-panel/manageappsection.png)\n\n1. [会議] Teams移動します。\n\n1. **[アプリの追加]** を選択します。 \n\n   アプリの選択ページで、アプリはサイド パネルとして **表示されます**。\n\n   ![アプリのアイコン (Teams](~/assets/images/meetings-side-panel/appicon.png)\n\n1. サイド パネル **アプリを選択** します。\n\n1. **[保存]** を選択します。\n\n   ![ウェルカム アプリ](~/assets/images/meetings-side-panel/welcomeapp.png)\n\n   アプリは 、 に表示されます `meetingSidePanel` 。         \n"
+  content: "**会議を作成してTeamsサイドパネル アプリを追加するには**\n\n1. 複製されたリポジトリで、[サイド パネル] または [マニフェスト] **> csharp >移動します**。\n\n1. Manifest フォルダー.zipファイルを含むフォルダーを **作成** します。 \n   * manifest.json\n   * icon-outline.png\n   * icon-color.png\n\n   ![Zip ファイル](~/assets/images/meetings-side-panel/zipfile.png) \n\n1. 少数の発表者と出席者との会議を作成します。\n\n1. 会議を作成したら、会議の詳細ページに移動し、[アプリの追加 **] を選択します**。\n\n   ![アプリの追加](~/assets/images/meetings-side-panel/addanapp.png) \n\n1. 開くポップアップで、[アプリの管理] **を選択します**。\n\n   ![アプリを管理する](~/assets/images/meeting-token-generator/meeting-token-generator-manageappsimage.png)\n\n1. カスタム **アプリアップロードを選択します**。 \n\n   ![アップロードカスタム アプリ](~/assets/images/meetings-side-panel/uploadcustomapp.png)\n\n1. [ **開く** ] を選択して.zip作成したファイルを **アップロード** します。\n\n   ![Zip ファイルの選択](~/assets/images/meetings-side-panel/selectzip.png)\n\n1. **[追加]** を選択します。\n\n   ![アプリを追加する](~/assets/images/meetings-side-panel/addtheapp.png)\n\n   [ **アプリの管理]** セクションには、アプリケーションの一覧が表示されます。\n\n   ![アプリの管理のアプリ](~/assets/images/meetings-side-panel/manageappsection.png)\n\n1. [会議] Teams移動します。\n\n1. **[アプリの追加]** を選択します。 \n\n   アプリの選択ページで、アプリはサイド パネルとして **表示されます**。\n\n   ![アプリのアイコン (Teams](~/assets/images/meetings-side-panel/appicon.png)\n\n1. サイド パネル **アプリを選択** します。\n\n1. **[保存]** を選択します。\n\n   ![ウェルカム アプリ](~/assets/images/meetings-side-panel/welcomeapp.png)\n\n   アプリは会議の SidePanel に表示されます。         \n"
 - title: アプリを操作Teams
   durationInMinutes: 1
   content: >

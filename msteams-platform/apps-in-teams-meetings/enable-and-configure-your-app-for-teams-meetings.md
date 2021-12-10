@@ -4,12 +4,12 @@ author: surbhigupta
 description: Teams 会議やさまざまな会議シナリオ用のアプリの有効化と構成、アプリ マニフェストの更新、会議内ダイアログ、共有会議ステージ、会議サイドパネルなどの機能の構成
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 21cbe3c038644ec3d28e4fbd68e91d0b0212eca0
-ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
+ms.openlocfilehash: bca634c69df202fc0bfdd36cdd6a561441d2baaa
+ms.sourcegitcommit: 0aa50ade5a044385eceff5e6b62333a78a1f8968
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/09/2021
-ms.locfileid: "61391667"
+ms.locfileid: "61392492"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>会議で使用するアプリを有効Teamsする
 
@@ -142,7 +142,7 @@ API を使用して `userContext` 要求をルーティングするには、「S
 ## <a name="step-by-step-guides"></a>ステップ バイ ステップ ガイド
 
 * ステップ バイ [ステップ ガイドに従って](../sbs-meeting-token-generator.yml)、**会議で会議** トークンを生成Teamsします。
-* ステップ バイ [ステップ ガイドに従って](../sbs-meetings-sidepanel.yml)、会議で **meetingSidePanel** をTeamsします。
+* ステップ バイ [ステップ ガイドに従って](../sbs-meetings-sidepanel.yml)、会議の **サイド** パネルを会議にTeamsします。
 * ステップ バイ[ステップ ガイドに従って](../sbs-meetings-stage-view.yml)、会議の会議で会議ステージ ビューをTeamsします。
 
 ## <a name="next-step"></a>次の手順
