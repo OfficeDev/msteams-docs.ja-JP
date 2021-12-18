@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams apps 会議 ユーザー参加者ロール api usercontext 通知シグナル クエリ
-ms.openlocfilehash: 251f8bbd65bf8ba563f09302b16bf7285a5c4267
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: 3ec6539e8a4970a00650c1bc35d72ea656a0eb38
+ms.sourcegitcommit: 0ae40fdf74b43834160821956b754cab94a60bb7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216070"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "61558709"
 ---
 # <a name="meeting-apps-api-references"></a>会議アプリ API リファレンス
 
@@ -29,17 +29,6 @@ ms.locfileid: "61216070"
 |**GetParticipant**| ボットが会議 ID と参加者 ID によって参加者情報をフェッチできます。 |**GET** _**/v1/meetings/{meetingId}/participants/{participantsId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
 |**NotificationSignal** | ユーザー ボット チャット用の既存の会話通知 API を使用して配信される会議信号を提供できます。 これにより、会議中のダイアログ ボックスを表示するユーザー アクションに基づいて信号を送信できます。 |**POST** _**/v3/conversation/{conversationId}/activities**_|Microsoft Bot Framework SDK|
 |**会議の詳細** | 静的な会議のメタデータを取得できます。 |**GET** _**/v1/meetings/{meetingId}**_| ボット SDK |
-|**shareAppContentToStage**| 会議のアプリ側パネルから、アプリの特定の部分を会議ステージに共有できます。 |_**microsoftTeams.meeting.shareAppContentToStage((err, result) => {} , appContentUrl)**_|Microsoft Teams SDK|
-|**getAppContentStageSharingState**| 会議ステージでアプリの共有状態に関する情報を取得できます。 |_**microsoftTeams.meeting.getAppContentStageSharingState((err, result)) => {}**_|Microsoft Teams SDK|
-|**getAppContentStageSharingCapabilities**| 会議ステージに共有するアプリの機能をフェッチできます。 |_**microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result)) => {}**_|Microsoft Teams SDK|
-
-次の表に、API の Bot Framework SDK メソッドを示します。
-
-|API|Bot Framework SDK メソッド|
-|---|---|
-|**GetParticipant**| `GetMeetingParticipantAsync (Microsoft.Bot.Builder.ITurnContext turnContext, string meetingId = default, string participantId = default, string tenantId = default, System.Threading.CancellationToken cancellationToken = default);` |
-|**NotificationSignal** | `activity.TeamsNotifyUser(true, "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<title>&completionBotId=BOT_APP_ID");` |
-|**会議の詳細** | `TeamsMeetingInfo (string id = default);` |
 
 ## <a name="getusercontext-api"></a>GetUserContext API
 
@@ -57,11 +46,11 @@ API `GetParticipant` を使用すると、ボットは会議 ID と参加者 ID 
 
 `GetParticipant`API には、次のクエリ パラメーターが含まれています。
 
-|値|Type|必須|説明|
+|値|型|必須|説明|
 |---|---|----|---|
-|**meetingId**| String | はい | 会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。|
-|**participantId**| String | はい | 参加者 ID はユーザー ID です。 これは、Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO から参加者 ID を取得する方法をお勧めします。 |
-|**tenantId**| String | はい | テナントユーザーにはテナント ID が必要です。 これは、Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO からテナント ID を取得する方法をお勧めします。 | 
+|**meetingId**| 文字列 | はい | 会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。|
+|**participantId**| 文字列 | はい | 参加者 ID はユーザー ID です。 これは、Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO から参加者 ID を取得する方法をお勧めします。 |
+|**tenantId**| 文字列 | はい | テナントユーザーにはテナント ID が必要です。 これは、Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO からテナント ID を取得する方法をお勧めします。 | 
 
 ### <a name="example"></a>例
 
@@ -162,7 +151,7 @@ API の JSON 応答 `GetParticipant` 本文は次の形式です。
 
 `NotificationSignal`API には、次のクエリ パラメーターが含まれています。
 
-|値|Type|必須|説明|
+|値|型|必須|説明|
 |---|---|----|---|
 |**conversationId**| String | はい | 会話識別子は、ボット呼び出しの一部として使用できます。 |
 
@@ -241,6 +230,9 @@ API はボット サービスを通じて利用できます。
 
 ### <a name="prerequisite"></a>前提条件
 
+> [!NOTE] 
+> [会議のアプリの前提条件] に記載されているすべての前提条件をアプリが満たTeams[します](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)。
+
 会議の詳細 API を使用するには、RSC アクセス許可を取得する必要があります。 アプリ マニフェストのプロパティを構成するには、次の例を使用 `webApplicationInfo` します。
 
 ```json
@@ -252,14 +244,13 @@ API はボット サービスを通じて利用できます。
     ]
 }
  ```
- 
 ### <a name="query-parameter"></a>クエリ パラメーター
 
 会議の詳細 API には、次のクエリ パラメーターが含まれています。
 
-|値|Type|必須|説明|
+|値|型|必須|説明|
 |---|---|----|---|
-|**meetingId**| String | はい | 会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。 |
+|**meetingId**| 文字列 | はい | 会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。 |
 
 ### <a name="example"></a>例
 
@@ -309,186 +300,6 @@ GET /v1/meetings/{meetingId}
     }
 } 
 ```
-
-## <a name="shareappcontenttostage-api"></a>shareAppContentToStage API
-
-API `shareAppContentToStage` を使用すると、アプリの特定の部分を会議ステージに共有できます。 API は、クライアント SDK のTeams使用できます。
-
-### <a name="prerequisite"></a>前提条件
-
-API を使用 `shareAppContentToStage` するには、RSC アクセス許可を取得する必要があります。 アプリ マニフェストで、プロパティ `authorization` とフィールドを `name` `type` 構成 `resourceSpecific` します。 例:
-
-```json
-"authorization": {
-    "permission": { 
-    "resourceSpecific": [
-      { 
-      "name": "MeetingStage.Write.Chat",
-      "type": "Delegated"
-      }
-    ]
-   }
-}
- ```
-
-### <a name="query-parameter"></a>クエリ パラメーター
-
-`shareAppContentToStage`API には、次のパラメーターが含まれています。
-
-|値|Type|必須|説明|
-|---|---|----|---|
-|**callback**| String | はい | コールバックには、エラーと結果という 2 つのパラメーターが含まれます。 エラー *には**、SdkError* 型のエラー (エラーが発生した場合) が含まれるか、共有が成功した場合は null が含まれる場合があります。 結果 *には* 、共有が成功した場合は true の値を含め、共有が失敗した場合は null を指定できます。|
-|**appContentURL**| String | はい | ステージに共有される URL。|
-
-### <a name="example"></a>例
-
-次のコードは、API の例を `shareAppContentToStage` 示しています。
-
-# <a name="c"></a>[C#](#tab/dotnet)
-
-使用不可
-
-# <a name="javascript"></a>[JavaScript](#tab/javascript)
-
-```typescript
-
-const appContentUrl = "https://www.bing.com/";
-
-microsoftTeams.meeting.shareAppContentToStage ((err, result) => {
-if(result) {
-  this.setState({ isAppSharing: true });
- }
-if(err) {
-  this.setState({ sharingError: err, isAppSharing: false })
- }
-}, appContentUrl); 
-
-```
-
-# <a name="json"></a>[JSON](#tab/json)
-
-使用不可
-
----
-
-### <a name="response-codes"></a>応答コード
-
-`shareAppContentToStage`API は、次の応答コードを返します。
-
-|応答コード|説明|
-|---|---|
-| **500** | 内部エラー。 |
-| **501** | API は現在のコンテキストではサポートされていません。|
-| **1000** | アプリには、共有をステージに設定するための適切なアクセス許可が付与されていない。|
-
-## <a name="getappcontentstagesharingstate-api"></a>getAppContentStageSharingState API
-
-API `getAppContentStageSharingState` を使用すると、会議ステージでアプリの共有に関する情報を取得できます。
-
-### <a name="query-parameter"></a>クエリ パラメーター
-
-`getAppContentStageSharingState`API には、次のパラメーターが含まれています。
-
-|値|Type|必須|説明|
-|---|---|----|---|
-|**callback**| String | はい | コールバックには、エラーと結果という 2 つのパラメーターが含まれます。 エラー *には**、SdkError* 型のエラー (エラーが発生した場合) が含まれるか、共有が成功した場合は null が含まれる場合があります。 結果 *には* 、正常に取得されたことを示すオブジェクト、または取得に失敗したことを示す `AppContentStageSharingState` null を含められます。|
-
-### <a name="example"></a>例
-
-次のコードは、API の例を `getAppContentStageSharingState` 示しています。
-
-# <a name="c"></a>[C#](#tab/dotnet)
-
-使用不可
-
-# <a name="javascript"></a>[JavaScript](#tab/javascript)
-
-```microsoftTeams.meeting.getAppContentStageSharingState((err, result)) => {
-  if(result.isAppSharing) {
-    this.setState({ isGameSessionOver: false });
-   }
-  });
-``` 
-
-# <a name="json"></a>[JSON](#tab/json)
-
-使用不可
-
----
-
-API の JSON 応答 `getAppContentStageSharingState` 本文は次の形式です。
-
-```json
-{
-   "isAppSharing":true
-  }
-  
-```
-
-
-### <a name="response-codes"></a>応答コード
-
-`getAppContentStageSharingState`API は、次の応答コードを返します。
-
-|応答コード|説明|
-|---|---|
-| **500** | 内部エラー。 |
-| **501** | API は現在のコンテキストではサポートされていません。|
-| **1000** | アプリには、共有をステージに設定するための適切なアクセス許可が付与されていない。|
-
-## <a name="getappcontentstagesharingcapabilities-api"></a>getAppContentStageSharingCapabilities API
-
-API `getAppContentStageSharingCapabilities` を使用すると、会議ステージに共有するアプリの機能をフェッチできます。
-
-### <a name="query-parameter"></a>クエリ パラメーター
-
-以下 `getAppContentStageSharingCapabilities` のパラメーターが含まれます。
-
-|値|Type|必須|説明|
-|---|---|----|---|
-|**callback**| String | はい | コールバックには、エラーと結果という 2 つのパラメーターが含まれます。 エラー *には**、SdkError* 型のエラー (エラーが発生した場合) が含まれるか、共有が成功した場合は null が含まれる場合があります。 結果には、正常に取得されたことを示すオブジェクト、または取得に失敗したことを示す `AppContentStageSharingState` null を含められます。|
-
-### <a name="example"></a>例
-
-次のコードは、API の例を `getAppContentStageSharingCapabilities` 示しています。
-
-# <a name="c"></a>[C#](#tab/dotnet)
-
-使用不可
-
-# <a name="javascript"></a>[JavaScript](#tab/javascript)
-
-```microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result)) => {
-  if(result.doesAppHaveSharePermission) {
-    this.setState({ isAppAllowedToShare: true });
-   }
-  });
-``` 
-
-# <a name="json"></a>[JSON](#tab/json)
-
-使用不可
-
----
-
-API の JSON 応答 `getAppContentStageSharingCapabilities` 本文は次の形式です。
-
-```json
-{
-   "doesAppHaveSharePermission":true
-  }
-  
-```
-
-### <a name="response-codes"></a>応答コード
-
-`getAppContentStageSharingCapabilities`API は、次の応答コードを返します。
-
-|応答コード|説明|
-|---|---|
-| **500** | 内部エラー。 |
-| **1000** | アプリには、ステージへの共有を許可するアクセス許可が付与されていない。|
-
 ## <a name="real-time-teams-meeting-events"></a>リアルタイムの会議Teamsイベント
 
 ユーザーはリアルタイムの会議イベントを受信できます。 アプリが会議に関連付けられるとすぐに、実際の会議の開始時刻と終了時刻がボットと共有されます。
@@ -496,6 +307,9 @@ API の JSON 応答 `getAppContentStageSharingCapabilities` 本文は次の形�
 会議の実際の開始時刻と終了時刻は、スケジュールされた開始時刻と終了時刻とは異なります。 会議の詳細 API は、スケジュールされた開始時刻と終了時刻を提供します。 イベントは、実際の開始時刻と終了時刻を提供します。
 
 ### <a name="prerequisite"></a>前提条件
+
+> [!NOTE] 
+> [会議のアプリの前提条件] に記載されているすべての前提条件をアプリが満たTeams[します](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)。
 
 アプリ マニフェストには、会議の開始 `webApplicationInfo` イベントと終了イベントを受信するプロパティが必要です。 マニフェストを構成するには、次の例を使用します。
 
