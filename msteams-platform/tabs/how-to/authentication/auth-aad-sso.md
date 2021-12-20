@@ -4,12 +4,12 @@ description: シングル サインオン (SSO) について説明します。
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams 認証 SSO AADシングル サインオン API
-ms.openlocfilehash: 3e941e905f2c75825c502f67f49bb4cec5e601fa
-ms.sourcegitcommit: 696b0f86cd32f20d4d4201e4c415e31f6c103a77
+ms.openlocfilehash: f935b9632c083fe3c78f0b134c398e51d88b9cdc
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2021
-ms.locfileid: "61323290"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569505"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>タブのシングル サインオン (SSO) のサポート
 
@@ -199,3 +199,10 @@ SSO の現在の実装では、ユーザー レベルのアクセス許可に対
 
 > [!NOTE]
 > SSO は、B2C テナント内の顧客所有AADサポートされます。
+
+## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
+
+ステップ バイ [ステップ ガイドに従って、](../../../sbs-tabs-and-messaging-extensions-with-sso.yml) タブとメッセージング拡張機能を認証します。
+
+## <a name="see-also"></a>関連項目
+[Teamsシングル サインオンを使用するボット](../../../sbs-bots-with-sso.yml)

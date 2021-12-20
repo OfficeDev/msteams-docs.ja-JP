@@ -4,12 +4,12 @@ author: surbhigupta
 description: Teams 会議やさまざまな会議シナリオ用のアプリの有効化と構成、アプリ マニフェストの更新、会議内ダイアログ、共有会議ステージ、会議サイドパネルなどの機能の構成
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: bca634c69df202fc0bfdd36cdd6a561441d2baaa
-ms.sourcegitcommit: 0aa50ade5a044385eceff5e6b62333a78a1f8968
+ms.openlocfilehash: 34439eb8b9682cf3deba2b9c6451bc07a6affe41
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "61392492"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569421"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>会議で使用するアプリを有効Teamsする
 
@@ -141,9 +141,10 @@ API を使用して `userContext` 要求をルーティングするには、「S
 
 ## <a name="step-by-step-guides"></a>ステップ バイ ステップ ガイド
 
-* ステップ バイ [ステップ ガイドに従って](../sbs-meeting-token-generator.yml)、**会議で会議** トークンを生成Teamsします。
-* ステップ バイ [ステップ ガイドに従って](../sbs-meetings-sidepanel.yml)、会議の **サイド** パネルを会議にTeamsします。
-* ステップ バイ[ステップ ガイドに従って](../sbs-meetings-stage-view.yml)、会議の会議で会議ステージ ビューをTeamsします。
+* ステップ バイ[ステップ ガイドに従って](../sbs-meeting-token-generator.yml)、会議で会議トークンを生成Teamsします。
+* ステップ バイ[ステップ ガイドに従って](../sbs-meetings-sidepanel.yml)、会議のサイドパネルを新しい会議Teamsします。
+* ステップ バイ[ステップ ガイドに従って](../sbs-meetings-stage-view.yml)、会議の会議で会議ステージ ビュー Teamsします。
+* ステップ バイ[ステップ ガイドに従って](../sbs-meeting-content-bubble.yml)、会議で会議コンテンツバブルを生成Teamsします。
 
 ## <a name="next-step"></a>次の手順
 

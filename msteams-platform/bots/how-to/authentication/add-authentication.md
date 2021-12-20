@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: リソース グループ ボット チャネル登録 Azure エミュレーター ボット マニフェスト
-ms.openlocfilehash: da3a506ef4c1eeb77f97ce517a68005750026915
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 9bf0b86f3dc1a2462188106173b9a98b5798f6cc
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887902"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569526"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>認証をボットにTeamsする
 
@@ -71,7 +71,7 @@ Azure Bot Service が認証を処理する方法の詳細については、「 [
 1. 次の情報の入力を求めるメッセージが表示されます。
     1. **サブスクリプション**。 既存のサブスクリプションを使用できます。
     1. **リソース グループ**。 前に作成したグループを選択します。
-    1. **Name**. サービス プランの名前を入力します。 たとえば  *、TeamsServicePlan です*。 名前はグループ内で一意である必要があります。
+    1. **名前**。 サービス プランの名前を入力します。 たとえば  *、TeamsServicePlan です*。 名前はグループ内で一意である必要があります。
     1. **オペレーティング システム**. *[Windows* または該当する OS] を選択します。
     1. **地域**. [ *米国西部]* またはアプリケーションに近い地域を選択します。
     1. **価格レベル**. [標準 *S1] が選択* されている必要があります。 これは既定値である必要があります。
@@ -83,7 +83,7 @@ Azure Bot Service が認証を処理する方法の詳細については、「 [
 Microsoft App Id とアプリ パスワード (クライアント シークレット) がある場合は、ボット チャネル登録によって Web サービスがボット フレームワークにボットとして登録されます。
 
 > [!IMPORTANT]
-> ボットが Azure でホストされていない場合にのみ、ボットを登録する必要があります。 Azure ポータル [を使用して](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0&preserve-view=true) ボットを作成した場合、そのボットは既にサービスに登録されています。 ボット フレームワークまたは[AppStudio](~/concepts/build-and-test/app-studio-overview.md)を使用してボットを作成した場合、ボットは Azure に登録されません。 [](https://dev.botframework.com/bots/new)
+> ボットが Azure でホストされていない場合にのみ、ボットを登録する必要があります。 Azure ポータル [を使用して](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0&preserve-view=true) ボットを作成した場合、そのボットは既にサービスに登録されています。 ボット フレームワークまたは開発者ポータルを [使用して](https://dev.botframework.com/bots/new) ボットを作成した [場合、ボット](../../../concepts/build-and-test/teams-developer-portal.md) は Azure に登録されていません。
 
 [!INCLUDE [bot channels registration steps](~/includes/bots/azure-bot-channels-registration.md)]
 
@@ -95,7 +95,7 @@ Microsoft App Id とアプリ パスワード (クライアント シークレ�
 ## <a name="create-the-identity-provider"></a>ID プロバイダーを作成する
 
 認証に使用できる ID プロバイダーが必要です。
-この手順では、プロバイダーを使用Azure ADします。サポートAzure AD ID プロバイダーも使用できます。
+この手順では、サポートされている id プロバイダー Azure AD他Azure ADを使用できます。
 
 1. Azure portal [**で、**][azure-portal]左側のナビゲーション パネルで 、[次 **へ]** を選択Azure Active Directory。
     > [!TIP]
@@ -104,7 +104,7 @@ Microsoft App Id とアプリ パスワード (クライアント シークレ�
 1. 左側のパネルで、[アプリの登録 **] を選択します**。
 1. 右側のパネルで、左上の **[新規登録** ] タブを選択します。
 1. 次の情報の入力を求めるメッセージが表示されます。
-   1. **Name**. アプリケーションの名前を入力します。 たとえば  *、BotTeamsIdentity を指定できます*。 名前は一意である必要があります。
+   1. **名前**。 アプリケーションの名前を入力します。 たとえば  *、BotTeamsIdentity を指定できます*。 名前は一意である必要があります。
    1. アプリケーションの **[サポートされているアカウントの種類** ] を選択します。 任意 *の組織ディレクトリ (Any Azure AD ディレクトリ - Multitenant)* と個人用 Microsoft アカウント (Xbox など) で [アカウント] を選択します (Skypeなど)。
    1. リダイレクト **URI の場合**:<br/>
        &#x2713;Web を **選択します**。 <br/>
@@ -126,9 +126,9 @@ Microsoft App Id とアプリ パスワード (クライアント シークレ�
 
 ### <a name="configure-the-identity-provider-connection-and-register-it-with-the-bot"></a>ID プロバイダー接続を構成し、ボットに登録する
 
-注:サービス プロバイダーには、V1 と V2 の 2 つのAzure ADがありますAzure ADがあります。  2 つのプロバイダー間の違いについては、[](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison)ここで要約しますが、一般に、V2 はボットのアクセス許可の変更に関して柔軟性を提供します。  GraphAPI アクセス許可は [スコープ] フィールドに一覧表示され、新しいアクセス許可が追加されるに合って、ボットはユーザーが次のサインインで新しいアクセス許可に同意できます。  V1 の場合、OAuth ダイアログで新しいアクセス許可を求めるには、ボットの同意をユーザーが削除する必要があります。 
+注:サービス プロバイダーには、V1 と V2 の 2 つのAzure ADがありますAzure ADがあります。  2 つのプロバイダー間の違いについては、[](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison)ここで要約しますが、一般に、V2 はボットのアクセス許可の変更に関して柔軟性を提供します。  Graph API のアクセス許可が [スコープ] フィールドに表示され、新しいアクセス許可が追加されるに合って、ボットはユーザーが次のサインインの新しいアクセス許可に同意できます。  V1 の場合、OAuth ダイアログで新しいアクセス許可を求めるには、ボットの同意をユーザーが削除する必要があります。 
 
-#### <a name="azure-ad-v1"></a>Azure ADV1
+#### <a name="azure-ad-v1"></a>Azure AD V1
 
 1. Azure portal [**で、**][azure-portal]ダッシュボードからリソース グループを選択します。
 1. ボット チャネル登録リンクを選択します。
@@ -138,7 +138,7 @@ Microsoft App Id とアプリ パスワード (クライアント シークレ�
 ![SampleAppDemoBot 構成](~/assets/images/authentication/sample-app-demo-bot-configuration.png)
 1. フォームに次のように入力します。
 
-    1. **Name**. 接続の名前を入力します。 この名前は、ファイル内のボットで使用 `appsettings.json` します。 たとえば *、BotTeamsAuthADv1 .*
+    1. **名前**。 接続の名前を入力します。 この名前は、ファイル内のボットで使用 `appsettings.json` します。 たとえば *、BotTeamsAuthADv1 .*
     1. **サービス プロバイダー**。 **Azure Active Directory** を選択します。 これを選択すると、Azure AD固有のフィールドが表示されます。
     1. **クライアント ID**。上記の手順で、Azure ID プロバイダー アプリに記録したアプリケーション (クライアント) ID を入力します。
     1. **クライアント シークレット**。 上記の手順で、Azure ID プロバイダー アプリに記録したシークレットを入力します。
@@ -157,7 +157,7 @@ Microsoft App Id とアプリ パスワード (クライアント シークレ�
 
 1. **[保存]** を選択します。
 
-#### <a name="azure-ad-v2"></a>Azure ADV2
+#### <a name="azure-ad-v2"></a>Azure AD V2
 
 1. Azure portal [**で、**][azure-portal]ダッシュボードからリソース グループを選択します。
 1. ボット チャネル登録リンクを選択します。
@@ -168,7 +168,7 @@ Microsoft App Id とアプリ パスワード (クライアント シークレ�
 
 1. フォームに次のように入力します。
 
-    1. **Name**. 接続の名前を入力します。 この名前は、ファイル内のボットで使用 `appsettings.json` します。 たとえば *BotTeamsAuthADv2*.
+    1. **名前**。 接続の名前を入力します。 この名前は、ファイル内のボットで使用 `appsettings.json` します。 たとえば *BotTeamsAuthADv2*.
     1. **サービス プロバイダー**。 v2 **Azure Active Directoryを選択します**。 これを選択すると、Azure AD固有のフィールドが表示されます。
     1. **クライアント ID**。上記の手順で、Azure ID プロバイダー アプリに記録したアプリケーション (クライアント) ID を入力します。
     1. **クライアント シークレット**。 上記の手順で、Azure ID プロバイダー アプリに記録したシークレットを入力します。
@@ -309,7 +309,7 @@ Microsoft App Id とアプリ パスワード (クライアント シークレ�
 1. ボットの **URL に**、ボットのローカル URL を入力します。 通常 `http://localhost:3978/api/messages` 、.
 1. Microsoft App **ID に、ボット** のアプリ ID を入力します `appsettings.json` 。
 1. Microsoft App **のパスワードで、** からボットのアプリ パスワードを入力 `appsettings.json` します。
-1. [Connect]**を選択します**。
+1. **[接続]** を選択します。
 1. ボットが稼働した後、任意のテキストを入力してサインイン カードを表示します。
 1. **[サインイン]** ボタンを選択します。
 1. [開く URL の確認] にポップアップ **ダイアログが表示されます**。 これは、ボットのユーザー (ユーザー) が認証を許可するために使用されます。  
@@ -415,7 +415,7 @@ Microsoft Teams完全にクラウドベースの製品である場合、HTTPS �
 > ngrok を停止して再起動すると、URL が変更されます。 プロジェクトで ngrok を使用するには、使用している機能に応じて、すべての URL 参照を更新する必要があります。
  
 
-## <a name="additional-information"></a>その他の情報
+## <a name="additional-information"></a>追加情報
 
 ### <a name="teamsappmanifestmanifestjson"></a>TeamsAppManifest/manifest.json
 

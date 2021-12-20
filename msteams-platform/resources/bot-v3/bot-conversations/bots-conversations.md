@@ -5,12 +5,12 @@ ms.topic: overview
 ms.localizationpriority: medium
 keywords: teams ボット メッセージ
 ms.date: 05/20/2019
-ms.openlocfilehash: c82f96c42992f49f61d19c2bf5c6a19283e8ee95
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 49b05e48a82208776beaa0b62b1b44f8fec0652f
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156640"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569519"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>ボットと会話Microsoft Teamsする
 
@@ -51,7 +51,7 @@ ms.locfileid: "59156640"
 
 ボットはリッチ テキスト、画像、カードを送信できます。 ユーザーは、リッチ テキストと画像をボットに送信できます。 ボットで処理できるコンテンツの種類は、ボットの [Microsoft Teams設定] ページで指定できます。
 
-| フォーマット | ユーザーからボットへ  | ボットからユーザーへ |  注意事項 |
+| フォーマット | ユーザーからボットへ  | ボットからユーザーへ |  メモ |
 | --- | :---: | :---: | --- |
 | リッチ テキスト | ✔ | ✔ |  |
 | ピクチャ | ✔ | ✔ | 最大 1024× 1024 および 1 MB (PNG、JPEG、または GIF 形式)。アニメーション GIF はサポートされていません。 |
@@ -76,7 +76,7 @@ a の省略可能なプロパティを設定して、メッセージのテキス
 
 画像は、PNG、JPEG、または GIF 形式× 1024、1024、1 MB 以下の値を使用できます。アニメーション GIF はサポートされていません。
 
-XML を使用して、各イメージの高さと幅を指定することをお勧めします。 Markdown を使用する場合、画像サイズの既定値は 256 ×256 です。 例:
+XML を使用して、各イメージの高さと幅を指定することをお勧めします。 Markdown を使用する場合、画像サイズの既定値は 256 ×256 です。 次に例を示します。
 
 * `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>` を使う
 * `![Duck on a rock](http://aka.ms/Fo983c)` を使用しないでください
@@ -158,12 +158,10 @@ XML を使用して、各イメージの高さと幅を指定することをお�
 
 このオブジェクトには、Teams固有の情報が含まれているので、チームとチャネルの ID の決定的 `channelData` なソースです。 これらの ID をキャッシュし、ローカル ストレージのキーとして使用する必要があります。
 
-オブジェクトは、チャネルの外部で行なうので、個人の会話 `channelData` のメッセージには含まれません。
-
 ボットに送信されるアクティビティの一般的な channelData オブジェクトには、次の情報が含まれます。
 
-* `eventType`Teamsイベントの種類。チャネル変更イベントの場合[にのみ渡されます](~/resources/bot-v3/bots-notifications.md#channel-updates)。
-* `tenant.id`Azure Active Directory ID。すべてのコンテキストで渡されます。
+* `eventType`Teamsの種類を指定します。チャネル変更イベントの場合[にのみ渡されます](~/resources/bot-v3/bots-notifications.md#channel-updates)。
+* `tenant.id`Azure Active Directory ID を使用します。すべてのコンテキストで渡されます。
 * `team` 個人チャットではなく、チャネル コンテキストでのみ渡されます。
   * `id` チャネルの GUID。
   * `name` チームの名前。チームの名前変更イベントの場合 [にのみ渡されます](~/resources/bot-v3/bots-notifications.md#team-name-updates)。

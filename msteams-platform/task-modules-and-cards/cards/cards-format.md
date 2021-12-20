@@ -5,12 +5,12 @@ keywords: teams ボット カードの形式
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 409ba9c0d96712ff3f5cfc40b64b406ce57818b8
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: 0c012db1936907c15082ba12c4d681540483bb95
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216231"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569533"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams のカードの書式設定
 
@@ -296,7 +296,7 @@ Information masking プロパティを使用して、アダプティブ カー�
 > [!NOTE]
 > この機能は、クライアント側の情報マスキングのみをサポートします。 マスクされた入力テキストは、ボットの構成中に指定された HTTPS エンドポイント アドレスにクリア テキスト [として送信されます](../../build-your-first-app/build-bot.md#4-register-your-bot-endpoint)。
 
-アダプティブ カードで情報をマスクするには、型に `isMasked` プロパティを追加 **し** `Input.Text` 、その値を true に設定 **します**。
+アダプティブ カードで情報をマスクするには、型にプロパティを追加し、その値を `style`  `input.text` Password に **設定します**。
 
 #### <a name="sample-adaptive-card-with-masking-property"></a>マスキング プロパティを持つアダプティブ カードのサンプル
 

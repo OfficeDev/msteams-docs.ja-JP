@@ -4,14 +4,14 @@ description: 開発者向けドキュメントの概要Microsoft Teams概要
 ms.localizationpriority: medium
 ms.topic: reference
 keywords: Microsoft Teamsサンプル
-ms.openlocfilehash: ee986f04ca760fbf9090f7dda94e1378261db7df
-ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
+ms.openlocfilehash: cb498d176b8893a2097e19ca76120a33a5f7221c
+ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "61075480"
+ms.lasthandoff: 12/20/2021
+ms.locfileid: "61569498"
 ---
-# <a name="get-started"></a>開始する
+# <a name="get-started"></a>概要
 
 カスタマイズされたアプリの構築と展開を開始する方法について、Microsoft Teams!
 
@@ -25,7 +25,7 @@ ms.locfileid: "61075480"
 
 選択できるビルド環境のオプションと、アプリの構築と展開へのロード マップを簡単にTeamsしましょう。
 
-:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="アプリをビルドして展開するための基本的な手順を示Teams図。":::
+:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="アプリをビルドして展開するための基本的な手順を示Teams図":::
 
 ## <a name="app-capabilities-and-development-tools"></a>アプリの機能と開発ツール
 
@@ -60,3 +60,7 @@ Yeoman ワークフローを既に理解している場合は [、YoTeams Yeoman
 
 > [!div class="nextstepaction"]
 > [アプリを使用TeamsアプリをNode.js](../sbs-gs-nodejs.yml)
+
+## <a name="see-also"></a>関連項目
+
+[Microsoft Teamsサンプル](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
