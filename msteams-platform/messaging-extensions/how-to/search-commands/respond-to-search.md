@@ -5,12 +5,12 @@ description: コード例とサンプルを使用して、Microsoft Teams拡張�
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: aac38b2578463a97704b18c854a07ec78e1d4948
-ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
+ms.openlocfilehash: b31bdc167c033785edc971b96b2ebfc44c265995
+ms.sourcegitcommit: f7eebbf863370b10493d822e23969ff689b1145e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "61178280"
+ms.lasthandoff: 12/21/2021
+ms.locfileid: "61573415"
 ---
 # <a name="respond-to-search-command"></a>検索コマンドに応答する
 
@@ -115,10 +115,9 @@ Teamsは、次のカードの種類をサポートしています。
 
 ヒーロー カードまたはサムネイル カードの場合、呼び出しアクションを除き、ボタンやタップなどの他のアクションはプレビュー カードではサポートされません。
 
-アダプティブ カードまたは Ofiice 365 Connector カードを送信するには、プレビューを含める必要があります。 プロパティ `preview` は、ヒーロー カードまたはサムネイル カードである必要があります。 オブジェクトで preview プロパティを指定しない場合 `attachment` 、プレビューは生成されません。
+アダプティブ カードまたはコネクタ カードをOffice 365するには、プレビューを含める必要があります。 プロパティ `preview` は、ヒーロー カードまたはサムネイル カードである必要があります。 オブジェクトで preview プロパティを指定しない場合 `attachment` 、プレビューは生成されません。
 
-ヒーロー カードとサムネイル カードの場合は、プレビュー プロパティを指定する必要が生じ、既定でプレビューが生成されます。 次の使用例は、メッセージング拡張機能にリンクを貼り付けするときにリンクの分岐解除機能を表示します。  
-![リンクのリンク解除](~/assets/images/messaging-extension/link-unfurl.gif)
+ヒーロー カードとサムネイル カードの場合は、プレビュー プロパティを指定する必要が生じ、既定でプレビューが生成されます。
 
 ### <a name="response-example"></a>応答の例
 

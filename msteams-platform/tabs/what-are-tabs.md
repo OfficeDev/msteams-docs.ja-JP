@@ -5,14 +5,14 @@ description: Teams プラットフォームでのカスタム タブの概要
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: a562fc9afbcb70d31eab78bfe4831af2a9b490c4
-ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
+ms.openlocfilehash: b48091c0701ebbb84e87e80cc3378f788bcb30b3
+ms.sourcegitcommit: f7eebbf863370b10493d822e23969ff689b1145e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "61391730"
+ms.lasthandoff: 12/21/2021
+ms.locfileid: "61573564"
 ---
-# <a name="microsoft-teams-tabs"></a>Microsoft Teams のタブ
+# <a name="build-tabs-for-microsoft-teams"></a>ビルド タブのMicrosoft Teams
 
 タブとは、Microsoft Teams に組み込まれている Teams 対応 Web ページです。 これらは簡単な HTML <iFrame \> タブで、アプリ マニフェストで宣言されたドメインを指していて、チーム内のチャネル、グループ チャット、または個々のユーザー用の個人用アプリとして追加できます。 アプリにカスタム タブを含めて独自の Web コンテンツを Teams に埋め込んだり、Teams 固有の機能を Web コンテンツに追加したりできます。 詳細については[、「JavaScript クライアント SDK Teamsを参照してください](/javascript/api/overview/msteams-client)。
 
@@ -36,7 +36,7 @@ ms.locfileid: "61391730"
 アダプティブ カードを使用してタブを構築し、ボットTeams別のバックエンドを不要にすることで、すべてのアプリ機能を一元化できます。 [ステージ ビュー](~/tabs/tabs-link-unfurling.md)は、新しい UI コンポーネントで、画面全体で開いたコンテンツをTeamsタブとしてピン留めできます。既存の[リンクの分岐](~/tabs/tabs-link-unfurling.md)解除サービスが更新され、アダプティブ カードとチャット サービスを使用して URL をタブに変換するために使用されます。 会話型[](~/tabs/how-to/conversational-tabs.md)のサブエンティティを使用して会話タブを作成できます。ユーザーは、タブ全体を議論する代わりに、特定のタスク、患者、販売機会などのサブエンティティに関する会話をタブで行えます。タブ余白を[変更して、](~/resources/removing-tab-margins.md)アプリを構築する際の開発者のエクスペリエンスを向上できます。 タブをドラッグして目的の位置に配置すると、個人用アプリやチャネルまたはグループ チャット内のタブ位置を交換できます。 
 
 > [!NOTE]
-> **投稿**、 **ファイル**、 **チャットの** タブを自分の位置から移動できない。
+> **投稿** と **ファイル** を自分の位置から移動できない。
 
 ## <a name="tab-features"></a>タブ機能
 
