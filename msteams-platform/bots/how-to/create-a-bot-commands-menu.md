@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: コマンド メニューでメッセージの会話を作成@mention
-ms.openlocfilehash: bf9b6963b482a335175e5a9c75b6c928104ead26
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 739d2c32bb07ef63c6e886c0172d24a7fbc17ff6
+ms.sourcegitcommit: aede47694894d281f6b725083bc0b46ab0e4846d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888238"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "61591793"
 ---
 # <a name="bot-command-menus"></a>ボット コマンド メニュー
 
@@ -163,7 +163,7 @@ ms.locfileid: "60888238"
 
 ## <a name="handle-menu-commands-in-your-bot-code"></a>ボット コードでメニュー コマンドを処理する
 
-グループまたはチャネル内のボットは、メッセージに記載されている場合 `@botname` にのみ応答します。 グループスコープまたはチャネル スコープ内でボットが受信したメッセージには、返されるメッセージ テキストに名前が含まれるすべてのメッセージが含まれる。 返されるコマンドを処理する前に、メッセージ解析でボットが受信したメッセージの名前を処理する必要があります。
+グループまたはチャネル内のボットは、メッセージに記載されている場合 `@botname` にのみ応答します。 グループスコープまたはチャネル スコープ内でボットが受信したメッセージには、その名前がメッセージ テキストに含まれるすべてのメッセージが含まれる。 返されるコマンドを処理する前に、メッセージ解析でボットが受信したメッセージの名前を処理する必要があります。
 
 > [!NOTE]
 > コード内のコマンドを処理するために、通常のメッセージとしてボットに送信されます。 ユーザーからの他のメッセージを処理する場合と同じ方法で処理する必要があります。 コード内のコマンドは、あらかじめ構成されたテキストをテキスト ボックスに挿入します。 その後、ユーザーはそのテキストを他のメッセージと同じ方法で送信する必要があります。
@@ -213,7 +213,7 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 > [!NOTE]
 > マニフェストからコマンドを削除する場合は、変更を実装するためにアプリを再展開する必要があります。 一般に、マニフェストに対する変更を行う場合は、アプリを再展開する必要があります。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [チャネルとグループ会話](~/bots/how-to/conversations/channel-and-group-conversations.md)

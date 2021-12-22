@@ -6,12 +6,12 @@ ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: e11c66e7e818a090305e320ed21080c7ca897856
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+ms.openlocfilehash: c8899131876533fdd64913fb6790cff9f258e8f5
+ms.sourcegitcommit: aede47694894d281f6b725083bc0b46ab0e4846d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61228083"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "61591786"
 ---
 # <a name="use-teams-toolkit-to-provision-cloud-resources"></a>クラウド Teams Toolkitプロビジョニングに使用する
 
@@ -51,7 +51,7 @@ TeamsFx は、Azure と Microsoft 365クラウドとのシームレスな統合�
 
 ### <a name="resource-creation-for-teams-tab-application"></a>タブ アプリケーションのリソースTeams作成
 
-|リソース|このリソースの目的| Notes |
+|リソース|このリソースの目的| メモ |
 |----------|--------------------------------|-----|
 | Azure Storage | タブ アプリをホストする | 静的 Web アプリ機能でタブ アプリをホストできます |
 | 簡易認証の App Service プラン | 簡易認証の Web アプリをホストする | |
@@ -60,7 +60,7 @@ TeamsFx は、Azure と Microsoft 365クラウドとのシームレスな統合�
 
 ### <a name="resources-created-for-teams-bot-or-messaging-extension-application"></a>ボットまたはメッセージングTeamsアプリケーション用に作成されたリソース
 
-|リソース|このリソースの目的| Notes |
+|リソース|このリソースの目的| メモ |
 |----------|--------------------------------|-----|
 | Azure Bot Service | ボット フレームワークにアプリをボットとして登録する | ボットをデバイスに接続Teams |
 | ボットの App Service プラン | ボットの Web アプリをホストする | |
@@ -69,7 +69,7 @@ TeamsFx は、Azure と Microsoft 365クラウドとのシームレスな統合�
 
 ### <a name="resources-created-when-including-azure-functions-in-the-project"></a>Azure Functions をプロジェクトに含めたときに作成されるリソース
 
-|リソース|このリソースの目的| Notes |
+|リソース|このリソースの目的| メモ |
 |----------|--------------------------------|-----|
 | 関数アプリの App Service プラン | 関数アプリをホストする | |
 | 関数アプリ | Azure Functions API をホストする | ユーザー割り当て ID を追加して、他の Azure リソースに簡単にアクセスできます。 <br /> CORS ルールを追加してタブ アプリからの要求を許可する <br /> アプリからの要求のみを許可する認証設定をTeamsします。 <br /> TeamsFx SDK で必要な [アプリ設定を追加する](https://www.npmjs.com/package/@microsoft/teamsfx) |
@@ -78,7 +78,7 @@ TeamsFx は、Azure と Microsoft 365クラウドとのシームレスな統合�
 
 ### <a name="resources-created-when-including-azure-sql-in-the-project"></a>Azure リソースをプロジェクトに含SQLリソース
 
-|リソース|このリソースの目的| Notes |
+|リソース|このリソースの目的| メモ |
 |----------|--------------------------------|-----|
 | Azure SQL Server | インスタンスのホストAzure SQL Databaseする | すべての Azure サービスがサーバーにアクセスできます |
 | Azure SQL データベース | アプリのデータを保存する | ユーザーに割り当てられた ID の読み取り/書き込みアクセス許可をデータベースに付与する |
@@ -94,20 +94,20 @@ TeamsFx は、Azure と Microsoft 365クラウドとのシームレスな統合�
 | API 管理 OAuth サーバー | Microsoft Power Platform が関数アプリでホストされている API にアクセスできます |
 | ユーザー割り当て ID | Azure サービス間要求の認証 |
 
-## <a name="customize-resource-provision"></a>リソースのプロビジョニングをカスタマイズする 
+## <a name="customize-resource-provision"></a>リソースのプロビジョニングをカスタマイズする
 
 Teams Toolkitでは、インフラストラクチャをコード アプローチとして使用して、プロビジョニングする Azure リソースと、それらを構成する方法を定義できます。 このツールは、ARMを使用して Azure リソースを定義します。 このARMテンプレートは、プロジェクトのインフラストラクチャと構成を定義する一連のバイセップ ファイルです。 カスタム テンプレートを変更して作成された Azure リソースARMできます。 詳細については [、「bicep ドキュメント」を参照してください](/azure/azure-resource-manager/bicep.md)。 アプリケーションを使用ARM、次の 2 セットのファイル、パラメーター、およびテンプレートを変更します。
 
 * ARMパラメーター ファイル ( ) は、テンプレートにパラメーターを渡すフォルダー `azure.parameters.{your_env_name}.json` `.fx/configs` にあります。
 * ARMにあるテンプレート ファイルには、 `templates/azure` 次のファイルが含まれます。
 
-| ファイル | 何を行う | カスタマイズを許可する |
+| File | 何を行う | カスタマイズを許可する |
 | --- | --- | --- |
-| main.bicep | Azure リソースプロビジョニングのエントリ ポイントを提供する | はい |
+| main.bicep | Azure リソースプロビジョニングのエントリ ポイントを提供する | 必要 |
 | provision.bicep | Azure リソースの作成と構成 | はい |
 | config.bicep | TeamsFx に必要な構成を Azure リソースに追加する | はい |
-| provision/xxx.bicep | によって使用される各 Azure リソースを作成および構成する `provision.bicep` | はい |
-| teamsfx/xxx.bicep | 使用する各 Azure リソースに TeamsFx 必要な構成を追加する `config.bicep`| 不要 |
+| provision/xxx.bicep | によって使用される各 Azure リソースを作成および構成する `provision.bicep` | 必要 |
+| teamsfx/xxx.bicep | 使用する各 Azure リソースに TeamsFx 必要な構成を追加する `config.bicep`| いいえ |
 
 > [!NOTE]
 > リソースまたは機能をプロジェクトに追加すると、 `teamsfx/xxx.bicep` 再生成されます。 そのため、カスタマイズ不可としてマークされています。 これらのバイセップ ファイルを実際に変更する必要がある場合は、Git を使用してファイルに対する変更を追跡し、リソースや機能の追加中に変更を失わないので、お勧 `teamsfx/xxx.bicep` めします。
@@ -306,7 +306,7 @@ TeamsFx ツールが正しく機能していることを確認するには、カ
 
 5. これで、出力バインドを使用してAzure Storage更新できます。
 
-## <a name="faq"></a>FAQ
+## <a name="faq"></a>よくあるご質問 (FAQ)
 
 <br>
 

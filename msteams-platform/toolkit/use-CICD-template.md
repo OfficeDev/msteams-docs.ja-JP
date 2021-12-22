@@ -6,17 +6,16 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: ff5b77b7891d36e63f2fd3260ae114cbf536384d
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+ms.openlocfilehash: acd12a96365bf97bd419045c415e71efd3a118e2
+ms.sourcegitcommit: aede47694894d281f6b725083bc0b46ab0e4846d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61228045"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "61591779"
 ---
 # <a name="ci-or-cd-support-for-teams-application-developers"></a>アプリケーション開発者向けの CI または CD Teamsサポート
 
 TeamsFx は、アプリケーションの構築中に開発ワークフローをTeamsします。 このドキュメントには、GitHub、Azure Devops、Jenkins などの最も一般的な開発プラットフォームを使用して CI または CD パイプラインをセットアップする場合に使用するツールと事前に作成されたテンプレートが用意されています。
-
 
 |ツールとテンプレート|説明|
 |---|---|
@@ -57,7 +56,7 @@ CD ワークフローをカスタマイズするには、次の手順を実行�
 
 ### <a name="environment-variables"></a>環境変数
 
-次の手順で環境変数を作成GitHub。
+次の手順で環境変数を作成GitHub:
 
 1. [プロジェクトの設定 **] ページ設定[** 環境]**セクションに** 移動し、[新しい環境]**を選択します**。
 1. 環境の名前を入力します。 テンプレートに指定されている既定の環境名はです `test_environment` 。 [続行 **する環境の** 構成] を選択します。
@@ -72,7 +71,9 @@ CD ワークフローをカスタマイズするには、次の手順を実行�
 |Microsoft 365_ACCOUNT_NAME|アプリMicrosoft 365発行するためのユーザー アカウントTeamsです。|
 |Microsoft 365_ACCOUNT_PASSWORD|アカウントのパスワードMicrosoft 365します。|
 |Microsoft 365_TENANT_ID|アプリを作成/発行するTeamsを特定します。 マルチテナント アカウントを持ち、別のテナントを使用しない限り、この値はオプションです。 テナント ID を[検索する方法の詳細Microsoft 365参照してください](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)。|
-> 注: ワークフローで使用される資格情報に対して多要素認証とセキュリティの既定値が無効になっている場合は、「Configure [Microsoft 365/Azure Credentials」](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret)を参照してください。
+
+> [!NOTE]
+> ワークフローで使用される資格情報Microsoft 365多要素認証とセキュリティの既定値を無効にした場合は、「Configure [Microsoft 365/Azure Credentials」](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret)を参照してください。
 
 ## <a name="set-up-ci-or-cd-pipelines-with-azure-devops"></a>CI または CD PipelinesをAzure DevOps
 
@@ -146,7 +147,6 @@ steps:
   env:
     AZURE_ACCOUNT_NAME: $(AZURE_ACCOUNT_NAME)
     AZURE_ACCOUNT_PASSWORD: $(AZURE_ACCOUNT_PASSWORD)
-    AZURE_SUBSCRIPTION_ID: $(AZURE_SUBSCRIPTION_ID)
     AZURE_TENANT_ID: $(AZURE_TENANT_ID)
     Microsoft 365_ACCOUNT_NAME: $(Microsoft 365_ACCOUNT_NAME)
     Microsoft 365_ACCOUNT_PASSWORD: $(Microsoft 365_ACCOUNT_PASSWORD)
@@ -184,7 +184,8 @@ steps:
 |Microsoft 365_ACCOUNT_PASSWORD|アカウントのパスワードMicrosoft 365します。|
 |Microsoft 365_TENANT_ID|アプリを作成/発行するTeamsを特定します。 マルチテナント アカウントを持ち、別のテナントを使用しない限り、この値はオプションです。 テナント ID を[検索する方法の詳細Microsoft 365参照してください](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)。|
 
-> !メモ ワークフローで使用される資格情報の多要素認証とセキュリティの既定値を無効にした場合は、「Configure [Microsoft 365/Azure Credentials」](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret)を参照してください。
+> [!NOTE]
+> 通常は 1 回しか実行されないので、プロビジョニング 手順は CD テンプレートには含まれません。 プロビジョニングは、TeamsFx CLI Teams Toolkit、または分離されたワークフローを使用して実行できます。 プロビジョニング後にコミットし (プロビジョニングの結果はフォルダー内に保存されます)、今後の使用のためにファイルの内容を `.fx` `.fx/states/{YOUR_ENV_NAME}.userdata` Jenkins 資格情報に保存してください。
 
 ## <a name="ci-or-cd-pipeline-templates-in-jenkins"></a>Jenkins の CI または CD パイプライン テンプレート
 
@@ -249,6 +250,19 @@ steps:
 > CI モード `@microsoft/teamsfx-cli` で実行を有効にするには、次の方法でオン `CI_ENABLED` にします `export CI_ENABLED=true` 。 CI モードでは `@microsoft/teamsfx-cli` 、CI または CD に対応しています。
 
 環境変数に Azure と M365 の資格情報を安全に設定してください。 たとえば、ソース コード リポジトリGitHub使用している場合は[、Github Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets)を使用して環境変数を安全に格納できます。
+
+## <a name="publish-teams-app-using-teams-developer-portal"></a>開発者ポータルTeams使用してアプリTeamsを発行する
+
+アプリのマニフェスト ファイルに関連Teams変更がある場合は、マニフェストを更新するために、Teams アプリを再度発行できます。
+
+アプリを手動Teams発行するには、開発者ポータルを使用してアプリ[をTeams。](https://dev.teams.microsoft.com/home)
+
+**アプリを発行するには**
+
+1. 対応する[アカウントを使用Teams](https://dev.teams.microsoft.com)開発者ポータルにサインインします。
+2. を選択して、アプリ パッケージを zip にインポートします `App -> Import app -> Replace` 。
+3. アプリ一覧でターゲット アプリを選択すると、概要ページに移動します。
+4. 選択してアプリを発行する `Publish -> Publish to your org`
 
 ### <a name="see-also"></a>関連項目
 
