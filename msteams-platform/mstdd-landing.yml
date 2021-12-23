@@ -11,12 +11,12 @@ metadata:
   author: surbhigupta12
   ms.author: msauthor
   ms.date: 11/10/2021
-  ms.openlocfilehash: ad54e998cf2097686ad41ba4db9fe44f44219ff2
-  ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+  ms.openlocfilehash: 34d96608af3a7f42063f4a1bf8d1c713b5f42266
+  ms.sourcegitcommit: 9a06b09ea4bd265096b35c792aa43cf1c0671d5d
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 12/20/2021
-  ms.locfileid: "61569491"
+  ms.lasthandoff: 12/23/2021
+  ms.locfileid: "61598942"
 landingContent:
 - title: 最新の情報を確認する
   linkLists:
@@ -54,6 +54,8 @@ landingContent:
       url: tabs/how-to/authentication/auth-aad-sso.md
   - linkListType: tutorial
     links:
+    - text: アダプティブ カードを使用したタブのステップバイステップ ガイド
+      url: ~/sbs-tab-with-adaptive-cards.yml
     - text: プロアクティブ メッセージのステップ バイ ステップ ガイド
       url: ~/sbs-send-proactive.yml
     - text: ボットに認証を追加する手順ガイド
@@ -68,7 +70,7 @@ landingContent:
       url: ~/sbs-meetings-stage-view.yml
     - text: タブとメッセージング拡張機能の SSO を使用したステップ バイ ステップ ガイド
       url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml
-- title: 概要
+- title: 作業の開始
   linkLists:
   - linkListType: get-started
     links:

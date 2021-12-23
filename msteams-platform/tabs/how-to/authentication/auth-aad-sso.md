@@ -4,12 +4,12 @@ description: シングル サインオン (SSO) について説明します。
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams 認証 SSO AADシングル サインオン API
-ms.openlocfilehash: f935b9632c083fe3c78f0b134c398e51d88b9cdc
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: 107c03fe7ecb2bc6fd38ede7797e6a2a23bac012
+ms.sourcegitcommit: 9a06b09ea4bd265096b35c792aa43cf1c0671d5d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569505"
+ms.lasthandoff: 12/23/2021
+ms.locfileid: "61598949"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>タブのシングル サインオン (SSO) のサポート
 
@@ -200,9 +200,10 @@ SSO の現在の実装では、ユーザー レベルのアクセス許可に対
 > [!NOTE]
 > SSO は、B2C テナント内の顧客所有AADサポートされます。
 
-## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
+## <a name="step-by-step-guides"></a>ステップ バイ ステップ ガイド
 
-ステップ バイ [ステップ ガイドに従って、](../../../sbs-tabs-and-messaging-extensions-with-sso.yml) タブとメッセージング拡張機能を認証します。
+* ステップ バイ [ステップ ガイドに従って、](../../../sbs-tabs-and-messaging-extensions-with-sso.yml) タブとメッセージング拡張機能を認証します。
+* アダプティブ カード [を使用してタブを作成するには、](../../../sbs-tab-with-adaptive-cards.yml) ステップ バイ ステップ ガイドに従います。
 
 ## <a name="see-also"></a>関連項目
 [Teamsシングル サインオンを使用するボット](../../../sbs-bots-with-sso.yml)
