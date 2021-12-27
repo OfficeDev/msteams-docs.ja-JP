@@ -5,12 +5,12 @@ description: Teams 環境内の IDE を使用してボットをローカルで�
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 087c18998df0a24470da8059eb107343588c3aa0
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: d9ddbb3aa4f93b8981fbba03d879a77f4175e81e
+ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569575"
+ms.lasthandoff: 12/27/2021
+ms.locfileid: "61608462"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>ボットをローカルでテストおよびデバッグする
 
@@ -74,6 +74,9 @@ ngrok http <port> -host-header=localhost:<port>
 
    3. ボットを選択し、メッセージを送信して会話を開始します。
       または、ボットのアプリ ID をアプリの左上の検索ボックスに貼り付Microsoft Teams。 検索結果ページで、[ユーザー] タブに移動してボットを表示し、チャットを開始します。
+
+> [!Note]
+> ボットMicrosoft Teamsを参照するには、アプリのサイドローディング[を有効にしてください](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)。      
 
 ボットは、オブジェクト内のチーム情報なしで、ボットをチームに追加すると `conversationUpdate` イベントを受け取 `channelData` ります。
 

@@ -4,12 +4,12 @@ keywords: teams アプリの機能のアクセス許可
 description: Web クライアントのアプリに対するデバイスのアクセス許可のサポートを安全に取り戻す
 localization_priority: Normal
 ms.topic: how-to
-ms.openlocfilehash: df0b45af341d936496b3b4cd4314f47f62f2bd3d
-ms.sourcegitcommit: a01d22a29e13e19331936e332ab7fbe6ffb1d718
+ms.openlocfilehash: a7517a5d393495ae64a43f08f7201f45a994c770
+ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "61348350"
+ms.lasthandoff: 12/27/2021
+ms.locfileid: "61608385"
 ---
 # <a name="device-permissions-for-the-browser"></a>ブラウザーのデバイスのアクセス許可
 
@@ -46,6 +46,9 @@ Teamsでデバイスのアクセス許可を必要とするアプリでは、ユ
 |----------------|-----------------|--------------|
 | ブラウザーのタブ デバイスのアクセス許可 | サンプル コードは、ブラウザーのデバイスのアクセス許可を表示する方法を示しています。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
 
+## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
+
+ステップ バイ[ステップ ガイドに従って](../../sbs-tab-device-permissions.yml)、タブ デバイスにアクセス許可を付与Microsoft Teams。
 
 ## <a name="see-also"></a>関連項目
 

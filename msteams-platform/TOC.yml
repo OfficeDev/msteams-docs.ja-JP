@@ -237,9 +237,6 @@
           href: bots/how-to/conversations/subscribe-to-conversation-events.md
         - name: プロアクティブ メッセージ
           href: bots/how-to/conversations/send-proactive-messages.md
-          items:
-            - name: ステップ バイ ステップのガイド
-              href: sbs-send-proactive.yml
         - name: ボット メッセージの書式を設定する
           href: bots/how-to/format-your-bot-messages.md
         - name: ボット メッセージの更新および削除
@@ -376,8 +373,6 @@
           href: bots/how-to/authentication/add-authentication.md
         - name: SSO 認証を利用する
           href: bots/how-to/authentication/auth-aad-sso-bots.md
-        - name: SSO を使用したボットのステップ バイ ステップ ガイド
-          href: sbs-bots-with-sso.yml
     - name: メッセージング拡張機能
       items:
         - name: メッセージング拡張機能に認証を追加する

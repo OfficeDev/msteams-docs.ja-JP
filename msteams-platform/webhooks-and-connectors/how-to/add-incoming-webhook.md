@@ -6,12 +6,12 @@ keywords: teams タブ送信 Webhook
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 7ce63a8456eaa0b15bd03999dd06c202ee689113
-ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
+ms.openlocfilehash: 9950bc6d610b280deff83c44ff26a5e4359d3b98
+ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "61178301"
+ms.lasthandoff: 12/27/2021
+ms.locfileid: "61608392"
 ---
 # <a name="create-incoming-webhook"></a>受信 Webhook の作成
 
@@ -57,6 +57,8 @@ ms.locfileid: "61178301"
     ![一意の URL](~/assets/images/url.png)
 
 Webhook は、webhook チャネルTeamsできます。
+
+[受信 Webhook] または [受信コネクタ] を使用して、アクション可能なOffice 365送信できます。 詳細については、「メッセージの作成 [と送信」を参照してください](/webhooks-and-connectors/how-to/connectors-using?tabs=cURL)。
 
 > [!NOTE]
 > [Teams] で、[設定メンバーのアクセス許可] [コネクタの作成、更新、および削除をメンバーに許可する] を選択して、チーム メンバーがコネクタを追加、変更、または削除できます  >    >  。

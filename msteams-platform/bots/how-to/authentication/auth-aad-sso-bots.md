@@ -4,12 +4,12 @@ description: ユーザー トークンを取得する方法について説明し
 keywords: トークン、ユーザー トークン、ボットの SSO サポート、アクセス許可、Microsoft Graph、AAD
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: b33bb933d8f4cdfc3bdc4ba04082d992021decbb
-ms.sourcegitcommit: 696b0f86cd32f20d4d4201e4c415e31f6c103a77
+ms.openlocfilehash: f9934d29b9c340b7e3543420a212ae9304ba22e6
+ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2021
-ms.locfileid: "61323373"
+ms.lasthandoff: 12/27/2021
+ms.locfileid: "61608448"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>ボットのシングル サインオン (SSO) のサポート
 
@@ -386,3 +386,7 @@ is `turnContext.activity.value` of type [TokenExchangeInvokeRequest](/dotnet/api
 |**サンプルの名前** | **説明** |**.NET** | 
 |----------------|-----------------|--------------|
 |ボット フレームワーク SDK | ボット フレームワーク SDK を使用するサンプル。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|
+
+## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
+
+ステップ バイ [ステップ ガイドに従](../../../sbs-bots-with-sso.yml)って、SSO 認証を有効にしたボットを作成できます。

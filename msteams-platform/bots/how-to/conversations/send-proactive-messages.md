@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
 Keywords: メッセージの送信、ユーザー ID の取得、チャネル ID の取得、会話 ID の取得
-ms.openlocfilehash: 3cd3388491ef8a29a3fb6321dbe778149eda66fb
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: c4e84461af7a9e162c9f4391a01284be735392de
+ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889301"
+ms.lasthandoff: 12/27/2021
+ms.locfileid: "61608441"
 ---
 # <a name="proactive-messages"></a>プロアクティブ メッセージ
 
@@ -267,7 +267,7 @@ POST /v3/conversations
 
 次の表は、基本的な会話フローを Teams アプリケーションに組み込む簡単なコード サンプルと、Teams のチャネルで新しい会話スレッドを作成する方法を示Teams。
 
-| **サンプル名** | **説明** | **.NET** | **Node.js** | **Python** |
+| **サンプルの名前** | **説明** | **.NET** | **Node.js** | **Python** |
 |---------------|--------------|--------|-------------|--------|
 | Teams での会話の基本  | 1 対 1 のプロアクティブ メッセージの送信など、Teams での会話の基本をご紹介します。| [表示](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [表示](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
 | チャネルで新しいスレッドを開始する | チャネルで新しいスレッドを作成する方法をご紹介します。 | [表示](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [表示](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [表示](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
@@ -278,7 +278,11 @@ POST /v3/conversations
 > [!div class="nextstepaction"]
 > [Teams のプロアクティブ メッセージング コード サンプル](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
 
-## <a name="next-step"></a>次のステップ
+## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
+
+ボットから [プロアクティブ なメッセージ](../../../sbs-send-proactive.yml)を送信するのに役立つ、ステップ バイ ステップ ガイドに従います。
+
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [ボット メッセージの書式を設定する](~/bots/how-to/format-your-bot-messages.md)
