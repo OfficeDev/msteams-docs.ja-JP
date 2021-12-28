@@ -4,12 +4,12 @@ description: 開発者向けドキュメントの概要Microsoft Teams概要
 ms.localizationpriority: medium
 ms.topic: reference
 keywords: Microsoft Teamsサンプル
-ms.openlocfilehash: cb498d176b8893a2097e19ca76120a33a5f7221c
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: 9ab8014ad528aff9cfb0f4e271332981af3a8f29
+ms.sourcegitcommit: 8935f54330c5685ff091f01e2b18c70502428054
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569498"
+ms.lasthandoff: 12/28/2021
+ms.locfileid: "61619803"
 ---
 # <a name="get-started"></a>概要
 
@@ -63,4 +63,5 @@ Yeoman ワークフローを既に理解している場合は [、YoTeams Yeoman
 
 ## <a name="see-also"></a>関連項目
 
-[Microsoft Teamsサンプル](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+* [Microsoft Teamsサンプル](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
+* [Git および GitHub リソース](/contribute/additional-resources)
