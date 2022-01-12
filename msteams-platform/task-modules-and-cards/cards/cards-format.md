@@ -5,12 +5,12 @@ keywords: teams ボット カードの形式
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 0c012db1936907c15082ba12c4d681540483bb95
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: e157828f4070e13b4ef73fb02fef8d1cebdb34fa
+ms.sourcegitcommit: 241b17ee149aa096b787d12afa8bcbd16513b0e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569533"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61934013"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams のカードの書式設定
 
@@ -232,7 +232,6 @@ Teamsでは、既存のメンション ID に加えて、AAD オブジェクト 
 > [!NOTE]    
 > * 受信 Webhook のスキーマでユーザーのメンションを有効にして、オブジェクト ID AAD UPN をサポートします。 
 > * UI/UX の変更は、ユーザーがオブジェクト ID と UPN を使用AADには必要ありません。      
-> * ユーザーメンションを含む受信 Webhook のアクティビティ フィード通知は、今後のリリースで利用できます。
 
 ##### <a name="example"></a>例 
 
