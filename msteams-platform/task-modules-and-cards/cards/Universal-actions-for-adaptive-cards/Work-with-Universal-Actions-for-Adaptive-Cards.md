@@ -3,12 +3,12 @@ title: アダプティブ カードのユニバーサル アクションの操�
 description: コード サンプルを使用して、アダプティブ カードのスキーマ for UniversalActions、Refresh モデル、下位互換性など、アダプティブ カードのユニバーサル アクションを操作する方法について説明します。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 488385d560f3f372be8149631eb1a04a3642f65f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 1ae881ff985d39865da480596ea2ece8bef2b075
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888364"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768609"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>アダプティブ カードのユニバーサル アクションの操作
 
@@ -73,6 +73,16 @@ ms.locfileid: "60888364"
 * UserIds プロパティが追加されたのは、Teams チャネルには多数のメンバーが含まれる場合があるためです。 すべてのメンバーが同時にチャネルを視聴している場合、無条件に自動更新を行うと、ボットへの同時呼び出しが多くなります。 最大 `userIds` *60 (60)* のユーザー MRIs で自動更新を取得する必要があるユーザーを識別するには、常にプロパティを含める必要があります。
 
 * 会話メンバーのTeams MRIs をフェッチできます。 アダプティブ カードの更新セクションで userIds リストに追加する方法の詳細については、「fetch roster or [user profile」を参照してください](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)。
+
+ 次の例を使用して、チャネル、グループ チャット、または 1:1 チャットのユーザーの MRI を取得できます。
+
+ 1. TurnContext の使用  
+
+     `userMRI= turnContext.Activity.From.Id`
+
+ 1. GetMemberAsync メソッドの使用
+  
+     `var member = await TeamsInfo.GetMemberAsync(turnContext, turnContext.Activity.From.Id, cancellationToken);var userMRI = member.Id;`
 
 * サンプルの Teams ユーザー MRI は `29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk` です
 

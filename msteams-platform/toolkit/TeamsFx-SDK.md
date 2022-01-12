@@ -6,39 +6,37 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 63c5fad9c795c513b476f305c09d94ffad7c5d61
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+ms.openlocfilehash: d0ec446b51363bbbe4c3322ec1d840ad4068ff74
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61228074"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768372"
 ---
 # <a name="teamsfx-sdk-for-typescript-or-javascript"></a>TeamsFx SDK for TypeScript または JavaScript
 
-TeamsFx は、ID を実装し、クラウド リソースにアクセスするタスクを"ゼロ構成" の単一行ステートメントに減らすことを目的とします。
+TeamsFx は、ID の実装とクラウド リソースへのアクセスのタスクを、構成がゼロの単一行ステートメントに減らすことを目的とします。
 
 ライブラリを使用して、次のコマンドを実行します。
 
 - 同様の方法でクライアント環境とサーバー環境のコア機能にアクセスします。
 - 簡単な方法でユーザー認証コードを記述します。
-
-   * [ソース コード](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk) 
-   * [パッケージ (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) 
-   * [API リファレンス ドキュメント](https://aka.ms/teamsfx-sdk-help) 
-   * [サンプル](https://github.com/OfficeDev/TeamsFx-Samples)
-
+ 
 ## <a name="get-started"></a>作業の開始
 
 TeamsFx SDK は、TeamsFx ツールキットまたは CLI を使用してスキャフォールディング されたプロジェクトで事前に構成されています。
-アプリ プロジェクトの詳細についてはTeams README を[参照してください](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md)。
+詳細については、「アプリ プロジェクトのTeams[を参照してください](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md)。
 
 ### <a name="prerequisites"></a>前提条件
 
-- Node.js以上 `10.x.x` のバージョン。
-- プロジェクトに関連するパッケージが依存関係としてインストールされている場合は、そのパッケージが同じバージョンとバージョン `botbuilder` である必要があります[](https://github.com/Microsoft/botbuilder-js#packages) `>= 4.9.3` 。 ([問題 - すべての BOTBUILDER パッケージが同じバージョンである必要があります](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
+- Node.js以降 `10.x.x` のバージョン。
+- プロジェクトに関連パッケージが依存関係としてインストールされている場合は、同じバージョンであり、バージョンが `botbuilder` [](https://github.com/Microsoft/botbuilder-js#packages) `>= 4.9.3` . ([問題 - すべての BOTBUILDER パッケージが同じバージョンである必要があります](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
 
-> [!TIP]
-> TeamsFx ツールキットによって作成されたプロジェクトVS Code CLI ツールを使用します。
+詳細については、以下を参照してください。
+* [ソース コード](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk) 
+* [パッケージ (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) 
+* [API リファレンス ドキュメント](https://aka.ms/teamsfx-sdk-help) 
+* [サンプル](https://github.com/OfficeDev/TeamsFx-Samples)
 
 ### <a name="install-the-microsoftteamsfx-package"></a>パッケージの `@microsoft/teamsfx` インストール
 
@@ -48,9 +46,9 @@ TeamsFx SDK は、TeamsFx ツールキットまたは CLI を使用してスキ�
 npm install @microsoft/teamsfx
 ```
 
-### <a name="create-and-authenticate-a-microsoftgraphclient"></a>A を作成して認証する `MicrosoftGraphClient`
+### <a name="create-and-authenticate-microsoftgraphclient"></a>作成と認証 `MicrosoftGraphClient`
 
-Microsoft Graph API にアクセスするグラフ クライアント オブジェクトを作成するには、認証を行う資格情報が必要です。 SDK には、さまざまな要件を満たす資格情報クラスがいくつか用意されています。資格情報を使用する前に構成を読み込む必要があります。
+Microsoft Graph API にアクセスするためのグラフ クライアント オブジェクトを作成するには、認証する資格情報が必要です。 SDK には、さまざまな要件を満たす資格情報クラスがいくつか用意されています。 資格情報を使用する前に構成を読み込む必要があります。
 
 - ブラウザー環境では、構成パラメーターを明示的に渡す必要があります。 プロジェクトのスキャフォールReact、使用する環境変数が用意されています。
 
@@ -72,9 +70,7 @@ loadConfiguration();
 
 #### <a name="using-teams-app-user-credential"></a>アプリTeams資格情報の使用
 
-以下のスニペットを使用します。
-
-> [メモ]この資格情報クラスは、ブラウザー アプリケーション (Tab App など) でのみTeams使用できます。
+次のスニペットを使用します。
 
 ```ts
 loadConfiguration({
@@ -88,11 +84,14 @@ const credential = new TeamsUserCredential();
 const graphClient = createMicrosoftGraphClient(credential, ["User.Read"]); // Initializes MS Graph SDK using our MsGraphAuthProvider
 const profile = await graphClient.api("/me").get();
 ```
+> [!NOTE]
+> この資格情報クラスは、ブラウザー アプリケーション (Tab App など) でTeams使用できます。
 
 #### <a name="using-microsoft-365-tenant-credential"></a>テナントMicrosoft 365の使用
 
-アプリ ユーザーとの対話はTeamsしません。 アプリケーションとして Microsoft Graph呼び出します。
-以下のスニペットを使用します。
+Microsoft 365資格情報は、アプリ ユーザーと対話するTeams必要ない。 アプリケーションとして Microsoft Graph呼び出します。
+
+次のスニペットを使用します。
 
 ```ts
 loadConfiguration();
@@ -105,30 +104,29 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 
 ### <a name="credentials"></a>資格情報
 
-認証を簡素化するために、資格情報フォルダーの下[](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential)に 3 つの資格情報クラスがあります。 
+認証を簡素化するために、資格情報フォルダーの下に 3 [つの資格情報](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential) クラスがあります。
 
-資格情報クラスは `TokenCredential` 、Azure ライブラリ API で広く使用されるインターフェイスを実装します。 特定のスコープにアクセス トークンを提供するように設計されています。
-資格情報クラスは、特定のシナリオで異なる ID を表します。
+資格情報クラスは `TokenCredential` 、Azure ライブラリ API で広く使用されるインターフェイスを実装します。 特定のスコープにアクセス トークンを提供するように設計されています。 次の資格情報クラスは、特定のシナリオで異なる ID を表します。
 
-`TeamsUserCredential`はTeamsユーザーの ID を表します。 この資格情報を使用すると、最初にユーザーの同意が要求されます。
-`M365TenantCredential`は、Microsoft 365 ID を表します。 通常、ユーザーが時間トリガーオートメーション ジョブのように関与していない場合に使用されます。
-`OnBehalfOfUserCredential` は、フローの代理として使用されます。 アクセス トークンが必要で、さまざまなスコープの新しいトークンを取得できます。 Azure 関数またはボットのシナリオで使用するように設計されています。
+* `TeamsUserCredential`はTeamsユーザーの ID を表します。 この資格情報を使用すると、最初にユーザーの同意が要求されます。
+* `M365TenantCredential`は、Microsoft 365 ID を表します。 通常、ユーザーが時間トリガーオートメーション ジョブのように関与していない場合に使用されます。
+* `OnBehalfOfUserCredential` は、フローの代理として使用されます。 アクセス トークンが必要で、さまざまなスコープの新しいトークンを取得できます。 Azure 関数またはボットのシナリオで使用するように設計されています。
 
 ### <a name="bots"></a>ボット
 
-ボット関連のクラスは、ボット フォルダー [の下に格納](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot) されます。
+ボット関連のクラスは、ボット フォルダーの [下に格納されます](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot)。
 
-`TeamsBotSsoPrompt` ボット フレームワークとの良好な統合が可能です。 ボット アプリケーションの開発時の認証プロセスを簡略化します。
+`TeamsBotSsoPrompt` ボット フレームワークと統合できます。 ボット アプリケーションを開発するための認証プロセスを簡略化します。
 
 ### <a name="helper-functions"></a>ヘルパー関数
 
-TeamsFx SDK には、サード パーティ製ライブラリの構成を容易にするヘルパー関数が提供されています。 これらはコア フォルダーの [下にあります](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core) 。
+TeamsFx SDK には、サード パーティ製ライブラリの構成を容易にするヘルパー関数が提供されています。 これらはコア フォルダーの [下にあります](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core)。
 
 ### <a name="error-handling"></a>エラー処理
 
-エラーが発生した `ErrorWithCode` 場合、API はスローされます。 それぞれに `ErrorWithCode` エラー コードとエラー メッセージが含まれる。
+API エラー応答は `ErrorWithCode` 、エラー コードとエラー メッセージを含むエラー応答です。
 
-たとえば、特定のエラーをフィルター処理するには、次のチェックを使用できます。
+たとえば、特定のエラーをフィルター処理するには、次のスニペットを使用できます。
 
 ```ts
 try {
@@ -163,13 +161,7 @@ try {
 
 ## <a name="scenarios"></a>シナリオ
 
-次のセクションでは、最も一般的なシナリオの一部をカバーするコード スニペットを示します。
-
-- [タブ アプリGraph API を使用する](#use-graph-api-in-tab-app)
-- [タブ アプリで Azure 関数を呼び出す](#call-azure-function-in-tab-app)
-- [Azure 関数SQLデータベースへのアクセス](#access-sql-database-in-azure-function)
-- [Azure 関数で証明書ベースの認証を使用する](#use-certificate-based-authentication-in-azure-function)
-- [ボット アプリケーションGraph API を使用する](#use-graph-api-in-bot-application)
+次のセクションでは、一般的なシナリオのいくつかのコード スニペットを示します。
 
 ### <a name="use-graph-api-in-tab-app"></a>タブ アプリGraph API を使用する
 
@@ -283,14 +275,13 @@ dialogs.add(
 
 ### <a name="configure-log"></a>ログの構成
 
-このライブラリを使用する場合は、顧客ログ レベルを設定し、出力をリダイレクトできます。
-ログは既定でオフになっています。ログ レベルを設定することで有効にできます。
+このライブラリを使用する場合は、顧客ログ レベルを設定し、出力をリダイレクトできます。 ログは既定でオフになっています。ログ レベルを設定することで有効にできます。
 
 #### <a name="enable-log-by-setting-log-level"></a>ログ レベルを設定してログを有効にする
 
-ログ レベルを設定すると、ログが有効になります。 既定では、ログ情報をコンソールに出力します。
+ログは、ログ レベルを設定した場合にのみ有効になります。 既定では、ログ情報をコンソールに出力します。
 
-以下のスニペットを使用してログ レベルを設定します。
+次のスニペットを使用してログ レベルを設定します。
 
 ```ts
 // Only need the warning and error messages.
@@ -309,7 +300,8 @@ setLogger(context.log);
 
 ##### <a name="redirect-by-setting-custom-log-function"></a>カスタム ログ関数を設定してリダイレクトする
 
-カスタム ロガーを設定した場合、ログ関数は有効にならなに注意してください。
+> [!NOTE]
+> カスタム ロガーを設定した場合、ログ関数は有効ではありません。
 
 ```ts
 setLogLevel(LogLevel.Info);

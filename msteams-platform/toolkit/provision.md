@@ -6,29 +6,28 @@ ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: c8899131876533fdd64913fb6790cff9f258e8f5
-ms.sourcegitcommit: aede47694894d281f6b725083bc0b46ab0e4846d
+ms.openlocfilehash: e68596e9d109fcfa54708a76570874951fe326b2
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2021
-ms.locfileid: "61591786"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768616"
 ---
 # <a name="use-teams-toolkit-to-provision-cloud-resources"></a>クラウド Teams Toolkitプロビジョニングに使用する
 
-TeamsFx は、Azure と Microsoft 365クラウドとのシームレスな統合を提供し、1 つのコマンドでアプリケーションを Azure に配置できます。 TeamsFx は Azure Resource Manager と統合し、インフラストラクチャをコード アプローチとして使用して、アプリケーションが必要とする Azure リソースを宣言的にプロビジョニングできます。  
+TeamsFx は Azure とクラウドMicrosoft 365統合され、1 つのコマンドでアプリケーションを Azure に配置できます。 TeamsFx は Azure Resource Manager と統合され、アプリケーションでコードアプローチに必要な Azure リソースをプロビジョニングできます。  
 
 ## <a name="prerequisites"></a>前提条件
 
-* アカウントの前提条件
+* アカウントの前提条件 クラウド リソースをプロビジョニングするには、次のアカウントが必要です。
 
-    クラウド リソースをプロビジョニングするには、適切なアクセス許可を持つ次のアカウントが必要です。 詳細については、「アプリをビルド[するためのアカウントの準備」をTeamsしてください](accounts.md)。
-    * Microsoft 365
-    * 有効なサブスクリプションを持つ Azure
+    * Microsoft 365有効なサブスクリプションを持つアカウント
+    * 有効なサブスクリプションを持つ Azure の詳細については、「アプリを作成するアカウントを準備する[Teams参照してください](accounts.md)。
 
 * [バージョン Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) v3.0.0 以上をインストールします。
 
 > [!TIP]
-> VS コードで開Teamsアプリ プロジェクトを既に持っている必要があります。
+> VS コードでTeamsアプリ プロジェクトが開いているか確認します。
 
 ## <a name="provision-using-teams-toolkit"></a>サーバーを使用したプロビジョニングTeams Toolkit
 
@@ -44,73 +43,82 @@ TeamsFx は、Azure と Microsoft 365クラウドとのシームレスな統合�
 * TeamsテナントのプラットフォームMicrosoft 365アプリの登録Teamsする
 * 選択した Azure サブスクリプションの Azure リソース
 
-新しいプロジェクトを作成すると、すべての Azure リソースが作成されます。 生成されたARMテンプレートは、すべての Azure リソースを定義し、プロビジョニング中に必要な Azure リソースを作成するのに役立ちます。 既存の [プロジェクトに新しい機能/リソース](./add-resource.md) を追加すると、更新された ARMは最新の変更を反映します。
+新しいプロジェクトを作成するときに、すべての Azure リソースを使用できます。 このARMは、すべての Azure リソースを定義し、プロビジョニング中に必要な Azure リソースを作成するのに役立ちます。 既存の [プロジェクトに新しい機能リソース](./add-resource.md) を追加すると、更新されたテンプレートARM最新の変更が反映されます。
 
 > [!NOTE]
-> Azure サービスでは、サブスクリプションにコストが発生します。見積もりを理解するには、価格 [計算ツールを](https://azure.microsoft.com/pricing/calculator/) 参照してください。
+> Azure サービスでは、サブスクリプションにコストが発生します。コストの見積もりについては、「価格計算 [ツール」を参照してください](https://azure.microsoft.com/pricing/calculator/)。
 
 ### <a name="resource-creation-for-teams-tab-application"></a>タブ アプリケーションのリソースTeams作成
 
-|リソース|このリソースの目的| メモ |
+|リソース|用途|Description |
 |----------|--------------------------------|-----|
-| Azure Storage | タブ アプリをホストする | 静的 Web アプリ機能でタブ アプリをホストできます |
-| 簡易認証の App Service プラン | 簡易認証の Web アプリをホストする | |
-| 簡易認証用 Web アプリ | 単一ページ アプリケーションで他のサービスにアクセスするのに役立つ簡単な認証サーバーをホストする | ユーザー割り当て ID を追加して、他の Azure リソースに簡単にアクセスできます |
+| Azure ストレージ | タブ アプリをホストする | 静的 Web アプリ機能でタブ アプリをホストできます |
+| 簡単な認証のためのアプリ サービスプラン | 簡易認証の Web アプリをホストする |該当なし |
+| 簡単な認証のための Web アプリ | 単純な認証サーバーをホストして、単一ページ アプリケーション内の他のサービスにアクセスする | 他の Azure リソースにアクセスするユーザー割り当て ID を追加する |
 | ユーザー割り当て ID | Azure サービス間要求の認証 | さまざまな機能とリソース間で共有 |
 
-### <a name="resources-created-for-teams-bot-or-messaging-extension-application"></a>ボットまたはメッセージングTeamsアプリケーション用に作成されたリソース
+### <a name="resource-creation-for-teams-bot-or-messaging-extension-application"></a>ボットまたはメッセージングTeamsアプリケーションのリソースの作成
 
-|リソース|このリソースの目的| メモ |
+|リソース|用途| Description |
 |----------|--------------------------------|-----|
-| Azure Bot Service | ボット フレームワークにアプリをボットとして登録する | ボットをデバイスに接続Teams |
-| ボットの App Service プラン | ボットの Web アプリをホストする | |
-| ボット用 Web アプリ | ボット アプリをホストする | ユーザー割り当て ID を追加して、他の Azure リソースに簡単にアクセスできます。 <br /> TeamsFx SDK で必要な [アプリ設定を追加する](https://www.npmjs.com/package/@microsoft/teamsfx) |
+| Azure ボット サービス | ボット フレームワークにアプリをボットとして登録する | ボットをデバイスに接続Teams |
+| ボットのアプリ サービス プラン | ボットの Web アプリをホストする |該当なし |
+| ボット用 Web アプリ | ボット アプリをホストする | 他の Azure リソースにアクセスするユーザー割り当て ID を追加します。 <br /> TeamsFx SDK で必要な [アプリ設定を追加する](https://www.npmjs.com/package/@microsoft/teamsfx) |
 | ユーザー割り当て ID | Azure サービス間要求の認証 | さまざまな機能とリソース間で共有 |
 
-### <a name="resources-created-when-including-azure-functions-in-the-project"></a>Azure Functions をプロジェクトに含めたときに作成されるリソース
+### <a name="resource-creation-for-azure-functions-in-the-project"></a>プロジェクト内の Azure Functions のリソース作成
 
-|リソース|このリソースの目的| メモ |
+|リソース|用途| Description|
 |----------|--------------------------------|-----|
-| 関数アプリの App Service プラン | 関数アプリをホストする | |
-| 関数アプリ | Azure Functions API をホストする | ユーザー割り当て ID を追加して、他の Azure リソースに簡単にアクセスできます。 <br /> CORS ルールを追加してタブ アプリからの要求を許可する <br /> アプリからの要求のみを許可する認証設定をTeamsします。 <br /> TeamsFx SDK で必要な [アプリ設定を追加する](https://www.npmjs.com/package/@microsoft/teamsfx) |
-| Azure Storage関数アプリの詳細 | 関数アプリの作成時に必須 | |
+| 関数アプリのアプリ サービス プラン | 関数アプリをホストする |該当なし |
+| 関数アプリ | Azure 関数 API をホストする | 他の Azure リソースにアクセスするユーザー割り当て ID を追加します。 <br /> クロスオリジン リソース共有 (CORS) ルールを追加して、タブ アプリからの要求を許可する <br /> アプリからの要求のみを許可する認証設定をTeamsします。 <br /> TeamsFx SDK で必要な [アプリ設定を追加する](https://www.npmjs.com/package/@microsoft/teamsfx) |
+| 関数アプリ用の Azure ストレージ | 関数アプリの作成に必要 |該当なし|
 | ユーザー割り当て ID | Azure サービス間要求の認証 | さまざまな機能とリソース間で共有 |
 
-### <a name="resources-created-when-including-azure-sql-in-the-project"></a>Azure リソースをプロジェクトに含SQLリソース
+### <a name="resource-creation-for-azure-sql-in-the-project"></a>プロジェクト内の Azure SQLリソースの作成
 
-|リソース|このリソースの目的| メモ |
+|リソース|用途 | Description |
 |----------|--------------------------------|-----|
-| Azure SQL Server | インスタンスのホストAzure SQL Databaseする | すべての Azure サービスがサーバーにアクセスできます |
-| Azure SQL データベース | アプリのデータを保存する | ユーザーに割り当てられた ID の読み取り/書き込みアクセス許可をデータベースに付与する |
+| Azure SQL サーバー | Azure データベース インスタンスSQLホストする | すべての Azure サービスがサーバーにアクセスできます |
+| Azure SQL データベース | アプリのデータを保存する | ユーザーに割り当てられた ID、読み取り、またはデータベースへの書き込みアクセス許可を付与する |
 | ユーザー割り当て ID | Azure サービス間要求の認証 | さまざまな機能とリソース間で共有 |
 
-### <a name="resources-created-when-including-azure-api-management-in-the-project"></a>Azure API Management をプロジェクトに含めたときに作成されるリソース
+### <a name="resource-creation-for-azure-api-management-in-the-project"></a>プロジェクトでの Azure API Management のリソースの作成
 
-|リソース|このリソースの目的|
+|リソース|用途|
 |----------|--------------------------------|
-| Azure Active Directory API 管理サービス用のアプリケーション | API 管理サービスによって管理される Microsoft Power Platform アクセス API を許可する |
-| API 管理サービス | 関数アプリでホストされている API を管理する |
+| API 管理サービス用の Azure Active Directory アプリケーション | API 管理サービスによって管理される Microsoft Power Platform アクセス API を許可する |
+| API 管理サービス | 関数アプリでホストされる API を管理する |
 | API 管理製品 | API をグループ化し、使用条件とランタイム ポリシーを定義する |
 | API 管理 OAuth サーバー | Microsoft Power Platform が関数アプリでホストされている API にアクセスできます |
 | ユーザー割り当て ID | Azure サービス間要求の認証 |
 
+### <a name="resources-created-when-including-azure-key-vault-in-the-project"></a>Azure Key Vault をプロジェクトに含めたときに作成されるリソース
+
+|リソース|このリソースの目的|
+|----------|--------------------------------|
+| Azure Key Vault Service | 他の Azure Services で使用されるAAD (アプリ クライアント シークレットなど) を管理する |
+| ユーザー割り当て ID | Azure サービス間要求の認証 |
+
 ## <a name="customize-resource-provision"></a>リソースのプロビジョニングをカスタマイズする
 
-Teams Toolkitでは、インフラストラクチャをコード アプローチとして使用して、プロビジョニングする Azure リソースと、それらを構成する方法を定義できます。 このツールは、ARMを使用して Azure リソースを定義します。 このARMテンプレートは、プロジェクトのインフラストラクチャと構成を定義する一連のバイセップ ファイルです。 カスタム テンプレートを変更して作成された Azure リソースARMできます。 詳細については [、「bicep ドキュメント」を参照してください](/azure/azure-resource-manager/bicep.md)。 アプリケーションを使用ARM、次の 2 セットのファイル、パラメーター、およびテンプレートを変更します。
+Teams Toolkitでは、インフラストラクチャをコード アプローチとして使用して、プロビジョニングする Azure リソースと構成方法を定義できます。 このツールでは、ARMテンプレートを使用して Azure リソースを定義します。 このARMテンプレートは、プロジェクトのインフラストラクチャと構成を定義する一連のバイセップ ファイルです。 Azure リソースは、テンプレートを変更してARMできます。 詳細については [、「bicep ドキュメント」を参照してください](/azure/azure-resource-manager/bicep.md)。 
 
-* ARMパラメーター ファイル ( ) は、テンプレートにパラメーターを渡すフォルダー `azure.parameters.{your_env_name}.json` `.fx/configs` にあります。
+ファイル、パラメーター ARMテンプレートのセットを変更する必要があります。
+
+* ARMテンプレートにパラメーターを渡す場合は、フォルダーにあるパラメーター ファイル ( `azure.parameters.{your_env_name}.json` ) `.fx/configs` を指定します。
 * ARMにあるテンプレート ファイルには、 `templates/azure` 次のファイルが含まれます。
 
-| File | 何を行う | カスタマイズを許可する |
+| ファイル | 機能 | カスタマイズを許可する |
 | --- | --- | --- |
-| main.bicep | Azure リソースプロビジョニングのエントリ ポイントを提供する | 必要 |
+| main.bicep | Azure リソースプロビジョニングのエントリ ポイントを提供する | はい |
 | provision.bicep | Azure リソースの作成と構成 | はい |
 | config.bicep | TeamsFx に必要な構成を Azure リソースに追加する | はい |
-| provision/xxx.bicep | によって使用される各 Azure リソースを作成および構成する `provision.bicep` | 必要 |
+| provision/xxx.bicep | 使用する各 Azure リソースを作成および構成する `provision.bicep` | はい |
 | teamsfx/xxx.bicep | 使用する各 Azure リソースに TeamsFx 必要な構成を追加する `config.bicep`| いいえ |
 
 > [!NOTE]
-> リソースまたは機能をプロジェクトに追加すると、 `teamsfx/xxx.bicep` 再生成されます。 そのため、カスタマイズ不可としてマークされています。 これらのバイセップ ファイルを実際に変更する必要がある場合は、Git を使用してファイルに対する変更を追跡し、リソースや機能の追加中に変更を失わないので、お勧 `teamsfx/xxx.bicep` めします。
+> プロジェクトにリソースまたは機能を追加すると、再生成 `teamsfx/xxx.bicep` されます。同じ機能をカスタマイズできない。 バイセップ ファイルを変更するには、Git を使用してファイルに対する変更を追跡できます。これにより、リソースや機能の追加中に変更を失わない `teamsfx/xxx.bicep` のに役立ちます。
 
 ### <a name="customize-arm-parameters-and-templates"></a>パラメーター ARMテンプレートをカスタマイズする
 
@@ -120,49 +128,50 @@ Teams Toolkitでは、インフラストラクチャをコード アプローチ
 
 このツールキットには、Azure リソースをカスタマイズするための一連の定義済みパラメーターが含まれています。 パラメーター ファイルは場所にあり `.fx/configs/azure.parameters.{env}.json` 、使用可能なすべてのパラメーターはプロパティで定義 `provisionParameters` されます。 定義済みのパラメーターが要件を満たす場合は、パラメーター ファイルをカスタマイズしてください。
 
-使用可能な定義済みのパラメーターの一覧を次に示します。
+次の表に、使用可能な定義済みパラメーターの一覧を示します。
 
 | パラメーター名 | 既定値 | パラメーターでカスタマイズできる機能 | 値の制約 |
 | --- | --- | --- | --- |
 | resourceBaseName | 環境ごとに自動生成 | すべてのリソースの既定の名前 | 2 ~ 20 文字の小文字と数字 |
 | simpleAuthServerFarmsName | ${resourceBaseName}simpleAuth | 簡易認証アプリ サービス プランの名前 | 1 ~ 40 文字の英数字とハイフン |
-| simpleAuthWebAppName | ${resourceBaseName}simpleAuth | 簡易認証 Web アプリの名前 | 2 ~ 60 文字の英数字とハイフン <br /> ハイフンで開始または終了できない |
-| simpleAuthSku | F1 | 簡易認証 App Service プランの SKU |  |
-| frontendHostingStorageName | ${resourceBaseName}タブ | Frontend Hosting Storage アカウントの名前 | 3 ~ 24 文字の小文字と数字 |
-| frontendHostingStorageSku | Standard_LRS | Frontend Hosting Storage アカウントの SKU | 使用可能な SKU [については、](/azure/templates/microsoft.storage/storageaccounts?tabs=bicep&branch) このページを参照してください。 |
-| functionServerfarmsName | ${resourceBaseName}api | 関数アプリの App Service プランの名前 | 1 ~ 40 文字の英数字とハイフン |
-| functionServerfarmsSku | Y1 | FUnction アプリの App Service プランの SKU |
+| simpleAuthWebAppName | ${resourceBaseName}simpleAuth | 単純な認証 Web アプリの名前 | 2 ~ 60 文字の英数字とハイフン <br /> ハイフンで開始または終了できない |
+| simpleAuthSku | F1 | 簡易認証アプリ サービスプランの SKU | 該当なし |
+| frontendHostingStorageName | ${resourceBaseName}タブ | フロントエンド ホスティング ストレージ アカウントの名前 | 3 ~ 24 文字の小文字と数字 |
+| frontendHostingStorageSku | Standard_LRS | フロントエンド ホスティング ストレージ アカウントの SKU |[使用可能な SKU](/azure/templates/microsoft.storage/storageaccounts?tabs=bicep&branch)|
+| functionServerfarmsName | ${resourceBaseName}api | 関数アプリのサービス プランの名前 | 1 ~ 40 文字の英数字とハイフン |
+| functionServerfarmsSku | Y1 | 関数アプリサービスプランの SKU | 該当なし|
 | functionAppName | ${resourceBaseName}api | 関数アプリの名前 | 2 ~ 60 文字の英数字とハイフン <br /> ハイフンで開始または終了できない |
-| functionStorageName | ${resourceBaseName}api | 関数アプリのアカウントStorage名 | 3 ~ 24 文字の小文字と数字 |
-| functionStorageSku | Standard_LRS | 関数アプリのアカウントStorage SKU | 使用可能な SKU [については、](/azure/templates/microsoft.storage/storageaccounts?tabs=bicep&branch=pr-en-us-4713)このページを参照してください。 |
-| botServiceName | ${resourceBaseName} | Azure Bot サービスの名前 | 2 ~ 64 文字の英数字、アンダースコア、ピリオド、ハイフン <br /> 英数字で始める |
-| botServiceSku | F0 | Azure Bot サービスの SKU | 使用可能な SKU [については、](/azure/templates/microsoft.botservice/2021-05-01-preview/botservices?tabs=bicep&branch) このページを参照してください。 |
+| functionStorageName | ${resourceBaseName}api | 関数アプリのストレージ アカウントの名前 | 3 ~ 24 文字の小文字と数字 |
+| functionStorageSku | Standard_LRS | 関数アプリのストレージ アカウントの SKU | [使用可能な SKU](/azure/templates/microsoft.storage/storageaccounts?tabs=bicep&branch=pr-en-us-4713) |
+| botServiceName | ${resourceBaseName} | Azure ボット サービスの名前 | 2 ~ 64 文字の英数字、アンダースコア、ピリオド、ハイフン <br /> 英数字で始める |
+| botServiceSku | F0 | Azure ボット サービスの SKU | [使用可能な SKU](/azure/templates/microsoft.botservice/2021-05-01-preview/botservices?tabs=bicep&branch) |
 | botDisplayName | ${resourceBaseName} | ボットの表示名 | 1 ~ 42 文字 |
-| botServerfarmsName | ${resourceBaseName}bot | ボットの App Service プランの名前 | 1 ~ 40 文字の英数字とハイフン |
+| botServerfarmsName | ${resourceBaseName}bot | ボットのアプリ サービス プランの名前 | 1 ~ 40 文字の英数字とハイフン |
 | botWebAppName | ${resourceBaseName}bot | ボットの Web アプリの名前 | 2 ~ 60 文字の英数字とハイフン <br /> ハイフンで開始または終了できない |
-| botWebAppSKU | F1 | ボット アプリ サービス プランの SKU |  |
+| botWebAppSKU | F1 | ボット アプリ サービス プランの SKU | 該当なし |
 | userAssignedIdentityName | ${resourceBaseName} | ユーザー割り当て ID の名前 | 3 ~ 128 文字の英数字、ハイフン、アンダースコア <br /> 文字または数字で始める |
-| sqlServerName | ${resourceBaseName} | Azure の名前SQL Server | 1 ~ 63 の小文字、数字、ハイフン <br /> ハイフンで開始または終了できない |
-| sqlDatabaseName | ${resourceBaseName} | [名前] Azure SQL Database | 1 ~ 128 文字、次の <>*%を \/ &。 またはコントロール文字 <br /> ピリオドまたはスペースで終了できない |
-| sqlDatabaseSku | 基本 | SKU のAzure SQL Database |  |
+| sqlServerName | ${resourceBaseName} | Azure SQL サーバーの名前 | 1 ~ 63 の小文字、数字、ハイフン <br /> ハイフンで開始または終了できない |
+| sqlDatabaseName | ${resourceBaseName} | Azure SQL データベースの名前 | 1 ~ 128 文字、次の <>*%を \/ &。 またはコントロール文字 <br /> ピリオドまたはスペースで終了できない |
+| sqlDatabaseSku | 基本 | Azure SQL データベースの SKU | 該当なし  |
 | apimServiceName | ${resourceBaseName} | APIM サービスの名前 | 1 ~ 50 文字の英数字とハイフン <br /> 文字で始め、英数字で終わる |
-| apimServiceSku | 消費 | APIM サービスの SKU | 使用可能な SKU [については、](/azure/templates/microsoft.apimanagement/service?tabs=bicep&branch)このページを参照してください。 |
+| apimServiceSku | 消費 | APIM サービスの SKU | [使用可能な SKU](/azure/templates/microsoft.apimanagement/service?tabs=bicep&branch) |
 | apimProductName | ${resourceBaseName} | APIM 製品の名前 | 1 ~ 80 文字の英数字とハイフン <br /> 文字で始め、英数字で終わる |
-| apimOauthServerName | ${resourceBaseName} | APIM OAuth Server の名前 | 1 ~ 80 文字の英数字とハイフン <br /> 文字で始め、英数字で終わる |
+| apimOauthServerName | ${resourceBaseName} | APIM OAuth サーバーの名前 | 1 ~ 80 文字の英数字とハイフン <br /> 文字で始め、英数字で終わる |
+| keyVaultSkuName | 標準 | Azure Key Vault Service の SKU 名| |
 
-一方、次のパラメーターは、プロビジョニング中に値が設定された場合に使用できます。 これらのプレースホルダーの目的は、新しい環境を作成するときに、新しいリソースを作成できます。 実際の値はから解決されます `.fx/states/state.{env}.json` 。
+一方、次のパラメーターは、プロビジョニング中に値が設定された場合に使用できます。 これらのプレースホルダーの目的は、新しい環境で新しいリソースを作成できます。 実際の値はから解決されます `.fx/states/state.{env}.json` 。
 
 ##### <a name="aad-application-related-parameters"></a>AAD関連のパラメーター
 
 | パラメーター名 | 既定値の場所の所有者 | 場所所有者の意味 | カスタマイズする方法 |
 | --- | --- | --- | --- |
-| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | プロビジョニング中に作成AADアプリのクライアント ID | 値 [をカスタマイズするには](#use-an-existing-aad-app-for-your-teams-app) 、このセクションを参照してください。 |
-| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | プロビジョニング中に作成AADアプリのクライアント シークレット | 値 [をカスタマイズするには](#use-an-existing-aad-app-for-your-teams-app) 、このセクションを参照してください。 |
-| Microsoft 365TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | アプリのアプリのテナント id AADします。 | 値 [をカスタマイズするには](#use-an-existing-aad-app-for-your-teams-app) 、このセクションを参照してください。 |
-| Microsoft 365 OauthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | アプリのアプリの OAuth AADホスト | 値 [をカスタマイズするには](#use-an-existing-aad-app-for-your-teams-app) 、このセクションを参照してください。 |
-| botAadAppClientId | {{state.fx-resource-bot.botId}} | プロビジョニング中にAADボットのアプリ クライアント ID | 値 [をカスタマイズするには](#use-an-existing-aad-app-for-your-bot) 、このセクションを参照してください。 |
-| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | プロビジョニング中に作成AADボットのアプリ クライアント シークレット | 値 [をカスタマイズするには](#use-an-existing-aad-app-for-your-bot) 、このセクションを参照してください。 |
-| apimClientId | {{state.fx-resource-apim.apimClientAADClientId}} | プロビジョニング中に作成AAD APIM のアプリ クライアント ID | プレースホルダーを削除し、実際の値を入力する |
+| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | プロビジョニング中に作成AADアプリのクライアント ID | [値をカスタマイズする](#use-an-existing-aad-app-for-your-teams-app) |
+| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | プロビジョニング中に作成AADアプリのクライアント シークレット | [値をカスタマイズする](#use-an-existing-aad-app-for-your-teams-app)  |
+| Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | アプリのアプリのテナント id AADします。 | [値をカスタマイズする](#use-an-existing-aad-app-for-your-teams-app)  |
+| Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | アプリのアプリの OAuth AADホスト | [値をカスタマイズする](#use-an-existing-aad-app-for-your-teams-app) |
+| botAadAppClientId | {{state.fx-resource-bot.botId}} | プロビジョニング中にAADボットのアプリ クライアント ID | [値をカスタマイズする](#use-an-existing-aad-app-for-your-bot) |
+| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | プロビジョニング中に作成AADボットのアプリ クライアント シークレット | [値をカスタマイズする](#use-an-existing-aad-app-for-your-bot) |
+| apimClientId | {{state.fx-resource-apim.apimClientAADClientId}} | プロビジョニング中にAAD APIM のアプリ クライアント ID | プレースホルダーを削除し、実際の値を入力する |
 | apimClientSecret | {{state.fx-resource-apim.apimClientAADClientSecret}} | プロビジョニング中に作成AAD APIM のアプリ クライアント シークレット | プレースホルダーを削除し、実際の値を入力する |
 
 ##### <a name="azure-resource-related-parameters"></a>Azure リソース関連のパラメーター
@@ -176,9 +185,9 @@ Teams Toolkitでは、インフラストラクチャをコード アプローチ
 
 #### <a name="referencing-environment-variables-in-parameter-files"></a>パラメーター ファイルでの環境変数の参照
 
-パラメーター ファイル内の値をハードコードしない場合があります。 たとえば、値がシークレットの場合です。 パラメーター ファイルは、環境変数からの値の参照をサポートします。 パラメーター値の構文を使用して、現在の環境変数から値を解決する必要があることをツール `{{$env.YOUR_ENV_VARIABLE_NAME}}` に伝えます。
+パラメーター ファイル内の値をハードコードしない場合 (たとえば、値がシークレットの場合)。 パラメーター ファイルは、環境変数からの値の参照をサポートします。 ツールのパラメーター値 `{{$env.YOUR_ENV_VARIABLE_NAME}}` の構文を使用して、現在の環境変数から解決できます。
 
-次の例では、環境変数から `mySelfHostedDbConnectionString` パラメーターの値を読み取ります `DB_CONNECTION_STRING` 。
+次の使用例は、環境変数から `mySelfHostedDbConnectionString` パラメーターの値を読み取ります `DB_CONNECTION_STRING` 。
 
 ```json
 ...
@@ -188,19 +197,20 @@ Teams Toolkitでは、インフラストラクチャをコード アプローチ
 
 #### <a name="customize-arm-template-files"></a>テンプレート ARMをカスタマイズする
 
-定義済みのテンプレートがアプリケーション要件を満たしていない場合は、フォルダーのARMカスタマイズ `templates/azure` できます。 たとえば、アプリ用の追加の Azure ARM作成するテンプレートをカスタマイズできます。 これは事前のシナリオであり、テンプレートの作成に使用される二頭上言語の基本的なARMです。 バイセップの使用を開始するには、 [バイセップのドキュメントを参照してください](/azure/azure-resource-manager/bicep/?branch)。
+定義済みのテンプレートがアプリケーション要件を満たしない場合は、フォルダーのARMカスタマイズ `templates/azure` できます。 たとえば、アプリ用の追加の Azure ARM作成するテンプレートをカスタマイズできます。 テンプレートの作成に使用されるバイセップ言語の基本的な知識ARMがあります。 バイセップの使用を開始するには、 [バイセップのドキュメントを参照してください](/azure/azure-resource-manager/bicep/?branch)。
+
 > [!NOTE]
-> このARMは、すべての環境で共有されます。 環境間のさまざまな [プロビジョニング動作の](/azure/azure-resource-manager/bicep/conditional-resource-deployment?branch) 場合は、条件付き展開を使用できます。
+> このARMは、すべての環境で共有されます。 プロビジョニングの動作 [が環境によって](/azure/azure-resource-manager/bicep/conditional-resource-deployment?branch) 異なる場合は、条件付き展開を使用できます。
 
-TeamsFx ツールが正しく機能していることを確認するには、カスタマイズしたテンプレートがARM要件を満たしていることを確認してください。 他のツールを使用してさらなる開発を行う場合は、これらの要件を無視できます。
+TeamsFx ツールが正しく機能していることを確認するには、次の要件を満たすARMテンプレートをカスタマイズしてください。 他のツールを使用してさらなる開発を行う場合は、これらの要件を無視できます。
 
-* フォルダー構造とファイル名は変更しないでください。 プロジェクトにリソース/機能を追加すると、ツールによって既存のファイルに新しいコンテンツが追加される場合があります。
-* 自動生成されたパラメーターの名前とプロパティ名は変更しないでください。 自動生成されたパラメーターは、プロジェクトにリソース/機能を追加するときに使用できます。
-* 自動生成されたテンプレートの出力は変更ARMしてください。 テンプレートに出力を追加ARMできます。 出力は、展開、マニフェスト ファイルの検証などの他の機能に保持され `.fx/states/state.{env}.json` 、使用されます。
+* フォルダー構造とファイル名は変更しないでください。 プロジェクトにリソースや機能を追加すると、ツールによって既存のファイルに新しいコンテンツが追加される場合があります。
+* 自動生成されたパラメーターの名前とプロパティ名は変更しないでください。 自動生成されたパラメーターは、プロジェクトにリソースや機能を追加するときに使用できます。
+* 自動生成されたテンプレートの出力は変更ARMしてください。 テンプレートに出力を追加ARMできます。 出力は、 `.fx/states/state.{env}.json` マニフェスト ファイルの展開、検証などの他の機能で使用できます。
 
 ### <a name="customization-scenarios"></a>カスタマイズ シナリオ
 
-これらは、プロビジョニング動作をカスタマイズできる一般的なシナリオです。
+次のシナリオをカスタマイズできます。
 
 #### <a name="use-an-existing-aad-app-for-your-teams-app"></a>既存のアプリをAADアプリにTeamsする
 
@@ -215,14 +225,14 @@ TeamsFx ツールが正しく機能していることを確認するには、カ
 }
 ```
 
-上記のスニペットを追加した後、関連する環境変数にシークレットを追加して、プロビジョニング中にツールが実際のシークレットを解決できます。
+スニペットを追加した後、関連する環境変数にシークレットを追加して、プロビジョニング中に実際のシークレットを解決できます。
 
 > [!NOTE]
-> 複数の環境で 1 つのアプリAAD共有しないでください。 アプリを更新する権限を持AAD場合は、アプリを手動で更新する方法に関するAADされます。 プロビジョニング後にアプリを更新するには、AAD手順に従ってください。
+> 複数の環境で同じアプリAAD共有しないでください。 アプリを更新する権限を持AAD場合は、アプリを手動で更新する方法に関するAADできます。 手順に従って、プロビジョニング後AADアプリを更新します。
 
 #### <a name="use-an-existing-aad-app-for-your-bot"></a>ボットに既存のAADアプリを使用する
 
-次の構成スニペットをファイルに追加 `.fx/configs/config.{env}.json` して、ボットAADアプリを使用できます。
+次の構成スニペットをファイルに追加して、ボットAAD `.fx/configs/config.{env}.json` アプリを使用できます。
 
 ```json
 "bot": {
@@ -231,14 +241,11 @@ TeamsFx ツールが正しく機能していることを確認するには、カ
 }
 ```
 
-上記のスニペットを追加した後、関連する環境変数にシークレットを追加して、プロビジョニング中にツールが実際のシークレットを解決できます。
-
-> [!NOTE]
-> 複数の環境で 1 つのアプリAAD共有しないでください。
+前のスニペットを追加した後、ツールの関連する環境変数にシークレットを追加して、プロビジョニング中に実際のシークレットを解決します。
 
 #### <a name="skip-adding-user-for-sql-database"></a>データベースのユーザーの追加SQLスキップする
 
-ツールがデータベースにユーザーを追加しようとすると、アクセス許可エラーがSQL場合があります。 次の構成スニペットをファイルに追加 `.fx/configs/config.{env}.json` して、データベース ユーザーへの追加SQLスキップできます。
+ツールがユーザーを SQL データベースに追加しようとするときにアクセス許可エラーが不十分な場合は、次の構成スニペットをファイルに追加して、データベース ユーザーへの追加SQL `.fx/configs/config.{env}.json` できます。
 
 ```json
 "skipAddingSqlUser": true
@@ -246,17 +253,17 @@ TeamsFx ツールが正しく機能していることを確認するには、カ
 
 ### <a name="specifying-the-name-of-function-app-instance"></a>Function App インスタンスの名前を指定する
 
-この例では、既定の名前を `contosoteamsappapi` 使用する代わりに、Function App インスタンスに別の名前を指定します。
+既定の名前 `contosoteamsappapi` を使用する代わりに、関数アプリ インスタンスに使用できます。
 
 > [!NOTE]
-> 既に環境をプロビジョニングしている場合、名前を指定すると、以前に作成したインスタンスの名前を変更する代わりに、新しい Function App インスタンスが作成されます。
+> 既に環境をプロビジョニングしている場合は、名前を指定すると、以前に作成したインスタンスの名前を変更する代わりに、新しい関数アプリ インスタンスを作成できます。
 
 次の手順を実行します。
 
 1. 現在 `.fx/configs/azure.parameters.{env}.json` の環境で開きます。
 2. パラメーターの値に `functionAppName` 新しいプロパティを追加します `provisionParameters` 。
-3. "contosoteamsappapi" を値として入力する `functionAppName`
-4. 最後のパラメーター ファイルは、次のように表示されます。
+3. の `contosoteamsappapi` 値として入力します。 `functionAppName`
+4. 最終的なパラメーター ファイルは、次のスニペットに表示されます。
 
     ```json
     {
@@ -275,13 +282,13 @@ TeamsFx ツールが正しく機能していることを確認するには、カ
 
 ### <a name="scenerio"></a>Scenerio 
 
-**他の Azure リソース (Azure ストレージ) をアプリケーションに追加するには**
+**他の Azure リソースまたはストレージをアプリケーションに追加するには**
 
-このシナリオでは、いくつかの BLOB データを格納Azure Storage Azure Function バックエンドにデータを追加する場合を考えます。 サポートを使用してバイセップ テンプレートを更新する自動フロー Azure Storageはありません。 ただし、バイセップ ファイルを編集してリソースを追加できます。 手順は次のとおりです。
+Blob データを格納するために Azure 関数バックエンドに Azure ストレージを追加するシナリオについて考えます。 Azure ストレージ サポートを使用してバイセップ テンプレートを更新する自動フローはありません。 ただし、バイセップ ファイルを編集してリソースを追加できます。 手順は次のとおりです。
 
-1. タブ プロジェクトを作成する
-2. プロジェクトに関数を追加します。 リソースの追加の [詳細については、「リソース](./add-resource.md) の追加」をご覧ください。
-3. 新しいアカウントをStorageテンプレートARMします。 簡略化するために、リソースを直接宣言 `templates/azure/provision/function.bicep` します。 他の場所でリソースを宣言できます。
+1. タブ プロジェクトを作成します。
+2. プロジェクトに関数を追加します。 詳細については、「リソースの追加 [」を参照してください](./add-resource.md)。
+3. 新しいストレージ アカウントをテンプレートでARMします。 リソースは直接宣言 `templates/azure/provision/function.bicep` できます。 他の場所でリソースを宣言できます。
 
     `````````bicep
     var applicationStorageAccountName = 'myapp${uniqueString(resourceGroup().id)}'
@@ -295,7 +302,7 @@ TeamsFx ツールが正しく機能していることを確認するには、カ
     }
     `````````
 
-4. 手順 3 の同設定でAzure Storage接続文字列を使用して Azure Function App を `templates/azure/provision/function.bicep` 更新します。 リソースの配列に `functionApp` 次のスニペットを追加 `appSettings` します。
+4. で Azure ストレージ接続文字列を使用して Azure 関数アプリの設定を更新します `templates/azure/provision/function.bicep` 。 リソースの配列に次 `functionApp` のスニペットを追加 `appSettings` します。
 
     ``````````````````bicep
     {
@@ -304,9 +311,9 @@ TeamsFx ツールが正しく機能していることを確認するには、カ
     }
     ```````````````````
 
-5. これで、出力バインドを使用してAzure Storage更新できます。
+5. Azure ストレージ出力バインドを使用して関数を更新できます。
 
-## <a name="faq"></a>よくあるご質問 (FAQ)
+## <a name="faq"></a>FAQ
 
 <br>
 
@@ -314,7 +321,7 @@ TeamsFx ツールが正しく機能していることを確認するには、カ
 
 <summary><b>トラブルシューティングの方法</b></summary>
 
-エラーが発生したTeams ToolkitがVisual Studio Code、エラー通知のボタンをクリックして、関連するヘルプ `Get Help` ドキュメントに移動できます。TeamsFx CLI を使用している場合は、ヘルプ ドキュメントを示すハイパー リンクがエラー メッセージの最後に表示されます。プロビジョニング ヘルプ ドキュメントを[直接表示](https://aka.ms/teamsfx-arm-help)することもできます。
+エラーが発生した場合はTeams ToolkitをVisual Studio Code、エラー通知の [問い合わせ]を選択して、関連するドキュメントに移動できます。 TeamsFx CLI を使用している場合は、ヘルプ ドキュメントを示すハイパーリンクがエラー メッセージの最後に表示されます。プロビジョニング ヘルプ ドキュメントを [直接表示](https://aka.ms/teamsfx-arm-help) することもできます。
 
 <br>
 
@@ -325,7 +332,7 @@ TeamsFx ツールが正しく機能していることを確認するには、カ
 <summary><b>プロビジョニング中に別の Azure サブスクリプションに切り替える方法</b></summary>
 
 1. 現在のアカウントでサブスクリプションを切り替えるか、ログアウトして新しいサブスクリプションを選択します。
-2. 現在の環境を既にプロビジョニングしている場合は、リソースの移動をサポートしていないので、新しい環境を作成し、ARMを実行する必要があります。
+2. 現在の環境を既に準備している場合は、リソースの移動をサポートしていないARM新しい環境を作成し、プロビジョニングを実行する必要があります。
 3. 現在の環境をプロビジョニングしなかった場合は、プロビジョニングを直接トリガーできます。
 
 <br>
@@ -344,12 +351,12 @@ TeamsFx ツールが正しく機能していることを確認するには、カ
 
 <details>
 
-<summary><b>アプリをプロビジョニングSharePointする方法</b></summary>
+<summary><b>Sharepoint ベースのアプリをプロビジョニングする方法</b></summary>
 
-[プロビジョニング] SharePoint[ベース のアプリに従](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)って、SharePointアプリをプロビジョニングできます。
+プロビジョニング の手順[に従って、SharePointベースのアプリを実行できます](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)。
 
 > [!NOTE]
-> 現在 Teams、Teams Toolkit を使用した SharePoint Framework を使用したアプリの構築には Azure との直接統合は行いません。このドキュメントのコンテンツは、SPFx ベースのアプリには適用されません。
+> 現在、Teams Toolkit を使用した sharepoint フレームワークを使用した Teams アプリの構築には Azure との直接統合は行いませんが、ドキュメント内のコンテンツは SPFx ベースのアプリには適用されません。
 
 
 <br>
@@ -358,11 +365,6 @@ TeamsFx ツールが正しく機能していることを確認するには、カ
 
 ## <a name="see-also"></a>関連項目
 
-> [!div class="nextstepaction"]
-> [クラウドTeamsアプリを展開する](deploy.md)
-
-> [!div class="nextstepaction"]
-> [複数の環境を管理する](TeamsFx-multi-env.md)
-
-> [!div class="nextstepaction"]
-> [プロジェクトで他の開発者とTeamsする](TeamsFx-collaboration.md)
+* [クラウドTeamsアプリを展開する](deploy.md)
+* [複数の環境を管理する](TeamsFx-multi-env.md)
+* [プロジェクトで他の開発者とTeamsする](TeamsFx-collaboration.md)

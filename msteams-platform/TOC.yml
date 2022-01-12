@@ -112,11 +112,11 @@
           href: toolkit/TeamsFx-manifest-customization.md
         - name: Teams アプリ マニフェストをプレビューする
           href: toolkit/TeamsFx-manifest-preview.md
-        - name: Teams アプリ マニフェストを管理する
+        - name: 複数の環境を管理する
           href: toolkit/TeamsFx-multi-env.md
         - name: Teams ツールキットで他の開発者と協力する
           href: toolkit/TeamsFx-collaboration.md
-        - name: CI/CD ワークフローを使用する
+        - name: CI/CD ガイド
           href: toolkit/use-CICD-template.md
         - name: Teams ツールキット CLI
           href: toolkit/TeamsFx-CLI.md

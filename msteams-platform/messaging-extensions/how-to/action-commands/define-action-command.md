@@ -5,12 +5,12 @@ description: アプリ マニフェストの例を使用したメッセージン
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d2d872810794c46fe424371268d8ef210f8f528c
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 3590309abf3e994333c907c69785f58af0162890
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887993"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768239"
 ---
 # <a name="define-messaging-extension-action-commands"></a>メッセージング拡張機能アクション コマンドの定義
 
@@ -29,11 +29,20 @@ ms.locfileid: "60887993"
 まず、アクション コマンドを呼び出す場所を決定する必要があります。 アプリ マニフェストで指定すると、次の 1 つ以上の場所からコマンド `context` を呼び出すことができます。
 
 * メッセージの作成領域: 作成メッセージ領域の下部にあるボタン。
-* [コマンド] ボックス: @mentioningボックスにアプリを追加します。 
+
+    コマンド コンテキスト = 作成
+
+* [コマンド] ボックス: @mentioningボックスにアプリを追加します。
+
+    コマンド コンテキスト = commandBox
+
    > [!NOTE]
    > コマンド ボックスからメッセージング拡張機能が呼び出された場合は、ボット メッセージをスレッドに直接挿入して応答できません。
 
-* メッセージ: 既存のメッセージから、メッセージのオーバーフロー `...` メニューから直接移動します。 
+* メッセージ: 既存のメッセージから、メッセージのオーバーフロー `...` メニューから直接移動します。
+
+    コマンド コンテキスト = メッセージ
+
     > [!NOTE] 
     > ボットへの最初の呼び出しには、呼び出されたメッセージを含む JSON オブジェクトが含まれます。 メッセージをタスク モジュールで表示する前に、メッセージを処理できます。
 
@@ -132,29 +141,29 @@ ms.locfileid: "60887993"
 |---|---|---|---|
 | `id` | このプロパティは、このコマンドに割り当てる一意の ID です。 ユーザー要求には、この ID が含まれます。 | はい | 1.0 |
 | `title` | このプロパティはコマンド名です。 この値は UI に表示されます。 | はい | 1.0 |
-| `type` | このプロパティは、 である必要があります `action` 。 | 不要 | 1.4 |
-| `fetchTask` | このプロパティは、タスク モジュールのアダプティブ カードまたは埋め込み Web ビュー、およびパラメーターの静的リストまたは Web ビューを読み込むときにに設定 `true` `false` されます `taskInfo` 。 | 不要 | 1.4 |
-| `context` | このプロパティは、メッセージング拡張機能の呼び出し先を定義する値の任意の配列です。 使用可能な値: `message`、`compose`、`commandBox`。 既定値は `["compose", "commandBox"]` です。 | 不要 | 1.5 |
+| `type` | このプロパティは、 である必要があります `action` 。 | いいえ | 1.4 |
+| `fetchTask` | このプロパティは、タスク モジュールのアダプティブ カードまたは埋め込み Web ビュー、およびパラメーターの静的リストまたは Web ビューを読み込むときにに設定 `true` `false` されます `taskInfo` 。 | いいえ | 1.4 |
+| `context` | このプロパティは、メッセージング拡張機能の呼び出し先を定義する値の任意の配列です。 使用可能な値: `message`、`compose`、`commandBox`。 既定値は `["compose", "commandBox"]` です。 | いいえ | 1.5 |
 
 静的なパラメーターの一覧を使用している場合は、次のパラメーターも追加する必要があります。
 
 | プロパティ名 | 用途 | 必須ですか? | マニフェストの最小バージョン |
 |---|---|---|---|
-| `parameters` | このプロパティは、コマンドのパラメーターの静的な一覧を示します。 の場合にのみ `fetchTask` 使用します `false` 。 | 不要 | 1.0 |
+| `parameters` | このプロパティは、コマンドのパラメーターの静的な一覧を示します。 の場合にのみ `fetchTask` 使用します `false` 。 | いいえ | 1.0 |
 | `parameter.name` | このプロパティは、パラメーターの名前を表します。 これは、ユーザー要求でサービスに送信されます。 | はい | 1.0 |
 | `parameter.description` | このプロパティは、パラメーターの目的または指定する必要がある値の例を示します。 この値は UI に表示されます。 | はい | 1.0 |
 | `parameter.title` | このプロパティは、短いユーザーフレンドリーなパラメーターのタイトルまたはラベルです。 | はい | 1.0 |
-| `parameter.inputType` | このプロパティは、必要な入力の種類に設定されます。 指定できる値には `text` `textarea` 、、 `number` 、 、 、 `date` 、 `time` が含まれます `toggle` 。 既定値は に設定されます `text` 。 | 不要 | 1.4 |
+| `parameter.inputType` | このプロパティは、必要な入力の種類に設定されます。 指定できる値には `text` `textarea` 、、 `number` 、 、 、 `date` 、 `time` が含まれます `toggle` 。 既定値は に設定されます `text` 。 | いいえ | 1.4 |
 
 埋め込み Web ビューを使用している場合は、ボットを直接呼び出さずに、必要に応じてオブジェクトを追加して Web ビュー `taskInfo` をフェッチできます。 このオプションを選択した場合の動作は、静的なパラメーターの一覧を使用する動作と似ています。 ボットとの最初のやり取りが [タスク モジュール送信アクションに応答しているという場合](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)。 オブジェクトを使用している場合 `taskInfo` は、パラメーターをに設定 `fetchTask` する必要があります `false` 。
 
 | プロパティ名 | 用途 | 必須ですか? | マニフェストの最小バージョン |
 |---|---|---|---|
-|`taskInfo`|メッセージング拡張機能コマンドを使用するときにプリロードするタスク モジュールを指定します。 | 不要 | 1.4 |
-|`taskInfo.title`|初期タスク モジュールのタイトル。 |不要 | 1.4 |
-|`taskInfo.width`|タスク モジュールの幅 (ピクセル単位の数値または既定のレイアウトなど) `large` `medium` `small` |不要 | 1.4 |
-|`taskInfo.height`|タスク モジュールの高さ (ピクセル単位の数値または既定のレイアウトなど) `large` `medium` `small`|不要 | 1.4 |
-|`taskInfo.url`|初期 Web ビューの URL。|不要 | 1.4 | 
+|`taskInfo`|メッセージング拡張機能コマンドを使用するときにプリロードするタスク モジュールを指定します。 | いいえ | 1.4 |
+|`taskInfo.title`|初期タスク モジュールのタイトル。 |いいえ | 1.4 |
+|`taskInfo.width`|タスク モジュールの幅 (ピクセル単位の数値または既定のレイアウトなど) `large` `medium` `small` |いいえ | 1.4 |
+|`taskInfo.height`|タスク モジュールの高さ (ピクセル単位の数値または既定のレイアウトなど) `large` `medium` `small`|いいえ | 1.4 |
+|`taskInfo.url`|初期 Web ビューの URL。|いいえ | 1.4 | 
 
 #### <a name="app-manifest-example"></a>アプリ マニフェストの例
 
@@ -215,7 +224,7 @@ ms.locfileid: "60887993"
 |Teams拡張アクション| アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams拡張機能の検索   |  検索コマンドを定義し、検索に応答する方法について説明します。        |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 アダプティブ カードまたはオブジェクトのない埋め込み Web ビューのいずれかを使用している場合、次の `taskInfo` 手順は次のとおりです。
 

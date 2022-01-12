@@ -5,12 +5,12 @@ description: コード例とサンプルを使用してメッセージング拡�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 83c7ce4f7897014345fd071b28273ade5907a917
-ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
+ms.openlocfilehash: 5c990bd46f145d34616b20e25dc6a0f776f022f9
+ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949097"
+ms.lasthandoff: 01/12/2022
+ms.locfileid: "61768448"
 ---
 # <a name="add-authentication-to-your-messaging-extension"></a>メッセージング拡張機能に認証を追加する
 
@@ -67,7 +67,8 @@ ms.locfileid: "60949097"
 ```
 
 > [!NOTE]
-> サインイン エクスペリエンスを Teams ポップアップ ウィンドウでホストするには、URL のドメイン部分がアプリの有効なドメインの一覧にある必要があります。 詳細については、マニフェスト [スキーマの validDomains](~/resources/schema/manifest-schema.md#validdomains) を参照してください。
+> * サインイン エクスペリエンスを Teams ポップアップ ウィンドウでホストするには、URL のドメイン部分がアプリの有効なドメインの一覧にある必要があります。 詳細については、マニフェスト [スキーマの validDomains](~/resources/schema/manifest-schema.md#validdomains) を参照してください。
+> * 認証ポップアップのサイズは、幅と高さのクエリ文字列パラメーターを含めて定義できます `Value = $"{_siteUrl}/searchSettings.html?settings={escapedSettings}",` 。
 
 ### <a name="start-the-sign-in-flow"></a>サインイン フローを開始する
 
