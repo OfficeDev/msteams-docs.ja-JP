@@ -5,12 +5,12 @@ description: アダプティブ カードの Input.ChoiceSet コントロール�
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
-ms.openlocfilehash: 95041b1a24ac083329a809b8a5989d77e2430e26
-ms.sourcegitcommit: e45742fd2aa2ff5e5c15e8f7c20cc14fbef6d441
+ms.openlocfilehash: 6c2c26ee6853b23283ae04dbbfec4a78425e2ea5
+ms.sourcegitcommit: f85d0a40326f45b1ffdd3bd1b61b2d6af76b6e85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "61075584"
+ms.lasthandoff: 01/04/2022
+ms.locfileid: "61722183"
 ---
 # <a name="typeahead-search-in-adaptive-cards"></a>アダプティブ カードの Typeahead 検索
 
@@ -80,18 +80,18 @@ John は、Xbox 小売店で働くストアの従業員です。 ストアはボ
 
 | プロパティ| 型 | 必須 | 説明 |
 |-----------|------|----------|-------------|
-| style | Compact <br/> Expanded <br/> Filtered | 不要 | 静的型先行のサポートされている検証の一覧にフィルター処理されたスタイルを追加します。|
-| choices.data | Data.Query | 不要 | バックエンドからリモートの選択肢セットをフェッチすることで、ユーザーの種類として動的な先行型を有効にできます。 |
+| style | Compact <br/> Expanded <br/> Filtered | いいえ | 静的型先行のサポートされている検証の一覧にフィルター処理されたスタイルを追加します。|
+| choices.data | Data.Query | いいえ | バックエンドからリモートの選択肢セットをフェッチすることで、ユーザーの種類として動的な先行型を有効にできます。 |
 
 ### <a name="dataquery-definition"></a>Data.Query 定義
 
 | プロパティ| 型 | 必須 | 説明 |
 |-----------|------|----------|-------------|
 | type | Data.Query | はい | Data.Query オブジェクトを指定します。|
-| データセット | 文字列 | はい | 動的にフェッチされるデータの種類を指定します。 |
-| value | 文字列 | いいえ | ボットへの呼び出し要求に対して、ユーザーが指定した入力を設定します `ChoiceSet` 。 |
-| count | 番号 | 不要 | ボットへの呼び出し要求を設定して、返す必要がある要素の数を指定します。 ユーザーが別の金額を送信する場合、ボットはそれを無視します。 | 
-| skip | 番号 | 不要 | ボットへの呼び出し要求を設定して、ユーザーがページ分割してリスト内を移動する必要があるかどうかを示します。 |
+| データセット | String | はい | 動的にフェッチされるデータの種類を指定します。 |
+| value | String | いいえ | ボットへの呼び出し要求に対して、ユーザーが指定した入力を設定します `ChoiceSet` 。 |
+| count | 番号 | いいえ | ボットへの呼び出し要求を設定して、返す必要がある要素の数を指定します。 ユーザーが別の金額を送信する場合、ボットはそれを無視します。 | 
+| skip | 番号 | いいえ | ボットへの呼び出し要求を設定して、ユーザーがページ分割してリスト内を移動する必要があるかどうかを示します。 |
 
 ### <a name="example"></a>例
 
@@ -296,6 +296,124 @@ John は、Xbox 小売店で働くストアの従業員です。 ストアはボ
   "version": "1.2"
 }
 ```
+
+## <a name="code-snippets-for-invoke-request-and-response"></a>呼び出し要求と応答のコード スニペット
+
+### <a name="invoke-request"></a>要求の呼び出し
+
+```json
+{
+    "name": "application/search",
+    "type": "invoke",
+    "value": {
+        "queryText": "fluentui",
+        "queryOptions": {
+            "skip": 0,
+            "top": 15
+        },
+        "dataset": "npm"
+    },
+    "locale": "en-US",
+    "localTimezone": "America/Los_Angeles",
+    // …. other fields
+}
+```
+
+### <a name="response"></a>応答
+
+#### <a name="c"></a>[C#](#tab/csharp)
+
+```csharp
+protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+{
+    if (turnContext.Activity.Name == "application/search")
+    {
+    var packages = new[] {
+            new { title = "A very extensive set of extension methods", value = "FluentAssertions" },
+            new { title = "Fluent UI Library", value = "FluentUI" }};
+
+    var searchResponseData = new
+    {
+        type = "application/vnd.microsoft.search.searchResponse",
+        value = new
+        {
+        results = packages
+        }
+    };
+    var jsonString = JsonConvert.SerializeObject(searchResponseData);
+    JObject jsonData = JObject.Parse(jsonString);
+    return new InvokeResponse()
+    {
+        Status = 200,
+        Body = jsonData
+    };
+    }
+
+    return null;
+}
+```
+
+#### <a name="nodejs"></a>[Node.js](#tab/nodejs)
+ 
+```nodejs
+  async onInvokeActivity(context) {
+    if (context._activity.name == 'application/search') {
+      // let searchQuery = context._activity.value.queryText;  // This can be used to filter the results
+      var successResult = {
+        status: 200,
+        body: {
+          "type": "application/vnd.microsoft.search.searchResponse",
+          "value": {
+            "results": [
+              {
+                "value": "FluentAssertions",
+                "title": "A very extensive set of extension methods"
+              },
+              {
+                "value": "FluentUI",
+                "title": "Fluent UI Library"
+              }
+            ]
+          }
+        }
+      }
+
+      return successResult;
+
+    }
+  }
+```
+
+####  <a name="json"></a>[JSON](#tab/json)
+
+```json
+{
+    "status": 200,
+    "body" : {
+        "type": "application/vnd.microsoft.search.searchResponse",
+        "value": {
+           "results": [
+                {
+                    "value": "FluentAssertions",
+                    "title": "A very extensive set of extension methods."
+                },
+                {
+                    "value": "FluentUI",
+                    "title": "Fluent UI Library"
+                }
+            ]
+        }
+    }
+}
+```
+
+---
+
+## <a name="code-sample"></a>コード サンプル
+
+|サンプルの名前 | 説明 | C# | Node.js |
+|----------------|-----------------|--------------|----------------|
+| アダプティブ カードに先行検索コントロールを入力する | このサンプルは、アダプティブ カードの静的および動的なタイプの先行検索コントロールの機能を示しています。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>関連項目
 
