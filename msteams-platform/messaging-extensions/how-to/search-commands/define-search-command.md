@@ -5,12 +5,12 @@ description: アプリのメッセージング拡張機能の検索コマンドM
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 104d5762aa3933d63764b2c703fad366cf190a0e
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 4cfbb57176f5c1bdcac5e120e23284b6bd705df3
+ms.sourcegitcommit: 7cccec0b2512f4e9366eb7c88998c5181a52681d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889385"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059076"
 ---
 # <a name="define-messaging-extension-search-commands"></a>メッセージング拡張機能の検索コマンドを定義する
 
@@ -64,7 +64,7 @@ ms.locfileid: "60889385"
     <img src="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt="search command parameter selection" width="500"/>
 
 1. コマンド ID **と Title** を **追加します**。
-1. 検索コマンドを呼び出す必要がある場所を選択します。 メッセージを **選択しても** 、現在、検索コマンドの動作は変更されません。 次の図は、検索コマンドの呼び出し場所を表示します。
+1. 検索コマンドを呼び出す必要がある場所を選択します。 次の図は、検索コマンドの呼び出し場所を表示します。
 
     <img src="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt="search command invoke location selection]" width="500"/>
 

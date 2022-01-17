@@ -6,18 +6,18 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 5ca5f81fd857296f2e81dbce97673f5a10c66ab7
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: b8a6506707626a80cabc9c730eef6fe11160e386
+ms.sourcegitcommit: 7cccec0b2512f4e9366eb7c88998c5181a52681d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768574"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059069"
 ---
 # <a name="cicd-guide"></a>CI/CD ガイド
 
 TeamsFx は、アプリケーションの構築中に開発ワークフローをTeamsします。 このドキュメントには、CI または CD パイプラインのセットアップを開始するためのツールとテンプレートがGitHub Azure Devops、Jenkins です。
 
-|ツールとテンプレート|Description| 
+|ツールとテンプレート|説明| 
 |---|---|
 |[teamsfx-cli-action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub TeamsFx CLI と統合するアクション。|
 |[github-ci-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-ci-template.yml) と [github-cd-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-cd-template.yml)| GitHubアプリ用の CI または CD Teamsします。 |
@@ -77,11 +77,9 @@ TeamsFx は、アプリケーションの構築中に開発ワークフローを
 |M365_ACCOUNT_PASSWORD|M365 アカウントのパスワード。|
 |M365_TENANT_ID|アプリを作成/発行するTeamsを特定します。 マルチテナント アカウントを持ち、別のテナントを使用しない限り、この値はオプションです。 詳細については [、「M365 テナント ID を検索する方法」を参照してください](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)。|
 
-> [!NOTE]
-> 現時点では、M365 の非対話型認証スタイルは CI または CD ワークフローで使用され、M365 アカウントがテナントに十分な特権を持ち、多要素認証や他の高度なセキュリティ機能が有効になっていないか確認します。 詳細については [、「Configure M365 Credentials」](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) を参照して、ワークフローで使用される資格情報の多要素認証とセキュリティの既定値を無効にしてください。
 
 > [!NOTE]
-> 現在、Azure のサービス プリンシパルは CI/CD ワークフローで使用されています。 詳細については[、「Create azure Service principles」を参照してください](#create-azure-service-principals)。
+> 現在、Azure のサービス プリンシパルは CI/CD ワークフローで使用されています。 詳細については [、「Create azure Service principles」を参照してください](#create-azure-service-principals)。
 
 ## <a name="set-up-ci-or-cd-pipelines-with-azure-devops"></a>アプリケーションを使用して CI または CD パイプラインをAzure DevOps
 
