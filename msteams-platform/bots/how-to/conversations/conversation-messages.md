@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: d417d0cc737b088a5f04ac8a45c834cd83bbbde5
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 10bc7de187b5303d70e0106737f656fef25da046
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889336"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059780"
 ---
 # <a name="messages-in-bot-conversations"></a>ボットの会話内のメッセージ
 
@@ -137,15 +137,17 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
 
 ```typescript
 
-export class MyBot extends TeamsActivityHandler {
-    constructor() {
-        super();
-        this.onMessage(async (context, next) => {
-            await context.sendActivity('Hello and welcome!');
-            await next();
-        });
-    }
-}
+    this.onMembersAddedActivity(async (context, next) => {
+        await Promise.all((context.activity.membersAdded || []).map(async (member) => {
+            if (member.id !== context.activity.recipient.id) {
+                await context.sendActivity(
+                    `Welcome to the team ${member.givenName} ${member.surname}`
+                );
+            }
+        }));
+
+        await next();
+    });
 ```
 
 # <a name="python"></a>[Python](#tab/python)
@@ -212,7 +214,7 @@ async def on_members_added_activity(
 * `channelData.teamsTeamId`: 非推奨です。 このプロパティは、下位互換性のためにのみ含まれます。
 * `channelData.teamsChannelId`: 非推奨です。 このプロパティは、下位互換性のためにのみ含まれます。
 
-### <a name="example-channeldata-object-or-channelcreated-event"></a>channelData オブジェクトまたは channelCreated イベントの例
+### <a name="example-channeldata-object-channelcreated-event"></a>channelData オブジェクトの例 (channelCreated イベント)
 
 次のコードは、channelData オブジェクトの例を示しています。
 
@@ -232,22 +234,20 @@ async def on_members_added_activity(
 }
 ```
 
-ボットから受信またはボットに送信されるメッセージには、さまざまな種類のメッセージ コンテンツを含めできます。
-
 ## <a name="message-content"></a>メッセージの内容
 
-| フォーマット    | ユーザーからボットへ | ボットからユーザーへ | メモ                                                                                   |
+ボットから受信またはボットに送信されるメッセージには、さまざまな種類のメッセージ コンテンツを含めできます。
+
+| フォーマット    | ユーザーからボットへ | ボットからユーザーへ | Notes                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | リッチ テキスト | ✔                | ✔                | ボットはリッチ テキスト、画像、カードを送信できます。 ユーザーは、リッチ テキストと画像をボットに送信できます。                                                                                        |
 | ピクチャ  | ✔                | ✔                | 最大 1024 × 1024 および 1 MB (PNG、JPEG、または GIF 形式)。 アニメーション GIF はサポートされていません。  |
 | カード     | ✖                | ✔                | サポートされているカード[についてはTeamsカード](~/task-modules-and-cards/cards/cards-reference.md)リファレンスを参照してください。 |
-| 絵文字    | ✖                | ✔                | Teams、顔にニヤリと笑う U+1F600 など、UTF-16 による絵文字がサポートされています。 |
-
-プロパティを使用してメッセージに通知を追加 `Notification.Alert` することもできます。
+| 絵文字    | ✔                | ✔                | Teams、顔にニヤリと笑う U+1F600 など、UTF-16 による絵文字がサポートされています。 |
 
 ## <a name="notifications-to-your-message"></a>メッセージへの通知
 
-通知は、新しいタスク、メンション、コメントについてユーザーに通知します。 これらのアラートは、ユーザーが作業している情報や、アクティビティ フィードに通知を挿入して表示する必要があるものに関連しています。 ボット メッセージから通知をトリガーするには、objects プロパティを `TeamsChannelData` true `Notification.Alert` に設定 *します*。 通知が発生するかどうかは、個々のユーザーの設定によって異Teams、これらの設定を上書きすることはできません。 通知の種類は、バナー、またはバナーとメールの両方です。
+プロパティを使用してメッセージに通知を追加 `Notification.Alert` することもできます。 通知は、新しいタスク、メンション、コメントについてユーザーに通知します。 これらのアラートは、ユーザーが作業している情報や、アクティビティ フィードに通知を挿入して表示する必要があるものに関連しています。 ボット メッセージから通知をトリガーするには、objects プロパティを `TeamsChannelData` true `Notification.Alert` に設定 *します*。 通知が発生するかどうかは、個々のユーザーの設定によって異Teams、これらの設定を上書きすることはできません。 通知の種類は、バナー、またはバナーとメールの両方です。
 
 > [!NOTE]
 > [ **概要] フィールド** には、ユーザーからのテキストがフィードに通知メッセージとして表示されます。
@@ -333,7 +333,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 画像は、PNG、JPEG、または GIF 形式× 1024、1024、1 MB までです。 アニメーション GIF はサポートされていません。
 
-XML を使用して各イメージの高さと幅を指定します。 markdown では、イメージ サイズの既定値は 256 ×256 です。 例:
+XML を使用して各イメージの高さと幅を指定します。 markdown では、イメージ サイズの既定値は 256 ×256 です。 次に例を示します。
 
 * 使用: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>` .
 * 使用 `![Duck on a rock](http://aka.ms/Fo983c)` しない:

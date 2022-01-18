@@ -4,18 +4,18 @@ description: 新しい音声/ビデオ通話ボットの登録、Microsoft Teams
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: ボットのオーディオ/ビデオ オーディオ ビデオ メディアを呼び出す
-ms.openlocfilehash: d1cf0049c37f7f586abf19f9e9d0290c74e230ac
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 6b90cea6adef1e59c1b075b6581c1415cf5a4786
+ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948622"
+ms.lasthandoff: 01/18/2022
+ms.locfileid: "62062510"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>会議の通話と会議ボットを登録Microsoft Teams
 
 音声またはビデオ通話とオンライン会議に参加するボットは、ボットの登録にMicrosoft Teams追加機能を備える通常のボットです。
 
-* 新しいバージョンのアプリ マニフェストTeams設定が 2 つ追加 `supportsCalling` されています `supportsVideo` 。 これらの設定は、アプリ マニフェスト[の](../../resources/dev-preview/developer-preview-intro.md)開発者プレビュー バージョンTeams含まれています。
+* 新しいバージョンのアプリ マニフェストTeams設定が 2 つ追加 `supportsCalling` されています `supportsVideo` 。 これらの設定は、マニフェスト スキーマ[のマニフェスト スキーマに含Microsoft Teams。](../../resources/schema/manifest-schema.md)
 * [Microsoft Graphアクセス許可は](./registering-calling-bot.md#add-graph-permissions)、ボットの Microsoft App ID 用に構成する必要があります。
 * 電話Graphオンライン会議 API のアクセス許可には、テナント管理者の同意が必要です。
 
@@ -29,7 +29,7 @@ ms.locfileid: "60948622"
 これらの値の呼び出しと会議ボットの manifest.json スキーマを IDE で適切に検証する場合は、次のように `$schema` 属性を変更できます。
 
 ```json
-"$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
+"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
 ```
 
 次のセクションでは、新しいボットを作成したり、既存のボットに通話機能を追加することができます。
@@ -92,7 +92,7 @@ AAD V1 エンドポイントを使用するアプリの場合、テナント管�
 > [!IMPORTANT]
 > アプリケーションのアクセス許可を変更する場合は、管理者の同意プロセスも繰り返す必要があります。 アプリ登録ポータルで行われた変更は、テナントの管理者が同意を再適用するまで反映されません。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [着信通知](~/bots/calls-and-meetings/call-notifications.md)

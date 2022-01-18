@@ -4,12 +4,13 @@ description: アプリを複数のユーザーにまたがって拡張Teams前�
 ms.date: 11/15/2021
 ms.topic: how-to
 ms.custom: m365apps
-ms.openlocfilehash: 2b11f940eba27fb3a2f44a89f3617d9d932881a7
-ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
+ms.localizationpriority: medium
+ms.openlocfilehash: cd9136b2442b8b39169592be13071136ab39c645
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "61391711"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059729"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-m365"></a>M365 全体でアプリを拡張Teams環境をセットアップする
 

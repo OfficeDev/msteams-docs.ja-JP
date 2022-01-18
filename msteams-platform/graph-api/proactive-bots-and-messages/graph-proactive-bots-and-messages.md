@@ -6,23 +6,20 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: Teams プロアクティブ メッセージング チャットのインストール Graph
-ms.openlocfilehash: a52d36150ee384841cde73e9a00510cabc31f144
-ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
+ms.openlocfilehash: d65be003bd6fe245e8a6ca80ca8823a2e935ff43
+ms.sourcegitcommit: 25a33b31cc56c05169fc52c65d44c65c601aefef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949580"
+ms.lasthandoff: 01/14/2022
+ms.locfileid: "62043225"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Graph API を使用してメッセージを送信するアプリの事前インストール
-
->[!IMPORTANT]
-> Microsoft GraphおよびMicrosoft Teamsパブリック プレビューは、早期アクセスとフィードバックのために利用できます。 このリリースでは広範なテストが実施されましたが、実稼働環境での使用を意図した製品ではありません。
 
 ## <a name="proactive-messaging-in-teams"></a>プロアクティブ メッセージング (Teams
 
 プロアクティブ メッセージはボットによって開始され、ユーザーとの会話を開始します。 ウェルカム メッセージの送信、アンケートや投票の実施、組織全体の通知のブロードキャストなど、さまざまな目的に役立ちます。 インプロアクティブ メッセージTeams、アドホックまたはダイアログ ベース **の会話として配信** できます。
 
-|メッセージの種類 | [説明] |
+|メッセージの種類 | 説明 |
 |----------------|-------------- |
 |アドホックプロアクティブ メッセージ| ボットは、会話フローを中断せずにメッセージを対話します。|
 |ダイアログ ベースのプロアクティブ メッセージ | ボットは新しいダイアログ スレッドを作成し、会話を制御し、プロアクティブ メッセージを配信し、閉じ、コントロールを前のダイアログに返します。|
@@ -35,7 +32,7 @@ ms.locfileid: "60949580"
 
 Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true)リソースの種類のアクセス許可は、Microsoft Teams プラットフォーム内のすべてのユーザー (個人用) スコープまたはチーム (チャネル) スコープのアプリのインストール ライフサイクルを管理するのに役立ちます。
 
-|アプリケーションのアクセス許可 | [説明]|
+|アプリケーションのアクセス許可 | 説明|
 |------------------|---------------------|
 |`TeamsAppInstallation.ReadWriteSelfForUser.All`|事前サインインTeams使用せずに、アプリがユーザーの読み取り、インストール、アップグレード、アンインストールを行えます。|
 |`TeamsAppInstallation.ReadWriteSelfForTeam.All`|事前サインインTeams使用せずに、アプリが任意のチームで自身を読み取り、インストール、アップグレード、アンインストールできます。|
@@ -156,14 +153,14 @@ Content-Type: application/json
 
 アプリがユーザー用にインストールされている場合、ボットは、プロアクティブ メッセージを送信するために必要な情報を含むイベント `conversationUpdate` [](../../resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)通知を受信します。
 
-**Microsoft Graph ページ リファレンス:** [チャットの取得](/graph/api/chat-get?view=graph-rest-beta&tabs=http&preserve-view=true)
+**Microsoft Graph ページ リファレンス:** [チャットの取得](/graph/api/chat-get?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
 1. アプリが必要です `{teamsAppInstallationId}` 。 持ってない場合は、次のコマンドを使用します。
 
     **HTTP GET** 要求:
 
     ```http
-    GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
+    GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
     ```
 
     応答 **の id** プロパティは、 `teamsAppInstallationId` です。
@@ -173,7 +170,7 @@ Content-Type: application/json
     **HTTP GET 要求** (アクセス許可 — `TeamsAppInstallation.ReadWriteSelfForUser.All` ):  
 
     ```http
-    GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
+    GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
     ```
 
     応答 **の id** プロパティは、 `chatId` です。
@@ -183,7 +180,7 @@ Content-Type: application/json
     **HTTP GET 要求** (アクセス許可 — `Chat.Read.All` ):
 
     ```http
-    GET https://graph.microsoft.com/beta/users/{user-id}/chats?$filter=installedApps/any(a:a/teamsApp/id eq '{teamsAppId}')
+    GET https://graph.microsoft.com/v1.0/users/{user-id}/chats?$filter=installedApps/any(a:a/teamsApp/id eq '{teamsAppId}')
     ```
 
 ### <a name="send-proactive-messages"></a>プロアクティブ メッセージを送信する
@@ -192,7 +189,7 @@ Content-Type: application/json
 
 ## <a name="code-sample"></a>コード サンプル
 
-| **サンプル名** | **説明** | **.NET** | **Node.js** |
+| **サンプルの名前** | **説明** | **.NET** | **Node.js** |
 |---------------|--------------|--------|-------------|
 | アプリのプロアクティブ インストールとプロアクティブ通知の送信 | このサンプルでは、ユーザーに対してアプリのプロアクティブ インストールを使用し、Microsoft の API を呼び出してプロアクティブ通知Graph示します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
 

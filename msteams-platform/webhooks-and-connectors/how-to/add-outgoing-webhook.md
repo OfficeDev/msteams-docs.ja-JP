@@ -3,15 +3,15 @@ title: 送信 Webhook を作成する
 author: laujan
 description: では、送信 Webhook を作成する方法について説明します。
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lajanuar
 keywords: Teams タブの送信 Webhook アクション可能メッセージの確認 Webhook
-ms.openlocfilehash: 2039ffdbc307b266e7bc0f93c1638450a8be9037
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
-ms.translationtype: MT
+ms.openlocfilehash: 0c41abe8078e05fa6e52a8c5379f91a21601eac3
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156452"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059750"
 ---
 # <a name="create-outgoing-webhook"></a>送信 Webhook を作成する
 
