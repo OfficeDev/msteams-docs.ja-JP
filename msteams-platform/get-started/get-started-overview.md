@@ -1,65 +1,65 @@
 ---
-title: 概要 - 概要
-description: 開発者向けドキュメントの概要Microsoft Teams概要
-ms.localizationpriority: medium
+title: 概要-開始する
+description: Microsoft Teams 開発者向けドキュメントの概要の概要
+ms.localizationpriority: high
 ms.topic: reference
-keywords: Microsoft Teamsサンプル
-ms.openlocfilehash: 9ab8014ad528aff9cfb0f4e271332981af3a8f29
-ms.sourcegitcommit: 8935f54330c5685ff091f01e2b18c70502428054
-ms.translationtype: MT
+keywords: Microsoft Teams 開発者向けサンプル
+ms.openlocfilehash: be53bc97ecc5df84ab4358927f4332764068d1c4
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/28/2021
-ms.locfileid: "61619803"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059645"
 ---
 # <a name="get-started"></a>概要
 
-カスタマイズされたアプリの構築と展開を開始する方法について、Microsoft Teams!
+Microsoft Teams 用のカスタマイズされたアプリを構築して展開するための概要へようこそ。
 
-手順を実行して、基本的な実際のアプリをTeamsします。 Get started では、一般的なツール、基本的な概念、より高度な機能も紹介します。
+基本的な実際の Teams アプリを構築する手順について説明します。 概要では、一般的なツール、基本的な概念、より高度な機能も紹介します。
 
-次に、学習する情報を示します。
+学習のアイデアを次に示します。
 
-- アプリ (拡張機能) を使用してMicrosoft Teams ToolkitをVisual Studio Codeします。
-- アプリと SDK のToolkit取得します。
-- さまざまな種類のアプリを構成Teamsします。
+- Microsoft Teams Toolkit (Visual Studio Code拡張機能) を使用すると、すぐに起動して実行できます。
+- ツールキットと SDK のエクスペリエンスを取得します。
+- さまざまな種類の Teams アプリを構成して構築します。
 
-選択できるビルド環境のオプションと、アプリの構築と展開へのロード マップを簡単にTeamsしましょう。
+選択できるビルド環境オプションと、Teams アプリのビルドと展開のロードマップを簡単に見てみましょう。
 
-:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="アプリをビルドして展開するための基本的な手順を示Teams図":::
+:::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Teams アプリをビルドして展開するための基本的な手順を示す図":::
 
 ## <a name="app-capabilities-and-development-tools"></a>アプリの機能と開発ツール
 
 アプリに必要な機能に応じて、適切な開発ツール セットを選択します。
 
-| アプリの機能 | ユーザーの操作 | 推奨されるツール | SDK | テクノロジ スタック /言語 |
+| アプリの機能 | ユーザーの操作 | 推奨されるツール | SDK | テクノロジ スタック/言語 |
 |--------|-------------|--------|--------|--------|
-| タブ | フルスクリーンの埋め込み Web エクスペリエンス。 | VS Code拡張子Teams Toolkit使用する場合は[TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md)を使用する | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) for core libs および ui Teams[クライアント SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) | Web テクノロジ全般、HTML、CSS、JavaScript (React)。 |
-| ボット | メンバーと会話するチャット ボット。 | VS Code拡張機能Teams Toolkit [TeamsFx CLI を使用する](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) と [Bot Framework SDK](https://dev.botframework.com/) | Node.js、C#、Java Python。 |
-| メッセージング拡張機能 | 会話に外部コンテンツを挿入したり、メッセージに対してアクションを実行したりするショートカット。 | VS Code拡張機能Teams Toolkit [TeamsFx CLI を使用する](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) と [Bot Framework SDK](https://dev.botframework.com/) | Node.js、C#、Java Python。 |
+| タブ | 全画面表示の埋め込み Web エクスペリエンス。 | Teams Toolkit 拡張機能をでVS Codeするか、CLI を使用する場合は [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md)を使用します | コア ライブラリ用の [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true)と、UI 機能用に[ Teams クライアント SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)を使用する | Web テクノロジ全般、HTML、CSS、JavaScript (React を含む)。 |
+| ボット | メンバーと会話するチャット ボット。 | Teams Toolkit 拡張機能を使用したVS Code、または [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) と [Bot Framework SDK](https://dev.botframework.com/) | Node.js、C#、Java Python。 |
+| メッセージング拡張機能 | 外部コンテンツを会話に挿入したり、メッセージに対してアクションを実行したりするためのショートカット。 | Teams Toolkit 拡張機能を使用したVS Code、または [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) と [Bot Framework SDK](https://dev.botframework.com/) | Node.js、C#、Java Python。 |
 
-*これらの特定のスタックの使用に限定されるのではありません。*
+*これらの特定のスタックの使用に限定されません。*
 
-Yeoman ワークフローを既に理解している場合は [、YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) を使用してアプリをビルドする方が好きです。
+Yeoman ワークフローに既に慣れている場合は、 [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) を使用してアプリをビルドすることを好むかもしれません。
 
 > [!NOTE]
-> App Studio を使用している場合は、開発者ポータルを試して、アプリの構成、配布、管理Teams勧めします。
+> App Studio を使用している場合は、Teams アプリを構成、配布、管理するための開発者ポータルを試してみることをお勧めします。
 
 
-## <a name="build-your-first-teams-app"></a>最初のアプリをTeamsする
+## <a name="build-your-first-teams-app"></a>最初の Teams アプリを構築する
 
-次に、最初のアプリをTeamsします。 ただし、まず言語 (またはフレームワーク) を選び、開発環境を準備します。
-
-> [!div class="nextstepaction"]
-> [JavaScript を使用Teamsアプリをビルドするには、次のReact](../sbs-gs-javascript.yml)
+では、最初の Teams アプリを構築しましょう。 ただし、まず、言語 (またはフレームワーク) を選択し、開発環境を準備します。
 
 > [!div class="nextstepaction"]
-> [アプリを使用TeamsアプリをSPFx](../sbs-gs-spfx.yml)
+> [React](../sbs-gs-javascript.yml) を使用して JavaScript で Teams アプリを構築する
 
 > [!div class="nextstepaction"]
-> [アプリまたは .NET Teamsを使用C#アプリを構築する](../sbs-gs-csharp.yml)
+> [SPFx](../sbs-gs-spfx.yml) を使用して Teams アプリを構築する
 
 > [!div class="nextstepaction"]
-> [アプリを使用TeamsアプリをNode.js](../sbs-gs-nodejs.yml)
+> [C# または .NETを使用して Teams アプリをビルドする](../sbs-gs-csharp.yml)
+
+> [!div class="nextstepaction"]
+> [node.js を使用して Teams アプリをビルドする](../sbs-gs-nodejs.yml)
 
 ## <a name="see-also"></a>関連項目
 
