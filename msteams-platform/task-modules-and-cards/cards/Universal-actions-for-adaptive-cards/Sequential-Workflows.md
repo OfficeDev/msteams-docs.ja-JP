@@ -4,12 +4,12 @@ description: コード サンプルを使用したユニバーサル アクシ�
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: e80f3d41e4dcbd281654c8070862fd5df9b0c128
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 468fd5168c58e7bc99b4f269e10f76484fc16b1d
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889112"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081052"
 ---
 # <a name="sequential-workflows"></a>シーケンシャル ワークフロー
 
@@ -136,3 +136,4 @@ var adaptiveCardResponse = JObject.FromObject(new
 * [Teams でのアダプティブ カードのアクション](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [ボットの機能](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [アダプティブ カードのユニバーサル アクションの操作](Work-with-universal-actions-for-adaptive-cards.md)
+* [フォームの完成に関するフィードバック](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

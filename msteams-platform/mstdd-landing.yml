@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: Microsoft Teams開発者向けドキュメント
-summary: 開発者向けドキュメントのMicrosoft Teamsへようこそ。 Microsoft Teamsアプリは、重要な情報、一般的なツール、信頼できるプロセスを、人々がますます収集、学習、作業する場所に提供します。
+summary: 開発者向けドキュメントのMicrosoft Teamsへようこそ。 Microsoft Teams アプリは、重要な情報、共通のツール、信頼できるプロセスを提供し、ユーザーが集まり、学習し、仕事をする場を増やします。
 metadata:
   title: Microsoft Teams開発者向けドキュメント
   description: ユーザー向けアプリの構築Teams
@@ -12,18 +12,20 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: ea705be66fdf5521fc68cedeb89eeb6d97319c32
-  ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
+  ms.openlocfilehash: de250e7f4e744b293abce91998fa7b65ab22c215
+  ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/18/2022
-  ms.locfileid: "62062491"
+  ms.lasthandoff: 01/19/2022
+  ms.locfileid: "62081045"
 landingContent:
 - title: 最新の情報を確認する
   linkLists:
   - linkListType: concept
     links:
-    - text: アダプティブ カードのユーザー選択
+    - text: アダプティブ カード フォームの完了フィードバック
+      url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
+    - text: アダプティブ カードでのユーザー ピッカー
       url: ~/task-modules-and-cards/cards/people-picker.md
     - text: Teams ToolkitのVisual Studio Code (プレビュー)
       url: ~/toolkit/teams-toolkit-fundamentals.md
@@ -79,7 +81,7 @@ landingContent:
       url: ~/sbs-meetings-stage-view.yml
     - text: 会議でコンテンツ バブル ボットを操作する
       url: ~/sbs-meeting-content-bubble.yml
-- title: 概要
+- title: 開始する
   linkLists:
   - linkListType: get-started
     links:
@@ -147,7 +149,7 @@ landingContent:
       url: ~/concepts/deploy-and-publish/apps-publish-overview.md
     - text: '[ストアにTeamsする]'
       url: ~/concepts/deploy-and-publish/appsource/publish.md
-    - text: ストアの検証ガイドライン
+    - text: ストア検証ガイドライン
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
     - text: 公開したアプリの保守およびサポート
       url: ~/concepts/deploy-and-publish/appsource/post-publish/overview.md

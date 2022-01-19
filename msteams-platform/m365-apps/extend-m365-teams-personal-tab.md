@@ -5,17 +5,17 @@ ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 17ad9b3a2e30a2daf25dd31344b4e674f3db3d25
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 27d690ca72ffe41fdcdfe39fcd5d7c203c9b3e7c
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059631"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081077"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>複数のユーザー Teamsの個人用タブを拡張Microsoft 365
 
 > [!NOTE]
-> *現在、ユーザー Teamsの個人用* タブをMicrosoft 365パブリック開発者 [プレビューでのみ使用できます](../resources/dev-preview/developer-preview-intro.md)。 プレビューに含まれる機能は完全ではない可能性があります。また、パブリック リリースで利用可能になる前に変更が加わる可能性があります。 これらは、テストおよび探索の目的でのみ提供されます。 これらは、実稼働アプリケーションでは使用できません。
+> *現在、ユーザー Teamsの個人用* タブをMicrosoft 365パブリック開発者 [プレビューでのみ使用できます](../resources/dev-preview/developer-preview-intro.md)。 プレビューに含まれている機能は完全でないため、一般公開前に変更される場合があります。 これらは、テストと調査のみを目的としています。 実稼働アプリケーションでは使用しないでください。
 
 個人用タブは、ユーザー エクスペリエンスを強化するMicrosoft Teamsします。 個人用タブを使用すると、ユーザーがエクスペリエンスを離れる必要や、もう一度サインインすることなく、Teams 内でアプリケーションへのアクセス権をユーザーに提供できます。 このプレビューを使用すると、他のアプリケーション内で個人用タブMicrosoft 365できます。 このチュートリアルでは、既存の Teams 個人用タブを取得し、Outlook デスクトップと Web エクスペリエンスの両方で実行し、Office on the web (office.com) で実行するプロセスを示します。
 
@@ -144,7 +144,7 @@ Azure Active Directory 個人用タブのシングル サインオン (SSO) は�
 |Outlook Web Access | 00000002-00000-0ff1-ce00-000000000000 |
 |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
-## <a name="sideload-your-app-in-teams"></a>アプリをサイドロードTeams
+## <a name="sideload-your-app-in-teams"></a>Teams でアプリをサイドロード
 
 最後の手順は、更新された個人用タブ ([アプリ](/microsoftteams/platform/concepts/build-and-test/apps-package)パッケージ) を [アプリ パッケージ] にサイドロードMicrosoft Teams。 完了すると、アプリは、アプリに加えて、OfficeとOutlookで実行Teams。
 
@@ -177,7 +177,7 @@ Teams個人用タブをアップグレードし、Teams でサイドロードす
 
 アプリをデスクトップ上の OutlookでWindowsするには、Outlookを起動し、開発テナント アカウントを使用してサインインします。 サイド バーの省略記号 (**...**) をクリックします。 サイドロードされたアプリのタイトルが、インストールされているアプリの中に表示されます。
 
-:::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="サイド バーの省略記号 ('More apps') オプションをクリックして、インストールされている個人用タブを表示する":::
+:::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="デスクトップ クライアントのサイド バーの省略記号 ('More apps') オプションをクリックしてOffice個人用タブを表示する":::
 
 アプリ のアイコンをクリックして、アプリを起動Outlook。
 
@@ -185,9 +185,14 @@ Teams個人用タブをアップグレードし、Teams でサイドロードす
 
 アプリをアプリで表示Outlook on the web、開発テナント アカウントを https://outlook.office.com 使用してサインインします。 サイド バーの省略記号 (**...**) をクリックします。 サイドロードされたアプリのタイトルが、インストールされているアプリの中に表示されます。
 
+:::image type="content" source="images/outlook-web-more-apps.png" alt-text="インストールされている個人用タブを表示するには、アプリのサイド バーの省略記号 ('more apps') outlook.com をクリックします。":::
+
 アプリアイコンをクリックして、アプリを起動してプレビューし、アプリを起動Outlook on the web。
 
 ### <a name="office-on-the-web"></a>Office on the web
+
+> [!IMPORTANT]
+> Microsoft Teams - Microsoft 365[開発者](https://devblogs.microsoft.com/microsoft365dev/)向けブログの最新の更新プログラムを参照して、Office.com の Teams 個人用アプリのサポートがテスト テナントで利用可能か確認してください。
 
 アプリで実行されているアプリをプレビューするには、Office on the web資格情報を使用して office.com にログインします。 サイド バーの省略記号 (**...**) をクリックします。 サイドロードされたアプリのタイトルが、インストールされているアプリの中に表示されます。
 

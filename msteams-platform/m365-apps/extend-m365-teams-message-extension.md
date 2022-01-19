@@ -4,17 +4,18 @@ description: 検索ベースのメッセージング拡張機能を更新して�
 ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: 9a8fc4135a2238d1402e25ef31ad7ebb918475b8
-ms.sourcegitcommit: 239807b74aa222452559509d49c4f2808cd9c9ca
+ms.localizationpriority: medium
+ms.openlocfilehash: 7ff02efe553d4b91c81ea184ae2b6b67b8464042
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "61391358"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081125"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>複数のユーザー Teamsメッセージ拡張機能を拡張Microsoft 365
 
 > [!NOTE]
-> *アプリケーション全体にTeamsメッセージ拡張機能を拡張Microsoft 365* パブリック開発者向け [プレビューでのみ使用できます](../resources/dev-preview/developer-preview-intro.md)。 プレビューに含まれる機能は完全ではない可能性があります。また、パブリック リリースで利用可能になる前に変更が加わる可能性があります。 これらは、テストおよび探索の目的でのみ提供されます。 これらは、実稼働アプリケーションでは使用できません。
+> *アプリケーション全体にTeamsメッセージ拡張機能を拡張Microsoft 365* パブリック開発者向け [プレビューでのみ使用できます](../resources/dev-preview/developer-preview-intro.md)。 プレビューに含まれている機能は完全でないため、一般公開前に変更される場合があります。 これらは、テストと調査のみを目的としています。 実稼働アプリケーションでは使用しないでください。
 
 検索ベースの[メッセージング拡張機能を使用](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions)すると、ユーザーは外部システムを検索し、クライアントの作成メッセージ領域を通じて結果をMicrosoft Teamsできます。 Teams アプリを[Microsoft 365 (プレビュー)](overview.md)に拡張することで、Windows デスクトップと Web エクスペリエンス用に検索ベースの Teams メッセージ拡張機能を Outlook Windows に追加できます。
 
@@ -124,13 +125,18 @@ ms.locfileid: "61391358"
 
 メッセージング拡張機能をテストすると[、Activity](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md)オブジェクトの[channelId](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md#channel-id)によってボット要求のソース (Teams と Outlook から発信元) を識別できます。 ユーザーがクエリを実行すると、サービスは標準の Bot Framework オブジェクトを受け取 `Activity` ります。 Activity オブジェクトのプロパティの 1 つは、ボット要求の発生元に応じて、または 、の値を持つ `channelId` `msteams` `outlook` プロパティです。 詳細については、「  [検索ベースのメッセージング拡張機能 SDK」を参照してください](/microsoftteams/platform/resources/messaging-extension-v3/search-extensions)。
 
-### <a name="outlook"></a>Outlook
-
-デスクトップ上で実行中のアプリOutlookプレビュー Windows、テスト テナントOutlook資格情報を使用してログインしているアプリを開きます。 [新しい **メール] をクリックします**。 上部リボン **の [その他の** アプリ] フライアウト メニューを開きます。 メッセージ拡張機能が表示されます。 そこから呼び出して、メッセージを作成する場合と同じ方法で使用Teams。
-
 ### <a name="outlook-on-the-web"></a>Outlook on the web
 
 テスト テナントで実行中のアプリOutlook on the webするには、テスト テナント[outlook.com](https://www.outlook.com)を使用してログインします。 [新しいメッセージ **] をクリックします**。 コンポジション **ウィンドウの下部** にある [その他のアプリ] フライアウト メニューを開きます。 メッセージ拡張機能が表示されます。 そこから呼び出して、メッセージを作成する場合と同じ方法で使用Teams。
+
+:::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="[メール構成] ウィンドウの下部にある [その他のアプリ] outlook.com をクリックして、メッセージ拡張機能の使用を開始します。":::
+
+### <a name="outlook"></a>Outlook
+
+> [!IMPORTANT]
+> Microsoft Teams - Microsoft 365[開発者](https://devblogs.microsoft.com/microsoft365dev/)ブログの最新の更新プログラムを参照して、Teams メッセージ拡張機能の Outlook デスクトップ サポートがテスト テナントで利用可能Windows を確認します。
+
+デスクトップ上で実行中のアプリOutlookプレビュー Windows、テスト テナントOutlook資格情報を使用してログインしているアプリを開きます。 [新しい **メール] をクリックします**。 上部リボン **の [その他の** アプリ] フライアウト メニューを開きます。 メッセージ拡張機能が表示されます。 そこから呼び出して、メッセージを作成する場合と同じ方法で使用Teams。
 
 ## <a name="next-steps"></a>次の手順
 

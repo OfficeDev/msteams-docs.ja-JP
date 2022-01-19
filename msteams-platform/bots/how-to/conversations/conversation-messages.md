@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 10bc7de187b5303d70e0106737f656fef25da046
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: b54a0843074f6689a5c946ea265a02cda92bc682
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059780"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62081105"
 ---
 # <a name="messages-in-bot-conversations"></a>ボットの会話内のメッセージ
 
@@ -342,7 +342,7 @@ XML を使用して各イメージの高さと幅を指定します。 markdown 
 
 ## <a name="adaptive-cards"></a>アダプティブ カード
 
-アダプティブ カードはボットで作成し、Teams、Web サイトなど、複数のアプリに表示できます。 詳細については、「アダプティブ カード」 [を参照してください](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)。
+アダプティブ カードはボットで作成し、Teams、Web サイトなど、複数のアプリに表示できます。 詳細については「[アダプティブ カード](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)」を参照してください。
 
 次のコードは、単純なアダプティブ カードを送信する例を示しています。
 
@@ -370,7 +370,25 @@ XML を使用して各イメージの高さと幅を指定します。 markdown 
 }
 ```
 
-ボット内のカードとカードの詳細については、カードのドキュメント [を参照してください](~/task-modules-and-cards/what-are-cards.md)。
+### <a name="form-completion-feedback"></a>フォームの完成に関するフィードバック
+
+フォーム補完メッセージは、ボットに応答を送信している間にアダプティブ カードに表示されます。 メッセージには、エラーまたは成功の 2 種類があります。
+
+* **エラー**: ボットに送信された応答が失敗した場合、 **何か問題が発生しました。再試行メッセージ** が表示されます。
+
+    ![エラー メッセージ](~/assets/images/Cards/error-message.png)
+
+* **成功**: ボットに送信された応答が成功すると、応答がアプリ **メッセージに** 送信されました。
+
+    ![成功メッセージ](~/assets/images/Cards/success.PNG)
+
+[閉じる] を **選択** するか、チャットを切り替えてメッセージを閉じできます。    
+
+**モバイルでの応答**:
+
+アダプティブ カードの下部にエラー メッセージが表示されます。
+
+ボット内のカードとカードの詳細については、カードのドキュメントを [参照してください](~/task-modules-and-cards/what-are-cards.md)。
 
 ## <a name="status-code-responses"></a>状態コードの応答
 
