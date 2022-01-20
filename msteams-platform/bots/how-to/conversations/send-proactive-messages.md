@@ -1,122 +1,122 @@
 ---
 title: プロアクティブ メッセージを送信する
-description: ボットでプロアクティブ メッセージを送信するMicrosoft Teamsします。
+description: Microsoft Teams ボットを使用して、プロアクティブメッセージを送信する方法について説明します。
 ms.topic: conceptual
 ms.author: anclear
-ms.localizationpriority: medium
+ms.localizationpriority: high
 Keywords: メッセージの送信、ユーザー ID の取得、チャネル ID の取得、会話 ID の取得
-ms.openlocfilehash: c4e84461af7a9e162c9f4391a01284be735392de
-ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
-ms.translationtype: MT
+ms.openlocfilehash: fc08e9413925f04a0f6e1a01ed7feb6fccd5e8d2
+ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/27/2021
-ms.locfileid: "61608441"
+ms.lasthandoff: 01/17/2022
+ms.locfileid: "62059773"
 ---
 # <a name="proactive-messages"></a>プロアクティブ メッセージ
 
 [!INCLUDE [v4 to v3 pointer](~/includes/v4-to-v3-pointer-bots.md)]
 
-プロアクティブ メッセージとは、ユーザーからの要求に応答しないボットから送信されるメッセージです。 これには、次のようなメッセージが含まれます。
+プロアクティブ メッセージとは、ユーザーからのリクエストに応答しないボットによって送信されるメッセージのことです。 これには、次のようなメッセージを含めることができます。
 
 * ウェルカム メッセージ
 * 通知
 * 予定されたメッセージ
 
-ボットがユーザー、グループ チャット、またはチームにプロアクティブ メッセージを送信するには、そのボットにメッセージを送信するアクセス権が必要です。 グループ チャットまたはチームの場合、ボットを含むアプリを最初にその場所にインストールする必要があります。 必要に[応じて、チーム](#proactively-install-your-app-using-graph)内の Microsoft Graph を使用してアプリをプロアクティブにインストールするか[](/microsoftteams/teams-custom-app-policies-and-settings)、アプリ ポリシーを使用してアプリをテナントのチームとユーザーにプッシュできます。 ユーザーの場合、自分でアプリをインストールしているか、アプリがインストールされているチームのメンバーである必要があります。
+ボットがプロアクティブなメッセージをユーザー、グループ チャット、またはチームに送信するには、ボットがメッセージを送信するためのアクセス権を持っている必要があります。 グループ チャットまたはチームの場合、ボットを含むアプリを最初にその場所にインストールする必要があります。 必要に応じて、チーム内で [Microsoft Graph を使用してアプリをプロアクティブにインストール](#proactively-install-your-app-using-graph)したり、[アプリ ポリシー](/microsoftteams/teams-custom-app-policies-and-settings)を使用して、テナント内のチームやユーザーにアプリをプッシュしたりすることができます。 ユーザーの場合、自分でアプリをインストールしているか、アプリがインストールされているチームのメンバーである必要があります。
 
-プロアクティブ メッセージの送信は、通常のメッセージの送信とは異なります。 返信に使用 `turnContext` するアクティブはありません。 メッセージを送信する前に、会話を作成する必要があります。 たとえば、新しい 1 対 1 のチャットやチャネル内の新しい会話スレッドなどです。 プロアクティブ メッセージングを使用してチーム内に新しいグループ チャットや新しいチャネルを作成できない。
+プロアクティブ メッセージの送信は、通常のメッセージの送信とは異なります。 返信に使うアクティブな `turnContext` はありません。 また、メッセージを送信する前に会話を作成する必要があります。 たとえば、新しい 1 対 1 のチャットやチャネル内の新しい会話スレッドなどです。 プロアクティブ メッセージングでは、新しいグループ チャットやチーム内の新しいチャネルを作成することはできません。
 
 **プロアクティブ メッセージを送信するには**
 
-1. [必要に応じて、ユーザー ID、チーム ID、またはチャネル ID](#get-the-user-id-team-id-or-channel-id)を取得します。
-1. [必要に応じて、](#create-the-conversation)会話を作成します。
+1. 必要に応じて、[ユーザー ID、チーム ID、またはチャネル ID](#get-the-user-id-team-id-or-channel-id) を取得します。
+1. 必要に応じて[会話を作成します](#create-the-conversation)。
 1. [会話ID を取得します](#get-the-conversation-id)。
 1. [メッセージを送信します](#send-the-message)。
 
-サンプル セクションのコード スニペット [は](#samples) 、1 対 1 の会話を作成するためのコード スニペットです。 1 対 1 の会話とグループまたはチャネルの両方の作業サンプルを完了するリンクについては、コード サンプルを [参照してください](#code-sample)。
+[サンプル](#samples)セクションのコード スニペットは、1 対 1 の会話を作成するためのものです。 1 対 1 の会話とグループやチャネルの両方に向けた完全な作業サンプルへのリンクについては、「[コード サンプル](#code-sample)」を参照してください。
 
-プロアクティブ メッセージを効果的に使用するには、「プロアクティブ [メッセージングのベスト プラクティス」を参照してください](#best-practices-for-proactive-messaging)。 特定のシナリオでは、アプリを使用してアプリを事前にインストールする[必要Graph。](#proactively-install-your-app-using-graph) サンプル セクションのコード スニペット [は](#samples) 、1 対 1 の会話を作成するためのコード スニペットです。 1 対 1 の会話とグループまたはチャネルの両方の完全な作業サンプルについては、コード サンプルを [参照してください](#code-sample)。
+プロアクティブメッセージを効果的に使用するには、「[プロアクティブ メッセージングのベスト プラクティス](#best-practices-for-proactive-messaging)」を参照してください。 特定のシナリオでは、[Graph を使用してアプリをプロアクティブにインストールする](#proactively-install-your-app-using-graph)必要があります。 [サンプル](#samples)セクションのコード スニペットは、1 対 1 の会話を作成するためのものです。 1 対 1 の会話とグループやチャネルの両方に向けた完全な作業サンプルについては、「[コード サンプル](#code-sample)」を参照してください。
 
 ## <a name="get-the-user-id-team-id-or-channel-id"></a>ユーザー ID、チーム ID、またはチャネル ID を取得する
 
-チャネルに新しいスレッドまたは会話スレッドを作成するには、正しい ID が必要です。 次の ID を使用して、この ID を受信または取得できます。
+チャネルで新しい会話や会話スレッドを作成するには、適切な ID がなくてはいけません。 次のいずれかを使用して、この ID を受信または取得できます。
 
-* アプリが特定のコンテキストにインストールされている場合は、アクティビティを受信[ `onMembersAdded` します](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。
-* アプリがインストールされているコンテキストに新しいユーザーを追加すると、アクティビティが表示[ `onMembersAdded` されます](~/bots/how-to/conversations/subscribe-to-conversation-events.md)。
-* アプリがインストール [されているチーム内](~/bots/how-to/get-teams-context.md) のチャネルの一覧を取得できます。
-* アプリがインストール [されているチームの](~/bots/how-to/get-teams-context.md) メンバーの一覧を取得できます。
+* アプリが特定のコンテキストでインストールされると、[`onMembersAdded`アクティビティ](~/bots/how-to/conversations/subscribe-to-conversation-events.md)を受信します。
+* アプリがインストールされているコンテキストに新しいユーザーが追加されると、[`onMembersAdded`アクティビティ](~/bots/how-to/conversations/subscribe-to-conversation-events.md)を受信します。
+* アプリがインストールされているチームで[チャネルのリスト](~/bots/how-to/get-teams-context.md)を取得することができます。
+* アプリがインストールされているチームで[メンバー リスト](~/bots/how-to/get-teams-context.md)を取得することができます。
 * ボットが受け取るすべてのアクティビティには、必要な情報が含まれている必要があります。
 
-情報の取得方法に関係なく、新しい会話を作成するか、またはを保存 `tenantId` `userId` `channelId` する必要があります。 `teamId` を使って、チームの一般チャネルや既定のチャネルに新しい会話スレッドを作成することもできます。
+情報を取得する方法に関わらず、`tenantId`、`userId`、`channelId` のいずれかを保存しないと、新たな会話が作成されません。 `teamId` を使って、チームの一般チャネルや既定のチャネルに新しい会話スレッドを作成することもできます。
 
-これは `userId` 、ボット ID と特定のユーザーに固有です。 間のボットを `userId` 再利用できない。 は `channelId` グローバルです。 ただし、チャネルにプロアクティブ メッセージを送信するには、ボットをチームにインストールする必要があります。
+`userId` は、ボット ID と特定のユーザーに固有です。 ボット間で `userId` を再利用することはできません。 `channelId` はグローバルです。 ただし、チャネルにプロアクティブ メッセージを送信するには、お使いのボットがチームにインストールされている必要があります。
 
-ユーザーまたはチャネル情報を取得した後、会話を作成する必要があります。
+ユーザーまたはチャネル情報を取得したら、会話を作成する必要があります。
 
 ## <a name="create-the-conversation"></a>会話を作成する
 
-会話が存在しない場合、または会話が存在しない場合は、会話を作成する必要があります `conversationId` 。 会話は 1 回だけ作成し、値または `conversationId` オブジェクトを格納する必要 `conversationReference` があります。
+会話が存在しない場合、または `conversationId` がわからない場合は、会話を作成する必要があります。 会話は 1 回だけ作成し、`conversationId` 値または `conversationReference` オブジェクトを保存する必要があります。
 
-会話が作成された後、会話 ID を取得する必要があります。
+会話が作成されたら、会話 ID を取得する必要があります。
 
 ## <a name="get-the-conversation-id"></a>会話 ID を取得する
 
-オブジェクトを使用 `conversationReference` するか、 `conversationId` メッセージ `tenantId` を送信します。 この ID は、会話を作成するか、そのコンテキストから送信された任意のアクティビティから保存することで取得できます。 参照用にこの ID を格納します。
+メッセージを送信するには、`conversationReference` オブジェクトまたは `conversationId` か `tenantId` のいずれかを使用します。 この ID は、会話を作成するか、そのコンテキストから送信されたアクティビティから保存することで取得することができます。 参照用にこの ID を格納します。
 
-適切なアドレス情報を取得した後、メッセージを送信できます。
+適切なアドレス情報を取得したら、メッセージを送信できます。
 
 ## <a name="send-the-message"></a>メッセージを送信する
 
-正しいアドレス情報を取得したので、メッセージを送信することができます。 SDK を使用している場合は、メソッドを使用し、直接 API 呼び出しを行う `continueConversation` `conversationId` `tenantId` 必要があります。 メッセージを正常に送信するには、`conversationParameters` を正しく設定する必要があります。 サンプル セクション [を参照](#samples) するか、コード サンプル セクションに記載されているサンプル [のいずれかを使用](#code-sample) します。
+正しいアドレス情報を取得したので、メッセージを送信することができます。 SDK を使用している場合は、メソッドを使用し、直接 API 呼び出しを行う `continueConversation` `conversationId` `tenantId` 必要があります。 メッセージを正常に送信するには、`conversationParameters` を正しく設定する必要があります。 [サンプル](#samples)セクションを参照するか、[コード サンプル](#code-sample)セクションに記載されているサンプルの 1 つを使用してください。
 
-プロアクティブ メッセージを送信したので、ユーザーとボット間の情報交換を向上するために、プロアクティブ メッセージを送信しながら、これらのベスト プラクティスに従う必要があります。
+プロアクティブなメッセージを送信したので、ユーザーとボットの間の情報交換を改善するために、プロアクティブなメッセージを送信する間、これらのベスト プラクティスに従う必要があります。
 
 ## <a name="best-practices-for-proactive-messaging"></a>プロアクティブ メッセージングのベスト プラクティス
 
-ユーザーにプロアクティブ メッセージを送信する方法は、ユーザーと通信する効果的な方法です。 ただし、ユーザーの観点から見ると、メッセージはプロンプトされていない表示されます。 ウェルカム メッセージがある場合、アプリを操作したのは初めてです。 この機能を使用し、このメッセージの目的を理解するためにユーザーに完全な情報を提供することが重要です。
+ユーザーにプロアクティブ メッセージを送信するのは、ユーザーと効果的なコミュニケーションを行うのに役立ちます。 ただし、ユーザーの観点からは、メッセージはプロンプトなしで表示されます。 ウェルカム メッセージがある場合、アプリを操作するのは初めてです。 この機能を使用し、このメッセージの目的を理解するためにユーザーに完全な情報を提供することが重要です。
 
 ### <a name="welcome-messages"></a>ウェルカム メッセージ
 
-プロアクティブ メッセージングを使用してウェルカム メッセージをユーザーに送信する場合、ユーザーがメッセージを受信する理由に関するコンテキストはありません。 また、ユーザーがアプリを操作するのも初めてです。 良い第一印象を生み出す機会です。 最高のウェルカム メッセージには、次のことが必ず含まれている必要があります。
+プロアクティブ メッセージングを使用してウェルカム メッセージをユーザーに送信する場合、ユーザーがメッセージを受信する理由についてのコンテキストはありません。 また、ユーザーがアプリを操作するのはこれが初めてです。 第一印象を良くするチャンスです。 最高のウェルカム メッセージには、次のことが必ず含まれている必要があります。
 
-* ユーザーがメッセージを受信する理由: メッセージを受信する理由は、ユーザーに明確である必要があります。 ボットがチャネルにインストールされ、すべてのユーザーにウェルカム メッセージを送信した場合は、そのボットがインストールされたチャネルとインストールしたユーザーを通知します。
-* 提供する機能: ユーザーは、アプリで実行できる操作と、アプリにどのような値を提供できるのかを特定できる必要があります。
-* 次に実行する操作: ユーザーにコマンドの試用やアプリの操作を招待します。
-ウェルカム メッセージが不十分な場合は、ユーザーがボットをブロックする可能性があります。 ポイントに書き込み、ウェルカム メッセージをクリアします。 ウェルカム メッセージが目的の効果を持たない場合は、メッセージを反復処理します。
+* ユーザーがメッセージを受信する理由: ユーザーがメッセージを受信する理由を明確に示す必要があります。 あなたのボットがチャネルにインストールされていて、すべてのユーザーにウェルカム メッセージを送信した場合は、どのチャネルにインストールされ、誰がインストールしたのかを通知する必要があります。
+* 提供する機能: ユーザーは、アプリで何ができるか、そしてユーザーにどのような価値をもたらすことができるかを識別できなければなりません。
+* 次に何をすべきか: コマンドを試すか、アプリを操作するようにユーザーを招待します。
+ウェルカム メッセージが不十分だと、ユーザーがボットをブロックする可能性があります。 要点を書いて、ウェルカム メッセージを明確にします。 ウェルカム メッセージが目的の効果を発揮していない場合は、ウェルカム メッセージを繰り返します。
 
 ### <a name="notification-messages"></a>通知メッセージ
 
-プロアクティブ メッセージングを使用して通知を送信するには、ユーザーが通知に基づいて一般的なアクションを実行するための明確なパスを持っている必要があります。 ユーザーが通知を受け取った理由を明確に理解してください。 良好な通知メッセージには、通常、次のものが含まれます。
+プロアクティブ メッセージングを使用して通知を送信するには、通知に基づいて一般的なアクションを実行するための明確なパスがユーザーにあることを確認してください。 ユーザーが通知を受け取った理由を明確に理解していることを確認してください。 良好な通知メッセージには、通常、以下のものが含まれます。
 
-* 何が起こったか: 通知の原因を明確に示します。
-* 結果は何でした: 明確である必要があります。通知を取得するために更新されるアイテムは何ですか。
-* Who、またはトリガーされたWho、または何がアクションを実行したのか、通知が送信されました。
-* ユーザーが応答で実行できる操作: 通知に基づいてユーザーが簡単にアクションを実行できます。
-* ユーザーがオプトアウトする方法: ユーザーが追加の通知をオプトアウトするパスを指定する必要があります。
+* 何が起こったか: 通知が発生した原因を明確に示します。
+* 結果がどのようなものだったか: 通知を受け取るためにどのアイテムが更新されているかを明確にする必要があります。
+* 誰が、または何がそれを引き起こしたか: 誰が、または何が行動を起こし、通知が送信されたのか。
+* ユーザーが対応できること: ユーザーが通知に基づいて簡単にアクションを実行できるようにします。
+* ユーザーがオプトアウトする方法: ユーザーが追加の通知をオプトアウトするためのパスを提供する必要があります。
 
-大規模なグループのユーザー (組織など) にメッセージを送信するには、アプリを事前にインストールGraph。
+組織などの大規模なユーザー グループにメッセージを送信するには、 Graph を使用してアプリをプロアクティブにインストールします。
 
 ### <a name="scheduled-messages"></a>予定されたメッセージ
 
-プロアクティブ メッセージングを使用してスケジュールされたメッセージをユーザーに送信する場合は、タイム ゾーンがタイム ゾーンに更新されるのを確認します。 これにより、メッセージが関連する時刻にユーザーに配信されます。 通常、スケジュール メッセージには次のものが含まれます。
+プロアクティブ メッセージングを使用してスケジュールされたメッセージをユーザーに送信する場合は、タイム ゾーンがユーザーのタイム ゾーンに更新されていることを確認してください。 これにより、メッセージが適切な時間にユーザーに確実に配信されます。 スケジュール メッセージには通常、次のものが含まれます。
 
-* ユーザーがメッセージを受け取る理由: ユーザーがメッセージを受け取る理由を簡単に理解できます。
-* ユーザーが次に実行できる操作: ユーザーは、メッセージの内容に基づいて必要なアクションを実行できます。
+* ユーザーがメッセージを受信する理由: ユーザーがメッセージを受信する理由を簡単に理解できるようにします。
+* ユーザーが次にできる事柄: ユーザーは、メッセージの内容に基づいて必要なアクションを実行できます。
 
 ## <a name="proactively-install-your-app-using-graph"></a>Graph を使用してアプリをプロアクティブにインストール
 
 > [!Note]
-> アプリを使用してアプリをプロアクティブにGraph現在ベータ版です。
+> [Graph を使用してアプリをプロアクティブにインストール] は、現在ベータ版です。
 
-アプリを以前にインストールまたは操作していないユーザーにプロアクティブにメッセージを送信します。 たとえば、[社内コミュニケーター](~/samples/app-templates.md#company-communicator)を使用して、組織全体にメッセージを送信する必要があるとします。 この場合、アプリ API を使用Graphユーザー向けアプリをプロアクティブにインストールできます。 インストール時にアプリが受け `conversationUpdate` 取ったイベントから必要な値をキャッシュします。
+以前アプリをインストールしたり操作したりしていないユーザーにプロアクティブにメッセージを送信します。 たとえば、[社内コミュニケーター](~/samples/app-templates.md#company-communicator)を使用して、組織全体にメッセージを送信する必要があるとします。 この場合、Graph API を使用して、ユーザー向けにアプリをプロアクティブにインストールできます。 インストール時にアプリが受け取る `conversationUpdate` イベントから必要な値をキャッシュします。
 
-組織のアプリ カタログまたはアプリ ストア内のアプリTeamsインストールできます。
+組織のアプリ カタログまたは Teams アプリ ストアにあるアプリのみインストールできます。
 
-詳細[については、Graph](/graph/api/userteamwork-post-installedapps)ドキュメントのユーザー向けアプリのインストールと、TeamsでのプロアクティブボットGraphを[参照してください](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)。 GitHub プラットフォームには[Microsoft .NET framework サンプル](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)もあります。
+Graph ドキュメントの「[ユーザー向けアプリのインストール](/graph/api/userteamwork-post-installedapps)」および「[Graph を使用した Teams でのプロアクティブ ボットのインストールとメッセージング](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)」を参照してください。 GitHub プラットフォームには[Microsoft .NET framework サンプル](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)もあります。
 
 ## <a name="samples"></a>サンプル
 
-次のコードは、プロアクティブ メッセージを送信する方法を示しています。
+次のコードは、プロアクティブなメッセージを送信する方法を示しています。
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -250,7 +250,7 @@ POST /v3/conversations
 }
 ```
 
-ユーザー ID とテナント ID を入力する必要があります。 呼び出しが成功すると、API は次の応答オブジェクトを返します。
+ユーザー ID とテナント ID を入力する必要があります。 呼び出しに成功した場合、API は以下の応答オブジェクトを返します。
 
 ```json
 {
@@ -261,17 +261,17 @@ POST /v3/conversations
 ---
 
 > [!NOTE]
-> 現在、ボットはボット API またはグループ チャットを使用してグループ チャットをGraph。 `createConversation` は 1:1 チャットでのみ使用できます。
+> 現在、ボットはボット API またはグラフを介してグループ チャットを作成できません。 `createConversation` は 1:1 チャットでのみ使用できます。
 
 ## <a name="code-sample"></a>コード サンプル
 
-次の表は、基本的な会話フローを Teams アプリケーションに組み込む簡単なコード サンプルと、Teams のチャネルで新しい会話スレッドを作成する方法を示Teams。
+次の表は、基本的な会話フローを Teams アプリケーションに組み込んだ簡単なコード サンプルと、Teams のチャネルで新しい会話スレッドを作成する方法を示しています。
 
 | **サンプルの名前** | **説明** | **.NET** | **Node.js** | **Python** |
 |---------------|--------------|--------|-------------|--------|
 | Teams での会話の基本  | 1 対 1 のプロアクティブ メッセージの送信など、Teams での会話の基本をご紹介します。| [表示](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [表示](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
 | チャネルで新しいスレッドを開始する | チャネルで新しいスレッドを作成する方法をご紹介します。 | [表示](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [表示](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [表示](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
-| アプリのプロアクティブ インストールとプロアクティブ通知の送信 | このサンプルでは、ユーザーに対してアプリのプロアクティブ インストールを使用し、Microsoft の API を呼び出してプロアクティブ通知Graph示します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
+| アプリのプロアクティブ インストールとプロアクティブ通知の送信 | このサンプルは、ユーザー向けのアプリのプロアクティブなインストールを使用し、Microsoft Graph API を呼び出してプロアクティブな通知を送信する方法を示しています。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
 
 ### <a name="additional-code-sample"></a>追加のコード サンプル
 
@@ -280,9 +280,9 @@ POST /v3/conversations
 
 ## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
 
-ボットから [プロアクティブ なメッセージ](../../../sbs-send-proactive.yml)を送信するのに役立つ、ステップ バイ ステップ ガイドに従います。
+ボットからプロアクティブなメッセージを送信するのに役立つ[ステップ バイ ステップ ガイド](../../../sbs-send-proactive.yml)に従ってください。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [ボット メッセージの書式を設定する](~/bots/how-to/format-your-bot-messages.md)
@@ -290,5 +290,5 @@ POST /v3/conversations
 ## <a name="see-also"></a>関連項目
 
 * [**Teams のプロアクティブ メッセージング コード サンプル**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
-* [ボットとのチャネルチャットとグループ チャットの会話](~/bots/how-to/conversations/channel-and-group-conversations.md)
+* [ボットとのチャネルおよびグループ チャットの会話](~/bots/how-to/conversations/channel-and-group-conversations.md)
 * [タスク モジュールの送信アクションに応答する](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
