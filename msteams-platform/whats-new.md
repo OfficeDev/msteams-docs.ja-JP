@@ -3,13 +3,13 @@ title: 新機能
 description: Microsoft Teams の最新情報やすべての開発者向け最新機能について説明します
 ms.topic: reference
 ms.localizationpriority: high
-keywords: Teams の最新情報 最新の更新プログラムと機能
-ms.openlocfilehash: af25a14d8caa230f0462f1c4194a1e60f27b8bda
-ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
+keywords: Teams の最新情報と最新の更新プログラムまたは開発者プレビューと機能
+ms.openlocfilehash: 531f520c479ec48ed734021550609a237705d37e
+ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2022
-ms.locfileid: "62062503"
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "62080961"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -22,9 +22,9 @@ ms.locfileid: "62062503"
 
 | 日付 | Update | ここで検索  |
 | --- | --- | --- |
+|01/19/2022| アダプティブ カードは、完了フィードバックを形成します | ボットのビルド > ボットの会話 > ボットの会話のメッセージ > [フォーム完了フィードバック](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |2022/1/17| アダプティブ カードのユーザー ピッカー (モバイル版開発者プレビュー、デスクトップ版一般提供) | [カードとタスク モジュールの構築] > [カードの構築] > [[アダプティブ カードのユーザー ピッカー]](task-modules-and-cards/cards/people-picker.md)|
 |2022/1/10 | Visual Studio Code 用 Teams ツールキット | [ツールと SDK] > [Visual Studio Code 向け Teams ツールキット] > [[Teams ツールキットの基本]](toolkit/teams-toolkit-fundamentals.md) |
-|
 
 ## <a name="ga-features"></a>一般提供の特徴
 
@@ -38,8 +38,13 @@ ms.locfileid: "62062503"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ----------------|
+|01/19/2022| アダプティブ カードは、完了フィードバックを形成します | ボットのビルド > ボットの会話 > ボットの会話のメッセージ > [フォーム完了フィードバック](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |2022/1/17| デスクトップ版アダプティブ カードのユーザー ピッカー | [カードとタスク モジュールの構築] > [カードの構築] > [[アダプティブ カードのユーザー ピッカー]](task-modules-and-cards/cards/people-picker.md)|
 
+<br>
+
+</details>
+  
 <br>
 
 <details>
@@ -48,42 +53,42 @@ ms.locfileid: "62062503"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ----------------|
-|2021/12/24| タブ デバイスのアクセス許可を付与するためのステップバイステップ ガイドを導入しました。 | [アプリの基本] > [デバイス機能] > [[タブ デバイスのアクセス許可を付与するためのステップバイステップ ガイド]](sbs-tab-device-permissions.yml) |
+|2021/12/24| タブ デバイスのアクセス許可を付与するためのステップバイステップ ガイドを導入しました | [アプリの基本] > [デバイス機能] > [[タブ デバイスのアクセス許可を付与するためのステップバイステップ ガイド]](sbs-tab-device-permissions.yml) |
 |2021/12/23| アダプティブ カードを使用してタブを作成するためのステップバイステップ ガイドを導入しました。| [認証の追加] > [タブ] > [SSO 認証の使用] > [[アダプティブ カードでタブを作成するためのステップバイステップ ガイド]](sbs-tab-with-adaptive-cards.yml) |
 |2021/12/21 | JavaScript の開始、C#、Node.js モジュールを Teams ツールキット 3.0.0 用に更新しました。 | • [使用を開始する] > [[JavaScript を使用した初めてのアプリのビルド]](sbs-gs-javascript.yml) <br> • [使用を開始する] > [[C# または .NET を使用した初めてのアプリのビルド]](sbs-gs-csharp.yml) <br> • [使用を開始する] > [[Node.js を使用した初めてのアプリのビルド]](sbs-gs-nodejs.yml) |
-|2021/12/20| シングルサインオン (SSO) を利用したタブ拡張機能およびメッセージング拡張機能向けのステップバイステップ ガイド。 | [認証の追加] > [タブ] > [SSO 認証の使用] > [[タブ拡張機能およびメッセージング拡張機能向けの SSO を使用してタブを作成するためのステップバイステップ ガイド]](sbs-tabs-and-messaging-extensions-with-SSO.yml)|
-|2021/12/20| 会議コンテンツ バブルを作成するためのステップバイステップ ガイドを導入しました。 | [Teams 会議] > [会議用アプリを有効化して構成する] > [[会議コンテンツ バブルを作成するためのステップバイステップ ガイド]](sbs-meeting-content-bubble.yml) でアプリを作成します |
+|2021/12/20| シングルサインオン (SSO) を利用したタブ拡張機能およびメッセージング拡張機能向けのステップバイステップ ガイド | [認証の追加] > [タブ] > [SSO 認証の使用] > [[タブ拡張機能およびメッセージング拡張機能向けの SSO を使用してタブを作成するためのステップバイステップ ガイド]](sbs-tabs-and-messaging-extensions-with-SSO.yml)|
+|2021/12/20| 会議コンテンツ バブルを作成するためのステップバイステップ ガイドを導入しました | [Teams 会議] > [会議用アプリを有効化して構成する] > [[会議コンテンツ バブルを作成するためのステップバイステップ ガイド]](sbs-meeting-content-bubble.yml) でアプリを作成します |
 |2021/12/9| 会議ステージ ビューのステップバイステップ ガイドを紹介しました。 | [Teams 会議] > [会議用アプリを有効化して構成する] > [[会議ステージ ビューを作成するためのステップバイステップ ガイド]](sbs-meetings-stage-view.yml) でアプリを作成します|
-|2021/12/13 | SaaS の提供にリンクしたアプリのガイドラインを導入しました。 | [アプリの配布] > [Teams ストアに公開する] > [ストアの検証ガイドラインを確認する] > [[SaaS の提供にリンクしたアプリのガイドライン]](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer)|
-|2021/12/9| 会議のサイドパネルを作成するためのステップバイステップ ガイドを導入しました。 | [Teams 会議] > [会議用アプリを有効化して構成する] > [[会議Teams で会議のサイドパネルを作成するためのステップバイステップ ガイド]](sbs-meetings-sidepanel.yml) でアプリを作成します|
-|2021/12/1 | 新しいストア アイコンを導入しました。 | • [アプリの設計] > [アプリの機能] > [[Microsoft Teams 向け個人用アプリの設計]](concepts/design/personal-apps.md)</br> • [アプリの設計] > [UI コンポーネント] > [[高度な UI コンポーネントを使用して Microsoft Teams アプリを設計する]](concepts/design/design-teams-app-advanced-ui-components.md) |
-|2021/11/24| 会議のトークンを生成するためのステップバイステップ ガイドを導入しました。 | [Teams 会議] > [会議用アプリを有効化して構成する] > [[会議Teams で会議のトークンを作成するためのステップバイステップ ガイド]](sbs-meeting-token-generator.yml) でアプリを作成します|
+|2021/12/13 | SaaS の提供にリンクしたアプリのガイドラインを導入しました | [アプリの配布] > [Teams ストアに公開する] > [ストアの検証ガイドラインを確認する] > [[SaaS の提供にリンクしたアプリのガイドライン]](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer)|
+|2021/12/9| 会議のサイドパネルを作成するためのステップバイステップ ガイドを導入しました | [Teams 会議] > [会議用アプリを有効化して構成する] > [[会議Teams で会議のサイドパネルを作成するためのステップバイステップ ガイド]](sbs-meetings-sidepanel.yml) でアプリを作成します|
+|2021/12/1 | 新しいストア アイコンを導入しました | • [アプリの設計] > [アプリの機能] > [[Microsoft Teams 向け個人用アプリの設計]](concepts/design/personal-apps.md)</br> • [アプリの設計] > [UI コンポーネント] > [[高度な UI コンポーネントを使用して Microsoft Teams アプリを設計する]](concepts/design/design-teams-app-advanced-ui-components.md) |
+|2021/11/24| 会議のトークンを生成するためのステップバイステップ ガイドを導入しました | [Teams 会議] > [会議用アプリを有効化して構成する] > [[会議Teams で会議のトークンを作成するためのステップバイステップ ガイド]](sbs-meeting-token-generator.yml) でアプリを作成します|
 |2021/11/17| 更新された Microsoft Teams ストア検証ガイドライン|[ストア検証ガイドライン](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
-|2021/11/17| デスクトップおよびモバイル ユーザー向けの静的/動的先行入力検索。| • [カードとタスク モジュールの構築] > [カードの構築] > [[アダプティブ カードの先行入力検索]](task-modules-and-cards/cards/dynamic-search.md) </br> • [カードとタスク モジュールの構築] > [カードの構築] > [概要] > [[アダプティブ カードの先行入力検索]](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • [カードとタスク モジュールの構築] > [概要] > [[カードとタスク モジュール]](task-modules-and-cards/cards-and-task-modules.md)|
-|2021/11/13| ボットは、リソース固有のコンテンツ (RSC) を使用して、すべてのチャネル メッセージの受信を有効化できます。 | • [ボットの構築] > [ボットの会話] > [ボット会話のメッセージ] > [[RSC を使用してすべてのチャネル メッセージを受信する]](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • [ボットの構築] > [ボットの会話] > [[ボット会話の概要]](~/bots/how-to/conversations/conversation-basics.md) </br> • [ボットの構築] > [ボットの会話] > [[チャネルとグループの会話]](~/bots/how-to/conversations/channel-and-group-conversations.md) |
-|2021/10/28| 取引可能な SaaS プランを使用して Teams アプリを収益化します。| [アプリの配布] > [Teams ストアに公開する] > [[SaaS プランを Teams アプリに含める]](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
-|2021/10/25| ステップバイステップのガイドの新しい構造と手順を使用して Microsoft Teams 開発者ドキュメントの [使用を開始する] モジュールが更新されました。| [使用を開始する] > [[最初の Teams アプリの使用を開始する]](get-started/get-started-overview.md) |
-|2021/10/21| タブまたはパーソナル アプリ用の `registerOnFocused` API を追加します。 | [タブの構築] > [個人用タブの作成] > [[タブまたは個人用アプリ用の `registerOnFocused` API の追加]](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
+|2021/11/17| デスクトップおよびモバイル ユーザー向けの静的/動的先行入力検索 | • [カードとタスク モジュールの構築] > [カードの構築] > [[アダプティブ カードの先行入力検索]](task-modules-and-cards/cards/dynamic-search.md) </br> • [カードとタスク モジュールの構築] > [カードの構築] > [概要] > [[アダプティブ カードの先行入力検索]](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • [カードとタスク モジュールの構築] > [概要] > [[カードとタスク モジュール]](task-modules-and-cards/cards-and-task-modules.md)|
+|2021/11/13| ボットは、リソース固有のコンテンツ (RSC) を使用して、すべてのチャネル メッセージの受信を有効化できます | • [ボットの構築] > [ボットの会話] > [ボット会話のメッセージ] > [[RSC を使用してすべてのチャネル メッセージを受信する]](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • [ボットの構築] > [ボットの会話] > [[ボット会話の概要]](~/bots/how-to/conversations/conversation-basics.md) </br> • [ボットの構築] > [ボットの会話] > [[チャネルとグループの会話]](~/bots/how-to/conversations/channel-and-group-conversations.md) |
+|2021/10/28| 取引可能な SaaS プランを使用して Teams アプリを収益化する | [アプリの配布] > [Teams ストアに公開する] > [[SaaS プランを Teams アプリに含める]](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
+|2021/10/25| ステップバイステップのガイドの新しい構造と手順を使用して Microsoft Teams 開発者ドキュメントの [使用を開始する] モジュールが更新されました | [使用を開始する] > [[最初の Teams アプリの使用を開始する]](get-started/get-started-overview.md) |
+|2021/10/21| タブまたはパーソナル アプリ用の `registerOnFocused` API を追加する | [タブの構築] > [個人用タブの作成] > [[タブまたは個人用アプリ用の `registerOnFocused` API の追加]](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
 |2021/10/20| 一般提供で会議ステージを使用できるようになりました。 | [Teams 会議用アプリの作成] > [[Teams 会議用アプリを有効化して構成する]](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |
-|2021/10/20| 会議の詳細 API とリアルタイム Teams 会議イベント。 | [Teams 会議用アプリの作成] > [[Teams 会議用アプリを作成する]](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
+|2021/10/20| 会議の詳細 API とリアルタイム Teams 会議イベント | [Teams 会議用アプリの作成] > [[Teams 会議用アプリを作成する]](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
 |2021/10/18| タブのリンクの展開とステージ ビュー。 | [タブの構築] > [[タブのリンクの展開とステージ ビュー]](tabs/tabs-link-unfurling.md) |
-|2021/10/8| アダプティブ カードの設計に関する新しいベスト プラクティス。 | [アプリの設計] > [UI コンポーネント] > [[Teams アプリのアダプティブ カードを設計する]](task-modules-and-cards/cards/design-effective-cards.md) |
+|2021/10/8| アダプティブ カードの設計に関する新しいベスト プラクティス | [アプリの設計] > [UI コンポーネント] > [[Teams アプリのアダプティブ カードを設計する]](task-modules-and-cards/cards/design-effective-cards.md) |
 |2021/10/5| 管理者がアプリの非表示を解除するまで、Teams アプリを非表示にします。| [アプリの設計] > [[管理者が承認するまで Teams アプリを非表示にする]](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) |
 |2021/10/5| Teams モバイル用のアプリを計画します。 | [アプリの基礎] > [[Teams モバイルの応答タブを計画する]](concepts/design/plan-responsive-tabs-for-teams-mobile.md) |
-|2021/10/4| Teams アプリを管理するために、新しい Teams 向け開発者ポータルが導入されました。| [ツールと SDK] > [[Teams の開発者ポータル]](concepts/build-and-test/teams-developer-portal.md) |
-|2021/9/21|Teams は、ボットや受信 Webhook 向けのユーザーのメンションで AAD オブジェクト ID と UPN をサポートしています。| • [カードとタスク モジュールの構築] > [カードの構築] > [[ユーザーのメンションでの AAD オブジェクト ID と UPN]](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention) </br> • [カードとタスク モジュールの構築] > [カードの構築] > [[カードの概要]](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |
-|2021/8/16| アダプティブカード (v1.3、すべての機能向け) およびユニバーサル アクション (v1.4、ボット送信カード向け) での入力の検証をサポートします。 | • [アダプティブ カード] > [カードの作成] > [[入力の検証]](/adaptive-cards/authoring-cards/input-validation)</br> • [カードとタスク モジュールの構築] > [カードの構築] > [アダプティブ カード向けユニバーサル アクション] > [[アダプティブ カード v1.4 向けユニバーサル アクション]](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
-|2021/8/30| カスタム Together モードのシーン機能は、参加者を 1 つの仮想シーンにまとめ、そのビデオ ストリームを事前に決定された席に配置します。| [Teams 会議用のアプリの構築] > [[カスタム Together モード シーン]](~/apps-in-teams-meetings/teams-together-mode.md) |
+|2021/10/4| Teams アプリを管理するために、新しい Teams 向け開発者ポータルが導入されました | [ツールと SDK] > [[Teams の開発者ポータル]](concepts/build-and-test/teams-developer-portal.md) |
+|2021/9/21|Teams は、ボットや受信 Webhook 向けのユーザーのメンションで AAD オブジェクト ID と UPN をサポートしています | • [カードとタスク モジュールの構築] > [カードの構築] > [[ユーザーのメンションでの AAD オブジェクト ID と UPN]](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention) </br> • [カードとタスク モジュールの構築] > [カードの構築] > [[カードの概要]](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |
+|2021/8/16| アダプティブカード (v1.3、すべての機能向け) およびユニバーサル アクション (v1.4、ボット送信カード向け) での入力の検証をサポートします | • [アダプティブ カード] > [カードの作成] > [[入力の検証]](/adaptive-cards/authoring-cards/input-validation)</br> • [カードとタスク モジュールの構築] > [カードの構築] > [アダプティブ カード向けユニバーサル アクション] > [[アダプティブ カード v1.4 向けユニバーサル アクション]](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|2021/8/30| カスタム Together モードのシーン機能は、参加者を 1 つの仮想シーンにまとめ、そのビデオ ストリームを事前に決定された席に配置します | [Teams 会議用のアプリの構築] > [[カスタム Together モード シーン]](~/apps-in-teams-meetings/teams-together-mode.md) |
 |2021/8/25| シングルサインオン (SSO) を使用して Teams ボットを作成するためのステップバイステップのガイドを導入しました。| [認証の追加] > [ボット] > [[SSO を使用して Teams ボットを作成するためのステップバイステップのガイド]](sbs-bots-with-sso.yml) |
 |2021/8/19| 会話スレッドにボットをインストールした場合に受信するインストール更新イベント。| [ボットの構築] > [ボットの会話] > [[インストール更新イベント]](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event) |
-|2021/8/12|アダプティブ カードを使用してタブを構築します。| [タブの構築] > [[アダプティブ カードを使用してタブを構築する]](tabs/how-to/build-adaptive-card-tabs.md) |
-|2021/8/4|タブのエクスペリエンスを囲む余白がなくなります。| [タブの構築] > [[タブの余白を削除する]](resources/removing-tab-margins.md) |
-|2021/7/8|Teams モバイルに会議中のアプリのサポートが追加されました。 | [Teams 会議用アプリの構築] > [[会議アプリの拡張性]](apps-in-teams-meetings/meeting-app-extensibility.md) |
+|2021/8/12|アダプティブ カードを使用してタブをビルドする| [タブの構築] > [[アダプティブ カードを使用してタブを構築する]](tabs/how-to/build-adaptive-card-tabs.md) |
+|2021/8/4|タブのエクスペリエンスを囲む余白がなくなります | [タブの構築] > [[タブの余白を削除する]](resources/removing-tab-margins.md) |
+|2021/7/8|Teams モバイルに会議中のアプリのサポートが追加されました | [Teams 会議用アプリの構築] > [[会議アプリの拡張性]](apps-in-teams-meetings/meeting-app-extensibility.md) |
 |2021/6/28|ユーザー ピッカー機能を統合します。 | [Teams との統合] > [[ユーザー ピッカー機能を統合する]](concepts/device-capabilities/people-picker-capability.md) |  
-|2021/6/25| プロアクティブ メッセージを送信するためのステップバイステップのガイドを導入しました。 | [ボットの構築] > [ボットの会話] > [プロアクティブ メッセージ] > [[プロアクティブ メッセージを送信するためのステップバイステップのガイド]](sbs-send-proactive.yml) |
+|2021/6/25| プロアクティブ メッセージを送信するためのステップバイステップのガイドを導入しました | [ボットの構築] > [ボットの会話] > [プロアクティブ メッセージ] > [[プロアクティブ メッセージを送信するためのステップバイステップのガイド]](sbs-send-proactive.yml) |
 |2021/6/9| `allowExpand` 属性を使用したアダプティブ カードの画像用ステージ ビュー。| [カードとタスク モジュールの構築] > [カードの構築] > [[アダプティブ カードの画像用ステージ ビュー]](task-modules-and-cards/cards/cards-format.md#stage-view-for-images-in-adaptive-cards) |
 |2021/5/31| 会話性タブ。 | [タブの構築] > [[タブ内のコンテンツに関する会話の開始と続行]](~/tabs/how-to/conversational-tabs.md) |
-|2021/5/24| モバイル パターンを使用して Teams アプリのデザイン ガイドラインを更新しました。 | [アプリをデザインする] > [[Teams アプリのデザイン]](~/concepts/design/design-teams-app-overview.md) |
+|2021/5/24| モバイル パターンを使用して Teams アプリのデザイン ガイドラインを更新しました | [アプリをデザインする] > [[Teams アプリのデザイン]](~/concepts/design/design-teams-app-overview.md) |
 |2021/5/13| mConnect と Skooler の情報が追加されました。| [Teams との統合] > [Moodle LMS] > [[Moodle ラーニング管理システム]](resources/moodle-overview.md)|
 |2021/5/10| アプリ マニフェスト v1.10 がリリースされました。 | [アプリ マニフェスト] > [[マニフェストのスキーマ]](resources/schema/manifest-schema.md) |
 |2021/5/10| 新しいアプリのカスタマイズ機能。 | [アプリをデザインする] > [[組織でアプリをカスタマイズできるようにする]](concepts/design/enable-app-customization.md) |
