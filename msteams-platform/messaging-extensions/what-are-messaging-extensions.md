@@ -5,12 +5,12 @@ description: Microsoft Teams プラットフォームでのメッセージング
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: baef9ac9bb15b3b2efd7b05b36966c5e6d30083c
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: 975a51850e7e9d0049de46fc8d77016166ffedab
+ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216224"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "62185450"
 ---
 # <a name="messaging-extensions"></a>メッセージング拡張機能
 
@@ -71,6 +71,160 @@ Web サービスは、作成メッセージ領域に URL を貼り付けする�
 
 ![リンクのリンク解除](../assets/images/messaging-extension/link-unfurl.gif)
 
+## <a name="code-snippets"></a>コード スニペット
+
+次のコードは、メッセージング拡張機能に基づくアクションの例を示しています。
+
+# <a name="c"></a>[C#](#tab/dotnet)
+
+```csharp
+
+ protected override Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+        {
+            // Handle different actions using switch
+            switch (action.CommandId)
+            {
+                case "HTML":
+                    return new MessagingExtensionActionResponse
+                    {
+                        Task = new TaskModuleContinueResponse
+                        {
+                            Value = new TaskModuleTaskInfo
+                            {
+                                Height = 200,
+                                Width = 400,
+                                Title = "Task Module HTML Page",
+                                Url = baseUrl + "/htmlpage.html",
+                            },
+                        },
+                    };
+                // return TaskModuleHTMLPage(turnContext, action);
+                default:
+                    string memberName = "";
+                    var member = await TeamsInfo.GetMemberAsync(turnContext, turnContext.Activity.From.Id, cancellationToken);
+                    memberName = member.Name;
+                    return new MessagingExtensionActionResponse
+                    {
+                        Task = new TaskModuleContinueResponse
+                        {
+                            Value = new TaskModuleTaskInfo
+                            {
+                                Card = <<AdaptiveAction card json>>,
+                                Height = 200,
+                                Width = 400,
+                                Title = $"Welcome {memberName}",
+                            },
+                        },
+                    };
+            }
+```
+
+# <a name="nodejs"></a>[Node.js](#tab/nodejs)
+
+```javascript
+
+    async handleTeamsMessagingExtensionFetchTask(context, action) {
+        switch (action.commandId) {
+            case 'Static HTML':
+                return staticHtmlPage();
+        }
+    }
+
+    staticHtmlPage(){
+        return {
+            task: {
+                type: 'continue',
+                value: {
+                    width: 450,
+                    height: 125,
+                    title: 'Task module Static HTML',
+                    url: `${baseurl}/StaticPage.html`
+                }
+            }
+        };
+    }
+
+```
+
+---
+
+次のコードは、メッセージング拡張機能に基づく検索の例を示しています。
+
+# <a name="c"></a>[C#](#tab/dotnet)
+
+```csharp
+
+protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionQueryAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken)
+        {
+            var text = query?.Parameters?[0]?.Value as string ?? string.Empty;
+
+            var packages = new[] {
+            new { title = "A very extensive set of extension methods", value = "FluentAssertions" },
+            new { title = "Fluent UI Library", value = "FluentUI" }};
+
+            // We take every row of the results and wrap them in cards wrapped in MessagingExtensionAttachment objects.
+            // The Preview is optional, if it includes a Tap, that will trigger the OnTeamsMessagingExtensionSelectItemAsync event back on this bot.
+            var attachments = packages.Select(package =>
+            {
+                var previewCard = new ThumbnailCard { Title = package.title, Tap = new CardAction { Type = "invoke", Value = package } };
+                if (!string.IsNullOrEmpty(package.title))
+                {
+                    previewCard.Images = new List<CardImage>() { new CardImage(package.title, "Icon") };
+                }
+
+                var attachment = new MessagingExtensionAttachment
+                {
+                    ContentType = HeroCard.ContentType,
+                    Content = new HeroCard { Title = package.title },
+                    Preview = previewCard.ToAttachment()
+                };
+
+                return attachment;
+            }).ToList();
+
+            // The list of MessagingExtensionAttachments must we wrapped in a MessagingExtensionResult wrapped in a MessagingExtensionResponse.
+            return new MessagingExtensionResponse
+            {
+                ComposeExtension = new MessagingExtensionResult
+                {
+                    Type = "result",
+                    AttachmentLayout = "list",
+                    Attachments = attachments
+                }
+            };
+        }
+```
+
+# <a name="nodejs"></a>[Node.js](#tab/nodejs)
+
+```javascript
+
+async handleTeamsMessagingExtensionQuery(context, query) {
+        const searchQuery = query.parameters[0].value;     
+        const attachments = [];
+                const response = await axios.get(`http://registry.npmjs.com/-/v1/search?${ querystring.stringify({ text: searchQuery, size: 8 }) }`);
+                
+                response.data.objects.forEach(obj => {
+                        const heroCard = CardFactory.heroCard(obj.package.name);
+                        const preview = CardFactory.heroCard(obj.package.name);
+                        preview.content.tap = { type: 'invoke', value: { description: obj.package.description } };
+                        const attachment = { ...heroCard, preview };
+                        attachments.push(attachment);
+                });
+    
+                return {
+                    composeExtension:  {
+                           type: 'result',
+                           attachmentLayout: 'list',
+                           attachments: attachments
+                    }
+                };
+            }       
+        }
+```
+
+---
+
 ## <a name="code-sample"></a>コード サンプル
 
 | **サンプルの名前** | **説明** | **.NET** | **Node.js** | **Python** |
@@ -79,7 +233,7 @@ Web サービスは、作成メッセージ領域に URL を貼り付けする�
 | 検索ベースのコマンドを使用したメッセージング拡張機能 | このサンプルは、検索ベースのメッセージング拡張機能を構築する方法を示しています。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 |タスクのスケジュールに関するメッセージング拡張機能アクション|このサンプルは、メッセージング拡張機能アクション コマンドからタスクをスケジュールし、スケジュールされた日時にリマインダー カードを取得する方法を示しています。|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)|
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [アクション メッセージング拡張機能のコマンドを定義する](~/messaging-extensions/how-to/action-commands/define-action-command.md)

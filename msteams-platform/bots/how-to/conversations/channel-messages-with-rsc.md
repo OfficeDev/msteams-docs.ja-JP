@@ -4,12 +4,12 @@ author: surbhigupta12
 description: RSC アクセス許可を持つすべてのチャネル メッセージを受信する
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c509475a94d7f161dd6fb26c46ecb669c4059a1
-ms.sourcegitcommit: f77750f2e60f63d1e2f66a96c169119683c66950
+ms.openlocfilehash: abe6bc821c9e4ffe05b1cf35480f9c559401014e
+ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "60960230"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "62185443"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>RSC のチャネル メッセージをすべて受信する
 
@@ -80,6 +80,36 @@ RSC を使用すると、ボットがチーム内の標準チャネル間でユ�
     ボットは、メッセージを受信せずにメッセージを@mentioned。
 
     ![ボットがメッセージを受信する](~/bots/how-to/conversations/Media/botreceivingmessage.png)
+
+## <a name="code-snippets"></a>コード スニペット
+
+次のコードは、RSC アクセス許可の例を示しています。
+
+# <a name="c"></a>[C#](#tab/dotnet)
+
+```csharp
+
+// Handle when a message is addressed to the bot. 
+// When rsc is enabled the method will be called even when bot is addressed without being @mentioned
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+        await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can recieve messages across channles in team without being @mentioned."));
+}
+```
+
+# <a name="nodejs"></a>[Node.js](#tab/nodejs)
+
+```javascript
+
+// Handle when a message is addressed to the bot. 
+// When rsc is enabled the method will be called even when bot is addressed without being @mentioned
+this.onMessage(async (context, next) => {
+   await context.sendActivity(MessageFactory.text("Using RSC the bot can recieve messages across channles in team without being @mentioned."))
+   await next();
+});
+```
+
+---
 
 ## <a name="code-sample"></a>コード サンプル
 

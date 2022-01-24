@@ -5,12 +5,12 @@ description: ボットを構築するためのツールと SDK Microsoft Teams�
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 3c39ed5c39a92967ebf8b90760bd28e7bb6366f3
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: fda6092165fa55accbf5348b9850ac94396c05b5
+ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948384"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "62185424"
 ---
 # <a name="bots-and-sdks"></a>ボットと SDK
 
@@ -112,20 +112,93 @@ Microsoft Teams のボットは、1 対 1 の会話、グループ チャット�
 
 ボットの欠点の 1 つは、応答が未確認の大規模な取得ナレッジ ベースを維持することは困難である点です。 ボットは、短く迅速なやり取りに最適で、回答を探している長いリストをふるいにかけない。
 
+## <a name="code-snippets"></a>コード スニペット
+
+次のコードは、チャネル チーム スコープのボット アクティビティの例を示しています。
+
+# <a name="c"></a>[C#](#tab/dotnet)
+
+```csharp
+
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+    var mention = new Mention
+    {
+        Mentioned = turnContext.Activity.From,
+        Text = $"<at>{XmlConvert.EncodeName(turnContext.Activity.From.Name)}</at>",
+    };
+
+    var replyActivity = MessageFactory.Text($"Hello {mention.Text}.");
+    replyActivity.Entities = new List<Entity> { mention };
+
+    await turnContext.SendActivityAsync(replyActivity, cancellationToken);
+}
+
+```
+
+# <a name="nodejs"></a>[Node.js](#tab/nodejs)
+
+```javascript
+
+this.onMessage(async (turnContext, next) => {
+    const mention = {
+        mentioned: turnContext.activity.from,
+        text: `<at>${ new TextEncoder().encode(turnContext.activity.from.name) }</at>`,
+    } as Mention;
+
+    const replyActivity = MessageFactory.text(`Hello ${mention.text}`);
+    replyActivity.entities = [mention];
+
+    await turnContext.sendActivity(replyActivity);
+
+    // By calling next() you ensure that the next BotHandler is run.
+    await next();
+});
+
+```
+
+---
+
+次のコードは、1 対 1 のチャットのボット アクティビティの例を示しています。
+
+# <a name="c"></a>[C#](#tab/dotnet)
+
+```csharp
+
+// Handle message activity
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+    turnContext.Activity.RemoveRecipientMention();
+    var text = turnContext.Activity.Text.Trim().ToLower();
+        await turnContext.SendActivityAsync(MessageFactory.Text($"Your message is {text}."), cancellationToken);
+}
+```
+
+# <a name="nodejs"></a>[Node.js](#tab/nodejs)
+
+```javascript
+this.onMessage(async (context, next) => {
+    await context.sendActivity(MessageFactory.text("Your message is:" + context.activity.text));
+    await next();
+});
+```
+
+---
+
 ## <a name="code-sample"></a>コード サンプル
 
 |サンプルの名前 | 説明 | .NETCore | Node.js |
 |----------------|-----------------|--------------|----------------|
 | Teams 会話ボット | メッセージングおよび会話イベントの処理。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [ボットのアクティビティ ハンドラー](~/bots/bot-basics.md)
 
 ## <a name="see-also"></a>関連項目
 
-* [通話と会議のボット](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+* [通話と会議ボット](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 * [ボットの会話](~/bots/how-to/conversations/conversation-basics.md)
 * [ボット コマンド メニュー](~/bots/how-to/create-a-bot-commands-menu.md)
 * [サーバー内のボットの認証フロー Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)

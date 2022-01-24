@@ -4,12 +4,12 @@ description: コード サンプルを使用したユニバーサル アクシ�
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: a4c110c8b1d1adf7140334d08073f2ef7780fbc5
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 645dd43039986f98560798899ac494b9f93c2a49
+ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081066"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "62185436"
 ---
 # <a name="user-specific-views"></a>ユーザー固有のビュー
 
@@ -181,7 +181,9 @@ ms.locfileid: "62081066"
 
 次のコードは、アダプティブ カードを返す呼び出し応答の例を示しています。
 
-```C#
+### <a name="c"></a>[C#](#tab/C)
+
+```csharp
 string cardJson = "<adaptive card json>";
 var card = JsonConvert.DeserializeObject(cardJson);
 
@@ -192,6 +194,26 @@ var adaptiveCardResponse = JObject.FromObject(new
     value = card
  });
 ```
+
+### <a name="nodejs"></a>[Node.js](#tab/nodejs)
+
+```javascript
+var card = "<adaptive card json>";
+ 
+const cardRes = {
+        statusCode: 200,
+        type: 'application/vnd.microsoft.card.adaptive',
+        value: card
+    };
+    const res = {
+        status: 200,
+        body: cardRes
+    };
+    return res;
+
+```
+
+---
 
 ユーザー固有のビューを設計する際に注意するカード設計ガイドライン:
 
@@ -211,4 +233,4 @@ var adaptiveCardResponse = JObject.FromObject(new
 
 * [アダプティブ カードのユニバーサル アクションの操作](Work-with-universal-actions-for-adaptive-cards.md)
 * [最新のビュー](Up-To-Date-Views.md)
-* [フォームの完成に関するフィードバック](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [フォームの完了に関するフィードバック](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

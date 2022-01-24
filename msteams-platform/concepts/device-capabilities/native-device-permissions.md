@@ -4,12 +4,12 @@ keywords: Teams アプリ 機能 アクセス許可 デバイス ネイティブ
 description: スキャン QR、バーコード、画像、オーディオ、ビデオ機能など、通常はユーザーの同意が必要なネイティブ機能へのアクセスを要求するためにアプリ マニフェストを更新する方法
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 24556765866eb271e30e9d1c7294c38352c78092
-ms.sourcegitcommit: 1ac0bd55adfd49c42cd870dc71ceca3dcac70941
-ms.translationtype: HT
+ms.openlocfilehash: e6ee04f47c87df8be7a424993a4f0c916b5a69f3
+ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2021
-ms.locfileid: "61041728"
+ms.lasthandoff: 01/24/2022
+ms.locfileid: "62185457"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Microsoft Teams アプリのデバイスアクセス許可を要求する
 
@@ -96,7 +96,7 @@ ms.locfileid: "61041728"
 
 アプリ マニフェストに `devicePermissions` を追加した後、プロンプトを表示せずに **HTML5 アクセス許可 API** を使用してアクセス許可のチェックを行います。
 
-``` Javascript
+``` JavaScript
 // Different query options:
 navigator.permissions.query({ name: 'camera' });
 navigator.permissions.query({ name: 'microphone' });
@@ -125,52 +125,98 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 例:
  * ユーザーに自分の場所にアクセスするように促すには、`getCurrentPosition()` を呼び出す必要があります。
 
-    ```Javascript
+    ```JavaScript
     navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
     ```
 
  * デスクトップまたは Web でカメラにアクセスするようにユーザーに促すには、`getUserMedia()` を呼び出す必要があります。
 
-    ```Javascript
+    ```JavaScript
     navigator.mediaDevices.getUserMedia({ audio: true, video: true });
     ```
 
  * モバイルで画像をキャプチャするために、Teams mobile は、`captureImage()` を呼び出すときに許可を求めます。
 
-    ```Javascript
-    microsoftTeams.media.captureImage((error: microsoftTeams.SdkError, files: microsoftTeams.media.File[]) => {
-      /* ... */
-    });
+    ```JavaScript
+            function captureImage() {
+            microsoftTeams.media.captureImage((error, files) => {
+                // If there's any error, an alert shows the error message/code
+                if (error) {
+                    if (error.message) {
+                        alert(" ErrorCode: " + error.errorCode + error.message);
+                    } else {
+                        alert(" ErrorCode: " + error.errorCode);
+                    }
+                } else if (files) {
+                    image = files[0].content;
+                    // Adding this image string in src attr of image tag will display the image on web page.
+                    let imageString = "data:" + item.mimeType + ";base64," + image;
+                }
+            });
+        } 
     ```
 
  * `requestPermission()` を呼び出すと、通知によってユーザーにプロンプトが表示されます。
 
-    ```Javascript
+    ```JavaScript
     Notification.requestPermission(function(result) { /* ... */ });
     ```
 
 * カメラを使用したり、フォト ギャラリーにアクセスしたりするために、`selectMedia()` を呼び出すときに Teams mobile が許可を求めます。
 
     ```JavaScript
-    microsoftTeams.media.selectMedia({ maxMediaCount: 10, mediaType: microsoftTeams.media.MediaType.Image }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
-      /* ... */
-    );
-    ```
+     function selectMedia() {
+     microsoftTeams.media.selectMedia(mediaInput, (error, attachments) => {
+         // If there's any error, an alert shows the error message/code
+         if (error) {
+             if (error.message) {
+                 alert(" ErrorCode: " + error.errorCode + error.message);
+             } else {
+                 alert(" ErrorCode: " + error.errorCode);
+             }
+         } else if (attachments) {
+             // creating image array which contains image string for all attached images. 
+             const imageArray = attachments.map((item, index) => {
+                 return ("data:" + item.mimeType + ";base64," + item.preview)
+             })
+         }
+     });
+    } 
+  ```
 
 * マイクを使用するために、Teams mobile は、`selectMedia()` を呼び出すときに許可を求めます。
 
-    ```JavaScript 
-    microsoftTeams.media.selectMedia({ maxMediaCount: 1, mediaType: microsoftTeams.media.MediaType.Audio }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
-      /* ... */
-    });
+    ```JavaScript
+     function selectMedia() {
+     microsoftTeams.media.selectMedia({ maxMediaCount: 1, mediaType: microsoftTeams.media.MediaType.Audio }, (error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
+         // If there's any error, an alert shows the error message/code
+         if (error) {
+             if (error.message) {
+                 alert(" ErrorCode: " + error.errorCode + error.message);
+             } else {
+                 alert(" ErrorCode: " + error.errorCode);
+             }
+         }
+
+         if (attachments) {
+             // taking the first attachment  
+             let audioResult = attachments[0];
+
+             // setting audio string which can be used in Video tag
+             let audioData = "data:" + audioResult.mimeType + ";base64," + audioResult.preview
+         }
+     });
+     }
     ```
 
 * マップ インターフェイスで場所を共有するようユーザーに促すために、Teams mobile は、`getLocation()` を呼び出すときに許可を求めます。
 
     ```JavaScript 
-    microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
-      /* ... *
-    /});
+     function getLocation() {
+     microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
+         let currentLocation = JSON.stringify(location);
+     });
+     } 
     ```
 
 # <a name="mobile"></a>[モバイル](#tab/mobile)
