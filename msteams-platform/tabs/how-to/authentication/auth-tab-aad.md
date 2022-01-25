@@ -3,20 +3,20 @@ title: タブを使用したタブAzure Active Directory
 description: 認証の詳細Teamsタブで使用する方法について説明します。
 ms.topic: how-to
 ms.localizationpriority: medium
-keywords: teams 認証タブAAD
-ms.openlocfilehash: 1c3c5a69d7b42589a104755968a6d6949efbcca2
-ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
+keywords: teams 認証タブAzure AD
+ms.openlocfilehash: 6fb7e608cd89183a6207fc16b4e42a0e31e4db32
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949041"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212441"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>[ユーザーの認証] タブでMicrosoft Teamsする
 
 > [!Note]
 > モバイル クライアントでタブで認証を機能するには、JavaScript SDK のバージョン 1.4.1 以降を使用Teams必要があります。
 
-Teams アプリ内で使用するサービスは多数あるので、サービスにアクセスするには認証と承認が必要です。 サービスには、Facebook、Twitter、およびTeams。 Teamsプロファイル情報は Microsoft Graph を使用して Azure Active Directory (Azure AD) に格納され、この記事では、Azure AD を使用してこの情報にアクセスする認証に重点を置いて説明します。
+Teams アプリ内で使用するサービスは多数あるので、サービスにアクセスするには認証と承認が必要です。 サービスには、Facebook、Twitter、およびTeams。 Teamsプロファイル情報は Microsoft Azure Active Directory を使用して Graph に格納され、この記事では、この情報へのアクセスを取得するために Azure AD を使用した認証に重点を置いて説明します。
 
 OAuth 2.0 は、ユーザーや他の多くのサービス プロバイダーが使用する認証Azure AD標準です。 OAuth 2.0 について理解は、認証と認証の操作を行うTeams前提条件Azure AD。 次の例では、OAuth 2.0 の暗黙的な許可フローを使用して、最終的に Azure AD および Microsoft Graph からユーザーのプロファイル情報を読み取る目的で使用します。
 
@@ -52,7 +52,7 @@ microsoftTeams.authentication.authenticate({
 });
 ```
 
-### <a name="notes"></a>メモ
+### <a name="notes"></a>Notes
 
 * 渡す URL `microsoftTeams.authentication.authenticate()` は、認証フローの開始ページです。 この例では、 `/tab-auth/simple-start` です。 これは、アプリケーション登録ポータルで登録[したAzure AD一致する必要があります](https://apps.dev.microsoft.com)。
 
@@ -91,7 +91,7 @@ microsoftTeams.getContext(function (context) {
 
 ユーザーが承認を完了すると、ユーザーはアプリで指定したコールバック ページにリダイレクトされます `/tab-auth/simple-end` 。
 
-### <a name="notes"></a>メモ
+### <a name="notes"></a>Notes
 
 * 認証 [要求と URL の作成に](~/tabs/how-to/access-teams-context.md) 関するヘルプについては、「ユーザー コンテキスト情報の取得」を参照してください。 たとえば、ユーザーのログイン名を、Azure ADサインインの値として使用できます。つまり、ユーザーが入力する必要が少ない `login_hint` 場合があります。 攻撃者が悪意のあるブラウザーにページを読み込み、必要な情報を提供する可能性がある場合は、このコンテキストを ID の証明として直接使用する必要があります。
 * タブ コンテキストはユーザーに関する有用な情報を提供しますが、この情報を使用して、タブ コンテンツ URL への URL パラメーターとして取得するか、Microsoft Teams クライアント SDK で関数を呼び出す場合でも、ユーザーを認証しません。 `microsoftTeams.getContext()` 悪意のあるアクターが、独自のパラメーターを使用してタブ コンテンツ URL を呼び出し、Microsoft Teams を偽装する Web ページが iframe にタブ コンテンツ URL を読み込み、独自のデータを関数に返す可能性があります。 `getContext()` 使用する前に、タブ コンテキスト内の ID 関連情報をヒントとして扱い、検証する必要があります。
@@ -136,7 +136,7 @@ if (hashParams["error"]) {
 
 このコードは、ヘルパー関数を使用して、Azure ADキーと値のペア `window.location.hash` を `getHashParameters()` 解析します。 認証フローの開始時点で指定した値と同じ値が見つけられる場合は、呼び出してタブにアクセス トークンを返します。それ以外の場合は、 でエラーを報告します `access_token` `state` `notifySuccess()` `notifyFailure()` 。
 
-### <a name="notes"></a>メモ
+### <a name="notes"></a>Notes
 
 `NotifyFailure()` 次の定義済みのエラー理由があります。
 
@@ -159,7 +159,7 @@ if (hashParams["error"]) {
 
 次のコードを使用してタブ認証プロセスを示すAzure AD。
 
-| **サンプルの名前** | **description** | **.NET** | **Node.js** |
+| **サンプルの名前** | **説明** | **.NET** | **Node.js** |
 |-----------------|-----------------|-------------|
 | Microsoft Teamsタブ認証 | タブ認証プロセスは、Azure AD。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) |
 

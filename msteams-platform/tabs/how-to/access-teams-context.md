@@ -4,12 +4,12 @@ description: タブにユーザー コンテクストを付与する方法を説
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: チーム タブ ユーザー コンテキスト
-ms.openlocfilehash: 336173f1c3a59e0dde6989fd21f60077c897c9df
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: 8ff93018bd23aad5742c876efddca72edcd67b30
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216105"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212420"
 ---
 # <a name="get-context-for-your-tab"></a>タブのコンテキストを取得する
 
@@ -24,7 +24,7 @@ ms.locfileid: "61216105"
 ユーザー、チーム、または会社に関するコンテキストは、次の場合に特に役立ちます。
 
 * アプリ内のリソースを作成または指定したユーザーまたはチームに関連付ける。
-* 認証フローは、Azure Active Directory (AAD) または他の ID プロバイダーから開始し、ユーザーがユーザー名を再入力する必要はありません。 
+* ユーザーまたは他の id プロバイダー Azure Active Directory認証フローを開始し、ユーザーがユーザー名を再入力する必要はありません。 
 
 詳細については、「ユーザーを認証[する」を参照Microsoft Teams。](~/concepts/authentication/authentication.md)
 
@@ -44,12 +44,12 @@ ms.locfileid: "61216105"
 
 * {entityId}: 最初の [タブの構成](~/tabs/how-to/create-tab-pages/configuration-page.md) 時に、このタブのアイテムに与えた ID。
 * {subEntityId}: このタブ内の特定のアイテムの[](~/concepts/build-and-test/deep-links.md)ディープ リンクを生成するときに指定した ID。これは、エンティティ内の特定の状態に復元するために使用する必要があります。たとえば、特定のコンテンツにスクロールしたり、アクティブ化したりします。
-* {loginHint}: ユーザーのログイン ヒントとして適したAAD。 これは通常、ホーム テナントの現在のユーザーのログイン名です。
+* {loginHint}: ユーザーのログイン ヒントとして適したAzure AD。 これは通常、ホーム テナントの現在のユーザーのログイン名です。
 * {userPrincipalName}: 現在のテナント内の現在のユーザーのユーザー プリンシパル名。
-* {userObjectId}: 現在AAD現在のユーザーのオブジェクト ID を指定します。
+* {userObjectId}: 現在Azure AD現在のユーザーのオブジェクト ID を指定します。
 * {theme}: 現在のユーザー インターフェイス (UI) テーマ (例: `default` `dark` 、 、 または `contrast` )
 * {groupId}: タブがOffice 365グループの ID。
-* {tid}: 現在AADのテナント ID を指定します。
+* {tid}: 現在のユーザーの Azure AD テナント ID。
 * {locale}: languageId-countryId(ja-us) として書式設定されたユーザーの現在のロケール。
 
 > [!NOTE]
@@ -140,7 +140,7 @@ ms.locfileid: "61216105"
 
 関数 `theme` の引数は、、 、または の値を持つ `default` `dark` 文字列です `contrast` 。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [アダプティブ カードを使用してタブをビルドする](~/tabs/how-to/build-adaptive-card-tabs.md)

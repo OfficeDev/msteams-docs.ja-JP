@@ -1,17 +1,17 @@
 ---
 title: クラウド Teams Toolkitプロビジョニングに使用する
 author: MuyangAmigo
-description: クラウド リソースのプロビジョニング
+description: クラウド リソースをプロビジョニングする
 ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: e68596e9d109fcfa54708a76570874951fe326b2
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: d6365cf7e513a1fbf8b5e4f443fdcf2c805f3b10
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768616"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212371"
 ---
 # <a name="use-teams-toolkit-to-provision-cloud-resources"></a>クラウド Teams Toolkitプロビジョニングに使用する
 
@@ -39,7 +39,7 @@ TeamsFx は Azure とクラウドMicrosoft 365統合され、1 つのコマン�
 
 このコマンドまたは TeamsFx CLI でTeams Toolkitコマンドをトリガーすると、次のリソースを取得できます。
 
-* AADテナントの下Microsoft 365アプリケーション
+* Azure ADテナントの下Microsoft 365アプリケーション
 * TeamsテナントのプラットフォームMicrosoft 365アプリの登録Teamsする
 * 選択した Azure サブスクリプションの Azure リソース
 
@@ -50,7 +50,7 @@ TeamsFx は Azure とクラウドMicrosoft 365統合され、1 つのコマン�
 
 ### <a name="resource-creation-for-teams-tab-application"></a>タブ アプリケーションのリソースTeams作成
 
-|リソース|用途|Description |
+|リソース|用途|説明 |
 |----------|--------------------------------|-----|
 | Azure ストレージ | タブ アプリをホストする | 静的 Web アプリ機能でタブ アプリをホストできます |
 | 簡単な認証のためのアプリ サービスプラン | 簡易認証の Web アプリをホストする |該当なし |
@@ -59,7 +59,7 @@ TeamsFx は Azure とクラウドMicrosoft 365統合され、1 つのコマン�
 
 ### <a name="resource-creation-for-teams-bot-or-messaging-extension-application"></a>ボットまたはメッセージングTeamsアプリケーションのリソースの作成
 
-|リソース|用途| Description |
+|リソース|用途| 説明 |
 |----------|--------------------------------|-----|
 | Azure ボット サービス | ボット フレームワークにアプリをボットとして登録する | ボットをデバイスに接続Teams |
 | ボットのアプリ サービス プラン | ボットの Web アプリをホストする |該当なし |
@@ -68,7 +68,7 @@ TeamsFx は Azure とクラウドMicrosoft 365統合され、1 つのコマン�
 
 ### <a name="resource-creation-for-azure-functions-in-the-project"></a>プロジェクト内の Azure Functions のリソース作成
 
-|リソース|用途| Description|
+|リソース|用途| 説明|
 |----------|--------------------------------|-----|
 | 関数アプリのアプリ サービス プラン | 関数アプリをホストする |該当なし |
 | 関数アプリ | Azure 関数 API をホストする | 他の Azure リソースにアクセスするユーザー割り当て ID を追加します。 <br /> クロスオリジン リソース共有 (CORS) ルールを追加して、タブ アプリからの要求を許可する <br /> アプリからの要求のみを許可する認証設定をTeamsします。 <br /> TeamsFx SDK で必要な [アプリ設定を追加する](https://www.npmjs.com/package/@microsoft/teamsfx) |
@@ -77,7 +77,7 @@ TeamsFx は Azure とクラウドMicrosoft 365統合され、1 つのコマン�
 
 ### <a name="resource-creation-for-azure-sql-in-the-project"></a>プロジェクト内の Azure SQLリソースの作成
 
-|リソース|用途 | Description |
+|リソース|用途 | 説明 |
 |----------|--------------------------------|-----|
 | Azure SQL サーバー | Azure データベース インスタンスSQLホストする | すべての Azure サービスがサーバーにアクセスできます |
 | Azure SQL データベース | アプリのデータを保存する | ユーザーに割り当てられた ID、読み取り、またはデータベースへの書き込みアクセス許可を付与する |
@@ -97,7 +97,7 @@ TeamsFx は Azure とクラウドMicrosoft 365統合され、1 つのコマン�
 
 |リソース|このリソースの目的|
 |----------|--------------------------------|
-| Azure Key Vault Service | 他の Azure Services で使用されるAAD (アプリ クライアント シークレットなど) を管理する |
+| Azure Key Vault Service | 他の Azure Services で使用されるAzure AD (アプリ クライアント シークレットなど) を管理する |
 | ユーザー割り当て ID | Azure サービス間要求の認証 |
 
 ## <a name="customize-resource-provision"></a>リソースのプロビジョニングをカスタマイズする
@@ -109,7 +109,7 @@ Teams Toolkitでは、インフラストラクチャをコード アプローチ
 * ARMテンプレートにパラメーターを渡す場合は、フォルダーにあるパラメーター ファイル ( `azure.parameters.{your_env_name}.json` ) `.fx/configs` を指定します。
 * ARMにあるテンプレート ファイルには、 `templates/azure` 次のファイルが含まれます。
 
-| ファイル | 機能 | カスタマイズを許可する |
+| File | 機能 | カスタマイズを許可する |
 | --- | --- | --- |
 | main.bicep | Azure リソースプロビジョニングのエントリ ポイントを提供する | はい |
 | provision.bicep | Azure リソースの作成と構成 | はい |
@@ -161,18 +161,18 @@ Teams Toolkitでは、インフラストラクチャをコード アプローチ
 
 一方、次のパラメーターは、プロビジョニング中に値が設定された場合に使用できます。 これらのプレースホルダーの目的は、新しい環境で新しいリソースを作成できます。 実際の値はから解決されます `.fx/states/state.{env}.json` 。
 
-##### <a name="aad-application-related-parameters"></a>AAD関連のパラメーター
+##### <a name="azure-ad-application-related-parameters"></a>Azure AD関連のパラメーター
 
 | パラメーター名 | 既定値の場所の所有者 | 場所所有者の意味 | カスタマイズする方法 |
 | --- | --- | --- | --- |
-| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | プロビジョニング中に作成AADアプリのクライアント ID | [値をカスタマイズする](#use-an-existing-aad-app-for-your-teams-app) |
-| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | プロビジョニング中に作成AADアプリのクライアント シークレット | [値をカスタマイズする](#use-an-existing-aad-app-for-your-teams-app)  |
-| Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | アプリのアプリのテナント id AADします。 | [値をカスタマイズする](#use-an-existing-aad-app-for-your-teams-app)  |
-| Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | アプリのアプリの OAuth AADホスト | [値をカスタマイズする](#use-an-existing-aad-app-for-your-teams-app) |
-| botAadAppClientId | {{state.fx-resource-bot.botId}} | プロビジョニング中にAADボットのアプリ クライアント ID | [値をカスタマイズする](#use-an-existing-aad-app-for-your-bot) |
-| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | プロビジョニング中に作成AADボットのアプリ クライアント シークレット | [値をカスタマイズする](#use-an-existing-aad-app-for-your-bot) |
-| apimClientId | {{state.fx-resource-apim.apimClientAADClientId}} | プロビジョニング中にAAD APIM のアプリ クライアント ID | プレースホルダーを削除し、実際の値を入力する |
-| apimClientSecret | {{state.fx-resource-apim.apimClientAADClientSecret}} | プロビジョニング中に作成AAD APIM のアプリ クライアント シークレット | プレースホルダーを削除し、実際の値を入力する |
+| Microsoft 365 ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | プロビジョニング中に作成Azure ADアプリのクライアント ID | [値をカスタマイズする](#use-an-existing-azure-ad-app-for-your-teams-app) |
+| Microsoft 365 ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | プロビジョニング中に作成Azure ADアプリのクライアント シークレットの作成 | [値をカスタマイズする](#use-an-existing-azure-ad-app-for-your-teams-app)  |
+| Microsoft 365 TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | アプリのアプリのテナント id Azure AD | [値をカスタマイズする](#use-an-existing-azure-ad-app-for-your-teams-app)  |
+| Microsoft 365 OAuthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | アプリのアプリの OAuth Azure ADホスト | [値をカスタマイズする](#use-an-existing-azure-ad-app-for-your-teams-app) |
+| botAadAppClientId | {{state.fx-resource-bot.botId}} | プロビジョニング中にAzure ADボットのアプリ クライアント ID | [値をカスタマイズする](#use-an-existing-azure-ad-app-for-your-bot) |
+| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | プロビジョニング中にAzure ADボットのアプリ クライアント シークレット | [値をカスタマイズする](#use-an-existing-azure-ad-app-for-your-bot) |
+| apimClientId | {{state.fx-resource-apim.apimClientAADClientId}} | プロビジョニング中にAzure AD APIM のアプリ クライアント ID | プレースホルダーを削除し、実際の値を入力する |
+| apimClientSecret | {{state.fx-resource-apim.apimClientAADClientSecret}} | プロビジョニング中にAzure AD APIM のアプリ クライアント シークレット | プレースホルダーを削除し、実際の値を入力する |
 
 ##### <a name="azure-resource-related-parameters"></a>Azure リソース関連のパラメーター
 
@@ -212,15 +212,15 @@ TeamsFx ツールが正しく機能していることを確認するには、次
 
 次のシナリオをカスタマイズできます。
 
-#### <a name="use-an-existing-aad-app-for-your-teams-app"></a>既存のアプリをAADアプリにTeamsする
+#### <a name="use-an-existing-azure-ad-app-for-your-teams-app"></a>アプリに既存Azure ADアプリをTeamsする
 
-次の構成スニペットをファイルに追加して、AADアプリ用にTeams `.fx/configs/config.{env}.json` できます。 アプリを作成するにはAADを参照してください <https://aka.ms/teamsfx-existing-aad-doc> 。
+次の構成スニペットをファイルに追加して、Azure ADアプリ用にTeams `.fx/configs/config.{env}.json` できます。 アプリを作成するにはAzure ADを参照してください <https://aka.ms/teamsfx-existing-aad-doc> 。
 
 ```json
 "auth": {
-    "clientId": "<your AAD app client id>",
+    "clientId": "<your Azure AD app client id>",
     "clientSecret": "{{$env.ENV_NAME_THAT_STORES_YOUR_SECRET}}",
-    "objectId": "<your AAD app object id>",
+    "objectId": "<your Azure AD app object id>",
     "accessAsUserScopeId": "<id of the access_as_user scope>"
 }
 ```
@@ -228,15 +228,15 @@ TeamsFx ツールが正しく機能していることを確認するには、次
 スニペットを追加した後、関連する環境変数にシークレットを追加して、プロビジョニング中に実際のシークレットを解決できます。
 
 > [!NOTE]
-> 複数の環境で同じアプリAAD共有しないでください。 アプリを更新する権限を持AAD場合は、アプリを手動で更新する方法に関するAADできます。 手順に従って、プロビジョニング後AADアプリを更新します。
+> 複数の環境で同じアプリAzure AD共有しないでください。 アプリを更新する権限を持Azure AD場合は、アプリを手動で更新する方法に関するAzure ADできます。 手順に従って、プロビジョニング後Azure ADアプリを更新します。
 
-#### <a name="use-an-existing-aad-app-for-your-bot"></a>ボットに既存のAADアプリを使用する
+#### <a name="use-an-existing-azure-ad-app-for-your-bot"></a>ボットに既存のAzure ADアプリを使用する
 
-次の構成スニペットをファイルに追加して、ボットAAD `.fx/configs/config.{env}.json` アプリを使用できます。
+次の構成スニペットをファイルに追加して、ボットAzure AD `.fx/configs/config.{env}.json` アプリを使用できます。
 
 ```json
 "bot": {
-    "appId": "<your AAD app client id>",
+    "appId": "<your Azure AD app client id>",
     "appPassword": "{{$env.ENV_NAME_THAT_STORES_YOUR_SECRET}}"
 }
 ```
@@ -313,7 +313,7 @@ Blob データを格納するために Azure 関数バックエンドに Azure �
 
 5. Azure ストレージ出力バインドを使用して関数を更新できます。
 
-## <a name="faq"></a>FAQ
+## <a name="faq"></a>よくあるご質問 (FAQ)
 
 <br>
 
@@ -365,6 +365,6 @@ Blob データを格納するために Azure 関数バックエンドに Azure �
 
 ## <a name="see-also"></a>関連項目
 
-* [クラウドTeamsアプリを展開する](deploy.md)
+* [Teams アプリをクラウドに展開する](deploy.md)
 * [複数の環境を管理する](TeamsFx-multi-env.md)
 * [プロジェクトで他の開発者とTeamsする](TeamsFx-collaboration.md)

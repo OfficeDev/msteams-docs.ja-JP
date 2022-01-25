@@ -1,22 +1,22 @@
 ---
 title: サーバーを使用したボットAzure Active Directory
 description: ユーザー Azure AD認証Teamsボットで使用する方法について説明します。
-keywords: teams 認証ボットAAD
+keywords: teams 認証ボットAzure AD
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 03/01/2018
-ms.openlocfilehash: 1f13e561e94029f007ff055627f335d00ee1c441
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 7456580b3c0cd45ed9f2032e08068d542986cfea
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60720072"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212399"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-bot"></a>ボットでユーザーをMicrosoft Teamsする
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Teams アプリ内で使用するサービスは多く、それらのサービスの大部分では、アクセスを取得するために認証と承認が必要です。 サービスには、Facebook、Twitter、およびTeams。 ユーザーはTeamsを使用して、ユーザー プロファイル情報を Azure Active Directory (Azure AD) にGraph。 このトピックでは、アクセスを取得するためにAzure AD認証に焦点を当てします。
+Teams アプリ内で使用するサービスは多く、それらのサービスの大部分では、アクセスを取得するために認証と承認が必要です。 サービスには、Facebook、Twitter、およびTeams。 ユーザーが microsoft Teamsを使用して、ユーザー プロファイル情報をAzure Active Directoryに保存Graph。 このトピックでは、アクセスを取得するためにAzure AD認証に焦点を当てします。
 OAuth 2.0 は、ユーザーや他の多くのサービス プロバイダーが使用する認証Azure AD標準です。 OAuth 2.0 について理解は、認証と認証の操作を行うTeams前提条件Azure AD。 次の例では、OAuth 2.0 暗黙的な付与フローを使用して、最終的に Azure AD および Microsoft のプロファイル情報を読み取Graph。
 
 このトピックで説明する認証フローは、タブで Web ベースの認証フローを使用できる点と、ボットがコードから駆動する認証を必要とする点を除き、タブに似ています。 このトピックの概念は、モバイル プラットフォームから認証を実装する場合にも役立ちます。

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: ボット コンテキスト名簿ユーザー プロファイル チャネル リスト
-ms.openlocfilehash: eb935515e4f130e57cf634dd9716306cce9f3a05
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: f75598caa876c8c65db9fc265cb68ae455f10fcf
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888245"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212427"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>ボットTeams特定のコンテキストを取得する
 
@@ -21,7 +21,7 @@ ms.locfileid: "60888245"
 
 ## <a name="fetch-the-roster-or-user-profile"></a>名簿またはユーザー プロファイルを取得する
 
-ボットは、Teams ユーザー ID や Azure Active Directory (AAD) 情報 (名前や objectId など) を含む、メンバーのリストとその基本的なユーザー プロファイルを照会できます。 この情報を使用して、ユーザー ID を関連付けできます。 たとえば、ユーザーが資格情報を使用してタブにログインAAD確認するには、チームのメンバーです。 会話メンバーを取得する場合、最小または最大のページ サイズは実装によって異なります。 50 未満のページ サイズは 50 として扱い、500 より大きい場合は 500 に制限されます。 ページ以外のバージョンを使用する場合でも、大規模なチームではこのバージョンは使用できません。 詳細については、「チームまたはチャット[メンバーをフェッチTeamsボット API の変更点」を参照してください](~/resources/team-chat-member-api-changes.md)。
+ボットは、メンバーのリストとその基本的なユーザー プロファイル (Teams ユーザー ID や名前や objectId などAzure Active Directory情報を照会できます。 この情報を使用して、ユーザー ID を関連付けできます。 たとえば、ユーザーが資格情報を使用してタブにログインAzure AD確認するには、チームのメンバーです。 会話メンバーを取得する場合、最小または最大のページ サイズは実装によって異なります。 50 未満のページ サイズは 50 として扱い、500 より大きい場合は 500 に制限されます。 ページ以外のバージョンを使用する場合でも、大規模なチームではこのバージョンは使用できません。 詳細については、「チームまたはチャット[メンバーをフェッチTeamsボット API の変更点」を参照してください](~/resources/team-chat-member-api-changes.md)。
 
 次のサンプル コードでは、ページ化されたエンドポイントを使用して、名簿をフェッチします。
 
@@ -128,7 +128,7 @@ Response body
 
 ## <a name="get-single-member-details"></a>単一のメンバーの詳細を取得する
 
-ユーザー ID、UPN、またはオブジェクト ID を使用して、特定のTeams詳細を取得AADできます。
+ユーザー ID、UPN、またはオブジェクト ID を使用して、特定のTeamsを取得Azure ADできます。
 
 次のサンプル コードは、単一のメンバーの詳細を取得するために使用されます。
 
@@ -212,7 +212,7 @@ Response body
 
 ## <a name="get-teams-details"></a>チームの詳細を取得する
 
-チームにインストールすると、ボットはグループ ID を含むそのチームに関するメタデータAADできます。
+チームにインストールすると、ボットはグループ ID を含むそのチームに関するメタデータをAzure ADできます。
 
 チームの詳細を取得するには、次のサンプル コードを使用します。
 

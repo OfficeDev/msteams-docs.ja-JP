@@ -1,17 +1,17 @@
 ---
-title: 会議の通話と会議ボットを登録Microsoft Teams
+title: Microsoft Teams の通話と会議ボットを登録する
 description: 新しい音声/ビデオ通話ボットの登録、Microsoft Teamsボットの作成、通話機能の追加、グラフのアクセス許可の追加を行う方法について学習します。
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: ボットのオーディオ/ビデオ オーディオ ビデオ メディアを呼び出す
-ms.openlocfilehash: 6b90cea6adef1e59c1b075b6581c1415cf5a4786
-ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
+ms.openlocfilehash: 2d2a3411d8db09c6bdf2199efb9cb5e721701135
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2022
-ms.locfileid: "62062510"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212490"
 ---
-# <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>会議の通話と会議ボットを登録Microsoft Teams
+# <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Microsoft Teams の通話と会議ボットを登録する
 
 音声またはビデオ通話とオンライン会議に参加するボットは、ボットの登録にMicrosoft Teams追加機能を備える通常のボットです。
 
@@ -78,13 +78,13 @@ ms.locfileid: "62062510"
 
 ### <a name="assign-permissions"></a>アクセス許可の割り当て
 
-V1 エンドポイントを使用する場合は[、Azure portal](https://aka.ms/aadapplist)を使用して事前にボットのアプリケーションのアクセス許可をAzure Active Directory [(AAD) する必要があります](/azure/active-directory/develop/azure-ad-endpoint-comparison)。
+仮想 V1 エンドポイントを使用する場合は[、Azure portal](https://aka.ms/aadapplist)を使用して、ボットのアプリケーションのアクセス許可を事前[Azure Active Directoryする必要があります](/azure/active-directory/develop/azure-ad-endpoint-comparison)。
 
 ### <a name="get-tenant-administrator-consent"></a>テナント管理者の同意を取得する
 
-AAD V1 エンドポイントを使用するアプリの場合、テナント管理者は、アプリが組織にインストールされている[ときに Azure portal](https://portal.azure.com)を使用してアプリケーションのアクセス許可に同意できます。 または、構成したアクセス許可に管理者が同意できるサインアップ エクスペリエンスをアプリに提供することもできます。 管理者の同意がユーザーによって記録AAD、アプリは再び同意を要求することなくトークンを要求できます。
+Azure AD V1 エンドポイントを使用するアプリの場合、テナント管理者は、アプリが組織にインストールされている[ときに Azure portal](https://portal.azure.com)を使用してアプリケーションのアクセス許可に同意できます。 または、構成したアクセス許可に管理者が同意できるサインアップ エクスペリエンスをアプリに提供することもできます。 管理者の同意がユーザーによって記録Azure AD、アプリは再び同意を要求することなくトークンを要求できます。
 
-管理者に頼って、Azure portal でアプリに必要なアクセス許可を [付与できます](https://portal.azure.com)。 より良い方法は、管理者が V2 エンドポイントを使用してサインアップ エクスペリエンスAAD `/adminconsent` です。 詳細については、「管理者の [同意 URL の作成に関する手順」を参照してください](/graph/uth-v2-service#3-get-administrator-consent)。
+管理者に頼って、Azure portal でアプリに必要なアクセス許可を [付与できます](https://portal.azure.com)。 より優れたオプションは、管理者が V2 エンドポイントを使用してサインアップ エクスペリエンスAzure AD `/adminconsent` です。 詳細については、「管理者の [同意 URL の作成に関する手順」を参照してください](/graph/uth-v2-service#3-get-administrator-consent)。
 
 > [!NOTE]
 > テナント管理者の同意 URL を作成するには、アプリ登録ポータルで構成されたリダイレクト URI または返信 URL [が](https://apps.dev.microsoft.com/) 必要です。 ボットの返信 URL を追加するには、ボット登録にアクセスし、[高度なオプション] [**アプリケーション** マニフェストの編集  >  **] を選択します**。 リダイレクト URL をコレクションに追加 `replyUrls` します。

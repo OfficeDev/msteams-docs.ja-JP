@@ -5,12 +5,12 @@ description: コード サンプルを使用してメッセージング拡張機
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 3da2c19debd3275266b4f96ce62bdfb0c85c353b
-ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
+ms.openlocfilehash: de0f08cf73c5ba353398693b95c94d45be2eb727
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "61178252"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212553"
 ---
 # <a name="single-sign-on-support-for-messaging-extensions"></a>メッセージング拡張機能のシングル サインオンのサポート
  
@@ -21,8 +21,9 @@ ms.locfileid: "61178252"
 ## <a name="prerequisites"></a>前提条件
 
 メッセージング拡張機能とリンクの分岐解除に SSO を有効にする前提条件は次のとおりです。
+
 * Azure アカウントが [必要](https://azure.microsoft.com/free/) です。
-* AAD ポータルを使用してアプリを構成し、Teams ポータルを使用してアプリを登録するで定義されているボットのアプリケーション マニフェストAAD[する必要があります](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal)。
+* Azure AD ポータルを使用してアプリを構成し、Teams ポータルを通じてアプリを登録するで定義されているボットのアプリケーション[マニフェストをAzure ADする必要があります](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-azure-ad-portal)。
 
 > [!NOTE]
 > Azure アカウントの作成とアプリ マニフェストの更新の詳細については、「ボットのシングル サインオン [(SSO) サポート」を参照してください](../../bots/how-to/authentication/auth-aad-sso-bots.md)。

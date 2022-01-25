@@ -5,13 +5,13 @@ ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-keywords: teams 承認 OAuth SSO AAD rsc Graph
-ms.openlocfilehash: abd56787c89fde44f7cc4c72f0f59e66b05af9aa
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+keywords: teams 承認 OAuth SSO Azure AD rsc Graph
+ms.openlocfilehash: 6a7c55cefa77d67ff41f8e8154ac05aacb5efe5b
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291633"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212364"
 ---
 # <a name="resource-specific-consent"></a>リソース固有の同意
 
@@ -28,7 +28,7 @@ ms.locfileid: "60291633"
 
 ### <a name="resource-specific-permissions-for-a-team"></a>チームのリソース固有のアクセス許可
 
-|アプリケーションのアクセス許可| Action |
+|アプリケーションのアクセス許可| アクション |
 | ----- | ----- |
 |TeamSettings.Read.Group | このチームの設定を取得します。|
 |TeamSettings.ReadWrite.Group|このチームの設定を更新します。|
@@ -51,7 +51,7 @@ ms.locfileid: "60291633"
 
 次の表に、チャットのリソース固有のアクセス許可を示します。
 
-|アプリケーションのアクセス許可| Action |
+|アプリケーションのアクセス許可| アクション |
 | ----- | ----- |
 | ChatSettings.Read.Chat         | このチャットの設定を取得します。                                    |
 | ChatSettings.ReadWrite.Chat    | このチャットの設定を更新します。                          |
@@ -71,15 +71,15 @@ ms.locfileid: "60291633"
 詳細については、「チャット リソース [固有の同意のアクセス許可」を参照してください](/graph/permissions-reference#chat-resource-specific-consent-permissions)。
 
 > [!NOTE]
-> リソース固有のアクセス許可は、Teams クライアントにインストールされている Teams アプリでのみ使用できます。現在は Azure Active Directory (AAD) ポータルの一部ではありません。
+> リソース固有のアクセス許可は、Teams クライアントにインストールされている Teams アプリでのみ使用できます。現在は Azure Active Director ポータルの一部ではありません。
 
 ## <a name="enable-rsc-in-your-application"></a>アプリケーションで RSC を有効にする
 
-1. [ポータルで同意設定をAADします](#configure-consent-settings-in-the-aad-portal)。
+1. [ポータルで同意設定をAzure ADします](#configure-consent-settings-in-the-azure-ad-portal)。
     1. [チーム内の RSC のグループ所有者の同意設定を構成します](#configure-group-owner-consent-settings-for-rsc-in-a-team)。
     1. [チャットで RSC のユーザー同意設定を構成します](#configure-user-consent-settings-for-rsc-in-a-chat)。
-1. [ポータルを使用してアプリMicrosoft ID プラットフォームをAADします](#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)。
-1. [ポータルでアプリケーションのアクセス許可をAADします](#review-your-application-permissions-in-the-aad-portal)。
+1. [ポータルを使用してアプリMicrosoft ID プラットフォームをAzure ADします](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)。
+1. [ポータルでアプリケーションのアクセス許可Azure ADします](#review-your-application-permissions-in-the-azure-ad-portal)。
 1. [ID プラットフォームからアクセス トークンを取得します](#obtain-an-access-token-from-the-microsoft-identity-platform)。
 1. [アプリ マニフェストTeams更新します](#update-your-teams-app-manifest)。
 1. [アプリをアプリに直接インストールTeams。](#sideload-your-app-in-teams)
@@ -87,7 +87,7 @@ ms.locfileid: "60291633"
     1. [チームに追加された RSC アクセス許可をアプリで確認します](#check-your-app-for-added-rsc-permissions-in-a-team)。
     1. [チャットで追加された RSC アクセス許可をアプリで確認します](#check-your-app-for-added-rsc-permissions-in-a-chat)。
 
-## <a name="configure-consent-settings-in-the-aad-portal"></a>ポータルで同意の設定AADする
+## <a name="configure-consent-settings-in-the-azure-ad-portal"></a>ポータルで同意の設定をAzure ADする
 
 ### <a name="configure-group-owner-consent-settings-for-rsc-in-a-team"></a>チームで RSC のグループ所有者の同意設定を構成する
 
@@ -113,30 +113,30 @@ Azure portal 内でユーザーの [同意を直接](/azure/active-directory/man
 
 さらに、PowerShell を使用してユーザーの同意を有効または無効にしたり [、PowerShell](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-powershell)を使用してユーザーの同意を構成するで説明されている手順に従います。
 
-## <a name="register-your-app-with-microsoft-identity-platform-using-the-aad-portal"></a>ポータルを使用してアプリMicrosoft ID プラットフォームをAADする
+## <a name="register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal"></a>ポータルを使用してアプリMicrosoft ID プラットフォームをAzure ADする
 
-このAADは、アプリを登録および構成する中心的なプラットフォームを提供します。 ID プラットフォームと統合し、Microsoft AAD API を呼び出すには、アプリを Graphする必要があります。 詳細については、「アプリケーションを [ID プラットフォームに登録する」を参照してください](/graph/auth-register-app-v2)。
+このAzure ADは、アプリを登録および構成する中心的なプラットフォームを提供します。 ID プラットフォームと統合し、Microsoft Azure AD API を呼び出すには、アプリを Graphする必要があります。 詳細については、「アプリケーションを [ID プラットフォームに登録する」を参照してください](/graph/auth-register-app-v2)。
 
 > [!WARNING]
-> 複数AADアプリ間でアプリ ID を共有Teams必要があります。 1 つのアプリとアプリの間に 1:1 TeamsがAADがあります。 同じアプリ ID に関連Teams複数のアプリをインストールしようとすると、インストールAAD実行時にエラーが発生します。
+> 複数Azure ADアプリ間でアプリ ID を共有Teams必要があります。 1 つのアプリとアプリの間に 1:1 TeamsがAzure ADがあります。 同じアプリ ID にTeams複数のアプリをインストールしようとすると、Azure AD実行時にエラーが発生します。
 
-## <a name="review-your-application-permissions-in-the-aad-portal"></a>ポータルでアプリケーションのアクセス許可をAADする
+## <a name="review-your-application-permissions-in-the-azure-ad-portal"></a>ポータルでアプリケーションのアクセス許可をAzure ADする
 
 1. [ホーム アプリの **登録**  >  **] ページに移動し**、RSC アプリを選択します。
 1. 左側 **のウィンドウから [API の** アクセス許可] を選択し、アプリの [構成済み **アクセス許可]** の一覧を表示します。 アプリで RSC 呼び出しGraph場合は、そのページのすべてのアクセス許可を削除します。 アプリで RSC 以外の呼び出しを行う場合は、必要に応じてこれらのアクセス許可を保持します。
 
 > [!IMPORTANT]
-> RSC AADを要求する場合は、このポータルを使用できません。 RSC アクセス許可は現在、Teams クライアントにインストールされている Teams アプリケーション専用であり、Teams アプリ マニフェスト (JSON) ファイルで宣言されています。
+> このAzure ADを使用して RSC アクセス許可を要求することはできません。 RSC アクセス許可は現在、Teams クライアントにインストールされている Teams アプリケーション専用であり、Teams アプリ マニフェスト (JSON) ファイルで宣言されています。
 
 ## <a name="obtain-an-access-token-from-the-microsoft-identity-platform"></a>サーバーからアクセス トークンを取得Microsoft ID プラットフォーム
 
-API 呼びGraphするには、ID プラットフォームからアプリのアクセス トークンを取得する必要があります。 アプリが ID プラットフォームからトークンを取得するには、そのトークンをポータルに登録するAADがあります。 アクセス トークンには、アプリとアプリに付与されているアクセス許可に関する情報が含まれています。このアクセス許可は、Microsoft Graph を通じて利用できるリソースと API に対応するものです。
+API 呼びGraphするには、ID プラットフォームからアプリのアクセス トークンを取得する必要があります。 アプリが ID プラットフォームからトークンを取得するには、そのトークンをポータルに登録Azure ADがあります。 アクセス トークンには、アプリとアプリに付与されているアクセス許可に関する情報が含まれています。このアクセス許可は、Microsoft Graph を通じて利用できるリソースと API に対応するものです。
 
-ID プラットフォームからアクセス トークンを取得するには、AAD登録プロセスから次の値が必要です。
+ID プラットフォームからアクセス トークンを取得するには、Azure AD登録プロセスから次の値が必要です。
 
 - アプリ **登録ポータルによって** 割り当てられたアプリケーション ID。 アプリがシングル サインオン (SSO) をサポートしている場合は、アプリと SSO に同じアプリケーション ID を使用する必要があります。
 - クライアント **シークレット/パスワード、** または証明書である公開キーまたは秘密キー **のペア** です。 ネイティブ アプリの場合、これは必須ではありません。
-- アプリ **のリダイレクト URI** または返信 URL で、アプリから応答を受信AAD。
+- アプリ **のリダイレクト URI** または返信 URL で、アプリから応答を受信Azure AD。
 
 詳細については、「ユーザーに [代わってアクセス権を取得](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token&preserve-view=true) する」および「ユーザーなしで [アクセスを取得する」を参照してください](/graph/auth-v2-service)。
 
@@ -146,7 +146,7 @@ RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣
 
 |名前| 種類 | 説明|
 |---|---|---|
-|`id` |String |ユーザー AADアプリ ID。 詳細については、「アプリを[ポータルに登録する」をAADしてください](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)。|
+|`id` |String |ユーザー Azure ADアプリ ID。 詳細については、「アプリを[ポータルに登録する」をAzure ADしてください](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)。|
 |`resource`|String| このフィールドは RSC で操作を行う必要がありますが、エラー応答を回避するには、値を追加して値を指定する必要があります。任意の文字列が実行します。|
 |`applicationPermissions`|文字列の配列|アプリの RSC アクセス許可。 詳細については、「リソース固有 [のアクセス許可」を参照してください](resource-specific-consent.md#resource-specific-permissions)。|
 
@@ -208,7 +208,7 @@ RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣
 > [!NOTE]
 > アプリがチームスコープとチャット スコープの両方でのインストールをサポートすることを意図している場合は、チームとチャットの両方のアクセス許可を同じマニフェストで指定できます `applicationPermissions` 。
 
-## <a name="sideload-your-app-in-teams"></a>アプリをサイドロードTeams
+## <a name="sideload-your-app-in-teams"></a>Teams でアプリをサイドロード
 
 管理者がTeamsアプリのアップロードを許可している場合は、アプリを特定[](~/concepts/deploy-and-publish/apps-upload.md)のチームまたはチャットに直接サイドロードできます。
 

@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: b358b7bbdd780851eedb78ca2151bc062d402f99
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 597896d79408fa596e9949166fceda97ef440d07
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059617"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212006"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>SaaS オファーをアプリにMicrosoft Teamsする
 
@@ -49,7 +49,7 @@ ms.locfileid: "62059617"
 
 * サブスクリプション モデルを決定します。 トランザクション可能な SaaS プランには、複数のサブスクリプション プランを含めできます。 誰でも利用できる公開サブスクリプション プランは最も一般的ですが、特定の顧客のみを対象にした場合もあります。 詳細については [、「Microsoft 商用マーケットプレースのプライベート オファー」を参照してください](/azure/marketplace/private-offers)。
 * ユーザーがアプリ[のサブスクリプション](/azure/marketplace/plan-saas-offer#listing-options)プランをアプリのサブスクリプション プランを直接購入する場合に必要な SaaS プランの [Microsoft による販売] オプションについてTeamsします。
-* サブスクリプションの[Azure Active Directory (Azure AD) シングル サインオン (SSO)](/azure/marketplace/azure-ad-saas)がどのように役立つのかについて学習します。 (saaS Azure ADアプリの場合はTeams SSO が必要です)。
+* シングル[サインオンAzure Active Directory (SSO)](/azure/marketplace/azure-ad-saas)がサブスクリプションの購入と管理に役立つ方法について学習します。 (saaS Azure ADアプリの場合はTeams SSO が必要です)。
 * お客様の SaaS オファーの使用をサポートするために必要なインフラストラクチャの管理と支払いは、お客様の責任で行う必要があります。
 * モバイルを計画する。 サードパーティのアプリ ストア ポリシーに違反しないようにするために、アプリには、ユーザーがモバイルでサブスクリプション プランを購入できるリンクを含めかねない。 ただし、アプリにサブスクリプション プランを必要とする機能が含けられているかどうかを示す場合は、引き続き指定できます。 詳細については、「関連する商用マーケットプレース認定ポリシー [」を参照してください](/legal/marketplace/certification-policies#114048-mobile-experience)。
 

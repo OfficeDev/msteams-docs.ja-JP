@@ -5,12 +5,12 @@ ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 27d690ca72ffe41fdcdfe39fcd5d7c203c9b3e7c
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 828b3fa2886782d8e7a28f506bbb6526b4b9c848
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081077"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212062"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>複数のユーザー Teamsの個人用タブを拡張Microsoft 365
 
@@ -25,7 +25,7 @@ ms.locfileid: "62081077"
 > * アプリ マニフェストを更新する
 > * TeamsJS SDK の参照を更新する 
 > * コンテンツ セキュリティ ポリシーのヘッダーを変更する
-> * シングル サインオンAADアプリ登録を更新する (SSO)
+> * シングル サインオンAzure ADアプリ登録を更新する (SSO)
 
 アプリをテストするには、次の手順が必要です。
 
@@ -63,7 +63,7 @@ Teams の開発者プレビュー マニフェスト スキーマ[と](/microsof
 
 アプリ マニフェストを更新するにはTeams Toolkitを使用するか、手動で変更を適用します。
 
-# <a name="teams-toolkit"></a>[Teams Toolkit](#tab/manifest-teams-toolkit)
+# <a name="teams-toolkit"></a>[Teams ツールキット](#tab/manifest-teams-toolkit)
 
 1. コマンド パレット *を開きます*。 `Ctrl+Shift+P`
 1. コマンドを実行 `Teams: Upgrade Teams manifest to support Outlook and Office apps` し、アプリ マニフェスト ファイルを選択します。 変更は、その場で行います。
@@ -120,9 +120,9 @@ Teams Toolkit を使用すると、コードの変更の一部を自動化して
 | Office | `*.office.com` |
 | Outlook | `outlook.office.com`, `outlook.office365.com` |
 
-## <a name="update-aad-app-registration-for-sso"></a>SSO AADアプリ登録の更新
+## <a name="update-azure-ad-app-registration-for-sso"></a>SSO Azure ADアプリ登録の更新
 
-Azure Active Directory 個人用タブのシングル サインオン (SSO) は、Teams の場合と同じように Office と[](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso)Outlook で動作しますが、テナントのアプリ登録ポータルでタブ アプリの AAD アプリ登録にいくつかのクライアント アプリケーション識別子を追加する必要があります。 
+Azure Active Directory 個人用タブのシングル サインオン (SSO) は、Office Teams Outlook と同じように動作しますが、[](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso)テナントのアプリ登録ポータルでタブ アプリの Azure AD アプリ登録にいくつかのクライアント アプリケーション識別子を追加する必要があります。 
 
 1. サンドボックス テナント アカウント [を使用して Azure portal](https://portal.azure.com) にサインインします。
 1. [アプリの **登録] ブレードを開** きます。

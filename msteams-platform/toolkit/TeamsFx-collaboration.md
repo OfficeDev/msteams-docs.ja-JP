@@ -6,16 +6,16 @@ ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 1440af663d0c3d26bdad968a7e0549c51d28dccb
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: 9a39b84c3cfa94c410df5774d4a177535e1cfdd6
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768405"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212350"
 ---
 # <a name="collaborate-on-teams-project-using-teams-toolkit"></a>プロジェクトを使用Teams共同作業Teams Toolkit
 
-複数の開発者が連携して同じ TeamsFx プロジェクトのデバッグ、プロビジョニング、展開を行うことができますが、Teams App と AAD App.Teams Toolkit の適切なアクセス許可を手動で設定する必要があります。
+複数の開発者が連携して同じ TeamsFx プロジェクトのデバッグ、プロビジョニング、展開を行うことができますが、Teams App と Azure AD App.Teams Toolkit の適切なアクセス許可を手動で設定して、開発者とプロジェクト所有者が TeamsFx プロジェクトに他の開発者や共同作業者を招待して、同じプロジェクトをデバッグ、プロビジョニング、および展開できるコラボレーション機能を手動で設定する必要があります。 TeamsFx プロジェクト。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -23,8 +23,8 @@ ms.locfileid: "61768405"
 
     クラウド リソースをプロビジョニングするには、次のアカウントが必要です。 詳細については、「アプリをビルドするためのアカウント[の準備」をTeamsしてください](accounts.md)。
 
-    * Microsoft 365 サブスクリプション
-    * 有効なサブスクリプションを持つ Azure
+  * Microsoft 365 サブスクリプション
+  * 有効なサブスクリプションを持つ Azure
 
 * [バージョン Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) v3.0.0 以上をインストールします。
 
@@ -77,8 +77,8 @@ ms.locfileid: "61768405"
   1. [開発者ポータルTeamsに移動し、名前またはアプリ ID Teamsアプリを選択します。
   2. 左側の **パネルから [所有者** ] を選択します。
   3. 共同作業者を選択して削除します。
-  4. [アプリの登録 [Azure Active Directory]](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)**に移動** し、左側のパネルから [アプリの登録] を選択し、アプリAADします。
-  5. [**アプリの管理**] ページの左側のAADから [所有者] を選択します。
+  4. [アプリ [の](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)Azure Active Directory] に移動 **し、** 左側のパネルから [アプリの登録] を選択し、アプリをAzure ADします。
+  5. [**アプリの管理**] ページの左側のAzure ADから [所有者] を選択します。
   6. 共同作業者を選択して削除します。
 
 > [!NOTE]
@@ -87,6 +87,6 @@ ms.locfileid: "61768405"
 
 ## <a name="see-also"></a>関連項目
 
-* [クラウド リソースのプロビジョニング](provision.md)
-* [クラウドTeamsアプリを展開する](deploy.md)
+* [クラウド リソースをプロビジョニングする](provision.md)
+* [Teams アプリをクラウドに展開する](deploy.md)
 * [複数の環境を管理する](TeamsFx-multi-env.md)

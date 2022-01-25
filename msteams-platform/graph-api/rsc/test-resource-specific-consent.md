@@ -5,13 +5,13 @@ ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
-keywords: teams 承認 OAuth SSO AAD rsc Postman Graph
-ms.openlocfilehash: fc926e307c2e3ee5d1336c09e264930abe20d9d0
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+keywords: teams 承認 OAuth SSO Azure AD rsc Postman Graph
+ms.openlocfilehash: fe3819b0da9783a6cf3aacac08a6045337e27600
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887721"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212483"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>リソース固有の同意のアクセス許可をテストTeams
 
@@ -23,7 +23,7 @@ ms.locfileid: "60887721"
 > [!NOTE]
 > RSC アクセス許可をテストするには、Teamsアプリ マニフェスト ファイルに、次のフィールドが設定された **webApplicationInfo** キーを含める必要があります。
 >
-> - **id**: アプリ ID Azure AD、アプリをポータルに登録 [するをAzure ADしてください](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal)。
+> - **id**: アプリ ID Azure AD、アプリをポータルに登録 [するをAzure ADしてください](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)。
 > - **resource**: 任意の文字列は、「アプリ マニフェストの更新 [」のTeams参照してください](resource-specific-consent.md#update-your-teams-app-manifest)。
 > - **アプリケーションのアクセス許可**: アプリの RSC アクセス許可については、「リソース固有の [アクセス許可」を参照してください](resource-specific-consent.md#resource-specific-permissions)。
 
@@ -81,7 +81,7 @@ ms.locfileid: "60887721"
 >[!NOTE]
 >アプリがチームスコープとチャット スコープの両方でのインストールをサポートすることを意図している場合は、チームとチャットの両方のアクセス許可を同じマニフェストで指定できます `applicationPermissions` 。
 
->アプリが通話/メディア API にアクセスすることを意図している場合は、Azure Bot Service の AAD `webApplicationInfo.Id` アプリ ID[である必要があります](/graph/cloud-communications-get-started#register-a-bot)。
+>アプリが通話/メディア API にアクセスすることを意図している場合は `webApplicationInfo.Id` 、Azure Bot Service のAzure ADアプリ ID[である必要があります](/graph/cloud-communications-get-started#register-a-bot)。
 
 ## <a name="test-added-rsc-permissions-to-a-team-using-the-postman-app"></a>Postman アプリを使用してチームに追加された RSC アクセス許可をテストする
 
@@ -105,7 +105,7 @@ RSC アクセス許可が API 要求ペイロードによって付与されて�
 * `azureADAppId`: アプリのAzure AD ID です。
 * `azureADAppSecret`: アプリAzure ADパスワード。
 * `token_scope`: トークンを取得するには、スコープが必要です。 に値を設定します https://graph.microsoft.com/.default 。
-* `tenantId`: テナントの名前AADオブジェクト ID です。
+* `tenantId`: テナントの名前Azure ADオブジェクト ID です。
 * `chatId`: 次のように、Web クライアントからチャット スレッド id をTeams *取得* できます。
 
     1. Web クライアントTeams、左側 **のナビゲーション** バーから [チャット] を選択します。

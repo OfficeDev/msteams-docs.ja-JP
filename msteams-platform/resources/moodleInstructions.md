@@ -1,17 +1,17 @@
 ---
 title: Moodle LMS のインストール
 description: アプリの Moodle 統合アプリをインストールして構成するMicrosoft Teams
-keywords: TeamsMoodle アプリ統合プラグイン
+keywords: Teamsアプリ統合プラグイン
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: f87264adc75e504feddc10f470f739747fb3d96b
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 7460a4f6e1a15df30ebc9b1c50f43b561908c7d4
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888133"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212385"
 ---
 # <a name="install-moodle-lms"></a>Moodle LMS のインストール
 
@@ -20,7 +20,7 @@ ms.locfileid: "60888133"
 > [!NOTE]
 > IT 管理者が簡単に Moodle と Teams統合をセットアップMicrosoft 365、次の情報が更新されます。
 >
-> * Moodle サーバーの自動登録 (Azure Active Directory [) をAzure AD。](https://azure.microsoft.com/services/active-directory/)
+> * [自動登録] を使用して、Moodle[サーバーを](https://azure.microsoft.com/services/active-directory/)Azure Active Directory。
 >
 > * Moodle Assistant ボットの Azure への展開を 1 回クリックで行います。
 >
@@ -57,7 +57,7 @@ Moodle プラグインのインストールに進む前に、次のMicrosoft 365
     >
     > さらに、テーマ[プラグインMicrosoft 365 Teams強](https://moodle.org/plugins/theme_boost_o365teams)くお勧めします。
 
-### <a name="microsoft-365-moodle-plugins"></a>Microsoft 365Moodle プラグイン
+### <a name="microsoft-365-moodle-plugins"></a>Microsoft 365のプラグイン
 
 1. 管理者として Moodle サーバーにサインインし、左側の[ナビゲーション](https://docs.moodle.org/22/en/Settings_block)パネルにある [設定] ブロックから [サイトの管理] を選択します。
 
@@ -75,7 +75,7 @@ Moodle プラグインのインストールに進む前に、次のMicrosoft 365
     >
     > * 既存の Moodle サイトをお持ちではない場合は、Azure repo の [Moodle](https://github.com/azure/moodle) に移動し、Moodle インスタンスをすばやく展開し、ニーズに合わせてカスタマイズします。
 
-## <a name="2-configure-the-connection-between-the-microsoft-365-plugins-and-azure-active-directory-azure-ad"></a>2. Microsoft 365プラグインとAzure Active Directory接続を構成する (Azure AD)
+## <a name="2-configure-the-connection-between-the-microsoft-365-plugins-and-azure-active-directory"></a>2. プラグインとアプリケーション間Microsoft 365を構成Azure Active Directory
 
 プラグインとアプリケーション間の接続をMicrosoft 365必要Azure AD。
 
@@ -108,7 +108,7 @@ PowerShell スクリプトを使用して、Azure ADアプリケーションと�
     1. 抽出したフォルダーを開きます。
     1. ファイルを右クリックし、[ `Moodle-AzureAD-Script.ps1` プロパティ] を **選択します**。
     1. [プロパティ **] ウィンドウの**[全般] タブで、ウィンドウの下部にあるセキュリティ属性の横にあるチェック `Unblock` ボックスをオンにします。
-    1. **[OK]** を選択します。
+    1. [**OK**] を選択します。
     1. ディレクトリ パスを抽出したフォルダーにコピーします。
 
 1. 管理者として PowerShell を実行します。
@@ -228,7 +228,7 @@ PowerShell スクリプトを使用して、Azure ADアプリケーションと�
 
 リソースが Azure への展開を完了したら、メッセージング エンドポイントMicrosoft 365を構成する必要があります。 Azure でボットからエンドポイントを取得する必要があります。
 
-1. [Azure portal](https://portal.azure.com) にサインインします。
+1. Azure portal
 
 1. 左側のウィンドウで、[リソース グループ **] を** 選択し、ボットの展開中に使用または作成したリソース グループを選択します。
 

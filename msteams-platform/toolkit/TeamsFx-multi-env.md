@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview of multiple environment
 ms.date: 11/29/2021
-ms.openlocfilehash: 1c0bb7eb75ee982e7c08d3039e59f03fc7f18146
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: 5aa701bc884a290c5030d54c67d31dd47d794d94
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768465"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212469"
 ---
 # <a name="manage-multiple-environments-in-teams-toolkit"></a>複数の環境を管理Teams Toolkit
 
@@ -75,11 +75,11 @@ Teams Toolkit構成ファイルとテンプレート ファイルを変更して
 
 次の表に、カスタマイズされたプロビジョニングでサポートされる一般的なシナリオとカスタマイズする場所を示します。
 
-| シナリオ | Location| Description |
+| シナリオ | Location| 説明 |
 | --- | --- | --- |
 | Azure リソースのカスタマイズ | <ul> <li>下のバイセップ ファイル `templates/azure` 。</li> <li>`.fx/azure.parameters.<envName>.json`.</li></ul> | [パラメーター ARMテンプレートをカスタマイズします](provision.md#customize-arm-parameters-and-templates)。 |
-| 既存のアプリをAADアプリにTeamsする | <ul> <li>`auth`セクション `.fx/config.<envName>.json`</li> </ul> |  [既存のアプリをAADアプリにTeamsします](provision.md#use-an-existing-aad-app-for-your-teams-app)。 |
-| ボットに既存のAADアプリを再利用する | <ul> <li>`bot`セクション `.fx/config.<envName>.json`</li> </ul> | [ボットに既存のAADアプリを使用します](provision.md#use-an-existing-aad-app-for-your-bot)。 |
+| 既存のアプリをAzure ADアプリTeamsする | <ul> <li>`auth`セクション `.fx/config.<envName>.json`</li> </ul> |  [既存のアプリをAzure ADアプリにTeamsします](provision.md#use-an-existing-azure-ad-app-for-your-teams-app)。 |
+| ボット用の既存Azure ADアプリを再利用する | <ul> <li>`bot`セクション `.fx/config.<envName>.json`</li> </ul> | [ボットに既存のAzure ADアプリを使用します](provision.md#use-an-existing-azure-ad-app-for-your-bot)。 |
 | プロビジョニング中にユーザーの追加をスキップSQL | <ul> <li>`skipAddingSqlUser`のプロパティ `.fx/config.<envName>.json`</li> </ul> | [データベースのユーザーの追加SQLスキップします](provision.md#skip-adding-user-for-sql-database)。 |
 | アプリ マニフェストのカスタマイズ | <ul> <li>`templates/manifest.remote.template.json`.</li> <li>`manifest`セクション `.fx/config.<envName>.json`</li>  </ul> | [[Teamsアプリ マニフェストをカスタマイズTeams Toolkit。](TeamsFx-manifest-customization.md) |
 

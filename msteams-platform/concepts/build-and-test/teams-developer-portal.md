@@ -5,14 +5,14 @@ keywords: 開発者ポータル チームの開始
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 598ee5fae79ff7c4c4a4c1096d1d234ecab89629
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 246ea41b30fe920562989b32c3643813238fb083
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888553"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212539"
 ---
-# <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>開発者ポータルを使用してアプリを管理Microsoft Teams
+# <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Microsoft Teams の開発者ポータルを使用してアプリを管理する
 
 開発者<a href="https://dev.teams.microsoft.com" target="_blank">ポータルは、Teams</a>アプリを構成、配布、および管理するための主要なMicrosoft Teamsです。 開発者ポータルを使用すると、アプリの同僚と共同作業を行い、ランタイム環境をセットアップできます。
 
@@ -85,7 +85,7 @@ ms.locfileid: "60888553"
 
 * **シーン スタジオ**: 会議 [のカスタム一](~/apps-in-teams-meetings/teams-together-mode.md)緒にモード のTeamsします。
 * **アダプティブ カード エディター**: アプリに含めるアダプティブ カードを作成およびプレビューします。
-* **Microsoft ID プラットフォーム管理**: アプリを Azure Active Directory (Azure AD) に登録して、ユーザーがサインインして API へのアクセスを提供します。
+* **Microsoft ID プラットフォーム管理**: アプリをアプリに登録Azure Active Directory、ユーザーがサインインして API へのアクセスを提供するのに役立ちます。
 
 ## <a name="see-also"></a>関連項目
 

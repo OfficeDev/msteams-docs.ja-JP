@@ -6,12 +6,12 @@ keywords: ユーザー選択コントロール
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 5f686b247397c89a5a1ab8fe80ac9e97017ea051
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 0c4bac7a92042d339f35c4b3eeb2c7302e5f0e1a
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156595"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212581"
 ---
 # <a name="integrate-people-picker"></a>ユーザー ピッカーを統合する  
 
@@ -42,12 +42,12 @@ API の説明は次のとおりです。
 
 `selectPeople`API には、次の入力構成が付属しています。
 
-|構成パラメーター|型|説明| 既定値|
+|構成パラメーター|種類|説明| 既定値|
 |-----|------|--------------|------|
 |`title`| String| これはオプションのパラメーターです。 ユーザー選択コントロールのタイトルを設定します。 | ユーザーを選択する|
-|`setSelected`|String| これはオプションのパラメーターです。 事前に選択するユーザーの AAD の ID を渡す必要があります。 このパラメーターは、ユーザー選択コントロールの起動中にユーザーを事前に選択します。 1 つの選択の場合、最初の有効なユーザーだけが、残りのユーザーを無視して事前設定されます。 |Null| 
-|`openOrgWideSearchInChatOrChannel`|ブール値 | これはオプションのパラメーターです。 true に設定すると、アプリがチャットやチャネルに追加された場合でも、組織全体のスコープでユーザー選択を起動します。 |False|
-|`singleSelect`|ブール値|これはオプションのパラメーターです。 true に設定すると、選択を 1 人のユーザーにのみ制限するユーザー選択を起動します。 |False|
+|`setSelected`|String| これはオプションのパラメーターです。 事前に選択Azure ADのユーザーのユーザーの一部を渡す必要があります。 このパラメーターは、ユーザー選択コントロールの起動中にユーザーを事前に選択します。 1 つの選択の場合、最初の有効なユーザーだけが、残りのユーザーを無視して事前設定されます。 |Null| 
+|`openOrgWideSearchInChatOrChannel`|ブール型 | これはオプションのパラメーターです。 true に設定すると、アプリがチャットやチャネルに追加された場合でも、組織全体のスコープでユーザー選択を起動します。 |False|
+|`singleSelect`|ブール型|これはオプションのパラメーターです。 true に設定すると、選択を 1 人のユーザーにのみ制限するユーザー選択を起動します。 |False|
 
 次の図は、サンプル Web アプリでの People Picker のエクスペリエンスを示しています。
 
@@ -82,7 +82,7 @@ API の説明は次のとおりです。
 
 Web アプリでエラーを適切に処理する必要があります。 次の表に、エラー コードとエラーが生成される条件を示します。 
 
-|エラー コード |  エラー名     | Condition|
+|エラー コード |  エラー名     | 条件|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API は現在のプラットフォームではサポートされていません。|
 | **500** | INTERNAL_ERROR | ユーザー選択の起動中に内部エラーが発生しました。|
@@ -92,6 +92,6 @@ Web アプリでエラーを適切に処理する必要があります。 次の
 
 ## <a name="see-also"></a>関連項目
 
-* [メディア機能を統合Teams](mobile-camera-image-permissions.md)
+* [Teams でメディア機能を統合する](mobile-camera-image-permissions.md)
 * [QR コードまたはバーコード スキャナー機能をアプリに統合Teams](qr-barcode-scanner-capability.md)
-* [場所の機能を統合Teams](location-capability.md)
+* [Teams で位置情報機能を統合する](location-capability.md)

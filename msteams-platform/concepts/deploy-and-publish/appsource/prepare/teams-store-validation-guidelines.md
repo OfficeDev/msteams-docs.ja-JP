@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: 23b3f67f5f949080dc9389e82dc459a33fbf029a
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
-ms.translationtype: HT
+ms.openlocfilehash: b4fc1d7b0e0ce1e32b82e0a82d490491f92ca387
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768281"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212125"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams ストア検証ガイドライン
 
@@ -271,7 +271,7 @@ Teams アプリ マニフェストは、アプリの構成を定義します。
 
 * マニフェストは、一般公開されたマニフェスト スキーマに適合している必要があります。 詳細については、「[マニフェストのリファレンス](~/resources/schema/manifest-schema.md)」を参照してください。 マニフェストのプレビュー バージョンを使用してアプリを申請しないでください。
 * アプリにボットやメッセージング拡張機能が含まれている場合、アプリ マニフェストの詳細は、ボット名、ロゴ、プライバシー ポリシーのリンク、サービス使用条件のリンクなど、ボット フレームワーク メタデータと一致している必要があります。
-* アプリが Azure Active Directory (Azure AD) を認証に使用する場合は、マニフェストに Azure AD Application (クライアント) ID を含めます。詳細については、「[マニフェストのリファレンス](~/resources/schema/manifest-schema.md#webapplicationinfo)」を参照してください。
+* アプリで認証にAzure Active Directoryする場合は、マニフェストに Azure ADアプリケーション (クライアント) ID を含める必要があります。 詳細については、「[マニフェストのリファレンス](~/resources/schema/manifest-schema.md#webapplicationinfo)」を参照してください。
 
 ### <a name="app-icons"></a>アプリのアイコン
 
@@ -1423,7 +1423,7 @@ Fluent UI コンポーネントの[初級](~/concepts/design/design-teams-app-ba
 
 Microsoft 365 アプリ コンプライアンス プログラムは、アプリに関するセキュリティおよびコンプライアンス情報を評価することにより、組織がリスクを評価し管理することを目的としています。 Teams ストアにアプリを公開する場合は、以下のレベルを完了する必要があります。 
 
-  * **Publisher の検証** は、管理者とエンド ユーザーが、Microsoft ID プラットフォームと統合するアプリ開発者の信頼性について理解する上で役立ちます。 完了すると、Azure Active Directory (Azure AD) 同意ダイアログやその他の画面に青い「**確認済み**」バッジが表示されます。 詳細については、「[アプリを発行元確認済みとしてマークする](/azure/active-directory/develop/mark-app-as-publisher-verified)」を参照してください。  
+  * **Publisher の検証** は、管理者とエンド ユーザーが、Microsoft ID プラットフォームと統合するアプリ開発者の信頼性について理解する上で役立ちます。 完了すると、認証済みの青いバッジが [同意Azure Active Directory他の画面に表示されます。 詳細については、「[アプリを発行元確認済みとしてマークする](/azure/active-directory/develop/mark-app-as-publisher-verified)」を参照してください。  
 
 :::row::: 
     :::column span="":::

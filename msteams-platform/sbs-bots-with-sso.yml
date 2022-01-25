@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: Teamsシングル サインオンを使用するボット
+title: シングル サインオンと Teams ボット
 metadata:
   title: Teamsボットと SSO
   description: このチュートリアルでは、ボットで SSO を設定する方法について説明します。Teams。
@@ -11,18 +11,18 @@ metadata:
   nextTutorialTitle: ボット認証の詳細
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 49665992436574ee92da917a8c1a3b32719d7df6
-  ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+  ms.openlocfilehash: be182190e04a57e9b581be3367ce4926eaf023f1
+  ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/17/2022
-  ms.locfileid: "62059708"
+  ms.lasthandoff: 01/25/2022
+  ms.locfileid: "62212532"
 items:
 - durationInMinutes: 1
-  content: "Teamsボットは、顧客サービスなど、ユーザーが繰り返し自動化されたタスクを実行する会話型ボットです。 ユーザーは、繰り返しタスクを実行するために資格情報を複数回使用してサインインする必要があります。 シングル サインオン (SSO) 認証方法は、Azure Active Directory (AAD) の認証トークンをサイレント モードで更新します。 これにより、ユーザーがサインイン資格情報を入力する必要がある回数が削減されます。 \n\nボットの動作は、関連する会話に応じて異なります。\n\n* チャネルチャットとグループ チャット会話のボットでは、ユーザーがボット@mention必要があります。\n* 1 対 1 の会話の場合、ボットを @メンションする必要はありません。 ユーザーが送信したメッセージはすべてボットにルーティングされます。\n\nこのステップ バイ ステップ ガイドは、SSO 認証を有効にしたボットを作成するのに役立ちます。 次の出力が表示されます。\n\n![ボットにサインインしたモバイル](~/assets/images/bots/sbs-desktop-mobile.png)\n"
+  content: "Teamsボットは、顧客サービスなど、ユーザーが繰り返し自動化されたタスクを実行する会話型ボットです。 ユーザーは、繰り返しタスクを実行するために資格情報を複数回使用してサインインする必要があります。 シングル サインオン (SSO) 認証メソッドは、Azure Active Directoryトークンを更新します。 これにより、ユーザーがサインイン資格情報を入力する必要がある回数が削減されます。 \n\nボットの動作は、関連する会話に応じて異なります。\n\n* チャネルチャットとグループ チャット会話のボットでは、ユーザーがボット@mention必要があります。\n* 1 対 1 の会話の場合、ボットを @メンションする必要はありません。 ユーザーが送信したメッセージはすべてボットにルーティングされます。\n\nこのステップ バイ ステップ ガイドは、SSO 認証を有効にしたボットを作成するのに役立ちます。 次の出力が表示されます。\n\n![ボットにサインインしたモバイル](~/assets/images/bots/sbs-desktop-mobile.png)\n"
 - title: 前提条件
   durationInMinutes: 1
-  content: "次のツールをインストールし、開発環境をセットアップしてください。  \n\n* Microsoft Teamsアカウントを使用する (ゲスト アカウントではない)\n* [ngrok](https://ngrok.com/) または同等のトンネリング ソリューション\n\n  > [!NOTE]\n  > ngrok をダウンロードしたら、サインアップして [authtoken をインストールします](https://ngrok.com/download)。\n\n* Visual Studio 2019 または最新バージョン\n* [Microsoft 365をインストールするための](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant)適切なアクセス許可Teams開発者アカウントまたはユーザー アカウントへのアクセスを許可する\n"
+  content: "次のツールをインストールし、開発環境をセットアップしてください。  \n\n* プロファイルMicrosoft Teams付きアクティブなアカウント\n\n  > [!TIP]\n  > ユーザー アカウントMicrosoft Teamsゲスト アカウントできなさい。\n\n* [ngrok](https://ngrok.com/) または同等のトンネリング ソリューション\n\n  > [!NOTE]\n  > ngrok をダウンロードしたら、サインアップして [authtoken をインストールします](https://ngrok.com/download)。\n\n* Visual Studio 2019 または最新バージョン\n* [Microsoft 365をインストールするための](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant)適切なアクセス許可Teams開発者アカウントまたはユーザー アカウントへのアクセスを許可する\n"
 - title: Azure Bot Service でボットをセットアップする
   durationInMinutes: 5
   content: "SSO を使用してボットを認証するには、Azure Bot Service でボットを設定できます。 Azure でボットを開発してホストするときに、ボットを Azure Bot Service に登録します。 次の手順を実行します。\n\n* ngrok を使用して、Web サーバーのエンドポイントへのトンネルを作成します。\n* Azure Bot Service にボットを登録する Azure Bot リソースを作成します。\n* ボットの SSO 認証を有効にするクライアント シークレットを作成します。\n* ボットMicrosoft Teamsチャネルを追加して、ボットを展開Teamsします。\n* 作成した ngrok トンネルにメッセージング エンドポイントを追加します。\n\nngrok を使用して、ローカルで実行中の Web サーバーのパブリックに利用可能な HTTPS エンドポイントへのトンネルを作成します。 ngrok で次のコマンドを実行します。\n\n```bash\nngrok http -host-header=rewrite 3978\n```\n\n**Azure Bot リソースを作成するには**\n\n1. [Azure portal](https://portal.azure.com/) にアクセスします。\n1. **[リソースの作成]** を選択します。\n1. 検索ボックスに **「Azure bot」と入力し** 、Enter キーを選択します。\n1. [Azure **Bot] を選択します**。\n\n    ![Azure ボット カードの作成](~/assets/images/bots/createazurebot.png)\n\n1. **[作成]** を選択します。\n1. ボット ハンドルに必要なボット ハンドル名 **を入力します**。\n1. [サブスクリプション **] ドロップダウン リスト** から、サブスクリプションを選択します。\n1. [リソース **グループ] ドロップダウン リスト** から、リソース グループを選択します。\n    \n    新しいリソースを作成するには、[新しいリソースの作成] を選択し、リソース名を入力し **、[OK]** を選択し、[新しいリソース グループの場所] ドロップダウン リストから必要な場所 **を** 選択します。\n\n    > [!NOTE]\n    > [Microsoft App ID] セクションで、[ **新しい Microsoft アプリ ID** の作成] が既に選択されています。 [既存のアプリ登録 **を使用する] を** 選択し、[既存のアプリ **ID] を** 入力し、[既存のアプリ パスワード **] を入力します**。\n\n1. **[確認 + 作成]** を選びます。\n\n    <img src=\"~/assets/images/bots/Azurebotcreate.png\" alt=\"Create resource Azure bot\" width=\"700\"/>\n\n1. 検証に合格した場合は、[作成] を **選択します**。\n\n    ボット サービスをプロビジョニングするには、少し時間が必要です。\n\n1. [**リソースに移動**] を選びます。 ボットと関連リソースがリソース グループに一覧表示されます。\n\n    これで、Azure ボットが作成されました。\n\n    ![Azure ボット リソースの作成](~/assets/images/bots/Azurebotresource.png)\n\n**クライアント シークレットを作成するには**\n\n1. [構成 **設定** 構成] を **選択します**。 将来の **参照のために Microsoft App ID** (クライアント ID) を保存します。\n\n1. [Microsoft App **ID] の隣にある [** 管理] を **選択します**。\n\n     ![Microsoft アプリ ID](~/assets/images/bots/MicrosoftAppID.png)\n\n1. [クライアント シークレット **] セクションで** 、[新しいクライアント シークレット **] を選択します**。 [ **クライアント シークレットの追加] ウィンドウ** が表示されます。  \n\n1. [説明 **] と入力し** 、[追加] **を選択します**。\n\n    <img src=\"~/assets/images/bots/addclientsecret.png\" alt=\"Add client secret to app\" width=\"500\"/>\n\n1. [値 **] 列で** 、[クリップボードにコピー] **を選択し** 、将来の参照のためにクライアント シークレット ID を保存します。\n\n     ![クライアント シークレットの値](~/assets/images/bots/valueclientsecret.png)\n   \n**チャネルを追加Microsoft Teamsするには**\n\n1. [ホーム] **に移動します**。\n\n    <img src=\"~/assets/images/bots/homepage.png\" alt=\"Home page\" width=\"600\"/>\n\n1. [最近使ったリソース] セクションに一覧表示されているボット **を開** きます。\n1. 左側 **のウィンドウで**[チャネル] を選択し、[チャネル]**をTeams** <img src=\"~/assets/images/bots/teamsicon.png\" alt=\"Teams icon\" width=\"20\"/>.    \n      ![チャネルTeamsを開く](~/assets/images/bots/channel-teams.png)    \n      ![[選択Teams](~/assets/images/bots/select-teams.png)    \n1. **[保存]** を選択します。\n1. このチェック ボックスをオンにしてサービス条件に同意し、[同意する] を **選択します**。</br>\n      ![利用規約](~/assets/images/bots/select-terms-of-service.png)\n\n**メッセージング エンドポイントを追加するには**\n\n1. 作成 **設定** Azure ボットの [構成] を **選択します**。\n1. ngrok に移動します。\n1. 次の図に示すように、HTTPS URL (https to io) をコピーします。\n\n    ![ngrok HTTPS URL](~/assets/images/bots/ngrokURL.png)\n\n1. メッセージング **エンドポイントで、ngrok** から利用可能な HTTPS URL を使用し、URL の最後に **/api/messages を追加します**。\n\n    <img src=\"~/assets/images/bots/messagingURL.png\" alt=\"Messaging endpoint\" width=\"600\"/>\n\n1. **[適用]** を選択します。\n\n    Azure Bot Service でボットを正常にセットアップし、ボット サービス接続をセットアップする必要があります。\n"

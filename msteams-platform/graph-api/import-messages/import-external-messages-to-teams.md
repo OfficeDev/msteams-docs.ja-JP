@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams import messages api graph microsoft migrate migration post
-ms.openlocfilehash: a34a6efe98e14d5c28126275ed2378a24d34efa0
-ms.sourcegitcommit: 37b1724bb0d2f1b087c356e0fd0ff80145671e22
+ms.openlocfilehash: d20212bf5f5766e71b1be7a4476518510b8de80b
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "60291710"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212525"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Microsoft Graph を使用してサードパーティのプラットフォーム メッセージを Teams にインポートする
 
@@ -42,7 +42,7 @@ Microsoft Graphを使用すると、ユーザーの既存のメッセージ履�
 ### <a name="set-up-your-office-365-tenant"></a>Office 365 テナントのセットアップ
 
 * インポート データにOffice 365テナントが存在することを確認します。 ユーザーのテナントを設定する方法のOffice 365については、「Teamsテナントの準備[」をOffice 365してください](../../concepts/build-and-test/prepare-your-o365-tenant.md)。
-* チーム メンバーが (Azure Active Directory) AAD。 詳細については、「新しいユーザー[を新しいユーザーに追加する](/azure/active-directory/fundamentals/add-users-azure-active-directory)」を参照AAD。
+* チーム メンバーがユーザーにAzure Active Directory。 詳細については、「新しいユーザー[を新しいユーザーに追加する」を参照Azure AD。](/azure/active-directory/fundamentals/add-users-azure-active-directory)
 
 ## <a name="step-1-create-a-team"></a>手順 1: チームを作成する
 
@@ -373,7 +373,7 @@ HTTP/1.1 204 No Content
 |メッセージの一部としてのインライン イメージ|メンション|
 |SPO または SPO の既存のファイルへのOneDrive|リアクション|
 |リッチ テキストを含むメッセージ|動画|
-|メッセージ返信チェーン|Announcements|
+|メッセージ返信チェーン|お知らせ|
 |高スループット処理|コード スニペット|
 ||ステッカー|
 ||絵文字|

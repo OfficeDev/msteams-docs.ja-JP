@@ -1,25 +1,25 @@
 ---
-title: 認証をボットにTeamsする
+title: Teams ボットに認証を追加する
 author: surbhigupta
-description: OAuth 認証をボットに追加する方法は、Microsoft TeamsをAAD。 認証が有効なボットを作成、展開、統合する方法について学習します。
+description: OAuth 認証をボットに追加する方法は、Microsoft TeamsをAzure AD。 認証が有効なボットを作成、展開、統合する方法について学習します。
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: リソース グループ ボット チャネル登録 Azure エミュレーター ボット マニフェスト
-ms.openlocfilehash: 9bf0b86f3dc1a2462188106173b9a98b5798f6cc
-ms.sourcegitcommit: a2d7d2bdf4b056b35f29c6fdb315bc7dc28b6f6f
+ms.openlocfilehash: 6ca9706dc946fcd98f573b9f7cdb05368156184d
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2021
-ms.locfileid: "61569526"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212497"
 ---
-# <a name="add-authentication-to-your-teams-bot"></a>認証をボットにTeamsする
+# <a name="add-authentication-to-your-teams-bot"></a>Teams ボットに認証を追加する
 
 メール サービスなど、ユーザーの代わりにリソースにアクセスMicrosoft Teamsボットを作成する必要がある場合があります。
 
 この記事では、OAuth 2.0 に基づいて Azure Bot Service v4 SDK 認証を使用する方法を示します。 これにより、ユーザーの資格情報に基づいて認証トークンを使用できるボットの開発が容易になります。 このすべてで重要なのは、後で **説明** する ID プロバイダーの使用です。
 
-OAuth 2.0 は、Azure Active Directory (Azure AD) および他の多くの ID プロバイダーが使用する認証および承認のオープン スタンダードです。 OAuth 2.0 の基本的な理解は、認証を使用する場合の前提条件Teams。
+OAuth 2.0 は、ユーザーや他の多くの ID プロバイダーが使用する認証と承認Azure Active Directory標準です。 OAuth 2.0 の基本的な理解は、認証を使用する場合の前提条件Teams。
 
 完全 [な仕様については、「OAuth 2 簡](https://aka.ms/oauth2-simplified) 体字」、OAuth [2.0](https://oauth.net/2/) を参照してください。
 
@@ -146,9 +146,9 @@ Microsoft App Id とアプリ パスワード (クライアント シークレ�
     1. **ログイン URL**。 を `https://login.microsoftonline.com` 入力します。
     1. **テナント ID** は、Id プロバイダー アプリの作成時に選択されたサポートされているアカウントの種類に応じて、Azure ID アプリまたは共通の前に記録したディレクトリ **(テナント) ID** を入力します。 割り当てる値を決定するには、次の条件に従います。
 
-        - この組織ディレクトリ内の [アカウントのみ] *(Microsoft のみ - シングル* テナント) または任意の組織ディレクトリの [アカウント] *(Microsoft AAD* ディレクトリ - マルチ テナント) を選択した場合は、AAD アプリ用に前に記録したテナント **ID** を入力します。 これは、認証できるユーザーに関連付けられたテナントになります。
+        - この組織ディレクトリ内の [アカウントのみ] *(Microsoft のみ -* シングル テナント) または任意の組織ディレクトリの [アカウント] *(Microsoft AAD* ディレクトリ - マルチ テナント) を選択した場合は、Azure AD アプリ用に前に記録したテナント **ID** を入力します。 これは、認証できるユーザーに関連付けられたテナントになります。
 
-        - 組織ディレクトリで [アカウント] を選択した場合 ([任意の AAD ディレクトリ - マルチ テナントと個人の Microsoft アカウント *(Skype、Xbox、Outlook など)* は、テナント ID の代わりに共通という単語を入力します。  それ以外の場合AADアプリは、ID が選択されたテナントを通じて確認し、個人の Microsoft アカウントを除外します。
+        - 組織ディレクトリで [アカウント] を選択した場合 ([任意の AAD ディレクトリ - マルチ テナントと個人の Microsoft アカウント *(Skype、Xbox、Outlook など)* は、テナント ID の代わりに共通という単語を入力します。  それ以外の場合Azure ADアプリは、ID が選択されたテナントを通じて確認し、個人の Microsoft アカウントを除外します。
 
     h. [ **リソース URL]** に、 を入力します `https://graph.microsoft.com/` 。 これは、現在のコード サンプルでは使用されません。  
     i. [ **スコープ] は空白** のままにします。 次の図は、例です。
@@ -175,9 +175,9 @@ Microsoft App Id とアプリ パスワード (クライアント シークレ�
     1. **トークンExchange URL**。 空白のままにします。
     1. **テナント ID** は、Id プロバイダー アプリの作成時に選択されたサポートされているアカウントの種類に応じて、Azure ID アプリまたは共通の前に記録したディレクトリ **(テナント) ID** を入力します。 割り当てる値を決定するには、次の条件に従います。
 
-        - この組織ディレクトリ内の [アカウントのみ] *(Microsoft のみ - シングル* テナント) または任意の組織ディレクトリの [アカウント] *(Microsoft AAD* ディレクトリ - マルチ テナント) を選択した場合は、AAD アプリ用に前に記録したテナント **ID** を入力します。 これは、認証できるユーザーに関連付けられたテナントになります。
+        - この組織ディレクトリ内の [アカウントのみ] *(Microsoft のみ -* シングル テナント) または任意の組織ディレクトリの [アカウント] *(Microsoft AAD* ディレクトリ - マルチ テナント) を選択した場合は、Azure AD アプリ用に前に記録したテナント **ID** を入力します。 これは、認証できるユーザーに関連付けられたテナントになります。
 
-        - 組織ディレクトリで [アカウント] を選択した場合 ([任意の AAD ディレクトリ - マルチ テナントと個人の Microsoft アカウント *(Skype、Xbox、Outlook など)* は、テナント ID の代わりに共通という単語を入力します。  それ以外の場合AADアプリは、ID が選択されたテナントを通じて確認し、個人の Microsoft アカウントを除外します。
+        - 組織ディレクトリで [アカウント] を選択した場合 ([任意の AAD ディレクトリ - マルチ テナントと個人の Microsoft アカウント *(Skype、Xbox、Outlook など)* は、テナント ID の代わりに共通という単語を入力します。  それ以外の場合Azure ADアプリは、ID が選択されたテナントを通じて確認し、個人の Microsoft アカウントを除外します。
 
     1. [ **スコープ]** に、このアプリケーションで必要なグラフのアクセス許可のスペースで区切られたリストを入力します。User.Read User.ReadBasic.All Mail.Read 
 
@@ -415,7 +415,7 @@ Microsoft Teams完全にクラウドベースの製品である場合、HTTPS �
 > ngrok を停止して再起動すると、URL が変更されます。 プロジェクトで ngrok を使用するには、使用している機能に応じて、すべての URL 参照を更新する必要があります。
  
 
-## <a name="additional-information"></a>追加情報
+## <a name="additional-information"></a>ページの先頭へ
 
 ### <a name="teamsappmanifestmanifestjson"></a>TeamsAppManifest/manifest.json
 

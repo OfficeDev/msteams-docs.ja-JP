@@ -1,15 +1,15 @@
 ---
 title: タブの認証フロー
-description: タブの認証フローについて説明し、OAuth AADコード サンプルを提供します。
+description: タブの認証フローについて説明し、OAuth Azure ADコード サンプルを提供します。
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams 認証フロー タブ
-ms.openlocfilehash: 2d054ef841bf4f05be4e662d77b999c654670f45
-ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
+ms.openlocfilehash: 64a31cd13f05211234bc30d22a89005eb2b91880
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949650"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212511"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Microsoft Teamsの認証フロー
 
@@ -17,7 +17,7 @@ ms.locfileid: "60949650"
 > モバイル クライアントでタブで認証を機能するには、JavaScript SDK の 1.4.1 以上のバージョンを使用Microsoft Teams必要があります。  
 > Teams SDK は、認証フロー用に個別のウィンドウを起動します。 属性を `SameSite` **Lax に設定します**。 Teamsクライアントまたは以前のバージョンの Chrome または Safari は `SameSite` サポートされていません =None。
 
-OAuth 2.0 は、Azure Active Directory (AAD) および他の多くの ID プロバイダーが使用する認証と承認のオープン標準です。 OAuth 2.0 の基本的な理解は、認証を使用する場合の前提条件Teams。 詳細については、「正式な仕様よりも簡単に実行できる [OAuth 2](https://aaronparecki.com/oauth-2-simplified/) 簡略化」 [を参照してください](https://oauth.net/2/)。 タブとボットの認証フローは異なります。タブは Web サイトに似ているため、OAuth 2.0 を直接使用できます。 ボットの動作はいくつかの方法が異なりますが、コア概念は同じです。
+OAuth 2.0 は、ユーザーや他の多くの ID プロバイダーが使用する認証と承認Azure Active Directory標準です。 OAuth 2.0 の基本的な理解は、認証を使用する場合の前提条件Teams。 詳細については、「正式な仕様よりも簡単に実行できる [OAuth 2](https://aaronparecki.com/oauth-2-simplified/) 簡略化」 [を参照してください](https://oauth.net/2/)。 タブとボットの認証フローは異なります。タブは Web サイトに似ているため、OAuth 2.0 を直接使用できます。 ボットの動作はいくつかの方法が異なりますが、コア概念は同じです。
 
 たとえば、Node と [OAuth 2.0](https://oauth.net/2/grant-types/implicit/)暗黙的な付与の種類を使用するタブとボットの認証フローについては、「タブの認証フローを開始する」 [を参照してください](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow)。
 
@@ -27,7 +27,7 @@ OAuth 2.0 は、Azure Active Directory (AAD) および他の多くの ID プロ�
 ![タブ認証シーケンス図](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
 1. ユーザーは、タブ構成またはコンテンツ ページのコンテンツ (通常は [サインイン] または [ログイン] ボタン)**を操作** します。
-2. タブは、認証開始ページの URL を作成します。 必要に応じて、URL プレースホルダーからの情報を使用するか、クライアント SDK Teams呼び出しを使用して、ユーザーの認証エクスペリエンス `microsoftTeams.getContext()` を合理化します。 たとえば、AAD を使用して認証する場合、パラメーターがユーザーの電子メール アドレスに設定されている場合、ユーザーが最近ログインした場合、ユーザーはサインインする `login_hint` 必要がなされます。 これは、ユーザー AADキャッシュされた資格情報を使用する必要があるためです。 ポップアップ ウィンドウが簡単に表示され、表示されなくなります。
+2. タブは、認証開始ページの URL を作成します。 必要に応じて、URL プレースホルダーからの情報を使用するか、クライアント SDK Teams呼び出しを使用して、ユーザーの認証エクスペリエンス `microsoftTeams.getContext()` を合理化します。 たとえば、Azure AD を使用して認証する場合、パラメーターがユーザーの電子メール アドレスに設定されている場合、ユーザーが最近ログインした場合、ユーザーはサインインする `login_hint` 必要が生じないので、ユーザーはサインインする必要があります。 これは、ユーザー Azure ADキャッシュされた資格情報を使用する必要があるためです。 ポップアップ ウィンドウが簡単に表示され、表示されなくなります。
 3. 次に、タブは `microsoftTeams.authentication.authenticate()` メソッドを呼び出し、`successCallback` 関数と `failureCallback` 関数を登録します。
 4. Teamsポップアップ ウィンドウで iframe でスタート ページを開きます。 スタート ページはランダム なデータを生成し、将来の検証のために保存し、ID プロバイダーのエンドポイント (たとえば、id プロバイダーのエンドポイントにリダイレクト `state` `/authorize` `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` Azure AD。 `<tenant id>`context.tid である独自のテナント ID に置き換える。
 Teams の他のアプリケーション認証フローと同様に、スタート ページはリスト内のドメイン上に、およびポスト サインイン リダイレクト ページと同じドメイン上にある `validDomains` 必要があります。
@@ -51,11 +51,11 @@ Teams の他のアプリケーション認証フローと同様に、スター�
 
 | **サンプルの名前** | **説明** | **C#** | **Node.js** |
 |-----------------|-----------------|-------------|------------|
-| Teamsタブ認証 | タブを使用したタブの認証AAD。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
+| Teamsタブ認証 | タブを使用したタブの認証Azure AD。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
 
 ## <a name="see-also"></a>関連項目
 
-ユーザー設定を使用したタブ認証の詳細な実装AADを参照してください。
+ユーザー設定を使用したタブ認証の詳細な実装Azure ADを参照してください。
 
 * [[ユーザーの認証] タブでTeamsする](~/tabs/how-to/authentication/auth-tab-AAD.md)
 * [サイレント認証](~/tabs/how-to/authentication/auth-silent-AAD.md)

@@ -4,12 +4,12 @@ author: surbhigupta12
 description: RSC アクセス許可を持つすべてのチャネル メッセージを受信する
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: abe6bc821c9e4ffe05b1cf35480f9c559401014e
-ms.sourcegitcommit: 55d4b4b721a33bacfe503bc646b412f0e3b0203e
+ms.openlocfilehash: e499b414a91f815bfe84172a8559f3b7cfd6d839
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "62185443"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212455"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>RSC のチャネル メッセージをすべて受信する
 
@@ -35,7 +35,7 @@ RSC を使用すると、ボットがチーム内の標準チャネル間でユ�
 
 オブジェクトの例を次に示 `webApplicationInfo` します。
 
-* **id**: アプリ id Azure Active Directory (AAD) アプリ ID。 これは、ボット ID と同じものにできます。
+* **id**: アプリ ID Azure Active Directory ID。 これは、ボット ID と同じものにできます。
 * **resource**: 任意の文字列。 このフィールドは RSC で操作を行う必要がありますが、エラー応答を回避するには、値を追加する必要があります。
 * **applicationPermissions**: アプリの RSC アクセス許可を指定 `ChannelMessage.Read.Group` する必要があります。 詳細については、「リソース固有 [のアクセス許可」を参照してください](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions)。
 

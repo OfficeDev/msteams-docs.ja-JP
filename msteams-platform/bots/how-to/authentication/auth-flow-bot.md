@@ -1,19 +1,19 @@
 ---
-title: Microsoft Teamsボットの認証フロー
+title: Microsoft Teamsの認証フロー
 description: コード サンプルMicrosoft Teamsボットの認証フローを説明します。
 keywords: teams 認証フロー ボット
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 9413a4a894ff7b67a2158f34c35bdfecd935b7a5
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 05f175941d7e1daa6e0ff26571499582af89cd21
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887860"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212434"
 ---
 # <a name="authentication-flow-for-bots-in-microsoft-teams"></a>サーバー内のボットの認証フロー Microsoft Teams
 
-OAuth 2.0 は、Azure Active Directory (Azure AD) および他の多くの ID プロバイダーが使用する認証および承認のオープン スタンダードです。 OAuth 2.0 の基本的な理解は、認証を使用する場合の前提条件Teams。[正式な仕様よりも簡単に](https://aaronparecki.com/oauth-2-simplified/)従える優れた概要を[次に示します](https://oauth.net/2/)。 タブとボットの認証フローは少し異なります。タブは Web サイトと非常に似ているので、OAuth 2.0 を直接使用できますが、ボットはそうではなく、いくつかの異なる方法で行う必要がありますが、コア概念は同じです。
+OAuth 2.0 は、ユーザーや他の多くの ID プロバイダーが使用する認証と承認Azure Active Directory標準です。 OAuth 2.0 の基本的な理解は、認証を使用する場合の前提条件Teams。[正式な仕様よりも簡単に](https://aaronparecki.com/oauth-2-simplified/)従える優れた概要を[次に示します](https://oauth.net/2/)。 タブとボットの認証フローは少し異なります。タブは Web サイトと非常に似ているので、OAuth 2.0 を直接使用できますが、ボットはそうではなく、いくつかの異なる方法で行う必要がありますが、コア概念は同じです。
 
 Node.js および[OAuth 2.0](https://oauth.net/2/grant-types/authorization-code/)承認コード付与の種類を使用するボットの認証フローを示す例については、GitHub Microsoft Teams 認証サンプルを参照してください。 [](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs)
 
@@ -59,4 +59,4 @@ Node.js および[OAuth 2.0](https://oauth.net/2/grant-types/authorization-code/
 
 ## <a name="see-also"></a>関連項目
 
-[認証をボットにTeamsする](add-authentication.md)
+[Teams ボットに認証を追加する](add-authentication.md)

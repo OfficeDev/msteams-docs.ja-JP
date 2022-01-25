@@ -1,19 +1,19 @@
 ---
-title: アダプティブ カードのユーザー選択
+title: アダプティブ カードでのユーザー ピッカー
 description: アダプティブ カードで People Picker コントロールを使用する方法について説明します。
 localization_priority: Normal
 keywords: アダプティブ カード ユーザー選択
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: d0183ea8f00c14e93586c0c12e02b837a41572c9
-ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
+ms.openlocfilehash: b09293c26dac6721b92fcf1d574560a3da7e281a
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2022
-ms.locfileid: "62062548"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212476"
 ---
-# <a name="people-picker-in-adaptive-cards"></a>アダプティブ カードのユーザー選択
+# <a name="people-picker-in-adaptive-cards"></a>アダプティブ カードでのユーザー ピッカー
 
 >[!NOTE]
 > 現在、アダプティブ カードの People Picker[](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams)は、モバイル向けのパブリック開発者プレビューでのみ利用可能で、デスクトップ用に一般公開 (GA) で利用できます。
@@ -101,7 +101,7 @@ People Picker は [、Input.ChoiceSet コントロールの拡張機能として
 
 |プロパティ |型 |必須 |説明 |
 |----|----|----|----|
-|**choices.data** |**Data.Query** |不要 |指定したデータセットから結果を取得することにより、さまざまなユーザーの種類に対して動的自動完了を有効にできます。 |
+|**choices.data** |**Data.Query** |いいえ |指定したデータセットから結果を取得することにより、さまざまなユーザーの種類に対して動的自動完了を有効にできます。 |
 
 #### <a name="dataquery"></a>Data.Query
 
@@ -160,25 +160,25 @@ People Picker は [、Input.ChoiceSet コントロールの拡張機能として
 
 ### <a name="data-submission"></a>データ提出
 
-選択したデータ `Action.Submit` を `Action.Execute` ボットに使用または送信できます。 ボットで受け取ったペイロードは、静的なAADで提供されるユーザーの `invoke` ID の一覧です。
-[ユーザー選択] で、コントロールでユーザーを選択すると、ユーザーの値が返 `AAD ID` されます。 は `AAD ID` 文字列であり、ディレクトリ内のユーザーを一意に識別します。
+選択したデータ `Action.Submit` を `Action.Execute` ボットに使用または送信できます。 ボットで受け取ったペイロードは、静的なAzure ADで提供されるデータの一覧です `invoke` 。
+[ユーザー選択] で、コントロールでユーザーを選択すると、ユーザーの値が返 `Azure AD ID` されます。 は `Azure AD ID` 文字列であり、ディレクトリ内のユーザーを一意に識別します。
 
 ボットに送信される値の形式は、プロパティの値によって異 `isMultiSelect` なります。
 
 |の値 `isMultiSelect`|フォーマット|
 |--|--|
-|false _(単一の選択)_|<selected_AAD_ID>|
-|true _(複数選択)_|<selected_AAD_ID_1>,<selected_AAD_ID_2>,<selected_AAD_ID_3>|  
+|false _(単一の選択)_|<_Azure_AD_ID>|
+|true _(複数選択)_|<_Azure_AD_ID_1>,<selected_Azure_AD_ID_2>,<selected_Azure_AD_ID_3>|  
 
-[ユーザー `AAD ID` 選択] を使用すると、対応するユーザーが事前に選択されます。 
+[ユーザー `Azure AD ID` 選択] を使用すると、対応するユーザーが事前に選択されます。 
 
 ## <a name="preselection-of-user"></a>ユーザーの事前選択
 
 People Picker は、アダプティブ カードを作成して送信するときに、コントロール内のユーザーの事前選択をサポートします。 `Input.ChoiceSet` は、 `value` ユーザーの事前選択に使用されるプロパティをサポートします。 このプロパティの形式 `value` は、データ送信で送信された値の形式 [と同じです](#data-submission)。  
 次の一覧は、ユーザーを事前に選択する情報を提供します。
 
-* コントロール内の単一ユーザーの場合は、ユーザーのユーザー `AAD ID` を . `value` 
-* 複数のユーザー (is など) `isMultiSelect` `true` の場合は、s のコンマ区切り文字列を指定 `AAD ID` します。  
+* コントロール内の単一ユーザーの場合は、ユーザーのユーザー `Azure AD ID` を . `value` 
+* 複数のユーザー (is など) `isMultiSelect` `true` の場合は、s のコンマ区切り文字列を指定 `Azure AD ID` します。  
 
 次の例では、1 人のユーザーの事前選択について説明します。
 
@@ -200,7 +200,7 @@ People Picker は、アダプティブ カードを作成して送信すると�
                 "dataset": "graph.microsoft.com/users"
             },
             "id": "people-picker",
-            "value": "<AAD ID 1>"
+            "value": "<Azure AD ID 1>"
         }
     ],
     "actions": [
@@ -235,7 +235,7 @@ People Picker は、アダプティブ カードを作成して送信すると�
             },
             "id": "people-picker",
             "isMultiSelect": true,
-            "value": "<AAD ID 1>,<AAD ID 2>,<AAD ID 3>"
+            "value": "<Azure AD ID 1>,<Azure AD ID 2>,<Azure AD ID 3>"
         }
     ],
     "actions": [

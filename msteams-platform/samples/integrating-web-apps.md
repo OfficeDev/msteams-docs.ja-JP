@@ -1,17 +1,17 @@
 ---
 author: heath-hamilton
 description: 既存の Web アプリとアプリを統合するためのベスト プラクティスMicrosoft Teams
-ms.author: v-heha
+ms.author: surbhigupta
 ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: 統合のTeams検討事項
-ms.openlocfilehash: c60a51775459e47116ac0cc33086c21ce26b5fe3
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 7de3e91a0971bc540536a25265e6e6871a5da92c
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948573"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212448"
 ---
 # <a name="considerations-for-teams-integration"></a>統合のTeams検討事項 
 
@@ -24,7 +24,7 @@ Web アプリを適切に統合することで、Teamsのソーシャル機能�
 
 統合シナリオに該当する適切なガイドラインをマップして従えます。
 このドキュメントでは、Teams 機能の概要、ファイルとデータストレージの共有ポイント要件、API 要件、認証、アプリと Teams のディープリンクについて説明します。
- 
+
 ## <a name="get-to-know-teams-platform-capabilities"></a>プラットフォームの機能Teamsする
 
 ***統合シナリオ**: スタンドアロン アプリ、コラボレーション アプリ、SharePoint*
@@ -37,7 +37,7 @@ Web アプリを適切に統合することで、Teamsのソーシャル機能�
 |ショートカットと拡張機能を共有する  |[メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)  |
 |操作のショートカットと拡張機能  |[メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)  |
 |チャットボット  |[ボット](../bots/what-are-bots.md) |
-|チャネル通知  |[ボット](../bots/what-are-bots.md)<br/>[受信 Webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)<br/>[Office 365 コネクタ](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
+|チャネル通知  |[ボット](../bots/what-are-bots.md)<br/>[受信 Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)<br/>[Office 365 コネクタ](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
 |メッセージ外部サービス  |[ボット](../bots/what-are-bots.md)<br/>[送信 Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
 |モーダル  |[タスク モジュール](../task-modules-and-cards/what-are-task-modules.md)  |
 |コンテンツが豊富なカード  |[アダプティブ カード](../task-modules-and-cards/what-are-cards.md)  |
@@ -48,10 +48,10 @@ Web アプリを適切に統合することで、Teamsのソーシャル機能�
 
 既存のアプリケーションのすべての機能をアプリケーションに統合Teams、特に大規模なアプリでは、強制的または不自然なユーザー エクスペリエンスが発生します。 最も影響の大きな機能と、より自然に機能と統合する機能からTeams。 ユーザーがメイン アプリを起動し、一連の機能にアクセスできます。
 
-**アプリとアプリを統合するための前提条件** Teams アプリとアプリを統合するための前提条件を次にTeams。 
+**アプリとアプリを統合するための前提条件Teams**
 
 1. [アプリの使用例をプラットフォームの機能Teamsマップします](../concepts/design/map-use-cases.md)。
-1. [アプリのエントリ ポイントを決定します](../concepts/extensibility-points.md)。 個人の使用、共同作業、または両方の目的ですか?
+1. [アプリのエントリ ポイントを決定します](../concepts/extensibility-points.md)。 個人向け、共同作業用、または両方用ですか?
 
 ## <a name="understand-sharepoint-requirements-and-options"></a>要件SharePointオプションについて理解する
 
@@ -68,21 +68,21 @@ Web アプリを適切に統合することで、Teamsのソーシャル機能�
 
 ***統合シナリオ**: スタンドアロン アプリ、コラボレーション アプリ、SharePoint*
 
-アプリが複数の組織で使用されている場合は、製品の拡張性を高め、配布を大幅に簡素化するマルチテナント ホスティングを検討してください。
+アプリが複数の組織で使用されている場合は、マルチテナント ホスティングを検討してください。 これにより、製品の拡張性が高く、配布が簡素化されます。
 
 ## <a name="review-your-apis"></a>API を確認する
 
 ***統合シナリオ**: スタンドアロン アプリ、コラボレーション アプリ*
 
-アプリと統合する場合は、アプリの既存の API とデータ構造がアプリをサポートTeams。 サポートを拡張するには、ID マッピング、ディープ リンク サポート、Microsoft Graph の組み[](../concepts/authentication/configure-identity-provider.md)込みのために[](../concepts/build-and-test/deep-links.md)、Teams に関するコンテキスト情報を使用して API とデータ構造を拡張する[必要があります](/graph/teams-concept-overview)。
+アプリの API とデータ構造は、アプリと統合するときにアプリをサポートするTeams。 サポートを拡張するには、ID マッピング、ディープ リンク サポート、Microsoft Graph の組み[](../concepts/authentication/configure-identity-provider.md)込みのために[](../concepts/build-and-test/deep-links.md)、Teams に関するコンテキスト情報を使用して API とデータ構造を拡張する[必要があります](/graph/teams-concept-overview)。
 
-詳細については、「ユーザー設定]タブまたはボットのコンテキストTeamsを取得[する](../bots/how-to/get-teams-context.md)[」を](../tabs/how-to/access-teams-context.md)参照してください。
+[ユーザー] タブまたはボットのコンテキストをTeams[する方法を](../tabs/how-to/access-teams-context.md)参照[してください](../bots/how-to/get-teams-context.md)。
 
 ## <a name="understand-authentication-options"></a>認証オプションについて
 
 ***統合シナリオ**: スタンドアロン アプリ、コラボレーション アプリ、SharePoint*
 
-Azure Active Directory (AD) は、ユーザーの ID プロバイダー Teams。 アプリで別の ID プロバイダーを使用する場合は、ID マッピングの演習を行う必要があります。または id マッピングと組み合わせるAzure AD。
+Azure Active Directoryは、ユーザーの ID プロバイダー Teams。 アプリで別の ID プロバイダーを使用する場合は、ID マッピングの演習を行う必要があります。または id マッピングと組み合わせるAzure AD。
 
 Teamsサード パーティ製アプリ向けシングル サインオン (SSO) Azure AD機能が備え付けされています。 また、OIDC と呼ばれる OAuth や Open ID などの標準を使用して、他の ID プロバイダー Connectガイダンスを提供します。
 
@@ -103,7 +103,7 @@ Teamsサード パーティ製アプリ向けシングル サインオン (SSO) 
 
 ***統合シナリオ**: スタンドアロン アプリ、コラボレーション アプリ、SharePoint*
 
-情報と機能へのリンクは、Teams。 ディープ[リンクを使用](../concepts/build-and-test/deep-links.md)してアプリとアプリTeamsリンクし、アプリの複数の部分を結び付け、よりネイティブなエクスペリエンスTeamsします。
+Teams 内の情報や機能へのリンクを作成できます。 ディープ[リンクを使用](../concepts/build-and-test/deep-links.md)してアプリとアプリTeamsリンクし、アプリの複数の部分を結び付け、よりネイティブなエクスペリエンスTeamsします。
 
 ## <a name="be-smart-when-messaging-users"></a>メッセージング ユーザーがスマートになる
 
@@ -122,7 +122,7 @@ Webhook[よりも柔軟性が](../bots/what-are-bots.md)高Teams、マルチス�
 
 ***統合シナリオ:** スタンドアロン アプリ、コラボレーション アプリ、SharePoint ページ*
 
-チームが作成されると、そのチーム[](/microsoftteams/sharepoint-onedrive-interact)SharePointファイルとデータ ストレージをサポートするサイト コレクションも準備されます。 アプリがファイルを操作する場合は、この機能を活用する必要があります。 サイト コレクションを使用して、生データを [リスト] および [SharePoint] にExcel。
+チームが作成されると、そのチーム[](/microsoftteams/sharepoint-onedrive-interact)SharePointファイルとデータ ストレージをサポートするサイト コレクションも準備されます。 アプリがファイルを操作する場合は、この機能を活用する必要があります。 サイト コレクションを使用して、生データを [リストとSharePointに保存Microsoft Excel。
 
 ## <a name="see-also"></a>関連項目
 

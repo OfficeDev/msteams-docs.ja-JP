@@ -3,20 +3,20 @@ title: アプリ ユーザーの認証
 description: アプリでの認証Teamsおよびアプリで使用する方法について説明します。
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: Teams 認証 OAuth SSO AAD
-ms.openlocfilehash: 8a148fc6d36a94afe88d4738711b7b86850f8be9
-ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
+keywords: teams 認証 OAuth SSO Azure AD
+ms.openlocfilehash: 0e98887b309e6d3752d27ee120326e02aeb54922
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949027"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212343"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>ユーザーを認証Microsoft Teams
 
 > [!Note]
 > モバイル クライアントでの Web ベース認証には、JavaScript クライアント SDK のバージョン 1.4.1 以降Teams必要です。
 
-Azure Active Directory (AAD) によって保護されたユーザー情報にアクセスし、Facebook や Twitter のようなサービスからデータにアクセスするために、アプリはそれらのプロバイダーとの信頼できる接続を確立します。 アプリがユーザー スコープで Microsoft Graph API を使用する場合は、適切な認証トークンを取得するためにユーザーを認証します。
+Azure Active Directory によって保護されたユーザー情報にアクセスし、Facebook や Twitter のようなサービスからデータにアクセスするために、アプリはそれらのプロバイダーとの信頼できる接続を確立します。 アプリがユーザー スコープで Microsoft Graph API を使用する場合は、適切な認証トークンを取得するためにユーザーを認証します。
 
 このTeams、アプリには 2 つの異なる認証フローがあります。 タブ、構成ページ、またはタスク モジュールに[](~/tabs/how-to/create-tab-pages/content-page.md)埋め込まれたコンテンツ ページで、従来の Web ベース認証フローを実行します。 アプリに会話ボットが含まれている場合、OAuthPrompt フロー (およびオプションの Azure Bot Framework のトークン サービス) を使用して、会話の一部としてユーザーを認証することができます。
 
@@ -26,8 +26,8 @@ Azure Active Directory (AAD) によって保護されたユーザー情報にア
 
 * [スレッド ボットに認証Teams、](~/bots/how-to/authentication/add-authentication.md)会話型ボットで Web ベースの認証フローを使用する方法について説明します。
 * [タブでの認証フロー](~/tabs/how-to/authentication/auth-flow-tab.md)では、Teams でのタブ認証の仕組みを説明しています。 これは、タブに使用される一般的な Web ベース認証フローを示しています。
-* [AADの認証では](~/tabs/how-to/authentication/auth-tab-AAD.md)、アプリ内のタブ内から AADに接続する方法について説明Teams。
-* [サイレント認証AAD、](~/tabs/how-to/authentication/auth-silent-AAD.md)アプリでサインインまたは同意のプロンプトを減らす方法について説明AAD。
+* [Azure ADの認証では](~/tabs/how-to/authentication/auth-tab-AAD.md)、アプリ内のタブAzure ADからアプリに接続する方法についてTeams。
+* [サイレント認証Azure AD、](~/tabs/how-to/authentication/auth-silent-AAD.md)アプリでサインインまたは同意のプロンプトを減らす方法について説明Azure AD。
 * [.Net または C#](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) [JavaScript または ](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) Node.jsは、Web ベース認証のサンプルを提供します。
 
 ## <a name="the-oauthprompt-flow-for-conversational-bots"></a>会話ボットの OAuthPrompt フロー
@@ -51,7 +51,7 @@ OAuthPrompt の使用の詳細については、以下を参照してくださ�
 
 ## <a name="configure-the-identity-provider"></a>ID プロバイダーを構成する
 
-アプリの認証フローに関係なく、ID プロバイダーがアプリと通信Teamsします。 ほとんどのサンプルとチュートリアルでは、主に id プロバイダー AADを使用します。 ただし、概念は ID プロバイダーに関係なく適用されます。 
+アプリの認証フローに関係なく、ID プロバイダーがアプリと通信Teamsします。 ほとんどのサンプルとチュートリアルでは、主に ID プロバイダー Azure ADを使用します。 ただし、概念は ID プロバイダーに関係なく適用されます。 
 
 詳細については、「ID プロバイダー [の構成」を参照してください](~/concepts/authentication/configure-identity-provider.md)。
 
