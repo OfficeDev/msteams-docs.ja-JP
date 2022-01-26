@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: アクティビティ ハンドラー フレームワーク ボット カードの同意チャネル イベント
-ms.openlocfilehash: 6350d9f0e280f345780eeac277e334fef867a67f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 54583fedadbd5a9791daaebf6df842b83aff1f6f
+ms.sourcegitcommit: 9bfa6b943b065c0a87b1fff2f5edc278916d624a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889133"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62214334"
 ---
 # <a name="bot-activity-handlers"></a>ボットのアクティビティ ハンドラー
 
@@ -33,6 +33,68 @@ Teamsアクティビティ ハンドラーは、Microsoft Bot Frameworkアクテ
 
 特定のアクティビティ ハンドラー Teamsロジックを実装するには、ボット のロジック セクションに示すように、ボット内のメソッドをオーバーライド[する必要](#bot-logic)があります。 これらのハンドラーの基本実装はありません。そのため、オーバーライドに必要なロジックを追加する必要があります。
 
+アクティビティ ハンドラーのコード スニペットTeams次のとおりです。
+
+`OnTeamsChannelCreatedAsync`
+
+```csharp
+
+protected override Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            // Code logic here
+        }
+```
+
+`OnTeamsChannelDeletedAsync`
+
+```csharp
+
+protected override Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            // Code logic here
+        }
+```
+
+`OnTeamsChannelRenamedAsync`
+
+```csharp
+
+protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            // Code logic here
+        }
+```
+
+`OnTeamsTeamRenamedAsync`
+
+```csharp
+
+protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            // Code logic here
+        }
+```
+
+`OnTeamsMembersAddedAsync`
+
+```csharp
+
+protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            // Code logic here
+        }
+```
+
+`OnTeamsMembersRemovedAsync`
+
+```csharp
+
+protected override Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> teamsMembersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken);
+        {
+            // Code logic here
+        }
+```
+
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
 ボットは、ボット フレームワークを使用して作成されます。 ボットがメッセージ アクティビティを受信すると、ターン ハンドラーはその受信アクティビティの通知を受け取ります。 ターン ハンドラーは、受信アクティビティをアクティビティ ハンドラーに `onMessage` 送信します。 このTeams機能は変わりません。 ボットが会話更新アクティビティを受け取った場合、ターン ハンドラーはその受信アクティビティの通知を受け取り、受信アクティビティをに送信します `dispatchConversationUpdateActivity` 。 アクティビティ Teamsは、最初に特定のイベントTeamsチェックします。 イベントが見つからない場合は、それらをボット フレームワークのアクティビティ ハンドラーに渡します。
@@ -40,6 +102,68 @@ Teamsアクティビティ ハンドラーは、Microsoft Bot Frameworkアクテ
 アクティビティ ハンドラー クラスTeamsアクティビティ ハンドラーには、2 つのTeamsアクティビティ ハンドラーがあります `dispatchConversationUpdateActivity` `onInvokeActivity` 。 `dispatchConversationUpdateActivity`すべての会話更新アクティビティをルーティングし、 `onInvokeActivity` すべてのスレッドをTeams呼び出します。
 
 特定のアクティビティ ハンドラー Teamsロジックを実装するには、ボット のロジック セクションに示すように、ボット内のメソッドをオーバーライド[する必要](#bot-logic)があります。 これらのハンドラーのボット ロジックを定義し、最後に必ず `next()` 呼び出します。 呼び出 `next()` しによって、次のハンドラーが実行されます。
+
+アクティビティ ハンドラーのコード スニペットTeams次のとおりです。
+
+`OnTeamsChannelCreatedAsync`
+
+```javascript
+
+onTeamsChannelCreated(async (channelInfo, teamInfo, context, next) => {
+       // code for handling
+        await next()
+    });
+```
+
+`OnTeamsChannelDeletedAsync`
+
+```javascript
+
+onTeamsChannelDeleted(async (channelInfo, teamInfo, context, next) => {
+       // code for handling
+       await next()
+    });
+```
+
+`OnTeamsChannelRenamedAsync`
+
+```javascript
+
+onTeamsChannelRenamed(async (channelInfo, teamInfo, context, next) => {
+       // code for handling
+       await next()
+    });
+```
+
+`OnTeamsTeamRenamedAsync`
+
+```javascript
+
+onTeamsTeamRenamedAsync(async (teamInfo, context, next) => {
+       // code for handling
+       await next()
+    });
+```
+
+`OnTeamsMembersAddedAsync`
+
+```javascript
+
+onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
+       // code for handling
+       await next();
+    });
+```
+
+`OnTeamsMembersRemovedAsync`
+
+```javascript
+
+onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
+       // code for handling
+       await next();
+    });
+```
 
 # <a name="python"></a>[Python](#tab/python)
 

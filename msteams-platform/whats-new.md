@@ -4,12 +4,12 @@ description: Microsoft Teams の最新情報やすべての開発者向け最新
 ms.topic: reference
 ms.localizationpriority: high
 keywords: Teams の最新情報と最新の更新プログラムまたは開発者プレビューと機能
-ms.openlocfilehash: 531f520c479ec48ed734021550609a237705d37e
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 64a8de2dc81d7b108dee86acf52a7c4830fb8ca7
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62080961"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212462"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -76,7 +76,7 @@ ms.locfileid: "62080961"
 |2021/10/5| 管理者がアプリの非表示を解除するまで、Teams アプリを非表示にします。| [アプリの設計] > [[管理者が承認するまで Teams アプリを非表示にする]](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) |
 |2021/10/5| Teams モバイル用のアプリを計画します。 | [アプリの基礎] > [[Teams モバイルの応答タブを計画する]](concepts/design/plan-responsive-tabs-for-teams-mobile.md) |
 |2021/10/4| Teams アプリを管理するために、新しい Teams 向け開発者ポータルが導入されました | [ツールと SDK] > [[Teams の開発者ポータル]](concepts/build-and-test/teams-developer-portal.md) |
-|2021/9/21|Teams は、ボットや受信 Webhook 向けのユーザーのメンションで AAD オブジェクト ID と UPN をサポートしています | • [カードとタスク モジュールの構築] > [カードの構築] > [[ユーザーのメンションでの AAD オブジェクト ID と UPN]](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention) </br> • [カードとタスク モジュールの構築] > [カードの構築] > [[カードの概要]](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |
+|2021/9/21|Teams は、ボットや受信 Webhook 向けのユーザーのメンションで Azure AD オブジェクト ID と UPN をサポートしています | • [カードとタスク モジュールの構築] > [カードの構築] > [[ユーザーのメンションでの Azure AD オブジェクト ID と UPN]](task-modules-and-cards/what-are-cards.md#support-for-azure-ad-object-id-and-upn-in-user-mention) </br> • [カードとタスク モジュールの構築] > [カードの構築] > [[カードの概要]](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |
 |2021/8/16| アダプティブカード (v1.3、すべての機能向け) およびユニバーサル アクション (v1.4、ボット送信カード向け) での入力の検証をサポートします | • [アダプティブ カード] > [カードの作成] > [[入力の検証]](/adaptive-cards/authoring-cards/input-validation)</br> • [カードとタスク モジュールの構築] > [カードの構築] > [アダプティブ カード向けユニバーサル アクション] > [[アダプティブ カード v1.4 向けユニバーサル アクション]](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |2021/8/30| カスタム Together モードのシーン機能は、参加者を 1 つの仮想シーンにまとめ、そのビデオ ストリームを事前に決定された席に配置します | [Teams 会議用のアプリの構築] > [[カスタム Together モード シーン]](~/apps-in-teams-meetings/teams-together-mode.md) |
 |2021/8/25| シングルサインオン (SSO) を使用して Teams ボットを作成するためのステップバイステップのガイドを導入しました。| [認証の追加] > [ボット] > [[SSO を使用して Teams ボットを作成するためのステップバイステップのガイド]](sbs-bots-with-sso.yml) |
@@ -206,7 +206,7 @@ ms.locfileid: "62080961"
 | 2018/5/29 | Teams でアダプティブ カードがサポートされます。 | [Teams でのアダプティブ カードのアクション](task-modules-and-cards/cards/cards-reference.md) |
 | 2018/4/17 | replyToID が `Invoke` および `MessageBack` カード アクションのペイロードに追加されました。 これは、カード アクションの送信元のメッセージを更新する必要がある場合に特に便利です。 | [カード アクション](~/concepts/cards/cards-actions.md)|
 | 2018/4/12 | Teams プログラミング インターフェイスとこのドキュメント セットの変更を追跡するこのトピックが追加されました。 | [新機能](~/whats-new.md)|
-| 2018/4/10 | 認証 URL で、パスにテナント ID を一貫して使用するように変更が行われました。 | [タブの認証フロー](~/concepts/authentication/auth-flow-tab.md)、[AAD タブ認証](~/concepts/authentication/auth-tab-AAD.md)|
+| 2018/4/10 | 認証 URL で、パスにテナント ID を一貫して使用するように変更が行われました。 | [タブの認証フロー](~/concepts/authentication/auth-flow-tab.md)、[Azure AD タブ認証](~/concepts/authentication/auth-tab-AAD.md)|
 | 2018/4/6 | コマンド ボックスの使用に関するデザイン ガイドラインが追加されました。 |[コマンド ボックス](~/resources/design/framework/command-box.md)|
 | 2018/4/2 | ボットを使用して、アプリの通知を送信します。 |[通知のみのボット](~/concepts/bots/bots-notification-only.md)|
 | 2018/3/27 | プロアクティブなメッセージングのためのドキュメントを展開しました。 |[会話の開始](./concepts/bots/bot-conversations/bots-conv-proactive.md)|

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams apps 会議 ユーザー参加者ロール api usercontext 通知シグナル クエリ
-ms.openlocfilehash: 3ec6539e8a4970a00650c1bc35d72ea656a0eb38
-ms.sourcegitcommit: 0ae40fdf74b43834160821956b754cab94a60bb7
+ms.openlocfilehash: 74d1082d1f3bbfeb3b2b1a96c321832799315b55
+ms.sourcegitcommit: 9bfa6b943b065c0a87b1fff2f5edc278916d624a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "61558709"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62214333"
 ---
 # <a name="meeting-apps-api-references"></a>会議アプリ API リファレンス
 
@@ -48,9 +48,9 @@ API `GetParticipant` を使用すると、ボットは会議 ID と参加者 ID 
 
 |値|型|必須|説明|
 |---|---|----|---|
-|**meetingId**| 文字列 | はい | 会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。|
-|**participantId**| 文字列 | はい | 参加者 ID はユーザー ID です。 これは、Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO から参加者 ID を取得する方法をお勧めします。 |
-|**tenantId**| 文字列 | はい | テナントユーザーにはテナント ID が必要です。 これは、Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO からテナント ID を取得する方法をお勧めします。 | 
+|**meetingId**| String | はい | 会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。|
+|**participantId**| String | はい | 参加者 ID はユーザー ID です。 これは、Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO から参加者 ID を取得する方法をお勧めします。 |
+|**tenantId**| 文字列 | はい | テナントユーザーにはテナント ID が必要です。 これは、Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO からテナント ID を取得する方法をお勧めします。 |
 
 ### <a name="example"></a>例
 
@@ -300,6 +300,63 @@ GET /v1/meetings/{meetingId}
     }
 } 
 ```
+
+## <a name="cart-api"></a>CART API
+
+CART API は、CART キャプション、人間Microsoft Teamsキャプションの POST エンドポイントを公開します。 このエンドポイントに送信されるテキスト コンテンツは、キャプションが有効になっているときに、Microsoft Teams会議のエンド ユーザーに表示されます。
+
+### <a name="cart-url"></a>CART URL
+
+POST エンドポイントの CART URL は、会議中の会議の [会議 **オプション**] ページMicrosoft Teamsできます。 詳細については、「会議の[CART キャプション」をMicrosoft Teamsしてください](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47)。 CART キャプションを使用するために CART URL を変更する必要はない。
+
+#### <a name="query-parameter"></a>クエリ パラメーター
+
+CART URL には、次のクエリ パラメーターが含まれています。
+
+|値|型|必須|説明|
+|---|---|----|----|
+|**meetingId**| 文字列 | はい |会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。 <br/>たとえば、 meetingid=%7b%22tId%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241 -47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%220%222%7d|
+|**トークン**| String | はい |承認トークン。<br/> たとえば、token=04751eac |
+
+#### <a name="example"></a>例
+
+```http
+https://api.captions.office.microsoft.com/cartcaption?meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d&token=gjs44ra
+```
+
+### <a name="method"></a>メソッド
+
+|リソース|メソッド|説明|
+|----|----|----|
+|/cartcaption|POST|開始された会議のキャプションを処理する|
+
+> [!NOTE]
+> すべての要求のコンテンツ タイプが、エンコードされたプレーン テキストUTF-8します。 要求の本文には、キャプションだけが含まれる。
+
+#### <a name="example"></a>例
+
+```http
+POST /cartcaption?meetingid=04751eac-30e6-47d9-9c3f-0b4ebe8e30d9&token=04751eac&lang=en-us HTTP/1.1
+Host: api.captions.office.microsoft.com
+Content-Type: text/plain
+Content-Length: 22
+Hello I’m Cortana, welcome to my meeting. 
+```
+
+> [!Note]  
+> 各 POST 要求は、キャプションの新しい行を生成します。 エンド ユーザーがコンテンツを読み取るのに十分な時間を確保するには、各 POST 要求本文を 80 ~ 120 文字に制限します。
+
+### <a name="error-codes"></a>エラー コード
+
+CART API には、次のエラー コードが含まれています。
+
+|エラー コード|説明|
+|---|---|
+| **400** | 要求が悪い。 応答本文には、より多くの情報があります。 たとえば、表示される必須パラメーターの一部ではありません。|
+| **401** | 承認されていない。 トークンが無効または期限切れです。 このエラーが表示された場合は、新しい CART URL を生成して、Teams。 |
+| **404** | 会議が見つからないか、開始されませんでした。 このエラーが表示された場合は、会議を開始し、[キャプションの開始] を選択してください。 会議でキャプションを有効にした後、会議に POSTing キャプションを開始できます。|
+| **500** |内部サーバー エラー。 詳細については、サポート [に問い合わせ、またはフィードバックを提供してください](../feedback.md)。|
+
 ## <a name="real-time-teams-meeting-events"></a>リアルタイムの会議Teamsイベント
 
 ユーザーはリアルタイムの会議イベントを受信できます。 アプリが会議に関連付けられるとすぐに、実際の会議の開始時刻と終了時刻がボットと共有されます。
@@ -472,7 +529,7 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 ## <a name="see-also"></a>関連項目
 
 * [Teamsの認証フロー](../tabs/how-to/authentication/auth-flow-tab.md)
-* [会議のTeamsアプリ](teams-apps-in-meetings.md)
+* [Teams 会議用アプリ](teams-apps-in-meetings.md)
 
 ## <a name="next-steps"></a>次の手順
 

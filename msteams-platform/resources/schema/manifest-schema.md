@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: a723a0d0d72f032b08addd1df68aa5c2f688d184
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 88fd025229a90ac6e3888763f643829950912633
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059694"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212020"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参照: Microsoft Teams のマニフェスト スキーマ
 
@@ -607,11 +607,11 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 **省略可能** — オブジェクト
 
-Azure Active Directory (AAD) アプリ ID と Microsoft Graph 情報を提供して、ユーザーがアプリにシームレスにサインインできるようにします。 アプリが AAD に登録されている場合は、アプリ ID を提供する必要があります。 管理者は、Teams 管理センターで権限を簡単に確認して同意を与えることができます。
+Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、ユーザーがアプリにシームレスにサインインできるようにします。 アプリが Azure AD に登録されている場合は、アプリ ID を提供する必要があります。 管理者は、Teams 管理センターで権限を簡単に確認して同意を与えることができます。
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`id`|string|36 文字|✔|AADのアプリケーション ID を指定します。 この ID は GUID である必要があります。|
+|`id`|string|36 文字|✔|Azure AD のアプリケーション ID を指定します。 この ID は GUID である必要があります。|
 |`resource`|string|2048 文字|✔|SSO の認証トークンを取得するためのアプリのリソース URL。 </br> **注:** SSO を使用していない場合は、エラー応答を回避するために、このフィールドにダミーの文字列値 (たとえば、https://notapplicable) をアプリ マニフェストに入力してください。 |
 |`applicationPermissions`|文字列の配列|128 文字||詳細な[リソース固有の同意](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)を指定します。|
 
@@ -718,8 +718,8 @@ Azure Active Directory (AAD) アプリ ID と Microsoft Graph 情報を提供し
  
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`team`|string|||選択したインストールスコープが `team` の場合、このフィールドは使用可能なデフォルト機能を指定します。 オプション: `tab`、`bot`、または `connector`。|
-|`groupchat`|string|||選択したインストールスコープが `groupchat` の場合、このフィールドは使用可能なデフォルト機能を指定します。 オプション: `tab`、`bot`、または `connector`。|
+|`team`|string|||選択したインストール スコープが `team` の場合、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab`、`bot`、または `connector`。|
+|`groupchat`|string|||選択したインストール スコープが `groupchat` の場合、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab`、`bot`、または `connector`。|
 |`meetings`|string|||選択したインストール スコープが `meetings` の場合、このフィールドは使用可能な既定の機能を指定します。 オプション: `tab`、`bot`、または `connector`。|
 
 ## <a name="configurableproperties"></a>configurableProperties

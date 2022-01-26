@@ -5,12 +5,12 @@ keywords: teams ボット カード書式
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: d660d58b00624b4d91ce4241829b204c66ba95df
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 1d1ecf16c07744a895db931516c943d068c91d51
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059603"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212378"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams のカードの書式設定
 
@@ -165,20 +165,20 @@ Android では、アダプティブ カード Markdown の書式設定が次の�
 }
 ```
 
-### <a name="aad-object-id-and-upn-in-user-mention"></a>ユーザーのメンションにおける AAD オブジェクト ID と UPN 
+### <a name="azure-ad-object-id-and-upn-in-user-mention"></a>ユーザーのメンションにおける Azure AD オブジェクト ID と UPN 
 
-Teams プラットフォームでは、既存の言及 ID に加えて、AAD オブジェクト ID とユーザー原則名 (UPN) を使用してユーザーに言及することができます。 アダプティブ カードを備えたボットと受信 Webhook を備えたコネクタは、2 つのユーザー メンション ID をサポートします。 
+Teams プラットフォームでは、既存の言及 ID に加えて、Azure AD オブジェクト ID とユーザー原則名 (UPN) を使用してユーザーに言及することができます。 アダプティブ カードを備えたボットと受信 Webhook を備えたコネクタは、2 つのユーザー メンション ID をサポートします。 
 
 次の表に、新しくサポートされたユーザー メンション ID を示します。
 
 |ID  | サポート機能 |   説明 | 例 |
 |----------|--------|---------------|---------|
-| AAD オブジェクト ID | ボット、コネクタ |  AAD ユーザーのオブジェクト ID を指定する |  49c4641c-ab91-4248-aebb-6a7de286397b |
-| UPN | ボット、コネクタ | AAD ユーザーの UPN | john.smith@microsoft.com |
+| Azure AD オブジェクト ID | ボット、コネクタ |  Azure AD ユーザーのオブジェクト ID を指定する |    49c4641c-ab91-4248-aebb-6a7de286397b |
+| UPN | ボット、コネクタ | Azure AD ユーザーの UPN | john.smith@microsoft.com |
 
 #### <a name="user-mention-in-bots-with-adaptive-cards"></a>アダプティブ カードを使用したボットでのユーザー メンション 
 
-ボットは、既存の ID に加えて、AAD オブジェクト ID と UPN を使用したユーザーのメンションをサポートします。 2 つの新しい ID のサポートは、テキスト メッセージ、アダプティブ カード本体、およびメッセージング拡張応答のボットで利用できます。 ボットは、会話および `invoke` シナリオでの言及 ID をサポートします。 ユーザーは、ID で @メンションされると、アクティビティ フィード通知を受け取ります。 
+ボットは、既存の ID に加えて、Azure AD オブジェクト ID と UPN を使用したユーザーのメンションをサポートします。 2 つの新しい ID のサポートは、テキスト メッセージ、アダプティブ カード本体、およびメッセージング拡張応答のボットで利用できます。 ボットは、会話および `invoke` シナリオでの言及 ID をサポートします。 ユーザーは、ID で @メンションされると、アクティビティ フィード通知を受け取ります。 
 
 > [!NOTE]
 > ボットのアダプティブ カードを使用したユーザー メンションには、スキーマの更新と UI/UX の変更は必要ありません。
@@ -195,7 +195,7 @@ Teams プラットフォームでは、既存の言及 ID に加えて、AAD オ
   "body": [
     {
       "type": "TextBlock",
-      "text": "Hi <at>Adele UPN</at>, <at>Adele AAD</at>"
+      "text": "Hi <at>Adele UPN</at>, <at>Adele Azure AD</at>"
     }
   ],
   "msteams": {
@@ -210,7 +210,7 @@ Teams プラットフォームでは、既存の言及 ID に加えて、AAD オ
       },
       {
         "type": "mention",
-        "text": "<at>Adele AAD</at>",
+        "text": "<at>Adele Azure AD</at>",
         "mentioned": {
           "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd",
           "name": "Adele Vance"
@@ -227,11 +227,11 @@ Teams プラットフォームでは、既存の言及 ID に加えて、AAD オ
 
 #### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>アダプティブ カードを使用した受信 Webhook でのユーザー メンション 
 
-受信 Webhook は、AAD オブジェクト ID と UPN を使用したアダプティブ カードでのユーザー メンションをサポートし始めます。
+受信 Webhook は、Azure AD オブジェクト ID と UPN を使用したアダプティブ カードでのユーザー メンションをサポートし始めます。
 
 > [!NOTE]    
-> * 受信 Webhook のスキーマでユーザー メンションを有効にして、AAD オブジェクト ID と UPN をサポートします。 
-> * UI/UX の変更は、AAD オブジェクト ID および UPN を使用したユーザー メンションには必要ありません。      
+> * 受信 Webhook のスキーマでユーザー メンションを有効にして、Azure AD オブジェクト ID と UPN をサポートします。 
+> * UI/UX の変更は、Azure AD オブジェクト ID および UPN を使用したユーザー メンションには必要ありません。      
 
 ##### <a name="example"></a>例 
 
@@ -254,7 +254,7 @@ Teams プラットフォームでは、既存の言及 ID に加えて、AAD オ
                 },
                 {
                     "type": "TextBlock",
-                    "text": "Hi <at>Adele UPN</at>, <at>Adele AAD</at>"
+                    "text": "Hi <at>Adele UPN</at>, <at>Adele Azure AD</at>"
                 }
             ],
             "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
@@ -271,7 +271,7 @@ Teams プラットフォームでは、既存の言及 ID に加えて、AAD オ
                       },
                       {
                         "type": "mention",
-                        "text": "<at>Adele AAD</at>",
+                        "text": "<at>Adele Azure AD</at>",
                         "mentioned": {
                           "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd",
                           "name": "Adele Vance"

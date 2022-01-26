@@ -3,13 +3,13 @@ title: タブのシングル サインオンのサポート
 description: シングル サインオン (SSO) について説明します
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: teams 認証 SSO AAD シングル サインオン API
-ms.openlocfilehash: aa602e554589f904687db882076a0c1183aa886f
-ms.sourcegitcommit: 05cce11f412af64f85afc7ebbfa485c307f2d95e
+keywords: teams 認証 SSO Azure AD シングル サインオン API
+ms.openlocfilehash: fd11f1febf1fb919a201a56156c36dfe1ee4d7d8
+ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2022
-ms.locfileid: "62064061"
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "62212357"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>タブのシングル サインオン (SSO) のサポート
 
@@ -40,8 +40,8 @@ ms.locfileid: "62064061"
 
 1. タブでは、JavaScript 呼び出しが `getAuthToken()`に対してなされます。 `getAuthToken()` は Teams にタブ アプリケーションのアクセス トークンを取得するように指示します。
 2. 現在のユーザーが初めてタブ アプリケーションを使用していて、同意が必要になる場合は、同意を要求する要求プロンプトが表示されます。 または、2 要素認証などのステップアップ認証を要求する要求プロンプトが表示されます。
-3. Teams では、現在のユーザーに Azure Active Directory (AAD) エンドポイントからのタブ アクセス トークンを要求します。
-4. AAD では、Teams アプリケーションにタブ アクセス トークンを送信します。
+3. Teams では、現在のユーザーに Azure Active Directory エンドポイントからのタブ アクセス トークンを要求します。
+4. Azure AD では、Teams アプリケーションにタブ アクセス トークンを送信します。
 5. `getAuthToken()` の呼び出しによって返される結果オブジェクトの一部として、Teams ではタブにタブ アクセス トークン を送信します。
 6. トークンは JavaScript を使用してタブ アプリケーションで解析され、ユーザーのメール アドレスなどの必要な情報を抽出します。
 
@@ -54,19 +54,19 @@ SSO API は、Web コンテンツを埋め込む [タスク モジュール](../
 
 このセクションでは、SSO を使用する Teams のタブの作成に関連するタスクについて説明します。 これらのタスクは、言語とフレームワークに依存していません。
 
-### <a name="1-create-your-aad-application"></a>1. AAD アプリケーションを作成する
+### <a name="1-create-your-azure-ad-application"></a>1. Azure AD アプリケーションを作成する
 
 > [!NOTE]
 > 知っておかなければならない重要な制限事項がいくつかあります。
 >
 > * メール、プロファイル、offline_access、OpenId など、ユーザー レベルの Graph API のアクセス許可のみがサポートされます。 `User.Read` や `Mail.Read` などの他の Graph スコープにアクセスしなければならない場合は、「[Graph のアクセス許可を持つアクセス トークンを取得する](#get-an-access-token-with-graph-permissions)」を参照してください。
-> * アプリケーションのドメイン名が AAD アプリケーションに登録した時のドメイン名と同じである点が重要になります。
+> * アプリケーションのドメイン名が Azure AD アプリケーションに登録した時のドメイン名と同じである点が重要になります。
 > * 現在、アプリごとの複数のドメインはサポートされていません。
 > * ユーザーは、`accessTokenAcceptedVersion` を新しいアプリケーションの `2` に設定する必要があります。
 
-**AAD ポータルからアプリを登録するには**
+**Azure AD ポータルからアプリを登録するには**
 
-1. 新しいアプリケーションを [AAD アプリ登録](https://go.microsoft.com/fwlink/?linkid=2083908) ポータルに登録します。
+1. 新しいアプリケーションを [Azure AD アプリ登録](https://go.microsoft.com/fwlink/?linkid=2083908) ポータルに登録します。
 1. **[新規登録]** を選択します。 **[アプリケーション登録]** ページが表示されます。
 1. **[アプリケーション登録]** ページで、次の値を入力します。
     1. アプリの **[名前]** を入力します。
@@ -116,9 +116,9 @@ SSO API は、Web コンテンツを埋め込む [タスク モジュール](../
 
 > [!NOTE]
 >
-> * ¹ AAD アプリが Teams で認証要求を行うのと同じテナントに登録されている場合にはユーザーが同意を求められることはなく、アクセス トークンがすぐ付与されます。 ユーザーは、AAD アプリが別のテナントに登録されている場合にのみ、これらのアクセス許可に同意します。
-> * ² カスタム ドメインが AAD に追加されていない場合は、ホスト名が既に所有されているドメインに基づいていなければならないというエラーが表示されます。 AAD にカスタム ドメインを追加して登録するには、[AAD にカスタム ドメイン名を追加](/azure/active-directory/fundamentals/add-custom-domain) する手順に従い、その後手順 5 を繰り返します。 Office 365 テナンシーで管理者資格情報を使用してサインインしていない場合にも、このエラーが表示されることがあります。
-> * AAD では、返されたアクセス トークンでユーザー プリンシパル名 (UPN) を受け取らない場合、それを [オプションの要求](/azure/active-directory/develop/active-directory-optional-claims) に追加することができます。
+> * ¹ Azure AD アプリが Teams で認証要求を行うのと同じテナントに登録されている場合にはユーザーが同意を求められることはなく、アクセス トークンがすぐ付与されます。 ユーザーは、Azure AD アプリが別のテナントに登録されている場合にのみ、これらのアクセス許可に同意します。
+> * ² カスタム ドメインが Azure AD に追加されていない場合は、ホスト名が既に所有されているドメインに基づいていなければならないというエラーが表示されます。 Azure AD にカスタム ドメインを追加して登録するには、[Azure AD にカスタム ドメイン名を追加](/azure/active-directory/fundamentals/add-custom-domain) する手順に従い、その後手順 5 を繰り返します。 Office 365 テナンシーで管理者資格情報を使用してサインインしていない場合にも、このエラーが表示されることがあります。
+> * Azure AD では、返されたアクセス トークンでユーザー プリンシパル名 (UPN) を受け取らない場合、それを [オプションの要求](/azure/active-directory/develop/active-directory-optional-claims) に追加することができます。
 
 ### <a name="2-update-your-teams-application-manifest"></a>2. Teams アプリケーション マニフェストを更新する
 
@@ -139,7 +139,7 @@ SSO API は、Web コンテンツを埋め込む [タスク モジュール](../
 
 > [!NOTE]
 >
->* AAD アプリのリソースは、通常、サイト URL と appID のルートです (例: `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`)。 この値は、ユーザーの要求が同じドメインから送信されているのを確認するのにも使用されます。 タブの `contentURL` でリソース プロパティと同じドメインが使用されていることを確認します。
+>* Azure AD アプリのリソースは、通常、サイト URL と appID のルートです (例: `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`)。 この値は、ユーザーの要求が同じドメインから送信されているのを確認するのにも使用されます。 タブの `contentURL` でリソース プロパティと同じドメインが使用されていることを確認します。
 >* `webApplicationInfo` フィールドを実装するには、マニフェスト バージョン 1.5 以上を使用する必要があります。
 
 ### <a name="3-get-an-access-token-from-your-client-side-code"></a>3. クライアント側コードからアクセス トークンを取得する
@@ -156,11 +156,73 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 `getAuthToken` を呼び出し、ユーザー レベルのアクセス許可にユーザーの同意が必要な場合は、同意を付与するためのダイアログがユーザーに表示されます。
 
-成功コールバックでアクセス トークンを受信した後、アクセス トークンをデコードして、そのトークンのクレームを表示します。 必要に応じて、[jwt.ms](https://jwt.ms/) など、手動でツールにアクセス トークンをコピーして貼り付けます。 AAD では、返されたアクセス トークンで UPN を受け取らない場合、それを [オプションの要求](/azure/active-directory/develop/active-directory-optional-claims) に追加します。 詳細については、「[アクセス トークン](/azure/active-directory/develop/access-tokens)」を参照してください。
+成功コールバックでアクセス トークンを受信した後、アクセス トークンをデコードして、そのトークンのクレームを表示します。 必要に応じて、[jwt.ms](https://jwt.ms/) など、手動でツールにアクセス トークンをコピーして貼り付けます。 Azure AD では、返されたアクセス トークンで UPN を受け取らない場合、それを [オプションの要求](/azure/active-directory/develop/active-directory-optional-claims) に追加します。 詳細については、「[アクセス トークン](/azure/active-directory/develop/access-tokens)」を参照してください。
 
 <p>
     <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
 </p>
+
+## <a name="code-snippets"></a>コード スニペット
+
+次のコードは、MSAL ライブラリを使用してアクセス トークンを取得するための on-behalf-of flow の例を示しています。
+
+### <a name="c"></a>[C#](#tab/dotnet)
+
+```csharp
+
+IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create(<"Client id">)
+                                                .WithClientSecret(<"Client secret">)
+                                                .WithAuthority($"https://login.microsoftonline.com/<"Tenant id">")
+                                                .Build();
+ 
+            try
+            {
+                var idToken = <"Client side token">;
+                UserAssertion assert = new UserAssertion(idToken);
+                List<string> scopes = new List<string>();
+                scopes.Add("https://graph.microsoft.com/User.Read");
+                var responseToken = await app.AcquireTokenOnBehalfOf(scopes, assert).ExecuteAsync();
+                return responseToken.AccessToken.ToString();
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+```
+
+### <a name="nodejs"></a>[Node.js](#tab/nodejs)
+
+```javascript
+
+// Exchange cliend side token with server token
+  app.post('/getProfileOnBehalfOf', function(req, res) {
+        var tid = < "Tenand id" >
+    var token = < "Client side token" >
+    var scopes = ["https://graph.microsoft.com/User.Read"];
+
+        // Creating MSAL client
+        const msalClient = new msal.ConfidentialClientApplication({
+            auth: {
+                clientId: < "Client ID" >,
+                clientSecret: < "Client Secret" >
+      }
+        });
+
+        var oboPromise = new Promise((resolve, reject) => {
+            msalClient.acquireTokenOnBehalfOf({
+                authority: `https://login.microsoftonline.com/${tid}`,
+                oboAssertion: token,
+                scopes: scopes,
+                skipCache: true
+            }).then(result => {
+                console.log("Token is: " + result.accessToken);
+            }).catch(error => {
+                reject({ "error": error.errorCode });
+            });
+        });
+```
+---
 
 ## <a name="code-sample"></a>コード サンプル
 
@@ -172,9 +234,9 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 ### <a name="get-an-access-token-with-graph-permissions"></a>Graph のアクセス許可を持つアクセス トークンを取得する
 
-SSO の現在の実装では、ユーザー レベルのアクセス許可に対する同意のみを付与します。このアクセス許可は、Graph の呼び出しには使用できません。 Graph の呼び出しに必要なアクセス許可 (スコープ) を取得するには、SSO ソリューションでカスタム Web サービスを実装して、Teams JavaScript SDK から受け取ったトークンを必要なスコープを含むトークンと交換する必要があります。 これは、AADの [On-Behalf-Of フロー](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow) を使用して行われます。
+SSO の現在の実装では、ユーザー レベルのアクセス許可に対する同意のみを付与します。このアクセス許可は、Graph の呼び出しには使用できません。 Graph の呼び出しに必要なアクセス許可 (スコープ) を取得するには、SSO ソリューションでカスタム Web サービスを実装して、Teams JavaScript SDK から受け取ったトークンを必要なスコープを含むトークンと交換する必要があります。 これは、Azure AD の [On-Behalf-Of フロー](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow) を使用して行われます。
 
-#### <a name="tenant-admin-consent"></a>テナント管理者の同意
+### <a name="tenant-admin-consent"></a>テナント管理者の同意
 
 テナント管理者として組織に代わって同意する簡単な方法は、`https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>` を参照することです。
 
@@ -184,21 +246,21 @@ Graph のスコープを取得できるもう 1 つの方法は、既存の [Web
 
 **認証 API を使用してその他の同意を求めるには**
 
-1. `getAuthToken()` を使用して取得されたトークンでは、他の Graph API にアクセスするのに AAD [代理フロー](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) を使用してサーバー側で交換を行う必要があります。 この交換には v2 Graph エンドポイントを使用するようにしてください。
-2. 交換が失敗した場合、AAD で使用できない付与例外が返されます。 通常、2 つのエラー メッセージ (`invalid_grant` または `interaction_required`) のいずれかです。
-3. 交換が失敗すると、同意を求める必要があります。 ユーザーに他の同意を求めるユーザー インターフェイス (UI) をいくつか表示します。 この UI には [AAD 認証 API](~/concepts/authentication/auth-silent-aad.md) を使用して AAD 同意ダイアログ ボックスをトリガーするボタンを含める必要があります。
-4. AAD にその他の同意を求める場合は、`prompt=consent` にAAD への [クエリ文字列パラメーター](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) を含める必要があります。それ以外の場合、AAD では他のスコープを要求できません。
+1. `getAuthToken()` を使用して取得されたトークンでは、他の Graph API にアクセスするのに Azure AD [代理フロー](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) を使用してサーバー側で交換を行う必要があります。 この交換には v2 Graph エンドポイントを使用するようにしてください。
+2. 交換が失敗した場合、Azure AD で使用できない付与例外が返されます。 通常、2 つのエラー メッセージ (`invalid_grant` または `interaction_required`) のいずれかです。
+3. 交換が失敗すると、同意を求める必要があります。 ユーザーに他の同意を求めるユーザー インターフェイス (UI) をいくつか表示します。 この UI には [Azure AD 認証 API](~/concepts/authentication/auth-silent-aad.md) を使用して Azure AD 同意ダイアログ ボックスをトリガーするボタンを含める必要があります。
+4. Azure AD にその他の同意を求める場合は、`prompt=consent` Azure AD への [クエリ文字列パラメーター](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) を含める必要があります。それ以外の場合、Azure AD では他のスコープを要求できません。
     * `?scope={scopes}` の代わりに
     * この `?prompt=consent&scope={scopes}` を使用する
     * `{scopes}` に Mail.Read や User.Read など、ユーザーに求めるすべてのスコープが含まれていることを確認します。
 5. ユーザーにその他のアクセス許可が付与されたら、代理のフローのを再試行して、これらの他の API へのアクセスを取得します。
 
-### <a name="non-aad-authentication"></a>AAD 以外の認証
+### <a name="non-azure-ad-authentication"></a>Azure AD 以外の認証を使用する
 
-上記の認証ソリューションは、ID プロバイダーとして AAD をサポートするアプリとサービスにのみ機能します。 AAD ベース以外のサービスを使用して認証するアプリでは、引き続きポップアップ ベースの [Web 認証フロー](~/concepts/authentication.md) を使用する必要があります。
+上記の認証ソリューションは、ID プロバイダーとして Azure AD をサポートするアプリとサービスにのみ機能します。 Azure AD ベース以外のサービスを使用して認証するアプリでは、引き続きポップアップ ベースの [Web 認証フロー](~/concepts/authentication.md) を使用する必要があります。
 
 > [!NOTE]
-> SSO は、AAD B2C テナント内で顧客が所有するアプリのためにサポートされています。
+> SSO は、Azure AD B2C テナント内で顧客が所有するアプリのためにサポートされています。
 
 ## <a name="step-by-step-guides"></a>ステップ バイ ステップのガイド
 
