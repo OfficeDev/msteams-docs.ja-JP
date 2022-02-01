@@ -5,12 +5,12 @@ ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: fa67f6b1261619565cb62d5e1333367904089244
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 47ff6d557a76c457dee9d7d976df6f8316d40b89
+ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059610"
+ms.lasthandoff: 01/31/2022
+ms.locfileid: "62281757"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Microsoft Teams でアプリをアップロードする
 
@@ -38,6 +38,9 @@ ms.locfileid: "62059610"
 1. アプリ パッケージの .zip ファイルを選択します。 インストール ダイアログが表示されます。
 :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Teams アプリのインストール ダイアログの例を示すスクリーンショット。":::
 1. アプリを Teams に追加します。
+
+> [!NOTE]
+> ボットを Microsoft Teams に追加すると、メッセージの送信などのユーザー操作によってボットのアクティビティが開始されないため、Microsoft Teams ロケールを取得できません。そのため、`turnContext.Activity.GetLocale();` は null 値を返します。
 
 ## <a name="troubleshoot-upload-issues"></a>アップロードに関する問題のトラブルシューティング
 

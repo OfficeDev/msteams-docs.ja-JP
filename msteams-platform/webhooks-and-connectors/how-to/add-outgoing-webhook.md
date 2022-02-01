@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: Teams タブの送信 Webhook アクション可能メッセージの確認 Webhook
-ms.openlocfilehash: 0c41abe8078e05fa6e52a8c5379f91a21601eac3
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 816a09a85af0e47f1dea5da6a4c02608c986573e
+ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059750"
+ms.lasthandoff: 01/31/2022
+ms.locfileid: "62281764"
 ---
 # <a name="create-outgoing-webhook"></a>送信 Webhook を作成する
 
@@ -25,8 +25,8 @@ ms.locfileid: "62059750"
 | ------- | ----------- |
 | スコープ構成| Webhook はチームのレベルでスコープが設定されます。 それぞれの必須セットアップ プロセスで、送信 Webhook が追加されます。 |
 | 反応性のあるメッセージング| ユーザーは、メッセージを受信するために Webhook に @Mention を使用する必要があります。 現在ユーザーが送信 Webhook でメッセージを送信できるのは公開チャネルのみです。個人またはプライベートのスコープ内では行えません。 |
-|標準の HTTP メッセージ交換|応答は元の要求メッセージと同じチェーンに表示され、リッチ テキスト、画像、カード、絵文字など、Bot Framework のメッセージのコンテンツを含めることができます。 送信 Webhook はカードを使用することができますが、`openURL` のカード アクションしか使用することができません。|
-| Teams API メソッドのサポート|送信 Webhook は HTTP POST を Web サービスに送信し、応答を取得します。 チーム内の名簿やチャネルの一覧の取得など、他の API にはアクセスすることはできません。|
+|標準の HTTP メッセージ交換|応答は元の要求メッセージと同じチェーンに表示され、Bot Framework メッセージの内容を含めることができます。 たとえば、リッチ テキスト、画像、カード、絵文字などです。 送信 Webhook はカードを使用することができますが、`openURL` のカード アクションしか使用することができません。|
+| Teams API メソッドのサポート|送信 Webhook は HTTP POST を Web サービスに送信し、応答を取得します。 チーム内の参加者一覧やチャネルのリストの取得など、他の API にはアクセスすることはできません。|
 
 ## <a name="create-outgoing-webhooks"></a>送信 Webhook を作成する
 
@@ -61,7 +61,7 @@ ms.locfileid: "62059750"
 
     ![送信 Webhook を作成する](~/assets/images/outgoingwebhook.png)
 
-[ハッシュ ベースのメッセージ認証コード (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) ダイアログ ボックスが表示されます。 これはセキュリティ トークンで、Teams と指定された外部サービス間の呼び出しを認証するために使用されます。
+[ハッシュ ベースのメッセージ認証コード (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) ダイアログ ボックスが表示されます。 これはセキュリティ トークンで、Teams と指定された外部サービス間の呼び出しを認証するために使用されます。 HMAC セキュリティ トークンは有効期限がなく、構成ごとに一意です。
 
 >[!NOTE]
 > URL が有効で、サーバーとクライアントの認証トークンが等しい場合、チームのユーザーは送信 Webhook を使用できるようになります。 たとえば、HMAC ハンドシェイクなどです。
