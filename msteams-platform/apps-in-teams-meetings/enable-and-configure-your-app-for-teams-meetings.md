@@ -4,12 +4,12 @@ author: surbhigupta
 description: Teams 会議やさまざまな会議シナリオ用のアプリの有効化と構成、アプリ マニフェストの更新、会議内ダイアログ、共有会議ステージ、会議サイドパネルなどの機能の構成
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 88c964d520a09f0acaa82933436653e0c434f22f
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: e0bf9f06d9a72f711e45291cd5f212ef1b2718c3
+ms.sourcegitcommit: 58a24422bb04a529b6629a56803ed2efabc17cb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212027"
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "62323177"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>会議で使用するアプリを有効Teamsする
 
@@ -21,11 +21,11 @@ ms.locfileid: "62212027"
 
 ### <a name="update-your-app-manifest"></a>アプリ マニフェストを更新する
 
-会議アプリの機能は、、 、および配列を使用してアプリ マニフェスト `configurableTabs` `scopes` で宣言 `context` されます。 スコープは、アクセスできるユーザーを定義し、コンテキストによってアプリが利用可能な場所を定義します。
+会議アプリの機能は、、 、および配列を使用してアプリ マニフェスト`configurableTabs``scopes`で宣言`context`されます。 スコープは、アクセスできるユーザーを定義し、コンテキストによってアプリが利用可能な場所を定義します。
 
 > [!NOTE]
 > * マニフェスト スキーマを使用してアプリ マニフェストを [更新する必要があります](../resources/schema/manifest-schema-dev-preview.md)。
-> * 会議のアプリにはスコープが `groupchat` 必要です。 スコープ `team` は、チャネル内のタブでのみ機能します。
+> * 会議のアプリにはスコープが必要 `groupchat` です。 スコープ `team` は、チャネル内のタブでのみ機能します。
 
 アプリ マニフェストには、次のコード スニペットが含まれる必要があります。
 
@@ -53,16 +53,16 @@ ms.locfileid: "62212027"
 
 ### <a name="context-property"></a>Context プロパティ
 
-プロパティは、ユーザーがアプリを呼び出す場所に応じて、ユーザーが会議でアプリを呼び出す際に表示 `context` する必要がある内容を決定します。 タブと `context` プロパティ `scopes` を使用すると、アプリを表示する必要がある場所を特定できます。 スコープ内のタブ `team` `groupchat` には、複数のコンテキストを指定できます。 値のすべてまたは一部を使用できるプロパティの値を `context` 次に示します。
+プロパティ `context` は、ユーザーがアプリを呼び出す場所に応じて、ユーザーが会議でアプリを呼び出す際に表示する必要がある内容を決定します。 タブとプロパティ `context` を `scopes` 使用すると、アプリを表示する必要がある場所を特定できます。 スコープ内のタブ `team` には `groupchat` 、複数のコンテキストを指定できます。 値のすべてまたは一部を `context` 使用できるプロパティの値を次に示します。
 
 |値|説明|
 |---|---|
 | **channelTab** | チーム チャネルのヘッダー内のタブ。 |
 | **privateChatTab** | チームまたは会議のコンテキストではなく、一連のユーザー間のグループ チャットのヘッダーにあるタブ。 |
-| **meetingChatTab** | スケジュールされた会議の一連のユーザー間のグループ チャットのヘッダー内のタブ。 meetingChatTab または **meetingDetailsTab** のいずれかを指定すると、アプリがモバイルで動作します。  |
-| **meetingDetailsTab** | 予定表の会議の詳細ビューのヘッダーにあるタブ。 meetingChatTab または **meetingDetailsTab** のいずれかを指定すると、アプリがモバイルで動作します。  |
+| **meetingChatTab** | スケジュールされた会議の一連のユーザー間のグループ チャットのヘッダー内のタブ。 **meetingChatTab** または **meetingDetailsTab** のいずれかを指定すると、アプリがモバイルで動作します。 |
+| **meetingDetailsTab** | 予定表の会議の詳細ビューのヘッダーにあるタブ。 **meetingChatTab** または **meetingDetailsTab** のいずれかを指定すると、アプリがモバイルで動作します。 |
 | **meetingSidePanel** | 統合バー (U バー) を介して開いた会議内パネル。 |
-| **meetingStage** | アプリを会議 `meetingSidePanel` ステージに共有できます。 このアプリは、モバイル クライアントまたはルーム クライアントTeamsできません。 |
+| **meetingStage** | アプリを会議 `meetingSidePanel` ステージに共有できます。 このアプリは、モバイル クライアントでも Teams Room クライアントでも使用できません。 |
 
 会議でアプリを有効Teams、会議の前、会議中、会議の後にアプリを構成する必要があります。
 
@@ -94,7 +94,7 @@ Teams会議は、組織に共同作業のエクスペリエンスを提供しま
 
 **ボットを会議に追加するには**
 
-会議チャットで、キーを入力し **@** 、[ボットの取得 **] を選択します**。
+会議チャットで、キーを入力し、[ **@** ボットの取得 **] を選択します**。
 
 > [!NOTE]
 > * コンテンツ バブルは、ユーザーがアクセスできるアダプティブ カードまたはカードを会議チャットに同時に投稿します。 これにより、会議または会議アプリが最小化Teamsユーザーに役立ちます。
@@ -104,28 +104,28 @@ Teams会議は、組織に共同作業のエクスペリエンスを提供しま
 
 ### <a name="during-a-meeting"></a>会議中
 
-会議中に、または会議内のダイアログ ボックスを使用して、アプリ `meetingSidePanel` に固有のエクスペリエンスを構築できます。
+会議中に、または `meetingSidePanel` 会議内のダイアログ ボックスを使用して、アプリに固有のエクスペリエンスを構築できます。
 
 #### <a name="meeting-sidepanel"></a>Meeting SidePanel
 
-開催者と発表者が異なる一連のビューとアクションを持つ会議のエクスペリエンス `meetingSidePanel` をカスタマイズできます。 アプリ マニフェストで、コンテキスト配列 `meetingSidePanel` に追加する必要があります。 会議およびすべてのシナリオで、アプリは幅 320 ピクセルの会議内タブに表示されます。 詳細については [、「FrameContext インターフェイス」を参照してください](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)。
+開催 `meetingSidePanel` 者と発表者が異なる一連のビューとアクションを持つ会議のエクスペリエンスをカスタマイズできます。 アプリ マニフェストで、コンテキスト配列に `meetingSidePanel` 追加する必要があります。 会議およびすべてのシナリオで、アプリは幅 320 ピクセルの会議内タブに表示されます。 詳細については、「 [FrameContext インターフェイス」を参照してください](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)。
 
-API を使用して `userContext` 要求をルーティングするには、「SDK のTeams[参照してください](../tabs/how-to/access-teams-context.md#user-context)。 詳細については、「タブの認証[フロー Teamsを参照してください](../tabs/how-to/authentication/auth-flow-tab.md)。 タブの認証フローは、Web サイトの認証フローに似ています。 したがって、タブは OAuth 2.0 を直接使用できます。 詳細については、「Microsoft ID プラットフォーム[OAuth 2.0 認証コード フロー」を参照してください](/azure/active-directory/develop/v2-oauth2-auth-code-flow)。
+API を使用して要求`userContext`をルーティングするには、「SDK のTeams[してください](../tabs/how-to/access-teams-context.md#user-context)。 詳細については、「タブの認証[フロー Teamsを参照してください](../tabs/how-to/authentication/auth-flow-tab.md)。 タブの認証フローは、Web サイトの認証フローに似ています。 したがって、タブは OAuth 2.0 を直接使用できます。 詳細については、「Microsoft ID プラットフォーム [OAuth 2.0 認証コード フロー」を参照してください](/azure/active-directory/develop/v2-oauth2-auth-code-flow)。
 
 メッセージング拡張機能は、ユーザーが会議中のビューに表示されている場合に期待通り動作します。 ユーザーは、作成メッセージ拡張カードを投稿できます。 AppName in-meeting は、会議中の U バーのアプリ名を示すツールヒントです。
 
 > [!NOTE]
-> バージョン 1.7.0 以上の[Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)を使用します。前のバージョンではサイド パネルはサポートされていません。
+> バージョン 1.7.0 以上の Teams [SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) を使用します。それより前のバージョンではサイド パネルはサポートされていません。
 
 #### <a name="in-meeting-dialog-box"></a>[会議内] ダイアログ ボックス
 
 会議中に参加者を引き付け、会議中に情報やフィードバックを収集するために、会議内ダイアログ ボックスが使用されます。 API を使用 [`NotificationSignal`](API-references.md#notificationsignal-api) してバブル通知をトリガーします。 通知要求ペイロードの一部として、表示するコンテンツがホストされている URL を含める。
 
-会議中のダイアログでは、タスク モジュールを使用することはできません。 タスク モジュールは、会議チャットでは呼び出されません。 外部リソース URL を使用して、会議のコンテンツ バブルを表示します。 このメソッドを使用 `submitTask` して、会議チャットでデータを送信できます。
+会議中のダイアログでは、タスク モジュールを使用することはできません。 タスク モジュールは、会議チャットでは呼び出されません。 外部リソース URL を使用して、会議のコンテンツ バブルを表示します。 このメソッドを使用して `submitTask` 、会議チャットでデータを送信できます。
 
 > [!NOTE]
-> * ユーザーが Web ビューでアクションを実行した後に自動的に終了するには [、submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) 関数を呼び出す必要があります。 これは、アプリの申請に必要な要件です。 詳細については、「SDK タスク モジュール[Teamsを参照してください](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。
-> * アプリで匿名ユーザーをサポートする場合、最初の呼び出し要求ペイロードは、要求メタデータではなく、オブジェクト内の要求メタデータに `from.id` `from` `from.aadObjectId` 依存する必要があります。 `from.id`はユーザー ID であり `from.aadObjectId` 、ユーザー Azure Active Directory ID です。 詳細については、「タブでタスク [モジュールを使用する」を参照し](../task-modules-and-cards/task-modules/task-modules-tabs.md) 、 [タスク モジュールを作成して送信します](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
+> * ユーザーが Web ビューでアクションを実行した後に自動的に終了するには、 [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) 関数を呼び出す必要があります。 これは、アプリの申請に必要な要件です。 詳細については、「SDK タスク [モジュールTeams参照してください](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-tasks-submittask&preserve-view=true)。
+> * アプリで匿名ユーザーをサポート`from.id``from`する場合、最初の呼び出し要求ペイロードは、要求メタデータではなく、オブジェクト内の要求メタデータに依存する`from.aadObjectId`必要があります。 `from.id`はユーザー ID であり`from.aadObjectId`、ユーザー Azure Active Directory ID です。 詳細については、「タブでタスク [モジュールを使用する」を参照し](../task-modules-and-cards/task-modules/task-modules-tabs.md)[、タスク モジュールを作成して送信します](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
 
 ### <a name="after-a-meeting"></a>会議後
 
@@ -141,10 +141,10 @@ API を使用して `userContext` 要求をルーティングするには、「S
 
 ## <a name="step-by-step-guides"></a>ステップ バイ ステップのガイド
 
-* ステップ バイ[ステップ ガイドに従って](../sbs-meeting-token-generator.yml)、会議で会議トークンを生成Teamsします。
-* ステップ バイ[ステップ ガイドに従って](../sbs-meetings-sidepanel.yml)、会議のサイドパネルを新しい会議Teamsします。
-* ステップ バイ[ステップ ガイドに従って](../sbs-meetings-stage-view.yml)、会議の会議で会議ステージ ビュー Teamsします。
-* ステップ バイ[ステップ ガイドに従って](../sbs-meeting-content-bubble.yml)、会議で会議コンテンツバブルを生成Teamsします。
+* 手順に[従って、](../sbs-meeting-token-generator.yml)会議で会議トークンを生成Teamsします。
+* ステップ バイ [ステップ ガイドに従って](../sbs-meetings-sidepanel.yml)、会議のサイドパネルを新しい会議Teamsします。
+* ステップ バイ [ステップ ガイドに従って](../sbs-meetings-stage-view.yml)、会議の会議で会議ステージ ビュー Teamsします。
+* ステップ バイ [ステップ ガイドに従って](../sbs-meeting-content-bubble.yml)、会議で会議コンテンツバブルを生成Teamsします。
 
 ## <a name="next-step"></a>次のステップ
 

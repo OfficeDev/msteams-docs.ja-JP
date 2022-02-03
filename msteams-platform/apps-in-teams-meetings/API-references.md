@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams apps 会議 ユーザー参加者ロール api usercontext 通知シグナル クエリ
-ms.openlocfilehash: 74d1082d1f3bbfeb3b2b1a96c321832799315b55
-ms.sourcegitcommit: 9bfa6b943b065c0a87b1fff2f5edc278916d624a
+ms.openlocfilehash: dd46dc2622915055e46e07ae34d48c690d6d8d8e
+ms.sourcegitcommit: 58a24422bb04a529b6629a56803ed2efabc17cb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62214333"
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "62323149"
 ---
 # <a name="meeting-apps-api-references"></a>会議アプリ API リファレンス
 
@@ -29,32 +29,33 @@ ms.locfileid: "62214333"
 |**GetParticipant**| ボットが会議 ID と参加者 ID によって参加者情報をフェッチできます。 |**GET** _**/v1/meetings/{meetingId}/participants/{participantsId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
 |**NotificationSignal** | ユーザー ボット チャット用の既存の会話通知 API を使用して配信される会議信号を提供できます。 これにより、会議中のダイアログ ボックスを表示するユーザー アクションに基づいて信号を送信できます。 |**POST** _**/v3/conversation/{conversationId}/activities**_|Microsoft Bot Framework SDK|
 |**会議の詳細** | 静的な会議のメタデータを取得できます。 |**GET** _**/v1/meetings/{meetingId}**_| ボット SDK |
+|**CART**|開始された会議のキャプションを投稿できます。|**POST/cartcaption?meetingid=04751eac-30e6-47d9-9c3f-0b4ebe8e30d9&token=04751eac&lang=ja-us HTTP/1.1**|Microsoft Teams SDK|
 
 ## <a name="getusercontext-api"></a>GetUserContext API
 
-タブ コンテンツのコンテキスト情報を識別して取得するには[、「Teams](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library)タブのコンテキストを取得する」を参照してください。会議コンテキストで実行するときにタブで使用され、応答ペイロードに追加されます。 `meetingId`
+タブ コンテンツのコンテキスト情報を識別して取得するには、「[Teams](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library)`meetingId` タブのコンテキストを取得する」を参照してください。会議コンテキストで実行するときにタブによって使用され、応答ペイロードに追加されます。
 
 ## <a name="getparticipant-api"></a>GetParticipant API
 
 > [!NOTE]
 > * 会議の開催者がいつでも役割を変更できるので、参加者の役割をキャッシュしない。
-> * Teams現在、350 人を超える参加者の大規模配布リストまたは名簿サイズはサポートされていません。 `GetParticipant`API。
+> * Teams現在、350 人を超える参加者の大規模配布リストまたは名簿サイズはサポートされていません。`GetParticipant`API。
 
 API `GetParticipant` を使用すると、ボットは会議 ID と参加者 ID によって参加者情報を取得できます。 API には、クエリ パラメーター、例、および応答コードが含まれています。
 
 ### <a name="query-parameters"></a>クエリ パラメーター
 
-`GetParticipant`API には、次のクエリ パラメーターが含まれています。
+API には `GetParticipant` 、次のクエリ パラメーターが含まれています。
 
 |値|型|必須|説明|
 |---|---|----|---|
 |**meetingId**| String | はい | 会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。|
 |**participantId**| String | はい | 参加者 ID はユーザー ID です。 これは、Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO から参加者 ID を取得する方法をお勧めします。 |
-|**tenantId**| 文字列 | はい | テナントユーザーにはテナント ID が必要です。 これは、Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO からテナント ID を取得する方法をお勧めします。 |
+|**tenantId**| String | はい | テナントユーザーにはテナント ID が必要です。 これは、Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO からテナント ID を取得する方法をお勧めします。 |
 
 ### <a name="example"></a>例
 
-`GetParticipant`API には、次の例が含まれています。
+API には `GetParticipant` 、次の例が含まれています。
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -100,7 +101,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 ---
 
-API の JSON 応答 `GetParticipant` 本文は次の形式です。
+API の JSON 応答本文は次 `GetParticipant` の形式です。
 
 ```json
 {
@@ -128,7 +129,7 @@ API の JSON 応答 `GetParticipant` 本文は次の形式です。
 
 ### <a name="response-codes"></a>応答コード
 
-`GetParticipant`API は、次の応答コードを返します。
+API は `GetParticipant` 、次の応答コードを返します。
 
 |応答コード|説明|
 |---|---|
@@ -149,7 +150,7 @@ API の JSON 応答 `GetParticipant` 本文は次の形式です。
 
 ### <a name="query-parameter"></a>クエリ パラメーター
 
-`NotificationSignal`API には、次のクエリ パラメーターが含まれています。
+API には `NotificationSignal` 、次のクエリ パラメーターが含まれています。
 
 |値|型|必須|説明|
 |---|---|----|---|
@@ -160,11 +161,11 @@ API の JSON 応答 `GetParticipant` 本文は次の形式です。
 は `Bot ID` マニフェストで宣言され、ボットは結果オブジェクトを受け取ります。
 
 > [!NOTE]
-> * 要求 `completionBotId` されたペイロードの `externalResourceUrl` 例では、the のパラメーターは省略可能です。 `Bot ID` はマニフェストで宣言され、ボットは結果オブジェクトを受け取ります。
-> * 幅 `externalResourceUrl` と高さのパラメーターはピクセル単位である必要があります。 寸法が許容される制限内にあるか確認するには、「設計ガイドライン [」を参照してください](design/designing-apps-in-meetings.md)。
-> * URL は、会議中のダイアログ ボックスに表示 `<iframe>` されるページです。 ドメインは、アプリ マニフェスト内のアプリ `validDomains` の配列にある必要があります。
+> * 要求 `completionBotId` されたペイロードの例 `externalResourceUrl` では、the のパラメーターは省略可能です。 `Bot ID` はマニフェストで宣言され、ボットは結果オブジェクトを受け取ります。
+> * 幅 `externalResourceUrl` と高さのパラメーターはピクセル単位である必要があります。 許容される制限内の寸法を確保するには、「設計ガイドライン [」を参照してください](design/designing-apps-in-meetings.md)。
+> * URL は、会議中のダイアログ ボックスに表示 `<iframe>` されるページです。 ドメインは、アプリ マニフェスト内のアプリの `validDomains` 配列にある必要があります。
 
-`NotificationSignal`API には、次の例が含まれています。
+API には `NotificationSignal` 、次の例が含まれています。
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -211,7 +212,7 @@ POST /v3/conversations/{conversationId}/activities
 
 ### <a name="response-codes"></a>応答コード
 
-`NotificationSignal`API には、次の応答コードが含まれています。
+API には `NotificationSignal` 、次の応答コードが含まれています。
 
 |応答コード|説明|
 |---|---|
@@ -231,7 +232,7 @@ API はボット サービスを通じて利用できます。
 ### <a name="prerequisite"></a>前提条件
 
 > [!NOTE] 
-> [会議のアプリの前提条件] に記載されているすべての前提条件をアプリが満たTeams[します](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)。
+> [会議のアプリの前提条件] に記載されているすべての前提条件をアプリが満[たTeamsします](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)。
 
 会議の詳細 API を使用するには、RSC アクセス許可を取得する必要があります。 アプリ マニフェストのプロパティを構成するには、次の例を使用 `webApplicationInfo` します。
 
@@ -250,7 +251,7 @@ API はボット サービスを通じて利用できます。
 
 |値|型|必須|説明|
 |---|---|----|---|
-|**meetingId**| 文字列 | はい | 会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。 |
+|**meetingId**| String | はい | 会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。 |
 
 ### <a name="example"></a>例
 
@@ -303,11 +304,11 @@ GET /v1/meetings/{meetingId}
 
 ## <a name="cart-api"></a>CART API
 
-CART API は、CART キャプション、人間Microsoft Teamsキャプションの POST エンドポイントを公開します。 このエンドポイントに送信されるテキスト コンテンツは、キャプションが有効になっているときに、Microsoft Teams会議のエンド ユーザーに表示されます。
+通信アクセスのリアルタイム翻訳 (CART) API は、ユーザーが入力したクローズド キャプションである CART キャプションMicrosoft Teams POST エンドポイントを公開します。 このエンドポイントに送信されるテキスト コンテンツは、キャプションが有効になっているときに、Microsoft Teams会議のエンド ユーザーに表示されます。
 
 ### <a name="cart-url"></a>CART URL
 
-POST エンドポイントの CART URL は、会議中の会議の [会議 **オプション**] ページMicrosoft Teamsできます。 詳細については、「会議の[CART キャプション」をMicrosoft Teamsしてください](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47)。 CART キャプションを使用するために CART URL を変更する必要はない。
+POST エンドポイントの CART URL は、会議中の会議の [会議 **オプション**] ページMicrosoft Teamsできます。 詳細については、「会議の [CART キャプション」をMicrosoft Teamsしてください](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47)。 CART キャプションを使用するために CART URL を変更する必要はない。
 
 #### <a name="query-parameter"></a>クエリ パラメーター
 
@@ -316,7 +317,7 @@ CART URL には、次のクエリ パラメーターが含まれています。
 |値|型|必須|説明|
 |---|---|----|----|
 |**meetingId**| 文字列 | はい |会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。 <br/>たとえば、 meetingid=%7b%22tId%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241 -47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%220%222%7d|
-|**トークン**| String | はい |承認トークン。<br/> たとえば、token=04751eac |
+|**トークン**| 文字列 | はい |承認トークン。<br/> たとえば、token=04751eac |
 
 #### <a name="example"></a>例
 
@@ -366,9 +367,9 @@ CART API には、次のエラー コードが含まれています。
 ### <a name="prerequisite"></a>前提条件
 
 > [!NOTE] 
-> [会議のアプリの前提条件] に記載されているすべての前提条件をアプリが満たTeams[します](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)。
+> [会議のアプリの前提条件] に記載されているすべての前提条件をアプリが満[たTeamsします](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)。
 
-アプリ マニフェストには、会議の開始 `webApplicationInfo` イベントと終了イベントを受信するプロパティが必要です。 マニフェストを構成するには、次の例を使用します。
+アプリ マニフェストには、会議の開始イベント `webApplicationInfo` と終了イベントを受信するプロパティが必要です。 マニフェストを構成するには、次の例を使用します。
 
 ```json
 "webApplicationInfo": {
@@ -488,14 +489,14 @@ CART API には、次のエラー コードが含まれています。
 
 ボットはハンドラーを介してイベントを受け取 `OnEventActivityAsync` ります。
 
-json ペイロードを逆シリアル化するために、会議のメタデータを取得するためにモデル オブジェクトが導入されます。 会議のメタデータは、イベント ペイロード `value` 内のプロパティにあります。 model `MeetingStartEndEventvalue` オブジェクトが作成され、メンバー変数はイベント ペイロード内のプロパティの `value` キーに対応します。
+json ペイロードを逆シリアル化するために、会議のメタデータを取得するためにモデル オブジェクトが導入されます。 会議のメタデータは、イベント ペイロード `value` 内のプロパティにあります。 model `MeetingStartEndEventvalue` オブジェクトが作成され、メンバー変数はイベント `value` ペイロード内のプロパティのキーに対応します。
      
 > [!NOTE]      
-> * から会議 ID を取得します `turnContext.ChannelData` 。    
+> * から会議 ID を取得します `turnContext.ChannelData`。    
 > * 会議 ID として会話 ID を使用しない。     
-> * 会議イベントペイロードから会議 ID を使用しない `turncontext.activity.value` 。 
+> * 会議イベントペイロードから会議 ID を使用しない `turncontext.activity.value`。 
       
-次のコードは、会議の開始/終了イベントのメタデータをキャプチャする方法を `MeetingType` `Title` `Id` `JoinUrl` `StartTime` `EndTime` 示しています。
+次のコードは、会議`MeetingType``EndTime``Title``Id``JoinUrl``StartTime`の開始/終了イベントのメタデータをキャプチャする方法を示しています。
 
 会議の開始イベント
 ```csharp
