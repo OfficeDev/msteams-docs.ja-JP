@@ -4,12 +4,12 @@ description: 検索ベースのメッセージング拡張機能を更新して�
 ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: f019f82c4e617e3cf6aa7caa499e125dc448b1c3
-ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
+ms.openlocfilehash: 5c37eff384f3aa9d2d5f615272ec7a5518de4e8d
+ms.sourcegitcommit: 6e33289c55a1a83adb9b7b38c42d781c699786f7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2022
-ms.locfileid: "62281743"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62345381"
 ---
 # <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>複数のTeamsメッセージング拡張機能を拡張Microsoft 365
 
@@ -91,6 +91,28 @@ ms.locfileid: "62281743"
 1. ボットの [チャネルOutlook] ウィンドウに、Microsoft Teamsチャネルが一 **覧表示されます。**
 
     :::image type="content" source="images/azure-bot-channels.png" alt-text="Azure Bot チャネル ウィンドウで、チャネルMicrosoft TeamsとOutlook一覧":::
+
+## <a name="update-azure-ad-app-registration-for-sso"></a>SSO Azure ADアプリ登録の更新
+
+> [!NOTE]
+> Teams メッセージング拡張機能検索サンプル[を](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search)使用している場合は、Azure Active Directory (AAD) シングル Sign-On 認証を使用しない場合は、この手順を省略できます。
+
+Azure Active Directory メッセージング拡張機能のシングル サインオン (SSO) は、[Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots) と同様に Outlook で動作しますが、テナントのアプリ登録ポータルでボットの Azure AD アプリ登録にいくつかのクライアント アプリケーション識別子を追加する必要があります。
+
+1. サンドボックス テナント アカウント [を使用して Azure portal](https://portal.azure.com) にサインインします。
+1. アプリ **の登録を開きます**。
+1. アプリケーションの名前を選択して、アプリ登録を開きます。
+1. [API  **の公開] ([管理]** の下) を *選択します*。
+
+[承認済 **みクライアント アプリケーション] セクション** で、次のすべての値が `Client Id` 一覧表示されます。
+
+|Microsoft 365 クライアント アプリケーション | クライアント ID |
+|--|--|
+|Teamsとモバイル |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
+|Teams Web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
+|Outlook デスクトップ | d3590ed6-52b3-4102-aeff-aad2292ab01c |
+|Outlook Web Access | 00000002-00000-0ff1-ce00-000000000000 |
+|Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
 ## <a name="sideload-your-updated-messaging-extension-in-teams"></a>更新されたメッセージング拡張機能をサーバーにサイドロードTeams
 

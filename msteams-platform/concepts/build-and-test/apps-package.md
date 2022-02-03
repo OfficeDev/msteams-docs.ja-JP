@@ -3,12 +3,12 @@ title: アプリをパッケージ化する
 description: テスト、アップロード、ストア発行用に Microsoft Teams アプリをパッケージ化する方法について説明します。
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 002da681a464770a31fa6963e96fdff54701b35f
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: f3f725280e24296f1f2d9c919a14585e07d86c75
+ms.sourcegitcommit: 6e33289c55a1a83adb9b7b38c42d781c699786f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059680"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62345393"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>Microsoft Teams アプリ パッケージを作成する
 
@@ -16,6 +16,12 @@ Microsoft Teams アプリの配布を計画している場合は、アプリ パ
 
 * **アプリ マニフェスト**: アプリの機能、必要なリソース、その他の重要な属性など、アプリの構成方法について説明します。
 * **アプリ アイコン**: 各パッケージには、アプリの色とアウトライン アイコンが必要です。
+
+## <a name="teams-doesnt-host-your-app"></a>Teams でアプリがホストされない
+
+ユーザーが Teams にアプリをインストールすると、構成ファイル (アプリ マニフェストとも呼ばれます) とアプリのアイコンのみを含むアプリ パッケージがインストールされます。 アプリのロジックとデータ ストレージは、開発中のローカルホストや Azure Web サービスなど、他の場所でホストされます。 Teams は HTTPS 経由でこれらのリソースにアクセスします。
+
+:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Teams アプリのアプリホスティングを示す図" border="true":::
 
 ## <a name="app-manifest"></a>アプリ マニフェスト
 
