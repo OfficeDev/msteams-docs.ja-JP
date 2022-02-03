@@ -92,7 +92,7 @@
   items:
     - name: Visual Studio Code 用 Teams ツールキット
       items:
-        - name: Teams ツールキットの基礎
+        - name: Teams ツールキットの概要
           href: toolkit/teams-toolkit-fundamentals.md
         - name: 新しいプロジェクトを作成する
           href: toolkit/create-new-project.md
@@ -465,6 +465,10 @@
           href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
         - name: 公開したアプリの保守およびサポート
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
+    - name: アプリを収益化する
+      items:
+        - name: 概要
+          href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
         - name: アプリに SaaS オファーを含める
           href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
 - name: アプリ マニフェスト
