@@ -5,16 +5,16 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: 88fd025229a90ac6e3888763f643829950912633
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: e81e50a5efba56c91bef5c59b1239f2d273b3354
+ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212020"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62362887"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参照: Microsoft Teams のマニフェスト スキーマ
 
-Teams マニフェストは、アプリが Microsoft Teams 製品にどのように統合されるかを説明します。 マニフェストは、[`https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json) でホストされているスキーマに準拠している必要があります。 以前のバージョン 1.0、1.1、... 1.11 もサポートされています (URL で "v1.x" を使用)。
+Teams マニフェストは、アプリが Microsoft Teams 製品にどのように統合されるかを説明します。 マニフェストは、[`https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json) でホストされているスキーマに準拠している必要があります。 以前のバージョン 1.0、1.1、... 1.12 もサポートされています (URL で "v1.x" を使用)。
 各バージョンで行われた変更の詳細については、[マニフェスト変更ログ](https://github.com/OfficeDev/microsoft-teams-app-schema/releases)を参照してください。
 
 次のスキーマ サンプルは、すべての拡張オプションを示しています。
@@ -23,295 +23,312 @@ Teams マニフェストは、アプリが Microsoft Teams 製品にどのよう
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.11",
-  "version": "1.0.0",
-  "id": "%MICROSOFT-APP-ID%",
-  "packageName": "com.example.myapp",
-  "localizationInfo": {
-    "defaultLanguageTag": "en-us",
-    "additionalLanguages": [
-      {
-        "languageTag": "es-es",
-        "file": "en-us.json"
-      }
-    ]
-  },
-  "developer": {
-    "name": "Publisher Name",
-    "websiteUrl": "https://website.com/",
-    "privacyUrl": "https://website.com/privacy",
-    "termsOfUseUrl": "https://website.com/app-tos",
-    "mpnId": "1234567890"
-  },
-  "name": {
-    "short": "Name of your app (<=30 chars)",
-    "full": "Full name of app, if longer than 30 characters (<=100 chars)"
-  },
-  "description": {
-    "short": "Short description of your app (<= 80 chars)",
-    "full": "Full description of your app (<= 4000 chars)"
-  },
-  "icons": {
-    "outline": "A relative path to a transparent .png icon — 32px X 32px",
-    "color": "A relative path to a full color .png icon — 192px X 192px"
-  },
-  "accentColor": "A valid HTML color code.",
-  "configurableTabs": [
-    {
-      "configurationUrl": "https://contoso.com/teamstab/configure",
-      "scopes": [
-        "team",
-        "groupchat"
-      ],
-      "canUpdateConfiguration": true,
-      "context":[
-        "channelTab",
-        "privateChatTab",
-        "meetingChatTab",
-        "meetingDetailsTab",
-        "meetingSidePanel",
-        "meetingStage"
-      ],
-      "sharePointPreviewImage": "Relative path to a tab preview image for use in SharePoint — 1024px X 768",
-      "supportedSharePointHosts": [
-         "sharePointFullPage",
-         "sharePointWebPart"
-      ]
-    }
-  ],
-  "staticTabs": [
-    {
-      "entityId": "unique Id for the page entity",
-      "scopes": [
-        "personal"
-      ],
-      "context":[
-        "personalTab",
-        "channelTab"
-        ],
-      "name": "Display name of tab",
-      "contentUrl": "https://contoso.com/content (displayed in Teams canvas)",
-      "websiteUrl": "https://contoso.com/content (displayed in web browser)",
-       "searchUrl":  "https://contoso.com/content (displayed in web browser)"
-    }
-  ],
-  "bots": [
-    {
-      "botId": "%MICROSOFT-APP-ID-REGISTERED-WITH-BOT-FRAMEWORK%",
-      "scopes": [
-        "team",
-        "personal",
-        "groupchat"
-      ],
-      "needsChannelSelector": false,
-      "isNotificationOnly": false,
-      "supportsFiles": true,
-      "supportsCalling": false,
-      "supportsVideo": true,
-      "commandLists": [
-        {
-          "scopes": [
-            "team",
-            "groupchat"
-          ],
-          "commands": [
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.12",
+    "version": "1.0.0",
+    "id": "%MICROSOFT-APP-ID%",
+    "packageName": "com.example.myapp",
+    "localizationInfo": {
+        "defaultLanguageTag": "en-us",
+        "additionalLanguages": [
             {
-              "title": "Command 1",
-              "description": "Description of Command 1"
-            },
-            {
-              "title": "Command 2",
-              "description": "Description of Command 2"
+                "languageTag": "es-es",
+                "file": "en-us.json"
             }
-          ]
-        },
+        ]
+    },
+    "developer": {
+        "name": "Publisher Name",
+        "websiteUrl": "https://website.com/",
+        "privacyUrl": "https://website.com/privacy",
+        "termsOfUseUrl": "https://website.com/app-tos",
+        "mpnId": "1234567890"
+    },
+    "name": {
+        "short": "Name of your app (<=30 chars)",
+        "full": "Full name of app, if longer than 30 characters (<=100 chars)"
+    },
+    "description": {
+        "short": "Short description of your app (<= 80 chars)",
+        "full": "Full description of your app (<= 4000 chars)"
+    },
+    "icons": {
+        "outline": "A relative path to a transparent .png icon — 32px X 32px",
+        "color": "A relative path to a full color .png icon — 192px X 192px"
+    },
+    "accentColor": "A valid HTML color code.",
+    "configurableTabs": [
         {
-          "scopes": [
-            "personal",
-            "groupchat"
-          ],
-          "commands": [
-            {
-              "title": "Personal command 1",
-              "description": "Description of Personal command 1"
-            },
-            {
-              "title": "Personal command N",
-              "description": "Description of Personal command N"
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "connectors": [
-    {
-      "connectorId": "GUID-FROM-CONNECTOR-DEV-PORTAL%",
-      "scopes": [
-        "team"
-      ],
-      "configurationUrl": "https://contoso.com/teamsconnector/configure"
-    }
-  ],
-  "composeExtensions": [
-    {
-      "canUpdateConfiguration": true,
-      "botId": "%MICROSOFT-APP-ID-REGISTERED-WITH-BOT-FRAMEWORK%",
-      "commands": [
-        {
-          "id": "exampleCmd1",
-          "title": "Example Command",
-          "type": "query",
-          "context": [
-            "compose",
-            "commandBox"
-          ],
-          "description": "Command Description; e.g., Search on the web",
-          "initialRun": true,
-          "fetchTask": false,
-          "parameters": [
-            {
-              "name": "keyword",
-              "title": "Search keywords",
-              "inputType": "text",
-              "description": "Enter the keywords to search for",
-              "value": "Initial value for the parameter",
-              "choices": [
-                {
-                  "title": "Title of the choice",
-                  "value": "Value of the choice"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "exampleCmd2",
-          "title": "Example Command 2",
-          "type": "action",
-          "context": [
-            "message"
-          ],
-          "description": "Command Description; e.g., Add a customer",
-          "initialRun": true,
-          "fetchTask": true,
-          "parameters": [
-            {
-              "name": "custinfo",
-              "title": "Customer name",
-              "description": "Enter a customer name",
-              "inputType": "text"
-            }
-          ]
-        },
-         {
-          "id": "exampleCmd3",
-          "title": "Example Command 3",
-          "type": "action",
-          "context": [
-            "compose",
-            "commandBox",
-            "message"
-          ],
-          "description": "Command Description; e.g., Add a customer",
-          "fetchTask": false,
-          "taskInfo": {
-            "title": "Initial dialog title",
-            "width": "Dialog width",
-            "height": "Dialog height",
-            "url": "Initial webview URL"
-          }
-        }
-      ],
-      "messageHandlers": [
-        {
-          "type": "link",
-          "value": {
-            "domains": [
-              "mysite.someplace.com",
-              "othersite.someplace.com"
+            "configurationUrl": "https://contoso.com/teamstab/configure",
+            "scopes": [
+                "team",
+                "groupchat"
+            ],
+            "canUpdateConfiguration": true,
+            "context": [
+                "channelTab",
+                "privateChatTab",
+                "meetingChatTab",
+                "meetingDetailsTab",
+                "meetingSidePanel",
+                "meetingStage"
+            ],
+            "sharePointPreviewImage": "Relative path to a tab preview image for use in SharePoint — 1024px X 768",
+            "supportedSharePointHosts": [
+                "sharePointFullPage",
+                "sharePointWebPart"
             ]
-          }
         }
-      ]
+    ],
+    "staticTabs": [
+        {
+            "entityId": "unique Id for the page entity",
+            "scopes": [
+                "personal"
+            ],
+            "context": [
+                "personalTab",
+                "channelTab"
+            ],
+            "name": "Display name of tab",
+            "contentUrl": "https://contoso.com/content (displayed in Teams canvas)",
+            "websiteUrl": "https://contoso.com/content (displayed in web browser)",
+            "searchUrl": "https://contoso.com/content (displayed in web browser)"
+        }
+    ],
+    "bots": [
+        {
+            "botId": "%MICROSOFT-APP-ID-REGISTERED-WITH-BOT-FRAMEWORK%",
+            "scopes": [
+                "team",
+                "personal",
+                "groupchat"
+            ],
+            "needsChannelSelector": false,
+            "isNotificationOnly": false,
+            "supportsFiles": true,
+            "supportsCalling": false,
+            "supportsVideo": true,
+            "commandLists": [
+                {
+                    "scopes": [
+                        "team",
+                        "groupchat"
+                    ],
+                    "commands": [
+                        {
+                            "title": "Command 1",
+                            "description": "Description of Command 1"
+                        },
+                        {
+                            "title": "Command 2",
+                            "description": "Description of Command 2"
+                        }
+                    ]
+                },
+                {
+                    "scopes": [
+                        "personal",
+                        "groupchat"
+                    ],
+                    "commands": [
+                        {
+                            "title": "Personal command 1",
+                            "description": "Description of Personal command 1"
+                        },
+                        {
+                            "title": "Personal command N",
+                            "description": "Description of Personal command N"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "connectors": [
+        {
+            "connectorId": "GUID-FROM-CONNECTOR-DEV-PORTAL%",
+            "scopes": [
+                "team"
+            ],
+            "configurationUrl": "https://contoso.com/teamsconnector/configure"
+        }
+    ],
+    "composeExtensions": [
+        {
+            "canUpdateConfiguration": true,
+            "botId": "%MICROSOFT-APP-ID-REGISTERED-WITH-BOT-FRAMEWORK%",
+            "commands": [
+                {
+                    "id": "exampleCmd1",
+                    "title": "Example Command",
+                    "type": "query",
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "description": "Command Description; e.g., Search on the web",
+                    "initialRun": true,
+                    "fetchTask": false,
+                    "parameters": [
+                        {
+                            "name": "keyword",
+                            "title": "Search keywords",
+                            "inputType": "text",
+                            "description": "Enter the keywords to search for",
+                            "value": "Initial value for the parameter",
+                            "choices": [
+                                {
+                                    "title": "Title of the choice",
+                                    "value": "Value of the choice"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "exampleCmd2",
+                    "title": "Example Command 2",
+                    "type": "action",
+                    "context": [
+                        "message"
+                    ],
+                    "description": "Command Description; e.g., Add a customer",
+                    "initialRun": true,
+                    "fetchTask": true,
+                    "parameters": [
+                        {
+                            "name": "custinfo",
+                            "title": "Customer name",
+                            "description": "Enter a customer name",
+                            "inputType": "text"
+                        }
+                    ]
+                },
+                {
+                    "id": "exampleCmd3",
+                    "title": "Example Command 3",
+                    "type": "action",
+                    "context": [
+                        "compose",
+                        "commandBox",
+                        "message"
+                    ],
+                    "description": "Command Description; e.g., Add a customer",
+                    "fetchTask": false,
+                    "taskInfo": {
+                        "title": "Initial dialog title",
+                        "width": "Dialog width",
+                        "height": "Dialog height",
+                        "url": "Initial webview URL"
+                    }
+                }
+            ],
+            "messageHandlers": [
+                {
+                    "type": "link",
+                    "value": {
+                        "domains": [
+                            "mysite.someplace.com",
+                            "othersite.someplace.com"
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "devicePermissions": [
+        "geolocation",
+        "media",
+        "notifications",
+        "midi",
+        "openExternal"
+    ],
+    "validDomains": [
+        "contoso.com",
+        "mysite.someplace.com",
+        "othersite.someplace.com"
+    ],
+    "webApplicationInfo": {
+        "id": "AAD App ID",
+        "resource": "Resource URL for acquiring auth token for SSO"
+    },
+    "authorization": {
+        "permissions": {
+            "resourceSpecific": [
+                {
+                    "type": "Application",
+                    "name": "ChannelSettings.Read.Group"
+                },
+                {
+                    "type": "Delegated",
+                    "name": "ChannelMeetingParticipant.Read.Group"
+                }
+            ]
+        }
+    },
+    "showLoadingIndicator": false,
+    "isFullScreen": false,
+    "activities": {
+        "activityTypes": [
+            {
+                "type": "taskCreated",
+                "description": "Task created activity",
+                "templateText": "<team member> created task <taskId> for you"
+            },
+            {
+                "type": "userMention",
+                "description": "Personal mention activity",
+                "templateText": "<team member> mentioned you"
+            }
+        ]
+    },
+    "defaultBlockUntilAdminAction": true,
+    "publisherDocsUrl": "https://website.com/app-info",
+    "defaultInstallScope": "meetings",
+    "defaultGroupCapability": {
+        "meetings": "tab",
+        "team": "bot",
+        "groupchat": "bot"
+    },
+    "configurableProperties": [
+        "name",
+        "shortDescription",
+        "longDescription",
+        "smallImageUrl",
+        "largeImageUrl",
+        "accentColor",
+        "developerUrl",
+        "privacyUrl",
+        "termsOfUseUrl"
+    ],
+    "subscriptionOffer": {
+        "offerId": "publisherId.offerId"
+    },
+    "meetingExtensionDefinition": {
+        "scenes": [
+            {
+                "id": "9082c811-7e6a-4174-8173-6ccd57d377e6",
+                "name": "Getting started sample",
+                "file": "scenes/sceneMetadata.json",
+                "preview": "scenes/scenePreview.png",
+                "maxAudience": 15,
+                "seatsReservedForOrganizersOrPresenters": 0
+            },
+            {
+                "id": "afeaed22-f89b-48e1-98b4-46a514344e4a",
+                "name": "Sample-1",
+                "file": "scenes/sceneMetadata.json",
+                "preview": "scenes/scenePreview.png",
+                "maxAudience": 15,
+                "seatsReservedForOrganizersOrPresenters": 3
+            }
+        ]
     }
-  ],
-"permissions": [
-    "identity",
-    "messageTeamMembers"
-  ],
-  "devicePermissions": [
-    "geolocation",
-    "media",
-    "notifications",
-    "midi",
-    "openExternal"
-  ],
-  "validDomains": [
-    "contoso.com",
-    "mysite.someplace.com",
-    "othersite.someplace.com"
-  ],
-  "webApplicationInfo": {
-    "id": "AAD App ID",
-    "resource": "Resource URL for acquiring auth token for SSO",
-    "applicationPermissions": [
-      "TeamSettings.Read.Group",
-      "ChannelSettings.Read.Group",
-      "ChannelSettings.Edit.Group",
-      "Channel.Create.Group",
-      "Channel.Delete.Group",
-      "ChannelMessage.Read.Group",
-      "TeamsApp.Read.Group",
-      "TeamsTab.Read.Group",
-      "TeamsTab.Create.Group",
-      "TeamsTab.Edit.Group",
-      "TeamsTab.Delete.Group",
-      "Member.Read.Group",
-      "Owner.Read.Group",
-      "Member.ReadWrite.Group",
-      "Owner.ReadWrite.Group"
-    ]
-  },
-  "showLoadingIndicator": false,
-  "isFullScreen": false,
-  "activities": {
-    "activityTypes": [
-      {
-        "type": "taskCreated",
-        "description": "Task created activity",
-        "templateText": "<team member> created task <taskId> for you"
-      },
-      {
-        "type": "userMention",
-        "description": "Personal mention activity",
-        "templateText": "<team member> mentioned you"
-      }
-    ]
-  },
-  "defaultBlockUntilAdminAction": true,
-  "publisherDocsUrl": "https://website.com/app-info",
-  "defaultInstallScope": "meetings",
-  "defaultGroupCapability": {
-    "meetings": "tab", 
-    "team": "bot", 
-    "groupchat": "bot"
-  },
- "configurableProperties": [
-     "name",
-     "shortDescription",
-     "longDescription",
-     "smallImageUrl", 
-     "largeImageUrl", 
-     "accentColor",
-     "developerUrl",
-     "privacyUrl",
-     "termsOfUseUrl"        
- ],
-  "subscriptionOffer": {
-    "offerId": "publisherId.offerId"
-  }
 }
 ```
 
@@ -327,7 +344,7 @@ Teams マニフェストは、アプリが Microsoft Teams 製品にどのよう
 
 **必須** — 文字列
 
-このマニフェストが使用しているマニフェスト スキーマのバージョン。 1.10 である必要があります。
+このマニフェストが使用しているマニフェスト スキーマのバージョン。
 
 ## <a name="version"></a>version
 
@@ -613,7 +630,6 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 |---|---|---|---|---|
 |`id`|string|36 文字|✔|Azure AD のアプリケーション ID を指定します。 この ID は GUID である必要があります。|
 |`resource`|string|2048 文字|✔|SSO の認証トークンを取得するためのアプリのリソース URL。 </br> **注:** SSO を使用していない場合は、エラー応答を回避するために、このフィールドにダミーの文字列値 (たとえば、https://notapplicable) をアプリ マニフェストに入力してください。 |
-|`applicationPermissions`|文字列の配列|128 文字||詳細な[リソース固有の同意](../../graph-api/rsc/resource-specific-consent.md#resource-specific-permissions)を指定します。|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
 
@@ -763,9 +779,80 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 
 アプリに関連付けられている SaaS オファーを指定します。
 
-|名前| 型| 最大サイズ | 必須 | 説明|
+|名前| 型|最大サイズ|必須|説明|
 |---|---|---|---|---|
 |`offerId`| string | 2,048 文字 | ✔ | [パートナー センター](https://partner.microsoft.com/dashboard)で見つけることができるパブリッシャー ID とオファー ID を含む一意の識別子。 文字列を `publisherId.offerId` として書式設定する必要があります。|
+
+## <a name="meetingextensiondefinition"></a>meetingExtensionDefinition
+
+**省略可能** - オブジェクト
+
+会議拡張機能の定義を指定します。 詳細については、「[Teams のカスタム Together Mode シーン](../../apps-in-teams-meetings/teams-together-mode.md)」を参照してください。
+
+|名前| 型| 最大サイズ | 必須 | 説明|
+|---|---|---|---|---|
+|`scenes`|オブジェクトの配列| 5 個の項目||会議でサポートされているシーン。|
+
+### <a name="meetingextensiondefinitionscenes"></a>meetingExtensionDefinition.scenes
+
+|名前| 型|最大サイズ|必須 |説明|
+|---|---|---|---|---|
+|`id`|||✔| シーンの一意の識別子。 この ID は GUID である必要があります。 |
+|`name`| string | 128 文字 |✔| シーンの名前。 |
+|`file`|||✔| シーンの metadata json ファイルへの相対ファイル パス。 |
+|`preview`|||✔| シーンの PNG プレビュー アイコンへの相対ファイル パス。 |
+|`maxAudience`| integer | 50  |✔| シーンでサポートされている対象ユーザーの最大数。 |
+|`seatsReservedForOrganizersOrPresenters`| integer | 50 |✔| 開催者または発表者用に予約されたシートの数。|
+
+## <a name="authorization"></a>承認
+
+**省略可能** — オブジェクト
+
+アプリの承認に関する情報を指定して統合します。
+
+|名前| 型|最大サイズ|必須 |説明|
+|---|---|---|---|---|
+|`permissions`||||アプリを実行する必要があるアクセス許可の一覧。|
+
+### <a name="authorizationpermissions"></a>authorization.permissions
+
+|名前| 型|最大サイズ|必須 |説明|
+|---|---|---|---|---|
+|`resourceSpecific`| オブジェクトの配列|16 項目||リソース インスタンス レベルでのデータ アクセスを保護するアクセス許可。|
+
+### <a name="authorizationpermissionsresourcespecific"></a>authorization.permissions.resourceSpecific
+
+|名前| 型|最大サイズ|必須 |説明|
+|---|---|---|---|---|
+|`type`|string||✔| リソース固有のアクセス許可の種類。 オプション: `Application` と `Delegated`。|
+|`name`|string|128 文字|✔|リソース固有のアクセス許可の名前。 <br> 詳細については、「[アプリケーションのアクセス許可](../../graph-api/rsc/resource-specific-consent.md)」および「[委任されたアクセス許可](#delegated-permissions)」を参照してください。|
+
+### <a name="delegated-permissions"></a>委任されたアクセス許可
+
+委任されたアクセス許可を使用すると、アプリはサインインしているユーザーの代わりにデータにアクセスできます。
+
+* **チームのリソース固有のアクセス許可**
+
+    |**[名前]**|**説明**|
+    |---|---|
+    |`ChannelMeetingParticipant.Read.Group`| サインインしたユーザーの代理で、このチームに関連付けられたチャネル会議の名前、役割、ID、参加時間と退会時間などの参加者情報を読み取ることができるようにします。|
+    |`InAppPurchase.Allow.Group`| サインインしているユーザーの代わりに、このチームのユーザーにマーケットプレース オファーを表示し、アプリ内での購入を完了できるようにします。|
+    |`ChannelMeetingStage.Write.Group`| サインインしているユーザーの代わりに、このチームに関連付けられているチャネル会議の会議ステージにコンテンツをアプリが表示できるようにします。|
+
+* **チャットまたは会議用のリソース固有のアクセス許可**
+
+    |**[名前]**|**説明**|
+    |---|---|
+    |`InAppPurchase.Allow.Chat`|サインインしているユーザーの代わりに、このチャットや関連する任意の会議のユーザーにマーケットプレース オファーを表示し、アプリ内での購入を完了できるようにします。|
+    |`MeetingStage.Write.Chat`|サインインしているユーザーの代わりに、このチャットに関連付けられている会議の会議ステージにコンテンツをアプリが表示できるようにします。|
+    |`OnlineMeetingParticipant.Read.Chat`|サインインしたユーザーの代理で、このチャットに関連付けられた会議の名前、役割、ID、参加時間と退会時間などの参加者情報を読み取ることができるようにします。|
+    |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|サインインしているユーザーの代わりに、このチャットに関連付けられている会議の参加者の着信オーディオをアプリで切り替えられるようにします。|
+
+* **ユーザーのリソース固有のアクセス許可**
+
+    |**[名前]**|**説明**|
+    |---|---|
+    |`InAppPurchase.Allow.User`|サインインしているユーザーの代わりに、アプリでユーザー マーケットプレース オファーを表示し、アプリ内でユーザーの購入を完了できるようにします。|
 
 ## <a name="see-also"></a>関連項目
 
@@ -773,4 +860,4 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 * [アプリのカスタマイズを有効にする](~/concepts/design/enable-app-customization.md)
 * [アプリをローカライズする](~/concepts/build-and-test/apps-localization.md)
 * [メディア機能を統合する](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
-* [開発者プレビュー マニフェスト スキーマ リファレンス - Teams](~/resources/schema/manifest-schema-dev-preview.md)
+* [Microsoft Teams の開発者向けパブリック プレビュー マニフェスト スキーマ](manifest-schema-dev-preview.md)
