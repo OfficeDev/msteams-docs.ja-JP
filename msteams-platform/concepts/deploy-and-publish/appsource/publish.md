@@ -5,18 +5,18 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: a05ff22944756151842a58fa0cd955c61d2c1c5c
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 2949d8611600b8841a5a4e3e945c5944f0b11f49
+ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888518"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62362810"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>アプリをアプリストアMicrosoft Teamsする
 
 アプリをアプリ内のストアに直接配布Microsoft Teams世界中の何百万人ものユーザーにリーチできます。 アプリがストアでも機能している場合は、潜在的な顧客に即座にアクセスできます。
 
-また、Teamsストアに発行されたアプリは[、Microsoft AppSource](https://appsource.microsoft.com)に自動的に一覧表示されます。これは、アプリとソリューションのMicrosoft 365マーケットプレースです。
+また、Teamsストアに発行されたアプリは[、Microsoft AppSource](https://appsource.microsoft.com) に自動的に一覧表示されます。これは、アプリとソリューションのMicrosoft 365マーケットプレースです。
 
 ## <a name="understand-the-publishing-process"></a>発行プロセスについて
 
@@ -30,7 +30,7 @@ ms.locfileid: "60888518"
 
 1. [アプリがTeamsと](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)ストアの標準を満たTeams、ストアの検証ガイドラインを確認します。
 1. [パートナー センターの開発者アカウントを作成します](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)。
-1. [自動テストの実行](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)、テスト ノートのコンパイル、ストア登録情報の作成など、レビュー プロセスの迅速化に役立つ重要なタスクを含む、ストア申請を準備します。
+1. [自動テストの実行](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)、テスト ノートのコンパイル、ストア登録情報の作成など、レビュー プロセスを迅速化するための重要なタスクを含む、ストア申請を準備します。
 1. [パートナー センターからアプリ](/office/dev/store/add-in-submission-guide) を提出します。
 1. 申請に失敗した場合は、Microsoft と直接作業して問題を解決し、 [アプリを再送信します](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)。
 
@@ -56,3 +56,4 @@ ms.locfileid: "60888518"
 * [組織にTeamsアプリを発行する](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
 * [ユーザーのオンボーディング エクスペリエンスを計画する](../../design/understand-use-cases.md#plan-the-onboarding-experience)
 * [モバイルでのタブ アプリの配布](../../../tabs/design/tabs-mobile.md#distribution)
+* [収益化されたアプリのテスト プレビュー](prepare/Test-preview-for-monetized-apps.md)

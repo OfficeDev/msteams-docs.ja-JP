@@ -6,33 +6,211 @@ author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: teams 承認 OAuth SSO Azure AD rsc Postman Graph
-ms.openlocfilehash: fe3819b0da9783a6cf3aacac08a6045337e27600
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 8bde324791199d1369c5accf454774cdc1c9a828
+ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212483"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62362929"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>リソース固有の同意のアクセス許可をテストTeams
 
 > [!NOTE]
 > チャット スコープに対するリソース固有の同意は、パブリック開発者 [プレビューでのみ利用](../../resources/dev-preview/developer-preview-intro.md) できます。
 
-リソース固有の同意 (RSC) は、Microsoft Teams と Graph API の統合であり、アプリは API エンドポイントを使用して組織内の特定のリソース (チームまたはチャット) を管理できます。 詳細については、「リソース固有[の同意 (RSC) - Microsoft Teams Graph API 」を参照してください](resource-specific-consent.md)。
+リソース固有の同意 (RSC) は、Microsoft Teams と Graph API の統合であり、アプリは API エンドポイントを使用して組織内の特定のリソース (チームまたはチャット) を管理できます。 詳細については、「リソース固有の[同意 (RSC) - Microsoft Teams Graph参照してください](resource-specific-consent.md)。
 
-> [!NOTE]
-> RSC アクセス許可をテストするには、Teamsアプリ マニフェスト ファイルに、次のフィールドが設定された **webApplicationInfo** キーを含める必要があります。
->
-> - **id**: アプリ ID Azure AD、アプリをポータルに登録 [するをAzure ADしてください](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)。
-> - **resource**: 任意の文字列は、「アプリ マニフェストの更新 [」のTeams参照してください](resource-specific-consent.md#update-your-teams-app-manifest)。
-> - **アプリケーションのアクセス許可**: アプリの RSC アクセス許可については、「リソース固有の [アクセス許可」を参照してください](resource-specific-consent.md#resource-specific-permissions)。
+## <a name="prerequisites"></a>前提条件
 
-## <a name="example-for-a-team"></a>チームの例
+テストする前に、リソース固有の同意のために次のアプリ マニフェストの変更を確認してください。
+
+<br>
+
+<details>
+
+<summary><b>アプリ マニフェスト バージョン 1.12 の RSC アクセス許可</b></summary>
+
+次の [値を使用して、WebApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) キーをアプリ マニフェストに追加します。
+
+|名前| 種類 | 説明|
+|---|---|---|
+|`id` |String |ユーザー Azure ADアプリ ID。 詳細については、「アプリを[ポータルに登録する」をAzure ADしてください](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)。|
+|`resource`|String| このフィールドは RSC で操作を行う必要がありますが、エラー応答を回避するには、値を追加して値を指定する必要があります。任意の文字列が実行します。|
+
+アプリに必要なアクセス許可を指定します。
+
+|名前| 種類 | 説明|
+|---|---|---|
+|`authorization`|オブジェクト|アプリが機能する必要があるアクセス許可の一覧。 詳細については、「承認」を [参照してください](../../resources/schema/manifest-schema.md#authorization)。|
+
+チームの RSC の例
+
 ```json
-"webApplicationInfo":{
-    "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
-    "resource":"https://AnyString",
-    "applicationPermissions":[
+"webApplicationInfo": {
+    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource": "https://RscBasedStoreApp"
+    },
+"authorization": {
+    "permissions": {
+        "resourceSpecific": [
+            {
+                "name": "TeamSettings.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamSettings.ReadWrite.Group",
+                "type": "Application"
+            },
+            {
+                "name": "ChannelSettings.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "ChannelSettings.ReadWrite.Group",
+                "type": "Application"
+            },
+            {
+                "name": "Channel.Create.Group",
+                "type": "Application"
+            },
+            {
+                "name": "Channel.Delete.Group",
+                "type": "Application"
+            },
+            {
+                "name": "ChannelMessage.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsAppInstallation.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Create.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.ReadWrite.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Delete.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamMember.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsActivity.Send.Group",
+                "type": "Application"
+            }
+        ]    
+    }
+}
+```
+
+チャット内の RSC の例
+
+```json
+"webApplicationInfo": {
+    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource": "https://RscBasedStoreApp"
+    },
+"authorization": {
+    "permissions": {
+        "resourceSpecific": [
+            {
+                "name": "ChatSettings.Read.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "ChatSettings.ReadWrite.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "ChatMessage.Read.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "ChatMember.Read.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "Chat.Manage.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Read.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Create.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Delete.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.ReadWrite.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsAppInstallation.Read.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "OnlineMeeting.ReadBasic.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "Calls.AccessMedia.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "Calls.JoinGroupCalls.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsActivity.Send.Chat",
+                "type": "Application"
+            }
+        ]    
+    }
+}
+```
+    
+> [!NOTE]
+> アプリがチームスコープとチャット スコープの両方でのインストールをサポートすることを意図している場合は、チームとチャットの両方のアクセス許可を同じマニフェストで指定できます `authorization`。
+
+</details>
+
+<br>
+
+<details>
+
+<summary><b>アプリ マニフェスト バージョン 1.11 以前の RSC アクセス許可</b></summary>
+
+次の [値を使用して、WebApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) キーをアプリ マニフェストに追加します。
+
+|名前| 種類 | 説明|
+|---|---|---|
+|`id` |String |ユーザー Azure ADアプリ ID。 詳細については、「アプリを[ポータルに登録する」をAzure ADしてください](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)。|
+|`resource`|String| このフィールドは RSC で操作を行う必要がありますが、エラー応答を回避するには、値を追加して値を指定する必要があります。任意の文字列が実行します。|
+|`applicationPermissions`|文字列の配列|アプリの RSC アクセス許可。 詳細については、「リソース固有 [のアクセス許可」を参照してください](resource-specific-consent.md#resource-specific-permissions)。|
+
+チームの RSC の例
+
+```json
+"webApplicationInfo": {
+    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource": "https://RscBasedStoreApp",
+    "applicationPermissions": [
         "TeamSettings.Read.Group",
         "TeamSettings.ReadWrite.Group",
         "ChannelSettings.Read.Group",
@@ -48,15 +226,16 @@ ms.locfileid: "62212483"
         "TeamMember.Read.Group",
         "TeamsActivity.Send.Group"
     ]
-   }
+  }
 ```
 
-## <a name="example-for-a-chat"></a>チャットの例
+チャット内の RSC の例
+
 ```json
-"webApplicationInfo":{
-    "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
-    "resource":"https://AnyString",
-    "applicationPermissions":[
+"webApplicationInfo": {
+    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource": "https://RscBasedStoreApp",
+    "applicationPermissions": [
         "ChatSettings.Read.Chat",
         "ChatSettings.ReadWrite.Chat",
         "ChatMessage.Read.Chat",
@@ -72,16 +251,21 @@ ms.locfileid: "62212483"
         "Calls.JoinGroupCalls.Chat",
         "TeamsActivity.Send.Chat"
     ]
-   }
+  }
 ```
+
+<br>
+
+> [!NOTE]
+> アプリがチームスコープとチャット スコープの両方でのインストールをサポートすることを意図している場合は、チームとチャットの両方のアクセス許可を同じマニフェストで指定できます `applicationPermissions`。
+    
+</details>
 
 > [!IMPORTANT]
 > アプリ マニフェストには、アプリに付与する RSC アクセス許可のみを含める必要があります。
 
->[!NOTE]
->アプリがチームスコープとチャット スコープの両方でのインストールをサポートすることを意図している場合は、チームとチャットの両方のアクセス許可を同じマニフェストで指定できます `applicationPermissions` 。
-
->アプリが通話/メディア API にアクセスすることを意図している場合は `webApplicationInfo.Id` 、Azure Bot Service のAzure ADアプリ ID[である必要があります](/graph/cloud-communications-get-started#register-a-bot)。
+> [!NOTE]
+> アプリが通話/メディア API `webApplicationInfo.Id` にアクセスすることを意図している場合は、Azure Bot Service のAzure ADアプリ ID [である必要があります](/graph/cloud-communications-get-started#register-a-bot)。
 
 ## <a name="test-added-rsc-permissions-to-a-team-using-the-postman-app"></a>Postman アプリを使用してチームに追加された RSC アクセス許可をテストする
 
@@ -89,10 +273,10 @@ RSC アクセス許可が API 要求ペイロードによって付与されて�
 
 * `azureADAppId`: アプリのAzure AD ID です。
 * `azureADAppSecret`: アプリAzure ADパスワード。
-* `token_scope`: トークンを取得するには、スコープが必要です。 に値を設定します https://graph.microsoft.com/.default 。
+* `token_scope`: トークンを取得するには、スコープが必要です。 に値を設定します https://graph.microsoft.com/.default。
 * `teamGroupId`: 次のように、チーム グループ ID をクライアントTeams取得できます。
 
-    1. クライアントで、Teams **バーから**[Teams] を選択します。
+    1. クライアントで、**Teamsバーから** [Teams] を選択します。
     2. ドロップダウン メニューからアプリがインストールされているチームを選択します。
     3. [その他 **のオプション]** アイコンを選択します (&#8943;)。
     4. [チーム **へのリンクを取得する] を選択します**。 
@@ -104,7 +288,7 @@ RSC アクセス許可が API 要求ペイロードによって付与されて�
 
 * `azureADAppId`: アプリのAzure AD ID です。
 * `azureADAppSecret`: アプリAzure ADパスワード。
-* `token_scope`: トークンを取得するには、スコープが必要です。 に値を設定します https://graph.microsoft.com/.default 。
+* `token_scope`: トークンを取得するには、スコープが必要です。 に値を設定します https://graph.microsoft.com/.default。
 * `tenantId`: テナントの名前Azure ADオブジェクト ID です。
 * `chatId`: 次のように、Web クライアントからチャット スレッド id をTeams *取得* できます。
 
@@ -116,9 +300,9 @@ RSC アクセス許可が API 要求ペイロードによって付与されて�
 ### <a name="use-postman"></a>Postman の使用
 
 1. Postman [アプリを開](https://www.postman.com) きます。
-2. [**ファイル**  >  **インポート ファイル**  >  **] を選択** して、更新された JSON ファイルを環境からアップロードします。  
+2. [**FileImportImport** >  >  **ファイル] を選択** して、更新された JSON ファイルを環境からアップロードします。  
 3. [コレクション **] タブを選択** します。 
-4. テスト RSC の横にあるシェブロンを選択して詳細ビューを **>** 展開し、API 要求を表示します。
+4. テスト **RSC** の横にある **>** シェブロンを選択して詳細ビューを展開し、API 要求を表示します。
 
 API 呼び出しごとにアクセス許可コレクション全体を実行します。 アプリ マニフェストで指定したアクセス許可は成功する必要があります。指定されていないアクセス許可は HTTP 403 状態コードで失敗する必要があります。 すべての応答状態コードを確認して、アプリ内の RSC アクセス許可の動作が期待を満たしている状態を確認します。
 
@@ -130,7 +314,7 @@ API 呼び出しごとにアクセス許可コレクション全体を実行し�
 1. 特定のリソースからアプリをアンインストールします。
 2. チャットまたはチームの手順に従います。 
     1. [Postman を使用してチームに追加された RSC アクセス許可をテストします](#test-added-rsc-permissions-to-a-team-using-the-postman-app)。
-    2. [Postman を使用してチャットに追加された RSC アクセス許可をテストします](#test-added-rsc-permissions-to-a-chat-using-the-postman-app)。
+    2. [Postman を使用して、チャットに追加された RSC アクセス許可をテストします](#test-added-rsc-permissions-to-a-chat-using-the-postman-app)。
 3. すべての応答状態コードを確認して、HTTP 403 状態コードで特定の API 呼び出し **が失敗したと確認します**。
 
 ## <a name="see-also"></a>関連項目

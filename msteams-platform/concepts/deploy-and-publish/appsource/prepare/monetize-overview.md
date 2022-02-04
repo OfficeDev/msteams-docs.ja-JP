@@ -5,14 +5,14 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
-ms.openlocfilehash: 545336a058e8b3d11da5b4ed737e0eb8f1cf2aa6
-ms.sourcegitcommit: 58a24422bb04a529b6629a56803ed2efabc17cb1
+ms.openlocfilehash: 8bf223dbb2ff63eca1ae466354c854af6466e523
+ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "62323266"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62362901"
 ---
-# <a name="monetize-your-app"></a>アプリの収益化
+# <a name="monetize-your-app"></a>アプリを収益化する
 
 Microsoft Teamsストアには、アプリを収益化し、ユーザーと関わり合って顧客を獲得できる機能が用意されています。 このセクションのトピックでは、これらの機能をアプリに組み込む方法について説明します。
 
@@ -20,7 +20,7 @@ Microsoft Teamsストアには、アプリを収益化し、ユーザーと関�
 
 :::row:::
     :::column:::
-        ![アプリの価格を請求する](~/assets/images/saas-offer/pricing-charge-price.png)
+        :::image type="content" source="../../../../assets/images/saas-offer/pricing-charge-price.png" alt-text="アプリの価格を請求する":::
     :::column-end:::
     :::column span="2":::
 
@@ -33,7 +33,7 @@ Microsoft Teamsストアには、アプリを収益化し、ユーザーと関�
 
 :::row:::
     :::column:::
-![無料試用版](~/assets/images/saas-offer/pricing-free-trial.png)
+     :::image type="content" source="../../../../assets/images/saas-offer/pricing-free-trial.png" alt-text="無料試用版":::
     :::column-end:::
     :::column span="2":::
 
@@ -41,6 +41,33 @@ Microsoft Teamsストアには、アプリを収益化し、ユーザーと関�
 
 アプリの無料試用版を提供して、より多くのユーザーに試用を提供できます。 顧客にフル バージョンの購入を許可するには、試用版の機能を制限するか (たとえば、1 週間の限られた数の応答のみを含む) か、試用版の期間を指定できます。
 
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetize-app-image.png" alt-text="テスト プレビュー SaaS オファー":::
+    :::column-end:::
+    :::column span="2":::
+
+**収益化されたアプリのテスト プレビュー**
+
+サービスとしての取引可能なソフトウェア (SaaS) オファーを使用すると、公開する前に、Teams で収益化されたアプリのエンドツーエンドの購入エクスペリエンスをテストできます。
+
+[収益化されたアプリのテスト プレビュー](Test-preview-for-monetized-apps.md)
+
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column:::
+        ![アプリ内購入](~/assets/images/saas-offer/pricing-in-app-purchases.png)
+    :::column-end:::
+    :::column span="2":::
+**アプリ内購入**
+
+アプリの価格を請求する場合でも、無料で提供する場合でも、アプリ内購入を使用して継続的な収益源を提供できます。 アプリ内購入を使用して、お客様が無料版から有料版のアプリにアップグレードできます。
+
+[アプリ内購入の使用](~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
     :::column-end:::
 :::row-end:::
 

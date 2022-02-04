@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: teams 承認 OAuth SSO Azure AD rsc Graph
-ms.openlocfilehash: 6a7c55cefa77d67ff41f8e8154ac05aacb5efe5b
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 25b8a8b4ab04f2ff3a574a1e6c4422b38aaa977d
+ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212364"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62362754"
 ---
 # <a name="resource-specific-consent"></a>リソース固有の同意
 
@@ -71,18 +71,18 @@ ms.locfileid: "62212364"
 詳細については、「チャット リソース [固有の同意のアクセス許可」を参照してください](/graph/permissions-reference#chat-resource-specific-consent-permissions)。
 
 > [!NOTE]
-> リソース固有のアクセス許可は、Teams クライアントにインストールされている Teams アプリでのみ使用できます。現在は Azure Active Director ポータルの一部ではありません。
+> リソース固有のアクセス許可は、Teams クライアントにインストールされている Teams アプリでのみ使用できます。現在は Azure Active Directory (AAD) ポータルの一部ではありません。
 
 ## <a name="enable-rsc-in-your-application"></a>アプリケーションで RSC を有効にする
 
-1. [ポータルで同意設定をAzure ADします](#configure-consent-settings-in-the-azure-ad-portal)。
+1. [ポータルで同意の設定をAzure ADします](#configure-consent-settings-in-the-azure-ad-portal)。
     1. [チーム内の RSC のグループ所有者の同意設定を構成します](#configure-group-owner-consent-settings-for-rsc-in-a-team)。
     1. [チャットで RSC のユーザー同意設定を構成します](#configure-user-consent-settings-for-rsc-in-a-chat)。
 1. [ポータルを使用してアプリMicrosoft ID プラットフォームをAzure ADします](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)。
 1. [ポータルでアプリケーションのアクセス許可Azure ADします](#review-your-application-permissions-in-the-azure-ad-portal)。
 1. [ID プラットフォームからアクセス トークンを取得します](#obtain-an-access-token-from-the-microsoft-identity-platform)。
 1. [アプリ マニフェストTeams更新します](#update-your-teams-app-manifest)。
-1. [アプリをアプリに直接インストールTeams。](#sideload-your-app-in-teams)
+1. [アプリをアプリに直接インストールTeams](#sideload-your-app-in-teams)。
 1. [アプリで追加された RSC アクセス許可を確認します](#check-your-app-for-added-rsc-permissions)。
     1. [チームに追加された RSC アクセス許可をアプリで確認します](#check-your-app-for-added-rsc-permissions-in-a-team)。
     1. [チャットで追加された RSC アクセス許可をアプリで確認します](#check-your-app-for-added-rsc-permissions-in-a-chat)。
@@ -93,9 +93,9 @@ ms.locfileid: "62212364"
 
 Azure portal 内でグループ所有者 [の同意を直接](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal) 有効または無効にできます。
 
-1. グローバル管理者または [会社管理者として Azure](https://portal.azure.com) portal [にサインインします](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true)。
-1. [アプリケーション **Azure Active Directory Enterprise** とアクセス許可ユーザーの同意  >    >  **設定**  >  [**] を選択します**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings)。
-1. データにアクセスするアプリに対するグループ所有者の同意というラベルが付いたコントロールを使用して、ユーザーの同意を有効 **、無効、または制限します**。 既定値は[ **すべてのグループ所有者に対するグループ所有者の同意を許可する] です**。 チームの所有者が RSC を使用してアプリをインストールするには、そのユーザーに対してグループ所有者の同意を有効にする必要があります。
+1. グローバル管理者または [会社](https://portal.azure.com) の管理者として Azure [portal にサインインします](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true)。
+1. [**アプリケーションAzure Active Directory** >  **Enterprise Consent** >  **と permissionsUser** >  [**の同意設定] を選択します**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings)。
+1. データにアクセスするアプリに対するグループ所有者の同意というラベルの付いたコントロールを使用して、ユーザーの同意 **を有効、無効、または制限します**。 既定値は、[ **すべてのグループ所有者に対するグループ所有者の同意を許可する] です**。 チームの所有者が RSC を使用してアプリをインストールするには、そのユーザーに対してグループ所有者の同意を有効にする必要があります。
 
     ![Azure RSC チーム構成](../../assets/images/azure-rsc-team-configuration.png)
 
@@ -105,13 +105,13 @@ Azure portal 内でグループ所有者 [の同意を直接](/azure/active-dire
 
 Azure portal 内でユーザーの [同意を直接](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) 有効または無効にできます。
 
-1. グローバル管理者または [会社管理者として Azure](https://portal.azure.com) portal [にサインインします](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true)。
-1. [アプリケーション **Azure Active Directory Enterprise** とアクセス許可ユーザーの同意  >    >  **設定**  >  [**] を選択します**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings)。
+1. グローバル管理者または [会社](https://portal.azure.com) の管理者として Azure [portal にサインインします](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true)。
+1. [**アプリケーションAzure Active Directory** >  **Enterprise Consent** >  **と permissionsUser** >  [**の同意設定] を選択します**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings)。
 1. [アプリケーションに対するユーザーの同意] というラベルの付いたコントロールを使用して、ユーザーの同意を有効 **、無効、または制限します**。 既定値は [ **アプリに対するユーザーの同意を許可する] です**。 チャット メンバーが RSC を使用してアプリをインストールするには、そのユーザーに対してユーザーの同意を有効にする必要があります。
 
     ![Azure RSC チャット構成](../../assets/images/azure-rsc-chat-configuration.png)
 
-さらに、PowerShell を使用してユーザーの同意を有効または無効にしたり [、PowerShell](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-powershell)を使用してユーザーの同意を構成するで説明されている手順に従います。
+さらに、PowerShell を使用してユーザーの同意を有効または無効にしたり、PowerShell を使用してユーザーの同意を構成するで説明されている [手順に従います](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-powershell)。
 
 ## <a name="register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal"></a>ポータルを使用してアプリMicrosoft ID プラットフォームをAzure ADする
 
@@ -122,7 +122,7 @@ Azure portal 内でユーザーの [同意を直接](/azure/active-directory/man
 
 ## <a name="review-your-application-permissions-in-the-azure-ad-portal"></a>ポータルでアプリケーションのアクセス許可をAzure ADする
 
-1. [ホーム アプリの **登録**  >  **] ページに移動し**、RSC アプリを選択します。
+1. [HomeApp 登録 **] ページ** > **に移動し** 、RSC アプリを選択します。
 1. 左側 **のウィンドウから [API の** アクセス許可] を選択し、アプリの [構成済み **アクセス許可]** の一覧を表示します。 アプリで RSC 呼び出しGraph場合は、そのページのすべてのアクセス許可を削除します。 アプリで RSC 以外の呼び出しを行う場合は、必要に応じてこれらのアクセス許可を保持します。
 
 > [!IMPORTANT]
@@ -135,14 +135,195 @@ API 呼びGraphするには、ID プラットフォームからアプリのア�
 ID プラットフォームからアクセス トークンを取得するには、Azure AD登録プロセスから次の値が必要です。
 
 - アプリ **登録ポータルによって** 割り当てられたアプリケーション ID。 アプリがシングル サインオン (SSO) をサポートしている場合は、アプリと SSO に同じアプリケーション ID を使用する必要があります。
-- クライアント **シークレット/パスワード、** または証明書である公開キーまたは秘密キー **のペア** です。 ネイティブ アプリの場合、これは必須ではありません。
+- クライアント **シークレット/パスワード、** または証明書である公開キーまたは秘密 **キーのペア**。 ネイティブ アプリの場合、これは必須ではありません。
 - アプリ **のリダイレクト URI** または返信 URL で、アプリから応答を受信Azure AD。
 
 詳細については、「ユーザーに [代わってアクセス権を取得](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token&preserve-view=true) する」および「ユーザーなしで [アクセスを取得する」を参照してください](/graph/auth-v2-service)。
 
 ## <a name="update-your-teams-app-manifest"></a>アプリ マニフェストTeams更新する
 
-RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣言されます。 次の [値を使用して、WebApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) キーをアプリ マニフェストに追加します。
+RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣言されます。 
+
+> [!IMPORTANT]
+> RSC 以外のアクセス許可は Azure portal に格納されます。 アプリ マニフェストに追加しません。
+
+### <a name="manifest-changes-for-resource-specific-consent"></a>リソース固有の同意のためのマニフェストの変更
+
+<br>
+
+<details>
+
+<summary><b>アプリ マニフェスト バージョン 1.12 の RSC アクセス許可</b></summary>
+
+次の [値を使用して、WebApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) キーをアプリ マニフェストに追加します。
+
+|名前| 種類 | 説明|
+|---|---|---|
+|`id` |String |ユーザー Azure ADアプリ ID。 詳細については、「アプリを[ポータルに登録する」をAzure ADしてください](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)。|
+|`resource`|String| このフィールドは RSC で操作を行う必要がありますが、エラー応答を回避するには、値を追加して値を指定する必要があります。任意の文字列が実行します。|
+
+アプリに必要なアクセス許可を指定します。
+
+|名前| 種類 | 説明|
+|---|---|---|
+|`authorization`|オブジェクト|アプリが機能する必要があるアクセス許可の一覧。 詳細については、「[マニフェストでのリンク承認のプレースホルダー] 」を参照してください。
+
+チームの RSC の例
+
+```json
+"webApplicationInfo": {
+    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource": "https://RscBasedStoreApp"
+    },
+"authorization": {
+    "permissions": {
+        "resourceSpecific": [
+            {
+                "name": "TeamSettings.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamSettings.ReadWrite.Group",
+                "type": "Application"
+            },
+            {
+                "name": "ChannelSettings.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "ChannelSettings.ReadWrite.Group",
+                "type": "Application"
+            },
+            {
+                "name": "Channel.Create.Group",
+                "type": "Application"
+            },
+            {
+                "name": "Channel.Delete.Group",
+                "type": "Application"
+            },
+            {
+                "name": "ChannelMessage.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsAppInstallation.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Create.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.ReadWrite.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Delete.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamMember.Read.Group",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsActivity.Send.Group",
+                "type": "Application"
+            }
+        ]    
+    }
+}
+```
+
+チャット内の RSC の例
+
+```json
+"webApplicationInfo": {
+    "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+    "resource": "https://RscBasedStoreApp"
+    },
+"authorization": {
+    "permissions": {
+        "resourceSpecific": [
+            {
+                "name": "ChatSettings.Read.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "ChatSettings.ReadWrite.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "ChatMessage.Read.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "ChatMember.Read.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "Chat.Manage.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Read.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Create.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.Delete.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsTab.ReadWrite.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsAppInstallation.Read.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "OnlineMeeting.ReadBasic.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "Calls.AccessMedia.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "Calls.JoinGroupCalls.Chat",
+                "type": "Application"
+            },
+            {
+                "name": "TeamsActivity.Send.Chat",
+                "type": "Application"
+            }
+        ]    
+    }
+}
+```
+
+> [!NOTE]
+> アプリがチームスコープとチャット スコープの両方でのインストールをサポートすることを意図している場合は、チームとチャットの両方のアクセス許可を同じマニフェストで指定できます `authorization`。
+    
+<br>
+
+</details>
+
+<br>
+
+<details>
+
+<summary><b>アプリ マニフェスト バージョン 1.11 以前の RSC アクセス許可</b></summary>
+
+次の [値を使用して、WebApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) キーをアプリ マニフェストに追加します。
 
 |名前| 種類 | 説明|
 |---|---|---|
@@ -150,12 +331,7 @@ RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣
 |`resource`|String| このフィールドは RSC で操作を行う必要がありますが、エラー応答を回避するには、値を追加して値を指定する必要があります。任意の文字列が実行します。|
 |`applicationPermissions`|文字列の配列|アプリの RSC アクセス許可。 詳細については、「リソース固有 [のアクセス許可」を参照してください](resource-specific-consent.md#resource-specific-permissions)。|
 
->
-> [!IMPORTANT]
-> RSC 以外のアクセス許可は Azure portal に格納されます。 アプリ マニフェストに追加しません。
->
-
-### <a name="example-for-rsc-in-a-team"></a>チームの RSC の例
+チームの RSC の例
 
 ```json
 "webApplicationInfo": {
@@ -180,7 +356,7 @@ RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣
   }
 ```
 
-### <a name="example-for-rsc-in-a-chat"></a>チャット内の RSC の例
+チャット内の RSC の例
 
 ```json
 "webApplicationInfo": {
@@ -206,7 +382,11 @@ RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣
 ```
 
 > [!NOTE]
-> アプリがチームスコープとチャット スコープの両方でのインストールをサポートすることを意図している場合は、チームとチャットの両方のアクセス許可を同じマニフェストで指定できます `applicationPermissions` 。
+> アプリがチームスコープとチャット スコープの両方でのインストールをサポートすることを意図している場合は、チームとチャットの両方のアクセス許可を同じマニフェストで指定できます `applicationPermissions`。
+    
+<br>
+
+</details>
 
 ## <a name="sideload-your-app-in-teams"></a>Teams でアプリをサイドロード
 
@@ -215,20 +395,20 @@ RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣
 ## <a name="check-your-app-for-added-rsc-permissions"></a>アプリで追加された RSC アクセス許可を確認する
 
 > [!IMPORTANT]
-> RSC アクセス許可は、ユーザーに属性付けされません。 呼び出しは、ユーザーが委任したアクセス許可ではなく、アプリのアクセス許可を使用して行います。 アプリは、タブの削除など、ユーザーが実行できない操作を実行できます。RSC API 呼び出しを行う前に、チーム所有者またはチャット所有者の使用意図を確認する必要があります。 詳細については、「API の概要[Microsoft Teamsを参照してください](/graph/teams-concept-overview)。
+> RSC アクセス許可は、ユーザーに属性付けされません。 呼び出しは、ユーザーが委任したアクセス許可ではなく、アプリのアクセス許可を使用して行います。 アプリは、タブの削除など、ユーザーが実行できない操作を実行できます。RSC API 呼び出しを行う前に、チーム所有者またはチャット所有者の使用意図を確認する必要があります。 詳細については、「API の概要Microsoft Teams[参照してください](/graph/teams-concept-overview)。
 
-アプリがリソースにインストールされた後、Graph[エクスプローラー](https://developer.microsoft.com/graph/graph-explorer)を使用して、リソース内のアプリに付与されたアクセス許可を表示できます。
+アプリがリソースにインストールされた後、Graph [エクスプローラー](https://developer.microsoft.com/graph/graph-explorer)を使用して、リソース内のアプリに付与されたアクセス許可を表示できます。
 
 ### <a name="check-your-app-for-added-rsc-permissions-in-a-team"></a>チームに追加された RSC アクセス許可をアプリで確認する
 
-1. チームの **groupId** を次のTeams。
+1. チームの **groupId を次** のTeams。
 1. [Teams] で、左端 **Teams** ウィンドウから [プロパティ] を選択します。
 1. アプリをインストールするチームを選択します。
 1. そのチームの省略 &#x25CF;&#x25CF;&#x25CF; を選択します。
 1. [チーム **] ドロップダウン メニューから [チームへの** リンクを取得する] を選択します。
 1. [チームへのリンク **を取得する** ] ポップアップ ダイアログ ボックスから groupId **値をコピー** して保存します。
 1. エクスプローラーにサインイン **Graphします**。
-1. このエンドポイント **に GET** 呼び出し `https://graph.microsoft.com/beta/teams/{teamGroupId}/permissionGrants` を行います。 応答 `clientAppId` のフィールドは、アプリ マニフェスト `webApplicationInfo.id` で指定されたTeamsマップされます。
+1. このエンドポイント **に GET** 呼び出しを行います。 `https://graph.microsoft.com/beta/teams/{teamGroupId}/permissionGrants` 応答`clientAppId`のフィールドは、アプリ マニフェストで`webApplicationInfo.id`指定されたTeamsマップされます。
 
     ![Graph RSC アクセス許可の GET 呼び出しに対するエクスプローラーの応答](../../assets/images/team-graph-permissions.png)
 
@@ -237,14 +417,14 @@ RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣
 ### <a name="check-your-app-for-added-rsc-permissions-in-a-chat"></a>チャットで追加された RSC アクセス許可をアプリで確認する
 
 1. Web クライアントからチャット スレッド ID を *Teamsします。*
-1. Web クライアントTeams、左端 **のウィンドウから**[チャット] を選択します。
+1. Web クライアントTeams、左端 **のウィンドウから** [チャット] を選択します。
 1. アプリがインストールされているチャットをドロップダウン メニューから選択します。
 1. Web URL をコピーし、文字列からチャット スレッド ID を保存します。
 
     ![Web URL からのチャット スレッド ID](../../assets/images/chat-thread-id.png)
 
 1. エクスプローラーにサインイン **Graphします**。
-1. 次の **エンドポイントに対** して GET 呼び出しを行います `https://graph.microsoft.com/beta/chats/{chatId}/permissionGrants` 。 応答 `clientAppId` のフィールドは、アプリ マニフェスト `webApplicationInfo.id` で指定されたTeamsマップされます。
+1. 次の **エンドポイントに対して GET** 呼び出しを行います。 `https://graph.microsoft.com/beta/chats/{chatId}/permissionGrants` 応答`clientAppId`のフィールドは、アプリ マニフェストで`webApplicationInfo.id`指定されたTeamsマップされます。
 
     ![Graph RSC アクセス許可の GET 呼び出しに対するエクスプローラーの応答](../../assets/images/chat-graph-permissions.png)
 

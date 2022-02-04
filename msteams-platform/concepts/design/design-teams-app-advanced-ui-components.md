@@ -5,20 +5,20 @@ description: Breadcrumbs、Teams、ステージ ビューなどの UI コンポ�
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: d42205ff7d62d1c65956baed4f7841c8fe70b2e5
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: dc3cb279ada3f130aeb6cd2626e6a36fcc8ecdc9
+ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889259"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "62362915"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>高度な UI Microsoft Teamsを使用したアプリの設計
 
-次のコンポーネントは、ナビゲーションなどの一[](~/concepts/design/design-teams-app-basic-ui-components.md)般的な設計状況で使用Teams UI コンポーネントの組み合わせです。
+次のコンポーネントは、ナビゲーションなどの一[](~/concepts/design/design-teams-app-basic-ui-components.md)般的な設計状況で使用できる基本的Teams UI コンポーネントの組み合わせです。
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-UI に<a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a>キットには、Microsoft Teamsアプリを構築するために特別に設計されたコンポーネントとTeamsがあります。 UI キットでは、ここに示すコンポーネントを直接デザインに挿入し、各コンポーネントの使い方の例を確認できます。
+UI に<a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a> キットには、Microsoft Teamsアプリを構築するために特別に設計されたコンポーネントとパターンTeamsがあります。 UI キットでは、ここに示すコンポーネントを直接デザインに挿入し、各コンポーネントの使い方の例を確認できます。
 
 > [!div class="nextstepaction"]
 > [Microsoft Teams UI Kit (Figma) を入手する](https://www.figma.com/community/file/916836509871353159)
@@ -32,7 +32,7 @@ Breadcrumbs は、アプリの階層を伝えるナビゲーション支援で�
 * コミュニケーション階層
 * ナビゲーション
 
-### <a name="mobile"></a>モバイル
+### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="例は、モバイル上のパンくずテンプレートを示しています。" border="false":::
 
@@ -49,7 +49,7 @@ Breadcrumbs は、アプリの階層を伝えるナビゲーション支援で�
 * [ページ] タブ内の複数Teams参照します。
 * 複雑なアプリを複数のページに分割します。
 
-### <a name="mobile"></a>モバイル
+### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="例は、モバイル上の左ナビゲーション テンプレートを示しています。" border="false":::
 
@@ -61,13 +61,15 @@ Breadcrumbs は、アプリの階層を伝えるナビゲーション支援で�
 
 通知バーは、ユーザーが即座にアクションを実行する必要が生じない、簡潔で重要なメッセージを表示するための専用の領域です。 特定の背景色とアイコンは、特定の種類のメッセージに関連付けられる (以下を参照)。
 
+通知バーは、UI 通知コンポーネントを使用Fluent[実装](https://fluentsite.z22.web.core.windows.net/0.59.0/components/alert/definition)できます。
+
 ### <a name="top-use-cases"></a>上位の使用例
 
 * 重大なメッセージ、エラー、および警告
 * 成功メッセージ
 * 情報メッセージまたはプロモーション メッセージ
 
-### <a name="mobile"></a>モバイル
+### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="例では、モバイルの通知バー UI テンプレートを表示します。" border="false":::
 
@@ -86,7 +88,7 @@ Breadcrumbs は、アプリの階層を伝えるナビゲーション支援で�
 * 別のアプリまたはブラウザーではなく、Teams内の大きなサーフェスにコンテンツを表示する
 * スポットライト メディアまたは他のリッチ コンテンツ
 
-### <a name="mobile"></a>モバイル
+### <a name="mobile"></a>Mobile
 
 アプリは、アダプティブ カード、共有リンク、またはビジュアル コンポーネント (グラフなど) からステージを起動できます。
 
@@ -106,7 +108,7 @@ Breadcrumbs は、アプリの階層を伝えるナビゲーション支援で�
 * コンテキスト フィルターと検索
 * ナビゲーションとパンくず
 
-### <a name="mobile"></a>モバイル
+### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="例は、モバイルのツール バー テンプレートを示しています。" border="false":::
 

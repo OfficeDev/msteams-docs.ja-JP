@@ -12,29 +12,35 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: de250e7f4e744b293abce91998fa7b65ab22c215
-  ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+  ms.openlocfilehash: 7fcabd8bd0eda4bb39718d250e39e2bc228ab191
+  ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/19/2022
-  ms.locfileid: "62081045"
+  ms.lasthandoff: 02/03/2022
+  ms.locfileid: "62362733"
 landingContent:
 - title: 最新の情報を確認する
   linkLists:
   - linkListType: concept
     links:
-    - text: アダプティブ カード フォームの完了フィードバック
+    - text: アプリ マニフェスト スキーマ バージョン 1.12
+      url: ~/resources/schema/manifest-schema.md
+    - text: パブリック開発者プレビュー マニフェスト スキーマ
+      url: ~/resources/schema/manifest-schema-dev-preview.md
+    - text: 会議ステージを共有する対話型モード
+      url: ~/apps-in-teams-meetings/API-references.md
+    - text: 収益化されたアプリのテスト プレビュー
+      url: ~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
+    - text: アプリの収益化のためのアプリ内購入フロー
+      url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
+    - text: アダプティブ カードは、完了フィードバックを形成します
       url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
-    - text: アダプティブ カードでのユーザー ピッカー
+    - text: アダプティブ カードのユーザー ピッカー
       url: ~/task-modules-and-cards/cards/people-picker.md
     - text: Teams ToolkitのVisual Studio Code (プレビュー)
       url: ~/toolkit/teams-toolkit-fundamentals.md
-    - text: 新しいストア アイコンの導入
-      url: ~/concepts/design/personal-apps.md
     - text: 個人用タブとメッセージング拡張機能は、OutlookとOfficeで実行されます (プレビュー)
       url: ~/m365-apps/overview.md
-    - text: アダプティブ カードに先行入力検索
-      url: ~/task-modules-and-cards/cards/dynamic-search.md
 - title: すべての時間のお気に入り
   linkLists:
   - linkListType: concept
@@ -43,7 +49,7 @@ landingContent:
       url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
     - text: Microsoft Teams ストア検証ガイドライン
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
-    - text: トランザクション可能な SaaS Teamsでアプリを収益化する
+    - text: 取引可能な SaaS プランを使用して Teams アプリを収益化する
       url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
     - text: 低コード アプリの詳細については、Teams
       url: ~/samples/teams-low-code-solutions.md
@@ -81,7 +87,7 @@ landingContent:
       url: ~/sbs-meetings-stage-view.yml
     - text: 会議でコンテンツ バブル ボットを操作する
       url: ~/sbs-meeting-content-bubble.yml
-- title: 開始する
+- title: 概要
   linkLists:
   - linkListType: get-started
     links:
