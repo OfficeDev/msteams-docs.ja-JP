@@ -5,13 +5,8 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal
-ms.openlocfilehash: 455809e64a934384d28e00bdf721ae8c66cb7d19
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62363471"
 ---
+
 # <a name="in-app-purchases"></a>アプリ内購入
 
 Microsoft Teams無料アプリから有料アプリへのアップグレードにアプリ内購入を実装するために使用できる API をTeamsします。 アプリ内購入では、アプリ内からユーザーを無料プランから有料プランに直接変換できます。
@@ -106,6 +101,10 @@ Microsoft Teams無料アプリから有料アプリへのアップグレード�
 
     :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="サブスクリプションのランディング ページ。" border="true":::
 
+## <a name="next-step"></a>次のステップ
+
+> [!div class="nextstepaction"]
+> [収益化されたアプリのテスト プレビュー](~/concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)
 
 ## <a name="see-also"></a>関連項目
 

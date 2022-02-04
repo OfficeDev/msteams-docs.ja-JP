@@ -6,13 +6,8 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams apps 会議 ユーザー参加者ロール API ユーザー コンテキスト通知シグナル クエリ
-ms.openlocfilehash: 2335233db1c973ed134968c7192a32d4bf9b5a34
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362726"
 ---
+
 # <a name="meeting-apps-api-references"></a>会議アプリ API リファレンス
 
 会議の機能拡張は、会議のエクスペリエンスを向上させる API を提供します。 リストされている API の助けを借りて、次の操作を実行できます。
@@ -28,12 +23,12 @@ ms.locfileid: "62362726"
 |[**ユーザー コンテキストの取得**](#get-user-context-api)| コンテキスト情報を取得して、関連するコンテンツを [ページ] タブTeams表示します。| MSTC SDK|
 |[**参加者を取得する**](#get-participant-api)| 会議 ID と参加者 ID で参加者情報を取得します。 |MSBF SDK|
 |[**通知信号の送信**](#send-notification-signal-api)| ユーザーボット チャット用の既存の会話通知 API を使用して会議信号を提供し、会議中のダイアログ ボックスを表示するユーザーアクションを通知できます。 |MSBF SDK|
-|[**会議の詳細を取得する**](#get-meeting-details-api)| 会議の静的メタデータを取得します。 |ボット SDK |
+|[**会議の詳細を取得する**](#get-meeting-details-api)| 会議の静的メタデータを取得します。 |MSBF SDK |
 |[**リアルタイムのキャプションを送信する**](#send-real-time-captions-api)| 進行中の会議にリアルタイムのキャプションを送信します。 |MSTC SDK|
 |[**アプリのコンテンツをステージに共有する**](#share-app-content-to-stage-api)| 会議のアプリ側パネルから、アプリの特定の部分を会議ステージに共有します。 |MSTC SDK|
 |[**アプリ コンテンツ ステージの共有状態を取得する**](#get-app-content-stage-sharing-state-api)| 会議ステージでアプリの共有状態に関する情報を取得します。 |MSTC SDK|
 |[**アプリ コンテンツ ステージ共有機能の取得**](#get-app-content-stage-sharing-capabilities-api)| 会議ステージに共有するアプリの機能を取得します。 |MSTC SDK|
-|[**会議イベントのリアルタイムTeams取得**](#get-real-time-teams-meeting-events-api)|実際の開始時刻や終了時刻など、リアルタイムの会議イベントをフェッチします。| ボット SDK|
+|[**会議イベントのリアルタイムTeams取得**](#get-real-time-teams-meeting-events-api)|実際の開始時刻や終了時刻など、リアルタイムの会議イベントをフェッチします。| MSBF SDK|
 
 ## <a name="get-user-context-api"></a>ユーザー コンテキスト API の取得
 
@@ -427,7 +422,7 @@ API `shareAppContentToStage` を使用すると、アプリの特定の部分を
 
 ### <a name="prerequisite"></a>前提条件
 
-API を使用するには `shareAppContentToStage` 、RSC アクセス許可を取得する必要があります。 アプリ マニフェストで、プロパティとフィールド`authorization`を`name``type`構成`resourceSpecific`します。 次に例を示します。
+API を使用するには `shareAppContentToStage` 、RSC アクセス許可を取得する必要があります。 アプリ マニフェストで、プロパティとフィールド`authorization`を`name``type`構成`resourceSpecific`します。 例:
 
 ```json
 "authorization": {
