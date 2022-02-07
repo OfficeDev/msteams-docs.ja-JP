@@ -27,7 +27,7 @@ keywords: teams apps 会議 ユーザー参加者ロール API ユーザー コ�
 |[**リアルタイムのキャプションを送信する**](#send-real-time-captions-api)| 進行中の会議にリアルタイムのキャプションを送信します。 |MSTC SDK|
 |[**アプリのコンテンツをステージに共有する**](#share-app-content-to-stage-api)| 会議のアプリ側パネルから、アプリの特定の部分を会議ステージに共有します。 |MSTC SDK|
 |[**アプリ コンテンツ ステージの共有状態を取得する**](#get-app-content-stage-sharing-state-api)| 会議ステージでアプリの共有状態に関する情報を取得します。 |MSTC SDK|
-|[**アプリ コンテンツ ステージ共有機能の取得**](#get-app-content-stage-sharing-capabilities-api)| 会議ステージに共有するアプリの機能を取得します。 |MSTC SDK|
+|[**アプリ コンテンツ ステージ共有機能の取得**](#get-app-content-stage-sharing-capabilities-api)| 会議ステージに共有するアプリの機能をフェッチします。 |MSTC SDK|
 |[**会議イベントのリアルタイムTeams取得**](#get-real-time-teams-meeting-events-api)|実際の開始時刻や終了時刻など、リアルタイムの会議イベントをフェッチします。| MSBF SDK|
 
 ## <a name="get-user-context-api"></a>ユーザー コンテキスト API の取得
@@ -360,7 +360,7 @@ GET /v1/meetings/{meetingId}
 } 
 ```
 
-## <a name="send-real-time-captions-api"></a>リアルタイムキャプション API の送信
+## <a name="send-real-time-captions-api"></a>リアルタイム キャプション API を送信する
 
 送信リアルタイム キャプション API は、Microsoft Teams 通信アクセスリアルタイム変換 (CART) キャプション、人間型のクローズド キャプションの POST エンドポイントを公開します。 このエンドポイントに送信されるテキスト コンテンツは、キャプションが有効になっているときに、Microsoft Teams会議のエンド ユーザーに表示されます。
 
@@ -422,7 +422,7 @@ API `shareAppContentToStage` を使用すると、アプリの特定の部分を
 
 ### <a name="prerequisite"></a>前提条件
 
-API を使用するには `shareAppContentToStage` 、RSC アクセス許可を取得する必要があります。 アプリ マニフェストで、プロパティとフィールド`authorization`を`name``type`構成`resourceSpecific`します。 例:
+API を使用するには `shareAppContentToStage` 、RSC アクセス許可を取得する必要があります。 アプリ マニフェストで、プロパティとフィールド`authorization`を`name``type`構成`resourceSpecific`します。 次に例を示します。
 
 ```json
 "authorization": {
@@ -753,7 +753,7 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 * [Teamsの認証フロー](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Teams 会議用アプリ](teams-apps-in-meetings.md)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [会議で使用するアプリを有効Teamsする](enable-and-configure-your-app-for-teams-meetings.md)

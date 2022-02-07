@@ -6,13 +6,8 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: d0ec446b51363bbbe4c3322ec1d840ad4068ff74
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768372"
 ---
+
 # <a name="teamsfx-sdk-for-typescript-or-javascript"></a>TeamsFx SDK for TypeScript または JavaScript
 
 TeamsFx は、ID の実装とクラウド リソースへのアクセスのタスクを、構成がゼロの単一行ステートメントに減らすことを目的とします。
@@ -21,16 +16,16 @@ TeamsFx は、ID の実装とクラウド リソースへのアクセスのタ�
 
 - 同様の方法でクライアント環境とサーバー環境のコア機能にアクセスします。
 - 簡単な方法でユーザー認証コードを記述します。
- 
+
 ## <a name="get-started"></a>作業の開始
 
 TeamsFx SDK は、TeamsFx ツールキットまたは CLI を使用してスキャフォールディング されたプロジェクトで事前に構成されています。
-詳細については、「アプリ プロジェクトのTeams[を参照してください](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md)。
+詳細については、「アプリ プロジェクトの[Teams参照してください](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md)。
 
 ### <a name="prerequisites"></a>前提条件
 
 - Node.js以降 `10.x.x` のバージョン。
-- プロジェクトに関連パッケージが依存関係としてインストールされている場合は、同じバージョンであり、バージョンが `botbuilder` [](https://github.com/Microsoft/botbuilder-js#packages) `>= 4.9.3` . ([問題 - すべての BOTBUILDER パッケージが同じバージョンである必要があります](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
+- プロジェクトに関連パッケージが`botbuilder` [](https://github.com/Microsoft/botbuilder-js#packages) `>= 4.9.3`依存関係としてインストールされている場合は、同じバージョンであり、バージョンが . ([問題 - すべての BOTBUILDER パッケージが同じバージョンである必要があります](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
 
 詳細については、以下を参照してください。
 * [ソース コード](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk) 
@@ -40,7 +35,7 @@ TeamsFx SDK は、TeamsFx ツールキットまたは CLI を使用してスキ�
 
 ### <a name="install-the-microsoftteamsfx-package"></a>パッケージの `@microsoft/teamsfx` インストール
 
-以下を使用して、TeamsFx SDK for TypeScript または JavaScript をインストールします `npm` 。
+以下を使用して、TeamsFx SDK for TypeScript または JavaScript をインストールします `npm`。
 
 ```bash
 npm install @microsoft/teamsfx
@@ -56,13 +51,12 @@ Microsoft Graph API にアクセスするためのグラフ クライアント �
 loadConfiguration({
   authentication: {
     initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-    simpleAuthEndpoint: process.env.REACT_APP_TEAMSFX_ENDPOINT,
     clientId: process.env.REACT_APP_CLIENT_ID,
   },
 });
 ```
 
-- Azure Function のような NodeJS 環境では、 を呼び出すだけでできます `loadConfiguration` 。 既定では、環境変数から読み込めます。
+- Azure Function のような NodeJS 環境では、 を呼び出すだけでできます `loadConfiguration`。 既定では、環境変数から読み込めます。
 
 ```ts
 loadConfiguration();
@@ -76,7 +70,6 @@ loadConfiguration();
 loadConfiguration({
   authentication: {
     initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-    simpleAuthEndpoint: process.env.REACT_APP_TEAMSFX_ENDPOINT,
     clientId: process.env.REACT_APP_CLIENT_ID,
   },
 });
@@ -104,9 +97,9 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 
 ### <a name="credentials"></a>資格情報
 
-認証を簡素化するために、資格情報フォルダーの下に 3 [つの資格情報](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential) クラスがあります。
+認証を簡素化するために、資格情報フォルダーの下に [3 つの資格情報](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential) クラスがあります。
 
-資格情報クラスは `TokenCredential` 、Azure ライブラリ API で広く使用されるインターフェイスを実装します。 特定のスコープにアクセス トークンを提供するように設計されています。 次の資格情報クラスは、特定のシナリオで異なる ID を表します。
+資格情報クラスは、 `TokenCredential` Azure ライブラリ API で広く使用されるインターフェイスを実装します。 特定のスコープにアクセス トークンを提供するように設計されています。 次の資格情報クラスは、特定のシナリオで異なる ID を表します。
 
 * `TeamsUserCredential`はTeamsユーザーの ID を表します。 この資格情報を使用すると、最初にユーザーの同意が要求されます。
 * `M365TenantCredential`は、Microsoft 365 ID を表します。 通常、ユーザーが時間トリガーオートメーション ジョブのように関与していない場合に使用されます。
@@ -114,7 +107,7 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 
 ### <a name="bots"></a>ボット
 
-ボット関連のクラスは、ボット フォルダーの [下に格納されます](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot)。
+ボット関連のクラスは、ボット フォルダー [の下に格納されます](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot)。
 
 `TeamsBotSsoPrompt` ボット フレームワークと統合できます。 ボット アプリケーションを開発するための認証プロセスを簡略化します。
 
@@ -124,7 +117,7 @@ TeamsFx SDK には、サード パーティ製ライブラリの構成を容易�
 
 ### <a name="error-handling"></a>エラー処理
 
-API エラー応答は `ErrorWithCode` 、エラー コードとエラー メッセージを含むエラー応答です。
+API エラー応答は、 `ErrorWithCode`エラー コードとエラー メッセージを含むエラー応答です。
 
 たとえば、特定のエラーをフィルター処理するには、次のスニペットを使用できます。
 
@@ -165,13 +158,12 @@ try {
 
 ### <a name="use-graph-api-in-tab-app"></a>タブ アプリGraph API を使用する
 
-Use `TeamsUserCredential` `createMicrosoftGraphClient` and .
+Use `TeamsUserCredential` and `createMicrosoftGraphClient`.
 
 ```ts
 loadConfiguration({
   authentication: {
     initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-    simpleAuthEndpoint: process.env.REACT_APP_TEAMSFX_ENDPOINT,
     clientId: process.env.REACT_APP_CLIENT_ID,
   },
 });
@@ -182,13 +174,12 @@ const profile = await graphClient.api("/me").get();
 
 ### <a name="call-azure-function-in-tab-app"></a>タブ アプリで Azure 関数を呼び出す
 
-ライブラリ `axios` を使用して Azure 関数に HTTP 要求を行います。
+ライブラリを `axios` 使用して Azure 関数に HTTP 要求を行います。
 
 ```ts
 loadConfiguration({
   authentication: {
     initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-    simpleAuthEndpoint: process.env.REACT_APP_TEAMSFX_ENDPOINT,
     clientId: process.env.REACT_APP_CLIENT_ID,
   },
 });
@@ -205,13 +196,16 @@ const response = await axios.default.get(apiConfig.endpoint + "api/httptrigger1"
 
 ### <a name="access-sql-database-in-azure-function"></a>Azure 関数SQLデータベースへのアクセス
 
-ライブラリ `tedious` を使用して、認証を管理SQL管理 `DefaultTediousConnectionConfiguration` するリソースにアクセスし、活用します。
-別に、. の結果に基づいて、他のSQLライブラリの接続構成 `tedious` を作成できます `sqlConnectionConfig.getConfig()` 。
+ライブラリを`tedious`使用して、認証を管理SQL管理するリソースに`DefaultTediousConnectionConfiguration`アクセスし、活用します。
+別に`tedious`、. の結果に基づいて、他SQLライブラリの接続構成を作成できます`sqlConnectionConfig.getConfig()`。
 
 ```ts
 loadConfiguration();
 const sqlConnectConfig = new DefaultTediousConnectionConfiguration();
+// If there's only one SQL database
 const config = await sqlConnectConfig.getConfig();
+// If there are multiple SQL databases
+const config2 = await sqlConnectConfig.getConfig("your database name");
 const connection = new Connection(config);
 connection.on("connect", (error) => {
   if (error) {
@@ -235,7 +229,7 @@ loadConfiguration({
 
 ### <a name="use-graph-api-in-bot-application"></a>ボット アプリケーションGraph API を使用する
 
-ダイアログ `TeamsBotSsoPrompt` セットに追加します。
+ダイアログ セット `TeamsBotSsoPrompt` に追加します。
 
 ```ts
 const { ConversationState, MemoryStorage } = require("botbuilder");

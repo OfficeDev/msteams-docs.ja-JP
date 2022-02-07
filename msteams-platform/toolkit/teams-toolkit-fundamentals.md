@@ -6,13 +6,8 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 0a048e12167847c1cc34560531cba13da9d74f8f
-ms.sourcegitcommit: 58a24422bb04a529b6629a56803ed2efabc17cb1
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "62323167"
 ---
+
 # <a name="teams-toolkit-overview"></a>Teams Toolkit概要
 
 > [!NOTE]
@@ -70,6 +65,72 @@ Teams Toolkit作業を自動化し、リソースと Azure リソースのTeams�
 [クイック スタート] **を選択** してプロジェクトをTeams Toolkit、または [新しいアプリを作成する] Teams **を** 選択して、1 つのプロジェクトTeamsできます。 サイドバーで既存のプロジェクトを作成または開Toolkit、すべての機能の一覧Visual Studio Codeできます。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/toolkit functions.png" alt-text="関数":::
+
+このドキュメントで説明されているトピックについて説明します。
+
+## <a name="accounts"></a>アカウント
+
+アプリを開発Teams、有効なサブスクリプションを持Microsoft 365少なくとも 1 つのアカウントが必要です。 Azure でバックエンド リソースをホストする場合は、Azure アカウントも必要です。 Teams Toolkit Azure リソースのサインイン、プロビジョニング、展開を行う統合エクスペリエンスをサポートしています。 開始する [前に無料の Azure アカウント](https://azure.microsoft.com/free/) を作成できます。
+
+## <a name="environment"></a>環境
+
+Teams Toolkit、複数の環境を作成および管理し、アイテムを準備し、アプリのターゲット環境に展開Teamsします。
+
+### <a name="teamsfx-collaboration"></a>TeamsFx コラボレーション
+
+これにより、開発者とプロジェクト所有者は、TeamsFx プロジェクトに他の共同作業者を招待して、同じ TeamsFx プロジェクトをデバッグ、プロビジョニング、および展開できます。
+
+## <a name="development"></a>開発
+
+Teams Toolkitアプリ開発をより簡単にTeamsするアプリ プロジェクトをTeamsカスタマイズするのに役立ちます。
+
+### <a name="create-a-new-teams-app"></a>新しいアプリをTeamsする
+
+[新しいプロジェクトの作成] または [サンプルTeams] を使用して、TeamsプロジェクトTeams Toolkitを作成することで、アプリ開発の開始に **役立ちます**。
+
+### <a name="add-capabilities"></a>機能の追加
+
+開発プロセス中に他の必須Teams機能をTeamsアプリに追加するのに役立ちます。
+
+### <a name="add-cloud-resources"></a>クラウド リソースの追加
+
+必要に応じて、開発ニーズに合ったクラウド リソースを追加するのに役立ちます。
+
+### <a name="edit-manifest-file"></a>マニフェスト ファイルの編集 
+
+これにより、アプリとクライアントとのTeamsを編集Teamsできます。
+
+## <a name="deployment"></a>展開
+
+開発中または開発後に、ユーザーがアクセスできる前に、Teamsアプリの準備、展開、発行を行います。
+
+### <a name="provision-in-the-cloud"></a>クラウドでのプロビジョニング
+
+Azure リソース マネージャーと統合され、アプリケーションでコードアプローチに必要な Azure リソースをプロビジョニングできます。
+
+### <a name="deploy-to-the-cloud"></a>クラウドへの展開
+
+ ソース コードを Azure に展開するのに役立ちます。
+
+### <a name="publish-to-teams"></a>[ファイルに発行Teams
+
+アプリを作成した後、アプリを個別、チーム、組織、またはだれでもなど、さまざまなスコープに配布できます。 開発したアプリTeams発行するのに役立つコンテンツを公開します。
+
+### <a name="cicd-guide"></a>CI/CD ガイド
+
+アプリケーションの構築中に開発ワークフローを自動化Teams役立ちます。 CI/CD ガイドには、CI または CD パイプラインのセットアップ中に開始するためのツールとテンプレートが含まれています。
+
+#### <a name="teamsfx-cli"></a>TeamsFx CLI
+
+これは、テキスト ベースのコマンド ライン インターフェイスであり、Teams開発を加速し、自動化のためのスクリプトに CLI を統合できる CI/CD シナリオも可能にします。
+
+#### <a name="teamsfx-sdk"></a>TeamsFx SDK
+
+ID の実装やクラウド リソースへのアクセスのタスクを、構成ゼロの単一行ステートメントに削減するのに役立ちます。
+
+## <a name="help-and-feedback"></a>ヘルプとフィードバック
+
+このセクションでは、必要なドキュメントとリソースを確認できます。 製品エキスパートから **クイック サポート** を受GitHub、Teams Toolkitで [問題の報告 **] を選択** できます。 新しい問題を作成する前に問題を参照するか、 [StackOverflow タグにアクセスしてフィードバック `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) を送信します。
 
 この機能をTeams Toolkitします。
 
