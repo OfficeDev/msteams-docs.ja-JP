@@ -4,13 +4,8 @@ description: Microsoft Teams の最新情報やすべての開発者向け最新
 ms.topic: reference
 ms.localizationpriority: high
 keywords: Teams の最新情報と最新の更新プログラムまたは開発者プレビューと機能
-ms.openlocfilehash: 88287c26ce2531b2eb76bca2b5352fbfccd4a3e8
-ms.sourcegitcommit: 9bfa6b943b065c0a87b1fff2f5edc278916d624a
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62214343"
 ---
+
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
 一般提供 (GA) および開発者プレビュー版の Microsoft Teams プラットフォーム機能をご紹介します。
@@ -22,7 +17,11 @@ ms.locfileid: "62214343"
 
 | 日付 | Update | ここで検索  |
 | --- | --- | --- |
-|2022 年 1 月 25 日| CART API | [Teams Meetings 用のアプリを作成する] > [Meeting Apps API リファレンス] > [[Meeting Apps API リファレンス]](apps-in-teams-meetings/API-references.md#cart-api)|
+|02/03/2022| アプリ マニフェスト バージョン 1.12 が導入されました |  • [アプリ マニフェスト] > [[アプリ マニフェストのスキーマ]](resources/schema/manifest-schema.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー > [[マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md) |
+|02/03/2022 |会議ステージを共有するための対話型モード|• [Teams 会議用アプリのビルド] > [[共有会議ステージ]](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • [Teams 会議用アプリのビルド] > [[Meeting apps API リファレンス]](apps-in-teams-meetings/API-references.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー] > [[開発者向けプレビュー マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md)|
+|02/03/2022| 収益化されたアプリのテスト プレビュー (開発者プレビュー)| [アプリの収益化] > [[収益化アプリのテスト プレビュー]](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
+|02/03/2022| アプリの収益化のためのアプリ内購入フロー (開発者プレビュー) | [アプリの収益化] > [[アプリ内購入]](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
+|2022 年 1 月 25 日| リアルタイム キャプション API を送信する | [Teams Meetings 用のアプリを作成する] > [Meeting Apps API リファレンス] > [[Meeting Apps API リファレンス]](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
 |01/19/2022| アダプティブ カードは、完了フィードバックを形成します | ボットのビルド > ボットの会話 > ボットの会話のメッセージ > [フォーム完了フィードバック](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |2022/1/17| アダプティブ カードのユーザー ピッカー (モバイル版開発者プレビュー、デスクトップ版一般提供) | [カードとタスク モジュールの構築] > [カードの構築] > [[アダプティブ カードのユーザー ピッカー]](task-modules-and-cards/cards/people-picker.md)|
 |2022/1/10 | Visual Studio Code 用 Teams ツールキット | [ツールと SDK] > [Visual Studio Code 向け Teams ツールキット] > [[Teams ツールキットの基本]](toolkit/teams-toolkit-fundamentals.md) |
@@ -39,7 +38,8 @@ ms.locfileid: "62214343"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ----------------|
-|2022 年 1 月 25 日| CART API | [Teams Meetings 用のアプリを作成する] > [Meeting Apps API リファレンス] > [[Meeting Apps API リファレンス]](apps-in-teams-meetings/API-references.md#cart-api)|
+|02/02/2022| アプリ マニフェスト バージョン 1.12 が導入されました | [アプリ マニフェスト] > [[アプリ マニフェストのスキーマ]](resources/schema/manifest-schema.md) |
+|2022 年 1 月 25 日| リアルタイム キャプション API を送信する | [Teams Meetings 用のアプリを作成する] > [Meeting Apps API リファレンス] > [[Meeting Apps API リファレンス]](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
 |01/19/2022| アダプティブ カードは、完了フィードバックを形成します | ボットのビルド > ボットの会話 > ボットの会話のメッセージ > [フォーム完了フィードバック](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 |2022/1/17| デスクトップ版アダプティブ カードのユーザー ピッカー | [カードとタスク モジュールの構築] > [カードの構築] > [[アダプティブ カードのユーザー ピッカー]](task-modules-and-cards/cards/people-picker.md)|
 
@@ -72,7 +72,7 @@ ms.locfileid: "62214343"
 |2021/10/25| ステップバイステップのガイドの新しい構造と手順を使用して Microsoft Teams 開発者ドキュメントの [使用を開始する] モジュールが更新されました | [使用を開始する] > [[最初の Teams アプリの使用を開始する]](get-started/get-started-overview.md) |
 |2021/10/21| タブまたはパーソナル アプリ用の `registerOnFocused` API を追加する | [タブの構築] > [個人用タブの作成] > [[タブまたは個人用アプリ用の `registerOnFocused` API の追加]](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
 |2021/10/20| 一般提供で会議ステージを使用できるようになりました。 | [Teams 会議用アプリの作成] > [[Teams 会議用アプリを有効化して構成する]](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |
-|2021/10/20| 会議の詳細 API とリアルタイム Teams 会議イベント | [Teams 会議用アプリの作成] > [[Teams 会議用アプリを作成する]](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
+|2021/10/20| 会議の詳細 API とリアルタイム Teams 会議イベント。 | [Teams 会議用のアプリをビルドする] > [[会議の詳細 API を取得する]](apps-in-teams-meetings/API-references.md#get-meeting-details-api) |
 |2021/10/18| タブのリンクの展開とステージ ビュー。 | [タブの構築] > [[タブのリンクの展開とステージ ビュー]](tabs/tabs-link-unfurling.md) |
 |2021/10/8| アダプティブ カードの設計に関する新しいベスト プラクティス | [アプリの設計] > [UI コンポーネント] > [[Teams アプリのアダプティブ カードを設計する]](task-modules-and-cards/cards/design-effective-cards.md) |
 |2021/10/5| 管理者がアプリの非表示を解除するまで、Teams アプリを非表示にします。| [アプリの設計] > [[管理者が承認するまで Teams アプリを非表示にする]](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) |
@@ -228,6 +228,10 @@ ms.locfileid: "62214343"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ------------------ |
+|02/02/2022| アプリ マニフェスト バージョン 1.12 が導入されました | [アプリ マニフェスト] > [開発者向けパブリック プレビュー] > [[マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md) |
+|02/03/2022 |会議ステージを共有するための対話型モード|• [Teams 会議用アプリのビルド] > [[共有会議ステージ]](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • [Teams 会議用アプリのビルド] > [[Meeting apps API リファレンス]](apps-in-teams-meetings/API-references.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー] > [[開発者向けプレビュー マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md)|
+|02/03/2022| 収益化されたアプリのテスト プレビュー| [アプリの収益化] > [[収益化アプリのテスト プレビュー]](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
+|02/03/2022| アプリの収益化のためのアプリ内購入フロー | [アプリの収益化] > [[アプリ内購入]](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) 
 |2022/1/17| モバイル版アダプティブ カードのユーザー ピッカー  | [カードとタスク モジュールの構築] > [カードの構築] > [[アダプティブ カードのユーザー ピッカー]](task-modules-and-cards/cards/people-picker.md)|
 |2022/1/10 | Visual Studio Code 用 Teams ツールキット | [ツールと SDK] > [Visual Studio Code 向け Teams ツールキット] > [[Teams ツールキットの基本]](toolkit/teams-toolkit-fundamentals.md) |
 |2021/12/24| タブ デバイスのアクセス許可を付与するためのステップバイステップ ガイドを導入しました。 | [アプリの基本] > [デバイス機能] > [[タブ デバイスのアクセス許可を付与するためのステップバイステップ ガイド]](sbs-tab-device-permissions.yml) |
