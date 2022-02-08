@@ -4,12 +4,12 @@ description: シングル サインオン (SSO) について説明します
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams 認証 SSO Azure AD シングル サインオン API
-ms.openlocfilehash: fd11f1febf1fb919a201a56156c36dfe1ee4d7d8
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 065b8a75348e026a7e4bc2514438c70dbef479d7
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212357"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435161"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>タブのシングル サインオン (SSO) のサポート
 
@@ -29,7 +29,7 @@ ms.locfileid: "62212357"
 > [!NOTE]
 > **クイックスタート**  
 >
-> タブ SSO を使い始める最も簡単なパスは、Visual Studio Code 用 Teams ツールキット内にあります。 詳細については、「[Teams ツールキットやタブ用 Visual Studio Code を使用したシングル サインオン](../../../toolkit/visual-studio-code-tab-sso.md)」をご覧ください。
+> タブ SSO を使い始める最も簡単なパスは、Microsoft Visual Studio Code 用 Teams ツールキット内にあります。 詳細については、「[Teams ツールキットやタブ用 Visual Studio Code を使用したシングル サインオン](../../../toolkit/visual-studio-code-tab-sso.md)」をご覧ください。
 
 ## <a name="how-sso-works-at-runtime"></a>実行時の SSO の動作のしくみ
 

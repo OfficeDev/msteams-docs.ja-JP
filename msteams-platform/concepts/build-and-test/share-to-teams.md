@@ -4,19 +4,19 @@ description: コード サンプルを使用して、Web サイトTeams埋め込
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: 共有Teams共有Teams
-ms.openlocfilehash: 0f9425ae28312aeb9700d260d9ac2cf208351d4c
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: dc70e35d8a02d4dc6349a062d0b4a38fd0a2f0a3
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889287"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435706"
 ---
 # <a name="create-share-to-teams-button"></a>[Teams で共有] ボタンを作成する
 
 サードパーティの Web サイトでは、ランチャー スクリプトを使用して、Web ページに Share-to-Teamsボタンを埋め込む可能性があります。 選択すると、ポップアップ ウィンドウで Share-to-Teamsエクスペリエンスが起動します。 これにより、コンテキストを切り替えることなく、任意のユーザーまたはMicrosoft Teamsにリンクを直接共有できます。 このドキュメントでは、Web サイト用に Share-to-Teams ボタンを作成して埋め込み、Web サイトのプレビューを作成し、Share-to-Microsoft Teams for Education を拡張する方法についてガイドします。
 
 > [!NOTE]
-> * サポートされているのは、Edge と Chrome のデスクトップ バージョンのみです。
+> * サポートされているのは、Microsoft Edgeと Google Chrome のデスクトップ バージョンのみです。
 > * Freemium アカウントまたはゲスト アカウントの使用はサポートされていません。  
 
 次の図は、Share-to-Teamsポップアップ エクスペリエンスを表示します。
@@ -25,13 +25,13 @@ ms.locfileid: "60889287"
 
 ## <a name="embed-a-share-to-teams-button"></a>[共有を埋め込む] Teamsボタン
 
-1. Web ページ `launcher.js` にスクリプトを追加します。
+1. Web ページに `launcher.js` スクリプトを追加します。
 
     ```html
     <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
     ```
 
-1. クラス属性と属性で共有するリンクを含む HTML 要素を Web ページ `teams-share-button` に追加 `data-href` します。
+1. クラス属性と属性で共有するリンクを `teams-share-button` 含む HTML 要素を Web ページに追加 `data-href` します。
 
     ```html
     <div
@@ -44,7 +44,7 @@ ms.locfileid: "60889287"
 
     ![[共有Teams] アイコン](~/assets/icons/share-to-teams-icon.png)
 
-1. または、[共有する共有] ボタンに別のアイコン サイズをTeams、属性を使用 `data-icon-px-size` します。
+1. または、[共有する共有] ボタンに別のアイコン サイズをTeams、属性を使用`data-icon-px-size`します。
 
     ```html
     <div
@@ -53,7 +53,7 @@ ms.locfileid: "60889287"
       data-icon-px-size="64">
     </div>
     ```
-1. 共有リンクでユーザー認証が必要で、リンクから共有する URL プレビューが Teams でうまく表示されない場合は、に属性セットを追加して URL プレビューを無効 `data-preview` にできます `false` 。
+1. 共有リンクでユーザー認証が必要で、リンクから共有する URL プレビューが Teams でうまく表示されない場合は、属性セットをに追加して URL `data-preview` プレビューを無効にできます`false`。
 
     ```html
     <div
@@ -63,15 +63,15 @@ ms.locfileid: "60889287"
     </div>
     ```
 
-1. ページがコンテンツを動的にレンダリングする場合は、このメソッドを使用して、パイプライン内の適切な場所で `shareToMicrosoftTeams.renderButtons()` **Share** を強制的にレンダリングできます。
+1. ページがコンテンツを動的にレンダリング `shareToMicrosoftTeams.renderButtons()` する場合は、このメソッドを使用して、パイプライン内の適切な場所で **Share** を強制的にレンダリングできます。
 
 ## <a name="craft-your-website-preview"></a>Web サイトのプレビューを作成する
 
-Web サイトが web サイトと共有Teams、選択したチャネルに挿入されるカードには、Web サイトのプレビューが含まれる。 このプレビューの動作を制御するには、共有する Web サイト (URL など) に適切なメタ データが追加されます `data-href` 。  
+Web サイトが web サイトと共有Teams、選択したチャネルに挿入されるカードには、Web サイトのプレビューが含まれる。 このプレビューの動作を制御するには、共有する Web サイト (URL など) に適切なメタ データが追加 `data-href` されます。  
 
 **プレビューを表示するには**
 
-* サムネイル 画像、または **Title と** Description の **両方を含める****必要があります**。 最適な結果を得る場合は、3 つすべてが含まれます。
+* サムネイル 画像、または **Title と** **Description の両方を含める****必要があります**。 最適な結果を得る場合は、3 つすべてが含まれます。
 * 共有 URL は認証を必要とします。 認証が必要な場合は共有できますが、プレビューは作成されません。
 
 次の表に、必要なタグの概要を示します。
@@ -86,7 +86,7 @@ HTML の既定のバージョンまたは Open Graph使用できます。
 
 ## <a name="share-to-teams-for-education"></a>共有するMicrosoft Teams for Education
 
-[共有して共有する] ボタンをTeams教師の場合は、 に追加のオプションがあります `Create an Assignment` 。 これにより、共有リンクに基づいて、選択したチームで割り当てを簡単に作成できます。 次の図は、教育のための共有Teamsを表示します。 
+[共有するユーザー] ボタンを使用Teams教師の場合は、 に追加のオプションがあります`Create an Assignment`。 これにより、共有リンクに基づいて、選択したチームで割り当てを簡単に作成できます。 次の図は、教育のための共有Teamsを表示します。 
 
 ![ポップアップ教育Teams共有する](~/assets/images/share-to-teams-popup-edu.png)
 
@@ -107,7 +107,7 @@ HTML の既定のバージョンまたは Open Graph使用できます。
 
 `options` (省略可能): `{ elements?: HTMLElement[] }`
 
-現在、すべての共有ボタンがページにレンダリングされます。 省略可能な `options` オブジェクトに要素のリストが指定されている場合、それらの要素は共有ボタンにレンダリングされます。
+現在、すべての共有ボタンがページにレンダリングされます。 省略可能なオブジェクト `options` に要素のリストが指定されている場合、それらの要素は共有ボタンにレンダリングされます。
 
 ### <a name="set-default-form-values"></a>既定のフォーム値を設定する
 

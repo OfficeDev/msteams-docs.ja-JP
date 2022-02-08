@@ -6,8 +6,13 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: 0f723edb3cc890ef0668dbd3b8f87648935e20c3
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435678"
 ---
-
 # <a name="create-new-teams-project-using-teams-toolkit"></a>プロジェクトを使用してTeamsプロジェクトを作成Teams Toolkit
 
 アプリ を使用してTeamsプロジェクトTeams Toolkitするには、[新しいアプリ プロジェクトを作成Teamsまたはサンプルから開始 **] を選択します**。
@@ -25,7 +30,7 @@ ms.date: 11/29/2021
 
  サンプル ギャラリーから新しいプロジェクト **を作成できます**。 アプリを作成するために必要なサンプルを選択します。 次の手順では、サンプルからアプリを作成する方法について説明します。
 
- 1. **[Teams Toolkit**] からVisual Studio Code。
+ 1. [**コードTeams Toolkit** からMicrosoft Visual Studio開きます。
  1. ツリー ビュー **で [開発** ] セクションを選択します。
  1. [サンプル **の表示] を選択します**。 次の図に示すように、サンプル ギャラリーが表示されます。
    

@@ -1,98 +1,94 @@
 ---
-title: アプリをTeamsしてアプリをTeams Toolkit
+title: Teams ツールキットを使用して Teams アプリを公開する
 author: zyxiaoyuer
 description: アプリTeams発行する
 ms.author: yanjiang
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 3060a3b36f63c30a6068887ab3112cfe49d16ae5
-ms.sourcegitcommit: f1e6f90fb6f7f5825e55a6d18ccf004d0091fb6d
+ms.openlocfilehash: d232ac1d0ac96d46aa5f265f3fedd7b65afb3a86
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "61228095"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435762"
 ---
-# <a name="publish-teams-apps-using-teams-toolkit"></a>アプリをTeamsしてアプリをTeams Toolkit
+# <a name="publish-teams-apps-using-teams-toolkit"></a>Teams ツールキットを使用して Teams アプリを公開する
 
-アプリを作成した後、アプリを個別、チーム、組織、またはだれでもなど、さまざまなスコープに配布できます。 この配布は、ニーズ、ビジネス要件、技術的要件、アプリの目標など、複数の要因に依存します。 異なる範囲への配布には、異なるレビュー プロセスが必要な場合があります。 一般に、スコープが大きかった場合は、セキュリティとコンプライアンスの懸念のためにアプリを確認する必要があります。
+アプリを作成した後、アプリを個別、チーム、組織、またはだれでもなど、さまざまなスコープに配布できます。 この配布は、ニーズ、ビジネス要件、技術的要件、アプリの目標など、複数の要因に依存します。 異なる範囲への配布には、異なるレビュー プロセスが必要な場合があります。 一般に、スコープが大きいなると、セキュリティとコンプライアンスに関する懸念のためにアプリを確認する必要があります。
 
 ## <a name="prerequisite"></a>前提条件
 
 * [バージョン Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) v3.0.0 以上をインストールします。
 
 > [!TIP]
-> アプリ プロジェクトは既にTeams必要があります。
+> VS コードでTeamsアプリ プロジェクトがインストールされている必要があります。
 
-## <a name="publish-to-individual-scope-sideloading-permission"></a>個々のスコープに発行する (サイドローディングのアクセス許可)
+## <a name="publish-to-individual-scope-or-sideload-permission"></a>個々のスコープまたはサイドロードのアクセス許可に発行する
 
-ユーザーは、Teams ファイルにアプリ パッケージを直接アップロードするか、.zipコンテキストでアプリ パッケージをアップロードすることで、カスタム アプリをアプリに追加できます。 サイド ローディングとも呼ばれるアプリ パッケージをアップロードしてカスタム アプリを追加すると、次のシナリオで説明したように広く配布する準備が整う前に、開発中のアプリをテストできます。
+ユーザーは、*Teams ファイルにアプリ パッケージを直接チームまたは個人のコンテキストでアップロードすることで、カスタム アプリを .zip に追加できます。 アプリ パッケージをアップロードしてカスタム アプリを追加する方法はサイドローディングと呼ばれる機能で、次のシナリオで説明したように、アプリを広く配布する準備が整う前に、開発中にアプリをテストできます。
 
-* 自分または他の開発者と一緒にアプリをローカルでテストしてデバッグします。
-* 自分だけのアプリを構築しました。 たとえば、ワークフローを自動化します。
-* 作業グループなどの小さなユーザー セット用のアプリを構築しました。
+* アプリをローカルでテストおよびデバッグします。
+* ワークフローの自動化など、自分用のアプリを構築します。
+* ワーク グループなどの小さなユーザー セット用のアプリを作成します。
 
-また、内部使用専用のアプリを構築し、チームと共有して、Teams アプリ ストアの Teams カタログに送信することもできます。
+内部使用専用のアプリを構築し、チームと共有できるのは、Teams アプリ ストアの Teams アプリ カタログTeamsできます。
 
-* アプリを *.zip パッケージ ファイルにビルドする
+**アプリ パッケージ ファイルを作成.zip *するには**
 
-    アプリ パッケージをビルドするには、アプリ のツリービューの [展開] パネル `Zip Teams metadata package` から選択Teams Toolkit。 最初に実行する必要 `Provision in the cloud` がある場合があります。 生成されたアプリ パッケージは、次の `{your project folder}/build/appPackage/appPackage.{env}.zip` 図に示すように表示されます。
+アプリ パッケージをビルドするには、アプリ の`Zip Teams metadata package`ツリー ビューの **[展開**] から選択Teams Toolkit。 最初に実行する必要 `Provision in the cloud` があります。 生成されたアプリ パッケージは .`{your project folder}/build/appPackage/appPackage.{env}.zip`
 
- ![カスタム アプリのアップロード](./images/sideload-check.png)
+アプリ パッケージをアップロードするには、次の手順を実行します。
+
+1. クライアントで、Teamsバーの **[アプリ]** を選択します。
+2. [アプリ **の管理] を選択します**。
+3. [アプリ **の発行] を選択する**
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pub.png" alt-text="publish":::
+
+4. カスタム **アップロードを選択します**。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/uplo.png" alt-text="アップロード":::
 
 ## <a name="publish-to-your-organization"></a>組織にアプリを公開する 
 
-アプリを実稼働環境で使用する準備ができたら、開発者は Graph ツールキットと一緒にインストールされた Visual Studio Code などの統合開発環境 (IDE) である Graph API から呼び出される Teams Teams アプリ申請 API を使用してアプリを提出できます。 [ツリー ビュー オブ Teams Toolkit]**の [** 展開] Teamsから [発行] を選択するか、[Teams: コマンド パレットTeamsに発行]**を** トリガーします。 次の **図に示すように、[組織の** インストール] を選択します。
+アプリを実稼働環境で使用する準備ができたら、Teams ツールキットと一緒にインストールされた Microsoft Visual Studio Code などの統合開発環境 (IDE) である Graph API から呼び出される Teams アプリ申請 API を使用してアプリを提出できます。 TreeView of Teams Toolkit  で [展開Teamsに発行] を選択するか、[Teams: コマンド パレットから Teamsに発行] **を** トリガーします。 次に、[ **組織のインストール] を選択します**。
 
 ![組織用にインストールする](./images/installforyourorganization.png)
 
-これにより、管理センターの [アプリの管理] ページでアプリを使用Microsoft Teams管理者が確認および承認できます。
+このアプリは、管理センターの **[** Microsoft Teams管理] で利用できます。ここで、管理者はアプリを確認および承認できます。
 
-管理者は、管理センターの [アプリの[](https://admin.teams.microsoft.com/policies/manage-apps)管理] ページMicrosoft Teams、組織のすべてのアプリを表示Teams管理します。 ここでは、アプリの組織レベルの状態とプロパティを確認したり、組織のアプリ ストアに新しいカスタム アプリを承認またはアップロードしたり、組織レベルでアプリをブロックまたは許可したり、チームにアプリを追加したり、サードパーティアプリのサービスを購入したり、アプリから要求されたアクセス許可を表示したり、アプリに管理者の同意を与え、組織全体のアプリ設定を管理することができます。
+管理者として **、管理センター** でアプリMicrosoft Teams [を](https://admin.teams.microsoft.com/policies/manage-apps)管理すると、組織のすべてのアプリを表示Teams管理できます。 アプリの組織レベルの状態とプロパティの確認、組織のアプリ ストアへの新しいカスタム アプリの承認またはアップロード、組織レベルでのアプリのブロックまたは許可、チームへのアプリの追加、サードパーティ アプリのサービスの購入、アプリによって要求されたアクセス許可の表示、アプリに対する管理者の[](https://admin.teams.microsoft.com/policies/manage-apps)同意の付与、組織全体のアプリ設定の管理を行えます。
 
-Teams アプリ申請 API の上に構築された Visual Studio Code 用チーム管理センター [Teams](https://admin.teams.microsoft.com/policies/manage-apps)ツールキットでアプリ ページを管理し、Teams のカスタム アプリの承認申請プロセスを自動化できます。
+Teams Visual Studio Code アプリ申請 API の上に構築された Visual Studio Code Teams ツールキットを使用すると、Teams でカスタム アプリの申請から承認へのプロセスを自動化できます。
 
 > [!NOTE]
-> これにより、組織のアプリ ストアにアプリがまだ発行されていないことに気を付ける必要があります。 この手順では、アプリを組織Microsoft Teamsストアに発行することを承認できる管理者センターにアプリを送信します。
+> アプリがまだ組織のアプリ ストアに発行されていません。 この手順では、アプリを組織のMicrosoft Teamsに発行することを承認できる管理者センターにアプリを送信します。
 
-## <a name="admin-approval-for-submitted-teams-apps"></a>送信されたアプリの管理者Teams承認
+## <a name="admin-approval-for-teams-apps"></a>アプリの管理者Teams承認
 
-Teams テナントの管理者は、Microsoft Teams 管理センターの [アプリの管理] ページ (左側のナビゲーションで、[Teams アプリ> アプリの管理] に移動して、組織のすべての Teams アプリを表示できます。 ページの上部にある保留中の承認ウィジェットを使用すると、カスタム アプリが承認のために送信される時間を確認できます。
-表の中で、新しく送信されたアプリは自動的に発行の状態が [送信済み] と [状態] の [ブロック済み] と表示されます。 [発行状態] 列を降順に並べ替え、アプリをすばやく検索できます。
+Teams テナントの管理者は、Microsoft Teams 管理センターの [アプリの管理] (左側のナビゲーション) に移動し、[アプリの管理] Teams > に移動します。 組織のすべてのアプリTeams表示できます。 ページの上部にある保留中の承認ウィジェットでは、カスタム アプリが承認のために送信される時間を確認できます。
+表では、新しく提出されたアプリは、送信済みアプリとブロックされたアプリの状態を自動的に公開します。 発行状態列を降順に並べ替え、アプリを検索できます。
 
- ![送信されたチーム アプリの管理者の承認](./images/admin-approval-for-teams-app.png)
+ :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/admin-approval-for-teams-app-1.png" alt-text="承認":::
 
-アプリ名を選択して、アプリの詳細ページに移動します。 [概要] タブでは、アプリの詳細 (説明、状態、提出者、アプリ ID など) を表示できます。
+アプリ名を選択して、アプリの詳細ページに移動します。 [概要] タブでは、アプリの詳細 (説明、状態、アプリ ID など) を表示できます。
 
- ![管理者承認済み送信チーム アプリの詳細](./images/about-submitted-app.png)
+ :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/about-submitted-app-1.png" alt-text="送信されたアプリ":::
 
-アプリをユーザーが利用できる状態にした場合は、次の手順に従ってアプリを発行します。
+アプリを発行するには、次の手順を実行します。
 
-1. 管理センターの左側のナビゲーションMicrosoft Teams、[アプリの管理] Teams[>] に移動します。
-2. アプリ名を選択してアプリの詳細ページに移動し、[発行の状態] ボックスで [発行] を選択します。
-アプリを発行すると、[発行] 状態が [発行済み] に変更され、[状態] が [許可済み] に自動的に変更されます。
+1. 管理センターの左側のナビゲーションMicrosoft Teams、[アプリの管理] Teamsアプリ>**移動します**。
+2. アプリ名を選択してアプリの詳細ページに移動し、状態ボックスで [発行] を選択 **します**。
+アプリを発行すると、発行状態が発行済みに変更され、状態が自動的に [許可] に変わります。
 
-## <a name="publish-to-microsoft-store"></a>[ファイルに発行Microsoft Store
+## <a name="publish-to-microsoft-store"></a>Microsoft ストアに発行する
 
-アプリをアプリ内のストアに直接配布Microsoft Teams世界中の何百万人ものユーザーにリーチできます。 アプリがストアでも機能している場合は、潜在的な顧客に即座にアクセスできます。
-また、Teams ストアに発行されたアプリは、Microsoft AppSource に自動的に一覧表示されます。これは、アプリとソリューションのMicrosoft 365マーケットプレースです。
-発行プロセスを理解する アプリの準備が整ったと感じたら、アプリをストアに表示するプロセスをTeamsできます。
+アプリをアプリ内のストアに直接配布Microsoft Teams世界中の何百万人ものユーザーにリーチできます。 アプリがストアでも機能している場合は、潜在的な顧客に即座にアクセスできます。 また、Teamsストアに発行されたアプリは、Microsoft AppSource に自動的に一覧表示されます。これは、Microsoft 365アプリとソリューションの公式マーケットプレースです。
 
->[!Tip]
-> 提出前の手順を密接に実行すると、Microsoft がアプリの発行を承認する可能性が高い可能性があります。
-
-![申請前の手順](./images/pre-submission-steps.png)
-
-* アプリがTeamsとストアの標準を満たTeams、ストアの検証ガイドラインを確認します。
-* パートナー センターの開発者アカウントを作成します。
-* 自動テストの実行、テスト ノートのコンパイル、ストア登録情報の作成など、レビュー プロセスを迅速化するための重要なタスクを含む、ストア申請を準備します。
-* パートナー センターからアプリを提出します。
-* Microsoft と直接作業して問題を解決し、アプリを再送信します (問題を解決し、アプリを再送信するためのリンク)。
+詳細については、「[microsoft Teams ストアに発行する」を参照してください。]([Publish your app to the Microsoft Teams store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store))
 
 ## <a name="see-also"></a>関連項目
 
-> [!div class="nextstepaction"]
-> [複数の環境を管理する](TeamsFx-multi-env.md)
-
-> [!div class="nextstepaction"]
-> [プロジェクトで他の開発者とTeamsする](TeamsFx-collaboration.md)
+* [複数の環境を管理する](TeamsFx-multi-env.md)
+* [プロジェクトで他の開発者とTeamsする](TeamsFx-collaboration.md)

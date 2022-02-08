@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: アプリ開発者プログラム チームのテスト
 ms.date: 11/01/2019
-ms.openlocfilehash: 92079eb8184e0d7618d87de97058f667bf85deda
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 82fff61f174b4dc08d30c466d9d404042bb3a4e0
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212560"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435846"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>テスト テナントにテスト データをMicrosoft 365する
 
@@ -18,9 +18,9 @@ ms.locfileid: "62212560"
 
 ## <a name="prerequisites"></a>前提条件
 
-1. [テスト テナントMicrosoft 365場合は、](/office/developer-program/office-365-developer-program)開発者プログラムに参加します。
-2. [開発者サブスクリプションのMicrosoft 365設定します](/office/developer-program/office-365-developer-program-get-started)。
-3. [ユーザー コンテンツ パックをインストールするには、Microsoft 365開発者サブスクリプションでサンプル データ パックを使用します](/office/developer-program/install-sample-packs)。
+1. [テスト テナントMicrosoft 365場合](/office/developer-program/office-365-developer-program)は、開発者プログラムに参加します。
+2. [開発者サブスクリプションMicrosoft 365設定します](/office/developer-program/office-365-developer-program-get-started)。
+3. [開発者サブスクリプションでサンプル データ パックMicrosoft 365を使用して、Users コンテンツ パックをインストールします](/office/developer-program/install-sample-packs)。
 4. [PowerShell モジュールTeamsインストールします](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)。
 5. [PowerShell モジュールAzure ADインストールします](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true)。
 
@@ -29,7 +29,7 @@ ms.locfileid: "62212560"
 
 ## <a name="allow-users-to-upload-apps"></a>ユーザーにアプリのアップロードを許可する
 
-既定では、テナントにアプリをアップロード (サイドロード) できるのは、Teams管理者またはサービス管理者のみです。 ユーザーが自分で使用するためにカスタム アプリをアップロードしたり、テストのためにチームにアップロードしたりすることもできます。 詳細については、「カスタム アプリ ポリシーと設定を管理する」を参照[Teams。](/microsoftteams/teams-custom-app-policies-and-settings)
+既定では、テナントにアプリをアップロード (サイドロード) できるのは、Teams管理者またはサービス管理者のみです。 ユーザーが自分で使用するためにカスタム アプリをアップロードしたり、テストのためにチームにアップロードしたりすることもできます。 詳細については、「カスタム アプリ ポリシー[と設定を](/microsoftteams/teams-custom-app-policies-and-settings)管理する」を参照Teams。
 
 ## <a name="create-teams-and-channels-for-testing"></a>テスト用のチームとチャネルを作成する
 
@@ -164,7 +164,7 @@ ms.locfileid: "62212560"
 
         try {
 
-            # 1. Login with the global administrator account for your O365 Developer Program tenant. This script uses these credentials to connect to the powershell modules for Azure Active Directory and Microsoft Teams
+            # 1. Login with the global administrator account for your Office 365 Developer Program tenant. This script uses these credentials to connect to the PowerShell modules for Azure Active Directory and Microsoft Teams
 
             $creds = Get-Credential
 

@@ -6,13 +6,20 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: 69d0802d72b06c8acbf1cd97fb498a6fefe4e3ca
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435755"
 ---
-
 # <a name="teams-toolkit-overview"></a>Teams Toolkit概要
 
 > [!NOTE]
 > 現時点では、この機能はパブリック開発者 **プレビューでのみ利用** できます。
 
+
+Teams Toolkit Microsoft Visual Studio コードを使用すると、統合 ID、クラウド ストレージへのアクセス、Microsoft Graph からのデータ、Azure および Microsoft 365 の他のサービスをゼロ構成アプローチで使用して、Teams アプリを作成および展開できます。 アプリTeams開発では、Teams ToolkitのVisual Studioと同様に、[CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) ツールを使用Toolkit`teamsfx`。
 Teams Toolkitを使用すると、アプリを作成、デバッグ、および展開TeamsからVisual Studio Code。 ツールキットを使用したアプリ開発には、次のような利点があります。
 
 - 統合 ID
@@ -38,6 +45,7 @@ Teams Toolkit作業を自動化し、リソースと Azure リソースのTeams�
 1. Azure アカウントを使用してアプリをプロビジョニングし、クラウドに展開します。
 1. アプリをアプリに公開Teams。
 
+
 ## <a name="install-teams-toolkit-for-visual-studio-code"></a>インストールTeams ToolkitインストールVisual Studio Code
 
 1. [ファイル **Visual Studio Code] を開きます。**
@@ -62,7 +70,8 @@ Teams Toolkit作業を自動化し、リソースと Azure リソースのTeams�
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/teams toolkit.png" alt-text="ミニ関数":::
 
-[クイック スタート] **を選択** してプロジェクトをTeams Toolkit、または [新しいアプリを作成する] Teams **を** 選択して、1 つのプロジェクトTeamsできます。 サイドバーで既存のプロジェクトを作成または開Toolkit、すべての機能の一覧Visual Studio Codeできます。
+
+[クイック スタート] **を選択** してプロジェクトをTeams Toolkit、または [新しいアプリを作成する] Teams **を** 選択して、1 つのプロジェクトTeamsできます。 Visual Studio Code で Teams Toolkit v2.+ によって作成された Teams プロジェクトが開いている場合は、次の図に示すように、すべての機能を備えた Teams Toolkit Teams Toolkit UI が表示されます。をクリックするか、[新 **しいアプリを作成Teams]を選択** して、1 つのプロジェクトTeamsします。 サイドバーで既存のプロジェクトを作成または開Toolkit、すべての機能の一覧Visual Studio Codeできます。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/toolkit functions.png" alt-text="関数":::
 

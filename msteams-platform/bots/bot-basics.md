@@ -6,16 +6,16 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: アクティビティ ハンドラー フレームワーク ボット カードの同意チャネル イベント
-ms.openlocfilehash: 54583fedadbd5a9791daaebf6df842b83aff1f6f
-ms.sourcegitcommit: 9bfa6b943b065c0a87b1fff2f5edc278916d624a
+ms.openlocfilehash: af6823a0a1395c5f33af9d914c3199d76854a050
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62214334"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435797"
 ---
 # <a name="bot-activity-handlers"></a>ボットのアクティビティ ハンドラー
 
-このドキュメントでは、ボットの動作に[](https://aka.ms/how-bots-work)関する記事を基に、ボット フレームワークのコア[ドキュメントを参照してください](https://aka.ms/azure-bot-service-docs)。 Microsoft Teams とコア ボット フレームワーク用に開発されたボットの主な違いは、Teams で提供される機能です。
+このドキュメントでは、ボットの動作に関する記事を基 [に](https://aka.ms/how-bots-work) 、ボット フレームワークのコア [ドキュメントを参照してください](https://aka.ms/azure-bot-service-docs)。 Microsoft Teams とコア ボット フレームワーク用に開発されたボットの主な違いは、Teams で提供される機能です。
 
 ボットの会話ロジックを整理するには、アクティビティ ハンドラーが使用されます。 アクティビティは、アクティビティ ハンドラーとボット ロジックTeams 2 つの方法で処理されます。 このTeamsアクティビティ ハンドラーは、特定のイベントMicrosoft Teams操作のサポートを追加します。 ボット オブジェクトには、ターンの会話的な理由またはロジックが含まれています。ターン ハンドラーが公開されます。これは、ボット アダプターからの受信アクティビティを受け入れ可能なメソッドです。
 
@@ -23,13 +23,13 @@ ms.locfileid: "62214334"
 
 Teamsアクティビティ ハンドラーは、Microsoft Bot Frameworkアクティビティ ハンドラーから派生します。 特定のアクティビティTeams処理する前に、すべてのTeamsアクティビティをルーティングします。
 
-アクティビティを受信Teamsボットはアクティビティ ハンドラーにルーティングされます。 すべてのアクティビティは、ターン ハンドラーと呼ばれる 1 つの基本ハンドラーを介してルーティングされます。 ターン ハンドラーは、受信したアクティビティを管理するために必要なアクティビティ ハンドラーを呼び出します。 ボットTeamsは、Bot Framework のクラスから派生した `TeamsActivityHandler` クラスから派生 `ActivityHandler` します。
+アクティビティを受信Teamsボットはアクティビティ ハンドラーにルーティングされます。 すべてのアクティビティは、ターン ハンドラーと呼ばれる 1 つの基本ハンドラーを介してルーティングされます。 ターン ハンドラーは、受信したアクティビティを管理するために必要なアクティビティ ハンドラーを呼び出します。 ボットTeamsは、`TeamsActivityHandler`Bot Framework のクラスから派生したクラスから派生`ActivityHandler`します。
 
 # <a name="c"></a>[C#](#tab/csharp)
 
-ボットは、ボット フレームワークを使用して作成されます。 ボットがメッセージ アクティビティを受信すると、ターン ハンドラーはその受信アクティビティの通知を受け取ります。 ターン ハンドラーは、受信アクティビティをアクティビティ ハンドラーに `OnMessageActivityAsync` 送信します。 このTeams機能は変わりません。 ボットが会話更新アクティビティを受け取った場合、ターン ハンドラーはその受信アクティビティの通知を受け取り、受信アクティビティをに送信します `OnConversationUpdateActivityAsync` 。 アクティビティ Teamsは、最初に特定のイベントTeamsチェックします。 イベントが見つからない場合は、それらをボット フレームワークのアクティビティ ハンドラーに渡します。
+ボットは、ボット フレームワークを使用して作成されます。 ボットがメッセージ アクティビティを受信すると、ターン ハンドラーはその受信アクティビティの通知を受け取ります。 ターン ハンドラーは、受信アクティビティをアクティビティ ハンドラーに `OnMessageActivityAsync` 送信します。 このTeams機能は変わりません。 ボットが会話更新アクティビティを受け取った場合、ターン ハンドラーはその受信アクティビティの通知を受け取り、受信アクティビティをに送信します `OnConversationUpdateActivityAsync`。 アクティビティ Teamsは、最初に特定のイベントTeamsチェックします。 イベントが見つからない場合は、それらをボット フレームワークのアクティビティ ハンドラーに渡します。
 
-アクティビティ ハンドラー クラスTeamsアクティビティ ハンドラーには、2 つのTeamsアクティビティ ハンドラーがあります `OnConversationUpdateActivityAsync` `OnInvokeActivityAsync` 。 `OnConversationUpdateActivityAsync`すべての会話更新アクティビティをルーティングし、 `OnInvokeActivityAsync` すべてのスレッドをTeams呼び出します。
+アクティビティ ハンドラー クラスTeamsアクティビティ ハンドラーには、2 つのTeamsアクティビティ ハンドラーがあります `OnConversationUpdateActivityAsync` `OnInvokeActivityAsync`。 `OnConversationUpdateActivityAsync`すべての会話更新アクティビティをルーティングし、`OnInvokeActivityAsync`すべてのTeamsをルーティングします。
 
 特定のアクティビティ ハンドラー Teamsロジックを実装するには、ボット のロジック セクションに示すように、ボット内のメソッドをオーバーライド[する必要](#bot-logic)があります。 これらのハンドラーの基本実装はありません。そのため、オーバーライドに必要なロジックを追加する必要があります。
 
@@ -97,11 +97,11 @@ protected override Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> te
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
-ボットは、ボット フレームワークを使用して作成されます。 ボットがメッセージ アクティビティを受信すると、ターン ハンドラーはその受信アクティビティの通知を受け取ります。 ターン ハンドラーは、受信アクティビティをアクティビティ ハンドラーに `onMessage` 送信します。 このTeams機能は変わりません。 ボットが会話更新アクティビティを受け取った場合、ターン ハンドラーはその受信アクティビティの通知を受け取り、受信アクティビティをに送信します `dispatchConversationUpdateActivity` 。 アクティビティ Teamsは、最初に特定のイベントTeamsチェックします。 イベントが見つからない場合は、それらをボット フレームワークのアクティビティ ハンドラーに渡します。
+ボットは、ボット フレームワークを使用して作成されます。 ボットがメッセージ アクティビティを受信すると、ターン ハンドラーはその受信アクティビティの通知を受け取ります。 ターン ハンドラーは、受信アクティビティをアクティビティ ハンドラーに `onMessage` 送信します。 このTeams機能は変わりません。 ボットが会話更新アクティビティを受け取った場合、ターン ハンドラーはその受信アクティビティの通知を受け取り、受信アクティビティをに送信します `dispatchConversationUpdateActivity`。 アクティビティ Teamsは、最初に特定のイベントTeamsチェックします。 イベントが見つからない場合は、それらをボット フレームワークのアクティビティ ハンドラーに渡します。
 
-アクティビティ ハンドラー クラスTeamsアクティビティ ハンドラーには、2 つのTeamsアクティビティ ハンドラーがあります `dispatchConversationUpdateActivity` `onInvokeActivity` 。 `dispatchConversationUpdateActivity`すべての会話更新アクティビティをルーティングし、 `onInvokeActivity` すべてのスレッドをTeams呼び出します。
+アクティビティ ハンドラー クラスTeamsアクティビティ ハンドラーには、2 つのTeamsアクティビティ ハンドラーがあります `dispatchConversationUpdateActivity` `onInvokeActivity`。 `dispatchConversationUpdateActivity`すべての会話更新アクティビティをルーティングし、`onInvokeActivity`すべてのTeamsをルーティングします。
 
-特定のアクティビティ ハンドラー Teamsロジックを実装するには、ボット のロジック セクションに示すように、ボット内のメソッドをオーバーライド[する必要](#bot-logic)があります。 これらのハンドラーのボット ロジックを定義し、最後に必ず `next()` 呼び出します。 呼び出 `next()` しによって、次のハンドラーが実行されます。
+特定のアクティビティ ハンドラー Teamsロジックを実装するには、ボット のロジック セクションに示すように、ボット内のメソッドをオーバーライド[する必要](#bot-logic)があります。 これらのハンドラーのボット ロジックを定義し、最後に必ず呼 `next()` び出します。 呼び出 `next()` しによって、次のハンドラーが実行されます。
 
 アクティビティ ハンドラーのコード スニペットTeams次のとおりです。
 
@@ -167,9 +167,9 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 # <a name="python"></a>[Python](#tab/python)
 
-ボットは、ボット フレームワークを使用して作成されます。 ボットがメッセージ アクティビティを受信すると、ターン ハンドラーはその受信アクティビティの通知を受け取ります。 ターン ハンドラーは、受信アクティビティをアクティビティ ハンドラーに `on_message_activity` 送信します。 このTeams機能は変わりません。 ボットが会話更新アクティビティを受け取った場合、ターン ハンドラーはその受信アクティビティの通知を受け取り、受信アクティビティをに送信します `on_conversation_update_activity` 。 アクティビティ Teamsは、最初に特定のイベントTeamsチェックします。 イベントが見つからない場合は、それらをボット フレームワークのアクティビティ ハンドラーに渡します。
+ボットは、ボット フレームワークを使用して作成されます。 ボットがメッセージ アクティビティを受信すると、ターン ハンドラーはその受信アクティビティの通知を受け取ります。 ターン ハンドラーは、受信アクティビティをアクティビティ ハンドラーに `on_message_activity` 送信します。 このTeams機能は変わりません。 ボットが会話更新アクティビティを受け取った場合、ターン ハンドラーはその受信アクティビティの通知を受け取り、受信アクティビティをに送信します `on_conversation_update_activity`。 アクティビティ Teamsは、最初に特定のイベントTeamsチェックします。 イベントが見つからない場合は、それらをボット フレームワークのアクティビティ ハンドラーに渡します。
 
-アクティビティ ハンドラー クラスTeamsアクティビティ ハンドラーには、2 つのTeamsアクティビティ ハンドラーがあります `on_conversation_update_activity` `on_invoke_activity` 。 `on_conversation_update_activity`すべての会話更新アクティビティをルーティングし、 `on_invoke_activity` すべてのスレッドをTeams呼び出します。
+アクティビティ ハンドラー クラスTeamsアクティビティ ハンドラーには、2 つのTeamsアクティビティ ハンドラーがあります `on_conversation_update_activity` `on_invoke_activity`。 `on_conversation_update_activity`すべての会話更新アクティビティをルーティングし、`on_invoke_activity`すべてのTeamsをルーティングします。
 
 特定のアクティビティ ハンドラー Teamsロジックを実装するには、ボット のロジック セクションに示すように、ボット内のメソッドをオーバーライド[する必要](#bot-logic)があります。 これらのハンドラーの基本実装はありません。そのため、オーバーライドに必要なロジックを追加する必要があります。
 
@@ -184,11 +184,11 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 #### <a name="core-bot-framework-handlers"></a>Core Bot Framework ハンドラー
 
 >[!NOTE]
-> 追加および削除 **された** メンバーのアクティビティを除き、このセクションで説明するアクティビティ ハンドラーはすべて、ボット以外のボットと同様にTeamsされます。
+> 追加および **削除された** メンバーのアクティビティを除き、このセクションで説明するアクティビティ ハンドラーはすべて、ボット以外のボットと同様にTeamsされます。
 
 アクティビティ ハンドラーは、メッセージ スレッドの代わりに新しいメンバーがチームに追加されるチームのコンテキストでは異なります。
 
-定義されているハンドラーの一覧には `ActivityHandler` 、次のものが含まれます。
+定義されているハンドラーの一覧には、 `ActivityHandler` 次のものが含まれます。
 
 | イベント | ハンドラー | 説明 |
 | :-- | :-- | :-- |
@@ -204,20 +204,20 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 #### <a name="teams-specific-activity-handlers"></a>Teams特定のアクティビティ ハンドラー
 
-コア Bot Framework ハンドラー セクションのハンドラーの一覧を拡張して `TeamsActivityHandler` 、次の項目を含める。
+コア `TeamsActivityHandler` Bot Framework ハンドラー セクションのハンドラーの一覧を拡張して、次の項目を含める。
 
 | イベント | ハンドラー | 説明 |
 | :-- | :-- | :-- |
 | channelCreated | `OnTeamsChannelCreatedAsync` | このメソッドは、作成中のチャネルを処理Teamsオーバーライドできます。 詳細については、「会話更新イベント[で作成されたチャネル](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created)[」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
-| channelDeleted | `OnTeamsChannelDeletedAsync` | このメソッドをオーバーライドして、削除するチャネルTeams処理できます。 詳細については、「会話更新イベント[で削除されたチャネル](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted)[」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
-| channelRenamed | `OnTeamsChannelRenamedAsync` | このメソッドは、名前を変更するチャネルTeamsオーバーライドできます。 詳細については、「会話の更新イベント[でチャネルの名前が変更](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-renamed)[された」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
-| teamRenamed | `OnTeamsTeamRenamedAsync` | `return Task.CompletedTask;`このメソッドをオーバーライドして、名前を変更するチームTeams処理できます。 詳細については、「会話の更新イベント [でチームの名前を](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed) 変更 [する」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
-| MembersAdded | `OnTeamsMembersAddedAsync` | このメソッドは、 で `OnMembersAddedAsync` メソッドを呼び出します `ActivityHandler` 。 このメソッドは、チームに参加しているメンバーを処理するためにオーバーライドできます。 詳細については、「会話の更新 [イベントに追加されたチーム メンバー](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-added) [」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
-| MembersRemoved | `OnTeamsMembersRemovedAsync` | このメソッドは、 で `OnMembersRemovedAsync` メソッドを呼び出します `ActivityHandler` 。 このメソッドは、チームを離れるメンバーを処理するためにオーバーライドできます。 詳細については、「会話更新イベント [で削除されたチーム メンバー](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-removed) [」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
+| channelDeleted | `OnTeamsChannelDeletedAsync` | このメソッドをオーバーライドして、削除するチャネルTeams処理できます。 詳細については、「会話の更新 [イベントで削除された](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) チャネル [」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
+| channelRenamed | `OnTeamsChannelRenamedAsync` | このメソッドは、名前を変更するチャネルTeamsオーバーライドできます。 詳細については、「会話の更新[イベントでチャネルの名前が変更](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-renamed)[された」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
+| teamRenamed | `OnTeamsTeamRenamedAsync` | `return Task.CompletedTask;`このメソッドをオーバーライドして、名前を変更するチームTeams処理できます。 詳細については、「会話の更新イベント[でチームの名前が変更](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed)[された」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
+| MembersAdded | `OnTeamsMembersAddedAsync` | このメソッドは、 でメソッド `OnMembersAddedAsync` を呼び出します `ActivityHandler`。 このメソッドは、チームに参加しているメンバーを処理するためにオーバーライドできます。 詳細については、「会話の更新 [イベントで追加されたチーム](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-added) メンバー [」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
+| MembersRemoved | `OnTeamsMembersRemovedAsync` | このメソッドは、 でメソッド `OnMembersRemovedAsync` を呼び出します `ActivityHandler`。 このメソッドは、チームを離れるメンバーを処理するためにオーバーライドできます。 詳細については、「会話の更新イベント[で削除されたチーム メンバー](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-removed)[」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
 
 #### <a name="teams-invoke-activities"></a>Teams呼び出しアクティビティ
 
-アクティビティ ハンドラーからTeamsされるアクティビティ ハンドラーの一覧Teams `OnInvokeActivityAsync` 次に示します。
+アクティビティ ハンドラーからTeamsされる`OnInvokeActivityAsync`アクティビティ ハンドラーの一覧Teams次に示します。
 
 | 呼び出しの種類                    | ハンドラー                              | 説明                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -225,7 +225,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 | fileConsent/invoke              | `OnTeamsFileConsentAcceptAsync`      | このメソッドは、ユーザーがファイル同意カードを受け入れるときに呼び出されます。 |
 | fileConsent/invoke              | `OnTeamsFileConsentAsync`            | このメソッドは、ファイル同意カードのアクティビティがコネクタから受信されると呼び出されます。 |
 | fileConsent/invoke              | `OnTeamsFileConsentDeclineAsync`     | このメソッドは、ファイル同意カードがユーザーによって拒否された場合に呼び出されます。 |
-| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | このメソッドは、O365 コネクタ カードのアクション アクティビティがコネクタから受信されると呼び出されます。 |
+| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | このメソッドは、コネクタ カードOffice 365がコネクタから受信されると呼び出されます。 |
 | signin/verifyState              | `OnTeamsSigninVerifyStateAsync`      | このメソッドは、signIn verify state activity がコネクタから受信されると呼び出されます。 |
 | task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | このメソッドは、派生クラスでオーバーライドして、タスク モジュールのフェッチ時にロジックを提供できます。 |
 | task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | このメソッドは、タスク モジュールの送信時にロジックを提供するために派生クラスでオーバーライドできます。 |
@@ -237,11 +237,11 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 #### <a name="core-bot-framework-handlers"></a>Core Bot Framework ハンドラー
 
 >[!NOTE]
-> 追加および削除 **された** メンバーのアクティビティを除き、このセクションで説明するアクティビティ ハンドラーはすべて、ボット以外のボットと同様にTeamsされます。
+> 追加および **削除された** メンバーのアクティビティを除き、このセクションで説明するアクティビティ ハンドラーはすべて、ボット以外のボットと同様にTeamsされます。
 
 アクティビティ ハンドラーは、メッセージ スレッドの代わりに新しいメンバーがチームに追加されるチームのコンテキストでは異なります。
 
-定義されているハンドラーの一覧には `ActivityHandler` 、次のものが含まれます。
+定義されているハンドラーの一覧には、 `ActivityHandler` 次のものが含まれます。
 
 | イベント | ハンドラー | 説明 |
 | :-- | :-- | :-- |
@@ -256,20 +256,20 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 #### <a name="teams-specific-activity-handlers"></a>Teams特定のアクティビティ ハンドラー
 
-コア Bot Framework ハンドラー セクションのハンドラーの一覧を拡張して `TeamsActivityHandler` 、次の項目を含める。
+コア `TeamsActivityHandler` Bot Framework ハンドラー セクションのハンドラーの一覧を拡張して、次の項目を含める。
 
 | イベント | ハンドラー | 説明 |
 | :-- | :-- | :-- |
 | channelCreated | `OnTeamsChannelCreatedAsync` | このメソッドは、作成中のチャネルを処理Teamsオーバーライドできます。 詳細については、「会話更新イベント[で作成されたチャネル](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created)[」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
-| channelDeleted | `OnTeamsChannelDeletedAsync` | このメソッドをオーバーライドして、削除するチャネルTeams処理できます。 詳細については、「会話更新イベント[で削除されたチャネル](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted)[」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
-| channelRenamed | `OnTeamsChannelRenamedAsync` | このメソッドは、名前を変更するチャネルTeamsオーバーライドできます。 詳細については、「会話の更新イベント[でチャネルの名前が変更](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-renamed)[された」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
-| teamRenamed | `OnTeamsTeamRenamedAsync` | `return Task.CompletedTask;`このメソッドをオーバーライドして、名前を変更するチームTeams処理できます。 詳細については、「会話の更新イベント [でチームの名前を](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed) 変更 [する」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
-| MembersAdded | `OnTeamsMembersAddedAsync` | このメソッドは、 で `OnMembersAddedAsync` メソッドを呼び出します `ActivityHandler` 。 このメソッドは、チームに参加しているメンバーを処理するためにオーバーライドできます。 詳細については、「会話の更新 [イベントに追加されたチーム メンバー](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-added) [」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
-| MembersRemoved | `OnTeamsMembersRemovedAsync` | このメソッドは、 で `OnMembersRemovedAsync` メソッドを呼び出します `ActivityHandler` 。 このメソッドは、チームを離れるメンバーを処理するためにオーバーライドできます。 詳細については、「会話更新イベント [で削除されたチーム メンバー](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-removed) [」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
+| channelDeleted | `OnTeamsChannelDeletedAsync` | このメソッドをオーバーライドして、削除するチャネルTeams処理できます。 詳細については、「会話の更新 [イベントで削除された](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) チャネル [」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
+| channelRenamed | `OnTeamsChannelRenamedAsync` | このメソッドは、名前を変更するチャネルTeamsオーバーライドできます。 詳細については、「会話の更新[イベントでチャネルの名前が変更](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-renamed)[された」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
+| teamRenamed | `OnTeamsTeamRenamedAsync` | `return Task.CompletedTask;`このメソッドをオーバーライドして、名前を変更するチームTeams処理できます。 詳細については、「会話の更新イベント[でチームの名前が変更](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed)[された」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
+| MembersAdded | `OnTeamsMembersAddedAsync` | このメソッドは、 でメソッド `OnMembersAddedAsync` を呼び出します `ActivityHandler`。 このメソッドは、チームに参加しているメンバーを処理するためにオーバーライドできます。 詳細については、「会話の更新 [イベントで追加されたチーム](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-added) メンバー [」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
+| MembersRemoved | `OnTeamsMembersRemovedAsync` | このメソッドは、 でメソッド `OnMembersRemovedAsync` を呼び出します `ActivityHandler`。 このメソッドは、チームを離れるメンバーを処理するためにオーバーライドできます。 詳細については、「会話の更新イベント[で削除されたチーム メンバー](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-removed)[」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
 
 #### <a name="teams-invoke-activities"></a>Teams呼び出しアクティビティ
 
-アクティビティ ハンドラーからTeamsされるアクティビティ ハンドラーの一覧Teams `onInvokeActivity` 次に示します。
+アクティビティ ハンドラーからTeamsされる`onInvokeActivity`アクティビティ ハンドラーの一覧Teams次に示します。
 
 | 呼び出しの種類                    | ハンドラー                              | 説明                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -277,7 +277,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 | fileConsent/invoke              | `handleTeamsFileConsentAccept`      | このメソッドは、ユーザーがファイル同意カードを受け入れるときに呼び出されます。 |
 | fileConsent/invoke              | `handleTeamsFileConsent`            | このメソッドは、ファイル同意カードのアクティビティがコネクタから受信されると呼び出されます。 |
 | fileConsent/invoke              | `handleTeamsFileConsentDecline`     | このメソッドは、ファイル同意カードがユーザーによって拒否された場合に呼び出されます。 |
-| actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | このメソッドは、O365 コネクタ カードのアクション アクティビティがコネクタから受信されると呼び出されます。 |
+| actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | このメソッドは、コネクタ カードOffice 365がコネクタから受信されると呼び出されます。 |
 | signin/verifyState              | `handleTeamsSigninVerifyState`      | このメソッドは、signIn verify state activity がコネクタから受信されると呼び出されます。 |
 | task/fetch                      | `handleTeamsTaskModuleFetch`        | このメソッドは、派生クラスでオーバーライドして、タスク モジュールのフェッチ時にロジックを提供できます。 |
 | task/submit                     | `handleTeamsTaskModuleSubmit`       | このメソッドは、タスク モジュールの送信時にロジックを提供するために派生クラスでオーバーライドできます。 |
@@ -289,11 +289,11 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 #### <a name="core-bot-framework-handlers"></a>Core Bot Framework ハンドラー
 
 >[!NOTE]
-> 追加および削除 **された** メンバーのアクティビティを除き、このセクションで説明するアクティビティ ハンドラーはすべて、ボット以外のボットと同様にTeamsされます。
+> 追加および **削除された** メンバーのアクティビティを除き、このセクションで説明するアクティビティ ハンドラーはすべて、ボット以外のボットと同様にTeamsされます。
 
 アクティビティ ハンドラーは、メッセージ スレッドの代わりに新しいメンバーがチームに追加されるチームのコンテキストでは異なります。
 
-定義されているハンドラーの一覧には `ActivityHandler` 、次のものが含まれます。
+定義されているハンドラーの一覧には、 `ActivityHandler` 次のものが含まれます。
 
 | イベント | ハンドラー | 説明 |
 | :-- | :-- | :-- |
@@ -309,20 +309,20 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 #### <a name="teams-specific-activity-handlers"></a>Teams特定のアクティビティ ハンドラー
 
-コアの Bot Framework ハンドラー セクションからハンドラーの一覧を拡張して `TeamsActivityHandler` 、次の項目を含める。
+コア `TeamsActivityHandler` の Bot Framework ハンドラー セクションからハンドラーの一覧を拡張して、次の項目を含める。
 
 | イベント | ハンドラー | 説明 |
 | :-- | :-- | :-- |
 | channelCreated | `on_teams_channel_created` | このメソッドは、作成中のチャネルを処理Teamsオーバーライドできます。 詳細については、「会話更新イベント[で作成されたチャネル](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created)[」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
-| channelDeleted | `on_teams_channel_deleted` | このメソッドをオーバーライドして、削除するチャネルTeams処理できます。 詳細については、「会話更新イベント[で削除されたチャネル](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted)[」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
-| channelRenamed | `on_teams_channel_renamed` | このメソッドは、名前を変更するチャネルTeamsオーバーライドできます。 詳細については、「会話の更新イベント[でチャネルの名前が変更](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-renamed)[された」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
-| teamRenamed | `on_teams_team_renamed` | `return Task.CompletedTask;`このメソッドをオーバーライドして、名前を変更するチームTeams処理できます。 詳細については、「会話の更新イベント [でチームの名前を](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed) 変更 [する」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
-| MembersAdded | `on_teams_members_added` | このメソッドは、 で `OnMembersAddedAsync` メソッドを呼び出します `ActivityHandler` 。 このメソッドは、チームに参加しているメンバーを処理するためにオーバーライドできます。 詳細については、「会話の更新 [イベントに追加されたチーム メンバー](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-added) [」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
-| MembersRemoved | `on_teams_members_removed` | このメソッドは、 で `OnMembersRemovedAsync` メソッドを呼び出します `ActivityHandler` 。 このメソッドは、チームを離れるメンバーを処理するためにオーバーライドできます。 詳細については、「会話更新イベント [で削除されたチーム メンバー](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-removed) [」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
+| channelDeleted | `on_teams_channel_deleted` | このメソッドをオーバーライドして、削除するチャネルTeams処理できます。 詳細については、「会話の更新 [イベントで削除された](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) チャネル [」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
+| channelRenamed | `on_teams_channel_renamed` | このメソッドは、名前を変更するチャネルTeamsオーバーライドできます。 詳細については、「会話の更新[イベントでチャネルの名前が変更](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-renamed)[された」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
+| teamRenamed | `on_teams_team_renamed` | `return Task.CompletedTask;`このメソッドをオーバーライドして、名前を変更するチームTeams処理できます。 詳細については、「会話の更新イベント[でチームの名前が変更](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed)[された」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
+| MembersAdded | `on_teams_members_added` | このメソッドは、 でメソッド `OnMembersAddedAsync` を呼び出します `ActivityHandler`。 このメソッドは、チームに参加しているメンバーを処理するためにオーバーライドできます。 詳細については、「会話の更新 [イベントで追加されたチーム](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-added) メンバー [」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
+| MembersRemoved | `on_teams_members_removed` | このメソッドは、 でメソッド `OnMembersRemovedAsync` を呼び出します `ActivityHandler`。 このメソッドは、チームを離れるメンバーを処理するためにオーバーライドできます。 詳細については、「会話の更新イベント[で削除されたチーム メンバー](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-members-removed)[」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
 
 #### <a name="teams-invoke-activities"></a>Teams呼び出しアクティビティ
 
-アクティビティ ハンドラーからTeamsされるアクティビティ ハンドラーの一覧Teams `on_invoke_activity` 次に示します。
+アクティビティ ハンドラーからTeamsされる`on_invoke_activity`アクティビティ ハンドラーの一覧Teams次に示します。
 
 | 呼び出しの種類                    | ハンドラー                              | 説明                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -330,7 +330,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 | fileConsent/invoke              | `on_teams_file_consent_accept`      | このメソッドは、ユーザーがファイル同意カードを受け入れるときに呼び出されます。 |
 | fileConsent/invoke              | `on_teams_file_consent`            | このメソッドは、ファイル同意カードのアクティビティがコネクタから受信されると呼び出されます。 |
 | fileConsent/invoke              | `on_teams_file_consent_decline`     | このメソッドは、ファイル同意カードがユーザーによって拒否された場合に呼び出されます。 |
-| actionableMessage/executeAction | `on_teams_o365_connector_card_action` | このメソッドは、O365 コネクタ カードのアクション アクティビティがコネクタから受信されると呼び出されます。 |
+| actionableMessage/executeAction | `on_teams_o365_connector_card_action` | このメソッドは、コネクタ カードOffice 365がコネクタから受信されると呼び出されます。 |
 | signin/verifyState              | `on_teams_signin_verify_state`      | このメソッドは、signIn verify state activity がコネクタから受信されると呼び出されます。 |
 | task/fetch                      | `on_teams_task_module_fetch`        | このメソッドは、派生クラスでオーバーライドして、タスク モジュールのフェッチ時にロジックを提供できます。 |
 | task/submit                     | `on_teams_task_module_submit`       | このメソッドは、タスク モジュールの送信時にロジックを提供するために派生クラスでオーバーライドできます。 |

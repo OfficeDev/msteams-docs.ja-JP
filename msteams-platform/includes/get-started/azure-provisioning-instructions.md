@@ -1,16 +1,24 @@
 ## <a name="deploy-your-app-to-azure"></a>アプリを Azure に展開する
 
-展開は 2 つの手順で構成されます。  まず、必要なクラウド リソースが作成されます (プロビジョニングとも呼ばれる)。 次に、アプリのコードが作成されたクラウド リソースにコピーされます。
+展開は 2 つの手順で構成されます。  まず、必要なクラウド リソースが作成されます (プロビジョニングとも呼ばれる)。 次に、アプリのコードが作成されたクラウド リソースにコピーされます。 このチュートリアルでは、タブ アプリを展開します。
+
+> <details>
+> <summary>プロビジョニングと展開の違いは何ですか?</summary>
+>
+> [**プロビジョニング]** 手順では、Azure と Microsoft 365 アプリのリソースを作成しますが、コード (HTML、CSS、JavaScript など) はリソースにコピーされません。 [ **展開]** 手順では、アプリのコードをプロビジョニング 手順で作成したリソースにコピーします。 新しいリソースをプロビジョニングせずに複数回展開するのが一般的です。 プロビジョニング 手順の完了には時間がかかる場合があります。展開手順とは別の手順です。
+</details>
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
-サイドバーのTeams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: アイコンをVisual Studio Codeします。
+サイドバーのTeams Toolkit:::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png":::アイコンをVisual Studio Codeします。
 
 1. [クラウド **でプロビジョニング] を選択します**。
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision.png" alt-text="プロビジョニング コマンドを示すスクリーンショット" border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="プロビジョニング コマンドを示すスクリーンショット" border="false":::
 
-1. 要求された場合は、Azure リソースに使用するサブスクリプションを選択します。
+1. Azure リソースに使用するサブスクリプションを選択します。
+
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="プロビジョニングのリソースを示すスクリーンショット" border="false":::
 
    > [!NOTE]
    > アプリのホスティングに使用される Azure リソースは常にいくつかある。
@@ -19,11 +27,17 @@
 
 1. [プロビジョニング **] を選択します**。
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-warning.png" alt-text="プロビジョニング ダイアログのスクリーンショット。" border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="プロビジョニング ダイアログのスクリーンショット。" border="false":::
 
    プロビジョニング プロセスによって、Azure クラウドにリソースが作成されます。 時間がかかる場合があります。 右下隅のダイアログを見て、進行状況を監視できます。 数分後、次の通知が表示されます。
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-success.png" alt-text="プロビジョニング完了ダイアログを示すスクリーンショット。" border="false":::
+
+    必要な場合は、プロビジョニングされたリソースを表示できます。 このチュートリアルでは、リソースを表示する必要があります。
+
+    プロビジョニングされたリソースが [環境] セクション **に表示** されます。
+
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="プロビジョニング完了ダイアログを示すスクリーンショット。" border="false":::
 
 1. プロビジョニング **が完了したら、[展開]** パネル **から** [クラウドへの展開] を選択します。
 
@@ -31,7 +45,7 @@
 
    プロビジョニングと同様に、展開には時間がかかる場合があります。 右下隅のダイアログを見て、プロセスを監視できます。 数分後、完了通知が表示されます。
 
-これで、同じプロセスを使用してボットアプリとメッセージ拡張機能アプリを Azure に展開できます。 
+これで、同じプロセスを使用してボットアプリとメッセージ拡張機能アプリを Azure に展開できます。
 
 # <a name="command-line"></a>[Command Line/コマンド ライン](#tab/cli)
 
@@ -56,19 +70,21 @@
 
 ---
 
-> [!NOTE]
-> **プロビジョニングと展開の違いは何ですか?**
->
-> [**プロビジョニング]** 手順では、Azure と Microsoft 365 でアプリのリソースを作成しますが、コード (HTML、CSS、JavaScript など) はリソースにコピーされません。 [ **展開]** 手順では、アプリのコードをプロビジョニング 手順で作成したリソースにコピーします。 新しいリソースをプロビジョニングせずに複数回展開するのが一般的です。 プロビジョニング 手順の完了には時間がかかる場合があります。展開手順とは別の手順です。
+## <a name="run-the-deployed-app"></a>展開されたアプリを実行する
 
 プロビジョニングと展開の手順が完了したら、次の手順を実行します。
 
-1. [デバッグ] パネル ( Ctrl + Shift + D [ctrl]+**[D**  /  **]--D)** または [実行>表示] を開Visual Studio Code。 
-1. [起動 **構成] ドロップダウンから [リモート** の起動 ] (エッジ) を選択します。
-1. [再生] ボタンを選択してアプリを起動します 。Azure からリモートで実行中です。
+1. [デバッグ] パネル (**Ctrl + Shift + D** / **??-D** または View **>実行**) を開Visual Studio Code。
+1. [起動 **構成] ドロップダウンから [リモートの起動 ] (エッジ)** を選択します。
+1. [再生] ボタンを選択して、Azure からアプリを起動します。
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="起動アプリをリモートで示すスクリーンショット。" border="false":::
 
-   これで、Azure で実行されているアプリがクライアントにインストールされます。
-
+1. **[追加]** を選択します。
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="インストールされているアプリを示すスクリーンショット。" border="false":::
+
+   アプリが Azure サイトに読み込まれます。
+
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="インストールされているアプリを示すスクリーンショット。" border="false":::
+
+    おめでとうございます! これで、タブ アプリは Azure からリモートで実行されています。

@@ -2,16 +2,14 @@
 title: アプリケーション全体でアプリを拡張Teams環境をMicrosoft 365
 description: アプリを複数のユーザーにまたがって拡張Teams前提条件を次に示Microsoft 365
 ms.date: 11/15/2021
-ms.topic: how-to
-ms.custom: m365apps
-ms.openlocfilehash: e024b11f03c605144a5d1cac6904cdd0095ec15c
-ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
+ms.openlocfilehash: 3fe9d9ea02ff1e7f607d8870ca6817b48556c81f
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2022
-ms.locfileid: "62281701"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435664"
 ---
-# <a name="set-up-your-dev-environment-for-extending-teams-apps-across-m365"></a>M365 全体でアプリを拡張Teams環境をセットアップする
+# <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>アプリケーション全体でアプリを拡張Teams環境をMicrosoft 365
 
 > [!NOTE]
 > 現在公開されている開発者プレビュー Microsoft 365 Teams アプリを拡張[します](~/resources/dev-preview/developer-preview-intro.md)。
@@ -21,11 +19,11 @@ ms.locfileid: "62281701"
 開発環境をセットアップするには:
 
 > [!div class="checklist"]
-> * [M365 Developer (Sandbox) テナントを取得し、サイドローディングを有効にする](#prepare-a-developer-tenant-for-testing)
-> * [M365 テナントをターゲット *リリースOffice 365登録する*](#enroll-your-developer-tenant-for-office-365-targeted-releases)
+> * [開発者 (Microsoft 365) テナントを取得し、サイドローディングを有効にする](#prepare-a-developer-tenant-for-testing)
+> * [ターゲットリリースMicrosoft 365にOffice 365 *テナントを登録する*](#enroll-your-developer-tenant-for-office-365-targeted-releases)
 > * [プレビュー バージョンのプレビュー バージョンにアクセスするアカウントを構成OutlookおよびOffice](#install-office-apps-in-your-test-environment)
 > * [バージョンの Developer Previewに切り替Teams](#switch-to-the-developer-preview-version-of-teams)
-> * [*省略可能*][Teams Toolkitの拡張機能をインストールVisual Studio Code](#install-visual-studio-code-and-teams-toolkit-preview-extension)
+> * [*省略可能*][コードTeams Toolkit拡張機能をMicrosoft Visual Studioする](#install-visual-studio-code-and-teams-toolkit-preview-extension)
 
 ## <a name="prepare-a-developer-tenant-for-testing"></a>テスト用に開発者テナントを準備する
 
@@ -106,7 +104,7 @@ ms.locfileid: "62281701"
 
 Teams Toolkit (`v2.10.0`[Visual Studio Code](https://aka.ms/teams-toolkit) 以降) の拡張機能は、既存の Teams コードを変更して、Outlook および Office と互換性を持つコマンドを提供します。 詳細については、「ユーザーとユーザー[の個人用Teamsを有効にするOffice」を参照Outlook](extend-m365-teams-personal-tab.md)。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [Office と Outlook の [Teams パーソナル] タブを有効にする](extend-m365-teams-personal-tab.md)
 - [Outlook の Teams メッセージングの拡張機能を有効にする](extend-m365-teams-message-extension.md)

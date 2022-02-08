@@ -6,12 +6,12 @@ ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 3555725fdea8ff858c842ed26ed652bb13e82b7f
-ms.sourcegitcommit: 2d5bdda6c52693ed682bbd543b0aa66e1feb3392
+ms.openlocfilehash: 453dc7e3c2698504ea755cd4564f588cdd95ba36
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "61768586"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435371"
 ---
 # <a name="preview-teams-app-manifest-in-teams-toolkit"></a>アプリ Teamsマニフェストをプレビュー Teams Toolkit
 
@@ -20,18 +20,18 @@ ms.locfileid: "61768586"
 - `manifest.local.template.json` - ローカル デバッグ チーム アプリ。
 - `manifest.remote.template.json` - すべてのリモート環境間で共有されます。
 
-プレースホルダーから成るテンプレート ファイル、およびファイルの実際のTeams Toolkitは、以下のファイルおよび `.fx/configs` `.fx/states` .
+プレースホルダーから成るテンプレート ファイル、およびファイルの実際の値Teams Toolkitで解決`.fx/configs`されます`.fx/states`。
 
 ## <a name="prerequisite"></a>前提条件
 
 * [バージョン Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) v3.0.0 以上をインストールします。
 
 > [!TIP]
-> VS コードでTeamsアプリ プロジェクトが開いているか確認します。
+> アプリ プロジェクトがTeamsコードで開いているVisual Studioします。
 
 ## <a name="preview-manifest"></a>プレビュー マニフェスト
 
-実際のコンテンツでマニフェストをプレビューするには、Teams Toolkit下にプレビュー マニフェスト ファイルを生成 `build/appPackage` します。
+実際のコンテンツでマニフェストをプレビューするには、Teams Toolkit下にプレビュー マニフェスト ファイルを生成`build/appPackage`します。
 
 ```text
 └───build
@@ -44,25 +44,25 @@ ms.locfileid: "61768586"
 
 ### <a name="preview-local-manifest-file"></a>ローカル マニフェスト ファイルのプレビュー
 
-ローカル チーム アプリのマニフェスト ファイルをプレビューするには **、F5** キーを押してローカル デバッグを実行する必要があります。 既定のローカル設定が生成され、ビルド **/appPackage** フォルダーの下にアプリ パッケージとプレビュー マニフェストビルドが生成されます。
+ローカル チーム アプリのマニフェスト ファイルをプレビューするには、 **F5** キーを押してローカル デバッグを実行する必要があります。 既定のローカル設定が生成され、ビルド **/appPackage** フォルダーの下にアプリ パッケージとプレビュー マニフェストビルドが生成されます。
 
 次の手順に従ってローカル マニフェストをプレビューできます。
 
-1. **manifest.local.template.json** ファイルの codelens で [プレビュー] を選択します。 
-2. manifest.local.template.json ファイルのメニュー バーで [**マニフェスト ファイルのプレビュー] を選択** します。 
-3. Treeview **で [zip Teamsメタデータ パッケージ] を選択** し、[ローカル] を **選択します**。
+1. **manifest.local.template.json ファイルの codelens で [プレビュー] を選択** します。
+2. manifest.local.template.json ファイルのメニュー バーで [**マニフェスト ファイルのプレビュー] を選択** します。
+3. Treeview **で [zip Teamsメタデータ パッケージ]** を選択し、[ローカル] を **選択します**。
 プレビュー ローカルは、イメージに示すように表示されます。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-1.png" alt-text="プレビュー":::
 
 ### <a name="preview-manifest-in-remote-environment"></a>リモート環境でマニフェストをプレビューする
 
-リモート チーム アプリのマニフェスト ファイルをプレビューするには、Teams Toolkit拡張子 Treeview の開発パネルでクラウドで [プロビジョニング] を選択するか、Teams:**コマンド** パレットからクラウドでプロビジョニングをトリガーします。 リモート チーム アプリの構成を生成し、ビルド **/appPackage** フォルダーの下にパッケージマニフェストとプレビュー マニフェストをビルドします。
+リモート チーム アプリのマニフェスト ファイルをプレビューするには、Teams Toolkit 拡張子 Treeview の開発パネルでクラウドで [プロビジョニング] を選択するか、Teams **:** コマンド パレットからクラウドでプロビジョニングをトリガーします。 リモート チーム アプリの構成を生成し、ビルド **/appPackage** フォルダーの下にパッケージマニフェストとプレビュー マニフェストをビルドします。
 
 次の手順に従って、リモート環境でマニフェストをプレビューできます。
 
-1. **manifest.remote.template.json ファイルの codelens で [プレビュー] を選択** します。 
-2. **manifest.remote.template.json** ファイルのメニュー バーで [マニフェスト ファイルのプレビュー] を選択します。 
+1. **manifest.remote.template.json ファイルの codelens で [プレビュー] を選択** します。
+2. **manifest.remote.template.json ファイルのメニュー バーで [マニフェスト ファイルのプレビュー] を選択** します。
 3. ツリー **ビューで [zip Teamsメタデータ パッケージ]** を選択します。
 4. 環境を選択します。
 
@@ -74,10 +74,10 @@ ms.locfileid: "61768586"
 
 マニフェスト ファイルをプレビューした後、次の手順に従ってローカルの変更を Dev ポータルに同期できます。
 
-1.  [**更新] をTeamsの左上** 隅にある [プラットフォームの更新] を選択します。`manifest.{env}.json`
-2. **[Teams: マニフェストを更新して、Teamsの** メニュー バーでプラットフォームに更新します。`manifest.{env}.json`
+1.  [**更新] をTeamsの** 左上隅にある [プラットフォームを更新する] を選択します。`manifest.{env}.json`
+2. [**Teams: マニフェストを更新して、Teamsの** メニュー バーでプラットフォームに更新します。`manifest.{env}.json`
 
- コマンド パレットからマニフェスト **TeamsプラットフォームにTeamsトリガー** することもできます。
+ コマンド パレットからマニフェスト **TeamsプラットフォームにTeamsをトリガー** することもできます。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="ツリー ビュー":::
 
@@ -88,8 +88,8 @@ ms.locfileid: "61768586"
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
 
-- **プレビューのみ**: ローカル マニフェスト ファイルは、現在の構成に従って上書きされます
-- **プレビューと更新**: ローカル マニフェスト ファイルは、現在の構成に従って上書きされ、新しいTeamsされます
+- **プレビューのみ**: ローカル マニフェスト ファイルは現在の構成に従って上書きされます
+- **プレビューと更新**: ローカル マニフェスト ファイルは、現在の構成に従って上書きされ、Teamsされます
 - **キャンセル**: 何もしない
 
 > [!NOTE]

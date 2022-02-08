@@ -1,37 +1,37 @@
 ---
-title: アプリとアプリのMicrosoft Teams ToolkitをVisual Studio Code
+title: Microsoft Teams ツールキットと Visual Studio Code を使用してアプリを構築する
 description: アプリを使用して、アプリ内で直接素晴らしいカスタム Visual Studio Codeを構築Microsoft Teams Toolkit
 keywords: teams visual studio コード ツールキット
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 8eeaadf28b9bdb46c91a803a66b4855d2a5e848c
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 0413edf1e0a724c193570c5828a6f7ca51277bc3
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948440"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435818"
 ---
 # <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>アプリとアプリのTeams ToolkitをVisual Studio Code
 
-Visual Studio Code の Teams Toolkit は、開発者エクスペリエンスに対する "ゼロ構成" アプローチで、統合 ID、クラウド ストレージへのアクセス、Microsoft Graph からのデータ、および Azure および M365 の他のサービスを備えた Teams アプリを作成および展開するのに役立ちます。  
+Visual Studio Code Teams Toolkit は、開発者が統合 ID、クラウド ストレージへのアクセス、Microsoft Graph からのデータ、Azure および Microsoft 365 の他のサービスを備えた Teams アプリを作成および展開し、開発者エクスペリエンスに対する "ゼロ構成" アプローチで役立ちます。  
 
-また、このツールキットは、Visual Studio CLI (と呼ばれる) として使用することもできます `teamsfx` 。
+また、このツールキットは、Visual Studio CLI (と呼ばれる) として使用することもできます`teamsfx`。
 
 ## <a name="install-the-teams-toolkit-for-visual-studio-code"></a>インストール用のTeams ToolkitをインストールVisual Studio Code
 
 1. Visual Studio Code を開きます。
-1. [拡張機能] ビューを選択します **(Ctrl + Shift +**  /   **>** X
+1. [拡張機能] ビュー (**Ctrl + Shift +** **X-1** /  または **[拡張機能の表示] >します**)。
 1. 検索ボックスに「Teams Toolkit」_と入力します_。
 1. [インストール] ウィンドウの横にある緑色のインストール ボタンTeams Toolkit。
 
-また、マーケットプレースでTeams ToolkitをVisual Studio Code[できます](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)。
+また、マーケットプレースTeams Toolkitを[Visual Studio Codeできます](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)。
 
 次のツールは、必要に応Visual Studio Code拡張機能によってインストールされます。 既にインストールされている場合は、インストールされているバージョンが代わりに使用されます。 Linux (WSL を含む) を使用する場合は、次のツールをインストールしてから使用する必要があります。
 
 - [Azure Functions コア ツール](/azure/azure-functions/functions-run-local)
 
-    Azure Functions Core Tools は、Azure でサービスを実行するときに必要な認証ヘルパーを含む、ローカル デバッグ実行時にバックエンド コンポーネントをローカルで実行するために使用されます。 これは、npm を使用してプロジェクト ディレクトリ内にインストールされます `devDependencies` 。
+    Azure Functions Core Tools は、Azure でサービスを実行するときに必要な認証ヘルパーを含む、ローカル デバッグ実行時にバックエンド コンポーネントをローカルで実行するために使用されます。 これは、npm を使用してプロジェクト ディレクトリ内にインストールされます `devDependencies`。
 
 - [.NET SDK](/dotnet/core/install/)
 
@@ -39,7 +39,7 @@ Visual Studio Code の Teams Toolkit は、開発者エクスペリエンスに�
 
 - [ngrok](https://ngrok.com/download)
 
-    一部Teamsアプリ機能 (会話型ボット、メッセージング拡張機能、受信 Webhook) では、受信接続が必要です。  開発システムをトンネル経由でTeamsする必要があります。 タブのみを含むアプリでは、トンネルは必要ありません。  このパッケージは、(npm を使用して) プロジェクト ディレクトリ内にインストールされます `devDependencies` 。
+    一部Teamsアプリ機能 (会話型ボット、メッセージング拡張機能、受信 Webhook) では、受信接続が必要です。  開発システムをトンネル経由でTeamsする必要があります。 タブのみを含むアプリでは、トンネルは必要ありません。  このパッケージは、(npm を使用して) プロジェクト ディレクトリ内にインストールされます `devDependencies`。
 
 ## <a name="use-the-teams-toolkit-for-visual-studio-code"></a>次のTeams Toolkitを使用Visual Studio Code
 
@@ -50,7 +50,7 @@ Visual Studio Code の Teams Toolkit は、開発者エクスペリエンスに�
 
 ## <a name="set-up-a-new-teams-project"></a>新しいプロジェクトをTeamsする
 
-このTeams Toolkitは、Azure Reactホストされているアプリ、または M365 SPFx環境でホストされている web パーツをSharePointできます。 Azure でホストReact新しいアプリを作成するには、次の方法を実行します。
+このTeams Toolkitは、Azure Reactホストされているアプリや、SPFx環境でホストされている web パーツをMicrosoft 365 SharePointできます。 Azure でホストReact新しいアプリを作成するには、次の方法を実行します。
 
 1. Visual Studio Code を開きます。
 1. サイド バーの Teams アイコンを選択して、Teams ツールキットを開きます。
@@ -73,11 +73,11 @@ Visual Studio Code の Teams Toolkit は、開発者エクスペリエンスに�
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="新規アプリのホスティングを選択する方法を示すスクリーンショット":::。
 
-1. 必要に応じて、[ **クラウド** リソース] ステップで、アプリケーションで使用するクラウド リソースを選択します。 CRUD (作成、読み取り、更新、および削除) を選択すると、テーブルまたは API SQLアクセスできます。
+1. 必要に応じて、[ **クラウド リソース] ステップ** で、アプリケーションで使用するクラウド リソースを選択します。 CRUD (作成、読み取り、更新、および削除) を選択すると、テーブルまたは API SQLアクセスできます。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-cloud-resources.png" alt-text="新しいアプリにクラウド リソースを追加する方法を示すスクリーンショット":::。
 
-1. [プログラミング **言語] ステップで****、JavaScript** または **TypeScript を選択できます**。
+1. [プログラミング **言語] ステップで** 、 **JavaScript または TypeScript** を **選択できます**。
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="プログラミング言語を選択する方法のスクリーンショット":::
 
@@ -101,12 +101,12 @@ Visual Studio Code の Teams Toolkit は、開発者エクスペリエンスに�
       >
       > - manifest.json。
       > - パブリック [または組織](../resources/schema/manifest-schema.md#icons) のアプリ カタログに表示するアプリの色アイコン。
-      > - アクティビティ[バーに](../resources/schema/manifest-schema.md#icons)表示するアウトライン Teamsアイコン。
+      > - アクティビティ [バーに](../resources/schema/manifest-schema.md#icons)表示するアウトライン Teamsアイコン。
 
-マニフェストとアイコンは、プロジェクトにアップロードされる前にプロジェクトのフォルダー `.fx` にTeams。 アプリがインストールされている場合、Teams クライアントはマニフェスト ファイルを解析して、アプリの名前やサービスが配置されている URL など、必要な情報を特定します。
+マニフェストとアイコンは、プロジェクトに`.fx`アップロードされる前にプロジェクトのフォルダーにTeams。 アプリがインストールされている場合、Teams クライアントはマニフェスト ファイルを解析して、アプリの名前やサービスが配置されている URL など、必要な情報を特定します。
 
-1. アプリを構成するには、アプリの **[Teams Toolkit]** タブにVisual Studio Code。
-1. [**マニフェスト エディター] セクション** の **[マニフェスト エディター Project** します。
+1. アプリを構成するには、アプリの [**Teams Toolkit] タブ** Visual Studio Code。
+1. [**マニフェスト エディター] セクション** の **[マニフェスト Project** 選択します。
 
 [アプリの詳細] ページでフィールドを編集すると、最終的にアプリ パッケージの一部として出荷される manifest.json ファイルの内容が更新されます。
 
@@ -126,7 +126,7 @@ Visual Studio Code の Teams Toolkit は、開発者エクスペリエンスに�
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="起動時に Web 版のチームを選択する方法を示すスクリーンショット":::
 
-1. サインインするように求めるメッセージが表示されることがあります。 その場合は、M365 アカウントを使用してサインインします。
+1. サインインするように求めるメッセージが表示されることがあります。 その場合は、アカウントでサインインMicrosoft 365します。
 1. Teams へのアプリのインストールを促すメッセージが表示された場合は、**[追加]** を押してください。
 
 バックエンドとフロントエンドの両方が、アプリケーション デバッガー Visual Studio Codeされます。  これにより、コード内の任意の場所にブレークポイントを設定し、状態を検査できます。  また、ブラウザー内でフロントエンド デバッグ ツール (開発者向けツールReactなど) を使用することもできます。  デバッグの詳細については、Visual Studio Codeを[参照してください](https://code.visualstudio.com/Docs/editor/debugging)。
@@ -135,12 +135,12 @@ Visual Studio Code の Teams Toolkit は、開発者エクスペリエンスに�
 
 他のユーザーがアプリを使用する前に、アプリを開発者ポータルに発行して、他のユーザー Teams。
 
-1. アプリを発行するには、アプリの **[Teams Toolkit]** タブにVisual Studio Code。
+1. アプリを発行するには、アプリの [**Teams Toolkit] タブ** にVisual Studio Code。
 1. [**発行] をTeams** セクションで **Project** します。
 
-Azure ホスティングを使用する場合は、クラウドにプロビジョニングして展開している必要があります。 文書の公開プロセスの詳細については、「SPFxチュートリアル」[をSPFxしてください](../get-started/first-app-spfx.md)。
+Azure ホスティングを使用する場合は、クラウドにプロビジョニングして展開している必要があります。 文書の公開プロセスの詳細については、SPFxチュートリアルを[SPFxしてください](../get-started/first-app-spfx.md)。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [発行済みアプリの保守とサポート](../concepts/deploy-and-publish/appsource/post-publish/overview.md)

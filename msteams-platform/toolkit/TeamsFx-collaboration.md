@@ -6,12 +6,12 @@ ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 9a39b84c3cfa94c410df5774d4a177535e1cfdd6
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 5b08923d92e8b1ea7a6292754f62899669de4804
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212350"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435168"
 ---
 # <a name="collaborate-on-teams-project-using-teams-toolkit"></a>プロジェクトを使用Teams共同作業Teams Toolkit
 
@@ -29,7 +29,7 @@ ms.locfileid: "62212350"
 * [バージョン Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) v3.0.0 以上をインストールします。
 
 > [!TIP]
-> VS コードでTeamsアプリ プロジェクトが開いているか確認します。
+> アプリ プロジェクトがTeamsコードで開いているMicrosoft Visual Studioします。
 
 ## <a name="collaborate-with-other-developers"></a>他の開発者と共同作業する
 
@@ -40,15 +40,15 @@ ms.locfileid: "62212350"
 > [!NOTE]
 > 環境の共同作業者を追加する前に、プロジェクトの所有者が最初に [プロジェクトを準備する](provision.md) 必要があります。
 
-* [**ユーザー]** の [環境] セクションTeams Toolkit共同作業者 **を選択します**。 次の図に **示すように、[M365 Teams** アプリの追加] (AAD App を使用した) 所有者とリスト **M365 Teams アプリ (AAD App) 所有者** のオプションが表示されます。
+* [**ユーザーの環境**] セクションでTeams Toolkit共同作業者 **を選択します**。 [アプリの追加] Microsoft 365 Teams **(Microsoft Azure Active Directory (Azure AD) アプリ)** の所有者とリスト Microsoft 365 Teams アプリ **(Azure AD アプリ) が表示されます。次の** 図に示すように、所有者。
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add collaborators.png" alt-text="共同作業者":::
 
-* [**アプリに M365 TeamsをAAD]** 所有者を選択し、他の M365 アカウントの電子メール アドレスを共同作業者として追加します。 追加するアカウントは、イメージに示すように、リモート デバッグ用のプロジェクト所有者と同じテナント上にある必要があります。
+* [**アプリMicrosoft 365 TeamsをAzure AD]** 所有者を選択し、他Microsoft 365アカウントの電子メール アドレスを共同作業者として追加します。 追加するアカウントは、イメージに示すように、リモート デバッグ用のプロジェクト所有者と同じテナント上にある必要があります。
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="envi を追加する":::
 
-* 現在の環境で共同作業者を表示するには、[リスト **M365 Teams App (AAD App 付き) 所有者]** を選択し、次の図に示すように、共同作業者が出力チャネルに一覧表示されます。
+* 現在の環境で共同作業者を表示するには、[リスト Microsoft 365 Teams **App] (Azure AD App を使用して) [所有者]** を選択すると、次の図に示すように、共同作業者が出力チャネルに一覧表示されます。
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="リスト":::
 
@@ -60,12 +60,12 @@ ms.locfileid: "62212350"
 ### <a name="as-project-collaborator"></a>プロジェクトの共同作業者として
 
 * プロジェクトのクローンを作成GitHub。
-* M365 アカウントにログインします。
+* アカウントにログインMicrosoft 365します。
 * このプロジェクトで使用しているすべての Azure リソースに対する共同作成者のアクセス許可を持つ Azure アカウントにログインします。
 * アプリをプレビュー Teams、プロジェクトをリモートに展開します。
 * リモートを起動して、アプリのプレビュー Teamsします。
 
-詳細については、「リモート環境[でアプリをビルドしてTeams実行する」を参照してください](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3&branch)。
+詳細については、「リモート環境[でアプリをビルドTeams実行する」を参照してください](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3&branch)。
 
 > [!NOTE]
 > 共同作業者は、プロジェクト所有者と同じテナントの下にあるプロジェクト所有者によって追加されたアカウントを使用してログインする必要があります。
@@ -77,13 +77,13 @@ ms.locfileid: "62212350"
   1. [開発者ポータルTeamsに移動し、名前またはアプリ ID Teamsアプリを選択します。
   2. 左側の **パネルから [所有者** ] を選択します。
   3. 共同作業者を選択して削除します。
-  4. [アプリ [の](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)Azure Active Directory] に移動 **し、** 左側のパネルから [アプリの登録] を選択し、アプリをAzure ADします。
-  5. [**アプリの管理**] ページの左側のAzure ADから [所有者] を選択します。
+  4. [[アプリの](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)Azure Active Directory] に移動し、左側 **の** パネルから [アプリの登録] を選択し、アプリAzure ADします。
+  5. [アプリ **の管理**] ページの左側のAzure ADから [所有者] を選択します。
   6. 共同作業者を選択して削除します。
 
 > [!NOTE]
 > * プロジェクトに追加された共同作業者は、通知を受け取る必要があります。 Project所有者は、オフラインで共同作業者に通知する必要があります。
-> * Azure 関連のアクセス許可は、Azure portal の Azure サブスクリプション管理者が手動で設定する必要があります。 開発者が TeamsFx プロジェクトの準備と展開に協力できるよう、Azure アカウントにはサブスクリプションの共同作成者の役割が必要です。
+> * Azure 関連のアクセス許可は、Azure サブスクリプション管理者がポータルで手動で設定Microsoft Azureがあります。 開発者が TeamsFx プロジェクトの準備と展開に協力できるよう、Azure アカウントにはサブスクリプションの共同作成者の役割が必要です。
 
 ## <a name="see-also"></a>関連項目
 

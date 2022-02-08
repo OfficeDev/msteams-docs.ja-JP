@@ -6,12 +6,12 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: b8a6506707626a80cabc9c730eef6fe11160e386
-ms.sourcegitcommit: 7cccec0b2512f4e9366eb7c88998c5181a52681d
+ms.openlocfilehash: e9292dc6d3157df4d226d39ea0d0fb0ac53c2c5d
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059069"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435748"
 ---
 # <a name="cicd-guide"></a>CI/CD ガイド
 
@@ -26,7 +26,7 @@ TeamsFx は、アプリケーションの構築中に開発ワークフローを
 
 ## <a name="ci-or-cd-workflow-templates-in-github"></a>ワークフロー内の CI または CD ワークフロー GitHub
 
-**CI または CD ワークフローを含め、** アプリTeamsプロセスを自動化するには、次GitHub。
+**CI または CD ワークフローを含め、アプリTeamsプロセスを自動化するには、次GitHub**。
 
 1. [フォルダーの作成] `.github/workflows`
 1. 次のいずれかのテンプレート ファイルをコピーします。
@@ -47,7 +47,7 @@ TeamsFx は、アプリケーションの構築中に開発ワークフローを
 以下の手順を実行して、CD ワークフローをカスタマイズします。
 
 1. 既定では、新しいコミットがブランチに対して行われたときに、CD ワークフローがトリガー `main` されます。
-1. 環境GitHubリポジトリ[シークレット](https://docs.github.com/en/actions/reference/encrypted-secrets)を作成して、Azure サービス プリンシパルと M365 アカウントのログイン資格情報を保持します。 詳細については、「GitHub[アクション」を参照してください](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md)。
+1. 環境GitHub[リポジトリ シークレット](https://docs.github.com/en/actions/reference/encrypted-secrets)を作成して、Azure サービス プリンシパルを保持し、Microsoft 365資格情報を保持します。 詳細については、「GitHub [アクション」を参照してください](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md)。
 1. 必要に応じてビルド スクリプトを変更します。
 1. 必要に応じてテスト スクリプトを削除します。
 
@@ -61,7 +61,7 @@ TeamsFx は、アプリケーションの構築中に開発ワークフローを
 1. [**設定**] を選択します。
 1. [環境] **セクションに移動** します。
 1. [新 **しい環境] を選択します**。
-1. 環境の名前を入力します。 テンプレートに指定されている既定の環境名はです `test_environment` 。 
+1. 環境の名前を入力します。 テンプレートに指定されている既定の環境名はです `test_environment`。 
 1. [環境 **の構成] を選択します**。
 1. [シークレット **の追加] を選択します**。
 
@@ -69,17 +69,16 @@ TeamsFx は、アプリケーションの構築中に開発ワークフローを
 
 |名前|説明|
 |---|---|
-|AZURE_SERVICE_PRINCIPAL_NAME|リソースのプロビジョニングに使用される Azure のサービス プリンシパル名。|
-|AZURE_SERVICE_PRINCIPAL_PASSWORD|Azure サービス プリンシパルのパスワード。|
-|AZURE_SUBSCRIPTION_ID|リソースがプロビジョニングされるサブスクリプションを特定します。|
-|AZURE_TENANT_ID|サブスクリプションが存在するテナントを識別します。|
-|M365_ACCOUNT_NAME|アプリを作成および発行する M365 Teams。|
-|M365_ACCOUNT_PASSWORD|M365 アカウントのパスワード。|
-|M365_TENANT_ID|アプリを作成/発行するTeamsを特定します。 マルチテナント アカウントを持ち、別のテナントを使用しない限り、この値はオプションです。 詳細については [、「M365 テナント ID を検索する方法」を参照してください](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)。|
-
+|`AZURE_SERVICE_PRINCIPAL_NAME`|リソースのプロビジョニングに使用される Azure のサービス プリンシパル名。|
+|`AZURE_SERVICE_PRINCIPAL_PASSWORD`|Azure サービス プリンシパルのパスワード。|
+|`AZURE_SUBSCRIPTION_ID`|リソースがプロビジョニングされるサブスクリプションを特定します。|
+|`AZURE_TENANT_ID`|サブスクリプションが存在するテナントを識別します。|
+|`M365_ACCOUNT_NAME`|アプリMicrosoft 365発行するアカウントをTeamsします。|
+|`M365_ACCOUNT_PASSWORD`|アカウントのパスワードMicrosoft 365します。|
+|`M365_TENANT_ID`|アプリを作成/発行するTeamsを特定します。 マルチテナント アカウントを持ち、別のテナントを使用しない限り、この値はオプションです。 詳細については、「テナント [ID の検索方法」をMicrosoft 365してください](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)。|
 
 > [!NOTE]
-> 現在、Azure のサービス プリンシパルは CI/CD ワークフローで使用されています。 詳細については [、「Create azure Service principles」を参照してください](#create-azure-service-principals)。
+> 現在、Azure のサービス プリンシパルは CI/CD ワークフローで使用されています。 詳細については、「 [Create Azure Service principles」を参照してください](#create-azure-service-principals)。
 
 ## <a name="set-up-ci-or-cd-pipelines-with-azure-devops"></a>アプリケーションを使用して CI または CD パイプラインをAzure DevOps
 
@@ -92,8 +91,8 @@ TeamsFx は、アプリケーションの構築中に開発ワークフローを
 
 ### <a name="set-up-ci-pipeline"></a>CI パイプラインのセットアップ
 
-1. CI[スクリプトを](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh)Azure DevOpsリポジトリに追加し、スクリプト ファイル内のコメントから確認できる必要なカスタマイズを行います。
-1. 手順に[従って、CI 用の Azure DevOpsパイプラインを作成します](/azure/devops/pipelines/create-first-pipeline)。
+1. CI [スクリプトを](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) Azure DevOpsリポジトリに追加し、スクリプト ファイル内のコメントから考え出す場合に必要なカスタマイズを行います。
+1. 手順に[従って、CI 用パイプラインAzure DevOps作成します](/azure/devops/pipelines/create-first-pipeline)。
 一般的な CI パイプライン スクリプトのシナリオを次に示します。
 
 ```yml
@@ -116,15 +115,15 @@ steps:
 
 スクリプトまたはワークフロー定義に対して行える変更を次に示します。
 
-1. CI フローを変更します。 既定では、新しいコミットがブランチにプッシュ `dev` されます。
+1. CI フローを変更します。 既定では、新しいコミットがブランチにプッシュされます `dev` 。
 1. ノードと npm のインストール方法を変更します。
 1. npm ビルド スクリプトを使用するか、オートメーション コードでのビルド方法をカスタマイズします。
 1. 成功するためにゼロを返す npm テスト スクリプトを使用し、テスト コマンドを変更します。
 
 ### <a name="set-up-cd-pipeline"></a>CD パイプラインのセットアップ
 
-1. CD[スクリプトを](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)Azure DevOps リポジトリに追加し、スクリプト ファイル内のコメントから確認する場合に必要なカスタマイズを行います。
-1. CD 用のAzure DevOpsパイプラインを作成します。 詳細については、「Create [first pipeline 」を参照してください](/azure/devops/pipelines/create-first-pipeline)。 パイプラインの定義は、CI パイプラインの次の定義例を参照できます。
+1. CD [スクリプトを](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh) Azure DevOpsリポジトリに追加し、スクリプト ファイル内のコメントから確認できる必要なカスタマイズを行います。
+1. CD 用のAzure DevOpsパイプラインを作成します。 詳細については、「Create [first pipeline」を参照してください](/azure/devops/pipelines/create-first-pipeline)。 パイプラインの定義は、CI パイプラインの次の定義例を参照できます。
 1. [変数の定義] [で必要な](/azure/devops/pipelines/process/variables)変数を追加し、必要に応じてシークレットとして作成します。
 
 ```yml
@@ -156,7 +155,7 @@ steps:
 
 1. CD フローのトリガー方法。 既定では、メイン ブランチに対して新しいコミットが行われたときに **発生** します。
 1. ノードと npm のインストール方法を変更します。
-1. 環境名を変更します。既定では、**ステージングします。**
+1. 既定では、ステージング環境名を変更 **します**。
 1. npm ビルド スクリプトを使用するか、オートメーション コードでのビルド方法をカスタマイズします。
 1. 成功した場合は 0 を返す npm テスト スクリプトを使用し、テスト コマンドを変更してください。
 
@@ -167,21 +166,21 @@ steps:
 1. [パイプラインの編集] ページで、[変数] **を選択し、[** 新しい変数] **を選択します**。
 1. 変数の [名前] または [値のペア] を入力します。
 1. 必要に応じて、[この値を **秘密にする] のチェック ボックス** をオフにします。
-1. **[OK] を** 選択して変数を作成します。
+1. [ **OK] を** 選択して変数を作成します。
 
 |名前|説明|
 |---|---|
-|AZURE_SERVICE_PRINCIPAL_NAME|リソースのプロビジョニングに使用される Azure のサービス プリンシパル名。|
-|AZURE_SERVICE_PRINCIPAL_PASSWORD|Azure サービス プリンシパルのパスワード。|
-|AZURE_SUBSCRIPTION_ID|リソースがプロビジョニングされるサブスクリプションを特定します。|
-|AZURE_TENANT_ID|サブスクリプションが存在するテナントを識別します。|
-|M365_ACCOUNT_NAME|アプリを作成して発行するための M365 Teams。|
-|M365_ACCOUNT_PASSWORD|M365 アカウントのパスワード。|
-|M365_TENANT_ID|アプリを作成/発行するTeamsを特定します。 マルチテナント アカウントを持ち、別のテナントを使用しない限り、この値はオプションです。 [M365 テナント ID を見つける方法について詳しくは、以下をご覧ください](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)。|
+|`AZURE_SERVICE_PRINCIPAL_NAME`|リソースのプロビジョニングに使用される Azure のサービス プリンシパル名。|
+|`AZURE_SERVICE_PRINCIPAL_PASSWORD`|Azure サービス プリンシパルのパスワード。|
+|`AZURE_SUBSCRIPTION_ID`|リソースがプロビジョニングされるサブスクリプションを特定します。|
+|`AZURE_TENANT_ID`|サブスクリプションが存在するテナントを識別します。|
+|`M365_ACCOUNT_NAME`|アプリMicrosoft 365発行するためのユーザー アカウントTeamsです。|
+|`M365_ACCOUNT_PASSWORD`|アカウントのパスワードMicrosoft 365します。|
+|`M365_TENANT_ID`|アプリを作成/発行するTeamsを特定します。 マルチテナント アカウントを持ち、別のテナントを使用しない限り、この値はオプションです。 テナント ID を[検索する方法の詳細Microsoft 365参照してください](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)。|
 
 ## <a name="ci-or-cd-pipeline-templates-in-jenkins"></a>Jenkins の CI または CD パイプライン テンプレート
 
-これらのテンプレートをリポジトリに追加するには [、jenkins-ci-template のバージョンを作成します。Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-ci-template.Jenkinsfile) と  [jenkins-cd-template。Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-cd-template.Jenkinsfile) をブランチ別にリポジトリに保存します。
+これらのテンプレートをリポジトリに追加するには、 [jenkins-ci-template のバージョンが必要です。Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-ci-template.Jenkinsfile) と  [jenkins-cd-template。Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-cd-template.Jenkinsfile) をブランチ別にリポジトリに保存します。
 
 また、Jenkins で CI または CD パイプラインを作成し、それに応じて特定の **Jenkinsfile を** 指す必要があります。
 
@@ -196,8 +195,8 @@ steps:
 
 プロジェクトを調整するために行える変更の一部を次に示します。
 
-1. テンプレート ファイルの名前を **Jenkinsfile** に変更し、ターゲット ブランチ (開発ブランチなど) の下 **に配置** します。
-1. CI フローのトリガー方法を変更します。 新しい変更が開発ブランチにプッシュされる場合、既定では **pollSCM** のトリガーを **使用** します。
+1. テンプレート ファイルの名前を **Jenkinsfile** に変更し、ターゲット ブランチ (開発ブランチなど) の下に **配置** します。
+1. CI フローのトリガー方法を変更します。 新しい変更が開発ブランチにプッシュされる場合、 **既定では pollSCM** のトリガーを **使用** します。
 1. npm ビルド スクリプトを使用するか、オートメーション コードでのビルド方法をカスタマイズします。
 1. 成功した場合は 0 を返す npm テスト スクリプトを使用し、テスト コマンドを変更してください。
 
@@ -206,24 +205,24 @@ steps:
 次の手順を実行して、CD パイプラインをカスタマイズします。
 
 1. テンプレート ファイルの名前を **Jenkinsfile** に変更し、メイン ブランチなど、ターゲット ブランチの下に **配置** します。
-1. CD フローを変更します。 新しい変更がメイン ブランチにプッシュされると **、pollSCM** のトリガーが既定で **使用** されます。
-1. Jenkins パイプライン [資格情報を作成して](https://www.jenkins.io/doc/book/using/using-credentials/) 、Azure サービス プリンシパルと M365 アカウントログイン資格情報を保持します。
+1. CD フローを変更します。 新しい変更がメイン ブランチにプッシュされると、 **pollSCM** のトリガーが既定で **使用** されます。
+1. Jenkins パイプライン[資格情報を作成](https://www.jenkins.io/doc/book/using/using-credentials/)して、Azure サービス プリンシパルを保持し、Microsoft 365ログイン資格情報を保持します。
 1. 必要に応じてビルド スクリプトを変更します。
 1. テストを実行しない場合は、テスト スクリプトを削除します。
 
 ### <a name="credentials-for-jenkins"></a>Jenkins の資格情報
 
-[Using-credentials に従って](https://www.jenkins.io/doc/book/using/using-credentials/)Jenkins に資格情報を作成します。
+[Using-credentials に従って](https://www.jenkins.io/doc/book/using/using-credentials/) Jenkins に資格情報を作成します。
 
 |名前|説明|
 |---|---|
-|AZURE_SERVICE_PRINCIPAL_NAME|リソースのプロビジョニングに使用される Azure のサービス プリンシパル名。|
-|AZURE_SERVICE_PRINCIPAL_PASSWORD|Azure サービス プリンシパルのパスワード。|
-|AZURE_SUBSCRIPTION_ID|リソースがプロビジョニングされるサブスクリプションを特定します。|
-|AZURE_TENANT_ID|サブスクリプションが存在するテナントを識別します。|
-|M365_ACCOUNT_NAME|アプリを作成して発行するための M365 Teams。|
-|M365_ACCOUNT_PASSWORD|M365 アカウントのパスワード。|
-|M365_TENANT_ID|アプリを作成/発行するTeamsを特定します。 マルチテナント アカウントを持ち、別のテナントを使用しない限り、この値はオプションです。 [M365 テナント ID を見つける方法について詳しくは、以下をご覧ください](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)。|
+|`AZURE_SERVICE_PRINCIPAL_NAME`|リソースのプロビジョニングに使用される Azure のサービス プリンシパル名。|
+|`AZURE_SERVICE_PRINCIPAL_PASSWORD`|Azure サービス プリンシパルのパスワード。|
+|`AZURE_SUBSCRIPTION_ID`|リソースがプロビジョニングされるサブスクリプションを特定します。|
+|`AZURE_TENANT_ID`|サブスクリプションが存在するテナントを識別します。|
+|`M365_ACCOUNT_NAME`|アプリMicrosoft 365発行するためのユーザー アカウントTeamsです。|
+|`M365_ACCOUNT_PASSWORD`|アカウントのパスワードMicrosoft 365します。|
+|`M365_TENANT_ID`|アプリが作成または発行されるテナントTeams識別します。 マルチテナント アカウントを持ち、別のテナントを使用する場合を指定しない限り、この値は省略可能です。 テナント ID を[検索する方法の詳細Microsoft 365参照してください](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)。|
 
 ## <a name="get-started-guide-for-other-platforms"></a>他のプラットフォームのガイドを開始する
 
@@ -235,10 +234,10 @@ steps:
 スクリプトは、クロスプラットフォームの TeamsFx コマンド ライン ツール [TeamsFx-CLI に基づいて作成されます](https://www.npmjs.com/package/@microsoft/teamsfx-cli)。 このスクリプトをインストールし `npm install -g @microsoft/teamsfx-cli` 、ドキュメントに [従って](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) スクリプトをカスタマイズできます。
 
 > [!NOTE]
-> * CI モード `@microsoft/teamsfx-cli` で実行を有効にするには、次の方法でオン `CI_ENABLED` にします `export CI_ENABLED=true` 。 CI モードでは `@microsoft/teamsfx-cli` 、CI または CD に対応しています。
-> * 非対話型 `@microsoft/teamsfx-cli` モードでの実行を有効にするには、コマンドを使用してグローバル構成を設定します `teamsfx config set -g interactive false` 。 非対話型モードでは、 `@microsoft/teamsfx-cli` 対話的に入力に関する質問をしません。
+> * CI モードで `@microsoft/teamsfx-cli` 実行を有効にするには、次の方法でオン `CI_ENABLED` にします `export CI_ENABLED=true`。 CI モードでは、 `@microsoft/teamsfx-cli` CI または CD に対応しています。
+> * 非対話型モード`@microsoft/teamsfx-cli`での実行を有効にするには、コマンドを使用してグローバル構成を設定します。 `teamsfx config set -g interactive false` 非対話型モードでは、対話 `@microsoft/teamsfx-cli` 的に入力に関する質問をしません。
 
-環境変数に Azure と M365 の資格情報を安全に設定してください。 たとえば、ソース コード リポジトリとしてGitHub使用している場合などです。 詳細については [、「Github Secrets」を参照してください](https://docs.github.com/en/actions/reference/encrypted-secrets)。
+環境変数に Azure と Microsoft365 の資格情報を安全に設定してください。 たとえば、ソース コード リポジトリとしてGitHub使用している場合などです。 詳細については、「 [Github Secrets」を参照してください](https://docs.github.com/en/actions/reference/encrypted-secrets)。
 
 ## <a name="create-azure-service-principals"></a>Azure サービス プリンシパルの作成
 
@@ -246,25 +245,25 @@ CI/CD 内で Azure を対象とするリソースをプロビジョニングお�
 
 Azure サービス プリンシパルを作成するには、次の手順を実行します。
 1. 単一テナントAzure ADアプリケーションを登録します。
-2. Azure サブスクリプションにアクセスするには、Azure ADアプリケーションにロールを割り当て、ロール `Contributor` をお勧めします。 
+2. Azure サブスクリプションにアクセスするには、Azure ADアプリケーション`Contributor`にロールを割り当て、ロールをお勧めします。 
 3. 新しいアプリケーション シークレットAzure AD作成します。
 
 > [!TIP]
 > テナント ID、アプリケーション ID(AZURE_SERVICE_PRINCIPAL_NAME)、および secret(AZURE_SERVICE_PRINCIPAL_PASSWORD) を将来使用するために保存します。
 
-詳細については [、「Azure サービス プリンシパルのガイドライン」を参照してください](/azure/active-directory/develop/howto-create-service-principal-portal)。 サービス プリンシパルを作成する 3 つの方法を次に示します。 
-* [Azure portal](/azure/active-directory/develop/howto-create-service-principal-portal)
-* [PowerShell](/azure/active-directory/develop/howto-authenticate-service-principal-powershell)
-* [Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli)
+詳細については、「 [Azure サービス プリンシパルのガイドライン」を参照してください](/azure/active-directory/develop/howto-create-service-principal-portal)。 サービス プリンシパルを作成する 3 つの方法を次に示します。 
+* [Microsoft Azure ポータル](/azure/active-directory/develop/howto-create-service-principal-portal)
+* [Windows PowerShell](/azure/active-directory/develop/howto-authenticate-service-principal-powershell)
+* [Microsoft Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli)
 
 ## <a name="publish-teams-app-using-teams-developer-portal"></a>開発者ポータルTeams使用してアプリTeamsを発行する
 アプリのマニフェスト ファイルに関連Teams変更がある場合は、マニフェストを更新するために、Teams アプリを再度発行できます。
 
-アプリを手動Teams発行するには、開発者ポータルを使用してアプリ[をTeams。](https://dev.teams.microsoft.com/home)
+アプリを手動Teams発行するには、開発者ポータルを使用してアプリ[をTeams](https://dev.teams.microsoft.com/home)。
 
 アプリを発行するには、次の手順を実行します。
 1. 対応するアカウントを[使用Teams](https://dev.teams.microsoft.com)開発者ポータルにサインインします。
-2. を選択して、アプリ パッケージを zip にインポートします `App -> Import app -> Replace` 。
+2. を選択して、アプリ パッケージを zip にインポートします `App -> Import app -> Replace`。
 3. アプリ一覧でターゲット アプリを選択します。
 4. 選択してアプリを発行する `Publish -> Publish to your org`
 
@@ -273,4 +272,4 @@ Azure サービス プリンシパルを作成するには、次の手順を実�
 * [[クイック スタート] GitHubアクション](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
 * [最初のパイプラインをAzure DevOpsする](/azure/devops/pipelines/create-first-pipeline)
 * [最初の Jenkins パイプラインを作成する](https://www.jenkins.io/doc/pipeline/tour/hello-world/)
-* [開発者ポータルを使用してアプリを管理Microsoft Teams](/concepts/build-and-test/teams-developer-portal)
+* [Microsoft Teams の開発者ポータルを使用してアプリを管理する](/concepts/build-and-test/teams-developer-portal)

@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET MVC パッケージ appmanifest 会話ドメインアクセス許可ストア
-ms.openlocfilehash: 98f72b41e13c9b06f00a1b32a1fb52bb6b82fd2e
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 8062add7411ebc583ef29ac8ac003cda81766f5f
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888042"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435881"
 ---
 # <a name="create-a-personal-tab"></a>プライベート タブを作成する
 
@@ -24,26 +24,26 @@ ms.locfileid: "60888042"
 ### <a name="create-a-custom-personal-tab-using-nodejs-and-the-yeoman-generator"></a>ユーザー設定と Yeoman Generator を使用Node.js個人用タブを作成する
 
 > [!NOTE]
-> この記事では、Microsoft OfficeDev Microsoft Teamsリポジトリにある最初のアプリ[Wiki](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)のビルドにGitHubします。
+> この記事では、Microsoft OfficeDev Microsoft Teamsリポジトリにある最初の[アプリ Wiki の](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)ビルドにGitHubします。
 
-Yeoman ジェネレーターを使用してカスタム[個人用Teams作成できます](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)。 アプリケーションは、アプリケーションにもアップロードTeams。
+カスタム個人用タブは、[Yeoman](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) ジェネレーターのTeams作成できます。 アプリケーションは、アプリケーションにもアップロードTeams。
 
 ### <a name="prerequisites-for-teams-apps"></a>アプリのTeams前提条件
 
 次の前提条件について理解している必要があります。
 
-- カスタム アプリのアップロードを許可Office 365を有効にしたテナントとチーム **が構成されている必要** があります。 詳細については、「prepare [your Office 365 テナント」を参照してください](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
+- カスタム アプリのアップロードを許可Office 365を有効にしたチームとテナント **が必要** です。 詳細については、「prepare [your Office 365テナント」を参照してください](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
 
     > [!NOTE]
     > ユーザーアカウントをお持ちOffice 365場合は、開発者プログラムから無料サブスクリプションOffice 365できます。 サブスクリプションは、継続的な開発に使用している限りアクティブなままです。 「[開発者プログラムへようこそOffice 365」を参照してください](/office/developer-program/microsoft-365-developer-program)。
 
 また、このプロジェクトでは、次のコードが開発環境にインストールされている必要があります。
 
-- 任意のテキスト エディターまたは IDE。 無料でインストール[して使用Visual Studio Code](https://code.visualstudio.com/download)できます。
+- 任意のテキスト エディターまたは IDE。 コードを無料でインストール[Microsoft Visual Studio使用](https://code.visualstudio.com/download)できます。
 
-- [Node.js/npm](https://nodejs.org/en/). 最新の LTS バージョンを使用します。 ノード ノード パッケージ マネージャー (npm) がシステムにインストールされ、システムにインストールNode.js。
+- [Node.js/npm。](https://nodejs.org/en/) 最新の LTS バージョンを使用します。 ノード ノード パッケージ マネージャー (npm) がシステムにインストールされ、システムにインストールNode.js。
 
-- インストールが正常に完了したらNode.jsコマンド プロンプトで次のコマンドを入力して [、Yeoman](https://yeoman.io/) パッケージと [gulp-cli](https://www.npmjs.com/package/gulp-cli) パッケージをインストールします。
+- インストールが正常に完了Node.js、コマンド プロンプトで次のコマンドを入力して [Yeoman](https://yeoman.io/) パッケージと [gulp-cli](https://www.npmjs.com/package/gulp-cli) パッケージをインストールします。
 
     ```bash
     npm install yo gulp-cli --global
@@ -77,7 +77,7 @@ Yeoman ジェネレーターを使用してカスタム[個人用Teams作成で�
 
     **ファイルをどこに保存しますか?**
 
-    現在、プロジェクト ディレクトリにいます。 **[Enter] を選択します**。
+    現在、プロジェクト ディレクトリにいます。 [Enter] を **選択します**。
 
     **アプリ プロジェクトMicrosoft Teamsタイトル**
 
@@ -85,7 +85,7 @@ Yeoman ジェネレーターを使用してカスタム[個人用Teams作成で�
 
     **(会社) の名前(最大 32 文字)**
 
-    会社名はアプリ マニフェストで使用されます。 会社名を入力するか **、Enter を選択して** 既定の名前を受け入れる。
+    会社名はアプリ マニフェストで使用されます。 会社名を入力するか、 **Enter を選択して** 既定の名前を受け入れる。
 
     **どのマニフェスト バージョンを使用しますか?**
 
@@ -97,11 +97,11 @@ Yeoman ジェネレーターを使用してカスタム[個人用Teams作成で�
 
     **Microsoft パートナー ID をお持ちの場合は、Microsoft パートナー ID を入力してください。(スキップする場合は空白のままにする)**
 
-    このフィールドは必須ではありません。既に Microsoft パートナー ネットワークに参加している場合にのみ [使用する必要があります](https://partner.microsoft.com)。
+    このフィールドは必須ではなく、既に Microsoft パートナー ネットワークに参加している場合にのみ [使用する必要があります](https://partner.microsoft.com)。
 
     **プロジェクトに何を追加しますか?**
 
-    [ **選択] &ast; ( ) [タブ] をクリックします**。
+    [ **( ) &ast; ] タブを選択します**。
 
     **このソリューションをホストする URL**
 
@@ -109,23 +109,23 @@ Yeoman ジェネレーターを使用してカスタム[個人用Teams作成で�
 
     **アプリ/タブの読み込み時に読み込みインジケーターを表示しますか?**
 
-    アプリ **またはタブ** の読み込み時に読み込みインジケーターを含めないを選択します。 既定値は no で、n と **入力します**。
+    アプリ **またはタブ** の読み込み時に読み込みインジケーターを含めないを選択します。 既定値は no で、 **n と入力します**。
 
     **個人用アプリをタブ ヘッダーバーなしでレンダリングしますか?**
 
-    タブ **ヘッダー** バーなしでレンダリングする個人用アプリを含めないを選択します。 既定値はいいえ、n と **入力します**。
+    タブ **ヘッダー** バーなしでレンダリングする個人用アプリを含めないを選択します。 既定値は no で、 **n と入力します**。
 
     **テスト フレームワークと初期テストを含めるには?(y/N)**
 
-    この **プロジェクトの** テスト フレームワークを含めないを選択します。 既定値は no で、n と **入力します**。
+    この **プロジェクトの** テスト フレームワークを含めないを選択します。 既定値は no で、 **n と入力します**。
 
     **ESLint のサポートを含めませんか?(y/N)**
 
-    ESLint サポートを含めないを選択します。 既定値は no で、n と **入力します**。
+    ESLint サポートを含めないを選択します。 既定値は no で、 **n と入力します**。
 
     **テレメトリに Azure Applications インサイト使用しますか?(y/N)**
 
-    [Azure **Application インサイト**[を含インサイト。](/azure/azure-monitor/app/app-insights-overview) 既定値は no です。 **n と入力します**。
+    Azure **Application アプリケーション** を [含めインサイト](/azure/azure-monitor/app/app-insights-overview)。 既定値は no です。 **n と入力します**。
 
     **既定のタブ名 (最大 16 文字)?**
 
@@ -133,16 +133,16 @@ Yeoman ジェネレーターを使用してカスタム[個人用Teams作成で�
 
     **作成するタブの種類**
 
-    矢印キーを使用して [個人用 ( **静的) ] を選択します**。
+    矢印キーを使用して [個人用 **(静的) ] を選択します**。
 
     **タブに Azure AD のシングルサインオン サポートが必要ですか?**
 
     [**シングル** サインオンのサポートAzure AD含めない] を選択します。既定値ははい、n と **入力します**。
 
     > [!IMPORTANT]
-    > パス コンポーネント **yourDefaultTabNameTab** は、ジェネレータで既定のタブ名にTab という単語を加えた値 **です**。
+    > パス コンポーネント **yourDefaultTabNameTab** は、[既定] タブ名のジェネレーターに入力した値に Tab という単語を加 **えた値です**。
     >
-    > 例: DefaultTabName: **MyTab**  >  **/MyTabTab/**
+    > 例: DefaultTabName: **MyTab** > **/MyTabTab/**
 
 ### <a name="add-a-personal-tab"></a>個人用タブの追加
 
@@ -170,7 +170,7 @@ Yeoman ジェネレーターを使用してカスタム[個人用Teams作成で�
     </html>
     ```
 
-1. アプリケーション **personal.html** の Web **フォルダーに次** の場所に保存します。
+1. アプリケーション **personal.html** Web フォルダーに次の場所に保存します。
 
     ```bash
     ./src/app/web/<yourDefaultTabNameTab>/personal.html
@@ -182,7 +182,7 @@ Yeoman ジェネレーターを使用してカスタム[個人用Teams作成で�
     ./src/manifest/manifest.json/
     ```
 
-1. 空の配列 ( ) に次を `staticTabs` 追加 `staticTabs":[]` し、次の JSON オブジェクトを追加します。
+1. 空の配列 () に次の `staticTabs` 値を追加`staticTabs":[]`し、次の JSON オブジェクトを追加します。
 
     ```json
     {
@@ -220,11 +220,11 @@ Yeoman ジェネレーターを使用してカスタム[個人用Teams作成で�
 
 タブをテストするには、アプリ パッケージが必要Teams。 これは、次の必須ファイルを含む zip フォルダーです。
 
-- 192 x 192 ピクセルのフル カラー アイコン。 
-- **32** x 32 ピクセルの透明なアウトライン アイコン。
+- 192 x 192 ピクセルのフル カラー アイコン。
+- 32 x 32 ピクセルの透明なアウトライン アイコン。
 - アプリ **の属性を指定する manifest.json** ファイル。
 
-パッケージは、manifest.json ファイルを検証し、./package ディレクトリに zip フォルダーを生成する **gulp タスクを使用して作成されます**。 コマンド プロンプトで、次のコマンドを入力します。
+パッケージは、manifest.json ファイルを検証し、./package ディレクトリに zip フォルダーを生成する gulp タスクを使用 **して作成されます**。 コマンド プロンプトで、次のコマンドを入力します。
 
 ```bash
 gulp manifest
@@ -246,11 +246,11 @@ gulp build
     gulp serve
     ```
 
-1. 次の図に示すように、ブラウザーに入力し、タブ名に置き換え、アプリケーションのホーム ページ `http://localhost:3007/<yourDefaultAppNameTab>/` `**<yourDefaultAppNameTab>**` を表示します。
+1. 次 `http://localhost:3007/<yourDefaultAppNameTab>/` の図に示 `**<yourDefaultAppNameTab>**` すように、ブラウザーに入力し、タブ名に置き換え、アプリケーションのホーム ページを表示します。
 
     ![ホーム ページのスクリーンショット](~/assets/images/tab-images/homePage.png)
 
-1. 個人用タブを表示するには、 に移動します `http://localhost:3007/<yourDefaultAppNameTab>/personal.html` 。
+1. 個人用タブを表示するには、 に移動します `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`。
 
     >![個人用タブのスクリーンショット](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
 
@@ -258,7 +258,7 @@ gulp build
 
 Microsoft Teamsはクラウドベースの製品であり、HTTPS エンドポイントを使用してタブ コンテンツをクラウドから利用できる必要があります。 Teamsはローカル ホスティングを許可しない。 タブをパブリック URL に発行するか、ローカル ポートをインターネットに接続する URL に公開するプロキシを使用します。
 
-タブ拡張機能をテストするには、 [このアプリケーションに組み込まれる ngrok](https://ngrok.com/docs)を使用します。 Ngrok はリバース プロキシ ソフトウェア ツールです。 Ngrok は、ローカルで実行中の Web サーバーのパブリックに利用可能な HTTPS エンドポイントへのトンネルを作成します。 サーバーの Web エンドポイントは、コンピューター上の現在のセッション中に使用できます。 コンピューターがシャットダウンまたはスリープ状態になった場合、サービスは使用できなくなりました。
+タブ拡張機能をテストするには、 [このアプリケーションに組み込まれる ngrok](https://ngrok.com/docs) を使用します。 Ngrok はリバース プロキシ ソフトウェア ツールです。 Ngrok は、ローカルで実行中の Web サーバーのパブリックに利用可能な HTTPS エンドポイントへのトンネルを作成します。 サーバーの Web エンドポイントは、コンピューター上の現在のセッション中に使用できます。 コンピューターがシャットダウンまたはスリープ状態になった場合、サービスは使用できなくなりました。
 
 コマンド プロンプトで localhost を終了し、次のコマンドを入力します。
 
@@ -267,16 +267,16 @@ gulp ngrok-serve
 ```
 
 > [!IMPORTANT]
-> タブが **ngrok** を介して Microsoft Teamsにアップロードされ、正常に保存された後、トンネル セッションが終了するまで、Teamsでタブを表示できます。
+> **タブが ngrok** を介して Microsoft Teamsにアップロードされ、正常に保存された後、トンネル セッションが終了するまで、Teamsでタブを表示できます。
 
 ### <a name="upload-your-application-to-teams"></a>アップロードを使用してアプリケーションをTeams
 
 **アプリケーションをアプリにアップロードTeams**
 
-1. [次へ] にMicrosoft Teams。 Web ベースのバージョン [を使用する](https://teams.microsoft.com)場合は、ブラウザーの開発者ツールを使用してフロントエンド コードを [検査できます](~/tabs/how-to/developer-tools.md)。
-1. 左下隅から、[アプリ] を **選択します**。
-1. 左下隅から、カスタム アプリ **アップロードを選択します**。
-1. プロジェクト ディレクトリに移動し **、./package** フォルダーを参照し、zip フォルダーを選択し、[開く] を選択 **します**。
+1. [次へ] にMicrosoft Teams。 Web ベースの [バージョンを使用する](https://teams.microsoft.com)場合は、ブラウザーの開発者ツールを使用してフロントエンド コードを [検査できます](~/tabs/how-to/developer-tools.md)。
+1. 左下隅から[アプリ] を **選択します**。
+1. 左下隅から、カスタム アプリ **アップロード選択します**。
+1. プロジェクト ディレクトリに移動し、 **./package** フォルダーを参照し、zip フォルダーを選択して、[開く] を選択 **します**。
 
     ![個人用タブの追加](../../assets/images/tab-images/addingpersonaltab.png)
 
@@ -298,18 +298,18 @@ gulp ngrok-serve
 
 次の前提条件について理解している必要があります。
 
-- カスタム アプリのアップロードを許可Office 365を有効にしたテナントとチーム **が構成されている必要** があります。 詳細については、「prepare [your Office 365 テナント」を参照してください](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
+- カスタム アプリのアップロードを許可Office 365を有効にしたチームとテナント **が必要** です。 詳細については、「prepare [your Office 365テナント」を参照してください](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
 
     > [!NOTE]
-    > ユーザーアカウントをお持ちMicrosoft 365場合は、Microsoft Developer Program を通じて無料サブスクリプションに[サインアップできます](https://developer.microsoft.com/en-us/microsoft-365/dev-program)。 サブスクリプションは、継続的な開発に使用している限りアクティブなままです。
+    > ユーザーアカウントをお持ちMicrosoft 365場合は、Microsoft Developer Program を通じて無料サブスクリプション[にサインアップできます](https://developer.microsoft.com/en-us/microsoft-365/dev-program)。 サブスクリプションは、継続的な開発に使用している限りアクティブなままです。
 
-- App Studio を使用してアプリケーションをインポートし、Teams。 App Studio をインストールするには、アプリアプリの左下隅にある [アプリ ストア アプリ] を選択Teams App Studio を ![ ](~/assets/images/tab-images/storeApp.png) **検索します**。 タイルを見つけたら、タイルを選択し、ポップアップ ダイアログ ボックスで [追加] を選択してインストールします。
+- App Studio を使用してアプリケーションをインポートし、Teams。 App Studio をインストールするには、アプリ![](~/assets/images/tab-images/storeApp.png)アプリの左下隅にある [アプリ ストア アプリTeams選択し、**App Studio を検索します**。 タイルを見つけたら、タイルを選択し、ポップアップ ダイアログ ボックスで [追加] を選択してインストールします。
 
 また、このプロジェクトでは、次のコードが開発環境にインストールされている必要があります。
 
-- 現在のバージョンの IDE **Visual Studio.NET CORE** クロスプラットフォーム開発ワークロードがインストールされています。 まだインストールされていない場合はVisual Studio最新のバージョンを無料で[Microsoft Visual Studio Communityインストールできます](https://visualstudio.microsoft.com/downloads)。
+- 現在のバージョンの IDE **Visual Studio.NET CORE** クロスプラットフォーム開発ワークロードがインストールされています。 まだインストールされていない場合は、Visual Studio最新のバージョンを無料でダウンロード[Microsoft Visual Studio Communityインストールできます](https://visualstudio.microsoft.com/downloads)。
 
-- [ngrok](https://ngrok.com)リバース プロキシ ツール。 ngrok を使用して、ローカルで実行中の Web サーバーのパブリックに利用可能な HTTPS エンドポイントへのトンネルを作成します。 [ngrok をダウンロードできます](https://ngrok.com/download)。
+- [ngrok](https://ngrok.com) リバース プロキシ ツール。 ngrok を使用して、ローカルで実行中の Web サーバーのパブリックに利用可能な HTTPS エンドポイントへのトンネルを作成します。 [ngrok をダウンロードできます](https://ngrok.com/download)。
 
 ### <a name="get-the-source-code"></a>ソース コードを取得する
 
@@ -323,9 +323,9 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 
 **タブ プロジェクトをビルドして実行するには**
 
-1. ソース コードを取得した後、[プロジェクト] に移動Visual Studio[プロジェクトまたはソリューションを開く **] を選択します**。
-1. タブ アプリケーション ディレクトリに移動し **、PersonalTab.sln を開きます**。
-1. アプリケーションをビルドして実行するには **、F5** キーを押するか、[デバッグ] メニューから [ **デバッグ** の開始] **を選択** します。
+1. ソース コードを取得した後、[プロジェクト] に移動Visual Studio[プロジェクトまたはソリューションを開 **く] を選択します**。
+1. タブ アプリケーション ディレクトリに移動し、 **PersonalTab.sln を開きます**。
+1. アプリケーションをビルドして実行するには、 **F5** キーを押するか、[デバッグ] メニューから [ **デバッグ** の開始] **を選択** します。
 1. ブラウザーで、次の URL に移動して、アプリケーションが正しく読み込まれたか確認します。
 
     - `http://localhost:44325/`
@@ -337,7 +337,7 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 
 #### <a name="startupcs"></a>Startup.cs
 
-このプロジェクトは、ASP.NET Core 2.2 Web アプリケーションの空のテンプレートから作成され、セットアップ時に [詳細設定 **- HTTPS** 用に構成] チェック ボックスがオンになっています。 MVC サービスは、依存関係の挿入フレームワークのメソッドによって登録 `ConfigureServices()` されます。 さらに、空のテンプレートでは既定では静的コンテンツの配信が有効ではないので、静的ファイル ミドルウェアは次のコードを使用してメソッド `Configure()` に追加されます。
+このプロジェクトは、ASP.NET Core 2.2 Web アプリケーションの空のテンプレートから作成され、セットアップ時に [Advanced **- Configure for HTTPS**] チェック ボックスがオンになっています。 MVC サービスは、依存関係の挿入フレームワークのメソッドによって登録 `ConfigureServices()` されます。 さらに、空のテンプレート `Configure()` では既定では静的コンテンツの配信が有効ではないので、静的ファイル ミドルウェアは次のコードを使用してメソッドに追加されます。
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -357,21 +357,21 @@ public void Configure(IApplicationBuilder app)
 
 #### <a name="indexcshtml"></a>Index.cshtml
 
-ASP.NET Core Index と呼ばれるファイルをサイトの既定またはホーム ページとして扱います。 ブラウザーの URL がサイトのルートをポイントすると **、Index.cshtml** がアプリケーションのホーム ページとして表示されます。
+ASP.NET Core Index と呼ばれるファイルを **サイトの既定** またはホーム ページとして扱います。 ブラウザーの URL がサイトのルートをポイントすると、 **Index.cshtml** がアプリケーションのホーム ページとして表示されます。
 
 #### <a name="appmanifest-folder"></a>AppManifest フォルダー
 
 このフォルダーには、次の必須アプリ パッケージ ファイルが含まれています。
 
-- 192 x 192 ピクセルのフル カラー アイコン。 
-- **32** x 32 ピクセルの透明なアウトライン アイコン。
+- 192 x 192 ピクセルのフル カラー アイコン。
+- 32 x 32 ピクセルの透明なアウトライン アイコン。
 - アプリ **の属性を指定する manifest.json** ファイル。
 
-これらのファイルは、タブをアプリ パッケージにアップロードする場合に使用するアプリ パッケージに圧縮するTeams。 Microsoft Teams指定したマニフェストを読み込み、それを iframe <埋め込み、それをタブ `contentUrl` \> に表示します。
+これらのファイルは、タブをアプリ パッケージにアップロードする場合に使用するアプリ パッケージに圧縮するTeams。 Microsoft Teams指定した`contentUrl`マニフェストを読み込み、それを iframe\> <に埋め込み、それをタブにレンダリングします。
 
 #### <a name="csproj"></a>.csproj
 
-[ソリューション エクスプローラー Visual Studioで、プロジェクトを右クリックし、[ファイルの編集] Project **します**。 ファイルの最後に、アプリケーションのビルド時に zip フォルダーを作成および更新する次のコードが表示されます。
+[ソリューション エクスプローラー Visual Studio] ウィンドウで、プロジェクトを右クリックし、[ファイルの編集] Project **します**。 ファイルの最後に、アプリケーションのビルド時に zip フォルダーを作成および更新する次のコードが表示されます。
 
 ```xml
 <PropertyGroup>
@@ -395,9 +395,9 @@ ASP.NET Core Index と呼ばれるファイルをサイトの既定またはホ�
 
 #### <a name="_layoutcshtml"></a>_Layout.cshtml
 
-タブを JavaScript クライアントにTeamsするには **、JavaScript** クライアント SDK をMicrosoft Teamsし、ページの読み込み後に呼び出 `microsoftTeams.initialize()` しを含める必要があります。 タブとアプリTeams、次の方法で通信します。
+タブを JavaScript クライアント SDK Teams表示するには、**JavaScript クライアント SDK** `microsoftTeams.initialize()` Microsoft Teamsを含め、ページの読み込み後に呼び出しを含める必要があります。 タブとアプリTeams、次の方法で通信します。
 
-[共有] **フォルダーに移動** し **、_Layout.cshtml** を開き、[タグ] セクションに次の項目 `<head>` を追加します。
+[共有] **フォルダーに移動** し、 **_Layout.cshtml** を開き、[タグ] セクションに次の項目を `<head>` 追加します。
 
 ```html
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
@@ -406,7 +406,7 @@ ASP.NET Core Index と呼ばれるファイルをサイトの既定またはホ�
 
 #### <a name="personaltabcshtml"></a>PersonalTab.cshtml
 
-**PersonalTab.cshtml を開** き、呼び出して埋め込 `<script>` みタグを更新します `microsoftTeams.initialize()` 。
+**PersonalTab.cshtml を開** き、呼び出して埋め込み`<script>`タグを更新します`microsoftTeams.initialize()`。
 
 更新された **PersonalTab.cshtml を保存してください**。
 
@@ -414,7 +414,7 @@ ASP.NET Core Index と呼ばれるファイルをサイトの既定またはホ�
 
 Microsoft Teamsはクラウドベースの製品であり、HTTPS エンドポイントを使用してタブ コンテンツをクラウドから利用できる必要があります。 Teamsはローカル ホスティングを許可しない。 タブをパブリック URL に発行するか、ローカル ポートをインターネットに接続する URL に公開するプロキシを使用します。
 
-タブをテストするには [、ngrok を使用します](https://ngrok.com/docs)。 ngrok がコンピューターで実行されている間、サーバーの Web エンドポイントを使用できます。 ngrok の無料版では、ngrok を閉じると、次回起動する URL が異なります。
+タブをテストするには、 [ngrok を使用します](https://ngrok.com/docs)。 ngrok がコンピューターで実行されている間、サーバーの Web エンドポイントを使用できます。 ngrok の無料版では、ngrok を閉じると、次回起動する URL が異なります。
 
 **タブへのセキュリティで保護されたトンネルを確立するには**
 
@@ -424,37 +424,37 @@ Microsoft Teamsはクラウドベースの製品であり、HTTPS エンドポ�
     ngrok http https://localhost:44325 -host-header="localhost:44325"
     ```
 
-    Ngrok はインターネットからの要求をリッスンし、ポート 44325 で実行されているアプリケーションにルーティングします。 `https://y8rPrT2b.ngrok.io/`**これは、y8rPrT2b** が ngrok の英数字 HTTPS URL に置き換えられる場所に似ています。
+    Ngrok はインターネットからの要求をリッスンし、ポート 44325 で実行されているアプリケーションにルーティングします。 これは、`https://y8rPrT2b.ngrok.io/`**y8rPrT2b** が ngrok の英数字 HTTPS URL に置き換えられる場所に似ています。
 
     ngrok を実行してコマンド プロンプトを保持し、URL をメモしてください。
 
-2. ブラウザーを開き、コマンド プロンプト ウィンドウで提供された ngrok HTTPS URL を使用してコンテンツ ページに移動して **、ngrok** が正常に実行および動作されていることを確認します。
+2. ブラウザーを開き、コマンド プロンプト ウィンドウで提供された ngrok HTTPS URL を使用してコンテンツ ページに移動して、 **ngrok** が正常に実行および動作されていることを確認します。
 
 > [!TIP]
 > この記事で示す手順を完了するには、Visual Studioと ngrok の両方でアプリケーションを実行する必要があります。 アプリケーションの実行を停止する必要がある場合Visual Studio **ngrok を実行し続ける必要があります**。 アプリケーションの要求がアプリケーションで再起動されると、アプリケーションの要求をリッスンしてVisual Studio。 ngrok サービスを再起動する必要がある場合は、新しい URL が返され、その URL を使用する場所を更新する必要があります。
 
 #### <a name="run-your-application"></a>アプリケーションを実行する
 
-このVisual Studio F5 キー **を押** するか、**アプリケーションの**[デバッグ] メニューから [デバッグの開始]**を選択** します。
+[Visual Studio **F5 キーを押** するか **、アプリケーションの** [デバッグ] メニューから [デバッグの開始] **を選択** します。
 
 ### <a name="upload-your-tab-with-app-studio-for-teams"></a>アップロード App Studio を使用してタブを開Teams
 
 > [!NOTE]
-> **App Studio** を使用すると **、manifest.json** ファイルを編集し、完成したパッケージをアップロードして、Teams。 **manifest.json を手動で編集することもできます**。 その場合は、ソリューションを再度ビルドして、アップロードする **Tab.zip作成してください** 。
+> **App Studio** を使用すると、**manifest.json** ファイルを編集し、完成したパッケージをアップロードして、Teams。 **manifest.json を手動で編集することもできます**。 その場合は、ソリューションを再度ビルドして、アップロードする **Tab.zip作成してください** 。
 
 **App Studio でタブをアップロードするには**
 
-1. [次へ] にMicrosoft Teams。 Web ベースのバージョン [を使用する](https://teams.microsoft.com)場合は、ブラウザーの開発者ツールを使用してフロントエンド コードを [検査できます](~/tabs/how-to/developer-tools.md)。
+1. [次へ] にMicrosoft Teams。 Web ベースの [バージョンを使用する](https://teams.microsoft.com)場合は、ブラウザーの開発者ツールを使用してフロントエンド コードを [検査できます](~/tabs/how-to/developer-tools.md)。
 
-1. [App **Studio] に移動し** 、[マニフェスト エディター **] タブを選択** します。
+1. [ **App Studio] に移動し** 、[マニフェスト エディター **] タブを選択** します。
 
-1. [ **マニフェスト エディターで既存のアプリ** をインポートする] **を選択して** 、タブのアプリ パッケージの更新を開始します。ソース コードには、部分的に完全なマニフェストが付属しています。 アプリ パッケージの名前は次 **tab.zip。** これは、次のパスから使用できます。
+1. [ **マニフェスト エディターで既存のアプリ** をインポートする] **を選択して** 、タブのアプリ パッケージの更新を開始します。ソース コードには、部分的に完全なマニフェストが付属しています。 アプリ パッケージの名前は次 **tab.zip**。 これは、次のパスから使用できます。
 
     ```bash
     /bin/Debug/netcoreapp2.2/tab.zip
     ```
 
-1. アップロードtab.zipApp  **Studio にアクセスします**。
+1. アップロード **tab.zip** App **Studio にアクセスします**。
 
 #### <a name="update-your-app-package-with-manifest-editor"></a>マニフェスト エディターを使用してアプリ パッケージを更新する
 
@@ -468,13 +468,13 @@ Microsoft Teamsはクラウドベースの製品であり、HTTPS エンドポ�
 
 [アプリ **の詳細] セクションで、次の内容を実行** します。
 
-1. **[Id] で**、[**生成] を** 選択して、アプリの新しいアプリ ID を生成します。
+1. [ **Id] で**、[ **生成] を** 選択して、アプリの新しいアプリ ID を生成します。
 
-1. [**開発者情報] で****、ngrok** HTTPS URL を使用して Web **サイトを** 更新します。
+1. [**開発者情報] で**、**ngrok HTTPS URL を使用して Web サイトを** 更新します。
 
     ![アプリの URL が更新されました](../../assets/images/tab-images/appurls.png)
 
-1. [**アプリの URL] で**、[プライバシーに関する **声明] と**[使用条件] を更新して、>。 `https://<yourngrokurl>/privacy`  `https://<yourngrokurl>/tou`
+1. [ **アプリの URL] で**、[プライバシーに関する **声明] と** `https://<yourngrokurl>/privacy` [使用条件 **]** `https://<yourngrokurl>/tou` を更新して、>。
 
 ##### <a name="capabilities-tabs"></a>機能: タブ
 
@@ -482,11 +482,11 @@ Microsoft Teamsはクラウドベースの製品であり、HTTPS エンドポ�
 
 1. [個人用 **タブの追加] で、[** 追加] を **選択します**。 ポップアップ ダイアログ ボックスが表示されます。
 
-1. [名前] に個人用タブの名前を **入力します**。
+1. [名前] に個人用タブの名前を入力 **します**。
 
 1. エンティティ **ID を入力します**。
 
-1. で **コンテンツ URL を** 更新 `https://<yourngrokurl>/personalTab` します。
+1. で **コンテンツ URL を** 更新します `https://<yourngrokurl>/personalTab`。
 
     [Web サイト **の URL] フィールドは** 空白のままにします。
 
@@ -496,14 +496,14 @@ Microsoft Teamsはクラウドベースの製品であり、HTTPS エンドポ�
 
 ##### <a name="finish-domains-and-permissions"></a>完了: ドメインとアクセス許可
 
-[ドメイン **とアクセス許可**] セクションで、タブのドメインには、HTTPS プレフィックスのない ngrok URL が含まれている必要があります `<yourngrokurl>.ngrok.io/` 。
+[ドメイン **とアクセス許可**] セクションで、タブのドメインには、HTTPS プレフィックスのない ngrok URL が含まれている必要があります`<yourngrokurl>.ngrok.io/`。
 
 ###### <a name="finish-test-and-distribute"></a>完了: テストと配布
 
 > [!IMPORTANT]
-> 右側の [説明] **で**、次の警告が表示されます。
+> 右側の [説明] **に**、次の警告が表示されます。
 >
-> &#9888; **'validDomains' 配列にトンネリング サイトを含めすることはできません。..**
+> &#9888; **'validDomains' 配列にはトンネリング サイトを含めできません。..**
 >
 > この警告は、タブのテスト中に無視できます。
 
@@ -519,26 +519,26 @@ Microsoft Teamsはクラウドベースの製品であり、HTTPS エンドポ�
 
 1. リストからタブを選択して表示します。
 
-# <a name="aspnet-core-mvc"></a>[ASP.NET CoreMVC](#tab/aspnetcoremvc)
+# <a name="aspnet-core-mvc"></a>[ASP.NET Core MVC](#tab/aspnetcoremvc)
 
 ### <a name="create-a-custom-personal-tab-with-aspnet-core-mvc"></a>MVC を使用してカスタム個人用タブを ASP.NET Coreする
 
-MVC を使用してカスタム個人用タブをC#し ASP.NET Coreできます。 [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md)は、アプリ マニフェストを完了し、タブをアプリ マニフェストに展開Teams。
+MVC を使用してカスタム個人用タブをC#し ASP.NET Coreできます。 [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md)は、アプリ マニフェストを完了し、タブをアプリケーションに展開Teams。
 
 ### <a name="prerequisites-for-personal-tab-with-aspnet-core-mvc"></a>MVC を使用した個人用タブ ASP.NET Core前提条件
 
-- カスタム アプリのアップロードを許可Microsoft 365を有効にしたチームとテナント **が必要** です。 詳細については、「prepare [your Office 365 テナント」を参照してください](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
+- カスタム アプリのアップロードを許可Microsoft 365を有効にしたチームとテナント **が必要** です。 詳細については、「prepare [your Office 365テナント」を参照してください](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
 
     > [!NOTE]
-    > ユーザーアカウントをお持ちMicrosoft 365場合は、Microsoft Developer Program を通じて無料サブスクリプションに[サインアップできます](https://developer.microsoft.com/en-us/microsoft-365/dev-program)。 サブスクリプションは、継続的な開発に使用している限りアクティブなままです。
+    > ユーザーアカウントをお持ちMicrosoft 365場合は、Microsoft Developer Program を通じて無料サブスクリプション[にサインアップできます](https://developer.microsoft.com/en-us/microsoft-365/dev-program)。 サブスクリプションは、継続的な開発に使用している限りアクティブなままです。
 
-- App Studio を使用してアプリケーションをインポートし、Teams。 App Studio をインストールするには、アプリアプリの左下隅にある [アプリ ストア アプリ] を選択Teams App Studio を ![ ](~/assets/images/tab-images/storeApp.png) **検索します**。 タイルを見つけたら、タイルを選択し、ポップアップ ダイアログ ボックスで [追加] を選択してインストールします。
+- App Studio を使用してアプリケーションをインポートし、Teams。 App Studio をインストールするには、アプリ![](~/assets/images/tab-images/storeApp.png)アプリの左下隅にある [アプリ ストア アプリTeams選択し、**App Studio を検索します**。 タイルを見つけたら、タイルを選択し、ポップアップ ダイアログ ボックスで [追加] を選択してインストールします。
 
 また、このプロジェクトでは、次のコードが開発環境にインストールされている必要があります。
 
-- 現在のバージョンの IDE **Visual Studio.NET CORE** クロスプラットフォーム開発ワークロードがインストールされています。 まだインストールされていない場合はVisual Studio最新のバージョンを無料で[Microsoft Visual Studio Communityインストールできます](https://visualstudio.microsoft.com/downloads)。
+- 現在のバージョンの IDE **Visual Studio.NET CORE** クロスプラットフォーム開発ワークロードがインストールされています。 まだインストールされていない場合は、Visual Studio最新のバージョンを無料でダウンロード[Microsoft Visual Studio Communityインストールできます](https://visualstudio.microsoft.com/downloads)。
 
-- [ngrok](https://ngrok.com)リバース プロキシ ツール。 ngrok を使用して、ローカルで実行中の Web サーバーのパブリックに利用可能な HTTPS エンドポイントへのトンネルを作成します。 [ngrok をダウンロードできます](https://ngrok.com/download)。
+- [ngrok](https://ngrok.com) リバース プロキシ ツール。 ngrok を使用して、ローカルで実行中の Web サーバーのパブリックに利用可能な HTTPS エンドポイントへのトンネルを作成します。 [ngrok をダウンロードできます](https://ngrok.com/download)。
 
 ### <a name="get-the-source-code"></a>ソース コードを取得する
 
@@ -553,8 +553,8 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 **タブ プロジェクトをビルドして実行するには**
 
 1. ソース コードを取得した後、[プロジェクト] に移動Visual Studioプロジェクトまたはソリューションを開 **く] を選択します**。
-1. タブ アプリケーション ディレクトリに移動し **、PersonalTabMVC.sln を開きます**。
-1. アプリケーションをビルドして実行するには **、F5** キーを押するか、[デバッグ] メニューから [ **デバッグ** の開始] **を選択** します。
+1. タブ アプリケーション ディレクトリに移動し、 **PersonalTabMVC.sln を開きます**。
+1. アプリケーションをビルドして実行するには、 **F5** キーを押するか、[デバッグ] メニューから [ **デバッグ** の開始] **を選択** します。
 1. ブラウザーで、次の URL に移動して、アプリケーションが正しく読み込まれたか確認します。
 
     * `http://localhost:44335`
@@ -565,7 +565,7 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 
 #### <a name="startupcs"></a>Startup.cs
 
-このプロジェクトは、ASP.NET Core 2.2 Web アプリケーションの空のテンプレートから作成され、セットアップ時に [詳細設定 **- HTTPS** 用に構成] チェック ボックスがオンになっています。 MVC サービスは、依存関係の挿入フレームワークのメソッドによって登録 `ConfigureServices()` されます。 さらに、空のテンプレートでは既定では静的コンテンツの配信が有効ではないので、静的ファイル ミドルウェアは次のコードを使用してメソッド `Configure()` に追加されます。
+このプロジェクトは、ASP.NET Core 2.2 Web アプリケーションの空のテンプレートから作成され、セットアップ時に [Advanced **- Configure for HTTPS**] チェック ボックスがオンになっています。 MVC サービスは、依存関係の挿入フレームワークのメソッドによって登録 `ConfigureServices()` されます。 さらに、空のテンプレート `Configure()` では既定では静的コンテンツの配信が有効ではないので、静的ファイル ミドルウェアは次のコードを使用してメソッドに追加されます。
 
 ``` csharp
 public void ConfigureServices(IServiceCollection services)
@@ -587,15 +587,15 @@ public void Configure(IApplicationBuilder app)
 
 このフォルダーには、次の必須アプリ パッケージ ファイルが含まれています。
 
-* 192 x 192 ピクセルのフル カラー アイコン。 
-* **32** x 32 ピクセルの透明なアウトライン アイコン。
+* 192 x 192 ピクセルのフル カラー アイコン。
+* 32 x 32 ピクセルの透明なアウトライン アイコン。
 * アプリ **の属性を指定する manifest.json** ファイル。
 
-これらのファイルは、タブをアプリ パッケージにアップロードする場合に使用するアプリ パッケージに圧縮するTeams。 Microsoft Teams指定したマニフェストを読み込み、IFrame に埋め込み、タブ `contentUrl` にレンダリングします。
+これらのファイルは、タブをアプリ パッケージにアップロードする場合に使用するアプリ パッケージに圧縮するTeams。 Microsoft Teams指定した`contentUrl`マニフェストを読み込み、IFrame に埋め込み、タブにレンダリングします。
 
 #### <a name="csproj"></a>.csproj
 
-[ソリューション エクスプローラー Visual Studioで、プロジェクトを右クリックし、[ファイルの編集] Project **します**。 ファイルの最後に、アプリケーションのビルド時に zip フォルダーを作成および更新する次のコードが表示されます。
+[ソリューション エクスプローラー Visual Studio] ウィンドウで、プロジェクトを右クリックし、[ファイルの編集] Project **します**。 ファイルの最後に、アプリケーションのビルド時に zip フォルダーを作成および更新する次のコードが表示されます。
 
 ``` xml
 <PropertyGroup>
@@ -623,13 +623,13 @@ public void Configure(IApplicationBuilder app)
 
 これらのビューは、MVC 内の ASP.NET Coreです。
 
-* ホーム: ASP.NET Core Index と呼ばれるファイルをサイトの既定またはホーム ページとして扱います。 ブラウザーの URL がサイトのルートをポイントすると **、Index.cshtml** がアプリケーションのホーム ページとして表示されます。
+* ホーム: ASP.NET Core Index と呼ばれるファイルをサイトの既定またはホーム ページとして扱います。 ブラウザーの URL がサイトのルートをポイントすると、 **Index.cshtml** がアプリケーションのホーム ページとして表示されます。
 
 * 共有: 部分ビュー マークアップ **_Layout.cshtml** には、アプリケーションの全体的なページ構造と共有ビジュアル要素が含まれます。 また、ライブラリのTeamsします。
 
 #### <a name="controllers"></a>コントローラー
 
-コントローラーはプロパティを使用 `ViewBag` して、値を Views に動的に転送します。
+コントローラーはプロパティを使用して `ViewBag` 、値を Views に動的に転送します。
 
 [!INCLUDE [dotnet-update-personal-app](~/includes/tabs/dotnet-update-personal-app.md)]
 
@@ -643,18 +643,18 @@ public void Configure(IApplicationBuilder app)
     ngrok http https://localhost:44345 -host-header="localhost:44345"
     ```
 
-    Ngrok はインターネットからの要求をリッスンし、ポート 44325 で実行されているアプリケーションにルーティングします。 `https://y8rPrT2b.ngrok.io/`**これは、y8rPrT2b** が ngrok の英数字 HTTPS URL に置き換えられる場所に似ています。
+    Ngrok はインターネットからの要求をリッスンし、ポート 44325 で実行されているアプリケーションにルーティングします。 これは、`https://y8rPrT2b.ngrok.io/`**y8rPrT2b** が ngrok の英数字 HTTPS URL に置き換えられる場所に似ています。
 
     ngrok を実行してコマンド プロンプトを保持し、URL をメモしてください。
 
-1. ブラウザーを開き、コマンド プロンプト ウィンドウで提供された ngrok HTTPS URL を使用してコンテンツ ページに移動して **、ngrok** が正常に実行および動作されていることを確認します。
+1. ブラウザーを開き、コマンド プロンプト ウィンドウで提供された ngrok HTTPS URL を使用してコンテンツ ページに移動して、 **ngrok** が正常に実行および動作されていることを確認します。
 
 > [!TIP]
 > この記事で示す手順を完了するには、Visual Studioと ngrok の両方でアプリケーションを実行する必要があります。 アプリケーションの実行を停止する必要がある場合Visual Studio **ngrok を実行し続ける必要があります**。 アプリケーションの要求がアプリケーションで再起動されると、アプリケーションの要求をリッスンしてVisual Studio。 ngrok サービスを再起動する必要がある場合は、新しい URL が返され、その URL を使用する場所を更新する必要があります。
 
 #### <a name="run-your-application"></a>アプリケーションを実行する
 
-このVisual Studio F5 キー **を押** するか、**アプリケーションの**[デバッグ] メニューから [デバッグの開始]**を選択** します。
+[Visual Studio **F5 キーを押** するか **、アプリケーションの** [デバッグ] メニューから [デバッグの開始] **を選択** します。
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
 
@@ -662,7 +662,7 @@ public void Configure(IApplicationBuilder app)
 
 ## <a name="reorder-static-personal-tabs"></a>静的な個人用タブの並べ替え
 
-マニフェスト バージョン 1.7 から、開発者は個人用アプリ内のすべてのタブを再配置できます。 特に、開発者はボット チャットタブを移動できます。これは常に既定で最初の位置に、個人用アプリのタブ ヘッダー内の任意の場所に移動できます。 2 つの予約済みタブ `entityId` キーワードが宣言され、**会話と****についてです**。
+マニフェスト バージョン 1.7 から、開発者は個人用アプリ内のすべてのタブを再配置できます。 特に、開発者はボット チャット タブを移動できます。これは常に既定で最初の位置に、個人用アプリのタブ ヘッダー内の任意の場所に移動できます。 2 つの予約済 `entityId` みタブ キーワードが宣言され、 **会話が** 行 **えます**。
 
 個人用スコープを持つ **ボットを作成** すると、既定では個人用アプリの最初のタブ位置に表示されます。 別の位置に移動する場合は、予約キーワードである会話を使用して静的タブ オブジェクトをマニフェストに追加する必要 **があります**。 [ **会話** ] タブは、配列に会話タブを追加する場所に応 **じて、Web** またはデスクトップに表示 `staticTabs` されます。
 
@@ -682,11 +682,11 @@ public void Configure(IApplicationBuilder app)
 }
 ```
 
-## <a name="add-registeronfocused-api-for-tabs-or-personal-apps"></a>タブ `registerOnFocused` または個人用アプリの API を追加する
+## <a name="add-registeronfocused-api-for-tabs-or-personal-apps"></a>タブまたは `registerOnFocused` 個人用アプリの API を追加する
 
-`registerOnFocused`SDK API を使用すると、ユーザーがキーボードを使用してTeams。 Ctrl キー、Shift キー、F6 キーを使用して、個人用アプリに戻り、タブまたは個人用アプリにフォーカスを維持できます。 たとえば、個人用アプリから移動して何かを検索し、個人用アプリに戻すか、Ctrl + F6 を使用して必要な場所を移動できます。 
+SDK `registerOnFocused` API を使用すると、ユーザーがキーボードを使用してTeams。 Ctrl キー、Shift キー、F6 キーを使用して、個人用アプリに戻り、タブまたは個人用アプリにフォーカスを維持できます。 たとえば、個人用アプリから移動して何かを検索し、個人用アプリに戻すか、Ctrl + F6 を使用して必要な場所を移動できます。 
 
-次のコードは、フォーカスをタブまたは個人用アプリに返す必要がある場合の SDK のハンドラー定義 `registerFocusEnterHandler` の例を示しています。
+次のコードは、フォーカスをタブ `registerFocusEnterHandler` または個人用アプリに返す必要がある場合の SDK のハンドラー定義の例を示しています。
 
 ```csharp
 export function registerFocusEnterHandler(handler: (navigateForward: boolean) => void): 
@@ -703,7 +703,7 @@ function handleFocusEnter(navigateForward: boolean): void
 }
 ```
 
-ハンドラーがキーワードでトリガーされると、ハンドラーはというパラメーターを受け取るコールバック関数 `focusEnter` `registerFocusEnterHandler` `focusEnterHandler` で呼び出されます `navigateForward` 。 値は `navigateForward` 、イベントの種類を決定します。 これは Ctrl + F6 によってのみ呼び出 `focusEnterHandler` され、タブ キーでは呼び出されません。   
+ハンドラーがキーワードでトリガーされると`focusEnter``registerFocusEnterHandler``focusEnterHandler`、ハンドラーはというパラメーターを受け取るコールバック関数で呼び出されます。`navigateForward` 値は、 `navigateForward` イベントの種類を決定します。 これは `focusEnterHandler` Ctrl + F6 によってのみ呼び出され、タブ キーでは呼び出されません。   
 次に示すキーは、Teams内の移動イベントに役立ちます。    
 * Forward イベント -> Ctrl + F6 キー
 * Backward イベント -> Ctrl + Shift + F6 キー

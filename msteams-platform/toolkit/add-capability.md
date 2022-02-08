@@ -6,8 +6,13 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: 3e704b08caa9a3aafc388fe4aa2e8851292c944f
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435804"
 ---
-
 # <a name="add-capabilities-to-your-teams-apps"></a>アプリに機能をTeamsする
 
 アプリの機能の 1 つTeams新しいアプリをTeamsできます。 アプリの開発中に、Teams Toolkitを使用して、アプリにTeamsできます。 次の表に、アプリのTeams一覧を示します。
@@ -30,7 +35,7 @@ ms.date: 11/29/2021
 > [!IMPORTANT]
 > アプリに機能を正常に追加した後、各環境に対してプロビジョニングをTeamsがあります。
 
-1. [ファイル **Visual Studio Code] を開きます**。
+1. [コード **Microsoft Visual Studio開きます**。
 1. 左側 **のTeams Toolkit** を選択します。
 1. [機能 **の追加] を選択します**。
 

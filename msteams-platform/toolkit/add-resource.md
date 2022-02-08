@@ -6,8 +6,13 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: 87420b5e2b133de32b8c27a4a8d34a90072a3c76
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435825"
 ---
-
 # <a name="add-cloud-resources-to-your-teams-app"></a>クラウド リソースをアプリにTeamsする
 
 TeamsFx は、アプリケーション ホスティング用にクラウド リソースをプロビジョニングするのに役立ちます。 必要に応じて、開発ニーズに合ったクラウド リソースを追加することもできます。
@@ -17,14 +22,14 @@ TeamsFx は、アプリケーション ホスティング用にクラウド リ�
 [バージョン Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) v3.0.0 以上をインストールします。
 
 > [!TIP]
-> アプリ プロジェクトをTeamsする必要VS Code。
+> アプリ プロジェクトをTeamsする必要Visual Studio Code。
 
 ## <a name="add-cloud-resources-using-teams-toolkit"></a>クラウド リソースを使用してクラウド リソースをTeams Toolkit
 
 > [!IMPORTANT]
 > リソースを追加した後、各環境をプロビジョニングする必要があります。
 
-1. [ファイル **Visual Studio Code] を開きます**。
+1. [コード **Microsoft Visual Studio開きます**。
 1. 左側 **のTeams Toolkit** を選択します。
 1. [サイド バー Teams Toolkitで、[クラウド リソースの追加 **] を選択します**。
 
@@ -76,7 +81,7 @@ resouces を追加した後、プロジェクトの追加の変更点は次の�
 
 |リソース|変更内容|説明|
 |---------------|---------------|-----------------------------|
-|Azure 関数|Azure 関数テンプレート コードがパスを持つサブフォルダーに追加される `yourProjectFolder/api`</br></br>`launch.json` フォルダー `task.json` の下で更新 `.vscode` されます。| プロジェクトに hello world http トリガー テンプレートを含む。</br></br> アプリケーションをローカルでデバッグVisual Studio Code実行するために必要なスクリプトが含まれています。|
+|Azure 関数|Azure 関数テンプレート コードがパスを持つサブフォルダーに追加される `yourProjectFolder/api`</br></br>`launch.json` フォルダー `task.json` の下で更新 `.visual studio code` されます。| プロジェクトに hello world http トリガー テンプレートを含む。</br></br> アプリケーションをローカルでデバッグVisual Studio Code実行するために必要なスクリプトが含まれています。|
 |Azure API 管理|パスを持つサブフォルダーに追加された開いている API 仕様ファイル `yourProjectFolder/openapi`|発行後に API を定義します。API 仕様ファイルです。|
 
 ## <a name="limitation"></a>制限

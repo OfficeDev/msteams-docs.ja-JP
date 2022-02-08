@@ -4,12 +4,12 @@ description: Microsoft Teams 開発者向けドキュメントの概要の概要
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams 開発者向けサンプル
-ms.openlocfilehash: be53bc97ecc5df84ab4358927f4332764068d1c4
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: e67ab472f28dc44dc23f892b36ddc78ff602d28d
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059645"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435839"
 ---
 # <a name="get-started"></a>概要
 
@@ -33,9 +33,9 @@ Microsoft Teams 用のカスタマイズされたアプリを構築して展開�
 
 | アプリの機能 | ユーザーの操作 | 推奨されるツール | SDK | テクノロジ スタック/言語 |
 |--------|-------------|--------|--------|--------|
-| タブ | 全画面表示の埋め込み Web エクスペリエンス。 | Teams Toolkit 拡張機能をでVS Codeするか、CLI を使用する場合は [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md)を使用します | コア ライブラリ用の [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true)と、UI 機能用に[ Teams クライアント SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)を使用する | Web テクノロジ全般、HTML、CSS、JavaScript (React を含む)。 |
-| ボット | メンバーと会話するチャット ボット。 | Teams Toolkit 拡張機能を使用したVS Code、または [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) と [Bot Framework SDK](https://dev.botframework.com/) | Node.js、C#、Java Python。 |
-| メッセージング拡張機能 | 外部コンテンツを会話に挿入したり、メッセージに対してアクションを実行したりするためのショートカット。 | Teams Toolkit 拡張機能を使用したVS Code、または [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) と [Bot Framework SDK](https://dev.botframework.com/) | Node.js、C#、Java Python。 |
+| タブ | 全画面表示の埋め込み Web エクスペリエンス。 | Teams Toolkit 拡張機能を備えた Microsoft Visual Studio Code、または CLI を使用する場合は [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | コア ライブラリ用の [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true)と、UI 機能用に[ Teams クライアント SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)を使用する | Web テクノロジ全般、HTML、CSS、JavaScript (React を含む)。 |
+| ボット | メンバーと会話するチャット ボット。 | Teams Toolkit 拡張機能を備えた Visual Studio Code、または [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) と [Bot Framework SDK](https://dev.botframework.com/) | Node.js、C#、Java Python。 |
+| メッセージング拡張機能 | 外部コンテンツを会話に挿入したり、メッセージに対してアクションを実行したりするためのショートカット。 | Teams Toolkit 拡張機能を備えた Visual Studio Code、または [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) と [Bot Framework SDK](https://dev.botframework.com/) | Node.js、C#、Java Python。 |
 
 *これらの特定のスタックの使用に限定されません。*
 

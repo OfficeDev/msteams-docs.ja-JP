@@ -5,12 +5,12 @@ description: Teams プラットフォームでのカスタム タブの概要
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 97803e89c225c45aee82c6969c8168dec7bf5cac
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 3e339853729fc97623fba78d94be23b0562d4dbb
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212504"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435182"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Microsoft Teams 用のタブの構築
 
@@ -79,7 +79,7 @@ Teams には、個人用タブとチャネル タブ、またはグループ タ
 複数のチャネルまたはグループ タブと、アプリごとに最大 16 個の個人用タブを使用できます。
 
 ### <a name="tools-you-can-use-to-build-tabs"></a>タブのビルドに使用できるツール
-* [Visual Studio Code 用 Teams ツールキット](../toolkit/visual-studio-code-overview.md)
+* [Microsoft Visual Studio Code 用 Teams ツールキット](../toolkit/visual-studio-code-overview.md)
 * [Visual Studio 用 Teams ツールキット](../toolkit/visual-studio-overview.md)
 
 ## <a name="next-step"></a>次のステップ

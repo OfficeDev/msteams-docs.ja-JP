@@ -4,12 +4,12 @@ description: 検索ベースのメッセージング拡張機能を更新して�
 ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: 5c37eff384f3aa9d2d5f615272ec7a5518de4e8d
-ms.sourcegitcommit: 6e33289c55a1a83adb9b7b38c42d781c699786f7
+ms.openlocfilehash: a72f4781c6765c908748a8be16d096bca866fe36
+ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62345381"
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "62435811"
 ---
 # <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>複数のTeamsメッセージング拡張機能を拡張Microsoft 365
 
@@ -34,7 +34,7 @@ ms.locfileid: "62345381"
  - 開発者Microsoft 365サンドボックス テナント
  - ターゲットリリースに登録 *Office 365サンドボックス テナント*
  - ベータ チャネルからインストールOfficeアプリを含むテストMicrosoft 365 Apps *環境*
- - Visual Studio Code (プレビュー) Teams Toolkit (省略可能)
+ - Microsoft Visual Studio (プレビュー) 拡張子Teams Toolkitコード (省略可能)
 
 > [!div class="nextstepaction"]
 > [前提条件のインストール](prerequisites.md)
@@ -80,7 +80,7 @@ ms.locfileid: "62345381"
 
 ユーザーがメッセージ拡張機能を Outlook操作するには、ボットに Outlookチャネルを追加する必要があります。
 
-1. [Azure portal](https://portal.azure.com) (以前に[登録した場合はボット フレームワーク](https://dev.botframework.com) ポータル) から、ボット リソースに移動します。
+1. ポータル[Microsoft Azure (](https://portal.azure.com)以前に登録[した場合は Bot Framework](https://dev.botframework.com) ポータル) から、ボット リソースに移動します。
 
 1. [*チャネル設定*] を **選択します**。
 
@@ -153,7 +153,7 @@ Azure Active Directory メッセージング拡張機能のシングル サイ�
 
 テスト テナントで実行しているアプリOutlook on the webプレビューするには、テスト [テナント outlook.com](https://www.outlook.com) 資格情報を使用してログインします。 [新しいメッセージ **] をクリックします**。 コンポジション **ウィンドウの下部** にある [その他のアプリ] フライアウト メニューを開きます。 メッセージング拡張機能が表示されます。 そこから呼び出して、メッセージを作成する場合と同じ方法で使用Teams。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Outlookが有効Teamsメッセージング拡張機能はプレビュー中であり、実稼働環境での使用はサポートされていません。 テスト目的でユーザーをプレビューするために、Outlook有効なメッセージング拡張機能を配布する方法を次に示します。
 
