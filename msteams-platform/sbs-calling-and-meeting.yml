@@ -1,0 +1,85 @@
+### YamlMime:Tutorial
+title: Teamsおよび会議ボット
+metadata:
+  title: Teamsと会議のボット
+  description: このチュートリアルでは、ボットで通話と会議を設定し、会議を行う方法についてTeams。
+  audience: Developer
+  level: Beginner
+  ms.date: 02/08/2021
+  ms.topic: interactive-tutorial
+  nextTutorialHref: bots/calls-and-meetings/registering-calling-bot.md
+  nextTutorialTitle: 通話ボットを登録する
+  ms.custom: mvc
+  ms.localizationpriority: none
+  ms.openlocfilehash: 0ceeea6474ab1ce0c20bcd51b65f792dfadd43c8
+  ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 02/08/2022
+  ms.locfileid: "62444136"
+items:
+- durationInMinutes: 1
+  content: >
+    通話ボットと会議ボットには、通話の作成、通話への参加、転送、またはリダイレクト、スケジュールされた会議への参加、およびクラウド通信 API GRAPH API の統合による参加者の招待など、基本的な機能が提供されます。
+
+
+    ボットは、リアルタイムの音声Teams、画面共有を使用して、通話や会議を操作できます。 Microsoft Graph通話やオンライン会議の API を使用すると、Teamsアプリは音声とビデオを使用してユーザーと対話してエクスペリエンスを強化できます。 これらの API を使用すると、次の新機能を追加できます。
+
+
+    * 対話型音声応答 (IVR)
+
+    * 呼び出し制御
+
+    * デスクトップとアプリの共有を含む、リアルタイムのオーディオストリームとビデオ ストリームへのアクセス
+
+
+    ボットを作成し、これらの API をアプリで使用するための追加情報Graphアクセス許可をTeamsします。
+
+
+    このステップ バイ ステップ ガイドは、通話と会議の機能を備え、ボットを作成するのに役立ちます。 このチュートリアルの終わりまでに、次の出力を実現できます。
+
+
+    ![最終出力](~/assets/images/calls-and-meetings/final-output.png)
+- title: 前提条件
+  durationInMinutes: 1
+  content: "次のツールをインストールし、開発環境をセットアップしてください。  \n\n* [Office 365テナント](https://developer.microsoft.com/en-us/microsoft-365/dev-program)\n* [Ngrok](https://ngrok.com/) または同等のトンネリング ソリューション\n* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)\n* [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) バージョン 3.1\n* Microsoft Teamsアカウントを使用する (ゲスト アカウントではない)\n* すべての[Windows PowerShell](https://docs.microsoft.com/en-us/microsoftteams/teams-powershell-install)を実行してインストールする\n"
+- title: 通話と会議ボットのセットアップ
+  durationInMinutes: 5
+  content: "アプリを Azure portal でアプリ登録を使用してアプリケーションを登録し、アプリと統合し、Microsoft Microsoft ID プラットフォームを呼び出Graph。 次の操作を実行します。\n\n1. ngrok を使用して、Web サーバーのエンドポイントへのトンネルを作成します。\n1. Azure Bot Service にボットを登録する Azure Bot リソースを作成します。\n1. ボットの SSO 認証を有効にするクライアント シークレットを作成します。\n1. PowerShell を使用してオンライン会議を作成するためのデモ テナント ユーザーのポリシーを作成します。\n1. ダウンストリーム呼び出しの API アクセス許可を追加します。\n1. Azure アカウントでボット チャネル登録を作成します。\n1. ボットMicrosoft Teamsチャネルを追加して、ボットを展開Teamsします。\n1. 作成した ngrok トンネルにメッセージング エンドポイントを追加します。\n\n**ngrok トンネルを作成する:**\n\nngrok を使用して、ローカルで実行中の Web サーバーのパブリックに利用可能な HTTPS エンドポイントへのトンネルを作成します。 ngrok で次のコマンドを実行します。\n\n```bash\nngrok http -host-header=rewrite 3978\n```\n\n**Azure でアプリを登録する:**\n\n1. 個人用 Microsoft アカウントを [使用して Azure portal](https://portal.azure.com/) にサインインします。\n1. [新しい **Azure Active Directory**] を選択し、左側のウィンドウから [アプリの登録] を選択し、[新しい登録] **を選択します**。\n\n    :::image type=\"content\" source=\"./assets/images/calls-and-meetings/azure-active-directory.png\" alt-text=\"Azure のアクティブ ディレクトリ。\":::\n\n1. **[アプリケーションの登録] ページ** が開きます。 アプリケーションの登録情報を入力します。\n1. アプリのユーザーに **表示** されるわかりやすいアプリケーション名を入力します。\n1. [ **サポートされているアカウントの種類**] で、アプリケーションでサポートするアカウントを選択します。\n1. [ **リダイレクト URI** (オプション)] フィールドで、アプリ Web またはパブリック クライアント (モバイル & デスクトップ **)** の種類を選択し、アプリケーションのリダイレクト URI を入力します。\n\n    > [!NOTE]\n    > Web アプリケーションの場合は、基本 URI をとして指定します `http://localhost:31544`。 パブリック クライアント アプリケーションの場合は、トークン応答を返Azure ADに使用する URI を指定します`myapp://auth`。\n\n1. **[登録]** を選択します。\n\n    :::image type=\"content\" source=\"./assets/images/calls-and-meetings/reg-app.png\" alt-text=\"アプリを登録します。\":::\n\n**クライアント シークレットを作成するには、次の方法を実行します。**\n\n1. ボット **の [** 概要] ページで、[ **Essentials** ] を選択し、将来の参照のためにアプリケーション クライアント **ID** (Microsoft App ID) を保存します。\n\n    :::image type=\"content\" source=\"./assets/images/calls-and-meetings/microsoft-app-id-new.png\" alt-text=\"Microsoft アプリ ID。\":::\n\n1. [**管理]** で、[証明書と&**] セクションを** 選択し、[クライアント  シークレット] を選択し、[新しいクライアント シークレット **] を選択します**。 [ **クライアント シークレットの追加] ウィンドウ** が表示されます。  \n\n1. [説明 **] と入力し** 、[追加] を **選択します**。\n\n    :::image type=\"content\" source=\"./assets/images/calls-and-meetings/add-client.png\" alt-text=\"クライアント シークレットを追加します。\":::\n\n1. [値 **] 列で** 、[クリップボードに **コピー] を選択し** 、将来の参照のためにクライアント シークレット ID を保存します。\n\n    :::image type=\"content\" source=\"./assets/images/calls-and-meetings/client-secret.png\" alt-text=\"値。\":::\n\n**PowerShell スクリプトを実行してポリシーを作成します。**\n\n1. 次の PowerShell スクリプトを使用してオンライン会議を作成するためのデモ テナント ユーザーのポリシーを作成します。\n\n    > [!NOTE]\n    > PSI Windows PowerShell管理者として実行し、スクリプトを実行します。\n\n    :::image type=\"content\" source=\"./assets/images/calls-and-meetings/powershell-script.png\" alt-text=\"PowerShell スクリプト。\":::\n\n1. `azure-client-id`ボットの **Microsoft App ID** に置き換え、Teams へのログインに使用するアカウントのテナント **ID** に置き換えてください (次の図に示すようにリンクをコピーし、取得したリンクで Teams アカウントのテナント ID `object-id` を見つける)。\n\n    :::image type=\"content\" source=\"./assets/images/calls-and-meetings/teams-link-new.png\" alt-text=\"Teamsリンク。\":::\n\n1. PowerShell `PolicyName`スクリプト `azure-client-id`で `policy-description`、 `object-id` を追加します。 PowerShell のプロンプトが表示されたらTeamsアカウントでログインします。\n\n    :::image type=\"content\" source=\"./assets/images/calls-and-meetings/powershell.png\" alt-text=\"PowerShell。\":::\n\n1. PowerShell で次のコマンドを実行して、ポリシーが正常に作成されたかどうかを確認します。 ポリシー名を定義済みのポリシー名に置き換える。\n\n    ```powershell\n    Get-CsApplicationAccessPolicy -Identity “<<policy-identity/policy-name>>”\n    ```\n\n**ダウンストリーム呼び出しの API アクセス許可を追加するには、次の方法を実行します。**\n\n> [!NOTE]\n> アカウントが Microsoft に対して管理者の同意を与え得る必要があります。 アクセス許可を追加した後、同意 `Grant admin consent for Microsoft` の状態を知る場合に選択します。\n\n1. ボット **の [管理** ] ウィンドウで、[ **API アクセス許可] を選択します**。\n1. [**アクセス許可を追加**] を選択します。 **[API アクセス許可の要求]** ウィンドウが表示されます。\n1. [**Microsoft API] を選択し**、[Microsoft API] を **Graph**。\n1. [アプリケーション **のアクセス許可] を選択** し、[アクセス許可] を選択します。\n1. Azure App にGraph API アプリケーションのアクセス許可を追加し、管理者の同意を付与します。\n    * `Calls.AccessMedia.All`\n    * `Calls.Initiate.All`\n    * `Calls.InitiateGroupCall.All`\n    * `Calls.JoinGroupCall.All`\n    * `Calls.JoinGroupCallAsGuest.All`\n    * `OnlineMeetings.ReadWrite.All`\n1. **[アクセス許可の追加]** を選択します。\n\n    :::image type=\"content\" source=\"./assets/images/calls-and-meetings/add-api-permissions.png\" alt-text=\"API アクセス許可を追加します。\":::\n\n**Azure アカウントでボット チャネル登録を作成する:**\n\n1. [Azure portal を開きます](https://portal.azure.com/)。\n1. **[リソースの作成]** を選択します。\n1. 検索ボックス **で Azure Bot** を検索します。\n1. [ **Azure Bot] を選択します**。\n\n    :::image type=\"content\" source=\"./assets/images/calls-and-meetings/azure-bot-homepage.png\" alt-text=\"Azure ボット カード。\":::\n\n1. **[作成]** を選択します。\n1. [ボット ハンドル] フィールドにボット ハンドル **名を入力** します。\n1. ドロップダウン リスト **から [サブスクリプション** ] を選択します。\n1. ドロップダウン リスト **からリソース グループ** を選択します。\n\n    新しいリソース グループを作成するには、[新しいリソース グループの **作成] を** 選択し、リソース名を入力し、[ **OK**] を選択し、[新しいリソース グループの場所] ドロップダウン リストから必要な場所 **を** 選択します。\n\n    :::image type=\"content\" source=\"./assets/images/calls-and-meetings/create-azure-bot.png\" alt-text=\"Azure Bot を作成します。\":::\n\n1. [Microsoft **アプリ ID のマルチ** テナント **としてアプリの種類****] を選択します**。\n\n    > [!NOTE]\n    > [ `Creation type` Microsoft App ID] セクションで、 `Create new Microsoft App ID` 新しいボットを作成するために既に選択されています。 ボットを既に `Use existing app registration`登録している場合は、 を選択できます。 フィールドに Microsoft App ID を入力 `Existing app id` し、フィールドに値を入力 `Existing app password` します。\n\n1. [**既存のアプリ登録を使用する**] を選択し、デモ テナントに登録されている Azure アプリのアプリ **ID** とアプリ シークレットを入力します。\n1. **[確認 + 作成]** を選びます。\n\n    :::image type=\"content\" source=\"./assets/images/calls-and-meetings/review-create.png\" alt-text=\"マルチ テナント。\":::\n\n1. 検証に合格した場合は、[作成] を **選択します**。\n\n   ボット サービスをプロビジョニングするには、少し時間が必要です。\n\n    :::image type=\"content\" source=\"./assets/images/calls-and-meetings/validation.png\" alt-text=\"検証。\":::\n\n1. [**リソースに移動**] を選びます。 ボットと関連リソースがリソース グループに一覧表示されます。\n\n    これで、Azure ボットが作成されました。\n\n    :::image type=\"content\" source=\"./assets/images/calls-and-meetings/go-to-resource.png\" alt-text=\"リソースに移動します。\":::\n\n**新しいチャネルをMicrosoft Teamsするには、次のMicrosoft Teamsします。**\n\n1. [ホーム] に **移動します**。\n1. [最近使ったリソース] セクションに一覧表示されているボット **を開** きます。\n1. 左側 **のウィンドウで** [チャネル] を選択し、[チャネル] **をMicrosoft Teams** <img src=\"~/assets/images/bots/teamsicon.png\" alt=\"Teams icon\" width=\"20\"/> 使用可能なチャネルの一覧から。    \n    \n    :::image type=\"content\" source=\"./assets/images/calls-and-meetings/channels-teams.png\" alt-text=\"チャネルTeams。\":::\n\n1. このチェック ボックスをオンにすると、利用規約に同意し、[同意する] を **選択します**。\n\n    :::image type=\"content\" source=\"./assets/images/calls-and-meetings/terms-of-service.png\" alt-text=\"利用規約。\":::\n\n1. **[保存]** を選択します。\n1. [Microsoft Teams] **を選択****し、[** チャネル] ページで [通話Teams] を選択します。\n\n    :::image type=\"content\" source=\"./assets/images/calls-and-meetings/configure-teams.png\" alt-text=\"構成Teams。\":::\n\n1. [ **通話を有効にする**] を選択し、HTTPS ngrok URL を使用して **Webhook** を更新します (https://yourNgrok/api/callback) 最後 `/api/callback` に追加します)。\n\n    :::image type=\"content\" source=\"./assets/images/calls-and-meetings/enable-calling.png\" alt-text=\"呼び出しを有効にする。\":::\n\n1. **[保存]** を選択します。\n\n**メッセージング エンドポイントを追加するには、次の方法を実行します。**\n\n1. ボットの **ホーム ページ** に移動し、左側のウィンドウ **から [設定****構成]** を選択します。\n1. ngrok に移動します。\n1. 次の図に示すように、HTTPS URL (https to io) をコピーします。\n    \n    :::image type=\"content\" source=\"./assets/images/calls-and-meetings/ngrok.png\" alt-text=\"Ngrok。\":::\n\n1. メッセージング **エンドポイントで、** ngrok から使用可能な HTTPS URL を追加し、URL の最後に **/api/messages を追加します**。\n    \n    :::image type=\"content\" source=\"./assets/images/calls-and-meetings/messaging-endpoint.png\" alt-text=\"メッセージング エンドポイント。\":::\n\n1. **[適用]** を選択します。\n\n    Azure Bot Service でボットを正常にセットアップし、ボット サービス接続をセットアップする必要があります。\n"
+- title: アプリ パッケージを更新Teams作成する
+  durationInMinutes: 1
+  content: "ボット サンプルを構成して、Microsoft Teamsで会話型ボットを認証し、Teamsアプリ パッケージを作成して組織にアップロードする方法を理解します。\n\n1. アプリの更新プログラムで appsettings.json をVisual Studio。\n1. ファイル エクスプローラーで manifest.json Visual Studioを更新し、ファイル エクスプローラーで zip ファイルに圧縮します。\n\n**ボットを呼び出すアプリの設定を更新します。**\n\n1. repo に移動します https://github.com/OfficeDev/Microsoft-Teams-Samples.git。\n1. [ **コード] を選択** し、ドロップダウンを選択します。\n1. [ZIP **のダウンロード] を選択します**。\n\n    :::image type=\"content\" source=\"./assets/images/calls-and-meetings/repo-download.png\" alt-text=\"レポのダウンロード。\":::\n\n1. ダウンロードされるリポジトリのパスに注意してください。\n1. エクスプローラーで **、** Microsoft-Teams-Samples-mainsamplesbot-calling-meetingcsharp  >  >  >  フォルダー **に移動** します。\n1. ボットの **構成Visual Studioで appsettings.json** ファイルを開きます。\n\n    * ボットの構成ページ `MicrosoftAppId` から取得できます。 これは `MicrosoftAppPassword` 、以前に保存したクライアント シークレット ID の値です。\n    * アカウントへのログインに`Tenant ID``UserId`使用するアカウントのリンクまたはリンクから取得Teams。 イメージ内のパスに従って、 のリンクを取得します `tenant id`。\n    \n        :::image type=\"content\" source=\"./assets/images/calls-and-meetings/teams-link-new.png\" alt-text=\"Teamsリンク。\":::\n    \n    * Microsoft のエクスプローラー サイト`DisplayName`から`UserId`[、および Microsoft Graph入手](https://developer.microsoft.com/en-us/graph/graph-explorer)できます。\n        * 自分のアカウントを使用してページにTeamsし`Users`、検索ボックスの URl の最後に追加し、[クエリの実行] **を選択します**。\n        * アカウントにリンクされている表示名とユーザー ID が生成されます。\n        * 任意の 3 つのアカウントを選択し`DisplayName``UserId`、appsettings.json に追加します。\n\n        :::image type=\"content\" source=\"./assets/images/calls-and-meetings/graph-explorer.png\" alt-text=\"Graph エクスプローラー。\":::\n\n    > [!NOTE]\n    > `Tenant ID`または `UserId` Teamsアカウント`DisplayName``UserId`は、通話を開始する場所を示し、ユーザーは通話のリダイレクトまたは転送先を示します。\n\n1. を `MicrosoftAppId`、 `ClientId`アプリケーション `AppId` (クライアント **) ID** `MicrosoftAppPassword`と 、、および Value `ClientSecret`に `AppSecret` 置き換 **えてください**。\n1. URL `BotBaseUrl` を使用して更新 `ngrok` します。\n1. 更新`Tenant ID`と .`UserId`\n1. 更新`DisplayName`と .`UserId`\n\n    :::image type=\"content\" source=\"./assets/images/calls-and-meetings/appsettings.png\" alt-text=\"Appsettings Json。\":::\n\n1. **[保存]** を選択します。\n\n**マニフェストを更新するには、**\n\n1. エクスプローラーで **、****Microsoft-Teams-Samples-mainsamplesbot-calling-meetingcsharpManifest** >  >  >  >  **フォルダーに移動** します。\n1. マニフェスト.**json ファイルを開** きます。Visual Studio。\n1. **manifest.json ファイルで**、**{id}、 {BotId}** を見つけて、Microsoft App ID を追加します。\n1. ngrok URL を **validDomains に** 追加し、https:// 保存します。\n\n    :::image type=\"content\" source=\"./assets/images/calls-and-meetings/manifest.png\" alt-text=\"マニフェスト。\":::\n\n1. Manifest フォルダーの内容 **を圧縮して** 、ファイルを作成 **manifest.zip**。\n\n    > [!NOTE]\n    > 追加 `manifest.zip` のフォルダーは含めずにしてください。 zip フォルダー内 `manifest json` にソース ファイル `color` 、 `outline` アイコン、およびアイコンが必要です。\n    > アップロード組織または組織のデモ テナントでマニフェストを作成し、Teamsでソリューションを実行Visual Studio。\n\n1. [次へ] Teams。\n1. ファイルを **manifest.zipするには、[****ストア] >** カスタム アプリ> アップロードアプリを管理し、エクスプローラーの repo フォルダーmanifest.zip **** を開きます。\n1. [追加 **] を** 選択して、通話ボットをインストールTeams。\n\n    :::image type=\"content\" source=\"./assets/images/calls-and-meetings/output.png\" alt-text=\"出力の追加。\":::\n\n    このボットは、このボットのデバッグ後に操作Visual Studio。\n"
+- title: 通話と会議ボットとの対話
+  durationInMinutes: 2
+  content: >
+    ボットを使用すると、チャネル内またはチャット内の専用スペース内のサービスとコンテンツにアクセスできます。
+
+
+    ボットを使用するには、次の手順に従います。
+
+
+    1. 左側のウィンドウで、省略Teams ●●● を選択し、一覧からアプリを選択します。
+
+    1. ボットは、以下に示すようにアダプティブ カード付きウェルカム テキストを送信します。
+
+        :::image type="content" source="./assets/images/calls-and-meetings/bot-with-adaptive-card.png" alt-text="ボットのアダプティブ カード。":::
+
+    1. ボットに呼び出しの作成を求めできます。
+
+        :::image type="content" source="./assets/images/calls-and-meetings/placed-call.png" alt-text="呼び出しを配置します。":::
+
+    1. ボットに呼び出しの転送を求めできます。
+
+        :::image type="content" source="./assets/images/calls-and-meetings/transfer-call.png" alt-text="転送呼び出し。":::
+
+    1. ボットに会議のスケジュールを設定し、参加者を招待する必要があります。
+
+        :::image type="content" source="./assets/images/calls-and-meetings/meeting.png" alt-text="会議ボット。":::
+- title: 完全なチャレンジ
+  durationInMinutes: 1
+  content: >
+    このようなことを思い付い出しましたか?
+
+
+    ![最終出力](~/assets/images/calls-and-meetings/final-output.png)
+- content: ボットの呼び出しと会議アプリの使用を開始するチュートリアルを完了Microsoft Teams。

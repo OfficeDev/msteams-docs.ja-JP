@@ -4,12 +4,12 @@ description: 新しい音声/ビデオ通話ボットの登録、Microsoft Teams
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: ボットのオーディオ/ビデオ オーディオ ビデオ メディアを呼び出す
-ms.openlocfilehash: 5368f8e5b5241ba91a1e4ad14b5d46f9ab778a12
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 8bb685d8d7ba470b7a9e76da084b7b165f83c23c
+ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435154"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "62443929"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Microsoft Teams の通話と会議ボットを登録する
 
@@ -91,6 +91,10 @@ Azure AD V1 エンドポイントを使用するアプリの場合、テナン�
 
 > [!IMPORTANT]
 > アプリケーションのアクセス許可を変更する場合は、管理者の同意プロセスも繰り返す必要があります。 アプリ登録ポータルで行われた変更は、テナントの管理者が同意を再適用するまで反映されません。
+
+## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
+
+ボットで [通話と会議を](../../sbs-calling-and-meeting.yml) 設定するには、手順に従ってガイドを実行します。
 
 ## <a name="next-step"></a>次のステップ
 

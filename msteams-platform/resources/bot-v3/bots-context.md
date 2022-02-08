@@ -5,12 +5,12 @@ keywords: teams ボットのコンテキスト
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 4d737564a77cdccc693a8fa3889476a1cf015be2
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 94d94f3f4c9c522a0fbccb448ba371e96da6c070
+ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212041"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "62443994"
 ---
 # <a name="get-context-for-your-microsoft-teams-bot"></a>ボットのコンテキストをMicrosoft Teamsする
 
@@ -21,18 +21,18 @@ ms.locfileid: "62212041"
 > [!NOTE]
 >
 > * Microsoft Teams固有のボット API は、ボット ビルダー SDK の拡張機能を通じて最適にアクセスできます。
-> * Microsoft.bot.Connector.C#または .NET については[、Microsoft.Bot.Connector.Teams NuGet](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)してください。
-> * 開発Node.js、ボット フレームワーク SDK v4.6 Teams機能の[ボット ビルダーが](https://github.com/microsoft/botframework-sdk)組み込まれています。
+> * Microsoft.bot.Connector.C# .NET または .NET の場合は、[Microsoft.Bot.Connector.Teams NuGet](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)してください。
+> * 開発Node.js、ボット フレームワークの機能Teamsボット ビルダーが [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) v4.6 に組み込まれています。
 
 ## <a name="fetch-the-team-roster"></a>チーム名簿を取得する
 
-ボットは、チーム メンバーとその基本的なプロファイルの一覧を照会できます。 基本的なプロファイルには、Teams ID やAzure Active Directory ID などの情報が含まれます。 この情報を使用して、ユーザー ID を関連付けできます。 たとえば、資格情報を使用してユーザーがタブにログインAzure ADチーム メンバーを確認します。
+ボットは、チーム メンバーとその基本的なプロファイルの一覧を照会できます。 基本的なプロファイルには、Teams ID やMicrosoft Azure Active Directory (Azure ADなど) 情報が含まれます。 この情報を使用して、ユーザー ID を関連付けできます。 たとえば、ユーザーが Microsoft Azure Active Directory (Azure AD) 資格情報を使用してタブにログインAzure ADチーム メンバーを確認します。
 
 ### <a name="rest-api-example"></a>REST API の例
 
-値をエンドポイントとして使用して、GET 要求 [`/conversations/{teamId}/members/`](/bot-framework/rest-api/bot-framework-rest-connector-api-reference#get-conversation-members) `serviceUrl` を直接発行します。
+値をエンドポイントとして使用して`serviceUrl`、[`/conversations/{teamId}/members/`](/bot-framework/rest-api/bot-framework-rest-connector-api-reference#get-conversation-members)GET 要求を直接発行します。
 
-ボットが受け取るアクティビティ ペイロードのオブジェクトは、次の `teamId` `channeldata` シナリオで確認できます。
+ボット `teamId` が受け取る `channeldata` アクティビティ ペイロードのオブジェクトは、次のシナリオで確認できます。
 
 * ユーザーがチーム コンテキストでボットにメッセージを送信または操作する場合。 詳細については、「メッセージの受信 [」を参照してください](~/resources/bot-v3/bot-conversations/bots-conversations.md#receiving-messages)。
 * 新しいユーザーまたはボットがチームに追加された場合。 詳細については、「チームに [追加されたボットまたはユーザー」を参照してください](~/resources/bot-v3/bots-notifications.md#bot-or-user-added-to-a-team)。
@@ -72,7 +72,7 @@ Response body
 
 ### <a name="net-example"></a>.NET の例
 
-ユーザー `GetConversationMembersAsync` ID `Team.Id` の一覧を取得するために using を呼び出します。
+ユーザー `GetConversationMembersAsync` ID の `Team.Id` 一覧を取得するために using を呼び出します。
 
 ```csharp
 // Fetch the members in the current conversation
@@ -122,7 +122,7 @@ connector.fetchMembers(
 
 任意の個人チャットの API 呼び出しを行って、ボットとチャットしているユーザーのプロファイル情報を取得できます。
 
-API 呼び出し、SDK メソッド、および応答オブジェクトは、チーム名簿のフェッチと同じです。 唯一の違いは `conversationId` 、. `teamId`
+API 呼び出し、SDK メソッド、および応答オブジェクトは、チーム名簿のフェッチと同じです。 唯一の違いは、.`conversationId` `teamId`
 
 ## <a name="fetch-the-list-of-channels-in-a-team"></a>チーム内のチャネルの一覧を取得する
 
@@ -135,7 +135,7 @@ API 呼び出し、SDK メソッド、および応答オブジェクトは、チ
 
 ### <a name="rest-api-example"></a>REST API の例
 
-値をエンドポイントとして使用して、GET 要求 `/teams/{teamId}/conversations/` `serviceUrl` を直接発行します。
+値をエンドポイントとして使用して`serviceUrl`、`/teams/{teamId}/conversations/`GET 要求を直接発行します。
 
 唯一のソース `teamId` は、チーム コンテキストからのメッセージです。 メッセージは、ユーザーからのメッセージか、ボットがチームに追加するときに受信するメッセージのいずれかです。 詳細については、「チームに [追加されたボットまたはユーザー」を参照してください](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)。
 
@@ -165,7 +165,7 @@ Response body
 
 #### <a name="net-example"></a>.NET の例
 
-次の例では、ボット ビルダー SDK for .NET Teams拡張機能からの呼び `FetchChannelList` [出しを使用します](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)。
+次の例では、`FetchChannelList`ボット ビルダー [SDK for .NET Teams拡張機能からの呼び出しを使用します](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)。
 
 ```csharp
 ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelList(activity.GetChannelData<TeamsChannelData>().Team.Id);
@@ -173,7 +173,7 @@ ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelL
 
 #### <a name="nodejs-example"></a>Node.js例
 
-次の例では、ボット ビルダー SDK Teams `fetchChannelList` [拡張機能からの呼び出しを使用Node.js。 ](https://www.npmjs.com/package/botbuilder-teams)
+次の例では、`fetchChannelList`ボット ビルダー [SDK Teams拡張機能からの呼び出しを使用Node.js](https://www.npmjs.com/package/botbuilder-teams)。
 
 ```javascript
 var teamId = session.message.sourceEvent.team.id;
