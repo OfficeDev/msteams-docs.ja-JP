@@ -5,12 +5,12 @@ keywords: teams ボット カード書式
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 1d1ecf16c07744a895db931516c943d068c91d51
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 1c55862ca94bb0091cadf6df835b0271cdb74094
+ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212378"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "62443949"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams のカードの書式設定
 
@@ -115,6 +115,14 @@ Android では、アダプティブ カード Markdown の書式設定が次の�
     ]
 }
 ```
+
+アダプティブ カードは、絵文字をサポートします。 次のコードは、絵文字を使用したアダプティブ カードの例を示しています。
+
+``` json
+{ "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }
+```
+
+:::image type="content" source="~/assets/images/cards/adaptive-card-emoji.png" alt-text="絵文字付きのアダプティブ カード" lightbox="../../assets/images/Cards/adaptive-card-emoji.png" border="true":::
 
 ### <a name="mention-support-within-adaptive-cards"></a>アダプティブ カード内でのサポートのメンション 
 
