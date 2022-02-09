@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: b54a0843074f6689a5c946ea265a02cda92bc682
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: b78ca5b46442f30db3adfe314d627d3fc95682be
+ms.sourcegitcommit: 25a33b31cc56c05169fc52c65d44c65c601aefef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081105"
+ms.lasthandoff: 01/14/2022
+ms.locfileid: "62043232"
 ---
 # <a name="messages-in-bot-conversations"></a>ボットの会話内のメッセージ
 
@@ -214,7 +214,7 @@ async def on_members_added_activity(
 * `channelData.teamsTeamId`: 非推奨です。 このプロパティは、下位互換性のためにのみ含まれます。
 * `channelData.teamsChannelId`: 非推奨です。 このプロパティは、下位互換性のためにのみ含まれます。
 
-### <a name="example-channeldata-object-channelcreated-event"></a>channelData オブジェクトの例 (channelCreated イベント)
+### <a name="example-channeldata-object-or-channelcreated-event"></a>channelData オブジェクトまたは channelCreated イベントの例
 
 次のコードは、channelData オブジェクトの例を示しています。
 
@@ -234,20 +234,22 @@ async def on_members_added_activity(
 }
 ```
 
-## <a name="message-content"></a>メッセージの内容
-
 ボットから受信またはボットに送信されるメッセージには、さまざまな種類のメッセージ コンテンツを含めできます。
+
+## <a name="message-content"></a>メッセージの内容
 
 | フォーマット    | ユーザーからボットへ | ボットからユーザーへ | Notes                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | リッチ テキスト | ✔                | ✔                | ボットはリッチ テキスト、画像、カードを送信できます。 ユーザーは、リッチ テキストと画像をボットに送信できます。                                                                                        |
 | ピクチャ  | ✔                | ✔                | 最大 1024 × 1024 および 1 MB (PNG、JPEG、または GIF 形式)。 アニメーション GIF はサポートされていません。  |
 | カード     | ✖                | ✔                | サポートされているカード[についてはTeamsカード](~/task-modules-and-cards/cards/cards-reference.md)リファレンスを参照してください。 |
-| 絵文字    | ✔                | ✔                | Teams、顔にニヤリと笑う U+1F600 など、UTF-16 による絵文字がサポートされています。 |
+| 絵文字    | ✖                | ✔                | Teams、顔にニヤリと笑う U+1F600 など、UTF-16 による絵文字がサポートされています。 |
+
+プロパティを使用してメッセージに通知を追加 `Notification.Alert` することもできます。
 
 ## <a name="notifications-to-your-message"></a>メッセージへの通知
 
-プロパティを使用してメッセージに通知を追加 `Notification.Alert` することもできます。 通知は、新しいタスク、メンション、コメントについてユーザーに通知します。 これらのアラートは、ユーザーが作業している情報や、アクティビティ フィードに通知を挿入して表示する必要があるものに関連しています。 ボット メッセージから通知をトリガーするには、objects プロパティを `TeamsChannelData` true `Notification.Alert` に設定 *します*。 通知が発生するかどうかは、個々のユーザーの設定によって異Teams、これらの設定を上書きすることはできません。 通知の種類は、バナー、またはバナーとメールの両方です。
+通知は、新しいタスク、メンション、コメントについてユーザーに通知します。 これらのアラートは、ユーザーが作業している情報や、アクティビティ フィードに通知を挿入して表示する必要があるものに関連しています。 ボット メッセージから通知をトリガーするには、objects プロパティを `TeamsChannelData` true `Notification.Alert` に設定 *します*。 通知が発生するかどうかは、個々のユーザーの設定によって異Teams、これらの設定を上書きすることはできません。 通知の種類は、バナー、またはバナーとメールの両方です。
 
 > [!NOTE]
 > [ **概要] フィールド** には、ユーザーからのテキストがフィードに通知メッセージとして表示されます。
@@ -342,7 +344,7 @@ XML を使用して各イメージの高さと幅を指定します。 markdown 
 
 ## <a name="adaptive-cards"></a>アダプティブ カード
 
-アダプティブ カードはボットで作成し、Teams、Web サイトなど、複数のアプリに表示できます。 詳細については「[アダプティブ カード](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)」を参照してください。
+アダプティブ カードはボットで作成し、Teams、Web サイトなど、複数のアプリに表示できます。 詳細については、「アダプティブ カード」 [を参照してください](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)。
 
 次のコードは、単純なアダプティブ カードを送信する例を示しています。
 
@@ -370,25 +372,7 @@ XML を使用して各イメージの高さと幅を指定します。 markdown 
 }
 ```
 
-### <a name="form-completion-feedback"></a>フォームの完成に関するフィードバック
-
-フォーム補完メッセージは、ボットに応答を送信している間にアダプティブ カードに表示されます。 メッセージには、エラーまたは成功の 2 種類があります。
-
-* **エラー**: ボットに送信された応答が失敗した場合、 **何か問題が発生しました。再試行メッセージ** が表示されます。
-
-    ![エラー メッセージ](~/assets/images/Cards/error-message.png)
-
-* **成功**: ボットに送信された応答が成功すると、応答がアプリ **メッセージに** 送信されました。
-
-    ![成功メッセージ](~/assets/images/Cards/success.PNG)
-
-[閉じる] を **選択** するか、チャットを切り替えてメッセージを閉じできます。    
-
-**モバイルでの応答**:
-
-アダプティブ カードの下部にエラー メッセージが表示されます。
-
-ボット内のカードとカードの詳細については、カードのドキュメントを [参照してください](~/task-modules-and-cards/what-are-cards.md)。
+ボット内のカードとカードの詳細については、カードのドキュメント [を参照してください](~/task-modules-and-cards/what-are-cards.md)。
 
 ## <a name="status-code-responses"></a>状態コードの応答
 

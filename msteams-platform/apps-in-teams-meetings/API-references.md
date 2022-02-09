@@ -6,8 +6,13 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams apps 会議 ユーザー参加者ロール API ユーザー コンテキスト通知シグナル クエリ
+ms.openlocfilehash: 681929c85d23f83ffa6742afdae2860ac8dfc356
+ms.sourcegitcommit: f5c2090fdd5b55d21ecd9c395423fa277e18d74a
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/09/2022
+ms.locfileid: "62470789"
 ---
-
 # <a name="meeting-apps-api-references"></a>会議アプリ API リファレンス
 
 会議の機能拡張は、会議のエクスペリエンスを向上させる API を提供します。 リストされている API の助けを借りて、次の操作を実行できます。
@@ -426,7 +431,7 @@ API を使用するには `shareAppContentToStage` 、RSC アクセス許可を�
 
 ```json
 "authorization": {
-    "permission": { 
+    "permissions": { 
     "resourceSpecific": [
       { 
       "name": "MeetingStage.Write.Chat",
@@ -753,7 +758,7 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 * [Teamsの認証フロー](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Teams 会議用アプリ](teams-apps-in-meetings.md)
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [会議で使用するアプリを有効Teamsする](enable-and-configure-your-app-for-teams-meetings.md)
