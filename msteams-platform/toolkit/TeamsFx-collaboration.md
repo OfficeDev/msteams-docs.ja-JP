@@ -6,16 +6,16 @@ ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 5b08923d92e8b1ea7a6292754f62899669de4804
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: af96227df93bb2c236607791e3870b1882d2da5f
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435168"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518374"
 ---
 # <a name="collaborate-on-teams-project-using-teams-toolkit"></a>プロジェクトを使用Teams共同作業Teams Toolkit
 
-複数の開発者が連携して同じ TeamsFx プロジェクトのデバッグ、プロビジョニング、展開を行うことができますが、Teams App と Azure AD App.Teams Toolkit の適切なアクセス許可を手動で設定して、開発者とプロジェクト所有者が TeamsFx プロジェクトに他の開発者や共同作業者を招待して、同じプロジェクトをデバッグ、プロビジョニング、および展開できるコラボレーション機能を手動で設定する必要があります。 TeamsFx プロジェクト。
+複数の開発者が一緒に作業して、同じ TeamsFx プロジェクトのデバッグ、プロビジョニング、展開を行うことができますが、Teams Microsoft Azure Active Directory App と Azure AD (Azure AD) App.Teams Toolkit の適切なアクセス許可を手動で設定する必要があります。 コラボレーション機能をサポートし、開発者とプロジェクト所有者が他の開発者または共同作業者を TeamsFx プロジェクトに招待して、同じ TeamsFx プロジェクトをデバッグ、プロビジョニング、および展開できます。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -44,11 +44,11 @@ ms.locfileid: "62435168"
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add collaborators.png" alt-text="共同作業者":::
 
-* [**アプリMicrosoft 365 TeamsをAzure AD]** 所有者を選択し、他Microsoft 365アカウントの電子メール アドレスを共同作業者として追加します。 追加するアカウントは、イメージに示すように、リモート デバッグ用のプロジェクト所有者と同じテナント上にある必要があります。
+* [**アプリMicrosoft 365 Teamsを追加する (Microsoft Azure Active Directory (Azure AD) アプリ) 所有者を** 選択し、他のアカウントのMicrosoft 365を共同作業者として追加します。 追加するアカウントは、イメージに示すように、リモート デバッグ用のプロジェクト所有者と同じテナント上にある必要があります。
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="envi を追加する":::
 
-* 現在の環境で共同作業者を表示するには、[リスト Microsoft 365 Teams **App] (Azure AD App を使用して) [所有者]** を選択すると、次の図に示すように、共同作業者が出力チャネルに一覧表示されます。
+* 現在の環境で共同作業者を表示するには、[リスト Microsoft 365 Teams **アプリ] (Microsoft Azure Active Directory (Azure AD) App)** 所有者を選択し、次の図に示すように、共同作業者が出力チャネルに一覧表示されます。
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="リスト":::
 
@@ -77,8 +77,8 @@ ms.locfileid: "62435168"
   1. [開発者ポータルTeamsに移動し、名前またはアプリ ID Teamsアプリを選択します。
   2. 左側の **パネルから [所有者** ] を選択します。
   3. 共同作業者を選択して削除します。
-  4. [[アプリの](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)Azure Active Directory] に移動し、左側 **の** パネルから [アプリの登録] を選択し、アプリAzure ADします。
-  5. [アプリ **の管理**] ページの左側のAzure ADから [所有者] を選択します。
+  4. [アプリの[Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)] に移動し、左側のパネルから [アプリの登録] を選択し、Microsoft Azure Active Directory (Azure AD) アプリを探します。
+  5. [**アプリの** 管理] ページの左側Microsoft Azure Active Directory (Azure AD) から [所有者] を選択します。
   6. 共同作業者を選択して削除します。
 
 > [!NOTE]

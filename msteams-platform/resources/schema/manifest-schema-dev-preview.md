@@ -5,12 +5,12 @@ ms.topic: reference
 keywords: teams マニフェスト スキーマ Developer Preview
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: c014495e3ae2a969bbebc28aed62aded18576c82
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
+ms.openlocfilehash: fd73fbdacf17c6c25a80071ec438c0dc97c6ee6a
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362936"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518549"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>リファレンス: パブリック開発者プレビュー マニフェスト スキーマ (Microsoft Teams
 
@@ -549,11 +549,11 @@ staticTabs ブロックではなく、アダプティブ カード`contentBotId`
 
 **Optional**
 
-ユーザーが auzre Azure ADアプリにシームレスにサインインGraph、アプリ ID とユーザー情報をADします。
+ユーザーが auzre Microsoft Azure Active Directory アプリAzure ADシームレスにサインインするのに役立つアプリ ID とGraph情報を指定ADします。
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`id`|String|36 文字|✔|Azure AD のアプリケーション ID を指定します。 この ID は GUID である必要があります。|
+|`id`|String|36 文字|✔|Microsoft Azure Active Directory (Azure AD) アプリケーション ID。 この ID は GUID である必要があります。|
 |`resource`|String|2048 文字|✔|SSO の認証トークンを取得するためのアプリのリソース URL。|
 |`applicationPermissions`|配列|最大 100 アイテム|✔|アプリケーションのリソースのアクセス許可。|
 
@@ -617,7 +617,7 @@ staticTabs ブロックではなく、アダプティブ カード`contentBotId`
 
 **省略可能** - オブジェクト
 
-会議の内線の定義を指定します。 詳細については、「カスタム Together [Mode scenes in Teams」 を参照してください](../../apps-in-teams-meetings/teams-together-mode.md)。
+会議拡張機能の定義を指定します。 詳細については、「[Teams のカスタム Together Mode シーン](../../apps-in-teams-meetings/teams-together-mode.md)」を参照してください。
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
@@ -629,60 +629,60 @@ staticTabs ブロックではなく、アダプティブ カード`contentBotId`
 |---|---|---|---|---|
 |`id`|||✔| シーンの一意の識別子。 この ID は GUID である必要があります。 |
 |`name`| string | 128 文字 |✔| シーンの名前。 |
-|`file`|||✔| シーンのメタデータ json ファイルへの相対ファイル パス。 |
+|`file`|||✔| シーンの metadata json ファイルへの相対ファイル パス。 |
 |`preview`|||✔| シーンの PNG プレビュー アイコンへの相対ファイル パス。 |
 |`maxAudience`| integer | 50  |✔| シーンでサポートされている対象ユーザーの最大数。 |
-|`seatsReservedForOrganizersOrPresenters`| integer | 50 |✔| 開催者または発表者用に予約されているシートの数。|
+|`seatsReservedForOrganizersOrPresenters`| integer | 50 |✔| 開催者または発表者用に予約されたシートの数。|
 
 ## <a name="authorization"></a>承認
 
 **省略可能** — オブジェクト
 
-アプリの承認関連情報を指定して統合します。
+アプリの承認に関する情報を指定して統合します。
 
 |名前| 型|最大サイズ|必須 |説明|
 |---|---|---|---|---|
-|`permissions`||||アプリが機能する必要があるアクセス許可の一覧。|
+|`permissions`||||アプリを実行する必要があるアクセス許可の一覧。|
 
 ### <a name="authorizationpermissions"></a>authorization.permissions
 
 |名前| 型|最大サイズ|必須 |説明|
 |---|---|---|---|---|
-|`resourceSpecific`| オブジェクトの配列|16 アイテム||リソース インスタンス レベルでのデータ アクセスを保護するアクセス許可。|
+|`resourceSpecific`| オブジェクトの配列|16 項目||リソース インスタンス レベルでのデータ アクセスを保護するアクセス許可。|
 
 ### <a name="authorizationpermissionsresourcespecific"></a>authorization.permissions.resourceSpecific
 
 |名前| 型|最大サイズ|必須 |説明|
 |---|---|---|---|---|
-|`type`|string||✔| リソース固有のアクセス許可の種類。 オプション: `Application` と `Delegated`.|
-|`name`|string|128 文字|✔|リソース固有のアクセス許可の名前。 <br> 詳細については、「アプリケーションのアクセス [許可と](../../graph-api/rsc/resource-specific-consent.md) 委任されたアクセス許可 [」を参照してください](#delegated-permissions)。|
+|`type`|string||✔| リソース固有のアクセス許可の種類。 オプション: `Application` と `Delegated`。|
+|`name`|string|128 文字|✔|リソース固有のアクセス許可の名前。 <br> 詳細については、「[アプリケーションのアクセス許可](../../graph-api/rsc/resource-specific-consent.md)」および「[委任されたアクセス許可](#delegated-permissions)」を参照してください。|
 
 ### <a name="delegated-permissions"></a>委任されたアクセス許可
 
 委任されたアクセス許可を使用すると、アプリはサインインしているユーザーの代わりにデータにアクセスできます。
 
-* **Teams のリソース固有のアクセス許可**
+* **チームのリソース固有のアクセス許可**
 
     |**[名前]**|**説明**|
     |---|---|
-    |`ChannelMeetingParticipant.Read.Group`| サインインしているユーザーに代わって、このチームに関連付けられたチャネル会議の名前、役割、ID、参加、および左の時間などの参加者情報を読み取るアプリを許可します。|
-    |`InAppPurchase.Allow.Group`| サインインしているユーザーに代わって、アプリでこのチームのユーザーにマーケットプレースオファーを表示し、アプリ内で購入を完了できます。|
-    |`ChannelMeetingStage.Write.Group`| サインインしているユーザーに代わって、このチームに関連付けられたチャネル会議で、会議ステージにコンテンツを表示できます。|
+    |`ChannelMeetingParticipant.Read.Group`| サインインしたユーザーの代理で、このチームに関連付けられたチャネル会議の名前、役割、ID、参加時間と退会時間などの参加者情報を読み取ることができるようにします。|
+    |`InAppPurchase.Allow.Group`| サインインしているユーザーの代わりに、このチームのユーザーにマーケットプレース オファーを表示し、アプリ内での購入を完了できるようにします。|
+    |`ChannelMeetingStage.Write.Group`| サインインしているユーザーの代わりに、このチームに関連付けられているチャネル会議の会議ステージにコンテンツをアプリが表示できるようにします。|
 
-* **チャットまたは会議のリソース固有のアクセス許可**
+* **チャットまたは会議用のリソース固有のアクセス許可**
 
     |**[名前]**|**説明**|
     |---|---|
-    |`InAppPurchase.Allow.Chat`|アプリは、サインインしているユーザーに代わって、このチャットおよび関連する会議のユーザーにマーケットプレースオファーを表示し、アプリ内で購入を完了できます。|
-    |`MeetingStage.Write.Chat`|サインインしているユーザーに代わって、このチャットに関連付けられた会議で、会議ステージにコンテンツを表示できます。|
-    |`OnlineMeetingParticipant.Read.Chat`|サインインしているユーザーに代わって、このチャットに関連付けられた会議の名前、役割、ID、参加、および左の時間などの参加者情報を読み取るアプリを許可します。|
-    |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|サインインしているユーザーに代わって、このチャットに関連付けられた会議の参加者の受信オーディオをアプリで切り替えます。|
+    |`InAppPurchase.Allow.Chat`|サインインしているユーザーの代わりに、このチャットや関連する任意の会議のユーザーにマーケットプレース オファーを表示し、アプリ内での購入を完了できるようにします。|
+    |`MeetingStage.Write.Chat`|サインインしているユーザーの代わりに、このチャットに関連付けられている会議の会議ステージにコンテンツをアプリが表示できるようにします。|
+    |`OnlineMeetingParticipant.Read.Chat`|サインインしたユーザーの代理で、このチャットに関連付けられた会議の名前、役割、ID、参加時間と退会時間などの参加者情報を読み取ることができるようにします。|
+    |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|サインインしているユーザーの代わりに、このチャットに関連付けられている会議の参加者の着信オーディオをアプリで切り替えられるようにします。|
 
 * **ユーザーのリソース固有のアクセス許可**
 
     |**[名前]**|**説明**|
     |---|---|
-    |`InAppPurchase.Allow.User`|サインインしているユーザーに代わって、アプリでユーザーのマーケットプレースオファーを表示し、アプリ内でユーザーの購入を完了できます。|
+    |`InAppPurchase.Allow.User`|サインインしているユーザーの代わりに、アプリでユーザー マーケットプレース オファーを表示し、アプリ内でユーザーの購入を完了できるようにします。|
 
 ## <a name="see-also"></a>関連項目
 

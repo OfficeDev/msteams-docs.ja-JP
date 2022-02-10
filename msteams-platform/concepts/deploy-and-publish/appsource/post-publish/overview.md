@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 5c85d30e595d30a236318d13535584d949b1075a
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: cbb4eff47d21180bbdfe4aad49cb749a745386c2
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212413"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518563"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>公開された Microsoft Teams アプリを管理する
 
@@ -29,7 +29,7 @@ ms.locfileid: "62212413"
 
 * アプリ ID を変更しない。
 * アプリのバージョン番号を増やします。
-* パートナー センターで、[新しいアプリの追加] **を選択して** 更新を行う必要があります。 代わりにアプリのページに移動します。
+* パートナー センターで、[新しいアプリの **追加] を選択して** 更新を行う必要があります。 代わりにアプリのページに移動します。
 
 ### <a name="app-updates-requiring-user-consent"></a>ユーザーの同意を必要とするアプリの更新
 
@@ -44,7 +44,7 @@ ms.locfileid: "62212413"
 * 個人用タブを追加します。
 * [チャネルとグループ] タブを追加します。
 * コネクタを追加します。
-* アプリ登録に関連する構成Azure Active Directory変更します。 詳細については、[`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo) を参照してください。
+* アプリの登録に関連する構成Microsoft Azure Active Directory (Azure AD) を変更します。 詳細については、[`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo) を参照してください。
 
 ## <a name="fix-issues-with-your-published-app"></a>発行済みアプリの問題を修正する
 
@@ -54,7 +54,7 @@ Microsoft は、アプリ ストアに一覧表示されているアプリで毎
 
 アプリが Teams ストアに表示されている場合は、Teamsを起動し、アプリをインストールするダイアログを表示するリンクを作成できます。 たとえば、製品のマーケティング ページにダウンロード ボタンを使用して、このリンクを含めできます。
 
-アプリ ID に追加された次の URL を使用してリンクを作成します `https://teams.microsoft.com/l/app/<your-app-id>` 。
+アプリ ID に追加された次の URL を使用してリンクを作成します。 `https://teams.microsoft.com/l/app/<your-app-id>`
 
 ## <a name="complete-microsoft-365-certification"></a>完全なMicrosoft 365認定
 

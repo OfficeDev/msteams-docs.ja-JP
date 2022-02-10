@@ -6,12 +6,12 @@ ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: 統合のTeams検討事項
-ms.openlocfilehash: 7de3e91a0971bc540536a25265e6e6871a5da92c
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 0e80a051bb3964b3ade44e1f2c60fe4bf2242138
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212448"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518472"
 ---
 # <a name="considerations-for-teams-integration"></a>統合のTeams検討事項 
 
@@ -19,7 +19,7 @@ Web アプリを適切に統合することで、Teamsのソーシャル機能�
   
 アプリと統合できるさまざまな種類のアプリはTeams次のとおりです。
 * **スタンドアロン アプリ**: スタンドアロン アプリは、単一ページまたは大規模で複雑なアプリです。 ユーザーは、その一部の側面をTeams。
-* **コラボレーション アプリ**: ソーシャル機能とコラボレーション機能に固有のアプリが既に構築Teams。
+* **コラボレーション アプリ**: ユーザーに固有のソーシャル機能と共同作業機能用に既に構築Teams。
 * **SharePoint**: SharePointに表示するページTeams。
 
 統合シナリオに該当する適切なガイドラインをマップして従えます。
@@ -57,12 +57,12 @@ Web アプリを適切に統合することで、Teamsのソーシャル機能�
 
 ***統合シナリオ**: SharePoint*
 
-既存のページを[[SharePoint]](/MicrosoftTeams/teams-standalone-static-tabs-using-spo-sites)タブTeams統合するには、次の点を考慮する必要があります。
+既存のページを [SharePoint[]](/MicrosoftTeams/teams-standalone-static-tabs-using-spo-sites) タブTeams統合するには、次の点を考慮する必要があります。
 
 * 最新のオンライン ページ *SharePoint* 必要があります。
 * 個人用タブのみサポートされます。 ページをチャネル タブとして統合することはできません。
 
-または、タブを使用してTeamsタブ[を作成SharePoint Framework。](/sharepoint/dev/spfx/integrate-with-teams-introduction)
+または、タブを使用してTeamsタブ[をSharePoint Framework](/sharepoint/dev/spfx/integrate-with-teams-introduction)。
 
 ## <a name="aim-towards-multi-tenancy"></a>マルチテナントを目指す
 
@@ -74,7 +74,7 @@ Web アプリを適切に統合することで、Teamsのソーシャル機能�
 
 ***統合シナリオ**: スタンドアロン アプリ、コラボレーション アプリ*
 
-アプリの API とデータ構造は、アプリと統合するときにアプリをサポートするTeams。 サポートを拡張するには、ID マッピング、ディープ リンク サポート、Microsoft Graph の組み[](../concepts/authentication/configure-identity-provider.md)込みのために[](../concepts/build-and-test/deep-links.md)、Teams に関するコンテキスト情報を使用して API とデータ構造を拡張する[必要があります](/graph/teams-concept-overview)。
+アプリの API とデータ構造は、アプリと統合するときにアプリをサポートするTeams。 サポートを拡張するには、ID マッピング、ディープリンク サポート、Microsoft Graph の組み込みのために、Teams に[](../concepts/authentication/configure-identity-provider.md)関するコンテキスト[](../concepts/build-and-test/deep-links.md)情報を使用して API とデータ構造を拡張する[必要があります](/graph/teams-concept-overview)。
 
 [ユーザー] タブまたはボットのコンテキストをTeams[する方法を](../tabs/how-to/access-teams-context.md)参照[してください](../bots/how-to/get-teams-context.md)。
 
@@ -82,41 +82,41 @@ Web アプリを適切に統合することで、Teamsのソーシャル機能�
 
 ***統合シナリオ**: スタンドアロン アプリ、コラボレーション アプリ、SharePoint*
 
-Azure Active Directoryは、ユーザーの ID プロバイダー Teams。 アプリで別の ID プロバイダーを使用する場合は、ID マッピングの演習を行う必要があります。または id マッピングと組み合わせるAzure AD。
+Azure Active Directoryは、ユーザーの ID プロバイダー Teams。 アプリで別の ID プロバイダーを使用する場合は、ID マッピングの演習を行う必要があります。または id マッピングとMicrosoft Azure Active Directory (Azure AD)。
 
-Teamsサード パーティ製アプリ向けシングル サインオン (SSO) Azure AD機能が備え付けされています。 また、OIDC と呼ばれる OAuth や Open ID などの標準を使用して、他の ID プロバイダー Connectガイダンスを提供します。
+Teamsサード パーティ製アプリ用のシングル サインオン (SSO) メカニズムMicrosoft Azure Active Directory (Azure AD) があります。 また、OIDC と呼ばれる OAuth や Open ID などの標準を使用して、他の ID プロバイダー Connectガイダンスを提供します。
 
 > [!IMPORTANT]
-> 現在、サード パーティ製アプリは Government Community Cloud (GCC) で利用できますが、GCC-High国防総省 (DOD) では使用できません。 サード パーティ製アプリは、既定では無効になっています。GCC。 アプリのサード パーティ製アプリを有効GCC、[アプリのアクセス](/microsoftteams/teams-app-permission-policies)許可ポリシーの管理とアプリの管理に[関するページをご覧ください](/microsoftteams/manage-apps)。
+> 現在、サード パーティ製アプリは Government Community Cloud (GCC) で利用できますが、GCC-High国防総省 (DOD) では使用できません。 サード パーティ製アプリは、既定では無効になっています。GCC。 アプリのサードパーティ 製アプリを有効にするGCC、[アプリのアクセス](/microsoftteams/teams-app-permission-policies)許可ポリシーの管理とアプリの[管理に関するページをご覧ください](/microsoftteams/manage-apps)。
 
-このSharePointでは、SSO のみを使用できます。また、別のアプリで SSO を使用する場合は、別の Azure AD ID を追加することはできません。この ID はアプリのSharePointです。
+SHAREPOINT ページの場合は、SSO のみを使用し、ID が SharePoint アプリであるとして SSO を別のアプリで動作する場合は、別の Microsoft Azure Active Directory (Azure AD) ID を追加できません。
 
-認証の詳細[については、「Teams」 を参照してください](../concepts/authentication/authentication.md)。
+認証の詳細[については、](../concepts/authentication/authentication.md)Teams。
 
 ## <a name="follow-teams-design-guidelines"></a>設計Teamsに従う
 
 ***統合シナリオ**: スタンドアロン アプリ、コラボレーション アプリ*
 
-アプリをアプリ[Teamsネイティブに](../concepts/design/understand-use-cases.md)するための設計ガイドラインに従Teams。 既存のアプリ コンテンツを [アプリ] タブTeamsできません。アプリの設計の詳細については、「アプリの設計」[をFluent Design System。](https://fluentsite.z22.web.core.windows.net/)
+アプリをアプリ[Teamsネイティブに](../concepts/design/understand-use-cases.md)するための設計ガイドラインに従Teams。 既存のアプリ コンテンツを [アプリ] タブTeamsできません。アプリの設計の詳細については、「アプリの設計」[を参照Fluent Design System](https://fluentsite.z22.web.core.windows.net/)。
 
 ## <a name="maximize-deep-linking"></a>ディープ リンクを最大化する
 
 ***統合シナリオ**: スタンドアロン アプリ、コラボレーション アプリ、SharePoint*
 
-Teams 内の情報や機能へのリンクを作成できます。 ディープ[リンクを使用](../concepts/build-and-test/deep-links.md)してアプリとアプリTeamsリンクし、アプリの複数の部分を結び付け、よりネイティブなエクスペリエンスTeamsします。
+Teams 内の情報や機能へのリンクを作成できます。 ディープ [リンクを使用](../concepts/build-and-test/deep-links.md)してアプリとアプリTeamsリンクし、アプリの複数の部分を結び付け、よりネイティブなエクスペリエンスTeamsします。
 
 ## <a name="be-smart-when-messaging-users"></a>メッセージング ユーザーがスマートになる
 
 ***統合シナリオ**: スタンドアロン アプリ、コラボレーション アプリ、SharePoint*
 
-Webhook[よりも柔軟性が](../bots/what-are-bots.md)高Teams、マルチスレッドの会話にアプリで[ボットを使用します](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)。
+Webhook [よりも柔軟性](../bots/what-are-bots.md)が高Teams、マルチスレッド会話を行う場合は、アプリで[ボットを使用します](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)。
 
 ボットでは、個々のユーザーまたは **チャネルにプロ** アクティブ メッセージを送信することもできます。 プロアクティブ メッセージは、ボットに送信されるメッセージではなく、外部イベントによってトリガーされるプロプロンプトされていないメッセージです。 たとえば、ボットがインストールされている場合、または新しいユーザーがチャネルに参加するときに、ボットからウェルカム メッセージが送信されます。
 
-プロアクティブ メッセージの送信には、Teams固有の識別子が必要です。 この情報は、名簿[](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)またはユーザー プロファイル データのフェッチ、[](../bots/how-to/conversations/subscribe-to-conversation-events.md)会話イベントのサブスクライブ、または Microsoft Graph[を使用して取得できます](/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?context=graph/context#proactive-messaging-in-teams)。
+プロアクティブ メッセージの送信には、Teams固有の識別子が必要です。 情報を取得するには、名[](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)簿またはユーザー プロファイル データをフェッチするか、[](../bots/how-to/conversations/subscribe-to-conversation-events.md)会話イベントをサブスクライブするか、[Microsoft](/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?context=graph/context#proactive-messaging-in-teams) Graph。
 
 過剰なメッセージを持つユーザーに迷惑メールを送信しない。 この機能Teamsサポートしている場合、ユーザーはアプリの通知設定を構成できます。
-通知メッセージの例を次に示します。プロンプトされていないメッセージ **は送信しません**。
+通知メッセージの例を次に示します **。プロ** ンプトされていないメッセージは送信しません。
 
 ## <a name="use-sharepoint-for-file-and-data-storage"></a>ファイルSharePointストレージに使用する
 

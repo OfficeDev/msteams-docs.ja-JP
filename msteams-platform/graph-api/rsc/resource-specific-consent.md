@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: teams 承認 OAuth SSO Azure AD rsc Graph
-ms.openlocfilehash: 50e26c78333068b180b374e4aae31f0727aee103
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: dbbda0dced53530c1688faa626bc63fe0bf1be76
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435741"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518164"
 ---
 # <a name="resource-specific-consent"></a>リソース固有の同意
 
@@ -28,7 +28,7 @@ ms.locfileid: "62435741"
 
 ### <a name="resource-specific-permissions-for-a-team"></a>チームのリソース固有のアクセス許可
 
-|アプリケーションのアクセス許可| アクション |
+|アプリケーションのアクセス許可| 操作 |
 | ----- | ----- |
 |TeamSettings.Read.Group | このチームの設定を取得します。|
 |TeamSettings.ReadWrite.Group|このチームの設定を更新します。|
@@ -51,7 +51,7 @@ ms.locfileid: "62435741"
 
 次の表に、チャットのリソース固有のアクセス許可を示します。
 
-|アプリケーションのアクセス許可| アクション |
+|アプリケーションのアクセス許可| 操作 |
 | ----- | ----- |
 | ChatSettings.Read.Chat         | このチャットの設定を取得します。                                    |
 | ChatSettings.ReadWrite.Chat    | このチャットの設定を更新します。                          |
@@ -145,7 +145,7 @@ ID プラットフォームからアクセス トークンを取得するには�
 RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣言されます。 
 
 > [!IMPORTANT]
-> RSC 以外のアクセス許可は Azure portal に格納されます。 アプリ マニフェストに追加しません。
+> RSC 以外のアクセス許可は、Microsoft Azureされます。 アプリ マニフェストに追加しません。
 
 ### <a name="manifest-changes-for-resource-specific-consent"></a>リソース固有の同意のためのマニフェストの変更
 
@@ -157,14 +157,14 @@ RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣
 
 次の [値を使用して、WebApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) キーをアプリ マニフェストに追加します。
 
-|名前| 型 | 説明|
+|名前| 種類 | 説明|
 |---|---|---|
 |`id` |String |ユーザー Azure ADアプリ ID。 詳細については、「アプリを[ポータルに登録する」をAzure ADしてください](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)。|
 |`resource`|String| このフィールドは RSC で操作を行う必要がありますが、エラー応答を回避するには、値を追加して値を指定する必要があります。任意の文字列が実行します。|
 
 アプリに必要なアクセス許可を指定します。
 
-|名前| 型 | 説明|
+|名前| 種類 | 説明|
 |---|---|---|
 |`authorization`|オブジェクト|アプリを実行する必要があるアクセス許可の一覧。 詳細については、「[マニフェストでのリンク承認のプレースホルダー] 」を参照してください。
 
@@ -325,7 +325,7 @@ RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣
 
 次の [値を使用して、WebApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) キーをアプリ マニフェストに追加します。
 
-|名前| 型 | 説明|
+|名前| 種類 | 説明|
 |---|---|---|
 |`id` |String |ユーザー Azure ADアプリ ID。 詳細については、「アプリを[ポータルに登録する」をAzure ADしてください](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)。|
 |`resource`|String| このフィールドは RSC で操作を行う必要がありますが、エラー応答を回避するには、値を追加して値を指定する必要があります。任意の文字列が実行します。|

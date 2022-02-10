@@ -1,22 +1,22 @@
 ---
-title: アダプティブ カードでのユーザー ピッカー
+title: アダプティブ カードのユーザー ピッカー
 description: アダプティブ カードで People Picker コントロールを使用する方法について説明します。
 localization_priority: Normal
 keywords: アダプティブ カード ユーザー選択
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: b09293c26dac6721b92fcf1d574560a3da7e281a
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 449c3d764cf3e4db68207560890e954bef14c7b4
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212476"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518304"
 ---
-# <a name="people-picker-in-adaptive-cards"></a>アダプティブ カードでのユーザー ピッカー
+# <a name="people-picker-in-adaptive-cards"></a>アダプティブ カードのユーザー ピッカー
 
 >[!NOTE]
-> 現在、アダプティブ カードの People Picker[](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams)は、モバイル向けのパブリック開発者プレビューでのみ利用可能で、デスクトップ用に一般公開 (GA) で利用できます。
+> 現在、アダプティブ カードの People Picker は、モバイル[](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams)向けのパブリック開発者プレビューでのみ利用可能で、デスクトップ用に一般公開 (GA) で利用できます。
 
 ユーザー選択機能は、アダプティブ カードでユーザーを検索して選択するのに役立ちます。 ユーザー選択ウィンドウを入力コントロールとしてアダプティブ カードに追加できます。これは、チャット、チャネル、タスク モジュール、タブ間で機能します。 People Picker は、次の機能をサポートしています。        
 
@@ -29,7 +29,7 @@ ms.locfileid: "62212476"
 
 次の表に、アダプティブ カードのユーザー選択ウィンドウの一般的なシナリオと、対応するアクションを示します。
 
-|シナリオ|操作|
+|シナリオ|Actions|
 |----------|-------------------------|
 |承認ベースのシナリオ| 要求、割り当て、および要件に基づいて、目的のユーザーに承認を再割り当てします。|
 |インシデント管理| インシデントを追跡し、通知、割り当て、および即時のアクションを目的のユーザーに再割り当てします。| 
@@ -84,7 +84,7 @@ Android および iOS モバイル クライアントは、アダプティブ �
 
 ## <a name="implement-people-picker"></a>ユーザー選択の実装
 
-People Picker は [、Input.ChoiceSet コントロールの拡張機能として実装](https://adaptivecards.io/explorer/Input.ChoiceSet.html) されます。 入力コントロールには、次の選択が含まれます。   
+People Picker は、 [Input.ChoiceSet コントロールの拡張機能として実装](https://adaptivecards.io/explorer/Input.ChoiceSet.html) されます。 入力コントロールには、次の選択が含まれます。   
 
 * 展開された選択範囲などのドロップダウン。
 * ラジオ ボタン (1 つの選択範囲など)。
@@ -95,7 +95,7 @@ People Picker は [、Input.ChoiceSet コントロールの拡張機能として
 
 ### <a name="update-schema"></a>スキーマの更新
 
-次のプロパティは、カードでユーザー選択ウィンドウのエクスペリエンスを有効にするスキーマ `Input.ChoiceSet` の追加です。  
+次のプロパティは、カードで `Input.ChoiceSet` ユーザー選択ウィンドウのエクスペリエンスを有効にするスキーマの追加です。  
 
 #### <a name="inputchoiceset-control"></a>Input.ChoiceSet コントロール
 
@@ -160,8 +160,8 @@ People Picker は [、Input.ChoiceSet コントロールの拡張機能として
 
 ### <a name="data-submission"></a>データ提出
 
-選択したデータ `Action.Submit` を `Action.Execute` ボットに使用または送信できます。 ボットで受け取ったペイロードは、静的なAzure ADで提供されるデータの一覧です `invoke` 。
-[ユーザー選択] で、コントロールでユーザーを選択すると、ユーザーの値が返 `Azure AD ID` されます。 は `Azure AD ID` 文字列であり、ディレクトリ内のユーザーを一意に識別します。
+選択したデータを`Action.Submit``Action.Execute`ボットに使用または送信できます。 ボット`invoke`で受け取ったペイロードは、Microsoft Azure Active Directory (Azure AD) の一覧または静的リストで提供される ID です。
+[ユーザー選択] で、コントロールでユーザーを `Microsoft Azure Active Directory (Azure AD) ID` 選択すると、ユーザーの値が返されます。 は `Microsoft Azure Active Directory (Azure AD) ID` 文字列であり、ディレクトリ内のユーザーを一意に識別します。
 
 ボットに送信される値の形式は、プロパティの値によって異 `isMultiSelect` なります。
 
@@ -170,15 +170,15 @@ People Picker は [、Input.ChoiceSet コントロールの拡張機能として
 |false _(単一の選択)_|<_Azure_AD_ID>|
 |true _(複数選択)_|<_Azure_AD_ID_1>,<selected_Azure_AD_ID_2>,<selected_Azure_AD_ID_3>|  
 
-[ユーザー `Azure AD ID` 選択] を使用すると、対応するユーザーが事前に選択されます。 
+[ユーザー選択 `Azure AD ID`] を使用すると、対応するユーザーが事前に選択されます。 
 
 ## <a name="preselection-of-user"></a>ユーザーの事前選択
 
 People Picker は、アダプティブ カードを作成して送信するときに、コントロール内のユーザーの事前選択をサポートします。 `Input.ChoiceSet` は、 `value` ユーザーの事前選択に使用されるプロパティをサポートします。 このプロパティの形式 `value` は、データ送信で送信された値の形式 [と同じです](#data-submission)。  
 次の一覧は、ユーザーを事前に選択する情報を提供します。
 
-* コントロール内の単一ユーザーの場合は、ユーザーのユーザー `Azure AD ID` を . `value` 
-* 複数のユーザー (is など) `isMultiSelect` `true` の場合は、s のコンマ区切り文字列を指定 `Azure AD ID` します。  
+* コントロール内の単一ユーザーの場合は、ユーザーのユーザー`Microsoft Azure Active Directory (Azure AD) ID`を .`value` 
+* 複数のユーザー (is `isMultiSelect` など) の場合 `true`は、s のコンマ区切り文字列を指定 `Microsoft Azure Active Directory (Azure AD) ID`します。  
 
 次の例では、1 人のユーザーの事前選択について説明します。
 
@@ -251,12 +251,12 @@ People Picker は、アダプティブ カードを作成して送信すると�
  
 ## <a name="static-choices"></a>静的な選択肢
 
-静的な選択肢は、定義済みのデータセットにカスタム プロファイルを挿入する必要があるシナリオをサポートします。 `Input.ChoiceSet` json で `choices` 静的に指定できます。 静的な選択肢は、ユーザーが選択できる選択肢を作成するために使用されます。
+静的な選択肢は、定義済みのデータセットにカスタム プロファイルを挿入する必要があるシナリオをサポートします。 `Input.ChoiceSet` json で静的 `choices` に指定できます。 静的な選択肢は、ユーザーが選択できる選択肢を作成するために使用されます。
 
 > [!NOTE]
 > 静的 `choices` は動的データセットと一緒に使用されます。 
 
-選択肢は、 で `title` 構成されます `value` 。 ユーザー選択と共に使用すると、これらの選択肢は、名前と識別子を持つユーザー プロファイル `title` `value` に変換されます。 これらのカスタム プロファイルは、検索クエリが指定したクエリと一致する場合にも検索結果の一部です `title` 。    
+選択肢は、 で構成されます`title``value`。 ユーザー選択と共`title``value`に使用すると、これらの選択肢は、名前と識別子を持つユーザー プロファイルに変換されます。 これらのカスタム プロファイルは、検索クエリが指定したクエリと一致する場合にも検索結果の一部です `title`。    
 次の例では、静的な選択肢について説明します。 
 
 ```json

@@ -6,18 +6,18 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: e9292dc6d3157df4d226d39ea0d0fb0ac53c2c5d
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: f8de6dd66b281f8cf842e5439d3a217598f46047
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435748"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518115"
 ---
 # <a name="cicd-guide"></a>CI/CD ガイド
 
 TeamsFx は、アプリケーションの構築中に開発ワークフローをTeamsします。 このドキュメントには、CI または CD パイプラインのセットアップを開始するためのツールとテンプレートがGitHub Azure Devops、Jenkins です。
 
-|ツールとテンプレート|説明| 
+|ツールとテンプレート|[説明]| 
 |---|---|
 |[teamsfx-cli-action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub TeamsFx CLI と統合するアクション。|
 |[github-ci-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-ci-template.yml) と [github-cd-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-cd-template.yml)| GitHubアプリ用の CI または CD Teamsします。 |
@@ -244,9 +244,9 @@ steps:
 CI/CD 内で Azure を対象とするリソースをプロビジョニングおよび展開するには、使用する Azure サービス プリンシパルを作成する必要があります。
 
 Azure サービス プリンシパルを作成するには、次の手順を実行します。
-1. 単一テナントAzure ADアプリケーションを登録します。
-2. Azure サブスクリプションにアクセスするには、Azure ADアプリケーション`Contributor`にロールを割り当て、ロールをお勧めします。 
-3. 新しいアプリケーション シークレットAzure AD作成します。
+1. 単一テナントMicrosoft Azure Active Directory (Azure AD) アプリケーションを登録します。
+2. Azure サブスクリプションにアクセスするには、Microsoft Azure Active Directory (Azure AD) `Contributor` アプリケーションにロールを割り当て、ロールをお勧めします。 
+3. 新しいアプリケーション Microsoft Azure Active Directory (Azure AD) アプリケーション シークレットを作成します。
 
 > [!TIP]
 > テナント ID、アプリケーション ID(AZURE_SERVICE_PRINCIPAL_NAME)、および secret(AZURE_SERVICE_PRINCIPAL_PASSWORD) を将来使用するために保存します。

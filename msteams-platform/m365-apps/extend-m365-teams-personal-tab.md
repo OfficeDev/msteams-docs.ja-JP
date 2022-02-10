@@ -5,12 +5,12 @@ ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 529dd82276f4e11dc6256d23b6e8eb622a1651a0
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: d22f29e75b9d8d074b0c689fa61f96dcdc23b5d1
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435273"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518024"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>複数のユーザー Teamsの個人用タブを拡張Microsoft 365
 
@@ -25,7 +25,7 @@ ms.locfileid: "62435273"
 > * アプリ マニフェストを更新する
 > * TeamsJS SDK の参照を更新する 
 > * コンテンツ セキュリティ ポリシーのヘッダーを変更する
-> * シングル サインオンAzure ADアプリ登録を更新する (SSO)
+> * シングル サインオン (SSO) Microsoft Azure Active Directory (Azure AD) アプリ登録を更新する
 
 アプリをテストするには、次の手順が必要です。
 
@@ -117,12 +117,12 @@ Teams Toolkit を使用`@microsoft/teams-js`すると、コード変更の一部
 |Microsoft 365ホスト| frame-ancestor アクセス許可|
 |--|--|
 | Teams | `teams.microsoft.com` |
-| 事業所 | `*.office.com` |
+| Office | `*.office.com` |
 | Outlook | `outlook.office.com`, `outlook.office365.com` |
 
-## <a name="update-azure-ad-app-registration-for-sso"></a>SSO Azure ADアプリ登録の更新
+## <a name="update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso"></a>SSO Microsoft Azure Active Directory (Azure AD) アプリ登録を更新する
 
-Azure Active Directory 個人用タブのシングル サインオン (SSO) は、Teams と同様に Office と Outlook で動作しますが、テナントのアプリ[](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso)登録ポータルで、タブ アプリの Azure AD アプリ登録にいくつかのクライアント アプリケーション識別子を追加する必要があります。
+Azure Active Directory 個人用タブのシングル サインオン (SSO) は、Office と Outlook [Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso) の場合と同じように動作しますが、Microsoft Azure Active Directory (Azure AD) テナントのアプリ登録ポータルでのタブ アプリ *のアプリ登録*。
 
 1. サンドボックス テナント アカウントを[Microsoft Azureポータル](https://portal.azure.com)にサインインします。
 1. [アプリの **登録] ブレードを開** きます。
@@ -198,7 +198,7 @@ Teams個人用タブをアップグレードし、Teams でサイドロードす
 
 [ホーム] でアプリを起動するには、アプリアイコンOfficeします。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Outlook有効Office個人用タブはプレビュー中であり、実稼働環境での使用はサポートされていません。 テスト目的で対象ユーザーをプレビューするために個人用タブ アプリを配布する方法を次に示します。
 

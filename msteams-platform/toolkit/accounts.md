@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: ff46e951122a74860e4518634e274ec4afdb1d21
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 302cac17ae6905899e43a8768882f61f0a2b9056
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435685"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518325"
 ---
 # <a name="prepare-accounts-to-build-teams-apps"></a>アプリをビルドするためのアカウントTeamsする
 
@@ -46,7 +46,7 @@ ms.locfileid: "62435685"
 
 - **業務用の仕事用アカウント**
 
-  Azure、azure、Microsoft Intune、またはエンタープライズ のすべてのビジネス レベルの Microsoft クラウド サービスにアクセスMicrosoft 365。 組織としてこのいずれかのサービスにサインアップすると、組織を表すクラウド ベースのディレクトリが Azure Active Directory に自動的にプロビジョニングされます。
+  Azure、azure、Microsoft Intune、またはエンタープライズ のすべてのビジネス レベルの Microsoft クラウド サービスにアクセスMicrosoft 365。 これらのサービスの 1 つを組織としてサインアップすると、クラウドベースのディレクトリが Microsoft Azure Active Directory (Azure AD) に自動的にプロビジョニングされ、組織を表します。
 
 - **Visual Studio ID**
 

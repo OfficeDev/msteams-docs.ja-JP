@@ -4,19 +4,19 @@ description: コード サンプルを使用して、Web サイトTeams埋め込
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: 共有Teams共有Teams
-ms.openlocfilehash: dc70e35d8a02d4dc6349a062d0b4a38fd0a2f0a3
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: a2c94ad690864b6af89005af4f96866f1ebda0b6
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435706"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518493"
 ---
 # <a name="create-share-to-teams-button"></a>[Teams で共有] ボタンを作成する
 
 サードパーティの Web サイトでは、ランチャー スクリプトを使用して、Web ページに Share-to-Teamsボタンを埋め込む可能性があります。 選択すると、ポップアップ ウィンドウで Share-to-Teamsエクスペリエンスが起動します。 これにより、コンテキストを切り替えることなく、任意のユーザーまたはMicrosoft Teamsにリンクを直接共有できます。 このドキュメントでは、Web サイト用に Share-to-Teams ボタンを作成して埋め込み、Web サイトのプレビューを作成し、Share-to-Microsoft Teams for Education を拡張する方法についてガイドします。
 
 > [!NOTE]
-> * サポートされているのは、Microsoft Edgeと Google Chrome のデスクトップ バージョンのみです。
+> * MicrosoftEdge と Google&nbsp; Chrome のデスクトップ バージョンだけがサポートされています。
 > * Freemium アカウントまたはゲスト アカウントの使用はサポートされていません。  
 
 次の図は、Share-to-Teamsポップアップ エクスペリエンスを表示します。
@@ -79,7 +79,7 @@ Web サイトが web サイトと共有Teams、選択したチャネルに挿入
 |値|メタ タグ| 開くGraph|
 |----|----|----|
 |Title|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
-|説明|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
+|[説明]|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
 |サムネイル 画像| none。 |`<meta property="og:image" content="http://example.com/image.jpg">`|
 
 HTML の既定のバージョンまたは Open Graph使用できます。
@@ -92,7 +92,7 @@ HTML の既定のバージョンまたは Open Graph使用できます。
 
 ## <a name="full-launcherjs-definition"></a>完全なlauncher.js定義
 
-| プロパティ | HTML 属性 | 型 | 既定値 | 説明 |
+| プロパティ | HTML 属性 | 種類 | 既定値 | 説明 |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
 | href | `data-href` | string | 該当なし | 共有するコンテンツの href。 |
 | preview | `data-preview` | boolean (文字列として) | `true` | 共有するコンテンツのプレビューを表示するかどうかを指定します。 |
@@ -101,7 +101,7 @@ HTML の既定のバージョンまたは Open Graph使用できます。
 | assignInstr | `data-assign-instr` | string | 該当なし | 割り当て "命令" フィールドに挿入される既定のテキスト。 最大文字数は 200 文字です。 |
 | assignTitle | `data-assign-title` | string | 該当なし | 割り当て "Title" フィールドに挿入される既定のテキスト。 最大文字数は 50 です。 |
 
-### <a name="methods"></a>メソッド
+### <a name="methods"></a>Methods
 
 **`shareToMicrosoftTeams.renderButtons(options)`**
 

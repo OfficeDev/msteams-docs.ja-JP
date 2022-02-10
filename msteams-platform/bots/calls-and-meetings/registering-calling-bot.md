@@ -4,12 +4,12 @@ description: 新しい音声/ビデオ通話ボットの登録、Microsoft Teams
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: ボットのオーディオ/ビデオ オーディオ ビデオ メディアを呼び出す
-ms.openlocfilehash: 8bb685d8d7ba470b7a9e76da084b7b165f83c23c
-ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
+ms.openlocfilehash: 33163314f5d1d37b79562532ec2f15b6002d90ce
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "62443929"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518290"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Microsoft Teams の通話と会議ボットを登録する
 
@@ -56,7 +56,7 @@ ms.locfileid: "62443929"
 
 次の表に、呼び出しに対するアプリケーションのアクセス許可の一覧を示します。
 
-|アクセス許可    |表示文字列   |説明 |管理者の同意が必要 |
+|アクセス許可    |表示文字列   |[説明] |管理者の同意が必要 |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 | Calls.Initiate.All |アプリ プレビューから発信 1:1 通話を開始します。 |アプリで、サインインしているユーザーがいなくても、1 人のユーザーに発信し、組織のディレクトリ内のユーザーに通話を転送することができるようにします。|はい|
 | Calls.InitiateGroupCall.All |アプリ プレビューからグループの発信呼び出しを開始します。 |アプリで、サインインしているユーザーがいなくても、複数のユーザーに発信し、組織内の会議に参加者を追加することができるようにします。|はい|
@@ -71,20 +71,20 @@ ms.locfileid: "62443929"
 
 次の表に、オンライン会議のアプリケーションアクセス許可の一覧を示します。
 
-|アクセス許可    |表示文字列   |説明 |管理者の同意が必要 |
+|アクセス許可    |表示文字列   |[説明] |管理者の同意が必要 |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 | OnlineMeetings.Read.All |アプリ プレビューからオンライン会議の詳細を読み取る|サインインしているユーザーなしで、アプリが組織内のオンライン会議の詳細を読み取るを許可します。|はい|
 | OnlineMeetings.ReadWrite.All |ユーザーに代わってアプリ プレビューからオンライン会議を読み取り、作成する|サインインしているユーザーなしで、アプリがユーザーに代わって組織内でオンライン会議を作成できます。|はい|
 
 ### <a name="assign-permissions"></a>アクセス許可の割り当て
 
-V1 エンドポイントを使用する場合は、Microsoft Azure ポータルを使用して、[](https://aka.ms/aadapplist)ボットのアプリケーションアクセス許可をAzure Active Directory[必要があります](/azure/active-directory/develop/azure-ad-endpoint-comparison)。
+Microsoft Azure Active Directory [(Azure AD) V1](/azure/active-directory/develop/azure-ad-endpoint-comparison) エンドポイントを使用する場合は、[Microsoft Azure](https://aka.ms/aadapplist) ポータルを使用して、ボットのアプリケーションアクセス許可を事前に構成する必要があります。
 
 ### <a name="get-tenant-administrator-consent"></a>テナント管理者の同意を取得する
 
-Azure AD V1 エンドポイントを使用するアプリの場合、テナント管理者は、アプリが組織にインストールされている[場合、Microsoft Azure](https://portal.azure.com) ポータルを使用してアプリケーションのアクセス許可に同意できます。 または、構成したアクセス許可に管理者が同意できるサインアップ エクスペリエンスをアプリに提供することもできます。 管理者の同意がユーザーによって記録Azure AD、アプリは再び同意を要求することなくトークンを要求できます。
+Microsoft Azure Active Directory (Azure AD) V1 エンドポイントを使用するアプリの場合、テナント管理者は、組織にアプリがインストールされている[場合、Microsoft Azure](https://portal.azure.com) ポータルを使用してアプリケーションのアクセス許可に同意できます。 または、構成したアクセス許可に管理者が同意できるサインアップ エクスペリエンスをアプリに提供することもできます。 管理者の同意が Microsoft Azure Active Directory (Azure AD) に記録された後、アプリは再び同意を要求することなくトークンを要求できます。
 
-管理者に頼って、アプリに必要なアクセス許可をポータルで付与Microsoft Azure[できます](https://portal.azure.com)。 より優れたオプションは、管理者が V2 エンドポイントを使用してサインアップ エクスペリエンスAzure ADです`/adminconsent`。 詳細については、「管理者の [同意 URL を作成する手順」を参照してください](/graph/uth-v2-service#3-get-administrator-consent)。
+管理者に頼って、アプリに必要なアクセス許可をポータルで付与Microsoft Azure[できます](https://portal.azure.com)。 より良い方法は、管理者が V2 エンドポイントを使用して、Microsoft Azure Active Directory (Azure AD) を提供する方法`/adminconsent`です。 詳細については、「管理者の [同意 URL を作成する手順」を参照してください](/graph/uth-v2-service#3-get-administrator-consent)。
 
 > [!NOTE]
 > テナント管理者の同意 URL を作成するには、アプリ登録ポータルで構成されたリダイレクト URI または返信 URL [が](https://apps.dev.microsoft.com/) 必要です。 ボットの返信 URL を追加するには、ボット登録にアクセスし、[**Advanced OptionsEdit** >  アプリケーション マニフェスト] **を選択します**。 リダイレクト URL をコレクションに追加 `replyUrls` します。

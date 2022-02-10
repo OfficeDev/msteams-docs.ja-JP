@@ -5,12 +5,12 @@ description: App Studio を使用してメッセージング拡張機能Microsof
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 6fb16b173e8660b85d7152ad1d88b1180cd61981
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: c9820cb3378553b48ea9109956bfcbf9b61ffe23
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435874"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518157"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>App Studio を使用してメッセージングの拡張機能を作成する
 
@@ -47,7 +47,7 @@ Web サービスの作成、アプリ パッケージの作成、ボット フ�
 
 クイック スタートの 1 つを実行するか、使用可能なサンプルの 1 つから開始する場合は、Web サービスの登録に関するガイドが表示されます。 サービスを手動で登録する場合は、3 つのオプションがあります。 Azure サブスクリプションを使用せずに登録する場合は、ボット フレームワークによって提供される簡略化された OAuth 認証フローを利用できます。 作成後に登録を Azure に移行できます。
 
-* Azure サブスクリプションを使用している場合 (または新しいサブスクリプションを作成する場合)、Web サービスを手動で登録するには、Microsoft Azure ポータルを使用します。 "ボット チャネル登録" リソースを作成します。 無料の価格レベルを選択できます。ユーザーからのメッセージMicrosoft Teams、1 か月あたりの許容メッセージの総数にはカウントされません。
+* Azure サブスクリプションを使用している場合 (または新しいサブスクリプションを作成する場合)、Web サービスを手動で登録するには、ポータルMicrosoft Azureできます。 "ボット チャネル登録" リソースを作成します。 無料の価格レベルを選択できます。ユーザーからのメッセージMicrosoft Teams、1 か月あたりの許容メッセージの総数にはカウントされません。
 * Azure サブスクリプションを使用しない場合は、従来の登録ポータル [を使用できます](https://dev.botframework.com/bots/new)。
 * App Studio は、Web サービス (ボット) の登録にも役立ちます。 App Studio を介して登録された Web サービスは Azure に登録されていません。 レガシ ポータル [を使用して](https://dev.botframework.com/bots) 、登録を表示、管理、および移行できます。
 
@@ -243,7 +243,7 @@ Web サービスの作成、アプリ パッケージの作成、ボット フ�
 
 1. **ユーザー エクスペリエンス**。 メッセージング拡張機能は、会議の外部と同じように表示および動作する必要があります。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 * [操作コマンドを作成する](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 * [検索コマンドを作成する](~/messaging-extensions/how-to/search-commands/define-search-command.md)

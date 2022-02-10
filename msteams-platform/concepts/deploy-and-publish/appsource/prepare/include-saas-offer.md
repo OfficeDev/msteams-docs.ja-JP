@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: 0efaea87af8128086db3e0e6416014d97f0af5a2
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
+ms.openlocfilehash: 837c311bf777b337187dbc54555b5268082a103f
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362775"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62517989"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>SaaS オファーをアプリにMicrosoft Teamsする
 
@@ -49,7 +49,7 @@ ms.locfileid: "62362775"
 
 * サブスクリプション モデルを決定します。 トランザクション可能な SaaS プランには、複数のサブスクリプション プランを含めできます。 誰でも利用できる公開サブスクリプション プランは最も一般的ですが、特定の顧客のみを対象にした場合もあります。 詳細については、「Microsoft 商用 [マーケットプレースのプライベート オファー」を参照してください](/azure/marketplace/private-offers)。
 * ユーザーが[アプリのサブスクリプション](/azure/marketplace/plan-saas-offer#listing-options) プランをアプリのサブスクリプション プランを直接購入する場合は、SaaS プランの [Microsoft による販売] オプションについてTeamsしてください。
-* シングル [サインオンAzure Active Directory (SSO)](/azure/marketplace/azure-ad-saas) を使用して、顧客がサブスクリプションを購入および管理する方法について学習します。 (saaS Azure ADアプリの場合はTeams SSO が必要です)。
+* シングル [サインオンAzure Active Directory (SSO)](/azure/marketplace/azure-ad-saas) を使用して、顧客がサブスクリプションを購入および管理する方法について学習します。 (Microsoft Azure Active Directory (Azure AD) SSO は、SaaS オファー Teamsアプリに必要です)。
 * お客様の SaaS オファーの使用をサポートするために必要なインフラストラクチャの管理と支払いは、お客様の責任で行う必要があります。
 * モバイルを計画する。 サードパーティのアプリ ストア ポリシーに違反しないようにするために、アプリには、ユーザーがモバイルでサブスクリプション プランを購入できるリンクを含めかねない。 ただし、アプリにサブスクリプション プランを必要とする機能が含けられているかどうかを示す場合は、引き続き指定できます。 詳細については、関連する商用マーケットプレース認定ポリシー [を参照してください](/legal/marketplace/certification-policies#114048-mobile-experience)。
 
@@ -81,7 +81,7 @@ Teams ストアでアプリのサブスクリプション プランの購入が�
 
 収益化するアプリのランディング ページを作成する際には、次Teams方法を検討してください。 エンド ユーザーの購入エクスペリエンスでランディング ページ [の例を参照してください](#end-user-purchasing-experience)。
 
-* ユーザーは、サブスクリプションの購入に使用した資格情報と同Azure ADランディング ページにログインできる必要があります。 詳細については、「商用マーケットAzure AD SaaS の販売と取引可能な [SaaS オファー」を参照してください](/azure/marketplace/azure-ad-saas)。
+* ユーザーは、サブスクリプションの購入に使用したMicrosoft Azure Active Directory (Azure AD) 資格情報を使用してランディング ページにログインできる必要があります。 詳細については、「商用マーケットプレース[Microsoft Azure Active Directory(Azure AD)および取引可能な SaaS オファー」を参照してください](/azure/marketplace/azure-ad-saas)。
 * ユーザーがランディング ページで次の操作を実行できます。 ユーザーの役割とアクセス許可に適した機能を検討することを忘れないでください (たとえば、サブスクリプション管理者だけがユーザーを検索することを許可する場合があります)。
   * 電子メールまたは別の形式の ID を使用して、組織のユーザーを検索します。
   * リストでライセンスを割り当て可能なユーザーを確認します。
