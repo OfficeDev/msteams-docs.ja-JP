@@ -5,12 +5,12 @@ description: リンクのリンクを解除し、ステージ ビューを開き
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 17eb7fd6376bee2836ce271b0201aae31881b457
-ms.sourcegitcommit: ba911ce3de7d096514f876faf00e4174444e2285
+ms.openlocfilehash: 48c7ae69b10702d58be933b5619fd6bdeb8cecf3
+ms.sourcegitcommit: 3332ca6f61d2d60ddb20140f6d163905ea177157
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "61178267"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62516520"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>タブのリンクの展開とステージ ビュー
 
@@ -39,7 +39,7 @@ ms.locfileid: "61178267"
 
 ## <a name="invoke-stage-view-from-adaptive-card"></a>アダプティブ カードからステージ ビューを呼び出す
 
-ユーザーが Teams デスクトップ クライアントで URL を入力すると、ボットが呼び出され、ステージ[](../task-modules-and-cards/cards/cards-actions.md)内で URL を開くオプションを持つアダプティブ カードが返されます。 ステージを起動して指定した後、ステージをタブとしてピン留めする機能 `tabInfo` を追加できます。  
+ユーザーがデスクトップ クライアントで URL を入力するとTeamsボットが呼び出され、ステージで URL を開く[](../task-modules-and-cards/cards/cards-actions.md)オプションを持つアダプティブ カードが返されます。 ステージを起動して指定した `tabInfo` 後、ステージをタブとしてピン留めする機能を追加できます。  
 
 次の画像は、アダプティブ カードから開いたステージを表示します。
 
@@ -72,35 +72,31 @@ ms.locfileid: "61178267"
 } 
 ```
 
-要求 `invoke` の種類は、 である必要があります `composeExtension/queryLink` 。
+要求 `invoke` の種類は、 である必要があります `composeExtension/queryLink`。
 
 > [!NOTE]
 > * `invoke` ワークフローは、現在のワークフローと似 `appLinking` ています。 
-> * 一貫性を保つには、 という名前を付けをお `Action.Submit` 勧めします `View` 。
+> * 一貫性を保つには、 という名前を付けをお勧 `Action.Submit` めします `View`。
 > * `websiteUrl` は、オブジェクトに渡す必要があるプロパティ `TabInfo` です。
 
 ステージ ビューを呼び出すプロセスを次に示します。
 
-* ユーザーが [表示] を **選択すると**、ボットは要求を受け取 `invoke` ります。 要求の種類はです `composeExtension/queryLink` 。
-* `invoke` ボットからの応答には、型が含まれるアダプティブ カード `tab/tabInfoAction` が含まれる。
+* ユーザーが [表示] を **選択すると**、ボットは要求を受け取 `invoke` ります。 要求の種類はです `composeExtension/queryLink`。
+* `invoke` ボットからの応答には、型が含まれるアダプティブ カードが `tab/tabInfoAction` 含まれる。
 * ボットはコードで応答 `200` します。
 
 > [!NOTE]
-> モバイル Teamsでは[、Teams](/platform/concepts/deploy-and-publish/apps-publish-overview.md)ストアを通じて配布されたアプリのステージ ビューを呼び出し、モブリに最適化されたエクスペリエンスを持たない場合、デバイスの既定の Web ブラウザーが開きます。 ブラウザーは、オブジェクトのパラメーターで指定 `websiteUrl` された URL を開 `TabInfo` きます。
+> モバイル Teamsでは、[Teams](/platform/concepts/deploy-and-publish/apps-publish-overview.md) ストアを通じて配布されたアプリのステージ ビューを呼び出し、モブリに最適化されたエクスペリエンスを持たない場合、デバイスの既定の Web ブラウザーが開きます。 ブラウザーは、オブジェクトのパラメーターで指定された `websiteUrl` URL を開 `TabInfo` きます。
 
 ## <a name="invoke-stage-view-through-deep-link"></a>深いリンクを介してステージ ビューを呼び出す
 
-タブからディープ リンクを介してステージ ビューを呼び出す場合は、API でディープ リンク URL をラップする必要 `microsoftTeams.executeDeeplink(url)` があります。 ディープ リンクは、カード内の `OpenURL` アクションを介して渡される場合があります。
-
-次の図は、ディープ リンクを介して呼び出されるステージ ビューを表示します。
-
-<img src="~/assets/images/tab-images/invoke-stage-view-through-deep-link.png" alt="Invoke a Stage View through a deep link" width="400"/>
+タブからディープ リンクを介してステージ ビューを呼び出す場合は、API でディープ リンク URL をラップする必要 `microsoftTeams.executeDeeplink(url)` があります。 ディープ リンクは、カード内のアクション `OpenURL` を介して渡される場合があります。
 
 ### <a name="syntax"></a>構文
 
 ディープリンク構文を次に示します。 
 
-https://teams.microsoft.com/l/stage/{appId}/0?context={\"contentUrl \" : \" "[contentUrl]" \" , \" websiteUrl : \" \" "[websiteUrl]" \" , 名前 : Contoso \" \" \" \" }
+https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}
  
 ### <a name="examples"></a>例
 
@@ -110,15 +106,30 @@ https://teams.microsoft.com/l/stage/{appId}/0?context={\"contentUrl \" : \" "[co
 
 **例 1**
 
-https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={"contentUrl":"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","websiteUrl": "https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","name":"Contoso"}
+エンコードされていない
+ 
+https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={"contentUrl":"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","websiteUrl:" "https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","name":"Contoso"}
+
+エンコード済み
+
+https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context=%7B%22contentUrl%22%3A%22https%253A%252F%252Fmicrosoft.sharepoint.com%252Fteams%252FLokisSandbox%252FSitePages%252FSandbox-Page.aspx%22%2C%22websiteUrl%0A%3A%22https%253A%252F%252Fmicrosoft.sharepoint.com%252Fteams%252FLokisSandbox%252FSitePages%252FSandbox-Page.aspx%22%2C%22name%22%3A%22Contoso%22%7D
+
 
 **例 2**
 
-https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={"contentUrl":"https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","websiteUrl": "https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx","name":"Contoso"}
+エンコードされていない
+
+https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={"contentUrl":""https://microsoft.sharepoint.com/teams/LokisSandbox/SitePages/Sandbox-Page.aspx,"websiteUrl":""https://microsoft.sharepoint.com/teams/LokisSandbox/SitePages/Sandbox-Page.aspx,"name":"Contoso"}
+
+エンコード済み
+
+https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx%22%2C%22name%22%3A%22Contoso%22%7D
+
 
 > [!NOTE]
+> URL を貼り付けする前に、すべてのディープリンクをエンコードする必要があります。 コード化されていない URL はサポートされていません。
 > * ディープ `name` リンクではオプションです。 含まれていない場合は、アプリ名が置き換わります。
-> * ディープ リンクは、アクションを介して渡 `OpenURL` される場合があります。
+> * ディープ リンクは、アクションを介して渡される場合 `OpenURL` があります。
 > * 特定のコンテキストからステージを起動する場合は、そのコンテキストでアプリが動作します。 たとえば、個人用アプリからステージ ビューを起動する場合は、アプリに個人用スコープが設定されている必要があります。
 
 ## <a name="tab-information-property"></a>タブ情報プロパティ
@@ -138,7 +149,7 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 |ステージ ビューのタブ |Microsoft Teamsでタブをデモンストレーションするタブ サンプル アプリを作成します。|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
     
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [会話タブを作成する](~/tabs/how-to/conversational-tabs.md)
