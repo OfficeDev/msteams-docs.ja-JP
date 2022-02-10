@@ -4,12 +4,12 @@ author: surbhigupta
 description: Teams 会議やさまざまな会議シナリオ用のアプリの有効化と構成、アプリ マニフェストの更新、会議内ダイアログ、共有会議ステージ、会議サイドパネルなどの機能の構成
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 45c12a52758bc86f2ab05112a69a8342ade9a5af
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 7eacd4c406dc81a2f6704a05d678eb6b70912856
+ms.sourcegitcommit: 60e4bbb013f0bb17a87a2e558abfcc311c73af75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518038"
+ms.locfileid: "62523781"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>会議で使用するアプリを有効Teamsする
 
@@ -128,9 +128,6 @@ API を使用して要求`userContext`をルーティングするには、「SDK
 > * アプリで匿名ユーザーをサポート`from.id``from`する場合、最初の呼び出し要求ペイロードは、要求メタデータではなく、オブジェクト内の要求メタデータに依存する`from.aadObjectId`必要があります。 `from.id`はユーザー ID で`from.aadObjectId`、ユーザー Microsoft Azure Active Directory (Azure AD) ID です。 詳細については、「タブでタスク [モジュールを使用する」を参照し](../task-modules-and-cards/task-modules/task-modules-tabs.md)[、タスク モジュールを作成して送信します](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
 
 #### <a name="shared-meeting-stage"></a>共有会議ステージ
-
-> [!NOTE]
-> 現時点では、この機能はパブリック開発者 [プレビューでのみ利用](../resources/dev-preview/developer-preview-intro.md) できます。
 
 共有会議ステージを使用すると、会議参加者はアプリ コンテンツをリアルタイムで操作し、共同作業できます。 次の方法で、共同作業の会議ステージにアプリを共有できます。
 

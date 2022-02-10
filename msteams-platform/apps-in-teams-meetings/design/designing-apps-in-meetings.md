@@ -6,12 +6,12 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: UI キット テンプレート会議内応答動作共有会議ステージ
-ms.openlocfilehash: d66dc257ae26a17519468cf11d1d0b5593ba9d33
-ms.sourcegitcommit: 3dd69ae18bca8dd2e0666d09746a4012cd8c8e42
+ms.openlocfilehash: e62146a4fb32f37145a818855749d68e64bee384
+ms.sourcegitcommit: 60e4bbb013f0bb17a87a2e558abfcc311c73af75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "61051197"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62523796"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>会議の拡張機能Microsoft Teams設計する
 
@@ -38,13 +38,13 @@ ms.locfileid: "61051197"
 
 #### <a name="mobile"></a>Mobile
 
-アプリが追加された後 (デスクトップなど)、ユーザーは [その他] を選択して会議でアプリに **アクセスできます** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: 。
+アプリが追加された後 (デスクトップなど)、ユーザーは [その他] を選択して会議でアプリに **アクセスできます**:::image type="icon" source="../../assets/icons/teams-client-more.png":::。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="例は、モバイルでの会議中に会議の内線情報を追加する方法を示しています。" border="false":::
 
 #### <a name="desktop"></a>Desktop
 
-会議で、ユーザーは [アプリの **追加]** を選択 :::image type="icon" source="../../assets/icons/teams-client-more.png":::  >  **し**、必要なアプリを選択できます。
+会議で、ユーザーは [アプリの **追加]** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: >  を選択 **し**、必要なアプリを選択できます。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="例は、会議中に会議の内線情報を追加する方法を示しています。" border="false":::
 
@@ -104,8 +104,8 @@ ms.locfileid: "61051197"
 |1|**アプリ アイコン (選択)**: 16 ピクセルの透明なアプリ ロゴ。|
 |2|**アプリ名**|
 |3|**ヘッダー**: アプリ名が含まれます。|
-|4|**[閉じる]** ボタン: タブを閉じます。フッターのアクションではなく、常に右上の閉じるアイコンを使用します。|
-|5|**通知バー**: エラー通知はヘッダーの直下に表示され、iframe コンテンツを 20 ピクセル下にプッシュします。|
+|4|**[閉じる**] ボタン: タブを閉じます。フッターのアクションではなく、常に右上の閉じるアイコンを使用します。|
+|5|**通知バー**: エラー通知はヘッダーの直下に表示され、残りの iframe コンテンツを 20 ピクセル下にプッシュします。|
 |6 |**iframe**: アプリのコンテンツを表示します。|
 
 ### <a name="spacing"></a>Spacing
@@ -157,7 +157,7 @@ ms.locfileid: "61051197"
 
 |カウンター|説明|
 |----------|-----------|
-|1|**ヘッダー**: アプリ アイコン、名前、アクション文字列、閉じるアイコンが含まれます。|
+|1|**ヘッダー**: アプリアイコン、名前、アクション文字列、閉じるアイコンが含まれます。|
 |2|**iframe**: アプリのコンテンツを表示します。|
 
 ### <a name="anatomy-in-meeting-dialog-header"></a>Anatomy: 会議内ダイアログ ヘッダー
@@ -171,29 +171,33 @@ ms.locfileid: "61051197"
 |1|**アバター**: 会議内ダイアログを開始するユーザー。|
 |2|**アプリ アイコン**|
 |3|**アプリ名**|
-|4|**[閉じる]** ボタン: ダイアログを閉じます。|
+|4|**[閉じる**] ボタン: ダイアログを閉じます。|
 |5|**アクション文字列**: 通常、ダイアログを開始したユーザーを示します。|
 
 ### <a name="responsive-behavior-in-meeting-dialogs"></a>応答性の高い動作: 会議中のダイアログ
 
 会議内のダイアログは、さまざまなシナリオを考慮してサイズが異なる場合があります。 パディングとコンポーネントのサイズは必ず維持してください。
 
-* **Width**: ダイアログの iframe の幅は、サポートされているサイズ範囲内の任意の場所で指定できます。
-* **Height**: ダイアログの iframe の高さは、サポートされているサイズ範囲内の任意の場所で指定できます。 アプリのコンテンツが最大の高さを超えた場合は、ユーザーが垂直方向にスクロールすることもできます。
-
-実装するには、キーを使用して幅と高さを指定 [`externalResourceUrl`](~/apps-in-teams-meetings/API-references.md#notificationsignal-api) します。
+* **幅**: ダイアログの iframe の幅は、サポートされているサイズ範囲内の任意の場所で指定できます。
+* **高** さ: ダイアログの iframe の高さは、サポートされているサイズ範囲内の任意の場所で指定できます。 アプリのコンテンツが最大の高さを超えた場合は、ユーザーが垂直方向にスクロールすることもできます。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="例は、会議中のダイアログを表示します。幅: 最小--280 ピクセル (248 ピクセルの iframe)。Max---460 ピクセル (428 ピクセルの iframe)。高さ: 300 ピクセル (iframe)。" border="false":::
 
 ## <a name="use-the-shared-meeting-stage"></a>共有会議ステージの使用
 
-共有会議ステージは、会議参加者がリアルタイムでアプリ コンテンツと対話し、共同作業を行うのに役立ちます。 たとえば、ユーザーは会議に集中して、ドキュメントの編集、ホワイトボードによるブレインストーミング、ダッシュボードの確認を行います。
+ユーザーが会議ステージでアプリ コンテンツの一部またはすべてが共有および操作を許可できます。 会議中にユーザーがこの機能を使用する方法の例を次に示します。
 
-会議ステージに共有されるアプリは、共有画面と同じ領域を占有します。 ステージは、すべての会議参加者の向きを変更します。
+* ドキュメントの編集
+* ホワイトボード
+* ダッシュボードの確認
+* ビデオを見る
+* ゲームをプレイする
+
+会議ステージに共有されるアプリは、共有画面と同じ領域を占有します。 ステージは、すべての会議参加者の向きも同じように変更されます。
 
 > [!NOTE]
-> 会議のすべてのユーザーは、デスクトップから共有するときにアプリを表示できます。 現時点では、モバイル ユーザーは、会議ステージにアプリ のコンテンツを共有できない。
- 
+> 現時点では、モバイル ユーザーは、会議ステージにアプリ のコンテンツを共有できない。 しかし、デスクトップから共有されたコンテンツを表示できます。
+
 ### <a name="use-cases"></a>使用例
 
 共有会議のステージは、共同作業と参加に関するすべてです。 開始に役立つシナリオの例を次に示します。
@@ -201,12 +205,14 @@ ms.locfileid: "61051197"
 :::row:::
    :::column span="1":::
 
-**編集とレビュー**: 会議のすべてのユーザーと一緒にダッシュボードと計画に取り組む。
+**編集とレビュー**: 会議の全員と一緒にダッシュボードと計画に取り組む。
 
    :::column-end:::
    :::column span="3":::
 
 :::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review.png" alt-text="例は、共有会議ステージでレビュー中のダッシュボードを示しています。" border="false":::
+
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="例は、共有会議ステージでレビュー中のダッシュボード コンポーネントを示しています。" border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -214,7 +220,7 @@ ms.locfileid: "61051197"
 :::row:::
    :::column span="1":::
 
-**ホワイトボード:** 共有キャンバスで一緒に描画してアイデアを作成します。
+**ホワイトボード:** 共有キャンバスで一緒に描画とアイデアを作成します。
 
    :::column-end:::
    :::column span="3":::
@@ -227,7 +233,7 @@ ms.locfileid: "61051197"
 :::row:::
    :::column span="1":::
 
-**クイズ**: 対話的な資料を使って知識をテストし、洞察を得る。
+**クイズ**: 対話型資料を使用して知識をテストし、洞察を得る。
 
    :::column-end:::
    :::column span="3":::
@@ -237,17 +243,29 @@ ms.locfileid: "61051197"
    :::column-end:::
 :::row-end:::
 
-### <a name="anatomy-shared-meeting-stage"></a>解剖学: 共有会議ステージ
+### <a name="anatomy-share-all-app-content-to-a-meeting"></a>Anatomy: すべてのアプリ コンテンツを会議に共有する
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="イメージは、共有会議ステージの設計構造を示しています。" border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="画像は、すべてのアプリ コンテンツが共有されている場合の共有会議ステージの設計構造を示しています。" border="false":::
 
 |カウンター|説明|
 |----------|-----------|
 |1|**アプリ アイコン**: 強調表示されたアイコンは、アプリの会議中タブが開いている状態を示します。|
-|2|**[会議ステージに共有] ボタン**: アプリを会議ステージに共有するエントリ ポイント。 共有会議ステージを使用するアプリを構成した場合に表示されます。|
-|3|**iframe**: アプリのコンテンツを表示します。|
-|4|**[共有を停止する**] ボタン: 会議ステージへのアプリの共有を停止します。 共有を開始した参加者にのみ表示されます。|
-|5|**発表者の属性**: アプリを共有した参加者の名前を表示します。|
+|2|**[会議に共有] ボタン**: アプリを会議に共有するエントリ ポイント。 共有会議ステージを使用するアプリを構成した場合に表示されます。|
+|3|**発表者の属性**: アプリを共有した参加者の名前を表示します。|
+|4|**iframe**: アプリのコンテンツを表示します。|
+|5|**[共有を停止する**] ボタン: 会議ステージへのアプリの共有を停止します。 共有を開始した参加者にのみ表示されます。|
+
+### <a name="anatomy-share-specific-app-content-to-a-meeting"></a>Anatomy: 特定のアプリ コンテンツを会議に共有する
+
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy-component.png" alt-text="画像は、特定のアプリ コンテンツだけが共有されている場合の共有会議ステージの設計構造を示しています。" border="false":::
+
+|カウンター|説明|
+|----------|-----------|
+|1|**アプリ アイコン**: 強調表示されたアイコンは、アプリの会議中タブが開いている状態を示します。|
+|2|**[会議に共有] ボタン**: アプリを会議に共有するエントリ ポイント。 一貫性のあるエクスペリエンスを得る場合は、常に標準の共有Teams使用してください。 **会議への共有は** 推奨される既定のテキストですが、使用例に合わせてカスタマイズできます。 たとえば、ゲーム **アプリで一** 緒にプレイしたり、ビデオ アプリで **一緒** に視聴したりします。 いずれにしろ、アクションによって会議の全員と共有された対話型エクスペリエンスが作成されます。|
+|3|**発表者の属性**: アプリを共有した参加者の名前を表示します。|
+|4|**iframe**: アプリのコンテンツを表示します。|
+|5|**[共有を停止する**] ボタン: 会議ステージへのアプリの共有を停止します。 共有を開始した参加者にのみ表示されます。|
 
 ### <a name="responsive-behavior-shared-meeting-stage"></a>応答性の高い動作: 共有会議ステージ
 
@@ -270,7 +288,7 @@ ms.locfileid: "61051197"
 
 ## <a name="after-a-meeting"></a>会議後
 
-会議の終了後に会議に戻り、アプリのコンテンツを表示できます。 この例では、会議の開催者は **[Contoso]** タブで投票結果を確認できます(注: デザインの観点から、会議前と会議後のタブ エクスペリエンスの違いはありません)。
+会議の終了後に会議に戻り、アプリのコンテンツを表示できます。 この例では、会議の開催者は[ **Contoso** ] タブで投票結果を確認できます(注: デザインの観点から、会議前と会議後のタブ エクスペリエンスの違いはありません)。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="例の図は、会議後のタブを示しています。" border="false":::
 
@@ -449,7 +467,7 @@ Teams会議は暗いテーマに最適化され、視覚的および認知的な
 
 #### <a name="dont-use-unfamiliar-colors"></a>[しない]: 見慣れない色を使用する
 
-会議環境と衝突する色が気を散らし、ユーザーのネイティブな表示が少Teams。 通話テーマのニュートラルTeams[含む、](https://developer.microsoft.com/fluentui#/styles/web/colors/products)カラー ランプの詳細について学習します。
+会議環境と衝突する色が気を散らし、ユーザーのネイティブな表示が少Teams。 通話テーマのニュートラルTeams[含む](https://developer.microsoft.com/fluentui#/styles/web/colors/products)、さまざまなカラー ランプについて学習します。
 
    :::column-end:::
 :::row-end:::
@@ -509,7 +527,7 @@ Teams会議は暗いテーマに最適化され、視覚的および認知的な
    :::column-end:::
 :::row-end:::
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [会議用にアプリを構成する](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
