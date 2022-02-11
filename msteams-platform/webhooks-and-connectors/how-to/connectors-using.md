@@ -5,12 +5,12 @@ description: Microsoft Teams で Office 365 コネクタを使用する方法に
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams Office365 コネクタ
-ms.openlocfilehash: 478bf9805c5f045e1f8c43ff7647dd418f6bd8af
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 816dfd4327f0ee3076431e2fdc0e855b40f729c3
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435867"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62517968"
 ---
 # <a name="create-and-send-messages"></a>メッセージを作成して送信する
 
@@ -45,7 +45,7 @@ ms.locfileid: "62435867"
 
 > [!NOTE]
 > * Microsoft Teams で `style` プロパティに `compact` を指定することは、Microsoft Outlook で `style` プロパティに `normal` を指定することと同じです。
-> * HttpPOST アクションでは、ベアラー トークンは要求に含まれています。 このトークンには、アクションを実行した Office 365 ユーザーの Azure AD ID が含まれています。
+> * HttpPOST アクションでは、ベアラー トークンは要求に含まれています。 このトークンには、アクションを実行した Office 365 ユーザーの Microsoft Azure Active Directory (Azure AD) ID が含まれています。
 
 ## <a name="send-a-message-through-incoming-webhook-or-office-365-connector"></a>受信 Webhook または Office 365 コネクタ経由でメッセージを送信する
 

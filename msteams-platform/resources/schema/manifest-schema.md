@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: e81e50a5efba56c91bef5c59b1239f2d273b3354
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
+ms.openlocfilehash: b7b2e175f144811118310bde1fcf63b88717a20e
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362887"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518360"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参照: Microsoft Teams のマニフェスト スキーマ
 
@@ -624,11 +624,11 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 **省略可能** — オブジェクト
 
-Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、ユーザーがアプリにシームレスにサインインできるようにします。 アプリが Azure AD に登録されている場合は、アプリ ID を提供する必要があります。 管理者は、Teams 管理センターで権限を簡単に確認して同意を与えることができます。
+Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、ユーザーがアプリにシームレスにサインインできるようにします。 アプリが Microsoft Azure Active Directory (Azure AD) に登録されている場合は、アプリ ID を提供する必要があります。 管理者は、Teams 管理センターで権限を簡単に確認して同意を与えることができます。
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`id`|string|36 文字|✔|Azure AD のアプリケーション ID を指定します。 この ID は GUID である必要があります。|
+|`id`|string|36 文字|✔|アプリの Microsoft Azure Active Directory (Azure AD) アプリケーション ID。 この ID は GUID である必要があります。|
 |`resource`|string|2048 文字|✔|SSO の認証トークンを取得するためのアプリのリソース URL。 </br> **注:** SSO を使用していない場合は、エラー応答を回避するために、このフィールドにダミーの文字列値 (たとえば、https://notapplicable) をアプリ マニフェストに入力してください。 |
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator

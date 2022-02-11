@@ -4,12 +4,12 @@ description: Microsoft Teams の最新情報やすべての開発者向け最新
 ms.topic: reference
 ms.localizationpriority: high
 keywords: Teams の最新情報と最新の更新プログラムまたは開発者プレビューと機能
-ms.openlocfilehash: a33e704b8c66d460b6946b60947601bac9fb9269
-ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
+ms.openlocfilehash: 4c4a145db5ce66a13d4f605419c5a402eef2c3b7
+ms.sourcegitcommit: 60e4bbb013f0bb17a87a2e558abfcc311c73af75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "62443973"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62523788"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -22,10 +22,10 @@ ms.locfileid: "62443973"
 
 | 日付 | Update | ここで検索  |
 | --- | --- | --- |
+|02/11/2022| 共有会議ステージ| • [Teams 会議用アプリのビルド] > [[共有会議ステージ]](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • [Teams 会議用アプリのビルド] > [[Meeting apps API リファレンス]](apps-in-teams-meetings/API-references.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー] > [[開発者向けプレビュー マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md)|
 |02/08/2022| 通話ボットと会議ボットを作成するステップバイステップ ガイドが導入されました。| [ボットの構築] > [通話と会議のボット] > [通話と会議のボットの登録] > [[通話と会議のボットを作成するためのステップバイステップ ガイド]](sbs-calling-and-meeting.yml) |
 |02/07/2022| ツールと SDK |Visual Studio Code 用 Teams ツールキット > </br> • [Teams アプリに機能を追加] > [[Teams アプリに機能を追加]](toolkit/add-capability.md) </br> • [クラウド リソースを Teams アプリに追加] > [[クラウド リソースを Teams アプリに追加]](toolkit/add-resource.md) |
 |02/03/2022| アプリ マニフェスト バージョン 1.12 が導入されました | • [アプリ マニフェスト] > [[アプリ マニフェストのスキーマ]](resources/schema/manifest-schema.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー > [[マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md) |
-|02/03/2022| 会議ステージを共有するための対話型モード| • [Teams 会議用アプリのビルド] > [[共有会議ステージ]](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • [Teams 会議用アプリのビルド] > [[Meeting apps API リファレンス]](apps-in-teams-meetings/API-references.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー] > [[開発者向けプレビュー マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md)|
 |02/03/2022| 収益化されたアプリのテスト プレビュー (開発者プレビュー)| [アプリの収益化] > [[収益化アプリのテスト プレビュー]](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
 |02/03/2022| アプリの収益化のためのアプリ内購入フロー (開発者プレビュー) | [アプリの収益化] > [[アプリ内購入]](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
 |2022 年 1 月 25 日| リアルタイム キャプション API を送信する | [Teams Meetings 用のアプリを作成する] > [Meeting Apps API リファレンス] > [[Meeting Apps API リファレンス]](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
@@ -45,6 +45,7 @@ ms.locfileid: "62443973"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ----------------|
+|02/11/2022| 共有会議ステージ| • [Teams 会議用アプリのビルド] > [[共有会議ステージ]](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • [Teams 会議用アプリのビルド] > [[Meeting apps API リファレンス]](apps-in-teams-meetings/API-references.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー] > [[開発者向けプレビュー マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md)|
 |02/08/2022| 通話ボットと会議ボットを作成するステップバイステップ ガイドが導入されました。| [ボットの構築] > [通話と会議のボット] > [通話と会議のボットの登録] > [[通話と会議のボットを作成するためのステップバイステップ ガイド]](sbs-calling-and-meeting.yml) |
 |02/02/2022| アプリ マニフェスト バージョン 1.12 が導入されました | [アプリ マニフェスト] > [[アプリ マニフェストのスキーマ]](resources/schema/manifest-schema.md) |
 |2022 年 1 月 25 日| リアルタイム キャプション API を送信する | [Teams Meetings 用のアプリを作成する] > [Meeting Apps API リファレンス] > [[Meeting Apps API リファレンス]](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
@@ -238,7 +239,6 @@ ms.locfileid: "62443973"
 | -------- | --------- | ------------------ |
 |02/07/2022| ツールと SDK |Visual Studio Code 用 Teams ツールキット > </br> • [Teams アプリに機能を追加] > [[Teams アプリに機能を追加]](toolkit/add-capability.md) </br> • [クラウド リソースを Teams アプリに追加] > [[クラウド リソースを Teams アプリに追加]](toolkit/add-resource.md) |
 |02/02/2022| アプリ マニフェスト バージョン 1.12 が導入されました | [アプリ マニフェスト] > [開発者向けパブリック プレビュー] > [[マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md) |
-|02/03/2022 |会議ステージを共有するための対話型モード| • [Teams 会議用アプリのビルド] > [[共有会議ステージ]](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • [Teams 会議用アプリのビルド] > [[Meeting apps API リファレンス]](apps-in-teams-meetings/API-references.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー] > [[開発者向けプレビュー マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md)|
 |02/03/2022| 収益化されたアプリのテスト プレビュー| [アプリの収益化] > [[収益化アプリのテスト プレビュー]](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
 |02/03/2022| アプリの収益化のためのアプリ内購入フロー | [アプリの収益化] > [[アプリ内購入]](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) 
 |2022/1/17| モバイル版アダプティブ カードのユーザー ピッカー  | [カードとタスク モジュールの構築] > [カードの構築] > [[アダプティブ カードのユーザー ピッカー]](task-modules-and-cards/cards/people-picker.md)|

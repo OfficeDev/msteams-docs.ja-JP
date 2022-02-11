@@ -5,12 +5,12 @@ keywords: teams ボット カード書式
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 1c55862ca94bb0091cadf6df835b0271cdb74094
-ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
+ms.openlocfilehash: 965f74bd2756fc4a2beb9c65ebf8da577f12dc89
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "62443949"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518353"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams のカードの書式設定
 
@@ -173,16 +173,16 @@ Android では、アダプティブ カード Markdown の書式設定が次の�
 }
 ```
 
-### <a name="azure-ad-object-id-and-upn-in-user-mention"></a>ユーザーのメンションにおける Azure AD オブジェクト ID と UPN 
+### <a name="microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention"></a>Microsoft Azure Active Directory (Azure AD) ユーザー メンションにおけるオブジェクト ID と UPN 
 
-Teams プラットフォームでは、既存の言及 ID に加えて、Azure AD オブジェクト ID とユーザー原則名 (UPN) を使用してユーザーに言及することができます。 アダプティブ カードを備えたボットと受信 Webhook を備えたコネクタは、2 つのユーザー メンション ID をサポートします。 
+Teams プラットフォームでは、既存の言及 ID に加えて、Microsoft Azure Active Directory (Azure AD) オブジェクト ID とユーザー原則名 (UPN) を使用してユーザーに言及することができます。 アダプティブ カードを備えたボットと受信 Webhook を備えたコネクタは、2 つのユーザー メンション ID をサポートします。 
 
 次の表に、新しくサポートされたユーザー メンション ID を示します。
 
 |ID  | サポート機能 |   説明 | 例 |
 |----------|--------|---------------|---------|
-| Azure AD オブジェクト ID | ボット、コネクタ |  Azure AD ユーザーのオブジェクト ID を指定する |    49c4641c-ab91-4248-aebb-6a7de286397b |
-| UPN | ボット、コネクタ | Azure AD ユーザーの UPN | john.smith@microsoft.com |
+| Microsoft Azure Active Directory (Azure AD) オブジェクト ID | ボット、コネクタ |  Microsoft Azure Active Directory (Azure AD) ユーザーのオブジェクト ID |  49c4641c-ab91-4248-aebb-6a7de286397b |
+| UPN | ボット、コネクタ | Microsoft Azure Active Directory (Azure AD) ユーザーの UPN | john.smith@microsoft.com |
 
 #### <a name="user-mention-in-bots-with-adaptive-cards"></a>アダプティブ カードを使用したボットでのユーザー メンション 
 
@@ -235,11 +235,11 @@ Teams プラットフォームでは、既存の言及 ID に加えて、Azure A
 
 #### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>アダプティブ カードを使用した受信 Webhook でのユーザー メンション 
 
-受信 Webhook は、Azure AD オブジェクト ID と UPN を使用したアダプティブ カードでのユーザー メンションをサポートし始めます。
+受信 Webhook は、Microsoft Azure Active Directory (Azure AD) オブジェクト ID と UPN を使用したアダプティブ カードでのユーザー メンションをサポートし始めます。
 
 > [!NOTE]    
-> * 受信 Webhook のスキーマでユーザー メンションを有効にして、Azure AD オブジェクト ID と UPN をサポートします。 
-> * UI/UX の変更は、Azure AD オブジェクト ID および UPN を使用したユーザー メンションには必要ありません。      
+> * 受信 Webhook のスキーマでユーザー メンションを有効にして、Microsoft Azure Active Directory (Azure AD) オブジェクト ID と UPN をサポートします。 
+> * UI/UX の変更は、Microsoft Azure Active Directory (Azure AD) オブジェクト ID および UPN を使用したユーザー メンションには必要ありません。      
 
 ##### <a name="example"></a>例 
 

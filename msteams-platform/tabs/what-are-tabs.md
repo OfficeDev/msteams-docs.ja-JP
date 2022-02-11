@@ -5,12 +5,12 @@ description: Teams プラットフォームでのカスタム タブの概要
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 3e339853729fc97623fba78d94be23b0562d4dbb
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: c9d4e7a97cc9272faab32408683f6d8d43338a0d
+ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435182"
+ms.lasthandoff: 02/10/2022
+ms.locfileid: "62518346"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Microsoft Teams 用のタブの構築
 
@@ -43,7 +43,7 @@ Teams には、個人用タブとチャネル タブ、またはグループ タ
 タブ機能は次のとおりです。
 
 * タブがボットも含まれるアプリに追加されると、ボットもチームに追加されます。
-* 現在のユーザーの Azure Active Directory ID の認識。
+* 現在のユーザーの Microsoft Azure Active Directory (Azure AD) ID の認識。
 * 言語が `en-us` であることを示すユーザーのロケール認識。
 * サポートされている場合、シングル サインオン (SSO) 機能があります。
 * ボットやアプリの通知を使用して、タブや、個々の作業項目などのサービス内のサブ エンティティにディープ リンクできます。
