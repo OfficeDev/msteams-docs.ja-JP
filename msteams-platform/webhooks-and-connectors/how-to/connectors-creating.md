@@ -2,16 +2,16 @@
 title: Office 365 コネクタの作成
 author: laujan
 description: コネクタの使用を開始するOffice 365説明Microsoft Teams
-keywords: teams Office365 コネクタ
+keywords: Teams Office365 コネクタ
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 719d73394c3ab072c61f08b826b42e35c3475ca1
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 64400b3f80aa5ba322ce7318e0261e8b694e7e18
+ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435147"
+ms.lasthandoff: 02/14/2022
+ms.locfileid: "62801384"
 ---
 # <a name="create-office-365-connectors"></a>Office 365 コネクタの作成
 
@@ -21,7 +21,9 @@ ms.locfileid: "62435147"
 
 パッケージを作成し[、](~/concepts/build-and-test/apps-package.md)[AppSource](~/concepts/deploy-and-publish/apps-publish.md) 申請の一部としてコネクタを発行できます。 登録されたコネクタは、アプリ パッケージの一部としてTeamsできます。 アプリのエントリ ポイントの詳細については、「Teams機能」[を参照してください](~/concepts/extensibility-points.md)。 また、パッケージをユーザーに直接提供して、アプリ内でアップロードTeams。
 
-コネクタを配布するには、 [Connectors Developer Dashboard を通じて登録する必要があります](https://aka.ms/connectorsdashboard)。 コネクタが登録されている場合は、アプリケーションをサポートしているすべての Office 365 製品で動作OutlookとTeams。 この問題が当てはめず、アプリ申請メールで動作するコネクタのみを作成するMicrosoft Teams:Microsoft Teams[してください](mailto:teamsubm@microsoft.com)。
+コネクタを配布するには、コネクタ開発者ダッシュボード [にコネクタを登録します](https://aka.ms/connectorsdashboard)。
+
+コネクタがアプリ内でのみ動作Microsoft Teams、アプリを発行する際にコネクタを送信する手順に従って、Microsoft Teams[記事を参照](~/concepts/deploy-and-publish/appsource/publish.md)してください。 それ以外の場合、登録されたコネクタは、Office 365アプリケーションをサポートするすべての製品で動作OutlookおよびTeams。
 
 > [!IMPORTANT]
 > コネクタ開発者ダッシュボードで [保存] を **選択** すると、コネクタが登録されます。 AppSource でコネクタを発行する場合は、アプリを AppSource に発行するMicrosoft Teams[手順に従います](~/concepts/deploy-and-publish/apps-publish.md)。 AppSource でアプリを発行しない場合は、組織に直接配布します。 組織 [のコネクタを発行した後](#publish-connectors-for-the-organization)、コネクタ ダッシュボードでそれ以上の操作は必要ありません。

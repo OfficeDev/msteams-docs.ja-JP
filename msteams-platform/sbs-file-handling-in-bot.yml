@@ -1,0 +1,98 @@
+### YamlMime:Tutorial
+title: Teamsアップロード ボット
+metadata:
+  title: Teams ファイル アップロード ボット
+  description: このチュートリアルでは、ボットから Teamsにファイルをアップロードする方法と、ボットに送信されたファイルを添付ファイルとして受信する方法について説明します。
+  audience: Developer
+  level: Beginner
+  ms.date: 28/12/2021
+  ms.topic: interactive-tutorial
+  nextTutorialHref: bots/how-to/bots-filesv4.md
+  nextTutorialTitle: ボットを介したファイルの送受信の詳細
+  ms.custom: mvc
+  ms.localizationpriority: none
+  ms.openlocfilehash: 9906e3e445e73f1e53ebe713e46cffcf342965a2
+  ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 02/14/2022
+  ms.locfileid: "62801470"
+items:
+- durationInMinutes: 1
+  content: "ボットは Bot Framework を使用して作成されます。 ボットからファイルをTeamsする方法と、添付ファイルとしてボットに送信されたファイルを受信する方法を示します。 また、メッセージで送信されたインライン イメージをフェッチする方法も示します。\n \nこのステップ バイ ステップ ガイドは、ボットからユーザーにファイルをアップロードするMicrosoft Teams。 次の出力が表示されます。\n\n:::image type=\"content\" source=\"assets/images/teams-file-upload-bot/output-sbs.png\" alt-text=\"sbs 出力\" lightbox=\"assets/images/teams-file-upload-bot/output-sbs.png\":::\n"
+- title: 前提条件
+  durationInMinutes: 1
+  content: >
+    開発環境をセットアップするには、次のツールをインストールします。
+
+
+    * Microsoft TeamsアカウントTeamsします。
+
+    * [.NET Core SDK バージョン 3.1](https://dotnet.microsoft.com/download)。
+
+    * [ngrok](https://ngrok.com/) または同等のトンネリング ソリューション。
+
+    * Visual Studio 2019 以降。
+- title: Azure Portal でボット登録を作成する
+  durationInMinutes: 5
+  content: "ボットを認証するには、Azure Bot Service でボットを設定できます。 Azure でボットを開発してホストするときに、ボットを Azure Bot Service に登録します。 次の手順を実行します。\n\n1. ファイル ボット アプリを構成Teams実行します。\n1. Azure Bot リソースを作成します。\n1. クライアント シークレットを作成します。\n1. チャネルMicrosoft Teams追加します。\n1. メッセージング エンドポイントを追加します。\n\n**ファイル ボット アプリを構成Teams実行するには、次の手順を実行します。**\n\n1. コマンド プロンプトを開き、リポジトリを複製します https://github.com/Microsoft/botbuilder-samples.git。 リポジトリを複製するパスをメモします。\n\n1. 次のVisual Studio。\n\n    * Visual Studio を開きます。\n    * [**FileOpen** >  **Project** > **/ソリューション] を選択します**。\n    * アクセス `botbuilder-samples\\samples\\csharp_dotnetcore\\56.teams-file-upload` フォルダー。\n    * `Teamsfileupload.csproj` ファイルを開きます。\n\n1. ngrok ターミナルを開き、このコマンドで ngrok トンネルを開始します `ngrok http -host-header=rewrite 3978`。\n\n**Azure Bot リソースを作成するには、次の方法を実行します。**\n\n1. Azure ポータル [にアクセスします](https://portal.azure.com/)。\n1. **[リソースの作成]** を選択します。\n1. 検索ボックスに「 **Azure bot」と入力し** 、Enter キーを選択します。\n1. [ **Azure Bot] を選択します**。\n\n     ![Azure ボット カードの作成](~/assets/images/teams-file-upload-bot/azure-new.png)\n\n1. **[作成]** を選択します。\n1. ボット ハンドルに必要なボット ハンドル名 **を入力します**。\n1. [サブスクリプション **] ドロップダウン リスト** から、サブスクリプションを選択します。\n1. [リソース **グループ] ドロップダウン リスト** から、リソース グループを選択します。\n    \n    新しいリソースを作成するには、[新しいリソースの **作成] を** 選択し、リソース名を入力し、[ **OK**] を選択し、[新しいリソース グループの場所] ドロップダウン リストから必要な場所 **を** 選択します。\n\n    > [!NOTE]\n    > [Microsoft App ID] セクションで、[ **新しい Microsoft アプリ ID** の作成] が既に選択されています。 [既存のアプリ **登録を使用する] を** 選択し、[既存のアプリ **ID] を** 入力し、[ **既存のアプリ パスワード] を入力します**。\n\n1. **[確認 + 作成]** を選びます。\n\n     ![レビューと作成](~/assets/images/teams-file-upload-bot/reg-azure-1.png)\n\n1. 検証に合格した場合は、[作成] を **選択します**。 ボット サービスをプロビジョニングするには、少し時間が必要です。\n\n1. [**リソースに移動**] を選びます。 ボットと関連リソースがリソース グループに一覧表示されます。\n\n   これで、Azure ボットが作成されました。\n\n     ![Azure ボット リソースの作成](~/assets/images/teams-file-upload-bot/resource-group.png)\n\n**クライアント シークレットを作成するには、次の方法を実行します。**\n\n1. [構成 **設定** 構成] を **選択します**。 将来の **参照のために Microsoft App ID** (クライアント ID) を保存します。\n1. **[Microsoft アプリ ID] の隣にある [** 管理] を **選択します**。\n\n     ![Microsoft アプリ ID](~/assets/images/teams-file-upload-bot/manage-sec.png)\n\n1. [クライアント シークレット **] セクションで、[** 新しいクライアント シークレット **] を選択します**。 [ **クライアント シークレットの追加] ウィンドウ** が表示されます。  \n\n1. [説明 **] と入力し** 、[追加] を **選択します**。\n\n     ![クライアント シークレット](~/assets/images/teams-file-upload-bot/add-client-secret.png)\n\n1. [値 **] 列で** 、[クリップボードに **コピー] を選択** し、将来の参照のためにクライアント シークレット ID の値を保存します。\n\n     ![クライアント シークレットの値](~/assets/images/teams-file-upload-bot/copy-value.png)\n   \n**新しいチャネルをMicrosoft Teamsするには、次のMicrosoft Teamsします。**\n\n1. [ホーム] に **移動します**。\n\n     ![ホーム](~/assets/images/teams-file-upload-bot/home-png.png)\n\n1. [最近使用したリソース] セクション **からボットを開** きます。\n1. 左側 **のウィンドウで** [チャネル] を選択し、[チャネル] **をMicrosoft Teams** \n\n      ![チャネルTeamsを開く](~/assets/images/teams-file-upload-bot/chanels-teams.png)  \n\n      ![[選択Teams](~/assets/images/teams-file-upload-bot/configure-microsoft-teams.png)  \n\n1. **[保存]** を選択します。\n1. このチェック ボックスをオンにすると、利用規約に同意し、[同意する] を **選択します**。</br>\n\n      ![利用規約](~/assets/images/teams-file-upload-bot/terms-service.png)\n\n**メッセージング エンドポイントを追加するには、次の方法を実行します。**\n\n1. 作成 **設定** Azure ボットの [構成] を選択 **します**。\n1. ngrok に移動します。\n1. HTTPS URL (https to io) をコピーします。\n\n    ![ngrok HTTPS URL](~/assets/images/teams-file-upload-bot/ngrok-url.png)\n\n1. メッセージング **エンドポイントで、** ngrok から利用可能な HTTPS URL を使用し、URL の最後に **/api/messages を追加します**。\n\n     ![メッセージングの終了点](~/assets/images/teams-file-upload-bot/messaging-endpoint.png)\n\n1. **[適用]** を選択します。\n\n   Azure Bot Service でボットを正常にセットアップし、ボット サービス接続をセットアップする必要があります。\n"
+- title: ボット サービス接続のセットアップ
+  durationInMinutes: 5
+  content: "ボット サービスでユーザーがサインインしてボットにアクセスするには、ボットの SSO を構成します。\nボット サービス接続を設定するには、次の手順を実行します。\n\n1. Azure ボット リソースにリダイレクト URI を追加します。\n1. API エンドポイントを公開します。\n1. クライアント アプリケーションを承認します。\n1. ダウンストリーム呼び出しに必要な API アクセス許可を追加します。\n1. 暗黙的な付与を有効にする。\n1. マニフェストを更新します。\n1. ボット サービス接続を設定します。\n\n**Azure ボット リソースにリダイレクト URI を追加するには、次の方法を実行します。**\n\n1. [Microsoft **App ID]** の隣にある **[管理] オプションを選択します**。\n\n     ![ボットの管理](~/assets/images/teams-file-upload-bot/manage-sec.png)\n\n1. ボット **リソースの** 左側のウィンドウから [認証] を選択します。\n1. [ **プラットフォーム構成] で、[** プラットフォームの **追加] を選択します**。\n1. **[Web]** を選びます。\n1. [リダイレクト **URI] と入力し** 、[ `https://token.botframework.com/.auth/web/redirect` 構成] を **選択します**。\n\n    ![Web リダイレクト URL の構成](~/assets/images/teams-file-upload-bot/authentication.png)\n\n    リダイレクト URI が Azure ボット リソースに追加されます。\n\n    ![Web リダイレクト URL の表示](~/assets/images/bots/redirectURIadded.png)\n    \n**API エンドポイントを公開するには、次の方法を実行します。**\n\n1. 左側 **のウィンドウから [API を公開** する] を選択します。\n1. アプリケーション ID **URI の [** 設定] を選択します。\n1. **ngrok** **URL ではなく**、`api://``https://`表示されるアプリケーション ID URL を使用して追加し、アプリ ID URL の先頭に追加します。\n\n    ![アプリ ID URI](~/assets/images/teams-file-upload-bot/expose-api.png)\n\n1. **[保存]** を選択します。\n1. **[スコープの追加]** を選択します。\n1. [ **スコープ名] に「** 」 と入力します `access_as_user`。\n1. [**Who同意できますか?] で**、[管理者と **ユーザー] に切り替えます**。\n1. ボックスに次の値を入力します。\n\n    | フィールド | 値 |\n    | ----- | ----- |\n    | 管理者の同意表示名 | Teamsプロファイルにアクセスできる |\n    | 管理者の同意の説明 | アプリTeams Web API を現在のユーザーとして呼び出す権限を持つユーザーを許可します。 |\n    | ユーザーの同意表示名 | Teamsプロファイルにアクセスし、代理で要求を行うことができます |\n    | ユーザーの同意の説明 | ユーザー Teams同じアクセス許可を持つこのアプリの API を呼び出す方法を有効にしてください。 |\n\n1. まだ **設定されていない** 場合 **は、[状態] を** [有効] に設定します。\n\n    ![スコープを追加する](~/assets/images/teams-file-upload-bot/expo.png)\n\n1. **[スコープの追加]** を選択します。 スコープ名は、アプリケーション ID URI と自動的に一致し、 `/access_as_user` 末尾に追加されます。\n\n**クライアント アプリケーションを承認するには、次の方法を実行します。**\n\nたとえば、次の ID を承認済みクライアント アプリケーションとして追加し、[承認済みスコープ] のチェック ボックスをオンにして、[アプリケーションの追加] を **選択します**。      \n* `1fec8e78-bce4-4aaf-ab1b-5451cc387264`(Teamsまたはデスクトップ アプリケーション)            \n* `5e3ce6c0-2b1f-4285-8d4b-75ee78787346`(Teams Web アプリケーション)</br>\n\n    ![クライアント アプリケーションの追加](~/assets/images/teams-file-upload-bot/client-application.png)      \n\n**ダウンストリーム呼び出しに必要な API アクセス許可を追加するには、次の方法を実行します。**\n\n1. 左側 **のウィンドウから [API のアクセス** 許可] を選択します。\n1. [**アクセス許可を追加**] を選択します。 **[API アクセス許可の要求]** ウィンドウが表示されます。\n1. [ **Microsoft API の] を選択します**。 次に、[**Microsoft Graph**] を選択し、[**委任されたアクセス許可] を選択します**。\n1. アプリで必要 **なユーザーの委任されたアクセス** 許可を、ダウンストリーム API (User.Read など) に追加します。</br>\n\n     ![API アクセス許可](~/assets/images/teams-file-upload-bot/delegated-permission-1.png)\n\n**暗黙的な付与を有効にするには、次の方法を実行します。**\n\n1. 左側の **ウィンドウから** [認証] を選択します。\n1. [ **アクセス トークンと** **ID トークン] チェック ボックス** をオンにします。\n\n     ![認証トークン](~/assets/images/teams-file-upload-bot/access-tokens.png)\n\n1. **[保存]** を選択します。\n\n**マニフェストを更新するには**\n\n1. 左側 **のウィンドウから** [マニフェスト] を選択します。\n1. 構成項目を **\"accessTokenAcceptedVersion\": 2 に設定します**。 設定しない場合は、その値を '2' に変更し、[保存] を選択 **します**。\n    \n    > [!NOTE]\n    > 既にボットをテストしている場合は、Teamsからサインアウトして、ボットからサインアウトTeams。 この変更を表示するには、もう一度サインインします。\n\n    ![マニフェストの更新](~/assets/images/teams-file-upload-bot/access-version-manifest-2.png)\n\n**ボット サービス接続を設定するには、次の方法を実行します。**\n\n1. ボットの **ホーム ページ** を開き、左側のウィンドウで [**設定] を** 選択します。\n1. [**OAuth 接続の追加] を設定**。\n1. [ **新しい接続設定] で**、次の詳細を入力します。\n\n    | フィールド | 値または説明 |\n    | ----- | ----- |\n    | 名前 | 新しい接続設定の名前を指定します。 ボット サービス コードの設定で名前を使用できます。 |\n    | Service Provider | [**V2 Azure Active Directory選択します**。 |\n    | クライアント ID | Microsoft アプリ **ID を指定します**。 |\n    | クライアント シークレット | クライアント シークレット **ID の** 値を指定します。 |\n    | トークンExchange URL | API エンドポイント **の公開中に** 以前に取得したアプリケーション ID URL を使用します。 |\n    | テナント ID | テナント **ID を指定します**。 |\n    | Scopes | ダウンストリーム **API へのアクセス** 許可を指定しながら、 **User.Read を提供** し、必要なすべてのスコープを追加します。 |\n\n    :::image type=\"content\" source=\"./assets/images/teams-file-upload-bot/oauth-settings.png\" alt-text=\"ボット サービス接続\":::\n\n1. **[保存]** を選択します。\n"
+- title: アプリのテスト
+  durationInMinutes: 2
+  content: >
+    アプリをテストする最も包括的な方法は、アプリ パッケージを作成し、アプリ パッケージをアプリ パッケージにTeams。 このメソッドは、すべてのスコープでアプリで使用できる完全な機能をテストする唯一の方法です。 ファイルをアップロードすることで、Teamsアプリを構成して実行`manifest.zip`できます。
+
+
+    ファイル ボットをTeamsするには、ファイルをファイル `manifest.zip` ボットにアップロードTeams。 次の手順を実行します。
+
+
+    1. エクスプローラーで **、****botbuilder-samplessamples** >  >  **csharp_dotnetcore** >  **56.teams-file-uploadappsettings** >  に **移動します**。
+
+
+    1. [アプリの設定] Visual Studio Code開き`appsettings.json``MicrosoftAppId (Bot Id)`、ボットの構成ファイルを更新して 、 、 `MicrosoftAppPassword(Value of the client secret ID)`、 を`MicrosoftAppType`使用します`MicrosoftAppTenantID`。
+
+       ![アプリの設定](~/assets/images/teams-file-upload-bot/app-settings.png)
+
+    1. ファイルを `manifest.json` [ファイル] で開Visual Studio Code。
+
+
+    1. ファイルで `manifest.json` 、アプリ ID `YOUR-MICROSOFT-APP-ID` を見つけて置き換える。アプリ ID は、ボットの登録時に作成されます。 ファイルを保存します。
+
+       ![マニフェスト json](~/assets/images/teams-file-upload-bot/manifest-json.png)
+
+    1. manifest.json' ファイルのmanifest.zip`TeamsAppManifest' folder to create a ` ` archive. Open the manifest file in Visual Studio Code and replace with your MicrosoftAppID (depending on the scenario the Microsoft App Id may occur multiple times in the `を圧縮します。
+
+
+    1. アップロードを開`manifest.zip`Teamsします ([アプリ] ビューで [カスタム アプリアップロードをクリックします)。
+
+
+    1. アップロードするには、[`manifest.zip`**StoreManage** >  **your apps** > アップロード **カスタム アプリを開く]** を選択します`manifest.zip`。
+
+
+    1. [ **追加] を** 選択して、ボットをチャットに追加します。
+
+
+    1. ボットにメッセージを送信する前に、**エクスプローラー** に移動し、**botbuilder-samplessamples** >  >  **csharp_dotnetcore** >  **56.teams-file-upload に移動します**。
+
+
+    1. [ファイル`TeamsFileUpload.csproj`のアップロードVisual Studio Code開き、[ファイルのアップロードTeams] に入る必要があります。
+
+        ![ビジュアル コード](~/assets/images/teams-file-upload-bot/visual-studio-teams-file-upload-bot.png)
+
+    1. 適切なフォルダーで使用Visual Studio、ボット`F5``dotnet run`を実行する
+
+
+    1. ボットにメッセージ `Hi` を送信し、カードで応答するまで数秒待ちます。
+- title: アプリ内のボットとの対話Teams
+  durationInMinutes: 2
+  content: "> [!NOTE]\n>  ボットが個人用スコープにインストールされた後、ユーザーはボットとの 1 つのチャット会話に 1 つを入力します。\n\nこのガイドでは、さまざまな方法でボットと通信する方法を示します。 ボット アクティビティを示す手順を次に示します。\n\n1. ボットにメッセージを送信します。 ファイルをアップロードするアクセス許可をカードで返します。\n   \n     ![prompt1](~/assets/images/teams-file-upload-bot/sbs-1.png)\n\n1. [許可] **を選択します**。 ファイル `teams-logo.png` がファイル ディレクトリにアップロードされ、ダウンロードできる状態です。\n\n     ![メッセージ プロンプト](~/assets/images/teams-file-upload-bot/sbs-2.png)\n\n1. ボットにファイルを添付ファイルとして送信Teams。 メッセージで応答します `Received and Saved`。 添付ファイルは、[ファイル] タブから **表示** できます。\n\n     ![ファイル プロンプト](~/assets/images/teams-file-upload-bot/sbs-3.png)\n\n1. 添付ファイルとして画像を送信します。 メッセージで応答します `Received and saved`。 チャット ウィンドウと [ファイル] タブで画像を **表示** できます。\n   \n     ![イメージ プロンプト](~/assets/images/teams-file-upload-bot/sbs-4.png)\n"
+- title: 完全なチャレンジ
+  durationInMinutes: 1
+  content: >
+    このようなことを思い付い出しましたか?
+
+
+    :::image type="content" source="assets/images/teams-file-upload-bot/output-sbs.png" alt-text="ボットからユーザーにファイルをアップロードできると確認するガイドからの期待Teams。" lightbox="assets/images/teams-file-upload-bot/output-sbs.png":::
+- content: チュートリアルが完了しました。 これで、ボットからユーザーにファイルをアップロードMicrosoft Teams。

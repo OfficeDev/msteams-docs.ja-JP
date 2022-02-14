@@ -5,16 +5,16 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: アプリケーションホスト型メディア Windows Azure VM
 ms.date: 11/16/2018
-ms.openlocfilehash: c3c6f76b5062f003902c9967191be9cd0be336aa
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 1e9fa106376a3068039dd74c8e0b4f2b8c8802d6
+ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435713"
+ms.lasthandoff: 02/14/2022
+ms.locfileid: "62801370"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>アプリケーションホスト型メディア ボットの要件と考慮事項
 
-アプリケーションホスト型メディア ボットでは、音声およびビデオ メディア [`Microsoft.Graph.Communications.Calls.Media` ストリームにアクセスするために .NET](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) ライブラリが必要です。 ボットは、Azure のサーバー コンピューター Windowsサーバー ゲスト オペレーティング システム (OS) Windows展開する必要があります。
+アプリケーションホスト型メディア ボットでは、音声およびビデオ メディア [`Microsoft.Graph.Communications.Calls.Media` ストリームにアクセスするために .NET](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) ライブラリが必要です。 ボットは、Azure の Windows サーバーのオンプレミス コンピューターまたは Windows Server ゲスト オペレーティング システム (OS) に展開する必要があります。
 
 > [!NOTE]
 > * メッセージングおよび対話型音声応答 (IVR) ボットを開発するためのガイダンスは、アプリケーションホスト型メディア ボットの構築には完全には適用されません。

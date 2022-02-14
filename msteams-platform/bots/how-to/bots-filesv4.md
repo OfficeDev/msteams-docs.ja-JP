@@ -5,12 +5,12 @@ keywords: teams ボット ファイルが受信を送信する
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: a65db945c5d32586c648bb2aeec9d1ad7b08112f
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: ec77aeff3771efd648b77215ca2eb53a4bcad8e9
+ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889175"
+ms.lasthandoff: 02/14/2022
+ms.locfileid: "62801356"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>ボットを介してファイルを送受信する
 
@@ -19,38 +19,38 @@ ms.locfileid: "60889175"
 
 ボットにファイルを送受信するには、次の 2 つの方法があります。
 
-* [**Microsoft Graph API を使用します。**](#use-the-graph-apis)このメソッドは、すべてのスコープ内のボットMicrosoft Teamsします。
+* [**Microsoft Graph API を使用する:**](#use-the-graph-apis) このメソッドは、すべてのスコープ内のボットMicrosoft Teamsします。
   * `personal`
   * `channel`
   * `groupchat`
 
-* [**ボット API Teams使用します。**](#use-the-teams-bot-apis)これらはコンテキスト内のファイルのみを `personal` サポートします。
+* [**ボット API Teams使用します。**](#use-the-teams-bot-apis)これらはコンテキスト内のファイルのみをサポート`personal`します。
 
 ## <a name="use-the-graph-apis"></a>API のGraphする
 
-既存のファイルを参照するカード添付ファイルを含むメッセージをSharePointする場合は、Graph API をOneDrive[およびSharePoint。](/onedrive/developer/rest-api/) この API をGraphするには、標準の OAuth 2.0 承認フローを使用して、次のいずれかのアクセス権を取得します。
+既存のファイルを参照するカード添付ファイルSharePoint、GraphおよびOneDrive[を](/onedrive/developer/rest-api/)SharePoint。 この API をGraphするには、標準の OAuth 2.0 承認フローを使用して、次のいずれかのアクセス権を取得します。
 
-* ユーザーのフォルダー OneDriveファイル `personal` 。 `groupchat`
-* チームのチャネル内のファイルをファイル用 `channel` に指定します。
+* ユーザーのフォルダー OneDriveファイル`personal`。`groupchat`
+* チームのチャネル内のファイルをファイル用に指定 `channel` します。
 
-GraphAPI は、すべてのスコープTeams機能します。 詳細については、「チャット メッセージ ファイル [の添付ファイルの送信」を参照してください](/graph/api/chatmessage-post?view=graph-rest-beta&tabs=http#example-4-file-attachments&preserve-view=true)。
+Graph API は、すべてのスコープでTeamsします。 詳細については、「送信チャット メッセージ [ファイルの添付ファイル」を参照してください](/graph/api/chatmessage-post?view=graph-rest-beta&tabs=http#example-4-file-attachments&preserve-view=true)。
 
 または、ボット API を使用して、ボットにファイルを送信し、ボットからTeamsすることもできます。
 
 ## <a name="use-the-teams-bot-apis"></a>ボット API Teams使用する
 
 > [!NOTE]
-> Teamsボット API はコンテキストでのみ機能 `personal` します。 これらは、コンテキストで `channel` 動作 `groupchat` しません。
+> Teamsボット API はコンテキストでのみ機能`personal`します。 これらは、コンテキストで動作`channel``groupchat`しません。
 
-ボットTeams API を使用して、コンテキスト内のユーザー (個人チャットとも呼ばれる) とファイルを直接送受信 `personal` できます。 経費レポート、画像認識、ファイル アーカイブ、ファイル コンテンツの編集に関する電子署名などの機能を実装します。 通常、Teamsファイルはカードとして表示され、豊富なアプリ内表示が可能です。
+ボットTeams API `personal` を使用して、コンテキスト内のユーザー (個人チャットとも呼ばれる) とファイルを直接送受信できます。 経費レポート、画像認識、ファイル アーカイブ、ファイル コンテンツの編集に関する電子署名などの機能を実装します。 通常、Teamsファイルはカードとして表示され、豊富なアプリ内表示が可能です。
 
 次のセクションでは、メッセージの送信など、ファイル コンテンツを直接ユーザー操作として送信する方法について説明します。 この API は、ボット プラットフォームの一部Teamsされます。
 
 ### <a name="configure-the-bot-to-support-files"></a>ファイルをサポートするボットを構成する
 
-ボットでファイルを送受信するには、マニフェスト `supportsFiles` のプロパティをに設定します `true` 。 このプロパティについては、Manifest [リファレンスの bots](~/resources/schema/manifest-schema.md#bots) セクションで説明します。
+ボットでファイルを送受信するには、マニフェストのプロパティ `supportsFiles` をに設定します `true`。 このプロパティについては、Manifest [リファレンスの bots](~/resources/schema/manifest-schema.md#bots) セクションで説明します。
 
-定義は次のように見えます `"supportsFiles": true` 。 ボットが有効にしない場合 `supportsFiles` 、このセクションに記載されている機能は機能しません。
+定義は次のように見えます `"supportsFiles": true`。 ボットが有効にしない場合 `supportsFiles`、このセクションに記載されている機能は機能しません。
 
 ### <a name="receive-files-in-personal-chat"></a>個人用チャットでファイルを受信する
 
@@ -80,7 +80,7 @@ GraphAPI は、すべてのスコープTeams機能します。 詳細につい�
 
 | プロパティ | 用途 |
 | --- | --- |
-| `downloadUrl` | OneDriveファイルのコンテンツをフェッチする URL。 ユーザーは、この `HTTP GET` URL から直接発行できます。 |
+| `downloadUrl` | OneDriveを取得する URL を指定します。 ユーザーは、この URL から `HTTP GET` 直接発行できます。 |
 | `uniqueId` | 一意のファイル ID。 これは、ユーザー OneDriveボットにファイルを送信する場合に備え、ドライブ アイテム ID の一部です。 |
 | `fileType` | ファイルの種類 (ファイルの種類.pdf、.docx。 |
 
@@ -90,7 +90,7 @@ GraphAPI は、すべてのスコープTeams機能します。 詳細につい�
 
 **ユーザーにファイルをアップロードするには**
 
-1. ファイルの書き込み許可を要求するメッセージをユーザーに送信します。 このメッセージには、アップロード `FileConsentCard` するファイルの名前を含む添付ファイルが含まれている必要があります。
+1. ファイルの書き込み許可を要求するメッセージをユーザーに送信します。 このメッセージには、アップロードする `FileConsentCard` ファイルの名前を含む添付ファイルが含まれている必要があります。
 2. ユーザーがファイルのダウンロードを受け入れる場合、ボットは場所 URL を持つ呼び出しアクティビティを受け取ります。
 3. ファイルを転送するために、ボットは指定された場所 `HTTP POST` の URL に直接実行します。
 4. 必要に応じて、ユーザーが同じファイルのアップロードをさらに受け入れたくない場合は、元の同意カードを削除します。
@@ -133,7 +133,7 @@ GraphAPI は、すべてのスコープTeams機能します。 詳細につい�
 
 #### <a name="invoke-activity-when-the-user-accepts-the-file"></a>ユーザーがファイルを受け入れるときにアクティビティを呼び出す
 
-ユーザーがファイルを受け入れる場合、呼び出しアクティビティがボットに送信されます。 このページには、OneDrive for Businessコンテンツを転送するためにボットが発行できるプレースホルダー URL `PUT` が含まれている。 URL へのアップロードの詳細については、「OneDriveアップロード セッションへの[アップロード バイト」を参照してください](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session)。
+ユーザーがファイルを受け入れる場合、呼び出しアクティビティがボットに送信されます。 このページには、OneDrive for Businessコンテンツを転送するためにボットが発行できる`PUT`プレースホルダー URL が含まれている。 URL へのアップロードの詳細については、「OneDriveアップロード セッション[へのアップロード バイト数」を参照してください](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session)。
 
 次のコードは、ボットが受け取る呼び出しアクティビティの簡潔なバージョンの例を示しています。
 
@@ -173,7 +173,7 @@ GraphAPI は、すべてのスコープTeams機能します。 詳細につい�
 
 ### <a name="notifying-the-user-about-an-uploaded-file"></a>アップロードされたファイルについてユーザーに通知する
 
-ユーザーのサーバーにファイルをアップロードOneDrive、ユーザーに確認メッセージを送信します。 メッセージには、ユーザーが選択できる次の添付ファイルが含まれている必要があります(プレビューまたは開く、またはローカルOneDrive `FileCard` ダウンロードします。
+ユーザーのサーバーにファイルをアップロードOneDrive、ユーザーに確認メッセージを送信します。 メッセージには、ユーザー`FileCard`が選択できる次の添付ファイルが含まれている必要があります(プレビューまたは開く、またはローカルOneDriveダウンロードします。
 
 ```json
 {
@@ -324,6 +324,10 @@ private async Task SendFileCardAsync(ITurnContext turnContext, string filename, 
 |**サンプルの名前** | **説明** | **.NET** | **Javascript** | **Python**|
 |----------------|-----------------|--------------|----------------|-----------|
 | ファイルのアップロード | ファイルの同意を取得し、ボットからファイルをTeamsする方法を示します。 また、ボットに送信されたファイルを受信する方法も示します。 | [表示](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/56.teams-file-upload) | [表示](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/56.teams-file-upload) | [表示](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/56.teams-file-upload) |
+
+## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
+
+ステップ バイ [ステップ ガイドに従って](../../sbs-file-handling-in-bot.yml)、ボットからTeamsファイルをアップロードします。
 
 ## <a name="next-step"></a>次のステップ
 
