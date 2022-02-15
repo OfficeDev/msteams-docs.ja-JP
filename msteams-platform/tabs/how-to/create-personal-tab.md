@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET MVC パッケージ appmanifest 会話ドメインアクセス許可ストア
-ms.openlocfilehash: 47f9e485d78fc1be845adac99bc4d6e41f943553
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 6fd5abaf21458560c65626982f57ae4a8eac722e
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518031"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821683"
 ---
 # <a name="create-a-personal-tab"></a>プライベート タブを作成する
 
@@ -137,7 +137,7 @@ ms.locfileid: "62518031"
 
     **タブに対Microsoft Azure Active Directory (Azure AD) シングル サインオンのサポートが必要ですか?**
 
-    タブ **に** シングル サインオンMicrosoft Azure Active Directory (Azure AD) を含めないを選択します。既定値ははい、n と **入力します**。
+    [**シングル** サインオンのサポートAzure AD含めない] を選択します。既定値ははい、n と **入力します**。
 
     > [!IMPORTANT]
     > パス コンポーネント **yourDefaultTabNameTab** は、[既定] タブ名のジェネレーターに入力した値に Tab という単語を加 **えた値です**。

@@ -4,12 +4,12 @@ author: surbhigupta
 description: Teams 会議やさまざまな会議シナリオ用のアプリの有効化と構成、アプリ マニフェストの更新、会議内ダイアログ、共有会議ステージ、会議サイドパネルなどの機能の構成
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 7eacd4c406dc81a2f6704a05d678eb6b70912856
-ms.sourcegitcommit: 60e4bbb013f0bb17a87a2e558abfcc311c73af75
+ms.openlocfilehash: 17dc9bce0bb6a54aea09d0f41b01840e5d2ca621
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62523781"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821592"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>会議で使用するアプリを有効Teamsする
 
@@ -140,7 +140,7 @@ API を使用して要求`userContext`をルーティングするには、「SDK
 
 <img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
 
-アプリ全体をステージ間で共有するには、アプリ マニフェスト`meetingStage``meetingSidePanel`でフレーム コンテキストとして構成する必要があります。 例:
+アプリ全体をステージ間で共有するには、アプリ マニフェスト`meetingStage``meetingSidePanel`でフレーム コンテキストとして構成する必要があります。 次に例を示します。
 
 ```json
 "configurableTabs": [
@@ -168,7 +168,7 @@ API を使用して要求`userContext`をルーティングするには、「SDK
 
 アプリの特定の部分をステージ間で共有するには、クライアント SDK ライブラリで関連する API をTeamsする必要があります。 詳細については、「API リファレンス [」を参照してください](API-references.md)。
 
-アプリで匿名ユーザーをサポート`from.id``from`する場合、最初の呼び出し要求ペイロードは、要求メタデータではなく、オブジェクト内の要求メタデータに依存する`from.aadObjectId`必要があります。 `from.id`はユーザー ID で`from.aadObjectId`、ユーザー Microsoft Azure Active Directory (Azure AD) ID です。 詳細については、「タブでタスク [モジュールを使用する」を参照し](../task-modules-and-cards/task-modules/task-modules-tabs.md)[、タスク モジュールを作成して送信します](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
+アプリで匿名ユーザーをサポート`from.id``from`する場合、最初の呼び出し要求ペイロードは、要求メタデータではなく、オブジェクト内の要求メタデータに依存する`from.aadObjectId`必要があります。 `from.id`はユーザー ID で`from.aadObjectId`、ユーザー Azure AD ID です。 詳細については、「タブでタスク [モジュールを使用する」を参照し](../task-modules-and-cards/task-modules/task-modules-tabs.md)[、タスク モジュールを作成して送信します](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
 
 ### <a name="after-a-meeting"></a>会議後
 

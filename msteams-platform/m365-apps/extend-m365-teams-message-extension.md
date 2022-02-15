@@ -4,12 +4,12 @@ description: 検索ベースのメッセージング拡張機能を更新して�
 ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: 410f019beeed078ed51c37c241e08511572e18b8
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 93775e543610500452da6ebd6535c1945d2f8dda
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518108"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821655"
 ---
 # <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>複数のTeamsメッセージング拡張機能を拡張Microsoft 365
 
@@ -97,9 +97,9 @@ ms.locfileid: "62518108"
 > [!NOTE]
 > Teams メッセージング拡張機能検索サンプル[を](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search)使用している場合は、Azure Active Directory (AAD) シングル Sign-On 認証を使用しない場合は、この手順を省略できます。
 
-Azure Active Directory拡張機能のシングル サインオン (SSO) は、Outlook Teams の場合と同じように動作しますが、Microsoft Azure Active Directory (Azure AD) [](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots)に複数のクライアント アプリケーション識別子を追加する必要Azure AD) テナントのアプリ登録ポータルでのボット *のアプリ登録*。
+Azure Active Directory メッセージング拡張機能のシングル サインオン (SSO) は、[Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots) と同様に Outlook で動作しますが、テナントのアプリ登録ポータルでボットの Azure AD アプリ登録にいくつかのクライアント アプリケーション識別子を追加する必要があります。
 
-1. サンドボックス テナント アカウントを[Microsoft Azureポータル](https://portal.azure.com)にサインインします。
+1. サンドボックス テナント アカウント [を使用して Azure portal](https://portal.azure.com) にサインインします。
 1. アプリ **の登録を開きます**。
 1. アプリケーションの名前を選択して、アプリ登録を開きます。
 1. [API  **の公開] ([管理]** の下) を *選択します*。

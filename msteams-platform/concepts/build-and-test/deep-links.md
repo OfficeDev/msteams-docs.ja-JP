@@ -4,12 +4,12 @@ description: ディープ リンクとアプリでの使用方法について説
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams ディープ リンク ディープリンク
-ms.openlocfilehash: 8f71bad37f858c2dff4cd1009168221ff02a6559
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 9d9e0ff794d413be1959e8e8ddaef1086acc307d
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518248"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821389"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成 
 
@@ -226,7 +226,7 @@ Teams の組み込みのスケジューリング ダイアログへのディー�
 
 クエリ パラメーターは次のとおりです。
 
-* `attendees`: 会議の参加者を表すユーザー ID のオプションのコンマ区切りリスト。 アクションを実行するユーザーは、会議の開催者です。 現在、[ユーザー ID] フィールドは、Microsoft Azure Active Directory (Azure AD) UserPrincipalName (通常はメール アドレス) のみをサポートしています。
+* `attendees`: 会議の参加者を表すユーザー ID のオプションのコンマ区切りリスト。 アクションを実行するユーザーは、会議の開催者です。 現在、[ユーザー ID] フィールドは、Azure AD UserPrincipalName (通常はメール アドレス) のみをサポートしています。
 * `startTime`: イベントのオプションの開始時間。 これは、[long ISO 8601 形式](https://en.wikipedia.org/wiki/ISO_8601) ( 例: *2018-03-12T23:55:25+02:00*)である必要があります。
 * `endTime`: イベントの終了時刻 (省略可能、 ISO 8601形式)。
 * `subject`: 会議の件名の省略可能なフィールド。
@@ -246,9 +246,6 @@ Teams の組み込みのスケジューリング ダイアログへのディー�
 > [!NOTE]
 > このディープリンクは、会議の呼び出しには使用できません。
 
-> [!NOTE]
-> 現在、通話へのディープリンクは Teams モバイル デバイスではサポートされていません。
-
 ### <a name="generate-a-deep-link-to-a-call"></a>通話へのディープ リンクを生成する
 
 | ディープ リンク | フォーマット | 例 |
@@ -259,7 +256,7 @@ Teams の組み込みのスケジューリング ダイアログへのディー�
 | VoIP ユーザーと PSTN ユーザーの組み合わせに音声通話とビデオ通話を発信する | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,4:&lt;phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com、4:9876543210 |
   
 クエリ パラメーターは次のとおりです。
-* `users`: 通話の参加者を表すユーザー ID のコンマで区切られたリスト。 現在、[ユーザー ID] フィールドは Microsoft Azure Active Directory (Azure AD) UserPrincipalName (通常はメール アドレス) をサポートしています。PSTN 通話の場合は、pstn mri 4: &lt;phonenumber&gt; をサポートしています。
+* `users`: 通話の参加者を表すユーザー ID のコンマで区切られたリスト。 現在、[ユーザー ID] フィールドは Azure AD UserPrincipalName (通常はメール アドレス) をサポートしています。PSTN 通話の場合は、pstn mri 4: &lt;phonenumber&gt; をサポートしています。
 * `withVideo`: これはオプションのパラメータであり、ビデオ通話を行うために使用できます。 このパラメータを設定すると、発信者のカメラだけがオンになります。 通話の受信者は、Teams の通話通知ウィンドウから音声通話または音声通話とビデオ通話を選択できます。 
 * `Source`: これはオプションのパラメーターで、ディープリンクのソースを通知します。
 

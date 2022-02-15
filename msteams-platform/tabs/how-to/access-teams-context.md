@@ -4,12 +4,12 @@ description: タブにユーザー コンテクストを付与する方法を説
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: チーム タブ ユーザー コンテキスト
-ms.openlocfilehash: ca77ba61a880bb12067f884e8c294700938cc6be
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: a8e8fe6d638f8887a30f65dbf812046738d12dfb
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518129"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821732"
 ---
 # <a name="get-context-for-your-tab"></a>タブのコンテキストを取得する
 
@@ -44,12 +44,12 @@ ms.locfileid: "62518129"
 
 * {entityId}: 最初の [タブの構成](~/tabs/how-to/create-tab-pages/configuration-page.md) 時に、このタブのアイテムに与えた ID。
 * {subEntityId}: このタブ内の特定のアイテムのディープ [](~/concepts/build-and-test/deep-links.md) リンクを生成するときに指定した ID。これは、エンティティ内の特定の状態に復元するために使用する必要があります。たとえば、特定のコンテンツにスクロールしたり、アクティブ化したりします。
-* {loginHint}: ユーザーのログイン ヒントとして適したMicrosoft Azure Active Directory (Azure AD)。 これは通常、ホーム テナントの現在のユーザーのログイン名です。
+* {loginHint}: ユーザーのログイン ヒントとして適したAzure AD。 これは通常、ホーム テナントの現在のユーザーのログイン名です。
 * {userPrincipalName}: 現在のテナント内の現在のユーザーのユーザー プリンシパル名。
-* {userObjectId}: 現在Microsoft Azure Active DirectoryのAzure ADのオブジェクト ID を指定します。
+* {userObjectId}: 現在Azure AD現在のユーザーのオブジェクト ID を指定します。
 * {theme}: 現在のユーザー インターフェイス (UI) テーマ `default`(例: 、 `dark`、 `contrast`または )
 * {groupId}: タブがOffice 365グループの ID。
-* {tid}: 現在Microsoft Azure Active Directory (Azure AD) テナント ID です。
+* {tid}: 現在のユーザーの Azure AD テナント ID。
 * {locale}: languageId-countryId(ja-us) として書式設定されたユーザーの現在のロケール。
 
 > [!NOTE]
@@ -82,10 +82,10 @@ ms.locfileid: "62518129"
     "locale": "The current locale of the user formatted as languageId-countryId (for example, en-us)",
     "entityId": "The developer-defined unique ID for the entity this content points to",
     "subEntityId": "The developer-defined unique ID for the sub-entity this content points to",
-    "loginHint": "A value suitable as a login hint for Microsoft Azure Active Directory (Azure AD). This is usually the login name of the current user, in their home tenant",
+    "loginHint": "A value suitable as a login hint for Azure AD. This is usually the login name of the current user, in their home tenant",
     "userPrincipalName": "The principal name of the current user, in the current tenant",
-    "userObjectId": "The Microsoft Azure Active Directory (Azure AD) object id of the current user, in the current tenant",
-    "tid": "The Microsoft Azure Active Directory (Azure AD) tenant ID of the current user",
+    "userObjectId": "The Azure AD object id of the current user, in the current tenant",
+    "tid": "The Azure AD tenant ID of the current user",
     "groupId": "Guid identifying the current Office 365 Group ID",
     "theme": "The current UI theme: default | dark | contrast",
     "isFullScreen": "Indicates if the tab is in full-screen",

@@ -6,12 +6,12 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: f8de6dd66b281f8cf842e5439d3a217598f46047
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 1ae613332f7a07ae0d0ae9ed65b75429db64b429
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518115"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821578"
 ---
 # <a name="cicd-guide"></a>CI/CD ガイド
 
@@ -245,8 +245,8 @@ CI/CD 内で Azure を対象とするリソースをプロビジョニングお�
 
 Azure サービス プリンシパルを作成するには、次の手順を実行します。
 1. 単一テナントMicrosoft Azure Active Directory (Azure AD) アプリケーションを登録します。
-2. Azure サブスクリプションにアクセスするには、Microsoft Azure Active Directory (Azure AD) `Contributor` アプリケーションにロールを割り当て、ロールをお勧めします。 
-3. 新しいアプリケーション Microsoft Azure Active Directory (Azure AD) アプリケーション シークレットを作成します。
+2. Azure サブスクリプションにアクセスするには、Azure ADアプリケーション`Contributor`にロールを割り当て、ロールをお勧めします。 
+3. 新しいアプリケーション シークレットAzure AD作成します。
 
 > [!TIP]
 > テナント ID、アプリケーション ID(AZURE_SERVICE_PRINCIPAL_NAME)、および secret(AZURE_SERVICE_PRINCIPAL_PASSWORD) を将来使用するために保存します。

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: ボット コンテキスト名簿ユーザー プロファイル チャネル リスト
-ms.openlocfilehash: 69f4f81720fc24acfbfb6ae5b0769e37511bd7b7
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: c356ea8e498f68ba1aec5c438840a366818070d0
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518570"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821620"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>ボットTeams特定のコンテキストを取得する
 
@@ -21,7 +21,7 @@ ms.locfileid: "62518570"
 
 ## <a name="fetch-the-roster-or-user-profile"></a>名簿またはユーザー プロファイルを取得する
 
-ボットは、Teams ユーザー ID や Microsoft Azure Active Directory (Azure AD) 情報 (名前や objectId など) を含む、メンバーのリストとその基本的なユーザー プロファイルを照会できます。 この情報を使用して、ユーザー ID を関連付けできます。 たとえば、ユーザーが (Microsoft Azure Active Directory) Azure AD資格情報を使用してタブにログインしたかどうかを確認するには、チームのメンバーです。 会話メンバーを取得する場合、最小または最大のページ サイズは実装によって異なります。 50 未満のページ サイズは 50 として扱い、500 より大きい場合は 500 に制限されます。 ページ以外のバージョンを使用する場合でも、大規模なチームではこのバージョンは使用できません。 詳細については、「チームまたはチャット [メンバーをフェッチTeamsボット API に対する変更」を参照してください](~/resources/team-chat-member-api-changes.md)。
+ボットは、Teams ユーザー ID や Microsoft Azure Active Directory (Azure AD) 情報 (名前や objectId など) を含む、メンバーのリストとその基本的なユーザー プロファイルを照会できます。 この情報を使用して、ユーザー ID を関連付けできます。 たとえば、ユーザーが資格情報を使用してタブにログインAzure AD確認するには、チームのメンバーです。 会話メンバーを取得する場合、最小または最大のページ サイズは実装によって異なります。 50 未満のページ サイズは 50 として扱い、500 より大きい場合は 500 に制限されます。 ページ以外のバージョンを使用する場合でも、大規模なチームではこのバージョンは使用できません。 詳細については、「チームまたはチャット [メンバーをフェッチTeamsボット API に対する変更」を参照してください](~/resources/team-chat-member-api-changes.md)。
 
 次のサンプル コードでは、ページ化されたエンドポイントを使用して、名簿をフェッチします。
 
@@ -128,7 +128,7 @@ Response body
 
 ## <a name="get-single-member-details"></a>単一のメンバーの詳細を取得する
 
-特定のユーザーの詳細は、ユーザー ID、UP Microsoft Azure Active Directory N、または Teams (Azure AD) オブジェクト ID を使用して取得できます。
+ユーザー ID、UPN、またはオブジェクト ID を使用して、特定のTeamsを取得Azure ADできます。
 
 次のサンプル コードは、単一のメンバーの詳細を取得するために使用されます。
 
@@ -212,7 +212,7 @@ Response body
 
 ## <a name="get-teams-details"></a>チームの詳細を取得する
 
-チームにインストールすると、ボットは、そのチームに関するメタデータ (グループ ID を含むMicrosoft Azure Active DirectoryクエリAzure ADできます。
+チームにインストールすると、ボットはグループ ID を含むそのチームに関するメタデータをAzure ADできます。
 
 チームの詳細を取得するには、次のサンプル コードを使用します。
 

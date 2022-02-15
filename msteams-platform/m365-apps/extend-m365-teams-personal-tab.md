@@ -5,12 +5,12 @@ ms.date: 11/15/2021
 ms.topic: tutorial
 ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
-ms.openlocfilehash: d22f29e75b9d8d074b0c689fa61f96dcdc23b5d1
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 9c6c88835dc24c64f93605d09ac15da5409add0f
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518024"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821417"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>複数のユーザー Teamsの個人用タブを拡張Microsoft 365
 
@@ -120,16 +120,16 @@ Teams Toolkit を使用`@microsoft/teams-js`すると、コード変更の一部
 | Office | `*.office.com` |
 | Outlook | `outlook.office.com`, `outlook.office365.com` |
 
-## <a name="update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso"></a>SSO Microsoft Azure Active Directory (Azure AD) アプリ登録を更新する
+## <a name="update-azure-ad-app-registration-for-sso"></a>SSO Azure ADアプリ登録の更新
 
-Azure Active Directory 個人用タブのシングル サインオン (SSO) は、Office と Outlook [Teams](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso) の場合と同じように動作しますが、Microsoft Azure Active Directory (Azure AD) テナントのアプリ登録ポータルでのタブ アプリ *のアプリ登録*。
+Azure Active Directory 個人用タブのシングル サインオン (SSO) は、Teams と同様に Office と Outlook で動作しますが、テナントのアプリ[](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso)登録ポータルで、タブ アプリの Azure AD アプリ登録にいくつかのクライアント アプリケーション識別子を追加する必要があります。
 
 1. サンドボックス テナント アカウントを[Microsoft Azureポータル](https://portal.azure.com)にサインインします。
 1. [アプリの **登録] ブレードを開** きます。
 1. 個人用タブ アプリケーションの名前を選択して、アプリ登録を開きます。 
 1. [API  **の公開] ([管理]** の下) を *選択します*。
 
-:::image type="content" source="images/azure-app-registration-clients.png" alt-text="ポータルの *App 登録* ブレードからクライアント id をMicrosoft Azureする":::
+:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Azure portal の *App 登録* ブレードからクライアント ID を承認する":::
 
 [承認済 **みクライアント アプリケーション] セクション** で、次のすべての値が `Client Id` 追加されます。
 

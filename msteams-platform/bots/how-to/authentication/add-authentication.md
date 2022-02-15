@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: リソース グループ ボット登録 Azure エミュレーター ボット マニフェスト
-ms.openlocfilehash: 6757b355ba9821e6966d5caf88d1a881d48d3145
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 8236a31eef3422ac8efca6f06437a62efafc778e
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435671"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821613"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Teams ボットに認証を追加する
 
@@ -65,7 +65,7 @@ Azure Bot Service が認証を処理する方法の詳細については、「�
 
 ## <a name="create-the-service-plan"></a>サービス プランの作成
 
-1. ポータルの [**Microsoft Azure左側**][azure-portal]のナビゲーション パネルで、[リソースの作成 **] を選択します**。
+1. Azure portal [**の左側の**][azure-portal]ナビゲーション パネルで、[リソースの作成 **] を選択します**。
 1. 検索ボックスに「 *App Service Plan」と入力します*。 検索結果から **[App Service プラン** ] カードを選択します。
 1. **[作成]** を選択します。
 1. 次の情報の入力を求めるメッセージが表示されます。
@@ -83,9 +83,9 @@ Azure Bot Service が認証を処理する方法の詳細については、「�
 Azure Bot リソース登録は、Web サービスをボットとしてボットフレームワークに登録し、Microsoft App Id と App パスワード (クライアント シークレット) を提供します。
 
 > [!IMPORTANT]
-> ボットが Azure でホストされていない場合にのみ、ボットを登録する必要があります。 ポータルから[ボットを](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0&preserve-view=true)作成したMicrosoft Azure、既にサービスに登録されています。 ボット フレームワークまたは開発者ポータル [を使用して](https://dev.botframework.com/bots/new) ボットを作成した [場合、ボット](../../../concepts/build-and-test/teams-developer-portal.md) は Azure に登録されていません。
+> ボットが Azure でホストされていない場合にのみ、ボットを登録する必要があります。 Azure ポータル [を使用して](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0&preserve-view=true) ボットを作成した場合、そのボットは既にサービスに登録されています。 ボット フレームワークまたは開発者ポータル [を使用して](https://dev.botframework.com/bots/new) ボットを作成した [場合、ボット](../../../concepts/build-and-test/teams-developer-portal.md) は Azure に登録されていません。
 
-1. [[**Microsoft Azure] ポータルにアクセス**][azure-portal]し、[リソースの作成] セクション **で Azure Bot** **を検索** します。
+1. Azure [**portal にアクセスし**][azure-portal] 、[リソースの作成 **] セクションで Azure Bot** **を検索** します。
 1. Azure Bot を **開き、[** 作成] を **選択します**。
 1. [ボット ハンドル] フィールドにボット ハンドル **名を入力** します。
 1. ドロップダウン リスト **から [サブスクリプション** ] を選択します。
@@ -106,7 +106,7 @@ Azure Bot リソース登録は、Web サービスをボットとしてボット
 
 1. [**リソースに移動**] を選びます。 ボットと関連リソースがリソース グループに一覧表示されます。
 
-    ![[リソースに移動]](~/assets/images/adaptive-cards/go-to-resource-card.png)
+    ![リソースに移動する](~/assets/images/adaptive-cards/go-to-resource-card.png)
 
     これで、Azure ボットが作成されます。
     
@@ -160,7 +160,7 @@ Azure Bot リソース登録は、Web サービスをボットとしてボット
 認証に使用できる ID プロバイダーが必要です。
 この手順では、サポートされている id プロバイダー Azure AD他Azure ADを使用できます。
 
-1. [ポータル] [**Microsoft Azure**][azure-portal]左側のナビゲーション パネルで、[ファイル **] を選択** Azure Active Directory。
+1. Azure portal [**で、**][azure-portal]左側のナビゲーション パネルで 、[ユーザー **] を選択** Azure Active Directory。
     > [!TIP]
     > アプリケーションから要求されたアクセス許可を委任Azure AD、このリソースをテナントに作成して登録する必要があります。
     > テナントの作成方法については、「Access [the portal and create a tenant」を参照してください](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)。
@@ -193,7 +193,7 @@ Azure Bot リソース登録は、Web サービスをボットとしてボット
 
 #### <a name="microsoft-azure-active-directory-azure-ad-v1"></a>Microsoft Azure Active Directory (Azure AD) V1
 
-1. [ポータル [**] Microsoft Azure、**][azure-portal]ダッシュボードからリソース グループを選択します。
+1. Azure portal [**で、**][azure-portal]ダッシュボードからリソース グループを選択します。
 1. ボット登録リンクを選択します。
 1. リソース ページを開き、[構成] **の下** の **[構成] 設定**。 
 1. [**OAuth 接続の追加] を設定**。    
@@ -222,7 +222,7 @@ Azure Bot リソース登録は、Web サービスをボットとしてボット
 
 #### <a name="microsoft-azure-active-directory-azure-ad-v2"></a>Microsoft Azure Active Directory (Azure AD) V2
 
-1. ポータルで [**Microsoft Azure**][azure-portal]ダッシュボードから Azure Bot を選択します。
+1. Azure portal [**で、**][azure-portal]ダッシュボードから Azure Bot を選択します。
 1. リソース ページで、[構成] の [構成 **]** **を選択設定**。 
 1. [**OAuth 接続の追加] を設定**。  
 次の図は、リソース ページで対応する選択内容を表示します。        
@@ -331,7 +331,7 @@ Azure Bot リソース登録は、Web サービスをボットとしてボット
 
 1. **[作成]** を選択します。
 1. 展開が正常に完了した場合は、展開がサーバーに反映Visual Studio。 さらに、既定のブラウザーに、ボットの準備が完了した *というページが表示されます*。 URL は次に似ています。 `https://botteamsauth.azurewebsites.net/` ファイルに保存します。
-1. ブラウザーで、ポータルのMicrosoft Azure [**します**][azure-portal]。
+1. ブラウザーで、 [**Azure ポータルに移動します**][azure-portal]。
 1. リソース グループを確認すると、ボットが他のリソースと共に一覧表示されます。 次の図は、例です。
 
     ![teams-bot-auth-app-service-group](../../../assets/images/authentication/auth-bot-app-service-in-group.png)
@@ -404,7 +404,7 @@ Azure Bot リソース登録は、Web サービスをボットとしてボット
 <!--There are several testing scenarios here. Ideally, we'd have a separate article on the what, why, 
 and when for these, and just reference that from here, along with the set of steps that exercises the bot code.-->
 
-1. ブラウザーで、ポータルのMicrosoft Azure [**します**][azure-portal]。
+1. ブラウザーで、 [**Azure ポータルに移動します**][azure-portal]。
 1. リソース グループを検索します。
 1. リソース リンクを選択します。 リソース ページが表示されます。
 1. リソース ページで、[Web チャットで **テスト] を選択します**。 ボットは、定義済みの案内応答を開始して表示します。
@@ -465,7 +465,7 @@ Microsoft Teams完全にクラウドベースの製品である場合、HTTPS �
 1. 転送 HTTPS アドレスをコピーします。 これは、次のようになります。 `https://dea822bf.ngrok.io/`
 1. 取得するには `/api/messages` 、追加します `https://dea822bf.ngrok.io/api/messages`。 これは、**コンピューター上でローカル** に実行され、コンピューター内のチャットで web を使用して到達可能なボットのメッセージ エンドポイントMicrosoft Teams。
 1. 実行する最後の手順の 1 つは、展開されたボットのメッセージ エンドポイントを更新する方法です。 この例では、Azure にボットを展開しました。 次の手順を実行します。
-    1. ブラウザーで、ポータルのMicrosoft Azure [**します**][azure-portal]。
+    1. ブラウザーで Azure ポータル [**に移動します**][azure-portal]。
     1. ボット登録 **を選択します**。
     1. 左側のパネルで、[次へ] **を設定**。
     1. 右側のパネルの [ **メッセージング エンドポイント]** ボックスに、ngrok URL を入力します。この例では、 を入力します `https://dea822bf.ngrok.io/api/messages`。
@@ -479,7 +479,7 @@ Microsoft Teams完全にクラウドベースの製品である場合、HTTPS �
 > ngrok を停止して再起動すると、URL が変更されます。 プロジェクトで ngrok を使用するには、使用している機能に応じて、すべての URL 参照を更新する必要があります。
  
 
-## <a name="additional-information"></a>ページの先頭へ
+## <a name="additional-information"></a>追加情報
 
 ### <a name="teamsappmanifestmanifestjson"></a>TeamsAppManifest/manifest.json
 

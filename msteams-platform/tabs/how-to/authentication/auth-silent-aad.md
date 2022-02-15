@@ -1,15 +1,15 @@
 ---
 title: サイレント認証
-description: タブのサイレント認証、シングル サインオン、Microsoft Azure Active Directory (Azure AD) について説明します。
+description: サイレント認証、シングル サインオン、タブのAzure AD説明します。
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: teams 認証 SSO サイレント Microsoft Azure Active Directory (Azure AD) タブ
-ms.openlocfilehash: 700f0d3f752beb7b09b76a805f2bbcd7adf82fb9
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+keywords: teams 認証 SSO サイレント Azure ADタブ
+ms.openlocfilehash: e59b7ff30a0659b670796c56b97eda437f907739
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518465"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821571"
 ---
 # <a name="silent-authentication"></a>サイレント認証
 
@@ -19,9 +19,9 @@ ms.locfileid: "62518465"
 > [!NOTE]
 > モバイル クライアントでタブで認証を機能するには、JavaScript SDK バージョン 1.4.1 以降Teamsを使用してください。
 
-Microsoft Azure Active Directory (Azure AD) のサイレント認証は、ユーザーが資格情報を入力する回数を最小限に抑えるために、認証トークンをサイレント 更新します。 シングル サインオンの真のサポートについては、SSO のドキュメント [を参照してください](~/tabs/how-to/authentication/auth-aad-sso.md)。
+サイレント認証はAzure ADトークンをサイレント 更新することで、ユーザーが資格情報を入力する回数を最小限に抑える必要があります。 シングル サインオンの真のサポートについては、SSO のドキュメント [を参照してください](~/tabs/how-to/authentication/auth-aad-sso.md)。
 
-コードクライアント側を保持するには、JavaScript [の Microsoft Azure Active Directory (Azure AD)](/azure/active-directory/develop/active-directory-authentication-libraries) 認証ライブラリを使用して、Microsoft Azure Active Directory (Azure AD) アクセス トークンをサイレント モードで取得します。 ユーザーが最近サインインした場合、ポップアップ ダイアログ ボックスは表示されない。
+コードクライアント側を保持するには、JavaScript Azure AD[](/azure/active-directory/develop/active-directory-authentication-libraries)認証ライブラリを使用して、Microsoft Azure Active Directory (Azure AD) アクセス トークンをサイレント モードで取得します。 ユーザーが最近サインインした場合、ポップアップ ダイアログ ボックスは表示されない。
 
 Active Directory 認証ライブラリは AngularJS アプリケーション用に最適化されています。JavaScript シングル ページ アプリケーション (SPA) でも機能します。
 
@@ -30,13 +30,13 @@ Active Directory 認証ライブラリは AngularJS アプリケーション用�
 
 ## <a name="how-silent-authentication-works"></a>サイレント認証の仕組み
 
-Active Directory 認証ライブラリは、OAuth 2.0 暗黙的な付与フロー用の非表示の iframe を作成します。 ただし、ライブラリは `prompt=none`、サインイン Microsoft Azure Active Directory (Azure AD) を表示しないので、指定します。 ユーザーがサインインするか、アプリケーションへのアクセスを許可する必要がある場合は、ユーザーの操作が必要になる場合があります。 ユーザーの操作が必要なMicrosoft Azure Active Directory (Azure AD) は、ライブラリがアプリに報告するエラーを返します。 必要に応じて、アプリにサインイン オプションを表示できます。
+Active Directory 認証ライブラリは、OAuth 2.0 暗黙的な付与フロー用の非表示の iframe を作成します。 ただし、ライブラリは 、`prompt=none`サインイン Azure ADページを表示しないので、指定します。 ユーザーがサインインするか、アプリケーションへのアクセスを許可する必要がある場合は、ユーザーの操作が必要になる場合があります。 ユーザーの操作が必要な場合Azure AD、ライブラリがアプリに報告するエラーが返されます。 必要に応じて、アプリにサインイン オプションを表示できます。
 
 ## <a name="how-to-do-silent-authentication"></a>サイレント認証を実行する方法
 
 この記事のコードは、認証サンプル ノードTeamsサンプル アプリTeams[から来ます](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)。
 
-[Microsoft Azure Active Directory (Azure AD)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) を使用して、サイレントで簡単な認証構成可能なタブを開始し、指示に従ってローカル コンピューターでサンプルを実行します。
+[[サイレント認証] タブと](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) [簡易認証構成可能] Azure ADを開始し、指示に従ってローカル コンピューターでサンプルを実行します。
 
 ### <a name="include-and-configure-active-directory-authentication-library"></a>Active Directory 認証ライブラリを含め、構成する
 
@@ -48,7 +48,7 @@ Active Directory 認証ライブラリをタブ ページに含め、クライ�
     // Active Directory Authentication Library configuration
     let config = {
         clientId: "YOUR_APP_ID_HERE",
-        // redirectUri must be in the list of redirect URLs for the Microsoft Azure Active Directory (Azure AD) app
+        // redirectUri must be in the list of redirect URLs for the Azure AD app
         redirectUri: window.location.origin + "/tab-auth/silent-end",
         cacheLocation: "localStorage",
         navigateToLoginRequestUrl: false,
@@ -58,7 +58,7 @@ Active Directory 認証ライブラリをタブ ページに含め、クライ�
 
 ### <a name="get-the-user-context"></a>ユーザー コンテキストの取得
 
-タブのコンテンツ ページで、現在 `microsoftTeams.getContext()` のユーザーのサインイン ヒントを取得するために呼び出します。 ヒントは、ユーザーの呼`loginHint`び出し (Microsoft Azure Active Directory) としてAzure AD。
+タブのコンテンツ ページで、現在 `microsoftTeams.getContext()` のユーザーのサインイン ヒントを取得するために呼び出します。 ヒントは、ユーザーに対する`loginHint`呼び出しで使用Azure AD。
 
 ```javascript
 // Set up extra query parameters for Active Directory Authentication Library
@@ -108,7 +108,7 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 
 ### <a name="process-the-return-value"></a>戻り値を処理する
 
-Active Directory 認証ライブラリは、サインイン コールバック ページでMicrosoft Azure Active Directory (Azure AD) `AuthenticationContext.handleWindowCallback(hash)` から結果を解析します。
+Active Directory 認証ライブラリは、サインイン コールバック ページAzure AD呼`AuthenticationContext.handleWindowCallback(hash)`び出すことによって、ユーザーからの結果を解析します。
 
 有効なユーザーを持ち、電話をか`microsoftTeams.authentication.notifySuccess()``microsoftTeams.authentication.notifyFailure()`けられているか、メイン タブのコンテンツ ページに状態を報告してください。
 
@@ -127,7 +127,7 @@ if (authContext.isCallback(window.location.hash)) {
 
 ### <a name="handle-the-sign-out-flow"></a>サインアウト フローの処理
 
-次のコードを使用して、認証 (Microsoft Azure Active Directory) Azure AD処理します。
+次のコードを使用して、認証のサインアウト フローをAzure ADします。
 
 > [!NOTE]
 > タブまたはボットからTeamsすると、現在のセッションがクリアされます。
@@ -141,5 +141,5 @@ window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 
 ## <a name="see-also"></a>関連項目
 
-* [ID プロバイダーがユーザーを使用Microsoft Azure Active Directory構成する (Azure AD)](../../../concepts/authentication/configure-identity-provider.md)
+* [ID プロバイダーが ID プロバイダーを使用Azure AD](../../../concepts/authentication/configure-identity-provider.md)
 * [Microsoft 認証ライブラリ (MSAL) について](/azure/active-directory/develop/msal-overview)

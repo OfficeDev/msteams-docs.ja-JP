@@ -4,12 +4,12 @@ description: ユーザー トークンを取得する方法について説明し
 keywords: トークン、ユーザー トークン、ボットの SSO サポート、アクセス許可、Microsoft Graph、Azure AD
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 0c354c4f60ff334ba5cc8a98fb3d3a346a8bb06e
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 760c9f964298e120dfaf5cfadd199f5a7d02454f
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435692"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821599"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>ボットのシングル サインオン (SSO) のサポート
 
@@ -159,7 +159,7 @@ ms.locfileid: "62435692"
 
 #### <a name="update-manifest-in-microsoft-azure-portal"></a>ポータルでマニフェストをMicrosoft Azureする
 
-次の手順では、ポータルでボット マニフェストを更新Microsoft Azureします。
+次の手順では、Azure portal でボット マニフェストを更新する方法について説明します。
 
 1. 左側 **のウィンドウから** [マニフェスト] を選択します。
 1. 構成項目が " **accessTokenAcceptedVersion": 2 に設定されている必要があります**。 指定しない場合は、値を 2 に **変更します**。
@@ -174,9 +174,9 @@ ms.locfileid: "62435692"
 
 #### <a name="update-the-azure-portal-with-the-oauth-connection"></a>OAuth 接続を使用して Azure ポータルを更新する
 
-次の手順では、OAuth 接続を使用してMicrosoft Azureポータルを更新します。
+次の手順では、OAuth 接続を使用して Azure portal を更新します。
 
-1. ポータルでMicrosoft Azure [**AzureBot に移動します。**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
+1. Azure ポータルで、 [**AzureBot に移動します。**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
 1. 左側のウィンドウ **の [** 構成] に移動します。
 1. [**OAuth 接続の追加] を設定**。
 

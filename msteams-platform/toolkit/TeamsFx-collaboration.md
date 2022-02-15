@@ -6,12 +6,12 @@ ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: af96227df93bb2c236607791e3870b1882d2da5f
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 692eebc774de42bddb2f832cb22681991ac0d87b
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518374"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821382"
 ---
 # <a name="collaborate-on-teams-project-using-teams-toolkit"></a>プロジェクトを使用Teams共同作業Teams Toolkit
 
@@ -40,15 +40,15 @@ ms.locfileid: "62518374"
 > [!NOTE]
 > 環境の共同作業者を追加する前に、プロジェクトの所有者が最初に [プロジェクトを準備する](provision.md) 必要があります。
 
-* [**ユーザーの環境**] セクションでTeams Toolkit共同作業者 **を選択します**。 [アプリの追加] Microsoft 365 Teams **(Microsoft Azure Active Directory (Azure AD) アプリ)** の所有者とリスト Microsoft 365 Teams アプリ **(Azure AD アプリ) が表示されます。次の** 図に示すように、所有者。
+* [**ユーザーの環境**] セクションでTeams Toolkit共同作業者 **を選択します**。 次 Microsoft 365 Teamsの図に示すように、[アプリの追加] **(Azure AD アプリ)** の所有者とリスト **Microsoft 365 Teams アプリ (Azure AD App を使用) 所有者** のオプションが表示されます。
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add collaborators.png" alt-text="共同作業者":::
 
-* [**アプリMicrosoft 365 Teamsを追加する (Microsoft Azure Active Directory (Azure AD) アプリ) 所有者を** 選択し、他のアカウントのMicrosoft 365を共同作業者として追加します。 追加するアカウントは、イメージに示すように、リモート デバッグ用のプロジェクト所有者と同じテナント上にある必要があります。
+* [**アプリMicrosoft 365 TeamsをAzure AD]** 所有者を選択し、他Microsoft 365アカウントの電子メール アドレスを共同作業者として追加します。 追加するアカウントは、イメージに示すように、リモート デバッグ用のプロジェクト所有者と同じテナント上にある必要があります。
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="envi を追加する":::
 
-* 現在の環境で共同作業者を表示するには、[リスト Microsoft 365 Teams **アプリ] (Microsoft Azure Active Directory (Azure AD) App)** 所有者を選択し、次の図に示すように、共同作業者が出力チャネルに一覧表示されます。
+* 現在の環境で共同作業者を表示するには、[リスト Microsoft 365 Teams **App] (Azure AD App を使用して) [所有者]** を選択すると、次の図に示すように、共同作業者が出力チャネルに一覧表示されます。
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="リスト":::
 
@@ -77,8 +77,8 @@ ms.locfileid: "62518374"
   1. [開発者ポータルTeamsに移動し、名前またはアプリ ID Teamsアプリを選択します。
   2. 左側の **パネルから [所有者** ] を選択します。
   3. 共同作業者を選択して削除します。
-  4. [アプリの[Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)] に移動し、左側のパネルから [アプリの登録] を選択し、Microsoft Azure Active Directory (Azure AD) アプリを探します。
-  5. [**アプリの** 管理] ページの左側Microsoft Azure Active Directory (Azure AD) から [所有者] を選択します。
+  4. [[アプリの](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)Azure Active Directory] に移動し、左側 **の** パネルから [アプリの登録] を選択し、アプリAzure ADします。
+  5. [アプリ **の管理**] ページの左側のAzure ADから [所有者] を選択します。
   6. 共同作業者を選択して削除します。
 
 > [!NOTE]

@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: 837c311bf777b337187dbc54555b5268082a103f
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 450afc9728a0c5f727dc772909da5c0e1b92f55b
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62517989"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821711"
 ---
 # <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>SaaS オファーをアプリにMicrosoft Teamsする
 
@@ -81,7 +81,7 @@ Teams ストアでアプリのサブスクリプション プランの購入が�
 
 収益化するアプリのランディング ページを作成する際には、次Teams方法を検討してください。 エンド ユーザーの購入エクスペリエンスでランディング ページ [の例を参照してください](#end-user-purchasing-experience)。
 
-* ユーザーは、サブスクリプションの購入に使用したMicrosoft Azure Active Directory (Azure AD) 資格情報を使用してランディング ページにログインできる必要があります。 詳細については、「商用マーケットプレース[Microsoft Azure Active Directory(Azure AD)および取引可能な SaaS オファー」を参照してください](/azure/marketplace/azure-ad-saas)。
+* ユーザーは、サブスクリプションの購入に使用した資格情報と同Azure ADランディング ページにログインできる必要があります。 詳細については、「商用マーケットAzure AD SaaS の販売と取引可能な [SaaS オファー」を参照してください](/azure/marketplace/azure-ad-saas)。
 * ユーザーがランディング ページで次の操作を実行できます。 ユーザーの役割とアクセス許可に適した機能を検討することを忘れないでください (たとえば、サブスクリプション管理者だけがユーザーを検索することを許可する場合があります)。
   * 電子メールまたは別の形式の ID を使用して、組織のユーザーを検索します。
   * リストでライセンスを割り当て可能なユーザーを確認します。

@@ -4,12 +4,12 @@ description: タブの認証フローについて説明し、OAuth Azure ADコ�
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams 認証フロー タブ
-ms.openlocfilehash: a4d6c184ca0747a2b0328e0194ebad472e9dfa6e
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: c0a3617332d3392c36f21645d4fb0074008ced40
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518297"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821375"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>Microsoft Teamsの認証フロー
 
@@ -27,9 +27,9 @@ OAuth 2.0 は、Microsoft Azure Active Directory (Azure AD) および他の多�
 ![タブ認証シーケンス図](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
 1. ユーザーは、タブ構成またはコンテンツ ページのコンテンツ (通常は [サインイン] または [ログイン] ボタン) **を操作** します。
-2. タブは、認証開始ページの URL を作成します。 必要に応じて、URL `microsoftTeams.getContext()` プレースホルダーからの情報を使用するか、クライアント SDK Teams呼び出しを使用して、ユーザーの認証エクスペリエンスを合理化します。 たとえば、A Microsoft Azure Active Directory (Azure AD`login_hint`) を使用して認証する場合、パラメーターがユーザーの電子メール アドレスに設定されている場合、ユーザーが最近サインインしている場合は、サインインする必要が生じないので、ユーザーはサインインする必要があります。 これは、ユーザー Microsoft Azure Active Directory (Azure AD) がユーザーのキャッシュされた資格情報を使用する理由です。 ポップアップ ウィンドウが簡単に表示され、表示されなくなります。
+2. タブは、認証開始ページの URL を作成します。 必要に応じて、URL `microsoftTeams.getContext()` プレースホルダーからの情報を使用するか、クライアント SDK Teams呼び出しを使用して、ユーザーの認証エクスペリエンスを合理化します。 たとえば`login_hint`、A Azure AD を使用して認証する場合、パラメーターがユーザーの電子メール アドレスに設定されている場合、ユーザーが最近ログインした場合、ユーザーはサインインする必要がなされます。 これは、ユーザー Azure ADキャッシュされた資格情報を使用する必要があるためです。 ポップアップ ウィンドウが簡単に表示され、表示されなくなります。
 3. 次に、タブは `microsoftTeams.authentication.authenticate()` メソッドを呼び出し、`successCallback` 関数と `failureCallback` 関数を登録します。
-4. Teamsポップアップ ウィンドウで iframe でスタート ページを開きます。 スタート ページはランダム な`state` `/authorize` `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize`データを生成し、将来の検証のために保存し、id プロバイダーのエンドポイント (たとえば、id プロバイダーのエンドポイントMicrosoft Azure Active Directory (Azure AD) にリダイレクトします。 context.tid `<tenant id>` である独自のテナント ID に置き換える。
+4. Teamsポップアップ ウィンドウで iframe でスタート ページを開きます。 スタート ページはランダム な`state` `/authorize` `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize`データを生成し、将来の検証のために保存し、ID プロバイダーのエンドポイント (たとえば、id プロバイダーのエンドポイントにリダイレクトAzure AD。 context.tid `<tenant id>` である独自のテナント ID に置き換える。
 Teams `validDomains` の他のアプリケーション認証フローと同様に、スタート ページはリスト内のドメイン上に、およびポスト サインイン リダイレクト ページと同じドメイン上にある必要があります。
 
     > [!NOTE]
@@ -51,11 +51,11 @@ Teams `validDomains` の他のアプリケーション認証フローと同様�
 
 | **サンプルの名前** | **説明** | **C#** | **Node.js** |
 |-----------------|-----------------|-------------|------------|
-| Teamsタブ認証 | タブを使用したタブのMicrosoft Azure Active Directory (Azure AD)。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
+| Teamsタブ認証 | タブを使用したタブの認証Azure AD。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
 
 ## <a name="see-also"></a>関連項目
 
-タブ認証の詳細な実装については、「Microsoft Azure Active Directory (Azure AD」を参照してください。
+ユーザー設定を使用したタブ認証の詳細な実装Azure ADを参照してください。
 
 * [[ユーザーの認証] タブでTeamsする](~/tabs/how-to/authentication/auth-tab-AAD.md)
 * [サイレント認証](~/tabs/how-to/authentication/auth-silent-AAD.md)

@@ -1,19 +1,19 @@
 ---
-title: アダプティブ カードのユーザー ピッカー
+title: アダプティブ カードでのユーザー ピッカー
 description: アダプティブ カードで People Picker コントロールを使用する方法について説明します。
 localization_priority: Normal
 keywords: アダプティブ カード ユーザー選択
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: 449c3d764cf3e4db68207560890e954bef14c7b4
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 18e4268258e008485617cb10fd11070963cf3ed1
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518304"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821634"
 ---
-# <a name="people-picker-in-adaptive-cards"></a>アダプティブ カードのユーザー ピッカー
+# <a name="people-picker-in-adaptive-cards"></a>アダプティブ カードでのユーザー ピッカー
 
 >[!NOTE]
 > 現在、アダプティブ カードの People Picker は、モバイル[](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams)向けのパブリック開発者プレビューでのみ利用可能で、デスクトップ用に一般公開 (GA) で利用できます。
@@ -161,7 +161,7 @@ People Picker は、 [Input.ChoiceSet コントロールの拡張機能として
 ### <a name="data-submission"></a>データ提出
 
 選択したデータを`Action.Submit``Action.Execute`ボットに使用または送信できます。 ボット`invoke`で受け取ったペイロードは、Microsoft Azure Active Directory (Azure AD) の一覧または静的リストで提供される ID です。
-[ユーザー選択] で、コントロールでユーザーを `Microsoft Azure Active Directory (Azure AD) ID` 選択すると、ユーザーの値が返されます。 は `Microsoft Azure Active Directory (Azure AD) ID` 文字列であり、ディレクトリ内のユーザーを一意に識別します。
+[ユーザー選択] で、コントロールでユーザーを `Azure AD ID` 選択すると、ユーザーの値が返されます。 は `Azure AD ID` 文字列であり、ディレクトリ内のユーザーを一意に識別します。
 
 ボットに送信される値の形式は、プロパティの値によって異 `isMultiSelect` なります。
 
@@ -177,8 +177,8 @@ People Picker は、 [Input.ChoiceSet コントロールの拡張機能として
 People Picker は、アダプティブ カードを作成して送信するときに、コントロール内のユーザーの事前選択をサポートします。 `Input.ChoiceSet` は、 `value` ユーザーの事前選択に使用されるプロパティをサポートします。 このプロパティの形式 `value` は、データ送信で送信された値の形式 [と同じです](#data-submission)。  
 次の一覧は、ユーザーを事前に選択する情報を提供します。
 
-* コントロール内の単一ユーザーの場合は、ユーザーのユーザー`Microsoft Azure Active Directory (Azure AD) ID`を .`value` 
-* 複数のユーザー (is `isMultiSelect` など) の場合 `true`は、s のコンマ区切り文字列を指定 `Microsoft Azure Active Directory (Azure AD) ID`します。  
+* コントロール内の単一ユーザーの場合は、ユーザーのユーザー`Azure AD ID`を .`value` 
+* 複数のユーザー (is `isMultiSelect` など) の場合 `true`は、s のコンマ区切り文字列を指定 `Azure AD ID`します。  
 
 次の例では、1 人のユーザーの事前選択について説明します。
 

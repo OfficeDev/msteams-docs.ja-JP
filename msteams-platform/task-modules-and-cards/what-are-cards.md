@@ -4,12 +4,12 @@ description: カードと、それらがボット、コネクタ、メッセー�
 ms.localizationpriority: high
 keywords: コネクタ ボット カード メッセージング
 ms.topic: overview
-ms.openlocfilehash: 3cbe26e9c84996242a22e8d0325914e7bde87f8c
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 7ab05607e7c5abf897c790bb777e5c697edc9e08
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62517982"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821585"
 ---
 # <a name="cards"></a>カード
 
@@ -79,7 +79,7 @@ Teams では、アダプティブ カードに加えて、他の 2 種類のカ�
 
 ## <a name="support-for-azure-ad-object-id-and-upn-in-user-mention"></a>ユーザー メンションでの Azure AD オブジェクト ID と UPN のサポート 
 
-アダプティブ カードを持つボットでは、既存の ID に加えて、Microsoft Azure Active Directory (Azure AD) オブジェクト ID やユーザー プリンシパル名 (UPN) などのユーザー メンション ID がサポートされます。 受信 Webhook は、Microsoft Azure Active Directory (Azure AD) オブジェクト ID と UPN を使用したアダプティブ カードでのユーザー メンションをサポートし始めます。
+アダプティブ カードを持つボットでは、既存の ID に加えて、Microsoft Azure Active Directory (Azure AD) オブジェクト ID やユーザー プリンシパル名 (UPN) などのユーザー メンション ID がサポートされます。 受信 Webhook は、Azure AD オブジェクト ID と UPN を使用したアダプティブ カードでのユーザー メンションをサポートし始めます。
 
 ## <a name="next-step"></a>次のステップ
 

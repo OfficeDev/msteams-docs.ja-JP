@@ -4,12 +4,12 @@ description: 新しい音声/ビデオ通話ボットの登録、Microsoft Teams
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: ボットのオーディオ/ビデオ オーディオ ビデオ メディアを呼び出す
-ms.openlocfilehash: 33163314f5d1d37b79562532ec2f15b6002d90ce
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 140a5c13df392a99dd7beea54cbb9cfd15ad8486
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518290"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821368"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Microsoft Teams の通話と会議ボットを登録する
 
@@ -82,9 +82,9 @@ Microsoft Azure Active Directory [(Azure AD) V1](/azure/active-directory/develop
 
 ### <a name="get-tenant-administrator-consent"></a>テナント管理者の同意を取得する
 
-Microsoft Azure Active Directory (Azure AD) V1 エンドポイントを使用するアプリの場合、テナント管理者は、組織にアプリがインストールされている[場合、Microsoft Azure](https://portal.azure.com) ポータルを使用してアプリケーションのアクセス許可に同意できます。 または、構成したアクセス許可に管理者が同意できるサインアップ エクスペリエンスをアプリに提供することもできます。 管理者の同意が Microsoft Azure Active Directory (Azure AD) に記録された後、アプリは再び同意を要求することなくトークンを要求できます。
+Azure AD V1 エンドポイントを使用するアプリの場合、テナント管理者は、アプリが組織にインストールされている[場合、Microsoft Azure](https://portal.azure.com) ポータルを使用してアプリケーションのアクセス許可に同意できます。 または、構成したアクセス許可に管理者が同意できるサインアップ エクスペリエンスをアプリに提供することもできます。 管理者の同意がユーザーによって記録Azure AD、アプリは再び同意を要求することなくトークンを要求できます。
 
-管理者に頼って、アプリに必要なアクセス許可をポータルで付与Microsoft Azure[できます](https://portal.azure.com)。 より良い方法は、管理者が V2 エンドポイントを使用して、Microsoft Azure Active Directory (Azure AD) を提供する方法`/adminconsent`です。 詳細については、「管理者の [同意 URL を作成する手順」を参照してください](/graph/uth-v2-service#3-get-administrator-consent)。
+管理者に頼って、アプリに必要なアクセス許可をポータルで付与Microsoft Azure[できます](https://portal.azure.com)。 より優れたオプションは、管理者が V2 エンドポイントを使用してサインアップ エクスペリエンスAzure ADです`/adminconsent`。 詳細については、「管理者の [同意 URL を作成する手順」を参照してください](/graph/uth-v2-service#3-get-administrator-consent)。
 
 > [!NOTE]
 > テナント管理者の同意 URL を作成するには、アプリ登録ポータルで構成されたリダイレクト URI または返信 URL [が](https://apps.dev.microsoft.com/) 必要です。 ボットの返信 URL を追加するには、ボット登録にアクセスし、[**Advanced OptionsEdit** >  アプリケーション マニフェスト] **を選択します**。 リダイレクト URL をコレクションに追加 `replyUrls` します。
