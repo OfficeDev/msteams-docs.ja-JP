@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: b7b2e175f144811118310bde1fcf63b88717a20e
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 7513b79ee25e4de3e7c2ffecf8f2fd91a23f170b
+ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518360"
+ms.lasthandoff: 02/15/2022
+ms.locfileid: "62821662"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参照: Microsoft Teams のマニフェスト スキーマ
 
@@ -628,7 +628,7 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`id`|string|36 文字|✔|アプリの Microsoft Azure Active Directory (Azure AD) アプリケーション ID。 この ID は GUID である必要があります。|
+|`id`|string|36 文字|✔|Azure AD のアプリケーション ID を指定します。 この ID は GUID である必要があります。|
 |`resource`|string|2048 文字|✔|SSO の認証トークンを取得するためのアプリのリソース URL。 </br> **注:** SSO を使用していない場合は、エラー応答を回避するために、このフィールドにダミーの文字列値 (たとえば、https://notapplicable) をアプリ マニフェストに入力してください。 |
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
