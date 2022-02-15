@@ -4,12 +4,12 @@ description: Microsoft Teams の最新情報やすべての開発者向け最新
 ms.topic: reference
 ms.localizationpriority: high
 keywords: Teams の最新情報と最新の更新プログラムまたは開発者プレビューと機能
-ms.openlocfilehash: 4c4a145db5ce66a13d4f605419c5a402eef2c3b7
-ms.sourcegitcommit: 60e4bbb013f0bb17a87a2e558abfcc311c73af75
+ms.openlocfilehash: 2c20fcb473fea847e19451d3ca883cf4b93337a4
+ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62523788"
+ms.lasthandoff: 02/14/2022
+ms.locfileid: "62801391"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -22,6 +22,7 @@ ms.locfileid: "62523788"
 
 | 日付 | Update | ここで検索  |
 | --- | --- | --- |
+|02/09/2022| ボットから Teams にファイルをアップロードする方法のステップバイステップ ガイドが導入されました | ビルド ボット>ファイルの送受信>[ボットから Teams にファイルをアップロードするステップバイステップ ガイド](sbs-file-handling-in-bot.yml) |
 |02/11/2022| 共有会議ステージ| • [Teams 会議用アプリのビルド] > [[共有会議ステージ]](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • [Teams 会議用アプリのビルド] > [[Meeting apps API リファレンス]](apps-in-teams-meetings/API-references.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー] > [[開発者向けプレビュー マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md)|
 |02/08/2022| 通話ボットと会議ボットを作成するステップバイステップ ガイドが導入されました。| [ボットの構築] > [通話と会議のボット] > [通話と会議のボットの登録] > [[通話と会議のボットを作成するためのステップバイステップ ガイド]](sbs-calling-and-meeting.yml) |
 |02/07/2022| ツールと SDK |Visual Studio Code 用 Teams ツールキット > </br> • [Teams アプリに機能を追加] > [[Teams アプリに機能を追加]](toolkit/add-capability.md) </br> • [クラウド リソースを Teams アプリに追加] > [[クラウド リソースを Teams アプリに追加]](toolkit/add-resource.md) |
@@ -45,6 +46,7 @@ ms.locfileid: "62523788"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ----------------|
+|02/09/2022| ボットから Teams にファイルをアップロードする方法のステップバイステップ ガイドが導入されました | ビルド ボット>ファイルの送受信>[ボットから Teams にファイルをアップロードするステップバイステップ ガイド](sbs-file-handling-in-bot.yml) |
 |02/11/2022| 共有会議ステージ| • [Teams 会議用アプリのビルド] > [[共有会議ステージ]](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • [Teams 会議用アプリのビルド] > [[Meeting apps API リファレンス]](apps-in-teams-meetings/API-references.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー] > [[開発者向けプレビュー マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md)|
 |02/08/2022| 通話ボットと会議ボットを作成するステップバイステップ ガイドが導入されました。| [ボットの構築] > [通話と会議のボット] > [通話と会議のボットの登録] > [[通話と会議のボットを作成するためのステップバイステップ ガイド]](sbs-calling-and-meeting.yml) |
 |02/02/2022| アプリ マニフェスト バージョン 1.12 が導入されました | [アプリ マニフェスト] > [[アプリ マニフェストのスキーマ]](resources/schema/manifest-schema.md) |
