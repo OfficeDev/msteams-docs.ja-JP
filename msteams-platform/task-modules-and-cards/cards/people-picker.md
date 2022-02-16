@@ -6,12 +6,12 @@ keywords: アダプティブ カード ユーザー選択
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: 18e4268258e008485617cb10fd11070963cf3ed1
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 4fda2916c6eaeb3cc0878911c21eb20e276844f3
+ms.sourcegitcommit: 20b84e13b5cb6899f4eb54ca90a13b6da7a3e3d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821634"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "62855894"
 ---
 # <a name="people-picker-in-adaptive-cards"></a>アダプティブ カードでのユーザー ピッカー
 
@@ -306,6 +306,13 @@ People Picker は、アダプティブ カードを作成して送信すると�
 
 
 さまざまなシナリオで効率的なタスク管理を行うユーザー選択ウィンドウを実装できます。  
+
+## <a name="code-sample"></a>コード サンプル
+
+| サンプルの名前           | 説明 | C#    | Node.js   |   
+|:---------------------|:--------------|:---------|:--------|
+|アダプティブ カードのユーザーピッカー コントロール| このサンプルでは、アダプティブ カードでユーザー選択コントロールを使用する方法を示します。|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/nodejs) | 
+
 
 ## <a name="see-also"></a>関連項目
 

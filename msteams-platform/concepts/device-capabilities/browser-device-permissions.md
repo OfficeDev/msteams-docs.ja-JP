@@ -4,28 +4,28 @@ keywords: teams アプリの機能のアクセス許可
 description: Web クライアントのアプリに対するデバイスのアクセス許可のサポートを安全に取り戻す
 localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: fbdca08c813d341c12fcfc824d21a6ff96d02749
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 18843d9d4981e83cf83472e37519344706f599bb
+ms.sourcegitcommit: 20b84e13b5cb6899f4eb54ca90a13b6da7a3e3d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059787"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "62855887"
 ---
 # <a name="device-permissions-for-the-browser"></a>ブラウザーのデバイスのアクセス許可
 
 > [!NOTE]
-> ブラウザーでのデバイスのアクセス許可の処理方法に関する最新の更新プログラムは、現在パブリック開発者 [プレビューでのみ利用](../../resources/dev-preview/developer-preview-intro.md) できます。 この更新プログラムは、2022 年 2 月 1 日までに一般提供 (GA) される予定です。
+> ブラウザーでのデバイスのアクセス許可の処理方法に関する最新の更新プログラムは、現在パブリック開発者 [プレビューでのみ利用](../../resources/dev-preview/developer-preview-intro.md) できます。 この更新プログラムは、2022 年 2 月 1 日から一般提供 (GA) され、2 月下旬に展開が終了します。
 
 
 Teamsアクセスなど、デバイスのアクセス許可を必要とするアプリでは、Web ブラウザーでアプリごとのレベルで手動でアクセス許可をユーザーに付与する必要があります。 以前は、ブラウザーはアクセス許可を付与する方法を処理しましたが、これらのアクセス許可は現在、Microsoft Teams。 これは、アプリケーションの設計方法や、ブラウザーでこれらのアクセス許可が必要な場合に影響します。
 
 ## <a name="enable-apps-device-permissions"></a>アプリのデバイスのアクセス許可を有効にする
-Teamsマニフェストでデバイスのアクセス許可が必要であると宣言されている[](native-device-permissions.md#specify-permissions)場合は、ユーザーがアプリのデバイスのアクセス許可を有効にするための [アプリのアクセス許可] オプションが表示されます。 [ **アプリのアクセス許可]** オプションは、次の機能で使用できます。 
+アプリケーション マニフェストTeamsでデバイスのアクセス許可が必要であると[](native-device-permissions.md#specify-permissions)宣言されている場合は、ユーザーがアプリのデバイスのアクセス許可を有効にするための [アプリのアクセス許可] オプションが表示されます。 [ **アプリのアクセス許可]** オプションは、次の機能で使用できます。 
 
 * **個人用アプリとタスク モジュールのダイアログ**: [ **アプリの** アクセス許可] オプションは、ページの右上隅にあります。
 <img src="../../assets/images/tabs/apppermissions.png" alt="App permissions button" width="800"/>
 
-* **チャット、チャネル、または会議のタブ**: [ **アプリの** アクセス許可] オプションは、タブのドロップダウンで使用できます。 ![[アプリのアクセス許可] ドロップダウン](../../assets/images/tabs/drop-downapppermissions.png)
+* **チャット、チャネル、または会議** のタブ: [ **アプリの** アクセス許可] オプションは、タブのドロップダウンで使用できます。 ![[アプリのアクセス許可] ドロップダウン](../../assets/images/tabs/drop-downapppermissions.png)
 
 [アプリ **のアクセス許可] オプション** を選択すると、ユーザーがアクセス許可ボタンを有効にできるポップアップが表示されます。
 
@@ -48,7 +48,7 @@ Teamsでデバイスのアクセス許可を必要とするアプリでは、ユ
 
 ## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
 
-ステップ バイ[ステップ ガイドに従って](../../sbs-tab-device-permissions.yml)、タブ デバイスにアクセス許可を付与Microsoft Teams。
+ステップ バイ [ステップ ガイドに従って](../../sbs-tab-device-permissions.yml)、タブ デバイスにアクセス許可を付与Microsoft Teams。
 
 ## <a name="see-also"></a>関連項目
 
