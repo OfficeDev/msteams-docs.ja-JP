@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams apps 会議 ユーザー参加者ロール API ユーザー コンテキスト通知シグナル クエリ
-ms.openlocfilehash: 681929c85d23f83ffa6742afdae2860ac8dfc356
-ms.sourcegitcommit: f5c2090fdd5b55d21ecd9c395423fa277e18d74a
+ms.openlocfilehash: 3dd234e99068c2d7014a04f378a131b5d325a2c8
+ms.sourcegitcommit: 58f1c3e6a4fab0778ff035e0bbddcee267a0e8e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "62470789"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "62857238"
 ---
 # <a name="meeting-apps-api-references"></a>会議アプリ API リファレンス
 
@@ -216,9 +216,6 @@ POST /v3/conversations/{conversationId}/activities
 
 ## <a name="get-meeting-details-api"></a>会議の詳細 API の取得
 
-> [!NOTE]
-> 現時点では、この機能はパブリック開発者 [プレビューでのみ利用](../resources/dev-preview/developer-preview-intro.md) できます。
-
 会議の詳細 API を使用すると、アプリは会議の静的メタデータを取得できます。 メタデータは、動的に変更しないデータ ポイントを提供します。 API はボット サービスを通じて利用できます。 現在、プライベートスケジュールされた会議または定期的な会議とチャネルのスケジュールされた会議または定期的な会議の両方が、それぞれ異なる RSC アクセス許可を持つ API をサポートしています。
 
 ### <a name="prerequisite"></a>前提条件
@@ -390,7 +387,7 @@ https://api.captions.office.microsoft.com/cartcaption?meetingid=%7b%22tId%22%3a%
 
 ### <a name="method"></a>メソッド
 
-|リソース|メソッド|説明|
+|Resource|メソッド|説明|
 |----|----|----|
 |/cartcaption|POST|開始された会議のキャプションを処理する|
 
