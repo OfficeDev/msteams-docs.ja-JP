@@ -4,12 +4,12 @@ description: Microsoft Teams の最新情報やすべての開発者向け最新
 ms.topic: reference
 ms.localizationpriority: high
 keywords: Teams の最新情報と最新の更新プログラムまたは開発者プレビューと機能
-ms.openlocfilehash: 0aa3c25b07100ba71fbf462ced4ffc9d68ee7397
-ms.sourcegitcommit: 9657cc2e25a554af96e7578c0abc7f868b65ca8c
+ms.openlocfilehash: a6cdb2cf19895b7a7179ec100a66066e948076d1
+ms.sourcegitcommit: 40aade608ee21f5d7d813bd145bef5736dc647f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/17/2022
-ms.locfileid: "62878116"
+ms.locfileid: "62881638"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -22,6 +22,7 @@ ms.locfileid: "62878116"
 
 | 日付 | Update | ここで検索  |
 | --- | --- | --- |
+|02/17/2022| アプリを送信した後、何を期待しますか?| アプリを配布する > Teams ストアに公開する > [概要](concepts/deploy-and-publish/appsource/publish.md)|
 |2022/02/15| ボットから Teams にファイルをアップロードする方法のステップバイステップ ガイドが導入されました | 「ボットを作成する」 > 「ファイルを送受信する」 > 「[ボットから Teams にファイルをアップロードするためのステップバイステップ ガイド](sbs-file-handling-in-bot.yml)」 |
 |02/11/2022| 共有会議ステージ| • [Teams 会議用アプリのビルド] > [[共有会議ステージ]](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • [Teams 会議用アプリのビルド] > [[Meeting apps API リファレンス]](apps-in-teams-meetings/API-references.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー] > [[開発者向けプレビュー マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md)|
 |02/08/2022| 通話と会議ボットを作成するステップバイステップ ガイドを導入しました| [ボットの構築] > [通話と会議のボット] > [通話と会議のボットの登録] > [[通話と会議のボットを作成するためのステップバイステップ ガイド]](sbs-calling-and-meeting.yml) |
