@@ -4,12 +4,12 @@ description: 認証の詳細Teamsタブで使用する方法について説明�
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams 認証タブMicrosoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: 2ceca46148c79b07dd417e84b0736f69ee520b8b
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 980df5b94f83a26c22c8594b72518f7d094c5307
+ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821718"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62897936"
 ---
 # <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>[ユーザーの認証] タブでMicrosoft Teamsする
 
@@ -165,7 +165,7 @@ if (hashParams["error"]) {
 
 ## <a name="see-also"></a>関連項目
 
-* [ユーザー認証を計画する](../../../concepts/design/understand-use-cases.md#provide-authentication)
+* [ユーザー認証を計画する](../../../concepts/design/understand-use-cases.md)
 * [Microsoft Teams 用のタブを設計する](~/tabs/design/tabs.md)
 * [サイレント認証](~/tabs/how-to/authentication/auth-silent-aad.md)
 * [メッセージング拡張機能に認証を追加する](~/messaging-extensions/how-to/add-authentication.md)
