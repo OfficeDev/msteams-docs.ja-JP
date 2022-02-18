@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
 Keywords: メッセージの送信、ユーザー ID の取得、チャネル ID の取得、会話 ID の取得
-ms.openlocfilehash: fc08e9413925f04a0f6e1a01ed7feb6fccd5e8d2
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 15d564af900e0b13024d051ef4711025c4b16060
+ms.sourcegitcommit: fb10a8b14acdba5cc48d2b31dec6f8e6d4ad99ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059773"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62896328"
 ---
 # <a name="proactive-messages"></a>プロアクティブ メッセージ
 
@@ -104,9 +104,6 @@ ms.locfileid: "62059773"
 * ユーザーが次にできる事柄: ユーザーは、メッセージの内容に基づいて必要なアクションを実行できます。
 
 ## <a name="proactively-install-your-app-using-graph"></a>Graph を使用してアプリをプロアクティブにインストール
-
-> [!Note]
-> [Graph を使用してアプリをプロアクティブにインストール] は、現在ベータ版です。
 
 以前アプリをインストールしたり操作したりしていないユーザーにプロアクティブにメッセージを送信します。 たとえば、[社内コミュニケーター](~/samples/app-templates.md#company-communicator)を使用して、組織全体にメッセージを送信する必要があるとします。 この場合、Graph API を使用して、ユーザー向けにアプリをプロアクティブにインストールできます。 インストール時にアプリが受け取る `conversationUpdate` イベントから必要な値をキャッシュします。
 
@@ -259,9 +256,6 @@ POST /v3/conversations
 ```
 
 ---
-
-> [!NOTE]
-> 現在、ボットはボット API またはグラフを介してグループ チャットを作成できません。 `createConversation` は 1:1 チャットでのみ使用できます。
 
 ## <a name="code-sample"></a>コード サンプル
 
