@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: fd7d2075d79e5c54e9257b71f8bf351fe3cd6823
-ms.sourcegitcommit: fb10a8b14acdba5cc48d2b31dec6f8e6d4ad99ba
+ms.openlocfilehash: 205b95e84d834d1171227d967257e72bc6dee16b
+ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/18/2022
-ms.locfileid: "62896321"
+ms.locfileid: "62898071"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Microsoft Teams ストアにアプリを発行する
 
@@ -95,7 +95,7 @@ Teams ストアに公開されたアプリは、Microsoft 365 アプリおよび
 
      1. Teams [開発者ポータル](https://dev.teams.microsoft.com/home)を使用してアプリ パッケージを検証し、パッケージ エラーを特定して修正します。
 
-        :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="ストアの検証":::
+        :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="Teams ストア アプリの検証を開発者ポータル" lightbox="../../../assets/images/submission/teams-validation-developer-portal.png":::
  
      1. アプリを申請する前にアプリを徹底的にセルフテストして、ストア ポリシーに準拠していることを確認します。 Teams でアプリをサイドロードし、アプリのエンドツーエンドのユーザー フローをテストします。 機能が期待どおりに機能し、リンクが壊れていないこと、ユーザー エクスペリエンスがブロックされていないこと、制限事項が明確に強調されていることを確認してください。
 
@@ -130,6 +130,6 @@ Teams ストアに公開されたアプリは、Microsoft 365 アプリおよび
 * [Microsoft 365 アプリ ストアへの公開](/office/dev/store/)
 * [Teams アプリをアップロードする](~/concepts/deploy-and-publish/apps-upload.md)
 * [Teams アプリを組織に公開する](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
-* [ユーザーのオンボーディング エクスペリエンスを計画する](../../design/understand-use-cases.md#plan-the-onboarding-experience)
+* [ユーザーのオンボーディング エクスペリエンスを計画する](../../design/planning-checklist.md#plan-beyond-app-building)
 * [モバイルでのタブ アプリの配布](../../../tabs/design/tabs-mobile.md#distribution)
 * [収益化されたアプリのテスト プレビュー](prepare/Test-preview-for-monetized-apps.md)

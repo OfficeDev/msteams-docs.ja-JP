@@ -1,52 +1,107 @@
 ---
-title: アプリ開発の基本の概要
+title: アプリの計画の概要
 author: heath-hamilton
-description: アプリの機能やエントリ ポイントなど、Teams プラットフォーム開発の基本的な概念、使用例の理解、アプリ機能へのマッピング、アプリの計画について説明します。
+description: アプリの計画、ユース ケースの理解、アプリの機能、およびその他の Teams 機能の要素を紹介します。
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lajanuar
-keywords: エントリ ポイントの拡張性の使用例デバイスの機能
-ms.openlocfilehash: fcb5da4fd7feac225b67341d6fe22187dd30a713
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
-ms.translationtype: MT
+keywords: エントリ ポイントの拡張性のユース ケースデバイス機能
+ms.openlocfilehash: 904b2b0ccf9ed815cbe750514818289b86a2f58b
+ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948426"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62898051"
 ---
-# <a name="microsoft-teams-app-development-fundamentals"></a>Microsoft Teams開発の基本
+# <a name="plan-your-app-with-teams-features"></a>Teams の機能を使用してアプリを計画する
 
-Microsoft Teamsの基本は、カスタム アプリを作成する必要がある方向Teamsします。 アプリの計画に必要なフレームワークをTeamsできます。 このドキュメントは、ユーザー アプリの通信を理解し、使用する必要があるアプリサーフェスの種類や、プロセスでアプリが必要とする可能性がある API を把握するのに役立ちます。 対話機能を受け入れるインスピレーションを得て、アプリと統合するときにアプリのエクスペリエンスを深Teams。
+優れた Teams アプリを構築することは、ユーザーのニーズを満たす適切な機能の組み合わせを見つけることです。 アプリの設計、機能は、この目的から生まれています。
 
-## <a name="capabilities-and-entry-points"></a>機能とエントリ ポイント
+その中心にあるのは、Teams はコラボレーション プラットフォームです。 また、ソーシャル プラットフォームでもあり、ネイティブにクロスプラットフォームであり、Office 365 の中心に位置し、アプリを作成するための個人用キャンバスを提供します。
 
-アプリを複数のTeams拡張できます。 アプリを拡張するには、すべてのコア機能と、共同作業スペースで機能するエントリ ポイントを理解する必要があります。 アプリを構築する拡張機能ポイントを試してみろ。 重要なアプリ プロジェクト コンポーネントは、アプリ ページを正しく構成するのに役立ちます。 Teamsは、複数の[機能とエントリ ポイント](../concepts/capabilities-overview.md)[を持つ可能性があります](../concepts/extensibility-points.md)。
+このセクションでは、次の方法について説明します:
 
-## <a name="understand-your-use-cases"></a>ユース ケースを理解する
+ - ユース ケースを特定し、Teams の機能にマップする方法。
+ - 計画チェックリストの使用法。
+ - アプリの展開以外の計画を立てる方法。
 
-ユーザーの問題を認識し、ユーザーが直面する一般的な問題に対する回答を特定できます。 ユーザーのニーズを満Teams適切な組み合わせを見つけることで、アプリをビルドできます。 [使用例を理解して](../concepts/design/understand-use-cases.md) 、エンド ユーザーがアプリとやり取りする方法を知る。 ユーザーとその問題を理解する方法について説明します。 一般的な質問の回答は次のとおりです。
+## <a name="plan-with-teams"></a>Teams で計画する
 
-* 認証が必要ですか?
-* アプリが解決する問題は何ですか?
-* Whoのエンドユーザーは何ですか?
-* オンボーディングエクスペリエンスの方法と、アプリが他に何を行う必要がありますか?
+プラットフォームとしての Teams は、アプリ開発のあらゆる段階でツールキット、ライブラリ、アプリを提供します。 アプリ構築ライフサイクルに分割しましょう。
 
-## <a name="map-your-use-cases-to-teams-app-capabilities"></a>使用例をアプリの機能Teamsマップする
+:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="アプリの計画を示す図" border="true":::
 
-[使用例をマップするには、](../concepts/design/map-use-cases.md) 一般的なシナリオとアプリの機能を選択する方法について説明します。 アプリを共有し、外部システム内のアイテムで共同作業を行う情報が提供されます。 ワークフローを開始し、ユーザーに通知を送信する方法も説明します。 開始する場所、ユーザーとのソーシャルを取得する方法、会話型ボット、複数の機能の組み合わせに関するその他のヒントを取得します。
+- [ビルド前](#before-you-build)
+- [ビルド中](#during-build)
+- [ビルド後](#post-build)
+- [計画チェックリスト](../concepts/design/planning-checklist.md)
 
-## <a name="plan-responsive-tabs-for-teams-mobile"></a>Teams モバイルの応答タブを計画する
-[モバイルの応答性の高いタブTeams、](../concepts/design/plan-responsive-tabs-for-teams-mobile.md)モバイル向けアプリの計画に役立つ一般的なシナリオTeamsします。 ドキュメント ガイドでは、モバイル上のアプリを戦略化する方法について示します。 また、さまざまなサッジとさまざまな種類のアプリについてTeamsできます。
+### <a name="before-you-build"></a>ビルド前
 
-## <a name="integrate-device-capabilities"></a>デバイス機能の統合
+ユーザーとその懸念事項を理解することは、Teams アプリがどのように役立つかを示す最初の指標です。 問題に関するユース ケースを構築し、アプリで問題を解決する方法を決定し、ソリューションを描画します。
 
-Microsoft Teamsプラットフォームは、組み込みのファースト パーティ エクスペリエンスと一致する開発者機能を継続的に強化しています。 拡張された Teams プラットフォームを使用すると、パートナーは、Microsoft Teams JavaScript クライアント SDK で利用できる専用 API を使用して、カメラ、QR またはバーコード スキャナー、フォト ギャラリー、マイク、場所などのネイティブ デバイス機能にアクセスして統合できます。
+- **ユース ケースと Teams アプリの機能を理解する**: ユーザーの要件を理解し、適切な機能を特定できます。
+
+- **ユース ケースのマッピング**: 共有、共同作業、ワークフロー、関連するソーシャル プラットフォームなどの要件に基づいて、一般的なユース ケースを Teams 機能にマップします。
+
+- **Teams モバイルの応答性の高いタブを計画する**: 一般的なシナリオについて説明し、Teams モバイル用のアプリの計画に役立ちます。
+
+### <a name="during-build"></a>ビルド中
+
+- **アプリ プロジェクトの作成とビルド**: Teams を使用すると、アプリの要件に最適なビルド環境を選択できます。 Teams Toolkit やその他の SDK (C#、Blazor、Node.js など) を使用して作業を開始します。
+
+- **アプリ UI のデザイン**: Teams UI Toolkit と UI ライブラリを使用してアプリのレイアウトをデザインします。
+
+- **Teams をプラットフォームとして使用**: Teams プラットフォームを使用すると、単一または複数機能のアプリを構築できます。 Teams アプリは、アプリ エクスペリエンスを強化する統合された製品とサービスによって支えられています。
+
+    :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Teams ソリューションの概念表現" border="true":::
+
+    アプリは、タブ、ボット、メッセージング拡張機能、コネクタ、Webhook として、またはマルチ機能アプリとして Teams に表示されます。 これらの機能は、タスクとプロセスの自動化に役立つ Azure、Microsoft Graph、SharePoint、Power アプリによってバックエンドに搭載されています。
+
+    これらの機能を組み合わせることで、アプリ ソリューションが実現します。
+
+- **デバイス機能の統合**: カメラ、QR またはバーコード スキャナー、フォト ギャラリー、マイク、位置情報などのネイティブ デバイス機能をアプリに統合できます。
+
+### <a name="post-build"></a>ビルド後
+
+- アプリを Teams やその他のアプリ (Microsoft 365、Microsoft Graphなど) と統合します。
+- 開発者ポータルを使用して、アプリを構成、管理、デプロイします。
+
+<details>
+<summary><b>Government Community Cloud (GCC) の詳細</b></summary>
+
+Government Community Cloud は、政府機関向けの商用環境のコピーです。 国防総省 (DOD) と連邦請負業者は、厳格なサイバーセキュリティとコンプライアンスの要件を満たす必要があります。 このため、DOD および連邦請負業者のニーズを満たすために GCC-High が作成されました。 GCC-High は DOD クラウドのコピーですが、独自の独立環境に存在します。 DOD クラウドは国防総省専用に構築されています。
+
+次の表に、GCC、GCC-High、DOD の Teams の機能と可用性を示します。
+
+| 機能   | GCC | GCC-High | DOD |
+|-------------|---------|---|---|
+| 社内で開発されたアプリと同様に、Teams が所有するアプリ | ✔️ アプリは、GCC がある場合有効です。 | ✔️ アプリは、GCC-High がある場合有効です。 | ✔️ アプリは、DOD がある場合有効です。 |
+| Microsoft アプリ | ✔️ GCC に準拠している Microsoft アプリ | ✔️ GCC-High に準拠している Microsoft アプリ | ✔️ DOD に準拠している Microsoft アプリ |
+| サードパーティ製アプリを許可する | ✔️ サード パーティ製アプリを利用できます。 既定では無効に設定されており、テナント管理者が独自の裁量で有効にします。 | ❌ | ❌ |
+| ボット | ✔️ | ❌ | ❌ |
+| カスタム タブ アプリまたは LOB タブ アプリ |  ✔️ | ✔️ | ✔️ |
+| アプリのサイドローディング | ✔️ | ❌ | ❌ |
+| カスタム ボットまたは LOB ボット | ✔️ | ❌ | ❌ |
+| メッセージング拡張機能を作成する | ❌ | ❌ | ❌ |
+| カスタム コネクタ | ❌ | ❌ | ❌ |
+
+次のリストは、機能に対する GCC、GCC-High、および DOD の可用性を特定するのに役立ちます。
+
+- サード パーティ製アプリについては、「[Web Apps](../samples/integrating-web-apps.md)」および「[会議アプリ拡張性](../apps-in-teams-meetings/meeting-app-extensibility.md)」を参照してください。
+- ボットについては、「[ Teams の最初の会話ボットを構築する](../get-started/first-app-bot.md)」、「[Teams ボットの設計](../bots/design/bots.md)」、「[Microsoft Teams アプリにボットを追加する](../resources/bot-v3/bots-overview.md)」、「[Teams でのボット](../bots/what-are-bots.md)」を山荘してください。
+- アプリのサイド ローディングについては、「[カスタマイズする Teams アプリを有効にする](../concepts/design/enable-app-customization.md)」、「[Microsoft Teams アプリの配布](../concepts/deploy-and-publish/apps-publish-overview.md)」、「[Teams でアプリをアップロードする](../concepts/deploy-and-publish/apps-upload.md)」を参照してください。
+- カスタム コネクタについては、「[Teams 用 Office 365 コネクタの作成](../webhooks-and-connectors/how-to/connectors-creating.md)」を参照してください。
+
+</details>
 
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [アプリTeamsについて](capabilities-overview.md)
+> [ユース ケースと Teams 機能](design/understand-use-cases.md)
 
 ## <a name="see-also"></a>関連項目
 
-* [統合のTeams検討事項](../samples/integrating-web-apps.md)
-* [最初のアプリをMicrosoft Teamsする](../build-your-first-app/build-first-app-overview.md)
+- [計画チェックリスト](../concepts/design/planning-checklist.md)
+- [Teams 統合に関する考慮事項](../samples/integrating-web-apps.md)
+- [最初の Microsoft Teams アプリを構築する](../build-your-first-app/build-first-app-overview.md)
