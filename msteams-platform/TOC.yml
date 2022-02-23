@@ -2,11 +2,19 @@
   href: mstdd-landing.yml
 - name: 新機能
   href: whats-new.md
+- name: 用語集
+  href: get-started/glossary.md
 - name: 概要
   expanded: false
   items:
-    - name: Microsoft Teams のアプリを作成する
+    - name: 最適な Teams アプリ
       href: overview.md
+    - name: アイデアを Teams アプリに活用する
+      href: overview-story.md
+    - name: Teams プラットフォームの機能を確認する
+      href: overview-explore.md
+    - name: Teams ソリューション
+      href: overview-solution.md
 - name: 作業の開始
   expanded: false
   items:
@@ -22,34 +30,18 @@
       href: sbs-gs-nodejs.yml
     - name: コード サンプル
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
-- name: アプリの基本事項
+- name: アプリを計画する
   items:
     - name: 概要
       href: concepts/app-fundamentals-overview.md
-    - name: Teams アプリの機能
-      href: concepts/capabilities-overview.md
-    - name: Teams アプリのエントリ ポイント
-      href: concepts/extensibility-points.md
     - name: ユース ケースを理解する
       href: concepts/design/understand-use-cases.md
-    - name: ユース ケースを Teams アプリの機能にマッピング
+    - name: ユース ケースを Teams の機能にマップする
       href: concepts/design/map-use-cases.md
+    - name: Teams アプリの計画チェックリスト
+      href: concepts/design/planning-checklist.md
     - name: Teams モバイルの応答タブを計画する
       href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
-    - name: デバイス機能
-      items:
-        - name: 概要
-          href: concepts/device-capabilities/device-capabilities-overview.md
-        - name: デバイスのアクセス許可を要求する
-          href: concepts/device-capabilities/native-device-permissions.md
-        - name: ブラウザーのデバイスのアクセス許可
-          href: concepts/device-capabilities/browser-device-permissions.md
-        - name: メディア機能を統合する
-          href: concepts/device-capabilities/mobile-camera-image-permissions.md
-        - name: QR コードまたはバーコード スキャナー機能を統合する
-          href: concepts/device-capabilities/qr-barcode-scanner-capability.md
-        - name: 場所機能を統合する
-          href: concepts/device-capabilities/location-capability.md
 - name: アプリをデザインする
   items:
     - name: 概要
@@ -381,6 +373,20 @@
           href: messaging-extensions/how-to/add-authentication.md
         - name: メッセージング拡張機能用の SSO を有効化する
           href: messaging-extensions/how-to/enable-SSO-auth-me.md
+- name: デバイスの機能を統合する
+  items:
+    - name: 概要
+      href: concepts/device-capabilities/device-capabilities-overview.md
+    - name: デバイスのアクセス許可を要求する
+      href: concepts/device-capabilities/native-device-permissions.md
+    - name: ブラウザーのデバイスのアクセス許可
+      href: concepts/device-capabilities/browser-device-permissions.md
+    - name: メディア機能を統合する
+      href: concepts/device-capabilities/mobile-camera-image-permissions.md
+    - name: QR コードまたはバーコード スキャナー機能を統合する
+      href: concepts/device-capabilities/qr-barcode-scanner-capability.md
+    - name: 場所機能を統合する
+      href: concepts/device-capabilities/location-capability.md
 - name: Microsoft Graph を使用したTeams データを使用する
   items:
     - name: 概要

@@ -4,12 +4,12 @@ description: ディープ リンクとアプリでの使用方法について説
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams ディープ リンク ディープリンク
-ms.openlocfilehash: 9d9e0ff794d413be1959e8e8ddaef1086acc307d
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 624bc47887950e98e49aa834f0a040e7ee234045
+ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821389"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62897915"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成 
 
@@ -80,16 +80,32 @@ Teams のエンティティへのディープ リンクを作成できます。 
 | `entityId`&emsp; | [タブの構成時](~/tabs/how-to/create-tab-pages/configuration-page.md)に指定した、タブ内のアイテムの ID。|Tasklist123|
 | `entityWebUrl` または `subEntityWebUrl`&emsp; | クライアントがタブのレンダリングをサポートしていない場合に使用するフォールバック URL を含むオプションのフィールド。 | `https://tasklist.example.com/123` または `https://tasklist.example.com/list123/task456` |
 | `entityLabel` または `subEntityLabel`&emsp; | ディープ リンクを表示するときに使用する、タブ内のアイテムのラベル。 | タスク リスト 123 または "タスク 456" |
-| `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| 次のフィールドを含む JSON オブジェクト。</br></br> * タブ内のアイテムの ID。 </br></br> * タブ [コンテキスト](~/tabs/how-to/access-teams-context.md)から利用できる Microsoft Teams チャネル ID。 | 
-| `subEntityId`&emsp; | タブ内のアイテムの ID。 |Task456 |
-| `channelId`&emsp; | タブ [コンテキスト](~/tabs/how-to/access-teams-context.md)から利用できる Microsoft Teams チャネル ID。 このプロパティは、**チーム** のスコープを持つ構成可能なタブでのみ使用できます。 **個人** のスコープを持つ静的タブでは使用できません。| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
+| `context.subEntityId`&emsp; | タブ内のアイテムの ID。 |Task456 |
+| `context.channelId`&emsp; | タブ[コンテキスト](~/tabs/how-to/access-teams-context.md)から使用可能な Microsoft Teams チャネル ID。 このプロパティは、**チーム** のスコープを持つ構成可能なタブでのみ使用できます。 **個人** のスコープを持つ静的タブでは使用できません。| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
+| `chatId`&emsp; | グループ チャットと会議チャットのタブ[コンテキスト](~/tabs/how-to/access-teams-context.md)から使用可能な ChatId | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
+| `contextType`&emsp; |  チャットは会議でサポートされている唯一の contextType です | チャット |
 
-例:
+**例**:
 
-* 構成可能なタブ自体へのリンク: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123&context={"channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
-* 構成可能なタブ内のタスク アイテムへのリンク: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
-* 静的なタブ自体へのリンク: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123`
-* 静的なタブ内のタスク アイテムへのリンク: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456"}`
+* 静的 (個人用) タブ自体へのリンク:
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123`
+
+* 静的 (個人用) タブ内のタスク アイテムへのリンク:
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456"}`
+
+* 構成可能なタブ自体へのリンク: 
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123&context={"channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
+
+* 構成可能なタブ内のタスク アイテムへのリンク: 
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
+    
+* 会議またはグループ チャットに追加されたタブ アプリへのリンク: 
+
+    >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456?context={"chatId": "17:b42de192376346a7906a7dd5cb84b673@thread.v2","contextType":"chat"}`
 
 > [!IMPORTANT]
 > すべてのクエリ パラメーターが適切に URI にエンコードされていることを確認します。 最後の例を使用して、前述の例に従う必要があります。
