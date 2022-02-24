@@ -1,87 +1,190 @@
 ---
-title: アプリの使用例について
+title: アプリのユース ケースと Teams 機能を理解する
 author: heath-hamilton
-description: アプリを計画し、ユーザーとその必要性を理解し、アプリが解決するユーザーの問題を理解し、ユーザー認証とオンボーディング エクスペリエンスを計画する
+description: アプリを計画し、ユーザーとそのニーズを理解し、アプリが解決するユーザーの問題を理解し、ユーザー認証とオンボード エクスペリエンスを計画する
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 93ab668a4ac317228186508eb721f1900add0de8
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
-ms.translationtype: MT
+ms.openlocfilehash: 6bd2bd7d4c9016d99ae653f9ca6889f661806a8e
+ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948390"
+ms.lasthandoff: 02/18/2022
+ms.locfileid: "62898155"
 ---
 # <a name="understand-your-use-cases"></a>ユース ケースを理解する
 
-このMicrosoft Teamsは、アプリが利用できるさまざまなエントリ ポイントと[UI](../../concepts/extensibility-points.md)要素を提供します。
+共同作業を行うことのできる Teams のソーシャルなフレームワークでは、Teams アプリを使用してさまざまなユーザー ニーズを解決できます。 たとえば、効果的なコラボレーションを実現する上でギャップを埋めるアプリは最適です。
+
+アプリ ユーザーとアプリの要件は、すべてのアプリの選択を決定する基本的なガイドラインです。 アプリの設計の構築、機能の選択、ビルド環境とテスト環境の決定、アプリの配布は、アプリのユーザーの要件に従います。
+
+アプリでユーザー要件を満たすには、まずユーザーの要件を理解する必要があります。
+
+- **ユーザーを理解する**:
+  - ユーザーの問題を認識し、ユーザーが直面する一般的な問題の解決策を特定します。
+  - ユーザーのニーズを満たす適切な機能の組み合わせを見つけて、Teams アプリを構築します。
+  - ユース ケースを理解して、エンド ユーザーがアプリを操作する方法を理解します。
+
+- **問題を理解する**: アプリが解決する必要のある主要な問題を解決します。
+
+- **統合を検討する**: アプリに必要なアプリとサービス (認証、Microsoft Graph、Web アプリなど) を特定します。
+
+## <a name="microsoft-teams-app-features"></a>Microsoft Teams アプリの機能
+
+Teams を拡張する方法は複数あり、アプリごとに異なります。 Teams アプリの機能は次の機能を提供します。
+
+- [アプリの機能](#app-capabilities)
+- [アプリのスコープ](#app-scope)
+
+### <a name="app-capabilities"></a>アプリの機能
+
+機能は、アプリで構築することのできる主要な機能です。 また、統合と操作を可能にするため、エントリ ポイントまたは拡張ポイントとも呼ばれます。
+
+Teams アプリには、次の主要な機能のいずれか、またはすべてが含まれます。
+
+:::row:::
+   :::column span="":::
+
+#### <a name="personal-apps"></a>個人用アプリ
+
+[個人用アプリ](../../concepts/design/personal-apps.md)は、ユーザーが自分のタスクに集中したり、関連するアクティビティを表示したりするのに役立つ専用のスペースまたはボットです。
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-personal-apps-2021.png" alt-text="Teams クライアントでの個人用アプリの外観の概念表現。" border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+
+#### <a name="tabs"></a>タブ
+
+Web ベースのコンテンツを[タブ](../../tabs/what-are-tabs.md)に表示します。こでは、他のユーザーが話し合って共同作業を行うことができます。
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-channel-chat-apps-2021.png" alt-text="Teams クライアントでタブがどのように表示されるかについての概念的な表現。" border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+
+#### <a name="bots"></a>ボット
+
+多くの場合、会話によって何らかの行動を取る必要性が発生します (注文の生成、コードの確認、チケットの状態の確認など)。 [ボット](../../bots/what-are-bots.md)は、このようなワークフローを Teams 内で開始することができます。
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-bots-2021.png" alt-text="Teams クライアントでボットがどのように表示されるかについての概念的な表現。" border="false":::
+
+   :::column-end:::
+
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+#### <a name="messaging-extensions"></a>メッセージング拡張機能
+
+[メッセージング拡張機能](../../messaging-extensions/what-are-messaging-extensions.md)を使用すると、外部の情報を検索して共有できます。 また、チャネル投稿の内容に基づいてヘルプ チケットを作成するなど、メッセージに対して操作を行うこともできます。
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="Teams クライアントでメッセージング拡張機能がどのように表示されるかについての概念的な表現。" border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+#### <a name="meeting-extensions"></a>ミーディング拡張機能
+
+[Teams の通話エクスペリエンスにアプリを組み込む](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md)ためのオプションがいくつか用意されています。
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-meeting-extensions-2021.png" alt-text="Teams クライアントでの会議拡張機能の概念表現。" border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+#### <a name="webhooks-and-connectors"></a>Webhook とコネクタ
+
+[受信 Webhook](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) は、他のアプリから Teams チャネルに通知を自動的に送信するためのシンプルな方法です。 [発信 Webhook](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks) を使用すると、@メンションを使用して Web サービスにメッセージを送信できます。
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-connectors.png" alt-text="Teams クライアントでコネクタがどのように表示されるかについての概念的な表現。" border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+#### <a name="microsoft-graph-for-teams"></a>Microsoft Graph for Teams
+
+[Microsoft Graph API for Teams](/graph/teams-concept-overview) は、アプリの機能を作成または強化するのに役立つチーム、チャネル、ユーザー、メッセージに関する情報へのアクセスを提供します。
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="../../assets/images/overview-graph.png" alt-text="Microsoft Graph for Teams についての概念的な表現。" border="false":::
+
+   :::column-end:::
+:::row-end:::
+
 > [!NOTE]
-> 使用例の構築を開始する前に、Teams 機能と、それらを使用する Teamsプラットフォームで可能なことを理解している必要があります。
+> Teams ストアが進化しました。
+> 
+> 以前は、タイルの省略記号を選択すれば LOB アプリが更新されました。 Teams ストア エクスペリエンスが更新され、[Teams 管理センター](https://admin.teams.microsoft.com)にログインして LOB アプリを更新できるようになりました。
 
-ユーザーと対話する各方法には、その長所と短所があります。 優Teamsアプリの構築は、ユーザーのニーズに合わせて適切な組み合わせを見つけることです。 これらのニーズを満たす場合は、まずそれらを理解する必要があります。
+### <a name="app-scope"></a>アプリのスコープ
 
-## <a name="understand-the-problem"></a>問題を理解する
+アプリには、次のいずれかのスコープを指定できます。
 
-すべてのアプリには、コアの問題や解決の必要性があります。 アプリの構築を開始する前に、その問題が何かを明確にする必要があります。 その中心にあるのTeamsはコラボレーション プラットフォームなので、効果的なコラボレーションを実現する際にギャップを埋めるアプリは最適です。 また、ソーシャル プラットフォームであり、ネイティブクロスプラットフォームであり、Office 365 の中心に位置し、アプリを作成する個人用キャンバスを提供します。 このソーシャル プラットフォームでは、さまざまなニーズをサポートするアプリで解決Teamsがあります。 解決しようとしている問題を理解している場合は、さまざまな問題を解決できます。 アプリの構築を開始する前に、次のような関連する質問をします。
+- **個人用アプリ エクスペリエンス**: 個人用アプリは、ユーザーが自分のタスクに集中したり、重要なアクティビティを表示したりするのに役立つ専用のスペースまたはボットです。
+- **共有アプリ エクスペリエンス**: Teams、チャネル、およびチャットは共同作業スペースです。 これらのコンテキストのアプリは、そのスペース内のすべてのユーザーが利用できます。 通常、共同作業スペースでは、アプリの操作や新しい社会的対話の実現に重点が置かれます。
 
-* ユーザーが使用している現在の状態システムの長所と短所は何ですか?
-* 対処するユーザーが直面する問題は何ですか?
-* 現在のプロセスのやり方でユーザーが好きと好きな機能は何ですか?
+アプリは、さまざまなスコープにまたがって存在できます。 例:
 
-## <a name="understand-your-user"></a>ユーザーを理解する
+- アプリは、中央の共有場所 (タブ) にデータを表示できます。
+- また、同じ情報を個人の会話インターフェイス (ボット) を介して表示することもできます。
 
-ユーザーが誰か理解し、適切な配布モデルを特定できます。 この機能を使用すると、ユーザーがユーザーを使用する方法をTeams。 次のような関連する質問をする。
-
-* ユーザーは主にモバイル クライアント上の第一線のワーカーですか?
-* 多くのゲスト ユーザーがアプリにアクセスする必要がありますか?
-* チームとチャネルを使用するか、主にグループ チャットを使用しますか?
-* プライマリ ユーザーは技術的に洗練されていますか?
-* 完全なオンボーディング エクスペリエンスが必要か、またはいくつかのポインターが行う可能性がありますか?
-
-答えは、すべてのユーザーに対してこの問題を解決 *Teams場合があります。* その場合は、AppSource に発行するために必要なことを理解するのに時間 [を費やしてください](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)。
-
-## <a name="understand-the-limitations-of-the-app"></a>アプリの制限を理解する
-
-データアクセシビリティとデータ常駐要件に関するアプリの制限を理解すると、より良いアプリを設計するのに役立ちます。 データの所有者に関する情報と API の可用性がソリューション アーキテクチャに影響を与えるので、これは重要です。 もう一度、次のような関連する質問をします。
-
-* 現在のアプリのバック エンド統合に関する課題は何ですか?
-* Whoのデータを所有していますか? インハウスまたはサードパーティ。
-* アプリの機能に影響を与えるファイアウォールはありますか?
-* アプリの機能に必要なデータにアクセスする API はありますか? 
-
-## <a name="provide-authentication"></a>認証の提供
-
-公開しているサービスを保護する必要がある場合や、どのレベルで保護する必要がある場合は、早期に特定する必要があります。 アプリで公開されている Web サービスTeamsインターネット上で一般公開されています。 そのため、セキュリティで保護する必要がある場合は、今すぐ考え始める必要があります。 テナント外のユーザーにゲスト アクセスを提供する必要があるソリューションが必要な場合は、機密情報を保護するためにアクセス制限とアクセス許可を設定する必要があります。 ゲスト ユーザー アクセスに関する制限を考慮してアプリを設計する必要があります。 したがって、次のような質問をします。 
-
-* ユーザーは役割に基づいて異なるデータ ビューにアクセスしますか?
-* PII が関係していますか?
-* 操作はユーザー の役割にも基づいて行いますか?
-* 外部ユーザーはアプリにアクセスしますか?
-
-## <a name="decide-what-goes-in-teams"></a>データの中で何が起こTeams
-
-新しいソリューションを構築する場合も、既存のソリューションを Teams に組み込む場合でも、アプリ全体が Teams クライアント内にあるかどうかを判断することが重要です。 エクスペリエンスの一部のみを取り込むのが理にかなっているのか確認します。 タブ、メッセージング拡張機能、タスク モジュール、アダプティブ カード、会話型ボットを組み合わせて、複雑なアプリを完全に構築Teams。
-ユーザーが誰か、解決しようとしている問題を覚えておいてください。 問題のほとんどを解決するためのシステムが既にあるか、機能のサブセットを拡張して問題を解決Teams? 通常、ソリューションの一部を取り込む場合は、ワークフローの共有、共同作業、開始、監視に集中する必要があります。
-
-## <a name="plan-the-onboarding-experience"></a>オンボーディング エクスペリエンスを計画する
-
-オンボーディング エクスペリエンスは、アプリの成功と失敗の違いになります。 アプリの各機能と、機能をインストールできるコンテキストごとに、自己紹介の計画が必要です。 会話ボットが 1,000 人のチャネルにインストールされている場合の導入方法は、1 対 1 のチャットにインストールされる場合とは異なります。 ユーザーが最初にチャネルでタブを構成すると、どうなるでしょうか。 メッセージング拡張機能を使用してカードを共有している場合は、詳細ページへの小さなリンクを追加して、アプリで他に何ができるかをユーザーに紹介するのに役立ちますか?
-
-ユーザーが誰かを知ることにより、適切なエクスペリエンスを作成できます。 ほとんどのユーザーは、アプリが何のためにあるか、または別のコンテキストで既にサービスを使用している必要がありますか? 彼らは事前の知識を持ってアプリに来ていますか? 主要なユーザーを念頭に置いてオンボーディング エクスペリエンスを作成します。
-
-ユーザーはさまざまな方法でアプリを検出できます。 別のユーザーがコンテンツを共有するためにアプリを使用している場合は、アプリをインストールしているユーザーやアプリに導入される可能性があります。 より多くのユーザーにアプリを使用する場合は、すべてのユーザーに自己紹介する方法を探す必要があります。
-
-とりわけ、スパムが好きな人はいないことを覚えておいてください。 個人用メッセージとチャネル メッセージを使用してブラスト処理を行うのは、インストールを迅速に解除するための良い方法です。
-
-## <a name="plan-for-the-future"></a>将来の計画
-
-ユーザーが現在のソリューションで使用する新しい機能を特定します。 アプリに追加する新機能のロードマップがある場合、設計とアーキテクチャに影響が及ぼす可能性があります。
+ユーザーは同一のアクティビティを実行するためにキャンバス タブでアプリを操作するか、会話型ボットを使用する場合があります。
 
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [使用例のマップ](../../concepts/design/map-use-cases.md)
+> [ユース ケースのマップ](../../concepts/design/map-use-cases.md)
 
 ## <a name="see-also"></a>関連項目
 
-[デバイス機能](~/concepts/device-capabilities/device-capabilities-overview.md)
+[デバイス機能の統合](~/concepts/device-capabilities/device-capabilities-overview.md)
