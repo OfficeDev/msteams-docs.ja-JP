@@ -6,16 +6,26 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: Teams タブの送信 Webhook アクション可能メッセージの確認 Webhook
-ms.openlocfilehash: 816a09a85af0e47f1dea5da6a4c02608c986573e
-ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
+ms.openlocfilehash: 2b77118e76bfde8c0fac7c74fce4dab1d78c7dd5
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2022
-ms.locfileid: "62281764"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356295"
 ---
 # <a name="create-outgoing-webhook"></a>送信 Webhook を作成する
 
 送信 Webhook はボットとして機能し、**@mention** を使用してチャネル内のメッセージを検索します。 外部 Web サービスに通知を送信し、カードや画像などの豊富なメッセージで応答します。 [Microsoft Bot Framework](https://dev.botframework.com/) を使用してボットを作成するプロセスをスキップすることができます。
+
+<!--- TBD: Edit this article.
+* Admonitions/alerts may be overused in this article. Check once.
+* An important alert at the end of this table does not make sense. Also, it has a code snippet inside it.
+* Some screenshots like teamschannel.png may be redundant. Check once.
+* Some headings use title case. We use sentence case for titles.
+* Check for markdownlint errors. 
+* Try using &nbsp; to add spaces in codeblocks for indentation and remove the hard tabs.
+* Table with just a row is not really needed. Provide the content without tabulating it.
+--->
 
 ## <a name="key-features-of-outgoing-webhook"></a>送信 Webhook の主な機能
 
@@ -32,13 +42,13 @@ ms.locfileid: "62281764"
 
 送信 Webhook を作成し、カスタム ボットを Teams に追加します。
 
-**送信 Webhook を作成するには**
+送信 Webhook を作成するには、次の手順を実行します。
 
 1. 左側のウィンドウから **Teams** を選択します。 **Teams** ページが表示されます。
 
     ![Teams チャネル](~/assets/images/teamschannel.png)
 
-1. **Teams** ページで、送信 Webhook を作成するために必要なチームを選択し、&#8226;&#8226;&#8226; を選択します。 ドロップダウン メニューで、**チームの管理** を選択します。
+1. **Teams** ページで、送信 Webhook を作成するために必要なチームを選択し、&#8226;&#8226;&#8226; を選択します。ドロップダウン メニューで **[チームの管理]** を選択します。
 
     ![送信 Webhook を作成する](~/assets/images/outgoingwebhook1.png)
 
@@ -57,7 +67,7 @@ ms.locfileid: "62281764"
     * **説明**: プロフィール カード、チームのレベルのアプリ ダッシュボードに表示される詳細な文字列です。
     * **プロフィール画像**: Webhook のアプリ アイコンで、省力可能です。
 
-1. **[作成]** を選択します。 送信 Webhook が、現在のチームのチャネルに追加されます。
+1. **[作成]** を選択します。送信 Webhook が、現在のチームのチャネルに追加されます。
 
     ![送信 Webhook を作成する](~/assets/images/outgoingwebhook.png)
 
@@ -72,6 +82,7 @@ ms.locfileid: "62281764"
 * 例: 作成、読み取り、更新、削除など、すべての CRUD 操作を追跡する基幹業務アプリがあります。 これらの操作は Office 365 テナント全体で HR ユーザーによって従業員記録に対して行われました。
 
 # <a name="url-json-payload"></a>[URL JSON ペイロード](#tab/urljsonpayload)
+
 **アプリのサーバー上で URL を作成し、JSON ペイロードを使用して POST 要求を受け入れて処理する**
 
 サービスは、標準の Azure Bot Service のメッセージング スキーマでメッセージを受信します。 Bot Framework Connector は、[Azure Bot Service API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference) で文書化されているように、サービスが HTTPS プロトコルを使用して JSON 形式のメッセージ交換を処理できるようにする RESTful サービスです。 Microsoft Bot Framework SDK を使用して、メッセージの処理と解析を行うこともできます。 詳細については、[Azure Bot Service の概要](/azure/bot-service/bot-service-overview-introduction) を参照してください。
@@ -79,25 +90,27 @@ ms.locfileid: "62281764"
 送信 Webhook は、`team` レベルにスコープが設定され、チームのすべてのメンバーに表示されます。 ユーザーは送信 Webhook の名前を **\@メンション** して、チャネルで呼び出す必要があります。
 
 # <a name="verify-hmac-token"></a>[HMAC トークンを確認する](#tab/verifyhmactoken)
+
 **送信 Webhook HMAC トークンを確認するメソッドを作成する**
 
 受信メッセージと ID の例: {"contoso", "vqF0En+Z0ucuRTM/01o2GuhMH3hKKk/N2bOmlM31zaA=" } という SigningKeyDictionary の "contoso"。 
 
 要求ヘッダーの認証には、"HMAC 03TCao0i55H1eVKUusZOTZRjtvYTs + mO41mPL + R1e1U =" という値を使用します。
 
-サービスが受け取る呼び出しが本物の Teams クライアントからの呼び出しのみになるよう、HTTP `hmac` 認証ヘッダーの HMAC コードが Teams によって提供されます。 常に認証プロトコルにコードを含めます。
+サービスが受け取る呼び出しが本物の Teams クライアントからの呼び出しのみになるよう、Teams により HTTP `hmac` ヘッダーに HMAC コードが提供されます。このコードは常に認証プロトコルに含める必要があります。
 
 次のように、コードで要求に含まれる HMAC 署名を常に検証する必要があります。
 
-* メッセージの要求本文から HMAC トークンを生成します。 ほとんどのプラットフォームでこれを行うための標準ライブラリがあります (Node.js の場合は [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto)、C\# の場合は [Teams Webhook Sample](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) を参照してください)。 Microsoft Teams では、標準の SHA256 HMAC 暗号化を使用します。 本文を UTF8 でバイト配列に変換する必要があります。
-* Teams クライアントで送信 Webhook を登録したときに Teams によって提供されたセキュリティ トークンのバイト配列からハッシュを計算します。 「[送信 Webhook を作成する](#create-outgoing-webhook)」を参照してください。
+* メッセージの要求本文から HMAC トークンを生成します。 ほとんどのプラットフォームでこれを行うための標準ライブラリがあり、Node.js の場合は [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto)、C\# の場合は [Teams Webhook Sample](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) などがあります。 Microsoft Teams では、標準の SHA256 HMAC 暗号化を使用します。 本文を UTF8 でバイト配列に変換する必要があります。
+* Teams クライアントで送信 Webhook を登録したときに Teams によって提供されたセキュリティ トークンのバイト配列からハッシュを計算します。「[送信 Webhook を作成する](#create-outgoing-webhook)」を参照してください。
 * UTF-8 エンコーディングを使用してハッシュを文字列に変換します。
 * 生成されたハッシュの文字列の値と、HTTP 要求で指定された値を比較します。
 
 # <a name="method-to-respond"></a>[応答するメソッド](#tab/methodtorespond)
+
 **成功または失敗の応答を送信するメソッドを作成する**
 
-送信 Webhook からの応答は、元のメッセージと同じ返信チェーンに表示されます。 ユーザーがクエリを実行すると、Microsoft Teams はサービスに対して同期 HTTP 要求を発行し、コードには、メッセージに応答するための 5 秒間が与えられます。この時間を過ぎると、接続がタイムアウトして終了します。
+送信 Webhook からの応答は、元のメッセージと同じ返信チェーンに表示されます。ユーザーがクエリを実行すると、Microsoft Teams はサービスに対して同期 HTTP 要求を発行し、コードには、メッセージに応答するための 5 秒間が与えられます。この時間を過ぎると、接続がタイムアウトして終了します。
 
 ### <a name="example-response"></a>応答の例
 
@@ -107,13 +120,14 @@ ms.locfileid: "62281764"
     "text": "This is a reply!"
 }
 ```
+
 ---
 
 > [!NOTE]
 > * アダプティブ カード、ヒーロー カード、テキスト メッセージは、送信 Webhook で添付ファイルとして送信できます。
-> * カードは書式設定をサポートしています。 詳細については、[「マークダウンを使用したカードの書式設定」](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#format-cards-with-markdown) を参照してください。
+> * カードでは、書式設定がサポートされています。詳細については、「[マークダウンを使用したカードの書式設定](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#format-cards-with-markdown)」を参照してください。
 
-アダプティブ カード応答の例を次に示します。
+以下のコードは、アダプティブ カードの応答例です。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -211,7 +225,7 @@ var responseMsg = JSON.stringify({
 }
 ```
 
-* * *
+---
 
 ## <a name="code-sample"></a>コード サンプル
 
@@ -219,7 +233,13 @@ var responseMsg = JSON.stringify({
 |----------------|------------------|--------|----------------|
 | Webhookの送信 | Microsoft Teams で使用するカスタム ボットを作成するサンプルです。| [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 
+
+## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
+
+「[ステップ バイ ステップ ガイド](../../sbs-outgoing-webhooks.yml)」に従って、Teams で送信 Webhook を作成します。
+
 ## <a name="see-also"></a>関連項目
+
 * [受信 Webhook を作成する](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Office 365 コネクタを作成する](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [メッセージを作成して送信する](~/webhooks-and-connectors/how-to/connectors-using.md)
