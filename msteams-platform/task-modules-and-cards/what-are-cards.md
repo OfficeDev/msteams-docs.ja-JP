@@ -4,27 +4,27 @@ description: カードと、それらがボット、コネクタ、メッセー�
 ms.localizationpriority: high
 keywords: コネクタ ボット カード メッセージング
 ms.topic: overview
-ms.openlocfilehash: 7ab05607e7c5abf897c790bb777e5c697edc9e08
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 249a83c8a41ddfa3a7409ce897238389114db165
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821585"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398653"
 ---
 # <a name="cards"></a>カード
 
 カードは、短い情報や関連する情報のユーザー インターフェイス (UI) コンテナーです。 カードには複数のプロパティと添付ファイルを含めることができます。また、ボタンを含めることができます。このボタンは、[カードアクション](~/task-modules-and-cards/cards/cards-actions.md)をトリガーします。 カードを使用すると、情報をグループに整理し、ユーザーが情報の特定の部分を操作する機会を与えることができます。
 
 Teams のボットでは、次の種類のカードがサポートされています。
- 
-- アダプティブ カード
-- ヒーロー カード
-- リスト カード
-- Office 365 コネクタ カード
-- レシート カード
-- サインイン カード
-- サムネイル カード
-- カード コレクション
+
+* アダプティブ カード
+* ヒーロー カード
+* リスト カード
+* Office 365 コネクタ カード
+* レシート カード
+* サインイン カード
+* サムネイル カード
+* カード コレクション
 
 カードの種類に応じて、Markdown または HTML を使用して、カードにリッチ テキストの書式設定を追加できます。 Microsoft Teams のボットとメッセージング拡張機能で使用されるカードは、これらのカード アクション、 `openUrl`、 `messageBack`、 `imBack`、 `invoke`、および `signin`に追加して応答します。
 
@@ -63,21 +63,22 @@ Teams では、アダプティブ カードに加えて、他の 2 種類のカ�
 
 ### <a name="people-picker-in-adaptive-cards"></a>アダプティブ カードでのユーザー ピッカー
 
-[ユーザー ピッカー](cards/people-picker.md#people-picker-in-adaptive-cards) 入力コントロールとして追加アダプティブ カード、ユーザーの検索と選択を有効にします。 チャット、チャネル、タスク モジュール、タブで使用できます。 モバイル クライアントとデスクトップ クライアントは、インライン入力エクスペリエンスを提供するユーザー ピッカーをサポートします。 
+[ユーザー ピッカー](cards/people-picker.md#people-picker-in-adaptive-cards) 入力コントロールとして追加アダプティブ カード、ユーザーの検索と選択を有効にします。 チャット、チャネル、タスク モジュール、タブで使用できます。 モバイル クライアントとデスクトップ クライアントは、インライン入力エクスペリエンスを提供するユーザー ピッカーをサポートします。
 
 ### <a name="type-ahead-search-in-adaptive-cards"></a>アダプティブ カードでの先行入力検索  
 
-入力コントロールとして追加された先行検索を入力アダプティブ カード、動的に読み込まれたデータセットから[動的検索](~/task-modules-and-cards/cards/dynamic-search.md)エクスペリエンスを可能にします。 また、ユーザーは選択肢の数が限られているリスト内で先行入力の静的検索を実行することもできます。 モバイル クライアントとデスクトップ クライアントでは、先行入力の動的検索エクスペリエンスがサポートされています。 
+入力コントロールとして追加された先行検索を入力アダプティブ カード、動的に読み込まれたデータセットから[動的検索](~/task-modules-and-cards/cards/dynamic-search.md)エクスペリエンスを可能にします。 また、ユーザーは選択肢の数が限られているリスト内で先行入力の静的検索を実行することもできます。 モバイル クライアントとデスクトップ クライアントでは、先行入力の動的検索エクスペリエンスがサポートされています。
 
 ### <a name="adaptive-cards-and-incoming-webhooks"></a>アダプティブ カードと受信 Webhook
 
 > [!NOTE]
+>
 > * `Action.Submit`を除くすべてのネイティブ アダプティブ カード スキーマ要素は、完全にサポートされています。
 > * サポートされているアクションは [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html)、[**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html)、[**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)、および [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)です。
 
 受信 Webhook でアダプティブ カードすると、アダプティブ カードの豊富で柔軟な機能を使用できます。 Teams の受信 Webhook を使用して、Web サービスからデータを送信します。
 
-## <a name="support-for-azure-ad-object-id-and-upn-in-user-mention"></a>ユーザー メンションでの Azure AD オブジェクト ID と UPN のサポート 
+## <a name="support-for-azure-ad-object-id-and-upn-in-user-mention"></a>ユーザー メンションでの Azure AD オブジェクト ID と UPN のサポート
 
 アダプティブ カードを持つボットでは、既存の ID に加えて、Microsoft Azure Active Directory (Azure AD) オブジェクト ID やユーザー プリンシパル名 (UPN) などのユーザー メンション ID がサポートされます。 受信 Webhook は、Azure AD オブジェクト ID と UPN を使用したアダプティブ カードでのユーザー メンションをサポートし始めます。
 

@@ -4,12 +4,12 @@ description: App Studio を使用して Microsoft Teams で優れたアプリの
 keywords: App Studio Teams の開始
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 92f24fbb7d4a41a192178ead1e2cb40dd7446b25
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: d03fae40ee0d003f3556e40c52ad876bb8949b5b
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948636"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399178"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>App Studio を使用してアプリを管理Microsoft Teams
 
@@ -66,7 +66,7 @@ App Studio の [マニフェスト エディター] タブでは、マニフェ�
 マニフェスト エディターの機能セクションでは、アプリの機能が定義され、各機能の詳細が表示されます。
 
 > [!NOTE]
-> ベスト プラクティスとして、アプリのユーザーとユーザーがアプリをカスタマイズするときに従うカスタマイズ ガイドラインを提供する必要があります。 詳細については、「アプリのカスタマイズ[」を参照Microsoft Teams。](/MicrosoftTeams/customize-apps)
+> ベスト プラクティスとして、アプリのユーザーとユーザーがアプリをカスタマイズするときに従うカスタマイズ ガイドラインを提供する必要があります。 詳細については、「アプリのカスタマイズ[」を参照Microsoft Teams](/MicrosoftTeams/customize-apps)。
 
 ##### <a name="tabs"></a>タブ
 
@@ -108,18 +108,19 @@ Bot Framework にボットをまだ登録していない場合は、**[Register]
 * 任意の説明。
 
 > [!NOTE]
-> アプリ スタジオを使用してメッセージング拡張機能を作成するには、「 [アプリ スタジオを使用してメッセージング拡張機能を作成する」を参照してください](~/resources/create-messaging-extension-using-appstudio.md)。
+> アプリ スタジオを使用してメッセージング拡張機能を作成するには、「アプリ [スタジオを使用してメッセージング拡張機能を作成する」を参照してください](~/resources/create-messaging-extension-using-appstudio.md)。
 
 #### <a name="test-and-distribute"></a>テストと配布
 
 アプリケーションの定義が完了したら、テストと配布のセクションを使用して、アプリの定義を zip ファイルとしてエクスポートし、それをテストのために Teams クライアントに共有およびアップロードできます。 [Export] (エクスポート) をクリックすると、zip ファイルが *appname.zip* として既定のダウンロード ディレクトリにダウンロードされます。
 
 ##### <a name="publish-your-app-to-teams"></a>アプリを Teams に公開する
+
 プロジェクトのホーム ページでは、アプリをチーム向けにアップロードしたり、組織内のユーザー向けに会社のカスタム App Store に提出したり、すべての Teams ユーザー向けに App Source に提出したりできます。 これらの送信内容は、IT 管理者によって審査されます。 *[Publish]* (発行) ページに戻ると提出ステータスを確認することができ、アプリが IT 管理者によって承認または却下されたかどうかを確認できます。このページでは、アプリの更新プログラムを提出したり、現在提出中のアプリをキャンセルしたりすることもできます。
 
 ### <a name="card-editor"></a>Card Editor
 
-カードは、短い情報または関連する情報のコンテナーです。 Microsoft Teams はカードをサポートしています。このカードには複数のプロパティと添付ファイルを含めることができます。 カードは、ボットとコネクタが実行可能な情報をユーザーに中継するための主要な方法です。 
+カードは、短い情報または関連する情報のコンテナーです。 Microsoft Teams はカードをサポートしています。このカードには複数のプロパティと添付ファイルを含めることができます。 カードは、ボットとコネクタが実行可能な情報をユーザーに中継するための主要な方法です。
 
 このプロセスを簡単にし、エラーが発生しにくくするために、[カード エディター] タブでは、フォームを使用してヒーロー カードまたはサムネイル カードを作成し、ボットを介して結果のカード (ユーザーが表示するとおり) を確認してテストできます。 また、アプリのソース コードにコピーまたは貼り付けることができるカードの対応する JSON、C#、Node.js コードも提供されます。
 
@@ -151,4 +152,4 @@ Teams のベスト プラクティスに従ってアプリを作成するのは�
 
 ## <a name="see-also"></a>関連項目
 
-[開発者ポータルを使用してアプリを管理Microsoft Teams](~/concepts/build-and-test/teams-developer-portal.md)
+[Microsoft Teams の開発者ポータルを使用してアプリを管理する](~/concepts/build-and-test/teams-developer-portal.md)

@@ -4,12 +4,12 @@ author: surbhigupta
 description: Teams 会議やさまざまな会議シナリオ用のアプリの有効化と構成、アプリ マニフェストの更新、会議内ダイアログ、共有会議ステージ、会議サイドパネルなどの機能の構成
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 160518c147ac2bc1d1378a3f1bd31fde9de1723c
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 99467135f75f46d89b565c4d6a6e4948ab905d7b
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355801"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398863"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>会議のアプリを有効にしてTeamsする
 
@@ -24,6 +24,7 @@ ms.locfileid: "63355801"
 会議アプリの機能は、、 、および配列を使用してアプリ マニフェスト`configurableTabs``scopes`で宣言`context`されます。 スコープは、アクセスできるユーザーを定義し、コンテキストによってアプリが利用可能な場所を定義します。
 
 > [!NOTE]
+>
 > * マニフェスト スキーマを使用してアプリ マニフェストを [更新する必要があります](../resources/schema/manifest-schema-dev-preview.md)。
 > * 会議のアプリにはスコープが必要 `groupchat` です。 スコープ `team` は、チャネル内のタブでのみ機能します。
 
@@ -78,7 +79,7 @@ Teams会議は、組織に共同作業のエクスペリエンスを提供しま
 
 会議の前に、ユーザーはタブ、ボット、メッセージング拡張機能を追加できます。 開催者と発表者の役割を持つユーザーは、会議にタブを追加できます。
 
-**タブを会議に追加するには**
+タブを会議に追加するには、次の方法を使用します。
 
 1. 予定表で、タブを追加する会議を選択します。
 1. [詳細] **タブを選択** し、[ <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>.
@@ -87,16 +88,17 @@ Teams会議は、組織に共同作業のエクスペリエンスを提供しま
 
 1. 表示されるタブ ギャラリーで、追加するアプリを選択し、必要に応じて手順に従います。 アプリはタブとしてインストールされます。
 
-**会議にメッセージング拡張機能を追加するには**
+メッセージング拡張機能を会議に追加するには、次の方法を使用します。
 
 1. チャット内のメッセージ &#x25CF;&#x25CF;&#x25CF; にある省略記号を選択します。
 1. 追加するアプリを選択し、必要に応じて手順に従います。 アプリはメッセージング拡張機能としてインストールされます。
 
-**ボットを会議に追加するには**
+ボットを会議に追加するには、次の方法を使用します。
 
 会議チャットで、キーを入力し、[ **@** ボットの取得 **] を選択します**。
 
 > [!NOTE]
+>
 > * コンテンツ バブルは、ユーザーがアクセスできるアダプティブ カードまたはカードを会議チャットに同時に投稿します。 これにより、会議または会議アプリが最小化Teamsユーザーに役立ちます。
 > * ユーザー ID は、Tabs SSO を使用して [確認する必要があります](../tabs/how-to/authentication/auth-aad-sso.md)。 認証後、アプリは API を使用してユーザー ロールを取得 `GetParticipant` できます。
 > * ユーザー ロールに基づいて、アプリにはロール固有のエクスペリエンスを提供する機能があります。 たとえば、ポーリング アプリでは、開催者と発表者だけが新しいポーリングを作成できます。
@@ -156,7 +158,7 @@ API を使用して要求`userContext`をルーティングするには、「SDK
   ]
 ```
 
-詳細については、「アプリ マニフェスト [」を参照してください](../resources/schema/manifest-schema-dev-preview.md#configurabletabs)。 
+詳細については、「アプリ マニフェスト [」を参照してください](../resources/schema/manifest-schema-dev-preview.md#configurabletabs)。
 
 ##### <a name="share-specific-parts-of-the-app-to-stage"></a>アプリの特定の部分をステージに共有する
 

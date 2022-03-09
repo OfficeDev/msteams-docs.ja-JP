@@ -4,18 +4,18 @@ description: アダプティブ カード、ヒーロー カード、サムネ�
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: ac5d7605b73d9aeb41bd41cca919e59fa47afff9
-ms.sourcegitcommit: 98cde8ff08552da4ce36fb0463982366bed979e0
+ms.openlocfilehash: 516ca3a0fbfc1e1fb386632eb06c1c3a60918485
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2022
-ms.locfileid: "62062517"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399045"
 ---
 # <a name="cards-and-task-modules"></a>カードとタスク モジュール
 
 カードは、ユーザーにさまざまなビジュアル、オーディオ、および会話フローで選択できるメッセージとヘルプを提供します。
 
-タスク モジュールを使用すると、モーダル ポップアップ エクスペリエンスを Microsoft Teams。 タスクの開始と完了、ビデオや Power Business Intelligence (BI) ダッシュボードのような豊富な情報の表示に役立ちます。
+タスク モジュールを使用すると、モーダル ポップアップ エクスペリエンスをMicrosoft Teams。 タスクの開始と完了、ビデオや Power Business Intelligence (BI) ダッシュボードのような豊富な情報の表示に役立ちます。
 
 ボットでは、次の種類のカードがサポートTeams。
 
@@ -33,6 +33,7 @@ ms.locfileid: "62062517"
 [アダプティブ カードのアダプティブ カードのユーザー](cards/people-picker.md) 選択機能は、チャットまたはチャネル内でユーザーを検索、選択、再割り当て、および事前選択するのに役立ちます。
 
 次のカードアクションを追加して対応できます。
+
 * URL を開く
 * ボットにメッセージとペイロードを送信する
 * OAuth フローの開始

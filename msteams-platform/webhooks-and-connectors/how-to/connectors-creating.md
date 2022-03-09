@@ -6,12 +6,12 @@ keywords: Teams Office365 コネクタ
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 880bede3a33d974c8424bdcaeb8e250bdc97edca
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 9914f721e155f01a05813441587d0d1ea71e09ae
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356099"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399199"
 ---
 # <a name="create-office-365-connectors"></a>Office 365 コネクタの作成
 
@@ -37,12 +37,13 @@ ms.locfileid: "63356099"
 1. ユーザーが [保存] **を選択** し、コード内のコールバックをトリガーします。
 
     > [!NOTE]
+    >
     > * コードは、Webhook 設定を取得して保存イベントを処理できます。 後でイベントを投稿する Webhook をコードに格納します。
     > * 構成エクスペリエンスは、インラインで読み込Teams。
 
 既存の Web 構成エクスペリエンスを再利用したり、別のバージョンを作成して、特にホストTeams。 コードには JavaScript SDK のMicrosoft Teamsする必要があります。 これにより、現在のユーザー、チャネル、またはチーム のコンテキストを取得して認証フローを開始するなどの一般的な操作を実行するための API へのコード アクセスが可能になります。
 
-**構成エクスペリエンスを統合するには**
+構成エクスペリエンスを統合するには、次の作業を行います。
 
 1. `microsoftTeams.initialize()` を呼び出して SDK を初期化します。
 1. [保存 `microsoftTeams.settings.setValidityState(true)` ] を有効にする呼び **出し**。
@@ -143,9 +144,9 @@ ms.locfileid: "63356099"
 
 コードは、既存のコネクタ構成の編集に戻るユーザーを処理する必要があります。 これを行うには、次のパラメーター `microsoftTeams.settings.setSettings()` を使用して初期構成中に呼び出します。
 
-- `entityId` は、ユーザーがサービスで構成および理解した情報を表すカスタム ID です。
-- `configName` は、構成コードが取得できる名前です。
-- `contentUrl` は、ユーザーが既存のコネクタ構成を編集するときに読み込まれるカスタム URL です。
+* `entityId` は、ユーザーがサービスで構成および理解した情報を表すカスタム ID です。
+* `configName` は、構成コードが取得できる名前です。
+* `contentUrl` は、ユーザーが既存のコネクタ構成を編集するときに読み込まれるカスタム URL です。
 
 この呼び出しは、保存イベント ハンドラーの一部として行います。 次に、読み込 `contentUrl` まれると、 `getSettings()` 構成ユーザー インターフェイスの設定やフォームを事前に設定するためにコードを呼び出す必要があります。
 
@@ -218,7 +219,7 @@ Exchange Online PowerShell で次のコマンドを実行します。
 * テナントのコネクタを無効にするには、次のコマンドを実行 `Set-OrganizationConfig -ConnectorsEnabled:$false`します。
 * テナントのアクション可能なメッセージを無効にするには、次の操作を行 `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$false`います。
 * コネクタを有効にするには、Teamsコマンドを実行します。
-  * `Set-OrganizationConfig -ConnectorsEnabled:$true `
+  * `Set-OrganizationConfig -ConnectorsEnabled:$true`
   * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
   * `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$true`
 
@@ -243,7 +244,7 @@ PowerShell モジュール交換の詳細については、「 [Set-Organization
 
 チームでコネクタを構成して使用するためにアプリ パッケージをアップロードした後、組織のアプリ カタログからコネクタをインストールします。
 
-**コネクタを設定するには**
+コネクタを設定するには、次の方法を使用します。
 
 1. 左側の **ナビゲーション** バーから [アプリ] を選択します。
 1. [アプリ **] セクションで** 、[コネクタ] **を選択します**。
@@ -269,8 +270,8 @@ PowerShell モジュール交換の詳細については、「 [Set-Organization
 
 |**サンプルの名前** | **説明** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| コネクタ    | サンプル Office 365 チャネルへの通知を生成するコネクタTeamsします。|   [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
-| 汎用コネクタのサンプル |Webhook をサポートする任意のシステム用にカスタマイズしやすい汎用コネクタのサンプル コード。|  | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
+| コネクタ | サンプル Office 365 チャネルへの通知を生成するコネクタTeamsします。| [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
+| 汎用コネクタのサンプル |Webhook をサポートする任意のシステム用にカスタマイズしやすい汎用コネクタのサンプル コード。| | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
 
 ## <a name="see-also"></a>関連項目
 

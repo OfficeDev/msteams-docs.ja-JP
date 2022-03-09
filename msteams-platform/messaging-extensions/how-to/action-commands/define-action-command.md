@@ -5,18 +5,18 @@ description: アプリ マニフェストの例を使用したメッセージン
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: fe3cb2296eabd38f94f0e2978e7232ea5f70acc3
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 938e37fac8cd27257e378fa1177916462b331023
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355889"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399269"
 ---
 # <a name="define-messaging-extension-action-commands"></a>メッセージング拡張機能アクション コマンドの定義
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-アクション コマンドを使用すると、ユーザーにタスク モジュールと呼ばれるモーダル ポップアップを表示Teams。 タスク モジュールは、情報を収集または表示し、対話を処理し、その情報をユーザーにTeams。 このドキュメントでは、アクション コマンドの呼び出し場所の選択、タスク モジュールの作成、最終メッセージまたはカードの送信、アプリ スタジオを使用したアクション コマンドの作成、または手動での作成方法について説明します。 
+アクション コマンドを使用すると、ユーザーにタスク モジュールと呼ばれるモーダル ポップアップを表示Teams。 タスク モジュールは、情報を収集または表示し、対話を処理し、その情報をユーザーにTeams。 このドキュメントでは、アクション コマンドの呼び出し場所の選択、タスク モジュールの作成、最終メッセージまたはカードの送信、アプリ スタジオを使用したアクション コマンドの作成、または手動での作成方法について説明します。
 
 アクション コマンドを作成する前に、次の要素を決定する必要があります。
 
@@ -43,7 +43,7 @@ ms.locfileid: "63355889"
 
     コマンド コンテキスト = メッセージ
 
-    > [!NOTE] 
+    > [!NOTE]
     > ボットへの最初の呼び出しには、呼び出されたメッセージを含む JSON オブジェクトが含まれます。 メッセージをタスク モジュールで表示する前に、メッセージを処理できます。
 
 次の図は、アクション コマンドが呼び出された場所を表示します。
@@ -52,11 +52,11 @@ ms.locfileid: "63355889"
 
 ## <a name="select-how-to-create-your-task-module"></a>タスク モジュールの作成方法を選択する
 
-コマンドの呼び出し先を選択する以外に、ユーザーのタスク モジュールにフォームを設定する方法も選択する必要があります。 タスク モジュール内でレンダリングされるフォームを作成するには、次の 3 つのオプションがあります。   
+コマンドの呼び出し先を選択する以外に、ユーザーのタスク モジュールにフォームを設定する方法も選択する必要があります。 タスク モジュール内でレンダリングされるフォームを作成するには、次の 3 つのオプションがあります。
 
 * **パラメーターの静的な一覧**: これは最も簡単な方法です。 アプリ マニフェストでクライアントがレンダリングするパラメーターの一覧Teams定義できますが、この場合は書式設定を制御できません。
 * **アダプティブ カード**: アダプティブ カードの使用を選択すると、UI の制御が向上しますが、使用可能なコントロールと書式設定オプションは制限されます。
-* **埋め込み Web ビュー**: カスタム Web ビューをタスク モジュールに埋め込み、UI とコントロールを完全に制御できます。 
+* **埋め込み Web ビュー**: カスタム Web ビューをタスク モジュールに埋め込み、UI とコントロールを完全に制御できます。
 
 パラメーターの静的リストを使用してタスク モジュールを作成する場合、ユーザーがタスク モジュールを送信すると、メッセージング拡張機能が呼び出されます。 埋め込み Web ビューまたはアダプティブ カードを使用する場合、メッセージング拡張機能は、ユーザーからの最初の呼び出しイベントを処理し、タスク モジュールを作成し、クライアントに戻す必要があります。
 
@@ -93,12 +93,12 @@ ms.locfileid: "63355889"
 1. ウィンドウ **で [セットアップ** ] を選択して、メッセージング拡張機能をアプリ エクスペリエンスに含めます。 次の図は、メッセージング拡張機能のセットアップ ウィンドウを表示します。
 
     <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
-    
+
 1. メッセージング拡張機能を作成するには、Microsoft 登録済みのボットが必要です。 既存のボットを使用するか、新しいボットを作成できます。 [ **新しいボットの作成]** オプションを選択し、新しいボットの名前を付け、[作成] を選択 **します**。 次の図は、メッセージング拡張機能のボットの作成を表示します。
 
     <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
 
-1. [ **メッセージング拡張機能** ] **ページの [コマンド** ] セクションで [追加] を選択して、メッセージング拡張機能の動作を決定するコマンドを含めます。   
+1. [ **メッセージング拡張機能** ] **ページの [コマンド** ] セクションで [追加] を選択して、メッセージング拡張機能の動作を決定するコマンドを含めます。
 次の図は、メッセージング拡張機能のコマンド追加を表示します。
 
    <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
@@ -106,14 +106,14 @@ ms.locfileid: "63355889"
 1. [ユーザー **が外部サービス内で** アクションをトリガー Teams。 次の図は、アクション コマンドの選択を表示します。
 
     <img src="~/assets/images/messaging-extension/action-command-selection.png" alt="action command selection" width="500"/>
-    
-1. 静的な一連のパラメーターを使用してタスク モジュールを作成するには、[コマンドの静的パラメーターのセット **を定義する] を選択します**。 
+
+1. 静的な一連のパラメーターを使用してタスク モジュールを作成するには、[コマンドの静的パラメーターのセット **を定義する] を選択します**。
 
     次の図は、アクション コマンドの静的パラメーターの選択を表示します。
 
-   <img src="~/assets/images/messaging-extension/action-command-static-parameter-selection.png" alt="action command static parameter selection" width="500"/> 
-   
-    次の図は、静的パラメーターのセットアップ例を示しています。 
+   <img src="~/assets/images/messaging-extension/action-command-static-parameter-selection.png" alt="action command static parameter selection" width="500"/>
+
+    次の図は、静的パラメーターのセットアップ例を示しています。
 
    <img src="~/assets/images/messaging-extension/setting-up-of-static-parameter.png" alt="action command static parameter set-up" width="500"/>
 
@@ -124,7 +124,7 @@ ms.locfileid: "63355889"
 1. 動的パラメーターを使用するには、[ボットから **パラメーターの動的セットをフェッチする] を選択します**。 次の図は、アクション コマンド パラメーターの選択を表示します。
 
     <img src="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt="action command dynamic parameter selection" width="500"/>
-    
+
 1. コマンド ID **と Title** を追加 **します**。
 1. アクション コマンドを呼び出す場所を選択します。 次の図は、アクション コマンドの呼び出し場所を表示します。
 
@@ -139,8 +139,8 @@ ms.locfileid: "63355889"
 
 | プロパティ名 | 用途 | 必須 | マニフェストの最小バージョン |
 |---|---|---|---|
-| `id` | このプロパティは、このコマンドに割り当てる一意の ID です。 ユーザー要求には、この ID が含まれます。 | 必要 | 1.0 |
-| `title` | このプロパティはコマンド名です。 この値は UI に表示されます。 | 必要 | 1.0 |
+| `id` | このプロパティは、このコマンドに割り当てる一意の ID です。 ユーザー要求には、この ID が含まれます。 | はい | 1.0 |
+| `title` | このプロパティはコマンド名です。 この値は UI に表示されます。 | はい | 1.0 |
 | `type` | このプロパティは、 である必要があります `action`。 | いいえ | 1.4 |
 | `fetchTask` | このプロパティは、 `true` タスク モジュールのアダプティブ カードまたは埋め込み Web`false` ビュー、およびパラメーターの静的リストまたは Web ビューを読み込むときにに設定されます `taskInfo`。 | いいえ | 1.4 |
 | `context` | このプロパティは、メッセージング拡張機能の呼び出し先を定義する値の任意の配列です。 使用可能な値: `message`、`compose`、`commandBox`。 既定値は `["compose", "commandBox"]` です。 | 不要 | 1.5 |
@@ -150,7 +150,7 @@ ms.locfileid: "63355889"
 | プロパティ名 | 用途 | 必須ですか? | マニフェストの最小バージョン |
 |---|---|---|---|
 | `parameters` | このプロパティは、コマンドのパラメーターの静的な一覧を示します。 の場合にのみ使用 `fetchTask` します `false`。 | いいえ | 1.0 |
-| `parameter.name` | このプロパティは、パラメーターの名前を表します。 これは、ユーザー要求でサービスに送信されます。 | 必要 | 1.0 |
+| `parameter.name` | このプロパティは、パラメーターの名前を表します。 これは、ユーザー要求でサービスに送信されます。 | はい | 1.0 |
 | `parameter.description` | このプロパティは、パラメーターの目的または指定する必要がある値の例を示します。 この値は UI に表示されます。 | はい | 1.0 |
 | `parameter.title` | このプロパティは、短いユーザーフレンドリーなパラメーターのタイトルまたはラベルです。 | はい | 1.0 |
 | `parameter.inputType` | このプロパティは、必要な入力の種類に設定されます。 指定できる値には、、 、 、 、 、 が`time`含まれます`toggle`。 `date``number``textarea``text` 既定値は に設定されます `text`。 | いいえ | 1.4 |
@@ -163,7 +163,7 @@ ms.locfileid: "63355889"
 |`taskInfo.title`|初期タスク モジュールのタイトル。 |いいえ | 1.4 |
 |`taskInfo.width`|タスク モジュールの幅 (ピクセル単位の数値または`large``medium``small`既定のレイアウトなど) |不要 | 1.4 |
 |`taskInfo.height`|タスク モジュールの高さ (ピクセル単位の数値または`large``medium``small`既定のレイアウトなど)|不要 | 1.4 |
-|`taskInfo.url`|初期 Web ビューの URL。|不要 | 1.4 | 
+|`taskInfo.url`|初期 Web ビューの URL。|不要 | 1.4 |
 
 #### <a name="app-manifest-example"></a>アプリ マニフェストの例
 
@@ -223,7 +223,6 @@ ms.locfileid: "63355889"
 |:---------------------|:--------------|:---------|:--------|
 |Teams拡張アクション| アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
 
-
 ## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
 
 ステップ バイ [ステップ ガイドに従って](../../../sbs-meetingextension-action.yml)、アクション ベースTeams拡張機能を構築します。
@@ -239,4 +238,3 @@ ms.locfileid: "63355889"
 
 > [!div class="nextstepaction"]
 > [タスク モジュールの送信に応答する](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
-

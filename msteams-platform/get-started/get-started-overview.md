@@ -4,12 +4,12 @@ description: Microsoft Teams 開発者向けドキュメントの概要の概要
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams 開発者向けサンプル
-ms.openlocfilehash: e67ab472f28dc44dc23f892b36ddc78ff602d28d
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 32f6e94e7c1773812fbdca26106dbd319cc45262
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435839"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399003"
 ---
 # <a name="get-started"></a>概要
 
@@ -44,20 +44,16 @@ Yeoman ワークフローに既に慣れている場合は、 [YoTeams Yeoman Ge
 > [!NOTE]
 > App Studio を使用している場合は、Teams アプリを構成、配布、管理するための開発者ポータルを試してみることをお勧めします。
 
-
 ## <a name="build-your-first-teams-app"></a>最初の Teams アプリを構築する
 
 では、最初の Teams アプリを構築しましょう。 ただし、まず、言語 (またはフレームワーク) を選択し、開発環境を準備します。
 
 > [!div class="nextstepaction"]
 > [React](../sbs-gs-javascript.yml) を使用して JavaScript で Teams アプリを構築する
-
 > [!div class="nextstepaction"]
 > [SPFx](../sbs-gs-spfx.yml) を使用して Teams アプリを構築する
-
 > [!div class="nextstepaction"]
 > [C# または .NETを使用して Teams アプリをビルドする](../sbs-gs-csharp.yml)
-
 > [!div class="nextstepaction"]
 > [node.js を使用して Teams アプリをビルドする](../sbs-gs-nodejs.yml)
 

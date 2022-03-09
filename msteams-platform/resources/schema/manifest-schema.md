@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: 18c42cf4a8ea6350214c2e459f0dcde1a1d8f66c
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 25de3d14019bbe37a202f2252749e816fc7b3edc
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356421"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399101"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参照: Microsoft Teams のマニフェスト スキーマ
 
@@ -481,7 +481,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |`context` | 列挙型の配列| 2|| タブがサポートされている `contextItem` 個のスコープのセット。|
 
 > [!NOTE]
->  サードパーティの開発者は searchUrl 機能を使用できません。関連するコンテンツを表示したり、認証フローを開始したりするために、タブにコンテキスト依存の情報が必要な場合は、「 [Microsoft Teams タブのコンテキストを取得する](../../tabs/how-to/access-teams-context.md)」を参照してください。
+> サードパーティの開発者は searchUrl 機能を使用できません。関連するコンテンツを表示したり、認証フローを開始したりするために、タブにコンテキスト依存の情報が必要な場合は、「 [Microsoft Teams タブのコンテキストを取得する](../../tabs/how-to/access-teams-context.md)」を参照してください。
 
 ## <a name="bots"></a>ボット
 
@@ -638,7 +638,6 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 >[!NOTE]
 >アプリマニフェストで `showLoadingIndicator` を true として選択した場合、ページを正しく読み込むには、「[ネイティブの読み込みインジケーターを表示する](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)」ドキュメントの説明に従って、タブとタスクモジュールのコンテンツページを変更します。
 
-
 ## <a name="isfullscreen"></a>IsFullScreen
 
  **省略可能** — ブール値
@@ -717,6 +716,7 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 **省略可能** - 文字列
 
 このアプリに既定で定義されているインストール スコープを指定します。 定義されたスコープは、ユーザーがアプリを追加しようとしたときにボタンに表示されるオプションになります。 オプションは、次のとおりです。
+
 * `personal`
 * `team`
 * `groupchat`
@@ -727,10 +727,11 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 **省略可能** - オブジェクト
 
 グループのインストール スコープを選択すると、ユーザーがアプリをインストールするときに既定の機能が定義されます。オプションは次のとおりです。
+
 * `team`
 * `groupchat`
 * `meetings`
- 
+
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`team`|string|||選択したインストール スコープが `team`の場合、このフィールドは使用可能な既定の機能を指定します。オプション: `tab`、 `bot`、または `connector`。|
@@ -761,7 +762,7 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 ## <a name="defaultblockuntiladminaction"></a>defaultBlockUntilAdminAction
 
 **省略可能** — ブール値
- 
+
 `defaultBlockUntilAdminAction` プロパティ が **true** に 設定されている場合、管理者が許可するまで、アプリは既定でユーザーから非表示になります。 **true** に 設定すると、アプリは、すべてのテナントとエンド ユーザーに対して非表示になります。 テナント管理者は、Teams 管理センターでアプリを確認し、アプリを許可またはブロックするためのアクションを実行できます。 既定値は **false** です。 既定のアプリ ブロックの詳細については、「[管理者が承認するまで Teams アプリを非表示にする](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves)」を参照してください。
 
 ## <a name="publisherdocsurl"></a>publisherDocsUrl

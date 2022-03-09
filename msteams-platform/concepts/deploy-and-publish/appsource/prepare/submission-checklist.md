@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
 keywords: 申請ストア配布アプリ パッケージのガイドラインのローカライズの検証
-ms.openlocfilehash: 579744dc8081eb8ca3e967cce1b4d696350d0a56
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: da0daf5daf927dcaf4346171fe78c3db6e874259
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356428"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398947"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>ストア申請Microsoft Teams準備する
 
@@ -24,7 +24,7 @@ ms.locfileid: "63356428"
 アプリがテスト環境で動作している場合は、申請プロセス中に問題が発生しないようにアプリ パッケージを確認する必要があります。
 
 > [!NOTE]
->  App Studio は間もなく非推奨になります。 新しい開発者ポータルを使用して、Teamsアプリを構成、配布、[および管理する](https://dev.teams.microsoft.com/)
+> App Studio は間もなく非推奨になります。 新しい開発者ポータルを使用して、Teamsアプリを構成、配布、[および管理する](https://dev.teams.microsoft.com/)
 
 アプリMicrosoft Teamsツールを使用すると、パートナー センターに提出する前に問題を特定して修正できます。 このツールは、ストアの検証中に使用したのと同じテスト ケースに対して、アプリの構成を自動的にチェックします。
 
@@ -36,6 +36,7 @@ ms.locfileid: "63356428"
 ## <a name="compile-testing-instructions"></a>テスト手順のコンパイル
 
 レビュー担当者がアプリをテストするのに役立つ手順とリソースを提供します。
+
 * テスト アカウント
 * 資格情報
 * ライセンス キー

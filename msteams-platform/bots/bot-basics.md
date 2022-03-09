@@ -6,20 +6,20 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: アクティビティ ハンドラー フレームワーク ボット カードの同意チャネル イベント
-ms.openlocfilehash: af6823a0a1395c5f33af9d914c3199d76854a050
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 5094ce68aae25cb4c22c3b0b3b3b3d39e565e4ab
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435797"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398646"
 ---
 # <a name="bot-activity-handlers"></a>ボットのアクティビティ ハンドラー
 
-このドキュメントでは、ボットの動作に関する記事を基 [に](https://aka.ms/how-bots-work) 、ボット フレームワークのコア [ドキュメントを参照してください](https://aka.ms/azure-bot-service-docs)。 Microsoft Teams とコア ボット フレームワーク用に開発されたボットの主な違いは、Teams で提供される機能です。
+このドキュメントでは、ボットの動作に関する記事を基 [に](https://aka.ms/how-bots-work) 、ボット フレームワークのコア [ドキュメントを参照してください](https://aka.ms/azure-bot-service-docs)。 Microsoft Teams ボット フレームワーク用に開発されたボットとコアボット フレームワークの主な違いは、Teams で提供される機能です。
 
-ボットの会話ロジックを整理するには、アクティビティ ハンドラーが使用されます。 アクティビティは、アクティビティ ハンドラーとボット ロジックTeams 2 つの方法で処理されます。 このTeamsアクティビティ ハンドラーは、特定のイベントMicrosoft Teams操作のサポートを追加します。 ボット オブジェクトには、ターンの会話的な理由またはロジックが含まれています。ターン ハンドラーが公開されます。これは、ボット アダプターからの受信アクティビティを受け入れ可能なメソッドです。
+ボットの会話ロジックを整理するには、アクティビティ ハンドラーが使用されます。 アクティビティは、アクティビティ ハンドラーとボット ロジックTeams 2 つの方法で処理されます。 アクティビティ Teamsハンドラーは、特定のイベントMicrosoft Teams操作のサポートを追加します。 ボット オブジェクトには、ターンの会話的な理由またはロジックが含まれています。ターン ハンドラーが公開されます。これは、ボット アダプターからの受信アクティビティを受け入れ可能なメソッドです。
 
-## <a name="teams-activity-handlers"></a>Teams アクティビティ ハンドラー
+## <a name="teams-activity-handlers"></a>Teamsアクティビティ ハンドラー
 
 Teamsアクティビティ ハンドラーは、Microsoft Bot Frameworkアクティビティ ハンドラーから派生します。 特定のアクティビティTeams処理する前に、すべてのTeamsアクティビティをルーティングします。
 
@@ -27,11 +27,11 @@ Teamsアクティビティ ハンドラーは、Microsoft Bot Frameworkアクテ
 
 # <a name="c"></a>[C#](#tab/csharp)
 
-ボットは、ボット フレームワークを使用して作成されます。 ボットがメッセージ アクティビティを受信すると、ターン ハンドラーはその受信アクティビティの通知を受け取ります。 ターン ハンドラーは、受信アクティビティをアクティビティ ハンドラーに `OnMessageActivityAsync` 送信します。 このTeams機能は変わりません。 ボットが会話更新アクティビティを受け取った場合、ターン ハンドラーはその受信アクティビティの通知を受け取り、受信アクティビティをに送信します `OnConversationUpdateActivityAsync`。 アクティビティ Teamsは、最初に特定のイベントTeamsチェックします。 イベントが見つからない場合は、それらをボット フレームワークのアクティビティ ハンドラーに渡します。
+ボットは、ボット フレームワークを使用して作成されます。 ボットがメッセージ アクティビティを受信すると、ターン ハンドラーはその受信アクティビティの通知を受け取ります。 ターン ハンドラーは、受信アクティビティをアクティビティ ハンドラーに `OnMessageActivityAsync` 送信します。 このTeamsは変わりません。 ボットが会話更新アクティビティを受け取った場合、ターン ハンドラーはその受信アクティビティの通知を受け取り、受信アクティビティをに送信します `OnConversationUpdateActivityAsync`。 最初Teamsアクティビティ ハンドラーは、特定のイベントTeamsチェックします。 イベントが見つからない場合は、それらをボット フレームワークのアクティビティ ハンドラーに渡します。
 
-アクティビティ ハンドラー クラスTeamsアクティビティ ハンドラーには、2 つのTeamsアクティビティ ハンドラーがあります `OnConversationUpdateActivityAsync` `OnInvokeActivityAsync`。 `OnConversationUpdateActivityAsync`すべての会話更新アクティビティをルーティングし、`OnInvokeActivityAsync`すべてのTeamsをルーティングします。
+アクティビティ ハンドラー クラスTeamsアクティビティ ハンドラーには、2 つのTeamsアクティビティ ハンドラーがあります `OnConversationUpdateActivityAsync` `OnInvokeActivityAsync`。 `OnConversationUpdateActivityAsync`すべての会話更新アクティビティをルーティングし、`OnInvokeActivityAsync`すべてのTeams呼び出しアクティビティをルーティングします。
 
-特定のアクティビティ ハンドラー Teamsロジックを実装するには、ボット のロジック セクションに示すように、ボット内のメソッドをオーバーライド[する必要](#bot-logic)があります。 これらのハンドラーの基本実装はありません。そのため、オーバーライドに必要なロジックを追加する必要があります。
+特定のアクティビティ ハンドラー Teamsロジックを実装するには、ボット ロジック セクションに示すように、ボット内のメソッドをオーバーライド[する必要](#bot-logic)があります。 これらのハンドラーの基本実装はありません。そのため、オーバーライドに必要なロジックを追加する必要があります。
 
 アクティビティ ハンドラーのコード スニペットTeams次のとおりです。
 
@@ -60,9 +60,9 @@ protected override Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, Team
 ```csharp
 
 protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-        {
-            // Code logic here
-        }
+  {
+   // Code logic here
+  }
 ```
 
 `OnTeamsTeamRenamedAsync`
@@ -70,9 +70,9 @@ protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, Team
 ```csharp
 
 protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-        {
-            // Code logic here
-        }
+  {
+   // Code logic here
+  }
 ```
 
 `OnTeamsMembersAddedAsync`
@@ -80,9 +80,9 @@ protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<
 ```csharp
 
 protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-        {
-            // Code logic here
-        }
+  {
+   // Code logic here
+  }
 ```
 
 `OnTeamsMembersRemovedAsync`
@@ -90,18 +90,18 @@ protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> team
 ```csharp
 
 protected override Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> teamsMembersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken);
-        {
-            // Code logic here
-        }
+  {
+   // Code logic here
+  }
 ```
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
-ボットは、ボット フレームワークを使用して作成されます。 ボットがメッセージ アクティビティを受信すると、ターン ハンドラーはその受信アクティビティの通知を受け取ります。 ターン ハンドラーは、受信アクティビティをアクティビティ ハンドラーに `onMessage` 送信します。 このTeams機能は変わりません。 ボットが会話更新アクティビティを受け取った場合、ターン ハンドラーはその受信アクティビティの通知を受け取り、受信アクティビティをに送信します `dispatchConversationUpdateActivity`。 アクティビティ Teamsは、最初に特定のイベントTeamsチェックします。 イベントが見つからない場合は、それらをボット フレームワークのアクティビティ ハンドラーに渡します。
+ボットは、ボット フレームワークを使用して作成されます。 ボットがメッセージ アクティビティを受信すると、ターン ハンドラーはその受信アクティビティの通知を受け取ります。 ターン ハンドラーは、受信アクティビティをアクティビティ ハンドラーに `onMessage` 送信します。 このTeamsは変わりません。 ボットが会話更新アクティビティを受け取った場合、ターン ハンドラーはその受信アクティビティの通知を受け取り、受信アクティビティをに送信します `dispatchConversationUpdateActivity`。 最初Teamsアクティビティ ハンドラーは、特定のイベントTeamsチェックします。 イベントが見つからない場合は、それらをボット フレームワークのアクティビティ ハンドラーに渡します。
 
-アクティビティ ハンドラー クラスTeamsアクティビティ ハンドラーには、2 つのTeamsアクティビティ ハンドラーがあります `dispatchConversationUpdateActivity` `onInvokeActivity`。 `dispatchConversationUpdateActivity`すべての会話更新アクティビティをルーティングし、`onInvokeActivity`すべてのTeamsをルーティングします。
+アクティビティ ハンドラー クラスTeamsアクティビティ ハンドラーには、2 つのTeamsアクティビティ ハンドラーがあります `dispatchConversationUpdateActivity` `onInvokeActivity`。 `dispatchConversationUpdateActivity`すべての会話更新アクティビティをルーティングし、`onInvokeActivity`すべてのTeams呼び出しアクティビティをルーティングします。
 
-特定のアクティビティ ハンドラー Teamsロジックを実装するには、ボット のロジック セクションに示すように、ボット内のメソッドをオーバーライド[する必要](#bot-logic)があります。 これらのハンドラーのボット ロジックを定義し、最後に必ず呼 `next()` び出します。 呼び出 `next()` しによって、次のハンドラーが実行されます。
+特定のアクティビティ ハンドラー Teamsロジックを実装するには、ボット ロジック セクションに示すように、ボット内のメソッドをオーバーライド[する必要](#bot-logic)があります。 これらのハンドラーのボット ロジックを定義し、最後に必ず呼 `next()` び出します。 呼び出 `next()` しによって、次のハンドラーが実行されます。
 
 アクティビティ ハンドラーのコード スニペットTeams次のとおりです。
 
@@ -151,7 +151,7 @@ onTeamsTeamRenamedAsync(async (teamInfo, context, next) => {
 
 onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
        // code for handling
-       await next();
+    await next();
     });
 ```
 
@@ -161,23 +161,23 @@ onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
 
 onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
        // code for handling
-       await next();
+    await next();
     });
 ```
 
 # <a name="python"></a>[Python](#tab/python)
 
-ボットは、ボット フレームワークを使用して作成されます。 ボットがメッセージ アクティビティを受信すると、ターン ハンドラーはその受信アクティビティの通知を受け取ります。 ターン ハンドラーは、受信アクティビティをアクティビティ ハンドラーに `on_message_activity` 送信します。 このTeams機能は変わりません。 ボットが会話更新アクティビティを受け取った場合、ターン ハンドラーはその受信アクティビティの通知を受け取り、受信アクティビティをに送信します `on_conversation_update_activity`。 アクティビティ Teamsは、最初に特定のイベントTeamsチェックします。 イベントが見つからない場合は、それらをボット フレームワークのアクティビティ ハンドラーに渡します。
+ボットは、ボット フレームワークを使用して作成されます。 ボットがメッセージ アクティビティを受信すると、ターン ハンドラーはその受信アクティビティの通知を受け取ります。 ターン ハンドラーは、受信アクティビティをアクティビティ ハンドラーに `on_message_activity` 送信します。 このTeamsは変わりません。 ボットが会話更新アクティビティを受け取った場合、ターン ハンドラーはその受信アクティビティの通知を受け取り、受信アクティビティをに送信します `on_conversation_update_activity`。 最初Teamsアクティビティ ハンドラーは、特定のイベントTeamsチェックします。 イベントが見つからない場合は、それらをボット フレームワークのアクティビティ ハンドラーに渡します。
 
-アクティビティ ハンドラー クラスTeamsアクティビティ ハンドラーには、2 つのTeamsアクティビティ ハンドラーがあります `on_conversation_update_activity` `on_invoke_activity`。 `on_conversation_update_activity`すべての会話更新アクティビティをルーティングし、`on_invoke_activity`すべてのTeamsをルーティングします。
+アクティビティ ハンドラー クラスTeamsアクティビティ ハンドラーには、2 つのTeamsアクティビティ ハンドラーがあります `on_conversation_update_activity` `on_invoke_activity`。 `on_conversation_update_activity`すべての会話更新アクティビティをルーティングし、`on_invoke_activity`すべてのTeams呼び出しアクティビティをルーティングします。
 
-特定のアクティビティ ハンドラー Teamsロジックを実装するには、ボット のロジック セクションに示すように、ボット内のメソッドをオーバーライド[する必要](#bot-logic)があります。 これらのハンドラーの基本実装はありません。そのため、オーバーライドに必要なロジックを追加する必要があります。
+特定のアクティビティ ハンドラー Teamsロジックを実装するには、ボット ロジック セクションに示すように、ボット内のメソッドをオーバーライド[する必要](#bot-logic)があります。 これらのハンドラーの基本実装はありません。そのため、オーバーライドに必要なロジックを追加する必要があります。
 
 ---
 
 ## <a name="bot-logic"></a>ボット ロジック
 
-ボット ロジックは、1 つ以上のボット チャネルからの受信アクティビティを処理し、応答して送信アクティビティを生成します。 これは、最初にアクティビティをチェックするアクティビティ ハンドラー クラスTeamsボットTeamsです。 アクティビティを確認Teams、他のすべてのアクティビティを Bot Framework のアクティビティ ハンドラーに渡します。
+ボット ロジックは、1 つ以上のボット チャネルからの受信アクティビティを処理し、応答して送信アクティビティを生成します。 これは、最初にアクティビティをチェックする Teams アクティビティ ハンドラー クラスから派生したボットTeamsです。 アクティビティを確認Teams、他のすべてのアクティビティを Bot Framework のアクティビティ ハンドラーに渡します。
 
 # <a name="c"></a>[C#](#tab/csharp)
 
@@ -190,7 +190,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 定義されているハンドラーの一覧には、 `ActivityHandler` 次のものが含まれます。
 
-| イベント | ハンドラー | 説明 |
+| イベント | ハンドラー | 内容 |
 | :-- | :-- | :-- |
 | 受信したアクティビティの種類 | `OnTurnAsync` | このメソッドは、受信したアクティビティの種類に基づいて、他のハンドラーのいずれかを呼び出します。 |
 | 受信したメッセージ アクティビティ | `OnMessageActivityAsync` | このメソッドは、アクティビティを処理するためにオーバーライド `Message` できます。 |
@@ -206,7 +206,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 コア `TeamsActivityHandler` Bot Framework ハンドラー セクションのハンドラーの一覧を拡張して、次の項目を含める。
 
-| イベント | ハンドラー | 説明 |
+| イベント | ハンドラー | 内容 |
 | :-- | :-- | :-- |
 | channelCreated | `OnTeamsChannelCreatedAsync` | このメソッドは、作成中のチャネルを処理Teamsオーバーライドできます。 詳細については、「会話更新イベント[で作成されたチャネル](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created)[」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
 | channelDeleted | `OnTeamsChannelDeletedAsync` | このメソッドをオーバーライドして、削除するチャネルTeams処理できます。 詳細については、「会話の更新 [イベントで削除された](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) チャネル [」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
@@ -219,7 +219,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 アクティビティ ハンドラーからTeamsされる`OnInvokeActivityAsync`アクティビティ ハンドラーの一覧Teams次に示します。
 
-| 呼び出しの種類                    | ハンドラー                              | 説明                                                  |
+| 呼び出しの種類                    | ハンドラー                              | 内容                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
 | CardAction.Invoke               | `OnTeamsCardActionInvokeAsync`       | このメソッドは、カード アクションの呼び出しアクティビティがコネクタから受信されると呼び出されます。 |
 | fileConsent/invoke              | `OnTeamsFileConsentAcceptAsync`      | このメソッドは、ユーザーがファイル同意カードを受け入れるときに呼び出されます。 |
@@ -230,7 +230,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 | task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | このメソッドは、派生クラスでオーバーライドして、タスク モジュールのフェッチ時にロジックを提供できます。 |
 | task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | このメソッドは、タスク モジュールの送信時にロジックを提供するために派生クラスでオーバーライドできます。 |
 
-このセクションに記載されている呼び出しアクティビティは、ユーザーの会話型ボットTeams。 ボット フレームワーク SDK では、メッセージング拡張機能に固有の呼び出しアクティビティもサポートしています。 詳細については、「メッセージング拡張機能 [について」を参照してください](https://aka.ms/azure-bot-what-are-messaging-extensions)。
+このセクションに記載されている呼び出しアクティビティは、ユーザー設定の会話型ボットTeams。 ボット フレームワーク SDK では、メッセージング拡張機能に固有の呼び出しアクティビティもサポートしています。 詳細については、「メッセージング拡張機能 [について」を参照してください](https://aka.ms/azure-bot-what-are-messaging-extensions)。
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
@@ -243,7 +243,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 定義されているハンドラーの一覧には、 `ActivityHandler` 次のものが含まれます。
 
-| イベント | ハンドラー | 説明 |
+| イベント | ハンドラー | 内容 |
 | :-- | :-- | :-- |
 | 受信したアクティビティの種類 | `onTurn` | このメソッドは、受信したアクティビティの種類に基づいて、他のハンドラーのいずれかを呼び出します。 |
 | 受信したメッセージ アクティビティ | `onMessage` | このメソッドは、アクティビティの処理に役立 `Message` ちます。 |
@@ -258,7 +258,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 コア `TeamsActivityHandler` Bot Framework ハンドラー セクションのハンドラーの一覧を拡張して、次の項目を含める。
 
-| イベント | ハンドラー | 説明 |
+| イベント | ハンドラー | 内容 |
 | :-- | :-- | :-- |
 | channelCreated | `OnTeamsChannelCreatedAsync` | このメソッドは、作成中のチャネルを処理Teamsオーバーライドできます。 詳細については、「会話更新イベント[で作成されたチャネル](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created)[」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
 | channelDeleted | `OnTeamsChannelDeletedAsync` | このメソッドをオーバーライドして、削除するチャネルTeams処理できます。 詳細については、「会話の更新 [イベントで削除された](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) チャネル [」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
@@ -271,7 +271,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 アクティビティ ハンドラーからTeamsされる`onInvokeActivity`アクティビティ ハンドラーの一覧Teams次に示します。
 
-| 呼び出しの種類                    | ハンドラー                              | 説明                                                  |
+| 呼び出しの種類                    | ハンドラー                              | 内容                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
 | CardAction.Invoke               | `handleTeamsCardActionInvoke`       | このメソッドは、カード アクションの呼び出しアクティビティがコネクタから受信されると呼び出されます。 |
 | fileConsent/invoke              | `handleTeamsFileConsentAccept`      | このメソッドは、ユーザーがファイル同意カードを受け入れるときに呼び出されます。 |
@@ -282,7 +282,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 | task/fetch                      | `handleTeamsTaskModuleFetch`        | このメソッドは、派生クラスでオーバーライドして、タスク モジュールのフェッチ時にロジックを提供できます。 |
 | task/submit                     | `handleTeamsTaskModuleSubmit`       | このメソッドは、タスク モジュールの送信時にロジックを提供するために派生クラスでオーバーライドできます。 |
 
-このセクションに記載されている呼び出しアクティビティは、ユーザーの会話型ボットTeams。 ボット フレームワーク SDK では、メッセージング拡張機能に固有の呼び出しアクティビティもサポートしています。 詳細については、「メッセージング拡張機能 [について」を参照してください](https://aka.ms/azure-bot-what-are-messaging-extensions)。
+このセクションに記載されている呼び出しアクティビティは、ユーザー設定の会話型ボットTeams。 ボット フレームワーク SDK では、メッセージング拡張機能に固有の呼び出しアクティビティもサポートしています。 詳細については、「メッセージング拡張機能 [について」を参照してください](https://aka.ms/azure-bot-what-are-messaging-extensions)。
 
 # <a name="python"></a>[Python](#tab/python)
 
@@ -295,7 +295,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 定義されているハンドラーの一覧には、 `ActivityHandler` 次のものが含まれます。
 
-| イベント | ハンドラー | 説明 |
+| イベント | ハンドラー | 内容 |
 | :-- | :-- | :-- |
 | 受信したアクティビティの種類 | `on_turn` | このメソッドは、受信したアクティビティの種類に基づいて、他のハンドラーのいずれかを呼び出します。 |
 | 受信したメッセージ アクティビティ | `on_message_activity` | このメソッドは、アクティビティを処理するためにオーバーライド `Message` できます。 |
@@ -311,7 +311,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 コア `TeamsActivityHandler` の Bot Framework ハンドラー セクションからハンドラーの一覧を拡張して、次の項目を含める。
 
-| イベント | ハンドラー | 説明 |
+| イベント | ハンドラー | 内容 |
 | :-- | :-- | :-- |
 | channelCreated | `on_teams_channel_created` | このメソッドは、作成中のチャネルを処理Teamsオーバーライドできます。 詳細については、「会話更新イベント[で作成されたチャネル](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created)[」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
 | channelDeleted | `on_teams_channel_deleted` | このメソッドをオーバーライドして、削除するチャネルTeams処理できます。 詳細については、「会話の更新 [イベントで削除された](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) チャネル [」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
@@ -324,7 +324,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 アクティビティ ハンドラーからTeamsされる`on_invoke_activity`アクティビティ ハンドラーの一覧Teams次に示します。
 
-| 呼び出しの種類                    | ハンドラー                              | 説明                                                  |
+| 呼び出しの種類                    | ハンドラー                              | 内容                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
 | CardAction.Invoke               | `on_teams_card_action_invoke`       | このメソッドは、カード アクションの呼び出しアクティビティがコネクタから受信されると呼び出されます。 |
 | fileConsent/invoke              | `on_teams_file_consent_accept`      | このメソッドは、ユーザーがファイル同意カードを受け入れるときに呼び出されます。 |
@@ -335,15 +335,15 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 | task/fetch                      | `on_teams_task_module_fetch`        | このメソッドは、派生クラスでオーバーライドして、タスク モジュールのフェッチ時にロジックを提供できます。 |
 | task/submit                     | `on_teams_task_module_submit`       | このメソッドは、タスク モジュールの送信時にロジックを提供するために派生クラスでオーバーライドできます。 |
 
-このセクションに記載されている呼び出しアクティビティは、ユーザーの会話型ボットTeams。 ボット フレームワーク SDK では、メッセージング拡張機能に固有の呼び出しアクティビティもサポートしています。 詳細については、「メッセージング拡張機能 [について」を参照してください](https://aka.ms/azure-bot-what-are-messaging-extensions)。
+このセクションに記載されている呼び出しアクティビティは、ユーザー設定の会話型ボットTeams。 ボット フレームワーク SDK では、メッセージング拡張機能に固有の呼び出しアクティビティもサポートしています。 詳細については、「メッセージング拡張機能 [について」を参照してください](https://aka.ms/azure-bot-what-are-messaging-extensions)。
 
 ---
 
-* * *
+---
 
 ボット アクティビティ ハンドラーについて理解し、会話と受信または送信するメッセージに応じてボットの動作が異なる方法を確認します。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [会話の基本](~/bots/how-to/conversations/conversation-basics.md)

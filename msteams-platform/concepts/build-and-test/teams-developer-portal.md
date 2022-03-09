@@ -5,12 +5,12 @@ keywords: 開発者ポータル チームの開始
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 02f344c82f6350fe324b423b198e5cbcb048a2b4
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 52a6f925caa8296908febdb2b963edcf2de2eba3
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355714"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399325"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Microsoft Teams の開発者ポータルを使用してアプリを管理する
 
@@ -18,7 +18,7 @@ ms.locfileid: "63355714"
 
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="開発者ポータルのホーム ページを示すスクリーンショットTeams。":::
 
-> [!NOTE] 
+> [!NOTE]
 > 現在、開発者ポータルは、Government Community Cloud (GCC)、GCC-High、または国防総省 (DOD) テナントでは使用できません。
 
 ## <a name="register-an-app"></a>アプリを登録します
@@ -35,18 +35,18 @@ ms.locfileid: "63355714"
 
 環境とグローバル変数を構成して、アプリをローカル ランタイムから実稼働環境に移行できます。 グローバル変数は、すべての環境で使用されます。
 
-**環境をセットアップするには**
+環境をセットアップするには、次の方法を実行します。
 
 1. 開発者ポータルで、作業しているアプリを選択します。
 2. [環境] **ページに移動し** 、[+ 環境 **の追加] を選択します**。
 3. [ **+ 変数の追加] を** 選択して、環境の構成変数を作成します。
 
-**変数を使用するには**
+変数を使用するには、次のコマンドを実行します。
 
 アプリの構成を設定するには、ハードコードされた値の代わりに変数名を使用します。
 
 1. 開発者 `{{` ポータルの任意のフィールドに入力します。 選択した環境に対して作成した変数とグローバル変数のドロップダウンが表示されます。  
-1. アプリ パッケージをダウンロードする前に (たとえば、Teams ストアに発行する準備が整った場合)、使用する環境を選択します。 アプリの構成は、環境に基づいて自動的に更新されます。 
+1. アプリ パッケージをダウンロードする前に (たとえば、Teams ストアに発行する準備が整った場合)、使用する環境を選択します。 アプリの構成は、環境に基づいて自動的に更新されます。
 
 ## <a name="identify-app-owners"></a>アプリの所有者を特定する
 

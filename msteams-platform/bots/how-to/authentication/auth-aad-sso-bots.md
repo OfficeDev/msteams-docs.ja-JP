@@ -4,12 +4,12 @@ description: ユーザー トークンを取得する方法について説明し
 keywords: トークン、ユーザー トークン、ボットの SSO サポート、アクセス許可、Microsoft Graph、Azure AD
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 16e57a6ffc95aa9814016d56b66721ec44b07308
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: a51b96cdb5d2b37f826f533dae58bed117b71700
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355903"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399367"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>ボットのシングル サインオン (SSO) のサポート
 
@@ -33,7 +33,6 @@ Microsoft Azure Active Directory (Azure AD) のシングル サインオン認�
    > * ユーザーは、一度に複数のアクティブなエンドポイントを持つ可能性があります。
    > * ボット トークンは、すべてのアクティブなユーザーのエンドポイントから受信されます。
    > * SSO をサポートするには、アプリを個人用のスコープにインストールする必要があります。
-
 
 1. 現在のユーザーが初めてボット アプリケーションを使用している場合は、次のいずれかの操作を行う要求プロンプトがユーザーに表示されます。
     * 必要に応じて同意をしてください。
@@ -85,6 +84,7 @@ Microsoft Azure Active Directory (Azure AD) のシングル サインオン認�
    > アプリ マニフェストを後で更新するには、 **アプリケーション (クライアント) ID 値を保存** します。
 
    > [!IMPORTANT]
+   >
    > * スタンドアロン ボットを作成する場合は、アプリケーション ID URI を次のように入力します `api://botid-{YourBotId}`。 ここでは *、YourBotId* は、Azure AD ID です。
    > * ボットとタブを使用してアプリをビルドしている場合は、アプリケーション ID URI と `api://fully-qualified-domain-name.com/botid-{YourBotId}` に入力します。
 
@@ -112,7 +112,7 @@ Microsoft Azure Active Directory (Azure AD) のシングル サインオン認�
 
 1. 状態が [有効] に設定 **されている必要があります**。
 
-    ![State](~/assets/images/authentication/SSO-bots-auth/enabled-state.png)
+    ![状態](~/assets/images/authentication/SSO-bots-auth/enabled-state.png)
 
 1. **[スコープの追加]** を選択して、詳細を保存します。 表示されるスコープ名の **ドメイン部分** は、前の手順で設定した **アプリケーション ID** URI `/access_as_user` と自動的に一致し、末尾に追加する必要があります `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`。
 
@@ -146,9 +146,9 @@ Microsoft Azure Active Directory (Azure AD) のシングル サインオン認�
 1. 次の手順は、暗黙的な付与を有効にするのに役立ちます。
     * 左側の **ウィンドウから** [認証] を選択します。
     * [アクセス トークン **と ID トークン****] チェック ボックスを** オンにします。
-    
+
     ![許可フロー](~/assets/images/authentication/SSO-bots-auth/grant-flow.png)
-    
+
     * [保存 **] を** 選択して変更を保存します。
 
 1. 必要な **API アクセス許可を追加します**。
@@ -163,7 +163,6 @@ Microsoft Azure Active Directory (Azure AD) のシングル サインオン認�
 1. 構成項目が " **accessTokenAcceptedVersion": 2 に設定されている必要があります**。 指定しない場合は、値を 2 に **変更します**。
 
     ![マニフェストの更新](~/assets/images/bots/update-manifest.png)
-
 
    >[!NOTE]
    > 既にボットをテストしている場合は、Teamsアプリからサインアウトして、ボットからサインアウトするTeams。 次に、もう一度サインインして、この変更を表示します。
@@ -197,7 +196,7 @@ Microsoft Azure Active Directory (Azure AD) のシングル サインオン認�
     * アプリケーションの **ダウンストリーム API への** アクセス許可を指定するときに構成されたスコープAzure ADします。 クライアント ID とクライアント シークレットが提供されている場合、トークン ストアは、定義されたアクセス許可を持つグラフ トークンのトークンを交換します。
     * **[保存]** を選択します。
     * **[適用]** を選択します。
-   
+
     ![接続設定](~/assets/images/authentication/Bot-connection-setting.png)
 
 ### <a name="update-your-teams-application-manifest-for-your-bot"></a>ボットのTeamsアプリケーション マニフェストを更新する
@@ -211,6 +210,7 @@ Microsoft Azure Active Directory (Azure AD) のシングル サインオン認�
             "resource": "api://botid-00000000-0000-0000-0000-000000000000"
         }
 ```
+
 アプリケーションにボットとタブが含まれている場合は、次のコードを使用して新しいプロパティをアプリケーション マニフェストTeamsします。
 
 ```json
@@ -356,7 +356,6 @@ is `turnContext.activity.value` of type [TokenExchangeInvokeRequest](/dotnet/api
 
 6. a を `TokenExchangeInvokeResponse` 持つ `status` 場合 `200`、クライアントは OAuth カードを表示しない。 通常の [フロー イメージを参照してください](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true)。 その他の場合 `status` 、または受信 `TokenExchangeInvokeResponse` されていない場合、クライアントはユーザーに OAuth カードを表示します。 フォールバック フロー [イメージを参照してください](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true)。 ユーザーの同意のようなエラーや依存関係が未解決の場合、このアクティビティによって SSO フローが通常の OAuthCard フローに戻ります。
 
-
 ### <a name="update-the-auth-sample"></a>auth サンプルを更新する
 
 認証[Teams開き](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth)、次の手順を実行して更新します。
@@ -379,7 +378,8 @@ is `turnContext.activity.value` of type [TokenExchangeInvokeRequest](/dotnet/api
 4. プロファイル イメージを使用してマニフェストを圧縮し、そのマニフェストをTeams。
 
 ## <a name="code-sample"></a>コード サンプル
-|**サンプルの名前** | **説明** |**.NET** | 
+
+|**サンプルの名前** | **説明** |**.NET** |
 |----------------|-----------------|--------------|
 |ボット フレームワーク SDK | ボット フレームワーク SDK を使用するサンプル。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|
 

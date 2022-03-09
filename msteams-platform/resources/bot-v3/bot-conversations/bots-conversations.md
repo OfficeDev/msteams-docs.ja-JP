@@ -5,14 +5,14 @@ ms.topic: overview
 ms.localizationpriority: medium
 keywords: teams ボット メッセージ
 ms.date: 05/20/2019
-ms.openlocfilehash: ce3d3d1dd39707d08c720e75c67ec61b606f676a
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 0f77606b0fcc73e2bb68fc08e964662fdcba4df7
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518500"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399220"
 ---
-# <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>ボットと会話Microsoft Teamsする
+# <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>ユーザーボットと会話Microsoft Teamsする
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -24,8 +24,8 @@ ms.locfileid: "62518500"
 
 ボットの動作は、関係する会話の種類に応じて少し異なります。
 
-* [チャネルチャットとグループ チャット会話](~/resources/bot-v3/bot-conversations/bots-conv-channel.md) のボットでは、ユーザーがチャネル@mention呼び出すボットを作成する必要があります。
-* [単一のユーザーの会話の](~/resources/bot-v3/bot-conversations/bots-conv-personal.md) ボットでは、@mentionを入力する必要があります。
+* [チャネルチャットとグループ チャットの](~/resources/bot-v3/bot-conversations/bots-conv-channel.md) 会話のボットでは、ユーザーがチャネル@mentionボットを呼び出す必要があります。
+* [1 人のユーザーの会話の](~/resources/bot-v3/bot-conversations/bots-conv-personal.md) ボットでは、@mentionを入力する必要があります。
 
 ボットが特定のスコープで動作するには、マニフェスト内のそのスコープをサポートするとして一覧表示する必要があります。 スコープはマニフェスト参照で定義され、さらに [説明されています](~/resources/schema/manifest-schema.md)。
 
@@ -49,17 +49,17 @@ ms.locfileid: "62518500"
 
 ## <a name="message-content"></a>メッセージの内容
 
-ボットはリッチ テキスト、画像、カードを送信できます。 ユーザーは、リッチ テキストと画像をボットに送信できます。 ボットで処理できるコンテンツの種類は、ボットの [Microsoft Teams設定] ページで指定できます。
+ボットはリッチ テキスト、画像、カードを送信できます。 ユーザーは、リッチ テキストと画像をボットに送信できます。 ボットで処理できるコンテンツの種類は、ボットの [Microsoft Teams] ページで指定できます。
 
 | フォーマット | ユーザーからボットへ  | ボットからユーザーへ |  メモ |
 | --- | :---: | :---: | --- |
 | リッチ テキスト | ✔ | ✔ |  |
-| ピクチャ | ✔ | ✔ | 最大 1024× 1024 および 1 MB (PNG、JPEG、または GIF 形式)。アニメーション GIF はサポートされていません。 |
-| カード | ✖ | ✔ | サポートされている[カードについてはTeamsカード リファレンス](~/task-modules-and-cards/cards/cards-reference.md)を参照してください。 |
-| 絵文字 | ✖ | ✔ | Teamsは現在、顔をニヤリと笑う U+1F600 など、UTF-16 経由で絵文字をサポートしています。 |
+| ピクチャ | ✔ | ✔ | PNG、JPEG、× GIF 形式の最大 1024、×1024、1 MB。アニメーション GIF はサポートされていません。 |
+| カード | ✖ | ✔ | サポートされているカード[についてはTeamsカード リファレンス](~/task-modules-and-cards/cards/cards-reference.md)を参照してください。 |
+| 絵文字 | ✖ | ✔ | Teamsは現在、顔に笑う U+1F600 などの UTF-16 経由で絵文字をサポートしています。 |
 |
 
-チーム内のボットが基づくボット フレームワークでサポートされるボット操作の種類の詳細については、ボット ビルダー [SDK for .NET](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0&preserve-view=true) および[ボット ビルダー SDK for Node.js](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0&preserve-view=true)のドキュメントの会話フローと関連する概念に関するボット フレームワークのドキュメントを参照してください。[](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0&preserve-view=true)
+チーム内のボットが基にしているボット フレームワークでサポートされるボット操作の種類の詳細については、ボット ビルダー [SDK for .NET](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0&preserve-view=true) および[ボット ビルダー SDK for Node.js](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0&preserve-view=true)のドキュメントの会話フローと関連する概念に関するボット フレームワークのドキュメントを参照してください。[](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0&preserve-view=true)
 
 ## <a name="message-formatting"></a>メッセージの書式設定
 
@@ -74,9 +74,9 @@ a の省略可能な [`TextFormat`](/azure/bot-service/dotnet/bot-builder-dotnet
 
 画像は、メッセージに添付ファイルを追加して送信されます。 添付ファイルの詳細については、 [Bot Framework のドキュメントを参照してください](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0&preserve-view=true)。
 
-画像は、PNG、JPEG、または GIF 形式× 1024、1024、1 MB 以下の値を使用できます。アニメーション GIF はサポートされていません。
+画像は、最大で 1024×1024、PNG、JPEG、または GIF 形式で 1 MB です。アニメーション GIF はサポートされていません。
 
-XML を使用して、各イメージの高さと幅を指定することをお勧めします。 Markdown を使用する場合、画像サイズの既定値は 256 ×256 です。 例:
+XML を使用して、各イメージの高さと幅を指定することをお勧めします。 Markdown を使用する場合、画像サイズの既定値は 256、×256 です。 次に例を示します。
 
 * `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>` を使う
 * `![Duck on a rock](http://aka.ms/Fo983c)` を使用しないでください
@@ -86,7 +86,7 @@ XML を使用して、各イメージの高さと幅を指定することをお�
 宣言されているスコープに応じて、ボットは次のコンテキストでメッセージを受信できます。
 
 * **個人用チャット** ユーザーは、チャット履歴で追加されたボットを選択するか、新しいチャットの [To:] ボックスに名前またはアプリ ID を入力するだけで、ボットとのプライベート会話で対話できます。
-* **チャネル** ボットがチームに追加されている場合は、チャネルにボット ("@_botname_") を指定できます。 チャネル内のボットに対する追加の返信には、ボットのメンションが必要です。 これは、記載されていない返信には応答しない。
+* **チャネル** ボットがチームに追加されている場合は、チャネルにボット ("@*botname*") を指定できます。 チャネル内のボットに対する追加の返信には、ボットのメンションが必要です。 これは、記載されていない返信には応答しない。
 
 受信メッセージの場合、ボットは種類 [の Activity オブジェクトを](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) 受け取ります `messageType: message`。 オブジェクトには`Activity`、ボット[](~/resources/bot-v3/bots-notifications.md#channel-updates)`message`に送信されるチャネル更新など、他の種類の情報を含めすることもできますが、この型はボットとユーザーの間の通信を表します。
 
@@ -191,7 +191,7 @@ XML を使用して、各イメージの高さと幅を指定することをお�
 
 ### <a name="net-example"></a>.NET の例
 
-[Microsoft.Bot.Connector.Teams NuGet](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)パッケージ`TeamsChannelData`は、特殊なオブジェクトを提供します。このオブジェクトは、特定のTeamsにアクセスするプロパティを公開します。
+[Microsoft.Bot.Connector.Teams NuGet](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)パッケージ`TeamsChannelData`には、特定の情報にアクセスするプロパティを公開するTeamsオブジェクトが提供されます。
 
 ```csharp
 TeamsChannelData channelData = activity.GetChannelData<TeamsChannelData>();
@@ -200,7 +200,7 @@ string tenantId = channelData.Tenant.Id;
 
 ## <a name="sending-replies-to-messages"></a>メッセージへの返信の送信
 
-既存のメッセージに返信するには、 [`ReplyToActivity`](/dotnet/api/microsoft.bot.connector.conversationsextensions.replytoactivityasync?view=botbuilder-dotnet-3.0#Microsoft_Bot_Connector_ConversationsExtensions_ReplyToActivityAsync_Microsoft_Bot_Connector_IConversations_System_String_System_String_Microsoft_Bot_Connector_Activity_System_Threading_CancellationToken_&preserve-view=true) .NET [`session.send`](/javascript/api/botbuilder-core/TurnContext?view=botbuilder-ts-latest&viewFallbackFrom=botbuilder-ts-3.0#sendactivities&preserve-view=true) を呼び出Node.js。 ボット ビルダー SDK は、すべての詳細を処理します。
+既存のメッセージに返信するには、 [`ReplyToActivity`](/dotnet/api/microsoft.bot.connector.conversationsextensions.replytoactivityasync?view=botbuilder-dotnet-3.0#Microsoft_Bot_Connector_ConversationsExtensions_ReplyToActivityAsync_Microsoft_Bot_Connector_IConversations_System_String_System_String_Microsoft_Bot_Connector_Activity_System_Threading_CancellationToken_&preserve-view=true) .NET [`session.send`](/javascript/api/botbuilder-core/TurnContext?view=botbuilder-ts-latest&viewFallbackFrom=botbuilder-ts-3.0#sendactivities&preserve-view=true) を呼び出すか、Node.js。 ボット ビルダー SDK は、すべての詳細を処理します。
 
 REST API を使用する場合は、エンドポイントを呼び出することもできます [`/v3/conversations/{conversationId}/activities/{activityId}`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?view=azure-bot-service-3.0&preserve-view=true) 。
 

@@ -4,12 +4,12 @@ description: Microsoft Teams の最新情報やすべての開発者向け最新
 ms.topic: reference
 ms.localizationpriority: high
 keywords: Teams の最新情報と最新の更新プログラムまたは開発者プレビューと機能
-ms.openlocfilehash: 069e0a0147dd4f0dfb6ec3a8f1a3394d9686c242
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: d0e3d200c4d3f1d174cae02a4e364ca4622611f4
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356078"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398814"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -39,7 +39,6 @@ ms.locfileid: "63356078"
 |02/03/2022| アプリ マニフェスト バージョン 1.12 が導入されました | • [アプリ マニフェスト] > [[アプリ マニフェストのスキーマ]](resources/schema/manifest-schema.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー > [[マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md) |
 |02/03/2022| 収益化されたアプリのテスト プレビュー (開発者プレビュー)| [アプリの収益化] > [[収益化アプリのテスト プレビュー]](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
 |02/03/2022| アプリの収益化のためのアプリ内購入フロー (開発者プレビュー) | [アプリの収益化] > [[アプリ内購入]](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) |
-
 
 ## <a name="ga-features"></a>一般提供の特徴
 
@@ -71,7 +70,7 @@ ms.locfileid: "63356078"
 | 2022/1/17 | デスクトップ版アダプティブ カードのユーザー ピッカー | [カードとタスク モジュールの構築] > [カードの構築] > [[アダプティブ カードのユーザー ピッカー]](task-modules-and-cards/cards/people-picker.md)|
 
 </details>
- 
+
 <br>
 
 <details>
@@ -79,7 +78,6 @@ ms.locfileid: "63356078"
 <br>
 ここに記載されている以前の GA リリースの更新プログラムについて詳細を確認してください。
 <br><br>
-
 
 <details>
 <summary><b>2021</b></summary>
@@ -253,7 +251,7 @@ ms.locfileid: "63356078"
 |02/07/2022| ツールと SDK |Visual Studio Code 用 Teams ツールキット > </br> • [Teams アプリに機能を追加] > [[Teams アプリに機能を追加]](toolkit/add-capability.md) </br> • [クラウド リソースを Teams アプリに追加] > [[クラウド リソースを Teams アプリに追加]](toolkit/add-resource.md) |
 |02/02/2022| アプリ マニフェスト バージョン 1.12 が導入されました | [アプリ マニフェスト] > [開発者向けパブリック プレビュー] > [[マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md) |
 |02/03/2022| 収益化されたアプリのテスト プレビュー| [アプリの収益化] > [[収益化アプリのテスト プレビュー]](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
-|02/03/2022| アプリの収益化のためのアプリ内購入フロー | [アプリの収益化] > [[アプリ内購入]](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) 
+|02/03/2022| アプリの収益化のためのアプリ内購入フロー | [アプリの収益化] > [[アプリ内購入]](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
 |2022/1/17| モバイル版アダプティブ カードのユーザー ピッカー  | [カードとタスク モジュールの構築] > [カードの構築] > [[アダプティブ カードのユーザー ピッカー]](task-modules-and-cards/cards/people-picker.md)|
 |2022/1/10 | Visual Studio Code 用 Teams ツールキット | [ツールと SDK] > [Visual Studio Code 向け Teams ツールキット] > [[Teams ツールキットの基本]](toolkit/teams-toolkit-fundamentals.md) |
 |2021/12/24| タブ デバイスのアクセス許可を付与するためのステップバイステップ ガイドを導入しました | [アプリの基本] > [デバイス機能] > [[タブ デバイスのアクセス許可を付与するためのステップバイステップ ガイド]](sbs-tab-device-permissions.yml) |

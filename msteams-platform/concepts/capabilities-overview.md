@@ -7,19 +7,19 @@ ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 09/22/2020
 keywords: タブ bot メッセージングの拡張機能 webhook コネクタ
-ms.openlocfilehash: ecc7ddc9ff1a80aa4eb5b37c55088f5fa5721b37
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 7200e785bc7c857aa65cf8b228720fe8e1d40a66
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355546"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398954"
 ---
 # <a name="understand-microsoft-teams-app-features"></a>Microsoft Teams アプリの機能を理解する
 
 Teams を拡張する方法は複数あり、アプリごとに異なります。 さまざまな方法で Teams アプリをユーザーに表示できます。 Teams アプリの機能には次のものが含まれます。
 
-- アプリの機能
-- アプリのスコープ
+* アプリの機能
+* アプリのスコープ
 
 たとえば、ユーザーは同一のアクティビティを実行するためにキャンバス タブでアプリを操作するか、会話型ボットを使用する場合があります。 Webhook などの機能は 1 つのみですが、他の機能にはユーザーにさまざまなオプションを提供する機能があります。
 
@@ -33,6 +33,7 @@ Teams アプリには、次の主要な機能のいずれか、またはすべ�
 
 :::row:::
    :::column span="":::
+
 ### <a name="personal-apps"></a>個人用アプリ
 
 [個人用アプリ](../concepts/design/personal-apps.md)は、ユーザーが自分のタスクに集中したり、重要なアクティビティを表示したりするのに役立つ専用のスペースまたはボットです。
@@ -156,8 +157,8 @@ Web ベースのコンテンツを[タブ](../tabs/what-are-tabs.md)に表示し
 
 アプリのスコープとして、次のいずれかを選択できます。
 
-- 個人用アプリ エクスペリエンス: 個人用アプリは、ユーザーが自分のタスクに集中したり、重要なアクティビティを表示したりするのに役立つ専用のスペースまたはボットです。
-- 共有アプリ エクスペリエンス: Teams、チャネル、およびチャットは共同作業スペースです。 これらのコンテキストのアプリは、そのスペース内のすべてのユーザーが利用できます。 通常、共同作業スペースでは、アプリの操作や新しい社会的対話の実現に重点が置かれます。
+* 個人用アプリ エクスペリエンス: 個人用アプリは、ユーザーが自分のタスクに集中したり、重要なアクティビティを表示したりするのに役立つ専用のスペースまたはボットです。
+* 共有アプリ エクスペリエンス: Teams、チャネル、およびチャットは共同作業スペースです。 これらのコンテキストのアプリは、そのスペース内のすべてのユーザーが利用できます。 通常、共同作業スペースでは、アプリの操作や新しい社会的対話の実現に重点が置かれます。
 
 ## <a name="see-also"></a>関連項目
 

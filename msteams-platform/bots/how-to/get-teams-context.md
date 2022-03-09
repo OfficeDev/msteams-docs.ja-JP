@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: ボット コンテキスト名簿ユーザー プロファイル チャネル リスト
-ms.openlocfilehash: 0b7bba5e642d5cedc7a4c07c441a52fc9298d0f2
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: ee931be0d84dadf518ee35625c6339c7880eb4d2
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355553"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398597"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>ボットTeams特定のコンテキストを取得する
 
@@ -291,6 +291,7 @@ Response body
 ボットは、チーム内のチャネルの一覧を照会できます。
 
 > [!NOTE]
+>
 > * ローカライズを許可するために、既定の一般チャネル `null` の名前が返されます。
 > * General チャネルのチャネル ID は、常にチーム ID と一致します。
 

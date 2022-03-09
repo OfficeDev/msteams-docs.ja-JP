@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: c13482e886cc4e2207faa84ff01bbb60e93661a5
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 2078e63dfbc95071cec3ba620643bd9a8fddf723
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62517996"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399353"
 ---
 # <a name="messages-in-bot-conversations"></a>ボットの会話内のメッセージ
 
@@ -22,7 +22,7 @@ ms.locfileid: "62517996"
 * 会話のフローと状態を管理するための追加機能。
 * 自然言語処理 (NLP) などの認知サービスを組み込む簡単な方法。
 
-ボットはプロパティを使用Teams`Text`メッセージを受信し、ユーザーに単一または複数のメッセージ応答を送信します。
+ボットはプロパティを使用Teamsメッセージを受信`Text`し、ユーザーに単一または複数のメッセージ応答を送信します。
 
 ## <a name="receive-a-message"></a>メッセージを受信する
 
@@ -241,9 +241,9 @@ async def on_members_added_activity(
 | フォーマット    | ユーザーからボットへ | ボットからユーザーへ | メモ                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | リッチ テキスト | ✔                | ✔                | ボットはリッチ テキスト、画像、カードを送信できます。 ユーザーは、リッチ テキストと画像をボットに送信できます。                                                                                        |
-| ピクチャ  | ✔                | ✔                | 最大 1024 × 1024 および 1 MB (PNG、JPEG、または GIF 形式)。 アニメーション GIF はサポートされていません。  |
-| カード     | ✖                | ✔                | サポートされているカード[についてはTeamsカード](~/task-modules-and-cards/cards/cards-reference.md)リファレンスを参照してください。 |
-| 絵文字    | ✔                | ✔                | Teams、顔にニヤリと笑う U+1F600 など、UTF-16 による絵文字がサポートされています。 |
+| ピクチャ  | ✔                | ✔                | 最大 1024 × 1024、PNG、JPEG、または GIF 形式で 1 MB。 アニメーション GIF はサポートされていません。  |
+| カード     | ✖                | ✔                | サポートされている[カードについてはTeamsカード](~/task-modules-and-cards/cards/cards-reference.md)リファレンスを参照してください。 |
+| 絵文字    | ✔                | ✔                | Teams、顔にニヤニヤする U+1F600 など、UTF-16 を通じて絵文字をサポートしています。 |
 
 ## <a name="notifications-to-your-message"></a>メッセージへの通知
 
@@ -331,9 +331,9 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 画像は、メッセージに添付ファイルを追加して送信されます。 添付ファイルの詳細については、「 [Bot Framework のドキュメント」を参照してください](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments)。
 
-画像は、PNG、JPEG、または GIF 形式× 1024、1024、1 MB までです。 アニメーション GIF はサポートされていません。
+画像は、最大で 1024、×1024、PNG、JPEG、または GIF 形式で 1 MB です。 アニメーション GIF はサポートされていません。
 
-XML を使用して各イメージの高さと幅を指定します。 markdown では、イメージ サイズの既定値は 256 ×256 です。 例:
+XML を使用して各イメージの高さと幅を指定します。 markdown では、イメージ サイズの既定値は 256 ×256 です。 次に例を示します。
 
 * 使用: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
 * 使用しない: `![Duck on a rock](http://aka.ms/Fo983c)`
@@ -342,7 +342,7 @@ XML を使用して各イメージの高さと幅を指定します。 markdown 
 
 ## <a name="adaptive-cards"></a>アダプティブ カード
 
-アダプティブ カードはボットで作成し、Teams、Web サイトなど、複数のアプリに表示できます。 詳細については「[アダプティブ カード](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)」を参照してください。
+アダプティブ カードはボットで作成し、Teams、web サイトなど、複数のアプリに表示できます。 詳細については「[アダプティブ カード](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)」を参照してください。
 
 次のコードは、単純なアダプティブ カードを送信する例を示しています。
 
@@ -382,7 +382,7 @@ XML を使用して各イメージの高さと幅を指定します。 markdown 
 
     ![成功メッセージ](~/assets/images/Cards/success.PNG)
 
-[閉じる] を **選択** するか、チャットを切り替えてメッセージを閉じできます。    
+[閉じる] を **選択** するか、チャットを切り替えてメッセージを閉じできます。
 
 **モバイルでの応答**:
 
@@ -394,7 +394,7 @@ XML を使用して各イメージの高さと幅を指定します。 markdown 
 
 状態コードとエラー コードとメッセージ値を次に示します。
 
-| 状態コード | エラー コードとメッセージ値 | [説明] |
+| 状態コード | エラー コードとメッセージ値 | 内容 |
 |----------------|-----------------|-----------------|
 | 403 | **コード**: `ConversationBlockedByUser` <br/> **メッセージ**: ユーザーがボットとの会話をブロックしました。 | ユーザーは、モデレート設定を使用して、1:1 チャットまたはチャネルでボットをブロックしました。 |
 | 403 | **コード**: `BotNotInConversationRoster` <br/> **メッセージ**: ボットは会話名簿の一部ではありません。 | ボットは会話の一部ではありません。 |
@@ -411,7 +411,7 @@ XML を使用して各イメージの高さと幅を指定します。 markdown 
 |----------------|-----------------|--------------|----------------|-----------|
 | Teams 会話ボット | メッセージングおよび会話イベントの処理。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [ボット コマンド メニュー](~/bots/how-to/create-a-bot-commands-menu.md)

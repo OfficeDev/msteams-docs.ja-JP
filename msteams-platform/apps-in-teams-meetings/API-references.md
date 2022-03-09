@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams apps 会議 ユーザー参加者ロール API ユーザー コンテキスト通知シグナル クエリ
-ms.openlocfilehash: 2ed9f1682ff3de9022d3de3f93bbfc07933e7b4c
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 3f77e0c1c24ad624fae268d4ca0621f7217ab24a
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355791"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398870"
 ---
 # <a name="meeting-apps-api-references"></a>会議アプリ API リファレンス
 
@@ -42,6 +42,7 @@ ms.locfileid: "63355791"
 ## <a name="get-participant-api"></a>参加者 API の取得
 
 > [!NOTE]
+>
 > * 会議の開催者がいつでも役割を変更できるので、参加者の役割をキャッシュしない。
 > * 現在、 `GetParticipant` API は 350 人未満の参加者を持つ配布リストまたは名簿でのみサポートされています。
 
@@ -55,8 +56,8 @@ ms.locfileid: "63355791"
 |値|型|必須|説明|
 |---|---|----|---|
 |**meetingId**| String | はい | 会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。|
-|**participantId**| 文字列 | はい | 参加者 ID はユーザー ID です。 Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO から参加者 ID を取得する方法をお勧めします。 |
-|**tenantId**| 文字列 | はい | テナントユーザーにはテナント ID が必要です。 Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO からテナント ID を取得する方法をお勧めします。 |
+|**participantId**| String | はい | 参加者 ID はユーザー ID です。 Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO から参加者 ID を取得する方法をお勧めします。 |
+|**tenantId**| String | はい | テナントユーザーにはテナント ID が必要です。 Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO からテナント ID を取得する方法をお勧めします。 |
 
 ### <a name="example"></a>例
 
@@ -129,7 +130,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 次の表に、応答コードを示します。
 
-|応答コード|説明|
+|応答コード|内容|
 |---|---|
 | **403** | 参加者情報の取得がアプリと共有されていない。 アプリが会議にインストールされていない場合は、エラー応答 403 がトリガーされます。 テナント管理者がライブ サイトの移行中にアプリを無効またはブロックすると、エラー応答 403 がトリガーされます。 |
 | **200** | 参加者情報が正常に取得されます。|
@@ -141,11 +142,12 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 会議のすべてのユーザーは、会議内通知ペイロードを介して送信された通知を受け取ります。 会議内通知ペイロードは、会議中の通知をトリガーし、ユーザーボット チャット用の既存の会話通知 API を使用して配信される会議信号を提供できます。 ユーザー操作に基づいて会議内通知を送信できます。 ペイロードはボット サービスを通じて利用できます。
 
 > [!NOTE]
+>
 > * 会議中の通知が呼び出されると、コンテンツはチャット メッセージとして表示されます。
 > * 現時点では、対象の通知と Web アプリのサポートの送信はサポートされていません。
 > * ユーザーが Web ビューでアクションを実行した後に自動的に終了するには、 [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) 関数を呼び出す必要があります。 これは、アプリの申請に必要な要件です。 詳細については、「SDK タスク [モジュールTeams参照してください](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。 
 > * アプリで匿名ユーザーをサポート`from.id``from`する場合、最初の呼び出し要求ペイロードは、要求メタデータではなく、オブジェクト内の要求メタデータに依存する`from.aadObjectId`必要があります。 `from.id`はユーザー ID `from.aadObjectId` で、ユーザー Microsoft Azure Active Directory (Azure AD) ID です。 詳細については、「タブでタスク [モジュールを使用する」を参照し](../task-modules-and-cards/task-modules/task-modules-tabs.md)[、タスク モジュールを作成して送信します](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
-
+>
 ### <a name="query-parameter"></a>クエリ パラメーター
 
 次の表に、クエリ パラメーターを示します。
@@ -159,6 +161,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 は `Bot ID` マニフェストで宣言され、ボットは結果オブジェクトを受け取ります。
 
 > [!NOTE]
+>
 > * 要求 `completionBotId` されたペイロードの例 `externalResourceUrl` では、the のパラメーターは省略可能です。
 > * 幅 `externalResourceUrl` と高さのパラメーターはピクセル単位である必要があります。 詳細については、「デザイン ガイドライン [」を参照してください](design/designing-apps-in-meetings.md)。
 > * URL は、会議中の通知のように `<iframe>` 読み込まれるページです。 ドメインは、アプリ マニフェスト内のアプリの `validDomains` 配列にある必要があります。
@@ -209,7 +212,7 @@ POST /v3/conversations/{conversationId}/activities
 
 次の表に、応答コードを示します。
 
-|応答コード|説明|
+|応答コード|内容|
 |---|---|
 | **201** | シグナルを含むアクティビティが正常に送信されます。 |
 | **401** | アプリは無効なトークンで応答します。 |
@@ -308,7 +311,7 @@ POST /v3/conversations/{conversationId}/activities
 
 > [!NOTE]
 > ボットは、RSC アクセス許可 `ChannelMeeting.ReadBasic.Group` のマニフェストに追加することで、すべてのチャネルで作成された会議から会議の開始イベントまたは終了イベントを自動的に受信できます。
- 
+
 ### <a name="query-parameter"></a>クエリ パラメーター
 
 次の表に、クエリ パラメーターの一覧を示します。
@@ -389,7 +392,7 @@ https://api.captions.office.microsoft.com/cartcaption?meetingid=%7b%22tId%22%3a%
 
 ### <a name="method"></a>メソッド
 
-|リソース|メソッド|説明|
+|Resource|メソッド|説明|
 |----|----|----|
 |/cartcaption|POST|開始された会議のキャプションを処理する|
 
@@ -469,7 +472,7 @@ microsoftTeams.meeting.shareAppContentToStage((err, result) => {
 
 次の表に、応答コードを示します。
 
-|応答コード|説明|
+|応答コード|内容|
 |---|---|
 | **500** | 内部エラー。 |
 | **501** | API は現在のコンテキストではサポートされていません。|
@@ -495,7 +498,7 @@ microsoftTeams.meeting.getAppContentStageSharingState((err, result) => {
         // Indicates app has permission to share contents to meeting stage.
     }
 });
-``` 
+```
 
 API の JSON 応答本文は次 `getAppContentStageSharingState` の形式です。
 
@@ -509,7 +512,7 @@ API の JSON 応答本文は次 `getAppContentStageSharingState` の形式です
 
 次の表に、応答コードを示します。
 
-|応答コード|説明|
+|応答コード|内容|
 |---|---|
 | **500** | 内部エラー。 |
 | **501** | API は現在のコンテキストではサポートされていません。|
@@ -535,7 +538,7 @@ microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result) => {
         // Indicates app has permission to share contents to meeting stage.
     }
 });
-``` 
+```
 
 API の JSON 応答本文は次 `getAppContentStageSharingCapabilities` の形式です。
 
@@ -549,7 +552,7 @@ API の JSON 応答本文は次 `getAppContentStageSharingCapabilities` の形�
 
 次の表に、応答コードを示します。
 
-|応答コード|説明|
+|応答コード|内容|
 |---|---|
 | **500** | 内部エラー。 |
 | **1000** | アプリには、ステージへの共有を許可するアクセス許可が付与されていない。|
@@ -614,6 +617,7 @@ API の JSON 応答本文は次 `getAppContentStageSharingCapabilities` の形�
 ボットはハンドラーを介してイベントを受け取 `OnEventActivityAsync` ります。 JSON ペイロードを逆シリアル化するために、会議のメタデータを取得するためにモデル オブジェクトが導入されます。 会議のメタデータは、イベント ペイロード `value` 内のプロパティにあります。 model `MeetingStartEndEventvalue` オブジェクトが作成され、メンバー変数はイベント `value` ペイロード内のプロパティのキーに対応します。
 
 > [!NOTE]
+>
 > * から会議 ID を取得します `turnContext.ChannelData`。
 > * 会議 ID として会話 ID を使用しない。
 > * 会議イベントペイロードから会議 ID を使用しない `turncontext.activity.value`。
@@ -621,6 +625,7 @@ API の JSON 応答本文は次 `getAppContentStageSharingCapabilities` の形�
 次のコードは、会議`MeetingType``EndTime``Title``Id``JoinUrl``StartTime`の開始/終了イベントのメタデータをキャプチャする方法を示しています。
 
 会議の開始イベント
+
 ```csharp
 protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {
@@ -629,6 +634,7 @@ protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails 
 ```
 
 会議の終了イベント
+
 ```csharp
 protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {

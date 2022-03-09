@@ -5,21 +5,21 @@ ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
-keywords: Teams プロアクティブ メッセージング チャットのインストール Graph
-ms.openlocfilehash: 6802c7aed4664969d32b7b183a2dbe6729939493
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+keywords: Teams プロアクティブ メッセージング チャットのインストールGraph
+ms.openlocfilehash: 11fb1188cc88c983b1ee958b1df264346af22693
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212406"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398702"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Graph API を使用してメッセージを送信するアプリの事前インストール
 
 ## <a name="proactive-messaging-in-teams"></a>プロアクティブ メッセージング (Teams
 
-プロアクティブ メッセージはボットによって開始され、ユーザーとの会話を開始します。 ウェルカム メッセージの送信、アンケートや投票の実施、組織全体の通知のブロードキャストなど、さまざまな目的に役立ちます。 インプロアクティブ メッセージTeams、アドホックまたはダイアログ ベース **の会話として配信** できます。
+プロアクティブ メッセージはボットによって開始され、ユーザーとの会話を開始します。 ウェルカム メッセージの送信、アンケートや投票の実施、組織全体の通知のブロードキャストなど、さまざまな目的に役立ちます。 インプロアクティブ メッセージTeams、アドホックまたはダイアログ ベースの **会話として配信** できます。
 
-|メッセージの種類 | 説明 |
+|メッセージの種類 | 内容 |
 |----------------|-------------- |
 |アドホックプロアクティブ メッセージ| ボットは、会話フローを中断せずにメッセージを対話します。|
 |ダイアログ ベースのプロアクティブ メッセージ | ボットは新しいダイアログ スレッドを作成し、会話を制御し、プロアクティブ メッセージを配信し、閉じ、コントロールを前のダイアログに返します。|
@@ -30,11 +30,11 @@ ms.locfileid: "62212406"
 
 ## <a name="permissions"></a>アクセス許可
 
-Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true)リソースの種類のアクセス許可は、Microsoft Teams プラットフォーム内のすべてのユーザー (個人用) スコープまたはチーム (チャネル) スコープのアプリのインストール ライフサイクルを管理するのに役立ちます。
+Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true) リソースの種類のアクセス許可は、Microsoft Teams プラットフォーム内のすべてのユーザー (個人用) スコープまたはチーム (チャネル) スコープのアプリのインストール ライフサイクルを管理するのに役立ちます。
 
-|アプリケーションのアクセス許可 | 説明|
+|アプリケーションのアクセス許可 | 内容|
 |------------------|---------------------|
-|`TeamsAppInstallation.ReadWriteSelfForUser.All`|事前サインインTeams使用せずに、アプリがユーザーの読み取り、インストール、アップグレード、アンインストールを行えます。|
+|`TeamsAppInstallation.ReadWriteSelfForUser.All`|事前サインインTeams使用せずに、ユーザーが任意のユーザーに対してアプリを読み取り、インストール、アップグレード、アンインストールできます。|
 |`TeamsAppInstallation.ReadWriteSelfForTeam.All`|事前サインインTeams使用せずに、アプリが任意のチームで自身を読み取り、インストール、アップグレード、アンインストールできます。|
 
 これらのアクセス許可を使用するには、次の値で [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) キーをアプリ マニフェストに追加する必要があります。
@@ -46,27 +46,27 @@ Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation
 >
 > * インストールは他のユーザー向けなので、ボットにはアプリケーションが必要であり、ユーザーが委任したアクセス許可は必要ではありません。
 >
-> * テナントAzure AD、アプリケーションに明示的に[アクセス許可を付与する必要があります](/graph/security-authorization#grant-permissions-to-an-application)。 アプリケーションにアクセス許可が付与された後、テナントのすべてのAzure ADアクセス許可を取得します。
+> * テナントAzure ADは、アプリケーション[に明示的にアクセス許可を付与する必要があります](/graph/security-authorization#grant-permissions-to-an-application)。 アプリケーションにアクセス許可が付与された後、テナントのすべてのAzure ADアクセス許可を取得します。
 
 ## <a name="enable-proactive-app-installation-and-messaging"></a>プロアクティブ アプリのインストールとメッセージングを有効にする
 
 > [!IMPORTANT]
-> Microsoft Graphは、組織のアプリ ストアまたは組織のアプリ ストアに発行されたアプリTeamsできます。
+> Microsoft Graphは、組織のアプリ ストアまたはサイト ストアに発行されたアプリTeamsできます。
 
 ### <a name="create-and-publish-your-proactive-messaging-bot-for-teams"></a>ユーザー向けプロアクティブ メッセージング ボットを作成してTeams
 
-開始するには、組織のアプリ ストア[または](../../bots/how-to/create-a-bot-for-teams.md)Teams ストアにある[](../../concepts/bots/bot-conversations/bots-conv-proactive.md)プロアクティブ メッセージング機能を備えるボット[](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-your-org)がTeams[必要です](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-the-teams-store)。
+開始するには、組織のアプリ ストア[または](../../bots/how-to/create-a-bot-for-teams.md) Teams ストアにあるプロアクティブ メッセージング[](../../concepts/bots/bot-conversations/bots-conv-proactive.md)機能を備えるボットがTeams[があります](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-the-teams-store)。[](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-your-org)
 
 > [!TIP]
-> 実稼働対応の [*Company Communicator*](../..//samples/app-templates.md#company-communicator)アプリ テンプレートを使用すると、ブロードキャスト メッセージングが許可され、プロアクティブボット アプリケーションを構築できます。
+> 実稼働対応 [*の Company Communicator*](../..//samples/app-templates.md#company-communicator) テンプレートを使用すると、ブロードキャスト メッセージングが許可され、プロアクティブボット アプリケーションを構築できます。
 
 ### <a name="get-the-teamsappid-for-your-app"></a>アプリの `teamsAppId` 取得
 
-次の方法 `teamsAppId` で取得できます。
+次の方法で `teamsAppId` 取得できます。
 
 * 組織のアプリ カタログから:
 
-    **Microsoft Graph ページリファレンス:** [teamsApp リソースの種類](/graph/api/resources/teamsapp?view=graph-rest-1.0&preserve-view=true)
+    **Microsoft Graphページ参照:** [teamsApp リソースの種類](/graph/api/resources/teamsapp?view=graph-rest-1.0&preserve-view=true)
 
     **HTTP GET** 要求:
 
@@ -74,7 +74,7 @@ Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation
     GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
     ```
 
-    要求は、アプリのカタログ生成アプリ ID であるオブジェクト `teamsApp` `id` を返す必要があります。 これは、アプリ マニフェストで指定した ID とはTeamsです。
+    要求は、アプリのカタログ `teamsApp` 生成 `id`アプリ ID であるオブジェクトを返す必要があります。 これは、アプリ マニフェストで指定した ID とはTeamsです。
 
     ```json
     {
@@ -102,7 +102,7 @@ Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation
 
 * チーム スコープ内のチャネルに対してアプリが既にアップロードまたはサイドロードされている場合:
 
-    **Microsoft Graph ページ リファレンス:** [チーム内のアプリの一覧](/graph/api/team-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
+    **Microsoft Graph ページ リファレンス:** [チーム内のアプリを一覧表示する](/graph/api/team-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
     **HTTP GET** 要求:
 
@@ -111,7 +111,7 @@ Microsoft Graph [teamsAppInstallation](/graph/api/resources/teamsappinstallation
     ```
 
     > [!TIP]
-    > 結果の一覧を絞り込むには [**、teamsApp**](/graph/api/resources/teamsapp?view=graph-rest-1.0&preserve-view=true) オブジェクトのフィールドをフィルター処理できます。
+    > 結果の一覧を絞り込むには、teamsApp オブジェクトのフィールドを [**フィルター処理**](/graph/api/resources/teamsapp?view=graph-rest-1.0&preserve-view=true) できます。
 
 ### <a name="determine-whether-your-bot-is-currently-installed-for-a-message-recipient"></a>メッセージ受信者にボットが現在インストールされているかどうかを確認する
 
@@ -151,11 +151,11 @@ Content-Type: application/json
 
 ### <a name="retrieve-the-conversation-chatid"></a>会話を取得する `chatId`
 
-アプリがユーザー用にインストールされている場合、ボットは、プロアクティブ メッセージを送信するために必要な情報を含むイベント `conversationUpdate` [](../../resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)通知を受信します。
+アプリがユーザー用にインストールされている場合`conversationUpdate`、ボットは、プロアクティブ メッセージを送信するために必要な情報を含むイベント通知を受信します。[](../../resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)
 
 **Microsoft Graph ページ リファレンス:** [チャットの取得](/graph/api/chat-get?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
-1. アプリが必要です `{teamsAppInstallationId}` 。 持ってない場合は、次のコマンドを使用します。
+1. アプリが必要です `{teamsAppInstallationId}`。 持ってない場合は、次のコマンドを使用します。
 
     **HTTP GET** 要求:
 
@@ -163,21 +163,21 @@ Content-Type: application/json
     GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
     ```
 
-    応答 **の id** プロパティは、 `teamsAppInstallationId` です。
+    応答 **の id** プロパティは、 `teamsAppInstallationId`です。
 
-1. フェッチする次の要求を行います `chatId` 。
+1. フェッチする次の要求を行います `chatId`。
 
-    **HTTP GET 要求** (アクセス許可 — `TeamsAppInstallation.ReadWriteSelfForUser.All` ):  
+    **HTTP GET 要求** (アクセス許可 — `TeamsAppInstallation.ReadWriteSelfForUser.All`):  
 
     ```http
     GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
     ```
 
-    応答 **の id** プロパティは、 `chatId` です。
+    応答 **の id** プロパティは、 `chatId`です。
 
-    次の要求を使用 `chatId` して取得できますが、より広範なアクセス許可が必要 `Chat.Read.All` です。
+    次の要求を使用して `chatId` 取得できますが、より広範なアクセス許可が必要 `Chat.Read.All` です。
 
-    **HTTP GET 要求** (アクセス許可 — `Chat.Read.All` ):
+    **HTTP GET 要求** (アクセス許可 — `Chat.Read.All`):
 
     ```http
     GET https://graph.microsoft.com/v1.0/users/{user-id}/chats?$filter=installedApps/any(a:a/teamsApp/id eq '{teamsAppId}')
@@ -230,6 +230,7 @@ server.get('/api/notify', async (req, res) => {
     res.end();
 });
 ```
+
 ---
 
 ## <a name="code-sample"></a>コード サンプル

@@ -4,12 +4,12 @@ description: Microsoft Teams のカード アクションと、ボットでの�
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: チーム ボット カード アクション
-ms.openlocfilehash: 9add163801cee511ccc636ab3abbb95c35b26590
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 756ff357947980ecf4a0c7c88c375c427e016d61
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081059"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398604"
 ---
 # <a name="card-actions"></a>カード アクション
 
@@ -27,6 +27,7 @@ Teams のボットやメッセージング拡張機能で使用されるカー�
 | `signin` | OAuth フローを開始し、ボットがセキュリティで保護されたサービスに接続できるようにします。 |
 
 > [!NOTE]
+>
 >* Teams は、前のテーブルに記載されていない `CardAction` タイプをサポートしていません。
 >* Teams は `potentialActions` プロパティをサポートしていません。
 >* カード アクションは、Bot Framework や Azure Bot Service の[おすすめの操作](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true)とは異なります。 おすすめの操作は、Microsoft Teams ではサポートされていません。 Teams ボット メッセージにボタンを表示させる場合は、カードを使用します。
@@ -556,6 +557,7 @@ CardFactory.actions([
   }
 }
 ```
+
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
@@ -567,4 +569,4 @@ CardFactory.actions([
 * [ボットでタスク モジュールを使用する](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [ボットのアダプティブ カード](../../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
 * [アダプティブ カードのユニバーサル アクション](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md)
-* [フォームの完成に関するフィードバック](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [フォームの完了に関するフィードバック](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

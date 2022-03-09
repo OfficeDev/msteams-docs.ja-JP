@@ -4,12 +4,12 @@ description: タブにユーザー コンテクストを付与する方法を説
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: チーム タブ ユーザー コンテキスト
-ms.openlocfilehash: 4c18ba7f7e7dbb90f6a357a567b2b6145afcd827
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: b4e693e127b06469a1f31a486fa8db9cc7ab4ba5
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356267"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398807"
 ---
 # <a name="get-context-for-your-tab"></a>タブのコンテキストを取得する
 
@@ -24,7 +24,7 @@ ms.locfileid: "63356267"
 ユーザー、チーム、または会社に関するコンテキストは、次の場合に特に役立ちます。
 
 * アプリ内のリソースを作成または指定したユーザーまたはチームに関連付ける。
-* 認証フローは、Microsoft Azure Active Directory (Azure AD) または他の ID プロバイダーから開始し、ユーザーがユーザー名を再入力する必要はありません。 
+* 認証フローは、Microsoft Azure Active Directory (Azure AD) または他の ID プロバイダーから開始し、ユーザーがユーザー名を再入力する必要はありません。
 
 詳細については、「ユーザーを認証[する」](~/concepts/authentication/authentication.md)を参照Microsoft Teams。
 
@@ -115,7 +115,7 @@ ms.locfileid: "63356267"
 
 ## <a name="retrieve-context-in-private-channels"></a>プライベート チャネルでのコンテキストの取得
 
-コンテンツ ページがプライベート `getContext` チャネルに読み込まれると、通話から受け取ったデータは、チャネルのプライバシーを保護するために難読化されます。 
+コンテンツ ページがプライベート `getContext` チャネルに読み込まれると、通話から受け取ったデータは、チャネルのプライバシーを保護するために難読化されます。
 
 コンテンツ ページがプライベート チャネルにある場合、次のフィールドが変更されます。
 
@@ -133,7 +133,7 @@ ms.locfileid: "63356267"
 > [!NOTE]
 > 現時点では、Microsoft Teams Connect共有チャネルは[開発者向けプレビューでのみ行](../../resources/dev-preview/developer-preview-intro.md)っています。
 
-コンテンツ ページが Microsoft Teams Connect共有チャネルに`getContext`読み込まれると、通話から受信したデータは、共有チャネル内のユーザーの一意の名簿によって変更されます。 
+コンテンツ ページが Microsoft Teams Connect共有チャネルに`getContext`読み込まれると、通話から受信したデータは、共有チャネル内のユーザーの一意の名簿によって変更されます。
 
 コンテンツ ページが共有チャネルにある場合、次のフィールドが変更されます。
 

@@ -5,31 +5,32 @@ ms.date: 11/15/2021
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: e70133fcd538e83a7822056074be27ac9dcb9bb0
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 2e78746c226c8fa9e34f37e405f992f1bd7d2fd1
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435175"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399262"
 ---
 # <a name="microsoft-teams-javascript-client-sdk-v2-preview"></a>Microsoft Teams JavaScript クライアント SDK v2 プレビュー
 
-[Microsoft Teams JavaScript クライアント SDK v2 プレビュー](/javascript/api/overview/msteams-client?view=msteams-client-js-beta&preserve-view=true)では、Teams 開発者が Outlook および Office で実行する Teams アプリを拡張する機能を有効にするために、既存の Teams SDK (`@microsoft/teams-js``TeamsJS`または単に) がリファクタ[](overview.md)リングされました。 機能的な観点から、TeamsJS SDK v2 Preview (`@microsoft/teams-js@next`) は現在の TeamsJS SDK のスーパーセットであり、Outlook および Office で Teams アプリをホストする機能を追加しながら、既存の Teams アプリ機能をサポートします。
+[Microsoft Teams JavaScript クライアント SDK v2 プレビュー](/javascript/api/overview/msteams-client?view=msteams-client-js-beta&preserve-view=true)では、Teams 開発者が Outlook および Office で実行する Teams アプリを拡張する機能を有効にするために、既存の Teams SDK (`@microsoft/teams-js``TeamsJS`または単に) がリ[](overview.md)ファクタリングされました。 機能的な観点から、TeamsJS SDK v2 Preview (`@microsoft/teams-js@next`) は現在の TeamsJS SDK のスーパーセットであり、Outlook および Office で Teams アプリをホストする機能を追加しながら、既存の Teams アプリ機能をサポートします。
 
-TeamsJS SDK v2 Preview には、他のアプリケーションで実行するためにコードが考慮する必要がある重要な 2 つのMicrosoft 365があります。
+TeamsJS SDK v2 プレビューには、他のアプリケーションで実行するためにコードを考慮する必要がある重要な 2 つのMicrosoft 365があります。
 
 * [**コールバック関数は Promise オブジェクトを返す。**](#callbacks-converted-to-promises) コールバック パラメーターを持つすべての既存の関数が最新化され、非同期操作の処理とコードの読みやすさが向上するために JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) オブジェクトが返されます。
 
- - [**API が機能に *整理されました*。**](#apis-organized-into-capabilities) 機能は、、などの同様の機能を提供する API `authentication``calendar``monetization``mail``meeting`の論理的なグループと考えてできます。`sharing`
+* [**API が機能に *整理されました*。**](#apis-organized-into-capabilities) 機能は、、などの同様の機能を提供する API `authentication``calendar``monetization``mail``meeting`の論理的なグループと考えてできます。`sharing`
 
- 次のセクション[で説明Teams Toolkit](https://aka.ms/teams-toolkit)、Microsoft Visual Studio コードの拡張機能を使用して、Teams アプリの更新プロセスを簡略化できます。
+ Teams Toolkit コードの [Teams Toolkit](https://aka.ms/teams-toolkit)拡張機能をMicrosoft Visual Studio、次のセクションで説明するように、Teams アプリの更新プロセスを簡略化できます。
 
 > [!NOTE]
-> 既存のアプリを Teamsで実行するには、次OutlookとOffice両方が必要です。
+> 既存のアプリをTeamsアプリで実行するには、OutlookとOfficeの両方が必要です。
+>
 > 1. 以降の依存関係 `@microsoft/teams-js@2.0.0-beta.1` 、および
 > 2. このドキュメントで説明されている必要な変更に従って既存のアプリケーション コードを変更します。
 >
->  既存のアプリ`@microsoft/teams-js@2.0.0-beta.1`から参照 (または後で) Teams、コードが変更された API を呼び出した場合、廃止の警告が表示されます。 既存の Teams アプリが TeamsJS SDK v2 プレビューで動作するコードを更新できるまで、Teams で作業を続行するには、API 変換レイヤー (現在の SDK をマッピングして SDK API 呼び出しをプレビューする) が用意されています。 この記事で説明されている変更を使用してコードを更新すると、個人用タブは、OutlookおよびOffice。
+> 既存のアプリ`@microsoft/teams-js@2.0.0-beta.1`から参照 (または後で) Teams、コードが変更された API を呼び出した場合、廃止の警告が表示されます。 既存の Teams アプリが TeamsJS SDK v2 プレビューで動作するコードを更新できるまで、Teams で作業を続行するには、API 変換レイヤー (現在の SDK をマッピングして SDK API 呼び出しをプレビューする) が用意されています。 この記事で説明した変更を使用してコードを更新すると、個人用タブは、OutlookおよびOffice。
 
 ## <a name="updating-to-the-teams-client-sdk-v2-preview"></a>クライアント SDK v2 プレビュー Teams更新する
 
@@ -37,7 +38,7 @@ TeamsJS SDK v2 プレビューを使用するように Teams アプリを更新�
 
 ### <a name="1-install-the-latest-teams-toolkit-visual-studio-code-extension"></a>1. 最新の拡張機能をTeams Toolkit Visual Studio Codeする
 
-[拡張機能 *Visual Studio Codeマーケット* プレースで、**Teams Toolkitを検索** し、バージョン以降をインストール`2.10.0`します。 ツールキットには、プロセスを支援する 2 つのコマンドがあります。
+[拡張機能 *Visual Studio Codeマーケット* プレースで、**Teams Toolkitを検索** し、バージョン以降を`2.10.0`インストールします。 ツールキットには、プロセスを支援する 2 つのコマンドがあります。
 
 1. マニフェスト スキーマを更新するコマンド
 1. SDK 参照を更新してサイトを呼び出すコマンド
@@ -61,9 +62,10 @@ TeamsJS SDK v2 プレビューを使用するように Teams アプリを更新�
     "manifestVersion" : "m365DevPreview"
 }
 ```
+
 ---
 
-個人用アプリのTeams Toolkit使用した場合は、マニフェスト ファイルの変更を検証し、エラーを特定するために使用することもできます。 コマンド パレット`Ctrl+Shift+P`を開き、[**Teams:** マニフェスト ファイルの検証] を見つけるか、Teams Toolkit の [展開] メニューからオプションを選択します (Visual Studio Code の左側にある Teams アイコンを探します)。
+個人用アプリのTeams Toolkit使用した場合は、マニフェスト ファイルへの変更を検証し、エラーを特定することもできます。 `Ctrl+Shift+P`コマンド パレットを開き、[**Teams:** マニフェスト ファイルの検証] を見つけるか、Teams Toolkit の [展開] メニューからオプションを選択します (Visual Studio Code の左側にある Teams アイコンを探します)。
 
 :::image type="content" source="images/toolkit-validate-manifest-file.png" alt-text="Teams Toolkit [展開] メニューの [マニフェスト ファイルの検証] オプションを選択します。":::
 
@@ -71,13 +73,14 @@ TeamsJS SDK v2 プレビューを使用するように Teams アプリを更新�
 
 アプリを OutlookおよびOfficeするには、[npm](https://www.npmjs.com/package/@microsoft/teams-js/v/2.0.0-beta.1) `@microsoft/teams-js@2.0.0-beta.1` パッケージ (または後のベータ版) に依存する *必要* があります。 これらの手順を手動で実行し、API の変更の詳細については、「 [Promises](#callbacks-converted-to-promises) および API に変換されたコールバック」の以下のセクションを [参照してください](#apis-organized-into-capabilities)。
 
-1. 必要[な情報Teams Toolkit](https://aka.ms/teams-toolkit)`v2.10.0`確認する
+1. インストールが可能[Teams Toolkit](https://aka.ms/teams-toolkit)`v2.10.0`確認する
 1. コマンド パレット *を開きます*。 `Ctrl+Shift+P`
 1. コマンドを実行する `Teams: Upgrade Teams JS SDK references to support Outlook and Office apps`
 
 完了すると、ユーティリティは `package.json` TeamsJS SDK v2 Preview (`@microsoft/teams-js@2.0.0-beta.1` 以降) `*.js/.ts` `*.jsx/.tsx` の依存関係を使用してファイルを更新し、ファイルとファイルは次の形式で更新されます。
 
 > [!div class="checklist"]
+>
 > * `package.json` TeamsJS SDK v2 Preview への参照
 > * TeamsJS SDK v2 プレビューのインポート ステートメント
 > * [TeamsJS SDK](#apis-organized-into-capabilities) v2 プレビューへの関数、列挙、およびインターフェイスの呼び出し
@@ -164,7 +167,7 @@ async function example() {
 ---
 
 > [!TIP]
-> Teams Toolkit を使用して TeamsJS SDK v2 プレビューのコードを更新すると、必要な更新プログラム[に](#updating-to-the-teams-client-sdk-v2-preview)`TODO`対して、クライアント コード内のコメントのフラグが設定されます。
+> Teams Toolkit を使用して TeamsJS SDK v2 プレビュー[](#updating-to-the-teams-client-sdk-v2-preview)`TODO`のコードを更新すると、必要な更新プログラムに対して、クライアント コード内のコメントが表示されます。
 
 ## <a name="apis-organized-into-capabilities"></a>機能に整理された API
 
@@ -180,8 +183,8 @@ TeamsJS SDK v2 プレビューでは、API は JavaScript 名前空間の関数�
 
 * **hostName プロパティ** の値に基づいて、ホスト内で特定の機能が使用できる、または使用できないと想定し、 *使用* できません。 代わりに、機能のサポート () を確認します`isSupported`。
 * **hostName を使用***して API 呼び出* しをゲートしない。 代わりに、機能のサポート () を確認します`isSupported`。
-* **hostName** *を使用して* 、実行中のホストに基づいてアプリケーションのテーマを区別します。 たとえば、Microsoft Teamsで実行する場合はMicrosoft Teams Teamsのアクセントカラーとして、Outlookで実行する場合は青色を使用Outlook。
-* **hostName** *を使用して* 、実行しているホストに基づいてユーザーに表示されるメッセージを区別します。 たとえば、「タスクを  Office で実行する場合は Office on the web でタスクを管理する」および「Teams で実行中のタスクを管理する」をMicrosoft Teams。
+* **hostName** *を使用して* 、実行中のホストに基づいてアプリケーションのテーマを区別します。 たとえば、Teams で実行する場合Microsoft Teamsアクセントカラーとして紫を使用し、Outlookで実行する場合は青色Outlook。
+* **hostName** *を使用して* 、実行しているホストに基づいてユーザーに表示されるメッセージを区別します。 たとえば、「Office で実行中にタスクを管理するOffice on the web」、および「Microsoft Teams で実行中のタスクを Teams で管理する」をMicrosoft Teams。
 
 ### <a name="namespaces"></a>名前空間
 
@@ -189,7 +192,7 @@ TeamsJS SDK v2 Preview は、名前空間を使用して  API を機能に整理
 
 #### <a name="app-namespace"></a>*アプリの* 名前空間
 
-名前空間`app`には、アプリ全体の使用状況に必要なトップ レベルの API が含Microsoft Teams、Office、Outlook。 他のさまざまな TeamsJS 名前空間のすべての API が TeamsJS `app` SDK v2 プレビューの名前空間に移動されました。
+名前空間`app`には、アプリ全体の使用に必要なトップ レベルの API が含Microsoft Teams、Office、Outlook。 他のさまざまな TeamsJS 名前空間のすべての API が TeamsJS `app` SDK v2 プレビューの名前空間に移動されました。
 
 | 元の名前空間 `global (window)` | 新しい名前空間 `app` |
 | - | - |
@@ -235,7 +238,7 @@ TeamsJS SDK v2 Preview は、名前空間を使用して  API を機能に整理
 | - | - |
 | `getTabInstances` |  `pages.tabs.getTabInstances` |
 | `getMruTabInstances` | `pages.tabs.getMruTabInstances` |
-| ` navigateToTab` | `pages.tabs.navigateToTab` |
+| `navigateToTab` | `pages.tabs.navigateToTab` |
 
 | 元の名前空間 `navigation` | 新しい名前空間 `pages.tabs` |
 | - | - |
@@ -306,7 +309,7 @@ TeamsJS SDK を一般化して、Office や Outlook などの他の Microsoft 36
 
 ### <a name="updates-to-the-context-interface"></a>コンテキスト インターフェイス *の* 更新
 
-インターフェイス`Context`は名前空間`app`に移動され、Outlook および Office で実行されるだけでなく、Outlook と Office で実行される同様のプロパティをグループ化Teams。
+インターフェイス`Context`は名前空間に`app`移動され、Outlook と Office で実行されるだけでなく、Outlook と Office で実行される同様のプロパティをグループ化Teams。
 
 ホスト アプリケーションに応 `app.Context.app.host.name` じて個人用タブでユーザー エクスペリエンスを区別するための新しいプロパティが追加されました。
 
@@ -352,19 +355,19 @@ TeamsJS SDK を一般化して、Office や Outlook などの他の Microsoft 36
 | `tenantSKU`| `app.Context.user.tenant.teamsSku` |
 | `tid`| `app.Context.user.tenant.id` |
 | `upn` | `app.Context.user.userPrincipalName` |
-|` userClickTime`| `app.Context.app.userClickTime`|
+|`userClickTime`| `app.Context.app.userClickTime`|
 | `userFileOpenPreference` | `app.Context.app.userFileOpenPreference` |
 | `userLicenseType`| `app.Context.user.licenseType` |
 | `userObjectId` | `app.Context.user.id`|
-| ` userTeamRole` | `app.Context.team.userRole`|
+| `userTeamRole` | `app.Context.team.userRole`|
 | `userDisplayName` | `app.Context.user.displayName` |
 | 該当なし | `app.Context.app.host.name`|
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 [また、「TeamsJS SDK v2 Preview changelog](https://github.com/OfficeDev/microsoft-teams-library-js/blob/2.0-preview/CHANGELOG.md)」および「[TeamsJS SDK v2 Preview API Reference](/javascript/api/overview/msteams-client?view=msteams-client-js-beta&preserve-view=true)」の変更点の詳細について説明します。
 
-アプリで実行されているアプリをテストするTeams、OutlookをOfficeしてください。
+アプリで実行されているアプリをテストするTeams準備が整Outlook、Office参照してください。
 
 > [!div class="nextstepaction"]
 > [アプリをTeams拡張Microsoft 365](overview.md)

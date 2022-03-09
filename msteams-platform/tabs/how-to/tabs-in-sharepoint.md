@@ -1,23 +1,23 @@
 ---
 title: SharePoint に [Teams] タブを追加する
 author: surbhigupta
-description: コード サンプルを使用して、既存の [Teams] タブSharePoint Web パーツSharePoint Framework展開する方法について説明します。
+description: コード サンプルを使用して、既存の [Teams] タブSharePoint web パーツSharePoint Framework展開する方法について説明します。
 keywords: teams タブ sharepoint framework 開発
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 766b9974419a6b4bfeb273a0d9d682a685b2da2d
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: ea5f5cc90e1451ab65a31205f4c83137163a36cc
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60887874"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399227"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>SharePoint に [Teams] タブを追加する
 
-Microsoft Teams と SharePoint の間の豊富な統合エクスペリエンスを得るには、Microsoft Teams タブを SharePoint web パーツSPFx追加します。 このドキュメントでは、サンプル アプリからタブを取り出し、Microsoft Teamsで使用する方法SharePoint。 
+Microsoft Teams と SharePoint の間で、Microsoft Teams タブを SharePoint web パーツとしてSPFxできます。 このドキュメントでは、サンプル アプリからタブを取り出し、Microsoft Teamsで使用する方法についてSharePoint。
 
-## <a name="rich-integration-between-teams-and-sharepoint"></a>ユーザーとユーザーの間Teams統合SharePoint
+## <a name="rich-integration-between-teams-and-sharepoint"></a>ユーザーとユーザーの間のTeams統合SharePoint
 
 11 月リリースの Teams v.1.7 SharePoint Framework開発者には、次の 2 つの強力な機能があります。
 
@@ -33,7 +33,7 @@ Microsoft Teams と SharePoint の間の豊富な統合エクスペリエンス�
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Teams[タブ] SharePoint</h3>
+                        <h3>TeamsタブのSharePoint</h3>
                         <p>アプリを新しいアプリにSharePointして、TeamsエクスペリエンスSharePoint作成します (この記事)。</p>
                     </div>
                 </div>
@@ -62,13 +62,13 @@ Microsoft Teams と SharePoint の間の豊富な統合エクスペリエンス�
 </li>
 </ul>
 
-### <a name="teams-tabs-in-sharepoint"></a>TeamsタブのSharePoint
+### <a name="teams-tabs-in-sharepoint"></a>TeamsのタブSharePoint
 
-SharePoint Framework v.1.7 では、TeamsタブをホストSharePoint。 SharePointでホストされているタブと同様のフル ページエクスペリエンスが得られているので、Teams タブのすべての機能が公開され、SharePoint サイトのコンテキストと親しみSharePointされます。
+SharePoint Framework v.1.7 では、TeamsタブをホストSharePoint。 SharePointでホストされているタブは、Teams タブのすべての機能を公開しながら、SharePoint サイトのコンテキストとなじみを維持しながら、同様のフル ページ エクスペリエンスを取得します。
 
 ### <a name="sharepoint-framework-in-teams"></a>SharePoint FrameworkのTeams
 
-また、タブを使用してMicrosoft Teamsを実装SharePoint Framework。 SharePoint Framework Web パーツは、Azure などのSharePointサービスを必要とせずに、Web パーツ内でホストされます。 開発者SharePoint、これにより、タブの開発プロセスが大幅にTeamsされます。 詳細については、SharePoint FrameworkのTeamsを使用する方法をSharePoint Framework[をTeams。](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+このタブを使用して、Microsoft TeamsタブをSharePoint Framework。 SharePoint Framework Web パーツは、Azure SharePoint外部サービスを必要とせずにホストされます。 開発者SharePoint、これにより、タブの開発プロセスが大幅Teamsになります。 詳細については、SharePoint FrameworkのTeamsを使用する方法をSharePoint Framework[をTeams。](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
 
 ## <a name="introduction"></a>はじめに
 
@@ -79,13 +79,11 @@ SharePoint Framework v.1.7 では、TeamsタブをホストSharePoint。 SharePo
 ### <a name="benefits-of-this-approach"></a>このアプローチの利点
 
 * 既存SharePointタブを使用して、ユーザーにTeamsします。
-* アップロードマニフェストをアプリ カタログに直接SharePointする。 [Teamsアプリケーション パッケージ](~/concepts/build-and-test/apps-package.md)は、現在、アプリケーション パッケージでSharePoint。
+* アップロードマニフェストをアプリ カタログに直接SharePoint変更します。 [Teamsアプリケーション パッケージ](~/concepts/build-and-test/apps-package.md)は、現在、アプリケーション パッケージでSharePoint。
 * ユーザーは、他の Web パーツと同様にページSharePoint構成します。
 * タブは、[タブ内で](~/tabs/how-to/access-teams-context.md)実行する場合と同じコンテキストにTeams。
 
-**タブをTeamsするには、次SharePoint**
-
-次の手順を実行して、[Teams] タブを追加SharePoint。
+タブを TeamsするにはSharePointを実行して、次の手順を実行して、[Teams] タブを追加SharePoint。
 
 ## <a name="1-test-the-sample-app"></a>1. サンプル アプリをテストする
 
@@ -98,17 +96,17 @@ SharePoint Framework v.1.7 では、TeamsタブをホストSharePoint。 SharePo
     ![カスタム アプリをアップロードする](~/assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png)
 
 1. アップロードするファイルは、[ダウンロード] フォルダー **にあります** 。 このメソッドは、TalentMgmt-Azure.zip。 次の図は、対応する画面を表示します。
- 
+
     ![Azure の TalentMgmt](~/assets/images/tabs/tabs-in-sharepoint/talentmgmt-azure.png)
 
-1. タレント管理アプリのインストール画面または同意画面が表示されます。 インストールするチームを選択します。 
+1. タレント管理アプリのインストール画面または同意画面が表示されます。 インストールするチームを選択します。
 1. [インストール **] を** 選択し、アプリの実験を開始します。
 
 ## <a name="2-use-teams-tab-in-sharepoint"></a>2. [Teams] タブを使用SharePoint
 
-1. アップロードアクセスして、Teamsアプリ パッケージをアプリ SharePointに展開します `https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` 。 たとえば、`https://contoso.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` などです。
+1. アップロードにアクセスして、Teamsアプリ パッケージをアプリ カタログにSharePointして展開します`https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`。 たとえば、「 `https://contoso.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` 」のように入力します。
 
-1. メッセージが表示されたら、[ **このソリューションを組織内のすべてのサイトで使用できる] を有効にします**。
+1. メッセージが表示されたら、[ **このソリューションを組織内のすべてのサイトで使用できます] を有効にします**。
 次の図は、対応する画面を表示します。
 
    ![Sharepoint ビューのタブ](~/assets/images/tabs/tabs-in-sharepoint/image065.png)
@@ -118,25 +116,27 @@ SharePoint Framework v.1.7 では、TeamsタブをホストSharePoint。 SharePo
 
    ![Sharepoint ビュー](~/assets/images/tabs/tabs-in-sharepoint/image066.png)
 
-1. このページの作成SharePoint確認できます。 ページに [マイ ページ]**タブTeamsします**。
+1. このページの作成SharePoint確認できます。 ページに [マイ ページ] **タブTeamsします**。
 
-1. ボタンを選択して Web パーツ ツールボックスを開き、Contoso HR という名前の `+` [Teams] タブ **を選択します**。 Web パーツはアルファベット順に並べ替えされます。 長いリストの場合は、検索バーを使用して検索できます。 これにより、キャンバスに Web パーツが作成されます。このタブには、Teamsがあります。次の図は、タブ ビューを表示します。
+1. ボタンを選択して Web パーツ ツールボックスを開`+`き、Contoso HR という名前Teamsタブを **選択します**。 Web パーツはアルファベット順に並べ替えされます。 長いリストの場合は、検索バーを使用して検索できます。 これにより、キャンバスに Web パーツが作成されます。このタブには、Teamsがあります。次の図は、タブ ビューを表示します。
 
    ![タブ ビュー](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
 
 1. 編集が **完了したら** 、[発行] ボタンを選択します。
 
-1. [ **ナビゲーションにページを追加する** ] を選択して、左側のナビゲーション バーでページを簡単に参照できます。 次の図は、Sharepoint のタブを表示します。 
+1. [ **ナビゲーションにページを追加する** ] を選択して、左側のナビゲーション バーでページを簡単に参照できます。
+次の図は、Sharepoint のタブを表示します。
 
    ![Sharepoint イメージのタブ](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
 
 ## <a name="3-explore-app-pages-in-sharepoint"></a>3. アプリ ページの SharePoint詳細
 
-ページが公開された後、アプリをアプリ内でTeams完全なエクスペリエンスに変える[方法をSharePoint。](/sharepoint/dev/spfx/web-parts/single-part-app-pages) これにより、現在のページがアプリ ページに変換されます。通常のページ レイアウトSharePointページ レイアウトを表示し、[ページ] タブのフル ページ エクスペリエンスTeamsします。 
+ページが公開された後は、アプリをTeamsの中で、より完全なエクスペリエンス[に変SharePoint](/sharepoint/dev/spfx/web-parts/single-part-app-pages)。 これにより、現在のページがアプリ ページに変換されます。通常のページ レイアウトSharePointページ レイアウトを表示し、[ページ] タブのフル ページ エクスペリエンスTeamsします。
 
-次の図は、[Sharepoint のタブTeams: SharePointアプリの完全 ![ なエクスペリエンスを表示します。](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
+次の図は、[Sharepoint のタブのイメージ] TeamsアプリSharePointエクスペリエンス![全体を表示します。](~/assets/images/tabs/tabs-in-sharepoint/image085.png)
 
 ## <a name="code-sample"></a>コード サンプル
+
 | **サンプルの名前** | **説明** | **SPFx** |
 |-----------------|-----------------|----------|
 | SPFx Web パーツ | SPFx、チャネル、およびグループの Web パーツサンプルを作成します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group/spfx)

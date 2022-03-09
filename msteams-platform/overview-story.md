@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: d87d1cd2e6a1e380d8e68585e313bed7913a18c6
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: 7a0db979b39173f03dddd2725aee3237894914f4
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62898238"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399010"
 ---
 # <a name="from-ideas-to-teams-app"></a>アイデアから Teams アプリへ
 
@@ -55,7 +55,7 @@ ms.locfileid: "62898238"
 :::row-end:::
 :::row:::
    :::column span="":::
-      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-03.png" alt-text="...顧客が気象条件を知り、前もって計画できるようにするためです" border="false"::: 
+      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-03.png" alt-text="...顧客が気象条件を知り、前もって計画できるようにするためです" border="false":::
    :::column-end:::
    :::column span="":::
       #### <a name="list-app-requirements-and-benefits"></a>アプリの要件と利点をリストする

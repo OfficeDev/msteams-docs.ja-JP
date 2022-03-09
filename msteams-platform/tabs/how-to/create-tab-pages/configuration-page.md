@@ -6,24 +6,24 @@ keywords: teams タブ グループ チャネル構成可能
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6e182c305950188e316c290e2c3d3fd5732adcf4
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: ed4f60e3071b882f73662c0b666f87c484b4e77b
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216217"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398730"
 ---
 # <a name="create-a-configuration-page"></a>構成ページを作成する
 
-構成ページは、特殊な種類のコンテンツ [ページです](content-page.md)。 ユーザーは、構成ページを使用して Microsoft Teamsアプリのいくつかの側面を構成し、その構成を次の一部として使用します。
+構成ページは、特別な種類のコンテンツ [ページです](content-page.md)。 ユーザーは、構成ページを使用して Microsoft Teamsアプリのいくつかの側面を構成し、その構成を次の一部として使用します。
 
-* [チャネルまたはグループ チャット] タブ: ユーザーから情報を収集し、表示するコンテンツ ページ `contentUrl` を設定します。
+* [チャネルまたはグループ チャット] タブ: ユーザーから情報を収集 `contentUrl` し、表示するコンテンツ ページを設定します。
 * メッセージング [拡張機能](~/messaging-extensions/what-are-messaging-extensions.md)。
-* [Office 365[コネクタ]](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
+* [[Office 365コネクタ]](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
 
 ## <a name="configure-a-channel-or-group-chat-tab"></a>チャネルまたはグループ チャット タブを構成する
 
-アプリケーションは JavaScript クライアント SDK Microsoft Teams[呼び出す](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)必要があります `microsoft.initialize()` 。 使用する URL は、セキュリティで保護された HTTPS エンドポイントで、クラウドから利用できる必要があります。
+アプリケーションは、[JavaScript クライアント SDK Microsoft Teams呼び出しを](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)参照する必要があります`microsoft.initialize()`。 使用する URL は、セキュリティで保護された HTTPS エンドポイントで、クラウドから利用できる必要があります。
 
 ### <a name="example"></a>例
 
@@ -98,19 +98,19 @@ ms.locfileid: "61216217"
 
 <img src="~/assets/images/tab-images/configure-tab-with-red.png" alt="Configure tab with select red" width="400"/>
 
-適切なボタンを選択すると、トリガー `saveGray()` または `saveRed()` トリガーが実行され、次のコマンドが呼び出されます。
+適切なボタンを選択すると、トリガーまたは`saveGray()``saveRed()`トリガーが実行され、次のコマンドが呼び出されます。
 
-* true `settings.setValidityState(true)` に設定します。 
+* true に `settings.setValidityState(true)` 設定します。
 * イベント `microsoftTeams.settings.registerOnSaveHandler()` ハンドラーがトリガーされます。
 * **アプリ** の構成ページで保存が有効です。
 
-構成ページ コードは、Teams要件が満たされ、インストールを続行できると通知します。 ユーザーが [保存] を **選択** すると、インターフェイスで定義されているパラメーター `settings.setSettings()` が設定 `Settings` されます。 詳細については、「設定インターフェイス」 [を参照してください](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true)。 `saveEvent.notifySuccess()` が呼び出され、コンテンツ URL が正常に解決されたことを示します。
+構成ページ コードは、構成Teamsが満たされ、インストールを続行できると通知します。 ユーザーが [保存] を **選択** すると、インターフェイスで `settings.setSettings()` 定義されているパラメーターが設定 `Settings` されます。 詳細については、「設定インターフェイス [」を参照してください](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true)。 `saveEvent.notifySuccess()` が呼び出され、コンテンツ URL が正常に解決されたことを示します。
 
 >[!NOTE]
 >
 >* タイムアウト前に保存操作 (RegisterOnSaveHandler へのコールバック) を完了するには、30 秒かかります。 タイムアウト後に、汎用的なエラー メッセージが表示されます。
->* 使用して保存ハンドラーを登録する場合は、コールバックを呼び出す必要があります。または構成の `microsoftTeams.settings.registerOnSaveHandler()` `saveEvent.notifySuccess()` `saveEvent.notifyFailure()` 結果を示す必要があります。
->* 保存ハンドラーを登録しない場合、ユーザーが [保存] を選択すると、呼び `saveEvent.notifySuccess()` 出しが自動的に **行われます**。
+>* 使用して保存ハンドラーを登録する`microsoftTeams.settings.registerOnSaveHandler()`場合は、コールバックを`saveEvent.notifySuccess()``saveEvent.notifyFailure()`呼び出す必要があります。または構成の結果を示す必要があります。
+>* 保存ハンドラーを登録しない場合、ユーザー `saveEvent.notifySuccess()` が [保存] を選択すると、呼び出しが自動的に行 **われます**。
 
 ### <a name="get-context-data-for-your-tab-settings"></a>タブ設定のコンテキスト データを取得する
 
@@ -118,13 +118,13 @@ ms.locfileid: "61216217"
 
 タブ構成に使用されるプロパティの詳細については、「コンテキスト インターフェイス」 [を参照してください](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true)。 次の 2 つの方法でコンテキスト データ変数の値を収集します。
 
-* マニフェストに URL クエリ文字列プレースホルダーを挿入します `configurationURL` 。
+* マニフェストに URL クエリ文字列プレースホルダーを挿入します `configurationURL`。
 
-* SDK メソッド[Teams使用](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `microsoftTeams.getContext((context) =>{})` します。
+* SDK メソッド[Teams使用](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)`microsoftTeams.getContext((context) =>{})`します。
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>プレースホルダーを `configurationUrl`
 
-コンテキスト インターフェイスのプレースホルダーを基本に追加します `configurationUrl` 。 例:
+コンテキスト インターフェイスのプレースホルダーを基本に追加します `configurationUrl`。 次に例を示します。
 
 ##### <a name="base-url"></a>ベース URL
 
@@ -142,7 +142,7 @@ ms.locfileid: "61216217"
 ...
 ```
 
-ページのアップロード後、Teams値を使用してクエリ文字列プレースホルダーを更新します。 これらの値を取得して使用するロジックを構成ページに含める。 URL クエリ文字列の操作の詳細については、「MDN Web Docs の [URLSearchParams」](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) を参照してください。次のコード例では、プロパティから値を抽出する方法を示 `configurationUrl` します。
+ページのアップロード後、Teams値を使用してクエリ文字列プレースホルダーを更新します。 これらの値を取得して使用するロジックを構成ページに含める。 URL クエリ文字列の操作の詳細については、「MDN Web Docs の [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) 」を参照してください。次のコード例では、プロパティから値を抽出する方法を示 `configurationUrl` します。
 
 ```html
 <script>
@@ -159,7 +159,7 @@ document.write(getId());
 
 ### <a name="use-the-getcontext-function-to-retrieve-context"></a>関数を使用 `getContext()` してコンテキストを取得する
 
-この `microsoftTeams.getContext((context) => {})` 関数は、呼び出されると [コンテキスト インターフェイス](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) を取得します。
+この関数 `microsoftTeams.getContext((context) => {})` は、呼び出されると [コンテキスト インターフェイス](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) を取得します。
 
 次のコードでは、この関数を構成ページに追加してコンテキスト値を取得する例を示します。
 
@@ -179,13 +179,13 @@ document.write(getId());
 
 ## <a name="context-and-authentication"></a>コンテキストと認証
 
-ユーザーにアプリの構成を許可する前に認証を行います。 それ以外の場合、コンテンツに認証プロトコルを持つソースが含まれる場合があります。 詳細については、「ユーザー認証」[タブでユーザーを認証するMicrosoft Teams参照してください](~/tabs/how-to/authentication/auth-flow-tab.md)。コンテキスト情報を使用して、認証要求と承認ページ URL を作成します。 タブ ページで使用されているドメインはすべて、and 配列に一覧表示 `manifest.json` されます `validDomains` 。
+ユーザーにアプリの構成を許可する前に認証を行います。 それ以外の場合、コンテンツに認証プロトコルを持つソースが含まれる場合があります。 詳細については、「ユーザー認証」[タブでユーザーを認証するMicrosoft Teamsしてください](~/tabs/how-to/authentication/auth-flow-tab.md)。コンテキスト情報を使用して、認証要求と承認ページ URL を作成します。 タブ ページで使用されているドメインはすべて、and 配列に一覧表示されます`manifest.json``validDomains`。
 
 ## <a name="modify-or-remove-a-tab"></a>タブを変更または削除する
 
-ユーザーがチャネルまたはグループ タブを変更、再構成、または名前を変更できるマニフェストのプロパティを `canUpdateConfiguration` `true` に設定します。また、アプリに削除オプション ページを含め、構成でプロパティの値を設定して、タブが削除されるとコンテンツに何が起こるかを `removeUrl` 示  `setSettings()` します。 ユーザーは個人用タブをアンインストールできますが、変更することはできません。 詳細については、「タブの [削除ページを作成する」を参照してください](~/tabs/how-to/create-tab-pages/removal-page.md)。
+ユーザーがチャネルまたはグループ タブ`canUpdateConfiguration``true`を変更、再構成、または名前を変更できるマニフェストのプロパティをに設定します。また、アプリに削除オプション `removeUrl` ページを含め、構成でプロパティの値を設定して、タブが削除されるとコンテンツに何が起こるかを示`setSettings()`します。 ユーザーは個人用タブをアンインストールできますが、変更することはできません。 詳細については、「タブの [削除ページを作成する」を参照してください](~/tabs/how-to/create-tab-pages/removal-page.md)。
 
-Microsoft Teams `setSettings()` の構成ページ:
+`setSettings()` Microsoft Teamsの構成ページ:
 
 ```javascript
 microsoftTeams.settings.setSettings({
@@ -199,7 +199,7 @@ microsoftTeams.settings.setSettings({
 
 ## <a name="mobile-clients"></a>モバイル クライアント
 
-チャネルまたはグループ タブをモバイル クライアントのTeamsする場合は、構成の値が `setSettings()` 必要です `websiteUrl` 。 詳細については、「モバイルでの [タブのガイダンス」を参照してください](~/tabs/design/tabs-mobile.md)。
+チャネルまたはグループ タブをモバイル クライアント`setSettings()`のTeamsする場合は、構成の値が必要です`websiteUrl`。 詳細については、「モバイル上の [タブのガイダンス」を参照してください](~/tabs/design/tabs-mobile.md)。
 
 ## <a name="next-step"></a>次の手順
 

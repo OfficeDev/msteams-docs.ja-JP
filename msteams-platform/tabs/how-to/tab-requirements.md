@@ -1,17 +1,17 @@
 ---
 title: 前提条件
 author: surbhigupta
-description: これらの要件にMicrosoft Teamsする必要があります。
+description: これらの要件にMicrosoft Teamsタブは必ず遵守する必要があります。
 keywords: teams タブ グループ チャネル構成可能
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 31910fa5e8cd7e4d4f1045b8c05d94a336d07726
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: eeb83f6bdd335c4d536f18915cff8b04a85761a5
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435140"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399192"
 ---
 # <a name="prerequisites"></a>前提条件
 
@@ -27,7 +27,7 @@ Teamsは、次の前提条件に従う必要があります。
     > [!NOTE]
     > Chrome 80 (2020 年初頭にリリース予定) では、新しい Cookie 値を紹介し、既定で Cookie ポリシーを設定します。 既定のブラウザー動作に依存するのではなく、Cookie の使用目的を設定することを推奨します。 詳細については、「 [SameSite cookie 属性」を参照してください](../../resources/samesite-cookie-update.md)。
 
-* ブラウザーは、同じオリジン ポリシーの制限に従います。 Web ページが、提供された Web ページとは異なるドメインに対して要求を行うのを防ぐ。 ただし、構成ページまたはコンテンツ ページを別のドメインまたはサブドメインにリダイレクトできます。 クロスドメイン ナビゲーション ロジックを使用すると、Teams クライアントは、タブの`validDomains`読み込みまたは通信時にアプリ マニフェストの静的リストに対して原点を検証できる必要があります。
+* ブラウザーは、同じオリジン ポリシーの制限に従います。 Web ページが、提供された Web ページとは異なるドメインに対して要求を行うのを防ぐ。 ただし、構成ページまたはコンテンツ ページを別のドメインまたはサブドメインにリダイレクトできます。 クロスドメイン ナビゲーション ロジックでは、Teams クライアントが、タブの`validDomains`読み込みまたは通信時にアプリ マニフェストの静的リストに対して原点を検証できる必要があります。
 
 * クライアントのテーマ、デザイン、および意図Teamsに基づいてタブのスタイルを設定する必要があります。 通常、タブは、特定の必要性に対処し、小さなタスクセットまたはタブのチャネルの場所に関連するデータのサブセットに焦点を当てするために構築されている場合に最適です。
 
@@ -35,12 +35,13 @@ Teamsは、次の前提条件に従う必要があります。
 
 * モバイル クライアントで認証を機能するには、JavaScript SDK Teamsバージョン 1.4.1 以上にアップグレードする必要があります。
 
-* モバイル クライアントにチャネルまたはグループ タブを表示Teams場合`setSettings()`、構成にはプロパティの値が必要`websiteUrl`です。
+* モバイル クライアントにチャネルまたはグループ タブ`setSettings()`を表示Teams場合、構成にはプロパティの値が必要`websiteUrl`です。
 
 * [MS Teams] タブでは、自己署名証明書を使用するイントラネット Web サイトを読み込む機能はサポートされていません。
 
 ## <a name="tools-you-can-use-to-build-tabs"></a>タブのビルドに使用できるツール
-* [Teams ToolkitコードMicrosoft Visual Studio](../../toolkit/visual-studio-code-overview.md)
+
+* [Microsoft Visual Studio Code 用 Teams ツールキット](../../toolkit/visual-studio-code-overview.md)
 * [Visual Studio 用 Teams ツールキット](../../toolkit/visual-studio-overview.md)
 
 ## <a name="next-step"></a>次のステップ

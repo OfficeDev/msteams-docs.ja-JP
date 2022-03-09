@@ -6,12 +6,12 @@ keywords: teams タブの送信 Webhook
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8c38d3effd16a445caca72628978d8822e006b30
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: c2705778251f44bde945efde7bfa8b519b88c8f3
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355644"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399115"
 ---
 # <a name="create-an-incoming-webhook"></a>受信 Webhook を作成する
 
@@ -38,6 +38,7 @@ ms.locfileid: "63355644"
 --->
 
 > [!NOTE]
+>
 > * Teams ボット、メッセージング拡張機能、受信 Webhook、およびBot Frameworkは、アダプティブ カードをサポートします。 アダプティブ カードは、Windows、Android、iOS などのすべてのプラットフォームで使用されているオープン なクロス カード プラットフォーム フレームワークです。 現時点では、 [Teams コネクタ](../../webhooks-and-connectors/how-to/connectors-creating.md) はアダプティブ カードをサポートしていません。 ただし、Teams チャネルにアダプティブ カードを投稿する [フロー](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) を作成することはできます。
 > * カードと Webhook の詳細については、「[アダプティブ カード と受信 Webhooks](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks)」を参照してください。
 

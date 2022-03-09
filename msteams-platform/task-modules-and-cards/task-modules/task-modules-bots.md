@@ -4,15 +4,15 @@ description: ボット フレームワーク カード、アダプティブ カ�
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: タスク モジュール チームボット ディープ リンクアダプティブ カード
-ms.openlocfilehash: 39df7f3845cc11e6e15da03c72b0c792a795af35
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 932bcaf858d0788a773b417647a92d2f52e9e45b
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355721"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399052"
 ---
 # <a name="use-task-modules-from-bots"></a>ボットでタスク モジュールを使用する
- 
+
 タスク モジュールは、ヒーロー、サムネイル、Microsoft Teams コネクタであるアダプティブ カードとボット フレームワーク カードのボタンを使用して、Office 365できます。 タスク モジュールは、多くの場合、複数の会話手順よりも優れたユーザー エクスペリエンスです。 ボットの状態を追跡し、ユーザーがシーケンスを中断またはキャンセルできます。
 
 タスク モジュールを呼び出す方法は 2 通りあります。
