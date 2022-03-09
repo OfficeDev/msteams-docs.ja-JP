@@ -4,24 +4,33 @@ description: Microsoft Teams の最新情報やすべての開発者向け最新
 ms.topic: reference
 ms.localizationpriority: high
 keywords: Teams の最新情報と最新の更新プログラムまたは開発者プレビューと機能
-ms.openlocfilehash: a6cdb2cf19895b7a7179ec100a66066e948076d1
-ms.sourcegitcommit: 40aade608ee21f5d7d813bd145bef5736dc647f1
+ms.openlocfilehash: 069e0a0147dd4f0dfb6ec3a8f1a3394d9686c242
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2022
-ms.locfileid: "62881638"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356078"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
 一般提供 (GA) および開発者プレビュー版の Microsoft Teams プラットフォーム機能をご紹介します。
 
 > [!IMPORTANT]
-> RSS フィード[![ダウンロード フィード](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)に登録することで、Teams プラットフォームの最新情報を取得できるようになりました。 詳細については、「[RSS フィードの構成](#get-latest-updates)」を参照してください。
+> RSS フィード[![ダウンロード フィード](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)に登録することで、Teams プラットフォームの最新情報を取得できるようになりました。詳細については、「[RSS フィード構成する](#get-latest-updates)」を参照してください。
 
 ## <a name="latest-updates-bullhorn-icon"></a>最新の更新 ![メガホン アイコン](~/assets/images/bullhorn.png)
 
-| 日付 | Update | ここで検索  |
+| 日付 | Update | ここで検索 |
 | --- | --- | --- |
+|03/03/2022 | 外部 OAuth プロバイダーを使用して認証を追加する方法| [認証の追加] > [タブ] >[[外部 OAuth プロバイダーの使用]](tabs/how-to/authentication/auth-oauth-provider.md) |
+|02/25/2022| Teams でタスク モジュールを呼び出すステップ バイ ステップ ガイドを導入しました| [カードとタスク モジュールの構築] > [タスク モジュールの構築] > [ボットからのタスク モジュールの使用] > [[Teams からのタスク モジュールの呼び出し]](sbs-botbuilder-taskmodule.yml)|
+|02/24/2022| アクション ベースのメッセージング拡張機能を構築するためのステップ バイ ステップ ガイドを導入しました | [メッセージング拡張機能の構築] > [アクション コマンド] > [アクション コマンドの定義] > [[アクション ベースのメッセージング拡張機能の構築]](sbs-meetingextension-action.yml)|
+|02/24/2022| 検索ベースのメッセージング拡張機能を構築するためのステップ バイ ステップ ガイドが導入されました | [メッセージング拡張機能の構築] > [検索コマンド] > [検索コマンドの定義] > [[検索ベースのメッセージング拡張機能の構築]](sbs-messagingextension-searchcommand.yml)|
+|02/24/2022| 送信 Webhook を作成するためのステップバイステップ ガイドを導入しました | [Webhook とコネクタの構築] > [送信 Webhook の作成] > [[送信 Webhooks の作成]](sbs-outgoing-webhooks.yml)|
+| 02/23/2022 |Microsoft Teams ストアのランク付けパラメーター| [アプリの配布] > [Teams ストアに公開] > [[Microsoft Teams ストアのランク付けパラメーター]](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
+| 02/18/2022 | 用語に関する定義をすばやく見つけるのに役立つ、Microsoft Teams 開発者ドキュメントの広範な用語集を導入しました | [用語集](~/get-started/glossary.md) |
+| 02/18/2022 | Teams アプリを組織の目標、ユーザー ストーリーにマッピングし、Teams アプリの機能を検索するための概要モジュールを更新しました | [[概要] > [適合する Teams アプリ]](overview.md) |
+| 02/18/2022 | ユース ケースの Teams 機能へのマッピングとアプリ計画チェックリストを含めるために、[アプリの基礎] モジュールを [アプリの計画] に更新しました | [[アプリの計画] > [概要]](~/concepts/app-fundamentals-overview.md) |
 |02/17/2022| アプリを送信した後、何を期待しますか?| アプリを配布する > Teams ストアに公開する > [概要](concepts/deploy-and-publish/appsource/publish.md)|
 |2022/02/15| ボットから Teams にファイルをアップロードする方法のステップバイステップ ガイドが導入されました | 「ボットを作成する」 > 「ファイルを送受信する」 > 「[ボットから Teams にファイルをアップロードするためのステップバイステップ ガイド](sbs-file-handling-in-bot.yml)」 |
 |02/11/2022| 共有会議ステージ| • [Teams 会議用アプリのビルド] > [[共有会議ステージ]](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • [Teams 会議用アプリのビルド] > [[Meeting apps API リファレンス]](apps-in-teams-meetings/API-references.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー] > [[開発者向けプレビュー マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md)|
@@ -29,11 +38,8 @@ ms.locfileid: "62881638"
 |02/07/2022| ツールと SDK |Visual Studio Code 用 Teams ツールキット > </br> • [Teams アプリに機能を追加] > [[Teams アプリに機能を追加]](toolkit/add-capability.md) </br> • [クラウド リソースを Teams アプリに追加] > [[クラウド リソースを Teams アプリに追加]](toolkit/add-resource.md) |
 |02/03/2022| アプリ マニフェスト バージョン 1.12 が導入されました | • [アプリ マニフェスト] > [[アプリ マニフェストのスキーマ]](resources/schema/manifest-schema.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー > [[マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md) |
 |02/03/2022| 収益化されたアプリのテスト プレビュー (開発者プレビュー)| [アプリの収益化] > [[収益化アプリのテスト プレビュー]](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
-|02/03/2022| アプリの収益化のためのアプリ内購入フロー (開発者プレビュー) | [アプリの収益化] > [[アプリ内購入]](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
-|2022 年 1 月 25 日| リアルタイム キャプション API を送信する | [Teams Meetings 用のアプリを作成する] > [Meeting Apps API リファレンス] > [[Meeting Apps API リファレンス]](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
-|01/19/2022| アダプティブ カードは、完了フィードバックを形成します | ボットのビルド > ボットの会話 > ボットの会話のメッセージ > [フォーム完了フィードバック](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
-|2022/1/17| アダプティブ カードのユーザー ピッカー (モバイル版開発者プレビュー、デスクトップ版一般提供) | [カードとタスク モジュールの構築] > [カードの構築] > [[アダプティブ カードのユーザー ピッカー]](task-modules-and-cards/cards/people-picker.md)|
-|2022/1/10| Visual Studio Code 用 Teams ツールキット | [ツールと SDK] > [Visual Studio Code 向け Teams ツールキット] > [[Teams ツールキットの基本]](toolkit/teams-toolkit-fundamentals.md) |
+|02/03/2022| アプリの収益化のためのアプリ内購入フロー (開発者プレビュー) | [アプリの収益化] > [[アプリ内購入]](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md) |
+
 
 ## <a name="ga-features"></a>一般提供の特徴
 
@@ -42,27 +48,40 @@ ms.locfileid: "62881638"
 <br>
 
 <details>
-
 <summary><b>2022</b></summary>
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ----------------|
-|2022/02/15| ボットから Teams にファイルをアップロードする方法のステップバイステップ ガイドが導入されました | 「ボットを作成する」 > 「ファイルを送受信する」 > 「[ボットから Teams にファイルをアップロードするためのステップバイステップ ガイド](sbs-file-handling-in-bot.yml)」 |
-|02/11/2022| 共有会議ステージ| • [Teams 会議用アプリのビルド] > [[共有会議ステージ]](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • [Teams 会議用アプリのビルド] > [[Meeting apps API リファレンス]](apps-in-teams-meetings/API-references.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー] > [[開発者向けプレビュー マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md)|
-|02/08/2022| 通話と会議ボットを作成するステップバイステップ ガイドを導入しました| [ボットの構築] > [通話と会議のボット] > [通話と会議のボットの登録] > [[通話と会議のボットを作成するためのステップバイステップ ガイド]](sbs-calling-and-meeting.yml) |
-|02/02/2022| アプリ マニフェスト バージョン 1.12 が導入されました | [アプリ マニフェスト] > [[アプリ マニフェストのスキーマ]](resources/schema/manifest-schema.md) |
-|2022 年 1 月 25 日| リアルタイム キャプション API を送信する | [Teams Meetings 用のアプリを作成する] > [Meeting Apps API リファレンス] > [[Meeting Apps API リファレンス]](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
-|01/19/2022| アダプティブ カードは、完了フィードバックを形成します | ボットのビルド > ボットの会話 > ボットの会話のメッセージ > [フォーム完了フィードバック](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
-|2022/1/17| デスクトップ版アダプティブ カードのユーザー ピッカー | [カードとタスク モジュールの構築] > [カードの構築] > [[アダプティブ カードのユーザー ピッカー]](task-modules-and-cards/cards/people-picker.md)|
-
-<br>
+|03/03/2022 | 外部 OAuth プロバイダーを使用して認証を追加する方法| [認証の追加] > [タブ] >[[外部 OAuth プロバイダーの使用]](tabs/how-to/authentication/auth-oauth-provider.md) |
+| 02/25/2022| Teams でタスク モジュールを呼び出すステップ バイ ステップ ガイドを導入しました| [カードとタスク モジュールの構築] > [タスク モジュールの構築] > [ボットからのタスク モジュールの使用] > [[Teams からのタスク モジュールの呼び出し]](sbs-botbuilder-taskmodule.yml)|
+| 02/24/2022| アクション ベースのメッセージング拡張機能を構築するためのステップ バイ ステップ ガイドを導入しました | [メッセージング拡張機能の構築] > [アクション コマンド] > [アクション コマンドの定義] > [[アクション ベースのメッセージング拡張機能の構築]](sbs-meetingextension-action.yml)|
+| 02/24/2022| 検索ベースのメッセージング拡張機能を構築するためのステップ バイ ステップ ガイドが導入されました | [メッセージング拡張機能の構築] > [検索コマンド] > [検索コマンドの定義] > [[検索ベースのメッセージング拡張機能の構築]](sbs-messagingextension-searchcommand.yml)|
+| 02/24/2022| 送信 Webhook を作成するためのステップバイステップ ガイドを導入しました | [Webhook とコネクタの構築] > [送信 Webhook の作成] > [[送信 Webhooks の作成]](sbs-outgoing-webhooks.yml)|
+| 02/23/2022 |Microsoft Teams ストアのランク付けパラメーター| [アプリの配布] > [Teams ストアに公開] > [[Microsoft Teams ストアのランク付けパラメーター]](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
+| 02/18/2022 | 用語に関する定義をすばやく見つけるのに役立つ、Microsoft Teams 開発者ドキュメントの広範な用語集を導入しました | [用語集](~/get-started/glossary.md) |
+| 02/18/2022 | Teams アプリを組織の目標、ユーザー ストーリーにマッピングし、Teams アプリの機能を検索するための概要モジュールを更新しました | [[概要] > [適合する Teams アプリ]](overview.md) |
+| 02/18/2022 | ユース ケースの Teams 機能へのマッピングとアプリ計画チェックリストを含めるために、[アプリの基礎] モジュールを [アプリの計画] に更新しました | [[アプリの計画] > [概要]](~/concepts/app-fundamentals-overview.md) |
+| 02/17/2022 | アプリを送信した後、何を期待しますか?| アプリを配布する > Teams ストアに公開する > [概要](concepts/deploy-and-publish/appsource/publish.md) |
+| 2022/02/15 | ボットから Teams にファイルをアップロードする方法のステップバイステップ ガイドが導入されました | 「ボットを作成する」 > 「ファイルを送受信する」 > 「[ボットから Teams にファイルをアップロードするためのステップバイステップ ガイド](sbs-file-handling-in-bot.yml)」 |
+| 02/11/2022 | 共有会議ステージ| • [Teams 会議用アプリのビルド] > [[共有会議ステージ]](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • [Teams 会議用アプリのビルド] > [[Meeting apps API リファレンス]](apps-in-teams-meetings/API-references.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー] > [[開発者向けプレビュー マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md)|
+| 02/08/2022 | 通話と会議ボットを作成するステップバイステップ ガイドを導入しました| [ボットの構築] > [通話と会議のボット] > [通話と会議のボットの登録] > [[通話と会議のボットを作成するためのステップバイステップ ガイド]](sbs-calling-and-meeting.yml) |
+| 02/02/2022 | アプリ マニフェスト バージョン 1.12 が導入されました | [アプリ マニフェスト] > [[アプリ マニフェストのスキーマ]](resources/schema/manifest-schema.md) |
+| 2022 年 1 月 25 日 | リアルタイム キャプション API を送信する | [Teams Meetings 用のアプリを作成する] > [Meeting Apps API リファレンス] > [[Meeting Apps API リファレンス]](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
+| 01/19/2022 | アダプティブ カードは、完了フィードバックを形成します | ボットのビルド > ボットの会話 > ボットの会話のメッセージ > [フォーム完了フィードバック](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
+| 2022/1/17 | デスクトップ版アダプティブ カードのユーザー ピッカー | [カードとタスク モジュールの構築] > [カードの構築] > [[アダプティブ カードのユーザー ピッカー]](task-modules-and-cards/cards/people-picker.md)|
 
 </details>
-  
+ 
 <br>
 
 <details>
+<summary><b>さらに以前の更新プログラム</b></summary>
+<br>
+ここに記載されている以前の GA リリースの更新プログラムについて詳細を確認してください。
+<br><br>
 
+
+<details>
 <summary><b>2021</b></summary>
 
 | **Date** | **Update** | **ここで検索** |
@@ -128,10 +147,6 @@ ms.locfileid: "62881638"
 <br>
 
 <details>
-<summary><b>さらに以前の更新プログラム</b></summary>
-
-<details>
-  
 <summary><b>2020</b></summary>
 
 | **Date** | **Update** | **ここで検索** |
@@ -170,7 +185,7 @@ ms.locfileid: "62881638"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ------------------ |
-| 2020/12/26 | ボットに送信されるペイロードの `replyToId` パラメーターが暗号化されなくなったため、この値を使用してこれらのメッセージへのディープ リンクを構築できるようになります。 メッセージのペイロードには、パラメーター `legacy.replyToId` の暗号化された値が含まれます。  |
+| 2020/12/26 | ボットに送信されるペイロードの `replyToId` パラメーターが暗号化されなくなったため、この値を使用してこれらのメッセージへのディープ リンクを構築できるようになります。メッセージ ペイロードには、パラメーター に暗号化された値が含まれます`legacy.replyToId`。  |
 | 2019/11/5 | Teams JavaScript SDK を使用したシングル サインオン。 | [シングル サインオン](tabs/how-to/authentication/auth-aad-sso.md) |
 | 2019/10/31 | 会話ボットとメッセージング拡張機能のドキュメントが 4.6 Bot Framework SDK に合わせて更新されました。 v3 SDK のドキュメントが [リソース] セクションで利用できます。 | すべてのボットとメッセージングの拡張機能のドキュメント |
 | 2019/10/31 | 新しいドキュメントの構造と記事の大幅なリファクタリング。 デッド リンクや 404 が発生した場合は、GitHub イシューを作成して報告してください。 | すべての項目です。 |
@@ -187,15 +202,12 @@ ms.locfileid: "62881638"
 | 2019/4/23 | 操作ベースのメッセージング拡張機能が使用可能です。 | [操作ベースのメッセージング拡張機能](~/concepts/messaging-extensions/create-extensions.md) |
 | 2019/2/18 | プライベート チャットへのディープ リンクの作成。 | [チャットへのディープ リンクの設定](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 2019/1/23 | タブ コンテキストで SKU とライセンスの種類の情報を表示します。 | [タブ コンテキスト](~/concepts/tabs/tabs-context.md) |
-
-<br>
-
+|
 </details>
 
 <br>
 
 <details>
-
 <summary><b>2018</b></summary>
 
 | **Date** | **Update** | **ここで検索** |
@@ -228,9 +240,7 @@ ms.locfileid: "62881638"
 | 2018/3/3 | Teams App Studio のドキュメントが追加されました。 |[Teams App Studio を使用したアプリの迅速な開発](~/get-started/get-started-app-studio.md)、[App Studio でのコントロール ライブラリの使用](~/get-started/app-studio-component-library.md)|
 | 2018/2/27 | AsTeamsChannelAccounts() メソッドのデモを行うサンプル コードが追加されました。 |[コンテキストをボット用に取得する](~/concepts/bots/bots-context.md)|
 | 2018/2/5 | C# の使用を開始するためのトピックが追加されました。 |[Microsoft Teams プラットフォームで C#/.NET を使い始める](./get-started/get-started-dotnet-app-studio.md)|
-
-<br>
-
+|
 </details>
 </details>
 
@@ -257,7 +267,7 @@ ms.locfileid: "62881638"
 
 ## <a name="teams-app-template-catalog"></a>Teams アプリのテンプレート カタログ
 
-新機能に合わせて、すぐに導入したり、ニーズに合わせて変更したりできる[稼働準備済みの Teams アプリ テンプレート](samples/app-templates.md)も提供しています。 新しく追加されたテンプレートには ☆ がついています。
+新機能に合わせて、すぐに導入したり、ニーズに合わせて変更したりできる[稼働準備済みの Teams アプリ テンプレート](samples/app-templates.md)も提供しています。新しく追加されたテンプレートは星 ☆ で示されます。
 
 ## <a name="submit-your-feedback"></a>フィードバックをお寄せください
 
