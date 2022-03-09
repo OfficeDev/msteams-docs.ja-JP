@@ -359,6 +359,8 @@
           href: tabs/how-to/authentication/auth-silent-aad.md
         - name: SSO 認証を利用する
           href: tabs/how-to/authentication/auth-aad-sso.md
+        - name: 外部 OAuth プロバイダーを使用する
+          href: tabs/how-to/authentication/auth-oauth-provider.md
     - name: ボット
       items:
         - name: ボットの認証フロー
@@ -471,6 +473,8 @@
           href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
         - name: 公開したアプリの保守およびサポート
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
+        - name: Microsoft Teams ストアのランク付けパラメーター
+          href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
     - name: アプリを収益化する
       items:
         - name: 概要

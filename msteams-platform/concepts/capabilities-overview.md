@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 09/22/2020
 keywords: タブ bot メッセージングの拡張機能 webhook コネクタ
-ms.openlocfilehash: 53ee8ffb0fdf51b5c4069cc79ff7022dbc46777d
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: ecc7ddc9ff1a80aa4eb5b37c55088f5fa5721b37
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62897971"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355546"
 ---
 # <a name="understand-microsoft-teams-app-features"></a>Microsoft Teams アプリの機能を理解する
 
@@ -23,7 +23,7 @@ Teams を拡張する方法は複数あり、アプリごとに異なります�
 
 たとえば、ユーザーは同一のアクティビティを実行するためにキャンバス タブでアプリを操作するか、会話型ボットを使用する場合があります。 Webhook などの機能は 1 つのみですが、他の機能にはユーザーにさまざまなオプションを提供する機能があります。
 
-これらの機能は、さまざまなスコープにまたがって存在できます。 たとえば、アプリは中央の共有場所 (タブ) にデータを表示し、同じ情報を個人の会話インターフェイス (ボット) を介して表示できます。
+これらの機能は、さまざまなスコープにまたがって存在する可能性があります。たとえば、アプリでは、中央の共有場所 (タブ) にデータを表示し、その同じ情報を個人の会話インターフェイス (ボット) を介して表示できます。
 
 ## <a name="app-capabilities"></a>アプリの機能
 
@@ -142,15 +142,15 @@ Web ベースのコンテンツを[タブ](../tabs/what-are-tabs.md)に表示し
 
    :::column-end:::
 
-> [!NOTE]
-> Teams ストアが進化しました。
-> 
-> 以前は、タイルの省略記号を選択すれば LOB アプリが更新されました。 Teams ストア エクスペリエンスが更新され、[Teams 管理センター](https://admin.teams.microsoft.com)にログインして LOB アプリを更新できるようになりました。
+   :::column span="":::
 
 :::image type="content" source="../assets/images/overview-graph.png" alt-text="Microsoft Graph for Teams についての概念的な表現。" border="false":::
 
    :::column-end:::
 :::row-end:::
+
+> [!NOTE]
+> Teams ストアは進化しました。以前は、タイルの省略記号を選択することで LOB アプリが更新されました。 Teams ストア エクスペリエンスが更新され、[Teams 管理センター](https://admin.teams.microsoft.com)にログインして LOB アプリを更新できるようになりました。
 
 ## <a name="choose-the-correct-scope-for-your-app"></a>アプリの正しいスコープを選択する
 
