@@ -1,20 +1,20 @@
 ---
 title: アプリをローカライズする
-description: アプリのローカライズに関する考慮事項Microsoft Teamsします。
+description: アプリのローカライズに関する考慮事項Microsoft Teams説明します。
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams publishs store office publishing AppSource ローカライズ言語
 ms.date: 05/15/2018
-ms.openlocfilehash: 82174caf6154e78a3cae80640c0b9d1d7fe00a68
-ms.sourcegitcommit: 58fe8a87b988850ae6219c55062ac34cd8bdbf66
+ms.openlocfilehash: ec734017a807f744a4b44d7d3594638a5ec72b32
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949573"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355525"
 ---
 # <a name="localize-your-app"></a>アプリをローカライズする
 
-アプリをローカライズするには、次の要素Microsoft Teamsしてください。
+アプリをローカライズするには、次のMicrosoft Teamsしてください。
 
 1. [AppSource リストをローカライズします](#localize-your-appsource-listing)。
 1. [アプリ マニフェスト内の文字列をローカライズします](#localize-strings-in-your-app-manifest)。 
@@ -22,11 +22,11 @@ ms.locfileid: "60949573"
 
 ## <a name="localize-your-appsource-listing"></a>AppSource リストをローカライズする
 
-アプリをストアに発行する場合は、AppSource リストのローカライズがまだサポートされていないことに注意する必要があります。 アプリ ストアでローカライズされたリストをサポートするには、リスティングに追加の言語を追加できます。 登録情報のパートナー センターで[](/office/dev/store/submit-to-appsource-via-partner-center)指定した既定の言語情報は、アプリの[AppSource Web](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1 "AppSource は、チームのすべてのニーズに対応する 1 つの場所です。チャット、会議、通話、ファイル、ツールなど、すべての情報をまとめ、チームワークを高めることができます。")サイトの一覧に表示されます。 現在、既定の言語は英語です。
+アプリをストアに発行する場合は、アプリを一覧表示する言語にメタデータ (説明、スクリーン ショット、名前) を入力し、パートナー センターの [Marketplace リスト] ページでこれらの言語を明示的に指定します。 詳細については、「ローカライズされた [Microsoft AppSource フロント」を参照してください](/office/dev/store/prepare-localized-solutions#localized-microsoft-appsource-fronts)。 アプリ ストアでローカライズされたリストをサポートするには、リスティングに追加の言語を追加できます。 登録情報のパートナー センターで指定[](/office/dev/store/submit-to-appsource-via-partner-center)した既定の言語情報は、アプリの [AppSource Web](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1 "AppSource は、チームのすべてのニーズに対応する 1 つの場所です。チャット、会議、通話、ファイル、ツールなど、すべての情報をまとめ、チームワークを高めることができます。") サイトの一覧に表示されます。 現在、既定の言語は英語です。
 
 ### <a name="configure-localization"></a>ローカライズの構成
 
-アプリの追加の言語を構成するには、 [パートナー](/office/dev/store/submit-to-appsource-via-partner-center)センターで、英語とアプリの追加言語の両方を選択します。 次の例では、フランス語を追加の言語として使用します。
+アプリの追加言語を構成するには、 [パートナー](/office/dev/store/submit-to-appsource-via-partner-center) センターで、英語とアプリの追加言語の両方を選択します。 次の例では、フランス語を追加の言語として使用します。
 
 1. 英語を追加する
     * アプリ名を入力します。
@@ -44,13 +44,13 @@ ms.locfileid: "60949573"
 
 ## <a name="localize-strings-in-your-app-manifest"></a>アプリ マニフェスト内の文字列をローカライズする
 
-アプリをローカライズするには、Microsoft Teamsスキーマ以降を使用 `v1.5` する必要があります。 これを行うには、manifest.json ファイルの属性を以上に設定し、プロパティをバージョン (この場合) に `$schema` **https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json** `manifestVersion` `$schema` `1.5` 更新します。 
+アプリをローカライズするには、Microsoft Teamsスキーマ以降`v1.5`を使用する必要があります。 これを行うには、`$schema`manifest.json `$schema` **https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json** `manifestVersion` ファイルの属性を以上に設定し、プロパティをバージョン (`1.5`この場合) に更新します。 
 
-アプリケーションでサポートされている `localizationInfo` 既定の言語でプロパティを追加する必要があります。 既定の言語は、ユーザーのクライアント設定が追加の言語と一致しない場合、最終的なフォールバック言語として使用されます。
+アプリケーションでサポートされている既定 `localizationInfo` の言語でプロパティを追加する必要があります。 既定の言語は、ユーザーのクライアント設定が追加の言語と一致しない場合、最終的なフォールバック言語として使用されます。
 
 ### <a name="example-manifestjson-change"></a>manifest.json の変更例
 
-次の manifest.json は、アプリケーションでサポートされている既定の言語でプロパティを追加するのに `localizationInfo` 役立ちます `additionalLanguages` 。
+次の manifest.json は、アプリケーションでサポート `localizationInfo` されている既定の言語でプロパティを追加するのに役立ちます `additionalLanguages`。
 
 ```json
 {
@@ -84,7 +84,7 @@ ms.locfileid: "60949573"
 ```
 
 
-マニフェスト内のすべてのユーザー向け文字列の翻訳を含む追加の .json ファイルを提供できます。 これらのファイルは、ローカライズ ファイル JSON スキーマに準拠している [必要があります](../../resources/schema/localization-schema.md) 。マニフェストの `localizationInfo` プロパティに追加する必要があります。 各ファイルは言語タグに関連付け、Teamsを使用して適切な文字列を選択します。 言語タグの形式を使用しますが、目的の言語をサポートしているすべての地域を対象とする部分 `<language>-<region>` `<region>` を省略できます。
+マニフェスト内のすべてのユーザー向け文字列の翻訳を含む追加の .json ファイルを提供できます。 これらのファイルは、ローカライズ ファイル JSON スキーマに準拠している[必要があります](../../resources/schema/localization-schema.md)`localizationInfo`。マニフェストのプロパティに追加する必要があります。 各ファイルは言語タグに関連付け、Teamsを使用して適切な文字列を選択します。 言語タグの形式を使用 `<language>-<region>` します `<region>` が、目的の言語をサポートしているすべての地域を対象とする部分を省略できます。
 
 Teams クライアントは、既定の言語文字列 -> ユーザーの言語のみ -> ユーザーの言語 + ユーザーの地域文字列の順序で文字列を適用します。
 
@@ -98,7 +98,7 @@ Teams クライアントは、既定の言語文字列 -> ユーザーの言語�
 1. クライアントTeams'fr' 文字列を受け取り、'en' 文字列で上書きします。
 1. 'en-ca' ローカライズは指定されていないので、'en' ローカライズが使用されます。
 
-ユーザーの言語が 'es-es' に設定されている場合、クライアントは 'fr' Teamsを受け取る。 このTeamsクライアントは、言語ファイルの文字列を上書きしません。'es' または 'es-es' 変換が提供されていない。
+ユーザーの言語が 'es-es' に設定されている場合、Teamsは 'fr' 文字列を受け取る。 このTeamsクライアントは、言語ファイルの文字列を上書きしません。'es' または 'es-es' 変換が提供されていない。
 
 したがって、マニフェストにトップ レベルの言語翻訳のみを提供する必要があります。 たとえば、'en-us' の代わりに 'en' を使用します。 地域レベルのオーバーライドは、必要な少数の文字列にのみ指定する必要があります。 
 
@@ -151,7 +151,7 @@ manifest.json の変更を次の例に示します。
 
 ## <a name="handle-localized-text-submissions-from-your-users"></a>ユーザーからのローカライズされたテキスト送信を処理する
 
-アプリケーションのローカライズされたバージョンを提供する場合、ユーザーは同じ言語で応答します。 ユーザー Teams既定の言語に変換されないので、アプリはローカライズされた言語の応答を処理する必要があります。 たとえば、ローカライズされた言語を指定した場合、ボットに対する応答はコマンドのローカライズされたテキストで、既定の言語 `commandList` ではありません。 アプリは適切に対応する必要があります。
+アプリケーションのローカライズされたバージョンを提供する場合、ユーザーは同じ言語で応答します。 ユーザー Teams既定の言語に変換されないので、アプリはローカライズされた言語の応答を処理する必要があります。 たとえば、ローカライズされた言語を `commandList`指定した場合、ボットに対する応答はコマンドのローカライズされたテキストで、既定の言語ではありません。 アプリは適切に対応する必要があります。
 
 ## <a name="code-sample"></a>コード サンプル
 

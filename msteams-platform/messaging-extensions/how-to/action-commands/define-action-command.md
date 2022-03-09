@@ -5,12 +5,12 @@ description: アプリ マニフェストの例を使用したメッセージン
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 1c533dacca3b50fb96311ad95a9828e9978ba5f9
-ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
+ms.openlocfilehash: fe3cb2296eabd38f94f0e2978e7232ea5f70acc3
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2022
-ms.locfileid: "62281911"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355889"
 ---
 # <a name="define-messaging-extension-action-commands"></a>メッセージング拡張機能アクション コマンドの定義
 
@@ -54,7 +54,7 @@ ms.locfileid: "62281911"
 
 コマンドの呼び出し先を選択する以外に、ユーザーのタスク モジュールにフォームを設定する方法も選択する必要があります。 タスク モジュール内でレンダリングされるフォームを作成するには、次の 3 つのオプションがあります。   
 
-* **パラメーターの静的な一覧**: これは最も簡単な方法です。 アプリ マニフェストで、クライアントがレンダリングするTeamsパラメーターの一覧を定義できますが、この場合は書式設定を制御できません。
+* **パラメーターの静的な一覧**: これは最も簡単な方法です。 アプリ マニフェストでクライアントがレンダリングするパラメーターの一覧Teams定義できますが、この場合は書式設定を制御できません。
 * **アダプティブ カード**: アダプティブ カードの使用を選択すると、UI の制御が向上しますが、使用可能なコントロールと書式設定オプションは制限されます。
 * **埋め込み Web ビュー**: カスタム Web ビューをタスク モジュールに埋め込み、UI とコントロールを完全に制御できます。 
 
@@ -87,7 +87,7 @@ ms.locfileid: "62281911"
 
 **アクション コマンドを作成するには**
 
-1. クライアント **から App Studio** を開Microsoft Teamsし、[マニフェスト エディター] **タブを選択** します。
+1. クライアント **から App Studio** をMicrosoft Teamsし、[マニフェスト エディター] **タブを選択** します。
 1. App Studio で既にアプリ パッケージを作成している **場合** は、一覧からアプリ パッケージを選択します。 アプリ パッケージを作成していない場合は、既存のパッケージをインポートします。
 1. アプリ パッケージをインポートした後、[機能] の **[メッセージング拡張機能]** **を選択します**。 メッセージング拡張機能を設定するポップアップ ウィンドウが表示されます。
 1. ウィンドウ **で [セットアップ** ] を選択して、メッセージング拡張機能をアプリ エクスペリエンスに含めます。 次の図は、メッセージング拡張機能のセットアップ ウィンドウを表示します。
@@ -139,18 +139,18 @@ ms.locfileid: "62281911"
 
 | プロパティ名 | 用途 | 必須 | マニフェストの最小バージョン |
 |---|---|---|---|
-| `id` | このプロパティは、このコマンドに割り当てる一意の ID です。 ユーザー要求には、この ID が含まれます。 | はい | 1.0 |
-| `title` | このプロパティはコマンド名です。 この値は UI に表示されます。 | はい | 1.0 |
+| `id` | このプロパティは、このコマンドに割り当てる一意の ID です。 ユーザー要求には、この ID が含まれます。 | 必要 | 1.0 |
+| `title` | このプロパティはコマンド名です。 この値は UI に表示されます。 | 必要 | 1.0 |
 | `type` | このプロパティは、 である必要があります `action`。 | いいえ | 1.4 |
 | `fetchTask` | このプロパティは、 `true` タスク モジュールのアダプティブ カードまたは埋め込み Web`false` ビュー、およびパラメーターの静的リストまたは Web ビューを読み込むときにに設定されます `taskInfo`。 | いいえ | 1.4 |
-| `context` | このプロパティは、メッセージング拡張機能の呼び出し先を定義する値の任意の配列です。 使用可能な値: `message`、`compose`、`commandBox`。 既定値は `["compose", "commandBox"]` です。 | いいえ | 1.5 |
+| `context` | このプロパティは、メッセージング拡張機能の呼び出し先を定義する値の任意の配列です。 使用可能な値: `message`、`compose`、`commandBox`。 既定値は `["compose", "commandBox"]` です。 | 不要 | 1.5 |
 
 静的なパラメーターの一覧を使用している場合は、次のパラメーターも追加する必要があります。
 
 | プロパティ名 | 用途 | 必須ですか? | マニフェストの最小バージョン |
 |---|---|---|---|
 | `parameters` | このプロパティは、コマンドのパラメーターの静的な一覧を示します。 の場合にのみ使用 `fetchTask` します `false`。 | いいえ | 1.0 |
-| `parameter.name` | このプロパティは、パラメーターの名前を表します。 これは、ユーザー要求でサービスに送信されます。 | はい | 1.0 |
+| `parameter.name` | このプロパティは、パラメーターの名前を表します。 これは、ユーザー要求でサービスに送信されます。 | 必要 | 1.0 |
 | `parameter.description` | このプロパティは、パラメーターの目的または指定する必要がある値の例を示します。 この値は UI に表示されます。 | はい | 1.0 |
 | `parameter.title` | このプロパティは、短いユーザーフレンドリーなパラメーターのタイトルまたはラベルです。 | はい | 1.0 |
 | `parameter.inputType` | このプロパティは、必要な入力の種類に設定されます。 指定できる値には、、 、 、 、 、 が`time`含まれます`toggle`。 `date``number``textarea``text` 既定値は に設定されます `text`。 | いいえ | 1.4 |
@@ -159,11 +159,11 @@ ms.locfileid: "62281911"
 
 | プロパティ名 | 用途 | 必須ですか? | マニフェストの最小バージョン |
 |---|---|---|---|
-|`taskInfo`|メッセージング拡張機能コマンドを使用するときにプリロードするタスク モジュールを指定します。 | いいえ | 1.4 |
+|`taskInfo`|メッセージング拡張機能コマンドを使用するときにプリロードするタスク モジュールを指定します。 | 不要 | 1.4 |
 |`taskInfo.title`|初期タスク モジュールのタイトル。 |いいえ | 1.4 |
-|`taskInfo.width`|タスク モジュールの幅 (ピクセル単位の数値または`large``medium``small`既定のレイアウトなど) |いいえ | 1.4 |
-|`taskInfo.height`|タスク モジュールの高さ (ピクセル単位の数値または`large``medium``small`既定のレイアウトなど)|いいえ | 1.4 |
-|`taskInfo.url`|初期 Web ビューの URL。|いいえ | 1.4 | 
+|`taskInfo.width`|タスク モジュールの幅 (ピクセル単位の数値または`large``medium``small`既定のレイアウトなど) |不要 | 1.4 |
+|`taskInfo.height`|タスク モジュールの高さ (ピクセル単位の数値または`large``medium``small`既定のレイアウトなど)|不要 | 1.4 |
+|`taskInfo.url`|初期 Web ビューの URL。|不要 | 1.4 | 
 
 #### <a name="app-manifest-example"></a>アプリ マニフェストの例
 
@@ -223,7 +223,12 @@ ms.locfileid: "62281911"
 |:---------------------|:--------------|:---------|:--------|
 |Teams拡張アクション| アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
 
-## <a name="next-step"></a>次のステップ
+
+## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
+
+ステップ バイ [ステップ ガイドに従って](../../../sbs-meetingextension-action.yml)、アクション ベースTeams拡張機能を構築します。
+
+## <a name="next-step"></a>次の手順
 
 アダプティブ カードまたはオブジェクトのない埋め込み Web `taskInfo` ビューのいずれかを使用している場合、次の手順は次のとおりです。
 
@@ -234,3 +239,4 @@ ms.locfileid: "62281911"
 
 > [!div class="nextstepaction"]
 > [タスク モジュールの送信に応答する](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+

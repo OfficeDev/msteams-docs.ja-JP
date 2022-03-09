@@ -6,27 +6,27 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 1ae613332f7a07ae0d0ae9ed65b75429db64b429
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: ac2a79014ed0dfedf9942f30ab67c759642ee850
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821578"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356176"
 ---
 # <a name="cicd-guide"></a>CI/CD ガイド
 
-TeamsFx は、アプリケーションの構築中に開発ワークフローをTeamsします。 このドキュメントには、CI または CD パイプラインのセットアップを開始するためのツールとテンプレートがGitHub Azure Devops、Jenkins です。
+TeamsFx は、アプリケーションの構築中に開発ワークフローをTeamsします。 このドキュメントには、CI または CD パイプラインのセットアップを開始するためのツールとテンプレートが記載されています。GitHub Azure Devops、Jenkins を使用します。
 
-|ツールとテンプレート|[説明]| 
+|ツールとテンプレート|説明|
 |---|---|
 |[teamsfx-cli-action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub TeamsFx CLI と統合するアクション。|
-|[github-ci-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-ci-template.yml) と [github-cd-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-cd-template.yml)| GitHubアプリ用の CI または CD Teamsします。 |
+|[github-ci-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-ci-template.yml) と [github-cd-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-cd-template.yml)| GitHubアプリの CI または CD テンプレートTeamsします。 |
 |[jenkins-ci-template。Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-ci-template.Jenkinsfile) と [jenkins-cd-template。Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-cd-template.Jenkinsfile)|アプリの Jenkins CI または CD テンプレートTeamsします。|
-|[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) と [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| スクリプト テンプレートを使用して、GitHub 外のオートメーションを実行します。 |
+|[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) と [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| スクリプト テンプレートを使用して、GitHub。 |
 
-## <a name="ci-or-cd-workflow-templates-in-github"></a>ワークフロー内の CI または CD ワークフロー GitHub
+## <a name="ci-or-cd-workflow-templates-in-github"></a>CI または CD ワークフロー テンプレート (GitHub
 
-**CI または CD ワークフローを含め、アプリTeamsプロセスを自動化するには、次GitHub**。
+**CI または CD ワークフローを含め**、アプリTeamsプロセスを自動化するには、次GitHub。
 
 1. [フォルダーの作成] `.github/workflows`
 1. 次のいずれかのテンプレート ファイルをコピーします。
@@ -38,7 +38,7 @@ TeamsFx は、アプリケーションの構築中に開発ワークフローを
 
 プロジェクトのワークフローを調整するには、次の手順を実行します。
 
-1. CI フローを変更します。 
+1. CI フローを変更します。
 1. npm ビルド スクリプトを使用するか、オートメーション コードでプロジェクトをビルドする方法をカスタマイズします。
 1. 成功するためにゼロを返す npm テスト スクリプトを使用し、テスト コマンドを変更します。
 
@@ -47,7 +47,7 @@ TeamsFx は、アプリケーションの構築中に開発ワークフローを
 以下の手順を実行して、CD ワークフローをカスタマイズします。
 
 1. 既定では、新しいコミットがブランチに対して行われたときに、CD ワークフローがトリガー `main` されます。
-1. 環境GitHub[リポジトリ シークレット](https://docs.github.com/en/actions/reference/encrypted-secrets)を作成して、Azure サービス プリンシパルを保持し、Microsoft 365資格情報を保持します。 詳細については、「GitHub [アクション」を参照してください](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md)。
+1. 環境GitHub[リポジトリ シークレットを作成](https://docs.github.com/en/actions/reference/encrypted-secrets)して、Azure サービス プリンシパルを保持し、Microsoft 365ログイン資格情報を保持します。 詳細については、「GitHub [アクション」を参照してください](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md)。
 1. 必要に応じてビルド スクリプトを変更します。
 1. 必要に応じてテスト スクリプトを削除します。
 
@@ -56,12 +56,12 @@ TeamsFx は、アプリケーションの構築中に開発ワークフローを
 
 ### <a name="github-secrets"></a>Github シークレット
 
-次の表に、環境を作成するために必要なすべてのシークレットを次の表に示GitHub。
+次の表に、環境を作成するために必要なすべてのシークレットを次の表GitHub。
 
 1. [**設定**] を選択します。
 1. [環境] **セクションに移動** します。
 1. [新 **しい環境] を選択します**。
-1. 環境の名前を入力します。 テンプレートに指定されている既定の環境名はです `test_environment`。 
+1. 環境の名前を入力します。 テンプレートに指定されている既定の環境名はです `test_environment`。
 1. [環境 **の構成] を選択します**。
 1. [シークレット **の追加] を選択します**。
 
@@ -75,12 +75,12 @@ TeamsFx は、アプリケーションの構築中に開発ワークフローを
 |`AZURE_TENANT_ID`|サブスクリプションが存在するテナントを識別します。|
 |`M365_ACCOUNT_NAME`|アプリMicrosoft 365発行するアカウントをTeamsします。|
 |`M365_ACCOUNT_PASSWORD`|アカウントのパスワードMicrosoft 365します。|
-|`M365_TENANT_ID`|アプリを作成/発行するTeamsを特定します。 マルチテナント アカウントを持ち、別のテナントを使用しない限り、この値はオプションです。 詳細については、「テナント [ID の検索方法」をMicrosoft 365してください](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)。|
+|`M365_TENANT_ID`|アプリを作成/発行するTeamsを特定します。 マルチテナント アカウントを持ち、別のテナントを使用しない限り、この値はオプションです。 詳細については、「テナント [ID を検索するMicrosoft 365参照してください](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)。|
 
 > [!NOTE]
 > 現在、Azure のサービス プリンシパルは CI/CD ワークフローで使用されています。 詳細については、「 [Create Azure Service principles」を参照してください](#create-azure-service-principals)。
 
-## <a name="set-up-ci-or-cd-pipelines-with-azure-devops"></a>アプリケーションを使用して CI または CD パイプラインをAzure DevOps
+## <a name="set-up-ci-or-cd-pipelines-with-azure-devops"></a>CI または CD パイプラインをセットアップするには、Azure DevOps
 
 自動化されたパイプラインは、Azure DevOpsで設定し、スクリプトを参照できます。
 
@@ -172,17 +172,17 @@ steps:
 |---|---|
 |`AZURE_SERVICE_PRINCIPAL_NAME`|リソースのプロビジョニングに使用される Azure のサービス プリンシパル名。|
 |`AZURE_SERVICE_PRINCIPAL_PASSWORD`|Azure サービス プリンシパルのパスワード。|
-|`AZURE_SUBSCRIPTION_ID`|リソースがプロビジョニングされるサブスクリプションを特定します。|
+|`AZURE_SUBSCRIPTION_ID`|リソースがプロビジョニングされるサブスクリプションを識別します。|
 |`AZURE_TENANT_ID`|サブスクリプションが存在するテナントを識別します。|
-|`M365_ACCOUNT_NAME`|アプリMicrosoft 365発行するためのユーザー アカウントTeamsです。|
+|`M365_ACCOUNT_NAME`|アプリMicrosoft 365発行するためのアカウントをTeamsします。|
 |`M365_ACCOUNT_PASSWORD`|アカウントのパスワードMicrosoft 365します。|
-|`M365_TENANT_ID`|アプリを作成/発行するTeamsを特定します。 マルチテナント アカウントを持ち、別のテナントを使用しない限り、この値はオプションです。 テナント ID を[検索する方法の詳細Microsoft 365参照してください](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)。|
+|`M365_TENANT_ID`|アプリが作成または発行されるテナントTeams識別します。 マルチテナント アカウントを持ち、別のテナントを使用しない限り、この値はオプションです。 テナント ID を[検索する方法の詳細Microsoft 365参照してください](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)。|
 
 ## <a name="ci-or-cd-pipeline-templates-in-jenkins"></a>Jenkins の CI または CD パイプライン テンプレート
 
 これらのテンプレートをリポジトリに追加するには、 [jenkins-ci-template のバージョンが必要です。Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-ci-template.Jenkinsfile) と  [jenkins-cd-template。Jenkinsfile](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/jenkins-cd-template.Jenkinsfile) をブランチ別にリポジトリに保存します。
 
-また、Jenkins で CI または CD パイプラインを作成し、それに応じて特定の **Jenkinsfile を** 指す必要があります。
+また、Jenkins で CI または CD パイプラインを作成し、それに応じて特定のパイプラインを指す必要 `Jenkinsfile` があります。
 
 手順に従って、Jenkins をさまざまな SCM プラットフォームに接続する方法を確認します。
 
@@ -204,8 +204,8 @@ steps:
 
 次の手順を実行して、CD パイプラインをカスタマイズします。
 
-1. テンプレート ファイルの名前を **Jenkinsfile** に変更し、メイン ブランチなど、ターゲット ブランチの下に **配置** します。
-1. CD フローを変更します。 新しい変更がメイン ブランチにプッシュされると、 **pollSCM** のトリガーが既定で **使用** されます。
+1. テンプレート ファイルの名前を 、 `Jenkinsfile`に変更し、ブランチなど、ターゲット ブランチに配置 `main` します。
+1. CD フローを変更します。 既定では、新しい変更が `pollSCM` ブランチにプッシュされるトリガーを使用 `main` します。
 1. Jenkins パイプライン[資格情報を作成](https://www.jenkins.io/doc/book/using/using-credentials/)して、Azure サービス プリンシパルを保持し、Microsoft 365ログイン資格情報を保持します。
 1. 必要に応じてビルド スクリプトを変更します。
 1. テストを実行しない場合は、テスト スクリプトを削除します。
@@ -220,7 +220,7 @@ steps:
 |`AZURE_SERVICE_PRINCIPAL_PASSWORD`|Azure サービス プリンシパルのパスワード。|
 |`AZURE_SUBSCRIPTION_ID`|リソースがプロビジョニングされるサブスクリプションを特定します。|
 |`AZURE_TENANT_ID`|サブスクリプションが存在するテナントを識別します。|
-|`M365_ACCOUNT_NAME`|アプリMicrosoft 365発行するためのユーザー アカウントTeamsです。|
+|`M365_ACCOUNT_NAME`|アプリMicrosoft 365発行するためのアカウントをTeamsします。|
 |`M365_ACCOUNT_PASSWORD`|アカウントのパスワードMicrosoft 365します。|
 |`M365_TENANT_ID`|アプリが作成または発行されるテナントTeams識別します。 マルチテナント アカウントを持ち、別のテナントを使用する場合を指定しない限り、この値は省略可能です。 テナント ID を[検索する方法の詳細Microsoft 365参照してください](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)。|
 
@@ -235,33 +235,37 @@ steps:
 
 > [!NOTE]
 > * CI モードで `@microsoft/teamsfx-cli` 実行を有効にするには、次の方法でオン `CI_ENABLED` にします `export CI_ENABLED=true`。 CI モードでは、 `@microsoft/teamsfx-cli` CI または CD に対応しています。
-> * 非対話型モード`@microsoft/teamsfx-cli`での実行を有効にするには、コマンドを使用してグローバル構成を設定します。 `teamsfx config set -g interactive false` 非対話型モードでは、対話 `@microsoft/teamsfx-cli` 的に入力に関する質問をしません。
+> * 非対話型モード`@microsoft/teamsfx-cli`での実行を有効にするには、コマンドを使用してグローバル構成を設定します。 `teamsfx config set -g interactive false` 非対話型モードでは、入力 `@microsoft/teamsfx-cli` を求めるメッセージは表示されません。
 
-環境変数に Azure と Microsoft365 の資格情報を安全に設定してください。 たとえば、ソース コード リポジトリとしてGitHub使用している場合などです。 詳細については、「 [Github Secrets」を参照してください](https://docs.github.com/en/actions/reference/encrypted-secrets)。
+必ず、環境変数に Azure Microsoft 365資格情報を安全に設定してください。 たとえば、ソース コード リポジトリとしてGitHub使用している場合などです。 詳細については、「 [Github Secrets」を参照してください](https://docs.github.com/en/actions/reference/encrypted-secrets)。
 
 ## <a name="create-azure-service-principals"></a>Azure サービス プリンシパルの作成
 
 CI/CD 内で Azure を対象とするリソースをプロビジョニングおよび展開するには、使用する Azure サービス プリンシパルを作成する必要があります。
 
 Azure サービス プリンシパルを作成するには、次の手順を実行します。
+
 1. 単一テナントMicrosoft Azure Active Directory (Azure AD) アプリケーションを登録します。
-2. Azure サブスクリプションにアクセスするには、Azure ADアプリケーション`Contributor`にロールを割り当て、ロールをお勧めします。 
+2. Azure サブスクリプションにアクセスするには、Azure ADアプリケーション`Contributor`にロールを割り当て、ロールをお勧めします。
 3. 新しいアプリケーション シークレットAzure AD作成します。
 
 > [!TIP]
-> テナント ID、アプリケーション ID(AZURE_SERVICE_PRINCIPAL_NAME)、および secret(AZURE_SERVICE_PRINCIPAL_PASSWORD) を将来使用するために保存します。
+> 将来使用するために、テナント ID、アプリケーション id(AZURE_SERVICE_PRINCIPAL_NAME)、および secret(AZURE_SERVICE_PRINCIPAL_PASSWORD) を保存します。
 
-詳細については、「 [Azure サービス プリンシパルのガイドライン」を参照してください](/azure/active-directory/develop/howto-create-service-principal-portal)。 サービス プリンシパルを作成する 3 つの方法を次に示します。 
+詳細については、「 [Azure サービス プリンシパルのガイドライン」を参照してください](/azure/active-directory/develop/howto-create-service-principal-portal)。 サービス プリンシパルを作成する 3 つの方法を次に示します。
+
 * [Microsoft Azure ポータル](/azure/active-directory/develop/howto-create-service-principal-portal)
 * [Windows PowerShell](/azure/active-directory/develop/howto-authenticate-service-principal-powershell)
 * [Microsoft Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli)
 
-## <a name="publish-teams-app-using-teams-developer-portal"></a>開発者ポータルTeams使用してアプリTeamsを発行する
-アプリのマニフェスト ファイルに関連Teams変更がある場合は、マニフェストを更新するために、Teams アプリを再度発行できます。
+## <a name="publish-teams-app-using-teams-developer-portal"></a>開発者ポータルTeamsを使用Teamsアプリを発行する
+
+アプリのマニフェスト ファイルに関連Teams変更がある場合は、マニフェストを更新するために、Teamsアプリを再度発行できます。
 
 アプリを手動Teams発行するには、開発者ポータルを使用してアプリ[をTeams](https://dev.teams.microsoft.com/home)。
 
 アプリを発行するには、次の手順を実行します。
+
 1. 対応するアカウントを[使用Teams](https://dev.teams.microsoft.com)開発者ポータルにサインインします。
 2. を選択して、アプリ パッケージを zip にインポートします `App -> Import app -> Replace`。
 3. アプリ一覧でターゲット アプリを選択します。

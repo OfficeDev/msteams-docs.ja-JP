@@ -1,50 +1,48 @@
 ---
 title: 複数のTeamsアプリを拡張Microsoft 365 (プレビュー)
-description: アプリ エクスペリエンスTeams他の使用率の高い領域に拡張Microsoft 365
-ms.date: 11/15/2021
+description: アプリ エクスペリエンスTeams他の高使用率領域に拡張Microsoft 365
+ms.date: 02/11/2022
 ms.topic: overview
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: ef2aff7d7f23d45b16041404e7a530596e978fb5
-ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
+ms.openlocfilehash: 895660e49e468583d7443799dd0c55d7950619e0
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "62443907"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355514"
 ---
 # <a name="extend-teams-apps-across-microsoft-365"></a>Teams アプリを Microsoft 365 全体に拡張する
 
 > [!NOTE]
-> この初期の開発者向けプレビューは、Teams 開発者に既存のアプリケーションに新しい機能を試し、Teams 開発者向け[](/microsoftteams/platform/feedback)プラットフォームを Microsoft 365 エコシステムの他の高利用領域に拡大するフィードバックを提供することを目的としています。
+> この初期の開発者プレビューは、Teams 開発者に既存のアプリケーションに新しい機能を試し、Microsoft 365 エコシステムの他の高使用率[](/microsoftteams/platform/feedback)領域への Teams 開発者プラットフォームの拡張に関するフィードバックを提供することを目的としています。
 
 Microsoft Office および Outlook で実行されている Teams アプリをテストするには、新しい [Microsoft Teams JavaScript クライアント SDK v2](using-teams-client-sdk-preview.md) Preview および Microsoft Teams [Developer](../resources/schema/manifest-schema-dev-preview.md) プレビュー マニフェストを使用するコードを更新します。
 
 このプレビューでは、次の機能を使用できます。
 
-- 既存の個人用Teams[をデスクトップ](/microsoftteams/platform/tabs/how-to/create-personal-tab)Outlook Web 上に拡張し、また (Office on the web) office.com。
+- 既存の個人用Teams[をデスクトップ](/microsoftteams/platform/tabs/how-to/create-personal-tab)Outlook Web 上のユーザーに拡張し、Office on the web (office.com)。
 - 既存のTeams[ベース](/microsoftteams/platform/messaging-extensions/how-to/search-commands/define-search-command)のメッセージング拡張機能をデスクトップおよび web Outlookに拡張します。
 
-フィードバックや問題については、関連する開発者コミュニティ チャネルMicrosoft Teams[使用してください](/microsoftteams/platform/feedback)。
+フィードバックや問題については、開発者コミュニティ チャネルに関連するMicrosoft Teams[使用してください](/microsoftteams/platform/feedback)。
 
 ## <a name="teams-personal-tabs-in-office-and-outlook"></a>Teamsの個人用タブをOfficeおよびOutlook
 
-このプレビューを使用すると、Teams 個人用タブ アプリケーションを拡張して、Outlook Windows デスクトップと web の Outlook と web の両方で実行し、Office on the web。
+このプレビューを使用すると、Teams 個人用タブ アプリケーションを拡張して、Outlook デスクトップと web の Outlook Windows と web の両方で実行し、Office on the web。
 
-ユーザーにサイドローディングTeams、個人用タブは、インストールされているアプリの 1 つとして、OutlookおよびOffice。
+ユーザーにサイドローディングTeams、個人用タブが、インストールされているアプリの 1 つとして、OutlookおよびOffice。
 
-:::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="[個人用] タブは、outlook.com":::
+:::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="[個人用] タブは、Outlook、Office、およびTeams":::
 
 ## <a name="teams-messaging-extensions-in-outlook"></a>Teams内のメッセージング拡張機能Outlook
 
 このプレビューを使用すると、検索ベースの Teams メッセージング拡張機能を Outlook on the web および Windows デスクトップに拡張し、Microsoft Teams クライアントに加えて、Outlook のメッセージ作成領域を通じて結果を検索および共有できます。
 
-メッセージをサイドローディングTeams、メッセージの作成領域にインストールされているアプリの 1 Outlook表示されます。
+メッセージをサイドローディングTeams、メッセージング拡張機能は、メッセージの作成領域内にインストールされているアプリOutlook表示されます。
 
-:::image type="content" source="~/assets/images/git-issue-msging-extension.png" alt-text="メッセージング拡張機能" lightbox="~/assets/images/git-issue-msging-extension.png" border="true":::
+## <a name="next-steps"></a>次の手順
 
-## <a name="next-step"></a>次のステップ
-
-複数のアプリを拡張するために、Teams環境をMicrosoft 365。
+複数のアプリケーション間でアプリを拡張Teams環境をMicrosoft 365。
 
 > [!div class="nextstepaction"]
 > [前提条件のインストール](prerequisites.md)

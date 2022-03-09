@@ -1,24 +1,25 @@
 ---
 author: heath-hamilton
-description: 既存の Web アプリとアプリを統合するためのベスト プラクティスMicrosoft Teams
+description: 既存の Web アプリとアプリを統合するためのベスト プラクティスまたは考慮事項Microsoft Teams
 ms.author: surbhigupta
 ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: 統合のTeams検討事項
-ms.openlocfilehash: a67124f5556ed8b197b981ac150a652dc8d25ec1
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: a21bb050008af935ee370d3e65d95a63a7090fb0
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821347"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356253"
 ---
-# <a name="considerations-for-teams-integration"></a>統合のTeams検討事項 
+# <a name="considerations-for-teams-integration"></a>統合のTeams検討事項
 
 Web アプリを適切に統合することで、Teamsのソーシャル機能や共同作業機能に適Teams。
   
 アプリと統合できるさまざまな種類のアプリはTeams次のとおりです。
-* **スタンドアロン アプリ**: スタンドアロン アプリは、単一ページまたは大規模で複雑なアプリです。 ユーザーは、その一部の側面をTeams。
+
+* **スタンドアロン アプリ**: スタンドアロン アプリは、単一ページまたは大規模で複雑なアプリです。 ユーザーは Teams でその一部の側面を使用できます。
 * **コラボレーション アプリ**: ユーザーに固有のソーシャル機能と共同作業機能用に既に構築Teams。
 * **SharePoint**: SharePointに表示するページTeams。
 
@@ -29,14 +30,14 @@ Web アプリを適切に統合することで、Teamsのソーシャル機能�
 
 ***統合シナリオ**: スタンドアロン アプリ、コラボレーション アプリ、SharePoint*
 
-アプリTeams必要な共同作業機能を含める必要があります。 アプリの統合を操作するには、開発用語を理解Teams重要です。
+アプリにはTeams必要な共同作業機能が含まれる必要があります。 アプリの統合を操作するには、開発用語を理解Teams重要です。
 
 |アプリの一般的な機能   |Teams機能   |
 |----------|-----------|
 |埋め込み Web ページ、ホームページ、または Web ビュー  |[タブ](../tabs/what-are-tabs.md)  |
 |ショートカットと拡張機能を共有する  |[メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)  |
 |操作のショートカットと拡張機能  |[メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)  |
-|チャットボット  |[ボット](../bots/what-are-bots.md) |
+|チャットボット |[ボット](../bots/what-are-bots.md) |
 |チャネル通知  |[ボット](../bots/what-are-bots.md)<br/>[受信 Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)<br/>[Office 365 コネクタ](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
 |メッセージ外部サービス  |[ボット](../bots/what-are-bots.md)<br/>[送信 Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
 |モーダル  |[タスク モジュール](../task-modules-and-cards/what-are-task-modules.md)  |
@@ -48,9 +49,9 @@ Web アプリを適切に統合することで、Teamsのソーシャル機能�
 
 既存のアプリケーションのすべての機能をアプリケーションに統合Teams、特に大規模なアプリでは、強制的または不自然なユーザー エクスペリエンスが発生します。 最も影響の大きな機能と、より自然に機能と統合する機能からTeams。 ユーザーがメイン アプリを起動し、一連の機能にアクセスできます。
 
-**アプリとアプリを統合するための前提条件Teams**
+アプリとアプリを統合するための前提条件は次Teams。
 
-1. [アプリの使用例をプラットフォームの機能Teamsマップします](../concepts/design/map-use-cases.md)。
+1. [アプリの使用例を、プラットフォームの機能Teamsマップします](../concepts/design/map-use-cases.md)。
 1. [アプリのエントリ ポイントを決定します](../concepts/extensibility-points.md)。 個人向け、共同作業用、または両方用ですか?
 
 ## <a name="understand-sharepoint-requirements-and-options"></a>要件SharePointオプションについて理解する
@@ -62,9 +63,9 @@ Web アプリを適切に統合することで、Teamsのソーシャル機能�
 * 最新のオンライン ページ *SharePoint* 必要があります。
 * 個人用タブのみサポートされます。 ページをチャネル タブとして統合することはできません。
 
-または、タブを使用してTeamsタブ[をSharePoint Framework](/sharepoint/dev/spfx/integrate-with-teams-introduction)。
+または、タブを使用してTeams[タブをSharePoint Framework](/sharepoint/dev/spfx/integrate-with-teams-introduction)。
 
-## <a name="aim-towards-multi-tenancy"></a>マルチテナントを目指す
+## <a name="aim-towards-multitenancy"></a>マルチテナントを目指す
 
 ***統合シナリオ**: スタンドアロン アプリ、コラボレーション アプリ、SharePoint*
 
@@ -74,7 +75,7 @@ Web アプリを適切に統合することで、Teamsのソーシャル機能�
 
 ***統合シナリオ**: スタンドアロン アプリ、コラボレーション アプリ*
 
-アプリの API とデータ構造は、アプリと統合するときにアプリをサポートするTeams。 サポートを拡張するには、ID マッピング、ディープリンク サポート、Microsoft Graph の組み込みのために、Teams に[](../concepts/authentication/configure-identity-provider.md)関するコンテキスト[](../concepts/build-and-test/deep-links.md)情報を使用して API とデータ構造を拡張する[必要があります](/graph/teams-concept-overview)。
+アプリの API とデータ構造は、アプリと統合するときにアプリをサポートするTeams。 サポートを拡張するには、ID マッピング、ディープ リンクサポート、Microsoft Graph の組み込みのために、Teams に[](../concepts/authentication/configure-identity-provider.md)関するコンテキスト[](../concepts/build-and-test/deep-links.md)情報を使用して API とデータ構造を拡張する[必要があります](/graph/teams-concept-overview)。
 
 [ユーザー] タブまたはボットのコンテキストをTeams[する方法を](../tabs/how-to/access-teams-context.md)参照[してください](../bots/how-to/get-teams-context.md)。
 
@@ -84,14 +85,14 @@ Web アプリを適切に統合することで、Teamsのソーシャル機能�
 
 Azure Active Directoryは、ユーザーの ID プロバイダー Teams。 アプリで別の ID プロバイダーを使用する場合は、ID マッピングの演習を行う必要があります。または id マッピングとMicrosoft Azure Active Directory (Azure AD)。
 
-Teamsサード パーティ製アプリ向けシングル サインオン (SSO) Azure AD機能が備え付けされています。 また、OIDC と呼ばれる OAuth や Open ID などの標準を使用して、他の ID プロバイダー Connectガイダンスを提供します。
+Teamsアプリ向けシングル サインオン (SSO) Azure AD機能が備え付けされています。 また、OIDC と呼ばれる OAuth や Open ID などの標準を使用して、他の ID プロバイダー Connectガイダンスを提供します。
 
 > [!IMPORTANT]
-> 現在、サード パーティ製アプリは Government Community Cloud (GCC) で利用できますが、GCC-High国防総省 (DOD) では使用できません。 サード パーティ製アプリは、既定では無効になっています。GCC。 アプリのサードパーティ 製アプリを有効にするGCC、[アプリのアクセス](/microsoftteams/teams-app-permission-policies)許可ポリシーの管理とアプリの[管理に関するページをご覧ください](/microsoftteams/manage-apps)。
+> 現在、サード パーティ製アプリは Government Community Cloud (GCC) で利用できますが、GCC-Highおよび国防総省 (DOD) では使用できません。 サード パーティ製アプリは、既定では無効になっています。GCC。 アプリのサードパーティ 製アプリを有効にするGCC[アプリのアクセス](/microsoftteams/teams-app-permission-policies)許可ポリシーの管理とアプリ[の管理に関するページをご覧ください](/microsoftteams/manage-apps)。
 
-このSharePointでは、SSO のみを使用できます。また、別のアプリで SSO を使用する場合は、別の Azure AD ID を追加することはできません。この ID はアプリのSharePointです。
+このSharePointでは、SSO のみを使用できます。また、別のアプリで SSO を動作する場合は、別の Azure AD ID を追加することはできません。この ID はアプリの SharePoint です。
 
-認証の詳細[については、](../concepts/authentication/authentication.md)Teams。
+認証の詳細[については](../concepts/authentication/authentication.md)、Teams。
 
 ## <a name="follow-teams-design-guidelines"></a>設計Teamsに従う
 
@@ -103,7 +104,7 @@ Teamsサード パーティ製アプリ向けシングル サインオン (SSO) 
 
 ***統合シナリオ**: スタンドアロン アプリ、コラボレーション アプリ、SharePoint*
 
-Teams 内の情報や機能へのリンクを作成できます。 ディープ [リンクを使用](../concepts/build-and-test/deep-links.md)してアプリとアプリTeamsリンクし、アプリの複数の部分を結び付け、よりネイティブなエクスペリエンスTeamsします。
+Teams 内の情報や機能へのリンクを作成できます。 ディープ [リンクを使用](../concepts/build-and-test/deep-links.md)してアプリTeamsをリンクし、アプリの複数の部分を結び付け、よりネイティブなエクスペリエンスTeamsします。
 
 ## <a name="be-smart-when-messaging-users"></a>メッセージング ユーザーがスマートになる
 
@@ -113,7 +114,7 @@ Webhook [よりも柔軟性](../bots/what-are-bots.md)が高Teams、マルチス
 
 ボットでは、個々のユーザーまたは **チャネルにプロ** アクティブ メッセージを送信することもできます。 プロアクティブ メッセージは、ボットに送信されるメッセージではなく、外部イベントによってトリガーされるプロプロンプトされていないメッセージです。 たとえば、ボットがインストールされている場合、または新しいユーザーがチャネルに参加するときに、ボットからウェルカム メッセージが送信されます。
 
-プロアクティブ メッセージの送信には、Teams固有の識別子が必要です。 情報を取得するには、名[](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)簿またはユーザー プロファイル データをフェッチするか、[](../bots/how-to/conversations/subscribe-to-conversation-events.md)会話イベントをサブスクライブするか、[Microsoft](/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?context=graph/context#proactive-messaging-in-teams) Graph。
+プロアクティブ メッセージの送信には、Teams固有の識別子が必要です。 情報を取得するには、名[](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)簿またはユーザー プロファイル データの取得、会話[](../bots/how-to/conversations/subscribe-to-conversation-events.md)イベントの[サブスクライブ、または Microsoft](/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?context=graph/context#proactive-messaging-in-teams) Graph。
 
 過剰なメッセージを持つユーザーに迷惑メールを送信しない。 この機能Teamsサポートしている場合、ユーザーはアプリの通知設定を構成できます。
 通知メッセージの例を次に示します **。プロ** ンプトされていないメッセージは送信しません。
@@ -122,7 +123,7 @@ Webhook [よりも柔軟性](../bots/what-are-bots.md)が高Teams、マルチス
 
 ***統合シナリオ:** スタンドアロン アプリ、コラボレーション アプリ、SharePoint ページ*
 
-チームが作成されると、そのチーム[](/microsoftteams/sharepoint-onedrive-interact)SharePointファイルとデータ ストレージをサポートするサイト コレクションも準備されます。 アプリがファイルを操作する場合は、この機能を活用する必要があります。 サイト コレクションを使用して、生データを [リストとSharePointに保存Microsoft Excel。
+チームが作成されると、そのチーム[](/microsoftteams/sharepoint-onedrive-interact)SharePointファイルとデータ ストレージをサポートするサイト コレクションも準備されます。 アプリがファイルを操作する場合は、この機能を活用する必要があります。 サイト コレクションを使用して、生データを [リスト] および [SharePoint] にMicrosoft Excel。
 
 ## <a name="see-also"></a>関連項目
 

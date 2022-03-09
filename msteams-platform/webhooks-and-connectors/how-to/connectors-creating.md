@@ -6,27 +6,27 @@ keywords: Teams Office365 コネクタ
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 64400b3f80aa5ba322ce7318e0261e8b694e7e18
-ms.sourcegitcommit: bfa9d24f736fb8915a9e3ef09c47dbe29a950cb5
+ms.openlocfilehash: 880bede3a33d974c8424bdcaeb8e250bdc97edca
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "62801384"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356099"
 ---
 # <a name="create-office-365-connectors"></a>Office 365 コネクタの作成
 
-アプリMicrosoft Teams、既存のコネクタを追加するか、Office 365内に新しいコネクタをTeams。 詳細については、「独自のコネクタ [をビルドする」を参照してください](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector)。
+アプリMicrosoft Teamsを使用すると、既存のコネクタコネクタをOffice 365したり、新しいコネクタをビルドしたりTeams。 詳細については、「独自のコネクタ [をビルドする」を参照してください](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector)。
 
 ## <a name="add-a-connector-to-teams-app"></a>コネクタをアプリにTeamsする
 
-パッケージを作成し[、](~/concepts/build-and-test/apps-package.md)[AppSource](~/concepts/deploy-and-publish/apps-publish.md) 申請の一部としてコネクタを発行できます。 登録されたコネクタは、アプリ パッケージの一部としてTeamsできます。 アプリのエントリ ポイントの詳細については、「Teams機能」[を参照してください](~/concepts/extensibility-points.md)。 また、パッケージをユーザーに直接提供して、アプリ内でアップロードTeams。
+パッケージを作成し[、](~/concepts/build-and-test/apps-package.md)[AppSource](~/concepts/deploy-and-publish/apps-publish.md) 申請の一部としてコネクタを発行できます。 登録されたコネクタは、アプリ パッケージの一部として配布Teamsできます。 アプリのエントリ ポイントの詳細については、「Teams機能」[を参照してください](~/concepts/extensibility-points.md)。 また、パッケージをユーザーに直接提供して、アプリ内でアップロードTeams。
 
 コネクタを配布するには、コネクタ開発者ダッシュボード [にコネクタを登録します](https://aka.ms/connectorsdashboard)。
 
-コネクタがアプリ内でのみ動作Microsoft Teams、アプリを発行する際にコネクタを送信する手順に従って、Microsoft Teams[記事を参照](~/concepts/deploy-and-publish/appsource/publish.md)してください。 それ以外の場合、登録されたコネクタは、Office 365アプリケーションをサポートするすべての製品で動作OutlookおよびTeams。
+コネクタがアプリ内でのみ動作Microsoft Teams、アプリを発行する際にコネクタを送信する手順に従って、Microsoft Teams[記事を参照](~/concepts/deploy-and-publish/appsource/publish.md)してください。 それ以外の場合は、登録されたコネクタは、Office 365アプリケーションをサポートしているすべての製品で動作OutlookおよびTeams。
 
 > [!IMPORTANT]
-> コネクタ開発者ダッシュボードで [保存] を **選択** すると、コネクタが登録されます。 AppSource でコネクタを発行する場合は、アプリを AppSource に発行するMicrosoft Teams[手順に従います](~/concepts/deploy-and-publish/apps-publish.md)。 AppSource でアプリを発行しない場合は、組織に直接配布します。 組織 [のコネクタを発行した後](#publish-connectors-for-the-organization)、コネクタ ダッシュボードでそれ以上の操作は必要ありません。
+> コネクタ開発者ダッシュボードで [保存] を **選択** すると、コネクタが登録されます。 AppSource でコネクタを発行する場合は、「アプリを AppSource に発行する」の[Microsoft Teamsに従います](~/concepts/deploy-and-publish/apps-publish.md)。 AppSource でアプリを発行しない場合は、組織に直接配布します。 組織 [のコネクタを発行した後](#publish-connectors-for-the-organization)、コネクタ ダッシュボードでそれ以上の操作は必要ありません。
 
 ### <a name="integrate-the-configuration-experience"></a>構成エクスペリエンスの統合
 
@@ -38,9 +38,9 @@ ms.locfileid: "62801384"
 
     > [!NOTE]
     > * コードは、Webhook 設定を取得して保存イベントを処理できます。 後でイベントを投稿する Webhook をコードに格納します。
-    > * 構成エクスペリエンスは、構成エクスペリエンス内でインラインTeams。
+    > * 構成エクスペリエンスは、インラインで読み込Teams。
 
-既存の Web 構成エクスペリエンスを再利用したり、別のバージョンを作成して、特にホストTeams。 コードには JavaScript SDK Microsoft Teams含める必要があります。 これにより、現在のユーザー、チャネル、またはチーム のコンテキストを取得して認証フローを開始するなどの一般的な操作を実行するための API へのコード アクセスが可能になります。
+既存の Web 構成エクスペリエンスを再利用したり、別のバージョンを作成して、特にホストTeams。 コードには JavaScript SDK のMicrosoft Teamsする必要があります。 これにより、現在のユーザー、チャネル、またはチーム のコンテキストを取得して認証フローを開始するなどの一般的な操作を実行するための API へのコード アクセスが可能になります。
 
 **構成エクスペリエンスを統合するには**
 
@@ -136,8 +136,8 @@ ms.locfileid: "62801384"
 | `configName`  | 呼び出し時にコードによって設定される構成名 `setSettings()`。 |
 | `contentUrl` | 呼び出し時にコードによって設定された構成ページの URL `setSettings()`。 |
 | `webhookUrl` | コネクタ用に作成された Webhook URL。 Webhook URL を使用して構造化 JSON を POST し、チャネルにカードを送信します。 アプリケーション `webhookUrl` がデータを正常に返した場合にのみ返されます。 |
-| `appType` | 返される値は、メール`mail``groups``teams`、グループ、Office 365、またはOffice 365に対応Microsoft Teamsできます。 |
-| `userObjectId` | コネクタのセットアップを開始Office 365ユーザーに対応する一意の ID。 セキュリティで保護されている必要があります。 この値は、サービスで構成をOffice 365ユーザーを関連付ける場合に使用できます。 |
+| `appType` | 返される値は、メール`mail``groups``teams`、Office 365グループ、Office 365に対応Microsoft Teamsできます。 |
+| `userObjectId` | コネクタのセットアップを開始Office 365ユーザーに対応する一意の ID。 セキュリティで保護されている必要があります。 この値は、サービスで構成を設定Office 365ユーザーを関連付ける場合に使用できます。 |
 
 #### <a name="handle-edits"></a>編集の処理
 
@@ -207,9 +207,9 @@ ms.locfileid: "62801384"
 
 ## <a name="enable-or-disable-connectors-in-teams"></a>デバイスでコネクタを有効または無効Teams
 
-PowerShell V2 Exchange Onlineモジュールは、モダン認証を使用し、多要素認証 (MFA と呼ばれる) を使用して、Exchange に関連する PowerShell 環境に接続Microsoft 365。 管理者は、Exchange Online PowerShell を使用して、テナント全体または特定のグループ メールボックスのコネクタを無効にし、そのテナントまたはメールボックス内のすべてのユーザーに影響を与える可能性があります。 一部のユーザーに対して無効にし、他のユーザーに対して無効にはできません。 また、コネクタは既定で、テナントと呼ばれるGovernment Community CloudにGCCされます。
+PowerShell V2 Exchange Onlineモジュールは、最新の認証を使用し、MFA と呼ばれる多要素認証を使用して、Exchange に関連する PowerShell 環境に接続Microsoft 365。 管理者は、Exchange Online PowerShell を使用して、テナント全体または特定のグループ メールボックスのコネクタを無効にし、そのテナントまたはメールボックス内のすべてのユーザーに影響を与える可能性があります。 一部のユーザーに対して無効にし、他のユーザーに対して無効にはできません。 また、既定では、テナントと呼ばれるGovernment Community CloudコネクタGCCされます。
 
-テナント レベルの設定は、グループ レベルの設定より優先されます。 たとえば、管理者がグループのコネクタを有効にしてテナントで無効にした場合、グループのコネクタは無効になります。 クライアントでコネクタを有効にするにはTeams MFA のExchange Online[を使用して PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true) に接続します。
+テナント レベルの設定は、グループ レベルの設定より優先されます。 たとえば、管理者がグループのコネクタを有効にしてテナントで無効にした場合、グループのコネクタは無効になります。 アプリケーションでコネクタを有効にするにはTeams MFA のExchange Online[を使用して PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true) に接続します。
 
 ### <a name="commands-to-enable-or-disable-connectors"></a>コネクタを有効または無効にするコマンド
 
@@ -222,11 +222,11 @@ Exchange Online PowerShell で次のコマンドを実行します。
   * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
   * `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$true`
 
-PowerShell モジュール交換の詳細については、「 [Set-OrganizationConfig」を参照してください](/powershell/module/exchange/Set-OrganizationConfig?view=exchange-ps&preserve-view=true)。 コネクタを有効または無効にするには、Outlookでアプリを[グループに接続Outlook](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab?ui=en-us&rs=en-us&ad=us)。
+PowerShell モジュール交換の詳細については、「 [Set-OrganizationConfig」を参照してください](/powershell/module/exchange/Set-OrganizationConfig?view=exchange-ps&preserve-view=true)。 コネクタを有効または無効にするにはOutlookでアプリを[グループに接続Outlook](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab?ui=en-us&rs=en-us&ad=us)。
 
 ## <a name="test-your-connector"></a>コネクタをテストする
 
-コネクタをテストするには、他のアプリを使用してチームにアップロードします。 マニフェスト ファイルとコネクタ.zipマニフェスト ファイルを使用して、マニフェスト パッケージを作成できます。開発者ダッシュボードは、「マニフェストにコネクタを含める」の指示に基いて [変更されます](#include-the-connector-in-your-manifest)。
+コネクタをテストするには、他のアプリを使用してチームにアップロードします。 マニフェスト ファイルとコネクタの 2 .zipを使用して、マニフェスト パッケージを作成できます。開発者ダッシュボードは、「マニフェストにコネクタを含める」の指示に基いて [変更されます](#include-the-connector-in-your-manifest)。
 
 アプリをアップロードした後、任意のチャネルからコネクタリストを開きます。 下にスクロールして、[アップロード] セクションにアプリ **を表示** します。
 
@@ -255,12 +255,12 @@ PowerShell モジュール交換の詳細については、「 [Set-Organization
 > [!IMPORTANT]
 > 現在、カスタム コネクタは、Government Community Cloud (GCC)、GCC-High、および国防総省 (DOD) では使用できません。
 
-コネクタは、「そのチームのその他の >  &#9679;&#9679;&#9679; > **ConnectorsAllConnectors** >  > 」セクションで使用できます。 このセクションまでスクロールするか、コネクタ アプリを検索して移動できます。 コネクタを構成または変更するには、[構成] を **選択します**。
+コネクタは、「そのチームのその他 &#9679;&#9679;&#9679; > **ConnectorsAllConnectors** >  >  > 」セクションで使用できます。 このセクションまでスクロールするか、コネクタ アプリを検索して移動できます。 コネクタを構成または変更するには、[構成] を **選択します**。
 
 ## <a name="distribute-webhook-and-connector"></a>Webhook とコネクタの配布
 
-1. [チームに直接受信 Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md?branch=pr-en-us-3076#create-incoming-webhook) を設定します。
-1. 構成ページ[を追加し](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#integrate-the-configuration-experience)[、受信 Webhook](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#publish-connectors-for-the-organization) を新しいコネクタOffice 365します。
+1. [チームに直接受信 Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md?branch=pr-en-us-3076#create-an-incoming-webhook) を設定します。
+1. 構成ページ[を追加し](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#integrate-the-configuration-experience)[、受信 Webhook](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#publish-connectors-for-the-organization) を受信コネクタOffice 365します。
 1. AppSource 申請の一部としてコネクタをパッケージ化 [して発行](~/concepts/deploy-and-publish/office-store-guidance.md) します。
 
 ## <a name="code-sample"></a>コード サンプル

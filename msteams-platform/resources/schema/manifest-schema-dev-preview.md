@@ -5,16 +5,16 @@ ms.topic: reference
 keywords: teams マニフェスト スキーマ Developer Preview
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: fd73fbdacf17c6c25a80071ec438c0dc97c6ee6a
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: bf2bcb1d7c72dc1fbd02de6ecab9ec0848c604c4
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518549"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356260"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>リファレンス: パブリック開発者プレビュー マニフェスト スキーマ (Microsoft Teams
 
-開発者プレビューを有効にする方法については、「開発者向けパブリック プレビュー」[を参照Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md)。
+開発者プレビューを有効にする方法については、「開発者向けパブリック プレビュー」を参照[Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md)。
 
 > [!NOTE]
 > [Outlook および Office で Teams](../../m365-apps/overview.md) 個人用タブやメッセージング拡張機能を実行するなどの開発者プレビュー機能を使用していない場合は、代わりに [GA](~/resources/schema/manifest-schema.md) 機能のアプリ マニフェストを使用します。
@@ -284,7 +284,7 @@ ms.locfileid: "62518549"
 
 **必須** &ndash; 文字列
 
-このマニフェストが使用しているマニフェスト スキーマのバージョン。 アプリ`m365DevPreview`とアプリで実行中のアプリTeams[プレビューする場合にのみOffice使用](../../m365-apps/overview.md)Outlook。 それ以外の場合は、他`devPreview`のすべてのプレビュー機能Teams使用します。
+このマニフェストが使用しているマニフェスト スキーマのバージョン。 アプリ`m365DevPreview`とアプリで実行されているアプリTeams[プレビューする場合にのみOffice使用Outlook](../../m365-apps/overview.md)。 それ以外の場合は、他`devPreview`のすべてのプレビュー機能Teams使用します。
 
 ## <a name="version"></a>version
 
@@ -300,7 +300,7 @@ ms.locfileid: "62518549"
 
 **必須** &ndash; Microsoft アプリ ID
 
-このアプリの Microsoft が生成した一意の識別子。 ボットを Microsoft Bot Framework 経由で登録している場合、またはタブの Web アプリが既に Microsoft にサインインしている場合は、既に ID を持っている必要があります。ここで入力する必要があります。 それ以外の場合は、Microsoft アプリケーション登録ポータル ([My Applications](https://apps.dev.microsoft.com)) で新しい ID を生成し、ここに入力し、ボットを追加するときに再利用 [する必要があります](~/bots/how-to/create-a-bot-for-teams.md)。
+このアプリの Microsoft が生成した一意の識別子。 ボットを Microsoft Bot Framework 経由で登録している場合、またはタブの Web アプリが既に Microsoft にサインインしている場合は、既に ID を持っている必要があります。ここに入力する必要があります。 それ以外の場合は、Microsoft アプリケーション登録ポータル ([My Applications](https://apps.dev.microsoft.com)) で新しい ID を生成し、ここに入力し、ボットを追加するときに再利用 [する必要があります](~/bots/how-to/create-a-bot-for-teams.md)。
 
 ## <a name="packagename"></a>packageName
 
@@ -312,7 +312,7 @@ ms.locfileid: "62518549"
 
 **必須**
 
-会社に関する情報を指定します。 AppSource に送信されたアプリ (以前Officeストア) の場合、これらの値は AppSource エントリの情報と一致する必要があります。
+会社に関する情報を指定します。 AppSource に送信されたアプリ (以前は Officeストア) の場合、これらの値は AppSource エントリの情報と一致する必要があります。
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
@@ -394,11 +394,11 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`configurationUrl`|String|2048 文字|✔|タブを構成するときに使用する https:// URL。|
+|`configurationUrl`|文字列|2048 文字|✔|タブを構成するときに使用する https:// URL。|
 |`canUpdateConfiguration`|Boolean|||タブの構成のインスタンスを作成後にユーザーが更新できるかどうかを示す値。 既定値: `true`|
 |`scopes`|列挙型の配列|1|✔|現在、構成可能なタブは、`team` スコープと `groupchat` スコープのみをサポートしています。 |
 |`context` |列挙型の配列|6 ||[タブがサポートされている](../../tabs/how-to/access-teams-context.md) `contextItem` スコープのセット。 既定値: `channelTab`、 `privateChatTab`、 `meetingChatTab`、 `meetingDetailsTab`、 `meetingSidePanel`です `meetingStage`。|
-|`sharePointPreviewImage`|String|2048||SharePoint で使用するためのタブ プレビュー画像への相対ファイル パス。 サイズは 1024x768 です。 |
+|`sharePointPreviewImage`|文字列|2048||SharePoint で使用するためのタブ プレビュー画像への相対ファイル パス。 サイズは 1024x768 です。 |
 |`supportedSharePointHosts`|列挙型の配列|1||タブをタブで使用する方法を定義SharePoint。 オプションは `sharePointFullPage` と `sharePointWebPart` です。 |
 
 ## <a name="statictabs"></a>staticTabs
@@ -418,7 +418,7 @@ staticTabs ブロックではなく、アダプティブ カード`contentBotId`
 |`name`|String|128 文字|✔|チャネル インターフェイスのタブの表示名。|
 |`contentUrl`|String|2048 文字|✔|Teams キャンバスに表示されるエンティティ UI を指す https:// URL。|
 |`contentBotId`|   | | | ボット Microsoft Teamsで指定されたアプリ ID を指定します。 |
-|`websiteUrl`|String|2048 文字||ユーザー https:// ブラウザーで表示することを選択した場合に示す URL を指定します。|
+|`websiteUrl`|文字列|2048 文字||ユーザー https:// ブラウザーで表示することを選択した場合に示す URL を指定します。|
 |`scopes`|列挙型の配列|1|✔|現在、静的タブは `personal` スコープのみをサポートしています。つまり、個人的なエクスペリエンスの一部としてのみプロビジョニングできます。|
 
 ## <a name="bots"></a>ボット
@@ -456,7 +456,7 @@ staticTabs ブロックではなく、アダプティブ カード`contentBotId`
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`configurationUrl`|String|2048 文字|✔|コネクタを構成するときに使用する https:// URL。|
+|`configurationUrl`|文字列|2048 文字|✔|コネクタを構成するときに使用する https:// URL。|
 |`connectorId`|String|64 文字|✔|[コネクタ開発者ダッシュボード](https://aka.ms/connectorsdashboard)の ID に一致するコネクタの一意の識別子です。|
 |`scopes`|列挙型の配列|1|✔|コネクタがエクスペリエンスを提供するのは、`team` 内のチャネルのコンテキスでなのか、個別のユーザーのみをエクスペリエンスの対象にする (`personal`) のかを指定します。 現在、`team` スコープだけがサポートされています。|
 
@@ -473,7 +473,7 @@ staticTabs ブロックではなく、アダプティブ カード`contentBotId`
 
 |名前| 種類 | 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`botId`|String|64|✔|ボット フレームワークに登録されている、メッセージング拡張機能をサポートするボットの一意の Microsoft アプリ ID。 これは、アプリ全体の ID と同じ [可能性があります](#id)。|
+|`botId`|文字列|64|✔|ボット フレームワークに登録されている、メッセージング拡張機能をサポートするボットの一意の Microsoft アプリ ID。 これは、アプリ全体の ID と同じ [可能性があります](#id)。|
 |`canUpdateConfiguration`|Boolean|||メッセージング拡張機能の構成をユーザーが更新できるかどうかを示す値。 既定値は `false` です。|
 |`commands`|オブジェクトの配列|10|✔|メッセージング拡張機能がサポートするコマンドの配列|
 
@@ -489,12 +489,12 @@ staticTabs ブロックではなく、アダプティブ カード`contentBotId`
 |`type`|String|64 文字||コマンドの種類。 `query` または `action` のいずれか。 既定値: `query`|
 |`title`|String|32 文字|✔|ユーザーフレンドリーなコマンド名。|
 |`description`|String|128 文字||このコマンドの目的を示すためにユーザーに表示される説明。|
-|`initialRun`|Boolean|||パラメーターを指定してコマンドを最初に実行するかどうかを示すブール値。 既定値: `false`|
+|`initialRun`|ブール値|||パラメーターを指定してコマンドを最初に実行するかどうかを示すブール値。 既定値: `false`|
 |`context`|文字列 (String) の配列|3||メッセージング拡張機能の呼び出し先を定義します。 、 の任意の `compose`組み `commandBox`合わせ `message`。 既定値は `["compose", "commandBox"]` です|
-|`fetchTask`|Boolean|||タスク モジュールを動的にフェッチする必要があるかどうかを示すブール値。|
+|`fetchTask`|ブール値|||タスク モジュールを動的にフェッチする必要があるかどうかを示すブール値。|
 |`taskInfo`|オブジェクト|||メッセージング拡張機能コマンドを使用するときにプリロードするタスク モジュールを指定します。|
-|`taskInfo.title`|String|64||最初のダイアログ タイトル。|
-|`taskInfo.width`|String|||ダイアログの幅 - ピクセル単位の数値、または '大'、'中'、'小' などの既定のレイアウト。|
+|`taskInfo.title`|文字列|64||最初のダイアログ タイトル。|
+|`taskInfo.width`|文字列|||ダイアログの幅 - ピクセル単位の数値、または '大'、'中'、'小' などの既定のレイアウト。|
 |`taskInfo.height`|String|||ダイアログの高さ - ピクセル単位の数値、または '大'、'中'、'小' などの既定のレイアウト。|
 |`taskInfo.url`|String|||初期 Web ビュー URL。|
 |`messageHandlers`|オブジェクトの配列|5||特定の条件が満たされた場合にアプリを呼び出すことができるハンドラーの一覧。 ドメインもに一覧表示する必要があります `validDomains`。|
@@ -503,11 +503,11 @@ staticTabs ブロックではなく、アダプティブ カード`contentBotId`
 |`parameters`|オブジェクトの配列|5|✔|コマンドが取得するパラメーターの一覧。 最小: 1;最大: 5|
 |`parameter.name`|String|64 文字|✔|クライアントに表示されるパラメーターの名前。 これは、ユーザー要求に含まれます。|
 |`parameter.title`|String|32 文字|✔|パラメーターのユーザーフレンドリーなタイトル。|
-|`parameter.description`|String|128 文字||このパラメーターの目的を説明するユーザーフレンドリーな文字列。|
+|`parameter.description`|文字列|128 文字||このパラメーターの目的を説明するユーザーフレンドリーな文字列。|
 |`parameter.inputType`|String|128 文字||タスク モジュールに表示されるコントロールの種類を定義します `fetchTask: true`。 `text`、 、 `textarea`、 `number`、 `date``time`、 の `toggle`1 つ`choiceset`。|
 |`parameter.choices`|オブジェクトの配列|10||の選択肢オプション `choiceset`です。 の場合にのみ使用 `parameter.inputType` します `choiceset`。|
-|`parameter.choices.title`|String|128||選択したタイトル。|
-|`parameter.choices.value`|String|512||Value of the choice.|
+|`parameter.choices.title`|文字列|128||選択したタイトル。|
+|`parameter.choices.value`|文字列|512||Value of the choice.|
 
 ## <a name="permissions"></a>アクセス許可
 
@@ -538,7 +538,7 @@ staticTabs ブロックではなく、アダプティブ カード`contentBotId`
 
 アプリがコンテンツの読み込みを期待する有効なドメインの一覧。 ドメインの一覧には、ワイルドカードを含め、たとえば、 を含めできます `*.example.com`。 これは、ドメインの 1 つのセグメントと完全に一致します。一致する必要がある場合は、 を `a.b.example.com` 使用します `*.*.example.com`。 タブ構成またはコンテンツ UI で、タブ構成に使用するドメイン以外のドメインに移動する必要がある場合は、ここでそのドメインを指定する必要があります。
 
-ただし、 **サポート** する ID プロバイダーのドメインをアプリに含める必要はありません。 たとえば、Google ID を使用して認証を行う場合は、accounts.google.com にリダイレクトする必要がありますが、accounts.google.com に含める必要はありません `validDomains[]`。
+ただし、 **サポート** する ID プロバイダーのドメインをアプリに含める必要はありません。 たとえば、Google ID を使用して認証を行う場合は、accounts.google.com にリダイレクトする必要がありますが、accounts.google.com を含 accounts.google.com する必要があります `validDomains[]`。
 
 > [!IMPORTANT]
 > 直接またはワイルドカードを使用して、コントロールの外部にあるドメインを追加しません。 たとえば、有効 `yourapp.onmicrosoft.com` ですが、 `*.onmicrosoft.com` 無効です。
@@ -549,11 +549,11 @@ staticTabs ブロックではなく、アダプティブ カード`contentBotId`
 
 **Optional**
 
-ユーザーが auzre Microsoft Azure Active Directory アプリAzure ADシームレスにサインインするのに役立つアプリ ID とGraph情報を指定ADします。
+ユーザーが auzre Microsoft Azure Active DirectoryアプリAzure ADシームレスにサインインするのに役立つアプリ ID とGraph情報を指定ADします。
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`id`|String|36 文字|✔|Microsoft Azure Active Directory (Azure AD) アプリケーション ID。 この ID は GUID である必要があります。|
+|`id`|文字列|36 文字|✔|アプリの Microsoft Azure Active Directory (Azure AD) アプリケーション ID。 この ID は GUID である必要があります。|
 |`resource`|String|2048 文字|✔|SSO の認証トークンを取得するためのアプリのリソース URL。|
 |`applicationPermissions`|配列|最大 100 アイテム|✔|アプリケーションのリソースのアクセス許可。|
 

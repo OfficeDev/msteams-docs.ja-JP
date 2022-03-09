@@ -4,22 +4,22 @@ description: コード サンプルを使用して、Web サイトTeams埋め込
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: 共有Teams共有Teams
-ms.openlocfilehash: a2c94ad690864b6af89005af4f96866f1ebda0b6
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 05e64033d16d4b94c6ac2f9f230c296218f75517
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518493"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355875"
 ---
 # <a name="create-share-to-teams-button"></a>[Teams で共有] ボタンを作成する
 
-サードパーティの Web サイトでは、ランチャー スクリプトを使用して、Web ページに Share-to-Teamsボタンを埋め込む可能性があります。 選択すると、ポップアップ ウィンドウで Share-to-Teamsエクスペリエンスが起動します。 これにより、コンテキストを切り替えることなく、任意のユーザーまたはMicrosoft Teamsにリンクを直接共有できます。 このドキュメントでは、Web サイト用に Share-to-Teams ボタンを作成して埋め込み、Web サイトのプレビューを作成し、Share-to-Microsoft Teams for Education を拡張する方法についてガイドします。
+サード パーティの Web サイトでは、ランチャー スクリプトを使用して、Web ページに Share-to-Teamsボタンを埋め込む可能性があります。 選択すると、ポップアップ ウィンドウで Share-to-Teamsエクスペリエンスが起動します。 これにより、コンテキストを切り替えることなく、任意のユーザーまたはMicrosoft Teamsにリンクを直接共有できます。 このドキュメントでは、Web サイト用に Share-to-Teams ボタンを作成して埋め込み、Web サイトのプレビューを作成し、Share-to-Microsoft Teams for Education を拡張する方法についてガイドします。
 
 > [!NOTE]
 > * MicrosoftEdge と Google&nbsp; Chrome のデスクトップ バージョンだけがサポートされています。
 > * Freemium アカウントまたはゲスト アカウントの使用はサポートされていません。  
 
-次の図は、Share-to-Teamsポップアップ エクスペリエンスを表示します。
+次の図は、Share-to-Teamsエクスペリエンスを表示します。
 
 ![共有と共有Teamsポップアップ](~/assets/images/share-to-teams-popup.png)
 
@@ -67,7 +67,7 @@ ms.locfileid: "62518493"
 
 ## <a name="craft-your-website-preview"></a>Web サイトのプレビューを作成する
 
-Web サイトが web サイトと共有Teams、選択したチャネルに挿入されるカードには、Web サイトのプレビューが含まれる。 このプレビューの動作を制御するには、共有する Web サイト (URL など) に適切なメタ データが追加 `data-href` されます。  
+Web サイトが web サイトと共有Teams、選択したチャネルに挿入されたカードには、Web サイトのプレビューが含まれる。 このプレビューの動作を制御するには、共有する Web サイト (URL など) に適切なメタ データが追加 `data-href` されます。  
 
 **プレビューを表示するには**
 
@@ -79,29 +79,29 @@ Web サイトが web サイトと共有Teams、選択したチャネルに挿入
 |値|メタ タグ| 開くGraph|
 |----|----|----|
 |Title|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
-|[説明]|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
+|説明|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
 |サムネイル 画像| none。 |`<meta property="og:image" content="http://example.com/image.jpg">`|
 
 HTML の既定のバージョンまたは Open Graph使用できます。
 
 ## <a name="share-to-teams-for-education"></a>共有するMicrosoft Teams for Education
 
-[共有するユーザー] ボタンを使用Teams教師の場合は、 に追加のオプションがあります`Create an Assignment`。 これにより、共有リンクに基づいて、選択したチームで割り当てを簡単に作成できます。 次の図は、教育のための共有Teamsを表示します。 
+[共有するユーザー] ボタンを使用Teams教師の場合は、 に追加のオプションがあります`Create an Assignment`。 これにより、共有リンクに基づいて、選択したチームで割り当てを簡単に作成できます。 次の図は、教育用の Share-to-Teamsを表示します。 
 
 ![ポップアップ教育Teams共有する](~/assets/images/share-to-teams-popup-edu.png)
 
-## <a name="full-launcherjs-definition"></a>完全なlauncher.js定義
+## <a name="full-launcherjs-definition"></a>完全launcher.js定義
 
-| プロパティ | HTML 属性 | 種類 | 既定値 | 説明 |
+| プロパティ | HTML 属性 | 型 | 既定値 | 説明 |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
-| href | `data-href` | string | 該当なし | 共有するコンテンツの href。 |
-| preview | `data-preview` | boolean (文字列として) | `true` | 共有するコンテンツのプレビューを表示するかどうかを指定します。 |
+| href | `data-href` | 文字列 | 該当なし | 共有するコンテンツの href。 |
+| preview | `data-preview` | ブール型 (文字列) | `true` | 共有するコンテンツのプレビューを表示するかどうかを指定します。 |
 | iconPxSize | `data-icon-px-size` | number (文字列として) | `32` | レンダリングする Share-to-Teamsボタンのサイズ (ピクセル単位)。 |
-| msgText | `data-msg-text` | string | 該当なし | メッセージ作成ボックスのリンクの前に挿入される既定のテキスト。 最大文字数は 200 文字です。 |
-| assignInstr | `data-assign-instr` | string | 該当なし | 割り当て "命令" フィールドに挿入される既定のテキスト。 最大文字数は 200 文字です。 |
-| assignTitle | `data-assign-title` | string | 該当なし | 割り当て "Title" フィールドに挿入される既定のテキスト。 最大文字数は 50 です。 |
+| msgText | `data-msg-text` | 文字列 | 該当なし | メッセージ作成ボックスのリンクの前に挿入される既定のテキスト。 最大文字数は 200 文字です。 |
+| assignInstr | `data-assign-instr` | 文字列 | 該当なし | 割り当て "命令" フィールドに挿入される既定のテキスト。 最大文字数は 200 文字です。 |
+| assignTitle | `data-assign-title` | 文字列 | 該当なし | 割り当て "Title" フィールドに挿入される既定のテキスト。 最大文字数は 50 です。 |
 
-### <a name="methods"></a>Methods
+### <a name="methods"></a>メソッド
 
 **`shareToMicrosoftTeams.renderButtons(options)`**
 

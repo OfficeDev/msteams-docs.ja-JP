@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
 keywords: 申請ストア配布アプリ パッケージのガイドラインのローカライズの検証
-ms.openlocfilehash: 4da374d9ced3231437aef278c7c90c68fc0c19de
-ms.sourcegitcommit: 1431dfe08d5a19a63dbf1542a2e6c661e4dd7fc1
+ms.openlocfilehash: 579744dc8081eb8ca3e967cce1b4d696350d0a56
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60949069"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356428"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>ストア申請Microsoft Teams準備する
 
@@ -28,7 +28,7 @@ ms.locfileid: "60949069"
 
 アプリMicrosoft Teamsツールを使用すると、パートナー センターに提出する前に問題を特定して修正できます。 このツールは、ストアの検証中に使用したのと同じテスト ケースに対して、アプリの構成を自動的にチェックします。
 
-1. アプリ検証ツール[Microsoft Teamsに移動します](https://dev.teams.microsoft.com/appvalidation.html)。 (注: このツールは App [Studio でも使用](../../../build-and-test/app-studio-overview.md)できます。)
+1. アプリ検証ツール[Microsoft Teams移動します](https://dev.teams.microsoft.com/appvalidation.html)。 (注: このツールは App [Studio でも使用](../../../build-and-test/app-studio-overview.md)できます)。
 1. アップロードテストを実行するには、アプリ パッケージをインストールします。
 1. [予備チェックリスト] **に移動し** 、自動化が困難なテスト ケースを確認します。
 1. [構成またはアプリ全般の問題](~/resources/schema/manifest-schema.md) を修正します。 これらの問題は、自動テストでエラーが発生した場合、またはチェックリストのすべての条件を満たしていない場合に発生します。
@@ -40,7 +40,7 @@ ms.locfileid: "60949069"
 * 資格情報
 * ライセンス キー
 
-手順は、パートナー センターに追加するか、一般に公開されている場所にアップロードSharePoint。
+手順は、パートナー センターで追加するか、一般に公開されている場所にアップロードSharePoint。
 
 ### <a name="feature-list"></a>機能一覧
 
@@ -68,13 +68,13 @@ Microsoft が機能を完全に理解できるよう、アプリの記録を提�
 
 ## <a name="create-your-store-listing-details"></a>ストア登録情報の詳細を作成する
 
-パートナー センター&#8212;[](https://partner.microsoft.com)に送信する情報 (名前、説明、アイコン、画像など)&#8212;は、Teams ストアとアプリの Microsoft AppSource リストになります。
+パートナー センター&#8212;に送信する[](https://partner.microsoft.com)情報 (名前、説明、アイコン、画像など)&#8212;は、Teams ストアとアプリの Microsoft AppSource リストになります。
 
 ストアの登録情報は、アプリの第一印象である可能性があります。 アプリの利点、機能、ブランドを効果的に伝えるリストを使用してインストールを増やします。
 
 ### <a name="specify-a-short-name"></a>短い名前を指定する
 
-アプリの名前 (具体的には短い名前 [*)*](~/resources/schema/manifest-schema.md#name)は、ユーザーがストアでアプリを検出する方法において重要な役割を果たします。
+アプリの名前 (具体的には短い [*名前) は*](~/resources/schema/manifest-schema.md#name)、ユーザーがストアでアプリを検出する方法において重要な役割を果たします。
 
 :::row:::
 
@@ -106,7 +106,7 @@ Microsoft が機能を完全に理解できるよう、アプリの記録を提�
 
 :::row-end:::
 
-短い説明がストアの検証ガイドラインに [準拠している必要があります](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#short-description)。
+短い説明がストアの検証ガイドラインに準拠 [している必要があります](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#short-description)。
 
 #### <a name="long-description"></a>詳しい説明
 
@@ -153,8 +153,8 @@ Microsoft が機能を完全に理解できるよう、アプリの記録を提�
 スクリーンショットに関する次のベスト プラクティスを覚えておいてください。
 
 * スクリーンショットは、1 つの一覧につき 5 枚まで設定できます。
-* サポートされているファイルの種類は、PNG、JPEG、GIF です。
-* 寸法は 1366×768 ピクセルである必要があります。
+* サポートされているファイルの種類には、.png.jpeg、gif 画像形式が含まれます。
+* ディメンションは 1366 x 768 ピクセルである必要があります。
 * 最大サイズは 1,024KB です。
 
 ベスト プラクティスについては、次のリソースを参照してください。
@@ -197,7 +197,7 @@ YouTube または Vimeo ビデオの URL を追加できます。
 
 ### <a name="localize-your-store-listing"></a>ストアの登録情報をローカライズする
 
-パートナー センターは、 [ローカライズされたストアの登録情報をサポートしています](/office/dev/store/prepare-localized-solutions)。 詳細については、「アプリの登録[情報をローカライズするTeams」を参照してください](../../../../concepts/build-and-test/apps-localization.md)。
+パートナー センターは、 [ローカライズされたストアの登録情報をサポートしています](/office/dev/store/prepare-localized-solutions)。 詳細については、「アプリの登録[情報をローカライズするTeams参照してください](../../../../concepts/build-and-test/apps-localization.md)。
 
 ## <a name="complete-publisher-verification"></a>完全なPublisher検証
 
@@ -208,7 +208,7 @@ YouTube または Vimeo ビデオの URL を追加できます。
 [Publisherストアに](/microsoft-365-app-certification/docs/attestation)一覧表示されているアプリTeams構成証明も必要です。 このプロセスには、アプリのセキュリティ、データ処理、コンプライアンスプラクティスの自己評価の完了が含まれます。 このプロセスは、潜在的な顧客がアプリの使用に関する情報に基づいた意思決定を行う際に役立ちます。
 
 > [!NOTE]
-> 新しいアプリを提出する場合は、アプリが Teams ストアに表示されるまで、Publisher 構成証明を正式にTeamsできます。 リストされているアプリを更新する場合は、検証Publisher最新バージョンのアプリを提出する前に、構成証明を完了してください。
+> 新しいアプリを提出する場合は、アプリが Teams ストアに表示されるまで、Publisher 構成証明を正式にTeamsできます。 リストされているアプリを更新する場合は、検証Publisherアプリの最新バージョンを提出する前に、構成証明を完了してください。
 
 ## <a name="next-step"></a>次の手順
 
@@ -217,4 +217,4 @@ YouTube または Vimeo ビデオの URL を追加できます。
 
 ## <a name="see-also"></a>関連項目
 
-[ストアの申請に失敗した場合Microsoft Teamsを解決する](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)
+[ストアの申請が失敗した場合Microsoft Teams解決する](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)

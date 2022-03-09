@@ -1,21 +1,21 @@
 ---
-title: 会議で使用するアプリを有効Teamsする
+title: 会議のアプリを有効にしてTeamsする
 author: surbhigupta
 description: Teams 会議やさまざまな会議シナリオ用のアプリの有効化と構成、アプリ マニフェストの更新、会議内ダイアログ、共有会議ステージ、会議サイドパネルなどの機能の構成
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 17dc9bce0bb6a54aea09d0f41b01840e5d2ca621
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 160518c147ac2bc1d1378a3f1bd31fde9de1723c
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821592"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355801"
 ---
-# <a name="enable-and-configure-your-apps-for-teams-meetings"></a>会議で使用するアプリを有効Teamsする
+# <a name="enable-and-configure-your-apps-for-teams-meetings"></a>会議のアプリを有効にしてTeamsする
 
-すべてのチームは、タスクのコミュニケーションと共同作業の異なる方法を持っています。 これらの異なるタスクを実現するには、会議Teamsをカスタマイズします。 会議でアプリを有効Teams、アプリ マニフェスト内の会議スコープで使用できるアプリを構成します。
+すべてのチームは、タスクのコミュニケーションと共同作業の異なる方法を持っています。 これらの異なるタスクを実現するには、会議Teamsをカスタマイズします。 アプリを会議にTeamsし、アプリ マニフェスト内の会議スコープで使用できるアプリを構成します。
 
-## <a name="enable-your-app-for-teams-meetings"></a>会議でアプリを有効Teamsする
+## <a name="enable-your-app-for-teams-meetings"></a>会議でアプリをTeamsする
 
 会議でアプリを有効にするにはTeamsマニフェストを更新し、コンテキスト プロパティを使用してアプリを表示する場所を決定します。
 
@@ -64,7 +64,7 @@ ms.locfileid: "62821592"
 | **meetingSidePanel** | 統合バー (U バー) を介して開いた会議内パネル。 |
 | **meetingStage** | アプリを会議 `meetingSidePanel` ステージに共有できます。 このアプリは、モバイル クライアントでも Teams Room クライアントでも使用できません。 |
 
-会議でアプリを有効Teams、会議の前、会議中、会議の後にアプリを構成する必要があります。
+会議に対してアプリを有効Teams、会議の前、会議中、会議後にアプリを構成する必要があります。
 
 ## <a name="configure-your-app-for-meeting-scenarios"></a>会議シナリオ用にアプリを構成する
 
@@ -104,7 +104,7 @@ Teams会議は、組織に共同作業のエクスペリエンスを提供しま
 
 ### <a name="during-a-meeting"></a>会議中
 
-会議中に、または `meetingSidePanel` 会議内のダイアログ ボックスを使用して、アプリに固有のエクスペリエンスを構築できます。
+会議中に、会議中または `meetingSidePanel` 会議中の通知を使用して、アプリに固有のエクスペリエンスを構築できます。
 
 #### <a name="meeting-sidepanel"></a>Meeting SidePanel
 
@@ -115,17 +115,15 @@ API を使用して要求`userContext`をルーティングするには、「SDK
 メッセージング拡張機能は、ユーザーが会議中のビューに表示されている場合に期待通り動作します。 ユーザーは、作成メッセージ拡張カードを投稿できます。 AppName in-meeting は、会議中の U バーのアプリ名を示すツールヒントです。
 
 > [!NOTE]
-> バージョン 1.7.0 以上の Teams [SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) を使用します。それより前のバージョンではサイド パネルはサポートされていません。
+> バージョン 1.7.0 以上の Teams SDK を使用します[。](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)前のバージョンではサイド パネルはサポートされていません。
 
-#### <a name="in-meeting-dialog-box"></a>[会議内] ダイアログ ボックス
+#### <a name="in-meeting-notification"></a>会議中の通知
 
-会議中に参加者を引き付け、会議中に情報やフィードバックを収集するために、会議内ダイアログ ボックスが使用されます。 バブル通知 [をトリガーするには、SendNotificationSignal API](API-references.md#send-notification-signal-api) を使用します。 通知要求ペイロードの一部として、表示するコンテンツがホストされている URL を含める。
+会議中の通知は、会議中に参加者を引き付け、会議中に情報やフィードバックを収集するために使用されます。 会議内 [通知ペイロードを使用して](API-references.md#send-an-in-meeting-notification) 会議内通知をトリガーします。 通知要求ペイロードの一部として、表示するコンテンツがホストされている URL を含める。
 
-会議中のダイアログでは、タスク モジュールを使用することはできません。 タスク モジュールは、会議チャットでは呼び出されません。 外部リソース URL を使用して、会議のコンテンツ バブルを表示します。 このメソッドを使用して `submitTask` 、会議チャットでデータを送信できます。
+会議中の通知では、タスク モジュールを使用しなける必要があります。 タスク モジュールは、会議チャットでは呼び出されません。 会議中の通知を表示するには、外部リソースの URL を使用します。 このメソッドを使用して `submitTask` 、会議チャットでデータを送信できます。
 
-> [!NOTE]
-> * ユーザーが Web ビューでアクションを実行した後に自動的に終了するには、 [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) 関数を呼び出す必要があります。 これは、アプリの申請に必要な要件です。 詳細については、「SDK タスク [モジュールTeams参照してください](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。 
-> * アプリで匿名ユーザーをサポート`from.id``from`する場合、最初の呼び出し要求ペイロードは、要求メタデータではなく、オブジェクト内の要求メタデータに依存する`from.aadObjectId`必要があります。 `from.id`はユーザー ID で`from.aadObjectId`、ユーザー Microsoft Azure Active Directory (Azure AD) ID です。 詳細については、「タブでタスク [モジュールを使用する」を参照し](../task-modules-and-cards/task-modules/task-modules-tabs.md)[、タスク モジュールを作成して送信します](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="例は、会議内ダイアログを使用する方法を示しています。" border="true":::
 
 #### <a name="shared-meeting-stage"></a>共有会議ステージ
 
@@ -140,7 +138,7 @@ API を使用して要求`userContext`をルーティングするには、「SDK
 
 <img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
 
-アプリ全体をステージ間で共有するには、アプリ マニフェスト`meetingStage``meetingSidePanel`でフレーム コンテキストとして構成する必要があります。 次に例を示します。
+アプリ全体をステージ間で共有するには、アプリ マニフェスト`meetingStage``meetingSidePanel`でフレーム コンテキストとして構成する必要があります。 例:
 
 ```json
 "configurableTabs": [
@@ -168,7 +166,7 @@ API を使用して要求`userContext`をルーティングするには、「SDK
 
 アプリの特定の部分をステージ間で共有するには、クライアント SDK ライブラリで関連する API をTeamsする必要があります。 詳細については、「API リファレンス [」を参照してください](API-references.md)。
 
-アプリで匿名ユーザーをサポート`from.id``from`する場合、最初の呼び出し要求ペイロードは、要求メタデータではなく、オブジェクト内の要求メタデータに依存する`from.aadObjectId`必要があります。 `from.id`はユーザー ID で`from.aadObjectId`、ユーザー Azure AD ID です。 詳細については、「タブでタスク [モジュールを使用する」を参照し](../task-modules-and-cards/task-modules/task-modules-tabs.md)[、タスク モジュールを作成して送信します](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
+アプリで匿名ユーザーをサポート`from.id``from`する場合、最初の呼び出し要求ペイロードは、要求メタデータではなく、オブジェクト内の要求メタデータに依存する`from.aadObjectId`必要があります。 `from.id`はユーザー ID であり`from.aadObjectId`、ユーザー Azure AD ID です。 詳細については、「タブでタスク [モジュールを使用する」を参照し](../task-modules-and-cards/task-modules/task-modules-tabs.md)[、タスク モジュールを作成して送信します](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
 
 ### <a name="after-a-meeting"></a>会議後
 
@@ -178,18 +176,18 @@ API を使用して要求`userContext`をルーティングするには、「SDK
 
 |サンプルの名前 | 説明 | C# | Node.js |
 |----------------|-----------------|--------------|----------------|
-| 会議アプリ | 会議トークン ジェネレーター アプリを使用してトークンを要求する方法を示します。 トークンが順番に生成され、各参加者が会議に参加する公平な機会を得る。 このトークンは、スクラム会議や Q セッションなど、&役立ちます。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| 会議アプリ | 会議トークン ジェネレーター アプリを使用してトークンを要求する方法を示します。 トークンが順番に生成され、各参加者が会議に参加する公平な機会を得る。 トークンは、スクラム会議や Q セッションのような状況&役立ちます。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 |会議ステージのサンプル | コラボレーション用の会議ステージにタブを表示するサンプル アプリ | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 |会議のサイド パネル | 会議サイド パネルに議題を追加する方法を示すサンプル アプリ | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |-|
 
 ## <a name="step-by-step-guides"></a>ステップ バイ ステップのガイド
 
-* 手順に[従って、](../sbs-meeting-token-generator.yml)会議で会議トークンを生成Teamsします。
-* ステップ バイ [ステップ ガイドに従って](../sbs-meetings-sidepanel.yml)、会議のサイドパネルを新しい会議Teamsします。
+* ステップ バイ [ステップ ガイドに従って](../sbs-meeting-token-generator.yml)、会議で会議トークンを生成Teamsします。
+* ステップ バイ [ステップ ガイドに従って](../sbs-meetings-sidepanel.yml)、会議のサイドパネルを生成Teamsします。
 * ステップ バイ [ステップ ガイドに従って](../sbs-meetings-stage-view.yml)、会議の会議で会議ステージ ビュー Teamsします。
 * ステップ バイ [ステップ ガイドに従って](../sbs-meeting-content-bubble.yml)、会議で会議コンテンツバブルを生成Teamsします。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [会議アプリ API リファレンス](API-references.md)
@@ -199,4 +197,4 @@ API を使用して要求`userContext`をルーティングするには、「SDK
 * [会議中のダイアログの設計ガイドライン](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teamsの認証フロー](../tabs/how-to/authentication/auth-flow-tab.md)
 * [共有会議ステージエクスペリエンスの設計ガイドライン](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [Microsoft サービス経由で会議にアプリを追加Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
+* [Microsoft Web サイトを介して会議にアプリを追加Graph](/graph/api/chat-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)

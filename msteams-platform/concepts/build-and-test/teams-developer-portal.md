@@ -5,18 +5,21 @@ keywords: 開発者ポータル チームの開始
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 246ea41b30fe920562989b32c3643813238fb083
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 02f344c82f6350fe324b423b198e5cbcb048a2b4
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212539"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355714"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Microsoft Teams の開発者ポータルを使用してアプリを管理する
 
 開発者<a href="https://dev.teams.microsoft.com" target="_blank">ポータルは、Teams</a>アプリを構成、配布、および管理するための主要なMicrosoft Teamsです。 開発者ポータルを使用すると、アプリの同僚と共同作業を行い、ランタイム環境をセットアップできます。
 
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="開発者ポータルのホーム ページを示すスクリーンショットTeams。":::
+
+> [!NOTE] 
+> 現在、開発者ポータルは、Government Community Cloud (GCC)、GCC-High、または国防総省 (DOD) テナントでは使用できません。
 
 ## <a name="register-an-app"></a>アプリを登録します
 
@@ -26,7 +29,7 @@ ms.locfileid: "62212539"
 * 既存のアプリ パッケージをインポートする
 
 > [!NOTE]
-> アプリを作成する場合は、Microsoft Teams Toolkit[を](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)Visual Studio Code、開発者ポータルでそのアプリを管理できます。
+> アプリを作成する場合は、Microsoft Teams Toolkit[を](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)Visual Studio Code、開発者ポータルでアプリを管理できます。
 
 ## <a name="set-up-an-environment"></a>環境のセットアップ
 
@@ -35,8 +38,8 @@ ms.locfileid: "62212539"
 **環境をセットアップするには**
 
 1. 開発者ポータルで、作業しているアプリを選択します。
-2. [環境] ページ **に移動し** 、[+ 環境 **の追加] を選択します**。
-3. [+ **変数の追加] を** 選択して、環境の構成変数を作成します。
+2. [環境] **ページに移動し** 、[+ 環境 **の追加] を選択します**。
+3. [ **+ 変数の追加] を** 選択して、環境の構成変数を作成します。
 
 **変数を使用するには**
 
@@ -51,7 +54,7 @@ ms.locfileid: "62212539"
 
 ## <a name="configure-your-apps-capabilities-and-other-important-metadata"></a>アプリの機能と他の重要なメタデータを構成する
 
-アプリTeams Web アプリです。 すべての Web アプリと同様に、ソース コードは通常、IDE またはコード エディターで開発され、クラウドのどこか (Azure など) でホストされます。
+アプリTeamsは Web アプリです。 すべての Web アプリと同様に、ソース コードは通常、IDE またはコード エディターで開発され、クラウドのどこか (Azure など) でホストされます。
 
 アプリをインストールしてレンダリングするには、Teams認識する一連の構成Teams必要があります。 これは、アプリ のコンテンツを表示するために必要なすべてのメタデータを含む JSON ファイルであるアプリ マニフェストTeams作成することで行われ始めでした。 開発者ポータルでは、このプロセスを抽象化し、より成功するための新機能とツールが含まれています。
 
@@ -59,18 +62,18 @@ ms.locfileid: "62212539"
 
 開発者ポータルには、アプリをテストおよびデバッグするためのオプションがあります。
 
-* [概要 **] ページ** では、アプリの構成がストア テスト ケースに対して検証Teams確認できます。
-* [**プレビューイン Teams]** ボタンを使用すると、デバッグ用にアプリを Teamsすぐに起動できます。
+* [概要 **] ページ** では、アプリの構成がストアテスト ケースに対して検証Teams確認できます。
+* [**プレビュー イン Teams**] ボタンを使用すると、デバッグ用にアプリを Teamsすぐに起動できます。
 
 ## <a name="distribute-your-app"></a>アプリを配布する
 
-開発者ポータルから、[配布]ボタンを使用して、アプリ パッケージをダウンロードしたり、組織に発行したり、組織に発行したり、Teamsします。
+開発者ポータルで 、[配布] ボタンを使用して、アプリ パッケージをダウンロードしたり、組織に発行したり、組織に発行したり、Teamsします。
 
 詳細については、「アプリの[配布」をTeamsしてください](~/concepts/deploy-and-publish/apps-publish-overview.md)。
 
 ## <a name="analyze-your-apps-usage"></a>アプリの使用状況を分析する
 
-[概要 **] ページ** で、アプリのアクティブなユーザーの総数を確認できます。 これらの指標は、開発者ポータルを通じて Teamsストアまたは組織のアプリ カタログに発行され、アプリ ID にスコープを設定したアプリで使用できます。
+[概要 **] ページ** で、アプリのアクティブなユーザーの総数を確認できます。 これらの指標は、開発者ポータルを通じて Teams ストアまたは組織のアプリ カタログに発行され、アプリ ID にスコープを設定したアプリで使用できます。
 
 | 測定基準 | 定義 |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -83,7 +86,7 @@ ms.locfileid: "62212539"
 
 また、開発者ポータルには、アプリの主要な機能を構築するためのTeamsがあります。 これらのツールの一部は次のとおりです。
 
-* **シーン スタジオ**: 会議 [のカスタム一](~/apps-in-teams-meetings/teams-together-mode.md)緒にモード のTeamsします。
+* **シーン スタジオ**: 会議 [に使用するカスタムの](~/apps-in-teams-meetings/teams-together-mode.md)一緒にモードTeamsします。
 * **アダプティブ カード エディター**: アプリに含めるアダプティブ カードを作成およびプレビューします。
 * **Microsoft ID プラットフォーム管理**: アプリをアプリに登録Azure Active Directory、ユーザーがサインインして API へのアクセスを提供するのに役立ちます。
 

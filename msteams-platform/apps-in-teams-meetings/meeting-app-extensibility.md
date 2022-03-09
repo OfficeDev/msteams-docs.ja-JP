@@ -4,12 +4,12 @@ author: surbhigupta
 description: 会議のライフサイクル、デスクトップおよびモバイル環境での会議ライフサイクル全体でのユーザーの会議エクスペリエンスの構築、参加者の役割、ユーザーの種類について説明します。 さらに、会議のライフサイクルでのボットとメッセージング拡張機能の統合について説明します。
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: ae4fbbd7f970752d936cd19944a6083da41a163e
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 84fab8e118ff83b36f2d0ac6f911d85e3d36c1c8
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821606"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355588"
 ---
 # <a name="unified-meetings-apps"></a>統合された会議アプリ
 
@@ -61,7 +61,7 @@ Teams会議アプリは、次の概念に基づいて行います。
 
 モバイル上の既存の会議にタブを追加すると、会議の詳細の [その他] セクションにある会議前のエクスペリエンスで同じアプリを表示できます。
 
-<img src="../assets/images/apps-in-meetings/mobilepremeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
+<img src="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
 
 ---
 
@@ -69,7 +69,7 @@ Teams会議アプリは、次の概念に基づいて行います。
 
 会議中のアプリ エクスペリエンスを使用すると、アプリと会議内ダイアログ ボックスを使用して、会議中に参加者とのやり取りを行うことができます。 会議アプリは、会議ウィンドウのツール バーに会議中タブとしてホストされます。会議中のダイアログ ボックスを使用して、会議の参加者に実用的なコンテンツを紹介できます。 詳細については、「会議のアプリを[作成するTeams参照してください](create-apps-for-teams-meetings.md)。
 
-モバイルの場合、会議アプリは、会議内>省略 &#x25CF;&#x25CF;&#x25CF; アプリから利用できます。 [アプリ **] を** 選択して、会議で利用可能なすべてのアプリを表示します。
+モバイルの場合、会議アプリは、会議内の>省略 &#x25CF;&#x25CF;&#x25CF; アプリから利用できます。 [アプリ **] を** 選択して、会議で利用可能なすべてのアプリを表示します。
 
 **会議中にタブを使用するには**
 
@@ -97,7 +97,7 @@ Teams会議アプリは、次の概念に基づいて行います。
 ---
 
 > [!NOTE]
-> * アプリは、クライアント SDK `meetingId`Teamsを利用して、 に`userMri`アクセスし、エクスペリエンス`frameContext`を適切にレンダリングできます。
+> * アプリは、クライアント SDK `meetingId`Teamsを利用して、 に`userMri``frameContext`アクセスし、エクスペリエンスを適切にレンダリングできます。
 > * 会議中のダイアログ ボックスが正常に表示されると、結果が正常にダウンロードされたことを通知します。
 > * アプリ マニフェストは、アプリを表示する場所を指定します。 これは、マニフェストでコンテキスト フィールドを指定することで実行できます。 また、指定された設計ガイドラインに従って、共有会議ステージのエクスペリエンス [の一部です](~\apps-in-teams-meetings\design\designing-apps-in-meetings.md)。
 
@@ -105,7 +105,7 @@ Teams会議アプリは、次の概念に基づいて行います。
 
 # <a name="desktop"></a>[デスクトップ](#tab/desktop)
 
-![会議中のサイド パネル](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+![会議中のサイド パネル](../assets/images/in-meeting-dialog.png)
 
 # <a name="mobile"></a>[モバイル](#tab/mobile)
 
@@ -142,11 +142,11 @@ Teams会議アプリは、次の概念に基づいて行います。
 
 ### <a name="integrate-bots-into-the-meeting-lifecycle"></a>ボットを会議のライフサイクルに統合する
 
-グループチャット スコープで有効になっているボットは、会議で機能し始める。 ボットを実装するには、ボットの[ビルドから始め](../build-your-first-app/build-bot.md)、会議のアプリを作成Teams[します](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)。
+グループチャット スコープで有効になっているボットは、会議で機能し始める。 ボットを実装するには、ボットの[作成から始め](../build-your-first-app/build-bot.md)、次に会議のアプリを作成[Teamsします](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)。
 
 ### <a name="integrate-messaging-extensions-into-the-meeting-lifecycle"></a>メッセージング拡張機能を会議のライフサイクルに統合する
 
-メッセージング拡張機能を実装するには、まずメッセージング[](../messaging-extensions/how-to/create-messaging-extension.md)拡張機能を作成してから、会議のアプリを作成[Teamsします](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)。
+メッセージング拡張機能を実装するには、まず[メッセージング拡張機能を](../messaging-extensions/how-to/create-messaging-extension.md)作成してから、会議のアプリを作成[Teamsします](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)。
 
 統合Teamsアプリを使用すると、会議の参加者の役割に基づいてアプリを設計できます。
 
@@ -176,17 +176,17 @@ Teams会議アプリは、次の概念に基づいて行います。
 
 次の一覧では、アクセシビリティとパフォーマンスに加え、さまざまなユーザーの種類について説明します。
 
-* **テナント内**: テナント内ユーザーは組織に属し、テナントの Microsoft Azure Active Directory (Azure AD) に資格情報を持ちます。 フルタイム、オンサイト、またはリモートの従業員です。 テナント内のユーザーには、開催者、発表者、または出席者を指定できます。
-* **ゲスト**: ゲストは、組織のテナント内の他のTeamsにアクセスするために招待された別の組織の参加者です。 ゲストは組織のグループに追加され、Azure ADのチーム Teamsと同じ機能を持ちます。 チーム チャット、会議、ファイルにアクセスできます。 ゲストには、開催者、発表者、出席者を指定できます。 詳細については、「ゲスト アクセス[」を参照Teams](/microsoftteams/guest-access)。
-* **フェデレーションまたは外部**: フェデレーション ユーザーは、Teamsに招待された別の組織の外部ユーザーです。 フェデレーション ユーザーは、フェデレーション パートナーと有効な資格情報を持ち、Teams。 組織からチームや他の共有リソースにアクセスできない。 ゲスト アクセスは、外部ユーザーがチームとチャネルにアクセスできる優れたオプションです。 詳細については、「外部アクセスを[管理する」を参照Teams](/microsoftteams/manage-external-access)。
+* **テナント内:** テナント内ユーザーは組織に属し、テナントの Microsoft Azure Active Directory (Azure AD) に資格情報を持ちます。 フルタイム、オンサイト、またはリモートの従業員です。 テナント内のユーザーには、開催者、発表者、または出席者を指定できます。
+* **ゲスト**: ゲストは、組織のテナント内の他のTeamsにアクセスするために招待された別の組織の参加者です。 ゲストは組織の組織のメンバーに追加Azure AD、ネイティブ チーム Teamsと同じ機能を持ちます。 チーム チャット、会議、ファイルにアクセスできます。 ゲストには、開催者、発表者、出席者を指定できます。 詳細については、「ゲスト アクセス[」を参照Teams](/microsoftteams/guest-access)。
+* **フェデレーションまたは外部**: フェデレーション ユーザーは、会議に参加Teams別の組織の外部ユーザーです。 フェデレーション ユーザーは、フェデレーション パートナーと有効な資格情報を持ち、フェデレーション パートナーによって承認Teams。 組織からチームや他の共有リソースにアクセスできない。 ゲスト アクセスは、外部ユーザーがチームとチャネルにアクセスできる優れたオプションです。 詳細については、「外部アクセスを[管理する」を参照Teams](/microsoftteams/manage-external-access)。
 
     > [!NOTE]
     > ユーザー Teams、他の組織との会議やチャットをホストするときにアプリを追加できます。 ユーザーは、ユーザーが他の組織がホストする会議やチャットに参加するときに、外部ユーザーが共有するアプリを使用できます。 ホスティング ユーザーの組織のデータ ポリシーと、そのユーザーの組織が共有するサード パーティ製アプリのデータ共有プラクティスが有効になります。
 
     > [!IMPORTANT]
-    > 現在、サード パーティ製アプリは Government Community Cloud (GCC) で利用できますが、GCC-High国防総省 (DOD) では使用できません。 サード パーティ製アプリは、既定では無効になっています。GCC。 アプリのサードパーティ 製アプリを有効にするGCC、[アプリのアクセス](/microsoftteams/teams-app-permission-policies)許可ポリシーの管理とアプリの[管理に関するページをご覧ください](/microsoftteams/manage-apps)。
+    > 現在、サード パーティ製アプリは Government Community Cloud (GCC) で利用できますが、GCC-Highおよび国防総省 (DOD) では使用できません。 サード パーティ製アプリは、既定では無効になっています。GCC。 アプリのサードパーティ 製アプリを有効にするGCC[アプリのアクセス](/microsoftteams/teams-app-permission-policies)許可ポリシーの管理とアプリ[の管理に関するページをご覧ください](/microsoftteams/manage-apps)。
 
-* **匿名**: 匿名ユーザーは、Azure AD ID を持ち、テナントとフェデレーションされません。 匿名の参加者は外部ユーザーと同じですが、その ID は会議には表示されません。 匿名ユーザーは会議ウィンドウでアプリにアクセスできない。 匿名ユーザーは開催者になじめ、発表者または出席者になじむ場合があります。
+* **匿名**: 匿名ユーザーは、ユーザー id をAzure ADテナントとフェデレーションされません。 匿名の参加者は外部ユーザーと同じですが、その ID は会議には表示されません。 匿名ユーザーは会議ウィンドウでアプリにアクセスできない。 匿名ユーザーは開催者になじめ、発表者または出席者になじむ場合があります。
 
     > [!NOTE]
     > 匿名ユーザーは、グローバル既定のユーザー レベルのアプリアクセス許可ポリシーを継承します。 詳細については、「アプリの管理 [」を参照してください](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access)。
@@ -201,7 +201,7 @@ Teams会議アプリは、次の概念に基づいて行います。
 | ゲスト、テナント の一部Azure AD | 対話は許可されます。 作成、更新、および削除は許可されません。 | 使用不可 | 使用不可 | 会議チャットでの操作は許可されます。 | アダプティブ カードからの会議チャットでの操作は許可されます。 | 使用可能 | 会議のステージでアプリを開始、表示、操作できます | 使用可能 |
 | フェデレーション ユーザーの詳細については、「標準以外の [ユーザー」を参照してください](/microsoftteams/non-standard-users)。 | 対話は許可されます。 作成、更新、および削除は許可されません。 | 対話は許可されます。 取得、更新、削除は許可されません。 | 使用不可 | 会議チャットでの操作は許可されます。 | アダプティブ カードからの会議チャットでの操作は許可されます。 | 使用不可 | 会議のステージでアプリを開始、表示、操作できます | 使用不可 |
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [Teams 会議アプリへの前提条件と API リファレンス](create-apps-for-teams-meetings.md)

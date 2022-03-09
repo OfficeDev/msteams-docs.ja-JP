@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: ボット コンテキスト名簿ユーザー プロファイル チャネル リスト
-ms.openlocfilehash: c356ea8e498f68ba1aec5c438840a366818070d0
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 0b7bba5e642d5cedc7a4c07c441a52fc9298d0f2
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821620"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355553"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>ボットTeams特定のコンテキストを取得する
 
@@ -59,7 +59,7 @@ export class MyBot extends TeamsActivityHandler {
             var members = [];
 
             do {
-                var pagedMembers = await TeamsInfo.getPagedMembers(context, 100, continuationToken);
+                var pagedMembers = await TeamsInfo.getPagedMembers(turnContext, 100, continuationToken);
                 continuationToken = pagedMembers.continuationToken;
                 members.push(...pagedMembers.members);
             }
@@ -124,11 +124,11 @@ Response body
 
 * * *
 
-名簿またはユーザー プロファイルを取得した後、1 つのメンバーの詳細を取得できます。 現在、チャットまたはチームの 1 `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` 人または複数のメンバーの情報を取得するには、Microsoft Teamsまたは TypeScript API の C#ボット API を使用します。
+名簿またはユーザー プロファイルを取得した後、1 つのメンバーの詳細を取得できます。 現在、チャットまたはチームの 1 `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` 人または複数のメンバーの情報を取得するには、Microsoft Teams または TypeScript API の C# ボット API を使用します。
 
 ## <a name="get-single-member-details"></a>単一のメンバーの詳細を取得する
 
-ユーザー ID、UPN、またはオブジェクト ID を使用して、特定のTeamsを取得Azure ADできます。
+ユーザー ID、UPN、またはオブジェクト ID を使用して、特定のユーザー Teamsを取得Azure ADできます。
 
 次のサンプル コードは、単一のメンバーの詳細を取得するために使用されます。
 
@@ -152,10 +152,11 @@ export class MyBot extends TeamsActivityHandler {
         super();
 
         // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
-        const member = await TeamsInfo.getMember(context, encodeURI('someone@somecompany.com'));
+        this.onMessage(async (turnContext, next) => {
+            const member = await TeamsInfo.getMember(turnContext, encodeURI('someone@somecompany.com'));
 
-        // By calling next() you ensure that the next BotHandler is run.
-        await next();
+            // By calling next() you ensure that the next BotHandler is run.
+            await next();
         });
     }
 }
@@ -208,11 +209,11 @@ Response body
 
 * * *
 
-1 人のメンバーの詳細を取得した後、チームの詳細を取得できます。 現時点では、チームの情報を取得するには、Microsoft Teamsまたは `TeamsInfo.GetMemberDetailsAsync` TypeScript のC#ボット `TeamsInfo.getTeamDetails` API を使用します。
+1 人のメンバーの詳細を取得した後、チームの詳細を取得できます。 現時点では、チームの情報を取得するには、Microsoft Teamsまたは `TeamsInfo.GetMemberDetailsAsync` `TeamsInfo.getTeamDetails` TypeScript C#ボット API を使用します。
 
 ## <a name="get-teams-details"></a>チームの詳細を取得する
 
-チームにインストールすると、ボットはグループ ID を含むそのチームに関するメタデータをAzure ADできます。
+チームにインストールすると、ボットはグループ ID を含むそのチームに関するメタデータAzure ADできます。
 
 チームの詳細を取得するには、次のサンプル コードを使用します。
 
@@ -369,7 +370,7 @@ Response body
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [ボットを介してファイルを送受信する](~/bots/how-to/bots-filesv4.md)

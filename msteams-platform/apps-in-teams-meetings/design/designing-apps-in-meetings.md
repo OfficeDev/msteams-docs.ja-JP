@@ -6,16 +6,16 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: UI キット テンプレート会議内応答動作共有会議ステージ
-ms.openlocfilehash: e62146a4fb32f37145a818855749d68e64bee384
-ms.sourcegitcommit: 60e4bbb013f0bb17a87a2e558abfcc311c73af75
+ms.openlocfilehash: bb83da351a6b9d2b1219ef1e265e5e6269b34f26
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62523796"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355824"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>会議の拡張機能Microsoft Teams設計する
 
-アプリを作成して、会議の生産性を高めることができます。 たとえば、会議中にアンケートを完了したり、会議のフローを中断しない簡単なリマインダーを送信したりします。
+会議の生産性を高めるようアプリを作成できます。 たとえば、会議中にアンケートを完了したり、会議のフローを中断しない簡単なリマインダーを送信したりします。
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
@@ -66,7 +66,7 @@ ms.locfileid: "62523796"
 
 ### <a name="design-with-ui-templates"></a>UI テンプレートを使用した設計
 
-会議タブを設計するにはTeams UI テンプレートのいずれかを使用します。
+会議タブの設計に役立Teams次のいずれかの UI テンプレートを使用します。
 
 * [リスト](../../concepts/design/design-teams-app-ui-templates.md#list): リストは、関連するアイテムをスキャン可能な形式で表示し、ユーザーがリスト全体または個々のアイテムに対してアクションを実行できるようにします。
 * [タスク ボード](../../concepts/design/design-teams-app-ui-templates.md#task-board): かんばんボードまたはスイム レーンと呼ばれることもあるタスク ボードは、作業項目またはチケットのステータスを追跡するためによく使用されるカードのコレクションです。
@@ -97,7 +97,7 @@ ms.locfileid: "62523796"
 
 ### <a name="anatomy-in-meeting-tab"></a>解剖学: [会議中] タブ
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-anatomy.png" alt-text="例は、会議内タブの構造構造を示しています。" border="false":::
+:::image type="content" source="../../assets/in-meeting-tab-anatomy.png" alt-text="例は、会議内タブの構造構造を示しています。" border="false":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -153,7 +153,7 @@ ms.locfileid: "62523796"
 
 ### <a name="anatomy-in-meeting-dialog"></a>解剖学: 会議中のダイアログ
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-anatomy.png" alt-text="例は、会議内ダイアログの構造構造を示しています。" border="false":::
+:::image type="content" source="../../assets/in-meeting-dialog-anatomy.png" alt-text="例は、会議内ダイアログの構造構造を示しています。" border="false":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -376,7 +376,7 @@ ms.locfileid: "62523796"
    :::column-end:::
 :::row-end:::
 
-### <a name="controls"></a>コントロール
+### <a name="controls"></a>Controls
 
 :::row:::
    :::column span="":::
@@ -456,7 +456,7 @@ ms.locfileid: "62523796"
 
 #### <a name="do-focus-on-dark-theme"></a>Do: 暗いテーマに焦点を当てる
 
-Teams会議は暗いテーマに最適化され、視覚的および認知的なノイズを減らし、ユーザーがディスカッションと共有コンテンツに集中できます。 特定の種類のアプリ (ホワイトボードやドキュメント編集など) では、暗いキャンバスは必要ない場合があります。
+Teams会議は暗いテーマに最適化され、視覚的および認知的なノイズを減らすのに役立ち、ユーザーはディスカッションと共有コンテンツに集中できます。 特定の種類のアプリ (ホワイトボードやドキュメント編集など) では、暗いキャンバスは必要ない場合があります。
 
    :::column-end:::
    :::column span="":::
@@ -467,7 +467,7 @@ Teams会議は暗いテーマに最適化され、視覚的および認知的な
 
 #### <a name="dont-use-unfamiliar-colors"></a>[しない]: 見慣れない色を使用する
 
-会議環境と衝突する色が気を散らし、ユーザーのネイティブな表示が少Teams。 通話テーマのニュートラルTeams[含む](https://developer.microsoft.com/fluentui#/styles/web/colors/products)、さまざまなカラー ランプについて学習します。
+会議環境と衝突する色は気が散り、ユーザーのネイティブな表示が少Teams。 通話テーマのニュートラルTeams[含む、](https://developer.microsoft.com/fluentui#/styles/web/colors/products)カラー ランプの詳細について学習します。
 
    :::column-end:::
 :::row-end:::
@@ -527,7 +527,7 @@ Teams会議は暗いテーマに最適化され、視覚的および認知的な
    :::column-end:::
 :::row-end:::
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [会議用にアプリを構成する](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)

@@ -4,12 +4,12 @@ description: タブにユーザー コンテクストを付与する方法を説
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: チーム タブ ユーザー コンテキスト
-ms.openlocfilehash: a8e8fe6d638f8887a30f65dbf812046738d12dfb
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 4c18ba7f7e7dbb90f6a357a567b2b6145afcd827
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821732"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356267"
 ---
 # <a name="get-context-for-your-tab"></a>タブのコンテキストを取得する
 
@@ -26,7 +26,7 @@ ms.locfileid: "62821732"
 * アプリ内のリソースを作成または指定したユーザーまたはチームに関連付ける。
 * 認証フローは、Microsoft Azure Active Directory (Azure AD) または他の ID プロバイダーから開始し、ユーザーがユーザー名を再入力する必要はありません。 
 
-詳細については、「ユーザーを認証する」を参照[Microsoft Teams](~/concepts/authentication/authentication.md)。
+詳細については、「ユーザーを認証[する」](~/concepts/authentication/authentication.md)を参照Microsoft Teams。
 
 > [!IMPORTANT]
 > このユーザー情報は、スムーズなユーザー エクスペリエンスを提供するのに役立ちますが、ID の証明として使用することはできません。  たとえば、攻撃者はブラウザーにページを読み込み、有害な情報や要求を表示する可能性があります。
@@ -36,7 +36,7 @@ ms.locfileid: "62821732"
 コンテキスト情報には 2 つの方法でアクセスできます。
 
 * URL プレースホルダーの値を挿入します。
-* JavaScript クライアント [SDK Microsoft Teams使用します](/javascript/api/overview/msteams-client)。
+* [JavaScript クライアント SDK Microsoft Teams使用します](/javascript/api/overview/msteams-client)。
 
 ### <a name="get-context-by-inserting-url-placeholder-values"></a>URL プレースホルダー値を挿入してコンテキストを取得する
 
@@ -59,8 +59,8 @@ ms.locfileid: "62821732"
 
 * ユーザー **名は user@example.com**。
 * 会社のテナント ID **は e2653c-などです**。
-* id **00209384 などOffice 365グループのメンバーです**。
-* ユーザーがテーマを暗Teams設定 **しました**。
+* id **00209384-などOffice 365グループのメンバーです**。
+* ユーザーが自分のテーマをTeamsに設定 **しました**。
 
 タブを構成すると、次Teams URL が呼び出されます。
 
@@ -115,9 +115,6 @@ ms.locfileid: "62821732"
 
 ## <a name="retrieve-context-in-private-channels"></a>プライベート チャネルでのコンテキストの取得
 
-> [!Note]
-> プライベート チャネルは、現在、開発者のプライベートなプレビューです。
-
 コンテンツ ページがプライベート `getContext` チャネルに読み込まれると、通話から受け取ったデータは、チャネルのプライバシーを保護するために難読化されます。 
 
 コンテンツ ページがプライベート チャネルにある場合、次のフィールドが変更されます。
@@ -127,12 +124,32 @@ ms.locfileid: "62821732"
 * `teamName`: プライベート チャネルの名前に設定する
 * `teamSiteUrl`: プライベート チャネル用の個別の一意のSharePointサイトの URL に設定します。
 * `teamSitePath`: プライベート チャネル用の個別の一意のSharePointパスに設定します。
-* `teamSiteDomain`: プライベート チャネル用の個別の一意のSharePointドメインに設定します。
+* `teamSiteDomain`: プライベート チャネルの個別の一意のSharePointドメインに設定します。
 
-ページでこれらの値を `channelType` 使用する場合は、フィールドをチェックして、ページがプライベート チャネルに読み込まれているかどうかを判断し、適切に対応する必要があります。
+ページでこれらの値を`channelType``Private`使用する場合、フィールドの値は、ページがプライベート チャネルに読み込まれ、適切に応答できるかどうかを判断する必要があります。
 
-> [!Note]
-> `teamSiteUrl` 標準チャネルでも動作します。
+## <a name="retrieve-context-in-microsoft-teams-connect-shared-channels"></a>共有チャネルのコンテキストMicrosoft Teams Connect取得する
+
+> [!NOTE]
+> 現時点では、Microsoft Teams Connect共有チャネルは[開発者向けプレビューでのみ行](../../resources/dev-preview/developer-preview-intro.md)っています。
+
+コンテンツ ページが Microsoft Teams Connect共有チャネルに`getContext`読み込まれると、通話から受信したデータは、共有チャネル内のユーザーの一意の名簿によって変更されます。 
+
+コンテンツ ページが共有チャネルにある場合、次のフィールドが変更されます。
+
+* `groupId`: 共有チャネルに対して未定義。
+* `teamId`: チームに設定 `threadId` すると、チャネルは現在のユーザーに対して共有されます。 ユーザーが複数のチームにアクセスできる場合、共有 `teamId` チャネルをホスト (作成) するチームに設定されます。
+* `teamName`: チームの名前に設定すると、チャネルは現在のユーザーに対して共有されます。 ユーザーが複数のチームにアクセスできる場合、共有 `teamName` チャネルをホスト (作成) するチームに設定されます。
+* `teamSiteUrl`: 共有チャネルの個別の一意のSharePointサイトの URL に設定します。
+* `teamSitePath`: 共有チャネルの個別の一意のSharePointパスに設定します。
+* `teamSiteDomain`: 共有チャネルの個別の一意のSharePointドメインに設定します。
+
+これらのフィールドの変更に加えて、共有チャネルで使用できる 2 つの新しいフィールドがあります。
+
+* `hostTeamGroupId`: ホスティング チーム、 `groupId` または共有チャネルを作成したチームに関連付けられているチームに設定します。 このプロパティを使用すると、Microsoft Graph呼び出しで共有チャネルのメンバーシップを取得できます。
+* `hostTeamTenantId`: ホスティング チーム、 `tenantId` または共有チャネルを作成したチームに関連付けられているチームに設定します。 プロパティは、フィールド内にある現在のユーザーのテナント ID `tid` `getContext` と相互参照して、ユーザーがホスティング チームのテナントの内部または外部かどうかを判断できます。
+
+ページでこれらの値を`channelType``Shared`使用する場合、フィールドの値は、ページが共有チャネルに読み込まれ、適切に応答できるかどうかを判断する必要があります。
 
 ## <a name="handle-theme-change"></a>テーマの変更を処理する
 
@@ -140,7 +157,7 @@ ms.locfileid: "62821732"
 
 関数`theme`の引数は、、 、または `default``dark`の値を持つ文字列です`contrast`。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [アダプティブ カードを使用してタブをビルドする](~/tabs/how-to/build-adaptive-card-tabs.md)

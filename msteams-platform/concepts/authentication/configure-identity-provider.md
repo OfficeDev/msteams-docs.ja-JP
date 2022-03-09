@@ -4,12 +4,12 @@ description: ID プロバイダーを構成する方法について説明しま�
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams 認証Azure AD Oauth ID プロバイダー
-ms.openlocfilehash: b35f28f2cb306a6dfc3ae3151616925da1525069
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 36e81839b1837fca8a124b60701c3d5f95608851
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821354"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356414"
 ---
 # <a name="configure-identity-providers"></a>ID プロバイダーを構成する
 
@@ -21,7 +21,7 @@ OAuth 2.0 をサポートする ID プロバイダーは、不明なアプリケ
 
 2. アプリを選択してプロパティを表示するか、[新しい登録] ボタンを選択します。 アプリの **[リダイレクト URI** ] セクションを探します。
 
-3. ドロップダウン **メニューから [Web** ] を選択します。 認証エンドポイントへの URL を更新します。 TypeScript/Node.jsおよび C#サンプル アプリGitHub、リダイレクト URL は次のようになります。
+3. ドロップダウン **メニューから [Web** ] を選択します。 認証エンドポイントへの URL を更新します。 TypeScript/Node.jsおよび C#サンプル GitHubの場合、リダイレクト URL は次のようになります。
 
     リダイレクト URL: `https://<hostname>/bot-auth/simple-start`
 
@@ -32,3 +32,11 @@ OAuth 2.0 をサポートする ID プロバイダーは、不明なアプリケ
 * **LinkedIn:** 「LinkedIn アプリケーションの [構成」の手順に従います。](/linkedin/talent/apply-with-linkedin)
 
 * **Google:** Google API コンソールから OAuth 2.0 クライアント資格情報 [を取得する](https://console.developers.google.com/)
+
+* **タブからの外部 OAuth プロバイダー:** 詳細については、「Use [external OAuth providers」を参照してください。](../../tabs/how-to/authentication/auth-oauth-provider.md)
+
+## <a name="see-also"></a>関連項目 
+
+* [ボットでユーザーをMicrosoft Teamsする](../../resources/bot-v3/bot-authentication/auth-bot-AAD.md)
+* [タブのシングル サインオン (SSO) のサポート](../../tabs/how-to/authentication/auth-aad-sso.md)
+* [[ユーザーの認証] タブでMicrosoft Teamsする](../../tabs/how-to/authentication/auth-tab-aad.md)

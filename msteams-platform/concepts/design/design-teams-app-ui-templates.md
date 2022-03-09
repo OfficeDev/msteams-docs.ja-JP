@@ -1,16 +1,16 @@
 ---
 title: UI テンプレートを使用したアプリの設計
 author: heath-hamilton
-description: 標準化された UI コンポーネント、レイアウト、およびパターンを使用して、アプリを迅速に設計し、Microsoft Teams。
+description: 標準の UI コンポーネント、レイアウト、およびパターンを使用して、アプリを迅速に設計し、Microsoft Teams。
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 4429c895bde9b2fd432b2d41c953c69e78f5ea92
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
+ms.openlocfilehash: f77517774237cce49976990a790987972d79118d
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362943"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356435"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>UI テンプレートをMicrosoft Teamsアプリを設計する
 
@@ -22,14 +22,14 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 
 ### <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-アプリ設計の UI テンプレートを Microsoft Teams UI キットから取得します。これには、使用状況、解剖学、アクセシビリティ、ベスト プラクティスに関する広範な情報も含まれています。
+Microsoft Teams UI キットからアプリ設計の UI テンプレートを取得します。これには、使用状況、解剖学、アクセシビリティ、ベスト プラクティスに関する広範な情報も含まれています。
 
 > [!div class="nextstepaction"]
 > [UI キットを取得する (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ### <a name="microsoft-teams-ui-library"></a>Microsoft Teams UI ライブラリ
 
-ブラウザーで UI テンプレートTeams関連するコンポーネントを個別に表示およびテストします。
+ブラウザーで UI Teams関連コンポーネントを表示およびテストします。
 
 > [!div class="nextstepaction"]
 > [UI ライブラリ (プレイグラウンド) を試す](https://dev-int.teams.microsoft.com/storybook/main/index.html)
@@ -46,9 +46,9 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 > [!div class="nextstepaction"]
 > [サンプル アプリを取得する (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
-## <a name="calendar"></a>カレンダー
+## <a name="calendar"></a>予定表
 
-このTeamsカレンダーは、ユーザーが自分自身またはグループの今後のイベントと過去のイベントを表示、スケジュール、管理する場所です。
+このTeams、予定表は、ユーザー自身またはグループの今後のイベントと過去のイベントを表示、スケジュール、および管理する場所です。
 
 ### <a name="top-use-cases"></a>上位の使用例
 
@@ -62,7 +62,7 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 
 ## <a name="dashboard"></a>ダッシュボード
 
-ダッシュボードには、中央の場所にさまざまな種類のコンテンツ (個人用アプリやタブTeamsなど) が表示されます。 ユーザーは、ダッシュボードに表示される機能の少なくとも一部をカスタマイズできる必要があります。
+ダッシュボードには、中央の場所にさまざまな種類のコンテンツ (個人用アプリTeamsタブなど) が表示されます。 ユーザーは、ダッシュボードに表示される機能の少なくとも一部をカスタマイズできる必要があります。
 
 ### <a name="top-use-cases"></a>上位の使用例
 
@@ -146,9 +146,9 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="例は、デスクトップ上のフォーム UI テンプレートを示しています。" border="false":::
+:::image type="content" source="../../assets/form.png" alt-text="例は、デスクトップ上のフォーム UI テンプレートを示しています。" border="false":::
 
-## <a name="list"></a>List
+## <a name="list"></a>リスト
 
 リストを使用して、関連するアイテムをスキャン可能な形式で表示し、ユーザーがリスト全体または個々のアイテムに対してアクションを実行できます。
 
@@ -183,7 +183,7 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 
 ## <a name="settings"></a>Settings
 
-設定は、ユーザーがアプリで自分の設定を構成できる画面です。 (注: 設定は基本的な [UI コンポーネントのコンテナーです](~/concepts/design/design-teams-app-basic-ui-components.md)。
+設定は、ユーザーがアプリで自分の設定を構成できる画面です。 (注: 設定は基本的な [UI コンポーネントのコンテナーです](~/concepts/design/design-teams-app-basic-ui-components.md))。
 
 ### <a name="top-use-case"></a>トップ の使用例
 
@@ -229,6 +229,6 @@ UI テンプレートを使用Microsoft Teamsアプリを迅速に設計しま�
 
 ## <a name="see-also"></a>関連項目
 
-* [基本的な UI コンポーネントを使用Fluentアプリを設計する](~/concepts/design/design-teams-app-basic-ui-components.md)
+* [基本的な UI コンポーネントを使用Fluentを設計する](~/concepts/design/design-teams-app-basic-ui-components.md)
 * [高度な UI Microsoft Teamsを使用したアプリの設計](~/concepts/design/design-teams-app-advanced-ui-components.md)
 * [ボット メッセージの書式を設定する](~/bots/how-to/format-your-bot-messages.md)

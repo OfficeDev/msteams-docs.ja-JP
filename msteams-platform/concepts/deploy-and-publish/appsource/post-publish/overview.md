@@ -5,21 +5,27 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: cbb4eff47d21180bbdfe4aad49cb749a745386c2
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 3226b56ad784c0780ae01e8776704062e1add753
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518563"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356015"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>公開された Microsoft Teams アプリを管理する
 
 アプリが Microsoft Teamsストアに表示された状態で、今後アプリを維持する方法について考え始め、ダウンロードと使用状況を増やします。
 
+## <a name="analyze-app-usage"></a>アプリの使用状況を分析する
+
+パートナー センターのアプリ使用状況レポートTeams[で、](/office/dev/store/teams-apps-usage)アプリの使用状況を追跡できます。 指標には、月次、日次、週単位のアクティブ ユーザー、および保持と強度のグラフが含まれます。このグラフを使用すると、解約や頻度を追跡できます。
+
+新しく公開されたアプリのデータは、レポートに表示するのに約 1 週間かかる。
+
 ## <a name="publish-updates-to-your-app"></a>アプリに更新プログラムを発行する
 
 > [!NOTE]
-> Teamsが進化しました。
+> Teams ストアが進化しました。
 > 
 > 以前は、アプリ タイルで省略記号を選択してリンクをコピーしました。 更新されたストア エクスペリエンスTeams、アプリの [詳細] タブから同じ情報にアクセスできます。 この更新プログラムは、2022 年 3 月 1 日までに一般提供 (GA) される予定です。
 
@@ -48,17 +54,17 @@ ms.locfileid: "62518563"
 
 ## <a name="fix-issues-with-your-published-app"></a>発行済みアプリの問題を修正する
 
-Microsoft は、アプリ ストアに一覧表示されているアプリで毎日自動化テストTeams実行します。 アプリに関する問題が特定された場合は、問題を再現する方法と問題を解決するための推奨事項に関する詳細なレポートをお客様に連絡します。 指定したタイムライン内で問題を解決できない場合は、アプリの登録情報がストアから削除される可能性があります。
+Microsoft は、アプリ ストアに一覧表示されているアプリで毎日自動化Teams実行します。 アプリに関する問題が特定された場合は、問題を再現する方法と問題を解決するための推奨事項に関する詳細なレポートをお客様に連絡します。 指定したタイムライン内で問題を解決できない場合は、アプリの登録情報がストアから削除される可能性があります。
 
 ## <a name="promote-your-app-on-another-site"></a>別のサイトでアプリを宣伝する
 
-アプリが Teams ストアに表示されている場合は、Teamsを起動し、アプリをインストールするダイアログを表示するリンクを作成できます。 たとえば、製品のマーケティング ページにダウンロード ボタンを使用して、このリンクを含めできます。
+アプリが Teams ストアに表示されている場合は、アプリを起動し、アプリをインストールTeamsダイアログを表示するリンクを作成できます。 たとえば、製品のマーケティング ページにダウンロード ボタンを使用して、このリンクを含めできます。
 
 アプリ ID に追加された次の URL を使用してリンクを作成します。 `https://teams.microsoft.com/l/app/<your-app-id>`
 
 ## <a name="complete-microsoft-365-certification"></a>完全なMicrosoft 365認定
 
-[Microsoft 365認定は](/microsoft-365-app-certification/docs/certification)、サード パーティ製の Office アプリ またはアドインが Microsoft 365 エコシステムにインストールされている場合に、データとプライバシーが適切に保護され、保護されていることを保証します。 認定は、アプリが Microsoft テクノロジと互換性があり、クラウド アプリのセキュリティのベスト プラクティスに準拠しており、Microsoft によってサポートされていないことを確認します。
+[Microsoft 365認定](/microsoft-365-app-certification/docs/certification)は、サード パーティ製の Office アプリ またはアドインが Microsoft 365 エコシステムにインストールされている場合に、データとプライバシーが適切に保護され、保護されていることを保証します。 認定は、アプリが Microsoft テクノロジと互換性があり、クラウド アプリのセキュリティのベスト プラクティスに準拠しており、Microsoft によってサポートされていないことを確認します。
 
 ## <a name="see-also"></a>関連項目
 

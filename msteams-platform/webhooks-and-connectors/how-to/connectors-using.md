@@ -5,12 +5,12 @@ description: Microsoft Teams で Office 365 コネクタを使用する方法に
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams Office365 コネクタ
-ms.openlocfilehash: 816dfd4327f0ee3076431e2fdc0e855b40f729c3
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 7b6b7adc8231e3bdcdb9bfec868702eaa3264c42
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62517968"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355637"
 ---
 # <a name="create-and-send-messages"></a>メッセージを作成して送信する
 
@@ -22,15 +22,15 @@ ms.locfileid: "62517968"
 
 コネクタ カードは、次のアクションがサポートされています。
 
-- `ActionCard`: 1 つ以上の入力の種類と関連するアクションを表示します。
-- `HttpPOST`: POST 要求を URL に送信します。
-- `OpenUri`: 別のブラウザーまたはアプリで URI を開き、必要に応じてオペレーティング システムに基づいて異なる URI をターゲットにします。
+* `ActionCard`: 1 つ以上の入力の種類と関連するアクションを表示します。
+* `HttpPOST`: POST 要求を URL に送信します。
+* `OpenUri`: 別のブラウザーまたはアプリで URI を開き、必要に応じてオペレーティング システムに基づいて異なる URI をターゲットにします。
 
 `ActionCard` アクションでは、次の 3 つの入力の種類がサポートされています。
 
-- `TextInput`: 1 行または複数行のテキスト フィールド (オプションの長さの制限あり)。
-- `DateInput`: オプションの時刻セレクターを持つ日付セレクター。
-- `MultichoiceInput`: 1 つまたは複数の選択を提供する選択肢の列挙リスト。
+* `TextInput`: 1 行または複数行のテキスト フィールド (オプションの長さの制限あり)。
+* `DateInput`: オプションの時刻セレクターを持つ日付セレクター。
+* `MultichoiceInput`: 1 つまたは複数の選択を提供する選択肢の列挙リスト。
 
 `MultichoiceInput` では、最初にすべて展開した状態でリストを表示するかどうかを制御する `style` プロパティがサポートされています。 `style`の既定値は、次のように`isMultiSelect`の値によって異なります。
 
@@ -39,7 +39,7 @@ ms.locfileid: "62517968"
 | `false` または指定なし | `compact` |
 | `true` | `expanded` |
 
-コンパクト スタイルで複数選択リストを表示するには、 `"isMultiSelect": true` と `"style": true`の両方を指定する必要があります。
+コンパクト スタイルで複数選択リストを表示するには、 `"isMultiSelect": true` と `"style": true`を指定する必要があります。
 
 コネクタ カードのアクションの詳細については、「 [Actions](/outlook/actionable-messages/card-reference#actions)」を参照してください。
 
@@ -149,9 +149,9 @@ ms.locfileid: "62517968"
 
 # <a name="curl"></a>[cURL](#tab/cURL)
 
-**cURL を使用して Webhook にメッセージを投稿するには**
+cURL を使用して webhook にメッセージを投稿するには、次の手順に従います。
 
-1. https://curl.haxx.se/を使用して cURL をインストールします。
+1. [cURL Web サイト](https://curl.haxx.se/)から cURL をインストールします。
 
 1. コマンド ラインから、次の cURL コマンドを入力します。
 
@@ -174,7 +174,7 @@ ms.locfileid: "62517968"
 
  前提条件: PowerShell のインストールとその基本的な使用方法の理解。
 
-**PowerShell を使用して Webhook にメッセージを投稿するには**
+PowerShell を使用して Webhook にメッセージを投稿するには、次の手順に従います。
 
 1. PowerShell プロンプトで次のコマンドを入力します。
 
@@ -198,7 +198,7 @@ ms.locfileid: "62517968"
 > * `Action.Submit`を除くすべてのネイティブ アダプティブ カード スキーマ要素は、完全にサポートされています。
 > * ✔ サポートされているアクションは [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html)、[**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html)、および [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html) です。
 
-**受信 Webhookを介してアダプティブ カードを送信するには**
+受信 Webhook を介してアダプティブ カードを送信するには、次の手順を実行します。
 
 1. [Teams でカスタム Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) をセットアップします。
 1. 次のコードを使用してアダプティブ カード JSON ファイルを作成します。
@@ -257,7 +257,7 @@ ms.locfileid: "62517968"
 | 7200 | 150  |
 | 86400  | 1800  |
 
-[指数バックオフを備えた再試行ロジック](/azure/architecture/patterns/retry)では、要求が 1 秒以内に制限を超えている場合のレート制限を軽減できます。 レート制限に達しないよう、[ベスト プラクティス](../../bots/how-to/rate-limit.md)に従ってください。
+[指数バックオフを備えた再試行ロジック](/azure/architecture/patterns/retry)では、要求が 1 秒以内に制限を超えている場合のレート制限を軽減できます。レート制限達しないように、[ベスト プラクティス](../../bots/how-to/rate-limit.md)に従ってください。
 
 > [!NOTE]
 > [指数バックオフを備えた再試行ロジック](/azure/architecture/patterns/retry)では、要求が 1 秒以内に制限を超えている場合のレート制限を軽減できます。 レート制限を避けるために、[HTTP 429 応答](../../bots/how-to/rate-limit.md#handle-http-429-responses)を参照してください。

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: アダプティブ カード個人用アプリ認証データ フロー
-ms.openlocfilehash: f2b6c78293a2bc6f25e3989f6eba4c4e2833aaee
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: 5ecd8ec7820adf07efbd588d0220c2849a11df0d
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62080968"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63355864"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>アダプティブ カードを使用してタブをビルドする
 
@@ -25,29 +25,29 @@ ms.locfileid: "62080968"
 * iFrame の制約
 * サーバーのメンテナンスとコスト
 
-アダプティブ カード タブは、新しい方法でタブを作成する方法Teams。 IFrame に Web コンテンツを埋め込む代わりに、アダプティブ カードをタブにレンダリングできます。フロントエンドがアダプティブ カードでレンダリングされている間、バックエンドはボットによって駆動されます。 ボットは、要求を受け入れ、レンダリングされるアダプティブ カードで適切に応答する責任があります。
+アダプティブ カード のタブは、新しい方法でタブを作成Teams。 IFrame に Web コンテンツを埋め込む代わりに、アダプティブ カードをタブにレンダリングできます。フロントエンドがアダプティブ カードでレンダリングされている間、バックエンドはボットによって駆動されます。 ボットは、要求を受け入れ、レンダリングされるアダプティブ カードで適切に応答する責任があります。
 
 デスクトップ、Web、モバイルでネイティブな既製のユーザー インターフェイス (UI) 構成要素を使用してタブを構築できます。 この記事では、アプリ マニフェストに加える必要がある変更を理解するのに役立ちます。 また、呼び出しアクティビティがアダプティブ カードを使用してタブ内の情報を要求および送信する方法と、タスク モジュール ワークフローに対する影響も示します。
 
 次の図は、デスクトップとモバイルのアダプティブ カードを含むビルド タブを示しています。
 
-:::image type="content" source="../../assets/images/tabs/adaptive-cards-rendered-in-tabs.jpg" alt-text="タブでレンダリングされるアダプティブ カードの例。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="タブでレンダリングされるアダプティブ カードの例。" border="false":::
 
 ## <a name="prerequisites"></a>前提条件
 
 アダプティブ カードを使用してタブを作成する前に、次の条件を実行する必要があります。
 
-* ボット開発、[アダプティブ カード](../../bots/what-are-bots.md)、[および](https://adaptivecards.io/)タスク[](../../task-modules-and-cards/task-modules/task-modules-bots.md)モジュールについて詳しくTeams。
+* ボット開発、[アダプティブ カード](../../bots/what-are-bots.md)、[タスク](https://adaptivecards.io/) モジュールについて詳[](../../task-modules-and-cards/task-modules/task-modules-bots.md)しくTeams。
 * 開発に必要なTeamsボットを作成します。
 
 ## <a name="changes-to-app-manifest"></a>アプリ マニフェストの変更点
 
-タブをレンダリングする個人用アプリには、アプリ マニフェスト `staticTabs` に配列を含める必要があります。 アダプティブ カード タブは、プロパティが `contentBotId` 定義で提供されている場合に表示 `staticTab` されます。 静的タブ定義には、アダプティブ カード タブを指定する 、またはホストされる一般的な Web コンテンツ タブ エクスペリエンスを指定する 、 のいずれかを `contentBotId` `contentUrl` 含む必要があります。
+タブをレンダリングする個人用アプリには、アプリ マニフェストに `staticTabs` 配列を含める必要があります。 アダプティブ カード タブは、プロパティが定義 `contentBotId` で提供されている場合に表示 `staticTab` されます。 静的タブ定義には、アダプティブ カード `contentBotId`タブを指定する 、 `contentUrl`またはホストされる一般的な Web コンテンツ タブ エクスペリエンスを指定する 、 のいずれかを含む必要があります。
 
 > [!NOTE]
 > この `contentBotId` プロパティは現在、マニフェスト バージョン 1.9 以降で使用できます。
 
-[アダプティブ `contentBotId` カード] タブが `botId` 通信する必要があるプロパティを指定します。 [アダプティブ カード] タブ用に構成された設定は、各呼び出し要求のパラメーターに送信され、同じボットを使用するアダプティブ カード タブを `entityId` `tabContext` 区別するために使用できます。 その他の静的タブ定義フィールドの詳細については、「マニフェスト スキーマ」 [を参照してください](../../resources/schema/manifest-schema.md#statictabs)。
+[アダプティブ カード `contentBotId` ] タブが通信 `botId` する必要があるプロパティを指定します。 [ `entityId` アダプティブ カード] タブ用に `tabContext` 構成された設定は、各呼び出し要求のパラメーターに送信され、同じボットを使用するアダプティブ カード タブを区別するために使用できます。 その他の静的タブ定義フィールドの詳細については、「マニフェスト スキーマ」 [を参照してください](../../resources/schema/manifest-schema.md#statictabs)。
 
 アダプティブ カード タブ マニフェストの例を次に示します。
 
@@ -107,18 +107,18 @@ ms.locfileid: "62080968"
 アダプティブ カード タブとボット間の通信は、アクティビティを通じて行 `invoke` われます。 各 `invoke` アクティビティには、対応する名前 **があります**。 各要求を区別するには、各アクティビティの名前を使用します。 `tab/fetch` この `tab/submit` セクションで説明するアクティビティを示します。
 
 > [!NOTE]
-> * ボットはサービス URL に対してすべての応答を [送信する必要があります](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true)。 サービス URL は、受信ペイロードの一部として受信 `activity` されます。
+> * ボットは、サービス URL に対してすべての応答を [送信する必要があります](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true)。 サービス URL は、受信ペイロードの一部として受信 `activity` されます。
 > * 呼び出しペイロード のサイズが 80 kb に増加しました。
 
 ### <a name="fetch-adaptive-card-to-render-to-a-tab"></a>タブにレンダリングするアダプティブ カードのフェッチ
 
 `tab/fetch`は、ユーザーがアダプティブ カード タブを開いたときにボットが受け取る最初の呼び出し要求です。ボットが要求を受信すると、タブ続行応答またはタブ **認証応答が送信** されます。
-継続 **応答** には、カードの配列 **が含** まれます。これは、配列の順序でタブに垂直にレンダリングされます。
+継続 **応答** には、カードの **配列が含** まれます。これは、配列の順序でタブに垂直にレンダリングされます。
 
 > [!NOTE]
 > 認証応答の詳細 **については、「認証** 」を [参照してください](#authentication)。
 
-次のコードは、要求と応答 `tab/fetch` の例を示しています。
+次のコードは、要求と応答の例 `tab/fetch` を示しています。
 
 **`tab/fetch` 要求**
 
@@ -168,14 +168,14 @@ ms.locfileid: "62080968"
 
 ### <a name="handle-submits-from-adaptive-card"></a>アダプティブ カードからの送信の処理
 
-タブでアダプティブ カードをレンダリングすると、ユーザーの操作に応答できます。 この応答は、呼び出し要求 `tab/submit` によって処理されます。
+タブでアダプティブ カードをレンダリングすると、ユーザーの操作に応答できます。 この応答は、呼び出し要求によって `tab/submit` 処理されます。
 
-ユーザーが [アダプティブ カード] タブのボタンを選択すると、アダプティブ カードの機能を使用して対応するデータを使用してボットに要求 `tab/submit` `Action.Submit` がトリガーされます。 アダプティブ カード データは、要求の data プロパティを使用して使用 `tab/submit` できます。 要求に対して次のいずれかの応答を受け取る。
+ユーザーが [アダプティブ カード] `tab/submit` `Action.Submit` タブのボタンを選択すると、アダプティブ カードの機能を使用して対応するデータを使用してボットに要求がトリガーされます。 アダプティブ カード データは、要求の data プロパティを使用して使用 `tab/submit` できます。 要求に対して次のいずれかの応答を受け取る。
 
-* 本文がない HTTP `200` 状態コード応答。 空の 200 応答では、クライアントによって実行されるアクションはありません。
-* アダプティブ カードの `200` フェッチ **で説明** したように、標準タブは応答 [を続行します](#fetch-adaptive-card-to-render-to-a-tab)。 タブの **応答を** 続行すると、クライアントは、引き続き応答のカード配列に用意されているアダプティブ カードを使用して、レンダリングされたアダプティブ カード タブを **更新** します。
+* 本文がない HTTP 状態コード `200` 応答。 空の 200 応答では、クライアントによって実行されるアクションはありません。
+* アダプティブ カードのフェッチ`200`**で説明** したように、標準タブは応答 [を続行します](#fetch-adaptive-card-to-render-to-a-tab)。 タブの **応答を** 続行すると、クライアントは、引き続き応答のカード配列に用意されているアダプティブ カードを使用して、レンダリングされたアダプティブ カード タブを **更新** します。
 
-次のコードは、要求と応答 `tab/submit` の例を示しています。
+次のコードは、要求と応答の例 `tab/submit` を示しています。
 
 **`tab/submit` 要求**
 
@@ -226,13 +226,13 @@ ms.locfileid: "62080968"
 
 ## <a name="understand-task-module-workflow"></a>タスク モジュールのワークフローについて
 
-また、タスク モジュールはアダプティブ カードを使用して呼 `task/fetch` び出し `task/submit` 、要求と応答を行います。 詳細については、「タスク ボット[でのタスク モジュールの使用Microsoft Teams参照してください](../../task-modules-and-cards/task-modules/task-modules-bots.md)。
+また、タスク モジュールはアダプティブ カードを使用して呼 `task/fetch` び出し、 `task/submit` 要求と応答を行います。 詳細については、「タスク ボット[でのタスク モジュールの使用Microsoft Teams参照してください](../../task-modules-and-cards/task-modules/task-modules-bots.md)。
 
-[アダプティブ カード] タブの導入により、ボットが要求に応答する方法が変更 `task/submit` されます。 アダプティブ カード タブを使用している場合、ボットは標準タブで呼び出し要求に応答し、応答を続行し、タスク モジュール `task/submit` を閉じます。  [アダプティブ カード] タブは、タブで提供される新しいカードの一覧を表示して、応答本文 **を** 続行することで更新されます。
+[アダプティブ カード] タブの導入により、ボットが要求に応答する方法が変更 `task/submit` されます。 アダプティブ カード タブを`task/submit`使用している場合、ボットは標準タブで呼び出し要求に応答し、応答を続行し、タスク モジュールを閉じます。 [アダプティブ カード] タブは、タブで提供される新しいカードの一覧を表示して、応答本文 **を** 続行することで更新されます。
 
 ### <a name="invoke-taskfetch"></a>Invoke `task/fetch`
 
-次のコードは、要求と応答 `task/fetch` の例を示しています。
+次のコードは、要求と応答の例 `task/fetch` を示しています。
 
 **`task/fetch` 要求**
 ```json
@@ -280,7 +280,7 @@ ms.locfileid: "62080968"
 
 ### <a name="invoke-tasksubmit"></a>Invoke `task/submit`
 
-次のコードは、要求と応答 `task/submit` の例を示しています。
+次のコードは、要求と応答の例 `task/submit` を示しています。
 
 **`task/submit` 要求**
 
@@ -342,12 +342,12 @@ ms.locfileid: "62080968"
 1. アプリを開きます。 サインイン ページが表示されます。
 
     > [!NOTE]
-    > アプリ のロゴは、アプリ マニフェスト `icon` で定義されているプロパティを使用して提供されます。 タブ認証応答本文で返されるプロパティでロゴが定義された後に表示されるタイトル `title` 。 
+    > アプリ のロゴは、アプリ マニフェストで定義 `icon` されているプロパティを使用して提供されます。 タブ認証応答本文で返される`title`プロパティでロゴが定義された後に表示されるタイトル。
 
-1. [**サインイン**] を選びます。 認証応答本文のプロパティに指定されている認証 URL `value` **に** リダイレクトされます。
+1. [**サインイン**] を選びます。 認証応答本文のプロパティに指定されている `value` 認証 URL **に** リダイレクトされます。
 1. ポップアップ ウィンドウが表示されます。 このポップアップ ウィンドウは、認証 URL を使用して Web ページをホストします。
 1. サインインした後、ウィンドウを閉じます。 認証 **コードが** クライアントにTeamsされます。
-1. 次Teamsクライアントは、ホストされた Web ページによって提供される認証コードを含む、サービスへの要求 `tab/fetch` を再発行します。
+1. 次Teamsクライアントは`tab/fetch`、ホストされた Web ページによって提供される認証コードを含む、サービスへの要求を再発行します。
 
 ### <a name="tabfetch-authentication-data-flow"></a>`tab/fetch` 認証データ フロー
 
@@ -357,7 +357,7 @@ ms.locfileid: "62080968"
 
 **`tab/fetch` 認証応答**
 
-次のコードは、認証応答の `tab/fetch` 例を示しています。
+次のコードは、認証応答の例 `tab/fetch` を示しています。
 
 ```json
 // tab/auth POST response (openURL)
@@ -429,10 +429,10 @@ ms.locfileid: "62080968"
 |----------------|-----------------|--------------|--------------|
 | [アダプティブ カードの表示] Teamsタブ | Microsoft Teamsタブのサンプル コードで、アダプティブ カードを表示する方法を示Teams。 |[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [タブリンクの分岐解除とステージ ビュー](~/tabs/tabs-link-unfurling.md)
+> [タブのリンクの展開とステージ ビュー](~/tabs/tabs-link-unfurling.md)
 
 ## <a name="see-also"></a>関連項目
 
@@ -441,4 +441,4 @@ ms.locfileid: "62080968"
 * [プライベート タブを作成する](~/tabs/how-to/create-personal-tab.md)
 * [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
 * [モバイルのタブ](~/tabs/design/tabs-mobile.md)
-* [フォームの完成に関するフィードバック](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [フォームの完了に関するフィードバック](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

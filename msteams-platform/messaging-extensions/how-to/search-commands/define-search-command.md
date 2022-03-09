@@ -5,12 +5,12 @@ description: アプリのメッセージング拡張機能の検索コマンドM
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 9ff1d6c51320db07e0363dff9f72bd513acc6199
-ms.sourcegitcommit: abe5ccd61ba3e8eddc1bec01752fd949a7ba0cc2
+ms.openlocfilehash: a68d43fc067e1a67b914ed49f042d535e6c8de5a
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2022
-ms.locfileid: "62281750"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356358"
 ---
 # <a name="define-messaging-extension-search-commands"></a>メッセージング拡張機能の検索コマンドを定義する
 
@@ -76,22 +76,22 @@ ms.locfileid: "62281750"
 
 | プロパティ名 | 用途 | 必須 | マニフェストの最小バージョン |
 |---|---|---|---|
-| `id` | このプロパティは、検索コマンドに割り当てる一意の ID です。 ユーザー要求には、この ID が含まれます。 | はい | 1.0 |
+| `id` | このプロパティは、検索コマンドに割り当てる一意の ID です。 ユーザー要求には、この ID が含まれます。 | 必要 | 1.0 |
 | `title` | このプロパティはコマンド名です。 この値は、ユーザー インターフェイス (UI) に表示されます。 | はい | 1.0 |
 | `description` | このプロパティは、このコマンドの動作を示すヘルプ テキストです。 この値は UI に表示されます。 | はい | 1.0 |
-| `type` | このプロパティは、 である必要があります `query`。 | いいえ | 1.4 |
-|`initialRun` | このプロパティが true に設定 **されている** 場合、ユーザーが UI でこのコマンドを選択するとすぐにこのコマンドを実行する必要があります。 | いいえ | 1.0 |
+| `type` | このプロパティは、 である必要があります `query`。 | 不要 | 1.4 |
+|`initialRun` | このプロパティが true に設定 **されている** 場合、ユーザーが UI でこのコマンドを選択するとすぐにこのコマンドを実行する必要があります。 | 不要 | 1.0 |
 | `context` | このプロパティは、検索アクションが使用できるコンテキストを定義する値のオプションの配列です。 使用可能な値: `message`、`compose`、`commandBox`。 既定値は `["compose", "commandBox"]` です。 | いいえ | 1.5 |
 
 検索クライアントでユーザーに表示されるテキストを定義する検索パラメーターの詳細を追加Teamsがあります。
 
 | プロパティ名 | 用途 | 必須ですか? | マニフェストの最小バージョン |
 |---|---|---|---|
-| `parameters` | このプロパティは、コマンドのパラメーターの静的リストを定義します。 | いいえ | 1.0 |
+| `parameters` | このプロパティは、コマンドのパラメーターの静的リストを定義します。 | 不要 | 1.0 |
 | `parameter.name` | このプロパティは、パラメーターの名前を表します。 これは、ユーザー要求でサービスに送信されます。 | はい | 1.0 |
 | `parameter.description` | このプロパティは、パラメーターの目的または指定する必要がある値の例を示します。 この値は UI に表示されます。 | はい | 1.0 |
 | `parameter.title` | このプロパティは、短いユーザーフレンドリーなパラメーターのタイトルまたはラベルです。 | はい | 1.0 |
-| `parameter.inputType` | このプロパティは、必要な入力の種類に設定されます。 可能な値には `text`、、 `textarea`、 `number`、 `date`、 、 が `time`含まれます `toggle`。 既定値は に設定されています `text`。 | いいえ | 1.4 |
+| `parameter.inputType` | このプロパティは、必要な入力の種類に設定されます。 可能な値には `text`、、 `textarea`、 `number`、 `date`、 、 が `time`含まれます `toggle`。 既定値は に設定されています `text`。 | 不要 | 1.4 |
 
 #### <a name="example"></a>例
 
@@ -129,7 +129,11 @@ ms.locfileid: "62281750"
 |:---------------------|:--------------|:---------|:--------|
 |Teams拡張機能の検索   |  検索コマンドを定義し、検索に応答する方法について説明します。        |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## <a name="next-step"></a>次のステップ
+## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
+
+詳細な [ガイドに従って、](../../../sbs-messagingextension-searchcommand.yml) 検索ベースのメッセージング拡張機能を作成します。
+
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [検索コマンドに応答します](~/messaging-extensions/how-to/search-commands/respond-to-search.md)。

@@ -1,0 +1,44 @@
+### YamlMime:Tutorial
+title: 送信 Webhooks のビルド
+metadata:
+  title: 送信 Webhooks のビルド
+  description: このチュートリアルでは、送信 Webhooks を設定する方法について説明Teams。
+  audience: Developer
+  level: Beginner
+  ms.date: 14/01/2022
+  ms.topic: interactive-tutorial
+  nextTutorialHref: webhooks-and-connectors/how-to/add-outgoing-webhook.md
+  nextTutorialTitle: 送信 Webhooks の詳細
+  ms.custom: mvc
+  ms.localizationpriority: High
+  ms.openlocfilehash: 0cf221616cb233d69356e1a012de15afc1254070
+  ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 03/08/2022
+  ms.locfileid: "63360986"
+items:
+- durationInMinutes: 1
+  content: "Webhooks は、Microsoft Teamsアプリとの統合に役立ちます。 このTeams送信 Webhooks はボットとして機能し、チャネル内のメッセージを検索する機能 **@mention**。 送信 Webhooks を使用すると、ユーザーは Web サービスを介してボットを作成するプロセス全体を実行せずに、web サービスにメッセージをMicrosoft Bot Framework。 送信 Webhooks は、JSON ペイロードを受け入れTeamsサービスにデータを送信します。 \n\n**送信 Webhooks の主な機能**\n\n* 任意の外部 Web サービスに通知を送信します。\n* カードや画像を含むリッチ テキスト メッセージで応答します。 \n* 個人用またはプライベート スコープ内ではなく、パブリック チャネルでメッセージを受信します。\n* Http POST を Web サービスに送信し、応答を取得します。 \n\n > [!NOTE]\n > 送信 Webhooks は、チーム内のチャネルの名簿やリストの取得など、他の API にアクセスできない。\n\nこのステップ バイ ステップ ガイドは、送信 Webhooks を作成する方法をTeams。 次の出力が表示されます。\n\n![ready](~/assets/images/sbs-outgoing-webhooks/output-result1.png)\n"
+- title: 前提条件
+  durationInMinutes: 1
+  content: "次のツールをインストールし、開発環境をセットアップしてください。  \n\n* [Microsoft Teams](https://teams.microsoft.com/)アカウントを使用する\n* [最新バージョンのVisual Studio](https://visualstudio.microsoft.com/downloads/)\n* [ngrok](https://ngrok.com/download) の最新バージョン (devbox テストの場合のみ) または同等のトンネリング ソリューション\n\n  > [!NOTE]\n  > ngrok をダウンロードしたら、サインアップして [authtoken をインストールします](https://ngrok.com/download)。\n"
+- title: ローカル環境のセットアップ
+  durationInMinutes: 1
+  content: "リポジトリ`Microsoft-Teams-Samples`をローカル リポジトリに複製GitHub。  \n\n 1. [サンプル[Microsoft Teams開きます](https://github.com/OfficeDev/Microsoft-Teams-Samples)。\n 1. [ **コード] を選択します**。\n 1. ドロップダウン メニューから、[デスクトップで開く] **をGitHubします**。\n\n    ![Clone](~/assets/images/sbs-outgoing-webhooks/clone-repository.png)\n\n 1. [ **複製] を選択します**。 \n"
+- title: 送信 Webhook を作成する
+  durationInMinutes: 5
+  content: "1. 必要なチームを選択し、(••)ドロップダウン メニューから [チームの管理] を選択します。\n\n   ![管理](~/assets/images/sbs-outgoing-webhooks/manage-team.png)\n\n1. ナビゲーション バーから **[アプリ]** タブを選択します。\n\n   ![Choose](~/assets/images/sbs-outgoing-webhooks/app-selection.png)\n\n1. ngrok を使用して、ローカルで実行中の Web サーバーのパブリックに利用可能な HTTPS エンドポイントへのトンネルを作成します。 ngrok で次のコマンドを実行します。\n\n    ```bash\n    ngrok http -host-header=localhost 3978\n    ```\n\n1. ウィンドウの右下隅で、[送信 Webhook の **作成] を選択します**。\n\n   ![送信](~/assets/images/sbs-outgoing-webhooks/create-outgoing-webhook.png).\n\n1. 次の詳細を入力します。\n \n    * **名前**: [webhook] タイトルを [@mention] タブに表示します。\n\n    * **コールバック URL**: JSON ペイロードを受け入れ、JSON ペイロードから POST 要求を受信する ngrok から生成された URL Teams。 api/Sample または api/authenticatedSample を使用するには、次の手順を実行します。\n\n        * api/sample の場合は、ngrok URL をコピーして貼り付け、/api/sample で追加します。\n\n        * 認証されたサンプルの場合は、ngrok URL をコピーアンドペーストし、それを /authenticatedSample?id=contoso で追加します。\n\n    * **説明**: プロファイル カードとチーム レベルのアプリ ダッシュボードに表示される詳細な文字列。\n\n    * **プロファイル画像 (オプション)**: Webhook のアプリ アイコン。\n\n1. **[作成]** を選択します。 送信 Webhook が現在のチームのチャネルに追加されます。\n\n    ![送信 Webhook を作成する](~/assets/images/sbs-outgoing-webhooks/select.png)\n\n1. ダイアログ `Hash-based Message Authentication Code (HMAC)` ボックスが表示されます。 **AuthProvider.cs** ファイルのセキュリティ トークンを使用して、Teamsと指定された外部サービス間の呼び出しを認証できます。 \n\n    > [!NOTE]\n    > 送信 Webhook は、URL が有効でサーバーとクライアント認証トークンが等しい場合にのみ、チームのユーザーが使用できます。 たとえば、HMAC ハンドシェイクなどです。\n                \n     ![コード](~/assets/images/sbs-outgoing-webhooks/security-token.png)   \n"
+- title: サービスのビルドと実行
+  durationInMinutes: 1
+  content: "1. 最新バージョンのファイルを起動Visual Studio。\n\n1. **[FileOpen Project** >  > **/ソリューション] に移動します**。\n\n    ![ファイルを開く](~/assets/images//sbs-outgoing-webhooks/outgoing-webhooks-VSopenfile.png)\n\n1. **csharp フォルダーから [WebhookSampleBot.sln** ファイル **] を選択** します。\n\n    ![ソリューション ファイル](~/assets/images//sbs-outgoing-webhooks/open-project.png)\n\n1. **AuthProvider.cs** ファイルの \"**contoso\"** を \"M365x712764\" と HMAC に更新します。  \n\n    ![update](~/assets/images//sbs-outgoing-webhooks/update-hmac2.png)\n\n1. **F5 キーを押** してプロジェクトを実行します。\n\n1. 次の **ダイアログが表示** される場合は、[はい] を選択します。\n\n    ![信頼証明書](~/assets/images//sbs-outgoing-webhooks/outgoing-webhook-certificate.png)\n\n   Web ページには、ローカル ホスト情報が表示されます。\n\n    ![アプリの準備完了](~/assets/images//sbs-outgoing-webhooks/outgoing-webhooks-ready.png)                  \n"
+- title: アプリを操作Teams
+  durationInMinutes: 1
+  content: "1. [全般 **] を** 選択して、新しい会話を開始します。\n\n1. [新 **しい会話] を** 選択して会話を開始します。\n\n1. チャネル **\\@で呼** び出す送信 Webhook の名前にメンションを入力します。 \n\n   ![メッセージ​​](~/assets/images/sbs-outgoing-webhooks/type-mention.png)\n\n1. [送信 **] を選択します**。\n\n   > [!NOTE]\n   >  アダプティブ カード、ヒーロー カード、テキスト メッセージは、送信 Webhook で添付ファイルとして送信できます。\n\n1. 会議チャットに新しいメッセージが表示されます。\n\n   ![ready](~/assets/images/sbs-outgoing-webhooks/output-result.png)\n   \n"
+- title: 完全なチャレンジ
+  durationInMinutes: 1
+  content: >
+    このようなことを思い付い出しましたか?
+
+       ![ready](~/assets/images/sbs-outgoing-webhooks/output-result1.png)
+- content: 送信 Webhook アプリの使用を開始するチュートリアルを完了しました。

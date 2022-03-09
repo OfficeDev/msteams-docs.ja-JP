@@ -12,17 +12,19 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 80cb52581677215ed199aba964ca626f46fdc915
-  ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+  ms.openlocfilehash: e9094868f72fa96df8d0301932b7032192eb2652
+  ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 02/18/2022
-  ms.locfileid: "62898020"
+  ms.lasthandoff: 03/08/2022
+  ms.locfileid: "63356113"
 landingContent:
 - title: 最新の情報を確認する
   linkLists:
   - linkListType: concept
     links:
+    - text: アダプティブ カードのオーバーフロー メニュー
+      url: ~/task-modules-and-cards/cards/cards-format.md
     - text: 用語集
       url: ~/get-started/glossary.md
     - text: 概要
@@ -39,10 +41,8 @@ landingContent:
       url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
     - text: アダプティブ カードは、完了フィードバックを形成します
       url: ~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback
-    - text: アダプティブ カードでのユーザー ピッカー
-      url: ~/task-modules-and-cards/cards/people-picker.md
-    - text: 個人用タブとメッセージング拡張機能は、OutlookとOfficeで実行されます (プレビュー)
-      url: ~/m365-apps/overview.md
+    - text: 外部 OAuth プロバイダーを使用した認証
+      url: ~/tabs/how-to/authentication/auth-oauth-provider.md
 - title: すべての時間のお気に入り
   linkLists:
   - linkListType: concept
@@ -53,9 +53,9 @@ landingContent:
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
     - text: 取引可能な SaaS プランを使用して Teams アプリを収益化する
       url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-    - text: 低コード アプリの詳細については、Teams
+    - text: 低コードアプリの詳細については、Teams
       url: ~/samples/teams-low-code-solutions.md
-- title: 概要
+- title: 開始する
   linkLists:
   - linkListType: get-started
     links:
@@ -67,13 +67,13 @@ landingContent:
     links:
     - text: JavaScript を使用してアプリをビルドする
       url: sbs-gs-javascript.yml
-    - text: アプリをビルドする方法SPFx
+    - text: アプリとアプリをビルドSPFx
       url: sbs-gs-spfx.yml
-    - text: アプリをビルドするC# .NET
+    - text: アプリまたは .NET C#アプリをビルドする
       url: sbs-gs-csharp.yml
-    - text: アプリをビルドするNode.js
+    - text: アプリをビルドする方法Node.js
       url: sbs-gs-nodejs.yml
-- title: アプリのビルド Teams
+- title: Teams 用アプリの作成
   linkLists:
   - linkListType: overview
     links:
@@ -137,13 +137,21 @@ landingContent:
     links:
     - text: アップロードからTeamsするファイルの作成
       url: ~/sbs-file-handling-in-bot.yml
+    - text: タスク モジュールを呼び出Microsoft Teams
+      url: ~/sbs-botbuilder-taskmodule.yml
+    - text: 検索ベースのメッセージング拡張機能を構築する
+      url: ~/sbs-messagingextension-searchcommand.yml
+    - text: アクションベースのメッセージング拡張機能を構築する
+      url: ~/sbs-meetingextension-action.yml
+    - text: 送信 Webhooks のビルド
+      url: ~/sbs-outgoing-webhooks.yml
 - title: Teamsシナリオ
   linkLists:
   - linkListType: reference
     links:
-    - text: アプリのシナリオをTeamsする
+    - text: アプリのビルド シナリオTeamsする
       url: https://adoption.microsoft.com/extensibility-look-book/scenarios/
-    - text: アプリのシナリオのTeams方法
+    - text: アプリのシナリオTeamsベスト プラクティス
       url: https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources
 - title: 発行と配布
   linkLists:
