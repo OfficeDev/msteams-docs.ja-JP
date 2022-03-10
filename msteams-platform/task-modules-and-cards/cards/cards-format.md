@@ -5,12 +5,12 @@ keywords: teams ボット カード書式
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 08c78748039fd8feccc1750abd17af7bcbc2d441
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: b0d171134b58606a2d9eefa81bf1b5c16d27138e
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821676"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356442"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams のカードの書式設定
 
@@ -20,9 +20,9 @@ ms.locfileid: "62821676"
 
 カードは、タイトル プロパティや字幕プロパティではなく、テキスト プロパティでのみ書式設定をサポートします。 カードの種類に応じて、XML または HTML のサブセット、または Markdown を使用して書式設定を指定できます。 アダプティブ カードの現在および将来の開発では、Markdown の書式設定をお勧めします。
 
-書式設定のサポートはカードの種類によって異なります。 カードのレンダリングは、デスクトップとモバイルの Microsoft Teams クライアント間、およびデスクトップ ブラウザーの Teams 間でわずかに異なる場合があります。
+書式設定のサポートはカードの種類によって異なります。カードのレンダリングは、デスクトップとモバイルの Microsoft Teams クライアント間、およびデスクトップ ブラウザーの Teams 間でわずかに異なる場合があります。
 
-Teams カードにはインライン画像を含めることができます。 画像は `.png`、`.jpg`、または `.gif` ファイルとして書式設定でき、1024×1024 ピクセルまたは 1 MB を超えてはなりません。 アニメーション GIF はサポートされていません。 詳細については、「[カードの種類](./cards-reference.md#inline-card-images)」を参照してください。
+Teams カードにはインライン画像を含めることができます。 サポートされているイメージ形式は、.png、.jpg、または .gif 形式です。 サイズは 1024 x 1024 px 以内、ファイル サイズは 1 MB 未満にしてください。 アニメーション .gif 画像はサポートされていません。 詳細については、「[カードの種類](./cards-reference.md#inline-card-images)」を参照してください。
 
 サポートされている特定のスタイルを含む Markdown を使用して、アダプティブカードと Office 365 コネクタ カードを書式設定できます。  
 
@@ -116,7 +116,7 @@ Android では、アダプティブ カード Markdown の書式設定が次の�
 }
 ```
 
-アダプティブ カードは、絵文字をサポートします。 次のコードは、絵文字を使用したアダプティブ カードの例を示しています。
+アダプティブ カードは、絵文字をサポートします。次のコードは、絵文字を使用したアダプティブ カードの例を示しています。
 
 ``` json
 { "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }
@@ -301,7 +301,7 @@ Teams プラットフォームでは、既存の言及 ID に加えて、Azure A
 情報マスキングプロパティを使用して、アダプティブ カード [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) 入力要素内のユーザーからのパスワードや機密情報などの特定の情報をマスクします。
 
 > [!NOTE]
-> この機能は、クライアント側の情報マスキングのみをサポートします。 マスキングされた入力テキストは、[ボット構成](../../build-your-first-app/build-bot.md#4-register-your-bot-endpoint)中に指定された HTTPS エンドポイント アドレスにクリア テキストとして送信されます。
+> この機能は、クライアント側の情報マスキングのみをサポートします。マスキングされた入力テキストは、[ボット構成](../../build-your-first-app/build-bot.md#4-register-your-bot-endpoint)中に指定された HTTPS エンドポイント アドレスにクリア テキストとして送信されます。
 
 アダプティブ カードの情報をマスクするには、`style`プロパティを **型** `input.text` に追加し、その値を **Password** に設定します。
 
@@ -610,7 +610,7 @@ Android では、次の図に示すように HTML 書式設定が表示されま
 
 # <a name="html-format-for-hero-and-thumbnail-cards"></a>[ヒーロー カードとサムネイル カードの HTML 書式](#tab/simple-html)
 
-HTML タグは、ヒーロー カードやサムネイル カードなどの簡易カードでサポートされます。 Markdown はサポートされていません。
+HTML タグは、ヒーロー カードやサムネイル カードなどの簡易カードでサポートされています。マークダウンはサポートされていません。
 
 | Style | 例 | HTML |
 | --- | --- | --- |

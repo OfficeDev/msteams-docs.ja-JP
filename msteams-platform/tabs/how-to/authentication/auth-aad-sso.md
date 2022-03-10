@@ -4,12 +4,12 @@ description: シングル サインオン (SSO) について説明します
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication SSO Microsoft Azure Active Directory (Azure AD) single sign-on api
-ms.openlocfilehash: edd7e08167c0efb93b7a578de12b7e1873aa193f
-ms.sourcegitcommit: b9af51e24c9befcf46945400789e750c34723e56
+ms.openlocfilehash: 9fd975aee587bd2a5602cc08a8c988773be276af
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "62821725"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356106"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>タブのシングル サインオン (SSO) のサポート
 
@@ -21,8 +21,8 @@ ms.locfileid: "62821725"
 > ✔Teams for Android (1416/1.0.0.2020073101 以降)
 >
 > ✔Teams for iOS (_バージョン_: 2.0.18 以降)  
-> 
-> ✔Teams JavaScript SDK (_バージョン_: 1.10 以降)。SSO が会議のサイド パネルで機能するようになります。 
+>
+> ✔Teams JavaScript SDK (_バージョン_: 1.10 以降)。SSO が会議のサイド パネルで機能するようになります。
 >
 > Teams を最適なパフォーマンスでご利用いただくために、最新バージョンの iOS および Android を使用してください。
 
@@ -30,6 +30,14 @@ ms.locfileid: "62821725"
 > **クイックスタート**  
 >
 > タブ SSO を使い始める最も簡単なパスは、Microsoft Visual Studio Code 用 Teams ツールキット内にあります。 詳細については、「[Teams ツールキットやタブ用 Visual Studio Code を使用したシングル サインオン](../../../toolkit/visual-studio-code-tab-sso.md)」をご覧ください。
+
+<!--- TBD: Edit this article.
+* Admonitions/alerts seem to be overused.
+* Don't add note for a list of items.
+* Don't add numbers to headings.
+* Don't copy-paste superscript characters as is. Use HTML entities. See https://sitefarm.ucdavis.edu/training/all/using-wysiwyg/special-characters for the values.
+* Same for the check marks added in the content in the note above. The content should not be in a note anyway.
+--->
 
 ## <a name="how-sso-works-at-runtime"></a>実行時の SSO の動作のしくみ
 
@@ -39,7 +47,7 @@ ms.locfileid: "62821725"
 <img src="~/assets/images/tabs/tabs-sso-diagram.png" alt="Tab single sign-on SSO diagram" width="75%"/>
 
 1. タブでは、JavaScript 呼び出しが `getAuthToken()`に対してなされます。 `getAuthToken()` は Teams にタブ アプリケーションのアクセス トークンを取得するように指示します。
-2. 現在のユーザーが初めてタブ アプリケーションを使用していて、同意が必要になる場合は、同意を要求する要求プロンプトが表示されます。 または、2 要素認証などのステップアップ認証を要求する要求プロンプトが表示されます。
+2. 現在のユーザーが初めてタブ アプリケーションを使用していて、同意が必要になる場合は、同意を要求する要求プロンプトが表示されます。または、2 要素認証などのステップアップ認証を要求する要求プロンプトが表示されます。
 3. Teams では、現在のユーザーに Azure AD エンドポイントからのタブ アクセス トークンを要求します。
 4. Azure AD では、Teams アプリケーションにタブ アクセス トークンを送信します。
 5. `getAuthToken()` の呼び出しによって返される結果オブジェクトの一部として、Teams ではタブにタブ アクセス トークン を送信します。
@@ -52,7 +60,7 @@ SSO API は、Web コンテンツを埋め込む [タスク モジュール](../
 
 ## <a name="develop-an-sso-microsoft-teams-tab"></a>SSO Microsoft Teams のタブを開発する
 
-このセクションでは、SSO を使用する Teams のタブの作成に関連するタスクについて説明します。 これらのタスクは、言語とフレームワークに依存していません。
+このセクションでは、SSO を使用する Teams のタブの作成に関連するタスクについて説明します。これらのタスクは、言語とフレームワークに依存していません。
 
 ### <a name="1-create-your-azure-ad-application"></a>1. Azure AD アプリケーションを作成する
 
@@ -64,13 +72,13 @@ SSO API は、Web コンテンツを埋め込む [タスク モジュール](../
 > * 現在、アプリごとの複数のドメインはサポートされていません。
 > * ユーザーは、`accessTokenAcceptedVersion` を新しいアプリケーションの `2` に設定する必要があります。
 
-**Azure AD ポータルからアプリを登録するには**
+Azure AD ポータルからアプリを登録するには、次の手順に従います。
 
 1. 新しいアプリケーションを [Azure AD アプリ登録](https://go.microsoft.com/fwlink/?linkid=2083908) ポータルに登録します。
 1. **[新規登録]** を選択します。 **[アプリケーション登録]** ページが表示されます。
 1. **[アプリケーション登録]** ページで、次の値を入力します。
     1. アプリの **[名前]** を入力します。
-    2. **[サポートされているアカウントの種類]** を選択し、[単一テナント] または [マルチテナント アカウントの種類] を選択します。 ¹
+    2. **[サポートされているアカウントの種類]** を選択し、[単一テナント] または [マルチテナント アカウントの種類] を選択します。¹
     * **[リダイレクト URI]** を空のままにします。
     3. **[登録]** を選択します。
 1. 概要ページで、**[アプリケーション (クライアント) ID]** をコピーして保存します。 後で Teams アプリケーション マニフェストを更新する際に必要になります。
@@ -80,7 +88,7 @@ SSO API は、Web コンテンツを埋め込む [タスク モジュール](../
     > ボットとタブを使用してアプリをビルドしている場合は、アプリケーション ID URI と `api://fully-qualified-domain-name.com/botid-{YourBotId}` に入力します。
 
 1. **[設定]** リンクを選択して、`api://{AppID}` の形式でアプリケーション ID URIを生成します。 ダブル スラッシュと GUID の間に完全修飾ドメイン名 (末尾にスラッシュ "/" を付けて) を挿入します。 ID 全体の形式は `api://fully-qualified-domain-name.com/{AppID}` である必要があります。 ² たとえば、`api://subdomain.example.com/00000000-0000-0000-0000-000000000000`。 完全修飾ドメイン名は、アプリを提供する人間が判読できるドメイン名です。 ngrok などのトンネリング サービスを使用している場合は、ngrok サブドメインが変更される度にこの値を更新する必要があります。
-1. **[スコープの追加]** を選択します。 開いたパネルで、**access_as_user** と **スコープ名** に入力します。
+1. **[スコープの追加]** を選択します。開いたパネルで、**access_as_user** と **スコープ名** に入力します。
 1. **[同意できるユーザー]** ボックスに、**管理者とユーザー** と入力します。
 1. 管理者とユーザーの同意プロンプトを構成するためのボックスに、`access_as_user` スコープに適した値を使用して詳細を入力します。
     * **管理者の同意タイトル:** チームはユーザーのプロフィールにアクセスできます。
@@ -88,7 +96,7 @@ SSO API は、Web コンテンツを埋め込む [タスク モジュール](../
     * **ユーザーの同意タイトル**: チームは、ユーザーのプロフィールにアクセスしてユーザーに代わって要求を行うことができます。
     * **ユーザーの同意の説明:** チームは、ユーザーと同じ権限でこのアプリの API を呼び出すことができます。
 1. **[状態]** が **[有効]** に設定されていることを確認してください。
-1. **[スコープの追加]** を選択して、詳細を保存します。 テキスト フィールドの下に表示される **[スコープ名]** のドメイン部分は、前の手順で設定された **[アプリケーション ID URI]** と自動的に一致し、最後に `/access_as_user` が追加されます`api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`。
+1. **[スコープの追加]** を選択して、詳細を保存します。テキスト フィールドの下に表示される **[スコープ名]** のドメイン部分は、前の手順で設定された **[アプリケーション ID URI]** と自動的に一致し、最後に `/access_as_user` が追加されます`api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`。
 1. **[承認済みのクライアント アプリケーション]** セクションで、アプリの Web アプリケーションに対して承認するアプリケーションを特定します。 **[クライアント アプリケーションの追加]** を選択します。 次の各クライアント ID を入力し、前の手順で作成した承認スコープを選択します。
     * Teams モバイル アプリケーションまたはデスクトップ アプリケーション用 `1fec8e78-bce4-4aaf-ab1b-5451cc387264`。
     * Teams Web アプリケーション用 `5e3ce6c0-2b1f-4285-8d4b-75ee78787346`。
@@ -112,7 +120,7 @@ SSO API は、Web コンテンツを埋め込む [タスク モジュール](../
     > [!NOTE]
     > タブ SSO には暗黙的な付与は必要ありません。
 
-おめでとうございます! 登録の前提条件を完了し、タブ SSO アプリを続行できるようになりました。
+おめでとうございます。登録の前提条件を完了し、タブ SSO アプリを続行できるようになりました。
 
 > [!NOTE]
 >
@@ -143,6 +151,9 @@ SSO API は、Web コンテンツを埋め込む [タスク モジュール](../
 >* `webApplicationInfo` フィールドを実装するには、マニフェスト バージョン 1.5 以上を使用する必要があります。
 
 ### <a name="3-get-an-access-token-from-your-client-side-code"></a>3. クライアント側コードからアクセス トークンを取得する
+
+> [!NOTE]
+> `Teams SDK Error: resourceDisabled` などのエラーを回避するには、アプリケーション ID URI が Azure AD アプリの登録と Teams アプリで正しく構成されていることを確認してください。
 
 次の認証 API を使用します。
 
@@ -244,7 +255,7 @@ SSO の現在の実装では、ユーザー レベルのアクセス許可に対
 
 Graph のスコープを取得できるもう 1 つの方法は、既存の [Web ベースのAzure AD 認証方法](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page) を使用して同意ダイアログを表示する方法です。 この方法には、Azure AD 同意ダイアログ ボックスのポップアップが含まれます。
 
-**認証 API を使用してその他の同意を求めるには**
+認証 API を使用してその他の同意を求めるには、次の手順を実行します。
 
 1. `getAuthToken()` を使用して取得されたトークンでは、他の Graph API にアクセスするのに Azure AD [代理フロー](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) を使用してサーバー側で交換を行う必要があります。 この交換には v2 Graph エンドポイントを使用するようにしてください。
 2. 交換が失敗した場合、Azure AD で使用できない付与例外が返されます。 通常、2 つのエラー メッセージ (`invalid_grant` または `interaction_required`) のいずれかです。
@@ -268,4 +279,5 @@ Graph のスコープを取得できるもう 1 つの方法は、既存の [Web
 * [ステップ バイ ステップのガイド](../../../sbs-tab-with-adaptive-cards.yml) に従って、アダプティブ カード付きタブを作成します。
 
 ## <a name="see-also"></a>関連項目
+
 [シングル サインオンと Teams ボット](../../../sbs-bots-with-sso.yml)
