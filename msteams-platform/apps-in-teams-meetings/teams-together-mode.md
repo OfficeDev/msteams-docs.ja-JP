@@ -3,19 +3,19 @@ title: カスタム Together モードのシーン
 description: カスタム Together モードシーンを操作する
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 0f2f57cb36ba7caed7acaffa3bcfc1e2e57c59c2
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 7249c907cd5afc68714be4a38a8f033c22382181
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059666"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356085"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Teams でのカスタム Together モードのシーン
 
 Microsoft Teams の Custom Together モードシーンは、次のアクションを使用して、イマーシブで魅力的な会議環境を提供します。
 
-* ユーザーを集め、ビデオをオンにするよう促します。 
-* 参加者を 1 つの仮想シーンにデジタルで結合します。 
+* ユーザーを集め、ビデオをオンにするよう促します。
+* 参加者を 1 つの仮想シーンにデジタルで結合します。
 * 参加者のビデオ ストリームを、シーン作成者によって設計および固定された事前に決定されたシートに配置します。
 
 カスタム Together モードシーンでは、シーンは成果物です。 シーンは、Microsoft Scene Studio を使用してシーン開発者によって作成されます。 想像されたシーンの設定では、参加者はビデオ ストリームを持つシートを持っています。 ビデオは、これらのシートにレンダリングされます。 このようなアプリのエクスペリエンスが明確であるため、シーン専用のアプリをお勧めします。
@@ -27,7 +27,7 @@ Microsoft Teams の Custom Together モードシーンは、次のアクショ�
 シーン専用のアプリは、Microsoft Teams のアプリのままです。 Scene Studio は、バックグラウンドでアプリ パッケージの作成を処理します。 1 つのアプリ パッケージ内の複数のシーンが、ユーザーに対してフラット リストとして表示されます。
 
 > [!NOTE]
-> ユーザーはモバイルから Together モードを開始できません。 ただし、ユーザーがモバイル経由で会議に参加し、デスクトップから Together モードを有効にすると、ビデオをオンにしたモバイル ユーザーはデスクトップの Together モードで表示されます。 
+> ユーザーはモバイルから Together モードを開始できません。ただし、ユーザーがモバイル経由で会議に参加し、デスクトップから Together モードを有効にすると、ビデオをオンにしたモバイル ユーザーはデスクトップの Together モードで表示されます。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -54,7 +54,7 @@ Microsoft には、シーンを構築できる Scene Studio があります。 �
 
 Scene Studio のコンテキスト内のシーンは、次の要素を含む成果物です。
 
-* 会議の開催者と会議の発表者用に予約されたシート。 発表者は、アクティブに共有しているユーザーを参照しません。 これは、 [会議の役割](https://support.microsoft.com/en-us/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)を参照します。
+* 会議の開催者と会議の発表者用に予約されたシート。 発表者は、アクティブに共有しているユーザーを参照しません。 これは、 [会議の役割](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)を参照します。
 
 * 幅と高さを調整できる各参加者のシートと画像。 画像では PNG 形式のみがサポートされています。
 
@@ -66,7 +66,7 @@ Scene Studio のコンテキスト内のシーンは、次の要素を含む成�
 
 ![Scene studio](../assets/images/apps-in-meetings/scene-design-studio.png)
 
-**Scene Studio** を使用してシーンを構築するには
+Scene Studio を使用してシーンを構築するには、次の手順を実行します。
 
 1. [シーン エディター - Teams 開発者ポータル](https://dev.teams.microsoft.com/scenes)に移動します。
 
@@ -86,7 +86,7 @@ Scene Studio のコンテキスト内のシーンは、次の要素を含む成�
     ![環境に画像を追加する](../assets/images/apps-in-meetings/addimages.png)
 
     >[!NOTE]
-    > * [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip)をダウンロードし、[SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) ファイルをイメージと一緒にできます。
+    >[SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip)をダウンロードし、[SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) ファイルをイメージと一緒にできます。
 
 1. 追加したイメージを選択します。
 
@@ -212,7 +212,7 @@ Custom Together Mode シーンでは、現在の参加者の拡大表示がサ�
 
 ユーザーがカスタム Together Mode シーンでシーンを操作する方法について詳しく説明します。
 
-**シーンを選択し、カスタムの Together Mode シーンをアクティブ化するには**
+シーンを選択し、カスタムの Together Mode シーンをアクティブ化するには、次の手順を実行します。
 
 1. 新しいテスト会議を作成します。
 
@@ -230,7 +230,7 @@ Custom Together Mode シーンでは、現在の参加者の拡大表示がサ�
     >[!NOTE]
     > 任意の時点で、会議に同種のシーンが 1 つだけ使用されます。 発表者または開催者がシーンを変更すると、すべて変更されます。 カスタム Together Mode シーンの切り替えは個々の参加者に対して行われますが、カスタムの Together Mode シーンでは、すべての参加者が同じシーンを持っています。
 
-1. **[適用]** を選択します。 Teams はユーザー用のアプリをインストールし、シーンを適用します。
+1. **[適用]** を選択します。Teams はユーザー用のアプリをインストールし、シーンを適用します。
 
 ## <a name="open-a-custom-together-mode-scenes-scene-package"></a>カスタム Together Mode シーン パッケージを開く
 

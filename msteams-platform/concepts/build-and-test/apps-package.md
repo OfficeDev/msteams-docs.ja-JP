@@ -3,12 +3,12 @@ title: アプリをパッケージ化する
 description: テスト、アップロード、ストア発行用に Microsoft Teams アプリをパッケージ化する方法について説明します。
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: f3f725280e24296f1f2d9c919a14585e07d86c75
-ms.sourcegitcommit: 6e33289c55a1a83adb9b7b38c42d781c699786f7
+ms.openlocfilehash: 7b895f30230a71db5953ffebc5dce2aa04972abb
+ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62345393"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63356071"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>Microsoft Teams アプリ パッケージを作成する
 
@@ -25,13 +25,13 @@ Microsoft Teams アプリの配布を計画している場合は、アプリ パ
 
 ## <a name="app-manifest"></a>アプリ マニフェスト
 
-アプリ マニフェスト ファイルは、名前が付けられている状態で、パッケージのトップ レベルにある必要があります`manifest.json`。 
+アプリ マニフェスト ファイルは、名前が付けられている状態で、パッケージのトップ レベルにある必要があります`manifest.json`。
 
 Teams ストアに発行する場合は、マニフェストが最新の [スキーマ](~/resources/schema/manifest-schema.md)を参照していることを確認します。
 
 ## <a name="app-icons"></a>アプリのアイコン
 
-アプリ パッケージには、アプリ アイコンの 2 つの PNG バージョン (色とアウトライン バージョン) を含める必要があります。
+アプリ パッケージには、アプリ アイコンの 2 つの .png バージョン (色とアウトライン バージョン) を含める必要があります。
 
 > [!Note]
 > アプリにボットまたはメッセージング拡張機能がある場合は、アイコンもMicrosoft Azure Bot Service登録に含まれます。
