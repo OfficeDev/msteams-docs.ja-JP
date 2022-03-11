@@ -6,24 +6,24 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: エントリ ポイントの拡張性のユース ケースデバイス機能
-ms.openlocfilehash: 904b2b0ccf9ed815cbe750514818289b86a2f58b
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: 02a41631931f24fa23e2ddaaadaf2a94c63c5b23
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62898051"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399171"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Teams の機能を使用してアプリを計画する
 
 優れた Teams アプリを構築することは、ユーザーのニーズを満たす適切な機能の組み合わせを見つけることです。 アプリの設計、機能は、この目的から生まれています。
 
-その中心にあるのは、Teams はコラボレーション プラットフォームです。 また、ソーシャル プラットフォームでもあり、ネイティブにクロスプラットフォームであり、Office 365 の中心に位置し、アプリを作成するための個人用キャンバスを提供します。
+その中心にあるのは、Teams はコラボレーション プラットフォームです。また、ソーシャル プラットフォームでもあり、ネイティブにクロスプラットフォームであり、Office 365 の中心に位置し、アプリを作成するための個人用キャンバスを提供します。
 
 このセクションでは、次の方法について説明します:
 
- - ユース ケースを特定し、Teams の機能にマップする方法。
- - 計画チェックリストの使用法。
- - アプリの展開以外の計画を立てる方法。
+* ユース ケースを特定し、Teams の機能にマップする方法。
+* 計画チェックリストの使用法。
+* アプリの展開以外の計画を立てる方法。
 
 ## <a name="plan-with-teams"></a>Teams で計画する
 
@@ -31,28 +31,28 @@ ms.locfileid: "62898051"
 
 :::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="アプリの計画を示す図" border="true":::
 
-- [ビルド前](#before-you-build)
-- [ビルド中](#during-build)
-- [ビルド後](#post-build)
-- [計画チェックリスト](../concepts/design/planning-checklist.md)
+* [ビルド前](#before-you-build)
+* [ビルド中](#during-build)
+* [ビルド後](#post-build)
+* [計画チェックリスト](../concepts/design/planning-checklist.md)
 
 ### <a name="before-you-build"></a>ビルド前
 
 ユーザーとその懸念事項を理解することは、Teams アプリがどのように役立つかを示す最初の指標です。 問題に関するユース ケースを構築し、アプリで問題を解決する方法を決定し、ソリューションを描画します。
 
-- **ユース ケースと Teams アプリの機能を理解する**: ユーザーの要件を理解し、適切な機能を特定できます。
+* **ユース ケースと Teams アプリの機能を理解する**: ユーザーの要件を理解し、適切な機能を特定できます。
 
-- **ユース ケースのマッピング**: 共有、共同作業、ワークフロー、関連するソーシャル プラットフォームなどの要件に基づいて、一般的なユース ケースを Teams 機能にマップします。
+* **ユース ケースのマッピング**: 共有、共同作業、ワークフロー、関連するソーシャル プラットフォームなどの要件に基づいて、一般的なユース ケースを Teams 機能にマップします。
 
-- **Teams モバイルの応答性の高いタブを計画する**: 一般的なシナリオについて説明し、Teams モバイル用のアプリの計画に役立ちます。
+* **Teams モバイルの応答性の高いタブを計画する**: 一般的なシナリオについて説明し、Teams モバイル用のアプリの計画に役立ちます。
 
 ### <a name="during-build"></a>ビルド中
 
-- **アプリ プロジェクトの作成とビルド**: Teams を使用すると、アプリの要件に最適なビルド環境を選択できます。 Teams Toolkit やその他の SDK (C#、Blazor、Node.js など) を使用して作業を開始します。
+* **アプリ プロジェクトの作成とビルド**: Teams を使用すると、アプリの要件に最適なビルド環境を選択できます。 Teams Toolkit やその他の SDK (C#、Blazor、Node.js など) を使用して作業を開始します。
 
-- **アプリ UI のデザイン**: Teams UI Toolkit と UI ライブラリを使用してアプリのレイアウトをデザインします。
+* **アプリ UI のデザイン**: Teams UI Toolkit と UI ライブラリを使用してアプリのレイアウトをデザインします。
 
-- **Teams をプラットフォームとして使用**: Teams プラットフォームを使用すると、単一または複数機能のアプリを構築できます。 Teams アプリは、アプリ エクスペリエンスを強化する統合された製品とサービスによって支えられています。
+* **Teams をプラットフォームとして使用**: Teams プラットフォームを使用すると、単一または複数機能のアプリを構築できます。 Teams アプリは、アプリ エクスペリエンスを強化する統合された製品とサービスによって支えられています。
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Teams ソリューションの概念表現" border="true":::
 
@@ -60,12 +60,12 @@ ms.locfileid: "62898051"
 
     これらの機能を組み合わせることで、アプリ ソリューションが実現します。
 
-- **デバイス機能の統合**: カメラ、QR またはバーコード スキャナー、フォト ギャラリー、マイク、位置情報などのネイティブ デバイス機能をアプリに統合できます。
+* **デバイス機能の統合**: カメラ、QR またはバーコード スキャナー、フォト ギャラリー、マイク、位置情報などのネイティブ デバイス機能をアプリに統合できます。
 
 ### <a name="post-build"></a>ビルド後
 
-- アプリを Teams やその他のアプリ (Microsoft 365、Microsoft Graphなど) と統合します。
-- 開発者ポータルを使用して、アプリを構成、管理、デプロイします。
+* アプリを Teams やその他のアプリ (Microsoft 365、Microsoft Graphなど) と統合します。
+* 開発者ポータルを使用して、アプリを構成、管理、デプロイします。
 
 <details>
 <summary><b>Government Community Cloud (GCC) の詳細</b></summary>
@@ -78,7 +78,7 @@ Government Community Cloud は、政府機関向けの商用環境のコピー�
 |-------------|---------|---|---|
 | 社内で開発されたアプリと同様に、Teams が所有するアプリ | ✔️ アプリは、GCC がある場合有効です。 | ✔️ アプリは、GCC-High がある場合有効です。 | ✔️ アプリは、DOD がある場合有効です。 |
 | Microsoft アプリ | ✔️ GCC に準拠している Microsoft アプリ | ✔️ GCC-High に準拠している Microsoft アプリ | ✔️ DOD に準拠している Microsoft アプリ |
-| サードパーティ製アプリを許可する | ✔️ サード パーティ製アプリを利用できます。 既定では無効に設定されており、テナント管理者が独自の裁量で有効にします。 | ❌ | ❌ |
+| サードパーティ製アプリを許可する | ✔️ サードパーティのアプリが利用可能です。既定では無効に設定されており、テナント管理者が独自の裁量で有効にします。 | ❌ | ❌ |
 | ボット | ✔️ | ❌ | ❌ |
 | カスタム タブ アプリまたは LOB タブ アプリ |  ✔️ | ✔️ | ✔️ |
 | アプリのサイドローディング | ✔️ | ❌ | ❌ |
@@ -88,10 +88,10 @@ Government Community Cloud は、政府機関向けの商用環境のコピー�
 
 次のリストは、機能に対する GCC、GCC-High、および DOD の可用性を特定するのに役立ちます。
 
-- サード パーティ製アプリについては、「[Web Apps](../samples/integrating-web-apps.md)」および「[会議アプリ拡張性](../apps-in-teams-meetings/meeting-app-extensibility.md)」を参照してください。
-- ボットについては、「[ Teams の最初の会話ボットを構築する](../get-started/first-app-bot.md)」、「[Teams ボットの設計](../bots/design/bots.md)」、「[Microsoft Teams アプリにボットを追加する](../resources/bot-v3/bots-overview.md)」、「[Teams でのボット](../bots/what-are-bots.md)」を山荘してください。
-- アプリのサイド ローディングについては、「[カスタマイズする Teams アプリを有効にする](../concepts/design/enable-app-customization.md)」、「[Microsoft Teams アプリの配布](../concepts/deploy-and-publish/apps-publish-overview.md)」、「[Teams でアプリをアップロードする](../concepts/deploy-and-publish/apps-upload.md)」を参照してください。
-- カスタム コネクタについては、「[Teams 用 Office 365 コネクタの作成](../webhooks-and-connectors/how-to/connectors-creating.md)」を参照してください。
+* サード パーティ製アプリについては、「[Web Apps](../samples/integrating-web-apps.md)」および「[会議アプリ拡張性](../apps-in-teams-meetings/meeting-app-extensibility.md)」を参照してください。
+* ボットについては、「[ Teams の最初の会話ボットを構築する](../get-started/first-app-bot.md)」、「[Teams ボットの設計](../bots/design/bots.md)」、「[Microsoft Teams アプリにボットを追加する](../resources/bot-v3/bots-overview.md)」、「[Teams でのボット](../bots/what-are-bots.md)」を山荘してください。
+* アプリのサイド ローディングについては、「[カスタマイズする Teams アプリを有効にする](../concepts/design/enable-app-customization.md)」、「[Microsoft Teams アプリの配布](../concepts/deploy-and-publish/apps-publish-overview.md)」、「[Teams でアプリをアップロードする](../concepts/deploy-and-publish/apps-upload.md)」を参照してください。
+* カスタム コネクタについては、「[Teams 用 Office 365 コネクタの作成](../webhooks-and-connectors/how-to/connectors-creating.md)」を参照してください。
 
 </details>
 
@@ -102,6 +102,6 @@ Government Community Cloud は、政府機関向けの商用環境のコピー�
 
 ## <a name="see-also"></a>関連項目
 
-- [計画チェックリスト](../concepts/design/planning-checklist.md)
-- [Teams 統合に関する考慮事項](../samples/integrating-web-apps.md)
-- [最初の Microsoft Teams アプリを構築する](../build-your-first-app/build-first-app-overview.md)
+* [計画チェックリスト](../concepts/design/planning-checklist.md)
+* [Teams 統合に関する考慮事項](../samples/integrating-web-apps.md)
+* [最初の Microsoft Teams アプリを構築する](../build-your-first-app/build-first-app-overview.md)

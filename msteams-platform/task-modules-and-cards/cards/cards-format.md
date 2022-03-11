@@ -5,16 +5,17 @@ keywords: teams ボット カード書式
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: b0d171134b58606a2d9eefa81bf1b5c16d27138e
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 0c374904c122cfd9c35680763b3fccd30fea6bbb
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356442"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398737"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams のカードの書式設定
 
 カードにリッチ テキストの書式設定を追加する 2 つの方法を次に示します。
+
 * [markdown](#format-cards-with-markdown)
 * [HTML](#format-cards-with-html)
 
@@ -124,13 +125,14 @@ Android では、アダプティブ カード Markdown の書式設定が次の�
 
 :::image type="content" source="~/assets/images/cards/adaptive-card-emoji.png" alt-text="絵文字付きのアダプティブ カード" lightbox="../../assets/images/Cards/adaptive-card-emoji.png" border="true":::
 
-### <a name="mention-support-within-adaptive-cards"></a>アダプティブ カード内でのサポートのメンション 
+### <a name="mention-support-within-adaptive-cards"></a>アダプティブ カード内でのサポートのメンション
 
 ボットとメッセージング拡張機能の応答のために、アダプティブ カード本体内に @メンションを追加できます。 カードに @メンションを追加するには、[チャネルおよびグループ チャットの会話でのメッセージ ベースのメンション](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)と同じ通知ロジックとレンダリングに従います。
 
 ボットとメッセージング拡張機能には、カード コンテンツ内の [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) 要素と [FactSet](https://adaptivecards.io/explorer/FactSet.html) 要素に言及を含めることができます。
 
 > [!NOTE]
+>
 > * [メディア要素](https://adaptivecards.io/explorer/Media.html)は現在、Teams プラットフォームのアダプティブ カードではサポートされていません。
 > * チャネルとチームのメンションはボット メッセージではサポートされていません。
 
@@ -173,29 +175,29 @@ Android では、アダプティブ カード Markdown の書式設定が次の�
 }
 ```
 
-### <a name="microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention"></a>Microsoft Azure Active Directory (Azure AD) ユーザー メンションにおけるオブジェクト ID と UPN 
+### <a name="microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention"></a>Microsoft Azure Active Directory (Azure AD) ユーザー メンションにおけるオブジェクト ID と UPN
 
-Teams プラットフォームでは、既存の言及 ID に加えて、Azure AD オブジェクト ID とユーザー原則名 (UPN) を使用してユーザーに言及することができます。 アダプティブ カードを備えたボットと受信 Webhook を備えたコネクタは、2 つのユーザー メンション ID をサポートします。 
+Teams プラットフォームでは、既存の言及 ID に加えて、Azure AD オブジェクト ID とユーザー原則名 (UPN) を使用してユーザーに言及することができます。 アダプティブ カードを備えたボットと受信 Webhook を備えたコネクタは、2 つのユーザー メンション ID をサポートします。
 
 次の表に、新しくサポートされたユーザー メンション ID を示します。
 
-|ID  | サポート機能 |   説明 | 例 |
+|ID  | サポート機能 | 説明 | 例 |
 |----------|--------|---------------|---------|
-| Azure AD オブジェクト ID | ボット、コネクタ |  Azure AD ユーザーのオブジェクト ID を指定する |    49c4641c-ab91-4248-aebb-6a7de286397b |
+| Azure AD オブジェクト ID | ボット、コネクタ |  Azure AD ユーザーのオブジェクト ID を指定する | 49c4641c-ab91-4248-aebb-6a7de286397b |
 | UPN | ボット、コネクタ | Azure AD ユーザーの UPN | john.smith@microsoft.com |
 
-#### <a name="user-mention-in-bots-with-adaptive-cards"></a>アダプティブ カードを使用したボットでのユーザー メンション 
+#### <a name="user-mention-in-bots-with-adaptive-cards"></a>アダプティブ カードを使用したボットでのユーザー メンション
 
-ボットは、既存の ID に加えて、Azure AD オブジェクト ID と UPN を使用したユーザーのメンションをサポートします。 2 つの新しい ID のサポートは、テキスト メッセージ、アダプティブ カード本体、およびメッセージング拡張応答のボットで利用できます。 ボットは、会話および `invoke` シナリオでの言及 ID をサポートします。 ユーザーは、ID で @メンションされると、アクティビティ フィード通知を受け取ります。 
+ボットは、既存の ID に加えて、Azure AD オブジェクト ID と UPN を使用したユーザーのメンションをサポートします。 2 つの新しい ID のサポートは、テキスト メッセージ、アダプティブ カード本体、およびメッセージング拡張応答のボットで利用できます。 ボットは、会話および `invoke` シナリオでの言及 ID をサポートします。 ユーザーは、ID で @メンションされると、アクティビティ フィード通知を受け取ります。
 
 > [!NOTE]
 > ボットのアダプティブ カードを使用したユーザー メンションには、スキーマの更新と UI/UX の変更は必要ありません。
 
-##### <a name="example"></a>例 
+##### <a name="example"></a>例
 
 アダプティブ カードを使用するボットでのユーザー メンションの例は次のとおりです。
 
-```json 
+```json
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "version": "1.0",
@@ -233,15 +235,16 @@ Teams プラットフォームでは、既存の言及 ID に加えて、Azure A
 
 ![アダプティブ カードを使用したボットでのユーザー メンション](~/assets/images/authentication/user-mention-in-bot.png)
 
-#### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>アダプティブ カードを使用した受信 Webhook でのユーザー メンション 
+#### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>アダプティブ カードを使用した受信 Webhook でのユーザー メンション
 
 受信 Webhook は、Azure AD オブジェクト ID と UPN を使用したアダプティブ カードでのユーザー メンションをサポートし始めます。
 
-> [!NOTE]    
-> * 受信 Webhook のスキーマでユーザー メンションを有効にして、Azure AD オブジェクト ID と UPN をサポートします。 
-> * UI/UX の変更は、Azure AD オブジェクト ID および UPN を使用したユーザー メンションには必要ありません。      
+> [!NOTE]
+>
+> * 受信 Webhook のスキーマでユーザー メンションを有効にして、Azure AD オブジェクト ID と UPN をサポートします。
+> * UI/UX の変更は、Azure AD オブジェクト ID および UPN を使用したユーザー メンションには必要ありません。
 
-##### <a name="example"></a>例 
+##### <a name="example"></a>例
 
 受信 Webhook でのユーザー メンションの例を次に示します。
 
@@ -417,6 +420,7 @@ Teams プラットフォームでは、既存の言及 ID に加えて、Azure A
 ステージ ビューでは、ユーザーは画像を拡大および縮小できます。 この機能が必要なアダプティブ カードの画像を選択できます。
 
 > [!NOTE]
+>
 > * 拡大および縮小機能は、アダプティブ カードの画像の種類である画像要素にのみ適用されます。
 > * Teams モバイルア プリの場合、アダプティブ カードの画像のステージ ビュー機能が既定で利用できます。 ユーザーは、`allowExpand` 属性が存在するかどうかに関係なく、画像をタップするだけでアダプティブ カードの画像をステージ ビューで表示できます。
 
@@ -427,7 +431,7 @@ Teams プラットフォームでは、既存の言及 ID に加えて、Azure A
 | Style | 例 | Markdown |
 | --- | --- | --- |
 | 太字 | **text** | `**text**` |
-| 斜体 | *text* | `*text*` |
+| 斜体 | _text_ | `*text*` |
 | ヘッダー (レベル 1&ndash;3) | **Text** | `### Text`|
 | 取り消し線 | ~~text~~ | `~~text~~` |
 | 記号付きリスト | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
@@ -525,7 +529,7 @@ Android では、次の図に示すように、コネクタ カードの Markdow
 | Style | 例 | HTML |
 | --- | --- | --- |
 | 太字 | **text** | `<strong>text</strong>` |
-| 斜体 | *text* | `<em>text</em>` |
+| 斜体 | _text_ | `<em>text</em>` |
 | ヘッダー (レベル 1&ndash;3) | **Text** | `<h3>Text</h3>` |
 | 取り消し線 | ~~text~~ | `<strike>text</strike>` |
 | 記号付きリスト | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
@@ -615,7 +619,7 @@ HTML タグは、ヒーロー カードやサムネイル カードなどの簡�
 | Style | 例 | HTML |
 | --- | --- | --- |
 | 太字 | **text** | `<strong>text</strong>` |
-| 斜体 | *text* | `<em>text</em>` |
+| 斜体 | _text_ | `<em>text</em>` |
 | ヘッダー (レベル 1&ndash;3) | **Text** | `<h3>Text</h3>` |
 | 取り消し線 | ~~text~~ | `<strike>text</strike>` |
 | 記号付きリスト | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |

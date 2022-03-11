@@ -4,19 +4,19 @@ description: ディープ リンクとアプリでの使用方法について説
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams ディープ リンク ディープリンク
-ms.openlocfilehash: 624bc47887950e98e49aa834f0a040e7ee234045
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: 79be1bcc04c33234859c4b564c9211c699b148e1
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62897915"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399311"
 ---
-# <a name="create-deep-links"></a>ディープ リンクの作成 
+# <a name="create-deep-links"></a>ディープ リンクの作成
 
 Teams 内の情報や機能へのリンクを作成できます。 ディープ リンクの作成が役立つシナリオは次のとおりです。
 
 * アプリのタブの 1 つにあるコンテンツにユーザーを移動します。 たとえば、アプリには、ユーザーに重要なアクティビティを通知するメッセージを送信するボットを含めることができます。 ユーザーが通知をタップすると、ディープ リンクがタブに移動し、ユーザーがアクティビティの詳細を表示できるようになります。
-* アプリは、ディープ リンクに必要なパラメーターを事前に入力することで、チャットの作成や会議のスケジュール設定など、特定のユーザー タスクを自動化または簡素化します。 これにより、ユーザーが手動で情報を入力する必要がなくなります。
+* アプリは、ディープ リンクに必要なパラメーターを事前に入力することで、チャットの作成や会議のスケジュール設定など、特定のユーザー タスクを自動化または簡素化します。これにより、ユーザーが手動で情報を入力する必要がなくなります。
 
 > [!NOTE]
 >
@@ -38,12 +38,12 @@ Teams 内の情報や機能へのリンクを作成できます。 ディープ 
 
 Teams のエンティティへのディープ リンクを作成できます。 これは、タブ内のコンテンツや情報に移動するリンクを作成するために使用されます。 たとえば、タブにタスク リストが含まれている場合、チーム メンバーは個々のタスクへのリンクを作成して共有できます。 リンクを選択すると、特定のアイテムに焦点を当てたタブに移動します。 これを実装するには、各アイテムに **リンクのコピー** アクションを UI に最適な方法で追加します。 このアクションを実行すると、 `shareDeepLink()` を呼び出して、ユーザーがクリップボードにコピーできるリンクを含むダイアログボックスを表示します。 この呼び出しを行うと、アイテムの ID も渡されます。この ID は、リンクに従って、タブを再読み込みするとき、[コンテキスト](~/tabs/how-to/access-teams-context.md)に戻されます。
 
-または、このトピックで後述する形式を使用して、プログラミングして、ディープ リンクを作成することもできます。 タブまたはタブ内のアイテムへの変更についてユーザーに通知する[ボット](~/bots/what-are-bots.md)および[コネクター](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) メッセージでディープ リンクを使用できます。
+または、この記事で後述する形式を使用して、プログラミングして、ディープ リンクを作成することもできます。 タブまたはタブ内のアイテムへの変更についてユーザーに通知する[ボット](~/bots/what-are-bots.md)および[コネクター](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) メッセージでディープ リンクを使用できます。
 
 > [!NOTE]
 > このディープリンクは、**[タブへのリンクのコピー]** メニュー項目によって提供されるリンクとは異なります。このメニュー項目は、このタブを指すディープ リンクを生成するだけです。
 
->[!NOTE]
+>[!IMPORTANT]
 > 現在、shareDeepLinkは、モバイル プラットフォームでは機能しません。
 
 ### <a name="show-a-deep-link-to-an-item-within-your-tab"></a>タブ内のアイテムへのディープ リンクを表示する
@@ -59,10 +59,9 @@ Teams のエンティティへのディープ リンクを作成できます。 
 ### <a name="generate-a-deep-link-to-your-tab"></a>タブへのディープ リンクを生成する
 
 > [!NOTE]
-> 個人用タブには `personal` スコープがあり、チャネル タブとグループ タブには `team` または `group` スコープが使用されます。 構成可能なタブだけがコンテキスト オブジェクトに関連付けられている `channel` プロパティを持つため、2 つのタブの種類の構文はわずかに異なります。 タブスコープの詳細については、[マニフェスト](~/resources/schema/manifest-schema.md) リファレンスを参照してください。
-
-> [!NOTE]
-> ディープ リンクは、タブが v0.4 以降のライブラリを使用して構成されていて、そのためエンティティ ID がある場合にのみ正常に機能します。 エンティティ ID のないタブへのディープ リンクは引き続きタブに移動しますが、サブエンティティ ID をタブに提供することはできません。
+>
+> * 個人用タブには `personal` スコープがあり、チャネル タブとグループ タブには `team` または `group` スコープが使用されます。 構成可能なタブだけがコンテキスト オブジェクトに関連付けられている `channel` プロパティを持つため、2 つのタブの種類の構文はわずかに異なります。 タブスコープの詳細については、[マニフェスト](~/resources/schema/manifest-schema.md) リファレンスを参照してください。
+> * ディープ リンクは、タブが v0.4 以降のライブラリを使用して構成されていて、そのためエンティティ ID がある場合にのみ正常に機能します。 エンティティ ID のないタブへのディープ リンクは引き続きタブに移動しますが、サブエンティティ ID をタブに提供することはできません。
 
 ボット、コネクタ、またはメッセージング拡張カードで使用できるディープ リンクには、次の形式を使用します。
 
@@ -71,6 +70,17 @@ Teams のエンティティへのディープ リンクを作成できます。 
 > [!NOTE]
 > ボットがディープ リンクを使用して `TextBlock` を含むメッセージを送信する場合、ユーザーがリンクを選択すると、新しいブラウザー タブが開きます。 これは、Chrome および Microsoft Teams デスクトップ アプリ (いずれも Linux で実行されています) で発生します。
 > ボットが同じディープ リンク URL を `Action.OpenUrl` に送信した場合、ユーザーがリンクを選択すると、現在のブラウザ タブで Teams タブが開きます。 新しいブラウザー タブは開きません。
+
+<!--- TBD: Edit this article.
+* Admonitions/alerts seem to be overused. 
+* An important alert at the end of this table does not make sense. Also, it has a code snippet inside it.
+* List items in the table are not formatted well in output.
+* Some headings use -ing verbs.
+* Example values and some URLs should be in backticks and not emphasized.
+* Codeblock are missing language.
+* Check for markdownlint errors.
+* Table with just a row is not really needed. Provide the content without tabulating it.
+--->
 
 クエリ パラメーターは次のとおりです。
 
@@ -102,14 +112,14 @@ Teams のエンティティへのディープ リンクを作成できます。 
 * 構成可能なタブ内のタスク アイテムへのリンク: 
 
     >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
-    
-* 会議またはグループ チャットに追加されたタブ アプリへのリンク: 
+
+* 会議またはグループ チャットに追加されたタブ アプリへのリンク:
 
     >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456?context={"chatId": "17:b42de192376346a7906a7dd5cb84b673@thread.v2","contextType":"chat"}`
 
 > [!IMPORTANT]
 > すべてのクエリ パラメーターが適切に URI にエンコードされていることを確認します。 最後の例を使用して、前述の例に従う必要があります。
-
+>
 > ```javascript
 > var encodedWebUrl = encodeURI('https://tasklist.example.com/123/456&label=Task 456');
 > var encodedContext = encodeURI('{"subEntityId": "task456"}');
@@ -124,13 +134,13 @@ Teams のエンティティへのディープ リンクを作成できます。 
 
 ## <a name="deep-linking-from-your-tab"></a>タブからのディープ リンクの設定
 
-タブから Teams のコンテンツにディープリンクを指定できます。 これは、タブが、チャネル、メッセージ、別のタブなど、Teams の他のコンテンツにリンクする必要がある場合、またはスケジュール ダイアログを開く必要がある場合に役立ちます。 タブからディープリンクをトリガーするには、次のように呼び出す必要があります。
+タブから Teams のコンテンツにディープリンクを指定できます。 これは、タブが、チャネル、メッセージ、別のタブなど、Teams の他のコンテンツにリンクする必要がある場合、またはスケジュール ダイアログを開く必要がある場合に役立ちます。タブからディープリンクをトリガーするには、次の呼び出しを行います。
 
 ```Javascript
 microsoftTeams.executeDeepLink(/*deepLink*/);
 ```
 
-この呼び出しは、正しい URL に移動するか、スケジュールやアプリのインストール ダイアログを開くなどのクライアント アクションをトリガーします。 次の例を参照してください。
+この呼び出しは、正しい URL に移動するか、スケジュールやアプリのインストール ダイアログを開くなどのクライアント アクションをトリガーします。次の例を参照してください。
 
 ```Javascript
 // Open a scheduling dialog from your tab
@@ -170,26 +180,29 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 クエリ パラメーターは次のとおりです。
 
-* `fileId`: Sharepoint Online からの一意のファイル ID、別名 sourcedoc。 例: 1FA202A5-3762-4F10-B550-C04F81F6ACBD
-* `tenantId`: テナント ID (例: 0d9b645f-597b-41f0-a2a3-ef103fbd91bb)
-* `fileType`: docx、pptx、xlsx、pdf などのサポートされているファイルの種類
-* `objectUrl`: ファイルのオブジェクト URL。 形式は `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext` です。 たとえば、`https://microsoft.sharepoint.com/teams/(filepath)` のように指定します。
-* `baseUrl`: ファイルのベース URL。 形式は `https://{tenantName}.sharepoint.com/sites/{TeamName}` です。 たとえば、`https://microsoft.sharepoint.com/teams` のように指定します。
-* `serviceName`: サービスの名前、アプリ ID。 例: teams。
-* `threadId`: threadId は、ファイルが保存されているチームのチーム ID です。 これはオプションであり、ユーザーの OneDrive フォルダーに保存されているファイルには設定できません。 threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
-* `groupId`: ファイルのグループ ID ae063b79-5315-4ddb-ba70-27328ba6c31e 
+* `fileId`: Sharepoint Online の一意のファイル ID (`sourcedoc` とも呼ばれます)。 たとえば、`1FA202A5-3762-4F10-B550-C04F81F6ACBD` などです。
+* `tenantId`: `0d9b645f-597b-41f0-a2a3-ef103fbd91bb` などのテナント ID。
+* `fileType`: .docx、.pptx、.xlsx、.pdf などのサポートされているファイルの種類
+* `objectUrl`: ファイルのオブジェクト URL。 形式は `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext` です。 たとえば、「 `https://microsoft.sharepoint.com/teams/(filepath)` 」のように入力します。
+* `baseUrl`: ファイルのベース URL。 形式は `https://{tenantName}.sharepoint.com/sites/{TeamName}` です。 たとえば、「 `https://microsoft.sharepoint.com/teams` 」のように入力します。
+* `serviceName`: サービスの名前、アプリ ID。たとえば、`teams` などです。
+* `threadId`: threadId は、ファイルが保存されているチームのチーム ID です。 これはオプションであり、ユーザーの OneDrive フォルダーに保存されているファイルには設定できません。 threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype.
+* `groupId`: ファイルのグループ ID。 たとえば、`ae063b79-5315-4ddb-ba70-27328ba6c31e` となります。
 
 > [!NOTE]
 > チャネルからの URL に `threadId` と `groupId` が表示されます。  
 
-次のディープ リンク形式は、ボット、コネクタ、またはメッセージング拡張カードで使用されます: `https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
+次のディープ リンク形式は、ボット、コネクタ、またはメッセージング拡張カードで使用されます: 
+
+`https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
 次のフォーマット例は、ファイルへのディープリンクを示しています。
 
 `https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=0d9b645f-597b-41f0-a2a3-ef103fbd91bb&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
 
-### <a name="serialization-of-this-object"></a>このオブジェクトのシリアル化:
-```
+### <a name="serialization-of-this-object"></a>このオブジェクトのシリアル化
+
+```javascript
 {
 fileId: "5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80",
 tenantId: "0d9b645f-597b-41f0-a2a3-ef103fbd91bb",
@@ -204,7 +217,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ## <a name="deep-linking-to-an-app"></a>アプリへのディープ リンク
 
-アプリが Teams ストアにリストされたら、アプリのディープリンクを作成します。 Teams を起動するためのリンクを作成するには、アプリ ID を次の URL に追加します: `https://teams.microsoft.com/l/app/<your-app-id>`。 アプリをインストールするダイアログ ボックスが表示されます。 
+アプリが Teams ストアにリストされたら、アプリのディープリンクを作成します。 Teams を起動するためのリンクを作成するには、アプリ ID を次の URL に追加します: `https://teams.microsoft.com/l/app/<your-app-id>`。 アプリをインストールするダイアログ ボックスが表示されます。
   
 ## <a name="deep-linking-for-sharepoint-framework-tabs"></a>SharePoint Framework タブのディープ リンク
 
@@ -216,13 +229,13 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 クエリ パラメーターは次のとおりです。
 
-* `appID`: マニフェスト ID、たとえば **fe4a8eba-2a31-4737-8e33-e5fae6fee194**。
+* `appID`: マニフェスト ID、たとえば `fe4a8eba-2a31-4737-8e33-e5fae6fee194`。
 
-* `entityID`: [タブを構成する](~/tabs/how-to/create-tab-pages/configuration-page.md)ときに提供したアイテム ID。 たとえば、**tasklist123** です。
+* `entityID`: [タブを構成する](~/tabs/how-to/create-tab-pages/configuration-page.md)ときに提供したアイテム ID。 たとえば、`tasklist123` です。
 * `entityWebUrl`: クライアントがタブのレンダリングをサポートしていない場合に使用するフォールバック URL を含むオプションのフィールド - `https://tasklist.example.com/123`または `https://tasklist.example.com/list123/task456`。
 * `entityName`: ディープ リンク、タスク リスト 123 またはタスク 456 を表示するときに使用するタブ内のアイテムのラベル。
 
-例: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
+例: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList`
 
 ## <a name="deep-linking-to-the-scheduling-dialog"></a>スケジュール設定ダイアログへのディープ リンク
 
@@ -249,13 +262,13 @@ Teams の組み込みのスケジューリング ダイアログへのディー�
 * `content`: 会議の詳細フィールドの省略可能なフィールド。
 
 > [!NOTE]
-> 現在、場所の指定はサポートされていません。 UTC オフセットを指定する必要があります。これは、開始時刻と終了時刻を生成するときのタイム ゾーンを意味します。
+> 現在、場所の指定はサポートされていません。UTC オフセットを指定する必要があります。これは、開始時刻と終了時刻を生成するときのタイム ゾーンを意味します。
 
 ボットとのこのディープ リンクを使用するには、カードのボタンで URL を対象として指定するか、[ `openUrl` アクションの種類] で [アクション] をタップします。
 
 ## <a name="deep-linking-to-an-audio-or-audio-video-call"></a>音声通話または音声ビデオ通話へのディープ リンク
 
-コールタイプを *オーディオ* または *av* として指定し、参加者を指定することで、単一のユーザーまたはユーザー グループに対して音声のみまたは音声ビデオ通話を呼び出すためのディープ リンクを作成できます。 ディープ リンクが呼び出された後、呼び出しを行う前に、Team sデスクトップ クライアントは電話をかけるための確認を求めます。 グループ通話の場合、同じディープリンク呼び出しで一連の VoIP ユーザーと一連の PSTN ユーザーを呼び出すことができます。 
+コールタイプを *オーディオ* または *av* として指定し、参加者を指定することで、単一のユーザーまたはユーザー グループに対して音声のみまたは音声ビデオ通話を呼び出すためのディープ リンクを作成できます。 ディープ リンクが呼び出された後、呼び出しを行う前に、Teams クライアントは電話をかけるための確認を求めます。 グループ通話の場合、同じディープリンク呼び出しで一連の VoIP ユーザーと一連の PSTN ユーザーを呼び出すことができます。
 
 ビデオ通話の場合、クライアントは確認を求め、通話の発信者のビデオをオンにします。 通話の受信者は、Teams の通話通知ウィンドウを使用して、音声のみで応答するか、音声とビデオで応答するかを選択できます。
 
@@ -266,14 +279,15 @@ Teams の組み込みのスケジューリング ダイアログへのディー�
 
 | ディープ リンク | フォーマット | 例 |
 |-----------|--------|---------|
-| 音声通話を行う | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,&lt;user2&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com |
-| 音声またはビデオ通話を開始する | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,&lt;user2&gt;&withVideo=true | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true |
-|オプションのパラメータ ソースを使用して音声通話とビデオ通話を発信する | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,&lt;user2&gt;&withVideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true&source=demoApp |  
-| VoIP ユーザーと PSTN ユーザーの組み合わせに音声通話とビデオ通話を発信する | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,4:&lt;phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com、4:9876543210 |
+| 音声通話を行う | `https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>` | `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com` |
+| 音声またはビデオ通話を開始する | `https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>&withVideo=true` | `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true` |
+|オプションのパラメータ ソースを使用して音声通話とビデオ通話を発信する | `https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>&withVideo=true&source=demoApp` | `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true&source=demoApp` |  
+| VoIP ユーザーと PSTN ユーザーの組み合わせに音声通話とビデオ通話を発信する | `https://teams.microsoft.com/l/call/0/0?users=<user1>,4:<phonenumber>` | `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210` |
   
 クエリ パラメーターは次のとおりです。
+
 * `users`: 通話の参加者を表すユーザー ID のコンマで区切られたリスト。 現在、[ユーザー ID] フィールドは Azure AD UserPrincipalName (通常はメール アドレス) をサポートしています。PSTN 通話の場合は、pstn mri 4: &lt;phonenumber&gt; をサポートしています。
-* `withVideo`: これはオプションのパラメータであり、ビデオ通話を行うために使用できます。 このパラメータを設定すると、発信者のカメラだけがオンになります。 通話の受信者は、Teams の通話通知ウィンドウから音声通話または音声通話とビデオ通話を選択できます。 
+* `withVideo`: これはオプションのパラメータであり、ビデオ通話を行うために使用できます。 このパラメータを設定すると、発信者のカメラだけがオンになります。 通話の受信者は、Teams の通話通知ウィンドウから音声通話または音声通話とビデオ通話を選択できます。
 * `Source`: これはオプションのパラメーターで、ディープリンクのソースを通知します。
 
 ## <a name="code-sample"></a>コード サンプル

@@ -5,12 +5,12 @@ description: アプリを計画し、ユーザーとそのニーズを理解し�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 6bd2bd7d4c9016d99ae653f9ca6889f661806a8e
-ms.sourcegitcommit: 3d7b34e7032b6d379eca8f580d432b365c8be840
+ms.openlocfilehash: 117ad5a99662194fef0707ff355d129e4b487cfe
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "62898155"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63399059"
 ---
 # <a name="understand-your-use-cases"></a>ユース ケースを理解する
 
@@ -31,7 +31,7 @@ ms.locfileid: "62898155"
 
 ## <a name="microsoft-teams-app-features"></a>Microsoft Teams アプリの機能
 
-Teams を拡張する方法は複数あり、アプリごとに異なります。 Teams アプリの機能は次の機能を提供します。
+Teams を拡張する方法は複数あり、アプリごとに異なります。Teams アプリの機能は次の機能を提供します。
 
 - [アプリの機能](#app-capabilities)
 - [アプリのスコープ](#app-scope)
@@ -163,7 +163,7 @@ Web ベースのコンテンツを[タブ](../../tabs/what-are-tabs.md)に表示
 
 > [!NOTE]
 > Teams ストアが進化しました。
-> 
+>
 > 以前は、タイルの省略記号を選択すれば LOB アプリが更新されました。 Teams ストア エクスペリエンスが更新され、[Teams 管理センター](https://admin.teams.microsoft.com)にログインして LOB アプリを更新できるようになりました。
 
 ### <a name="app-scope"></a>アプリのスコープ
@@ -173,7 +173,7 @@ Web ベースのコンテンツを[タブ](../../tabs/what-are-tabs.md)に表示
 - **個人用アプリ エクスペリエンス**: 個人用アプリは、ユーザーが自分のタスクに集中したり、重要なアクティビティを表示したりするのに役立つ専用のスペースまたはボットです。
 - **共有アプリ エクスペリエンス**: Teams、チャネル、およびチャットは共同作業スペースです。 これらのコンテキストのアプリは、そのスペース内のすべてのユーザーが利用できます。 通常、共同作業スペースでは、アプリの操作や新しい社会的対話の実現に重点が置かれます。
 
-アプリは、さまざまなスコープにまたがって存在できます。 例:
+アプリは、さまざまなスコープにまたがって存在できます。次に例を示します。
 
 - アプリは、中央の共有場所 (タブ) にデータを表示できます。
 - また、同じ情報を個人の会話インターフェイス (ボット) を介して表示することもできます。
