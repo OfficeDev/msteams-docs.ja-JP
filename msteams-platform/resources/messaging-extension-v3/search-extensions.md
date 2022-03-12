@@ -5,12 +5,12 @@ keywords: teams メッセージング拡張機能メッセージング拡張機�
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: ecaa841e6f8870b7e7c9284535082c4ec08112f2
-ms.sourcegitcommit: 9bdd930523041377b52dadffbd8cd52a86a047d7
+ms.openlocfilehash: dca01a22d4479d1f7c59689c5321483371c4aff2
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "62443987"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453713"
 ---
 # <a name="search-with-messaging-extensions"></a>メッセージング拡張機能を使用して検索する
 
@@ -24,11 +24,11 @@ ms.locfileid: "62443987"
 
 [!include[common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
-### <a name="search-type-message-extensions"></a>検索の種類のメッセージ拡張機能
+## <a name="search-type-message-extensions"></a>検索の種類のメッセージ拡張機能
 
 検索ベースのメッセージング拡張機能では、パラメーターをに `type` 設定します `query`。 次に、1 つの検索コマンドを使用するマニフェストの例を示します。 1 つのメッセージング拡張機能には、最大 10 種類のコマンドを関連付けできます。 これには、複数の検索と複数のアクション ベースのコマンドの両方が含まれます。
 
-#### <a name="complete-app-manifest-example"></a>アプリ マニフェストの完全な例
+### <a name="complete-app-manifest-example"></a>アプリ マニフェストの完全な例
 
 ```json
 {
@@ -85,11 +85,11 @@ ms.locfileid: "62443987"
 }
 ```
 
-### <a name="test-via-uploading"></a>アップロードによるテスト
+## <a name="test-via-uploading"></a>アップロードによるテスト
 
 メッセージング拡張機能をテストするには、アプリをアップロードします。
 
-メッセージング拡張機能を開くには、チャットまたはチャネルに移動します。 作成ボックス **で [その****他**&#8943;] ボタンを選択し、メッセージング拡張機能を選択します。
+メッセージング拡張機能を開くには、チャットまたはチャネルに移動します。 作成ボックス **で [その****他** の&#8943;] ボタンを選択し、メッセージング拡張機能を選択します。
 
 ## <a name="add-event-handlers"></a>イベント ハンドラーの追加
 
@@ -97,7 +97,7 @@ ms.locfileid: "62443987"
 
 マニフェストでに設定`canUpdateConfiguration``true`した場合は、メッセージング拡張機能 **設定メニュー項目** を有効にし、およびを処理する必要`onQuerySettingsUrl`があります。`onSettingsUpdate`
 
-### <a name="handle-onquery-events"></a>onQuery イベントの処理
+## <a name="handle-onquery-events"></a>onQuery イベントの処理
 
 メッセージング拡張機能は、メッセージング拡張機能 `onQuery` ウィンドウで何かが発生した場合、またはウィンドウに送信された場合にイベントを受け取ります。
 
@@ -109,7 +109,7 @@ ms.locfileid: "62443987"
 
 ハンドラーの残りの部分では `onQuery` 、ユーザーに情報の入力を求め、プレビュー カードの一覧を表示し、ユーザーが選択したカードを返します。
 
-### <a name="handle-onquerysettingsurl-and-onsettingsupdate-events"></a>onQuerySettingsUrl イベントと onSettingsUpdate イベントの処理
+## <a name="handle-onquerysettingsurl-and-onsettingsupdate-events"></a>onQuerySettingsUrl イベントと onSettingsUpdate イベントの処理
 
 イベント`onQuerySettingsUrl`とイベント`onSettingsUpdate`が一緒に機能して **、設定を** 有効にできます。
 
@@ -123,7 +123,7 @@ ms.locfileid: "62443987"
 
 ### <a name="receive-user-requests"></a>ユーザー要求の受信
 
-ユーザーがクエリを実行すると、Microsoft Teams標準的な Bot Framework オブジェクトが送信`Activity`されます。 サービスは、次の`Activity` `name` `type` `invoke` `composeExtension`表に示すように、サポートされている型に設定されているロジックを実行する必要があります。
+ユーザーがクエリを実行すると、Microsoft Teams標準の Bot Framework オブジェクトがサービスに送信`Activity`されます。 サービスは、次の`Activity` `name` `type` `invoke` `composeExtension`表に示すように、サポートされている型に設定されているロジックを実行する必要があります。
 
 標準のボット アクティビティ プロパティに加えて、ペイロードには次の要求メタデータが含まれます。
 
@@ -195,7 +195,7 @@ ms.locfileid: "62443987"
 
 ### <a name="receive-requests-from-links-inserted-into-the-compose-message-box"></a>作成メッセージ ボックスに挿入されたリンクから要求を受信する
 
-外部サービスの検索に代わる (または追加) として、作成メッセージ ボックスに挿入された URL を使用してサービスにクエリを実行し、カードを返します。 下のスクリーンショットでは、ユーザーがメッセージング拡張機能がカードに解決したAzure DevOpsワーク アイテムの URL に貼り付けます。
+外部サービスの検索に代わる (または追加) として、作成メッセージ ボックスに挿入された URL を使用してサービスにクエリを実行し、カードを返します。 下のスクリーンショットでは、メッセージング拡張機能がカードに解決されたAzure DevOpsアイテムの URL に貼り付けます。
 
 ![リンクの分岐解除の例](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
@@ -261,7 +261,7 @@ ms.locfileid: "62443987"
 
 サムネイルカードとヒーロー カードの種類を使用する方法については、「Add [card and card actions」を参照してください](~/task-modules-and-cards/cards/cards-actions.md)。
 
-コネクタ カードの詳細については、「Office 365コネクタ カードの[使用Office 365参照してください](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)。
+コネクタ カードの詳細については、「Office 365コネクタ カードの使用[Office 365参照してください](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)。
 
 結果リストは、各アイテムのプレビュー Microsoft Teams UI に表示されます。 プレビューは、次の 2 つの方法で生成されます。
 
@@ -272,7 +272,7 @@ ms.locfileid: "62443987"
 
 #### <a name="response-example"></a>応答の例
 
-次の使用例は、2 つの結果を持つ応答を示し、異なるカード形式 (コネクタとアダプティブOffice 365混在しています。 応答で `preview` `attachments` 1 つのカード形式に固執する場合は、コレクション内の各要素のプロパティが、前述のようにヒーロー形式またはサムネイル形式でプレビューを明示的に定義する必要がある方法を示しています。
+次の使用例は、2 つの結果を持つ応答を示しています。異なるカード形式が混在しています。Office 365アダプティブです。 応答で `preview` `attachments` 1 つのカード形式に固執する場合は、コレクション内の各要素のプロパティが、前述のようにヒーロー形式またはサムネイル形式でプレビューを明示的に定義する必要がある方法を示しています。
 
 ```json
 {
@@ -454,7 +454,7 @@ ms.locfileid: "62443987"
 シーケンスは次のとおりです。
 
 1. ユーザーがクエリを発行するか、既定のクエリがサービスに自動的に送信されます。
-2. サービスは、ユーザーが最初にユーザー ID を調Teamsチェックします。
+2. サービスは、ユーザーが最初にユーザー ID を調Teamsします。
 3. ユーザーが認証されていない場合は、`auth``openUrl`認証 URL を含む推奨されるアクションを含む応答を返します。
 4. クライアントMicrosoft Teams、指定した認証 URL を使用して Web ページをホストするポップアップ ウィンドウを起動します。
 5. ユーザーがサインインした後、ウィンドウを閉じて、"認証コード" をクライアントにTeamsします。
@@ -492,7 +492,7 @@ ms.locfileid: "62443987"
 
 サインイン エクスペリエンスは応答性が高く、ポップアップ ウィンドウ内に収まる必要があります。 メッセージの受け渡しを[Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) と統合する必要があります。
 
-他の埋め込みエクスペリエンスが Microsoft Teamsで実行されている場合と同様に、ウィンドウ内のコードは最初に呼び出す必要があります`microsoftTeams.initialize()`。 コードで OAuth フローを実行する場合は、Teams ユーザー ID をウィンドウに渡し、OAuth サインイン URL に渡します。
+他の埋め込みエクスペリエンスMicrosoft Teams、ウィンドウ内のコードを最初に呼び出す必要があります`microsoftTeams.initialize()`。 コードで OAuth フローを実行する場合は、Teams ユーザー ID をウィンドウに渡し、OAuth サインイン URL に渡します。
 
 ### <a name="complete-the-sign-in-flow"></a>サインイン フローを完了する
 
@@ -556,7 +556,7 @@ ms.locfileid: "62443987"
 
 ### <a name="net"></a>.NET
 
-.NET `invoke` 用ボット ビルダー SDK を使用してクエリを受信および処理するには、受信アクティビティのアクションの種類を確認し、NuGet パッケージ [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) のヘルパー メソッドを使用して、メッセージング拡張機能アクティビティかどうかを判断できます。
+ボット ビルダー SDK for .NET `invoke` を使用してクエリを受信および処理するには、受信アクティビティのアクションの種類を確認してから、NuGet パッケージ [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) のヘルパー メソッドを使用して、メッセージング拡張機能アクティビティかどうかを判断できます。
 
 #### <a name="example-code-in-net"></a>.NET のコード例
 

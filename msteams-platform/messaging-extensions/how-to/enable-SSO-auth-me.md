@@ -5,15 +5,15 @@ description: コード サンプルを使用してメッセージング拡張機
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: a0aaae8637a80dd2e6f48cf9ae3081b4e796824f
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 3543d86d15755642a1617e07514db95a6a812313
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435699"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453468"
 ---
 # <a name="single-sign-on-support-for-messaging-extensions"></a>メッセージング拡張機能のシングル サインオンのサポート
- 
+
 シングル サインオン (SSO) のサポートは、メッセージング拡張機能とリンク解除で利用できます。 メッセージング拡張機能のシングル サインオンを既定で有効にすると、認証トークンが更新され、Microsoft Teams のサインイン資格情報を入力する必要がある回数が最小限に抑Microsoft Teams。
 
 このドキュメントでは、SSO を有効にして、必要に応じて認証トークンを保存する方法についてガイドします。
@@ -23,7 +23,7 @@ ms.locfileid: "62435699"
 メッセージング拡張機能とリンクの分岐解除に SSO を有効にする前提条件は次のとおりです。
 
 * Azure アカウントが [必要](https://azure.microsoft.com/free/) です。
-* Azure AD ポータルを使用してアプリを構成し、Teams ポータルを通じてアプリを登録するで定義されているボットのアプリケーション マニフェストを[Azure ADがあります](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-azure-ad-portal)。
+* Azure AD ポータルを使用してアプリを構成し、Teams ポータルを通じてアプリを登録するで定義されているボットのアプリケーション [マニフェストをAzure ADがあります](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-azure-ad-portal)。
 
 > [!NOTE]
 > Azure アカウントの作成とアプリ マニフェストの更新の詳細については、「シングル サインオン [(SSO) ボットのサポート」を参照してください](../../bots/how-to/authentication/auth-aad-sso-bots.md)。
@@ -32,7 +32,8 @@ ms.locfileid: "62435699"
 
 前提条件が完了したら、メッセージング拡張機能の SSO を有効にし、リンクを解除できます。
 
-**SSO を有効にするには**
+SSO を有効にするには、次の方法を実行します。
+
 1. ボットの [OAuth](../../bots/how-to/authentication/auth-aad-sso-bots.md#update-the-azure-portal-with-the-oauth-connection) 接続の詳細をポータルで更新Microsoft Azureします。
 2. メッセージング拡張機能 [のサンプルをダウンロードし、](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) ウィザードによって提供されるセットアップ手順に従います。
    > [!NOTE]
@@ -41,7 +42,7 @@ ms.locfileid: "62435699"
 
     > [!NOTE]
     > TeamsMessagingExtensionsSearchAuthConfigBot.cs ファイル以外の他のハンドラー SSO `OnTeamsMessagingExtensionQueryAsync` `OnTeamsAppBasedLinkQueryAsync` はサポートされていません。
-   
+
 4. 次に示す SSO を `OnTeamsMessagingExtensionQueryAsync` `turnContext.Activity.Value` `OnTeamsAppBasedLinkQueryAsync`有効にするシナリオに応じて、ペイロード内またはペイロード内のハンドラーでトークンを受け取る。
 
     ```json
@@ -55,7 +56,7 @@ ms.locfileid: "62435699"
      ```
   
     OAuth 接続を使用している場合は、次のコードを TeamsMessagingExtensionsSearchAuthConfigBot.cs ファイルに追加して、トークンをストアに更新または追加します。
-    
+
    ```C#
    protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
         {
@@ -114,7 +115,7 @@ ms.locfileid: "62435699"
             return true;
         }
     
-    ```    
+    ```
 
 ## <a name="see-also"></a>関連項目
 

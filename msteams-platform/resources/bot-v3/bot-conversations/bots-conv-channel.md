@@ -1,16 +1,16 @@
 ---
 title: ボットとのチャネルチャットとグループ チャットの会話
-description: チャネル内でボットと会話を行うエンドツーエンドのシナリオについて説明Microsoft Teams
+description: チャネル内のボットと会話を行うエンドツーエンドのシナリオについて説明Microsoft Teams
 keywords: チームのシナリオ チャネルの会話ボット
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/25/2019
-ms.openlocfilehash: 8e4336e8b0db7c6c720b8fb7adcb281685b6a6ba
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 1b9d25b7ce6bc30c980634510b5fca7c60f155ef
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156516"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453811"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Microsoft Teams ボットとのチャネルおよびグループ チャット会話
 
@@ -22,41 +22,41 @@ Microsoft Teamsは、ユーザーが自分のチャネルまたはグループ �
 
 ## <a name="designing-a-great-bot-for-channels-or-groups"></a>チャネルまたはグループに最適なボットを設計する
 
-チームに追加されたボットは、別のチーム メンバーになり、会話@mentionedに使用できます。 実際、ボットはメッセージを受信するときにのみ受信@mentioned、チャネル上の他の会話はボットに送信されません。
+チームに追加されたボットは別のチーム メンバーになり、会話の@mentionedとして使用できます。 実際、ボットはメッセージを受信する@mentioned、チャネル上の他の会話はボットに送信されません。
 
 グループまたはチャネルのボットは、すべてのメンバーに関連する適切な情報を提供する必要があります。 ボットはエクスペリエンスに関連する情報を確実に提供することができますが、ボットとの会話は誰にでも表示されます。 したがって、グループまたはチャネルの優良なボットは、すべてのユーザーに価値を追加し、1 対 1 の会話に適した情報を誤って共有する必要があります。
 
-ボットは、同様に、追加の作業を必要とせずに、すべてのスコープで完全に関連している可能性があります。 このMicrosoft Teams、すべてのスコープでボットが機能するとは思いもよらありませんが、ボットがサポートを選択したスコープでユーザー値を提供する必要があります。 スコープの詳細については、「App [in Microsoft Teams」を参照してください](~/concepts/build-and-test/app-studio-overview.md)。
+ボットは、同様に、追加の作業を必要とせずに、すべてのスコープで完全に関連している可能性があります。 このMicrosoft Teams、すべてのスコープでボットが機能するとは思いもよらありませんが、ボットがサポートするスコープでユーザー値を提供する必要があります。 スコープの詳細については、「アプリ」を参照[Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md)。
 
-グループまたはチャネルで動作するボットの開発では、個人の会話と同じ機能の多くを使用します。 ペイロード内の追加のイベントとデータは、Teamsチャネル情報を提供します。 これらの違い、および一般的な機能の主な違いについては、次のセクションで説明します。
+グループまたはチャネルで動作するボットの開発では、個人の会話と同じ機能の多くを使用します。 ペイロード内の追加のイベントとデータは、グループTeamsチャネル情報を提供します。 これらの違い、および一般的な機能の主な違いについては、次のセクションで説明します。
 
 ### <a name="creating-messages"></a>メッセージの作成
 
-チャネルでメッセージを作成するボットの詳細については、「 [ボットのプロ](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)アクティブ メッセージング」および「特にチャネル会話の作成 [」を参照してください](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md#creating-a-channel-conversation)。
+チャネルでメッセージを作成するボットの詳細については、「 [Proactive Messaging for bots](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)」および「特にチャネル会話を作成 [する」を参照してください](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md#creating-a-channel-conversation)。
 
 ### <a name="receiving-messages"></a>メッセージの受信
 
-グループまたはチャネル内のボットの場合、通常のメッセージ[](https://docs.botframework.com/core-concepts/reference/#activity)スキーマに加えて、ボットは次のプロパティも受け取ります。
+グループまたはチャネル内のボットの場合、通常のメッセージ スキーマ[](https://docs.botframework.com/core-concepts/reference/#activity)に加えて、ボットは次のプロパティも受け取ります。
 
-* `channelData`「チャネル[Teams」を参照してください](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data)。 グループ チャットには、そのチャットに固有の情報が含まれる。
+* `channelData`「チャネル [Teams」を参照してください](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data)。 グループ チャットには、そのチャットに固有の情報が含まれる。
 * `conversation.id` チャネル ID と返信チェーン内の最初のメッセージの ID で構成される応答チェーン ID。
 * `conversation.isGroup` チャネル `true` またはグループ チャットのボット メッセージ用です。
-* `conversation.conversationType` どちらか `groupChat` `channel` または .
+* `conversation.conversationType` どちらか `groupChat` または `channel`.
 * `entities` 1 つ以上のメンションを含めできます。 詳細については、「メンション」 [を参照してください](#-mentions)。
 
 ### <a name="replying-to-messages"></a>メッセージへの返信
 
-既存のメッセージに返信するには [`ReplyToActivity`](/bot-framework/dotnet/bot-builder-dotnet-connector#send-a-reply) 、.NET を呼び出すか、Node.js。 [`session.send`](/bot-framework/nodejs/bot-builder-nodejs-use-default-message-handler) ボット ビルダー SDK は、すべての詳細を処理します。
+既存のメッセージに返信するには、 [`ReplyToActivity`](/bot-framework/dotnet/bot-builder-dotnet-connector#send-a-reply) .NET [`session.send`](/bot-framework/nodejs/bot-builder-nodejs-use-default-message-handler) を呼び出すか、Node.js。 ボット ビルダー SDK は、すべての詳細を処理します。
 
-REST API を使用する場合は、エンドポイントを呼び出 [`/conversations/{conversationId}/activities/{activityId}`](/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-the-reply) することもできます。
+REST API を使用する場合は、エンドポイントを呼び出することもできます [`/conversations/{conversationId}/activities/{activityId}`](/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-the-reply) 。
 
-チャネルでは、メッセージに返信すると、開始する返信チェーンへの返信として表示されます。 チャネル `conversation.id` とトップ レベルのメッセージ ID が含まれる。 ボット フレームワークは詳細を処理しますが、必要に応じて、その会話スレッドに対する今後の返信のためにキャッシュ `conversation.id` できます。
+チャネルでは、メッセージに返信すると、開始する返信チェーンへの返信として表示されます。 チャネル `conversation.id` とトップ レベルのメッセージ ID が含まれる。 ボット フレームワークは詳細を処理しますが `conversation.id` 、必要に応じて、その会話スレッドに対する今後の返信のためにキャッシュできます。
 
 ### <a name="best-practice-welcome-messages-in-teams"></a>ベスト プラクティス: ウェルカム メッセージ (Teams
 
-ボットが最初にグループまたはチームに追加される場合は、通常、ボットを紹介するウェルカム メッセージをすべてのユーザーに送信すると便利です。 ウェルカム メッセージには、ボットの機能とユーザーの利点の説明が記載されている必要があります。 理想的には、メッセージには、ユーザーがアプリを操作するためのコマンドも含める必要があります。 これを行うには、ボットがメッセージに応答し、オブジェクトに `conversationUpdate` `teamsAddMembers` eventType が含まれることを確認 `channelData` します。 ユーザーがチームに追加された場合に同じイベントが送信されるので、ID がボットのアプリ ID 自体 `memberAdded` である必要があります。 詳細については [、「チーム メンバーまたはボットの追加」](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) を参照してください。
+ボットが最初にグループまたはチームに追加される場合は、通常、ボットを紹介するウェルカム メッセージをすべてのユーザーに送信すると便利です。 ウェルカム メッセージには、ボットの機能とユーザーの利点の説明が記載されている必要があります。 理想的には、メッセージには、ユーザーがアプリを操作するためのコマンドも含める必要があります。 これを行うには、ボットがメッセージ`conversationUpdate``teamsAddMembers`に応答し、オブジェクトに eventType が含まれることを確認`channelData`します。 ユーザーがチームに `memberAdded` 追加された場合に同じイベントが送信されるので、ID がボットのアプリ ID 自体である必要があります。 詳細については [、「チーム メンバーまたはボットの追加」](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) を参照してください。
 
-ボットを追加するときに、チームの各メンバーに個人用メッセージを送信する場合があります。 これを行うには、チーム名 [簿を](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) フェッチし、各ユーザーに直接メッセージを [送信します](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)。
+ボットを追加するときに、チームの各メンバーに個人用メッセージを送信する場合があります。 これを行うには、チーム名 [簿を](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) 取得し、各ユーザーに直接メッセージを [送信します](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)。
 
 次の状況では *、ボットが* ウェルカム メッセージを送信しなかすることをお勧めします。
 
@@ -67,11 +67,11 @@ REST API を使用する場合は、エンドポイントを呼び出 [`/convers
 
 ## <a name="-mentions"></a>@ メンション
 
-グループまたはチャネル内のボットは、メッセージに ("@_botname_") と記載されている場合にのみ応答しますので、グループ チャネル内のボットによって受信されるメッセージには、その名前が含まれているため、メッセージ解析で処理を行う必要があります。 さらに、ボットは、メッセージの一部として言及された他のユーザーを解析し、ユーザーに言及することもできます。
+グループまたはチャネル内のボットは、メッセージに ("@*botname*") と記載されている場合にのみ応答しますので、グループ チャネル内のボットによって受信されるメッセージには、その名前が含まれているため、メッセージ解析で処理を行う必要があります。 さらに、ボットは、メッセージの一部として言及された他のユーザーを解析し、ユーザーに言及することもできます。
 
 ### <a name="retrieving-mentions"></a>メンションの取得
 
-メンションはペイロード内のオブジェクトで返され、ユーザーの一意の ID と、ほとんどの場合、言及されたユーザーの `entities` 名前の両方が含まれます。 メッセージ内のすべてのメンションを取得するには、オブジェクトの配列を返す .NET 用ボット ビルダー SDK で関数 `GetMentions` を呼び出 `Mentioned` します。
+メンションはペイロード内の `entities` オブジェクトで返され、ユーザーの一意の ID と、ほとんどの場合、言及されたユーザーの名前の両方が含まれます。 メッセージ内のすべてのメンションを `GetMentions` 取得するには、オブジェクトの配列を返す .NET 用ボット ビルダー SDK で関数を呼び出 `Mentioned` します。
 
 #### <a name="net-example-code-check-for-and-strip-bot-mention"></a>.NET サンプル コード: メンションの確認と@botする
 
@@ -92,7 +92,7 @@ for (int i = 0;i < m.Length;i++)
 ```
 
 > [!NOTE]
-> ボットを含むすべてのTeamsを取り除く拡張機能を使用 `GetTextWithoutMentions` することもできます。
+> ボットを含むすべてのTeams`GetTextWithoutMentions`を取り除く拡張機能を使用することもできます。
 
 #### <a name="nodejs-example-code-check-for-and-strip-bot-mention"></a>Node.jsコードの例: メンションの確認と@botする
 
@@ -108,14 +108,14 @@ if (message.entities) {
 }
 ```
 
-ボットを含むすべてのTeamsを取り除く拡張機能を使用 `getTextWithoutMentions` することもできます。
+ボットを含むすべてのTeams`getTextWithoutMentions`を取り除く拡張機能を使用することもできます。
 
 ### <a name="constructing-mentions"></a>メンションの作成
 
 ボットは、チャネルに投稿されたメッセージで他のユーザーに言及できます。 これを行うには、メッセージで次の操作を行う必要があります。
 
 * メッセージ `<at>@username</at>` テキストに含める。
-* エンティティ コレクション `mention` 内にオブジェクトを含める。
+* エンティティ コレクション内 `mention` にオブジェクトを含める。
 
 #### <a name="net-example"></a>.NET の例
 
@@ -195,7 +195,7 @@ session.send(generalMessage);
 
 ## <a name="accessing-groupchat-or-channel-scope"></a>groupChat またはチャネル スコープへのアクセス
 
-ボットは、グループやチームでメッセージを送受信する以上の操作を実行できます。 たとえば、メンバーのリスト (プロファイル情報を含む) とチャネルのリストをフェッチすることもできます。 詳細については、「Get [context for your Microsoft Teams ボット」を参照してください](~/resources/bot-v3/bots-context.md)。
+ボットは、グループやチームでメッセージを送受信する以上の操作を実行できます。 たとえば、メンバーのリスト (プロファイル情報を含む) とチャネルのリストをフェッチすることもできます。 詳細については、「Get [context for your Microsoft Teamsボット」を参照してください](~/resources/bot-v3/bots-context.md)。
 
 ## <a name="see-also"></a>関連項目
 

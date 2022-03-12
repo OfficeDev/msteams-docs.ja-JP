@@ -4,12 +4,12 @@ description: コード サンプルを使用したユニバーサル アクシ�
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 284fda042d5862929004f7809aea9080d0c5d3fd
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 472620da2bcd15f34b111afe170eb74e31e64492
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356365"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453111"
 ---
 # <a name="user-specific-views"></a>ユーザー固有のビュー
 
@@ -64,7 +64,7 @@ ms.locfileid: "63356365"
 }
 ```
 
-**アダプティブ カードを送信するには、ユーザー固有のビューを更新し、ボットに要求を呼び出します。**
+アダプティブ カードを送信するには、ユーザー固有のビューを更新し、ボットに要求を呼び出します。
 
 1. Megan が新しいインシデントを作成すると、ボットはアダプティブ カードまたは共通カードにインシデントの詳細を送信し、Teamsします。
 2. これで、このカードは、Megan と Alex のユーザー固有のビューに自動的に更新されます。 Alex と Megan のユーザー MRIs `userIds` `refresh` は、アダプティブ カード JSON のプロパティのプロパティに追加されます。 カードは、会話内の他のユーザーに対して同じままです。
@@ -216,7 +216,7 @@ const cardRes = {
 
 ```
 
----
+***
 
 ユーザー固有のビューを設計する際に注意するカード設計ガイドライン:
 

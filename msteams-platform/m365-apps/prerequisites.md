@@ -2,12 +2,12 @@
 title: 複数のアプリを拡張するために、Teams環境をMicrosoft 365
 description: アプリを複数のユーザーにまたがって拡張Teams前提条件を次に示Microsoft 365
 ms.date: 02/11/2022
-ms.openlocfilehash: eec44e149e81b420c507b0580896d2c5a4a99cc2
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 1f9b893c185d7cbae249ccc77de2a52cbdcb409a
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356001"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452740"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>複数のアプリを拡張するために、Teams環境をMicrosoft 365
 
@@ -19,6 +19,7 @@ ms.locfileid: "63356001"
 開発環境をセットアップするには:
 
 > [!div class="checklist"]
+>
 > * [開発者 (Microsoft 365) テナントを取得し、サイドローディングを有効にする](#prepare-a-developer-tenant-for-testing)
 > * [ターゲットリリースMicrosoft 365にOffice 365 *テナントを登録する*](#enroll-your-developer-tenant-for-office-365-targeted-releases)
 > * [プレビュー バージョンのプレビュー バージョンにアクセスするアカウントを構成Outlook Office](#install-office-apps-in-your-test-environment)
@@ -48,7 +49,7 @@ ms.locfileid: "63356001"
     1. **選択したユーザーのターゲット リリース**
 
     :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="Microsoft 365 管理センターを選択した場合の [リリースの基本設定] メニュー":::
-    
+
 1. **[保存]** を選択します。
 
 リリース オプションの詳細Office 365、ヘルプの「標準リリースオプションまたはターゲット リリース オプションを設定 [する」](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true#targeted-release)*をMicrosoft 365 管理センターしてください*。
@@ -71,7 +72,7 @@ ms.locfileid: "63356001"
 1. ファイル **を開** > **Office** **AccountAbout** >  Outlook。  
    ビルド番号が **14416** 以上で、チャネルがベータ チャネルの場合は、ベータ Microsoft 365ビルドを実行しています。
 1. 右上隅で、[近日] トグル **をオン** にします。
-    
+
     :::image type="content" source="images/outlook-coming-soon.png" alt-text="[近日公開] トグル オプション (Outlook":::
 
 > [!NOTE]
@@ -108,5 +109,5 @@ Teams Toolkit (`v2.10.0`[Visual Studio Code](https://aka.ms/teams-toolkit)以降
 
 ## <a name="next-steps"></a>次の手順
 
-- [Office と Outlook の [Teams パーソナル] タブを有効にする](extend-m365-teams-personal-tab.md)
-- [Outlook の Teams メッセージングの拡張機能を有効にする](extend-m365-teams-message-extension.md)
+* [Office と Outlook の [Teams パーソナル] タブを有効にする](extend-m365-teams-personal-tab.md)
+* [Outlook の Teams メッセージングの拡張機能を有効にする](extend-m365-teams-message-extension.md)

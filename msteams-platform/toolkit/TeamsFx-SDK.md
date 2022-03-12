@@ -6,31 +6,37 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
+ms.openlocfilehash: 1e78827d4105eefb112bef40d059804a94050f2d
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453622"
 ---
-
 # <a name="teamsfx-sdk-for-typescript-or-javascript"></a>TeamsFx SDK for TypeScript または JavaScript
 
 TeamsFx は、ID の実装とクラウド リソースへのアクセスのタスクを、構成がゼロの単一行ステートメントに減らすことを目的とします。
 
 ライブラリを使用して、次のコマンドを実行します。
 
-- 同様の方法でクライアント環境とサーバー環境のコア機能にアクセスします。
-- 簡単な方法でユーザー認証コードを記述します。
+* 同様の方法でクライアント環境とサーバー環境のコア機能にアクセスします。
+* 簡単な方法でユーザー認証コードを記述します。
 
 ## <a name="get-started"></a>作業の開始
 
-TeamsFx SDK は、TeamsFx ツールキットまたは CLI を使用してスキャフォールディング されたプロジェクトで事前に構成されています。
-詳細については、「アプリ プロジェクトの[Teams参照してください](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md)。
+TeamsFx SDK は、TeamsFx ツールキットまたは CLI を使用してスキャフォールディングされたプロジェクトで事前構成されています。
+詳細については、「アプリ プロジェクトTeams[参照してください](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md)。
 
 ### <a name="prerequisites"></a>前提条件
 
-- Node.js以降 `10.x.x` のバージョン。
-- プロジェクトに関連パッケージが`botbuilder` [](https://github.com/Microsoft/botbuilder-js#packages) `>= 4.9.3`依存関係としてインストールされている場合は、同じバージョンであり、バージョンが . ([問題 - すべての BOTBUILDER パッケージが同じバージョンである必要があります](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
+* Node.js以降 `10.x.x` のバージョン。
+* プロジェクトに関連パッケージが`botbuilder` [](https://github.com/Microsoft/botbuilder-js#packages) `>= 4.9.3`依存関係としてインストールされている場合は、同じバージョンであり、バージョンが . ([問題 - すべての BOTBUILDER パッケージが同じバージョンである必要があります](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
 
 詳細については、以下を参照してください。
-* [ソース コード](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk) 
-* [パッケージ (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) 
-* [API リファレンス ドキュメント](https://aka.ms/teamsfx-sdk-help) 
+
+* [ソース コード](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk)
+* [パッケージ (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx)
+* [API リファレンス ドキュメント](https://aka.ms/teamsfx-sdk-help)
 * [サンプル](https://github.com/OfficeDev/TeamsFx-Samples)
 
 ### <a name="install-the-microsoftteamsfx-package"></a>パッケージの `@microsoft/teamsfx` インストール
@@ -45,7 +51,7 @@ npm install @microsoft/teamsfx
 
 Microsoft Graph API にアクセスするためのグラフ クライアント オブジェクトを作成するには、認証する資格情報が必要です。 SDK には、さまざまな要件を満たす資格情報クラスがいくつか用意されています。 資格情報を使用する前に構成を読み込む必要があります。
 
-- ブラウザー環境では、構成パラメーターを明示的に渡す必要があります。 プロジェクトのスキャフォールReact、使用する環境変数が用意されています。
+* ブラウザー環境では、構成パラメーターを明示的に渡す必要があります。 プロジェクトのスキャフォールReact、使用する環境変数が用意されています。
 
 ```ts
 loadConfiguration({
@@ -56,7 +62,7 @@ loadConfiguration({
 });
 ```
 
-- Azure Function のような NodeJS 環境では、 を呼び出すだけでできます `loadConfiguration`。 既定では、環境変数から読み込めます。
+* Azure Function のような NodeJS 環境では、 を呼び出すだけでできます `loadConfiguration`。 既定では、環境変数から読み込めます。
 
 ```ts
 loadConfiguration();
@@ -77,12 +83,13 @@ const credential = new TeamsUserCredential();
 const graphClient = createMicrosoftGraphClient(credential, ["User.Read"]); // Initializes MS Graph SDK using our MsGraphAuthProvider
 const profile = await graphClient.api("/me").get();
 ```
+
 > [!NOTE]
 > この資格情報クラスは、ブラウザー アプリケーション (Tab App など) でTeams使用できます。
 
 #### <a name="using-microsoft-365-tenant-credential"></a>テナントMicrosoft 365の使用
 
-Microsoft 365資格情報は、アプリ ユーザーと対話するTeams必要ない。 アプリケーションとして Microsoft Graph呼び出します。
+Microsoft 365資格情報は、アプリ ユーザーと対話するTeams必要とします。 アプリケーションとして Microsoft Graph呼び出しできます。
 
 次のスニペットを使用します。
 
@@ -135,7 +142,7 @@ try {
 }
 ```
 
-また、資格情報インスタンスが Microsoft Graphなどの他のライブラリで使用されている場合は、エラーがキャッチされ、変換される可能性があります。
+また、資格情報インスタンスが Microsoft Graph などの他のライブラリで使用されている場合は、エラーがキャッチされ、変換される可能性があります。
 
 ```ts
 try {
@@ -196,8 +203,8 @@ const response = await axios.default.get(apiConfig.endpoint + "api/httptrigger1"
 
 ### <a name="access-sql-database-in-azure-function"></a>Azure 関数SQLデータベースへのアクセス
 
-ライブラリを`tedious`使用して、認証を管理SQL管理するリソースに`DefaultTediousConnectionConfiguration`アクセスし、活用します。
-別に`tedious`、. の結果に基づいて、他SQLライブラリの接続構成を作成できます`sqlConnectionConfig.getConfig()`。
+ライブラリを`tedious`使用して、認証を管理するSQLに`DefaultTediousConnectionConfiguration`アクセスし、活用します。
+別に`tedious`、 の結果に基づいて、他のSQLライブラリの接続構成を作成できます`sqlConnectionConfig.getConfig()`。
 
 ```ts
 loadConfiguration();

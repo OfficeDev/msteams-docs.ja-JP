@@ -6,32 +6,32 @@ keywords: タブの余白の余白の削除
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 5540354405c87d829245dfb01629aa8f06a5e93d
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 7260c0baf6a33b69988d07cb6d0aef7f90b6c62f
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888077"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452838"
 ---
 # <a name="tab-margin-changes"></a>タブ余白の変更
 
-このドキュメントでは、アプリの構築エクスペリエンスを向上させる方法について説明Microsoft Teamsタブの余白を削除する方法について説明します。 これは、2021 年にMicrosoft Teams拡張機能です。
+このドキュメントでは、アプリの作成エクスペリエンスを向上させる方法について説明Microsoft Teamsタブの余白を削除する方法について説明します。 これは、2021 年にMicrosoft Teams拡張機能です。
 すべてのタブの余白を削除することで、Teamsネイティブに見えるアプリを作成できます。 余白が削除されたタブは、Microsoft Teams [UI キットのデザインと一致します](~/tabs/design/tabs.md)。 ほとんどのアプリでは、余白のない外観が強化されています。
 
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="タブの wit と余白なし" border="false":::
 
 > [!NOTE]
-> モバイル クライアントで表示されるタブに余白が含まれるので、この機能はモバイル クライアントには適用されません。 
+> モバイル クライアントで表示されるタブに余白が含まれるので、この機能はモバイル クライアントには適用されません。
 
 ## <a name="guidelines"></a>ガイドライン
 
 タブ余白の削除は、タブをTeamsアプリに影響します。 このような場合は、必要なタブ デザインの周囲に余白を追加できます。 実稼働環境のアプリデザインには、追加のパディング効果があります。つまり、タブによって提供される余白Teams余白が提供されます。ただし、余分なパディングは一時的なだけであり、数週間で消え、アプリが提供するパディングだけが残されます。
 
-## <a name="faq"></a>FAQ
+## <a name="faq"></a>よくあるご質問 (FAQ)
 
 **ヘッダー バーやタスク バーなどのアプリクロムがデザインの端に触れても問題ないか。**
 
-はい、これは問題ありませんが、Teamsを推奨します。 アプリがネイティブと感じるのに役立ちます。
+はい、これは問題ありませんが、Teams推奨されます。 アプリがネイティブと感じるのに役立ちます。
 
 **テキスト、ロゴ、画像などのアプリ コンテンツがデザインの左右の端に触れても問題ないか。**
 
@@ -44,8 +44,9 @@ ms.locfileid: "60888077"
 * 下: 0px
 
 > [!IMPORTANT]
+>
 > * すべてのタブには、個人用タブ、(グループ) チャット タブ、会議タブ、チャネル タブなど、余白が削除されています。
-> * タブ余白の削除の変更は、すべてのタブに適用されます。 変更をオプトインまたはオプトアウトする方法はありません。 
+> * タブ余白の削除の変更は、すべてのタブに適用されます。 変更をオプトインまたはオプトアウトする方法はありません。
 > * タブ 余白の変更は、UI を囲む余白Microsoft Teamsに依存するタブに影響を与える可能性があります。
 
 ## <a name="see-also"></a>関連項目

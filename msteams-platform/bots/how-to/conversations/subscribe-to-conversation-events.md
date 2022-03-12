@@ -1,17 +1,17 @@
 ---
 title: 会話イベント
 author: WashingtonKayaker
-description: コード サンプルを使用して、Microsoft Teams ボットからの会話イベント、チャネル イベントの更新、チーム メンバー イベント、およびメッセージの反応イベントを処理する方法。
+description: コード サンプルを使用して、Microsoft Teams ボットからの会話イベント、チャネル イベントの更新、チーム メンバー イベント、メッセージの反応イベントを処理する方法。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: イベント ボット チャネル メッセージの反応の会話
-ms.openlocfilehash: 4cb48c73b139ece4d16f935b611701def35e89b7
-ms.sourcegitcommit: 7209e5af27e1ebe34f7e26ca1e6b17cb7290bc06
+ms.openlocfilehash: 8052ec921a0e0e72ea6b64323ec713b84d18d18d
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62212546"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453447"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams ボットの会話イベント
 
@@ -29,6 +29,7 @@ ms.locfileid: "62212546"
 会話の更新イベントを使用して、通知の向上とボットの効果的なアクションを提供できます。
 
 > [!IMPORTANT]
+>
 > * いつでも新しいイベントを追加し、ボットがイベントの受信を開始できます。
 > * 予期しないイベントを受け取るボットを設計する必要があります。
 > * ボット フレームワーク SDK を使用している場合、ボットは処理しないイベントに対して自動的 `200 - OK` に応答します。
@@ -51,7 +52,7 @@ ms.locfileid: "62212546"
 | チャネルの復元    | channelRestored    | OnTeamsChannelRestoredAsync | [チャネルが復元されます](#channel-deleted)。 | チーム |
 | メンバーが追加されました   | membersAdded   | OnTeamsMembersAddedAsync   | [メンバーが追加されます](#team-members-added)。 | すべて |
 | 削除されたメンバー | membersRemoved | OnTeamsMembersRemovedAsync | [メンバーが削除されます](#team-members-removed)。 | groupChat とチーム |
-| チャットの名前が変更されました        | teamRenamed       | OnTeamsTeamRenamedAsync    | [チームの名前が変更されました](#team-renamed)。       | チーム |
+| チャットの名前が変更されました        | teamRenamed       | OnTeamsTeamRenamedAsync    | [チームの名前が変更されます](#team-renamed)。       | チーム |
 | チームが削除されました        | teamDeleted       | OnTeamsTeamDeletedAsync    | [チームが削除されます](#team-deleted)。       | チーム |
 | チームがアーカイブされました        | teamArchived       | OnTeamsTeamArchivedAsync    | [チームがアーカイブされます](#team-archived)。       | チーム |
 | チームのアーカイブが解除されました        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [チームはアーカイブ解除されます](#team-unarchived)。       | チーム |
@@ -135,13 +136,13 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_channel_created(
-    self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+ self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
 ):
-    return await turn_context.send_activity(
-        MessageFactory.text(
-            f"The new channel is {channel_info.name}. The channel id is {channel_info.id}"
-        )
-    )
+ return await turn_context.send_activity(
+  MessageFactory.text(
+   f"The new channel is {channel_info.name}. The channel id is {channel_info.id}"
+  )
+ )
 ```
 
 ---
@@ -219,11 +220,11 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_channel_renamed(
-    self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+ self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
 ):
-    return await turn_context.send_activity(
-        MessageFactory.text(f"The new channel name is {channel_info.name}")
-    )
+ return await turn_context.send_activity(
+  MessageFactory.text(f"The new channel name is {channel_info.name}")
+ )
 ```
 
 ---
@@ -303,11 +304,11 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_channel_deleted(
-    self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+ self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
 ):
-    return await turn_context.send_activity(
-        MessageFactory.text(f"The deleted channel is {channel_info.name}")
-    )
+ return await turn_context.send_activity(
+  MessageFactory.text(f"The deleted channel is {channel_info.name}")
+ )
 ```
 
 ---
@@ -390,13 +391,13 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_channel_restored(
-    self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+ self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
 ):
-    return await turn_context.send_activity(
-        MessageFactory.text(
-            f"The restored channel is {channel_info.name}. The channel id is {channel_info.id}"
-        )
-    )
+ return await turn_context.send_activity(
+  MessageFactory.text(
+   f"The restored channel is {channel_info.name}. The channel id is {channel_info.id}"
+  )
+ )
 ```
 
 ---
@@ -534,23 +535,23 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_members_added(
-    self, teams_members_added: [TeamsChannelAccount], turn_context: TurnContext
+ self, teams_members_added: [TeamsChannelAccount], turn_context: TurnContext
 ):
-    for member in teams_members_added:
-        await turn_context.send_activity(
-            MessageFactory.text(f"Welcome your new team member {member.id}")
-        )
-    return
+ for member in teams_members_added:
+  await turn_context.send_activity(
+   MessageFactory.text(f"Welcome your new team member {member.id}")
+  )
+ return
 ```
 
 ---
 
 ### <a name="team-members-removed"></a>チーム メンバーが削除されました
 
-イベント `teamMemberRemoved` は、チームから削除された場合にボットに送信されます。 イベントは、ボットがメンバーであるチームからユーザーが削除される度にボットに送信されます。 削除された新しいメンバーがボット自体またはユーザーかどうかを確認するには、 `Activity` のオブジェクトを確認します `turnContext` 。  オブジェクトのフィールドがオブジェクトのフィールドと同じ場合、削除されたメンバーはボット、それ以外の場合は `Id` `MembersRemoved` `Id` `Recipient` ユーザーです。 ボットの一般的 `Id` な設定はです `28:<MicrosoftAppId>` 。
+イベント `teamMemberRemoved` は、チームから削除された場合にボットに送信されます。 イベントは、ボットがメンバーであるチームからユーザーが削除される度にボットに送信されます。 削除された新しいメンバーがボット自体またはユーザーかどうかを確認するには、 のオブジェクト `Activity` を確認します `turnContext`。  オブジェクトの `Id` フィールドがオブジェクト `MembersRemoved` `Id` `Recipient` のフィールドと同じ場合、削除されたメンバーはボット、それ以外の場合はユーザーです。 ボットの一般的 `Id` な設定はです `28:<MicrosoftAppId>`。
 
 > [!NOTE]
-> ユーザーがテナントから完全に削除されると、 `membersRemoved conversationUpdate` イベントがトリガーされます。
+> ユーザーがテナントから完全に削除されると `membersRemoved conversationUpdate` 、イベントがトリガーされます。
 
 次のコードは、チーム メンバーが削除したイベントの例を示しています。
 
@@ -601,7 +602,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-次のペイロード例のオブジェクトは、グループ チャットではなくチームにメンバーを追加するか、新しい 1 対 1 の会話を `channelData` 開始します。
+次 `channelData` のペイロード例のオブジェクトは、グループ チャットではなくチームにメンバーを追加するか、新しい 1 対 1 の会話を開始します。
 
 ```json
 {
@@ -646,20 +647,20 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_members_removed(
-    self, teams_members_removed: [TeamsChannelAccount], turn_context: TurnContext
+ self, teams_members_removed: [TeamsChannelAccount], turn_context: TurnContext
 ):
-    for member in teams_members_removed:
-        await turn_context.send_activity(
-            MessageFactory.text(f"Say goodbye to {member.id}")
-        )
-    return
+ for member in teams_members_removed:
+  await turn_context.send_activity(
+   MessageFactory.text(f"Say goodbye to {member.id}")
+  )
+ return
 ```
 
 ---
 
 ### <a name="team-renamed"></a>チャットの名前が変更されました
 
-チームの名前が変更された場合、ボットに通知されます。 オブジェクトで `conversationUpdate` イベントを `eventType.teamRenamed` 受け取 `channelData` ります。
+チームの名前が変更された場合、ボットに通知されます。 オブジェクトでイベント `conversationUpdate` を受 `eventType.teamRenamed` け取 `channelData` ります。
 
 次のコードは、チーム名が変更されたイベントの例を示しています。
 
@@ -728,18 +729,18 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_team_renamed(
-    self, team_info: TeamInfo, turn_context: TurnContext
+ self, team_info: TeamInfo, turn_context: TurnContext
 ):
-    return await turn_context.send_activity(
-        MessageFactory.text(f"The new team name is {team_info.name}")
-    )
+ return await turn_context.send_activity(
+  MessageFactory.text(f"The new team name is {team_info.name}")
+ )
 ```
 
 ---
 
 ### <a name="team-deleted"></a>チームが削除されました
 
-チームが削除された場合、ボットに通知されます。 オブジェクトで `conversationUpdate` イベントを `eventType.teamDeleted` 受け取 `channelData` ります。
+チームが削除された場合、ボットに通知されます。 オブジェクトでイベント `conversationUpdate` を受 `eventType.teamDeleted` け取 `channelData` ります。
 
 次のコードは、チームが削除したイベントの例を示しています。
 
@@ -805,17 +806,17 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_team_deleted(
-    self, team_info: TeamInfo, turn_context: TurnContext
+ self, team_info: TeamInfo, turn_context: TurnContext
 ):
-    //handle delete event
-    )
+ //handle delete event
+ )
 ```
 
 ---
 
 ### <a name="team-restored"></a>チームの復元
 
-削除後にチームが復元された場合、ボットは通知を受け取ります。 オブジェクトで `conversationUpdate` イベントを `eventType.teamrestored` 受け取 `channelData` ります。
+削除後にチームが復元された場合、ボットは通知を受け取ります。 オブジェクトでイベント `conversationUpdate` を受 `eventType.teamrestored` け取 `channelData` ります。
 
 次のコードは、チームが復元したイベントの例を示しています。
 
@@ -884,18 +885,18 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_team_restored(
-    self, team_info: TeamInfo, turn_context: TurnContext
+ self, team_info: TeamInfo, turn_context: TurnContext
 ):
-    return await turn_context.send_activity(
-        MessageFactory.text(f"The team name is {team_info.name}")
-    )
+ return await turn_context.send_activity(
+  MessageFactory.text(f"The team name is {team_info.name}")
+ )
 ```
 
 ---
 
 ### <a name="team-archived"></a>チームがアーカイブされました
 
-チームがインストールおよびアーカイブされた場合、ボットは通知を受け取ります。 オブジェクトで `conversationUpdate` イベントを `eventType.teamarchived` 受け取 `channelData` ります。
+チームがインストールおよびアーカイブされた場合、ボットは通知を受け取ります。 オブジェクトでイベント `conversationUpdate` を受 `eventType.teamarchived` け取 `channelData` ります。
 
 次のコードは、チーム アーカイブ イベントの例を示しています。
 
@@ -964,19 +965,18 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_team_archived(
-    self, team_info: TeamInfo, turn_context: TurnContext
+ self, team_info: TeamInfo, turn_context: TurnContext
 ):
-    return await turn_context.send_activity(
-        MessageFactory.text(f"The team name is {team_info.name}")
-    )
+ return await turn_context.send_activity(
+  MessageFactory.text(f"The team name is {team_info.name}")
+ )
 ```
 
 ---
 
-
 ### <a name="team-unarchived"></a>チームのアーカイブが解除されました
 
-チームがインストールされ、アーカイブ解除された場合、ボットは通知を受け取ります。 オブジェクトで `conversationUpdate` イベントを `eventType.teamUnarchived` 受け取 `channelData` ります。
+チームがインストールされ、アーカイブ解除された場合、ボットは通知を受け取ります。 オブジェクトでイベント `conversationUpdate` を受 `eventType.teamUnarchived` け取 `channelData` ります。
 
 次のコードは、チームのアーカイブ解除イベントの例を示しています。
 
@@ -1045,11 +1045,11 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_team_unarchived(
-    self, team_info: TeamInfo, turn_context: TurnContext
+ self, team_info: TeamInfo, turn_context: TurnContext
 ):
-    return await turn_context.send_activity(
-        MessageFactory.text(f"The team name is {team_info.name}")
-    )
+ return await turn_context.send_activity(
+  MessageFactory.text(f"The team name is {team_info.name}")
+ )
 ```
 
 ---
@@ -1058,7 +1058,7 @@ async def on_teams_team_unarchived(
 
 ## <a name="message-reaction-events"></a>メッセージの反応イベント
 
-ユーザーがボットから送信されたメッセージに対する反応を追加または削除すると、イベント `messageReaction` が送信されます。 メッセージ `replyToId` の ID を含み、テキスト形式 `Type` の反応の種類を指定します。 反応の種類には、怒り、心、笑い、例えば、悲しい、驚くなどです。 このイベントには、元のメッセージの内容は含めされません。 メッセージに対する処理の反応がボットにとって重要な場合は、メッセージを送信するときにメッセージを保存する必要があります。 次の表に、イベントの種類とペイロード オブジェクトの詳細を示します。
+ユーザー `messageReaction` がボットから送信されたメッセージに対する反応を追加または削除すると、イベントが送信されます。 メッセージ `replyToId` の ID を含み、テキスト `Type` 形式の反応の種類を指定します。 反応の種類には、怒り、心、笑い、例えば、悲しい、驚くなどです。 このイベントには、元のメッセージの内容は含めされません。 メッセージに対する処理の反応がボットにとって重要な場合は、メッセージを送信するときにメッセージを保存する必要があります。 次の表に、イベントの種類とペイロード オブジェクトの詳細を示します。
 
 | EventType       | Payload オブジェクト   | 説明                                                             | 範囲 |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
@@ -1157,21 +1157,21 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_reactions_added(
-    self, message_reactions: List[MessageReaction], turn_context: TurnContext
+ self, message_reactions: List[MessageReaction], turn_context: TurnContext
 ):
-    for reaction in message_reactions:
-        activity = await self._log.find(turn_context.activity.reply_to_id)
-        if not activity:
-            await self._send_message_and_log_activity_id(
-                turn_context,
-                f"Activity {turn_context.activity.reply_to_id} not found in log",
-            )
-        else:
-            await self._send_message_and_log_activity_id(
-                turn_context,
-                f"You added '{reaction.type}' regarding '{activity.text}'",
-            )
-    return
+ for reaction in message_reactions:
+  activity = await self._log.find(turn_context.activity.reply_to_id)
+  if not activity:
+   await self._send_message_and_log_activity_id(
+    turn_context,
+    f"Activity {turn_context.activity.reply_to_id} not found in log",
+   )
+  else:
+   await self._send_message_and_log_activity_id(
+    turn_context,
+    f"You added '{reaction.type}' regarding '{activity.text}'",
+   )
+ return
 ```
 
 ---
@@ -1266,35 +1266,35 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 async def on_reactions_removed(
-    self, message_reactions: List[MessageReaction], turn_context: TurnContext
+ self, message_reactions: List[MessageReaction], turn_context: TurnContext
 ):
-    for reaction in message_reactions:
-        activity = await self._log.find(turn_context.activity.reply_to_id)
-        if not activity:
-            await self._send_message_and_log_activity_id(
-                turn_context,
-                f"Activity {turn_context.activity.reply_to_id} not found in log",
-            )
-        else:
-            await self._send_message_and_log_activity_id(
-                turn_context,
-                f"You removed '{reaction.type}' regarding '{activity.text}'",
-            )
-    return
+ for reaction in message_reactions:
+  activity = await self._log.find(turn_context.activity.reply_to_id)
+  if not activity:
+   await self._send_message_and_log_activity_id(
+    turn_context,
+    f"Activity {turn_context.activity.reply_to_id} not found in log",
+   )
+  else:
+   await self._send_message_and_log_activity_id(
+    turn_context,
+    f"You removed '{reaction.type}' regarding '{activity.text}'",
+   )
+ return
 ```
 
 ---
 
 ## <a name="installation-update-event"></a>インストール更新イベント
 
-ボットをスレッドに `installationUpdate` インストールすると、ボットはイベントを受け取ります。 スレッドからボットをアンインストールすると、イベントもトリガーされます。 ボットをインストールすると、イベント内のアクション フィールドが追加に設定され、ボットがアンインストールされた場合、アクションフィールドは削除に設定 *されます*。
- 
+ボットをスレッドにインストール `installationUpdate` すると、ボットはイベントを受け取ります。 スレッドからボットをアンインストールすると、イベントもトリガーされます。 ボットをインストールすると、イベント内のアクション フィールドが追加に設定され、ボットをアンインストールするとアクション フィールドが削除に設定 *されます*。
+
 > [!NOTE]
 > アプリケーションをアップグレードし、ボットを追加または削除すると、アクションによってイベントもトリガー `installationUpdate` されます。 ボット **を** 削除した場合、ボット *を追加したり* 、削除アップグレードを行った場合は、アクション フィールドは追加 *アップグレード* に設定されます。
 
 ### <a name="install-update-event"></a>更新イベントのインストール
 
-イベントを `installationUpdate` 使用して、インストール時にボットから導入メッセージを送信します。 このイベントは、プライバシーとデータ保持の要件を満たすのに役立ちます。 ボットがアンインストールされた場合は、ユーザーデータまたはスレッド データをクリーンアップして削除できます。
+イベントを使用 `installationUpdate` して、インストール時にボットから導入メッセージを送信します。 このイベントは、プライバシーとデータ保持の要件を満たすのに役立ちます。 ボットがアンインストールされた場合は、ユーザーデータまたはスレッド データをクリーンアップして削除できます。
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -1425,7 +1425,7 @@ async def on_installation_update(self, turn_context: TurnContext):
 |----------|-----------------|----------|
 | 会話ボット | ボットの会話イベントのサンプル コード。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [プロアクティブ メッセージを送信する](~/bots/how-to/conversations/send-proactive-messages.md)

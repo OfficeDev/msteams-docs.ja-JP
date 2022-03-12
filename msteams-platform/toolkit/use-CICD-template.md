@@ -6,18 +6,18 @@ ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: ac2a79014ed0dfedf9942f30ab67c759642ee850
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 4db593c82ef2efb97b99fbb2a00b88bc622394d6
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356176"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453412"
 ---
 # <a name="cicd-guide"></a>CI/CD ガイド
 
 TeamsFx は、アプリケーションの構築中に開発ワークフローをTeamsします。 このドキュメントには、CI または CD パイプラインのセットアップを開始するためのツールとテンプレートが記載されています。GitHub Azure Devops、Jenkins を使用します。
 
-|ツールとテンプレート|説明|
+|ツールとテンプレート|[説明]|
 |---|---|
 |[teamsfx-cli-action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub TeamsFx CLI と統合するアクション。|
 |[github-ci-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-ci-template.yml) と [github-cd-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-cd-template.yml)| GitHubアプリの CI または CD テンプレートTeamsします。 |
@@ -234,6 +234,7 @@ steps:
 スクリプトは、クロスプラットフォームの TeamsFx コマンド ライン ツール [TeamsFx-CLI に基づいて作成されます](https://www.npmjs.com/package/@microsoft/teamsfx-cli)。 このスクリプトをインストールし `npm install -g @microsoft/teamsfx-cli` 、ドキュメントに [従って](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) スクリプトをカスタマイズできます。
 
 > [!NOTE]
+>
 > * CI モードで `@microsoft/teamsfx-cli` 実行を有効にするには、次の方法でオン `CI_ENABLED` にします `export CI_ENABLED=true`。 CI モードでは、 `@microsoft/teamsfx-cli` CI または CD に対応しています。
 > * 非対話型モード`@microsoft/teamsfx-cli`での実行を有効にするには、コマンドを使用してグローバル構成を設定します。 `teamsfx config set -g interactive false` 非対話型モードでは、入力 `@microsoft/teamsfx-cli` を求めるメッセージは表示されません。
 

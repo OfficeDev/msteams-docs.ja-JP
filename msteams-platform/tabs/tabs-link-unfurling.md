@@ -5,24 +5,24 @@ description: リンクのリンクを解除し、ステージ ビューを開き
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: 3119e444c8dd2b654f26b2fad5638f7c831619ac
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 1608f6e24ef4fbd3c979dcb7081c754d3b7cc30f
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518255"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453846"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>タブのリンクの展開とステージ ビュー
 
 ステージ ビューは、新しいユーザー インターフェイス (UI) コンポーネントで、Teams で開き、タブとしてピン留めされたコンテンツをレンダリングできます。
- 
+
 ## <a name="stage-view"></a>ステージ ビュー
 
 ステージ ビューは、Web コンテンツを表示するために呼び出すフルスクリーン UI コンポーネントです。 既存のリンク解除サービスが更新され、アダプティブ カードとチャット サービスを使用して URL をタブに変換するために使用されます。 ユーザーがチャットまたはチャネルで URL を送信すると、その URL はアダプティブ カードにリンク解除されます。 ユーザーは、カード **で [表示]** を選択し、ステージ ビューから直接タブとしてコンテンツをピン留めできます。
 
 ## <a name="advantage-of-stage-view"></a>ステージ ビューの利点
 
-ステージ ビューを使用すると、コンテンツを表示するエクスペリエンスをシームレスにTeams。 ユーザーは、コンテキストを離れることなくアプリが提供するコンテンツを開いて表示できます。また、コンテンツをチャットやチャネルにピン留めすることで、アプリとのユーザーエンゲージメントを高めます。
+ステージ ビューは、コンテンツを表示するエクスペリエンスをシームレスにTeams。 ユーザーは、コンテキストを離れることなくアプリが提供するコンテンツを開いて表示できます。また、コンテンツをチャットやチャネルにピン留めすることで、アプリとのユーザーエンゲージメントを高めます。
 
 ## <a name="stage-view-vs-task-module"></a>ステージ ビューとタスク モジュール
 
@@ -39,13 +39,13 @@ ms.locfileid: "62518255"
 
 ## <a name="invoke-stage-view-from-adaptive-card"></a>アダプティブ カードからステージ ビューを呼び出す
 
-ユーザーがデスクトップ クライアントで URL を入力するとTeamsボットが呼び出され、ステージで URL を開く[](../task-modules-and-cards/cards/cards-actions.md)オプションを持つアダプティブ カードが返されます。 ステージを起動して指定した `tabInfo` 後、ステージをタブとしてピン留めする機能を追加できます。  
+ユーザーがデスクトップ クライアントの URL をTeamsすると、ボットが呼び出され、ステージで URL を開く[](../task-modules-and-cards/cards/cards-actions.md)オプションを持つアダプティブ カードが返されます。 ステージを起動して指定した `tabInfo` 後、ステージをタブとしてピン留めする機能を追加できます。  
 
 次の画像は、アダプティブ カードから開いたステージを表示します。
 
 [![アダプティブ カードからステージを開く](~/assets/images/tab-images/open-stage-from-adaptive-card1.png)](~/assets/images/tab-images/open-stage-from-adaptive-card1.png#lightbox)
 
-[![ステージを開く](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)](~/assets/images/tab-images/open-stage-from-adaptive-card2.png#lightbox) 
+[![ステージを開く](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)](~/assets/images/tab-images/open-stage-from-adaptive-card2.png#lightbox)
 
 ### <a name="example"></a>例
 
@@ -75,7 +75,8 @@ ms.locfileid: "62518255"
 要求 `invoke` の種類は、 である必要があります `composeExtension/queryLink`。
 
 > [!NOTE]
-> * `invoke` ワークフローは、現在のワークフローと似 `appLinking` ています。 
+>
+> * `invoke` ワークフローは、現在のワークフローと似 `appLinking` ています。
 > * 一貫性を保つには、 という名前を付けをお勧 `Action.Submit` めします `View`。
 > * `websiteUrl` は、オブジェクトに渡す必要があるプロパティ `TabInfo` です。
 
@@ -94,7 +95,7 @@ ms.locfileid: "62518255"
 
 ### <a name="syntax"></a>構文
 
-ディープリンク構文を次に示します。 
+ディープリンク構文を次に示します。
 
 https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}
  
@@ -107,13 +108,12 @@ https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl"
 **例 1: threadId の URL**
 
 コード化されていない URL:
- 
-https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes:Miscellaneous","threadId":"19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}
+
+https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes:Miscellaneous","threadId":""19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}
 
 エンコードされた URL:
 
 https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%2C%22threadId%22%3A%2219:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2%22%7D
-
 
 **例 2: threadId がない URL**
 
@@ -125,9 +125,9 @@ https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?conte
 
 https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%7D
 
-
 > [!NOTE]
 > URL を貼り付けする前に、すべてのディープリンクをエンコードする必要があります。 コード化されていない URL はサポートされていません。
+>
 > * ディープ `name` リンクではオプションです。 含まれていない場合は、アプリ名が置き換わります。
 > * ディープ リンクは、アクションを介して渡される場合 `OpenURL` があります。
 > * 特定のコンテキストからステージを起動する場合は、そのコンテキストでアプリが動作します。 たとえば、個人用アプリからステージ ビューを起動する場合は、アプリに個人用スコープが設定されている必要があります。
@@ -136,20 +136,19 @@ https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?conte
 
 | プロパティ名 | 種類 | 文字数 | 説明 |
 |:-----------|:---------|:------------|:-----------------------|
-| `entityId` | String | 64 | このプロパティは、タブが表示されるエンティティの一意の識別子です。 これは必須フィールドです。|
-| `name` | String | 128 | このプロパティは、チャネル インターフェイスのタブの表示名です。 この入力フィールドは省略できます。|
-| `contentUrl` | String | 2048 | このプロパティは、https:// キャンバスに表示するエンティティ UI をポイントするTeamsです。 これは必須フィールドです。|
-| `websiteUrl?` | String | 2048 | ユーザーがブラウザーで表示 https:// 場合、このプロパティは参照先の URL です。 これは必須フィールドです。|
-| `removeUrl?` | String | 2048 | このプロパティは、https:// を削除するときに表示される UI を示す URL です。これはオプションのフィールドです。|
+| `entityId` | 文字列 | 64 | このプロパティは、タブが表示されるエンティティの一意の識別子です。 これは必須フィールドです。|
+| `name` | 文字列 | 128 | このプロパティは、チャネル インターフェイスのタブの表示名です。 この入力フィールドは省略できます。|
+| `contentUrl` | 文字列 | 2048 | このプロパティは、https:// キャンバスに表示するエンティティ UI をポイントするTeamsです。 これは必須フィールドです。|
+| `websiteUrl?` | 文字列 | 2048 | ユーザーがブラウザーで表示 https:// 場合、このプロパティは参照先の URL です。 これは必須フィールドです。|
+| `removeUrl?` | 文字列 | 2048 | このプロパティは、https:// を削除するときに表示される UI を示す URL です。これはオプションのフィールドです。|
 
 ## <a name="code-sample"></a>コード サンプル
 
 | サンプルの名前 | 説明 | C# |Node.js|
 |-------------|-------------|------|----|
 |ステージ ビューのタブ |Microsoft Teamsでタブをデモンストレーションするタブ サンプル アプリを作成します。|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
-    
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [会話タブを作成する](~/tabs/how-to/conversational-tabs.md)

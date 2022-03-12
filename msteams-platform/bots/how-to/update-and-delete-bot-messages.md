@@ -5,12 +5,12 @@ description: さまざまな環境で、およびコード サンプルを使用
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: b92eb5c566df1d23b0228a218afa546160a3bb91
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: b02e4ec19fdb3494ef4e84e4f8de1ba25645f91a
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889343"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453727"
 ---
 # <a name="update-and-delete-messages-sent-from-your-bot"></a>ボットから送信されたメッセージを更新および削除する
 
@@ -26,7 +26,7 @@ ms.locfileid: "60889343"
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
-既存のメッセージを更新するには、既存のアクティビティ ID を持つ新しいオブジェクトをクラス `Activity` の `UpdateActivityAsync` メソッドに渡 `TurnContext` します。 詳細については [、「TurnContextClass」を参照してください](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true)。
+既存のメッセージを更新するには、既存 `Activity` のアクティビティ ID を持つ新しいオブジェクトをクラスのメソッド `UpdateActivityAsync` に渡 `TurnContext` します。 詳細については、「 [TurnContextClass」を参照してください](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true)。
 
 ```csharp
 var newActivity = MessageFactory.Text("The new text for the activity");
@@ -36,7 +36,7 @@ await turnContext.UpdateActivityAsync(newActivity, cancellationToken);
 
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
-既存のメッセージを更新するには、既存のアクティビティ ID を持つ新しいオブジェクトをオブジェクトの `Activity` `updateActivity` メソッドに渡 `TurnContext` します。 詳細については [、「updateActivity 」を参照してください](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true)。
+既存のメッセージを更新するには、既存 `Activity` のアクティビティ ID `updateActivity` を持つ新しいオブジェクトをオブジェクトのメソッドに渡 `TurnContext` します。 詳細については、「 [updateActivity」を参照してください](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true)。
 
 ```typescript
 const newActivity = MessageFactory.text('The new text for the activity');
@@ -46,7 +46,7 @@ await turnContext.updateActivity(newActivity);
 
 # <a name="python"></a>[Python](#tab/python)
 
-既存のメッセージを更新するには、既存のアクティビティ ID を持つ新しいオブジェクトをクラス `Activity` の `update_activity` メソッドに渡 `TurnContext` します。 [「TurnContextClass」を参照してください](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true)。
+既存のメッセージを更新するには、既存 `Activity` のアクティビティ ID を持つ新しいオブジェクトをクラスのメソッド `update_activity` に渡 `TurnContext` します。 [「TurnContextClass」を参照してください](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true)。
 
 ```python
 new_activity = MessageFactory.text("The new text for the activity")
@@ -57,10 +57,9 @@ update_result = await context.update_activity(new_activity)
 # <a name="rest-api"></a>[REST API](#tab/rest)
 
 > [!NOTE]
+> Web プログラミング テクノロジTeamsアプリを開発し、ボット コネクタ サービス [REST API を直接呼び出します](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true)。 これを行うには、API 要求で [認証](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) セキュリティ手順を実装する必要があります。
 
-> Web プログラミング テクノロジTeamsアプリを開発し、ボット コネクタ サービス REST [API を直接呼び出します](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true)。 これを行うには、API 要求で [認証](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) セキュリティ手順を実装する必要があります。
-
-会話内の既存のアクティビティを更新するには、要求エンドポイントに含 `conversationId` `activityId` める必要があります。 このシナリオを完了するには、元の通話後に返されたアクティビティ ID をキャッシュする必要があります。
+会話内の既存のアクティビティを更新するには、要求エンドポイントに`conversationId``activityId`含める必要があります。 このシナリオを完了するには、元の通話後に返されたアクティビティ ID をキャッシュする必要があります。
 
 ```http
 PUT /v3/conversations/{conversationId}/activities/{activityId}
@@ -68,10 +67,10 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 
 |要求 |応答 |
 |----|----|
-| [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true)オブジェクト。 | [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true)オブジェクト。 |
+| [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) オブジェクト。 | [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) オブジェクト。 |
 
 ---
-* * *
+---
 
 メッセージが更新されたので、受信アクティビティのボタン選択の既存のカードを更新します。
 
@@ -81,7 +80,7 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-ボタン選択の既存のカードを更新するには、更新されたカードとアクティビティ ID を持つ新しいオブジェクトをクラスのメソッド `Activity` `ReplyToId` `UpdateActivityAsync` に渡 `TurnContext` します。 [「TurnContextClass」を参照してください](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true)。
+ボタン選択の既存のカードを更新するには、`Activity``ReplyToId`更新されたカードとアクティビティ ID `UpdateActivityAsync` を持つ新しいオブジェクトをクラスのメソッドに渡`TurnContext`します。 [「TurnContextClass」を参照してください](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true)。
 
 ```csharp
 var activity = MessageFactory.Attachment(card.ToAttachment());
@@ -91,7 +90,7 @@ await turnContext.UpdateActivityAsync(activity, cancellationToken);
 
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
-ボタン選択の既存のカードを更新するには、新しいオブジェクトに更新されたカードとアクティビティ ID をオブジェクトのメソッド `Activity` `replyToId` `updateActivity` に渡 `TurnContext` します。 updateActivity [を参照してください](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true)。
+ボタン選択の既存のカードを更新するには、`Activity``replyToId`新しいオブジェクトに更新されたカードとアクティビティ ID `updateActivity` をオブジェクトのメソッドに渡`TurnContext`します。 [「updateActivity」を参照してください](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true)。
 
 ```typescript
 const message = MessageFactory.attachment(card);
@@ -101,7 +100,7 @@ await context.updateActivity(message);
 
 # <a name="python"></a>[Python](#tab/python)
 
-ボタンクリックで既存のカードを更新するには、更新されたカードとアクティビティ ID を持つ新しいオブジェクトをクラスのメソッド `Activity` `reply_to_id` `update_activity` に渡 `TurnContext` します。 [「TurnContextClass」を参照してください](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true)。
+ボタンクリックで既存のカードを更新するには、`Activity``reply_to_id`更新されたカードとアクティビティ ID `update_activity` を持つ新しいオブジェクトをクラスのメソッドに渡`TurnContext`します。 [「TurnContextClass」を参照してください](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true)。
 
 ```python
 updated_activity = MessageFactory.attachment(CardFactory.hero_card(card))
@@ -112,9 +111,9 @@ await turn_context.update_activity(updated_activity)
 # <a name="rest-api"></a>[REST API](#tab/rest)
 
 > [!NOTE]
-> 任意の web プログラミング Teamsアプリを開発し、ボット コネクタ サービス[REST API を直接呼び出します](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true)。 これを行うには、API 要求 [で認証](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) セキュリティ手順を実装する必要があります。
+> Web プログラミング テクノロジTeamsアプリを開発し、ボット コネクタ サービス [REST API を直接呼び出します](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true)。 これを行うには、API [要求で認証](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) セキュリティ手順を実装する必要があります。
 
-会話内の既存のアクティビティを更新するには、要求エンドポイントに含 `conversationId` `activityId` める必要があります。 このシナリオを完了するには、元の通話後に返されたアクティビティ ID をキャッシュする必要があります。
+会話内の既存のアクティビティを更新するには、要求エンドポイントに`conversationId``activityId`含める必要があります。 このシナリオを完了するには、元の通話後に返されたアクティビティ ID をキャッシュする必要があります。
 
 ```http
 PUT /v3/conversations/{conversationId}/activities/{activityId}
@@ -122,9 +121,9 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 
 |要求 |応答 |
 |----|----|
-| アクティビティ [オブジェクト](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) 。 | [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true)オブジェクト。 |
+| アクティビティ [オブジェクト](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) 。 | [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) オブジェクト。 |
 
-* * *
+---
 
 カードを更新したので、ボット フレームワークを使用してメッセージを削除できます。
 
@@ -134,7 +133,7 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
-メッセージを削除するには、そのアクティビティの ID をクラスの `DeleteActivityAsync` メソッドに渡 `TurnContext` します。 詳細については [、「TurnContext.DeleteActivityAsync メソッド」を参照してください](/dotnet/api/microsoft.bot.builder.turncontext.deleteactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)。
+メッセージを削除するには、そのアクティビティの ID をクラスのメソッド `DeleteActivityAsync` に渡 `TurnContext` します。 詳細については、「 [TurnContext.DeleteActivityAsync メソッド」を参照してください](/dotnet/api/microsoft.bot.builder.turncontext.deleteactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)。
 
 ```csharp
 foreach (var activityId in _list)
@@ -145,7 +144,7 @@ foreach (var activityId in _list)
 
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
-メッセージを削除するには、そのアクティビティの ID をオブジェクトの `deleteActivity` メソッドに渡 `TurnContext` します。 詳細については [、「deleteActivity」を参照してください](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#deleteactivity-string---partial-conversationreference--&preserve-view=true)。
+メッセージを削除するには、そのアクティビティの ID をオブジェクトのメソッド `deleteActivity` に渡 `TurnContext` します。 詳細については、「 [deleteActivity」を参照してください](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#deleteactivity-string---partial-conversationreference--&preserve-view=true)。
 
 ```typescript
 for (let i = 0; i < activityIds.length; i++) {
@@ -155,7 +154,7 @@ for (let i = 0; i < activityIds.length; i++) {
 
 # <a name="python"></a>[Python](#tab/python)
 
-そのメッセージを削除するには、そのアクティビティの ID をオブジェクトの `delete_activity` メソッドに渡 `TurnContext` します。 詳細については [、「activity-update-and-delete」を参照してください](https://github.com/microsoft/botbuilder-python/blob/c04ecacb22c1f4b43a671fe2f1e4782218391975/tests/teams/scenarios/activity-update-and-delete/bots/activity_update_and_delete_bot.py)。
+そのメッセージを削除するには、そのアクティビティの ID をオブジェクトのメソッド `delete_activity` に渡 `TurnContext` します。 詳細については、「 [activity-update-and-delete」を参照してください](https://github.com/microsoft/botbuilder-python/blob/c04ecacb22c1f4b43a671fe2f1e4782218391975/tests/teams/scenarios/activity-update-and-delete/bots/activity_update_and_delete_bot.py)。
 
 ```python
 for each activity_id in _list:
@@ -164,7 +163,7 @@ for each activity_id in _list:
 
 # <a name="rest-api"></a>[REST API](#tab/rest)
 
-会話内の既存のアクティビティを削除するには、要求エンドポイントに含 `conversationId` `activityId` める必要があります。
+会話内の既存のアクティビティを削除するには、要求エンドポイントに`conversationId``activityId`含める必要があります。
 
 ```http
 DELETE /v3/conversations/{conversationId}/activities/{activityId}
@@ -184,7 +183,7 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 |----------------------|-----------------|--------|-------------|--------|
 | Teams での会話の基本  | メッセージの更新と削除を含むTeamsの基本を示します。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [コンテキストTeams取得](~/bots/how-to/get-teams-context.md)

@@ -5,14 +5,14 @@ keywords: teams ボット メニューの作成
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 14100c9032f0adf964975abbe436c84194475a99
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 6f339f23298c14607eb1d9ca12daa50bcc98775b
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59157041"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452901"
 ---
-# <a name="add-a-bot-menu-in-microsoft-teams"></a>[ボット] メニューを [Microsoft Teams
+# <a name="add-a-bot-menu-in-microsoft-teams"></a>[ボット] メニューを [ボット] にMicrosoft Teams
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -23,12 +23,13 @@ ms.locfileid: "59157041"
 ユーザーがメニュー項目を選択すると、ボット メッセージのユーザー完了を支援するために、コマンド文字列がテキスト ボックスに挿入されます。
 
 ## <a name="bot-menu-support-on-teams-mobile-app"></a>モバイル アプリでのボット メニュー Teamsサポート
-> [!NOTE] 
+
+> [!NOTE]
 > ボット メニューはモバイル デバイスに表示されません。
 
 ## <a name="app-manifest"></a>アプリ マニフェスト
 
-ボット メニューを作成するには、ボット セクションの下に新 [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) しいオブジェクトをアプリ マニフェストに追加します。 ボットがサポートするスコープごとに個別のコマンドを使用して個別のメニューを宣言できます ( 、、または ) 各メニューは、最大 10 個のコマンド `personal` `groupChat` `team` をサポートします。
+ボット メニューを作成するには、ボット セクション [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) の下に新しいオブジェクトをアプリ マニフェストに追加します。 ボットがサポートするスコープごとに個別のコマンドを使用して個別のメニューを宣言できます (`personal``groupChat``team`、または) 各メニューは、最大 10 個のコマンドをサポートします。
 
 ### <a name="manifest-excerpt---single-menu-for-both-scopes"></a>マニフェストの抜粋 - 両方のスコープの単一メニュー
 

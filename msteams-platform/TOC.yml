@@ -501,14 +501,14 @@
       href: samples/integrate-web-apps-overview.md
     - name: Teams 統合に関する考慮事項
       href: samples/integrating-web-apps.md
+    - name: 仮想アシスタントを作成する
+      href: samples/virtual-assistant.md
     - name: Power プラットフォーム アプリ
       items:
         - name: 概要
           href: samples/teams-low-code-solutions.md
         - name: Power Virtual Agents チャットボットを追加する
           href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
-        - name: 仮想アシスタントを作成する
-          href: samples/virtual-assistant.md
     - name: Microsoft Teams 用のアプリ テンプレート
       href: samples/app-templates.md
     - name: 本番対応の Shifts コネクタ
@@ -517,8 +517,12 @@
       items:
         - name: 概要
           href: resources/moodle-overview.md
-        - name: Moodle LMS のインストール
-          href: resources/moodleInstructions.md
+        - name: Microsoft 365 プラグイン
+          href: resources/m365-plugins/m365-plugins-overview.md
+        - name: Moodle のパートナー アプリ
+          href: resources/partner-apps-for-moodle.md
+        - name: Moodle に関するよく寄せられる質問
+          href: resources/faqs.md
     - name: '[Teams で共有] ボタンを作成する'
       href: concepts/build-and-test/share-to-teams.md
     - name: SharePoint に Teams タブを追加する

@@ -1,25 +1,25 @@
 ---
-title: TeamsFX の複数のTeams Toolkit
+title: TeamsFX の複数の環境 (Teams Toolkit
 author: MuyangAmigo
 description: TeamsFX マルチ環境について
 ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview of multiple environment
 ms.date: 11/29/2021
-ms.openlocfilehash: a3f7dd06b2bc3762545290d294aa189f27ee2685
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 27172617db35126fb086d8691486e86c2946f0bd
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435343"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453587"
 ---
 # <a name="manage-multiple-environments-in-teams-toolkit"></a>複数の環境を管理Teams Toolkit
 
- Teams Toolkitは、複数の環境を作成および管理し、アイテムを準備し、アプリのターゲット環境に展開するための簡単なTeamsです。
+ Teams Toolkitは、複数の環境を作成および管理し、成果物を準備し、アプリのターゲット環境に展開するための簡単なTeamsです。
 
  複数の環境を使用すると、次の操作を実行できます。
 
-1. **運用前のテスト**: Teams App を最新のアプリ開発ライフサイクルで運用環境に公開する前に、開発、テスト、ステージングなどの複数の環境をセットアップする一般的な方法です。
+1. **運用前のテスト**: 開発、テスト、ステージングなどの複数の環境をセットアップしてから、Teams App を最新のアプリ開発ライフサイクルの実稼働環境に公開する一般的な方法です。
 
 2. **異なる環境でアプリ** の動作を管理する: 複数の環境に対して異なる動作 (実稼働環境でテレメトリを有効にし、開発環境で無効にするなど) を設定できます。
 
@@ -28,14 +28,14 @@ ms.locfileid: "62435343"
 * [バージョン Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) v3.0.0 以上をインストールします。
 
 > [!TIP]
-> アプリ プロジェクトがTeamsコードで開いているMicrosoft Visual Studioします。
+> アプリ プロジェクトTeamsコードで開いているMicrosoft Visual Studioします。
 
 ## <a name="create-a-new-environment"></a>新しい環境を作成する
 
 新しいプロジェクトを作成した後、既定Teams Toolkit作成されます。
 
-- ローカル `local` コンピューター環境構成を表す 1 つの環境。
-- リモート `dev` 環境またはクラウド環境構成を表す 1 つの環境。
+* ローカル `local` コンピューター環境構成を表す 1 つの環境。
+* リモート `dev` 環境またはクラウド環境構成を表す 1 つの環境。
 
 > [!NOTE]
 > 各プロジェクトには、1 つの環境しか使用できません `local` が、複数のリモート環境を使用できます。
@@ -47,52 +47,52 @@ ms.locfileid: "62435343"
 > [!NOTE]
 > 複数の既存の環境がある場合は、既存の環境を選択して同じ環境を作成する必要があります。 このコマンドは、選択した既存`config.<newEnv>.json``azure.parameters.<newEnv>.json`の環境のファイルの内容とファイルの内容を、作成中の新しい環境にコピーします。
 
-## <a name="select-target-environment"></a>ターゲット環境の選択 
+## <a name="select-target-environment"></a>ターゲット環境の選択
 
 すべての環境関連操作のターゲット環境を選択できます。 次の図に示すように、複数のリモート環境がある場合、ツールキットはターゲット環境のプロンプトを表示して要求します。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="env を追加する":::
 
-## <a name="project-folder-structure"></a>Projectフォルダー構造 
+## <a name="project-folder-structure"></a>Projectフォルダー構造
 
 プロジェクトを作成した後、プロジェクト フォルダーとファイルをプロジェクト のエクスプローラー領域に表示Visual Studio Code。 カスタム コードの他に、アプリの構成、状態Teams Toolkitテンプレートを維持するために、一部のファイルが使用されます。 次の一覧は、ファイルを提供し、複数の環境との関係の概要を示します。
 
-- `.fx/configs`: ユーザーがアプリ用にカスタマイズできるファイルをTeamsします。
-  - `config.<envName>.json`: 環境ごとの構成ファイル。
-  - `azure.parameters.<envName>.json`: Azure bicep プロビジョニング用の環境ごとのパラメーター ファイル。
-  - `projectSettings.json`: すべての環境に適用されるグローバル プロジェクト設定。
-  - `localSettings.json`: ローカル デバッグ構成ファイル。
-- `.fx/states`: ユーザーが生成するプロビジョニング結果Toolkit。
-  - `state.<envName>.json`: 環境ごとのプロビジョニング出力ファイル。
-  - `<env>.userdata`: プロビジョニング出力の環境ごとの機密ユーザー データ。
-- `templates`
-  - `appPackage`: アプリ マニフェスト テンプレート ファイル。
-  - `azure`: Bicep テンプレート ファイル。
+* `.fx/configs`: ユーザーがアプリ用にカスタマイズできるファイルをTeamsします。
+  * `config.<envName>.json`: 環境ごとの構成ファイル。
+  * `azure.parameters.<envName>.json`: Azure bicep プロビジョニング用の環境ごとのパラメーター ファイル。
+  * `projectSettings.json`: すべての環境に適用されるグローバル プロジェクト設定。
+  * `localSettings.json`: ローカル デバッグ構成ファイル。
+* `.fx/states`: ユーザーが生成するプロビジョニング結果Toolkit。
+  * `state.<envName>.json`: 環境ごとのプロビジョニング出力ファイル。
+  * `<env>.userdata`: プロビジョニング出力の環境ごとの機密ユーザー データ。
+* `templates`
+  * `appPackage`: アプリ マニフェスト テンプレート ファイル。
+  * `azure`: Bicep テンプレート ファイル。
 
-## <a name="customize-the-provision"></a>プロビジョニングをカスタマイズする 
+## <a name="customize-the-provision"></a>プロビジョニングをカスタマイズする
 
 Teams Toolkit構成ファイルとテンプレート ファイルを変更して、各環境でリソースの準備をカスタマイズできます。
 
 次の表に、カスタマイズされたプロビジョニングでサポートされる一般的なシナリオとカスタマイズする場所を示します。
 
-| シナリオ | Location| 説明 |
+| シナリオ | 場所| 説明 |
 | --- | --- | --- |
 | Azure リソースのカスタマイズ | <ul> <li>下のバイセップ ファイル `templates/azure`。</li> <li>`.fx/azure.parameters.<envName>.json`.</li></ul> | [パラメーター ARMテンプレートをカスタマイズします](provision.md#customize-arm-parameters-and-templates)。 |
-| 既存のアプリをAzure ADアプリTeamsする | <ul> <li>`auth` セクションを参照してください`.fx/config.<envName>.json`。</li> </ul> |  [既存のアプリをAzure ADアプリTeamsします](provision.md#use-an-existing-azure-ad-app-for-your-teams-app)。 |
-| ボット用の既存Azure ADアプリを再利用する | <ul> <li>`bot` セクションを参照してください`.fx/config.<envName>.json`。</li> </ul> | [ボットに既存のAzure ADアプリを使用します](provision.md#use-an-existing-azure-ad-app-for-your-bot)。 |
+| 既存のアプリAzure ADアプリをTeamsする | <ul> <li>`auth` セクションを参照してください`.fx/config.<envName>.json`。</li> </ul> |  [既存のアプリをAzure ADアプリTeamsします](provision.md#use-an-existing-azure-ad-app-for-your-teams-app)。 |
+| ボット用にAzure AD既存のアプリを再利用する | <ul> <li>`bot` セクションを参照してください`.fx/config.<envName>.json`。</li> </ul> | [ボットに既存のAzure ADアプリを使用します](provision.md#use-an-existing-azure-ad-app-for-your-bot)。 |
 | プロビジョニング中にユーザーの追加をスキップSQL | <ul> <li>`skipAddingSqlUser` プロパティを使用します`.fx/config.<envName>.json`。</li> </ul> | [データベースのユーザーの追加SQLスキップします](provision.md#skip-adding-user-for-sql-database)。 |
-| アプリ マニフェストのカスタマイズ | <ul> <li>`templates/manifest.remote.template.json`.</li> <li>`manifest` セクションを参照してください`.fx/config.<envName>.json`。</li>  </ul> | [[Teamsアプリ マニフェストをカスタマイズTeams Toolkit](TeamsFx-manifest-customization.md)。 |
+| アプリ マニフェストのカスタマイズ | <ul> <li>`templates/manifest.remote.template.json`.</li> <li>`manifest` セクションを参照してください`.fx/config.<envName>.json`。</li>  </ul> | [アプリ TeamsマニフェストをカスタマイズTeams Toolkit](TeamsFx-manifest-customization.md)。 |
 
 ## <a name="scenarios"></a>シナリオ
 
 ### <a name="scenario-1-customize-teams-app-name-for-different-environment"></a>シナリオ 1: さまざまな環境Teamsアプリ名をカスタマイズする
 
-既定の環境Teamsステージング`myapp(dev)`環境のアプリ`dev``myapp(staging)`名を設定できます`staging`。
+既定の環境Teamsステージング`myapp(dev)`環境のアプリ名`dev``myapp(staging)`を設定できます`staging`。
 
 カスタマイズのために次の手順を実行します。
 
-- 1. 構成ファイルを開きます `.fx/configs/config.dev.json`。
-- 2. 短い *appName のマニフェスト >プロパティ>更新* する `myapp(dev)`
+* 1. 構成ファイルを開きます `.fx/configs/config.dev.json`。
+* 2. 短い *appName の>プロパティ>更新* する `myapp(dev)`
 
   更新プログラムは次 `.fx/configs/config.dev.json` のとおりです。
 
@@ -110,22 +110,22 @@ Teams Toolkit構成ファイルとテンプレート ファイルを変更して
   }
   ```
 
-- 3. 新しい環境を作成し、存在しない `staging` 場合は名前を付けします。
-- 4. 構成ファイルを開きます `.fx/configs/config.staging.json`。
-- 5. 同じプロパティを更新します `myapp(staging)`。
-- 6. リモート環境でアプリ名を `dev` 更新 `staging` するには、プロビジョニング コマンドを on と environment で実行します。 プロビジョニング コマンドを実行するには、「プロビジョニング」Teams Toolkitを参照[してください](provision.md#provision-using-teams-toolkit)。
+* 3. 新しい環境を作成し、存在しない `staging` 場合は名前を付けします。
+* 4. 構成ファイルを開きます `.fx/configs/config.staging.json`。
+* 5. 同じプロパティを更新します `myapp(staging)`。
+* 6. リモート環境でアプリ名を `dev` 更新 `staging` するには、プロビジョニング コマンドを on と environment で実行します。 このコマンドを使用してプロビジョニング コマンドをTeams Toolkit、provision を参照[してください](provision.md#provision-using-teams-toolkit)。
 
 ### <a name="scenario-2-customize-teams-app-description-for-different-environment"></a>シナリオ 2: さまざまな環境Teamsアプリの説明をカスタマイズする
 
 このシナリオでは、さまざまな環境に対して異なるアプリTeamsを設定する方法について説明します。
 
-- 既定の環境の場合 `dev`、説明は次になります `my app description for dev`。
-- ステージング環境の場合 `staging`、説明は次になります `my app description for staging`。
+* 既定の環境の場合 `dev`、説明は次になります `my app description for dev`。
+* ステージング環境の場合 `staging`、説明は次になります `my app description for staging`。
 
 カスタマイズのために次の手順を実行します。
 
-- 1. 構成ファイルを開きます `.fx/configs/config.dev.json`。
-- 2. マニフェストと説明の新 *しいプロパティ>値>短く* 追加します `my app description for dev`。
+* 1. 構成ファイルを開きます `.fx/configs/config.dev.json`。
+* 2. マニフェストと説明の新 *しいプロパティ>値>短く* 追加します `my app description for dev`。
 
   更新プログラムは次 `.fx/configs/config.dev.json` のとおりです。
 
@@ -144,11 +144,11 @@ Teams Toolkit構成ファイルとテンプレート ファイルを変更して
   }
   ```
 
-- 3. 新しい環境を作成し、存在しない `staging` 場合は名前を付けします。
-- 4. 構成ファイルを開きます `.fx/configs/config.staging.json`。
-- 5. に同じプロパティを追加します `my app description for staging`。
-- 6. リモートTeamsアプリ マニフェスト テンプレートを開きます`templates/appPackage/manifest.remote.template.json`。
-- 7. 口ひげ構文を `description > short` 使用してファイル **を構成するで** 定義されている変数を使用するプロパティを更新します `{{config.manifest.description.short}}`。
+* 3. 新しい環境を作成し、存在しない `staging` 場合は名前を付けします。
+* 4. 構成ファイルを開きます `.fx/configs/config.staging.json`。
+* 5. に同じプロパティを追加します `my app description for staging`。
+* 6. リモート用Teamsマニフェスト テンプレートを開きます`templates/appPackage/manifest.remote.template.json`。
+* 7. 口ひげ構文を `description > short` 使用してファイル **を構成するで** 定義されている変数を使用するプロパティを更新します `{{config.manifest.description.short}}`。
   
   更新プログラムは次 `manifest.remote.template.json` のとおりです。
 
@@ -165,7 +165,8 @@ Teams Toolkit構成ファイルとテンプレート ファイルを変更して
     ...
   }
   ```
-- 8. プロビジョニング コマンドと環境を `dev` 実行 `staging` して、リモート環境でアプリ名を更新します。 プロビジョニング コマンドを実行するには、「プロビジョニング」Teams Toolkitを参照[してください](provision.md#provision-using-teams-toolkit)。
+
+* 8. プロビジョニング コマンドと環境を `dev` 実行 `staging` して、リモート環境でアプリ名を更新します。 このコマンドを使用してプロビジョニング コマンドをTeams Toolkit、provision を参照[してください](provision.md#provision-using-teams-toolkit)。
 
 ### <a name="scenario-3-customize-teams-app-description-for-all-environments"></a>シナリオ 3: すべてのTeamsアプリの説明をカスタマイズする
 
@@ -173,8 +174,8 @@ Teams Toolkit構成ファイルとテンプレート ファイルを変更して
 
 アプリ マニフェスト Teamsテンプレートがすべての環境で共有されている場合、ターゲットの説明の値を更新できます。
 
-- 1. リモートTeamsアプリ マニフェスト テンプレートを開きます`templates/appPackage/manifest.remote.template.json`。
-- 2. ハードコードされた文字列`description > short`**でプロパティを更新します**`my app description`。
+* 1. リモート用Teamsマニフェスト テンプレートを開きます`templates/appPackage/manifest.remote.template.json`。
+* 2. ハードコードされた文字列`description > short`**でプロパティを更新します**`my app description`。
   
   更新プログラムは次 `manifest.remote.template.json` のとおりです。
 
@@ -191,7 +192,7 @@ Teams Toolkit構成ファイルとテンプレート ファイルを変更して
     ...
   }
 
-- 3. Run provision command against **all** environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
+* 3. Run provision command against **all** environment to update the app name in remote environments. To run provision command with Teams Toolkit, see [provision](provision.md#provision-using-teams-toolkit).
 
 ### Scenario 4: customize Azure resources for different environment
 

@@ -6,12 +6,12 @@ keywords: teams タブ チャネル構成可能
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: none
-ms.openlocfilehash: 63f6310faa4bec78f246857cbd7c1368acee8edf
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: ac58448ec390d0e954c0737d5b0700d0d91b04b1
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889364"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452600"
 ---
 # <a name="create-conversational-tabs"></a>会話タブを作成する
 
@@ -21,7 +21,7 @@ ms.locfileid: "60889364"
 
 ## <a name="prerequisites"></a>前提条件
 
-会話のサブエンテリティをサポートするには、タブ Web アプリケーションがバックエンド データベース内のサブ↔マッピングを格納できる必要があります。 は指定されますが、ユーザーが会話を続行するには、Teamsを保存して返 `conversationId` `conversationId` す必要があります。
+会話のサブエンテリティをサポートするには、タブ Web ↔ アプリケーションがバックエンド データベースにサブエンテリティの会話間のマッピングを格納できる必要があります。 指定`conversationId`しますが、ユーザー`conversationId`が会話を続行するには、Teamsを保存して返す必要があります。
 
 ## <a name="start-a-new-conversation"></a>新しい会話を開始する
 
@@ -62,7 +62,7 @@ microsoftTeams.conversations.onStartConversation = (conversationResponse) => {
 
 ## <a name="continue-a-conversation"></a>会話を続ける
 
-会話が開始されると、その後の呼び出しが必要になります。また、新しい会話を開始する場合と同じ入力を入力しますが `openConversation()` **、conversationId も含まれます**。 [](#start-a-new-conversation) 適切な会話が表示されているユーザーの会話パネルが開きます。 ユーザーは、新しいメッセージまたは受信メッセージをリアルタイムで表示できます。
+会話が開始されると、その後の`openConversation()`呼び出しが必要になります。また、新 [](#start-a-new-conversation)しい会話を開始する場合と同じ入力を提供しますが、**conversationId も含まれます**。 適切な会話が表示されているユーザーの会話パネルが開きます。 ユーザーは、新しいメッセージまたは受信メッセージをリアルタイムで表示できます。
 
 次の図は、適切な会話を含む会話パネルを示しています。
 
@@ -72,7 +72,7 @@ microsoftTeams.conversations.onStartConversation = (conversationResponse) => {
 
 タブにサブエンティへの [深いリンクが含まれる必要があります](~/concepts/build-and-test/deep-links.md)。 たとえば、チャネル会話からタブ のシックレットディープ リンクを選択したユーザー。 想定される動作は、ディープ リンクを受信し、そのサブエンティを開き、そのサブエンティの会話パネルを開きます。
 
-個人用タブまたは静的タブから会話のサブエンテリティをサポートするには、実装内で何も変更する必要はありません。 既にピン留めされているチャネル タブからの会話の開始または継続のみをサポートします。 静的タブをサポートすることで、ユーザーがすべてのサブエンテリティを操作するための単一の場所を提供できます。 静的タブで会話ビューを開く際に適切なプロパティを持つには、チャネル内にタブが最初に作成されている場合に、、を保存することが `subEntityId` `entityId` `channelId` 重要です。
+個人用タブまたは静的タブから会話のサブエンテリティをサポートするには、実装内で何も変更する必要はありません。 既にピン留めされているチャネル タブからの会話の開始または継続のみをサポートします。 静的タブをサポートすることで、ユーザーがすべてのサブエンテリティを操作するための単一の場所を提供できます。 静的タブで会話ビュー`subEntityId``entityId``channelId`を開く際に適切なプロパティを持つには、チャネル内にタブが最初に作成されている場合に、、を保存することが重要です。
 
 ## <a name="close-a-conversation"></a>会話を閉じる
 
@@ -94,9 +94,9 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 | サンプルの名前 | 説明 | C# |Node.js|
 |-------------|-------------|------|----|
-|[会話の作成] タブ| Microsoft Teams作成タブを示すタブ サンプル アプリを作成します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+|[会話の作成] タブ| Microsoft Teamsの作成タブを示すタブ サンプル アプリを作成します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [タブ余白の変更](~/resources/removing-tab-margins.md)

@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: 呼び出し通知コールバック地域アフィニティ
 ms.date: 04/02/2019
-ms.openlocfilehash: 75c6b33db6431901665b71674cb4f4fd93248c12
-ms.sourcegitcommit: 85d0584877db21e2d3e49d3ee940d22675617582
+ms.openlocfilehash: a1d2362347643badc06a23d967120c8f14a17200
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "61216091"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453055"
 ---
 # <a name="incoming-call-notifications"></a>着信通知
 
@@ -18,7 +18,7 @@ ms.locfileid: "61216091"
 
 ## <a name="protocol-determination"></a>プロトコルの決定
 
-受信通知は、以前のプロトコルと互換性を保つレガシ形式[でSkypeされます](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)。 呼び出しを Microsoft Graph プロトコルに変換するには、ボットが通知が従来の形式であるかどうかを判断し、次の応答を提供する必要があります。
+受信通知は、以前のプロトコルと互換性を保つレガシ[形式Skypeされています](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)。 呼び出しを Microsoft Graph プロトコルに変換するには、ボットが通知が従来の形式であるかどうかを判断し、次の応答を提供する必要があります。
 
 ```http
 HTTP/1.1 204 No Content
@@ -39,8 +39,7 @@ HTTP/1.1 302 Found
 Location: your-new-location
 ```
 
-ボットが応答 API を使用して着信呼び出しに応答 [できます](/graph/api/call-answer?view=graph-rest-1.0&tabs=http&preserve-view=true) 。 この特定の呼び `callbackUri` 出しを処理するを指定できます。 これは、呼び出しが特定のパーティションによって処理され、この情報を適切なインスタンスにルーティングするために埋め込むステートフル インスタンスに `callbackUri` 役立ちます。
-
+ボットが応答 API を使用して着信呼び出しに応答 [できます](/graph/api/call-answer?view=graph-rest-1.0&tabs=http&preserve-view=true) 。 この特定の呼び出 `callbackUri` しを処理するを指定できます。 これは、呼び出 `callbackUri` しが特定のパーティションによって処理され、この情報を適切なインスタンスにルーティングするために埋め込むステートフル インスタンスに役立ちます。
 
 次のセクションでは、Webhook に投稿されたトークンを調によるコールバックの認証の詳細を示します。
 
@@ -82,11 +81,11 @@ OAuth トークンは次の値を持ち、次の値で署名Skype。
 }
 ```
 
-公開されている OpenID 構成 <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> を使用して、トークンを確認できます。 各 OAuth トークンの値は、次のように使用されます。
+公開されている OpenID 構成を <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> 使用して、トークンを確認できます。 各 OAuth トークンの値は、次のように使用されます。
 
 * `aud` 対象ユーザーは、アプリケーションに指定されたアプリ ID URI です。
 * `tid` は、ユーザーのテナント id Contoso.com。
-* `iss` はトークン発行者です `https://api.botframework.com` 。
+* `iss`はトークン発行者です。 `https://api.botframework.com`
 
 コード処理では、Webhook はトークンを検証し、有効期限が切れていないか確認し、発行された OpenID 構成によって署名されているかどうかを確認する必要があります。 コールバック要求を受け入れる前に、aud がアプリ ID と一致するかどうかを確認する必要があります。
 

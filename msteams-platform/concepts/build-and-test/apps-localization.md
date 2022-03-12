@@ -5,19 +5,19 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams publishs store office publishing AppSource ローカライズ言語
 ms.date: 05/15/2018
-ms.openlocfilehash: ec734017a807f744a4b44d7d3594638a5ec72b32
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 13325d323ec1d4d87f6cd5ff64c4a6c71552e01c
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355525"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452698"
 ---
 # <a name="localize-your-app"></a>アプリをローカライズする
 
 アプリをローカライズするには、次のMicrosoft Teamsしてください。
 
 1. [AppSource リストをローカライズします](#localize-your-appsource-listing)。
-1. [アプリ マニフェスト内の文字列をローカライズします](#localize-strings-in-your-app-manifest)。 
+1. [アプリ マニフェスト内の文字列をローカライズします](#localize-strings-in-your-app-manifest)。
 1. [ユーザーからのローカライズされたテキスト送信を処理します](#handle-localized-text-submissions-from-your-users)。
 
 ## <a name="localize-your-appsource-listing"></a>AppSource リストをローカライズする
@@ -44,7 +44,7 @@ ms.locfileid: "63355525"
 
 ## <a name="localize-strings-in-your-app-manifest"></a>アプリ マニフェスト内の文字列をローカライズする
 
-アプリをローカライズするには、Microsoft Teamsスキーマ以降`v1.5`を使用する必要があります。 これを行うには、`$schema`manifest.json `$schema` **https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json** `manifestVersion` ファイルの属性を以上に設定し、プロパティをバージョン (`1.5`この場合) に更新します。 
+アプリをローカライズするには、Microsoft Teamsスキーマ以降`v1.5`を使用する必要があります。 これを行うには、`$schema`manifest.json `$schema` **https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json** `manifestVersion` ファイルの属性を以上に設定し、プロパティをバージョン (`1.5`この場合) に更新します。
 
 アプリケーションでサポートされている既定 `localizationInfo` の言語でプロパティを追加する必要があります。 既定の言語は、ユーザーのクライアント設定が追加の言語と一致しない場合、最終的なフォールバック言語として使用されます。
 
@@ -57,14 +57,14 @@ ms.locfileid: "63355525"
   "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
   "manifestVersion": "1.5",
   "localizationInfo": {
-        "defaultLanguageTag": "en",
-        "additionalLanguages": [
-            {
-                "languageTag": "es-mx",
-                "file": "es-mx.json"
-            }
-        ]
-    }
+  "defaultLanguageTag": "en",
+  "additionalLanguages": [
+   {
+    "languageTag": "es-mx",
+    "file": "es-mx.json"
+   }
+  ]
+ }
   ...
 }
 ```
@@ -83,7 +83,6 @@ ms.locfileid: "63355525"
 }
 ```
 
-
 マニフェスト内のすべてのユーザー向け文字列の翻訳を含む追加の .json ファイルを提供できます。 これらのファイルは、ローカライズ ファイル JSON スキーマに準拠している[必要があります](../../resources/schema/localization-schema.md)`localizationInfo`。マニフェストのプロパティに追加する必要があります。 各ファイルは言語タグに関連付け、Teamsを使用して適切な文字列を選択します。 言語タグの形式を使用 `<language>-<region>` します `<region>` が、目的の言語をサポートしているすべての地域を対象とする部分を省略できます。
 
 Teams クライアントは、既定の言語文字列 -> ユーザーの言語のみ -> ユーザーの言語 + ユーザーの地域文字列の順序で文字列を適用します。
@@ -93,14 +92,14 @@ Teams クライアントは、既定の言語文字列 -> ユーザーの言語�
 1. クライアントTeams'fr' 文字列を受け取り、'en' 文字列で上書きします。
 1. 'en' 文字列を 'en-gb' 文字列で上書きします。
 
-ユーザーの言語が 'en-ca' に設定されている場合、言語の選択に基づいて次の変更が行います。 
+ユーザーの言語が 'en-ca' に設定されている場合、言語の選択に基づいて次の変更が行います。
 
 1. クライアントTeams'fr' 文字列を受け取り、'en' 文字列で上書きします。
 1. 'en-ca' ローカライズは指定されていないので、'en' ローカライズが使用されます。
 
 ユーザーの言語が 'es-es' に設定されている場合、Teamsは 'fr' 文字列を受け取る。 このTeamsクライアントは、言語ファイルの文字列を上書きしません。'es' または 'es-es' 変換が提供されていない。
 
-したがって、マニフェストにトップ レベルの言語翻訳のみを提供する必要があります。 たとえば、'en-us' の代わりに 'en' を使用します。 地域レベルのオーバーライドは、必要な少数の文字列にのみ指定する必要があります。 
+したがって、マニフェストにトップ レベルの言語翻訳のみを提供する必要があります。 たとえば、'en-us' の代わりに 'en' を使用します。 地域レベルのオーバーライドは、必要な少数の文字列にのみ指定する必要があります。
 
 ### <a name="example-manifestjson-change"></a>manifest.json の変更例
 

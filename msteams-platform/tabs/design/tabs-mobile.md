@@ -4,12 +4,12 @@ description: モバイル、認証、低帯域幅Microsoft Teams、モバイル 
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: アプリのモバイル タブ チャネル グループ認証の配布
-ms.openlocfilehash: eb0bc5b0415f1879619cc704a77501406bcea397
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 520cad9d295b4f63ca437db5f69abc3ba9464faa
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356372"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452593"
 ---
 # <a name="tabs-on-mobile"></a>モバイルのタブ
 
@@ -25,6 +25,7 @@ ms.locfileid: "63356372"
 | **チャネルタブとグループ タブ** | タブが使用しているクライアントTeams開きます`contentUrl`。 | タブは、 を使用してクライアントの外部Teams開きます`websiteUrl`。 |
 
 > [!NOTE]
+>
 > * AppSource に送信された[アプリ](https://appsource.microsoft.com)は、モバイルの応答性Teams自動的に評価されます。 クエリの場合は、ユーザーに問い合 teamsubm@microsoft.com。
 > * AppSource を介して配布されていないすべてのアプリでは、タブは既定で Teams クライアント内のアプリ内 Web ビューで開き、個別の承認プロセスは必要ありません。
 > * アプリの既定の動作は、アプリ ストアを通じて配布Teamsです。 既定では、すべてのタブがクライアントでTeamsされます。
@@ -52,7 +53,7 @@ ms.locfileid: "63356372"
 
 |機能   |モバイルの可用性   |モバイル動作|
 |----------|-----------|------------|
-|チャネル <br /> [グループ] タブ|必要|アプリの構成を使用Teamsモバイル クライアントのタブが開`contentUrl`きます。|
+|チャネル <br /> [グループ] タブ|はい|アプリの構成を使用Teamsモバイル クライアントのタブが開`contentUrl`きます。|
 |個人用アプリ|はい|[個人用アプリ] タブの各タブが、それぞれの構成Teamsモバイル クライアントで開`contentUrl`きます。|
 
 ### <a name="apps-on-teams-store-not-approved-for-mobile"></a>モバイル向Teamsアプリが承認されていないアプリ

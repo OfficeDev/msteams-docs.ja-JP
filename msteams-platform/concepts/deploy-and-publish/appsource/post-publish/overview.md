@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 3226b56ad784c0780ae01e8776704062e1add753
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: cfbfc1cb1796bcdcf1946c87756e3fa2285eff69
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356015"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453580"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>公開された Microsoft Teams アプリを管理する
 
@@ -18,15 +18,15 @@ ms.locfileid: "63356015"
 
 ## <a name="analyze-app-usage"></a>アプリの使用状況を分析する
 
-パートナー センターのアプリ使用状況レポートTeams[で、](/office/dev/store/teams-apps-usage)アプリの使用状況を追跡できます。 指標には、月次、日次、週単位のアクティブ ユーザー、および保持と強度のグラフが含まれます。このグラフを使用すると、解約や頻度を追跡できます。
+パートナー センターのアプリ使用状況レポートTeams[で、](/office/dev/store/teams-apps-usage)アプリの使用状況を追跡できます。 メトリックには、月間、日単位、週単位のアクティブ ユーザー、リテンション期間と強度のグラフが含まれており、チャーンと使用量の頻度を追跡できます。
 
-新しく公開されたアプリのデータは、レポートに表示するのに約 1 週間かかる。
+新しく公開されたアプリのデータがレポートに表示されるまでに約 1 週間かかります。
 
 ## <a name="publish-updates-to-your-app"></a>アプリに更新プログラムを発行する
 
 > [!NOTE]
 > Teams ストアが進化しました。
-> 
+>
 > 以前は、アプリ タイルで省略記号を選択してリンクをコピーしました。 更新されたストア エクスペリエンスTeams、アプリの [詳細] タブから同じ情報にアクセスできます。 この更新プログラムは、2022 年 3 月 1 日までに一般提供 (GA) される予定です。
 
 パートナー センターでは、アプリに変更 (新機能やメタデータなど) を送信できます。 これらの変更には、新しいレビュー プロセスが必要です。

@@ -1,26 +1,26 @@
 ---
-title: アプリTeamsマニフェストをプレビュー Teams Toolkit
+title: アプリ Teamsマニフェストをプレビュー Teams Toolkit
 author: zyxiaoyuer
 description: Teams アプリ マニフェストをプレビューする
 ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 453dc7e3c2698504ea755cd4564f588cdd95ba36
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: aa80636a4fdb3c27d66bc08f9d308a009e183570
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435371"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453244"
 ---
 # <a name="preview-teams-app-manifest-in-teams-toolkit"></a>アプリ Teamsマニフェストをプレビュー Teams Toolkit
 
 スキャフォールディング後、フォルダーで使用できるマニフェスト テンプレート ファイルを次に示 `templates/appPackage` します。
 
-- `manifest.local.template.json` - ローカル デバッグ チーム アプリ。
-- `manifest.remote.template.json` - すべてのリモート環境間で共有されます。
+* `manifest.local.template.json` - ローカル デバッグ チーム アプリ。
+* `manifest.remote.template.json` - すべてのリモート環境間で共有されます。
 
-プレースホルダーから成るテンプレート ファイル、およびファイルの実際の値Teams Toolkitで解決`.fx/configs`されます`.fx/states`。
+プレースホルダーから成るテンプレート ファイルと、ファイルの`.fx/configs``.fx/states`実際Teams Toolkitファイルおよび .
 
 ## <a name="prerequisite"></a>前提条件
 
@@ -50,20 +50,20 @@ ms.locfileid: "62435371"
 
 1. **manifest.local.template.json ファイルの codelens で [プレビュー] を選択** します。
 2. manifest.local.template.json ファイルのメニュー バーで [**マニフェスト ファイルのプレビュー] を選択** します。
-3. Treeview **で [zip Teamsメタデータ パッケージ]** を選択し、[ローカル] を **選択します**。
+3. Treeview **で [zip Teamsメタデータ パッケージ] を** 選択し、[ローカル] を **選択します**。
 プレビュー ローカルは、イメージに示すように表示されます。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-1.png" alt-text="プレビュー":::
 
 ### <a name="preview-manifest-in-remote-environment"></a>リモート環境でマニフェストをプレビューする
 
-リモート チーム アプリのマニフェスト ファイルをプレビューするには、Teams Toolkit 拡張子 Treeview の開発パネルでクラウドで [プロビジョニング] を選択するか、Teams **:** コマンド パレットからクラウドでプロビジョニングをトリガーします。 リモート チーム アプリの構成を生成し、ビルド **/appPackage** フォルダーの下にパッケージマニフェストとプレビュー マニフェストをビルドします。
+リモート チーム アプリのマニフェスト ファイルをプレビューするには、Teams Toolkit 拡張子 Treeview の開発パネルでクラウドで [プロビジョニング] を選択するか、Teams **: コマンド** パレットからクラウドでプロビジョニングをトリガーします。 リモート チーム アプリの構成を生成し、ビルド **/appPackage** フォルダーの下にパッケージマニフェストとプレビュー マニフェストをビルドします。
 
 次の手順に従って、リモート環境でマニフェストをプレビューできます。
 
 1. **manifest.remote.template.json ファイルの codelens で [プレビュー] を選択** します。
 2. **manifest.remote.template.json ファイルのメニュー バーで [マニフェスト ファイルのプレビュー] を選択** します。
-3. ツリー **ビューで [zip Teamsメタデータ パッケージ]** を選択します。
+3. Treeview **で [zip Teamsメタデータ パッケージ]** を選択します。
 4. 環境を選択します。
 
 複数の環境がある場合は、イメージに示すようにプレビューする環境を選択する必要があります。
@@ -74,23 +74,23 @@ ms.locfileid: "62435371"
 
 マニフェスト ファイルをプレビューした後、次の手順に従ってローカルの変更を Dev ポータルに同期できます。
 
-1.  [**更新] をTeamsの** 左上隅にある [プラットフォームを更新する] を選択します。`manifest.{env}.json`
-2. [**Teams: マニフェストを更新して、Teamsの** メニュー バーでプラットフォームに更新します。`manifest.{env}.json`
+1. [**更新] をTeamsの** 左上隅にある [プラットフォームを更新する] を選択します。`manifest.{env}.json`
+2. [Teams **: マニフェストを更新して、Teamsバーの [** プラットフォームに更新する] を選択します。`manifest.{env}.json`
 
- コマンド パレットからマニフェスト **TeamsプラットフォームにTeamsをトリガー** することもできます。
+ コマンド パレットからTeams **プラットフォームにマニフェスト** をTeamsトリガーすることもできます。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="ツリー ビュー":::
 
 > [!NOTE]
-> エディター の codelens または title からのトリガー **は**、現在のマニフェスト ファイルを新しいプラットフォームTeamsします。 コマンド パレットからトリガーするには、ターゲット環境を選択する必要があります。
+> エディター の codelens または title からトリガー **すると**、現在のマニフェスト ファイルが新しいプラットフォームTeamsされます。 コマンド パレットからトリガーするには、ターゲット環境を選択する必要があります。
 
 構成ファイルの変更またはテンプレートの変更によりマニフェスト ファイルが古くなった場合は、次の操作を確認してください。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
 
-- **プレビューのみ**: ローカル マニフェスト ファイルは現在の構成に従って上書きされます
-- **プレビューと更新**: ローカル マニフェスト ファイルは、現在の構成に従って上書きされ、Teamsされます
-- **キャンセル**: 何もしない
+* **プレビューのみ**: ローカル マニフェスト ファイルは現在の構成に従って上書きされます
+* **プレビューと更新**: ローカル マニフェスト ファイルは、現在の構成に従って上書きされ、Teamsされます
+* **キャンセル**: 何もしない
 
 > [!NOTE]
 > 変更は開発ポータルに更新されます。 開発ポータルでいくつかの手動更新プログラムがある場合は、上書きされます。

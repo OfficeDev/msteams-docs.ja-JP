@@ -5,12 +5,12 @@ description: Teams 環境内の IDE を使用してボットをローカルで�
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: d9ddbb3aa4f93b8981fbba03d879a77f4175e81e
-ms.sourcegitcommit: 4892d8d0fa38a472edab047754ef85b1a85be495
+ms.openlocfilehash: db4b9143dfbaa8dbbb3a5aa965836d151ad8cd46
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/27/2021
-ms.locfileid: "61608462"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453370"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>ボットをローカルでテストおよびデバッグする
 
@@ -31,7 +31,7 @@ ms.locfileid: "61608462"
 
 ## <a name="debug-your-bot-locally"></a>ボットをローカルでデバッグする
 
-開発中にボットをローカルでホストしている場合は、ボットをテストするために [ngrok](https://ngrok.com/) のようなトンネリング サービスを使用する必要があります。 ngrok をダウンロードしてインストールした後、パスに追加し、次のコマンドを実行してトンネ `ngrok` リング サービスを開始します。
+開発中にボットをローカルでホストしている場合は、ボットをテストするために [ngrok](https://ngrok.com/) のようなトンネリング サービスを使用する必要があります。 ngrok をダウンロードしてインストールした後、 `ngrok` パスに追加し、次のコマンドを実行してトンネリング サービスを開始します。
 
 ```bash
 ngrok http <port> -host-header=localhost:<port>
@@ -44,13 +44,13 @@ ngrok http <port> -host-header=localhost:<port>
 
 ## <a name="test-your-bot-without-uploading-to-teams"></a>ボットにアップロードせずにボットをテストTeams
 
-場合によっては、ボットをアプリとしてインストールせずにボットをテストする必要Teams。 ボットをテストする 2 つの方法を提供します。 アプリとしてインストールせずにボットをテストすると、ボットが利用可能で応答を確実に行うのに役立ちますが、ボットに追加した Microsoft Teams 機能の全幅をテストできません。 ボットを完全にテストする必要がある場合は、「アップロード [によるテスト」を参照してください](#test-by-uploading-to-teams)。
+場合によっては、ボットをアプリとしてインストールせずにボットをテストする必要Teams。 ボットをテストする 2 つの方法を提供します。 アプリとしてインストールせずにボットをテストすると、ボットが利用可能で応答を確実に行うのに役立ちますが、ボットに追加した可能性がある Microsoft Teams 機能の全幅をテストできません。 ボットを完全にテストする必要がある場合は、「アップロード [によるテスト」を参照してください](#test-by-uploading-to-teams)。
 
 ### <a name="use-the-bot-emulator"></a>ボット を使用Emulator
 
 このBot Framework Emulatorは、ボット開発者がボットをローカルまたはリモートでテストおよびデバッグできるデスクトップ アプリケーションです。 エミュレーターは、ボットとチャットし、ボットが送信および受信するメッセージを調べするのに役立ちます。 これは、ボットが使用可能で応答を確認する場合に役立ちます。 ただし、エミュレーターでは、ボットに追加した Teams 固有の機能をテストできません。また、ボットからの応答は、Teams でのレンダリング方法の正確な視覚的表現です。 これらのテストを行う必要がある場合は、ボットをアップロード [する方が最適です](#test-by-uploading-to-teams)。
 
-詳細については、「詳細な手順[」を参照Bot Framework Emulator。](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&preserve-view=true)
+詳細については、「詳細な手順[」を参照Bot Framework Emulator](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&preserve-view=true)。
 
 ### <a name="talk-to-your-bot-directly-by-id"></a>ボットと ID で直接話す
 
@@ -59,14 +59,14 @@ ngrok http <port> -host-header=localhost:<port>
 
 ボットとの会話を開始するには、その ID を使用します。 これらの方法のいずれかを使用してボットを追加した場合、チャネル会話では対応できません。また、タブやメッセージング拡張機能などの他の Microsoft Teams アプリ機能を利用することはできません。 次のいずれかの方法で会話を開始できます。
 
-* ボットの [[ボット ダッシュボード]](https://dev.botframework.com/bots)ページの [チャネル]**で、[ボット** に追加] を選択 **Microsoft Teams。** Microsoft Teamsボットとの個人用チャットを起動します。
+* ボットの [[ボット ダッシュボード]](https://dev.botframework.com/bots) ページの [チャネル] で、[**ボットに追加**] **Microsoft Teams**。 Microsoft Teamsボットとの個人用チャットを起動します。
 
 * ボットのアプリ ID を次の場所から直接参照Microsoft Teams。
-   1. ボットの [[ボット ダッシュボード]](https://dev.botframework.com/bots)ページの [詳細] で、ボットの **Microsoft App ID** をコピーします。
+   1. ボットの [[ボット ダッシュボード]](https://dev.botframework.com/bots) ページの [ **詳細] で**、 **ボットの Microsoft App ID** をコピーします。
   
       ![ボットの AppID の取得](~/assets/images/bots_appid_botframework.png)
   
-   2. [チャットMicrosoft Teamsを開き、[チャットの追加]**アイコンを選択** します。 **[To:]** で、ボットの Microsoft App ID を貼り付けます。
+   2. [Microsoft Teams] を開き、[**チャット] ウィンドウで** [チャットの追加 **] アイコンを選択** します。 [ **To:]** で、ボットの Microsoft App ID を貼り付けます。
   
       ![ボットのアップロード](~/assets/images/bots_uploading.png)
 
@@ -76,9 +76,9 @@ ngrok http <port> -host-header=localhost:<port>
       または、ボットのアプリ ID をアプリの左上の検索ボックスに貼り付Microsoft Teams。 検索結果ページで、[ユーザー] タブに移動してボットを表示し、チャットを開始します。
 
 > [!Note]
-> ボットMicrosoft Teamsを参照するには、アプリのサイドローディング[を有効にしてください](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)。      
+> ボットMicrosoft Teamsを参照するには、アプリのサイドローディング[を有効にしてください](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)。
 
-ボットは、オブジェクト内のチーム情報なしで、ボットをチームに追加すると `conversationUpdate` イベントを受け取 `channelData` ります。
+ボットは、オブジェクト内 `conversationUpdate` のチーム情報なしで、ボットをチームに追加するとイベントを受け取 `channelData` ります。
 
 ## <a name="block-a-bot-in-personal-chat"></a>個人用チャットでボットをブロックする
 
@@ -90,13 +90,13 @@ ngrok http <port> -host-header=localhost:<port>
 
 ユーザーは、チームのビューでボットリストのごみ箱アイコンを選択して、ボットを削除できます。 これにより、そのチームの使用からボットが削除されるだけで、個々のユーザーは個人のコンテキストで操作できます。 個人用コンテキストのボットは、ユーザーが無効にしたり削除したりすることはできません。
 
-## <a name="disable-a-bot-in-teams"></a>アプリでボットを無効Teams
+## <a name="disable-a-bot-in-teams"></a>デバイスでボットを無効Teams
 
-ボットがメッセージを受け取るのを停止するには、ボット ダッシュボードに移動し、ボット チャネルMicrosoft Teamsします。 [有効にする **] オプションをMicrosoft Teams** します。 これにより、ユーザーはボットを操作できませんが、検出可能であり、ユーザーは引き続きボットに追加Teams。
+ボットがメッセージの受信を停止するには、ボット ダッシュボードに移動し、ボット チャネルMicrosoft Teamsします。 [有効にする **] オプションをMicrosoft Teams** します。 これにより、ユーザーはボットを操作できませんが、検出可能であり、ユーザーは引き続きボットに追加Teams。
 
 ## <a name="delete-a-bot-from-teams"></a>ボットを削除Teams
 
-ボットを完全に削除するにはTeamsボット ダッシュボードに移動し、ボット チャネルMicrosoft Teamsします。 下部にある **[削除** ] ボタンを選択します。 これにより、ユーザーはボットを検出、追加、操作できます。 これにより、他のユーザーのインスタンスからボットTeams削除されるわけではありませんが、ボットの機能も停止します。
+ボットを完全に削除するにはTeamsボット ダッシュボードに移動し、ボット  チャネルMicrosoft Teamsします。 下部にある **[削除** ] ボタンを選択します。 これにより、ユーザーはボットを検出、追加、操作できます。 これにより、他のユーザーのインスタンスからボットTeams削除されるわけではありませんが、ボットの機能も停止します。
 
 ## <a name="see-also"></a>関連項目
 

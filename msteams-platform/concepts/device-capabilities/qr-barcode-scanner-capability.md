@@ -6,35 +6,35 @@ keywords: カメラ メディア QR コード qrcode バーコード バーコ�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: c21408ccbca6cd12d37d2066cf50f3468b669012
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 799306024980a9bb4e7a44b5ca654865303dec24
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888000"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452957"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>QR コードまたはバーコード スキャナー機能を統合する
 
-バーコードは、視覚的で機械で読み取り可能な形式でデータを表す方法です。 バーコードには、バーとスペースの形式で、種類、サイズ、製造元、発生国などの製品に関する情報が含まれます。 コードは、ネイティブ デバイス カメラの光学スキャナーを使用して読み取ります。 より豊富な共同作業エクスペリエンスを実現するには、Teams プラットフォームで提供される QR またはバーコード スキャナー機能をアプリTeamsできます。   
+バーコードは、視覚的で機械で読み取り可能な形式でデータを表す方法です。 バーコードには、バーとスペースの形式で、種類、サイズ、製造元、発生国などの製品に関する情報が含まれます。 コードは、ネイティブ デバイス カメラの光学スキャナーを使用して読み取ります。 より豊富な共同作業エクスペリエンスを実現するには、Teams プラットフォームで提供される QR またはバーコード スキャナー機能をアプリTeamsできます。
 
-JavaScript クライアント[SDK Microsoft Teams使用](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)できます。これは、アプリがユーザーのネイティブ デバイス機能にアクセスするために必要なツール[を提供します](native-device-permissions.md)。 [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API を使用して、スキャナー機能をアプリ内に統合します。
+JavaScript クライアント [SDK Microsoft Teams使用](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)できます。アプリがユーザーのネイティブ デバイス機能にアクセスするために必要なツール[を提供します](native-device-permissions.md)。 [scanBarCode API を使用](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_)して、スキャナー機能をアプリ内に統合します。
 
 ## <a name="advantage-of-integrating-qr-or-barcode-scanner-capability"></a>QR またはバーコード スキャナー機能を統合する利点
 
-QR またはバーコード スキャナー機能の統合の利点は次のとおりです。 
+QR またはバーコード スキャナー機能の統合の利点は次のとおりです。
 
 * この統合により、Web アプリ開発者は、Teams JavaScript クライアント SDK で QR またはバーコードスキャン機能Teams活用できます。
 * この機能を使用すると、ユーザーはスキャナー UI の中央にあるフレーム内の QR またはバーコードのみを配置する必要があります。コードは自動的にスキャンされます。 保存されたデータは、呼び出し元の Web アプリと共有されます。 これにより、長い製品コードや他の関連情報を手動で入力する際の不便や人的ミスを回避できます。
 
-QR またはバーコード スキャナー機能を統合するには、アプリ マニフェスト ファイルを更新し [、scanBarCode API を呼び出す必要](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) があります。 統合を効果的に行う場合は、ネイティブ[](#code-snippet)QR またはバーコード スキャナー機能を使用できる[scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API を呼び出すコード スニペットについて理解している必要があります。 API では、サポートされていないバーコード標準に対してエラーが発生します。
-API 応答エラーを理解して、アプリ[](#error-handling)内のエラーを処理することがTeamsです。
+QR またはバーコード スキャナー機能を統合するには、アプリ マニフェスト ファイルを更新し、 [scanBarCode API を呼び出す必要](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) があります。 統合を効果的に行う場合は、ネイティブ QR [](#code-snippet) またはバーコード スキャナー機能を使用できる [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API を呼び出すコード スニペットについて理解している必要があります。 API では、サポートされていないバーコード標準に対してエラーが発生します。
+API 応答エラーを理解して、アプリ内[](#error-handling)のエラーを処理することがTeamsです。
 
-> [!NOTE] 
-> 現在、qr Microsoft Teamsバーコード スキャナー機能のサポートは、モバイル クライアントでのみ利用できます。
+> [!NOTE]
+> 現在、Microsoft Teamsバーコード スキャナー機能のサポートはモバイル クライアントでのみ利用できます。
 
 ## <a name="update-manifest"></a>マニフェストの更新
 
-プロパティをTeams指定して、[アプリ manifest.json](../../resources/schema/manifest-schema.md#devicepermissions)ファイル `devicePermissions` を更新します `media` 。 これにより、QR またはバーコード スキャナー機能の使用を開始する前に、アプリでユーザーに必要なアクセス許可を求めできます。 アプリ マニフェストの更新プログラムは次のとおりです。
+プロパティを追加Teams指定して、[アプリ manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) `devicePermissions` ファイルを更新します`media`。 これにより、QR またはバーコード スキャナー機能の使用を開始する前に、アプリでユーザーに必要なアクセス許可を求めできます。 アプリ マニフェストの更新プログラムは次のとおりです。
 
 ``` json
 "devicePermissions": [
@@ -43,20 +43,20 @@ API 応答エラーを理解して、アプリ[](#error-handling)内のエラー
 ```
 
 > [!NOTE]
-> 要求 **のアクセス許可のプロンプト** は、関連する API が開始されるとTeams表示されます。 詳細については、「デバイスのアクセス許可 [を要求する」を参照してください](native-device-permissions.md)。
+> [**アクセス許可の要求]** プロンプトは、関連する API が開始Teams自動的に表示されます。 詳細については、「デバイスのアクセス許可 [を要求する」を参照してください](native-device-permissions.md)。
 
 ## <a name="scanbarcode-api"></a>ScanBarCode API
 
-[scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API は、ユーザーがさまざまな種類のバーコードをスキャンできるスキャナー コントロールを呼び出し、結果を文字列として返します。
+[scanBarCode API は](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_)、ユーザーがさまざまな種類のバーコードをスキャンできるスキャナー コントロールを呼び出し、結果を文字列として返します。
 
-バーコードスキャンエクスペリエンスをカスタマイズするために、オプションの [バーコード構成](/javascript/api/@microsoft/teams-js/microsoftteams.media.barcodeconfig?view=msteams-client-js-latest&preserve-view=true) が [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API に入力として渡されます。 を使用して、スキャンのタイム アウト間隔を秒で指定できます `timeOutIntervalInSec` 。 既定値は 30 秒で、最大値は 60 秒です。
+バーコードスキャンエクスペリエンスをカスタマイズするために、オプションの [バーコード構成](/javascript/api/@microsoft/teams-js/microsoftteams.media.barcodeconfig?view=msteams-client-js-latest&preserve-view=true) が [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API に入力として渡されます。 を使用して、スキャンのタイム アウト間隔を秒で指定できます `timeOutIntervalInSec`。 既定値は 30 秒で、最大値は 60 秒です。
 
-**scanBarCode()** API は、次のバーコードの種類をサポートしています。
+**scanBarCode() API は**、次のバーコードの種類をサポートしています。
 
 | バーコードの種類 | Android でサポートされる | iOS でサポート |
 | ---------- | ---------- | ------------ |
 | Codebar | はい | 不要 |
-| コード 39 | はい | はい | 
+| コード 39 | はい | はい |
 | コード 93 | はい | はい |
 | コード 128 | はい | はい |
 | EAN-13 | はい | はい |
@@ -74,7 +74,7 @@ API 応答エラーを理解して、アプリ[](#error-handling)内のエラー
 
 ## <a name="error-handling"></a>エラー処理
 
-これらのエラーは、アプリで適切に処理Teamsがあります。 次の表に、エラー コードとエラーが生成される条件を示します。 
+これらのエラーは、アプリで適切に処理Teamsがあります。 次の表に、エラー コードとエラーが生成される条件を示します。
 
 |エラー コード |  エラー名     | 条件|
 | --------- | --------------- | -------- |
@@ -109,6 +109,6 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 ## <a name="see-also"></a>関連項目
 
-* [メディア機能を統合Teams](mobile-camera-image-permissions.md)
-* [場所の機能を統合Teams](location-capability.md)
-* [[ユーザー選択] を [ユーザー選択] Teams](people-picker-capability.md)
+* [Teams でメディア機能を統合する](mobile-camera-image-permissions.md)
+* [Teams で位置情報機能を統合する](location-capability.md)
+* [ユーザー選択ツールをユーザー 選択ツールにTeams](people-picker-capability.md)

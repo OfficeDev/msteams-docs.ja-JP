@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: power platform power apps people picker deep link virtual agent assistant share-to-Teams
-ms.openlocfilehash: 0b19e5ae5a8427a77df0f4ec5fd3ea85a9abd682
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 274525b61ae95021cde41095e4bb37133e05b3e8
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355959"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453692"
 ---
 # <a name="integrate-web-apps"></a>Web アプリを統合する
 
@@ -41,7 +41,10 @@ ms.locfileid: "63355959"
 
 Microsoft Power プラットフォームは、1 つの強力なアプリケーション プラットフォームで、Power BI、Power Apps、Power Automate、Power Virtual Agentsなど、4 つの堅牢な Microsoft テクノロジを組み合わせたプラットフォームです。 これらのテクノロジを使用すると、ソリューションの構築、プロセスの自動化、データの分析、統合された統合環境内での仮想エージェントの作成が可能になります。
 
-### <a name="power-apps"></a>Power アプリ
+>[!NOTE]
+>Microsoft Power Platform を使用して、アプリ ストアに発行するアプリを作成Teams必要があります。 Microsoft Power Platform アプリは、組織のアプリ ストアにのみ発行できます。
+
+### <a name="power-apps"></a>Power Apps
 
 このPower Apps、ビジネス データに接続し、組織のニーズに合わせてカスタマイズされたビジネス アプリを構築できます。 Power Appsキャンバス アプリを通じてビジネスの課題を解決するために、さまざまなアプリ シナリオを有効にします。 アプリを構築した後、アプリをメーカー ポータルからエクスポートしPower Appsに埋め込Microsoft Teams。
 

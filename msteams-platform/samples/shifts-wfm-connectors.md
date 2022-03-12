@@ -7,12 +7,12 @@ ms.date: 03/09/2020
 ms.localizationpriority: medium
 keywords: Microsoft Teams コネクタ kronos
 ms.author: lajanuar
-ms.openlocfilehash: 21ea28e3b5d53226a2ab50ac22db31fef561596a
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 84e16f26dbe8597089e601e0d7eadca12a4a4446
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355742"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453104"
 ---
 # <a name="production-ready-shifts-connectors"></a>本番対応の Shifts コネクタ  
 
@@ -36,7 +36,7 @@ Shifts WFM コネクタの主な利点Teams次に示します。
 
 * **シームレスな統合:** WFM ソリューションと Teams Shifts の統合により、第一線のワーカーは、Teams Shifts アプリを使用してスケジュールとシフト時間を表示または管理し、コンテキストを別のアプリに切り替えることなく、Teams で提供される他のすべての豊富なコラボレーション機能をモバイル デバイスまたはデスクトップから使用できます。  
 
-**[シフト] ビューを開Teams**
+次の方法でシフト ビュー Teams。
 
 次の図に、Teamsシフト ビューが表示されます。
 

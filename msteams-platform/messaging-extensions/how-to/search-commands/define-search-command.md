@@ -5,12 +5,12 @@ description: アプリのメッセージング拡張機能の検索コマンドM
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: a68d43fc067e1a67b914ed49f042d535e6c8de5a
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: ba8fdf2426fbedb88d7df11cee1957deaba9b721
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356358"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452971"
 ---
 # <a name="define-messaging-extension-search-commands"></a>メッセージング拡張機能の検索コマンドを定義する
 
@@ -42,12 +42,12 @@ ms.locfileid: "63356358"
 
 検索コマンドを作成する前提条件は、メッセージング拡張機能を既に作成している必要があります。 メッセージング拡張機能を作成する方法については、「create a [messaging extension」を参照してください](~/messaging-extensions/how-to/create-messaging-extension.md)。
 
-**検索コマンドを作成するには**
+検索コマンドを作成するには、次のコマンドを実行します。
 
 1. クライアント **から App Studio** をMicrosoft Teamsし、[マニフェスト エディター] **タブを選択** します。
-1.  App Studio でアプリ パッケージを既に作成している **場合** は、一覧から選択します。 アプリ パッケージを作成していない場合は、既存のパッケージをインポートします。
+1. App Studio でアプリ パッケージを既に作成している **場合** は、一覧から選択します。 アプリ パッケージを作成していない場合は、既存のパッケージをインポートします。
 1. アプリ パッケージをインポートした後、[機能] **の [メッセージング拡張機能]** **を選択します**。 メッセージング拡張機能を設定するポップアップ ウィンドウが表示されます。
-1. ウィンドウ **で [セットアップ** ] を選択して、メッセージング拡張機能をアプリ エクスペリエンスに含めます。 次の図は、メッセージング拡張機能のセットアップ ページを表示します。 
+1. ウィンドウ **で [セットアップ** ] を選択して、メッセージング拡張機能をアプリ エクスペリエンスに含めます。 次の図は、メッセージング拡張機能のセットアップ ページを表示します。
 
     <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="500"/>
 
@@ -55,7 +55,7 @@ ms.locfileid: "63356358"
 
     <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
 
-1. [ **メッセージング拡張機能** ] **ページの [コマンド** ] セクションで [追加] を選択して、メッセージング拡張機能の動作を決定するコマンドを含めます。   
+1. [ **メッセージング拡張機能** ] **ページの [コマンド** ] セクションで [追加] を選択して、メッセージング拡張機能の動作を決定するコマンドを含めます。
 次の図は、メッセージング拡張機能のコマンド追加を表示します。
 
    <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
@@ -76,12 +76,12 @@ ms.locfileid: "63356358"
 
 | プロパティ名 | 用途 | 必須 | マニフェストの最小バージョン |
 |---|---|---|---|
-| `id` | このプロパティは、検索コマンドに割り当てる一意の ID です。 ユーザー要求には、この ID が含まれます。 | 必要 | 1.0 |
+| `id` | このプロパティは、検索コマンドに割り当てる一意の ID です。 ユーザー要求には、この ID が含まれます。 | はい | 1.0 |
 | `title` | このプロパティはコマンド名です。 この値は、ユーザー インターフェイス (UI) に表示されます。 | はい | 1.0 |
 | `description` | このプロパティは、このコマンドの動作を示すヘルプ テキストです。 この値は UI に表示されます。 | はい | 1.0 |
 | `type` | このプロパティは、 である必要があります `query`。 | 不要 | 1.4 |
 |`initialRun` | このプロパティが true に設定 **されている** 場合、ユーザーが UI でこのコマンドを選択するとすぐにこのコマンドを実行する必要があります。 | 不要 | 1.0 |
-| `context` | このプロパティは、検索アクションが使用できるコンテキストを定義する値のオプションの配列です。 使用可能な値: `message`、`compose`、`commandBox`。 既定値は `["compose", "commandBox"]` です。 | いいえ | 1.5 |
+| `context` | このプロパティは、検索アクションが使用できるコンテキストを定義する値のオプションの配列です。 使用可能な値: `message`、`compose`、`commandBox`。 既定値は `["compose", "commandBox"]` です。 | 不要 | 1.5 |
 
 検索クライアントでユーザーに表示されるテキストを定義する検索パラメーターの詳細を追加Teamsがあります。
 
@@ -121,6 +121,7 @@ ms.locfileid: "63356358"
 ...
 }
 ```
+
 完全なアプリ マニフェストについては、「アプリ マニフェスト [スキーマ」を参照してください](~/resources/schema/manifest-schema.md)。
 
 ## <a name="code-sample"></a>コード サンプル
@@ -137,4 +138,3 @@ ms.locfileid: "63356358"
 
 > [!div class="nextstepaction"]
 > [検索コマンドに応答します](~/messaging-extensions/how-to/search-commands/respond-to-search.md)。
-

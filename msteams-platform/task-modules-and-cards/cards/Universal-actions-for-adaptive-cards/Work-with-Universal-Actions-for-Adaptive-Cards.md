@@ -3,12 +3,12 @@ title: アダプティブ カードのユニバーサル アクションの操�
 description: コード サンプルを使用して、アダプティブ カードのスキーマ for UniversalActions、Refresh モデル、下位互換性など、アダプティブ カードのユニバーサル アクションを操作する方法について説明します。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a7160e1aa2dff6500335dc6b8557fcd94e836d8
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: c0893f5aaa9e454ab8a4091ce5b08c132c110746
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62080954"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452579"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>アダプティブ カードのユニバーサル アクションの操作
 
@@ -22,7 +22,7 @@ ms.locfileid: "62080954"
 ## <a name="quick-start-guide-to-use-universal-actions-for-adaptive-cards-in-teams"></a>アダプティブ カードのユニバーサル アクションを使用するクイック スタート Teams
 
 1. `Action.Submit` のすべてのインスタンスを `Action.Execute` に置き換えて、Teams の既存のシナリオを更新します。
-2. 自動更新モデルを使用する場合、またはシナリオでユーザー固有のビューが必要な場合は、アダプティブ カードに句 `refresh` を追加します。
+2. 自動更新 `refresh` モデルを使用する場合、またはシナリオでユーザー固有のビューが必要な場合は、アダプティブ カードに句を追加します。
 
     >[!NOTE]
     > `userIds` プロパティを指定して、どのユーザーが自動更新を取得するかを特定します。
@@ -70,9 +70,9 @@ ms.locfileid: "62080954"
 
 * カードの更新セクションで `userIds` リスト プロパティを `userIds: []` として指定した場合、カードは自動的に更新されません。 代わりに、Web やデスクトップではトリプル ドット メニューに、モバイル (Android や iOS) では長押しコンテキスト メニューに、カードを手動で更新するための **[カードの更新]** オプションがユーザーに表示されます。
 
-* UserIds プロパティが追加されたのは、Teams チャネルには多数のメンバーが含まれる場合があるためです。 すべてのメンバーが同時にチャネルを視聴している場合、無条件に自動更新を行うと、ボットへの同時呼び出しが多くなります。 最大 `userIds` *60 (60)* のユーザー MRIs で自動更新を取得する必要があるユーザーを識別するには、常にプロパティを含める必要があります。
+* UserIds プロパティが追加されたのは、Teams チャネルには多数のメンバーが含まれる場合があるためです。 すべてのメンバーが同時にチャネルを視聴している場合、無条件に自動更新を行うと、ボットへの同時呼び出しが多くなります。 最大 `userIds` *60 (60) のユーザー MRIs* で自動更新を取得する必要があるユーザーを識別するには、常にプロパティを含める必要があります。
 
-* 会話メンバーのTeams MRIs をフェッチできます。 アダプティブ カードの更新セクションで userIds リストに追加する方法の詳細については、「fetch roster or [user profile」を参照してください](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)。
+* 会話メンバーのTeamsの MRIs をフェッチできます。 アダプティブ カードの更新セクションで userIds リストに追加する方法の詳細については、「fetch [roster or user profile」を参照してください](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)。
 
  次の例を使用して、チャネル、グループ チャット、または 1:1 チャットのユーザーの MRI を取得できます。
 
@@ -103,7 +103,7 @@ ms.locfileid: "62080954"
 
 ## <a name="backward-compatibility"></a>下位互換機能
 
-アダプティブ カード用のユニバーサル アクションを使用すると、以前のバージョンのバージョンのカードと互換性のあるOutlook設定Teams。
+アダプティブ カードのユニバーサル アクションを使用すると、以前のバージョンと互換性を維持できるプロパティを設定OutlookおよびTeams。
 
 ### <a name="teams"></a>Teams
 
@@ -124,4 +124,4 @@ ms.locfileid: "62080954"
 * [ボットの機能](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [シーケンシャル ワークフロー](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md)
 * [最新のカード](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
-* [フォームの完成に関するフィードバック](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [フォームの完了に関するフィードバック](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

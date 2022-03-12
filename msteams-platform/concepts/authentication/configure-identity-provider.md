@@ -4,12 +4,12 @@ description: ID プロバイダーを構成する方法について説明しま�
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams 認証Azure AD Oauth ID プロバイダー
-ms.openlocfilehash: 36e81839b1837fca8a124b60701c3d5f95608851
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: ee99bf10f517eb928be0231a1188d2d5db74709d
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356414"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452719"
 ---
 # <a name="configure-identity-providers"></a>ID プロバイダーを構成する
 
@@ -35,7 +35,7 @@ OAuth 2.0 をサポートする ID プロバイダーは、不明なアプリケ
 
 * **タブからの外部 OAuth プロバイダー:** 詳細については、「Use [external OAuth providers」を参照してください。](../../tabs/how-to/authentication/auth-oauth-provider.md)
 
-## <a name="see-also"></a>関連項目 
+## <a name="see-also"></a>関連項目
 
 * [ボットでユーザーをMicrosoft Teamsする](../../resources/bot-v3/bot-authentication/auth-bot-AAD.md)
 * [タブのシングル サインオン (SSO) のサポート](../../tabs/how-to/authentication/auth-aad-sso.md)

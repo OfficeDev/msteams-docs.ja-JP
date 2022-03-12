@@ -5,12 +5,12 @@ description: ボットを構築するためのツールと SDK のMicrosoft Team
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 9aef0786d643c80879700ed6c2d4b05ce7c2e09a
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 5a95159df887033bca339efd871261938aecb07d
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398660"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453888"
 ---
 # <a name="bots-and-sdks"></a>ボットと SDK
 
@@ -44,6 +44,9 @@ ms.locfileid: "63398660"
 ## <a name="bots-with-power-virtual-agents"></a>ボットとPower Virtual Agents
 
 [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)は、Microsoft Power プラットフォームとボット フレームワーク上に構築されたチャットボット サービスです。 Power Virtual Agent 開発プロセスでは、ガイド付き、コードなし、グラフィカル インターフェイスのアプローチを使用して、チーム メンバーがインテリジェントな仮想エージェントを簡単に作成および維持できます。 ポータルでチャットボットを作成[Power Virtual Agents、](https://powervirtualagents.microsoft.com)チャットボットと簡単に統合[Teams](how-to/add-power-virtual-agents-bot-to-teams.md)。 開始方法の詳細については、「ドキュメント」[をPower Virtual Agentsしてください](/power-virtual-agents)。
+
+>[!NOTE]
+>Microsoft Power Platform を使用して、アプリ ストアに発行するアプリを作成Teams必要があります。 Microsoft Power Platform アプリは、組織のアプリ ストアにのみ発行できます。
 
 ## <a name="bots-with-webhooks-and-connectors"></a>Webhooks とコネクタを持つボット
 

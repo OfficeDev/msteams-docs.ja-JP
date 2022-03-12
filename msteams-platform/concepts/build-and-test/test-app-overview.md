@@ -4,38 +4,38 @@ description: カスタム アプリをテストおよびデバッグするプロ
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: テスト アプリMicrosoft 365アップロードTeamsテナントを構成する
-ms.openlocfilehash: 9cbb650fc248d12fc310cc8b1aaaded7b9a87140
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 7831d245fd48b9eb5c6dd4761a84a1fee3d9cfef
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889266"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453881"
 ---
 # <a name="test-your-app"></a>アプリのテスト
 
-アプリとアプリを統合Microsoft Teams、アプリを発行する前にテストする必要があります。 最終的な目標は、アプリのユーザー数を多く取得し、ユーザーが使用できる複数のデバイスでアプリをテストする方法です。 アプリをテストする場合:
+アプリを Microsoft Teams と統合した後、アプリを発行する前にテストする必要があります。 最終的な目標は、アプリのユーザー数を多く取得し、ユーザーが使用できる複数のデバイスでアプリをテストする方法です。 アプリをテストする場合:
 
-* テナントをMicrosoft 365します。
+* テナントを準備Microsoft 365します。
 * アプリをテストおよびデバッグするワークスペースを選択します。
 * テスト データをテナントにMicrosoft 365します。
 
 ## <a name="prepare-your-microsoft-365-tenant"></a>Microsoft 365 テナントを準備する
 
-アプリのテストを開始する前に、テスト テナントMicrosoft 365準備し、アプリをアップロードできるカスタム Teamsを有効にします。 開発者プログラムにサインアップしMicrosoft 365組織のTeams管理する必要があります。 開発者サブスクリプションをセットアップし、テナントを準備[してMicrosoft 365します](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
+アプリのテストを開始する前に、テスト テナントMicrosoft 365準備し、アプリでアプリをアップロードTeamsカスタム テストを有効にします。 開発者プログラムにサインアップしMicrosoft 365組織のTeams管理する必要があります。 開発者サブスクリプションをセットアップし、テナントの準備[を通じてMicrosoft 365します](~/concepts/build-and-test/prepare-your-o365-tenant.md)。
 
 ## <a name="test-and-debug"></a>テストとデバッグ
 
 アプリをテストおよびデバッグするには、少なくとも 1 つのワークスペースを作成する必要があります。 アプリをテストおよびデバッグするために、ローカル ホストやクラウドベースのホストなどのテストセットアップを選択できます。 アプリ エクスペリエンスを読みTeams実行するために、アプリをデバッグするガイダンスが提供されています。 詳細については、「セットアップを[選択してアプリを実行する」をMicrosoft Teamsしてください](~/concepts/build-and-test/debug.md)。
 
-ボットをローカルでテストします。 詳細については [、「IDE を使用してボットをローカルでデバッグする」を参照してください](~/bots/how-to/debug/locally-with-an-ide.md)。 検査ミドルウェアとアダプティブ ツールを使用 [してボット](/azure/bot-service/bot-service-debug-inspection-middleware?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true) を [デバッグすることもできます](/azure/bot-service/bot-service-debug-adaptive-tools?view=azure-bot-service-4.0&preserve-view=true)。 
+ボットをローカルでテストします。 詳細については、「IDE を [使用してボットをローカルでデバッグする」を参照してください](~/bots/how-to/debug/locally-with-an-ide.md)。 検査ミドルウェアとアダプティブ ツールを使用 [してボット](/azure/bot-service/bot-service-debug-inspection-middleware?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true) を [デバッグすることもできます](/azure/bot-service/bot-service-debug-adaptive-tools?view=azure-bot-service-4.0&preserve-view=true)。
 
-コンソール ログを表示したり、実行時に html、css、およびネットワーク要求を表示または変更したりするには、JavaScript コードにブレークポイントを追加し、DevTools への対話的なデバッグ アクセスを実行します。 詳細については[、「Access the DevTools for the DevTools for the Teams」を参照してください](~/tabs/how-to/developer-tools.md)。 
+コンソール ログを表示したり、実行時に html、css、およびネットワーク要求を表示または変更したりするには、JavaScript コードにブレークポイントを追加し、DevTools への対話的なデバッグ アクセスを実行します。 詳細については、「[Access the DevTools for the DevTools for Teams参照してください](~/tabs/how-to/developer-tools.md)。
 
 ## <a name="add-test-data-to-your-microsoft-365-tenant"></a>テスト データをテナントにMicrosoft 365する
 
-テスト テナントにテスト データMicrosoft 365追加します。 詳細については、「テスト データをテスト テナントに追加する[Office 365、](~/concepts/build-and-test/test-data.md)テスト データのアップロードを開始する前に、すべての前提条件を完了する」を参照してください。
+テスト データをテスト テナントMicrosoft 365追加します。 詳細については、「テスト データを[テスト](~/concepts/build-and-test/test-data.md) テナントに追加Office 365テスト データのアップロードを開始する前に、すべての前提条件を完了する」を参照してください。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [Microsoft 365 テナントを準備する](~/concepts/build-and-test/prepare-your-o365-tenant.md)

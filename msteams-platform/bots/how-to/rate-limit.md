@@ -4,24 +4,24 @@ description: コード例を使用して、スレッドごとのボットごと�
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Teams ボットのレート制限
-ms.openlocfilehash: 1be6377a6d7497b4f1b53f034eb631547dcf4a5c
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
+ms.openlocfilehash: 5f0eba162215aeda2c0f1e433b223f21628ea5e1
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60889294"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453377"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Teams でレートを制限してボットを最適化する
 
 レート制限は、メッセージを特定の最大頻度に制限する方法です。 一般的な原則として、アプリケーションは投稿するメッセージの数を個々のチャットまたはチャネルの会話に制限する必要があります。 これにより、最適なエクスペリエンスが確保され、メッセージがユーザーにスパムとして表示されません。
 
-ボット API はMicrosoft Teamsユーザーを保護するために、受信要求のレート制限を提供します。 この制限を超えるアプリは、エラー状態 `HTTP 429 Too Many Requests` を受け取る。 すべての要求は、メッセージの送信、チャネル列挙、名簿フェッチなど、同じレート制限ポリシーの対象です。
+Microsoft Teams とそのユーザーを保護するために、ボット API は受信要求のレート制限を提供します。 この制限を超えるアプリは、エラー状態を `HTTP 429 Too Many Requests` 受け取る。 すべての要求は、メッセージの送信、チャネル列挙、名簿フェッチなど、同じレート制限ポリシーの対象です。
 
-レート制限の正確な値は変更される可能性があります。API が返される場合、アプリケーションは適切なバックオフ動作を実装する必要があります `HTTP 429 Too Many Requests` 。
+レート制限の正確な値は変更される可能性があります。API が返される場合、アプリケーションは適切なバックオフ動作を実装する必要があります `HTTP 429 Too Many Requests`。
 
 ## <a name="handle-rate-limits"></a>レート制限の処理
 
-ボット ビルダー SDK 操作を発行する場合は、状態コードを処理 `Microsoft.Rest.HttpOperationException` して確認できます。
+ボット ビルダー SDK 操作を発行する場合は、状態コードを `Microsoft.Rest.HttpOperationException` 処理して確認できます。
 
 次のコードは、レート制限の処理例を示しています。
 
@@ -40,7 +40,7 @@ catch (HttpOperationException ex)
 }
 ```
 
-ボットのレート制限を処理した後、指数バックオフを `HTTP 429` 使用して応答を処理できます。
+ボットのレート制限を処理した後、指数 `HTTP 429` バックオフを使用して応答を処理できます。
 
 ## <a name="handle-http-429-responses"></a>応答 `HTTP 429` の処理
 
@@ -48,10 +48,10 @@ catch (HttpOperationException ex)
 
 ランダムなジッターで指数バックオフを使用する方法は、429 を処理するための推奨される方法です。 これにより、複数の要求が再試行時に競合を発生しない。
 
-応答を `HTTP 429` 処理した後、一時的な例外を検出する例を確認できます。
+応答を処理 `HTTP 429` した後、一時的な例外を検出する例を確認できます。
 
 > [!NOTE]
-> エラー コード **429 の** 再試行に加えて、エラー コード **412、502、****および 504** も再試行する必要があります。 
+> エラー コード **429** の再試行に加えて、エラー コード **412**、**502、および 504** も再試行する必要があります。
 
 ## <a name="detect-transient-exceptions-example"></a>一時的な例外の検出の例
 
@@ -83,7 +83,7 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
     }
 ```
 
-一時的な障害処理を使用して、バックオフと再試行 [を実行できます](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29)。 NuGet パッケージの取得とインストールに関するガイドラインについては、「一時的な障害処理アプリケーション ブロックをソリューションに追加する[」を参照してください](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN)。 一時的な [障害処理も参照してください](/azure/architecture/best-practices/transient-faults)。
+一時的な障害処理を使用して、バックオフと再試行 [を実行できます](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29)。 NuGet パッケージの取得とインストールに関するガイドラインについては、「一時的な障害処理アプリケーション ブロックをソリューションに[追加する」を参照してください](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN)。 一時的な障害 [処理も参照してください](/azure/architecture/best-practices/transient-faults)。
 
 一時的な例外を検出する例を実行した後、指数バックオフの例を参照してください。 エラー時に再試行する代わりに指数バックオフを使用できます。
 
@@ -110,7 +110,7 @@ var retryPolicy = new RetryPolicy(new BotSdkTransientExceptionDetectionStrategy(
 await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsync( (Activity)reply) ).ConfigureAwait(false);
 ```
 
-また、このセクションで説明 `System.Action` する再試行ポリシーを使用してメソッドの実行を実行できます。 参照されるライブラリでは、固定間隔または線形バックオフ メカニズムを指定することもできます。
+また、このセクションで説明する `System.Action` 再試行ポリシーを使用してメソッドの実行を実行できます。 参照されるライブラリでは、固定間隔または線形バックオフ メカニズムを指定することもできます。
 
 値と戦略を構成ファイルに格納して、実行時に値を微調整および調整します。
 
@@ -123,7 +123,8 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 スレッドごとのボットごとの制限は、ボットが 1 回の会話で生成できるトラフィックを制御します。 ボットとユーザー、グループ チャット、またはチーム内のチャネル間の会話は 1:1 です。 したがって、アプリケーションが各ユーザーにボット メッセージを 1 つ送信しても、スレッドの制限は調整されません。
 
 >[!NOTE]
-> * 3600 秒と 1800 の操作のスレッド制限は、複数のボット メッセージが 1 人のユーザーに送信される場合にのみ適用されます。 
+>
+> * 3600 秒と 1800 の操作のスレッド制限は、複数のボット メッセージが 1 人のユーザーに送信される場合にのみ適用されます。
 > * テナントごとのアプリごとのグローバル制限は、1 秒あたり 50 要求 (RPS) です。 したがって、1 秒あたりのボット メッセージの総数がスレッドの制限を超えなけってはいけない。
 > * サービス レベルでのメッセージの分割は、予想される RPS よりも高くなります。 制限への近付きが懸念される場合は、バックオフ戦略を [実装する必要があります](#backoff-example)。 このセクションで提供される値は、見積もり専用です。
 
@@ -172,7 +173,7 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 | 会話を取得する | 1 | 28 |
 | 会話を取得する | 2 | 32 |
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [通話と会議のボット](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)

@@ -6,16 +6,17 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: アダプティブ カード個人用アプリ認証データ フロー
-ms.openlocfilehash: 5ecd8ec7820adf07efbd588d0220c2849a11df0d
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 2747dbe089ee847e7f5465d3a19fa58dbf945be5
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355864"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453265"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>アダプティブ カードを使用してタブをビルドする
 
 > [!IMPORTANT]
+>
 > * アダプティブ カード付きタブは現在、個人用アプリとしてのみサポートされています。
 
 従来のメソッドを使用してタブを開発する場合、次の問題が発生する可能性があります。
@@ -107,6 +108,7 @@ ms.locfileid: "63355864"
 アダプティブ カード タブとボット間の通信は、アクティビティを通じて行 `invoke` われます。 各 `invoke` アクティビティには、対応する名前 **があります**。 各要求を区別するには、各アクティビティの名前を使用します。 `tab/fetch` この `tab/submit` セクションで説明するアクティビティを示します。
 
 > [!NOTE]
+>
 > * ボットは、サービス URL に対してすべての応答を [送信する必要があります](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true)。 サービス URL は、受信ペイロードの一部として受信 `activity` されます。
 > * 呼び出しペイロード のサイズが 80 kb に増加しました。
 
@@ -235,6 +237,7 @@ ms.locfileid: "63355864"
 次のコードは、要求と応答の例 `task/fetch` を示しています。
 
 **`task/fetch` 要求**
+
 ```json
 // task/fetch POST request: agents/{botId}/invoke
 {
@@ -432,7 +435,7 @@ ms.locfileid: "63355864"
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [タブのリンクの展開とステージ ビュー](~/tabs/tabs-link-unfurling.md)
+> [タブリンクの分岐解除とステージ ビュー](~/tabs/tabs-link-unfurling.md)
 
 ## <a name="see-also"></a>関連項目
 

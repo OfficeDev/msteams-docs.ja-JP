@@ -5,18 +5,18 @@ ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: none
-ms.openlocfilehash: eab34d853c4aa10ea3c03b5c669464390e9288eb
-ms.sourcegitcommit: 97a64453410edbd2ba28e7a04e9c3a54bf48f4f6
+ms.openlocfilehash: 1d4fc957eb8511e9da2b3ebacd3a6b025e048e78
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "61391674"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453552"
 ---
 # <a name="create-a-partner-center-developer-account"></a>パートナー センターの開発者アカウントを作成する
 
-アプリをパートナー ストアに発行Microsoft Teams、パートナー センターの開発者アカウント[を設定する必要があります](/office/dev/store/open-a-developer-account)。 シナリオによっては、既存のアカウントを使用できる場合があります。
+アプリをパートナー ストアに発行するにはMicrosoft Teamsパートナー センターの開発者アカウント[を設定する必要があります](/office/dev/store/open-a-developer-account)。 シナリオによっては、既存のアカウントを使用できる場合があります。
 
-## <a name="faq"></a>FAQ
+## <a name="faq"></a>よくあるご質問 (FAQ)
 
 パートナー センター アカウントの管理に関する一般的な質問に対する回答を取得します。
 
@@ -29,7 +29,7 @@ ms.locfileid: "61391674"
 パートナー センター アカウントは、次のいずれかの方法で作成できます。
 
 * パートナー センターを使い、Microsoft ネットワーク アカウントを持ってない場合は、[パートナー センターの登録] ページ [を使用してアカウントを作成します](/office/dev/store/open-a-developer-account#create-an-account-using-the-partner-center-enrollment-page)。
-* 既に Microsoft パートナー ネットワークに登録している場合は、既存の Microsoft パートナー センターの登録を使用して、パートナー センターから直接アカウント [を作成します](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment)。
+* Microsoft パートナー ネットワークに既に登録している場合は、既存の Microsoft パートナー センター登録を使用して、パートナー センターから直接アカウント [を作成します](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment)。
 
 <br>
 
@@ -55,7 +55,7 @@ ms.locfileid: "61391674"
 
 <summary><b>パートナー センター アカウントの問題のサポートはどこで受け取れるのですか?</b></summary>
 
-発行元 [のサポート ページにアクセスして](https://aka.ms/marketplacepublishersupport) 、問題を検索します。 ガイダンスが役に立たなかった場合は、パートナー センターの [サポート チケットを作成します](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket)。
+発行元 [のサポート ページにアクセスして](https://aka.ms/marketplacepublishersupport) 、問題を検索します。 ガイダンスが役に立たなかった場合は、パートナー センター [のサポート チケットを作成します](/azure/marketplace/partner-center-portal/support#how-to-open-a-support-ticket)。
 
 <br>
 
@@ -63,7 +63,7 @@ ms.locfileid: "61391674"
 
 <details>
 
-<summary><b>パートナー センターで自分の Office ストア アカウントを管理する方法</b></summary>
+<summary><b>パートナー センターで自分のストア Officeを管理する方法</b></summary>
 
 詳細については [、「パートナー センターを通じてアカウントを管理する」](/office/dev/store/manage-account-settings-and-profile) を参照してください。
 
@@ -95,7 +95,7 @@ ms.locfileid: "61391674"
 
 <summary><b>アプリを提出しようとするときに、「このアカウントは発行対象ではありません」というメッセージが表示される理由</b></summary>
 
-アカウント検証の状態が保留中のため、この [エラー メッセージを](/partner-center/verification-responses) 受け取った。 パートナー センター ダッシュボードで状態を確認 [します](https://partner.microsoft.com/dashboard)。 [アカウント]**設定** アイコンを選択し、[開発者設定] >**アカウント>選択します**。
+アカウント検証の状態が保留中のため、この [エラー メッセージを](/partner-center/verification-responses) 受け取った。 パートナー センター ダッシュボードで状態を確認 [します](https://partner.microsoft.com/dashboard)。 [アカウント] **設定** アイコンを選択し、[開発者設定] >**アカウント>選択します**。
 
 ![パートナー センターの検証状態](~/assets/images/partner-center-verification-status.png)
 
@@ -107,7 +107,7 @@ ms.locfileid: "61391674"
 
 <summary><b>パートナー センター のアカウント検証プロセスで確認される情報</b></summary>
 
-検証領域は、電子メールの所有権 **、雇用、** およびビジネスの **3****つがあります**。 詳細については、「確認済み [」と「応答方法」を参照してください](/partner-center/verification-responses#what-is-verified-and-how-to-respond)。
+検証領域は、電子メールの所有権 **、雇用、****およびビジネスの** 3 **つがあります**。 詳細については、「確認済み [情報と応答方法」を参照してください](/partner-center/verification-responses#what-is-verified-and-how-to-respond)。
 
 プライマリ連絡先、グローバル管理者、またはアカウント管理者の場合は、確認の状態を監視し、プロファイル ページの進行状況を追跡できます。
 
@@ -121,13 +121,13 @@ ms.locfileid: "61391674"
 
 <summary><b>アカウントの確認の状態がメールの所有権を超えて進めなかった。どのように進める必要がありますか?</b></summary>
 
-電子メール **所有権の検証** プロセス中に、確認メールがプライマリ連絡先に送信されます。 メインの連絡先の受信トレイで、[必要な maccount@microsoft.com] という件名のメールを確認します **。Microsoft** でメール アカウントを確認し、電子メールの検証プロセスを完了します。 確認メールは、パートナー センター のアカウント設定に記載されているアドレスに送信されます。
+電子メール **所有権の検証** プロセス中に、確認メールがプライマリ連絡先に送信されます。 メインの連絡先の受信トレイで、maccount@microsoft.com  件名が必要なメールを確認します。**Microsoft** でメール アカウントを確認し、電子メール検証プロセスを完了します。 確認メールは、パートナー センター のアカウント設定に記載されているアドレスに送信されます。
 
 電子メールの検証プロセスについては、次の情報を覚えておいてください。
 
 * 電子メール検証リンクは 7 日間のみ有効です。
 * パートナー プロファイル ページにアクセスし、[確認メールの再送信] リンクを選択すると、電子メールの再送信 **を要求** できます。
-* メールを確実に受信するには、安全なドメイン microsoft.com **リストを** 作成し、迷惑メール フォルダーを確認します。
+* メールを確実に受信するには、安全なドメイン **microsoft.com、迷惑** メール フォルダーを確認してください。
 
 <br>
 
@@ -143,7 +143,7 @@ ms.locfileid: "61391674"
 * ブラウザー キャッシュをクリアし、パートナー センター アカウント ダッシュボードに移動し、[検証メールの再送信 **] を選択します**。
 * 別のブラウザーから **[再送信確認メール** ] リンクにアクセスしてみてください。
 * IT 部門と一緒に作業して、確認メールが電子メール サーバーによってブロックされていないことを確認します。
-* サーバーのスパム フィルターを調整して、サーバーからのすべてのメールを許可または **maccount@microsoft.com。**
+* サーバーのスパム フィルターを調整して、サーバーからのすべてのメールを許可または **maccount@microsoft.com**。
 
 <br>
 
@@ -185,11 +185,11 @@ ms.locfileid: "61391674"
 
 次の詳細を含む <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a> メールを送信します。
 
-* **件名 :** アプリ名のパートナー センター *アカウントの問題*。
+* **件名:** アプリ名のパートナー センター *アカウントの問題*。
 * **メール本文**:
-    * サポート チケット番号。
-    * 販売者 ID。
-    * 問題のスクリーンショット (可能な場合)。
+  * サポート チケット番号。
+  * 販売者 ID。
+  * 問題のスクリーンショット (可能な場合)。
 
 <br>
 
@@ -201,7 +201,7 @@ ms.locfileid: "61391674"
 
 次のリソースも支援できます。
 
-* [Microsoft 365申請に関する FAQ](/office/dev/store/appsource-submission-faq)です。
+* [Microsoft 365申請に関する FAQ を参照してください](/office/dev/store/appsource-submission-faq)。
 * [商用マーケットプレースのドキュメント](/azure/marketplace/)。
 
 <br>

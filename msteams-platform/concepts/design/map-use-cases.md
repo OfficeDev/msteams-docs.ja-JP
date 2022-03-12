@@ -5,12 +5,12 @@ description: Teams のエクスペリエンス、アプリの機能、および�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: a14a906cf0f3e0ea5cc2c9671b6c972f59329542
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 8cc1694a5ce5ee8472a48f86edf09eb7255a4810
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398905"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452831"
 ---
 # <a name="map-your-use-cases-to-teams-app-features"></a>ユース ケースを Teams アプリの機能にマッピングする
 
@@ -18,9 +18,9 @@ ms.locfileid: "63398905"
 
 以下に基づいてユース ケースをマッピングできます。
 
-- 外部システムのアイテムの共有とコラボレーション。
-- ワークフローの開始とユーザーへの通知の送信。
-- ソーシャル プラットフォーム、会話型ボットの使用と、複数の機能の組み合わせ。
+* 外部システムのアイテムの共有とコラボレーション。
+* ワークフローの開始とユーザーへの通知の送信。
+* ソーシャル プラットフォーム、会話型ボットの使用と、複数の機能の組み合わせ。
 
 ## <a name="common-use-cases-mapped-to-teams-capabilities"></a>Teams の機能にマッピングされた一般的なユース ケース
 
@@ -92,10 +92,10 @@ Teams の機能がアプリのさまざまな機能をどのように有効に�
 
 例:
 
-- **タブ** 機能を使用して、タスク モジュールの表示、デバイスのアクセス許可の要求、<`iframe`> コンテンツの表示、またはディープ リンクの使用を行います。
-- **メッセージング拡張機能** を使用して、カードを送信したり、リンクを展開したり、メッセージに対してアクションを実行したりします。
+* **タブ** 機能を使用して、タスク モジュールの表示、デバイスのアクセス許可の要求、<`iframe`> コンテンツの表示、またはディープ リンクの使用を行います。
+* **メッセージング拡張機能** を使用して、カードを送信したり、リンクを展開したり、メッセージに対してアクションを実行したりします。
 
 ## <a name="see-also"></a>関連項目
 
-- [計画チェックリスト](../design/planning-checklist.md)
-- [最初の Microsoft Teams アプリをビルドする](../../get-started/get-started-overview.md)
+* [計画チェックリスト](../design/planning-checklist.md)
+* [最初の Microsoft Teams アプリをビルドする](../../get-started/get-started-overview.md)

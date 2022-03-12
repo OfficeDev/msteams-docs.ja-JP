@@ -5,12 +5,12 @@ author: surbhigupta
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: contributor-guide
-ms.openlocfilehash: 5ee1be71c0ba07612808dc8d1cfb766e2f40c36b
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: 10c7bbf952311dd1668a3fa1b013228d9dd58000
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435259"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453118"
 ---
 # <a name="contribute-to-teams-documentation"></a>Teams ドキュメントに投稿する
 
@@ -24,7 +24,6 @@ Teamsドキュメントは、Microsoft Docs のテクニカル ドキュメン�
 > * コード [(Microsoft Visual Studio)](https://code.visualstudio.com/) をインストールVS Code。
 > * ドキュメント[オーサリング パックを、](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack)VS Code Marketplace から直接インストールします。
 <br>&emsp;&emsp; または
-
 > [!div class="checklist"]
 >
 > * 次の手順でインストールVS Code。
@@ -35,7 +34,7 @@ Teamsドキュメントは、Microsoft Docs のテクニカル ドキュメン�
 
 ## <a name="review-the-microsoft-docs-contributors-guide"></a>Microsoft Docs コントリビューター ガイドを確認する
 
-投稿者ガイドでは、Microsoft Docs プラットフォームで技術的なコンテンツを作成、発行、更新 **する方向を示** します。 
+投稿者ガイドでは、Microsoft Docs プラットフォームで技術的なコンテンツを作成、発行、更新 **する方向を示** します。
 
 ## <a name="microsoft-writing-style-and-content-guides"></a>Microsoft ライティング、スタイル、およびコンテンツ ガイド
 
@@ -51,25 +50,26 @@ Teamsドキュメントは、Microsoft Docs のテクニカル ドキュメン�
 
 ## <a name="file-paths"></a>ファイル パス
 
-相対パスを使用して他のドキュメントセットへのリンクを作成する場合は、ドキュメント内のハイパーリンクの有効なファイル パスを設定することが重要です。 ビルドは、ファイル パスGitHubまたは有効な場合にのみ成功します。
- 
+相対パスを使用して他のドキュメントセットへのリンクを作成する場合は、ドキュメント内のハイパーリンクの有効なファイル パスを設定することが重要です。 ビルドは、ファイル パスGitHubまたは有効な場合にのみ、ビルドが成功します。
+
 ハイパーリンクとファイル パスの詳細については、ドキュメントのリンク [を使用するを参照してください](/contribute/how-to-write-links)。
 
 > [!IMPORTANT]
-> プラットフォーム ドキュメントセット **の一部** であるTeams参照するには、次のTeams使用します。<br>
-> &emsp;&#x2714; 先頭スラッシュを付けずに相対パスを使用します。<br>
+> プラットフォーム ドキュメントセットの一部である **記事Teams参照** するには、次のTeams使用します。<br>
+> &emsp;&#x2714; 先頭スラッシュを使用せずに相対パスを使用します。<br>
 > &emsp;&#x2714; Markdown ファイル拡張子を含めます。<br>
 >Ex: **parent directory/directory/path-to-article.md** —> アプリの構築 [Microsoft Teams](../concepts/building-an-app.md) <br><br>
 > Microsoft Docs ライブラリの記事を参照するには、次のプラットフォーム ドキュメントセットTeams参照してください。<br>
 > &emsp;&#x2714; スラッシュで始まる相対パスを使用します。<br>
-> &emsp;&#x2714;ファイル拡張子を含めることはできません。 <br> 例: **/docset/address-to-file-location** —> Microsoft Graph API を使用してファイル [をMicrosoft Teams](/graph/api/resources/teams-api-overview)<br><br>
+> &emsp;&#x2714;ファイル拡張子を含めることはできません。 <br>
+> 例: **/docset/address-to-file-location** —> [Microsoft Graph API](/graph/api/resources/teams-api-overview) を使用してファイルをMicrosoft Teams<br><br>
 > Microsoft Docs ライブラリの外部にあるページを参照するには、GitHubパスを使用`https`します。<br>
 
 ## <a name="code-samples-and-snippets"></a>コード サンプルとスニペット
 
 コード サンプルは、API と SDK を効果的に使用する重要な役割を果たします。 よく提示されたコード サンプルは、説明的なテキストや指示情報だけでなく、物事の動作を明確に伝えます。 コード サンプルは、正確で簡潔で、十分に文書化され、読者に優しい必要があります。 読みやすくするコードは、理解、テスト、デバッグ、保守、変更、拡張が容易である必要があります。 詳細については、「ドキュメントに [コードを含める方法」を参照してください](/contribute/code-in-docs)。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [Microsoft Docs の更新プログラムと最新のお知らせを取得する](/teamblog)

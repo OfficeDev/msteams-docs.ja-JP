@@ -6,16 +6,16 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 302cac17ae6905899e43a8768882f61f0a2b9056
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 9dbfa97b892f2234b53eb42b5d5764b8f6fd6e93
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518325"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452572"
 ---
-# <a name="prepare-accounts-to-build-teams-apps"></a>アプリをビルドするためのアカウントTeamsする
+# <a name="prepare-accounts-to-build-teams-apps"></a>アカウントを準備してアプリTeamsする
 
-アプリをTeamsするには、有効なサブスクリプションを持つアカウントMicrosoft 365少なくとも 1 つ必要です。 Azure でバックエンド リソースをホストする場合は、Azure アカウントが必要です。 Azure アカウントは、既存のアプリケーションが他のクラウド プロバイダーでホストされ、既存のアプリケーションを新しいプラットフォームに統合Teamsです。
+アプリをTeamsするには、有効なサブスクリプションを持つアカウントMicrosoft 365少なくとも 1 つ必要です。 Azure でバックエンド リソースをホストする場合は、Azure アカウントが必要です。 Azure アカウントは、既存のアプリケーションが他のクラウド プロバイダーでホストされ、既存のアプリケーションを新しいプラットフォームに統合する場合Teamsです。
 
 ## <a name="microsoft-365-account"></a>Microsoft 365 アカウント
 
@@ -25,9 +25,9 @@ ms.locfileid: "62518325"
 
 アプリ関連のリソースをホストする場合、または Azure 内のリソースにアクセスする場合は、Azure サブスクリプションが必要です。 開始する [前に無料アカウント](https://azure.microsoft.com/free/) を作成できます。
 
-## <a name="join-microsoft-365-developer-program"></a>開発者Microsoft 365に参加する 
+## <a name="join-microsoft-365-developer-program"></a>開発者Microsoft 365に参加する
 
-ユーザーアカウントをお持ちMicrosoft 365場合は、開発者プログラムのサブスクリプションMicrosoft 365[する必要](https://developer.microsoft.com/microsoft-365/dev-program)があります。 サブスクリプションは 90 日間無料で、開発アクティビティに使用している限り更新を続行します。 ユーザーがサブスクリプションをVisual Studio EnterpriseまたはProfessional場合、両方のプログラムに無料の開発者サブスクリプションMicrosoft 365[含まれます](https://aka.ms/MyVisualStudioBenefits)。 サブスクリプションがアクティブである限りVisual Studioアクティブです。 詳細については、「開発者向けサブスクリプション[のMicrosoft 365参照してください](https://developer.microsoft.com/microsoft-365/dev-program)。
+ユーザーアカウントをお持ちMicrosoft 365場合は、開発者プログラムのサブスクリプションにMicrosoft 365[必要](https://developer.microsoft.com/microsoft-365/dev-program)があります。 サブスクリプションは 90 日間無料で、開発アクティビティに使用している限り更新を続行します。 ユーザーがサブスクリプションを持Visual Studio Enterprise場合Professional両方のプログラムには、無料の開発者サブスクリプションMicrosoft 365[含まれます](https://aka.ms/MyVisualStudioBenefits)。 サブスクリプションがアクティブである限りVisual Studioアクティブです。 詳細については、「開発者向けサブスクリプション[のMicrosoft 365参照してください](https://developer.microsoft.com/microsoft-365/dev-program)。
 
 1. 開発者プログラムの[Microsoft 365に移動します](https://developer.microsoft.com/microsoft-365/dev-program)。
 2. [今 **すぐ参加] を選択します**。
@@ -40,17 +40,17 @@ ms.locfileid: "62518325"
 
 次のいずれかの種類のアカウントを使用して、開発者プログラムにサインアップできます。
 
-- **個人用の Microsoft アカウント** 
+* **個人用の Microsoft アカウント**
 
-  Outlook、Messenger、OneDrive、MSN、Xbox Live、クラウド サービスなど、すべてのコンシューマー向け Microsoft 製品とクラウド サービスMicrosoft 365。 Outlook.com メールボックスにサインアップすると、Microsoft アカウントが自動的に作成されます。 作成された Microsoft アカウントを使用して、コンシューマー関連の Microsoft クラウド サービスまたは Azure にアクセスできます。
+  Outlook、Messenger、OneDrive、MSN、Xbox Live、Microsoft 365 など、すべてのコンシューマー向け Microsoft 製品とクラウド サービスにアクセスできます。 Outlook.com メールボックスにサインアップすると、Microsoft アカウントが自動的に作成されます。 作成された Microsoft アカウントを使用して、コンシューマー関連の Microsoft クラウド サービスまたは Azure にアクセスできます。
 
-- **業務用の仕事用アカウント**
+* **業務用の仕事用アカウント**
 
-  Azure、azure、Microsoft Intune、またはエンタープライズ のすべてのビジネス レベルの Microsoft クラウド サービスにアクセスMicrosoft 365。 これらのサービスの 1 つを組織としてサインアップすると、クラウドベースのディレクトリが Microsoft Azure Active Directory (Azure AD) に自動的にプロビジョニングされ、組織を表します。
+  Azure、azure、Microsoft Intune、またはクラウド サービスなど、すべての小規模、中、およびエンタープライズのビジネス レベルの Microsoft クラウド サービスMicrosoft 365。 これらのサービスの 1 つを組織としてサインアップすると、クラウドベースのディレクトリが Microsoft Azure Active Directory (Azure AD) に自動的にプロビジョニングされ、組織を表します。
 
-- **Visual Studio ID**
+* **Visual Studio ID**
 
-  Visual Studio Professional サブスクリプションまたは Enterprise サブスクリプション用に作成できます。 Visual Studio ギャラリー内から開発者プログラムに参加して、Visual Studio サブスクライバーとして完全なメリットを得る場合は、このオプションを使用することをお勧めします。
+  Visual Studio Professional サブスクリプションまたは Enterprise サブスクリプション用に作成できます。 Visual Studio ギャラリー内から開発者プログラムに参加して、Visual Studio サブスクライバーとして完全なメリットを得る場合に、このオプションを使用することをお勧めします。
 
 ## <a name="teams-customer-app-upload-or-sideload-permission"></a>Teamsアプリのアップロードまたはサイドロードのアクセス許可
 
@@ -63,7 +63,7 @@ ms.locfileid: "62518325"
 
     1. [ファイル **Visual Studio Code] を開きます**。
     1. 左側 **のTeams Toolkit** を選択します。
-    1. [**アカウント] を** 選択し、自分のアカウントMicrosoft 365します。
+    1. [**アカウント] を** 選択し、アカウントにMicrosoft 365します。
     1. イメージに示すように、サイドローディングが有効 **になっている** オプションが表示されるかどうかを確認します。
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="サイドローディングを有効にする":::
@@ -94,7 +94,7 @@ ms.locfileid: "62518325"
    :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="すべて表示する":::
 
 > [!NOTE]
-> このオプション **が表示される場合、Teams 24** **時間かかる** 場合があります。 カスタム アプリ[をテストおよび検証Teams環境](/microsoftteams/upload-custom-apps)にアップロードできます。
+> このオプション **を表示するには、最大で 24** **Teams** かかる場合があります。 カスタム アプリ[をテストおよび検証のためにTeams環境](/microsoftteams/upload-custom-apps)にアップロードできます。
 
 3. [アプリ **のTeams** >  **Setup PoliciesGlobal** > **] に移動します**。
 
@@ -104,14 +104,14 @@ ms.locfileid: "62518325"
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/4.png" alt-text="トグル":::
 
-5. **[保存]** を選択します。 
+5. **[保存]** を選択します。
 
 > [!Note]
-> サイドローディングがアクティブになるには、最大 24 時間かかる場合があります。 その間、テナントの **アップロードを使用して** アプリをテストできます。 アプリのパッケージ .zipをアップロードするには、「カスタム アプリの [アップロード」を参照してください](/microsoftteams/teams-app-setup-policies)。
+> サイドローディングがアクティブになるには、最大 24 時間かかる場合があります。 その間、テナントの **アップロードを使用して** アプリをテストできます。 アプリのパッケージ .zipをアップロードするには、「カスタム アプリのアップロード [」を参照してください](/microsoftteams/teams-app-setup-policies)。
 
-詳細については、「カスタム アプリ ポリシーと設定[を](/microsoftteams/teams-custom-app-policies-and-settings)管理する」を参照し、Teamsでアプリセットアップ ポリシー[を](/microsoftteams/teams-app-setup-policies)管理Teams。
+詳細については、「カスタム アプリ ポリシーと設定を管理する」を参照し、Teamsでアプリ[セットアップ](/microsoftteams/teams-custom-app-policies-and-settings) ポリシー[を](/microsoftteams/teams-app-setup-policies)管理Teams。
 
 ## <a name="see-also"></a>関連項目
 
-* [新しいプロジェクトTeamsする](create-new-project.md)
+* [新しいプロジェクトをTeamsする](create-new-project.md)
 * [クラウド リソースをプロビジョニングする](provision.md)

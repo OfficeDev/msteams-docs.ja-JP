@@ -1,18 +1,18 @@
 ---
-title: アダプティブ カードの Typeahead 検索
+title: アダプティブ カードの先行入力検索
 author: Rajeshwari-v
 description: アダプティブ カードの Input.ChoiceSet コントロールを使用した typeahead 検索について説明します。
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 6c2c26ee6853b23283ae04dbbfec4a78425e2ea5
-ms.sourcegitcommit: f85d0a40326f45b1ffdd3bd1b61b2d6af76b6e85
+ms.openlocfilehash: 2f9a8844d4e976e4d0a975e7e3a901fe3b93ba85
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2022
-ms.locfileid: "61722183"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453832"
 ---
-# <a name="typeahead-search-in-adaptive-cards"></a>アダプティブ カードの Typeahead 検索
+# <a name="typeahead-search-in-adaptive-cards"></a>アダプティブ カードの先行入力検索
 
 アダプティブ カードの Typeahead 検索機能により、コンポーネントでの検索エクスペリエンスが強化 `input.choiceset` されます。 検索フィールドにテキストを入力する選択肢の一覧を提供します。 Typeahead 検索とアダプティブ カードを組み込み、データを検索および選択できます。
 
@@ -23,7 +23,7 @@ ms.locfileid: "61722183"
 
 ## <a name="static-typeahead-search"></a>静的型検索
 
-静的な typeahead 検索を使用すると、アダプティブ カード ペイロード内で指定された値 `input.choiceset` から検索できます。 静的型検索を使用すると、ユーザーに複数の選択肢を表示できます。 静的検索のペイロード サイズは、ペイロードで指定された選択肢の数と一緒に増加します。
+静的な typeahead 検索を使用すると、アダプティブ カード ペイロード内で指定 `input.choiceset` された値から検索できます。 静的型検索を使用すると、ユーザーに複数の選択肢を表示できます。 静的検索のペイロード サイズは、ペイロードで指定された選択肢の数と一緒に増加します。
 ユーザーがテキストの入力を開始すると、選択肢がフィルター処理され、入力に部分的に一致します。 ドロップダウン リストは、検索に一致する入力文字を強調表示します。
 
 次の図は、静的な typeahead 検索を示しています。
@@ -51,7 +51,7 @@ John は、Xbox 小売店で働くストアの従業員です。 ストアはボ
 **アダプティブ カードで typeahead 検索を使用するには**
 
 1. ユーザー A がストア ボットを開きます。
-1. ユーザー A は、新しい顧客要求のコマンドを **ボットに送信します**。 ボットは、コンポーネントを持つアダプティブ カードで応答 `Input.ChoiceSet` します。
+1. ユーザー A は、新しい顧客要求のためにボットに **コマンドを送信します**。 ボットは、コンポーネントを持つアダプティブ カードで応答 `Input.ChoiceSet` します。
 1. ユーザー A は typeahead 検索を使用して、顧客の選択に基づいて情報を検索および選択します。
 
 次の図は、typeahead 検索のモバイル エクスペリエンスを示しています。
@@ -65,14 +65,14 @@ John は、Xbox 小売店で働くストアの従業員です。 ストアはボ
 
 ## <a name="implement-typeahead-search"></a>typeahead 検索の実装
 
-`Input.ChoiceSet` はアダプティブ カードの重要な入力コンポーネントの 1 つです。 typeahead 検索コントロールをコンポーネントに追加して `Input.ChoiceSet` 、typeahead 検索を実装できます。 次の項目を選択して、必要な情報を検索して選択できます。
+`Input.ChoiceSet` はアダプティブ カードの重要な入力コンポーネントの 1 つです。 typeahead 検索コントロールをコンポーネントに追加 `Input.ChoiceSet` して、typeahead 検索を実装できます。 次の項目を選択して、必要な情報を検索して選択できます。
 
 * 展開された選択範囲などのドロップダウン。
 * ラジオ ボタン (単一選択など)。
 * 複数の選択範囲などのチェック ボックスをオンにします。
 
 > [!NOTE]
-> コントロール `Input.ChoiceSet` は、スタイルとプロパティに基 `isMultiSelect` づいて設定されます。
+> コントロール `Input.ChoiceSet` は、スタイルとプロパティに基づいて設定 `isMultiSelect` されます。
 
 ### <a name="schema-properties"></a>スキーマ のプロパティ
 
@@ -80,7 +80,7 @@ John は、Xbox 小売店で働くストアの従業員です。 ストアはボ
 
 | プロパティ| 型 | 必須 | 説明 |
 |-----------|------|----------|-------------|
-| style | Compact <br/> Expanded <br/> Filtered | いいえ | 静的型先行のサポートされている検証の一覧にフィルター処理されたスタイルを追加します。|
+| style | Compact <br/> Expanded <br/> Filtered | 不要 | 静的型先行のサポートされている検証の一覧にフィルター処理されたスタイルを追加します。|
 | choices.data | Data.Query | いいえ | バックエンドからリモートの選択肢セットをフェッチすることで、ユーザーの種類として動的な先行型を有効にできます。 |
 
 ### <a name="dataquery-definition"></a>Data.Query 定義
@@ -88,10 +88,10 @@ John は、Xbox 小売店で働くストアの従業員です。 ストアはボ
 | プロパティ| 型 | 必須 | 説明 |
 |-----------|------|----------|-------------|
 | type | Data.Query | はい | Data.Query オブジェクトを指定します。|
-| データセット | String | はい | 動的にフェッチされるデータの種類を指定します。 |
-| value | String | いいえ | ボットへの呼び出し要求に対して、ユーザーが指定した入力を設定します `ChoiceSet` 。 |
-| count | 番号 | いいえ | ボットへの呼び出し要求を設定して、返す必要がある要素の数を指定します。 ユーザーが別の金額を送信する場合、ボットはそれを無視します。 | 
-| skip | 番号 | いいえ | ボットへの呼び出し要求を設定して、ユーザーがページ分割してリスト内を移動する必要があるかどうかを示します。 |
+| データセット | 文字列 | はい | 動的にフェッチされるデータの種類を指定します。 |
+| value | 文字列 | いいえ | ボットへの呼び出し要求に対して、ユーザーが指定した入力を設定します `ChoiceSet`。 |
+| count | 番号 | 不要 | ボットへの呼び出し要求を設定して、返す必要がある要素の数を指定します。 ユーザーが別の金額を送信する場合、ボットはそれを無視します。 |
+| skip | 番号 | 不要 | ボットへの呼び出し要求を設定して、ユーザーがページ分割してリスト内を移動する必要があるかどうかを示します。 |
 
 ### <a name="example"></a>例
 
@@ -328,25 +328,25 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 {
     if (turnContext.Activity.Name == "application/search")
     {
-    var packages = new[] {
-            new { title = "A very extensive set of extension methods", value = "FluentAssertions" },
-            new { title = "Fluent UI Library", value = "FluentUI" }};
+ var packages = new[] {
+   new { title = "A very extensive set of extension methods", value = "FluentAssertions" },
+   new { title = "Fluent UI Library", value = "FluentUI" }};
 
-    var searchResponseData = new
-    {
-        type = "application/vnd.microsoft.search.searchResponse",
-        value = new
-        {
-        results = packages
-        }
-    };
-    var jsonString = JsonConvert.SerializeObject(searchResponseData);
-    JObject jsonData = JObject.Parse(jsonString);
-    return new InvokeResponse()
-    {
-        Status = 200,
-        Body = jsonData
-    };
+ var searchResponseData = new
+ {
+     type = "application/vnd.microsoft.search.searchResponse",
+     value = new
+     {
+  results = packages
+     }
+ };
+ var jsonString = JsonConvert.SerializeObject(searchResponseData);
+ JObject jsonData = JObject.Parse(jsonString);
+ return new InvokeResponse()
+ {
+     Status = 200,
+     Body = jsonData
+ };
     }
 
     return null;
@@ -354,7 +354,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 ```
 
 #### <a name="nodejs"></a>[Node.js](#tab/nodejs)
- 
+
 ```nodejs
   async onInvokeActivity(context) {
     if (context._activity.name == 'application/search') {
@@ -384,7 +384,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
   }
 ```
 
-####  <a name="json"></a>[JSON](#tab/json)
+#### <a name="json"></a>[JSON](#tab/json)
 
 ```json
 {
@@ -411,9 +411,9 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 ## <a name="code-sample"></a>コード サンプル
 
-|サンプルの名前 | 説明 | C# | Node.js |
+|**サンプルの名前** | **説明** | **C#** | **Node.js** |
 |----------------|-----------------|--------------|----------------|
-| アダプティブ カードに先行検索コントロールを入力する | このサンプルは、アダプティブ カードの静的および動的なタイプの先行検索コントロールの機能を示しています。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
+| アダプティブ カードの Typeahead 検索コントロール | このサンプルは、アダプティブ カードの静的および動的な typeahead 検索コントロールの機能を示しています。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>関連項目
 

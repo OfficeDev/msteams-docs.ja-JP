@@ -1,17 +1,17 @@
 ---
 title: SameSite Cookie 属性
 author: laujan
-description: SameSite Cookie、その属性、Teams タブ、タスク モジュール、メッセージング拡張機能での Cookie の種類、および認証についてTeams
+description: SameSite Cookie、その属性、Teams タブ、タスク モジュール、メッセージング拡張機能での Cookie の種類、およびユーザーの認証に対する影響についてTeams
 keywords: cookie 属性 samesite
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 3c587056821eff3c24358a1dfbf6ecc63351a3c3
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: 8a1d8cff46612091749ba6801f42c79a3d997c97
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518479"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452586"
 ---
 # <a name="samesite-cookie-attribute"></a>SameSite Cookie 属性
 
@@ -33,14 +33,14 @@ SameSite の制限が導入される前に、Cookie はブラウザーに保存�
 
 ## <a name="samesite-cookie-attribute-initial-release"></a>SameSite cookie 属性: 初期リリース
 
-Google Chrome バージョン 51 では、オプションの `SetCookie SameSite` 属性として仕様が導入されました。 ビルド 17672 から、MicrosoftEdge Windows 10 SameSite Cookie [&nbsp;のサポートが導入されました](https://blogs.windows.com/msedgedev/2018/05/17/samesite-cookies-microsoft-edge-internet-explorer/)。
+Google Chrome バージョン 51 では、オプションの `SetCookie SameSite` 属性として仕様が導入されました。 ビルド 17672 から、MicrosoftEdge Windows 10 SameSite Cookie のサポート[が導入&nbsp;されました](https://blogs.windows.com/msedgedev/2018/05/17/samesite-cookies-microsoft-edge-internet-explorer/)。
 
 SameSite `SetCookie` cookie 属性をヘッダーに追加することをオプトアウトするか、 **Lax** と Strict の 2 つの設定のいずれかを使用して追加 **できます**。 Anmplemented SameSite 属性は既定の状態と見なされました。
 
 ## <a name="samesite-cookie-attribute-2020-release"></a>SameSite cookie 属性: 2020 リリース
 
 2020 年 2 月にリリースされた Chrome 80 では、新しい Cookie 値が導入され、既定で Cookie ポリシーが適用されます。 更新された SameSite 属性には、Strict、Lax、None の **3 つの値** が渡 **されます**。 指定しない場合、Cookie SameSite 属性は既定で値を `SameSite=Lax` 取得します。
- 
+
 SameSite cookie 属性は次のとおりです。
 
 |Setting | 強制 | 値 |属性の指定 |
@@ -49,7 +49,7 @@ SameSite cookie 属性は次のとおりです。
 | **Strict** |ブラウザーは、ファースト パーティのコンテキスト要求の Cookie のみを送信します。 これらは、Cookie を設定するサイトから発信された要求です。 要求が現在の場所とは異なる URL `Strict` から発信された場合、属性にタグ付けされた Cookie は送信されません。| 省略可能 |`Set-Cookie: key=value; SameSite=Strict`|
 | **なし** | Cookie は、ファースト パーティコンテキストとクロスオリジン要求の両方で送信されます。ただし、値は明示的 **`None`** に設定する必要があります。すべてのブラウザー要求は **HTTPS** **`Secure`** プロトコルに従い、暗号化された接続を必要とする属性を含める必要があります。 その要件に準拠しない Cookie は拒否 **されます**。 <br/>**両方の属性が一緒に必要です**。 HTTPS  **`None`** プロトコルを使用せずに **`Secure`**  指定した場合、または HTTPS プロトコルを使用しない場合、サード パーティの Cookie は拒否されます。| オプションですが、設定されている場合は HTTPS プロトコルが必要です。 |`Set-Cookie: key=value; SameSite=None; Secure` |
 
-## <a name="teams-implications-and-adjustments"></a>Teamsの影響と調整
+## <a name="teams-implications-and-adjustments"></a>Teamsと調整
 
 1. Cookie に関連する SameSite 設定を有効にし、アプリと拡張機能が引き続き機能Teams。
 1. アプリや拡張機能が失敗した場合は、Chrome 80 リリースの前に必要な修正を行います。
@@ -81,6 +81,7 @@ SameSite cookie 属性は次のとおりです。
 Android WebView は、Android アプリが Web コンテンツを表示できる Chrome システム コンポーネントです。 新しい制限は既定ですが、Chrome 80 から始まるが、WebViews では直ちに適用されません。 これらは将来適用されます。 Android では、準備のために、ネイティブ アプリが [CookieManager API を介して直接 Cookie を設定できます](https://developer.android.com/reference/android/webkit/CookieManager)。
 
 > [!NOTE]
+>
 > * 必要に応じて、ファースト パーティ Cookie を宣言`SameSite=Lax``SameSite=Strict`するか、または宣言する必要があります。
 > * サードパーティの Cookie をとして宣言する必要があります `SameSite=None; Secure`。
 

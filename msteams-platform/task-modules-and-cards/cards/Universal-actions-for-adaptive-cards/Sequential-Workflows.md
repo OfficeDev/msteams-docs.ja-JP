@@ -4,18 +4,18 @@ description: コード サンプルを使用したユニバーサル アクシ�
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 468fd5168c58e7bc99b4f269e10f76484fc16b1d
-ms.sourcegitcommit: c65a868744e4108b5d786de2350981e3f1f05718
+ms.openlocfilehash: ce715749d1b9fb5e1cff6457eebd3cac9674c58c
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62081052"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453251"
 ---
 # <a name="sequential-workflows"></a>シーケンシャル ワークフロー
 
 アダプティブ カードは、ユーザーの操作で更新されるシーケンシャル ワークフローをサポートします。 シーケンシャル ワークフローを使用すると、アダプティブ カードはユーザーの操作で更新され、ユーザーはユーザー入力を必要とする一連のカードを進めできます。 `Action.Execute` シーケンシャル ワークフローがサポートされています。これにより、ボット開発者はユーザーの操作に応じてアダプティブ カードを返す事が可能です。
 
-たとえば、カフェテリアがチームまたはチャネルの注文を受け取るシナリオを考えます。 食べ物や飲み物など、さまざまなアイテムに対するユーザーの選択を順番 `Action.Execute` に記録できます。 また、ボット開発者が定義したロジックに基いて、カードを行き来できます。 <br/>
+たとえば、カフェテリアがチームまたはチャネルの注文を受け取るシナリオを考えます。 食 `Action.Execute` べ物や飲み物など、さまざまなアイテムに対するユーザーの選択を順番に記録できます。 また、ボット開発者が定義したロジックに基いて、カードを行き来できます。 <br/>
 
 次の図は、シーケンシャル ワークフローを示しています。
 
@@ -26,7 +26,7 @@ ms.locfileid: "62081052"
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="ケータリング ボットの状態":::
 
 > [!NOTE]
-> デバイス間でユーザーの進行状況を同期するには、アダプティブ カード `refresh` JSON のプロパティを使用します。
+> デバイス間でユーザーの進行状況を同期するには、アダプティブ `refresh` カード JSON のプロパティを使用します。
 
 ## <a name="sequential-workflow-for-adaptive-cards"></a>アダプティブ カードのシーケンシャル ワークフロー
 
@@ -130,10 +130,9 @@ var adaptiveCardResponse = JObject.FromObject(new
 | Teams ケータリング ボット | アダプティブ カードを使用して、食品の注文を受け入れるボットを作成します。 |[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| まだ利用できません。 |
 | シーケンシャル ワークフローアダプティブ カード | シーケンシャル ワークフロー、ユーザー固有のビュー、最新のアダプティブ カードをボットに実装する方法を示します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
-
 ## <a name="see-also"></a>関連項目
 
 * [Teams でのアダプティブ カードのアクション](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [ボットの機能](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [アダプティブ カードのユニバーサル アクションの操作](Work-with-universal-actions-for-adaptive-cards.md)
-* [フォームの完成に関するフィードバック](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [フォームの完了に関するフィードバック](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

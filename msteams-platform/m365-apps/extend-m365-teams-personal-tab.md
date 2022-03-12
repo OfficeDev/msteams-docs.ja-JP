@@ -5,12 +5,12 @@ ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
-ms.openlocfilehash: e914793fcd0d7bbaa2442f282224c4ca94d99a85
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 65002e300527a03ef2b7468a97aef06295ce76a8
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356306"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453720"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>個人用タブをTeamsに拡張Microsoft 365
 
@@ -22,14 +22,16 @@ ms.locfileid: "63356306"
 個人用アプリを更新して、OutlookホームOffice実行するには、次の手順を実行します。
 
 > [!div class="checklist"]
+>
 > * アプリ マニフェストを更新する
-> * TeamsJS SDK の参照を更新する 
+> * TeamsJS SDK の参照を更新する
 > * コンテンツ セキュリティ ポリシーのヘッダーを変更する
 > * シングル サインオンMicrosoft Azure Active Directory (Azure AD) アプリ登録を更新する (SSO)
 
 アプリをテストするには、次の手順が必要です。
 
 > [!div class="checklist"]
+>
 > * ターゲットリリースMicrosoft 365にOffice 365 *テナントを登録する*
 > * アプリとアプリのプレビュー バージョンにアクセスOutlookアカウントOfficeする
 > * 更新したアプリをアプリにサイドロードTeams
@@ -56,7 +58,6 @@ ms.locfileid: "63356306"
 
 :::image type="content" source="images/toolkit-todo-sample.png" alt-text="Todo List サンプル (Teams、Outlook、Office) Teams Toolkit":::
 
-
 ## <a name="update-the-app-manifest"></a>アプリ マニフェストを更新します。
 
 Teams 個人用タブを [Office](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview) `Microsoft 365 DevPreview` および Outlook で実行するには、Teams Teams 開発者プレビュー マニフェスト スキーマとマニフェスト バージョンを使用する必要があります。
@@ -78,6 +79,7 @@ Teams 個人用タブを [Office](/microsoftteams/platform/resources/schema/mani
     "manifestVersion" : "m365DevPreview"
 }
 ```
+
 ---
 
 個人用アプリのTeams Toolkit使用した場合は、マニフェスト ファイルへの変更を検証し、エラーを特定することもできます。 `Ctrl+Shift+P`コマンド パレットを開き、[**Teams:** マニフェスト ファイルの検証] を見つけるか、Teams Toolkit の [展開] メニューからオプションを選択します (Visual Studio Code の左側にある Teams アイコンを探します)。
@@ -96,6 +98,7 @@ Teams Toolkit を使用`@microsoft/teams-js`すると、コード変更の一部
 完了すると、ユーティリティは `package.json` TeamsJS SDK Preview (`@microsoft/teams-js@2.0.0-beta.1` 以降) `*.js/.ts` `*.jsx/.tsx` 依存関係を持つファイルを更新し、ファイルとファイルは次の形式で更新されます。
 
 > [!div class="checklist"]
+>
 > * `package.json` TeamsJS SDK プレビューへの参照
 > * TeamsJS SDK プレビューのインポート ステートメント
 > * TeamsJS SDK [プレビューへの関数、列挙、](using-teams-client-sdk-preview.md#apis-organized-into-capabilities)およびインターフェイスの呼び出し
@@ -126,7 +129,7 @@ Azure Active Directory 個人用タブのシングル サインオン (SSO) は�
 
 1. サンドボックス テナント アカウントを[Microsoft Azureポータル](https://portal.azure.com)にサインインします。
 1. [アプリの **登録] ブレードを開** きます。
-1. 個人用タブ アプリケーションの名前を選択して、アプリ登録を開きます。 
+1. 個人用タブ アプリケーションの名前を選択して、アプリ登録を開きます。
 1. [API  **の公開] ([管理]** の下) を *選択します*。
 
 :::image type="content" source="images/azure-app-registration-clients.png" alt-text="Azure portal の *App 登録* ブレードからクライアント ID を承認する":::
@@ -179,7 +182,7 @@ Teams 個人用タブをアップグレードし、Teams でサイドロード�
 
 1. 開発Outlookアカウントを使用して、アカウントを起動してサインインします。
 1. サイド バーの省略記号 (**....**) をクリックします。 サイドロードされたアプリのタイトルが、インストールされているアプリの中に表示されます。
-1.  アプリのアイコンをクリックして、アプリを起動Outlook。
+1. アプリのアイコンをクリックして、アプリを起動Outlook。
 
 :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="デスクトップ クライアントのサイド バーの省略記号 ('More apps') オプションをクリックしてOutlook個人用タブを表示する":::
 
@@ -187,7 +190,7 @@ Teams 個人用タブをアップグレードし、Teams でサイドロード�
 
 アプリをアプリで表示するには、次Outlook on the web。
 
-1. デベロッパー テナント アカウント https://outlook.office.com を使用して、移動してサインインします。
+1. 開発テナント アカウント[Outlook on the web](https://outlook.office.com)を使用して、ユーザーに移動してサインインします。
 1. サイド バーの省略記号 (**....**) をクリックします。 サイドロードされたアプリのタイトルが、インストールされているアプリの中に表示されます。
 1. アプリ アイコンをクリックして、アプリを起動してプレビューし、アプリを起動Outlook on the web。
 
@@ -227,11 +230,11 @@ Outlook有効Office個人用タブは、次の 3 つの方法のいずれかを�
 
 #### <a name="microsoft-teams-admin-center"></a>Microsoft Teams管理センター
 
-管理者Teams、組織のテナントのアプリ パッケージをアップロードして事前インストールできますhttps://admin.teams.microsoft.com/。 詳細[についてはアップロード管理センターのカスタム アプリMicrosoft Teamsを参照](/MicrosoftTeams/upload-custom-apps)してください。
+管理者Teams、組織のテナントのアプリ パッケージを管理者からアップロードして[Teamsできます](https://admin.teams.microsoft.com/)。詳細[についてはアップロード管理センターのカスタム アプリMicrosoft Teamsを参照](/MicrosoftTeams/upload-custom-apps)してください。
 
 #### <a name="microsoft-admin-center"></a>Microsoft 管理センター
 
-グローバル管理者は、アプリ パッケージをアップロードして事前インストールできます https://admin.microsoft.com/。 詳細[については、「統合アプリ ポータルMicrosoft 365 Appsパートナーによるテストと展開」を](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps)参照してください。
+グローバル管理者は、Microsoft 管理者からアプリ パッケージをアップロードして事前インストール[できます](https://admin.microsoft.com/)。詳細[については、「統合アプリ ポータルMicrosoft 365 Appsパートナーによるテストと展開」を](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps)参照してください。
 
 ### <a name="multitenant-distribution"></a>マルチテナント配布
 

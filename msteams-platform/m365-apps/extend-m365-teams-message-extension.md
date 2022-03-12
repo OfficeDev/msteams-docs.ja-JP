@@ -4,12 +4,12 @@ description: 検索ベースのメッセージング拡張機能を更新して�
 ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: 743181b11d595aabdd9d7972674e843b598826af
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 0cb9cf0d1963e7d9fd2b8d27f245c251ef99c625
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356008"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453517"
 ---
 # <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>複数のTeamsメッセージング拡張機能を拡張Microsoft 365
 
@@ -21,6 +21,7 @@ ms.locfileid: "63356008"
 検索ベースのメッセージング拡張機能を更新してTeams実行するプロセスにはOutlook手順が含まれます。
 
 > [!div class="checklist"]
+>
 > * アプリ マニフェストを更新する
 > * ボットのOutlookチャネルを追加する
 > * 更新されたアプリをアプリにサイドロードTeams
@@ -31,10 +32,10 @@ ms.locfileid: "63356008"
 
 このチュートリアルを完了するには、次の情報が必要です。
 
- - 開発者Microsoft 365サンドボックス テナント
- - ターゲットリリースに登録 *Office 365サンドボックス テナント*
- - ベータ 版チャネルからOfficeアプリをインストールしたテストMicrosoft 365 Apps *環境*
- - Microsoft Visual Studio (Preview) 拡張子Teams Toolkitコード (省略可能)
+* 開発者Microsoft 365サンドボックス テナント
+* ターゲットリリースに登録 *Office 365サンドボックス テナント*
+* ベータ 版チャネルからOfficeアプリをインストールしたテストMicrosoft 365 Apps *環境*
+* Microsoft Visual Studio (Preview) 拡張子Teams Toolkitコード (省略可能)
 
 > [!div class="nextstepaction"]
 > [前提条件のインストール](prerequisites.md)
@@ -68,6 +69,7 @@ ms.locfileid: "63356008"
     "manifestVersion" : "m365DevPreview"
 }
 ```
+
 ---
 
 メッセージング拡張機能アプリTeams Toolkit使用した場合は、このアプリを使用してマニフェスト ファイルの変更を検証し、エラーを特定できます。 `Ctrl+Shift+P`コマンド パレットを開き、[**Teams:** マニフェスト ファイルの検証] を見つけるか、Teams Toolkit の [展開] メニューからオプションを選択します (Visual Studio Code の左側にある Teams アイコンを探します)。
@@ -181,11 +183,11 @@ Outlook有効Office個人用タブは、次の 3 つの方法のいずれかを�
 
 #### <a name="microsoft-teams-admin-center"></a>Microsoft Teams管理センター
 
-管理者Teams、組織のテナントのアプリ パッケージをアップロードして事前インストールできますhttps://admin.teams.microsoft.com/。 詳細[についてはアップロード管理センターのカスタム アプリMicrosoft Teamsを参照](/MicrosoftTeams/upload-custom-apps)してください。
+管理者Teams、組織のテナントのアプリ パッケージを管理者からアップロードして[Teamsできます](https://admin.teams.microsoft.com/)。詳細[についてはアップロード管理センターのカスタム アプリMicrosoft Teamsを参照](/MicrosoftTeams/upload-custom-apps)してください。
 
 #### <a name="microsoft-admin-center"></a>Microsoft 管理センター
 
-グローバル管理者は、アプリ パッケージをアップロードして事前インストールできます https://admin.microsoft.com/。 詳細[については、「統合アプリ ポータルMicrosoft 365 Appsパートナーによるテストと展開」を](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps)参照してください。
+グローバル管理者は、Microsoft 管理者からアプリ パッケージをアップロードして事前インストール[できます](https://admin.microsoft.com/)。詳細[については、「統合アプリ ポータルMicrosoft 365 Appsパートナーによるテストと展開」を](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps)参照してください。
 
 ### <a name="multitenant-distribution"></a>マルチテナント配布
 

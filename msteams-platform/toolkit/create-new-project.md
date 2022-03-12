@@ -1,30 +1,30 @@
 ---
-title: 新しいプロジェクトを作成Teamsを使用してTeams Toolkit
+title: 新しいプロジェクトをTeamsする 方法を使用Teams Toolkit
 author: zyxiaoyuer
-description: 新しいプロジェクトを作成Teamsを使用してTeams Toolkit
+description: 新しいプロジェクトをTeamsする 方法を使用Teams Toolkit
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 0f723edb3cc890ef0668dbd3b8f87648935e20c3
-ms.sourcegitcommit: c66da76fb766df6270095265e1da8c49a3afd195
+ms.openlocfilehash: bac67621e14d12b61b04eac3ec24c90cb3057a79
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "62435678"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452558"
 ---
 # <a name="create-new-teams-project-using-teams-toolkit"></a>プロジェクトを使用してTeamsプロジェクトを作成Teams Toolkit
 
-アプリ を使用してTeamsプロジェクトTeams Toolkitするには、[新しいアプリ プロジェクトを作成Teamsまたはサンプルから開始 **] を選択します**。
+アプリ を使用してTeamsプロジェクトTeams Toolkitするには、[アプリ プロジェクトの新しいTeamsを作成する] または [サンプル **から** 開始 **] を選択します**。
 
 ## <a name="create-new-project"></a>新しいプロジェクトを作成する
 
 次のガイドは、次の方法を使用して新しいアプリ Teamsを作成Teams Toolkit。
 
-- [新しいタブ Teamsアプリを作成する (React)](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2)
-- [新しいボット Teamsを作成する](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&branch)
-- [新しいメッセージ拡張機能アプリを作成する](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=6&branch)
-- [新しいタブ Teamsアプリを作成する (SharePoint Framework)](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&branch)
+* [新しいタブ Teamsアプリを作成する (React)](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2)
+* [新しいボット アプリTeams作成する](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&branch)
+* [新しいメッセージ拡張機能アプリを作成する](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=6&branch)
+* [新しいタブ Teamsアプリを作成する (SharePoint Framework)](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&branch)
 
 ## <a name="create-from-samples"></a>サンプルから作成する
 
@@ -33,10 +33,10 @@ ms.locfileid: "62435678"
  1. [**コードTeams Toolkit** からMicrosoft Visual Studio開きます。
  1. ツリー ビュー **で [開発** ] セクションを選択します。
  1. [サンプル **の表示] を選択します**。 次の図に示すように、サンプル ギャラリーが表示されます。
-   
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/view samples.png" alt-text="サンプル":::
 
-サンプルを探索してダウンロードし、ローカルまたはリモートでアプリを実行して、Web クライアントTeamsできます。 各サンプルの指示に従って、サンプルのソース コードを参照するには、[サンプルの表示] GitHubを選択して、サンプルのオープン ソース レ **ポ** にアクセスします。
+サンプルを探索してダウンロードし、ローカルまたはリモートでアプリを実行して、Web クライアントTeamsできます。 各サンプルの指示に従って、サンプルのソース コードを参照するには、[サンプルの表示] GitHubを選択して、サンプルのオープン ソース レポにアクセスします。
 
 ## <a name="see-also"></a>関連項目
 

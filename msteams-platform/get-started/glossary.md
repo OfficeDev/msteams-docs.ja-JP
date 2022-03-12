@@ -4,17 +4,16 @@ description: 開発者向けドキュメント Microsoft Teams 用語集
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams 開発者定義
-ms.openlocfilehash: af5d713076419c016b65983e4876f52803d8d1fe
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: eab4779a862aa9a3e5183d52977fa012b1fc254f
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398708"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63452747"
 ---
 # <a name="glossary"></a>用語集
 
 Teams 開発者向けドキュメントで使用される一般的な用語と定義。
-
 
 ## <a name="a"></a>A
 

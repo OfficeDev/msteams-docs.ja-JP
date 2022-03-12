@@ -4,12 +4,12 @@ author: surbhigupta12
 description: RSC アクセス許可を持つすべてのチャネル メッセージを受信する
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: d573e6e52f09537a9cb5e815529ff9ee2ab31cae
-ms.sourcegitcommit: 90587b1ec04bf20d716ed6feb8ccca4313e87f8c
+ms.openlocfilehash: b18b4f64d34abc1dec71c526c1f604978dc77cdf
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62518312"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453454"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>RSC のチャネル メッセージをすべて受信する
 
@@ -21,16 +21,17 @@ RSC を使用すると、ボットがチーム内の標準チャネル間でユ�
 
 ## <a name="enable-bots-to-receive-all-channel-messages"></a>ボットがすべてのチャネル メッセージを受信可能にする
 
-`ChannelMessage.Read.Group` RSC アクセス許可はボットに拡張されます。 ユーザーの同意を得た場合、このアクセス許可を使用すると、グラフ アプリケーションは会話内のすべてのメッセージを取得し、ボットはメッセージを読み取ることなくすべてのチャネル @mentioned。
+`ChannelMessage.Read.Group` RSC アクセス許可はボットに拡張されます。 ユーザーの同意を得た場合、このアクセス許可を使用すると、グラフ アプリケーションは会話内のすべてのメッセージを取得し、ボットはメッセージにアクセスせずにすべてのチャネル メッセージを受信@mentioned。
 
 > [!NOTE]
-> * すべてのメッセージ データにアクセスするTeamsサービスは、チャネルやチャットGraphアーカイブ されたデータへのアクセスを提供する api を使用する必要があります。
+>
+> * すべてのメッセージ データにアクセスする必要Teamsサービスは、チャネルやチャットでアーカイブされたデータGraphアクセスできる api を使用する必要があります。
 > * ボットは、チーム内の `ChannelMessage.Read.Group` ユーザーの魅力的なエクスペリエンスを構築および強化するために、RSC アクセス許可を適切に使用する必要があります。または、ユーザーがストアの承認に合格しない必要があります。 アプリの説明には、ボットが読み取ったデータを使用する方法が含まれる必要があります。
-> * 大量 `ChannelMessage.Read.Group` の顧客データを抽出する方法として、RSC アクセス許可をボットで使用することはできません。 
+> * 大量 `ChannelMessage.Read.Group` の顧客データを抽出する方法として、RSC アクセス許可をボットで使用することはできません。
 
 ## <a name="update-app-manifest"></a>アプリ マニフェストの更新
 
-ボットがすべてのチャネル メッセージを受信するには、プロパティで指定されたアクセス許可Teamsアプリ マニフェストで RSC `ChannelMessage.Read.Group` を構成する必要`webApplicationInfo`があります。
+ボットがすべてのチャネル メッセージを受信するには、プロパティで指定されたアクセス許可を持つ Teamsアプリ マニフェストで RSC `ChannelMessage.Read.Group` を構成する必要`webApplicationInfo`があります。
 ![アプリ マニフェストの更新](~/bots/how-to/conversations/Media/appmanifest.png)
 
 オブジェクトの例を次に示 `webApplicationInfo` します。
@@ -53,7 +54,7 @@ RSC を使用すると、ボットがチーム内の標準チャネル間でユ�
 
 ## <a name="sideload-in-a-team"></a>チームのサイドロード
 
-テストするチームにサイドロードするには、RSC を持つチーム内のすべてのチャネル メッセージが、次の情報を取得せずに受信@mentioned。
+テストするチームにサイドロードするには、RSC を持つチーム内のすべてのチャネル メッセージを、次の方法で受信@mentioned。
 
 1. チームを選択または作成します。
 1. 左側のウィンドウから &#x25CF;&#x25CF;&#x25CF; 省略記号を選択します。 ドロップダウン メニューが表示されます。
@@ -93,7 +94,7 @@ RSC を使用すると、ボットがチーム内の標準チャネル間でユ�
 // When rsc is enabled the method will be called even when bot is addressed without being @mentioned
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-        await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can recieve messages across channels in team without being @mentioned."));
+  await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can recieve messages across channels in team without being @mentioned."));
 }
 ```
 
@@ -115,7 +116,7 @@ this.onMessage(async (context, next) => {
 
 | サンプルの名前 | 説明 | C# |Node.js|
 |-------------|-------------|------|----|
-|RSC アクセス許可を持つチャネル メッセージ| Microsoft Teams、ボットが RSC を使用してすべてのチャネル メッセージを受信する方法を示すサンプル アプリ@mentioned。|  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) |    [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |
+|RSC アクセス許可を持つチャネル メッセージ| Microsoft Teams、ボットが RSC を使用してすべてのチャネル メッセージを受信する方法を示すサンプル アプリ@mentioned。| [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |
 
 ## <a name="see-also"></a>関連項目
 
