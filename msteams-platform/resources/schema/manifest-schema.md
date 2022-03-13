@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: 25de3d14019bbe37a202f2252749e816fc7b3edc
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 14f1bdaa546fd18612e9869efc2f1216c1aef8db
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399101"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453769"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参照: Microsoft Teams のマニフェスト スキーマ
 
@@ -825,13 +825,17 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 |名前| 型|最大サイズ|必須 |説明|
 |---|---|---|---|---|
 |`type`|string||✔| リソース固有のアクセス許可の種類。オプション: `Application` と `Delegated`。|
-|`name`|string|128 文字|✔|リソース固有のアクセス許可の名前。 <br> 詳細については、「[アプリケーションのアクセス許可](../../graph-api/rsc/resource-specific-consent.md)」および「[委任されたアクセス許可](#delegated-permissions)」を参照してください。|
+|`name`|string|128 文字|✔|リソース固有のアクセス許可の名前。 詳細については、「[リソース固有のアプリケーションのアクセス許可](#resource-specific-application-permissions)」および「[リソース固有の委任されたアクセス許可](#resource-specific-delegated-permissions)」を参照してください|
 
-### <a name="delegated-permissions"></a>委任されたアクセス許可
+#### <a name="resource-specific-application-permissions"></a>リソース固有のアプリケーションのアクセス許可
+
+アプリケーションのアクセス許可により、アプリはサインインしたユーザーなしでデータにアクセスできます。 アプリケーションのアクセス許可については、「[MS Graph および MS BotSDK のリソース固有の同意](../../graph-api/rsc/resource-specific-consent.md)」を参照してください。
+
+#### <a name="resource-specific-delegated-permissions"></a>リソース固有の委任されたアクセス許可
 
 委任されたアクセス許可を使用すると、アプリはサインインしているユーザーの代わりにデータにアクセスできます。
 
-* **チームのリソース固有のアクセス許可**
+* **チームのリソース固有の委任されたアクセス許可**
 
     |**[名前]**|**説明**|
     |---|---|
@@ -839,7 +843,7 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
     |`InAppPurchase.Allow.Group`| サインインしているユーザーの代わりに、このチームのユーザーにマーケットプレース オファーを表示し、アプリ内での購入を完了できるようにします。|
     |`ChannelMeetingStage.Write.Group`| サインインしているユーザーの代わりに、このチームに関連付けられているチャネル会議の会議ステージにコンテンツをアプリが表示できるようにします。|
 
-* **チャットまたは会議用のリソース固有のアクセス許可**
+* **チャットまたは会議用のリソース固有の委任されたアクセス許可**
 
     |**[名前]**|**説明**|
     |---|---|
@@ -848,7 +852,7 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
     |`OnlineMeetingParticipant.Read.Chat`|サインインしたユーザーの代理で、このチャットに関連付けられた会議の名前、役割、ID、参加時間と退会時間などの参加者情報を読み取ることができるようにします。|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|サインインしているユーザーの代わりに、このチャットに関連付けられている会議の参加者の着信オーディオをアプリで切り替えられるようにします。|
 
-* **ユーザーのリソース固有のアクセス許可**
+* **ユーザーのリソース固有の委任されたアクセス許可**
 
     |**[名前]**|**説明**|
     |---|---|
