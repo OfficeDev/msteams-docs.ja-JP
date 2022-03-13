@@ -5,12 +5,12 @@ description: Microsoft Teams で Office 365 コネクタを使用する方法に
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams Office365 コネクタ
-ms.openlocfilehash: 7b6b7adc8231e3bdcdb9bfec868702eaa3264c42
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 348b133ea4df73d52f8b35a2271ccf9be6f4ff8e
+ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355637"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63398877"
 ---
 # <a name="create-and-send-messages"></a>メッセージを作成して送信する
 
@@ -44,6 +44,7 @@ ms.locfileid: "63355637"
 コネクタ カードのアクションの詳細については、「 [Actions](/outlook/actionable-messages/card-reference#actions)」を参照してください。
 
 > [!NOTE]
+>
 > * Microsoft Teams で `style` プロパティに `compact` を指定することは、Microsoft Outlook で `style` プロパティに `normal` を指定することと同じです。
 > * HttpPOST アクションでは、ベアラー トークンは要求に含まれています。 このトークンには、アクションを実行した Office 365 ユーザーの Microsoft Azure Active Directory (Azure AD) ID が含まれています。
 
@@ -187,14 +188,15 @@ PowerShell を使用して Webhook にメッセージを投稿するには、次
 
 1. Webhook URL に関連付けられている Microsoft Teams チャネルを確認します。 チャネルに投稿された新しいカードを確認できます。 コネクタを使用してアプリをテストまたは発行する前に、次の操作を行う必要があります。
 
-    - [アイコンを 2 つ含めます](../../concepts/build-and-test/apps-package.md#app-icons)。
-    - マニフェストの `icons` 部分を、URL ではなくアイコンのファイル名に変更します。
+    * [アイコンを 2 つ含めます](../../concepts/build-and-test/apps-package.md#app-icons)。
+    * マニフェストの `icons` 部分を、URL ではなくアイコンのファイル名に変更します。
 
 ---
 
 ## <a name="send-adaptive-cards-using-an-incoming-webhook"></a>受信 Webhook を使用してアダプティブ カードを送信する
 
 > [!NOTE]
+>
 > * `Action.Submit`を除くすべてのネイティブ アダプティブ カード スキーマ要素は、完全にサポートされています。
 > * ✔ サポートされているアクションは [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html)、[**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html)、および [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html) です。
 
@@ -260,7 +262,7 @@ PowerShell を使用して Webhook にメッセージを投稿するには、次
 [指数バックオフを備えた再試行ロジック](/azure/architecture/patterns/retry)では、要求が 1 秒以内に制限を超えている場合のレート制限を軽減できます。レート制限達しないように、[ベスト プラクティス](../../bots/how-to/rate-limit.md)に従ってください。
 
 > [!NOTE]
-> [指数バックオフを備えた再試行ロジック](/azure/architecture/patterns/retry)では、要求が 1 秒以内に制限を超えている場合のレート制限を軽減できます。 レート制限を避けるために、[HTTP 429 応答](../../bots/how-to/rate-limit.md#handle-http-429-responses)を参照してください。
+> [指数バックオフを備えた再試行ロジック](/azure/architecture/patterns/retry)では、要求が 1 秒以内に制限を超えている場合のレート制限を軽減できます。レート制限に達しないように、[HTTP 429 応答](../../bots/how-to/rate-limit.md#handle-http-429-responses)を参照してください。
 
 ```csharp
 // Please note that response body needs to be extracted and read 
