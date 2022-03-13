@@ -1,62 +1,58 @@
 ---
 title: Moodle ラーニング管理システム
-description: Moodle LMS とサービスとの統合Teams
+description: Teams と Moodle LMS 統合の概要
 ms.topic: overview
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: surbhigupta
-author: KirtiPereira
 keywords: moodle LMS mConnect ディープ リンク
-ms.openlocfilehash: beaac8d139b164b26f791b46a089a44cd8a4681d
-ms.sourcegitcommit: af1d0a4041ce215e7863ac12c71b6f1fa3e3ba81
-ms.translationtype: MT
+ms.openlocfilehash: 3a999846b9df72298e35eed9edaf9bd96df30edf
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "60888455"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453124"
 ---
 # <a name="moodle-learning-management-system"></a>Moodle ラーニング管理システム
 
-Moodle は、世界最大のオープン ソース学習管理システムです。 
+ Moodle は、セキュリティで保護されたプライバシー サービスを利用した独自のリモート 学習エクスペリエンスを提供する、最も大きなオープンソース学習管理システム (LMS) の 1 つです。 次のサービスを提供するために、Moodle LMS は Microsoft Teams と統合します。
 
-このアプリは、教育者が次のような貴重な機能を通じてコースを作成および整理するのに役立ちます。
-* 堅牢なクイズ ツール 
-* 採点されたディスカッション
-* 学生がコンテンツに取り組むさまざまな課題の種類  
- 
-Moodle は、次のMicrosoft Teams。 Teamsは、リアルタイムのコラボレーション、チームワーク、生産性のハブです。 最大 300 人のOffice 365、数百のアプリ、チャット、ライブ会議機能とのシームレスな統合。 Teamsは、教職員と学生がどこにいっても、より効率的に一緒に働く能力を提供します。 
- 
-Microsoft 365Moodle プラグインは、教職員と学生に包括的なエクスペリエンスを提供することで、Moodle を補完します。 Moodle Microsoft 365を使用すると、サイト管理者は次のユーザーを同期できます。
+* 音声通話またはビデオ通話
+* 学生とのチャット
+* コースとアクティビティの管理
+* 階級章と褒賞
+* Analytical insights
 
-* Office 365と Moodle
-* ユーザーの照合を自動化する
-* コースとファイル リポジトリMicrosoft Teams同期する
-* Connect OneNote割り当て
-* ドキュメントOffice埋め込み
- 
-Microsoft Teams mConnect by Skooler や Microsoft 365 Moodle Plugins などのアプリは、Moodle をTeams。
+<!-- [Moodle](https://moodle.com/about/) is the world’s largest open-source learning management system (LMS). With greater than 30 years of experience in remote learning, it has attracted around 300 million users worldwide with its rich set of hosted and cloud-based services. Combining Moodle LMS and Teams provides an enhanced learning experience with modern superpowers. 
+This content is modified as per the requirement.-->
 
-教職員と学生は、リアルタイムのコミュニケーションとコラボレーションで、Moodle の独自の機能を活用できます。
+ <!--The following image demonstrates Moodle LMS:
+  Query on this image about what is meant by section
 
-## <a name="mconnect-app-by-skooler"></a>skooler による mConnect アプリ
+:::image type="content" source="../assets/images/MoodleInstructions/flow-chart.png" alt-text="Flow chart" border="true":::-->
 
-Skooler による mConnect アプリを使用すると、仮想学習を簡単にTeams提供できます。
+## <a name="moodle-lms-accessibility"></a>Moodle LMS アクセシビリティ
 
-### <a name="why-mconnect-and-teams"></a>mConnect と Teams
+Moodle LMS は、ユーザーが次のアプリにアクセスするのに役立ちます:
 
-以下のビデオを見て、mConnect と Teamsの動作を理解してください。
+* **Microsoft 365 プラグイン**: Microsoft 365 プラグインは、Moodle サイトと Microsoft Teams の間の統合を確実にできるように設計されています。 これらのプラグインは個別に、またはパートナーシップの下で、個別のユーザー要件を達成するために使用できます。 詳細については、[Microsoft 365 プラグイン](m365-plugins/m365-plugins-overview.md)を参照してください。
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/nM56R_woMdE]
+* **Moodle のパートナー アプリ**: Moodle と Teams 向けアプリの全てのパートナー セットは、Microsoft Store で提供されています。 詳細については、[Moodle のためのパートナー アプリ](partner-apps-for-moodle.md)を参照してください。
 
-mConnect の内部から、コース参加者は、ユーザーが提供するリアルタイムのコラボレーションとコミュニケーションの中で、完全な Moodle コースエクスペリエンスにMicrosoft Teams。
+## <a name="user-requirement-scenarios"></a>ユーザー要求シナリオ
 
-### <a name="get-started-with-mconnect-and-teams"></a>mConnect と Teams
+次のシナリオは、Microsoft クラウド サービス群と Moodle のコースを組み合わせた、学習を加速する期待について説明します。
 
-次のビデオを見て、mConnect とネットワークの使用を開始する方法Teams。
+* **ハイブリッド リモート会議を促進する**: Teams 会議と機能拡張サービスを使用すると、教員は学生と、対面及びリモートで発表できます。 学生の場合、リモート会議の共有ビュー、アプリ、および投票にアクセスする必要があります。 残タスクとして、多言語の文字起こしと、音声またはビデオによるコースの録画を提供します。 Teams と Moodle が連携し、roosters、アクティビティ、タスクを共有します。
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/KOVpQ2s7iA8]
+* **会議パネルのカスタマイズ**: Teams Graph API エンドポイントを使用して、独自の共同学習エクスペリエンスを作成します。 他の追加のプランやプロジェクトについて、ユーザーは新入社員全員に面接することができ、カスタム投票を使用して結果を分類できます。 Teams には、情報更新を非同期的に Moodle サイトにプッシュしながらクイズを直接共有する設備があります。
 
-詳細については [、「mConnect by Skooler」を参照してください](https://skooler.com/mconnect/how-to/)。
+* **自動化設備**: 新入生が参加する際の教室の自動化設備をセットアップするには、ユーザーは、Moodle コースを追加し、学生にアダプティブ カードを送信し、適切なリンク集とコースの重要な参考図書を提案できます。 Moodle のための Teams カスタム コネクタを使用すると、コース ミーティングがスケジュールされるごとに、Moodle カレンダー イベントを作成できます。
 
-## <a name="microsoft-365-moodle-plugins"></a>Microsoft 365Moodle プラグイン
+* **市民開発者向けアプリの作成**: 学校用の新しいカスタム アプリの開発。作成は簡単で、学習を最適化できます。 また、このアプリは学生と教員に対して使いやすいトランザクション アクティビティを提供します。
 
-ユーザー向け Moodle プラグインTeams、コース コンテンツのスケジュール、配信、共同作業を簡単に行えます。 Moodle ラーニング管理システムをシームレスに導入するプラグインをインストールTeams。 詳細については [、「Install Moodle LMS」を参照してください](moodleInstructions.md)。
+<!-- For more information, see [Microsoft education](https://www.microsoft.com/education).-->
+## <a name="see-also"></a>関連項目
 
+* [Microsoft 365 プラグイン](m365-plugins/m365-plugins-overview.md)
+* [Moodle のパートナー アプリ](partner-apps-for-moodle.md)
+* [Moodle FAQ](faqs.md)

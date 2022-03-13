@@ -5,19 +5,19 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: d602750a8f41d8331f30d64e06b2aafb026e0ff4
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: e3a22378819d8fb1e865e2122b7977bcbabbbb74
+ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356281"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63453336"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Microsoft Teams でアプリをアップロードする
 
-組織または Teams ストアに公開しなくても、Microsoft Teams アプリをサイドロードできます。これは、以下のシナリオで有効です。
+組織または Teams ストアに公開しなくても、Microsoft Teams アプリを脇で発行できます。これは、以下のシナリオで有効です:
 
 * アプリをローカルで、または他の開発者とテストしてデバッグする必要があります。
-* 自分専用のアプリを作成しました。 たとえば、ワークフローを自動化する場合などです。
+* ワークフローを自動化するために、自分用のアプリを構築しました。
 * 作業グループなど、少数のユーザー向けのアプリを作成しました。
 
 > [!IMPORTANT]
@@ -25,30 +25,33 @@ ms.locfileid: "63356281"
 
 ## <a name="prerequisites"></a>前提条件
 
-* [アプリ パッケージ](~/concepts/build-and-test/apps-package.md)を作成し、エラーを[検証](https://dev.teams.microsoft.com/appvalidation.html)します。
+* [アプリ パッケージ](~/concepts/build-and-test/apps-package.md)を作成し、[アプリ パッケージを検証](https://dev.teams.microsoft.com/appvalidation.html)することを確かめて下さい。
 * Teams で[カスタム アプリのアップロード を有効](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading)にします。
-* アプリが実行されていて、HTTP 経由でアクセスできることを確認します。
+* アプリが実行されていて、HTTP 経由でアクセスできることを確認してください。
 
 ## <a name="upload-your-app"></a>アプリをアップロードする
 
 アプリのスコープの構成方法に応じて、チーム、チャット、会議、または個人用にアプリをサイドロードできます。
 
 1. [Microsoft 365開発アカウント](~/build-your-first-app/build-and-run.md#prerequisites)を使用して Teams クライアントにログインします。
-1. [ **Apps** ] を選択し ［**カスタム アプリをアップロードする**] を選択します。
-1. アプリ パッケージの .zip ファイルを選択します。 インストール ダイアログが表示されます。
-:::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Teams アプリのインストール ダイアログの例を示すスクリーンショット。":::
-1. アプリを Teams に追加します。
+1. **[アプリ]** を選択し、**[アプリの管理]** を選択します。
+1. **[カスタム アプリをアップロードする]** を選択します。
+1. アプリ パッケージの .zip ファイルを選択し、次の画面が表示されます:
 
-> [!NOTE]
-> `onInstallationUpdateActivityAsync()` メソッドは、ボットを Microsoft Teams に追加するときに Microsoft Teams Locale を取得するために使用されます。
+    :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Teams アプリのインストール ダイアログの例を示すスクリーンショット。":::
 
-## <a name="troubleshoot-upload-issues"></a>アップロードに関する問題のトラブルシューティング
+1. **[追加]** を選択して、アプリを Microsoft Teams に追加します。
 
-アプリがサイドロードに失敗した場合は、問題が解決するまで次の操作を行います。
+    > [!NOTE]
+    > `onInstallationUpdateActivityAsync()` メソッドは、ボットを Microsoft Teams に追加するときに Microsoft Teams Locale を取得するために使用されます。
 
-1. [アプリ パッケージ作成](../../concepts/build-and-test/apps-package.md)手順に戻ります。
-1. [アプリ パッケージ](https://dev.teams.microsoft.com/appvalidation.html) をもう一度検証します。
-1. アプリ マニフェストが最新の [スキーマ](../../resources/schema/manifest-schema.md)と一致していることを確認します。
+## <a name="troubleshooting"></a>トラブルシューティング
+
+アプリを脇で発行することに失敗した場合や、アップロードに関する問題がある場合は、次のオプションを確認します:
+
+1. [アプリ パッケージを作成する](../../concepts/build-and-test/apps-package.md)ための、全ての指示通りに操作を済ませたことを確かめてください。
+1. [アプリ パッケージ を検証する](https://dev.teams.microsoft.com/appvalidation.html)。
+1. アプリ マニフェストが最新の [スキーマ](../../resources/schema/manifest-schema.md)と一致していることを確かめてください。
 
 ## <a name="access-your-app"></a>アプリにアクセスする
 
