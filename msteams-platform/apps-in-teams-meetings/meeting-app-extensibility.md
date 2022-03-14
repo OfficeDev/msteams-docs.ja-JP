@@ -4,12 +4,12 @@ author: surbhigupta
 description: 会議のライフサイクル、デスクトップおよびモバイル環境での会議ライフサイクル全体でのユーザーの会議エクスペリエンスの構築、参加者の役割、ユーザーの種類について説明します。 さらに、会議のライフサイクルでのボットとメッセージング拡張機能の統合について説明します。
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 253cc365263b1d385d18d1043da7a779a1ed2355
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 01b24c96e19f11fe32ac511bc1c3f091f23b6cfb
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398849"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63466499"
 ---
 # <a name="unified-meetings-apps"></a>統合された会議アプリ
 
@@ -46,7 +46,7 @@ Teams会議アプリは、次の概念に基づいて行います。
 1. 予定表で、タブを追加する会議を選択します。
 1. [詳細] **タブを選択** し、[ <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. タブ ギャラリーが表示されます。
 
-    <img src="../assets/images/apps-in-meetings/PreMeeting.png" alt="Pre-meeting experience" width="900"/>
+    :::image type="content" source="~/assets/images/apps-in-meetings/Pre-Meeting-002.png" alt-text="会議前のアプリ エクスペリエンス":::
 
 1. タブ ギャラリーで、追加するアプリを選択し、必要に応じて手順に従います。 アプリはタブとしてインストールされます。
 
@@ -57,7 +57,7 @@ Teams会議アプリは、次の概念に基づいて行います。
 
 # <a name="desktop"></a>[デスクトップ](#tab/desktop)
 
-![会議前タブ ビュー](../assets/images/apps-in-meetings/PreMeetingTab.png)
+:::image type="content" source="~/assets/images/apps-in-meetings/PreMeetingTab.png" alt-text="会議中のタブ":::
 
 # <a name="mobile"></a>[モバイル](#tab/mobile)
 
@@ -69,7 +69,7 @@ Teams会議アプリは、次の概念に基づいて行います。
 
 #### <a name="in-meeting-app-experience"></a>会議中のアプリ エクスペリエンス
 
-会議中のアプリ エクスペリエンスを使用すると、アプリと会議内ダイアログ ボックスを使用して、会議中に参加者とのやり取りを行うことができます。 会議アプリは、会議ウィンドウのツール バーに会議中タブとしてホストされます。会議中のダイアログ ボックスを使用して、会議の参加者に実用的なコンテンツを紹介できます。 詳細については、「会議のアプリを[作成するTeams参照してください](create-apps-for-teams-meetings.md)。
+会議中のアプリ エクスペリエンスを使用すると、アプリと会議内ダイアログ ボックスを使用して、会議中に参加者とのやり取りを行うことができます。 会議アプリは、会議ウィンドウのツール バーに会議中タブとしてホストされます。会議中のダイアログ ボックスを使用して、会議の参加者に実用的なコンテンツを紹介できます。 詳細については、「会議で使用するアプリを有効にして[構成するTeams参照してください](enable-and-configure-your-app-for-teams-meetings.md)。
 
 モバイルの場合、会議アプリは、会議内の>省略 &#x25CF;&#x25CF;&#x25CF; アプリから利用できます。 [アプリ **] を** 選択して、会議で利用可能なすべてのアプリを表示します。
 
@@ -82,8 +82,6 @@ Teams会議アプリは、次の概念に基づいて行います。
 1. [会議内] ダイアログ ボックスで、フィードバックとして応答を入力します。
 
 # <a name="desktop"></a>[デスクトップ](#tab/desktop)
-
-![ダイアログ ボックス ビュー](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
 
 # <a name="mobile"></a>[モバイル](#tab/mobile)
 
@@ -132,11 +130,11 @@ Teams会議アプリは、次の概念に基づいて行います。
 
 # <a name="desktop"></a>[デスクトップ](#tab/desktop)
 
-![会議ビューの投稿](../assets/images/apps-in-meetings/PostMeeting.png)
+:::image type="content" source="~/assets/images/apps-in-meetings/post.png" alt-text="結果を含む Contoso タブ":::
 
 # <a name="mobile"></a>[モバイル](#tab/mobile)
 
-<img src="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt="Mobile post meeting view" width="200"/>
+:::image type="content" source="~/assets/images/apps-in-meetings/mobilepremeeting.png" alt-text="会議アプリのエクスペリエンスの投稿":::
 
 ---
 
@@ -155,7 +153,7 @@ Teams会議アプリは、次の概念に基づいて行います。
 
 ## <a name="participant-roles-in-a-meeting"></a>会議の参加者の役割
 
-![会議の参加者](../assets/images/apps-in-meetings/participant-roles.png)
+:::image type="content" source="~/assets/images/apps-in-meetings/participant-roles.png" alt-text="会議の参加者の役割":::
 
 既定の参加者設定は、組織の IT 管理者によって決まります。 会議の参加者の役割を次に示します。
 
@@ -200,14 +198,14 @@ Teams会議アプリは、次の概念に基づいて行います。
 
 | ユーザーの種類 | タブ | ボット | メッセージング拡張機能 | アダプティブ カード | タスク モジュール | 会議中ダイアログ | 会議ステージ | コンテンツ バブル |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| 匿名ユーザー | 使用不可 | 使用不可 | 使用不可 | 会議チャットでの操作は許可されます。 | アダプティブ カードからの会議チャットでの操作は許可されます。 | 利用不可 | 会議ステージでアプリを表示および操作できます | 使用不可 |
+| 匿名ユーザー | 使用不可 | 使用不可 | 使用不可 | 会議チャットでの操作は許可されます。 | アダプティブ カードからの会議チャットでの操作は許可されます。 | 使用不可 | 会議ステージでアプリを表示および操作できます | 利用不可 |
 | ゲスト、テナント の一部Azure AD | 対話は許可されます。 作成、更新、および削除は許可されません。 | 使用不可 | 使用不可 | 会議チャットでの操作は許可されます。 | アダプティブ カードからの会議チャットでの操作は許可されます。 | 使用可能 | 会議のステージでアプリを開始、表示、操作できます | 使用可能 |
-| フェデレーション ユーザーの詳細については、「標準以外の [ユーザー」を参照してください](/microsoftteams/non-standard-users)。 | 対話は許可されます。 作成、更新、および削除は許可されません。 | 対話は許可されます。 取得、更新、削除は許可されません。 | 利用不可 | 会議チャットでの操作は許可されます。 | アダプティブ カードからの会議チャットでの操作は許可されます。 | 利用不可 | 会議のステージでアプリを開始、表示、操作できます | 使用不可 |
+| フェデレーション ユーザーの詳細については、「標準以外の [ユーザー」を参照してください](/microsoftteams/non-standard-users)。 | 対話は許可されます。 作成、更新、および削除は許可されません。 | 対話は許可されます。 取得、更新、削除は許可されません。 | 利用不可 | 会議チャットでの操作は許可されます。 | アダプティブ カードからの会議チャットでの操作は許可されます。 | 使用不可 | 会議のステージでアプリを開始、表示、操作できます | 使用不可 |
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
-> [Teams 会議アプリへの前提条件と API リファレンス](create-apps-for-teams-meetings.md)
+> [会議のアプリを有効にしてTeamsする](enable-and-configure-your-app-for-teams-meetings.md)
 
 ## <a name="see-also"></a>関連項目
 

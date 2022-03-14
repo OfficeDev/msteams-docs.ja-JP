@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: teams apps 会議 ユーザー参加者ロール API ユーザー コンテキスト通知シグナル クエリ
-ms.openlocfilehash: 3f77e0c1c24ad624fae268d4ca0621f7217ab24a
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 150a0bec1d8566392914ffeaf4990de21e3ec7de
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398870"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63464253"
 ---
 # <a name="meeting-apps-api-references"></a>会議アプリ API リファレンス
 
@@ -20,6 +20,9 @@ ms.locfileid: "63398870"
 * 会議のライフサイクル内でアプリを構築したり、既存のアプリを統合したりします。
 * API を使用して、アプリに会議を認識させる。
 * 会議のエクスペリエンスを向上させるために必要な API を選択します。
+
+> [!NOTE]
+> SSO Teamsサイド パネルで動作するには、[JavaScript SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) (*バージョン*: 1.10 以降) を使用します。
 
 次の表に、クライアント (MSTC) と MSBF (MSBF) SDK でMicrosoft Teams API の一覧Microsoft Bot Framework示します。
 
@@ -41,6 +44,8 @@ ms.locfileid: "63398870"
 
 ## <a name="get-participant-api"></a>参加者 API の取得
 
+認証 `GetParticipant` トークンを生成するには、API にボット登録と ID が必要です。 詳細については、「ボットの登録 [と ID」を参照してください](../build-your-first-app/build-bot.md)。
+
 > [!NOTE]
 >
 > * 会議の開催者がいつでも役割を変更できるので、参加者の役割をキャッシュしない。
@@ -49,15 +54,17 @@ ms.locfileid: "63398870"
 ### <a name="query-parameters"></a>クエリ パラメーター
 
 > [!TIP]
-> Tab SSO から参加者 ID とテナント ID を取得します。
+> タブ SSO 認証から参加者 ID とテナント [ID を取得します](../tabs/how-to/authentication/auth-aad-sso.md)。
+
+API には `Meeting` 、、 `meetingId`、および `participantId`URL パラメーターが `tenantId` 必要です。 パラメーターは、クライアント SDK とボット アクティビティTeams使用できます。
 
 次の表に、クエリ パラメーターを示します。
 
 |値|型|必須|説明|
 |---|---|----|---|
-|**meetingId**| String | はい | 会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。|
-|**participantId**| String | はい | 参加者 ID はユーザー ID です。 Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO から参加者 ID を取得する方法をお勧めします。 |
-|**tenantId**| String | はい | テナントユーザーにはテナント ID が必要です。 Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO からテナント ID を取得する方法をお勧めします。 |
+|**meetingId**| 文字列 | はい | 会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。|
+|**participantId**| 文字列 | はい | 参加者 ID はユーザー ID です。 Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO から参加者 ID を取得する方法をお勧めします。 |
+|**tenantId**| 文字列 | はい | テナントユーザーにはテナント ID が必要です。 Tab SSO、Bot Invoke、およびクライアント SDK Teams使用できます。 Tab SSO からテナント ID を取得する方法をお勧めします。 |
 
 ### <a name="example"></a>例
 
@@ -100,8 +107,6 @@ export class MyBot extends TeamsActivityHandler {
 GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 ```
 
----
-
 ```json
 {
    "user":{
@@ -126,11 +131,13 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 }
 ```
 
+---
+
 ### <a name="response-codes"></a>応答コード
 
 次の表に、応答コードを示します。
 
-|応答コード|内容|
+|応答コード|説明|
 |---|---|
 | **403** | 参加者情報の取得がアプリと共有されていない。 アプリが会議にインストールされていない場合は、エラー応答 403 がトリガーされます。 テナント管理者がライブ サイトの移行中にアプリを無効またはブロックすると、エラー応答 403 がトリガーされます。 |
 | **200** | 参加者情報が正常に取得されます。|
@@ -145,9 +152,9 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 >
 > * 会議中の通知が呼び出されると、コンテンツはチャット メッセージとして表示されます。
 > * 現時点では、対象の通知と Web アプリのサポートの送信はサポートされていません。
-> * ユーザーが Web ビューでアクションを実行した後に自動的に終了するには、 [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) 関数を呼び出す必要があります。 これは、アプリの申請に必要な要件です。 詳細については、「SDK タスク [モジュールTeams参照してください](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。 
+> * ユーザーが Web ビューでアクションを実行した後に自動的に終了するには、 [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) 関数を呼び出す必要があります。 これは、アプリの申請に必要な要件です。 詳細については、「SDK タスク [モジュールTeams参照してください](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true)。
 > * アプリで匿名ユーザーをサポート`from.id``from`する場合、最初の呼び出し要求ペイロードは、要求メタデータではなく、オブジェクト内の要求メタデータに依存する`from.aadObjectId`必要があります。 `from.id`はユーザー ID `from.aadObjectId` で、ユーザー Microsoft Azure Active Directory (Azure AD) ID です。 詳細については、「タブでタスク [モジュールを使用する」を参照し](../task-modules-and-cards/task-modules/task-modules-tabs.md)[、タスク モジュールを作成して送信します](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
->
+
 ### <a name="query-parameter"></a>クエリ パラメーター
 
 次の表に、クエリ パラメーターを示します。
@@ -191,6 +198,9 @@ await context.sendActivity(replyActivity);
 
 ```http
 POST /v3/conversations/{conversationId}/activities
+```
+
+```json
 
 {
     "type": "message",
@@ -212,7 +222,7 @@ POST /v3/conversations/{conversationId}/activities
 
 次の表に、応答コードを示します。
 
-|応答コード|内容|
+|応答コード|説明|
 |---|---|
 | **201** | シグナルを含むアクティビティが正常に送信されます。 |
 | **401** | アプリは無効なトークンで応答します。 |
@@ -222,6 +232,8 @@ POST /v3/conversations/{conversationId}/activities
 ## <a name="get-meeting-details-api"></a>会議の詳細 API の取得
 
 会議の詳細 API を使用すると、アプリは会議の静的メタデータを取得できます。 メタデータは、動的に変更しないデータ ポイントを提供します。 API はボット サービスを通じて利用できます。 現在、プライベートスケジュールされた会議または定期的な会議とチャネルのスケジュールされた会議または定期的な会議の両方が、それぞれ異なる RSC アクセス許可を持つ API をサポートしています。
+
+API には `Meeting Details` ボット登録とボット ID が必要です。 ボット SDK を取得する必要があります `TurnContext`。 会議の詳細 API を使用するには、プライベート会議やチャネル会議など、会議の範囲に基づいて異なる RSC アクセス許可を取得する必要があります。
 
 ### <a name="prerequisite"></a>前提条件
 
@@ -318,7 +330,7 @@ POST /v3/conversations/{conversationId}/activities
 
 |値|型|必須|説明|
 |---|---|----|---|
-|**meetingId**| String | はい | 会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。 |
+|**meetingId**| 文字列 | はい | 会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。 |
 
 ### <a name="example"></a>例
 
@@ -338,8 +350,6 @@ await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
 ```http
 GET /v1/meetings/{meetingId}
 ```
-
----
 
 会議の詳細 API の JSON 応答本文は次のとおりです。
 
@@ -367,6 +377,8 @@ GET /v1/meetings/{meetingId}
 } 
 ```
 
+---
+
 ## <a name="send-real-time-captions-api"></a>リアルタイム キャプション API を送信する
 
 送信リアルタイムキャプション API は、Microsoft Teams通信アクセスリアルタイム翻訳 (CART) キャプション、人間型のクローズド キャプションの POST エンドポイントを公開します。 このエンドポイントに送信されるテキスト コンテンツは、キャプションが有効になっているときに、Microsoft Teams会議のエンド ユーザーに表示されます。
@@ -381,8 +393,8 @@ CART URL には、次のクエリ パラメーターが含まれています。
 
 |値|型|必須|説明|
 |---|---|----|----|
-|**meetingId**| String | はい |会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。 <br/>たとえば、 meetingid=%7b%22tId%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241 -47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%220%220%7d|
-|**トークン**| String | はい |承認トークン。<br/> たとえば、token=04751eac |
+|**meetingId**| 文字列 | はい |会議識別子は、ボットの呼び出しとクライアント SDK Teams使用できます。 <br/>たとえば、 meetingid=%7b%22tId%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241 -47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%220%220%7d|
+|**トークン**| 文字列 | はい |承認トークン。<br/> たとえば、token=04751eac |
 
 #### <a name="example"></a>例
 
@@ -392,7 +404,7 @@ https://api.captions.office.microsoft.com/cartcaption?meetingid=%7b%22tId%22%3a%
 
 ### <a name="method"></a>メソッド
 
-|Resource|メソッド|説明|
+|リソース|メソッド|説明|
 |----|----|----|
 |/cartcaption|POST|開始された会議のキャプションを処理する|
 
@@ -429,20 +441,21 @@ API `shareAppContentToStage` を使用すると、アプリの特定の部分を
 
 ### <a name="prerequisite"></a>前提条件
 
-API を使用するには `shareAppContentToStage` 、RSC アクセス許可を取得する必要があります。 アプリ マニフェストで、プロパティとフィールド`authorization`を`name``type`構成`resourceSpecific`します。 例:
+*  API を使用するには `shareAppContentToStage` 、RSC アクセス許可を取得する必要があります。 アプリ マニフェストで、プロパティとフィールド`authorization`を`name``type`構成`resourceSpecific`します。 例:
 
-```json
-"authorization": {
-    "permissions": { 
-    "resourceSpecific": [
-      { 
-      "name": "MeetingStage.Write.Chat",
-      "type": "Delegated"
-      }
-    ]
-   }
-}
- ```
+    ```json
+    "authorization": {
+        "permissions": { 
+        "resourceSpecific": [
+        { 
+        "name": "MeetingStage.Write.Chat",
+        "type": "Delegated"
+        }
+        ]
+    }
+    }
+    ```
+*  `appContentUrl` manifest.json 内の配列 `validDomains` で許可する必要があります。それ以外の API は 501 を返します。
 
 ### <a name="query-parameter"></a>クエリ パラメーター
 
@@ -450,8 +463,8 @@ API を使用するには `shareAppContentToStage` 、RSC アクセス許可を�
 
 |値|型|必須|説明|
 |---|---|----|---|
-|**callback**| String | はい | コールバックには、エラーと結果という 2 つのパラメーターが含まれます。 この *エラーには* 、 *SdkError* 型のエラーが含まれているか、共有が成功した場合は null が含まれる場合があります。 結果 *には* 、共有が成功した場合は true の値を含め、共有が失敗した場合は null を指定できます。|
-|**appContentURL**| String | はい | ステージに共有される URL。|
+|**callback**| 文字列 | はい | コールバックには、エラーと結果という 2 つのパラメーターが含まれます。 この *エラーには* 、 *SdkError* 型のエラーが含まれているか、共有が成功した場合は null が含まれる場合があります。 結果 *には* 、共有が成功した場合は true の値を含め、共有が失敗した場合は null を指定できます。|
+|**appContentURL**| 文字列 | はい | ステージに共有される URL。|
 
 ### <a name="example"></a>例
 
@@ -472,7 +485,7 @@ microsoftTeams.meeting.shareAppContentToStage((err, result) => {
 
 次の表に、応答コードを示します。
 
-|応答コード|内容|
+|応答コード|説明|
 |---|---|
 | **500** | 内部エラー。 |
 | **501** | API は現在のコンテキストではサポートされていません。|
@@ -488,7 +501,7 @@ API `getAppContentStageSharingState` を使用すると、会議ステージで�
 
 |値|型|必須|説明|
 |---|---|----|---|
-|**callback**| String | はい | コールバックには、エラーと結果という 2 つのパラメーターが含まれます。 エラー *には* 、エラーが発生した場合は *SdkError* 型のエラーが含まれるか、共有が成功した場合は null が含まれる場合があります。 結果 *には* 、正常に取得されたことを `AppContentStageSharingState` 示すオブジェクト、または取得に失敗したことを示す null を含められます。|
+|**callback**| 文字列 | はい | コールバックには、エラーと結果という 2 つのパラメーターが含まれます。 エラー *には* 、エラーが発生した場合は *SdkError* 型のエラーが含まれるか、共有が成功した場合は null が含まれる場合があります。 結果 *には* 、正常に取得されたことを `AppContentStageSharingState` 示すオブジェクト、または取得に失敗したことを示す null を含められます。|
 
 ### <a name="example"></a>例
 
@@ -512,7 +525,7 @@ API の JSON 応答本文は次 `getAppContentStageSharingState` の形式です
 
 次の表に、応答コードを示します。
 
-|応答コード|内容|
+|応答コード|説明|
 |---|---|
 | **500** | 内部エラー。 |
 | **501** | API は現在のコンテキストではサポートされていません。|
@@ -528,7 +541,7 @@ API `getAppContentStageSharingCapabilities` を使用すると、会議ステー
 
 |値|型|必須|説明|
 |---|---|----|---|
-|**callback**| String | はい | コールバックには、エラーと結果という 2 つのパラメーターが含まれます。 この *エラーには* 、 *SdkError* 型のエラーが含まれているか、共有が成功した場合は null が含まれる場合があります。 結果には、正常に取得されたことを `AppContentStageSharingState` 示すオブジェクト、または取得に失敗したことを示す null を含められます。|
+|**callback**| 文字列 | はい | コールバックには、エラーと結果という 2 つのパラメーターが含まれます。 この *エラーには* 、 *SdkError* 型のエラーが含まれているか、共有が成功した場合は null が含まれる場合があります。 結果には、正常に取得されたことを `AppContentStageSharingState` 示すオブジェクト、または取得に失敗したことを示す null を含められます。|
 
 ### <a name="example"></a>例
 
@@ -552,7 +565,7 @@ API の JSON 応答本文は次 `getAppContentStageSharingCapabilities` の形�
 
 次の表に、応答コードを示します。
 
-|応答コード|内容|
+|応答コード|説明|
 |---|---|
 | **500** | 内部エラー。 |
 | **1000** | アプリには、ステージへの共有を許可するアクセス許可が付与されていない。|
@@ -560,6 +573,8 @@ API の JSON 応答本文は次 `getAppContentStageSharingCapabilities` の形�
 ## <a name="get-real-time-teams-meeting-events-api"></a>会議イベント API をTeamsリアルタイムで取得する
 
 ユーザーはリアルタイムの会議イベントを受信できます。 アプリが会議に関連付けられるとすぐに、実際の会議の開始時刻と終了時刻がボットと共有されます。 会議の実際の開始時刻と終了時刻は、スケジュールされた開始時刻と終了時刻とは異なります。 会議の詳細 API は、スケジュールされた開始時刻と終了時刻を提供します。 イベントは、実際の開始時刻と終了時刻を提供します。
+
+ボット SDK で使用できるオブジェクト `TurnContext` に精通している必要があります。 オブジェクト `Activity` には、 `TurnContext` 実際の開始時刻と終了時刻を含むペイロードが含まれます。 リアルタイム会議イベントでは、会議プラットフォームから登録されたボット ID がTeamsされます。 ボットは、マニフェストに追加することで、会議の開始イベントまたは終了イベントを自動的 `ChannelMeeting.ReadBasic.Group` に受信できます。
 
 ### <a name="prerequisite"></a>前提条件
 

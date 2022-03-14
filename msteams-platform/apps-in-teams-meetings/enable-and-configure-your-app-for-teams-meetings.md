@@ -4,16 +4,28 @@ author: surbhigupta
 description: Teams 会議やさまざまな会議シナリオ用のアプリの有効化と構成、アプリ マニフェストの更新、会議内ダイアログ、共有会議ステージ、会議サイドパネルなどの機能の構成
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 99467135f75f46d89b565c4d6a6e4948ab905d7b
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 0211cb1458b13a0727fce9915d1a50d227ed1a53
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398863"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63464360"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>会議のアプリを有効にしてTeamsする
 
 すべてのチームは、タスクのコミュニケーションと共同作業の異なる方法を持っています。 これらの異なるタスクを実現するには、会議Teamsをカスタマイズします。 アプリを会議にTeamsし、アプリ マニフェスト内の会議スコープで使用できるアプリを構成します。
+
+## <a name="prerequisites"></a>必須条件
+
+会議のTeamsを使用すると、会議のライフサイクル全体にわたってアプリの機能を拡張できます。 会議のアプリを使用するTeams、次の前提条件を満たす必要があります。
+
+* アプリを開発するTeamsします。 アプリの開発方法の詳細については、「Teams開発[」Teams参照してください](../overview.md)。
+
+* groupchat スコープで構成可能なタブをサポートするアプリを使用します。 詳細については、「グループ チャットスコープ [」と「グループ](../resources/schema/manifest-schema.md#configurabletabs) [タブの作成」を参照してください](../build-your-first-app/build-channel-tab.md)。
+
+* 会議前および[会議Teamsの](../tabs/design/tabs.md)一般的なタブ設計ガイドラインに従います。 会議中のエクスペリエンスについては、会議 [中のタブ](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) デザインガイドラインと会議内ダイアログの設計ガイドライン [を参照してください](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)。
+
+* アプリをリアルタイムで更新するには、会議のイベント アクティビティに基づいてアプリを最新の情報に更新する必要があります。 これらのイベントは、会議のライフサイクル全体にわたって、会議内のダイアログ ボックスや他のステージ内に含めできます。 [会議内] ダイアログ ボックスについては、「会議内 `completionBotId` 通知ペイロードの [パラメーター」を参照してください](API-references.md#send-an-in-meeting-notification)。
 
 ## <a name="enable-your-app-for-teams-meetings"></a>会議でアプリをTeamsする
 
@@ -54,7 +66,11 @@ ms.locfileid: "63398863"
 
 ### <a name="context-property"></a>Context プロパティ
 
-プロパティ `context` は、ユーザーがアプリを呼び出す場所に応じて、ユーザーが会議でアプリを呼び出す際に表示する必要がある内容を決定します。 タブとプロパティ `context` を `scopes` 使用すると、アプリを表示する必要がある場所を特定できます。 スコープ内のタブ `team` には `groupchat` 、複数のコンテキストを指定できます。 値のすべてまたは一部を `context` 使用できるプロパティの値を次に示します。
+プロパティ `context` は、ユーザーがアプリを呼び出す場所に応じて、ユーザーが会議でアプリを呼び出す際に表示する必要がある内容を決定します。 タブとプロパティ `context` を `scopes` 使用すると、アプリを表示する必要がある場所を特定できます。 スコープ内のタブ `team` には `groupchat` 、複数のコンテキストを指定できます。
+
+会議前 `groupchat` および会議後のチャットでアプリを有効にするスコープをサポートします。 会議前アプリエクスペリエンスを使用すると、会議アプリを検索して追加し、会議前のタスクを実行できます。 会議後のアプリ エクスペリエンスを使用すると、アンケートのアンケート結果や料金など、会議の結果を表示できます。
+
+ 値のすべてまたは一部を `context` 使用できるプロパティの値を次に示します。
 
 |値|説明|
 |---|---|
@@ -189,7 +205,7 @@ API を使用して要求`userContext`をルーティングするには、「SDK
 * ステップ バイ [ステップ ガイドに従って](../sbs-meetings-stage-view.yml)、会議の会議で会議ステージ ビュー Teamsします。
 * ステップ バイ [ステップ ガイドに従って](../sbs-meeting-content-bubble.yml)、会議で会議コンテンツバブルを生成Teamsします。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [会議アプリ API リファレンス](API-references.md)

@@ -4,12 +4,12 @@ description: 開発者向けドキュメント Microsoft Teams 用語集
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams 開発者定義
-ms.openlocfilehash: eab4779a862aa9a3e5183d52977fa012b1fc254f
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: dc29c40cfa79f267e2fde866974badc97d1900b7
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452747"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63466563"
 ---
 # <a name="glossary"></a>用語集
 
@@ -124,8 +124,8 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 | [会議ステージ](../sbs-meetings-stage-view.yml) | 会議拡張機能アプリの機能。 会議中にすべての参加者がアクセスできる共有スペースです。 これは、参加者がリアルタイムでアプリ コンテンツと対話して共同作業するのに役立ちます。 <br>**関連情報**: [ステージ ビュー](#s) |
 | [メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md) | メッセージング拡張機能は、アプリのコンテンツを挿入したり、メッセージを操作したりするためのショートカットです。会話から離れることなく、メッセージング拡張機能を使用できます。 <br>**関連情報**: [検索コマンド](#s); [アクション コマンド](#a) |
 | [会議の拡張機能](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | ホワイトボード、ダッシュボードなど、会議のライフサイクル中に生産性を高めるために使用するように設計されたアプリ。 |
-| [Microsoft 365 アカウント](../toolkit/accounts.md#microsoft-365-account) | Microsoft 365 アカウントには、25 のユーザー ライセンスを含めることができますが、開発目的のみの使用となります。 |
-| [Microsoft 365 開発者プログラム](../toolkit/accounts.md#join-microsoft-365-developer-program) | Microsoft 365 開発者プログラムは、Microsoft 365 を拡張するアプリの構築に役立ちます。 |
+| [Microsoft 365 アカウント](../toolkit/accounts.md#microsoft-365-developer-account-types) | Microsoft 365 アカウントには、25 のユーザー ライセンスを含めることができますが、開発目的のみの使用となります。 |
+| [Microsoft 365 開発者プログラム](../toolkit/accounts.md)| Microsoft 365 開発者プログラムは、Microsoft 365 を拡張するアプリの構築に役立ちます。 |
 | [Microsoft Graph Explorer](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | Microsoft 365 のデータとインテリジェンスへのゲートウェイ。Microsoft 365、Windows 10、および Enterprise Mobility + Security のデータにアクセスできる統合されたプログラミング モデルが用意されています。 |
 | [Microsoft Teams](../overview.md) | Microsoft Teams は、チームがリモートで共同作業を行うのに役立つグループ コラボレーション ソフトウェアです。 |
 | [Microsoft Teams プラットフォーム](../concepts/app-fundamentals-overview.md) | Microsoft Teams 開発者プラットフォームを使用すると、開発者は独自のアプリやサービスを Teams と簡単に統合できます。 |
