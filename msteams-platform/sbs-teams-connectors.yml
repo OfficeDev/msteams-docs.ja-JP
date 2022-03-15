@@ -1,0 +1,45 @@
+### YamlMime:Tutorial
+title: ビルド Teams コネクタ
+metadata:
+  title: ビルド Teams コネクタ
+  description: このチュートリアルでは、コネクタのセットアップについて説明Teams。
+  audience: Developer
+  level: Beginner
+  ms.date: 02/14/2022
+  ms.topic: interactive-tutorial
+  nextTutorialHref: webhooks-and-connectors/how-to/connectors-creating.md
+  nextTutorialTitle: Webhooks と Connectors の詳細
+  ms.custom: mvc
+  ms.localizationpriority: none
+  ms.openlocfilehash: 52c73c6b7574eb592b89ae1f670ca50b192c9a6b
+  ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 03/14/2022
+  ms.locfileid: "63493389"
+items:
+- durationInMinutes: 1
+  content: "Microsoft Teamsは、Model-View-Controller (MVC) サンプル タスク管理アプリケーションです。 アプリケーションは、Web アプリケーション テンプレート ASP.NET 使用して生成されます。 ほとんどのコードは、基本的な MVC 構成またはタスク管理システムに関連しています。 既存のコネクタコネクタをOffice 365したり、新しいコネクタをビルドしたりTeams。\n\n**コネクタ コードの種類**\n\n  * **ConnectorController.cs**: アクションの設定と保存\n  * **TaskController.cs**: アクションの作成と更新\n\n**コネクタの主Microsoft Teams機能**\n\n  * 実際のタスク管理システムをシミュレートします。\n  * ユーザーがタスクを作成および表示できます。\n  * コンテンツをランダムに生成します。 \n  * チャネルに送信する通知Microsoft Teamsします。 \n\nこのステップ バイ ステップ ガイドは、コネクタを作成してテストするのに役立Microsoft Teams。 次の出力が表示されます。\n   \n:::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/mobile.png\" alt-text=\"概要画像\" border=\"true\":::\n   \n"
+- title: 前提条件
+  durationInMinutes: 1
+  content: "次のツールをインストールし、開発環境をセットアップしてください。 \n\n* [Microsoft Teams](https://teams.microsoft.com/)アカウントを使用する\n* [最新バージョンのVisual Studio](https://visualstudio.microsoft.com/downloads/)\n* [ngrok の最新バージョン](https://ngrok.com/download) (開発ボックス テスト用のみ) または同等のトンネリング ソリューション\n\n  > [!NOTE]\n  > ngrok をダウンロードしたら、サインアップして [authtoken をインストールします](https://ngrok.com/download)。\n"
+- title: ローカル環境のセットアップ
+  durationInMinutes: 1
+  content: "\n1. [サンプル[Microsoft Teams開きます](https://github.com/OfficeDev/Microsoft-Teams-Samples)。\n1. [ **コード] を選択します**。\n1. ドロップダウン メニューから、[デスクトップで開く] **をGitHubします**。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/clone repository.png\" alt-text=\"リポジトリの複製\" border=\"true\":::\n\n1. [ **複製] を選択します**。 \n"
+- title: 開発者向けプレビューを有効にする
+  durationInMinutes: 1
+  content: "\n1. テナントの管理コンソールでアプリのアップロードを有効にします。\n    1. 管理者資格情報を[使用Microsoft 365 管理センター](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/)サインインします。\n    1. 左側のパネルで、[すべて表示] **を選択します**。\n    1. [Teams] **を選択します**。\n\n       :::image type=\"content\" source=\"./assets/images/meeting-token-generator/meeting-token-generator-admincenter.png\" alt-text=\"管理センター メニュー\" border=\"true\":::\n\n1.  左側のパネルで、[アプリ] **をTeamsします**。\n   \n1.  [セットアップ **ポリシー] を選択します**。\n\n       :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-setuppolicies.png\" alt-text=\"セットアップ ポリシー\" border=\"true\":::\n\n1.  [グローバル **] を選択します**。\n\n      ![グローバル](~/assets/images/sbs-connector/Global.png)\n\n1.   カスタム **アプリアップロードオンの位置** に **切り替** える。\n\n      :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn.png\" alt-text=\"トグル オン\" border=\"true\":::\n\n1.   **[保存]** を選択します。 \n   \n      テスト テナントは、カスタム アプリのサイドローディングを許可できます。\n\n      > [!TIP]\n      > サイドローディングはアクティブになるのに時間がかかる。\n\n1.   [次へ] **Microsoft Teams**。\n\n1.   インターフェイスの右上隅から、Teamsを選択します`...`。\n\n1.   **[バージョン情報]** を選びます。 \n\n1.   [開発者 **プレビュー] を選択します**。\n\n      :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/meeting-token-generator-devpreview.png\" alt-text=\"開発者向けプレビュー\" border=\"true\":::\n\n1.   [開発者 **プレビューに切り替える] を選択します**。\n"
+- title: コネクタを構成する
+  durationInMinutes: 1
+  content: "\n1. 複製された **リポジトリの TeamsToDoAppconnector.sln** に移動します。\n\n   ![sln パス](~/assets/images/sbs-connector/sln.png)\n\n2. ngrok または Command prompt を使用して、ローカルで実行中の Web サーバーのパブリックに利用可能な HTTPS エンドポイントへのトンネルを作成します。 ngrok で次のコマンドを実行します。\n\n    ```bash\n    ngrok http -host-header=localhost 3978\n    ``` \n   > [!TIP]\n   > 問題が発生 **ERR_NGROK_4018**、コマンド プロンプトに表示される手順に従って、ngrok にサインアップして認証します。 `ngrok http -host-header=localhost 3978` コマンドを実行します。\n\n   ![ngrok パス](~/assets/images/sbs-connector/ngrok1.png)\n\n3. コネクタ開発者 [ポータルに移動します](https://outlook.office.com/connectors/publish)。\n4. **[新しいコネクタ]** を選択します。\n \n   ![新しいコネクタの追加](~/assets/images/sbs-connector/connector.png)\n  \n5. 新しいコネクタを登録するには、次の詳細を入力します。\n\n   * **コネクタ名**\n   * **ロゴ**\n   * **アプリの簡単な説明 (10 単語以下)**\n   * **Connector の動作の詳細な説明 (3 ~ 5 文)**\n   * **会社の Web サイト**\n   * **コネクタの** 構成ページ `https://[BASE_URI]/connector/setup`\n   * **有効なドメイン**`https Base URL`\n   * コネクタ カード **でアクション** を有効にするには、[はい] を選択します。\n   * **アクション URL**`https://[BASE_URI]/Task/Update`\n   * [ **アプリ開発者契約の条項に同意する] を選択します**\n   * **[保存]** を選びます。\n\n   ![基本的な詳細](~/assets/images/sbs-connector/basicdetails.png)\n\n   新しいコネクタの登録に成功しました。 ウィンドウに登録済みのコネクタ ID が表示されます。\n\n   ![出力画面](~/assets/images/sbs-connector/output.png)\n  \n   > [!TIP]\n   > 将来の参照のためにコネクタ ID を保存します。\n\n6. **TeamsToDoAppConnector フォルダーから TeamsToDoAppConnector.csproj** **ファイルを選択します**。\n\n   ![ナビゲーション パス](~/assets/images/sbs-connector/web.png) \n\n7. [開く] Visual Studio。 \n\n8. 変数をに置 `configuration.appSettings.BaseUrl` き換える `ngrok https forwarding url`.\n   \n   ![設定マニフェスト](~/assets/images/sbs-connector/manifest.png) \n\n9. **F5 キーを押** してプロジェクトを実行します。\n   Web ページが開きます。 \n\n   ![ローカル ホスト](~\\assets\\images/sbs-connector/local-host.png)    \n"
+- title: テスト コネクタ (Microsoft Teams
+  durationInMinutes: 5
+  content: "\n1. 複製されたリポジトリで、 **TeamsToDoAppConnector の csharp > TeamsAppPackages >移動します**。\n\n1. マニフェスト フォルダーに.zipファイルを含むフォルダーを **作成** します。 \n   * manifest.json\n   * icon-outline.png\n   * icon-color.png\n\n   ![マニフェストの場所](~/assets/images/sbs-connector/zip.png)\n\n1. [次へ] **Microsoft Teams**。\n1. 左側のパネルで、[ **アプリのストア管理** > **] を選択します**。\n\n   ![アプリの管理](~/assets/images/sbs-connector/manageapp.png)\n\n1. **[カスタム アプリをアップロードする]** を選択します。\n\n   ![アップロードアプリを作成する](~/assets/images/sbs-connector/upload.png)\n  \n1. [ **開く** ] を選択して.zip作成したファイルを **アップロード** します。\n\n   ![manifest](~/assets/images/sbs-connector/open.png)\n\n1. [チーム **に追加] を選択します**。\n\n   ![アプリを追加する](~/assets/images/sbs-connector/addtoteam.png)\n\n1. リストからチーム名またはチャネル名を選択します。\n\n   ![チャネルの選択](~/assets/images/sbs-connector/channel.png)\n\n1. [コネクタ **のセットアップ] を選択します**。\n\n1. 左側のパネルで、検索 **バー Teams ToDo 通知** コネクタを検索し、[構成] を選択 **します**。\n\n   ![通知の構成](~/assets/images/sbs-connector/configure.png)\n\n1. 登録ページで **[作成] または** **[更新]** を選択し、[保存] を **選択します**。\n\n   ![select](~/assets/images/sbs-connector/create.png)\n\n   構成後、タスク マネージャー ポータルへのリンクを含む通知を **チャネルで確認できます**。\n\n   ![通知メッセージ](~/assets/images/sbs-connector/notification.png)\n\n12. [タスク マネージャー **ポータル] に移動します**。\n\n    ![タスク マネージャー ポータル](~/assets/images/sbs-connector/taskportal.png)\n\n13. [新 **しい作成] を選択します**。\n   \n    ![新しいタスクの作成](~/assets/images/sbs-connector/tasks.png)\n   \n14. 新しいタスクの詳細を入力します。\n\n    * **タイトル**\n    * **説明**\n    * **[割り当て]**\n\n    ![タスクの詳細](~/assets/images/sbs-connector/details.png)\n\n15. **[保存]** を選択します。 \n  \n    メッセージ カードが登録済みのチャネルTeamsされます\n   \n    ![メッセージ](~/assets/images/sbs-connector/messagecard.png)\n\n    > [!TIP]\n    > メッセージ カードで使用可能な操作可能なボタンを試してみてください。\n"
+- title: 完全なチャレンジ
+  durationInMinutes: 1
+  content: >
+    このようなことを思い付い出しましたか?
+
+
+    :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/mobile.png" alt-text="最終出力" border="true":::
+- content: このチュートリアルを完了して、新しいコネクタの使用Microsoft Teams **完了しました**。

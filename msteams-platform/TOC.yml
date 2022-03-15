@@ -86,7 +86,7 @@
       items:
         - name: Teams ツールキットの概要
           href: toolkit/teams-toolkit-fundamentals.md
-        - name: 新しいプロジェクトを作成する
+        - name: Teams アプリの新規作成
           href: toolkit/create-new-project.md
         - name: Teams アプリを構築するためのアカウントを準備する
           href: toolkit/accounts.md
@@ -283,8 +283,6 @@
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
     - name: 統合された会議アプリ
       href: apps-in-teams-meetings/meeting-app-extensibility.md
-    - name: Teams 会議でのアプリの前提条件
-      href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
     - name: 会議用アプリを有効にして構成する
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
     - name: 会議アプリ API リファレンス

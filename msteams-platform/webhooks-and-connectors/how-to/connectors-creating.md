@@ -6,12 +6,12 @@ keywords: Teams Office365 コネクタ
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 9914f721e155f01a05813441587d0d1ea71e09ae
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: bc3a2ff1dc039c04e7ba809b6b63dcdcb62a4e66
+ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399199"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63492982"
 ---
 # <a name="create-office-365-connectors"></a>Office 365 コネクタの作成
 
@@ -238,6 +238,8 @@ PowerShell モジュール交換の詳細については、「 [Set-Organization
 
 アクションが正しく `HttpPOST` 動作しているのを確認するには [、コネクタにメッセージを送信します](~/webhooks-and-connectors/how-to/connectors-using.md)。
 
+手順ガイド[に従って](../../sbs-teams-connectors.yml)、コネクタを作成してテストMicrosoft Teams。
+
 ## <a name="publish-connectors-for-the-organization"></a>組織の発行コネクタ
 
 コネクタを組織内のユーザーだけが利用できる場合は、カスタム コネクタ アプリを組織のアプリ カタログ [にアップロードできます](~/concepts/deploy-and-publish/apps-publish.md)。
@@ -272,6 +274,10 @@ PowerShell モジュール交換の詳細については、「 [Set-Organization
 |----------------|------------------|--------|----------------|
 | コネクタ | サンプル Office 365 チャネルへの通知を生成するコネクタTeamsします。| [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
 | 汎用コネクタのサンプル |Webhook をサポートする任意のシステム用にカスタマイズしやすい汎用コネクタのサンプル コード。| | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
+
+## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
+
+ステップ バイ [ステップ ガイドに従って](../../sbs-teams-connectors.yml)、コネクタをビルドしてテストTeams。
 
 ## <a name="see-also"></a>関連項目
 

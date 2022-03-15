@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: リソース グループ ボット登録 Azure エミュレーター ボット マニフェスト
-ms.openlocfilehash: 0151cc8fd756ee7ed7dbaecaef5739690f7f9302
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 8b624b36dca9a280ec35e062861a95513859c0c5
+ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399374"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63493032"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Teams ボットに認証を追加する
 
@@ -141,9 +141,10 @@ Azure Bot リソース登録は、Web サービスをボットとしてボット
     ![ボットのホーム ページ](~/assets/images/adaptive-cards/bot-home-page.png)
 
 1. [最近使ったリソース] セクションに一覧表示されているボット **を開** きます。
-1. 左側 **のウィンドウで** [チャネル] を選択し、[チャネル] **をTeams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-    ![チャネル Teams](~/assets/images/adaptive-cards/channel-teams.png)
+1. 左側 **のウィンドウで** [チャネル] を選択し、[チャネル] **をMicrosoft Teams**:::image type="icon" source="../../../assets/icons/teams-icon.png" border="false":::。
+
+   :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="チャネル Teams":::
 
 1. このチェック ボックスをオンにすると、利用規約に同意し、[同意する] を **選択します**。</br>
 
@@ -184,7 +185,7 @@ Azure Bot リソース登録は、Web サービスをボットとしてボット
    1. [ **クライアント シークレット] で**、[新しい&#x2795; **シークレット] を選択します**。
    1. このアプリ用に作成する必要がある可能性がある他のユーザーからこのシークレットを識別するための説明を *追加します* 。たとえば、このアプリのボット ID アプリTeams。
    1. [ **有効期限] を選択** に設定します。
-   1. [**追加**] を選択します。
+   1. **[追加]** を選択します。
    1. このページを離れる前に、 **シークレットを記録します**。 この値は、後でボットにアプリケーションを登録するときにクライアント シークレットAzure AD使用します。
 
 ### <a name="configure-the-identity-provider-connection-and-register-it-with-the-bot"></a>ID プロバイダー接続を構成し、ボットに登録する
@@ -477,7 +478,7 @@ Microsoft Teams完全にクラウドベースの製品である場合、HTTPS �
 > [!NOTE]
 > ngrok を停止して再起動すると、URL が変更されます。 プロジェクトで ngrok を使用するには、使用している機能に応じて、すべての URL 参照を更新する必要があります。
 
-## <a name="additional-information"></a>追加情報
+## <a name="additional-information"></a>ページの先頭へ
 
 ### <a name="teamsappmanifestmanifestjson"></a>TeamsAppManifest/manifest.json
 
