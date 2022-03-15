@@ -1,117 +1,135 @@
 ---
-title: アプリをビルドするためのアカウントTeamsする
+title: Teams アプリを構築するためのアカウントを準備する
 author: zyxiaoyuer
-description: アプリをビルドするためのアカウントTeamsする
-ms.author: zhany
-ms.localizationpriority: medium
+description: Teams アプリを構築するためのアカウントを準備する
+ms.author: surbhigupta
+ms.localizationpriority: high
 ms.topic: overview
-ms.date: 11/29/2021
-ms.openlocfilehash: 9dbfa97b892f2234b53eb42b5d5764b8f6fd6e93
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.date: 03/14/2022
+ms.openlocfilehash: 21de5611daacbc00630cd7fa4b2aa3704788ed5e
+ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452572"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63464315"
 ---
-# <a name="prepare-accounts-to-build-teams-apps"></a>アカウントを準備してアプリTeamsする
+# <a name="prepare-accounts-to-build-teams-apps"></a>Teams アプリを構築するためのアカウントを準備する
 
-アプリをTeamsするには、有効なサブスクリプションを持つアカウントMicrosoft 365少なくとも 1 つ必要です。 Azure でバックエンド リソースをホストする場合は、Azure アカウントが必要です。 Azure アカウントは、既存のアプリケーションが他のクラウド プロバイダーでホストされ、既存のアプリケーションを新しいプラットフォームに統合する場合Teamsです。
+Teams アプリを作成してアップロードするには、次のアカウントを準備する必要があります:
+
+* [有効なサブスクリプションのある Microsoft 365アカウント。](accounts.md#microsoft-365-account)
+* [Azure でバックエンド リソースをホストする Azure アカウント](accounts.md#azure-account-to-host-backend-resources)。
 
 ## <a name="microsoft-365-account"></a>Microsoft 365 アカウント
 
-有効なサブスクリプションを持つ既存Microsoft 365アカウントがない場合は、開発者プログラムに参加Microsoft 365[作成できます](https://developer.microsoft.com/microsoft-365/dev-program)。 開発者Microsoft 365には、Microsoft 365 E5サンドボックスを作成し、実稼働環境に依存しないソリューションを開発するために使用できる、開発者向けサブスクリプションが含まれています。
+Microsoft 365 アカウントを作成するには、Microsoft 365 開発者プログラム サブスクリプションにサインアップします。 サブスクリプションは 90 日間無料で、開発アクティビティに使用している限り、引き続き更新されます。
 
-## <a name="azure-account"></a>Azure アカウント
+Visual Studio Enterprise または Professional サブスクリプションをお持ちの場合は、両方のプログラムに無料の Microsoft 365 [開発者サブスクリプション](https://aka.ms/MyVisualStudioBenefits)が含まれています。 Visual Studio サブスクリプションがアクティブである限り、アクティブです。 詳細については、「[Microsoft 365 開発者サブスクリプション](https://developer.microsoft.com/microsoft-365/dev-program)」を参照してください。
 
-アプリ関連のリソースをホストする場合、または Azure 内のリソースにアクセスする場合は、Azure サブスクリプションが必要です。 開始する [前に無料アカウント](https://azure.microsoft.com/free/) を作成できます。
+### <a name="microsoft-365-developer-program"></a>Microsoft 365 開発者プログラム
 
-## <a name="join-microsoft-365-developer-program"></a>開発者Microsoft 365に参加する
+無料の Teams 開発者アカウントを取得するには、Microsoft 365 開発者プログラムに参加し、次の手順を実行します:
 
-ユーザーアカウントをお持ちMicrosoft 365場合は、開発者プログラムのサブスクリプションにMicrosoft 365[必要](https://developer.microsoft.com/microsoft-365/dev-program)があります。 サブスクリプションは 90 日間無料で、開発アクティビティに使用している限り更新を続行します。 ユーザーがサブスクリプションを持Visual Studio Enterprise場合Professional両方のプログラムには、無料の開発者サブスクリプションMicrosoft 365[含まれます](https://aka.ms/MyVisualStudioBenefits)。 サブスクリプションがアクティブである限りVisual Studioアクティブです。 詳細については、「開発者向けサブスクリプション[のMicrosoft 365参照してください](https://developer.microsoft.com/microsoft-365/dev-program)。
+1. [Microsoft 365 開発者プログラム](https://developer.microsoft.com/microsoft-365/dev-program)に移動します。
+2. [**今すぐ参加**] を選択します。
+3. [**E5 サブスクリプションのセットアップ**] を選択します。
+4. 管理者アカウントを設定します。
 
-1. 開発者プログラムの[Microsoft 365に移動します](https://developer.microsoft.com/microsoft-365/dev-program)。
-2. [今 **すぐ参加] を選択します**。
-3. [ **E5 サブスクリプションの設定] を選択します**。
-4. 管理者アカウントを設定します。 完了すると、次の画面が表示されます。
+   次の図は、サブスクリプションの完了後に表示されます。
 
-:::image type="content" source="./images/m365-developer-program.png" alt-text="プログラムを示Microsoft 365図":::
+    :::image type="content" source="./images/m365-developer-program.png" alt-text="Microsoft 365プログラムを示す図":::
 
-## <a name="accounts-for-microsoft-365-developer-program"></a>開発者プログラムMicrosoft 365アカウント
+### <a name="microsoft-365-developer-account-types"></a>Microsoft 365 開発者アカウントの種類
 
 次のいずれかの種類のアカウントを使用して、開発者プログラムにサインアップできます。
 
-* **個人用の Microsoft アカウント**
+- **個人使用の Microsoft アカウント**
 
-  Outlook、Messenger、OneDrive、MSN、Xbox Live、Microsoft 365 など、すべてのコンシューマー向け Microsoft 製品とクラウド サービスにアクセスできます。 Outlook.com メールボックスにサインアップすると、Microsoft アカウントが自動的に作成されます。 作成された Microsoft アカウントを使用して、コンシューマー関連の Microsoft クラウド サービスまたは Azure にアクセスできます。
+    Microsoft アカウントを使用すると、Outlook、Messenger、OneDrive、MSN、Xbox Live、Microsoft 365 などの Microsoft 製品とクラウド サービスにアクセスできます。 Outlook.com メールボックスにサインアップして、コンシューマー関連の Microsoft クラウド サービスまたは Azure にアクセスするために使用できるMicrosoft アカウントを作成できます。
 
-* **業務用の仕事用アカウント**
+- **ビジネス向け Microsoft ワーク アカウント**
 
-  Azure、azure、Microsoft Intune、またはクラウド サービスなど、すべての小規模、中、およびエンタープライズのビジネス レベルの Microsoft クラウド サービスMicrosoft 365。 これらのサービスの 1 つを組織としてサインアップすると、クラウドベースのディレクトリが Microsoft Azure Active Directory (Azure AD) に自動的にプロビジョニングされ、組織を表します。
+     このアカウントを使用すると、Azure、Microsoft Intune、Microsoft 365 など、すべての小規模、中規模、エンタープライズのビジネス レベルの Microsoft クラウド サービスにアクセスできます。 組織としてこれらのサービスのいずれかにサインアップすると、クラウドベースのディレクトリが組織を代表する Microsoft Azure Active Directory (Azure AD) に自動的にプロビジョニングされます。
 
-* **Visual Studio ID**
+- **Visual Studio ユーザー ID**
 
-  Visual Studio Professional サブスクリプションまたは Enterprise サブスクリプション用に作成できます。 Visual Studio ギャラリー内から開発者プログラムに参加して、Visual Studio サブスクライバーとして完全なメリットを得る場合に、このオプションを使用することをお勧めします。
+    Visual Studio Professional または Enterprise サブスクリプションを使用するために作成されたユーザー ID を使用して、Visual Studio ギャラリー内の開発者プログラムに参加し、Visual Studio サブスクライバーとして完全な利点を利用できます。
 
-## <a name="teams-customer-app-upload-or-sideload-permission"></a>Teamsアプリのアップロードまたはサイドロードのアクセス許可
+## <a name="azure-account-to-host-backend-resources"></a>バックエンド リソースをホストする Azure アカウント
+
+既存のアプリケーションが他のクラウド プロバイダーでホストされていて、Teams プラットフォームで既存のアプリケーションを統合する場合、Azure アカウントは省略可能です。
+
+**Visual Studio ID**
+
+アプリケーション関連のリソースをホストする場合、または Azure 内のリソースにアクセスする場合は、開始する前に[無料のアカウントを作成](https://azure.microsoft.com/free/)できます。 または、別のクラウド プロバイダーを使用してバックエンド リソースをホストするか、パブリック ドメインから使用できる場合は独自のサーバーでホストするかを選択できます。
+
+## <a name="teams-custom-app-upload-or-sideload-permission"></a>Teams カスタム アプリのアップロードまたはサイドロードのアクセス許可
 
 > [!IMPORTANT]
-> 開発中は、アプリを配布せずにアプリをTeamsする必要があります。 これはサイドローディング **と呼ばれる。**
+> アプリを作成したら、アプリを配布せずに Teams に読み込む必要があります。 このプロセスは **サイドローディング** と呼ばれます。
 
-次の一覧では、サイドローディング アプリのアクセス許可が有効かどうかを確認する手順を示します。 2 つの異なる方法は次のとおりです。
+   Visual Studio Code または Teams クライアントを使用して、サイドローディングアクセス許可が有効になっているかどうかを確認できます。
 
-* **Microsoft Visual studio コードを使用するには**
+* **Visual Studio Code を使用してサイドローディングアクセス許可を確認する**
 
-    1. [ファイル **Visual Studio Code] を開きます**。
-    1. 左側 **のTeams Toolkit** を選択します。
-    1. [**アカウント] を** 選択し、アカウントにMicrosoft 365します。
-    1. イメージに示すように、サイドローディングが有効 **になっている** オプションが表示されるかどうかを確認します。
+    1. **Visual Studio Code** を開きます。
+    1. 左側のウィンドウから [**Teams Toolkit**] を選択します。 オプションが表示できない場合は、Teams Toolkit 拡張機能がインストールされていることを確認します。
+    1. [**アカウント**] 選択し、Microsoft 365 アカウントにログインします。
+    1. 次の図に示すように、**サイドローディングが有効** なオプションを表示できるかどうかを確認します。
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="サイドローディングを有効にする":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="サイドローディングを有効にする" border="true":::
 
-* **アカウントをTeamsするには**
+* **Teams クライアントを使用してサイドローディングのアクセス許可を確認する**
 
-    1. [ファイル **Microsoft Teams] を開きます**。
-    2. 左側の **バーで [** アプリ] を選択します。
-    3. [アプリ **の発行] を選択します**。
+    1. **Microsoft Teams** を開きます。
+    2. 左側のパネルで [**アプリ**] を選択します。
+    3. [**アプリ の発行**] を選択します。
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/publish.png" alt-text="アプリを発行します。":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/publish.png" alt-text="アプリを発行します。" border="true":::
 
-    4. イメージに示すように、カスタム アプリアップロード **オプションが表示** されるかどうかを確認します。
+    4. 次の図に示すように、[**カスタム アプリのアップロード**] オプションが表示されるかどうかを確認します。
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="アップロードアプリを作成する":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="カスタム アプリをアップロード" border="true":::
 
-カスタム アプリ オプション **にアップロード表示** できない場合は、サイドローディングのアクセス許可を持たなかった場合に表示されます。 サイドローディングのアクセス許可がない場合は、ローカルまたはリモートのデバッグを実行することはできません。 そのため、アプリのデバッグを行う前に、アカウントのサイドローディング権限を取得することがTeamsです。 テナントの管理者である場合は、テナントまたは組織のサイドローディング設定を開きます。 管理者ではない場合は、テナント管理者にアクセス許可を問い合わせください。
+        [**カスタム アプリのアップロード**] オプションを表示できない場合は、サイドローディングに必要なアクセス許可がないということです。
+        * テナント管理者の場合は、Teams 管理センターでテナントまたは組織のサイドローディング設定を有効にします。
+        * テナント管理者でない場合は、テナント管理者に問い合わせ、サイドローディングを有効にする必要があります。
 
-## <a name="enable-custom-app-uploading-for-your-organization"></a>組織のカスタム アプリのアップロードを有効にする
+### <a name="upload-your-custom-app"></a>カスタム アプリをアップロードする
 
 > [!IMPORTANT]
 > 開発者テナントのカスタム アプリのアップロードまたはサイドローディングを有効にするには、テナントの管理者である必要があります。
 
-1. 管理者資格情報を[使用Microsoft 365 管理センター](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/)サインインします。
+**カスタム アプリをアップロードするには**
+
+1. 管理者の資格情報で [Microsoft 365 管理センター](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/)にサインインします。
 
 2. [**すべての** > **Teams の表示**]を選択します。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="すべて表示する":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="すべて表示" border="true":::
 
-> [!NOTE]
-> このオプション **を表示するには、最大で 24** **Teams** かかる場合があります。 カスタム アプリ[をテストおよび検証のためにTeams環境](/microsoftteams/upload-custom-apps)にアップロードできます。
+   > [!Note]
+   > **Teams** オプションが表示されるまで、**最大 24 時間** かかる場合があります。 テストと検証のために、[カスタム アプリを Teams 環境にアップロード](/microsoftteams/upload-custom-apps)することができます。
 
-3. [アプリ **のTeams** >  **Setup PoliciesGlobal** > **] に移動します**。
+3. [**Teams アプリ**]  >  [**セット アップ ポリシー**] に移動します。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/3.png" alt-text="olicies を設定する":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/3.png" alt-text="ポリシーの設定":::
 
-4. カスタム アップロードを On の位置に **切り替** える。
+4. [**カスタム アプリのアップロード**] を "**オン**" に切り替えます。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/4.png" alt-text="トグル":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/4.png" alt-text="切り替え":::
 
 5. **[保存]** を選択します。
 
-> [!Note]
-> サイドローディングがアクティブになるには、最大 24 時間かかる場合があります。 その間、テナントの **アップロードを使用して** アプリをテストできます。 アプリのパッケージ .zipをアップロードするには、「カスタム アプリのアップロード [」を参照してください](/microsoftteams/teams-app-setup-policies)。
+   > [!Note]
+   > データが反映されるまでに最大 24 時間かかることがあります。 その間、[**テナントのアップロード**] を使用してアプリをテストできます。 アプリの .zip パッケージ ファイルをアップロードするには、「[カスタム アプリのアップロード](/microsoftteams/teams-app-setup-policies)」を参照してください。
 
-詳細については、「カスタム アプリ ポリシーと設定を管理する」を参照し、Teamsでアプリ[セットアップ](/microsoftteams/teams-custom-app-policies-and-settings) ポリシー[を](/microsoftteams/teams-app-setup-policies)管理Teams。
+詳細については、「[Teams でカスタム アプリ ポリシーと設定を管理する](/microsoftteams/teams-custom-app-policies-and-settings)」および「[Teams でアプリのセットアップ ポリシーを管理する](/microsoftteams/teams-app-setup-policies)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-* [新しいプロジェクトをTeamsする](create-new-project.md)
+* [Teams Toolkit を使用して新しい Teams アプリを作成する](create-new-project.md)
 * [クラウド リソースをプロビジョニングする](provision.md)
+* [Teams アプリをクラウドに展開する](deploy.md)
+* [Teams アプリの発行](TeamsFx-collaboration.md)
+* [複数の環境を管理する](TeamsFx-multi-env.md)
