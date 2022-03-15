@@ -4,13 +4,13 @@ description: Teams ストア (AppSource) に提出されるすべてのアプリ
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.localizationpriority: medium
-ms.openlocfilehash: 6326c8ff28857ab75436e61de5b8783842642acb
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.localizationpriority: high
+ms.openlocfilehash: 387731176778eb17f7c6322778e9a9bb48b640f1
+ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399136"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63501929"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams ストア検証ガイドライン
 
