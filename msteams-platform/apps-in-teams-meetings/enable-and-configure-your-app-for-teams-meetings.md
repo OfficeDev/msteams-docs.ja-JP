@@ -4,18 +4,18 @@ author: surbhigupta
 description: Teams 会議やさまざまな会議シナリオ用のアプリの有効化と構成、アプリ マニフェストの更新、会議内ダイアログ、共有会議ステージ、会議サイドパネルなどの機能の構成
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 0211cb1458b13a0727fce9915d1a50d227ed1a53
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.openlocfilehash: eaa3e17c2045383307949f031d20723f3d420510
+ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63464360"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63558839"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>会議のアプリを有効にしてTeamsする
 
 すべてのチームは、タスクのコミュニケーションと共同作業の異なる方法を持っています。 これらの異なるタスクを実現するには、会議Teamsをカスタマイズします。 アプリを会議にTeamsし、アプリ マニフェスト内の会議スコープで使用できるアプリを構成します。
 
-## <a name="prerequisites"></a>必須条件
+## <a name="prerequisites"></a>前提条件
 
 会議のTeamsを使用すると、会議のライフサイクル全体にわたってアプリの機能を拡張できます。 会議のアプリを使用するTeams、次の前提条件を満たす必要があります。
 
@@ -183,8 +183,6 @@ API を使用して要求`userContext`をルーティングするには、「SDK
 <img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
 
 アプリの特定の部分をステージ間で共有するには、クライアント SDK ライブラリで関連する API をTeamsする必要があります。 詳細については、「API リファレンス [」を参照してください](API-references.md)。
-
-アプリで匿名ユーザーをサポート`from.id``from`する場合、最初の呼び出し要求ペイロードは、要求メタデータではなく、オブジェクト内の要求メタデータに依存する`from.aadObjectId`必要があります。 `from.id`はユーザー ID であり`from.aadObjectId`、ユーザー Azure AD ID です。 詳細については、「タブでタスク [モジュールを使用する」を参照し](../task-modules-and-cards/task-modules/task-modules-tabs.md)[、タスク モジュールを作成して送信します](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request)。
 
 ### <a name="after-a-meeting"></a>会議後
 
