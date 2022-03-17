@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: bb05bc85c4b070870a88d8c71cb80e4d7ef4390c
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: d93e27c7180938a7329eec94ff54a9988b851430
+ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398723"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63501964"
 ---
 # <a name="the-teams-solution"></a>Teams ソリューション
 
@@ -74,7 +74,7 @@ Teams アプリの設計から構築、配布まで、さまざまなツール�
 1. Microsoft Graph を使用して、さらに Teams の機能と M365 データを追加して、機能を拡張します。
 1. サンプル ユーザー データを使用して開発者テナントでアプリをテストします。
 1. アプリを Azure にデプロイします。
-1. 開発者ポータルを使用してアプリを管理し、ストアに公開します。
+1. 開発者ポータルを使用してアプリを管理し、ストアに公開します。 SaaS オファー、アプリ内購入などのオプションを使用してアプリを収益化します。
 
 ## <a name="next-step"></a>次の手順
 
@@ -161,6 +161,18 @@ Teams アプリの設計から構築、配布まで、さまざまなツール�
 
         > [!div class="nextstepaction"]
         > [アプリを配布する](~/concepts/deploy-and-publish/apps-publish-overview.md)
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
+        **アプリを収益化する**
+    :::column-end:::
+    :::column span="2":::
+        Teams ストアは、SaaS オファーやアプリ内購入などのアプリの収益化オプションを提供します。 Teams アプリに最適な収益化オプションを選択してください。
+
+        > [!div class="nextstepaction"]
+        > [アプリを収益化する](concepts/deploy-and-publish/appsource/prepare/monetize-overview.md)
     :::column-end:::
 :::row-end:::
 

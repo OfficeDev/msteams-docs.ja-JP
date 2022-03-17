@@ -42,6 +42,8 @@
       href: concepts/design/planning-checklist.md
     - name: Teams モバイルの応答タブを計画する
       href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
+    - name: アプリの収益化を計画する
+      href: concepts/design/plan-to-monetize.md
 - name: アプリをデザインする
   items:
     - name: 概要
@@ -473,16 +475,16 @@
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
         - name: Microsoft Teams ストアのランク付けパラメーター
           href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
-    - name: アプリを収益化する
-      items:
-        - name: 概要
-          href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
-        - name: アプリに SaaS オファーを含める
-          href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-        - name: アプリ内購入
-          href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
-        - name: 収益化されたアプリのテスト プレビュー
-          href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
+- name: アプリを収益化する
+  items:
+    - name: 概要
+      href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
+    - name: アプリに SaaS オファーを含める
+      href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+    - name: アプリ内購入
+      href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
+    - name: 収益化されたアプリのテスト プレビュー
+      href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: アプリ マニフェスト
   items:
     - name: アプリ マニフェストのスキーマ

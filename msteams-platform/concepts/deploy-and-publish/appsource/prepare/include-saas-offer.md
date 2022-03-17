@@ -1,149 +1,149 @@
 ---
 title: アプリに SaaS オファーを含める
-description: サブスクリプション プランを使用してアプリMicrosoft Teams収益化する方法について学習します。
+description: サブスクリプション プランを使用して Microsoft Teams アプリを収益化する方法について説明します。
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
-ms.localizationpriority: medium
-ms.openlocfilehash: 235d3eb7da5a3bfda61d06662e6cb21bd056f275
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 6828350ab09dede3022bb9cad61756eccc9988f0
+ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453559"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63501999"
 ---
-# <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>SaaS オファーをアプリにMicrosoft Teamsする
+# <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Microsoft Teams アプリに SaaS オファーを含める
 
 :::row:::
    :::column span="3":::
 
-取引可能なサービスとしてのソフトウェア (SaaS) オファーを使用すると、Teams ストアの登録情報からサブスクリプション プランを直接販売することで、Teams アプリを収益化できます。 たとえば、誰もがストアにアクセスできる無料アプリを持っているとします。 これで、より多くの機能が必要なユーザーに対して、プレミアムプランとエンタープライズ プランを提供できます。
+取引可能なサービスとしてのソフトウェア (SaaS) オファーを使用すると、Teams ストア登録情報からサブスクリプション プランを直接販売し、Teams アプリを収益化できます。 たとえば、ストアで誰でも入手できる無料アプリを持っているとします。 より多くの機能が必要なユーザーに対して、プレミアム プランとエンタープライズ プランを提供できます。
 
-アプリを収益化する方法の一般的な考え方を次に示します。
+アプリを収益化する方法の一般的な概念を次に示します。
 
-1. [SaaS プランを計画します](#plan-your-saas-offer)。
+1. [SaaS オファーを計画します](#plan-your-saas-offer)。
 
 1. [SaaS フルフィルメント API と統合します](#integrate-with-the-saas-fulfillment-apis)。
 
-1. [サブスクリプション管理用のランディング ページを作成します](#build-a-landing-page-for-subscription-management)。
+1. [サブスクリプション管理のためのランディング ページを作成します](#build-a-landing-page-for-subscription-management)。
 
 1. [SaaS オファーを作成します](#create-your-saas-offer)。
 
 1. [SaaS オファー用にアプリを構成します](#configure-your-app-for-the-saas-offer)。
 
-1. [アプリをアプリ ストアTeamsします](#publish-your-app)。
+1. [アプリを Teams ストアに公開します](#publish-your-app)。
 
    :::column-end:::
    :::column span="1":::
 
-:::image type="content" source="~/assets/images/saas-offer/saas-offer-diagram.png" alt-text="SaaS オファーをアプリに含める方法のプロセスを示Teams図。" border="false":::
+:::image type="content" source="~/assets/images/saas-offer/saas-offer-diagram.png" alt-text="Teams アプリに SaaS オファーを含める方法のプロセスを示す図。" border="false":::
 
    :::column-end:::
 :::row-end:::
 
-## <a name="plan-your-saas-offer"></a>SaaS プランを計画する
+## <a name="plan-your-saas-offer"></a>SaaS オファーの計画
 
-包括的なガイダンスについては、「 [Microsoft 商用市場向け SaaS プランを計画する方法」を参照してください](/azure/marketplace/plan-saas-offer)。
+包括的なガイダンスについては、「[コマーシャル マーケットプレース向けの SaaS オファーを計画する方法](/azure/marketplace/plan-saas-offer)」を参照してください。
 
-アプリを収益化する方法を計画Teams、次の点を考慮する必要があります。
+Teams アプリを収益化する方法を計画するとき、次の点を考慮します。
 
-* サブスクリプション モデルを決定します。 トランザクション可能な SaaS プランには、複数のサブスクリプション プランを含めできます。 誰でも利用できる公開サブスクリプション プランは最も一般的ですが、特定の顧客のみを対象にした場合もあります。 詳細については、「Microsoft 商用 [マーケットプレースのプライベート オファー」を参照してください](/azure/marketplace/private-offers)。
-* ユーザーが[アプリのサブスクリプション](/azure/marketplace/plan-saas-offer#listing-options) プランをアプリのサブスクリプション プランを直接購入する場合は、SaaS プランの [Microsoft による販売] リスト オプションについてTeamsしてください。
-* シングル [サインオンAzure Active Directory (SSO)](/azure/marketplace/azure-ad-saas) がサブスクリプションの購入と管理に役立つ方法について学習します。 (Microsoft Azure Active Directory (Azure AD) SSO は、SaaS Teamsアプリに必要です)。
-* お客様の SaaS オファーの使用をサポートするために必要なインフラストラクチャの管理と支払いは、お客様の責任で行う必要があります。
-* モバイルを計画する。 サードパーティのアプリ ストア ポリシーに違反しないようにするために、アプリには、ユーザーがモバイルでサブスクリプション プランを購入できるリンクを含めかねない。 ただし、アプリにサブスクリプション プランを必要とする機能が含けられているかどうかを示す場合は、引き続き指定できます。 詳細については、関連する商用マーケットプレース認定ポリシー [を参照してください](/legal/marketplace/certification-policies#114048-mobile-experience)。
+* サブスクリプション モデルを決定します。 取引可能な SaaS プランには、複数のサブスクリプション プランを含めることができます。 誰でも利用できるパブリック サブスクリプション プランが最も一般的ですが、特定の顧客のみを対象に特典を用意する必要がある場合もあります。 詳細については、「[Microsoft コマーシャル マーケットプレースでのプライベート オファー](/azure/marketplace/private-offers)」を参照してください。
+* SaaS オファーの「[*Microsoft を通じた販売*」リスト オプション](/azure/marketplace/plan-saas-offer#listing-options)についてお読みください。これは、ユーザーが Teams ストアを通して直接サブスクリプション プランを購入するようにする場合に必要です。
+* [Azure Active Directory シングル サインオン (SSO)](/azure/marketplace/azure-ad-saas) がユーザーのサブスクリプションの購入と管理に役立つ方法を参照します。 (Microsoft Azure Active Directory (Azure AD) SSO は、SaaS オファーを含む Teamsアプリに必要です。)
+* 顧客による SaaS オファーの使用をサポートするために必要なインフラストラクチャを管理し、支払う責任があることを理解します。
+* モバイル向けに計画します。 サードパーティのアプリ ストア ポリシーの違反を回避するため、ユーザーがモバイルでサブスクリプション プランを購入できるリンクをアプリに含めることはできません。 ただし、アプリにサブスクリプション プランを必要とする機能が含まれているかどうかを引き続き示すことはできます。 詳細については、「[コマーシャル マーケットプレース認定ポリシー](/legal/marketplace/certification-policies#114048-mobile-experience)」を参照してください。
 
 ## <a name="integrate-with-the-saas-fulfillment-apis"></a>SaaS フルフィルメント API との統合
 
-アプリを収益化するには、SaaS フルフィルメント API との統合Teams必要です。 これらの API は、ユーザーが購入したサブスクリプション プランのライフサイクルを管理するのに役立ちます。
+Teams アプリを収益化するには、SaaS フルフィルメント API との統合が必要です。 これらの API は、ユーザーが購入したサブスクリプション プランのライフサイクルを管理するのに役立ちます。
 
-詳細な手順と API リファレンスについては、 [SaaS フルフィルメント API のドキュメントを参照してください](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-apis)。 一般に、サブスクリプションの購入後に API を使用して次の手順を実装します。
+詳細な手順と API リファレンスについては、「[SaaS フルフィルメント API のドキュメント](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-apis)」を参照してください。 一般に、サブスクリプションが購入されたら、API を使用して次の手順を実装します。
 
-1. ランディング ページ [*への URL を介*](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-life-cycle#purchased-but-not-yet-activated-pendingfulfillmentstart) して購入識別トークンを受け取ります。
+1. ランディング ページへの URL を介して [*購入 ID トークンを受け取ります*](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-life-cycle#purchased-but-not-yet-activated-pendingfulfillmentstart)。
 
 1. トークンを使用してサブスクリプションの詳細を取得します。
 
-1. サブスクリプションがアクティブ化されている商用マーケットプレースに通知します。
+1. サブスクリプションがアクティブ化されたことをコマーシャル マーケットプレースに通知します。
 
 ### <a name="best-practices-for-implementing-subscription-management"></a>サブスクリプション管理を実装するためのベスト プラクティス
 
-* Teams アプリ向け取引可能な SaaS オファーでは、サブスクリプション プラン (ライセンス) は、グループまたは組織全体ではなく、個々のユーザーに割り当てる必要があります。
-* ユーザーにサブスクリプション プランが割り当てられている場合は、ボットまたはTeamsを通じて通知します。 メッセージングで、アプリをアプリに追加して開始する方法Teams含めておきます。
-* 複数の管理者のアイデアをサポートします。 つまり、同じ組織の複数のユーザーが独自のサブスクリプションを購入および管理できます。
+* Teams アプリの取引可能な SaaS オファーでは、サブスクリプション プラン (ライセンス) は、グループまたは組織全体ではなく、個々のユーザーに割り当てられる必要があります。
+* ユーザーにサブスクリプション プランが割り当てられたら、Teams ボットまたはメールで通知します。 メッセージには、Teams にアプリを追加して開始する方法を含めます。
+* 複数の管理者という概念をサポートします。 つまり、同じ組織の複数のユーザーが自分のサブスクリプションを購入および管理できます。
 
-## <a name="build-a-landing-page-for-subscription-management"></a>サブスクリプション管理用のランディング ページを作成する
+## <a name="build-a-landing-page-for-subscription-management"></a>サブスクリプション管理のためのランディング ページを作成する
 
-Teams ストアでアプリのサブスクリプション プランの購入が完了すると、商用マーケットプレースからランディング ページに移動し、サブスクリプションを管理できます (組織の特定のユーザーにライセンスを割り当てるなど)。
+Teams ストアでアプリのサブスクリプション プランの購入を完了すると、ユーザーはコマーシャル マーケットプレースからランディング ページに移動します。ここでは、サブスクリプションを管理できます (組織の特定のユーザーにライセンスを割り当てるなど)。
 
-詳細な手順については、「 [SaaS オファーのランディング ページを作成する」を参照してください](/azure/marketplace/azure-ad-transactable-saas-landing-page)。
+詳細な手順については、「[SaaS オファーのランディング ページを作成する](/azure/marketplace/azure-ad-transactable-saas-landing-page)」を参照してください。
 
 ### <a name="best-practices-for-landing-pages"></a>ランディング ページのベスト プラクティス
 
-収益化するアプリのランディング ページを構築する際には、次Teams方法を検討してください。 エンド ユーザーの購入エクスペリエンスでランディング ページ [の例を参照してください](#end-user-purchasing-experience)。
+収益化する Teams アプリのランディング ページを作成するとき、次の方法を検討してください。 「[エンドユーザーの購入エクスペリエンス](#end-user-purchasing-experience)」でランディング ページの例を参照してください。
 
-* ユーザーは、サブスクリプションの購入に使用した資格情報と同Azure ADランディング ページにログインできる必要があります。 詳細については、「商用マーケットAzure AD SaaS の販売と取引可能な [SaaS オファー」を参照してください](/azure/marketplace/azure-ad-saas)。
-* ユーザーがランディング ページで次の操作を実行できます。 ユーザーの役割とアクセス許可に適した機能を検討することを忘れないでください (たとえば、サブスクリプション管理者だけがユーザーを検索することを許可する場合があります)。
-  * 電子メールまたは別の形式の ID を使用して、組織のユーザーを検索します。
-  * リストでライセンスを割り当て可能なユーザーを確認します。
+* ユーザーが、サブスクリプションの購入に使用したものと同じ Azure AD 資格情報を使用してランディング ページにログインできるようにする必要があります。 詳細については、「[コマーシャル マーケットプレースにおける Azure AD と取引可能な SaaS オファー](/azure/marketplace/azure-ad-saas)」を参照してください。
+* ユーザーがランディング ページで次の操作を実行できるようにします。 操作がユーザーの役割とアクセス許可に適しているかどうかを必ず検討します (たとえば、ユーザーの検索はサブスクリプション管理者のみに許可することにするかもしれません)。
+  * メールまたは別の形式の ID を使用して、組織のユーザーを検索する。
+  * ライセンスを割り当てることのできるユーザーをリストで確認する。
   * ライセンスを 1 人または複数のユーザーに同時に割り当てる。
-  * 異なる種類のライセンスを割り当て、管理します (使用可能な場合)。
-  * ライセンスが既に別のユーザーに割り当てられているか検証します。
-  * サブスクリプションをキャンセルします。
+  * 異なる種類のライセンスを割り当て、管理する (使用可能な場合)。
+  * ライセンスが既に別のユーザーに割り当てられているかどうかを検証する。
+  * サブスクリプションをキャンセルする。
 * アプリの使い方の概要を説明します。
-* FAQ、ナレッジ ベース、連絡先メールなど、サポートを受け取る方法を追加します。
-* サブスクライバーがランディング ページに戻りやすくするリンクを提供します。 たとえば、アプリの [概要] タブにこのリンク **を含** める。
+* FAQ、ナレッジ ベース、連絡先のメール アドレスなど、サポートを受ける方法を追加します。
+* サブスクライバーがランディング ページに簡単に戻ることができるようにするリンクを提供します。 たとえば、アプリの **[情報]** タブにこのリンクを含めます。
 
 ## <a name="create-your-saas-offer"></a>SaaS オファーを作成する
 
-SaaS フルフィルメント API を統合し、ユーザーがサブスクリプションを管理できるランディング ページを構築したら、取引可能な SaaS プランを公式に作成、テスト、発行します。
+SaaS フルフィルメント API を統合し、ユーザーがサブスクリプションを管理できるランディング ページを作成したら、いよいよ取引可能な SaaS オファーを作成し、テストして公開します。
 
 > [!IMPORTANT]
-> Teams、SaaS **オファーの** ユーザー単位 (ユーザー/月およびユーザー/年) の価格モデルのみをサポートしています。 詳細については、「 [SaaS 価格モデル」を参照してください](/azure/marketplace/plan-saas-offer#saas-pricing-models)。
+> Teams は現在、SaaS オファーについて **ユーザー単位** (1 ユーザー 1 か月あたりおよび 1 ユーザー 1 年あたり) の価格モデルのみをサポートしています。 詳細については、「[SaaS の価格モデル](/azure/marketplace/plan-saas-offer#saas-pricing-models)」を参照してください。
 
 ### <a name="create-the-offer"></a>オファーを作成する
 
-パートナー [センターでこれを行う方法の詳細については、「Create a SaaS offer](/azure/marketplace/create-new-saas-offer) 」を参照してください。 次の手順では、高レベルで実行する操作について説明します。
+パートナー センターでこれを行う方法の詳細な手順については、「[SaaS オファーを作成する](/azure/marketplace/create-new-saas-offer)」を参照してください。 次の手順では、実行する操作を大まかに説明します。
 
-1. パートナー センター [アカウントをお持](https://partner.microsoft.com/) ちでない場合は、パートナー センター アカウントを作成します。
+1. パートナー センター アカウントをお持ちでない場合は、[パートナー センター](https://partner.microsoft.com/) アカウントを作成します。
 
-1. 取引可能な SaaS プランのサブスクリプション プラン、価格の詳細などについて構成します。 特に、次の手順を実行してください。
+1. 取引可能な SaaS プランのサブスクリプション プラン、価格の詳細などを構成します。 特に、次の手順を必ず実行してください。
 
-    * [ **セットアップの詳細]** で、[ **は** い] オプションを選択して、Microsoft を通じてオファーを販売する場合に指定します。
+    * **[セットアップの詳細]** で、**[はい]** オプションを選択して、Microsoft を通してオファーを販売するように指定します。
 
-    * [**Microsoft 365] で**、アプリの一覧に [AppSource] リンクを追加します。 この手順では、ユーザーが AppSource でサブスクリプション プランを購入できるだけでなく、サブスクリプション プランも購入Teams。
+    * **[Microsoft 365 の統合]** で、アプリの登録情報に AppSource リンクを追加します。 この手順により、ユーザーが Teams に加えて AppSource でもサブスクリプション プランを購入できます。
 
-1. 発行元とオファーの ID を保存します。 (開発者ポータルでオファーをアプリにリンクするには、後で必要になります)。
+1. 発行元 ID とオファー ID を保存します。 (開発者ポータルでオファーをアプリにリンクするために後で必要になります)。
 
-1. オファーを商用マーケットプレースに発行します。
+1. オファーをコマーシャル マーケットプレースに公開します。
 
 ### <a name="test-the-offer"></a>オファーをテストする
 
-SaaS オファーを発行する前に、エンドツーエンドの購入エクスペリエンスを確認することを強く推奨します。 これを行うには、テスト用に個別のオファーを作成します。 詳細については、「テスト オファーの [概要」、](/azure/marketplace/plan-saas-offer#test-offer)テスト [オファーの](/azure/marketplace/create-saas-dev-test-offer)作成、およびオファー [のプレビューを参照してください](/azure/marketplace/test-publish-saas-offer)。
+SaaS オファーを公開する前に、エンドツーエンドの購入エクスペリエンスを確認することを強くお勧めします。 これを行うには、テスト用に別のオファーを作成します。 詳細については、「[オファーのテスト](/azure/marketplace/plan-saas-offer#test-offer)」、「[テスト オファーを作成する](/azure/marketplace/create-saas-dev-test-offer)」、「[オファーをプレビューする](/azure/marketplace/test-publish-saas-offer)」を参照してください。
 
 > [!IMPORTANT]
-> アプリがストアの検証を完了するまで、Teamsトランザクションをテストできます。 詳細については、「収益化された [アプリのプレビューをテストする」を参照してください](Test-preview-for-monetized-apps.md)。
+> アプリがストアの検証を完了するまで、Teams でエンドツーエンド トランザクションをテストできます。 詳細については、「[収益化されたアプリのプレビューをテストする](Test-preview-for-monetized-apps.md)」を参照してください。
 
-これらのテストTeams、ユーザーが次の場合に、ライセンスと割り当ての数が管理センターのTeams一致する必要があります。
+Teams の観点から、これらのテストで、ユーザーが次の操作を実行するときにライセンスと割り当ての数が Teams 管理センターでの数と一致することを検証する必要があります。
 
-* ランディング ページでサブスクリプション プランをアクティブ化して構成します。
-* 自分自身または他のユーザーにライセンスを割り当て、削除、または再割り当てします。
-* サブスクリプションをキャンセルまたは更新します。
+* ランディング ページでサブスクリプション プランをアクティブ化して構成する。
+* 自分または他のユーザーにライセンスを割り当て、削除、または再割り当てする。
+* サブスクリプションをキャンセルまたは更新する。
 
-### <a name="publish-the-offer"></a>オファーを発行する
+### <a name="publish-the-offer"></a>オファーを公開する
 
-テストが完了したら、オファー [をライブで公開します](/azure/marketplace/test-publish-saas-offer#publish-your-offer-live)。
+テストが完了したら、[オファーをライブ公開します](/azure/marketplace/test-publish-saas-offer#publish-your-offer-live)。
 
 ## <a name="configure-your-app-for-the-saas-offer"></a>SaaS オファー用にアプリを構成する
 
-SaaS プランは発行済みですが、ユーザーがサブスクリプション プランを Teams ストアに表示するには、そのプランを Teams アプリにリンクする必要があります。
+SaaS オファーを公開しましたが、Teams ストアでサブスクリプション プランをユーザーに表示するには、オファーを Teams アプリにリンクする必要があります。
 
-1. 開発者ポータルに [移動し、[アプリ](https://dev.teams.microsoft.com/) ] を **選択します**。
-1. [アプリ **] ページ** で、SaaS オファーをリンクするアプリを選択します。
-1. [プランと価格 **] ページに移動** し、発行元とオファーの ID を指定します。 (これらの ID は、すぐに利用できない場合は、パートナー センターで確認できます)。
-1. [ **表示] を** 選択して、SaaS プランのサブスクリプション プランをプレビューします。
-1. すべてが適切な場合は、[保存] を **選択します**。
+1. [開発者ポータル](https://dev.teams.microsoft.com/)に移動し、**[アプリ]** を選択します。
+1. **[アプリ]** ページで、SaaS オファーをリンクするアプリを選択します。
+1. **[プランと価格]** ページに移動し、発行元 ID とオファー ID を指定します。 (これらの ID がすぐにわからない場合は、パートナー センターで確認できます。)
+1. **[表示]** を選択して、SaaS オファーのサブスクリプション プランをプレビューします。
+1. 問題がない場合は、**[保存]** を選択します。
 
-   プロパティ `subscriptionOffer` がアプリ マニフェストに [追加されます](~/resources/schema/manifest-schema-dev-preview.md#subscriptionoffer)。
+   `subscriptionOffer` プロパティが[アプリ マニフェスト](~/resources/schema/manifest-schema-dev-preview.md#subscriptionoffer)に追加されます。
 
    ```json
       "subscriptionOffer": {
@@ -153,56 +153,56 @@ SaaS プランは発行済みですが、ユーザーがサブスクリプショ
 
 ## <a name="publish-your-app"></a>アプリを公開する
 
-SaaS オファーを作成し、Teams アプリにリンクしました。次に、アプリをアプリをアプリストアにTeamsします。 詳細な手順については、「[アプリをアプリ ストアに発行するTeamsしてください](~/concepts/deploy-and-publish/appsource/publish.md)。
+SaaS オファーを作成し、Teams アプリにリンクしました。次に、アプリを Teams ストアに公開します。 詳細な手順については、「[Teams ストアにアプリを公開する](~/concepts/deploy-and-publish/appsource/publish.md)」を参照してください。
 
 > [!IMPORTANT]
 > アプリが既に Teams ストアに表示されている場合でも、SaaS オファーを含めるには、ストア検証プロセスを再度実行する必要があります。
 
-公開すると、アプリをアプリに追加しようとするときに、[アプリの詳細] ダイアログに [サブスクリプションの購入] オプションが表示Teams。
+アプリを公開すると、ユーザーがアプリを Teams に追加しようとするときに [アプリの詳細] ダイアログに **[サブスクリプションの購入]** オプションが表示されます。
 
 ## <a name="end-user-purchasing-experience"></a>エンドユーザーの購入エクスペリエンス
 
-次の例は、ユーザーが Recloud と呼ばれる架空のアプリのサブスクリプション プランTeams *示しています*。
+次の例は、ユーザーが *Recloud* という架空の Teams アプリでサブスクリプション プランを購入する方法を示しています。
 
-1. [アプリ] Teamsで、*Recloud アプリを見つけて選択* します。
+1. Teams ストアで、*Recloud* アプリを見つけて選択します。
 
-1. アプリの詳細ダイアログで、[サブスクリプションの購入 **] を選択します**。
+1. [アプリの詳細] ダイアログで、**[サブスクリプションの購入]** を選択します。
 
     :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="選択したアプリのサブスクリプションを購入する。":::
 
-1. お客様の国を選択すると、現在地のサブスクリプション プランが表示されます。
+1. 国を選択すると、自分の地域のサブスクリプション プランが表示されます。
 
-1. [サブスクリプション **プランの選択] ダイアログで** 、必要なプランを選択し、[チェックアウト] を **選択します**。 (注: プライベート プランは、オファーを提供する組織のユーザーにのみ表示されます。 これらのプランには、特別オファー アイコン **が表示**:::image type="icon" source="~/assets/icons/special-icon.png":::されます)。
+1. **[サブスクリプション プランを選ぶ]** ダイアログで目的のプランを選択し、**[チェックアウト]** を選択します。 (注: プライベート プランは、オファーを提供する組織のユーザーにのみ表示されます。 これらのプランには **特別オファー** :::image type="icon" source="~/assets/icons/special-icon.png"::: アイコンが表示されます。)
 
-    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="適切なサブスクリプション プランを選択します。":::
+    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="適切なサブスクリプション プランを選択する。":::
 
-1. [チェックアウト **] ダイアログで** 、必要な情報を入力し、[注文の配置] **を選択します**。
+1. **[チェックアウト]** ダイアログで必要な情報を入力し、**[注文]** を選択します。
 
     :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder.png" alt-text="サブスクリプションの注文を行う。":::
 
-1. メッセージが表示されたら、[今 **すぐ設定] を選択して** サブスクリプションを設定します。
+1. メッセージが表示されたら、**[今すぐ設定]** を選択してサブスクリプションを設定します。
 
-    :::image type="content" source="~/assets/images/saas-offer/saas-offer-set-up.png" alt-text="サブスクリプションのセットアップ。":::
+    :::image type="content" source="~/assets/images/saas-offer/saas-offer-set-up.png" alt-text="サブスクリプションを設定する。":::
 
-1. *Recloud* Web サイト (ランディング ページとも呼ばれる) を使用してサブスクリプション プランを [管理します](#build-a-landing-page-for-subscription-management)。
+1. *Recloud* Web サイト ([ランディング ページ](#build-a-landing-page-for-subscription-management)とも呼ばれる) を使用してサブスクリプション プランを管理します。
 
-    :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="ユーザー ライセンスの構成。":::
+    :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="ユーザー ライセンスを構成する。":::
 
 ## <a name="admin-purchasing-experience"></a>管理者の購入エクスペリエンス
 
-管理者は、アプリのサブスクリプション プランを管理センター Teams[購入できます](/MicrosoftTeams/purchase-third-party-apps)。
+管理者は、[Teams 管理センター](/MicrosoftTeams/purchase-third-party-apps)でアプリのサブスクリプション プランを購入できます。
 
 ## <a name="remove-a-saas-offer-from-your-app"></a>アプリから SaaS オファーを削除する
 
-Teams ストアの登録情報に含まれる SaaS オファーのリンクを解除する場合は、アプリを再発行してストア内の変更を確認する必要があります。
+Teams ストア登録情報に含まれる SaaS オファーのリンクを解除する場合、変更をストアに表示するにはアプリを再公開する必要があります。
 
-1. 開発者ポータルに [移動し、[アプリ](https://dev.teams.microsoft.com/) ] を **選択します**。
-1. [アプリ **] ページ** で、オファーを削除するアプリを選択します。
-1. [プランと価格 **] ページに移動し、[** 元に戻す] を **選択します**。
-1. オファーのリンクが解除された後、次の手順を実行してストアの登録情報を更新します。
-   1. [**配布>発行] を選択して、Teamsストアに発行します**。
-   1. [ **パートナー センターを開く** ] を選択して、オファーなしでアプリを再発行するプロセスを開始します。
+1. [開発者ポータル](https://dev.teams.microsoft.com/)に移動し、**[アプリ]** を選択します。
+1. **[アプリ]** ページで、オファーを削除するアプリを選択します。
+1. **[プランと価格]** ページに移動し、**[元に戻す]** を選択します。
+1. オファーのリンクが解除されたら、次の手順を実行してストア登録情報を更新します。
+   1. **[配布] > [Teams ストアに公開する]** の順に選択します。
+   1. **[パートナー センターを開く]** を選択して、オファーなしでアプリを再発行する手順を開始します。
 
 ## <a name="see-also"></a>関連項目
 
-[発行済みアプリの保守とサポート](../post-publish/overview.md)
+[公開したアプリの管理とサポート](../post-publish/overview.md)
