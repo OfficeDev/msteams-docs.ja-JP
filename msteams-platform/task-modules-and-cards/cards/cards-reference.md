@@ -4,12 +4,12 @@ description: Teams の Bot で使用できるすべてのカードとカード �
 ms.localizationpriority: high
 keywords: Bot のカード リファレンス
 ms.topic: reference
-ms.openlocfilehash: 7144887b0b53d0542f2756d4f473e8e2e5807e58
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 4bd890268641de5c228f77c8b65e5e93fcf66094
+ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399381"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63558830"
 ---
 # <a name="types-of-cards"></a>カードの種類
 
@@ -130,7 +130,7 @@ App Studio からヒーロー カード、サムネイル カード、アダプ�
 
 ### <a name="example-of-adaptive-card"></a>アダプティブ カードの例
 
-![アダプティブ カードの例](~/assets/images/cards/adaptivecard.png)
+:::image type="content" source="~/assets/images/cards/adaptivecard.png" alt-text="アダプティブ カードの例" border="true":::
 
 次のコードは、アダプティブ カードの例を示しています。
 
@@ -274,6 +274,8 @@ App Studio からヒーロー カード、サムネイル カード、アダプ�
 * [アダプティブ カード ノード](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
 * [アダプティブ カード C#](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
 
+アダプティブ カードの詳細については、「[アダプティブ カード](/adaptive-cards/)」を参照してください。
+
 これで、潜在的なユーザー選択を視覚的に強調表示するために使用する多目的カードであるヒーロー カードを使用できます。
 
 ## <a name="hero-card"></a>ヒーロー カード
@@ -359,7 +361,7 @@ App Studio からヒーロー カード、サムネイル カード、アダプ�
 
 次の表に、リスト カードのプロパティを示します:
 
-| プロパティ | 型  | 説明 |
+| プロパティ | 種類  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。|
 | アイテム | リスト アイテムの配列 | カードに適用可能なアイテムのセット。|
@@ -437,7 +439,7 @@ App Studio からヒーロー カード、サムネイル カード、アダプ�
 
 次の表に、Office 365 コネクタ カードのプロパティを示します。
 
-| プロパティ | 型  | 説明 |
+| プロパティ | 種類  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。 |
 | 概要 | リッチ テキスト | カードの概要。 最大 2 行。 |
@@ -654,7 +656,7 @@ Teams のサインイン カードは Bot Framework のサインイン カード
 
 次の表に、サムネイル カードのプロパティを示します:
 
-| プロパティ | 型  | 説明 |
+| プロパティ | 種類  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。|
 | サブタイトル | リッチ テキスト | カードのサブタイトル。 最大 2 行。|
