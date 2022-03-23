@@ -4,12 +4,12 @@ author: surbhigupta
 description: Teams 会議やさまざまな会議シナリオ用のアプリの有効化と構成、アプリ マニフェストの更新、会議内ダイアログ、共有会議ステージ、会議サイドパネルなどの機能の構成
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: eaa3e17c2045383307949f031d20723f3d420510
-ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
+ms.openlocfilehash: 576ee5dc7d34ae49b6b166a43bd59e8251d519a2
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63558839"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727303"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>会議のアプリを有効にしてTeamsする
 
@@ -156,7 +156,7 @@ API を使用して要求`userContext`をルーティングするには、「SDK
 
 <img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
 
-アプリ全体をステージ間で共有するには、アプリ マニフェスト`meetingStage``meetingSidePanel`でフレーム コンテキストとして構成する必要があります。 例:
+アプリ全体をステージ間で共有するには、アプリ マニフェスト`meetingStage``meetingSidePanel`でフレーム コンテキストとして構成する必要があります。 次に例を示します。
 
 ```json
 "configurableTabs": [
@@ -184,6 +184,10 @@ API を使用して要求`userContext`をルーティングするには、「SDK
 
 アプリの特定の部分をステージ間で共有するには、クライアント SDK ライブラリで関連する API をTeamsする必要があります。 詳細については、「API リファレンス [」を参照してください](API-references.md)。
 
+> [!NOTE]
+> * アプリの特定の部分をステージに共有するには、Teamsバージョン 1.12 以降を使用します。
+> * アプリの特定の部分をステージに共有するは、デスクトップ クライアントTeamsサポートされています。
+
 ### <a name="after-a-meeting"></a>会議後
 
 会議の後と前の [構成は](#before-a-meeting) 同じです。
@@ -203,7 +207,7 @@ API を使用して要求`userContext`をルーティングするには、「SDK
 * ステップ バイ [ステップ ガイドに従って](../sbs-meetings-stage-view.yml)、会議の会議で会議ステージ ビュー Teamsします。
 * ステップ バイ [ステップ ガイドに従って](../sbs-meeting-content-bubble.yml)、会議で会議コンテンツバブルを生成Teamsします。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [会議アプリ API リファレンス](API-references.md)

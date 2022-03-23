@@ -4,12 +4,12 @@ description: Microsoft Teams 開発者向けドキュメントの概要の概要
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams 開発者向けサンプル
-ms.openlocfilehash: 32f6e94e7c1773812fbdca26106dbd319cc45262
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 6a5b8b2ca2a8685db5cd78ece283ea2a2938e8ab
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399003"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727645"
 ---
 # <a name="get-started"></a>概要
 
@@ -26,6 +26,7 @@ Microsoft Teams 用のカスタマイズされたアプリを構築して展開�
 選択できるビルド環境オプションと、Teams アプリのビルドと展開のロードマップを簡単に見てみましょう。
 
 :::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Teams アプリをビルドして展開するための基本的な手順を示す図":::
+
 
 ## <a name="app-capabilities-and-development-tools"></a>アプリの機能と開発ツール
 

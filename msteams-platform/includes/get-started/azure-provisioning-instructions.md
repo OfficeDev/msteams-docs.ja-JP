@@ -5,12 +5,12 @@
 > <details>
 > <summary>プロビジョニングと展開の違いは何ですか?</summary>
 >
-> [**プロビジョニング]** 手順では、Azure と Microsoft 365 アプリのリソースを作成しますが、コード (HTML、CSS、JavaScript など) はリソースにコピーされません。 [ **展開]** 手順では、アプリのコードをプロビジョニング 手順で作成したリソースにコピーします。 新しいリソースをプロビジョニングせずに複数回展開するのが一般的です。 プロビジョニング 手順の完了には時間がかかる場合があります。展開手順とは別の手順です。
+> [**プロビジョニング]** 手順では、Azure とアプリの Microsoft 365 にリソースを作成しますが、コード (HTML、CSS、JavaScript など) はリソースにコピーされません。 [ **展開]** 手順では、アプリのコードをプロビジョニング 手順で作成したリソースにコピーします。 新しいリソースをプロビジョニングせずに複数回展開するのが一般的です。 プロビジョニング 手順の完了には時間がかかる場合があります。展開手順とは別の手順です。
 </details>
 
 # <a name="visual-studio-code"></a>[Visual Studio Code](#tab/vscode)
 
-サイドバーのTeams Toolkit:::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png":::アイコンをVisual Studio Codeします。
+Visual Studio Code のサイド バーで Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: アイコンを選択します。
 
 1. [クラウド **でプロビジョニング] を選択します**。
 
@@ -81,6 +81,7 @@
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="起動アプリをリモートで示すスクリーンショット。" border="false":::
 
 1. **[追加]** を選択します。
+
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="インストールされているアプリを示すスクリーンショット。" border="false":::
 
    アプリが Azure サイトに読み込まれます。

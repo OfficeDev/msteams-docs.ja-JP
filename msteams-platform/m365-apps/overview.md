@@ -5,12 +5,12 @@ ms.date: 02/11/2022
 ms.topic: overview
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 895660e49e468583d7443799dd0c55d7950619e0
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 1936e6a660d77855e53257f40925cf54b05de0de
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355514"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727293"
 ---
 # <a name="extend-teams-apps-across-microsoft-365"></a>Teams アプリを Microsoft 365 全体に拡張する
 
@@ -39,6 +39,8 @@ Microsoft Office および Outlook で実行されている Teams アプリを�
 このプレビューを使用すると、検索ベースの Teams メッセージング拡張機能を Outlook on the web および Windows デスクトップに拡張し、Microsoft Teams クライアントに加えて、Outlook のメッセージ作成領域を通じて結果を検索および共有できます。
 
 メッセージをサイドローディングTeams、メッセージング拡張機能は、メッセージの作成領域内にインストールされているアプリOutlook表示されます。
+
+:::image type="content" source="images/outlook-teams-messaging-ext.png" alt-text="メッセージング拡張機能は、OutlookおよびTeams":::
 
 ## <a name="next-steps"></a>次の手順
 
