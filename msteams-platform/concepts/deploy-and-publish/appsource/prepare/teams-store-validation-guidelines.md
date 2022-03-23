@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 387731176778eb17f7c6322778e9a9bb48b640f1
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 8999f6005775c4719de3f1e91ae26fa43ce7cb27
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501929"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63674979"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams ストア検証ガイドライン
 
@@ -425,7 +425,8 @@ Teams アプリ マニフェストは、アプリの構成を定義します。
 ## <a name="apps-linked-to-saas-offer"></a>SaaS プランに関連付けられたアプリ
 
 * ISV は、同じテナント内の複数のユーザー (サブスクライバー) が自身のサブスクリプションを管理し、テナント内のユーザーにライセンスを割り当てる機能をサポートする必要があります。
-* このプランは、SaaS プランに関連付けられた [Teams アプリの技術的要件](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer?branch=pr-en-us-2759)をすべて満たす必要があります。
+*
+ このプランは、SaaS プランに関連付けられた [Teams アプリの技術的要件](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer)をすべて満たす必要があります。
 * SaaS プランに関連付けられた Teams アプリは、[サービスとしての 1000 個のソフトウェア (SaaS)](/legal/marketplace/certification-policies#1000-software-as-a-service-saas)で定義されたすべての要件を満たす必要があります。
 * マニフェスト ファイルに記載されている `subscriptionOffer` 個の詳細が正しい必要があります。 アプリ マニフェストで、値 `publisherId.offerId` を使用してノード `subscriptionOffer` を追加または更新します。 たとえば、発行元 ID が `contoso1234` で、オファー ID が `offer01` である場合、アプリ マニフェストで指定する値は `contoso1234.offer01` である必要があります。
 * Teams アプリに関連付けられた SaaS プランは AppSource に存在する必要があり、プレビュー プランはストア承認には承諾されません。
@@ -452,8 +453,8 @@ Teams アプリ マニフェストは、アプリの構成を定義します。
 ### <a name="usability-and-functionality"></a>使いやすさと機能  
 
 * ライセンスの購入と割り当てが正常に行われたら、次の情報を入力する必要があります。
-  * 登録したプランの機能へのユーザーへのアクセス。
-  * ユーザーへのサブスクリプション プランの価値の追加と大きなメリット。
+* 登録したプランの機能へのユーザーへのアクセス。
+* ユーザーへのサブスクリプション プランの価値の追加と大きなメリット。
 * Teams アプリから、SaaS アプリケーション ホーム ページへのリンクを提供し、サブスクライバーが将来的にライセンスを管理できるようにします。
 
 ### <a name="configure-and-test-saas-application"></a>SaaS アプリケーションの構成とテスト

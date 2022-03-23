@@ -6,12 +6,12 @@ keywords: Teams Office365 コネクタ
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: bc3a2ff1dc039c04e7ba809b6b63dcdcb62a4e66
-ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
+ms.openlocfilehash: 42288d757a12c6e31de612f19a5556a283cf3e98
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63492982"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63674937"
 ---
 # <a name="create-office-365-connectors"></a>Office 365 コネクタの作成
 
@@ -223,7 +223,7 @@ Exchange Online PowerShell で次のコマンドを実行します。
   * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
   * `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$true`
 
-PowerShell モジュール交換の詳細については、「 [Set-OrganizationConfig」を参照してください](/powershell/module/exchange/Set-OrganizationConfig?view=exchange-ps&preserve-view=true)。 コネクタを有効または無効にするにはOutlookでアプリを[グループに接続Outlook](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab?ui=en-us&rs=en-us&ad=us)。
+PowerShell モジュール交換の詳細については、「 [Set-OrganizationConfig」を参照してください](/powershell/module/exchange/Set-OrganizationConfig?view=exchange-ps&preserve-view=true)。 コネクタを有効または無効にするにはOutlookでアプリを[グループに接続Outlook](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab)。
 
 ## <a name="test-your-connector"></a>コネクタをテストする
 
@@ -262,8 +262,8 @@ PowerShell モジュール交換の詳細については、「 [Set-Organization
 
 ## <a name="distribute-webhook-and-connector"></a>Webhook とコネクタの配布
 
-1. [チームに直接受信 Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md?branch=pr-en-us-3076#create-an-incoming-webhook) を設定します。
-1. 構成ページ[を追加し](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#integrate-the-configuration-experience)[、受信 Webhook](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#publish-connectors-for-the-organization) を受信コネクタOffice 365します。
+1. [チームに直接受信 Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md#create-an-incoming-webhook) を設定します。
+1. 構成ページ[を追加し](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience)[、受信 Webhook](~/webhooks-and-connectors/how-to/connectors-creating.md#publish-connectors-for-the-organization) を受信コネクタOffice 365します。
 1. AppSource 申請の一部としてコネクタをパッケージ化 [して発行](~/concepts/deploy-and-publish/office-store-guidance.md) します。
 
 ## <a name="code-sample"></a>コード サンプル

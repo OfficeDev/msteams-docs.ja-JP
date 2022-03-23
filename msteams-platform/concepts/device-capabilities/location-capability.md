@@ -6,12 +6,12 @@ keywords: 場所マップ機能ネイティブ デバイスのアクセス許可
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 40b0f3da9b6811a7172aa5207dd7680c70db7719
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: a375d8f7c2692c9da8e220474c2c0ece97b623c2
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452824"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63675014"
 ---
 # <a name="integrate-location-capabilities"></a>場所機能を統合する
 
@@ -34,7 +34,7 @@ API 応答エラーを理解して、アプリ内[](#error-handling)のエラー
 > [!NOTE]
 > 現在、Microsoft Teams機能のサポートはモバイル クライアントでのみ利用できます。
 
-## <a name="update-manifest"></a>マニフェストの更新
+## <a name="update-manifest"></a>マニフェストを更新する
 
 プロパティを追加Teams指定して、[アプリ manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) `devicePermissions` ファイルを更新します`geolocation`。 これにより、アプリは場所機能の使用を開始する前に、ユーザーに必要なアクセス許可を求めできます。 アプリ マニフェストの更新プログラムは次のとおりです。
 
@@ -45,7 +45,6 @@ API 応答エラーを理解して、アプリ内[](#error-handling)のエラー
 ```
 
 > [!NOTE]
->
 > * [**アクセス許可の要求]** プロンプトは、関連する API が開始Teams自動的に表示されます。 詳細については、「デバイスのアクセス [許可を要求する」を参照してください](native-device-permissions.md)。
 > * デバイスのアクセス許可はブラウザーによって異なります。 詳細については、「[ブラウザー デバイスのアクセス許可](browser-device-permissions.md)」を参照してください。
 

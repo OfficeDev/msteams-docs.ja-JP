@@ -4,12 +4,12 @@ keywords: Teams アプリ 機能 アクセス許可 デバイス ネイティブ
 description: スキャン QR、バーコード、画像、オーディオ、ビデオ機能など、通常はユーザーの同意が必要なネイティブ機能へのアクセスを要求するためにアプリ マニフェストを更新する方法
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 9d06cebaac7c3e0ff5938cd3c21dda306c8b1e45
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 3cb15e82101be7df9f90c94928fa91ae570c14d5
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398716"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63674965"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Microsoft Teams アプリのデバイスアクセス許可を要求する
 
@@ -33,7 +33,6 @@ ms.locfileid: "63398716"
 * ユーザーの位置情報を使用して、関連情報を表示する。
 
 > [!NOTE]
->
 > * 現在のところ Teams は、マルチウィンドウ アプリ、タブ、および会議のサイド パネルへのデバイスのアクセス許可をサポートしていません。
 > * デバイスのアクセス許可はブラウザーによって異なります。 詳細については、「[ブラウザー デバイスのアクセス許可](browser-device-permissions.md)」を参照してください。
 

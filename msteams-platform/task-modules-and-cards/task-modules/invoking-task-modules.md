@@ -4,12 +4,12 @@ description: コード サンプルを使用したタスク モジュール、�
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 93d25847b0be86822f15c9443c28907031b98fea
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 84cca74d6e81dce9bbcd7637b5d0b6537524d831
+ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399332"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63674727"
 ---
 # <a name="invoke-and-dismiss-task-modules"></a>タスク モジュールを呼び出して閉じる
 
@@ -208,7 +208,7 @@ YouTube では、Web ページにビデオを埋め込む機能が提供され�
 
 HTML または JavaScript ベースのタスク モジュールでは、アプリのタスク モジュールをキーボードで使用できる必要があります。 スクリーン リーダー プログラムは、キーボードを使用して移動する機能にも依存します。 これには、次の 2 つのことが含まれます。
 
-* HTML タグ [で tabindex 属性](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) を使用して、フォーカスできる要素を制御します。 また、tabindex 属性を使用して、通常は Tab キーと <kbd>Shift-Tab</kbd> キーを<kbd></kbd>使用して、シーケンシャル キーボード ナビゲーションに参加する場所を特定します。
+* HTML タグ [で tabindex 属性](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/tabindex) を使用して、フォーカスできる要素を制御します。 また、tabindex 属性を使用して、通常は Tab キーと <kbd>Shift-Tab</kbd> キーを<kbd></kbd>使用して、シーケンシャル キーボード ナビゲーションに参加する場所を特定します。
 * タスク モジュール <kbd>の JavaScript</kbd> の Esc キーを処理します。 次のコードは、Esc キーを処理する方法の例 <kbd>を示</kbd> しています。
 
     ```javascript
@@ -229,7 +229,7 @@ Microsoft Teams、タスク モジュール のヘッダーから HTML へのキ
 |タスク モジュールのサンプル ボット-V4 | タスク モジュールを作成するためのサンプル。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
 |タスク モジュールのサンプル タブとボット-V3 | タスク モジュールを作成するためのサンプル。 |[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)|
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [タブでタスク モジュールを使用する](~/task-modules-and-cards/task-modules/task-modules-tabs.md)

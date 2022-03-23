@@ -4,12 +4,12 @@ description: 開発者向けドキュメント Microsoft Teams 用語集
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams 開発者定義
-ms.openlocfilehash: dc29c40cfa79f267e2fde866974badc97d1900b7
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.openlocfilehash: bbfb59d2dec2f72bb94aae1b241554ebc5de3211
+ms.sourcegitcommit: 2863b7537f414517c0fe751f135b39978eb749bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63466563"
+ms.lasthandoff: 03/18/2022
+ms.locfileid: "63625999"
 ---
 # <a name="glossary"></a>用語集
 
@@ -188,6 +188,7 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 | [Teams ツールキット](../toolkit/teams-toolkit-fundamentals.md) | Microsoft Teams ツールキットを使用すると、Visual Studio Code 環境内で直接カスタムの Teams アプリを構築できます。  |
 | [TeamsFx](../toolkit/teamsfx-cli.md) | TeamsFx は、Teams アプリケーションの開発を加速するテキスト ベースのコマンド ライン インターフェイスです。TeamsFx CLI とも呼ばれます。|
 | [TeamsFx SDK](../toolkit/teamsfx-sdk.md) | TeamsFx SDK は、TeamsFx ツールキットまたは CLI を使用してスキャフォールディングされたプロジェクトで事前構成されています。 |
+| [TeamsJS SDK](../tabs/how-to/using-teams-client-sdk.md) | TeamsJS SDK を使用すると、Teams でホストされたエクスペリエンスを作成できます。 [最新バージョン](~/m365-apps/using-teams-client-sdk-preview.md)の機能は、Outlook と Office で実行されるように Teams アプリを拡張します。 |
 | [Teams モバイル](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) | Microsoft Teams はモバイル アプリとして利用できます。 |
 | [Teams ストア](../concepts/deploy-and-publish/appsource/publish.md) | アプリを 1 か所でユーザーに提供するストアのランディング ページ。 アプリは、使用状況、業界などによって分類されます。 アプリは、ストアの検証ガイドラインに従い、Teams ストアを介してユーザーが利用できるようになる前に承認を取得する必要があります。  <br>**関連情報**: [ストア検証ガイドライン](#s) |
 | [Teams ワークベンチ](../sbs-gs-spfx.yml) | SPFx と Teams ツールキットを使って作成された Teams アプリのビルドで使われる Visual Studio Code のワークビーチ。 <br>**関連情報**: [Workbench](#w); [ローカル ワークベンチ](#l) |

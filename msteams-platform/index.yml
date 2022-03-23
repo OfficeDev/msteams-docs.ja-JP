@@ -4,7 +4,7 @@ summary: カスタム アプリの作成に役立つドキュメント、サン�
 brand: teams
 metadata:
   title: Microsoft Teamsプラットフォーム開発者向けドキュメント
-  description: Microsoft Teams 開発者向けプラットフォームを使用すると、開発者は独自のアプリとサービスを簡単に統合して生産性を向上させ、意思決定を迅速に行い、コンテキスト切り替えを減らし、既存のコンテンツやワークフローに関するコラボレーションを作成できます。
+  description: Microsoft Teams 開発者向けプラットフォームを使用すると、開発者は独自のアプリとサービスを簡単に統合して、生産性を向上させ、意思決定を迅速に行い、コンテキスト切り替えを減らし、既存のコンテンツやワークフローに関するコラボレーションを作成できます。
   ms.service: msteams
   ms.topic: hub-page
   ms.collection: collection
@@ -31,7 +31,7 @@ highlightedContent:
     - title: Microsoft アプリを使用してアプリを強化Graph
       itemType: how-to-guide
       url: /graph/teams-concept-overview
-    - title: アプリをアプリ ストアTeamsする
+    - title: アプリをアプリストアTeamsする
       itemType: deploy
       url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
     - title: コード サンプル
@@ -59,10 +59,10 @@ conceptualContent:
           text: 入力を収集し、タスク モジュールで情報を収集する
         - url: /learn/modules/msteams-webhooks-connectors/
           itemType: learn
-          text: Connect Web サービスをチャネルとチームに提供する Webhook および Office 365 コネクタ
+          text: Connect webhooks および Office 365 コネクタを使用してチャネルやチームに web サービスを提供する
         - url: /microsoftteams/platform/m365-apps/overview
           itemType: overview
-          text: 複数のTeamsアプリを拡張Microsoft 365
+          text: Teams アプリを Microsoft 365 全体に拡張する
     - title: 機能
       links:
         - url: /microsoftteams/platform/tabs/what-are-tabs
@@ -76,7 +76,7 @@ conceptualContent:
           text: メッセージング拡張機能
         - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
           itemType: overview
-          text: 会議のTeamsアプリ
+          text: Teams 会議用アプリ
         - url: /microsoftteams/platform/task-modules-and-cards/cards-and-task-modules
           itemType: concept
           text: カードとタスク モジュール
@@ -87,13 +87,13 @@ conceptualContent:
       links:
         - url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer
           itemType: concept
-          text: トランザクション可能な SaaS Teamsでアプリを収益化する
+          text: 取引可能な SaaS プランを使用して Teams アプリを収益化する
         - url: /microsoftteams/platform/concepts/authentication/authentication
           itemType: concept
           text: ユーザー認証と SSO
         - url: /microsoftteams/platform/samples/teams-low-code-solutions
           itemType: how-to-guide
-          text: Microsoft Power Platform で低Teamsアプリ、ボット、およびフローを構築する
+          text: Microsoft Power Platform で低Teamsアプリ、ボット、フローを構築する
         - url: 'https://dev.teams.microsoft.com/home'
           itemType: reference
           text: Teams の開発者ポータル
@@ -102,10 +102,10 @@ conceptualContent:
           text: アプリのマニフェスト スキーマTeamsする
         - url: 'https://adoption.microsoft.com/extensibility-look-book/scenarios/'
           itemType: reference
-          text: アプリのシナリオをTeamsする
-        - url: 'https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources'
+          text: アプリのビルド シナリオTeamsする
+        - url: 'https://developer.microsoft.com/microsoft-teams/app-development-resources'
           itemType: reference
-          text: アプリのシナリオのTeams方法
+          text: アプリのシナリオTeamsベスト プラクティス
     - title: 統合
       links:
         - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
@@ -113,10 +113,10 @@ conceptualContent:
           text: チャットボットPower Virtual Agents統合する
         - url: /microsoftteams/platform/concepts/build-and-test/share-to-teams
           itemType: reference
-          text: 'Web サイトの [共有Teams統合] ボタン'
+          text: '[Share-to-Teams] ボタンを Web サイトに統合する'
         - url: /microsoftteams/platform/tabs/how-to/tabs-in-sharepoint
           itemType: reference
-          text: '[ユーザー] タブTeamsと統合SharePoint'
+          text: '[Teams] タブを [SharePoint'
         - url: /microsoftteams/platform/resources/moodleinstructions
           itemType: how-to-guide
           text: Moodle ラーニング管理システムとの統合
@@ -133,8 +133,8 @@ conceptualContent:
           text: Microsoft Teams 開発者ブログ
         - url: 'https://aka.ms/microsoftteamscommunitycall'
           itemType: overview
-          text: Microsoft Teamsの呼び出し
-        - url: 'https://docs.microsoft.com/en-us/teamblog/'
+          text: Microsoft Teams呼び出し
+        - url: 'https://docs.microsoft.com/teamblog/'
           itemType: whats-new
           text: お知らせ
         - url: /microsoftteams/platform/feedback
@@ -151,16 +151,16 @@ conceptualContent:
         - url: /microsoftteams/microsoft-teams
           itemType: concept
           text: IT 担当者
-        - url: 'https://support.microsoft.com/en-us/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-US&rs=en-US&ad=US#PickTab=Basics'
+        - url: 'https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b'
           itemType: concept
           text: エンド ユーザー
 tools:
   title: ツールと SDK
   items:
-    - title: Microsoft Teams Toolkitの拡張子Visual Studio Code
+    - title: Microsoft Teams Toolkitの拡張機能Visual Studio Code
       imageSrc: /media/logos/logo_vs-code.svg
       url: /microsoftteams/platform/toolkit/visual-studio-code-overview
-    - title: Microsoft Teams Toolkitの拡張子Visual Studio
+    - title: Microsoft Teams ToolkitのVisual Studio
       imageSrc: /media/logos/logo_vs-ide.svg
       url: /microsoftteams/platform/toolkit/visual-studio-overview
     - title: 開発者ポータル
