@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 022baf126d8c809bc4f3acb5bcc0496d688a399c
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 4751bcdee0addc21c7aaa165cf29d78a895d723d
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453664"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63766150"
 ---
 # <a name="teamsfx-library"></a>TeamsFx ライブラリ
 
@@ -75,14 +75,14 @@ TeamsFx CLI は、テキスト ベースのコマンド ライン インター�
 | パラメーター | 要件 | 説明 |
 |:---------------- |:-------------|:-------------|
 |`--app-name` | はい| アプリケーションの名前Teamsします。|
-|`--interactive`| いいえ | オプションを対話的に選択します。 オプションと既定値`true``false`はです`true`。|
-|`--capabilities`| いいえ| アプリケーションTeamsを選択すると、複数のオプションは 、、`bot`、、 です`tab-spfx``messaging-extension`。`tab` 既定値は `tab` です。|
+|`--interactive`| 不要 | オプションを対話的に選択します。 オプションと既定値`true``false`はです`true`。|
+|`--capabilities`| 不要| アプリケーションTeamsを選択すると、複数のオプションは 、、`bot`、、 です`tab-spfx``messaging-extension`。`tab` 既定値は `tab` です。|
 |`--programming-language`| 不要| プロジェクトのプログラミング言語。 オプションは、または `javascript` 既定値 `typescript` です `javascript`。|
-|`--folder`| いいえ | Projectディレクトリ。 アプリ名を持つサブ フォルダーは、このディレクトリの下に作成されます。 既定値は `./` です。|
+|`--folder`| 不要 | Projectディレクトリ。 アプリ名を持つサブ フォルダーは、このディレクトリの下に作成されます。 既定値は `./` です。|
 |`--spfx-framework-type`| 不要| 機能が選択 `Tab(SPfx)` されている場合に適用されます。 Frontend Framework。 オプションは、および `none` 、 `react`既定値はです `none`。|
-|`--spfx-web part-name`| いいえ | 機能が選択 `Tab(SPfx)` されている場合に適用されます。 既定値は "helloworld" です。|
-|`--spfx-web part-desp`| いいえ | 機能が選択 `Tab(SPfx)` されている場合に適用されます。 既定値は "helloworld description" です。 |
-|`--azure-resources`| いいえ| 機能が含まれている場合に適用 `tab` されます。 Azure リソースをプロジェクトに追加します。 複数のオプションは `sql` (Azure SQL Database) と `function` (Azure Functions) です。 |
+|`--spfx-web part-name`| 不要 | 機能が選択 `Tab(SPfx)` されている場合に適用されます。 既定値は "helloworld" です。|
+|`--spfx-web part-desp`| 不要 | 機能が選択 `Tab(SPfx)` されている場合に適用されます。 既定値は "helloworld description" です。 |
+|`--azure-resources`| 不要| 機能が含まれている場合に適用 `tab` されます。 Azure リソースをプロジェクトに追加します。 複数のオプションは `sql` (Azure SQL Database) と `function` (Azure Functions) です。 |
 
 ### <a name="scenarios-for-teamsfx-new"></a>シナリオ `teamsfx new`
 
@@ -202,9 +202,9 @@ teamsfx env add staging --env dev
 |:----------------  |:-------------|:-------------|
 |`--env`| はい| プロジェクトの環境を選択します。 |
 |`--subscription`| 不要 | Azure サブスクリプション ID を指定します。 |
-|`--resource-group`| いいえ | 既存のリソース グループの名前を設定します。 |
-|`--sql-admin-name`| いいえ | プロジェクトにリソースSQLがある場合に適用されます。 管理者の名前SQL。|
-|`--sql-password`| いいえ| プロジェクトにリソースSQLがある場合に適用されます。 管理者パスワードのSQL。|
+|`--resource-group`| 不要 | 既存のリソース グループの名前を設定します。 |
+|`--sql-admin-name`| 不要 | プロジェクトにリソースSQLがある場合に適用されます。 管理者の名前SQL。|
+|`--sql-password`| 不要| プロジェクトにリソースSQLがある場合に適用されます。 管理者パスワードのSQL。|
 
 ## `teamsfx deploy`
 
@@ -215,9 +215,9 @@ teamsfx env add staging --env dev
 | パラメーター  | 要件 | 説明 |
 |:----------------  |:-------------|:-------------|
 |`--env`| はい| プロジェクトの既存の環境を選択します。 |
-|`--open-api-document`| いいえ | プロジェクトに APIM リソースがある場合に適用されます。 開いている API ドキュメント ファイルのパス。 |
-|`--api-prefix`| いいえ | プロジェクトに APIM リソースがある場合に適用されます。 API 名のプレフィックス。 API の既定の一意の名前はです `{api-prefix}-{resource-suffix}-{api-version}`。 |
-|`--api-version`| いいえ | プロジェクトに APIM リソースがある場合に適用されます。 API のバージョン。 |
+|`--open-api-document`| 不要 | プロジェクトに APIM リソースがある場合に適用されます。 開いている API ドキュメント ファイルのパス。 |
+|`--api-prefix`| 不要 | プロジェクトに APIM リソースがある場合に適用されます。 API 名のプレフィックス。 API の既定の一意の名前はです `{api-prefix}-{resource-suffix}-{api-version}`。 |
+|`--api-version`| 不要 | プロジェクトに APIM リソースがある場合に適用されます。 API のバージョン。 |
 
 ## `teamsfx validate`
 
@@ -248,7 +248,7 @@ teamsfx env add staging --env dev
 | パラメーター  | 要件 | 説明 |
 |:----------------  |:-------------|:-------------|
 |`--local`| いいえ | ローカルからアプリケーションをプレビューします。 `--local` で排他的です `--remote`。 |
-|`--remote`| いいえ | リモートからアプリケーションをプレビューします。 `--remote` で排他的です `--local`。 |
+|`--remote`| 不要 | リモートからアプリケーションをプレビューします。 `--remote` で排他的です `--local`。 |
 |`--env`| 不要 | パラメーターを追加するときに、プロジェクトの既存の環境 `--remote` を選択します。 |
 |`--folder`| 不要 | Projectルート ディレクトリ。 既定値は `./` です。 |
 |`--browser`| 不要 | Web クライアントを開Teamsブラウザー。 オプションは、システム`chrome``edge`の既定`default`のブラウザーなどであり、値はです`default`。 |
@@ -294,7 +294,7 @@ teamsfx preview --remote --browser edge
 | パラメーター  | 要件 | 説明 |
 |:----------------  |:-------------|:-------------|
 |`--env`| はい | プロジェクトの既存の環境を選択します。 |
-|`--folder`| いいえ | Projectディレクトリ。 これは、プロジェクト構成の取得または設定に使用されます。 既定値は `./` です。 |
+|`--folder`| 不要 | Projectディレクトリ。 これは、プロジェクト構成の取得または設定に使用されます。 既定値は `./` です。 |
 |`--global`| 不要 | 構成の対応。 この値が true の場合、スコープはプロジェクト スコープではなくユーザー スコープに制限されます。 既定値は `false` です。 現在、サポートされているグローバル構成には `telemetry`、 、 、 `validate-dotnet-sdk`が含 `validate-func-core-tools`まれます `validate-node`。 |
 
 ### <a name="scenerios-for-teamsfx-config"></a>Scenerios for `teamsfx config`
@@ -470,5 +470,6 @@ teamsfx permission status --env dev --list-all-collaborators
 ## <a name="see-also"></a>関連項目
 
 * [TeamsFx SDK for TypeScript または JavaScript](TeamsFx-SDK.md)
-* [複数の環境を管理Teams Toolkit](TeamsFx-multi-env.md)
+* [Teams Toolkit で複数の環境を管理する](TeamsFx-multi-env.md)
 * [プロジェクトを使用Teamsで共同作業Teams Toolkit](TeamsFx-collaboration.md)
+* [Teams ツールキットの概要](teams-toolkit-fundamentals.md)

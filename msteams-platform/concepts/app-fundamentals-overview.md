@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: エントリ ポイントの拡張性のユース ケースデバイス機能
-ms.openlocfilehash: 02a41631931f24fa23e2ddaaadaf2a94c63c5b23
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 0c1b2289734a54ced4298062260e8424b3454a09
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399171"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63766038"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Teams の機能を使用してアプリを計画する
 
@@ -21,9 +21,9 @@ ms.locfileid: "63399171"
 
 このセクションでは、次の方法について説明します:
 
-* ユース ケースを特定し、Teams の機能にマップする方法。
-* 計画チェックリストの使用法。
-* アプリの展開以外の計画を立てる方法。
+* ユース ケースを特定し、Teams の機能にマップする方法
+* 計画チェックリストの使用法
+* アプリの展開以外の計画を立てる方法
 
 ## <a name="plan-with-teams"></a>Teams で計画する
 
@@ -76,7 +76,7 @@ Government Community Cloud は、政府機関向けの商用環境のコピー�
 
 | 機能   | GCC | GCC-High | DOD |
 |-------------|---------|---|---|
-| 社内で開発されたアプリと同様に、Teams が所有するアプリ | ✔️ アプリは、GCC がある場合有効です。 | ✔️ アプリは、GCC-High がある場合有効です。 | ✔️ アプリは、DOD がある場合有効です。 |
+| 社内で開発されたアプリと同様に、Teams が所有するアプリ | ✔️ アプリは、GCC がある場合有効です | ✔️ アプリは、GCC-High がある場合有効です | ✔️ アプリは、DOD がある場合有効です |
 | Microsoft アプリ | ✔️ GCC に準拠している Microsoft アプリ | ✔️ GCC-High に準拠している Microsoft アプリ | ✔️ DOD に準拠している Microsoft アプリ |
 | サードパーティ製アプリを許可する | ✔️ サードパーティのアプリが利用可能です。既定では無効に設定されており、テナント管理者が独自の裁量で有効にします。 | ❌ | ❌ |
 | ボット | ✔️ | ❌ | ❌ |

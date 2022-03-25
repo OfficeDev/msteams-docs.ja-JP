@@ -4,12 +4,12 @@ description: Microsoft Teams の最新情報やすべての開発者向け最新
 ms.topic: reference
 ms.localizationpriority: high
 keywords: Teams の最新情報と最新の更新プログラムまたは開発者プレビューと機能
-ms.openlocfilehash: 9ad67a1ecfe9947ed0dc665827dd4e127e3a4e69
-ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
+ms.openlocfilehash: 4c48e2e5ca7ac9dcaaf73189cc724f5c86385ee0
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63492989"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63765954"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -22,7 +22,10 @@ ms.locfileid: "63492989"
 
 | 日付 | Update | ここで検索 |
 | --- | --- | --- |
-|03/14/2022| Microsoft Teams でコネクタをビルドしてテストするためのステップ バイ ステップ ガイドを導入しました。 | Webhook とコネクタのビルド> Office 365 コネクタの作成> [Teams コネクタのビルド](sbs-teams-connectors.yml)|
+|03/23/2022| ボットを使用して Teams でリンクを展開するためのステップ バイ ステップ ガイドを導入しました | メッセージング拡張機能の構築＞リンクの展開の追加＞ [ボットを使用して Teams でリンクを展開](sbs-botbuilder-linkunfurling.yml)|
+|03/22/2022| Teams用のBlazorアプリの概要を更新しました |  はじめに＞[Blazorを使用して初めてのアプリを構築する](sbs-gs-blazorapp.yml)|
+|03/22/2022| デバッグ プロセスに関する情報を追加しました| • ツールと SDK> Visual Studio Code 用 Teams ツールキット> [Teams アプリをローカルでデバッグする](toolkit/debug-local.md) </br> • ツールと SDK> Visual Studio Code 用 Teams ツールキット [バックグラウンド プロセスのデバッグ](toolkit/debug-background-process.md)|
+|03/14/2022| Microsoft Teams でコネクタを構築してテストするためのステップバイステップ ガイドを導入しました。 | Webhook とコネクタのビルド> Office 365 コネクタの作成> [Teams コネクタのビルド](sbs-teams-connectors.yml)|
 |03/10/2022| Moodle LMS および Microsoft 365 プラグインに関する情報を追加しました | [Teams との統合] > [Moodle LMS] > [[Moodle ラーニング管理システム]](resources/moodle-overview.md)|
 |03/03/2022 | 外部 OAuth プロバイダーを使用して認証を追加する方法| [認証の追加] > [タブ] >[[外部 OAuth プロバイダーの使用]](tabs/how-to/authentication/auth-oauth-provider.md) |
 |02/25/2022| Teams でタスク モジュールを呼び出すステップ バイ ステップ ガイドを導入しました| [カードとタスク モジュールの構築] > [タスク モジュールの構築] > [ボットからのタスク モジュールの使用] > [[Teams からのタスク モジュールの呼び出し]](sbs-botbuilder-taskmodule.yml)|
@@ -40,6 +43,7 @@ ms.locfileid: "63492989"
 |02/07/2022| ツールと SDK |Visual Studio Code 用 Teams ツールキット > </br> • [Teams アプリに機能を追加] > [[Teams アプリに機能を追加]](toolkit/add-capability.md) </br> • [クラウド リソースを Teams アプリに追加] > [[クラウド リソースを Teams アプリに追加]](toolkit/add-resource.md) |
 |02/03/2022| アプリ マニフェスト バージョン 1.12 が導入されました | • [アプリ マニフェスト] > [[アプリ マニフェストのスキーマ]](resources/schema/manifest-schema.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー > [[マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md) |
 
+
 ## <a name="ga-features"></a>一般提供の特徴
 
 すべてのアプリ開発者が利用可能な Microsoft Teams プラットフォーム機能。
@@ -51,7 +55,10 @@ ms.locfileid: "63492989"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ----------------|
-|03/14/2022| Microsoft Teams でコネクタをビルドしてテストするためのステップ バイ ステップ ガイドを導入しました。 | Webhook とコネクタのビルド> Office 365 コネクタの作成> [Teams コネクタのビルド](sbs-teams-connectors.yml)|
+|03/23/2022| ボットを使用して Teams でリンクを展開するためのステップ バイ ステップ ガイドを導入しました | メッセージング拡張機能の構築＞リンクの展開の追加＞ [ボットを使用して Teams でリンクを展開](sbs-botbuilder-linkunfurling.yml)|
+|03/22/2022| Teams用のBlazorアプリの概要を更新しました|  はじめに＞[Blazorを使用して初めてのアプリを構築する](sbs-gs-blazorapp.yml)|
+|03/22/2022| デバッグ プロセスに関する情報を追加しました| • ツールと SDK> Visual Studio Code 用 Teams ツールキット> [Teams アプリをローカルでデバッグする](toolkit/debug-local.md) </br> • ツールと SDK> Visual Studio Code 用 Teams ツールキット [バックグラウンド プロセスのデバッグ](toolkit/debug-background-process.md)|
+|03/14/2022| Microsoft Teams でコネクタを構築してテストするためのステップバイステップ ガイドを導入しました。 | Webhook とコネクタのビルド> Office 365 コネクタの作成> [Teams コネクタのビルド](sbs-teams-connectors.yml)|
 |03/10/2022 | Moodle LMS および Microsoft 365 プラグインに関する情報を追加しました | [Teams との統合] > [Moodle LMS] > [[Moodle ラーニング管理システム]](resources/moodle-overview.md)|  
 |03/03/2022 | 外部 OAuth プロバイダーを使用して認証を追加する方法| [認証の追加] > [タブ] >[[外部 OAuth プロバイダーの使用]](tabs/how-to/authentication/auth-oauth-provider.md) |
 | 02/25/2022| Teams でタスク モジュールを呼び出すステップ バイ ステップ ガイドを導入しました| [カードとタスク モジュールの構築] > [タスク モジュールの構築] > [ボットからのタスク モジュールの使用] > [[Teams からのタスク モジュールの呼び出し]](sbs-botbuilder-taskmodule.yml)|

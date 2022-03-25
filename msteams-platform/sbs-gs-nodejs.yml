@@ -11,19 +11,19 @@ metadata:
   nextTutorialTitle: '[概要] に戻る'
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 07d6d767cbdb7fefbacde7e0446eb28f9d890b18
-  ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
+  ms.openlocfilehash: 01984057cc92544b778818d4f10160aaadadd761
+  ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 03/20/2022
-  ms.locfileid: "63674958"
+  ms.lasthandoff: 03/23/2022
+  ms.locfileid: "63765989"
 items:
 - durationInMinutes: 1
   content: >
     タブMicrosoft Teamsボット、およびメッセージ拡張機能機能を使用して最初のアプリを構築することで、アプリ開発の開始を開始します。
 
 
-    >このアプリにはすべての機能が含まれるので、それぞれ独自の UI と UX があります。
+    > このアプリにはすべての機能が含まれるので、それぞれ独自の UI と UX があります。
 
 
     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="このアプリを示す図には、3 つの機能があります。" border="false":::

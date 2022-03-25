@@ -20,6 +20,8 @@
   items:
     - name: 概要を開始する
       href: get-started/get-started-overview.md
+    - name: Blazor を使用して初めてのアプリを構築する
+      href: sbs-gs-blazorapp.yml
     - name: JavaScript を使用して初めてのアプリを構築する
       href: sbs-gs-javascript.yml
     - name: SPFx を使用して初めてのアプリを構築する
@@ -90,6 +92,10 @@
           href: toolkit/teams-toolkit-fundamentals.md
         - name: Teams アプリの新規作成
           href: toolkit/create-new-project.md
+        - name: Teams アプリをローカルでデバッグする
+          href: toolkit/debug-local.md
+        - name: バックグランド プロセスのデバッグ
+          href: toolkit/debug-background-process.md
         - name: Teams アプリを構築するためのアカウントを準備する
           href: toolkit/accounts.md
         - name: クラウド リソースをプロビジョニングする
@@ -112,10 +118,10 @@
           href: toolkit/TeamsFx-collaboration.md
         - name: CI/CD ガイド
           href: toolkit/use-CICD-template.md
-        - name: Teams ツールキット CLI
-          href: toolkit/TeamsFx-CLI.md
         - name: TeamsFx SDK
           href: toolkit/TeamsFx-SDK.md
+    - name: Teams ツールキット CLI
+      href: toolkit/TeamsFx-CLI.md
     - name: Visual Studio 用 Teams ツールキット
       href: toolkit/visual-studio-overview.md
     - name: Teams 用 Yeoman ジェネレーター (GitHub)

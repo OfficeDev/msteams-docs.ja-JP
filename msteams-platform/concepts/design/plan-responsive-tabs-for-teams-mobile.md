@@ -5,16 +5,16 @@ description: モバイルでアプリを作成する計画Teamsガイド
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: ad9fb6500aa74cf4de43ed837a60aeeff0485dc2
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 4a32f5e0045def6571f347ebd1bbf8b56f4e082b
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453524"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63766129"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>Teams モバイルの応答タブを計画する
 
- Teamsプラットフォームは、モバイルとデスクトップでアプリを構築する機会を提供します。 アプリユーザーは、デスクトップまたはモバイルのどちらか、または両方を好む場合があります。 ユーザーはデスクトップでデータを準備できますが、モバイルを使用してより多くのデータを使用して共有できます。 アプリを構築する鍵は、ユーザーのニーズを理解し、満たします。 ボット、メッセージング拡張機能、コネクタなど、デスクトップとモバイルでシームレスに動作する機能があります。 ただし、タブとタスク モジュールを構築するには、モバイルで Web エクスペリエンスをホストするTeams必要があります。 このドキュメントでは、モバイルでレスポンシブ Web ページを計画Teamsします。
+ Teamsプラットフォームは、モバイルとデスクトップでアプリを構築する機会を提供します。 アプリユーザーは、デスクトップまたはモバイルのどちらか、または両方を好む場合があります。 ユーザーはデスクトップでデータを準備できますが、モバイルを使用してより多くのデータを使用して共有できます。 アプリを構築する鍵は、ユーザーのニーズを理解し、満たします。 ボット、メッセージング拡張機能、コネクタなど、デスクトップとモバイルでシームレスに動作する機能があります。 ただし、タブとタスク モジュールを構築するには、モバイルで Web エクスペリエンスをホストするTeams必要があります。 この記事では、モバイルでレスポンシブ Web ページを計画Teamsします。
 
 ## <a name="identify-apps-scope"></a>アプリのスコープを特定する
 

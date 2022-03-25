@@ -5,12 +5,12 @@ description: Teams のエクスペリエンス、アプリの機能、および�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 8cc1694a5ce5ee8472a48f86edf09eb7255a4810
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 006b639509d8aaaef96c8f4a3b57235097f1d531
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452831"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63765940"
 ---
 # <a name="map-your-use-cases-to-teams-app-features"></a>ユース ケースを Teams アプリの機能にマッピングする
 
@@ -26,7 +26,7 @@ ms.locfileid: "63452831"
 
 次のステップは、ユース ケースとアプリの機能を一致させることです。
 
-これは、Teams の機能にマッピングされた一般的なユーザー シナリオのリストです。 完全なリストではありませんが、利用できるいくつかの可能性について考えるのに役立ちます。
+これは、Teams の機能にマッピングされた一般的なユーザー シナリオのリストです。 これはすべてを網羅するリストではありませんが、利用できるいくつかの可能性について考えるのに役立ちます。
 </br>
 </br>
 <details>

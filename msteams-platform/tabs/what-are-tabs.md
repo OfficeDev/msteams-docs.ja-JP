@@ -5,12 +5,12 @@ description: Teams プラットフォームでのカスタム タブの概要
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 72c1ae8b22ff4d3ac96ad7c6c07a98dd37266a99
-ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
+ms.openlocfilehash: b39d6b29704e7894e747c02323dda7d96bc6985a
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63492973"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727917"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Microsoft Teams 用のタブの構築
 
@@ -90,6 +90,7 @@ Teams には、個人用タブとチャネル タブ、またはグループ タ
 
 ## <a name="see-also"></a>関連項目
 
+* [Microsoft Teams のカスタム タブ](/microsoftteams/built-in-custom-tabs#develop-custom-tabs)
 * [デバイスのアクセス許可を要求する](../concepts/device-capabilities/native-device-permissions.md)
 * [メディア機能を統合する](../concepts/device-capabilities/mobile-camera-image-permissions.md)
 * [QR の統合またはバーコード スキャナーの統合](../concepts/device-capabilities/qr-barcode-scanner-capability.md)

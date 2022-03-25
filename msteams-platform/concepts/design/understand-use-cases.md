@@ -5,12 +5,12 @@ description: アプリを計画し、ユーザーとそのニーズを理解し�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 117ad5a99662194fef0707ff355d129e4b487cfe
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 95ed5ed7af2eaf8c5b542a9a510484b5ec964b3e
+ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399059"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63766122"
 ---
 # <a name="understand-your-use-cases"></a>ユース ケースを理解する
 

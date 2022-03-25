@@ -4,12 +4,12 @@ description: 通話やオンライン会議Microsoft Teams Microsoft Graph API �
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: 通話通話オーディオ ビデオ IVR 音声オンライン会議リアルタイム メディア ストリーム ボット
-ms.openlocfilehash: 2339431e6643d9ecf986b7a327f5fb7ee764fa00
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 19f101a35120e068dbdcf06fe12e5bf030f44822
+ms.sourcegitcommit: 6906ba7e2a6e957889530b0a117a852c43bc86a6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727633"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "63784003"
 ---
 # <a name="calls-and-online-meetings-bots"></a>通話とオンライン会議ボット
 
@@ -94,7 +94,7 @@ ms.locfileid: "63727633"
 |---------------|----------|--------|
 | Graph通信 | Graph Microsoft の通信プラットフォームとやり取りするための通信を提供します。 | [表示](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [リアルタイムのメディア通話と会議](~/bots/calls-and-meetings/real-time-media-concepts.md)
@@ -108,3 +108,5 @@ ms.locfileid: "63727633"
 * [コンピューターで通話とオンライン会議ボットを開発する方法](./debugging-local-testing-calling-meeting-bots.md)
 * [アプリケーションホスト型メディア ボットの要件と考慮事項](./requirements-considerations-application-hosted-media-bots.md)
 * [着信通知の処理に関する技術情報](./call-notifications.md)
+* [自動応答を設定する](/microsoftteams/create-a-phone-system-auto-attendant)
+* [Android およびビデオ電話デバイスの Microsoft Teams会議室の自動応答Teams設定する](/microsoftteams/set-up-auto-answer-on-teams-android)
