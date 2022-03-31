@@ -4,18 +4,14 @@ keywords: teams アプリの機能のアクセス許可
 description: Web クライアントのアプリに対するデバイスのアクセス許可のサポートを安全に取り戻す
 localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: 2b1d00a6bd0059df042dacedb043d89c73a972f9
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 02a3602f17923506cba6aa6e83548595aac60852
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453006"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571475"
 ---
 # <a name="device-permissions-for-the-browser"></a>ブラウザーのデバイスのアクセス許可
-
-> [!NOTE]
-> ブラウザーでのデバイスのアクセス許可の処理方法に関する最新の更新プログラムは、現在パブリック開発者 [プレビューでのみ利用](../../resources/dev-preview/developer-preview-intro.md) できます。
-> この更新プログラムは、2022 年 2 月 1 日から一般提供 (GA) され、2 月下旬に展開が終了します。
 
 Teamsアクセスなど、デバイスのアクセス許可を必要とするアプリでは、Web ブラウザーでアプリレベルごとに手動でアクセス許可をユーザーに付与する必要があります。 以前は、ブラウザーはアクセス許可を付与する方法を処理しましたが、これらのアクセス許可は現在、Microsoft Teams。 これは、アプリケーションの設計方法や、ブラウザーでこれらのアクセス許可が必要な場合に影響します。
 

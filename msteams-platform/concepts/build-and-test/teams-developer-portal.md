@@ -5,12 +5,12 @@ keywords: 開発者ポータル チームの開始
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: c6c5ea448d8b1f793b2aa881c62325a1016f4508
-ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
+ms.openlocfilehash: 03fd1f75363f303a33a8349f88e13e3444316fc3
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64511235"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464783"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Microsoft Teams の開発者ポータルを使用してアプリを管理する
 
@@ -19,9 +19,7 @@ ms.locfileid: "64511235"
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="開発者ポータルのホーム ページを示すスクリーンショットTeams。":::
 
 > [!NOTE]
->
-> * 現在、開発者ポータルは、Government Community Cloud (GCC)、GCC-High、または国防総省 (DOD) テナントでは使用できません。
-> * ただし、通常のテナントを使用して、開発者ポータルでアプリをビルドし、アプリをダウンロードし、Microsoft Graphを使用して国内[クラウドにアプリを](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true)アップロードできます。 詳細については、「National [cloud deployments」を参照してください](/graph/deployments)。
+> 現在、開発者ポータルは、Government Community Cloud (GCC)、GCC-High、または国防総省 (DOD) テナントでは使用できません。
 
 ## <a name="register-an-app"></a>アプリを登録します
 

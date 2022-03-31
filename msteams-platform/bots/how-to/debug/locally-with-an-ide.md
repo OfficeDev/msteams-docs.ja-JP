@@ -5,12 +5,12 @@ description: Teams 環境内の IDE を使用してボットをローカルで�
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: db4b9143dfbaa8dbbb3a5aa965836d151ad8cd46
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 0085d38ef2dafc4708772222fb9b173a12afedd7
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453370"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590704"
 ---
 # <a name="test-and-debug-your-bot-locally"></a>ボットをローカルでテストおよびデバッグする
 
@@ -27,7 +27,7 @@ ms.locfileid: "63453370"
 
 > [!NOTE]
 > マニフェストを変更してアプリを再アップロードするには [、変更された](#delete-a-bot-from-teams) アプリ パッケージをアップロードする前にボットを削除します。
-> ボットをテストするには、ボットでサイドローディングを有効Teams。 「 [サイドローディングを有効にする」を参照してください](/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)。
+> ボットをテストするには、ボットでサイドローディングを有効Teams。 「 [サイドローディングを有効にする」を参照してください](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)。
 
 ## <a name="debug-your-bot-locally"></a>ボットをローカルでデバッグする
 

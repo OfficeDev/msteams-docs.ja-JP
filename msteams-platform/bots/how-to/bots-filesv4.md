@@ -1,16 +1,16 @@
 ---
 title: ボットを介してファイルを送受信する
-description: ボットを介してファイルを送受信する方法、すべての Teams スコープに Graph API を使用する方法、コード例とサンプルを使用して Teams ボット API を使用する方法について説明します。
+description: 個人用、チャネル、およびグループチャットスコープの API を使用して、ボットGraphファイルを送受信する方法について説明します。 v4 Teams SDK に基づくコード サンプルを使用して、ボット API を使用します。
 keywords: teams ボット ファイルが受信を送信する
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 0a7b98cb3e9070dc0b5c9df998c7457fabd3538e
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 787de4c774ae1b4cde71f74ed578668ca99a8f95
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452845"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590725"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>ボットを介してファイルを送受信する
 

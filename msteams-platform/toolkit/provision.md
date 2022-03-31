@@ -1,21 +1,21 @@
 ---
-title: クラウド Teams Toolkitプロビジョニングに使用する
+title: Teams Toolkit を使用してクラウド リソースをプロビジョニングする
 author: MuyangAmigo
 description: クラウド リソースをプロビジョニングする
 ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: ef087add6e69d8168a065bf52f4e265a55559755
-ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
+ms.openlocfilehash: 0528654b2867552af802fb95e3a6e47ca3228414
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63674993"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590648"
 ---
-# <a name="use-teams-toolkit-to-provision-cloud-resources"></a>クラウド Teams Toolkitプロビジョニングに使用する
+# <a name="use-teams-toolkit-to-provision-cloud-resources"></a>Teams Toolkit を使用してクラウド リソースをプロビジョニングする
 
-TeamsFx は Azure および Microsoft 365クラウドと統合され、1 つのコマンドでアプリケーションを Azure に配置できます。 TeamsFx は Azure Resource Manager と統合され、アプリケーションでコードアプローチに必要な Azure リソースをプロビジョニングできます。  
+TeamsFx は Azure および Microsoft 365クラウドと統合され、1 つのコマンドでアプリケーションを Azure に配置できます。 TeamsFx は Azure Resource Manager統合され、アプリケーションでコードアプローチに必要な Azure リソースをプロビジョニングできます。  
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -50,7 +50,7 @@ TeamsFx は Azure および Microsoft 365クラウドと統合され、1 つの�
 
 ### <a name="resource-creation-for-teams-tab-application"></a>タブ アプリケーションのリソースTeams作成
 
-|リソース|用途|[説明] |
+|Resource|用途|説明 |
 |----------|--------------------------------|-----|
 | Azure ストレージ | タブ アプリをホストする | 静的 Web アプリ機能でタブ アプリをホストできます |
 | 簡単な認証のためのアプリ サービスプラン | 簡易認証の Web アプリをホストする |該当なし |
@@ -59,33 +59,33 @@ TeamsFx は Azure および Microsoft 365クラウドと統合され、1 つの�
 
 ### <a name="resource-creation-for-teams-bot-or-messaging-extension-application"></a>ボットまたはメッセージングTeamsアプリケーションのリソースの作成
 
-|リソース|用途| [説明] |
+|Resource|用途| 説明 |
 |----------|--------------------------------|-----|
 | Azure ボット サービス | ボット フレームワークにアプリをボットとして登録する | ボットをデバイスに接続Teams |
 | ボットのアプリ サービス プラン | ボットの Web アプリをホストする |該当なし |
 | ボット用 Web アプリ | ボット アプリをホストする | 他の Azure リソースにアクセスするユーザー割り当て ID を追加します。 <br /> [TeamsFx SDK で必要なアプリ設定を追加する](https://www.npmjs.com/package/@microsoft/teamsfx) |
 | ユーザー割り当て ID | Azure サービス間要求の認証 | さまざまな機能とリソース間で共有 |
 
-### <a name="resource-creation-for-azure-functions-in-the-project"></a>プロジェクト内の Azure Functions のリソース作成
+### <a name="resource-creation-for-azure-functions-in-the-project"></a>プロジェクト内のAzure Functionsリソースの作成
 
-|リソース|用途| [説明]|
+|Resource|用途| 説明|
 |----------|--------------------------------|-----|
 | 関数アプリのアプリ サービス プラン | 関数アプリをホストする |該当なし |
 | 関数アプリ | Azure 関数 API をホストする | 他の Azure リソースにアクセスするユーザー割り当て ID を追加します。 <br /> クロスオリジン リソース共有 (CORS) ルールを追加して、タブ アプリからの要求を許可する <br /> アプリからの要求のみを許可する認証設定をTeamsします。 <br /> [TeamsFx SDK で必要なアプリ設定を追加する](https://www.npmjs.com/package/@microsoft/teamsfx) |
 | 関数アプリ用の Azure ストレージ | 関数アプリの作成に必要 |該当なし|
 | ユーザー割り当て ID | Azure サービス間要求の認証 | さまざまな機能とリソース間で共有 |
 
-### <a name="resource-creation-for-azure-sql-in-the-project"></a>プロジェクト内の Azure SQLリソースの作成
+### <a name="resource-creation-for-azure-sql-in-the-project"></a>プロジェクト内のAzure SQLリソースの作成
 
-|リソース|用途 | [説明] |
+|Resource|用途 | 説明 |
 |----------|--------------------------------|-----|
-| Azure SQL サーバー | Azure データベース インスタンスSQLホストする | すべての Azure サービスがサーバーにアクセスできます |
+| Azure SQL サーバー | データベース インスタンスAzure SQLホストする | すべての Azure サービスがサーバーにアクセスできます |
 | Azure SQL データベース | アプリのデータを保存する | ユーザーに割り当てられた ID、読み取り、またはデータベースへの書き込みアクセス許可を付与する |
 | ユーザー割り当て ID | Azure サービス間要求の認証 | さまざまな機能とリソース間で共有 |
 
-### <a name="resource-creation-for-azure-api-management-in-the-project"></a>プロジェクトでの Azure API Management のリソースの作成
+### <a name="resource-creation-for-azure-api-management-in-the-project"></a>プロジェクト内の Azure API Managementリソースの作成
 
-|リソース|用途|
+|Resource|用途|
 |----------|--------------------------------|
 | Azure AD API 管理サービス用のアプリケーション | API 管理サービスによって管理される Microsoft Power Platform アクセス API を許可する |
 | API 管理サービス | 関数アプリでホストされる API を管理する |
@@ -93,16 +93,16 @@ TeamsFx は Azure および Microsoft 365クラウドと統合され、1 つの�
 | API 管理 OAuth サーバー | Microsoft Power Platform が関数アプリでホストされている API にアクセスできます |
 | ユーザー割り当て ID | Azure サービス間要求の認証 |
 
-### <a name="resources-created-when-including-azure-key-vault-in-the-project"></a>Azure Key Vault をプロジェクトに含めたときに作成されるリソース
+### <a name="resources-created-when-including-azure-key-vault-in-the-project"></a>Azure リソースをプロジェクトに含Key Vaultリソース
 
-|関連情報|このリソースの目的|
+|リソース|このリソースの目的|
 |----------|--------------------------------|
-| Azure Key Vault Service | 他の Azure Services で使用されるAzure AD (アプリ クライアント シークレットなど) を管理する |
+| Azure Key Vault サービス | 他の Azure Services で使用されるAzure AD (アプリ クライアント シークレットなど) を管理する |
 | ユーザー割り当て ID | Azure サービス間要求の認証 |
 
 ## <a name="customize-resource-provision"></a>リソースのプロビジョニングをカスタマイズする
 
-Teams Toolkit、インフラストラクチャをコード アプローチとして使用して、プロビジョニングする Azure リソースと構成方法を定義できます。 このツールは、ARMテンプレートを使用して Azure リソースを定義します。 このARMテンプレートは、プロジェクトのインフラストラクチャと構成を定義する一連のバイセップ ファイルです。 Azure リソースは、テンプレートを変更してARMできます。 詳細については、「バイセ [ップ ドキュメント」を参照してください](/azure/azure-resource-manager/bicep.md)。
+Teams Toolkit、インフラストラクチャをコード アプローチとして使用して、プロビジョニングする Azure リソースと構成方法を定義できます。 このツールは、ARMテンプレートを使用して Azure リソースを定義します。 このARMテンプレートは、プロジェクトのインフラストラクチャと構成を定義する一連のバイセップ ファイルです。 Azure リソースは、テンプレートを変更してARMできます。 詳細については、「バイセ [ップ ドキュメント」を参照してください](/azure/azure-resource-manager/bicep)。
 
 ファイル、パラメーター ARMテンプレートのセットを変更する必要があります。
 
@@ -115,7 +115,7 @@ Teams Toolkit、インフラストラクチャをコード アプローチとし
 | provision.bicep | Azure リソースの作成と構成 | はい |
 | config.bicep | TeamsFx に必要な構成を Azure リソースに追加する | はい |
 | provision/xxx.bicep | 使用する各 Azure リソースを作成および構成する `provision.bicep` | はい |
-| teamsfx/xxx.bicep | 使用する各 Azure リソースに TeamsFx 必要な構成を追加する `config.bicep`| いいえ |
+| teamsfx/xxx.bicep | 使用する各 Azure リソースに TeamsFx 必要な構成を追加する `config.bicep`| 不要 |
 
 > [!NOTE]
 > プロジェクトにリソースまたは機能を `teamsfx/xxx.bicep` 追加すると、再生成されます。同じ機能をカスタマイズできない。 バイセップ ファイルを変更するには、Git `teamsfx/xxx.bicep` を使用してファイルに対する変更を追跡できます。これにより、リソースや機能の追加中に変更を失わないのに役立ちます。
@@ -148,16 +148,16 @@ Teams Toolkit、インフラストラクチャをコード アプローチとし
 | botDisplayName | ${resourceBaseName} | ボットの表示名 | 1 ~ 42 文字 |
 | botServerfarmsName | ${resourceBaseName}bot | ボットのアプリ サービス プランの名前 | 1 ~ 40 文字の英数字とハイフン |
 | botWebAppName | ${resourceBaseName}bot | ボットの Web アプリの名前 | 2 ~ 60 文字の英数字とハイフン <br /> ハイフンで開始または終了できない |
-| botWebAppSKU | F1 | ボット アプリ サービス プランの SKU | 該当なし |
+| botWebAppSKU | F1 | ボットの SKU App Serviceプラン | 該当なし |
 | userAssignedIdentityName | ${resourceBaseName} | ユーザー割り当て ID の名前 | 3 ~ 128 文字の英数字、ハイフン、アンダースコア <br /> 文字または数字で始める |
-| sqlServerName | ${resourceBaseName} | Azure SQL サーバーの名前 | 1 ~ 63 の小文字、数字、ハイフン <br /> ハイフンで開始または終了できない |
-| sqlDatabaseName | ${resourceBaseName} | Azure SQL データベースの名前 | 1 ~ 128 文字、 <>*%&:\/? またはコントロール文字 <br /> ピリオドまたはスペースで終了できない |
-| sqlDatabaseSku | 基本 | Azure SQL データベースの SKU | 該当なし  |
+| sqlServerName | ${resourceBaseName} | サーバー Azure SQL名 | 1 ~ 63 の小文字、数字、ハイフン <br /> ハイフンで開始または終了できない |
+| sqlDatabaseName | ${resourceBaseName} | データベースのAzure SQL名 | 1 ~ 128 文字、 <>*%&:\/? またはコントロール文字 <br /> ピリオドまたはスペースで終了できない |
+| sqlDatabaseSku | 基本 | データベースの SKU Azure SQL | 該当なし  |
 | apimServiceName | ${resourceBaseName} | APIM サービスの名前 | 1 ~ 50 文字の英数字とハイフン <br /> 文字で始め、英数字で終わる |
 | apimServiceSku | 消費 | APIM サービスの SKU | [使用可能な SKU](/azure/templates/microsoft.apimanagement/service?tabs=bicep) |
 | apimProductName | ${resourceBaseName} | APIM 製品の名前 | 1 ~ 80 文字の英数字とハイフン <br /> 文字で始め、英数字で終わる |
 | apimOauthServerName | ${resourceBaseName} | APIM OAuth サーバーの名前 | 1 ~ 80 文字の英数字とハイフン <br /> 文字で始め、英数字で終わる |
-| keyVaultSkuName | 標準 | Azure Key Vault Service の SKU 名| |
+| keyVaultSkuName | 標準 | Azure Key Vault サービスの SKU 名| |
 
 一方、次のパラメーターは、プロビジョニング中に値が設定された場合に使用できます。 これらのプレースホルダーの目的は、新しい環境で新しいリソースを作成できます。 実際の値はから解決されます `.fx/states/state.{env}.json`。
 
@@ -178,8 +178,8 @@ Teams Toolkit、インフラストラクチャをコード アプローチとし
 
 | パラメーター名 | 既定値の場所の所有者 | 場所所有者の意味 | カスタマイズする方法 |
 | --- | --- | --- | --- |
-| azureSqlAdmin | {{state.fx-resource-azure-sql.admin}} | プロビジョニングSQL Serverした Azure 管理者アカウント | プレースホルダーを削除し、実際の値を入力する |
-| azureSqlAdminPassword | {{state.fx-resource-azure-sql.adminPassword}} | プロビジョニングSQL Server指定した Azure 管理者パスワード | プレースホルダーを削除し、実際の値を入力する |
+| azureSqlAdmin | {{state.fx-resource-azure-sql.admin}} | Azure SQL中に指定したサーバー管理者アカウント | プレースホルダーを削除し、実際の値を入力する |
+| azureSqlAdminPassword | {{state.fx-resource-azure-sql.adminPassword}} | Azure SQL中に指定したサーバー管理者パスワード | プレースホルダーを削除し、実際の値を入力する |
 | apimPublisherEmail | {{state.fx-resource-apim.publisherEmail}} | APIM の発行元メール、既定値は Azure アカウント | プレースホルダーを削除し、実際の値を入力する |
 | apimPublisherName | {{state.fx-resource-apim.publisherName}} | APIM の発行元名、既定値は Azure アカウント | プレースホルダーを削除し、実際の値を入力する |
 

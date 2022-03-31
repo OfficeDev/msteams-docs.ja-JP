@@ -5,12 +5,12 @@ ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 829adc0d066b10ef9bce74c91abce27f3f7b061c
-ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
+ms.openlocfilehash: 376d12b1fce2352ebfd92312c3154806b9bda5e2
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64464818"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590760"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>個人用タブをTeamsに拡張Microsoft 365
 
@@ -54,7 +54,7 @@ ms.locfileid: "64464818"
 
 既存の個人用タブ アプリがある場合は、アプリ マニフェストでアプリ ID をテストおよび更新するために、実稼働プロジェクトのコピーまたはブランチを作成し、新しい識別子 (実稼働アプリ ID とは異なる) を使用します。
 
-このチュートリアルを完了するためにサンプル コードを使用する場合は、「[Todo](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) リスト サンプルの使用を開始する」のセットアップ手順に従って、Visual Studio Code の Teams Toolkit 拡張機能を使用して個人用タブ アプリを作成します。 または、[TeamsJS SDK v2 プレビュー](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend-M365)用に更新された同じ Todo リスト サンプルから開始し、他のユーザー エクスペリエンスで [個人用] タブをプレビューするに[進Microsoft 365できます](#preview-your-personal-tab-in-other-microsoft-365-experiences)。 更新されたサンプルは、拡張機能Teams Toolkit内でも使用できます。*DevelopmentView* >  *samplesTodo* >  **List (Works in Teams、Outlook、Office)**。
+このチュートリアルを完了するためにサンプル コードを使用する場合は、「[はじめに with Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend)」のセットアップ手順に従って、Visual Studio Code の Teams Toolkit拡張機能を使用して個人用タブ アプリを作成します。 または、[TeamsJS SDK v2 プレビュー](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend-M365)用に更新された同じ Todo リスト サンプルから開始し、他のユーザー エクスペリエンスで [個人用] タブをプレビューするに[進Microsoft 365できます](#preview-your-personal-tab-in-other-microsoft-365-experiences)。 更新されたサンプルは、拡張機能Teams Toolkit内でも使用できます。*DevelopmentView* >  *samplesTodo* >  **List (Works in Teams、Outlook、Office)**。
 
 :::image type="content" source="images/toolkit-todo-sample.png" alt-text="Todo List サンプル (Teams、Outlook、Office) Teams Toolkit":::
 
@@ -125,14 +125,14 @@ Teams Toolkit を使用`@microsoft/teams-js`すると、コード変更の一部
 
 ## <a name="update-azure-ad-app-registration-for-sso"></a>SSO Azure ADアプリ登録の更新
 
-Azure Active Directory 個人用タブのシングル サインオン (SSO) は、Teams と同じように Office と Outlook で動作しますが、テナントのアプリ[](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso)登録ポータルでタブ アプリの Azure AD アプリ登録にいくつかのクライアント アプリケーション識別子を追加する必要があります。
+Azure Active Directory 個人用タブのシングル サインオン (SSO) は、Teams の場合と同様に Office と Outlook で動作しますが、テナントの アプリの登録 [](/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso)でタブ アプリの Azure AD アプリ登録にいくつかのクライアント アプリケーション識別子を追加する必要 *があります。* ポータル。
 
 1. サンドボックス テナント アカウントを[Microsoft Azureポータル](https://portal.azure.com)にサインインします。
-1. [アプリの **登録] ブレードを開** きます。
+1. [ウィンドウ] ブレード **アプリの登録** 開きます。
 1. 個人用タブ アプリケーションの名前を選択して、アプリ登録を開きます。
 1. [API  **の公開] ([管理]** の下) を *選択します*。
 
-:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Azure portal の *App 登録* ブレードからクライアント ID を承認する":::
+:::image type="content" source="images/azure-app-registration-clients.png" alt-text="サーバー上の *アプリの登録* ブレードからクライアント ID をAzure portal":::
 
 [承認済 **みクライアント アプリケーション] セクション** で、次のすべての値が `Client Id` 追加されます。
 
@@ -173,9 +173,9 @@ Azure Active Directory 個人用タブのシングル サインオン (SSO) は�
 
 ## <a name="preview-your-personal-tab-in-other-microsoft-365-experiences"></a>他のユーザー エクスペリエンスで個人用タブMicrosoft 365する
 
-Teams 個人用タブをアップグレードし、Teams でサイドロードすると、Outlook デスクトップおよび Web クライアントおよび Office on the web (office.com) でも実行されます。 これらのエクスペリエンスからプレビューする方法をMicrosoft 365します。
+Teams 個人用タブをアップグレードし、Teams でサイドロードすると、Outlook、Windows、web、Windows および web (office.com) の Office で実行されます。 これらのエクスペリエンスからプレビューする方法をMicrosoft 365します。
 
-### <a name="outlook"></a>Outlook
+### <a name="outlook-on-windows"></a>Windows での Outlook
 
 デスクトップで実行中のアプリをOutlookするにはWindowsします。
 
@@ -195,7 +195,7 @@ Teams 個人用タブをアップグレードし、Teams でサイドロード�
 
 :::image type="content" source="images/outlook-web-more-apps.png" alt-text="インストールされている個人用タブを表示するには、アプリのサイド バーの省略記号 ('more apps') outlook.com をクリックします。":::
 
-### <a name="office"></a>Office
+### <a name="office-on-windows"></a>Windows での Office
 
 デスクトップで実行中のアプリをOfficeするにはWindowsします。
 

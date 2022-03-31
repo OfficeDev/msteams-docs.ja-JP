@@ -1,17 +1,17 @@
 ---
 title: Microsoft Teams アプリ テンプレート
-description: Microsoft Teams プラットフォーム用のアプリ テンプレートのリンクと説明
+description: アプリの展開とインストールの詳細な手順をMicrosoft Teamsプラットフォームでアプリ テンプレートを使用する方法について説明します。
 ms.topic: reference
 keywords: Microsoft Teams テンプレートのサンプル デモ
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 961ad0ff22a528dc1267023d4f4ff288ba7202ca
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 7c5f99666e9044c748278e409f95271f42cfaace
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453139"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590711"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 用のアプリ テンプレート
 
@@ -111,7 +111,7 @@ New Employee Onboarding は、組織が新入社員教育で、従業員に一�
 アプリ テンプレート のコード サンプルは、プラットフォーム機能をサポートするサンプル Microsoft Teamsです。
 
 > [!NOTE]
-> * Microsoft はソース コードを積極的に管理していない。 完全なソース コードはオープン ソースであり、特定の要件を満たすためにソース コードを探索、フォーク、および変更できます。
+> * Microsoft はソース コードを積極的に管理していない。 完全なソース コードはオープンソース、特定の要件を満たしたソース コードを探索、フォーク、および変更できます。
 > * Microsoft Power Platform を使用して、アプリ ストアに発行するアプリを作成Teams必要があります。 Microsoft Power Platform アプリは、組織のアプリ ストアにのみ発行できます。
 
 次の表では、アプリ テンプレートのコード サンプルについて説明します。  
@@ -126,3 +126,4 @@ New Employee Onboarding は、組織が新入社員教育で、従業員に一�
 * [アプリMicrosoft Teamsについて](../concepts/capabilities-overview.md)
 * [アプリの個人用アプリを設計Microsoft Teams](../concepts/design/personal-apps.md)
 * [デザイン システム](../concepts/design/design-teams-app-fundamentals.md)
+* [ボットから人間への会話の移行](/azure/bot-service/bot-service-design-pattern-handoff-human)

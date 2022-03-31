@@ -5,12 +5,12 @@ description: App Studio を使用して、Microsoft Teamsメッセージング�
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: cf4d2efae2c5628ad32beadbc61174ea2bb037a8
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 0dc7e8798301e57cc55814938e3311173ad82ce3
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452908"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590683"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>App Studio を使用してメッセージングの拡張機能を作成する
 
@@ -42,7 +42,7 @@ Web サービスの作成、アプリ パッケージの作成、ボット フ�
 
 ## <a name="register-your-web-service-with-the-bot-framework"></a>Web サービスを Bot Framework に登録する
 
-メッセージング拡張機能は、ボット フレームワークのメッセージング スキーマとセキュリティで保護された通信プロトコルを利用します。まだ Web サービスを持ってない場合は、ボット フレームワークに Web サービスを登録する必要があります。 Microsoft App Id (これを Teams の内部からボット ID と参照し、作業している可能性のある他のアプリ ID から識別します)、ボット フレームワークを使用した登録のメッセージング エンドポイントがメッセージング拡張機能で使用され、要求を受信して応答します。 既存の登録を使用している場合は、登録チャネルを有効[Microsoft Teamsしてください](/azure/bot-service/bot-service-manage-channels.md?preserve-view=true&view=azure-bot-service-4.0)。
+メッセージング拡張機能は、ボット フレームワークのメッセージング スキーマとセキュリティで保護された通信プロトコルを利用します。まだ Web サービスを持ってない場合は、ボット フレームワークに Web サービスを登録する必要があります。 Microsoft App Id (これを Teams の内部からボット ID と参照し、作業している可能性のある他のアプリ ID から識別します)、ボット フレームワークを使用した登録のメッセージング エンドポイントがメッセージング拡張機能で使用され、要求を受信して応答します。 既存の登録を使用している場合は、登録チャネルを有効[Microsoft Teamsしてください](/azure/bot-service/bot-service-manage-channels?preserve-view=true&view=azure-bot-service-4.0)。
 
 クイック スタートの 1 つを実行するか、使用可能なサンプルの 1 つから開始する場合は、Web サービスの登録に関するガイドが表示されます。 サービスを手動で登録する場合は、3 つのオプションがあります。 Azure サブスクリプションを使用せずに登録する場合は、ボット フレームワークによって提供される簡略化された OAuth 認証フローを利用できます。 作成後に登録を Azure に移行できます。
 

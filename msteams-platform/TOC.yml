@@ -21,7 +21,7 @@
     - name: 概要を開始する
       href: get-started/get-started-overview.md
     - name: Blazor を使用して初めてのアプリを構築する
-      href: sbs-gs-blazorapp.yml
+      href: sbs-gs-blazorupdate.yml
     - name: JavaScript を使用して初めてのアプリを構築する
       href: sbs-gs-javascript.yml
     - name: SPFx を使用して初めてのアプリを構築する
@@ -139,7 +139,7 @@
     - name: ボットおよびメッセージング拡張機能用 .NET Bot Framework (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-dotnet'
     - name: Microsoft Graph SDK
-      href: 'https://docs.microsoft.com/graph/sdks/sdks-overview'
+      href: /graph/sdks/sdks-overview
     - name: 従来の SDK
       items:
         - name: ボット SDK (v3)
@@ -398,11 +398,11 @@
 - name: Microsoft Graph を使用したTeams データを使用する
   items:
     - name: 概要
-      href: 'https://docs.microsoft.com/graph/teams-concept-overview'
+      href: /graph/teams-concept-overview
     - name: Microsoft Graph ツールキット
-      href: 'https://docs.microsoft.com/graph/toolkit/overview'
+      href: /graph/toolkit/overview
     - name: 作業の開始
-      href: 'https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab'
+      href: /graph/toolkit/get-started/build-a-microsoft-teams-tab
     - name: リソース固有の同意
       href: graph-api/rsc/resource-specific-consent.md
     - name: Graph API を使用してメッセージを送信するアプリの事前インストール
