@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 8999f6005775c4719de3f1e91ae26fa43ce7cb27
-ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
+ms.openlocfilehash: c395324daba877b0e8f6030f4929dbbe5ce0dc6f
+ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63674979"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64511258"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams ストア検証ガイドライン
 
@@ -25,15 +25,13 @@ ms.locfileid: "63674979"
 
 ## <a name="value-proposition"></a>価値提案
 
-> [!NOTE]  
-> このセクションは、[Microsoft 商用認定ポリシー番号 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) に沿ったものであり、そのオファーの価値提供に関して、Microsoft Teams アプリの開発者に追加のガイダンスを提供します。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用認定ポリシー番号 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) に沿ったものであり、そのオファーの価値提供に関して、Microsoft Teams アプリの開発者に追加のガイダンスを提供します。
 
 ### <a name="app-name"></a>アプリ名
 
 [*必須の修正プログラム*]
 
-> [!NOTE]  
-> このセクションは、Microsoft [商用認定ポリシー番号 1140.1.1](/legal/marketplace/certification-policies#114011-app-name) に沿ったものであり、それらのアプリの名前の指定に関して、開発者に追加のガイダンスを提供します。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、Microsoft [商用認定ポリシー番号 1140.1.1](/legal/marketplace/certification-policies#114011-app-name) に沿ったものであり、それらのアプリの名前の指定に関して、開発者に追加のガイダンスを提供します。
 
 アプリの名前は、ユーザーがストアでアプリを見つける際に重要な役割を果たします。 次のガイドラインを使用してアプリの名前を指定します。
 
@@ -63,8 +61,7 @@ ms.locfileid: "63674979"
 
 [*必須の修正プログラム*]
 
-> [!NOTE]  
-> このセクションは、Microsoft 商用認定ポリシー番号 [1140.1.2](/legal/marketplace/certification-policies#114012-workplace-appropriateness)、[100.8](/legal/marketplace/certification-policies#1008-significant-value)、[100.10](/legal/marketplace/certification-policies#10010-inappropriate-content) に沿ったものであり、開発者に職場に適したアプリを構築するための追加のガイダンスを提供します。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、Microsoft 商用認定ポリシー番号 [1140.1.2](/legal/marketplace/certification-policies#114012-workplace-appropriateness)、[100.8](/legal/marketplace/certification-policies#1008-significant-value)、[100.10](/legal/marketplace/certification-policies#10010-inappropriate-content) に沿ったものであり、開発者に職場に適したアプリを構築するための追加のガイダンスを提供します。
 
 アプリ コンテンツは、職場での一般的な消費に適したものであり、コマーシャル マーケットプレースの認証ポリシーに一覧表示されたすべての制限事項に従う必要があります。 宗教、政治、ギャンブル、長時間の娯楽などに関するコンテンツは禁止されています。
 
@@ -74,8 +71,7 @@ ms.locfileid: "63674979"
 
 [*必須の修正プログラム*]
 
-> [!NOTE]  
-> このセクションは、[Microsoft 商用認定ポリシー番号 1140.1.3](/legal/marketplace/certification-policies#114013-other-platforms-and-services) に沿ったものです。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用認定ポリシー番号 1140.1.3](/legal/marketplace/certification-policies#114013-other-platforms-and-services) に沿ったものです。
 
 アプリ内では、Teams のエクスペリエンスが占有的である必要があります。アプリ コンテンツやアプリのメタデータには、他の同様のチャットベースのコラボレーション プラットフォームやサービスから取られた、名前、アイコン、またはイメージを含めてはいけません。ただし、アプリが特定の相互運用性を提供している場合はその限りではありません。
 
@@ -87,14 +83,13 @@ ms.locfileid: "63674979"
 
 [*必須の修正プログラム*]
 
-> [!NOTE]  
-> このセクションは、Microsoft [商用認定ポリシー番号 1140.1.4](/legal/marketplace/certification-policies#114014-access-to-services) に沿ったものであり、外部サービスを使用したそれらのアプリの認証に関して、開発者にガイダンスを提供します。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用認定ポリシー番号 1140.1.4](/legal/marketplace/certification-policies#114014-access-to-services) に沿ったものであり、外部サービスを使用したそれらのアプリの認証に関して、開発者にガイダンスを提供します。
 
 アプリ認証を実装する方法の詳細については、「[Teams での認証](~/concepts/authentication/authentication.md)」を参照してください。
 
 #### <a name="authenticating-with-external-services"></a>外部サービスを使用した認証
 
- アプリが外部サービスを使用してユーザーを認証する場合は、以下のガイドラインに従ってください。
+アプリが外部サービスを使用してユーザーを認証する場合は、以下のガイドラインに従ってください。
 
 * **サインイン、サインアウト、サインアップのエクスペリエンス**:
   * 外部アカウントまたはサービスに依存するアプリでは、シンプルでわかりやすいサインイン、サインアウト、およびサインアップ エクスペリエンスを提供する必要があります。
@@ -108,15 +103,14 @@ ms.locfileid: "63674979"
 
 ## <a name="security"></a>セキュリティ
 
-> [!NOTE]  
-> このセクションは、[Microsoft 商用認定ポリシー番号 1140.3](/legal/marketplace/certification-policies#11403-security) と一致します。
+
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用認定ポリシー番号 1140.3](/legal/marketplace/certification-policies#11403-security) と一致します。
 
 ### <a name="financial-information"></a>財務情報
 
 [*必須の修正プログラム*]
 
-> [!NOTE]  
-> このセクションは [Microsoft 商用認定ポリシー番号 1140.3.1](/legal/marketplace/certification-policies#114031-financial-transactions) に沿ったもので、Teams インターフェイス内の財務情報の送信に関するガイダンスを提供し、Teams アプリのモバイル (Android および iOS) バージョンでの制限付き支払いシナリオを開発者に通知します。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは [Microsoft 商用認定ポリシー番号 1140.3.1](/legal/marketplace/certification-policies#114031-financial-transactions) に沿ったもので、Teams インターフェイス内の財務情報の送信に関するガイダンスを提供し、Teams アプリのモバイル (Android および iOS) バージョンでの制限付き支払いシナリオを開発者に通知します。
 
 アプリは、ユーザーに対して、Teams インターフェイス内で支払いを求めたり、ボットを介してユーザーに財務情報を送信してはいけません。  
 
@@ -166,8 +160,7 @@ iOS 版または Android 版 Teams で実行するアプリは、以下のガイ
 
 [*必須の修正プログラム*]
 
-> [!NOTE]
-> このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.3.2](/legal/marketplace/certification-policies#114032-bots-and-messaging-extension) に沿ったものです。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.3.2](/legal/marketplace/certification-policies#114032-bots-and-messaging-extension) に沿ったものです。
 
 Microsoft Azure Bot Service を使用するアプリ (ボットやメッセージング拡張機能など) の場合、Microsoft [オンライン サービスの使用条件](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46)で定義されているすべての要件に従う必要があります。
 
@@ -187,8 +180,7 @@ Microsoft Azure Bot Service を使用するアプリ (ボットやメッセー�
 
 [*必須の修正プログラム*]
 
-> [!NOTE]
-> このセクションは、[Microsoft 商用マーケットプレース ポリシー番号 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains) に沿ったもので、`validDomains` マニフェスト プロパティでの制限付きドメインの使用に関する開発者向けのガイダンスを提供します。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー番号 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains) に沿ったもので、`validDomains` マニフェスト プロパティでの制限付きドメインの使用に関する開発者向けのガイダンスを提供します。
 
 組織の制御外のドメイン (ワイルドカードなど) やトンネリング サービスをアプリのドメイン構成に含めてはいけません。以下の例外があります。
 
@@ -209,8 +201,7 @@ Government Community Cloud (GCC) ユーザーにアプリを配布するには�
 
 ## <a name="general-functionality-and-performance"></a>一般的な機能とパフォーマンス
 
-> [!NOTE]
-> このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4](/legal/marketplace/certification-policies#11404-functionality) に沿ったものです。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4](/legal/marketplace/certification-policies#11404-functionality) に沿ったものです。
 
 ### <a name="launching-external-functionality"></a>外部機能の起動
 
@@ -466,8 +457,7 @@ Teams アプリ マニフェストは、アプリの構成を定義します。
 
 ## <a name="tabs"></a>タブ
 
-> [!NOTE]  
-> このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.2](/legal/marketplace/certification-policies#114042-tabs) に沿ったものです。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.2](/legal/marketplace/certification-policies#114042-tabs) に沿ったものです。
 アプリにタブが含まれている場合は、以下のガイドラインに従っていることを確認してください。
 > [!TIP]
 > 高品質なアプリ エクスペリエンスを作成するための詳細については、「[Teams タブ デザインのガイドライン](~/tabs/design/tabs.md)」を参照してください。
@@ -838,8 +828,7 @@ Fluent UI コンポーネントの[初級](~/concepts/design/design-teams-app-ba
 
 ## <a name="bots"></a>ボット
 
-> [!NOTE]
-> このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.3](/legal/marketplace/certification-policies#114043-bots) に沿ったものです。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.3](/legal/marketplace/certification-policies#114043-bots) に沿ったものです。
 
 アプリにボットが含まれている場合は、以下のガイドラインに従っていることを確認してください。
 
@@ -1074,8 +1063,7 @@ Fluent UI コンポーネントの[初級](~/concepts/design/design-teams-app-ba
 
 ## <a name="messaging-extensions"></a>メッセージング拡張機能
 
-> [!NOTE]
-> このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.4](/legal/marketplace/certification-policies#114044-messaging-extensions) に沿ったものです。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.4](/legal/marketplace/certification-policies#114044-messaging-extensions) に沿ったものです。
 
 アプリにメッセージングの拡張機能が含まれている場合は、以下のガイドラインに従っていることを確認してください。
 
@@ -1217,8 +1205,7 @@ Fluent UI コンポーネントの[初級](~/concepts/design/design-teams-app-ba
 
 ## <a name="task-modules"></a>タスク モジュール
 
-> [!NOTE]
-> このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.5](/legal/marketplace/certification-policies#114045-task-modules) に沿ったものです。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.5](/legal/marketplace/certification-policies#114045-task-modules) に沿ったものです。
 
 タスク モジュールには、アイコンと関連付けられたアプリの短い名前を含める必要があります。 タスク モジュールは、アプリ全体を埋め込むものであったり、特定の操作を完了するために必要なコンポーネントのみを表示するものであったりしてはいけません。 [*必須の修正プログラム*]
 
@@ -1249,8 +1236,8 @@ Fluent UI コンポーネントの[初級](~/concepts/design/design-teams-app-ba
 
 ## <a name="meeting-extensions"></a>ミーディング拡張機能
 
-> [!NOTE]
-> このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.6](/legal/marketplace/certification-policies#114046-meeting-extensions) に沿ったものです。[!TIP]
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.6](/legal/marketplace/certification-policies#114046-meeting-extensions) に沿ったものです。
+> [!TIP]
 > 高品質なアプリ エクスペリエンスを作成するための詳細については、「[Teams ミーティング拡張機能デザインのガイドライン](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)」を参照してください。
 
 ミーティング拡張機能には、次のガイドラインを使用します。
@@ -1351,8 +1338,7 @@ Fluent UI コンポーネントの[初級](~/concepts/design/design-teams-app-ba
 
 ## <a name="notifications"></a>通知
 
-> [!NOTE]
-> このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.7](/legal/marketplace/certification-policies#114047-notification-apis) に沿ったものです。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.7](/legal/marketplace/certification-policies#114047-notification-apis) に沿ったものです。
 
 アプリで [Microsoft Graph が提供するアクティビティ フィード API](/graph/teams-send-activityfeednotifications) を使用する場合は、以下のガイドラインを遵守してください。
 
@@ -1380,8 +1366,7 @@ Fluent UI コンポーネントの[初級](~/concepts/design/design-teams-app-ba
 
 ## <a name="microsoft-365-app-compliance-program"></a>Microsoft 365 アプリ コンプライアンス プログラム
 
-> [!NOTE]
-> このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.6](/legal/marketplace/certification-policies#11406-publisher-attestation) に沿ったものです。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.6](/legal/marketplace/certification-policies#11406-publisher-attestation) に沿ったものです。
 
 Microsoft 365 アプリ コンプライアンス プログラムは、アプリに関するセキュリティおよびコンプライアンス情報を評価することにより、組織がリスクを評価し管理することを目的としています。 Teams ストアにアプリを公開する場合は、以下のレベルを完了する必要があります。
 
@@ -1399,13 +1384,11 @@ Microsoft 365 アプリ コンプライアンス プログラムは、アプリ�
 
 * **発行元の構成証明**: 潜在的な顧客がアプリの使用を適切な情報に基づいて判断できるように、一般的な情報、データの取り扱い、セキュリティとコンプライアンスに関する情報を共有するプロセス。
 
-> [!NOTE]
-> 過去に表示されていないアプリを提出する場合は、アプリが Teams ストアに表示されるまで正式に発行元の構成証明を完了することができません。 一覧表示されているアプリを更新する場合は、アプリの最新バージョンを提出する前に発行元の構成証明証を完了します。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: 過去に表示されていないアプリを提出する場合は、アプリが Teams ストアに表示されるまで正式に発行元の構成証明を完了することができません。 一覧表示されているアプリを更新する場合は、アプリの最新バージョンを提出する前に発行元の構成証明証を完了します。
 
 ## <a name="advertising"></a>広告
 
-> [!NOTE]
-> このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.7](/legal/marketplace/certification-policies#11407-advertising) に沿ったものです。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.7](/legal/marketplace/certification-policies#11407-advertising) に沿ったものです。
 
 アプリは、動的な広告、バナー広告、メッセージ内広告などの広告を表示してはいけません。
 

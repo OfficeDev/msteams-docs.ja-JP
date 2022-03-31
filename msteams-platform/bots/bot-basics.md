@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: アクティビティ ハンドラー フレームワーク ボット カードの同意チャネル イベント
-ms.openlocfilehash: 5094ce68aae25cb4c22c3b0b3b3b3d39e565e4ab
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 59c03c339187010867d9fd380d4ac9798e3aa20c
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398646"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464776"
 ---
 # <a name="bot-activity-handlers"></a>ボットのアクティビティ ハンドラー
 
@@ -184,13 +184,15 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 #### <a name="core-bot-framework-handlers"></a>Core Bot Framework ハンドラー
 
 >[!NOTE]
-> 追加および **削除された** メンバーのアクティビティを除き、このセクションで説明するアクティビティ ハンドラーはすべて、ボット以外のボットと同様にTeamsされます。
+>
+>* 追加および **削除された** メンバーのアクティビティを除き、このセクションで説明するアクティビティ ハンドラーはすべて、ボット以外のボットと同様にTeamsされます。
+>* `onInstallationUpdateActivityAsync()`メソッドは、ボットを追加Teamsロケールを取得するためにTeams。
 
 アクティビティ ハンドラーは、メッセージ スレッドの代わりに新しいメンバーがチームに追加されるチームのコンテキストでは異なります。
 
 定義されているハンドラーの一覧には、 `ActivityHandler` 次のものが含まれます。
 
-| イベント | ハンドラー | 内容 |
+| イベント | ハンドラー | 説明 |
 | :-- | :-- | :-- |
 | 受信したアクティビティの種類 | `OnTurnAsync` | このメソッドは、受信したアクティビティの種類に基づいて、他のハンドラーのいずれかを呼び出します。 |
 | 受信したメッセージ アクティビティ | `OnMessageActivityAsync` | このメソッドは、アクティビティを処理するためにオーバーライド `Message` できます。 |
@@ -206,7 +208,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 コア `TeamsActivityHandler` Bot Framework ハンドラー セクションのハンドラーの一覧を拡張して、次の項目を含める。
 
-| イベント | ハンドラー | 内容 |
+| イベント | ハンドラー | 説明 |
 | :-- | :-- | :-- |
 | channelCreated | `OnTeamsChannelCreatedAsync` | このメソッドは、作成中のチャネルを処理Teamsオーバーライドできます。 詳細については、「会話更新イベント[で作成されたチャネル](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created)[」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
 | channelDeleted | `OnTeamsChannelDeletedAsync` | このメソッドをオーバーライドして、削除するチャネルTeams処理できます。 詳細については、「会話の更新 [イベントで削除された](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) チャネル [」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
@@ -219,7 +221,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 アクティビティ ハンドラーからTeamsされる`OnInvokeActivityAsync`アクティビティ ハンドラーの一覧Teams次に示します。
 
-| 呼び出しの種類                    | ハンドラー                              | 内容                                                  |
+| 呼び出しの種類                    | ハンドラー                              | 説明                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
 | CardAction.Invoke               | `OnTeamsCardActionInvokeAsync`       | このメソッドは、カード アクションの呼び出しアクティビティがコネクタから受信されると呼び出されます。 |
 | fileConsent/invoke              | `OnTeamsFileConsentAcceptAsync`      | このメソッドは、ユーザーがファイル同意カードを受け入れるときに呼び出されます。 |
@@ -243,7 +245,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 定義されているハンドラーの一覧には、 `ActivityHandler` 次のものが含まれます。
 
-| イベント | ハンドラー | 内容 |
+| イベント | ハンドラー | 説明 |
 | :-- | :-- | :-- |
 | 受信したアクティビティの種類 | `onTurn` | このメソッドは、受信したアクティビティの種類に基づいて、他のハンドラーのいずれかを呼び出します。 |
 | 受信したメッセージ アクティビティ | `onMessage` | このメソッドは、アクティビティの処理に役立 `Message` ちます。 |
@@ -258,7 +260,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 コア `TeamsActivityHandler` Bot Framework ハンドラー セクションのハンドラーの一覧を拡張して、次の項目を含める。
 
-| イベント | ハンドラー | 内容 |
+| イベント | ハンドラー | 説明 |
 | :-- | :-- | :-- |
 | channelCreated | `OnTeamsChannelCreatedAsync` | このメソッドは、作成中のチャネルを処理Teamsオーバーライドできます。 詳細については、「会話更新イベント[で作成されたチャネル](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created)[」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
 | channelDeleted | `OnTeamsChannelDeletedAsync` | このメソッドをオーバーライドして、削除するチャネルTeams処理できます。 詳細については、「会話の更新 [イベントで削除された](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) チャネル [」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
@@ -271,7 +273,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 アクティビティ ハンドラーからTeamsされる`onInvokeActivity`アクティビティ ハンドラーの一覧Teams次に示します。
 
-| 呼び出しの種類                    | ハンドラー                              | 内容                                                  |
+| 呼び出しの種類                    | ハンドラー                              | 説明                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
 | CardAction.Invoke               | `handleTeamsCardActionInvoke`       | このメソッドは、カード アクションの呼び出しアクティビティがコネクタから受信されると呼び出されます。 |
 | fileConsent/invoke              | `handleTeamsFileConsentAccept`      | このメソッドは、ユーザーがファイル同意カードを受け入れるときに呼び出されます。 |
@@ -295,7 +297,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 定義されているハンドラーの一覧には、 `ActivityHandler` 次のものが含まれます。
 
-| イベント | ハンドラー | 内容 |
+| イベント | ハンドラー | 説明 |
 | :-- | :-- | :-- |
 | 受信したアクティビティの種類 | `on_turn` | このメソッドは、受信したアクティビティの種類に基づいて、他のハンドラーのいずれかを呼び出します。 |
 | 受信したメッセージ アクティビティ | `on_message_activity` | このメソッドは、アクティビティを処理するためにオーバーライド `Message` できます。 |
@@ -311,7 +313,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 コア `TeamsActivityHandler` の Bot Framework ハンドラー セクションからハンドラーの一覧を拡張して、次の項目を含める。
 
-| イベント | ハンドラー | 内容 |
+| イベント | ハンドラー | 説明 |
 | :-- | :-- | :-- |
 | channelCreated | `on_teams_channel_created` | このメソッドは、作成中のチャネルを処理Teamsオーバーライドできます。 詳細については、「会話更新イベント[で作成されたチャネル](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created)[」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。 |
 | channelDeleted | `on_teams_channel_deleted` | このメソッドをオーバーライドして、削除するチャネルTeams処理できます。 詳細については、「会話の更新 [イベントで削除された](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) チャネル [」を参照してください](https://aka.ms/azure-bot-subscribe-to-conversation-events)。|
@@ -324,7 +326,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 アクティビティ ハンドラーからTeamsされる`on_invoke_activity`アクティビティ ハンドラーの一覧Teams次に示します。
 
-| 呼び出しの種類                    | ハンドラー                              | 内容                                                  |
+| 呼び出しの種類                    | ハンドラー                              | 説明                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
 | CardAction.Invoke               | `on_teams_card_action_invoke`       | このメソッドは、カード アクションの呼び出しアクティビティがコネクタから受信されると呼び出されます。 |
 | fileConsent/invoke              | `on_teams_file_consent_accept`      | このメソッドは、ユーザーがファイル同意カードを受け入れるときに呼び出されます。 |

@@ -5,12 +5,12 @@ ms.date: 11/15/2021
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e78746c226c8fa9e34f37e405f992f1bd7d2fd1
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 7aef6fff7e8d68e76f1a9233d3650d3833275bde
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399262"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464790"
 ---
 # <a name="microsoft-teams-javascript-client-sdk-v2-preview"></a>Microsoft Teams JavaScript クライアント SDK v2 プレビュー
 
@@ -365,7 +365,7 @@ TeamsJS SDK を一般化して、Office や Outlook などの他の Microsoft 36
 
 ## <a name="next-steps"></a>次の手順
 
-[また、「TeamsJS SDK v2 Preview changelog](https://github.com/OfficeDev/microsoft-teams-library-js/blob/2.0-preview/CHANGELOG.md)」および「[TeamsJS SDK v2 Preview API Reference](/javascript/api/overview/msteams-client?view=msteams-client-js-beta&preserve-view=true)」の変更点の詳細について説明します。
+[また、「TeamsJS SDK v2 Preview changelog](https://github.com/OfficeDev/microsoft-teams-library-js/blob/2.0-preview/packages/teams-js/CHANGELOG.md)」および「[TeamsJS SDK v2 Preview API Reference](/javascript/api/overview/msteams-client?view=msteams-client-js-beta&preserve-view=true)」の変更点の詳細について説明します。
 
 アプリで実行されているアプリをテストするTeams準備が整Outlook、Office参照してください。
 

@@ -4,12 +4,12 @@ description: シングル サインオン (SSO) について説明します
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication SSO Microsoft Azure Active Directory (Azure AD) single sign-on api
-ms.openlocfilehash: 63ffaa8ee11f728a262094f0300db37259f79a8d
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 4a7854ef9cefffab04026b3fe3257154cc81f7ac
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398891"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464811"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>タブのシングル サインオン (SSO) のサポート
 
@@ -22,7 +22,7 @@ ms.locfileid: "63398891"
 >
 > ✔Teams for iOS (_バージョン_: 2.0.18 以降)  
 >
-> ✔Teams JavaScript SDK (_バージョン_: 1.10 以降)。SSO が会議のサイド パネルで機能するようになります。
+> ✔Teams JavaScript SDK (_バージョン_: 1.11 以降)。SSO を会議のサイド パネルで機能させるために必要です。
 >
 > Teams を最適なパフォーマンスでご利用いただくために、最新バージョンの iOS および Android を使用してください。[!NOTE]
 > **クイックスタート**  

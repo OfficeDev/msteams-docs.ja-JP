@@ -5,12 +5,12 @@ description: Microsoft Teams のボットの概要。
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: a795ae8c75774f5f3814e5b664314c0f32f30bcb
-ms.sourcegitcommit: 58a24422bb04a529b6629a56803ed2efabc17cb1
+ms.openlocfilehash: 7d6996f023b6e9f706edd99429dd1575394a43f1
+ms.sourcegitcommit: 6189ca81099452a3ab2ff4fff4fb1ded5ba6dcfe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "62323198"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64498225"
 ---
 # <a name="bots-in-microsoft-teams"></a>Microsoft Teams のボット
 
@@ -37,13 +37,13 @@ ms.locfileid: "62323198"
 
 ボットは、会話インターフェイスを持つアプリです。 テキスト、対話型カード、音声を使用してボットと対話できます。 ボットの動作は、チャネルまたはグループ チャットの会話と 1 対 1 の会話で異なります。 会話は、Bot Framework コネクタを介して処理されます。 [会話の基本](~/bots/how-to/conversations/conversation-basics.md)を参照してください。
 
-ボットには、関連するコンテンツにアクセスし、ボットのエクスペリエンスを向上させるために、ユーザー プロファイルの詳細などのコンテキスト情報が必要です。 [Teams コンテキストを取得](~/bots/how-to/get-teams-context.md)を参照してください。
+ボットには、関連するコンテンツにアクセスし、ボットのエクスペリエンスを向上させるために、ユーザー プロファイルの詳細などのコンテキスト情報が必要です。「[Teams コンテキストを取得](~/bots/how-to/get-teams-context.md)」を参照してください。
 
 Graph API または Teams ボット API を使用して、ボットを介してファイルを送受信できます。 ボット[を介してファイルを送受信する方法](~/bots/how-to/bots-filesv4.md)を参照してください。
 
 レート制限は、Teams アプリケーションに使用されるボットを最適化するために使用されます。 Microsoft Teams とそのユーザーを保護するために、ボット API は受信要求のレート制限を提供します。 [Teamsでレート制限を使用してボットを最適化](~/bots/how-to/rate-limit.md)を参照してください。
 
-通話やオンライン会議用のMicrosoft Graph API により、Microsoft Teams アプリは音声とビデオを使用してユーザーと対話できるようになりました。 [通話と会議のボット](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)を参照してください。
+通話やオンライン会議用のMicrosoft Graph API により、Microsoft Teams アプリで音声とビデオを使用してユーザーと対話できるようになりました。「[通話と会議のボット](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)」を参照してください。
 
 Teams ボット API を使用して、チャットまたはチームのメンバーの情報を取得できます。 [チームまたはチャット メンバーをフェッチするための Teams ボット API に対する変更](~/resources/team-chat-member-api-changes.md)を参照してください。
 
@@ -64,6 +64,7 @@ Teams ボット API を使用して、チャットまたはチームのメンバ
 ## <a name="see-also"></a>関連項目
 
 * [Teams のボットを作成する](~/bots/how-to/create-a-bot-for-teams.md)
+* [Microsoft Teams ボットの仕組み](/azure/bot-service/bot-builder-basics-teams)
 * [Microsoft Teams の通話と会議ボットを登録する](~/bots/calls-and-meetings/registering-calling-bot.md)
 * [Teams ボットに認証を追加する](~/bots/how-to/authentication/add-authentication.md)
 * [ボットのアクティビティ ハンドラー](~/bots/bot-basics.md)

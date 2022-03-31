@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 1c4b219ed4f664e92d144b18c7aa3734c79c0c61
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.openlocfilehash: 55596671f6799145e5bd3de0d9ee4fb1b9ad4942
+ms.sourcegitcommit: 6189ca81099452a3ab2ff4fff4fb1ded5ba6dcfe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63464270"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64498218"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>Teams Toolkit を使用して新しい Teams アプリを作成する
 
@@ -34,13 +34,20 @@ Teams Toolkit を使用して新しい Teams アプリを作成するには、�
 
  1. Microsoft Visual Studio Code から **[Teams ツールキット]** を開きます。
  1. ツリービューで **[開発]** セクションを選択します。
- 1. **[サンプルを見る]** を選択します。 次の図に示すように、サンプル ギャラリーが表示されます。
+ 1. [**サンプルを表示**] を選択します。次の図に示すように、サンプル ギャラリーが表示されます。
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="[サンプルを見る]":::
 
 サンプルを探索してダウンロードし、アプリをローカルで実行するか、リモートで Teams web クライアントを利用してプレビューすることができます。 各サンプルの指示に従うか、**[GitHub で表示]** を選択して `TeamsFx Samples repository` 内でサンプルを開き、ソース コードを参照します。
 
 詳細については、「[新しい Teams タブ アプリを作成する (React)](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2)」を参照してください。
+
+## <a name="step-by-step-guides-using-teams-toolkit"></a>Teams ツールキットを使用したステップバイステップ ガイド
+
+* [Blazor を使用して Teams アプリを構築する](../sbs-gs-blazorapp.yml)
+* [React](../sbs-gs-javascript.yml) を使用して JavaScript で Teams アプリを構築する
+* [SPFx](../sbs-gs-spfx.yml) を使用して Teams アプリを構築する
+* [C# または .NETを使用して Teams アプリをビルドする](../sbs-gs-csharp.yml)
 
 ## <a name="see-also"></a>関連項目
 

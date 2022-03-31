@@ -5,12 +5,12 @@ keywords: 開発者ポータル チームの開始
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 52a6f925caa8296908febdb2b963edcf2de2eba3
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: c6c5ea448d8b1f793b2aa881c62325a1016f4508
+ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399325"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64511235"
 ---
 # <a name="manage-your-apps-with-the-developer-portal-for-microsoft-teams"></a>Microsoft Teams の開発者ポータルを使用してアプリを管理する
 
@@ -19,7 +19,9 @@ ms.locfileid: "63399325"
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="開発者ポータルのホーム ページを示すスクリーンショットTeams。":::
 
 > [!NOTE]
-> 現在、開発者ポータルは、Government Community Cloud (GCC)、GCC-High、または国防総省 (DOD) テナントでは使用できません。
+>
+> * 現在、開発者ポータルは、Government Community Cloud (GCC)、GCC-High、または国防総省 (DOD) テナントでは使用できません。
+> * ただし、通常のテナントを使用して、開発者ポータルでアプリをビルドし、アプリをダウンロードし、Microsoft Graphを使用して国内[クラウドにアプリを](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true)アップロードできます。 詳細については、「National [cloud deployments」を参照してください](/graph/deployments)。
 
 ## <a name="register-an-app"></a>アプリを登録します
 
@@ -71,17 +73,6 @@ ms.locfileid: "63399325"
 
 詳細については、「アプリの[配布」をTeamsしてください](~/concepts/deploy-and-publish/apps-publish-overview.md)。
 
-## <a name="analyze-your-apps-usage"></a>アプリの使用状況を分析する
-
-[概要 **] ページ** で、アプリのアクティブなユーザーの総数を確認できます。 これらの指標は、開発者ポータルを通じて Teams ストアまたは組織のアプリ カタログに発行され、アプリ ID にスコープを設定したアプリで使用できます。
-
-| 測定基準 | 定義 |
-| :-----------------------| :------------------------------------------------------------------------------------------------------|
-| *月次 R30* | 既定の使用状況メトリック。 UTC の 30 日間のローリング ウィンドウ内でアプリを使用した一意のアクティブ ユーザーの数が表示されます。 |
-| *毎日* | UTC で特定の日にアプリを使用した一意のアクティブ ユーザーの数を示します。 |
-
-過去 7 日間、30 日間、および 60 日間の月次および毎日の使用状況が表示されます。 24 ~ 48 時間以内に、特定の日の使用状況が反映されます。 新しいアプリの使用状況は、表示に最大で 3 ~ 5 日かかる場合があります。
-
 ## <a name="use-tools-to-create-app-features"></a>ツールを使用してアプリ機能を作成する
 
 また、開発者ポータルには、アプリの主要な機能を構築するためのTeamsがあります。 これらのツールの一部は次のとおりです。
@@ -92,4 +83,4 @@ ms.locfileid: "63399325"
 
 ## <a name="see-also"></a>関連項目
 
-[SaaS オファーをアプリにMicrosoft Teamsする](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+[Microsoft Teams アプリに SaaS オファーを含める](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

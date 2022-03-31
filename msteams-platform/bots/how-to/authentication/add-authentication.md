@@ -5,13 +5,13 @@ description: アプリケーションを使用して、OAuth 認証をボット�
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-keywords: リソース グループ ボット登録 Azure エミュレーター ボット マニフェスト
-ms.openlocfilehash: 8b624b36dca9a280ec35e062861a95513859c0c5
-ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
+keywords: リソース グループ ボット登録 Azure エミュレーター ボット マニフェストの展開
+ms.openlocfilehash: f0dafb52774c43a511076134d2b39b91de0743a7
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63493032"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464825"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Teams ボットに認証を追加する
 
@@ -436,7 +436,7 @@ and when for these, and just reference that from here, along with the set of ste
     1. ボット登録 **時に受信** したボット アプリ ID がに割り当てられているか確認します`id``botId`。
     1. この値を割り当てる。 `validDomains: [ "token.botframework.com" ]`
 1. 、および **ファイルを**`manifest.json`選択`outline.png`して圧縮`color.png`します。
-1. [ファイル **Microsoft Teams] を開きます**。
+1. **Microsoft Teams** を開きます。
 1. 左側のパネルで、下部にある [アプリ] アイコン **を選択します**。
 1. 右側のパネルの下部で、カスタム アプリアップロード **選択します**。
 1. フォルダーに移動し `TeamsAppManifest` 、圧縮されたマニフェストをアップロードします。
@@ -478,7 +478,7 @@ Microsoft Teams完全にクラウドベースの製品である場合、HTTPS �
 > [!NOTE]
 > ngrok を停止して再起動すると、URL が変更されます。 プロジェクトで ngrok を使用するには、使用している機能に応じて、すべての URL 参照を更新する必要があります。
 
-## <a name="additional-information"></a>ページの先頭へ
+## <a name="additional-information"></a>追加情報
 
 ### <a name="teamsappmanifestmanifestjson"></a>TeamsAppManifest/manifest.json
 

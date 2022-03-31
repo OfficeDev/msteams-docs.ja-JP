@@ -5,12 +5,12 @@ ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: Microsoft 365 apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 5370c9b5f273936c8afdd6c95e4e524dda3857ce
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: 829adc0d066b10ef9bce74c91abce27f3f7b061c
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63765947"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464818"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>個人用タブをTeamsに拡張Microsoft 365
 
@@ -120,8 +120,8 @@ Teams Toolkit を使用`@microsoft/teams-js`すると、コード変更の一部
 |Microsoft 365ホスト| frame-ancestor アクセス許可|
 |--|--|
 | Teams | `teams.microsoft.com` |
-| 事業所 | `*.office.com` |
-| Outlook | `outlook.office.com`, `outlook.office365.com` |
+| Office | `*.office.com` |
+| Outlook | `outlook.office.com`, `outlook.office365.com`, `outlook-sdf.office.com`, `outlook-sdf.office365.com` |
 
 ## <a name="update-azure-ad-app-registration-for-sso"></a>SSO Azure ADアプリ登録の更新
 
@@ -195,7 +195,7 @@ Teams 個人用タブをアップグレードし、Teams でサイドロード�
 
 :::image type="content" source="images/outlook-web-more-apps.png" alt-text="インストールされている個人用タブを表示するには、アプリのサイド バーの省略記号 ('more apps') outlook.com をクリックします。":::
 
-### <a name="office"></a>事業所
+### <a name="office"></a>Office
 
 デスクトップで実行中のアプリをOfficeするにはWindowsします。
 

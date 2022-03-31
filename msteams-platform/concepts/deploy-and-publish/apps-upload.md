@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 1db2f2933f2da47310468c5374b1b6a27b7fffbc
-ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
+ms.openlocfilehash: 4a866738f2fb52f5b6c66909648c145ad0e96767
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63675007"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464797"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Microsoft Teams でアプリをアップロードする
 
@@ -41,9 +41,6 @@ ms.locfileid: "63675007"
     :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Teams アプリのインストール ダイアログの例を示すスクリーンショット。":::
 
 1. **[追加]** を選択して、アプリを Microsoft Teams に追加します。
-
-    > [!NOTE]
-    > `onInstallationUpdateActivityAsync()` メソッドは、ボットを Microsoft Teams に追加するときに Microsoft Teams Locale を取得するために使用されます。
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 

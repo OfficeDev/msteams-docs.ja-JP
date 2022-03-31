@@ -5,12 +5,12 @@ keywords: teams ボット カード書式
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 0c374904c122cfd9c35680763b3fccd30fea6bbb
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: f48cecf9938710c40634c48299e3213e0475984a
+ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398737"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63727268"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams のカードの書式設定
 
@@ -665,3 +665,4 @@ Android で太字や斜体などの文字の書式設定が正しく表示され
 * [ボットでタスク モジュールを使用する](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [タスク モジュール](~/task-modules-and-cards/cards/cards-format.md)
 * [ボット メッセージの書式を設定する](~/bots/how-to/format-your-bot-messages.md)
+* [アダプティブ カードのスキーマ エクスプローラー](https://adaptivecards.io/explorer/TextBlock.html)

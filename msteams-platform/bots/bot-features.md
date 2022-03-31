@@ -5,12 +5,12 @@ description: ボットを構築するためのツールと SDK のMicrosoft Team
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 5a95159df887033bca339efd871261938aecb07d
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 1818ebfa102ce55d8243c16f460fa688fc67fdc3
+ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453888"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64464769"
 ---
 # <a name="bots-and-sdks"></a>ボットと SDK
 
@@ -50,7 +50,7 @@ ms.locfileid: "63453888"
 
 ## <a name="bots-with-webhooks-and-connectors"></a>Webhooks とコネクタを持つボット
 
-Webhooks とコネクタは、ボットを Web サービスに接続します。 Webhooks とコネクタを使用すると、ワークフローや他の簡単なコマンドの作成など、基本的な操作を行う簡単なボットを作成できます。 これらは、作成したチームでのみ使用できます。会社のワークフローに固有の単純なプロセスを対象とします。 詳細については、「 [webhooks とコネクタの機能」を参照してください](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)。
+Webhooks とコネクタは、ボットを Web サービスに接続します。 Webhooks とコネクタを使用すると、ワークフローや他の簡単なコマンドの作成など、基本的な操作用のボットを作成できます。 これらは、作成したチームでのみ使用できます。会社のワークフローに固有の単純なプロセスを対象とします。 詳細については、「 [webhooks とコネクタの機能」を参照してください](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)。
 
 ## <a name="advantages-of-bots"></a>ボットの利点
 
@@ -194,6 +194,7 @@ this.onMessage(async (context, next) => {
 |サンプルの名前 | 説明 | .NETCore | Node.js |
 |----------------|-----------------|--------------|----------------|
 | Teams 会話ボット | メッセージングおよび会話イベントの処理。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
+| ボット サンプル | ボット サンプルのセット | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore) | |
 
 ## <a name="next-step"></a>次の手順
 

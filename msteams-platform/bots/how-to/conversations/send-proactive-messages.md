@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
 Keywords: メッセージの送信、ユーザー ID の取得、チャネル ID の取得、会話 ID の取得
-ms.openlocfilehash: e62f5715017deac6919de6b0b70f83ff626fd64b
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: dc8c600c08c3f0e381a85aeef6c268ad8a5cbb96
+ms.sourcegitcommit: 6906ba7e2a6e957889530b0a117a852c43bc86a6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355735"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "63784010"
 ---
 # <a name="proactive-messages"></a>プロアクティブ メッセージ
 
@@ -287,3 +287,4 @@ POST /v3/conversations
 * [**Teams のプロアクティブ メッセージング コード サンプル**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
 * [ボットとのチャネルおよびグループ チャットの会話](~/bots/how-to/conversations/channel-and-group-conversations.md)
 * [タスク モジュールの送信アクションに応答する](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+* [ユーザーにプロアクティブ通知を送信する](/azure/bot-service/bot-builder-howto-proactive-message)
