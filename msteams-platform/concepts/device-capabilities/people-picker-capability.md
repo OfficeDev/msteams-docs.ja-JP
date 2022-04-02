@@ -1,62 +1,75 @@
 ---
 title: ユーザー ピッカーを統合する
-author: Rajeshwari-v
-description: JavaScript クライアント SDK Teamsを使用して People Picker コントロールを統合する方法
-keywords: ユーザー選択コントロール
+description: Teams JavaScript クライアント SDK を使用してユーザー ピッカー コントロールを統合する方法
+keywords: ユーザー ピッカー コントロール
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: b12cda18e8144c64e7b533af63f8a49283fff593
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.openlocfilehash: cd7039693b146abb53e938ba020077a48c343bda
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452999"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571462"
 ---
-# <a name="integrate-people-picker"></a>ユーザー ピッカーを統合する  
+# <a name="integrate-people-picker"></a>ユーザー ピッカーを統合する
 
-[ユーザー選択] は、ユーザーを検索して選択するコントロールです。 これは、プラットフォームで使用できるネイティブTeamsです。 ネイティブのユーザー選択Teamsコントロールを Web アプリと統合できます。 単一または複数の選択、および構成 (チャット、チャネル、組織全体での検索の制限など) を選択できます。
+ユーザー ピッカーは、ユーザーがユーザーを検索して選択できるようにする Teams の入力コントロールです。 入力コントロールユーザー ピッカー を Web アプリに統合できます。これにより、エンド ユーザーは、Teams 内のチャット、チャネル、組織全体のユーザーの検索や選択などのさまざまな機能を実行できます。 ユーザー ピッカー コントロールは、Web、デスクトップ、モバイルなど、すべての Teams クライアントで使用できます。
 
-JavaScript クライアント SDK [Microsoft Teams使用して、](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)`selectPeople`Web アプリ内にユーザー選択ツールを統合する API を提供します。
+[Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) を使用できます。これにより、`selectPeople` API を使用して、ユーザー ピッカー入力コントロールを Web アプリに統合できます。
 
-## <a name="advantages-of-integrating-the-native-people-picker"></a>ネイティブの People Picker を統合する利点
+## <a name="advantages-of-using-people-picker"></a>ユーザー ピッカーを使用する利点
 
-* ユーザー選択コントロールは、タスク モジュール、Teams、チャネル、会議タブ、個人用アプリなど、すべてのユーザー選択サーフェスで機能します。
-* このコントロールを使用すると、チャット、チャネル、または組織全体のユーザーを検索して選択できます。
-* ユーザー選択ウィンドウは、タスクの割り当て、タグ付け、ユーザーへの通知に関するシナリオに役立ちます。
-* この簡単に利用できるコントロールは、Web アプリで使用できます。 このようなコントロールを独自に構築する労力と時間を大幅に節約できます。
+* タスク モジュール、チャット、チャネル、会議タブ、個人用アプリなど、Teams のすべての機能で動作します。
+* ユーザーが Teams 内のチャット、チャネル、または組織全体のユーザーを検索して選択できるようにします。
+* タスクの割り当て、タグ付け、ユーザーへの通知に関連するシナリオで役立ちます。
+* 同様のコントロールを構築する場合と比較して、大幅な時間と労力を節約できます。
 
-ユーザー選択コントロールをアプリ`selectPeople`に統合するには、API を呼び出Teamsがあります。 効果的な統合を行う場合は、API を呼び出 [すコード スニペット](#code-snippet) について理解している必要があります。
-Web アプリのエラーを処理するには [、API](#error-handling) 応答エラーについて理解することが重要です。
-
-> [!NOTE]
-> 現在、Microsoft Teamsユーザー選択のサポートはモバイル クライアントでのみ利用できます。
+Teams アプリでユーザー ピッカー入力コントロールを統合するには、[`selectPeople`](#selectpeople-api) API を使用します。 API を統合して呼び出すには、付随する [code スニペット](#code-snippet) をよく理解している必要があります。 また、[API 応答エラー](#error-handling) についての知識も必要です。
 
 ## <a name="selectpeople-api"></a>`selectPeople` API
 
-`selectPeople`API を使用すると、web アプリTeamsネイティブなアプリ`People Picker input control`を追加できます。  
-API の説明は次のとおりです。
+`selectPeople` API を使用すると、Teams ユーザー ピッカー入力コントロールを Web アプリに追加したり、次の操作を行うこともできます。
 
-| API      | 説明  |
-| --- | --- |
-|**selectPeople**|ユーザー選択ツールを起動し、ユーザーがリストから 1 人または複数のユーザーを検索して選択できます。<br/><br/>この API は、選択したユーザーの ID、名前、電子メール アドレスを呼び出し元の Web アプリに返します。<br/><br/>個人用アプリの場合、コントロールは組織全体を検索します。 アプリがチャットまたはチャネルに追加された場合、シナリオに応じて検索コンテキストが構成されます。 検索は、そのチャット、チャネルのメンバー内で制限されている、または組織全体で利用できます。|
+* ユーザーがリストから 1 人以上のユーザーを検索して選択できるようにします。
+* 選択したユーザーの ID、名前、電子メール アドレスを Web アプリに返します。
 
-API `selectPeople` には、次の入力構成が付属しています。
+個人用アプリの場合、コントロールは Teams 内で組織全体の名前または電子メール ID を検索します。 アプリがチャットまたはチャネルに追加された場合、検索コンテキストはシナリオに基づいて構成されます。 検索は、そのチャットまたはチャネルのメンバー内で制限されます。
+
+`selectPeople` API には、次の入力構成が付属しています。
 
 |構成パラメーター|型|説明| 既定値|
 |-----|------|--------------|------|
-|`title`| 文字列| これはオプションのパラメーターです。 ユーザー選択コントロールのタイトルを設定します。 | ユーザーを選択する|
-|`setSelected`|文字列| これはオプションのパラメーターです。 事前に選択するMicrosoft Azure Active Directory (Azure AD) のユーザーの ID を渡す必要があります。 このパラメーターは、ユーザー選択コントロールの起動中にユーザーを事前に選択します。 1 つの選択の場合、最初の有効なユーザーだけが、残りのユーザーを無視して事前設定されます。 |Null|
-|`openOrgWideSearchInChatOrChannel`|Boolean | これはオプションのパラメーターです。 true に設定すると、アプリがチャットやチャネルに追加された場合でも、組織全体のスコープでユーザー選択を起動します。 |False|
-|`singleSelect`|Boolean|これはオプションのパラメーターです。 true に設定すると、選択を 1 人のユーザーにのみ制限するユーザー選択を起動します。 |False|
+|`title`|String| これは省略可能なパラメーターであり、ユーザー ピッカー コントロールのタイトルを設定します。|`selectPeople`|
+|`setSelected`|String| 省略可能なパラメーターです。 事前に選択したユーザーの Microsoft Azure Active Directory (Azure AD) ID を渡す必要があります。 このパラメーターは、ユーザー ピッカー入力コントロールの起動中にユーザーを事前に選択します。 1 つの選択の場合、最初の有効なユーザーのみが事前設定され、残りは無視されます。|**Null**|
+|`openOrgWideSearchInChatOrChannel`|Boolean| これは省略可能なパラメーターであり、TRUE に設定すると、アプリがチャットまたはチャネルに追加された場合でも、組織全体のスコープでユーザー ピッカーが起動されます。|**False**|
+|`singleSelect`|Boolean|これは省略可能なパラメーターであり、TRUE に設定すると、ユーザー ピッカーが起動され、選択が 1 人のユーザーのみに制限されます。|**False**|
 
-次の図は、サンプル Web アプリでの People Picker のエクスペリエンスを示しています。
+次の図は、モバイル デバイスとデスクトップでのユーザー ピッカーのエクスペリエンスを示しています。
 
-![ユーザー選択の Web アプリ エクスペリエンス](../../assets/images/tabs/people-picker-control-capability.png)
+# <a name="mobile"></a>[モバイル](#tab/Samplemobileapp)
 
-### <a name="code-snippet"></a>コード スニペット
+ユーザー ピッカー入力コントロールを使用すると、ユーザーは次の手順を使用してユーザーを検索して追加できます。
 
-**通話 `selectPeople` リスト** からユーザーを選択する API:
+1. 必要なユーザーの名前を入力します。 リストに名前の候補が表示されます。
+1. リストから必要なユーザーの名前を選択します。 
+
+   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="ピッカーとピッカー モバイル" border="true":::
+
+# <a name="desktop"></a>[デスクトップ](#tab/Sampledesktop)
+
+Web またはデスクトップ上のユーザー ピッカー コントロールは、Web アプリの上部にあるモーダル ウィンドウで起動され、ユーザーを追加するには、次の手順を使用します。
+
+1. 必要なユーザーの名前を入力します。 リストに名前の候補が表示されます。
+1. リストから必要なユーザーの名前を選択します。 
+
+   :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="デスクトップ名によるユーザー ピッカー" border="true":::
+
+---
+
+## <a name="code-snippet"></a>コード スニペット
+
+次のコード スニペットでは、`selectPeople` API ユーザーの使用をリストから表示します。
 
 ```javascript
  microsoftTeams.people.selectPeople((error: microsoftTeams.SdkError, people: microsoftTeams.people.PeoplePickerResult[]) => 
@@ -81,18 +94,18 @@ API `selectPeople` には、次の入力構成が付属しています。
 
 ## <a name="error-handling"></a>エラー処理
 
-Web アプリでエラーを適切に処理する必要があります。 次の表に、エラー コードとエラーが生成される条件を示します。
+次の表に、エラー コードとその説明を示します。
 
-|エラー コード |  エラー名     | 条件|
-| --------- | --------------- | -------- |
+|エラー コード |  エラー名     | 説明|
+| --------- | --------------- | --------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API は現在のプラットフォームではサポートされていません。|
-| **500** | INTERNAL_ERROR | ユーザー選択の起動中に内部エラーが発生しました。|
-| **4000** | INVALID_ARGUMENTS | API は、間違った引数または不十分な必須引数を使用して呼び出されます。|
+| **500** | 内部エラーです(_E) | ユーザー ピッカーの起動中に内部エラーが発生しました。|
+| **4000** | 引数が無効です | API が間違った引数または不十分な必須引数で呼び出されました。|
 | **8000** | USER_ABORT |ユーザーが操作を取り消しました。|
-| **9000** | OLD_PLATFORM | ユーザーは、API の実装が存在しない古いプラットフォーム ビルドに存在します。  ビルドをアップグレードすると、問題が解決します。|
+| **9000** | OLD_PLATFORM | ユーザーは、API の実装が利用できない古いプラットフォーム ビルドを使用しています。 問題を解決するには、ビルドの最新バージョンにアップグレードしてください。|
 
 ## <a name="see-also"></a>関連項目
 
 * [Teams でメディア機能を統合する](mobile-camera-image-permissions.md)
-* [QR コードまたはバーコード スキャナー機能をアプリに統合Teams](qr-barcode-scanner-capability.md)
+* [Teams で QR コードまたはバーコード スキャナー機能を統合する](qr-barcode-scanner-capability.md)
 * [Teams で位置情報機能を統合する](location-capability.md)

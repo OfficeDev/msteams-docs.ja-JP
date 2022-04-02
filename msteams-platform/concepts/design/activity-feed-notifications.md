@@ -1,16 +1,16 @@
 ---
 title: アクティビティ フィード通知の設計
 author: heath-hamilton
-description: アプリのアクティビティ フィード通知を設計し、Teams UI キットをMicrosoft Teamsする方法について学習します。
+description: アプリのアクティビティ フィード通知を設計し、Teams UI キットTeamsする方法について学習します。 C のチャネルTeams通知をVisual Studioする#
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: d566def261d6fd1177fed46c31466d248c8e5e3b
-ms.sourcegitcommit: 22c9e44437720d30c992a4a3626a2a9f745983c1
+ms.openlocfilehash: 06e6b0ed28208f9ce446a0fc037b7477a562c596
+ms.sourcegitcommit: a85b4ae65b87006bb2e2e50ea902eb97291e83a8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60719918"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64612623"
 ---
 # <a name="designing-activity-feed-notifications-for-your-microsoft-teams-app"></a>アプリのアクティビティ フィード通知をMicrosoft Teamsする
 
@@ -18,11 +18,11 @@ ms.locfileid: "60719918"
 
 # <a name="mobile"></a>[モバイル](#tab/mobile)
 
-:::image type="content" source="../../assets/images/activity-feed/mobile-overview.png" alt-text="例は、モバイルのアクティビティ フィードのTeamsアプリ通知を示しています。" border="false":::
+:::image type="content" source="../../assets/images/activity-feed/mobile-overview.png" alt-text="例は、モバイルのアクティビティ フィードTeams表示するアプリ通知を示しています。" border="false":::
 
 # <a name="desktop"></a>[デスクトップ](#tab/desktop)
 
-:::image type="content" source="../../assets/images/activity-feed/desktop-overview.png" alt-text="例では、アクティビティ フィードに表示されるアプリ通知Teams示します。" border="false":::
+:::image type="content" source="../../assets/images/activity-feed/desktop-overview.png" alt-text="たとえば、アプリの通知がアクティビティ フィードTeams表示されます。" border="false":::
 
 ---
 
@@ -37,7 +37,7 @@ ms.locfileid: "60719918"
 |3|**タイトル (最初の行): Actor + Reason**: *Actor*: アクティビティを開始したユーザーまたはアプリの名前。 *理由*: アクティビティについて説明します。|
 |4|**タイムスタンプ**: アクティビティが発生した日時を示します。|
 |5|**場所 (2 行目)**: アクティビティが 2 行目で発生した場所Teams。|
-|6 |**テキスト プレビュー (3 行目)**: 通知の開始から切り捨てられた行を表示します。|
+|6 |**テキスト プレビュー (3 行目):** 通知の開始から切り捨てられた行を表示します。|
 
 ## <a name="types-of-activity-feed-notification-cards"></a>アクティビティ フィード通知カードの種類
 

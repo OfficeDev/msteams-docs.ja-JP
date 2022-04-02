@@ -1,23 +1,23 @@
 ---
-title: CI または CD アプリケーション開発者向Teamsサポート
+title: アプリケーション開発者向けの CI または CD パイプライン テンプレートGitHub Azure Devops、Jenkins で使用するTeams説明します。
 author: MuyangAmigo
 description: CICD テンプレート
 ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 4db593c82ef2efb97b99fbb2a00b88bc622394d6
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 5fa12248969f589282ecf8fd80c4d908ff42e8d8
+ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453412"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64614538"
 ---
 # <a name="cicd-guide"></a>CI/CD ガイド
 
 TeamsFx は、アプリケーションの構築中に開発ワークフローをTeamsします。 このドキュメントには、CI または CD パイプラインのセットアップを開始するためのツールとテンプレートが記載されています。GitHub Azure Devops、Jenkins を使用します。
 
-|ツールとテンプレート|[説明]|
+|ツールとテンプレート|説明|
 |---|---|
 |[teamsfx-cli-action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub TeamsFx CLI と統合するアクション。|
 |[github-ci-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-ci-template.yml) と [github-cd-template.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/github-cd-template.yml)| GitHubアプリの CI または CD テンプレートTeamsします。 |
@@ -47,7 +47,7 @@ TeamsFx は、アプリケーションの構築中に開発ワークフローを
 以下の手順を実行して、CD ワークフローをカスタマイズします。
 
 1. 既定では、新しいコミットがブランチに対して行われたときに、CD ワークフローがトリガー `main` されます。
-1. 環境GitHub[リポジトリ シークレットを作成](https://docs.github.com/en/actions/reference/encrypted-secrets)して、Azure サービス プリンシパルを保持し、Microsoft 365ログイン資格情報を保持します。 詳細については、「GitHub [アクション」を参照してください](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md)。
+1. 環境GitHub[リポジトリ シークレットを作成](https://docs.github.com/en/actions/reference/encrypted-secrets)して、Azure サービス プリンシパルを保持し、Microsoft 365ログイン資格情報を保持します。 詳細については、「GitHub Actions」[を参照してください](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md)。
 1. 必要に応じてビルド スクリプトを変更します。
 1. 必要に応じてテスト スクリプトを削除します。
 
@@ -224,7 +224,7 @@ steps:
 |`M365_ACCOUNT_PASSWORD`|アカウントのパスワードMicrosoft 365します。|
 |`M365_TENANT_ID`|アプリが作成または発行されるテナントTeams識別します。 マルチテナント アカウントを持ち、別のテナントを使用する場合を指定しない限り、この値は省略可能です。 テナント ID を[検索する方法の詳細Microsoft 365参照してください](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)。|
 
-## <a name="get-started-guide-for-other-platforms"></a>他のプラットフォームのガイドを開始する
+## <a name="get-started-guide-for-other-platforms"></a>概要プラットフォームの詳細ガイド
 
 リストされている定義済みの bash スクリプトの例に従って、他のプラットフォームで CI または CD パイプラインをビルドおよびカスタマイズできます。
 
@@ -274,7 +274,7 @@ Azure サービス プリンシパルを作成するには、次の手順を実�
 
 ### <a name="see-also"></a>関連項目
 
-* [[クイック スタート] GitHubアクション](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
+* [クイック スタートのGitHub Actions](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
 * [最初のパイプラインをAzure DevOpsする](/azure/devops/pipelines/create-first-pipeline)
 * [最初の Jenkins パイプラインを作成する](https://www.jenkins.io/doc/pipeline/tour/hello-world/)
 * [Microsoft Teams の開発者ポータルを使用してアプリを管理する](/concepts/build-and-test/teams-developer-portal)

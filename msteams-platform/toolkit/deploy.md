@@ -1,19 +1,19 @@
 ---
-title: クラウドへの展開
+title: クラウドにデプロイする
 author: MuyangAmigo
 description: アプリをクラウド、Azure、またはクラウドに展開SharePoint
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 2e2d288340f3a806857f1e62ae832be0e6c4068c
-ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
+ms.openlocfilehash: 35a60e718bb97cdcc24de66729e3929b2d21a59f
+ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63558818"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64614531"
 ---
-# <a name="deploy-to-the-cloud"></a>クラウドへの展開
+# <a name="deploy-to-the-cloud"></a>クラウドにデプロイする
 
 Teams Toolkitアプリケーションのフロントエンドコードとバックエンド コードを Azure でプロビジョニングされたクラウド リソースに展開またはアップロードするのに役立ちます。
 
@@ -52,6 +52,7 @@ Teams Toolkitアプリケーションのフロントエンドコードとバッ�
 ## <a name="see-also"></a>関連項目
 
 * [クラウド リソースの追加](add-resource.md)
+* [Azure クラウド サービスの作成と展開](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
 * [アプリの機能Teams追加する](add-capability.md)
 * [CI/CD パイプラインを使用してプロジェクト コードを展開する](use-CICD-template.md)
 * [複数の環境を管理する](TeamsFx-multi-env.md)

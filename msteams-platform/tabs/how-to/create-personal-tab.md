@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET MVC パッケージ appmanifest 会話ドメインのアクセス許可ストア
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 43302047a3c5712a17e2bc506eca2eeb350db825
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.openlocfilehash: 25eb2c75ea59c52cb7fb8878e3cfddde02f0db6d
+ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571365"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64614545"
 ---
 # <a name="create-a-personal-tab"></a>プライベート タブを作成する
 
@@ -23,8 +23,6 @@ ms.locfileid: "64571365"
 ::: zone pivot="node-java-script"
 
 ## <a name="create-a-personal-tab-with-nodejs"></a>ユーザー設定で個人用タブを作成Node.js
-
-ユーザー設定を使用して個人用タブを作成Node.js
 
 1. コマンド プロンプトで、次のコマンドを入力して [Yeoman](https://yeoman.io/) パッケージと [gulp-cli](https://www.npmjs.com/package/gulp-cli) パッケージをインストールし、次のコマンドをインストールNode.js。
 
@@ -178,8 +176,8 @@ ms.locfileid: "64571365"
     {
         "entityId": "personalTab",
         "name": "Personal Tab ",
-        "contentUrl": "https://{{HOSTNAME}}/<yourDefaultTabNameTab>/personal.html",
-        "websiteUrl": "https://{{HOSTNAME}}",
+        "contentUrl": "https://{{PUBLIC_HOSTNAME}}/<yourDefaultTabNameTab>/personal.html",
+        "websiteUrl": "https://{{PUBLIC_HOSTNAME}}",
         "scopes": ["personal"]
     }
     ```
@@ -279,8 +277,6 @@ gulp ngrok-serve
 ::: zone pivot="razor-csharp"
 
 ## <a name="create-a-personal-tab-with-aspnet-core"></a>ユーザー設定で個人用タブを作成 ASP.NET Core
-
-カスタムの個人用タブは、Razor ページを使用してC#作成 ASP.NET Core作成できます。 ユーザー設定で個人用タブを作成 ASP.NET Core
 
 1. コマンド プロンプトで、タブ プロジェクトの新しいディレクトリを作成します。
 
@@ -444,8 +440,6 @@ ngrok http 3978 --host-header=localhost
 ::: zone pivot="mvc-csharp"
 
 ## <a name="create-a-personal-tab-with-aspnet-core-mvc"></a>MVC を使用して個人用タブ ASP.NET Coreする
-
-MVC を使用してカスタム個人用タブC#作成 ASP.NET Coreできます。 MVC を使用して個人用タブを ASP.NET Coreするには
 
 1. コマンド プロンプトで、タブ プロジェクトの新しいディレクトリを作成します。
 
