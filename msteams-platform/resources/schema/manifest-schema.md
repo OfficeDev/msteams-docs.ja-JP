@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: 14f1bdaa546fd18612e9869efc2f1216c1aef8db
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 3117195b697061b4199ac629f73d8ffd2d93cd6a
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453769"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590746"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参照: Microsoft Teams のマニフェスト スキーマ
 
@@ -807,6 +807,9 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 ## <a name="authorization"></a>承認
 
 **省略可能** — オブジェクト
+
+> [!NOTE]
+> `manifestVersion` プロパティを **1.12** に設定した場合、承認プロパティは以前のバージョンのマニフェストと互換性がありません。 承認はマニフェスト バージョン 1.12 でサポートされています。
 
 アプリの承認に関する情報を指定して統合します。
 

@@ -4,12 +4,12 @@ description: Teams の Bot で使用できるすべてのカードとカード �
 ms.localizationpriority: high
 keywords: Bot のカード リファレンス
 ms.topic: reference
-ms.openlocfilehash: 4bd890268641de5c228f77c8b65e5e93fcf66094
-ms.sourcegitcommit: f9dc32566e87ffc1b2d2bd45f1388aae8f5c9083
+ms.openlocfilehash: 2eab0ee575efb1abf0aed025243d3e4d891b60fd
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63558830"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571496"
 ---
 # <a name="types-of-cards"></a>カードの種類
 
@@ -269,6 +269,20 @@ App Studio からヒーロー カード、サムネイル カード、アダプ�
 
 #### <a name="additional-information-on-adaptive-cards"></a>アダプティブ カードの追加情報
 
+アダプティブ カードでは、ドル記号 ($) と中かっこを使用して動的な値を渡すことができます。 詳細については、「[アダプティブ カード のテンプレート作成](/adaptive-cards/templating/)」を参照してください。
+
+例:
+
+```json
+{ 
+ "type": "TextBlock",
+ "text": "${titleText}",
+ "size": "default",
+ "weight": "bolder"
+}
+
+```
+
 以下の Bot Framework リファレンスを参照してください。
 
 * [アダプティブ カード ノード](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
@@ -361,7 +375,7 @@ App Studio からヒーロー カード、サムネイル カード、アダプ�
 
 次の表に、リスト カードのプロパティを示します:
 
-| プロパティ | 種類  | 説明 |
+| プロパティ | 型  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。|
 | アイテム | リスト アイテムの配列 | カードに適用可能なアイテムのセット。|
@@ -439,7 +453,7 @@ App Studio からヒーロー カード、サムネイル カード、アダプ�
 
 次の表に、Office 365 コネクタ カードのプロパティを示します。
 
-| プロパティ | 種類  | 説明 |
+| プロパティ | 型  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。 |
 | 概要 | リッチ テキスト | カードの概要。 最大 2 行。 |
@@ -656,7 +670,7 @@ Teams のサインイン カードは Bot Framework のサインイン カード
 
 次の表に、サムネイル カードのプロパティを示します:
 
-| プロパティ | 種類  | 説明 |
+| プロパティ | 型  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。|
 | サブタイトル | リッチ テキスト | カードのサブタイトル。 最大 2 行。|

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: Teams タブの送信 Webhook アクション可能メッセージの確認 Webhook
-ms.openlocfilehash: c849fd10c19a7af198147cb39fa90c2fdd5052a8
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 8450f9411e2fa5b1e0af624f48882016951f24a7
+ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399108"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64590690"
 ---
 # <a name="create-outgoing-webhook"></a>送信 Webhook を作成する
 
@@ -127,6 +127,7 @@ ms.locfileid: "63399108"
 >
 > * アダプティブ カード、ヒーロー カード、テキスト メッセージは、送信 Webhook で添付ファイルとして送信できます。
 > * カードでは、書式設定がサポートされています。詳細については、「[マークダウンを使用したカードの書式設定](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#format-cards-with-markdown)」を参照してください。
+> * 送信 Webhook のアダプティブ カードは、`openURL` 件のカード アクションのみをサポートします。
 
 以下のコードは、アダプティブ カードの応答例です。
 

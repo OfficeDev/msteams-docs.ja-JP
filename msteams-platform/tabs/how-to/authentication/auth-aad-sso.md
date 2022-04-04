@@ -4,12 +4,12 @@ description: シングル サインオン (SSO) について説明します
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication SSO Microsoft Azure Active Directory (Azure AD) single sign-on api
-ms.openlocfilehash: 4a7854ef9cefffab04026b3fe3257154cc81f7ac
-ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
+ms.openlocfilehash: 8ac1e44ecb36d3b863a6800b0167ce7ec9ce1803
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64464811"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571321"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>タブのシングル サインオン (SSO) のサポート
 
@@ -83,7 +83,10 @@ Azure AD ポータルからアプリを登録するには、次の手順に従�
 1. [**管理**] で [**API の公開**] を選択します。
 
     > [!NOTE]
-    > ボットとタブを使用してアプリをビルドしている場合は、アプリケーション ID URI と `api://fully-qualified-domain-name.com/botid-{YourBotId}` に入力します。
+    >
+    > * ボットとタブを使用してアプリをビルドしている場合は、アプリケーション ID URI と `api://fully-qualified-domain-name.com/botid-{YourBotId}` に入力します。
+    >
+    > * ドメイン名には小文字を使用し、大文字は使用しないでください。 たとえば、アプリ サービス または Web アプリを作成するため、基本リソース名を `demoapplication` と入力すると、URL は `https://demoapplication.azurewebsites.net` になります。 ただし、基本リソース名を `DemoApplication` として使用すると、URL は `https://DemoApplication.azurewebsites.net` になり、デスクトップ、Web、iOS ではサポートされますが、Android ではサポートされません。
 
 1. **[設定]** リンクを選択して、`api://{AppID}` の形式でアプリケーション ID URIを生成します。 ダブル スラッシュと GUID の間に完全修飾ドメイン名 (末尾にスラッシュ "/" を付けて) を挿入します。 ID 全体の形式は `api://fully-qualified-domain-name.com/{AppID}` である必要があります。 ² たとえば、`api://subdomain.example.com/00000000-0000-0000-0000-000000000000`。 完全修飾ドメイン名は、アプリを提供する人間が判読できるドメイン名です。 ngrok などのトンネリング サービスを使用している場合は、ngrok サブドメインが変更される度にこの値を更新する必要があります。
 1. **[スコープの追加]** を選択します。開いたパネルで、**access_as_user** と **スコープ名** に入力します。

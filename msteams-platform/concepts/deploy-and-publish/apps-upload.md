@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 4a866738f2fb52f5b6c66909648c145ad0e96767
-ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
+ms.openlocfilehash: a9ac73d3c3e41c5c57892273e788855a16642457
+ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64464797"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64571109"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Microsoft Teams でアプリをアップロードする
 
@@ -33,14 +33,16 @@ ms.locfileid: "64464797"
 
 アプリのスコープの構成方法に応じて、チーム、チャット、会議、または個人用にアプリをサイドロードできます。
 
-1. [Microsoft 365開発アカウント](~/build-your-first-app/build-and-run.md#prerequisites)を使用して Teams クライアントにログインします。
+1. [Microsoft 365開発アカウント](https://developer.microsoft.com/en-us/microsoft-365/dev-program)を使用して Teams クライアントにログインします。
 1. **[アプリ]** を選択し、**[アプリの管理]** を選択します。
 1. **[カスタム アプリをアップロードする]** を選択します。
-1. アプリ パッケージの .zip ファイルを選択し、次の画面が表示されます:
+1. アプリ パッケージの .zip ファイルを選択します。
+2. 要件に従ってアプリを Teams に追加します。</br>
 
-    :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Teams アプリのインストール ダイアログの例を示すスクリーンショット。":::
+   a. **［追加］** を選択して、個人用アプリを追加します。</br>
+   b. ドロップダウン メニューを使用して、アプリをチームまたはチャットに追加します。
 
-1. **[追加]** を選択して、アプリを Microsoft Teams に追加します。
+![Teams アプリを作成する](~/assets/videos/app-teams.gif)
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 
@@ -63,7 +65,9 @@ Teams には、アプリを開く方法がいくつか用意されています�
 アプリを削除するには、Teams のアプリ アイコンを右クリックし、**[アンインストール]** を選択します。
 
 > [!NOTE]
-> 個人のボット アクティビティを完全に削除することはできません。アプリを削除してもう一度追加すると、ボットとの新しい通信が以前の会話に追加されます。
+>
+> * 個人のボット アクティビティを完全に削除することはできません。アプリを削除してもう一度追加すると、ボットとの新しい通信が以前の会話に追加されます。
+> * 現在、カスタム アプリを Teams ストアに移行することはできません。 アプリを Teams ストアにリスト表示する場合は、「[Microsoft Teams ストアにアプリを公開する](appsource/publish.md)」 を参照してください。
 
 ## <a name="next-step"></a>次のステップ
 
