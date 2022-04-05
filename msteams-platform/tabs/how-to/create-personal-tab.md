@@ -7,13 +7,8 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET MVC パッケージ appmanifest 会話ドメインのアクセス許可ストア
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 25eb2c75ea59c52cb7fb8878e3cfddde02f0db6d
-ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64614545"
 ---
+
 # <a name="create-a-personal-tab"></a>プライベート タブを作成する
 
 [個人] タブは、個人を対象としたボットと共に、個人用アプリの一部であり、1 人のユーザーを対象としています。 左ウィンドウにピン留めして、簡単にアクセスできます。 個人用タブの [API の順序](#reorder-static-personal-tabs)を[変更`registerOnFocused`して](#add-registeronfocused-api-for-tabs-or-personal-apps)追加することもできます。
@@ -262,7 +257,7 @@ gulp ngrok-serve
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="個人用タブの追加" border="true":::
 
-1. ポップアップ **ウィンドウで** [追加] を選択します。 タブがアップロードされ、Teams。
+1. ダイアログで **[追加** ] を選択します。 タブがアップロードされ、Teams。
 
     :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="アップロードされた個人用タブ" border="true":::
 
@@ -370,14 +365,14 @@ ASP.NET Core Index と呼ばれるファイルを **サイトの既定** また�
 
 ### <a name="update-and-run-your-application"></a>アプリケーションを更新して実行する
 
-1. **PagesShared フォルダー** > **に移動** し、**_Layout.cshtml** を開き、タグ セクションに次を`<head>`追加します。
+1. [Visual Studio ソリューション エクスプローラー開き、**PagesShared**  >  フォルダーに移動し、**_Layout.cshtml** を開き、[タグ] セクションに次の項目を`<head>`追加します。
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. **Pages フォルダーから PersonalTab.cshtml** を **開** き、タグ`microsoftTeams.initialize()`を追加して`<script>`保存します。
+1. このVisual Studio ソリューション エクスプローラー **Pages フォルダーから PersonalTab.cshtml** を **開** き、タグ`microsoftTeams.initialize()`を追加して`<script>`保存します。
 
 1. [Visual Studio **F5] を選択するか****、アプリケーションの** [デバッグ] メニューから [デバッグの開始] **を選択** します。
 
@@ -391,7 +386,7 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="update-your-app-package-with-developer-portal"></a>開発者ポータルでアプリ パッケージを更新する
 
-1. [開発者ポータル **] に** 移動Teams。
+1. [開発者ポータル [**] に移動します**](https://dev.teams.microsoft.com/home)。
 
 1. [アプリ **] を開** き、[アプリの **インポート] を選択します**。
 
@@ -411,23 +406,17 @@ ngrok http 3978 --host-header=localhost
 
 1. アプリ **の URL で、** プライバシー ポリシーを更新し `https://<yourngrokurl>/privacy` 、使用条件を更新して `https://<yourngrokurl>/tou` 保存します。
 
-1. [ **アプリの機能] で**、[個人用アプリ] を選択し、[名前] を入力してコンテンツ **URL を更新** します `https://<yourngrokurl>/personalTab`。 [Web サイトの URL] フィールドは空白のままにします。
+1. [ **アプリの機能]** で、[ **個人用アプリ** > **を** 作成する] タブを選択し、[名前] を入力してコンテンツ **URL を更新** します `https://<yourngrokurl>/personalTab`。 [Web サイトの URL] フィールドを空白のままにし **、ドロップダウン リスト** から [Context as personalTab] を選択し、[追加] を **選択します**。
 
-1. **[保存]** を選択します。
+1. [**保存**] を選択します。
 
 1. [ドメイン] セクションでは、タブのドメインに HTTPS プレフィックスのない ngrok URL が含まれている必要があります `<yourngrokurl>.ngrok.io`。
 
 ### <a name="preview-your-app-in-teams"></a>アプリをプレビュー Teams
 
-1. [開発者 **ポータル] ツール バー Teams**[プレビュー] を選択します。 開発者ポータルは、アプリが正常にサイドロードされたことを通知します。
+1. [**開発者ポータル] Teams** [プレビュー] を選択すると、アプリが正常にサイドロードされたことを開発者ポータルから通知されます。 アプリ **の [** 追加] ページが [アプリ] Teams。
 
-1. [アプリ **の管理] を選択します**。 アプリがサイドロードされたアプリに表示されます。
-
-1. 検索を使用してアプリを検索し、行の 3 ドットを選択します。
-
-1. [表示] **オプションを** 選択します。 アプリ **の [** 追加] ページが表示されます。
-
-1. [追加 **] を** 選択して、タブを [Teams] に読み込Teams。 タブは、このタブでTeams。
+1. [追加 **] を** 選択してタブを読み込Teams。 タブは、このタブでTeams。
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="[既定] タブ" border="true":::
 
@@ -545,14 +534,14 @@ public void Configure(IApplicationBuilder app)
 
 ### <a name="update-and-run-your-application"></a>アプリケーションを更新して実行する
 
-1. **[ViewsShared** > **] フォルダーに移動** し、**_Layout.cshtml** を開き、[タグ] セクションに次の項目を`<head>`追加します。
+1. [Visual Studio ソリューション エクスプローラーを開き、**ViewsShared**  >  フォルダーに移動し、**_Layout.cshtml** を開き、次の項目を [タグ] セクションに`<head>`追加します。
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. **ViewsPersonalTab フォルダーから PersonalTab.cshtml** >  を開き、タグ内`microsoftTeams.initialize()`に追加して`<script>`保存します。
+1. このVisual Studio ソリューション エクスプローラー **ViewsPersonalTab** フォルダーから **PersonalTab.cshtml**  >  を開き、タグ`microsoftTeams.initialize()`内に追加して`<script>`保存します。
 
 1. [Visual Studio **F5] を選択するか****、アプリケーションの** [デバッグ] メニューから [デバッグの開始] **を選択** します。
 
@@ -566,7 +555,7 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="update-your-app-package-with-developer-portal"></a>開発者ポータルでアプリ パッケージを更新する
 
-1. [開発者ポータル **] に** 移動Teams。
+1. [開発者ポータル [**] に移動します**](https://dev.teams.microsoft.com/home)。
 
 1. [アプリ **] を開** き、[アプリの **インポート] を選択します**。
 
@@ -586,21 +575,15 @@ ngrok http 3978 --host-header=localhost
 
 1. アプリ **の URL で、** プライバシー ポリシーを更新し `https://<yourngrokurl>/privacy` 、使用条件を更新して `https://<yourngrokurl>/tou` 保存します。
 
-1. [ **アプリの機能] で**、[個人用アプリ] を選択し、[名前] を入力してコンテンツ **URL を更新** します `https://<yourngrokurl>/personalTab`。 [Web サイトの URL] フィールドは空白のままにします。
+1. [ **アプリの機能]** で、[ **個人用アプリ** > **を** 作成する] タブを選択し、[名前] を入力してコンテンツ **URL を更新** します `https://<yourngrokurl>/personalTab`。 [Web サイトの URL] フィールドを空白のままにし **、ドロップダウン リスト** から [Context as personalTab] を選択し、[追加] を **選択します**。
 
-1. **[保存]** を選択します。
+1. [**保存**] を選択します。
 
 1. [ドメイン] セクションで、タブのドメインには、HTTPS プレフィックスのない ngrok URL が含まれている必要があります `<yourngrokurl>.ngrok.io`。
 
 ### <a name="preview-your-app-in-teams"></a>アプリをプレビュー Teams
 
-1. [開発者 **ポータル] ツール バー Teams**[プレビュー] を選択します。 開発者ポータルは、アプリが正常にサイドロードされたことを通知します。
-
-1. [アプリ **の管理] を選択します**。 アプリがサイドロードされたアプリに表示されます。
-
-1. 検索を使用してアプリを検索し、その行で 3 ドットを選択します。
-
-1. [表示 **] オプションを** 選択します。 アプリ **の [** 追加] ページが表示されます。
+1. [**開発者ポータル] Teams** [プレビュー] を選択すると、アプリが正常にサイドロードされたことを開発者ポータルから通知されます。 アプリ **の [** 追加] ページが [アプリ] Teams。
 
 1. [追加 **] を** 選択して、タブを [Teams] に読み込Teams。 タブは、このタブでTeams。
 
@@ -701,11 +684,11 @@ this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
 
 :::image type="content" source="../../assets/images/personal-apps/registerfocus-backward-event.png" alt-text="例では、registerOnFocussed API の後方移動を追加するためのオプションを示しています" border="true":::
 
-### <a name="tab"></a>タブ
+### <a name="tab"></a>Tab
 
 :::image type="content" source="../../assets/images/personal-apps/registerfocus-tab.png" alt-text="例は、tab に registerOnFocussed API を追加するためのオプションを示しています" border="true":::
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)

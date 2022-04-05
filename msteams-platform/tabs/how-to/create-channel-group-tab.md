@@ -6,13 +6,8 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 7d74a49ff85986b27ec30eeffbc15ca836a6a94b
-ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64590671"
 ---
+
 # <a name="channel-or-group-tab"></a>[チャネルまたはグループ] タブ
 
 チャネル/グループ タブは、コンテンツをチャネルやグループのチャットに配信します。また、専用の Web ベースのコンテンツまわりに関する共同作業スペースを作成するのに優れた方法です。
@@ -171,7 +166,7 @@ gulp build
 
     :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="[既定] タブ" border="true":::
 
-1. タブ構成ページを表示するには、 に移動します `https://localhost:3007/<yourDefaultAppNameTab>/config.html`。 次に示します。
+1. タブ構成ページを表示するには、 に移動します `http://localhost:3007/<yourDefaultAppNameTab>/config.html`。 次に示します。
 
     :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="タブ構成ページ" border="true":::
 
@@ -198,7 +193,7 @@ gulp ngrok-serve
     
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="[アップロードされたチャネル] タブ" border="true":::
 
-1. ポップアップ **ウィンドウで** [追加] を選択します。 タブがアップロードされ、Teams。
+1. ダイアログで **[追加** ] を選択します。 タブがアップロードされ、Teams。
     
     > [!NOTE]
     > [  **追加]** がダイアログ ボックスに表示されない場合は、アップロードしたアプリ パッケージの zip フォルダーのマニフェストから次のコードを削除します。 もう一度フォルダーを圧縮し、フォルダーにTeams。
@@ -210,11 +205,12 @@ gulp ngrok-serve
     >"composeExtensions": [],
     >```
 
-1. チームに戻り、タブ➕を追加するチャネルを選択し、タブ バーから選択し、リストからタブを選択します。
-1. タブを追加するには、指示に従います。チャネルまたはグループ タブのカスタム構成ダイアログ ボックスがあります。
+1. タブを追加するには、指示に従います。チャネルまたはグループ タブのカスタム構成ダイアログがあります。
 1. [ **保存] を** 選択すると、タブがチャネルのタブ バーに追加されます。
 
     :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="チャネル タブのアップロード" border="true":::
+    
+    これで、チャネルまたはグループ タブが完全に作成され、追加Teams。
 
 ::: zone-end
 
@@ -245,7 +241,7 @@ gulp ngrok-serve
 
 1. Microsoft-Teams-Samplessamplestab-channel-grouprazor-csharp  >  >  >  フォルダーに移動し、**channelGroupTab.sln を開きます**。
 
-1. このVisual Studio **F5** キーを押するか、アプリケーションの  [デバッグ] メニューから [デバッグの開始] を選択して、アプリケーションが正しく読み込まれたか確認します。 ブラウザーで、次の URL に移動します。
+1. [Visual Studio **F5**] を選択するか、アプリケーションの  [デバッグ] メニューから [デバッグの開始] を選択して、アプリケーションが正しく読み込まれているか確認します。 ブラウザーで、次の URL に移動します。
 
     * https://localhost:3978/
     * https://localhost:3978/privacy
@@ -328,7 +324,7 @@ ngrok を実行してコマンド プロンプトを保持し、URL をメモし
 
 ### <a name="update-your-application"></a>アプリケーションを更新する
 
-1. **PagesShared フォルダー** > **に移動** し、**_Layout.cshtml** を開き、次の項目を <head> タグ セクション:
+1. [Visual Studio ソリューション エクスプローラーを開き、**PagesShared**  >  フォルダーに移動し、**_Layout.cshtml** を開き、次のファイルに次を追加します。 <head> タグ セクション:
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
@@ -338,9 +334,9 @@ ngrok を実行してコマンド プロンプトを保持し、URL をメモし
     > [!IMPORTANT]
     > URL は最新バージョンを `<script src="...">` 表すので、このページの URL をコピーして貼り付けは行ないます。 SDK の最新バージョンを取得するには、常に [JavaScript API Microsoft Teams移動します](https://www.npmjs.com/package/@microsoft/teams-js)。
     
-1. タグの上部に 、 `script` への呼び出しを挿入します `microsoftTeams.initialize();`。
+1. タグに呼び出し `microsoftTeams.initialize();` を挿入 `script` します。
 
-1. Pages フォルダーに **移動し** 、 **Tab.cshtml を開きます。**
+1. [Visual Studio ソリューション エクスプローラーページ] **フォルダーに移動** し、[**Tab.cshtml] を開きます。**
 
     **Tab.cshtml 内** では、アプリケーションは、赤または灰色のアイコンでタブを表示するための 2 つのオプション ボタンをユーザーに表示します。 [灰色の **選択] または**  **[赤の選択** `saveGray()` `saveRed()``settings.setValidityState(true)`] ボタンを選択すると、構成ページの [保存] ボタンがそれぞれトリガーまたは設定され、有効になります。 このコードをTeams構成要件を完了し、インストールを続行できます。 のパラメーターが `settings.setSettings` 設定されます。 最後に、 `saveEvent.notifySuccess()` コンテンツ URL が正常に解決されたことを示すために呼び出されます。
 
@@ -379,7 +375,7 @@ ngrok を実行してコマンド プロンプトを保持し、URL をメモし
 
 ### <a name="build-and-run-your-application"></a>アプリケーションのビルドと実行
 
-1. このVisual Studio **F5 キーを押するか、[** デバッグ] メニューから [**デバッグ** の開始] **を選択** します。
+1. [Visual Studioで、[F5] を選択 **するか、[** デバッグ] メニューから [**デバッグ** の開始] **を選択** します。
 
 1. ブラウザーを開き、コマンド プロンプト ウィンドウで提供された ngrok HTTPS URL を介してコンテンツ ページに移動して、 **ngrok** が正常に実行され、正常に動作されていることを確認します。
 
@@ -390,7 +386,7 @@ ngrok を実行してコマンド プロンプトを保持し、URL をメモし
 
 1. [次へ] Microsoft Teams。 Web ベースの [バージョンを使用する](https://teams.microsoft.com)場合は、ブラウザーの開発者ツールを使用してフロントエンド コードを [検査できます](~/tabs/how-to/developer-tools.md)。
 
-1. [開発者ポータル] **に移動** Teams。
+1. [開発者ポータル [**] に移動します**](https://dev.teams.microsoft.com/home)。
 
 1. [アプリ **] を開** き、[アプリの **インポート] を選択します**。
 
@@ -410,25 +406,21 @@ ngrok を実行してコマンド プロンプトを保持し、URL をメモし
 
 1. アプリ **の URL で、** プライバシー ポリシーを更新し `https://<yourngrokurl>/privacy` 、使用条件を更新して `https://<yourngrokurl>/tou` 保存します。
 
-1. [ **アプリの機能] で**、[個人用アプリ] を選択し、[名前] を入力してコンテンツ **URL を更新** します `https://<yourngrokurl>/personalTab`。 [Web サイトの URL] フィールドは空白のままにします。 
+1. [アプリ **の機能] で**、[グループとチャネル アプリ] を選択します。 構成 **URL を更新し** 、[ `https://<yourngrokurl>/tab` スコープ] タブを **選択します**。
 
-1. **[保存]** を選択します。
+1. [**保存**] を選択します。
 
 1. [ドメイン] セクションでは、タブのドメインに HTTPS プレフィックスのない ngrok URL が含まれている必要があります `<yourngrokurl>.ngrok.io`。
 
 ### <a name="preview-your-app-in-teams"></a>アプリをプレビュー Teams
 
-1. [開発者 **ポータル] ツール バー Teams**[プレビュー] を選択します。 開発者ポータルは、アプリが正常にサイドロードされたことを通知します。
+1. [**開発者ポータル] Teams** [プレビュー] を選択すると、アプリが正常にサイドロードされたことを開発者ポータルから通知されます。 アプリ **の [** 追加] ページが [アプリ] Teams。
 
-1. [アプリ **の管理] を選択します**。 アプリがサイドロードされたアプリに表示されます。
-
-1. 検索を使用してアプリを検索し、[アプリ] を &#x25CF;&#x25CF;&#x25CF;。
-
-1. [詳細の **表示] オプションを** 選択します。 アプリの詳細ウィンドウがアプリに表示されます。
-
-1. [アプリ&nbsp;:::image type="content" source="~/assets/images/tab-images/app-dropdown.png" alt-text="の詳細] ドロップダウン" border="true":::&nbsp; >  **[チームに追加] を選択** して、チームにタブを読み込む。 タブは、このタブでTeams。
+1. [ **チームに追加] を** 選択して、チームのタブを設定します。 タブを構成し、[保存] を **選択します**。 タブは、このタブでTeams。
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="[チャネル] タブの ASPNET がアップロードされました" border="true":::
+    
+    これで、チャネルまたはグループ タブが完全に作成され、追加Teams。
 
 ::: zone-end
 
@@ -459,7 +451,7 @@ ngrok を実行してコマンド プロンプトを保持し、URL をメモし
 
 1. Microsoft-Teams-Samplessamplestab-channel-groupmvc-csharp  >  >  >  フォルダーに移動し、**ChannelGroupTabMVC.sln を開きます**。
 
-1. このVisual Studio **F5** キーを押するか、アプリケーションの  [デバッグ] メニューから [デバッグの開始] を選択して、アプリケーションが正しく読み込まれたか確認します。 ブラウザーで、次の URL に移動します。
+1. [Visual Studio **F5**] を選択するか、アプリケーションの  [デバッグ] メニューから [デバッグの開始] を選択して、アプリケーションが正しく読み込まれているか確認します。 ブラウザーで、次の URL に移動します。
 
     * https://localhost:3978/
     * https://localhost:3978/privacy
@@ -550,7 +542,7 @@ ngrok を実行してコマンド プロンプトを保持し、URL をメモし
 
 ### <a name="update-your-application"></a>アプリケーションを更新する
 
-1. **ViewsShared フォルダー** > **に移動** し、**_Layout.cshtml** を開き、次の項目を <head> タグ セクション:
+1. [Visual Studio ソリューション エクスプローラーを開き、**ViewsShared**  >  フォルダーに移動し、**_Layout.cshtml** を開き、次の項目を次に追加します。 <head> タグ セクション:
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
@@ -560,9 +552,9 @@ ngrok を実行してコマンド プロンプトを保持し、URL をメモし
     > [!IMPORTANT]
     > URL は最新バージョンを `<script src="...">` 表すので、このページの URL をコピーして貼り付けは行ないます。 SDK の最新バージョンを取得するには、常に [JavaScript API Microsoft Teams移動します](https://www.npmjs.com/package/@microsoft/teams-js)。
     
-1. タグの上部に 、 `script` への呼び出しを挿入します `microsoftTeams.initialize();`。
+1. タグに呼び出し `microsoftTeams.initialize();` を挿入 `script` します。
 
-1. Tab フォルダーに **移動し** 、 **Tab.cshtml を開きます**
+1. [Visual Studio ソリューション エクスプローラー Tab フォルダーに **移動し、****Tab.cshtml を開きます。**
 
     **Tab.cshtml 内** では、アプリケーションは、赤または灰色のアイコンでタブを表示するための 2 つのオプション ボタンをユーザーに表示します。 [灰色の **選択] または**  **[赤の選択** `saveGray()` `saveRed()``settings.setValidityState(true)`] ボタンを選択すると、構成ページの [保存] ボタンがそれぞれトリガーまたは設定され、有効になります。 このコードをTeams構成要件を完了し、インストールを続行できます。 のパラメーターが `settings.setSettings` 設定されます。 最後に、 `saveEvent.notifySuccess()` コンテンツ URL が正常に解決されたことを示すために呼び出されます。 
 
@@ -601,7 +593,7 @@ ngrok を実行してコマンド プロンプトを保持し、URL をメモし
 
 ### <a name="build-and-run-your-application"></a>アプリケーションのビルドと実行
 
-1. このVisual Studio **F5 キーを押するか、[** デバッグ] メニューから [**デバッグ** の開始] **を選択** します。
+1. [Visual Studioで、[F5] を選択 **するか、[** デバッグ] メニューから [**デバッグ** の開始] **を選択** します。
 
 1. ブラウザーを開き、コマンド プロンプト ウィンドウで提供された ngrok HTTPS URL を介してコンテンツ ページに移動して、 **ngrok** が正常に実行され、正常に動作されていることを確認します。
 
@@ -612,7 +604,7 @@ ngrok を実行してコマンド プロンプトを保持し、URL をメモし
 
 1. [次へ] Microsoft Teams。 Web ベースの [バージョンを使用する](https://teams.microsoft.com)場合は、ブラウザーの開発者ツールを使用してフロントエンド コードを [検査できます](~/tabs/how-to/developer-tools.md)。
 
-1. [開発者ポータル **] に** 移動Teams。
+1. [開発者ポータル [**] に移動します**](https://dev.teams.microsoft.com/home)。
 
 1. [アプリ **] を開** き、[アプリの **インポート] を選択します**。
 
@@ -632,29 +624,25 @@ ngrok を実行してコマンド プロンプトを保持し、URL をメモし
 
 1. アプリ **の URL で、** プライバシー ポリシーを更新し `https://<yourngrokurl>/privacy` 、使用条件を更新して `https://<yourngrokurl>/tou` 保存します。
 
-1. [ **アプリの機能] で**、[個人用アプリ] を選択し、[名前] を入力してコンテンツ **URL を更新** します `https://<yourngrokurl>/personalTab`。 [Web サイトの URL] フィールドは空白のままにします。
+1. [アプリ **の機能] で**、[グループとチャネル アプリ] を選択します。 構成 **URL を更新し** 、[ `https://<yourngrokurl>/tab` スコープ] タブを **選択します**。
 
-1. **[保存]** を選択します。
+1. [**保存**] を選択します。
 
 1. [ドメイン] セクションでは、タブのドメインに HTTPS プレフィックスのない ngrok URL が含まれている必要があります `<yourngrokurl>.ngrok.io`。
 
 ### <a name="preview-your-app-in-teams"></a>アプリをプレビュー Teams
 
-1. [開発者 **ポータル] ツール バー Teams**[プレビュー] を選択します。 開発者ポータルは、アプリが正常にサイドロードされたことを通知します。
+1. [**開発者ポータル] Teams** [プレビュー] を選択すると、アプリが正常にサイドロードされたことを開発者ポータルから通知されます。 アプリ **の [** 追加] ページが [アプリ] Teams。
 
-1. [アプリ **の管理] を選択します**。 アプリがサイドロードされたアプリに表示されます。
-
-1. 検索を使用してアプリを検索し、[アプリ] を &#x25CF;&#x25CF;&#x25CF;。
-
-1. [詳細の **表示] オプションを** 選択します。 アプリの詳細ウィンドウがアプリに表示されます。
-
-1. [チャネル&nbsp;:::image type="content" source="~/assets/images/tab-images/app-dropdown.png" alt-text="] タブ [ASPNET のアップロード] [" border="true":::&nbsp; > **チームに追加] を選択して**、チームにタブを読みTeams。 タブは、このタブでTeams。
+1. [ **チームに追加] を** 選択して、チームのタブを設定します。 タブを構成し、[保存] を **選択します**。 タブは、このタブでTeams。
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="チャネル タブ ASPNET MVC アップロード" border="true":::
+    
+    これで、チャネルまたはグループ タブが完全に作成され、追加Teams。
 
 ::: zone-end
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [コンテンツ ページを作成する](~/tabs/how-to/create-tab-pages/content-page.md)

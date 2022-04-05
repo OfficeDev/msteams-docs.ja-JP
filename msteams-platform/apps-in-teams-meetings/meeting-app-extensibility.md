@@ -4,13 +4,8 @@ author: surbhigupta
 description: デスクトップ環境Teams環境での会議のライフサイクルとユーザーの会議エクスペリエンス、参加者とユーザーの役割と種類、会議ライフサイクルでのボットとメッセージング拡張機能の統合について説明します。
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 16a969c7f863bf1f4c01f6f81b9ddfb848eaaf22
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571132"
 ---
+
 # <a name="unified-meetings-apps"></a>統合された会議アプリ
 
 Teams会議アプリは、次の概念に基づいて行います。
@@ -85,6 +80,9 @@ Teams会議アプリは、次の概念に基づいて行います。
 1. [会議内] ダイアログ ボックスで、フィードバックとして応答を入力します。
 
 # <a name="desktop"></a>[デスクトップ](#tab/desktop)
+
+:::image type="content" source="~/assets/images/apps-in-meetings/desktop-in-meeting-dialog-view.png" alt-text="デスクトップ ビュー":::
+
 
 # <a name="mobile"></a>[モバイル](#tab/mobile)
 
@@ -211,7 +209,7 @@ Teams会議アプリは、次の概念に基づいて行います。
 | ゲスト、テナント の一部Azure AD | 対話は許可されます。 作成、更新、および削除は許可されません。 | 使用不可 | 使用不可 | 会議チャットでの操作は許可されます。 | アダプティブ カードからの会議チャットでの操作は許可されます。 | 使用可能 | 会議のステージでアプリを開始、表示、操作できます | 使用可能 |
 | フェデレーション ユーザーの詳細については、「標準以外の [ユーザー」を参照してください](/microsoftteams/non-standard-users)。 | 対話は許可されます。 作成、更新、および削除は許可されません。 | 対話は許可されます。 取得、更新、削除は許可されません。 | 使用不可 | 会議チャットでの操作は許可されます。 | アダプティブ カードからの会議チャットでの操作は許可されます。 | 使用不可 | 会議のステージでアプリを開始、表示、操作できます | 使用不可 |
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [会議のアプリを有効にしてTeamsする](enable-and-configure-your-app-for-teams-meetings.md)
