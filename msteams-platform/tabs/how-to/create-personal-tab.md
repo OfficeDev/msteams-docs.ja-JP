@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET MVC パッケージ appmanifest conversation domain permission store
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: b0da768a74ab6925f95ce89e38cecdaa96e084e6
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+ms.openlocfilehash: 91099b1acdea7b89305db9aad894c94019de4695
+ms.sourcegitcommit: b2f6599e44a418b4cce92f28843b7e013fd6e86d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685647"
+ms.locfileid: "64686684"
 ---
 # <a name="create-a-personal-tab"></a>プライベート タブを作成する
 
@@ -252,12 +252,8 @@ gulp ngrok-serve
 
 ### <a name="upload-your-application-to-teams"></a>アプリケーションをTeamsにアップロードする
 
-1. Microsoft Teamsに移動し、**ストア**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teamsストア":::を選択します。
-1. [ **アプリの管理] を選択する**
-1. [**アプリの発行] を** 選択し、**カスタム アプリをアップロードします**。
-
-    :::image type="content" source="~/assets/images/tab-images/publish-app.png" alt-text="カスタム アプリをアップロードする" border="true":::
-
+1. Microsoft Teamsに移動し、[**アプリ**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teamsストア":::] を選択します。
+1. [**アプリの管理**] を選択し、**カスタム アプリをアップロードします**。
 1. プロジェクト ディレクトリに移動し、 **./package** フォルダーに移動し、zip フォルダーを選択して **[開く**] を選択します。
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="個人用タブの追加" border="true":::
