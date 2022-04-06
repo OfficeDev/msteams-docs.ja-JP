@@ -4,12 +4,12 @@ description: Microsoft Teams の最新情報やすべての開発者向け最新
 ms.topic: reference
 ms.localizationpriority: high
 keywords: Teams の最新情報と最新の更新プログラムまたは開発者プレビューと機能
-ms.openlocfilehash: 334d397ac2bc0e5c08c0b1df5bf6309d5f0a57ee
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
-ms.translationtype: HT
+ms.openlocfilehash: 809aae76471b4b21821151f03d293b9c519a0f58
+ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571489"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64685535"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -22,6 +22,8 @@ ms.locfileid: "64571489"
 
 | 日付 | Update | ここで検索 |
 | --- | --- | --- |
+|04/06/2022| 個人用アプリまたはタブからTeamsに共有する (開発者プレビュー) | [個人用アプリまたはタブから Teams > Share to Teams > Share to Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)と統合する |
+|04/01/2022| 会話型ボットを作成するためのステップ バイ ステップ ガイドTeams導入しました| ボット>ボットの会話>チャネルとグループの会話>ステップ [バイ ステップ ガイドを構築して、会話ボットTeams作成する](sbs-teams-conversation-bot.yml) |
 |03/30/2022| タブとボットを使用した Blazor アプリの [使用を開始するモジュール] の更新|  はじめに＞[Blazorを使用して初めてのアプリを構築する](sbs-gs-blazorupdate.yml)|
 |03/30/2022|ブラウザーのデバイスのアクセス許可 | [デバイス機能を統合する] > [[ブラウザーのデバイス アクセス許可]](concepts/device-capabilities/browser-device-permissions.md) |
 |03/29/2022 | ユーザー ピッカーを統合する | [Teams との統合] > [[ユーザー ピッカーを統合する]](concepts/device-capabilities/people-picker-capability.md)|
@@ -32,6 +34,22 @@ ms.locfileid: "64571489"
 |03/14/2022| Microsoft Teams でコネクタを構築してテストするためのステップバイステップ ガイドを導入しました。 | Webhook とコネクタのビルド> Office 365 コネクタの作成> [Teams コネクタのビルド](sbs-teams-connectors.yml)|
 |03/10/2022| Moodle LMS および Microsoft 365 プラグインに関する情報を追加しました | [Teams との統合] > [Moodle LMS] > [[Moodle ラーニング管理システム]](resources/moodle-overview.md)|
 |03/03/2022 | 外部 OAuth プロバイダーを使用して認証を追加する方法| [認証の追加] > [タブ] >[[外部 OAuth プロバイダーの使用]](tabs/how-to/authentication/auth-oauth-provider.md) |
+|02/25/2022| Teams でタスク モジュールを呼び出すステップ バイ ステップ ガイドを導入しました| [カードとタスク モジュールの構築] > [タスク モジュールの構築] > [ボットからのタスク モジュールの使用] > [[Teams からのタスク モジュールの呼び出し]](sbs-botbuilder-taskmodule.yml)|
+|02/24/2022| アクション ベースのメッセージング拡張機能を構築するためのステップ バイ ステップ ガイドを導入しました | [メッセージング拡張機能の構築] > [アクション コマンド] > [アクション コマンドの定義] > [[アクション ベースのメッセージング拡張機能の構築]](sbs-meetingextension-action.yml)|
+|02/24/2022| 検索ベースのメッセージング拡張機能を構築するためのステップ バイ ステップ ガイドが導入されました | [メッセージング拡張機能の構築] > [検索コマンド] > [検索コマンドの定義] > [[検索ベースのメッセージング拡張機能の構築]](sbs-messagingextension-searchcommand.yml)|
+|02/24/2022| 送信 Webhook を作成するためのステップバイステップ ガイドを導入しました | [Webhook とコネクタの構築] > [送信 Webhook の作成] > [[送信 Webhooks の作成]](sbs-outgoing-webhooks.yml)|
+| 02/23/2022 |Microsoft Teams ストアのランク付けパラメーター| [アプリの配布] > [Teams ストアに公開] > [[Microsoft Teams ストアのランク付けパラメーター]](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
+|02/09/2022| ボットから Teams にファイルをアップロードする方法のステップバイステップ ガイドが導入されました | ビルド ボット>ファイルの送受信>[ボットから Teams にファイルをアップロードするステップバイステップ ガイド](sbs-file-handling-in-bot.yml) |
+| 02/18/2022 | 用語に関する定義をすばやく見つけるのに役立つ、Microsoft Teams 開発者ドキュメントの広範な用語集を導入しました | [用語集](~/get-started/glossary.md) |
+| 02/18/2022 | Teams アプリを組織の目標、ユーザー ストーリーにマッピングし、Teams アプリの機能を検索するための概要モジュールを更新しました | [[概要] > [適合する Teams アプリ]](overview.md) |
+| 02/18/2022 | ユース ケースの Teams 機能へのマッピングとアプリ計画チェックリストを含めるために、[アプリの基礎] モジュールを [アプリの計画] に更新しました | [[アプリの計画] > [概要]](~/concepts/app-fundamentals-overview.md) |
+|02/17/2022| アプリを送信した後、何を期待しますか?| アプリを配布する > Teams ストアに公開する > [概要](concepts/deploy-and-publish/appsource/publish.md)|
+|2022/02/15| ボットから Teams にファイルをアップロードする方法のステップバイステップ ガイドが導入されました | 「ボットを作成する」 > 「ファイルを送受信する」 > 「[ボットから Teams にファイルをアップロードするためのステップバイステップ ガイド](sbs-file-handling-in-bot.yml)」 |
+|02/11/2022| 共有会議ステージ| • [Teams 会議用アプリのビルド] > [[共有会議ステージ]](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • [Teams 会議用アプリのビルド] > [[Meeting apps API リファレンス]](apps-in-teams-meetings/API-references.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー] > [[開発者向けプレビュー マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md)|
+|02/08/2022| 通話と会議ボットを作成するステップバイステップ ガイドを導入しました| [ボットの構築] > [通話と会議のボット] > [通話と会議のボットの登録] > [[通話と会議のボットを作成するためのステップバイステップ ガイド]](sbs-calling-and-meeting.yml) |
+|02/07/2022| ツールと SDK |Visual Studio Code 用 Teams ツールキット > </br> • [Teams アプリに機能を追加] > [[Teams アプリに機能を追加]](toolkit/add-capability.md) </br> • [クラウド リソースを Teams アプリに追加] > [[クラウド リソースを Teams アプリに追加]](toolkit/add-resource.md) |
+|02/03/2022| アプリ マニフェスト バージョン 1.12 が導入されました | • [アプリ マニフェスト] > [[アプリ マニフェストのスキーマ]](resources/schema/manifest-schema.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー > [[マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md) |
+
 
 ## <a name="ga-features"></a>一般提供の特徴
 
@@ -44,6 +62,7 @@ ms.locfileid: "64571489"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ----------------|
+|04/01/2022| 会話型ボットを作成するためのステップ バイ ステップ ガイドTeams導入しました| ボット>ボットの会話>チャネルとグループの会話>ステップ [バイ ステップ ガイドを構築して、会話ボットTeams作成する](sbs-teams-conversation-bot.yml) |
 |03/30/2022| タブとボットを使用した Blazor アプリの [使用を開始するモジュール] の更新|  はじめに＞[Blazorを使用して初めてのアプリを構築する](sbs-gs-blazorupdate.yml)|
 |03/30/2022|ブラウザーのデバイスのアクセス許可 | [デバイス機能を統合する] > [[ブラウザーのデバイス アクセス許可]](concepts/device-capabilities/browser-device-permissions.md) |
 |03/29/2022 |ユーザー ピッカーを統合する | [Teams との統合] > [[ユーザー ピッカーを統合する]](concepts/device-capabilities/people-picker-capability.md)
@@ -250,6 +269,7 @@ ms.locfileid: "64571489"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ------------------ |
+|04/06/2022| 個人用アプリまたはタブからTeamsに共有する | [個人用アプリまたはタブから Teams > Share to Teams > Share to Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)と統合する |
 |02/07/2022| ツールと SDK |Visual Studio Code 用 Teams ツールキット > </br> • [Teams アプリに機能を追加] > [[Teams アプリに機能を追加]](toolkit/add-capability.md) </br> • [クラウド リソースを Teams アプリに追加] > [[クラウド リソースを Teams アプリに追加]](toolkit/add-resource.md) |
 |02/02/2022| アプリ マニフェスト バージョン 1.12 が導入されました | [アプリ マニフェスト] > [開発者向けパブリック プレビュー] > [[マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md) |
 |02/03/2022| 収益化されたアプリのテスト プレビュー| [アプリの収益化] > [[収益化アプリのテスト プレビュー]](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
