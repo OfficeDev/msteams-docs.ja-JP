@@ -529,8 +529,14 @@
           href: resources/partner-apps-for-moodle.md
         - name: Moodle に関するよく寄せられる質問
           href: resources/faqs.md
-    - name: '[Teams で共有] ボタンを作成する'
-      href: concepts/build-and-test/share-to-teams.md
+    - name: Teams への共有
+      items:
+        - name: 概要
+          href: concepts/build-and-test/share-to-teams-overview.md
+        - name: Web アプリから Teams に共有する
+          href: concepts/build-and-test/share-to-teams-from-web-apps.md
+        - name: 個人用アプリまたはタブから Teams に共有する
+          href: concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
     - name: SharePoint に Teams タブを追加する
       href: tabs/how-to/tabs-in-sharepoint.md
     - name: ディープ リンクの作成
