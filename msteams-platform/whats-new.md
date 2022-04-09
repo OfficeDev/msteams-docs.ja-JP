@@ -4,12 +4,12 @@ description: Microsoft Teams の最新情報やすべての開発者向け最新
 ms.topic: reference
 ms.localizationpriority: high
 keywords: Teams の最新情報と最新の更新プログラムまたは開発者プレビューと機能
-ms.openlocfilehash: 809aae76471b4b21821151f03d293b9c519a0f58
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
-ms.translationtype: MT
+ms.openlocfilehash: e977349c2a1b9685fff58ea555d1e86984246100
+ms.sourcegitcommit: 7bae0aa77b9f4818efc72133eb582d682e126cb3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685535"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "64706159"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -22,14 +22,12 @@ ms.locfileid: "64685535"
 
 | 日付 | Update | ここで検索 |
 | --- | --- | --- |
-|04/06/2022| 個人用アプリまたはタブからTeamsに共有する (開発者プレビュー) | [個人用アプリまたはタブから Teams > Share to Teams > Share to Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)と統合する |
-|04/01/2022| 会話型ボットを作成するためのステップ バイ ステップ ガイドTeams導入しました| ボット>ボットの会話>チャネルとグループの会話>ステップ [バイ ステップ ガイドを構築して、会話ボットTeams作成する](sbs-teams-conversation-bot.yml) |
+|04/06/2022| 個人用アプリまたはタブから Teams に共有する (開発者プレビュー) | [Teams と統合] > [Teams に共有] > [[個人用アプリまたはタブから Teams に共有]](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
+|04/01/2022| Teams ボットを作成するためのステップバイステップのガイドを導入しました| [ボットの構築] > [ボットの会話] > [チャネルとグループの会話]  > [Teams 会話型ボットを作成するためのステップバイステップ ガイド](sbs-teams-conversation-bot.yml) |
 |03/30/2022| タブとボットを使用した Blazor アプリの [使用を開始するモジュール] の更新|  はじめに＞[Blazorを使用して初めてのアプリを構築する](sbs-gs-blazorupdate.yml)|
 |03/30/2022|ブラウザーのデバイスのアクセス許可 | [デバイス機能を統合する] > [[ブラウザーのデバイス アクセス許可]](concepts/device-capabilities/browser-device-permissions.md) |
 |03/29/2022 | ユーザー ピッカーを統合する | [Teams との統合] > [[ユーザー ピッカーを統合する]](concepts/device-capabilities/people-picker-capability.md)|
 |03/23/2022| ボットを使用して Teams でリンクを展開するためのステップ バイ ステップ ガイドを導入しました | メッセージング拡張機能の構築＞リンクの展開の追加＞ [ボットを使用して Teams でリンクを展開](sbs-botbuilder-linkunfurling.yml)|
-|03/22/2022| Teams用のBlazorアプリの概要を更新しました |  • はじめに > [Blazorを使用して初めてのアプリを構築する](sbs-gs-blazorapp.yml)|
-|03/22/2022| Teams用のBlazorアプリの概要を更新しました |  はじめに＞[Blazorを使用して初めてのアプリを構築する](sbs-gs-blazorapp.yml)|
 |03/22/2022| デバッグ プロセスに関する情報を追加しました| • ツールと SDK> Visual Studio Code 用 Teams ツールキット> [Teams アプリをローカルでデバッグする](toolkit/debug-local.md) </br> • ツールと SDK> Visual Studio Code 用 Teams ツールキット [バックグラウンド プロセスのデバッグ](toolkit/debug-background-process.md)|
 |03/14/2022| Microsoft Teams でコネクタを構築してテストするためのステップバイステップ ガイドを導入しました。 | Webhook とコネクタのビルド> Office 365 コネクタの作成> [Teams コネクタのビルド](sbs-teams-connectors.yml)|
 |03/10/2022| Moodle LMS および Microsoft 365 プラグインに関する情報を追加しました | [Teams との統合] > [Moodle LMS] > [[Moodle ラーニング管理システム]](resources/moodle-overview.md)|
@@ -62,13 +60,11 @@ ms.locfileid: "64685535"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ----------------|
-|04/01/2022| 会話型ボットを作成するためのステップ バイ ステップ ガイドTeams導入しました| ボット>ボットの会話>チャネルとグループの会話>ステップ [バイ ステップ ガイドを構築して、会話ボットTeams作成する](sbs-teams-conversation-bot.yml) |
+|04/01/2022| Teams ボットを作成するためのステップバイステップのガイドを導入しました| [ボットの構築] > [ボットの会話] > [チャネルとグループの会話]  > [Teams 会話型ボットを作成するためのステップバイステップ ガイド](sbs-teams-conversation-bot.yml) |
 |03/30/2022| タブとボットを使用した Blazor アプリの [使用を開始するモジュール] の更新|  はじめに＞[Blazorを使用して初めてのアプリを構築する](sbs-gs-blazorupdate.yml)|
 |03/30/2022|ブラウザーのデバイスのアクセス許可 | [デバイス機能を統合する] > [[ブラウザーのデバイス アクセス許可]](concepts/device-capabilities/browser-device-permissions.md) |
 |03/29/2022 |ユーザー ピッカーを統合する | [Teams との統合] > [[ユーザー ピッカーを統合する]](concepts/device-capabilities/people-picker-capability.md)
 |03/23/2022| ボットを使用して Teams でリンクを展開するためのステップ バイ ステップ ガイドを導入しました | メッセージング拡張機能の構築＞リンクの展開の追加＞ [ボットを使用して Teams でリンクを展開](sbs-botbuilder-linkunfurling.yml)|  
-|03/22/2022| Teams用のBlazorアプリの概要を更新しました|  • はじめに > [Blazorを使用して初めてのアプリを構築する](sbs-gs-blazorapp.yml)|
-|03/22/2022| Teams用のBlazorアプリの概要を更新しました|  はじめに＞[Blazorを使用して初めてのアプリを構築する](sbs-gs-blazorapp.yml)|
 |03/22/2022| デバッグ プロセスに関する情報を追加しました| • ツールと SDK> Visual Studio Code 用 Teams ツールキット> [Teams アプリをローカルでデバッグする](toolkit/debug-local.md) </br> • ツールと SDK> Visual Studio Code 用 Teams ツールキット [バックグラウンド プロセスのデバッグ](toolkit/debug-background-process.md)|
 |03/14/2022| Microsoft Teams でコネクタを構築してテストするためのステップバイステップ ガイドを導入しました。 | Webhook とコネクタのビルド> Office 365 コネクタの作成> [Teams コネクタのビルド](sbs-teams-connectors.yml)|
 |03/10/2022 | Moodle LMS および Microsoft 365 プラグインに関する情報を追加しました | [Teams との統合] > [Moodle LMS] > [[Moodle ラーニング管理システム]](resources/moodle-overview.md)|  
@@ -269,7 +265,7 @@ ms.locfileid: "64685535"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ------------------ |
-|04/06/2022| 個人用アプリまたはタブからTeamsに共有する | [個人用アプリまたはタブから Teams > Share to Teams > Share to Teams](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)と統合する |
+|04/06/2022| 個人用アプリまたはタブから Teams に共有する | [Teams と統合] > [Teams に共有] > [[個人用アプリまたはタブから Teams に共有]](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |02/07/2022| ツールと SDK |Visual Studio Code 用 Teams ツールキット > </br> • [Teams アプリに機能を追加] > [[Teams アプリに機能を追加]](toolkit/add-capability.md) </br> • [クラウド リソースを Teams アプリに追加] > [[クラウド リソースを Teams アプリに追加]](toolkit/add-resource.md) |
 |02/02/2022| アプリ マニフェスト バージョン 1.12 が導入されました | [アプリ マニフェスト] > [開発者向けパブリック プレビュー] > [[マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md) |
 |02/03/2022| 収益化されたアプリのテスト プレビュー| [アプリの収益化] > [[収益化アプリのテスト プレビュー]](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|

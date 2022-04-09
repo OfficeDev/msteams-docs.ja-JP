@@ -1,44 +1,44 @@
 ### YamlMime:Tutorial
-title: タブ デバイスのアクセス許可
+title: Tab デバイスのアクセス許可
 metadata:
-  title: タブ デバイスのアクセス許可
-  description: このチュートリアルでは、アプリに対してタブ デバイスのアクセス許可を付与Microsoft Teamsします。
+  title: Tab デバイスのアクセス許可
+  description: このチュートリアルでは、Microsoft Teams アプリに対するタブ デバイスのアクセス許可を付与する方法について説明します。
   audience: Developer
   level: Beginner
   ms.date: 12/24/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: concepts/device-capabilities/browser-device-permissions.md
-  nextTutorialTitle: ブラウザーのデバイスのアクセス許可の詳細
+  nextTutorialTitle: ブラウザーのデバイスアクセス許可の詳細
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 745da67854dbe1916f3cafe6dc5eb8753e0eb3d2
-  ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+  ms.openlocfilehash: 8bf835a3f97dca980bc01324434f7b8d62ac51a8
+  ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 03/31/2022
-  ms.locfileid: "64571020"
+  ms.lasthandoff: 04/09/2022
+  ms.locfileid: "64737050"
 items:
 - durationInMinutes: 1
   content: >
-    Teams、カメラ、マイク アクセスなどのデバイスのアクセス許可を必要とするアプリでは、Web ブラウザーでアプリ レベルごとに手動でアクセス許可をユーザーに付与する必要があります。 以前は、ブラウザーはアクセス許可を付与する方法を処理しましたが、これらのアクセス許可は現在、Microsoft Teams。
+    デバイスのアクセス許可 (場所、カメラ、マイクアクセスなど) を必要とするアプリTeams、ユーザーは Web ブラウザーでアプリ レベルごとに手動でアクセス許可を付与する必要があります。 以前は、ブラウザーがアクセス許可を付与する方法を処理していましたが、これらのアクセス許可はMicrosoft Teamsで処理されるようになりました。
 
 
-    このステップ バイ ステップ ガイドは、タブ デバイスのアクセス許可をユーザーに提供Microsoft Teams。 次の出力が表示されます。
+    このステップ バイ ステップ ガイドは、Microsoft Teamsでタブ デバイスのアクセス許可を実行するのに役立ちます。 次の出力が表示されます。
 
       ![desktop3](~/assets/images/tab-device-permission/sbs-tab-device-permission-location.PNG)
 - title: 前提条件
   durationInMinutes: 1
-  content: "次のツールをインストールし、開発環境をセットアップしてください。  \n\n* [ngrok または同等の](https://ngrok.com/)トンネリング ソリューションをインストールします。\n* [Node.js](https://nodejs.org/en/) をインストールします。\n* Visual Studio Codeまたは最新バージョン。\n* [Microsoft 365アプリをインストールするための](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant)適切Teamsを使用して、開発者アカウントまたはユーザー アカウントへのアクセスを許可します。\n"
-- title: タブ デバイスのアクセス許可アプリを構成して実行Teams
+  content: "次のツールをインストールし、開発環境を設定してください。  \n\n* [ngrok](https://ngrok.com/) または同等のトンネリング ソリューションをインストールします。\n* [Node.js](https://nodejs.org/en/) をインストールします。\n* Visual Studio Codeまたは最新バージョン。\n* [アプリを](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant)インストールするための適切なアクセス許可を持つ開発者アカウントまたはTeams アカウントへのアクセスをMicrosoft 365します。\n"
+- title: Teamsで Tab デバイスのアクセス許可アプリを構成して実行する
   durationInMinutes: 1
-  content: "アプリをテストする最も包括的な方法は、アプリ パッケージを作成し、アプリ パッケージをアプリ パッケージにTeams。 このメソッドは、すべてのスコープでアプリで使用できる完全な機能をテストする唯一の方法です。 \n\nアプリを構成して実行するにはTeamsファイルをアップロードしてmanifest.zipを実行します。\n\n1. タブ デバイスのアクセス許可アプリを構成して実行します。\n2. https エンドポイントを取得するには、トンネリング サービスを開始します。\n3. タブ デバイスのアクセス許可を実行するには、manifest.zipファイルをアップロードTeams。\n\n**タブ デバイスのアクセス許可アプリを構成して実行するには、次の手順を実行します。**\n\n1. コマンド **プロンプトを開き** 、リポジトリ git の **複製を複製します https://github.com/OfficeDev/Microsoft-Teams-Samples.git**。 リポジトリが複製される **パス** に注意してください。\n2. [エクスプローラー] で、**microsoft-Teams-Samples > サンプル > nodejs** フォルダー>タブ デバイス アクセス許可)に移動し、フォルダーの場所をコピーします。\n3. コマンド プロンプト **で、** cd の場所 **(ノード js フォルダー** の場所) と入力し、このコマンドを実行します。\n4. コマンド プロンプトで次のコマンド **を実行します**。\n\n   ```command-prompt\n    npm install\n    ```\n5. 次のコマンドを使用して **、コマンド プロンプト** でアプリケーションを実行します。\n\n   ```command-prompt\n   npm start\n   ```\n6. ブラウザーで次の出力を確認できます。\n\n   ![react](~/assets/images/tab-device-permission/sbs-react.PNG)\n\n**https エンドポイントを取得するには、トンネリング サービスを開始します。**\n\n1. **nodejs のタブ Teams->アクセス> Microsoft->に移動します**。\n2. **ngrok ターミナルを開** き、次のコマンドで ngrok トンネルを開始します (マニフェスト ファイルを更新するには https エンドポイントが必要です)。\n\n   ```ngrok\n   ngrok http 3000 --host-header=localhost\n   ```  \n    \n**タブ デバイスのアクセス許可を実行するには、次のmanifest.zipファイルをアップロードTeams。**\n\n1. [エクスプローラー] で、[**appPackage] フォルダーの nodejs Teams-Samples** > >タブ デバイス アクセス許可>に移動>します。\n2. visual studio コード **で manifest.json** ファイルを開きます。\n3. **manifest.json ファイル** で、すべての場所<<BASE_URI_DOMAIN>>\"https://\" パーツを除く ngrok の https エンドポイントに置き換えることができます。\n\n   ![ngrok](~/assets/images/tab-device-permission/ngrok-tunnel.PNG)\n\n4. **appPackage/folder 内のファイルを次のように圧縮** manifest.zip。\n5. テナント ID をTeamsブラウザーで開きます。\n6. カスタム アプリを **manifest.zipするには、[** カスタム アプリ **> アップロードアプリ]** を選択し、[アプリ] を **manifest.zip**。\n7. [タブ **デバイスのアクセス許可] アプリを** 選択します。\n8. [追加 **] を** 選択して、タブ デバイスのアクセス許可アプリを追加します。\n\n    ![addbrowserteams](~/assets/images/tab-device-permission/sbs-add-browser-teams.png)\n\n9. タブ **の [デバイスのアクセス許可] を** 開き、[ **デバイスのアクセス許可] タブを選択すると** 、次の出力が表示されます。\n\n    ![desktopteams](~/assets/images/tab-device-permission/sbs-tab-device-permission-browser-mobile-get-location.png)\n\n10. モバイル デバイスをTeams次の出力を表示します。\n\n    ![mobileteams](~/assets/images/tab-device-permission/mobile-teams-output.png)\n\n11. デスクトップ を開Teams。\n12. カスタム アプリを **manifest.zipするには、[** カスタム アプリ **> アップロードアプリ]** を選択し、[アプリ] を **manifest.zip**。\n13. [ **追加]** を選択してタブ デバイスアクセス許可アプリを追加すると、次の出力が表示されます。  \n\n    ![desktopteams](~/assets/images/tab-device-permission/dekstop-tab-device-permission.png)\n"
+  content: "アプリをテストする最も包括的な方法は、アプリ パッケージを作成してTeamsにアップロードすることです。 このメソッドは、すべてのスコープでアプリで使用できる完全な機能をテストする唯一の方法です。 \n\nmanifest.zip ファイルをアップロードしてTeams アプリを構成して実行するには、次の手順に従います。\n\n1. タブ デバイスのアクセス許可アプリを構成して実行します。\n2. トンネリング サービスを開始して https エンドポイントを取得します。\n3. Teamsでmanifest.zip ファイルをアップロードして、タブ デバイスのアクセス許可を実行します。\n\n**タブ デバイスのアクセス許可アプリを構成して実行するには:**\n\n1. **コマンド プロンプト** を開き、リポジトリ **の git clone を複製しますhttps://github.com/OfficeDev/Microsoft-Teams-Samples.git**。 リポジトリが複製される **パス** に注意してください。\n2. **エクスプローラー** で、**microsoft-Teams-Samples > サンプル > tab-device-permissions > nodejs** フォルダーに移動し、フォルダーの場所をコピーします。\n3. **コマンド プロンプト** で、**cd の場所 (ノード js フォルダーの場所)** を入力し、このコマンドを実行します。\n4. **コマンド プロンプト** で次のコマンドを実行します。\n\n   ```command-prompt\n    npm install\n    ```\n5. 次のコマンドを使用して、 **コマンド プロンプト** でアプリケーションを実行します。\n\n   ```command-prompt\n   npm start\n   ```\n6. ブラウザーに次の出力が表示されます。\n\n   ![反応](~/assets/images/tab-device-permission/sbs-react.PNG)\n\n**トンネリング サービスを開始して https エンドポイントを取得します。**\n\n1. **tab-device-permissions > nodejs > Microsoft-Teams-Samples > サンプルに移動します**。\n2. **ngrok** ターミナルを開き、次のコマンドで ngrok トンネルを開始します (マニフェスト ファイルを更新するには https エンドポイントが必要です)。\n\n   ```ngrok\n   ngrok http 3000 --host-header=localhost\n   ```  \n    \n**Teamsでmanifest.zip ファイルをアップロードしてタブ デバイスのアクセス許可を実行するには:**\n\n1. **エクスプローラー** で、**microsoft-Teams-Samples > サンプル>タブデバイスアクセス許可> nodejs > appPackage** フォルダーに移動します。\n2. Visual Studio コードでファイルを `manifest.json` 開きます。\n3. ファイルで `manifest.json` **<<BASE_URI_DOMAIN>>** を見つけて、すべての場所で \"https://\" 部分を除く ngrok の https エンドポイントに置き換えます。\n\n   ![ngrok](~/assets/images/tab-device-permission/ngrok-tunnel.PNG)\n\n4. **appPackage/folder** 内のファイルをmanifest.zipとして zip 化します。\n5. テナント ID を使用してブラウザーでTeamsを開きます。\n6. アップロード`manifest.zip`するには、**カスタム アプリ> アップロードアプリを** 選択して開きます`manifest.zip`。\n7. **Tab Device Permission App を選択します**。\n8. [ **追加]** を選択して、タブ デバイスのアクセス許可アプリを追加します。\n\n    ![addbrowserteams](~/assets/images/tab-device-permission/sbs-add-browser-teams.png)\n\n9. **Tab デバイスのアクセス許可を** 開き、[**デバイスのアクセス許可] タブ** を選択して、次の出力を表示します。\n\n    ![desktopteams](~/assets/images/tab-device-permission/sbs-tab-device-permission-browser-mobile-get-location.png)\n\n10. モバイル Teamsを開いて、次の出力を表示します。\n\n    ![mobileteams](~/assets/images/tab-device-permission/mobile-teams-output.png)\n\n11. デスクトップ Teamsを開きます。\n12. アップロード`manifest.zip`するには、**カスタム アプリ> アップロードアプリを** 選択して開きます`manifest.zip`。\n13. [ **追加]** を選択してタブ デバイスのアクセス許可アプリを追加すると、次の出力が表示されます。  \n\n    ![desktopteams](~/assets/images/tab-device-permission/dekstop-tab-device-permission.png)\n"
 - title: アプリのテスト
   durationInMinutes: 1
-  content: "タブ デバイスのアクセス許可アプリでユーザーがアクセス許可を付与するには、アプリをアプリに正常にアップロードした後でアプリをテストするTeams。\n\n # <a name=\"desktop\"></a>[デスクトップ](#tab/Desktop)\n\n  デスクトップでアプリをテストするには、[ **アプリ** のアクセス許可] アイコンを選択し、アクセス許可要求を受け入れる次のプロンプトを取得します。\n\n   ![desktoppermissionteams](~/assets/images\\tab-device-permission\\desktop-teams-permission.png)\n\n  # <a name=\"browser\"></a>[Browser](#tab/Browser)\n\n  ブラウザーでアプリをテストするには、[場所の取得] **を選択して** 、次の出力を確認します。\n\n   ![locationresultbrowserteams](~/assets/images/tab-device-permission/sbs-location-result.png)\n\n # <a name=\"mobile\"></a>[モバイル](#tab/Mobile)\n\n  モバイルでアプリをテストするには、それぞれのボタンを選択してシナリオをテストし、アクセス許可要求を受け入れる次のプロンプトを取得します。\n\n   ![mobileappteams](~/assets/images/tab-device-permission/prompt-mobile-app.png)\n\n--- \n"
-- title: 完全なチャレンジ
+  content: "タブ デバイスのアクセス許可アプリでユーザーがアクセス許可を付与できるようにするには、アプリをTeamsに正常にアップロードした後でアプリをテストする必要があります。\n\n # <a name=\"desktop\"></a>[デスクトップ](#tab/Desktop)\n\n  デスクトップでアプリをテストするには、[ **アプリのアクセス許可]** アイコンを選択し、次のプロンプトを表示してアクセス許可要求を受け入れます。\n\n   ![desktoppermissionteams](~/assets/images\\tab-device-permission\\desktop-teams-permission.png)\n\n  # <a name=\"browser\"></a>[Browser](#tab/Browser)\n\n  ブラウザーでアプリをテストするには、[ **場所の取得** ] を選択して、次の出力を表示します。\n\n   ![locationresultbrowserteams](~/assets/images/tab-device-permission/sbs-location-result.png)\n\n # <a name=\"mobile\"></a>[モバイル](#tab/Mobile)\n\n  モバイルでアプリをテストするには、それぞれのボタンを選択してシナリオをテストし、アクセス許可要求を受け入れるように次のプロンプトを表示します。\n\n   ![mobileappteams](~/assets/images/tab-device-permission/prompt-mobile-app.png)\n\n--- \n"
+- title: チャレンジを完了する
   durationInMinutes: 1
   content: >
-    このようなことを思い付い出しましたか?
+    このようなことを思い付いたのですか?
 
       ![tabdeviceimage](~/assets/images/tab-device-permission/sbs-tab-device-permission-location.PNG)
-- content: チュートリアルが完了し、アプリでタブ デバイスのアクセス許可を付与Microsoft Teamsしました。
+- content: チュートリアルを完了し、Microsoft Teams アプリでタブ デバイスのアクセス許可を付与できるようになりました。

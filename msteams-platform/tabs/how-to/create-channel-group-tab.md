@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 736b8821a7d0f9e1eda35377bc4937e68c035c75
-ms.sourcegitcommit: b2f6599e44a418b4cce92f28843b7e013fd6e86d
+ms.openlocfilehash: bc7cb1fceef586959be44ba680874914c4f07cc1
+ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64686677"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64737044"
 ---
 # <a name="channel-or-group-tab"></a>[チャネル] タブまたは [グループ] タブ
 
@@ -51,7 +51,7 @@ ms.locfileid: "64686677"
     yo teams
     ```
 
-1. **マニフェスト.json** ファイルを更新するためにアプリ ジェネレーター Microsoft Teams求められる一連の質問に値を指定します。
+1. Microsoft Teams アプリ ジェネレーターによってファイルを更新するように求められた一連の質問に値を`manifest.json`入力します。
 
     ![ジェネレーターを開くスクリーンショット](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -137,13 +137,17 @@ ms.locfileid: "64686677"
     </details>
 
 > [!IMPORTANT]
-> path コンポーネント **yourDefaultTabNameTab** は、 **既定のタブ名** と単語 **Tab** のジェネレーターに入力した値です。
->
-> たとえば、DefaultTabName は **MyTab**、**次に /MyTabTab/** です。
+> path コンポーネント **yourDefaultTabNameTab** は、 **既定のタブ名** と単語 **Tab** のジェネレーターに入力した値です。たとえば、 `DefaultTabName` **MyTab** は **/MyTabTab/** です。
+
+<!--- TBD: this info seems removed from the main branch.
+* A **full color icon** measuring 192 x 192 pixels.
+* A **transparent outline icon** measuring 32 x 32 pixels.
+* A `manifest.json` file that specifies the attributes of your app.
+--->
 
 ### <a name="create-your-app-package"></a>アプリ パッケージを作成する
 
-Teamsでアプリケーションをビルドして実行するためのアプリ パッケージが必要です。 アプリ パッケージは、 **manifest.json** ファイルを検証し、 **./package** ディレクトリに zip フォルダーを生成する gulp タスクを使用して作成されます。 コマンド プロンプトで、次のコマンドを入力します。
+Teamsでアプリケーションをビルドして実行するためのアプリ パッケージが必要です。 アプリ パッケージは、ファイルを検証し、ディレクトリ内`./package`の zip フォルダーを`manifest.json`生成する gulp タスクを使用して作成されます。 コマンド プロンプトで、次のコマンドを入力します。
 
 ```cmd
 gulp manifest
@@ -153,7 +157,7 @@ gulp manifest
 
 #### <a name="build-your-application"></a>アプリケーションをビルドする
 
-コマンド プロンプトで次のコマンドを入力して、 **ソリューションを ./dist** フォルダーに移します。
+コマンド プロンプトで次のコマンドを入力して、ソリューションをフォルダーに `./dist` 挿入します。
 
 ```cmd
 gulp build
@@ -191,11 +195,11 @@ gulp ngrok-serve
 1. Microsoft Teamsに移動し、[**アプリ**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teamsストア":::] を選択します。
 1. [**アプリの管理**] を選択し、**カスタム アプリをアップロードします**。
 1. プロジェクト ディレクトリに移動し、 **./package** フォルダーに移動し、アプリ パッケージの zip フォルダーを選択して、[ **開く**] を選択します。
-    
+
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="[アップロードされたチャネル] タブ" border="true":::
 
 1. ダイアログで **[追加]** を選択します。 タブがTeamsにアップロードされます。
-    
+
     > [!NOTE]
     > ダイアログ ボックスに  **[追加]** が表示されない場合は、アップロードされたアプリ パッケージ zip フォルダーのマニフェストから次のコードを削除します。 もう一度フォルダーを zip 形式で圧縮し、Teamsにアップロードします。
     >
@@ -210,7 +214,7 @@ gulp ngrok-serve
 1. **[保存] を** 選択すると、タブがチャネルのタブ バーに追加されます。
 
     :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="[チャネル] タブがアップロードされました" border="true":::
-    
+
     これで、Teamsでチャネルまたはグループ タブが正常に作成され、追加されました。
 
 ::: zone-end
@@ -285,7 +289,7 @@ ASP.NET Core **は、Index** という名前のファイルをサイトの既定
 
 * 192 x 192 ピクセルの **フル カラー アイコン** 。
 * 32 x 32 ピクセルの **透明なアウトライン アイコン** 。
-* アプリの属性を指定する **manifest.json** ファイル。
+* `manifest.json`アプリの属性を指定するファイル。
 
 タブをTeamsにアップロードする際に使用するには、これらのファイルをアプリ パッケージに圧縮する必要があります。 ユーザーがタブの追加または更新を選択すると、マニフェストで指定した内容を読み込み`configurationUrl`、IFrame に埋め込み、タブにレンダリングMicrosoft Teams。
 
@@ -383,6 +387,11 @@ ngrok を実行したままコマンド プロンプトを保持し、URL を書
     > [!TIP]
     > この記事で説明する手順を完了するには、アプリケーションをVisual Studioと ngrok の両方で実行する必要があります。 Visual Studioでアプリケーションの実行を停止して作業する必要がある場合は、**ngrok を実行し続けます**。 アプリケーションがVisual Studioで再起動されると、アプリケーションの要求をリッスンしてルーティングを再開します。 ngrok サービスを再起動する必要がある場合は、新しい URL が返され、新しい URL でアプリケーションを更新する必要があります。
 
+<!--- TBD: This note seems to be removed from main. Commenting it for now.
+> [!NOTE]
+> App Studio can be used to edit your `manifest.json` file and upload the completed package to Teams. You can also manually edit the `manifest.json` file. If you do, ensure that you build the solution again to create the `tab.zip` file to upload.
+--->
+
 ### <a name="update-your-app-package-with-developer-portal"></a>開発者ポータルを使用してアプリ パッケージを更新する
 
 1. Microsoft Teamsに移動します。 [Web ベースのバージョン](https://teams.microsoft.com)を使用している場合は、ブラウザーの[開発者ツール](~/tabs/how-to/developer-tools.md)を使用してフロントエンド コードを調べることができます。
@@ -391,13 +400,18 @@ ngrok を実行したままコマンド プロンプトを保持し、URL を書
 
 1. **アプリを** 開き、[**アプリのインポート**] を選択します。
 
-1. アプリ パッケージの名前は **tab.zip** です。 次のパスで使用できます。
+<!--- TBD: This steps seems to be removed from main now so commenting it for now.
+
+1. Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available from the following path:
+--->
+
+1. アプリ パッケージの名前は `tab.zip`. 次のパスで使用できます。
 
     ```bash
     /bin/Debug/netcoreapp3.1/tab.zip
     ```
 
-1. **tab.zip** 選択し、開発者ポータルで開きます。
+1. 開発者ポータルで選択 `tab.zip` して開きます。
 
 1. 既定の **アプリ ID** が作成され、[ **基本情報** ] セクションに入力されます。
 
@@ -409,7 +423,7 @@ ngrok を実行したままコマンド プロンプトを保持し、URL を書
 
 1. **アプリの機能** で、[グループアプリとチャネル アプリ] を選択します。 **[構成 URL] を**`https://<yourngrokurl>/tab`更新し、[**スコープ**] タブを選択します。
 
-1. [**保存**] を選択します。
+1. **[保存]** を選択します。
 
 1. [ドメイン] セクションでは、タブのドメインに HTTPS プレフィックス `<yourngrokurl>.ngrok.io`のない ngrok URL を含める必要があります。
 
@@ -487,7 +501,7 @@ ASP.NET Coreでは、Web ルート フォルダーは、アプリケーション
 
 * 192 x 192 ピクセルの **フル カラー アイコン** 。
 * 32 x 32 ピクセルの **透明なアウトライン アイコン** 。
-* アプリの属性を指定する **manifest.json** ファイル。
+* `manifest.json`アプリの属性を指定するファイル。
 
 タブをTeamsにアップロードする際に使用するには、これらのファイルをアプリ パッケージに圧縮する必要があります。
 
@@ -627,7 +641,7 @@ ngrok を実行したままコマンド プロンプトを保持し、URL を書
 
 1. **アプリの機能** で、[グループアプリとチャネル アプリ] を選択します。 **[構成 URL] を**`https://<yourngrokurl>/tab`更新し、[**スコープ**] タブを選択します。
 
-1. [**保存**] を選択します。
+1. **[保存]** を選択します。
 
 1. [ドメイン] セクションでは、タブのドメインに HTTPS プレフィックス `<yourngrokurl>.ngrok.io`のない ngrok URL を含める必要があります。
 

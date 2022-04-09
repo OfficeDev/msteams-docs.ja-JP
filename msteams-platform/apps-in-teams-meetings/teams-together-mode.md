@@ -3,12 +3,12 @@ title: カスタム Together モードのシーン
 description: カスタム Together モードシーンを操作する
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 7249c907cd5afc68714be4a38a8f033c22382181
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: 047e2aa04bfb0196ab7a01e91ce54b01d61f64bf
+ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356085"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64736869"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Teams でのカスタム Together モードのシーン
 
@@ -125,7 +125,7 @@ Scene Studio を使用してシーンを構築するには、次の手順を実�
 
 プレビューの後、アプリの申請手順に従って、シーンがアプリとして Teams に配布されます。 この手順では、アプリ パッケージが必要です。 アプリ パッケージは、設計されたシーンのシーン パッケージとは異なります。 自動的に作成されたアプリ パッケージは、Teams デベロッパー センターの **Apps** セクションにあります。
 
-必要に応じて、**保存**]ドロップダウン メニューから **エクスポート** を選択して、シーン パッケージを取得します。 シーン パッケージ **.zip** ファイルがダウンロードされます。 シーン パッケージには、scene.json と、シーンの構築に使用される PNG アセットが含まれています。 シーン パッケージは、他の変更を組み込むかどうかを確認します。
+必要に応じて、**保存**]ドロップダウン メニューから **エクスポート** を選択して、シーン パッケージを取得します。 シーン パッケージ .zip ファイルがダウンロードされます。 シーン パッケージには、scene.json と、シーンの構築に使用される PNG アセットが含まれています。 シーン パッケージは、他の変更を組み込むかどうかを確認します。
 
 ![シーンをエクスポートする](../assets/images/apps-in-meetings/build-a-scene.png)
 

@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET MVC パッケージ appmanifest conversation domain permission store
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 91099b1acdea7b89305db9aad894c94019de4695
-ms.sourcegitcommit: b2f6599e44a418b4cce92f28843b7e013fd6e86d
+ms.openlocfilehash: 40afdd1692b0f5d7c99eaaf228969ba8c95ba20b
+ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64686684"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64737214"
 ---
 # <a name="create-a-personal-tab"></a>プライベート タブを作成する
 
@@ -55,7 +55,7 @@ ms.locfileid: "64686684"
     yo teams
     ```
 
-1. **マニフェスト.json** ファイルを更新するためにアプリ ジェネレーター Microsoft Teams求められる一連の質問に値を入力します。
+1. Microsoft Teams アプリ ジェネレーターによってファイルを更新するように求められた一連の質問に値を指定します`manifest.json`。
 
     :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Teams ジェネレーター" border="true":::
 
@@ -164,7 +164,7 @@ ms.locfileid: "64686684"
     ./src/public/<yourDefaultTabNameTab>/personal.html
     ```
 
-1. Visual Studio Code内の次の場所から **manifest.json を** 開きます。
+1. Visual Studio Code内の次の場所から開きます`manifest.json`。
 
     ```
      ./src/manifest/manifest.json
@@ -189,7 +189,7 @@ ms.locfileid: "64686684"
 
 1. **contentURL** パス コンポーネント **yourDefaultTabNameTab** を実際のタブ名で更新します。
 
-1. 更新された **manifest.json** ファイルを保存します。
+1. 更新 `manifest.json` されたファイルを保存します。
 
 1. 次のパスからVisual Studio Codeで **Tab.ts** を開き、IFrame でコンテンツ ページを提供します。
 
@@ -207,11 +207,7 @@ ms.locfileid: "64686684"
 
 ### <a name="create-your-app-package"></a>アプリ パッケージを作成する
 
-Teamsでアプリケーションをビルドして実行するためのアプリ パッケージが必要です。 アプリ パッケージは、 **manifest.json** ファイルを検証し、 **./package** ディレクトリに zip フォルダーを生成する gulp タスクを使用して作成されます。 コマンド プロンプトで、次のコマンドを入力します。
-
-```cmd
-gulp manifest
-```
+Teamsでアプリケーションをビルドして実行するためのアプリ パッケージが必要です。 アプリ パッケージは、ファイルを検証し、ディレクトリ内`./package`の zip フォルダーを`manifest.json`生成する gulp タスクを使用して作成されます。 コマンド プロンプトで、コマンドを使用します `gulp manifest`。
 
 ### <a name="build-and-run-your-application"></a>アプリケーションをビルドして実行する
 
@@ -334,9 +330,9 @@ ASP.NET Core **は、Index** という名前のファイルをサイトの既定
 
 このフォルダーには、次の必須アプリ パッケージ ファイルが含まれています。
 
-* 192 x 192 ピクセルの **フル カラー アイコン** 。
-* 32 x 32 ピクセルの **透明なアウトライン アイコン** 。
-* アプリの属性を指定する **manifest.json** ファイル。
+* 192 x 192 ピクセルのフル カラー アイコン。
+* 32 x 32 ピクセルの透明なアウトライン アイコン。
+* `manifest.json`アプリの属性を指定するファイル。
 
 タブをTeamsにアップロードする際に使用するには、これらのファイルをアプリ パッケージに圧縮する必要があります。 指定したマニフェストを`contentUrl`読み込み、<iframe\> に埋め込み、タブにレンダリングMicrosoft Teams。
 
@@ -391,13 +387,9 @@ ngrok http 3978 --host-header=localhost
 
 1. **アプリを** 開き、[**アプリのインポート**] を選択します。
 
-1. アプリ パッケージの名前は **tab.zip** です。 次のパスで使用できます。
+1. アプリ パッケージ ファイル名は `tab.zip` パスで `/bin/Debug/netcoreapp3.1/tab.zip` 使用できます。
 
-    ```
-    /bin/Debug/netcoreapp3.1/tab.zip
-    ```
-
-1. **tab.zip** 選択し、開発者ポータルで開きます。
+1. 開発者ポータルで選択 `tab.zip` して開きます。
 
 1. 既定の **アプリ ID** が作成され、[ **基本情報** ] セクションに入力されます。
 
@@ -409,7 +401,7 @@ ngrok http 3978 --host-header=localhost
 
 1. **アプリの機能** で、[**個人用 appCreate** >  **your first personal app] タブを** 選択し、名前を入力して **コンテンツ URL を**`https://<yourngrokurl>/personalTab`更新します。 [Web サイト URL] フィールドを空白のままにし、ドロップダウン リストと **[追加**] から [**Context** as personalTab] を選択します。
 
-1. [**保存**] を選択します。
+1. **[保存]** を選択します。
 
 1. [ドメイン] セクションでは、タブのドメインに HTTPS プレフィックス `<yourngrokurl>.ngrok.io`のない ngrok URL を含める必要があります。
 
@@ -489,7 +481,7 @@ ASP.NET Coreでは、Web ルート フォルダーは、アプリケーション
 
 * 192 x 192 ピクセルの **フル カラー アイコン** 。
 * 32 x 32 ピクセルの **透明なアウトライン アイコン** 。
-* アプリの属性を指定する **manifest.json** ファイル。
+* `manifest.json`アプリの属性を指定するファイル。
 
 タブをTeamsにアップロードする際に使用するには、これらのファイルをアプリ パッケージに圧縮する必要があります。 指定したマニフェストを`contentUrl`読み込み、IFrame に埋め込み、タブにレンダリングMicrosoft Teams。
 
@@ -578,7 +570,7 @@ ngrok http 3978 --host-header=localhost
 
 1. **アプリの機能** で、[**個人用 appCreate** >  **your first personal app] タブを** 選択し、名前を入力して **コンテンツ URL を**`https://<yourngrokurl>/personalTab`更新します。 [Web サイト URL] フィールドを空白のままにし、ドロップダウン リストと **[追加**] から [**Context** as personalTab] を選択します。
 
-1. [**保存**] を選択します。
+1. **[保存]** を選択します。
 
 1. [ドメイン] セクションでは、タブのドメインに HTTPS プレフィックス `<yourngrokurl>.ngrok.io`のない ngrok URL を含める必要があります。
 
@@ -700,4 +692,4 @@ this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
 * [モバイルのタブ](~/tabs/design/tabs-mobile.md)
 * [アダプティブ カードを使用してタブをビルドする](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [会話タブを作成する](~/tabs/how-to/conversational-tabs.md)
-* [個人用アプリまたはタブからTeamsに共有する](~/concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
+* [個人用アプリまたはタブから Teams に共有する](~/concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)

@@ -5,12 +5,12 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: fcb8c700ecd6f925c011ba1773989622e6221e78
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 4f606363b62126731afcbc8b7f065951d8cd1a13
+ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501985"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64736878"
 ---
 # <a name="in-app-purchases"></a>アプリ内購入
 
@@ -31,11 +31,11 @@ Microsoft Teams は、アプリ内購入を実装して無料から有料の Tea
 
 * アプリは [`openPurchaseExperience`API](#purchase-experience-api) で呼び出されます。
 
-アプリ内購入エクスペリエンスは、**manifest.json** ファイルを更新するか、**[開発者ポータル]** の **[アクセス許可]** セクションから **[アプリ内購入オファーを表示]** を有効にすることで有効にできます。
+アプリ内購入エクスペリエンスは、`manifest.json` ファイルを更新するか、**[開発者ポータル]** の **[アクセス許可]** セクションから **[アプリ内購入オファーを表示]** を有効にすることで有効にできます。
 
 ### <a name="update-manifest"></a>マニフェストを更新する
 
-アプリ内購入エクスペリエンスを有効にするには、開発者ポータルの [アクセス許可] セクションから RSC の permissions.se オファーを追加して、Teams アプリの **manifest.json** ファイルを更新します。 これにより、アプリユーザーはアプリの有料バージョンにアップグレードして、新しい機能の使用を開始できます。 アプリ マニフェストの更新プログラムは次のとおりです。
+アプリ内購入エクスペリエンスを有効にするには、開発者ポータルの [アクセス許可] セクションから RSC の permissions.se オファーを追加して、Teams アプリの `manifest.json` ファイルを更新します。 これにより、アプリユーザーはアプリの有料バージョンにアップグレードして、新しい機能の使用を開始できます。 アプリ マニフェストの更新プログラムは次のとおりです。
 
 ```json
 
