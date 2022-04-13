@@ -1,66 +1,66 @@
 ---
 title: 会話イベント
 author: WashingtonKayaker
-description: コード サンプルを使用して、Microsoft Teams ボットからの会話イベント、チャネル イベントの更新、チーム メンバー イベント、メッセージの反応イベントを処理する方法。
+description: コード サンプルを使用して、Microsoft Teams ボットからの会話イベント、チャネル イベントの更新、チーム メンバー イベント、メッセージリアクション イベントを操作する方法。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: イベント ボット チャネル メッセージの反応の会話
-ms.openlocfilehash: 8052ec921a0e0e72ea6b64323ec713b84d18d18d
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 2c3a41c84eec620aa0cc87fbd473a913d14f6ef4
+ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453447"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64826972"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams ボットの会話イベント
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-会話用のボットを構築するMicrosoft Teams、会話イベントを処理できます。 Teamsボットがアクティブなスコープで発生する会話イベントの通知をボットに送信します。 これらのイベントをコードでキャプチャし、次のアクションを実行できます。
+Microsoft Teams用の会話ボットを構築する場合は、会話イベントを操作できます。 Teamsは、ボットがアクティブなスコープで発生する会話イベントの通知をボットに送信します。 コードでこれらのイベントをキャプチャし、次のアクションを実行できます。
 
-* ボットがチームに追加されると、ウェルカム メッセージをトリガーします。
-* 新しいチーム メンバーが追加または削除されると、ウェルカム メッセージをトリガーします。
-* チャネルの作成、名前の変更、または削除時に通知をトリガーします。
-* ボット メッセージがユーザーに気に入った場合。
+* ボットがチームに追加されたときにウェルカム メッセージをトリガーします。
+* 新しいチーム メンバーが追加または削除されたときにウェルカム メッセージをトリガーします。
+* チャネルが作成、名前変更、または削除されたときに通知をトリガーします。
+* ボット メッセージがユーザーに気に入られたときに通知をトリガーします。
 
 ## <a name="conversation-update-events"></a>会話の更新イベント
 
-会話の更新イベントを使用して、通知の向上とボットの効果的なアクションを提供できます。
+会話更新イベントを使用すると、より良い通知とより効果的なボット アクションを提供できます。
 
 > [!IMPORTANT]
 >
-> * いつでも新しいイベントを追加し、ボットがイベントの受信を開始できます。
-> * 予期しないイベントを受け取るボットを設計する必要があります。
-> * ボット フレームワーク SDK を使用している場合、ボットは処理しないイベントに対して自動的 `200 - OK` に応答します。
+> * 新しいイベントはいつでも追加でき、ボットはイベントの受信を開始します。
+> * 予期しないイベントを受信するようにボットを設計する必要があります。
+> * Bot Framework SDK を使用している場合、ボットは、処理しないことを選択したイベントに対して自動的に応答 `200 - OK` します。
 
-ボットは、次 `conversationUpdate` のいずれかの場合にイベントを受信します。
+ボットは、 `conversationUpdate` 次のいずれかの場合にイベントを受け取ります。
 
-* ボットが会話に追加された場合。
-* 他のメンバーは会話に追加または削除されます。
-* 会話のメタデータが変更されました。
+* ボットが会話に追加されたとき。
+* 他のメンバーは、会話に追加または削除されます。
+* 会話メタデータが変更されました。
 
-`conversationUpdate` イベントは、ボットが追加されているチームのメンバーシップの更新に関する情報を受信したときにボットに送信されます。 また、個人の会話用に初めて追加された更新プログラムも受け取ります。
+`conversationUpdate` イベントは、ボットが追加されているチームのメンバーシップの更新に関する情報を受信したときにボットに送信されます。 また、個人の会話に初めて追加されたときに更新プログラムを受け取ります。
 
-次の表に、スレッド更新イベントのTeams詳細を示します。
+次の表は、Teams会話更新イベントの一覧と詳細を示しています。
 
-| 実行されたアクション        | EventType         | 呼び出されるメソッド              | 説明                | 範囲 |
+| 実行されたアクション        | EventType         | 呼び出されたメソッド              | 説明                | 範囲 |
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
 | 作成されたチャネル     | channelCreated    | OnTeamsChannelCreatedAsync | [チャネルが作成されます](#channel-created)。 | チーム |
 | チャネルの名前が変更されました     | channelRenamed    | OnTeamsChannelRenamedAsync | [チャネルの名前が変更されます](#channel-renamed)。 | チーム |
 | チャネルが削除されました     | channelDeleted    | OnTeamsChannelDeletedAsync | [チャネルが削除されます](#channel-deleted)。 | チーム |
-| チャネルの復元    | channelRestored    | OnTeamsChannelRestoredAsync | [チャネルが復元されます](#channel-deleted)。 | チーム |
+| 復元されたチャネル    | channelRestored    | OnTeamsChannelRestoredAsync | [チャネルが復元されます](#channel-deleted)。 | チーム |
 | メンバーが追加されました   | membersAdded   | OnTeamsMembersAddedAsync   | [メンバーが追加されます](#team-members-added)。 | すべて |
-| 削除されたメンバー | membersRemoved | OnTeamsMembersRemovedAsync | [メンバーが削除されます](#team-members-removed)。 | groupChat とチーム |
+| 削除されたメンバー | membersRemoved | OnTeamsMembersRemovedAsync | [メンバーが削除されます](#team-members-removed)。 | groupChat と team |
 | チャットの名前が変更されました        | teamRenamed       | OnTeamsTeamRenamedAsync    | [チームの名前が変更されます](#team-renamed)。       | チーム |
 | チームが削除されました        | teamDeleted       | OnTeamsTeamDeletedAsync    | [チームが削除されます](#team-deleted)。       | チーム |
-| チームがアーカイブされました        | teamArchived       | OnTeamsTeamArchivedAsync    | [チームがアーカイブされます](#team-archived)。       | チーム |
-| チームのアーカイブが解除されました        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [チームはアーカイブ解除されます](#team-unarchived)。       | チーム |
-| チームの復元        | teamRestored      | OnTeamsTeamRestoredAsync    | [チームが復元される](#team-restored)       | チーム |
+| チームがアーカイブされました        | teamArchived       | OnTeamsTeamArchivedAsync    | [チームはアーカイブされます](#team-archived)。       | チーム |
+| チームのアーカイブが解除されました        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [チームはアーカイブされません](#team-unarchived)。       | チーム |
+| 復元されたチーム        | teamRestored      | OnTeamsTeamRestoredAsync    | [チームが復元される](#team-restored)       | チーム |
 
 ### <a name="channel-created"></a>作成されたチャネル
 
-作成されたチャネル イベントは、ボットがインストールされているチームで新しいチャネルが作成されるたびにボットに送信されます。
+チャネル作成イベントは、ボットがインストールされているチームで新しいチャネルが作成されるたびにボットに送信されます。
 
 次のコードは、チャネル作成イベントの例を示しています。
 
@@ -151,7 +151,7 @@ async def on_teams_channel_created(
 
 チャネルの名前が変更されたイベントは、ボットがインストールされているチームでチャネルの名前が変更されるたびにボットに送信されます。
 
-次のコードは、チャネルの名前が変更されたイベントの例を示しています。
+次のコードは、チャネル名が変更されたイベントの例を示しています。
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -231,9 +231,9 @@ async def on_teams_channel_renamed(
 
 ### <a name="channel-deleted"></a>チャネルが削除されました
 
-チャネル削除イベントは、ボットがインストールされているチームでチャネルが削除されるたびに、ボットに送信されます。
+チャネルが削除されたイベントは、ボットがインストールされているチームでチャネルが削除されるたびに、ボットに送信されます。
 
-次のコードは、チャネル削除イベントの例を示しています。
+次のコードは、チャネルが削除されたイベントの例を示しています。
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -313,11 +313,11 @@ async def on_teams_channel_deleted(
 
 ---
 
-### <a name="channel-restored"></a>チャネルの復元
+### <a name="channel-restored"></a>復元されたチャネル
 
-以前に削除されたチャネルが、ボットが既にインストールされているチームで復元されるたびに、チャネル復元イベントがボットに送信されます。
+以前に削除されたチャネルが、ボットが既にインストールされているチームで復元されるたびに、チャネルの復元イベントがボットに送信されます。
 
-次のコードは、チャネル復元イベントの例を示しています。
+次のコードは、チャネルが復元されたイベントの例を示しています。
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -402,11 +402,11 @@ async def on_teams_channel_restored(
 
 ---
 
-### <a name="team-members-added"></a>チーム メンバーの追加
+### <a name="team-members-added"></a>チーム メンバーが追加されました
 
-イベント `teamMemberAdded` が初めて会話に追加された場合、イベントはボットに送信されます。 イベントは、ボットがインストールされているチームまたはグループ チャットに新しいユーザーが追加される度にボットに送信されます。 ID であるユーザー情報はボットに対して一意であり、特定のユーザーにメッセージを送信するなどのサービスで将来使用するためにキャッシュできます。
+イベントは `teamMemberAdded` 、会話に初めて追加されるときにボットに送信されます。 イベントは、ボットがインストールされているチームまたはグループ チャットに新しいユーザーが追加されるたびにボットに送信されます。 ID であるユーザー情報は、ボットに対して一意であり、特定のユーザーにメッセージを送信するなど、今後サービスで使用するためにキャッシュできます。
 
-次のコードは、チーム メンバーがイベントを追加した例を示しています。
+次のコードは、チーム メンバーが追加したイベントの例を示しています。
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -455,7 +455,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-これは、ボットがチームに追加された場合にボットが受信するメッセージです。
+これは、ボットがチームに追加されたときにボットが受信するメッセージです。
 
 ```json
 {
@@ -494,7 +494,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-これは、ボットが 1 対 1 のチャットに追加された場合にボットが受信するメッセージです。
+これは、ボットが 1 対 1 のチャットに追加されたときにボットが受信するメッセージです。
 
 ```json
 {
@@ -546,14 +546,14 @@ async def on_teams_members_added(
 
 ---
 
-### <a name="team-members-removed"></a>チーム メンバーが削除されました
+### <a name="team-members-removed"></a>削除されたチーム メンバー
 
-イベント `teamMemberRemoved` は、チームから削除された場合にボットに送信されます。 イベントは、ボットがメンバーであるチームからユーザーが削除される度にボットに送信されます。 削除された新しいメンバーがボット自体またはユーザーかどうかを確認するには、 のオブジェクト `Activity` を確認します `turnContext`。  オブジェクトの `Id` フィールドがオブジェクト `MembersRemoved` `Id` `Recipient` のフィールドと同じ場合、削除されたメンバーはボット、それ以外の場合はユーザーです。 ボットの一般的 `Id` な設定はです `28:<MicrosoftAppId>`。
+`teamMemberRemoved`イベントがチームから削除された場合、イベントはボットに送信されます。 イベントは、ボットがメンバーであるチームからユーザーが削除されるたびにボットに送信されます。 削除された新しいメンバーがボット自体かユーザーかを確認するには、`Activity``turnContext`.  オブジェクトの`Id`フィールドがオブジェクトの`MembersRemoved`フィールド`Recipient`と`Id`同じ場合、削除されたメンバーはボット、それ以外の場合はユーザーです。 ボットの一般的な `Id` 例は `28:<MicrosoftAppId>`.
 
 > [!NOTE]
-> ユーザーがテナントから完全に削除されると `membersRemoved conversationUpdate` 、イベントがトリガーされます。
+> ユーザーがテナントから完全に削除されると、 `membersRemoved conversationUpdate` イベントがトリガーされます。
 
-次のコードは、チーム メンバーが削除したイベントの例を示しています。
+次のコードは、チーム メンバーが削除されたイベントの例を示しています。
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -602,7 +602,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-次 `channelData` のペイロード例のオブジェクトは、グループ チャットではなくチームにメンバーを追加するか、新しい 1 対 1 の会話を開始します。
+次のペイロード例のオブジェクトは `channelData` 、グループ チャットではなくチームにメンバーを追加するか、新しい 1 対 1 の会話を開始することに基づいています。
 
 ```json
 {
@@ -660,7 +660,7 @@ async def on_teams_members_removed(
 
 ### <a name="team-renamed"></a>チャットの名前が変更されました
 
-チームの名前が変更された場合、ボットに通知されます。 オブジェクトでイベント `conversationUpdate` を受 `eventType.teamRenamed` け取 `channelData` ります。
+チームの名前が変更されると、ボットに通知されます。 オブジェクト内`channelData`のイベントを`eventType.teamRenamed``conversationUpdate`受信します。
 
 次のコードは、チーム名が変更されたイベントの例を示しています。
 
@@ -740,7 +740,7 @@ async def on_teams_team_renamed(
 
 ### <a name="team-deleted"></a>チームが削除されました
 
-チームが削除された場合、ボットに通知されます。 オブジェクトでイベント `conversationUpdate` を受 `eventType.teamDeleted` け取 `channelData` ります。
+チームが削除されると、ボットに通知されます。 オブジェクト内`channelData`のイベントを`eventType.teamDeleted``conversationUpdate`受信します。
 
 次のコードは、チームが削除したイベントの例を示しています。
 
@@ -814,9 +814,9 @@ async def on_teams_team_deleted(
 
 ---
 
-### <a name="team-restored"></a>チームの復元
+### <a name="team-restored"></a>復元されたチーム
 
-削除後にチームが復元された場合、ボットは通知を受け取ります。 オブジェクトでイベント `conversationUpdate` を受 `eventType.teamrestored` け取 `channelData` ります。
+ボットは、チームが削除された後に復元されたときに通知を受け取ります。 オブジェクト内`channelData`のイベントを`eventType.teamrestored``conversationUpdate`受信します。
 
 次のコードは、チームが復元したイベントの例を示しています。
 
@@ -896,9 +896,9 @@ async def on_teams_team_restored(
 
 ### <a name="team-archived"></a>チームがアーカイブされました
 
-チームがインストールおよびアーカイブされた場合、ボットは通知を受け取ります。 オブジェクトでイベント `conversationUpdate` を受 `eventType.teamarchived` け取 `channelData` ります。
+チームがインストールされてアーカイブされると、ボットは通知を受け取ります。 オブジェクト内`channelData`のイベントを`eventType.teamarchived``conversationUpdate`受信します。
 
-次のコードは、チーム アーカイブ イベントの例を示しています。
+次のコードは、チームアーカイブイベントの例を示しています。
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -976,7 +976,7 @@ async def on_teams_team_archived(
 
 ### <a name="team-unarchived"></a>チームのアーカイブが解除されました
 
-チームがインストールされ、アーカイブ解除された場合、ボットは通知を受け取ります。 オブジェクトでイベント `conversationUpdate` を受 `eventType.teamUnarchived` け取 `channelData` ります。
+チームがインストールされ、アーカイブ解除されると、ボットは通知を受け取ります。 オブジェクト内`channelData`のイベントを`eventType.teamUnarchived``conversationUpdate`受信します。
 
 次のコードは、チームのアーカイブ解除イベントの例を示しています。
 
@@ -1054,18 +1054,18 @@ async def on_teams_team_unarchived(
 
 ---
 
-会話の更新イベントを処理したので、メッセージに対するさまざまな反応に対して発生するメッセージの反応イベントを理解できます。
+会話の更新イベントを操作したので、メッセージに対するさまざまな反応に対して発生するメッセージリアクション イベントを理解できます。
 
-## <a name="message-reaction-events"></a>メッセージの反応イベント
+## <a name="message-reaction-events"></a>メッセージのリアクション イベント
 
-ユーザー `messageReaction` がボットから送信されたメッセージに対する反応を追加または削除すると、イベントが送信されます。 メッセージ `replyToId` の ID を含み、テキスト `Type` 形式の反応の種類を指定します。 反応の種類には、怒り、心、笑い、例えば、悲しい、驚くなどです。 このイベントには、元のメッセージの内容は含めされません。 メッセージに対する処理の反応がボットにとって重要な場合は、メッセージを送信するときにメッセージを保存する必要があります。 次の表に、イベントの種類とペイロード オブジェクトの詳細を示します。
+イベントは `messageReaction` 、ユーザーがボットによって送信されたメッセージに対する反応を追加または削除したときに送信されます。 には `replyToId` メッセージの ID が含まれ `Type` 、テキスト形式のリアクションの種類です。 反応の種類には、腹立ち、心、笑い、いいね、悲しい、驚きなどがあります。 このイベントには、元のメッセージの内容は含まれません。 メッセージに対する処理の反応がボットにとって重要な場合は、メッセージを送信するときにメッセージを格納する必要があります。 次の表に、イベントの種類とペイロード オブジェクトの詳細を示します。
 
 | EventType       | Payload オブジェクト   | 説明                                                             | 範囲 |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [ボット メッセージに追加された反応](#reactions-added-to-bot-message)。           | すべて   |
-| messageReaction | reactionsRemoved | [ボット メッセージから削除された反応](#reactions-removed-from-bot-message)。 | すべて |
+| messageReaction | reactionsAdded   | [ボット メッセージに追加されたリアクション](#reactions-added-to-bot-message)。           | すべて   |
+| messageReaction | reactionsRemoved | [ボット メッセージから削除されたリアクション](#reactions-removed-from-bot-message)。 | すべて |
 
-### <a name="reactions-added-to-bot-message"></a>ボット メッセージに追加された反応
+### <a name="reactions-added-to-bot-message"></a>ボット メッセージに追加されたリアクション
 
 次のコードは、ボット メッセージに対する反応の例を示しています。
 
@@ -1287,14 +1287,14 @@ async def on_reactions_removed(
 
 ## <a name="installation-update-event"></a>インストール更新イベント
 
-ボットをスレッドにインストール `installationUpdate` すると、ボットはイベントを受け取ります。 スレッドからボットをアンインストールすると、イベントもトリガーされます。 ボットをインストールすると、イベント内のアクション フィールドが追加に設定され、ボットをアンインストールするとアクション フィールドが削除に設定 *されます*。
+ボットを会話スレッドに `installationUpdate` インストールすると、ボットはイベントを受け取ります。 スレッドからボットをアンインストールすると、イベントもトリガーされます。 ボットをインストールすると、イベント内の **アクション** フィールドが *追加* に設定され、ボットがアンインストールされると **、アクション** フィールドが *削除* されるように設定されます。
 
 > [!NOTE]
-> アプリケーションをアップグレードし、ボットを追加または削除すると、アクションによってイベントもトリガー `installationUpdate` されます。 ボット **を** 削除した場合、ボット *を追加したり* 、削除アップグレードを行った場合は、アクション フィールドは追加 *アップグレード* に設定されます。
+> アプリケーションをアップグレードしてからボットを追加または削除すると、アクションによってイベントもトリガーされます `installationUpdate` 。 ボットを追加する場合は **アクション** フィールドが *add-upgrade* に設定され、ボットを *削除すると削除/アップグレード* されます。
 
-### <a name="install-update-event"></a>更新イベントのインストール
+### <a name="install-update-event"></a>更新イベントをインストールする
 
-イベントを使用 `installationUpdate` して、インストール時にボットから導入メッセージを送信します。 このイベントは、プライバシーとデータ保持の要件を満たすのに役立ちます。 ボットがアンインストールされた場合は、ユーザーデータまたはスレッド データをクリーンアップして削除できます。
+このイベントを `installationUpdate` 使用して、インストール時にボットから入門メッセージを送信します。 このイベントは、プライバシーとデータ保持の要件を満たすのに役立ちます。 ボットがアンインストールされたときに、ユーザーまたはスレッド データをクリーンアップして削除することもできます。
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -1310,7 +1310,7 @@ else
 } return; }
 ```
 
-イベントをキャプチャする別の方法として、シナリオの追加または削除に専用のハンドラーを使用することもできます。
+イベントをキャプチャするための代替方法として、シナリオを *追加* または *削除* するための専用ハンドラーを使用することもできます。
 
 ```csharp
 protected override async Task
@@ -1404,20 +1404,20 @@ async def on_installation_update(self, turn_context: TurnContext):
 ## <a name="uninstall-behavior-for-personal-app-with-bot"></a>ボットを使用した個人用アプリのアンインストール動作
 
 > [!NOTE]
-> ボットを使用した個人用アプリのアンインストール動作は、現在パブリック開発者 [プレビューでのみ利用できます](../../../resources/dev-preview/developer-preview-intro.md)。
+> ボットを使用した個人用アプリのアンインストール動作は、現在 [、パブリック開発者向けプレビュー](../../../resources/dev-preview/developer-preview-intro.md)でのみ使用できます。
 
-アプリをアンインストールすると、ボットもアンインストールされます。 ユーザーがアプリにメッセージを送信すると、403 応答コードが表示されます。 ボットは、ボットによって投稿された新しいメッセージの 403 応答コードを受け取ります。 個人用スコープ内のボットのアンインストール後の動作と、Teams groupChat スコープが揃いました。 アプリのアンインストール後にメッセージを送受信することはできません。
+アプリをアンインストールすると、ボットもアンインストールされます。 ユーザーがアプリにメッセージを送信すると、403 応答コードが表示されます。 ボットは、ボットによって投稿された新しいメッセージに対する 403 応答コードを受け取ります。 個人用スコープ内のボットのアンインストール後の動作と、Teamsスコープと groupChat スコープが揃いました。 アプリのアンインストール後にメッセージを送受信することはできません。
 
 <img src="~/assets/images/bots/uninstallbot.png" alt="Uninstall event" width="900" height="900"/>
 
-## <a name="event-handling-for-install-and-uninstall-events"></a>インストール イベントとアンインストール イベントのイベント処理
+## <a name="event-handling-for-install-and-uninstall-events"></a>イベントのインストールとアンインストールのイベント処理
 
-これらのインストール イベントとアンインストール イベントを使用する場合、ボットがイベントから予期しないイベントを受け取る際に例外をTeams。 これは、次の場合に発生します。
+これらのインストール イベントとアンインストール イベントを使用すると、ボットがTeamsから予期しないイベントを受信する際に例外が発生する場合があります。 これは、次の場合に発生します。
 
-* SDK を使用せずにボットをMicrosoft Bot Framework、その結果、ボットは予期しないイベントを受け取る場合に例外を与えます。
-* Microsoft Bot Framework SDK を使用してボットをビルドし、基本イベント ハンドルをオーバーライドして既定のイベント動作を変更します。
+* Microsoft Bot Framework SDK を使用せずにボットをビルドすると、その結果、ボットは予期しないイベントを受信する際に例外を発生させます。
+* Microsoft Bot Framework SDK を使用してボットをビルドし、基本イベント ハンドルをオーバーライドして既定のイベント動作を変更することを選択します。
 
-将来いつでも新しいイベントを追加し、ボットがイベントを受け取り始めるのを知る必要があります。 そのため、予期しないイベントを受け取る可能性を設計する必要があります。 ボット フレームワーク SDK を使用している場合、ボットは処理を選択しないイベントに対して 200 - OK で自動的に応答します。
+今後いつでも新しいイベントを追加でき、ボットが受け取り始めるという点を理解しておくことが重要です。 そのため、予期しないイベントを受け取る可能性を設計する必要があります。 Bot Framework SDK を使用している場合、処理を選択しないイベントに対してボットは自動的に 200 - OK で応答します。
 
 ## <a name="code-sample"></a>コード サンプル
 
@@ -1425,7 +1425,7 @@ async def on_installation_update(self, turn_context: TurnContext):
 |----------|-----------------|----------|
 | 会話ボット | ボットの会話イベントのサンプル コード。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [プロアクティブ メッセージを送信する](~/bots/how-to/conversations/send-proactive-messages.md)

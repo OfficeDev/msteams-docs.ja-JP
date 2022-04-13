@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: c395324daba877b0e8f6030f4929dbbe5ce0dc6f
-ms.sourcegitcommit: d9daad3d5818d5774911b96fdc7bde45b04c9908
+ms.openlocfilehash: aaef04fc6e624f1d6863ac8a575c5d2662643ecd
+ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64511258"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64826993"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams ストア検証ガイドライン
 
@@ -1029,7 +1029,7 @@ Fluent UI コンポーネントの[初級](~/concepts/design/design-teams-app-ba
 
 ### <a name="notification-only-bots"></a>通知専用ボット
 
-通知専用ボットで構成されるアプリは、コア アプリまたはバックエンドの特定のトリガーまたはイベントに基づいてユーザーの通知をトリガーすることにより、ユーザーに価値を提供します。 たとえば、営業チームがフォローアップするために新しい潜在顧客や見込み客が追加されることなどです。
+通知専用ボットで構成されるアプリは、コア アプリまたはバックエンドの特定のトリガーまたはイベントに基づいてユーザーの通知をトリガーすることにより、ユーザーに価値を提供します。 たとえば、営業チームがフォローアップするために新しい潜在顧客や見込み客が追加されることなどです。 高品質の通知専用ボットは、ワークフローの完了やアラートなど、特定のイベント完了時にユーザーに定期的に通知します。
 
 通知は、次のような場合に Teams での価値を提供します。
 

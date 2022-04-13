@@ -4,12 +4,12 @@ author: surbhigupta
 description: Teams会議やさまざまな会議シナリオ用にアプリを有効にして構成する、アプリ マニフェストを更新する、機能を構成する (会議内ダイアログ、共有会議ステージ、会議サイドパネルなど)
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 1f77d0924eec9c52dc2f3d10566010c2953bd66b
-ms.sourcegitcommit: 5201e7f390fbb2a9190cae1781c2f09e1746c8f7
+ms.openlocfilehash: 719019439e095abf1ef6befccb3f9f6eaa8cd22b
+ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/13/2022
-ms.locfileid: "64820196"
+ms.locfileid: "64826979"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Teams会議用にアプリを有効にして構成する
 
@@ -25,7 +25,7 @@ Teams会議用のアプリを使用すると、会議のライフサイクル全
 
 * 会議の前後のシナリオに関する一般的な[Teamsタブ設計ガイドライン](../tabs/design/tabs.md)に従います。 会議中のエクスペリエンスについては、 [会議内タブの設計ガイドライン](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) と [会議内ダイアログの設計ガイドライン](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)を参照してください。
 
-* アプリをリアルタイムで更新するには、会議のイベント アクティビティに基づいて最新の状態にする必要があります。 これらのイベントは、会議のライフサイクル全体で、会議内のダイアログ ボックスや他のステージ内に含めることができます。 会議中のダイアログ ボックスについては、会議[中の通知ペイロードのパラメーターに関する説明を](API-references.md#send-an-in-meeting-notification)参照してください`completionBotId`。
+* アプリをリアルタイムで更新するには、会議のイベント アクティビティに基づいて最新の状態にする必要があります。 これらのイベントは、会議のライフサイクル全体で、会議内ダイアログやその他のステージ内に含めることができます。 会議中ダイアログについては、会議[中の通知ペイロードの](API-references.md#send-an-in-meeting-notification)パラメーターを参照してください`completionBotId`。
 
 ## <a name="enable-your-app-for-teams-meetings"></a>Teams会議用にアプリを有効にする
 
@@ -114,8 +114,7 @@ Teams会議は、組織のコラボレーション エクスペリエンスを�
 会議チャットでキーを入力し、[ボットの **@** 取得] を選択 **します**。
 
 > [!NOTE]
->
-> * コンテンツ バブルは、ユーザーがアクセスできる会議チャットにアダプティブ カードまたはカードを同時に投稿します。 これは、会議やTeams アプリが最小化されたときにユーザーを支援します。
+> * 会議内ダイアログには、会議にダイアログが表示され、ユーザーがアクセスできるアダプティブ カードが会議チャットに同時に投稿されます。 会議チャットのアダプティブ カードは、会議に出席しているユーザーや、Teams アプリが最小化されている場合に役立ちます。
 > * ユーザー ID は [、Tabs SSO](../tabs/how-to/authentication/auth-aad-sso.md) を使用して確認する必要があります。 認証後、アプリは API を使用してユーザー ロールを `GetParticipant` 取得できます。
 > * ユーザー ロールに基づいて、アプリにはロール固有のエクスペリエンスを提供する機能があります。 たとえば、ポーリング アプリでは、開催者と発表者のみが新しい投票を作成できます。
 > * 会議の進行中は、ロールの割り当てを変更できます。 詳細については、[Teams会議のロールを](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)参照してください。
