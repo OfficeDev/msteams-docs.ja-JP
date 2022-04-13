@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: d367824e633e129129a5c4de8900d8f1e3a19013
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 248830328e68ce5c8e844a200501d240ff9e82ea
+ms.sourcegitcommit: 1346b0eab13704807fca98f85c452214701d3fa2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398933"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64793798"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Microsoft Teams ストアにアプリを発行する
 
@@ -51,7 +51,7 @@ Teams ストアに公開されたアプリは、Microsoft 365 アプリおよび
 
 * **機能とエクスペリエンスの詳細なテスト**
 
-  アプリは検証ツールによって徹底的にレビューされ、高度な機能とユーザー エクスペリエンスのテスト、使いやすさのチェック、メタデータチェックに重点を置いて、[Microsoft コマーシャルマーケットプレースの 認定ポリシー](/legal/marketplace/certification-policies)に準拠していることを確認します。アプリの検証は、デスクトップ、Web、およびモバイル クライアント間で実行されます。
+  アプリは検証ツールによって徹底的にレビューされ、高度な機能とユーザー エクスペリエンスのテスト、使いやすさのチェック、メタデータチェックに重点を置いて、[Microsoft コマーシャルマーケットプレースの 認定ポリシー](/legal/marketplace/certification-policies)に準拠していることを確認します。アプリの検証は、デスクトップ、Web、およびモバイル クライアント間で実行されます。アプリの検証は、デスクトップ、Web、およびモバイル クライアント間で実行されます。
 
 * **ガイド付きアプリはコンシェルジュ サービスを通じて公開します**
 
