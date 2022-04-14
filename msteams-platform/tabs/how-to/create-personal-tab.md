@@ -7,16 +7,16 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET MVC パッケージ appmanifest conversation domain permission store
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 40afdd1692b0f5d7c99eaaf228969ba8c95ba20b
-ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
+ms.openlocfilehash: fda21b5bf9908529a9a20820867551202b761362
+ms.sourcegitcommit: 77e92360bd8fb5afcda76195d90122ce8ef0389e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64737214"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64838477"
 ---
 # <a name="create-a-personal-tab"></a>プライベート タブを作成する
 
-[個人] タブは、個人を対象としたボットと共に、個人用アプリの一部であり、1 人のユーザーを対象としています。 左側のウィンドウにピン留めして簡単にアクセスできます。 個人用タブの API を[並べ替えて](#reorder-static-personal-tabs)追加[`registerOnFocused`](#add-registeronfocused-api-for-tabs-or-personal-apps)することもできます。
+[個人] タブは、個人を対象としたボットと共に、個人用アプリの一部であり、1 人のユーザーを対象としています。 左側のウィンドウにピン留めして簡単にアクセスできます。 個人用タブの [順序を変更](#reorder-static-personal-tabs) することもできます。
 
 個人用タブを作成するための [前提条件](~/tabs/how-to/tab-requirements.md) がすべて揃っていることを確認します。
 
@@ -262,7 +262,7 @@ gulp ngrok-serve
 
    これで、Teamsに個人用タブが正常に作成され、追加されました。
   
-   Teamsに個人用タブがあるため、個人用タブの API [を並べ替えて](#reorder-static-personal-tabs)追加[`registerOnFocused`](#add-registeronfocused-api-for-tabs-or-personal-apps)することもできます。
+   Teamsに個人用タブがあるため、個人用タブを[並べ替えることもできます](#reorder-static-personal-tabs)。
 
 ::: zone-end
 
@@ -415,7 +415,7 @@ ngrok http 3978 --host-header=localhost
 
    これで、Teamsに個人用タブが正常に作成され、追加されました。
   
-   Teamsに個人用タブがあるため、個人用タブの API [を並べ替えて](#reorder-static-personal-tabs)追加[`registerOnFocused`](#add-registeronfocused-api-for-tabs-or-personal-apps)することもできます。
+   Teamsに個人用タブがあるため、個人用タブを[並べ替えることもできます](#reorder-static-personal-tabs)。
 
 ::: zone-end
 
@@ -584,7 +584,7 @@ ngrok http 3978 --host-header=localhost
   
    これで、Teamsに個人用タブが正常に作成され、追加されました。
 
-   Teamsに個人用タブがあるため、個人用タブの API [を並べ替えて](#reorder-static-personal-tabs)追加[`registerOnFocused`](#add-registeronfocused-api-for-tabs-or-personal-apps)することもできます。
+   Teamsに個人用タブがあるため、個人用タブを[並べ替えることもできます](#reorder-static-personal-tabs)。
 
 ::: zone-end
 
@@ -612,76 +612,7 @@ ngrok http 3978 --host-header=localhost
 
 ```
 
-## <a name="add-registeronfocused-api-for-tabs-or-personal-apps"></a>タブまたは個人用アプリ用の API を追加 `registerOnFocused` する
-
-`registerOnFocused` SDK API を使用すると、Teamsでキーボードを使用できます。 Ctrl キー、Shift キー、F6 キーを使用して、個人用アプリに戻り、タブまたは個人用アプリにフォーカスを維持できます。 たとえば、個人用アプリから離れて何かを検索し、個人用アプリに戻ったり、Ctrl + F6 キーを押して必要な場所を移動したりできます。
-
-次のコードは、フォーカスをタブまたは個人用アプリに `registerFocusEnterHandler` 返す必要がある場合の SDK のハンドラー定義の例を示しています。
-
-``` C#
-
-export function registerFocusEnterHandler(handler: (navigateForward: boolean) => void): 
-void {
-  HandlersPrivate.focusEnterHandler = handler;
-  handler && sendMessageToParent('registerHandler', ['focusEnter']);
-}
-function handleFocusEnter(navigateForward: boolean): void
- {
-  if (HandlersPrivate.focusEnterHandler)
-   {
-    HandlersPrivate.focusEnterHandler(navigateForward);
-  }
-}
-
-```
-
-ハンドラーがキーワード `focusEnter`を使用してトリガーされると、ハンドラー `registerFocusEnterHandler` は 、.. という名前のパラメーターを受け取るコールバック関数 `focusEnterHandler` を使用して呼び `navigateForward`出されます。 `navigateForward`値によって、イベントの種類が決まります。 これは `focusEnterHandler` Ctrl + F6 によってのみ呼び出され、タブ キーでは呼び出されません。
-Teams内の移動イベントに役立つキーは次のとおりです。
-
-* 転送イベント: Ctrl + F6 キー
-* 後方イベント: Ctrl + Shift + F6 キー
-
-``` C#
-
-case 'focusEnter':     
-this.registerFocusEnterHandler((navigateForward: boolean = true) => {
-this.sdkWindowMessageHandler.sendRequestMessage(this.frame, this.constants.SdkMessageTypes.focusEnter, [navigateForward]);
-// Set focus on iframe or webview
-if (this.frame && this.frame.sourceElem) {
-  this.frame.sourceElem.focus();
-}
-return true;
-});
-}
-
-// callback function to be passed to the handler
-private focusEnterHandler: (navigateForward: boolean) => boolean;
-
-// function that gets invoked after handler is registered.
-private registerFocusEnterHandler(focusEnterHandler: (navigateForward: boolean) => boolean): void {
-this.focusEnterHandler = focusEnterHandler;
-this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
-}
-
-```
-
-### <a name="personal-app"></a>個人用アプリ
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus.png" alt-text="registerOnFocussed API を追加するためのオプションを示す例" border="true":::
-
-#### <a name="personal-app-forward-event"></a>個人用アプリ: 転送イベント
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-forward-event.png" alt-text="registerOnFocussed API の前方移動を追加するためのオプションを示す例" border="true":::
-
-#### <a name="personal-app-backward-event"></a>個人用アプリ: バックワード イベント
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-backward-event.png" alt-text="例は、registerOnFocussed API の後方移動を追加するためのオプションを示しています" border="true":::
-
-### <a name="tab"></a>Tab
-
-:::image type="content" source="../../assets/images/personal-apps/registerfocus-tab.png" alt-text="例は、タブに registerOnFocussed API を追加するためのオプションを示しています" border="true":::
-
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [[チャネルまたはグループの作成] タブ](~/tabs/how-to/create-channel-group-tab.md)
