@@ -4,12 +4,12 @@ description: Microsoft Teams 開発者向けドキュメントの概要の概要
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams 開発者向けサンプル
-ms.openlocfilehash: e30aae82c4251b9d32556032a7f4165ffc6ab4b1
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.openlocfilehash: 6ab9c3c531f7919b8558c45b200a5bf679591e34
+ms.sourcegitcommit: 123a64d7bcd310352dcff9f769b5f7f9cafd6aeb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571426"
+ms.lasthandoff: 04/18/2022
+ms.locfileid: "64910544"
 ---
 # <a name="get-started"></a>概要
 
@@ -49,9 +49,9 @@ Yeoman ワークフローに既に慣れている場合は、 [YoTeams Yeoman Ge
 では、最初の Teams アプリを構築しましょう。 ただし、まず、言語 (またはフレームワーク) を選択し、開発環境を準備します。
 
 > [!div class="nextstepaction"]
-> [Blazor を使用して Teams アプリを構築する](../sbs-gs-blazorupdate.yml)
-> [!div class="nextstepaction"]
 > [React](../sbs-gs-javascript.yml) を使用して JavaScript で Teams アプリを構築する
+> [!div class="nextstepaction"]
+> [Blazor を使用して Teams アプリを構築する](../sbs-gs-blazor.yml)
 > [!div class="nextstepaction"]
 > [SPFx](../sbs-gs-spfx.yml) を使用して Teams アプリを構築する
 > [!div class="nextstepaction"]

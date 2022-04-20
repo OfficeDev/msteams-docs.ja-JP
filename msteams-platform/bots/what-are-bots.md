@@ -5,12 +5,12 @@ description: Microsoft Teams のボットの概要。
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 7d6996f023b6e9f706edd99429dd1575394a43f1
-ms.sourcegitcommit: 6189ca81099452a3ab2ff4fff4fb1ded5ba6dcfe
+ms.openlocfilehash: fbf7f7b1f4e863ec7612a404b5576baf40035d21
+ms.sourcegitcommit: 8ae93b7bfffff77a5b9cb7a5d287f202e73ea9be
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64498225"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64952304"
 ---
 # <a name="bots-in-microsoft-teams"></a>Microsoft Teams のボット
 
@@ -55,7 +55,7 @@ Teams ボット API を使用して、チャットまたはチームのメンバ
 > [!div class="nextstepaction"]
 > [ボットと SDK](~/bots/bot-features.md)
 
-## <a name="code-sample"></a>コード サンプル
+## <a name="code-samples"></a>コード サンプル
 
 |サンプルの名前 | 説明 | C# | Node.js |
 |----------------|-----------------|--------------|--------------|

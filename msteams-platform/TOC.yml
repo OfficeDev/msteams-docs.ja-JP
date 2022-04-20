@@ -20,10 +20,10 @@
   items:
     - name: 概要を開始する
       href: get-started/get-started-overview.md
-    - name: Blazor を使用して初めてのアプリを構築する
-      href: sbs-gs-blazorupdate.yml
     - name: JavaScript を使用して初めてのアプリを構築する
       href: sbs-gs-javascript.yml
+    - name: Blazor を使用して初めてのアプリを構築する
+      href: sbs-gs-blazorupdate.yml
     - name: SPFx を使用して初めてのアプリを構築する
       href: sbs-gs-spfx.yml
     - name: C# または .NET を使用して初めてのアプリを構築する
