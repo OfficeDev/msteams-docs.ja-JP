@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: a9ac73d3c3e41c5c57892273e788855a16642457
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.openlocfilehash: d095bc5536742ad1e0b6d3e9053c6a18e5f1c0f3
+ms.sourcegitcommit: 8ae93b7bfffff77a5b9cb7a5d287f202e73ea9be
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571109"
+ms.lasthandoff: 04/19/2022
+ms.locfileid: "64952354"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Microsoft Teams でアプリをアップロードする
 
@@ -34,17 +34,22 @@ ms.locfileid: "64571109"
 アプリのスコープの構成方法に応じて、チーム、チャット、会議、または個人用にアプリをサイドロードできます。
 
 1. [Microsoft 365開発アカウント](https://developer.microsoft.com/en-us/microsoft-365/dev-program)を使用して Teams クライアントにログインします。
-1. **[アプリ]** を選択し、**[アプリの管理]** を選択します。
+1. **[アプリ]** > **[アプリの管理]** と **[アプリの公開]** を選択します。
+
+    :::image type="content" source="~/assets/images/publish-app/manage-apps.png" alt-text="アプリを発行します。" border="true":::
+
 1. **[カスタム アプリをアップロードする]** を選択します。
+
+   :::image type="content" source="~/assets/images/publish-app/publish-app.png" alt-text="カスタム アプリをアップロード" border="true":::
+
 1. アプリ パッケージの .zip ファイルを選択します。
-2. 要件に従ってアプリを Teams に追加します。</br>
+1. 要件に従ってアプリを Teams に追加します。</br>
 
-   a. **［追加］** を選択して、個人用アプリを追加します。</br>
-   b. ドロップダウン メニューを使用して、アプリをチームまたはチャットに追加します。
+   a. **［追加］** を選択して、個人用アプリを追加します。</br> b. ドロップダウン メニューを使用して、アプリをチームまたはチャットに追加します。
 
-![Teams アプリを作成する](~/assets/videos/app-teams.gif)
+    :::image type="content" source="~/assets/videos/app-teams.gif" alt-text="Teams アプリを作成する" border="true":::
 
-## <a name="troubleshooting"></a>トラブルシューティング
+## <a name="troubleshoot"></a>トラブルシューティング
 
 アプリを脇で発行することに失敗した場合や、アップロードに関する問題がある場合は、次のオプションを確認します:
 
@@ -52,17 +57,55 @@ ms.locfileid: "64571109"
 1. [アプリ パッケージ を検証する](https://dev.teams.microsoft.com/appvalidation.html)。
 1. アプリ マニフェストが最新の [スキーマ](../../resources/schema/manifest-schema.md)と一致していることを確かめてください。
 
-## <a name="access-your-app"></a>アプリにアクセスする
+## <a name="manage-your-apps"></a>アプリを管理する
 
+アプリを管理すると、ユーザーは Teams クライアントでアプリ、アクセス許可、サブスクリプションを管理、更新、削除するための専用の場所を持つことができます。 ユーザーは、**[アプリを管理]** からアプリをインストールできます。
+
+### <a name="access-your-app"></a>アプリにアクセスする
+
+**[アプリを管理]** からアプリにアクセスするには、次の手順に従います。
+
+1. **[アプリ]** に移動し、Teams で **[アプリを管理]** を選択して、すべてのチャネルにインストールされているアプリを表示するか、リスト形式で個人使用します。
+
+    :::image type="content" source="~/assets/images/publish-app/manage-apps-list.png" alt-text="チームのアプリ一覧にアクセスする" border="true":::
+    
+1. アプリのドロップダウンを選択して、アプリがインストールされているすべてのスコープを表示します。
+    
+    :::image type="content" source="~/assets/images/publish-app/app-scopes.png" alt-text="チームのアプリ スコープにアクセスする" border="true":::
+    
+1. アプリのスコープを選択して、チャネルまたは個人用ビューでアプリに移動します。 スコープの一覧は、個人スコープとチーム スコープのみで構成されています。 グループ チャット スコープにインストールされているアプリは、現在このビューに表示されていません。
+    
 Teams には、アプリを開く方法がいくつか用意されています。 詳細については、「 [Teamsでアプリにアクセスする](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a)」を参照してください。
 
-## <a name="update-your-app"></a>アプリを更新する
+### <a name="update-your-app"></a>アプリを更新する
 
 コードを変更する場合は、アプリを再びサイドロードする必要はありません (これらはリアルタイムで Teams に反映されます)。 ただし、アプリの構成を変更する場合は、再インストールする必要があります。
 
-## <a name="remove-your-app"></a>アプリを削除する
+アプリで更新プログラムが利用可能な場合は、**[利用可能な更新プログラム]** オプションが有効になります。 更新するには、次の手順に従います。
 
-アプリを削除するには、Teams のアプリ アイコンを右クリックし、**[アンインストール]** を選択します。
+1. 更新を表示するには、**[利用可能な更新プログラム]** を選択します。
+
+     :::image type="content" source="~/assets/images/publish-app/update-available.png" alt-text="Teams アプリを更新する" border="true":::
+
+1. **[更新の表示]** を選択すると、更新オプションのあるウィンドウが表示されます。
+1. アプリを更新するには、**[更新]** ボタンを選択します。
+    
+     :::image type="content" source="~/assets/images/publish-app/update-window.png" alt-text="アプリの管理で Teams アプリを更新する" border="true":::
+
+     :::image type="content" source="~/assets/images/publish-app/updated-app.png" alt-text="更新されたアプリ" border="true":::
+
+### <a name="remove-your-app"></a>アプリを削除する
+
+Teams からアプリを削除するには、次の手順に従います。
+
+1. **[アプリの管理]** でアプリを見つけます。
+1. インストールされたアプリのスコープで、&nbsp;:::image type="content" source="~/assets/images/publish-app/bin-icon.png" alt-text="[Teams のアプリを削除]" border="false":::&nbsp; を選択します。
+        
+    :::image type="content" source="~/assets/images/publish-app/uninstall-from-channel.png" alt-text="チャネル内のアプリを削除する" border="true":::
+
+1. アプリを削除するには、**[削除]** を選択します。
+    
+    :::image type="content" source="~/assets/images/publish-app/remove-app-teams.png" alt-text="Teams からアプリを削除する" border="true":::
 
 > [!NOTE]
 >
