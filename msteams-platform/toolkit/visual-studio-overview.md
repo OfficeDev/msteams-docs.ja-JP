@@ -1,89 +1,89 @@
 ---
-title: アプリとアプリのTeams ToolkitをVisual Studio
-description: 新しいアプリを使用して、アプリ内で直接Visual Studioカスタム アプリをMicrosoft Teams Toolkit。 アプリの構成方法については、Visual Studioアプリを検証し、アプリをアプリと開発者ポータルVisual Studio発行する方法について説明します。
-keywords: teams visual studio ツールキット
+title: Teams Toolkit と Visual Studio を使用してアプリを構築する
+description: Microsoft Teams Toolkitを使用してVisual Studio内に直接優れたカスタム アプリの構築をはじめましょう。 Visual Studioでアプリを構成し、アプリを検証し、Visual Studioおよび開発者ポータルから発行する方法について説明します。
+keywords: teams Visual Studio ツールキット
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 1/13/2022
 ms.author: johmil
 ms.openlocfilehash: c34f1113cd4da5f1b416dba6bc950b3588accecf
 ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2022
 ms.locfileid: "63453431"
 ---
 # <a name="teams-toolkit-for-visual-studio"></a>Visual Studio 用 Teams ツールキット
 
-IDE 内のアプリケーションをビルド、テストTeams開発します。
+IDE 内のTeamsのビルド、テスト、開発を行います。
 
-Teams Toolkit Visual Studio の拡張機能を使用すると、Teams 用の新しいプロジェクトを簡単に作成し、Teams 開発者ポータルでアプリを自動的にセットアップし、Teams で実行およびデバッグし、クラウド ホスティングを構成し、IDE から [TeamsFx](https://github.com/OfficeDev/teamsfx) を使用できます。
+Teams ToolkitのVisual Studio用拡張機能を使用すると、Teams用の新しいプロジェクトの作成、Teams開発者ポータルでのアプリの自動セットアップ、Teamsでの実行とデバッグ、クラウド ホスティングの構成、IDE からの [TeamsFx](https://github.com/OfficeDev/teamsfx) の使用を簡単に行うことができます。
 
-## <a name="install-teams-toolkit-for-visual-studio"></a>インストールTeams ToolkitのVisual Studio
+## <a name="install-teams-toolkit-for-visual-studio"></a>Visual Studio 用 Teams ツールキットのインストール
 
 >[!NOTE]
-> 前提条件として、以下の手順に従Visual Studio 2022 17.1 Preview 2 以降を使用してください。
+> 前提条件として、Visual Studio 2022 17.1 Preview 2 以降を使用していることを確認し、以下の手順に従ってください。
 
-1. 2022 17.1 Visual Studioプレビュー 2 が既にインストールされている場合は、次の手順に進みます。 それ以外の場合[は、2022 プレビュー Visual Studioインストールします](https://visualstudio.microsoft.com/vs/preview/)。
-2. ファイルを開Visual Studio インストーラー。
-3. 既存 **の VS** 2022 プレビュー インストールの [変更] を選択します。
-4. アプリケーションと **ASP.NET ワークロードを選択** します。
-5. 右側の [コンポーネントと web 開発 ASP.NET **] セクション** を展開し、[**オプション**] Microsoft Teamsの一覧で [開発ツール] を選択します。
-6. インストール **プロセスを****完了するには**、Visual Studio インストーラーで [インストール] または [変更] を選択します。
+1. Visual Studio 2022 17.1 Preview 2 が既にインストールされている場合は、次の手順に進みます。 それ以外の場合は、[Visual Studio 2022 Preview をインストール](https://visualstudio.microsoft.com/vs/preview/)します。
+2. Visual Studio インストーラーを開きます。
+3. 既存の VS 2022 プレビュー インストールの **[変更]** を選択します。
+4. **ASP.NET と Web 開発** のワークロードを選択します。
+5. 右側の **[ASP.NET と Web 開発**] セクションを展開し、オプションのコンポーネントの一覧で **Microsoft Teams 開発ツール** を選択します。
+6. Visual Studio インストーラーで [**インストール**] または [**変更**] を選択して、インストール プロセスを完了します。
 
-![インストールされているMicrosoft Teamsの開発ツールVisual Studio選択します。](images/teams-development-tools-vs-installer.png)
+![インストールされているVisual Studio インストーラーでMicrosoft Teams開発ツールを選択します。](images/teams-development-tools-vs-installer.png)
 
-## <a name="get-started-quickly-with-a-new-project"></a>新しいプロジェクトをすばやく開始する
+## <a name="get-started-quickly-with-a-new-project"></a>新しいプロジェクトですぐに使用を開始する
 
-Teams Toolkit テンプレートには、アプリ プロジェクトの開始に必要なすべてのコード、ファイル、および構成Teams提供されます。
+プロジェクト テンプレートTeams Toolkit、Teams アプリ プロジェクトを開始するために必要なすべてのコード、ファイル、および構成が提供されます。
 
-アプリ Microsoft Teams テンプレートを使用すると、新しいアプリを自動的に登録Microsoft 365構成するために必要なアカウントをTeamsできます。
+Microsoft Teams アプリ プロジェクト テンプレートを使用すると、新しいTeams アプリを自動的に登録して構成するために必要なMicrosoft 365 アカウントを指定できます。
 
 > [!NOTE]
-> ユーザーアカウントをお持ちMicrosoft 365場合は、開発者プログラムのサブスクリプションMicrosoft 365[サインアップ](https://developer.microsoft.com/microsoft-365/dev-program)できます。 90 日間無料で、開発アクティビティに使用している限り更新されます。 Visual Studio Enterprise または Professional サブスクリプションをお持ちの場合、両方のプログラムには、無料の Microsoft 365 [開発者向けサブスクリプション](https://aka.ms/MyVisualStudioBenefits)が含まれています。これは、Visual Studio サブスクリプションの有効期間中はアクティブです。 詳細については、「開発者向けサブスクリプション[のMicrosoft 365参照してください](/office/developer-program/office-365-developer-program-get-started)。
+> 現在 Microsoft 365 アカウントを使用していない場合は、 [Microsoft 365 開発者プログラム](https://developer.microsoft.com/microsoft-365/dev-program) サブスクリプションにサイン アップできます。 90 日間は無料で、開発アクティビティに使用している限り更新されます。 Visual Studio Enterprise または Professional サブスクリプションをお持ちの場合、両方のプログラムには、無料の Microsoft 365 [開発者向けサブスクリプション](https://aka.ms/MyVisualStudioBenefits)が含まれています。これは、Visual Studio サブスクリプションの有効期間中はアクティブです。 詳細については、[Microsoft 365 開発者サブスクリプションを設定する](/office/developer-program/office-365-developer-program-get-started)をご覧ください。
 
-1. 2022 Visual Studio起動します。
-1. スタート ウィンドウで、[新しいプロジェクトの **作成] を選択します**。
-1. [テンプレートの **検索] ボックスに**、「アプリ」とMicrosoft Teams入力します。
-1. [アプリ テンプレート] **Microsoft Teams選択し**、[次へ] を **選択します**。
-1. [新しい **プロジェクトの構成] ウィンドウ** で、[新しいプロジェクト名] ボックスに _「HelloTeams_**」と入力Project入力** します。 次に、[作成] を **選択します**。
-1. [新しい **アプリケーション アプリケーションのTeams]** ウィンドウで、[アカウントの選択] セレクターを使用して、Microsoft 365アカウント **にサインインまたは選択** します。 次に、[作成] を **選択します**。
+1. Visual Studio 2022を起動します。
+1. スタート ウィンドウで、[ **新しいプロジェクトの作成**] を選択します。
+1. [**テンプレートの検索**] ボックスにMicrosoft Teams アプリと入力します。
+1. **Microsoft Teamsアプリ** テンプレートを選択し、[**次へ**] を選択します。
+1. [**新しいプロジェクトの構成]** ウィンドウで、**Project名** ボックスに _「HelloTeams_」とタイプまたは入力します。 その後、**[作成]** を選択します。
+1. [**新しいTeamsアプリケーションの作成**] ウィンドウで、**[アカウントの選択]** セレクターを使用してMicrosoft 365 アカウントを選択またはサインインします。 その後、**[作成]** を選択します。
 
-![新しいアプリ プロジェクトMicrosoft Teamsを作成Visual Studio。](images/teams-toolkit-vs-new-project.png)
+![Visual Studioで新しいMicrosoft Teamsアプリ プロジェクトを作成する。](images/teams-toolkit-vs-new-project.png)
 
-Visual Studio新しいプロジェクトが開きTeams Toolkit開発者ポータルで新しいプロジェクトTeamsセットアップされます。 プロジェクトは、上記の手順でTeamsした Microsoft 365 アカウントにリンクされている組織に対して追加され、新しいユーザー登録Azure Active Directoryされます。 これは、アプリをアプリで実行するために必要Teams。
+Visual Studioが新しいプロジェクトを開き、Teams ToolkitがTeams開発者ポータルに新しいプロジェクトを設定します。 上記の手順で選択したMicrosoft 365 アカウントにリンクされたTeams組織に対してプロジェクトが追加され、新しいAzure Active Directory登録が作成されます。 これは、Teamsでアプリを実行するために必要なものです。
 
-## <a name="run-and-debug-your-app-in-teams"></a>アプリを実行してデバッグTeams
+## <a name="run-and-debug-your-app-in-teams"></a>Teamsでアプリを実行してデバッグする
 
-アプリ プロジェクトをローカルで実行するには、アプリ プロジェクトVisual Studio。
+Visual Studioからローカルで実行されているアプリ プロジェクトを起動できます。
 
-1. アプリ プロジェクト[を開Teams作成します](#get-started-quickly-with-a-new-project)。
-2. **F5 キーを押** するか、または [デバッグ **>デバッグの** 開始] を選択Visual Studio。
+1. [Teams アプリ プロジェクトを開くか](#get-started-quickly-with-a-new-project)作成します。
+2. **F5** キーを押すか、Visual Studioで **[デバッグ] > [デバッグの開始]** を選択します。
 
-Visual Studioブラウザーでアプリ Teamsを起動し、デバッグを開始します。
+Visual StudioブラウザーでTeams アプリ プロジェクトを起動し、デバッグを開始します。
 
 ## <a name="host-your-teams-app-in-the-cloud-and-preview-it"></a>クラウドでTeamsアプリをホストし、プレビューする
 
-Azure でアプリをホストするクラウド リソースを作成し、自動的に構成Teams Toolkit。
+Teams Toolkitを使用して、Azure でアプリをホストするためのクラウド リソースを作成して自動的に構成できます。
 
-1. [クラウド] **Project > Teams Toolkit >の [プロビジョニング] を選択** します。
+1. **クラウドメニューの Project > Teams Toolkit > Provision** を選択します。
 2. [サブスクリプションの選択] ウィンドウで、リソースの作成に使用する Azure サブスクリプションを選択します。
 
-Teams Toolkitサブスクリプションに Azure リソースを作成しますが、この手順ではコードは展開されません。 プロジェクトを次の新しいリソースに展開するには、次の手順を実行します。
+Teams Toolkitはこのサブスクリプションに Azure リソースを作成しますが、この手順ではコードはデプロイされません。 プロジェクトをこれらの新しいリソースにデプロイするには:
 
-1. [クラウド] **Project > Teams Toolkit >で [展開] を選択** します。
+1. **[クラウド] メニューの Project > Teams Toolkit >deployを** 選択します。
 
-## <a name="preview-your-app-running-from-cloud-resources"></a>クラウド リソースから実行しているアプリをプレビューする
+## <a name="preview-your-app-running-from-cloud-resources"></a>クラウド リソースから実行されているアプリをプレビューする
 
-リモート リソースを使用してブラウザーでアプリを実行して、すべてが機能するのを確認できます。 このシナリオでは、まだデバッグできません。
+リモート リソースを使用してブラウザーでアプリを実行し、すべてが動作することを確認できます。 このシナリオでは、まだデバッグできません。
 
-1. [アプリの **プレビュー Project > Teams Toolkit >] Teams選択** します。
+1. メニューで **Project > Teams Toolkit > プレビューTeams アプリ** を選択します。
 
-アプリはブラウザーで開き、[プロビジョニングと展開] の手順で作成されたリソースを使用します。
+アプリはブラウザーで開き、プロビジョニングとデプロイの手順で作成されたリソースを使用します。
 
 ## <a name="publish-your-app-to-teams"></a>アプリを Teams に公開する
 
-[Teams 開発者](https://dev.teams.microsoft.com/home)ポータルでは、チームにアプリをアップロードしたり、組織内のユーザー用に会社のカスタム アプリ ストアにアプリを提出したり、すべての Teams ユーザーのアプリ ソースにアプリを提出することができます。
+[Teams 開発者ポータル](https://dev.teams.microsoft.com/home)では、アプリをチーム向けにアップロードしたり、組織内のユーザー向けに会社のカスタム App Store に提出したり、すべての Teams ユーザー向けに App Source に提出したりできます。
 
 - これらの送信内容は、IT 管理者によって審査されます。
-- [発行] ページ **に戻り** 、申請の状態を確認し、アプリが IT 管理者によって承認または却下された場合に確認できます。また、アプリに更新プログラムを送信したり、現在アクティブな申請を取り消したりすることもできます。
+- **[Publish]** (発行) ページに戻ると提出ステータスを確認することができ、アプリが IT 管理者によって承認または却下されたかどうかを確認できます。このページでは、アプリの更新プログラムを提出したり、現在提出中のアプリをキャンセルしたりすることもできます。

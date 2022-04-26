@@ -1,13 +1,13 @@
 ---
-title: ボットからのファイルの送受信
-description: 個人用、チャネル、およびグループチャットスコープの API を使用して、ボットGraphファイルを送受信する方法について説明します。 v3 Teams SDK に基づくコード サンプルを使用して、ボット API を使用します。
-keywords: teams ボット ファイルが受信を送信する
+title: ボットからファイルを送受信する
+description: 個人用スコープ、チャネル スコープ、グループチャット スコープの Graph API を使用して、ボットを通じてファイルを送受信する方法について説明します。 v3 Bot Framework SDK に基づくコード サンプルを使用して Teams ボット API を使用します。
+keywords: Teams ボット ファイル送信受信
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/20/2019
 ms.openlocfilehash: c95ddbc4bfe0d491f48101b12d8658f7714c0075
 ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/31/2022
 ms.locfileid: "64590753"
@@ -16,39 +16,39 @@ ms.locfileid: "64590753"
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-ボットにファイルを送受信するには、次の 2 つの方法があります。
+ボットからファイルを送受信するには、次の 2 つの方法があります。
 
-* Microsoft Graph API を使用します。 このメソッドは、次に示すすべてのスコープのボットTeams。
+* Microsoft Graph API を使用します。 この方法は、Teams のすべてのスコープのボットで機能します。
   * `personal`
   * `channel`
   * `groupchat`
-* API のTeams使用します。 これらは、1 つのコンテキストでファイルのみをサポートします。
+* Teams API を使用します。 これらは、1 つのコンテキストでのみファイルをサポートします。
   * `personal`
 
-## <a name="using-the-microsoft-graph-apis"></a>Microsoft Graph API の使用
+## <a name="using-the-microsoft-graph-apis"></a>Microsoft Graph API を使用します
 
-Microsoft Graph API を使用して、既存SharePointファイルを参照するカード添付ファイルOneDrive[投稿SharePoint](/onedrive/developer/rest-api/)。 Graph API を使用するには、標準の OAuth 2.0 承認フローを使用して、ユーザーの OneDrive フォルダー (for and files) またはチームのチャネル内のファイル (`personal` `groupchat` `channel`ファイル用) へのアクセスを取得する必要があります。 このメソッドは、すべてのスコープTeamsします。
+[OneDrive および SharePoint](/onedrive/developer/rest-api/) 用の Microsoft Graph API を使用して、既存の SharePoint ファイルを参照するカードが添付されたメッセージを投稿できます。 Graph API を使用するには、標準の OAuth 2.0 認証フローを通じてユーザーの OneDrive フォルダー (`personal` および `groupchat` ファイルの場合) またはチームのチャネル内のファイル (`channel` ファイルの場合) へのアクセス権を取得する必要があります。 このメソッドは、すべての Teams スコープで機能します。
 
-## <a name="using-the-teams-bot-apis"></a>ボット API Teams使用する
+## <a name="using-the-teams-bot-apis"></a>Teams ボット API の使用
 
 > [!NOTE]
-> このメソッドは、コンテキストでのみ機能 `personal` します。 またはコンテキストでは `channel` 動作 `groupchat` しません。
+> このメソッドは、`personal` コンテキストでのみ機能します。 `channel` または `groupchat` のコンテキストでは機能しません。
 
-ボットは、コンテキスト内のユーザー `personal` (個人チャットとも呼ばれる) を使用して、ユーザーとファイルを直接送受信Teamsできます。 これにより、経費報告、画像認識、ファイル アーカイブ、電子署名、およびファイル コンテンツの直接操作に関するその他のシナリオを実装できます。 通常、Teamsファイルはカードとして表示され、アプリ内でのリッチ表示が可能です。
+ボットは、Teams API を使用して、`personal` コンテキスト (個人用チャットとも呼ばれます) のユーザーとファイルを直接送受信できます。 これにより、経費報告、画像認識、ファイル アーカイブ、電子署名、およびファイル コンテンツの直接操作を含むその他のシナリオを実装できます。 Teams で共有されるファイルは通常、カードとして表示され、アプリ内で豊富に表示できます。
 
-次のセクションでは、メッセージの送信など、ユーザーが直接やり取りした結果としてファイル コンテンツを送信する方法について説明します。 この API は、ボット プラットフォームのMicrosoft Teams提供されます。
+次のセクションでは、メッセージの送信など、ユーザーが直接操作した結果としてファイル コンテンツを送信する方法について説明します。 この API は、Microsoft Teams ボット プラットフォームの一部として提供されます。
 
-### <a name="configure-your-bot-to-support-files"></a>ファイルをサポートするためにボットを構成する
+### <a name="configure-your-bot-to-support-files"></a>ファイルをサポートするようにボットを構成する
 
-ボットでファイルを送受信 `supportsFiles` するには、マニフェストのプロパティをに設定する必要があります `true`。 このプロパティについては、Manifest [リファレンスの bots](~/resources/schema/manifest-schema.md#bots) セクションで説明します。
+ボットでファイルを送受信するには、マニフェストの `supportsFiles` プロパティを `true` に設定する必要があります。 このプロパティは、マニフェスト リファレンスの[ボット](~/resources/schema/manifest-schema.md#bots) セクションで説明されています。
 
-定義は次のように表示されます。 `"supportsFiles": true` ボットが有効にしない場合、 `supportsFiles`次の機能は機能しません。
+定義は次のようになります: `"supportsFiles": true`。 ボットが `supportsFiles` を有効にしない場合、次の機能は機能しません。
 
-### <a name="receiving-files-in-personal-chat"></a>個人用チャットでのファイルの受信
+### <a name="receiving-files-in-personal-chat"></a>個人用チャットでファイルを受信する
 
-ユーザーがボットにファイルを送信すると、そのファイルは最初にユーザーのストレージにアップロードOneDrive for Businessされます。 その後、ボットはユーザーのアップロードを通知するメッセージ アクティビティを受信します。 アクティビティには、名前やコンテンツ URL などのファイル メタデータが含まれます。 この URL から直接読み取って、バイナリ コンテンツを取得できます。
+ユーザーがボットにファイルを送信すると、ファイルは最初にユーザーの OneDrive for Business ストレージにアップロードされます。 ボットは、ユーザーのアップロードを通知するメッセージ アクティビティを受信します。 アクティビティには、名前やコンテンツ URL などのファイル メタデータが含まれます。 この URL から直接読み取って、バイナリ コンテンツを取得できます。
 
-#### <a name="message-activity-with-file-attachment-example"></a>添付ファイルを含むメッセージ アクティビティの例
+#### <a name="message-activity-with-file-attachment-example"></a>ファイル添付の例を使用したメッセージ アクティビティ
 
 ```json
 {
@@ -66,34 +66,34 @@ Microsoft Graph API を使用して、既存SharePointファイルを参照す�
 }
 ```
 
-次の表に、添付ファイルのコンテンツ プロパティについて説明します。
+次の表で、添付ファイルのコンテンツ プロパティについて説明します。
 
 | プロパティ | 用途 |
 | --- | --- |
-| `downloadUrl` | OneDriveを取得する URL を指定します。 この URL から直接 `HTTP GET` 発行できます。 |
-| `uniqueId` | 一意のファイル ID。 これは、ユーザー OneDriveボットにファイルを送信する場合のドライブ アイテム ID の一部です。 |
-| `fileType` | ファイル拡張子の種類 (pdf や docx など)。 |
+| `downloadUrl` | ファイルのコンテンツを取得するための OneDrive URL。 この URL から直接 `HTTP GET` を発行できます。 |
+| `uniqueId` | 一意のファイル ID。 ユーザーがボットにファイルを送信する場合、これは OneDrive ドライブ アイテム ID になります。 |
+| `fileType` | pdf や docx などのファイル拡張子の種類。 |
 
-ベスト プラクティスとして、ユーザーにメッセージを送信してファイルのアップロードを確認する必要があります。
+ベスト プラクティスとして、ユーザーにメッセージを返送してファイルのアップロードを確認する必要があります。
 
 ### <a name="uploading-files-to-personal-chat"></a>個人用チャットへのファイルのアップロード
 
-ユーザーにファイルをアップロードするには、次の手順を実行します。
+ユーザーへのファイルのアップロードには、次の手順が含まれます。
 
-1. ファイルの書き込み許可を要求するメッセージをユーザーに送信します。 このメッセージには、アップロードする `FileConsentCard` ファイルの名前を含む添付ファイルが含まれている必要があります。
-2. ユーザーがファイルのダウンロードを受け入れる場合、ボットは場所 URL を含む *Invoke* アクティビティを受信します。
-3. ファイルを転送するために、ボットは指定された場所 `HTTP POST` の URL に直接実行します。
-4. 必要に応じて、ユーザーが同じファイルのそれ以上のアップロードを受け入れるのを許可しない場合は、元の同意カードを削除できます。
+1. ファイルの書き込み許可を要求するメッセージをユーザーに送信します。 このメッセージには、アップロードするファイルの名前が記載された `FileConsentCard` 個の添付ファイルが含まれている必要があります。
+2. ユーザーがファイルのダウンロードを受け入れると、ボットはロケーション URL を使用して *Invoke* アクティビティを受け取ります。
+3. ファイルを転送するために、ボットは指定されたロケーション URL に直接 `HTTP POST` を実行します。
+4. オプションで、ユーザーが同じファイルのそれ以上のアップロードを受け入れないようにする場合は、元の同意カードを削除できます。
 
-#### <a name="message-requesting-permission-to-upload"></a>アップロードするアクセス許可を要求するメッセージ
+#### <a name="message-requesting-permission-to-upload"></a>アップロードの許可を求めるメッセージ
 
-このデスクトップ メッセージには、ファイルをアップロードするユーザーのアクセス許可を要求する簡単な添付ファイル オブジェクトが含まれている。
+このデスクトップ メッセージには、ファイルをアップロードするためのユーザー権限を要求する単純な添付オブジェクトが含まれています。
 
-![ファイルのアップロード許可をユーザーに要求する同意カードのスクリーンショット](../../assets/images/bots/bot-file-consent-card.png)
+![ファイルのアップロードに対するユーザー権限を要求する同意カードのスクリーンショット](../../assets/images/bots/bot-file-consent-card.png)
 
-このモバイル メッセージには、ファイルをアップロードするユーザーのアクセス許可を要求する添付ファイル オブジェクトが含まれている。
+このモバイル メッセージには、ファイルをアップロードするためのユーザー権限を要求する添付オブジェクトが含まれています。
 
-![モバイルでファイルをアップロードするユーザーのアクセス許可を要求する同意カードのスクリーンショット](../../assets/images/bots/mobile-bot-file-consent-card.png)
+![モバイルにファイルをアップロードするためのユーザー権限を要求する同意カードのスクリーンショット](../../assets/images/bots/mobile-bot-file-consent-card.png)
 
 ```json
 {
@@ -112,20 +112,20 @@ Microsoft Graph API を使用して、既存SharePointファイルを参照す�
 }
 ```
 
-次の表に、添付ファイルのコンテンツ プロパティについて説明します。
+次の表で、添付ファイルのコンテンツ プロパティについて説明します。
 
 | プロパティ | 用途 |
 | --- | --- |
-| `description` | ファイルの説明。 目的を説明したり、その内容を要約したりするために、ユーザーに表示される場合があります。 |
-| `sizeInBytes` | ユーザーに、ファイル サイズと、ファイルに含む容量の見積もりをOneDrive。 |
-| `acceptContext` | ユーザーがファイルを受け入れるときにボットに無音で送信される追加のコンテキスト。 |
-| `declineContext` | ユーザーがファイルを拒否した場合にボットに無音で送信される追加のコンテキスト。 |
+| `description` | ファイルの説明。 その目的を説明したり、その内容を要約したりするために、ユーザーに表示される場合があります。 |
+| `sizeInBytes` | OneDrive で必要なファイル サイズと容量の見積もりをユーザーに提供します。 |
+| `acceptContext` | ユーザーがファイルを受け入れると、ボットにサイレントに送信される追加のコンテキスト。 |
+| `declineContext` | ユーザーがファイルを拒否したとき、ボットにサイレントに送信される追加のコンテキスト。 |
 
-#### <a name="invoke-activity-when-the-user-accepts-the-file"></a>ユーザーがファイルを受け入れるときにアクティビティを呼び出す
+#### <a name="invoke-activity-when-the-user-accepts-the-file"></a>ユーザーがファイルを受け入れたときにアクティビティを呼び出す
 
-ユーザーがファイルを受け入れる場合、呼び出しアクティビティがボットに送信されます。 このページには、OneDrive for Businessコンテンツを転送するためにボットが発行できる`PUT`プレースホルダー URL が含まれている。 URL へのアップロードの詳細については、このOneDriveを読み取る: アップロード[バイトをアップロード セッションに送信します](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session)。
+ユーザーがファイルを受け入れると、呼び出しアクティビティがボットに送信されます。 これには、ボットが `PUT` を発行してファイルの内容を転送できる OneDrive for Business プレースホルダー URL が含まれています。 OneDrive URL へのアップロードについては、次の記事をお読みください: [アップロード セッションにバイトをアップロードする](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session)。
 
-次の例は、ボットが受け取る呼び出しアクティビティの簡橋的なバージョンを示しています。
+次の例は、ボットが受け取る呼び出しアクティビティの要約バージョンを示しています。
 
 ```json
 {
@@ -149,7 +149,7 @@ Microsoft Graph API を使用して、既存SharePointファイルを参照す�
 }
 ```
 
-同様に、ユーザーがファイルを拒否した場合、ボットは同じアクティビティ名で次のイベントを受け取る予定です。
+同様に、ユーザーがファイルを拒否すると、ボットは同じ全体的なアクティビティ名で次のイベントを受け取ります。
 
 ```json
 {
@@ -165,7 +165,7 @@ Microsoft Graph API を使用して、既存SharePointファイルを参照す�
 
 ### <a name="notifying-the-user-about-an-uploaded-file"></a>アップロードされたファイルについてユーザーに通知する
 
-ユーザーの OneDrive にファイルをアップロードした後、前述のメカニズムを使用するか、または OneDrive ユーザーが委任した API を使用するかに関わり、ユーザーに確認メッセージを送信する必要があります。 このメッセージには、`FileCard`ユーザーがクリックできる添付ファイルが含まれている必要があります。そのメッセージをプレビューしたり、ファイルを開OneDriveダウンロードしたりします。
+ユーザーの OneDrive にファイルをアップロードした後、上記のメカニズムを使用するか、OneDrive ユーザー委任 API を使用するかにかかわらず、ユーザーに確認メッセージを送信する必要があります。 このメッセージには、ユーザーがクリックしてプレビューしたり、OneDrive で開いたり、ローカルにダウンロードしたりできる `FileCard` 個の添付ファイルが含まれている必要があります。
 
 ```json
 {
@@ -181,16 +181,16 @@ Microsoft Graph API を使用して、既存SharePointファイルを参照す�
 }
 ```
 
-次の表に、添付ファイルのコンテンツ プロパティについて説明します。
+次の表で、添付ファイルのコンテンツ プロパティについて説明します。
 
 | プロパティ | 用途 |
 | --- | --- |
-| `uniqueId` | OneDrive/SharePointアイテム ID。 |
+| `uniqueId` | OneDrive/SharePoint ドライブ アイテム ID。 |
 | `fileType` | pdf や docx などのファイルの種類。 |
 
-### <a name="basic-example-in-c"></a>C の基本例#
+### <a name="basic-example-in-c"></a>C# の基本的な例
 
-次のサンプルは、ファイルのアップロードを処理し、ボットのダイアログでファイル同意要求を送信する方法を示しています。
+次のサンプルは、ボットのダイアログでファイルのアップロードを処理し、ファイルの同意要求を送信する方法を示しています。
 
 ```csharp
 

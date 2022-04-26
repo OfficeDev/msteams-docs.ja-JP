@@ -1,100 +1,100 @@
 ---
 title: ボットと SDK
 author: surbhigupta
-description: ボットを構築するためのツールと SDK のMicrosoft Teamsです。
+description: Microsoft Teams ボットを構築するためのツールと SDK の概要。
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
 ms.openlocfilehash: 1818ebfa102ce55d8243c16f460fa688fc67fdc3
 ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2022
 ms.locfileid: "64464769"
 ---
 # <a name="bots-and-sdks"></a>ボットと SDK
 
-次のいずれかのツールまたは機能を使用して、Microsoft Teamsで動作するボットを作成できます。
+次のいずれかのツールまたは機能を使用して、Microsoft Teams で動作するボットを作成できます。
 
 * [Microsoft Bot Framework SDK](#bots-with-the-microsoft-bot-framework)
 * [Power Virtual Agents](#bots-with-power-virtual-agents)
 * [仮想アシスタント](~/samples/virtual-assistant.md)
 * [Webhook とコネクタ](#bots-with-webhooks-and-connectors)
 
-## <a name="bots-with-the-microsoft-bot-framework"></a>ボットとMicrosoft Bot Framework
+## <a name="bots-with-the-microsoft-bot-framework"></a>Microsoft Bot Framework を使用したボット
 
-ユーザー Teamsボットは、次の要素で構成されます。
+Teams ボットは以下から構成されます。
 
-* ユーザーがホストする一般にアクセス可能な Web サービス。
-* Web サービスのボット フレームワーク登録。
-* Web Teamsクライアントを接続するアプリ Teamsパッケージ。
+* お客様がホストし、公開している Web サービス。
+* Web サービスの Bot Framework 登録。
+* Teams クライアントを Web サービスに接続する、Teams アプリ パッケージ。
 
 > [!TIP]
-> 開発者ポータルを使用して、Web サービスをボット フレームワークに登録し、アプリ構成を指定します。 詳細については、「開発者ポータル[で](~/concepts/build-and-test/teams-developer-portal.md)アプリを管理する」を参照Teams。
+> 開発者ポータルを使用して Web サービスを Bot Framework に登録し、アプリの構成を指定します。 詳細については、「[Microsoft Teams の開発者ポータルを使用してアプリを管理する](~/concepts/build-and-test/teams-developer-portal.md)」を参照してください。
 
-ボット [フレームワークは、](https://dev.botframework.com/) ボット フレームワーク、C#、Python、および JavaScript をJavaする豊富な SDK です。 ボット フレームワークに基づくボットが既に存在する場合は、ボット フレームワークで動作するボットを簡単にTeams。 SDK をC#、Node.jsを使用[します。](/microsoftteams/platform/#pivot=sdk-tools) これらのパッケージは、基本的な Bot Builder SDK のクラスとメソッドを次のように拡張します。
+[Bot Framework](https://dev.botframework.com/) は、C#、Java、Python、JavaScript を使用してボットを作成するために使用される豊富な SDK です。 Bot Framework に基づくボットが既にある場合は、Teams で動作するようにボットを簡単に変更できます。 用意されている [SDK](/microsoftteams/platform/#pivot=sdk-tools) を活用するため、C# か Node.js を使用してください。 これらのパッケージは、基本的な Bot Builder SDK のクラスとメソッドを次のように拡張します。
 
-* コネクタ カードのような特殊なカードOffice 365使用します。
-* アクティビティTeams固有のチャネル データを設定します。
+* Office 365 コネクタ カードなどの専用のカードを使用する。
+* アクティビティに関する Teams 固有のチャネル データを設定する。
 * メッセージング拡張要求を処理する。
 
 > [!IMPORTANT]
-> Web プログラミング テクノロジTeamsアプリを開発し、[Bot Framework REST API を直接呼び出](/bot-framework/rest-api/bot-framework-rest-overview)します。 ただし、すべてのケースでトークン処理を実行する必要があります。
+> 任意の Web プログラミング技術で Teams アプリを開発し、[Bot Framework REST API](/bot-framework/rest-api/bot-framework-rest-overview) を直接呼び出すことができますが、すべてのケースでトークン処理を実行する必要があります。
 
-## <a name="bots-with-power-virtual-agents"></a>ボットとPower Virtual Agents
+## <a name="bots-with-power-virtual-agents"></a>Power Virtual Agents を使用したボット
 
-[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)は、Microsoft Power プラットフォームとボット フレームワーク上に構築されたチャットボット サービスです。 Power Virtual Agent 開発プロセスでは、ガイド付き、コードなし、グラフィカル インターフェイスのアプローチを使用して、チーム メンバーがインテリジェントな仮想エージェントを簡単に作成および維持できます。 ポータルでチャットボットを作成[Power Virtual Agents、](https://powervirtualagents.microsoft.com)チャットボットと簡単に統合[Teams](how-to/add-power-virtual-agents-bot-to-teams.md)。 開始方法の詳細については、「ドキュメント」[をPower Virtual Agentsしてください](/power-virtual-agents)。
+[Power Virtual Agent](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) は、Microsoft Power platform および Bot Framework で構築された チャット ボット サービスです。 Power Virtual Agent の開発プロセスでは、ガイド付きのコーディングされていないグラフィカル インターフェイス アプローチを使用して、チーム メンバーが高度な仮想エージェントを簡単に作成して管理できるようにします。 [Power Virtual Agents ポータル](https://powervirtualagents.microsoft.com)でチャットボットを作成した後、簡単に [Teams と統合](how-to/add-power-virtual-agents-bot-to-teams.md) できます。 作業を開始する方法の詳細については、「[Power Virtual Agents のドキュメント](/power-virtual-agents)」を参照してください。
 
 >[!NOTE]
->Microsoft Power Platform を使用して、アプリ ストアに発行するアプリを作成Teams必要があります。 Microsoft Power Platform アプリは、組織のアプリ ストアにのみ発行できます。
+>Microsoft Power Platform を使用して、Teams アプリ ストアに発行するアプリを作成することはできません。 Microsoft Power Platform アプリは、組織のアプリ ストアにのみ発行できます。
 
-## <a name="bots-with-webhooks-and-connectors"></a>Webhooks とコネクタを持つボット
+## <a name="bots-with-webhooks-and-connectors"></a>Webhook とコネクタを使用したボット
 
-Webhooks とコネクタは、ボットを Web サービスに接続します。 Webhooks とコネクタを使用すると、ワークフローや他の簡単なコマンドの作成など、基本的な操作用のボットを作成できます。 これらは、作成したチームでのみ使用できます。会社のワークフローに固有の単純なプロセスを対象とします。 詳細については、「 [webhooks とコネクタの機能」を参照してください](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)。
+Webhook とコネクタは、ボットを Web サービスに接続します。 Webhook とコネクタを使用すると、ワークフローやその他のシンプルなコマンドの作成など、基本的なやり取りを行うためのボットを作成することができます。 これらは、作成したチームでのみ使用でき、会社のワークフロー固有のシンプルなプロセスを対象としています。 詳細については、「[Webhook とコネクタとは](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)」を参照してください。
 
 ## <a name="advantages-of-bots"></a>ボットの利点
 
-Microsoft Teams のボットは、1 対 1 の会話、グループ チャット、チーム内のチャネルで扱うことができます。 各スコープは、会話ボットに固有の機会と課題を提供します。
+Microsoft Teams のボットは、1 対 1 の会話、グループ チャット、チーム内のチャネルで扱うことができます。 各スコープに、会話ボット向けの機能と条件があります。
 
 | チャネル | グループ チャット | 1 対 1 のチャット |
 | :-- | :-- | :-- |
-| 大規模なリーチ | メンバーの数が少ない | 従来の方法 |
-| 個々の対話を簡潔に | @mentionボットへのアクセス  | Q&ボット |
-| @mentionボットへのアクセス | チャネルに似ている | ジョークを伝え、メモを取るボット |
+| 大規模なリーチ | 減少したメンバー | 従来の方法 |
+| 簡潔な個々のやり取り | ボットへの @メンション  | Q&A ボット |
+| ボットへの @メンション | チャネルと同様 | ジョークを言ったり、メモを取ったりするボット |
 
 ### <a name="in-a-channel"></a>チャネル
 
-チャネルには、最大 2,000 人までの複数のユーザー間のスレッド会話が含まれる。 これにより、ボットに大量のリーチが生まれる可能性がありますが、個々のやり取りは簡潔である必要があります。 従来のマルチターン操作は機能しません。 代わりに、対話型カードまたはタスク モジュールを使用するか、会話を 1 対 1 の会話に移動して多くの情報を収集する必要があります。 ボットにはメッセージへのアクセスのみ許可されます `@mentioned`。 Microsoft Graphレベルのアクセス許可を使用して、会話から追加のメッセージを取得できます。
+チャネルには、最大 2,000 人まで、複数のユーザーによるスレッド形式の会話が含まれます。 これにより、ボットが大規模になる可能性がでてきますが、それぞれの対話を簡潔にする必要があります。 ただし、従来のマルチターンの対話は、動作しません。 多くの情報を収集するためには、対話型カードまたはタスク モジュールを使用するか、1 対 1 の会話に変更する必要があります。 ボットは `@mentioned` のメッセージにのみアクセスできます。 Microsoft Graph および組織レベルのアクセス許可を使用して会話から追加のメッセージを取得できます。
 
-ボットは、次の場合にチャネルで優れた機能を提供します。
+ボットは、次の場合にチャネルで適切に機能します。
 
-* 通知: ユーザーが追加情報を取得する対話型カードを提供します。
-* アンケートやアンケートなどのフィードバック シナリオ。
-* 単一の要求または応答サイクルは対話を解決し、結果は会話の複数のメンバーに役立ちます。
-* ソーシャルボットや楽しいボット。素晴らしい猫の画像を取得し、ランダムに勝者を選ぶなどです。
+* ユーザーが追加情報を取得するための対話型カードを提供する通知。
+* 投票やアンケート調査などのフィードバック シナリオ。
+* 単一の要求または応答サイクルは対話を解決し、結果は複数のメンバーで会話をする場合に役立ちます。
+* 素晴らしい猫の画像を取得したり、勝者をランダムに選んだりできる、交流または娯楽を目的としたボット。
 
 ### <a name="in-a-group-chat"></a>グループ チャット
 
-グループ チャットは、3 人以上のユーザー同士で行われる非スレッドの会話です。 チャネルよりもメンバーは少なく、一時的な会話が多いのが特徴です。 チャネルと同様に、ボットはメッセージに直接アクセスできるのみです `@mentioned` 。
+グループ チャットは、3 人以上のユーザー同士で行われる非スレッドの会話です。 チャネルよりもメンバーは少なく、一時的な会話が多いのが特徴です。 チャネルと同様に、ボットは `@mentioned` のメッセージにのみに直接アクセスできます。
 
-チャネルでボットがうまく機能する場合は、グループ チャットの方がうまく機能します。
+チャネルでボットの方がうまく機能する場合は、グループ チャットでもうまく機能します。
 
 ### <a name="in-a-one-to-one-chat"></a>1 対 1 のチャット
 
-1 対 1 のチャットは、会話ボットがユーザーと対話する従来の方法です。 1 対 1 の会話型ボットの例を次に示します。
+1 対 1 のチャットは、会話ボットがユーザーとやり取りする従来の方法です。 1 対 1 の会話ボットの例を次に示します。
 
-* Q&ボット
+* Q&A ボット
 * 他のシステムでワークフローを開始するボット
-* ジョークを伝えるボット
-* メモを取るボット 1 対 1 のチャットボットを作成する前に、会話ベースのインターフェイスが機能を提示する最善の方法かどうかを検討してください。
+* ジョークを言うボット
+* メモを取るボット 1 対 1 のチャットボットを作成する前に、機能を表示するための方法として、会話ベースのインターフェイスが最適な方法であるかどうかを検討してください。
 
 ## <a name="disadvantages-of-bots"></a>ボットの欠点
 
-ボットとユーザーの間の広範なダイアログは、タスクを完了するための低速で複雑な方法です。 過剰なコマンド、特に広範なコマンドをサポートするボットは、ユーザーが成功または肯定的に表示されません。
+ボットとユーザーの間のダイアログが広範になると、タスクの完了に要する時間が長くなり、複雑になります。 サポートするコマンドがあまりに多く、特に広範な種類に及ぶボットは、うまく機能せず、ユーザーからの評価が低くなります。
 
-### <a name="have-multi-turn-experiences-in-chat"></a>チャットでのマルチターン エクスペリエンス
+### <a name="have-multi-turn-experiences-in-chat"></a>チャットではマルチターンのやり取りが交わされる
 
-広範なダイアログでは、開発者が状態を維持する必要があります。 この状態を終了するには、ユーザーがタイム アウトするか、[キャンセル] を選択する必要 **があります**。 また、このプロセスは時間のかかっています。 たとえば、次の会話シナリオを参照してください。
+広範なダイアログでは、開発者が状態を維持する必要があります。 このような状態を終了するには、ユーザーはタイムアウトするか、**[キャンセル]** を選択する必要があります。 また、このプロセスは面倒です。 たとえば、次の会話シナリオを参照してください。
 
 ユーザー: Megan との会議をスケジュールして。
 
@@ -108,13 +108,13 @@ Microsoft Teams のボットは、1 対 1 の会話、グループ チャット�
 
 ボット: 何日のですか?
 
-### <a name="support-too-many-commands"></a>多くのコマンドをサポートする
+### <a name="support-too-many-commands"></a>サポートするコマンドの数が多すぎる
 
-現在のボット メニューには 6 つのコマンドしか表示されないので、それ以上のコマンドを頻度で使用する可能性は低い。 幅広いアシスタントの仕事と運賃を向上させようとするのではなく、特定の領域に深く入り込むボット。
+現在のボット メニューにはコマンドが 6 つしか表示されないため、それ以外のコマンドは滅多に使用されなくなります。 幅広いアシストを提供するボットより、特定の分野を深く掘り下げるボットの方がうまくいきます。
 
-### <a name="maintain-a-large-knowledge-base"></a>大規模なナレッジ ベースを維持する
+### <a name="maintain-a-large-knowledge-base"></a>維持するサポート情報が大規模である
 
-ボットの欠点の 1 つは、応答が未確認の大規模な取得ナレッジ ベースを維持することは困難である点です。 ボットは、短く迅速なやり取りに最適で、回答を探している長いリストをふるいにかけない。
+ボットの欠点の 1 つは、未ランクの応答を含む大規模な取得サポート情報を維持するのが難しいことです。 ボットは、長いリストから答えを調べ出すようなものではなく、短く簡潔なやり取りに最適です。
 
 ## <a name="code-snippets"></a>コード スニペット
 
@@ -193,7 +193,7 @@ this.onMessage(async (context, next) => {
 
 |サンプルの名前 | 説明 | .NETCore | Node.js |
 |----------------|-----------------|--------------|----------------|
-| Teams 会話ボット | メッセージングおよび会話イベントの処理。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
+| Teams 会話ボット | メッセージングと会話イベントの処理。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
 | ボット サンプル | ボット サンプルのセット | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore) | |
 
 ## <a name="next-step"></a>次の手順
@@ -205,6 +205,6 @@ this.onMessage(async (context, next) => {
 
 * [通話と会議のボット](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 * [ボットの会話](~/bots/how-to/conversations/conversation-basics.md)
-* [ボット コマンド メニュー](~/bots/how-to/create-a-bot-commands-menu.md)
-* [サーバー内のボットの認証フロー Microsoft Teams](~/bots/how-to/authentication/auth-flow-bot.md)
+* [Bot コマンド メニュー](~/bots/how-to/create-a-bot-commands-menu.md)
+* [Microsoft Teams でのボットの認証フロー](~/bots/how-to/authentication/auth-flow-bot.md)
 * [ボットでタスク モジュールを使用する](~/task-modules-and-cards/task-modules/task-modules-bots.md)

@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 ms.topic: how-to
 ms.openlocfilehash: 3cb15e82101be7df9f90c94928fa91ae570c14d5
 ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/20/2022
 ms.locfileid: "63674965"
@@ -122,7 +122,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 > [!IMPORTANT]
 >
 > * `camera`、`gallery`、および `microphone`の サポートは、[**selectMedia API**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true) を介して有効になります。 単一の画像キャプチャには [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) を使用します。
-> * `location` のサポートは、[**getLocation API**](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) を介して有効になります。 HTML5 位置情報 API は現在 Teams デスクトップ クライアントで完全にはサポートされていないため、位置情報にはこの `getLocation API` を使用する必要があります。
+> * `location` のサポートは、[**getLocation API**](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) を通じて有効になります。HTML5 位置情報 API は現在 Teams デスクトップ クライアントで完全にはサポートされていないため、場所にはこの `getLocation API` を使用する必要があります。
 
 例:
 

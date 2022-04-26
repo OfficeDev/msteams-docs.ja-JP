@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.openlocfilehash: 8545f36d8449e2cf86b7af841690b8bfb8d66c6c
 ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/06/2022
 ms.locfileid: "64685626"
@@ -95,5 +95,5 @@ Teams チャネルから受信 Webhook を削除するには、次の手順に�
 * [送信 Webhook を作成する](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Office 365 コネクタを作成する](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [メッセージを作成して送信する](~/webhooks-and-connectors/how-to/connectors-using.md)
-* [Web アプリからTeamsに共有する](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
+* [Web アプリから Teams に共有する](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)
