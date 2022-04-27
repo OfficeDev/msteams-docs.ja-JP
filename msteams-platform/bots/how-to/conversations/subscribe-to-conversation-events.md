@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: イベント ボット チャネル メッセージの反応の会話
-ms.openlocfilehash: 2c3a41c84eec620aa0cc87fbd473a913d14f6ef4
-ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
+ms.openlocfilehash: 26180e39bd26768b2e09311a370e5bd78c44c673
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64826972"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073730"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams ボットの会話イベント
 
@@ -1403,10 +1403,8 @@ async def on_installation_update(self, turn_context: TurnContext):
 
 ## <a name="uninstall-behavior-for-personal-app-with-bot"></a>ボットを使用した個人用アプリのアンインストール動作
 
-> [!NOTE]
-> ボットを使用した個人用アプリのアンインストール動作は、現在 [、パブリック開発者向けプレビュー](../../../resources/dev-preview/developer-preview-intro.md)でのみ使用できます。
-
 アプリをアンインストールすると、ボットもアンインストールされます。 ユーザーがアプリにメッセージを送信すると、403 応答コードが表示されます。 ボットは、ボットによって投稿された新しいメッセージに対する 403 応答コードを受け取ります。 個人用スコープ内のボットのアンインストール後の動作と、Teamsスコープと groupChat スコープが揃いました。 アプリのアンインストール後にメッセージを送受信することはできません。
+
 
 <img src="~/assets/images/bots/uninstallbot.png" alt="Uninstall event" width="900" height="900"/>
 
@@ -1425,7 +1423,7 @@ async def on_installation_update(self, turn_context: TurnContext):
 |----------|-----------------|----------|
 | 会話ボット | ボットの会話イベントのサンプル コード。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [プロアクティブ メッセージを送信する](~/bots/how-to/conversations/send-proactive-messages.md)

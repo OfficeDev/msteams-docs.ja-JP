@@ -1,101 +1,101 @@
 ---
 title: アダプティブ カードの先行入力検索
 author: Rajeshwari-v
-description: アダプティブ カードの Input.ChoiceSet コントロールを使用した typeahead 検索について説明します。
+description: アダプティブ カードの Input.ChoiceSet コントロールを使用した先行入力検索について説明します
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 2f9a8844d4e976e4d0a975e7e3a901fe3b93ba85
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: d33fce44cbf1ff550d9aa21686111746318bb17e
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453832"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073802"
 ---
 # <a name="typeahead-search-in-adaptive-cards"></a>アダプティブ カードの先行入力検索
 
-アダプティブ カードの Typeahead 検索機能により、コンポーネントでの検索エクスペリエンスが強化 `input.choiceset` されます。 検索フィールドにテキストを入力する選択肢の一覧を提供します。 Typeahead 検索とアダプティブ カードを組み込み、データを検索および選択できます。
+アダプティブ カードの先行入力検索機能により、コンポーネントの `input.choiceset` 検索機能が強化されます。 検索フィールドにテキストを入力するための選択肢の一覧が表示されます。 アダプティブ カードに先行入力検索を組み込んで、データを検索および選択できます。
 
-次の検索に対して typeahead 検索を使用できます。
+次の検索には先行入力検索を使用できます。
 
 * [静的検索](#static-typeahead-search)
 * [動的検索](#dynamic-typeahead-search)
 
-## <a name="static-typeahead-search"></a>静的型検索
+## <a name="static-typeahead-search"></a>静的先行型検索
 
-静的な typeahead 検索を使用すると、アダプティブ カード ペイロード内で指定 `input.choiceset` された値から検索できます。 静的型検索を使用すると、ユーザーに複数の選択肢を表示できます。 静的検索のペイロード サイズは、ペイロードで指定された選択肢の数と一緒に増加します。
-ユーザーがテキストの入力を開始すると、選択肢がフィルター処理され、入力に部分的に一致します。 ドロップダウン リストは、検索に一致する入力文字を強調表示します。
+静的な先行入力検索を使用すると、ユーザーはアダプティブ カード ペイロード内 `input.choiceset` で指定された値から検索できます。 静的な先行入力検索を使用して、ユーザーに複数の選択肢を表示できます。 静的検索のペイロード サイズは、ペイロードで指定された選択肢の数と共に増加します。
+ユーザーがテキストの入力を開始すると、入力と部分的に一致する選択肢がフィルター処理されます。 ドロップダウン リストでは、検索に一致する入力文字が強調表示されます。
 
-次の図は、静的な typeahead 検索を示しています。
+次の図は、静的な先行型検索を示しています。
 
-![静的型検索](~/assets/images/Cards/static-typeahead-search.gif)
+![静的先行型検索](~/assets/images/Cards/static-typeahead-search.gif)
 
-## <a name="dynamic-typeahead-search"></a>動的な型検索
+## <a name="dynamic-typeahead-search"></a>動的な先行入力検索
 
-動的型検索は、大きなデータ セットからデータを検索して選択する場合に便利です。 データ セットは、カード ペイロードで指定されたデータセットから動的に読み込まれます。 先行型機能は、ユーザーの種類として選択肢をフィルター処理するのに役立ちます。
+動的な先行入力検索は、大規模なデータ セットからデータを検索して選択する場合に便利です。 データ セットは、カード ペイロードで指定されたデータセットから動的に読み込まれます。 先行入力機能は、ユーザーの種類に応じて選択肢を除外するのに役立ちます。
 
 # <a name="desktop"></a>[デスクトップ](#tab/desktop)
 
-![動的な型検索](~/assets/images/Cards/dynamic-typeahead-search-desktop.png)
+:::image type="content" source="../../assets/images/Cards/dynamic-typeahead-search-desktop.png" alt-text="動的な先行入力検索":::
 
-![動的タイプアヘッド検索イメージ 2](~/assets/images/Cards/dynamic-typeahead-search-desktop-2.png)
+:::image type="content" source="../../assets/images/Cards/dynamic-typeahead-search-desktop-2.png" alt-text="動的な先行入力検索 2":::
 
 # <a name="mobile"></a>[モバイル](#tab/mobile)
 
-Android および iOS モバイル クライアントは、アダプティブ カードでの typeahead 検索をサポートします。
+Android および iOS モバイル クライアントでは、アダプティブ カードでの先行入力検索がサポートされます。
 
 **シナリオ**
 
-John は、Xbox 小売店で働くストアの従業員です。 ストアはボットを使用して、顧客からの新しい購入要求を受け取ります。 顧客は、利用可能な数千のゲームから検索できます。 アダプティブ カードの Typeahead 検索は、顧客の選択肢を検索および選択するために使用されます。
+John は、Xbox リテール ストアで働く店員です。 ストアはボットを使用して、顧客からの新しい購入要求を受け取ります。 顧客は、使用可能な数千のゲームから検索できます。 アダプティブ カードの先行入力検索は、顧客の選択肢を検索および選択するために使用されます。
 
-**アダプティブ カードで typeahead 検索を使用するには**
+**アダプティブ カードで先行入力検索を使用するには**
 
 1. ユーザー A がストア ボットを開きます。
-1. ユーザー A は、新しい顧客要求のためにボットに **コマンドを送信します**。 ボットは、コンポーネントを持つアダプティブ カードで応答 `Input.ChoiceSet` します。
-1. ユーザー A は typeahead 検索を使用して、顧客の選択に基づいて情報を検索および選択します。
+1. ユーザー A は、 **新しい顧客要求** のコマンドをボットに送信します。 ボットは、コンポーネントを持 `Input.ChoiceSet` つアダプティブ カードで応答します。
+1. ユーザー A は、先行入力検索を使用して、顧客の選択に基づいて情報を検索して選択します。
 
-次の図は、typeahead 検索のモバイル エクスペリエンスを示しています。
+次の図は、先行入力検索のモバイル エクスペリエンスを示しています。
 
-![静的型検索](~/assets/images/Cards/static-typeahead-search.gif)
+![静的先行型検索](~/assets/images/Cards/static-typeahead-search.gif)
 
 ---
 
 > [!NOTE]
-> クエリ ベースのメッセージング拡張機能など、動的検索でリッチ カード エクスペリエンスを取得できない。
+> クエリ ベースのメッセージング拡張機能など、動的検索ではリッチ カード エクスペリエンスを得ることはできません。
 
-## <a name="implement-typeahead-search"></a>typeahead 検索の実装
+## <a name="implement-typeahead-search"></a>先行入力検索を実装する
 
-`Input.ChoiceSet` はアダプティブ カードの重要な入力コンポーネントの 1 つです。 typeahead 検索コントロールをコンポーネントに追加 `Input.ChoiceSet` して、typeahead 検索を実装できます。 次の項目を選択して、必要な情報を検索して選択できます。
+`Input.ChoiceSet` は、アダプティブ カードの重要な入力コンポーネントの 1 つです。 先行入力検索コントロールをコンポーネントに追加して `Input.ChoiceSet` 、先行入力検索を実装できます。 次の選択を使用して、必要な情報を検索して選択できます。
 
-* 展開された選択範囲などのドロップダウン。
-* ラジオ ボタン (単一選択など)。
-* 複数の選択範囲などのチェック ボックスをオンにします。
+* 展開された選択などのドロップダウン。
+* ラジオ ボタン (単一の選択など)。
+* 複数の選択など、チェック ボックス。
 
 > [!NOTE]
-> コントロール `Input.ChoiceSet` は、スタイルとプロパティに基づいて設定 `isMultiSelect` されます。
+> コントロールは `Input.ChoiceSet` 、スタイルと `isMultiSelect` プロパティに基づいています。
 
-### <a name="schema-properties"></a>スキーマ のプロパティ
+### <a name="schema-properties"></a>スキーマのプロパティ
 
-次のプロパティは、typeahead 検索を有効 [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) にするスキーマへの新しい追加です。
+次のプロパティは、事前入力検索を有効にするための [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) スキーマへの新しい追加です。
 
 | プロパティ| 型 | 必須 | 説明 |
 |-----------|------|----------|-------------|
-| style | Compact <br/> Expanded <br/> Filtered | 不要 | 静的型先行のサポートされている検証の一覧にフィルター処理されたスタイルを追加します。|
-| choices.data | Data.Query | いいえ | バックエンドからリモートの選択肢セットをフェッチすることで、ユーザーの種類として動的な先行型を有効にできます。 |
+| style | Compact <br/> Expanded <br/> Filtered | いいえ | 静的な先行入力でサポートされている検証の一覧にフィルター処理されたスタイルを追加します。|
+| choices.data | Data.Query | 不要 | バックエンドから選択肢のリモート セットをフェッチすることで、ユーザーの種類として動的な先行入力を有効にします。 |
 
 ### <a name="dataquery-definition"></a>Data.Query 定義
 
 | プロパティ| 型 | 必須 | 説明 |
 |-----------|------|----------|-------------|
-| type | Data.Query | はい | Data.Query オブジェクトを指定します。|
-| データセット | 文字列 | はい | 動的にフェッチされるデータの種類を指定します。 |
-| value | 文字列 | いいえ | ボットへの呼び出し要求に対して、ユーザーが指定した入力を設定します `ChoiceSet`。 |
-| count | 番号 | 不要 | ボットへの呼び出し要求を設定して、返す必要がある要素の数を指定します。 ユーザーが別の金額を送信する場合、ボットはそれを無視します。 |
-| skip | 番号 | 不要 | ボットへの呼び出し要求を設定して、ユーザーがページ分割してリスト内を移動する必要があるかどうかを示します。 |
+| type | Data.Query | はい | Data.Query オブジェクトであることを指定します。|
+| データセット | String | はい | 動的にフェッチされるデータの種類を指定します。 |
+| value | String | いいえ | ユーザーがボットに指定 `ChoiceSet`した入力をボットに呼び出し要求を入力します。 |
+| count | 番号 | いいえ | 返す必要がある要素の数を指定するために、ボットへの呼び出し要求を設定します。 ユーザーが別の金額を送信する場合、ボットはそれを無視します。 |
+| skip | 番号 | 不要 | 呼び出し要求をボットに設定して、ユーザーがページ分割してリスト内で先に移動することを示します。 |
 
 ### <a name="example"></a>例
 
-次に示す複数の選択オプションを使用して、静的および動的な typeahead 検索を&ペイロードの例を示します。
+次に示すように、単一の&複数選択オプションを含む静的および動的な先行型検索を含むペイロードの例を示します。
 
 ```json
 {
@@ -413,7 +413,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 |**サンプルの名前** | **説明** | **C#** | **Node.js** |
 |----------------|-----------------|--------------|----------------|
-| アダプティブ カードの Typeahead 検索コントロール | このサンプルは、アダプティブ カードの静的および動的な typeahead 検索コントロールの機能を示しています。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
+| アダプティブ カードの先行入力検索コントロール | このサンプルは、アダプティブ カードの静的および動的な先行型検索コントロールの機能を示しています。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>関連項目
 

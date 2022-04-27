@@ -5,12 +5,12 @@ description: Microsoft Teams ボットを構築するためのツールと SDK �
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 1818ebfa102ce55d8243c16f460fa688fc67fdc3
-ms.sourcegitcommit: 4abb9ca0b0e9661c7e2e329d9f10bad580e7d8f3
-ms.translationtype: HT
+ms.openlocfilehash: a50f93e718dcff35d810f0f8748c97095b49b138
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64464769"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073747"
 ---
 # <a name="bots-and-sdks"></a>ボットと SDK
 
@@ -191,10 +191,10 @@ this.onMessage(async (context, next) => {
 
 ## <a name="code-sample"></a>コード サンプル
 
-|サンプルの名前 | 説明 | .NETCore | Node.js |
-|----------------|-----------------|--------------|----------------|
-| Teams 会話ボット | メッセージングと会話イベントの処理。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
-| ボット サンプル | ボット サンプルのセット | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore) | |
+|サンプルの名前 | 説明 | .NETCore | Node.js | Python|
+|----------------|-----------------|--------------|----------------|-------|
+| Teams 会話ボット | メッセージングと会話イベントの処理。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot)|
+| ボット サンプル | ボット サンプルのセット | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore) |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python)|
 
 ## <a name="next-step"></a>次の手順
 

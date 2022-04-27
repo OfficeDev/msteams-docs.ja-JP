@@ -5,19 +5,16 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 4f606363b62126731afcbc8b7f065951d8cd1a13
-ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
+ms.openlocfilehash: f404c80a8b5db61636e175ca6439b32938358cac
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64736878"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073301"
 ---
 # <a name="in-app-purchases"></a>アプリ内購入
 
 Microsoft Teams は、アプリ内購入を実装して無料から有料の Teams アプリにアップグレードするために使用できる API を提供します。 アプリ内購入では、アプリ内から直接ユーザーを無料プランから有料プランに変換できます。
-
-> [!NOTE]
-> Teamsアプリのアプリ内購入は、現在、[**開発者プレビュー**](/microsoftteams/platform/resources/dev-preview/developer-preview-intro)でのみ利用可能です。
 
 ## <a name="implement-in-app-purchases"></a>アプリ内購入の実装
 

@@ -4,12 +4,12 @@ description: Microsoft Teams アプリが通話やオンライン会議に Micro
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: 発信 通話 音声ビデオ IVR 音声オンライン会議 リアルタイム メディア ストリーム ボット
-ms.openlocfilehash: 19f101a35120e068dbdcf06fe12e5bf030f44822
-ms.sourcegitcommit: 6906ba7e2a6e957889530b0a117a852c43bc86a6
-ms.translationtype: HT
+ms.openlocfilehash: e17d0c18bfb3f751a11e43780dba9f0f85441a96
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63784003"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073824"
 ---
 # <a name="calls-and-online-meetings-bots"></a>通話とオンライン会議のボット
 
@@ -110,3 +110,4 @@ Teams ユーザーの観点からは、随意開催と計画開催の 2 種類�
 * [着信通知の処理に関する技術情報](./call-notifications.md)
 * [自動応答を設定する](/microsoftteams/create-a-phone-system-auto-attendant)
 * [Android および Teams ビデオ電話デバイスの Microsoft Teams Rooms 自動応答を設定する](/microsoftteams/set-up-auto-answer-on-teams-android)
+* [Teams記録ポリシー](/MicrosoftTeams/teams-recording-policy)

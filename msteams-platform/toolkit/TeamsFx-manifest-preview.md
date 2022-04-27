@@ -1,37 +1,32 @@
 ---
-title: アプリ Teamsマニフェストをプレビュー Teams Toolkit
+title: Teams Toolkitでアプリ マニフェストTeamsプレビューする
 author: zyxiaoyuer
 description: Teams アプリ マニフェストをプレビューする
 ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: aa80636a4fdb3c27d66bc08f9d308a009e183570
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 57dc719f872d502beded14c30a09d72c27ee74c3
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453244"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073284"
 ---
-# <a name="preview-teams-app-manifest-in-teams-toolkit"></a>アプリ Teamsマニフェストをプレビュー Teams Toolkit
+# <a name="preview-app-manifest-in-toolkit"></a>Toolkitでアプリ マニフェストをプレビューする
 
-スキャフォールディング後、フォルダーで使用できるマニフェスト テンプレート ファイルを次に示 `templates/appPackage` します。
-
-* `manifest.local.template.json` - ローカル デバッグ チーム アプリ。
-* `manifest.remote.template.json` - すべてのリモート環境間で共有されます。
-
-プレースホルダーから成るテンプレート ファイルと、ファイルの`.fx/configs``.fx/states`実際Teams Toolkitファイルおよび .
+マニフェスト テンプレート ファイル `manifest.template.json` は、スキャフォールディング後にフォルダーの下で `templates/appPackage` 使用できます。 プレースホルダーを含むテンプレート ファイルと実際の値は、異なる環境のファイル`.fx/configs``.fx/states`のTeams Toolkitによって解決されます。
 
 ## <a name="prerequisite"></a>前提条件
 
-* [バージョン Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) v3.0.0 以上をインストールします。
+* [最新バージョンのTeams Toolkitを](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)インストールする
 
 > [!TIP]
-> アプリ プロジェクトがTeamsコードで開いているVisual Studioします。
+> Visual Studio コードでアプリ プロジェクトTeams開かれていることを確認します。
 
-## <a name="preview-manifest"></a>プレビュー マニフェスト
+## <a name="preview-manifest"></a>マニフェストのプレビュー
 
-実際のコンテンツでマニフェストをプレビューするには、Teams Toolkit下にプレビュー マニフェスト ファイルを生成`build/appPackage`します。
+実際のコンテンツを使用してマニフェストをプレビューするために、Teams Toolkitはフォルダーの下にプレビュー マニフェスト ファイルを`build/appPackage`生成します。
 
 ```text
 └───build
@@ -42,59 +37,64 @@ ms.locfileid: "63453244"
         └───manifest.local.json  - Previewed manifest of local teams app
 ```
 
-### <a name="preview-local-manifest-file"></a>ローカル マニフェスト ファイルのプレビュー
+### <a name="preview-local-manifest-file"></a>ローカル マニフェスト ファイルをプレビューする
 
-ローカル チーム アプリのマニフェスト ファイルをプレビューするには、 **F5** キーを押してローカル デバッグを実行する必要があります。 既定のローカル設定が生成され、ビルド **/appPackage** フォルダーの下にアプリ パッケージとプレビュー マニフェストビルドが生成されます。
+ローカル チーム アプリのマニフェスト ファイルをプレビューするには、 **F5** キーを押してローカル デバッグを実行します。 既定のローカル設定が生成され、アプリ パッケージとプレビュー マニフェストがフォルダーの下に `build/appPackage` ビルドされます。
 
-次の手順に従ってローカル マニフェストをプレビューできます。
+次の手順に従って、ローカル マニフェストをプレビューすることもできます。
 
-1. **manifest.local.template.json ファイルの codelens で [プレビュー] を選択** します。
-2. manifest.local.template.json ファイルのメニュー バーで [**マニフェスト ファイルのプレビュー] を選択** します。
-3. Treeview **で [zip Teamsメタデータ パッケージ] を** 選択し、[ローカル] を **選択します**。
+1. ファイルの`manifest.template.json`コーデレンズで **プレビュー** を選択し、**ローカル** を選択します
+2. ファイルのメニュー バーで **プレビュー マニフェスト ファイル** を `manifest.template.json` 選択する
+3. Treeview で **Zip Teamsメタデータ パッケージ** を選択し、**ローカル** を選択します
+
 プレビュー ローカルは、イメージに示すように表示されます。
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-1.png" alt-text="プレビュー":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="プレビュー":::
 
 ### <a name="preview-manifest-in-remote-environment"></a>リモート環境でマニフェストをプレビューする
 
-リモート チーム アプリのマニフェスト ファイルをプレビューするには、Teams Toolkit 拡張子 Treeview の開発パネルでクラウドで [プロビジョニング] を選択するか、Teams **: コマンド** パレットからクラウドでプロビジョニングをトリガーします。 リモート チーム アプリの構成を生成し、ビルド **/appPackage** フォルダーの下にパッケージマニフェストとプレビュー マニフェストをビルドします。
+リモート チーム アプリのマニフェスト ファイルをプレビューするには、Teams Toolkit拡張機能 Treeview の **開発** パネルで **クラウドでプロビジョニング** を選択するか、コマンド パレットから **クラウドでプロビジョニングTeamsトリガーします**。 リモート チーム アプリの構成を生成し、パッケージとプレビュー マニフェストをフォルダーの下に `build/appPackage` ビルドします。
 
-次の手順に従って、リモート環境でマニフェストをプレビューできます。
+次の手順に従って、リモート環境でマニフェストをプレビューすることもできます。
 
-1. **manifest.remote.template.json ファイルの codelens で [プレビュー] を選択** します。
-2. **manifest.remote.template.json ファイルのメニュー バーで [マニフェスト ファイルのプレビュー] を選択** します。
-3. Treeview **で [zip Teamsメタデータ パッケージ]** を選択します。
-4. 環境を選択します。
+1. ファイルの`manifest.template.json`コーデレンズで **[プレビュー]** を選択する
+2. ファイルのメニュー バーで **プレビュー マニフェスト ファイル** を `manifest.template.json` 選択する
+3. Treeview で **Zip Teamsメタデータ パッケージ** を選択する
+4. 環境を選択する
 
 複数の環境がある場合は、イメージに示すようにプレビューする環境を選択する必要があります。
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="env の追加":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="env を追加する":::
 
-## <a name="sync-local-changes-to-dev-portal"></a>ローカルの変更を開発ポータルに同期する
+## <a name="sync-local-changes-to-developer-portal"></a>ローカルの変更を開発者ポータルに同期する
 
-マニフェスト ファイルをプレビューした後、次の手順に従ってローカルの変更を Dev ポータルに同期できます。
+マニフェスト ファイルをプレビューしたら、次の手順に従ってローカルの変更を開発者ポータルに同期できます。
 
-1. [**更新] をTeamsの** 左上隅にある [プラットフォームを更新する] を選択します。`manifest.{env}.json`
-2. [Teams **: マニフェストを更新して、Teamsバーの [** プラットフォームに更新する] を選択します。`manifest.{env}.json`
+1. の左上隅にある **プラットフォームTeams更新を** 選択します。`manifest.{env}.json`
+2. Teamsを選択 **します。マニフェストをTeamsプラットフォームに更新** します。`manifest.{env}.json`
 
- コマンド パレットからTeams **プラットフォームにマニフェスト** をTeamsトリガーすることもできます。
+ Teamsをトリガーすることもできます。コマンド パレットから **プラットフォームTeamsマニフェストを更新** します。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="ツリー ビュー":::
 
 > [!NOTE]
-> エディター の codelens または title からトリガー **すると**、現在のマニフェスト ファイルが新しいプラットフォームTeamsされます。 コマンド パレットからトリガーするには、ターゲット環境を選択する必要があります。
+> エディターのコードレンズまたは **タイトル** からトリガーすると、現在のマニフェスト ファイルがTeams プラットフォームに更新されます。 コマンド パレットからトリガーするには、ターゲット環境を選択する必要があります
 
-構成ファイルの変更またはテンプレートの変更によりマニフェスト ファイルが古くなった場合は、次の操作を確認してください。
+  
+
+構成ファイルの変更またはテンプレートの変更によりマニフェスト ファイルが古い場合は、次のいずれかのアクションを選択します。
+
+* **プレビューのみ**: ローカル マニフェスト ファイルは、現在の構成に従って上書きされます
+* **プレビューと更新**: ローカル マニフェスト ファイルは現在の構成に従って上書きされ、プラットフォームTeams更新されます
+* **キャンセル**: アクションは実行されません
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
 
-* **プレビューのみ**: ローカル マニフェスト ファイルは現在の構成に従って上書きされます
-* **プレビューと更新**: ローカル マニフェスト ファイルは、現在の構成に従って上書きされ、Teamsされます
-* **キャンセル**: 何もしない
+
 
 > [!NOTE]
-> 変更は開発ポータルに更新されます。 開発ポータルでいくつかの手動更新プログラムがある場合は、上書きされます。
+> 変更は Dev Portal で更新されます。 開発ポータルの手動更新プログラムはすべて上書きされます。
 
 ## <a name="see-also"></a>関連項目
 
-[アプリ マニフェストTeamsのカスタマイズTeams Toolkit](TeamsFx-manifest-customization.md)
+[Teams Toolkitでアプリ マニフェストTeamsカスタマイズする](TeamsFx-manifest-customization.md)

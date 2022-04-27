@@ -1,32 +1,32 @@
 ---
 title: シーケンシャル ワークフロー
-description: コード サンプルを使用したユニバーサル アクションを使用したアダプティブ カードのシーケンシャル ワークフローの詳細
+description: ユニバーサル アクションとコード サンプルを使用したアダプティブ カードのシーケンシャル ワークフローについて学習する
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: ce715749d1b9fb5e1cff6457eebd3cac9674c58c
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 32200fc7a4df12567ba4000aad34e5a229dbc466
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453251"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073782"
 ---
 # <a name="sequential-workflows"></a>シーケンシャル ワークフロー
 
-アダプティブ カードは、ユーザーの操作で更新されるシーケンシャル ワークフローをサポートします。 シーケンシャル ワークフローを使用すると、アダプティブ カードはユーザーの操作で更新され、ユーザーはユーザー入力を必要とする一連のカードを進めできます。 `Action.Execute` シーケンシャル ワークフローがサポートされています。これにより、ボット開発者はユーザーの操作に応じてアダプティブ カードを返す事が可能です。
+アダプティブ カードでは、ユーザー アクションで更新されるシーケンシャル ワークフローがサポートされるようになりました。 シーケンシャル ワークフローを使用すると、アダプティブ カードはユーザー アクションで更新され、ユーザーはユーザー入力を必要とする一連のカードを進めることができます。 `Action.Execute` はシーケンシャル ワークフローをサポートしています。これにより、ボット開発者はユーザー アクションに応答してアダプティブ カードを返すことができます。
 
-たとえば、カフェテリアがチームまたはチャネルの注文を受け取るシナリオを考えます。 食 `Action.Execute` べ物や飲み物など、さまざまなアイテムに対するユーザーの選択を順番に記録できます。 また、ボット開発者が定義したロジックに基いて、カードを行き来できます。 <br/>
+たとえば、カフェテリアがチームまたはチャネルの注文を受けたいと考えるシナリオを考えてみます。 `Action.Execute`食べ物や飲み物など、さまざまな項目に対するユーザーの選択を順番に記録できます。 ユーザーは、ボット開発者によって定義されたロジックに従ってカードを行き来することもできます。 <br/>
 
 次の図は、シーケンシャル ワークフローを示しています。
 
 <img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential Workflow" width="400"/>
 
-ユーザーは、他のユーザーのカードを変更せずにワークフローを進めできます。 このワークフローは、シーケンシャル アダプティブ カードを使用してクイズを実行する場合にも役立ちます。 次の図は、異なるユーザーがワークフローの異なる段階とカードの状態を示しています。
+ユーザーは、他のユーザーのカードを変更することなく、ワークフローを進めることができます。 このワークフローは、シーケンシャルアダプティブ カードを使用してクイズを行う場合にも役立ちます。 次の図は、さまざまなユーザーがワークフローのさまざまな段階にあり、カードの状態を示しています。
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="ケータリング ボットの状態":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="ケータリング ボットの状態" lightbox="../../../assets/images/adaptive-cards/universal-bots-catering-bot.png":::
 
 > [!NOTE]
-> デバイス間でユーザーの進行状況を同期するには、アダプティブ `refresh` カード JSON のプロパティを使用します。
+> デバイス間でユーザーの進行状況を同期するには、Adaptive Card JSON のプロパティを `refresh` 使用します。
 
 ## <a name="sequential-workflow-for-adaptive-cards"></a>アダプティブ カードのシーケンシャル ワークフロー
 
@@ -75,14 +75,14 @@ ms.locfileid: "63453251"
 }
 ```
 
-`Action.Execute`ボットを呼び出す場合、アダプティブ カードを応答として返す場合があります。この応答は、ボット内の既存のカードを置き換Teams。
-次の例は、ボットが食品や飲み物の選択または注文確認で返す内容を示しています。
+`Action.Execute`ボットを呼び出すと、応答としてアダプティブ カードを返すことができます。これは、Teams内の既存のカードを置き換えます。
+次の例では、ボットが食べ物や飲み物の選択または注文の確認で返す内容を示します。
 
-* カード 1 からのフードの選択では、ボットはカード 2 である飲み物の選択用のカードを返します。
-* カード 2 からのドリンクの選択時に、ボットはカード 3 である注文確認カードを返します。
-* カード 3 からの注文確認で、ボットはカード 4 である注文確認済みカードを返します。
+* カード 1 からの食品の選択では、ボットはカード 2 である飲み物の選択用のカードを返すことができます。
+* カード 2 からの飲料の選択では、ボットはカード 3 である注文確認カードを返すことができます。
+* カード 3 からの注文確認時に、ボットはカード 4 である注文確認済みカードを返すことができます。
 
-## <a name="invoke-request-received-on-bot-side"></a>ボット側で受信した要求の呼び出し
+## <a name="invoke-request-received-on-bot-side"></a>ボット側で受信した呼び出し要求
 
 次のコードは、ボット側で受信した呼び出し要求の例を示しています。
 
@@ -127,7 +127,7 @@ var adaptiveCardResponse = JObject.FromObject(new
 
 |サンプルの名前 | 説明 | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Teams ケータリング ボット | アダプティブ カードを使用して、食品の注文を受け入れるボットを作成します。 |[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| まだ利用できません。 |
+| Teams ケータリング ボット | アダプティブ カードを使用して、食品注文を受け入れるボットを作成します。 |[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| まだ利用できません。 |
 | シーケンシャル ワークフローアダプティブ カード | シーケンシャル ワークフロー、ユーザー固有のビュー、最新のアダプティブ カードをボットに実装する方法を示します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>関連項目
