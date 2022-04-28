@@ -5,12 +5,12 @@ ms.topic: reference
 ms.author: lajanuar
 ms.localizationpriority: high
 keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: 0c2dccd3533ff5115fe28a09dee2304a56287413
-ms.sourcegitcommit: 7bae0aa77b9f4818efc72133eb582d682e126cb3
+ms.openlocfilehash: 135e4c7cfd82c0ca47075e8339bf9123fe094a9a
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64706152"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104008"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参照: Microsoft Teams のマニフェスト スキーマ
 
@@ -535,25 +535,25 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 **省略可能** — 配列
 
-アプリのメッセージング拡張機能を定義します。
+アプリのメッセージ拡張機能を定義します。
 
 > [!NOTE]
-> 機能の名前は、2017 年 11 月に "作成拡張機能" から "メッセージング拡張機能" に変更されましたが、マニフェスト名は同じままであるため、既存の拡張機能は引き続き機能します。
+> 機能の名前は、2017 年 11 月に "作成拡張機能" から "メッセージ拡張機能" に変更されましたが、マニフェスト名は同じままであるため、既存の拡張機能は引き続き機能します。
 
-アイテムは、型 `object` のすべての要素を持つ配列 (最大 1 つの要素) です。 このブロックは、メッセージング拡張機能を提供するソリューションにのみ必要です。
+アイテムは、型 `object` のすべての要素を持つ配列 (最大 1 つの要素) です。 このブロックは、メッセージ拡張機能を提供するソリューションにのみ必要です。
 
 |名前| 種類 | 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`botId`|string|64|✔|ボット フレームワークに登録されている、メッセージング拡張機能をサポートするボットの一意の Microsoft アプリ ID。 ID は、全体のアプリ ID と同じにできます。|
-|`commands`|オブジェクトの配列|10|✔|メッセージング拡張機能がサポートするコマンドの配列。|
-|`canUpdateConfiguration`|Boolean|||メッセージング拡張機能の構成をユーザーが更新できるかどうかを示す値。既定値: **false** です。|
+|`botId`|string|64|✔|ボット フレームワークに登録されている、メッセージ拡張機能をサポートするボットの一意の Microsoft アプリ ID。 ID は、全体のアプリ ID と同じにできます。|
+|`commands`|オブジェクトの配列|10|✔|メッセージ拡張機能がサポートするコマンドの配列。|
+|`canUpdateConfiguration`|ブール型|||メッセージ拡張機能の構成をユーザーが更新できるかどうかを示す値。既定値: **false** です。|
 |`messageHandlers`|オブジェクトの配列|5||特定の条件が満たされた場合にアプリを呼び出すことができるハンドラーの一覧。|
 |`messageHandlers.type`|string|||メッセージ ハンドラーの種類。`"link"`でなければなりません。|
 |`messageHandlers.value.domains`|文字列の配列|||リンク メッセージ ハンドラーが登録できるドメインの配列。|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
-メッセージング拡張機能では、最大 10 のコマンドで 1 つ以上のコマンドを宣言する必要があります。 各コマンドは、UI ベースのエントリ ポイントからの潜在的な相互作用として Microsoft Teams に表示されます。
+メッセージ拡張機能では、最大 10 のコマンドで 1 つ以上のコマンドを宣言する必要があります。 各コマンドは、UI ベースのエントリ ポイントからの潜在的な相互作用として Microsoft Teams に表示されます。
 
 各コマンド 項目は、次の構造を持つオブジェクトです。
 
@@ -566,7 +566,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |`initialRun`|Boolean|||ブール値は、コマンドがパラメーターなしで最初に実行されるかどうかを示します。既定値は **false** です。|
 |`context`|文字列の配列|3||メッセージ拡張機能の呼び出し先を定義します。 `compose`、`commandBox`、`message` の任意の組み合わせ。 既定値は `["compose","commandBox"]` です。|
 |`fetchTask`|Boolean|||タスク モジュールを動的にフェッチする必要があるかどうかを示すブール値。既定値は **false** です。|
-|`taskInfo`|object|||メッセージング拡張コマンドを使用するときにプリロードするタスク モジュールを指定します。|
+|`taskInfo`|object|||メッセージ拡張コマンドを使用するときにプリロードするタスク モジュールを指定します。|
 |`taskInfo.title`|string|64 文字||最初のダイアログ タイトル。|
 |`taskInfo.width`|string|||ダイアログの幅 - ピクセル単位の数値、または '大'、'中'、'小' などの既定のレイアウト。|
 |`taskInfo.height`|string|||ダイアログの高さ - ピクセル単位の数値、または '大'、'中'、'小' などの既定のレイアウト。|
@@ -809,7 +809,7 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 **省略可能** — オブジェクト
 
 > [!NOTE]
-> `manifestVersion` プロパティを 1.12 に設定した場合、承認プロパティは以前のバージョン (バージョン 1.11 以前) のマニフェストと互換性がありません。 承認はマニフェスト バージョン 1.12 でサポートされています。
+> `manifestVersion` プロパティを 1.12 に設定した場合、承認プロパティは以前のバージョン (バージョン 1.11 以前) のマニフェストと互換性がありません。承認はマニフェスト バージョン 1.12 でサポートされています。
 
 アプリの承認に関する情報を指定して統合します。
 

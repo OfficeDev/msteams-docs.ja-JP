@@ -5,12 +5,12 @@ description: アプリの計画中に考慮すべき質問、ユーザーとそ�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 6a2440ea05c1a89f4e1306b6fb54635287fb2d6d
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: 4620d1bc17332e40f79c429769090f1ce7b2210f
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63765933"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104309"
 ---
 # <a name="teams-app-planning-checklist"></a>Teams アプリの計画チェックリスト
 
@@ -78,7 +78,7 @@ ms.locfileid: "63765933"
 | # | 考慮する要因 |
 | --- | --- |
 | 1 | ユーザーがチャネルでタブを初めて構成するとどうなりますか? |
-| 2 | メッセージングの拡張機能でカードを共有している場合は、詳細情報ページへの小さなリンクを追加して、アプリで他にできることをユーザーに紹介するのに役立ちますか? |
+| 2 | メッセージ拡張機能でカードを共有している場合は、詳細情報ページへの小さなリンクを追加して、アプリで他にできることをユーザーに紹介するのに役立ちますか? |
 | 3 | ほとんどのユーザーが既にアプリの内容のコンテキストを持っているか、別のコンテキストで既にサービスを使用していることを期待していますか? |
 | 4 | 事前の知識を持たないユーザーがアプリにアクセスすることがありますか? |
 
