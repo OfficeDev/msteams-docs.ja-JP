@@ -2,15 +2,15 @@
 title: カスタム アプリの設計
 author: heath-hamilton
 description: Microsoft Teams アプリの設計方法はこちら。 リソースには、Microsoft Teams UI キット、ベスト プラクティス、例などが含まれます。
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: c6ccc282159a436b31671fc821372a3f08e47539
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: 8e417a59e03fbb57905e2a84490888b8f98a5435
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104463"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111277"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Microsoft Teams のアプリの設計
 
@@ -123,7 +123,7 @@ UI は理解しやすく、見た目とトーンが楽しく、ユーザーの�
 
 * [個人用アプリ](../../concepts/design/personal-apps.md)
 * [タブ](../../tabs/design/tabs.md)
-* [メッセージ拡張機能](../../messaging-extensions/design/messaging-extension-design.md)
+* [メッセージの拡張機能](../../messaging-extensions/design/messaging-extension-design.md)
 * [ボット](../../bots/design/bots.md)
 * [ミーディング拡張機能](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 

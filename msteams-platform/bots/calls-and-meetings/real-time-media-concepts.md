@@ -2,14 +2,14 @@
 title: リアルタイムのメディア コールと Microsoft Teams とのオンライン会議
 description: リアルタイムの音声通話とビデオ通話、およびオンライン会議を実行できるボットを構築する際の重要な概念を理解します。 メディア セッション、フレーム レート、オーディオ/ビデオ形式、および開発者リソースへの参照の詳細
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: オーディオ ストリーム ビデオ ストリーム 音声/ビデオ通話会議リアルタイム メディア アプリケーション ホスト型メディア サービス ホスト型メディア
-ms.openlocfilehash: e35ce08bc0efed328687f7aacf311cf94c3e8830
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 0e5343567be3843c457885fcf506446b20b6dcf7
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948552"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111991"
 ---
 # <a name="real-time-media-calls-and-meetings-with-microsoft-teams"></a>Microsoft Teamsでのリアルタイムのメディア通話と会議
 

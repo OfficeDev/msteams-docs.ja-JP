@@ -3,13 +3,13 @@ title: メッセージ拡張機能を開発する
 description: Microsoft Teamsでメッセージ拡張機能を使用する方法について説明します
 ms.topic: overview
 ms.localizationpriority: medium
-keywords: teams メッセージ拡張機能のメッセージ拡張機能
-ms.openlocfilehash: b1d219bbb8e79a99836ad20b35442e10ec537c4a
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+keywords: teams メッセージング拡張機能メッセージング拡張機能
+ms.openlocfilehash: 8d44ea8ffe3c265a5c65ae2e842fe4f55f950e58
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104338"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111921"
 ---
 # <a name="develop-message-extensions-for-microsoft-teams"></a>Microsoft Teams用のメッセージ拡張機能を開発する
 

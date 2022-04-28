@@ -4,13 +4,13 @@ author: surbhigupta
 description: Microsoft Teams アプリのメッセージ拡張機能検索コマンドについて説明します。アプリ マニフェストを使用して検索コマンドを作成し、コード例とサンプルを手動で使用します。
 ms.topic: conceptual
 ms.author: anclear
-ms.localizationpriority: none
-ms.openlocfilehash: f7933b1ef7de40ac889e0ae6d8063f6b21991cc7
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.localizationpriority: medium
+ms.openlocfilehash: 9615b1ab599f567815df5f68155a8ab2abb292ca
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104302"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111627"
 ---
 # <a name="define-message-extension-search-commands"></a>メッセージ拡張機能検索コマンドを定義する
 
@@ -79,9 +79,9 @@ ms.locfileid: "65104302"
 | `id` | このプロパティは、検索コマンドに割り当てる一意の ID です。 ユーザー要求には、この ID が含まれています。 | はい | 1.0 |
 | `title` | このプロパティはコマンド名です。 この値は、ユーザー インターフェイス (UI) に表示されます。 | はい | 1.0 |
 | `description` | このプロパティは、このコマンドの動作を示すヘルプ テキストです。 この値は UI に表示されます。 | はい | 1.0 |
-| `type` | このプロパティは 、 `query`. | いいえ | 1.4 |
+| `type` | このプロパティは 、 `query`. | なし | 1.4 |
 |`initialRun` | このプロパティが **true** に設定されている場合は、ユーザーが UI でこのコマンドを選択するとすぐに、このコマンドを実行する必要があることを示します。 | いいえ | 1.0 |
-| `context` | このプロパティは、検索アクションを使用できるコンテキストを定義する値の省略可能な配列です。 使用可能な値: `message`、`compose`、`commandBox`。 既定値は `["compose", "commandBox"]` です。 | なし | 1.5 |
+| `context` | このプロパティは、検索アクションを使用できるコンテキストを定義する値の省略可能な配列です。 使用可能な値: `message`、`compose`、`commandBox`。 既定値は `["compose", "commandBox"]` です。 | いいえ | 1.5 |
 
 Teams クライアントでユーザーに表示されるテキストを定義する検索パラメーターの詳細を追加する必要があります。
 
@@ -134,7 +134,7 @@ Teams クライアントでユーザーに表示されるテキストを定義�
 
 ステップ [バイ ステップ ガイド](../../../sbs-messagingextension-searchcommand.yml) に従って、検索ベースのメッセージ拡張機能を構築します。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [検索コマンドに応答します](~/messaging-extensions/how-to/search-commands/respond-to-search.md)。

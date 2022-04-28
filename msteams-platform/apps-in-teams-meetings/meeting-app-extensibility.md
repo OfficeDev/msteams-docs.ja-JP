@@ -3,13 +3,13 @@ title: 統合された会議アプリ
 author: surbhigupta
 description: デスクトップ環境とモバイル環境での会議のライフサイクルとユーザーの会議エクスペリエンス、参加者とユーザーの役割と種類のTeams、会議ライフサイクルにおけるボットとメッセージ拡張機能の統合について説明します。
 ms.topic: conceptual
-ms.localizationpriority: none
-ms.openlocfilehash: 0da600f3cbdf32a998e55bdf0db21ef1bbb4122f
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.localizationpriority: medium
+ms.openlocfilehash: 97f1254fc71dce93aa7e30b8ef1901f9fd93b6f0
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103335"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111347"
 ---
 # <a name="unified-meetings-apps"></a>統合された会議アプリ
 
@@ -210,13 +210,13 @@ Teams統合会議アプリを使用すると、会議の参加者ロールに基
 
 次の表に、ユーザーの種類と、各ユーザーがアクセスできる機能の一覧を示します。
 
-| ユーザーの種類 | タブ | ボット | メッセージ拡張機能 | アダプティブ カード | タスク モジュール | 会議中ダイアログ | 会議ステージ |
+| ユーザーの種類 | タブ | ボット | メッセージの拡張機能 | アダプティブ カード | タスク モジュール | 会議中ダイアログ | 会議ステージ |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | 匿名ユーザー | 使用不可 | 使用不可 | 使用不可 | 会議チャットでの対話は許可されます。 | アダプティブ カードからの会議チャットでの対話は許可されます。 | 使用不可 | 使用不可 |
 | ゲスト、テナント Azure ADの一部 | 対話は許可されます。 作成、更新、削除は許可されません。 | 使用不可 | 使用不可 | 会議チャットでの対話は許可されます。 | アダプティブ カードからの会議チャットでの対話は許可されます。 | 使用可能 | デスクトップ クライアントでのみ会議ステージでアプリを起動、表示、操作Teamsできます。 |
-| フェデレーション ユーザーの詳細については、 [非標準ユーザーを](/microsoftteams/non-standard-users)参照してください。 | 対話は許可されます。 作成、更新、削除は許可されません。 | 対話は許可されます。 取得、更新、削除は許可されません。 | 利用不可 | 会議チャットでの対話は許可されます。 | アダプティブ カードからの会議チャットでの対話は許可されます。 | 利用不可 | デスクトップ クライアントでのみ、会議ステージでアプリを起動、表示、操作Teamsできます。 |
+| フェデレーション ユーザーの詳細については、 [非標準ユーザーを](/microsoftteams/non-standard-users)参照してください。 | 対話は許可されます。 作成、更新、削除は許可されません。 | 対話は許可されます。 取得、更新、削除は許可されません。 | 使用不可 | 会議チャットでの対話は許可されます。 | アダプティブ カードからの会議チャットでの対話は許可されます。 | 使用不可 | デスクトップ クライアントでのみ、会議ステージでアプリを起動、表示、操作Teamsできます。 |
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [Teams 会議用アプリを有効化して構成する](enable-and-configure-your-app-for-teams-meetings.md)
@@ -225,5 +225,5 @@ Teams統合会議アプリを使用すると、会議の参加者ロールに基
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [ボット](../bots/what-are-bots.md)
-* [メッセージ拡張機能](../messaging-extensions/what-are-messaging-extensions.md)
+* [メッセージ拡張機能:](../messaging-extensions/what-are-messaging-extensions.md)
 * [アプリをデザインする](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)

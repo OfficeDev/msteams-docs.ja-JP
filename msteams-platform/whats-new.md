@@ -4,12 +4,12 @@ description: Microsoft Teams の最新情報やすべての開発者向け最新
 ms.topic: reference
 ms.localizationpriority: high
 keywords: Teams の最新情報と最新の更新プログラムまたは開発者プレビューと機能
-ms.openlocfilehash: 936d5eff50453801527425cbd4a61f6928fb1d30
-ms.sourcegitcommit: 8ae93b7bfffff77a5b9cb7a5d287f202e73ea9be
+ms.openlocfilehash: ba9588517e7b0657eef7da265844e20d8b2fbd76
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952388"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073091"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -22,6 +22,7 @@ ms.locfileid: "64952388"
 
 | 日付 | Update | ここで検索 |
 | --- | --- | --- |
+|2022/04/20 |  CI/CD パイプラインを設定する | [ツールと SDK] > [Visual Studio Code 向け Teams ツールキット] > [[CI/CD パイプラインの設定]](toolkit/use-CICD-template.md)|
 |04/19/2022 | Microsoft Teams でアプリをアップロードする | アプリを配布する > [アプリをアップロードする](concepts/deploy-and-publish/apps-upload.md)|
 |04/06/2022| 個人用アプリまたはタブから Teams に共有する (開発者プレビュー) | [Teams と統合] > [Teams に共有] > [[個人用アプリまたはタブから Teams に共有]](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |04/01/2022| Teams ボットを作成するためのステップバイステップのガイドを導入しました| [ボットの構築] > [ボットの会話] > [チャネルとグループの会話]  > [Teams 会話型ボットを作成するためのステップバイステップ ガイド](sbs-teams-conversation-bot.yml) |
@@ -61,6 +62,10 @@ ms.locfileid: "64952388"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ----------------|
+|2022/04/26|ボットを使用した個人用アプリのアンインストール動作 | [ボットの構築] > [ボットの会話] > [[ボットを使用した個人用アプリのアンインストール動作]](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
+|2022/04/22| 収益化されたアプリのテスト プレビュー | [アプリの収益化] > [[収益化アプリのテスト プレビュー]](concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md)
+|2022/04/22| アプリの収益化のためのアプリ内購入フロー | [アプリの収益化] > [[アプリ内購入]](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
+|2022/04/20 |  CI/CD パイプラインを設定する | [ツールと SDK] > [Visual Studio Code 向け Teams ツールキット] > [[CI/CD パイプラインの設定]](toolkit/use-CICD-template.md)|
 |04/19/2022 | Microsoft Teams でアプリをアップロードする | アプリを配布する > [アプリをアップロードする](concepts/deploy-and-publish/apps-upload.md)|
 |04/01/2022| Teams ボットを作成するためのステップバイステップのガイドを導入しました| [ボットの構築] > [ボットの会話] > [チャネルとグループの会話]  > [Teams 会話型ボットを作成するためのステップバイステップ ガイド](sbs-teams-conversation-bot.yml) |
 |03/30/2022| タブとボットを使用した Blazor アプリの [使用を開始するモジュール] の更新|  はじめに＞[Blazorを使用して初めてのアプリを構築する](sbs-gs-blazorupdate.yml)|
@@ -269,14 +274,10 @@ ms.locfileid: "64952388"
 |04/06/2022| 個人用アプリまたはタブから Teams に共有する | [Teams と統合] > [Teams に共有] > [[個人用アプリまたはタブから Teams に共有]](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 |02/07/2022| ツールと SDK |Visual Studio Code 用 Teams ツールキット > </br> • [Teams アプリに機能を追加] > [[Teams アプリに機能を追加]](toolkit/add-capability.md) </br> • [クラウド リソースを Teams アプリに追加] > [[クラウド リソースを Teams アプリに追加]](toolkit/add-resource.md) |
 |02/02/2022| アプリ マニフェスト バージョン 1.12 が導入されました | [アプリ マニフェスト] > [開発者向けパブリック プレビュー] > [[マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md) |
-|02/03/2022| 収益化されたアプリのテスト プレビュー| [アプリの収益化] > [[収益化アプリのテスト プレビュー]](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md)|
-|02/03/2022| アプリの収益化のためのアプリ内購入フロー | [アプリの収益化] > [[アプリ内購入]](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
 |2022/1/17| モバイル版アダプティブ カードのユーザー ピッカー  | [カードとタスク モジュールの構築] > [カードの構築] > [[アダプティブ カードのユーザー ピッカー]](task-modules-and-cards/cards/people-picker.md)|
 |2022/1/10 | Visual Studio Code 用 Teams ツールキット | [ツールと SDK] > [Visual Studio Code 向け Teams ツールキット] > [[Teams ツールキットの基本]](toolkit/teams-toolkit-fundamentals.md) |
-|2021/12/24| タブ デバイスのアクセス許可を付与するためのステップバイステップ ガイドを導入しました | [アプリの基本] > [デバイス機能] > [[タブ デバイスのアクセス許可を付与するためのステップバイステップ ガイド]](sbs-tab-device-permissions.yml) |
 |2021/11/15| Outlook と Office で実行する個人用タブとメッセージング拡張機能 | [Teams アプリを Microsoft 365 全体に拡張する](~/m365-apps/overview.md) |
 |2021/10/28|ボットは、リソース固有のコンテンツ (RSC) を使用して、すべてのチャネル メッセージの受信を有効化できます | • [ボットの構築] > [ボットの会話] > [ボット会話のメッセージ] > [[RSC を使用してすべてのメッセージを受信する]](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • [ボットの構築] > [ボットの会話] > [[ボット会話の概要]](~/bots/how-to/conversations/conversation-basics.md) </br> • [ボットの構築] > [ボットの会話] > [[チャネルとグループの会話]](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー > [[開発者向けプレビュー マニフェスト スキーマ]](~/resources/schema/manifest-schema-dev-preview.md) |
-|2021/6/21|ボットを使用した個人用アプリのアンインストール動作 | [ボットの構築] > [ボットの会話] > [[ボットを使用した個人用アプリのアンインストール動作]](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |2021/6/16| チャットのリソース固有の同意 | • [Microsoft Graph を使用した Teams データの活用] > [[リソース固有の同意]](graph-api/rsc/resource-specific-consent.md) </br> • [アプリのテスト] > [Microsoft Graph] > [[Teams でリソース固有の同意をテストする]](graph-api/rsc/test-resource-specific-consent.md)|
 
 詳細については、「[Teams の開発者向けパブリック プレビュー](~/resources/dev-preview/developer-preview-intro.md)」を参照してください。

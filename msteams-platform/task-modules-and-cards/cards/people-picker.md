@@ -1,17 +1,17 @@
 ---
 title: アダプティブ カードのユーザー ピッカー
 description: アダプティブ カードで People Picker コントロールを使用する方法について説明します
-localization_priority: Normal
+localization_priority: Medium
 keywords: アダプティブ カードのユーザー選択
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: 8a78be74d8142600ccc08093744491a19900e60b
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 3d6305895239ca2b8a0c871e53723979feb3f890
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073433"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111634"
 ---
 # <a name="people-picker-in-adaptive-cards"></a>アダプティブ カードのユーザー ピッカー
 
@@ -72,7 +72,7 @@ Android および iOS モバイル クライアントでは、アダプティブ
 1. [ユーザー選択フィールドに名前が事前設定されている場所を **再** 割り当て] を選択して、タスクを目的のユーザーに再割り当てします。
 1. 正しくないユーザーの名前を削除します。
 1. イメージ シナリオに従って目的のユーザーを選択し、タスクのユーザー B (Pdb)、およびユーザー C (Robin) を選択します。
-1. [**完了**] を選択します。
+1. **[完了]** を選択します。
 1. **[割り当て]** を選択します。 割り当て後、情報はボットに送信されます。
    ボットはアダプティブ カードを更新し、目的のユーザーに通知します。
 
@@ -101,7 +101,7 @@ Android および iOS モバイル クライアントでは、アダプティブ
 
 |プロパティ |型 |必須 |説明 |
 |----|----|----|----|
-|**choices.data** |**Data.Query** |いいえ |指定したデータセットから結果をフェッチすることで、さまざまなユーザーの種類に対して動的な自動完了を有効にします。 |
+|**choices.data** |**Data.Query** |なし |指定したデータセットから結果をフェッチすることで、さまざまなユーザーの種類に対して動的な自動完了を有効にします。 |
 
 #### <a name="dataquery"></a>Data.Query
 

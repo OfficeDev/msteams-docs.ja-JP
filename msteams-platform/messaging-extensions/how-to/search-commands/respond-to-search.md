@@ -4,13 +4,13 @@ author: surbhigupta
 description: コード例とサンプルを使用して、Microsoft Teams アプリのメッセージ拡張機能から検索コマンドに応答する方法について説明します
 ms.topic: conceptual
 ms.author: anclear
-ms.localizationpriority: none
-ms.openlocfilehash: 4dcf3d5743471daa034d138818cf11a9a516a32e
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.localizationpriority: medium
+ms.openlocfilehash: f02db887a83965eeaac9e905fd20b34f79b34a68
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104505"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111935"
 ---
 # <a name="respond-to-search-command"></a>検索コマンドに応答する
 
