@@ -5,12 +5,12 @@ description: Microsoft Teams のボットの概要。
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: fbf7f7b1f4e863ec7612a404b5576baf40035d21
-ms.sourcegitcommit: 8ae93b7bfffff77a5b9cb7a5d287f202e73ea9be
+ms.openlocfilehash: 53d016c6e01c73a6fbe5f59ed4a3239077e8b12e
+ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952304"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65102422"
 ---
 # <a name="bots-in-microsoft-teams"></a>Microsoft Teams のボット
 
@@ -21,11 +21,11 @@ ms.locfileid: "64952304"
 
 会話ボットを使用すると、ユーザーはテキスト、対話型カード、タスク モジュールを使用して Web サービスと対話できます。
 
-![テキストを使用してボットを呼び出す](~/assets/images/invokebotwithtext.png)
+:::image type="content" source="../assets/images/invokebotwithtext.png" alt-text="テキストを使用した Web サービス"lightbox="../assets/images/invokebotwithtext.png":::
 
-![カードを使用してボットを呼び出す](~/assets/images/invokebotwithcard.png)
+:::image type="content" source="../assets/images/invokebotwithcard.png" alt-text="対話型カードを使用した Web サービス"lightbox="../assets/images/invokebotwithcard.png"border="true":::
 
-<img src="~/assets/images/task-module-example.png" alt="Invoke bot using task module" width="400"/>
+:::image type="content" source="../assets/images/task-module-example.png" alt-text="タスク モジュールを使用した Web サービス"lightbox="../assets/images/task-module-example.png"border="true":::
 
 会話ボットは非常に柔軟です。 ボットは、人工知能と自然言語処理を含むいくつかの基本的なコマンドまたは複雑なタスクを処理できます。 ボットは、大規模なアプリケーションの一部にすることも、スタンドアロンにすることもできます。
 

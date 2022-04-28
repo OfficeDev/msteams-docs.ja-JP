@@ -1,16 +1,16 @@
 ---
 title: ボットを介してファイルを送受信する
-description: 個人用、チャネル、およびグループチャットのスコープに対してGraph API を使用して、ボットを介してファイルを送受信する方法について説明します。 v4 Bot Framework SDK に基づくコード サンプルを使用して、Teams ボット API を使用します。
-keywords: teams bots files send receive
+description: 個人用スコープ、チャネル スコープ、グループチャット スコープの Graph API を使用して、ボットを通じてファイルを送受信する方法について説明します。 v4 Bot Framework SDK に基づくコード サンプルを使用して、Teams ボット API を使用します。
+keywords: Teams ボット ファイル送信受信
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: ebfa6bf24899d8bc88a15018b0d74d395bb56c79
-ms.sourcegitcommit: 5201e7f390fbb2a9190cae1781c2f09e1746c8f7
+ms.openlocfilehash: 22c88a435628c34942eb8f5652b9170f861a0446
+ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64820301"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65102536"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>ボットを介してファイルを送受信する
 
@@ -48,7 +48,7 @@ Teams API を使用して、ボットは、コンテキスト内のユーザー�
 
 ### <a name="configure-the-bot-to-support-files"></a>ファイルをサポートするようにボットを構成する
 
-ボット内のファイルを送受信するには、マニフェスト`true`のプロパティを `supportsFiles` . このプロパティについては、マニフェストリファレンスの [bots](~/resources/schema/manifest-schema.md#bots) セクションで説明されています。
+ボット内のファイルを送受信するには、マニフェスト`true`のプロパティを `supportsFiles` . このプロパティは、マニフェスト リファレンスの[ボット](~/resources/schema/manifest-schema.md#bots) セクションで説明されています。
 
 定義は次のようになります `"supportsFiles": true`。 ボットが有効 `supportsFiles`になっていない場合、このセクションに記載されている機能は機能しません。
 
@@ -56,7 +56,7 @@ Teams API を使用して、ボットは、コンテキスト内のユーザー�
 
 ユーザーがボットにファイルを送信すると、最初にビジネス ストレージ用のユーザーのOneDriveにファイルがアップロードされます。 その後、ボットは、ユーザーのアップロードについてユーザーに通知するメッセージ アクティビティを受け取ります。 アクティビティには、ファイルの名前やコンテンツ URL などのファイル メタデータが含まれます。 ユーザーはこの URL から直接読み取ってバイナリ コンテンツをフェッチできます。
 
-#### <a name="message-activity-with-file-attachment-example"></a>添付ファイルを含むメッセージ アクティビティの例
+#### <a name="message-activity-with-file-attachment-example"></a>ファイル添付の例を使用したメッセージ アクティビティ
 
 次のコードは、添付ファイルを含むメッセージ アクティビティの例を示しています。
 
@@ -76,11 +76,11 @@ Teams API を使用して、ボットは、コンテキスト内のユーザー�
 }
 ```
 
-次の表では、添付ファイルのコンテンツ プロパティについて説明します。
+次の表で、添付ファイルのコンテンツ プロパティについて説明します。
 
 | プロパティ | 用途 |
 | --- | --- |
-| `downloadUrl` | ファイルのコンテンツをフェッチするための URL をOneDriveします。 ユーザーはこの URL から直接発行 `HTTP GET` できます。 |
+| `downloadUrl` | ファイルのコンテンツを取得するための OneDrive URL。 ユーザーはこの URL から直接発行 `HTTP GET` できます。 |
 | `uniqueId` | 一意のファイル ID。 これは、ユーザーがボットにファイルを送信する場合に備えて、OneDriveドライブ項目 ID です。 |
 | `fileType` | .pdfや.docxなどのファイルの種類。 |
 
@@ -90,16 +90,16 @@ Teams API を使用して、ボットは、コンテキスト内のユーザー�
 
 ユーザーにファイルをアップロードするには:
 
-1. ファイルを書き込むアクセス許可を要求するメッセージをユーザーに送信します。 このメッセージには、アップロードする `FileConsentCard` ファイルの名前を含む添付ファイルが含まれている必要があります。
+1. ファイルの書き込み許可を要求するメッセージをユーザーに送信します。 このメッセージには、アップロードするファイルの名前が記載された `FileConsentCard` 個の添付ファイルが含まれている必要があります。
 2. ユーザーがファイルのダウンロードを受け入れた場合、ボットは場所 URL を含む呼び出しアクティビティを受け取ります。
 3. ファイルを転送するために、ボットは指定された場所 URL に直接実行 `HTTP POST` します。
 4. 必要に応じて、ユーザーが同じファイルの追加のアップロードを受け入れたくない場合は、元の同意カードを削除します。
 
-#### <a name="message-requesting-permission-to-upload"></a>アップロードするアクセス許可を要求するメッセージ
+#### <a name="message-requesting-permission-to-upload"></a>アップロードの許可を求めるメッセージ
 
 次のデスクトップ メッセージには、ファイルをアップロードするためのユーザーアクセス許可を要求する単純な添付ファイル オブジェクトが含まれています。
 
-![ファイルをアップロードするためのユーザーアクセス許可を要求する同意カード](../../assets/images/bots/bot-file-consent-card.png)
+:::image type="content" source="../../assets/images/bots/bot-file-consent-card.png" alt-text="ファイルをアップロードするためのユーザーアクセス許可を要求する同意カード"lightbox="../../assets/images/bots/bot-file-consent-card.png"border="true":::
 
 次のモバイル メッセージには、ファイルをアップロードするためのユーザーアクセス許可を要求する添付ファイル オブジェクトが含まれています。
 
@@ -122,7 +122,7 @@ Teams API を使用して、ボットは、コンテキスト内のユーザー�
 }
 ```
 
-次の表では、添付ファイルのコンテンツ プロパティについて説明します。
+次の表で、添付ファイルのコンテンツ プロパティについて説明します。
 
 | プロパティ | 用途 |
 | --- | --- |
@@ -189,7 +189,7 @@ Teams API を使用して、ボットは、コンテキスト内のユーザー�
 }
 ```
 
-次の表では、添付ファイルのコンテンツ プロパティについて説明します。
+次の表で、添付ファイルのコンテンツ プロパティについて説明します。
 
 | プロパティ | 用途 |
 | --- | --- |
@@ -200,7 +200,7 @@ Teams API を使用して、ボットは、コンテキスト内のユーザー�
 
 ボットのアクセス トークンを使用して、メッセージの一部であるインライン イメージをフェッチします。
 
-![インライン イメージ](../../assets/images/bots/inline-image.png)
+:::image type="content" source="../../assets/images/bots/inline-image.png" alt-text="インライン イメージ"border="true":::
 
 次のコードは、メッセージからインライン イメージをフェッチする例を示しています。
 
@@ -239,7 +239,7 @@ private static Attachment GetInlineAttachment()
 }
 ```
 
-### <a name="basic-example-in-c"></a>C の基本的な例#
+### <a name="basic-example-in-c"></a>C# の基本的な例
 
 次のコードは、ファイルのアップロードを処理し、ボットのダイアログでファイル同意要求を送信する方法の例を示しています。
 
@@ -329,7 +329,7 @@ private async Task SendFileCardAsync(ITurnContext turnContext, string filename, 
 
 ステップ [バイ ステップ ガイド](../../sbs-file-handling-in-bot.yml)に従って、ボットを使用してTeamsにファイルをアップロードします。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [Teams でレートを制限してボットを最適化する](~/bots/how-to/rate-limit.md)

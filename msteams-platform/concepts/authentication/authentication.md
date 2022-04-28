@@ -4,12 +4,12 @@ description: Teams での認証と、アプリでの認証の使用方法につ�
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Teams 認証 OAuth SSO Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: efc065f317d0877b3e5f158566cba6d5d095505f
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
-ms.translationtype: HT
+ms.openlocfilehash: 811b8917297ad8fe1420f4887983b93f43cd73b3
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399346"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103959"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Microsoft Teams でユーザーを認証する
 
@@ -22,7 +22,7 @@ Teams には、アプリに 2 つの異なる認証フローがあります。 �
 
 ## <a name="web-based-authentication-flow"></a>Web ベースの認証フロー
 
-[タブ](~/tabs/what-are-tabs.md)には Web ベースの認証フローを使用し、[会話ボット](~/bots/what-are-bots.md)や[メッセージング拡張機能](~/messaging-extensions/what-are-messaging-extensions.md)との併用を選択します。 [Microsoft Teams の JavaScript クライアント SDK](/javascript/api/overview/msteams-client) を Web コンテンツ ページで使用し、認証を有効にします。 認証を有効にした後、コンテンツ ページをタブ、構成ページ、またはタスク モジュールに埋め込みます。 Web ベースの認証フローの詳細については、以下を参照してください。
+[タブ](~/tabs/what-are-tabs.md)には Web ベースの認証フローを使用し、[会話ボット](~/bots/what-are-bots.md)または[メッセージ拡張機能](~/messaging-extensions/what-are-messaging-extensions.md)で使用することを選択します。 [Microsoft Teams の JavaScript クライアント SDK](/javascript/api/overview/msteams-client) を Web コンテンツ ページで使用し、認証を有効にします。 認証を有効にした後、コンテンツ ページをタブ、構成ページ、またはタスク モジュールに埋め込みます。 Web ベースの認証フローの詳細については、以下を参照してください。
 
 * [Teams ボットへの認証の追加](~/bots/how-to/authentication/add-authentication.md)では、会話ボットで Web ベースの認証フローを使用する方法について説明します。
 * [タブでの認証フロー](~/tabs/how-to/authentication/auth-flow-tab.md)では、Teams でのタブ認証の仕組みを説明しています。 ここでは、タブに使用される一般的な Web ベースの認証フローを示しています。
@@ -46,7 +46,7 @@ OAuthPrompt の使用の詳細については、次を参照してください�
 | **サンプルの名前** | **説明** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
 | ボット認証 | このサンプルは、Microsoft Teams のボットで認証を開始する方法を示しています。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
-| タブ、ボット、メッセージング拡張機能 (ME) SSO | このサンプルは、タブ、ボット、および ME の SSO (検索、アクション、linkunfurl) を示しています。 |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | 利用不可 |
+| タブ、ボット、メッセージ拡張機能 (ME) SSO | このサンプルは、タブ、ボット、および ME の SSO (検索、アクション、linkunfurl) を示しています。 |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | 利用不可 |
 
 ## <a name="configure-the-identity-provider"></a>ID プロバイダーを構成する
 
@@ -62,4 +62,4 @@ iOS 14 の更新後、Apple は既定ですべてのアプリの[サードパー
 
 * [タブの Microsoft Teams 認証フロー](~/tabs/how-to/authentication/auth-flow-tab.md)
 * [ボットのシングル サインオンのサポート](~/bots/how-to/authentication/auth-aad-sso-bots.md)
-* [メッセージング拡張機能に認証を追加する](~/messaging-extensions/how-to/add-authentication.md)
+* [メッセージ拡張機能に認証を追加する](~/messaging-extensions/how-to/add-authentication.md)

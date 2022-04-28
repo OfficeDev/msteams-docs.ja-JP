@@ -5,12 +5,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 25a851f0dcc956139551a46b713dc2e7df3f626d
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: df40425e00014e3836a572dd6de02d978e15d737
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63731859"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073674"
 ---
 # <a name="debug-your-teams-app-locally"></a>Teams アプリをローカルでデバッグする
 
@@ -47,13 +47,13 @@ Teams Toolkit では、マルチターゲット デバッグ機能を利用し�
 
 #### <a name="hot-reload"></a>ホット リロード
 
-Teams アプリをデバッグするときに、タブ、ボット、メッセージング拡張機能、および Azure Functions のソース コードを同時に更新して保存できます。 アプリが再読み込みされ、デバッガーがプログラミング言語に再アタッチされます。
+Teams アプリをデバッグするときに、タブ、ボット、メッセージング拡張機能、および Azure Functions のソース コードを同時に更新して保存できます。アプリが再読み込みされ、デバッガーがプログラミング言語に再アタッチされます。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot-reload.png" alt-text="ソース コードのホット リロード":::
 
 #### <a name="stop-debugging"></a>デバッグの停止
 
-ローカル デバッグを完了すると、フローティング デバッグ ツール バーから **[停止]** または **[切断]** を選択して、すべてのデバッグ セッションを停止し、タスクを終了できます。 次の図は、デバッグの停止アクションを示しています。
+ローカル デバッグを完了すると、フローティング デバッグ ツール バーから **[停止]** または **[切断]** を選択して、すべてのデバッグ セッションを停止し、タスクを終了できます。次の図は、デバッグ操作の停止を示しています:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debug.png" alt-text="デバッグの停止":::
 
@@ -68,7 +68,7 @@ Teams Toolkit を使用して新しいアプリを作成した後、次の手順
 <details>
 <summary><b>Windows</b></summary>
 
-1. アクティビティ バーで **[Edge のデバッグ]** または **[Chrome デバッグ]** を **[実行とデバグ]** から選択します。
+1. アクティビティ バーで **[実行とデバッグ]** から **[Edge のデバッグ]** または **[Chrome デバッグ]** を 選択します。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="ブラウザー オプション" border="false":::
 
@@ -76,7 +76,7 @@ Teams Toolkit を使用して新しいアプリを作成した後、次の手順
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="デバッグの開始" border="false":::
 
-3. Microsoft 365 アカウントへ **[サインイン]** を選択します。
+3. Microsoft 365 アカウントへの **[サインイン]** を選択します。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="サインイン" border="true":::
 
@@ -84,7 +84,7 @@ Teams Toolkit を使用して新しいアプリを作成した後、次の手順
    > [!TIP]
    > Microsoft 365 開発者プログラムの詳細については **[詳細情報]** を選択してください。 既定の Web ブラウザーが開き、資格情報を使用して Microsoft 365 アカウントにサインインできます。
 
-4. localhost の開発証明書をインストールするには **[インストール]** を選択します。
+4. ローカルホストの開発証明書をインストールするには **[インストール]** を選択します。
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="証明書" border="true":::
 
@@ -102,7 +102,7 @@ Teams Toolkit を使用して新しいアプリを作成した後、次の手順
 <details>
 <summary><b>macOS</b></summary>
 
-1. アクティビティ バーで **[Edge のデバッグ]** または **[Chrome デバッグ]** を **[実行とデバグ]** から選択します。
+1. アクティビティ バーで **[実行とデバッグ]** から **[Edge のデバッグ]** または **[Chrome デバッグ]** を 選択します。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="ブラウザー リスト" border="false":::
 
@@ -110,14 +110,14 @@ Teams Toolkit を使用して新しいアプリを作成した後、次の手順
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="アプリのデバッグ" border="false":::
 
-3. Microsoft 365 アカウントへ **[サインイン]** を選択します。
+3. Microsoft 365 アカウントへの **[サインイン]** を選択します。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="M365 アカウントにサインイン" border="true":::
 
    > [!TIP]
    > Microsoft 365 開発者プログラムの詳細については **[詳細情報]** を選択してください。 既定の Web ブラウザーが開き、資格情報を使用して Microsoft 365 アカウントにサインインできます。
 
-4. **[インストール]** を選択して localhost の開発証明書をインストールします。
+4. **[インストール]** を選択してローカルホストの開発証明書をインストールします。
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="証明書" border="true":::
 
@@ -133,13 +133,13 @@ Teams Toolkit を使用して新しいアプリを作成した後、次の手順
 </details>
 
 
-#### <a name="2-debug-your-app"></a>2. ボットのデバッグ 
+#### <a name="2-debug-your-app"></a>2. ボットのデバッグ
 
 初期セットアップ プロセスの後、Teams Toolkit は次のプロセスを開始します:
 
-  a.  [アプリ サービスを開始](#starts-app-services) </br>
-  b. [デバッガーを起動](#launches-debuggers)   </br>
-  c. [Teams アプリをサイドロード](#sideloads-the-teams-app)
+a.  [アプリ サービスを開始](#starts-app-services) </br>
+b. [デバッガーを起動](#launches-debuggers)   </br>
+      c. [Teams アプリをサイドロードする](#sideloads-the-teams-app)
         
 #### <a name="starts-app-services"></a>アプリ サービスを開始します
 
@@ -149,7 +149,7 @@ Teams Toolkit を使用して新しいアプリを作成した後、次の手順
 | --- | --- | --- |
 |  Tab |  **フロントエンドの開始** |  tabs |
 |  ボットまたはメッセージング拡張機能 |  **ボットの開始** |  ボット |
-|  Azure Functions |  **バックエンドの開始** |  api |
+|  Azure Functions |  **バックエンドの開始** |  API |
 
 次の図は、タブ、ボット、メッセージング拡張機能、およびAzure Functionsの実行中に、Visual Studio Code の **[出力]** **[ターミナル]** タブにタスク名を表示します。
 
@@ -194,9 +194,18 @@ Teams Toolkit を使用すると、いくつかの前提条件をオフにして
 <details>
 <summary><b>ボット エンドポイントを使用する</b></summary>
 
-1. [Visual Studio Codeの設定] で **[Ngrok がインストールされ、起動されていることを確認する (ngrok) ]** をオフにします。
+1. [Visual Studio Code の設定] で **[Ngrok がインストールされ、起動されていることを確認する (ngrok) ]** をオフにします。
 
-1. `.fx/configs/localSettings.json` で botDomain と botEndpoint の構成をドメインとエンドポイントに設定します。
+1. `.fx/configs/config.local.json` で siteEndpoint の構成をエンドポイントに設定します。
+
+```json
+{
+    "bot": {
+        "siteEndpoint": "https://your-bot-tunneling-url"
+    }
+}
+
+```
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/bot-endpoint.png" alt-text="ボット エンドポイントのカスタマイズ":::
 
@@ -205,9 +214,18 @@ Teams Toolkit を使用すると、いくつかの前提条件をオフにして
 <details>
 <summary><b>開発証明書を使用する</b></summary>
 
-1. Visual Studio Code 設定で [**開発証明書が信頼されていることを確認する (devCert)**] をオフにします。
+1. Visual Studio Code 設定で **[開発証明書が信頼されていることを確認する (devCert)]** をオフにします。
 
-1. `.fx/configs/localSettings.json` の sslCertFile と sslKeyFile の構成を、証明書ファイル パスとキー ファイル パスに設定します。
+1. `.fx/configs/config.local.json` の `sslCertFile` と `sslKeyFile` の構成を、証明書ファイル パスとキー ファイル パスに設定します。
+
+```json
+{
+    "frontend": {
+        "sslCertFile": "",
+        "sslKeyFile": ""
+    }
+}
+```
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate-customize.png" alt-text="証明書のカスタマイズ":::
 
@@ -220,7 +238,7 @@ Teams Toolkit を使用すると、いくつかの前提条件をオフにして
 
 1. ボットまたはメッセージング拡張機能の場合は、`bot/package.json` で `dev:teamsfx` スクリプトを更新します。
 
-1. Azure Functions の場合は、`api/package.json` の `dev:teamsfx` スクリプトと TypeScript 更新 `watch:teamsfx` スクリプトを更新します。
+1. Azure Functions の場合は、`api/package.json` の `dev:teamsfx` スクリプトを更新し、TypeScript の場合は、`watch:teamsfx` スクリプトを更新します。
 
    > [!NOTE]
    > 現時点では、タブ、ボット、メッセージング拡張機能アプリ、Azure Functions ポートはカスタマイズをサポートしていません。

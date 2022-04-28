@@ -4,12 +4,12 @@ description: シングル サインオン (SSO) について説明します
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication SSO Microsoft Azure Active Directory (Azure AD) single sign-on api
-ms.openlocfilehash: 8ac1e44ecb36d3b863a6800b0167ce7ec9ce1803
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.openlocfilehash: d9391489c8bafafa24ba52528f5d0b8440319a55
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571321"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104421"
 ---
 # <a name="single-sign-on-sso-support-for-tabs"></a>タブのシングル サインオン (SSO) のサポート
 

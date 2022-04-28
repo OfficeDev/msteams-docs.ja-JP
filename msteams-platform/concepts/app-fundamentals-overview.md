@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: エントリ ポイントの拡張性のユース ケースデバイス機能
-ms.openlocfilehash: 0c1b2289734a54ced4298062260e8424b3454a09
-ms.sourcegitcommit: 65cea59cc0602269395a2f87e023a4057d9cc55e
+ms.openlocfilehash: 13ad637e4e6ef6831d5d268d866538c6ce99e33f
+ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63766038"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65073112"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Teams の機能を使用してアプリを計画する
 
@@ -67,10 +67,9 @@ ms.locfileid: "63766038"
 * アプリを Teams やその他のアプリ (Microsoft 365、Microsoft Graphなど) と統合します。
 * 開発者ポータルを使用して、アプリを構成、管理、デプロイします。
 
-<details>
-<summary><b>Government Community Cloud (GCC) の詳細</b></summary>
+#### <a name="government-community-cloud"></a>Government Community Cloud
 
-Government Community Cloud は、政府機関向けの商用環境のコピーです。 国防総省 (DOD) と連邦請負業者は、厳格なサイバーセキュリティとコンプライアンスの要件を満たす必要があります。 このため、DOD および連邦請負業者のニーズを満たすために GCC-High が作成されました。 GCC-High は DOD クラウドのコピーですが、独自の独立環境に存在します。 DOD クラウドは国防総省専用に構築されています。
+Government Community Cloud (GCC) は、政府機関向けの商用環境のコピーです。 国防総省 (DOD) と連邦請負業者は、厳格なサイバーセキュリティとコンプライアンスの要件を満たす必要があります。 このため、DOD および連邦請負業者のニーズを満たすために GCC-High が作成されました。 GCC-High は DOD クラウドのコピーですが、独自の独立環境に存在します。 DOD クラウドは国防総省専用に構築されています。
 
 次の表に、GCC、GCC-High、DOD の Teams の機能と可用性を示します。
 

@@ -1,29 +1,29 @@
 ---
 title: 統合された会議アプリ
 author: surbhigupta
-description: デスクトップおよびモバイル環境での会議のライフサイクルとユーザーの会議エクスペリエンス、参加者とユーザーのロールと種類のTeams、会議ライフサイクルにおけるボットとメッセージング拡張機能の統合について説明します。
+description: デスクトップ環境とモバイル環境での会議のライフサイクルとユーザーの会議エクスペリエンス、参加者とユーザーの役割と種類のTeams、会議ライフサイクルにおけるボットとメッセージ拡張機能の統合について説明します。
 ms.topic: conceptual
 ms.localizationpriority: none
-ms.openlocfilehash: 4eb3b65213414b7e793795490613c343fc84ad3a
-ms.sourcegitcommit: 77e92360bd8fb5afcda76195d90122ce8ef0389e
+ms.openlocfilehash: 0da600f3cbdf32a998e55bdf0db21ef1bbb4122f
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64838465"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103335"
 ---
 # <a name="unified-meetings-apps"></a>統合された会議アプリ
 
 Teams統合会議アプリは、次の概念に基づいています。
 
 * 会議のライフサイクルには、会議前、会議中、会議後の異なる段階があります。  
-* 会議では、開催者、発表者、出席者の 3 つの異なる参加者の役割があります。 詳細については、[Teams会議のロールを](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)参照してください。  
+* 会議では、開催者、発表者、出席者の 3 つの異なる参加者の役割があります。 詳細については、「[Teams 会議での役割](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)」を参照してください。  
 * 会議には、[テナント内、](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.)[ゲスト](/microsoftteams/guest-access)、フェデレーション、匿名ユーザーなど、さまざまな種類[の](/microsoftteams/manage-external-access)ユーザーがあります。
 
-この記事では、会議のライフサイクルに関する情報と、タブ、ボット、メッセージング拡張機能を統合する方法について説明します。 さまざまな参加者ロールとユーザーの種類を識別します。
+この記事では、会議のライフサイクルに関する情報と、タブ、ボット、メッセージ拡張機能を統合する方法について説明します。 さまざまな参加者ロールとユーザーの種類を識別します。
 
 ## <a name="meeting-lifecycle"></a>会議のライフサイクル
 
-会議のライフサイクルは、会議前、会議中、会議後のアプリ エクスペリエンスで構成されます。 会議のライフサイクルの各段階で、タブ、ボット、メッセージング拡張機能を統合できます。
+会議のライフサイクルは、会議前、会議中、会議後のアプリ エクスペリエンスで構成されます。 会議ライフサイクルの各ステージで、タブ、ボット、メッセージ拡張機能を統合できます。
 
 > [!NOTE]
 > ボット、カード、メッセージ拡張機能、メッセージ アクションなどの会議拡張機能は、Web クライアントでサポートされています。 ただし、現在、タブ、コンテンツ バブル、ステージへの共有などのホストされたエクスペリエンスは完全にはサポートされていません。
@@ -47,7 +47,7 @@ Teams統合会議アプリは、次の概念に基づいています。
 既存の会議にタブを追加するには:
 
 1. 予定表で、タブを追加する会議を選択します。
-1. [ **詳細** ] タブを選択し、 <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. タブ ギャラリーが表示されます。
+1. **[詳細]** タブを選択し、次を選択します: <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. タブ ギャラリーが表示されます。
 
     :::image type="content" source="~/assets/images/apps-in-meetings/Pre-Meeting-002.png" alt-text="会議前のアプリ エクスペリエンス":::
 
@@ -152,9 +152,9 @@ Teams統合会議アプリは、次の概念に基づいています。
 
 グループ チャット スコープで有効になっているボットは、会議で機能し始めます。 ボットを実装するには、まず[ボットをビルド](../build-your-first-app/build-bot.md)してから、[Teams会議用のアプリの作成](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)を続行します。
 
-### <a name="integrate-messaging-extensions-into-the-meeting-lifecycle"></a>メッセージング拡張機能を会議のライフサイクルに統合する
+### <a name="integrate-message-extensions-into-the-meeting-lifecycle"></a>メッセージ拡張機能を会議のライフサイクルに統合する
 
-メッセージング拡張機能を実装するには、まず[メッセージング拡張機能をビルド](../messaging-extensions/how-to/create-messaging-extension.md)してから、[Teams会議用のアプリの作成](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)に進みます。
+メッセージ拡張機能を実装するには、まず[メッセージ拡張機能を作成](../messaging-extensions/how-to/create-messaging-extension.md)してから、[Teams会議用のアプリの作成](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references)に進みます。
 
 Teams統合会議アプリを使用すると、会議の参加者ロールに基づいてアプリを設計できます。
 
@@ -178,7 +178,7 @@ Teams統合会議アプリを使用すると、会議の参加者ロールに基
 > [!NOTE]
 > アプリを追加、削除、またはアンインストールできるのは、開催者または発表者のみです。
 
-詳細については、[Teams会議のロールを](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)参照してください。
+詳細については、「[Teams 会議での役割](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)」を参照してください。
 
 会議の参加者ロールに基づいてアプリを設計したら、会議の各ユーザーの種類を特定し、アクセスできる内容を選択できます。
 
@@ -210,20 +210,20 @@ Teams統合会議アプリを使用すると、会議の参加者ロールに基
 
 次の表に、ユーザーの種類と、各ユーザーがアクセスできる機能の一覧を示します。
 
-| ユーザーの種類 | タブ | ボット | メッセージング拡張機能 | アダプティブ カード | タスク モジュール | 会議中ダイアログ | 会議ステージ |
+| ユーザーの種類 | タブ | ボット | メッセージ拡張機能 | アダプティブ カード | タスク モジュール | 会議中ダイアログ | 会議ステージ |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | 匿名ユーザー | 使用不可 | 使用不可 | 使用不可 | 会議チャットでの対話は許可されます。 | アダプティブ カードからの会議チャットでの対話は許可されます。 | 使用不可 | 使用不可 |
 | ゲスト、テナント Azure ADの一部 | 対話は許可されます。 作成、更新、削除は許可されません。 | 使用不可 | 使用不可 | 会議チャットでの対話は許可されます。 | アダプティブ カードからの会議チャットでの対話は許可されます。 | 使用可能 | デスクトップ クライアントでのみ会議ステージでアプリを起動、表示、操作Teamsできます。 |
-| フェデレーション ユーザーの詳細については、 [非標準ユーザーを](/microsoftteams/non-standard-users)参照してください。 | 対話は許可されます。 作成、更新、削除は許可されません。 | 対話は許可されます。 取得、更新、削除は許可されません。 | 利用不可 | 会議チャットでの対話は許可されます。 | アダプティブ カードからの会議チャットでの対話は許可されます。 | 使用不可 | デスクトップ クライアントでのみ、会議ステージでアプリを起動、表示、操作Teamsできます。 |
+| フェデレーション ユーザーの詳細については、 [非標準ユーザーを](/microsoftteams/non-standard-users)参照してください。 | 対話は許可されます。 作成、更新、削除は許可されません。 | 対話は許可されます。 取得、更新、削除は許可されません。 | 利用不可 | 会議チャットでの対話は許可されます。 | アダプティブ カードからの会議チャットでの対話は許可されます。 | 利用不可 | デスクトップ クライアントでのみ、会議ステージでアプリを起動、表示、操作Teamsできます。 |
 
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [Teams会議用にアプリを有効にして構成する](enable-and-configure-your-app-for-teams-meetings.md)
+> [Teams 会議用アプリを有効化して構成する](enable-and-configure-your-app-for-teams-meetings.md)
 
 ## <a name="see-also"></a>関連項目
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [ボット](../bots/what-are-bots.md)
-* [メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)
+* [メッセージ拡張機能](../messaging-extensions/what-are-messaging-extensions.md)
 * [アプリをデザインする](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)

@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 6ef2836dd6eb61cc5a7b6efe8a9ffd593ca0aa93
-  ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+  ms.openlocfilehash: c9995cb280cffba91e8315fbde9ac93c9652a2f9
+  ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
   ms.translationtype: MT
   ms.contentlocale: ja-JP
   ms.lasthandoff: 04/27/2022
-  ms.locfileid: "65073810"
+  ms.locfileid: "65103980"
 landingContent:
 - title: 最新の情報を確認する
   linkLists:
@@ -123,7 +123,9 @@ landingContent:
       url: ~/sbs-teams-conversation-bot.yml
     - text: 通話と会議ボットを作成する
       url: ~/sbs-calling-and-meeting.yml
-    - text: タブとメッセージング拡張機能の SSO を構成する
+    - text: タブ デバイスのアクセス許可を付与する
+      url: ~/sbs-tab-device-permissions.yml
+    - text: タブとメッセージ拡張機能の SSO を構成する
       url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml
     - text: アダプティブ カードを使用してタブを作成する
       url: ~/sbs-tab-with-adaptive-cards.yml
@@ -143,9 +145,9 @@ landingContent:
       url: ~/sbs-meeting-content-bubble.yml
     - text: Microsoft Teamsからタスク モジュールを呼び出す
       url: ~/sbs-botbuilder-taskmodule.yml
-    - text: 検索ベースのメッセージング拡張機能を構築する
+    - text: 検索ベースのメッセージ拡張機能をビルドする
       url: ~/sbs-messagingextension-searchcommand.yml
-    - text: アクション ベースのメッセージング拡張機能をビルドする
+    - text: ビルド アクション ベースのメッセージ拡張機能
       url: ~/sbs-meetingextension-action.yml
     - text: 送信 Webhook をビルドする
       url: ~/sbs-outgoing-webhooks.yml

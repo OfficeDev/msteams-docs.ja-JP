@@ -5,12 +5,12 @@ description: アダプティブ カードの Input.ChoiceSet コントロール�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: d33fce44cbf1ff550d9aa21686111746318bb17e
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 1e302a74ceffb88989989b42aa8a202d1e79fb36
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073802"
+ms.locfileid: "65103440"
 ---
 # <a name="typeahead-search-in-adaptive-cards"></a>アダプティブ カードの先行入力検索
 
@@ -61,7 +61,7 @@ John は、Xbox リテール ストアで働く店員です。 ストアはボ�
 ---
 
 > [!NOTE]
-> クエリ ベースのメッセージング拡張機能など、動的検索ではリッチ カード エクスペリエンスを得ることはできません。
+> クエリ ベースのメッセージ拡張機能など、動的検索ではリッチ カード エクスペリエンスを得ることはできません。
 
 ## <a name="implement-typeahead-search"></a>先行入力検索を実装する
 
@@ -80,8 +80,8 @@ John は、Xbox リテール ストアで働く店員です。 ストアはボ�
 
 | プロパティ| 型 | 必須 | 説明 |
 |-----------|------|----------|-------------|
-| style | Compact <br/> Expanded <br/> Filtered | いいえ | 静的な先行入力でサポートされている検証の一覧にフィルター処理されたスタイルを追加します。|
-| choices.data | Data.Query | 不要 | バックエンドから選択肢のリモート セットをフェッチすることで、ユーザーの種類として動的な先行入力を有効にします。 |
+| style | Compact <br/> Expanded <br/> Filtered | なし | 静的な先行入力でサポートされている検証の一覧にフィルター処理されたスタイルを追加します。|
+| choices.data | Data.Query | なし | バックエンドから選択肢のリモート セットをフェッチすることで、ユーザーの種類として動的な先行入力を有効にします。 |
 
 ### <a name="dataquery-definition"></a>Data.Query 定義
 
@@ -91,7 +91,7 @@ John は、Xbox リテール ストアで働く店員です。 ストアはボ�
 | データセット | String | はい | 動的にフェッチされるデータの種類を指定します。 |
 | value | String | いいえ | ユーザーがボットに指定 `ChoiceSet`した入力をボットに呼び出し要求を入力します。 |
 | count | 番号 | いいえ | 返す必要がある要素の数を指定するために、ボットへの呼び出し要求を設定します。 ユーザーが別の金額を送信する場合、ボットはそれを無視します。 |
-| skip | 番号 | 不要 | 呼び出し要求をボットに設定して、ユーザーがページ分割してリスト内で先に移動することを示します。 |
+| skip | 番号 | なし | 呼び出し要求をボットに設定して、ユーザーがページ分割してリスト内で先に移動することを示します。 |
 
 ### <a name="example"></a>例
 

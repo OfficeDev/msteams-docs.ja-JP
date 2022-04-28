@@ -1,27 +1,27 @@
 ---
 title: ボットのコマンド メニューを作成する
 author: surbhigupta
-description: コード サンプルを使用して、ボットのコマンド メニュー Microsoft Teams作成する方法について説明します。
+description: コード サンプルを使用して、Microsoft Teams ボットのコマンド メニューを作成する方法について説明します。
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-keywords: コマンド メニューでメッセージの会話を作成@mention
-ms.openlocfilehash: 739d2c32bb07ef63c6e886c0172d24a7fbc17ff6
-ms.sourcegitcommit: aede47694894d281f6b725083bc0b46ab0e4846d
+keywords: コマンド メニューでメッセージ会話@mentionを作成する
+ms.openlocfilehash: 6f4b9cdac76fc9beb42a39dde3b320036ea580b5
+ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2021
-ms.locfileid: "61591793"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65102555"
 ---
-# <a name="bot-command-menus"></a>ボット コマンド メニュー
+# <a name="bot-command-menus"></a>Bot コマンド メニュー
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-ボットが応答できる一連のコア コマンドを定義するには、ボットのコマンドのドロップダウン リストを含むコマンド メニューを追加できます。 コマンドの一覧は、ボットと会話するときに、作成メッセージ領域のユーザーに表示されます。 一覧からコマンドを選択して、コマンド文字列をメッセージ作成ボックスに挿入し、[送信] を **選択します**。
+ボットが応答できる一連のコア コマンドを定義するには、ボットのコマンドのドロップダウン リストを含むコマンド メニューを追加します。 コマンドの一覧は、ボットと会話しているときに、メッセージ作成領域のユーザーに表示されます。 一覧からコマンドを選択して、メッセージの作成ボックスにコマンド文字列を挿入し、[ **送信**] を選択します。
 
 # <a name="desktop"></a>[デスクトップ](#tab/desktop)
 
-![ボット コマンド メニュー](./conversations/media/bot-menu-sample.png)
+![Bot コマンド メニュー](./conversations/media/bot-menu-sample.png)
 
 # <a name="mobile"></a>[モバイル](#tab/mobile)
 
@@ -31,47 +31,47 @@ ms.locfileid: "61591793"
 
 ## <a name="create-a-command-menu-for-your-bot"></a>ボットのコマンド メニューを作成する
 
-コマンド メニューは、アプリ マニフェストで定義されます。 App Studio を使用 **して作成するか** 、アプリ マニフェストに手動で追加できます。
+コマンド メニューは、アプリ マニフェストで定義されます。 **App Studio** を使用して作成するか、アプリ マニフェストに手動で追加できます。
 
 ### <a name="create-a-command-menu-for-your-bot-using-app-studio"></a>App Studio を使用してボットのコマンド メニューを作成する
 
-ボットのコマンド メニューを作成するには、既存のアプリ マニフェストを編集する必要があります。 新しいマニフェストを作成するか、既存のマニフェストを編集するかに関して、コマンド メニューを追加する手順は同じです。
+ボットのコマンド メニューを作成するための前提条件は、既存のアプリ マニフェストを編集する必要があるということです。 コマンド メニューを追加する手順は、新しいマニフェストを作成するか、既存のマニフェストを編集するかに関係なく、同じです。
 
 **App Studio を使用してボットのコマンド メニューを作成するには**
 
-1. [アプリTeams開き、左側 **のウィンドウから**[アプリ] を選択します。 [アプリ **] ページで** App Studio を検索 **し、[開** く] を **選択します**。
+1. Teams開き、左側のウィンドウで **[アプリ**] を選択します。 [ **アプリ]** ページで App **Studio** を検索し、[ **開く**] を選択します。
    > [!NOTE]
-   > App Studio をお持ち **ではない場合** は、ダウンロードできます。 詳細については [、「App Studio のインストール」を参照してください](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio)。
+   > **App Studio** をお持ちでない場合は、ダウンロードできます。 詳細については、 [App Studio のインストールに関するページを](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio)参照してください。
 
-    ![App Studio](./conversations/media/AppStudio.png)
+    :::image type="content" source="/media/AppStudio.png" alt-text="アプリ スタジオのインストール"lightbox="media/AppStudio.png"border="true":::
 
-2. **App Studio で、[** マニフェスト エディター]**タブを選択** します。既存のアプリ パッケージをお持ちではない場合は、既存のアプリを作成またはインポートできます。 詳細については、「アプリ パッケージの [更新」を参照してください](~/get-started/deploy-csharp-app-studio.md)。
+2. **App Studio** で、[**マニフェスト エディター**] タブを選択します。既存のアプリ パッケージがない場合は、既存のアプリを作成またはインポートできます。 詳細については、「 [アプリ パッケージの更新」を](~/get-started/deploy-csharp-app-studio.md)参照してください。
 
-3. マニフェスト エディターの左側のウィンドウ **で** 、[機能] セクションで **[ボット** ] **を選択します**。
+3. **マニフェスト エディター** の左側のウィンドウで、[**機能**] セクションで [**ボット**] を選択します。
 
-4. マニフェスト エディターの右側のウィンドウ **で、[コマンド** ] セクション **で、[追加** ] を **選択します**。 [ **新しいコマンド]** 画面が表示されます。
+4. **マニフェスト エディター** の右側のウィンドウで、[**コマンド**] セクションで [**追加**] を選択します。 **[新しいコマンド]** 画面が表示されます。
 
-    ![App Studio コマンド メニュー [追加] ボタン](./conversations/media/AppStudio-CommandMenu-Add.png)
+    :::image type="content" source="/media/AppStudio-CommandMenu-Add.png" alt-text="アプリ パッケージを選択する"lightbox="/media/AppStudio-CommandMenu-Add.png"border="true":::
 
-5. ボットの **コマンド メニュー** として表示する必要がある Command テキストを入力します。
+5. ボットの **コマンド** メニューとして表示する必要があるコマンド テキストを入力します。
 
-6. メニューの **コマンド テキストの** 下に表示する必要があるヘルプ テキストを入力します。 **ヘルプ テキスト** は、コマンドの目的を簡単に説明する必要があります。
+6. メニューのコマンド テキストの下に表示する必要がある **ヘルプ** テキストを入力します。 **ヘルプ テキスト** は、コマンドの目的を簡単に説明する必要があります。
 
-7. [スコープ **] チェック** ボックスをオンにして、このコマンド メニューを表示する必要がある場所を選択し、[保存] を **選択します**。
+7. [ **スコープ** ] チェック ボックスをオンにして、このコマンド メニューを表示する必要がある場所を選択し、[保存] を選択 **します**。
 
-    ![App Studio の [新しいコマンド] メニュー ボタン](./conversations/media/AppStudio-NewCommandMenu.png)
+:::image type="content" source="/media/AppStudio-NewCommandMenu.png" alt-text="App Studio の [新しいコマンド] メニュー ボタン"lightbox="/media/AppStudio-NewCommandMenu.png"border="true":::
 
 ### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Manifest.json を編集してボットのコマンド メニューを作成する
 
-コマンド メニューを作成するもう 1 つの方法は、ボットソース コードの開発中にマニフェスト ファイルに直接作成することです。 このメソッドを使用するには、次の点に従います。
+コマンド メニューを作成するもう 1 つの方法は、ボットのソース コードの開発中にマニフェスト ファイルに直接作成することです。 このメソッドを使用するには、次の点に従います。
 
-* 各メニューは、最大 10 個のコマンドをサポートします。
-* すべてのスコープで機能する 1 つのコマンド メニューを作成します。
+* 各メニューでは、最大 10 個のコマンドがサポートされます。
+* すべてのスコープで動作する 1 つのコマンド メニューを作成します。
 * スコープごとに異なるコマンド メニューを作成します。
 
-#### <a name="manifest-example-for-single-menu-for-both-scopes"></a>両方のスコープの単一メニューのマニフェスト例
+#### <a name="manifest-example-for-single-menu-for-both-scopes"></a>両方のスコープの単一メニューのマニフェストの例
 
-両方のスコープの単一メニューのマニフェストのコード例は次のとおりです。
+両方のスコープの単一メニューのマニフェストサンプル コードは次のとおりです。
 
 ```json
 {
@@ -115,9 +115,9 @@ ms.locfileid: "61591793"
 }
 ```
 
-#### <a name="manifest-example-for-the-menu-for-each-scope"></a>各スコープのメニューのマニフェスト例
+#### <a name="manifest-example-for-the-menu-for-each-scope"></a>各スコープのメニューのマニフェストの例
 
-各スコープのメニューのマニフェストのコード例は次のとおりです。
+各スコープのメニューのマニフェストコード例は次のとおりです。
 
 ```json
 {
@@ -159,20 +159,20 @@ ms.locfileid: "61591793"
 }
 ```
 
-ユーザーからのメッセージを処理する場合は、ボット コードでメニュー コマンドを処理する必要があります。 メッセージ テキストのメンション部分を解析することで、ボット コード内の **\@ メニュー** コマンドを処理できます。
+ユーザーからのメッセージを処理するときは、ボット コード内のメニュー コマンドを処理する必要があります。 メッセージ テキストのメンション部分を解析することで、**\@** ボット コード内のメニュー コマンドを処理できます。
 
 ## <a name="handle-menu-commands-in-your-bot-code"></a>ボット コードでメニュー コマンドを処理する
 
-グループまたはチャネル内のボットは、メッセージに記載されている場合 `@botname` にのみ応答します。 グループスコープまたはチャネル スコープ内でボットが受信したメッセージには、その名前がメッセージ テキストに含まれるすべてのメッセージが含まれる。 返されるコマンドを処理する前に、メッセージ解析でボットが受信したメッセージの名前を処理する必要があります。
+グループまたはチャネル内のボットは、メッセージに記載されている `@botname` 場合にのみ応答します。 グループスコープまたはチャネル スコープ内でボットによって受信されたすべてのメッセージには、メッセージ テキストにその名前が含まれています。 返されるコマンドを処理する前に、メッセージ解析でボットが受信したメッセージをその名前で処理する必要があります。
 
 > [!NOTE]
-> コード内のコマンドを処理するために、通常のメッセージとしてボットに送信されます。 ユーザーからの他のメッセージを処理する場合と同じ方法で処理する必要があります。 コード内のコマンドは、あらかじめ構成されたテキストをテキスト ボックスに挿入します。 その後、ユーザーはそのテキストを他のメッセージと同じ方法で送信する必要があります。
+> コード内のコマンドを処理するために、通常のメッセージとしてボットに送信されます。 ユーザーからの他のメッセージを処理する場合と同様に、それらを処理する必要があります。 コード内のコマンドは、テキスト ボックスに事前構成されたテキストを挿入します。 その後、ユーザーはそのテキストを他のメッセージと同様に送信する必要があります。
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
-メッセージ テキストの **\@ メンション部分** を解析するには、メッセージ テキストに用意されている静的メソッドをMicrosoft Bot Framework。 という名前のクラス `Activity` のメソッドです `RemoveRecipientMention` 。
+Microsoft Bot Frameworkで提供される静的メソッドを使用して、メッセージ テキストのメンション部分を解析できます。**\@** という名前`RemoveRecipientMention`のクラスの`Activity`メソッドです。
 
-メッセージ C#メンション部分を解析するコード **\@** は次のとおりです。
+メッセージ テキストのメンション部分を **\@** 解析する C# コードは次のとおりです。
 
 ```csharp
 var modifiedText = turnContext.Activity.RemoveRecipientMention();
@@ -180,9 +180,9 @@ var modifiedText = turnContext.Activity.RemoveRecipientMention();
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
-ボット フレームワークで提供される **\@ 静的** メソッドを使用して、メッセージ テキストのメンション部分を解析できます。 という名前のクラス `TurnContext` のメソッドです `removeMentionText` 。
+Bot Framework で提供される静的メソッドを **\@** 使用して、メッセージ テキストのメンション部分を解析できます。 という名前`removeMentionText`のクラスの`TurnContext`メソッドです。
 
-メッセージ テキストのメンション部分を解析する **\@ JavaScript** コードは次のとおりです。
+メッセージ テキストのメンション部分を **\@** 解析する JavaScript コードは次のとおりです。
 
 ```javascript
 const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnContext.activity.recipient.id);
@@ -190,9 +190,9 @@ const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnCon
 
 # <a name="python"></a>[Python](#tab/python)
 
-ボット フレームワークで提供される **静的@Mention** を使用して、メッセージ テキストの一部を解析できます。 という名前のクラス `TurnContext` のメソッドです `remove_recipient_mention` 。
+Bot Framework で提供される静的メソッドを使用して、メッセージ テキストの **@Mention** 部分を解析できます。 という名前`remove_recipient_mention`のクラスの`TurnContext`メソッドです。
 
-メッセージ テキストの Mention 部分を解析する **\@ Python** コードは次のとおりです。
+メッセージ テキストのメンション部分を **\@** 解析する Python コードは次のとおりです。
 
 ```python
 modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
@@ -200,18 +200,18 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 
 * * *
 
-ボット コードの円滑な機能を有効にするには、従う必要があるベスト プラクティスがいくつかある。
+ボット コードの円滑な機能を有効にするには、従う必要があるベスト プラクティスがいくつかあります。
 
 ## <a name="command-menu-best-practices"></a>コマンド メニューのベスト プラクティス
 
 コマンド メニューのベスト プラクティスを次に示します。
 
-* シンプルに保つ: ボット メニューは、ボットの主要な機能を提示することを目的とします。
-* 短くしてください:メニュー オプションは長くする必要があります。また、複雑な自然言語ステートメントで指定する必要があります。 単純なコマンドである必要があります。
-* 呼び出し可能な状態を維持する: ボット メニューの操作またはコマンドは、会話の状態やボットが含むダイアログに関係なく、常に使用できる必要があります。
+* シンプルに保つ: ボット メニューは、ボットの主要な機能を示すために使用されます。
+* 短くしてください。メニュー オプションは長くすることはできません。複雑な自然言語ステートメントにすることはできません。 単純なコマンドである必要があります。
+* 呼び出し可能な状態に保つ: ボットのメニュー アクションまたはコマンドは、会話の状態やボットのダイアログに関係なく、常に使用できる必要があります。
 
 > [!NOTE]
-> マニフェストからコマンドを削除する場合は、変更を実装するためにアプリを再展開する必要があります。 一般に、マニフェストに対する変更を行う場合は、アプリを再展開する必要があります。
+> マニフェストからコマンドを削除する場合は、変更を実装するためにアプリを再デプロイする必要があります。 一般に、マニフェストに変更を加える場合は、アプリを再デプロイする必要があります。
 
 ## <a name="next-step"></a>次の手順
 

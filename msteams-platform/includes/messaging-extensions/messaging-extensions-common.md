@@ -1,54 +1,54 @@
-## <a name="add-a-messaging-extension-to-your-app"></a>アプリにメッセージング拡張機能を追加する
+## <a name="add-a-message-extension-to-your-app"></a>アプリにメッセージ拡張機能を追加する
 
-メッセージング拡張機能は、ユーザーの要求をリッスンし、カードなどの構造化データで応答するクラウドホスト型サービス [です](~/task-modules-and-cards/what-are-cards.md)。 ボット フレームワーク オブジェクトを介してサービスMicrosoft Teamsサービスと統合 `Activity` します。 ボット ビルダー SDK の .NET Node.js拡張機能は、アプリにメッセージング拡張機能を追加するのに役立ちます。
+メッセージ拡張機能は、ユーザーの要求をリッスンし、 [カード](~/task-modules-and-cards/what-are-cards.md)などの構造化データで応答するクラウドでホストされるサービスです。 Bot Framework `Activity` オブジェクトを使用して、サービスをMicrosoft Teamsと統合します。 Bot Builder SDK の .NET 拡張機能とNode.js拡張機能は、メッセージ拡張機能機能をアプリに追加するのに役立ちます。
 
-![メッセージング拡張機能のメッセージ フローの図](~/assets/images/compose-extensions/ceflow.png)
+![メッセージ拡張機能のメッセージ フローの図](~/assets/images/compose-extensions/ceflow.png)
 
-### <a name="register-in-the-bot-framework"></a>ボット フレームワークに登録する
+### <a name="register-in-the-bot-framework"></a>Bot Framework に登録する
 
-まだ登録していない場合は、最初にボットを登録する必要Microsoft Bot Framework。 ボットの Microsoft アプリ ID とコールバック エンドポイントは、そこで定義されている通り、メッセージング拡張機能でユーザー要求の受信と応答に使用されます。 ボットに対してMicrosoft Teamsチャネルを有効にしてください。
+まだ行っていない場合は、まずボットをMicrosoft Bot Frameworkに登録する必要があります。 定義されているとおり、ボットの Microsoft アプリ ID とコールバック エンドポイントは、メッセージ拡張機能で使用され、ユーザー要求を受信して応答します。 ボットのMicrosoft Teams チャネルを有効にすることを忘れないでください。
 
-ボット アプリ ID とアプリ パスワードを記録し、アプリ マニフェストにアプリ ID を指定する必要があります。
+ボット アプリ ID とアプリ パスワードを記録します。アプリ マニフェストでアプリ ID を指定する必要があります。
 
 ### <a name="update-your-app-manifest"></a>アプリ マニフェストを更新する
 
-ボットとタブと同様に、メッセージング拡張機能の[](~/resources/schema/manifest-schema.md#composeextensions)プロパティを含めるアプリのマニフェストを更新します。 これらのプロパティは、メッセージング拡張機能がクライアントでどのように表示され、動作Microsoft Teamsします。 メッセージング拡張機能は、マニフェストの v1.0 からサポートされています。
+ボットとタブと同様に、アプリの [マニフェスト](~/resources/schema/manifest-schema.md#composeextensions) を更新して、メッセージ拡張機能のプロパティを含めます。 これらのプロパティは、Microsoft Teams クライアントでのメッセージ拡張機能の表示と動作を制御します。 メッセージ拡張機能は、マニフェストの v1.0 以降でサポートされています。
 
-#### <a name="declare-your-messaging-extension"></a>メッセージング拡張機能の宣言
+#### <a name="declare-your-message-extension"></a>メッセージ拡張機能を宣言する
 
-メッセージング拡張機能を追加するには、プロパティを使用してマニフェストに新しいトップ レベルの JSON 構造を含 `composeExtensions` めます。 現時点では、アプリの 1 つのメッセージング拡張機能の作成に制限されています。
+メッセージ拡張機能を追加するには、プロパティを使用してマニフェストに新しい最上位レベルの JSON 構造を `composeExtensions` 含めます。 現時点では、アプリ用に 1 つのメッセージ拡張機能を作成することに制限されています。
 
 > [!NOTE]
-> マニフェストは、メッセージング拡張機能を次のように参照します `composeExtensions` 。 これは、下位互換性を維持するための方法です。
+> マニフェストでは、メッセージ拡張機能 `composeExtensions`が . これは、下位互換性を維持するためです。
 
-拡張定義は、次の構造を持つオブジェクトです。
+拡張機能定義は、次の構造を持つオブジェクトです。
 
 | プロパティ名 | 用途 | 必須 |
 |---|---|---|
-| `botId` | Bot Framework に登録された、ボット用の一意の Microsoft アプリ ID。 通常、これはアプリ全体の ID と同Teamsがあります。 | はい |
-| `scopes` | この拡張機能を追加できるかどうか、スコープ (または両方) を宣言 `personal` `team` する配列。 | はい |
-| `canUpdateConfiguration` | メニュー **設定** を有効にします。 | いいえ |
-| `commands` | このメッセージング拡張機能がサポートするコマンドの配列。 コマンドは 10 に制限されています。 | はい |
+| `botId` | Bot Framework に登録された、ボット用の一意の Microsoft アプリ ID。 これは通常、Teams アプリ全体の ID と同じである必要があります。 | はい |
+| `scopes` | この拡張機能をスコープに追加できるかどうかを宣言する`personal``team`配列 (またはその両方)。 | はい |
+| `canUpdateConfiguration` | **メニュー項目設定** 有効にします。 | いいえ |
+| `commands` | このメッセージ拡張機能がサポートするコマンドの配列。 コマンドは 10 個に制限されています。 | はい |
 
-#### <a name="define-commands"></a>コマンドの定義
+#### <a name="define-commands"></a>コマンドを定義する
 
-メッセージング拡張機能は、作成ボックスの [その他のオプション **]** (&#8943;) ボタンからアプリを選択すると表示される **1** つのコマンドを宣言する必要があります。
+メッセージ拡張機能は 1 つのコマンドを宣言する必要があります。これは、ユーザーが作成ボックスの **[その他のオプション** ] (**&#8943;**) ボタンからアプリを選択したときに表示されます。
 
-![メッセージ内のメッセージング拡張機能の一覧のTeams](~/assets/images/compose-extensions/compose-extension-list.png)
+![Teamsのメッセージ拡張機能の一覧のスクリーンショット](~/assets/images/compose-extensions/compose-extension-list.png)
 
-アプリ マニフェストでは、コマンド アイテムは次の構造を持つオブジェクトです。
+アプリ マニフェストでは、コマンド項目は次の構造を持つオブジェクトです。
 
 | プロパティ名 | 用途 | 必須 | マニフェストの最小バージョン |
 |---|---|---|---|
 | `id` | このコマンドに割り当てる一意の ID。 ユーザー要求には、この ID が含まれます。 | はい | 1.0 |
 | `title` | コマンド名。 この値は UI に表示されます。 | はい | 1.0 |
 | `description` | このコマンドの動作を示すヘルプ テキスト。 この値は UI に表示されます。 | はい | 1.0 |
-| `type` | コマンドの種類を設定します。 使用可能な値は、`query`、`action` です。 存在しない場合、既定値は に設定されます `query` 。 | いいえ | 1.4 |
-| `initialRun` | コマンドと一緒に使用されるオプション `query` のパラメーター。 true に **設定されている場合** は、ユーザーが UI でこのコマンドを選択するとすぐにこのコマンドを実行する必要があります。 | いいえ | 1.0 |
-| `fetchTask` | コマンドと一緒に使用されるオプション `action` のパラメーター。 タスク モジュール **内に** 表示するアダプティブ カードまたは Web URL をフェッチするには、true に [設定します](~/task-modules-and-cards/what-are-task-modules.md)。 これは、静的なパラメーターのセットではなく、コマンドへの入力が動的 `action` である場合に使用されます。 if を true に設定 **すると** 、コマンドの静的パラメーター リストは無視されます。 | いいえ | 1.4 |
+| `type` | コマンドの種類を設定します。 使用可能な値は、`query`、`action` です。 存在しない場合、既定値は `query`. | なし | 1.4 |
+| `initialRun` | コマンドと共に使用される省略可能な `query` パラメーター。 **true** に設定すると、ユーザーが UI でこのコマンドを選択するとすぐに、このコマンドを実行する必要があることを示します。 | いいえ | 1.0 |
+| `fetchTask` | コマンドと共に使用される省略可能な `action` パラメーター。 [タスク モジュール](~/task-modules-and-cards/what-are-task-modules.md)内に表示するアダプティブ カードまたは Web URL をフェッチするには **、true** に設定します。 これは、静的なパラメーター セットではなく、コマンドへの `action` 入力が動的な場合に使用されます。 if が **true** に設定されている場合、コマンドの静的パラメーター リストは無視されることに注意してください。 | なし | 1.4 |
 | `parameters` | コマンドのパラメーターの静的リスト。 | はい | 1.0 |
 | `parameter.name` | パラメーターの名前です。 これは、ユーザー要求でサービスに送信されます。 | はい | 1.0 |
-| `parameter.description` | 指定する必要がある値のこのパラメーターの目的または例について説明します。 この値は UI に表示されます。 | はい | 1.0 |
-| `parameter.title` | 短いユーザーフレンドリーなパラメーターのタイトルまたはラベル。 | はい | 1.0 |
-| `parameter.inputType` | 必要な入力の種類に設定します。 可能な値 `text` には `textarea` 、、 `number` 、 、 、 、 `date` `time` が含まれます `toggle` 。 既定値は に設定されています `text` 。 | いいえ | 1.4 |
-| `context` | メッセージ アクションが使用できるコンテキストを定義する値のオプションの配列。 指定できる値 `message` は `compose` 、、、または `commandBox` です。 既定値は `["compose", "commandBox"]` です。 | いいえ | 1.5 |
+| `parameter.description` | このパラメーターの目的または指定する必要がある値の例について説明します。 この値は UI に表示されます。 | はい | 1.0 |
+| `parameter.title` | 短いわかりやすいパラメーターのタイトルまたはラベル。 | はい | 1.0 |
+| `parameter.inputType` | 必要な入力の種類に設定します。 使用可能な値には`text`、, , `textarea`, `number`, `date`, `time``toggle`. 既定値は .`text` | なし | 1.4 |
+| `context` | メッセージ アクションを使用できるコンテキストを定義する値の省略可能な配列。 指定できる値は `message`、、 `compose`、または `commandBox`. 既定値は `["compose", "commandBox"]` です。 | いいえ | 1.5 |

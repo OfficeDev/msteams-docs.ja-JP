@@ -1,59 +1,59 @@
 ---
 title: クラウドにデプロイする
 author: MuyangAmigo
-description: アプリをクラウド、Azure、またはクラウドに展開SharePoint
+description: クラウド、Azure、またはSharePointにアプリをデプロイする
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 35a60e718bb97cdcc24de66729e3929b2d21a59f
-ms.sourcegitcommit: 2236204ff710f4eca606ceffb233572981f6edbe
+ms.openlocfilehash: 1d0ade9abed4be212abfb96068626172c4f0f03e
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64614531"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104148"
 ---
 # <a name="deploy-to-the-cloud"></a>クラウドにデプロイする
 
-Teams Toolkitアプリケーションのフロントエンドコードとバックエンド コードを Azure でプロビジョニングされたクラウド リソースに展開またはアップロードするのに役立ちます。
+Teams Toolkitは、アプリケーション内のフロントエンド コードとバックエンド コードを Azure でプロビジョニングされたクラウド リソースにデプロイまたはアップロードするのに役立ちます。
 
-* フロントエンド アプリケーションなどのタブは Azure ストレージに展開され、静的 Web ホスティングまたは sharepoint サイト用に構成されます。
-* バックエンド API は Azure 関数に展開されます。
-* ボットまたはメッセージング拡張機能が Azure アプリ サービスに展開されます。
+* フロントエンド アプリケーションなどのタブは、Azure Storage にデプロイされ、静的 Web ホスティングまたは SharePoint サイト用に構成されます。
+* バックエンド API は Azure 関数にデプロイされます。
+* ボットまたはメッセージ拡張機能は、Azure アプリ サービスにデプロイされます。
 
 ## <a name="prerequisite"></a>前提条件
 
-* [バージョン Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) v3.0.0 以上をインストールします。
+* バージョン v3.0.0 以降[Teams Toolkitインストール](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)します。
 
 > [!NOTE]
 >
-> * VS コードでTeamsアプリ プロジェクトが開いているか確認します。
-> * プロジェクト コードをクラウドに展開する前に、 [クラウド リソースを準備します](provision.md)。
+> * TEAMSアプリ プロジェクトが VS コードで開かれていることを確認します。
+> * プロジェクト コードをクラウドにデプロイする前に、 [クラウド リソースをプロビジョニングします](provision.md)。
 
-## <a name="deploy-teams-apps-using-teams-toolkit"></a>アプリをTeamsしてアプリを展開Teams Toolkit
+## <a name="deploy-teams-apps-using-teams-toolkit"></a>Teams Toolkitを使用してTeams アプリをデプロイする
 
-スタートガイドは、ユーザーがユーザーの情報を使用して展開Teams Toolkit。 次のコマンドを使用して、アプリをTeamsできます。
+入門ガイドは、Teams Toolkitを使用したデプロイに役立ちます。 次を使用して、Teams アプリをデプロイできます。
 
-* [アプリを Azure に展開する](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch)
-* [アプリをアプリに展開SharePoint](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)
+* [アプリを Azure にデプロイする](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch)
+* [アプリをSharePointにデプロイする](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)
 
-## <a name="details-on-teams-app-workload"></a>アプリのワークロードTeams詳細
+## <a name="details-on-teams-app-workload"></a>Teams アプリワークロードの詳細
 
-| Teamsのワークロード | ソース コード | ビルド成果物| ターゲット リソース |
+| Teams アプリワークロード | ソースコード | 成果物をビルドする| ターゲット リソース |
 |-------------|----------|---------------|---------------|
-|タブとReact </br> フロントエンド ワークロード| `yourProjectFolder/tabs`| `tabs/build` |Azure ストレージ |
-|タブとSharePoint </br> フロントエンド ワークロード | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |SharePoint アプリ カタログ |
-|Azure 関数の API </br> バックエンド ワークロード | `yourProjectFolder/api`| 該当なし |Azure 関数 |
-|ボットとメッセージング拡張機能 </br> バックエンド ワークロード | `yourProjectFolder/bot` | 該当なし | Azure アプリ サービス |
+|Reactを含むタブ </br> フロントエンド ワークロード| `yourProjectFolder/tabs`| `tabs/build` |Azure Storage |
+|SharePointのタブ </br> フロントエンド ワークロード | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |SharePoint アプリ カタログ |
+|Azure 関数上の API </br> バックエンド ワークロード | `yourProjectFolder/api`| 該当しない |Azure 関数 |
+|ボットとメッセージ拡張機能 </br> バックエンド ワークロード | `yourProjectFolder/bot` | 該当しない | Azure アプリ サービス |
 
 > [!NOTE]
-> Azure API 管理リソースをプロジェクトに含め、展開をトリガーする場合。 Azure 関数で API を Azure API 管理サービスに発行できます。
+> プロジェクトに Azure API 管理リソースを含め、デプロイをトリガーする場合。 Azure 関数の API を Azure API 管理サービスに発行できます。
 
 ## <a name="see-also"></a>関連項目
 
-* [クラウド リソースの追加](add-resource.md)
-* [Azure クラウド サービスの作成と展開](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
+* [クラウド リソースをさらに追加する](add-resource.md)
+* [Azure クラウド サービスを作成してデプロイする](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
 * [アプリの機能Teams追加する](add-capability.md)
-* [CI/CD パイプラインを使用してプロジェクト コードを展開する](use-CICD-template.md)
+* [CI/CD パイプラインを使用してプロジェクト コードをデプロイする](use-CICD-template.md)
 * [複数の環境を管理する](TeamsFx-multi-env.md)
 * [Teams プロジェクトで他の開発者と協力する](TeamsFx-collaboration.md)

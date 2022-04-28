@@ -1,17 +1,17 @@
 ---
 title: SameSite Cookie 属性
 author: laujan
-description: SameSite Cookie、その属性、Teams タブ、タスク モジュール、メッセージング拡張機能における意味、Teams での認証など、Cookie の種類について説明します。
+description: SameSite Cookie、その属性、Teams タブ、タスク モジュール、メッセージ拡張機能への影響、Teamsでの認証など、Cookie の種類について説明します。
 keywords: Cookie 属性 SameSite
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 8a1d8cff46612091749ba6801f42c79a3d997c97
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: HT
+ms.openlocfilehash: 1fbaf46da93a0d7c253f1f5d2ad6c9ae1764565a
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452586"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104491"
 ---
 # <a name="samesite-cookie-attribute"></a>SameSite Cookie 属性
 
@@ -58,11 +58,11 @@ SameSite Cookie 属性は次のとおりです。
 > [!NOTE]
 > Cookie の使用目的を反映するように SameSite 属性を設定する必要があります。 既定のブラウザーの動作に依存しないでください。 詳細については、「[Developers: Get Ready for New SameSite=None; Secure Cookie Settings](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)」を参照してください。
 
-### <a name="tabs-task-modules-and-messaging-extensions"></a>タブ、タスク モジュール、メッセージング拡張機能
+### <a name="tabs-task-modules-and-message-extensions"></a>タブ、タスク モジュール、メッセージ拡張機能
 
 * Teams タブは、`<iframes>` を使用して、最上位レベルまたはファースト パーティのコンテキストで表示されるコンテンツを埋め込みます。
 * タスク モジュールを使用すると、Teams アプリケーションでモーダル ポップアップ エクスペリエンスを作成することができます。 タブと同様に、モーダル ウィンドウが現在のページ内で開きます。
-* メッセージング拡張機能を使用すると、外部リソースからのチャット メッセージに強化されたコンテンツを挿入できます。
+* メッセージ拡張機能を使用すると、外部リソースからのチャット メッセージにエンリッチメントされたコンテンツを挿入できます。
 
 `<iframe>` に表示される場合、埋め込みコンテンツで使用される Cookie は、サード パーティーとみなされます。 さらに、ページ上のリモート リソースが要求 `<img>`、`<script>` タグ、外部フォント、カスタマイズされたコンテンツとともに送信される Cookie に依存している場合は、`SameSite=None; Secure` など、サイト横断的に使用できるようにマークされているか、フォールバックが確実に実行されている必要があります。
 
@@ -71,7 +71,7 @@ SameSite Cookie 属性は次のとおりです。
 次の場合は、Web ベースの認証フローを使用する必要があります。
 
 * タブに埋め込まれたコンテンツ ページ。
-* 構成ページ、タスク モジュール、メッセージング拡張機能。
+* 構成ページ、タスク モジュール、およびメッセージ拡張機能。
 * タスク モジュールを使用した会話性ボット。
 
 更新された SameSite の制限によると、ブラウザーは、リンクが外部サイトに由来する場合、すでに認証済みの Web サイトにクッキーを追加することはありません。 認証 Cookie で `SameSite=None; Secure` をサイト横断的に使用できるようにマークしておくか、フォールバックを確実に実行する必要があります。

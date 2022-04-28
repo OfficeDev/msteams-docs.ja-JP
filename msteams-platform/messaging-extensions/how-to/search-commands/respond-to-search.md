@@ -1,35 +1,35 @@
 ---
 title: 検索コマンドに応答する
 author: surbhigupta
-description: コード例とサンプルを使用して、Microsoft Teams拡張機能から検索コマンドに応答する方法について説明します。
+description: コード例とサンプルを使用して、Microsoft Teams アプリのメッセージ拡張機能から検索コマンドに応答する方法について説明します
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
-ms.openlocfilehash: 42b36e5d7056368463797d1297c0674b33b6b5a0
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 4dcf3d5743471daa034d138818cf11a9a516a32e
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453825"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104505"
 ---
 # <a name="respond-to-search-command"></a>検索コマンドに応答する
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-ユーザーが検索コマンドを送信すると、Web `composeExtension/query` サービスは、検索パラメーターを持つオブジェクトを含む `value` 呼び出しメッセージを受信します。 この呼び出しは、次の条件でトリガーされます。
+ユーザーが検索コマンドを送信すると、Web サービスは、検索パラメーターを `composeExtension/query` 持つオブジェクトを含む `value` 呼び出しメッセージを受け取ります。 この呼び出しは、次の条件でトリガーされます。
 
 * 検索ボックスに文字が入力されます。
-* `initialRun` がアプリ マニフェストで true に設定されている場合、検索コマンドが呼び出されるとすぐに呼び出しメッセージが表示されます。 詳細については、「既定のクエリ [」を参照してください](#default-query)。
+* `initialRun` がアプリ マニフェストで true に設定されている場合は、検索コマンドが呼び出されるとすぐに呼び出しメッセージが表示されます。 詳細については、既定の [クエリ](#default-query)に関するページを参照してください。
 
-このドキュメントでは、カードとプレビューの形式でユーザー要求に応答する方法と、ユーザーが既定のクエリを発行する条件Microsoft Teams説明します。
+このドキュメントでは、カードとプレビューの形式でユーザー要求に応答する方法と、Microsoft Teamsが既定のクエリを発行する条件について説明します。
 
-要求パラメーターは、次のプロパティを `value` 含む要求内のオブジェクトに含まれています。
+要求パラメーターは、次のプロパティを `value` 含む要求内のオブジェクトにあります。
 
 | プロパティ名 | 用途 |
 |---|---|
-| `commandId` | アプリ マニフェストで宣言されているコマンドの 1 つと一致する、ユーザーによって呼び出されるコマンドの名前。 |
-| `parameters` | パラメーターの配列。 各パラメーター オブジェクトには、ユーザーが指定したパラメーター値と共に、パラメーター名が含まれる。 |
-| `queryOptions` | ページネーション パラメーター: <br>`skip`: このクエリのスキップ カウント <br>`count`: 返す要素の数。 |
+| `commandId` | アプリ マニフェストで宣言されているコマンドの 1 つに一致する、ユーザーによって呼び出されるコマンドの名前。 |
+| `parameters` | パラメーターの配列。 各パラメーター オブジェクトには、ユーザーが指定したパラメーター値と共に、パラメーター名が含まれています。 |
+| `queryOptions` | ページ分割パラメーター: <br>`skip`: このクエリのカウントをスキップする <br>`count`: 返す要素の数。 |
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -79,44 +79,44 @@ class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
 
 ## <a name="respond-to-user-requests"></a>ユーザー要求に応答する
 
-ユーザーがクエリを実行すると、Microsoft Teamsに同期 HTTP 要求が発行されます。 その時点で、要求に対 `5` する HTTP 応答を提供する秒がコードに設定されています。 この間、サービスは追加の参照、または要求を処理するために必要なその他のビジネス ロジックを実行できます。
+ユーザーがクエリを実行すると、Microsoft Teamsはサービスに対して同期 HTTP 要求を発行します。 その時点で、コードは `5` 要求に対する HTTP 応答を提供するのに数秒かかります。 この間、サービスは追加のルックアップ、または要求の処理に必要なその他のビジネス ロジックを実行できます。
 
-サービスは、ユーザー クエリに一致する結果で応答する必要があります。 応答は、HTTP 状態コード `200 OK` と、次のプロパティを持つ有効なアプリケーションまたは JSON オブジェクトを示す必要があります。
+サービスは、ユーザー クエリと一致する結果で応答する必要があります。 応答は、HTTP 状態コードと、次の `200 OK` プロパティを持つ有効なアプリケーションまたは JSON オブジェクトを示す必要があります。
 
 |プロパティ名|用途|
 |---|---|
-|`composeExtension`|トップ レベルの応答エンベロープ。|
-|`composeExtension.type`|応答の種類。 次の種類がサポートされています。 <br>`result`: 検索結果の一覧を表示します。 <br>`auth`: ユーザーに認証を求める <br>`config`: メッセージング拡張機能のセットアップをユーザーに求める <br>`message`: テキスト形式のメッセージを表示します。 |
-|`composeExtension.attachmentLayout`|添付ファイルのレイアウトを指定します。 型の応答に使用されます `result`。 <br>現在、次の種類がサポートされています。 <br>`list`: サムネイル、タイトル、テキスト フィールドを含むカード オブジェクトの一覧 <br>`grid`: サムネイル画像のグリッド |
+|`composeExtension`|最上位レベルの応答エンベロープ。|
+|`composeExtension.type`|応答の種類。 次の種類がサポートされています。 <br>`result`: 検索結果の一覧を表示します <br>`auth`: ユーザーに認証を求める <br>`config`: メッセージ拡張機能の設定をユーザーに求める <br>`message`: プレーンテキスト メッセージを表示します |
+|`composeExtension.attachmentLayout`|添付ファイルのレイアウトを指定します。 型の応答に使用されます `result`。 <br>現在、次の種類がサポートされています。 <br>`list`: サムネイル、タイトル、テキスト フィールドを含むカード オブジェクトの一覧 <br>`grid`: サムネイル 画像のグリッド |
 |`composeExtension.attachments`|有効な添付ファイル オブジェクトの配列。 型の応答に使用されます `result`。 <br>現在、次の種類がサポートされています。 <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
-|`composeExtension.suggestedActions`|推奨されるアクション。 型または . の応答に `auth` 使用されます `config`。 |
+|`composeExtension.suggestedActions`|推奨されるアクション。 型 `auth` または `config`. |
 |`composeExtension.text`|表示するメッセージ。 型の応答に使用されます `message`。 |
 
 ### <a name="response-card-types-and-previews"></a>応答カードの種類とプレビュー
 
-Teamsは、次のカードの種類をサポートしています。
+Teamsでは、次の種類のカードがサポートされています。
 
 * [サムネイル カード](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [ヒーロー カード](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
 * [Office 365 コネクタ カード](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [アダプティブ カード](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-カードの理解と概要を把握するには、カード [の概要を参照してください](~/task-modules-and-cards/what-are-cards.md)。
+カードの理解と概要を理解するには、カード [の概要](~/task-modules-and-cards/what-are-cards.md)を確認してください。
 
-サムネイルカードとヒーロー カードの種類を使用する方法については、「Add [card and card actions」を参照してください](~/task-modules-and-cards/cards/cards-actions.md)。
+サムネイルカードとヒーロー カードの種類を使用する方法については、「 [カードとカードアクションの追加](~/task-modules-and-cards/cards/cards-actions.md)」を参照してください。
 
-コネクタ カードの詳細については、「Office 365コネクタ カードの[使用Office 365参照してください](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)。
+Office 365 コネクタ カードの詳細については、「[Office 365 コネクタ カードの使用](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)」を参照してください。
 
-結果リストは、各アイテムのプレビュー Microsoft Teams UI に表示されます。 プレビューは、次の 2 つの方法で生成されます。
+結果の一覧がMicrosoft Teams UI に表示され、各項目のプレビューが表示されます。 プレビューは、次の 2 つの方法のいずれかで生成されます。
 
-* オブジェクト内の `preview` プロパティを使用 `attachment` する。 添付 `preview` ファイルには、ヒーロー カードまたはサムネイル カードのみを指定できます。
-* オブジェクトの基本 、および`title``text`プロパティ`image`から抽出`attachment`します。 基本プロパティは、プロパティが指定されていない `preview` 場合にのみ使用されます。
+* オブジェクト内の `preview` プロパティを `attachment` 使用します。 添付ファイルは `preview` 、ヒーローカードまたはサムネイル カードにのみ使用できます。
+* オブジェクトの基本 `title`プロパティ `text`と `image` プロパティ `attachment` から抽出します。 基本プロパティは、プロパティが `preview` 指定されていない場合にのみ使用されます。
 
-ヒーロー カードまたはサムネイル カードの場合、呼び出しアクションを除き、ボタンやタップなどの他のアクションはプレビュー カードではサポートされません。
+ヒーロー カードまたはサムネイル カードの場合、呼び出しアクション以外の他のアクション (ボタンやタップなど) はプレビュー カードではサポートされていません。
 
-アダプティブ カードまたはコネクタ カードをOffice 365するには、プレビューを含める必要があります。 プロパティ `preview` は、ヒーロー カードまたはサムネイル カードである必要があります。 オブジェクトで preview プロパティを指定しない `attachment` 場合、プレビューは生成されません。
+アダプティブ カードまたはOffice 365 コネクタ カードを送信するには、プレビューを含める必要があります。 このプロパティは `preview` 、ヒーロー カードまたはサムネイル カードである必要があります。 オブジェクトで `attachment` preview プロパティを指定しない場合、プレビューは生成されません。
 
-ヒーロー カードとサムネイル カードの場合は、プレビュー プロパティを指定する必要が生じ、既定でプレビューが生成されます。
+Hero カードとサムネイル カードの場合、プレビュー プロパティを指定する必要はありません。プレビューは既定で生成されます。
 
 ### <a name="response-example"></a>応答の例
 
@@ -315,7 +315,7 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 
 * * *
 
-### <a name="enable-and-handle-tap-actions"></a>タップ操作を有効にして処理する
+### <a name="enable-and-handle-tap-actions"></a>タップ アクションを有効にして処理する
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -383,13 +383,13 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
 * * *
 
 > [!NOTE]
-> `OnTeamsMessagingExtensionSelectItemAsync` モバイル チーム アプリケーションではトリガーされません。
+> `OnTeamsMessagingExtensionSelectItemAsync` はモバイル チーム アプリケーションではトリガーされません。
 
 ## <a name="default-query"></a>既定のクエリ
 
-マニフェストで設定`initialRun`した`true`場合、Microsoft Teamsが最初にメッセージング拡張機能を開くと、既定のクエリが発行されます。 サービスは、事前に設定された結果のセットでこのクエリに応答できます。 これは、検索コマンドで認証または構成が必要な場合、最近表示されたアイテム、お気に入り、またはユーザー入力に依存しないその他の情報を表示する場合に便利です。
+マニフェストに設定`initialRun`すると、ユーザーが最初に`true`メッセージ **拡張機能を開** いたときに既定のクエリが発行Microsoft Teams。 サービスは、事前に設定された一連の結果でこのクエリに応答できます。 これは、検索コマンドで認証または構成が必要な場合、最近表示されたアイテム、お気に入り、またはユーザー入力に依存しないその他の情報を表示する場合に便利です。
 
-既定のクエリは、通常 `name` `initialRun` `value` `true` のユーザー クエリと同じ構造を持ち、フィールドを次のオブジェクトに示すように設定します。
+既定のクエリは、通常のユーザー クエリと同じ構造を持ち、フィールドは次の`name`オブジェクトに示すように設定および`value`設定`true`されます。`initialRun`
 
 ```json
 {
@@ -416,14 +416,14 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
 
 | サンプルの名前           | 説明 | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams拡張アクション| アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
-|Teams拡張機能の検索   |  検索コマンドを定義し、検索に応答する方法について説明します。        |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams メッセージ拡張機能アクション| アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
+|Teams メッセージ拡張機能の検索   |  検索コマンドを定義し、検索に応答する方法について説明します。        |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [メッセージング拡張機能に認証を追加する](~/messaging-extensions/how-to/add-authentication.md)
+> [メッセージ拡張機能に認証を追加する](~/messaging-extensions/how-to/add-authentication.md)
 
 ## <a name="see-also"></a>関連項目
 
-[メッセージング拡張機能に構成を追加する](~/get-started/first-message-extension.md)
+[メッセージ拡張機能に構成を追加する](~/get-started/first-message-extension.md)

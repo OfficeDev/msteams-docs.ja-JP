@@ -4,12 +4,12 @@ description: Microsoft Teams アプリが通話やオンライン会議に Micro
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: 発信 通話 音声ビデオ IVR 音声オンライン会議 リアルタイム メディア ストリーム ボット
-ms.openlocfilehash: e17d0c18bfb3f751a11e43780dba9f0f85441a96
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: a7b9dbe81304e2556b8b8b868f1f9e29f8bba284
+ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073824"
+ms.locfileid: "65102506"
 ---
 # <a name="calls-and-online-meetings-bots"></a>通話とオンライン会議のボット
 
@@ -45,7 +45,7 @@ Teams での通話は、純粋に音声のみ、または音声とビデオに�
 
 通話は、ユーザーとボットの間のピア ツー ピア、またはグループ通話内の 2 人以上のユーザーとボットの間のマルチパーティのいずれかです。
 
-![通話タイプ](~/assets/images/calls-and-meetings/call-types.png)
+:::image type="content" source="~/assets/images/calls-and-meetings/call-types.png" alt-text="通話タイプ"border="true":::
 
 通話に必要なさまざまな通話タイプとアクセス許可を次に示します:
 
@@ -63,7 +63,7 @@ Teams での通話は、純粋に音声のみ、または音声とビデオに�
 
 * 着信を受信するには、ボットの設定にエンドポイントを 1 つ入力します。 このエンドポイントは、着信が開始されたときに通知を受け取ります。 通話に応答したり、それを拒否したり、他のユーザーにリダイレクトしたりできます。
 
-    ![通話処理](~/assets/images/calls-and-meetings/call-handling.png)
+     :::image type="content" source="~/assets/images/calls-and-meetings/call-handling.png" alt-text="通話処理"border="true":::
 
 * ボットが通話中の場合、ボットをミュートしたりそれを解除したり、ビデオやデスクトップ コンテンツを他の参加者と共有したり共有を停止したりするための API があります。
 * ボットは、参加者の一覧にアクセスし、新しい参加者を招待し、ミュートすることもできます。

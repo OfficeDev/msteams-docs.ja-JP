@@ -6,19 +6,19 @@ keywords: teams タブの送信 Webhook
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8545f36d8449e2cf86b7af841690b8bfb8d66c6c
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+ms.openlocfilehash: 93cdadbbb0e14a174d84a8fd0a71e5b4f77c0af4
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685626"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104022"
 ---
 # <a name="create-an-incoming-webhook"></a>受信 Webhook を作成する
 
 受信 Webhook を使用すると、外部アプリケーションからのコンテンツを Teams チャネル内で共有できるようになります。 Webhook は、追跡と通知を行うツールとして使用されます。 Webhook により、カード形式のメッセージを含む JSON ペイロードを送信するための一意の URL が提供されます。 カードは、1 つのトピックに関連するコンテンツとアクションを含むユーザー インターフェイス コンテナーです。 カードは、次の機能で使用できます。
 
 * ボット
-* メッセージング拡張機能
+* メッセージの拡張機能
 * コネクタ
 
 ## <a name="key-features-of-an-incoming-webhook"></a>受信 Webhook の主な機能

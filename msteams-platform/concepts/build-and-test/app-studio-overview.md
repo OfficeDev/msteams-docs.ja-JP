@@ -4,12 +4,12 @@ description: App Studio を使用して Microsoft Teams で優れたアプリの
 keywords: App Studio Teams の開始
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: d03fae40ee0d003f3556e40c52ad876bb8949b5b
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
-ms.translationtype: HT
+ms.openlocfilehash: 3c87edeaf7404e0a9f362f1233cd543c7a0d963a
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399178"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103917"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Microsoft Teams 用の App Studio を使用してアプリを管理する
 
@@ -93,13 +93,13 @@ Bot Framework にボットをまだ登録していない場合は、**[Register]
 
 このセクションでは、コネクタをアプリに追加することができます。 Office 365 コネクタが既に登録されている場合は、**[セットアップ]** を選択して、コネクタの名前と ID を入力します。 新しいコネクタが必要な場合は、**[登録]** をクリックして、ブラウザーでコネクタ開発者ダッシュボードに移動します。
 
-##### <a name="messaging-extensions"></a>メッセージング拡張機能
+##### <a name="message-extensions"></a>メッセージ拡張機能
 
-[メッセージング拡張機能](~/messaging-extensions/what-are-messaging-extensions.md) は、ユーザーが Microsoft Teams 内でアプリを使用する強力な方法です。 ユーザーはサービスからの情報に対してクエリを実行して、その情報をカード形式でチャネルやチャット会話に直接投稿できます。
+[メッセージ拡張機能](~/messaging-extensions/what-are-messaging-extensions.md)は、ユーザーがMicrosoft Teams内でアプリに関わる強力な方法です。 ユーザーはサービスからの情報に対してクエリを実行して、その情報をカード形式でチャネルやチャット会話に直接投稿できます。
 
-メッセージング拡張機能は Bot Framework ボットを利用しているため、動作するには構成済みのボットが必要です。 メッセージング拡張機能を利用するボットの名前と Bot Framework ID がある場合は、入力します。 それ以外の場合は、**[登録]** をクリックしてボットを作成し、後で情報を入力します。 ユーザーがメッセージング拡張機能の構成を更新できるかどうかを選択します。
+メッセージ拡張機能は Bot Framework ボットによって強化されているため、操作するには構成されたボットが必要です。 メッセージ拡張機能を使用するボットの名前と Bot Framework ID がある場合は、それを入力します。 それ以外の場合は、**[登録]** をクリックしてボットを作成し、後で情報を入力します。 メッセージ拡張機能の構成をユーザーが更新できるかどうかを選択します。
 
-基になっているボットを構成したら、メッセージング拡張機能で許可されるコマンドとパラメーターを定義します。
+基になるボットを構成したら、メッセージ拡張機能が受け入れることができるコマンドとパラメーターを定義します。
 
 各コマンドには、タイトルと ID が必要です。 必要に応じて、コマンドにユーザーの説明を含めることができます。 各コマンドは最大 5 つのパラメーターをサポートできます。各パラメーターには次のものが必要です。
 
@@ -108,7 +108,7 @@ Bot Framework にボットをまだ登録していない場合は、**[Register]
 * 任意の説明。
 
 > [!NOTE]
-> アプリ スタジオを使用してメッセージングの拡張機能を作成する方法については、「[アプリ スタジオを使用してメッセージングの拡張機能を作成する](~/resources/create-messaging-extension-using-appstudio.md)」を参照してください。
+> App Studio を使用してメッセージ拡張機能を作成する方法については、「App Studio を [使用してメッセージ拡張機能を作成する](~/resources/create-messaging-extension-using-appstudio.md)」を参照してください。
 
 #### <a name="test-and-distribute"></a>テストと配布
 

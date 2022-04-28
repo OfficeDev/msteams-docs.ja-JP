@@ -3,12 +3,12 @@ title: アダプティブ カードのユニバーサル アクションの概�
 description: デスクトップ環境とモバイル環境のユーザー固有のビュー、シーケンシャル ワークフローのサポートなど、アダプティブ カードのユニバーサル アクションの簡単な概要
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ec546b0345c1fd26caf0b3016a788e14b623ae2
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
-ms.translationtype: HT
+ms.openlocfilehash: dc3a61b323e462f90937d8b6c432d624c29e0125
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356165"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103412"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>アダプティブ カードのユニバーサル アクション
 
@@ -57,7 +57,7 @@ Teams と Outlook の両方に同じカードを送信し、基になるボッ�
 
 # <a name="desktop"></a>[デスクトップ](#tab/desktop)
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="Teams と Outlook に同じカード":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="Teams と Outlook に同じカード" lightbox="../../../assets/images/adaptive-cards/universal-bots-teams-outlook.png":::
 
 * * *
 
@@ -67,15 +67,15 @@ Teams と Outlook の両方に同じカードを送信し、基になるボッ�
 
 たとえば、チャットまたはチャネルでインシデント レポート カードを送信する場合、インシデントが割り当てられているユーザーにのみ、**[解決]** ボタンが表示される必要があります。 一方、インシデント作成者は **[編集]** ボタンを表示する必要があり、他のすべてのユーザーはインシデントの詳細のみを表示できる必要があります。 これは、 `refresh` プロパティによって有効になっているユーザー固有のビューによって実現されます。
 
-次の図は、チャット内の異なるユーザーが要件に基づいて異なるアクションを表示するチケット メッセージング拡張機能 (ME) の例を示しています。
+次の図は、チャット内の異なるユーザーが要件に基づいて異なるアクションを表示するチケットメッセージ拡張機能 (ME) の例を示しています。
 
 # <a name="mobile"></a>[モバイル](#tab/mobile)
 
-:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="モバイル ユーザー固有のビュー":::
+:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="モバイル ユーザー固有のビュー" lightbox="../../../assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg":::
 
 # <a name="desktop"></a>[デスクトップ](#tab/desktop)
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="ユーザー固有のビュー":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="ユーザー固有のビュー" lightbox="../../../assets/images/adaptive-cards/universal-bots-incident-management.png":::
 
 * * *
 
@@ -91,7 +91,7 @@ Teams と Outlook の両方に同じカードを送信し、基になるボッ�
 
 次の図は、チャットまたはチャネル内のさまざまなユーザーのさまざまな状態を示しています。
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="ケータリング ボットの状態":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="ケータリング ボットの状態" lightbox="../../../assets/images/adaptive-cards/universal-bots-catering-bot.png":::
 
 詳細については、「[シーケンシャル ワークフローのサンプル](Sequential-Workflows.md)」を参照してください。
 
@@ -99,7 +99,7 @@ Teams と Outlook の両方に同じカードを送信し、基になるボッ�
 
 自動的に更新されるアダプティブ カードを作成できます。 たとえば、ユーザーから送信された承認要求を指定できます。 承認後、カードには、要求の承認時刻と要求を承認したユーザーに関する詳細が自動的に表示される必要があります。 更新モデルを使用すると、このような最新のビューを提供できます。 次の図は、複数ステップの承認フローと、さまざまなユーザーのビューがどのように表示されるかを示しています。
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views.png" alt-text="最新のユーザー固有ビュー":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views.png" alt-text="最新のユーザー固有ビュー" lightbox="../../../assets/images/adaptive-cards/universal-bots-up-to-date-views.png":::
 
 詳細については、「[最新のビューのサンプル](Up-To-Date-Views.md)」を参照してください。
 

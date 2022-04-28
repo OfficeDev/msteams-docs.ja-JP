@@ -5,12 +5,12 @@ description: Microsoft Teams アプリの設計方法はこちら。 リソー�
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 7a7a6d380341c94f4ed2eef92bf4407ac1a7681f
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
-ms.translationtype: HT
+ms.openlocfilehash: c6ccc282159a436b31671fc821372a3f08e47539
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63466529"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104463"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Microsoft Teams のアプリの設計
 
@@ -123,7 +123,7 @@ UI は理解しやすく、見た目とトーンが楽しく、ユーザーの�
 
 * [個人用アプリ](../../concepts/design/personal-apps.md)
 * [タブ](../../tabs/design/tabs.md)
-* [メッセージング拡張機能](../../messaging-extensions/design/messaging-extension-design.md)
+* [メッセージ拡張機能](../../messaging-extensions/design/messaging-extension-design.md)
 * [ボット](../../bots/design/bots.md)
 * [ミーディング拡張機能](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 

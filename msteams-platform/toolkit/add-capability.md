@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 9d2e3d559bd9d561e3afae8b0db9544ab2ad86cc
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 746b089bf8be4b091a34969118e640d8571c2237
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073532"
+ms.locfileid: "65103272"
 ---
 # <a name="add-capabilities-to-your-teams-apps"></a>Teams アプリに機能を追加する
 
@@ -21,7 +21,7 @@ ms.locfileid: "65073532"
 |--------|-------------|
 | タブ |  タブは、アプリ マニフェストで宣言されたドメインを指す単純な HTML タグです。 個々のユーザーのチーム、グループ チャット、または個人用アプリ内のチャネルの一部としてタブを追加できます|
 | ボット |  ボットは、テキスト、対話型カード、タスク モジュールを使用して Web サービスと対話するのに役立ちます|
-| メッセージング拡張機能 | メッセージング拡張機能は、Microsoft Teams クライアントのボタンとフォームを使用して Web サービスと対話するのに役立ちます|
+| メッセージ拡張機能 | メッセージ拡張機能は、Microsoft Teams クライアントのボタンやフォームを使用して Web サービスと対話するのに役立ちます|
 
 ## <a name="prerequisite"></a>前提条件
 
@@ -35,7 +35,8 @@ ms.locfileid: "65073532"
 TeamsFx に対する制限事項と、さらに機能を追加する場合の制限事項は次のとおりです。
 
 * 最大 16 個のインスタンスにタブを追加できます
-* 1 つのインスタンスごとにボットとメッセージング拡張機能を追加できます
+* 1 つのインスタンスごとにボットとメッセージ拡張機能を追加できます
+
 ## <a name="add-capabilities"></a>機能を追加する
 
 > [!Note]
@@ -69,7 +70,7 @@ TeamsFx に対する制限事項と、さらに機能を追加する場合の制
    |-----------------------|----------|
    |タブを追加するには|`teamsfx capability add tab`|
    |ボットを追加するには|`teamsfx capability add bot`|
-   |メッセージング拡張機能を追加するには|`teamsfx capability add messaging-extension`|
+   |メッセージ拡張機能を追加するには|`teamsfx capability add messaging-extension`|
 
 ## <a name="supported-capabilities"></a>サポートされている機能
 
@@ -77,18 +78,18 @@ Teams アプリに既に用意されている機能とは別に、Teams アプ�
 
 |既存の機能|サポートされているその他の機能|
 |--------------------|--------------------|
-|SPFxタブ|なし|
-|Azure のタブ|ボットとメッセージング拡張機能|
+|SPFxタブ|None|
+|Azure のタブ|ボットとメッセージの拡張機能|
 |Bot|タブ|
-|メッセージング拡張機能|タブとボット|
+|メッセージ拡張機能|タブとボット|
 |タブとボット|タブとメッセージ拡張機能|
-|タブとメッセージング拡張機能|タブとボット|
-|タブ、ボット、メッセージング拡張機能|タブ|
+|タブとメッセージ拡張機能|タブとボット|
+|タブ、ボット、メッセージ拡張機能|タブ|
 |タブ |ボットとメッセージの拡張機能|
 
-## <a name="add-bot-tab-and-messaging-extension"></a>ボット、タブ、メッセージング拡張機能を追加する
+## <a name="add-bot-tab-and-message-extension"></a>ボット、タブ、メッセージ拡張機能を追加する
 
-ボットとメッセージング拡張機能を追加した後、プロジェクトの変更は次のようになります。
+ボットとメッセージ拡張機能を追加した後、プロジェクトの変更は次のようになります。
 
 * ボット テンプレート コードは、パス `yourProjectFolder/bot`を持つサブフォルダーに追加されます。 これには、プロジェクトへの **hello world** ボット アプリケーション テンプレートが含まれます。
 * `launch.json`フォルダー`task.json`の下`.vscode`に更新され、Visual Studio Codeに必要なスクリプトが含まれ、アプリケーションをローカルでデバッグするときに実行されます
@@ -108,7 +109,6 @@ Teams アプリに既に用意されている機能とは別に、Teams アプ�
   * タブのスコープ
 * 下の `templates/azure/teamsfx` ファイルが更新され `templates/azure/provision/xxx`、.bicep ファイルが再生成されます
 * 下 `.fx/config` のファイルが再生成されます。これにより、新しく追加された機能に対して適切な構成でプロジェクトが設定されます
-
 
 
 ## <a name="see-also"></a>関連項目

@@ -5,15 +5,15 @@ ms.author: surbhigupta
 ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
-title: Teams 統合に関する考慮事項
-ms.openlocfilehash: eb278d078c7b195ff5d2d2a2f980ffc9db74f748
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+title: Teams統合に関する考慮事項
+ms.openlocfilehash: bbd5b046d7b1afca5cc3fa5c8afb21a3698f43eb
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685598"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104351"
 ---
-# <a name="considerations-for-teams-integration"></a>Teams 統合に関する考慮事項
+# <a name="considerations-for-teams-integration"></a>Teams統合に関する考慮事項
 
 web アプリをTeamsと適切に統合することで、Teamsのソーシャルおよびコラボレーション機能に適した Web アプリを作成できます。
   
@@ -35,8 +35,8 @@ Teams アプリには、必要で想定される共同作業機能が含まれ�
 |アプリの一般的な機能   |Teams プラットフォーム機能   |
 |----------|-----------|
 |埋め込み Web ページ、ホームページ、または Web ビュー  |[タブ](../tabs/what-are-tabs.md)  |
-|ショートカットと拡張機能を共有する  |[メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)  |
-|アクションのショートカットと拡張機能  |[メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md)  |
+|ショートカットと拡張機能を共有する  |[メッセージ拡張機能](../messaging-extensions/what-are-messaging-extensions.md)  |
+|アクションのショートカットと拡張機能  |[メッセージ拡張機能](../messaging-extensions/what-are-messaging-extensions.md)  |
 |Chatbots |[ボット](../bots/what-are-bots.md) |
 |チャネル通知  |[ボット](../bots/what-are-bots.md)<br/>[受信 Webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)<br/>[Office 365 コネクタ](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
 |メッセージ外部サービス  |[ボット](../bots/what-are-bots.md)<br/>[送信 Webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
@@ -129,6 +129,6 @@ Teams 内の情報や機能へのリンクを作成できます。 [ディープ
 
 * [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)
 * [Microsoft Teams用の低コードソリューションとコードなしソリューション](~/samples/teams-low-code-solutions.md)
-* [Web アプリからTeamsに共有する](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
+* [Web アプリから Teams に共有する](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [SameSite cookie 属性](~/resources/samesite-cookie-update.md)
 * [チャットボットPower Virtual Agents統合する](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)

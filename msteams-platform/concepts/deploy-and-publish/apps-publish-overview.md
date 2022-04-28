@@ -6,12 +6,12 @@ author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: none
 keywords: 発行アプリのアップロード gcc をデプロイする
-ms.openlocfilehash: f691edee8f4e3aab34aa616f9bbf0ed451874070
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 5db182f9276865fc98d277f642f7e58fd4a52df5
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073070"
+ms.locfileid: "65104435"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Microsoft Teams アプリを配布する
 
@@ -45,7 +45,7 @@ Microsoft Teams アプリを配布するには、有効なアプリ パッケー
 GCC Teams環境では、準拠している Microsoft アプリが既定で有効になっています。 ただし、アプリを発行する前に、すべてのアプリのエンドポイントがGCC組織の要件に準拠していることを確認してください。 詳細については、「[Government Community Cloud](../app-fundamentals-overview.md#government-community-cloud)」を参照してください。
 
 > [!IMPORTANT]
->アプリにボットまたはメッセージング拡張機能が含まれている場合は、Azure でボットとTeamsの間にチャネルを設定するときに **、Government** オプションのMicrosoft Teamsを選択する必要があります。 詳細については、「 [ボットをチャネルに接続する」を](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true)参照してください。
+>アプリにボットまたはメッセージ拡張機能が含まれている場合は、Azure でボットとTeamsの間にチャネルを設定するときに **、Government** オプションのMicrosoft Teamsを選択する必要があります。 詳細については、「 [ボットをチャネルに接続する」を](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true)参照してください。
 
 ## <a name="publish-your-app-to-the-teams-store"></a>Teams ストアにアプリを発行する
 

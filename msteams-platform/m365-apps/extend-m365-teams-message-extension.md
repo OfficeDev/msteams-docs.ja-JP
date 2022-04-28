@@ -1,67 +1,67 @@
 ---
-title: 複数のTeamsメッセージング拡張機能を拡張Microsoft 365
-description: 検索ベースのメッセージング拡張機能を更新して、Teamsで実行する方法をOutlook
+title: Microsoft 365間でTeamsメッセージ拡張機能を拡張する
+description: 検索ベースのTeams メッセージ拡張機能を更新してOutlookで実行する方法を次に示します。
 ms.date: 02/11/2022
 ms.topic: tutorial
 ms.custom: m365apps
-ms.openlocfilehash: d2369d5a07652055a9474be586470f906ed3de5b
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 3bab70d85d071763ffbbae7cb1dae11534d0e812
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727528"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104540"
 ---
-# <a name="extend-a-teams-messaging-extension-across-microsoft-365"></a>複数のTeamsメッセージング拡張機能を拡張Microsoft 365
+# <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Microsoft 365間でTeamsメッセージ拡張機能を拡張する
 
 > [!NOTE]
-> *現在、Teamsメッセージング拡張機能を拡張Microsoft 365* パブリック開発者向け [プレビューでのみ使用できます](../resources/dev-preview/developer-preview-intro.md)。 プレビューに含まれている機能は完全でないため、一般公開前に変更される場合があります。 これらは、テストと調査のみを目的としています。 実稼働アプリケーションでは使用しないでください。
+> *Teamsメッセージ拡張機能をMicrosoft 365全体に拡張* することは、現在、[パブリック開発者向けプレビュー](../resources/dev-preview/developer-preview-intro.md)でのみ使用できます。 プレビューに含まれている機能は完全でないため、一般公開前に変更される場合があります。 これらは、テストと調査のみを目的としています。 実稼働アプリケーションでは使用しないでください。
 
-検索ベースの[メッセージング拡張機能を使用](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions)すると、ユーザーは外部システムを検索し、クライアントの作成メッセージ領域を通じて結果をMicrosoft Teamsできます。 [Microsoft 365 (プレビュー)](overview.md) 全体で Teams アプリを拡張することで、Teams デスクトップと web エクスペリエンスの検索ベースの Teams メッセージング拡張機能を Outlook Windows に追加できます。
+検索ベースの[メッセージ拡張機能](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions)を使用すると、ユーザーは外部システムを検索し、Microsoft Teams クライアントのメッセージ作成領域で結果を共有できます。 [Teams アプリをMicrosoft 365 (プレビュー) に拡張](overview.md)することで、検索ベースのTeams メッセージ拡張機能をWindowsデスクトップと Web エクスペリエンスのOutlookに追加できるようになりました。
 
-検索ベースのメッセージング拡張機能を更新してTeams実行するプロセスにはOutlook手順が含まれます。
+検索ベースのTeams メッセージ拡張機能を更新してOutlookを実行するプロセスには、次の手順が含まれます。
 
 > [!div class="checklist"]
 >
 > * アプリ マニフェストを更新する
-> * ボットのOutlookチャネルを追加する
-> * 更新されたアプリをアプリにサイドロードTeams
+> * ボットのOutlook チャネルを追加する
+> * 更新されたアプリをTeamsにサイドロードする
 
-このガイドの残りの部分では、以下の手順について説明し、デスクトップと Web の両方でメッセージング拡張機能Outlookプレビュー Windows示します。
+このガイドの残りの部分では、これらの手順について説明し、Windowsデスクトップと Web の両方のOutlookでメッセージ拡張機能をプレビューする方法について説明します。
 
 ## <a name="prerequisites"></a>前提条件
 
-このチュートリアルを完了するには、次の情報が必要です。
+このチュートリアルを完了するには、次のものが必要です。
 
-* 開発者Microsoft 365サンドボックス テナント
-* ターゲットリリースに登録 *Office 365サンドボックス テナント*
-* ベータ 版チャネルからOfficeアプリをインストールしたテストMicrosoft 365 Apps *環境*
-* Microsoft Visual Studio (Preview) 拡張子Teams Toolkitコード (省略可能)
+* Microsoft 365開発者プログラムサンドボックス テナント
+* *Office 365対象のリリース* に登録されているサンドボックス テナント
+* Microsoft 365 Apps *ベータ チャネル* からインストールされたOffice アプリを含むテスト環境
+* Teams Toolkit (プレビュー) 拡張機能を使用したコードのMicrosoft Visual Studio (省略可能)
 
 > [!div class="nextstepaction"]
 > [前提条件のインストール](prerequisites.md)
 
-## <a name="prepare-your-messaging-extension-for-the-upgrade"></a>アップグレード用にメッセージング拡張機能を準備する
+## <a name="prepare-your-message-extension-for-the-upgrade"></a>アップグレードのメッセージ拡張機能を準備する
 
-既存のメッセージング拡張機能がある場合は、アプリ マニフェストでアプリ ID をテストおよび更新するために、実稼働プロジェクトのコピーまたはブランチを作成し、新しい識別子 (実稼働アプリ ID とは異なる) を使用します。
+既存のメッセージ拡張機能がある場合は、テスト用の運用プロジェクトのコピーまたはブランチを作成し、アプリ マニフェストでアプリ ID を更新して、(運用環境のアプリ ID とは異なる) 新しい識別子を使用します。
 
-このチュートリアルを完了するためにサンプル コードを使用する場合は、[Teams](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) メッセージング拡張機能検索サンプルのセットアップ手順に従って、Microsoft Teams 検索ベースのメッセージング拡張機能をすばやく構築します。 または、[TeamsJS SDK v2](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2/NPM-search-connector-M365) プレビュー用に更新された同じ Teams メッセージング拡張機能検索サンプルから開始し、Outlook でメッセージング拡張機能のプレビュー[に進みます](#preview-your-messaging-extension-in-outlook)。 更新されたサンプルは、拡張機能 (*DevelopmentView* >  *samplesNPM* >  **Search Connector) Teams Toolkit内でも使用できます**。
+このチュートリアルを完了するためにサンプル コードを使用する場合は、[Teamsメッセージ拡張機能検索サンプル](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search)のセットアップ手順に従って、Microsoft Teams検索ベースのメッセージ拡張機能をすばやく構築します。 または、[TeamsJS SDK v2 プレビュー用に更新された同じTeamsメッセージ拡張機能検索サンプル](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2/NPM-search-connector-M365)から開始し、[Outlookでメッセージ拡張機能のプレビューに](#preview-your-message-extension-in-outlook)進むことができます。 更新されたサンプルは、*Teams Toolkit拡張機能である DevelopmentView* >  *samplesNPM* >  **Search Connector** 内でも使用できます。
 
-:::image type="content" source="images/toolkit-search-sample.png" alt-text="NPM 検索コネクタのサンプル (Teams Toolkit":::
+:::image type="content" source="images/toolkit-search-sample.png" alt-text="Teams Toolkitの NPM Search Connector サンプル":::
 
 ## <a name="update-the-app-manifest"></a>アプリ マニフェストを更新します。
 
-開発者プレビュー マニフェスト スキーマとマニフェスト [Teams](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview)`m365DevPreview`を使用して、Teams メッセージング拡張機能を Outlook で実行する必要があります。
+[Teams開発者プレビュー マニフェスト](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview) スキーマとマニフェスト バージョンを`m365DevPreview`使用して、Teams メッセージ拡張機能をOutlookで実行できるようにする必要があります。
 
 アプリ マニフェストを更新するには、次の 2 つのオプションがあります。
 
 # <a name="teams-toolkit"></a>[Teams ツールキット](#tab/manifest-teams-toolkit)
 
-1. コマンド パレット *を開きます*。 `Ctrl+Shift+P`
-1. コマンドを実行 `Teams: Upgrade Teams manifest to support Outlook and Office apps` し、アプリ マニフェスト ファイルを選択します。 変更は、その場で行います。
+1. *コマンド パレット* を開きます。`Ctrl+Shift+P`
+1. コマンドを `Teams: Upgrade Teams manifest to support Outlook and Office apps` 実行し、アプリ マニフェスト ファイルを選択します。 変更が行われます。
 
 # <a name="manual-steps"></a>[手動の手順](#tab/manifest-manual)
 
-アプリ マニフェストTeams開き、次の値`$schema``manifestVersion`を使用して更新します。
+Teams アプリ マニフェストを開き、次の値を`$schema``manifestVersion`使用して更新します。
 
 ```json
 {
@@ -72,125 +72,125 @@ ms.locfileid: "63727528"
 
 ---
 
-メッセージング拡張機能アプリTeams Toolkit使用した場合は、このアプリを使用してマニフェスト ファイルの変更を検証し、エラーを特定できます。 `Ctrl+Shift+P`コマンド パレットを開き、[**Teams:** マニフェスト ファイルの検証] を見つけるか、Teams Toolkit の [展開] メニューからオプションを選択します (Visual Studio Code の左側にある Teams アイコンを探します)。
+Teams Toolkitを使用してメッセージ拡張アプリを作成した場合は、それを使用してマニフェスト ファイルの変更を検証し、エラーを特定できます。 コマンド パレット`Ctrl+Shift+P`を開いてTeamsを見つけます **。マニフェスト ファイルを検証** するか、Teams Toolkitの [配置] メニューからオプションを選択します (Visual Studio Codeの左側にあるTeams アイコンを探します)。
 
-:::image type="content" source="images/toolkit-validate-manifest-file.png" alt-text="Teams Toolkit [展開] メニューの [マニフェスト ファイルの検証] オプションを選択します。":::
+:::image type="content" source="images/toolkit-validate-manifest-file.png" alt-text="Teams Toolkit [配置] メニューの [マニフェスト ファイルの検証] オプション":::
 
-## <a name="add-an-outlook-channel-for-your-bot"></a>ボットのOutlookチャネルを追加する
+## <a name="add-an-outlook-channel-for-your-bot"></a>ボットのOutlook チャネルを追加する
 
-このMicrosoft Teamsメッセージング拡張機能は、ホストする Web サービスと、Web サービスのホスト場所を定義するアプリ マニフェストで構成されます。 Web サービスは、ボットに登録されているチャネルを通じて、[ボット フレームワーク SDK](/azure/bot-service/bot-service-overview) メッセージング スキーマとセキュリティで保護されたTeamsを利用します。
+Microsoft Teamsでは、メッセージ拡張機能は、ホストする Web サービスと、Web サービスがホストされる場所を定義するアプリ マニフェストで構成されます。 Web サービスは [Bot Framework SDK](/azure/bot-service/bot-service-overview) メッセージング スキーマを利用し、ボットに登録されたTeams チャネルを介して通信プロトコルをセキュリティで保護します。
 
-ユーザーがメッセージ拡張機能を Outlook操作するには、ボットに Outlookチャネルを追加する必要があります。
+ユーザーがOutlookからメッセージ拡張機能を操作するには、Outlook チャネルをボットに追加する必要があります。
 
-1. ポータル[Microsoft Azure (](https://portal.azure.com)以前に登録した場合は [Bot Framework](https://dev.botframework.com) ポータル) から、ボット リソースに移動します。
+1. [Microsoft Azure ポータル](https://portal.azure.com) (以前に登録した場合は [Bot Framework ポータル](https://dev.botframework.com)) から、ボット リソースに移動します。
 
-1. [*チャネル設定*] を **選択します**。
+1. *設定* から [チャネル] を選択 **します**。
 
-1. [メッセージの表示 **Outlook** をクリックし、[**メッセージ** の拡張機能] タブを選択し、[保存] を **クリックします**。
+1. **Outlook** をクリックし、[**メッセージ拡張機能**] タブを選択して、[保存] をクリック **します**。
 
-    :::image type="content" source="images/azure-bot-channel-message-extensions.png" alt-text="[Azure ボット Outlook] ウィンドウからボットの [メッセージ拡張機能] チャネルを追加する":::
+    :::image type="content" source="images/azure-bot-channel-message-extensions.png" alt-text="Azure Bot Channels ペインからボットのOutlook 'Message Extensions' チャネルを追加する":::
 
-1. ボットの [チャネルOutlook] ウィンドウに、Microsoft Teamsチャネルが一覧表示されているのを **確認** します。
+1. Outlook チャネルがボットの [**チャネル**] ウィンドウにMicrosoft Teamsと共に表示されていることを確認します。
 
-    :::image type="content" source="images/azure-bot-channels.png" alt-text="Azure Bot チャネル ウィンドウで、チャネルMicrosoft TeamsとOutlook一覧":::
+    :::image type="content" source="images/azure-bot-channels.png" alt-text="Microsoft TeamsチャネルとOutlook チャネルの両方を一覧表示する Azure Bot Channels ペイン":::
 
-## <a name="update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso"></a>SSO Microsoft Azure Active Directory (Azure AD) アプリ登録を更新する
+## <a name="update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso"></a>SSO のMicrosoft Azure Active Directory (Azure AD) アプリの登録を更新する
 
 > [!NOTE]
-> [Teams](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) メッセージング拡張機能検索サンプルを使用している場合は、Azure Active Directory (AAD) シングル Sign-On 認証を使用しない場合は、この手順を省略できます。
+> [メッセージ拡張機能検索サンプルTeams](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search)使用している場合は、シナリオに単一のSign-On認証Azure Active Directory (AAD) が含まれていないので、手順をスキップできます。
 
-Azure Active Directory メッセージング拡張機能のシングル サインオン (SSO) は、Outlook [Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots) と同じように動作しますが、テナントのアプリ登録ポータルでボットの Azure AD アプリ登録にいくつかのクライアント アプリケーション識別子を追加する必要があります。
+メッセージ拡張機能のシングル サインオン (SSO) Azure Active Directoryは、Outlook Teamsの場合と同じように機能しますが、テナントのアプリの登録 *ポータル*[で](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots)ボットのAzure AD アプリ登録にいくつかのクライアント アプリケーション識別子を追加する必要があります。
 
-1. サンドボックス テナント アカウント [を使用して Azure portal](https://portal.azure.com) にサインインします。
-1. アプリ **の登録を開きます**。
-1. アプリケーションの名前を選択して、アプリ登録を開きます。
-1. [API  **の公開] ([管理]** の下) を *選択します*。
+1. サンドボックス テナント アカウント[を使用してAzure portal](https://portal.azure.com)にサインインします。
+1. **アプリの登録** を開きます。
+1. アプリケーションの名前を選択して、アプリの登録を開きます。
+1. [*管理*] で [**API の公開**] を選択します。
 
-[承認済 **みクライアント アプリケーション] セクション** で、次のすべての値が `Client Id` 一覧表示されます。
+[ **承認済みクライアント アプリケーション** ] セクションで、次 `Client Id` のすべての値が一覧表示されていることを確認します。
 
 |Microsoft 365 クライアント アプリケーション | クライアント ID |
 |--|--|
-|Teamsとモバイル |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
+|デスクトップとモバイルのTeams |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
 |Teams Web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
 |Outlook デスクトップ | d3590ed6-52b3-4102-aeff-aad2292ab01c |
-|Outlook Web Access | 00000002-00000-0ff1-ce00-000000000000 |
+|Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
 |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
-## <a name="sideload-your-updated-messaging-extension-in-teams"></a>更新されたメッセージング拡張機能をサーバーにサイドロードTeams
+## <a name="sideload-your-updated-message-extension-in-teams"></a>更新されたメッセージ拡張機能をTeamsでサイドロードする
 
-最後の手順は、更新されたメッセージング拡張機能 ([アプリ](/microsoftteams/platform/concepts/build-and-test/apps-package) パッケージ) をアプリ 内にサイドロードMicrosoft Teams。 完了すると、メッセージ作成領域からインストールされている *アプリ* にメッセージング拡張機能が表示されます。
+最後の手順は、更新されたメッセージ拡張機能 ([アプリ パッケージ](/microsoftteams/platform/concepts/build-and-test/apps-package)) をMicrosoft Teamsにサイドロードすることです。 完了すると、メッセージ拡張機能がインストールされている *アプリ* に作成メッセージ領域から表示されます。
 
-1. zip ファイルTeamsアプリケーション (マニフェストアイコンとアプリ [アイコン](/microsoftteams/platform/resources/schema/manifest-schema#icons)) をパッケージ化します。 アプリの作成Teams Toolkit使用した場合は、アプリの [展開] メニューの [Zip Teams メタデータ パッケージ] **オプション** を使用して簡単にTeams Toolkit。
+1. Teams アプリケーション (マニフェストアイコンとアプリ [アイコン](/microsoftteams/platform/resources/schema/manifest-schema#icons)) を zip ファイルにパッケージ化します。 Teams Toolkitを使用してアプリを作成した場合は、Teams Toolkitの *[展開]* メニューの **[Zip Teams メタデータ パッケージ**] オプションを使用して簡単に行うことができます。
 
-    :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="[zip Teams メタデータ パッケージ] オプションは、Teams Toolkitの拡張機能Visual Studio Code":::
+    :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="Visual Studio CodeのTeams Toolkit拡張機能の 'zip Teamsメタデータ パッケージ' オプション":::
 
-1. サンドボックス テナント アカウントを使用して Teams にログインし、ユーザー プロファイルで省略記号 (**.....**) メニューをクリックして [開発者プレビュー] オプションがオンに切り替わるか確認して、パブリック *Developer Preview* 上にあるか確認します。
+1. サンドボックス テナント アカウントでTeamsにログインし、ユーザー プロファイルの省略記号 (**...**) メニューをクリックし、[**バージョン情報**] を開いて *[開発者プレビュー*] オプションがオンになっていることを確認します。
 
-    :::image type="content" source="images/teams-dev-preview.png" alt-text="[省略Teams] メニューの [概要] を開き、[Developer Preview] オプションがオンになっています。":::
+    :::image type="content" source="images/teams-dev-preview.png" alt-text="省略記号Teamsメニューから 、'About' を開き、'Developer Preview' オプションがオンになっていることを確認します":::
 
-1. [アプリ *] ウィンドウを* 開き、[カスタム アプリ **アップロードを** クリックし、自分アップロード **チームにアクセスします**。
+1. *[アプリ*] ウィンドウを開き、**カスタム アプリアップロード** クリックし、**自分または自分のチームにアップロード** します。
 
-    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="[アップロード] ウィンドウの [カスタム アプリTeams] ボタンをクリックします。":::
+    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Teams [アプリ] ウィンドウの [カスタム アプリのアップロード] ボタン":::
 
-1. アプリ パッケージを選択し、[開く] を *クリックします*。
+1. アプリ パッケージを選択し、[ *開く*] をクリックします。
 
-メッセージをサイドロードTeams、メッセージング拡張機能を使用して、Outlook on the web。
+Teamsを介してサイドロードされると、メッセージ拡張機能はOutlook on the webで使用できるようになります。
 
-## <a name="preview-your-messaging-extension-in-outlook"></a>メッセージ拡張機能をプレビュー Outlook
+## <a name="preview-your-message-extension-in-outlook"></a>Outlookでメッセージ拡張機能をプレビューする
 
-これで、デスクトップと Web 上で実行中のメッセージング拡張機能OutlookテストWindows準備ができました。 更新されたメッセージング拡張機能は、メッセージング拡張機能の完全な機能サポートを備え、Teams [](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions)で引き続き実行しますが、Outlook が有効なエクスペリエンスのこの早期プレビューでは、次の点に注意する必要があります。
+これで、デスクトップと Web 上のOutlookで実行されているメッセージ拡張機能Windowsテストする準備が整いました。 更新されたメッセージ拡張機能は引き続きTeamsで実行され、メッセージ拡張機能の完全な[機能サポートが提供](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions)されますが、このOutlook対応エクスペリエンスの早期プレビューでは、次の点に注意する必要があります。
 
-* メッセージの拡張機能はOutlook作成コンテキストに [*制限* されます](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions)。 メッセージ拡張機能にTeamsコンテキスト`commandBox`がマニフェストに含まれる場合でも、現在のプレビューはメール構成 (`compose`) オプションに制限されます。 [検索] ボックスからメッセージング拡張機能Outlook *呼* び出す操作はサポートされていません。
-* [アクション ベースのメッセージング拡張機能コマンド](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS)は、この機能ではOutlook。 アプリに検索とアクション ベースの両方のコマンドがある場合、アプリは Outlook表示されますが、アクション メニューは使用できません。
-* メールに 5 つ以上 [のアダプティブ](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) カードを挿入する機能はサポートされていません。アダプティブ カード v1.4 以降はサポートされていません。
-* [タイプ 、](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json)、、`messageBack``imBack`のカード `invoke`アクション`signin`は、挿入されたカードではサポートされていません。 サポートは:クリック `openURL`時に、ユーザーは新しいタブで指定された URL にリダイレクトされます。
+* Outlookのメッセージ拡張機能は、メール [*作成* コンテキスト](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions)に限定されます。 Teamsメッセージ拡張機能がマニフェストのコンテキストとして含まれている`commandBox`場合でも、現在のプレビューはメール構成 (`compose`) オプションに制限されます。 グローバル Outlook *検索* ボックスからのメッセージ拡張機能の呼び出しはサポートされていません。
+* [アクション ベースのメッセージ拡張](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS)コマンドは、Outlookではサポートされていません。 アプリに検索ベースのコマンドとアクション ベースのコマンドの両方がある場合は、Outlookに表示されますが、アクション メニューは使用できません。
+* メールへの 5 つ以上の [アダプティブ カード](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) の挿入はサポートされていません。アダプティブ カード v1.4 以降はサポートされていません。
+* [挿入されたカード](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json) の種類 `messageBack`、 `imBack`、 `invoke`および `signin` サポートされていないカード アクション。 サポートは次に `openURL`限定されます。クリックすると、ユーザーは新しいタブで指定された URL にリダイレクトされます。
 
-メッセージング拡張機能をテストする場合は、[Activity](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md) オブジェクトの [channelId](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md#channel-id) によってボット要求のソース (Teams と Outlook から発信元) を識別できます。 ユーザーがクエリを実行すると、サービスは標準の Bot Framework オブジェクトを受け取 `Activity` ります。 Activity `channelId``msteams` `outlook`オブジェクトのプロパティの 1 つは、ボット要求の発生元に応じて、または 、の値を持つプロパティです。 詳細については、「  [検索ベースのメッセージング拡張機能 SDK」を参照してください](/microsoftteams/platform/resources/messaging-extension-v3/search-extensions)。
+メッセージ拡張機能をテストするときに、[アクティビティ](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md) オブジェクトの [channelId](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md#channel-id) によってボット要求のソース (TeamsとOutlookから発信) を識別できます。 ユーザーがクエリを実行すると、サービスは標準の Bot Framework `Activity` オブジェクトを受け取ります。 Activity オブジェクト `channelId`のプロパティの 1 つは、ボット要求の `msteams` 発信元に応じて値または `outlook`値を持つプロパティです。 詳細については、「  [検索ベースのメッセージ拡張機能 SDK](/microsoftteams/platform/resources/messaging-extension-v3/search-extensions)」を参照してください。
 
 ### <a name="outlook-on-the-web"></a>Outlook on the web
 
-アプリで実行中のアプリをプレビューするには、次Outlook on the web。
+Outlook on the webで実行されているアプリをプレビューするには:
 
-1. テスト テナントの [資格情報 outlook.com](https://www.outlook.com) を使用して、ログインしてログインします。
-1. [新 **しいメッセージ] を選択します**。
-1. コン **ポジション ウィンドウの** 下部にある [その他のアプリ] フライアウト メニューを開きます。
+1. テスト テナントの資格情報を使用して [outlook.com](https://www.outlook.com) にログインします。
+1. [ **新しいメッセージ]** を選択します。
+1. コンポジション ウィンドウの下部にある **[その他のアプリ** ] ポップアップ メニューを開きます。
 
-:::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="メッセージ拡張機能を使用するには、メール構成ウィンドウの下部にある [その他のアプリ] メニューをクリックします。":::
+:::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="メール構成ウィンドウの下部にある [その他のアプリ] メニューをクリックして、メッセージ拡張機能を使用します":::
 
-メッセージング拡張機能が表示されます。 そこから呼び出して、メッセージを作成する場合と同じ方法で使用Teams。
+メッセージ拡張機能が一覧表示されます。 そこからそれを呼び出し、Teamsでメッセージを作成する場合と同じように使用できます。
 
 ### <a name="outlook"></a>Outlook
 
 > [!IMPORTANT]
-> [Microsoft Teams - Microsoft 365 開発者](https://devblogs.microsoft.com/microsoft365dev/)向けブログの最新の更新プログラムを参照して、Windows デスクトップ の Outlook で Teams 個人用アプリがテスト テナントで利用できるのか確認してください。
+> [Microsoft Teams - Microsoft 365開発者向けブログ](https://devblogs.microsoft.com/microsoft365dev/)の最新の更新プログラムを参照して、Teams個人用アプリのデスクトップ サポートWindows Outlookがテスト テナントで利用できるかどうかを確認してください。
 
-デスクトップで実行中のアプリOutlookプレビューするにはWindows:
+デスクトップ上のOutlookで実行されているアプリWindowsプレビューするには:
 
-1. テスト Outlook資格情報を使用してログインしているユーザーを起動します。 1. [新しい **メール] をクリックします**。
-1. 上部リボン **の [その他の** アプリ] フライアウト メニューを開きます。
+1. テスト テナントの資格情報でログインOutlook起動します。 1. [ **新しいメール**] をクリックします。
+1. 上部のリボンの **[その他のアプリ** ] ポップアップ メニューを開きます。
 
-メッセージング拡張機能が表示されます。 そこから呼び出して、メッセージを作成する場合と同じ方法で使用Teams。
+メッセージ拡張機能が一覧表示されます。 そこからそれを呼び出し、Teamsでメッセージを作成する場合と同じように使用できます。
 
 ## <a name="next-steps"></a>次の手順
 
-Outlookが有効Teamsメッセージング拡張機能はプレビュー中であり、実稼働環境での使用はサポートされていません。 テスト目的でユーザーをプレビューするために、Outlook有効なメッセージング拡張機能を配布する方法を次に示します。
+Outlook対応のTeams メッセージ拡張機能はプレビュー段階にあり、運用環境での使用ではサポートされていません。 テスト目的でOutlook対応のメッセージ拡張機能をプレビュー対象ユーザーに配布する方法を次に示します。
 
-### <a name="single-tenant-distribution"></a>単一テナントの配布
+### <a name="single-tenant-distribution"></a>シングルテナント配布
 
-Outlook有効Office個人用タブは、次の 3 つの方法のいずれかを使用して、テスト (または実稼働) テナント全体でプレビュー対象ユーザーに配布できます。
+OutlookおよびOffice対応の個人用タブは、次の 3 つの方法のいずれかで、テスト (または運用環境) テナント全体でプレビュー対象ユーザーに配布できます。
 
 #### <a name="teams-client"></a>Teams クライアント
 
-[アプリ *] メニューの* [アプリ *の管理* > **] を選択して、アプリを組織に送信します**。これには、IT 管理者からの承認が必要です。
+[*アプリ*] メニューの [*アプリ* > の管理] を選択し、**組織にアプリを提出します**。これには、IT 管理者の承認が必要です。
 
 #### <a name="microsoft-teams-admin-center"></a>Microsoft Teams管理センター
 
-管理者Teams、組織のテナントのアプリ パッケージを管理者からアップロードして[Teamsできます](https://admin.teams.microsoft.com/)。詳細[についてはアップロード管理センターのカスタム アプリMicrosoft Teamsを参照](/MicrosoftTeams/upload-custom-apps)してください。
+Teams管理者は、組織のテナントのアプリ パッケージをアップロードして、管理者から事前にインストール[Teams](https://admin.teams.microsoft.com/)。詳細については[、Microsoft Teams管理センターでカスタム アプリのアップロード](/MicrosoftTeams/upload-custom-apps)を参照してください。
 
-#### <a name="microsoft-admin-center"></a>Microsoft 管理センター
+#### <a name="microsoft-admin-center"></a>Microsoft Admin Center
 
-グローバル管理者は、Microsoft 管理者からアプリ パッケージをアップロードして事前インストール[できます](https://admin.microsoft.com/)。詳細[については、「統合アプリ ポータルMicrosoft 365 Appsパートナーによるテストと展開」を](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps)参照してください。
+グローバル管理者は、[Microsoft 管理者](https://admin.microsoft.com/)からアプリ パッケージをアップロードして事前インストールできます。詳細については、[統合アプリ ポータルのパートナーによるMicrosoft 365 Appsのテストとデプロイ](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps)に関する説明を参照してください。
 
-### <a name="multitenant-distribution"></a>マルチテナント配布
+### <a name="multitenant-distribution"></a>マルチテナント分布
 
-Microsoft AppSource への配布は、この初期の開発者向けプレビューで、Outlookメッセージング拡張機能Teamsサポートされていません。
+Microsoft AppSource への配布は、Outlook対応のTeams メッセージ拡張機能の初期の開発者向けプレビューではサポートされていません。

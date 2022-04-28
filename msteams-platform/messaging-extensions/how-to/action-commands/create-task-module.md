@@ -1,42 +1,42 @@
 ---
 title: タスク モジュールの作成と送信
 author: surbhigupta
-description: 最初の呼び出しアクションを処理し、コード例とサンプルを使用してアクション メッセージング拡張機能コマンドからタスク モジュールで応答する方法について説明します。
+description: コード例とサンプルを使用して、最初の呼び出しアクションを処理し、アクション メッセージ拡張機能コマンドからタスク モジュールで応答する方法について説明します。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 30ef2cdbe5bde14120a0ba8b17040c26a5de2a45
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: bea8358edfa11dd278bdbc8ea052c61612d6db71
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453482"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104470"
 ---
 # <a name="create-and-send-the-task-module"></a>タスク モジュールの作成と送信
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-アダプティブ カードまたは埋め込み Web ビューを使用してタスク モジュールを作成できます。 タスク モジュールを作成するには、最初の呼び出し要求と呼ばれるプロセスを実行する必要があります。 このドキュメントでは、最初の呼び出し要求、1:1 チャット、グループ チャット、チャネル (新しい投稿)、チャネル (スレッドへの返信)、およびコマンド ボックスからタスク モジュールが呼び出された場合のペイロード アクティビティ プロパティについて説明します。
+アダプティブ カードまたは埋め込み Web ビューを使用して、タスク モジュールを作成できます。 タスク モジュールを作成するには、最初の呼び出し要求と呼ばれるプロセスを実行する必要があります。 このドキュメントでは、タスク モジュールが 1:1 チャット、グループ チャット、チャネル (新しい投稿)、チャネル (スレッドに返信)、コマンド ボックスから呼び出されたときの初期呼び出し要求、ペイロード アクティビティプロパティについて説明します。
 > [!NOTE]
-> アプリ マニフェストで定義されたパラメーターをタスク モジュールに設定しない場合は、アダプティブ カードまたは埋め込み Web ビューを使用するユーザー用のタスク モジュールを作成する必要があります。
+> アプリ マニフェストで定義されているパラメーターをタスク モジュールに設定しない場合は、アダプティブ カードまたは埋め込み Web ビューを持つユーザー向けのタスク モジュールを作成する必要があります。
 
 ## <a name="the-initial-invoke-request"></a>最初の呼び出し要求
 
-最初の呼`Activity``composeExtension/fetchTask``task`び出し要求のプロセスで、サービスは型のオブジェクトを受け取り、アダプティブ カードまたは埋め込み Web ビューへの URL を含むオブジェクトで応答する必要があります。 ボットアクティビティの標準プロパティと共に、最初の呼び出しペイロードには次の要求メタデータが含まれます。
+最初の呼び出し要求の過程で、サービスは型`composeExtension/fetchTask`のオブジェクトを`Activity`受け取り、アダプティブ カードまたは埋め込み Web ビューへの URL を含むオブジェクトで応答`task`する必要があります。 標準のボット アクティビティ プロパティと共に、最初の呼び出しペイロードには次の要求メタデータが含まれます。
 
 |プロパティ名|用途|
 |---|---|
-|`type`| 要求の種類。 この値は、 である必要があります `invoke`。 |
-|`name`| サービスに発行されるコマンドの種類。 この値は、 である必要があります `composeExtension/fetchTask`。 |
+|`type`| 要求の種類。 必ず指定 `invoke`してください。 |
+|`name`| サービスに対して発行されるコマンドの種類。 必ず指定 `composeExtension/fetchTask`してください。 |
 |`from.id`| 要求を送信したユーザーの ID。 |
 |`from.name`| 要求を送信したユーザーの名前。 |
-|`from.aadObjectId`| Azure Active Directory送信したユーザーのオブジェクト ID を指定します。 |
+|`from.aadObjectId`| 要求を送信したユーザーのオブジェクト ID をAzure Active Directoryします。 |
 |`channelData.tenant.id`| Azure Active Directory テナント ID。 |
-|`channelData.channel.id`| チャネル ID (チャネルで要求が行われた場合)。 |
-|`channelData.team.id`| チーム ID (チャネルで要求が行われた場合)。 |
-|`value.commandId` | 呼び出されたコマンドの ID が含まれる。 |
-|`value.commandContext` | イベントをトリガーしたコンテキスト。 この値は、 である必要があります `compose`。 |
-|`value.context.theme` | ユーザーのクライアント テーマは、埋め込み Web ビューの書式設定に役立ちます。 は、または `default`である `contrast` 必要があります `dark`。 |
+|`channelData.channel.id`| チャネル ID (要求がチャネルで行われた場合)。 |
+|`channelData.team.id`| チーム ID (要求がチャネルで行われた場合)。 |
+|`value.commandId` | 呼び出されたコマンドの ID を格納します。 |
+|`value.commandContext` | イベントをトリガーしたコンテキスト。 必ず指定 `compose`してください。 |
+|`value.context.theme` | 埋め込み Web ビューの書式設定に役立つ、ユーザーのクライアント テーマ。 `default`これは 、または `contrast` `dark`. |
 
 ### <a name="example"></a>例
 
@@ -70,27 +70,27 @@ ms.locfileid: "63453482"
   "name": "composeExtension/fetchTask"
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-11-chat"></a>タスク モジュールが 1:1 チャットから呼び出された場合のペイロード アクティビティプロパティ
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-11-chat"></a>タスク モジュールが 1:1 チャットから呼び出されたときのペイロード アクティビティプロパティ
 
-タスク モジュールが 1:1 チャットから呼び出された場合のペイロード アクティビティのプロパティは、次のように表示されます。
+タスク モジュールが 1:1 チャットから呼び出されたときのペイロード アクティビティのプロパティは、次のように一覧表示されます。
 
 |プロパティ名|用途|
 |---|---|
-|`type`| 要求の種類。 この値は、 である必要があります `invoke`。 |
-|`name`| サービスに発行されるコマンドの種類。 この値は、 である必要があります `composeExtension/fetchTask`。 |
+|`type`| 要求の種類。 必ず指定 `invoke`してください。 |
+|`name`| サービスに対して発行されるコマンドの種類。 必ず指定 `composeExtension/fetchTask`してください。 |
 |`from.id`| 要求を送信したユーザーの ID。 |
 |`from.name`| 要求を送信したユーザーの名前。 |
-|`from.aadObjectId`| Azure Active Directory送信したユーザーのオブジェクト ID を指定します。 |
+|`from.aadObjectId`| 要求を送信したユーザーのオブジェクト ID をAzure Active Directoryします。 |
 |`channelData.tenant.id`| Azure Active Directory テナント ID。 |
-|`channelData.source.name`| タスク モジュールの呼び出し元のソース名。 |
-|`ChannelData.legacy. replyToId`| このメッセージが返信であるメッセージの ID を取得または設定します。 |
-|`value.commandId` | 呼び出されたコマンドの ID が含まれる。 |
-|`value.commandContext` | イベントをトリガーしたコンテキスト。 この値は、 である必要があります `compose`。 |
-|`value.context.theme` | ユーザーのクライアント テーマは、埋め込み Web ビューの書式設定に役立ちます。 は、または `default`である `contrast` 必要があります `dark`。 |
+|`channelData.source.name`| タスク モジュールが呼び出されるソース名。 |
+|`ChannelData.legacy. replyToId`| このメッセージが応答であるメッセージの ID を取得または設定します。 |
+|`value.commandId` | 呼び出されたコマンドの ID を格納します。 |
+|`value.commandContext` | イベントをトリガーしたコンテキスト。 必ず指定 `compose`してください。 |
+|`value.context.theme` | 埋め込み Web ビューの書式設定に役立つ、ユーザーのクライアント テーマ。 `default`これは 、または `contrast` `dark`. |
 
 ### <a name="example"></a>例
 
-タスク モジュールが 1:1 チャットから呼び出された場合のペイロード アクティビティプロパティは、次の例で示されています。
+タスク モジュールが 1 対 1 チャットから呼び出されたときのペイロード アクティビティプロパティは、次の例で示されています。
 
 ```json
 {
@@ -121,27 +121,27 @@ ms.locfileid: "63453482"
 }
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-group-chat"></a>グループ チャットからタスク モジュールが呼び出された場合のペイロード アクティビティのプロパティ
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-group-chat"></a>タスク モジュールがグループ チャットから呼び出されたときのペイロード アクティビティプロパティ
 
-タスク モジュールがグループ チャットから呼び出された場合のペイロード アクティビティのプロパティは、次のように表示されます。
+タスク モジュールがグループ チャットから呼び出されたときのペイロード アクティビティのプロパティは、次のように一覧表示されます。
 
 |プロパティ名|用途|
 |---|---|
-|`type`| 要求の種類。 この値は、 である必要があります `invoke`。 |
-|`name`| サービスに発行されるコマンドの種類。 この値は、 である必要があります `composeExtension/fetchTask`。 |
+|`type`| 要求の種類。 必ず指定 `invoke`してください。 |
+|`name`| サービスに対して発行されるコマンドの種類。 必ず指定 `composeExtension/fetchTask`してください。 |
 |`from.id`| 要求を送信したユーザーの ID。 |
 |`from.name`| 要求を送信したユーザーの名前。 |
-|`from.aadObjectId`| Azure Active Directory送信したユーザーのオブジェクト ID を指定します。 |
+|`from.aadObjectId`| 要求を送信したユーザーのオブジェクト ID をAzure Active Directoryします。 |
 |`channelData.tenant.id`| Azure Active Directory テナント ID。 |
-|`channelData.source.name`| タスク モジュールの呼び出し元のソース名。 |
-|`ChannelData.legacy. replyToId`| このメッセージが返信であるメッセージの ID を取得または設定します。 |
-|`value.commandId` | 呼び出されたコマンドの ID が含まれる。 |
-|`value.commandContext` | イベントをトリガーしたコンテキスト。 この値は、 である必要があります `compose`。 |
-|`value.context.theme` | ユーザーのクライアント テーマは、埋め込み Web ビューの書式設定に役立ちます。 は、または `default`である `contrast` 必要があります `dark`。 |
+|`channelData.source.name`| タスク モジュールが呼び出されるソース名。 |
+|`ChannelData.legacy. replyToId`| このメッセージが応答であるメッセージの ID を取得または設定します。 |
+|`value.commandId` | 呼び出されたコマンドの ID を格納します。 |
+|`value.commandContext` | イベントをトリガーしたコンテキスト。 必ず指定 `compose`してください。 |
+|`value.context.theme` | 埋め込み Web ビューの書式設定に役立つ、ユーザーのクライアント テーマ。 `default`これは 、または `contrast` `dark`. |
 
 ### <a name="example"></a>例
 
-タスク モジュールがグループ チャットから呼び出された場合のペイロード アクティビティプロパティは、次の例で示されています。
+タスク モジュールがグループ チャットから呼び出されたときのペイロード アクティビティのプロパティは、次の例で示されています。
 
 ```json
 {
@@ -178,9 +178,9 @@ ms.locfileid: "63453482"
 }
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-meeting-chat"></a>タスク モジュールが会議チャットから呼び出された場合のペイロード アクティビティのプロパティ
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-meeting-chat"></a>タスク モジュールが会議チャットから呼び出されたときのペイロード アクティビティプロパティ
 
-タスク モジュールが会議チャットから呼び出された場合のペイロード アクティビティのプロパティは、次の例で示されています。
+タスク モジュールが会議チャットから呼び出されたときのペイロード アクティビティのプロパティは、次の例で示されています。
 
 ```json
 {
@@ -220,29 +220,29 @@ ms.locfileid: "63453482"
 }
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-new-post"></a>チャネルからタスク モジュールが呼び出された場合のペイロード アクティビティ プロパティ (新しい投稿)
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-new-post"></a>タスク モジュールがチャネルから呼び出されたときのペイロード アクティビティプロパティ (新しい投稿)
 
-タスク モジュールがチャネル (新しい投稿) から呼び出された場合のペイロード アクティビティプロパティは、次のように表示されます。
+タスク モジュールがチャネルから呼び出されたときのペイロード アクティビティプロパティ (新しい投稿) は、次のように一覧表示されます。
 
 |プロパティ名|用途|
 |---|---|
-|`type`| 要求の種類。 この値は、 である必要があります `invoke`。 |
-|`name`| サービスに発行されるコマンドの種類。 この値は、 である必要があります `composeExtension/fetchTask`。 |
+|`type`| 要求の種類。 必ず指定 `invoke`してください。 |
+|`name`| サービスに対して発行されるコマンドの種類。 必ず指定 `composeExtension/fetchTask`してください。 |
 |`from.id`| 要求を送信したユーザーの ID。 |
 |`from.name`| 要求を送信したユーザーの名前。 |
-|`from.aadObjectId`| Azure Active Directory送信したユーザーのオブジェクト ID を指定します。 |
+|`from.aadObjectId`| 要求を送信したユーザーのオブジェクト ID をAzure Active Directoryします。 |
 |`channelData.tenant.id`| Azure Active Directory テナント ID。 |
-|`channelData.channel.id`| チャネル ID (チャネルで要求が行われた場合)。 |
-|`channelData.team.id`| チーム ID (チャネルで要求が行われた場合)。 |
-|`channelData.source.name`| タスク モジュールの呼び出し元のソース名。 |
-|`ChannelData.legacy. replyToId`| このメッセージが返信であるメッセージの ID を取得または設定します。 |
-|`value.commandId` | 呼び出されたコマンドの ID が含まれる。 |
-|`value.commandContext` | イベントをトリガーしたコンテキスト。 この値は、 である必要があります `compose`。 |
-|`value.context.theme` | ユーザーのクライアント テーマは、埋め込み Web ビューの書式設定に役立ちます。 、、または`default``contrast`である必要があります`dark`。 |
+|`channelData.channel.id`| チャネル ID (要求がチャネルで行われた場合)。 |
+|`channelData.team.id`| チーム ID (要求がチャネルで行われた場合)。 |
+|`channelData.source.name`| タスク モジュールが呼び出されるソース名。 |
+|`ChannelData.legacy. replyToId`| このメッセージが応答であるメッセージの ID を取得または設定します。 |
+|`value.commandId` | 呼び出されたコマンドの ID を格納します。 |
+|`value.commandContext` | イベントをトリガーしたコンテキスト。 必ず指定 `compose`してください。 |
+|`value.context.theme` | 埋め込み Web ビューの書式設定に役立つ、ユーザーのクライアント テーマ。 `default`これは、`contrast`または `dark`. |
 
 ### <a name="example"></a>例
 
-タスク モジュールがチャネル (新しい投稿) から呼び出された場合のペイロード アクティビティ プロパティは、次の例で示されています。
+次の例では、チャネル (新しい投稿) からタスク モジュールが呼び出されたときのペイロード アクティビティのプロパティを示します。
 
 ```json
 {
@@ -286,29 +286,29 @@ ms.locfileid: "63453482"
 }
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-reply-to-thread"></a>チャネルからタスク モジュールが呼び出された場合のペイロード アクティビティ プロパティ (スレッドに返信)
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-channel-reply-to-thread"></a>タスク モジュールがチャネルから呼び出されたときのペイロード アクティビティプロパティ (スレッドに返信)
 
-タスク モジュールがチャネルから呼び出された場合のペイロード アクティビティ プロパティ (スレッドへの返信) は、次のように表示されます。
+タスク モジュールがチャネルから呼び出されたときに (スレッドに応答する) ペイロード アクティビティのプロパティは、次のように一覧表示されます。
 
 |プロパティ名|用途|
 |---|---|
-|`type`| 要求の種類。 この値は、 である必要があります `invoke`。 |
-|`name`| サービスに発行されるコマンドの種類。 この値は、 である必要があります `composeExtension/fetchTask`。 |
+|`type`| 要求の種類。 必ず指定 `invoke`してください。 |
+|`name`| サービスに対して発行されるコマンドの種類。 必ず指定 `composeExtension/fetchTask`してください。 |
 |`from.id`| 要求を送信したユーザーの ID。 |
 |`from.name`| 要求を送信したユーザーの名前。 |
-|`from.aadObjectId`| Azure Active Directory送信したユーザーのオブジェクト ID を指定します。 |
+|`from.aadObjectId`| 要求を送信したユーザーのオブジェクト ID をAzure Active Directoryします。 |
 |`channelData.tenant.id`| Azure Active Directory テナント ID。 |
-|`channelData.channel.id`| チャネル ID (チャネルで要求が行われた場合)。 |
-|`channelData.team.id`| チーム ID (チャネルで要求が行われた場合)。 |
-|`channelData.source.name`| タスク モジュールの呼び出し元のソース名。 |
-|`ChannelData.legacy. replyToId`| このメッセージが返信であるメッセージの ID を取得または設定します。 |
-|`value.commandId` | 呼び出されたコマンドの ID が含まれる。 |
-|`value.commandContext` | イベントをトリガーしたコンテキスト。 この値は、 である必要があります `compose`。 |
-|`value.context.theme` | ユーザーのクライアント テーマは、埋め込み Web ビューの書式設定に役立ちます。 は、または `default`である `contrast` 必要があります `dark`。 |
+|`channelData.channel.id`| チャネル ID (要求がチャネルで行われた場合)。 |
+|`channelData.team.id`| チーム ID (要求がチャネルで行われた場合)。 |
+|`channelData.source.name`| タスク モジュールが呼び出されるソース名。 |
+|`ChannelData.legacy. replyToId`| このメッセージが応答であるメッセージの ID を取得または設定します。 |
+|`value.commandId` | 呼び出されたコマンドの ID を格納します。 |
+|`value.commandContext` | イベントをトリガーしたコンテキスト。 必ず指定 `compose`してください。 |
+|`value.context.theme` | 埋め込み Web ビューの書式設定に役立つ、ユーザーのクライアント テーマ。 `default`これは 、または `contrast` `dark`. |
 
 ### <a name="example"></a>例
 
-タスク モジュールがチャネルから呼び出された場合のペイロード アクティビティ プロパティ (スレッドへの返信) は、次の例で示されています。
+次の例では、チャネルからタスク モジュールが呼び出されたときのペイロード アクティビティ プロパティ (スレッドへの応答) が示されています。
 
 ```json
 {
@@ -395,26 +395,26 @@ ms.locfileid: "63453482"
 }
 ```
 
-## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-command-box"></a>タスク モジュールがコマンド ボックスから呼び出された場合のペイロード アクティビティ プロパティ
+## <a name="payload-activity-properties-when-a-task-module-is-invoked-from-a-command-box"></a>タスク モジュールがコマンド ボックスから呼び出されたときのペイロード アクティビティプロパティ
 
-タスク モジュールがコマンド ボックスから呼び出された場合のペイロード アクティビティ プロパティは、次のように表示されます。
+タスク モジュールがコマンド ボックスから呼び出されたときのペイロード アクティビティのプロパティは、次のように一覧表示されます。
 
 |プロパティ名|用途|
 |---|---|
-|`type`| 要求の種類。 この値は、 である必要があります `invoke`。 |
-|`name`| サービスに発行されるコマンドの種類。 この値は、 である必要があります `composeExtension/fetchTask`。 |
+|`type`| 要求の種類。 必ず指定 `invoke`してください。 |
+|`name`| サービスに対して発行されるコマンドの種類。 必ず指定 `composeExtension/fetchTask`してください。 |
 |`from.id`| 要求を送信したユーザーの ID。 |
 |`from.name`| 要求を送信したユーザーの名前。 |
-|`from.aadObjectId`| Azure Active Directory送信したユーザーのオブジェクト ID を指定します。 |
+|`from.aadObjectId`| 要求を送信したユーザーのオブジェクト ID をAzure Active Directoryします。 |
 |`channelData.tenant.id`| Azure Active Directory テナント ID。 |
-|`channelData.source.name`| タスク モジュールの呼び出し元のソース名。 |
-|`value.commandId` | 呼び出されたコマンドの ID が含まれる。 |
-|`value.commandContext` | イベントをトリガーしたコンテキスト。 この値は、 である必要があります `compose`。 |
-|`value.context.theme` | ユーザーのクライアント テーマは、埋め込み Web ビューの書式設定に役立ちます。 、、または`default``contrast`である必要があります`dark`。 |
+|`channelData.source.name`| タスク モジュールが呼び出されるソース名。 |
+|`value.commandId` | 呼び出されたコマンドの ID を格納します。 |
+|`value.commandContext` | イベントをトリガーしたコンテキスト。 必ず指定 `compose`してください。 |
+|`value.context.theme` | 埋め込み Web ビューの書式設定に役立つ、ユーザーのクライアント テーマ。 `default`これは、`contrast`または `dark`. |
 
 ### <a name="example"></a>例
 
-タスク モジュールがコマンド ボックスから呼び出された場合のペイロード アクティビティ プロパティは、次の例で示されています。
+タスク モジュールがコマンド ボックスから呼び出されたときのペイロード アクティビティのプロパティは、次の例で示されています。
 
 ```json
 {
@@ -459,7 +459,7 @@ ms.locfileid: "63453482"
 
 ### <a name="example"></a>例
 
-次のコード セクションは、要求の例 `fetchTask` です。
+次のコード セクションは、要求の `fetchTask` 例です。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -541,10 +541,10 @@ class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
 
 * * *
 
-## <a name="initial-invoke-request-from-a-message"></a>メッセージからの最初の呼び出し要求
+## <a name="initial-invoke-request-from-a-message"></a>メッセージからの初期呼び出し要求
 
-ボットがメッセージから呼 `value` び出されると、最初の呼び出し要求のオブジェクトに、メッセージング拡張機能が呼び出されるメッセージの詳細が含まれている必要があります。 配列 `reactions` と `mentions` 配列は省略可能で、元のメッセージにリアクションやメンションがない場合は存在しません。
-次のセクションは、オブジェクトの例 `value` です。
+ボットがメッセージから呼び出されると、最初の `value` 呼び出し要求のオブジェクトに、メッセージ拡張機能の呼び出し元のメッセージの詳細が含まれている必要があります。 配列と`mentions`配列は`reactions`省略可能であり、元のメッセージに反応やメンションがない場合は存在しません。
+次のセクションは、オブジェクトの `value` 例です。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -644,35 +644,35 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ## <a name="respond-to-the-fetchtask"></a>fetchTask に応答する
 
-アダプティブ カードまたは Web `task` `taskInfo` URL を持つオブジェクト、または単純な文字列メッセージを含むオブジェクトを使用して、呼び出し要求に応答します。
+アダプティブ カードまたは Web URL を持つ `task` オブジェクト、または単純な文字列メッセージを `taskInfo` 含むオブジェクトを使用して、呼び出し要求に応答します。
 
 |プロパティ名|用途|
 |---|---|
-|`type`| フォームを表示 `continue` するか、単純 `message` なポップアップを表示できます。 |
-|`value`| フォームの `taskInfo` オブジェクト、またはメッセージ `string` の a。 |
+|`type`| フォームを表示するか `continue` 、 `message` 単純なポップアップを表示することができます。 |
+|`value`| フォームの `taskInfo` オブジェクト、または `string` メッセージのオブジェクト。 |
 
-taskInfo オブジェクトのスキーマは次の値です。
+taskInfo オブジェクトのスキーマは次のとおりです。
 
 |プロパティ名|用途|
 |---|---|
 |`title`| タスク モジュールのタイトル。|
-|`height`| 整数 (ピクセル単位) または 、 `small`、 のいずれかである `medium`必要 `large`があります。|
-|`width`| 整数 (ピクセル単位) または 、 `small`、 のいずれかである `medium`必要 `large`があります。|
+|`height`| 整数 (ピクセル単位) または `small`, , `medium``large`のいずれかである必要があります。|
+|`width`| 整数 (ピクセル単位) または `small`, , `medium``large`のいずれかである必要があります。|
 |`card`| フォームを定義するアダプティブ カード (使用している場合)。
 |`url`| 埋め込み Web ビューとしてタスク モジュール内で開く URL。|
 |`fallbackUrl`| クライアントがタスク モジュール機能をサポートしていない場合、この URL はブラウザー タブで開きます。 |
 
 ### <a name="respond-to-the-fetchtask-with-an-adaptive-card"></a>アダプティブ カードを使用して fetchTask に応答する
 
-アダプティブ カードを使用する場合は、アダプティブ `task` `value` カードを含むオブジェクトでオブジェクトに応答する必要があります。
+アダプティブ カードを使用する場合は、アダプティブ カードを `task` 含むオブジェクトで `value` 応答する必要があります。
 
 #### <a name="example"></a>例
 
-次のコード セクションは、アダプティブ カードで応答 `fetchTask` する例です。
+次のコード セクションは、アダプティブ カードを使用して応答する `fetchTask` 例です。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-このサンプルでは、[Bot Framework SDK に加NuGet AdaptiveCards](https://www.nuget.org/packages/AdaptiveCards) パッケージを使用します。
+このサンプルでは、Bot Framework SDK に加えて[、AdaptiveCards NuGet パッケージ](https://www.nuget.org/packages/AdaptiveCards)を使用します。
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -822,7 +822,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="create-a-task-module-with-an-embedded-web-view"></a>埋め込み Web ビューを使用してタスク モジュールを作成する
 
-埋め込み Web ビューを使用`task``value`する場合は、読み込む Web フォームへの URL を含むオブジェクトを持つオブジェクトに応答する必要があります。 読み込む URL のドメインは、アプリ `validDomains` のマニフェストの配列に含める必要があります。 埋め込み Web ビューの構築の詳細については、タスク モジュールの [ドキュメントを参照してください](~/task-modules-and-cards/what-are-task-modules.md)。
+埋め込み Web ビューを使用する場合は、読み込む Web フォームへの URL を含むオブジェクトを含むオブジェクトで応答`task``value`する必要があります。 読み込む URL のドメインは、アプリの `validDomains` マニフェストの配列に含める必要があります。 埋め込み Web ビューの構築の詳細については、 [タスク モジュールのドキュメントを参照してください](~/task-modules-and-cards/what-are-task-modules.md)。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -898,9 +898,9 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="request-to-install-your-conversational-bot"></a>会話型ボットのインストールを要求する
 
-アプリに会話型ボットが含まれている場合は、会話にボットをインストールし、タスク モジュールを読み込む。 ボットは、タスク モジュールの追加コンテキストを取得する場合に便利です。 このシナリオの例は、名簿をフェッチして、ユーザー選択コントロールまたはチーム内のチャネルの一覧を設定します。
+アプリに会話型ボットが含まれている場合は、会話にボットをインストールし、タスク モジュールを読み込みます。 ボットは、タスク モジュールの追加コンテキストを取得するのに役立ちます。 このシナリオの例として、ユーザー選択コントロールまたはチーム内のチャネルの一覧を設定する名簿をフェッチします。
 
-メッセージング拡張機能が呼び出しを受信 `composeExtension/fetchTask` したら、ボットが現在のコンテキストにインストールされていることを確認して、フローを容易にしてください。 たとえば、取得名簿呼び出しでフローを確認します。 ボットがインストールされていない場合は、ユーザーにボットのインストールを要求するアクションを含むアダプティブ カードを返します。 ユーザーは、チェックのためにその場所にアプリをインストールする権限を持っている必要があります。 アプリのインストールが失敗した場合、ユーザーは管理者に連絡するメッセージを受信します。
+メッセージ拡張機能が呼び出しを `composeExtension/fetchTask` 受信したら、フローを容易にするためにボットが現在のコンテキストにインストールされているかどうかを確認します。 たとえば、名簿の取得呼び出しでフローを確認します。 ボットがインストールされていない場合は、ユーザーにボットのインストールを要求するアクションを含むアダプティブ カードを返します。 ユーザーには、確認のためにその場所にアプリをインストールするアクセス許可が必要です。 アプリのインストールに失敗した場合、ユーザーは管理者に問い合わせるメッセージを受け取ります。
 
 #### <a name="example"></a>例
 
@@ -930,7 +930,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-会話型ボットのインストール後、別の呼び出しメッセージを受け `name = composeExtension/submitAction`取 `value.data.msteams.justInTimeInstall = true`ります。
+会話型ボットのインストール後、メッセージの呼び出しと `name = composeExtension/submitAction``value.data.msteams.justInTimeInstall = true`.
 
 #### <a name="example"></a>例
 
@@ -958,11 +958,11 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-呼び出しに対するタスク応答は、インストールされているボットのタスク応答と似ている必要があります。
+呼び出しに対するタスク応答は、インストールされているボットの応答と同様である必要があります。
 
 #### <a name="example"></a>例
 
-次のコード セクションは、アダプティブ カードを使用したアプリの just-in time インストールの例です。
+次のコード セクションは、アダプティブ カードを使用したアプリの Just-In-Time インストールの例です。
 
 ```csharp
 private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
@@ -985,13 +985,13 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 | サンプルの名前           | 説明 | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
-|Teams拡張アクション| アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
-|Teams拡張機能の検索   |  検索コマンドを定義し、検索に応答する方法について説明します。        |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams メッセージ拡張機能アクション| アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
+|Teams メッセージ拡張機能の検索   |  検索コマンドを定義し、検索に応答する方法について説明します。        |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [[アクションに応答] コマンド](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+> [Action コマンドに応答する](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
 ## <a name="see-also"></a>関連項目
 
