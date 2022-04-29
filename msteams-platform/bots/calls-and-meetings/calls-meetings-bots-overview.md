@@ -2,14 +2,14 @@
 title: 通話とオンライン会議のボット
 description: Microsoft Teams アプリが通話やオンライン会議に Microsoft Graph API と、音声及びビデオを使用してユーザーと対話する方法、そしてリアルタイム メディア ストリームについて説明します
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: 発信 通話 音声ビデオ IVR 音声オンライン会議 リアルタイム メディア ストリーム ボット
-ms.openlocfilehash: a7b9dbe81304e2556b8b8b868f1f9e29f8bba284
-ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
-ms.translationtype: MT
+ms.openlocfilehash: 6a21980a81e462ef278f060ebbad81ee3e941300
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65102506"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65112012"
 ---
 # <a name="calls-and-online-meetings-bots"></a>通話とオンライン会議のボット
 
@@ -110,4 +110,4 @@ Teams ユーザーの観点からは、随意開催と計画開催の 2 種類�
 * [着信通知の処理に関する技術情報](./call-notifications.md)
 * [自動応答を設定する](/microsoftteams/create-a-phone-system-auto-attendant)
 * [Android および Teams ビデオ電話デバイスの Microsoft Teams Rooms 自動応答を設定する](/microsoftteams/set-up-auto-answer-on-teams-android)
-* [Teams記録ポリシー](/MicrosoftTeams/teams-recording-policy)
+* [Teams レコーディング ポリシー](/MicrosoftTeams/teams-recording-policy)

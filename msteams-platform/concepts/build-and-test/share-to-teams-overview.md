@@ -1,21 +1,21 @@
 ---
-title: Teamsへの共有の概要
-description: チーム間の共有ボタンを作成する方法について説明します
+title: Teams への共有の概要
+description: '[Teams に共有] ボタンを作成する方法について説明します'
 ms.topic: how-to
-ms.localizationpriority: medium
-keywords: Teamsへの共有の概要
-ms.openlocfilehash: 24bc48c348efb4d2cbb7b3a88353824b56c6aaf0
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: Teams への共有の概要
+ms.openlocfilehash: fb32399139f67bfef52bca085d21df52194a93f8
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685684"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111718"
 ---
 # <a name="share-to-teams"></a>Teams への共有
 
-Teamsへの共有は、任意の Web アプリ、個人用アプリ、またはタブで有効になっているボタンで、ユーザーはTeams内の他のユーザーとコンテンツを共有できます。
+Teams への共有は、ユーザーが Teams の他のユーザーとコンテンツを共有できる任意の Web アプリ、個人用アプリ、またはタブで有効になっているボタンです。
 
-アプリの [Teamsに共有] ボタンの配置を決定することもできます。 ユーザーは、重要なコンテンツをピン留めし、Teamsと共同作業しながら参照できます。
+アプリの [Teams に共有] ボタンの配置を決定することもできます。 ユーザーは、Teams と共同作業しながら、重要なコンテンツをピン留めして参照できます。
 
 :::image type="content" source="../../assets/images/share-to-teams/overview-share-to-teams.PNG" alt-text="share":::
 
@@ -24,18 +24,18 @@ Teamsへの共有は、任意の Web アプリ、個人用アプリ、または�
 * Web アプリ
 * 個人用アプリまたはタブ
 
-## <a name="share-to-teams-from-web-apps"></a>Web アプリからTeamsに共有する
+## <a name="share-to-teams-from-web-apps"></a>Web アプリから Teams に共有する
 
-ユーザーがコンテキストを切り替えることなく、web アプリから任意のチャット、グループ チャット、またはチャネルにコンテンツを共有できる Web アプリの [Teams Teamsに共有] ボタンを埋め込むことができます。
+Web アプリの [Teams に共有] ボタンを埋め込むことができます。これにより、ユーザーはコンテキストを切り替えることなく、Web アプリから Teams のチャット、グループ チャット、チャネルにコンテンツを共有できます。
 
-詳細については、「[Web アプリからTeamsに共有する](share-to-teams-from-web-apps.md)」を参照してください。
+詳細については、「[Web アプリから Teams に共有する](share-to-teams-from-web-apps.md)」を参照してください。
 
-## <a name="share-to-teams-from-personal-app-or-tab"></a>個人用アプリまたはタブからTeamsに共有する
+## <a name="share-to-teams-from-personal-app-or-tab"></a>個人用アプリまたはタブから Teams に共有する
 
-Teams内でホストされている個人用アプリまたはタブに [Teamsに共有] ボタンを埋め込むことができます。これにより、ユーザーはコンテキストを切り替えることなく、Teams内の任意のチャット、グループ チャット、またはチャネルに個人用アプリまたはタブからコンテンツを共有できます。
+Teams 内でホストされている個人用アプリまたはタブに [Teams に共有] ボタンを埋め込むことができます。これにより、ユーザーはコンテキストを切り替えることなく、個人用アプリまたはタブから Teams のチャット、グループ チャット、チャネルにコンテンツを共有できます。
 
-詳細については、「[個人用アプリまたはタブからTeamsに共有](share-to-teams-from-personal-app-or-tab.md)する」を参照してください。
+詳細については、「[個人用アプリまたはタブから Teams に共有する](share-to-teams-from-personal-app-or-tab.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[Teams開発者ページに共有する](https://developer.microsoft.com/microsoft-teams/share-to-teams#/)
+[Teams 開発者ページに共有](https://developer.microsoft.com/microsoft-teams/share-to-teams#/)

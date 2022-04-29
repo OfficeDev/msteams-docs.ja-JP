@@ -3,19 +3,19 @@ title: Office 365 コネクタの作成
 author: laujan
 description: Microsoft Teams で Office 365 コネクタの使用を開始する方法について説明します。
 keywords: Teams Office365 コネクタ
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 42288d757a12c6e31de612f19a5556a283cf3e98
-ms.sourcegitcommit: a36760750ff4f510c374a4c956be57f7c1b4a0db
+ms.openlocfilehash: 9381fb9a55b6a48126e8c157040745d56708e9f8
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63674937"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111613"
 ---
 # <a name="create-office-365-connectors"></a>Office 365 コネクタの作成
 
-Microsoft Teams アプリを使用すると、既存のOffice 365 コネクタを追加したり、Teams 内に新しいアプリを作成したりできます。 詳細については、「[独自のコネクタを構築する](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector)」を参照してください。
+Microsoft Teams アプリを使用すると、Teams 内に既存の Office 365 コネクタを追加したり、新しい Office 365 コネクタを作成したりできます。詳細については、[自分でコネクタを開発する](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector)を参照してください。
 
 ## <a name="add-a-connector-to-teams-app"></a>Teams アプリにコネクタを追加する
 
@@ -52,7 +52,7 @@ Microsoft Teams アプリを使用すると、既存のOffice 365 コネクタ�
     > ユーザーの選択またはフィールドの更新に対する応答として `microsoftTeams.settings.setValidityState(true)` を呼び出す必要があります。
 
 1. ユーザーが **[保存]** を選択した場合に呼び出される `microsoftTeams.settings.registerOnSaveHandler()` イベント ハンドラーを登録します。
-1. `microsoftTeams.settings.setSettings()` を呼び出し、コネクタ設定を保存します。 保存された設定は、ユーザーがコネクタの既存の構成を更新しようとした場合にも、構成ダイアログに表示されます。
+1. `microsoftTeams.settings.setSettings()` を呼び出し、コネクタ設定を保存します。保存された設定は、ユーザーがコネクタの既存の構成を更新しようとした場合にも、構成ダイアログに表示されます。
 1. `microsoftTeams.settings.getSettings()` を呼び出し、URL を含む Webhook プロパティを取得します。
 
     > [!NOTE]
@@ -227,7 +227,7 @@ PowerShell モジュール交換の詳細については、「[Set-OrganizationC
 
 ## <a name="test-your-connector"></a>コネクタをテストする
 
-コネクタをテストするには、他のアプリと同じ方法でコネクタをチームにアップロードします。 「[マニフェストにコネクタを含める](#include-the-connector-in-your-manifest)」での指示どおりに修正した 2 つのアイコン ファイルとコネクタ開発者ダッシュボードからマニフェスト ファイルを使用して、.zip パッケージを作成できます。
+コネクタをテストするには、他のアプリと同じ方法でコネクタをチームにアップロードします。「[マニフェストにコネクタを含める](#include-the-connector-in-your-manifest)」での指示どおりに修正した 2 つのアイコン ファイルとコネクタ開発者ダッシュボードからマニフェスト ファイルを使用して、.zip パッケージを作成できます。
 
 アプリをアップロードしたら、任意のチャネルからコネクタ リストを開きます。 一番下までスクロールして、アプリが **[アップロード済み]** セクションに表示されていることを確認します。
 
