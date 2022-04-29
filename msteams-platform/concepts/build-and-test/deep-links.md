@@ -4,12 +4,12 @@ description: ディープ リンクとアプリでの使用方法について説
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams ディープ リンク ディープリンク
-ms.openlocfilehash: 79be1bcc04c33234859c4b564c9211c699b148e1
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: cc8e71e77964ff2a07e75983c94f72091033b789
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399311"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103924"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成
 
@@ -63,7 +63,7 @@ Teams のエンティティへのディープ リンクを作成できます。 
 > * 個人用タブには `personal` スコープがあり、チャネル タブとグループ タブには `team` または `group` スコープが使用されます。 構成可能なタブだけがコンテキスト オブジェクトに関連付けられている `channel` プロパティを持つため、2 つのタブの種類の構文はわずかに異なります。 タブスコープの詳細については、[マニフェスト](~/resources/schema/manifest-schema.md) リファレンスを参照してください。
 > * ディープ リンクは、タブが v0.4 以降のライブラリを使用して構成されていて、そのためエンティティ ID がある場合にのみ正常に機能します。 エンティティ ID のないタブへのディープ リンクは引き続きタブに移動しますが、サブエンティティ ID をタブに提供することはできません。
 
-ボット、コネクタ、またはメッセージング拡張カードで使用できるディープ リンクには、次の形式を使用します。
+ボット、コネクタ、またはメッセージング拡張カードで使用できるディープ リンクには、次の形式を使用します:
 
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
@@ -158,7 +158,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 ### <a name="generate-a-deep-link-to-a-chat"></a>チャットへのディープ リンクを生成する
 
-ボット、コネクタ、またはメッセージングの拡張機能カードで使用できるディープ リンクには、次の形式を使用します:
+ボット、コネクタ、またはメッセージの拡張機能カードで使用できるディープ リンクには、次の形式を使用します:
 
 `https://teams.microsoft.com/l/chat/0/0?users=<user1>,<user2>,...&topicName=<chat name>&message=<precanned text>`
 
@@ -174,25 +174,25 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 ## <a name="generate-deep-links-to-file-in-channel"></a>チャネル内のファイルへのディープ リンクを生成する
 
-次のディープ リンク形式は、ボット、コネクタ、またはメッセージング拡張カードで使用できます。
+次のディープ リンク形式は、ボット、コネクタ、またはメッセージ拡張カードで使用されます: 
 
 `https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
 クエリ パラメーターは次のとおりです。
 
-* `fileId`: Sharepoint Online の一意のファイル ID (`sourcedoc` とも呼ばれます)。 たとえば、`1FA202A5-3762-4F10-B550-C04F81F6ACBD` などです。
+* `fileId`: Sharepoint Online の一意のファイル ID (`sourcedoc` とも呼ばれます)。たとえば、`1FA202A5-3762-4F10-B550-C04F81F6ACBD` です。
 * `tenantId`: `0d9b645f-597b-41f0-a2a3-ef103fbd91bb` などのテナント ID。
 * `fileType`: .docx、.pptx、.xlsx、.pdf などのサポートされているファイルの種類
 * `objectUrl`: ファイルのオブジェクト URL。 形式は `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext` です。 たとえば、「 `https://microsoft.sharepoint.com/teams/(filepath)` 」のように入力します。
 * `baseUrl`: ファイルのベース URL。 形式は `https://{tenantName}.sharepoint.com/sites/{TeamName}` です。 たとえば、「 `https://microsoft.sharepoint.com/teams` 」のように入力します。
 * `serviceName`: サービスの名前、アプリ ID。たとえば、`teams` などです。
 * `threadId`: threadId は、ファイルが保存されているチームのチーム ID です。 これはオプションであり、ユーザーの OneDrive フォルダーに保存されているファイルには設定できません。 threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype.
-* `groupId`: ファイルのグループ ID。 たとえば、`ae063b79-5315-4ddb-ba70-27328ba6c31e` となります。
+* `groupId`: ファイルのグループ ID。例: `ae063b79-5315-4ddb-ba70-27328ba6c31e`。
 
 > [!NOTE]
 > チャネルからの URL に `threadId` と `groupId` が表示されます。  
 
-次のディープ リンク形式は、ボット、コネクタ、またはメッセージング拡張カードで使用されます: 
+次のディープ リンク形式は、ボット、コネクタ、またはメッセージ拡張カードで使用されます: 
 
 `https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
@@ -221,7 +221,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
   
 ## <a name="deep-linking-for-sharepoint-framework-tabs"></a>SharePoint Framework タブのディープ リンク
 
-次のディープ リンク形式は、ボット、コネクタ、またはメッセージング拡張カードで使用できます: `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
+次のディープ リンク形式は、ボット、コネクタ、またはメッセージ拡張カードで使用できます: `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
 
 > [!NOTE]
 > ボットがディープ リンクを含む TextBlock メッセージを送信すると、ユーザーがリンクを選択すると新しいブラウザ タブが開きます。 これは、Linuxで 実行されている Chrome および Microsoft Teams デスクトップ アプリで発生します。
@@ -246,7 +246,7 @@ Teams の組み込みのスケジューリング ダイアログへのディー�
 
 ### <a name="generate-a-deep-link-to-the-scheduling-dialog"></a>スケジュール設定ダイアログへのディープ リンクを作成する
 
-ボット、コネクタ、またはメッセージング拡張カードで使用できるディープ リンクには、次の形式を使用します: `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
+ボット、コネクタ、またはメッセージ拡張カードで使用できるディープ リンクには、次の形式を使用します: `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
 例: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 
@@ -286,7 +286,7 @@ Teams の組み込みのスケジューリング ダイアログへのディー�
   
 クエリ パラメーターは次のとおりです。
 
-* `users`: 通話の参加者を表すユーザー ID のコンマで区切られたリスト。 現在、[ユーザー ID] フィールドは Azure AD UserPrincipalName (通常はメール アドレス) をサポートしています。PSTN 通話の場合は、pstn mri 4: &lt;phonenumber&gt; をサポートしています。
+* `users`: 通話の参加者を表すユーザー ID のコンマで区切られたリスト。現在、[ユーザー ID] フィールドは Azure AD UserPrincipalName (通常はメール アドレス) をサポートしています。PSTN 通話の場合は、pstn mri 4: &lt;phonenumber&gt; をサポートしています。
 * `withVideo`: これはオプションのパラメータであり、ビデオ通話を行うために使用できます。 このパラメータを設定すると、発信者のカメラだけがオンになります。 通話の受信者は、Teams の通話通知ウィンドウから音声通話または音声通話とビデオ通話を選択できます。
 * `Source`: これはオプションのパラメーターで、ディープリンクのソースを通知します。
 

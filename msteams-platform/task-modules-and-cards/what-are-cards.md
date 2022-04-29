@@ -1,15 +1,15 @@
 ---
 title: カード
-description: カードと、それらがボット、コネクタ、メッセージング拡張機能でどのように使用されるかについて説明します
+description: カードと、それらがボット、コネクタ、メッセージ拡張機能でどのように使用されるかについて説明します
 ms.localizationpriority: high
 keywords: コネクタ ボット カード メッセージング
 ms.topic: overview
-ms.openlocfilehash: 249a83c8a41ddfa3a7409ce897238389114db165
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 3689c57ce16f8cfff1d197a35dc0eae084babd36
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398653"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104456"
 ---
 # <a name="cards"></a>カード
 
@@ -26,13 +26,13 @@ Teams のボットでは、次の種類のカードがサポートされてい�
 * サムネイル カード
 * カード コレクション
 
-カードの種類に応じて、Markdown または HTML を使用して、カードにリッチ テキストの書式設定を追加できます。 Microsoft Teams のボットとメッセージング拡張機能で使用されるカードは、これらのカード アクション、 `openUrl`、 `messageBack`、 `imBack`、 `invoke`、および `signin`に追加して応答します。
+カードの種類に応じて、Markdown または HTML を使用して、カードにリッチ テキストの書式設定を追加できます。 Microsoft Teams のボットとメッセージ拡張機能で使用されるカードは、これらのカード アクション、 `openUrl`、 `messageBack`、 `imBack`、 `invoke`、および `signin`に追加して応答します。
 
 Teams では、次の 3 つの異なる場所でカードが使用されます。
 
 * コネクタ
 * ボット
-* メッセージング拡張機能
+* メッセージ拡張機能
 
 ## <a name="cards-in-connectors"></a>コネクタ内のカード
 
@@ -44,9 +44,9 @@ Teams では、次の 3 つの異なる場所でカードが使用されます�
 
 Teams のボットでは、単純なカード、コネクタ カード、またはアダプティブ カードを使用できます。 [カードの種類](~/task-modules-and-cards/cards/cards-reference.md)は Teams のボットでサポートされているカードに関する情報を提供します。
 
-## <a name="cards-in-messaging-extensions"></a>メッセージング拡張機能のカード
+## <a name="cards-in-message-extensions"></a>メッセージ拡張機能のカード
 
-[メッセージング拡張機能は、](~/messaging-extensions/what-are-messaging-extensions.md) カードを返す場合もあります。 メッセージング拡張機能では、単純なカード、コネクタ カード、またはアダプティブ カードを使用できます。 これらのカードは、 [カードの種類](~/task-modules-and-cards/cards/cards-reference.md)の中にあります。
+[メッセージ拡張機能は、](~/messaging-extensions/what-are-messaging-extensions.md) カードを返す場合もあります。 メッセージ拡張機能では、単純なカード、コネクタ カード、またはアダプティブ カードを使用できます。 これらのカードは、 [カードの種類](~/task-modules-and-cards/cards/cards-reference.md)の中にあります。
 
 ## <a name="types-of-cards"></a>カードの種類
 

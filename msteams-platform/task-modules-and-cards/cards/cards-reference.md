@@ -4,12 +4,12 @@ description: Teams の Bot で使用できるすべてのカードとカード �
 ms.localizationpriority: high
 keywords: Bot のカード リファレンス
 ms.topic: reference
-ms.openlocfilehash: 2eab0ee575efb1abf0aed025243d3e4d891b60fd
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.openlocfilehash: b1dd6d5c9ac388f1862041df836f5590d57bfe84
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571496"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104141"
 ---
 # <a name="types-of-cards"></a>カードの種類
 
@@ -26,7 +26,7 @@ App Studio からヒーロー カード、サムネイル カード、アダプ�
 1. **[新しいカードの作成]** を選択します。
 1. **[ヒーロー カード]**、**[サムネイルカード]**、または **[アダプティブ カード]** のいずれかのカードに対して **[作成]** を選択します。 そのカードのメタデータの詳細、ボタン、json、csharp、およびノード コードの例が表示されます。
 
-    ![ヒーロー カードの詳細](~/assets/images/Cards/Herocarddetails.png)
+    :::image type="content" source="../../assets/images/Cards/Herocarddetails.png" alt-text="ヒーロー カードの詳細":::
 
 1. **[この カードを送信する]** を選択します。 カードがチャット メッセージとして送信されます。
 
@@ -89,7 +89,7 @@ App Studio からヒーロー カード、サムネイル カード、アダプ�
 
 次の表に、インライン カード画像のプロパティを示します。
 
-| プロパティ | 型  | 説明 |
+| プロパティ | 種類  | 説明 |
 | --- | --- | --- |
 | url | URL | 画像の HTTPS URL。 |
 | alt | 文字列 | 画像のアクセシビリティ対応の説明。 |
@@ -117,14 +117,14 @@ App Studio からヒーロー カード、サムネイル カード、アダプ�
 
 次の表に、アダプティブ カードをサポートする機能を示します:
 
-| Teams の Bot | メッセージング拡張機能  | コネクタ | Bot Framework |
+| Teams の Bot | メッセージ拡張機能  | コネクタ | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
 > [!NOTE]
 >
-> * Teams プラットフォームでは、ボット送信カードとアクション ベースのメッセージング拡張機能に対して、v1.4 以前のアダプティブ カード機能がサポートされています。
-> * Teams プラットフォームでは、ユーザーから送信されたカード (検索ベースのメッセージング拡張機能とリンク解除)、タブ、タスク モジュールなど、他の機能に対して v1.3 以前のアダプティブ カード機能がサポートされています。
+> * Teams プラットフォームでは、ボット送信カードとアクション ベースのメッセージ拡張機能に対して、v1.4 以前のアダプティブ カード機能がサポートされています。
+> * Teams プラットフォームでは、ユーザーから送信されたカード (検索ベースのメッセージ拡張機能とリンク解除)、タブ、タスク モジュールなど、他の機能に対して v1.3 以前のアダプティブ カード機能がサポートされています。
 > * 肯定的または破壊的なアクションのスタイル設定は、Teams プラットフォームのアダプティブ カードではサポートされていません。
 > * メディア要素は、現在、Teams プラットフォームのアダプティブ カードではサポートされていません。
 
@@ -269,7 +269,7 @@ App Studio からヒーロー カード、サムネイル カード、アダプ�
 
 #### <a name="additional-information-on-adaptive-cards"></a>アダプティブ カードの追加情報
 
-アダプティブ カードでは、ドル記号 ($) と中かっこを使用して動的な値を渡すことができます。 詳細については、「[アダプティブ カード のテンプレート作成](/adaptive-cards/templating/)」を参照してください。
+アダプティブ カードでは、ドル記号 ($) と中かっこを使用して動的な値を渡すことができます。詳細については、「[アダプティブ カード のテンプレート作成](/adaptive-cards/templating/)」を参照してください。
 
 例:
 
@@ -300,7 +300,7 @@ App Studio からヒーロー カード、サムネイル カード、アダプ�
 
 次の表に、ヒーロー カードをサポートする機能を示します。
 
-| Teams の Bot | メッセージング拡張機能  | コネクタ | Bot Framework |
+| Teams の Bot | メッセージ拡張機能  | コネクタ | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
@@ -308,7 +308,7 @@ App Studio からヒーロー カード、サムネイル カード、アダプ�
 
 次の表に、ヒーロー カードのプロパティを示します。
 
-| プロパティ | 型  | 説明 |
+| プロパティ | 種類  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。 |
 | サブタイトル | リッチ テキスト | カードのサブタイトル。 最大 2 行。|
@@ -319,7 +319,7 @@ App Studio からヒーロー カード、サムネイル カード、アダプ�
 
 ### <a name="example-of-a-hero-card"></a>ヒーロー カードの例
 
-![ヒーロー カードの例](~/assets/images/cards/hero.png)
+:::image type="content" source="../../assets/images/Cards/hero.png" alt-text="ヒーロー カード":::
 
 次のコードはヒーロー カードの一例を示します:
 
@@ -367,7 +367,7 @@ App Studio からヒーロー カード、サムネイル カード、アダプ�
 
 次の表に、リスト カードをサポートする機能を示します:
 
-| Teams の Bot | メッセージング拡張機能  | コネクタ | Bot Framework |
+| Teams の Bot | メッセージ拡張機能  | コネクタ | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ |✔ |
 
@@ -375,7 +375,7 @@ App Studio からヒーロー カード、サムネイル カード、アダプ�
 
 次の表に、リスト カードのプロパティを示します:
 
-| プロパティ | 型  | 説明 |
+| プロパティ | 種類  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。|
 | アイテム | リスト アイテムの配列 | カードに適用可能なアイテムのセット。|
@@ -445,7 +445,7 @@ App Studio からヒーロー カード、サムネイル カード、アダプ�
 
 次の表に、Office 365 コネクタ カードをサポートする機能を示します。
 
-| Teams の Bot | メッセージング拡張機能  | コネクタ | Bot Framework |
+| Teams の Bot | メッセージ拡張機能  | コネクタ | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✔ | ✖ |
 
@@ -453,7 +453,7 @@ App Studio からヒーロー カード、サムネイル カード、アダプ�
 
 次の表に、Office 365 コネクタ カードのプロパティを示します。
 
-| プロパティ | 型  | 説明 |
+| プロパティ | 種類  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。 |
 | 概要 | リッチ テキスト | カードの概要。 最大 2 行。 |
@@ -567,13 +567,13 @@ Teams はレシート カードをサポートしています。 ボットがユ
 
 次の表に、レシート カードをサポートする機能を示します:
 
-| Teams の Bot | メッセージング拡張機能  | コネクタ | Bot Framework |
+| Teams の Bot | メッセージ拡張機能  | コネクタ | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
 ### <a name="example-of-a-receipt-card"></a>レシート カードの例
 
-![レシート カードの例](~/assets/images/cards/receipt.png)
+:::image type="content" source="../../assets/images/Cards/receipt.png" alt-text="レシート カード":::
 
 次のコードはレシート カードの一例を示します:
 
@@ -641,7 +641,7 @@ Teams のサインイン カードは Bot Framework のサインイン カード
 
 次の表に、サインイン カードをサポートする機能を示します:
 
-| Teams の Bot | メッセージング拡張機能  | コネクタ | Bot Framework |
+| Teams の Bot | メッセージ拡張機能  | コネクタ | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 
@@ -660,17 +660,17 @@ Teams のサインイン カードは Bot Framework のサインイン カード
 
 次の表に、サムネイル カードをサポートする機能を示します:
 
-| Teams の Bot | メッセージング拡張機能  | コネクタ | Bot Framework |
+| Teams の Bot | メッセージ拡張機能  | コネクタ | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
-![サムネイル カードの例](~/assets/images/cards/thumbnail.png)
+:::image type="content" source="../../assets/images/Cards/thumbnail.png" alt-text="サムネイル カード":::
 
 ### <a name="properties-of-a-thumbnail-card"></a>サムネイル カードのプロパティ
 
 次の表に、サムネイル カードのプロパティを示します:
 
-| プロパティ | 型  | 説明 |
+| プロパティ | 種類  | 説明 |
 | --- | --- | --- |
 | title | リッチ テキスト | カードのタイトル。 最大 2 行。|
 | サブタイトル | リッチ テキスト | カードのサブタイトル。 最大 2 行。|
@@ -743,7 +743,7 @@ Teams のサインイン カードは Bot Framework のサインイン カード
 
 次の表に、カルーセル コレクションをサポートする機能を示します:
 
-| Teams の Bot | メッセージング拡張機能  | コネクタ | Bot Framework |
+| Teams の Bot | メッセージ拡張機能  | コネクタ | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 
@@ -756,7 +756,7 @@ Teams のサインイン カードは Bot Framework のサインイン カード
 
 #### <a name="example-of-a-carousel-collection"></a>カルーセル コレクションの例
 
-![カードのカルーセルの例](~/assets/images/cards/carousel.png)
+:::image type="content" source="../../assets/images/Cards/carousel.png" alt-text="カルーセル コレクション":::
 
 次のコードは、カルーセル コレクションの例を示しています:
 
@@ -937,13 +937,13 @@ Teams のサインイン カードは Bot Framework のサインイン カード
 
 次の表に、リスト コレクションをサポートする機能を示します:
 
-| Teams の Bot | メッセージング拡張機能  | コネクタ | Bot Framework |
+| Teams の Bot | メッセージ拡張機能  | コネクタ | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
 #### <a name="example-of-a-list-collection"></a>リスト コレクションの例
 
-![カードのリストの例](~/assets/images/cards/list.png)
+:::image type="content" source="../../assets/images/Cards/list.png" alt-text="リスト コレクション":::
 
 リスト コレクションのプロパティは、ヒーロー カードまたはサムネイル カードのプロパティと同じです。
 

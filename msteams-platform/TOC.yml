@@ -64,7 +64,7 @@
           href: tabs/design/tabs.md
         - name: ボット
           href: bots/design/bots.md
-        - name: メッセージング拡張機能
+        - name: メッセージの拡張機能
           href: messaging-extensions/design/messaging-extension-design.md
         - name: ミーディング拡張機能
           href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
@@ -134,9 +134,9 @@
       href: tabs/how-to/using-teams-client-sdk.md
     - name: Teams JavaScript client SDK v2 プレビュー
       href: m365-apps/using-teams-client-sdk-preview.md
-    - name: ボットおよびメッセージング拡張機能用 Node.js Bot Framework (GitHub)
+    - name: ボットおよびメッセージ拡張機能用 Node.js Bot Framework (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-js'
-    - name: ボットおよびメッセージング拡張機能用 .NET Bot Framework (GitHub)
+    - name: ボットおよびメッセージ拡張機能用 .NET Bot Framework (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-dotnet'
     - name: Microsoft Graph SDK
       href: /graph/sdks/sdks-overview
@@ -176,9 +176,9 @@
               href: resources/bot-v3/bots-text-formats.md
             - name: ボットをテストする
               href: resources/bot-v3/bots-test.md
-        - name: メッセージング拡張機能 SDK (v3)
+        - name: メッセージ拡張機能 SDK (v3)
           items:
-            - name: メッセージング拡張機能 SDK (v3)
+            - name: メッセージ拡張機能 SDK (v3)
               href: resources/messaging-extension-v3/messaging-extensions-overview.md
             - name: 検索拡張機能
               href: resources/messaging-extension-v3/search-extensions.md
@@ -265,7 +265,7 @@
           href: resources/media-formats.md
     - name: チームおよびチャット メンバーのボット API の変更
       href: resources/team-chat-member-api-changes.md
-- name: メッセージング拡張機能を作成する
+- name: メッセージの拡張機能のビルド
   items:
     - name: 概要
       href: messaging-extensions/what-are-messaging-extensions.md
@@ -375,11 +375,11 @@
           href: bots/how-to/authentication/add-authentication.md
         - name: SSO 認証を利用する
           href: bots/how-to/authentication/auth-aad-sso-bots.md
-    - name: メッセージング拡張機能
+    - name: メッセージの拡張機能
       items:
-        - name: メッセージング拡張機能に認証を追加する
+        - name: メッセージ拡張機能に認証を追加する
           href: messaging-extensions/how-to/add-authentication.md
-        - name: メッセージング拡張機能用の SSO を有効化する
+        - name: メッセージ拡張機能用の SSO を有効化する
           href: messaging-extensions/how-to/enable-SSO-auth-me.md
 - name: デバイスの機能を統合する
   items:
@@ -419,7 +419,7 @@
       href: m365-apps/prerequisites.md
     - name: 'Office と Outlook の [Teams パーソナル] タブを有効にする'
       href: m365-apps/extend-m365-teams-personal-tab.md
-    - name: Outlook の Teams メッセージングの拡張機能を有効にする
+    - name: Outlook の Teams メッセージ拡張機能を有効にする
       href: m365-apps/extend-m365-teams-message-extension.md
 - name: アプリのテスト
   items:

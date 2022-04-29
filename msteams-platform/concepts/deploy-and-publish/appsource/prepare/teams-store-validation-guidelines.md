@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: aaef04fc6e624f1d6863ac8a575c5d2662643ecd
-ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
+ms.openlocfilehash: 7a35b58bb6612cce74b995cf2506e8a287f1b703
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64826993"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103973"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams ストア検証ガイドライン
 
@@ -162,7 +162,7 @@ iOS 版または Android 版 Teams で実行するアプリは、以下のガイ
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.3.2](/legal/marketplace/certification-policies#114032-bots-and-messaging-extension) に沿ったものです。
 
-Microsoft Azure Bot Service を使用するアプリ (ボットやメッセージング拡張機能など) の場合、Microsoft [オンライン サービスの使用条件](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46)で定義されているすべての要件に従う必要があります。
+Microsoft Azure Bot Service を使用するアプリ (ボットやメッセージ拡張機能など) の場合、Microsoft [オンライン サービスの使用条件](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46)で定義されているすべての要件に従う必要があります。
 
 ボットを介してファイルをアップロードする場合は、必ずボットからユーザーに許可を求め、確認メッセージを表示しなければなりません。
 
@@ -236,7 +236,7 @@ Teams アプリは、合理的な時間内に応答するか、読み込み中�
 
 * タブは、2 秒以内に反応するか、読み込みメッセージや警告を表示する必要があります。
 * ボットは、ユーザーのコマンドに対して 2 秒以内に応答するか、入力インジケーターを表示する必要があります。
-* メッセージング拡張機能は、ユーザーのコマンドに対して 2 秒以内に応答する必要があります。
+* メッセージ拡張機能は、ユーザーのコマンドに対して 2 秒以内に応答する必要があります。
 * 通知は、ユーザーのアクションから 2 秒以内に表示される必要があります。
 
 ## <a name="app-package-and-store-listing"></a>アプリ パッケージと Store 登録情報
@@ -261,7 +261,7 @@ Teams アプリは、合理的な時間内に応答するか、読み込み中�
 Teams アプリ マニフェストは、アプリの構成を定義します。
 
 * マニフェストは、一般公開されたマニフェスト スキーマに適合している必要があります。 詳細については、「[マニフェストのリファレンス](~/resources/schema/manifest-schema.md)」を参照してください。 マニフェストのプレビュー バージョンを使用してアプリを申請しないでください。
-* アプリにボットやメッセージング拡張機能が含まれている場合、アプリ マニフェストの詳細は、ボット名、ロゴ、プライバシー ポリシーのリンク、サービス使用条件のリンクなど、Bot Framework のメタデータと一致している必要があります。
+* アプリにボットやメッセージ拡張機能が含まれている場合、アプリ マニフェストの詳細は、ボット名、ロゴ、プライバシー ポリシーのリンク、サービス使用条件のリンクなど、Bot Framework のメタデータと一致している必要があります。
 * アプリが Azure Active Directory を認証に使用する場合は、マニフェストに Microsoft Azure Active Directory (Azure AD) アプリケーション (クライアント) ID を含めます。 詳細については、「[マニフェストのリファレンス](~/resources/schema/manifest-schema.md#webapplicationinfo)」を参照してください。
 
 ### <a name="app-icons"></a>アプリのアイコン
@@ -274,7 +274,7 @@ Teams アプリ マニフェストは、アプリの構成を定義します。
 * カラー アイコンの解像度は 192x192 ピクセルである必要があります。  アイコン記号の配色は自由ですが、無地または完全に透明な正方形の背景に配置する必要があります。
 * アイコンのアウトライン バージョンは、次のシナリオで表示されます。
   * アプリが使用中で、Teams の左側のアプリ バーに **ホストされて** いるとき。
-  * ユーザーがアプリのメッセージング拡張をピン留めするとき。
+  * ユーザーがアプリのメッセージ拡張をピン留めするとき。
 
 * アウトライン アイコンの解像度は 32x32 ピクセルです。透明な背景、または白地に透明な背景が使用できます。 アウトライン アイコン内の記号の周りには、余分なパディングがあってはいけません。
 
@@ -789,7 +789,7 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
 * 設定を変更する必要があるアプリの機能が存在する場合は、**[設定]** タブを用意します。[*おすすめの修正プログラム*]
 * タブは、ページ内ナビゲーション、ダイアログの配置や使用方法、情報階層など、Teams の対話型デザインに沿ったものである必要があります。詳細については、「[Microsoft Teams Fluent UI キット](~/concepts/design/design-teams-app-basic-ui-components.md)」を参照してください。
 
-* IFRAME 内のタブ コンテンツは、Teams のコア機能を模倣した機能を含んではなりません。 たとえば、ボット、メッセージングの拡張機能、通話、会議などです。
+* IFRAME 内のタブ コンテンツは、Teams のコア機能を模倣した機能を含んではなりません。 たとえば、ボット、メッセージの拡張機能、通話、会議などです。
 
 * 構成可能タブのランディング ページのコンテンツは、コンテキストごとに、すべてのチャネル メンバーに対して同じでなければいけません。
 
@@ -1061,18 +1061,18 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
 > [!TIP]
 > 投稿されたカード内に表示される情報を見直し、ユーザーが選択できる基本的なアクションのすべてが、Teams から離れることなく利用できるような形で提供されていることを確認してください (適用される機能の複雑さに関わらず)。
 
-## <a name="messaging-extensions"></a>メッセージング拡張機能
+## <a name="message-extensions"></a>メッセージの拡張機能
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.4](/legal/marketplace/certification-policies#114044-messaging-extensions) に沿ったものです。
 
-アプリにメッセージング拡張機能が含まれている場合は、以下のガイドラインに従っていることを確認してください。
+アプリにメッセージ拡張機能が含まれている場合は、以下のガイドラインに従っていることを確認してください。
 
 > [!TIP]
-> 高品質なアプリ エクスペリエンスを作成するための詳細については、「[Teams メッセージング拡張機能デザインのガイドライン](~/messaging-extensions/design/messaging-extension-design.md)」を参照してください。
+> 高品質なアプリ エクスペリエンスを作成するための詳細については、「[Teams メッセージ拡張機能デザインのガイドライン](~/messaging-extensions/design/messaging-extension-design.md)」を参照してください。
 
 ### <a name="action-commands"></a>操作コマンド
 
-操作ベースのメッセージング拡張機能では、以下のことを行う必要があります。
+操作ベースのメッセージ拡張機能では、以下のことを行う必要があります。
 
 * ユーザーがサインインなどの中間的な手順を行うことなく、メッセージに対するアクションを起こせるようにする。
 
@@ -1142,11 +1142,11 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
 
 ### <a name="preview-links-link-unfurling"></a>プレビュー リンク (リンク展開)
 
-メッセージング拡張機能では、認識されたリンクが Teams の作成ボックスでプレビューされます。  制御外のドメイン (絶対 URL、ワイルドカードのいずれについても) を追加してはいけません。  たとえば、`yourapp.onmicrosoft.com` は有効ですが、`*.onmicrosoft.com` は無効です。 トップレベルの ドメインも禁止です。 たとえば、`*.com` および `*.org` が禁止となります。 [*必須の修正*]
+メッセージ拡張機能では、認識されたリンクが Teams の作成ボックスでプレビューされます。  制御外のドメイン (絶対 URL、ワイルドカードのいずれについても) を追加してはいけません。  たとえば、`yourapp.onmicrosoft.com` は有効ですが、`*.onmicrosoft.com` は無効です。 トップレベルの ドメインも禁止です。 たとえば、`*.com` および `*.org` が禁止となります。 [*必須の修正*]
 
 ### <a name="search-commands"></a>検索コマンド
 
-* 検索ベースのメッセージング拡張機能では、ユーザーが効果的に検索できるようなテキストが用意されている必要があります。 [*必須の修正*]
+* 検索ベースのメッセージ拡張機能では、ユーザーが効果的に検索できるようなテキストが用意されている必要があります。 [*必須の修正*]
 
 :::row:::
     :::column span="":::
@@ -1170,13 +1170,13 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
    :::column-end:::
 :::row-end:::
 
-### <a name="search-based-messaging-extension-only-apps"></a>検索ベースのメッセージング拡張機能専用アプリ
+### <a name="search-based-message-extension-only-apps"></a>検索ベースのメッセージ拡張機能専用アプリ
 
 [*必須の修正*]
 
-検索ベースのメッセージング拡張機能により構成されるアプリは、コンテキストの切り替えなしでコンテキストに沿った会話が可能なカードを共有することで、ユーザーに価値を提供します。
+検索ベースのメッセージ拡張機能により構成されるアプリは、コンテキストの切り替えなしでコンテキストに沿った会話が可能なカードを共有することで、ユーザーに価値を提供します。
 
-検索ベースのメッセージ拡張機能専用アプリの検証に合格するには、ユーザー エクスペリエンスが壊れないようにするためのベースラインとして、以下の項目が必要です。 メッセージング拡張機能を介して共有されるカードは、次の場合に Teams に価値を提供します。
+検索ベースのメッセージ拡張機能専用アプリの検証に合格するには、ユーザー エクスペリエンスが壊れないようにするためのベースラインとして、以下の項目が必要です。 メッセージ拡張機能を介して共有されるカードは、次の場合に Teams に価値を提供します。
 
 1. 投稿されたカードにより十分な情報が提供され、ユーザーが追加で操作する必要がない。
 1. 投稿されたカードが、ユーザーがアクションを起こしたり、Teams 外部のリンクを開いて詳細を表示ことを決定するのに十分なプレビュー情報を提供している。
@@ -1279,7 +1279,7 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
    :::column-end:::
 :::row-end:::
 
-* メッセージング拡張機能は、会議中も会議以外のときと同じように機能する必要があります。
+* メッセージ拡張機能は、会議中も会議以外のときと同じように機能する必要があります。
 
 ### <a name="in-meeting-tabs"></a>会議中のタブ
 

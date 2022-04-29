@@ -5,12 +5,12 @@ description: この記事では、Microsoft Teams アプリの機能について
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 55955972bb9ebfbb3699ebcbc2cc131afc00fbd1
-ms.sourcegitcommit: 6189ca81099452a3ab2ff4fff4fb1ded5ba6dcfe
+ms.openlocfilehash: dbed78461fd39f4442c67ac7ec7523ca5cc09ba5
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64498232"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104379"
 ---
 # <a name="understand-your-use-cases"></a>ユース ケースを理解する
 
@@ -97,15 +97,15 @@ Web ベースのコンテンツを[タブ](../../tabs/what-are-tabs.md)に表示
 
    :::column span="":::
 
-#### <a name="messaging-extensions"></a>メッセージング拡張機能
+#### <a name="message-extensions"></a>メッセージ拡張機能
 
-[メッセージング拡張機能](../../messaging-extensions/what-are-messaging-extensions.md)を使用すると、外部の情報を検索して共有できます。 また、チャネル投稿の内容に基づいてヘルプ チケットを作成するなど、メッセージに対して操作を行うこともできます。
+[メッセージ拡張機能](../../messaging-extensions/what-are-messaging-extensions.md)を使用すると、外部の情報を検索して共有できます。 また、チャネル投稿の内容に基づいてヘルプ チケットを作成するなど、メッセージに対して操作を行うこともできます。
 
    :::column-end:::
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="Teams クライアントでメッセージング拡張機能がどのように表示されるかについての概念的な表現。" border="false":::
+:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="Teams クライアントでメッセージ拡張機能がどのように表示されるかについての概念的な表現。" border="false":::
 
    :::column-end:::
 :::row-end:::

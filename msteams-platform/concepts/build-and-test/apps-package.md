@@ -3,12 +3,12 @@ title: アプリをパッケージ化する
 description: テスト、アップロード、ストア発行用に Microsoft Teams アプリをパッケージ化する方法について説明します。
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 7b895f30230a71db5953ffebc5dce2aa04972abb
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
+ms.openlocfilehash: ec583ff0998baef7162156c8c5c5c07fde176321
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63356071"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104092"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>Microsoft Teams アプリ パッケージを作成する
 
@@ -34,7 +34,7 @@ Teams ストアに発行する場合は、マニフェストが最新の [スキ
 アプリ パッケージには、アプリ アイコンの 2 つの .png バージョン (色とアウトライン バージョン) を含める必要があります。
 
 > [!Note]
-> アプリにボットまたはメッセージング拡張機能がある場合は、アイコンもMicrosoft Azure Bot Service登録に含まれます。
+> アプリにボットまたはメッセージ拡張機能がある場合は、アイコンもMicrosoft Azure Bot Service 登録に含まれます。
 
 アプリが Teams ストア レビューに合格するには、これらのアイコンが次のサイズ要件を満たしている必要があります。
 
@@ -51,7 +51,7 @@ Teams では、アイコンが自動的にトリミングされ、複数のシ�
 アウトライン アイコンは、次の 2 つのシナリオで表示されます。
 
 * アプリが使用されていて、Teams の左側のアプリ バーで「ホスト」と表示されている場合。
-* ユーザーがアプリのメッセージング拡張機能をピン留めする場合。
+* ユーザーがアプリのメッセージ拡張機能をピン留めする場合。
 
 アイコンは 32x32 ピクセルである必要があります。 透明な背景を持つ白または白の背景を持つ透明にすることができます (他の色は許可されていません)。 アウトライン アイコンは、シンボルの周囲に余分なパディングを含めないことが必要です。
 
@@ -94,7 +94,7 @@ Teams では、アイコンが自動的にトリミングされ、複数のシ�
 
 :::image type="content" source="../../assets/images/icons/bot-icon-example.png" alt-text="チャネル内のボットでアプリ アイコンがどのように表示されるかを示す例。" border="false":::
 
-#### <a name="messaging-extension"></a>メッセージング拡張機能
+#### <a name="message-extension"></a>メッセージ拡張機能:
 
 :::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="代替テキスト" border="false":::
 

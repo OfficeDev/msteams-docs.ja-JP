@@ -5,12 +5,12 @@ description: Microsoft Teams で Office 365 コネクタを使用する方法に
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams Office365 コネクタ
-ms.openlocfilehash: 348b133ea4df73d52f8b35a2271ccf9be6f4ff8e
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: a8c4c5cc9b0db3b1bb41477e413af7c864a493c4
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398877"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104078"
 ---
 # <a name="create-and-send-messages"></a>メッセージを作成して送信する
 
@@ -52,7 +52,7 @@ ms.locfileid: "63398877"
 
 受信 Webhook または Office 365 コネクタを介してメッセージを送信するには、WEBhook URL に JSON ペイロードを投稿します。 このペイロードは、 [Office 365 コネクタ カード](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)の形式である必要があります。
 
-この JSON を使用して、テキスト入力、複数選択、日付と時刻の選択など、豊富な入力を含むカードを作成することもできます。 カードを生成して Webhook URL に投稿するコードは、ホストされている任意のサービスで実行できます。 これらのカードは、アクション可能なメッセージの一部として定義され、Teams ボットとメッセージング拡張機能で使用される [カード](~/task-modules-and-cards/what-are-cards.md)でもサポートされます。
+この JSON を使用して、テキスト入力、複数選択、日付と時刻の選択など、豊富な入力を含むカードを作成することもできます。 カードを生成して Webhook URL に投稿するコードは、ホストされている任意のサービスで実行できます。 これらのカードは、アクション可能なメッセージの一部として定義され、Teams ボットとメッセージ拡張機能で使用される [カード](~/task-modules-and-cards/what-are-cards.md)でもサポートされます。
 
 ### <a name="example-of-connector-message"></a>コネクタ メッセージの例
 

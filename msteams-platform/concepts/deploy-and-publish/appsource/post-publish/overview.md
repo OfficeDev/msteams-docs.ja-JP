@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 62bf3eb9534f0f113c0c1ec4877859ebd22e9bce
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 2a85739a5a94109aae87de4579f17fe99df8d28b
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501943"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104533"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>公開された Microsoft Teams アプリを管理する
 
@@ -29,13 +29,13 @@ ms.locfileid: "63501943"
 >
 > 以前は、アプリ タイルで省略記号を選択してリンクをコピーしました。 更新された Teams ストア エクスペリエンスを使用すると、アプリの [詳細] タブから同じものにアクセスできます。 この更新プログラムは、2022 年 3 月 1 日までに一般提供 (GA) される予定です。
 
-パートナー センターでは、アプリに変更 (新機能やメタデータなど) を送信できます。 これらの変更には、新しいレビュー プロセスが必要です。
+パートナー センターでは、アプリに変更 (新機能やメタデータなど) を送信できます。これらの変更には、新しいレビュー プロセスが必要です。
 
 更新プログラムを発行する場合は、次の情報を確認してください。
 
 * アプリ ID を変更しないでください。
 * アプリのバージョン番号を増やします。
-* パートナー センターで、更新を行うために **[新しいアプリの追加]** を選択しないでください。 代わりにアプリのページに移動します。
+* パートナー センターで、更新を行うために **[新しいアプリの追加]** を選択しないでください。代わりにアプリのページに移動します。
 
 ### <a name="app-updates-requiring-user-consent"></a>ユーザーの同意を必要とするアプリの更新
 
@@ -46,11 +46,11 @@ ms.locfileid: "63501943"
 * ボット ID を変更します。
 * ボットの一方向の通知構成を変更します。
 * ファイルのアップロードとダウンロードに対するボットのサポートを変更します。
-* メッセージング拡張機能を追加または削除します。
+* メッセージ拡張機能を追加または削除します。
 * 個人用タブを追加します。
 * チャネルとグループ タブを追加します。
 * コネクタを追加します。
-* Microsoft Azure Active Directory (Azure AD) アプリの登録に関連する構成を変更します。 詳細については、[`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo) を参照してください。
+* Microsoft Azure Active Directory (Azure AD) アプリの登録に関連する構成を変更します。詳細については、「[`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo)」を参照してください。
 
 ## <a name="fix-issues-with-your-published-app"></a>公開したアプリの問題を修正する
 

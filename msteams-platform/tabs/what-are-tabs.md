@@ -5,12 +5,12 @@ description: Teams プラットフォームでのカスタム タブの概要
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: b39d6b29704e7894e747c02323dda7d96bc6985a
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 1ab927f11588d58a68249c1213e6eae17346ac8d
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727917"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103293"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Microsoft Teams 用のタブの構築
 
@@ -31,7 +31,7 @@ ms.locfileid: "63727917"
 
 Teams には、個人用タブとチャネル タブ、またはグループ タブの 2 種類があります。 [個人用タブ](~/tabs/how-to/create-personal-tab.md)は、個人を対象としたボットと共に、個人用アプリの一部であり、1 人のユーザーを対象としています。 簡単にアクセスできるように、左側のナビゲーション バーにピン留めすることができます。 [チャネル/グループ タブ](~/tabs/how-to/create-channel-group-tab.md)は、コンテンツをチャネルやグループのチャットに配信します。また、専用の Web ベースのコンテンツまわりに関する共同作業スペースを作成するのに優れた方法です。
 
-[コンテンツ ページの作成](~/tabs/how-to/create-tab-pages/content-page.md)は、個人用タブ、チャネルまたはグループ タブ、またはタスク モジュールの一部として行えます。 [構成ページを作成](~/tabs/how-to/create-tab-pages/configuration-page.md)をすると、ユーザーは Microsoft Teams アプリを構成し、それを使用してチャネルまたはグループのチャット タブ、メッセージング拡張機能、または Office 365 コネクタを構成できます。 インストール後にユーザーがタブを再構成することを許可し、アプリケーションの[タブ削除ページを作成](~/tabs/how-to/create-tab-pages/removal-page.md)できます。 タブを含む Teams アプリをビルドする場合は、[Android と iOS の両方の Teams クライアントでタブが機能する方法](~/tabs/design/tabs-mobile.md)をテストする必要があります。 タブは、基本情報、ロケールとテーマ情報、および `entityId` または タブにあるものを特定する `subEntityId` を通して[コンテンツを取得](~/tabs/how-to/access-teams-context.md)する必要があります。
+[コンテンツ ページの作成](~/tabs/how-to/create-tab-pages/content-page.md)は、個人用タブ、チャネルまたはグループ タブ、またはタスク モジュールの一部として行えます。 [構成ページを作成](~/tabs/how-to/create-tab-pages/configuration-page.md)をすると、ユーザーは Microsoft Teams アプリを構成し、それを使用してチャネルまたはグループのチャット タブ、メッセージ拡張機能、または Office 365 コネクタを構成できます。 インストール後にユーザーがタブを再構成することを許可し、アプリケーションの[タブ削除ページを作成](~/tabs/how-to/create-tab-pages/removal-page.md)できます。 タブを含む Teams アプリをビルドする場合は、[Android と iOS の両方の Teams クライアントでタブが機能する方法](~/tabs/design/tabs-mobile.md)をテストする必要があります。 タブは、基本情報、ロケールとテーマ情報、および `entityId` または タブにあるものを特定する `subEntityId` を通して[コンテンツを取得](~/tabs/how-to/access-teams-context.md)する必要があります。
 
 アダプティブ カードを使用してタブを構築し、ボットとタブに別のバックエンドを必要としなくても、すべての Teams アプリ機能を一元化できます。 [ステージ ビュー](~/tabs/tabs-link-unfurling.md)は、Teams で全画面表示で開かれ、タブとしてピン留めされるコンテンツをレンダリングできる新しい UI コンポーネントです。既存の[リンク展開](~/tabs/tabs-link-unfurling.md)サービスが更新され、アダプティブ カードとチャット サービスを使用して URL をタブに変換するために使用されます。 タブ全体について話し合うのではなく、特定のタスク、患者、営業案件など、タブ内のサブエンティティに関する会話を行うことができる会話型サブエンティティを使用して[会話タブ](~/tabs/how-to/conversational-tabs.md)を作成できます。[タブ マージン](~/resources/removing-tab-margins.md) に変更を加えると、アプリのビルド時の開発者エクスペリエンスを向上させることができます。 タブをドラッグして目的の位置に配置すると、個人用アプリやチャネルまたはグループ チャット内のタブ位置を交換できます。
 
@@ -55,7 +55,7 @@ Teams には、個人用タブとチャネル タブ、またはグループ タ
 **シナリオ:** Teams 内に既存の Web ベース リソースを取得します。 \
 **例:** 情報提供企業の Web サイトをユーザーに提供する Teams アプリに [個人] タブを作成します。
 
-**シナリオ:** Teams ボットまたはメッセージング拡張機能にサポート ページを追加します。 \
+**シナリオ:** Teams ボットまたはメッセージ拡張機能にサポート ページを追加します。 \
 **例:** 作成する個人タブは **について** と **ヘルプの** を、Web ページ コンテンツをユーザーに提供します。
 
 **シナリオ:** 協力対話と共同作業のためにユーザーが定期的にやり取りするアイテムへのアクセスを提供します。 \

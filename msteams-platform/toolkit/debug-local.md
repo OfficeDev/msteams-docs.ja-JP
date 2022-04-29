@@ -5,16 +5,16 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: df40425e00014e3836a572dd6de02d978e15d737
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 6fd32b35a28ae0d9b1592f82a824622000c04161
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073674"
+ms.locfileid: "65104442"
 ---
 # <a name="debug-your-teams-app-locally"></a>Teams アプリをローカルでデバッグする
 
-Teams Toolkit は、Teams アプリをローカルでデバッグおよびプレビューするのに役立ちます。 デバッグとは、問題やバグをチェック、検出、修正して、プログラムが正常に実行されるようにするプロセスです。 Visual Studio Code では、タブ、ボット、メッセージング拡張機能、および Azure Functions をデバッグできます。 Teams Toolkit では、次のデバッグ機能がサポートされています:
+Teams Toolkit は、Teams アプリをローカルでデバッグおよびプレビューするのに役立ちます。 デバッグとは、問題やバグをチェック、検出、修正して、プログラムが正常に実行されるようにするプロセスです。 Visual Studio Code では、タブ、ボット、メッセージ拡張機能、および Azure Functions をデバッグできます。 Teams Toolkit では、次のデバッグ機能がサポートされています:
 
 * [デバッグの開始](#start-debugging)
 * [マルチターゲット デバッグ](#multi-target-debugging)
@@ -37,17 +37,17 @@ Teams Toolkit は、Teams アプリをローカルでデバッグおよびプレ
 
 #### <a name="multi-target-debugging"></a>マルチターゲット デバッグ
 
-Teams Toolkit では、マルチターゲット デバッグ機能を利用して、タブ、ボット、メッセージング拡張機能、および Azure Functions を同時にデバッグします。
+Teams Toolkit では、マルチターゲット デバッグ機能を利用して、タブ、ボット、メッセージ拡張機能、および Azure Functions を同時にデバッグします。
 
 #### <a name="toggle-breakpoints"></a>ブレークポイントの切り替え
 
-タブ、ボット、メッセージング拡張機能、および Azure Functions のソース コードのブレークポイントを切り替えることができます。 ブレークポイントは、Web ブラウザーで Teams アプリを操作するときに実行されます。 次の図は、ブレークポイントの切り替えを示しています。
+タブ、ボット、メッセージ拡張機能、および Azure Functions のソース コードのブレークポイントを切り替えることができます。 ブレークポイントは、Web ブラウザーで Teams アプリを操作するときに実行されます。 次の図は、ブレークポイントの切り替えを示しています。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/toggle-points.png" alt-text="ブレークポイントの切り替え":::
 
 #### <a name="hot-reload"></a>ホット リロード
 
-Teams アプリをデバッグするときに、タブ、ボット、メッセージング拡張機能、および Azure Functions のソース コードを同時に更新して保存できます。アプリが再読み込みされ、デバッガーがプログラミング言語に再アタッチされます。
+Teams アプリをデバッグするときに、タブ、ボット、メッセージ拡張機能、および Azure Functions のソース コードを同時に更新して保存できます。 アプリが再読み込みされ、デバッガーがプログラミング言語に再アタッチされます。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot-reload.png" alt-text="ソース コードのホット リロード":::
 
@@ -148,10 +148,10 @@ b. [デバッガーを起動](#launches-debuggers)   </br>
 |  コンポーネント |  タスク名  | フォルダー |
 | --- | --- | --- |
 |  Tab |  **フロントエンドの開始** |  tabs |
-|  ボットまたはメッセージング拡張機能 |  **ボットの開始** |  ボット |
+|  ボットまたはメッセージ拡張機能 |  **ボットの開始** |  ボット |
 |  Azure Functions |  **バックエンドの開始** |  API |
 
-次の図は、タブ、ボット、メッセージング拡張機能、およびAzure Functionsの実行中に、Visual Studio Code の **[出力]** **[ターミナル]** タブにタスク名を表示します。
+次の図は、タブ、ボット、メッセージ拡張機能、およびAzure Functionsの実行中に、Visual Studio Code の **[出力]** **[ターミナル]** タブにタスク名を表示します。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal.png" alt-text="アプリ サービスの開始":::
 
@@ -166,15 +166,15 @@ b. [デバッガーを起動](#launches-debuggers)   </br>
 |  コンポーネント |  デバッグ構成名  | デバッグ構成の種類 |
 | --- | --- | --- |
 |  Tab |  **フロントエンド (Edge)** アタッチするか、または **フロントエンドにアタッチ (Chrome)** します  |  pwa-msedge または pwa-chrome  |
-|  ボットまたはメッセージング拡張機能 |   **ボットにアタッチ** |  PWA ノード |
+|  ボットまたはメッセージ拡張機能 |   **ボットにアタッチ** |  PWA ノード |
 | Azure Functions |   **バックエンドにアタッチ** |  PWA ノード |
 
 次の表に、ボット アプリとタブ アプリを使用しないプロジェクトのデバッグ構成名と種類を示します。
 
 |  コンポーネント |  デバッグ構成名  | デバッグ構成の種類  |
 | --- | --- | --- |
-|  ボット、メッセージングの拡張機能  | **ボット (Edge) を起動する** か、**ボット (Chrome) を起動する**  |   pwa-msedge または pwa-chrome  |
-|  ボット、メッセージングの拡張機能  |   **ボットにアタッチ** |  PWA ノード  |
+|  ボットまたはメッセージ拡張機能  | **ボット (Edge) を起動する** か、**ボット (Chrome) を起動する**  |   pwa-msedge または pwa-chrome  |
+|  ボットまたはメッセージ拡張機能  |   **ボットにアタッチ** |  PWA ノード  |
 |  Azure Functions |  **バックエンドにアタッチ** |  PWA ノード |
 
 #### <a name="sideloads-the-teams-app"></a>Teams アプリをサイドロードする
@@ -236,19 +236,19 @@ Teams Toolkit を使用すると、いくつかの前提条件をオフにして
 
 1. タブの場合は、`tabs/package.json` の `dev:teamsfx` スクリプトを更新します。
 
-1. ボットまたはメッセージング拡張機能の場合は、`bot/package.json` で `dev:teamsfx` スクリプトを更新します。
+1. ボットまたはメッセージ拡張機能の場合は、`bot/package.json` で `dev:teamsfx` スクリプトを更新します。
 
 1. Azure Functions の場合は、`api/package.json` の `dev:teamsfx` スクリプトを更新し、TypeScript の場合は、`watch:teamsfx` スクリプトを更新します。
 
    > [!NOTE]
-   > 現時点では、タブ、ボット、メッセージング拡張機能アプリ、Azure Functions ポートはカスタマイズをサポートしていません。
+   > 現時点では、タブ、ボット、メッセージ拡張機能アプリ、Azure Functions ポートはカスタマイズをサポートしていません。
 
 </details>
 
 <details>
 <summary><b>環境変数の追加</b></summary>
 
-タブ、ボット、メッセージング拡張機能、および Azure Functions の `.env.teamsfx.local` ファイルに環境変数を追加できます。 Teams Toolkit は、ローカル デバッグ中にサービスを開始するために追加した環境変数を読み込みます。
+タブ、ボット、メッセージ拡張機能、および Azure Functions の `.env.teamsfx.local` ファイルに環境変数を追加できます。 Teams Toolkit は、ローカル デバッグ中にサービスを開始するために追加した環境変数を読み込みます。
 
  > [!NOTE]
  > 環境変数がホット リロードをサポートしていないため、新しい環境変数を追加した後、新しいローカル デバッグを開始するようにします。
@@ -259,7 +259,7 @@ Teams Toolkit を使用すると、いくつかの前提条件をオフにして
 <summary><b>部分的なコンポーネントのデバッグ</b></summary>
 
 
-Teams Toolkit は、Visual Studio Code マルチターゲット デバッグを利用して、タブ、ボット、メッセージング拡張機能、および Azure Functions を同時にデバッグします。 部分コンポーネントをデバッグするには、`.vscode/launch.json` と `.vscode/tasks.json` を更新できます。 タブとAzure Functions プロジェクトを含むボットでのみタブをデバッグする場合は、次の手順を使用します。
+Teams Toolkit は、Visual Studio Code マルチターゲット デバッグを利用して、タブ、ボット、メッセージ拡張機能、および Azure Functions を同時にデバッグします。 部分コンポーネントをデバッグするには、`.vscode/launch.json` と `.vscode/tasks.json` を更新できます。 タブとAzure Functions プロジェクトを含むボットでのみタブをデバッグする場合は、次の手順を使用します。
 
 1. コメント **[Bot にアタッチ]** し、`.vscode/launch.json` のデバッグ複合から **[バックエンドにアタッチ]**
 

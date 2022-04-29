@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: f2f0fb7e3ed57ebfdbbe3c8cd20b654c600d9623
-ms.sourcegitcommit: 8feddafb51b2a1a85d04e37568b2861287f982d3
+ms.openlocfilehash: f6a19b2c75d5e3b42e7b1b7cea7834d28e3917a9
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "59475826"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104386"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Microsoft Teams のボットをデザインする
 
@@ -92,7 +92,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 ### <a name="tours"></a>ツアー
 
-ウェルカム メッセージや "ヘルプ "コマンドのようなものにボットが応答する場合にツアーを含めることができます。 ボットにできることを説明するには、ツアーが最も効果的です。 必要に応じて、アプリのその他の機能を説明するのにも最適です。 たとえば、メッセージング拡張機能のスクリーンショットなどです。
+ウェルカム メッセージや "ヘルプ "コマンドのようなものにボットが応答する場合にツアーを含めることができます。 ボットにできることを説明するには、ツアーが最も効果的です。 必要に応じて、アプリのその他の機能を説明するのにも最適です。 たとえば、メッセージ拡張機能のスクリーンショットなどです。
 
 > [!IMPORTANT]
 > ログインしなくてもツアーに参加できることが必要です。
@@ -159,8 +159,8 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 |3|**[カスタム] タブ**: アプリに関連するその他のコンテンツを開きます。|
 |4|**[バージョン情報] タブ**: アプリの基本情報を表示します。|
 |5|**チャット バブル**: ボットの会話は、Teams のメッセージング フレームワークを使用しています。|
-|6|**アダプティブ カード**: ボットの応答にアダプティブ カードが含まれる場合、カードはチャット バブルの幅いっぱいに表示されます。|
-|7|**コマンド メニュー**: ボットの標準コマンド (ユーザーによる定義) を表示します。|
+|6 |**アダプティブ カード**: ボットの応答にアダプティブ カードが含まれる場合、カードはチャット バブルの幅いっぱいに表示されます。|
+|7 |**コマンド メニュー**: ボットの標準コマンド (ユーザーによる定義) を表示します。|
 
 ### <a name="command-menu"></a>コマンド メニュー
 
@@ -279,7 +279,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 ## <a name="manage-a-bot"></a>ボットの管理
 
-ユーザーがボットの設定を変更できるようにします。 この機能をボット コマンドで提供することもできますが、通常は [タスク モジュール](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) にすべての設定を含める方が効率的です (次に例を示します)。
+ユーザーがボットの設定を変更できるようにします。この機能をボット コマンドで提供することもできますが、通常は [タスク モジュール](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) にすべての設定を含める方が効率的です (次に例を示します)。
 
 :::image type="content" source="../../assets/images/bots/manage-bot-task-module.png" alt-text="ボットの設定を構成するタスク モジュールを示す例。" border="false":::
 

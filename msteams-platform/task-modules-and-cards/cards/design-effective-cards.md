@@ -4,18 +4,18 @@ description: Teams のアダプティブ カードをデザインして、Micros
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6d908c47585c44718e25ec92dc8e06bff0ef5c9e
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 1575cfb4e5c97aaf5b4b849a32f3244b3d0626c7
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398625"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103903"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Microsoft Teams のアプリのアダプティブ カードの設計
 
-アダプティブ カードには、カード要素のフリーフォーム本体とオプションのアクション セットが含まれています。 アダプティブ カードは、ボットまたはメッセージングの拡張機能を介してスレッドに追加できる、アクション可能なコンテンツのスニペットです。 これらのカードは、テキスト、グラフィック、ボタンを使用して、対象ユーザーにリッチなコミュニケーションを提供します。
+アダプティブ カードには、カード要素のフリーフォーム本体とオプションのアクション セットが含まれています。 アダプティブ カードは、ボットまたはメッセージの拡張機能を介してスレッドに追加できる、アクション可能なコンテンツのスニペットです。 これらのカードは、テキスト、グラフィック、ボタンを使用して、対象ユーザーにリッチなコミュニケーションを提供します。
 
-アダプティブ カード フレームワークは、Teams を含む多くの Microsoft 製品で使用されています。 メッセージ内のカードは、ボットまたはメッセージングの拡張機能を介してユーザーに送信できます。 ユーザーは、カードが存在する場合、カードに対してアクションを実行することもできます。
+アダプティブ カード フレームワークは、Teams を含む多くの Microsoft 製品で使用されています。 メッセージ内のカードは、ボットまたはメッセージの拡張機能を介してユーザーに送信できます。 ユーザーは、カードが存在する場合、カードに対してアクションを実行することもできます。
 
 :::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="アダプティブ カードの概要の例。" border="false":::
 

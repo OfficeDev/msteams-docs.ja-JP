@@ -5,12 +5,12 @@ keywords: teams ボット カード書式
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: f48cecf9938710c40634c48299e3213e0475984a
-ms.sourcegitcommit: 5e5d2d3fb621bcbd9d792a5b450f95167ec8548b
+ms.openlocfilehash: 9598ea8f241388e982d0ce0e05de0e5ed0b9e407
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63727268"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103952"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams のカードの書式設定
 
@@ -66,15 +66,15 @@ Teams カードにはインライン画像を含めることができます。 �
 
 デスクトップでは、アダプティブ カードの Markdown 書式設定は、Web ブラウザーと Teams クライアント アプリケーションの両方で次の画像のように表示されます。
 
-![デスクトップ クライアントでのアダプティブ カード Markdown の書式設定](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-desktop-client.png" alt-text="アダプティブ markdown デスクトップ クライアント":::
 
 iOS では、アダプティブ カード Markdown の書式設定が次の図のように表示されます。
 
-![iOS でのアダプティブ カード Markdown の書式設定](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-iOS-75.png" alt-text="iOS でのアダプティブ カード Markdown の書式設定":::
 
 Android では、アダプティブ カード Markdown の書式設定が次の図のように表示されます。
 
-![Android でのアダプティブ カード Markdown の書式設定](../../assets/images/cards/Adaptive-markdown-Android.png)
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-Android.png" alt-text="Android でのアダプティブ カード Markdown の書式設定":::
 
 詳細については、[「アダプティブ カード」のテキスト機能](/adaptive-cards/create/textfeatures)を参照してください。
 
@@ -123,13 +123,13 @@ Android では、アダプティブ カード Markdown の書式設定が次の�
 { "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }
 ```
 
-:::image type="content" source="~/assets/images/cards/adaptive-card-emoji.png" alt-text="絵文字付きのアダプティブ カード" lightbox="../../assets/images/Cards/adaptive-card-emoji.png" border="true":::
+:::image type="content" source="../../assets/images/Cards/adaptive-card-emoji.png" alt-text="絵文字付きのアダプティブ カード":::
 
 ### <a name="mention-support-within-adaptive-cards"></a>アダプティブ カード内でのサポートのメンション
 
-ボットとメッセージング拡張機能の応答のために、アダプティブ カード本体内に @メンションを追加できます。 カードに @メンションを追加するには、[チャネルおよびグループ チャットの会話でのメッセージ ベースのメンション](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)と同じ通知ロジックとレンダリングに従います。
+ボットとメッセージ拡張機能の応答のために、アダプティブ カード本体内に @メンションを追加できます。 カードに @メンションを追加するには、[チャネルおよびグループ チャットの会話でのメッセージ ベースのメンション](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions)と同じ通知ロジックとレンダリングに従います。
 
-ボットとメッセージング拡張機能には、カード コンテンツ内の [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) 要素と [FactSet](https://adaptivecards.io/explorer/FactSet.html) 要素に言及を含めることができます。
+ボットとメッセージ拡張機能には、カード コンテンツ内の [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) 要素と [FactSet](https://adaptivecards.io/explorer/FactSet.html) 要素に言及を含めることができます。
 
 > [!NOTE]
 >
@@ -188,7 +188,7 @@ Teams プラットフォームでは、既存の言及 ID に加えて、Azure A
 
 #### <a name="user-mention-in-bots-with-adaptive-cards"></a>アダプティブ カードを使用したボットでのユーザー メンション
 
-ボットは、既存の ID に加えて、Azure AD オブジェクト ID と UPN を使用したユーザーのメンションをサポートします。 2 つの新しい ID のサポートは、テキスト メッセージ、アダプティブ カード本体、およびメッセージング拡張応答のボットで利用できます。 ボットは、会話および `invoke` シナリオでの言及 ID をサポートします。 ユーザーは、ID で @メンションされると、アクティビティ フィード通知を受け取ります。
+ボットは、既存の ID に加えて、Azure AD オブジェクト ID と UPN を使用したユーザーのメンションをサポートします。 2 つの新しい ID のサポートは、テキスト メッセージ、アダプティブ カード本体、およびメッセージ拡張応答のボットで利用できます。 ボットは、会話および `invoke` シナリオでの言及 ID をサポートします。 ユーザーは、ID で @メンションされると、アクティビティ フィード通知を受け取ります。
 
 > [!NOTE]
 > ボットのアダプティブ カードを使用したユーザー メンションには、スキーマの更新と UI/UX の変更は必要ありません。
@@ -233,7 +233,7 @@ Teams プラットフォームでは、既存の言及 ID に加えて、Azure A
 
 次の画像は、ボットのアダプティブ カードでのユーザー メンションを示しています。
 
-![アダプティブ カードを使用したボットでのユーザー メンション](~/assets/images/authentication/user-mention-in-bot.png)
+:::image type="content" source="../../assets/images/authentication/user-mention-in-bot.png" alt-text="アダプティブ カードを使用したボットでのユーザー メンション":::
 
 #### <a name="user-mention-in-incoming-webhook-with-adaptive-cards"></a>アダプティブ カードを使用した受信 Webhook でのユーザー メンション
 
@@ -297,7 +297,7 @@ Teams プラットフォームでは、既存の言及 ID に加えて、Azure A
 
 次の図は、受信 Webhook でのユーザー メンションを示しています。
 
-![受信 Webhook でのユーザー メンション](~/assets/images/authentication/user-mention-in-incoming-webhook.png)
+:::image type="content" source="../../assets/images/authentication/user-mention-in-incoming-webhook.png" alt-text="受信 Webhook でのユーザー メンション":::
 
 ### <a name="information-masking-in-adaptive-cards"></a>アダプティブ カードの情報マスキング
 
@@ -322,7 +322,7 @@ Teams プラットフォームでは、既存の言及 ID に加えて、Azure A
 
 次の画像は、アダプティブ カードのマスキング情報の例です。
 
-![マスキング情報画像](../../assets/images/cards/masking-information-view.png)
+:::image type="content" source="../../assets/images/Cards/masking-information-view.png" alt-text="マスキング情報ビュー":::
 
 ### <a name="full-width-adaptive-card"></a>全幅アダプティブ カード
 
@@ -359,11 +359,11 @@ Teams プラットフォームでは、既存の言及 ID に加えて、Azure A
 
 次の画像は、全幅アダプティブカードを示しています。
 
-![全幅アダプティブ カード ビュー](../../assets/images/cards/full-width-adaptive-card.png)
+:::image type="content" source="../../assets/images/Cards/full-width-adaptive-card.png" alt-text="全幅アダプティブ カード ビュー":::
 
 次の画像は、`width`プロパティを **Full** に設定していない場合のアダプティブ カードの既定ビューを示しています。
 
-![小幅アダプティブ カード ビュー](../../assets/images/cards/small-width-adaptive-card.png)
+:::image type="content" source="../../assets/images/Cards/small-width-adaptive-card.png" alt-text="小幅アダプティブ カード ビュー":::
 
 ### <a name="typeahead-support"></a>先行入力のサポート
 
@@ -411,11 +411,11 @@ Teams プラットフォームでは、既存の言及 ID に加えて、Azure A
 
 ユーザーが画像にカーソルを合わせると、次の画像に示すように、右上隅に拡張アイコンが表示されます。
 
-![拡張可能な画像を備えたアダプティブ カード](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
+:::image type="content" source="../../assets/images/Cards/adaptivecard-hover-expand-icon.png" alt-text="拡張可能な画像を備えたアダプティブ カード":::
 
 次の画像に示すように、ユーザーが拡張アイコンを選択すると、画像がステージ ビューに表示されます。
 
-![ステージ ビューに拡張された画像](../../assets/images/cards/adaptivecard-expand-image.png)
+:::image type="content" source="../../assets/images/Cards/adaptivecard-expand-image.png" alt-text="ステージ ビューに拡張された画像":::
 
 ステージ ビューでは、ユーザーは画像を拡大および縮小できます。 この機能が必要なアダプティブ カードの画像を選択できます。
 
@@ -447,11 +447,11 @@ Teams プラットフォームでは、既存の言及 ID に加えて、Azure A
 
 デスクトップでは、次の図に示すように、コネクタ カードの Markdown 書式設定が表示されます。
 
-![デスクトップ クライアントでのコネクタ カードの Markdown の書式設定](../../assets/images/cards/connector-desktop-markdown-combined.png)
+:::image type="content" source="../../assets/images/Cards/connector-desktop-markdown-combined.png" alt-text="コネクタ カードの Markdown 書式設定":::
 
 iOS では、次の図に示すように、コネクタ カードの Markdown 書式設定が表示されます。
 
-![iOS クライアントのコネクタ カードの Markdown 書式設定](../../assets/images/cards/connector-iphone-markdown-combined-80.png)
+:::image type="content" source="../../assets/images/Cards/connector-iphone-html-combined-80.png" alt-text="iOS クライアントのコネクタ カードの Markdown 書式設定":::
 
 iOS 用 Markdown を使用するコネクタ カードには、次の問題があります。
 
@@ -460,7 +460,7 @@ iOS 用 Markdown を使用するコネクタ カードには、次の問題が�
 
 Android では、次の図に示すように、コネクタ カードの Markdown の書式設定が表示されます。
 
-![Android クライアントのコネクタ カードの Markdown の書式設定](../../assets/images/cards/connector-android-markdown-combined.png)
+:::image type="content" source="../../assets/images/Cards/connector-android-markdown-combined.png" alt-text="Android クライアントのコネクタ カードの Markdown の書式設定":::
 
 ### <a name="format-example-for-markdown-connector-cards"></a>Markdown コネクタ カードの書式の例
 
@@ -545,11 +545,11 @@ Android では、次の図に示すように、コネクタ カードの Markdow
 
 デスクトップでは、次の画像に示すように、コネクタ カードの HTML 書式設定が表示されます。
 
-![デスクトップ クライアントのコネクタ カードの HTML 書式設定](../../assets/images/cards/Connector-desktop-html-combined.png)
+:::image type="content" source="../../assets/images/Cards/Connector-desktop-html-combined.png" alt-text="デスクトップ クライアントのコネクタ カードの HTML 書式設定":::
 
 iOS では、次の図に示すように HTML 書式設定が表示されます。
 
-![iOS クライアントのコネクタ カードの HTML 書式設定](../../assets/images/cards/connector-iphone-html-combined-80.png)
+:::image type="content" source="../../assets/images/Cards/connector-iphone-html-combined-80.png" alt-text="iOS クライアントのコネクタ カードの HTML 書式設定":::
 
 iOS 用 HTML を使用するコネクタ カードには、次の問題があります。
 
@@ -558,7 +558,7 @@ iOS 用 HTML を使用するコネクタ カードには、次の問題があり
 
 Android では、次の図に示すように HTML 書式設定が表示されます。
 
-![Android クライアントのコネクタ カードの HTML 書式設定](../../assets/images/cards/connector-android-html-combined.png)
+:::image type="content" source="../../assets/images/Cards/connector-android-html-combined.png" alt-text="Android クライアントのコネクタ カードの HTML 書式設定":::
 
 ### <a name="format-sample-for-html-connector-cards"></a>HTML コネクタ カードの書式のサンプル
 
@@ -635,17 +635,17 @@ HTML タグは、ヒーロー カードやサムネイル カードなどの簡�
 
 デスクトップでは、次の図に示すように HTML 書式設定が表示されます。
 
-![デスクトップ クライアントでの HTML 書式設定](../../assets/images/cards/card-formatting-xml-desktop-v2.png)
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-desktop-v2.png" alt-text="デスクトップ クライアントでの HTML 書式設定":::
 
 iOS では、次の図に示すように HTML 書式設定が表示されます。
 
-![iOS クライアントの HTML 書式設定](../../assets/images/cards/card-formatting-xml-mobile-v2.png)
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-mobile-v2.png" alt-text="iOS クライアントの HTML 書式設定":::
 
 太字や斜体などの文字の書式設定は、iOS ではレンダリングされません。
 
 Android では、次の図に示すように HTML 書式設定が表示されます。
 
-![Android クライアントでの HTML 書式設定](../../assets/images/cards/card-formatting-xml-android-60.png)
+:::image type="content" source="../../assets/images/Cards/card-formatting-xml-android-60.png" alt-text="Android クライアントでの HTML 書式設定":::
 
 Android で太字や斜体などの文字の書式設定が正しく表示されます。
 

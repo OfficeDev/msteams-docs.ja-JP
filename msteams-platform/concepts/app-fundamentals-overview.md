@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: エントリ ポイントの拡張性のユース ケースデバイス機能
-ms.openlocfilehash: 13ad637e4e6ef6831d5d268d866538c6ce99e33f
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: f91ae1de96845c913d5001660a1e9f09985ca25a
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073112"
+ms.locfileid: "65104029"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Teams の機能を使用してアプリを計画する
 
@@ -56,7 +56,7 @@ ms.locfileid: "65073112"
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Teams ソリューションの概念表現" border="true":::
 
-    アプリは、タブ、ボット、メッセージング拡張機能、コネクタ、Webhook として、またはマルチ機能アプリとして Teams に表示されます。 これらの機能は、タスクとプロセスの自動化に役立つ Azure、Microsoft Graph、SharePoint、Power アプリによってバックエンドに搭載されています。
+    アプリは、タブ、ボット、メッセージ拡張機能、コネクタ、Webhook として、またはマルチ機能アプリとして Teams に表示されます。 これらの機能は、タスクとプロセスの自動化に役立つ Azure、Microsoft Graph、SharePoint、Power アプリによってバックエンドに搭載されています。
 
     これらの機能を組み合わせることで、アプリ ソリューションが実現します。
 
@@ -82,7 +82,7 @@ Government Community Cloud (GCC) は、政府機関向けの商用環境のコ�
 | カスタム タブ アプリまたは LOB タブ アプリ |  ✔️ | ✔️ | ✔️ |
 | アプリのサイドローディング | ✔️ | ❌ | ❌ |
 | カスタム ボットまたは LOB ボット | ✔️ | ❌ | ❌ |
-| メッセージング拡張機能を作成する | ❌ | ❌ | ❌ |
+| カスタム メッセージ拡張機能 | ❌ | ❌ | ❌ |
 | カスタム コネクタ | ❌ | ❌ | ❌ |
 
 次のリストは、機能に対する GCC、GCC-High、および DOD の可用性を特定するのに役立ちます。

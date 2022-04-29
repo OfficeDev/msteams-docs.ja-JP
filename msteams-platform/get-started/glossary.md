@@ -4,12 +4,12 @@ description: 開発者向けドキュメント Microsoft Teams 用語集
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams 開発者定義
-ms.openlocfilehash: bbfb59d2dec2f72bb94aae1b241554ebc5de3211
-ms.sourcegitcommit: 2863b7537f414517c0fe751f135b39978eb749bf
+ms.openlocfilehash: 1f97cd46ae8096830b2f46c80f4ffc13212eebd8
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2022
-ms.locfileid: "63625999"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65103994"
 ---
 # <a name="glossary"></a>用語集
 
@@ -19,8 +19,8 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 
 | 用語 | 定義 |
 | --- | --- |
-| [アクション コマンド](../messaging-extensions/how-to/action-commands/define-action-command.md) | ポップアップを使用して情報を収集または表示するメッセージング拡張機能アプリの種類。 <br>**関連情報**: 「[メッセージング拡張機能](#m); [検索コマンド](#s) |
-| [アダプティブ カード](../task-modules-and-cards/what-are-cards.md) | ボットまたはメッセージング拡張機能によって会話に追加されたアクション可能なコンテンツ スニペット。 リッチ コミュニケーションのために、これらのカードでテキスト、グラフィックス、ボタンを使用します。 |
+| [アクション コマンド](../messaging-extensions/how-to/action-commands/define-action-command.md) | ポップアップを使用して情報を収集または表示するメッセージ拡張機能アプリの種類。 <br>**関連情報**: 「[メッセージ拡張機能](#m); [検索コマンド](#s) |
+| [アダプティブ カード](../task-modules-and-cards/what-are-cards.md) | ボットまたはメッセージ拡張機能によって会話に追加されたアクション可能なコンテンツ スニペット。 リッチ コミュニケーションのために、これらのカードでテキスト、グラフィックス、ボタンを使用します。 |
 | [匿名ユーザー](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | Azure AD ID を持っておらず、テナントとフェデレーションされていない Teams 会議の参加者の種類。これらは、会議の外部ユーザーのようなものです。 <br>**関連情報**: [フェデレーション ユーザー](#f) |
 | [アプリ カタログ](../toolkit/publish.md) | 組織の内部使用のために SharePoint アプリと Office アプリを格納するサイト。 <br>**関連情報**: [SPFx](#s) |
 | [アプリ マニフェスト](../resources/schema/manifest-schema.md) | Teams アプリ マニフェストは、アプリが Microsoft Teams 製品にどのように統合されるかを説明します。 マニフェストは、最新の[マニフェスト スキーマ](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json)に適合している必要があります。 |
@@ -49,14 +49,14 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 | 用語 | 定義 |
 | --- | --- |
 | [通話ボット](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | 音声通話またはビデオ通話とオンライン会議に参加するボット。 <br> **関連情報**: [チャット ボット](#c); [会議ボット](#m) |
-| [機能](../toolkit/add-capability.md) | アプリ ユーザーと対話するためにアプリに組み込むことができる Teams 機能。 アプリの機能は、アプリのニーズに合わせて Teams を拡張するために使用されます。 アプリには、タブ、ボット、メッセージング拡張機能などの 1 つ以上のコア機能が含まれる場合があります。 <br>**以下も参照してください**: [デバイス機能](#d); [メディア機能](#m) |
+| [機能](../toolkit/add-capability.md) | アプリ ユーザーと対話するためにアプリに組み込むことができる Teams 機能。 アプリの機能は、アプリのニーズに合わせて Teams を拡張するために使用されます。 アプリには、タブ、ボット、メッセージ拡張機能などの 1 つ以上のコア機能が含まれる場合があります。 <br>**以下も参照してください**: [デバイス機能](#d); [メディア機能](#m) |
 | [チャット ボット](../bots/how-to/conversations/conversation-basics.md) | ボットは、チャットボットまたは会話ボットとも呼ばれます。 これは、カスタマー サービスやサポート スタッフなどのユーザーが単純で反復的なタスクを実行するアプリです。 <br> **以下も参照してください**: [会話ボット](#c) |
 | チャネル | チームがメッセージ、ツール、ファイルを 1 か所で共有できます。 チームワークとコミュニケーションにチャネルを使用できます。 <br>**関連情報**: [会話](#c) |
 | [クライアント シークレット](../bots/how-to/authentication/add-authentication.md) | クライアントシークレット/パスワード、または証明書である公開キーまたは秘密キーのペア。 ネイティブ アプリには必要ありません。 <br> **関連情報**: [ボット](#b) |
 | [クラウド リソース](../toolkit/add-resource.md) | Teams アプリが使用できるインターネットを経由してクラウド上で利用できるサービス。 ストレージ アカウント、Web アプリ、データベースなどです。 |
 | [コラボレーション アプリ](../concepts/extensibility-points.md) | ユーザーが他のユーザーと共同作業ワークスペースで作業するための機能を備えたアプリ。 <br> **関連情報**: [スタンドアロン アプリ](#s) |
-| [拡張機能の作成](../resources/schema/manifest-schema.md#composeextensions) | メッセージング拡張機能を参照するアプリ マニフェスト (`composeExtensions`) のプロパティ。 これは、拡張機能を認証するか、続行するように構成する必要がある場合に使用されます。 <br>**関連情報**: [アプリ マニフェスト](#a); [メッセージング拡張機能](#m) |
-| [コマンド ボックス](../resources/schema/manifest-schema.md) | Teams コマンド ボックスからメッセージング拡張機能を呼び出すように構成できるアプリ マニフェスト (`commandBox`) のコンテキストの種類。 |
+| [拡張機能の作成](../resources/schema/manifest-schema.md#composeextensions) | メッセージ拡張機能を参照するアプリ マニフェスト (`composeExtensions`) のプロパティ。 これは、拡張機能を認証するか、続行するように構成する必要がある場合に使用されます。 <br>**関連情報**: [アプリ マニフェスト](#a); [メッセージ拡張機能](#m) |
+| [コマンド ボックス](../resources/schema/manifest-schema.md) | Teams コマンド ボックスからメッセージ拡張機能を呼び出すように構成できるアプリ マニフェスト (`commandBox`) のコンテキストの種類。 |
 | [Connector](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) | これを使用して、ユーザーは Web サービスから通知とメッセージを受信するようにサブスクライブできます。 コネクタにより、サービスが Teams チャネルにメッセージを投稿するための HTTPS エンドポイントが通常はカードの形式で公開されます。 <br> **関連情報**: [Webhook](#w) |
 | 会話 | Microsoft Teams アプリ (タブまたはボット) と 1 人以上のユーザーの間で送信される一連のメッセージ。 会話には、チャネル、個人用、グループ チャットの 3 つのスコープを設定できます。 <br>**関連情報**: [1 対 1 チャット](#o); [グループ チャット](#g); [チャネル](#c) |
 | [会話型ボット](../bots/how-to/conversations/conversation-messages.md) |  これにより、ユーザーはテキスト、対話型カード、タスク モジュールを使用して Web サービスと対話できます。 <br>**関連情報** [チャット ボット](#c) |
@@ -108,7 +108,7 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 
 | 用語 | 定義 |
 | --- | --- |
-| [リンク展開](../messaging-extensions/how-to/link-unfurling.md) | メッセージ作成領域に貼り付けられたリンクを展開するためにメッセージング拡張機能と会議で使用される機能。 リンクが展開され、リンクに関する追加情報が アダプティブ カード または会議ステージ ビューに表示されます。 |
+| [リンク展開](../messaging-extensions/how-to/link-unfurling.md) | メッセージ作成領域に貼り付けられたリンクを展開するためにメッセージ拡張機能と会議で使用される機能。 リンクが展開され、リンクに関する追加情報が アダプティブ カード または会議ステージ ビューに表示されます。 |
 | [ローカル環境](../toolkit/teamsfx-multi-env.md#create-a-new-environment) | Teams Toolkit によって作成される既定の開発環境。  <br>**関連情報**: [環境](#e); [開発環境](#d) |
 | [ローカル ワークベンチ](../sbs-gs-spfx.yml) | SPFx を使用して作成された Visual Studio Code で Teams アプリを実行およびデバッグするための既定のオプション。 <br>**関連情報**: [Workbench](#w); [Teams ワークベンチ](#t) |
 | [場所機能](../concepts/device-capabilities/location-capability.md) | アプリと統合して、アプリ ユーザーの場所を把握し、コラボレーション エクスペリエンスを強化できるデバイス機能。この機能は現在、Teams モバイル クライアントでのみ使用できます。 <br>**関連情報**: [機能](#c); [メディア機能](#m); [デバイス](#d); [Teams モバイル](#t) |
@@ -120,9 +120,9 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 | --- | --- |
 | [メディア機能](../concepts/device-capabilities/mobile-camera-image-permissions.md) | カメラやマイクなど、Teams アプリと統合できるネイティブ デバイス機能。 <br>**関連情報**: [機能](#c); [デバイス機能](#d) |
 | [会議ボット](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | リアルタイムの音声、ビデオ、画面共有を使用して Teams の通話や会議と対話するボット。 <br>**関連情報**: [通話ボット](#c); [チャット ボット](#c) |
-| [会議のライフサイクル](../apps-in-teams-meetings/meeting-app-extensibility.md#meeting-lifecycle) | これは、会議前、会議中、および会議後のアプリ エクスペリエンスに及びます。 会議のライフサイクルの各段階で、タブ、ボット、メッセージング拡張機能を統合できます。 <br>**関連情報**: [会議中エクスペリエンス](#i) |
+| [会議のライフサイクル](../apps-in-teams-meetings/meeting-app-extensibility.md#meeting-lifecycle) | これは、会議前、会議中、および会議後のアプリ エクスペリエンスに及びます。 会議のライフサイクルの各段階で、タブ、ボット、メッセージ拡張機能を統合できます。 <br>**関連情報**: [会議中エクスペリエンス](#i) |
 | [会議ステージ](../sbs-meetings-stage-view.yml) | 会議拡張機能アプリの機能。 会議中にすべての参加者がアクセスできる共有スペースです。 これは、参加者がリアルタイムでアプリ コンテンツと対話して共同作業するのに役立ちます。 <br>**関連情報**: [ステージ ビュー](#s) |
-| [メッセージング拡張機能](../messaging-extensions/what-are-messaging-extensions.md) | メッセージング拡張機能は、アプリのコンテンツを挿入したり、メッセージを操作したりするためのショートカットです。会話から離れることなく、メッセージング拡張機能を使用できます。 <br>**関連情報**: [検索コマンド](#s); [アクション コマンド](#a) |
+| [メッセージ拡張機能](../messaging-extensions/what-are-messaging-extensions.md) | メッセージ拡張機能は、アプリのコンテンツを挿入したり、メッセージを操作したりするためのショートカットです。会話から離れることなく、メッセージ拡張機能を使用できます。 <br>**関連情報**: [検索コマンド](#s); [アクション コマンド](#a) |
 | [会議の拡張機能](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | ホワイトボード、ダッシュボードなど、会議のライフサイクル中に生産性を高めるために使用するように設計されたアプリ。 |
 | [Microsoft 365 アカウント](../toolkit/accounts.md#microsoft-365-developer-account-types) | Microsoft 365 アカウントには、25 のユーザー ライセンスを含めることができますが、開発目的のみの使用となります。 |
 | [Microsoft 365 開発者プログラム](../toolkit/accounts.md)| Microsoft 365 開発者プログラムは、Microsoft 365 を拡張するアプリの構築に役立ちます。 |
@@ -138,7 +138,7 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 | --- | --- |
 | [Office 365 コネクタ](../webhooks-and-connectors/how-to/connectors-creating.md) | 受信 Webhook のカスタム構成ページを作成し、Teams アプリの一部としてパッケージ化できます。 主に Office 365 コネクタ カードを使用してメッセージを送信し、それらに限られたカード アクションのセットを追加できます。 |
 | [送信 Webhook](../webhooks-and-connectors/how-to/add-outgoing-webhook.md) | 送信 Webhook はボットとして機能し、@mention を使用してチャネル内のメッセージを検索します。 外部 Web サービスに通知を送信し、カードや画像などの豊富なメッセージで応答します。 <br>**関連情報**: [Webhook](#w); [着信 Webhook](#i) |
-| [Outlook チャネル](../m365-apps/extend-m365-teams-message-extension.md#add-an-outlook-channel-for-your-bot) | ユーザーが Microsoft Outlook から操作できるようにする Teams メッセージング拡張機能アプリの機能。 |
+| [Outlook チャネル](../m365-apps/extend-m365-teams-message-extension.md#add-an-outlook-channel-for-your-bot) | ユーザーが Microsoft Outlook から操作できるようにする Teams メッセージ拡張機能アプリの機能。 |
 | [1 対 1 のチャット](../resources/bot-v3/bot-conversations/bots-conv-personal.md) | Teams 個人用ボット アプリと 1 人のユーザー間のチャットの種類。 <br>**関連情報**: [グループ チャット](#g); [チャット ボット](#c) |
 
 ## <a name="p"></a>P
@@ -163,7 +163,7 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 
 | 用語 | 定義 |
 | --- | --- |
-| [検索コマンド](../messaging-extensions/how-to/search-commands/define-search-command.md) | ユーザーが外部システムを検索し、カードを使用して検索結果をメッセージに含めることができるメッセージング拡張機能アプリの種類。 <br>**関連情報**: [メッセージング拡張機能](#m); [アクション コマンド](#a) |
+| [検索コマンド](../messaging-extensions/how-to/search-commands/define-search-command.md) | ユーザーが外部システムを検索し、カードを使用して検索結果をメッセージに含めることができるメッセージ拡張機能アプリの種類。 <br>**関連情報**: [メッセージ拡張機能](#m); [アクション コマンド](#a) |
 | [シーケンシャル ワークフロー](../task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md) | ボットがユーザー応答に基づいてユーザーとの会話を実行できるようにするワークフロー。 |
 | [共有アプリ](../concepts/extensibility-points.md#shared-app-experiences) | ユーザーが共同作業や対話を行うことができるチーム、チャネル、またはチャットに存在するアプリ。 <br>**関連情報:** 個人用アプリ |
 | [SharePoint サイト コレクション](../sbs-gs-spfx.yml) | SharePoint アプリのコレクション サイト。SharePoint サイトに SPFx ベースのアプリを展開するには、このサイトの管理者アカウントが必要です。 <br>**関連情報**: SPFx |
@@ -184,7 +184,7 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 | [タブ チャット](../tabs/how-to/conversational-tabs.md) | 動的タブでユーザーが優先会話エクスペリエンスを持つタブの種類。 |
 | [タスク モジュール](../task-modules-and-cards/what-are-task-modules.md) | タスクを完了したり、ビデオを表示したり、ダッシュボードを表示したりするためのモーダル ポップアップを作成する Teams アプリの機能。 |
 | [スレッド ディスカッション](../tabs/design/tabs.md#thread-discussion) | ユーザー間のチャネルまたはチャットに投稿された会話。 <br>**関連情報** [会話](#c); [チャネル](#c) |
-| [Teams](../overview.md) | Microsoft Teams は、組織にとって最高のメッセージング アプリです。リアルタイムのコラボレーションやコミュニケーション、会議、ファイルやアプリの共有ができるワークスペースです。 |
+| [Teams](../overview.md) | Microsoft Teams は、組織にとって最高のメッセージ アプリです。リアルタイムのコラボレーションやコミュニケーション、会議、ファイルやアプリの共有ができるワークスペースです。 |
 | [Teams ツールキット](../toolkit/teams-toolkit-fundamentals.md) | Microsoft Teams ツールキットを使用すると、Visual Studio Code 環境内で直接カスタムの Teams アプリを構築できます。  |
 | [TeamsFx](../toolkit/teamsfx-cli.md) | TeamsFx は、Teams アプリケーションの開発を加速するテキスト ベースのコマンド ライン インターフェイスです。TeamsFx CLI とも呼ばれます。|
 | [TeamsFx SDK](../toolkit/teamsfx-sdk.md) | TeamsFx SDK は、TeamsFx ツールキットまたは CLI を使用してスキャフォールディングされたプロジェクトで事前構成されています。 |
