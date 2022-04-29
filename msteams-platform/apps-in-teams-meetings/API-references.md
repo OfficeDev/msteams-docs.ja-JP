@@ -4,14 +4,14 @@ author: surbhigupta
 description: 例とコード サンプルを含む会議アプリ API リファレンスを特定する
 ms.topic: conceptual
 ms.author: lajanuar
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: Teams アプリ会議ユーザー参加者ロール API ユーザー コンテキスト通知シグナル クエリ
-ms.openlocfilehash: 150a0bec1d8566392914ffeaf4990de21e3ec7de
-ms.sourcegitcommit: ca902f505a125641c379a917ee745ab418bd1ce6
+ms.openlocfilehash: 4f04d94d5fd9d1b38f7569db658fac10ccaa2650
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63464253"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111354"
 ---
 # <a name="meeting-apps-api-references"></a>会議アプリ API リファレンス
 
@@ -422,7 +422,7 @@ Hello I’m Cortana, welcome to my meeting.
 ```
 
 > [!Note]  
-> 各 POST 要求では、キャプションの新しい行が生成されます。 エンド ユーザーがコンテンツを読む十分な時間を確保するために、各 POST 要求の本文を 80 から 120 文字に制限してください。
+> POST 要求ごとに、キャプションの新しい行が生成されます。エンド ユーザーがコンテンツを読む十分な時間を確保するために、各 POST 要求本文を 80 から 120 文字に制限します。
 
 ### <a name="error-codes"></a>エラー コード
 
@@ -431,9 +431,9 @@ Hello I’m Cortana, welcome to my meeting.
 |エラー コード|説明|
 |---|---|
 | **400** | 要求が正しくありません。 応答本文に、詳細な情報があります。 たとえば、必要なパラメーターの一部が提示されていません。|
-| **401** | 権限がありません。 トークンが正しくないか、有効期限が切れています。 このエラーが発生した場合は、Teams で新しい CART URL を生成してください。 |
+| **401** | 承認されていません。不適切な/期限切れのトークンです。このエラーが発生した場合は、Teams で新しい CART URL を生成してください。 |
 | **404** | 会議が見つからないか、開始されていません。 このエラーが発生した場合は、会議を開始してキャプションの開始を選択したことを確認してください。 会議でキャプションを有効にした後、会議へのキャプションの POST を開始できます。|
-| **500** |内部サーバー エラー。 詳細については、[サポートにお問い合わせいただくか、フィードバックをお寄せください](../feedback.md)。|
+| **500** |内部サーバー エラーです。詳細については、「[サポートにお問い合わせいただくかフィードバックをお寄せください](../feedback.md)」を参照してください。|
 
 ## <a name="share-app-content-to-stage-api"></a>アプリ コンテンツをステージに共有する API
 

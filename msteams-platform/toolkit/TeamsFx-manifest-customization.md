@@ -1,21 +1,21 @@
 ---
-title: Teams Toolkitでアプリ マニフェストTeamsカスタマイズする
+title: Teams Toolkit で Teams アプリ マニフェストをカスタマイズする
 author: zyxiaoyuer
 description: Teams アプリ マニフェストをカスタマイズする
 ms.author: nliu
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: de85674891a53c1e87b43ae1d472daf35716c348
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
-ms.translationtype: MT
+ms.openlocfilehash: 28a06da170ee52e4340aa3d401d39ad08f58e2ba
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073541"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65110261"
 ---
-# <a name="customize-app-manifest-in-toolkit"></a>Toolkitでアプリ マニフェストをカスタマイズする
+# <a name="customize-app-manifest-in-toolkit"></a>Toolkit でアプリ マニフェストをカスタマイズする
 
-Teams Toolkitは、ローカル環境とリモート環境のフォルダー下にある次のマニフェスト テンプレート ファイルで`manifest.template.json`構成されます。
+Teams Toolkit は、ローカル環境とリモート環境の `manifest.template.json` フォルダーにある次のマニフェスト テンプレート ファイルで構成されています。
 
 * `manifest.template.json`
 * `templates/appPackage`
@@ -26,19 +26,19 @@ Teams Toolkitは、ローカル環境とリモート環境のフォルダー下�
 * [Teams Toolkit の最新バージョン](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)をインストールします。
 
 > [!TIP]
-> Visual Studio Codeでアプリ プロジェクトTeams開かれていることを確認します。
+> Teams アプリ プロジェクトが Visual Studio Code で開かれていることを確認します。
 
-ローカル デバッグまたはプロビジョニング中に、Teams Toolkitから構成`state.{env}.json`を使用してマニフェスト`manifest.template.json`を読み込み、`config.{env}.json`[開発ポータル](https://dev.teams.microsoft.com/apps)でチーム アプリを作成します。
+ローカル デバッグまたはプロビジョニング中に、Teams Toolkit は `manifest.template.json` からマニフェストを読み込みます。 `state.{env}.json`、`config.{env}.json` の構成を使用して、[Dev Portal](https://dev.teams.microsoft.com/apps) で Teams アプリを作成します。
 
 
 ## <a name="placeholders-supported-in-manifesttemplatejson"></a>manifest.template.json でサポートされているプレースホルダー
 
-* `{{state.xx}}`は定義済みのプレースホルダーであり、値は Teams Toolkit `state.{env}.json`によって解決されます。. 状態の値を変更しないようにしてください。{env}.json
-* `{{config.manifest.xx}}` はカスタマイズされたプレースホルダーであり、その値は `config.{env}.json`
+* `{{state.xx}}` は定義済みのプレースホルダーであり、その値は Teams Toolkit によって解決されます。これは、`state.{env}.json` で定義されています。 state.{env}.json の値を変更しないようにします。
+* `{{config.manifest.xx}}` はカスタマイズされたプレースホルダーであり、値は `config.{env}.json` から解決されます
 
-  1. カスタマイズされたパラメーターは、次のように追加できます。
-      1. manifest.template.json に次のパターンを含むプレースホルダーを追加します。 `{{config.manifest.xx}}`
-      2. config に構成値を追加します。{env}.json
+  1. 次のようにカスタマイズされたパラメーターを追加できます。
+      1. manifest.template.json に次のパターンのプレースホルダーを追加します: `{{config.manifest.xx}}`
+      2. config.{env}.json に構成値を追加します。
 
         ```json
         {
@@ -48,8 +48,8 @@ Teams Toolkitは、ローカル環境とリモート環境のフォルダー下�
         }
         ```
 
-   2. 構成ファイルに移動するには、いずれかの構成プレースホルダー [構成 **ファイルに移動** ] または [ **状態ファイルの表示** ] を選択します。 `manifest.template.json`
+   2. 構成ファイルに移動するには、いずれかの構成プレースホルダーを選択 **構成ファイルに移動する** か、`manifest.template.json` で **状態ファイルを表示**
 
 ## <a name="see-also"></a>関連項目
 
-[Teams Toolkitでアプリ マニフェストTeamsプレビューする](TeamsFx-manifest-preview.md)
+[Teams Toolkit で Teams アプリ マニフェストをプレビューする](TeamsFx-manifest-preview.md)

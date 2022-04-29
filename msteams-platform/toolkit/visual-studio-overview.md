@@ -2,16 +2,16 @@
 title: Teams Toolkit と Visual Studio を使用してアプリを構築する
 description: Microsoft Teams Toolkitを使用してVisual Studio内に直接優れたカスタム アプリの構築をはじめましょう。 Visual Studioでアプリを構成し、アプリを検証し、Visual Studioおよび開発者ポータルから発行する方法について説明します。
 keywords: teams Visual Studio ツールキット
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: overview
 ms.date: 1/13/2022
 ms.author: johmil
-ms.openlocfilehash: c34f1113cd4da5f1b416dba6bc950b3588accecf
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 751ea9b8a0f4592c5884c4d49450972cef7e6623
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453431"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111312"
 ---
 # <a name="teams-toolkit-for-visual-studio"></a>Visual Studio 用 Teams ツールキット
 
@@ -24,7 +24,7 @@ Teams ToolkitのVisual Studio用拡張機能を使用すると、Teams用の新�
 >[!NOTE]
 > 前提条件として、Visual Studio 2022 17.1 Preview 2 以降を使用していることを確認し、以下の手順に従ってください。
 
-1. Visual Studio 2022 17.1 Preview 2 が既にインストールされている場合は、次の手順に進みます。 それ以外の場合は、[Visual Studio 2022 Preview をインストール](https://visualstudio.microsoft.com/vs/preview/)します。
+1. Visual Studio 2022 17.1 Preview 2 が既にインストールされている場合は、次の手順にスキップします。それ以外の場合は、[Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/) をインストールします。
 2. Visual Studio インストーラーを開きます。
 3. 既存の VS 2022 プレビュー インストールの **[変更]** を選択します。
 4. **ASP.NET と Web 開発** のワークロードを選択します。
@@ -46,8 +46,8 @@ Microsoft Teams アプリ プロジェクト テンプレートを使用する�
 1. スタート ウィンドウで、[ **新しいプロジェクトの作成**] を選択します。
 1. [**テンプレートの検索**] ボックスにMicrosoft Teams アプリと入力します。
 1. **Microsoft Teamsアプリ** テンプレートを選択し、[**次へ**] を選択します。
-1. [**新しいプロジェクトの構成]** ウィンドウで、**Project名** ボックスに _「HelloTeams_」とタイプまたは入力します。 その後、**[作成]** を選択します。
-1. [**新しいTeamsアプリケーションの作成**] ウィンドウで、**[アカウントの選択]** セレクターを使用してMicrosoft 365 アカウントを選択またはサインインします。 その後、**[作成]** を選択します。
+1. **[新しいプロジェクトの構成]** ウィンドウで、**[プロジェクト名]** ボックスに、「_HelloTeams_」と入力します。それから **[作成]** を選択します。
+1. **[新しい Teams アプリケーションの作成]** ウィンドウで、**[アカウントの選択]** セレクターを使用して、Microsoft 365 アカウントを選択するかサインインします。それから **[作成]** を選択します。
 
 ![Visual Studioで新しいMicrosoft Teamsアプリ プロジェクトを作成する。](images/teams-toolkit-vs-new-project.png)
 

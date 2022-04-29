@@ -3,14 +3,14 @@ title: ボットと SDK
 author: surbhigupta
 description: Microsoft Teams ボットを構築するためのツールと SDK の概要。
 ms.topic: overview
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 52f933aaddd5a02319ae1c0a35e9a4a26b617b57
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: b579444f23a629b58497e27245807e7086ad8c75
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104323"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111284"
 ---
 # <a name="bots-and-sdks"></a>ボットと SDK
 
@@ -36,7 +36,7 @@ Teams ボットは以下から構成されます。
 
 * Office 365 コネクタ カードなどの専用のカードを使用する。
 * アクティビティに関する Teams 固有のチャネル データを設定する。
-* メッセージ拡張機能要求を処理します。
+* メッセージ拡張要求を処理する。
 
 > [!IMPORTANT]
 > 任意の Web プログラミング技術で Teams アプリを開発し、[Bot Framework REST API](/bot-framework/rest-api/bot-framework-rest-overview) を直接呼び出すことができますが、すべてのケースでトークン処理を実行する必要があります。
