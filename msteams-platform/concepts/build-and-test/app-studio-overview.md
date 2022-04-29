@@ -4,17 +4,17 @@ description: App Studio を使用して Microsoft Teams で優れたアプリの
 keywords: App Studio Teams の開始
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 3c87edeaf7404e0a9f362f1233cd543c7a0d963a
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 175d4718e91a8ebe2c72b3c06530952fe007baf9
+ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103917"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65135718"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Microsoft Teams 用の App Studio を使用してアプリを管理する
 
 > [!TIP]
-> **開発者ポータルを試す**: App Studio が進化しました。 新しい[開発者ポータル](https://dev.teams.microsoft.com/)を使用して Teams アプリを構成、配布および管理する。
+> **開発者ポータルを試す**: App Studio が進化しました。 新しい[開発者ポータル](https://dev.teams.microsoft.com/)を使用して Teams アプリを構成、配布および管理する。 <br> App Studio は、2022 年 6 月 30 日までに非推奨になります。
 
 App Studio を使用すると、Microsoft Teams アプリの作成や統合を簡単に始めることができます。自分の組織用にカスタム アプリを開発する場合も、世界各地のチーム用に SaaS アプリケーションを開発する場合も、App Studio ではマニフェストの作成とアプリのパッケージングが合理化され、Card Editor や React 制御ライブラリなどの便利なツールが提供されます。
 
