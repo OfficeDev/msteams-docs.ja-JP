@@ -1,104 +1,104 @@
 ---
-title: メッセージング拡張機能のデザイン
-description: Teams のメッセージング拡張機能をデザインして、Microsoft Teams UI Kit を取得する方法をご紹介します。
-keywords: Teams デザイン ガイドライン リファレンス メッセージング拡張機能のヒント ベスト プラクティス
+title: メッセージ拡張機能のデザイン
+description: Teams のメッセージ拡張機能をデザインして、Microsoft Teams UI Kit を取得する方法をご紹介します。
+keywords: Teams デザイン ガイドライン リファレンス、メッセージ拡張機能のヒント、ベスト プラクティス
 author: heath-hamilton
 ms.localizationpriority: high
-ms.author: qinch
+ms.author: surbhigupta
 ms.topic: conceptual
-ms.openlocfilehash: 3cc9ac28bd07d3d79894a59cb2ff436fa43dda0d
-ms.sourcegitcommit: fc9f906ea1316028d85b41959980b81f2c23ef2f
+ms.openlocfilehash: 4021f52359d2c97382fa988679bbfe2f9bd0ecab
+ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "59156170"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65104099"
 ---
-# <a name="designing-your-microsoft-teams-messaging-extension"></a>Microsoft Teams メッセージング拡張機能のデザイン
+# <a name="designing-your-microsoft-teams-message-extension"></a>Microsoft Teams メッセージ拡張機能のデザイン
 
-メッセージング拡張機能は、会話から離れることなく、アプリのコンテンツを挿入したり、メッセージに対して操作したりするためのショートカットです。
-アプリのデザインに役立てるために、次の情報では、Teams でユーザーがどのようにメッセージング拡張機能を追加、使用、管理できるかを説明、図解しています。
+メッセージ拡張機能は、会話から離れることなく、アプリのコンテンツを挿入したり、メッセージに対して操作したりするためのショートカットです。
+アプリのデザインに役立てるために、次の情報では、Teams でユーザーがどのようにメッセージ拡張機能を追加、使用、管理できるかを説明、図解しています。
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-Microsoft Teams UI Kit には、必要に応じて把握、変更できる要素を含む、より包括的なメッセージング拡張機能のデザインのガイドラインが掲載されています。
+Microsoft Teams UI Kit には、必要に応じて把握、変更できる要素を含む、より包括的なメッセージ拡張機能のデザインのガイドラインが掲載されています。
 
 > [!div class="nextstepaction"]
 > [Microsoft Teams UI Kit (Figma) を入手する](https://www.figma.com/community/file/916836509871353159)
 
-## <a name="add-a-messaging-extension"></a>メッセージング拡張機能の追加
+## <a name="add-a-message-extension"></a>メッセージ拡張機能を追加する
 
-メッセージング拡張機能は、次の Teams コンテキストで追加できます。
+メッセージ拡張機能は、次の Teams コンテキストで追加できます。
 
 * Teams ストアから。
-* 作成ボックスの近くにあるチャネル、チャット、または会議中 (または前後)。 これらの場所のいずれかにメッセージング拡張機能を追加すると、そのコンテキストで使用できるのは自分だけであるという点に注意してください。
+* 作成ボックスの近くにあるチャネル、チャット、または会議中 (または前後)。 これらの場所のいずれかにメッセージ拡張機能を追加すると、そのコンテキストで使用できるのは自分だけであるという点に注意してください。
 
-次の例は、チャネルにメッセージング拡張機能を追加する方法を示しています。
+次の例は、チャネルにメッセージ拡張機能を追加する方法を示しています。
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-add-in-channel.png" alt-text="例は、モバイルのチャネルの作成ボックスの近くにメッセージング拡張機能を追加する方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-add-in-channel.png" alt-text="例は、モバイルのチャネルの作成ボックスの近くにメッセージ拡張機能を追加する方法を示しています。" border="false":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="例は、チャネルの作成ボックスの近くにメッセージング拡張機能を追加する方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="例は、チャネルの作成ボックスの近くにメッセージ拡張機能を追加する方法を示しています。" border="false":::
 
-## <a name="set-up-a-messaging-extension"></a>メッセージング拡張機能の設定
+## <a name="set-up-a-message-extension"></a>メッセージ拡張機能を設定する
 
-認証は必須ではありませんが、アプリがチケット追跡ツールのようなものの場合は、メッセージング拡張機能を使用するためにユーザーにサインインしてもらう必要がある場合もあります。
+認証は必須ではありませんが、アプリがチケット追跡ツールのようなものの場合は、メッセージ拡張機能を使用するためにユーザーにサインインしてもらう必要がある場合もあります。
 
 Teams アプリ間で一貫性を保つために、サインイン画面をカスタマイズすることはできません。 シングル サインオン (SSO) 認証を使用すると、ユーザーは自動的にサインインします。
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-set-up.png" alt-text="モバイルでサインイン ボタンを含むメッセージング拡張機能の設定画面を示す例です。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-set-up.png" alt-text="モバイルでサインイン ボタンを含むメッセージ拡張機能の設定画面を示す例です。" border="false":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="サインイン ボタンを含むメッセージング拡張機能の設定画面を示す例です。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="サインイン ボタンを含むメッセージ拡張機能の設定画面を示す例です。" border="false":::
 
-## <a name="types-of-messaging-extensions"></a>メッセージング拡張機能の種類
+## <a name="types-of-message-extensions"></a>メッセージ拡張機能の種類
 
-メッセージング拡張機能には、検索コマンド、アクション コマンド、またはその両方を含めることができます。 コマンドは、アプリの機能と、それらが Teams のユース ケースへの適合状況によって異なります。
+メッセージ拡張機能には、検索コマンド、アクション コマンド、またはその両方を含めることができます。 コマンドは、アプリの機能と、それらが Teams のユース ケースへの適合状況によって異なります。
 
 ### <a name="search-commands"></a>検索コマンド
 
-検索コマンドを使用すると、ユーザーはメッセージング拡張機能を使用して外部コンテンツをすばやく検索し、メッセージに挿入できます。 検索コマンドは、通常、作成ボックスで使用できます。 たとえば、Teams から離れることなくコンテンツを共有することで、ディスカッションを開始またはディスカッションに追加できます。
+検索コマンドを使用すると、ユーザーはメッセージ拡張機能を使用して外部コンテンツをすばやく検索し、メッセージに挿入できます。 検索コマンドは、通常、作成ボックスで使用できます。 たとえば、Teams から離れることなくコンテンツを共有することで、ディスカッションを開始またはディスカッションに追加できます。
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-search-command-type.png" alt-text="例では、モバイルで作成ボックスから起動された検索ベースのメッセージング拡張機能を示しています。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-search-command-type.png" alt-text="例では、モバイルで作成ボックスから起動された検索ベースのメッセージ拡張機能を示しています。" border="false":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="例では、作成ボックスから起動された検索ベースのメッセージング拡張機能を示しています。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="例では、作成ボックスから起動された検索ベースのメッセージ拡張機能を示しています。" border="false":::
 
 #### <a name="compose-box-layout-options"></a>作成ボックスのレイアウト オプション
 
-メッセージング拡張機能の検索結果を表示するには、[リスト ビューやグリッド ビュー](../../messaging-extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests)など、いくつかのオプションがあります。
+メッセージ拡張機能の検索結果を表示するには、[リスト ビューやグリッド ビュー](../../messaging-extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests)など、いくつかのオプションがあります。
 
-:::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="メッセージング拡張機能の検索結果のレイアウト オプションを示す図。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="メッセージ拡張機能の検索結果のレイアウト オプションを示す図。" border="false":::
 
 ### <a name="action-commands"></a>操作コマンド
 
 アクション コマンドを使用すると、ユーザーは Teams 内の外部サービスでアクションをトリガーし、要求を処理できます。 たとえば、アプリが注文を追跡する場合、ユーザーはチャット内から同僚のメッセージの内容を使用して新しい注文を作成できます。
 
-アクション ベースのメッセージング拡張機能では、多くの場合、ユーザーはフォーム、またはモーダル内でその他の種類の構成を完了する必要があります。 [タスク モジュール](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)を使用して、これらのエクスペリエンス作成できます。
+アクション ベースのメッセージ拡張機能では、多くの場合、ユーザーはフォーム、またはモーダル内でその他の種類の構成を完了する必要があります。 [タスク モジュール](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)を使用して、これらのエクスペリエンス作成できます。
 
-## <a name="open-a-messaging-extension"></a>メッセージング拡張機能を開く
+## <a name="open-a-message-extension"></a>メッセージ拡張機能を開く
 
-ユーザーがメッセージング拡張機能を使用する主要なコンテキストは、作成ボックスと、メッセージまたは投稿です。
+ユーザーがメッセージ拡張機能を使用する主要なコンテキストは、作成ボックスと、メッセージまたは投稿です。
 
 ### <a name="from-the-compose-box"></a>作成ボックスから
 
-追加すると、ユーザーは作成ボックスの下にあるアプリ アイコンを選択して、メッセージング拡張機能を開くことができます。 これらの例では、拡張機能に検索コマンドとアクション コマンドがあります。
+追加すると、ユーザーは作成ボックスの下にあるアプリ アイコンを選択して、メッセージ拡張機能を開くことができます。 これらの例では、拡張機能に検索コマンドとアクション コマンドがあります。
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-compose-box.png" alt-text="例は、モバイルで作成ボックスからメッセージング拡張機能を開く方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-compose-box.png" alt-text="例は、モバイルで作成ボックスからメッセージ拡張機能を開く方法を示しています。" border="false":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="例は、作成ボックスからメッセージング拡張機能を開く方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="例は、作成ボックスからメッセージ拡張機能を開く方法を示しています。" border="false":::
 
 ### <a name="from-a-chat-message-or-channel-post"></a>チャット メッセージまたはチャネルの投稿から
 
@@ -106,19 +106,19 @@ Teams アプリ間で一貫性を保つために、サインイン画面をカ�
 
 #### <a name="chat-message"></a>チャット メッセージ
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="例は、チャット メッセージからメッセージング拡張機能を開く方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="例は、チャット メッセージからメッセージ拡張機能を開く方法を示しています。" border="false":::
 
 #### <a name="channel-post"></a>チャネルの投稿
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="例は、モバイルでチャネルの投稿からメッセージング拡張機能を開く方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="例は、モバイルでチャネルの投稿からメッセージ拡張機能を開く方法を示しています。" border="false":::
 
-## <a name="use-a-messaging-extension"></a>メッセージング拡張機能の使用
+## <a name="use-a-message-extension"></a>メッセージ拡張機能の使用
 
-次のシナリオでは、ユーザーがメッセージング拡張機能を使用する主な方法を示します。
+次のシナリオでは、ユーザーがメッセージ拡張機能を使用する主な方法を示します。
 
 ### <a name="insert-content-into-a-message"></a>メッセージにコンテンツを挿入する
 
-**1. メッセージング拡張機能を選択します**。 ユーザーは、作成ボックスから共有するコンテンツを検索できます。
+**1. メッセージ拡張機能の選択**。ユーザーは、作成ボックスから共有するコンテンツを検索できます。
 
 #### <a name="mobile"></a>Mobile
 
@@ -128,7 +128,7 @@ Teams アプリ間で一貫性を保つために、サインイン画面をカ�
 
 :::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="作成ボックスから挿入するコンテンツを検索するユーザーの例を示します。" border="false":::
 
-**2. コンテンツの挿入**。 投稿されると、他のユーザーが返信したり、コンテンツを選択してアプリの詳細情報を表示したりできます。
+**2. コンテンツの挿入**。投稿されると、他のユーザーが返信したり、コンテンツを選択してアプリの詳細情報を表示したりできます。
 
 #### <a name="mobile"></a>Mobile
 
@@ -140,9 +140,9 @@ Teams アプリ間で一貫性を保つために、サインイン画面をカ�
 
 ### <a name="take-action-on-a-message"></a>メッセージに対してアクションを取る
 
-**1. メッセージング拡張機能を選択します**。 アプリには、1 つ以上のアクション コマンドを含めることができます。
+**1. メッセージ​​拡張機能の選択**。 アプリには、1 つ以上のアクション コマンドを含めることができます。
 
-:::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="ユーザーがメッセージング拡張機能のアクション コマンドを選択する例を示しています。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="ユーザーがメッセージ拡張機能のアクション コマンドを選択する例を示しています。" border="false":::
 
 **2. アクションの完了**。 アプリは、メッセージ アクションによって送信されたコンテンツやデータを受信して処理できます。 ユーザーは会話を続けながら、アプリでアクションを完了します。
 
@@ -150,7 +150,7 @@ Teams アプリ間で一貫性を保つために、サインイン画面をカ�
 
 ### <a name="preview-links"></a>リンクのプレビュー
 
-メッセージング拡張機能を使用すると、認識された URL からメッセージにリッチなリンクを挿入することもできます (この機能は、[リンク展開の解除](../../messaging-extensions/how-to/link-unfurling.md)と呼ばれます)。
+メッセージ拡張機能を使用すると、認識された URL からメッセージにリッチなリンクを挿入することもできます (この機能は、[リンク展開の解除](../../messaging-extensions/how-to/link-unfurling.md) と呼ばれます)。
 
 **1. 認識されたリンク** を作成ボックスに貼り付けます。
 
@@ -162,7 +162,7 @@ Teams アプリ間で一貫性を保つために、サインイン画面をカ�
 
 :::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="たとえば、ユーザーが作成ボックスにリンクを貼り付ける例を示しています。" border="false":::
 
-**2. コンテンツの挿入**。 アプリが作成ボックス内の URL を認識すると、Web コンテンツのコンテンツリッチなプレビューを提供するカードとしてリンクがレンダリングされます。 (詳細については[アダプティブ カード デザイン ガイドライン](../../task-modules-and-cards/cards/design-effective-cards.md)を参照してください)。
+**2. コンテンツの挿入**。アプリが作成ボックス内の URL を認識すると、Web コンテンツのコンテンツリッチなプレビューを提供するカードとしてリンクがレンダリングされます。(詳細については、[アダプティブ カード設計ガイドライン](../../task-modules-and-cards/cards/design-effective-cards.md) を参照してください。)
 
 #### <a name="mobile"></a>Mobile
 
@@ -172,52 +172,52 @@ Teams アプリ間で一貫性を保つために、サインイン画面をカ�
 
 :::image type="content" source="../../assets/images/messaging-extension/insert-preview-link.png" alt-text="例は、URL がアプリに認識されてから作成ボックスにリッチ コンテンツを含める方法を示しています。" border="false":::
 
-## <a name="manage-a-messaging-extension"></a>メッセージング拡張機能の管理
+## <a name="manage-a-message-extension"></a>メッセージ拡張機能の管理
 
-アイコンを右クリックすると、ユーザーはメッセージング拡張機能をピン留め、削除、または構成できます。
+アイコンを右クリックすると、ユーザーはメッセージ拡張機能のピン留め、削除、または構成を行うことができます。
 
 ## <a name="anatomy"></a>構造
 
-### <a name="messaging-extension-in-the-compose-box"></a>作成ボックスのメッセージの拡張機能
+### <a name="message-extension-in-the-compose-box"></a>作成ボックスのメッセージ拡張機能
 
-次の例は、作成ボックスから開かれたメッセージング拡張機能です。
+次の例は、作成ボックスから開かれたメッセージ拡張機能です。
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-anatomy-compose.png" alt-text="モバイルで作成ボックスのメッセージング拡張機能の UI 構造を示す図。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-anatomy-compose.png" alt-text="モバイルで作成ボックスのメッセージ拡張機能の UI 構造を示す図。" border="false":::
 
 |カウンター|説明|
 |----------|-----------|
-|1.|**アプリ名**: アプリのフル ネーム|
-|2.|**[アクション コマンド] メニュー アイコン (省略可能)**: メッセージング拡張機能のアクション コマンドのリストを開きます (指定した場合)。
+|1|**アプリ名**: アプリのフル ネーム|
+|2|**[アクション コマンド] メニュー アイコン (省略可能)**: メッセージ拡張機能のアクション コマンドのリストを開きます (指定した場合)。
 |3|**検索ボックス**: ユーザーが挿入するアプリ コンテンツを検索できるようにします。|
 |4|**タブ メニュー (省略可能)**: 複数のコンテンツ カテゴリを提供します。|
 |5|**[アクション コマンド] メニュー (省略可能)**: アクション コマンドのリストを表示します (指定した場合)。|
-|6|**アプリ コンテンツ**: 主に検索結果を表示します。|
+|6 |**アプリ コンテンツ**: 主に検索結果を表示します。|
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/anatomy-compose.png" alt-text="作成ボックスのメッセージング拡張機能の UI 構造を示す図。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/anatomy-compose.png" alt-text="作成ボックスのメッセージ拡張機能の UI 構造を示す図。" border="false":::
 
 |カウンター|説明|
 |----------|-----------|
-|1.|**アプリのロゴ**: アプリのロゴの色アイコン。|
+|1|**アプリのロゴ**: アプリのロゴの色アイコン。|
 |2.|**アプリ名**: アプリのフル ネーム|
-|3|**[アクション コマンド] メニュー アイコン (省略可能)**: メッセージング拡張機能のアクション コマンドのリストを開きます (指定した場合)。
+|3|**[アクション コマンド] メニュー アイコン (省略可能)**: メッセージ拡張機能のアクション コマンドのリストを開きます (指定した場合)。
 |4|**検索ボックス**: ユーザーが挿入するアプリ コンテンツを検索できるようにします。|
 |5|**タブ メニュー (省略可能)**: 複数のコンテンツ カテゴリを提供します。|
-|6|**[アクション コマンド] メニュー (省略可能)**: アクション コマンドのリストを表示します (指定した場合)。|
-|7|**アプリ コンテンツ**: 主に検索結果を表示します。 この例では、リスト レイアウトを使用しています (グリッド レイアウトは別のオプションです)。|
-|8|**アプリのロゴ**: アプリのロゴの枠線アイコン。|
+|6 |**[アクション コマンド] メニュー (省略可能)**: アクション コマンドのリストを表示します (指定した場合)。|
+|7 |**アプリ コンテンツ**: 主に検索結果を表示します。 この例では、リスト レイアウトを使用しています (グリッド レイアウトは別のオプションです)。|
+|8 |**アプリのロゴ**: アプリのロゴの枠線アイコン。|
 
-### <a name="messaging-extension-management-menu"></a>メッセージング拡張機能の管理メニュー
+### <a name="message-extension-management-menu"></a>メッセージ拡張機能の管理メニュー
 
-:::image type="content" source="../../assets/images/messaging-extension/anatomy-management-menu.png" alt-text="メッセージング拡張機能の管理メニューの UI 構造を示す図。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/anatomy-management-menu.png" alt-text="メッセージ拡張機能の管理メニューの UI 構造を示す図。" border="false":::
 
 |カウンター|説明|
 |----------|-----------|
-|1.|**ピン留めを外す**: ユーザーがアプリをピン留めしている場合に使用できます。|
-|2.|**削除**: チャネル、チャット、または会議からメッセージング拡張機能を削除します。|
+|1|**ピン留めを外す**: ユーザーがアプリをピン留めしている場合に使用できます。|
+|2|**削除**: チャネル、チャット、または会議からメッセージ拡張機能を削除します。|
 
 ## <a name="best-practices"></a>ベスト プラクティス
 
@@ -231,7 +231,7 @@ Teams アプリ間で一貫性を保つために、サインイン画面をカ�
 
 #### <a name="do-integrate-with-single-sign-on"></a>Do: シングル サインオンとの統合
 
-SSO を使用すると、サインイン プロセスが簡単、高速になり、セキュリティで保護されます。また、ユーザーが既に個人用アプリにサインインしている場合は、メッセージング拡張機能にアクセスするためにもう一度サインインする必要はありません。
+SSO を使用すると、サインイン プロセスが簡単、高速になり、セキュリティで保護されます。また、ユーザーが既に個人用アプリにサインインしている場合は、メッセージ拡張機能にアクセスするためにもう一度サインインする必要はありません。
 
    :::column-end:::
    :::column span="":::
@@ -239,14 +239,14 @@ SSO を使用すると、サインイン プロセスが簡単、高速になり
 
 #### <a name="dont-take-users-away-from-the-conversation"></a>Don't: ユーザーを会話から除外しないでください
 
-メッセージング拡張機能は、コンテキストの切り替えを減らすはずのショートカットです。 拡張機能は、たとえば、Teams の外部の Web ページにユーザーを誘導するものであってはいけません。
+メッセージ拡張機能は、コンテキストの切り替えを減らすはずのショートカットです。 拡張機能は、たとえば、Teams の外部の Web ページにユーザーを誘導するものであってはいけません。
 
    :::column-end:::
 :::row-end:::
 
-#### <a name="do-highlight-your-messaging-extension"></a>Do: メッセージング拡張機能のハイライト
+#### <a name="do-highlight-your-message-extension"></a>Do: メッセージ拡張機能のハイライト
 
-メッセージング拡張機能は、必ずしも簡単に見つかるとは限りません。 アプリの詳細ページにその使用方法のスクリーンショットを含めます。 アプリにボットも含まれている場合は、ボットウェルカム ツアーにメッセージング拡張機能のヘルプ ドキュメントを含めることができます。
+メッセージ拡張機能は、必ずしも簡単に見つかるとは限りません。 アプリの詳細ページにその使用方法のスクリーンショットを含めます。 アプリにボットも含まれている場合は、ボットウェルカム ツアーにメッセージ拡張機能のヘルプ ドキュメントを含めることができます。
 
 ### <a name="templating"></a>テンプレート作成
 
@@ -256,7 +256,7 @@ SSO を使用すると、サインイン プロセスが簡単、高速になり
 
 #### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>Do: 可能であれば、Teams が設計作業の一部を処理できるようにします
 
-ユース ケースに適している場合は、検索ベースのメッセージング拡張機能を作成することを検討してください。 Teams は、これらの種類の拡張機能を、組み込みのテーマ設定とアクセシビリティでレンダリングします。
+ユース ケースに適している場合は、検索ベースのメッセージ拡張機能を作成することを検討してください。 Teams は、これらの種類の拡張機能を、組み込みのテーマ設定とアクセシビリティでレンダリングします。
 
    :::column-end:::
    :::column span="":::
@@ -264,7 +264,7 @@ SSO を使用すると、サインイン プロセスが簡単、高速になり
 
 #### <a name="dont-embed-your-entire-app-in-a-task-module"></a>Don't: アプリ全体をタスク モジュールに埋め込まないでください
 
-メッセージング拡張機能でアクション コマンドが必要な場合は、タスク モジュールをシンプルにし、アクションを完了するために必要なコンポーネントのみを表示します。
+メッセージ拡張機能でアクション コマンドが必要な場合は、タスク モジュールをシンプルにし、アクションを完了するために必要なコンポーネントのみを表示します。
 
    :::column-end:::
 :::row-end:::
