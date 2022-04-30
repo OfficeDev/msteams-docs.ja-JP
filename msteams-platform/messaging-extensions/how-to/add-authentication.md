@@ -1,16 +1,16 @@
 ---
 title: メッセージ拡張機能に認証を追加する
 author: surbhigupta
-description: コード例とサンプルを使用してメッセージ拡張機能に認証を追加する方法について説明します
-ms.localizationpriority: medium
+description: コード例とサンプルを使用してメッセージング拡張機能に認証を追加する方法について説明します
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: e3f799214a5007f90c03b2a7f9ac280c8e8760e1
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: 36a2aa269bfc43f4c07e97a5c214e3081a38ffeb
+ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104414"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65135711"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>メッセージ拡張機能に認証を追加する
 
@@ -18,7 +18,7 @@ ms.locfileid: "65104414"
 
 ## <a name="identify-the-user"></a>ユーザーを識別する
 
-サービスに対するすべての要求には、ユーザー ID、ユーザーの表示名、Azure Active Directory オブジェクト ID が含まれます。
+サービスに対するすべての要求には、ユーザー ID、ユーザーの表示名、および Azure Active Directory オブジェクト ID が含まれます。
 
 ```json
 "from": {
@@ -28,26 +28,26 @@ ms.locfileid: "65104414"
 },
 ```
 
-`id`この値と`aadObjectId`値は、認証されたTeams ユーザーに対して保証されます。 資格情報またはサービス内のキャッシュされた状態を検索するためのキーとして使用されます。 さらに、各要求には、ユーザーの組織を識別するために使用されるAzure Active Directoryテナント ID が含まれています。 該当する場合、要求には、要求の送信元となるチーム ID とチャネル ID も含まれます。
+`id` および `aadObjectId` の値は、認証された Teams ユーザーに対して保証されます。 これらは、サービス内の資格情報またはキャッシュされた状態を検索するためのキーとして使用されます。 さらに、各要求には、ユーザーの組織を識別するために使用される Azure Active Directory テナント ID が含まれています。 該当する場合、要求には、要求の送信元となるチーム ID とチャネル ID も含まれます。
 
 ## <a name="authentication"></a>認証
 
 サービスでユーザー認証が必要な場合、ユーザーはメッセージ拡張機能を使用する前にサインインする必要があります。 認証手順は、ボットまたはタブの手順と似ています。シーケンスは次のとおりです。
 
-1. ユーザーがクエリを発行するか、既定のクエリが自動的にサービスに送信されます。
-1. サービスは、Teamsユーザー ID を調べることで、ユーザーが認証されているかどうかを確認します。
-1. ユーザーが認証されていない場合は、認証 URL を含む推奨されるアクションを含`openUrl`む応答を返信`auth`します。
+1. ユーザーがクエリを発行するか、既定のクエリがサービスに自動的に送信されます。
+1. サービスは、Teams ユーザー ID を調べることで、ユーザーが認証されているかどうかを確認します。
+1. ユーザーが認証されていない場合は、`auth` 応答を`openUrl` 認証 URL を含む推奨アクションを返します。
 1. Microsoft Teams クライアントは、指定された認証 URL を使用して Web ページをホストするダイアログ ボックスを起動します。
-1. ユーザーがサインインしたら、ウィンドウを閉じて、**認証コード** をTeams クライアントに送信する必要があります。
-1. その後、Teams クライアントは、手順 5 で渡した認証コードを含むクエリをサービスに再発行します。
+1. ユーザーがサインインしたら、ウィンドウを閉じて **認証コード** を Teams クライアントに送信する必要があります。
+1. Teams クライアントは、手順 5 で渡された認証コードを含むクエリをサービスに再発行します。
 
-サービスは、手順 6 で受信した認証コードが手順 5. の認証コードと一致することを確認する必要があります。 これにより、悪意のあるユーザーがサインイン フローのスプーフィングや侵害を試みないようにします。 これにより、セキュリティで保護された認証シーケンスを完了するために、実質的に "ループを閉じる" ようになります。
+サービスは、手順 6 で受け取った認証コードが手順 5 の認証コードと一致することを確認する必要があります。 これにより、悪意のあるユーザーがサインイン フローのなりすましや侵害を試みないようにします。 これにより、安全な認証シーケンスを終了させるための 「ループを閉じる」 効果があります。
 
 ### <a name="respond-with-a-sign-in-action"></a>サインイン アクションで応答する
 
-認証されていないユーザーにサインインを求めるには、認証 URL を含む種類 `openUrl` の推奨アクションで応答します。
+認証されていないユーザーにサインインを求めるには、認証 URL を含む `openUrl` 型の推奨アクションで応答します。
 
-#### <a name="response-example-for-a-sign-in-action"></a>サインイン アクションの応答例
+#### <a name="response-example-for-a-sign-in-action"></a>サインイン アクションの応答の例
 
 ```json
 {
@@ -68,23 +68,23 @@ ms.locfileid: "65104414"
 
 > [!NOTE]
 >
-> * サインイン エクスペリエンスをTeamsポップアップ ウィンドウでホストするには、URL のドメイン部分がアプリの有効なドメインの一覧に含まれている必要があります。 詳細については、マニフェスト スキーマの [validDomains](~/resources/schema/manifest-schema.md#validdomains) を参照してください。
-> * 認証ポップアップのサイズは、幅と高さの `Value = $"{_siteUrl}/searchSettings.html?settings={escapedSettings}",`クエリ文字列パラメーターを含めることで定義できます。
+> * サインイン エクスペリエンスを Teams ポップアップ ウィンドウでホストするには、URL のドメイン部分がアプリの有効なドメインの一覧に含まれている必要があります。 詳細については、「マニフェスト スキーマの[validDomains](~/resources/schema/manifest-schema.md#validdomains)」 を参照してください。
+> * 認証ポップアップのサイズは、幅と高さのクエリ文字列パラメーター `Value = $"{_siteUrl}/searchSettings.html?height=600&width=600"` を含めることによって定義できます。
 
 ### <a name="start-the-sign-in-flow"></a>サインイン フローを開始する
 
-サインイン エクスペリエンスは応答性が高く、ポップアップ ウィンドウ内に収まる必要があります。 メッセージの受け渡しを使用[するMicrosoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) と統合する必要があります。
+サインイン エクスペリエンスは応答性が高く、ポップアップ ウィンドウ内に収まる必要があります。 メッセージ パッシングを使用する [Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) と統合する必要があります。
 
-Microsoft Teams内で実行されている他の埋め込みエクスペリエンスと同様に、ウィンドウ内のコードを最初に呼び出す`microsoftTeams.initialize()`必要があります。 コードで OAuth フローを実行する場合は、Teams ユーザー ID をウィンドウに渡し、それを OAuth サインイン URL に渡すことができます。
+Microsoft Teams 内で実行される他の埋め込みエクスペリエンスと同様に、ウィンドウ内のコードは、最初に `microsoftTeams.initialize()` を呼び出す必要があります。 コードで OAuth フローを実行する場合は、Teams ユーザー ID をウィンドウに渡し、OAuth サインイン URL に渡すことができます。
 
 ### <a name="complete-the-sign-in-flow"></a>サインイン フローを完了する
 
 サインイン要求が完了し、ページにリダイレクトされたら、次の手順を実行する必要があります。
 
 1. セキュリティ コード (乱数) を生成します。 このコードは、OAuth 2.0 トークンなどのサインイン フローで取得した資格情報と共に、サービスにキャッシュする必要があります。
-1. セキュリティ コードを呼び出 `microsoftTeams.authentication.notifySuccess` して渡します。
+1. `microsoftTeams.authentication.notifySuccess` を呼び出して、セキュリティ コードを渡します。
 
-この時点でウィンドウが閉じ、コントロールがTeams クライアントに渡されます。 クライアントは、プロパティ内のセキュリティ コードと共に、元のユーザー クエリを `state` 再発行するようになりました。 コードでは、セキュリティ コードを使用して、前に保存した資格情報を検索して認証シーケンスを完了し、ユーザー要求を完了できます。
+この時点でウィンドウが閉じ、コントロールが Teams クライアントに渡されます。 クライアントは、`state` プロパティのセキュリティ コードと共に、元のユーザー クエリを再発行します。 コードでは、セキュリティ コードを使用して、前に保存した資格情報を検索して認証シーケンスを完了し、ユーザー要求を完了できます。
 
 #### <a name="reissued-request-example"></a>再発行された要求の例
 
@@ -139,7 +139,7 @@ Microsoft Teams内で実行されている他の埋め込みエクスペリエ�
 
 |**サンプルの名前** | **説明** |**.NET** | **Node.js**|
 |----------------|-----------------|--------------|----------------|
-|メッセージ拡張機能 - 認証と構成 | 構成ページを持ち、検索要求を受け入れ、ユーザーがサインインした後に結果を返すメッセージ拡張機能。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[表示](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)|
+|メッセージ拡張機能 - 認証と構成 | 構成ページを含み、検索要求を受け入れ、ユーザーがサインインした後に結果を返すメッセージ拡張機能。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[表示](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)|
 
 ## <a name="see-also"></a>関連項目
 

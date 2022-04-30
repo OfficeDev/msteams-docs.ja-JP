@@ -6,12 +6,12 @@ keywords: Teams Office365 コネクタ
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 9381fb9a55b6a48126e8c157040745d56708e9f8
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 1ec406d633eb2db0d3564984d5451d58d41b4c14
+ms.sourcegitcommit: 38c435e806bb7c2c30efd10e8264c5c06a43fad3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111613"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65136969"
 ---
 # <a name="create-office-365-connectors"></a>Office 365 コネクタの作成
 
@@ -206,25 +206,6 @@ Microsoft Teams アプリを使用すると、Teams 内に既存の Office 365 �
 }
 ```
 
-## <a name="enable-or-disable-connectors-in-teams"></a>Teams でコネクタを有効または無効にする
-
-Exchange Online PowerShell V2 モジュールは、先進認証を使用し、Microsoft 365 のすべての Exchange 関連 PowerShell 環境への接続において多要素認証 (MFA) と連携します。 管理者は、Exchange Online PowerShell を使用して、テナント全体または特定のグループ メールボックスのコネクタを無効にし、そのテナントまたはメールボックス内のすべてのユーザーに影響を与えることができます。 一部のユーザーに対して無効にし、他のユーザーに対しては無効にしないという設定はできません。 また、GCC テナントと呼ばれる Government Community Cloud のコネクタは既定で無効になっています。
-
-テナント レベルの設定は、グループ レベル設定を無効にします。 たとえば、管理者がグループのコネクタを有効にし、テナントに対して無効にした場合、グループのコネクタは無効になります。 Teams でコネクタを有効にするには、MFA を利用または利用しない先進認証を使用して [Exchange Online PowerShell に接続](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true)します。
-
-### <a name="commands-to-enable-or-disable-connectors"></a>コネクタを有効または無効にするコマンド
-
-Exchange Online PowerShell で次のコマンドを実行します。
-
-* テナントに対してコネクタを無効にするには、`Set-OrganizationConfig -ConnectorsEnabled:$false`。
-* テナントの操作可能なメッセージを無効にするには、`Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$false`。
-* Teams のコネクタを有効にするには、次のコマンドを実行します。
-  * `Set-OrganizationConfig -ConnectorsEnabled:$true`
-  * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
-  * `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$true`
-
-PowerShell モジュール交換の詳細については、「[Set-OrganizationConfig](/powershell/module/exchange/Set-OrganizationConfig?view=exchange-ps&preserve-view=true)」を参照してください。 Outlook コネクタを有効または無効にするには、[Outlook 内のグループにアプリを接続](https://support.microsoft.com/topic/connect-apps-to-your-groups-in-outlook-ed0ce547-038f-4902-b9b3-9e518ae6fbab)します。
-
 ## <a name="test-your-connector"></a>コネクタをテストする
 
 コネクタをテストするには、他のアプリと同じ方法でコネクタをチームにアップロードします。「[マニフェストにコネクタを含める](#include-the-connector-in-your-manifest)」での指示どおりに修正した 2 つのアイコン ファイルとコネクタ開発者ダッシュボードからマニフェスト ファイルを使用して、.zip パッケージを作成できます。
@@ -239,26 +220,6 @@ PowerShell モジュール交換の詳細については、「[Set-OrganizationC
 `HttpPOST` アクションが正しく動作していることを確認するために、[お使いのコネクタにメッセージを送信します](~/webhooks-and-connectors/how-to/connectors-using.md)。
 
 [ステップ バイ ステップ ガイド](../../sbs-teams-connectors.yml)に従って、Microsoft Teams でコネクタを作成してテストします。
-
-## <a name="publish-connectors-for-the-organization"></a>組織のコネクタを発行する
-
-組織内のユーザーのみがコネクタを使用できるようにする場合は、カスタム コネクタ アプリを[組織のアプリ カタログ](~/concepts/deploy-and-publish/apps-publish.md)にアップロードできます。
-
-チームでコネクタを構成して使用するためにアプリ パッケージをアップロードした後、組織のアプリ カタログからコネクタをインストールします。
-
-コネクタを設定するには、以下の操作を行います。
-
-1. 左側のナビゲーション バーから **[アプリ]** を選択します。
-1. **[アプリ]** セクションで、**[コネクタ]** を選択します。
-1. 追加するコネクタを選択します。 ポップアップ ダイアログ ウィンドウが表示されます。
-1. ドロップダウン メニューから、**[チームに追加]** を選択します。
-1. 検索ボックスに、チーム名またはチャネル名を入力します。
-1. ダイアログ ウィンドウの右下隅にあるドロップダウン メニューから **[コネクタのセットアップ]** を選択します。
-
-> [!IMPORTANT]
-> 現在、カスタム コネクタは Government Community Cloud (GCC)、GCC-High、国防総省 (DOD) で使用できます。
-
-コネクタは、そのチームの [&#9679;&#9679;&#9679;] > **[その他のオプション]**  > > **[コネクタ]**  > > **[すべて]**  > > **[チームのコネクタ]** セクションで利用可能です。 このセクションにスクロールするか、コネクタ アプリを検索することで移動できます。 コネクタを構成または変更するには、**[構成]** を選択します。
 
 ## <a name="distribute-webhook-and-connector"></a>Webhook とコネクタを配布する
 
@@ -284,3 +245,5 @@ PowerShell モジュール交換の詳細については、「[Set-OrganizationC
 * [メッセージを作成して送信する](~/webhooks-and-connectors/how-to/connectors-using.md)
 * [受信 Webhook を作成する](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Office 365 コネクタを作成する](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* [管理者がコネクタを有効または無効にする方法](/MicrosoftTeams/office-365-custom-connectors#enable-or-disable-connectors-in-teams)
+* [管理者が組織内でカスタム コネクタを発行する方法](/MicrosoftTeams/office-365-custom-connectors)
