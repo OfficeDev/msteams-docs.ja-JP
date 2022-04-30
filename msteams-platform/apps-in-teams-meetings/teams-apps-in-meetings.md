@@ -4,14 +4,14 @@ author: surbhigupta
 description: 参加者とユーザーの役割に基づく Teams 会議のアプリの概要
 ms.topic: overview
 ms.author: lajanuar
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: Teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: cdccc6eafdfad25b813ca08419981aec1a9ce18a
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: ec3a9dc46b5a509e68f451e8e2735fc2acbe7bd1
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103300"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111305"
 ---
 # <a name="apps-for-teams-meetings"></a>Teams 会議用アプリ
 
@@ -29,7 +29,7 @@ ms.locfileid: "65103300"
 
 この記事では、会議アプリの拡張性、API リファレンス、会議用のアプリの有効化と構成、および Teams のカスタム Together モード シーンの概要を説明します。
 
-会議の拡張性機能を使用して、会議のエクスペリエンスを向上します。 この機能を使用すると、会議内にアプリを統合できます。 また、会議ライフサイクルのさまざまなステージも含まれており、タブ、ボット、メッセージ拡張機能を統合できます。 さまざまな参加者の役割とユーザーの種類を識別し、会議イベントを取得し、会議中のダイアログを生成できます。
+会議の拡張性機能を使用して、会議のエクスペリエンスを向上します。 この機能を使用すると、会議内にアプリを統合できます。 また、タブ、ボット、メッセージ拡張機能を統合できる会議のライフサイクルのさまざまなステージもあります。 さまざまな参加者の役割とユーザーの種類を識別し、会議イベントを取得し、会議中のダイアログを生成できます。
 
 会議用のアプリを使用して Teams をカスタマイズするには、アプリ マニフェストを更新して Teams 会議用のアプリを有効にし、会議シナリオ用にアプリを構成します。
 
