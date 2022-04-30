@@ -3,15 +3,15 @@ title: SharePoint に [Teams] タブを追加する
 author: surbhigupta
 description: コード サンプルを使用して、既存の [Teams] タブを SharePoint Framework Web パーツとして SharePoint に展開する方法について説明します。
 keywords: teams タブ Sharepoint フレームワーク開発
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: ea5f5cc90e1451ab65a31205f4c83137163a36cc
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: c11356750f78a015c8d404f519f45476f947b80a
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399227"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111690"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>SharePoint に [Teams] タブを追加する
 
@@ -64,7 +64,7 @@ SPFx Web パーツとして SharePoint に Microsoft Teams タブを追加する
 
 ### <a name="teams-tabs-in-sharepoint"></a>SharePoint における Teams タブ
 
-SharePoint Framework v.1.7 により、SharePoint で Teams タブをホストできます。 SharePoint でホストされているタブは、同様の **full page** エクスペリエンスを実現し、SharePoint サイトのコンテキストと親しみやすさを維持しながら、Teams タブのすべての機能を提供します。
+SharePoint Framework v.1.7 により、SharePoint で Teams タブをホストできます。SharePoint でホストされているタブは、同様の **full page** エクスペリエンスを実現し、SharePoint サイトのコンテキストと親しみやすさを維持しながら、Teams タブのすべての機能を提供します。
 
 ### <a name="sharepoint-framework-in-teams"></a>SharePoint Framework in Teams
 
@@ -104,15 +104,14 @@ Teams タブを SharePoint に追加するには、次の手順に従って、Te
 
 ## <a name="2-use-teams-tab-in-sharepoint"></a>2. SharePointの Teams タブを使用する
 
-1. `https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` にアクセスして、Teams アプリ パッケージを SharePoint アプリ カタログにアップロードしてデプロイします。 たとえば、「 `https://contoso.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` 」のように入力します。
+1. `https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` にアクセスして、Teams アプリ パッケージを SharePoint アプリ カタログにアップロードしてデプロイします。たとえば、`https://contoso.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx` です。
 
 1. プロンプトで促されたら、**組織内のすべてのサイトでこのソリューションを使用できるようにする** を有効にします。
 次の図は、対応する画面を示しています:
 
    ![SharePoint ビューのタブ](~/assets/images/tabs/tabs-in-sharepoint/image065.png)
 
-1. サイトで、右上にある歯車ボタンを選択して新しいページを作成し、**ページを追加** を選択します。
-次の図は、対応する画面を示しています:
+1. サイトで、右上にある歯車ボタンを選択して新しいページを作成し、**ページを追加** を選択します。次の図は、対応する画面を示しています:
 
    ![SharePoint ビュー](~/assets/images/tabs/tabs-in-sharepoint/image066.png)
 
@@ -124,8 +123,7 @@ Teams タブを SharePoint に追加するには、次の手順に従って、Te
 
 1. 編集が完了したら、**Publish** ボタンを選択します。
 
-1. 左側のナビゲーション バーでページを素早く参照するには、**ナビゲーションにページを追加** を選択します。
-次の図は、SharePoint のタブを示します:
+1. 左側のナビゲーション バーでページを素早く参照するには、**ナビゲーションにページを追加** を選択します。次の図は、SharePoint のタブを示します:
 
    ![SharePoint におけるタブを示す画像](~/assets/images/tabs/tabs-in-sharepoint/image073.png)
 

@@ -3,14 +3,14 @@ title: ボットからファイルを送受信する
 description: 個人用スコープ、チャネル スコープ、グループチャット スコープの Graph API を使用して、ボットを通じてファイルを送受信する方法について説明します。 v3 Bot Framework SDK に基づくコード サンプルを使用して Teams ボット API を使用します。
 keywords: Teams ボット ファイル送信受信
 ms.topic: how-to
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.date: 05/20/2019
-ms.openlocfilehash: c95ddbc4bfe0d491f48101b12d8658f7714c0075
-ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
+ms.openlocfilehash: b12e8e79e7d8d5180803004b4e0f238446a8fc98
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64590753"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65110359"
 ---
 # <a name="send-and-receive-files-through-your-bot"></a>ボットを介してファイルを送受信する
 
@@ -71,7 +71,7 @@ ms.locfileid: "64590753"
 | プロパティ | 用途 |
 | --- | --- |
 | `downloadUrl` | ファイルのコンテンツを取得するための OneDrive URL。 この URL から直接 `HTTP GET` を発行できます。 |
-| `uniqueId` | 一意のファイル ID。 ユーザーがボットにファイルを送信する場合、これは OneDrive ドライブ アイテム ID になります。 |
+| `uniqueId` | 一意のファイル ID。ユーザーがボットにファイルを送信する場合、これは OneDrive ドライブ アイテム ID になります。 |
 | `fileType` | pdf や docx などのファイル拡張子の種類。 |
 
 ベスト プラクティスとして、ユーザーにメッセージを返送してファイルのアップロードを確認する必要があります。
@@ -116,7 +116,7 @@ ms.locfileid: "64590753"
 
 | プロパティ | 用途 |
 | --- | --- |
-| `description` | ファイルの説明。 その目的を説明したり、その内容を要約したりするために、ユーザーに表示される場合があります。 |
+| `description` | ファイルの説明。その目的を説明したり、その内容を要約したりするために、ユーザーに表示される場合があります。 |
 | `sizeInBytes` | OneDrive で必要なファイル サイズと容量の見積もりをユーザーに提供します。 |
 | `acceptContext` | ユーザーがファイルを受け入れると、ボットにサイレントに送信される追加のコンテキスト。 |
 | `declineContext` | ユーザーがファイルを拒否したとき、ボットにサイレントに送信される追加のコンテキスト。 |

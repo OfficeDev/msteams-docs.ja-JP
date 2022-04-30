@@ -2,14 +2,14 @@
 title: アプリ ユーザーの認証
 description: Teams での認証と、アプリでの認証の使用方法について説明します
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: Teams 認証 OAuth SSO Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: 811b8917297ad8fe1420f4887983b93f43cd73b3
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: f5aecf2791d03795229d3b37c5fc8784de992326
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103959"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111403"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Microsoft Teams でユーザーを認証する
 
@@ -22,7 +22,7 @@ Teams には、アプリに 2 つの異なる認証フローがあります。 �
 
 ## <a name="web-based-authentication-flow"></a>Web ベースの認証フロー
 
-[タブ](~/tabs/what-are-tabs.md)には Web ベースの認証フローを使用し、[会話ボット](~/bots/what-are-bots.md)または[メッセージ拡張機能](~/messaging-extensions/what-are-messaging-extensions.md)で使用することを選択します。 [Microsoft Teams の JavaScript クライアント SDK](/javascript/api/overview/msteams-client) を Web コンテンツ ページで使用し、認証を有効にします。 認証を有効にした後、コンテンツ ページをタブ、構成ページ、またはタスク モジュールに埋め込みます。 Web ベースの認証フローの詳細については、以下を参照してください。
+[タブ](~/tabs/what-are-tabs.md)には Web ベースの認証フローを使用し、[会話ボット](~/bots/what-are-bots.md)や[メッセージ拡張機能](~/messaging-extensions/what-are-messaging-extensions.md)との併用を選択します。 [Microsoft Teams の JavaScript クライアント SDK](/javascript/api/overview/msteams-client) を Web コンテンツ ページで使用し、認証を有効にします。 認証を有効にした後、コンテンツ ページをタブ、構成ページ、またはタスク モジュールに埋め込みます。 Web ベースの認証フローの詳細については、以下を参照してください。
 
 * [Teams ボットへの認証の追加](~/bots/how-to/authentication/add-authentication.md)では、会話ボットで Web ベースの認証フローを使用する方法について説明します。
 * [タブでの認証フロー](~/tabs/how-to/authentication/auth-flow-tab.md)では、Teams でのタブ認証の仕組みを説明しています。 ここでは、タブに使用される一般的な Web ベースの認証フローを示しています。

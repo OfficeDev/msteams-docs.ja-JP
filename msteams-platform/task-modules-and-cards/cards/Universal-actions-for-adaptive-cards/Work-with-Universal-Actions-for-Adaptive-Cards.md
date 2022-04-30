@@ -1,41 +1,41 @@
 ---
 title: アダプティブ カードのユニバーサル アクションの操作
-description: コード サンプルを使用して、アダプティブ カードのスキーマ for UniversalActions、Refresh モデル、下位互換性など、アダプティブ カードのユニバーサル アクションを操作する方法について説明します。
+description: アダプティブ カードのユニバーサル アクション (アダプティブ カードのユニバーサルアクションのスキーマ、モデルの更新、コード サンプルを使用した下位互換性など) の操作について説明します。
 ms.topic: conceptual
-ms.localizationpriority: medium
-ms.openlocfilehash: c0893f5aaa9e454ab8a4091ce5b08c132c110746
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 768458b1bd7cad77288d1e8e0be5b231fd331891
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452579"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65110275"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>アダプティブ カードのユニバーサル アクションの操作
 
-アダプティブ カードのユニバーサル アクションは、アダプティブ カード ベースのシナリオを、アダプティブ カードとアダプティブ カードの両方Teams実装Outlook。 このドキュメントでは、次のトピックについて説明します。
+アダプティブ カードのユニバーサル アクションは、Teams と Outlook の両方にアダプティブ カード ベースのシナリオを実装する方法を提供します。このドキュメントでは、次のトピックについて説明します。
 
 * [アダプティブ カードのユニバーサル アクションを使用したスキーマ](#schema-for-universal-actions-for-adaptive-cards)
 * [モデルのリフレッシュ](#refresh-model)
 * [`adaptiveCard/action` 起動アクティビティ](#adaptivecardaction-invoke-activity)
 * [下位互換機能](#backward-compatibility)
 
-## <a name="quick-start-guide-to-use-universal-actions-for-adaptive-cards-in-teams"></a>アダプティブ カードのユニバーサル アクションを使用するクイック スタート Teams
+## <a name="quick-start-guide-to-use-universal-actions-for-adaptive-cards-in-teams"></a>アダプティブ カードのユニバーサル アクションを Teams で活用するためのクイック スタート ガイド
 
 1. `Action.Submit` のすべてのインスタンスを `Action.Execute` に置き換えて、Teams の既存のシナリオを更新します。
-2. 自動更新 `refresh` モデルを使用する場合、またはシナリオでユーザー固有のビューが必要な場合は、アダプティブ カードに句を追加します。
+2. 自動更新モデルを活用したい場合や、シナリオにユーザー固有のビューが必要な場合は、アダプティブ カードに `refresh` 句を追加します。
 
     >[!NOTE]
     > `userIds` プロパティを指定して、どのユーザーが自動更新を取得するかを特定します。
 
 3. ボットの中で `adaptiveCard/action` の起動要求を処理します。
-4. 呼び出し要求のコンテキストを使用して、ユーザー用に作成されたカードで応答します。
+4. 起動要求のコンテキストを利用して、ユーザー向けに作成されたカードを返信します。
 
     > [!NOTE]
     > ボットが `Action.Execute` を処理した結果、新しいカードを返す場合はいつでも、その応答は応答の形式に準拠している必要があります。
 
 ## <a name="schema-for-universal-actions-for-adaptive-cards"></a>アダプティブ カードのユニバーサル アクション向けスキーマ
 
-アダプティブ カードのユニバーサル アクションは、アダプティブ カード スキーマ バージョン 1.4 で導入されています。 アダプティブ カードを効果的に使用するには、アダプティブ カードの `version` プロパティが 1.4 に設定されている必要があります。
+アダプティブ カードのユニバーサル アクションは、アダプティブ カード スキーマ バージョン 1.4 で導入されました。 アダプティブ カードを効果的に使用するには、アダプティブ カードの `version` プロパティが 1.4 に設定されている必要があります。
 
 > [!NOTE]
 > `version` プロパティを 1.4 に設定すると、Outlook や Teams などのプラットフォームやアプリケーションの以前のバージョンのクライアントは、アダプティブ カードのユニバーサル アクションをサポートしていないため、アダプティブ カードとの互換性がありません。
@@ -66,13 +66,13 @@ ms.locfileid: "63452579"
 
 リフレッシュでの UserIds の機能は以下のとおりです。
 
-* UserIds は、アダプティブ カードのプロパティの一部であるユーザー MRIs `refresh` の配列です。
+* UserIds は、アダプティブ カードの `refresh` プロパティの一部であるユーザー MRI の配列です。
 
 * カードの更新セクションで `userIds` リスト プロパティを `userIds: []` として指定した場合、カードは自動的に更新されません。 代わりに、Web やデスクトップではトリプル ドット メニューに、モバイル (Android や iOS) では長押しコンテキスト メニューに、カードを手動で更新するための **[カードの更新]** オプションがユーザーに表示されます。
 
-* UserIds プロパティが追加されたのは、Teams チャネルには多数のメンバーが含まれる場合があるためです。 すべてのメンバーが同時にチャネルを視聴している場合、無条件に自動更新を行うと、ボットへの同時呼び出しが多くなります。 最大 `userIds` *60 (60) のユーザー MRIs* で自動更新を取得する必要があるユーザーを識別するには、常にプロパティを含める必要があります。
+* UserIds プロパティが追加されたのは、Teams チャネルには多数のメンバーが含まれる場合があるためです。 すべてのメンバーが同時にチャネルを視聴している場合、無条件に自動更新を行うと、ボットへの同時呼び出しが多くなります。 `userIds` プロパティを常に含める必要があり、最大 *60 人のユーザー MRI* で自動更新を行うべきユーザーを特定する必要があります。
 
-* 会話メンバーのTeamsの MRIs をフェッチできます。 アダプティブ カードの更新セクションで userIds リストに追加する方法の詳細については、「fetch [roster or user profile」を参照してください](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)。
+* Teams 会話メンバーのユーザー MRI を取得できます。 アダプティブ カードの更新セクションに userIds リストを追加する方法の詳細については、[フェッチ名簿またはユーザー プロファイル](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)を参照してください。
 
  次の例を使用して、チャネル、グループ チャット、または 1:1 チャットのユーザーの MRI を取得できます。
 
@@ -103,11 +103,11 @@ ms.locfileid: "63452579"
 
 ## <a name="backward-compatibility"></a>下位互換機能
 
-アダプティブ カードのユニバーサル アクションを使用すると、以前のバージョンと互換性を維持できるプロパティを設定OutlookおよびTeams。
+アダプティブ カードのユニバーサル アクションでは、以前のバージョンの Outlook や Teams との下位互換機能を実現するためのプロパティを設定することができます。
 
 ### <a name="teams"></a>Teams
 
-アダプティブ カードの以前のバージョンの Teams との下位互換機能を確保するためには、`fallback` プロパティを含め、その値を `Action.Submit` に設定する必要があります。 また、ボット コードは、`Action.Execute` と `Action.Submit` の両方を処理する必要があります。
+アダプティブ カードの以前のバージョンの Teams との下位互換機能を確保するためには、`fallback` プロパティを含め、その値を `Action.Submit` に設定する必要があります。また、ボットコードは `Action.Execute` と `Action.Submit` の両方を処理する必要があります。
 
 詳細については、「[Teams での下位互換機能](/adaptive-cards/authoring-cards/universal-action-model#teams)」を参照してください。
 
@@ -115,8 +115,8 @@ ms.locfileid: "63452579"
 
 |サンプルの名前 | 説明 | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Teams ケータリング ボット | アダプティブ カードを使用して、食品の注文を受け入れるボットを作成します。 |[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| まだ利用できません。 |
-| シーケンシャル ワークフローアダプティブ カード | シーケンシャル ワークフロー、ユーザー固有のビュー、最新のアダプティブ カードをボットに実装する方法を示します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+| Teams ケータリング ボット | アダプティブ カードを使用して、料理の注文を受け付けるボットを作成します。 |[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| まだ利用できません。 |
+| シーケンシャル ワークフロー アダプティブ カード | シーケンシャル ワークフロー、ユーザー固有のビュー、最新のアダプティブ カードをボットに実装する方法を示します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>関連項目
 

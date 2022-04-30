@@ -1,17 +1,17 @@
 ---
 title: SameSite Cookie 属性
 author: laujan
-description: SameSite Cookie、その属性、Teams タブ、タスク モジュール、メッセージ拡張機能への影響、Teamsでの認証など、Cookie の種類について説明します。
+description: SameSite Cookie、その属性、Teams タブ、タスク モジュール、メッセージング拡張機能における意味、Teams での認証など、Cookie の種類について説明します。
 keywords: Cookie 属性 SameSite
 ms.topic: reference
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lomeybur
-ms.openlocfilehash: 1fbaf46da93a0d7c253f1f5d2ad6c9ae1764565a
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: 7bf6d5a986a2111ba624534aa13b0aaa2866120c
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104491"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65110338"
 ---
 # <a name="samesite-cookie-attribute"></a>SameSite Cookie 属性
 
@@ -25,7 +25,7 @@ Cookie の種類とそれに対応するスコープは次のとおりです。
 | ------ | ------ |
 |ファースト パーティ Cookie|ファースト パーティ Cookie は、ユーザーがアクセスした Web サイトによって作成されます。 これは、ショッピング カートアイテムなどのデータを保存するために使用され、資格情報にサインインします。 たとえば、認証 Cookie やその他の分析などです。|
 |サードパーティ Cookie|サード パーティ Cookie は、技術的にはファースト パーティ Cookie と同じです。 違いは、データ パートナーシップ契約を通じてデータが第 2 者と共有される点です。 詳細については、「[Microsoft Teams の分析とレポート](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference)」を参照してください。 |
-|サード パーティ Cookie|サード パーティ Cookie は、ユーザーが明示的にアクセスしたドメイン以外のドメインによってインストールされ、主に追跡用に使用されます。 たとえば、**[いいね]** ボタン、広告配信、ライブ チャットなどです。|
+|サード パーティ Cookie|サード パーティ Cookie は、ユーザーが明示的にアクセスしたドメイン以外のドメインによってインストールされ、主に追跡用に使用されます。たとえば、**[いいね]** ボタン、広告配信、ライブ チャットなどです。|
 
 ## <a name="cookies-and-http-requests"></a>Cookie と HTTP 要求
 
@@ -35,7 +35,7 @@ SameSite の制限が導入される前は、Cookie はブラウザーに保存�
 
 Google Chrome バージョン 51 では、この `SetCookie SameSite` 仕様が省略可能な属性として導入されました。 ビルド 17672 以降の Windows 10 は、[Microsoft&nbsp;Edgeブラウザー](https://blogs.windows.com/msedgedev/2018/05/17/samesite-cookies-microsoft-edge-internet-explorer/)向けの SameSite Cookie のサポートを導入しました。
 
-`SetCookie` ヘッダーへの SameSite Cookie 属性の追加をオプトアウトするか、**Lax** と **Strict** の 2 つの設定のいずれかを使用して追加できます。 実装されていない SameSite 属性が既定の状態と見なされました。
+`SetCookie` ヘッダーへの SameSite Cookie 属性の追加をオプトアウトするか、**Lax** と **Strict** の 2 つの設定のいずれかを使用して追加できます。実装されていない SameSite 属性が既定の状態と見なされました。
 
 ## <a name="samesite-cookie-attribute-2020-release"></a>SameSite Cookie 属性: 2020 リリース
 
@@ -47,7 +47,7 @@ SameSite Cookie 属性は次のとおりです。
 | -------- | ----------- | --------|--------|
 | **Lax**  | Cookie は、**ファースト パーティ** コンテキストと HTTP GET 要求でのみ自動的に送信されます。 SameSite Cookie は、イメージや iframe を読み込むための呼び出し音など、サイト横断的なサブ要求に対して保留されます。 ユーザーがリンクをたどるなどして外部サイトから URL に移動したときに送信されます。| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Strict** |ブラウザーは、ファースト パーティのコンテキスト要求に対してのみ Cookie を送信します。 これらは、Cookie を設定するサイトから送信された要求です。 要求が現在の場とは異なる URL から送信された場合、`Strict` 属性でタグ付けされた Cookie は送信されません。| 省略可能 |`Set-Cookie: key=value; SameSite=Strict`|
-| **なし** | Cookie は、ファースト パーティコンテキストとクロスオリジン要求の両方で送信されますが、値を明示的 **`None`** に設定する必要があり、すべてのブラウザー要求は **HTTPS プロトコルに従い**、暗号化された接続を必要とする **`Secure`** 属性を含める必要があります。 その要件に準拠していない Cookie は **拒否されます**。 <br/>**両方の属性が一緒に必要です**。 **`None`** が **`Secure`** なしで指定されるか、HTTPS プロトコルを使用せずに指定された場合、サード パーティ Cookie は拒否されます。| 省略可能ですが、設定した場合は HTTPS プロトコルが必要です。 |`Set-Cookie: key=value; SameSite=None; Secure` |
+| **なし** | Cookie は、ファースト パーティコンテキストとクロスオリジン要求の両方で送信されますが、値を明示的 **`None`** に設定する必要があり、すべてのブラウザー要求は **HTTPS プロトコルに従い**、暗号化された接続を必要とする **`Secure`** 属性を含める必要があります。その要件に準拠していない Cookie は **拒否されます**。<br/>**両方の属性が同時に必要です**。**`None`** が **`Secure`** なしで指定されるか、HTTPS プロトコルを使用せずに指定された場合、サード パーティ Cookie は拒否されます。| 省略可能ですが、設定した場合は HTTPS プロトコルが必要です。 |`Set-Cookie: key=value; SameSite=None; Secure` |
 
 ## <a name="teams-implications-and-adjustments"></a>Teams の影響と調整
 
@@ -62,16 +62,16 @@ SameSite Cookie 属性は次のとおりです。
 
 * Teams タブは、`<iframes>` を使用して、最上位レベルまたはファースト パーティのコンテキストで表示されるコンテンツを埋め込みます。
 * タスク モジュールを使用すると、Teams アプリケーションでモーダル ポップアップ エクスペリエンスを作成することができます。 タブと同様に、モーダル ウィンドウが現在のページ内で開きます。
-* メッセージ拡張機能を使用すると、外部リソースからのチャット メッセージにエンリッチメントされたコンテンツを挿入できます。
+* メッセージ拡張機能を使用すると、外部リソースからのチャット メッセージに強化されたコンテンツを挿入できます。
 
-`<iframe>` に表示される場合、埋め込みコンテンツで使用される Cookie は、サード パーティーとみなされます。 さらに、ページ上のリモート リソースが要求 `<img>`、`<script>` タグ、外部フォント、カスタマイズされたコンテンツとともに送信される Cookie に依存している場合は、`SameSite=None; Secure` など、サイト横断的に使用できるようにマークされているか、フォールバックが確実に実行されている必要があります。
+`<iframe>` に表示される場合、埋め込みコンテンツで使用される Cookie は、サード パーティーとみなされます。さらに、ページ上のリモート リソースが要求 `<img>`、`<script>` タグ、外部フォント、カスタマイズされたコンテンツとともに送信される Cookie に依存している場合は、`SameSite=None; Secure` など、サイト横断的に使用できるようにマークされているか、フォールバックが確実に実行されている必要があります。
 
 ### <a name="authentication"></a>認証
 
 次の場合は、Web ベースの認証フローを使用する必要があります。
 
 * タブに埋め込まれたコンテンツ ページ。
-* 構成ページ、タスク モジュール、およびメッセージ拡張機能。
+* 構成ページ、タスク モジュール、メッセージング拡張機能。
 * タスク モジュールを使用した会話性ボット。
 
 更新された SameSite の制限によると、ブラウザーは、リンクが外部サイトに由来する場合、すでに認証済みの Web サイトにクッキーを追加することはありません。 認証 Cookie で `SameSite=None; Secure` をサイト横断的に使用できるようにマークしておくか、フォールバックを確実に実行する必要があります。
