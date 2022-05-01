@@ -481,6 +481,8 @@
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
         - name: Microsoft Teams ストアのランク付けパラメーター
           href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
+        - name: アプリ検証エラーの一般的な理由
+          href: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
 - name: アプリを収益化する
   items:
     - name: 概要

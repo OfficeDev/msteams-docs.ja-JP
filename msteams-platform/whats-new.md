@@ -4,12 +4,12 @@ description: Microsoft Teams の最新情報やすべての開発者向け最新
 ms.topic: reference
 ms.localizationpriority: high
 keywords: Teams の最新情報と最新の更新プログラムまたは開発者プレビューと機能
-ms.openlocfilehash: 7be0852fad2344a5d57437d928a2a1d386bc4eb3
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: aabbe185edd57491dc9928d66700d1f35f8b1557
+ms.sourcegitcommit: 6d87e131eeae6846cadecf6ba775cecd010b4ffc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104050"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65132710"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -22,6 +22,7 @@ ms.locfileid: "65104050"
 
 | 日付 | Update | ここで検索 |
 | --- | --- | --- |
+|2022/04/28| アプリ検証エラーの一般的な理由 | [アプリの配布] > [Teams ストアへの公開] > [[アプリ検証エラーの一般的な理由](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)]|
 |04/20/2022 |  CI/CD パイプラインを設定する | [ツールと SDK] > [Visual Studio Code 向け Teams ツールキット] > [[CI/CD パイプラインの設定]](toolkit/use-CICD-template.md)|
 |04/19/2022 | Microsoft Teams でアプリをアップロードする | アプリを配布する > [アプリをアップロードする](concepts/deploy-and-publish/apps-upload.md)|
 |04/06/2022| 個人用アプリまたはタブから Teams に共有する (開発者プレビュー) | [Teams と統合] > [Teams に共有] > [[個人用アプリまたはタブから Teams に共有]](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
