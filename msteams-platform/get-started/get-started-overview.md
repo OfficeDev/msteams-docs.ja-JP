@@ -4,12 +4,12 @@ description: Microsoft Teams 開発者向けドキュメントの概要の概要
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams 開発者向けサンプル
-ms.openlocfilehash: 12fea3fcbdceddfba4c0f60db2ed64b20f801284
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 11989fe16da36e9fc68840782f63078fc39731c6
+ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104358"
+ms.lasthandoff: 04/29/2022
+ms.locfileid: "65135767"
 ---
 # <a name="get-started"></a>概要
 
@@ -42,7 +42,7 @@ Microsoft Teams 用のカスタマイズされたアプリを構築して展開�
 Yeoman ワークフローに既に慣れている場合は、 [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) を使用してアプリをビルドすることを好むかもしれません。
 
 > [!NOTE]
-> App Studio を使用している場合は、Teams アプリを構成、配布、管理するための開発者ポータルを試してみることをお勧めします。
+> App Studio を使用している場合は、Teams アプリを構成、配布、管理するための開発者ポータルを試してみることをお勧めします。<br> App Studio は 2022 年 6 月 30 日までに非推奨になります。
 
 ## <a name="build-your-first-teams-app"></a>最初の Teams アプリを構築する
 
