@@ -3,13 +3,13 @@ title: Teams 会議用アプリを有効化して構成する
 author: surbhigupta
 description: Teams 会議やさまざまな会議シナリオのためのアプリを有効化して構成し、アプリ マニフェストを更新し、機能 (会議中のダイアログ、共有会議ステージ、会議のサイドパネルなど) を構成します
 ms.topic: conceptual
-ms.localizationpriority: none
-ms.openlocfilehash: 4c3f571797df2810e76fc7145e9e9441adbd1e9b
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 20253da4688009baabb746f3e71d0af47b2455d6
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103349"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111319"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Teams 会議用アプリを有効化して構成する
 
@@ -102,7 +102,7 @@ Teams 会議は、組織の共同作業エクスペリエンスを提供しま�
 
     <img src="../assets/images/apps-in-meetings/PreMeeting.png" alt="Pre-meeting experience" width="900"/>
 
-1. 表示されるタブ ギャラリーで、追加するアプリを選択し、必要に応じて手順に従います。 アプリはタブとしてインストールされます。
+1. 表示されるタブ ギャラリーで、追加するアプリを選択し、必要に応じて手順に従います。アプリはタブとしてインストールされます。
 
 会議にメッセージ拡張機能を追加するには:
 
@@ -129,7 +129,7 @@ Teams 会議は、組織の共同作業エクスペリエンスを提供しま�
 
 `userContext` API を使用して要求をルーティングするには、「[Teams SDK](../tabs/how-to/access-teams-context.md#user-context)」を参照してください。 詳細については、「[タブの Teams 認証フロー](../tabs/how-to/authentication/auth-flow-tab.md)」を参照してください。 タブの認証フローは、Web サイトの認証フローに似ています。 そのため、タブは OAuth 2.0 を直接使用できます。 詳細については、「[Microsoft ID プラットフォームと OAuth 2.0 認証コード フロー](/azure/active-directory/develop/v2-oauth2-auth-code-flow)」を参照してください。
 
-メッセージ拡張機能は、ユーザーが会議中ビューに表示されている場合に想定どおりに機能します。 ユーザーは、メッセージ拡張カードを作成して投稿できます。 会議中の AppName は、会議中のアプリ名の U バーを示すツールヒントです。
+メッセージ拡張機能は、ユーザーが会議中ビューを使用しているとき、期待どおりに機能します。 ユーザーは、メッセージ拡張カードを作成して投稿できます。 会議中の AppName は、会議中のアプリ名の U バーを示すツールヒントです。
 
 > [!NOTE]
 > バージョン 1.7.0 より前のバージョンではサイド パネルがサポートされていないため、このバージョン以降の [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) を使用してください。
@@ -155,7 +155,7 @@ Teams 会議は、組織の共同作業エクスペリエンスを提供しま�
 
 <img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
 
-アプリ全体をステージに共有するには、アプリ マニフェストで `meetingStage` と `meetingSidePanel` をフレーム コンテキストとして構成する必要があります。 例:
+アプリ全体をステージに共有するには、アプリ マニフェストで `meetingStage` と `meetingSidePanel` をフレーム コンテキストとして構成する必要があります。次に例を示します。
 
 ```json
 "configurableTabs": [
@@ -181,7 +181,7 @@ Teams 会議は、組織の共同作業エクスペリエンスを提供しま�
 
 <img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
 
-アプリの特定の部分をステージに共有するには、Teams クライアント SDK ライブラリで関連 API を呼び出す必要があります。 詳細については、「[API リファレンス](API-references.md)」を参照してください。
+アプリの特定の部分をステージに共有するには、Teams クライアント SDK ライブラリで関連 API を呼び出す必要があります。詳細については、「[API リファレンス](API-references.md)」を参照してください。
 
 > [!NOTE]
 > * アプリの特定の部分をステージに共有するには、Teams マニフェスト バージョン 1.12 以降を使用します。

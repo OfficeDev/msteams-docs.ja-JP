@@ -2,14 +2,14 @@
 title: Microsoft Teams の通話と会議ボットを登録する
 description: Microsoft Teams 用に新しいオーディオ / ビデオ通話ボットを登録する方法、新しいボットを作成する方法、通話機能を追加する方法、グラフのアクセス許可を追加する方法について説明します。
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: ボットのオーディオ / ビデオ オーディオ ビデオ メディアを呼び出す
-ms.openlocfilehash: 1a90e430ba0c5bc4ae1ab246baa85a5d33507a43
-ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
+ms.openlocfilehash: 53c12b3d65ad909088e18081ed4b38a77919844b
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64590767"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111417"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Microsoft Teams の通話と会議ボットを登録する
 
@@ -23,8 +23,8 @@ ms.locfileid: "64590767"
 
 通話とオンライン会議ボットには、 Teams でボットのオーディオまたはビデオを有効にする manifest.json に次の 2 つの追加設定があります。
 
-* `bots[0].supportsCalling`. 存在し、 `true` に設定されている場合は、 Teams は、ボットが通話やオンライン会議に参加できるようにします。
-* `bots[0].supportsVideo`. 存在し、 `true` に設定されている場合は、ボットがビデオをサポートしていることを Teams が認識します。
+* `bots[0].supportsCalling`。この設定が存在し、かつ `true` に設定されている場合、Teams はボットが通話やオンライン会議に参加することを許可します。
+* `bots[0].supportsVideo`。この設定が存在し、かつ `true` に設定されている場合は、ボットがビデオをサポートしていることを Teams が認識します。
 
 IDE でこれらの値について、通話と会議ボットの manifest.json スキーマを適切に検証する場合は、次のように `$schema` 属性を変更できます。
 
@@ -40,7 +40,7 @@ IDE でこれらの値について、通話と会議ボットの manifest.json �
 
 Teams 用の新しいボットを作成するには:
 
-1. このリンクを使用して、新しいボットを作成します `https://dev.botframework.com/bots/new`。 または、 Bot Framework ポータルで **[ ボットの作成 ]** ボタンを選択した場合は、 Azure アカウントを持っている必要がある Microsoft Azure でボットを作成します。
+1. このリンク (`https://dev.botframework.com/bots/new`) を使用して新しいボットを作成します。または、Bot Framework ポータルで **[ボットの作成]** ボタンを選択する場合は、Microsoft Azure でボットを作成します。この場合、Azure アカウントを持っている必要があります。
 1. Teams チャネルを追加します。
 1. チャネル ページの **[ 通話 ]** タブを選択します。 **[ 通話を有効にする ]** を選択し、たとえば `https://contoso.com/teamsapp/api/calling` のような、着信通知を受信する HTTPS URL を使用して **Webhook (通話用)** を更新します。 詳細については、 「[チャネルの構成](/bot-framework/portal-configure-channels)」を参照してください。
 

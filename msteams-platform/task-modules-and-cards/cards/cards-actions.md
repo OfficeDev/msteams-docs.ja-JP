@@ -1,19 +1,19 @@
 ---
 title: ボットにカード アクションを追加する
 description: Microsoft Teams のカード アクションと、ボットでの使用方法について説明します。
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.topic: conceptual
 keywords: チーム ボット カード アクション
-ms.openlocfilehash: 12100ca05d8e4ff4f68c934bc82e1f078dd0210e
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: 7650ec5f3b027396226f8250aa353d48e8c9e0f3
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103910"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111578"
 ---
 # <a name="card-actions"></a>カード アクション
 
-Teamsのボットとメッセージ拡張機能によって使用されるカードでは、次のアクティビティ[`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards)の種類がサポートされます。
+Teams のボットやメッセージ拡張機能で使用されるカードは、以下のアクティビティ [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) タイプをサポートします。
 
 > [!NOTE]
 > `CardAction` アクションは、コネクタから使用する場合、Office 365 コネクタ カード向けの `potentialActions` とは異なります。
@@ -31,7 +31,7 @@ Teamsのボットとメッセージ拡張機能によって使用されるカー
 >* Teams は、前のテーブルに記載されていない `CardAction` タイプをサポートしていません。
 >* Teams は `potentialActions` プロパティをサポートしていません。
 >* カード アクションは、Bot Framework や Azure Bot Service の[おすすめの操作](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true)とは異なります。 おすすめの操作は、Microsoft Teams ではサポートされていません。 Teams ボット メッセージにボタンを表示させる場合は、カードを使用します。
->* メッセージ拡張機能の一部としてカード アクションを使用している場合、カードがチャネルに送信されるまでアクションは機能しません。 カードがメッセージの作成ボックスに入っている間は、アクションは機能しません。
+>* カード アクションをメッセージ拡張機能の一部として使用している場合、カードがチャネルに送信されるまでアクションは機能しません。 カードがメッセージの作成ボックスに入っている間は、アクションは機能しません。
 
 ## <a name="action-type-openurl"></a>アクション タイプ openUrl
 

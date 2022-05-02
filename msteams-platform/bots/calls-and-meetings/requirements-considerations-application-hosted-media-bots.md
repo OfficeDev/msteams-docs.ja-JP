@@ -1,75 +1,75 @@
 ---
-title: アプリケーションホスト型メディア ボットの要件と考慮事項
-description: コード例とサンプルを使用したアプリケーションホスト型メディア ボットの作成に関連する重要な要件と考慮事項、スケーラビリティとパフォーマンスに関する考慮事項Microsoft Teams理解します。
+title: アプリケーションでホストされるメディア ボットの要件と考察
+description: コード例とサンプルを使用して、Microsoft Teams 用のアプリケーションでホストされるメディア ボットの作成に関連する重要な要件と考慮事項、およびスケーラビリティとパフォーマンスに関する考慮事項について説明します。
 ms.topic: conceptual
-ms.localizationpriority: medium
-keywords: アプリケーションホスト型メディア Windows Azure VM
+ms.localizationpriority: high
+keywords: アプリケーションでホストされるメディア Windows Server Azure VM
 ms.date: 11/16/2018
-ms.openlocfilehash: ddbcf4edd2783d79c8bfdcd057067d7d5a4d1137
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.openlocfilehash: 35ad133d898b53538f51c2ae4c699cd19368f9af
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453020"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111984"
 ---
-# <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>アプリケーションホスト型メディア ボットの要件と考慮事項
+# <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>アプリケーションでホストされるメディア ボットの要件と考察
 
-アプリケーションホスト型メディア ボットでは、音声およびビデオ メディア [`Microsoft.Graph.Communications.Calls.Media` ストリームにアクセスするために .NET](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) ライブラリが必要です。 ボットは、Azure の Windows サーバーのオンプレミス コンピューターまたは Windows Server ゲスト オペレーティング システム (OS) に展開する必要があります。
+アプリケーションでホストされるメディア ボットでは、オーディオおよびビデオ メディア ストリームにアクセスするために [`Microsoft.Graph.Communications.Calls.Media` .NET ライブラリ](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)が必要です。このボットは、Windows Server オンプレミス マシンまたは Azure の Windows Server ゲスト オペレーティング システム (OS) にデプロイする必要があります。
 
 > [!NOTE]
 >
-> * メッセージングおよび対話型音声応答 (IVR) ボットを開発するためのガイダンスは、アプリケーションホスト型メディア ボットの構築には完全には適用されません。
-> * Microsoft Real-time Media Platform for bots は開発者向けプレビューに含まれるので、このドキュメントのガイダンスは変更される可能性があります。
+> * メッセージング ボットや対話型音声応答 (IVR) ボットの開発に関するガイダンスは、アプリケーションでホストされるメディア ボットの構築には完全には適用されません。
+> * Microsoft Real-Time Media Platform for Bots は開発者向けプレビュー段階であるため、このドキュメントのガイダンスは変更される可能性があります。
 
-## <a name="c-or-net-and-windows-server-for-development"></a>C#または .NET および Windows サーバーの開発
+## <a name="c-or-net-and-windows-server-for-development"></a>開発用の C# または .NET および Windows Server
 
-アプリケーションホスト型メディア ボットには、次の情報が必要です。
+アプリケーションでホストされるメディア ボットには、次のものが必要です。
 
-* ボットは、ユーザーと標準のC#で開発し、.NET Frameworkに展開するMicrosoft Azure。 C++ API または Node.js API を使用してリアルタイム メディアにアクセスすることはできません。アプリケーションホスト型メディア ボットでは .NET Core はサポートされていません。
+* ボットは C# と標準の.NET Framework で開発し、Microsoft Azure にデプロイする必要があります。 C++ または Node.js API を使用してリアルタイム メディアにアクセスすることはできません。また、.NET Core はアプリケーションでホストされるメディア ボットではサポートされていません。
 
-* ボットは、次のいずれかの Azure サービス環境内でホストできます。
+* このボットは、次のいずれかの Azure サービス環境内でホストできます。
   * クラウド サービス。
-  * Service Fabricスケール セット (VMSS) を使用します。
+  * Virtual Machine Scale Sets (VMSS) を使用した Service Fabric。
   * サービスとしてのインフラストラクチャ (IaaS) 仮想マシン (VM)。  
   
-* ボットを Azure Web アプリとして展開することはできません。
+* このボットは、Azure Web アプリとしてデプロイすることはできません。
 
-* ボットは、.NET ライブラリの最新バージョンで実行されている `Microsoft.Graph.Communications.Calls.Media` 必要があります。 ボットは、最新のバージョンの NuGet パッケージ、または 3 か[月以内](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)のバージョンを使用する必要があります。 古いバージョンのライブラリは廃止され、数か月後には機能しません。 ライブラリを`Microsoft.Graph.Communications.Calls.Media`最新の状態に保つことで、ボットとサーバー間の最適な相互運用性がMicrosoft Teams。
+* このボットは、最新バージョンの `Microsoft.Graph.Communications.Calls.Media` .NET ライブラリで実行されている必要があります。 このボットは、使用可能な最新バージョンの [NuGet パッケージ](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)か、3 か月以下のバージョンを使用する必要があります。 以前のバージョンのライブラリは非推奨となり、数か月後には機能しなくなります。 `Microsoft.Graph.Communications.Calls.Media` ライブラリを最新の状態に保つことで、ボットと Microsoft Teams の間の最適な相互運用性を確保できます。
 
-次のセクションでは、リアルタイム メディア通話の場所の詳細について説明します。
+次のセクションでは、リアルタイム メディア呼び出しがどこに存在するかについて詳しく説明します。
 
-## <a name="real-time-media-calls-stay-where-they-are-created"></a>リアルタイム のメディア通話は、作成された場所にとどまる
+## <a name="real-time-media-calls-stay-where-they-are-created"></a>リアルタイム メディア呼び出しは作成された場所に留まる
 
-リアルタイムのメディア通話は、作成されたコンピューターに残っています。 リアルタイムのメディア通話は、呼び出しを受け入れるか開始した仮想マシン (VM) インスタンスにピン留めされます。 その VM インスタンスMicrosoft Teams呼び出しまたは会議フローからのメディア、およびボットが送信するメディアは、Microsoft Teams VM から発信する必要があります。 VM の停止時にリアルタイムのメディア呼び出しが進行中の場合、これらの呼び出しは突然終了します。 ボットが保留中の VM シャットダウンに関する事前知識を持っている場合は、呼び出しを終了できます。
+リアルタイム メディア呼び出しは、その呼び出しが作成されたコンピューターに留まります。 リアルタイム メディア呼び出しは、呼び出しを受け入れたか開始した仮想マシン (VM) インスタンスにピン留めされます。 Microsoft Teams 呼び出しまたは会議フローからその VM インスタンスへのメディアと、ボットが Microsoft Teams に返送するメディアも、その VM から発信される必要があります。 その VM が停止されたときに処理中のリアルタイム メディア呼び出しがある場合、それらの呼び出しは突然終了します。 保留中の VM シャットダウンに関する予備知識をボットが持っている場合は、ボットが呼び出しを終了できます。
 
-次のセクションでは、アプリケーションホスト型メディア ボットのアクセシビリティの詳細について説明します。
+次のセクションでは、アプリケーションでホストされるメディア ボットのアクセシビリティについて詳しく説明します。
 
-## <a name="application-hosted-media-bots-accessible-on-the-internet"></a>インターネット上でアクセス可能なアプリケーションホスト型メディア ボット
+## <a name="application-hosted-media-bots-accessible-on-the-internet"></a>インターネット上でアクセス可能なアプリケーションでホストされるメディア ボット
 
-アプリケーションホスト型メディア ボットは、インターネット上で直接アクセスできる必要があります。 これらのボットには、次の機能が含まれる必要があります。
+アプリケーションでホストされるメディア ボットは、インターネット上で直接アクセスできる必要があります。 これらのボットには、次の機能が含まれている必要があります。
 
-* Azure でアプリケーションホスト型メディア ボットをホストする各 VM インスタンスは、インスタンス レベルのパブリック IP アドレス (ILPIP) を使用してインターネットから直接アクセスできる必要があります。
-  * Azure Cloud Service の ILPIP を取得および構成するには、「インスタンス レベルのパブリック [IP クラシックの概要」を参照してください](/azure/virtual-network/virtual-networks-instance-level-public-ip)。
-  * VM スケール セットの ILPIP を構成するには、「仮想マシンごとの [パブリック IPv4」を参照してください](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-networking#public-ipv4-per-virtual-machine)。
-* アプリケーションホスト型メディア ボットをホストするサービスでは、特定のインスタンスにマップされるパブリック向けポートを使用して各 VM インスタンスを構成する必要があります。
-  * Azure Cloud Service の場合、これにはインスタンス入力エンドポイントが必要です。 詳細については、「Azure でロール [インスタンスの通信を有効にする」を参照してください](/azure/cloud-services/cloud-services-enable-communication-role-instances)。
-  * VM スケール セットの場合、ロード バランサーの NAT ルールを構成する必要があります。 詳細については、「Azure の [仮想ネットワークと仮想マシン」を参照してください](/azure/virtual-machines/windows/network-overview)。
+* アプリケーションでホストされるメディア ボットを Azure でホストしている各 VM インスタンスには、インスタンス レベルのパブリック IP アドレス (ILPIP) を使用してインターネットから直接アクセスできる必要があります。
+  * Azure クラウド サービス用の ILPIP を取得して構成する方法については、「[インスタンス レベル パブリック IP (クラシック) の概要](/azure/virtual-network/virtual-networks-instance-level-public-ip)」を参照してください。
+  * VM スケール セット用の ILPIP を構成する方法については、「[仮想マシンごとのパブリック IPv4](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-networking#public-ipv4-per-virtual-machine)」を参照してください。
+* アプリケーションでホストされるメディア ボットをホストしているサービスでは、特定のインスタンスにマップされる公開ポートを使用して各 VM インスタンスを構成する必要もあります。
+  * Azure クラウド サービスの場合、これにはインスタンス入力エンドポイントが必要です。 詳細については、[Azure でロール インスタンスの通信を有効にする](/azure/cloud-services/cloud-services-enable-communication-role-instances)方法に関する記事を参照してください。
+  * VM スケール セットの場合は、ロード バランサーに関する NAT 規則を構成する必要があります。 詳細については、「[Azure における仮想ネットワークと仮想マシン](/azure/virtual-machines/windows/network-overview)」を参照してください。
 
-* アプリケーションホスト型メディア ボットは、アプリケーション ホスト型メディア ボットではBot Framework Emulator。
+* アプリケーションでホストされるメディア ボットは、Bot Framework Emulator ではサポートされていません。
 
-次のセクションでは、アプリケーションホスト型メディア ボットのスケーラビリティとパフォーマンスに関する考慮事項の詳細について説明します。
+次のセクションでは、アプリケーションでホストされるメディア ボットのスケーラビリティとパフォーマンスに関する考慮事項について詳しく説明します。
 
 ## <a name="scalability-and-performance-considerations"></a>スケーラビリティとパフォーマンスに関する検討事項
 
-アプリケーションホスト型メディア ボットには、次のスケーラビリティとパフォーマンスに関する考慮事項が必要です。
+アプリケーションでホストされるメディア ボットには、次のスケーラビリティとパフォーマンスに関する考慮事項が必要です。
 
-* アプリケーションホスト型メディア ボットでは、メッセージング ボットよりも多くのコンピューティングおよびネットワーク (帯域幅) 容量が必要であり、運用コストが大幅に高くなる可能性があります。 リアルタイムのメディア ボット開発者は、ボットのスケーラビリティを慎重に測定し、ボットが管理できる以上の同時呼び出しを受け入れなかねない必要があります。 ビデオが有効なボットは、CPU コアごとに 1 つまたは 2 つの同時メディア セッションのみを維持できる場合があります ("raw" RGB24 または NV12 ビデオ形式を使用している場合)。
-* リアルタイム メディア プラットフォームでは、現在、VM で使用可能なグラフィックス処理ユニット (GPU) を利用して H.264 ビデオ エンコード/デコードをオフロードできません。 代わりに、ビデオエンコードとデコードは CPU 上のソフトウェアで行われます。 GPU が使用可能な場合、ボットが 3D グラフィックス エンジンを使用している場合など、ボットは独自のグラフィックス レンダリングに利用できます。
-* リアルタイム メディア ボットをホストする VM インスタンスには、少なくとも 2 つの CPU コアが必要です。 Azure では、Dv2 シリーズ仮想マシンをお勧めします。 他の Azure VM の種類では、4 つの仮想 CPU (vCPU) を持つシステムが必要な最小サイズです。 Azure VM の種類の詳細については、Azure のドキュメントを [参照してください](/azure/virtual-machines/windows/sizes-general)。
+* アプリケーションでホストされるメディア ボットには、メッセージング ボットよりも多くのコンピューティングとネットワーク (帯域幅) の容量が必要であり、運用コストが大幅に高くなる可能性があります。 リアルタイム メディア ボット開発者は、ボットのスケーラビリティを慎重に測定し、ボットが管理できるよりも多くの同時呼び出しを受け入れないようにする必要があります。 ビデオ対応ボットでは、CPU コアあたり 1 つか 2 つの同時メディア セッションしか維持できない可能性があります ("RAW" RGB24 または NV12 ビデオ形式を使用している場合)。
+* Real-time Media Platform は、現時点では、H.264 ビデオ エンコード/デコードをオフロードするために VM で使用可能なグラフィックス処理装置 (GPU) を利用することはしていません。 代わりに、ビデオのエンコードとデコードは、CPU 上のソフトウェアで行われます。 GPU が使用可能な場合、ボットは独自のグラフィックス レンダリングにその GPU を利用できます (ボットが 3D グラフィックス エンジンを使用している場合など)。
+* リアルタイム メディア ボットをホストしている VM インスタンスには、少なくとも 2 つの CPU コアが必要です。 Azure の場合は、Dv2 シリーズの仮想マシンをお勧めします。 その他の Azure VM の種類では、4 つの仮想 CPU (vCPU) を備えたシステムが必要な最小サイズです。 Azure VM の種類の詳細については、[Azure のドキュメント](/azure/virtual-machines/windows/sizes-general)を参照してください。
 
 ## <a name="code-sample"></a>コード サンプル
 
-アプリケーションホスト型メディア ボットのサンプルは次のとおりです。
+アプリケーションでホストされるメディア ボットのサンプルは次のとおりです。
 
 | **サンプルの名前** | **説明** | **Graph** |
 |------------|-------------|-----------|
@@ -83,14 +83,14 @@ ms.locfileid: "63453020"
 
 ## <a name="see-also"></a>関連項目
 
-* [Graph SDK ドキュメントの呼び出し](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
-* ボットでは、メッセージング ボットよりも多くのコンピューティングとネットワーク帯域幅の容量が必要であり、運用コストが大幅に高くなります。 リアルタイムのメディア ボット開発者は、ボットのスケーラビリティを慎重に測定し、ボットが管理できる以上の同時呼び出しを受け入れなかねない必要があります。 ビデオが有効なボットは、RAW RGB24 または NV12 ビデオ形式を使用する場合、CPU コアごとに 1 つまたは 2 つの同時メディア セッションのみを維持できます。
-* リアルタイム メディア プラットフォームでは、現在、VM で使用できるグラフィックス処理ユニット (GPU) を利用して H.264 ビデオ エンコードまたはデコードをオフロードできません。 代わりに、ビデオエンコードとデコードは CPU 上のソフトウェアで行われます。 GPU が使用可能な場合、ボットが 3D グラフィックス エンジンを使用している場合など、ボットは独自のグラフィックス レンダリングで GPU を利用します。
-* リアルタイム メディア ボットをホストする VM インスタンスには、少なくとも 2 つの CPU コアが必要です。 Azure では、Dv2 シリーズ仮想マシンをお勧めします。 他の Azure VM の種類では、4 つの仮想 CPU (vCPU) を持つシステムが必要な最小サイズです。 Azure VM の種類の詳細については、「Azure のドキュメント [」を参照してください](/azure/virtual-machines/windows/sizes-general)。
+* [Graph 呼び出し SDK に関するドキュメント](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
+* このボットには、メッセージング ボットよりも多くのコンピューティングとネットワーク帯域幅の容量が必要であり、運用コストが大幅に高くなります。 リアルタイム メディア ボット開発者は、ボットのスケーラビリティを慎重に測定し、ボットが管理できるよりも多くの同時呼び出しを受け入れないようにする必要があります。 RAW RGB24 または NV12 ビデオ形式を使用している場合、ビデオ対応ボットでは、CPU コアあたり 1 つか 2 つの同時メディア セッションしか維持できません。
+* Real-time Media Platform は、現時点では、H.264 ビデオ エンコードまたはデコードをオフロードするために VM で使用可能なグラフィックス処理装置 (GPU) を利用することはしていません。 代わりに、ビデオのエンコードとデコードは、CPU 上のソフトウェアで行われます。 GPU が使用可能な場合、ボットは独自のグラフィックス レンダリングにその GPU を利用します (ボットが 3D グラフィックス エンジンを使用している場合など)。
+* リアルタイム メディア ボットをホストしている VM インスタンスには、少なくとも 2 つの CPU コアが必要です。 Azure の場合は、Dv2 シリーズの仮想マシンをお勧めします。 その他の Azure VM の種類では、4 つの仮想 CPU (vCPU) を備えたシステムが必要な最小サイズです。 Azure VM の種類の詳細については、[Azure のドキュメント](/azure/virtual-machines/windows/sizes-general)を参照してください。
 
-次のセクションでは、さまざまなローカル メディア シナリオを示すサンプルを示します。
+次のセクションでは、さまざまなローカル メディアシナリオを示すサンプルを提供します。
 
-## <a name="samples-and-additional-resources"></a>サンプルと追加のリソース
+## <a name="samples-and-additional-resources"></a>サンプルとその他のリソース
 
 * [サンプル アプリケーション](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples)
-* [Graph SDK ドキュメントの呼び出し](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
+* [Graph 呼び出し SDK に関するドキュメント](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)

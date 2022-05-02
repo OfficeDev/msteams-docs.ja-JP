@@ -1,58 +1,62 @@
 ---
-title: アプリをTeamsする
+title: Teams アプリをカスタマイズする
 author: heath-hamilton
-description: 管理者が組織Teamsアプリをカスタマイズする方法について説明します。
-ms.localizationpriority: medium
+description: Teams 管理者が組織用にアプリをカスタマイズする方法について説明します。
+ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: overview
-keywords: アクセント カラー ブランドアプリの承認を非表示にする
-ms.openlocfilehash: 1487a1a44991143b93b87bf47bdb93180d97cb8c
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
-ms.translationtype: MT
+keywords: アクセント カラー, ブランド, 非表示, アプリ, 承認
+ms.openlocfilehash: 4728e6f34680d51983558d1ad96c47ffe3650234
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948615"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111200"
 ---
-# <a name="customize-your-teams-app"></a>アプリをTeamsする
+# <a name="customize-your-teams-app"></a>Teams アプリをカスタマイズする
 
-## <a name="enable-your-microsoft-teams-app-to-be-customized"></a>アプリMicrosoft Teamsカスタマイズを有効にする
+## <a name="enable-your-microsoft-teams-app-to-be-customized"></a>Microsoft Teams アプリをカスタマイズできるようにする
 
-顧客が管理センターでアプリのMicrosoft TeamsをカスタマイズTeamsできます。 この機能は、アプリ ストアに発行されたアプリTeamsされます。 組織用に公開されたサイドロードされたアプリとアプリはカスタマイズできません。
+開発者は、Microsoft Teams アプリのいくつかの側面を顧客が Teams 管理センターでカスタマイズできるようにすることができます。 この機能は、Teams ストアに公開されたアプリでのみサポートされます。 サイドロードされたアプリや組織用に公開されたアプリはカスタマイズできません。
 
-この機能のいくつかの考えられる例は次のとおりです。
+この機能の考えられる例を次に示します。
 
-* アプリのアクセントカラーを組織のブランドに合わせて変更する。
-* Contoso から Contoso *エージェント**にアプリ* 名を更新すると、組織のユーザーに表示される名前が表示されます。 (注: チャットまたはチャネルにコネクタを追加するユーザーには、元のアプリ名 Contoso .) が引き続き *表示* されます。
+* 組織のブランドに合わせてアプリのアクセント カラーを変更する。
+* アプリ名を "*Contoso*" から "*Contoso エージェント*" に更新する。この名前が組織内のユーザーに表示されます。 (注: チャットまたはチャネルにコネクタを追加しているユーザーには、元のアプリ名 *Contoso* が引き続き表示されます)。
 
-開発者ポータルでこの機能を有効に[Teams。](https://dev.teams.microsoft.com/home) これにより、アプリ マニフェストの `configurableProperties` 1.10 より前のバージョンTeams構成されます。
+この機能は、[Teams の開発者ポータル](https://dev.teams.microsoft.com/home)で有効にできます。 これは `configurableProperties` を構成します。この構成は Teams アプリ マニフェストの 1.10 より前のバージョンでは使用できません。
 
 ### <a name="test-your-app"></a>アプリのテスト
 
-開発中にこの機能をテストできない。 組織のアプリ カタログにサイドローディングまたは発行を行う場合、アプリのカスタマイズはサポートされません。
+開発中にこの機能をテストすることはできません。 組織のアプリ カタログにサイドロードまたは公開する場合、アプリのカスタマイズはサポートされません。
 
-### <a name="user-considerations"></a>ユーザーの考慮事項
+### <a name="user-considerations"></a>ユーザーに関する考慮事項
 
-アプリをカスタマイズするユーザー (特Teams管理者) にガイドラインを提供します。 詳細については、「アプリのカスタマイズ[」を参照Teams。](/MicrosoftTeams/customize-apps)
+アプリをカスタマイズしたい顧客 (具体的には Teams 管理者) 向けにガイドラインを提供します。 詳細については、[Teams でのアプリのカスタマイズ](/MicrosoftTeams/customize-apps)に関する記事を参照してください。
 
-## <a name="hide-teams-app-until-admin-approves"></a>管理者がTeamsするまでアプリを非表示にする
+## <a name="hide-teams-app-until-admin-approves"></a>管理者が承認するまで Teams アプリを非表示にする
 
-アプリエクスペリエンスTeams強化するには、管理者がアプリの表示を解除するまで、既定でユーザーからアプリを非表示にできます。 たとえば、Contoso Electronics は、ユーザー向けヘルプ デスク アプリを作成Teams。 アプリの適切な機能を有効にするために、Contoso Electronics では、顧客が最初にアプリの特定のプロパティを設定する必要があります。 アプリは既定で非表示にされ、管理者が許可した後にのみユーザーが利用できます。
+Teams アプリのエクスペリエンスを向上させるために、開発者は、管理者がアプリの再表示を許可するまで、既定でユーザーからアプリを非表示にすることができます。 たとえば、Contoso Electronics では Teams 用のヘルプ デスク アプリを作成しました。 Contoso Electronics は、アプリの適切な機能を実現するために、顧客が最初にアプリの特定のプロパティを設定することを望んでいます。 このアプリは既定では非表示になっており、管理者が許可してはじめてユーザーが使用できるようになります。
 
-アプリを非表示にする場合は、アプリ マニフェスト ファイルでプロパティをに `defaultBlockUntilAdminAction` 設定します `true` 。 プロパティがに設定されている場合は、Teams管理センター>アプリの管理、発行者によるブロックがアプリの状態 `true` に表示 **されます**。
+> [!NOTE]
+> Teams ストアが進化しました。
+> 
+> 以前は、タイルの省略記号を選択すれば LOB アプリが更新されました。 Teams ストア エクスペリエンスが更新され、[Teams 管理センター](https://admin.teams.microsoft.com)にログインして LOB アプリを更新できるようになりました。
+
+アプリを非表示にするには、アプリ マニフェスト ファイルで `defaultBlockUntilAdminAction` プロパティを `true` に設定します。 このプロパティが `true` に設定されている場合、Teams 管理センター > **[アプリの管理]** では、**[Blocked by publisher]\(発行元によってブロック済み\)** がアプリの **[状態]** に表示されます。
 
 ![発行元によってブロックされたアプリを管理する](../../assets/images/apps-in-meetings/manageappsblockedapps.png)
 
-管理者は、ユーザーがアプリにアクセスする前にアクションを実行する要求を取得します。 [ **アプリの管理]** で、管理者は [許可] を **選択して、** 発行元の状態でブロック **されたアプリを許可** できます。
+管理者は、ユーザーがアプリにアクセスできるようになる前にアクションを実行する要求を受け取ります。 **[アプリの管理]** で、管理者は **[許可]** を選択して、**[Blocked by publisher]\(発行元によってブロック済み\)** 状態のアプリを許可できます。
 
 ![アプリを管理する](../../assets/images/apps-in-meetings/manageapp.png)
 
-既定では、アプリを非表示にしない場合は、プロパティをに `defaultBlockUntilAdminAction` 更新できます `false` 。 新しいバージョンのアプリが承認されると、管理者が明示的なアクションを実行しない限り、アプリは既定で許可されます。
+既定でアプリを非表示にしたくない場合は、`defaultBlockUntilAdminAction` プロパティを `false` に更新できます。 そのアプリの新しいバージョンが承認された場合、管理者が明示的なアクションを実行していない限り、アプリは既定で許可されます。
 
 > [!NOTE]
-> `defaultBlockUntilAdminAction` LOB アプリではサポートされていません。 このプロパティを使用して LOB アプリをアップロードすると、アプリはブロックされません。
+> `defaultBlockUntilAdminAction` は LOB アプリではサポートされていません。 このプロパティを使用して LOB アプリをアップロードした場合、アプリはブロックされません。
 
 ## <a name="see-also"></a>関連項目
 
 * [アプリ マニフェストのスキーマ](/microsoftteams/platform/resources/schema/manifest-schema)
-* [管理センターでアプリTeamsカスタマイズする](/MicrosoftTeams/customize-apps)
-
+* [Teams 管理センターでアプリをカスタマイズする](/MicrosoftTeams/customize-apps)
