@@ -1,40 +1,40 @@
 ---
 title: メディア機能を統合する
 author: Rajeshwari-v
-description: JavaScript クライアント SDK を使用Teamsコード例を使用してメディア機能を有効にする方法について説明します。
+description: コード例を使用して、Teams JavaScript クライアント SDK を使用してメディア機能を有効にする方法について説明します
 keywords: カメラ イメージ マイク機能ネイティブ デバイスのアクセス許可メディア API
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 444f07a6901fb7bdfef0811f8568497522571828
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.openlocfilehash: c9b31bf6fe97446bfbccdd1861612ec938733f88
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452817"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111263"
 ---
 # <a name="integrate-media-capabilities"></a>メディア機能を統合する
 
-カメラやマイクなどのネイティブ デバイス機能を、ユーザーのアプリと統合Teamsできます。 統合のために、アプリがユーザー Microsoft Teamsアクセス許可にアクセスするために必要なツールを提供する [JavaScript クライアント SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) を使用[できます](native-device-permissions.md)。 適切なメディア機能 API を使用して、カメラやマイクなどのデバイス機能を Microsoft Teams  モバイル アプリ内の Teams プラットフォームに統合し、より豊富なエクスペリエンスを構築します。
+**カメラ** や **マイク** など、Teams アプリと統合できるネイティブ デバイス機能。 [Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) を使用できます。これは、アプリがユーザーの [ネイティブ デバイス機能](native-device-permissions.md) にアクセスするために必要なツールを提供します。 適切なメディア機能 API を使用して、**カメラ** や **マイク** などのデバイス機能を Microsoft Teams モバイル アプリ内の Teams プラットフォームと統合し、より豊富なエクスペリエンスを構築します。
 
 ## <a name="advantage-of-integrating-media-capabilities"></a>メディア機能を統合する利点
 
-Teams アプリにデバイス機能を統合する主な利点は、ネイティブ Teams コントロールを活用して、ユーザーに豊富で没入感のあるエクスペリエンスを提供する方法です。
+Teams アプリにデバイス機能を統合する主な利点は、ネイティブ Teams コントロールを利用して、ユーザーに豊富でイマーシブなエクスペリエンスを提供することです。
 メディア機能を統合するには、アプリ マニフェスト ファイルを更新し、メディア機能 API を呼び出す必要があります。
 
-効果的な統合を行う場合は、それぞれの API [](#code-snippets) を呼び出すコード スニペットについて理解している必要があります。ネイティブ メディア機能を使用できます。
+効果的な統合を実現するには、ネイティブ メディア機能を使用できる、それぞれの API を呼び出すための [コード スニペット](#code-snippets) を十分に理解している必要があります。
 
-API 応答エラーを理解して、アプリ内[](#error-handling)のエラーを処理することがTeamsです。
+Teams アプリのエラーを処理するには、[API 応答エラー](#error-handling) を理解しておくことが重要です。
 
 > [!NOTE]
 >
-> * 現在、Microsoft Teams機能のサポートはモバイル クライアントでのみ利用できます。
-> * 現在、Teamsは、マルチウィンドウ アプリ、タブ、および会議のサイド パネルに対するデバイスのアクセス許可をサポートしていない。
+> * 現在、Microsoft Teams によるメディア機能と QR バーコード スキャナー機能のサポートは、モバイル クライアントでのみ利用できます。
+> * 現在のところ Teams は、マルチウィンドウ アプリ、タブ、および会議のサイド パネルへのデバイスのアクセス許可をサポートしていません。
 > * デバイスのアクセス許可はブラウザーによって異なります。 詳細については、「[ブラウザー デバイスのアクセス許可](browser-device-permissions.md)」を参照してください。
 
-## <a name="update-manifest"></a>マニフェストの更新
+## <a name="update-manifest"></a>マニフェストを更新する
 
-プロパティを追加Teams指定して、[アプリ manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) `devicePermissions` ファイルを更新します`media`。 これにより、ユーザーがカメラを使用して画像をキャプチャし始める前、ギャラリーを開いて添付ファイルとして送信する画像を選択するか、マイクを使用して会話を録音する前に、ユーザーに必要なアクセス許可を求めできます。 アプリ マニフェストの更新プログラムは次のとおりです。
+`devicePermissions` プロパティを追加して `media` を指定することにより、Teamsアプリの [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) ファイルを更新します。 これにより、アプリは、 **カメラ** を使用して画像をキャプチャする前にユーザーに必要なアクセス許可を要求したり、ギャラリーを開いて添付ファイルとして送信する画像を選択したり、 **マイク** を使用して会話を記録したりできます。 アプリ マニフェストの更新プログラムは次のとおりです。
 
 ``` json
 "devicePermissions": [
@@ -43,61 +43,61 @@ API 応答エラーを理解して、アプリ内[](#error-handling)のエラー
 ```
 
 > [!NOTE]
-> [**アクセス許可の要求]** プロンプトは、関連する API が開始Teams自動的に表示されます。 詳細については、「デバイスのアクセス許可 [を要求する」を参照してください](native-device-permissions.md)。
+> **アクセス許可要求** プロンプトは、関連する Teams API が開始されると自動的に表示されます。 詳細については、「[デバイスのアクセス許可要求](native-device-permissions.md)」 を参照してください。
 
 ## <a name="media-capability-apis"></a>メディア機能 API
 
-[selectMedia、](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true)[getMedia](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediachunk?view=msteams-client-js-latest&preserve-view=true)、[viewImages](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageuri?view=msteams-client-js-latest&preserve-view=true) API を使用すると、ネイティブ メディア機能を次のように使用できます。
+[selectMedia](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true)、[getMedia](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediachunk?view=msteams-client-js-latest&preserve-view=true)、[viewImages](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageuri?view=msteams-client-js-latest&preserve-view=true) API を使用すると、ネイティブ メディア機能を次のように使用できます。
 
-* ネイティブ マイクを **使用して** 、ユーザーがデバイス **からオーディオ (** 10 分の会話を録音) を録音できます。
-* ネイティブ カメラ コントロール **を使用** して、ユーザーが移動 **中に** 画像をキャプチャして添付できます。
-* ネイティブ ギャラリー **のサポートを使用** して、ユーザーが添付ファイル **としてデバイス イメージを選択** できます。
-* ネイティブ イメージ **ビューアー コントロールを使用して、****一度に複数の画像** をプレビューします。
-* SDK **ブリッジを介した** 大規模なイメージ転送 (1 MB から 50 MB) をサポートします。
-* 高度 **な画像機能をサポートすると** 、ユーザーは次の画像をプレビューおよび編集できます。
-  * カメラを介してドキュメント、ホワイトボード、名刺をスキャンします。
+* ネイティブ **マイク** を使用して、ユーザーがデバイスから **オーディオを録音** (10 分間の会話を録音) できるようにします。
+* ネイティブ **カメラ コントロール** を使用して、ユーザーが外出先で **画像をキャプチャおよびアタッチ** できるようにします。
+* ネイティブ **ギャラリーのサポート** を使用して、ユーザーが添付ファイルとして **デバイス イメージを選択** できるようにします。
+* ネイティブ **イメージ ビューアー コントロール** を使用して、一度に **複数のイメージをプレビュー** します。
+* SDK ブリッジを介した **大規模なイメージ転送** (1 MB から 50 MB) をサポートします。
+* **高度なイメージ機能** をサポートすると、ユーザーは画像をプレビューおよび編集できます。
+  * カメラを使用してドキュメント、ホワイトボード、名刺をスキャンします。
   
 > [!IMPORTANT]
 >
-> * 、`selectMedia`および `getMedia`API は`viewImages`、タスク モジュール、タブ、個人用アプリなどTeams複数のサーフェスから呼び出すことができます。 詳細については、「Entry [points for Teams」を参照してください](../extensibility-points.md)。
-> * `selectMedia` マイクとオーディオのプロパティをサポートするために API が拡張されました。
+> * `selectMedia`、`getMedia`、および `viewImages` API は、タスク モジュール、タブ、個人用アプリなど、複数の Teams サーフェスから呼び出すことができます。 詳細については、「[Teams アプリのエントリ ポイント](../extensibility-points.md)」を参照してください。
+> * `selectMedia` マイクとオーディオのプロパティをサポートするように API が拡張されました。
 
 デバイスのメディア機能を有効にするには、次の API セットを使用する必要があります。
 
-| API      | [説明]   |
+| API      | 説明   |
 | --- | --- |
-| [**selectMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true) (**カメラ)**| この API を使用すると、 **ユーザーはデバイス** カメラからメディアをキャプチャまたは選択し、Web アプリに戻します。 ユーザーは、申請前に画像を編集、トリミング、回転、注釈、または描画できます。 に応答して `selectMedia`、Web アプリは、選択した画像のメディアの ID と、選択したメディアのサムネイルを受信します。 この API は、 [ImageProps 構成を使用してさらに構成](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageprops?view=msteams-client-js-latest&preserve-view=true) できます。 |
-| [**selectMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true) (**マイク**)| マイク機能[にアクセスするために](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediatype?view=msteams-client-js-latest&preserve-view=true)`4`、mediaType を `selectMedia` API で設定します。 また、この API を使用すると、ユーザーはデバイスのマイクからオーディオを録音し、記録されたクリップを Web アプリに戻す機能も使用できます。 ユーザーは、申請前に録音プレビューを一時停止、再録音、再生できます。 selectMedia に **応答して**、Web アプリは選択したオーディオ録音のメディアの ID を受信します。 <br/> 会話 `maxDuration`を記録するために時間を分単位で構成する必要がある場合は、使用します。 現在の記録時間は 10 分で、その後、記録は終了します。  |
-| [**getMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediachunk?view=msteams-client-js-latest&preserve-view=true)| この API は、メディア サイズに関係なく `selectMedia` 、API によってキャプチャされたメディアをチャンク単位で取得します。 これらのチャンクはアセンブルされ、ファイルまたは BLOB として Web アプリに返されます。 メディアを小さなチャンクに分割すると、大きなファイル転送が容易です。 |
-| [**viewImages**](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageuri?view=msteams-client-js-latest&preserve-view=true)| この API を使用すると、ユーザーはスクロール可能なリストとしてフルスクリーン モードで画像を表示できます。|
+| [**selectMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true) (**カメラ)**| この API を使用すると、ユーザーは **デバイス カメラからメディアをキャプチャまたは選択** し、それを Web アプリに返すことができます。 ユーザーは、送信前に画像の編集、トリミング、回転、注釈付け、または描画を行うことができます。 `selectMedia` に対応して、Web アプリは、選択した画像のメディア ID と、選択したメディアのサムネイルを受信します。 この API は、 [ImageProps](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageprops?view=msteams-client-js-latest&preserve-view=true) 構成を使用してさらに構成できます。 |
+| [**selectMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true) (**マイク**)| マイク機能にアクセスするには、`selectMedia` API で [mediaType](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediatype?view=msteams-client-js-latest&preserve-view=true) を `4` に設定します。 この API を使用すると、ユーザーはデバイスのマイクからオーディオを録音し、記録されたクリップを Web アプリに返すこともできます。 ユーザーは、送信前に記録プレビューを一時停止、再記録、再生できます。  **selectMedia** に応答して、Web アプリは選択されたオーディオ録音のメディア ID を受け取ります。 <br/> 会話を記録するための期間を分単位で構成する必要がある場合は、`maxDuration` を使用します。 現在の記録時間は 10 分です。その後、記録は終了します。  |
+| [**getMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediachunk?view=msteams-client-js-latest&preserve-view=true)| この API は、メディア サイズに関係なく、`selectMedia` API によってキャプチャされたメディアをチャンク単位で取得します。 これらのチャンクは、ファイルまたは BLOB として組み立てられ、Web アプリに送り返されます。 メディアを小さなチャンクに分割すると、大きなファイル転送が容易になります。 |
+| [**viewImages**](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageuri?view=msteams-client-js-latest&preserve-view=true)| この API を使用すると、ユーザーはスクロール可能なリストとして全画面表示モードで画像を表示できます。|
 
-次の図は、イメージ機能用の API の `selectMedia` Web アプリ エクスペリエンスを示しています。
+次の図は、イメージ機能用の `selectMedia` API の Web アプリ エクスペリエンスを示しています。
 
-![デバイス カメラとイメージ エクスペリエンス (Teams](../../assets/images/tabs/image-capability.png)
+![Teams でのデバイス カメラと画像のエクスペリエンス](../../assets/images/tabs/image-capability.png)
 
-次の図は、マイク機能用の API の `selectMedia` Web アプリ エクスペリエンスを示しています。
+次の図は、マイク機能に対する `selectMedia` API の Web アプリ エクスペリエンスを示しています。
 
-![マイク機能用の Web アプリ エクスペリエンス](../../assets/images/tabs/microphone-capability.png)
+![QR またはバーコード スキャナー機能の Web アプリ エクスペリエンス](../../assets/images/tabs/microphone-capability.png)
 
 ## <a name="error-handling"></a>エラー処理
 
-これらのエラーは、アプリで適切に処理Teamsがあります。 次の表に、エラー コードとエラーが生成される条件を示します。
+Teams アプリでこれらのエラーを適切に処理する必要があります。 次の表に、エラー コードとエラーが生成される条件を示します。
 
 |エラー コード |  エラー名     | 条件|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API は現在のプラットフォームではサポートされていません。|
-| **404** | FILE_NOT_FOUND | 指定されたファイルが指定された場所に見つかりません。|
-| **500** | INTERNAL_ERROR | 必要な操作の実行中に内部エラーが発生します。|
-| **1000** | PERMISSION_DENIED |アクセス許可は、ユーザーによって拒否されます。|
-| **3000** | NO_HW_SUPPORT | 基になるハードウェアでは、この機能はサポートされていません。|
-| **4000**| INVALID_ARGUMENTS | いくつかの引数は無効です。|
-|  **8000** | USER_ABORT |ユーザーは操作を中止します。|
-| **9000**| OLD_PLATFORM | プラットフォーム コードは古く、この API は実装されません。|
-| **10000**| SIZE_EXCEEDED |  戻り値が大きすぎて、プラットフォーム サイズの境界を超えました。|
+| **404** | FileNotFound | 指定されたファイルが指定された場所に見つかりません。|
+| **500** | 内部エラーです(_E) | 必要な操作の実行中に内部エラーが発生しました。|
+| **1000** | PERMISSION_DENIED |アクセス許可がユーザーによって拒否されました。|
+| **3000** | NO_HW_SUPPORT | 基になるハードウェアはこの機能をサポートしていません。|
+| **4000**| 引数が無効です | いくつかの引数は無効です。|
+|  **8000** | USER_ABORT |ユーザーが操作を中止します。|
+| **9000**| OLD_PLATFORM | プラットフォーム コードが古く、この API は実装されていません。|
+| **10,000**| SIZE_EXCEEDED |  戻り値が大きすぎて、プラットフォーム サイズの境界を超えています。|
 
 ## <a name="code-snippets"></a>コード スニペット
 
-**通話 `selectMedia` カメラを** 使用して画像をキャプチャするための API:
+**カメラを使用して画像をキャプチャするための `selectMedia`API** を呼び出す:
 
 ```javascript
 let imageProp: microsoftTeams.media.ImageProps = {
@@ -128,7 +128,7 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 });
 ```
 
-**通話 `getMedia` 大きな** メディアをチャンクで取得する API:
+**大きなメディアをチャンクで取得するために `getMedia`API** を呼び出す:
 
 ```javascript
 let media: microsoftTeams.media.Media = attachments[0]
@@ -148,7 +148,7 @@ media.getMedia((error: microsoftTeams.SdkError, blob: Blob) => {
 });
 ```
 
-**通話 `viewImages` API によって返される `selectMedia` ID による API**:
+**`selectMedia` API** によって返されたIDによる`viewImages`API を呼び出す:
 
 ```javascript
 // View images by id:
@@ -183,7 +183,7 @@ if (uriList.length > 0) {
 }
 ```
 
-**通話 `viewImages` URL による API**:
+**URL** による `viewImages` API を呼び出す:
 
 ```javascript
 // View Images by URL:
@@ -218,7 +218,7 @@ if (uriList.length > 0) {
 }
 ```
 
-**マイクを `selectMedia` 介して `getMedia` オーディオを録音する呼び出しと API**:
+**マイクを介して音声を録音するための `selectMedia` および `getMedia` API の呼び出し**:
 
 ```javascript
 let mediaInput: microsoftTeams.media.MediaInputs = {
@@ -257,5 +257,5 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 
 * [Teams で QR コードまたはバーコード スキャナー機能を統合する](qr-barcode-scanner-capability.md)
 * [Teams で位置情報機能を統合する](location-capability.md)
-* [ユーザー選択ツールをユーザー 選択ツールにTeams](people-picker-capability.md)
-* [アプリケーションホスト型メディア ボットの要件と考慮事項](~/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)
+* [Teams でユーザー ピッカーを統合する](people-picker-capability.md)
+* [アプリケーションでホストされるメディア ボットの要件と考察](~/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)
