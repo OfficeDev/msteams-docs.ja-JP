@@ -1,36 +1,36 @@
 ---
 title: ローカルで呼び出しや会議用ボットのデバッグを行う
-description: ngrok を使用して、ローカル PC で通話とオンライン会議ボットを開発する方法について学習します。
+description: ngrok を使用して、ローカル PC で通話やオンライン会議ボットを開発する方法についても学びます。
 ms.topic: how-to
-ms.localizationpriority: medium
+ms.localizationpriority: high
 keywords: ローカル開発 ngrok トンネル
 ms.date: 11/18/2018
-ms.openlocfilehash: c55ec6e5d7296f4ee04ae3ad3de0f9bb82cfd276
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: MT
+ms.openlocfilehash: 7e5f9de7177c847352b0e2768b52553455989443
+ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453363"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65111998"
 ---
-# <a name="develop-calling-and-online-meeting-bots-on-your-local-pc"></a>ローカル PC で通話およびオンライン会議ボットを開発する
+# <a name="develop-calling-and-online-meeting-bots-on-your-local-pc"></a>ローカル PC で通話ボットとオンライン会議ボットを開発する
 
-[ [アプリの実行とデバッグ](../../concepts/build-and-test/debug.md) ] では、 [ngrok](https://ngrok.com) を使用してローカル コンピューターとインターネットの間にトンネルを作成する方法について説明します。 このトピックでは、ngrok とローカル PC を使用して、通話やオンライン会議をサポートするボットを開発する方法について説明します。
+[[アプリの実行とデバッグ]](../../concepts/build-and-test/debug.md) では、[ngrok](https://ngrok.com) を使用してローカル コンピューターとインターネットの間にトンネルを作成する方法について説明します。 このトピックでは、ngrok とローカル PC を使用して、通話やオンライン会議をサポートするボットを開発する方法について説明します。
 
-メッセージング ボットは HTTP を使用しますが、通話とオンライン会議ボットは下位レベルの TCP を使用します。 Ngrok は、HTTP トンネルに加えて TCP トンネルもサポートします。
+メッセージング ボットは HTTP を使用しますが、通話とオンライン会議ボットでは下位レベルの TCP が使用されます。 ngrok では、HTTP トンネルに加えて TCP トンネルもサポートされています。
 
 ## <a name="configure-ngrokyml"></a>ngrok.yml を構成する
 
-[ngrok に移動し](https://ngrok.com)、無料アカウントにサインアップするか、既存のアカウントにログインします。 サインインした後、ダッシュボードに [移動し、](https://dashboard.ngrok.com) 認証トークンを取得します。
+[ngrok](https://ngrok.com) に移動し、無料アカウントにサインアップするか、既存のアカウントにログインします。 サインインしたら、[ダッシュボード](https://dashboard.ngrok.com)に移動し、認証トークンを取得します。
 
-ngrok 構成ファイルを作成し、 `ngrok.yml` 次の行を追加します。 ファイルの場所の詳細については、「 [ngrok」を参照してください](https://ngrok.com/docs#config)。
+ngrok 構成ファイル `ngrok.yml` を作成し、次の行を追加します。 ファイルの場所の詳細については、[ngrok](https://ngrok.com/docs#config) を参照してください。
 
   `authtoken: <Your-AuthToken>`
 
-## <a name="set-up-signaling"></a>シグナリングのセットアップ
+## <a name="set-up-signaling"></a>シグナリングを設定する
 
-[ [通話とオンライン会議の](./calls-meetings-bots-overview.md)ボット] では、ボットが通話中に新しい通話やイベントを検出して応答する方法に関する通話シグナリングについて説明しました。 呼び出しシグナル イベントは、HTTP POST を介してボットの呼び出しエンドポイントに送信されます。
+[[通話とオンライン会議ボット]](./calls-meetings-bots-overview.md) では、通話中にボットが新しい通話やイベントを検出して応答する方法に関する通話シグナリングについて説明しました。 呼び出しシグナリング イベントは、HTTP POST を介してボットの呼び出しエンドポイントに送信されます。
 
-ボットのメッセージング API と同様に、リアルタイム メディア プラットフォームがボットと通信するには、ボットがインターネット上で到達可能である必要があります。 Ngrok は、この単純な操作を行います。 ngrok.yml に次の行を追加します。
+ボットのメッセージング API と同様に、リアルタイム メディア プラットフォームがボットと通信するには、ボットにインターネット経由で到達できる必要があります。 Ngrok では、この操作が簡単になります。 ngrok.yml に次の行を追加します。
 
 ```yaml
 tunnels:
@@ -39,16 +39,16 @@ tunnels:
         proto: http
 ```
 
-## <a name="set-up-local-media"></a>ローカル メディアのセットアップ
+## <a name="set-up-local-media"></a>ローカル メディアを設定する
 
 > [!NOTE]
-> このセクションは、アプリケーションホスト型メディア ボットでのみ必要であり、自分でメディアをホストしない場合はスキップできます。
+> このセクションは、アプリケーションでホストされるメディア ボットにのみ必要であり、自分でメディアをホストしていない場合はスキップできます。
 
-アプリケーションホスト型メディアは、証明書と TCP トンネルを使用します。 以下の手順が必要です。
+アプリケーションでホストされるメディアでは、証明書と TCP トンネルが使用されます。 次の手順が必要です。
 
-1. Ngrok のパブリック TCP エンドポイントには固定 URL があります。 これらは、 `0.tcp.ngrok.io`、 `1.tcp.ngrok.io`、などです。 これらの URL をポイントするサービスの DNS CNAME エントリが必要です。 たとえば、参照、参照`0.bot.contoso.com` `0.tcp.ngrok.io``1.bot.contoso.com` `1.tcp.ngrok.io`、などとします。
-2. URL には SSL 証明書が必要です。 簡単に行う場合は、ワイルドカード ドメインに発行された SSL 証明書を使用します。 この場合は、 です `*.bot.contoso.com`。 この SSL 証明書はメディア SDK によって検証されます。そのため、ボットのパブリック URL と一致する必要があります。 拇印をメモし、コンピューター証明書にインストールします。
-3. 次に、トラフィックを localhost に転送する TCP トンネルを設定します。 ngrok.yml に次の行を記述します。
+1. Ngrok のパブリック TCP エンドポイントには固定 URL があります。 それらは `0.tcp.ngrok.io`、`1.tcp.ngrok.io` などです。 これらの URL を指すサービスの DNS CNAME エントリが必要です。 たとえば、`0.bot.contoso.com` が `0.tcp.ngrok.io` を参照し、`1.bot.contoso.com` が `1.tcp.ngrok.io` を参照するとします。
+2. URL には SSL 証明書が必要です。 簡単にするには、ワイルドカード ドメインに発行された SSL 証明書を使用します。 この例では、`*.bot.contoso.com` になります。 この SSL 証明書はメディア SDK によって検証されるため、ボットのパブリック URL と一致する必要があります。 サムプリントをメモし、マシン証明書にインストールします。
+3. 次に、トラフィックを localhost に転送する TCP トンネルを設定します。 次の行を ngrok.yml に書き込みます。
 
     ```yaml
     media:
@@ -58,11 +58,11 @@ tunnels:
 
 ## <a name="start-ngrok"></a>ngrok を開始する
 
-ngrok 構成の準備が整ったので、次の方法で起動します。
+ngrok 構成の準備ができたら、次のように起動します。
 
   `ngrok.exe start -all -config <Path to your ngrok.yml>`
 
-これは ngrok を開始し、ローカル ホストへのトンネルを提供するパブリック URL を定義します。 出力の例を次に示します。
+これにより ngrok が開始され、localhost へのトンネルを提供するパブリック URL が定義されます。 出力の例を次に示します。
 
 ```cmd
 Forwarding  http://signal.ngrok.io -> localhost:12345
@@ -70,15 +70,15 @@ Forwarding  https://signal.ngrok.io -> localhost:12345
 Forwarding  tcp://1.tcp.ngrok.io:12332 -> localhost:8445
 ```
 
-ここでは、 `12345` シグナリング ポート、 `8445` `12332` アプリケーションホストポート、および ngrok によって公開されるリモート メディア ポートを示します。 からへの転送があります`1.bot.contoso.com``1.tcp.ngrok.io`。 これは、ボットのメディア URL として使用されます。 もちろん、これらのポート番号は単なる例であり、使用可能な任意のポートを使用できます。
+ここで、`12345` はシグナリング ポート、`8445` はアプリケーションでホストされるポート、`12332` は ngrok によって公開されるリモート メディア ポートです。  `1.bot.contoso.com` から `1.tcp.ngrok.io` への転送があることに注意してください。 これは、ボットのメディア URL として使用されます。 もちろん、これらのポート番号は単なる例であり、使用可能な任意のポートを使用できます。
 
 ### <a name="update-code"></a>コードを更新する
 
-ngrok が稼働した後、セットアップした構成を使用するコードを更新します。
+ngrok が起動して実行されたら、設定した構成を使用するようにコードを更新します。
 
-#### <a name="update-signaling"></a>信号の更新
+#### <a name="update-signaling"></a>シグナリングを更新する
 
-BotBuilder 呼び出しで、ngrok `NotificationUrl` によって提供されるシグナリング URL に変更します。
+BotBuilder 呼び出しで、`NotificationUrl` を ngrok によって提供されるシグナリング URL に変更します。
 
 ```csharp
 statefulClientBuilder.SetNotificationUrl(
@@ -86,17 +86,17 @@ statefulClientBuilder.SetNotificationUrl(
 ```
 
 > [!NOTE]
-> 信号を ngrok が提供するパスに置き換え、通知 `NotificationEndpoint` を受け取るコントローラー パスに置き換える。
+> シグナルを ngrok によって提供されるものに置き換え、`NotificationEndpoint` を通知を受信するコントローラー パスに置き換えます。
 
 > [!IMPORTANT]
 >
-> * URL は `SetNotificationUrl` HTTPS である必要があります。
+> * `SetNotificationUrl` の URL は HTTPS である必要があります。
 >
-> ローカル インスタンスは、シグナリング ポートで HTTP トラフィックをリッスンしている必要があります。 通話とオンライン会議プラットフォームによって行われた要求は、エンドツーエンドの暗号化が設定されていない限り、ボットに localhost HTTP トラフィックとして到達します。
+> ローカル インスタンスは、シグナリング ポートで HTTP トラフィックをリッスンしている必要があります。 通話とオンライン会議プラットフォームによって行われた要求は、エンドツーエンドの暗号化が設定されていない限り、localhost HTTP トラフィックとしてボットに到達します。
 
-#### <a name="update-media"></a>メディアの更新
+#### <a name="update-media"></a>メディアを更新する
 
-次のように `MediaPlatformSettings` 更新します。
+`MediaPlatformSettings` を次のように更新します。
 
 ```csharp
 var mediaPlatform = new MediaPlatformSettings
@@ -114,10 +114,10 @@ var mediaPlatform = new MediaPlatformSettings
 ```
 
 > [!NOTE]
-> で提供される証明書の拇印は、 `MediaPlatformSettings` サービス FQDN と一致する必要があります。 DNS エントリが必要な理由です。
+> `MediaPlatformSettings` で提供される証明書の拇印は、サービス FQDN と一致する必要があります。 そのため、DNS エントリが必要です。
 
-## <a name="caveats"></a>注意点
+## <a name="caveats"></a>警告
 
-* Ngrok 無料アカウント **は、エンドツーエンド** の暗号化を提供しません。 HTTPS データは ngrok URL で終了し、データ フローは ngrok `localhost`から . エンドツーエンドの暗号化が必要な場合は、有料の ngrok アカウントを検討してください。 セキュリティ [で保護されたエンドツーエンド トンネル](https://ngrok.com/docs#tls) をセットアップする手順については、「TLS トンネル」を参照してください。
-* ボットコールバック URL は動的なので、着信呼び出しのシナリオでは、ngrok エンドポイントを頻繁に更新する必要があります。 これを修正する 1 つの方法は、ボットとプラットフォームをポイントできる固定サブドメインを提供する有料の ngrok アカウントを使用する方法です。
-* Ngrok トンネルは、[Azure](/azure/service-fabric/service-fabric-overview) のネットワーク ネットワークService Fabric。 これを行う方法の例については、「 [HueBot サンプル アプリ」を参照してください](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples/HueBot/HueBot)。
+* ngrok の無料アカウント **はエンドツーエンドの暗号化を提供しません**。 HTTPS データは ngrok URL で終了し、データは暗号化されずに ngrok から `localhost` に流れます。 エンドツーエンドの暗号化が必要な場合は、有料の ngrok アカウントを検討してください。 安全なエンドツーエンド トンネルを設定する手順については、[TLS トンネル](https://ngrok.com/docs#tls) を参照してください。
+* ボットコールバック URL は動的であるため、着信のシナリオでは、ngrok エンドポイントを頻繁に更新する必要があります。 これを修正する 1 つの方法は、ボットとプラットフォームを指すことができる固定サブドメインを提供する有料の ngrok アカウントを使用することです。
+* Ngrok トンネルは、[Azure サービス ファブリック](/azure/service-fabric/service-fabric-overview) でも使用できます。 これを行う方法の例については、[[HueBot サンプル アプリ]](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples/HueBot/HueBot) を参照してください。
