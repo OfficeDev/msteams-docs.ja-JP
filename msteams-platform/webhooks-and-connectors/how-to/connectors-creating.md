@@ -3,15 +3,15 @@ title: Office 365 コネクタの作成
 author: laujan
 description: Microsoft Teams で Office 365 コネクタの使用を開始する方法について説明します。
 keywords: Teams Office365 コネクタ
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 1ec406d633eb2db0d3564984d5451d58d41b4c14
-ms.sourcegitcommit: 38c435e806bb7c2c30efd10e8264c5c06a43fad3
+ms.openlocfilehash: 8091edf34ff53930afea03cd2c4833bf6a000158
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65136969"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297150"
 ---
 # <a name="create-office-365-connectors"></a>Office 365 コネクタの作成
 
@@ -26,7 +26,7 @@ Microsoft Teams アプリを使用すると、Teams 内に既存の Office 365 �
 コネクタを Microsoft Teams でのみ機能させるには、[Microsoft Teams ストアにアプリを公開する](~/concepts/deploy-and-publish/appsource/publish.md)の記事でコネクタを提出する手順に従ってください。 それ以外の場合、登録済みのコネクタは、Outlook や Teams など、アプリケーションをサポートするすべての Office 365 製品で機能します。
 
 > [!IMPORTANT]
-> コネクタは、コネクタ開発者ダッシュボードで **[保存]** を選択した後で登録されます。 AppSource でコネクタを発行する場合は、[Microsoft Teams アプリを AppSource に公開する](~/concepts/deploy-and-publish/apps-publish.md)の手順に従います。 AppSource でアプリを公開しない場合は、それを組織に直接配布します。 [組織のコネクタを公開](#publish-connectors-for-the-organization)した後、コネクタ ダッシュボードでそれ以上のアクションは必要ありません。
+> コネクタは、コネクタ開発者ダッシュボードで **[保存]** を選択した後で登録されます。 AppSource でコネクタを発行する場合は、[Microsoft Teams アプリを AppSource に公開する](~/concepts/deploy-and-publish/apps-publish.md)の手順に従います。 AppSource でアプリを公開しない場合は、それを組織に直接配布します。 組織のコネクタを公開した後、コネクタ ダッシュボードでそれ以上のアクションは必要ありません。
 
 ### <a name="integrate-the-configuration-experience"></a>構成エクスペリエンスを統合する
 
@@ -224,7 +224,7 @@ Microsoft Teams アプリを使用すると、Teams 内に既存の Office 365 �
 ## <a name="distribute-webhook-and-connector"></a>Webhook とコネクタを配布する
 
 1. チームに[受信 Webhook を直接セットアップ](~/webhooks-and-connectors/how-to/add-incoming-webhook.md#create-an-incoming-webhook)します。
-1. [構成ページ](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience)を追加して、[受信 Webhook を Office 365 コネクタで公開](~/webhooks-and-connectors/how-to/connectors-creating.md#publish-connectors-for-the-organization)します。
+1. [構成ページ](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience)を追加して、受信 Webhook を Office 365 コネクタで公開します。
 1. [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) への提出の一部としてコネクタをパッケージ化して公開します。
 
 ## <a name="code-sample"></a>コード サンプル

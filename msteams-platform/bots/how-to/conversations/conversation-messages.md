@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: d31f528b17c671074f3009c435cfff7bad728a09
-ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
+ms.openlocfilehash: fa13a03d30fd112b1c8983683b667d0cb96ef4ee
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65102121"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191181"
 ---
 # <a name="messages-in-bot-conversations"></a>ボットの会話内のメッセージ
 
@@ -199,7 +199,7 @@ async def on_members_added_activity(
 
 オブジェクトには`channelData`Teams固有の情報が含まれており、チーム ID とチャネル ID の決定的なソースです。 必要に応じて、これらの ID をキャッシュし、ローカル ストレージのキーとして使用できます。 `TeamsActivityHandler` SDK では、オブジェクトから重要な情報を`channelData`取り出して、簡単にアクセスできるようにします。 ただし、オブジェクトから `turnContext` 元のデータにいつでもアクセスできます。
 
-オブジェクトは `channelData` 、チャネルの外部で行われるので、個人用会話のメッセージには含まれません。
+オブジェクトは `channelData` 、チャネルの外部で行われるので、個人の会話のメッセージには含まれません。
 
 ボットに送信されるアクティビティの一般的な `channelData` オブジェクトには、次の情報が含まれています。
 
@@ -207,7 +207,7 @@ async def on_members_added_activity(
 * `tenant.id`: すべてのコンテキストで渡されるMicrosoft Azure Active Directory (Azure AD) テナント ID。
 * `team`: 個人用チャットではなく、チャネル コンテキストでのみ渡されます。
   * `id`: チャネルの GUID。
-  * `name`: チーム名の [変更イベント](~/bots/how-to/conversations/subscribe-to-conversation-events.md)の場合にのみ渡されたチームの名前。
+  * `name`: チーム名の [変更イベント](subscribe-to-conversation-events.md#team-renamed)の場合にのみ渡されたチームの名前。
 * `channel`: チャネル コンテキストでのみ渡されます。ボットが言及されたとき、またはボットが追加されたチーム内のチャネル内のイベントに対してのみ渡されます。
   * `id`: チャネルの GUID。
   * `name`: チャネル [変更イベント](~/bots/how-to/conversations/subscribe-to-conversation-events.md)の場合にのみ渡されるチャネル名。
@@ -241,7 +241,7 @@ async def on_members_added_activity(
 | フォーマット    | ユーザーからボットへ | ボットからユーザーへ | メモ                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | リッチ テキスト | ✔                | ✔                | ボットは、リッチ テキスト、画像、カードを送信できます。 ユーザーは、リッチ テキストと画像をボットに送信できます。                                                                                        |
-| ピクチャ  | ✔                | ✔                | PNG、JPEG、または GIF 形式の最大 1024×1024 および 1 MB。 アニメーション GIF はサポートされていません。  |
+| ピクチャ  | ✔                | ✔                | 最大 1024 ×1024 MB、PNG、JPEG、または GIF 形式で 1 MB。 アニメーション GIF はサポートされていません。  |
 | カード     | ✖                | ✔                | サポートされているカードについては、[Teams カードリファレンスを参照](~/task-modules-and-cards/cards/cards-reference.md)してください。 |
 | 絵文字    | ✔                | ✔                | Teamsは現在、顔を笑う U+1F600 など、UTF-16 を介した絵文字をサポートしています。 |
 
@@ -329,11 +329,11 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## <a name="picture-messages"></a>画像メッセージ
 
-画像は、メッセージに添付ファイルを追加して送信されます。 添付ファイルの詳細については、 [Bot Framework のドキュメントを参照してください](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments)。
+画像は、メッセージに添付ファイルを追加して送信されます。 添付ファイルの詳細については、「 [メッセージにメディア添付ファイルを追加する」を](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments)参照してください。
 
-画像は最大 1024 ×1024 および 1 MB (PNG、JPEG、GIF 形式) です。 アニメーション GIF はサポートされていません。
+画像は最大 1024 ×1024 MB、PNG、JPEG、または GIF 形式で 1 MB です。 アニメーション GIF はサポートされていません。
 
-XML を使用して、各イメージの高さと幅を指定します。 マークダウンでは、イメージ サイズの既定値は 256×256 です。 次に例を示します。
+XML を使用して、各イメージの高さと幅を指定します。 マークダウンでは、イメージ サイズの既定値は 256×256 です。 例として以下のようなものがあります。
 
 * 使用: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
 * 使用しないでください: `![Duck on a rock](http://aka.ms/Fo983c)`.
@@ -420,5 +420,5 @@ XML を使用して、各イメージの高さと幅を指定します。 マー
 
 * [プロアクティブ メッセージを送信する](~/bots/how-to/conversations/send-proactive-messages.md)
 * [会話イベントにサブスクライブする](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
-* [ボットを介してファイルを送受信する](~/bots/how-to/bots-filesv4.md)
-* [テナント ID と会話 ID をボットの要求ヘッダーに送信する](~/bots/how-to/conversations/request-headers-of-the-bot.md)
+* [ボットを介してファイルを送受信する方法](~/bots/how-to/bots-filesv4.md)
+* [ボットの要求ヘッダーにテナント ID と会話 ID を送信する](~/bots/how-to/conversations/request-headers-of-the-bot.md)

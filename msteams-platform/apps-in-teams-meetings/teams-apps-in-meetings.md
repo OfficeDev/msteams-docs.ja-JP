@@ -4,14 +4,14 @@ author: surbhigupta
 description: 参加者とユーザーの役割に基づく Teams 会議のアプリの概要
 ms.topic: overview
 ms.author: lajanuar
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: Teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: ec3a9dc46b5a509e68f451e8e2735fc2acbe7bd1
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: ec9db255d6dad410844451830b12ee902b106712
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111305"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296953"
 ---
 # <a name="apps-for-teams-meetings"></a>Teams 会議用アプリ
 
@@ -38,7 +38,7 @@ ms.locfileid: "65111305"
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [会議アプリ拡張性](meeting-app-extensibility.md)
+> [統合された会議アプリ](meeting-app-extensibility.md)
 
 ## <a name="see-also"></a>関連項目
 

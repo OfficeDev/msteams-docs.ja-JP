@@ -5,12 +5,12 @@ description: Microsoft Teams のボットの概要。
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 53d016c6e01c73a6fbe5f59ed4a3239077e8b12e
-ms.sourcegitcommit: e40383d9081bf117030f7e6270140e6b94214e8b
+ms.openlocfilehash: d37b35e46156777022a5b19a7ccf6de1ab2e0fb9
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65102422"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191251"
 ---
 # <a name="bots-in-microsoft-teams"></a>Microsoft Teams のボット
 
@@ -63,7 +63,7 @@ Teams ボット API を使用して、チャットまたはチームのメンバ
 
 ## <a name="see-also"></a>関連項目
 
-* [Teams のボットを作成する](~/bots/how-to/create-a-bot-for-teams.md)
+* [Teams のボットを作成する](../resources/bot-v3/bots-create.md)
 * [Microsoft Teams ボットの仕組み](/azure/bot-service/bot-builder-basics-teams)
 * [Microsoft Teams の通話と会議ボットを登録する](~/bots/calls-and-meetings/registering-calling-bot.md)
 * [Teams ボットに認証を追加する](~/bots/how-to/authentication/add-authentication.md)
