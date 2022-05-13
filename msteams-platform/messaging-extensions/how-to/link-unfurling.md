@@ -2,15 +2,15 @@
 title: リンク展開
 author: surbhigupta
 description: アプリ マニフェストを含む Microsoft Teams アプリでメッセージングの拡張機能を使用するか、コード例とサンプルを手動で使用して、リンク展開を追加する方法について説明します。
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: b172320f6f116026fe5ea4b45c9c74da6ff82f07
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 09b8447e68a07e98293409e6c371a301da3017d0
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111249"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297185"
 ---
 # <a name="link-unfurling"></a>リンク展開
 
@@ -25,7 +25,7 @@ ms.locfileid: "65111249"
 
 Azure DevOps メッセージ拡張機能では、作業項目をポイントするメッセージ作成領域に貼り付けられた URL を検索するためにリンク展開を使用します。 次の図では、ユーザーが Azure DevOps に作業項目の URL を貼り付け、メッセージ拡張機能がこれをカードに解決しています。
 
-![リンク展開の例](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
+:::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="リンク展開の例":::
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>アプリ マニフェストにリンク展開を追加する
 
@@ -38,9 +38,9 @@ Azure DevOps メッセージ拡張機能では、作業項目をポイントす�
 
 1. Microsoft Teams クライアントから **App Studio** を開き、**[マニフェスト エディター]** タブを選択します。
 1. アプリ マニフェストを読み込みます。
-1. **[メッセージ拡張機能]** ページで、検索したいドメインを **[メッセージ ハンドラー]** セクションに追加します。 次の図にこのプロセスを示します。
+1. **[メッセージ拡張機能]** ページで、検索したいドメインを **[メッセージ ハンドラー]** セクションに追加します。次の画像では、プロセスについて説明します。
 
-    ![App Studio の [メッセージ ハンドラー] セクション](~/assets/images/link-unfurling.png)
+    :::image type="content" source="~/assets/images/link-unfurling.png" alt-text="App Studio の [メッセージ ハンドラー] セクション":::
 
 ### <a name="add-link-unfurling-manually"></a>手動でリンク展開を追加する
 

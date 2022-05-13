@@ -3,19 +3,19 @@ title: TeamsFx SDK
 author: MuyangAmigo
 description: TeamsFx SDK について
 ms.author: nintan
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: d54c3d962ecc9d1fd703bd4126d71564f8358794
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: aad897e7b4028363bcfa0f21a75b6da01fc57ec6
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111221"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297178"
 ---
 # <a name="teamsfx-sdk"></a>TeamsFx SDK
 
-TeamsFx は、Teams SSO を活用し、構成がゼロの 1 行のステートメントにクラウド リソースにアクセスすることで、開発者タスクを削減するのに役立ちます。 TeamsFx SDK は、ブラウザーと Node.js 環境で使用するように構築されています。一般的なシナリオは次のとおりです。
+TeamsFx は、Teams SSO を使用して、構成がゼロの 1 行のステートメントにクラウド リソースにアクセスすることで、開発者タスクを削減するのに役立ちます。 TeamsFx SDK は、ブラウザーと Node.js 環境で使用するように構築されています。一般的なシナリオは次のとおりです。
 
 * Microsoft Teams のタブによる Web アプリケーション
 * Azure 関数
@@ -55,7 +55,7 @@ npm install @microsoft/teamsfx
 
 ### <a name="create-microsoftgraphclient-service"></a>`MicrosoftGraphClient` サービスを作成する
 
-グラフ クライアント オブジェクトを作成し、Microsoft Graph API にアクセスするには、認証用の資格情報が必要です。 SDK には、開発者向けに構成するための API が用意されています。
+グラフ クライアント オブジェクトを作成し、Microsoft Graph API にアクセスするには、認証用の資格情報が必要です。SDK では、開発者向けの構成用 API が提供されています。
 
 <br>
 
@@ -105,7 +105,7 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 
 ### <a name="teamsfx-class"></a>TeamsFx クラス
 
-既定では、TeamsFx クラス インスタンスは、環境変数からすべての TeamsFx 設定にアクセスします。 また、カスタマイズした構成値を設定して、既定値をオーバーライドすることもできます。 詳細については、[オーバーライド構成](#override-configuration) を確認してください。 TeamsFx インスタンスを作成するときは、ID の種類も指定する必要があります。 ID には次の 2 種類があります:
+既定では、TeamsFx クラス インスタンスは、環境変数からすべての TeamsFx 設定にアクセスします。 また、カスタマイズした構成値を設定して、既定値をオーバーライドすることもできます。 詳細については、「[構成をオーバーライドする](#override-configuration)」 を確認してください。 TeamsFx インスタンスを作成するときは、ID の種類も指定する必要があります。 ID には次の 2 種類があります:
 
 * ユーザー ID
 * アプリケーション ID
@@ -134,7 +134,7 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 
 ### <a name="credential"></a>Credential
 
-TeamsFx を初期化するときは、ID の種類を選択する必要があります。 TeamsFx の初期化時に ID の種類を指定した後、SDK はさまざまな種類の資格情報クラスを使用して ID を表し、対応する認証フローによってアクセス トークンを取得します。
+TeamsFx を初期化する際は、ID の種類を選択する必要があります。TeamsFx の初期化時に ID の種類を指定した後、SDK はさまざまな種類の資格情報クラスを使用して ID を表し、対応する認証フローによってアクセス トークンを取得します。
 
 認証を簡略化するための資格情報クラスは 3 つあります。 [資格情報フォルダー](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential)。 資格情報クラスは、特定のスコープにアクセス トークンを提供するように設計された、Azure ライブラリ API で広く使用される `TokenCredential` インターフェイスを実装します。 他の API は、クレデンシャル呼び出し `TeamsFx:getCredential()` に依存して `TokenCredential` のインスタンスを取得します。
 
@@ -151,7 +151,7 @@ TeamsFx を初期化するときは、ID の種類を選択する必要があり
 必要な構成: `authorityHost`、`tenantId`、`clientId`、`clientSecret`、`certificateContent`。
 
 #### <a name="application-identity-in-nodejs-environment"></a>Node.js 環境でのアプリケーション ID
-`AppCredential` は、アプリケーション ID を表します。 これは通常、ユーザーが時間トリガーの自動化ジョブのように関与していない場合に使用されます。 SDK は、開発者が Node.js 環境でアプリ ID を選択するときに、この資格情報を使用します。
+`AppCredential` は、アプリケーション ID を表します。 これは、ユーザーが時間トリガーの自動化ジョブのように関与していない場合に使用されます。 SDK は、開発者が Node.js 環境でアプリ ID を選択するときに、この資格情報を使用します。
 
 必要な構成: `tenantId`、`clientId`、`clientSecret`、`certificateContent`。
 
@@ -159,13 +159,13 @@ TeamsFx を初期化するときは、ID の種類を選択する必要があり
 
 ボット関連のクラスは、[ボット フォルダー](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot)の下に格納されます。
 
-`TeamsBotSsoPrompt` には、ボット フレームワークとの良好な統合があります。 これにより、ボット アプリケーションを開発し、ボットの SSO を利用する場合の認証プロセスが簡略化されます。
+`TeamsBotSsoPrompt` は、ボット フレームワークと効果的に統合されています。これにより、ボット アプリケーションを開発し、ボットの SSO を利用する場合の認証プロセスが簡略化されます。
 
 必要な構成: `initiateLoginEndpoint`、`tenantId`、`clientId`、`applicationIdUri`。
 
 ### <a name="supported-functions"></a>サポートされているワークシート関数
 
-TeamsFx SDK には、サード パーティ製ライブラリの構成を容易にするためのいくつかの機能が用意されています。 [コア フォルダー](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core) の下にあります。
+TeamsFx SDK には、サード パーティ製ライブラリの構成を容易にするためのいくつかの機能が用意されています。これらは、[コア フォルダー](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core)の下にあります。
 
 *  Microsoft Graph サービス: `createMicrosoftGraphClient` および `MsGraphAuthProvider` は、認証された Graph インスタンスの作成に役立ちます。
 *  SQL: `getTediousConnectionConfig` は面倒な接続構成を返します。
