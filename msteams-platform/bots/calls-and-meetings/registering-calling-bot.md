@@ -2,20 +2,20 @@
 title: Microsoft Teams の通話と会議ボットを登録する
 description: Microsoft Teams 用に新しいオーディオ / ビデオ通話ボットを登録する方法、新しいボットを作成する方法、通話機能を追加する方法、グラフのアクセス許可を追加する方法について説明します。
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: ボットのオーディオ / ビデオ オーディオ ビデオ メディアを呼び出す
-ms.openlocfilehash: 53c12b3d65ad909088e18081ed4b38a77919844b
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 71ab66ab6c5f53405897447b8d531ed0ce6dac99
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111417"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297164"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Microsoft Teams の通話と会議ボットを登録する
 
 音声またはビデオ通話やオンライン会議に参加するボットは、ボットの登録に使用される次の追加機能を備えた通常のMicrosoft Teams ボットです。
 
-* Teams アプリ マニフェストの新しいバージョンには、 `supportsCalling` と `supportsVideo` の 2 つの追加設定があります。 これらの設定は、 [Microsoft Teams のマニフェスト スキーマ](../../resources/schema/manifest-schema.md)に含まれています。
+* Teams アプリ マニフェストの新しいバージョンには、`supportsCalling` と `supportsVideo` の 2 つの追加設定があります。 これらの設定は、 [Microsoft Teams のマニフェスト スキーマ](../../resources/schema/manifest-schema.md)に含まれています。
 * [Microsoft Graph アクセス許可](./registering-calling-bot.md#add-graph-permissions)は、ボットの Microsoft アプリ ID に対して構成する必要があります。
 * Graph 通話とオンライン会議 API のアクセス許可には、テナント管理者の同意が必要です。
 
@@ -78,7 +78,7 @@ Graph は、アプリがリソースに対して持つアクセスを制御す�
 
 ### <a name="assign-permissions"></a>アクセス許可の割り当て
 
-[Microsoft Azure Active Directory (Azure AD) V1 エンドポイント](/azure/active-directory/develop/azure-ad-endpoint-comparison)を使用する場合は、 [Microsoft Azure ポータル](https://aka.ms/aadapplist)を使用して、ボットのアプリケーションのアクセス許可を事前に構成する必要があります。
+[Microsoft Azure Active Directory (Azure AD) V1 エンドポイント](/azure/active-directory/develop/azure-ad-endpoint-comparison)を使用する場合は、 [Microsoft Azure ポータル](https://portal.azure.com)を使用して、ボットのアプリケーションのアクセス許可を事前に構成する必要があります。
 
 ### <a name="get-tenant-administrator-consent"></a>テナント管理者の同意を取得する
 
@@ -96,7 +96,7 @@ Azure AD V1 エンドポイントを使用するアプリの場合、テナン�
 
 | **サンプルの名前** | **説明** | **Graph** |
 |---------------|----------|--------|
-| 通話ボットと会議ボット | サンプル アプリでは、ボットが通話を作成し、会議に参加し、通話を転送する方法を説明します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
+| 通話ボットと会議ボット | サンプル アプリでは、ボットが通話を作成し、会議に参加し、通話を転送する方法を示します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
 
 ## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
 

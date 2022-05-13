@@ -1,29 +1,29 @@
 ---
 title: タスク モジュールの送信アクションに応答する
 author: surbhigupta
-description: コード サンプルを使用して、プロアクティブ メッセージ、別のタスク モジュール、アダプティブ カード ボットなどを使用して、メッセージ拡張機能アクション コマンドからタスク モジュール送信アクションに応答する方法について説明します。
+description: メッセージング拡張機能のアクション コマンドからタスク モジュールの送信アクションに対して、プロアクティブ メッセージ、別のタスク モジュール、アダプティグ カード ボットなどで応答する方法をコード サンプルを使用して説明します。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 4cd42fec6209b79a43ba6cc7489d5ac9afea3759
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
-ms.translationtype: MT
+ms.openlocfilehash: de1924881b6e3732fc4b2170a496f234244be84e
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104477"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297199"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>タスク モジュールの送信アクションに応答する
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 このドキュメントでは、ユーザーのタスク モジュール送信アクションなどのアクション コマンドに対するアプリの応答について説明します。
-ユーザーがタスク モジュールを送信すると、Web サービスはコマンド ID とパラメーター値を含む `composeExtension/submitAction` 呼び出しメッセージを受信します。 アプリが呼び出しに応答するまでに 5 秒かかります。それ以外の場合、ユーザーは **アプリに到達できない** というエラー メッセージを受け取り、呼び出す応答はTeams クライアントによって無視されます。
+ユーザーがタスク モジュールを送信すると、Web サービスはコマンド ID とパラメーター値を含む `composeExtension/submitAction` 呼び出しメッセージを受信します。 アプリは 5 秒以内に呼び出しに応答する必要があります。それ以外の場合、ユーザーは「**アプリに到達できない**」というエラー メッセージを受け取り、呼び出しに対する応答は Teams クライアントによって無視されます。
 
-応答するには、次のオプションがあります。
+対応には、以下のオプションがあります。
 
-* 応答なし: 送信アクションを使用して、外部システムでプロセスをトリガーし、ユーザーにフィードバックを提供しません。 実行時間の長いプロセスやフィードバックを交互に提供する場合に便利です。 たとえば、 [プロアクティブ なメッセージ](~/bots/how-to/conversations/send-proactive-messages.md)を使用してフィードバックを送信できます。
-* [別のタスク モジュール](#respond-with-another-task-module): 複数ステップの対話の一環として、追加のタスク モジュールを使用して応答できます。
-* [カードの応答](#respond-with-a-card-inserted-into-the-compose-message-area): ユーザーがメッセージと対話したり、メッセージに挿入したりできるカードで応答できます。
+* 応答なし: 送信アクションを使用して、外部システムでプロセスをトリガーし、ユーザーにはフィードバックを提供しません。 長時間実行する処理や、交互にフィードバックを行う場合に有効です。 たとえば、[プロアクティブ メッセージ](~/bots/how-to/conversations/send-proactive-messages.md)を使用してフィードバックを送信できます。
+* [別のタスク モジュール](#respond-with-another-task-module): 複数のステップがある操作の一部として、追加のタスク モジュールで応答します。
+* [カードによる応答](#respond-with-a-card-inserted-into-the-compose-message-area): ユーザーが操作したり、メッセージに挿入したりできるカードで応答できます。
 * [ボットからのアダプティブ カード](#bot-response-with-adaptive-card): アダプティブ カードを会話に直接挿入します。
 * [ユーザーに認証を要求します](~/messaging-extensions/how-to/add-authentication.md)。
 * [追加の構成をユーザーに要求します](~/get-started/first-message-extension.md)。
@@ -39,10 +39,10 @@ ms.locfileid: "65104477"
 
 > [!NOTE]
 >
-> * **Action.Submit** through ME カードを選択すると、**composeExtension** という名前の呼び出しアクティビティが送信されます。値は通常のペイロードと等しくなります。
-> * **Action.Submit** through conversation を選択すると、**onCardButtonClicked** という名前のメッセージ アクティビティが表示されます。この値は通常のペイロードと等しくなります。
+> * ME カードを通して **Action.Submit** を選択すると、値は通常のペイロードと等しくなる **composeExtension** という名前の呼び出しアクティビティが送信されます。
+> * 会話を通して **Action.Submit** を選択すると、値は通常のペイロードと等しくなる **onCardButtonClicked** という名前のメッセージ アクティビティを受け取ります。
 
-アプリに会話型ボットが含まれている場合は、会話にボットをインストールし、タスク モジュールを読み込みます。 ボットは、タスク モジュールの追加コンテキストを取得するのに役立ちます。 会話型ボットをインストールするには、「会話型ボット [のインストールを要求する」](create-task-module.md#request-to-install-your-conversational-bot)を参照してください。
+アプリに会話型ボットが含まれている場合、会話にボットをインストールし、タスク モジュールを読み込みます。 ボットは、タスク モジュールの追加のコンテキストを取得するのに役立ちます。 会話型ボットをインストールするには、「[会話型ボットのインストールを要求する](create-task-module.md#request-to-install-your-conversational-bot)」を参照してください。
 
 ## <a name="the-submitaction-invoke-event"></a>submitAction 呼び出しイベント
 
@@ -72,7 +72,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-これは、受信する JSON オブジェクトの例です。 このパラメーターは `commandContext` 、メッセージ拡張機能がトリガーされた場所を示します。 `data`オブジェクトには、パラメーターとしてフォーム上のフィールドと、ユーザーが送信した値が含まれています。 JSON オブジェクトは、最も関連性の高いフィールドを強調表示します。
+これは、受信する JSON オブジェクトの例です。 この `commandContext` パラメーターは、メッセージ拡張機能がトリガーされた場所を示します。 `data` オブジェクトには、パラメーターとしてフォーム上のフィールドと、ユーザーが送信した値が含まれます。 JSON オブジェクトは、最も関連性の高いフィールドを強調表示します。
 
 ```json
 {
@@ -100,9 +100,9 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-## <a name="respond-with-a-card-inserted-into-the-compose-message-area"></a>メッセージの作成領域にカードを挿入して応答する
+## <a name="respond-with-a-card-inserted-into-the-compose-message-area"></a>メッセージ作成領域にカードを挿入して応答する
 
-要求に応答する `composeExtension/submitAction` 最も一般的な方法は、作成メッセージ領域にカードを挿入することです。 ユーザーがメッセージ交換にカードを送信します。 カードの使用の詳細については、「 [カードとカードのアクション](~/task-modules-and-cards/cards/cards-actions.md)」を参照してください。
+`composeExtension/submitAction` の要求に応答する最も一般的な方法は、作成メッセージ領域にカードを挿入することです。 ユーザーは、カードを会話に送信します。 カードの使用に関する詳細については、「[カードとカード アクション](~/task-modules-and-cards/cards/cards-actions.md)」を参照してください。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -193,40 +193,40 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ## <a name="respond-with-another-task-module"></a>別のタスク モジュールで応答する
 
-追加のタスク モジュールを使用してイベントに応答するように `submitAction` 選択できます。 これは、次のことを行う必要がある場合に便利です。
+追加のタスク モジュールを使用して `submitAction` イベントに応答するように選択できます。 これは、次のことを行う必要がある場合に便利です。
 
-* 大量の情報を収集します。
-* ユーザー入力に基づいて情報コレクションを動的に変更します。
-* ユーザーによって送信された情報を検証し、何か問題がある場合は、エラー メッセージでフォームを再送信します。
+* 大量の情報を収集する。
+* ユーザー入力に基づいて情報コレクションを動的に変更する。
+* ユーザーが送信した情報を検証し、問題が発生した場合は、エラー メッセージでフォームを再送信します。
 
-応答のメソッドは、 [最初 `fetchTask` のイベントに応答するの](~/messaging-extensions/how-to/action-commands/create-task-module.md)と同じです。 Bot Framework SDK を使用している場合は、両方の送信アクションに対して同じイベント トリガーが発生します。 これを機能させるには、正しい応答を決定するロジックを追加する必要があります。
+対応方法は、[ としての最初の`fetchTask`イベント](~/messaging-extensions/how-to/action-commands/create-task-module.md)への対応と同じです。 Bot Framework SDK を使用している場合は、両方の送信アクションに対して同じイベント トリガーが発生します。 これを機能させるには、正しい応答を決定するロジックを追加する必要があります。
 
 ## <a name="bot-response-with-adaptive-card"></a>アダプティブ カードを使用したボットの応答
 
 > [!NOTE]
-> アダプティブ カードを使用してボットの応答を取得する前提条件は、オブジェクトを `bot` アプリ マニフェストに追加し、ボットに必要なスコープを定義する必要があるということです。 ボットのメッセージ拡張機能と同じ ID を使用します。
+> アダプティブ カードを使用してボットの応答を取得する前提条件は、`bot` オブジェクトをアプリ マニフェストに追加し、ボットに必要なスコープを定義する必要があるということです。 ボットのメッセージ拡張機能と同じ ID を使用します。
 
-また、アダプティブ カードを含むメッセージをボットを使用してチャネルに挿入することで、そのメッセージに応答 `submitAction` することもできます。 ユーザーは、メッセージを送信する前にプレビューできます。 これは、アダプティブ カード応答を作成する前にユーザーから情報を収集するシナリオや、他のユーザーが対話した後にカードを更新する場合に便利です。
+また、ボットを使用してアダプティブ カードを含むメッセージをチャネルに挿入することで、`submitAction` に応答することもできます。 ユーザーは、メッセージを送信する前にプレビューできます。 これは、アダプティブ カード応答を作成する前にユーザーから情報を収集するシナリオや、他のユーザーが対話した後にカードを更新する場合に便利です。
 
-次のシナリオは、アプリ Polly がチャネル会話に構成手順を含めずにポーリングを構成する方法を示しています。
+次のシナリオは、アプリ Polly がチャネル会話に構成手順を含めずに投票を構成する方法を示しています。
 
-ポーリングを構成するには:
+投票を構成するには、以下の操作を行います。
 
 1. ユーザーは、タスク モジュールを呼び出すメッセージ拡張機能を選択します。
-1. ユーザーは、タスク モジュールを使用してポーリングを構成します。
-1. タスク モジュールを送信した後、アプリは提供された情報を使用してアダプティブ カードとしてポーリングを構築し、クライアントに応答として `botMessagePreview` 送信します。
-1. その後、ユーザーは、ボットがチャネルに挿入する前に、アダプティブ カード メッセージをプレビューできます。 アプリがチャネルのメンバーでない場合は、アプリを選択して追加します `Send` 。
+1. ユーザーは、タスク モジュールを使用して投票を構成します。
+1. タスク モジュールを送信した後、アプリは提供された情報を使用してアダプティブ カードとして投票を構築し、クライアントに `botMessagePreview` 応答として送信します。
+1. その後、ユーザーは、ボットがチャネルに挿入する前に、アダプティブ カード メッセージをプレビューできます。 アプリがチャネルのメンバーでない場合は、`Send` を選択して追加します。
 
     > [!NOTE]
     >
-    > * ユーザーはメッセージを `Edit` 選択して、元のタスク モジュールに返すこともできます。
-    > * アダプティブ カードとの対話では、メッセージを送信する前にメッセージが変更されます。
+    > * ユーザーは `Edit` にメッセージを選択して、元のタスク モジュールに返すこともできます。
+    > * アダプティブ カードとの対話では、メッセージの送信前に変更されます。
     >
-1. ユーザーが選択すると、 `Send` チャネルにメッセージが投稿されます。
+1. ユーザーが `Send` を選択すると、ボットからチャネルにメッセージが投稿されます。
 
 ## <a name="respond-to-initial-submit-action"></a>最初の送信アクションに応答する
 
-タスク モジュールは、ボットがチャネルに送信するカードのプレビューを使用して、最初 `composeExtension/submitAction` のメッセージに応答する必要があります。 ユーザーは送信する前にカードを確認し、ボットがまだインストールされていない場合は会話にボットをインストールしようとします。
+タスク モジュールは、ボットがチャネルに送信するカードのプレビューを使用して、最初の `composeExtension/submitAction` メッセージに応答する必要があります。 ユーザーは送信する前にカードを確認し、ボットがまだインストールされていない場合は会話にボットをインストールしようとします。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -312,7 +312,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 > [!NOTE]
 >
-> * `activityPreview` 1 つのアダプティブ カード添付ファイルを`message`含むアクティビティが含まれている必要があります。 値は `<< Card Payload >>` 、送信するカードのプレースホルダーです。
+> * `activityPreview` には、1 つのアダプティブ カード添付ファイルを含む `message` アクティビティが含まれている必要があります。 `<< Card Payload >>` の値は、送信するカードのプレースホルダーです。
 
 ```json
 {
@@ -335,7 +335,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="the-botmessagepreview-send-and-edit-events"></a>botMessagePreview によるイベントの送信と編集
 
-メッセージ拡張機能は、2 つの新しい種類の呼び出しに応答する `composeExtension/submitAction` 必要があります。ここで `value.botMessagePreviewAction = "send"`、 `value.botMessagePreviewAction = "edit"`.
+メッセージ拡張機能は、`composeExtension/submitAction` 呼び出しの 2 つの新しい種類である `value.botMessagePreviewAction = "send"` と `value.botMessagePreviewAction = "edit"` に応答する必要があります。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -406,12 +406,12 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="respond-to-botmessagepreview-edit"></a>botMessagePreview の編集に応答する
 
-ユーザーが送信する前にカードを編集した場合は、[**編集]** を選択すると`composeExtension/submitAction``value.botMessagePreviewAction = edit`、. 対話を開始した最初 `composeExtension/fetchTask` の呼び出しに応答して、送信したタスク モジュールを返して応答します。 これにより、ユーザーは元の情報を再入力してプロセスを開始できます。 ユーザーが一からすべての情報を入力する必要がないように、使用可能な情報を使用してタスク モジュールを更新します。
-初期イベントへの応答の詳細については、「初期`fetchTask`イベント[への応答」を`fetchTask`](~/messaging-extensions/how-to/action-commands/create-task-module.md)参照してください。
+**[編集]** を選択してユーザーが送信する前にカードを編集した場合は、`value.botMessagePreviewAction = edit` を含む `composeExtension/submitAction` の呼び出しを受信します。 対話を開始した最初の `composeExtension/fetchTask` 呼び出しに応答して、送信したタスク モジュールを返すことで応答します。 これにより、ユーザーは元の情報を再入力してプロセスを開始できます。 ユーザーが最初からすべての情報を入力する必要がないように、使用可能な情報を使用してタスク モジュールを更新します。
+最初の `fetchTask` イベントへの応答に関する詳細については、「[最初の `fetchTask` イベントに応答する](~/messaging-extensions/how-to/action-commands/create-task-module.md)」を参照してください。
 
 ### <a name="respond-to-botmessagepreview-send"></a>botMessagePreview 送信に応答する
 
-ユーザーが **[送信**] を選択すると`composeExtension/submitAction``value.botMessagePreviewAction = send`、. Web サービスは、アダプティブ カードを使用してプロアクティブ メッセージを作成して会話に送信し、呼び出しに応答する必要があります。
+ユーザーが **[送信]** を選択すると、`value.botMessagePreviewAction = send` を含む `composeExtension/submitAction` の呼び出しを受信します。 Web サービスは、アダプティブ カードを使用したプロアクティブ メッセージを作成して会話に送信し、呼び出しに返信する必要があります。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
@@ -509,7 +509,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-次のような新しい `composeExtension/submitAction` メッセージが表示されます。
+次のような新しい `composeExtension/submitAction` メッセージを受信します。
 
 ```json
 {
@@ -544,13 +544,13 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### <a name="user-attribution-for-bots-messages"></a>ボット メッセージのユーザー属性
 
-ボットがユーザーに代わってメッセージを送信するシナリオでは、メッセージをそのユーザーに帰属させるのは、エンゲージメントに役立ち、より自然な対話フローを紹介するのに役立ちます。 この機能を使用すると、ボットから送信されたユーザーにメッセージを属性付けできます。
+ボットがユーザーに代わってメッセージを送信するシナリオでは、メッセージをそのユーザーに帰属させることでエンゲージメントを高め、より自然な対話フローを示すのに役立ちます。 この機能を使用すると、ボットから送信されたメッセージを、送信先のユーザーに属性付けできます。
 
-次の図では、左側はユーザー属性のないボットによって送信されたカード メッセージで、右側はユーザー属性を持つボットによって送信されたカードです。
+次の画像では、左側はユーザー属性のないボットによって送信されたカード メッセージ、右側はユーザー属性のあるボットによって送信されたカードです。
 
-![ユーザー属性ボット](../../../assets/images/messaging-extension/user-attribution-bots.png)
+:::image type="content" source="../../../assets/images/messaging-extension/user-attribution-bots.png" alt-text="ユーザー属性ボット":::
 
-チームでユーザー属性を使用するには、Teamsに`ChannelData`送信されるペイロードに`Activity`メンション エンティティを追加`OnBehalfOf`する必要があります。
+チームでユーザー属性を使用するには、Teams に送信される `Activity` ペイロードで `ChannelData` に `OnBehalfOf` メンション エンティティを追加する必要があります。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet-1)
 
@@ -586,23 +586,23 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-#### <a name="details-of--onbehalfof-entity-schema"></a>エンティティ スキーマの  `OnBehalfOf` 詳細
+#### <a name="details-of--onbehalfof-entity-schema"></a>`OnBehalfOf` エンティティ スキーマの詳細
 
-次のセクションでは、配列内のエンティティの説明を示 `OnBehalfOf` します。
+次のセクションは、`OnBehalfOf` 配列内のエンティティの説明です。
 
-|Field|種類|説明|
+|フィールド|種類|説明|
 |:---|:---|:---|
-|`itemId`|整数|アイテムの識別について説明します。 その値は .`0`|
-|`mentionType`|String|"person" のメンションについて説明します。|
-|`mri`|String|メッセージが送信された代理ユーザーのメッセージ リソース識別子 (MRI)。 メッセージの送信者名は "~ \<bot name\>"\<user\> として表示されます。|
-|`displayName`|String|ユーザーの名前。 名前解決が利用できない場合にフォールバックとして使用されます。|
+|`itemId`|整数|アイテムの識別について説明します。 その値は `0` にする必要があります。|
+|`mentionType`|String|"ユーザー" のメンションについて説明します。|
+|`mri`|String|メッセージが送信された代理ユーザーのメッセージ リソース識別子 (MRI)。 メッセージの送信者名は"\<bot name\> 経由の \<user\>" として表示されます。|
+|`displayName`|String|ユーザーの名前。 ケース名の解決が利用できない場合にフォールバックとして使用されます。|
   
 ## <a name="code-sample"></a>コード サンプル
 
 | サンプルの名前           | 説明 | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|
 |Teams メッセージ拡張機能アクション| アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法について説明します。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
-|Teams メッセージ拡張機能の検索   |  検索コマンドを定義し、検索に応答する方法について説明します。        |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams メッセージ拡張機能検索   |  検索コマンドを定義し、検索に応答する方法について説明します。        |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## <a name="next-step"></a>次のステップ
 

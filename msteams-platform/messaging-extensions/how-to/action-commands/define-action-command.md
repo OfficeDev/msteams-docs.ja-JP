@@ -2,15 +2,15 @@
 title: メッセージ拡張機能のアクション コマンドを定義する
 author: surbhigupta
 description: アプリ マニフェストの例を使用したメッセージング拡張機能アクション コマンドの概要
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 9a39b01f7ccbf45e33be89aef4411e1d2fba8108
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: 7793563db7a3e2d4f3b5b780cadac22ae609c74d
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135746"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297213"
 ---
 # <a name="define-message-extension-action-commands"></a>メッセージ拡張機能のアクション コマンドを定義する
 
@@ -54,7 +54,7 @@ ms.locfileid: "65135746"
 
 コマンドの呼び出し元の選択に加えて、ユーザーのタスク モジュールでフォームを入力する方法も選択する必要があります。 タスク モジュール内でレンダリングされるフォームを作成するには、次の 3 つのオプションがあります。
 
-* **静的なパラメーターの一覧**: これは最も簡単なメソッドです。 アプリ マニフェストのパラメーターの一覧は、Teams クライアント レンダラーを定義できますが、この場合は書式設定を制御できません。
+* **静的なパラメーターの一覧**: これは最も簡単なメソッドです。アプリ マニフェストのパラメーターの一覧は、Teams クライアント レンダラーを定義できますが、この場合は書式設定を制御できません。
 * **アダプティブ カード**: UI をより細かく制御できるアダプティブ カードの使用を選択できますが、使用可能な制御および書式設定オプションは制限されます。
 * **埋め込み Web ビュー**: カスタム Web ビューをタスク モジュールに埋め込んで、UI とコントロールを完全に制御することができます。
 
@@ -68,7 +68,7 @@ ms.locfileid: "65135746"
 
 ## <a name="add-the-action-command-to-your-app-manifest"></a>アプリ マニフェストに操作コマンドを追加する
 
-操作コマンドをアプリ マニフェストに追加するには、アプリ マニフェスト JSON の最上位レベルに新しい `composeExtension` オブジェクトを追加する必要があります。 これを行うには、次のいずれかの方法を使用します。
+操作コマンドをアプリ マニフェストに追加するには、アプリ マニフェスト JSON の最上位レベルに新しい `composeExtension` オブジェクトを追加する必要があります。これを行うには、次のいずれかの方法を使用します。
 
 * [App Studio を使用して操作コマンドを作成する](#create-an-action-command-using-app-studio)
 * [操作コマンドを手動で作成する](#create-an-action-command-manually)
@@ -78,7 +78,7 @@ ms.locfileid: "65135746"
 **App Studio** または **開発者ポータル** を使用して操作コマンドを作成できます。
 
 > [!NOTE]
- > App Studio を使用している場合は、Teams アプリを構成、配布、管理するために[開発者ポータル](https://dev.teams.microsoft.com/)を試してみることをお勧めします。 App Studio は、2022 年 6 月 30 日までに廃止されます。
+ > App Studio を使用している場合は、Teams アプリを構成、配布、管理するための開発者ポータル [開発者ポータル](https://dev.teams.microsoft.com/) を試してみることをお勧めします。App Studio は 2022 年 6 月 30 日までに非推奨になります。
 
 # <a name="app-studio"></a>[App Studio](#tab/AS)
 
@@ -102,8 +102,7 @@ ms.locfileid: "65135746"
 
     :::image type="content" source="~/assets/images/messaging-extension/use-existing-bot.png" alt-text="メッセージング拡張機能に既存のボットを使用する":::
 
-1. メッセージ拡張機能の動作を決定するコマンドを含めるには、メッセージ拡張機能ページの **[コマンド] セクション** で **[追加]** を選択します。
-次の画像は、メッセージ拡張機能のコマンドの追加を表示します。
+1. メッセージ拡張機能の動作を決定するコマンドを含めるには、メッセージ拡張機能ページの **[コマンド] セクション** で **[追加]** を選択します。次の画像は、メッセージ拡張機能のコマンドの追加を表示します。
 
     :::image type="content" source="~/assets/images/messaging-extension/include-command.png" alt-text="コマンドを含める":::
 
@@ -153,9 +152,9 @@ ms.locfileid: "65135746"
 
 | プロパティ名 | 用途 | は必須ですか? | マニフェストの最小バージョン |
 |---|---|---|---|
-| `parameters` | このプロパティでは、コマンドのパラメーターの静的な一覧について説明します。 `fetchTask` が `false` である場合にのみ使用します。 | いいえ | 1.0 |
+| `parameters` | このプロパティでは、コマンドのパラメーターの静的な一覧について説明します。`fetchTask` が `false` である場合にのみ使用します。 | いいえ | 1.0 |
 | `parameter.name` | このプロパティは、パラメーターの名前を説明します。 これは、ユーザー要求でサービスに送信されます。 | はい | 1.0 |
-| `parameter.description` | このプロパティは、指定する必要がある値のパラメーターの目的または例を説明します。 この値は UI に表示されます。 | はい | 1.0 |
+| `parameter.description` | このプロパティは、指定する必要がある値のパラメーターの目的または例を説明します。この値は UI に表示されます。 | はい | 1.0 |
 | `parameter.title` | このプロパティは、ユーザー フレンドリな短いパラメーターのタイトルまたはラベルです。 | はい | 1.0 |
 | `parameter.inputType` | このプロパティは、必要な入力の種類に設定されます。 指定できる値には`text`、`textarea`、`number`、`date`、`time`、`toggle` などがあります。 既定値は `text` に設定されていません。 | いいえ | 1.4 |
 

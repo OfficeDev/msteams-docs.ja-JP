@@ -2,15 +2,15 @@
 title: アプリの設計プロセス
 author: heath-hamilton
 description: 効果的な Microsoft Teams アプリを設計するために、Microsoft のツールとリソースをいつどのように使用すればよいかについて概要を説明します。
-ms.localizationpriority: high
+ms.localizationpriority: mediums
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: b59c2c09240478899ff66e6554719f0f46bc791c
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 40d223180e0f8bcbfcd5aad27a9a3eb4ee571328
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111270"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297220"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>Microsoft Teams アプリの設計プロセス
 
@@ -20,7 +20,7 @@ Microsoft Teams アプリを設計するためのツールとリソースは複�
 
 ## <a name="plan-your-app"></a>アプリを計画する
 
-高品質の Teams アプリを設計するには、アプリで実現したいことと、ユーザーがそれをどのように使用するかを理解する必要があります。 ただし、設計を開始する前に次の質問に答えてみましょう。
+高品質の Teams アプリを設計するには、アプリで実現したいことと、ユーザーがそれをどのように使用するかを理解する必要があります。設計を開始する前に次の質問に答えてみましょう。
 
 * 対象ユーザーは誰か。
 * 対象ユーザーの問題は何か。
@@ -113,7 +113,7 @@ Fluent UI に基づくこれらのコンポーネントは、使い慣れた Tea
 
 アプリの開発に着手したばかりの場合でも、実稼働可能なアプリの完成が間近な場合でも、次のリソースを定期的に確認することをお勧めします。
 
-* **Microsoft Teams ストア検証ガイドライン**: ストアにリストされているアプリだけでなく、すべての Teams アプリが目指すべき標準を提供します。 詳細については、[ガイドライン](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)のページを参照してください。
+* **Microsoft Teams ストア検証ガイドライン**: ストアにリストされているアプリだけでなく、すべての Teams アプリが目指すべき標準を提供します。詳細については、[ガイドライン](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)を参照してください。
 * **設計のベスト プラクティス**: これらのドキュメントと UI キットは、高品質のアプリを設計するためのベスト プラクティスを提供します。 たとえば、[ボットを設計するためのベスト プラクティス](~/bots/design/bots.md#best-practices)に関する記事を参照してください。
 
 ## <a name="see-also"></a>関連項目
