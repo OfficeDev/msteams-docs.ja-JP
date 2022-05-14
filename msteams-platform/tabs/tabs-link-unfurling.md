@@ -4,13 +4,13 @@ author: Rajeshwari-v
 description: リンクを展開し、ステージ ビューを開き、Microsoft Teams アプリでタブを固定する方法について説明します。 コード例とサンプルを使用して、ステージ ビューとアダプティブ カードを使用したステージ ビューの呼び出しについて説明します。
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.localizationpriority: high
-ms.openlocfilehash: 0f1d5db388e937fc382a045d40cc47a1350c033b
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.localizationpriority: medium
+ms.openlocfilehash: 71974d9c553509b974dc2b52377f2d7ab8d79a16
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110296"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296960"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>タブのリンクの展開とステージ ビュー
 
@@ -22,7 +22,7 @@ ms.locfileid: "65110296"
 
 ## <a name="advantage-of-stage-view"></a>ステージ ビューの利点
 
-ステージ ビューは、Teams でコンテンツを表示するよりシームレスなエクスペリエンスを提供するのに役立ちます。 ユーザーは、コンテキストを離れることなく、アプリが提供するコンテンツを開いて表示できます。また、コンテンツをチャットまたはチャネルに固定して、後ですばやくアクセスできるようにすることで、アプリへのユーザーエンゲージメントを高めることができます。
+ステージ ビューは、Teams でコンテンツを表示するよりシームレスなエクスペリエンスを提供するのに役立ちます。ユーザーは、コンテキストを離れることなく、アプリが提供するコンテンツを開いて表示できます。また、コンテンツをチャットまたはチャネルに固定して、後ですばやくアクセスできるようにすることで、アプリへのユーザーエンゲージメントを高めることができます。
 
 ## <a name="stage-view-vs-task-module"></a>ステージ ビューとタスク モジュール
 
@@ -82,12 +82,12 @@ ms.locfileid: "65110296"
 
 ステージ ビューを呼び出すプロセスを次に示します。
 
-* ユーザーが **[表示]** を選択すると、ボットは `invoke` 要求を受け取ります。 要求の種類は `composeExtension/queryLink` です。
+* ユーザーが **[表示]** を選択すると、ボットは `invoke` 要求を受け取ります。リクエストタイプは `composeExtension/queryLink` です。
 * `invoke` ボットからの応答には、型 `tab/tabInfoAction` が含まれるアダプティブ カードが含まれています。
 * ボットは `200` コードで応答します。
 
 > [!NOTE]
-> Teams モバイル クライアントでは、[[Teams ストア]](/platform/concepts/deploy-and-publish/apps-publish-overview.md) を介して配布されたアプリのステージ ビューを呼び出し、モバイル向けに最適化されたエクスペリエンスがない場合、デバイスの既定の Web ブラウザーが開きます。 ブラウザは、`TabInfo` オブジェクトの `websiteUrl` パラメータで指定された URL を開きます。
+> Teams モバイル クライアントでは、[[Teams ストア]](/platform/concepts/deploy-and-publish/apps-publish-overview.md) を介して配布されたアプリのステージ ビューを呼び出し、モバイル向けに最適化されたエクスペリエンスがない場合、デバイスの既定の Web ブラウザーが開きます。ブラウザは、`TabInfo` オブジェクトの `websiteUrl` パラメータで指定されたURLを開きます。
 
 ## <a name="invoke-stage-view-through-deep-link"></a>ディープ リンクを使用してステージ ビューを呼び出す
 
@@ -138,8 +138,8 @@ https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?conte
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | String | 64 | このプロパティは、タブに表示されるエンティティの固有の識別子です。 これは必須フィールドです。|
 | `name` | String | 128 | このプロパティは、チャネル インターフェイスのタブの表示名です。 この入力フィールドは省略できます。|
-| `contentUrl` | String | 2048 | このプロパティは、チーム キャンバスに表示されるエンティティ UI を指す https:// URL です。 これは必須フィールドです。|
-| `websiteUrl?` | String | 2048 | このプロパティは、ユーザーがブラウザーで表示することを選択した場合にポイントする https:// URL です。 これは必須フィールドです。|
+| `contentUrl` | String | 2048 | このプロパティは、チーム キャンバスに表示されるエンティティ UI を指す https:// URL です。これは必須フィールドです。|
+| `websiteUrl?` | String | 2048 | このプロパティは、ユーザーがブラウザーで表示することを選択した場合にポイントする https:// URL です。これは必須フィールドです。|
 | `removeUrl?` | String | 2048 | このプロパティは、ユーザーがタブを削除したときに表示される UI を指す https:// URL です。これは省略可能なフィールドです。|
 
 ## <a name="code-sample"></a>コード サンプル

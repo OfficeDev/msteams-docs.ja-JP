@@ -4,12 +4,12 @@ description: カードと、それらがボット、コネクタ、メッセー�
 ms.localizationpriority: high
 keywords: コネクタ ボット カード メッセージング
 ms.topic: overview
-ms.openlocfilehash: 3689c57ce16f8cfff1d197a35dc0eae084babd36
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 23ac23928a1fa1a31e41bd5b553612bf02c23728
+ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104456"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "65191258"
 ---
 # <a name="cards"></a>カード
 
@@ -36,7 +36,7 @@ Teams では、次の 3 つの異なる場所でカードが使用されます�
 
 ## <a name="cards-in-connectors"></a>コネクタ内のカード
 
-カードは、最初に Outlook と Office 365 の一部として定義され、Office 365 コネクタの一部として使用されるようになりました。 多くの Office 365 アプリケーションと同様に、Teams はコネクタをサポートしています。 詳細については、「[Teams の Office 365 コネクタ](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)」を参照してください。 コネクタ内のカードの仕様は、[アクション可能なメッセージ カードリファレンス ](/outlook/actionable-messages/card-reference)にあります。
+カードは、最初に Outlook と Office 365 の一部として定義され、Office 365 コネクタの一部として使用されるようになりました。 多くの Office 365 アプリケーションと同様に、Teams はコネクタをサポートしています。 詳細については、「[Office 365 コネクタの作成](../webhooks-and-connectors/how-to/connectors-creating.md)」を参照してください。 コネクタ内のカードの仕様は、[アクション可能なメッセージ カードリファレンス ](/outlook/actionable-messages/card-reference)にあります。
 
 ## <a name="cards-in-bots"></a>ボット内のカード
 

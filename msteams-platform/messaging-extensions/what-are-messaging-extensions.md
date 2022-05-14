@@ -2,23 +2,25 @@
 title: メッセージの拡張機能
 author: surbhigupta
 description: Microsoft Teams プラットフォームでのメッセージング拡張機能の概要
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: c8814d7bd3b67ad88859eb381f1d7116fe1a5c43
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 54c0ce0139f6d70aca0c002edff2c60065c48b7b
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110387"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297143"
 ---
 # <a name="message-extensions"></a>メッセージの拡張機能
 
-メッセージ拡張機能を使用すると、ユーザーは、Microsoft Teams クライアントのボタンとフォームを使用して Web サービスを操作することができます。 ユーザーは、外部システムのメッセージ作成領域、コマンド ボックスから、またはメッセージから直接、操作を検索したり、開始したりできます。 その操作の結果を、リッチに書式設定されたカードとして Microsoft Teams クライアントに送信できます。 このドキュメントでは、メッセージ拡張機能、さまざまなシナリオで実行されるタスク、メッセージ拡張機能の動作、操作コマンドと検索コマンド、リンク展開の概要について説明します。
+メッセージ拡張機能を使用すると、ユーザーは、Microsoft Teams クライアントのボタンとフォームを使用して Web サービスを操作することができます。 ユーザーは、外部システムのメッセージ作成領域、コマンド ボックスから、またはメッセージから直接、操作を検索したり、開始したりできます。 その操作の結果を、リッチに書式設定されたカードとして Microsoft Teams クライアントに送信できます。
+
+このドキュメントでは、メッセージ拡張機能、さまざまなシナリオで実行されるタスク、メッセージ拡張機能の動作、操作コマンドと検索コマンド、リンク展開の概要について説明します。
 
 次の画像は、メッセージ拡張機能が呼び出される場所を示しています。
 
-![メッセージ拡張機能の呼び出し場所](~/assets/images/messaging-extension-invoke-locations.png)
+:::image type="content" source="~/assets/images/messaging-extension-invoke-locations.png" alt-text="メッセージ拡張機能の呼び出し場所":::
 
 > [!NOTE]
 > @メンション メッセージ拡張機能は、作成ボックスではサポートされなくなりました。
@@ -48,7 +50,9 @@ Microsoft Teams アプリのアプリ マニフェストでは、最大 10 個�
 
 操作コマンドは、情報を収集または表示するためのモーダル ポップアップをユーザーに表示するために使用されます。 ユーザーがフォームを送信すると、Web サービスはメッセージを会話に直接挿入するか、またはメッセージ作成領域にメッセージを挿入することで応答します。 その後、ユーザーはメッセージを送信できます。 複数のフォームをチェーン化して、より複雑なワークフローを実現することができます。
 
-操作コマンドは、メッセージの作成領域、コマンド ボックス、またはメッセージからトリガーされます。 コマンドがメッセージから呼び出される場合、ボットに送信される最初の JSON ペイロードには、呼び出されたメッセージ全体が含まれます。 次の画像は、メッセージ拡張機能操作コマンド タスク モジュールを示しています。![メッセージ拡張機能操作コマンド タスク モジュール](~/assets/images/task-module.png)
+操作コマンドは、メッセージの作成領域、コマンド ボックス、またはメッセージからトリガーされます。 コマンドがメッセージから呼び出される場合、ボットに送信される最初の JSON ペイロードには、呼び出されたメッセージ全体が含まれます。 次の画像は、メッセージ拡張機能アクション コマンド タスク モジュールを示しています。
+
+:::image type="content" source="~/assets/images/task-module.png" alt-text="メッセージ拡張機能アクション コマンド タスク モジュール":::
 
 ### <a name="search-commands"></a>検索コマンド
 
@@ -57,7 +61,7 @@ Microsoft Teams アプリのアプリ マニフェストでは、最大 10 個�
 カードは、メッセージ作成領域、コマンド ボックス、またはメッセージからトリガーされ、メッセージからはトリガーされません。 メッセージからトリガーすることはできません。
 次の画像は、メッセージ拡張機能検索コマンド タスク モジュールを示しています。
 
-![メッセージ拡張機能検索コマンド](~/assets/images/search-extension.png)
+:::image type="content" source="~/assets/images/search-extension.png" alt-text="メッセージ拡張機能検索コマンド":::
 
 > [!NOTE]
 > カードの詳細については、「[カードとは](../task-modules-and-cards/what-are-cards.md)」を参照してください。
@@ -67,7 +71,7 @@ Microsoft Teams アプリのアプリ マニフェストでは、最大 10 個�
 Web サービスは、メッセージ作成領域に URL が貼り付けられたときに呼び出されます。 この機能は、リンク展開として知られています。 特定のドメインを含む URL がメッセージ作成領域に貼り付けられたときに、呼び出しを受け取るよう登録することができます。 お客様の Web サービスは、URL を詳細情報が記載されたカードに "展開" することができ、そのカードでは標準的な Web サイトのプレビュー カードよりも多くの情報を提供できます。 また、ボタンを追加して、ユーザーが Microsoft Teams クライアントから離脱することなくすぐにアクションを起こせるようにすることができます。
 次の画像は、リンクがメッセージ拡張機能に貼り付けられたときのリンク展開機能を示しています。
 
-![リンクを展開する](../assets/images/messaging-extension/unfurl-link.png)
+:::image type="content" source="../assets/images/messaging-extension/unfurl-link.png" alt-text="リンクを展開する":::
 
 ![リンク展開](../assets/images/messaging-extension/link-unfurl.gif)
 

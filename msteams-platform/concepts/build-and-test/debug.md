@@ -2,18 +2,18 @@
 title: アプリをテストしてデバッグするためのセットアップを選択する
 description: ローカルおよびクラウドでホストされる環境で Microsoft Teams アプリをテストおよびデバッグするためのオプションについて説明します。
 keywords: チームがローカル クラウド ホストのホストでデバッグ アプリを実行する
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: e87032cbe9b116aa0ddbe816169c2763301edd07
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: ba4a07b2a83901f537512067894865bf1c59895d
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135760"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296995"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Microsoft Teams アプリをテストしてデバッグするためのセットアップを選択する
 
-Microsoft Teams アプリには 1 つ以上の機能が含まれており、それらを実行またはホストする方法は異なります。 デバッグには、次のいずれかの方法を使用します。
+Microsoft Teams アプリには 1 つ以上の機能が含まれており、それらを実行またはホストする方法は異なります。デバッグには、次のいずれかの方法を使用します。
 
 * **ローカル専用**: ボットの場合は、Bot Emulator でエクスペリエンスをテストできます。 その他のコンテンツの場合は、ブラウザーでローカルに実行し、`http://localhost` を使用してコンテンツをアドレス指定できます。
 * **Teams でローカルにホストされている場合**: これには、トンネリング ソフトウェアでアプリをローカルに実行し、[パッケージを作成](~/concepts/build-and-test/apps-package.md)して、Teams に [アップロード](~/concepts/deploy-and-publish/apps-upload.md)することが含まれます。 これにより、Teams クライアント内でアプリを簡単に実行およびデバッグできます。
@@ -67,11 +67,11 @@ Microsoft Bot Framework に登録されているボットの場合は、この�
 外部アドレス指定可能な任意のサービスを使用して、開発および運用コードとその HTTPS エンドポイントをホストできます。 機能が同じサービスにあることを期待するものではありません。 `manifest.json` ファイルの [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) オブジェクトに一覧表示されている Microsoft Teams アプリからすべてのドメインにアクセスする必要があります。
 
 > [!NOTE]
-> セキュリティで保護された環境を確保するには、参照する正確なドメインとサブドメインについて明示的に指定し、それらのドメインを制御する必要があります。 たとえば、`*.azurewebsites.net` は推奨されませんが、`contoso.azurewebsites.net` をお勧めします。
+> セキュリティで保護された環境を確保するには、参照する正確なドメインとサブドメインについて明示的に指定し、それらのドメインを制御する必要があります。たとえば、`*.azurewebsites.net` は推奨されませんが、`contoso.azurewebsites.net` をお勧めします。
 
 ## <a name="load-and-run-your-experience"></a>エクスペリエンスを読み込んで実行する
 
-Microsoft Teams 内でエクスペリエンスを読み込んで実行するには、パッケージを作成して Teams にアップロードする必要があります。 詳細については、以下を参照してください。
+Microsoft Teams 内でエクスペリエンスを読み込んで実行するには、パッケージを作成して Teams にアップロードする必要があります。詳細については、以下を参照してください。
 
 * [Microsoft Teams アプリのパッケージを作成する](~/concepts/build-and-test/apps-package.md)。
 * [Microsoft Teams でアプリをアップロードする](~/concepts/deploy-and-publish/apps-upload.md)。

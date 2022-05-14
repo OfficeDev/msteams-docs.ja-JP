@@ -5,12 +5,12 @@ ms.topic: overview
 ms.localizationpriority: medium
 keywords: Teamsボットメッセージ
 ms.date: 05/20/2019
-ms.openlocfilehash: 0f77606b0fcc73e2bb68fc08e964662fdcba4df7
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 0d4665d098e0e14fa3de5f2667c7e970b545b284
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399220"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296974"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>Microsoft Teams ボットと会話する
 
@@ -25,13 +25,13 @@ ms.locfileid: "63399220"
 ボットの動作は、関係する会話の種類に応じて多少異なります:
 
 * [チャネル内やグループ チャット内の会話の場合](~/resources/bot-v3/bot-conversations/bots-conv-channel.md)、ユーザーはボットを @メンションしてチャネルに呼び出す必要があります。
-* [単一ユーザー会話のボット](~/resources/bot-v3/bot-conversations/bots-conv-personal.md) には@mention -  は必要ありません。ユーザーは入力するだけで済みます。
+* [単一ユーザー会話のボット](~/resources/bot-v3/bot-conversations/bots-conv-personal.md)には @mention -  は必要ありません。ユーザーは入力するだけで済みます。
 
-ボットを特定のスコープで動作させるには、マニフェストでそのスコープをサポートするものとして一覧表示する必要があります。 スコープは、 [マニフェスト リファレンス](~/resources/schema/manifest-schema.md)で定義され、さらに詳しく説明されています。
+ボットを特定のスコープで動作させるには、マニフェストでそのスコープをサポートするものとして一覧表示する必要があります。スコープは、[マニフェスト リファレンス](~/resources/schema/manifest-schema.md)で定義され、さらに詳しく説明されています。
 
 ## <a name="proactive-messages"></a>プロアクティブ メッセージ
 
-ボットは会話に参加したり、会話を開始したりできます。 ほとんどの通信は、別のメッセージに応答しています。 ボットが会話を開始する場合は、 *プロアクティブ メッセージ* と呼ばれます。 たとえば、次のような情報が含まれます。
+ボットは会話に参加したり、会話を開始したりできます。 ほとんどの通信は、別のメッセージに応答しています。 ボットが会話を開始する場合は、*プロアクティブ メッセージ* と呼ばれます。 たとえば、次のような情報が含まれます。
 
 * ウェルカム メッセージ
 * イベント通知
@@ -54,7 +54,7 @@ ms.locfileid: "63399220"
 | フォーマット | ユーザーからボットへ  | ボットからユーザーへ |  メモ |
 | --- | :---: | :---: | --- |
 | リッチ テキスト | ✔ | ✔ |  |
-| ピクチャ | ✔ | ✔ | 最大1024×1024、1MBのPNG、JPEG、GIF形式、アニメーションGIFはサポートされていません。 |
+| ピクチャ | ✔ | ✔ | 最大 1024×1024 MB、1 MB の PNG、JPEG、GIF 形式、アニメーション GIF はサポートされていません。 |
 | カード | ✖ | ✔ | サポートされているカードについては、[Teams カード リファレンスを参照](~/task-modules-and-cards/cards/cards-reference.md)してください。 |
 | 絵文字 | ✖ | ✔ | Teamsは現在、ニヤリとした顔のU+1F600など、UTF-16による絵文字をサポートしています。 |
 |
@@ -74,7 +74,7 @@ Teamsがチームでテキストの書式設定をサポートする方法の詳
 
 画像は、メッセージに添付ファイルを追加して送信されます。 添付ファイルの詳細については、 [Bot Framework のドキュメント](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0&preserve-view=true)を参照してください。
 
-画像は最大 1024×1024 および 1 MB の PNG、JPEG、または GIF 形式にすることができます。アニメーション GIF はサポートされていません。
+画像は最大 1024×1024 MB および 1 MB の PNG、JPEG、または GIF 形式にすることができます。アニメーション GIF はサポートされていません。
 
 XML を使用して、各イメージの高さと幅を指定することをお勧めします。 Markdown を使用する場合、イメージ サイズの既定値は 256×256 です。 次に例を示します。
 
@@ -85,17 +85,17 @@ XML を使用して、各イメージの高さと幅を指定することをお�
 
 どのスコープが宣言されているかに応じて、ボットは次のコンテキストでメッセージを受信できます。
 
-* **個人用チャット** ユーザーは、チャット履歴で追加されたボットを選択するか、新しいチャットの [To: ] ボックスに名前またはアプリ ID を入力するだけで、ボットとプライベート会話ができます。
+* **個人用チャット** ユーザーは、チャット履歴で追加されたボットを選択するか、新しいチャットの [To: ] ボックスに名前またはアプリ ID を入力することにより、ボットとプライベート会話ができます。
 * **チャンネル** ボットがチームに追加されている場合は、チャネルでボット ("@*botname*") を指定できます。 チャネル内のボットに対する追加の返信には、ボットについて言及する必要があることに注意してください。 メンションされていない返信には応答しません。
 
-受信メッセージの場合、ボットは`messageType: message`タイプの[アクティビティ](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true)オブジェクトを受け取ります。 `Activity`オブジェクトには、ボットに送信される[チャンネル更新](~/resources/bot-v3/bots-notifications.md#channel-updates)など、他の種類の情報を含めることができますが、`message`この種類はボットとユーザー間の通信を表します。
+受信メッセージの場合、ボットは`messageType: message`タイプの[アクティビティ](../../../bots/how-to/conversations/conversation-messages.md)オブジェクトを受け取ります。`Activity` オブジェクトには、ボットに送信される[チャンネル更新](~/resources/bot-v3/bots-notifications.md#channel-updates)など、他の種類の情報を含めることができますが、`message` の種類はボットとユーザー間の通信を表します。
 
-ボットは、ユーザー メッセージと、ユーザーに関するその他の情報、メッセージ`Text`のソース、およびTeams情報を含むペイロードを受け取ります。 注意:
+ボットは、ユーザー メッセージ`Text`と、ユーザーに関するその他の情報、メッセージのソース、およびTeams情報を含むペイロードを受け取ります。注意:
 
 * `timestamp`世界協定時刻 (UTC) でのメッセージの日付と時刻。
 * `localTimestamp` 送信者のタイム ゾーン内のメッセージの日付と時刻。
-* `channelId` 常に "MSTeams" です。 これは、チーム チャネルではなく、ボット フレームワーク チャネルを指します。
-* `from.id` ボットのユーザーのユニークで暗号化された ID; アプリでユーザー データを格納する必要がある場合は、キーとして適しています。 これはボットに固有であり、そのユーザーを識別する意味のある方法でボット インスタンスの外部で直接使用することはできません。
+* `channelId` は常に "msteams" です。これは、チーム チャネルではなく、ボット フレームワーク チャネルを指します。
+* `from.id` ボットのユーザーのユニークで暗号化された ID; アプリでユーザー データを格納する必要がある場合は、キーとして適しています。 ボットに対して固有であり、そのユーザーを識別する意味のある方法でボット インスタンスの外部で直接使用することはできません。
 * `channelData.tenant.id` - ユーザーの テナント ID。
 
 > [!NOTE]
@@ -168,8 +168,8 @@ XML を使用して、各イメージの高さと幅を指定することをお�
 * `channel` ボットが言及されたとき、またはボットが追加されたチームのチャネル内のイベントに対してのみ、チャネル コンテキストで渡されます。
   * `id` チャネルの GUID。
   * `name` チャネル名; [チャネル変更イベント](~/resources/bot-v3/bots-notifications.md#channel-updates)の場合にのみ渡されます。
-* `channelData.teamsTeamId` 非推奨です。 このプロパティは、後方互換性のためにのみ含まれます。
-* `channelData.teamsChannelId` 非推奨です。 このプロパティは、後方互換性のためにのみ含まれます。
+* `channelData.teamsTeamId` は非推奨です。このプロパティは、後方互換性のためにのみ含まれます。
+* `channelData.teamsChannelId` は非推奨です。このプロパティは、後方互換性のためにのみ含まれます。
 
 ### <a name="example-channeldata-object-channelcreated-event"></a>channelData オブジェクトの例 (channelCreated イベント)
 
@@ -212,7 +212,7 @@ REST API を使用する場合は、[`/v3/conversations/{conversationId}/activit
 
 メッセージをデータの静的スナップショットにするのではなく、送信後にメッセージをインラインで動的に更新できます。 ポーリングの更新、ボタンを押した後の使用可能なアクションの変更、その他の非同期状態の変更などのシナリオでは、動的メッセージ更新を使用できます。
 
-新しいメッセージは、種類の元のメッセージと一致する必要はありません。 たとえば、元のメッセージに添付ファイルが含まれている場合、新しいメッセージは単純なテキスト メッセージにすることができます。
+新しいメッセージは、種類の元のメッセージと一致する必要はありません。 たとえば、元のメッセージに添付ファイルが含まれている場合、新しいメッセージはテキスト メッセージにすることができます。
 
 > [!NOTE]
 > 単一の添付ファイル メッセージとカルーセル レイアウトで送信されたコンテンツのみを更新できます。 リスト レイアウト内の複数の添付ファイルを含むメッセージへの更新の投稿はサポートされていません。
@@ -273,13 +273,13 @@ function sendCardUpdate(bot, session, originalMessage, address) {
 
 ## <a name="starting-a-conversation-proactive-messaging"></a>会話の開始 (プロアクティブ メッセージング)
 
-ユーザーとの個人的な会話を作成したり、チーム ボットのチャネルで新しい返信チェーンを開始したりできます。 これにより、ユーザーが最初にボットとの連絡を開始しなくても、メッセージを送信できます。 詳細については、次のトピックをご覧ください。
+ユーザーとの個人的な会話を作成したり、チーム ボットのチャネルで新しい返信チェーンを開始したりできます。 これにより、ユーザーが最初にボットとの連絡を開始しなくても、メッセージを送信できます。 詳細については、次の記事を参照してください。
 
 ボットによって開始される会話の一般的な情報については、「 [ボットのプロアクティブ メッセージング](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) 」を参照してください。
 
 ## <a name="deleting-messages"></a>メッセージの削除
 
-メッセージは [BotBuilder SDK](/bot-framework/bot-builder-overview-getstarted)のコネクタ[`delete()`](https://docs.botframework.com/node/builder/chat-reference/interfaces/_botbuilder_d_.iconnector.html#delete)メソッドを使用して削除できます。
+メッセージは [BotBuilder SDK](/bot-framework/bot-builder-overview-getstarted)のコネクタ[`delete()`](https://docs.botframework.com/node/builder/chat-reference/interfaces/_botbuilder_d_.iconnector.html)メソッドを使用して削除できます。
 
 ```typescript
 bot.dialog('BotDeleteMessage', function (session: builder.Session) {
