@@ -1,17 +1,17 @@
 ---
-title: 個人用アプリまたはタブからTeamsに共有する
+title: 個人用アプリまたはタブから Teams に共有する
 description: 個人用アプリまたはタブに埋め込まれたTeamsで共有を追加する方法について説明します
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Teamsに共有Teams共有する
-ms.openlocfilehash: 7ece44c3b0a48ad2ce0ad72aed5ba9efc9cf57c2
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+ms.openlocfilehash: 59185b9e2531a0ca61c97ceba50b4f71f06c45e9
+ms.sourcegitcommit: a3567e3e1a52b8e3cb2072b037f0e75bd0f12e58
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685701"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65439364"
 ---
-# <a name="share-to-teams-from-personal-app-or-tab"></a>個人用アプリまたはタブからTeamsに共有する
+# <a name="share-to-teams-from-personal-app-or-tab"></a>個人用アプリまたはタブから Teams に共有する
 
 > [!NOTE]
 > 現在、Teamsへの共有は[、パブリック開発者向けプレビュー](../../resources/dev-preview/developer-preview-intro.md)でのみ利用できます。
@@ -43,6 +43,7 @@ microsoftTeams.sharing.shareWebContent({
           {
             type: 'URL',
             url: '<URL to be shared>',
+            message: 'Default message to be loaded in the compose box',
             preview: true
           }
         ]
@@ -55,6 +56,7 @@ microsoftTeams.sharing.shareWebContent({
 |---|---|
 | `type` | 型は次の値にする必要があります。 `URL` |
 | `url` | `URL` 共有する |
+|`message`| 作成ボックスに読み込まれる既定のメッセージ |
 | `preview` | URL プレビューを有効にするように設定する`true` |
 
 次の図は、[Teamsに共有] オプションを示しています。
@@ -80,7 +82,7 @@ microsoftTeams.sharing.shareWebContent({
 | **7000** | API が頻繁に呼び出されたため、プラットフォームによって要求が調整されました。 |
 | **8000** | ユーザーが操作を中止しました。 |
 | **9000** | プラットフォーム コードは古く、この API は実装されていません。 |
-| **10000** | 戻り値が大きすぎて、サイズの境界を超えています。 |
+| **10,000** | 戻り値が大きすぎて、サイズの境界を超えています。 |
 
 ## <a name="limitations"></a>制限事項
 
@@ -114,5 +116,5 @@ microsoftTeams.sharing.shareWebContent({
 
 ## <a name="see-also"></a>関連項目
 
-* [Web アプリからTeamsに共有する](share-to-teams-from-web-apps.md)
+* [Web アプリから Teams に共有する](share-to-teams-from-web-apps.md)
 * [プライベート タブを作成する](../../tabs/how-to/create-personal-tab.md)

@@ -1,17 +1,17 @@
 ---
-title: Web アプリからTeamsに共有する
+title: Web アプリから Teams に共有する
 description: コード サンプルを使用して、Web サイトのプレビューを使用して、Web サイトの埋め込みボタンTeams共有を追加する方法について説明します
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Teamsに共有Teams共有する
-ms.openlocfilehash: ac08d3c697bc5f02eb8527d2239afe022cb421af
-ms.sourcegitcommit: f892125106adb6731a20127f15d6e92f279127c5
+ms.openlocfilehash: b3efd268e2bded3955c2d9ab76d6dea755d06b5a
+ms.sourcegitcommit: a3567e3e1a52b8e3cb2072b037f0e75bd0f12e58
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64685687"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65439301"
 ---
-# <a name="share-to-teams-from-web-apps"></a>Web アプリからTeamsに共有する
+# <a name="share-to-teams-from-web-apps"></a>Web アプリから Teams に共有する
 
 サード パーティの Web サイトでは、起動スクリプトを使用して、Web ページの Teams ボタンに Share を埋め込むことができます。 選択すると、ポップアップ ウィンドウで [Share to Teams エクスペリエンス] が起動します。 これにより、コンテキストを切り替えることなく、任意のユーザーまたはMicrosoft Teams チャネルへのリンクを直接共有できます。 このドキュメントでは、Web サイトの [Share to Teams] ボタンを作成して埋め込み、Web サイトプレビューを作成し、共有をMicrosoft Teams for Educationに拡張する方法について説明します。
 
@@ -65,6 +65,17 @@ ms.locfileid: "64685687"
     </div>
     ```
 
+1. 選択したメッセージを作成ボックスに表示するには、属性で `data-msg-text` テキストを定義します。
+
+     ```html
+     <div
+      class="teams-share-button"
+      data-href="https://<link-to-be-shared>"
+      data-msg-text="<default-message-to-be-populated-in-compose-box>"
+      data-preview="false">
+      </div>
+     ```
+
 1. ページがコンテンツを動的にレンダリングする場合は、このメソッドを `shareToMicrosoftTeams.renderButtons()` 使用して **、** Share をパイプライン内の適切な場所に強制的にレンダリングすることができます。
 
 ## <a name="craft-your-website-preview"></a>Web サイトのプレビューを作成する
@@ -80,7 +91,7 @@ Web サイトがTeamsに共有されている場合、選択したチャネル�
 
 |値|メタ タグ| Graphを開く|
 |----|----|----|
-|タイトル|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
+|Title|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
 |説明|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
 |サムネイル 画像| なし。 |`<meta property="og:image" content="http://example.com/image.jpg">`|
 
@@ -96,12 +107,12 @@ HTML の既定のバージョンまたは Open Graph バージョンのいずれ
 
 | プロパティ | HTML 属性 | 型 | 既定値 | 説明 |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
-| href | `data-href` | 文字列 | 該当なし | 共有するコンテンツの href。 |
+| href | `data-href` | string | 該当なし | 共有するコンテンツの href。 |
 | preview | `data-preview` | ブール値 (文字列として) | `true` | 共有するコンテンツのプレビューを表示するかどうかを指定します。 |
 | iconPxSize | `data-icon-px-size` | number (文字列として) | `32` | レンダリングする [Teamsに共有] ボタンのサイズ (ピクセル単位)。 |
-| msgText | `data-msg-text` | 文字列 | 該当なし | メッセージ作成ボックスのリンクの前に挿入される既定のテキスト。 最大文字数は 200 文字です。 |
-| assignInstr | `data-assign-instr` | 文字列 | 該当なし | 割り当て "命令" フィールドに挿入される既定のテキスト。 最大文字数は 200 文字です。 |
-| assignTitle | `data-assign-title` | 文字列 | 該当なし | 割り当て "タイトル" フィールドに挿入する既定のテキスト。 最大文字数は 50 文字です。 |
+| msgText | `data-msg-text` | string | 該当なし | メッセージ作成ボックスのリンクの前に挿入される既定のテキスト。 最大文字数は 200 文字です。 |
+| assignInstr | `data-assign-instr` | string | 該当なし | 割り当て "命令" フィールドに挿入される既定のテキスト。 最大文字数は 200 文字です。 |
+| assignTitle | `data-assign-title` | string | 該当なし | 割り当て "タイトル" フィールドに挿入する既定のテキスト。 最大文字数は 50 文字です。 |
 
 ### <a name="methods"></a>メソッド
 
@@ -136,4 +147,4 @@ HTML の既定のバージョンまたは Open Graph バージョンのいずれ
 ## <a name="see-also"></a>関連項目
 
 * [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)
-* [個人用アプリまたはタブからTeamsに共有する](share-to-teams-from-personal-app-or-tab.md)
+* [個人用アプリまたはタブから Teams に共有する](share-to-teams-from-personal-app-or-tab.md)
