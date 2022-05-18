@@ -5,12 +5,12 @@ ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 6e348cc0db5c9b197b985b144105924c2c40669a
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 7d5e6d4d345f94e893a494c6dea2e719aece9da6
+ms.sourcegitcommit: ef582a5ac33e815854d58f2f1faeb06aa2d761ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63501915"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "65443902"
 ---
 # <a name="create-a-partner-center-developer-account"></a>パートナー センターの開発者アカウントを作成する
 
@@ -207,6 +207,18 @@ ms.locfileid: "63501915"
 <br>
 
 </details>
+
+## <a name="update-apple-developer-id-on-partner-center"></a>パートナー センターで Apple Developer ID を更新する
+
+ユーザーが Teams iOS プラットフォームにアプリをインストールできるようにするには、Microsoft パートナー センターで Apple Developer ID を更新する必要があります。 Apple Developer ID を更新するには、次の手順に従います。
+
+1. 全体管理者の資格情報を使用して、[Microsoft パートナー センター](https://partner.microsoft.com/dashboard/home) にログインします。
+1. ページの右上隅にある設定アイコンを選択します。
+1. 左側のウィンドウから、**「組織プロファイル］** の下にある **［法務情報］** セクションに移動します。
+1. **［開発者］** タブを選択します。
+1. Apple Developer ID を入力します。
+1. オファー ページに移動し、Teams アプリを再発行します。
+   Apple Developer ID が Microsoft パートナー センター で更新されました。
 
 ## <a name="next-step"></a>次のステップ
 

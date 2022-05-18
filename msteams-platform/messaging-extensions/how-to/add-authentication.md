@@ -2,15 +2,15 @@
 title: メッセージ拡張機能に認証を追加する
 author: surbhigupta
 description: コード例とサンプルを使用してメッセージング拡張機能に認証を追加する方法について説明します
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 36a2aa269bfc43f4c07e97a5c214e3081a38ffeb
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: 996ae2fe8a45e5ebbb481865198b759c7ad221a3
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135711"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65297009"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>メッセージ拡張機能に認証を追加する
 
@@ -68,7 +68,7 @@ ms.locfileid: "65135711"
 
 > [!NOTE]
 >
-> * サインイン エクスペリエンスを Teams ポップアップ ウィンドウでホストするには、URL のドメイン部分がアプリの有効なドメインの一覧に含まれている必要があります。 詳細については、「マニフェスト スキーマの[validDomains](~/resources/schema/manifest-schema.md#validdomains)」 を参照してください。
+> * サインイン エクスペリエンスを Teams ポップアップ ウィンドウでホストするには、URL のドメイン部分がアプリの有効なドメインの一覧に含まれている必要があります。詳細については、「マニフェスト スキーマの [validDomains](~/resources/schema/manifest-schema.md#validdomains)」 を参照してください。
 > * 認証ポップアップのサイズは、幅と高さのクエリ文字列パラメーター `Value = $"{_siteUrl}/searchSettings.html?height=600&width=600"` を含めることによって定義できます。
 
 ### <a name="start-the-sign-in-flow"></a>サインイン フローを開始する
@@ -81,7 +81,7 @@ Microsoft Teams 内で実行される他の埋め込みエクスペリエンス�
 
 サインイン要求が完了し、ページにリダイレクトされたら、次の手順を実行する必要があります。
 
-1. セキュリティ コード (乱数) を生成します。 このコードは、OAuth 2.0 トークンなどのサインイン フローで取得した資格情報と共に、サービスにキャッシュする必要があります。
+1. 乱数のセキュリティコードを生成します。このコードは、OAuth 2.0 トークンなどのサインインフローで取得した認証情報とともに、サービス上にキャッシュしておく必要があります。
 1. `microsoftTeams.authentication.notifySuccess` を呼び出して、セキュリティ コードを渡します。
 
 この時点でウィンドウが閉じ、コントロールが Teams クライアントに渡されます。 クライアントは、`state` プロパティのセキュリティ コードと共に、元のユーザー クエリを再発行します。 コードでは、セキュリティ コードを使用して、前に保存した資格情報を検索して認証シーケンスを完了し、ユーザー要求を完了できます。

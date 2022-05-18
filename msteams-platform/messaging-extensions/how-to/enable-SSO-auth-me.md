@@ -2,19 +2,19 @@
 title: メッセージ拡張機能の SSO サポート
 author: KirtiPereira
 description: コード サンプルを使用してメッセージング拡張機能の SSO サポートを有効にする方法について説明します。
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 148e8c59acc520e7771ac23c38b4b17c43d4d74d
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: bba2a8a225a75c21c46a242dec8acc55dcc0e8b5
+ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111256"
+ms.lasthandoff: 05/10/2022
+ms.locfileid: "65296946"
 ---
 # <a name="single-sign-on-support-for-message-extensions"></a>メッセージ拡張機能のシングル サインオンのサポート
 
-シングル サインオン (SSO) のサポートは、メッセージ拡張機能とリンク解除で使用できるようになりました。 メッセージ拡張機能のシングル サインオンを既定で有効にすると、認証トークンが更新され、Microsoft Teams のサインイン資格情報を入力する必要がある回数が最小限に抑えられます。
+シングル サインオン (SSO) のサポートが、メッセージ拡張機能とリンク解除で使用できるようになりました。メッセージ拡張機能のシングル サインオンを既定で有効にすると、認証トークンが更新され、Microsoft Teams のサインイン資格情報を入力する必要がある回数が最小限に抑えられます。
 
 このドキュメントでは、SSO を有効にして、必要に応じて認証トークンを格納する方法について説明します。
 
