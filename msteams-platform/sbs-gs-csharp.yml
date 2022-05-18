@@ -20,21 +20,21 @@ metadata:
 items:
 - durationInMinutes: 1
   content: >
-    タブ、ボット、メッセージ拡張機能機能を使用して最初のアプリをビルドすることで、Microsoft Teams アプリの開発を開始します。
+    タブ、ボット、メッセージ拡張機能のある最初のアプリをビルドして、Microsoft Teams アプリ開発を始めます。
 
 
-    >このアプリにはすべての機能があり、それぞれに独自の UI と UX があります。
+    >このアプリには全ての機能が含まれ、それぞれ独自の UI と UX を提供します。
 
 
     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="このアプリを示すダイアグラムには、3 つの機能があります。" border="true":::
 
 
-    このチュートリアルでは、次の方法について学ぶことができます:
+    このチュートリアルでは以下を学習します。
 
 
     - 新しいプロジェクトを設定する方法
 
-    - C# と Visual Studio 2019 を使用して、それぞれ異なる機能を持つ 3 つのアプリをビルドする方法
+    - C# と Visual Studio 2019 を利用して、それぞれ異なる機能 (タブ、ボット、メッセージ拡張機能) を持つ 3 つのアプリをビルドする方法
 
     - 開発者ポータルからアプリをデプロイする方法
 - title: 前提条件
