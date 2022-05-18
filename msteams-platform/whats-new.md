@@ -253,7 +253,7 @@ ms.locfileid: "65132710"
 | 2018/6/7 | Microsoft Teams テナント アプリ カタログの情報が追加されました。 | [Microsoft Teams アプリの公開](~/publishing/apps-publish.md)|
 | 2018/5/29 | Teams でアダプティブ カードがサポートされます。 | [Teams でのアダプティブ カードのアクション](task-modules-and-cards/cards/cards-reference.md) |
 | 2018/4/17 | replyToID が `Invoke` および `MessageBack` カード アクションのペイロードに追加されました。 これは、カード アクションの送信元のメッセージを更新する必要がある場合に特に便利です。 | [カード アクション](~/concepts/cards/cards-actions.md)|
-| 2018/4/12 | Teams プログラミング インターフェイスとこのドキュメント セットの変更を追跡するこのトピックが追加されました。 | [新機能](~/whats-new.md)|
+| 2018/4/12 | Teams プログラミング インターフェイスとこのドキュメント セットの変更を追跡するこのトピックが追加されました。 | [最新情報](~/whats-new.md)|
 | 2018/4/10 | 認証 URL で、パスにテナント ID を一貫して使用するように変更が行われました。 | [タブの認証フロー](~/concepts/authentication/auth-flow-tab.md)、[Azure AD タブ認証](~/concepts/authentication/auth-tab-AAD.md)|
 | 2018/4/6 | コマンド ボックスの使用に関するデザイン ガイドラインが追加されました。 |[コマンド ボックス](~/resources/design/framework/command-box.md)|
 | 2018/4/2 | ボットを使用して、アプリの通知を送信します。 |[通知のみのボット](~/concepts/bots/bots-notification-only.md)|
