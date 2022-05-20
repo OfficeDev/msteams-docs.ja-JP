@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: fa13a03d30fd112b1c8983683b667d0cb96ef4ee
-ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
+ms.openlocfilehash: 1b3f5784161295aa31a723e3ca6b0a08f21afb76
+ms.sourcegitcommit: f7d0e330c96e00b2031efe6f91a0c67ab0976455
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65191181"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65611464"
 ---
 # <a name="messages-in-bot-conversations"></a>ボットの会話内のメッセージ
 
@@ -23,6 +23,8 @@ ms.locfileid: "65191181"
 * 自然言語処理 (NLP) などのコグニティブ サービスを組み込む簡単な方法。
 
 ボットは、プロパティを使用してTeamsからメッセージを`Text`受信し、1 つまたは複数のメッセージ応答をユーザーに送信します。
+
+詳細については、「[ボット メッセージのユーザー属性」を](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1&branch=pr-en-us-5926#user-attribution-for-bots-messages)参照してください。
 
 ## <a name="receive-a-message"></a>メッセージを受信する
 
@@ -333,7 +335,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 画像は最大 1024 ×1024 MB、PNG、JPEG、または GIF 形式で 1 MB です。 アニメーション GIF はサポートされていません。
 
-XML を使用して、各イメージの高さと幅を指定します。 マークダウンでは、イメージ サイズの既定値は 256×256 です。 例として以下のようなものがあります。
+XML を使用して、各イメージの高さと幅を指定します。 マークダウンでは、イメージ サイズの既定値は 256×256 です。 次に例を示します。
 
 * 使用: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
 * 使用しないでください: `![Duck on a rock](http://aka.ms/Fo983c)`.
