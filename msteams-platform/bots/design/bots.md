@@ -5,19 +5,19 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: f6a19b2c75d5e3b42e7b1b7cea7834d28e3917a9
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 67f67535994bde9871cdaa7be8081e05ccbf1a1d
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104386"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602300"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Microsoft Teams のボットをデザインする
 
 ボットは、特定のタスクを実行する会話型アプリです。 <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot Framework</a> をベースに、ボットはユーザーと通信し、ユーザーの質問に答え、変更などのイベントをプロアクティブに通知します。 ボットは、連絡を取るのに最適な方法です。
 
 > [!IMPORTANT]
-> ボットは、Government Community Cloud (GCC) 環境では使用できますが、GCC High や米国国防総省 (DOD) 環境では使用できません。
+> ボットは Government Community Cloud (GCC) 環境とGCC High環境では使用できますが、米国国防総省 (DOD) 環境では使用できません。
 
 アプリのデザインに役立てるために、次の情報では、Teams でユーザーがどのようにボットを追加、使用、管理できるかを説明、図解しています。
 

@@ -3,14 +3,14 @@ title: ボットと SDK
 author: surbhigupta
 description: Microsoft Teams ボットを構築するためのツールと SDK の概要。
 ms.topic: overview
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: b579444f23a629b58497e27245807e7086ad8c75
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 05cb93fef74d22931591b3bb077afbb785d168ad
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111284"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602241"
 ---
 # <a name="bots-and-sdks"></a>ボットと SDK
 
@@ -20,6 +20,7 @@ ms.locfileid: "65111284"
 * [Power Virtual Agents](#bots-with-power-virtual-agents)
 * [仮想アシスタント](~/samples/virtual-assistant.md)
 * [Webhook とコネクタ](#bots-with-webhooks-and-connectors)
+* [Azure ボット サービス](#azure-bot-service)
 
 ## <a name="bots-with-the-microsoft-bot-framework"></a>Microsoft Bot Framework を使用したボット
 
@@ -51,6 +52,105 @@ Teams ボットは以下から構成されます。
 ## <a name="bots-with-webhooks-and-connectors"></a>Webhook とコネクタを使用したボット
 
 Webhook とコネクタは、ボットを Web サービスに接続します。 Webhook とコネクタを使用すると、ワークフローやその他のシンプルなコマンドの作成など、基本的なやり取りを行うためのボットを作成することができます。 これらは、作成したチームでのみ使用でき、会社のワークフロー固有のシンプルなプロセスを対象としています。 詳細については、「[Webhook とコネクタとは](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)」を参照してください。
+
+## <a name="azure-bot-service"></a>Azure ボット サービス
+
+Azure ボット サービスは Bot Framework と共に、インテリジェント ボットを 1 か所で構築、テスト、デプロイ、管理するためのツールを提供します。 Azure ボット サービスでボットを作成することもできます。
+
+> [!IMPORTANT]
+> Microsoft Teams内のボット アプリケーションは、[Azure bot Service](/azure/bot-service/channel-connect-teams) を通じてGCC-Highで利用できます。
+
+> [!NOTE]
+> * GCCH のボットは、マニフェスト バージョン v1.10 までしかサポートしません。
+> * アダプティブ カード内のイメージ URL は、GCCH 環境ではサポートされていません。 イメージ URL は、Base64 でエンコードされた DataUri に置き換えることができます。
+> * Azure Governmentでのボット チャネルの登録では、Web アプリ ボット、アプリ サービス (App Service プラン)、およびアプリケーション分析情報もプロビジョニングされますが、Azure bot Service のプロビジョニングのみ (アプリ サービスなし) はサポートされません。
+>   <details>
+>   <summary><b>ボットの登録のみを行う場合</b></summary>
+>
+>   * リソース グループに移動し、未使用のリソースを手動で削除します。 アプリ サービス、App Service プラン (ボットの登録中に作成した場合)、アプリケーション分析情報 (ボットの登録中に有効にすることを選択した場合) などです。
+>   * az-cli を使用してボットの登録を行うこともできます。
+>
+>     1. Azure にサインインしてサブスクリプションを設定する <br> 
+>           &nbsp; az cloud set –name "AzureUSGovernment" <br> 
+>           &nbsp; az account set –name "`subscriptionname/id`.<br>
+>     1. アプリの登録を作成する  
+>           &nbsp; az ad app create --display-name "`name`" <br> 
+>           &nbsp; --password "`password`" --available-to-other-tenants。<br> 
+>           アプリ ID はここで作成されます。<br>
+>     1. ボット リソースを作成する <br>
+>           &nbsp; az bot create –resource-group "`resource-group`"<br>
+>           &nbsp; --appid "`appid`"<br>
+>           &nbsp; --name "`botid`"<br>
+>           &nbsp; --kind "registration"。<br>
+>
+> </details>
+
+GCCH 環境の場合は、[Azure Government ポータル](https://portal.azure.us)を使用してボットを登録する必要があります。
+
+:::image type="content" source="../assets/videos/abs-bot.gif" alt-text="Azure Government ポータル":::
+<br>
+<br>
+GCC-High環境では、ボット内で次の変更が必要です。
+<br>
+<br>
+<details>
+<summary><b>構成の変更</b></summary>
+
+Azure Government ポータルでボットの登録が発生した場合は、Azure govermnet インスタンスに接続するようにボット構成を更新してください。 構成の詳細は次のとおりです。
+
+| 構成名 | 値 |
+|----|----|
+| ChannelService | `https://botframework.azure.us` |
+| OAuthUrl | `https://tokengcch.botframework.azure.us` |
+| ToChannelFromBotLoginUrl | `https://login.microsoftonline.us/MicrosoftServices.onmicrosoft.us` |
+| ToChannelFromBotOAuthScope | `https://api.botframework.us` |
+| ToBotFromChannelTokenIssuer | `https://api.botframework.us`  |
+| BotOpenIdMetadata | `https://login.botframework.azure.us/v1/.well-known/openidconfiguration` |
+
+</details>
+<br>
+<details>
+<summary><b>appsettings.json & startup.cs に更新する</b></summary>
+
+1. **appsettings.json を更新します。**
+
+    * `ConnectionName` を、ボットに追加した OAuth 接続設定の名前に設定します。
+
+    * `MicrosoftAppId` と `MicrosoftAppPassword` をボットのアプリ ID とアプリ シークレットに設定します。
+    
+    ボット シークレットの文字によっては、パスワードの XML エスケープが必要になる場合があります。 たとえば、アンパサンド (&) は次のように `&amp;`エンコードする必要があります。
+
+    ```json
+    {
+      "MicrosoftAppType": "",
+      "MicrosoftAppId": "",
+      "MicrosoftAppPassword": "",
+      "MicrosoftAppTenantId": "",
+      "ConnectionName": ""
+    }
+    ```
+2. **Startup.cs の更新:**
+
+    政府機関 *のクラウドなどのパブリックでない Azure クラウド* や、データ常駐のボットで OAuth を使用するには、 **Startup.cs** ファイルに次のコードを追加する必要があります。
+    
+    ```csharp
+    string uri = "<uri-to-use>";
+    MicrosoftAppCredentials.TrustServiceUrl(uri);
+    OAuthClientConfig.OAuthEndpoint = uri;
+    ```
+    
+    次の URI の 1 つはどこにありますか \<uri-to-use\> 。
+
+    |**URI**|**説明**|
+    |---|---|
+    |`https://europe.api.botframework.com`|ヨーロッパのデータ所在地を持つパブリック クラウド ボットの場合。|
+    |`https://unitedstates.api.botframework.com`|米国内のデータ所在地を持つパブリック クラウド ボットの場合。|
+    |`https://apiGCCH.botframework.azure.us`|データ常駐のない米国政府機関向けクラウド ボットの場合。|
+    |`https://api.botframework.com`|データ常駐のないパブリック クラウド ボットの場合。 これは既定の URI であり、 **Startup.cs** への変更は必要ありません。|
+
+3. Azure からのアプリ登録のリダイレクト URL は、次のように更新する `https://tokengcch.botframework.azure.us/.auth/web/redirect`必要があります。
+
+</details>
 
 ## <a name="advantages-of-bots"></a>ボットの利点
 

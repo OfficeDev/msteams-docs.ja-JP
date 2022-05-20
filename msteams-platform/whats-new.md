@@ -4,12 +4,12 @@ description: Microsoft Teams の最新情報やすべての開発者向け最新
 ms.topic: reference
 ms.localizationpriority: high
 keywords: Teams の最新情報と最新の更新プログラムまたは開発者プレビューと機能
-ms.openlocfilehash: aabbe185edd57491dc9928d66700d1f35f8b1557
-ms.sourcegitcommit: 6d87e131eeae6846cadecf6ba775cecd010b4ffc
+ms.openlocfilehash: a65a63ef7fafe8ab63e5c865349ff2da6c8869fa
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65132710"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602286"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -22,6 +22,7 @@ ms.locfileid: "65132710"
 
 | 日付 | Update | ここで検索 |
 | --- | --- | --- |
+|05/19/2022|GCCと GCCH 用のボットとメッセージ拡張機能| • ボットの作成> [概要](bots/what-are-bots.md) </br> • メッセージ拡張機能の作成> [概要](messaging-extensions/what-are-messaging-extensions.md) |
 |2022/04/28| アプリ検証エラーの一般的な理由 | [アプリの配布] > [Teams ストアへの公開] > [[アプリ検証エラーの一般的な理由](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)]|
 |04/20/2022 |  CI/CD パイプラインを設定する | [ツールと SDK] > [Visual Studio Code 向け Teams ツールキット] > [[CI/CD パイプラインの設定]](toolkit/use-CICD-template.md)|
 |04/19/2022 | Microsoft Teams でアプリをアップロードする | アプリを配布する > [アプリをアップロードする](concepts/deploy-and-publish/apps-upload.md)|
@@ -63,6 +64,7 @@ ms.locfileid: "65132710"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ----------------|
+|05/19/2022|GCCと GCCH 用のボットとメッセージ拡張機能| • ボットの作成> [概要](bots/what-are-bots.md) </br> • メッセージ拡張機能の作成> [概要](messaging-extensions/what-are-messaging-extensions.md) |
 |04/26/2022|ボットを使用した個人用アプリのアンインストール動作 | [ボットの構築] > [ボットの会話] > [[ボットを使用した個人用アプリのアンインストール動作]](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |04/22/2022| 収益化されたアプリのテスト プレビュー | [アプリの収益化] > [[収益化アプリのテスト プレビュー]](concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md)
 |04/22/2022| アプリの収益化のためのアプリ内購入フロー | [アプリの収益化] > [[アプリ内購入]](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
 keywords: エントリ ポイントの拡張性のユース ケースデバイス機能
-ms.openlocfilehash: f91ae1de96845c913d5001660a1e9f09985ca25a
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: ffcefbdfc5696f91872fcf828f9e40e58e224a6b
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104029"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602251"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Teams の機能を使用してアプリを計画する
 
@@ -71,6 +71,14 @@ ms.locfileid: "65104029"
 
 Government Community Cloud (GCC) は、政府機関向けの商用環境のコピーです。 国防総省 (DOD) と連邦請負業者は、厳格なサイバーセキュリティとコンプライアンスの要件を満たす必要があります。 このため、DOD および連邦請負業者のニーズを満たすために GCC-High が作成されました。 GCC-High は DOD クラウドのコピーですが、独自の独立環境に存在します。 DOD クラウドは国防総省専用に構築されています。
 
+政府機関向けクラウドのエンドポイントは次のとおりです:
+
+| Tenant | GCC | GCC-High | DOD |
+|-------------|---------|---|---|
+|Teams クライアント|`https://teams.microsoft.com`|`https://gov.teams.microsoft.us/`|`https://dod.teams.microsoft.us/` |
+|Teams 管理者 |`https://admin.teams.microsoft.com/`|`https://admin.gov.teams.microsoft.us/`|`https://admin.dod.teams.microsoft.us`|
+|Microsoft Graph |`https://graph.microsoft.com`|`https://graph.microsoft.us`|`https://dod-graph.microsoft.us`|
+
 次の表に、GCC、GCC-High、DOD の Teams の機能と可用性を示します。
 
 | 機能   | GCC | GCC-High | DOD |
@@ -78,12 +86,13 @@ Government Community Cloud (GCC) は、政府機関向けの商用環境のコ�
 | 社内で開発されたアプリと同様に、Teams が所有するアプリ | ✔️ アプリは、GCC がある場合有効です | ✔️ アプリは、GCC-High がある場合有効です | ✔️ アプリは、DOD がある場合有効です |
 | Microsoft アプリ | ✔️ GCC に準拠している Microsoft アプリ | ✔️ GCC-High に準拠している Microsoft アプリ | ✔️ DOD に準拠している Microsoft アプリ |
 | サードパーティ製アプリを許可する | ✔️ サードパーティのアプリが利用可能です。既定では無効に設定されており、テナント管理者が独自の裁量で有効にします。 | ❌ | ❌ |
-| ボット | ✔️ | ❌ | ❌ |
-| カスタム タブ アプリまたは LOB タブ アプリ |  ✔️ | ✔️ | ✔️ |
+| カスタム タブ アプリまたは LOB タブ アプリ |  ✔️ | ✔️ (****コンプライアンス UI**_) | ✔️ (_ ***コンプライアンス UI***) |
+| カスタム ボットまたは LOB ボット | ✔️ | ✔️ (****コンプライアンス UI***) | ❌ |
+| カスタム メッセージ拡張機能 | ✔️ | ✔️ | ❌ |
 | アプリのサイドローディング | ✔️ | ❌ | ❌ |
-| カスタム ボットまたは LOB ボット | ✔️ | ❌ | ❌ |
-| カスタム メッセージ拡張機能 | ❌ | ❌ | ❌ |
 | カスタム コネクタ | ❌ | ❌ | ❌ |
+
+****コンプライアンス UI***: サード パーティの通信を有効にすることで、お客様はそのような通信が Microsoft ではなくサード パーティを通じて処理されることを承諾しています。 サービス内のサード パーティボットとの接続に関連するリスクを軽減することは、お客様ご自身の責任となります。 Microsoft は、お客様がサービスとの接続を許可する第三者のセキュリティに関して、明示または黙示を問わず、何ら保証するものではありません。 ボットを有効にすると、利用するボットに基づいて、このテナントを超えてシステム境界が拡張されます。 これが FedRAMP、DFARS、ITAR などのコンプライアンス要件を満たしていることを確認するのは、お客様の責任です。接続するエンドポイントと URL のリスクとコンプライアンスを評価するのは、お客様の責任です。
 
 次のリストは、機能に対する GCC、GCC-High、および DOD の可用性を特定するのに役立ちます。
 

@@ -3,14 +3,14 @@ title: Microsoft Teams アプリにボットを追加する
 description: Microsoft Teams でボットの開発を開始する方法について説明します
 ms.topic: conceptual
 keywords: Teams ボット開発
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 05/20/2018
-ms.openlocfilehash: a9a3ad2e4e60b43e6730c06b8bd8d2cee824b3fc
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: cbf8b1c14b080d890dd4c65390671632e2602f81
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111704"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602265"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>Microsoft Teams アプリにボットを追加する
 
@@ -19,7 +19,7 @@ ms.locfileid: "65111704"
 インテリジェント ボットを構築して接続し、チャットを通じて自然に Microsoft Teams ユーザーと対話します。 または、より広範な Teams アプリ エクスペリエンスの "コマンド ライン" インターフェイスとして使用する、単純なコマンド ベースのボットを提供します。 通知専用ボットを作成すると、ユーザーに関連する情報をチャネルまたはダイレクト メッセージで直接プッシュできます。 既存の Bot Framework ベースのボットを導入し、Teams 固有のサポートを追加して、エクスペリエンスを輝かせます。
 
 > [!IMPORTANT]
-> 現在、ボットは Government Community Cloud (GCC) で利用できますが、GCC-High および国防総省 (DOD) では使用できません。
+> 現在、ボットはGovernment Community Cloud (GCC) とGCC-Highで利用できますが、国防総省 (DOD) では利用できません。
 
 ![ユーザーを支援するボットの例](~/assets/images/bot_example.png)
 

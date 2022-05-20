@@ -5,16 +5,19 @@ description: Microsoft Teams プラットフォームでのメッセージング
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 54c0ce0139f6d70aca0c002edff2c60065c48b7b
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 52c9b5a890197f652c8debcae32bc6ab08d7f1c7
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297143"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602258"
 ---
 # <a name="message-extensions"></a>メッセージの拡張機能
 
 メッセージ拡張機能を使用すると、ユーザーは、Microsoft Teams クライアントのボタンとフォームを使用して Web サービスを操作することができます。 ユーザーは、外部システムのメッセージ作成領域、コマンド ボックスから、またはメッセージから直接、操作を検索したり、開始したりできます。 その操作の結果を、リッチに書式設定されたカードとして Microsoft Teams クライアントに送信できます。
+
+> [!IMPORTANT]
+> メッセージ拡張機能は、Government Community Cloud (GCC) 環境とGCC-High環境で使用できますが、国防総省 (DoD) 環境では使用できません。
 
 このドキュメントでは、メッセージ拡張機能、さまざまなシナリオで実行されるタスク、メッセージ拡張機能の動作、操作コマンドと検索コマンド、リンク展開の概要について説明します。
 

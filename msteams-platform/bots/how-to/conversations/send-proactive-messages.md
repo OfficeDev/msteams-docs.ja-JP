@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
 Keywords: メッセージの送信、ユーザー ID の取得、チャネル ID の取得、会話 ID の取得
-ms.openlocfilehash: ec41ec08af9c7e3b7280995f8abc66b3a5a7baa0
-ms.sourcegitcommit: 52af681132e496a57b18f468c5b73265a49a5f44
+ms.openlocfilehash: fd3ed48022239aaa84e00c8b3b59701970d9a0af
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64590718"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602272"
 ---
 # <a name="proactive-messages"></a>プロアクティブ メッセージ
 
@@ -21,6 +21,13 @@ ms.locfileid: "64590718"
 * ウェルカム メッセージ
 * 通知
 * 予定されたメッセージ
+
+> [!IMPORTANT]
+> 現在、ボットは Government Community Cloud (GCC) と GCC-High で利用できますが、国防総省 (DOD) では利用できません。
+>
+> プロアクティブ メッセージの場合、ボットは政府機関のクラウド環境に対して次のエンドポイントを使用する必要があります。
+>    * GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`。
+>    * GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`。
 
 ボットがプロアクティブなメッセージをユーザー、グループ チャット、またはチームに送信するには、ボットがメッセージを送信するためのアクセス権を持っている必要があります。 グループ チャットまたはチームの場合、ボットを含むアプリを最初にその場所にインストールする必要があります。
 必要に応じて、チーム内で [Microsoft Graph を使用してアプリをプロアクティブにインストール](#proactively-install-your-app-using-graph)したり、[アプリ ポリシー](/microsoftteams/teams-custom-app-policies-and-settings)を使用して、テナント内のチームやユーザーにアプリをプッシュしたりすることができます。 ユーザーの場合、自分でアプリをインストールしているか、アプリがインストールされているチームのメンバーである必要があります。

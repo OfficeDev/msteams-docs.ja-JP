@@ -5,19 +5,21 @@ description: Microsoft Teams のボットの概要。
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: d37b35e46156777022a5b19a7ccf6de1ab2e0fb9
-ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
+ms.openlocfilehash: 81fa44730a26f3d7bcafdc9f37ec15b4eb7b1951
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65191251"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602293"
 ---
 # <a name="bots-in-microsoft-teams"></a>Microsoft Teams のボット
 
 ボットは、チャットボットまたは会話ボットとも呼ばれます。 これは、カスタマー サービスやサポート スタッフなどのユーザーが単純で反復的なタスクを実行するアプリです。 ボットの日常的な使用には、天気に関する情報を提供するボット、ディナーの予約を行うボット、旅行情報を提供するボットなどがあります。 ボットとのやり取りは、質問や回答を素早く行ったり、複雑な会話になったりする場合があります。
 
 > [!IMPORTANT]
-> 現在、ボットは Government Community Cloud (GCC) で利用でき、GCC-High および国防総省 (DOD) では使用できません。
+> 現在、ボットは Government Community Cloud (GCC) と GCC-High で利用できますが、国防総省 (DOD) では利用できません。
+> 
+> Microsoft Teams 内のボット アプリケーションは、 [Azure Bot Service](/azure/bot-service/channel-connect-teams) を介して GCC-High で利用できます。
 
 会話ボットを使用すると、ユーザーはテキスト、対話型カード、タスク モジュールを使用して Web サービスと対話できます。
 

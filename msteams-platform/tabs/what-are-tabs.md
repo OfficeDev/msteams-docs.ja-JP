@@ -5,12 +5,12 @@ description: Teams プラットフォームでのカスタム タブの概要
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 1ab927f11588d58a68249c1213e6eae17346ac8d
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: d6651baa6b57254f8aea5c62425c2c948abe1382
+ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103293"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65602279"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Microsoft Teams 用のタブの構築
 
@@ -18,6 +18,8 @@ ms.locfileid: "65103293"
 
 > [!IMPORTANT]
 > 現在、カスタム タブは Government Community Cloud (GCC)、GCC-High、国防総省 (DOD) で使用できます。
+>
+> 現在、Teams クライアント SDK は Government Cloud CDN では利用できないので、 [npm パッケージ](https://www.npmjs.com/package/@microsoft/teams-js) を使用して Teams クライアント SDK を使用し、アプリにバンドルすることをお勧めします。
 
 次の画像は、個人用タブを示しています:
 
