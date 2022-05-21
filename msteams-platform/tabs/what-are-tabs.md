@@ -5,12 +5,12 @@ description: Teams プラットフォームでのカスタム タブの概要
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: d6651baa6b57254f8aea5c62425c2c948abe1382
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: 7f39d01c9ff6a264d16c89129ed1b93525da5b6f
+ms.sourcegitcommit: f7d0e330c96e00b2031efe6f91a0c67ab0976455
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602279"
+ms.locfileid: "65611449"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Microsoft Teams 用のタブの構築
 
@@ -75,6 +75,9 @@ Teams には、個人用タブとチャネル タブ、またはグループ タ
 カスタム タブは、アプリ パッケージのアプリ マニフェストで宣言されます。 アプリのタブとして含める Web ページごとに、URL と範囲を定義します。 また、[Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) をページに追加して、ページの読み込みが終了したら `microsoftTeams.initialize()` を呼び出す必要があります。 Teams はページを表示し、Teams 固有の情報 (Teams クライアントがダーク テーマを実行しているなど) へのアクセスを提供します。
 
 チャネル/グループ または 個人 スコープ内でタブを表示するかどうかを選択した場合は、タブに <iframe 付き\> HTML [コンテンツ ページ](~/tabs/how-to/create-tab-pages/content-page.md)を表示する必要があります。個人用タブの場合、コンテンツ URL は `staticTabs` 配列内の `contentUrl` プロパティによって Teams アプリのマニフェストに直接設定されます。タブのコンテンツはすべてのユーザーに対して同じです。
+
+> [!Note]
+> Teams アプリはサブ iframe を認識しません。 そのため、タブ アプリ内に iframe がある場合は読み込まれません。
 
 チャネル タブまたはグループ タブの場合は、追加の構成ページを作成することもできます。 このページでは、コンテンツ ページの URL を構成できます。通常、URL クエリ文字列パラメーターを使用して、そのコンテキストに適したコンテンツを読み込みます。 これは、チャネル/グループ タブを複数のチームまたはグループ チャットに追加できるためです。 以降にインストールが行われるたびに、ユーザーはタブを構成して、必要に応じてエクスペリエンスを調整することが出来ます。 ユーザーがタブを追加またはタブを構成すると、Teams ユーザー インターフェイス (UI) に表示されているタブに URL が関連付けられます。 タブの構成は、その URL に追加のパラメーターを追加するだけです。 たとえば、Azure Boards タブを追加すると、構成ページで、タブにロードするボードを選択することができます。 構成ページの URL は、アプリ マニフェストの `configurableTabs` 配列の `configurationUrl` プロパティで指定します。
 

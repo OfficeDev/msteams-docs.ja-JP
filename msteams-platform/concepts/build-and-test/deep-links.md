@@ -1,15 +1,14 @@
 ---
 title: ディープ リンクの作成
-description: ディープ リンクとアプリでの使用方法について説明する
+description: Teams ディープ リンクとアプリでの使用方法について説明します。
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: Teams ディープ リンク ディープリンク
-ms.openlocfilehash: cc8e71e77964ff2a07e75983c94f72091033b789
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 750fc8f6153cf64fa585e3d74d73afba483aafb0
+ms.sourcegitcommit: f7d0e330c96e00b2031efe6f91a0c67ab0976455
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103924"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65611457"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成
 
@@ -79,14 +78,14 @@ Teams のエンティティへのディープ リンクを作成できます。 
 * Example values and some URLs should be in backticks and not emphasized.
 * Codeblock are missing language.
 * Check for markdownlint errors.
-* Table with just a row is not really needed. Provide the content without tabulating it.
+* Table with just a row isn't really needed. Provide the content without tabulating it.
 --->
 
 クエリ パラメーターは次のとおりです。
 
 | パラメーター名 | 説明 | 例 |
 |:------------|:--------------|:---------------------|
-| `appId`&emsp; | マニフェストからの ID。 |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
+| `appId`&emsp; | Teams 管理センターからの ID。 |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
 | `entityId`&emsp; | [タブの構成時](~/tabs/how-to/create-tab-pages/configuration-page.md)に指定した、タブ内のアイテムの ID。|Tasklist123|
 | `entityWebUrl` または `subEntityWebUrl`&emsp; | クライアントがタブのレンダリングをサポートしていない場合に使用するフォールバック URL を含むオプションのフィールド。 | `https://tasklist.example.com/123` または `https://tasklist.example.com/list123/task456` |
 | `entityLabel` または `subEntityLabel`&emsp; | ディープ リンクを表示するときに使用する、タブ内のアイテムのラベル。 | タスク リスト 123 または "タスク 456" |
@@ -172,6 +171,26 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 ボットでこのディープ リンクを使用するには、これをカードのボタンの URL ターゲットとして指定するか、`openUrl` アクション タイプでアクションをタップします。
 
+## <a name="generate-deep-links-to-channel-conversation"></a>チャネル会話へのディープ リンクを生成する
+
+このディープ リンク形式を使用して、以下のチャネル スレッド内の特定の会話に移動します。
+
+`https://teams.microsoft.com/l/message/<channelId>/<parentMessageId>?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=<parentMessageId>&teamName=<teamName>&channelName=<channelName>&createdTime=<createdTime>`
+
+例: `https://teams.microsoft.com/l/message/<channelId>/1648741500652?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=1648741500652&teamName=<teamName>&channelName=<channelName>&createdTime=1648741500652`
+
+クエリ パラメーターは次のとおりです。
+
+* `channelId`: 会話のチャネル ID。 たとえば、`19:3997a8734ee5432bb9cdedb7c432ae7d@thread.tacv2` となります。
+* `tenantId`: `0d9b645f-597b-41f0-a2a3-ef103fbd91bb` などのテナント ID。
+* `groupId`: ファイルのグループ ID。例: `3606f714-ec2e-41b3-9ad1-6afb331bd35d`。
+* `parentMessageId`: 会話の親メッセージ ID。
+* `teamName`: チームの名前。
+* `channelName`: チームのチャネルの名前。
+
+> [!NOTE]
+> チャネルからの URL に `channelId` と `groupId` が表示されます。
+
 ## <a name="generate-deep-links-to-file-in-channel"></a>チャネル内のファイルへのディープ リンクを生成する
 
 次のディープ リンク形式は、ボット、コネクタ、またはメッセージ拡張カードで使用されます: 
@@ -196,7 +215,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/f46ad259-0fe5-
 
 `https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
-次のフォーマット例は、ファイルへのディープリンクを示しています。
+次のフォーマット例は、ファイルへのディープ リンクを示しています。
 
 `https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=0d9b645f-597b-41f0-a2a3-ef103fbd91bb&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
 
