@@ -87,4 +87,4 @@ Visual Studio Code のサイド バーで Teams Toolkit :::image type="icon" sou
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="インストールされているアプリを示すスクリーンショット。" border="false":::
 
-    おめでとうございます! これで、ボット アプリは Azure からリモートで実行されています。
+    おめでとうございます! これで、タブ アプリが Azure からリモートで実行されるようになりました。

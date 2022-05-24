@@ -6,87 +6,95 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 7778a5747ae6b5118d5ebeac857e2a9944cff62b
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: a0ebea1fb05e3583c90c41596da98a25d89f9b4c
+ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654542"
+ms.locfileid: "65656762"
 ---
-# <a name="add-capabilities-to-your-teams-apps"></a>Teams アプリに機能を追加する
+# <a name="add-capabilities-to-teams-apps"></a>Teams アプリに機能を追加する
 
-アプリの開発中に、Teamsアプリ機能を備えた新しいTeams アプリを作成できます。 次の表に、Teams アプリの機能を示します。
+Teams Toolkitに機能を追加すると、既存のTeams アプリに追加機能を追加できます。次の表に、Teams アプリの機能を示します。
 
 |**機能**|**説明**|
 |--------|-------------|
-| タブ |  タブは、アプリ マニフェストで宣言されたドメインを指す単純な HTML タグです。 個々のユーザーのチーム、グループ チャット、または個人用アプリ内のチャネルの一部としてタブを追加できます|
-| ボット |  ボットは、テキスト、対話型カード、タスク モジュールを使用して Web サービスと対話するのに役立ちます|
-| メッセージの拡張機能 | メッセージ拡張機能は、Microsoft Teams クライアントのボタンやフォームを使用して Web サービスと対話するのに役立ちます|
+| タブ |  タブは、アプリ マニフェストで宣言されたドメインを参照する単純な HTML タグです。 個々のユーザーのチーム、グループ チャット、または個人用アプリ内のチャネルの一部としてタブを追加できます。|
+| ボット |  ボットは、テキスト、対話型カード、タスク モジュールを使用して Web サービスと対話するのに役立ちます。|
+| メッセージの拡張機能 | メッセージ拡張機能は、Microsoft Teams クライアントのボタンやフォームを使用して Web サービスと対話するのに役立ちます。|
 
-## <a name="prerequisite"></a>前提条件
+## <a name="advantages"></a>メリット
 
-* [Teams Toolkit の最新バージョン](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)をインストールします。
+次の一覧では、TeamsFx でさらに機能を追加する利点を提供します。
 
-> [!TIP]
-> TEAMSアプリ プロジェクトが VS コードで開かれていることを確認します。
+* 利便性を提供します
+* Teams Toolkitを使用してソース コードを自動的に追加することで、アプリにさらに関数を追加します。
 
 ## <a name="limitations"></a>制限事項
 
-TeamsFx に対する制限事項と、さらに機能を追加する場合の制限事項は次のとおりです。
+TeamsFx でさらに機能を追加するための制限事項を次に示します。
 
 * 最大 16 個のインスタンスにタブを追加できます
 * 1 つのインスタンスごとにボットとメッセージ拡張機能を追加できます
 
 ## <a name="add-capabilities"></a>機能の追加
 
-> [!Note]
-> Teams アプリに機能を正常に追加した後は、環境ごとにプロビジョニングを実行する必要があります。
-* Visual Studio Code のTeams Toolkitを使用して機能を追加できます
+**次の方法で機能を追加できます。**
 
-    1. **Microsoft Visual Studio コードを** 開く
-    1. 左側 **の** パネルからTeams Toolkitを選択する
-    1. [**機能の追加]** を選択する
+* Visual Studio Code でTeams Toolkitを使用して機能を追加するには
+* コマンド パレットを使用して機能を追加するには
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add capabilities.png" alt-text="capabilities":::
+  > [!Note]
+  > Teams アプリで機能を正常に追加した後は、環境ごとにプロビジョニングする必要があります。
 
-*   コマンド パレットを開き、「Teams: 機能の追加:」と入力することもできます。
+* **Visual Studio Code でTeams Toolkitを使用して機能を追加するには:**
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/tree view capabilities.png" alt-text="代替機能":::
+   1. **Visual Studio Code** を開きます。
+   1. 左側 **の** パネルからTeams Toolkitを選択します。
+   1. **[開発**] で [**機能の追加]** を選択します。
 
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="更新された 1 つ" border="true":::
 
-    1. ポップアップから、プロジェクトに含める機能を選択します。
+* **コマンド パレットを使用して機能を追加するには:**
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select capabilities.png" alt-text="select":::
+   1. **コマンド パレットを** 開きます。
+   1. **「Teams:機能の追加」と入力します**。
+   1. **[Enter]** キーを押します。
 
-    2. [**OK**] を選択します。
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/Teams-add-features.png" alt-text="チーム機能" border="true":::
 
-選択した機能がプロジェクトに正常に追加されます。 Teams Toolkitは、新しく追加された機能のソース コードを生成します
+   1. ポップアップから、プロジェクトに追加する機能を選択します。
 
-## <a name="add-capabilities-using-teamsfx-cli-in-command-window"></a>コマンド ウィンドウで TeamsFx CLI を使用して機能を追加する
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="通知" border="true":::
 
-1. ディレクトリを **プロジェクト ディレクトリ** に変更する
-1. 次のコマンドを実行して、プロジェクトにさまざまな機能を追加します。
+## <a name="add-capabilities-using-teamsfx-cli"></a>TeamsFx CLI を使用して機能を追加する
 
-   |機能とシナリオ| コマンド|
-   |-----------------------|----------|
-   |タブを追加するには|`teamsfx capability add tab`|
-   |ボットを追加するには|`teamsfx capability add bot`|
-   |メッセージ拡張機能を追加するには|`teamsfx capability add messaging-extension`|
+* ディレクトリを **プロジェクト ディレクトリ** に変更する
+* 次の表に、機能と必要なコマンドの一覧を示します。
 
-## <a name="supported-capabilities"></a>サポートされている機能
+  |機能とシナリオ| コマンド|
+  |-----------------------|----------|
+  |通知ボットを追加するには |`teamsfx add notification `|
+  |コマンド ボットを追加するには |`teamsfx add command-and-response `|
+  |sso 対応タブを追加するには |`teamsfx add sso-tab`|
+  |タブを追加するには |`teamsfx add tab`|
+  |ボットを追加するには |`teamsfx add bot`|
+  |メッセージ拡張機能を追加するには |`teamsfx add message extension`|
 
-Teams アプリに既に用意されている機能とは別に、Teams アプリにさまざまな機能を追加することもできます。 次の表に、さまざまなTeamsアプリ機能を示します。
+## <a name="available-capabilities-to-add-for-different-teams-project"></a>さまざまなTeams プロジェクトに追加できる機能
+
+アプリで作成したプロジェクトに基づいて、さまざまな機能を追加Teams選択できます。
+次の表に、プロジェクトに追加できる機能の一覧を示します。
 
 |既存の機能|サポートされているその他の機能|
 |--------------------|--------------------|
-|SPFxタブ|なし|
-|Azure のタブ|ボットとメッセージの拡張機能|
-|Bot|タブ|
-|メッセージ拡張機能:|タブとボット|
-|タブとボット|タブとメッセージ拡張機能|
-|タブとメッセージ拡張機能|タブとボット|
-|タブ、ボット、メッセージ拡張機能|タブ|
-|タブ |ボットとメッセージの拡張機能|
+|[SPFx] タブ |None|
+|[SSO 対応] タブ |SSO 対応タブ, 通知ボット, コマンド ボット, ボット, メッセージ拡張機能|
+|通知ボット |SSO 対応タブ、タブ|
+|コマンド ボット |SSO 対応タブ、タブ|
+|Tab |Tab, notification bot, command bot, bot, message extension|
+|Bot |メッセージ拡張機能、SSO 対応タブ、タブ|
+|メッセージ拡張機能: |ボット、SSO 対応タブ、タブ |
 
 ## <a name="add-bot-tab-and-message-extension"></a>ボット、タブ、メッセージ拡張機能を追加する
 
@@ -115,7 +123,7 @@ Teams アプリに既に用意されている機能とは別に、Teams アプ�
 
 * [ステップ バイ ステップ](../sbs-gs-commandbot.yml) ガイドに従って、Microsoft Teamsでコマンド ボットをビルドする
 
-* [ステップ バイ ステップ ガイド](../sbs-gs-notificationbot.yml)に従って、Microsoft Teamsで通知ボットをビルドします。
+* [ステップ バイ ステップ](../sbs-gs-notificationbot.yml) ガイドに従って、Microsoft Teamsで通知ボットをビルドします。
 
 ## <a name="see-also"></a>関連項目
 

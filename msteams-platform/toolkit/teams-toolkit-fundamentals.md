@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/17/2022
-ms.openlocfilehash: 36436b5cc2cf7edec784ab653b12d8cf44172b8b
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: 12ac74f64c4be69ff9b73ca2de1ee7c91917b259
+ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654612"
+ms.locfileid: "65656860"
 ---
 # <a name="teams-toolkit-overview"></a>Teams ツールキットの概要
 
@@ -72,7 +72,7 @@ Toolkit のインストール後、次の画像に示すように Teams Toolkit 
 
 ## <a name="accounts"></a>アカウント
 
-Teams アプリを開発するには、有効なサブスクリプションを持つ少なくとも 1 つのMicrosoft 365 アカウントが必要です。 Azure でバックエンド リソースをホストする場合は、Azure アカウントも必要です。 Teams Toolkitでは、Azure リソースのサインイン、プロビジョニング、デプロイを行うための統合エクスペリエンスがサポートされています。 開始する前に、[無料の Azure アカウントを作成](https://azure.microsoft.com/free/) できます。
+Teams アプリを開発するには、有効なサブスクリプションを持つ少なくとも 1 つのMicrosoft 365 アカウントが必要です。 Azure でバックエンド リソースをホストする場合は、Azure アカウントも必要です。 Teams Toolkitでは、Azure リソースのサインイン、プロビジョニング、デプロイに関する統合エクスペリエンスがサポートされます。 開始する前に、[無料の Azure アカウントを作成](https://azure.microsoft.com/free/) できます。
 
 ## <a name="environment"></a>環境
 
@@ -127,35 +127,35 @@ Azure リソース マネージャーと統合され、アプリケーション�
 ## <a name="help-and-feedback"></a>ヘルプとフィードバック
 
 このセクションでは、必要なドキュメントとリソースを見つけることができます。 Teams Toolkitで **[GitHubに関する問題を報告する]** を選択すると、製品の専門家から **[クイック サポート]** を受けることができます。 新しい問題を作成する前に問題を参照するか、 [StackOverflow タグ `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) にアクセスしてフィードバックを送信します。
+<!--  
+Let's explore Teams Toolkit features.
 
-Teams Toolkit 機能を見てみましょう。
-
-| Teams Toolkit 機能 | 含まれる内容... | 可能な操作 |
+| Teams Toolkit Features | Includes | What you can do |
 | --- | --- | --- |
 | **Accounts** | &nbsp; | &nbsp; |
-| &nbsp; | Microsoft 365 アカウント | アプリをビルドするために有効な E5 サブスクリプションで Microsoft 365 アカウントを使用します。 |
-| &nbsp; | Azure アカウント | Azure にアプリをデプロイするには、Azure アカウントを使用します。 |
-| **環境** | &nbsp; | &nbsp; |
-| &nbsp; | ローカル | ローカル コンピューター環境の構成を使用して、既定のローカル環境にアプリをデプロイします。 |
-| &nbsp; | dev | リモートまたはクラウド環境の構成を使用して、既定の開発環境にアプリをデプロイします。 必要に応じて、より多くの環境を作成できます。 |
-| **開発** | &nbsp; | &nbsp; |
-| &nbsp; | 新しい Teams アプリを作成する | ツールキット ウィザードを使用して、アプリ開発用のプロジェクト スキャフォールディングを準備します。 |
-| &nbsp; | [サンプルを見る] | Teams Toolkitの 12 個のサンプル アプリのいずれかを選択します。 ツールキットは GitHub からアプリ コードをダウンロードし、サンプル アプリをビルドできます。 |
-| &nbsp; | 機能の追加 | - 開発プロセス中に、アプリに必要なその他のTeams機能Teams追加します。 </br> - アプリに適したオプションのクラウド リソースを追加します。 |
-| &nbsp; | マニフェスト ファイルを編集する | Teams アプリと Teams クライアントの統合を編集します。 |
-| **展開** | &nbsp; | &nbsp; |
-| &nbsp; | クラウドでのプロビジョニング | アプリケーションに Azure リソースを割り当てます。 Teams Toolkit は Azure Resource Manager と統合されています。 |
-| &nbsp; | Zip Teams メタデータ パッケージ | Teamsまたは開発者ポータルにアップロードできるアプリ パッケージを作成します。 アプリ マニフェストとアプリ アイコンが含まれています。  |
-| &nbsp; | クラウドにデプロイする | ソース コードを Azure にデプロイします。 |
-| &nbsp; | Teams ストアに公開する | 開発したアプリを公開し、個人、チーム、チャネル、組織などのスコープに配布します。 |
-| &nbsp; | Teams の開発者ポータル | 開発者ポータルを使用して、アプリを構成、管理、デプロイします。 |
-| **ヘルプとフィードバック** | &nbsp; | &nbsp; |
-| &nbsp; | クイック スタート | Visual Studio Code 内のTeams Toolkitクイック スタートのヘルプを表示します。  |
-| &nbsp; | チュートリアル | 選択すると、さまざまなチュートリアルにアクセスできます。 |
-| &nbsp; | ドキュメント | Microsoft Teams 開発者向けドキュメントにアクセスする場合に選択します。 |
-| &nbsp; | GitHub に関する問題を報告する | 選択すると、GitHub ページにアクセスし、問題が発生します。 |
+| &nbsp; | Microsoft 365 account | Use your Microsoft 365 account with a valid E5 subscription for building your app. |
+| &nbsp; | Azure account | Use your Azure account for deploying app on Azure. |
+| **Environment** | &nbsp; | &nbsp; |
+| &nbsp; | local | Deploy your app in the default local environment with local machine environment configurations. |
+| &nbsp; | dev | Deploy your app in the default dev environment with remote or cloud environment configurations. You can create more environments, as you need. |
+| **Development** | &nbsp; | &nbsp; |
+| &nbsp; | Create a new Teams app | Use the toolkit wizard to prepare project scaffolding for app development. |
+| &nbsp; | View samples | Select any of Teams Toolkit's 12 sample apps. The toolkit downloads the app code from GitHub, and you can build the sample app. |
+| &nbsp; | Add Features | - Add other required Teams capabilities to Teams app during development process. </br> - Add optional cloud resources suitable for your app. |
+| &nbsp; | Edit manifest file | Edit the Teams app integration with Teams client. |
+| **Deployment** | &nbsp; | &nbsp; |
+| &nbsp; | Provision in the cloud | Allocate Azure resources for your application. Teams Toolkit is integrated with Azure Resource Manager. |
+| &nbsp; | Zip Teams metadata package | Create the app package that can be uploaded to Teams or Developer Portal. It contains the app manifest and app icons.  |
+| &nbsp; | Deploy to the cloud | Deploy the source code to Azure. |
+| &nbsp; | Publish to Teams | Publish your developed app and distribute it to scopes, such as personal, team, channel, or organization. |
+| &nbsp; | Developer Portal for Teams | Use Developer Portal to configure and manage your Teams app. |
+| **Help and Feedback** | &nbsp; | &nbsp; |
+| &nbsp; | Quick start | View the Teams Toolkit Quick start help within Visual Studio Code.  |
+| &nbsp; | Tutorial | Select to access different tutorials. |
+| &nbsp; | Documentation | Select to access the Microsoft Teams Developer Documentation. |
+| &nbsp; | Report issues on GitHub | Select to access GitHub page and raise any issues. |
 
-
+-->
 > [!TIP]
 > 新しい問題を作成する前に既存の問題を参照するか、 [StackOverflow タグ `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) にアクセスしてフィードバックを送信します。
 

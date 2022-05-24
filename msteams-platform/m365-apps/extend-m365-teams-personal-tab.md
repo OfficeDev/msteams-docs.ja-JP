@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: abdd21eae707b2edf180a77f3fe25aaed3b165e5
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: b164231a95c511402431b5d4cdb3c7d0fc6cfdff
+ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654555"
+ms.locfileid: "65656174"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Teams 個人用タブを Microsoft 365 全体に拡張する
 
@@ -91,7 +91,7 @@ Teams ツールキットを使用して個人用アプリを作成した場合�
 
 ## <a name="update-sdk-references"></a>SDK 参照を更新する
 
-OutlookおよびOfficeで実行するには、アプリでnpm パッケージ `@microsoft/teams-js@2.0.0` (またはそれ以降) を参照する必要があります。 OutlookとOfficeではダウンレベル バージョンのコードがサポートされていますが、非推奨の警告がログに記録され、OutlookおよびOfficeのダウンレベル バージョンの TeamsJS のサポートは最終的に停止します。
+OutlookおよびOfficeで実行するには、アプリでnpm パッケージ `@microsoft/teams-js@2.0.0` (またはそれ以降) を参照する必要があります。 ダウンレベル バージョンのコードはOutlookとOfficeでサポートされていますが、非推奨の警告はログに記録され、OutlookおよびOfficeのダウンレベル バージョンの TeamsJS のサポートは最終的に停止します。
 
 Teams Toolkitを使用すると、1.x TeamsJS バージョンから TeamsJS バージョン 2.0.0 にアップグレードするために必要なコード変更を特定して自動化できます。 または、同じ手順を手動で実行することもできます。詳細については、[Microsoft Teams JavaScript クライアント SDK](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) を参照してください。
 
@@ -107,8 +107,7 @@ Teams Toolkitを使用すると、1.x TeamsJS バージョンから TeamsJS バ�
 > * `TODO`[コールバック関数を Promise に変換するための](../tabs/how-to/using-teams-client-sdk.md#callbacks-converted-to-promises)コメントリマインダー
 
 > [!IMPORTANT]
-> *.html* ファイル内のコードはアップグレード ツールではサポートされていないため、手動で変更する必要があります。
-
+> *.html* ファイル内のコードはアップグレード ツールではサポートされておらず、手動による変更が必要です。
 
 ## <a name="configure-content-security-policy-headers"></a>コンテンツ セキュリティ ポリシー ヘッダーを構成する
 
@@ -135,15 +134,15 @@ Microsoft Teamsと同様に、タブ アプリケーションは、Officeおよ�
 
 1. **[承認されたクライアント アプリケーション]** セクションで、次のすべての `Client Id` 値が追加されていることを確認します。
 
-|Microsoft 365 クライアント アプリケーション | クライアント ID |
-|--|--|
-|Teams デスクトップ、モバイル |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
-|Teams Web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
-|Office.com  |4765445b-32c6-49b0-83e6-1d93765276ca|
-|Office デスクトップ  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
-|Outlook デスクトップ | d3590ed6-52b3-4102-aeff-aad2292ab01c |
-|Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
-|Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
+    |Microsoft 365 クライアント アプリケーション | クライアント ID |
+    |--|--|
+    |Teams デスクトップ、モバイル |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
+    |Teams Web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
+    |Office.com  |4765445b-32c6-49b0-83e6-1d93765276ca|
+    |Office デスクトップ  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
+    |Outlook デスクトップ | d3590ed6-52b3-4102-aeff-aad2292ab01c |
+    |Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
+    |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
 ## <a name="sideload-your-app-in-teams"></a>Teams でアプリをサイドロード
 
@@ -174,14 +173,14 @@ Teamsにサイドロードされると、個人用タブはOutlookとOfficeで�
 Office、Outlook、Web、Windows デスクトップ クライアントで実行されているアプリをプレビューする方法を次に示します。
 
 > [!NOTE]
-> Teamsからアプリをアンインストールすると、OutlookおよびOfficeの **その他のアプリ** カタログからもアプリが削除されます。 上記のTeams Toolkitサンプル アプリを使用している場合
+> Teamsからアプリをアンインストールすると、OutlookおよびOfficeの **その他のアプリ** カタログからもアプリが削除されます。 上記のTeams Toolkitサンプル アプリを使用している場合。
 
 ### <a name="outlook-on-windows"></a>Windows での Outlook
 
 Windows デスクトップの Outlook で実行されているアプリを表示するには:
 
 1. Outlook を起動し、開発テナント アカウントを使用してサインインします。
-1. サイド バーで、[  **その他のアプリ**] を選択します。 サイドロードされたアプリ タイトルは、インストールされているアプリの中に表示されます。
+1. サイド バーで、[  **その他のアプリ**] を選択します。 サイドロードされたアプリのタイトルが、インストールされているアプリの間に表示されます。
 1. アプリ アイコンを選択して、Outlookでアプリを起動します。
 
     :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Outlook デスクトップ クライアントのサイドバーにある楕円（[その他のアプリ]）オプションをクリックして、インストールされている個人用タブを表示する":::
@@ -191,7 +190,7 @@ Windows デスクトップの Outlook で実行されているアプリを表示
 Outlook on the web でアプリを表示するには:
 
 1. [Outlook on the web](https://outlook.office.com) に移動し、開発テナント アカウントを使用してサインインします。
-1. サイド バーの省略記号 (**...**) を選択します。 サイドロードされたアプリ タイトルは、インストールされているアプリの中に表示されます。
+1. サイド バーの省略記号 (**...**) を選択します。 サイドロードされたアプリのタイトルが、インストールされているアプリの間に表示されます。
 1. アプリ アイコンを選択して、Outlook on the webで実行されているアプリを起動してプレビューします。
 
     :::image type="content" source="images/outlook-web-more-apps.png" alt-text="outlook.com のサイド バーにある楕円 ([その他のアプリ]) オプションをクリックして、インストールされている個人用タブを表示する":::
@@ -201,7 +200,7 @@ Outlook on the web でアプリを表示するには:
 Windows デスクトップの Office で実行されているアプリを表示するには:
 
 1. Office を起動し、開発テナント アカウントを使用してサインインします。
-1. サイド バーの省略記号 (**...**) を選択します。 サイドロードされたアプリ タイトルは、インストールされているアプリの中に表示されます。
+1. サイド バーの省略記号 (**...**) を選択します。 サイドロードされたアプリのタイトルが、インストールされているアプリの間に表示されます。
 1. アプリ アイコンを選択して、Officeでアプリを起動します。
 
     :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Office デスクトップ クライアントのサイドバーにある楕円（[その他のアプリ]）オプションをクリックして、インストールされている個人用タブを表示する":::
@@ -210,15 +209,15 @@ Windows デスクトップの Office で実行されているアプリを表示�
 
 Office on the web で実行されているアプリをプレビューするには:
 
-1. テスト テナント資格情報を使用して office.com にログインします。
-1. サイド バーの **[アプリ** ] アイコンを選択します。 サイドロードされたアプリ タイトルは、インストールされているアプリの中に表示されます。
+1. テスト テナント資格情報 **を使用して office.com** にログインします。
+1. サイド バーの **[アプリ** ] アイコンを選択します。 サイドロードされたアプリのタイトルが、インストールされているアプリの間に表示されます。
 1. アプリ アイコンを選択して、Office on the webでアプリを起動します。
 
     :::image type="content" source="images/office-web-more-apps.png" alt-text="インストールされている個人用タブを表示するには、office.com のサイド バーにある [その他のアプリ] オプションをクリックします":::
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 
-現在、Outlook およびOffice クライアントでは、Teamsアプリケーションの種類と機能のサブセットがサポートされています。 このサポートは、時間の経過と共に拡張されます。 
+現在、Outlook およびOffice クライアントでは、Teamsアプリケーションの種類と機能のサブセットがサポートされています。 このサポートは、時間の経過と共に拡張されます。
 
 さまざまな TeamsJS 機能のホスト サポートを確認するには、[Microsoft 365](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook)サポートを参照してください。
 
@@ -240,7 +239,7 @@ OfficeまたはOutlookへのローカル デバッグの初回実行時に、Mic
 
 フィードバックを提供し、Microsoft Teams [Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx/issues) でTeams Toolkitデバッグ エクスペリエンスに関する問題を報告します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-step"></a>次のステップ
 
 Teams、Outlook、Officeでアプリを公開します。
 

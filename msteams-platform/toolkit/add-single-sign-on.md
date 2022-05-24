@@ -6,14 +6,14 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: db676795e394856f6e787086cae654efad79172a
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: 73177f96172e4fd60b7225c2463efb6a057f36c4
+ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65655245"
+ms.locfileid: "65656846"
 ---
-# <a name="add-single-sign-on-experience"></a>シングル サインオン エクスペリエンスを追加する
+# <a name="add-single-sign-on-to-teams-app"></a>Teams アプリにシングル サインオンを追加する
 
 Microsoft Teamsは、サインインTeamsユーザー トークンを取得して Microsoft Graphやその他の API にアクセスするためのシングル サインオン機能をアプリケーションに提供します。 Teams Toolkitは、Azure AD のフローの一部と、いくつかの単純な API の背後にある統合を抽象化することで、対話を容易にします。 これにより、シングル サインオン (SSO) 機能をTeams アプリケーションに簡単に追加できます。
 
@@ -282,22 +282,22 @@ export async function showUserImage(context, ssoToken, param) {
 
    * で使用する新しいコマンド登録に次の`teamsSsoBot`行を`addCommand`追加します。
 
-   ```bash
+     ```bash
 
-   this.dialog.addCommand("ShowUserProfile", "show", showUserInfo);
+     this.dialog.addCommand("ShowUserProfile", "show", showUserInfo);
 
-   ```
+     ```
 
    * 上記の行の後に次の行を追加して、新しいコマンド `photo` を登録し、上記で追加したメソッド `showUserImage` にフックアップします。
 
-   ```bash
+     ```bash
 
-   // As shown here, you can add your own parameter into the `showUserImage` method
-   // You can also use regular expression for the command here
-   const scope = ["User.Read"];
-   this.dialog.addCommand("ShowUserPhoto", new RegExp("photo\s*.*"), showUserImage, scope);
+     // As shown here, you can add your own parameter into the `showUserImage` method
+     // You can also use regular expression for the command here
+     const scope = ["User.Read"];
+     this.dialog.addCommand("ShowUserPhoto", new RegExp("photo\s*.*"), showUserImage, scope);
 
-   ```
+     ```
 
 3. Teams アプリ マニフェストにコマンドを登録します。 ボットの下に`command`次の行を開`templates/appPackage/manifest.template.json`き、`commandLists`追加します。
 
@@ -336,12 +336,12 @@ Microsoft Azure Active Directory (Azure AD) でのシングル サインオン (
 
 ### <a name="simplified-sso-with-teamsfx"></a>TeamsFx を使用した SSO の簡略化
 
-TeamsFx は、Teams SSO を使用して、構成がゼロの 1 行のステートメントにクラウド リソースにアクセスすることで、開発者タスクを削減するのに役立ちます。
+TeamsFx は、SSO を使用し、構成がゼロの 1 行のステートメントにクラウド リソースにアクセスすることで、開発者タスクを減らすのに役立ちます。
 
 TeamsFx SDK を使用すると、資格情報を使用して簡単な方法でユーザー認証コードを記述できます。
 
 1. ブラウザー環境のユーザー ID: `TeamsUserCredential` 現在Teamsユーザーの ID を表します。
-2. Node.js環境のユーザー ID: `OnBehalfOfUserCredentail` On-Behalf-Of フローを使用し、SSO トークンをTeamsします。
+2. Node.js環境のユーザー ID: `OnBehalfOfUserCredentail` On-Behalf-Of フローと SSO トークンを使用します。
 3. Node.js環境のアプリケーション ID: `AppCredential` アプリケーション ID を表します。
 
 TeamsFx SDK の詳細については、次を参照してください。

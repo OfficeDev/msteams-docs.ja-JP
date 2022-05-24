@@ -6,14 +6,14 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: Overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 133ec7fa80950fde59529a2e1abe0415d6620171
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: b2dd6bfb1bc13b4d2b94ff57e2005b6450f59c23
+ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65655396"
+ms.locfileid: "65656769"
 ---
-# <a name="connect-to-existing-apis"></a>既存の API にConnectする
+# <a name="add-api-connection-to-teams-app"></a>Teams アプリへの API 接続の追加
 
 Teams Toolkitは、Teams アプリケーションを構築するための既存の API にアクセスするのに役立ちます。 これらの API は、組織またはサード パーティによって開発されます。
 

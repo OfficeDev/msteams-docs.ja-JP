@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 4067b86bc3a8de0ed891e84ceef68f5f95741479
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: a0a7a44986e0e672cfc4e4bcd723019b914b4904
+ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65655453"
+ms.locfileid: "65656776"
 ---
 # <a name="azure-ad-manifest"></a>Azure AD マニフェスト
 
@@ -29,9 +29,9 @@ Azure AD マニフェスト テンプレートをカスタマイズして、Azur
 
 2. テンプレートを直接更新するか、 [別のファイルから値を参照します](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#Placeholders-in-AAD-manifest-template)。 ここでは、いくつかのカスタマイズ シナリオを確認できます。
   
-* [アプリケーションのアクセス許可を追加する](#customize-requiredresourceaccess)
-* [クライアント アプリケーションの事前認証](#customize-preauthorizedapplications)
-* [認証応答のリダイレクト URL を更新する](#customize-redirect-urls)
+   * [アプリケーションのアクセス許可を追加する](#customize-requiredresourceaccess)
+   * [クライアント アプリケーションの事前認証](#customize-preauthorizedapplications)
+   * [認証応答のリダイレクト URL を更新する](#customize-redirect-urls)
 
 3. [ローカル環境用に Azure AD アプリケーションの変更をデプロイ](#deploy-azure-ad-application-changes-for-local-environment)します。
   
@@ -223,8 +223,8 @@ Azure AD マニフェスト テンプレート ファイルの先頭には、プ
 
 2. [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)に移動し、Microsoft 365 アカウントにログインします。
   
-> [!NOTE]
-> Teams アプリケーションと M365 アカウントのログイン資格情報が同じであることを確認します。
+   > [!NOTE]
+   > Teams アプリケーションと M365 アカウントのログイン資格情報が同じであることを確認します。
 
 3. [[アプリの登録] ページを](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)開き、前にコピーしたクライアント ID を使用して Azure AD アプリケーションを検索します。
   
@@ -313,5 +313,4 @@ Teams アプリケーション開発ライフサイクルのさまざまな段�
 
 ## <a name="see-also"></a>関連項目
 
-* [Toolkit でアプリ マニフェストをカスタマイズする](TeamsFx-manifest-customization.md)
-* [Toolkitでアプリ マニフェストをプレビューする](TeamsFx-manifest-preview.md)
+* [Toolkitでのアプリ マニフェストのプレビューとカスタマイズ](TeamsFx-preview-and-customize-app-manifest.md)
