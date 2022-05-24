@@ -3,15 +3,15 @@ title: 前提条件
 author: surbhigupta
 description: Microsoft Teams のすべてのタブは、これらの要件に準拠している必要があります。
 keywords: 構成可能なチーム タブ グループ チャネル
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 2ac02c7c78fca1ddf4c64e2718cdaf840b0ae59b
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: ca9b4d073a324c3cbf1d2d087bec8d366faf0830
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110282"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65654899"
 ---
 # <a name="prerequisites"></a>前提条件
 
@@ -44,7 +44,7 @@ Teams の個人用およびチャネルまたはグループのタブを作成�
 | &nbsp; | インストール | 使用するには... |
 | --- | --- | --- |
 | **必須** | &nbsp; | &nbsp; |
-| &nbsp; | [Node.js](https://nodejs.org/en/download/) | バックエンド JavaScript ランタイム環境。 最新の v14 LTS リリースを使用します。|
+| &nbsp; | [Node.js](https://nodejs.org/en/download/) | バックエンド JavaScript ランタイム環境。 最新の v16 LTS リリースを使用します。|
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (推奨) または [Google Chrome](https://www.google.com/chrome/) | 開発者ツールを備えたブラウザー。 |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript、TypeScript、または SharePoint Framework (SPFx) ビルド環境。 |
 | &nbsp; | [Visual Studio 2019](https://visualstudio.com/download)、**ASP.NET と Web 開発**、**または .NET Core クロスプラットフォーム開発** ワークロード | .NET。Visual Studio 2019 の無料コミュニティ エディションをインストールできます。 |

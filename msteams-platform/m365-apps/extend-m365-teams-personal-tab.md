@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a28c9d3e8b54d2c3f160ccd5e38f6e666e60f2e
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: abdd21eae707b2edf180a77f3fe25aaed3b165e5
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653801"
+ms.locfileid: "65654555"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Teams 個人用タブを Microsoft 365 全体に拡張する
 
@@ -131,9 +131,9 @@ Microsoft Teamsと同様に、タブ アプリケーションは、Officeおよ�
 1. 個人用タブ アプリケーションの名前を選択して、アプリの登録を開きます。
 1. *[管理]* の下の **[API の公開]** を選択します。
 
-:::image type="content" source="images/azure-app-registration-clients.png" alt-text="Azure portal の *アプリの登録* ブレードからクライアント ID を承認する":::
+    :::image type="content" source="images/azure-app-registration-clients.png" alt-text="Azure portal の *アプリの登録* ブレードからクライアント ID を承認する":::
 
-**[承認されたクライアント アプリケーション]** セクションで、次のすべての `Client Id` 値が追加されていることを確認します。
+1. **[承認されたクライアント アプリケーション]** セクションで、次のすべての `Client Id` 値が追加されていることを確認します。
 
 |Microsoft 365 クライアント アプリケーション | クライアント ID |
 |--|--|
@@ -184,7 +184,7 @@ Windows デスクトップの Outlook で実行されているアプリを表示
 1. サイド バーで、[  **その他のアプリ**] を選択します。 サイドロードされたアプリ タイトルは、インストールされているアプリの中に表示されます。
 1. アプリ アイコンを選択して、Outlookでアプリを起動します。
 
-:::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Outlook デスクトップ クライアントのサイドバーにある楕円（[その他のアプリ]）オプションをクリックして、インストールされている個人用タブを表示する":::
+    :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Outlook デスクトップ クライアントのサイドバーにある楕円（[その他のアプリ]）オプションをクリックして、インストールされている個人用タブを表示する":::
 
 ### <a name="outlook-on-the-web"></a>Outlook on the web
 
@@ -194,7 +194,7 @@ Outlook on the web でアプリを表示するには:
 1. サイド バーの省略記号 (**...**) を選択します。 サイドロードされたアプリ タイトルは、インストールされているアプリの中に表示されます。
 1. アプリ アイコンを選択して、Outlook on the webで実行されているアプリを起動してプレビューします。
 
-:::image type="content" source="images/outlook-web-more-apps.png" alt-text="outlook.com のサイド バーにある楕円 ([その他のアプリ]) オプションをクリックして、インストールされている個人用タブを表示する":::
+    :::image type="content" source="images/outlook-web-more-apps.png" alt-text="outlook.com のサイド バーにある楕円 ([その他のアプリ]) オプションをクリックして、インストールされている個人用タブを表示する":::
 
 ### <a name="office-on-windows"></a>Windows での Office
 
@@ -204,7 +204,7 @@ Windows デスクトップの Office で実行されているアプリを表示�
 1. サイド バーの省略記号 (**...**) を選択します。 サイドロードされたアプリ タイトルは、インストールされているアプリの中に表示されます。
 1. アプリ アイコンを選択して、Officeでアプリを起動します。
 
-:::image type="content" source="images/office-desktop-more-apps.png" alt-text="Office デスクトップ クライアントのサイドバーにある楕円（[その他のアプリ]）オプションをクリックして、インストールされている個人用タブを表示する":::
+    :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Office デスクトップ クライアントのサイドバーにある楕円（[その他のアプリ]）オプションをクリックして、インストールされている個人用タブを表示する":::
 
 ### <a name="office-on-the-web"></a>Office on the web
 
@@ -214,7 +214,7 @@ Office on the web で実行されているアプリをプレビューするに�
 1. サイド バーの **[アプリ** ] アイコンを選択します。 サイドロードされたアプリ タイトルは、インストールされているアプリの中に表示されます。
 1. アプリ アイコンを選択して、Office on the webでアプリを起動します。
 
-:::image type="content" source="images/office-web-more-apps.png" alt-text="インストールされている個人用タブを表示するには、office.com のサイド バーにある [その他のアプリ] オプションをクリックします":::
+    :::image type="content" source="images/office-web-more-apps.png" alt-text="インストールされている個人用タブを表示するには、office.com のサイド バーにある [その他のアプリ] オプションをクリックします":::
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 
@@ -236,7 +236,7 @@ Teams Toolkitから、Teamsに加えて、OfficeおよびOutlookで実行され�
 
 OfficeまたはOutlookへのローカル デバッグの初回実行時に、Microsoft 365 テナント アカウントにサインインし、自己署名証明書をインストールするように求められます。 また、Teamsを手動でインストールするように求められます。 **Teamsで [インストール**] を選択してブラウザー ウィンドウを開き、アプリを手動でインストールします。 次に、[**続行**] をクリックして、Office/Outlookでアプリのデバッグに進みます。
 
-:::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="{alt-text}":::
+:::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="インストールTeams Toolkitダイアログ":::
 
 フィードバックを提供し、Microsoft Teams [Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx/issues) でTeams Toolkitデバッグ エクスペリエンスに関する問題を報告します。
 

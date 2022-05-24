@@ -92,26 +92,24 @@
           href: toolkit/teams-toolkit-fundamentals.md
         - name: Teams アプリの新規作成
           href: toolkit/create-new-project.md
+        - name: Teams アプリを構築するためのアカウントを準備する
+          href: toolkit/accounts.md
         - name: Teams アプリをローカルでデバッグする
           href: toolkit/debug-local.md
         - name: バックグランド プロセスのデバッグ
           href: toolkit/debug-background-process.md
-        - name: Teams アプリを構築するためのアカウントを準備する
-          href: toolkit/accounts.md
         - name: クラウド リソースをプロビジョニングする
           href: toolkit/provision.md
         - name: Teams アプリをクラウドに展開する
           href: toolkit/deploy.md
+        - name: Teams アプリ マニフェストのプレビューとカスタマイズ
+          href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
         - name: Teams ツールキットを使用して Teams アプリを公開する
           href: toolkit/publish.md
         - name: Teams アプリに機能を追加する
           href: toolkit/add-capability.md
         - name: Teams アプリにクラウド リソースを追加する
           href: toolkit/add-resource.md
-        - name: Teams アプリ マニフェストをカスタマイズする
-          href: toolkit/TeamsFx-manifest-customization.md
-        - name: Teams アプリ マニフェストをプレビューする
-          href: toolkit/TeamsFx-manifest-preview.md
         - name: 複数の環境を管理する
           href: toolkit/TeamsFx-multi-env.md
         - name: Teams ツールキットで他の開発者と協力する
@@ -132,8 +130,6 @@
       href: concepts/build-and-test/teams-developer-portal.md
     - name: Teams JavaScript client SDK
       href: tabs/how-to/using-teams-client-sdk.md
-    - name: Teams JavaScript client SDK v2 プレビュー
-      href: m365-apps/using-teams-client-sdk-preview.md
     - name: ボットおよびメッセージ拡張機能用 Node.js Bot Framework (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-js'
     - name: ボットおよびメッセージ拡張機能用 .NET Bot Framework (GitHub)
@@ -421,6 +417,8 @@
       href: m365-apps/extend-m365-teams-personal-tab.md
     - name: Outlook の Teams メッセージ拡張機能を有効にする
       href: m365-apps/extend-m365-teams-message-extension.md
+    - name: Microsoft 365 用の Teams アプリを発行する
+      href: m365-apps/publish.md
 - name: アプリのテスト
   items:
     - name: 概要

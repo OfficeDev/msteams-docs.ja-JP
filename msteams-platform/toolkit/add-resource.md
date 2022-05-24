@@ -6,88 +6,98 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 50cd3de693f70fd0c8414408bd6f4e6d3332d544
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 27e46454658bdc95e5baf5e7453fd50b1b92f03f
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297206"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65654795"
 ---
-# <a name="add-cloud-resources-to-your-teams-app"></a>Teams アプリにクラウド リソースを追加する
+# <a name="add-cloud-resources-to-teams-app"></a>Teams アプリにクラウド リソースを追加する
 
-TeamsFx は、アプリケーション ホスティング用にクラウド リソースをプロビジョニングするのに役立ちます。 必要に応じて、開発ニーズに合ったクラウド リソースを追加することもできます。
+TeamsFx は、アプリケーション ホスティング用にクラウド リソースをプロビジョニングするのに役立ちます。 必要に応じて、開発ニーズに合わせてクラウド リソースを追加できます。
 
-## <a name="prerequisite"></a>前提条件
+## <a name="advantages"></a>メリット
 
-[Teams ツールキット バージョン v3.0.0+ をインストール](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)します。
+次の一覧は、TeamsFx にクラウド リソースを追加する利点を提供します。
 
-> [!TIP]
-> Teams アプリ プロジェクトが Visual Studio Code にあることを確認します。
+* 利便性を提供します
+* Teams Toolkitを使用して、すべての構成ファイルを自動生成し、Teams アプリに接続します
 
-## <a name="add-cloud-resources-using-teams-toolkit"></a>Teams Toolkit を使用してクラウド リソースを追加する
+## <a name="limitation"></a>制限
 
-> [!IMPORTANT]
-> リソースを追加した後は、各環境をプロビジョニングする必要があります。
+SPFx ベースのタブ プロジェクトを作成した場合、Azure クラウド リソースを追加することはできません。
 
-1. **Microsoft Visual Studio Code** を開きます。
-1. 左側のウィンドウから **Teams Toolkit** を選択します。
-1. Teams Toolkit サイド バー パネルで、[**クラウド リソースの追加**] を選択します。
+## <a name="add-cloud-resources"></a>Teams アプリにクラウド リソースを追加する
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add cloudresources.png" alt-text="リソースの追加":::
+**クラウド リソースは、次の方法で追加できます。**
 
-   コマンド パレットを開き、「**Teams: クラウド リソースを追加する**」と入力することもできます。
+* Visual Studio Code でTeams Toolkitを使用してクラウド リソースを追加するには
+* コマンド パレットを使用してクラウド リソースを追加するには
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/manual/addcloud.png" alt-text="クラウド リソースを追加する":::
+  > [!NOTE]
+  > Teams アプリでリソースを正常に追加した後は、環境ごとにプロビジョニングする必要があります。
+  
+* **Visual Studio Code でTeams Toolkitを使用してクラウド リソースを追加するには:**
 
-1. ポップアップから、Teams アプリ プロジェクトに追加するクラウド リソースを選択します。
+   1. **Visual Studio Code** を開きます。
+   1. 左側 **の** パネルからTeams Toolkitを選択します。
+   1. **[開発**] で [**機能の追加]** を選択します。
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/addresources.png" alt-text="追加":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated.png" alt-text="機能を追加する" border="true":::
 
-1. **[OK]** を選択します。
+* **コマンド パレットを使用してクラウド リソースを追加するには:**
 
-選択したリソースがプロジェクトに正常に追加されます。
+   1. **コマンド パレットを** 開きます。
+   1. **「Teams:機能の追加」と入力します**。
+   1. **[Enter]** キーを押します。
 
-## <a name="add-cloud-resources-using-teamsfx-cli-in-command-window"></a>コマンド ウィンドウで TeamsFx CLI を使用してクラウド リソースを追加する
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features.png" alt-text="クラウド" border="true":::
 
-1. **プロジェクト ディレクトリ** をプロジェクト フォルダーに変更します。
-1. 次のコマンドを実行して、プロジェクトに異なるリソースを追加します。
+   1. ポップアップから、プロジェクトに追加するクラウド リソースを選択します。
 
-|クラウド リソース|コマンド|
-|---------------|----------|
-| Azure 関数|`teamsfx resource add azure-function --function-name your-func-name`|
-| Azure SQL データベース|`teamsfx resource add --function-name your-func-name`|
-| Azure API 管理|`teamsfx resource add azure-apim`|
-| Azure Key Vault|`teamsfx resource add azure-keyvault`|
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/updated-final-cloud.png" alt-text="最終的な" border="true":::
+
+## <a name="add-cloud-resources-using-teamsfx-cli"></a>TeamsFx CLI を使用してクラウド リソースを追加する
+
+* **プロジェクト ディレクトリ** をプロジェクト フォルダーに変更します。
+* 次の表に、機能と必要なコマンドの一覧を示します。
+
+  |クラウド リソース|コマンド|
+  |---------------|----------|
+  | Azure 関数|`teamsfx add azure-function`|
+  | Azure SQL データベース|`teamsfx add azure-sql`|
+  | Azure API 管理|`teamsfx resource add azure-apim`|
+  | Azure Key Vault|`teamsfx resource add azure-keyvault`|
 
 ## <a name="types-of-cloud-resources"></a>クラウド リソースの種類
 
-TeamsFx は、次のシナリオで Azure サービスと統合されます:
+次のシナリオでは、TeamsFx は Azure サービスと統合されます。
 
 - [Azure 関数](/azure/azure-functions/functions-overview): Teams アプリケーション バックエンド用の Web API の作成など、オンデマンド要件を満たすサーバーレス ソリューション。
 - [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview): Teams アプリケーション データ ストアとして機能するサービスとしてのプラットフォーム (PaaS) のデータベース エンジン。
-- [Azure API Management](deploy.md): Teams アプリケーション用に作成された API を管理し、Power アプリなどの他のアプリケーションで使用するために公開するために使用できる API ゲートウェイ。
+- [Azure API 管理](deploy.md): API ゲートウェイを使用して、Teams アプリケーション用に作成された API を管理し、Power アプリなどの他のアプリケーションで使用するように公開できます。
 - [Azure Key Vault](/azure/key-vault/general/overview): クラウド アプリとサービスで使用される暗号化キーとその他のシークレットを保護します。
 
 ## <a name="add-cloud-resources"></a>クラウド リソースの追加
 
-リソースを追加すると、プロジェクトの変更は次のようになります:
+プロジェクトにリソースを追加すると、次の変更が表示されます。
 
-- プロビジョニングに必要な情報を提供するために新しいパラメータを azure.parameter.{env}.json に追加できます。
-- 新しいコンテンツは、追加された Azure リソースを作成する `templates/azure/teamsfx` フォルダーの下のファイルを除き、`templates/azure` フォルダーの下の ARM テンプレートに追加されます。
+- azure.parameter に追加された新しいパラメーター。プロビジョニングに必要な情報を提供する {env}.json。
+- 新しいコンテンツは ARM テンプレートの下 `templates/azure`に含まれます。ただし、ファイルは Azure リソースを追加するためのフォルダーにあります `templates/azure/teamsfx` 。
 - `templates/azure/teamsfx` フォルダー下のファイルは、追加された Azure リソースに対して TeamsFx に必要な構成が最新であることを確認するために再生成されるものです。
-- `.fx/projectSettings.json` は、プロジェクトに存在するリソースを追跡するために更新されます。
+- `.fx/projectSettings.json` は、プロジェクトで使用可能なリソースを追跡するために更新されます。
 
-リソースを追加した後、プロジェクト内での追加の変化は次のものです:
+プロジェクトにリソースを追加すると、次の追加の変更が表示されます。
 
 |リソース|変更内容|説明|
 |---------------|---------------|-----------------------------|
 |Azure Functions|Azure Functions テンプレート コードがパス `yourProjectFolder/api` を持つサブフォルダーに追加される</br></br>`launch.json` と `task.json` が `.visual studio code` フォルダーで更新されました。| hello world http トリガー テンプレートがプロジェクトに含まれます。</br></br> アプリケーションをローカルでデバッグするときに実行する Visual Studio コードに必要なスクリプトが含まれています。|
 |Azure API 管理|パス `yourProjectFolder/openapi` を持つサブフォルダーに追加された開いている API 仕様ファイル|公開後に API を定義します。これは API 仕様ファイルです。|
 
-## <a name="limitation"></a>制限
-
-SPFx ベースのタブ プロジェクトを作成した場合は、リソースを追加できません。
-
 ## <a name="see-also"></a>関連項目
 
-[クラウド リソースをプロビジョニングする](provision.md)
+* [クラウド リソースをプロビジョニングする](provision.md)
+* [[新しい Teams アプリを作成]](create-new-project.md)
+* [Teams アプリに機能を追加する](add-capability.md)
+* [クラウドにデプロイする](deploy.md)

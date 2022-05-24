@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 356e0138d9cc33725ac87cd9a4385d201be01df4
-  ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+  ms.openlocfilehash: 1404ad66f8ce221f2f94186636cba7d7722d8f6e
+  ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
   ms.translationtype: MT
   ms.contentlocale: ja-JP
   ms.lasthandoff: 05/24/2022
-  ms.locfileid: "65653302"
+  ms.locfileid: "65656104"
 landingContent:
 - title: Microsoft Build 2022
   linkLists:
@@ -27,9 +27,11 @@ landingContent:
       url: m365-apps/overview.md
     - text: TeamsJS バージョン 2.0.0 のアプリガイダンスと新機能
       url: tabs/how-to/using-teams-client-sdk.md
+    - text: Visual Studio Code のバージョン 4.0.0 Teams Toolkitが GA になりました
+      url: toolkit/teams-toolkit-fundamentals.md
     - text: GCCおよび GCCH のボットとメッセージ拡張機能
       url: ~/concepts/app-fundamentals-overview.md#government-community-cloud
-- title: 概要
+- title: 作業の開始
   linkLists:
   - linkListType: get-started
     links:
@@ -53,6 +55,10 @@ landingContent:
       url: sbs-gs-csharp.yml
     - text: Node.jsを使用してアプリをビルドする
       url: sbs-gs-nodejs.yml
+    - text: JavaScript を使用してコマンド ボットをビルドする
+      url: toolkit/add-capability.md
+    - text: JavaScript を使用して通知ボットをビルドする
+      url: toolkit/add-capability.md
 - title: アプリを収益化する
   linkLists:
   - linkListType: concept
@@ -129,6 +135,10 @@ landingContent:
       url: ~/sbs-meetings-sidepanel.yml
   - linkListType: tutorial
     links:
+    - text: JavaScript を使用してコマンド ボットをビルドする
+      url: toolkit/add-capability.md
+    - text: JavaScript を使用して通知ボットをビルドする
+      url: toolkit/add-capability.md
     - text: ボットからTeamsにファイルをアップロードする
       url: ~/sbs-file-handling-in-bot.yml
     - text: 会議のコンテンツ バブルを生成する

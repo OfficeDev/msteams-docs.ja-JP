@@ -1,18 +1,18 @@
 ---
-title: Microsoft 365用Teamsアプリを発行する
+title: Microsoft 365 用の Teams アプリを発行する
 description: Teams、Outlook、OfficeのユーザーがMicrosoft 365対応のTeams アプリを検出できるようにします
 ms.date: 05/24/2022
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 66b5adb6162222da155318aeb818fd681a664816
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: b256eb75f871425d855c0f12359015134870efc0
+ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653705"
+ms.locfileid: "65656081"
 ---
-# <a name="publish-teams-apps-for-microsoft-365"></a>Microsoft 365用Teamsアプリを発行する
+# <a name="publish-teams-apps-for-microsoft-365"></a>Microsoft 365 用の Teams アプリを発行する
 
 Microsoft Teamsでの運用環境での使用では、Microsoft 365対応のTeams アプリがサポートされています。 これらのアプリを配布して、*対象となるリリース* バージョンの outlook.com と office.com を使用する対象ユーザーと、デスクトップ用の *ベータ チャネル* ビルドのOutlook Windows配布できます。 Microsoft 365対応のTeams アプリの配布オプションとプロセスは、従来のTeams アプリの場合と同じです。
 
@@ -42,7 +42,7 @@ Teams管理者は、管理センターから組織のテナントのアプリ �
 
 ## <a name="multitenant-distribution"></a>マルチテナント分布
 
-OutlookとOfficeが有効になっているTeams アプリの [Microsoft AppSource](https://appsource.microsoft.com/) (Microsoft コマーシャル マーケットプレース) の申請プロセスは、従来のTeams アプリと同じです。唯一の違いは、アプリ パッケージでアプリ マニフェスト [バージョン 1.13](../tabs/how-to/using-teams-client-sdk.md) Teamsを使用する必要があるTeams Microsoft 365間で実行されるアプリ。
+OutlookとOfficeに対して有効になっているTeams アプリの [Microsoft AppSource](https://appsource.microsoft.com/) (Microsoft コマーシャル マーケットプレース) 申請プロセスは、従来のTeams アプリと同じです。 唯一の違いは、アプリ パッケージTeamsアプリ マニフェスト [バージョン 1.13](../tabs/how-to/using-teams-client-sdk.md) を使用する必要がある点です。これにより、Microsoft 365全体で実行されるTeams アプリのサポートが導入されます。
 
 > [!TIP]
 > Teams開発者ポータルを使用して[、アプリ パッケージを検証](https://dev.teams.microsoft.com/validation)し、([Microsoft パートナー ネットワーク](https://partner.microsoft.com/)経由で) Teams ストアに送信する前に、エラーや警告を解決します。
