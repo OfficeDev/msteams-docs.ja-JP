@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview of multiple environment
 ms.date: 11/29/2021
-ms.openlocfilehash: 194c31d02424d08080dca981bb9fe6d963d0a416
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 684951451519ca5e1aaa82344de802259df22a63
+ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073084"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65653281"
 ---
 # <a name="manage-multiple-environments"></a>複数の環境を管理する
 
@@ -30,7 +30,7 @@ ms.locfileid: "65073084"
 > [!TIP]
 > Microsoft Visual Studio コードでアプリ プロジェクトTeams開かれていることを確認します。
 
-## <a name="create-a-new-environment"></a>新しい環境を作成する
+## <a name="create-a-new-environment"></a>新しい環境を作成します。
 
 新しいプロジェクトを作成した後、既定でTeams Toolkit次が作成されます。
 
@@ -57,7 +57,7 @@ ms.locfileid: "65073084"
 
 ## <a name="project-folder-structure"></a>Project フォルダー構造
 
-プロジェクトを作成した後、プロジェクトのフォルダーとファイルをVisual Studio Codeのエクスプローラー領域に表示できます。 カスタム コードに加えて、一部のファイルは、アプリの構成、状態、テンプレートを維持するためにTeams Toolkitによって使用されます。 次の一覧では、ファイルを提供し、複数の環境との関係の概要を示します。
+プロジェクトを作成した後、Visual Studio Code のエクスプローラー領域にプロジェクト フォルダーとファイルを表示できます。 カスタム コードに加えて、一部のファイルは、アプリの構成、状態、テンプレートを維持するためにTeams Toolkitによって使用されます。 次の一覧では、ファイルを提供し、複数の環境との関係の概要を示します。
 
 * `.fx/configs`: ユーザーがTeams アプリ用にカスタマイズできるファイルを構成する
   * `config.<envName>.json`: 環境ごとの構成ファイル 
@@ -79,10 +79,10 @@ Teams Toolkitでは、構成ファイルとテンプレート ファイルを変
 | シナリオ | 場所| 説明 |
 | --- | --- | --- |
 | Azure リソースをカスタマイズする | <ul> <li>下の Bicep ファイル `templates/azure`</li> <li>`.fx/azure.parameters.<envName>.json`</li></ul> | [ARM パラメーターとテンプレートをカスタマイズする](provision.md#customize-arm-parameters-and-templates) |
-| Teams アプリに既存のAzure AD アプリを再利用する | <ul> <li>`auth` のセクション`.fx/config.<envName>.json`</li> </ul> |  [Teams アプリに既存のAzure AD アプリを使用する](provision.md#use-an-existing-azure-ad-app-for-your-teams-app) |
-| ボット用に既存のAzure AD アプリを再利用する | <ul> <li>`bot` のセクション`.fx/config.<envName>.json`</li> </ul> | [ボットに既存のAzure AD アプリを使用する](provision.md#use-an-existing-azure-ad-app-for-your-bot) |
+| Teams アプリ用に既存の Azure AD アプリを再利用する | <ul> <li>`auth` のセクション`.fx/config.<envName>.json`</li> </ul> |  [Teams アプリに既存の Azure AD アプリを使用する](provision.md#use-an-existing-azure-ad-app-for-your-teams-app) |
+| ボット用に既存の Azure AD アプリを再利用する | <ul> <li>`bot` のセクション`.fx/config.<envName>.json`</li> </ul> | [ボットに既存の Azure AD アプリを使用する](provision.md#use-an-existing-azure-ad-app-for-your-bot) |
 | SQLのプロビジョニング中にユーザーの追加をスキップする | <ul> <li>`skipAddingSqlUser` 内のプロパティ`.fx/config.<envName>.json`</li> </ul> | [SQL データベースのユーザーの追加をスキップする](provision.md#skip-adding-user-for-sql-database) |
-| アプリ マニフェストをカスタマイズする | <ul> <li>`templates/manifest.template.json`</li> <li>`manifest` のセクション `.fx/config.<envName>.json`</li>  </ul> | [Teams Toolkitでアプリ マニフェストTeamsカスタマイズする](TeamsFx-manifest-customization.md) |
+| アプリ マニフェストをカスタマイズする | <ul> <li>`templates/manifest.template.json`</li> <li>`manifest` のセクション `.fx/config.<envName>.json`</li>  </ul> | [Toolkitでアプリ マニフェストをプレビューする](TeamsFx-preview-and-customize-app-manifest.md)|
 
 ## <a name="scenarios"></a>シナリオ
 

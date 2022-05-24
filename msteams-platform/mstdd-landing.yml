@@ -4,7 +4,7 @@ summary: Microsoft Teams開発者向けドキュメントの概要へようこ�
 metadata:
   title: Microsoft Teams開発者向けドキュメント
   description: Teams用のアプリの構築の概要
-  ms.service: service
+  ms.service: msteams
   ms.subservice: subservice
   ms.topic: landing-page
   ms.collection: collection
@@ -12,38 +12,24 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: c9995cb280cffba91e8315fbde9ac93c9652a2f9
-  ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+  ms.openlocfilehash: 356e0138d9cc33725ac87cd9a4385d201be01df4
+  ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 04/27/2022
-  ms.locfileid: "65103980"
+  ms.lasthandoff: 05/24/2022
+  ms.locfileid: "65653302"
 landingContent:
-- title: 最新の情報を確認する
+- title: Microsoft Build 2022
   linkLists:
-  - linkListType: concept
+  - linkListType: whats-new
     links:
-    - text: Microsoft Teams でアプリをアップロードする
-      url: ~/concepts/deploy-and-publish/apps-upload.md
-    - text: 個人用アプリまたはタブから Teams に共有する
-      url: ~/concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
-    - text: 会話ボットTeams作成する
-      url: ~/sbs-teams-conversation-bot.yml
-    - text: Blazor を使用して初めてのアプリを構築する
-      url: sbs-gs-blazorupdate.yml
-    - text: ブラウザーのデバイスのアクセス許可
-      url: ~/concepts/device-capabilities/browser-device-permissions.md
-    - text: ユーザー ピッカーを統合する
-      url: ~/concepts/device-capabilities/people-picker-capability.md
-    - text: アダプティブ カードオーバーフロー メニュー
-      url: ~/task-modules-and-cards/cards/cards-format.md
-    - text: 用語集
-      url: ~/get-started/glossary.md
-    - text: 概要
-      url: ~/overview.md
-    - text: アプリを計画する
-      url: ~/concepts/app-fundamentals-overview.md
-- title: 作業の開始
+    - text: OutlookおよびOfficeが有効なアプリをTeams ストアに送信する
+      url: m365-apps/overview.md
+    - text: TeamsJS バージョン 2.0.0 のアプリガイダンスと新機能
+      url: tabs/how-to/using-teams-client-sdk.md
+    - text: GCCおよび GCCH のボットとメッセージ拡張機能
+      url: ~/concepts/app-fundamentals-overview.md#government-community-cloud
+- title: 概要
   linkLists:
   - linkListType: get-started
     links:
@@ -51,6 +37,10 @@ landingContent:
       url: ../msteams-platform/get-started/get-started-overview.md
     - text: GitHubを使用した概要
       url: /contribute/additional-resources
+    - text: 用語集
+      url: ~/get-started/glossary.md
+    - text: 概要
+      url: ~/overview.md
   - linkListType: tutorial
     links:
     - text: JavaScript を使用してアプリをビルドする
@@ -101,7 +91,7 @@ landingContent:
       url: ~/tabs/what-are-tabs.md
     - text: ボットを作成する
       url: ~/bots/what-are-bots.md
-    - text: メッセージ拡張機能をビルドする
+    - text: メッセージの拡張機能のビルド
       url: ~/messaging-extensions/what-are-messaging-extensions.md
     - text: Teams 会議用のアプリを作成する
       url: ~/apps-in-teams-meetings/teams-apps-in-meetings.md
@@ -171,9 +161,13 @@ landingContent:
     links:
     - text: 配布
       url: ~/concepts/deploy-and-publish/apps-publish-overview.md
-    - text: Teams ストアに発行する
+    - text: Microsoft Teams でアプリをアップロードする
+      url: ~/concepts/deploy-and-publish/apps-upload.md
+    - text: Teams Microsoft Storeに発行する
       url: ~/concepts/deploy-and-publish/appsource/publish.md
     - text: ストア検証ガイドライン
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
+    - text: アプリ検証エラーの一般的な理由
+      url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
     - text: 公開したアプリの保守およびサポート
       url: ~/concepts/deploy-and-publish/appsource/post-publish/overview.md
