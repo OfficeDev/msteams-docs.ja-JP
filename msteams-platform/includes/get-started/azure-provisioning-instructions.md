@@ -82,23 +82,13 @@ Visual Studio Code のサイド バーで Teams Toolkit :::image type="icon" sou
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="起動アプリをリモートで示すスクリーンショット。" border="false":::
 
-1. [**追加**] を選択します。
+1. ローカル マシン上の Teams にアプリをサイドロードするように求められたら、**[追加]** を選択します。
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="インストールされているアプリを示すスクリーンショット。" border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-bot-debug.png" alt-text="ボットが Teams クライアントに追加されていることを示すスクリーンショット。":::
 
-   Toolkit には、アプリが Teams に追加されることを示すメッセージが表示されます。
+   `welcome` を入力すると概要カードが表示され、`learn` と入力するとアダプティブ カードとボット コマンド ドキュメントが示されます。
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/mex-added-msg.png" alt-text="スクリーンショットは、アプリを今すぐまたは後で試すためのメッセージを示しています" border="true":::
- 
-    - **[OK]** を選択した場合、サイドロードされたアプリの一覧から後でアプリを試すことができます。
-    - **[試してみる]** を選択した場合、Teams によってアプリが読み込まれます。
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-app.png" alt-text="Teams クライアント上のボットの学習カードを示すスクリーンショット。":::       
 
-   アプリは Azure サイトに読み込まれます。
-   
-1. **[試してみる]** を選択します。
-
-   メッセージ拡張機能アプリが、チャット ボット アプリに読み込まれます。
-
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/app-added-mex1.png" alt-text="Teams にサイドロードされたアプリを示すスクリーンショット" border="false":::
 
 

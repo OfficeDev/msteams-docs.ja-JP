@@ -3,14 +3,14 @@ title: パブリック開発者プレビュー マニフェスト スキーマ �
 description: サンプル マニフェスト ファイルと、Microsoft Teams でサポートされているすべてのコンポーネントの説明
 ms.topic: reference
 keywords: チーム マニフェスト スキーマ開発者プレビュー
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: a32ea7faba4d3c0e362637c8e4338112cd75d839
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: cd018acfa71dc7815ae4a2a85311d0adb3245652
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110331"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668131"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>参照: Microsoft Teams のパブリック開発者プレビュー マニフェスト スキーマ
 
@@ -284,7 +284,7 @@ Microsoft Teams マニフェストは、アプリが Microsoft Teams プラッ�
 
 **必須** &ndash; 文字列
 
-このマニフェストが使用しているマニフェスト スキーマのバージョン。 [Office および Outlook で実行されている Teams アプリ](../../m365-apps/overview.md)をプレビューする場合にのみ `m365DevPreview` を使用します。 それ以外の場合は、他のすべての Teams プレビュー機能に `devPreview` を使用します。
+このマニフェストが使用しているマニフェスト スキーマのバージョン。
 
 ## <a name="version"></a>version
 
@@ -556,6 +556,97 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |`resource`|String|2048 文字|✔|SSO の認証トークンを取得するためのアプリのリソース URL。|
 |`applicationPermissions`|配列|最大 100 アイテム|✔|アプリケーションのリソースのアクセス許可。|
 
+## <a name="graphconnector"></a>graphConnector
+
+**省略可能** — オブジェクト
+
+アプリのGraph コネクタ構成を指定します。 これが存在する場合は [、webApplicationInfo.id](#webapplicationinfo) も指定する必要があります。
+
+|名前| 型| 最大サイズ | 必須 | 説明|
+|---|---|---|---|---|
+|`notificationUrl`|string|2048 文字|✔|アプリケーションのGraphコネクタ通知を送信する URL。|
+
+## <a name="showloadingindicator"></a>showLoadingIndicator
+
+**省略可能** — ブール値
+
+アプリまたはタブの読み込み中に読み込みインジケーターを表示するかどうかを示します。 既定値は **false** です。
+> [!NOTE]
+> アプリマニフェストで `showLoadingIndicator` を true として選択した場合、ページを正しく読み込むには、「[ネイティブの読み込みインジケーターを表示する](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)」ドキュメントの説明に従って、タブとタスクモジュールのコンテンツページを変更します。
+
+## <a name="isfullscreen"></a>IsFullScreen
+
+ **省略可能** — ブール値
+
+タブ ヘッダー バーの有無にかかわらず、個人用アプリがレンダリングされる場所を示します。既定値は **false** です。
+
+> [!NOTE]
+> `isFullScreen` は、組織に発行されたアプリでのみ機能します。
+
+## <a name="activities"></a>activities
+
+**省略可能** — オブジェクト
+
+アプリがユーザー アクティビティ フィードを投稿するために使用するプロパティを定義します。
+
+|名前| 型| 最大サイズ | 必須 | 説明|
+|---|---|---|---|---|
+|`activityTypes`|オブジェクトの配列|128 項目| | アプリがユーザーのアクティビティ フィードに投稿できるアクティビティの種類を提供します。|
+
+### <a name="activitiesactivitytypes"></a>activity.activityTypes
+
+|名前| 型| 最大サイズ | 必須 | 説明|
+|---|---|---|---|---|
+|`type`|string|32 文字|✔|通知の種類。 *以下を参照してください*。|
+|`description`|string|128 文字|✔|通知の簡単な説明。 *以下を参照してください*。|
+|`templateText`|string|128 文字|✔|例: "あなたに {actor} が作成したタスク {taskId}"|
+
+```json
+{
+   "activities":{
+      "activityTypes":[
+         {
+            "type":"taskCreated",
+            "description":"Task Created Activity",
+            "templateText":"{actor} created task {taskId} for you"
+         },
+         {
+            "type":"teamMention",
+            "description":"Team Mention Activity",
+            "templateText":"{actor} mentioned team"
+         },
+         {
+            "type":"channelMention",
+            "description":"Channel Mention Activity",
+            "templateText":"{actor} mentioned channel"
+         },
+         {
+            "type":"userMention",
+            "description":"Personal Mention Activity",
+            "templateText":"{actor} mentioned user"
+         },
+         {
+            "type":"calendarForward",
+            "description":"Forwarding a Calendar Event",
+            "templateText":"{actor} sent user an invite on behalf of {eventOwner}"
+         },
+         {
+            "type":"calendarForward",
+            "description":"Forwarding a Calendar Event",
+            "templateText":"{actor} sent user an invite on behalf of {eventOwner}"
+         },
+         {
+            "type":"creatorTaskCreated",
+            "description":"Created Task Created",
+            "templateText":"The Creator created task {taskId} for you"
+         }
+      ]
+   }
+}
+```
+
+***
+
 ## <a name="configurableproperties"></a>configurableProperties
 
 **オプション** - 配列
@@ -688,6 +779,15 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
     |**[名前]**|**説明**|
     |---|---|
     |`InAppPurchase.Allow.User`|サインインしているユーザーの代わりに、アプリでユーザー マーケットプレース オファーを表示し、アプリ内でユーザーの購入を完了できるようにします。|
+
+* **Teamsライブ共有に対するリソース固有のアクセス許可**
+
+   |名前| 説明 |
+   | ----- | ----- |
+   |`LiveShareSession.ReadWrite.Chat`|<!--- need info --->|
+   |`LiveShareSession.ReadWrite.Channel`|<!--- need info --->|
+   |`MeetingStage.Write.Chat`|<!--- need info --->|
+   |`OnlineMeetingIncomingAudio.Detect.Chat`|<!--- need info --->|
 
 ## <a name="see-also"></a>関連項目
 

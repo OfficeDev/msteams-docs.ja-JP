@@ -4,12 +4,12 @@ description: Microsoft Teams 開発者向けドキュメントの概要の概要
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams 開発者向けサンプル
-ms.openlocfilehash: 11989fe16da36e9fc68840782f63078fc39731c6
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: 7e2288912fd2a851571b4b735af02db519fefe47
+ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135767"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65654769"
 ---
 # <a name="get-started"></a>概要
 
@@ -58,6 +58,11 @@ Microsoft Teams 用のカスタマイズ アプリの構築・展開にあたり
 > [C# または .NETを使用して Teams アプリをビルドする](../sbs-gs-csharp.yml)
 > [!div class="nextstepaction"]
 > [node.js を使用して Teams アプリをビルドする](../sbs-gs-nodejs.yml)
+> [!div class="nextstepaction"]
+> [JavaScript を使用した通知ボットのビルド](../sbs-gs-notificationbot.yml)
+> [!div class="nextstepaction"]
+> [Build コマンド ボットと JavaScript](../sbs-gs-commandbot.yml)
+> [!div class="nextstepaction"]
 
 ## <a name="see-also"></a>関連項目
 

@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: a3259c46927547b98700f76f704c6c5cb222a74d
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 1c78c6cfe68d263ede675161e5a89b03b0885616
+ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104015"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65656160"
 ---
 # <a name="debug-background-process"></a>バックグランド プロセスのデバッグ
 
@@ -33,10 +33,10 @@ Teams Toolkit は、デバッグ プロセス中に次の前提条件を確認�
 
   |プロジェクトの種類|Node.js LTS バージョン|
   |----------|--------------------------------|
-  |Azure Functions のないタブ | 10、12、 **14 (推奨)**、16 |
-  |Azure Functions のあるタブ | 10、12、 **14 (推奨)**|
-  |Bot |  10、12、 **14 (推奨)**、16|
-  |メッセージ拡張機能: | 10、12、 **14 (推奨)**、16 |
+  |Tab | 14、16 (推奨) |
+  |SPFx タブ | 12、14 (推奨)|
+  |Bot |  14、16 (推奨)|
+  |メッセージ拡張機能: | 14、16 (推奨) |
 
    
 * 有効な資格情報を持つ Microsoft 365 アカウント。サインインしていない場合は、Microsoft 365 アカウントにサインインするように Teams ツールキットから求められます。
@@ -45,7 +45,7 @@ Teams Toolkit は、デバッグ プロセス中に次の前提条件を確認�
 
 * Ngrok バイナリ バージョン 2.3 はボットとメッセージ拡張機能に適用されます。Ngrok がインストールされていない場合、またはバージョンが要件と一致しない場合、Teams ツールキットは Ngrok NPM パッケージ `ngrok@4.2.2` を `~/.fx/bin/ngrok` にインストールします。
 
-* Azure Functions Core Tools バージョン 3。Azure Functions Core Tools がインストールされていない場合、またはバージョンが要件と一致しない場合、Teams ツールキットは、**Windows** および **macOs** 用に Azure Functions Core Tools NPM パッケージ、azure-functions-core-tools@3 を `~/.fx/bin/func` にインストールします。 `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` のAzure Functions Core Tools NPM パッケージは、バイナリAzure Functions Core Tools管理します。 Linux の場合、ローカル デバッグは終了します。
+* Azure Functions Core Tools バージョン 4で、Azure Functions Core Tools がインストールされていない場合、またはバージョンが要件と一致しない場合、Teams ツールキットは、**Windows** および **macOs** 用に Azure Functions Core Tools NPM パッケージ、azure-functions-core-tools@3 を `~/.fx/bin/func` にインストールします。 `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` のAzure Functions Core Tools NPM パッケージは、バイナリAzure Functions Core Tools管理します。 Linux の場合、ローカル デバッグは終了します。
 
 * Azure Functions に適用される .NET Core SDK のバージョン。.NET Core SDK がインストールされていない場合、またはバージョンが要件に一致しない場合、Teams Toolkit は .NET Core SDK for Windows および MacOS `~/.fx/bin/dotnet`をインストールします。Linux の場合、ローカル デバッグは終了します。
 

@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: b256eb75f871425d855c0f12359015134870efc0
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 78a2d0354028426f4de98759a501e66530cf1166
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656081"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668061"
 ---
 # <a name="publish-teams-apps-for-microsoft-365"></a>Microsoft 365 用の Teams アプリを発行する
 
@@ -26,7 +26,7 @@ Outlookが有効なメッセージ拡張機能は、いくつかの方法でテ�
 
 ### <a name="teams-client"></a>Teams クライアント
 
-[*アプリ*] メニューの [*アプリ* > の管理] を選択します *。appSubmit* >  **an app を組織に** 公開します。これには、IT 管理者の承認が必要です。
+[**アプリ**] メニューの [**アプリ** > の管理] を選択 **し、アプリ** > を発行 **して組織にアプリを送信します**。これには、IT 管理者の承認が必要です。
 
 ### <a name="teams-developer-portal"></a>Teams 開発者ポータル
 

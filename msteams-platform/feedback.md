@@ -1,15 +1,15 @@
 ---
 title: Microsoft Teams 開発者コミュニティのヘルプとフィードバック
 description: Microsoft Teams 製品チームは、さまざまなフィードバックとサポート チャネルで開発者コミュニティに応答します。
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: reference
 keywords: Teams フィードバック 開発者 質問 問題 コミュニティ ヘルプ 要求 バグ 投稿 コミュニティ ディスカッション サポート
-ms.openlocfilehash: 77da574ca83bd3c927366e7c5aeb7eebdc7a2d92
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: b5030f9e814dc7acf2ae2f5bb25719cc6c3f58f8
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111193"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668012"
 ---
 # <a name="support-and-feedback"></a>サポートとフィードバック
 
@@ -47,6 +47,7 @@ Microsoft Teams のアプリ開発に関する質問を共有したり回答し�
 |  **Teams Toolkit または TeamsFx SDK と CLI の問題** | <ul><li> :::image type="icon" source="assets/icons/GitHub-icon.png" border="false":::  [GitHub の問題](https://github.com/OfficeDev/TeamsFx/issues): [TeamsFx (Microsoft Teams フレームワーク) GitHub リポジトリ](https://github.com/OfficeDev/TeamsFx)で新しい問題を作成して問題を報告したり、機能要求を上げます。 クエリやコミュニティを活用するために、GitHub の問題を使用することをお勧めします。 <li> :::image type="icon" source="assets/icons/stack-overflow-icon.png" border="false"::: [スタック オーバーフロー](https://stackoverflow.com/questions/tagged/teams-toolkit): 質問を投稿するには、`teams-toolkit` タグを使用します。 スタック オーバーフローのガイドラインに従って、わかりやすいタイトル、簡潔な問題説明、問題を再現するための詳細を提供します。 機能要求または広範な質問はトピック外です。 </li> </ul> |
 | **ボットとメッセージの拡張機能 SDK の問題または提案** | ボットの言語 ([C#](https://github.com/Microsoft/botbuilder-dotnet/)、[JavaScript](https://github.com/Microsoft/botbuilder-js)、または [Python](https://github.com/Microsoft/botbuilder-python)) の SDK リポジトリに問題と機能要求を送信します。 `botframework` および `microsoft-teams` タグを使用して、[スタック オーバーフロー](https://stackoverflow.com/questions/tagged/botframework%20microsoft-teams)で、ハウツーの質問を投稿します。 |
 | **タブ SDK の問題または提案** | [Microsoft Teams JavaScript ライブラリ](https://github.com/OfficeDev/microsoft-teams-library-js/issues)の SDK リポジトリに問題と機能要求を送信します。 `microsoft-teams` タグを使用して、[スタック オーバーフロー](https://stackoverflow.com/questions/tagged/microsoft-teams)に SDK に関するハウツーの質問を投稿します。 |
+| **SDK の問題や提案をLive Shareする** | Live Share SDK の SDK リポジトリに問題と機能要求を送信[します](https://github.com/microsoft/live-share-sdk)。 `live-share` [スタック オーバーフロー](https://stackoverflow.com/questions/tagged/live-share+microsoft-teams)での SDK に関するハウツーの質問を投稿するには、タグと`microsoft-teams`タグを使用します。 |
 
 ### <a name="documentation-feedback"></a>ドキュメントのフィードバック
 

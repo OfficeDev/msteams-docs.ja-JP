@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 keywords: Teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: ec9db255d6dad410844451830b12ee902b106712
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 3543cb8e1beff69484a6348f511a033ad09e1f6d
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296953"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668047"
 ---
 # <a name="apps-for-teams-meetings"></a>Teams 会議用アプリ
 
@@ -47,3 +47,4 @@ ms.locfileid: "65296953"
 * [カスタム Together モード シーン](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Teams 会議用にアプリを有効にして構成する](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
 * [会議のライフサイクル](meeting-app-extensibility.md#meeting-lifecycle)
+* [Live Share SDK による強化されたコラボレーション](teams-live-share-overview.md)
