@@ -5,12 +5,12 @@ description: Teams プラットフォームでのカスタム タブの概要
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 7f39d01c9ff6a264d16c89129ed1b93525da5b6f
-ms.sourcegitcommit: f7d0e330c96e00b2031efe6f91a0c67ab0976455
+ms.openlocfilehash: c885587dcbd5447cd62b399d28504a096b705e71
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65611449"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65672972"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Microsoft Teams 用のタブの構築
 
@@ -20,6 +20,8 @@ ms.locfileid: "65611449"
 > 現在、カスタム タブは Government Community Cloud (GCC)、GCC-High、国防総省 (DOD) で使用できます。
 >
 > 現在、Teams クライアント SDK は Government Cloud CDN では利用できないので、 [npm パッケージ](https://www.npmjs.com/package/@microsoft/teams-js) を使用して Teams クライアント SDK を使用し、アプリにバンドルすることをお勧めします。
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 次の画像は、個人用タブを示しています:
 
@@ -33,7 +35,7 @@ ms.locfileid: "65611449"
 
 Teams には、個人用タブとチャネル タブ、またはグループ タブの 2 種類があります。 [個人用タブ](~/tabs/how-to/create-personal-tab.md)は、個人を対象としたボットと共に、個人用アプリの一部であり、1 人のユーザーを対象としています。 簡単にアクセスできるように、左側のナビゲーション バーにピン留めすることができます。 [チャネル/グループ タブ](~/tabs/how-to/create-channel-group-tab.md)は、コンテンツをチャネルやグループのチャットに配信します。また、専用の Web ベースのコンテンツまわりに関する共同作業スペースを作成するのに優れた方法です。
 
-[コンテンツ ページの作成](~/tabs/how-to/create-tab-pages/content-page.md)は、個人用タブ、チャネルまたはグループ タブ、またはタスク モジュールの一部として行えます。 [構成ページを作成](~/tabs/how-to/create-tab-pages/configuration-page.md)をすると、ユーザーは Microsoft Teams アプリを構成し、それを使用してチャネルまたはグループのチャット タブ、メッセージ拡張機能、または Office 365 コネクタを構成できます。 インストール後にユーザーがタブを再構成することを許可し、アプリケーションの[タブ削除ページを作成](~/tabs/how-to/create-tab-pages/removal-page.md)できます。 タブを含む Teams アプリをビルドする場合は、[Android と iOS の両方の Teams クライアントでタブが機能する方法](~/tabs/design/tabs-mobile.md)をテストする必要があります。 タブは、基本情報、ロケールとテーマ情報、および `entityId` または タブにあるものを特定する `subEntityId` を通して[コンテンツを取得](~/tabs/how-to/access-teams-context.md)する必要があります。
+[コンテンツ ページの作成](~/tabs/how-to/create-tab-pages/content-page.md)は、個人用タブ、チャネルまたはグループ タブ、またはタスク モジュールの一部として行えます。 [構成ページを作成](~/tabs/how-to/create-tab-pages/configuration-page.md)をすると、ユーザーは Microsoft Teams アプリを構成し、それを使用してチャネルまたはグループのチャット タブ、メッセージ拡張機能、または Office 365 コネクタを構成できます。 インストール後にユーザーがタブを再構成することを許可し、アプリケーションの[タブ削除ページを作成](~/tabs/how-to/create-tab-pages/removal-page.md)できます。 タブを含む Teams アプリをビルドする場合は、[Android と iOS の両方の Teams クライアントでタブが機能する方法](~/tabs/design/tabs-mobile.md)をテストする必要があります。 タブは、基本情報、ロケールとテーマ情報、および `app.Context.page.id` または タブにあるものを特定する `app.Context.page.subPageId` を通して[コンテンツを取得](~/tabs/how-to/access-teams-context.md)する必要があります。
 
 アダプティブ カードを使用してタブを構築し、ボットとタブに別のバックエンドを必要としなくても、すべての Teams アプリ機能を一元化できます。 [ステージ ビュー](~/tabs/tabs-link-unfurling.md)は、Teams で全画面表示で開かれ、タブとしてピン留めされるコンテンツをレンダリングできる新しい UI コンポーネントです。既存の[リンク展開](~/tabs/tabs-link-unfurling.md)サービスが更新され、アダプティブ カードとチャット サービスを使用して URL をタブに変換するために使用されます。 タブ全体について話し合うのではなく、特定のタスク、患者、営業案件など、タブ内のサブエンティティに関する会話を行うことができる会話型サブエンティティを使用して[会話タブ](~/tabs/how-to/conversational-tabs.md)を作成できます。[タブ マージン](~/resources/removing-tab-margins.md) に変更を加えると、アプリのビルド時の開発者エクスペリエンスを向上させることができます。 タブをドラッグして目的の位置に配置すると、個人用アプリやチャネルまたはグループ チャット内のタブ位置を交換できます。
 
@@ -72,7 +74,7 @@ Teams には、個人用タブとチャネル タブ、またはグループ タ
 
 ### <a name="declare-custom-tab-in-app-manifest"></a>アプリ マニフェストでカスタム タブを宣言する
 
-カスタム タブは、アプリ パッケージのアプリ マニフェストで宣言されます。 アプリのタブとして含める Web ページごとに、URL と範囲を定義します。 また、[Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) をページに追加して、ページの読み込みが終了したら `microsoftTeams.initialize()` を呼び出す必要があります。 Teams はページを表示し、Teams 固有の情報 (Teams クライアントがダーク テーマを実行しているなど) へのアクセスを提供します。
+カスタム タブは、アプリ パッケージのアプリ マニフェストで宣言されます。 アプリのタブとして含める Web ページごとに、URL と範囲を定義します。 また、[Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) をページに追加して、ページの読み込みが終了したら `app.initialize()` を呼び出す必要があります。 Teams はページを表示し、Teams 固有の情報 (Teams クライアントがダーク テーマを実行しているなど) へのアクセスを提供します。
 
 チャネル/グループ または 個人 スコープ内でタブを表示するかどうかを選択した場合は、タブに <iframe 付き\> HTML [コンテンツ ページ](~/tabs/how-to/create-tab-pages/content-page.md)を表示する必要があります。個人用タブの場合、コンテンツ URL は `staticTabs` 配列内の `contentUrl` プロパティによって Teams アプリのマニフェストに直接設定されます。タブのコンテンツはすべてのユーザーに対して同じです。
 

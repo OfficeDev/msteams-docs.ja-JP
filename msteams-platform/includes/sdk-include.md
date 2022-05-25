@@ -1,0 +1,2 @@
+> [!NOTE]
+> このトピックでは、Microsoft Teams JavaScript クライアント SDK のバージョン 2.0.0 を反映しています。 以前のバージョンを使用している場合は、v1 と v2 の違いに関するガイダンスについては、[Teams JS SDK の概要](msteams-docs/msteams-platform/tabs/how-to/../../../../../tabs/how-to/using-teams-client-sdk.md)を参照してください。

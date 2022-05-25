@@ -6,12 +6,12 @@ keywords: 構成可能なチーム タブ グループ チャネル
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: ca9b4d073a324c3cbf1d2d087bec8d366faf0830
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: 92b03146200af978f3fa5d6dc2c5e6ad27a12200
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654899"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65672930"
 ---
 # <a name="prerequisites"></a>前提条件
 
@@ -31,13 +31,15 @@ Teams の個人用およびチャネルまたはグループのタブを作成�
 
 * Teams クライアントのテーマ、デザイン、および意図に基づいてタブのスタイルを設定します。 タブは、特定のニーズに対応し、タブのチャネル位置に関連するタスクの小さなセットまたはデータのサブセットに焦点を当てるように構築されている場合に最適に機能します。
 
-* コンテンツ ページ内で、スクリプト タグを使用して、[Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) への参照を追加します。 ページが読み込まれたら、`microsoftTeams.initialize()` への呼び出しを行います。それ以外の場合、ページは表示されません。
+* コンテンツ ページ内で、スクリプト タグを使用して、[Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) への参照を追加します。 ページが読み込まれたら、呼び出しを `app.initialize()`行います。それ以外の場合、ページは表示されません。
 
 * モバイル クライアントで認証を機能させるには、Teams JavaScript SDK 1.4.1 以降にアップグレードする必要があります。
 
-* Teams モバイル クライアントに 、チャネル/グループ タブを表示するように選択した場合、`setSettings()` の構成には `websiteUrl` プロパティの値を設定する必要があります。
+* Teams モバイル クライアントに 、チャネル/グループ タブを表示するように選択した場合、`setConfig()` の構成には `websiteUrl` プロパティの値を設定する必要があります。
 
-* [Microsoft Teams] タブでは、自己署名証明書を使用するイントラネット Web サイトを読み込む機能はサポートされません。
+* [Microsoft Teams] タブでは、自己署名証明書を使用するイントラネット Web サイトを読み込む機能はサポートされていません。
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="tools-to-build-tabs"></a>タブを作成するツール
 

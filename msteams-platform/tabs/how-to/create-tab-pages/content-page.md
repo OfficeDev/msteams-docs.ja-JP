@@ -6,12 +6,12 @@ keywords: Teams タブ グループ チャネル構成可能スタティック
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 887559b65acd7c28ba6c8f96b380fde837fbc053
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
-ms.translationtype: HT
+ms.openlocfilehash: 4f0d5ea16c51b8b40dd28c6ff29ee7d990636f31
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398590"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65673028"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>タブのコンテンツ ページを作成する
 
@@ -23,6 +23,8 @@ ms.locfileid: "63398590"
 
 この記事は、コンテンツ・ページをタブとして使用することに特化していますが、ここに書かれているガイダンスの大部分は、コンテンツ・ページがどのようにユーザーに表示されるかに関係なく適用されます。
 
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
+
 ## <a name="tab-content-and-design-guidelines"></a>タブのコンテンツとデザインのガイドライン
 
 タブの全体的な目的は、実用的な価値と明らかな目的を持つ意味のある魅力的なコンテンツへのアクセスを提供することです。 タブデザインをクリーンにし、ナビゲーションを直感的に、コンテンツをイマーシブなものにすることに集中する必要があります。
@@ -31,9 +33,31 @@ ms.locfileid: "63398590"
 
 ## <a name="integrate-your-code-with-teams"></a>コードを Teams と統合する
 
-Teams でページを表示するには、[Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) を含め、ページの読み込み後に `microsoftTeams.initialize()` の呼び出しを含める必要があります。
+Teams でページを表示するには、[Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) を含め、ページの読み込み後に `app.initialize()` の呼び出しを含める必要があります。
 
 次のコードは、ページと Teams クライアントの通信方法の例を示しています。
+
+# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+...
+    <script src= 'https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js'></script>
+...
+</head>
+
+<body>
+...
+    <script>
+    app.initialize();
+    </script>
+...
+</body>
+```
+
+# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
 
 ```html
 <!DOCTYPE html>
@@ -52,6 +76,8 @@ Teams でページを表示するには、[Microsoft Teams JavaScript クライ�
 ...
 </body>
 ```
+
+***
 
 ## <a name="access-additional-content"></a>追加のコンテンツにアクセスする
 
@@ -89,10 +115,10 @@ Teams のエンティティへのディープ リンクを作成できます。 
 読み込みインジケーターを表示する方法:
 
 1. マニフェストに `"showLoadingIndicator": true` を追加します。
-1. `microsoftTeams.initialize();` を呼び出します。
-1. **必須** ステップとして、`microsoftTeams.appInitialization.notifySuccess()` を呼び出して、アプリが正常に読み込まれたことを Teams に通知します。 Teamsは、読み込みインジケータがある場合、それを非表示にします。 `notifySuccess` が 30 秒以内に呼び出されない場合は、アプリがタイムアウトし、再試行オプションを含むエラー画面が表示されたと見なされます。
-1. **オプション** で、画面に印刷する準備ができていて、アプリケーションの残りのコンテンツを遅延読み込む場合は、`microsoftTeams.appInitialization.notifyAppLoaded();` を呼び出して読み込みインジケーターを手動で非表示にすることができます。
-1. アプリケーションの読み込みに失敗した場合は、`microsoftTeams.appInitialization.notifyFailure(reason);` を呼び出して、エラーが発生したことを Teams に知らせることができます。 エラー画面がユーザーに表示されます。 次のコードは、アプリケーションエラーの理由の例を示しています。
+1. `app.initialize();` を呼び出します。
+1. **必須** ステップとして、`app.notifySuccess()` を呼び出して、アプリが正常に読み込まれたことを Teams に通知します。 次に、読み込みインジケーター Teams非表示にします (該当する場合)。 30 秒以内に呼び出されない場合`notifySuccess`、Teamsはアプリがタイムアウトしたことを前提とし、再試行オプションを使用してエラー画面を表示します。
+1. **必要に応じて**、画面に印刷する準備が整い、アプリケーションの残りのコンテンツを遅延読み込む場合は、読み込みインジケーターを呼び出 `app.notifyAppLoaded();`して手動で非表示にすることができます。
+1. アプリケーションが読み込まれない場合は、呼び出`app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});`してエラーについてTeamsに知らせ、必要に応じてエラー メッセージを入力できます。 エラー画面がユーザーに表示されます。 次のコードは、アプリケーションの読み込みに失敗した場合に示すことができる理由を定義する列挙体を示しています。
 
     ```typescript
     /* List of failure reasons */

@@ -3,15 +3,15 @@ title: 構成ページを作成する
 author: surbhigupta
 description: コンテキスト データの取得、プレースホルダーの挿入、コード例を使用した認証など、設定用のチャネルまたはグループ チャットを構成する構成ページを作成する方法について説明します。
 keywords: 構成可能なチーム タブ グループ チャネル
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 912e38fc63d8c897f086d27362ad249688ce7ce9
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 5352481d30071edb96dae8bf3ec04f15a6e9c8d7
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111641"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65672944"
 ---
 # <a name="create-a-configuration-page"></a>構成ページを作成する
 
@@ -21,9 +21,11 @@ ms.locfileid: "65111641"
 * [メッセージ拡張機能](~/messaging-extensions/what-are-messaging-extensions.md)。
 * [Office 365 コネクタ](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)。
 
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
+
 ## <a name="configure-a-channel-or-group-chat-tab"></a>チャネルまたはグループチャット タブを構成する
 
-アプリケーションは、[ Microsoft Teams JavaScript クライアントSDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) を参照し、`microsoft.initialize()` を呼び出す必要があります。 使用される URL は、セキュリティで保護された HTTPS エンドポイントであり、クラウドから使用できる必要があります。
+アプリケーションは、[ Microsoft Teams JavaScript クライアントSDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) を参照し、`app.initialize()` を呼び出す必要があります。 使用される URL は、セキュリティで保護された HTTPS エンドポイントであり、クラウドから使用できる必要があります。
 
 ### <a name="example"></a>例
 
@@ -32,6 +34,70 @@ ms.locfileid: "65111641"
 <img src="~/assets/images/tab-images/configuration-page.png" alt="Configuration page" width="400"/>
 
 次のコードは、構成ページに対応するコードの例です。
+
+# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+```html
+<head>
+    <script src='https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js'></script>
+</head>
+<body>
+    <button onclick="(document.getElementById('icon').src = '/images/iconGray.png'); colorClickGray()">Select Gray</button>
+    <img id="icon" src="/images/teamsIcon.png" alt="icon" style="width:100px" />
+    <button onclick="(document.getElementById('icon').src = '/images/iconRed.png'); colorClickRed()">Select Red</button>
+
+    <script>
+        app.initialize();
+        let saveGray = () => {
+            pages.config.registerOnSaveHandler((saveEvent) => {
+                const configPromise = pages.config.setConfig({
+                    websiteUrl: "https://yourWebsite.com",
+                    contentUrl: "https://yourWebsite.com/gray",
+                    entityId: "grayIconTab",
+                    suggestedDisplayName: "MyNewTab"
+                });
+                configPromise.
+                    then((result) => {saveEvent.notifySuccess()}).
+                    catch((error) => {saveEvent.notifyFailure("failure message")});
+            });
+        }
+
+        let saveRed = () => {
+            pages.config.registerOnSaveHandler((saveEvent) => {
+                const configPromise = pages.config.setConfig({
+                    websiteUrl: "https://yourWebsite.com",
+                    contentUrl: "https://yourWebsite.com/red",
+                    entityId: "redIconTab",
+                    suggestedDisplayName: "MyNewTab"
+                });
+                configPromise.
+                    then((result) => {saveEvent.notifySuccess();}).
+                    catch((error) => {saveEvent.notifyFailure("failure message")});
+            });
+        }
+
+        let gr = document.getElementById("gray").style;
+        let rd = document.getElementById("red").style;
+
+        const colorClickGray = () => {
+            gr.display = "block";
+            rd.display = "none";
+            pages.config.setValidityState(true);
+            saveGray()
+        }
+
+        const colorClickRed = () => {
+            rd.display = "block";
+            gr.display = "none";
+            pages.config.setValidityState(true);
+            saveRed();
+        }
+    </script>
+    ...
+</body>
+```
+
+# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
 
 ```html
 <head>
@@ -88,6 +154,7 @@ ms.locfileid: "65111641"
 </body>
 ```
 
+***
 タブのコンテンツを灰色または赤色のアイコンで表示するには、構成ページで **[灰色を選択]** または **[赤色を選択]** ボタンを選択します。
 
 次の図は、**[灰色]** のアイコンが選択されたタブコンテンツを表示します。
@@ -100,27 +167,27 @@ ms.locfileid: "65111641"
 
 適切なボタンを選択すると、`saveGray()` または `saveRed()` のいずれかがトリガーされ、以下が呼び出されます。
 
-* `settings.setValidityState(true)` を true に設定します。
-* `microsoftTeams.settings.registerOnSaveHandler()`イベント ハンドラーがトリガーされます。
+* `pages.config.setValidityState(true)` を true に設定します。
+* `pages.config.registerOnSaveHandler()`イベント ハンドラーがトリガーされます。
 * アプリの構成ページで **[保存]** が有効になっています。
 
-構成ページ コードは、構成要件が満たされ、インストールを続行できることを Teams に通知します。 ユーザーが **[保存]** を選択すると、`Settings` インターフェースで定義されているように `settings.setSettings()` のパラメーターが設定されます。 詳細については、「[設定 インターフェイス](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true)」を参照してください。 `saveEvent.notifySuccess()` は、コンテンツ URL が正常に解決されたことを示すために呼び出されます。
+構成ページ コードは、構成要件が満たされ、インストールを続行できることを Teams に通知します。 ユーザーが **[保存]** を選択すると、`Config` インターフェースで定義されているように `pages.config.setConfig()` のパラメーターが設定されます。 詳細については、「 [構成インターフェイス」を](/javascript/api/@microsoft/teams-js/pages.config.Config?view=msteams-client-js-latest&preserve-view=true)参照してください。 `saveEvent.notifySuccess()` は、コンテンツ URL が正常に解決されたことを示すために呼び出されます。
 
 >[!NOTE]
 >
 >* タイムアウトまでに保存操作 (registerOnSaveHandler へのコールバック) を完了するまでに 30 秒かかります。 タイムアウト後、一般的なエラー メッセージが表示されます。
->* `microsoftTeams.settings.registerOnSaveHandler()` を使用して保存ハンドラーを登録する場合、コールバックは `saveEvent.notifySuccess()` または `saveEvent.notifyFailure()` を呼び出して、構成の結果を示す必要があります。
+>* `registerOnSaveHandler()` を使用して保存ハンドラーを登録する場合、コールバックは `saveEvent.notifySuccess()` または `saveEvent.notifyFailure()` を呼び出して、構成の結果を示す必要があります。
 >* 保存ハンドラーを登録しない場合、ユーザーが **[保存]** を選択すると、`saveEvent.notifySuccess()` 呼び出しが自動的に行われます。
 
 ### <a name="get-context-data-for-your-tab-settings"></a>タブのコンテキストを取得する
 
 お使いのタブでは、関連するコンテンツを表示するためにコンテキスト情報が必要になる場合があります。 コンテキスト情報は、よりカスタマイズされたユーザー エクスペリエンスを提供することで、タブの魅力をさらに高めます。
 
-タブ構成に使用されるプロパティの詳細については、 [コンテキスト インターフェイス](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true)を参照してください。 コンテキスト データ変数の値を次の 2 つの方法で収集します。
+タブ構成に使用されるプロパティの詳細については、 [コンテキスト インターフェイス](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true)を参照してください。 コンテキスト データ変数の値を次の 2 つの方法で収集します。
 
 * マニフェストの `configurationURL` に URL クエリ文字列プレースホルダーを挿入します。
 
-* [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `microsoftTeams.getContext((context) =>{})` メソッドを使用します。
+* [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `app.getContext()` メソッドを使用します。
 
 #### <a name="insert-placeholders-in-the-configurationurl"></a>`configurationUrl` にプレースホルダーを挿入します。
 
@@ -144,6 +211,23 @@ ms.locfileid: "65111641"
 
 ページのアップロード後、Teams クエリ文字列プレースホルダーが関連する値で更新されます。 これらの値を取得して使用するには、構成ページにロジックを含めます。 URL クエリ文字列の操作の詳細については、MDN Web Docs の [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) を参照してください。 次のコード例は、`configurationUrl` プロパティから値を抽出する方法を示しています。
 
+# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+```html
+<script>
+   app.initialize();
+   const getId = () => {
+        let urlParams = new URLSearchParams(document.location.search.substring(1));
+        let blueTeamId = urlParams.get('team');
+        return blueTeamId
+    }
+//For testing, you can invoke the following to view the pertinent value:
+document.write(getId());
+</script>
+```
+
+# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
+
 ```html
 <script>
    microsoftTeams.initialize();
@@ -157,11 +241,34 @@ document.write(getId());
 </script>
 ```
 
+***
+
 ### <a name="use-the-getcontext-function-to-retrieve-context"></a>関数を `getContext()` 使用してコンテキストを取得する
 
-`microsoftTeams.getContext((context) => {})`関数は、呼び出されたときに [コンテキスト インターフェイス](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) を取得します。
+この関数は `app.getContext()` 、 [コンテキスト インターフェイス](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true) オブジェクトを使用して解決する Promise を返します。
 
 次のコードは、この関数を構成ページに追加してコンテキスト値を取得する例を示しています。
+
+# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+```html
+<!-- `userPrincipalName` will render in the span with the id "user". -->
+
+<span id="user"></span>
+...
+<script>
+    const contextPromise = app.getContext();
+    contextPromise.
+        then((context) => {
+            let userId = document.getElementById('user');
+            userId.innerHTML = context.user.userPrincipalName;
+        }).
+        catch((error) => {/*Unsuccessful operation*/});
+</script>
+...
+```
+
+# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
 
 ```html
 <!-- `userPrincipalName` will render in the span with the id "user". -->
@@ -177,15 +284,34 @@ document.write(getId());
 ...
 ```
 
+***
+
 ## <a name="context-and-authentication"></a>コンテキストと認証
 
 ユーザーにアプリの構成を許可する前に認証します。 そうしないと、コンテンツに認証プロトコルを持つソースが含まれる可能性があります。 詳細については、「[Microsoft Teams タブでユーザーを認証する](~/tabs/how-to/authentication/auth-flow-tab.md)」を参照してください。コンテキスト情報を使用して、認証要求と承認ページ URL を作成します。 タブ ページで使用されているすべてのドメインが `manifest.json` および `validDomains` 配列にリストされていることを確認してください。
 
 ## <a name="modify-or-remove-a-tab"></a>タブを変更または削除する
 
-マニフェストの `canUpdateConfiguration` プロパティを `true` に設定します。これにより、ユーザーはチャネル タブまたはグループ タブを変更、再構成、または名前変更できます。また、アプリに削除オプション ページを含め、構成に `removeUrl` プロパティ `setSettings()` の値を設定することで、タブが削除されたときにコンテンツがどうなるかを示します。 ユーザーは個人用タブをアンインストールできますが、変更することはできません。 詳細については、「[タブの削除ページを作成する](~/tabs/how-to/create-tab-pages/removal-page.md)」を参照してください。
+マニフェストの `canUpdateConfiguration` プロパティ `true`を . これにより、ユーザーはチャネルまたはグループ タブを変更、再構成、または名前変更できます。タブが削除されたときのコンテンツへの影響についてユーザーに通知します。 これを行うには、アプリに [削除オプション] ページを含め、(以前の) 構成でプロパティの`setConfig()`値`removeUrl`を`setSettings()`設定します。 ユーザーは個人用タブをアンインストールできますが、変更することはできません。 詳細については、「[タブの削除ページを作成する](~/tabs/how-to/create-tab-pages/removal-page.md)」を参照してください。
 
-`setSettings()`削除ページの Microsoft Teams 構成:
+`setConfig()` 削除ページのMicrosoft Teams (以前`setSettings()`の) 構成:
+
+# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+```javascript
+const configPromise = pages.config.setConfig({
+    contentUrl: "add content page URL here",
+    entityId: "add a unique identifier here",
+    suggestedDisplayName: "add name to display on tab here",
+    websiteUrl: "add website URL here //Required field for configurable tabs on Mobile Clients",
+    removeUrl: "add removal page URL here"
+});
+configPromise.
+    then((result) => {/*Successful operation*/).
+    catch((error) => {/*Unsuccessful operation*/});
+```
+
+# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
 
 ```javascript
 microsoftTeams.settings.setSettings({
@@ -197,9 +323,11 @@ microsoftTeams.settings.setSettings({
 });
 ```
 
+***
+
 ## <a name="mobile-clients"></a>モバイル クライアント
 
-Teams モバイル クライアントに、チャネルまたはグループ タブを表示するように選択した場合は、`setSettings()`の構成には`websiteUrl`の値を設定する必要があります。 詳細については、「[モバイル上のタブに関するガイダンス](~/tabs/design/tabs-mobile.md)」を参照してください。
+Teams モバイル クライアントに、チャネルまたはグループ タブを表示するように選択した場合は、`setConfig()`の構成には`websiteUrl`の値を設定する必要があります。 詳細については、「[モバイル上のタブに関するガイダンス](~/tabs/design/tabs-mobile.md)」を参照してください。
 
 ## <a name="next-step"></a>次のステップ
 
