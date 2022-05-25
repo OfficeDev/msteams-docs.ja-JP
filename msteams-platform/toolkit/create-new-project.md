@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 5da4a0ada6e116a22957a6f1f1b1f2f281501e2a
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: d44f757141d31faaf4639a58fbbd31e5729e6f02
+ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654457"
+ms.locfileid: "65656153"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>Teams Toolkit を使用して新しい Teams アプリを作成する
 
@@ -66,8 +66,8 @@ Teams Toolkit を使用して新しい Teams アプリを作成するには、�
 * [React](../sbs-gs-javascript.yml) を使用して JavaScript で Teams アプリを構築する
 * [SPFx](../sbs-gs-spfx.yml) を使用して Teams アプリを構築する
 * [C# または .NETを使用して Teams アプリをビルドする](../sbs-gs-csharp.yml)
-* Teams への通知の送信 
-* ビルド コマンド ボット
+* [Teams への通知の送信](../sbs-gs-notificationbot.yml)
+* [ビルド コマンド ボット](../sbs-gs-commandbot.yml)
 
 ## <a name="see-also"></a>関連項目
 
