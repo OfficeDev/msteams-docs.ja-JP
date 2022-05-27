@@ -3,23 +3,23 @@ title: タスク モジュールを呼び出して閉じる
 description: コード サンプルを使用したタスク モジュール、タスク情報オブジェクト、タスク モジュール サイジング、タスク モジュール ディープ リンク構文の呼び出しと取り消しについて説明します
 author: surbhigupta12
 ms.topic: conceptual
-ms.localizationpriority: high
-ms.openlocfilehash: ae2eb0e1367feb5f1b31c47396277758e2385204
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 3b33d553849376da73b3269ac9a5c0a551d6074d
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111879"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757305"
 ---
 # <a name="invoke-and-dismiss-task-modules"></a>タスク モジュールを呼び出して閉じる
 
-タスク モジュールは、タブ、ボット、またはディープ リンクから呼び出すことができます。 応答は、HTML、JavaScript、または Adaptive Card のいずれかになります。 タスク モジュールの呼び出し方法と、ユーザーの操作に対する応答の処理の方法に関しては、多くの柔軟性があります。 次の表はこのしくみを纏めています:
+タスク モジュールは、タブ、ボット、またはディープ リンクから呼び出すことができます。 応答は、HTML、JavaScript、または Adaptive Card のいずれかになります。 タスク モジュールの呼び出し方法と、ユーザーの操作の応答に対処する方法については、さまざまな柔軟性があります。 次の表はこのしくみを纏めています:
 
 | 使用して呼び出される | HTML または JavaScript を使用したタスク モジュール | Adaptive Card を使用したタスク モジュール |
 | --- | --- | --- |
 | タブ内の JavaScript | 1. オプション `submitHandler(err, result)` のコールバック関数 `tasks.startTask()` を使用して、Teams クライアント SDK 関数を使用します。 <br/><br/> 2. タスク モジュール コードで、ユーザーがアクションを実行したら、`result` オブジェクトをパラメーターとして Teams SDK 関数 `tasks.submitTask()` を呼び出します。 コールバック `submitHandler` が `tasks.startTask()` で指定されている場合、`result` をパラメーターとして Teams を呼び出します。 `tasks.startTask()` の呼び出し時にエラーが発生した場合は、代わりに文字列 `err` を使用して `submitHandler` 関数が呼び出されます。 <br/><br/> 3. `teams.startTask()` を呼び出すときに `completionBotId` を指定することもできます。 その後、代わりに `result` がボットに送信されます。 | 1. [TaskInfo オブジェクト](#the-taskinfo-object) と、タスク モジュール ポップアップに表示する Adaptive Card の JSON を含む `TaskInfo.card` を使用して、Teams クライアント SDK 関数 `tasks.startTask()` を呼び出します。 <br/><br/> 2. `tasks.startTask()` でコールバック `submitHandler` が指定されているとき、`tasks.startTask()` を呼び出すときにエラーが発生した場合、または右上の X を使用してタスク モジュール ポップアップを閉じた場合、Teams は文字列 `err` を使用してコールバックを呼び出します。 <br/><br/> 3. ユーザーが `Action.Submit` ボタンを押すと、そのオブジェクト `data` が `result` の値として返されます。 |
-| ボット カード ボタン | 1. ボット カード ボタンは、ボタンの種類に応じて、ディープ リンク URL またはメッセージ `task/fetch` の送信という 2 つの方法で、タスク モジュールを呼び出すことができます。 <br/><br/> 2. ボタンのアクション `type` が `task/fetch` であり、それは Adaptive Card のボタンの種類 `Action.Submit` である場合は、HTTP POST イベント `task/fetch invoke` がボットに送信されます。 ボットは HTTP 200 で POST に応答し、応答本文には [TaskInfo オブジェクト](#the-taskinfo-object)のラッパーが含まれています。 詳細については、「[`task/fetch`を使用したタスク モジュールの呼び出し](~/task-modules-and-cards/task-modules/task-modules-bots.md#invoke-a-task-module-using-taskfetch)」を参照してください。 Teams はタスク モジュールを表示します。 <br/><br/> 3. ユーザーがアクションを実行したら、オブジェクト `result` をパラメーターとして指定して、Teams SDK 関数 `tasks.submitTask()` を呼び出します。 ボットは、オブジェクト `result` を含むメッセージ `task/submit invoke` を受け取ります。 <br/><br/> 4. メッセージ `task/submit` に応答する 3 つの方法があります。タスクが正常に完了したことを何も行わないか、ポップアップ ウィンドウでユーザーにメッセージを表示するか、別のタスク モジュール ウィンドウを呼び出すか、です。 詳細については、[次の詳細な説明を参照してください`task/submit`](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit)。 | <ul><li> Bot Framework カードのボタンと同様に、Adaptive Card のボタンでは、タスク モジュールの呼び出しについて、ボタン `Action.openUrl` を含むディープ リンク URL、およびボタン `Action.Submit` を使用する `task/fetch` の 2 つの方法がサポートされています。 </li></ul> <br/><br/> <ul><li> Adaptive Card を使用するタスク モジュールは、HTML または JavaScript のケースとよく似ています。 主な違いは、Adaptive Card を使用しているときに JavaScript がないため、`tasks.submitTask()` を呼び出す方法がないことです。 代わりに、Teams は`Action.Submit`からオブジェクト `data` を取得し、イベント `task/submit` のペイロードとして返します。 詳細については、「[`task/submit`の柔軟性](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit)」を参照してください。 </li></ul> |
-| ディープ リンク URL <br/>[URL 構文](#task-module-deep-link-syntax) | 1. Teams は、ディープ リンクの `url` パラメーター内で指定された `<iframe>` 内に表示される URL で示されるタスク モジュールを呼び出します。 コールバック `submitHandler` はありません。 <br/><br/> 2. タスク モジュールのページの JavaScript 内で、 `tasks.submitTask()` を呼び出して、タブまたはボット カード ボタンから呼び出すときと同じように、パラメーターとしてオブジェクト `result` 内で閉じます。 ただし、完了ロジックは若干異なります。 ボットがない場合で完了ロジックがクライアント上に存在する場合は、コールバック `submitHandler` がないため、`tasks.submitTask()` の呼び出しの前のコードに完了ロジックが含まれている必要があります。 呼び出しエラーは、コンソール経由でのみ報告されます。 ボットがある場合は、ディープ リンクでパラメーター `completionBotId` を指定して、イベント `task/submit` を介してオブジェクト `result` を送信できます。 | 1. Teams は、ディープ リンクのパラメーター `card` の URL エンコード値として指定された Adaptive Card の JSON カード本体であるタスク モジュールを呼び出します。 <br/><br/> 2. ユーザーは、タスク モジュールの右上にある X を選択するか、カードのボタン `Action.Submit` を押して、タスク モジュールを閉じます。 呼び出す `submitHandler` がないため、ユーザーは Adaptive Card フィールドの値を送信するボットを持っている必要があります。 ユーザーはディープ リンクのパラメーター `completionBotId` を使用して、イベント `task/submit invoke` を使用してデータを送信するボットを指定する必要があります。 |
+| ボット カード ボタン | 1. ボット カード ボタンは、ボタンの種類に応じて、ディープ リンク URL またはメッセージ `task/fetch` の送信という 2 つの方法で、タスク モジュールを呼び出すことができます。 <br/><br/> 2. ボタンのアクション `type` が `task/fetch` であり、それは Adaptive Card のボタンの種類 `Action.Submit` である場合は、HTTP POST イベント `task/fetch invoke` がボットに送信されます。 ボットは HTTP 200 で POST に応答し、応答本文には [TaskInfo オブジェクト](#the-taskinfo-object)のラッパーが含まれています。 詳細については、「[`task/fetch`を使用したタスク モジュールの呼び出し](~/task-modules-and-cards/task-modules/task-modules-bots.md#invoke-a-task-module-using-taskfetch)」を参照してください。 Teams はタスク モジュールを表示します。 <br/><br/> 3. ユーザーがアクションを実行したら、オブジェクト `result` をパラメーターとして指定して、Teams SDK 関数 `tasks.submitTask()` を呼び出します。 ボットは、オブジェクト `result` を含むメッセージ `task/submit invoke` を受け取ります。 <br/><br/> 4. メッセージ `task/submit` に応答する 3 つの方法があります。タスクが正常に完了したことを何も行わないか、ポップアップ ウィンドウでユーザーにメッセージを表示するか、別のタスク モジュール ウィンドウを呼び出すか、です。 詳細については、[次の詳細な説明を参照してください`task/submit`](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit)。 | <ul><li> Bot Framework カードのボタンと同様に、Adaptive Card のボタンでは、タスク モジュールの呼び出しについて、ボタン `Action.openUrl` を含むディープ リンク URL、およびボタン `Action.Submit` を使用する `task/fetch` の 2 つの方法がサポートされています。 </li></ul> <br/><br/> <ul><li> アダプティブ カードを使用するタスク モジュールは、HTML または JavaScript のケースと同様に機能します。 主な違いは、アダプティブ カードを使用しているときに JavaScript がないため、呼び出す `tasks.submitTask()`方法がないことです。 代わりに、Teams は`Action.Submit`からオブジェクト `data` を取得し、イベント `task/submit` のペイロードとして返します。 詳細については、「[`task/submit`の柔軟性](~/task-modules-and-cards/task-modules/task-modules-bots.md#the-flexibility-of-tasksubmit)」を参照してください。 </li></ul> |
+| ディープ リンク URL <br/>[URL 構文](#task-module-deep-link-syntax) | 1. Teams は、ディープ リンクの `url` パラメーター内で指定された `<iframe>` 内に表示される URL で示されるタスク モジュールを呼び出します。 コールバックはありません `submitHandler` 。 <br/><br/> 2. タスク モジュールのページの JavaScript 内で、 `tasks.submitTask()` を呼び出して、タブまたはボット カード ボタンから呼び出すときと同じように、パラメーターとしてオブジェクト `result` 内で閉じます。 ただし、完了ロジックは若干異なります。 完了ロジックがクライアント上に存在する場合は、ボットがない場合はコールバックがないため `submitHandler` 、完了ロジックは呼び出し `tasks.submitTask()`の前のコードに含まれている必要があります。 呼び出しエラーは、コンソール経由でのみ報告されます。 ボットがある場合は、ディープ リンクでパラメーター `completionBotId` を指定して、イベント `task/submit` を介してオブジェクト `result` を送信できます。 | 1. Teams は、ディープ リンクのパラメーター `card` の URL エンコード値として指定された Adaptive Card の JSON カード本体であるタスク モジュールを呼び出します。 <br/><br/> 2. ユーザーは、タスク モジュールの右上にある X を選択するか、カードのボタン `Action.Submit` を押して、タスク モジュールを閉じます。 呼び出す必要がないため `submitHandler` 、アダプティブ カード フィールドの値を送信するボットがユーザーに必要です。 ユーザーはディープ リンクのパラメーター `completionBotId` を使用して、イベント `task/submit invoke` を使用してデータを送信するボットを指定する必要があります。 |
 
 次のセクションでは、タスク モジュールの特定の属性を定義するオブジェクト `TaskInfo` を指定します。
 
@@ -34,7 +34,7 @@ ms.locfileid: "65111879"
 | `width` | number または string | この属性は、タスク モジュールの幅をピクセル単位で表す数値、または `small`、`medium`、または `large` で指定します。 詳細については、「[タスク モジュールのサイズ策定](#task-module-sizing)」を参照してください。 |
 | `url` | string | この属性は、タスク モジュール内の `<iframe>` として読み込まれたページの URL です。 URL のドメインは、アプリのマニフェストにアプリの [validDomains 配列](~/resources/schema/manifest-schema.md#validdomains) に含まれている必要があります。 |
 | `card` | Adaptive Card または Adaptive Card ボット カードの添付ファイル | この属性は、タスク モジュールに表示される Adaptive Card 向けの JSON です。 ユーザーがボットから呼び出している場合は、Bot Framework オブジェクト `attachment` でAdaptive Card JSON を使用します。 タブから、ユーザーは Adaptive Card を使用する必要があります。 詳細については、「[Adaptive Card またはAdaptive Card ボット カードの添付ファイル](#adaptive-card-or-adaptive-card-bot-card-attachment)」を参照してください。 |
-| `fallbackUrl` | string | クライアントがタスク モジュール機能をサポートしていない場合、この属性はブラウザー タブ内で URL を開きます。 |
+| `fallbackUrl` | string | クライアントがタスク モジュール機能をサポートしていない場合、この属性はブラウザー タブで URL を開きます。 |
 | `completionBotId` | string | この属性は、ユーザーがタスク モジュールとやり取りした結果を送信するボット App ID を指定します。 指定した場合、ボットはイベント ペイロードに JSON オブジェクトを含むイベント `task/submit invoke` を受け取ります。 |
 
 > [!NOTE]
@@ -44,7 +44,7 @@ ms.locfileid: "65111879"
 
 ## <a name="task-module-sizing"></a>タスク モジュールのサイズ設定
 
-`TaskInfo.width` および `TaskInfo.height` に整数を使用して、タスク モジュールの高さと幅をピクセル単位で設定します。 ただし、Teams のウィンドウのサイズと画面の解像度に応じて、幅または高さの縦横比を維持しながら比例して縮小されます。
+`TaskInfo.width` および `TaskInfo.height` に整数を使用して、タスク モジュールの高さと幅をピクセル単位で設定します。 ただし、チームのウィンドウのサイズと画面の解像度に応じて、幅または高さの縦横比を維持しながら比例的に縮小されます。
 
 `TaskInfo.width` と `TaskInfo.height` が `"small"`、`"medium"`、または `"large"` の場合、次の図の赤い四角形のサイズは、使用可能な領域の割合、`width` の場合は 20%、50%、60% で、`height` の場合は 20%、50%、66% です:
 
@@ -130,9 +130,9 @@ YouTube では、Web ページにビデオを埋め込むことができます�
 
 ## <a name="adaptive-card-or-adaptive-card-bot-card-attachment"></a>Adaptive Card または Adaptive Card ボット カードの添付ファイル
 
-`card` の呼び出し方法に応じて、Adaptive Card またはAdaptive Card ボット カードの添付ファイルを使用する必要があります。これは、添付ファイル オブジェクトにラップされた Adaptive Card です。
+呼び出し `card`方法に応じて、アダプティブ カードまたはアダプティブ カード ボット カードの添付ファイルを使用する必要があります。これは、添付ファイル オブジェクトにラップされたアダプティブ カードです。
 
-タブから呼び出す場合、ユーザーはAdaptive Card を使用する必要があります。
+タブから呼び出す場合、ユーザーはアダプティブ カードを使用する必要があります。
 
 次のコードは、Adaptive Card の例を示しています:
 
@@ -154,7 +154,7 @@ YouTube では、Web ページにビデオを埋め込むことができます�
 }
 ```
 
-次のコードは、ボットから呼び出すときのAdaptive Card ボット カードの添付ファイルの例を示しています:
+次のコードは、ボットから呼び出すときのアダプティブ カード ボット カードの添付ファイルの例を示しています。
 
 ```json
 {
@@ -196,8 +196,8 @@ YouTube では、Web ページにビデオを埋め込むことができます�
 
 | 値 | 型 | 必須 | 説明 |
 | --- | --- | --- | --- |
-| `APP_ID` | string | はい | タスク モジュールを呼び出すアプリの [ID](~/resources/schema/manifest-schema.md#id)。 `APP_ID`のマニフェストの [validDomains 配列](~/resources/schema/manifest-schema.md#validdomains)には、`url` が URL 内に存在する場合、`url`のドメインが含まれている必要があります。 タスク モジュールがタブまたはボットから呼び出された場合、アプリ ID は既にわかっています。それが、アプリ ID が `TaskInfo` に含まれていない理由です。 |
-| `BOT_APP_ID` | 文字列 | いいえ | `completionBotId` の値を指定した場合、オブジェクト `result` はメッセージ `task/submit invoke` を使用して指定したボットに送信されます。 アプリのマニフェストで `BOT_APP_ID` はボットとして指定する必要があります。つまり、どのボットにも送信できません。 |
+| `APP_ID` | string | はい | タスク モジュールを呼び出すアプリの [ID](~/resources/schema/manifest-schema.md#id)。 `APP_ID`のマニフェストの [validDomains 配列](~/resources/schema/manifest-schema.md#validdomains)には、`url` が URL 内に存在する場合、`url`のドメインが含まれている必要があります。 アプリ ID は、タスク モジュールがタブまたはボットから呼び出されたときに既にわかっています。そのため、アプリ ID は含まれていません `TaskInfo`。 |
+| `BOT_APP_ID` | 文字列 | いいえ | `completionBotId` の値を指定した場合、オブジェクト `result` はメッセージ `task/submit invoke` を使用して指定したボットに送信されます。 `BOT_APP_ID` は、アプリのマニフェストでボットとして指定する必要があります。つまり、ボットに送信することはできません。 |
 
 > [!NOTE]
 > アプリに、アプリの ID として使用できる 1 つの推奨ボットがある場合、多くの場合 `APP_ID` と `BOT_APP_ID` は同じにすることができます。

@@ -3,14 +3,14 @@ title: ボットのテストおよびデバッグ
 description: Microsoft Teams でボットを作成する方法について説明します
 keywords: teams ボット テスト
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 03/20/2019
-ms.openlocfilehash: 7eae460614f33456748b2546e36c10924f49b25d
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: a95432ae2e704d6faac51185ce0d971f9f1e15ef
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111473"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755915"
 ---
 # <a name="test-and-debug-your-microsoft-teams-bot"></a>Microsoft Teams ボットのテストとデバッグ
 
@@ -55,11 +55,11 @@ ID を使用してボットとの会話を開始することもできます。 �
 2. Microsoft Teams 内からボットのアプリ ID を直接参照します。
    * ボットの [[ボット ダッシュボード]](https://dev.botframework.com/bots) ページの **[詳細]** で、ボットの **Microsoft App ID** をコピーします。
   
-     ![ボットの AppID を取得する](~/assets/images/bots_appid_botframework.png)
+      :::image type="content" source="../../assets/images/bots_appid_botframework.png" alt-text="ボット ダッシュボード":::
   
    * Microsoft Teams 内の **[チャット]** ウィンドウで、**[チャットの追加]** アイコンを選択します。 **[To:]** に、ボットの Microsoft アプリ ID を貼り付けます。
   
-     ![ボットの AppID のアップロード](~/assets/images/bots_uploading.png)
+      :::image type="content" source="../../assets/images/bots_uploading.png" alt-text="ボットの AppID のアップロード"border="true":::
 
      アプリ ID はボット名に解決する必要があります。
 
@@ -72,7 +72,7 @@ ID を使用してボットとの会話を開始することもできます。 �
 
 ユーザーは、ボットが個人用チャット メッセージを送信できないようにすることを選択できることに注意してください。 チャット チャネルでボットを右クリックし、**[ボットの会話をブロック]** を選択することで、これを切り替えることができます。 つまり、ボットは引き続きメッセージを送信しますが、ユーザーはこれらのメッセージを受信しません。
 
-![ボットをブロックする](~/assets/images/bots/botdisable.png)
+  :::image type="content" source="../../assets/images/bots/botdisable.png" alt-text="ボットをブロックする"border="true":::
 
 ## <a name="removing-a-bot-from-a-team"></a>チームからボットを削除する
 

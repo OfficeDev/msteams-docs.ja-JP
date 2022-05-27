@@ -1,15 +1,15 @@
 ---
 title: ボットにカード アクションを追加する
 description: Microsoft Teams のカード アクションと、ボットでの使用方法について説明します。
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: チーム ボット カード アクション
-ms.openlocfilehash: 7650ec5f3b027396226f8250aa353d48e8c9e0f3
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 305706f3dfad820584f7a95e231870d258caa8ed
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111578"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756486"
 ---
 # <a name="card-actions"></a>カード アクション
 
@@ -23,7 +23,7 @@ Teams のボットやメッセージ拡張機能で使用されるカードは�
 | `openUrl` | URL を既定のブラウザーで開きます。 |
 | `messageBack` | ボタンを選択するか、またはカードをタップしたユーザーからのメッセージおよびペイロードをボットに送信します。 別のメッセージをチャット ストリームに送信します。 |
 | `imBack`| ボタンを選択するか、またはカードをタップしたユーザーからのメッセージをボットに送信します。 ユーザーからボットに送信されたこのメッセージは、すべての会話参加者に表示されます。 |
-| `invoke` | ボタンを選択するか、またはカードをタップしたユーザーからのメッセージおよびペイロードをボットに送信します。このメッセージは表示されません。 |
+| `invoke` | ボタンを選択するか、またはカードをタップしたユーザーからのメッセージおよびペイロードをボットに送信します。 このメッセージは表示されません。 |
 | `signin` | OAuth フローを開始し、ボットがセキュリティで保護されたサービスに接続できるようにします。 |
 
 > [!NOTE]
@@ -94,11 +94,11 @@ CardFactory.actions([
 | プロパティ | 説明 |
 | --- | --- |
 | `title` | ボタンのラベルとして表示されます。 |
-| `displayText` | 省略可能。 アクションが実行されたときに、チャット ストリームでユーザーが使用します。 このテキストは、お使いのボットには送信されません。 |
+| `displayText` | 省略可能。 アクションが実行されたときに、チャット ストリームでユーザーが使用します。 このテキストはボットに送信されません。 |
 | `value` | アクションが実行された場合に、ボットに送信されます。 固有の識別子や JSON オブジェクトなど、アクションのコンテキストをエンコードすることができます。 |
 | `text` | アクションが実行された場合に、ボットに送信されます。 このプロパティを使用して、ボット開発を簡略化します。 コードでは、トップレベルのプロパティをチェックして、ボット ロジックをディスパッチすることができます。 |
 
-`messageBack` の柔軟性は、`displayText` を使用しないだけでは、コードが視覚的なユーザー メッセージを履歴に残すことができないことを意味します。
+柔軟性 `messageBack` とは、コードを使用 `displayText`しないだけでは、履歴に表示されるユーザー メッセージを残できないことを意味します。
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -427,7 +427,7 @@ CardFactory.actions([
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
 * [Action.Execute](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
 
-アダプティブ カード `Action.Submit`のペイロードを変更して、`Action.Submit` の `data` オブジェクトで `msteams` プロパティを使用して、既存の Bot Framework アクションをサポートすることもできます。 次のセクションでは、既存の Bot Framework アクションをアダプティブ カードで使用する方法について詳しく説明します。
+アダプティブ カード `Action.Submit`のペイロードを変更して、`Action.Submit` の `data` オブジェクトで `msteams` プロパティを使用して、既存の Bot Framework アクションをサポートすることもできます。 次のセクションでは、アダプティブ カードで既存の Bot Framework アクションを使用する方法について詳しく説明します。
 
 > [!NOTE]
 > Bot Framework アクションを含むデータに `msteams` を追加しても、アダプティブ カード タスク モジュールでは動作しません。
@@ -442,7 +442,7 @@ CardFactory.actions([
 | プロパティ | 説明 |
 | --- | --- |
 | `type` | `messageBack` に設定します。 |
-| `displayText` | 省略可能。 アクションが実行されたときに、チャット ストリームでユーザーが使用します。 このテキストは、お使いのボットには送信されません。 |
+| `displayText` | 省略可能。 アクションが実行されたときに、チャット ストリームでユーザーが使用します。 このテキストはボットに送信されません。 |
 | `value` | アクションが実行された場合に、ボットに送信されます。 固有の識別子や JSON オブジェクトなど、アクションのコンテキストをエンコードすることができます。 |
 | `text` | アクションが実行された場合に、ボットに送信されます。 このプロパティを使用して、ボット開発を簡略化します。 コードでは、トップレベルのプロパティをチェックして、ボット ロジックをディスパッチすることができます。 |
 

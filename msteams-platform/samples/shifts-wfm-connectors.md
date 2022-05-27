@@ -7,16 +7,16 @@ ms.date: 03/09/2020
 ms.localizationpriority: medium
 keywords: Microsoft Teams コネクタ kronos
 ms.author: lajanuar
-ms.openlocfilehash: cf4fa72932a231085b7b1c16a5153d2df0cd7643
-ms.sourcegitcommit: bde5f3f409fb6824a5d6ff5618e9386c85879b8b
+ms.openlocfilehash: 78c76e93040354d37770988f45f1b94d35f6102c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65604265"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757354"
 ---
 # <a name="production-ready-shifts-connectors"></a>本番対応の Shifts コネクタ  
 
-Teams Shifts Workforce Management (WFM) コネクタは、実稼働対応、オープンソース、コミュニティ主導の統合であり、ファーストライン ワーカーに役立ちます。 彼らは、Teams Shifts を使用した第一線のワーカーのデジタル変革のためのシームレスなエクスペリエンスと迅速なプロセスを提供します。
+Teams Shifts Workforce Management (WFM) コネクタは、実稼働対応、オープンソース、コミュニティ主導の統合であり、Firstline Worker に役立ちます。 彼らは、Teams Shifts を使用した Firstline Workers のデジタル変革のためのシームレスなエクスペリエンスと迅速なプロセスを提供します。
 
 各コネクタには、組織へのデプロイと統合に関する詳細なガイダンスが用意されています。 完全なソース コードは、GitHub リポジトリで使用できます。 詳細またはフォークを調べて、特定のニーズに合わせてカスタマイズできます。
 
@@ -34,7 +34,7 @@ Teams Shifts WFM コネクタの主な利点を次に示します。
 
 * **サポート&詳細なドキュメント:** すべての Shifts WFM コネクタには、ソリューションアーキテクチャ、デプロイ、および構成手順に関するエンドツーエンドのドキュメントが付属しています。 コネクタ リポジトリは監視されるため、リポジトリのGitHubの問題追跡ツールを使用して、発生した問題、課題、または困難を報告できます。
 
-* **シームレスな統合:** WFM ソリューションと Teams Shifts の統合により、ファーストライン ワーカーは、Teams Shifts アプリを使用してスケジュールとシフト時間を表示または管理し、コンテキストを別のアプリに切り替えることなく、モバイル デバイスまたはデスクトップから直接Teamsで提供されるその他のすべての豊富なコラボレーション機能を使用できます。  
+* **シームレスな統合:** WFM ソリューションと Teams Shifts の統合により、Firstline Worker は、Teams Shifts アプリを使用してスケジュールとシフト時間を表示または管理し、コンテキストを別のアプリに切り替えることなく、モバイル デバイスまたはデスクトップから直接Teamsで提供される他のすべての豊富なコラボレーション機能を使用できます。  
 
 Teamsで Shifts ビューを開きます。
 

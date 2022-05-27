@@ -4,20 +4,20 @@ description: コード サンプルを使用して、Web サイトのプレビ�
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Teamsに共有Teams共有する
-ms.openlocfilehash: b3efd268e2bded3955c2d9ab76d6dea755d06b5a
-ms.sourcegitcommit: a3567e3e1a52b8e3cb2072b037f0e75bd0f12e58
+ms.openlocfilehash: f891c3ea768b3e97a9764ec08f5f91dd7b13e821
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65439301"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757060"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Web アプリから Teams に共有する
 
-サード パーティの Web サイトでは、起動スクリプトを使用して、Web ページの Teams ボタンに Share を埋め込むことができます。 選択すると、ポップアップ ウィンドウで [Share to Teams エクスペリエンス] が起動します。 これにより、コンテキストを切り替えることなく、任意のユーザーまたはMicrosoft Teams チャネルへのリンクを直接共有できます。 このドキュメントでは、Web サイトの [Share to Teams] ボタンを作成して埋め込み、Web サイトプレビューを作成し、共有をMicrosoft Teams for Educationに拡張する方法について説明します。
+サードパーティの Web サイトは、ランチャー スクリプトを使用して、Web ページに [Teams に共有​​] ボタンを埋め込むことができます。 選択すると、ポップアップ ウィンドウで [Share to Teams エクスペリエンス] が起動します。 これにより、コンテキストを切り替えることなく、任意のユーザーまたはMicrosoft Teams チャネルへのリンクを直接共有できます。 このドキュメントでは、Web サイトの [Share to Teams] ボタンを作成して埋め込み、Web サイトプレビューを作成し、共有をMicrosoft Teams for Educationに拡張する方法について説明します。
 
 > [!NOTE]
 >
-> * MicrosoftEdge&nbsp; と Google Chrome のデスクトップ バージョンのみがサポートされています。
+> * Microsoft&nbsp;Edge と Google Chrome のデスクトップ バージョンのみがサポートされています。
 > * Freemium またはゲスト アカウントの使用はサポートされていません。  
 
 次の図は、Teamsに共有するポップアップ エクスペリエンスを示しています。
@@ -55,7 +55,7 @@ ms.locfileid: "65439301"
     </div>
     ```
 
-1. 共有リンクにユーザー認証が必要で、リンクの URL プレビューが共有されるTeamsで適切にレンダリングされない場合は、属性セットを追加して URL プレビューを`data-preview``false`無効にすることができます。
+1. 共有リンクにユーザー認証が必要であり、リンクの URL プレビューが共有されるTeamsでは適切にレンダリングされない場合は、属性セットを追加して URL プレビューを`data-preview``false`無効にすることができます。
 
     ```html
     <div
@@ -99,19 +99,19 @@ HTML の既定のバージョンまたは Open Graph バージョンのいずれ
 
 ## <a name="share-to-teams-for-education"></a>Microsoft Teams for Educationに共有する
 
-[Teamsに共有] ボタンを使用する教師の場合は`Create an Assignment`、[. これにより、共有リンクに基づいて、選択したチームに割り当てを迅速に作成できます。 次の図は、教育用にTeamsに共有を表示します。
+[共有先] ボタン Teamsを使用する教師には、共有リンクに`Create an Assignment`基づいて選択したチームに割り当てを迅速に作成できる追加オプションがあります。 次の図は、教育用にTeamsに共有を表示します。
 
 :::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="ポップアップ教育Teams共有する":::
 
 ## <a name="full-launcherjs-definition"></a>完全なlauncher.js定義
 
-| プロパティ | HTML 属性 | 型 | 既定値 | 説明 |
+| プロパティ | HTML 属性 | 種類 | 既定値 | 説明 |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
-| href | `data-href` | string | 該当なし | 共有するコンテンツの href。 |
+| href | `data-href` | 文字列 | 該当なし | 共有するコンテンツの href。 |
 | preview | `data-preview` | ブール値 (文字列として) | `true` | 共有するコンテンツのプレビューを表示するかどうかを指定します。 |
 | iconPxSize | `data-icon-px-size` | number (文字列として) | `32` | レンダリングする [Teamsに共有] ボタンのサイズ (ピクセル単位)。 |
 | msgText | `data-msg-text` | string | 該当なし | メッセージ作成ボックスのリンクの前に挿入される既定のテキスト。 最大文字数は 200 文字です。 |
-| assignInstr | `data-assign-instr` | string | 該当なし | 割り当て "命令" フィールドに挿入される既定のテキスト。 最大文字数は 200 文字です。 |
+| assignInstr | `data-assign-instr` | 文字列 | 該当なし | 割り当て "命令" フィールドに挿入される既定のテキスト。 最大文字数は 200 文字です。 |
 | assignTitle | `data-assign-title` | string | 該当なし | 割り当て "タイトル" フィールドに挿入する既定のテキスト。 最大文字数は 50 文字です。 |
 
 ### <a name="methods"></a>メソッド

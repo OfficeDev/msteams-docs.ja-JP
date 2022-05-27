@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: アプリ開発者プログラム チームのテスト
 ms.date: 11/01/2019
-ms.openlocfilehash: 5c8848196f5c5493c49f3446f788181f4123120d
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 6694c925e49d38fa15f908e58202907c7d479fa0
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296988"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757025"
 ---
 # <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Microsoft 365 テスト テナントにテスト データを追加する
 
@@ -18,7 +18,7 @@ Microsoft 365 開発者サブスクリプションを使用して、サンプル
 
 ## <a name="prerequisites"></a>前提条件
 
-1. テスト テナントがない場合は、[Microsoft 365 開発者プログラムに参加](/office/developer-program/office-365-developer-program)します。
+1. テスト テナントがない場合は、[Microsoft 365開発者プログラムに参加](/office/developer-program/office-365-developer-program)します。
 2. [Microsoft 365 開発者サブスクリプションを設定する](/office/developer-program/office-365-developer-program-get-started)
 3. [サンプル データ パックを Microsoft 365 開発者サブスクリプションと共に使用して、Users コンテンツ パックをインストールします。](/office/developer-program/install-sample-packs)
 4. [Teams PowerShell モジュールをインストールします](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)。
@@ -238,8 +238,8 @@ Microsoft 365 開発者サブスクリプションを使用して、サンプル
     }
     ```
 
-3. 管理者モードで Windows PowerShell セッションを開き、保存したスクリプトを実行します。
-4. 資格情報の入力を求められたら、開発者サブスクリプションに初めてサインアップしたときに受け取ったグローバル管理者の資格情報を入力します。
+3. Windows PowerShell セッションを管理者モードで開き、保存したスクリプトを実行します。
+4. 資格情報の入力を求められたら、開発者サブスクリプションに初めてサインアップしたときに受け取ったグローバル管理者資格情報を入力します。
 
     > [!Note]
     > スクリプトの実行に数分かかるため、PowerShell セッションを閉じないでください。 サブスクリプション内のユーザーを既定のコンテンツ パックで作成されたものから変更した場合、一部のユーザーは Teams に追加されない可能性があります。 スクリプトを実行すると、成功または失敗したアクションが表示されます。

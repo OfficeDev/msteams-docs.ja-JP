@@ -1,15 +1,14 @@
 ---
 title: Microsoft Teams アプリのデバイスアクセス許可を要求する
-keywords: Teams アプリ 機能 アクセス許可 デバイス ネイティブ スキャン qr バーコード画像 オーディオ ビデオ
-description: スキャン QR、バーコード、画像、オーディオ、ビデオ機能など、通常はユーザーの同意が必要なネイティブ機能へのアクセスを要求するためにアプリ マニフェストを更新する方法
+description: アプリ マニフェストを更新し、ユーザーの同意、場所、QR コードとバーコード、画像、オーディオ、ビデオの機能に関するネイティブ機能へのアクセスを要求する方法について説明します
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 5269aed130714bc9afbe97b170d955d79d79abc8
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 624a079d7c72f77fac4109d11cde13974359884f
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103307"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757606"
 ---
 # <a name="request-device-permissions-for-your-microsoft-teams-app"></a>Microsoft Teams アプリのデバイスアクセス許可を要求する
 
@@ -126,13 +125,13 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 例:
 
-* ユーザーに自分の場所にアクセスするように促すには、`getCurrentPosition()` を呼び出す必要があります。
+* ユーザーに自分の場所へのアクセスを求めるには、次のコマンドを呼び出す `getCurrentPosition()`必要があります。
 
     ```JavaScript
     navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
     ```
 
-* デスクトップまたは Web でカメラにアクセスするようにユーザーに促すには、`getUserMedia()` を呼び出す必要があります。
+* デスクトップまたは Web でカメラにアクセスするようにユーザーに求めるには、次のコマンドを呼び出す `getUserMedia()`必要があります。
 
     ```JavaScript
     navigator.mediaDevices.getUserMedia({ audio: true, video: true });
@@ -234,7 +233,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 ## <a name="permission-behavior-across-login-sessions"></a>ログイン セッション全体でのアクセス許可の動作
 
-デバイスのアクセス許可は、ログイン セッションごとに保存されます。 これは、たとえば別のコンピューターでチームの別のインスタンスにサインインした場合、以前のセッションからのデバイスのアクセス許可が利用できないことを意味します。 したがって、新しいセッションのデバイス権限に再同意する必要があります。 また、Teams からサインアウトするか、Teams のテナントを切り替えると、デバイスのアクセス許可が前回のログイン セッションから削除されることも意味します。  
+デバイスのアクセス許可は、ログイン セッションごとに保存されます。 つまり、別のコンピューターなど、Teamsの別のインスタンスにサインインした場合、以前のセッションのデバイスアクセス許可は使用できません。 したがって、新しいセッションのデバイス権限に再同意する必要があります。 また、Teams からサインアウトするか、Teams のテナントを切り替えると、デバイスのアクセス許可が前回のログイン セッションから削除されることも意味します。  
 
 > [!NOTE]
 > ネイティブ デバイスのアクセス許可に同意すると、_現在の_ ログイン セッションでのみ有効になります。

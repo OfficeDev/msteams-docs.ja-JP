@@ -4,12 +4,12 @@ description: Microsoft Teams の最新情報やすべての開発者向け最新
 ms.topic: reference
 ms.localizationpriority: high
 keywords: Teams の最新情報と最新の更新プログラムまたは開発者プレビューと機能
-ms.openlocfilehash: 0ce0de2efd6c38e610226db48a6a463942a7ccc6
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 2150c0dba509a1dc9c46d149538e1951cafcc955
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656167"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65672965"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -19,9 +19,11 @@ ms.locfileid: "65656167"
 
 | 日付 | 機能 | ここから見つける |
 | --- | --- | --- |
+| 05/24/2022| [*開発者向けプレビュー*] <br> Live Share SDK による強化されたコラボレーション |  Teams会議用のアプリのビルド > Live Share を使用した強化されたコラボレーション > [概要](apps-in-teams-meetings/teams-live-share-overview.md) |
 |05/24/2022| Outlook と Office が有効なアプリを Teams ストアに送信する | Microsoft 365 間でアプリを拡張する [概要](m365-apps/overview.md) |
 |05/24/2022| TeamsJS バージョン 2.0.0 のアプリ ガイダンスと新機能| ツールと SDK > [Teams JavaScript クライアント SDK](tabs/how-to/using-teams-client-sdk.md)  |
 | 05/24/2022 | Visual Studio Code 用 Teams Toolkit バージョン 4.0.0 の一般提供開始 | ［ツールと SDK］ > ［Visual Studio Code 用 Teams Toolkit］ <br> • [Teams ツールキットの概要](toolkit/teams-toolkit-fundamentals.md) <br> • [Build コマンド ボットと JavaScript](toolkit/add-capability.md) <br> • [JavaScript を使用した通知ボットのビルド](toolkit/add-capability.md) <br> • [Teams アプリ マニフェストのプレビューとカスタマイズ](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [既存の API に接続します](toolkit/add-API-connection.md) <br> • [Teams アプリに機能を追加する](toolkit/add-capability.md) <br> • [シングル サインオン エクスペリエンスを追加する](toolkit/add-single-sign-on.md) <br> • [Teams アプリにクラウド リソースを追加する](toolkit/add-resource.md) |
+| 05/24/2022 | アプリ マニフェスト バージョン 1.13 が導入されました | アプリ マニフェスト > [Microsoft Teams のマニフェスト スキーマ](resources/schema/manifest-schema.md) |
 | 05/24/2022 | GCC と GCCH のボットとメッセージ拡張機能 | • [アプリの計画] > [[概要]](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • ボットの作成> [概要](bots/what-are-bots.md) </br> • メッセージ拡張機能の作成> [概要](messaging-extensions/what-are-messaging-extensions.md) |
 
 <!--
@@ -29,6 +31,7 @@ ms.locfileid: "65656167"
 
 | Date | Update | Find here |
 | --- | --- | --- |
+|05/24/2022|Live Share SDK|  Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
 |05/24/2022| Submit your Outlook- and Office-enabled apps to the Teams store | Extend your app across Microsoft 365 > [Overview](m365-apps/overview.md) |
 |05/24/2022| App guidance and what's new in TeamsJS version 2.0.0| Tools and SDKs > [Teams JavaScript client SDK](tabs/how-to/using-teams-client-sdk.md)  |
 |05/19/2022|Bots and Message extensions in GCC and GCCH| • Plan your app > [Overview](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Build bots > [Overview](bots/what-are-bots.md) </br> • Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md) |
@@ -73,9 +76,11 @@ ms.locfileid: "65656167"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ----------------|
+|05/24/2022| SaaS オファーにリンクされたアプリを公開するための迅速な承認に関するその他のヒント | Teams ストアに公開 > 概要 > [SaaS オファーにリンクされたアプリを公開するための迅速な承認に関するその他のヒント](~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer) |
 |05/24/2022| Outlook と Office が有効なアプリを Teams ストアに送信する | Microsoft 365 間でアプリを拡張する [概要](m365-apps/overview.md) |
 |05/24/2022| TeamsJS バージョン 2.0.0 のアプリ ガイダンスと新機能| ツールと SDK > [Teams JavaScript クライアント SDK](tabs/how-to/using-teams-client-sdk.md)  |
 | 05/24/2022 | Visual Studio Code 用 Teams Toolkit バージョン 4.0.0 の一般提供開始 | ［ツールと SDK］ > ［Visual Studio Code 用 Teams Toolkit］ <br> •  [Teams ツールキットの概要](toolkit/teams-toolkit-fundamentals.md) <br> • [Build コマンド ボットと JavaScript](toolkit/add-capability.md) <br> • [JavaScript を使用した通知ボットのビルド](toolkit/add-capability.md) <br> • [Teams アプリ マニフェストのプレビューとカスタマイズ](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [既存の API に接続します](toolkit/add-API-connection.md) <br> • [Teams アプリに機能を追加する](toolkit/add-capability.md) <br> • [シングル サインオン エクスペリエンスを追加する](toolkit/add-single-sign-on.md) <br> • [Teams アプリにクラウド リソースを追加する](toolkit/add-resource.md) |
+| 05/24/2022 | アプリ マニフェスト バージョン 1.13 が導入されました | アプリ マニフェスト > [Microsoft Teams のマニフェスト スキーマ](resources/schema/manifest-schema.md) |
 |05/24/2022|GCC と GCCH のボットとメッセージ拡張機能| • [アプリの計画] > [[概要]](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • ボットの作成> [概要](bots/what-are-bots.md) </br> • メッセージ拡張機能の作成> [概要](messaging-extensions/what-are-messaging-extensions.md) |
 |04/26/2022|ボットを使用した個人用アプリのアンインストール動作 | [ボットの構築] > [ボットの会話] > [[ボットを使用した個人用アプリのアンインストール動作]](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |04/22/2022| 収益化されたアプリのテスト プレビュー | [アプリの収益化] > [[収益化アプリのテスト プレビュー]](concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md)
@@ -162,7 +167,7 @@ ms.locfileid: "65656167"
 |2021/5/13| mConnect と Skooler の情報を追加しました | [Teams との統合] > [Moodle LMS] > [[Moodle ラーニング管理システム]](resources/moodle-overview.md)|
 |2021/5/10| アプリ マニフェスト v1.10 をリリースしました | [アプリ マニフェスト] > [[マニフェストのスキーマ]](resources/schema/manifest-schema.md) |
 |2021/5/10| 新しいアプリのカスタマイズ機能 | [アプリをデザインする] > [[組織でアプリをカスタマイズできるようにする]](concepts/design/enable-app-customization.md) |
-|2021/5/7| チャットでの音声通話とビデオ通話のためのディープ リンク | [Teams との統合] > [[ディープ リンク]](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
+|2021/5/7| チャットでの音声通話とビデオ通話のためのディープ リンク | [Teams との統合] > [[ディープ リンク]](concepts/build-and-test/deep-links.md#navigate-to-an-audio-or-audio-video-call) |
 |2021/4/30|Teams ストアにアプリを発行する方法に関する新しいガイダンス | • [Teams ストアに公開する] > [[アプリを Teams ストアに公開する]](concepts/deploy-and-publish/appsource/publish.md)</br> • [Teams ストアに公開する] > [[Teams ストア検証ガイドライン]](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
 |2021/4/29 | アダプティブ カード v1.4 のユニバーサル アクションのサポート | [カードとタスク モジュールの構築] > [カードの構築] > [アダプティブ カード向けユニバーサル アクション] > [[アダプティブ カード向けユニバーサル アクション]](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |2021/4/29 | ユーザー固有のビュー | [カードとタスク モジュールの構築] > [カードの構築] > [アダプティブ カード向けユニバーサル アクション] > [[ユーザー固有のビュー]](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/User-Specific-Views.md) |
@@ -237,7 +242,7 @@ ms.locfileid: "65656167"
 | 2019/5/6 | ストア アプリ用アプリケーション認定プログラム。 | [アプリケーション認定](~/concepts/deploy-and-publish/appsource/post-publish/overview.md#complete-microsoft-365-certification) |
 | 2019/5/6 | アプリ テンプレートが利用可能になりました | [アプリ テンプレート](~/samples/app-templates.md) |
 | 2019/4/23 | 操作ベースのメッセージ拡張機能が使用可能です。 | [操作ベースのメッセージング拡張機能](~/concepts/messaging-extensions/create-extensions.md) |
-| 2019/2/18 | プライベート チャットへのディープ リンクの作成。 | [チャットへのディープ リンクの設定](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
+| 2019/2/18 | プライベート チャットへのディープ リンクの作成。 | [チャットへのディープ リンクの設定](concepts/build-and-test/deep-links.md#navigate-to-a-chat) |
 | 2019/1/23 | タブ コンテキストで SKU とライセンスの種類の情報を表示します。 | [タブ コンテキスト](~/concepts/tabs/tabs-context.md) |
 |
 </details>
@@ -251,7 +256,7 @@ ms.locfileid: "65656167"
 | -------- | --------- | ------------------ |
 | 2018 年 11 月 12 日 | リリースされたバージョンの Teams で、グループ チャットでタブを使用できるようになりました。 この作業の一環として、タブ セクションが分かりやすく作り直されました。| [構成可能なタブ](~/concepts/tabs/tabs-configurable.md) |
 | 2018/11/11 | Node JS と .NET/C# の概要は、Teams で App Studio を使用するために更新され、Node ベースの Teams アプリを Azure でホスティングするための新しいセクションが追加されました。 | [C#/.NET と App Studio を使用して Microsoft Teams プラットフォームの使用を開始する](~/get-started/get-started-dotnet-app-studio.md)、[Node JS と App Studio を使用して Microsoft Teams プラットフォームの使用を開始する](~/get-started/get-started-nodejs-app-studio.md)、[Node Teams アプリを Azure にホストする](~/get-started/get-started-nodejs-in-azure.md)|
-| 2018/11/9 | ユーザー間のプライベート チャットへのディープ リンクを作成できるようになりました。 | [チャットへのディープ リンクの設定](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
+| 2018/11/9 | ユーザー間のプライベート チャットへのディープ リンクを作成できるようになりました。 | [チャットへのディープ リンクの設定](concepts/build-and-test/deep-links.md#navigate-to-a-chat) |
 | 2018 年 11 月 8 日 | SharePoint Framework 1.7 がリリースされたことに伴い、Microsoft Teams タブを SharePoint Framework の Web パーツとして使用できる新機能が追加されました。 | [SharePoint のタブ](~/concepts/tabs/tabs-in-sharepoint.md) |
 | 2018/11/5 | **タスク モジュール** 機能がリリースされました。 タスク モジュールを使用すると、Teams アプリケーションでボットとタブの両方からモーダル ポップアップ エクスペリエンスを作成することができます。 ポップアップ内で、独自のカスタム HTML/JavaScript コードを実行したり、YouTube や Microsoft Stream ビデオなどの `<iframe>` ベースのウィジェットを表示したり、[アダプティブ カード](/adaptive-cards/)を表示したりすることができます。 | [タスク モジュールの概要](~/concepts/task-modules/task-modules-overview.md)、[タブ内のタスク モジュール](~/concepts/task-modules/task-modules-tabs.md)、[ボット内のタスク モジュール](~/concepts/task-modules/task-modules-bots.md) |
 | 2018/10/5 | Teams のデスクトップ、iOS、Android クライアントでカードの書式設定情報の更新およびテストが行われました。 | [カード](~/concepts/cards/cards.md)、[カードの書式設定](~/concepts/cards/cards-format.md) |
@@ -287,6 +292,7 @@ ms.locfileid: "65656167"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ------------------ |
+|05/24/2022| Live Share SDK による強化されたコラボレーション |  Teams会議用のアプリのビルド > Live Share を使用した強化されたコラボレーション > [概要](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 04/06/2022 | 個人用アプリまたはタブから Teams に共有する | [Teams と統合] > [Teams に共有] > [[個人用アプリまたはタブから Teams に共有]](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 02/07/2022 | ツールと SDK |Visual Studio Code 用 Teams ツールキット > </br> • [Teams アプリに機能を追加] > [[Teams アプリに機能を追加]](toolkit/add-capability.md) </br> • [クラウド リソースを Teams アプリに追加] > [[クラウド リソースを Teams アプリに追加]](toolkit/add-resource.md) |
 | 02/03/2022 | アプリ マニフェスト バージョン 1.12 が導入されました | • [アプリ マニフェスト] > [[アプリ マニフェストのスキーマ]](resources/schema/manifest-schema.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー > [[マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md) |

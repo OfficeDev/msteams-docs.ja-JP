@@ -1,17 +1,17 @@
 ---
 title: Teams でリソース固有の同意アクセス許可をテストする
 description: Postman とコード サンプルを使用した Teams でのリソース固有の同意のテストの詳細
-ms.localizationpriority: high
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: teams 認証 OAuth SSO Microsoft Azure Active Directory (Azure AD) rsc Postman Graph
-ms.openlocfilehash: a03e0be6bfab79f0e900f2dc3fb71b5bcb388350
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 60014699aa1275df787fcf553ae04671d1105f1c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111361"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757445"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Teams でリソース固有の同意アクセス許可をテストする
 
@@ -39,7 +39,7 @@ ms.locfileid: "65111361"
 
 アプリで必要なアクセス許可を指定します。
 
-|名前| 種類 | 説明|
+|名前| 型 | 説明|
 |---|---|---|
 |`authorization`|オブジェクト|アプリを実行する必要があるアクセス許可の一覧。 詳細については、「[承認](../../resources/schema/manifest-schema.md#authorization)」を参照してください。|
 
@@ -198,7 +198,7 @@ ms.locfileid: "65111361"
 
 次の値を使用して、アプリ マニフェストに [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) キーを追加します。
 
-|名前| 種類 | 説明|
+|名前| 型 | 説明|
 |---|---|---|
 |`id` |String |Azure ADアプリ ID。 詳細については、「[Azure AD ポータルでアプリを登録する](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)」を参照してください。|
 |`resource`|String| このフィールドには RSC での操作はありませんが、エラー応答を回避するために値を追加し、値を指定する必要があります。任意の文字列が実行されます。|

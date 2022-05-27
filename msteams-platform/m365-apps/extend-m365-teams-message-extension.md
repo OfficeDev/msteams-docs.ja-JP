@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: a2f509aa56606c0e0afb07c1e74903d8b4e515f6
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: f9c4b342a0be797a1ac20f9f195ae969b51a0187
+ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654856"
+ms.locfileid: "65656146"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Microsoft 365 間で Teams メッセージ拡張機能を拡張する
 
@@ -57,7 +57,7 @@ Outlook で実行が既に有効になっている[サンプル メッセージ�
     :::image type="content" source="images/toolkit-palatte-search-sample.png" alt-text="「Create a new Teams app」と VS Code コマンド パレットに入力して、Teams のサンプル オプションを一覧表示する":::
 
     このサンプルは、Teams Toolkit サンプル ギャラリーにある *NPM Search Connector* としても使用できます。 Teams Toolkit ウィンドウで、*[開発]* > *[サンプルを見る]* > **[NPM Search Connector]** の順に選択します。
-    
+
     :::image type="content" source="images/toolkit-search-sample.png" alt-text="Teams Toolkit サンプル ギャラリーにある NPM Search Connector サンプル":::
 
 1. ワークスペース フォルダーのために、ローカル コンピューター上の場所を選択します。
@@ -121,8 +121,7 @@ Microsoft Teams では、メッセージ拡張機能は、ホストする Web �
 1. **[アプリ登録]** を開きます。
 1. アプリケーションの名前を選択して、アプリの登録を開きます。
 1. *[管理]* の下の **[API の公開]** を選択します。
-
-**[承認されたクライアント アプリケーション]** セクションで、次のすべての `Client Id` 値が一覧表示されていることを確認します。
+1. **[承認されたクライアント アプリケーション]** セクションで、次のすべての `Client Id` 値が一覧表示されていることを確認します。
 
 |Microsoft 365 クライアント アプリケーション | クライアント ID |
 |--|--|
@@ -180,7 +179,7 @@ Outlook on the web で実行されているアプリをプレビューするに�
 
     :::image type="content" source="images/outlook-desktop-compose-more-apps.png" alt-text="コンポジション ウィンドウ リボンにある [その他のアプリ] をクリックして、メッセージ拡張機能を使用する":::
 
-メッセージ拡張機能が一覧表示されます。 これを呼び出すと、隣接するウィンドウが開き、検索結果が表示されます。
+メッセージ拡張機能が一覧表示され、隣接するウィンドウが開き、検索結果が表示されます。
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 

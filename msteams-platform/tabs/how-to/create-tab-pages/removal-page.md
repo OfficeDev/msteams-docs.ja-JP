@@ -6,12 +6,12 @@ keywords: teams tabs group channel configurable remove delete
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: fe0445099958af7cd9eccc831fe22fa2e94cbcc5
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 0d8d466a2dd2504b74f72b342345576b6f823a89
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672937"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757466"
 ---
 # <a name="create-a-removal-page"></a>削除ページを作成する
 
@@ -121,7 +121,7 @@ ms.locfileid: "65672937"
 > * イベント ハンドラーを `registerOnRemoveHandler` 呼び出すと、メソッドに応答するまでに 15 秒かかります。 既定では、Teamsは、呼び出`setValidityState(true)`さない場合でも 5 秒後に **[削除]** ボタンを有効にします。
 > * ユーザーが **[削除]** を選択すると、アクションが完了したかどうかにかかわらず、Teamsは 30 秒後にタブを削除します。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [モバイルのタブ](~/tabs/design/tabs-mobile.md)

@@ -5,12 +5,12 @@ description: モーダル ポップアップ エクスペリエンスを追加�
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: c262de1bab6a29331350166160a4b51503e4b8aa
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: a7d7778aa4d38dbc879255c449b93590d04f00e2
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073553"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756598"
 ---
 # <a name="task-modules"></a>タスク モジュール
 
@@ -22,12 +22,12 @@ ms.locfileid: "65073553"
 
 タスク モジュールは、タスクの開始と完了、ビデオや Power Business Intelligence (BI) ダッシュボードなどの豊富な情報の表示に役立ちます。 多くの場合、ポップアップ エクスペリエンスは、タブまたは会話ベースのボット エクスペリエンスと比較して、ユーザーがタスクを開始して完了する方が自然です。
 
-タスク モジュールは、Microsoft Teams タブの基礎に基づいて構築されます。 これらは基本的に、ポップアップ ウィンドウ内のタブです。 同じ SDK を使用しているため、タブを構築している場合は、タスク モジュールの作成に既に精通しています。
+タスク モジュールは、Microsoft Teams タブの基礎に基づいて構築されます。 これらは本質的に、ポップアップ ウィンドウ内のタブです。 これらは同じ SDK を使用するため、タブを構築している場合は、タスク モジュールの作成に既に精通しています。
 
 タスク モジュールは次の 3 つの方法で呼び出すことができます。
 
 * チャネル タブまたは個人用タブ: Microsoft Teams タブ SDK を使用すると、タブのボタン、リンク、またはメニューからタスク モジュールを呼び出すことができます。詳細については、[タブでのタスク モジュールの使用に関するページを参照してください](~/task-modules-and-cards/task-modules/task-modules-tabs.md)。
-* ボット: ボットから送信された [カード](~/task-modules-and-cards/cards/cards-reference.md) のボタンを使用します。 これは、チャネル内のすべてのユーザーがボットで何をしているかを確認する必要がない場合に便利です。 たとえば、ユーザーがチャネル内の投票に応答する場合、そのポーリングのレコードが作成されているのを確認することは役に立ちません。 詳細については、[Teams ボットからのタスク モジュールの使用](~/task-modules-and-cards/task-modules/task-modules-bots.md)に関するページを参照してください。
+* ボット: ボットから送信された [カード](~/task-modules-and-cards/cards/cards-reference.md) のボタンを使用します。 これは、チャネル内のすべてのユーザーがボットで何をしているかを確認する必要がない場合に便利です。 たとえば、ユーザーがチャネル内の投票に応答する場合、そのポーリングが作成されているレコードを表示することは役に立ちません。 詳細については、[Teams ボットからのタスク モジュールの使用](~/task-modules-and-cards/task-modules/task-modules-bots.md)に関するページを参照してください。
 * ディープ リンクからTeams外: URL を作成して、どこからでもタスク モジュールを呼び出すこともできます。 詳細については、 [タスク モジュールのディープ リンク構文に関するページを](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax)参照してください。
 
 ## <a name="components-of-a-task-module"></a>タスク モジュールのコンポーネント
@@ -46,11 +46,11 @@ ms.locfileid: "65073553"
     > [!NOTE]
     > 現在、タスク モジュールがボットから呼び出されたときにイベントを検出 `err` することはできません。
 
-5. 青い四角形は、[TaskInfo オブジェクト](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object)のプロパティを使用して独自の Web ページを読み込む場合に`url`、Web ページが表示される場所です。 詳細については、「 [タスク モジュールのサイズ設定](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-sizing)」を参照してください。
+5. 青い四角形は、[TaskInfo オブジェクト](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object)のプロパティを使用して独自の Web ページを読み込む場合に`url`、Web ページが表示される場所です。 詳細については、「[タスク モジュールのサイズ策定](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-sizing)」を参照してください。
 6. [TaskInfo オブジェクト](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object)のプロパティを使用してアダプティブ カードを`card`表示する場合は、パディングが追加されます。 詳細については、 [HTML または JavaScript タスク モジュールのタスク モジュール CSS に関するページ](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-css-for-html-or-javascript-task-modules)を参照してください。
 7. **[サインアップ**] を選択すると、[アダプティブ カード] ボタンがレンダリングされます。 独自のページを使用する場合は、独自のボタンを作成します。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [タスク モジュールを呼び出して閉じる](~/task-modules-and-cards/task-modules/invoking-task-modules.md)

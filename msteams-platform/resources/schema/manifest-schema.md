@@ -2,20 +2,22 @@
 title: マニフェスト スキーマの参照
 description: Microsoft Teams のマニフェスト スキーマについて説明します
 ms.topic: reference
-ms.author: lajanuar
 ms.localizationpriority: high
 keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: 135e4c7cfd82c0ca47075e8339bf9123fe094a9a
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 788a8f5542510e3232c3f97bf12584f08f12d0f6
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104008"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65672909"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参照: Microsoft Teams のマニフェスト スキーマ
 
-Teams マニフェストは、アプリが Microsoft Teams 製品にどのように統合されるかを説明します。 マニフェストは、[`https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json) でホストされているスキーマに準拠している必要があります。 以前のバージョン 1.0、1.1、... 1.12 もサポートされています (URL で "v1.x" を使用)。
+Microsoft Teams アプリ マニフェストでは、アプリが Microsoft Teams 製品にどのように統合されるかを説明します。 アプリ マニフェストは、[`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json) でホストされているスキーマに準拠している必要があります。 以前のバージョン 1.0、1.1、...、1.12、および現在の 1.13 バージョン (以下の注を参照) はそれぞれサポートされています (URL で "v1.x" を使用)。
 各バージョンで行われた変更の詳細については、[マニフェスト変更ログ](https://github.com/OfficeDev/microsoft-teams-app-schema/releases)を参照してください。
+
+> [!Important]
+> Microsoft Teams アプリ マニフェスト スキーマのバージョン `1.13` では、[Teams アプリを Outlook および Office に拡張できます](../../m365-apps/overview.md)。 Teams 専用アプリの場合は、バージョン `1.12` (またはそれ以前) を使用します。 それ以外の場合は、1.12 と 1.13 スキーマは同じです。 詳細については、[Teams JavaScript クライアント SDK](../../m365-apps/overview.md) の概要を参照してください。
 
 次のスキーマ サンプルは、すべての拡張オプションを示しています。
 
@@ -23,8 +25,8 @@ Teams マニフェストは、アプリが Microsoft Teams 製品にどのよう
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.12/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.12",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.13",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
     "packageName": "com.example.myapp",
@@ -344,7 +346,7 @@ Teams マニフェストは、アプリが Microsoft Teams 製品にどのよう
 
 **必須** — 文字列
 
-このマニフェストが使用しているマニフェスト スキーマのバージョン。
+このマニフェストが使用しているマニフェスト スキーマのバージョン。 Outlook および Office で Teams アプリのサポートを有効にするには、`1.13` を使用します。Teams 専用アプリに対しては `1.12` (またはそれ以前) を使用します。
 
 ## <a name="version"></a>version
 
@@ -630,6 +632,16 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 |`id`|string|36 文字|✔|Azure AD のアプリケーション ID を指定します。 この ID は GUID である必要があります。|
 |`resource`|string|2048 文字|✔|SSO の認証トークンを取得するためのアプリのリソース URL。 </br> **注:** SSO を使用していない場合は、エラー応答を回避するために、このフィールドにダミーの文字列値 (たとえば、https://notapplicable) をアプリ マニフェストに入力してください。 |
 
+## <a name="graphconnector"></a>graphConnector
+
+**省略可能** — オブジェクト
+
+アプリの Graph コネクタ構成を指定します。 これが存在する場合は [、webApplicationInfo.id](#webapplicationinfo) も指定する必要があります。
+
+|名前| 型| 最大サイズ | 必須 | 説明|
+|---|---|---|---|---|
+|`notificationUrl`|string|2048 文字|✔|アプリケーションの Graph コネクタ通知を送信する URL。|
+
 ## <a name="showloadingindicator"></a>showLoadingIndicator
 
 **省略可能** — ブール値
@@ -642,7 +654,7 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 
  **省略可能** — ブール値
 
-タブ ヘッダー バーの有無にかかわらず、個人用アプリがレンダリングされる場所を示します。既定値は **false** です。
+個人用アプリがタブ ヘッダー バーなしでレンダリングされるかどうかを示します (全画面表示モードを示します)。 既定値は **false** です。
 
 > [!NOTE]
 > `isFullScreen` は、組織に発行されたアプリでのみ機能します。

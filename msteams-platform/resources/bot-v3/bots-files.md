@@ -3,14 +3,14 @@ title: ボットからファイルを送受信する
 description: 個人用スコープ、チャネル スコープ、グループチャット スコープの Graph API を使用して、ボットを通じてファイルを送受信する方法について説明します。 v3 Bot Framework SDK に基づくコード サンプルを使用して Teams ボット API を使用します。
 keywords: Teams ボット ファイル送信受信
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: b12e8e79e7d8d5180803004b4e0f238446a8fc98
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 2baf356b8ec5cf0f7d3e68af81a34ccd178e90b9
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110359"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755903"
 ---
 # <a name="send-and-receive-files-through-your-bot"></a>ボットを介してファイルを送受信する
 
@@ -89,7 +89,7 @@ ms.locfileid: "65110359"
 
 このデスクトップ メッセージには、ファイルをアップロードするためのユーザー権限を要求する単純な添付オブジェクトが含まれています。
 
-![ファイルのアップロードに対するユーザー権限を要求する同意カードのスクリーンショット](../../assets/images/bots/bot-file-consent-card.png)
+:::image type="content" source="../../assets/images/bots/bot-file-consent-card.png" alt-text="ファイルのアップロードに対するユーザー権限を要求する同意カードのスクリーンショット" border="true":::
 
 このモバイル メッセージには、ファイルをアップロードするためのユーザー権限を要求する添付オブジェクトが含まれています。
 

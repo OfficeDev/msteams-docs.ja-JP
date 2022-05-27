@@ -4,12 +4,12 @@ description: Teams アプリを Microsoft 365 に拡張するための前提条�
 ms.date: 05/24/2022
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: aede01c48f9e5e4ddbfbfebac9a5fa504225ca62
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: fc96d8883f0ad09ebd321a392481e75d92ae8641
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656181"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668026"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Teams アプリを Microsoft 365 全体に拡張するための開発環境を設定する
 
@@ -32,8 +32,8 @@ Microsoft 365 全体に Teams アプリを拡張するための開発環境は�
 また、テナントのサイドローディングを有効にする必要もあります。
 
 1. Microsoft 365 管理センター (https://admin.microsoft.com) テストテナントの認証情報でサインインし、サイドパネルから **Teams** を選択し、*Microsoft Teams 管理センター* を開きます。
-1. 選択: ［Teams アプリ］ > [アプリの管理] > **［組織全体のアプリ設定］**
-1. **［カスタム アプリ］** で、オプションの *［カスタム アプリとの対話］* トグルを切り替えます
+1. 選択: ［Teams アプリ］ > [アプリの管理] > **［組織全体のアプリ設定］**。
+1. **［カスタム アプリ］** で、オプションの *［カスタム アプリとの対話］* トグルを切り替えます。
 
     :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="Teams 管理センターからカスタム アプリのサイドローディングを有効にします":::
 
@@ -99,5 +99,7 @@ Microsoft Teams クライアントから [[パブリック開発者プレビュ�
 
 Microsoft 365 間で実行する Teams アプリを作成または更新します。
 
-* [Office と Outlook の [Teams パーソナル] タブを有効にする](extend-m365-teams-personal-tab.md)
-* [Outlook の Teams メッセージング 拡張機能を有効にする](extend-m365-teams-message-extension.md)
+> [!div class="nextstepaction"]
+> [Office と Outlook の [Teams パーソナル] タブを有効にする](extend-m365-teams-personal-tab.md)
+> [!div class="nextstepaction"]
+> [Outlook の Teams メッセージング 拡張機能を有効にする](extend-m365-teams-message-extension.md)

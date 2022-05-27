@@ -1,17 +1,17 @@
 ---
 title: Microsoft Graph を使用して、Teams でのプロアクティブなボットのインストールとメッセージングを承認する
 description: Teams でのプロアクティブ メッセージングとその実装方法について説明します。 コード サンプルを使用してプロアクティブなアプリのインストールとメッセージングを有効にする方法について説明します。
-ms.localizationpriority: high
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
 keywords: teams プロアクティブ メッセージング チャットのインストール Graph
-ms.openlocfilehash: 7915d958cf73b916921a6346b4eca1f8ce0280e7
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 7a133b91aabe920b109b644331bc6526cd950858
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111515"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757704"
 ---
 # <a name="proactive-installation-of-apps-using-graph-api-to-send-messages"></a>Graph API を使用してメッセージを送信するアプリの事前インストール
 
@@ -26,7 +26,7 @@ ms.locfileid: "65111515"
 
 ## <a name="proactive-app-installation-in-teams"></a>Teams でのプロアクティブ アプリのインストール
 
-ボットがユーザーに事前にメッセージを送信するには、個人用アプリとして、またはユーザーがメンバーであるチームにインストールする必要があります。 場合によっては、アプリをインストールしていないユーザーや以前に操作したユーザーに対して事前にメッセージを送信する必要があります。 たとえば、組織内のすべてのユーザーに重要な情報をメッセージで送信する必要がある場合です。 このようなシナリオでは、Microsoft Graph API を使用して、ユーザーのボットを事前にインストールできます。
+ボットがユーザーに事前にメッセージを送信するには、個人用アプリとして、またはユーザーがメンバーであるチームにインストールする必要があります。 場合によっては、アプリをインストールしていないユーザーや以前に操作したユーザーに対してプロアクティブにメッセージを送信する必要があります。 たとえば、組織内のすべてのユーザーに重要な情報をメッセージで送信する必要がある場合は、Microsoft Graph APIを使用して、ユーザーのボットをプロアクティブにインストールできます。
 
 ## <a name="permissions"></a>アクセス許可
 
@@ -155,7 +155,7 @@ Content-Type: application/json
 
 **Microsoft Graph ページ リファレンス:** [チャットの取得](/graph/api/chat-get?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
-1. アプリの `{teamsAppInstallationId}` が必要です。 カスタム サイトがない場合、次の URL を使用できます。
+1. アプリの `{teamsAppInstallationId}` が必要です。 お持ちでない場合は、次を使用します。
 
     **HTTP GET** リクエスト:
 
@@ -167,7 +167,7 @@ Content-Type: application/json
 
 1. 次の要求を行って、`chatId` をフェッチします。
 
-    **HTTP GET** 要求 (アクセス許可 — `TeamsAppInstallation.ReadWriteSelfForUser.All`):  
+    **HTTP GET** 要求 (アクセス許可—`TeamsAppInstallation.ReadWriteSelfForUser.All`):  
 
     ```http
     GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
@@ -177,7 +177,7 @@ Content-Type: application/json
 
     次のリクエストで `chatId` を取得することもできますが、より広範な `Chat.Read.All` 権限が必要です。
 
-    **HTTP GET** 要求 (アクセス許可 — `Chat.Read.All`):
+    **HTTP GET** 要求 (アクセス許可—`Chat.Read.All`):
 
     ```http
     GET https://graph.microsoft.com/v1.0/users/{user-id}/chats?$filter=installedApps/any(a:a/teamsApp/id eq '{teamsAppId}')

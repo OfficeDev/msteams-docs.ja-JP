@@ -20,8 +20,12 @@
   items:
     - name: 概要を開始する
       href: get-started/get-started-overview.md
-    - name: JavaScript を使用して初めてのアプリを構築する
+    - name: JavaScript を使用して初めてのタブ アプリを構築する
       href: sbs-gs-javascript.yml
+    - name: JavaScript を使用して初めてのボット アプリを構築する
+      href: sbs-gs-bot.yml
+    - name: JavaScript を使用して初めてのメッセージング拡張アプリを構築する
+      href: sbs-gs-msgext.yml
     - name: Blazor を使用して初めてのアプリを構築する
       href: sbs-gs-blazorupdate.yml
     - name: SPFx を使用して初めてのアプリを構築する

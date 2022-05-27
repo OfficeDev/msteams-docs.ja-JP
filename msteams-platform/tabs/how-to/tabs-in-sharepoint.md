@@ -3,15 +3,15 @@ title: SharePoint に [Teams] タブを追加する
 author: surbhigupta
 description: コード サンプルを使用して、既存の [Teams] タブを SharePoint Framework Web パーツとして SharePoint に展開する方法について説明します。
 keywords: teams タブ Sharepoint フレームワーク開発
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: c11356750f78a015c8d404f519f45476f947b80a
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 54fd6858a115662e24944a692458bb3d4e8034a0
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111690"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757312"
 ---
 # <a name="add-teams-tab-to-sharepoint"></a>SharePoint に [Teams] タブを追加する
 
@@ -72,9 +72,9 @@ SharePoint Framework を使用して Microsoft Teams タブを実装すること
 
 ## <a name="introduction"></a>はじめに
 
-ここで使用するタブは、必要な統合作業に重点を置くために、Azure で既にホストされています。
+ここで使用されるタブは、必要な統合作業に重点を置くために、Azure で既にホストされています。
 
-使用されているサンプル アプリは Talent Management アプリケーションです。 チーム内のオープン ポジションの候補者の採用プロセスを管理します。 サンプル Teams アプリをビルドし、Teams に導入します。 実際の人材管理アプリケーションを作成しないでください。
+使用されているサンプル アプリは Talent Management アプリケーションです。 チーム内のオープン ポジションの候補者の採用プロセスを管理します。 サンプル Teams アプリをビルドし、Teams に導入します。 実際のタレント管理アプリケーションを作成しないでください。
 
 ### <a name="benefits-of-this-approach"></a>このアプローチの利点
 
@@ -95,7 +95,7 @@ Teams タブを SharePoint に追加するには、次の手順に従って、Te
 
     ![カスタム アプリのアップロード](~/assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png)
 
-1. アップロードするファイルは、**ダウンロード** フォルダーにあります。 TalentMgmt-Azure.zip と呼ばれます。 次の図は、対応する画面を示しています:
+1. アップロードするファイルは、**ダウンロード** フォルダーにあります。 TalentMgmt-Azure.zipと呼ばれます。 次の図は、対応する画面を示しています:
 
     ![TalentMgmt in Azure](~/assets/images/tabs/tabs-in-sharepoint/talentmgmt-azure.png)
 
@@ -117,7 +117,7 @@ Teams タブを SharePoint に追加するには、次の手順に従って、Te
 
 1. SharePoint ページ作成エクスペリエンスを確認できます。 ページに **My Teams タブ** という名前を付けます。
 
-1. `+` ボタンを選択して Web パーツ ツールボックスを開き、**Contoso HR** という名前の Teams タブを選択します。 Web パーツはアルファベット順に並べ替えられます。 長いリストの場合は、検索バーを使用して見つけ出すことができます。 これにより、Teams タブを含む Web パーツがキャンバスに作成されます。次の図は、タブ ビューを示します:
+1. `+` ボタンを選択して Web パーツ ツールボックスを開き、**Contoso HR** という名前の Teams タブを選択します。 Web パーツはアルファベット順に並べ替えられます。 長いリストの場合は、検索バーを使用して検索できます。 これにより、Teams タブを含む Web パーツがキャンバスに作成されます。次の図は、タブ ビューを示します:
 
    ![タブ ビュー](~/assets/images/tabs/tabs-in-sharepoint/image071.png)
 

@@ -4,12 +4,12 @@ description: ローカルおよびクラウドでホストされる環境で Mic
 keywords: チームがローカル クラウド ホストのホストでデバッグ アプリを実行する
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: ba4a07b2a83901f537512067894865bf1c59895d
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 7db690ff7d622e327d5029b6cb6fe8c3b101ada6
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296995"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757011"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Microsoft Teams アプリをテストしてデバッグするためのセットアップを選択する
 
@@ -54,17 +54,19 @@ Microsoft Teams アプリをローカルで実行するための準備として 
 > [!NOTE]
 > ngrok を停止して再起動すると、URL が変更されます。
 
-使用している機能に基づいてプロジェクトで ngrok を使用するには、コード、構成、manifest.json ファイル内のすべての URL 参照を、この URL エンドポイントを使用するように置き換える必要があります。
+使用している機能に基づいてプロジェクトで ngrok を使用するには、コード、構成、manifest.json ファイル内のすべての URL 参照を置き換えて、この URL エンドポイントを使用する必要があります。
 
-Microsoft Bot Framework に登録されているボットの場合は、この新しい ngrok エンドポイントを使用するようにボットのメッセージング エンドポイントを更新します。 たとえば、「 `https://2d1224fb.ngrok.io/api/messages` 」のように入力します。 ngrok が動作していることを検証する場合は、Bot Framework ポータルのテスト チャット ウィンドウでボットの応答をテストします。 このテストでも、エミュレーターと同様に、Teams 固有の機能にアクセスすることはできません。
+Microsoft Bot Framework に登録されているボットの場合は、この新しい ngrok エンドポイントを使用するようにボットのメッセージング エンドポイントを更新します。 たとえば、「 `https://2d1224fb.ngrok.io/api/messages` 」のように入力します。 ngrok が動作していることを検証する場合は、Bot Framework ポータルのテスト チャット ウィンドウでボットの応答をテストします。 エミュレーターと同様に、このテストでは、Teams固有の機能にアクセスすることはできません。
 
 > [!NOTE]
 > * ボットのメッセージング エンドポイントを更新するには、Bot Framework を使用する必要があります。 [Bot Framework のボットのリスト](https://dev.botframework.com/bots)から、ボットを選択します。 ボットを Microsoft Azure に移行する必要はありません。 また、[App Studio](~/concepts/build-and-test/app-studio-overview.md) を使用してメッセージング エンドポイントを更新することもできます。
+
+> [!WARNING]
 > * App Studio を使用している場合は、Teams アプリを構成、配布、管理するための開発者ポータルを試してみることをお勧めします。App Studio は 2022 年 6 月 30 日までに非推奨になります
 
 ## <a name="cloud-hosted"></a>クラウド ホスト型
 
-外部アドレス指定可能な任意のサービスを使用して、開発および運用コードとその HTTPS エンドポイントをホストできます。 機能が同じサービスにあることを期待するものではありません。 `manifest.json` ファイルの [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) オブジェクトに一覧表示されている Microsoft Teams アプリからすべてのドメインにアクセスする必要があります。
+外部アドレス指定可能な任意のサービスを使用して、開発および運用コードとその HTTPS エンドポイントをホストできます。 機能が同じサービスに存在するとは限らない。 `manifest.json` ファイルの [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) オブジェクトに一覧表示されている Microsoft Teams アプリからすべてのドメインにアクセスする必要があります。
 
 > [!NOTE]
 > セキュリティで保護された環境を確保するには、参照する正確なドメインとサブドメインについて明示的に指定し、それらのドメインを制御する必要があります。たとえば、`*.azurewebsites.net` は推奨されませんが、`contoso.azurewebsites.net` をお勧めします。

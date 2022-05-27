@@ -3,21 +3,21 @@ author: heath-hamilton
 description: 既存の Web アプリと Microsoft Teams を統合するためのベスト プラクティスまたは考慮事項
 ms.author: surbhigupta
 ms.date: 08/26/2020
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 title: Teams 統合に関する考慮事項
-ms.openlocfilehash: 2e1d749a34d0dec2a38e84e57aa6147c791264c1
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: e963019783699ebe0ed20b8e45632d03d6631e71
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111662"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757641"
 ---
 # <a name="considerations-for-teams-integration"></a>Teams 統合に関する考慮事項
 
 Web アプリを Teams と適切に統合することで、Teams のソーシャルおよびコラボレーション機能に適した Web アプリを作成できます。
   
-Teams と統合できるさまざまな種類のアプリは次のとおりです。
+Teamsと統合できるさまざまな種類のアプリは次のとおりです。
 
 * **スタンドアロン アプリ**: スタンドアロン アプリは、単一ページまたは大規模で複雑なアプリです。 ユーザーは Teams でその一部の側面を使用できます。
 * **コラボレーション アプリ**: Teams 固有のソーシャル機能とコラボレーション機能用に既に構築されたアプリ。
@@ -30,7 +30,7 @@ Teams と統合できるさまざまな種類のアプリは次のとおりで�
 
 ***統合シナリオ**: スタンドアロン アプリ、コラボレーション アプリ、SharePoint*
 
-Teams アプリには、必要で想定される共同作業機能が含まれている必要があります。 アプリの統合を操作するには、Teams の開発用語を理解しておくことが重要です。
+Teams アプリには、必要で想定される共同作業機能が含まれている必要があります。 アプリ統合を操作するには、開発用語Teams理解しておくことが重要です。
 
 |アプリの一般的な機能   |Teams プラットフォーム機能   |
 |----------|-----------|
@@ -112,11 +112,11 @@ Teams 内の情報や機能へのリンクを作成できます。 [ディープ
 
 [webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) よりも柔軟性が高いため、マルチスレッド会話には Teams アプリで[ボット](../bots/what-are-bots.md)を使用します。
 
-ボットでは、個々のユーザーまたはチャネルに **プロアクティブ メッセージ** を送信することもできます。 プロアクティブ メッセージは、ボットに送信されるメッセージではなく、外部イベントによってトリガーされるプロンプトなしのメッセージです。 たとえば、ボットがインストールされたとき、または新しいユーザーがチャネルに参加したときに、ボットはウェルカム メッセージを送信します。
+ボットでは、個々のユーザーまたはチャネルに **プロアクティブ メッセージ** を送信することもできます。 プロアクティブ メッセージは、ボットに送信されるメッセージではなく、外部イベントによってトリガーされるプロンプトなしのメッセージです。 たとえば、ボットがインストールされたとき、または新しいユーザーがチャネルに参加したときに、ウェルカム メッセージを送信します。
 
 プロアクティブ メッセージを送信するには、Teams 固有の識別子が必要です。 情報をキャプチャするには、[名簿またはユーザー プロファイル データをフェッチする](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)か、[会話イベントをサブスクライブする](../bots/how-to/conversations/subscribe-to-conversation-events.md)か、[Microsoft Graph](/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?context=graph/context#proactive-messaging-in-teams)を使用します。
 
-過剰なメッセージでユーザーにスパムを送信しないでください。 Teams 機能でサポートされている場合、ユーザーはアプリの通知設定を構成できます。
+過剰なメッセージでユーザーをスパムにしないでください。 Teams 機能でサポートされている場合、ユーザーはアプリの通知設定を構成できます。
 通知メッセージの例を次に示します: **プロンプトされていないメッセージを送信しないでください**。
 
 ## <a name="use-sharepoint-for-file-and-data-storage"></a>ファイルとデータ ストレージに SharePoint を使用する

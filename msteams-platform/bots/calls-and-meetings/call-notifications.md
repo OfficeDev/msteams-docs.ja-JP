@@ -1,55 +1,55 @@
 ---
 title: 着信通知
-description: 着信呼び出しからの通知の処理、コード サンプルを使用した呼び出しのリダイレクトと認証に関する詳細な技術情報について説明します。
+description: コード サンプルを使用した着信呼び出しからの通知の処理、呼び出しのリダイレクトと認証に関する詳細な技術情報について説明します
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: 呼び出し通知コールバック地域アフィニティ
+keywords: 呼び出しの通知コールバックリージョンのアフィニティ
 ms.date: 04/02/2019
-ms.openlocfilehash: d7939bd7fa613636d225e6f5437434c394a8c0bd
-ms.sourcegitcommit: 6906ba7e2a6e957889530b0a117a852c43bc86a6
+ms.openlocfilehash: e2844649764284f74e242967106adbfdc8edf8cf
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63783996"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757144"
 ---
 # <a name="incoming-call-notifications"></a>着信通知
 
-会議[の呼び出しと](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)会議ボットを登録するMicrosoft Teams URL を呼び出す Webhook について説明します。 この URL は、ボットへのすべての着信呼び出しの Webhook エンドポイントです。
+[Microsoft Teamsの通話と会議ボットを登録する](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)際に、呼び出し URL の Webhook について説明します。 この URL は、ボットへのすべての着信呼び出しの Webhook エンドポイントです。
 
 ## <a name="protocol-determination"></a>プロトコルの決定
 
-受信通知は、以前のプロトコルと互換性を保つレガシ[形式Skypeされています](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)。 呼び出しを Microsoft Graph プロトコルに変換するには、ボットが通知が従来の形式であるかどうかを判断し、次の応答を提供する必要があります。
+受信通知は、以前の[Skype プロトコル](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)との互換性を確保するために従来の形式で提供されます。 呼び出しを Microsoft Graph プロトコルに変換するには、ボットは通知がレガシ形式であるかどうかを判断し、次の応答を提供する必要があります。
 
 ```http
 HTTP/1.1 204 No Content
 ```
 
-ボットは通知を再び受信しますが、今回は Microsoft Graphされます。
+ボットは再び通知を受け取りますが、今度は Microsoft Graph プロトコルで通知を受け取ります。
 
-リアルタイム メディア プラットフォームの将来のリリースでは、アプリケーションがサポートするプロトコルを構成して、従来の形式で最初のコールバックを受信しないようにすることができます。
+リアルタイム メディア プラットフォームの今後のリリースでは、アプリケーションがサポートするプロトコルを構成して、レガシ形式の初期コールバックを受信しないようにすることができます。
 
-次のセクションでは、展開に地域アフィニティ用にリダイレクトされる着信呼び出し通知の詳細について説明します。
+次のセクションでは、リージョンアフィニティにリダイレクトされた着信呼び出し通知について、デプロイにリダイレクトする方法について詳しく説明します。
 
-## <a name="redirects-for-region-affinity"></a>地域アフィニティのリダイレクト
+## <a name="redirects-for-region-affinity"></a>リージョン アフィニティのリダイレクト
 
-Webhook は、呼び出しをホストするデータ センターから呼び出します。 呼び出しは任意のデータ センターで開始され、地域アフィニティは考慮されません。 通知は、GeoDNS 解決に応じて展開に送信されます。 アプリケーションが最初の通知ペイロードを調べ、それ以外の場合は別の展開で実行する必要があると判断した場合、アプリケーションは次の応答を提供します。
+呼び出しをホストしているデータ センターから Webhook を呼び出します。 呼び出しはどのデータ センターでも開始され、リージョンのアフィニティは考慮されません。 GeoDNS の解決に応じて、通知がデプロイに送信されます。 アプリケーションが最初の通知ペイロードまたはその他の方法を調べることで、別のデプロイで実行する必要があると判断した場合、アプリケーションは次の応答を提供します。
 
 ```http
 HTTP/1.1 302 Found
 Location: your-new-location
 ```
 
-ボットが応答 API を使用して着信呼び出しに応答 [できます](/graph/api/call-answer?view=graph-rest-1.0&tabs=http&preserve-view=true) 。 この特定の呼び出 `callbackUri` しを処理するを指定できます。 これは、呼び出 `callbackUri` しが特定のパーティションによって処理され、この情報を適切なインスタンスにルーティングするために埋め込むステートフル インスタンスに役立ちます。
+ボットが応答 API を使用して着信呼び出しに [応答](/graph/api/call-answer?view=graph-rest-1.0&tabs=http&preserve-view=true) できるようにします。 この特定の `callbackUri` 呼び出しを処理するように指定できます。 これは、呼び出しが特定のパーティションによって処理され、適切なインスタンスへのルーティングのためにこの情報 `callbackUri` を埋め込むステートフル インスタンスに便利です。
 
-次のセクションでは、Webhook に投稿されたトークンを調によるコールバックの認証の詳細を示します。
+次のセクションでは、Webhook に投稿されたトークンを調べることでコールバックを認証する方法について詳しく説明します。
 
-## <a name="authenticate-the-callback"></a>コールバックの認証
+## <a name="authenticate-the-callback"></a>コールバックを認証する
 
-ボットは、Webhook に投稿されたトークンを検査して要求を検証する必要があります。 API が Webhook に投稿する度に、HTTP POST メッセージには、承認ヘッダーに OAuth トークンがベアラー トークンとして含まれます。対象ユーザーはアプリケーションのアプリ ID です。
+ボットは、Webhook に投稿されたトークンを調べて、要求を検証する必要があります。 API が Webhook に投稿するたびに、HTTP POST メッセージには承認ヘッダーに OAuth トークンがベアラー トークンとして含まれ、対象ユーザーはアプリケーションのアプリ ID になります。
 
-アプリケーションは、コールバック要求を受け入れる前に、このトークンを検証する必要があります。
+コールバック要求を受け入れる前に、アプリケーションでこのトークンを検証する必要があります。
 
-コールバックを認証するには、次のサンプル コードを使用します。
+次のサンプル コードは、コールバックを認証するために使用されます。
 
 ```http
 POST https://bot.contoso.com/api/calls
@@ -68,7 +68,7 @@ Authentication: Bearer <TOKEN>
 ]
 ```
 
-OAuth トークンは次の値を持ち、次の値で署名Skype。
+OAuth トークンには次の値があり、Skypeによって署名されます。
 
 ```json
 {
@@ -81,22 +81,22 @@ OAuth トークンは次の値を持ち、次の値で署名Skype。
 }
 ```
 
-公開されている OpenID 構成を <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> 使用して、トークンを確認できます。 各 OAuth トークンの値は、次のように使用されます。
+公開されている <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> OpenID 構成を使用して、トークンを確認できます。 各 OAuth トークン値は、次のように使用されます。
 
 * `aud` 対象ユーザーは、アプリケーションに指定されたアプリ ID URI です。
-* `tid` は、ユーザーのテナント id Contoso.com。
-* `iss`はトークン発行者です。 `https://api.botframework.com`
+* `tid` は、Contoso.com のテナント ID です。
+* `iss` はトークン発行者です。 `https://api.botframework.com`.
 
-コード処理では、Webhook はトークンを検証し、有効期限が切れていないか確認し、発行された OpenID 構成によって署名されているかどうかを確認する必要があります。 コールバック要求を受け入れる前に、aud がアプリ ID と一致するかどうかを確認する必要があります。
+コード処理では、Webhook でトークンを検証し、有効期限が切れていないことを確認し、発行された OpenID 構成によって署名されているかどうかを確認する必要があります。 コールバック要求を受け入れる前に、aud がアプリ ID と一致するかどうかを確認する必要もあります。
 
-詳細については、「受信要求 [の検証」を参照してください](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs)。
+詳細については、「 [受信要求の検証](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs)」を参照してください。
 
 ## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
-> [アプリケーションホスト型メディア ボットの要件と考慮事項](~/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)
+> [アプリケーションでホストされるメディア ボットの要件と考察](~/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)
 
 ## <a name="see-also"></a>関連項目
 
 * [自動応答を設定する](/microsoftteams/create-a-phone-system-auto-attendant)
-* [Android およびビデオ電話デバイスの Microsoft Teams会議室の自動応答Teams設定する](/microsoftteams/set-up-auto-answer-on-teams-android)
+* [Android および Teams ビデオ電話デバイスの Microsoft Teams Rooms 自動応答を設定する](/microsoftteams/set-up-auto-answer-on-teams-android)

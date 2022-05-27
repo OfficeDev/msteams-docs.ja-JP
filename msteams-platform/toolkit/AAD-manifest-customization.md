@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: a0a7a44986e0e672cfc4e4bcd723019b914b4904
-ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
+ms.openlocfilehash: 9ffd4e4fd8f346f49d715f2537942d02cd4892d9
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656776"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755938"
 ---
 # <a name="azure-ad-manifest"></a>Azure AD マニフェスト
 
@@ -260,11 +260,11 @@ Teams アプリケーション開発ライフサイクルのさまざまな段�
 
     Teams Toolkitは、ローカル開発中に次の関数を実行します (F5 と呼ばれます)。
 
-    * ファイルを `state.local.json` 読み取って、既存の Azure AD アプリケーションを見つけます。 Azure AD アプリケーションが既に存在する場合は、既存の Azure AD アプリケーションを再利用Teams Toolkitそれ以外の場合は、ファイルを使用して新しいアプリケーションを作成する`aad.template.json`必要があります
+    * ファイルを `state.local.json` 読み取って、既存の Azure AD アプリケーションを見つけます。 Azure AD アプリケーションが既に存在する場合は、既存の Azure AD アプリケーションを再利用Teams Toolkit。それ以外の場合は、ファイルを使用して新しいアプリケーションを作成する`aad.template.json`必要があります。
 
     * マニフェスト ファイルを使用した新しい Azure AD アプリケーションの作成時に、追加のコンテキスト (ローカル デバッグ エンドポイントを必要とする replyUrls プロパティなど) を必要とするマニフェスト ファイル内の一部のプロパティを最初に無視します。
 
-    * ローカル開発環境の起動が正常に完了すると、作成ステージ中に使用できない Azure AD アプリケーションの identifierUris、replyUrls、およびその他のプロパティが適宜更新されます。
+    * ローカル開発環境の起動が正常に完了すると、作成ステージ中に使用できない Azure AD アプリケーションの identifierUris、replyUrls、およびその他のプロパティがそれに応じて更新されます。
 
     * Azure AD アプリケーションに対して行った変更は、次のローカル デバッグ セッション中に読み込まれます。 [Azure AD アプリケーションの変更](https://github.com/OfficeDev/TeamsFx/wiki/)を手動で適用する Azure AD アプリケーションの変更を確認できます。
 
@@ -272,19 +272,19 @@ Teams アプリケーション開発ライフサイクルのさまざまな段�
 
       クラウド リソースをプロビジョニングし、アプリケーションをクラウドに移行するときにアプリケーションをデプロイする必要があります。 ローカル開発などの段階で、Teams Toolkitは次の作業を行います。
 
-      * ファイルを `state.{env}.json` 読み取って、既存の Azure AD アプリケーションを見つけます。 Azure AD アプリケーションが既に存在する場合は、既存の Azure AD アプリケーションを再利用Teams Toolkitそれ以外の場合は、ファイルを使用して新しいアプリケーションを作成する`aad.template.json`必要があります
+      * ファイルを `state.{env}.json` 読み取って、既存の Azure AD アプリケーションを見つけます。 Azure AD アプリケーションが既に存在する場合は、既存の Azure AD アプリケーションを再利用Teams Toolkit。それ以外の場合は、ファイルを使用して新しいアプリケーションを作成する`aad.template.json`必要があります。
 
-      * マニフェスト ファイルを使用して新しい Azure AD アプリケーションを作成するときに、追加のコンテキストを必要とするマニフェスト ファイル内の一部のプロパティ (replyUrls プロパティにはフロントエンドやボット エンドポイントが必要) を最初に無視します。
+      * マニフェスト ファイルを使用した新しい Azure AD アプリケーションの作成時に、追加のコンテキストを必要とするマニフェスト ファイルの一部のプロパティ (replyUrls プロパティにはフロントエンドやボット エンドポイントが必要) を最初に無視します。
 
-      * 他のリソースのプロビジョニングが完了すると、Azure AD アプリケーションの identifierUris と replyUrl が適切なエンドポイントに従って更新されます
+      * 他のリソースのプロビジョニングが完了すると、Azure AD アプリケーションの identifierUris と replyUrl が適切なエンドポイントに従って更新されます。
 
 5. **アプリケーションをビルドするには**
 
-    * クラウド コマンドにデプロイすると、プロビジョニングされたリソースにアプリケーションがデプロイされます。 行った Azure AD アプリケーションの変更のデプロイは含まれません。
+    * クラウド コマンドにデプロイすると、プロビジョニングされたリソースにアプリケーションがデプロイされます。 加えた Azure AD アプリケーションの変更のデプロイは含まれません。
 
-    * [リモート環境に Azure AD アプリケーションの変更をデプロイして、リモート環境用](#deploy-azure-ad-application-changes-for-remote-environment)に Azure AD アプリケーションの変更をデプロイする方法を確認できます。
+    * リモート環境用に [Azure AD アプリケーションの変更をデプロイして、リモート環境用](#deploy-azure-ad-application-changes-for-remote-environment) に Azure AD アプリケーションの変更をデプロイする方法を確認できます。
 
-    * Teams Toolkitは、Azure AD マニフェスト テンプレート ファイルに従って Azure AD アプリケーションを更新します
+    * Teams Toolkitは、Azure AD マニフェスト テンプレート ファイルに従って Azure AD アプリケーションを更新します。
 
 ## <a name="limitations"></a>制限事項
 
@@ -306,10 +306,10 @@ Teams アプリケーション開発ライフサイクルのさまざまな段�
 
 2. 現在、`requiredResourceAccess`プロパティは、ユーザーが読み取り可能なリソース アプリケーション名またはアクセス許可名の文字列のみを API に使用`Microsoft Graph``Office 365 SharePoint Online`できます。 他の API の場合は、代わりに UUID を使用する必要があります。 次の手順に従って、Azure portalから ID を取得できます。
 
-    * [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)に新しい Azure AD アプリケーションを登録する
-    * Azure AD アプリケーション ページから選択 `API permissions` する
-    * 目的のアクセス許可を追加する場合に選択 `add a permission` します
-    * プロパティから [選択] `requiredResourceAccess` を選択`Manifest`すると、API とアクセス許可の ID を見つけることができます
+    * Azure portalに新しい Azure AD アプリケーションを登録[します](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)。
+    * Azure AD アプリケーション ページから選択 `API permissions` します。
+    * 目的のアクセス許可を追加する場合に選択 `add a permission` します。
+    * プロパティから `requiredResourceAccess` 、API とアクセス許可の ID を選択`Manifest`します。
 
 ## <a name="see-also"></a>関連項目
 

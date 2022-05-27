@@ -4,12 +4,12 @@ description: 個人用アプリまたはタブに埋め込まれたTeamsで共�
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Teamsに共有Teams共有する
-ms.openlocfilehash: 59185b9e2531a0ca61c97ceba50b4f71f06c45e9
-ms.sourcegitcommit: a3567e3e1a52b8e3cb2072b037f0e75bd0f12e58
+ms.openlocfilehash: c40263504b77a8a848251431de1eb49b85253b77
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65439364"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757263"
 ---
 # <a name="share-to-teams-from-personal-app-or-tab"></a>個人用アプリまたはタブから Teams に共有する
 
@@ -70,7 +70,7 @@ microsoftTeams.sharing.shareWebContent({
 |応答コード|説明|
 |---|---|
 | **100** | API は現在のプラットフォームではサポートされていません。 |
-| **404** | 指定されたファイルが指定された場所に見つかりませんでした。 |
+| **404** | 指定したファイルが指定された場所に見つかりませんでした。 |
 | **500** | 必要な操作の実行中に内部エラーが発生しました。 |
 | **501** | API は現在のコンテキストではサポートされていません。 |
 | **1000** | ユーザーによって拒否されたアクセス許可。 |

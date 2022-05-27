@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview of multiple environment
 ms.date: 11/29/2021
-ms.openlocfilehash: 684951451519ca5e1aaa82344de802259df22a63
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: 72d980849d48498dddedb87db35ae15ca69e4cda
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653281"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756934"
 ---
 # <a name="manage-multiple-environments"></a>複数の環境を管理する
 
@@ -45,9 +45,9 @@ ms.locfileid: "65653281"
 1. サイドバーで **Teams** アイコンを選択します
 2. **[+Teams:** 次の図に示すように、[環境] セクションの下に新しい環境を作成するを選択します。
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="作成":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="作成":::
 
-複数の環境がある場合は、同じ環境を作成するために既存の環境を選択する必要があります。 このコマンドは、選択した既存の環境のファイルの `config.<newEnv>.json` 内容を `azure.parameters.<newEnv>.json` 、作成した新しい環境にコピーします。
+   複数の環境がある場合は、同じ環境を作成するために既存の環境を選択する必要があります。 このコマンドは、選択した既存の環境のファイルの `config.<newEnv>.json` 内容を `azure.parameters.<newEnv>.json` 、作成した新しい環境にコピーします。
 
 ## <a name="select-target-environment"></a>ターゲット環境を選択する
 
@@ -204,18 +204,21 @@ Teams アプリ マニフェスト テンプレートはすべての環境で共
     },
     ...
   }
- ```
-3. **すべての** 環境に対してプロビジョニング コマンドを実行して、リモート環境でアプリ名を更新します。 Teams Toolkitを使用してプロビジョニング コマンドを実行するには、「プロビジョニング」を参照してください[。](provision.md#provision-using-teams-toolkit)
+
+  ```
+
+3. **すべての** 環境に対してプロビジョニング コマンドを実行して、リモート環境でアプリ名を更新します。 Teams Toolkitを使用してプロビジョニング コマンドを実行するには、「[プロビジョニング](provision.md#provision-using-teams-toolkit)」を参照してください。
+
 <br></details>
 <br>
+
 <details>
 <br><summary><b>シナリオ 4: さまざまな環境用に Azure リソースをカスタマイズする</b></summary>
 fx/configs/azure.parameters に対応する環境を編集することで、Azure 関数名を指定するなど、環境ごとに Azure リソースをカスタマイズできます。{env}.json. ファイル。
 
-Bicep テンプレートとパラメーター ファイルの詳細については、「 [クラウド リソース](provision.md)
-</details> を br <プロビジョニングする」を参照してください。
-
-
+Bicep テンプレートとパラメーター ファイルの詳細については、[クラウド リソースのプロビジョニング](provision.md)に関するページを参照してください。
+</details>
+</br>
 
 ## <a name="see-also"></a>関連項目
 

@@ -2,16 +2,16 @@
 title: Teams Toolkit と Visual Studio を使用してアプリを構築する
 description: Microsoft Teams Toolkitを使用してVisual Studio内に直接優れたカスタム アプリの構築をはじめましょう。 Visual Studioでアプリを構成し、アプリを検証し、Visual Studioおよび開発者ポータルから発行する方法について説明します。
 keywords: teams Visual Studio ツールキット
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 1/13/2022
 ms.author: johmil
-ms.openlocfilehash: 751ea9b8a0f4592c5884c4d49450972cef7e6623
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 9dbe606b99ef493a136381667bbd1c1da1f955b0
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111312"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756458"
 ---
 # <a name="teams-toolkit-for-visual-studio"></a>Visual Studio 用 Teams ツールキット
 
@@ -31,7 +31,7 @@ Teams ToolkitのVisual Studio用拡張機能を使用すると、Teams用の新�
 5. 右側の **[ASP.NET と Web 開発**] セクションを展開し、オプションのコンポーネントの一覧で **Microsoft Teams 開発ツール** を選択します。
 6. Visual Studio インストーラーで [**インストール**] または [**変更**] を選択して、インストール プロセスを完了します。
 
-![インストールされているVisual Studio インストーラーでMicrosoft Teams開発ツールを選択します。](images/teams-development-tools-vs-installer.png)
+   ![インストールされているVisual Studio インストーラーでMicrosoft Teams開発ツールを選択します。](images/teams-development-tools-vs-installer.png)
 
 ## <a name="get-started-quickly-with-a-new-project"></a>新しいプロジェクトですぐに使用を開始する
 
@@ -49,7 +49,7 @@ Microsoft Teams アプリ プロジェクト テンプレートを使用する�
 1. **[新しいプロジェクトの構成]** ウィンドウで、**[プロジェクト名]** ボックスに、「_HelloTeams_」と入力します。それから **[作成]** を選択します。
 1. **[新しい Teams アプリケーションの作成]** ウィンドウで、**[アカウントの選択]** セレクターを使用して、Microsoft 365 アカウントを選択するかサインインします。それから **[作成]** を選択します。
 
-![Visual Studioで新しいMicrosoft Teamsアプリ プロジェクトを作成する。](images/teams-toolkit-vs-new-project.png)
+   ![Visual Studioで新しいMicrosoft Teamsアプリ プロジェクトを作成する。](images/teams-toolkit-vs-new-project.png)
 
 Visual Studioが新しいプロジェクトを開き、Teams ToolkitがTeams開発者ポータルに新しいプロジェクトを設定します。 上記の手順で選択したMicrosoft 365 アカウントにリンクされたTeams組織に対してプロジェクトが追加され、新しいAzure Active Directory登録が作成されます。 これは、Teamsでアプリを実行するために必要なものです。
 

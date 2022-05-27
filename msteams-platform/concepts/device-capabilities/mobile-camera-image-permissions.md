@@ -4,14 +4,14 @@ author: Rajeshwari-v
 description: コード例を使用して、Teams JavaScript クライアント SDK を使用してメディア機能を有効にする方法について説明します
 keywords: カメラ イメージ マイク機能ネイティブ デバイスのアクセス許可メディア API
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: c9b31bf6fe97446bfbccdd1861612ec938733f88
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: a65f39d3796bc0dacaa80f6badba7a011716edbf
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111263"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756759"
 ---
 # <a name="integrate-media-capabilities"></a>メディア機能を統合する
 
@@ -24,11 +24,11 @@ Teams アプリにデバイス機能を統合する主な利点は、ネイテ�
 
 効果的な統合を実現するには、ネイティブ メディア機能を使用できる、それぞれの API を呼び出すための [コード スニペット](#code-snippets) を十分に理解している必要があります。
 
-Teams アプリのエラーを処理するには、[API 応答エラー](#error-handling) を理解しておくことが重要です。
+Teams アプリのエラーを処理するには[、API 応答エラー](#error-handling)について理解しておくことが重要です。
 
 > [!NOTE]
 >
-> * 現在、Microsoft Teams によるメディア機能と QR バーコード スキャナー機能のサポートは、モバイル クライアントでのみ利用できます。
+> * 現在、メディア機能のサポートMicrosoft Teamsは、モバイル クライアントでのみ使用できます。
 > * 現在のところ Teams は、マルチウィンドウ アプリ、タブ、および会議のサイド パネルへのデバイスのアクセス許可をサポートしていません。
 > * デバイスのアクセス許可はブラウザーによって異なります。 詳細については、「[ブラウザー デバイスのアクセス許可](browser-device-permissions.md)」を参照してください。
 
@@ -89,10 +89,10 @@ Teams アプリでこれらのエラーを適切に処理する必要があり�
 | **404** | FileNotFound | 指定されたファイルが指定された場所に見つかりません。|
 | **500** | 内部エラーです(_E) | 必要な操作の実行中に内部エラーが発生しました。|
 | **1000** | PERMISSION_DENIED |アクセス許可がユーザーによって拒否されました。|
-| **3000** | NO_HW_SUPPORT | 基になるハードウェアはこの機能をサポートしていません。|
+| **3000** | NO_HW_SUPPORT | 基になるハードウェアでは、この機能はサポートされていません。|
 | **4000**| 引数が無効です | いくつかの引数は無効です。|
 |  **8000** | USER_ABORT |ユーザーが操作を中止します。|
-| **9000**| OLD_PLATFORM | プラットフォーム コードが古く、この API は実装されていません。|
+| **9000**| OLD_PLATFORM | プラットフォーム コードは古く、この API は実装されていません。|
 | **10,000**| SIZE_EXCEEDED |  戻り値が大きすぎて、プラットフォーム サイズの境界を超えています。|
 
 ## <a name="code-snippets"></a>コード スニペット

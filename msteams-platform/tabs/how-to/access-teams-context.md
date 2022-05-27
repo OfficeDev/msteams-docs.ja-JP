@@ -4,12 +4,12 @@ description: タブにユーザー コンテクストを付与する方法を説
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: チーム タブ ユーザー コンテキスト
-ms.openlocfilehash: 319aea79c38466969f84e1e00d44b127a77ef92f
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 04a0e751a8a532895b183690e00bc058c94d3346
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672921"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755945"
 ---
 # <a name="get-context-for-your-tab"></a>タブのコンテキストを取得する
 
@@ -110,13 +110,16 @@ ms.locfileid: "65672921"
 
 ページでこれらの値のいずれかを使用する場合、フィールドの `channelType` 値は `Shared` 、ページが共有チャネルに読み込まれ、適切に応答できるかどうかを判断する必要があります。
 
+> [!NOTE]
+> ユーザーがTeamsデスクトップまたは Web クライアントを再起動または再読み込みするたびに、新しい sessionID が作成されます。これは、Teams セッションによって追跡されますが、ユーザーがTeams アプリを終了し、Teams プラットフォームで再読み込みすると、アプリ セッションによって追跡される新しいアプリ sessionID が作成されます。
+
 ## <a name="handle-theme-change"></a>テーマの変更を処理する
 
 テーマが変更された場合は、アプリを登録して通知を受け取 `app.registerOnThemeChangeHandler(function(theme) { /* ... */ })`ることができます。
 
 `theme`関数内の引数は、値`default`が 、 、 または `dark``contrast`.
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [アダプティブ カードを使用してタブをビルドする](~/tabs/how-to/build-adaptive-card-tabs.md)

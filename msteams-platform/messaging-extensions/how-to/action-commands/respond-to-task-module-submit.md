@@ -5,12 +5,12 @@ description: メッセージング拡張機能のアクション コマンドか
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: de1924881b6e3732fc4b2170a496f234244be84e
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 16ad47f3b57dc5704ad106f8ec3593a2234d29d3
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297199"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757564"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>タスク モジュールの送信アクションに応答する
 
@@ -21,14 +21,14 @@ ms.locfileid: "65297199"
 
 対応には、以下のオプションがあります。
 
-* 応答なし: 送信アクションを使用して、外部システムでプロセスをトリガーし、ユーザーにはフィードバックを提供しません。 長時間実行する処理や、交互にフィードバックを行う場合に有効です。 たとえば、[プロアクティブ メッセージ](~/bots/how-to/conversations/send-proactive-messages.md)を使用してフィードバックを送信できます。
+* 応答なし: 送信アクションを使用して、外部システムでプロセスをトリガーし、ユーザーにはフィードバックを提供しません。 実行時間の長いプロセスやフィードバックを交互に提供する場合に便利です。 たとえば、[プロアクティブ メッセージ](~/bots/how-to/conversations/send-proactive-messages.md)を使用してフィードバックを送信できます。
 * [別のタスク モジュール](#respond-with-another-task-module): 複数のステップがある操作の一部として、追加のタスク モジュールで応答します。
 * [カードによる応答](#respond-with-a-card-inserted-into-the-compose-message-area): ユーザーが操作したり、メッセージに挿入したりできるカードで応答できます。
 * [ボットからのアダプティブ カード](#bot-response-with-adaptive-card): アダプティブ カードを会話に直接挿入します。
 * [ユーザーに認証を要求します](~/messaging-extensions/how-to/add-authentication.md)。
 * [追加の構成をユーザーに要求します](~/get-started/first-message-extension.md)。
 
-認証または構成の場合、ユーザーがプロセスを完了すると、元の呼び出しが Web サービスに再送信されます。 次の表は、メッセージ拡張機能の呼び出し場所 `commandContext` に基づいて使用可能な応答の種類を示しています。
+認証または構成の場合、ユーザーがプロセスを完了すると、元の呼び出しが Web サービスに再送信されます。 次の表は、メッセージ拡張機能の呼び出し場所 `commandContext` に基づいて、使用可能な応答の種類を示しています。
 
 |応答の種類 | 作成 | コマンド バー | メッセージ |
 |--------------|:-------------:|:-------------:|:---------:|
@@ -215,18 +215,18 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 1. ユーザーは、タスク モジュールを呼び出すメッセージ拡張機能を選択します。
 1. ユーザーは、タスク モジュールを使用して投票を構成します。
 1. タスク モジュールを送信した後、アプリは提供された情報を使用してアダプティブ カードとして投票を構築し、クライアントに `botMessagePreview` 応答として送信します。
-1. その後、ユーザーは、ボットがチャネルに挿入する前に、アダプティブ カード メッセージをプレビューできます。 アプリがチャネルのメンバーでない場合は、`Send` を選択して追加します。
+1. その後、ユーザーは、ボットがチャネルに挿入する前に、アダプティブ カード メッセージをプレビューできます。 アプリがチャネルのメンバーでない場合は、アプリを選択して追加します `Send` 。
 
     > [!NOTE]
     >
     > * ユーザーは `Edit` にメッセージを選択して、元のタスク モジュールに返すこともできます。
     > * アダプティブ カードとの対話では、メッセージの送信前に変更されます。
     >
-1. ユーザーが `Send` を選択すると、ボットからチャネルにメッセージが投稿されます。
+1. ユーザーが選択 `Send`すると、ボットはメッセージをチャネルに投稿します。
 
 ## <a name="respond-to-initial-submit-action"></a>最初の送信アクションに応答する
 
-タスク モジュールは、ボットがチャネルに送信するカードのプレビューを使用して、最初の `composeExtension/submitAction` メッセージに応答する必要があります。 ユーザーは送信する前にカードを確認し、ボットがまだインストールされていない場合は会話にボットをインストールしようとします。
+タスク モジュールは、ボットがチャネルに送信するカードのプレビューを使用して、最初の `composeExtension/submitAction` メッセージに応答する必要があります。 ユーザーは送信する前にカードを確認し、ボットが既にインストールされている場合は会話にボットをインストールしようとします。
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 

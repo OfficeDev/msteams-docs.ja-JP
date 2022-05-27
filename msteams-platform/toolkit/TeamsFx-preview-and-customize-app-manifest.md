@@ -6,12 +6,12 @@ ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: ebb6f7e66f09c3ebbc3834577f924f5a34bb8583
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: 94f02ce31a9af3acb78fc6fef6f071df02bfd565
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653882"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755861"
 ---
 # <a name="edit-teams-app-manifest"></a>アプリ マニフェストTeams編集する
 
@@ -51,7 +51,7 @@ ms.locfileid: "65653882"
 
 **リモート環境でマニフェスト ファイルをプレビューするには**
 
-* [**development** in Teams Toolkit extension] で [**クラウドでプロビジョニング**] を選択するか、 
+* [**development** in Teams Toolkit extension] で [**クラウドでプロビジョニング**] を選択するか、
 * トリガー Teams: コマンド パレットから **クラウドにプロビジョニング** します。
  
 リモート Teams アプリの構成を生成し、パッケージとプレビュー マニフェストをフォルダーの下に`build/appPackage`ビルドします。
@@ -72,25 +72,25 @@ ms.locfileid: "65653882"
 
 マニフェスト ファイルをプレビューしたら、次の方法でローカルの変更を Dev Portal に同期できます。
 
-1. アプリ マニフェストTeamsデプロイする
+1. アプリ マニフェストTeamsデプロイします。
 
    Teamsアプリ マニフェストは、次のいずれかの方法でデプロイできます。
 
-   * ファイルに `manifest.template.json` 移動し、右クリックしてコンテキスト メニューから選択 `Deploy Teams app manifest` します
+   * ファイルに `manifest.template.json` 移動し、右クリックしてコンテキスト メニューから選択 `Deploy Teams app manifest` します。
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-manifest.png" alt-text="マニフェストをデプロイする":::
 
-   * コマンド パレットからトリガーする`Teams: Deploy Teams app manifest`
+   * コマンド パレットからトリガー `Teams: Deploy Teams app manifest` します。
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/deploy-command.png" alt-text="コマンド パレットから配置する":::
 
-2. Teams プラットフォームに更新する
+2. Teams プラットフォームに更新します。
 
    次のいずれかの方法で、Teams プラットフォームに更新できます。
 
-   * の左上隅にある **プラットフォームTeams更新を** 選択します。`manifest.{env}.json`
+   * の左上隅にある`manifest.{env}.json`**プラットフォームTeams更新を** 選択します。
 
-   * **トリガー Teams: マニフェストをTeamsプラットフォーム** のメニュー バーに更新します。`manifest.{env}.json`
+   * **トリガー Teams: の** メニュー バー`manifest.{env}.json`にあるプラットフォームTeamsマニフェストを更新します。
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png" alt-text="チームの更新":::
 
@@ -114,12 +114,11 @@ Teamsをトリガーすることもできます。コマンド パレットか�
 
 構成ファイルの変更またはテンプレートの変更によりマニフェスト ファイルが古い場合は、次のいずれかのアクションを選択します。
 
-* **プレビューのみ**: ローカル マニフェスト ファイルは、現在の構成に従って上書きされます
-* **プレビューと更新**: ローカル マニフェスト ファイルは現在の構成に従って上書きされ、プラットフォームTeams更新されます
-* **キャンセル**: アクションは実行されません
+* **プレビューのみ**: ローカル マニフェスト ファイルは、現在の構成に従って上書きされます。
+* **プレビューと更新**: ローカル マニフェスト ファイルは、現在の構成に従って上書きされ、プラットフォームTeams更新されます。
+* **キャンセル**: アクションは実行されません。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre" border="true":::
-
 
 ## <a name="customize-teams-app-manifest"></a>Teams アプリ マニフェストをカスタマイズする
 
@@ -141,7 +140,7 @@ Teams Toolkit は、ローカル環境とリモート環境の `manifest.templat
 **カスタマイズされたパラメーターを追加するには**
 
 1. 次のようにカスタマイズされたパラメーターを追加します。</br>
-   a.  パターン`{{config.manifest.xx}}`を含むプレースホルダー`manifest.template.json`を追加します。</br>
+   a. パターン`{{config.manifest.xx}}`を含むプレースホルダー`manifest.template.json`を追加します。</br>
    b. に構成値 `config.{env}.json`を追加します。
 
      ```json
@@ -177,8 +176,8 @@ In `manifest.template.json`, you can navigate to codelens to preview the values 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/codelens.png" alt-text="Preview values":::
 
-> [!NOTE] 
-> Provision the environment or execute local debug to generate values for placeholders. 
+> [!NOTE]
+> Provision the environment or execute local debug to generate values for placeholders.
 
 You can navigate to state file or configuration file by selecting the codelens, which provides a drop-down list with all the environment names. After selecting one environment, the corresponding state file or configuration file opens.
 
@@ -187,7 +186,6 @@ You can navigate to state file or configuration file by selecting the codelens, 
 To preview values for all the environments, you can hover over the placeholder. It shows a list with environment names and corresponding values. If you haven't provisioned the environment or executed the local debug, select `Trigger Teams: Provision in the cloud command to see placeholder value` or `Trigger local debug to see placeholder value`.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/hover.png" alt-text="Preview all values":::
-
 
 ## See also
 

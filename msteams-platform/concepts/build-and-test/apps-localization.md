@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: Teams 発行ストア オフィス発行 AppSource ローカライズ言語
 ms.date: 05/15/2018
-ms.openlocfilehash: 25a7694017cc8002ac23cf7075c59488ceb9773d
-ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
+ms.openlocfilehash: 2975365f56c573b66fda5e5a51106dc8cecf8c0f
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64737037"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757046"
 ---
 # <a name="localize-your-app"></a>アプリをローカライズする
 
@@ -22,7 +22,7 @@ Microsoft Teams アプリをローカライズするには、次の要素を考�
 
 ## <a name="localize-your-appsource-listing"></a>AppSource の一覧をローカライズする
 
-アプリをストアに公開する場合は、アプリを一覧表示する言語のメタデータ (説明、スクリーンショット、名前) を指定し、パートナー センターの **Marketplace の一覧** ページでこれらの言語を明示的に指定します。 詳細については、 [ローカライズされた Microsoft AppSource のフロントを](/office/dev/store/prepare-localized-solutions#localized-microsoft-appsource-fronts)参照してください。 アプリ ストアでローカライズされたリストをサポートするために、追加の言語を登録情報に追加できます。 リストの [パートナー センター](/office/dev/store/submit-to-appsource-via-partner-center) で指定する既定の言語情報は、 [アプリの AppSource Web サイト](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1 "AppSource は、チームのニーズに合わせて 1 つの場所です。チャット、会議、通話、ファイル、ツールなど、すべてをまとめ、より生産性の高いチームワークを実現します。") の一覧に表示されます。 現在、既定の言語は英語です。
+アプリをストアに発行する場合は、アプリを一覧表示する言語のメタデータ (説明、スクリーンショット、名前) を指定し、パートナー センターの **Marketplace の一覧** ページでこれらの言語を明示的に指定します。 詳細については、 [ローカライズされた Microsoft AppSource のフロントを](/office/dev/store/prepare-localized-solutions#localized-microsoft-appsource-fronts)参照してください。 アプリ ストアでローカライズされたリストをサポートするために、追加の言語を登録情報に追加できます。 リストの [パートナー センター](/office/dev/store/submit-to-appsource-via-partner-center) で指定する既定の言語情報は、 [アプリの AppSource Web サイト](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1 "AppSource は、チームのニーズに合わせて 1 つの場所です。チャット、会議、通話、ファイル、ツールなど、すべてをまとめ、より生産性の高いチームワークを実現します。") の一覧に表示されます。 現在、既定の言語は英語です。
 
 ### <a name="configure-localization"></a>ローカライズを構成する
 
@@ -150,7 +150,7 @@ Teams クライアントは、既定の言語文字列 -> ユーザーの言語�
 
 ## <a name="handle-localized-text-submissions-from-your-users"></a>ユーザーからのローカライズされたテキスト送信を処理する
 
-ローカライズされたバージョンのアプリケーションを提供する場合、ユーザーは同じ言語で応答します。 Teamsはユーザーの提出を既定の言語に翻訳しないため、アプリはローカライズされた言語応答を処理する必要があります。 たとえば、ローカライズされた `commandList`テキストを指定した場合、ボットに対する応答はコマンドのローカライズされたテキストであり、既定の言語ではありません。 アプリは適切に応答する必要があります。
+アプリケーションのローカライズされたバージョンを指定した場合、ユーザーは同じ言語で応答します。 Teamsはユーザーの申請を既定の言語に翻訳しないため、アプリはローカライズされた言語応答を処理する必要があります。 たとえば、ローカライズされた `commandList`テキストを指定した場合、ボットに対する応答はコマンドのローカライズされたテキストであり、既定の言語ではありません。 アプリは適切に応答する必要があります。
 
 ## <a name="code-sample"></a>コード サンプル
 

@@ -1,19 +1,19 @@
 ---
 title: Microsoft Teams タブの DevTools
 description: Microsoft Teams デスクトップ クライアントとデバッグを使用するときに DevTools にアクセスする方法について説明します
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: devtools debug mobile chrome デスクトップ クライアント開発者ツール タブ
-ms.openlocfilehash: 4e7ea8ee51d5dd77345c0c7392775aa29050a9a5
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: c4601711948df798bda6b7d4940b5436c66f8c97
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111445"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757480"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>Microsoft Teams タブの DevTools
 
-Teams がブラウザーで実行されている場合は、ブラウザーの DevTools: F12 on Windows または MacOS の Command-Option-I に簡単にアクセスできます。 ダッシュボードでは、次の項目にもアクセスできます。
+Teamsがブラウザーで実行されている場合は、ブラウザーの DevTools: F12 on Windows または MacOS の Command-Option-I に簡単にアクセスできます。 ダッシュボードでは、次の項目にもアクセスできます。
 
 1. コンソール ログを表示します。
 1. 実行時に HTML、CSS、およびネットワーク要求を表示または変更します。

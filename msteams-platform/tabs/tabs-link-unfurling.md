@@ -5,20 +5,20 @@ description: リンクを展開し、ステージ ビューを開き、Microsoft
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 71974d9c553509b974dc2b52377f2d7ab8d79a16
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 08df4cfccf6d9fabad1e07736796d6728d7c527c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296960"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756738"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>タブのリンクの展開とステージ ビュー
 
-ステージ ビューは、新しいユーザー インターフェイス (UI) コンポーネントであり、Teams で全画面表示され、タブとして固定されているコンテンツをレンダリングできます。
+ステージ ビューは、新しいユーザー インターフェイス (UI) コンポーネントです。 これにより、Teamsで全画面表示で開き、タブとしてピン留めされたコンテンツをレンダリングできます。
 
 ## <a name="stage-view"></a>ステージ ビュー
 
-ステージ ビューは、Web コンテンツを表示するために呼び出すことができる全画面表示 UI コンポーネントです。 既存の "リンクを張る" サービスが更新され、アダプティブ カードとチャット サービスを使用して URL をタブに変換するために使用されます。 ユーザーがチャットまたはチャネルで URLを送信すると、その URL はアダプティブ カードに展開されます。 ユーザーはカードで **[表示]** を選択し、ステージ ビューから直接コンテンツをタブとしてピン留めできます。
+ステージ ビューは、Web コンテンツを表示するために呼び出すことができる全画面表示 UI コンポーネントです。 既存のリンク展開サービスが更新され、アダプティブ カードとチャット サービスを使用して URL をタブに変換するために使用されます。 ユーザーがチャットまたはチャネルで URLを送信すると、その URL はアダプティブ カードに展開されます。 ユーザーはカードで **[表示]** を選択し、ステージ ビューから直接コンテンツをタブとしてピン留めできます。
 
 ## <a name="advantage-of-stage-view"></a>ステージ ビューの利点
 
@@ -109,7 +109,7 @@ https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl"
 
 エンコードされていない URL:
 
-https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes:Miscellaneous","threadId":"19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}
+https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191,"websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true,"title":"Quotes: その他","threadId":"19:9UryYW9rjwpfx-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}
 
 エンコードされた URL:
 
@@ -119,7 +119,7 @@ https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?conte
 
 エンコードされていない URL:
 
-https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes:Miscellaneous"}
+https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context={"contentUrl":""https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191,"websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true,"title":"Quotes: その他"}
 
 エンコード済み
 

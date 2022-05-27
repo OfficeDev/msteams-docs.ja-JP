@@ -3,15 +3,15 @@ title: QR コードまたはバーコード スキャナー機能を統合する
 author: Rajeshwari-v
 description: Teams JavaScript クライアント SDK を使用して QR またはバーコード スキャナー機能を活用する方法
 keywords: カメラ メディア QR コード qrcode バー コード バーコード スキャナースキャン機能ネイティブ デバイスのアクセス許可
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 32d707202a28789a720dd83905b462451533ff55
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 1a8b89754ddf4f04fb2cc6f5890d8ce4c3f25dab
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111788"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757718"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>QR コードまたはバーコード スキャナー機能を統合する
 
@@ -27,7 +27,7 @@ QR またはバーコード スキャナー機能の統合の利点を次に示�
 * この機能を使用すると、ユーザーはスキャナー UI の中央にあるフレーム内の QR またはバーコードのみを配置する必要があり、コードは自動的にスキャンされます。 保存されたデータは、呼び出し元の Web アプリと共有されます。 これにより、長い製品コードやその他の関連情報を手動で入力する際の不便さと人的エラーを回避できます。
 
 QR またはバーコード スキャナー機能を統合するには、アプリ マニフェスト ファイルを更新し、[scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API を呼び出す必要があります。 効果的な統合を実現するには、ネイティブ QR またはバーコード スキャナー機能を使用できる [code スニペット](#code-snippet) で [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API を呼び出す方法をよく理解している必要があります。 API では、サポートされていないバーコード標準に対してエラーが発生します。
-Teams アプリのエラーを処理するには、[API 応答エラー](#error-handling) を理解しておくことが重要です。
+Teams アプリのエラーを処理するには[、API 応答エラー](#error-handling)について理解しておくことが重要です。
 
 > [!NOTE]
 > 現在、Microsoft Teams による QR バーコード スキャナー機能のサポートは、モバイル クライアントでのみ利用できます。
@@ -81,11 +81,11 @@ Teams アプリでこれらのエラーを適切に処理する必要があり�
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API は現在のプラットフォームではサポートされていません。|
 | **500** | 内部エラーです(_E) | 必要な操作の実行中に内部エラーが発生しました。|
 | **1000** | PERMISSION_DENIED |アクセス許可がユーザーによって拒否されました。|
-| **3000** | NO_HW_SUPPORT | 基になるハードウェアはこの機能をサポートしていません。|
+| **3000** | NO_HW_SUPPORT | 基になるハードウェアでは、この機能はサポートされていません。|
 | **4000** | 引数が無効です | いくつかの引数は無効です。|
 | **8000** | USER_ABORT |ユーザーが操作を中止します。|
 | **8001** | OPERATION_TIMED_OUT | 指定された時間間隔でバーコードを検出できませんでした。|
-| **9000** | OLD_PLATFORM | プラットフォーム コードが古く、この API は実装されていません。|
+| **9000** | OLD_PLATFORM | プラットフォーム コードは古く、この API は実装されていません。|
 
 ## <a name="code-snippet"></a>コード スニペット
 

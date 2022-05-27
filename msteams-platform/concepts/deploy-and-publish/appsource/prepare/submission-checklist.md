@@ -6,12 +6,12 @@ ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
 keywords: 送信ストア配布アプリ パッケージの検証ガイドライン ローカライズ
-ms.openlocfilehash: e1c2f94eb0bb3989ea461b10543fcea3051ef52a
-ms.sourcegitcommit: 591bab4c7e01ac9099b9a540f149b64e6e31e6e8
+ms.openlocfilehash: 6ea5ff76cc81f23719e4b4c499f4a2f2594718a2
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65135753"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756780"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Microsoft Teams のストア送信を準備する
 
@@ -23,8 +23,8 @@ Microsoft Teams アプリの設計、構築、テストが完了しました。 
 
 アプリがテスト環境で動作している場合がありますが、送信プロセス中に問題が発生しないようにアプリ パッケージを確認する必要があります。
 
-> [!NOTE]
- > App Studio を使用している場合は、Teams アプリを構成、配布、管理するための開発者ポータル [開発者ポータル](https://dev.teams.microsoft.com/) を試してみることをお勧めします。App Studio は 2022 年 6 月 30 日までに非推奨になります。
+> [!WARNING]
+> App Studio を使用している場合は、Teams アプリを構成、配布、管理するための開発者ポータル [開発者ポータル](https://dev.teams.microsoft.com/) を試してみることをお勧めします。App Studio は 2022 年 6 月 30 日までに非推奨になります。
 
 Microsoft Teams アプリ検証ツールを使用すると、パートナー センターに送信する前に問題を特定して修正できます。 このツールは、ストアの検証中に使用したものと同じテスト ケースに対して、アプリの構成を自動的にチェックします。
 
@@ -75,15 +75,15 @@ Microsoft が機能を完全に理解できるよう、アプリの録画を提�
 
 ### <a name="specify-a-short-name"></a>短い名前を指定する
 
-アプリの名前 (具体的には [*短い名前*](~/resources/schema/manifest-schema.md#name)) は、ユーザーがストアでアプリを検出する方法において重要な役割を果たします。
+アプリの名前 (具体的には *[短い名前](~/resources/schema/manifest-schema.md#name)*) は、ユーザーがストアでアプリを検出する方法において重要な役割を果たします。
 
 :::row:::
 
-   :::column span="3":::
-      :::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="アプリの短い名前が表示されるストア登録情報の場所を強調表示するスクリーンショットの例。":::
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
+:::column span="3":::
+:::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="アプリの短い名前が表示されるストア登録情報の場所を強調表示するスクリーンショットの例。":::
+:::column-end:::
+:::column span="1":::
+:::column-end:::
 
 :::row-end:::
 
@@ -99,11 +99,11 @@ Microsoft が機能を完全に理解できるよう、アプリの録画を提�
 
 :::row:::
 
-   :::column span="3":::
-      :::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="アプリの短い説明が表示されるストア登録情報の場所を強調表示するスクリーンショットの例。":::
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
+:::column span="3":::
+:::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="アプリの短い説明が表示されるストア登録情報の場所を強調表示するスクリーンショットの例。":::
+:::column-end:::
+:::column span="1":::
+:::column-end:::
 
 :::row-end:::
 
@@ -121,11 +121,11 @@ Microsoft が機能を完全に理解できるよう、アプリの録画を提�
 
 :::row:::
 
-   :::column span="3":::
-      :::image type="content" source="~/assets/images/store-detail-page/LongDescription-02.png" alt-text="アプリの長い説明が表示されるストア登録情報の場所を強調表示するスクリーンショットの例。":::
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
+:::column span="3":::
+:::image type="content" source="~/assets/images/store-detail-page/LongDescription-02.png" alt-text="アプリの長い説明が表示されるストア登録情報の場所を強調表示するスクリーンショットの例。":::
+:::column-end:::
+:::column span="1":::
+:::column-end:::
 
 :::row-end:::
 
@@ -143,11 +143,11 @@ Microsoft が機能を完全に理解できるよう、アプリの録画を提�
 
 :::row:::
 
-   :::column span="3":::
-      :::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="アプリのスクリーンショットが表示されるストア登録情報の場所を強調表示するスクリーンショットの例。":::
-   :::column-end:::
-   :::column span="1":::
-   :::column-end:::
+:::column span="3":::
+:::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="アプリのスクリーンショットが表示されるストア登録情報の場所を強調表示するスクリーンショットの例。":::
+:::column-end:::
+:::column span="1":::
+:::column-end:::
 
 :::row-end:::
 
@@ -212,7 +212,6 @@ Teams アプリをストアに登録するには、[発行元の検証](/azure/a
 > 新しいアプリを送信する場合は、アプリが Teams ストアに表示されるまで正式に発行元の構成証明を完了することができません。 登録されたことのあるアプリを更新する場合は、アプリの最新バージョンを送信する前に、発行元の構成証明を完了します。
 
 ## <a name="next-step"></a>次のステップ
-
 > [!div class="nextstepaction"]
 > [アプリを送信する](/office/dev/store/add-in-submission-guide)
 

@@ -1,15 +1,15 @@
 ---
 title: Microsoft Teams ボットでタスク モジュールを使用する
 description: Bot Framework カード、アダプティブ カード、ディープ リンクなど、Microsoft Teams ボットでタスク モジュールを使用する方法。
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: タスク モジュール チーム ボットディープ リンク アダプティブ カード
-ms.openlocfilehash: 1074eee616ca7a5d78a071fb42c23d0010a8300d
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 443ff94fcc5c8b47dda5462555bf181c88b71ce3
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111333"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756717"
 ---
 # <a name="use-task-modules-from-bots"></a>ボットでタスク モジュールを使用する
 
@@ -17,7 +17,7 @@ ms.locfileid: "65111333"
 
 タスク モジュールを呼び出す方法は 2 つあります。
 
-* 新しい種類の呼び出しメッセージ`task/fetch`: [ボット フレームワーク カード] の場合は`invoke` [カードアクション](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke)を使用し、[アダプティブ カード] の場合は`Action.Submit`[カードアクション](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)を `task/fetch` で使用します。 URL または [アダプティブ カード] のいずれかのタスク モジュールは、ボットから動的にフェッチされます。
+* 新しい呼び出しメッセージ`task/fetch`: Bot Framework カードの`invoke`[カード アクション](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke)を使用するか`Action.Submit`、アダプティブ カードの[カード アクション](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)を使用して、`task/fetch`タスク モジュールに URL またはアダプティブ カードを指定すると、ボットから動的にフェッチされます。
 * ディープ リンク URL：[タスク モジュールのディープリンク構文](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax)を使用すると、ボット フレームワークカード の場合は`openUrl` [カードアクション](~/task-modules-and-cards/cards/cards-actions.md#action-type-openurl)、または、アダプティブカードの場合`Action.OpenUrl`[カードアクション](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)にそれぞれなります。 ディープ リンク URL の場合、タスク モジュールの URL またはアダプティブ カード本体は、`task/fetch` との相対的なサーバー ラウンドトリップを回避することがすでにわかっています。
 
 > [!IMPORTANT]
@@ -27,7 +27,7 @@ ms.locfileid: "65111333"
 
 ## <a name="invoke-a-task-module-using-taskfetch"></a>タスク/フェッチを使用してタスク モジュールを呼び出す
 
-`invoke` カード アクションまたは `Action.Submit` の `value` オブジェクトが初期化され、ユーザーがボタンを選択すると、`invoke` メッセージがボットに送信されます。 `invoke` メッセージへの HTTP 応答には、ラッパー オブジェクトに埋め込まれた [ TaskInfo オブジェクト ](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) があり、Teams はこれを使用してタスク モジュールを表示します。
+`invoke` カード アクションまたは `Action.Submit` の `value` オブジェクトが初期化され、ユーザーがボタンを選択すると、`invoke` メッセージがボットに送信されます。 メッセージに対する `invoke` HTTP 応答には、タスク モジュールの表示に使用Teamsラッパー オブジェクトに [TaskInfo](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) オブジェクトが埋め込まれています。
 
 :::image type="content" source="../../assets/images/task-module/task-module-invoke-request-response.png" alt-text="タスク/フェッチ要求または応答":::
 
@@ -62,7 +62,7 @@ ms.locfileid: "65111333"
 
 ユーザーがタスク モジュールを終了したら、結果をボットに送信するのは、タブでの作業と同じです。 詳細については、[タスク モジュールの結果を送信する例](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-of-submitting-the-result-of-a-task-module)を参照してください。 次のようないくつかの違いがあります。
 
-* `TaskInfo.url` である HTML または JavaScript: ユーザーが入力した内容を検証したら、読みやすくするために、以降 `submitTask()` と呼ばれる `microsoftTeams.tasks.submitTask()` SDK 関数を呼び出します。 Teams にタスク モジュールを閉じさせたい場合は、パラメータなしで `submitTask()` を呼び出すことができますが、オブジェクトまたは文字列を `submitHandler` に渡す必要があります。 最初のパラメーター `result` として渡します。. Teams は `submitHandler` を呼び出し、`err` は `null` であり、`result` は `submitTask()` に渡したオブジェクトまたは文字列です。 `result`パラメータを使用して `submitTask()` を呼び出す場合は、`appId` または `appId` 文字列の配列を渡す必要があります。 これにより、Teamsは、結果を送信するアプリがタスク モジュールを呼び出したアプリと同じであることを検証できます。 ボットは、`result` を含む `task/submit` メッセージを受信します。 詳細については、[ ペイロードの `task/fetch` および `task/submit`メッセージ](#payload-of-taskfetch-and-tasksubmit-messages) を参照してください。
+* HTML または JavaScript : `TaskInfo.url`ユーザーが入力した内容を検証したら、以降`submitTask()`で読みやすくするために呼び出す SDK 関数を呼び出`microsoftTeams.tasks.submitTask()`します。 Teams にタスク モジュールを閉じさせたい場合は、パラメータなしで `submitTask()` を呼び出すことができますが、オブジェクトまたは文字列を `submitHandler` に渡す必要があります。 最初のパラメーター `result` として渡します。. Teams は `submitHandler` を呼び出し、`err` は `null` であり、`result` は `submitTask()` に渡したオブジェクトまたは文字列です。 `result`パラメータを使用して `submitTask()` を呼び出す場合は、`appId` または `appId` 文字列の配列を渡す必要があります。 これにより、Teamsは、結果を送信するアプリがタスク モジュールを呼び出したのと同じアプリであることを検証できます。 ボットは、`result` を含む `task/submit` メッセージを受信します。 詳細については、[ ペイロードの `task/fetch` および `task/submit`メッセージ](#payload-of-taskfetch-and-tasksubmit-messages) を参照してください。
 * `TaskInfo.card` であるアダプティブ カード: ユーザーが入力したアダプティブ カード本体は、ユーザーが `Action.Submit` ボタンを選択すると、`task/submit` メッセージを介してボットに送信されます。
 
 次のセクションでは、`task/submit` の柔軟性について詳しく説明します。
@@ -73,7 +73,7 @@ ms.locfileid: "65111333"
 
 | HTTP 本文の応答                      | シナリオ                                |
 | --------------------------------------- | --------------------------------------- |
-| `task/submit` メッセージを無視するものはありません | 最も単純な応答は、まったく応答がないことです。 ユーザーがタスク モジュールを終了したときにボットが応答する必要はありません。 |
+| `task/submit` メッセージを無視するものはありません | 最も単純な応答は、まったく応答がないことです。 ユーザーがタスク モジュールを使用して完了したときに、ボットが応答する必要はありません。 |
 | <pre>{<br/>  "task": {<br/>    "type": "message",<br/>    "value": "Message text"<br/>  }<br/>}</pre> | Teams は、ポップアップ メッセージ ボックスに `value` の値を表示します。 |
 | <pre>{<br/>  "task": {<br/>    "type": "continue",<br/>    "value": &lt;TaskInfo object&gt;<br/>  }<br/>}</pre> | アダプティブ カードのシーケンスをウィザードまたはマルチステップ エクスペリエンスで連結できます。 |
 
@@ -199,7 +199,7 @@ private static void SetTaskInfo(TaskModuleTaskInfo taskInfo, UISettings uIConsta
 
 ### <a name="bot-framework-card-actions-vs-adaptive-card-actionsubmit-actions"></a>Bot Framework カード アクションと Adaptive Card Action.Submit アクション
 
-Bot Framework カード アクションのスキーマは、アダプティブ カード `Action.Submit` アクションとは異なり、タスク モジュールを呼び出す方法も異なります。 `Action.Submit` の `data` オブジェクトには `msteams` オブジェクトが含まれているため、カードの他のプロパティに干渉しません。 次の表は、各カード アクションの例を示しています。
+Bot Framework カード アクションのスキーマは、アダプティブ カード `Action.Submit` アクションとは異なり、タスク モジュールを呼び出す方法も異なります。 `data`オブジェクトには`Action.Submit`オブジェクトが`msteams`含まれているため、カード内の他のプロパティと干渉しません。 次の表は、各カード アクションの例を示しています。
 
 | Bot Framework カード アクション                              | Adaptive Card Action.Submit アクション                     |
 | ------------------------------------------------------ | ------------------------------------------------------ |

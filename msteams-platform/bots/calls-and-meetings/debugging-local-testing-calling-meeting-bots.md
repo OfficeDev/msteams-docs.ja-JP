@@ -2,19 +2,19 @@
 title: ローカルで呼び出しや会議用ボットのデバッグを行う
 description: ngrok を使用して、ローカル PC で通話やオンライン会議ボットを開発する方法についても学びます。
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: ローカル開発 ngrok トンネル
 ms.date: 11/18/2018
-ms.openlocfilehash: 7e5f9de7177c847352b0e2768b52553455989443
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 7f85243e0a5d94711cd303ff542decd3bbc7847a
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111998"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757116"
 ---
 # <a name="develop-calling-and-online-meeting-bots-on-your-local-pc"></a>ローカル PC で通話ボットとオンライン会議ボットを開発する
 
-[[アプリの実行とデバッグ]](../../concepts/build-and-test/debug.md) では、[ngrok](https://ngrok.com) を使用してローカル コンピューターとインターネットの間にトンネルを作成する方法について説明します。 このトピックでは、ngrok とローカル PC を使用して、通話やオンライン会議をサポートするボットを開発する方法について説明します。
+[アプリの実行とデバッグ](../../concepts/build-and-test/debug.md)で、[ngrok](https://ngrok.com) を使用してローカル コンピューターとインターネットの間にトンネルを作成する方法について説明します。 このトピックでは、ngrok とローカル PC を使用して、通話やオンライン会議をサポートするボットを開発する方法について説明します。
 
 メッセージング ボットは HTTP を使用しますが、通話とオンライン会議ボットでは下位レベルの TCP が使用されます。 ngrok では、HTTP トンネルに加えて TCP トンネルもサポートされています。
 
@@ -46,7 +46,7 @@ tunnels:
 
 アプリケーションでホストされるメディアでは、証明書と TCP トンネルが使用されます。 次の手順が必要です。
 
-1. Ngrok のパブリック TCP エンドポイントには固定 URL があります。 それらは `0.tcp.ngrok.io`、`1.tcp.ngrok.io` などです。 これらの URL を指すサービスの DNS CNAME エントリが必要です。 たとえば、`0.bot.contoso.com` が `0.tcp.ngrok.io` を参照し、`1.bot.contoso.com` が `1.tcp.ngrok.io` を参照するとします。
+1. Ngrok のパブリック TCP エンドポイントには固定 URL があります。 `0.tcp.ngrok.io`これらは、次`1.tcp.ngrok.io`のように表示されます。 これらの URL を指すサービスの DNS CNAME エントリが必要です。 たとえば、`0.bot.contoso.com` が `0.tcp.ngrok.io` を参照し、`1.bot.contoso.com` が `1.tcp.ngrok.io` を参照するとします。
 2. URL には SSL 証明書が必要です。 簡単にするには、ワイルドカード ドメインに発行された SSL 証明書を使用します。 この例では、`*.bot.contoso.com` になります。 この SSL 証明書はメディア SDK によって検証されるため、ボットのパブリック URL と一致する必要があります。 サムプリントをメモし、マシン証明書にインストールします。
 3. 次に、トラフィックを localhost に転送する TCP トンネルを設定します。 次の行を ngrok.yml に書き込みます。
 

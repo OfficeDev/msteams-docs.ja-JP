@@ -6,12 +6,12 @@ description: Teams、Office、Outlook の <iframe> でホストされたアプ�
 ms.localizationpriority: high
 keywords: Teams タブ グループ チャンネル 構成可能な静的 SDK JavaScript 個人用 M365
 ms.topic: conceptual
-ms.openlocfilehash: 2a1c827913759d49ba721251d4a6f5382d8eb3a4
-ms.sourcegitcommit: 264d3cc84d6eec4ab025cf86a7a6f4865f1aed07
+ms.openlocfilehash: 11d5bfa9b2dff29cb627a75f13af70915784a175
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65653288"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757620"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Microsoft Teams JavaScript クライアント SDK を使用してタブやその他のホストされたエクスペリエンスを構築する
 
@@ -20,7 +20,7 @@ Microsoft Teams JavaScript クライアント SDK は、Teams、Office、Outlook
 * [タブ](../../tabs/what-are-tabs.md)
 * [ダイアログ (タスク モジュール)](../../task-modules-and-cards/what-are-task-modules.md)
 
-バージョン `2.0.0` 以降、既存の Teams クライアント SDK (`@microsoft/teams-js`、または単に `TeamsJS`) がリファクタリングされ、[Teams アプリが Microsoft Teams に加えて Outlook と Office で実行](/m365-apps/overview.md)できるようになりました。 機能的な観点から見て、TeamsJS の最新バージョンでは、既存のすべての Teams アプリ (v.1.x.x) の機能がサポートされ、Outlook と Office で Teams アプリをホストするオプション機能が追加されています。
+バージョン `2.0.0` 以降、既存の Teams クライアント SDK (`@microsoft/teams-js`、または単に `TeamsJS`) がリファクタリングされ、[Teams アプリが Microsoft Teams に加えて Outlook と Office で実行](/microsoftteams/platform/m365-apps/overview)できるようになりました。 機能的な観点から見て、TeamsJS の最新バージョンでは、既存のすべての Teams アプリ (v.1.x.x) の機能がサポートされ、Outlook と Office で Teams アプリをホストするオプション機能が追加されています。
 
 さまざまなアプリ シナリオについて、現在のバージョン管理ガイダンスを次に示します。
 

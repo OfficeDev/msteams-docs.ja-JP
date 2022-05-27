@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: コマンド メニュー 作成 メッセージ 会話 @mention
-ms.openlocfilehash: 59f2dc595a4baac2d99b25d9c7c0fb0d3c5013d1
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: b81959b23363142cd463788950116b4f805f95ae
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296967"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757697"
 ---
 # <a name="bot-command-menus"></a>Bot コマンド メニュー
 
@@ -42,8 +42,9 @@ ms.locfileid: "65296967"
 1. Teams を開き、左側のウィンドウから **[アプリ]** を選択します。 **[アプリ]** ページで **App Studio** を検索し、**[開く]** を選択します。
    > [!NOTE]
    > **App Studio** をお持ちでない場合は、ダウンロードできます。 詳細については、「[App Studio をインストールする](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio)」を参照してください。
-
-  > App Studio を使用している場合は、Teams アプリを構成、配布、管理するための開発者ポータルを試してみることをお勧めします。App Studio は 2022 年 6 月 30 日までに非推奨になります
+  
+   > [!WARNING]
+   > App Studio を使用している場合は、Teams アプリを構成、配布、管理するための開発者ポータルを試してみることをお勧めします。App Studio は 2022 年 6 月 30 日までに非推奨になります
 
   :::image type="content" source="/media/AppStudio.png" alt-text="Installing App Studio"lightbox="media/AppStudio.png"border="true":::
 

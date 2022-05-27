@@ -5,12 +5,12 @@ ms.topic: conceptual
 keywords: Teams ボット開発
 ms.localizationpriority: medium
 ms.date: 05/20/2018
-ms.openlocfilehash: cbf8b1c14b080d890dd4c65390671632e2602f81
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: f592ae06efc2c416e70530fe2c46cbfbfc03140b
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602265"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755854"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>Microsoft Teams アプリにボットを追加する
 
@@ -21,7 +21,7 @@ ms.locfileid: "65602265"
 > [!IMPORTANT]
 > 現在、ボットはGovernment Community Cloud (GCC) とGCC-Highで利用できますが、国防総省 (DOD) では利用できません。
 
-![ユーザーを支援するボットの例](~/assets/images/bot_example.png)
+:::image type="content" source="../../assets/images/bot_example.png" alt-text="ユーザーを支援するボットの例" border="true":::
 
 ## <a name="what-you-need-to-know-bots"></a>知っておく必要がある情報: ボット
 

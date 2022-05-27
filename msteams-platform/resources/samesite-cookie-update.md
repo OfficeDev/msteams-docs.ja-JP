@@ -4,18 +4,18 @@ author: laujan
 description: SameSite Cookie、その属性、Teams タブ、タスク モジュール、メッセージング拡張機能における意味、Teams での認証など、Cookie の種類について説明します。
 keywords: Cookie 属性 SameSite
 ms.topic: reference
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 7bf6d5a986a2111ba624534aa13b0aaa2866120c
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: f93ee29198400a0cabd4512d9abb4de80cebb9da
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110338"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756990"
 ---
 # <a name="samesite-cookie-attribute"></a>SameSite Cookie 属性
 
-Cookie は、Web サイトから送信され、Web ブラウザーによってコンピューターに保存されるテキスト文字列です。 これらは、認証と個人用設定に使用されます。 たとえば、Cookie はステートフルな情報の呼び出し、ユーザー設定の保持、閲覧アクティビティの記録、関連する広告の表示に使用されます。 Cookie は常に特定のドメインにリンクされ、さまざまな関係者によってインストールされます。
+Cookie は、Web サイトから送信され、Web ブラウザーによってコンピューターに保存されるテキスト文字列です。 認証とパーソナル化に使用されます。 たとえば、Cookie はステートフルな情報の呼び出し、ユーザー設定の保持、閲覧アクティビティの記録、関連する広告の表示に使用されます。 Cookie は常に特定のドメインにリンクされ、さまざまな関係者によってインストールされます。
 
 ## <a name="types-of-cookies"></a>Cookie の種類
 
@@ -23,9 +23,9 @@ Cookie の種類とそれに対応するスコープは次のとおりです。
 
 |クッキー|範囲|
 | ------ | ------ |
-|ファースト パーティ Cookie|ファースト パーティ Cookie は、ユーザーがアクセスした Web サイトによって作成されます。 これは、ショッピング カートアイテムなどのデータを保存するために使用され、資格情報にサインインします。 たとえば、認証 Cookie やその他の分析などです。|
+|ファースト パーティ Cookie|ファースト パーティ Cookie は、ユーザーがアクセスした Web サイトによって作成されます。 これは、ショッピング カート アイテムなどのデータを保存するために使用され、資格情報にサインインします。 たとえば、認証 Cookie やその他の分析などです。|
 |サードパーティ Cookie|サード パーティ Cookie は、技術的にはファースト パーティ Cookie と同じです。 違いは、データ パートナーシップ契約を通じてデータが第 2 者と共有される点です。 詳細については、「[Microsoft Teams の分析とレポート](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference)」を参照してください。 |
-|サード パーティ Cookie|サード パーティ Cookie は、ユーザーが明示的にアクセスしたドメイン以外のドメインによってインストールされ、主に追跡用に使用されます。たとえば、**[いいね]** ボタン、広告配信、ライブ チャットなどです。|
+|サード パーティ Cookie|サード パーティの Cookie は、ユーザーが明示的にアクセスしたドメイン以外のドメインによってインストールされ、追跡に使用されます。 たとえば、**[いいね]** ボタン、広告配信、ライブ チャットなどです。|
 
 ## <a name="cookies-and-http-requests"></a>Cookie と HTTP 要求
 
@@ -47,7 +47,7 @@ SameSite Cookie 属性は次のとおりです。
 | -------- | ----------- | --------|--------|
 | **Lax**  | Cookie は、**ファースト パーティ** コンテキストと HTTP GET 要求でのみ自動的に送信されます。 SameSite Cookie は、イメージや iframe を読み込むための呼び出し音など、サイト横断的なサブ要求に対して保留されます。 ユーザーがリンクをたどるなどして外部サイトから URL に移動したときに送信されます。| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Strict** |ブラウザーは、ファースト パーティのコンテキスト要求に対してのみ Cookie を送信します。 これらは、Cookie を設定するサイトから送信された要求です。 要求が現在の場とは異なる URL から送信された場合、`Strict` 属性でタグ付けされた Cookie は送信されません。| 省略可能 |`Set-Cookie: key=value; SameSite=Strict`|
-| **なし** | Cookie は、ファースト パーティコンテキストとクロスオリジン要求の両方で送信されますが、値を明示的 **`None`** に設定する必要があり、すべてのブラウザー要求は **HTTPS プロトコルに従い**、暗号化された接続を必要とする **`Secure`** 属性を含める必要があります。その要件に準拠していない Cookie は **拒否されます**。<br/>**両方の属性が同時に必要です**。**`None`** が **`Secure`** なしで指定されるか、HTTPS プロトコルを使用せずに指定された場合、サード パーティ Cookie は拒否されます。| 省略可能ですが、設定した場合は HTTPS プロトコルが必要です。 |`Set-Cookie: key=value; SameSite=None; Secure` |
+| **なし** | Cookie は、ファースト パーティコンテキストとクロスオリジン要求の両方で送信されます。ただし、値を明示的に設定する **`None`** 必要があり、すべてのブラウザー要求は **HTTPS プロトコルに従い** 、暗号化された接続が **`Secure`** 必要な属性を含める必要があります。 その要件に準拠していない Cookie は **拒否されます**。 <br/>**両方の属性が一緒に必要です**。 HTTPS プロトコルを使用せずに **`Secure`** 指定した場合 **`None`**、または HTTPS プロトコルが使用されていない場合、サード パーティの Cookie は拒否されます。| 省略可能ですが、設定した場合は HTTPS プロトコルが必要です。 |`Set-Cookie: key=value; SameSite=None; Secure` |
 
 ## <a name="teams-implications-and-adjustments"></a>Teams の影響と調整
 
@@ -74,11 +74,11 @@ SameSite Cookie 属性は次のとおりです。
 * 構成ページ、タスク モジュール、メッセージング拡張機能。
 * タスク モジュールを使用した会話性ボット。
 
-更新された SameSite の制限によると、ブラウザーは、リンクが外部サイトに由来する場合、すでに認証済みの Web サイトにクッキーを追加することはありません。 認証 Cookie で `SameSite=None; Secure` をサイト横断的に使用できるようにマークしておくか、フォールバックを確実に実行する必要があります。
+更新された SameSite の制限に従って、リンクが外部サイトから派生した場合、ブラウザーは既に認証された Web サイトに Cookie を追加しません。 認証 Cookie で `SameSite=None; Secure` をサイト横断的に使用できるようにマークしておくか、フォールバックを確実に実行する必要があります。
 
 ## <a name="android-system-webview"></a>Android System WebView
 
-Android WebView は、Android アプリが Web コンテンツを表示できるようにする Chrome システム コンポーネントです。 新しい制限は、Chrome 80 以降では既定で適用されますが、WebView にはすぐには適用されません。 これらは今後適用される予定です。 準備のために、Android ではネイティブ アプリが [CookieManager API](https://developer.android.com/reference/android/webkit/CookieManager) 経由で直接 Cookie を設定できます。
+Android WebView は、Android アプリが Web コンテンツを表示できるようにする Chrome システム コンポーネントです。 新しい制限は既定ですが、Chrome 80 以降では、WebView ではすぐに適用されません。 これらは今後適用される予定です。 準備のために、Android ではネイティブ アプリが [CookieManager API](https://developer.android.com/reference/android/webkit/CookieManager) 経由で直接 Cookie を設定できます。
 
 > [!NOTE]
 >

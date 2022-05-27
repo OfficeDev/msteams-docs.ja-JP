@@ -2,14 +2,14 @@
 title: タブの認証フロー
 description: タブでの認証フロー、Azure AD ごとの OAuth について説明し、コード サンプルを提供します
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 keywords: teams 認証フロー タブ
-ms.openlocfilehash: 2589489598f51393f2a429f8701e9101cf80b273
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: a40a09b025949b36491534a4e8bdda9f523b24df
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111452"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756493"
 ---
 # <a name="microsoft-teams-authentication-flow-for-tabs"></a>タブの Microsoft Teams 認証フロー
 
@@ -27,7 +27,7 @@ OAuth 2.0 は、Azure Active Directory (Azure AD) および他の多くの ID �
 ![タブ認証シーケンス図](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
 1. ユーザーは、タブ構成またはコンテンツ ページのコンテンツ (通常は **[サインイン]** または **[ログイン]** ボタン) で操作します。
-2. このタブは、認証の開始ページの URL を作成します。 オプションで、UR Lプレースホルダーからの情報を使用するか、`microsoftTeams.getContext()` Teams クライアント SDK メソッドを呼び出して、ユーザーの認証エクスペリエンスを合理化します。 たとえば、Azure AD で認証するときに、`login_hint` パラメーターがユーザーの電子メール アドレスに設定されている場合、ユーザーは最近サインインしていなくてもサインインする必要がありません。 これは、Azure AD がユーザーのキャッシュされた資格情報を使用するためです。 ポップアップ ウィンドウが短い時間表示され、消えます。
+2. このタブは、認証の開始ページの URL を作成します。 オプションで、UR Lプレースホルダーからの情報を使用するか、`microsoftTeams.getContext()` Teams クライアント SDK メソッドを呼び出して、ユーザーの認証エクスペリエンスを合理化します。 たとえば、A Azure AD を使用して認証する場合、パラメーターがユーザーの電子メール アドレスに設定されている場合 `login_hint` 、ユーザーが最近サインインした場合、ユーザーはサインインする必要はありません。 これは、Azure AD がユーザーのキャッシュされた資格情報を使用するためです。 ポップアップ ウィンドウが短い時間表示され、消えます。
 3. 次に、タブは `microsoftTeams.authentication.authenticate()` メソッドを呼び出し、`successCallback` 関数と `failureCallback` 関数を登録します。
 4. Teams は、ポップアップ ウィンドウの iframe で開始ページを開きます。 スタート ページはランダムな `state` データを生成し、将来の検証のために保存し、AzureAD の `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` などの ID プロバイダーの `/authorize` エンドポイントにリダイレクトします。 `<tenant id>` を context.tid である独自のテナント ID に置き換えます。
 Teams 内の他のアプリケーション認証フローと同様に、開始ページは、その `validDomains` リストにあるドメイン上にあり、ログイン後のリダイレクト ページと同じドメイン上にある必要があります。

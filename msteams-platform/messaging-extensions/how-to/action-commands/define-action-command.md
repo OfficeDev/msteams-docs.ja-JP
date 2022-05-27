@@ -5,12 +5,12 @@ description: アプリ マニフェストの例を使用したメッセージン
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 7793563db7a3e2d4f3b5b780cadac22ae609c74d
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 7bdb3a0572ab7723a03768357260f252fbbf626c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297213"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756899"
 ---
 # <a name="define-message-extension-action-commands"></a>メッセージ拡張機能のアクション コマンドを定義する
 
@@ -54,7 +54,7 @@ ms.locfileid: "65297213"
 
 コマンドの呼び出し元の選択に加えて、ユーザーのタスク モジュールでフォームを入力する方法も選択する必要があります。 タスク モジュール内でレンダリングされるフォームを作成するには、次の 3 つのオプションがあります。
 
-* **静的なパラメーターの一覧**: これは最も簡単なメソッドです。アプリ マニフェストのパラメーターの一覧は、Teams クライアント レンダラーを定義できますが、この場合は書式設定を制御できません。
+* **静的なパラメーターの一覧**: これは最も簡単なメソッドです。 アプリマニフェストのパラメーターの一覧は、Teams クライアントのレンダリングを定義できますが、この場合は書式設定を制御できません。
 * **アダプティブ カード**: UI をより細かく制御できるアダプティブ カードの使用を選択できますが、使用可能な制御および書式設定オプションは制限されます。
 * **埋め込み Web ビュー**: カスタム Web ビューをタスク モジュールに埋め込んで、UI とコントロールを完全に制御することができます。
 
@@ -62,7 +62,7 @@ ms.locfileid: "65297213"
 
 ## <a name="select-how-the-final-message-is-sent"></a>最終メッセージの送信方法を選択する
 
-ほとんどの場合、操作コマンドにより、メッセージの作成ボックスにカードが挿入されます。 ユーザーは、チャネルやチャットに送信できます。 この場合、メッセージはユーザーから送信され、ボットはカードをさらに編集したり更新したりすることはできません。
+ほとんどの場合、操作コマンドにより、メッセージの作成ボックスにカードが挿入されます。 ユーザーは、チャネルやチャットに送信できます。 この場合、メッセージはユーザーから送信され、ボットはカードをさらに編集または更新できません。
 
 メッセージ拡張機能が作成ボックスまたはメッセージから直接呼び出された場合、Web サービスは最終的な応答をチャネルまたはチャットに直接挿入できます。 この場合、アダプティブ カードはボットから取得され、ボットはそれを更新し、必要に応じて会話スレッドに返信します。 同じ ID を使用し、適切な範囲を定義して、`bot` オブジェクトをアプリ マニフェストに追加する必要があります。
 
@@ -77,7 +77,7 @@ ms.locfileid: "65297213"
 
 **App Studio** または **開発者ポータル** を使用して操作コマンドを作成できます。
 
-> [!NOTE]
+> [!WARNING]
  > App Studio を使用している場合は、Teams アプリを構成、配布、管理するための開発者ポータル [開発者ポータル](https://dev.teams.microsoft.com/) を試してみることをお勧めします。App Studio は 2022 年 6 月 30 日までに非推奨になります。
 
 # <a name="app-studio"></a>[App Studio](#tab/AS)
@@ -148,7 +148,7 @@ ms.locfileid: "65297213"
 | `fetchTask` | このプロパティは、タスク モジュールのアダプティブ カードまたは埋め込み Web ビューの `true` に設定し、パラメーターの静的な一覧、または `taskInfo` によって Web ビューを読み込む場合に `false` | いいえ | 1.4 |
 | `context` | このプロパティは、メッセージ拡張機能の呼び出し元を定義する値の省略可能な配列です。 使用可能な値: `message`、`compose`、`commandBox`。 既定値は `["compose", "commandBox"]` です。 | いいえ | 1.5 |
 
-パラメーターの静的な一覧を使用している場合は、次のパラメーターも追加する必要があります。
+パラメーターの静的リストを使用している場合は、次のパラメーターも追加する必要があります。
 
 | プロパティ名 | 用途 | は必須ですか? | マニフェストの最小バージョン |
 |---|---|---|---|
@@ -158,7 +158,7 @@ ms.locfileid: "65297213"
 | `parameter.title` | このプロパティは、ユーザー フレンドリな短いパラメーターのタイトルまたはラベルです。 | はい | 1.0 |
 | `parameter.inputType` | このプロパティは、必要な入力の種類に設定されます。 指定できる値には`text`、`textarea`、`number`、`date`、`time`、`toggle` などがあります。 既定値は `text` に設定されていません。 | いいえ | 1.4 |
 
-埋め込み Web ビューを使用している場合は、必要に応じて、ボットを直接呼び出さずに Web ビューを取得する `taskInfo` オブジェクトを追加できます。 このオプションを選択した場合、動作はパラメーターの静的な一覧を使用する動作と類似します。 ボットとの最初の対話が [タスク モジュール送信アクションに応答する](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)場合。 `taskInfo` オブジェクトを使用している場合は、`fetchTask` パラメーターを `false` に設定する必要があります。
+埋め込み Web ビューを使用している場合は、必要に応じて、ボットを `taskInfo` 直接呼び出さずに Web ビューをフェッチするオブジェクトを追加できます。 このオプションを選択した場合、動作はパラメーターの静的な一覧を使用する動作と類似します。 ボットとの最初の対話が [タスク モジュール送信アクションに応答する](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)場合。 オブジェクトを使用している場合は、パラメーター`false`を `taskInfo` `fetchTask` .
 
 | プロパティ名 | 用途 | は必須ですか? | マニフェストの最小バージョン |
 |---|---|---|---|
@@ -232,12 +232,12 @@ ms.locfileid: "65297213"
 
 ## <a name="next-step"></a>次の手順
 
-アダプティブ カードまたは埋め込み Web ビューを `taskInfo` オブジェクトなしで使用している場合は、次の手順を実行します。
+アダプティブ カードまたは埋め込み Web ビューをオブジェクトなしで `taskInfo` 使用する場合は、次の手順に進みます。
 
 > [!div class="nextstepaction"]
 > [タスク モジュールを使用した作成と応答](~/messaging-extensions/how-to/action-commands/create-task-module.md)
 
-パラメーターまたは埋め込み Web ビューを `taskInfo` オブジェクトと共に使用する場合は、次の手順に進みます。
+パラメーターまたは埋め込み Web ビューをオブジェクトと共 `taskInfo` に使用する場合は、次の手順に進みます。
 
 > [!div class="nextstepaction"]
 > [タスク モジュールの送信アクションへの応答](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)

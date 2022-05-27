@@ -1,17 +1,16 @@
 ---
 title: 会議アプリ API リファレンス
 author: surbhigupta
-description: 例とコード サンプルを含む会議アプリ API リファレンスを特定する
+description: 例とコード サンプルを使用して会議アプリ API 参照を特定し、アプリ会議ユーザー参加者ロール API ユーザー コンテキスト通知シグナル クエリをTeamsします。
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-keywords: Teams アプリ会議ユーザー参加者ロール API ユーザー コンテキスト通知シグナル クエリ
-ms.openlocfilehash: 75dc6dde65b24fd05931021544fafe3af956d88d
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: 9d0ae72e89104d58722c24dcdd1138d9fcc97033
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65667984"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755833"
 ---
 # <a name="meeting-apps-api-references"></a>会議アプリ API リファレンス
 
@@ -28,15 +27,15 @@ ms.locfileid: "65667984"
 
 |メソッド| 説明| ソース|
 |---|---|----|
-|[**ユーザー コンテキストを取得する**](#get-user-context-api)| コンテキスト情報を取得して、関連するコンテンツを [Teams] タブに表示します。| MSTC SDK|
-|[**参加者を取得する**](#get-participant-api)| 会議 ID と参加者 ID によって参加者情報を取得します。 |MSBF SDK|
-|[**会議中の通知を送信する**](#send-an-in-meeting-notification)| ユーザー ボット チャット用の既存の会話通知 API を使用して会議のシグナルを提供し、会議中の通知を示すユーザー アクションを通知できます。 |MSBF SDK|
-|[**会議の詳細を取得する**](#get-meeting-details-api)| 会議の静的メタデータを取得します。 |MSBF SDK |
-|[**リアルタイム キャプションを送信する**](#send-real-time-captions-api)| 進行中の会議にリアルタイム キャプションを送信します。 |MSTC SDK|
-|[**アプリ コンテンツをステージに共有する**](#share-app-content-to-stage-api)| 会議でアプリのサイド パネルからアプリの特定の部分を会議ステージに対して共有します。 |MSTC SDK|
-|[**アプリ コンテンツ ステージの共有状態を取得する**](#get-app-content-stage-sharing-state-api)| 会議ステージでアプリの共有状態に関する情報を取得します。 |MSTC SDK|
-|[**アプリ コンテンツ ステージの共有機能を取得する**](#get-app-content-stage-sharing-capabilities-api)| 共有のためのアプリの機能を会議ステージに取得します。 |MSTC SDK|
-|[**リアルタイムの Teams 会議イベントを取得する**](#get-real-time-teams-meeting-events-api)|実際の開始時刻や終了時刻など、リアルタイムの会議イベントを取得します。| MSBF SDK|
+|[**ユーザー コンテキストを取得する**](#get-user-context-api)| コンテキスト情報を取得して、関連するコンテンツを [Teams] タブに表示します。| [MSTC SDK](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
+|[**参加者を取得する**](#get-participant-api)| 会議 ID と参加者 ID によって参加者情報を取得します。 | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
+|[**会議中の通知を送信する**](#send-an-in-meeting-notification)| ユーザー ボット チャット用の既存の会話通知 API を使用して会議のシグナルを提供し、会議中の通知を示すユーザー アクションを通知できます。 | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
+|[**会議の詳細を取得する**](#get-meeting-details-api)| 会議の静的メタデータを取得します。 | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
+|[**リアルタイム キャプションを送信する**](#send-real-time-captions-api)| 進行中の会議にリアルタイム キャプションを送信します。 | [MSTC SDK](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
+|[**アプリ コンテンツをステージに共有する**](#share-app-content-to-stage-api)| 会議でアプリのサイド パネルからアプリの特定の部分を会議ステージに対して共有します。 | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+|[**アプリ コンテンツ ステージの共有状態を取得する**](#get-app-content-stage-sharing-state-api)| 会議ステージでアプリの共有状態に関する情報を取得します。 | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting.iappcontentstagesharingstate?view=msteams-client-js-latest&preserve-view=true) |
+|[**アプリ コンテンツ ステージの共有機能を取得する**](#get-app-content-stage-sharing-capabilities-api)| 共有のためのアプリの機能を会議ステージに取得します。 | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting.iappcontentstagesharingcapabilities?view=msteams-client-js-latest&preserve-view=true) |
+|[**リアルタイムの Teams 会議イベントを取得する**](#get-real-time-teams-meeting-events-api)|実際の開始時刻や終了時刻など、リアルタイムの会議イベントを取得します。| [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 
 ## <a name="get-user-context-api"></a>ユーザー コンテキストを取得する API 
 
@@ -133,6 +132,22 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 ---
 
+| プロパティ名 | 用途 |
+|---|---|
+| **user.id** | ユーザーの ID。 |
+| **user.aadObjectId** | ユーザーのオブジェクト ID をAzure Active Directoryします。 |
+| **user.name** | ユーザーの名前 |
+| **user.givenName** | ユーザーの名。|
+| **user.surname** | ユーザーの姓。 |
+| **user.email** | ユーザーのメール ID。 |
+| **user.userPrincipalName** | ユーザーの UPN。 |
+| **user.tenantId** | Azure Active Directory テナント ID。 |
+| **user.userRole** | ユーザーのロール (例: 'admin' または 'user')。 |
+| **meeting.role** | 会議の参加者の役割。 例: 'Organizer' または 'Presenter' または 'Attendee'。 |
+| **meeting.inMeeting** | 参加者が会議に参加しているかどうかを示す値。 |
+| **conversation.id** | 会議チャット ID。 |
+| **conversation.isGroup** | 会話に 2 人以上の参加者があるかどうかを示すブール値。 |
+
 ### <a name="response-codes"></a>応答コード
 
 次の表に、応答コードを示します。
@@ -217,6 +232,15 @@ POST /v3/conversations/{conversationId}/activities
 ```
 
 ---
+
+| プロパティ名 | 用途 |
+|---|---|
+| **type** | 動作状況の種類。 |
+| **text** | メッセージのテキスト コンテンツ。 |
+| **summary** | メッセージの概要テキスト。 |
+| **channelData.notification.alertInMeeting** | 会議中に通知をユーザーに表示するかどうかを示すブール値。 |
+| **channelData.notification.externalResourceUrl** | 通知の外部リソース URL の値。|
+| **replyToId** | スレッドの親メッセージまたはルート メッセージの ID。 |
 
 ### <a name="response-codes"></a>応答コード
 
@@ -378,6 +402,28 @@ Meeting Details API の JSON 応答本文は次のとおりです。
 ```
 
 ---
+
+| プロパティ名 | 用途 |
+|---|---|
+| **details.id** | BASE64 文字列としてエンコードされた会議の ID。 |
+| **details.msGraphResourceId** | MS Graph API呼び出しに特に使用される MsGraphResourceId。 |
+| **details.scheduledStartTime** | 会議のスケジュールされた開始時刻 (UTC)。 |
+| **details.scheduledEndTime** | 会議のスケジュールされた終了時刻 (UTC)。 |
+| **details.joinUrl** | 会議に参加するために使用される URL。 |
+| **details.title** | 会議のタイトル。 |
+| **details.type** | 会議の種類 (Adhoc、Broadcast、MeetNow、定期的、スケジュール、不明など)。 |
+| **conversation.isGroup** | 会話に 2 人以上の参加者があるかどうかを示すブール値。 |
+| **conversation.conversationType** | 会話の種類。 |
+| **conversation.id** | 会議チャット ID。 |
+| **organizer.id** | 開催者のユーザー ID。 |
+| **organizer.aadObjectId** | 開催者のAzure Active Directory オブジェクト ID。 |
+| **organizer.tenantId** | 開催者のAzure Active Directoryテナント ID。 |
+
+定期的な会議の種類の場合は、
+
+**startDate**: パターンの適用を開始する日付を指定します。 startDate の値は、イベント リソースの start プロパティの日付値に対応している必要があります。 パターンと一致しない場合、会議の最初の回はこの日付には発生しないことにご注意ください。
+
+**endDate**: パターンの適用を停止する日付を指定します。 パターンと一致しない場合、会議の最後の回はこの日付には発生しないことにご注意ください。
 
 ## <a name="send-real-time-captions-api"></a>リアルタイム キャプション API を送信する
 
@@ -760,6 +806,35 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
     "locale": "en-US" 
 }
 ```
+
+| プロパティ名 | 用途 |
+|---|---|
+| **name** | ユーザーの名前|
+| **type** | アクティビティの種類。 |
+| **timestamp** | ISO-8601 形式で表されるメッセージのローカル日付と時刻。 |
+| **id** | アクティビティの ID。 |
+| **channelId** | このアクティビティが関連付けられているチャネル。 |
+| **serviceUrl** | このアクティビティへの応答を送信する必要があるサービス URL。 |
+| **from.id** | 要求を送信したユーザーの ID。 |
+| **from.aadObjectId** | 要求を送信したユーザーの Azure Active Directory オブジェクト ID。 |
+| **conversation.isGroup** | 会話に 2 人以上の参加者があるかどうかを示すブール値。 |
+| **conversation.tenantId** | 会話または会議のテナント ID をAzure Active Directoryします。 |
+| **conversation.id** | 会議チャット ID。 |
+| **recipient.id** | 要求を受け取るユーザーの ID。 |
+| **recipient.name** | 要求を受け取るユーザーの名前。 |
+| **entityes.locale** | ロケールに関するメタデータを含むエンティティ。 |
+| **entityes.country** | 国に関するメタデータを含むエンティティ。 |
+| **entities.type** | クライアントに関するメタデータを含むエンティティ。 |
+| **channelData.tenant.id** | Azure Active Directory テナント ID。 |
+| **channelData.source** | イベントが発生または呼び出されたソース名。 |
+| **channelData.meeting.id** | 会議に関連付けられている既定の ID。 |
+| **値。MeetingType** | 会議の種類。 |
+| **値。タイトル** | 会議の件名。 |
+| **値。Id** | 会議に関連付けられている既定の ID。 |
+| **値。JoinUrl** | 会議の参加 URL。 |
+| **値。Starttime** | 会議の開始時刻 (UTC)。 |
+| **値。Endtime** | 会議の終了時刻 (UTC)。 |
+| **locale**| クライアントによって設定されたメッセージのロケール。 |
 
 ## <a name="code-sample"></a>コード サンプル
 

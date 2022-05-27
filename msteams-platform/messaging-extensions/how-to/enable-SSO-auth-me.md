@@ -5,12 +5,12 @@ description: コード サンプルを使用してメッセージング拡張機
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: bba2a8a225a75c21c46a242dec8acc55dcc0e8b5
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 490d44631fbd291e6c8686d94222b41ddd68de86
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296946"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757424"
 ---
 # <a name="single-sign-on-support-for-message-extensions"></a>メッセージ拡張機能のシングル サインオンのサポート
 
@@ -43,7 +43,7 @@ SSO を有効にするには:
     > [!NOTE]
     > TeamsMessagingExtensionsSearchAuthConfigBot.cs ファイルの `OnTeamsMessagingExtensionQueryAsync` と `OnTeamsAppBasedLinkQueryAsync` を除いて、他のハンドラー SSO はサポートされていません。
 
-4. トークンは、次の SSO を有効にしているシナリオに応じて、`turnContext.Activity.Value` ペイロードまたは `OnTeamsAppBasedLinkQueryAsync` の `OnTeamsMessagingExtensionQueryAsync` ハンドラーで受け取ります。
+4. 次の場合に `OnTeamsMessagingExtensionQueryAsync` SSO を有効にするシナリオに応じて、ペイロードまたはペイロード内のハンドラー `turnContext.Activity.Value` で `OnTeamsAppBasedLinkQueryAsync`トークンを受け取ります。
 
     ```json
     JObject valueObject=JObject.FromObject(turnContext.Activity.Value);

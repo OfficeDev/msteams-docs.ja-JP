@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 7c7c53b7b269e5c406cb27c3faee8b818dc567a6
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: f0dc772043eca4fc624fbd04261ddbc921c91fc4
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668138"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755952"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Teams 個人用タブを Microsoft 365 全体に拡張する
 
@@ -52,14 +52,14 @@ OutlookおよびOfficeで実行するように個人用アプリを更新する�
 
 OutlookとOfficeで実行が既に有効になっている[個人用タブ](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)から開始するには、Visual Studio Code のTeams Toolkit拡張機能を使用します。
 
-1. Visual Studio Code から、コマンド パレット (`Ctrl+Shift+P`) を開き、次のように入力します`Teams: Create a new Teams app`。
+1. Visual Studio Code から、コマンド パレット (`Ctrl+Shift+P`) を開き、「`Teams: Create a new Teams app`」と入力します。
 1. **[SSO が有効な個人用] タブを選択します**。
 
     :::image type="content" source="images/toolkit-tab-sample.png" alt-text="Teams ツールキットの Todo List サンプル (Teams、Outlook、Office で動作)":::
 
-1. ワークスペース フォルダーのローカル コンピューター上の場所を選択します。
+1. ワークスペース フォルダーのために、ローカル コンピューター上の場所を選択します。
 1. コマンド パレット (`Ctrl+Shift+P`) を開き、Azure アカウントに必要なアプリ リソース (App Service プラン、Storage アカウント、Function App、Managed Identity) を作成するために入力`Teams: Provision in the cloud`します。
-1. コマンド パレット (`Ctrl+Shift+P`) を開き、サンプル `Teams: Deploy to the cloud` コードを Azure のプロビジョニング済みリソースにデプロイしてアプリを起動します。
+1. コマンド パレット (`Ctrl+Shift+P`) を開き、「`Teams: Deploy to the cloud`」と入力して、サンプル コードを Azure のプロビジョニング済みリソースにデプロイしてアプリを起動します。
 
 ここから先に進み、[Teamsでアプリをサイドロード](#sideload-your-app-in-teams)し、OutlookとOfficeでアプリをプレビューできます。 (アプリ マニフェストと TeamsJS API 呼び出しは、Microsoft 365用に既に更新されています)。
 
@@ -71,7 +71,7 @@ OutlookとOfficeで実行が既に有効になっている[個人用タブ](http
 
 # <a name="teams-toolkit"></a>[Teams ツールキット](#tab/manifest-teams-toolkit)
 
-1. コマンド パレットを開きます。 `Ctrl+Shift+P`
+1. コマンド パレットを開きます: `Ctrl+Shift+P`。
 1. `Teams: Upgrade Teams manifest` コマンドを実行し、アプリ マニフェスト ファイルを選択します。 変更が行われます。
 
 # <a name="manual-steps"></a>[手動の手順](#tab/manifest-manual)
@@ -104,7 +104,7 @@ Teams Toolkitを使用すると、1.x TeamsJS バージョンから TeamsJS バ�
 > * teams-js@2.0.0 のステートメントをインポートする
 > * teams-js@2.0.0 の[関数、列挙型、およびインターフェイス呼び出し](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20)
 > * `TODO` コメントリマインダーは、 [コンテキスト](../tabs/how-to/using-teams-client-sdk.md#updates-to-the-context-interface) インターフェイスの変更の影響を受ける可能性がある領域にフラグを設定します
-> * `TODO`[コールバック関数を Promise に変換するための](../tabs/how-to/using-teams-client-sdk.md#callbacks-converted-to-promises)コメントリマインダー
+> * [コールバック関数を Promise に変換する](../tabs/how-to/using-teams-client-sdk.md#callbacks-converted-to-promises)ための `TODO` コメント リマインダー
 
 > [!IMPORTANT]
 > *.html* ファイル内のコードはアップグレード ツールではサポートされておらず、手動による変更が必要です。
@@ -148,21 +148,21 @@ Microsoft Teamsと同様に、タブ アプリケーションは、Officeおよ�
 
 OfficeとOutlookでアプリを実行する最後の手順は、更新された個人用タブ [アプリ パッケージ](..//concepts/build-and-test/apps-package.md)をMicrosoft Teamsにサイドロードすることです。
 
-1. Teams アプリケーション ([マニフェスト](../resources/schema/manifest-schema.md)アイコンと[アプリ アイコン](/microsoftteams/platform/resources/schema/manifest-schema#icons)) を zip ファイルにパッケージ化します。 Teams Toolkitを使用してアプリを作成した場合は、Teams Toolkitの **[展開]** メニューの **[Zip Teams メタデータ パッケージ**] オプションを使用して簡単にこれを行うことができます。
+1. Teams アプリケーション ([マニフェスト](../resources/schema/manifest-schema.md)アイコンと[アプリ アイコン](/microsoftteams/platform/resources/schema/manifest-schema#icons)) を zip ファイルにパッケージ化します。 Teams Toolkit を使用してアプリを作成した場合は、Teams Toolkit の **[展開]** メニューの **[Zip Teams メタデータ パッケージ]** オプションを使用して簡単に行うことができます。
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="Visual Studio Code 用のTeams ツールキット拡張機能の 'Zip Teams メタデータ パッケージ' オプション":::
 
-1. サンドボックス テナント アカウントでTeamsにサインインし、*開発者プレビュー* モードに切り替えます。 ユーザー プロファイルで省略記号 (**...**) メニューを選択し、[**開発者向けプレビュー****について** > ] を選択します。
+1. サンドボックス テナント アカウントで Teams にサインインし、*開発者プレビュー* モードに切り替えます。 ユーザープロファイルの横にある省略記号 (**...**) メニューから、**[詳細]** > **[開発者プレビュー]** の順に選択します。
 
-    :::image type="content" source="images/teams-dev-preview.png" alt-text="省略記号Teamsメニューから [バージョン情報] を開き、[開発者プレビュー] オプションを選択します。":::
+    :::image type="content" source="images/teams-dev-preview.png" alt-text="Teams の省略記号メニューから、[バージョン情報] を開き、[開発者プレビュー] オプションを選択する":::
 
-1. [ **アプリ] を** 選択して 、[ **アプリの管理** ] ウィンドウを開きます。 次に、[ **アプリの発行**] を選択します。
+1. **[アプリ]** を選択して、**[アプリを管理]** ウィンドウを開きます。 次に、**[アプリの発行]** を選択します。
 
-    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="[アプリの管理] ウィンドウを開き、[アプリの発行] を選択します。":::
+    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="[アプリを管理] ウィンドウを開き、[アプリの発行] を選択する":::
 
 1. **カスタム アプリ オプションアップロード** 選択し、アプリ パッケージを選択します。
 
-    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Teamsの [カスタム アプリをアップロードする] オプション":::
+    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Teams の [カスタム アプリをアップロード] オプション":::
 
 Teamsにサイドロードされると、個人用タブはOutlookとOfficeで利用できるようになります。 アプリをサイドロードするためにTeamsにサインインするために使用したのと同じ資格情報でサインインしてください。
 
@@ -225,7 +225,7 @@ Teams アプリのMicrosoft 365ホストとプラットフォームのサポー�
 
 実行時に特定の機能のホスト サポートを確認するには、その機能 (名前空間) で関数を `isSupported()` 呼び出し、必要に応じてアプリの動作を調整します。 これにより、アプリは、それをサポートするホストの UI と機能を明るくし、そうでないホストで正常なフォールバック エクスペリエンスを提供できます。 詳細については、「 [アプリ エクスペリエンスを区別する](../tabs/how-to/using-teams-client-sdk.md#differentiate-your-app-experience)」を参照してください。
 
-[Microsoft Teams開発者コミュニティ チャネル](/microsoftteams/platform/feedback)を使用して、問題を報告し、フィードバックを提供します。
+[Microsoft Teams 開発者コミュニティ チャネル](/microsoftteams/platform/feedback)を使用して、問題を報告し、フィードバックを提供します。
 
 ### <a name="debugging"></a>デバッグ
 
@@ -239,13 +239,6 @@ OfficeまたはOutlookへのローカル デバッグの初回実行時に、Mic
 
 フィードバックを提供し、Microsoft Teams [Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx/issues) でTeams Toolkitデバッグ エクスペリエンスに関する問題を報告します。
 
-## <a name="next-step"></a>次のステップ
-
-Teams、Outlook、Officeでアプリを公開します。
-
-> [!div class="nextstepaction"]
-> [OutlookとOfficeのTeams アプリを発行する](publish.md)
-
 ## <a name="code-sample"></a>コード サンプル
 
 | **サンプルの名前** | **説明** | **Node.js** |
@@ -253,3 +246,10 @@ Teams、Outlook、Officeでアプリを公開します。
 | Todo List | ReactとAzure Functionsを使用して構築された SSO を使用した編集可能な todo リスト。 Teamsでのみ動作します (このサンプル アプリを使用して、このチュートリアルで説明されているアップグレード プロセスを試してください)。 | [表示](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
 | Todo List (Microsoft 365) | ReactとAzure Functionsを使用して構築された SSO を使用した編集可能な todo リスト。 Teams、Outlook、Officeで動作します。 | [表示](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | イメージ エディター (Microsoft 365) | Microsoft Graph APIを使用してイメージを作成、編集、開き、保存します。 Teams、Outlook、Officeで動作します。 | [表示](https://github.com/OfficeDev/m365-extensibility-image-editor) |
+
+## <a name="next-step"></a>次の手順
+
+Teams、Outlook、Office でアプリを公開します。
+
+> [!div class="nextstepaction"]
+> [Outlook と Office 用の Teams アプリを発行する](publish.md)

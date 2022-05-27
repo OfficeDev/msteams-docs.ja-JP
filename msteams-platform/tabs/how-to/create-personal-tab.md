@@ -7,18 +7,20 @@ ms.topic: quickstart
 ms.author: lajanuar
 keywords: yeoman ASP.NET MVC パッケージ appmanifest 会話ドメイン アクセス許可ストア
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 6acb5e0adf24dca7538b6ceaca470b9b6c3126f2
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 9da0078813d43584d415ccb9425a529decdc78bd
+ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111242"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65673021"
 ---
 # <a name="create-a-personal-tab"></a>プライベート タブを作成する
 
 [個人] タブは、個人を対象としたボットと共に、個人用アプリの一部であり、1 人のユーザーを対象としています。 簡単にアクセスできるように、左側のナビゲーション バーにピン留めすることができます。 個人用タブの[順序を変更](#reorder-static-personal-tabs)することもできます。
 
 個人用タブを作成するための[前提条件](~/tabs/how-to/tab-requirements.md)がすべて揃っていることを確認します。
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ::: zone pivot="node-java-script"
 
@@ -64,61 +66,61 @@ ms.locfileid: "65111242"
 
     * **ソリューション名は何ですか?**
 
-      ソリューション名はプロジェクト名です。 **Enter** キーを押して、推奨される名前をそのまま使用できます。
+      ソリューション名はプロジェクト名です。 候補の名前をそのまま使用するには、**Enter** キーを押します。
 
     * **ファイルをどこに保存しますか?**
 
-      現在、プロジェクト ディレクトリにいます。 **Enter** キーを 選択します。
+      現在、プロジェクト ディレクトリにいます。 **Enter** キーを押します。
 
-    * **Microsoft Teams アプリ プロジェクトのタイトルは?**
+    * **Microsoft Teams アプリ プロジェクトのタイトル**
 
       タイトルはアプリ パッケージ名であり、アプリ マニフェストと説明で使用されます。 タイトルを入力するか、**Enter** キーを押して既定の名前をそのまま使用します。
 
-    * **(会社) 名は? (最大 32 文字)**
+    * **(会社) 名 (最大 32 文字)**
 
-      会社名はアプリ マニフェストで使用されます。 会社名を入力するか、 **Enter** を選択して既定の名前をそのまま使用します。
+      会社名はアプリ マニフェストで使用されます。 会社名を入力するか、**Enter** キーを押して既定の名前をそのまま使用します。
 
-    * **どのマニフェスト バージョンを使用しますか?**: 
+    * **使用するマニフェスト バージョン**
 
       既定のスキーマを選択します。
 
-    * **クイック スキャフォールディングをしますか? (Y/n)**
+    * **クイック スキャフォールディング (Y/n)**
 
-      既定値は yes です。 **n** 入力して、Microsoft パートナー ID を入力します。
+      既定値は [はい] です。Microsoft パートナー ID を入力するには、**[n]** を入力します。
 
-    * **Microsoft パートナー ID (お持ちの場合) を入力しますか? (空白のままにする)**
+    * **Microsoft パートナー ID (お持ちの場合): (空白のままにする)**
 
-      このフィールドは必須ではなく、[Microsoft パートナー ネットワーク](https://partner.microsoft.com)に既に参加している場合にのみ使用する必要があります。
+      このフィールドは必須ではなく、既に [Microsoft Partner Network](https://partner.microsoft.com) に参加している場合にのみ使用する必要があります。
 
     * **プロジェクトに何を追加しますか?**
 
-      **( &ast; ) A タブを選択します**。
+      **( &ast; ) A タブ** を選択します。
 
-    * **このソリューションをホストする URL は?**
+    * **このソリューションをホストする URL**
 
-      既定では、ジェネレーターは Azure Web サイト URL を提案します。 アプリをローカルでのみテストしているため、有効な URL は必要ありません。
+      既定では、ジェネレーターは Azure Web サイトの URL を提案します。 アプリをローカルでのみテストしているため、有効な URL は必要ありません。
 
     * **アプリ/タブが読み込まれたときに、読み込みインジケーターを表示しますか?**
 
-      アプリまたはタブの読み込み時に読み込みインジケーターを含め **ない** ことを選択します。 既定値は no で、**n** と入力します。
+      アプリまたはタブの読み込み時に読み込みインジケーターを含め **ない** ことを選択します。 既定値は [いいえ] です。**[n]** を入力します。
 
     * **個人用アプリをタブ ヘッダーバーなしでレンダリングしますか?**
 
-      タブ ヘッダー バーなしでレンダリングする個人用アプリを含め **ない** ことを選択します。 既定値は no で、 **n** と入力します。
+      タブのヘッダーバーなしで表示される個人用アプリを含め **ない** ことを選択します。 既定値は [いいえ] です。**[n]** を入力します。
 
     * **Test フレームワークと初期テストを含めますか? (y/N)**
 
-      このプロジェクトのテスト フレームワークを含め **ない** ことを選択します。 既定値は no で、**n** と入力します。
+      このプロジェクトのテスト フレームワークを含め **ない** ことを選択します。 既定値は [いいえ] です。**[n]** を入力します。
 
-    * **ESLint サポートを含めますか? (y/N)**
+    * **ESLint のサポートを含めますか? (y/N)**
 
-      ESLint サポートを含めないことを選択します。 既定値は no で、**n** と入力します。
+      ESLint サポートを含めないことを選択します。 既定値は [いいえ] です。**[n]** を入力します。
 
     * **テレメトリに Azure Application Insights を使用しますか? (y/N)**
 
-      [Azure アプリケーション インサイト](/azure/azure-monitor/app/app-insights-overview)を含め **ない** ことを選択します。 既定値は no です。 **n** と入力します。
+      [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview) を含め **ない** ことを選択します。 既定値は [いいえ] です。**[n]** を入力します。
 
-    * **既定のタブ名 (最大 16 文字) は?**
+    * **既定のタブ名 (最大 16 文字)**
 
       タブに名前を付けます。このタブ名は、ファイルまたは URL パス コンポーネントとしてプロジェクト全体で使用されます。
 
@@ -207,7 +209,7 @@ ms.locfileid: "65111242"
 
 ### <a name="create-your-app-package"></a>アプリ パッケージを作成する
 
-Teams でアプリケーションをビルドして実行するためのアプリ パッケージが必要です。 アプリ パッケージは、`manifest.json` ファイルを検証し、`./package` ディレクトリに zip フォルダーを生成する gulp タスクを使用して作成されます。 コマンド プロンプトで、コマンド `gulp manifest` を実行します。
+Teams でアプリケーションをビルドして実行するには、アプリ パッケージが必要です。 アプリ パッケージは、`manifest.json` ファイルを検証し、`./package` ディレクトリに zip フォルダーを生成する gulp タスクを使用して作成されます。 コマンド プロンプトで、コマンド `gulp manifest` を実行します。
 
 ### <a name="build-and-run-your-application"></a>アプリケーションをビルドして実行する
 
@@ -248,7 +250,7 @@ gulp ngrok-serve
 
 ### <a name="upload-your-application-to-teams"></a>Microsoft Teams にアプリ パッケージをアップロードする
 
-1. Microsoft Teams に移動し、[**アプリ**] &nbsp; [:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teamsストア":::] を選択します。
+1. Microsoft Teams に移動し、**[アプリ]**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="[Teamsストア]"::: を選択します。
 1. [**アプリの管理**] を選択し、[**カスタム アプリをアップロード**] します。
 1. プロジェクト ディレクトリに移動し、 **./package** フォルダーに移動し、zip フォルダーを選択して [**開く**] を選択します。
 
@@ -304,7 +306,7 @@ gulp ngrok-serve
 
 #### <a name="startupcs"></a>Startup.cs
 
-このプロジェクトは ASP.NET Core 3.1 Web アプリケーションの空のテンプレートから作成され、セットアップ時に [**Advanced - Configure for HTTPS**] チェック ボックスがオンになっています。 MVC サービスは、依存関係挿入フレームワーク `ConfigureServices()` のメソッドによって登録されます。 また、空のテンプレートでは、既定では静的コンテンツの提供が有効にされないため、次のコードを使用して静的ファイル ミドルウェアがメソッド `Configure()` に追加されます。
+このプロジェクトは ASP.NET Core 3.1 Web アプリケーションの空のテンプレートから作成され、セットアップ時に **[Advanced - Configure for HTTPS]** チェック ボックスがオンになっています。 MVC サービスは、依存関係挿入フレームワーク `ConfigureServices()` のメソッドによって登録されます。 また、空のテンプレートでは、既定では静的コンテンツの提供が有効にされないため、次のコードを使用して静的ファイル ミドルウェアがメソッド `Configure()` に追加されます。
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -366,10 +368,10 @@ Visual Studio ソリューション エクスプローラーで、プロジェ�
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. Visual Studio ソリューション エクスプローラー [**Pages**] フォルダーから **PersonalTab.cshtml** を開き、`microsoftTeams.initialize()` を `<script>` タグに追加して保存します。
+1. Visual Studio ソリューション エクスプローラー [**Pages**] フォルダーから **PersonalTab.cshtml** を開き、`app.initialize()` を `<script>` タグに追加して保存します。
 
 1. Visual Studioで **F5** を選択するか、アプリケーションの [**デバッグ**] メニューから [**デバッグの開始**] を選択します。
 
@@ -391,11 +393,11 @@ ngrok http 3978 --host-header=localhost
 
 1. 開発者ポータルで `tab.zip` を選択して開きます。
 
-1. 既定の **アプリ ID** が作成され、[**基本情報**] セクションに入力されます。
+1. 既定の **アプリ ID** が作成され、**[基本情報]** セクションに入力されます。
 
-1. [**説明**]にアプリの短い説明と長い説明を追加します。
+1. **[説明]** にアプリの短い説明と長い説明を追加します。
 
-1. [**開発者情報**] で、必要な詳細を追加し、**Web サイト (有効な HTTPS URL である必要があります)** に ngrok HTTPS URL を指定します。
+1. **[開発者情報]** で、必要な詳細を追加し、**Web サイト (有効な HTTPS URL である必要があります)** に ngrok HTTPS URL を指定します。
 
 1. **アプリの URL** で、プライバシー ポリシーを `https://<yourngrokurl>/privacy` に、利用規約を `https://<yourngrokurl>/tou` に更新して保存します。
 
@@ -407,7 +409,7 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="preview-your-app-in-teams"></a>Teams でアプリをプレビューする
 
-1. [開発者ポータル] ツール バーの [**Teamsでプレビュー**] を選択すると、アプリが正常にサイドロードされたことを開発者ポータルから通知されます。 アプリの [**追加**] ページが表示されます。
+1. [開発者ポータル] ツール バーの **[Teamsでプレビュー]** を選択すると、アプリが正常にサイドロードされたことを開発者ポータルから通知されます。 アプリの [**追加**] ページが表示されます。
 
 1. [**追加**] を選択して、Teams にアプリを読み込みます。 タブが Teams で利用できるようになりました。
 
@@ -457,7 +459,7 @@ ngrok http 3978 --host-header=localhost
 
 #### <a name="startupcs"></a>Startup.cs
 
-このプロジェクトは ASP.NET Core 3.1 Web アプリケーションの空のテンプレートから作成され、セットアップ時に [**Advanced - Configure for HTTPS**] チェック ボックスがオンになっています。 MVC サービスは、依存関係挿入フレームワーク `ConfigureServices()` のメソッドによって登録されます。 また、空のテンプレートでは、既定では静的コンテンツの提供が有効にされないため、次のコードを使用して静的ファイル ミドルウェアがメソッド `Configure()` に追加されます。
+このプロジェクトは ASP.NET Core 3.1 Web アプリケーションの空のテンプレートから作成され、セットアップ時に **[Advanced - Configure for HTTPS]** チェック ボックスがオンになっています。 MVC サービスは、依存関係挿入フレームワーク `ConfigureServices()` のメソッドによって登録されます。 また、空のテンプレートでは、既定では静的コンテンツの提供が有効にされないため、次のコードを使用して静的ファイル ミドルウェアがメソッド `Configure()` に追加されます。
 
 ``` csharp
 public void ConfigureServices(IServiceCollection services)
@@ -531,10 +533,10 @@ Visual Studio ソリューション エクスプローラーで、プロジェ�
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js"></script>
     ```
 
-1. Visual Studio ソリューション エクスプローラーで、[**ビュー**]  >  [**PersonalTab**] フォルダーから **PersonalTab.cshtml** を開き、`<script>` タグ内で `microsoftTeams.initialize()` を追加して保存します。
+1. Visual Studio ソリューション エクスプローラーで、[**ビュー**]  >  [**PersonalTab**] フォルダーから **PersonalTab.cshtml** を開き、`<script>` タグ内で `app.initialize()` を追加して保存します。
 
 1. Visual Studioで **F5** を選択するか、アプリケーションの [**デバッグ**] メニューから [**デバッグの開始**] を選択します。
 
@@ -550,7 +552,7 @@ ngrok http 3978 --host-header=localhost
 
 1. [**開発者ポータル**](https://dev.teams.microsoft.com/home)に移動します。
 
-1. **アプリ** を開き、[**アプリのインポート**] を選択します。
+1. **[アプリ]** を開き、**[アプリのインポート]** を選択します。
 
 1. アプリ パッケージの名前は **tab.zip** です。 次のパスで使用できます:
 
@@ -560,11 +562,11 @@ ngrok http 3978 --host-header=localhost
 
 1. **tab.zip** を選択し、開発者ポータルで開きます。
 
-1. 既定の **アプリ ID** が作成され、[**基本情報**] セクションに入力されます。
+1. 既定の **アプリ ID** が作成され、**[基本情報]** セクションに入力されます。
 
-1. [**説明**]にアプリの短い説明と長い説明を追加します。
+1. **[説明]** にアプリの短い説明と長い説明を追加します。
 
-1. [**開発者情報**] で、必要な詳細を追加し、**Web サイト (有効な HTTPS URL である必要があります)** に ngrok HTTPS URL を指定します。
+1. **[開発者情報]** で、必要な詳細を追加し、**Web サイト (有効な HTTPS URL である必要があります)** に ngrok HTTPS URL を指定します。
 
 1. **アプリの URL** で、プライバシー ポリシーを `https://<yourngrokurl>/privacy` に、利用規約を `https://<yourngrokurl>/tou` に更新して保存します。
 
@@ -576,7 +578,7 @@ ngrok http 3978 --host-header=localhost
 
 ### <a name="preview-your-app-in-teams"></a>Teams でアプリをプレビューする
 
-1. [開発者ポータル] ツール バーの [**Teamsでプレビュー**] を選択すると、アプリが正常にサイドロードされたことを開発者ポータルから通知されます。 アプリの [**追加**] ページが表示されます。
+1. [開発者ポータル] ツール バーの **[Teamsでプレビュー]** を選択すると、アプリが正常にサイドロードされたことを開発者ポータルから通知されます。 アプリの [**追加**] ページが表示されます。
 
 1. [**追加**] を選択して、Teams にアプリを読み込みます。 タブが Teams で利用できるようになりました。
 
