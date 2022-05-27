@@ -6,12 +6,12 @@ keywords: Teams Office365 コネクタ
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 8091edf34ff53930afea03cd2c4833bf6a000158
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 3258e6b08041abbfcd3e0b9a4365d6a31f884e0b
+ms.sourcegitcommit: 09ee0305b827ad6d1368d892db3824c5dbad886f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297150"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65759663"
 ---
 # <a name="create-office-365-connectors"></a>Office 365 コネクタの作成
 
@@ -224,7 +224,9 @@ Microsoft Teams アプリを使用すると、Teams 内に既存の Office 365 �
 ## <a name="distribute-webhook-and-connector"></a>Webhook とコネクタを配布する
 
 1. チームに[受信 Webhook を直接セットアップ](~/webhooks-and-connectors/how-to/add-incoming-webhook.md#create-an-incoming-webhook)します。
+
 1. [構成ページ](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience)を追加して、受信 Webhook を Office 365 コネクタで公開します。
+
 1. [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) への提出の一部としてコネクタをパッケージ化して公開します。
 
 ## <a name="code-sample"></a>コード サンプル

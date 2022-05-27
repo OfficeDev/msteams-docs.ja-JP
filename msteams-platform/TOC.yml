@@ -24,7 +24,7 @@
       href: sbs-gs-javascript.yml
     - name: JavaScript を使用して初めてのボット アプリを構築する
       href: sbs-gs-bot.yml
-    - name: JavaScript を使用して初めてのメッセージング拡張アプリを構築する
+    - name: JavaScript を使用して最初のメッセージ拡張アプリを作成する
       href: sbs-gs-msgext.yml
     - name: Blazor を使用して初めてのアプリを構築する
       href: sbs-gs-blazorupdate.yml
@@ -34,6 +34,10 @@
       href: sbs-gs-csharp.yml
     - name: Node.js を使用して初めてのアプリを構築する
       href: sbs-gs-nodejs.yml
+    - name: JavaScript を使用した通知ボットのビルド
+      href: sbs-gs-notificationbot.yml
+    - name: Build コマンド ボットと JavaScript
+      href: sbs-gs-commandbot.yml
     - name: コード サンプル
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: アプリを計画する
@@ -301,6 +305,24 @@
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
     - name: 会議アプリ API リファレンス
       href: apps-in-teams-meetings/API-references.md
+    - name: Live Share による強化されたコラボレーション
+      items:
+        - name: 概要
+          href: apps-in-teams-meetings/teams-live-share-overview.md
+        - name: はじめに
+          items:
+            - name: クイック スタート
+              href: apps-in-teams-meetings/teams-live-share-quick-start.md
+            - name: サイコロ ローラーのチュートリアル
+              href: apps-in-teams-meetings/teams-live-share-tutorial.md
+        - name: コア機能
+          href: apps-in-teams-meetings/teams-live-share-capabilities.md
+        - name: メディア機能
+          href: apps-in-teams-meetings/teams-live-share-media-capabilities.md
+        - name: アジャイル ポーカー チュートリアル
+          href: sbs-teams-live-share.yml
+        - name: Live Share SDK FAQ
+          href: apps-in-teams-meetings/teams-live-share-faq.md
     - name: Teams でのカスタム Together モードのシーン
       href: apps-in-teams-meetings/teams-together-mode.md
 - name: Webhook とコネクタを作成する

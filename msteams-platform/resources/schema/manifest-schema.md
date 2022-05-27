@@ -4,12 +4,12 @@ description: Microsoft Teams のマニフェスト スキーマについて説�
 ms.topic: reference
 ms.localizationpriority: high
 keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: 788a8f5542510e3232c3f97bf12584f08f12d0f6
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 5881d5745e12255aad270c227cdd9508a0023644
+ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672909"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65755882"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参照: Microsoft Teams のマニフェスト スキーマ
 
@@ -17,7 +17,7 @@ Microsoft Teams アプリ マニフェストでは、アプリが Microsoft Team
 各バージョンで行われた変更の詳細については、[マニフェスト変更ログ](https://github.com/OfficeDev/microsoft-teams-app-schema/releases)を参照してください。
 
 > [!Important]
-> Microsoft Teams アプリ マニフェスト スキーマのバージョン `1.13` では、[Teams アプリを Outlook および Office に拡張できます](../../m365-apps/overview.md)。 Teams 専用アプリの場合は、バージョン `1.12` (またはそれ以前) を使用します。 それ以外の場合は、1.12 と 1.13 スキーマは同じです。 詳細については、[Teams JavaScript クライアント SDK](../../m365-apps/overview.md) の概要を参照してください。
+> Microsoft Teams アプリ マニフェスト スキーマのバージョン `1.13` では、[Teams アプリを Outlook および Office に拡張できます](../../m365-apps/overview.md)。 Teams 専用アプリの場合は、バージョン `1.12` (またはそれ以前) を使用します。 それ以外の場合は、1.12 と 1.13 スキーマは同じです。 詳細については、[Teams JavaScript クライアント SDK](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit) の概要を参照してください。
 
 次のスキーマ サンプルは、すべての拡張オプションを示しています。
 

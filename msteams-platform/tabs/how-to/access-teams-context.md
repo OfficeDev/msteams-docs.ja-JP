@@ -4,12 +4,12 @@ description: タブにユーザー コンテクストを付与する方法を説
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: チーム タブ ユーザー コンテキスト
-ms.openlocfilehash: 04a0e751a8a532895b183690e00bc058c94d3346
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 0539f1dc3f31a2b068e80b4ff12b93a26e09b766
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755945"
+ms.locfileid: "65757361"
 ---
 # <a name="get-context-for-your-tab"></a>タブのコンテキストを取得する
 
@@ -26,7 +26,7 @@ ms.locfileid: "65755945"
 ユーザー、チーム、または会社に関するコンテキストは、次の場合に特に役立ちます。
 
 * アプリ内のリソースを作成するか、指定したユーザーまたはチームに関連付けます。
-* Microsoft Azure Active Directory (Azure AD) またはその他の ID プロバイダーから認証フローを開始すると、ユーザーがユーザー名を再度入力する必要はありません。
+* Microsoft Azure Active Directory (Azure AD) またはその他の ID プロバイダーから認証フローを開始し、ユーザーがユーザー名を再入力する必要はありません。
 
 詳細については、「[Microsoft Teamsでユーザーを認証する」を参照してください](~/concepts/authentication/authentication.md)。
 
@@ -70,7 +70,53 @@ ms.locfileid: "65755945"
 
 ### <a name="get-context-by-using-the-microsoft-teams-javascript-library"></a>Microsoft Teams JavaScript ライブラリを使用してコンテキストを取得する
 
+git-issue-clarify-the-full-set-of-values-any-context-object-property-can-can-can-take: Microsoft Teams [JavaScript クライアント SDK](/javascript/api/overview/msteams-client) を呼び出`microsoftTeams.getContext(function(context) { /* ... */ })`して、上記の情報を取得することもできます。
+
+次のコードは、コンテキスト変数の例を示しています。
+
+```json
+{
+    "teamId": "The Microsoft Teams ID in the format 19:[id]@thread.skype",
+    "teamName": "The name of the current team",
+    "channelId": "The channel ID in the format 19:[id]@thread.skype",
+    "channelName": "The name of the current channel",
+    "chatId": "The chat ID in the format 19:[id]@thread.skype",
+    "locale": "The current locale of the user formatted as languageId-countryId (for example, en-us)",
+    "entityId": "The developer-defined unique ID for the entity this content points to",
+    "subEntityId": "The developer-defined unique ID for the sub-entity this content points to",
+    "loginHint": "A value suitable as a login hint for Azure AD. This is usually the login name of the current user, in their home tenant",
+    "userPrincipalName": "The principal name of the current user, in the current tenant",
+    "userObjectId": "The Azure AD object id of the current user, in the current tenant",
+    "tid": "The Azure AD tenant ID of the current user",
+    "groupId": "Guid identifying the current Office 365 Group ID",
+    "theme": "The current UI theme: default | dark | contrast",
+    "isFullScreen": "Indicates if the tab is in full-screen",
+    "teamType": "The type of team",
+    "teamSiteUrl": "The root SharePoint site associated with the team",
+    "teamSiteDomain": "The domain of the root SharePoint site associated with the team",
+    "teamSitePath": "The relative path to the SharePoint site associated with the team",
+    "channelRelativeUrl": "The relative path to the SharePoint folder associated with the channel",
+    "sessionId": "The unique ID for the current Teams session for use in correlating telemetry data",
+    "userTeamRole": "The user's role in the team",
+    "isTeamArchived": "Indicates if team is archived",
+    "hostClientType": "The type of host client. Possible values are android, ios, web, desktop, surfaceHub, teamsRoomsAndroid, teamsPhones, teamsDisplays rigel (deprecated, use teamsRoomsWindows instead)",
+    "frameContext": "The context where tab URL is loaded (for example, content, task, setting, remove, sidePanel)",
+    "sharepoint": "The SharePoint context is available only when hosted in SharePoint",
+    "tenantSKU": "The license type for the current user tenant. Possible values are enterprise, free, edu, unknown",
+    "userLicenseType": "The license type for the current user. Possible values are E1, E3, and E5 enterprise plans",
+    "parentMessageId": "The parent message ID from which this task module is launched",
+    "ringId": "The current ring ID",
+    "appSessionId": "The unique ID for the current session used for correlating telemetry data",
+    "isCallingAllowed": "Indicates if calling is allowed for the current logged in user",
+    "isPSTNCallingAllowed": "Indicates if PSTN calling is allowed for the current logged in user",
+    "meetingId": "The meeting ID used by tab when running in meeting context",
+    "defaultOneNoteSectionId": "The OneNote section ID that is linked to the channel",
+    "isMultiWindow": "The indication whether the tab is in a pop out window"
+}
+```
+
 また、関数を呼び出して[、Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) を使用して、上記の情報を`app.getContext()`取得することもできます。 詳細については、 [Context インターフェイス](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true)のプロパティを参照してください。
+
 
 ## <a name="retrieve-context-in-private-channels"></a>プライベート チャネルでコンテキストを取得する
 

@@ -5,12 +5,12 @@ description: 例とコード サンプルを使用して会議アプリ API 参�
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 9d0ae72e89104d58722c24dcdd1138d9fcc97033
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: cb28e893a9c0460290294893800f77c90829edda
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755833"
+ms.locfileid: "65756584"
 ---
 # <a name="meeting-apps-api-references"></a>会議アプリ API リファレンス
 
@@ -534,8 +534,8 @@ microsoftTeams.meeting.shareAppContentToStage((err, result) => {
 |応答コード|説明|
 |---|---|
 | **500** | 内部エラー。 |
-| **501** | API は、現在のコンテキストではサポートされていません。|
-| **1000** | アプリには、ステージに対する共有を許可する適切なアクセス許可がありません。|
+| **501** | API は現在のコンテキストではサポートされていません。|
+| **1000** | アプリには、共有のステージングを許可するための適切なアクセス許可がありません。|
 
 ## <a name="get-app-content-stage-sharing-state-api"></a>アプリ コンテンツ ステージの共有状態を取得する API
 
@@ -574,8 +574,8 @@ microsoftTeams.meeting.getAppContentStageSharingState((err, result) => {
 |応答コード|説明|
 |---|---|
 | **500** | 内部エラー。 |
-| **501** | API は、現在のコンテキストではサポートされていません。|
-| **1000** | アプリには、ステージに対する共有を許可する適切なアクセス許可がありません。|
+| **501** | API は現在のコンテキストではサポートされていません。|
+| **1000** | アプリには、共有のステージングを許可するための適切なアクセス許可がありません。|
 
 ## <a name="get-app-content-stage-sharing-capabilities-api"></a>アプリ コンテンツ ステージの共有機能を取得する API
 
@@ -614,7 +614,7 @@ microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result) => {
 |応答コード|説明|
 |---|---|
 | **500** | 内部エラー。 |
-| **1000** | アプリには、ステージに対する共有を許可するアクセス許可がありません。|
+| **1000** | アプリには、共有のステージングを許可するアクセス許可がありません。|
 
 ## <a name="get-real-time-teams-meeting-events-api"></a>リアルタイムの Teams 会議イベントを取得する API
 

@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: f9c4b342a0be797a1ac20f9f195ae969b51a0187
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 6df09a7398d26c4e0a69a2a9ac3f256b7086a9e0
+ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656146"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65668075"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Microsoft 365 間で Teams メッセージ拡張機能を拡張する
 
@@ -90,7 +90,7 @@ Teams アプリ マニフェストを開き、`$schema` と `manifestVersion` �
 
 ---
 
-Teams Toolkit を使用してメッセージ拡張アプリを作成した場合は、それを使用してマニフェスト ファイルへの変更を検証し、エラーを特定できます。コマンド パレット `Ctrl+Shift+P` を開き、「**Teams: マニフェスト ファイルの検証**」を見つけます。
+Teams Toolkit を使用してメッセージ拡張アプリを作成した場合は、それを使用してマニフェスト ファイルへの変更を検証し、エラーを特定できます。 コマンド パレット`Ctrl+Shift+P` を開き、**Teams: マニフェスト ファイルを検証します**。
 
 ## <a name="add-an-outlook-channel-for-your-bot"></a>ボットの Outlook チャネルを追加する
 
@@ -115,7 +115,7 @@ Microsoft Teams では、メッセージ拡張機能は、ホストする Web �
 > [!NOTE]
 > このチュートリアルで提供される [サンプル アプリ](#quickstart) を使用している場合は、シナリオに Azure Active Directory (AAD) シングル サインオン認証が含まれていないため、この手順をスキップできます。
 
-メッセージ拡張機能の Azure Active Directory (AD) シングル サインオン (SSO) は、Outlook でも [Teams と同じように](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots)機能します。しかし、テナントの *アプリ登録* ポータルで、ボットの Azure AD アプリ登録に複数のクライアント アプリケーション識別子を追加する必要があります。
+メッセージ拡張機能の Azure Active Directory シングル サインオン (SSO) は、Outlook でも [Teams と同じように](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots)機能します。 ただし、テナントのアプリ登録ポータルでボットの Azure AD *アプリ登録* に複数のクライアント アプリケーション識別子を追加する必要があります。
 
 1. Azure 管理者アカウントを使用して、[Azure portal](https://portal.azure.com) にサインインします。
 1. **[アプリ登録]** を開きます。
@@ -123,27 +123,27 @@ Microsoft Teams では、メッセージ拡張機能は、ホストする Web �
 1. *[管理]* の下の **[API の公開]** を選択します。
 1. **[承認されたクライアント アプリケーション]** セクションで、次のすべての `Client Id` 値が一覧表示されていることを確認します。
 
-|Microsoft 365 クライアント アプリケーション | クライアント ID |
-|--|--|
-|Teams デスクトップとモバイル |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
-|Teams Web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
-|Outlook デスクトップ | d3590ed6-52b3-4102-aeff-aad2292ab01c |
-|Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
-|Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
+   |Microsoft 365 クライアント アプリケーション | クライアント ID |
+   |--|--|
+   |Teams デスクトップとモバイル |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
+   |Teams Web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
+   |Outlook デスクトップ | d3590ed6-52b3-4102-aeff-aad2292ab01c |
+   |Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
+   |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
 
 ## <a name="sideload-your-updated-message-extension-in-teams"></a>更新されたメッセージ拡張機能を Teams でサイドロードする
 
 最後の手順は、更新されたメッセージ拡張機能 ([アプリ パッケージ](/microsoftteams/platform/concepts/build-and-test/apps-package)) をMicrosoft Teamsにサイドロードすることです。 完了すると、メッセージ拡張機能がインストールされている *[アプリ]* に作成メッセージ領域から表示されます。
 
-1. Teams アプリケーション (マニフェストおよびアプリ [アイコン](/microsoftteams/platform/resources/schema/manifest-schema#icons)) を zip ファイルにパッケージ化します。Teams Toolkit を使用してアプリを作成した場合は、Teams Toolkit の *[展開]* メニューの **[Zip Teams メタデータ パッケージ]** オプションを使用して簡単に行うことができます。
+1. Teams アプリケーション (マニフェスト アイコンとアプリ [アイコン](/microsoftteams/platform/resources/schema/manifest-schema#icons)) を zip ファイルにパッケージ化します。 Teams Toolkit を使用してアプリを作成した場合は、Teams Toolkit の *[展開]* メニューの **[Zip Teams メタデータ パッケージ]** オプションを使用して簡単に行うことができます。
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="Visual Studio Code 用のTeams ツールキット拡張機能の 'Zip Teams メタデータ パッケージ' オプション":::
 
-1. サンドボックス テナント アカウントで Teams にサインインし、*開発者プレビュー* モードに切り替えます。 ユーザー プロファイルで省略記号 (**...**) メニューを選択し、[バージョン情報] > **[開発者プレビュー]** の順に選択します。
+1. サンドボックス テナント アカウントで Teams にサインインし、*開発者プレビュー* モードに切り替えます。 ユーザープロファイルの横にある省略記号 (**...**) メニューから、**[詳細]** > **[開発者プレビュー]** の順に選択します。
 
     :::image type="content" source="images/teams-dev-preview.png" alt-text="Teams の省略記号メニューから、[バージョン情報] を開き、[開発者プレビュー] オプションを選択する":::
 
-1. *[アプリ]* を選択して、**[アプリを管理]** ウィンドウを開きます。 次に、**[アプリの発行]** を選択します。
+1. **[アプリ]** を選択して、**[アプリを管理]** ウィンドウを開きます。 次に、**[アプリの発行]** を選択します。
 
     :::image type="content" source="images/teams-manage-your-apps.png" alt-text="[アプリを管理] ウィンドウを開き、[アプリの発行] を選択する":::
 
@@ -167,14 +167,14 @@ Outlook on the web で実行されているアプリをプレビューするに�
 
     :::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="メール構成ウィンドウの下部にある [その他のアプリ] メニューをクリックして、メッセージ拡張機能を使用します":::
 
-メッセージ拡張機能が一覧表示されます。そこから呼び出して、Teams でメッセージを作成する場合と同じように使用できます。
+メッセージ拡張機能が一覧表示されます。 そこからそれを呼び出し、Teams でメッセージを作成する場合と同じように使用できます。
 
 ### <a name="outlook"></a>Outlook
 
 デスクトップ上の Outlook で実行されているアプリ Windows プレビューするには:
 
 1. テスト テナントの資格情報を使用してログインした Outlook を起動します。
-1. **[新しいメール]** を選択します。
+1. [**新しい電子メール**] を選択します。
 1. 上部のリボンの **[その他のアプリ]** ポップアップ メニューを開きます。
 
     :::image type="content" source="images/outlook-desktop-compose-more-apps.png" alt-text="コンポジション ウィンドウ リボンにある [その他のアプリ] をクリックして、メッセージ拡張機能を使用する":::
