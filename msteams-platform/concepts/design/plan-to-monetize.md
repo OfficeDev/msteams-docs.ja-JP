@@ -4,12 +4,12 @@ description: Microsoft Teams アプリの収益化を計画する方法につい
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 2a799f7a796405327c075d6729fba7901d73cdaa
-ms.sourcegitcommit: 7f224d37d23e5a3f72b83254e556f5b33e807bca
+ms.openlocfilehash: 9a21304666866da5c08af5ba3df1f0a48297398c
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63502010"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756850"
 ---
 # <a name="plan-to-monetize-your-app"></a>アプリの収益化を計画する
 

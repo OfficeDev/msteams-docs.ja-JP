@@ -4,12 +4,12 @@ description: Microsoft Teams 開発者向けドキュメントの概要の概要
 ms.localizationpriority: high
 ms.topic: reference
 keywords: Microsoft Teams 開発者向けサンプル
-ms.openlocfilehash: 7e2288912fd2a851571b4b735af02db519fefe47
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: 9e4405439241de9a4f3db97d256df8b8fab21880
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654769"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757711"
 ---
 # <a name="get-started"></a>概要
 
@@ -23,7 +23,7 @@ Microsoft Teams 用のカスタマイズ アプリの構築・展開にあたり
 - ツールキットと SDK のエクスペリエンス。
 - さまざまな種類の Teams アプリの設定・ビルド。
 
-選択可能なビルド環境オプションと、Teams アプリをビルド・展開する段取りを簡単に見てみましょう。
+選択できるビルド環境オプションと、Teams アプリのビルドと展開のロードマップを簡単に見てみましょう。
 
 :::image type="content" source="../assets/images/get-started/gs-build-options.png" alt-text="Teams アプリをビルドして展開するための基本的な手順を示す図":::
 
@@ -41,7 +41,7 @@ Microsoft Teams 用のカスタマイズ アプリの構築・展開にあたり
 
 既に Yeoman ワークフローに慣れている方は、 [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) を使用してアプリをビルドするのを好まれるかも知れません。
 
-> [!NOTE]
+> [!WARNING]
 > App Studio を使用している場合は、開発者ポータルで Teams アプリの設定、配布、管理を行うことをお勧めします。<br> App Studio は 2022 年 6 月 30 日までに非推奨になります。
 
 ## <a name="build-your-first-teams-app"></a>最初の Teams アプリをビルドする
@@ -49,11 +49,15 @@ Microsoft Teams 用のカスタマイズ アプリの構築・展開にあたり
 それでは、最初の Teams アプリをビルドしましょう。 まず、言語 (またはフレームワーク) を選択し、開発環境を準備します。
 
 > [!div class="nextstepaction"]
-> [React](../sbs-gs-javascript.yml) を使用して JavaScript で Teams アプリをビルドする
+> [React を使用して JavaScript で Teams タブ アプリを構築する](../sbs-gs-javascript.yml)
 > [!div class="nextstepaction"]
-> [Blazor を使用して Teams アプリをビルドする](../sbs-gs-blazorupdate.yml)
+> [React を使用して JavaScript で Teams ボット アプリを構築する](../sbs-gs-bot.yml)
 > [!div class="nextstepaction"]
-> [SPFx](../sbs-gs-spfx.yml) を使用して Teams アプリをビルドする
+> [React を使用して JavaScript で Teams メッセージ拡張アプリを構築する](../sbs-gs-msgext.yml)
+> [!div class="nextstepaction"]
+> [Blazor を使用して Teams アプリを構築する](../sbs-gs-blazorupdate.yml)
+> [!div class="nextstepaction"]
+> [SPFx](../sbs-gs-spfx.yml) を使用して Teams アプリを構築する
 > [!div class="nextstepaction"]
 > [C# または .NETを使用して Teams アプリをビルドする](../sbs-gs-csharp.yml)
 > [!div class="nextstepaction"]

@@ -6,12 +6,12 @@ keywords: 場所マップ機能のネイティブ デバイスのアクセス許
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 369e9307a8007d45cc42ae4059b16cdcf9a3cc4c
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: d143cdd0e94664d916bd5eefa7523d92e2af183a
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111186"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757172"
 ---
 # <a name="integrate-location-capabilities"></a>場所機能を統合する
 
@@ -29,7 +29,7 @@ Teams アプリで位置情報機能を統合する主な利点は、Teams プ�
 * 場所の機能により、サービス プロバイダーのメンテナンス スタッフは、携帯電話の塔の本格的な正常性データを管理と共有できます。 管理は、キャプチャされた場所情報とメンテナンス スタッフによって送信されたデータの間の不一致を比較できます。
 
 ロケーション機能を統合するには、アプリのマニフェスト ファイルを更新して API を呼び出す必要があります。 効果的な統合を実現するには、場所 API を呼び出すための [コード スニペット](#code-snippets) をよく理解している必要があります。
-Teams アプリのエラーを処理するには、[API 応答エラー](#error-handling) を理解しておくことが重要です。
+Teams アプリのエラーを処理するには、[API 応答エラー](#error-handling)を理解しておくことが重要です。
 
 > [!NOTE]
 > 現在、ロケーション機能に対する Microsoft Teams のサポートは、モバイル クライアントでのみ利用できます。
@@ -103,7 +103,7 @@ Teams アプリでこれらのエラーを適切に処理する必要があり�
 | **1000** | PERMISSION_DENIED |ユーザーが Teams アプリまたは Web アプリに対する場所のアクセス許可を拒否しました。|
 | **4000** | 引数が無効です | API が間違った引数または不十分な必須引数で呼び出されました。|
 | **8000** | USER_ABORT |ユーザーが操作を取り消しました。|
-| **9000** | OLD_PLATFORM | ユーザーは、API の実装が利用できない古いプラットフォーム ビルドを使用しています。 ビルドをアップグレードすると、問題が解決するはずです。|
+| **9000** | OLD_PLATFORM | ユーザーは、API の実装が利用できない以前のプラットフォーム ビルドを使用しています。 ビルドをアップグレードすると、問題が解決するはずです。|
 
 ### <a name="code-sample"></a>コード サンプル
 
