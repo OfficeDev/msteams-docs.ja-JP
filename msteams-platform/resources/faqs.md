@@ -4,12 +4,12 @@ description: 一般的な質問の回答
 ms.topic: Frequently asked questions on Moodle LMS
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 587451e3a0e89206a4ea49aaca3c682ab290ac5b
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 944fc379f7623599c543171a8d57a7854b51a980
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453970"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757550"
 ---
 # <a name="moodle-faq"></a>Moodle に関するよく寄せられる質問
 

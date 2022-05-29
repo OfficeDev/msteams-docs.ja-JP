@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: c57bbdf6be1b31d61acc1725924f42faeb20b264
-ms.sourcegitcommit: 05285653b2548e0b39e788cd07d414ac87ba3eaf
+ms.openlocfilehash: cb9985aa1f7b9f3f5eff3308f385afbefffba3b6
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65191195"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756955"
 ---
 # <a name="prepare-accounts-to-build-teams-apps"></a>Teams アプリを構築するためのアカウントを準備する
 
@@ -91,7 +91,7 @@ Visual Studio Enterprise または Professional サブスクリプションを�
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/upload.png" alt-text="カスタム アプリをアップロード" border="true":::
 
-        [カスタム アプリのアップロード] オプションを表示できない場合は**、サイドローディングに必要なアクセス許可がないということです。
+        **[カスタム アプリのアップロード]** オプションを表示できない場合は、サイドローディングに必要なアクセス許可がないということです。
         * テナント管理者の場合は、Teams 管理センターでテナントまたは組織のサイドローディング設定を有効にします。
         * テナント管理者でない場合は、テナント管理者に問い合わせ、サイドローディングを有効にする必要があります。
 

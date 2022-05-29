@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 2a85739a5a94109aae87de4579f17fe99df8d28b
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 844398ded497911f6c30cf732ab01d40b622f7ad
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104533"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757018"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>公開された Microsoft Teams アプリを管理する
 
@@ -29,7 +29,7 @@ ms.locfileid: "65104533"
 >
 > 以前は、アプリ タイルで省略記号を選択してリンクをコピーしました。 更新された Teams ストア エクスペリエンスを使用すると、アプリの [詳細] タブから同じものにアクセスできます。 この更新プログラムは、2022 年 3 月 1 日までに一般提供 (GA) される予定です。
 
-パートナー センターでは、アプリに変更 (新機能やメタデータなど) を送信できます。これらの変更には、新しいレビュー プロセスが必要です。
+パートナー センターでは、アプリに変更 (新機能やメタデータなど) を送信できます。 これらの変更には、新しいレビュー プロセスが必要です。
 
 更新プログラムを発行する場合は、次の情報を確認してください。
 

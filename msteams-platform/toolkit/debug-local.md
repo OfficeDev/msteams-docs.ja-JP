@@ -5,12 +5,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 6fd32b35a28ae0d9b1592f82a824622000c04161
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 04c88e840ba1edbeb657428bb76ecea86acf895a
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104442"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756633"
 ---
 # <a name="debug-your-teams-app-locally"></a>Teams アプリをローカルでデバッグする
 
@@ -102,7 +102,7 @@ Teams Toolkit を使用して新しいアプリを作成した後、次の手順
 <details>
 <summary><b>macOS</b></summary>
 
-1. アクティビティ バーで **[実行とデバッグ]** から **[Edge のデバッグ]** または **[Chrome デバッグ]** を 選択します。
+1. アクティビティ バーで **[Edge のデバッグ]** または **[Chrome デバッグ]** を **[実行とデバグ]** から選択します。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="ブラウザー リスト" border="false":::
 
@@ -110,14 +110,14 @@ Teams Toolkit を使用して新しいアプリを作成した後、次の手順
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="アプリのデバッグ" border="false":::
 
-3. Microsoft 365 アカウントへの **[サインイン]** を選択します。
+3. Microsoft 365 アカウントへ **[サインイン]** を選択します。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="M365 アカウントにサインイン" border="true":::
 
    > [!TIP]
    > Microsoft 365 開発者プログラムの詳細については **[詳細情報]** を選択してください。 既定の Web ブラウザーが開き、資格情報を使用して Microsoft 365 アカウントにサインインできます。
 
-4. **[インストール]** を選択してローカルホストの開発証明書をインストールします。
+4. **[インストール]** を選択して localhost の開発証明書をインストールします。
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="証明書" border="true":::
 
@@ -128,18 +128,16 @@ Teams Toolkit を使用して新しいアプリを作成した後、次の手順
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="Mac サインイン" border="true":::
 
-ツールキットは、選択内容に応じて新しい Edge または Chrome ブラウザー インスタンスを起動し、Teams クライアントを読み込む Web ページを開きます。 
+ツールキットは、選択内容に応じて新しい Edge または Chrome ブラウザー インスタンスを起動し、Teams クライアントを読み込む Web ページを開きます。
 
 </details>
-
 
 #### <a name="2-debug-your-app"></a>2. ボットのデバッグ
 
 初期セットアップ プロセスの後、Teams Toolkit は次のプロセスを開始します:
 
 a.  [アプリ サービスを開始](#starts-app-services) </br>
-b. [デバッガーを起動](#launches-debuggers)   </br>
-      c. [Teams アプリをサイドロードする](#sideloads-the-teams-app)
+b. [デバッガーを起動](#launches-debuggers)   </br>c. [Teams アプリをサイドロードする](#sideloads-the-teams-app)
         
 #### <a name="starts-app-services"></a>アプリ サービスを開始します
 
@@ -194,7 +192,7 @@ Teams Toolkit を使用すると、いくつかの前提条件をオフにして
 <details>
 <summary><b>ボット エンドポイントを使用する</b></summary>
 
-1. [Visual Studio Code の設定] で **[Ngrok がインストールされ、起動されていることを確認する (ngrok) ]** をオフにします。
+1. [Visual Studio Codeの設定] で **[Ngrok がインストールされ、起動されていることを確認する (ngrok) ]** をオフにします。
 
 1. `.fx/configs/config.local.json` で siteEndpoint の構成をエンドポイントに設定します。
 
@@ -214,7 +212,7 @@ Teams Toolkit を使用すると、いくつかの前提条件をオフにして
 <details>
 <summary><b>開発証明書を使用する</b></summary>
 
-1. Visual Studio Code 設定で **[開発証明書が信頼されていることを確認する (devCert)]** をオフにします。
+1. Visual Studio Code 設定で [**開発証明書が信頼されていることを確認する (devCert)**] をオフにします。
 
 1. `.fx/configs/config.local.json` の `sslCertFile` と `sslKeyFile` の構成を、証明書ファイル パスとキー ファイル パスに設定します。
 
@@ -238,7 +236,7 @@ Teams Toolkit を使用すると、いくつかの前提条件をオフにして
 
 1. ボットまたはメッセージ拡張機能の場合は、`bot/package.json` で `dev:teamsfx` スクリプトを更新します。
 
-1. Azure Functions の場合は、`api/package.json` の `dev:teamsfx` スクリプトを更新し、TypeScript の場合は、`watch:teamsfx` スクリプトを更新します。
+1. Azure Functions の場合は、`api/package.json` の `dev:teamsfx` スクリプトと TypeScript 更新 `watch:teamsfx` スクリプトを更新します。
 
    > [!NOTE]
    > 現時点では、タブ、ボット、メッセージ拡張機能アプリ、Azure Functions ポートはカスタマイズをサポートしていません。
@@ -261,7 +259,7 @@ Teams Toolkit を使用すると、いくつかの前提条件をオフにして
 
 Teams Toolkit は、Visual Studio Code マルチターゲット デバッグを利用して、タブ、ボット、メッセージ拡張機能、および Azure Functions を同時にデバッグします。 部分コンポーネントをデバッグするには、`.vscode/launch.json` と `.vscode/tasks.json` を更新できます。 タブとAzure Functions プロジェクトを含むボットでのみタブをデバッグする場合は、次の手順を使用します。
 
-1. コメント **[Bot にアタッチ]** し、`.vscode/launch.json` のデバッグ複合から **[バックエンドにアタッチ]**
+1. コメント **[Bot にアタッチ]** し、`.vscode/launch.json` のデバッグ複合から **[バックエンドにアタッチ]**。
 
    ```json
    {
@@ -281,7 +279,7 @@ Teams Toolkit は、Visual Studio Code マルチターゲット デバッグを�
    }
    ```
 
-2. コメント **[バックエンドを起動]** と .vscode/tasks.json の [すべてのタスクを起動] から [ボットを起動]
+2. コメント **[バックエンドを起動]** と .vscode/tasks.json の [すべてのタスクを起動] から [ボットを起動]。
 
    ```json
    {
@@ -298,7 +296,6 @@ Teams Toolkit は、Visual Studio Code マルチターゲット デバッグを�
    ```
 
 </details>
-
 
 ## <a name="next-step"></a>次の手順
 

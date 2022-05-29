@@ -5,12 +5,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: surbhigupta
 keywords: moodle LMS mConnect ディープ リンク
-ms.openlocfilehash: 3a999846b9df72298e35eed9edaf9bd96df30edf
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: dc5674ef092c9462786871aa8bb8618a84b141b8
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453124"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65757347"
 ---
 # <a name="moodle-learning-management-system"></a>Moodle ラーニング管理システム
 

@@ -4,12 +4,12 @@ description: Microsoft Teams の開発者向けパブリック プレビュー�
 ms.topic: conceptual
 ms.localizationpriority: high
 keywords: Teams プレビューの開発者向け機能
-ms.openlocfilehash: b84a13936e023c743829876f9d1c039d6744b063
-ms.sourcegitcommit: 3d0cfa779dec6bfc0daa57880ea37ab94f3d426f
+ms.openlocfilehash: a671a8ed6a1e4a49c731bcad78dd0d454a6bb600
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63492954"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756878"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>Microsoft Teams の開発者向けパブリック プレビュー
 
@@ -20,7 +20,7 @@ ms.locfileid: "63492954"
 
 ## <a name="developer-preview-app-manifest"></a>開発者向けプレビューのアプリ マニフェスト
 
-開発者向けプレビューで有効になっている多くの機能は、アプリ マニフェスト JSON ファイルを変更する必要があります。 そのためには、[開発者向けプレビュー マニフェスト スキーマ](~/resources/schema/manifest-schema-dev-preview.md)を使用する必要があります。 このスキーマを使用した場合、[アプリ スタジオ](~/concepts/build-and-test/app-studio-overview.md)を使用してこれらの変更を行うことも、テスト用のアプリをアップロードすることもできません。 アプリをアップロードするには、アプリ バーの `More apps` アイコンをクリックして、`Upload a custom app link` を選択する必要があります。 この方法を使用する場合、アプリ パッケージを圧縮 (zip 形式) してアップロードすることのみ可能です。
+開発者向けプレビューで有効になっている多くの機能は、アプリ マニフェスト JSON ファイルを変更する必要があります。 そのためには、[開発者向けプレビュー マニフェスト スキーマ](~/resources/schema/manifest-schema-dev-preview.md)を使用する必要があります。 このスキーマを使用した場合、[アプリ スタジオ](~/concepts/build-and-test/app-studio-overview.md)を使用してこれらの変更を行うことも、テスト用のアプリをアップロードすることもできません。 アプリをアップロードするには、アプリ バーの `More apps` アイコンを選択して、`Upload a custom app link` を選択する必要があります。 この方法を使用する場合、アプリ パッケージを圧縮 (zip 形式) してアップロードすることのみ可能です。
 
 アプリ スタジオを使用してアプリ パッケージの開発者向けプレビュー以外の部分を作成し、そのパッケージをエクスポートして `manifest.json` ファイルを手動で編集し、使用する開発者向けプレビュー機能を追加すると便利です。 `manifest.json` ファイルに開発者向けプレビュー機能を追加すると、パッケージをアプリ スタジオに再インポートできなくなります。
 
@@ -50,7 +50,7 @@ ms.locfileid: "63492954"
 
 ## <a name="disable-developer-preview"></a>開発者向けプレビューを無効にする
 
-[情報] → [開発者向けプレビュー] で同じメニュー アイテムを使用し、それをクリックしてオフにします。
+[情報] → [開発者向けプレビュー] で同じメニュー アイテムを使用し、それを選択してオフにします。
 
 ## <a name="see-also"></a>関連項目
 

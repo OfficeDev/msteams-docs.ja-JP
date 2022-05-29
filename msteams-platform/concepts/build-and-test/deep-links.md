@@ -3,12 +3,12 @@ title: ディープ リンクの作成
 description: Teams ディープ リンクとアプリでの使用方法について説明します。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: a57487f64070955b21c8b11bd9995f0f2201b0e2
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: a1bd16f178508d62a2a38b6d8880a9315ee45ee3
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672958"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756770"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成
 
@@ -101,7 +101,7 @@ TeamsJS v1 の [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view
 
 > [!NOTE]
 >
-> * 個人用タブには `personal` スコープがあり、チャネル タブとグループ タブには `team` または `group` スコープが使用されます。 構成可能なタブだけがコンテキスト オブジェクトに関連付けられている `channel` プロパティを持つため、2 つのタブの種類の構文はわずかに異なります。 タブスコープの詳細については、[マニフェスト](~/resources/schema/manifest-schema.md) リファレンスを参照してください。
+> * 個人用タブには `personal` スコープがあり、チャネル タブとグループ タブには `team` または `group` スコープが使用されます。 構成可能なタブだけがコンテキスト オブジェクトに関連付けられている `channel` プロパティを持つため、2 つのタブの種類の構文はわずかに異なります。 タブ スコープの詳細については、 [マニフェスト](~/resources/schema/manifest-schema.md) リファレンスを参照してください。
 > * ディープ リンクは、タブが v0.4 以降のライブラリを使用して構成されていて、そのためエンティティ ID がある場合にのみ正常に機能します。 エンティティ ID のないタブへのディープ リンクは引き続きタブに移動しますが、サブエンティティ ID をタブに提供することはできません。
 
 ボット、コネクタ、またはメッセージング拡張カードで使用できるディープ リンクには、次の形式を使用します:
@@ -328,9 +328,9 @@ else { /* handle case where capability isn't supported */ }
 
 クエリ パラメーターは次のとおりです。
 
-* `channelId`: 会話のチャネル ID。 たとえば、`19:3997a8734ee5432bb9cdedb7c432ae7d@thread.tacv2` となります。
+* `channelId`: 会話のチャネル ID。 たとえば、「 `19:3997a8734ee5432bb9cdedb7c432ae7d@thread.tacv2` 」のように入力します。
 * `tenantId`: `0d9b645f-597b-41f0-a2a3-ef103fbd91bb` などのテナント ID。
-* `groupId`: ファイルのグループ ID。例: `3606f714-ec2e-41b3-9ad1-6afb331bd35d`。
+* `groupId`: ファイルのグループ ID。 たとえば、「 `3606f714-ec2e-41b3-9ad1-6afb331bd35d` 」のように入力します。
 * `parentMessageId`: 会話の親メッセージ ID。
 * `teamName`: チームの名前。
 * `channelName`: チームのチャネルの名前。
@@ -353,7 +353,7 @@ else { /* handle case where capability isn't supported */ }
 * `baseUrl`: ファイルのベース URL。 形式は `https://{tenantName}.sharepoint.com/sites/{TeamName}` です。 たとえば、「 `https://microsoft.sharepoint.com/teams` 」のように入力します。
 * `serviceName`: サービスの名前、アプリ ID。 たとえば、「 `teams` 」のように入力します。
 * `threadId`: threadId は、ファイルが保存されているチームのチーム ID です。 これはオプションであり、ユーザーの OneDrive フォルダーに保存されているファイルには設定できません。 threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype.
-* `groupId`: ファイルのグループ ID。例: `ae063b79-5315-4ddb-ba70-27328ba6c31e`。
+* `groupId`: ファイルのグループ ID。 たとえば、「 `ae063b79-5315-4ddb-ba70-27328ba6c31e` 」のように入力します。
 
 > [!NOTE]
 > チャネルからの URL に `threadId` と `groupId` が表示されます。  
@@ -438,7 +438,7 @@ TeamsJS の強い型付き API の使用をお勧めしますが、手動で作�
   
 クエリ パラメーターは次のとおりです。
 
-* `users`: 通話の参加者を表すユーザー ID のコンマで区切られたリスト。現在、[ユーザー ID] フィールドは Azure AD UserPrincipalName (通常はメール アドレス) をサポートしています。PSTN 通話の場合は、pstn mri 4: &lt;phonenumber&gt; をサポートしています。
+* `users`: 通話の参加者を表すユーザー ID のコンマで区切られたリスト。 現在、[ユーザー ID] フィールドは Azure AD UserPrincipalName (通常はメール アドレス) をサポートしています。PSTN 通話の場合は、pstn mri 4: &lt;phonenumber&gt; をサポートしています。
 * `withVideo`: これはオプションのパラメータであり、ビデオ通話を行うために使用できます。 このパラメータを設定すると、発信者のカメラだけがオンになります。 通話の受信者は、Teams の通話通知ウィンドウから音声通話または音声通話とビデオ通話を選択できます。
 * `Source`: これはオプションのパラメーターで、ディープ リンクのソースを通知します。
 

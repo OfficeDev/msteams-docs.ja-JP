@@ -1,29 +1,29 @@
 ---
-title: ボットTeams特定のコンテキストを取得する
+title: Teams の特定のコンテキストをボット用に取得する
 author: surbhigupta
-description: 会話名簿、単一メンバー、またはチームの詳細、チャネル リスト、コード サンプルなど、ボットの Microsoft Team の特定のコンテキストを取得する方法。
+description: 会話名簿、シングル メンバーまたはチームの詳細、チャネル リスト、コード サンプルなど、ボットに対する Microsoft Team 固有のコンテキストを取得する方法。
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lajanuar
-keywords: ボット コンテキスト名簿ユーザー プロファイル チャネル リスト
-ms.openlocfilehash: ee931be0d84dadf518ee35625c6339c7880eb4d2
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
-ms.translationtype: MT
+keywords: ボット コンテキスト名簿のユーザー プロファイル チャネル リスト
+ms.openlocfilehash: 8bbbf7af5fd9d86ec1019a5c3b4ec76dce4085f2
+ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63398597"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65756591"
 ---
-# <a name="get-teams-specific-context-for-your-bot"></a>ボットTeams特定のコンテキストを取得する
+# <a name="get-teams-specific-context-for-your-bot"></a>Teams の特定のコンテキストをボット用に取得する
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-ボットは、インストールされているチームまたはチャットに関する追加のコンテキスト データにアクセスできます。 この情報は、ボットの機能を強化し、よりカスタマイズされたエクスペリエンスを提供するために使用できます。
+ボットは、インストールされているチームまたはチャットに関する追加のコンテキスト データにアクセスできます。 この情報は、ボットの機能を強化し、よりパーソナライズされたエクスペリエンスを提供するために使用できます。
 
-## <a name="fetch-the-roster-or-user-profile"></a>名簿またはユーザー プロファイルを取得する
+## <a name="fetch-the-roster-or-user-profile"></a>名簿またはユーザー プロファイルをフェッチする
 
-ボットは、Teams ユーザー ID や Microsoft Azure Active Directory (Azure AD) 情報 (名前や objectId など) を含む、メンバーのリストとその基本的なユーザー プロファイルを照会できます。 この情報を使用して、ユーザー ID を関連付けできます。 たとえば、ユーザーが資格情報を使用してタブにログインAzure AD確認するには、チームのメンバーです。 会話メンバーを取得する場合、最小または最大のページ サイズは実装によって異なります。 50 未満のページ サイズは 50 として扱い、500 より大きい場合は 500 に制限されます。 ページ以外のバージョンを使用する場合でも、大規模なチームではこのバージョンは使用できません。 詳細については、「チームまたはチャット [メンバーをフェッチTeamsボット API に対する変更」を参照してください](~/resources/team-chat-member-api-changes.md)。
+ボットは、メンバーとその基本的なユーザー プロファイルの一覧 (Teams ユーザー ID、名前や objectId などの Microsoft Azure Active Directory (Azure AD) 情報を含む) を照会できます。 この情報を使用して、ユーザー ID を関連付けることができます。 たとえば、ユーザーが Azure AD 資格情報を使用してタブにログインしているかどうかを確認するには、チームのメンバーです。 会話メンバーを取得する場合、最小または最大ページ サイズは実装によって異なります。 ページ サイズが 50 未満の場合は 50 として扱われ、500 を超える場合は 500 に制限されます。 ページ化されていないバージョンを使用している場合でも、大規模なチームでは信頼性が低いため、使用しないでください。 詳細については、「[チームまたはチャット メンバーをフェッチするための Teams ボット API に対する変更](~/resources/team-chat-member-api-changes.md)」を参照してください。
 
-次のサンプル コードでは、ページ化されたエンドポイントを使用して、名簿をフェッチします。
+次のサンプル コードは、ページ化されたエンドポイントを使用して名簿を取得します。
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -83,7 +83,7 @@ async def _show_members(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-エンドポイントとして値を使用して、 `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}`GET 要求を直接 `serviceUrl` 発行できます。 値は安定 `serviceUrl` していますが、変更できます。 新しいメッセージが届いた場合、ボットは保存されている値を確認する必要があります `serviceUrl`。 応答ペイロードは、ユーザーが正規ユーザーか匿名ユーザーかも示します。
+`serviceUrl` の値をエンドポイントとして使用して、`/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}` で GET 要求を直接発行できます。 `serviceUrl` の値は安定していますが、変化する可能性があります。 新しいメッセージが届いたら、ボットは格納されている `serviceUrl` の値を確認する必要があります。 応答ペイロードは、ユーザーが通常のユーザーであるか匿名のユーザーであるかも示します。
 
 ```http
 GET /v3/conversations/19:meeting_N2QzYTA3YmItYmMwOC00OTJmLThkYzMtZWMzZGU0NGIyZGI0@thread.v2/pagedmembers?pageSize=100&continuationToken=asdfasdfalkdsjfalksjdf
@@ -124,13 +124,13 @@ Response body
 
 * * *
 
-名簿またはユーザー プロファイルを取得した後、1 つのメンバーの詳細を取得できます。 現在、チャットまたはチームの 1 `TeamsInfo.GetMembersAsync` `TeamsInfo.getMembers` 人または複数のメンバーの情報を取得するには、Microsoft Teams または TypeScript API の C# ボット API を使用します。
+名簿またはユーザー プロファイルをフェッチすると、単一のメンバーの詳細を取得できます。 現在、チャットまたはチームの 1 人以上のメンバーの情報を取得するには、Microsoft Teams ボット API `TeamsInfo.GetMembersAsync` (C# の場合) または `TeamsInfo.getMembers` (TypeScript API の場合) を使用します。
 
 ## <a name="get-single-member-details"></a>単一のメンバーの詳細を取得する
 
-ユーザー ID、UPN、またはオブジェクト ID を使用して、特定のユーザー Teamsを取得Azure ADできます。
+Teams のユーザー ID、UPN、または Azure AD オブジェクト ID を使用して、特定のユーザーの詳細を取得することもできます。
 
-次のサンプル コードは、単一のメンバーの詳細を取得するために使用されます。
+次のサンプル コードは、単一メンバーの詳細を取得するために使用されます。
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -173,9 +173,9 @@ async def _show_members(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-エンドポイントとして値を使用して、 `/v3/conversations/{conversationId}/members/{userId}`GET 要求を直接 `serviceUrl` 発行できます。 値は安定 `serviceUrl` していますが、変更できます。 新しいメッセージが届いた場合、ボットは保存されている値を確認する必要があります `serviceUrl`。 これは、通常のユーザーと匿名ユーザーに使用できます。
+`serviceUrl` の値をエンドポイントとして使用して、`/v3/conversations/{conversationId}/members/{userId}` で GET 要求を直接発行できます。 `serviceUrl` の値は安定していますが、変化する可能性があります。 新しいメッセージが届いたら、ボットは格納されている `serviceUrl` の値を確認する必要があります。 これは、通常のユーザーと匿名ユーザーに使用できます。
 
-通常のユーザーの応答サンプルを次に示します。
+以下は、通常のユーザーの応答サンプルです。
 
 ```http
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc
@@ -193,7 +193,7 @@ Response body
 }
 ```
 
-匿名ユーザーの応答サンプルを次に示します。
+以下は、匿名ユーザーの応答サンプルです。
 
 ```http
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/<anonymous user id>"
@@ -209,13 +209,13 @@ Response body
 
 * * *
 
-1 人のメンバーの詳細を取得した後、チームの詳細を取得できます。 現時点では、チームの情報を取得するには、Microsoft Teamsまたは `TeamsInfo.GetMemberDetailsAsync` `TeamsInfo.getTeamDetails` TypeScript C#ボット API を使用します。
+単一のメンバーの詳細を取得した後、チームの詳細を取得できます。 現在、チームの情報を取得するには、Microsoft Teams ボット API `TeamsInfo.GetMemberDetailsAsync` (C# の場合) または `TeamsInfo.getTeamDetails` (TypeScript の場合) を使用します。
 
 ## <a name="get-teams-details"></a>チームの詳細を取得する
 
-チームにインストールすると、ボットはグループ ID を含むそのチームに関するメタデータAzure ADできます。
+チームにインストールすると、ボットは Azure AD グループ ID を含むそのチームに関するメタデータをクエリできます。
 
-チームの詳細を取得するには、次のサンプル コードを使用します。
+次のサンプル コードは、チームの詳細を取得するために使用されます。
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -269,7 +269,7 @@ async def _show_details(self, turn_context: TurnContext):
 
 # <a name="json"></a>[JSON](#tab/json)
 
-エンドポイントとして値を使用して、 `/v3/teams/{teamId}`GET 要求を直接 `serviceUrl` 発行できます。 値は安定 `serviceUrl` していますが、変更できます。 新しいメッセージが届いた場合、ボットは保存されている値を確認する必要があります `serviceUrl`。
+`serviceUrl` の値をエンドポイントとして使用して、`/v3/teams/{teamId}` で GET 要求を直接発行できます。 `serviceUrl` の値は安定していますが、変化する可能性があります。 新しいメッセージが届いたら、ボットは格納されている `serviceUrl` の値を確認する必要があります。
 
 ```http
 GET /v3/teams/19:ja0cu120i1jod12j@skype.net
@@ -284,18 +284,18 @@ Response body
 
 * * *
 
-チームの詳細を取得した後、チーム内のチャネルの一覧を取得できます。 現時点では、チーム内の`TeamsInfo.GetTeamChannelsAsync``TeamsInfo.getTeamChannels`チャネルの一覧の情報を取得するには、Microsoft Teamsまたは TypeScript API 用C#ボット API を使用します。
+チームの詳細を取得したら、チーム内のチャネルのリストを取得できます。 現在、チーム内のチャネルのリストの情報を取得するには、Microsoft Teams ボット API `TeamsInfo.GetTeamChannelsAsync` (C# の場合) または `TeamsInfo.getTeamChannels` (TypeScript API の場合) を使用します。
 
-## <a name="get-the-list-of-channels-in-a-team"></a>チーム内のチャネルの一覧を取得する
+## <a name="get-the-list-of-channels-in-a-team"></a>チーム内のチャネルの一覧を取得します。
 
-ボットは、チーム内のチャネルの一覧を照会できます。
+ボットは、チーム内のチャネルのリストをクエリできます。
 
 > [!NOTE]
 >
-> * ローカライズを許可するために、既定の一般チャネル `null` の名前が返されます。
-> * General チャネルのチャネル ID は、常にチーム ID と一致します。
+> * ローカリゼーションを可能にするために、既定の一般チャネルの名前が `null` として返されます。
+> * 一般チャネルのチャネル ID は、常にチーム ID と一致します。
 
-チーム内のチャネルの一覧を取得するには、次のサンプル コードを使用します。
+次のサンプル コードは、チーム内のチャネルのリストを取得するために使用されます。
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
@@ -344,7 +344,7 @@ async def _show_channels(
 
 # <a name="json"></a>[JSON](#tab/json)
 
-エンドポイントとして値を使用して、 `/v3/teams/{teamId}/conversations`GET 要求を直接 `serviceUrl` 発行できます。 値は安定 `serviceUrl` していますが、変更できます。 新しいメッセージが届いた場合、ボットは保存されている値を確認する必要があります `serviceUrl`。
+`serviceUrl` の値をエンドポイントとして使用して、`/v3/teams/{teamId}/conversations` で GET 要求を直接発行できます。 `serviceUrl` の値は安定していますが、変化する可能性があります。 新しいメッセージが届いたら、ボットは格納されている `serviceUrl` の値を確認する必要があります。
 
 ```http
 GET /v3/teams/19%3A033451497ea84fcc83d17ed7fb08a1b6%40thread.skype/conversations
@@ -371,7 +371,7 @@ Response body
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
-> [ボットを介してファイルを送受信する](~/bots/how-to/bots-filesv4.md)
+> [ボットを介してファイルを送受信する方法](~/bots/how-to/bots-filesv4.md)
