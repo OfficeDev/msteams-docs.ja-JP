@@ -1,15 +1,14 @@
 ---
 title: 概要-開始する
-description: Microsoft Teams 開発者向けドキュメントの概要の概要
+description: このラーニング パスでは、一般的なツール、基本的な概念、高度な機能を紹介する Microsoft Teams 開発者向けドキュメントの使用を開始します。
 ms.localizationpriority: high
 ms.topic: reference
-keywords: Microsoft Teams 開発者向けサンプル
-ms.openlocfilehash: 9e4405439241de9a4f3db97d256df8b8fab21880
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: a2dc779e24828ce73f9a93498bdcceecbdfe582b
+ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757711"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65795155"
 ---
 # <a name="get-started"></a>概要
 
