@@ -1,17 +1,17 @@
 ---
 title: 概要 - Microsoft Teams プラットフォームのユーザー ストーリー
 author: heath-hamilton
-description: アプリのアイデアがどのように適合するかに関する概要となるユーザー ストーリー
+description: アプリのアイデアがどのように適合するかに関する概要となるユーザー ストーリーについて説明します。
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 7a0db979b39173f03dddd2725aee3237894914f4
-ms.sourcegitcommit: 830fdc80556a5fde642850dd6b4d1b7efda3609d
+ms.openlocfilehash: 8b5aa93548ad08f8e1114b2d4b66b92fcd7195ba
+ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63399010"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65795127"
 ---
 # <a name="from-ideas-to-teams-app"></a>アイデアから Teams アプリへ
 
