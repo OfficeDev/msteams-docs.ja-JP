@@ -381,20 +381,30 @@
   items:
     - name: 概要
       href: concepts/authentication/authentication.md
-    - name: ID プロバイダーを構成する
-      href: concepts/authentication/configure-identity-provider.md
     - name: タブ
       items:
-        - name: タブの認証フロー
-          href: tabs/how-to/authentication/auth-flow-tab.md
-        - name: Azure AD 認証を使用する
-          href: tabs/how-to/authentication/auth-tab-aad.md
-        - name: サイレント認証を使用する
-          href: tabs/how-to/authentication/auth-silent-aad.md
-        - name: SSO 認証を利用する
-          href: tabs/how-to/authentication/auth-aad-sso.md
-        - name: 外部 OAuth プロバイダーを使用する
-          href: tabs/how-to/authentication/auth-oauth-provider.md
+        - name: タブ アプリの SSO を有効にする
+          items:
+            - name: 概要
+              href: tabs/how-to/authentication/tab-sso-overview.md
+            - name: Azure ADでタブ アプリを登録する
+              href: tabs/how-to/authentication/tab-sso-register-aad.md
+            - name: SSO を有効にするコードを追加する
+              href: tabs/how-to/authentication/tab-sso-code.md
+            - name: SSO 用のアプリ マニフェストを更新しプレビューする
+              href: tabs/how-to/authentication/tab-sso-manifest.md
+            - name: Microsoft Graph の権限または範囲を許可する
+              href: tabs/how-to/authentication/tab-sso-graph-api.md
+            - name: トラブルシューティング
+              href: tabs/how-to/authentication/tab-sso-troubleshooting.md
+        - name: サード パーティの OAuth IdP 認証を使用する
+          items:
+            - name: 概要
+              href: tabs/how-to/authentication/auth-flow-tab.md
+            - name: サード パーティの OAuth IdP 認証を構成する
+              href: tabs/how-to/authentication/auth-tab-aad.md
+            - name: 外部 OAuth プロバイダーを使用する
+              href: tabs/how-to/authentication/auth-oauth-provider.md
     - name: ボット
       items:
         - name: ボットの認証フロー
@@ -583,6 +593,8 @@
           href: concepts/build-and-test/apps-localization.md
         - name: JSON スキーマの参照のローカライズ
           href: resources/schema/localization-schema.md
+    - name: サイレント認証を使用する
+      href: tabs/how-to/authentication/auth-silent-aad.md
     - name: SameSite Cookie 属性
       href: resources/samesite-cookie-update.md
     - name: Teams ドキュメントに投稿する

@@ -6,7 +6,7 @@
 <details>
 <summary>プロビジョニングとデプロイの違いは何ですか?</summary>
 <br>
-<b>プロビジョニング</b>手順では、Azure にリソースとアプリのMicrosoft 365が作成されますが、コード (HTML、CSS、JavaScript など) はリソースにコピーされません。 <b>[デプロイ]</b> ステップでは、プロビジョニング 手順中に作成したリソースにアプリのコードをコピーします。 新しいリソースをプロビジョニングせずに複数回デプロイするのが一般的です。 プロビジョニング手順は完了するまでに時間がかかる可能性があるため、デプロイ手順とは別です。
+<b>プロビジョニング</b>手順では、アプリの Azure と Microsoft 365 にリソースが作成されますが、コード (HTML、CSS、JavaScript など) はリソースにコピーされません。 <b>[デプロイ]</b> ステップでは、プロビジョニング 手順中に作成したリソースにアプリのコードをコピーします。 新しいリソースをプロビジョニングせずに複数回デプロイするのが一般的です。 プロビジョニング手順は完了するまでに時間がかかる可能性があるため、デプロイ手順とは別です。
 </details>
 <br>
 
@@ -82,7 +82,7 @@ Visual Studio Code のサイド バーで Teams Toolkit :::image type="icon" sou
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="起動アプリをリモートで示すスクリーンショット。" border="false":::
 
-1. [**追加**] を選択します。
+1. **[追加]** を選択します。
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="インストールされているアプリを示すスクリーンショット。" border="false":::
 

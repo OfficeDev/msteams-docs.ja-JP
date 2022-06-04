@@ -3,12 +3,12 @@ title: Microsoft Teams 開発者向けドキュメント - 用語集
 description: Microsoft Teams 開発者向けドキュメントで使用される用語について説明します
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 0762f1f8315d1254e3adb0875655735dcdc0f130
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: 333f8e2efe0952d96907f6db2c76ebb688e3777d
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795141"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887626"
 ---
 # <a name="glossary"></a>用語集
 
@@ -31,7 +31,7 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 | [Azure リソース](../toolkit/provision.md) | Teams アプリが Azure デプロイに使用できる Azure 経由で利用できるサービス。 ストレージ アカウント、Web アプリ、データベースなどです。 |
 | [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Microsoft クラウドベースの、ID およびアクセス管理サービスです。 認証されたユーザーが内部および外部の Azure リソースにアクセスするのに役立ちます。 |
 | [認証](../concepts/authentication/authentication.md) | アプリの使用状況についてユーザー アクセスを検証するプロセス。 これは、Microsoft Graph API または Web ベースの認証を使用して行うことができます。 <br> **関連情報**: [ID プロバイダー](#i); [SSO](#s) |
-| [認証フロー](../concepts/authentication/authentication.md#web-based-authentication-flow) | Teams には、アプリを使用するためにユーザーを認証する認証フローが 2 つあります。Web ベースの認証と OAuthPrompt フローです。 |
+| [認証フロー](../concepts/authentication/authentication.md) | Teams には、アプリを使用するためにユーザーを認証する認証フローが 2 つあります。Web ベースの認証と OAuthPrompt フローです。 |
 
 ## <a name="b"></a>B
 

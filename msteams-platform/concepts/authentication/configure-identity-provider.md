@@ -4,12 +4,12 @@ description: Microsoft Azure Active Directory (Azure AD) に焦点を当てて I
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams authentication Azure AD oauth ID プロバイダー
-ms.openlocfilehash: 6ab95958c66fcf680cdab54d3307eab5dc66fa57
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 6fb17041e9169b4d5e74295cbb62ea97c8befd0f
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757053"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887570"
 ---
 # <a name="configure-identity-providers"></a>ID プロバイダーを構成する
 
@@ -21,7 +21,7 @@ OAuth 2.0 をサポートする ID プロバイダーは、不明なアプリケ
 
 2. アプリを選択してプロパティを表示するか、[新しい登録] ボタンを選択します。 アプリの **リダイレクト URI** セクションを見つけます。
 
-3. ドロップダウン メニューから **[Web** ] を選択します。 URL を認証エンドポイントに更新します。 GitHubの TypeScript/Node.js および C# サンプル アプリの場合、リダイレクト URL は次のようになります。
+3. ドロップダウン メニューから **[Web** ] を選択します。 URL を認証エンドポイントに更新します。 GitHub 上の TypeScript/Node.js および C# サンプル アプリの場合、リダイレクト URL は次のようになります。
 
     リダイレクト URL: `https://<hostname>/bot-auth/simple-start`
 
@@ -38,5 +38,5 @@ OAuth 2.0 をサポートする ID プロバイダーは、不明なアプリケ
 ## <a name="see-also"></a>関連項目
 
 * [Microsoft Teams ボットでユーザーを認証する](../../resources/bot-v3/bot-authentication/auth-bot-AAD.md)
-* [タブのシングル サインオン (SSO) のサポート](../../tabs/how-to/authentication/auth-aad-sso.md)
-* [[Microsoft Teams] タブでユーザーを認証する](../../tabs/how-to/authentication/auth-tab-aad.md)
+* [タブのシングル サインオン (SSO) のサポート](../../tabs/how-to/authentication/tab-sso-overview.md)
+* [Microsoft Teams タブでユーザーを認証する](../../tabs/how-to/authentication/auth-tab-aad.md)

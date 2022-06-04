@@ -5,12 +5,12 @@ description: コード サンプルを使用してメッセージング拡張機
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 490d44631fbd291e6c8686d94222b41ddd68de86
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 900723ca77d4178a6a2ded46617ed53d985d83e3
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757424"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887703"
 ---
 # <a name="single-sign-on-support-for-message-extensions"></a>メッセージ拡張機能のシングル サインオンのサポート
 
@@ -116,6 +116,15 @@ SSO を有効にするには:
         }
     
     ```
+
+## <a name="code-sample"></a>コード サンプル
+
+このセクションでは、Bot 認証 v3 SDK サンプルを提供します。
+
+| **サンプルの名前** | **説明** | **.NET** | **Node.js** | **Python** |
+|---------------|------------|------------|-------------|---------------|
+| ボット認証 | このサンプルは、Microsoft Teams のボットで認証を開始する方法を示しています。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| タブ、ボット、メッセージ拡張機能 (ME) SSO | このサンプルは、タブ、ボット、および ME の SSO (検索、アクション、linkunfurl) を示しています。 |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | 利用不可 |
 
 ## <a name="see-also"></a>関連項目
 

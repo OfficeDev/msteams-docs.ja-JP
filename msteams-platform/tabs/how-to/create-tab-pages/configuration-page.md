@@ -6,12 +6,12 @@ keywords: 構成可能なチーム タブ グループ チャネル
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 5352481d30071edb96dae8bf3ec04f15a6e9c8d7
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 2ee2a6017ed96d90d205b0a764f5f0fe8b512207
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672944"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887633"
 ---
 # <a name="create-a-configuration-page"></a>構成ページを作成する
 
@@ -245,7 +245,7 @@ document.write(getId());
 
 ### <a name="use-the-getcontext-function-to-retrieve-context"></a>関数を `getContext()` 使用してコンテキストを取得する
 
-この関数は `app.getContext()` 、 [コンテキスト インターフェイス](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true) オブジェクトを使用して解決する Promise を返します。
+この関数は `app.getContext()` 、 [コンテキスト インターフェイス](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) オブジェクトを使用して解決する Promise を返します。
 
 次のコードは、この関数を構成ページに追加してコンテキスト値を取得する例を示しています。
 
@@ -294,7 +294,7 @@ document.write(getId());
 
 マニフェストの `canUpdateConfiguration` プロパティ `true`を . これにより、ユーザーはチャネルまたはグループ タブを変更、再構成、または名前変更できます。タブが削除されたときのコンテンツへの影響についてユーザーに通知します。 これを行うには、アプリに [削除オプション] ページを含め、(以前の) 構成でプロパティの`setConfig()`値`removeUrl`を`setSettings()`設定します。 ユーザーは個人用タブをアンインストールできますが、変更することはできません。 詳細については、「[タブの削除ページを作成する](~/tabs/how-to/create-tab-pages/removal-page.md)」を参照してください。
 
-`setConfig()` 削除ページのMicrosoft Teams (以前`setSettings()`の) 構成:
+削除ページ用`setSettings()`の Microsoft Teams `setConfig()` (以前の) 構成:
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 

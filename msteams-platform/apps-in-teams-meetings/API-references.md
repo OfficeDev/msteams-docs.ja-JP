@@ -1,16 +1,16 @@
 ---
 title: 会議アプリ API リファレンス
 author: surbhigupta
-description: 例とコード サンプルを使用して会議アプリ API 参照を特定し、アプリ会議ユーザー参加者ロール API ユーザー コンテキスト通知シグナル クエリをTeamsします。
+description: 例とコード サンプルを使用して会議アプリ API 参照を識別します。Teams アプリ会議ユーザー参加者ロール API ユーザー コンテキスト通知シグナル クエリ。
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: cb28e893a9c0460290294893800f77c90829edda
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 075801958ccffb9613840995bdda86b6df37d2a3
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756584"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887577"
 ---
 # <a name="meeting-apps-api-references"></a>会議アプリ API リファレンス
 
@@ -53,7 +53,7 @@ ms.locfileid: "65756584"
 ### <a name="query-parameters"></a>クエリ パラメーター
 
 > [!TIP]
-> 参加者 ID とテナント ID は、[タブの SSO 認証](../tabs/how-to/authentication/auth-aad-sso.md)から取得します。
+> 参加者 ID とテナント ID は、[タブの SSO 認証](../tabs/how-to/authentication/tab-sso-overview.md)から取得します。
 
 `Meeting` API には、URL パラメーターとして `meetingId`、`participantId`、`tenantId` が必要です。 これらのパラメーターは、Teams クライアント SDK とボット アクティビティの一部として使用できます。
 
@@ -135,7 +135,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | プロパティ名 | 用途 |
 |---|---|
 | **user.id** | ユーザーの ID。 |
-| **user.aadObjectId** | ユーザーのオブジェクト ID をAzure Active Directoryします。 |
+| **user.aadObjectId** | ユーザーの Azure Active Directory オブジェクト ID。 |
 | **user.name** | ユーザーの名前 |
 | **user.givenName** | ユーザーの名。|
 | **user.surname** | ユーザーの姓。 |
@@ -406,7 +406,7 @@ Meeting Details API の JSON 応答本文は次のとおりです。
 | プロパティ名 | 用途 |
 |---|---|
 | **details.id** | BASE64 文字列としてエンコードされた会議の ID。 |
-| **details.msGraphResourceId** | MS Graph API呼び出しに特に使用される MsGraphResourceId。 |
+| **details.msGraphResourceId** | MsGraphResourceId。特に MS Graph API 呼び出しに使用されます。 |
 | **details.scheduledStartTime** | 会議のスケジュールされた開始時刻 (UTC)。 |
 | **details.scheduledEndTime** | 会議のスケジュールされた終了時刻 (UTC)。 |
 | **details.joinUrl** | 会議に参加するために使用される URL。 |
@@ -416,8 +416,8 @@ Meeting Details API の JSON 応答本文は次のとおりです。
 | **conversation.conversationType** | 会話の種類。 |
 | **conversation.id** | 会議チャット ID。 |
 | **organizer.id** | 開催者のユーザー ID。 |
-| **organizer.aadObjectId** | 開催者のAzure Active Directory オブジェクト ID。 |
-| **organizer.tenantId** | 開催者のAzure Active Directoryテナント ID。 |
+| **organizer.aadObjectId** | 開催者の Azure Active Directory オブジェクト ID。 |
+| **organizer.tenantId** | 開催者の Azure Active Directory テナント ID。 |
 
 定期的な会議の種類の場合は、
 
@@ -487,7 +487,7 @@ Hello I’m Cortana, welcome to my meeting.
 
 ### <a name="prerequisite"></a>前提条件
 
-*  `shareAppContentToStage` API を使用するには、RSC アクセス許可を取得する必要があります。 アプリ マニフェストで、`authorization` プロパティと、`resourceSpecific` フィールドの `name` および `type` を構成します。 次に例を示します。
+* `shareAppContentToStage` API を使用するには、RSC アクセス許可を取得する必要があります。 アプリ マニフェストで、`authorization` プロパティと、`resourceSpecific` フィールドの `name` および `type` を構成します。 次に例を示します。
 
     ```json
     "authorization": {
@@ -501,7 +501,8 @@ Hello I’m Cortana, welcome to my meeting.
     }
     }
     ```
-*  `appContentUrl` は、manifest.json 内の `validDomains` 配列で許可されている必要があります。それ以外の場合、API は 501 を返します。
+
+* `appContentUrl` は、manifest.json 内の `validDomains` 配列で許可されている必要があります。それ以外の場合、API は 501 を返します。
 
 ### <a name="query-parameter"></a>クエリ パラメーター
 
@@ -818,7 +819,7 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 | **from.id** | 要求を送信したユーザーの ID。 |
 | **from.aadObjectId** | 要求を送信したユーザーの Azure Active Directory オブジェクト ID。 |
 | **conversation.isGroup** | 会話に 2 人以上の参加者があるかどうかを示すブール値。 |
-| **conversation.tenantId** | 会話または会議のテナント ID をAzure Active Directoryします。 |
+| **conversation.tenantId** | 会話または会議の Azure Active Directory テナント ID。 |
 | **conversation.id** | 会議チャット ID。 |
 | **recipient.id** | 要求を受け取るユーザーの ID。 |
 | **recipient.name** | 要求を受け取るユーザーの名前。 |

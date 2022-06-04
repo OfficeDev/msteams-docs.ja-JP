@@ -5,12 +5,12 @@ description: コード例とサンプルを使用してメッセージング拡�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 996ae2fe8a45e5ebbb481865198b759c7ad221a3
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: dbc49707d3fe2777761f51c46b23efaf7df96491
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297009"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887612"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>メッセージ拡張機能に認証を追加する
 
@@ -81,7 +81,7 @@ Microsoft Teams 内で実行される他の埋め込みエクスペリエンス�
 
 サインイン要求が完了し、ページにリダイレクトされたら、次の手順を実行する必要があります。
 
-1. 乱数のセキュリティコードを生成します。このコードは、OAuth 2.0 トークンなどのサインインフローで取得した認証情報とともに、サービス上にキャッシュしておく必要があります。
+1. セキュリティ コード (乱数) を生成します。 このコードは、OAuth 2.0 トークンなどのサインイン フローで取得した資格情報を使用して、サービスにキャッシュする必要があります。
 1. `microsoftTeams.authentication.notifySuccess` を呼び出して、セキュリティ コードを渡します。
 
 この時点でウィンドウが閉じ、コントロールが Teams クライアントに渡されます。 クライアントは、`state` プロパティのセキュリティ コードと共に、元のユーザー クエリを再発行します。 コードでは、セキュリティ コードを使用して、前に保存した資格情報を検索して認証シーケンスを完了し、ユーザー要求を完了できます。

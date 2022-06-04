@@ -3,18 +3,18 @@ title: Teams の開発者向けの新機能
 description: Microsoft Teams の新しい開発者向け機能とそれらの機能の機能強化について説明します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: c1bdab01bdc8dc1fe2a4c81bed40bce52a64ecea
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: 6152181ac53685ad056f9a7e4ae8f11cf5dab0a1
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795169"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887766"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
 一般提供 (GA) および開発者プレビュー版の Microsoft Teams プラットフォーム機能をご紹介します。 RSS フィード[![ダウンロード フィード](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)に登録することで、Teams プラットフォームの最新情報を取得できるようになりました。 詳細については、「[RSS フィードの構成](#get-latest-updates)」を参照してください。
 
-## <a name="microsoft-build-2022-image-typeicon-sourceassetsimagesbullhornpng-borderfalse"></a>Microsoft Build 2022 :::image type="icon" source="assets/images/bullhorn.png" border="false":::
+## <a name="microsoft-build-2022-image-typeicon-sourceassetsimagesbullhornpng-borderfalse"></a>Microsoft Build 2022 :::image type="icon" source="assets/images/bullhorn.png" border="false"
 
 | 日付 | 機能 | ここから見つける |
 | --- | --- | --- |
@@ -34,35 +34,7 @@ ms.locfileid: "65795169"
 |05/24/2022| Submit your Outlook- and Office-enabled apps to the Teams store | Extend your app across Microsoft 365 > [Overview](m365-apps/overview.md) |
 |05/24/2022| App guidance and what's new in TeamsJS version 2.0.0| Tools and SDKs > [Teams JavaScript client SDK](tabs/how-to/using-teams-client-sdk.md)  |
 |05/19/2022|Bots and Message extensions in GCC and GCCH| • Plan your app > [Overview](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Build bots > [Overview](bots/what-are-bots.md) </br> • Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md) |
-|04/28/2022| Common reasons for app validation failure | Distribute your app > Publish to the Teams store > [Common reasons for app validation failure](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)|
-|04/20/2022 |  Set up CI/CD pipelines | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Set up CI/CD pipelines](toolkit/use-CICD-template.md)|
-|04/19/2022 | Upload your app in Microsoft Teams | Distribute your app > [Upload your app](concepts/deploy-and-publish/apps-upload.md)|
-|04/06/2022| Share to Teams from personal app or tab (developer preview) | Integrate with Teams > Share to Teams > [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
-|04/01/2022| Introduced step-by-step guide to create Teams conversational bot| Build bots > Bot conversations > Channel and group conversations > [Step-by-step guide to create Teams conversational bot](sbs-teams-conversation-bot.yml) |
-|03/30/2022| Updated the Get started module with Blazor app using tabs and bots|  Get started > [Build your first app using Blazor](sbs-gs-blazorupdate.yml)|
-|03/30/2022|Device permissions for the browser | Integrate device capabilities > [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |
-|03/29/2022 | Integrate People Picker | Integrate with Teams > [Integrate People Picker](concepts/device-capabilities/people-picker-capability.md)|
-|03/23/2022| Introduced step-by-step guide to unfurl links in Teams using bot | Build message extensions > Add link unfurling > [Unfurl links in Teams using bot](sbs-botbuilder-linkunfurling.yml)|
-|03/22/2022| Added information on debug process| • Tools and SDKs> Teams Toolkit for Visual Studio Code > [Debug your Teams app locally](toolkit/debug-local.md) </br> • Tools and SDKs> Teams Toolkit for Visual Studio Code > [Debug background process](toolkit/debug-background-process.md)|
-|03/14/2022| Introduced step-by-step guide to build and test a connector in Microsoft Teams | Build webhooks and connectors > Create Office 365 Connectors > [Build Teams connectors](sbs-teams-connectors.yml)|
-|03/10/2022| Added information on Moodle LMS and Microsoft 365 plugins | Integrate with Teams > Moodle LMS > [Moodle learning management system](resources/moodle-overview.md)|
-|03/03/2022 | How to add authentication using external OAuth provider| Add authentication > Tabs > [Use external OAuth providers](tabs/how-to/authentication/auth-oauth-provider.md) |
-|02/25/2022| Introduced step-by-step guide to invoke task modules in Teams| Build cards and task modules > Build task modules > Use task modules from bots > [Invoke task module from Teams](sbs-botbuilder-taskmodule.yml)|
-|02/24/2022| Introduced step-by-step guide to build action based message extension | Build Message Extensions > Action commands > Define action commands > [Build action based message extension](sbs-meetingextension-action.yml)|
-|02/24/2022| Introduced step-by-step guide to build search based message extension | Build message extensions > Search commands > Define search commands > [Build search based message extension](sbs-messagingextension-searchcommand.yml)|
-|02/24/2022| Introduced step-by-step guide to create Outgoing Webhooks | Build webhooks and connectors > Create Outgoing Webhooks > [Create Outgoing Webhooks](sbs-outgoing-webhooks.yml)|
-| 02/23/2022 |Microsoft Teams store ranking parameters| Distribute your app > Publish to the Teams store > [Microsoft Teams store ranking parameters](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
-|02/09/2022| Introduced step-by-step guide how to upload files to Teams from a bot | Build bots > Send and receive files > [step-by-step guide how to upload files to Teams from a bot](sbs-file-handling-in-bot.yml) |
-| 02/18/2022 | Introduced extensive Glossary for the Microsoft Teams Developer Documentation to help you find the definition about a term quickly | [Glossary](~/get-started/glossary.md) |
-| 02/18/2022 | Updated the Overview module for mapping Teams app to organizational goals, user story, and exploring Teams app features | [Overview > Teams app that fits](overview.md) |
-| 02/18/2022 | Updated the App fundamentals module to Plan your app to include mapping use cases to Teams features, and app planning checklist | [Plan your app > Overview](~/concepts/app-fundamentals-overview.md) |
-|02/17/2022| What to expect after you submit your app?| Distribute your app > Publish to the Teams store > [Overview](concepts/deploy-and-publish/appsource/publish.md)|
-|02/15/2022| Introduced step-by-step guide how to upload files to Teams from a bot | Build bots > Send and receive files > [Step-by-step guide how to upload files to Teams from a bot](sbs-file-handling-in-bot.yml) |
-|02/11/2022| Shared meeting stage| • Build apps for Teams meetings > [Shared meeting stage](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • Build apps for Teams meetings > [Meeting apps API references](apps-in-teams-meetings/API-references.md) </br> • App manifest > Public developer preview > [Developer preview manifest schema](resources/schema/manifest-schema-dev-preview.md)|
-|02/08/2022| Introduced step-by-step guide to create Calling and Meeting bot| Build bots > Calls and meetings bots > Register calls and meetings bot > [Step-by-step guide to create Calling and Meeting bot](sbs-calling-and-meeting.yml) |
-|02/07/2022| Tools and SDKs |Teams Toolkit for Visual Studio Code > </br> • Add capabilities to Teams app> [Add capabilities to your Teams apps](toolkit/add-capability.md) </br> • Add cloud resources to Teams app> [Add cloud resources to your Teams app](toolkit/add-resource.md) |
-|02/03/2022| Introduced app manifest version 1.12 | • App manifest > [App manifest schema](resources/schema/manifest-schema.md) </br> • App manifest > Public developer preview > [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |-->
-
+-->
 
 ## <a name="ga-features"></a>一般提供の特徴
 
@@ -75,31 +47,32 @@ ms.locfileid: "65795169"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ----------------|
-|05/24/2022| SaaS オファーにリンクされたアプリを公開するための迅速な承認に関するその他のヒント | Teams ストアに公開 > 概要 > [SaaS オファーにリンクされたアプリを公開するための迅速な承認に関するその他のヒント](~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer) |
-|05/24/2022| Outlook と Office が有効なアプリを Teams ストアに送信する | Microsoft 365 間でアプリを拡張する [概要](m365-apps/overview.md) |
-|05/24/2022| TeamsJS バージョン 2.0.0 のアプリ ガイダンスと新機能| ツールと SDK > [Teams JavaScript クライアント SDK](tabs/how-to/using-teams-client-sdk.md)  |
+| 06/03/2022 | 新しい構造と手順でタブ アプリの SSO を有効にするための認証モジュールの追加を更新しました | 認証の追加 > タブ > [タブ アプリでシングル サインオンを有効にする](tabs/how-to/authentication/tab-sso-overview.md) |
+| 05/24/2022 | SaaS オファーにリンクされたアプリを公開するための迅速な承認に関するその他のヒント | Teams ストアに公開 > 概要 > [SaaS オファーにリンクされたアプリを公開するための迅速な承認に関するその他のヒント](~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer) |
+| 05/24/2022 | Outlook と Office が有効なアプリを Teams ストアに送信する | Microsoft 365 間でアプリを拡張する [概要](m365-apps/overview.md) |
+| 05/24/2022 | TeamsJS バージョン 2.0.0 のアプリ ガイダンスと新機能| ツールと SDK > [Teams JavaScript クライアント SDK](tabs/how-to/using-teams-client-sdk.md)  |
 | 05/24/2022 | Visual Studio Code 用 Teams Toolkit バージョン 4.0.0 の一般提供開始 | ［ツールと SDK］ > ［Visual Studio Code 用 Teams Toolkit］ <br> •  [Teams ツールキットの概要](toolkit/teams-toolkit-fundamentals.md) <br> • [Build コマンド ボットと JavaScript](toolkit/add-capability.md) <br> • [JavaScript を使用した通知ボットのビルド](toolkit/add-capability.md) <br> • [Teams アプリ マニフェストのプレビューとカスタマイズ](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [既存の API に接続します](toolkit/add-API-connection.md) <br> • [Teams アプリに機能を追加する](toolkit/add-capability.md) <br> • [シングル サインオン エクスペリエンスを追加する](toolkit/add-single-sign-on.md) <br> • [Teams アプリにクラウド リソースを追加する](toolkit/add-resource.md) |
 | 05/24/2022 | アプリ マニフェスト バージョン 1.13 が導入されました | アプリ マニフェスト > [Microsoft Teams のマニフェスト スキーマ](resources/schema/manifest-schema.md) |
-|05/24/2022|GCC と GCCH のボットとメッセージ拡張機能| • [アプリの計画] > [[概要]](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • ボットの作成> [概要](bots/what-are-bots.md) </br> • メッセージ拡張機能の作成> [概要](messaging-extensions/what-are-messaging-extensions.md) |
+| 5/24/2022|GCC と GCCH のボットとメッセージ拡張機能| • [アプリの計画] > [[概要]](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • ボットの作成> [概要](bots/what-are-bots.md) </br> • メッセージ拡張機能の作成> [概要](messaging-extensions/what-are-messaging-extensions.md) |
 |04/26/2022|ボットを使用した個人用アプリのアンインストール動作 | [ボットの構築] > [ボットの会話] > [[ボットを使用した個人用アプリのアンインストール動作]](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
-|04/22/2022| 収益化されたアプリのテスト プレビュー | [アプリの収益化] > [[収益化アプリのテスト プレビュー]](concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md)
-|04/22/2022| アプリの収益化のためのアプリ内購入フロー | [アプリの収益化] > [[アプリ内購入]](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
-|2022/04/28| アプリ検証エラーの一般的な理由 | [アプリの配布] > [Teams ストアへの公開] > [[アプリ検証エラーの一般的な理由](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)]|
-|04/20/2022 |  CI/CD パイプラインを設定する | [ツールと SDK] > [Visual Studio Code 向け Teams ツールキット] > [[CI/CD パイプラインの設定]](toolkit/use-CICD-template.md)|
-|04/19/2022 | Microsoft Teams でアプリをアップロードする | アプリを配布する > [アプリをアップロードする](concepts/deploy-and-publish/apps-upload.md)|
-|04/01/2022| Teams ボットを作成するためのステップバイステップのガイドを導入しました| [ボットの構築] > [ボットの会話] > [チャネルとグループの会話]  > [Teams 会話型ボットを作成するためのステップバイステップ ガイド](sbs-teams-conversation-bot.yml) |
-|03/30/2022| タブとボットを使用した Blazor アプリの [使用を開始するモジュール] の更新|  はじめに＞[Blazorを使用して初めてのアプリを構築する](sbs-gs-blazorupdate.yml)|
+| 04/22/2022 | 収益化されたアプリのテスト プレビュー | [アプリの収益化] > [[収益化アプリのテスト プレビュー]](concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md)
+| 04/22/2022 | アプリの収益化のためのアプリ内購入フロー | [アプリの収益化] > [[アプリ内購入]](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
+| 2022/04/28 | アプリ検証エラーの一般的な理由 | [アプリの配布] > [Teams ストアへの公開] > [[アプリ検証エラーの一般的な理由](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)]|
+| 04/20/2022 |  CI/CD パイプラインを設定する | [ツールと SDK] > [Visual Studio Code 向け Teams ツールキット] > [[CI/CD パイプラインの設定]](toolkit/use-CICD-template.md)|
+| 04/19/2022 | Microsoft Teams でアプリをアップロードする | アプリを配布する > [アプリをアップロードする](concepts/deploy-and-publish/apps-upload.md)|
+| 04/01/2022 | Teams ボットを作成するためのステップバイステップのガイドを導入しました| [ボットの構築] > [ボットの会話] > [チャネルとグループの会話]  > [Teams 会話型ボットを作成するためのステップバイステップ ガイド](sbs-teams-conversation-bot.yml) |
+| 03/30/2022 | タブとボットを使用した Blazor アプリの [使用を開始するモジュール] の更新|  はじめに＞[Blazorを使用して初めてのアプリを構築する](sbs-gs-blazorupdate.yml)|
 |03/30/2022|ブラウザーのデバイスのアクセス許可 | [デバイス機能を統合する] > [[ブラウザーのデバイス アクセス許可]](concepts/device-capabilities/browser-device-permissions.md) |
-|03/29/2022 |ユーザー ピッカーを統合する | [Teams との統合] > [[ユーザー ピッカーを統合する]](concepts/device-capabilities/people-picker-capability.md)
-|03/23/2022| ボットを使用して Teams でリンクを展開するためのステップ バイ ステップ ガイドを導入しました | メッセージ拡張機能の構築＞リンクの展開の追加＞ [ボットを使用して Teams でリンクを展開](sbs-botbuilder-linkunfurling.yml)|  
-|03/22/2022| デバッグ プロセスに関する情報を追加しました| • ツールと SDK> Visual Studio Code 用 Teams ツールキット> [Teams アプリをローカルでデバッグする](toolkit/debug-local.md) </br> • ツールと SDK> Visual Studio Code 用 Teams ツールキット [バックグラウンド プロセスのデバッグ](toolkit/debug-background-process.md)|
-|03/14/2022| Microsoft Teams でコネクタを構築してテストするためのステップバイステップ ガイドを導入しました。 | Webhook とコネクタのビルド> Office 365 コネクタの作成> [Teams コネクタのビルド](sbs-teams-connectors.yml)|
-|03/10/2022 | Moodle LMS および Microsoft 365 プラグインに関する情報を追加しました | [Teams との統合] > [Moodle LMS] > [[Moodle ラーニング管理システム]](resources/moodle-overview.md)|  
-|03/03/2022 | 外部 OAuth プロバイダーを使用して認証を追加する方法| [認証の追加] > [タブ] >[[外部 OAuth プロバイダーの使用]](tabs/how-to/authentication/auth-oauth-provider.md) |
-| 02/25/2022| Teams でタスク モジュールを呼び出すステップ バイ ステップ ガイドを導入しました| [カードとタスク モジュールの構築] > [タスク モジュールの構築] > [ボットからのタスク モジュールの使用] > [[Teams からのタスク モジュールの呼び出し]](sbs-botbuilder-taskmodule.yml)|
+| 03/29/2022 |ユーザー ピッカーを統合する | [Teams との統合] > [[ユーザー ピッカーを統合する]](concepts/device-capabilities/people-picker-capability.md)
+| 03/23/2022 | ボットを使用して Teams でリンクを展開するためのステップ バイ ステップ ガイドを導入しました | メッセージ拡張機能の構築＞リンクの展開の追加＞ [ボットを使用して Teams でリンクを展開](sbs-botbuilder-linkunfurling.yml)|  
+| 03/22/2022 | デバッグ プロセスに関する情報を追加しました| • ツールと SDK> Visual Studio Code 用 Teams ツールキット> [Teams アプリをローカルでデバッグする](toolkit/debug-local.md) </br> • ツールと SDK> Visual Studio Code 用 Teams ツールキット [バックグラウンド プロセスのデバッグ](toolkit/debug-background-process.md)|
+| 03/14/2022 | Microsoft Teams でコネクタを構築してテストするためのステップバイステップ ガイドを導入しました。 | Webhook とコネクタのビルド> Office 365 コネクタの作成> [Teams コネクタのビルド](sbs-teams-connectors.yml)|
+| 03/10/2022 | Moodle LMS および Microsoft 365 プラグインに関する情報を追加しました | [Teams との統合] > [Moodle LMS] > [[Moodle ラーニング管理システム]](resources/moodle-overview.md)|  
+| 03/03/2022 | 外部 OAuth プロバイダーを使用して認証を追加する方法| [認証の追加] > [タブ] >[[外部 OAuth プロバイダーの使用]](tabs/how-to/authentication/auth-oauth-provider.md) |
+| 02/25/2022 | Teams でタスク モジュールを呼び出すステップ バイ ステップ ガイドを導入しました| [カードとタスク モジュールの構築] > [タスク モジュールの構築] > [ボットからのタスク モジュールの使用] > [[Teams からのタスク モジュールの呼び出し]](sbs-botbuilder-taskmodule.yml)|
 | 02/24/2022| アクション ベースのメッセージ拡張機能を構築するためのステップ バイ ステップ ガイドを導入しました | [メッセージ拡張機能の構築] > [アクション コマンド] > [アクション コマンドの定義] > [[アクション ベースのメッセージ拡張機能の構築]](sbs-meetingextension-action.yml)|
-| 02/24/2022| 検索ベースのメッセージ拡張機能を構築するためのステップ バイ ステップ ガイドが導入されました | [メッセージ拡張機能の構築] > [検索コマンド] > [検索コマンドの定義] > [[検索ベースのメッセージ拡張機能の構築]](sbs-messagingextension-searchcommand.yml)|
-| 02/24/2022| 送信 Webhook を作成するためのステップバイステップ ガイドを導入しました | [Webhook とコネクタの構築] > [送信 Webhook の作成] > [[送信 Webhooks の作成]](sbs-outgoing-webhooks.yml)|
+| 02/24/2022 | 検索ベースのメッセージ拡張機能を構築するためのステップ バイ ステップ ガイドが導入されました | [メッセージ拡張機能の構築] > [検索コマンド] > [検索コマンドの定義] > [[検索ベースのメッセージ拡張機能の構築]](sbs-messagingextension-searchcommand.yml)|
+| 02/24/2022 | 送信 Webhook を作成するためのステップバイステップ ガイドを導入しました | [Webhook とコネクタの構築] > [送信 Webhook の作成] > [[送信 Webhooks の作成]](sbs-outgoing-webhooks.yml)|
 | 02/23/2022 |Microsoft Teams ストアのランク付けパラメーター| [アプリの配布] > [Teams ストアに公開] > [[Microsoft Teams ストアのランク付けパラメーター]](concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md)|
 | 02/18/2022 | 用語に関する定義をすばやく見つけるのに役立つ、Microsoft Teams 開発者ドキュメントの広範な用語集を導入しました | [用語集](~/get-started/glossary.md) |
 | 02/18/2022 | Teams アプリを組織の目標、ユーザー ストーリーにマッピングし、Teams アプリの機能を検索するための概要モジュールを更新しました | [[概要] > [適合する Teams アプリ]](overview.md) |
@@ -201,14 +174,14 @@ ms.locfileid: "65795169"
 |2020/8/19|Microsoft Graph を使用して Teams メッセージをインポートします |[Microsoft Graph を使用してサードパーティのプラットフォーム メッセージを Teams にインポートする](graph-api/import-messages/import-external-messages-to-teams.md)
 |2020/8/12 |受信 Webhookでのアダプティブ カードのサポートが一般提供に移行しました |[受信 Webhook を使用してアダプティブ カードを送信する](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
 |2020/8/10|Visual Studio ツールキットを使用して Teams アプリの構築を開始します |[Microsoft Teams ツールキットと Visual Studio Code を使用してアプリを構築する](toolkit/visual-studio-overview.md) |
-|2020/8/6|タブの SSO 認証のサポート |[SSO Microsoft Teams のタブを開発する](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
+|2020/8/6|タブの SSO 認証のサポート |[SSO Microsoft Teams のタブを開発する](tabs/how-to/authentication/tab-sso-overview.md) |
 |2020/7/27 | Graph のプロアクティブ ボットとメッセージ (パブリック プレビュー) |[Microsoft Graph を使用した Teams でプロアクティブなボットをインストールしてプロアクティブ メッセージを有効にする](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
 |2020/7/22 |モバイル デバイスの機能更新 |[Microsoft Teams タブのデバイス アクセス許可を要求する](concepts/device-capabilities/native-device-permissions.md) |
 |2020/7/20|AppSource 申請用の Teams アプリ検証ツール |[Teams アプリ認証ツール](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 |2020/7/15|Teams の仮想アシスタントを作成します |[Microsoft Teams 用仮想アシスタント](samples/virtual-assistant.md)|
 |2020/7/14|ネイティブ読み込みインジケーターのドキュメントの表示 |[ネイティブ読み込みインジケーターの表示](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
 |2020/7/1|Visual Studio Code ツールキットを使用して Teams アプリの構築を開始します |[Microsoft Teams ツールキットと Visual Studio Code を使用してアプリを構築する](toolkit/visual-studio-code-overview.md) |
-|2020/7/1|Teams Web クライアントおよびデスクトップ クライアント向けタブのシングル サインオンの一般提供 |[シングル サインオン (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
+|2020/7/1|Teams Web クライアントおよびデスクトップ クライアント向けタブのシングル サインオンの一般提供 |[シングル サインオン (SSO)](tabs/how-to/authentication/tab-sso-overview.md)|
 |2020/6/5| マニフェスト スキーマがバージョン 1.7 に更新されました。| [参照: Microsoft Teams のマニフェスト スキーマ](resources/schema/manifest-schema.md)|
 |2020/5/18|Power Virtual Agent と Teams の統合 |[Power Virtual Agent チャットボットを Microsoft Teams と統合する](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
 |2020/4/1|WFM システムと Teams 用シフト コネクタの統合 |[Microsoft Teams シフトの WFM コネクタ](samples/shifts-wfm-connectors.md)
@@ -227,7 +200,7 @@ ms.locfileid: "65795169"
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ------------------ |
 | 2020/12/26 | ボットに送信されるペイロードの `replyToId` パラメーターが暗号化されなくなったため、この値を使用してこれらのメッセージへのディープ リンクを構築できるようになります。メッセージ ペイロードには、パラメーター に暗号化された値が含まれます`legacy.replyToId`。  |
-| 2019/11/5 | Teams JavaScript SDK を使用したシングル サインオン。 | [シングル サインオン](tabs/how-to/authentication/auth-aad-sso.md) |
+| 2019/11/5 | Teams JavaScript SDK を使用したシングル サインオン。 | [シングル サインオン](tabs/how-to/authentication/tab-sso-overview.md) |
 | 2019/10/31 | 会話ボットとメッセージ拡張機能のドキュメントが 4.6 Bot Framework SDK に合わせて更新されました。 v3 SDK のドキュメントが [リソース] セクションで利用できます。 | すべてのボットとメッセージ拡張機能のドキュメント |
 | 2019/10/31 | 新しいドキュメントの構造と記事の大幅なリファクタリング。 デッド リンクや 404 が発生した場合は、GitHub イシューを作成して報告してください。 | すべての項目です。 |
 | 2019/9/13 | 要求ボットは、操作ベースのメッセージ拡張機能からインストールされます。 | [メッセージ拡張機能を使用した操作の開始](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)

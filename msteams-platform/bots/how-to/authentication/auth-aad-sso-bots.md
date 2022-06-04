@@ -2,14 +2,14 @@
 title: ボットのシングル サインオンのサポート
 description: ユーザー トークンを取得する方法について説明します。 現在、ボット開発者は、OAuth カードをサポートするサインイン カードまたは Azure ボット サービスを使用できます。
 keywords: トークン、ユーザー トークン、ボット向け SSO サポート、アクセス許可、Microsoft Graph、Azure AD
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 49fac724cea263dac8e1540b0b40f5e3b8d267d8
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: e271296eafc1a4e74865c00cf467c5cb2901146e
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111760"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887598"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>ボット向けのシングル サインオン (SSO) サポート
 
@@ -56,7 +56,7 @@ Microsoft Azure Active Directory (Azure AD) のシングル サインオン認�
 
 ### <a name="register-your-app-through-the-azure-ad-portal"></a>Azure AD ポータルからアプリを登録する
 
-Azure AD ポータルを使用してアプリを登録する手順は、[タブ向けの SSO フロー](../../../tabs/how-to/authentication/auth-aad-sso.md)に似ています。 以下の手順により、アプリの登録についてガイドします:
+Azure AD ポータルを使用してアプリを登録する手順は、[タブ向けの SSO フロー](../../../tabs/how-to/authentication/tab-sso-overview.md)に似ています。 以下の手順により、アプリの登録についてガイドします:
 
 1. [Azure Active Directory – App Registrations](https://go.microsoft.com/fwlink/?linkid=2083908) ポータルで新しいアプリケーションを登録します。
 
@@ -96,7 +96,7 @@ Azure AD ポータルを使用してアプリを登録する手順は、[タブ�
    >
    > 次の重要な制限に注意する必要があります。
    >
-   > * email、profile、offline_access、OpenId などのユーザー レベルの Microsoft Graph API アクセス許可のみがサポートされます。 `User.Read` や `Mail.Read` など、他の Microsoft Graph スコープにアクセスする必要がある場合は、「[Graph のアクセス許可を持つアクセス トークンを取得する](../../../tabs/how-to/authentication/auth-aad-sso.md#get-an-access-token-with-graph-permissions)」を参照してください。
+   > * email、profile、offline_access、OpenId などのユーザー レベルの Microsoft Graph API アクセス許可のみがサポートされます。 他の Microsoft Graph スコープ (Microsoft Graph スコープなど`User.Read``Mail.Read`) にアクセスする必要がある場合は、「[Microsoft Graph のアクセス許可とスコープを使用してタブ アプリを拡張](../../../tabs/how-to/authentication/tab-sso-graph-api.md)する」を参照してください。
    > * アプリケーションのドメイン名は、Azure AD アプリケーションに登録したドメイン名と同じである必要があります。
    > * 現在、アプリごとに複数のドメインはサポートされていません。
    > * `azurewebsites.net` ドメインを使用するアプリケーションは大衆的であり、セキュリティ リスクである可能性があるため、サポートされていません。

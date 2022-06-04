@@ -1,34 +1,48 @@
 ---
-title: Azure Active Directoryを使用したタブの認証
-description: Teamsでの認証と、それをタブで使用する方法について説明します
+title: サード パーティの OAuth 認証を構成する
+description: Teams での認証と、それをタブで使用する方法について説明します
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams 認証タブ Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: aa60f3908a13b55add525a561fe3f60afaad6c87
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 1cbd871a3066c5f8dd1cbba0837fdf8e4ab9be8f
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757319"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887780"
 ---
-# <a name="authenticate-a-user-in-a-microsoft-teams-tab"></a>[Microsoft Teams] タブでユーザーを認証する
+# <a name="configure-third-party-oauth-authentication"></a>サード パーティの OAuth 認証を構成する
 
 > [!Note]
-> モバイル クライアントのタブで認証を機能させるには、バージョン 1.4.1 以降の Teams JavaScript SDK を使用していることを確認する必要があります。
+> モバイル クライアントのタブで認証を機能させるには、バージョン 1.4.1 以降の Teams JavaScript SDK を使用していることを確認します。
 
-Teams アプリ内で使用するサービスは多数あります。これらのサービスのほとんどは、サービスにアクセスするために認証と承認が必要です。 サービスには、Facebook、Twitter、Teamsが含まれます。 Teamsユーザー プロファイル情報は Microsoft Graphを使用して Azure AD に格納されます。この記事では、この情報にアクセスするために Azure AD を使用した認証に焦点を当てます。
+Teams アプリ内で使用するサービスは多数あります。これらのサービスのほとんどは、サービスにアクセスするために認証と承認が必要です。 サービスには、Facebook、Twitter、Teams が含まれます。
+Teams ユーザー プロファイル情報は Microsoft Graph を使用して Azure AD に格納され、この記事では、この情報にアクセスするために Azure AD を使用した認証に焦点を当てます。
 
-OAuth 2.0 は、Azure AD や他の多くのサービス プロバイダーで使用される認証のオープン 標準です。 OAuth 2.0 について理解することは、Teamsと Azure AD で認証を操作するための前提条件です。 次の例では、Azure AD と Microsoft Graphからユーザーのプロファイル情報を最終的に読み取る目的で、OAuth 2.0 暗黙的許可フローを使用します。
+OAuth 2.0 は、Azure AD や他の多くのサービス プロバイダーで使用される認証のオープン 標準です。 OAuth 2.0 について理解することは、Teams と Azure AD で認証を操作するための前提条件です。 次の例では、OAuth 2.0 暗黙的許可フローを使用します。 Azure AD と Microsoft Graph からユーザーのプロファイル情報を読み取ります。
 
-この記事のコードは、Teams サンプル アプリ[Microsoft Teamsタブ認証サンプル (Node) から](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)提供されています。 これには、Microsoft Graphのアクセス トークンを要求し、Azure AD から現在のユーザーの基本的なプロファイル情報を表示する静的タブが含まれています。
+この記事のコードは、Teams サンプル アプリ [Microsoft Teams タブ認証サンプル (ノード)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) から提供されています。 これには、Microsoft Graph のアクセス トークンを要求する静的タブが含まれており、Azure AD から現在のユーザーの基本的なプロファイル情報が表示されます。
 
-タブの認証フローの一般的な概要については、タブ [の認証フローに関するページを参照してください](~/tabs/how-to/authentication/auth-flow-tab.md)。
+タブの認証フローの概要については、タブ [の認証フローに関するページを参照してください](~/tabs/how-to/authentication/auth-flow-tab.md)。
 
-タブの認証フローは、ボットの認証フローとは若干異なります。
+タブの認証フローは、ボットの認証フローとは異なります。
 
-## <a name="configuring-identity-providers"></a>ID プロバイダーの構成
+## <a name="configure-your-app-to-use-azure-ad-as-an-identity-provider"></a>ID プロバイダーとして Azure AD を使用するようにアプリを構成する
 
-ID プロバイダーとして Azure AD を使用する場合の OAuth 2.0 コールバック リダイレクト URL の構成に関する詳細な手順については、ID [プロバイダー](~/concepts/authentication/configure-identity-provider.md) の構成に関するトピックを参照してください。
+OAuth 2.0 をサポートする ID プロバイダーは、不明なアプリケーションからの要求を認証しません。 事前にアプリケーションを登録する必要があります。 Azure AD でこれを行うには、次の手順に従います。
+
+1. [アプリケーション登録ポータル](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)を開きます。
+
+2. アプリを選択してプロパティを表示するか、[新しい登録] ボタンを選択します。 アプリの **リダイレクト URI** セクションを見つけます。
+
+3. ドロップダウン メニューから **[Web** ] を選択します。 URL を認証エンドポイントに更新します。 GitHub 上の TypeScript/Node.js および C# サンプル アプリの場合、リダイレクト URL は次のようになります。
+
+    リダイレクト URL: `https://<hostname>/bot-auth/simple-start`
+
+実際のホストに置き換えます `<hostname>` 。 このホストは、Azure、Glitch などの専用ホスティング サイト、開発マシン上の localhost への ngrok トンネル (例: `abcd1234.ngrok.io`. この情報がない場合は、アプリ (またはサンプル アプリ) を完了またはホストしていることを確認します。 この情報がある場合は、このプロセスを再開します。
+
+> [!NOTE]
+> LinkedIn、Google、その他のサードパーティ OAuth プロバイダーを選択できます。 これらのプロバイダーの認証を有効にするプロセスは、サード パーティの OAuth プロバイダーとして Azure AD を使用する場合と似ています。 サードパーティ OAuth プロバイダーの使用の詳細については、特定のプロバイダーの Web サイトを参照してください。
 
 ## <a name="initiate-authentication-flow"></a>認証フローを開始する
 
@@ -36,7 +50,7 @@ ID プロバイダーとして Azure AD を使用する場合の OAuth 2.0 コ�
 
 必要に応じてユーザーがサインインできるように、構成ページまたはコンテンツ ページにボタンを追加します。 これは、タブ [構成](~/tabs/how-to/create-tab-pages/configuration-page.md) ページまたは [任意のコンテンツ](~/tabs/how-to/create-tab-pages/content-page.md) ページで行うことができます。
 
-Azure AD は、ほとんどの ID プロバイダーと同様に、そのコンテンツを iframe に配置することを許可しません。 つまり、ID プロバイダーをホストするためにポップアップ ページを追加する必要があります。 次の例では、このページは `/tab-auth/simple-start`. `microsoftTeams.authenticate()` Microsoft Teams クライアント SDK の機能を使用して、ボタンが選択されたときにこのページを起動します。
+Azure AD は、ほとんどの ID プロバイダーと同様に、そのコンテンツを `iframe`. つまり、ID プロバイダーをホストするためにポップアップ ページを追加する必要があります。 次の例では、このページは `/tab-auth/simple-start`. ボタンが `microsoftTeams.authenticate()` 選択されているときにこのページを起動するには、Microsoft Teams クライアント SDK の機能を使用します。
 
 ```javascript
 microsoftTeams.authentication.authenticate({
@@ -94,7 +108,7 @@ microsoftTeams.getContext(function (context) {
 ### <a name="notes"></a>メモ
 
 * 認証要求と URL の構築に関するヘルプについては、 [ユーザー コンテキスト情報の取得](~/tabs/how-to/access-teams-context.md) に関するページを参照してください。 たとえば、Azure AD サインインの値としてユーザーのログイン名を `login_hint` 使用できます。つまり、ユーザーの入力が少なくなる可能性があります。 攻撃者が悪意のあるブラウザーにページを読み込み、必要な情報を提供する可能性があるため、このコンテキストを ID の証明として直接使用しないでください。
-* タブ コンテキストはユーザーに関する有用な情報を提供しますが、タブ コンテンツ URL の URL パラメーターとして取得するか、Microsoft Teams クライアント SDK で関数を呼び出`microsoftTeams.getContext()`すかに関係なく、この情報を使用してユーザーを認証しないでください。 悪意のあるアクターが独自のパラメーターを使用してタブ コンテンツ URL を呼び出す可能性があり、偽装Microsoft Teams Web ページが iframe にタブ コンテンツ URL を読み込み、独自のデータを関数に`getContext()`返す可能性があります。 タブ コンテキスト内の ID 関連情報は、単にヒントとして扱い、使用する前に検証する必要があります。
+* タブ コンテキストはユーザーに関する有用な情報を提供しますが、タブ コンテンツ URL の URL パラメーターとして取得するか、Microsoft Teams クライアント SDK で関数を呼び出 `microsoftTeams.getContext()` すかに関係なく、この情報を使用してユーザーを認証しないでください。 悪意のあるアクターが独自のパラメーターを使用してタブ コンテンツ URL を呼び出す可能性があり、Microsoft Teams を偽装する Web ページが iframe にタブ コンテンツ URL を読み込み、独自のデータを関数に `getContext()` 返す可能性があります。 タブ コンテキスト内の ID 関連情報は、単にヒントとして扱い、使用する前に検証する必要があります。
 * このパラメーターは `state` 、コールバック URI を呼び出すサービスが呼び出したサービスであることを確認するために使用されます。 コールバック内の `state` パラメーターが呼び出し中に送信したパラメーターと一致しない場合、戻り値の呼び出しは検証されないため、終了する必要があります。
 * アプリの manifest.json ファイルの一覧に ID プロバイダーのドメイン `validDomains` を含める必要はありません。
 
@@ -141,7 +155,7 @@ if (hashParams["error"]) {
 `NotifyFailure()` には、次の定義済みのエラーの理由があります。
 
 * `CancelledByUser` ユーザーは、認証フローを完了する前にポップアップ ウィンドウを閉じました。
-* `FailedToOpenWindow` ポップアップ ウィンドウを開くことができませんでした。 ブラウザーでMicrosoft Teamsを実行している場合、これは通常、ポップアップ ブロックによってウィンドウがブロックされたことを意味します。
+* `FailedToOpenWindow` ポップアップ ウィンドウを開くことができませんでした。 ブラウザーで Microsoft Teams を実行している場合、これは通常、ポップアップ ブロックによってウィンドウがブロックされたことを意味します。
 
 成功した場合は、ページを更新または再読み込みし、現在認証されたユーザーに関連するコンテンツを表示できます。 認証に失敗すると、エラー メッセージが表示されます。
 
@@ -150,7 +164,7 @@ if (hashParams["error"]) {
 > [!NOTE]
 >
 > * Chrome 80 (2020 年初頭にリリース予定) では、新しい Cookie 値を紹介し、既定で Cookie ポリシーを設定します。 既定のブラウザーの動作を利用するのではなく、Cookie に対して使用する目的を設定することをお勧めします。 「[SameSite Cookie 属性 (2020 更新プログラム)](../../../resources/samesite-cookie-update.md)」を *参照してください*。
-> * Microsoft Teams Free ユーザーとゲスト ユーザーに対して正しいトークンを取得するには、アプリでテナント固有のエンドポイント`https://login.microsoftonline.com/**{tenantId}**`を使用することが重要です。 bot メッセージまたはタブ コンテキストから tenantId を取得できます。 アプリが使用 `https://login.microsoftonline.com/common`されている場合、ユーザーは正しくないトークンを取得し、現在サインインしているテナントではなく "ホーム" テナントにログオンします。
+> * Microsoft Teams Free とゲスト ユーザーの正しいトークンを取得するには、アプリでテナント固有のエンドポイント `https://login.microsoftonline.com/**{tenantId}**`を使用することが重要です。 bot メッセージまたはタブ コンテキストから tenantId を取得できます。 アプリが使用 `https://login.microsoftonline.com/common`されている場合、ユーザーは正しくないトークンを取得し、現在サインインしているテナントではなく "ホーム" テナントにログオンします。
 
 シングル Sign-On (SSO) の詳細については、 [サイレント認証](~/tabs/how-to/authentication/auth-silent-AAD.md)に関する記事を参照してください。
 
