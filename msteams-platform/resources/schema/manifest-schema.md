@@ -4,12 +4,12 @@ description: Microsoft Teams のマニフェスト スキーマについて説�
 ms.topic: reference
 ms.localizationpriority: high
 keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: 5881d5745e12255aad270c227cdd9508a0023644
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: cbb0835ccc121b6a0e178c31a0a9df2e492fd605
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755882"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887836"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参照: Microsoft Teams のマニフェスト スキーマ
 
@@ -630,7 +630,7 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`id`|string|36 文字|✔|Azure AD のアプリケーション ID を指定します。 この ID は GUID である必要があります。|
-|`resource`|string|2048 文字|✔|SSO の認証トークンを取得するためのアプリのリソース URL。 </br> **注:** SSO を使用していない場合は、エラー応答を回避するために、このフィールドにダミーの文字列値 (たとえば、https://notapplicable) をアプリ マニフェストに入力してください。 |
+|`resource`|string|2048 文字|✔|SSO の認証トークンを取得するためのアプリのリソース URL。 </br> **注:** SSO を使用していない場合は、エラー応答を回避するために、このフィールドにダミーの文字列値 (たとえば、<https://notapplicable>) をアプリ マニフェストに入力してください。 |
 
 ## <a name="graphconnector"></a>graphConnector
 
@@ -872,6 +872,85 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
     |**[名前]**|**説明**|
     |---|---|
     |`InAppPurchase.Allow.User`|サインインしているユーザーの代わりに、アプリでユーザー マーケットプレース オファーを表示し、アプリ内でユーザーの購入を完了できるようにします。|
+
+## <a name="create-a-manifest-file"></a>マニフェスト ファイルを作成する
+
+アプリに Teams アプリ マニフェスト ファイルがない場合は、これを作成する必要があります。
+
+Teams アプリ マニフェスト ファイルを作成するには:
+
+1. [サンプル マニフェスト スキーマ](#sample-full-manifest)を使用して、JSON ファイルを作成します。
+1. これをプロジェクト フォルダーのルートに、`manifest.json`として保存します。
+
+<br>
+<details>
+<summary>SSO が有効なタブ アプリのマニフェスト スキーマの例を次に示します: </summary>
+<br>
+
+> [!NOTE]
+> ここに示すマニフェストのサンプル コンテンツは、タブ アプリ専用です。 サブドメイン URI とパッケージ名にサンプル値を使用しています。 詳細については[サンプル マニフェスト スキーマ](#sample-full-manifest)をご覧ください。
+
+  ```json
+{ 
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json", 
+ "manifestVersion": "1.12", 
+ "version": "1.0.0", 
+ "id": "{new GUID for this Teams app - not the Azure AD App ID}", 
+ "packageName": "com.contoso.teamsauthsso", 
+ "developer": { 
+ "name": "Microsoft", 
+ "websiteUrl": "https://www.microsoft.com", 
+ "privacyUrl": "https://www.microsoft.com/privacy", 
+ "termsOfUseUrl": "https://www.microsoft.com/termsofuse" 
+  }, 
+
+  "name": { 
+    "short": "Teams Auth SSO", 
+    "full": "Teams Auth SSO" 
+  }, 
+
+
+  "description": { 
+    "short": "Teams Auth SSO app", 
+    "full": "The Teams Auth SSO app" 
+  }, 
+
+  "icons": { 
+    "outline": "outline.png", 
+    "color": "color.png" 
+  }, 
+
+  "accentColor": "#60A18E", 
+  "staticTabs": [ 
+    { 
+     "entityId": "auth", 
+     "name": "Auth", 
+     "contentUrl": "https://https://subdomain.example.com/Home/Index", 
+     "scopes": [ "personal" ] 
+    } 
+  ], 
+
+  "configurableTabs": [ 
+    { 
+     "configurationUrl": "https://subdomain.example.com/Home/Configure", 
+     "canUpdateConfiguration": true, 
+     "scopes": [ 
+     "team" 
+      ] 
+    } 
+  ], 
+  "permissions": [ "identity", "messageTeamMembers" ], 
+  "validDomains": [ 
+   "{subdomain or ngrok url}" 
+  ], 
+  "webApplicationInfo": { 
+    "id": "{Azure AD AppId}", 
+    "resource": "api://subdomain.example.com/{Azure AD AppId}" 
+  }
+} 
+```
+
+</details>
 
 ## <a name="see-also"></a>関連項目
 
