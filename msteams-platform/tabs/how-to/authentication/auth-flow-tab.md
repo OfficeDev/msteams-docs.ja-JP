@@ -1,25 +1,31 @@
 ---
-title: タブの認証フロー
+title: サード パーティの OAuth プロバイダーを使用して認証を有効にする
 description: タブでの認証フロー、Azure AD ごとの OAuth について説明し、コード サンプルを提供します
 ms.topic: conceptual
-ms.localizationpriority: medium
-keywords: teams 認証フロー タブ
-ms.openlocfilehash: a40a09b025949b36491534a4e8bdda9f523b24df
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: Teams 認証フロー タブ サード パーティ OAuth プロバイダー
+ms.openlocfilehash: 4ad7a765632a451880d8d8bb5342240478e6f6da
+ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756493"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65887801"
 ---
-# <a name="microsoft-teams-authentication-flow-for-tabs"></a>タブの Microsoft Teams 認証フロー
+# <a name="enable-authentication-using-third-party-oauth-provider"></a>サード パーティの OAuth プロバイダーを使用して認証を有効にする
+
+サード パーティの OAuth ID プロバイダー (IdP) を使用して、タブ アプリで認証を有効にすることができます。 このメソッドでは、アプリ ユーザー ID が検証され、Azure AD、Google、Facebook、GitHub、その他のプロバイダーなどの OAuth IdP によってアクセスが許可されました。 IdP との信頼関係を構成する必要があり、またアプリ ユーザーもそれに登録する必要があります。
 
 > [!NOTE]
 > モバイル クライアントのタブで認証を機能させるには、少なくとも 1.4.1 バージョンの Microsoft Teams JavaScript SDK を使用していることを確認する必要があります。  
 > Teams SDK は、認証フロー用に別のウィンドウを起動します。 `SameSite` 属性を **Lax** に設定します。 Teams デスクトップ クライアントまたは以前のバージョンの Chrome または Safari は、`SameSite`=None をサポートしていません。
 
+## <a name="use-oauth-idp-to-enable-authentication"></a>OAuth IdP を使用して認証を有効にする
+
 OAuth 2.0 は、Azure Active Directory (Azure AD) および他の多くの ID プロバイダーが使用する認証および承認のオープン スタンダードです。 OAuth 2.0 の基本的な解釈は、Teams で認証を操作するための前提条件です。 詳細については、[正式な仕様](https://oauth.net/2/)よりもわかりやすい [簡略化された OAuth2](https://aaronparecki.com/oauth-2-simplified/) を参照してください。 タブとボットの認証フローは異なります。タブは Web サイトに似ているため、OAuth 2.0 を直接使用できます。 ボットではいくつかの操作が異なりますが、コア概念は同じです。
 
 たとえば、Node と [OAuth 2.0 暗黙的な許可の種類](https://oauth.net/2/grant-types/implicit/)を使用するタブとボットの認証フローについては、「[タブの認証フローを開始する](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow)」を参照してください。
+
+このセクションでは、タブ アプリで認証を有効にするためのサード パーティの OAuth プロバイダーの例として Azure AD を使用します。
 
 > [!NOTE]
 > ユーザーに **ログイン** ボタンを表示し、ボタンの `microsoftTeams.authentication.authenticate` 選択に応答して API を呼び出す前に、SDK の初期化が完了するのを待つ必要があります。 初期化が完了したときに呼び出される `microsoftTeams.initialize` API にコールバックを渡すことができます。
@@ -27,7 +33,7 @@ OAuth 2.0 は、Azure Active Directory (Azure AD) および他の多くの ID �
 ![タブ認証シーケンス図](~/assets/images/authentication/tab_auth_sequence_diagram.png)
 
 1. ユーザーは、タブ構成またはコンテンツ ページのコンテンツ (通常は **[サインイン]** または **[ログイン]** ボタン) で操作します。
-2. このタブは、認証の開始ページの URL を作成します。 オプションで、UR Lプレースホルダーからの情報を使用するか、`microsoftTeams.getContext()` Teams クライアント SDK メソッドを呼び出して、ユーザーの認証エクスペリエンスを合理化します。 たとえば、A Azure AD を使用して認証する場合、パラメーターがユーザーの電子メール アドレスに設定されている場合 `login_hint` 、ユーザーが最近サインインした場合、ユーザーはサインインする必要はありません。 これは、Azure AD がユーザーのキャッシュされた資格情報を使用するためです。 ポップアップ ウィンドウが短い時間表示され、消えます。
+2. このタブは、認証の開始ページの URL を作成します。 オプションで、UR Lプレースホルダーからの情報を使用するか、`microsoftTeams.getContext()` Teams クライアント SDK メソッドを呼び出して、ユーザーの認証エクスペリエンスを合理化します。 たとえば、Azure AD で認証するときに、`login_hint` パラメーターがユーザーの電子メール アドレスに設定されている場合、ユーザーが最近サインインしたことがあれば、サインインする必要がありません。 これは、Azure AD がユーザーのキャッシュされた資格情報を使用するためです。 ポップアップ ウィンドウが短い時間表示され、消えます。
 3. 次に、タブは `microsoftTeams.authentication.authenticate()` メソッドを呼び出し、`successCallback` 関数と `failureCallback` 関数を登録します。
 4. Teams は、ポップアップ ウィンドウの iframe で開始ページを開きます。 スタート ページはランダムな `state` データを生成し、将来の検証のために保存し、AzureAD の `https://login.microsoftonline.com/<tenant ID>/oauth2/authorize` などの ID プロバイダーの `/authorize` エンドポイントにリダイレクトします。 `<tenant id>` を context.tid である独自のテナント ID に置き換えます。
 Teams 内の他のアプリケーション認証フローと同様に、開始ページは、その `validDomains` リストにあるドメイン上にあり、ログイン後のリダイレクト ページと同じドメイン上にある必要があります。
