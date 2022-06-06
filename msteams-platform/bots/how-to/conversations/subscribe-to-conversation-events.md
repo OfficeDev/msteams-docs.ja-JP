@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: イベント ボット チャネル メッセージの反応の会話
-ms.openlocfilehash: d9722ece0edd835213b7a963368c81ab1121c436
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 9234b192788a1449d5da344b271f5028ce7fd110
+ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757571"
+ms.lasthandoff: 06/06/2022
+ms.locfileid: "65906277"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams ボットの会話イベント
 
@@ -23,10 +23,11 @@ Microsoft Teams 用の会話ボットを構築する場合は、会話イベン�
 * 新しいチーム メンバーが追加または削除されたときにウェルカム メッセージをトリガーする。
 * チャネルが作成、名前変更、削除されたときに通知をトリガーする。
 * ボット メッセージがユーザーによって「いいね!」されたときに通知をトリガーする。
+* インストール中に、ユーザー入力 (選択) からボットの既定のチャネルを特定します。
 
 ## <a name="conversation-update-events"></a>会話の更新イベント
 
-会話更新イベントを使用すると、より良い通知とより効果的なボット アクションを提供できます。
+会話更新イベントを使用すると、より良い通知と効果的なボット アクションを提供できます。
 
 > [!IMPORTANT]
 >
@@ -50,8 +51,8 @@ Microsoft Teams 用の会話ボットを構築する場合は、会話イベン�
 | チャネルの名前が変更されました     | channelRenamed    | OnTeamsChannelRenamedAsync | [チャネルの名前が変更されます](#channel-renamed)。 | チーム |
 | チャネルが削除されました     | channelDeleted    | OnTeamsChannelDeletedAsync | [チャネルが削除されます](#channel-deleted)。 | チーム |
 | 復元されたチャネル    | channelRestored    | OnTeamsChannelRestoredAsync | [チャネルが復元されます](#channel-deleted)。 | チーム |
-| メンバーが追加されました   | membersAdded   | OnTeamsMembersAddedAsync   | [メンバーが追加されます](#team-members-added)。 | すべて |
-| 削除されたメンバー | membersRemoved | OnTeamsMembersRemovedAsync | [メンバーが削除されます](#team-members-removed)。 | groupChat とチーム |
+| メンバーが追加されました   | membersAdded   | OnTeamsMembersAddedAsync   | [メンバーが追加されます](#members-added)。 | すべて |
+| 削除されたメンバー | membersRemoved | OnTeamsMembersRemovedAsync | [メンバーが削除されます](#members-removed)。 | すべて |
 | チャットの名前が変更されました        | teamRenamed       | OnTeamsTeamRenamedAsync    | [チームの名前が変更されます](#team-renamed)。       | チーム |
 | チームが削除されました        | teamDeleted       | OnTeamsTeamDeletedAsync    | [チームが削除されます](#team-deleted)。       | チーム |
 | チームがアーカイブされました        | teamArchived       | OnTeamsTeamArchivedAsync    | [チームはアーカイブされます](#team-archived)。       | チーム |
@@ -60,7 +61,7 @@ Microsoft Teams 用の会話ボットを構築する場合は、会話イベン�
 
 ### <a name="channel-created"></a>チャネルを作成しました
 
-ボットがインストールされているチームで新しいチャネルが作成されるたびに、チャネルの作成イベントがボットに送信されます。
+イベントは `channelCreated` 、ボットがインストールされているチームで新しいチャネルが作成されるたびにボットに送信されます。
 
 次のコードは、チャネル作成イベントの例を示しています。
 
@@ -149,7 +150,7 @@ async def on_teams_channel_created(
 
 ### <a name="channel-renamed"></a>チャネルの名前が変更されました
 
-ボットがインストールされているチームでチャネルの名前が変更されるたびに、チャネル名変更イベントがボットに送信されます。
+このイベントは `channelRenamed` 、ボットがインストールされているチームでチャネルの名前が変更されるたびにボットに送信されます。
 
 次のコードは、チャネル名変更イベントの例を示しています。
 
@@ -231,7 +232,7 @@ async def on_teams_channel_renamed(
 
 ### <a name="channel-deleted"></a>チャネルが削除されました
 
-ボットがインストールされているチームでチャネルが削除されるたびに、チャネル削除イベントがボットに送信されます。
+`channelDeleted`ボットがインストールされているチームでチャネルが削除されるたびに、イベントがボットに送信されます。
 
 次のコードは、チャネル削除イベントの例を示しています。
 
@@ -315,7 +316,7 @@ async def on_teams_channel_deleted(
 
 ### <a name="channel-restored"></a>復元されたチャネル
 
-ボットが既にインストールされているチームで以前に削除されたチャネルが復元されるたびに、チャネル復元イベントがボットに送信されます。
+イベントは `channelRestored` 、ボットが既にインストールされているチームで以前に削除されたチャネルが復元されるたびに、ボットに送信されます。
 
 次のコードは、チャネルが復元されたイベントの例を示しています。
 
@@ -402,9 +403,22 @@ async def on_teams_channel_restored(
 
 ---
 
-### <a name="team-members-added"></a>チーム メンバーが追加されました
+### <a name="members-added"></a>メンバーが追加されました
 
-イベントは `teamMemberAdded` 、会話に初めて追加されるときにボットに送信されます。 イベントは、ボットがインストールされているチームまたはグループ チャットに新しいユーザーが追加されるたびにボットに送信されます。 ID であるユーザー情報はボットに対して一意であり、特定のユーザーにメッセージを送信するなど、サービスで今後使用するためにキャッシュできることに注意してください。
+メンバーが追加したイベントは、次のシナリオでボットに送信されます。
+
+1. ボット自体がインストールされ、会話に追加されると
+
+   > チーム コンテキストでは、アクティビティの conversation.id は、アプリのインストール中に `id` ユーザーが選択したチャネル、またはボットがインストールされたチャネル (現在 [パブリック開発者プレビュー](../../../resources/dev-preview/developer-preview-intro.md)で利用可能) に設定されます。
+
+2. ボットがインストールされている会話にユーザーが追加されたとき
+
+   > イベント ペイロードで受信されたユーザー ID はボットに固有であり、ユーザーを直接メッセージングするなど、将来の使用のためにキャッシュできます。
+
+メンバーが追加したアクティビティ `eventType` は、イベントがチーム コンテキストから送信されたときに設定 `teamMemberAdded` されます。 追加された新しいメンバーがボット自体かユーザーかを確認するには、`Activity``turnContext`. リストにオブジェクトの`MembersAdded`フィールド`Recipient`と`id`同じオブジェクトが`id`含まれている場合、追加されたメンバーはボット、それ以外の場合はユーザーです。 ボットの `id` 形式 `28:<MicrosoftAppId>`は .
+
+> [!TIP]
+> [このイベントを`InstallationUpdate`](#installation-update-event)使用して、ボットがいつ会話に追加または削除されるかを判断します。
 
 次のコードは、チーム メンバー追加イベントの例を示しています。
 
@@ -455,46 +469,58 @@ export class MyBot extends TeamsActivityHandler {
 
 # <a name="json"></a>[JSON](#tab/json)
 
-これは、ボットがチームに追加されたときにボットが受信するメッセージです。
+ボットがチームに追加されたときにボットが受信するメッセージ。
+
+> [!NOTE]
+> このペイロードでは、 `conversation.id` `channelData.settings.selectedChannel.id` アプリのインストール中またはインストールのトリガー元としてユーザーが選択したチャネルの ID になります。
 
 ```json
 {
+    "type": "conversationUpdate",
     "membersAdded": [
         {
-            "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0"
+            "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b"
         }
     ],
-    "type": "conversationUpdate",
-    "timestamp": "2017-02-23T19:38:35.312Z",
-    "localTimestamp": "2017-02-23T12:38:35.312-07:00",
-    "id": "f:5f85c2ad",
+    "timestamp": "2021-12-07T22:34:56.534Z",
+    "id": "f:0b9079f4-d4d3-3d8e-b883-798298053c7e",
     "channelId": "msteams",
-    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+    "serviceUrl": "https://smba.trafficmanager.net/amer/",
     "from": {
-        "id": "29:1I9Is_Sx0OIy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"
+        "id": "29:1ljv6N86roXr5pjPrCJVIz6xHh5QxjI....",
+        "aadObjectId": "eddfa9d4-346e-4cce-a18f-fa6261ad776b"
     },
     "conversation": {
         "isGroup": true,
         "conversationType": "channel",
-        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+        "tenantId": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f",
+        "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2",
+        "name": "2021 Test Channel"
     },
     "recipient": {
-        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
-        "name": "SongsuggesterBot"
+        "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b",
+        "name": "Test Bot"
     },
     "channelData": {
+        "settings": {
+            "selectedChannel": {
+                "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
+            }
+        },
         "team": {
-            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+            "aadGroupId": "f3ec8cd2-e704-4344-8c47-9a3a21d683c0",
+            "name": "TestTeam2022",
+            "id": "19:zFLSDFWsesfzcmKArqKJ-65aOXJz@sgf462H2wz41@thread.tacv2"
         },
         "eventType": "teamMemberAdded",
         "tenant": {
-            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+            "id": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
         }
     }
 }
 ```
 
-これは、ボットが 1 対 1 のチャットに追加されたときにボットが受信するメッセージです。
+ボットが 1 対 1 のチャットに追加されたときにボットが受信するメッセージ。
 
 ```json
 {
@@ -546,9 +572,15 @@ async def on_teams_members_added(
 
 ---
 
-### <a name="team-members-removed"></a>削除されたチーム メンバー
+### <a name="members-removed"></a>削除されたメンバー
 
-イベントは `teamMemberRemoved` 、チームから削除された場合、ボットに送信されます。 イベントは、ボットがメンバーであるチームからユーザーが削除されるたびにボットに送信されます。 新たに削除されたメンバーがボット自身なのかユーザーなのかを判断するには、`turnContext` のうちの `Activity` オブジェクトを確認します。  オブジェクトの`Id`フィールドがオブジェクトの`MembersRemoved`フィールド`Recipient`と`Id`同じ場合、削除されたメンバーはボットであり、それ以外の場合はユーザーです。 ボットの `Id` は通常 `28:<MicrosoftAppId>` です。
+メンバーが削除されたイベントは、次のシナリオでボットに送信されます。
+
+1. ボット自体がアンインストールされ、会話から削除されるとします。
+2. ボットがインストールされている会話からユーザーが削除されたとき。
+
+メンバーが削除したアクティビティ `eventType` は、イベントがチーム コンテキストから送信されたときに設定 `teamMemberRemoved` されます。 新たに削除されたメンバーがボット自身なのかユーザーなのかを判断するには、`turnContext` のうちの `Activity` オブジェクトを確認します。 リストにオブジェクトの`MembersRemoved`フィールド`Recipient`と`id`同じオブジェクトが`id`含まれている場合、追加されたメンバーはボット、それ以外の場合はユーザーです。 ボットの ID は 、 `28:<MicrosoftAppId>`.
+
 
 > [!NOTE]
 > ユーザーがテナントから完全に削除されると、`membersRemoved conversationUpdate` イベントがトリガーされます。
@@ -740,7 +772,7 @@ async def on_teams_team_renamed(
 
 ### <a name="team-deleted"></a>チームが削除されました
 
-チームが削除されると、そのボットは通知を受け取ります。 ボットは、`channelData` オブジェクト内に `eventType.teamDeleted` を含む `conversationUpdate` イベントを受信します。
+チームが削除されると、ボットは通知を受け取ります。 ボットは、`channelData` オブジェクト内に `eventType.teamDeleted` を含む `conversationUpdate` イベントを受信します。
 
 次のコードは、チーム削除イベントの例を示しています。
 
@@ -1296,6 +1328,15 @@ async def on_reactions_removed(
 
 `installationUpdate` イベントを使用して、インストールでボットから入門メッセージを送信します。 このイベントは、プライバシーとデータ保持の要件を満たすのに役立ちます。 ボットがアンインストールされたときに、ユーザーまたはスレッド データをクリーンアップして削除することもできます。
 
+ボットが `conversationUpdate` チームに追加されたときに送信されるイベントと同様に、イベントの conversation.id は、アプリの `installationUpdate` インストール中にユーザーが選択したチャネルの ID またはインストールが発生したチャネルに設定されます。 ID は、ユーザーがボットを操作するチャネルを表し、ウェルカム メッセージを送信するときにボットが使用する必要があります。 For scenarios where the ID of the General channel is explicitly required, you can get it from `team.id` in `channelData`.
+
+この例では、 `conversation.id` Daves Demo チームの `conversationUpdate` 応答チャネルの ID にアクティビティと `installationUpdate` アクティビティが設定されます。
+
+![選択したチャネルを作成する](~/assets/videos/addteam.gif)
+
+> [!NOTE]
+> 選択したチャネル ID は、アプリがチームに `installationUpdate`インストールされたときに送信されるイベントの *追加* にのみ設定されます (現在 [、パブリック開発者プレビュー](../../../resources/dev-preview/developer-preview-intro.md)で利用できます)。
+
 # <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
@@ -1337,56 +1378,58 @@ async onInstallationUpdateActivity(context: TurnContext) {
 # <a name="json"></a>[JSON](#tab/json)
 
 ```json
-{ 
-  "action": "add", 
-  "type": "installationUpdate", 
-  "timestamp": "2020-10-20T22:08:07.869Z", 
-  "id": "f:3033745319439849398", 
-  "channelId": "msteams", 
-  "serviceUrl": "https://smba.trafficmanager.net/amer/", 
-  "from": { 
-    "id": "sample id", 
-    "aadObjectId": "sample Azure AD Object ID" 
-  },
-  "conversation": { 
-    "isGroup": true, 
-    "conversationType": "channel", 
-    "tenantId": "sample tenant ID", 
-    "id": "sample conversation Id@thread.skype" 
-  }, 
-
-  "recipient": { 
-    "id": "sample reciepent bot ID", 
-    "name": "bot name" 
-  }, 
-  "entities": [ 
-    { 
-      "locale": "en", 
-      "platform": "Windows", 
-      "type": "clientInfo" 
-    } 
-  ], 
-  "channelData": { 
-    "settings": { 
-      "selectedChannel": { 
-        "id": "sample channel ID@thread.skype" 
-      } 
-    }, 
-    "channel": { 
-      "id": "sample channel ID" 
-    }, 
-    "team": { 
-      "id": "sample team ID" 
-    }, 
-    "tenant": { 
-      "id": "sample tenant ID" 
-    }, 
-    "source": { 
-      "name": "message" 
-    } 
-  }, 
-  "locale": "en" 
-}
+{
+    {
+    "type": "installationUpdate",
+    "id": "f:816eb23d-bfa1-afa3-dfeb-d2aa338e9541",
+    "timestamp": "2021-11-09T04:47:30.91Z",
+    "serviceUrl": "https://smba.trafficmanager.net/amer/",
+    "channelId": "msteams",
+    "from": {
+        "id": "29:1ljv6N86roXr5pjPrCJVIz6xHh5QxjI....",
+        "aadObjectId": "eddfa9d4-346e-4cce-a18f-fa6261ad776b"
+    },
+    "recipient": {
+        "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b",
+        "name": "Test Bot"
+    },
+    "locale": "en-US",
+    "entities": [
+        {
+            "type": "clientInfo",
+            "locale": "en-US"
+        }
+    ],
+    "conversation": {
+        "isGroup": true,
+        "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2",
+        "name": "2021 Test Channel",
+        "conversationType": "channel",
+        "tenantId": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
+    },
+    "channelData": {
+        "settings": {
+            "selectedChannel": {
+                "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
+            }
+        },
+        "channel": {
+            "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
+        },
+        "team": {
+            "aadGroupId": "da849743-4259-475f-ae7a-4f4b0fb49943",
+            "name": "TestTeam2022",
+            "id": "19:zFLSDFWsesfzcmKArqKJ-65aOXJz@sgf462H2wz41@thread.tacv2"
+        },
+        "tenant": {
+            "id": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
+        },
+        "source": {
+            "name": "message"
+        }
+    },
+    "action": "add"
+    }
 ```
 
 # <a name="python"></a>[Python](#tab/python)
@@ -1403,13 +1446,13 @@ async def on_installation_update(self, turn_context: TurnContext):
 
 ## <a name="uninstall-behavior-for-personal-app-with-bot"></a>ボットを使用した個人用アプリのアンインストール動作
 
-アプリをアンインストールすると、ボットもアンインストールされます。 ユーザーがアプリにメッセージを送信すると、403 応答コードが表示されます。 ボットによって投稿された新しいメッセージには、403 応答コードが表示されます。 個人用スコープ内のボットのアンインストール後の動作と、Teams スコープと groupChat スコープが揃いました。 アプリをアンインストールすると、メッセージの送受信ができなくなります。
+アプリをアンインストールすると、ボットもアンインストールされます。 ユーザーがアプリにメッセージを送信すると、403 応答コードが表示されます。 ボットによって投稿された新しいメッセージには、403 応答コードが表示されます。 個人用スコープ内のボットのアンインストール後の動作と、Teams スコープと groupChat スコープが揃いました。 アプリのアンインストール後にメッセージを送受信することはできません。
 
 :::image type="content" source="../../../assets/images/bots/uninstallbot.png" alt-text="応答コードをアンインストールする"lightbox="../../../assets/images/bots/uninstallbot.png"border="true":::
 
 ## <a name="event-handling-for-install-and-uninstall-events"></a>インストールおよびアンインストール イベント向けのイベント ハンドリング
 
-これらのインストールおよびアンインストールのイベントを使用する場合、Teams から予期しないイベントを受信したボットで例外が発生する場合があります。 これは、次の場合に発生します。
+これらのインストール およびアンインストール イベントを使用すると、ボットが Teams から予期しないイベントを受信する際に例外が発生する場合があります。これは、次の場合に発生します。
 
 * Microsoft Bot Framework SDK を使用せずにボットをビルドした結果、ボットが予期しないイベントを受信した場合に例外が発生します。
 * Microsoft Bot Framework SDK を使用してボットをビルドし、基本イベント ハンドルをオーバーライドして既定のイベント動作を変更することを選択します。

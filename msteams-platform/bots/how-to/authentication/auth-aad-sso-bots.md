@@ -4,12 +4,12 @@ description: ユーザー トークンを取得する方法について説明し
 keywords: トークン、ユーザー トークン、ボット向け SSO サポート、アクセス許可、Microsoft Graph、Azure AD
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: e271296eafc1a4e74865c00cf467c5cb2901146e
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: cf62bc0834c6ce3792ef30355b2c6b3234127672
+ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887598"
+ms.lasthandoff: 06/06/2022
+ms.locfileid: "65906263"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>ボット向けのシングル サインオン (SSO) サポート
 
@@ -385,4 +385,4 @@ Azure AD ポータルを使用してアプリを登録する手順は、[タブ�
 
 ## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
 
-SSO 認証が有効になっているボットを作成するのに役立つ「[ステップ バイ ステップ ガイド](../../../sbs-bots-with-sso.yml)」を参照してください。
+ステップ [バイ ステップ ガイド](../../../sbs-bots-with-sso.yml)に従って、SSO 認証を使用してボットを構築します。
