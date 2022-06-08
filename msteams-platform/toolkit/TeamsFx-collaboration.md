@@ -1,90 +1,91 @@
 ---
-title: グループを使用して TeamsFx Project共同作業Teams Toolkit
+title: Teams Toolkit を使用して TeamsFx プロジェクトで共同作業する
 author: yanjiang
-description: グループを使用して TeamsFx Project共同作業Teams Toolkit
+description: Teams Toolkit を使用して TeamsFx プロジェクトで共同作業する
 ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 423e03e373edb1980186ea3dc43f2817d2e25636
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: be36cf1af9741d65d66ede498f5ac2fff31df148
+ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452565"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65938871"
 ---
-# <a name="collaborate-on-teams-project-using-teams-toolkit"></a>プロジェクトを使用Teamsで共同作業Teams Toolkit
+# <a name="collaborate-on-teams-project-using-teams-toolkit"></a>Teams Toolkit を使用して Teams プロジェクトで共同作業する
 
-複数の開発者が一緒に作業して、同じ TeamsFx プロジェクトのデバッグ、プロビジョニング、展開を行うことができますが、Teams Microsoft Azure Active Directory App と Azure AD (Azure AD) App.Teams Toolkit の適切なアクセス許可を手動で設定する必要があります。 コラボレーション機能をサポートし、開発者とプロジェクト所有者が他の開発者または共同作業者を TeamsFx プロジェクトに招待して、同じ TeamsFx プロジェクトをデバッグ、プロビジョニング、および展開できます。
+複数の開発者が連携して同じ TeamsFx プロジェクトのデバッグ、プロビジョニング、デプロイを行うことができますが、Teams App と Microsoft Azure Active Directory (Azure AD) アプリの適切なアクセス許可を手動で設定する必要があります。 Teams Toolkit では、開発者とプロジェクト所有者が TeamsFx プロジェクトに他の開発者またはコラボレーターを招待して、同じ TeamsFx プロジェクトをデバッグ、プロビジョニング、および展開できるようにするコラボレーション機能がサポートされています。
 
 ## <a name="prerequisites"></a>前提条件
 
-* アカウントの前提条件
+* Microsoft 365 サブスクリプション
+* 有効なサブスクリプションを持つ Azure
+  
+  さまざまなアカウントの詳細については、「 [アカウントを準備して Teams アプリを構築する」を](accounts.md)参照してください。
 
-    クラウド リソースをプロビジョニングするには、次のアカウントが必要です。 詳細については、「アプリをビルドするためのアカウント[の準備」をTeamsしてください](accounts.md)。
-
-  * Microsoft 365 サブスクリプション
-  * 有効なサブスクリプションを持つ Azure
-
-* [バージョン Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) v3.0.0 以上をインストールします。
+* [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) バージョン v3.0.0 以降をインストールする
 
 > [!TIP]
-> アプリ プロジェクトがTeamsコードで開Microsoft Visual Studioします。
+> Visual Studio Code で Teams アプリ プロジェクトが開かれていることを確認します。
 
 ## <a name="collaborate-with-other-developers"></a>他の開発者と共同作業する
 
-次の一覧では、コラボレーション プロセスとその制限について説明します。
+コラボレーション プロセスとその制限事項を理解するには、次の一覧を参照してください。
 
-### <a name="as-project-owner"></a>プロジェクトの所有者として
+* プロジェクト所有者として
 
-> [!NOTE]
-> 環境の共同作業者を追加する前に、プロジェクトの所有者が最初に [プロジェクトを準備する](provision.md) 必要があります。
+  > [!NOTE]
+  > 環境のコラボレーターを追加する前に、プロジェクト所有者が最初にプロジェクトを [プロビジョニング](provision.md) する必要があります。
 
-* [**ユーザーの環境**] セクションでTeams Toolkit共同作業者 **を選択します**。 次の図に **示すように**、[Microsoft 365 Teams アプリ] 所有者とリスト Azure AD Microsoft 365 Teams アプリ **(Azure AD App) 所有者** のオプションを表示します。
+  1. Teams Toolkit の **[環境** ] セクションで、 **コラボレーターを選択します**。 次の図に示すように、 **Microsoft 365 Teams アプリの追加 (Azure AD アプリを使用) 所有者** と **Microsoft 365 Teams アプリの一覧表示 (Azure AD アプリを使用) の所有者** のオプションが表示されます。
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add collaborators.png" alt-text="共同作業者":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add collaborators.png" alt-text="協力":::
 
-* [**アプリMicrosoft 365 TeamsをAzure AD] 所有者を選択し**、他Microsoft 365アカウントの電子メール アドレスを共同作業者として追加します。 追加するアカウントは、イメージに示すように、リモート デバッグ用のプロジェクト所有者と同じテナント上にある必要があります。
+  2. [ **Microsoft 365 Teams App (Azure AD アプリを使用) 所有者を追加する]** を選択し、他の Microsoft 365 アカウントのメール アドレスをコラボレーターとして追加します。 追加するアカウントは、イメージに示すように、リモート デバッグのプロジェクト所有者と同じテナント上にある必要があります。
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="envi を追加する":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="envi を追加する":::
 
-* 現在の環境で共同作業者を表示するには、[リスト Microsoft 365 Teams **App] (Azure AD App を使用して) [所有者]** を選択し、次の図に示すように、共同作業者が出力チャネルに一覧表示されます。
+  3. 現在の環境でコラボレーターを表示するには、 **Microsoft 365 Teams アプリの一覧表示 (Azure AD アプリを使用) 所有者** を選択し、次の図に示すようにコラボレーターが出力チャネルに一覧表示されます。
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="list":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="リスト":::
 
-* プロジェクトをプッシュしてGitHub。
+  4. プロジェクトを GitHub にプッシュする
 
-> [!NOTE]
-> 新しく追加された共同作業者は通知を受け取らない。 Projectは、共同作業者に通知する必要があります。
+     > [!NOTE]
+     > 新しく追加されたコラボレーターは、通知を受け取りません。 プロジェクトの所有者はコラボレーターに通知する必要があります。
 
-### <a name="as-project-collaborator"></a>プロジェクトの共同作業者として
+* プロジェクトコラボレーターとして
 
-* プロジェクトのクローンを作成GitHub。
-* アカウントにログインMicrosoft 365します。
-* このプロジェクトで使用しているすべての Azure リソースに対する共同作成者のアクセス許可を持つ Azure アカウントにログインします。
-* アプリをプレビュー Teams、プロジェクトをリモートに展開します。
-* リモートを起動して、アプリのプレビュー Teamsします。
+  1. GitHub からプロジェクトを複製します。
+  2. Microsoft 365 アカウントにログオンします。
+  3. Azure アカウントにログオンすると、プロジェクトで使用されるすべての Azure リソースに対する共同作成者アクセス許可が付与されます。
+  4. Teams アプリをプレビューするには、プロジェクトをリモートにデプロイします。
+  5. リモートを起動して Teams アプリのプレビューを作成します。
 
-詳細については、「リモート環境で[アプリをビルドしてTeams実行する」を参照してください](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3&branch)。
+     > [!NOTE]
+     > コラボレーターは、プロジェクト所有者がプロジェクト所有者と同じテナントの下に追加するアカウントを使用してログインする必要があります。 詳細については、「 [リモート環境で Teams アプリをビルドして実行](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3&branch)する」を参照してください。
 
-> [!NOTE]
-> 共同作業者は、プロジェクト所有者と同じテナントの下にあるプロジェクト所有者によって追加されたアカウントを使用してログインする必要があります。
+### <a name="limitations"></a>制限事項
 
-### <a name="limitation"></a>制限
+Teams Toolkit 拡張機能からコラボレーターを削除する場合は、直接削除できないため、手動で削除する必要があります。 コラボレーターを手動で削除するには、次の手順を実行します。
 
-拡張機能から共同作業者を直接削除Teams Toolkitできません。 共同作業者を手動で削除するには、次の手順を実行します。
+* 開発者ポータルの使用
 
-  1. [開発者ポータルTeamsに移動し、名前Teamsアプリ ID でアプリを選択します。
-  2. 左側の **パネルから [所有者** ] を選択します。
-  3. 共同作業者を選択して削除します。
-  4. [アプリ] [にAzure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)**、左側** のパネルから [アプリの登録] を選択し、アプリをAzure ADします。
-  5. [**アプリの管理**] ページの左側のAzure ADから [所有者] を選択します。
-  6. 共同作業者を選択して削除します。
+  * [Teams 開発者ポータル](https://dev.teams.microsoft.com/home)に移動し、名前またはアプリ ID で Teams アプリを選択します
+  * 左側のパネルから **所有者を** 選択する
+  * コラボレーターを選択して削除する
 
-> [!NOTE]
->
-> * プロジェクトに追加された共同作業者は、通知を受け取る必要があります。 Project所有者は、オフラインで共同作業者に通知する必要があります。
-> * Azure 関連のアクセス許可は、Azure サブスクリプション管理者がポータルで手動で設定Microsoft Azureがあります。 開発者が TeamsFx プロジェクトの準備と展開に協力できるよう、Azure アカウントにはサブスクリプションの共同作成者の役割が必要です。
+* Azure Active Directory の使用
+
+  * [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) に移動し、左側のパネルから **[アプリの登録**] を選択し、Azure AD アプリを見つけます
+  * Azure AD アプリ管理ページの左側のパネルから **所有者** を選択する
+  * コラボレーターを選択して削除する
+
+   > [!NOTE]
+   >
+   > * プロジェクトに追加されたコラボレーターは、通知を受け取りません。 プロジェクト所有者はコラボレーターにオフラインで通知する必要があります。
+   > * Azure 関連のアクセス許可は、Azure portal 上の Azure サブスクリプション管理者が手動で設定する必要があります。 開発者が連携して TeamsFx プロジェクトをプロビジョニングおよびデプロイできるように、Azure アカウントにはサブスクリプションの共同作成者ロールが必要です。
 
 ## <a name="see-also"></a>関連項目
 
