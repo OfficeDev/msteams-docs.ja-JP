@@ -3,12 +3,12 @@ title: Teams の開発者向けの新機能
 description: Microsoft Teams の新しい開発者向け機能とそれらの機能の機能強化について説明します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 6152181ac53685ad056f9a7e4ae8f11cf5dab0a1
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 267f8a00994a066c9eb7a32669a816a452a7af70
+ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887766"
+ms.lasthandoff: 06/06/2022
+ms.locfileid: "65906289"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -264,6 +264,7 @@ ms.locfileid: "65887766"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ------------------ |
+| 06/06/2022| Teams ボットの会話とインストール イベントを更新する |  ボットの構築 > ボットの会話 > Teams ボットの会話イベント > [Teams ボットの会話イベント](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 |05/24/2022| Live Share SDK による強化されたコラボレーション |  Teams会議用のアプリのビルド > Live Share を使用した強化されたコラボレーション > [概要](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 04/06/2022 | 個人用アプリまたはタブから Teams に共有する | [Teams と統合] > [Teams に共有] > [[個人用アプリまたはタブから Teams に共有]](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 02/07/2022 | ツールと SDK |Visual Studio Code 用 Teams ツールキット > </br> • [Teams アプリに機能を追加] > [[Teams アプリに機能を追加]](toolkit/add-capability.md) </br> • [クラウド リソースを Teams アプリに追加] > [[クラウド リソースを Teams アプリに追加]](toolkit/add-resource.md) |
