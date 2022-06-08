@@ -6,16 +6,16 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: 48c3716258477bf7b8dc1086a75aa7a495ff5026
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: d692f3f6869767e4b9948b36e521a56d799ebe4b
+ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756885"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65938927"
 ---
-# <a name="debug-background-process"></a>バックグランド プロセスのデバッグ
+# <a name="debug-background-processes"></a>バックグランド プロセスのデバッグ
 
-ローカル デバッグ ワークフローには、`.vscode/launch.json` と `.vscode/tasks.json` ファイルを使って VS Code でデバッガーを構成します。その後、VS Code はデバッガーを起動し、Microsoft Edge または Chrome デバッガーは次のように新しいブラウザー インスタンスを起動します:
+ローカル デバッグ ワークフローには、`.vscode/launch.json` ファイルと `.vscode/tasks.json` ファイルが含まれ、Visual Studio Code (VS Code) でデバッガーを構成します。 VS Code がデバッガーを起動し、Microsoft Edge または Google Chrome は次のように新しいブラウザー インスタンスを起動します: 
 
 1. `launch.json` ファイルは、VS Code でデバッガーを構成します。
 
@@ -23,7 +23,7 @@ ms.locfileid: "65756885"
 
 3. その後、VS Code は、**ボットにアタッチ**、**バックエンドにアタッチ**、**フロントエンドにアタッチ**、**ボットの起動** など、複雑な構成で指定されたデバッガーを立ち上げます。
 
-4. Microsoft Edge または Chrome デバッガーは、新しいブラウザー インスタンスを起動し、Teams クライアントを読み込む Web ページを開きます。
+4. Microsoft Edge または Google Chrome は、新しいブラウザー インスタンスを起動し、Teams クライアントを読み込む Web ページを開きます。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -38,14 +38,13 @@ Teams Toolkit は、デバッグ プロセス中に次の前提条件を確認�
   |Bot |  14、16 (推奨)|
   |メッセージ拡張機能: | 14、16 (推奨) |
 
-* 有効な資格情報を持つ Microsoft 365 アカウント、サインインしていない場合は、Microsoft 365 アカウントにサインインするように Teams ツールキットから求められます。
-
+* 有効な資格情報を持つ Microsoft 365 アカウント。サインインしていない場合は、Microsoft 365 アカウントにサインインするように Teams Toolkit から求められます。
 * 開発者テナントのカスタム アプリのアップロードまたはサイドローディングがオンになっています。そうでない場合は、ローカル デバッグが終了します。
-
-* Ngrok バイナリ バージョン 2.3 はボットとメッセージ拡張機能に適用されます。Ngrok がインストールされていない場合、またはバージョンが要件と一致しない場合、Teams ツールキットは Ngrok NPM パッケージ `ngrok@4.2.2` を `~/.fx/bin/ngrok` にインストールします。 Ngrok バイナリは、`/.fx/bin/ngrok/node modules/ngrok/bin` の Ngrok NPM パッケージによって管理されます。
-
-* Azure Functions Core Tools バージョン 4で、Azure Functions Core Tools がインストールされていない場合、またはバージョンが要件と一致しない場合、Teams ツールキットは、**Windows** および **MacOs** 用に Azure Functions Core Tools NPM パッケージ、azure-functions-core-tools@3 を `~/.fx/bin/func` にインストールします。 `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` のAzure Functions Core Tools NPM パッケージは、バイナリAzure Functions Core Tools管理します。 Linux の場合、ローカル デバッグは終了します。
-
+* Ngrok バイナリ バージョン 2.3 はボットとメッセージ拡張機能に適用されます。Ngrok がインストールされていない場合、またはバージョンが要件と一致しない場合、Teams Toolkit は Ngrok NPM パッケージ `ngrok@4.2.2` を `~/.fx/bin/ngrok` にインストールします。 `/.fx/bin/ngrok/node modules/ngrok/bin` の Ngrok NPM パッケージは、Ngrok バイナリを管理します。
+* Azure Functions Core Tools バージョン 3 で、Azure Functions Core Tools がインストールされていない場合、またはバージョンが要件と一致しない場合、Teams Toolkit は、**Windows** および **macOS** 用に Azure Functions Core Tools NPM パッケージ、azure-functions-core-tools@3 を `~/.fx/bin/func` にインストールします。 `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` のAzure Functions Core Tools NPM パッケージは、バイナリAzure Functions Core Tools管理します。 Linux の場合、ローカル デバッグは終了します。
+* Azure Functions に適用される .NET Core SDK のバージョン。.NET Core SDK がインストールされていない場合、またはバージョンが要件に一致しない場合、Teams Toolkit は Windows および MacOS 用に .NET Core SDK を `~/.fx/bin/dotnet` にインストールします。 Linux の場合、ローカル デバッグは終了します。
+* Ngrok バイナリ バージョン 2.3 はボットとメッセージ拡張機能に適用されます。Ngrok がインストールされていない場合、またはバージョンが要件と一致しない場合、Teams Toolkit は Ngrok NPM パッケージ `ngrok@4.2.2` を `~/.fx/bin/ngrok` にインストールします。 Ngrok バイナリは、`/.fx/bin/ngrok/node modules/ngrok/bin` の Ngrok NPM パッケージによって管理されます。
+* Azure Functions Core Tools バージョン 4で、Azure Functions Core Tools がインストールされていない場合、またはバージョンが要件と一致しない場合、Teams ツールキットは、**Windows** および **MacOs** 用に Azure Functions Core Tools NPM パッケージ、azure-functions-core-tools@3 を `~/.fx/bin/func` にインストールします。 `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` のAzure Functions Core Tools NPM パッケージは、バイナリ Azure Functions Core Tools を管理します。 Linux の場合、ローカル デバッグは終了します。
 * Azure Functions に適用される .NET Core SDK のバージョン。.NET Core SDK がインストールされていない場合、またはバージョンが要件に一致しない場合、Teams Toolkit は .NET Core SDK for Windows および MacOS `~/.fx/bin/dotnet`をインストールします。 Linux の場合、ローカル デバッグは終了します。
 
   次の表に、.NET Core のバージョンを示します:
@@ -55,14 +54,10 @@ Teams Toolkit は、デバッグ プロセス中に次の前提条件を確認�
   |Windows、macOs (x64)、Linux | **3.1 (推奨)**、5.0、6.0 |
   |macOs (arm64) |6.0 |
 
-* 開発証明書。Windows または MacOS のタブにローカルホストの開発証明書がインストールされていない場合、Teams ツールキットによってインストールが求められます。
-
+* 開発証明書。Windows または MacOS のタブにローカルホストの開発証明書がインストールされていない場合、Teams Toolkit によってインストールが求められます。
 * `api/extensions.csproj` に定義されている Azure Functions バインド拡張機能。Azure Functions バインド拡張機能がインストールされていない場合、Teams Toolkit は Azure Functions バインド拡張機能をインストールします。
-
 * NPM パッケージ。タブ アプリ、ボット アプリ、メッセージ拡張機能アプリ、および Azure Functions に適用されます。 NPM がインストールされていない場合、Teams Toolkit はすべての NPM パッケージをインストールします。
-
 * ボットとメッセージ拡張機能。Teams Toolkit は Ngrok を開始してボットとメッセージ拡張機能の HTTP トンネルを作成します。
-
 * 使用可能なポート。タブ、ボット、メッセージ拡張機能、および Azure Functions ポートが使用できない場合、ローカル デバッグは終了します。
 
   次の表に、コンポーネントで使用できるポートのリストを示します:
@@ -83,12 +78,12 @@ Teams Toolkit は、デバッグ プロセス中に次の前提条件を確認�
 |Tab with Azure functions | Node.js LTS versions 10, 12, **14 (recommended)** |The local debug terminates, if Node.js isn't installed or the version doesn't match the requirement.|
 |Bot | Node.js LTS versions 10, 12, **14 (recommended)**, 16|The local debug terminates, if Node.js isn't installed or the version doesn't match the requirement.|
 |Message extension | Node.js LTS versions 10, 12, **14 (recommended)**, 16 |The local debug terminates, if Node.js isn't installed or the version doesn't match the requirement.|
-|Sign in to Microsoft 365 account | Microsoft 365 credentials |Teams toolkit prompts you to sign in to Microsoft 365 account, if you haven't signed in. |
-|Bot, message extension | Ngrok version 2.3| • If Ngrok isn't installed or the version doesn't match the requirement, the Teams toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. </br> • The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.|
-|Azure functions | Azure Functions Core Tools version 3| • If Azure Functions Core Tools isn't installed or the version doesn't match the requirement, the Teams toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. </br> • The Azure Functions Core Tools NPM package in  `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.|
-|Azure functions |.NET Core SDK version|• If .NET Core SDK isn't installed or the version  doesn't match the requirement, the toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`.</br> • For Linux, the local debug terminates.|
-|Azure functions | Azure functions binding extensions defined in `api/extensions.csproj`| If Azure functions binding extensions isn't installed, the toolkit installs Azure functions binding extensions.|
-|NPM packages| NPM packages for tab app, bot app, message extension app, and Azure functions|If NPM isn't installed, the toolkit installs all NPM packages.|
+|Sign-in to Microsoft 365 account | Microsoft 365 credentials |Teams Toolkit prompts you to sign-in to Microsoft 365 account, if you haven't signed in. |
+|Bot, message extension | Ngrok version 2.3| • If Ngrok isn't installed or the version doesn't match the requirement, the Teams Toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. </br> • The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.|
+|Azure functions | Azure Functions Core Tools version 3| • If Azure Functions Core Tools isn't installed or the version doesn't match the requirement, the Teams Toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. </br> • The Azure Functions Core Tools NPM package in `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.|
+|Azure functions |.NET Core SDK version|• If .NET Core SDK isn't installed or the version  doesn't match the requirement, the Toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`.</br> • For Linux, the local debug terminates.|
+|Azure functions | Azure functions binding extensions defined in `api/extensions.csproj`| If Azure functions binding extensions isn't installed, the Toolkit installs Azure functions binding extensions.|
+|NPM packages| NPM packages for tab app, bot app, message extension app, and Azure functions|If NPM isn't installed, the Toolkit installs all NPM packages.|
 |Bot and message extension | Ngrok |Toolkit starts Ngrok to create a HTTP tunnel for bot and message extension. |
 
 > [!NOTE]
@@ -102,13 +97,13 @@ Use the following .NET Core versions:
 |macOs (arm64) |6.0 |
 
 > [!NOTE]
-> If the development certificate for localhost isn't installed for tab in Windows or MacOS, the Teams toolkit prompts you to install it.</br> -->
+> If the development certificate for localhost isn't installed for tab in Windows or MacOS, the Teams Toolkit prompts you to install it.</br> -->
 
 **Start Debugging (F5)** を選択すると、Teams Toolkit の出力チャネルに、前提条件を確認した後の進行状況と結果が表示されます。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png" alt-text="前提条件":::
 
-## <a name="register-and-configure-your-teams-app"></a>Teams アプリの登録と構成
+## <a name="register-and-configure-teams-app"></a>Teams アプリの登録と構成
 
 セットアップ プロセスでは、Teams Toolkit によって、Teams アプリの次の登録と構成が準備されます:
 
@@ -133,15 +128,15 @@ Use the following .NET Core versions:
 4. API のアクセス許可を構成します。 Microsoft Graph のアクセス許可を **User.Read** に追加します。
 
     次の表に、認証の構成を示します。
-    
+
       | プロジェクトの種類 | Web のリダイレクト URI | シングルページ アプリケーションのリダイレクト URI |
       | --- | --- | --- |
       | Tab | `https://localhost:53000/auth-end.html` | `https://localhost:53000/auth-end.html?clientId={appId>}` |
       | ボットまたはメッセージ拡張機能 | `https://ngrok.io/auth-end.html` | 該当なし |
 
-    次の表に、クライアント ID を持つ Microsoft 365 クライアント アプリケーションを示します。
-    
-      | Microsoft 365 クライアント アプリケーション |  クライアント ID  |
+    次の表に、クライアント ID を持つ Microsoft 365 クライアント アプリケーションを示します:
+
+      | Microsoft 365 クライアント アプリケーション | クライアント ID |
       | --- | --- |
       | Teams デスクトップ、モバイル | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
       | Teams Web | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
@@ -151,7 +146,7 @@ Use the following .NET Core versions:
       | Outlook デスクトップ | d3590ed6-52b3-4102-aeff-aad2292ab01c |
       | Outlook Web Access | 00000002-0000-0ff1-ce00-000000000000 |
       | Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
-    
+
 ### <a name="registers-and-configures-bot"></a>ボットの登録と構成
 
 タブ アプリまたはメッセージ拡張機能アプリの場合:
@@ -162,7 +157,7 @@ Use the following .NET Core versions:
 
 1. Azure AD アプリケーションを使用して、[Microsoft Bot Framework](https://dev.botframework.com/) にボットを登録します。
 
-1. Microsoft Teams チャネル ピッカーが追加されます。
+1. Teams チャネルを追加します。
 
 1. メッセージング エンドポイントが `https://{ngrokTunnelId}.ngrok.io/api/messages` として構成されます。
 
@@ -170,20 +165,23 @@ Use the following .NET Core versions:
 
 `templates/appPackage/manifest.template.json` のマニフェスト テンプレートを使用して、[Developer](https://dev.teams.microsoft.com/home) に Teams アプリを登録します。
 
-アプリを登録して構成すると、ローカル デバッグ ファイルが生成されます。
+アプリの登録と構成が終わったら、ローカル デバッグ ファイルが生成されます。
 
 ## <a name="take-a-tour-of-your-app-source-code"></a>アプリのソース コードのツアーを開始する
 
-Teams Toolkit がアプリを登録して構成した後、VS Code のエクスプローラー領域でプロジェクト フォルダーとファイルを表示できます。 次の表に、ローカル デバッグ ファイルと構成の種類を示します。
+Teams Toolkit がアプリを登録して構成した後、VS Code の **[エクスプローラー]** でプロジェクト フォルダーとファイルを表示できます。 次の表に、ローカル デバッグ ファイルと構成の種類を示します。
 
 | フォルダー名| コンテンツ| デバッグ構成の種類 |
 | --- | --- | --- |
 |  `.fx/configs/config.local.json` | ローカル デバッグ構成ファイル | 各構成の値は、ローカル デバッグ中に生成および保存されます。 |
-|  `templates/appPackage/manifest.template.json` | ローカル デバッグ用の Teams アプリ マニフェスト テンプレート ファイル | ファイル内のプレースホルダーは、ローカル デバッグ中に解決されます。 |
-|  `tabs/.env.teams.local`  | タブの環境変数ファイル  | 各環境変数の値は、ローカル デバッグ中に生成および保存されます。 |
+|  `templates/appPackage/manifest.template.json` | ローカル デバッグ用の Teams アプリ マニフェスト テンプレート ファイル | ローカル デバッグ中のファイル内のプレースホルダー。 |
+|  `tabs/.env.teams.local`  | タブの環境変数ファイル | 各環境変数の値は、ローカル デバッグ中に生成および保存されます。 |
 |  `bot/.env.teamsfx.local` | ボットとメッセージ拡張機能の環境変数ファイル| 各環境変数の値は、ローカル デバッグ中に生成および保存されます。 |
 | `api/.env.teamsfx.local`  | Azure Functions の環境変数ファイル | 各環境変数の値は、ローカル デバッグ中に生成および保存されます。 |
 
 ## <a name="see-also"></a>関連項目
 
-[Teams Toolkit を使用して Teams アプリをデバッグする](debug-local.md)
+* [Teams Toolkit を使用して Teams アプリをデバッグする](debug-local.md)
+* [Teams Toolkit を使用してクラウド リソースをプロビジョニングする](provision.md)
+* [クラウドにデプロイする](deploy.md)
+* [Teams アプリ マニフェストのプレビューとカスタマイズ](TeamsFx-preview-and-customize-app-manifest.md)
