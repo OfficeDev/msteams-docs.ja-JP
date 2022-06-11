@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: c1eacf5b023b5bb4bfc9ec243ed8beebcb0a5220
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: df9f38be8202f9b982292847a7cfcc982e72fcb5
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756796"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032817"
 ---
 # <a name="upload-your-app-in-microsoft-teams"></a>Microsoft Teams でアプリをアップロードする
 
@@ -19,6 +19,9 @@ ms.locfileid: "65756796"
 * アプリをローカルで、または他の開発者とテストしてデバッグする必要があります。
 * ワークフローを自動化するために、自分用のアプリを構築しました。
 * 作業グループなど、少数のユーザー向けのアプリを作成しました。
+
+> [!NOTE]
+> アプリを複数回サイドローディングすると、メッセージング拡張機能の複数のインスタンスが表示されます。
 
 > [!IMPORTANT]
 > 現時点では、サイドローディング アプリは Government Community Cloud (GCC) で利用できますが、GCC-High および国防総省 (DOD) では使用できません。
