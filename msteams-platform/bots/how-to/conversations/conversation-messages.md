@@ -5,12 +5,12 @@ ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 1b3f5784161295aa31a723e3ca6b0a08f21afb76
-ms.sourcegitcommit: f7d0e330c96e00b2031efe6f91a0c67ab0976455
+ms.openlocfilehash: 1704ff5fcbff177651a8ff6fec952fb76aa1a44c
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65611464"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033016"
 ---
 # <a name="messages-in-bot-conversations"></a>ボットの会話内のメッセージ
 
@@ -382,13 +382,31 @@ XML を使用して、各イメージの高さと幅を指定します。 マー
 
 * **成功**: ボットに送信された応答が成功すると、 **アプリに送信された応答** メッセージが表示されます。
 
-:::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="成功メッセージ"border="true":::
+     :::image type="content" source="../../../assets/images/Cards/success.PNG" alt-text="成功メッセージ"border="true":::
 
-[ **閉じる** ] または [チャットの切り替え] を選択して、メッセージを閉じます。
+     [ **閉じる** ] または [チャットの切り替え] を選択して、メッセージを閉じます。
 
-**モバイルでの応答**:
-
-アダプティブ カードの下部にエラー メッセージが表示されます。
+     成功メッセージを表示しない場合は、プロパティで`msTeams``feedback`属性`hide`を`true`設定します。 次に例を示します。
+    
+     ```json
+        "content": {
+            "type": "AdaptiveCard",
+            "title": "Card with hidden footer messages",
+            "version": "1.0",
+            "actions": [
+            {
+                "type": "Action.Submit",
+                "title": "Submit",
+                "msTeams": {
+                    "feedback": {
+                    "hide": true
+                    }
+                }
+            }
+            ]
+        } 
+     ```
+    
 
 ボット内のカードとカードの詳細については、カードの [ドキュメントを参照してください](~/task-modules-and-cards/what-are-cards.md)。
 

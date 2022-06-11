@@ -5,12 +5,12 @@ description: リンクを展開し、ステージ ビューを開き、Microsoft
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 08df4cfccf6d9fabad1e07736796d6728d7c527c
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 2471a375960e47e31c6f35966a9ad2fba7007e99
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756738"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033037"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>タブのリンクの展開とステージ ビュー
 
@@ -87,7 +87,7 @@ ms.locfileid: "65756738"
 * ボットは `200` コードで応答します。
 
 > [!NOTE]
-> Teams モバイル クライアントでは、[[Teams ストア]](/platform/concepts/deploy-and-publish/apps-publish-overview.md) を介して配布されたアプリのステージ ビューを呼び出し、モバイル向けに最適化されたエクスペリエンスがない場合、デバイスの既定の Web ブラウザーが開きます。ブラウザは、`TabInfo` オブジェクトの `websiteUrl` パラメータで指定されたURLを開きます。
+> Teams モバイル クライアントでは、[[Teams ストア]](/microsoftteams/platform/concepts/deploy-and-publish/apps-publish-overview) を介して配布されたアプリのステージ ビューを呼び出し、モバイル向けに最適化されたエクスペリエンスがない場合、デバイスの既定の Web ブラウザーが開きます。ブラウザは、`TabInfo` オブジェクトの `websiteUrl` パラメータで指定されたURLを開きます。
 
 ## <a name="invoke-stage-view-through-deep-link"></a>ディープ リンクを使用してステージ ビューを呼び出す
 

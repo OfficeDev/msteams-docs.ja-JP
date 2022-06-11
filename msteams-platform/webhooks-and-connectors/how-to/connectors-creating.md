@@ -6,12 +6,12 @@ keywords: Teams Office365 コネクタ
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 3258e6b08041abbfcd3e0b9a4365d6a31f884e0b
-ms.sourcegitcommit: 09ee0305b827ad6d1368d892db3824c5dbad886f
+ms.openlocfilehash: 2d711821d2b76b4cc2fd93a6d28cd5061129222e
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65759663"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032953"
 ---
 # <a name="create-office-365-connectors"></a>Office 365 コネクタの作成
 
@@ -127,7 +127,7 @@ Microsoft Teams アプリを使用すると、Teams 内に既存の Office 365 �
 #### <a name="getsettings-response-properties"></a>`GetSettings` 件の応答のプロパティ
 
 >[!NOTE]
->`getSettings` の呼び出しによって返されるパラメーターは、タブからこのメソッドを呼び出した場合、[js settings](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true) でドキュメント化されたものとは異なります。
+>`getSettings` の呼び出しによって返されるパラメーターは、タブからこのメソッドを呼び出した場合、[js settings](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings) でドキュメント化されたものとは異なります。
 
 `GetSetting` 件の応答のプロパティのパラメーターとその詳細についてはとおりです。
 

@@ -5,34 +5,34 @@ description: アプリ マニフェストを含む Microsoft Teams アプリで�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 09b8447e68a07e98293409e6c371a301da3017d0
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: c5f89847e374f6e7e2e15409f4a9fe019701788d
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297185"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032974"
 ---
 # <a name="link-unfurling"></a>リンク展開
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-このドキュメントでは、アプリ マニフェストにリンク展開を App Studio を使用して追加する方法と手動で追加する方法について説明します。 リンク展開を使用すると、特定のドメインの URL がメッセージ作成領域に貼り付けられたときに、アプリが `invoke` アクティビティを受信するように登録することができます。 `invoke` には、メッセージ作成領域に貼り付けられた完全な URL が含まれ、ユーザーが展開できるカードを使用して応答し、追加情報やアクションを提供できます。 これは検索コマンドと同様に機能し、URL は検索語として機能します。
+このドキュメントでは、App Studio または手動でアプリ マニフェストにリンク解除を追加する方法について説明します。 リンク展開を使用すると、特定のドメインの URL がメッセージ作成領域に貼り付けられたときに、アプリが `invoke` アクティビティを受信するように登録することができます。 には `invoke` 、作成メッセージ領域に貼り付けられた完全な URL が含まれています。 ユーザーが追加情報やアクションの登録を解除できるカードを使用して応答できます。 これは、URL を検索用語として使用する検索コマンドとして機能します。
 
 > [!NOTE]
 >
 > * 現在、モバイル クライアントではリンク展開はサポートされていません。
 > * リンク展開の結果は、30 分間キャッシュされます。
 
-Azure DevOps メッセージ拡張機能では、作業項目をポイントするメッセージ作成領域に貼り付けられた URL を検索するためにリンク展開を使用します。 次の図では、ユーザーが Azure DevOps に作業項目の URL を貼り付け、メッセージ拡張機能がこれをカードに解決しています。
+Azure DevOps メッセージ拡張機能では、作業項目をポイントするメッセージ作成領域に貼り付けられた URL を検索するためにリンク展開を使用します。 次の図では、ユーザーがメッセージ拡張機能がカードに解決したAzure DevOpsにアイテムの URL を貼り付けています。
 
 :::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="リンク展開の例":::
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>アプリ マニフェストにリンク展開を追加する
 
-アプリ マニフェストにリンク展開を追加するには、アプリ マニフェスト JSON の `composeExtensions` セクションに新しい `messageHandlers` 配列を追加します。 この配列は、App Studio の助けを借りて追加することも、手動で追加することもできます。 ドメイン リストには、`*.example.com` などのワイルドカードを含めることができます。 これは、ドメインの 1 つのセグメントと正確に一致します。`a.b.example.com` と一致させる必要がある場合は、`*.*.example.com` を使用してください。
+アプリ マニフェストにリンク展開を追加するには、アプリ マニフェスト JSON の `composeExtensions` セクションに新しい `messageHandlers` 配列を追加します。 App Studio の助けを借りて、または手動で配列を追加できます。 ドメイン リストには、`*.example.com` などのワイルドカードを含めることができます。 これは、ドメインの 1 つのセグメントと正確に一致します。`a.b.example.com` と一致させる必要がある場合は、`*.*.example.com` を使用してください。
 
 > [!NOTE]
-> 自分で管理していないドメインを直接またはワイルドカードを使用して追加しないでください。 たとえば、`yourapp.onmicrosoft.com` は有効ですが、`*.onmicrosoft.com` は無効です。 また、最上位レベルのドメインは禁止されています。 たとえば、`*.com` や `*.org` などは使用できません。
+> 直接、またはワイルドカードを使用して、コントロールに含まれていないドメインを追加しないでください。 たとえば、`yourapp.onmicrosoft.com` は有効ですが、`*.onmicrosoft.com` は無効です。 最上位レベルのドメインは禁止されています 。たとえば、`*.com``*.org`.
 
 ### <a name="add-link-unfurling-using-app-studio"></a>App Studio を使用してリンク展開を追加する
 
@@ -43,6 +43,9 @@ Azure DevOps メッセージ拡張機能では、作業項目をポイントす�
     :::image type="content" source="~/assets/images/link-unfurling.png" alt-text="App Studio の [メッセージ ハンドラー] セクション":::
 
 ### <a name="add-link-unfurling-manually"></a>手動でリンク展開を追加する
+
+> [!NOTE]
+> Azure AD 経由で認証が追加された場合は、[ボットを使用してTeamsにリンクを展開解除します](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4)。
 
 メッセージ拡張機能でリンクを操作できるようにするには、まずアプリ マニフェストに `messageHandlers` 配列を追加する必要があります。 次の例は、リンク展開を手動で追加する方法を説明しています。
 

@@ -4,24 +4,24 @@ description: サイレント認証、シングル サインオン、タブ用の
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams Authentication SSO Silent Azure AD タブ
-ms.openlocfilehash: 8cac439b73884703324d45506bce3600f3084031
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 50d5d5327ee31286c7124f23b8fd4c8b07c71639
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887794"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033023"
 ---
 # <a name="silent-authentication"></a>サイレント認証
 
 > [!IMPORTANT]
-> セキュリティ修正プログラムを含む Active Directory Authentication Library (ADAL) の Microsoft サポートと開発は、 **2022 年 6 月 30** 日に終了します。 Microsoft Authentication Library (MSAL) を使用するようにアプリケーションを更新して、引き続きサポートを受け取ってください。 [Microsoft Authentication Library (MSAL) へのアプリケーションの移行に関するページを](/azure/active-directory/develop/msal-migration)参照してください。
+> セキュリティ修正プログラムを含む Active Directory Authentication Library (ADAL) の Microsoft サポートと開発は、 **2022 年 6 月 30** 日に終了します。 引き続きサポートを受けるには、Microsoft Authentication Library (MSAL) を使用するようにアプリケーションを更新します。 [Microsoft Authentication Library (MSAL) へのアプリケーションの移行に関するページを](/azure/active-directory/develop/msal-migration)参照してください。
 
 > [!NOTE]
-> モバイル クライアントのタブで認証を機能させるには、Teams JavaScript SDK バージョン 1.4.1 以降を使用していることを確認します。
+> モバイル クライアントのタブで認証を機能させるには、JavaScript SDK バージョン 1.4.1 以降Teams使用していることを確認します。
 
 Azure AD のサイレント認証では、認証トークンをサイレント に更新することで、ユーザーが資格情報を入力する回数が最小限に抑えられます。 シングル サインオンの真のサポートについては、 [SSO のドキュメントを参照してください](~/tabs/how-to/authentication/tab-sso-overview.md)。
 
-コード クライアント側を維持するには、 [JavaScript 用の Azure AD 認証ライブラリ](/azure/active-directory/develop/active-directory-authentication-libraries) を使用して、Microsoft Azure Active Directory (Azure AD) アクセス トークンをサイレント モードで取得します。 ユーザーが最近サインインした場合、ポップアップ ダイアログ ボックスは表示されません。
+コード クライアント側を維持するには、[JavaScript 用の Azure AD 認証ライブラリ](/azure/active-directory/develop/active-directory-authentication-libraries)を使用して、Microsoft Azure Active Directory (Azure AD) アクセス トークンをサイレント モードで取得します。 ユーザーが最近サインインした場合、ポップアップ ダイアログ ボックスは表示されません。
 
 Active Directory 認証ライブラリは AngularJS アプリケーション用に最適化されていますが、JavaScript シングルページ アプリケーション (SPA) でも動作します。
 
@@ -34,7 +34,7 @@ Active Directory 認証ライブラリでは、OAuth 2.0 の暗黙的な許可�
 
 ## <a name="how-to-do-silent-authentication"></a>サイレント認証を行う方法
 
-この記事のコードは、Teams [認証サンプル ノードである Teams](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs) サンプル アプリからのものです。
+この記事のコードは、[認証サンプル ノード](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)Teams Teamsサンプル アプリからのものです。
 
 [Azure AD を使用してサイレントでシンプルな認証構成可能タブを開始](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) し、指示に従ってローカル コンピューターでサンプルを実行します。
 
@@ -130,7 +130,7 @@ if (authContext.isCallback(window.location.hash)) {
 Azure AD 認証でサインアウト フローを処理するには、次のコードを使用します。
 
 > [!NOTE]
-> Teams タブまたはボットからログアウトすると、現在のセッションがクリアされます。
+> Teamsタブまたはボットからログアウトすると、現在のセッションがクリアされます。
 
 ```javascript
 function logout() {

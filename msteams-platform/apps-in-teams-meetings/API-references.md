@@ -1,16 +1,16 @@
 ---
 title: 会議アプリ API リファレンス
 author: surbhigupta
-description: 例とコード サンプルを使用して会議アプリ API 参照を識別します。Teams アプリ会議ユーザー参加者ロール API ユーザー コンテキスト通知シグナル クエリ。
+description: 例とコード サンプルを使用して会議アプリ API 参照を特定し、アプリ会議ユーザー参加者ロール API ユーザー コンテキスト通知シグナル クエリをTeamsします。
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 075801958ccffb9613840995bdda86b6df37d2a3
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 5b53b85ef2831261d493302dec3aed8a82910f5d
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887577"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032789"
 ---
 # <a name="meeting-apps-api-references"></a>会議アプリ API リファレンス
 
@@ -135,7 +135,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | プロパティ名 | 用途 |
 |---|---|
 | **user.id** | ユーザーの ID。 |
-| **user.aadObjectId** | ユーザーの Azure Active Directory オブジェクト ID。 |
+| **user.aadObjectId** | ユーザーのオブジェクト ID をAzure Active Directoryします。 |
 | **user.name** | ユーザーの名前 |
 | **user.givenName** | ユーザーの名。|
 | **user.surname** | ユーザーの姓。 |
@@ -406,7 +406,7 @@ Meeting Details API の JSON 応答本文は次のとおりです。
 | プロパティ名 | 用途 |
 |---|---|
 | **details.id** | BASE64 文字列としてエンコードされた会議の ID。 |
-| **details.msGraphResourceId** | MsGraphResourceId。特に MS Graph API 呼び出しに使用されます。 |
+| **details.msGraphResourceId** | MS Graph API呼び出しに特に使用される MsGraphResourceId。 |
 | **details.scheduledStartTime** | 会議のスケジュールされた開始時刻 (UTC)。 |
 | **details.scheduledEndTime** | 会議のスケジュールされた終了時刻 (UTC)。 |
 | **details.joinUrl** | 会議に参加するために使用される URL。 |
@@ -416,8 +416,8 @@ Meeting Details API の JSON 応答本文は次のとおりです。
 | **conversation.conversationType** | 会話の種類。 |
 | **conversation.id** | 会議チャット ID。 |
 | **organizer.id** | 開催者のユーザー ID。 |
-| **organizer.aadObjectId** | 開催者の Azure Active Directory オブジェクト ID。 |
-| **organizer.tenantId** | 開催者の Azure Active Directory テナント ID。 |
+| **organizer.aadObjectId** | 開催者のAzure Active Directory オブジェクト ID。 |
+| **organizer.tenantId** | 開催者のAzure Active Directoryテナント ID。 |
 
 定期的な会議の種類の場合は、
 
@@ -540,7 +540,7 @@ microsoftTeams.meeting.shareAppContentToStage((err, result) => {
 
 ## <a name="get-app-content-stage-sharing-state-api"></a>アプリ コンテンツ ステージの共有状態を取得する API
 
-`getAppContentStageSharingState` API を使用すると、会議ステージでのアプリの共有に関する情報を取得できます。
+この `getAppContentStageSharingState` API を使用すると、モバイルとデスクトップの両方の会議ステージでアプリの共有に関する情報を取得できます。
 
 ### <a name="query-parameter"></a>クエリ パラメーター
 
@@ -819,7 +819,7 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 | **from.id** | 要求を送信したユーザーの ID。 |
 | **from.aadObjectId** | 要求を送信したユーザーの Azure Active Directory オブジェクト ID。 |
 | **conversation.isGroup** | 会話に 2 人以上の参加者があるかどうかを示すブール値。 |
-| **conversation.tenantId** | 会話または会議の Azure Active Directory テナント ID。 |
+| **conversation.tenantId** | 会話または会議のテナント ID をAzure Active Directoryします。 |
 | **conversation.id** | 会議チャット ID。 |
 | **recipient.id** | 要求を受け取るユーザーの ID。 |
 | **recipient.name** | 要求を受け取るユーザーの名前。 |

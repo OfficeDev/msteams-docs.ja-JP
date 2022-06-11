@@ -1,21 +1,21 @@
 ---
 title: App Studio を使用してメッセージングの拡張機能を作成する
 author: surbhigupta
-description: App Studio を使用して Microsoft Teams メッセージング拡張機能を作成する方法について説明します。
+description: App Studio を使用してMicrosoft Teamsメッセージング拡張機能を作成する方法について説明します。
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 78c36a3adc711b4aeedc72fb6131d61b4df0c5fd
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 09bc7a7884f69c7c3ac4c8e195e5ac6d14d20990
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887850"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032782"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>App Studio を使用してメッセージングの拡張機能を作成する
 
 > [!TIP]
-> より速く作業を開始する方法をお探しですか? Microsoft Teams Toolkit を使用して [メッセージング拡張機能](../build-your-first-app/build-messaging-extension.md) を作成します。
+> より速く作業を開始する方法をお探しですか? Microsoft Teams Toolkitを使用して[メッセージング拡張機能](../build-your-first-app/build-messaging-extension.md)を作成します。
 
 高いレベルでは、メッセージング拡張機能を作成するには、次の手順を完了する必要があります。
 
@@ -25,9 +25,9 @@ ms.locfileid: "65887850"
 4. アプリ パッケージを作成する
 5. Microsoft Teams にアプリ パッケージをアップロードする
 
-Web サービスの作成、アプリ パッケージの作成、Web サービスの Bot Framework への登録は、任意の順序で行うことができます。 これらの 3 つの部分は非常に絡み合っているため、どの順序で行っても、他の部分を更新するには戻る必要があります。 登録にはデプロイされた Web サービスのメッセージング エンドポイントが必要であり、Web サービスには登録から作成された ID とパスワードが必要です。 アプリ マニフェストには、Teams を Web サービスに接続するためにその ID も必要です。
+Web サービスの作成、アプリ パッケージの作成、Web サービスの Bot Framework への登録は、任意の順序で行うことができます。 これらの 3 つの部分は非常に絡み合っているため、どの順序で行っても、他の部分を更新するには戻る必要があります。 登録にはデプロイされた Web サービスのメッセージング エンドポイントが必要であり、Web サービスには登録から作成された ID とパスワードが必要です。 また、アプリ マニフェストでは、Teamsを Web サービスに接続するためにその ID も必要です。
 
-メッセージング拡張機能を構築するときに、アプリ マニフェストの変更と Web サービスへのコードのデプロイの間を定期的に移動します。 アプリ マニフェストを操作する場合は、JSON ファイルを手動で操作するか、App Studio を使用して変更を加えることができます。 いずれの場合も、マニフェストを変更するときに Teams でアプリを再デプロイ (アップロード) する必要がありますが、Web サービスに変更を展開する場合はそうする必要はありません。
+メッセージング拡張機能を構築するときに、アプリ マニフェストの変更と Web サービスへのコードのデプロイの間を定期的に移動します。 アプリ マニフェストを使用する場合は、JSON ファイルを手動で変更するか、App Studio を使用して変更できることを確認します。 いずれの場合も、マニフェストに変更を加える際にアプリをTeamsに再デプロイ (アップロード) する必要がありますが、Web サービスに変更をデプロイする場合は、その必要はありません。
 
 [!include[prepare environment](~/includes/prepare-environment.md)]
 
@@ -37,16 +37,16 @@ Web サービスの作成、アプリ パッケージの作成、Web サービ�
 
 * Web サービスの作成をガイドする [クイック スタート](#learn-more) のチュートリアルのいずれかを使用します。
 * [Bot Framework サンプル リポジトリ](https://github.com/Microsoft/BotBuilder-Samples)で使用できるメッセージング拡張機能のサンプルの 1 つを選択します。
-* JavaScript を使用している場合は、 [Microsoft Teams の Yeoman ジェネレーター](https://github.com/OfficeDev/generator-teams) を使用して、Web サービスを含む Teams アプリをスキャフォールディングします。
+* JavaScript を使用している場合は、[Yeoman ジェネレーター](https://github.com/OfficeDev/generator-teams)を使用してMicrosoft Teamsを使用して、Web サービスを含むTeams アプリをスキャフォールディングします。
 * Web サービスを一から作成する。 お使いの言語用の Bot Framework SDK を追加することも、JSON ペイロードに対して直接作業を行うこともできます。
 
 ## <a name="register-your-web-service-with-the-bot-framework"></a>Web サービスを Bot Framework に登録する
 
-メッセージング拡張機能は、Bot Framework のメッセージング スキーマとセキュリティで保護された通信プロトコルを利用します。まだお持ちでない場合は、Bot Framework に Web サービスを登録する必要があります。 Microsoft アプリ ID (この ID は Teams の内部からボット ID と呼ばれます)、Bot Framework に登録したメッセージング エンドポイントがメッセージング拡張機能で使用され、要求の受信と応答が行われます。 既存の登録を使用している場合は、 [Microsoft Teams チャネルを有効に](/azure/bot-service/bot-service-manage-channels?preserve-view=true&view=azure-bot-service-4.0)してください。
+メッセージング拡張機能は、Bot Framework のメッセージング スキーマとセキュリティで保護された通信プロトコルを利用します。まだお持ちでない場合は、Bot Framework に Web サービスを登録する必要があります。 Microsoft アプリ ID (この ID は、Teamsの内部からボット ID として参照され、操作している可能性がある他のアプリ ID から識別します) と、Bot Framework に登録したメッセージング エンドポイントがメッセージング拡張機能で使用され、要求の受信と応答が行われます。 既存の登録を使用している場合は、[Microsoft Teams チャネルを有効に](/azure/bot-service/bot-service-manage-channels?preserve-view=true&view=azure-bot-service-4.0)していることを確認します。
 
 クイック スタートの 1 つに従うか、使用可能なサンプルの 1 つから開始する場合は、Web サービスの登録について説明します。 サービスを手動で登録する場合は、3 つの方法があります。 Azure サブスクリプションを使用せずに登録することを選択した場合、Bot Framework によって提供される簡単な OAuth 認証フローを利用することはできません。 作成後、登録を Azure に移行できます。
 
-* Azure サブスクリプションを持っている (または新しいサブスクリプションを作成する場合) 場合は、Microsoft Azure portal を使用して Web サービスを手動で登録できます。 "Bot Channels Registration" リソースを作成します。 Microsoft Teams からのメッセージは、1 か月あたりの許容される合計メッセージにはカウントされないため、無料価格レベルを選択できます。
+* Azure サブスクリプション (または新しいサブスクリプションを作成する場合) がある場合は、Microsoft Azure ポータルを使用して Web サービスを手動で登録できます。 "Bot Channels Registration" リソースを作成します。 無料の価格レベルを選択できます。Microsoft Teamsからのメッセージは、1 か月あたりの許容されるメッセージの合計にはカウントされません。
 * Azure サブスクリプションを使用しない場合は、 [レガシ登録ポータル](https://dev.botframework.com/bots/new)を使用できます。
 * App Studio は、Web サービス (ボット) の登録にも役立ちます。 App Studio を介して登録された Web サービスは、Azure に登録されません。 [レガシ ポータル](https://dev.botframework.com/bots)を使用して、登録を表示、管理、および移行できます。
 
@@ -85,7 +85,7 @@ Microsoft Teams クライアント内から App Studio アプリを使用する�
 | プロパティ名 | 用途 | 必須 |
 |---|---|---|
 | `botId` | Bot Framework に登録された、ボット用の一意の Microsoft アプリ ID。 これは通常、Teams アプリ全体の ID と同じである必要があります。 | はい |
-| `canUpdateConfiguration` | **[設定]** メニュー項目を有効にします。 | 不要 |
+| `canUpdateConfiguration` | **メニュー項目設定** 有効にします。 | 不要 |
 | `commands` | このメッセージング拡張機能がサポートするコマンドの配列。 コマンドは 10 個に制限されています。 | はい |
 
 #### <a name="define-your-commands"></a>コマンドを定義する
@@ -227,12 +227,12 @@ Microsoft Teams クライアント内から App Studio アプリを使用する�
 
 ユーザーがメッセージング拡張機能をトリガーしたら、最初の呼び出しメッセージを処理し、ユーザーから情報を収集してから、その情報を処理して適切に応答する必要があります。 これを行うには、まず、メッセージング拡張機能に追加するコマンドの種類を決定し、 [アクション コマンドを追加](~/messaging-extensions/how-to/action-commands/define-action-command.md) するか [、検索コマンドを追加](~/messaging-extensions/how-to/search-commands/define-search-command.md)する必要があります。
 
-## <a name="messaging-extensions-in-teams-meetings"></a>Teams 会議のメッセージング拡張機能
+## <a name="messaging-extensions-in-teams-meetings"></a>Teams会議のメッセージング拡張機能
 
 > [!NOTE]
-> 会議またはグループ チャットでユーザーが名簿にフェデレーションされている場合、Teams は、開催者を含むすべてのユーザーのメッセージング拡張機能へのアクセスを抑制します。
+> 会議またはグループ チャットでユーザーが名簿にフェデレーションされている場合、Teamsは、開催者を含むすべてのユーザーのメッセージング拡張機能へのアクセスを抑制します。
 
-会議が開始されると、Teams 参加者はライブ通話中にメッセージング拡張機能と直接対話できます。 会議中のメッセージング拡張機能を構築する場合は、次の点を考慮してください。
+会議が開始されると、Teams参加者はライブ通話中にメッセージング拡張機能と直接対話できます。 会議中のメッセージング拡張機能を構築する場合は、次の点を考慮してください。
 
 1. **Location**。 メッセージング拡張機能は、会議チャットのメッセージ作成領域、コマンド ボックス、または@mentionedから呼び出すことができます。
 
@@ -259,7 +259,7 @@ Microsoft Teams クライアント内から App Studio アプリを使用する�
   * [アクションベースのコマンドを使用したメッセージング拡張機能](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
   * [検索ベースのコマンドを使用したメッセージング拡張機能](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
 
-Teams 開発の概念について詳しくは、以下をご覧ください。
+Teams開発の概念について詳しくは、以下をご覧ください。
 
-* [Teams アプリの機能を理解する](../concepts/capabilities-overview.md)
+* [アプリの機能Teams理解する](../concepts/capabilities-overview.md)
 * [メッセージング拡張機能について](../messaging-extensions/what-are-messaging-extensions.md)

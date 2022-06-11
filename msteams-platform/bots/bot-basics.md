@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: アクティビティ ハンドラー フレームワーク ボット カード同意チャネル イベント
-ms.openlocfilehash: 5b03eeaa01231fd070c1e81fc11b9254e10aba91
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 8bf1638274c8d83c8483df13556927d98b4d8cb5
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757431"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032922"
 ---
 # <a name="bot-activity-handlers"></a>ボットのアクティビティ ハンドラー
 
@@ -24,6 +24,9 @@ ms.locfileid: "65757431"
 Teams のアクティビティ ハンドラーは、Microsoft Bot Framework のアクティビティ ハンドラーから派生したものです。 すべての Teams アクティビティをルーティングしてから、Teams 以外の特定のアクティビティを処理できるようにします。
 
 Teams用のボットがアクティビティを受信すると、アクティビティ ハンドラーにルーティングされます。 すべてのアクティビティは、ターン ハンドラーと呼ばれる 1 つのベース ハンドラーを経由してルーティングされます。 ターン ハンドラーは、受信したアクティビティを管理するために必要なアクティビティ ハンドラーを呼び出します。 Teams ボットは、Bot Framework の `ActivityHandler` クラスから派生した `TeamsActivityHandler` クラスから派生したものです。
+
+> [!NOTE]
+> ボット アクティビティの処理に 15 秒以上かかる場合は、再試行要求をボット エンドポイントに送信Teams。 そのため、ボットに重複する要求が表示されます。
 
 # <a name="c"></a>[C#](#tab/csharp)
 

@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: コマンド メニュー 作成 メッセージ 会話 @mention
-ms.openlocfilehash: 6d61b7566dd0dcb25fae94bf43f2f19bd219e9b0
-ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
+ms.openlocfilehash: 524ecb9ee829292487cc0e6c45604d4c241967c8
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65938941"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032969"
 ---
 # <a name="bot-command-menus"></a>Bot コマンド メニュー
 
@@ -21,11 +21,11 @@ ms.locfileid: "65938941"
 
 # <a name="desktop"></a>[デスクトップ](#tab/desktop)
 
-![ボット コマンド メニュー](./conversations/media/bot-menu-sample.png)
+:::image type="content" source="conversations/Media/bot-menu-sample.png" alt-text="Bot-command-menu":::
 
 # <a name="mobile"></a>[モバイル](#tab/mobile)
 
-![モバイル ボットのコマンド メニュー](./conversations/media/mobile-bot-menu-sample.png)
+:::image type="content" source="conversations/Media/mobile-bot-menu-sample.png" alt-text="Mobile-bot-command-menu":::
 
 * * *
 
@@ -40,11 +40,11 @@ ms.locfileid: "65938941"
 **App Studio を使用してボットのコマンド メニューを作成するには**
 
 1. Teams を開き、左側のウィンドウから **[アプリ]** を選択します。 **[アプリ]** ページで **App Studio** を検索し、**[開く]** を選択します。
-    
+
    > [!WARNING]
    > App Studio を使用している場合は、Teams アプリを構成、配布、管理するための開発者ポータルを試してみることをお勧めします。App Studio は 2022 年 6 月 30 日までに非推奨になります
 
-   :::image type="content" source="/media/AppStudio.png" alt-text="Installing App Studio"lightbox="media/AppStudio.png"border="true":::
+   :::image type="content" source="conversations/Media/AppStudio.png" alt-text="appstudio-media":::
 
 2. **App Studio** で、**[マニフェスト エディター]** タブを選択します。既存のアプリ パッケージがない場合は、既存のアプリを作成またはインポートできます。 詳細については、「[アプリ パッケージの更新](~/get-started/deploy-csharp-app-studio.md)」を参照してください。
 
@@ -52,7 +52,7 @@ ms.locfileid: "65938941"
 
 4. **[マニフェスト エディター]** の右側のウィンドウで、**[コマンド]** セクションで **[追加]** を選択します。 **[新規コマンド]** 画面が表示されます。
 
-    :::image type="content" source="/media/AppStudio-CommandMenu-Add.png" alt-text="アプリのパッケージを選択する"lightbox="/media/AppStudio-CommandMenu-Add.png"border="true":::
+   :::image type="content" source="media/AppStudio-CommandMenu-Add.png" alt-text="アプリのパッケージを選択する" lightbox="media/AppStudio-CommandMenu-Add.png "border="true":::
 
 5. ボットのコマンド メニューとして表示する必要がある **コマンド テキスト** を入力します。
 
@@ -60,7 +60,7 @@ ms.locfileid: "65938941"
 
 7. **[スコープ]** チェック ボックスをオンにして、このコマンド メニューを表示する必要がある場所を選択し、**[保存]** を選択します。
 
-:::image type="content" source="/media/AppStudio-NewCommandMenu.png" alt-text="App Studio 新規コマンド メニュー ボタン"lightbox="/media/AppStudio-NewCommandMenu.png"border="true":::
+   :::image type="content" source="media/AppStudio-NewCommandMenu.png" alt-text="App Studio の [新しいコマンド] メニュー ボタン "lightbox="media/AppStudio-NewCommandMenu.png "border="true":::
 
 ### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Manifest.json を編集してボットのコマンド メニューを作成する
 

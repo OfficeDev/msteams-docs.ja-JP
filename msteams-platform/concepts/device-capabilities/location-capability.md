@@ -6,12 +6,12 @@ keywords: 場所マップ機能のネイティブ デバイスのアクセス許
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: d143cdd0e94664d916bd5eefa7523d92e2af183a
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: ff2403331d3d51581be4711fb6fb14fcdb809544
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757172"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033051"
 ---
 # <a name="integrate-location-capabilities"></a>場所機能を統合する
 
@@ -58,7 +58,7 @@ Teams アプリのエラーを処理するには、[API 応答エラー](#error-
 |[showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) | マップ上の場所を表示します。 |
 
 > [!NOTE]
-> `getLocation()` API には、次の[入力構成](/javascript/api/@microsoft/teams-js/locationprops?view=msteams-client-js-latest&preserve-view=true)、`allowChooseLocation`、および `showMap` が付属しています。<br/> `allowChooseLocation`の値が *true* の場合、ユーザーは任意の場所を選択できます。<br/>  値が *false* の場合、ユーザーは現在の場所を変更できません。<br/> `showMap` の値が *false* の場合、現在の場所は地図を表示せずに取得されます。 `allowChooseLocation` が *true* に設定されている場合、`showMap` は無視されます。
+> `getLocation()` API には、次の[入力構成](/javascript/api/@microsoft/teams-js/microsoftteams.location.locationprops)、`allowChooseLocation`、および `showMap` が付属しています。<br/> `allowChooseLocation`の値が *true* の場合、ユーザーは任意の場所を選択できます。<br/>  値が *false* の場合、ユーザーは現在の場所を変更できません。<br/> `showMap` の値が *false* の場合、現在の場所は地図を表示せずに取得されます。 `allowChooseLocation` が *true* に設定されている場合、`showMap` は無視されます。
 
 次の画像は、ロケーション機能の Web アプリ エクスペリエンスを示しています。
 

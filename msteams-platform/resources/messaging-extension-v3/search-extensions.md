@@ -5,12 +5,12 @@ keywords: teams メッセージ拡張機能のメッセージ拡張機能の検�
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: 13915bc3e67f6d5789fe9e977f6579a05a010542
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: dec73b248f6a71f078eff6a956c7875ef3507227
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104400"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032943"
 ---
 # <a name="search-with-message-extensions"></a>メッセージ拡張機能を使用して検索する
 
@@ -197,7 +197,7 @@ ms.locfileid: "65104400"
 
 外部サービスを検索する代わりに 、メッセージの作成ボックスに挿入された URL を使用して、サービスにクエリを実行し、カードを返すことができます。 下のスクリーンショットでは、メッセージ拡張機能がカードに解決されたAzure DevOpsで、ユーザーが作業項目の URL に貼り付けています。
 
-![リンクの展開解除の例](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
+![リンク展開の例](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
 この方法でメッセージ拡張機能がリンクを操作できるようにするには、まず、次の例のように、アプリ マニフェストに配列を追加 `messageHandlers` する必要があります。
 
@@ -242,7 +242,7 @@ ms.locfileid: "65104400"
 |プロパティ名|用途|
 |---|---|
 |`composeExtension`|最上位レベルの応答エンベロープ。|
-|`composeExtension.type`|応答の種類。 次の種類がサポートされています。 <br>`result`: 検索結果の一覧を表示します <br>`auth`: ユーザーに認証を求める <br>`config`: メッセージ拡張機能の設定をユーザーに求める <br>`message`: テキスト形式のメッセージを表示する |
+|`composeExtension.type`|応答の種類。 次の種類がサポートされています。 <br>`result`: 検索結果の一覧を表示します <br>`auth`: ユーザーに認証を求めるメッセージを表示します <br>`config`: ユーザーにメッセージ拡張機能の設定を求めるメッセージを表示します <br>`message`: テキスト形式のメッセージを表示する |
 |`composeExtension.attachmentLayout`|添付ファイルのレイアウトを指定します。 型の応答に使用されます `result`。 <br>現在、次の種類がサポートされています。 <br>`list`: サムネイル、タイトル、テキスト フィールドを含むカード オブジェクトの一覧 <br>`grid`: サムネイル 画像のグリッド |
 |`composeExtension.attachments`|有効な添付ファイル オブジェクトの配列。 型の応答に使用されます `result`。 <br>現在、次の種類がサポートされています。 <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
 |`composeExtension.suggestedActions`|推奨されるアクション。 型 `auth` または `config`. |
@@ -445,7 +445,7 @@ Office 365 コネクタ カードに関するその他のドキュメントに�
 },
 ```
 
-値と`aadObjectId`値は`id`、認証されたTeams ユーザーの値であることが保証されます。 資格情報またはサービス内のキャッシュされた状態を検索するためのキーとして使用できます。 さらに、各要求には、ユーザーのMicrosoft Azure Active Directory (Azure AD) テナント ID が含まれており、ユーザーの組織を識別するために使用できます。 該当する場合、要求には、要求の送信元となったチーム ID とチャネル ID も含まれます。
+値と`aadObjectId`値は`id`、認証されたTeams ユーザーの値であることが保証されます。 資格情報またはサービス内のキャッシュされた状態を検索するためのキーとして使用できます。 さらに、各要求には、ユーザーの組織を識別するために使用できるユーザーのMicrosoft Azure Active Directory (Azure AD) テナント ID が含まれています。 該当する場合、要求には、要求の送信元となったチーム ID とチャネル ID も含まれます。
 
 ## <a name="authentication"></a>認証
 
@@ -460,11 +460,11 @@ Office 365 コネクタ カードに関するその他のドキュメントに�
 5. ユーザーがサインインしたら、ウィンドウを閉じて、Teams クライアントに "認証コード" を送信する必要があります。
 6. その後、Teams クライアントは、手順 5 で渡した認証コードを含むクエリをサービスに再発行します。
 
-サービスは、手順 6 で受信した認証コードが手順 5. の認証コードと一致することを確認する必要があります。 これにより、悪意のあるユーザーがサインイン フローのスプーフィングや侵害を試みないようにします。 これにより、セキュリティで保護された認証シーケンスを完了するために、実質的に "ループを閉じる" ようになります。
+サービスは、手順 6 で受け取った認証コードが手順 5 の認証コードと一致することを確認する必要があります。 これにより、悪意のあるユーザーがサインイン フローのスプーフィングや侵害を試みないようにします。 これにより、安全な認証シーケンスを終了させるための 「ループを閉じる」 効果があります。
 
 ### <a name="respond-with-a-sign-in-action"></a>サインイン アクションで応答する
 
-認証されていないユーザーにサインインを求めるには、認証 URL を含む種類 `openUrl` の推奨アクションで応答します。
+認証されていないユーザーにサインインを求めるには、認証 URL を含む `openUrl` 型の推奨アクションで応答します。
 
 #### <a name="response-example-for-a-sign-in-action"></a>サインイン アクションの応答の例
 
@@ -486,20 +486,20 @@ Office 365 コネクタ カードに関するその他のドキュメントに�
 ```
 
 > [!NOTE]
-> サインイン エクスペリエンスをTeamsポップアップでホストするには、URL のドメイン部分がアプリの有効なドメインの一覧に含まれている必要があります。 詳細については、マニフェスト スキーマの [validDomains](~/resources/schema/manifest-schema.md#validdomains) を参照してください。
+> サインイン エクスペリエンスをTeamsポップアップでホストするには、URL のドメイン部分がアプリの有効なドメインの一覧に含まれている必要があります。 詳細については、「マニフェスト スキーマの[validDomains](~/resources/schema/manifest-schema.md#validdomains)」 を参照してください。
 
 ### <a name="start-the-sign-in-flow"></a>サインイン フローを開始する
 
-サインイン エクスペリエンスは応答性が高く、ポップアップ ウィンドウ内に収まる必要があります。 メッセージの受け渡しを使用[するMicrosoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) と統合する必要があります。
+サインイン エクスペリエンスは応答性が高く、ポップアップ ウィンドウ内に収まる必要があります。 メッセージ パッシングを使用する [Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) と統合する必要があります。
 
-Microsoft Teams内で実行されている他の埋め込みエクスペリエンスと同様に、ウィンドウ内のコードを最初に呼び出す`microsoftTeams.initialize()`必要があります。 コードで OAuth フローを実行する場合は、ウィンドウにTeamsユーザー ID を渡し、それを OAuth サインイン URL に渡すことができます。
+Microsoft Teams 内で実行される他の埋め込みエクスペリエンスと同様に、ウィンドウ内のコードは、最初に `microsoftTeams.initialize()` を呼び出す必要があります。 コードで OAuth フローを実行する場合は、ウィンドウにTeamsユーザー ID を渡し、それを OAuth サインイン URL に渡すことができます。
 
 ### <a name="complete-the-sign-in-flow"></a>サインイン フローを完了する
 
 サインイン要求が完了し、ページにリダイレクトされたら、次の手順を実行する必要があります。
 
 1. セキュリティ コードを生成します。 (ランダムな数値を指定できます)。このコードは、OAuth 2.0 トークンなどのサインイン フローで取得した資格情報と共に、サービスにキャッシュする必要があります。
-2. セキュリティ コードを呼び出 `microsoftTeams.authentication.notifySuccess` して渡します。
+2. `microsoftTeams.authentication.notifySuccess` を呼び出して、セキュリティ コードを渡します。
 
 この時点でウィンドウが閉じ、コントロールがTeams クライアントに渡されます。 クライアントは、プロパティ内のセキュリティ コードと共に、元のユーザー クエリを `state` 再発行できるようになりました。 コードでは、セキュリティ コードを使用して、前に保存した資格情報を検索して認証シーケンスを完了し、ユーザー要求を完了できます。
 
