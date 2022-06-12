@@ -3,12 +3,12 @@ title: Teams の開発者向けの新機能
 description: Microsoft Teams の新しい開発者向け機能とそれらの機能の機能強化について説明します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 267f8a00994a066c9eb7a32669a816a452a7af70
-ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
+ms.openlocfilehash: 90361f12d3aa327ca0cab3eca9c87ff44b947f94
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2022
-ms.locfileid: "65906289"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032981"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -47,6 +47,7 @@ ms.locfileid: "65906289"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ----------------|
+| 06/08/2022 | 成功メッセージに関するオプションのカード フィードバック| [ボットのビルド] > [ボットの会話] > [[ボットの会話のメッセージ]](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 | 06/03/2022 | 新しい構造と手順でタブ アプリの SSO を有効にするための認証モジュールの追加を更新しました | 認証の追加 > タブ > [タブ アプリでシングル サインオンを有効にする](tabs/how-to/authentication/tab-sso-overview.md) |
 | 05/24/2022 | SaaS オファーにリンクされたアプリを公開するための迅速な承認に関するその他のヒント | Teams ストアに公開 > 概要 > [SaaS オファーにリンクされたアプリを公開するための迅速な承認に関するその他のヒント](~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer) |
 | 05/24/2022 | Outlook と Office が有効なアプリを Teams ストアに送信する | Microsoft 365 間でアプリを拡張する [概要](m365-apps/overview.md) |

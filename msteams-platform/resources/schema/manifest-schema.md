@@ -4,20 +4,21 @@ description: Microsoft Teams のマニフェスト スキーマについて説�
 ms.topic: reference
 ms.localizationpriority: high
 keywords: teams マニフェスト スキーマ
-ms.openlocfilehash: cbb0835ccc121b6a0e178c31a0a9df2e492fd605
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 5ec9aa0968ad8d15bf935302480330bca78c1bf1
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887836"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66032938"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参照: Microsoft Teams のマニフェスト スキーマ
 
 Microsoft Teams アプリ マニフェストでは、アプリが Microsoft Teams 製品にどのように統合されるかを説明します。 アプリ マニフェストは、[`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json) でホストされているスキーマに準拠している必要があります。 以前のバージョン 1.0、1.1、...、1.12、および現在の 1.13 バージョン (以下の注を参照) はそれぞれサポートされています (URL で "v1.x" を使用)。
 各バージョンで行われた変更の詳細については、[マニフェスト変更ログ](https://github.com/OfficeDev/microsoft-teams-app-schema/releases)を参照してください。
 
-> [!Important]
-> Microsoft Teams アプリ マニフェスト スキーマのバージョン `1.13` では、[Teams アプリを Outlook および Office に拡張できます](../../m365-apps/overview.md)。 Teams 専用アプリの場合は、バージョン `1.12` (またはそれ以前) を使用します。 それ以外の場合は、1.12 と 1.13 スキーマは同じです。 詳細については、[Teams JavaScript クライアント SDK](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit) の概要を参照してください。
+次の表は、さまざまなアプリのシナリオに応じた TeamsJS バージョンとアプリ マニフェスト バージョンを示しています。
+
+[!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
 次のスキーマ サンプルは、すべての拡張オプションを示しています。
 
@@ -593,6 +594,9 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 * `messageTeamMembers`&emsp; にはチーム メンバーに直接メッセージを送信するためのアクセス許可が必要です。
 
 アプリの更新中にこれらのアクセス許可を変更すると、ユーザーは更新されたアプリを実行した後に同意プロセスを繰り返します。詳細については、「 [アプリの更新](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)」を参照してください。
+
+> [!NOTE]
+> アクセス許可は現在非推奨になっています。
 
 ## <a name="devicepermissions"></a>devicePermissions
 

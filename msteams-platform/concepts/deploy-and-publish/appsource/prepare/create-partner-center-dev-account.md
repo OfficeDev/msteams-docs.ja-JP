@@ -5,12 +5,12 @@ ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 7d5e6d4d345f94e893a494c6dea2e719aece9da6
-ms.sourcegitcommit: ef582a5ac33e815854d58f2f1faeb06aa2d761ae
+ms.openlocfilehash: f83083524a4d49761e6c69683b66d34a0988d789
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65443902"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033030"
 ---
 # <a name="create-a-partner-center-developer-account"></a>パートナー センターの開発者アカウントを作成する
 
@@ -208,17 +208,23 @@ ms.locfileid: "65443902"
 
 </details>
 
-## <a name="update-apple-developer-id-on-partner-center"></a>パートナー センターで Apple Developer ID を更新する
+## <a name="update-apple-app-store-connect-team-id-on-partner-center"></a>パートナー センターで Apple App Store Connect Team ID を更新する
 
-ユーザーが Teams iOS プラットフォームにアプリをインストールできるようにするには、Microsoft パートナー センターで Apple Developer ID を更新する必要があります。 Apple Developer ID を更新するには、次の手順に従います。
+ユーザーが Teams iOS プラットフォームにアプリをインストールできるようにするには、Microsoft パートナー センターで Apple App Store Connect Team ID を更新する必要があります。 Apple App Store Connect Team ID を更新するには、次の手順に従います。
 
 1. 全体管理者の資格情報を使用して、[Microsoft パートナー センター](https://partner.microsoft.com/dashboard/home) にログインします。
 1. ページの右上隅にある設定アイコンを選択します。
 1. 左側のウィンドウから、**「組織プロファイル］** の下にある **［法務情報］** セクションに移動します。
 1. **［開発者］** タブを選択します。
-1. Apple Developer ID を入力します。
+1. Apple App Store Connect Team ID を入力します。
 1. オファー ページに移動し、Teams アプリを再発行します。
-   Apple Developer ID が Microsoft パートナー センター で更新されました。
+   Apple App Store Connect Team ID が更新され、ユーザーは Teams iOS プラットフォームにアプリをインストールできるようになりました。
+
+Apple Developer ポータルから Apple App Store Connect Team ID を取得するには、次の手順に従います。
+
+1. [Apple Developer Center](https://developer.apple.com/) にログインします。
+1. **[アカウント]** を選択し、**[メンバーシップ]** に移動します。
+1. **[メンバーシップ]** に **Apple App Store Connect Team ID** が表示されます。
 
 ## <a name="next-step"></a>次のステップ
 

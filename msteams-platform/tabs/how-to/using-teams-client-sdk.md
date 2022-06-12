@@ -6,12 +6,12 @@ description: Teams、Office、Outlook の <iframe> でホストされたアプ�
 ms.localizationpriority: high
 keywords: Teams タブ グループ チャンネル 構成可能な静的 SDK JavaScript 個人用 M365
 ms.topic: conceptual
-ms.openlocfilehash: 11d5bfa9b2dff29cb627a75f13af70915784a175
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 3b607056e2e3e10ff6817acdea4425573f99c170
+ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757620"
+ms.lasthandoff: 06/11/2022
+ms.locfileid: "66033044"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Microsoft Teams JavaScript クライアント SDK を使用してタブやその他のホストされたエクスペリエンスを構築する
 
@@ -24,13 +24,7 @@ Microsoft Teams JavaScript クライアント SDK は、Teams、Office、Outlook
 
 さまざまなアプリ シナリオについて、現在のバージョン管理ガイダンスを次に示します。
 
-|                  |[TeamsJS](/javascript/api/overview/msteams-client) のバージョン | [アプリ マニフェスト](../../resources/schema/manifest-schema.md)のバージョン| 次のステップ|
-|------------------|---------|--------|---|
-|**Office/Outlook に拡張された Teams アプリ**| TeamsJS v.2.0 以降  | **1.13** 以降 | [Teams アプリを拡張して Microsoft 365 全体で実行する](../../m365-apps/extend-m365-teams-personal-tab.md)、または[新しい Microsoft 365 アプリを作成する](../../m365-apps/extend-m365-teams-personal-tab.md#quickstart) |
-|**既存の Teams 専用アプリ**| 可能な場合、TeamsJS v.2.0 に更新する (v.1.12 はまだサポートされています*)  | 1.12 | [TeamsJS の下位互換性について理解し](#backwards-compatibility)、[TeamsJS v.2.0 に更新する](#updating-to-the-teams-client-sdk-v200) |
-|**新しい Teams 専用アプリ**| TeamsJS v.2.0 以降 | 1.12 | [Teams Toolkit を使用して新しい Teams アプリを作成する](../../toolkit/create-new-project.md) |
-
-**ベスト プラクティスは、可能な限り、最新の TeamsJS (v.2.0 以降) を使用して、(Teams 専用アプリの場合でも) 最新の機能強化と新機能のサポートを利用できるようにすることです。TeamsJS v.1.12 は引き続きサポートされますが、新機能や機能強化は追加されません。*
+[!INCLUDE [pre-release-label](~/includes/teamjs-version-details.md)]
 
 この記事の残りの部分では、Teams JavaScript クライアント SDK の構造と最新の更新プログラムについて説明します。
 
@@ -66,14 +60,14 @@ TeamsJS v.2.0 では、特定の種類の Teams アプリをMicrosoft 365 エコ
 
 #### <a name="app-permissions"></a>アプリのアクセス許可
 
-ユーザーが [デバイスのアクセス許可](../../concepts/device-capabilities/device-capabilities-overview.md) (*位置情報* など) を付与する必要のあるアプリ機能は、Teams の外部で実行されるアプリではまだサポートされていません。 現在、Outlook または Office で実行しているときに [設定] またはアプリ ヘッダーでアプリのアクセス許可を確認する方法はありません。 Office または Outlook で実行されている Teams アプリが、デバイスのアクセス許可をトリガーする TeamsJS (または HTML5) API を呼び出すと、その API はエラーをスローし、ユーザーの同意を求めるシステム ダイアログを表示できません。
+ユーザーが [デバイスのアクセス許可](../../concepts/device-capabilities/device-capabilities-overview.md) (*位置情報* など) を付与する必要のあるアプリ機能は、Teams の外部で実行されるアプリではまだサポートされていません。 現在、Outlook または Office で実行しているときに [設定] またはアプリ ヘッダーでアプリのアクセス許可を確認する方法はありません。 Office または Outlook で実行されている Teams アプリが、デバイスのアクセス許可をトリガーする TeamsJS (または HTML5) API を呼び出すと、その API はエラーを生成し、ユーザーの同意を求めるシステム ダイアログを表示できません。
 
 現在のガイダンスとして、エラーをキャッチするようにコードを変更してください。
 
 * 機能を使用する前に、機能の [isSupported()](#differentiate-your-app-experience) を確認してください。 `media`、`meeting`、および `files` は *isSupported* 呼び出しをまだサポートしておらず、Teams の外部ではまだ機能しません。
 * TeamsJS と HTML5 API を呼び出すときに、エラーをキャッチして処理します。
 
-API がサポートされていないか、エラーをスローする場合、ロジックを追加して正常に機能させるか、回避策を提示します。 例として以下のようなものがあります。
+API がサポートされていないか、エラーを生成する場合、ロジックを追加して正常に機能させるか、回避策を提示します。 例として以下のようなものがあります。
 
 * ユーザーにアプリの Web サイトに移動するように指示します。
 * フローを完了するために Teams 内でアプリを使用するようにユーザーに指示します。
@@ -231,7 +225,7 @@ async function example() {
 
 *機能* は、同様の機能を提供する API の (名前空間を介した) 論理グループです。 タブ アプリのホストとして、Microsoft Teams、Outlook、Office が考えられます。 ホストは、特定の機能内で定義されているすべての API をサポートしている場合、その機能をサポートします。 ホストが機能を部分的に実装することはできません。 機能は、*認証* や *ダイアログ* のように、機能ベースまたはコンテンツ ベースです。 *ページ* などのアプリケーションの種類や他のグループの機能もあります。
 
-TeamsJS v.2.0 以降では、API は JavaScript 名前空間の関数として定義されます。この名前は、必要な機能と一致します。 たとえば、アプリが *ダイアログ* 機能をサポートするホストで実行されている場合、アプリは (名前空間で定義されている他のダイアログ関連の API に加えて) `dialog.open` などの API を安全に呼び出すことができます。 アプリがそのホストでサポートされていない API を呼び出そうとすると、API は例外をスローします。 アプリを実行している現在のホストが特定の機能をサポートしているかどうかを確認するには、その名前空間の [isSupported()](#differentiate-your-app-experience) 関数を呼び出します。
+TeamsJS v.2.0 以降では、API は JavaScript 名前空間の関数として定義されます。この名前は、必要な機能と一致します。 たとえば、アプリが *ダイアログ* 機能をサポートするホストで実行されている場合、アプリは (名前空間で定義されている他のダイアログ関連の API に加えて) `dialog.open` などの API を安全に呼び出すことができます。 アプリがそのホストでサポートされていない API を呼び出そうとすると、API は例外を生成します。 アプリを実行している現在のホストが特定の機能をサポートしているかどうかを確認するには、その名前空間の [isSupported()](#differentiate-your-app-experience) 関数を呼び出します。
 
 #### <a name="differentiate-your-app-experience"></a>アプリ エクスペリエンスを差別化する
 
