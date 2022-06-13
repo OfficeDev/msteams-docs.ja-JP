@@ -6,12 +6,12 @@ keywords: 構成可能なチーム タブ グループ チャネル
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 2ee2a6017ed96d90d205b0a764f5f0fe8b512207
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: ec1a479421b7439db7a5492a059d470bd2d7024e
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887633"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66048977"
 ---
 # <a name="create-a-configuration-page"></a>構成ページを作成する
 
@@ -21,7 +21,7 @@ ms.locfileid: "65887633"
 * [メッセージ拡張機能](~/messaging-extensions/what-are-messaging-extensions.md)。
 * [Office 365 コネクタ](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)。
 
-[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)].
 
 ## <a name="configure-a-channel-or-group-chat-tab"></a>チャネルまたはグループチャット タブを構成する
 
@@ -171,7 +171,7 @@ ms.locfileid: "65887633"
 * `pages.config.registerOnSaveHandler()`イベント ハンドラーがトリガーされます。
 * アプリの構成ページで **[保存]** が有効になっています。
 
-構成ページ コードは、構成要件が満たされ、インストールを続行できることを Teams に通知します。 ユーザーが **[保存]** を選択すると、`Config` インターフェースで定義されているように `pages.config.setConfig()` のパラメーターが設定されます。 詳細については、「 [構成インターフェイス」を](/javascript/api/@microsoft/teams-js/pages.config.Config?view=msteams-client-js-latest&preserve-view=true)参照してください。 `saveEvent.notifySuccess()` は、コンテンツ URL が正常に解決されたことを示すために呼び出されます。
+構成ページ コードは、構成要件が満たされ、インストールを続行できることを Teams に通知します。 ユーザーが **[保存]** を選択すると、`Config` インターフェースで定義されているように `pages.config.setConfig()` のパラメーターが設定されます。 詳細については、「 [構成インターフェイス」を](/javascript/api/@microsoft/teams-js/pages.config?)参照してください。 `saveEvent.notifySuccess()` は、コンテンツ URL が正常に解決されたことを示すために呼び出されます。
 
 >[!NOTE]
 >
@@ -294,7 +294,7 @@ document.write(getId());
 
 マニフェストの `canUpdateConfiguration` プロパティ `true`を . これにより、ユーザーはチャネルまたはグループ タブを変更、再構成、または名前変更できます。タブが削除されたときのコンテンツへの影響についてユーザーに通知します。 これを行うには、アプリに [削除オプション] ページを含め、(以前の) 構成でプロパティの`setConfig()`値`removeUrl`を`setSettings()`設定します。 ユーザーは個人用タブをアンインストールできますが、変更することはできません。 詳細については、「[タブの削除ページを作成する](~/tabs/how-to/create-tab-pages/removal-page.md)」を参照してください。
 
-削除ページ用`setSettings()`の Microsoft Teams `setConfig()` (以前の) 構成:
+`setConfig()` 削除ページのMicrosoft Teams (以前`setSettings()`の) 構成:
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 

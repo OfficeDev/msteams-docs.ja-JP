@@ -5,12 +5,12 @@ keywords: teams アプリ開発のトラブルシューティング
 localization_priority: Normal
 ms.topic: troubleshooting
 ms.date: 07/09/2018
-ms.openlocfilehash: 76a1a4d45757dff36d45c73f1ea5f2791fbe2e02
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: ea6a452d3e3ace7c78e29f6829ac124eea8219d6
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032824"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66048963"
 ---
 # <a name="troubleshoot-your-microsoft-teams-app"></a>Microsoft Teams アプリのトラブルシューティング
 
@@ -53,7 +53,7 @@ ms.locfileid: "66032824"
 サイレント認証を行う場合を除き、[Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) によって提供される認証プロセスに従う必要があります。
 
 > [!NOTE]
->すべての認証フローをドメインで開始および終了する必要があります。このフローは、マニフェストの `validDomains` オブジェクトに一覧表示する必要があります。
+> すべての認証フローをドメインで開始および終了する必要があります。このフローは、マニフェストの `validDomains` オブジェクトに一覧表示する必要があります。
 
 認証の詳細については、「 [ユーザーの認証」を参照してください](~/concepts/authentication/authentication.md)。
 

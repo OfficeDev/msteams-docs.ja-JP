@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: b5e023041ad732c7580b8b01cd62bc7159a52887
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: cbce3d51d902301f6aca422bfe2c8112e50f6b31
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033058"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66049005"
 ---
 # <a name="install-moodle-lms"></a>Moodle LMS のインストール
 
@@ -287,7 +287,7 @@ Moodle タブの自動作成を許可するには:
 Moodle コースが同期されると、Microsoft Teamsチームに Moodle アプリが自動的にインストールされ、Teamsの [全般] チャネルに [Moodle] タブが作成され、同期元の Moodle コースのコース ページが含まれるようになります。 これで、Microsoft Teamsから直接 Moodle コースの操作を開始できます。
 
 > [!NOTE]
-> 機能の要求やフィードバックを Microsoft と共有するには、 [ユーザー音声ページ](https://microsoftteams.uservoice.com/forums/916759-moodle)を参照してください。
+> 機能の要求やフィードバックを Microsoft と共有するには、 [ユーザー音声ページ](https://support.microsoft.com/en-us/office/uservoice-pages-430e1a78-e016-472a-a10f-dc2a3df3450a)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

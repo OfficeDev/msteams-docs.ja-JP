@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: コマンド メニュー 作成 メッセージ 会話 @mention
-ms.openlocfilehash: 524ecb9ee829292487cc0e6c45604d4c241967c8
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 5b96a9b995806678596cc8cedd45f4bb6e80827c
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032969"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66048991"
 ---
 # <a name="bot-command-menus"></a>Bot コマンド メニュー
 
@@ -46,7 +46,7 @@ ms.locfileid: "66032969"
 
    :::image type="content" source="conversations/Media/AppStudio.png" alt-text="appstudio-media":::
 
-2. **App Studio** で、**[マニフェスト エディター]** タブを選択します。既存のアプリ パッケージがない場合は、既存のアプリを作成またはインポートできます。 詳細については、「[アプリ パッケージの更新](~/get-started/deploy-csharp-app-studio.md)」を参照してください。
+2. **App Studio** で、**[マニフェスト エディター]** タブを選択します。既存のアプリ パッケージがない場合は、既存のアプリを作成またはインポートできます。 詳細については、「[App Studio で C# アプリ パッケージを更新する」を](../../get-started/deploy-csharp-app-studio.md)参照してください。
 
 3. **[マニフェスト エディター]** の左側のウィンドウで、**[機能]** セクション内で **[ボット]** を選択します。
 
@@ -61,6 +61,7 @@ ms.locfileid: "66032969"
 7. **[スコープ]** チェック ボックスをオンにして、このコマンド メニューを表示する必要がある場所を選択し、**[保存]** を選択します。
 
    :::image type="content" source="media/AppStudio-NewCommandMenu.png" alt-text="App Studio の [新しいコマンド] メニュー ボタン "lightbox="media/AppStudio-NewCommandMenu.png "border="true":::
+
 
 ### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Manifest.json を編集してボットのコマンド メニューを作成する
 

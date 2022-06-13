@@ -6,18 +6,18 @@ keywords: 場所マップ機能のネイティブ デバイスのアクセス許
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: ff2403331d3d51581be4711fb6fb14fcdb809544
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: cea6ab31f816f41a191a93620c5b91f0b7ba56a2
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033051"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66048998"
 ---
 # <a name="integrate-location-capabilities"></a>場所機能を統合する
 
 ネイティブ デバイスの位置情報機能を Teams アプリと統合できます。  
 
-[Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) を使用できます。これは、アプリがユーザーの [ネイティブ デバイス機能](native-device-permissions.md) にアクセスするために必要なツールを提供します。 [getLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) や [showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) などの場所 API を使用して、アプリ内の機能を統合します。
+[Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) を使用できます。これは、アプリがユーザーの [ネイティブ デバイス機能](native-device-permissions.md) にアクセスするために必要なツールを提供します。 [getLocation](/javascript/api/@microsoft/teams-js/location.locationprops) や [showLocation](/javascript/api/@microsoft/teams-js/location.locationprops?) などの場所 API を使用して、アプリ内の機能を統合します。
 
 ## <a name="advantages-of-integrating-location-capabilities"></a>場所の機能を統合する利点
 
@@ -45,6 +45,7 @@ Teams アプリのエラーを処理するには、[API 応答エラー](#error-
 ```
 
 > [!NOTE]
+>
 > * **アクセス許可要求** プロンプトは、関連する Teams API が開始されると自動的に表示されます。 詳細については、「[デバイスのアクセス許可要求](native-device-permissions.md)」 を参照してください。
 > * デバイスのアクセス許可はブラウザーによって異なります。 詳細については、「[ブラウザー デバイスのアクセス許可](browser-device-permissions.md)」を参照してください。
 
@@ -54,8 +55,8 @@ Teams アプリのエラーを処理するには、[API 応答エラー](#error-
 
 | API      | 説明   |
 | --- | --- |
-|[getLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) | ユーザーの現在のデバイスの場所を指定するか、ネイティブの場所ピッカーを開き、ユーザーが選択した場所を返します。 |
-|[showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) | マップ上の場所を表示します。 |
+|[getLocation](/javascript/api/@microsoft/teams-js/location.locationprops) | ユーザーの現在のデバイスの場所を指定するか、ネイティブの場所ピッカーを開き、ユーザーが選択した場所を返します。 |
+|[showLocation](/javascript/api/@microsoft/teams-js/location.locationprops?) | マップ上の場所を表示します。 |
 
 > [!NOTE]
 > `getLocation()` API には、次の[入力構成](/javascript/api/@microsoft/teams-js/microsoftteams.location.locationprops)、`allowChooseLocation`、および `showMap` が付属しています。<br/> `allowChooseLocation`の値が *true* の場合、ユーザーは任意の場所を選択できます。<br/>  値が *false* の場合、ユーザーは現在の場所を変更できません。<br/> `showMap` の値が *false* の場合、現在の場所は地図を表示せずに取得されます。 `allowChooseLocation` が *true* に設定されている場合、`showMap` は無視されます。
