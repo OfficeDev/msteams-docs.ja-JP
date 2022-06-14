@@ -3,12 +3,12 @@ title: Teams の開発者向けの新機能
 description: Microsoft Teams の新しい開発者向け機能とそれらの機能の機能強化について説明します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 90361f12d3aa327ca0cab3eca9c87ff44b947f94
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: ca3cbbac88a0133c5c4973f0a1ad8809f8e4ff73
+ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032981"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66048970"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -24,6 +24,7 @@ ms.locfileid: "66032981"
 | 05/24/2022 | Visual Studio Code 用 Teams Toolkit バージョン 4.0.0 の一般提供開始 | ［ツールと SDK］ > ［Visual Studio Code 用 Teams Toolkit］ <br> • [Teams ツールキットの概要](toolkit/teams-toolkit-fundamentals.md) <br> • [Build コマンド ボットと JavaScript](toolkit/add-capability.md) <br> • [JavaScript を使用した通知ボットのビルド](toolkit/add-capability.md) <br> • [Teams アプリ マニフェストのプレビューとカスタマイズ](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [既存の API に接続します](toolkit/add-API-connection.md) <br> • [Teams アプリに機能を追加する](toolkit/add-capability.md) <br> • [シングル サインオン エクスペリエンスを追加する](toolkit/add-single-sign-on.md) <br> • [Teams アプリにクラウド リソースを追加する](toolkit/add-resource.md) |
 | 05/24/2022 | アプリ マニフェスト バージョン 1.13 が導入されました | アプリ マニフェスト > [Microsoft Teams のマニフェスト スキーマ](resources/schema/manifest-schema.md) |
 | 05/24/2022 | GCC と GCCH のボットとメッセージ拡張機能 | • [アプリの計画] > [[概要]](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • ボットの作成> [概要](bots/what-are-bots.md) </br> • メッセージ拡張機能の作成> [概要](messaging-extensions/what-are-messaging-extensions.md) |
+
 
 <!--
 ## Latest updates ![bullhorn icon](~/assets/images/bullhorn.png)
@@ -206,7 +207,7 @@ ms.locfileid: "66032981"
 | 2019/10/31 | 新しいドキュメントの構造と記事の大幅なリファクタリング。 デッド リンクや 404 が発生した場合は、GitHub イシューを作成して報告してください。 | すべての項目です。 |
 | 2019/9/13 | 要求ボットは、操作ベースのメッセージ拡張機能からインストールされます。 | [メッセージ拡張機能を使用した操作の開始](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
 | 2019/8/28 | タブとコネクターのプライベート チャネルのサポート。 | [タブのコンテキストを取得する](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) |
-| 2019/6/20 | 外部 Web サイトを、外部 Web サイトから、Teams チャネルに共有します。 | [Teams への共有](~/share-to-teams.md) |
+| 2019/6/20 | 外部 Web サイトを、外部 Web サイトから、Teams チャネルに共有します。 | [Teams への共有](concepts/build-and-test/share-to-teams-overview.md)。 |
 | 2019/5/25 | タスク モジュールからのボット メッセージで応答します。 | [タスク モジュールからのボット メッセージで応答する](resources/messaging-extension-v3/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
 | 2019/5/25 | グループ チャット内のボット。 | [グループ チャットやチャネルでのボットとの対話](~/concepts/bots/bot-conversations/bots-conv-channel.md) |
 | 2019/5/20 | アプリ マニフェストのローカリゼーション。 | [アプリのローカリゼーション](~/publishing/apps-localization.md) |
