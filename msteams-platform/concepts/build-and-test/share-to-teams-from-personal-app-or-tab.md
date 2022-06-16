@@ -1,15 +1,14 @@
 ---
 title: 個人用アプリまたはタブから Teams に共有する
-description: 個人用アプリまたはタブに埋め込まれたTeamsで共有を追加する方法について説明します
+description: 個人用アプリまたはタブで [共有してTeams] ボタンを有効にする方法、制限事項、エンド ユーザー エクスペリエンスについて説明します。
 ms.topic: reference
 ms.localizationpriority: medium
-keywords: Teamsに共有Teams共有する
-ms.openlocfilehash: c40263504b77a8a848251431de1eb49b85253b77
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 6a676dd90d9b02332869b5584b1e067be8bfcf19
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757263"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123935"
 ---
 # <a name="share-to-teams-from-personal-app-or-tab"></a>個人用アプリまたはタブから Teams に共有する
 

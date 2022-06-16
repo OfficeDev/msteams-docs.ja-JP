@@ -6,30 +6,31 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 6c8873bf952cd05e0315efb45403688f69471147
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: f26593c409f0b2f7d64093fa90e65afebd27c0ec
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887647"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123795"
 ---
 # <a name="teamsfx-library"></a>TeamsFx ライブラリ
 
-Microsoft Teams Framework (TeamsFx) は、Microsoft Identity への簡単なアクセスなど、一般的な機能と統合パターンをカプセル化したライブラリです。 構成なしで Microsoft Teams 用のアプリを構築できます。
+Microsoft Teams Framework (TeamsFx) は、Microsoft Identity への簡単なアクセスなど、一般的な機能と統合パターンをカプセル化するライブラリです。 構成なしで Microsoft Teams 用のアプリを構築できます。
 
 TeamsFx の主な機能の一覧を次に示します。
 
 * **TeamsFx コラボレーション**: 開発者とプロジェクト所有者が TeamsFx プロジェクトに他のコラボレーターを招待できるようにします。 TeamsFx プロジェクトをデバッグおよび展開するために共同作業を行うことができます。
 
-* **TeamsFx CLI**: Teams アプリケーション開発を高速化します。 また、自動化用のスクリプトに CLI を統合できる CI/CD シナリオも可能になります。
+* **TeamsFx CLI**: アプリケーション開発Teams高速化します。 また、自動化用のスクリプトに CLI を統合できる CI/CD シナリオも可能になります。
 
-* **TeamsFx SDK: Teams** 開発者向けにカスタマイズされたクライアントコードとサーバー側コードの両方に対する簡単な認証を含むプライマリ TeamsFx コード ライブラリなど、データベースへのアクセスを提供します。
+* **TeamsFx SDK**: Teams開発者向けに調整されたクライアントとサーバー側の両方のコードに対する単純な認証を含むプライマリ TeamsFx コード ライブラリなど、データベースへのアクセスを提供します。
 
 ## <a name="teamsfx-command-line-interface"></a>TeamsFx コマンド ライン インターフェイス
 
 TeamsFx は、Teams アプリケーションの開発を加速するテキスト ベースのコマンド ライン インターフェイスです。 これは、Teams アプリケーションを構築する際にキーボード中心のエクスペリエンスを提供することを目的としています。 また、自動化用のスクリプトに CLI を統合できる CI/CD シナリオも可能になります。
 
 詳細については、以下を参照してください。
+
 * [ソース コード](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli)
 * [パッケージ (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx-cli)
 
@@ -61,7 +62,7 @@ TeamsFx は、Teams アプリケーションの開発を加速するテキスト
 
 ## `teamsfx new`
 
-既定では、対話型モードであり、 `teamsfx new` 新しい Teams アプリケーションを作成するためのガイドです。 フラグ`false`を [.] に設定`--interactive`すると、非対話型モードで作業できます。
+既定では、対話型モードであり、`teamsfx new`新しいTeams アプリケーションを作成するためのガイドです。 フラグ`false`を [.] に設定`--interactive`すると、非対話型モードで作業できます。
 
 | コマンド | 説明 |
 |:----------------  |:-------------|
@@ -74,7 +75,7 @@ TeamsFx は、Teams アプリケーションの開発を加速するテキスト
 |:---------------- |:-------------|:-------------|
 |`--app-name` | はい| Teams アプリケーションの名前です。|
 |`--interactive`| いいえ | オプションを対話形式で選択します。 オプションは `true` と `false` で、既定値は `true` です。|
-|`--capabilities`| いいえ| Teams アプリケーション機能を選択します。オプションは `tab`、 , , `tab-non-sso`, `tab-spfx`, `bot`, `message-extension``notification`, `sso-launch-page``command-bot`, `search-app`. 既定値は `tab` です。|
+|`--capabilities`| いいえ| Teamsアプリケーション機能を選択します。オプションは `tab`、 , , `tab-non-sso`, `tab-spfx`, `bot``message-extension`, `notification``command-bot`, . `search-app``sso-launch-page` 既定値は `tab` です。|
 |`--programming-language`| いいえ| プロジェクトのプログラミング言語です。 オプションは `javascript` または `typescript` で、デフォルト値は `javascript` です。|
 |`--folder`| いいえ | プロジェクト ディレクトリ。 このディレクトリの下に、アプリ名を持つサブ フォルダーが作成されます。 既定値は `./` です。|
 |`--spfx-framework-type`| いいえ| `SPFx tab` 機能が選択されている場合に適用されます。 フロントエンド フレームワーク。 オプションは `none`、 `react` および `minimal`既定値 `none`です。|
@@ -83,7 +84,7 @@ TeamsFx は、Teams アプリケーションの開発を加速するテキスト
 
 ### <a name="scenarios-for-teamsfx-new"></a>`teamsfx new` のシナリオ
 
-対話型モードを使用して Teams アプリを作成できます。 次の一覧では、次を使用してすべてのパラメーター `teamsfx new`を制御するシナリオを示します。
+対話型モードを使用して、Teams アプリを作成できます。 次の一覧では、次を使用してすべてのパラメーター `teamsfx new`を制御するシナリオを示します。
 
 * restify サーバーを使用した Http によってトリガーされた通知ボット
 
@@ -91,7 +92,7 @@ TeamsFx は、Teams アプリケーションの開発を加速するテキスト
   teamsfx new --interactive false --capabilities "notification" --bot-host-type-trigger "http-restify" --programming-language "typescript" --folder "./" --app-name       MyAppName
   ```
 
-* Teams コマンドと応答ボット
+* Teamsコマンドと応答ボット
 
   ```bash
   teamsfx new --interactive false --capabilities "command-bot" --programming-language "typescript" --folder "./" --app-name myAppName
@@ -109,23 +110,23 @@ TeamsFx は、Teams アプリケーションの開発を加速するテキスト
 
 | コマンド | 説明 |
 |:----------------  |:-------------|
-| `teamsfx add notification` | さまざまなトリガーを使用して Microsoft Teams に通知を送信します。 |
+| `teamsfx add notification` | さまざまなトリガーを介してMicrosoft Teamsに通知を送信します。 |
 | `teamsfx add command-and-response` | Microsoft Teams チャットで簡単なコマンドに応答します。|
-| `teamsfx add sso-tab` | Microsoft Teams に埋め込まれた Teams ID 対応 Web ページ。|
-| `teamsfx add tab` | Microsoft Teams に埋め込まれた Hello world Web ページ。|
+| `teamsfx add sso-tab` | Microsoft Teamsに埋め込まれた id 対応 web ページをTeamsします。|
+| `teamsfx add tab` | Microsoft Teamsに埋め込まれた Hello world Web ページ。|
 | `teamsfx add bot` | ユーザーが簡単で反復的なタスクを実行するための Hello world chatbot。 |
 | `teamsfx add message-extension` | ボタンとフォームを介した対話を可能にする Hello world メッセージ拡張機能。 |
 | `teamsfx add azure-function`| より少ないコードを記述できる、サーバーレスのイベントドリブンコンピューティング ソリューション。 |
 | `teamsfx add azure-apim` | すべての環境にわたる API 用のハイブリッドマルチクラウド管理プラットフォーム。|
 | `teamsfx add azure-sql` | クラウド用に構築された常に最新のリレーショナル データベース サービス。 |
 | `teamsfx add azure-keyvault` | シークレットを安全に格納してアクセスするためのクラウド サービス。 |
-| `teamsfx add sso` | Teams の起動ページとボット機能の単一のSign-On機能を開発します。 |
-| `teamsfx add api-connection [auth-type]` | TeamsFx SDK を使用して認証サポートを使用して API に接続します。 |
+| `teamsfx add sso` | Teams起動ページとボット機能のシングル Sign-On機能を開発します。 |
+| `teamsfx add api-connection [auth-type]` | TeamsFx SDK を使用して認証をサポートする API にConnectします。 |
 | `teamsfx add cicd` | GitHub、Azure DevOps、または Jenkins の CI/CD ワークフローを追加します。|
 
 ## `teamsfx account`
 
-次の表に、Azure や Microsoft 365 などのクラウド サービス アカウントを示します。
+次の表に、Azure やMicrosoft 365などのクラウド サービス アカウントを示します。
 
 | コマンド | 説明 |
 |:----------------  |:-------------|
@@ -156,7 +157,7 @@ teamsfx env add staging --env dev
 
 | `teamsFx provision`コマンド | 説明 |
 |:----------------  |:-------------|
-| `teamsfx provision manifest` | 特定のマニフェスト ファイルで指定された対応する情報を使用して、Teams 開発者ポータルで Teams アプリをプロビジョニングします。 |
+| `teamsfx provision manifest` | 指定したマニフェスト ファイルで指定された対応する情報を使用して、Teams開発者ポータルでTeams アプリをプロビジョニングします。 |
 
 ### <a name="parameters-for-teamsfx-provision"></a>`teamsfx provision` のパラメーター
 
@@ -165,8 +166,8 @@ teamsfx env add staging --env dev
 |`--env`| はい| プロジェクトの環境を選択します。 |
 |`--subscription`| いいえ | Azure サブスクリプション ID を指定します。 |
 |`--resource-group`| いいえ | 既存のリソース グループの名前を設定します。 |
-|`--sql-admin-name`| なし | プロジェクトに SQL リソースがある場合に適用されます。 SQL の管理者名。|
-|`--sql-password`| なし| プロジェクトに SQL リソースがある場合に適用されます。 SQL の管理者パスワード。|
+|`--sql-admin-name`| なし | プロジェクトにSQLリソースがある場合に適用されます。 SQL の管理者名。|
+|`--sql-password`| なし| プロジェクトにSQLリソースがある場合に適用されます。 SQL の管理者パスワード。|
 
 ## `teamsfx deploy`
 
@@ -180,9 +181,8 @@ teamsfx env add staging --env dev
 |`--open-api-document`| いいえ | プロジェクトに APIM リソースがある場合に適用されます。 開いている API ドキュメント ファイルパス。 |
 |`--api-prefix`| なし | プロジェクトに APIM リソースがある場合に適用されます。 API 名プレフィックス。 API の既定の一意の名前は `{api-prefix}-{resource-suffix}-{api-version}` です。 |
 |`--api-version`| なし | プロジェクトに APIM リソースがある場合に適用されます。 API バージョン。 |
-|`--include-app-manifest`| 不要 | アプリ マニフェストを Teams プラットフォームに展開するかどうか。 オプションは次`yes`のとおりです。`not` 既定値は `no` です。 |
-|`--include-aad-manifest`| いいえ | aad マニフェストをデプロイするかどうか。 オプションは次`yes`のとおりです。`not` 既定値は `no` です。 |
-
+|`--include-app-manifest`| 不要 | アプリ マニフェストをTeams プラットフォームにデプロイするかどうか。 オプションは次`yes`のとおりです。`not` 既定値は `no` です。 |
+|`--include-aad-manifest`| なし | aad マニフェストをデプロイするかどうか。 オプションは次`yes`のとおりです。`not` 既定値は `no` です。 |
 
 ## `teamsfx validate`
 
@@ -219,7 +219,7 @@ Teams アプリを公開用のパッケージにビルドします。
 |`--browser`| いいえ | Teams Web クライアントを開くためのブラウザー。 オプションはシステムの既定ブラウザなどの `chrome`、`edge`、`default` で、値は `default` です。 |
 |`--browser-arg`| いいえ | ブラウザに渡す引数。--browser が必要です。たとえば、--browser-args="--guest" のように、複数回使用できます。 |
 |`--sharepoint-site`| いいえ | SPFx プロジェクトのリモート プレビュー用の `{your-tenant-name}.sharepoint.com` などの SharePoint サイトの URL。 |
-|`--m365-host`| Teams、Outlook、または Office でアプリケーションをプレビューします。 オプションは `teams`、および `office``outlook` . 既定値は `teams` です。 |
+|`--m365-host`| Teams、Outlook、またはOfficeでアプリケーションをプレビューします。 オプションは `teams`、および `office``outlook` . 既定値は `teams` です。 |
 
 ### <a name="scenarios-for-teamsfx-preview"></a>`teamsfx preview` のシナリオ
 
@@ -262,7 +262,7 @@ Teams アプリを公開用のパッケージにビルドします。
 | パラメーター  | 要件 | 説明 |
 |:----------------  |:-------------|:-------------|
 |`--env`| はい | プロジェクトの既存の環境を選択します。 |
-|`--folder`| いいえ | プロジェクト構成の取得または設定に使用されるプロジェクト ディレクトリ。 既定値は `./` です。 |
+|`--folder`| いいえ | プロジェクト構成の取得または設定に使用されるディレクトリProject。 既定値は `./` です。 |
 |`--global`| いいえ | 構成に対応します。 true の場合、スコープはプロジェクト スコープではなくユーザー スコープに制限されます。 既定値は `false` です。 現在、サポートされているグローバル構成には`telemetry`、, , `validate-dotnet-sdk`, `validate-func-core-tools`. `validate-node` |
 
 ### <a name="scenarios-for-teamsfx-config"></a>`teamsfx config` のシナリオ
@@ -277,11 +277,11 @@ Teams アプリを公開用のパッケージにビルドします。
 
 * 環境チェッカーを無効にする
 
-  Node.js、.NET SDK と Azure Functions Core Tools の検証を有効または無効にする構成は 3 つあり、すべての構成が既定で有効になっています。 依存関係の検証が不要で、自分で依存関係をインストールする場合は、構成を "オフ" に設定できます。 次のガイドを確認してください。
+  Node.jsを有効または無効にする構成には、.NET SDK と Azure Functions Core Tools の検証の 3 つがあり、これらすべてが既定で有効になっています。 依存関係の検証が不要で、自分で依存関係をインストールする場合は、構成を "オフ" に設定できます。 次のガイドを確認してください。
 
   * [Node.js インストール ガイド](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-nodejs)
   * [.NET SDK インストール ガイド](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-net-sdk)
-  * [Azure Functions Core Tools インストール ガイド](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-azure-   functions-core-tools)。
+  * [Azure Functions Core Tools インストール ガイド](<https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-azure>- functions-core-tools)。
 
   .NET SDK 検証を無効にするには、次のコマンドを使用します。
 
@@ -350,11 +350,11 @@ TeamsFx CLI には、コラボレーション シナリオ用のコマンドが�
   teamsfx permission grant --env dev --email user-email@user-tenant.com
   ```
 
-  必要なアクセス許可を受け取った後、プロジェクト作成者とコラボレーターは GitHub によって新しいコラボレーターとプロジェクトを共有でき、新しいコラボレーターは Microsoft 365 アカウントのすべてのアクセス許可を持つことができます。
+  必要なアクセス許可を受け取った後、プロジェクト作成者とコラボレーターはGitHubによって新しいコラボレーターとプロジェクトを共有でき、新しいコラボレーターはMicrosoft 365 アカウントのすべてのアクセス許可を持つことができます。
 
 * アクセス許可の状態を表示する
 
-  プロジェクトの作成者とコラボレーターは、コマンドを使用 `teamsfx permission status` して、特定の env に対する Microsoft 365 アカウントのアクセス許可を表示できます。
+  Project作成者とコラボレーターは、コマンドを使用`teamsfx permission status`して、特定の env に対Microsoft 365アカウントのアクセス許可を表示できます。
 
   ```bash
   teamsfx permission status --env dev

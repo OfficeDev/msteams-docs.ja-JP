@@ -1,29 +1,29 @@
 ---
 title: Microsoft Teams ツールキットと Visual Studio Code を使用してアプリを構築する
-description: Microsoft Teams Toolkit を使用して Visual Studio Code 内で直接優れたカスタム アプリの構築を開始する
+description: Microsoft Teams Toolkitを使用して、Visual Studio Code 内に直接優れたカスタム アプリを構築概要。
 keywords: teams Visual Studio コード ツールキット
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 841dddfd515fd202a36f4c8a6b490faccff7b537
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 4672c6be9629d70c50885ecd0d9d034c943a337a
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887605"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123077"
 ---
-# <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>Teams Toolkit と Visual Studio Code を使用してアプリをビルドする
+# <a name="build-apps-with-the-teams-toolkit-and-visual-studio-code"></a>Teams ToolkitコードとVisual Studio コードを使用してアプリをビルドする
 
-Teams Toolkit for Visual Studio Code を使用すると、開発者は、統合 ID、クラウド ストレージへのアクセス、Microsoft Graph からのデータ、および Azure および Microsoft 365 のその他のサービスへのアクセスを備えた Teams アプリを、開発者エクスペリエンスに対する "ゼロ構成" アプローチで作成および展開できます。  
+Visual Studio Code のTeams Toolkitにより、開発者は、統合 ID、クラウド ストレージへのアクセス、Microsoft Graph からのデータ、Azure のその他のサービスへのアクセス権を持つTeams アプリを作成してデプロイし、開発者エクスペリエンスに"ゼロ構成" アプローチでMicrosoft 365できます。
 
-また、Visual Studio または CLI (呼び出し) `teamsfx`としてツールキットを使用することもできます。
+ツールキットは、Visual Studioまたは CLI (呼び出し) `teamsfx`として使用することもできます。
 
-## <a name="install-the-teams-toolkit-for-visual-studio-code"></a>Teams Toolkit for Visual Studio Code をインストールする
+## <a name="install-the-teams-toolkit-for-visual-studio-code"></a>Visual Studio Code のTeams Toolkitをインストールする
 
 1. Visual Studio Code を開きます。
 1. 拡張機能ビュー (**Ctrl + Shift + X** / **⌘⇧-X** または **ビュー > Extensions**) を選択します。
 1. 検索ボックスに、「_Teams Toolkit_」と入力します。
-1. Teams Toolkit の横にある緑色のインストール ボタンを選択します。
+1. Teams Toolkitの横にある緑色のインストール ボタンを選択します。
 
 Teams Toolkit は、[Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) でも見つけることができます。
 
@@ -31,26 +31,26 @@ Teams Toolkit は、[Visual Studio Code Marketplace](https://marketplace.visuals
 
 - [Azure Functions Core Tools](/azure/azure-functions/functions-run-local)
 
-    Azure Functions Core Tools は、Azure でサービスを実行するときに必要な認証ヘルパーを含め、ローカル デバッグの実行中にバックエンド コンポーネントをローカルで実行するために使用されます。 npm `devDependencies`を使用してプロジェクト ディレクトリ内にインストールされます。
+    Azure Functions Core Tools は、Azure でサービスを実行するときに必要な認証ヘルパーを含め、ローカル デバッグの実行中にバックエンド コンポーネントをローカルで実行するために使用されます。 npmを使用してプロジェクト ディレクトリ内に`devDependencies`インストールされます。
 
 - [.NET SDK](/dotnet/core/install/)
 
-    .NET SDK は、ローカル デバッグと Azure Functions アプリのデプロイ用にカスタマイズされたバインドをインストールするために使用されます。 .NET 3.1 以降の SDK をグローバルにインストールしていない場合は、ポータブル バージョンがインストールされます。
+    .NET SDK は、ローカル デバッグとAzure Functions アプリのデプロイ用にカスタマイズされたバインドをインストールするために使用されます。 .NET 3.1 以降の SDK をグローバルにインストールしていない場合は、ポータブル バージョンがインストールされます。
 
 - [ngrok](https://ngrok.com/download)
 
-    Teams アプリの一部の機能 (会話ボット、メッセージング拡張機能、受信 Webhook) には受信接続が必要です。  トンネルを介して開発システムを Teams に公開する必要があります。 タブのみを含むアプリにはトンネルは必要ありません。  このパッケージはプロジェクト ディレクトリ内にインストールされます (npm `devDependencies` を使用)。
+    一部のTeams アプリ機能 (会話ボット、メッセージング拡張機能、受信 Webhook) には受信接続が必要です。  トンネルを介して開発システムを Teams に公開する必要があります。 タブのみを含むアプリにはトンネルは必要ありません。  このパッケージはプロジェクト ディレクトリ内にインストールされます (npm `devDependencies` を使用)。
 
-## <a name="use-the-teams-toolkit-for-visual-studio-code"></a>Teams Toolkit for Visual Studio Code を使用する
+## <a name="use-the-teams-toolkit-for-visual-studio-code"></a>Visual Studio Code のTeams Toolkitを使用する
 
 - [新しいプロジェクトを設定する](#set-up-a-new-teams-project)
 - [アプリを構成する](#configure-your-app)
 - [アプリをローカルで実行する](#install-and-run-your-app-locally)
 - [アプリを公開する](#publish-your-app-to-teams)
 
-## <a name="set-up-a-new-teams-project"></a>新しい Teams プロジェクトを設定する
+## <a name="set-up-a-new-teams-project"></a>新しいTeams プロジェクトを設定する
 
-Teams Toolkit では、Microsoft 365 SharePoint 環境でホストされている Azure または SPFx Web パーツでホストされている React アプリを作成できます。 Azure でホストされる新しい React アプリを作成するには、
+Teams Toolkitは、Azure でホストされているReact アプリ、またはMicrosoft 365 SharePoint環境でホストされている web パーツSPFx作成できます。 Azure でホストされる新しいReact アプリを作成するには:
 
 1. Visual Studio Code を開きます。
 1. サイド バーの Teams アイコンを選択して、Teams ツールキットを開きます。
@@ -83,30 +83,30 @@ Teams Toolkit では、Microsoft 365 SharePoint 環境でホストされてい�
 
 1. ワークスペース フォルダーを選択します。 作成するプロジェクトのワークスペース フォルダー内にフォルダーが作成されます。
 
-1. `helloworld` のように、アプリに適した名前を入力します。 アプリの名前は、英数字のみで構成されている必要があります。  **Enter** キーを押して続行します。
+1. `helloworld` のように、アプリに適した名前を入力します。 アプリの名前は、英数字のみで構成されている必要があります。 **Enter** キーを押して続行します。
 
-Teams アプリは数秒以内に作成されます。 スキャフォールディングされたアプリには、Azure Active Directory でのシングル サインオンと Microsoft Graph へのアクセスを処理するコードが含まれています。  Azure リソースを選択した場合は、それらのリソースのコードも使用できます。
+Teams アプリは数秒で作成されます。 スキャフォールディングされたアプリには、Azure Active Directoryと Microsoft Graphへのアクセスでシングル サインオンを処理するコードが含まれています。 Azure リソースを選択した場合は、それらのリソースのコードも使用できます。
 
-SPFx の作成と発行プロセスの詳細については、 [SPFx のチュートリアル](../get-started/first-app-spfx.md)を参照してください。
+SPFxの作成と発行プロセスの詳細については、[SPFxチュートリアル](../get-started/first-app-spfx.md)を参照してください。
 
 ## <a name="configure-your-app"></a>アプリを構成する
 
-その中核となる Teams アプリは、次の 3 つのコンポーネントを採用しています。
+その中核となるTeams アプリには、次の 3 つのコンポーネントが含まれています。
 
-  1. ユーザーがアプリを操作する Microsoft Teams クライアント (Web、デスクトップ、モバイル)。
-  1. Teams に表示されるコンテンツの要求に応答するサーバー。 たとえば、HTML タブのコンテンツやボットのアダプティブ カードなどです。
+  1. ユーザーがアプリと対話するMicrosoft Teams クライアント (Web、デスクトップ、モバイル)。
+  1. Teamsに表示されるコンテンツの要求に応答するサーバー。 たとえば、HTML タブのコンテンツやボットのアダプティブ カードなどです。
   1. Teams アプリ パッケージは、次の 3 つのファイルで構成されます。
 
       > [!div class="checklist"]
       >
       > - manifest.json。
       > - パブリックまたは組織のアプリ カタログに表示するアプリの [色アイコン](../resources/schema/manifest-schema.md#icons) 。
-      > - Teams アクティビティ バーに表示する [アウトライン アイコン](../resources/schema/manifest-schema.md#icons) 。
+      > - Teamsアクティビティ バーに表示する[アウトライン アイコン](../resources/schema/manifest-schema.md#icons)。
 
-マニフェストとアイコンは、Teams にアップロードされる `.fx` 前に、プロジェクトのフォルダーに保存されます。 アプリがインストールされると、Teams クライアントはマニフェスト ファイルを解析して、アプリの名前やサービスが配置されている URL などの必要な情報を判断します。
+マニフェストとアイコンは、Teamsにアップロードされる前に、プロジェクトのフォルダーに保存されます`.fx`。 アプリがインストールされると、Teams クライアントはマニフェスト ファイルを解析して、アプリの名前やサービスが配置されている URL などの必要な情報を判断します。
 
-1. アプリを構成するには、Visual Studio Code の **[Teams Toolkit** ] タブに移動します。
-1. **[プロジェクト**] セクションで [**マニフェスト エディター]** を選択します。
+1. アプリを構成するには、Visual Studio Code の **[Teams Toolkit**] タブに移動します。
+1. **Project** セクションで **マニフェスト エディター** を選択します。
 
 [アプリの詳細] ページのフィールドを編集すると、最終的にアプリ パッケージの一部として出荷される manifest.json ファイルの内容が更新されます。
 
@@ -116,7 +116,7 @@ SPFx の作成と発行プロセスの詳細については、 [SPFx のチュ�
 
 1. Visual Studio Code で、**F5** を押して、アプリケーションをデバッグ モードで実行します。
 
-   > アプリを初めて実行すると、すべての依存関係がダウンロードされ、アプリがビルドされます。  ビルドが完了すると、自動的にブラウザー ウィンドウが開きます。  この作業には 3 ～ 5 分かかります。
+   > アプリを初めて実行すると、すべての依存関係がダウンロードされ、アプリがビルドされます。  ビルドが完了すると、自動的にブラウザー ウィンドウが開きます。 この作業には 3 ～ 5 分かかります。
 
    必要に応じて、ローカル証明書のインストールを求めるメッセージがツールキットに表示されます。 この証明書により、Teams は `https://localhost` からアプリケーションを読み込むことができます。 以下のダイアログが表示されたら、「はい」を選択します。
 
@@ -129,23 +129,23 @@ SPFx の作成と発行プロセスの詳細については、 [SPFx のチュ�
 1. サインインするように求めるメッセージが表示されることがあります。 その場合は、Microsoft 365 アカウントでサインインします。
 1. Teams へのアプリのインストールを促すメッセージが表示された場合は、**[追加]** を押してください。
 
-バックエンドとフロントエンドの両方が Visual Studio Code デバッガーにフックされます。  これにより、コード内の任意の場所にブレークポイントを設定し、状態を検査できます。  ブラウザー内でフロントエンド デバッグ ツール (React Developer Tools など) を使用することもできます。  Visual Studio Code でのデバッグの詳細については、 [ドキュメントを参照してください](https://code.visualstudio.com/Docs/editor/debugging)。
+バックエンドとフロントエンドの両方が、Visual Studio Code デバッガーにフックされます。 これにより、コード内の任意の場所にブレークポイントを設定し、状態を検査できます。  ブラウザー内で任意のフロントエンド デバッグ ツール (React Developer Tools など) を使用することもできます。  Visual Studio Code でのデバッグの詳細については、[ドキュメントを参照してください](https://code.visualstudio.com/Docs/editor/debugging)。
 
 ## <a name="publish-your-app-to-teams"></a>アプリを Teams に公開する
 
-他のユーザーが使用できるようにするには、Teams 用開発者ポータルにアプリを発行する必要があります。
+他のユーザーが使用できるようにする前に、アプリを開発者ポータルに発行してTeamsする必要があります。
 
-1. アプリを発行するには、Visual Studio Code の **[Teams Toolkit** ] タブに移動します。
-1. [**プロジェクト**] セクションで [**Teams に発行**] を選択します。
+1. アプリを発行するには、Visual Studio Code の **[Teams Toolkit**] タブに移動します。
+1. [Project] セクションで [**発行してTeams**] を選択します。
 
-Azure ホスティングを使用している場合は、クラウドにプロビジョニングしてデプロイする必要があります。 SPFx パブリケーション プロセスの詳細については、 [SPFx のチュートリアル](../get-started/first-app-spfx.md)を参照してください。
+Azure ホスティングを使用している場合は、クラウドにプロビジョニングしてデプロイする必要があります。 SPFxパブリケーション プロセスの詳細については、[SPFxチュートリアル](../get-started/first-app-spfx.md)を参照してください。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [公開したアプリの管理とサポート](../concepts/deploy-and-publish/appsource/post-publish/overview.md)
 
 ## <a name="see-also"></a>関連項目
 
-* [Teams Toolkit と Visual Studio を使用してアプリを構築する](~/toolkit/visual-studio-overview.md)
-* [Microsoft Teams JavaScript クライアント SDK を使用してタブやその他のホストされたエクスペリエンスを構築する](~/tabs/how-to/using-teams-client-sdk.md)
+- [Teams Toolkit と Visual Studio を使用してアプリを構築する](~/toolkit/visual-studio-overview.md)
+- [Microsoft Teams JavaScript クライアント SDK を使用してタブやその他のホストされたエクスペリエンスを構築する](~/tabs/how-to/using-teams-client-sdk.md)

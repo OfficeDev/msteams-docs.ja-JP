@@ -1,17 +1,17 @@
 ---
 title: 個人用アプリをデザインする
-description: Teams 個人用アプリを設計して Microsoft Teams UI キットを入手する方法、ダッシュボード、フォーム、モバイルおよびデスクトップ エクスペリエンス用のタスク ボードなどのコンポーネントを作成する方法について説明します。 個人用アプリを開発するためのベスト プラクティスについて説明します。
+description: Teams 個人用アプリを設計して Microsoft Teams UI キットを入手する方法、ダッシュボード、フォーム、モバイルおよびデスクトップ エクスペリエンス用のタスク ボードなどのコンポーネントを作成する方法について説明します。
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: UI キット個人用アプリ ウェブビュー ナビゲーション ボット タブ iframe ダッシュボード フォーム テンプレート
-ms.openlocfilehash: 4ab361ad274eda0659e01bbd57a1b8ce3f84984f
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: fe22f63ec3bf93011f3acebd8f1269496e8444e5
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297234"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123928"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Microsoft Teams の個人用アプリの設計
 

@@ -5,12 +5,12 @@ description: カメラ、画像、メディア、マイク、QR コードなど�
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 8d5c288e35ef18ada9ff93390ff745798ba3b01c
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: e2f1e36d78e2bea5e5f4a5b4625c503e570dd77d
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757032"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123837"
 ---
 # <a name="device-capabilities"></a>デバイス機能
 
@@ -45,3 +45,9 @@ Microsoft Teams プラットフォームは、組み込みのファーストパ�
 * [場所ピッカー](location-capability.md)を使用して場所を共有します。
 
 また、ユーザーが Web アプリ エクスペリエンスでユーザーを検索して選択できるようにする、Teamsネイティブ[ユーザー ピッカー コントロール](people-picker-capability.md)を統合することもできます。
+
+## <a name="code-sample"></a>コード サンプル
+
+| サンプルの名前           | 説明 | Node.js    |
+|:---------------------|:--------------|:---------|
+|デバイス アクセス許可 | デバイスのアクセス許可のタブ サンプル アプリMicrosoft Teams示す方法について説明します。 |[表示](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|

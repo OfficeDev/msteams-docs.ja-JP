@@ -6,12 +6,12 @@ ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: 94f02ce31a9af3acb78fc6fef6f071df02bfd565
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 4cfa9beac8f75b04df8ac916a1d0e4e45919ffe3
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755861"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123655"
 ---
 # <a name="edit-teams-app-manifest"></a>アプリ マニフェストTeams編集する
 
@@ -32,7 +32,7 @@ ms.locfileid: "65755861"
 
 * [ローカル環境でマニフェスト ファイルをプレビューする](#preview-manifest-file-in-local-environment)
 * [リモート環境でマニフェスト ファイルをプレビューする](#preview-manifest-file-in-remote-environment)
- 
+
 ### <a name="preview-manifest-file-in-local-environment"></a>ローカル環境でマニフェスト ファイルをプレビューする
 
 ローカル環境でマニフェスト ファイルをプレビューするには、 **F5** キーを押してローカル デバッグを実行します。 既定のローカル設定が生成され、アプリ パッケージとプレビュー マニフェストがフォルダーの下に `build/appPackage` ビルドされます。
@@ -53,7 +53,7 @@ ms.locfileid: "65755861"
 
 * [**development** in Teams Toolkit extension] で [**クラウドでプロビジョニング**] を選択するか、
 * トリガー Teams: コマンド パレットから **クラウドにプロビジョニング** します。
- 
+
 リモート Teams アプリの構成を生成し、パッケージとプレビュー マニフェストをフォルダーの下に`build/appPackage`ビルドします。
 
 次の手順で、リモート環境でマニフェスト ファイルをプレビューすることもできます。
@@ -127,7 +127,6 @@ Teams Toolkit は、ローカル環境とリモート環境の `manifest.templat
 * `manifest.template.json`
 * `templates/appPackage`
 
-
 ローカル デバッグまたはプロビジョニング中に、Teams Toolkitから 、構成を`state.{env}.json`使用してマニフェスト`manifest.template.json`を読み込み、`config.{env}.json`[Dev Portal](https://dev.teams.microsoft.com/apps) でTeamsアプリを作成します。
 
 ## <a name="supported-placeholders-in-manifesttemplatejson"></a>manifest.template.json でサポートされているプレースホルダー
@@ -140,7 +139,7 @@ Teams Toolkit は、ローカル環境とリモート環境の `manifest.templat
 **カスタマイズされたパラメーターを追加するには**
 
 1. 次のようにカスタマイズされたパラメーターを追加します。</br>
-   a. パターン`{{config.manifest.xx}}`を含むプレースホルダー`manifest.template.json`を追加します。</br>
+   a.  パターン`{{config.manifest.xx}}`を含むプレースホルダー`manifest.template.json`を追加します。</br>
    b. に構成値 `config.{env}.json`を追加します。
 
      ```json
@@ -191,4 +190,4 @@ To preview values for all the environments, you can hover over the placeholder. 
 
 * [Manage multiple environments](TeamsFx-multi-env.md)
 * [Reference: Manifest schema for Microsoft Teams](../resources/schema/manifest-schema.md)
-* [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md) 
+* [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md)

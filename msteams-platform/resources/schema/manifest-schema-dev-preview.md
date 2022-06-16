@@ -1,16 +1,15 @@
 ---
 title: パブリック開発者プレビュー マニフェスト スキーマ リファレンス
-description: サンプル マニフェスト ファイルと、Microsoft Teams でサポートされているすべてのコンポーネントの説明
+description: Microsoft Teamsでサポートされているすべてのコンポーネントのサンプル マニフェスト ファイルと説明について説明します。
 ms.topic: reference
-keywords: チーム マニフェスト スキーマ開発者プレビュー
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: 82f1a4fd9a51089069d1f8ed40d5e169f49b62c7
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 09aea8d3288f52e26d9f1e1845a2124e77d1c280
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757494"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123042"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>参照: Microsoft Teams のパブリック開発者プレビュー マニフェスト スキーマ
 
@@ -755,9 +754,9 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 #### <a name="resource-specific-delegated-permissions"></a>リソース固有の委任されたアクセス許可
 
-委任されたアクセス許可を使用すると、アプリはサインインしているユーザーの代わりにデータにアクセスできます。 
+委任されたアクセス許可を使用すると、アプリはサインインしているユーザーの代わりにデータにアクセスできます。
 
-* **チームのリソース固有の委任されたアクセス許可** 
+* **チームのリソース固有の委任されたアクセス許可**
 
     |**[名前]**|**説明**|
     |---|---|

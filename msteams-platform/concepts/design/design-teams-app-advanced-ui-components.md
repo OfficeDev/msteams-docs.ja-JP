@@ -1,69 +1,69 @@
 ---
 title: 高度な UI コンポーネントを使用してアプリを設計する
 author: heath-hamilton
-description: Breadcrumbs、Teams、ステージ ビューなどの UI コンポーネントと関連する使用例について説明します。
+description: 階層リンク、通知バー、ステージ ビューなどのTeams UI コンポーネントと関連するユース ケースについて説明します。
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: dc3cb279ada3f130aeb6cd2626e6a36fcc8ecdc9
-ms.sourcegitcommit: 54f6690b559beedc330b971618e574d33d69e8a8
+ms.openlocfilehash: 2b009d4a31181ed1794dafdb8e224b7239bebd81
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62362915"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123420"
 ---
-# <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>高度な UI Microsoft Teamsを使用したアプリの設計
+# <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>高度な UI コンポーネントを使用したMicrosoft Teams アプリの設計
 
-次のコンポーネントは、ナビゲーションなどの一[](~/concepts/design/design-teams-app-basic-ui-components.md)般的な設計状況で使用できる基本的Teams UI コンポーネントの組み合わせです。
+次のコンポーネントは、ナビゲーションなどの一般的なTeams設計状況に使用できる[基本的な UI コンポーネント](~/concepts/design/design-teams-app-basic-ui-components.md)の組み合わせです。
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-UI に<a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a> キットには、Microsoft Teamsアプリを構築するために特別に設計されたコンポーネントとパターンTeamsがあります。 UI キットでは、ここに示すコンポーネントを直接デザインに挿入し、各コンポーネントの使い方の例を確認できます。
+<a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a> に基づいて、Microsoft Teams UI キットには、Teams アプリを構築するために特別に設計されたコンポーネントとパターンが含まれています。 UI キットでは、ここに示されているコンポーネントを直接デザインに取り込んで挿入し、各コンポーネントの使用方法の例をさらに確認できます。
 
 > [!div class="nextstepaction"]
 > [Microsoft Teams UI Kit (Figma) を入手する](https://www.figma.com/community/file/916836509871353159)
 
 ## <a name="breadcrumb"></a>Breadcrumb
 
-Breadcrumbs は、アプリの階層を伝えるナビゲーション支援です。 ユーザーは、表示しているページが全体的なエクスペリエンスに適合する方法を理解し、その階層内の上位レベルへの 1 回のクリックアクセスを許可するのに役立ちます。
+階層リンクは、アプリの階層を伝えるナビゲーション支援です。 ユーザーは、表示しているページが全体的なエクスペリエンスにどのように適合しているかを理解し、その階層内の上位レベルへのワンクリック アクセスを提供するのに役立ちます。
 
-### <a name="top-use-cases"></a>上位の使用例
+### <a name="top-use-cases"></a>上位のユース ケース
 
-* コミュニケーション階層
+* 階層の通信
 * ナビゲーション
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="例は、モバイル上のパンくずテンプレートを示しています。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="モバイルでの階層リンク テンプレートの例を示します。" border="false":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="例は、デスクトップ上のパンくずテンプレートを示しています。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="デスクトップ上の階層リンク テンプレートの例を示します。" border="false":::
 
 ## <a name="left-nav"></a>左ナビゲーション
 
-左側のナビゲーションを使用して、[ページ] タブ内の複数Teamsします。次の例では、左側のナビゲーションはチャネル リストとタブ コンテンツの間にあります。
+左側のナビゲーションを使用して、Teams タブ内の複数のページを参照します。次の例では、左側のナビゲーションはチャネル リストとタブ コンテンツの間にあります。
 
-### <a name="top-use-cases"></a>上位の使用例
+### <a name="top-use-cases"></a>上位のユース ケース
 
-* [ページ] タブ内の複数Teams参照します。
+* Teams タブ内の複数のページを参照します。
 * 複雑なアプリを複数のページに分割します。
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="例は、モバイル上の左ナビゲーション テンプレートを示しています。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="モバイル上の左側のナビゲーション テンプレートの例を示します。" border="false":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="例は、デスクトップ上の左側のナビゲーション テンプレートを示しています。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="デスクトップ上の左側のナビゲーション テンプレートの例を示します。" border="false":::
 
 ## <a name="notification-bar"></a>通知バー
 
-通知バーは、ユーザーが即座にアクションを実行する必要が生じない、簡潔で重要なメッセージを表示するための専用の領域です。 特定の背景色とアイコンは、特定の種類のメッセージに関連付けられる (以下を参照)。
+通知バーは、ユーザーがすぐにアクションを実行する必要のない、簡単で重要なメッセージを表示するための専用領域です。 特定の背景色とアイコンは、特定の種類のメッセージに関連付けられます (以下を参照)。
 
-通知バーは、UI 通知コンポーネントを使用Fluent[実装](https://fluentsite.z22.web.core.windows.net/0.59.0/components/alert/definition)できます。
+Fluent UI [アラート](https://fluentsite.z22.web.core.windows.net/0.59.0/components/alert/definition) コンポーネントを使用して通知バーを実装できます。
 
-### <a name="top-use-cases"></a>上位の使用例
+### <a name="top-use-cases"></a>上位のユース ケース
 
 * 重大なメッセージ、エラー、および警告
 * 成功メッセージ
@@ -71,47 +71,47 @@ Breadcrumbs は、アプリの階層を伝えるナビゲーション支援で�
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="例では、モバイルの通知バー UI テンプレートを表示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="モバイル上の通知バー UI テンプレートの例を示します。" border="false":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="例は、デスクトップ上の通知バーの UI テンプレートを示しています。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="デスクトップ上の通知バー UI テンプレートの例を示します。" border="false":::
 
 ## <a name="stage-view"></a>ステージ ビュー
 
-ステージ ビューを使用すると、ユーザーはコンテキストを切り替えることなく、画像、ファイル、または web サイトのようなコンテンツを大規模なTeams表示できます。 このコンポーネントは、主にコンテンツを表示する目的です。 複雑なやり取りには使用しない。
+ステージ ビューを使用すると、ユーザーは、コンテキストを切り替えることなく、Teamsの大きな画面にコンテンツ (画像、ファイル、Web サイトなど) を表示できます。 このコンポーネントは、主にコンテンツを表示するためのコンポーネントです。 複雑な対話には使用しないでください。
 
-ステージ ビューを実装する [方法を参照してください](~/tabs/tabs-link-unfurling.md)。
+[ステージ ビュー](~/tabs/tabs-link-unfurling.md)を実装する方法について説明します。
 
-### <a name="top-use-cases"></a>上位の使用例
+### <a name="top-use-cases"></a>上位のユース ケース
 
-* 別のアプリまたはブラウザーではなく、Teams内の大きなサーフェスにコンテンツを表示する
-* スポットライト メディアまたは他のリッチ コンテンツ
+* 別のアプリやブラウザーの代わりに、Teams内の大きなサーフェスにコンテンツを表示する
+* スポットライト メディアまたはその他のリッチ コンテンツ
 
 ### <a name="mobile"></a>Mobile
 
 アプリは、アダプティブ カード、共有リンク、またはビジュアル コンポーネント (グラフなど) からステージを起動できます。
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-stage.png" alt-text="例は、モバイル上のステージ テンプレートを示しています。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-stage.png" alt-text="モバイルでのステージ テンプレートの例を示します。" border="false":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="例は、デスクトップ上のステージ テンプレートを示しています。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="デスクトップ上のステージ テンプレートの例を示します。" border="false":::
 
 ## <a name="toolbar"></a>ツールバー
 
-ツールバーは、コントロールのセットをグループ化するコンテナーです。
+ツール バーは、一連のコントロールをグループ化するためのコンテナーです。
 
-### <a name="top-use-cases"></a>上位の使用例
+### <a name="top-use-cases"></a>上位のユース ケース
 
-* アプリ コンテンツに関するコンテキスト アクション
+* アプリ コンテンツに対するコンテキスト アクション
 * コンテキスト フィルターと検索
-* ナビゲーションとパンくず
+* ナビゲーションと階層リンク
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="例は、モバイルのツール バー テンプレートを示しています。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="モバイル上のツール バー テンプレートの例を示します。" border="false":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="例は、デスクトップ上のツール バー テンプレートを示しています。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="デスクトップ上のツール バー テンプレートの例を示します。" border="false":::

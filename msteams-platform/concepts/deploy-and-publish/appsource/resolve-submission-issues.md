@@ -1,16 +1,16 @@
 ---
 title: ストアの申請に関する問題を解決する
-description: Microsoft Teams ストアの送信に関する問題のトラブルシューティングと修正方法について説明します。
+description: この記事では、Microsoft Teams ストアの申請に関する問題のトラブルシューティングと修正を行う方法について説明します。
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: f69b3d1bbcdcf0f85151df62bbb032934a871d12
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 51427f2023ba566391a3d0b544d74e5658464a7c
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111389"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123210"
 ---
 # <a name="resolve-issues-if-your-microsoft-teams-store-submission-fails"></a>Microsoft Teams ストアの送信に失敗した場合に問題を解決する
 
@@ -84,7 +84,7 @@ Microsoft によって提供されるコンシェルジェ検証サービスは�
 
 <summary><b>アプリがベータ テスト中です。発行プロセスの時間を節約するために、アプリを送信できますか?</b></summary>
 
-その必要はありません。 Microsoft では、実稼働対応アプリのみが検証されます。
+いいえ。 Microsoft では、実稼働対応アプリのみが検証されます。
 
 <br>
 
@@ -94,7 +94,7 @@ Microsoft によって提供されるコンシェルジェ検証サービスは�
 
 <summary><b>パートナー センターで初めてアプリを送信する前に、teamsubm@microsoft.com メールに問い合わせることはできますか?</b></summary>
 
-その必要はありません。 パートナー センターで初めてアプリを送信するまで、Microsoft はアプリの検証を開始しません。
+いいえ。 パートナー センターで初めてアプリを送信するまで、Microsoft はアプリの検証を開始しません。
 
 <br>
 

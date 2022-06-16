@@ -2,7 +2,7 @@
 title: アダプティブ カードを使用した [ビルド] タブ
 metadata:
   title: アダプティブ カードを使用した [ビルド] タブ
-  description: このチュートリアルでは、Teams のタブでアダプティブ カードを設定する方法について説明します。
+  description: このラーニング モジュールでは、デスクトップとモバイルのタブでアダプティブ カードを設定してMicrosoft Teamsする方法について説明します。
   audience: Developer
   level: Beginner
   ms.date: 12/23/2021
@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: タブ認証の詳細
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 38b8d2c6aab61bbe2f96205a4ec3415ab8a47e1a
-  ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+  ms.openlocfilehash: 9dbd3e7e733eabb9237ef942f9a784d442691db3
+  ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 06/04/2022
-  ms.locfileid: "65887640"
+  ms.lasthandoff: 06/16/2022
+  ms.locfileid: "66123245"
 items:
 - durationInMinutes: 1
   content: >
@@ -40,13 +40,13 @@ items:
 
 
     ![デスクトップ モバイルのスクリーンショット](~/assets/images/adaptive-cards/desktop-mobile-screenshot.png)
-- title: 前提条件
+- title: 必須条件
   durationInMinutes: 1
   content: >
     次のツールをインストールし、開発環境を設定していることを確認します
 
 
-    * アカウントを持つ Microsoft Teams (ゲスト アカウントではありません)。
+    * (ゲスト アカウントではなく) アカウントでMicrosoft Teamsします。
 
     * [Visual Studio Code](https://code.visualstudio.com/)
 
@@ -54,17 +54,17 @@ items:
 
     * [ngrok](https://ngrok.com/) または [Tunnel Relay](https://github.com/OfficeDev/microsoft-teams-tunnelrelay)
 
-    * [Microsoft 365 開発者アカウント](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) 、またはアプリをインストールするための適切なアクセス許可を持つ Teams アカウントへのアクセス。
-- title: Microsoft Azure portal でボット登録を作成する
+    * [アプリを](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant)インストールするための適切なアクセス許可を持つ開発者アカウントまたはTeams アカウントへのアクセスをMicrosoft 365します。
+- title: Microsoft Azure ポータルでボット登録を作成する
   durationInMinutes: 2
-  content: "アダプティブ カード タブでは、Azure Bot Service がチームでタブを作成する必要があります。 Azure でボットを開発してホストするときに、ボットを Azure Bot Service に登録します。 次の操作を実行します。\n1. ngrok を使用して、Web サーバーのエンドポイントへのトンネルを作成します。\n1. Azure Bot Service にボットを登録する Azure Bot リソースを作成します。\n1. ボットの SSO 認証を有効にするクライアント シークレットを作成します。\n1. Microsoft Teams チャネルを追加して、ボットを Teams チャネルにデプロイします。\n1. 作成した ngrok トンネルにメッセージング エンドポイントを追加します。\n\nngrok を使用して、ローカルで実行されている Web サーバーのパブリックに利用可能な HTTPS エンドポイントへのトンネルを作成します。 ngrok で次のコマンドを実行します。\n\n```bash\nngrok http -host-header=rewrite 3978\n```\n\n**Azure Bot リソースを作成するには**\n\n1. [Azure portal を開きます](https://portal.azure.com/)。\n1. **[リソースの作成]** を選択します。\n1. 検索ボックスで **Azure ボット** を検索します。\n1. **Azure Bot** を選択します。\n\n    ![Azure Bot](~/assets/images/adaptive-cards/azure-bot.png)\n\n1. **[作成]** を選択します。\n1. **[ボット ハンドル]** フィールドでボット ハンドル名を入力します。\n1. ドロップダウン リストから **[サブスクリプション]** を選択します。\n1. ドロップダウン リストから **[リソース グループ]** を選択します。\n    \n    新しいリソース グループを作成するには、[ **新規作成**] を選択し、リソース名を入力 **し、[OK] を** 選択し、[ **新しいリソース グループの場所** ] ドロップダウン リストから必要な場所を選択します。\n\n1. **Microsoft アプリ ID** の **マルチテナント** として **アプリ種類** を選択します。\n\n    ![マルチテナント機能](~/assets/images/adaptive-cards/multi-tenant.png)\n\n    > [!NOTE]\n    > [ **作成の種類** ] の [Microsoft アプリ ID] セクションでは、新しいボットを作成するために [ **新しい Microsoft アプリ ID** の作成] が既に選択されています。 ボットを既に登録している場合は、[ **既存のアプリの登録を使用** する] を選択することもできます。 [既存のアプリ ID] フィールドに Microsoft **アプリ ID を** 入力し、[ **既存のアプリ パスワード** ] フィールドに値を入力します。\n\n1. **[確認 + 作成]** を選びます。\n\n    ![Azure Bot の作成](~/assets/images/adaptive-cards/create-azure-bot.png)\n\n1. 検証に合格した場合は、**[作成]** を選択します。\n\n    ボット サービスがプロビジョニングされるまで少し時間がかかります。\n\n    ![Azure Bot の検証](~/assets/images/adaptive-cards/validation-pane.png)\n\n1. **[リソースに移動]** を選択します。ボットと関連リソースがリソース グループに一覧表示されます。\n\n    ![リソースに移動](~/assets/images/adaptive-cards/go-to-resource-card.png)\n\n    これで、Azure ボットが作成されます。\n\n    ![Azure ボット リソースが作成されました](~/assets/images/adaptive-cards/azure-bot-ui.png)\n\n**クライアント シークレットを作成するには**\n\n1. **[設定]** で、**[構成]** を選択します。後で参照できるように、**Microsoft アプリ ID** (クライアント ID) を保存します。\n\n    ![Microsoft アプリ ID](~/assets/images/adaptive-cards/config-microsoft-app-id.png)\n\n    > [!NOTE]\n    > **[ボットの種類**] で **[MultiTenant**] が選択されていることを確認します。\n\n1. **Microsoft アプリ ID** の横にある **[管理]** を選択します。\n\n    ![ボットの管理](~/assets/images/adaptive-cards/manage-bot-label.png)\n\n1. **[クライアント シークレット]** セクションで、**[新しいクライアント シークレット]** を選択します。**[クライアント シークレットの追加]** ウィンドウが表示されます。  \n\n    ![新しいクライアント シークレット](~/assets/images/adaptive-cards/new-client-secret.png)\n\n1. **[説明]** を入力し、**[追加]** を選択します。\n\n    ![クライアント シークレット](~/assets/images/adaptive-cards/client-secret.png)\n\n1. **[値]** の列で、**[クリップボードにコピー]** を選択し、将来参照できるようにクライアント シークレット ID を保存します。\n\n    ![クライアント シークレットの値](~/assets/images/adaptive-cards/client-secret-value.png)\n   \n**Microsoft Teams チャネルを追加するには**\n\n1. **[ホーム]** に移動します。\n\n    ![ホーム ページを設定する](~/assets/images/adaptive-cards/bot-home-page.png)\n\n1. **[最近使ったリソース]** セクションに一覧表示されているボット開きます。\n1. 左側のウィンドウで **[チャネル**] を選択し、[Teams] を選択 **します**。 <img src=\"~/assets/images/bots/teamsicon.png\" alt=\"Teams icon\" width=\"20\"/>.\n\n    ![チャネル Teams](~/assets/images/adaptive-cards/channel-teams.png)\n\n1. サービス利用規約に同意するチェック ボックスをオンにし、**[承諾する]** を選択します。</br>\n\n    ![サービス利用規約の選択](~/assets/images/adaptive-cards/select-terms-of-service.png)\n\n1. **[保存]** を選択します。\n\n    ![[Teams] を選択します](~/assets/images/adaptive-cards/select-teams.png)\n\n**メッセージング エンドポイントを追加するには**\n\n1. **ホーム** ページに移動し、左側のウィンドウの **[設定]** で **[構成**] を選択します。\n1. ngrok に移動します。\n1. 次の図に示すように、HTTPS URL (https から io) をコピーします。\n\n    ![ngrok HTTPS URL](~/assets/images/adaptive-cards/ngrok-url.png)\n\n1. **メッセージング エンドポイント** で、ngrok から生成された HTTPS URL を追加し、URL の最後に **/api/messages** を追加します。\n\n    ![メッセージング エンドポイント](~/assets/images/adaptive-cards/ngrok-messaging-endpoint.png)\n\n1. **[適用]** を選択します。\n\n    Azure Bot Service でボットを正常に設定したので、ボット サービス接続を設定する必要があります。\n"
+  content: "アダプティブ カード タブでは、チームでタブを作成するために Azure Bot Serviceが必要になります。 Azure でボットを開発してホストするときに、ボットを Azure Bot Serviceに登録します。 次の操作を実行します。\n1. ngrok を使用して、Web サーバーのエンドポイントへのトンネルを作成します。\n1. Azure bot リソースを作成して、Azure Bot Serviceにボットを登録します。\n1. ボットの SSO 認証を有効にするクライアント シークレットを作成します。\n1. Microsoft Teams チャネルを追加して、ボットをTeams チャネルにデプロイします。\n1. 作成した ngrok トンネルにメッセージング エンドポイントを追加します。\n\nngrok を使用して、ローカルで実行されている Web サーバーのパブリックに利用可能な HTTPS エンドポイントへのトンネルを作成します。 ngrok で次のコマンドを実行します。\n\n```bash\nngrok http -host-header=rewrite 3978\n```\n\n**Azure Bot リソースを作成するには**\n\n1. [Azure portal](https://portal.azure.com/)を開きます。\n1. **[リソースの作成]** を選択します。\n1. 検索ボックスで **Azure ボット** を検索します。\n1. **Azure Bot** を選択します。\n\n    ![Azure Bot](~/assets/images/adaptive-cards/azure-bot.png)\n\n1. **[作成]** を選択します。\n1. **[ボット ハンドル]** フィールドでボット ハンドル名を入力します。\n1. ドロップダウン リストから **[サブスクリプション]** を選択します。\n1. ドロップダウン リストから **[リソース グループ]** を選択します。\n    \n    新しいリソース グループを作成するには、[ **新規作成**] を選択し、リソース名を入力 **し、[OK] を** 選択し、[ **新しいリソース グループの場所** ] ドロップダウン リストから必要な場所を選択します。\n\n1. **Microsoft アプリ ID** の **マルチテナント** として **アプリ種類** を選択します。\n\n    ![マルチテナント機能](~/assets/images/adaptive-cards/multi-tenant.png)\n\n    > [!NOTE]\n    > [ **作成の種類** ] の [Microsoft アプリ ID] セクションでは、新しいボットを作成するために [ **新しい Microsoft アプリ ID** の作成] が既に選択されています。 ボットを既に登録している場合は、[ **既存のアプリの登録を使用** する] を選択することもできます。 [既存のアプリ ID] フィールドに Microsoft **アプリ ID を** 入力し、[ **既存のアプリ パスワード** ] フィールドに値を入力します。\n\n1. **[確認 + 作成]** を選びます。\n\n    ![Azure Bot の作成](~/assets/images/adaptive-cards/create-azure-bot.png)\n\n1. 検証に合格した場合は、**[作成]** を選択します。\n\n    ボット サービスがプロビジョニングされるまで少し時間がかかります。\n\n    ![Azure Bot の検証](~/assets/images/adaptive-cards/validation-pane.png)\n\n1. **[リソースに移動]** を選択します。ボットと関連リソースがリソース グループに一覧表示されます。\n\n    ![リソースに移動](~/assets/images/adaptive-cards/go-to-resource-card.png)\n\n    これで、Azure ボットが作成されます。\n\n    ![Azure ボット リソースが作成されました](~/assets/images/adaptive-cards/azure-bot-ui.png)\n\n**クライアント シークレットを作成するには**\n\n1. **[設定]** で、**[構成]** を選択します。後で参照できるように、**Microsoft アプリ ID** (クライアント ID) を保存します。\n\n    ![Microsoft アプリ ID](~/assets/images/adaptive-cards/config-microsoft-app-id.png)\n\n    > [!NOTE]\n    > **[ボットの種類**] で **[MultiTenant**] が選択されていることを確認します。\n\n1. **Microsoft アプリ ID** の横にある **[管理]** を選択します。\n\n    ![ボットの管理](~/assets/images/adaptive-cards/manage-bot-label.png)\n\n1. **[クライアント シークレット]** セクションで、**[新しいクライアント シークレット]** を選択します。**[クライアント シークレットの追加]** ウィンドウが表示されます。  \n\n    ![新しいクライアント シークレット](~/assets/images/adaptive-cards/new-client-secret.png)\n\n1. **[説明]** を入力し、**[追加]** を選択します。\n\n    ![クライアント シークレット](~/assets/images/adaptive-cards/client-secret.png)\n\n1. **[値]** の列で、**[クリップボードにコピー]** を選択し、将来参照できるようにクライアント シークレット ID を保存します。\n\n    ![クライアント シークレットの値](~/assets/images/adaptive-cards/client-secret-value.png)\n   \n**Microsoft Teams チャネルを追加するには**\n\n1. **[ホーム]** に移動します。\n\n    ![ホーム ページを設定する](~/assets/images/adaptive-cards/bot-home-page.png)\n\n1. **[最近使ったリソース]** セクションに一覧表示されているボット開きます。\n1. 左側のウィンドウで **[チャネル**] を選択し、[**Teams**] を選択します。 <img src=\"~/assets/images/bots/teamsicon.png\" alt=\"Teams icon\" width=\"20\"/>.\n\n    ![チャネル Teams](~/assets/images/adaptive-cards/channel-teams.png)\n\n1. サービス利用規約に同意するチェック ボックスをオンにし、**[承諾する]** を選択します。</br>\n\n    ![サービス利用規約の選択](~/assets/images/adaptive-cards/select-terms-of-service.png)\n\n1. **[保存]** を選択します。\n\n    ![[Teams] を選択します](~/assets/images/adaptive-cards/select-teams.png)\n\n**メッセージング エンドポイントを追加するには**\n\n1. **ホーム** ページに移動し、左側のウィンドウの **設定** で **[構成**] を選択します。\n1. ngrok に移動します。\n1. 次の図に示すように、HTTPS URL (https から io) をコピーします。\n\n    ![ngrok HTTPS URL](~/assets/images/adaptive-cards/ngrok-url.png)\n\n1. **メッセージング エンドポイント** で、ngrok から生成された HTTPS URL を追加し、URL の最後に **/api/messages** を追加します。\n\n    ![メッセージング エンドポイント](~/assets/images/adaptive-cards/ngrok-messaging-endpoint.png)\n\n1. **[適用]** を選択します。\n\n    Azure Bot Serviceでボットを正常に設定したので、ボット サービス接続を設定する必要があります。\n"
 - title: ボット サービス接続を設定する
   durationInMinutes: 5
-  content: "Bot Service でユーザーがサインインしてボットにアクセスできるようにするには、ボットの SSO を構成する必要があります。 これを行うには、次の操作を実行します。\n\n1. Azure ボット リソースにリダイレクト URI を追加する\n1. API エンドポイントを公開する\n1. クライアント アプリケーションを承認する\n1. ダウンストリーム呼び出しに必要な API アクセス許可を追加する\n1. 暗黙的な許可を有効にする\n1. マニフェストを更新する\n1. Bot Service 接続を設定する\n\n**Azure ボット リソースにリダイレクト URI を追加するには**\n\n1. **Microsoft アプリ ID** の横にある **[管理**] を選択します。\n\n    ![ボットの管理](~/assets/images/adaptive-cards/manage-bot-label.png)\n\n1. ボット リソースの左側のウィンドウで [ **認証** ] を選択します。\n1. **[プラットフォームの構成]** で、**[プラットフォームの追加]** を選択します。\n1. **[Web]** を選びます。\n1. **「リダイレクト URI」と**`https://token.botframework.com/.auth/web/redirect`入力し、[構成] を選択 **します**。\n\n    ![Web リダイレクト URL を構成する](~/assets/images/adaptive-cards/configure-web-redirect-url.png)\n\n    リダイレクト URI が Azure ボット リソースに追加されます。\n\n    ![Web リダイレクト URL を表示する](~/assets/images/adaptive-cards/web-redirect-url-display.png)\n\n**API エンドポイントを公開するには**\n\n1. 左側のウィンドウで [ **API の公開** ] を選択します。\n1. アプリケーション ID URI の **[設定** ] を選択します。\n1. **ngrok** URL の代わりに`https://`表示および追加`api://`する **アプリケーション ID** URL を使用し、アプリ ID URL の先頭に追加します。\n\n    ![アプリ ID URI](~/assets/images/adaptive-cards/app-id-url.png)\n\n1. **[保存]** を選択します。\n1. **[スコープの追加]** を選択します。\n1. **[スコープ名] に****「access_as_user**」と入力します。\n1. [ **同意できるユーザー] で**、 **管理者とユーザー** に切り替えます。\n1. ボックスに次の値を入力します。\n\n    | フィールド | 値 |\n    | ----- | ----- |\n    | 管理者の同意表示名 | Teams はユーザーのプロファイルにアクセスできます |\n    | 管理者の同意の説明 | Teams がアプリの Web API を現在のユーザーとして呼び出すことができます。 |\n    | ユーザー同意表示名 | Teams はユーザー プロファイルにアクセスし、ユーザーに代わって要求を行うことができます |\n    | ユーザーの同意の説明 | Teams が持っているのと同じ権限でこのアプリの API を呼び出すようにします。 |\n\n1. **[状態]** が **[有効]** に設定されていることを確認してください。\n\n    ![スコープを追加する](~/assets/images/adaptive-cards/add-scope.png)\n\n1. **[スコープの追加]** を選択します。 スコープ名はアプリケーション ID URI と自動的に一致し、 **末尾に /access_as_user** が追加されます。\n\n**クライアント アプリケーションを承認するには**\n\n次の ID を **承認済みクライアント アプリケーション** として追加し、 **承認されたスコープ** のチェック ボックスをオンにし、[ **アプリケーションの追加**] を選択します。      \n* 1fec8e78-bce4-4aaf-ab1b-5451cc387264 (Teams モバイルまたはデスクトップ アプリケーション)            \n* 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 (Teams Web アプリケーション)</br>\n\n    ![クライアント アプリケーションを追加する](~/assets/images/adaptive-cards/add-client-aapplication.png)      \n\n**ダウンストリーム呼び出しに必要な API アクセス許可を追加するには**\n\n1. 左側のウィンドウ **[API アクセス許可]** を選択します。\n1. [**アクセス許可を追加**] を選択します。 **[要求 API のアクセス許可** ] ウィンドウが表示されます。\n1. **Microsoft API** を選択します。 次に **、Microsoft Graph** を選択し、[ **委任されたアクセス許可**] を選択します。\n1. アプリに必要なユーザー **委任アクセス許可** をダウンストリーム API (User.Read など) に追加します。</br>\n\n    ![API アクセス許可](~/assets/images/adaptive-cards/add-permissions.png)\n\n**暗黙的な付与を有効にするには**\n\n1. 左側のウィンドウで **[認証]** を選択します。\n1. **[アクセス トークン** と **ID トークン**] チェック ボックスをオンにします。</br>\n\n    ![認証トークン](~/assets/images/adaptive-cards/authentication-tokens.png)\n\n1. **[保存]** を選択し、変更内容を保存します。\n\n**マニフェストを更新するには**\n\n1. 左側のウィンドウで **[マニフェスト]** を選択します。\n1. 構成項目が次に設定されていることを確認します **\"accessTokenAcceptedVersion\": 2**。 そうでない場合は、その値を **2** に変更し、[ **保存]** を選択します。\n    \n    > [!NOTE]\n    > Teams でボットを既にテストしている場合は、このアプリをサインアウトして Teams をサインアウトする必要があります。 その後、もう一度サインインして、この変更を確認します。\n\n    ![マニフェストを更新する](~/assets/images/adaptive-cards/manifest.png)\n\n**Bot Service 接続を設定するには**\n\n1. **ホーム** ページに移動し、左側のウィンドウの **[設定]** で **[構成**] を選択します。\n1. **[OAuth 接続設定の追加]** を選択します。\n1. **[新しい接続設定]** で、次の詳細を入力します。\n\n    | フィールド | 値または説明 |\n    | ----- | ----- |\n    | 名前 | 新しい接続設定の名前を入力します。 この名前は、ボット サービス コードの設定で使用できます。 |\n    | Service Provider | **Azure Active Directory V2 を選択します**。 |\n    | クライアント ID | 以前に **Microsoft アプリ ID** として保存しました。 |\n    | クライアント シークレット | 以前にクライアント シークレット ID の **値** として保存しました。 |\n    | トークン交換 URL | API エンドポイントを公開するときに、以前に取得した **アプリケーション ID URL を** 使用します。 |\n    | テナント ID | common と入力 **します**。 |\n    | Scopes | **User.Read** と入力し、ダウンストリーム API へのアクセス許可を指定するときに必要なすべての **スコープ** を追加します。 |\n\n    :::image type=\"content\" source=\"./assets/images/adaptive-cards/oauth-connection-setting.png\" alt-text=\"ボット サービス接続\":::\n\n1. **[保存]** を選択します。\n"
+  content: "Bot Serviceでユーザーがサインインしてボットにアクセスできるようにするには、ボットの SSO を構成する必要があります。 これを行うには、次の操作を実行します。\n\n1. Azure ボット リソースにリダイレクト URI を追加する\n1. API エンドポイントを公開する\n1. クライアント アプリケーションを承認する\n1. ダウンストリーム呼び出しに必要な API アクセス許可を追加する\n1. 暗黙的な許可を有効にする\n1. マニフェストを更新する\n1. Bot Service接続を設定する\n\n**Azure ボット リソースにリダイレクト URI を追加するには**\n\n1. **Microsoft アプリ ID** の横にある **[管理**] を選択します。\n\n    ![ボットの管理](~/assets/images/adaptive-cards/manage-bot-label.png)\n\n1. ボット リソースの左側のウィンドウで [ **認証** ] を選択します。\n1. **[プラットフォームの構成]** で、**[プラットフォームの追加]** を選択します。\n1. **[Web]** を選びます。\n1. **「リダイレクト URI」と**`https://token.botframework.com/.auth/web/redirect`入力し、[構成] を選択 **します**。\n\n    ![Web リダイレクト URL を構成する](~/assets/images/adaptive-cards/configure-web-redirect-url.png)\n\n    リダイレクト URI が Azure ボット リソースに追加されます。\n\n    ![Web リダイレクト URL を表示する](~/assets/images/adaptive-cards/web-redirect-url-display.png)\n\n**API エンドポイントを公開するには**\n\n1. 左側のウィンドウで [ **API の公開** ] を選択します。\n1. アプリケーション ID URI の **[設定** ] を選択します。\n1. **ngrok** URL の代わりに`https://`表示および追加`api://`する **アプリケーション ID** URL を使用し、アプリ ID URL の先頭に追加します。\n\n    ![アプリ ID URI](~/assets/images/adaptive-cards/app-id-url.png)\n\n1. **[保存]** を選択します。\n1. **[スコープの追加]** を選択します。\n1. **[スコープ名] に****「access_as_user**」と入力します。\n1. **Who同意できますか?** **で、管理者とユーザー** に切り替えます。\n1. ボックスに次の値を入力します。\n\n    | フィールド | 値 |\n    | ----- | ----- |\n    | 管理同意表示名 | ユーザーのプロファイルにアクセスできるTeams |\n    | 管理同意の説明 | Teamsは、アプリの Web API を現在のユーザーとして呼び出すことができます。 |\n    | ユーザー同意表示名 | Teamsは、ユーザー プロファイルにアクセスし、ユーザーに代わって要求を行うことができます |\n    | ユーザーの同意の説明 | Teamsを有効にして、自分と同じ権限でこのアプリの API を呼び出します。 |\n\n1. **[状態]** が **[有効]** に設定されていることを確認してください。\n\n    ![スコープを追加する](~/assets/images/adaptive-cards/add-scope.png)\n\n1. **[スコープの追加]** を選択します。 スコープ名はアプリケーション ID URI と自動的に一致し、 **末尾に /access_as_user** が追加されます。\n\n**クライアント アプリケーションを承認するには**\n\n次の ID を **承認済みクライアント アプリケーション** として追加し、 **承認されたスコープ** のチェック ボックスをオンにし、[ **アプリケーションの追加**] を選択します。      \n* 1fec8e78-bce4-4aaf-ab1b-5451cc387264 (モバイルまたはデスクトップ アプリケーションTeams)            \n* 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 (Teams Web アプリケーション)</br>\n\n    ![クライアント アプリケーションを追加する](~/assets/images/adaptive-cards/add-client-aapplication.png)      \n\n**ダウンストリーム呼び出しに必要な API アクセス許可を追加するには**\n\n1. 左側のウィンドウ **[API アクセス許可]** を選択します。\n1. [**アクセス許可を追加**] を選択します。 **[要求 API のアクセス許可** ] ウィンドウが表示されます。\n1. **Microsoft API** を選択します。 次に、**Microsoft Graph** を選択し、[**委任されたアクセス許可**] を選択します。\n1. アプリに必要なユーザー **委任アクセス許可** をダウンストリーム API (User.Read など) に追加します。</br>\n\n    ![API アクセス許可](~/assets/images/adaptive-cards/add-permissions.png)\n\n**暗黙的な付与を有効にするには**\n\n1. 左側のウィンドウで **[認証]** を選択します。\n1. **[アクセス トークン** と **ID トークン**] チェック ボックスをオンにします。</br>\n\n    ![認証トークン](~/assets/images/adaptive-cards/authentication-tokens.png)\n\n1. **[保存]** を選択し、変更内容を保存します。\n\n**マニフェストを更新するには**\n\n1. 左側のウィンドウで **[マニフェスト]** を選択します。\n1. 構成項目が次に設定されていることを確認します **\"accessTokenAcceptedVersion\": 2**。 そうでない場合は、その値を **2** に変更し、[ **保存]** を選択します。\n    \n    > [!NOTE]\n    > Teamsでボットを既にテストしている場合は、このアプリをサインアウトしてTeamsサインアウトする必要があります。 その後、もう一度サインインして、この変更を確認します。\n\n    ![マニフェストを更新する](~/assets/images/adaptive-cards/manifest.png)\n\n**Bot Service接続を設定するには**\n\n1. **ホーム** ページに移動し、左側のウィンドウの **設定** で **[構成**] を選択します。\n1. **[OAuth 接続設定の追加]** を選択します。\n1. **[新しい接続設定]** で、次の詳細を入力します。\n\n    | Field | 値または説明 |\n    | ----- | ----- |\n    | 名前 | 新しい接続設定の名前を入力します。 この名前は、ボット サービス コードの設定で使用できます。 |\n    | Service Provider | **Azure Active Directory V2** を選択します。 |\n    | クライアント ID | 以前に **Microsoft アプリ ID** として保存しました。 |\n    | クライアント シークレット | 以前にクライアント シークレット ID の **値** として保存しました。 |\n    | トークン Exchange URL | API エンドポイントを公開するときに、以前に取得した **アプリケーション ID URL を** 使用します。 |\n    | テナント ID | common と入力 **します**。 |\n    | Scopes | **User.Read** と入力し、ダウンストリーム API へのアクセス許可を指定するときに必要なすべての **スコープ** を追加します。 |\n\n    :::image type=\"content\" source=\"./assets/images/adaptive-cards/oauth-connection-setting.png\" alt-text=\"ボット サービス接続\":::\n\n1. **[保存]** を選択します。\n"
 - title: ボットを構成する
   durationInMinutes: 1
   content: >
-    Microsoft Teams で会話型ボットを認証する方法を理解するようにボット サンプルを構成します。
+    Microsoft Teamsで会話型ボットを認証する方法を理解するようにボット サンプルを構成します。
 
 
     **ボット サンプルを構成して実行するには**
@@ -80,9 +80,9 @@ items:
 
     1. ダウンロードされたリポジトリのパスを確認してください。
 
-    1. エクスプローラーで、プロジェクトを選択 **します**。
+    1. エクスプローラーで、**Project** を選択します。
 
-    1. **TabWithAdpativeCardFlow フォルダー>タブ アダプティブ カード> csharp >サンプル> Microsoft-Teams サンプルに** 移動します。
+    1. **Microsoft-Teams-Samples > サンプル>タブ アダプティブ カード> csharp > TabWithAdpativeCardFlow フォルダーに** 移動します。
 
     1. Visual Studio Code で **appsettings.json** ファイルを開きます。
 
@@ -96,33 +96,33 @@ items:
         ![Appsettings Json](~/assets/images/adaptive-cards/appsettings-json.png)
 
     1. **[保存]** を選択します。
-- title: Teams でアプリを構成してアップロードする
+- title: Teamsでアプリを構成してアップロードする
   durationInMinutes: 2
   content: >
-    ボットをテストする最も包括的な方法は、アプリ パッケージを作成して Teams にアップロードすることです。 このメソッドは、すべてのスコープでボットで使用できる完全な機能をテストする唯一の方法です。 Teams アプリを構成して実行するには、ファイルを `manifest.zip` アップロードします。
+    ボットをテストする最も包括的な方法は、アプリ パッケージを作成して Teams にアップロードすることです。 このメソッドは、すべてのスコープでボットで使用できる完全な機能をテストする唯一の方法です。 ファイルをアップロードすることで、Teams アプリを`manifest.zip`構成して実行できます。
 
 
-    **manifest.zip ファイルをアップロードして Teams アプリを実行するには**
+    **manifest.zip ファイルをアップロードしてTeams アプリを実行するには**
 
 
-    1. エクスプローラーで、 **Microsoft-Teams-Samples > サンプル >タブ アダプティブ カード > csharp > TabWithAdpativeCardFlow > AppPackage** に移動してフォルダーを開きます。
+    1. エクスプローラーで、**Microsoft-Teams-Samples > サンプル>タブ アダプティブ カード> csharp > TabWithAdpativeCardFlow > AppPackage** に移動してフォルダーを開きます。
 
-    1. Visual Studio Code でファイルを `manifest.json` 開きます。
+    1. `manifest.json` Visual Studio Code でファイルを開きます。
 
     1. ファイルで `manifest.json` **{contentBotId} を** 探し、Microsoft アプリ ID を追加して保存します。
 
         ![マニフェストの構成](~/assets/images/adaptive-cards/manifest-vsc.png)
 
-    1. エクスプローラーで、 **AppPackage** フォルダーに移動します。
+    1. エクスプローラーで、**AppPackage** フォルダーに移動します。
 
     1. 作成`manifest.zip`する **AppPackage** フォルダーの内容を zip にします。
 
         > [!NOTE]
         > その `manifest.zip` 中に追加のフォルダーを含めてはなりません。 zip フォルダー内には、 **マニフェスト** JSON ソース ファイル、 **色** アイコン、 **アウトライン** アイコンが含まれている必要があります。
 
-    1. Teams に移動します。
+    1. Teamsに移動します。
 
-    1. アップロード `manifest.zip`するには、[ **ストア > アプリの管理] >カスタム アプリをアップロード** して開きます `manifest.zip`。
+    1. アップロード`manifest.zip`するには、**カスタム アプリ> アップロードアプリの管理Microsoft Store >** 選択し、開きます`manifest.zip`。
 
     1. [ **追加]** を選択して、チャットにタブを追加します。
 
@@ -133,9 +133,9 @@ items:
     1. タブにメッセージを送信します。
 
         ![デスクトップ モバイルのスクリーンショット](~/assets/images/adaptive-cards/desktop-mobile-screenshot.png)
-- title: Teams でタブを操作する
+- title: Teamsのタブを操作する
   durationInMinutes: 1
-  content: "タブを使用すると、チャネル内またはチャット内の専用スペース内のサービスやコンテンツにアクセスできます。\n\nタブを使用するには、次の手順に従います。\n\n1. Teams の左側のウィンドウで省略記号 ●●● を選択し、一覧からアプリを選択します。\n1. アクション コントロールを含むアダプティブ カードを示すタブ。\n\n    ![アクション コントロールを含むアダプティブ カードを示すタブ](~/assets/images/adaptive-cards/adaptive-cards-tab-action-controls.png)\n\n1. [ **サインイン** ] を選択し、アカウントを選択してタブにアクセスします。\n\n    ![サインイン](~/assets/images/adaptive-cards/sign-in-page.png)\n\n1. ホーム ページで [ **タスク モジュールの表示** ] を選択します。\n\n    ![タスク モジュールを表示する](~/assets/images/adaptive-cards/tab-home-page.png)\n\n1. Tab/fetch は、ユーザーがアダプティブ カード タブを開いたときにボットが受け取る最初の呼び出し要求です。ボットが要求を受信すると、タブの続行応答またはタブ認証応答が送信されます。\n\n    ![サンプル タスク モジュール](~/assets/images/adaptive-cards/sample-task-module.png)\n\n1. **アダプティブ カード**\n   の送信関数 **task/submit** 要求は、アクションを介して対応するデータを使用してボットにトリガーされます。 \n\n    ![タスク送信カード](~/assets/images/adaptive-cards/task-submit.png)\n\n1. [ **サインアウト**] を選択しない限り、Tab キーを押してサインインし続けます。\n\n    ![サインアウト](~/assets/images/adaptive-cards/sign-out.png)\n\n1. もう一度 **サインイン** するように更新します。\n\n    ![成功サインアウト](~/assets/images/adaptive-cards/success-sign-out.png)\n"
+  content: "タブを使用すると、チャネル内またはチャット内の専用スペース内のサービスやコンテンツにアクセスできます。\n\nタブを使用するには、次の手順に従います。\n\n1. Teamsの左側のウィンドウで省略記号 ●●● を選択し、一覧からアプリを選択します。\n1. アクション コントロールを含むアダプティブ カードを示すタブ。\n\n    ![アクション コントロールを含むアダプティブ カードを示すタブ](~/assets/images/adaptive-cards/adaptive-cards-tab-action-controls.png)\n\n1. [ **サインイン** ] を選択し、アカウントを選択してタブにアクセスします。\n\n    ![サインイン](~/assets/images/adaptive-cards/sign-in-page.png)\n\n1. ホーム ページで [ **タスク モジュールの表示** ] を選択します。\n\n    ![タスク モジュールを表示する](~/assets/images/adaptive-cards/tab-home-page.png)\n\n1. Tab/fetch は、ユーザーがアダプティブ カード タブを開いたときにボットが受け取る最初の呼び出し要求です。ボットが要求を受信すると、タブの続行応答またはタブ認証応答が送信されます。\n\n    ![サンプル タスク モジュール](~/assets/images/adaptive-cards/sample-task-module.png)\n\n1. **アダプティブ カード**\n   の送信関数 **task/submit** 要求は、アクションを介して対応するデータを使用してボットにトリガーされます。 \n\n    ![タスク送信カード](~/assets/images/adaptive-cards/task-submit.png)\n\n1. [ **サインアウト**] を選択しない限り、Tab キーを押してサインインし続けます。\n\n    ![サインアウト](~/assets/images/adaptive-cards/sign-out.png)\n\n1. もう一度 **サインイン** するように更新します。\n\n    ![成功サインアウト](~/assets/images/adaptive-cards/success-sign-out.png)\n"
 - title: チャレンジを完了する
   durationInMinutes: 1
   content: >
@@ -143,4 +143,4 @@ items:
 
 
     ![デスクトップ モバイルのスクリーンショット](~/assets/images/adaptive-cards/desktop-mobile-screenshot.png)
-- content: Bot Framework を使用して Microsoft Teams 用のアダプティブ カードの使用を開始するためのチュートリアルを完了しました。
+- content: Bot Framework を使用して、Microsoft Teams用のアダプティブ カードの使用を開始するためのチュートリアルを完了しました。

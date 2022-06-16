@@ -5,12 +5,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: a41cbac6a0cee3f42a6de2d436c227c858347d4e
-ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
+ms.openlocfilehash: 5615175ef6dac7f232f276c73f2991db8433224c
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65938962"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123977"
 ---
 # <a name="debug-your-teams-app-locally"></a>Teams アプリをローカルでデバッグする
 
@@ -177,7 +177,7 @@ Teams Toolkit を使用して新しいアプリを作成した後、次の手順
 <details>
 <summary><b>Teams アプリをサイドロード</b></summary>
 
-構成 **フロントエンドにアタッチ**、または **立ち上げボット** を起動すると、新しい Edge または Chrome ブラウザー インスタンスが起動され、Teams クライアントを読み込む Web ページが開きます。 Teams クライアントが読み込まれた後、Teams は、[Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}) 起動構成で定義されているサイドローディング URL によって制御される Teams アプリをサイドロードします。  Teams クライアントが Web ブラウザーに読み込まれたら、**[追加]** を選択するか、要件に従ってドロップダウン リストから 1 つ選択します。
+構成 **フロントエンドにアタッチ**、または **立ち上げボット** を起動すると、新しい Edge または Chrome ブラウザー インスタンスが起動され、Teams クライアントを読み込む Web ページが開きます。 Teams クライアントが読み込まれた後、Teams は、[Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}) 起動構成で定義されているサイドローディング URL によって制御される Teams アプリをサイドロードします。 Teams クライアントが Web ブラウザーに読み込まれたら、**[追加]** を選択するか、要件に従ってドロップダウン リストから 1 つ選択します。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="ローカル デバッグ" border="true":::
 

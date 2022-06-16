@@ -1,15 +1,14 @@
 ---
 title: Teams への共有の概要
-description: '[Teams に共有] ボタンを作成する方法について説明します'
+description: Teamsの概要と、Teams アプリとタブ アプリでチーム間共有ボタンを作成できる場所について説明します。
 ms.topic: how-to
 ms.localizationpriority: mediumss
-keywords: Teams への共有の概要
-ms.openlocfilehash: 1bc840c5b85042ef109d544a3b94cd55f6eae2ad
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: caf75bed6c741e5d504c91e2c7df5739ec786cbb
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297129"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123774"
 ---
 # <a name="share-to-teams"></a>Teams への共有
 

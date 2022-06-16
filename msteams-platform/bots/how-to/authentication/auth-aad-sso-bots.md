@@ -4,12 +4,12 @@ description: ユーザー トークンを取得する方法について説明し
 keywords: トークン、ユーザー トークン、ボット向け SSO サポート、アクセス許可、Microsoft Graph、Azure AD
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: cf62bc0834c6ce3792ef30355b2c6b3234127672
-ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
+ms.openlocfilehash: c10fe639417ad71814b060ba70e6a33c4ae4038f
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2022
-ms.locfileid: "65906263"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123469"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>ボット向けのシングル サインオン (SSO) サポート
 
@@ -96,7 +96,7 @@ Azure AD ポータルを使用してアプリを登録する手順は、[タブ�
    >
    > 次の重要な制限に注意する必要があります。
    >
-   > * email、profile、offline_access、OpenId などのユーザー レベルの Microsoft Graph API アクセス許可のみがサポートされます。 他の Microsoft Graph スコープ (Microsoft Graph スコープなど`User.Read``Mail.Read`) にアクセスする必要がある場合は、「[Microsoft Graph のアクセス許可とスコープを使用してタブ アプリを拡張](../../../tabs/how-to/authentication/tab-sso-graph-api.md)する」を参照してください。
+   > * email、profile、offline_access、OpenId などのユーザー レベルの Microsoft Graph API アクセス許可のみがサポートされます。 他の Microsoft Graph スコープ (たとえば`User.Read``Mail.Read`、Microsoft [Graphのアクセス許可とスコープを使用してタブ アプリを拡張](../../../tabs/how-to/authentication/tab-sso-graph-api.md)する) にアクセスする必要がある場合は、「」を参照してください。
    > * アプリケーションのドメイン名は、Azure AD アプリケーションに登録したドメイン名と同じである必要があります。
    > * 現在、アプリごとに複数のドメインはサポートされていません。
    > * `azurewebsites.net` ドメインを使用するアプリケーションは大衆的であり、セキュリティ リスクである可能性があるため、サポートされていません。
@@ -379,9 +379,9 @@ Azure AD ポータルを使用してアプリを登録する手順は、[タブ�
 
 ## <a name="code-sample"></a>コード サンプル
 
-|**サンプルの名前** | **説明** |**.NET** |
-|----------------|-----------------|--------------|
-|Bot framework SDK | ボット フレームワーク SDK を使用するためのサンプル。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|
+|**サンプルの名前** | **説明** |**.NET** |**C#** |**Node.js** |
+|----------------|-----------------|--------------|--------------|--------------|
+|Bot framework SDK | このサンプル コードでは、Microsoft Teams用のボットで認証を開始する方法を示します。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)|
 
 ## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
 

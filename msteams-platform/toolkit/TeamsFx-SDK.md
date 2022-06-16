@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: ae533039c8a0af5719dd884628d600ae3be11410
-ms.sourcegitcommit: 80edf3c964bb47a2ee13f9eda4334ad19e21f331
+ms.openlocfilehash: ed110f95d8f25ba4595d8b96e08c5e49a0c9225e
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65654888"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123767"
 ---
 # <a name="teamsfx-sdk"></a>TeamsFx SDK
 
@@ -23,8 +23,8 @@ TeamsFx は、Teams SSO を使用して、構成がゼロの 1 行のステー�
 
 TeamsFx SDK を使用すると、次のことができます。
 
-* クライアント環境とサーバー環境のコア機能にアクセスする 
-* 簡略化された方法でユーザー認証コードを記述する
+* クライアント環境とサーバー環境のコア機能にアクセスします。
+* 簡単な方法でユーザー認証コードを記述します。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -105,7 +105,9 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 
 ### <a name="teamsfx-class"></a>TeamsFx クラス
 
-既定では、TeamsFx クラス インスタンスは、環境変数からすべての TeamsFx 設定にアクセスします。 また、カスタマイズした構成値を設定して、既定値をオーバーライドすることもできます。 詳細については、「[構成をオーバーライドする](#override-configuration)」 を確認してください。 TeamsFx インスタンスを作成するときは、ID の種類も指定する必要があります。 ID には次の 2 種類があります:
+既定では、TeamsFx クラス インスタンスは、環境変数からすべての TeamsFx 設定にアクセスします。 また、カスタマイズした構成値を設定して、既定値をオーバーライドすることもできます。 詳細については、「[構成をオーバーライドする](#override-configuration)」 を確認してください。
+TeamsFx インスタンスを作成するときは、ID の種類も指定する必要があります。
+ID には次の 2 種類があります:
 
 * ユーザー ID
 * アプリケーション ID
@@ -141,16 +143,19 @@ TeamsFx を初期化する際は、ID の種類を選択する必要がありま
 各資格情報クラスター ゲットに対応するシナリオは次のとおりです。
 
 #### <a name="user-identity-in-browser-environment"></a>ブラウザー環境のユーザー ID
+
 `TeamsUserCredential` は、現在 Teams ユーザーの ID を表します。 この資格情報を使用すると、初めてユーザーの同意が要求されます。 これは、Teams SSO と On-Behalf-Of フローを利用してトークン交換を行います。 SDK では、開発者がブラウザー環境でユーザー ID を選択するときに、この資格情報が使用されます。
 
 必要な構成: `initiateLoginEndpoint`、`clientId`。
 
 #### <a name="user-identity-in-nodejs-environment"></a>Node.js 環境のユーザー ID
+
 `OnBehalfOfUserCredential` は On-Behalf-Of フローを使用し、Teams SSO トークンが必要です。 これは、Azure Function またはボットのシナリオで使用するように設計されています。 SDK は、開発者が Node.js 環境でユーザー ID を選択するときに、この資格情報を使用します。
 
 必要な構成: `authorityHost`、`tenantId`、`clientId`、`clientSecret`、`certificateContent`。
 
 #### <a name="application-identity-in-nodejs-environment"></a>Node.js 環境でのアプリケーション ID
+
 `AppCredential` は、アプリケーション ID を表します。 これは、ユーザーが時間トリガーの自動化ジョブのように関与していない場合に使用されます。 SDK は、開発者が Node.js 環境でアプリ ID を選択するときに、この資格情報を使用します。
 
 必要な構成: `tenantId`、`clientId`、`clientSecret`、`certificateContent`。
@@ -167,10 +172,11 @@ TeamsFx を初期化する際は、ID の種類を選択する必要がありま
 
 TeamsFx SDK には、サード パーティ製ライブラリの構成を容易にするためのいくつかの機能が用意されています。これらは、[コア フォルダー](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core)の下にあります。
 
-*  Microsoft Graph サービス: `createMicrosoftGraphClient` および `MsGraphAuthProvider` は、認証された Graph インスタンスの作成に役立ちます。
-*  SQL: `getTediousConnectionConfig` は面倒な接続構成を返します。
+* Microsoft Graph サービス: `createMicrosoftGraphClient` および `MsGraphAuthProvider` は、認証された Graph インスタンスの作成に役立ちます。
+* SQL: `getTediousConnectionConfig` は面倒な接続構成を返します。
 
 必要な構成:
+
 * `sqlServerEndpoint`、`sqlUsername`、ユーザー ID を使用する場合は `sqlPassword`
 * `sqlServerEndpoint`、MSI ID を使用する場合は `sqlIdentityId`
 
@@ -217,7 +223,7 @@ try {
 
 <details>
 <summary><b>タブ アプリで Graph API を使用する</b></summary>
- 
+
 `TeamsFx` と `createMicrosoftGraphClient` を使用します。
 
 ```ts
@@ -234,7 +240,6 @@ const profile = await graphClient.api("/me").get();
 <summary><b>Bot または Azure Function で既存の API を呼び出す API クライアントを作成する</b></summary>
 
 :::image type="content" source="~/assets/images/teams-toolkit-v2/teams toolkit fundamentals/createapi-client.PNG" alt-text="API クライアントを作成する" border="false":::
-
 
 </details>
 
@@ -259,7 +264,6 @@ const response = await apiClient.get("/api/" + functionName);
 
 <details>
 <summary><b>Azure Function でデータベース SQL にアクセスする</b></summary>
-
 
 `tedious`ライブラリを使用して SQL にアクセスし、認証を管理する `DefaultTediousConnectionConfiguration` 機能を利用します。
 `tedious`とは別に、`sqlConnectionConfig.getConfig()` の結果に基づいて、他の SQL ライブラリの接続構成を作成することもできます。
@@ -398,9 +402,10 @@ setLogFunction((level: LogLevel, message: string) => {
 ```
 
 ## <a name="override-configuration"></a>構成をオーバーライドする
+
 TeamsFx インスタンスを作成するときにカスタム構成を渡して、既定の構成をオーバーライドしたり、環境変数が見つからない場合に必須フィールドを設定したりできます。
 
-- VS Code Toolkit を使用してタブ プロジェクトを作成した場合は、事前構成済みの環境変数から次の構成値が使用されます。
+* VS Code Toolkit を使用してタブ プロジェクトを作成した場合は、事前構成済みの環境変数から次の構成値が使用されます。
   * authorityHost (REACT_APP_AUTHORITY_HOST)
   * tenantId (REACT_APP_TENANT_ID)
   * clientId (REACT_APP_CLIENT_ID)
@@ -409,7 +414,7 @@ TeamsFx インスタンスを作成するときにカスタム構成を渡して
   * apiEndpoint (REACT_APP_FUNC_ENDPOINT)
   * apiName (REACT_APP_FUNC_NAME)
 
-- VS Code Toolkitを使用して Azure Function / bot プロジェクトを作成した場合は、事前に構成された環境変数から次の構成値が使用されます。
+* VS Code Toolkitを使用して Azure Function / bot プロジェクトを作成した場合は、事前に構成された環境変数から次の構成値が使用されます。
   * initiateLoginEndpoint (INITIATE_LOGIN_ENDPOINT)
   * authorityHost (M365_AUTHORITY_HOST)
   * tenantId (M365_TENANT_ID)
@@ -426,6 +431,7 @@ TeamsFx インスタンスを作成するときにカスタム構成を渡して
 ## <a name="upgrade-latest-sdk-version"></a>最新の SDK バージョンをアップグレードする
 
 `loadConfiguration()` を持つバージョンの SDK を使用している場合は、次の手順に従って最新の SDK バージョンにアップグレードできます。
+
 1. `loadConfiguration()` を削除し、`new TeamsFx(IdentityType.User, { ...customConfig })` を使用してカスタマイズされた設定を渡す
 2. `new TeamsUserCredential()` を `new TeamsFx()` に置き換え
 3. `new M365TenantCredential()` を `new TeamsFx(IdentityType.App)` に置き換え

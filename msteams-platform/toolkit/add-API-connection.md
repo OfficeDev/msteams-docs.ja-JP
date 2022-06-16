@@ -1,19 +1,19 @@
 ---
 title: 既存の API にConnectする
 author: MuyangAmigo
-description: 既存の API への接続について説明します
+description: この記事では、ツールキットを使用して、既存の API へのサンプル アクセスをブートストラップする方法について説明します。 さまざまな認証の種類の一覧が表示されます。
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: Overview
 ms.date: 05/20/2022
-ms.openlocfilehash: b2dd6bfb1bc13b4d2b94ff57e2005b6450f59c23
-ms.sourcegitcommit: 74623035d7c18194e339f566c820e0653bc3d8b6
+ms.openlocfilehash: 2e00991f42b85e0e053fd94e68298c819a14a730
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656769"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66124005"
 ---
-# <a name="add-api-connection-to-teams-app"></a>Teams アプリへの API 接続の追加
+# <a name="add-api-connection-to-teams-app"></a>Teams アプリに API 接続を追加する
 
 Teams Toolkitは、Teams アプリケーションを構築するための既存の API にアクセスするのに役立ちます。 これらの API は、組織またはサード パーティによって開発されます。
 
@@ -25,9 +25,9 @@ Teams Toolkitは、これらの API にアクセスするための適切な SDK 
 
 Teams Toolkitを使用して既存の API に接続すると、Teams Toolkitは次の関数を実行します。
 
-* 下またはフォルダーに `./bot` サンプル コードを `./api` 生成する
-* パッケージへの参照を `@microsoft/teamsfx` 追加する `package.json`
-* ローカル デバッグを構成する API の  `.env.teamsfx.local` アプリケーション設定を追加する
+* 下またはフォルダーに `./bot` サンプル コードを `./api` 生成します。
+* パッケージへの参照を追加します`@microsoft/teamsfx``package.json`。
+* ローカル デバッグを構成する API の  `.env.teamsfx.local` アプリケーション設定を追加します。
 
 ### <a name="connect-to-api-in-visual-studio-code"></a>Visual Studio Code で API にConnectする
 
@@ -80,11 +80,11 @@ Teams Toolkitを使用して既存の API に接続すると、Teams Toolkitは�
 
    |**認証の種類**|**サンプル コマンド**|
    |-----------------------|------------------|
-   |基本|teamsfx add api-connection basic --endpoint <https://example.com> --component bot --alias example --user-name exampleuser --interactive false|
+   |基本|teamsfx add api-connection basic --endpoint <https://example.com> --component bot --alias example--user-name exampleuser --interactive false|
    |API キー|teamsfx add api-connection apikey --endpoint <https://example.com> --component bot --alias example --key-location header --key-name example-key-name --interactive false|
    |Azure AD|teamsfx add api-connection aad --endpoint <https://example.com> --component bot --alias example --app-type custom --tenant-id your_tenant_id --app-id your_app_id --interactive false|
    |証明 書|teamsfx add api-connection cert --endpoint <https://example.com> --component bot --alias example --interactive false|
-   |カスタム|teamsfx add api-connection custom --endpoint <https://example.com> --component bot --alias example --interactive false|
+   |Custom|teamsfx add api-connection custom --endpoint <https://example.com> --component bot --alias example --interactive false|
 
 ## <a name="understand-toolkit-updates-to-your-project"></a>プロジェクトの更新Toolkit理解する
 
@@ -121,7 +121,7 @@ Teams Toolkitを使用して既存の API に接続すると、Teams Toolkitは�
     生成された API クライアントは Axios API クライアントです。 Axios クライアントを使用して API に要求を行います。
 
      > [!Note]
-     >[Axios](https://www.npmjs.com/package/axios) は、http 要求に役立つ一般的な nodejs パッケージです。 http 要求を行う方法の詳細については、 [axios のサンプル ドキュメント](https://axios-http.com/docs/example) を参照して、http を作成する方法を確認してください。
+     > [Axios](https://www.npmjs.com/package/axios) は、http 要求に役立つ一般的な nodejs パッケージです。 http 要求を行う方法の詳細については、 [axios のサンプル ドキュメント](https://axios-http.com/docs/example) を参照して、http を作成する方法を確認してください。
 
 ## <a name="deploy-your-application-to-azure"></a>アプリケーションを Azure にデプロイする
 
@@ -160,6 +160,7 @@ class CustomAuthProvider implements AuthProvider {
     };
 }
 ```
+
 </details>
 <details>
 <summary><b>Azure AD アクセス許可の API にConnectする</b></summary>
@@ -204,6 +205,7 @@ API の適切なリソース スコープを持つトークンを取得する方
 
         > [!NOTE]
         > アプリケーションのアクセス許可の場合は、クライアント ID を使用します。
+        >
 </details>
 
 ## <a name="see-also"></a>関連項目

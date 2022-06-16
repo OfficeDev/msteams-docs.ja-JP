@@ -1,17 +1,17 @@
 ---
 author: heath-hamilton
-description: 既存の Web アプリと Microsoft Teams を統合するためのベスト プラクティスまたは考慮事項
+description: 既存の Web アプリと Microsoft Teamsを統合するためのベスト プラクティスまたは考慮事項について説明します。 API の要件、認証、およびアプリとTeamsのディープ リンクに関する情報が提供されます。
 ms.author: surbhigupta
 ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Teams 統合に関する考慮事項
-ms.openlocfilehash: e963019783699ebe0ed20b8e45632d03d6631e71
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 2df2d9be6962a70c4eb8a933a7c1893ae4bbdb25
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757641"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123802"
 ---
 # <a name="considerations-for-teams-integration"></a>Teams 統合に関する考慮事項
 

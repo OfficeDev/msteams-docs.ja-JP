@@ -1,17 +1,17 @@
 ---
 title: 会議拡張機能の設計
 author: heath-hamilton
-description: Teams 会議でアプリを設計し、Microsoft Teams UI Kit、会議中タブとユース ケース、応答性の高い動作と共有の会議ステージ、テーマとナビゲーションを取得する方法について説明します。
+description: Teams会議でアプリを設計し、Microsoft Teams UI キット、会議内タブ、ユース ケース、応答性の高い動作、共有会議ステージ、テーマ、ナビゲーションを取得する方法について説明します。
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: UI キット テンプレートの会議中の応答性の高い動作の共有会議ステージ
-ms.openlocfilehash: bb83da351a6b9d2b1219ef1e265e5e6269b34f26
-ms.sourcegitcommit: 2fdca6fb0ade3f6b460eb9a4dfea0a8e2ab8d3b9
-ms.translationtype: HT
+ms.openlocfilehash: 5688e858fda4aa90fb4bfa75ca70c145308d97ca
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63355824"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123000"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Microsoft Teams 会議拡張機能の設計
 
@@ -119,7 +119,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 スクロールを許可する場合は、次の点に注意してください:
 
 * iframe コンテンツ内のコンテンツは、垂直方向にのみスクロールできます。
-* ユーザーには、スクロールしたコンテンツのみが表示されます (上または下に何も表示されません)。 
+* ユーザーには、スクロールしたコンテンツのみが表示されます (上または下に何も表示されません)。
 * スクロール バーは iframe コンテンツの一部です。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-scrolling.png" alt-text="例では、会議中タブのスクロール方法を示します。" border="false":::
@@ -331,7 +331,7 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
 
 #### <a name="dont-include-competing-surfaces"></a>禁止: 競合するサーフェイスを含める
 
-アプリは、ステージで共同作業を行う場合でも、会議中のダイアログに応答する場合でも、一度に 1 つのサーフェイスにフォーカスするようにユーザーに求める必要があります。 (注: アプリがステージ上にある間は、他のアプリによってトリガーされるダイアログを保持することはできません)。 
+アプリは、ステージで共同作業を行う場合でも、会議中のダイアログに応答する場合でも、一度に 1 つのサーフェイスにフォーカスするようにユーザーに求める必要があります。 (注: アプリがステージ上にある間は、他のアプリによってトリガーされるダイアログを保持することはできません)。
 
    :::column-end:::
 :::row-end:::

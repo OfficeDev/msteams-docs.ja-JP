@@ -2,16 +2,15 @@
 title: Microsoft Teams アプリ テンプレート
 description: アプリのデプロイとインストールに関する詳細な手順と共に、Microsoft Teams プラットフォーム用のアプリ テンプレートを使用する方法について説明します。
 ms.topic: reference
-keywords: Microsoft Teams テンプレートのサンプル デモ
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 2b5bb6742a0ff55913e87041d6f4e59dd3795bc5
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 62554dbbfff947e8177be12b3a50a5bf623e0427
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757690"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123553"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 用のアプリ テンプレート
 
