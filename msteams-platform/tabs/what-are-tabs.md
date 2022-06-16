@@ -5,12 +5,12 @@ description: Teams プラットフォームでのカスタム タブの概要
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: c885587dcbd5447cd62b399d28504a096b705e71
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 42d03b988268f9042bd6f6e84d180c8d4b0b2209
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672972"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130418"
 ---
 # <a name="build-tabs-for-microsoft-teams"></a>Microsoft Teams 用のタブの構築
 
@@ -99,7 +99,7 @@ Teams には、個人用タブとチャネル タブ、またはグループ タ
 
 * [Microsoft Teams のカスタム タブ](/microsoftteams/built-in-custom-tabs#develop-custom-tabs)
 * [デバイスのアクセス許可を要求する](../concepts/device-capabilities/native-device-permissions.md)
-* [メディア機能を統合する](../concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [メディア機能を統合する](../concepts/device-capabilities/media-capabilities.md)
 * [QR の統合またはバーコード スキャナーの統合](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [場所機能を統合する](../concepts/device-capabilities/location-capability.md)
 * [モバイルのタブ](design/tabs-mobile.md#tabs-on-mobile)

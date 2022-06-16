@@ -4,12 +4,12 @@ description: コード サンプルを使用したタスク モジュール、�
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b33d553849376da73b3269ac9a5c0a551d6074d
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 04e27e780c1d2686be2ee73909c2d28bfc19fd23
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757305"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130411"
 ---
 # <a name="invoke-and-dismiss-task-modules"></a>タスク モジュールを呼び出して閉じる
 
@@ -237,6 +237,6 @@ Microsoft Teams では、タスク モジュール ヘッダーから HTML へ�
 ## <a name="see-also"></a>関連項目
 
 * [デバイスのアクセス許可を要求する](~/concepts/device-capabilities/native-device-permissions.md)
-* [メディア機能を統合する](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [メディア機能を統合する](~/concepts/device-capabilities/media-capabilities.md)
 * [Teams で QR コードまたはバーコード スキャナー機能を統合する](~/concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [Teams で位置情報機能を統合する](~/concepts/device-capabilities/location-capability.md)

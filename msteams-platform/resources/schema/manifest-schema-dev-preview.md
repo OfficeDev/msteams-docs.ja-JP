@@ -4,12 +4,12 @@ description: Microsoft Teamsでサポートされているすべてのコンポ�
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: 09aea8d3288f52e26d9f1e1845a2124e77d1c280
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 1b1aa4e1e7cf1bff8ff37ec89d555bd1758d16db
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123042"
+ms.locfileid: "66130516"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>参照: Microsoft Teams のパブリック開発者プレビュー マニフェスト スキーマ
 
@@ -793,4 +793,4 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 * [Microsoft Teams アプリの構造を理解する](~/concepts/design/app-structure.md)
 * [アプリのカスタマイズを有効にする](~/concepts/design/enable-app-customization.md)
 * [アプリをローカライズする](~/concepts/build-and-test/apps-localization.md)
-* [メディア機能を統合する](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [メディア機能を統合する](~/concepts/device-capabilities/media-capabilities.md)

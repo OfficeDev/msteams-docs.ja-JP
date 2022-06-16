@@ -5,12 +5,12 @@ description: カメラ、画像、メディア、マイク、QR コードなど�
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: e2f1e36d78e2bea5e5f4a5b4625c503e570dd77d
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 8795e3caef1582fca10ad8e0c396d98ef7b80422
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123837"
+ms.locfileid: "66130432"
 ---
 # <a name="device-capabilities"></a>デバイス機能
 
@@ -37,7 +37,7 @@ Microsoft Teams プラットフォームは、組み込みのファーストパ�
 
 ## <a name="integrate-device-capabilities"></a>デバイスの機能を統合する
 
-デバイス機能にアクセスしたら、Teams メディア機能 API を使用して[、メディア機能](mobile-camera-image-permissions.md)をTeams プラットフォームと統合して、ユーザー エクスペリエンスを向上させます。 これらの統合機能を使用すると、アプリは次のことができるようになります。
+デバイス機能にアクセスしたら、Teams メディア機能 API を使用して[、メディア機能](media-capabilities.md)をTeams プラットフォームと統合して、ユーザー エクスペリエンスを向上させます。 これらの統合機能を使用すると、アプリは次のことができるようになります。
 
 * 画像をキャプチャして共有します。
 * [スキャナー コントロール](qr-barcode-scanner-capability.md)を使用して QR またはバーコードをスキャンします。

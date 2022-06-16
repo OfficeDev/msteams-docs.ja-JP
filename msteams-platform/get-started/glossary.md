@@ -3,12 +3,12 @@ title: Microsoft Teams 開発者向けドキュメント - 用語集
 description: Microsoft Teams 開発者向けドキュメントで使用される用語について説明します
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 333f8e2efe0952d96907f6db2c76ebb688e3777d
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 99872eb963c708e4b2a45f01e743ae9845ffa4b0
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887626"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130425"
 ---
 # <a name="glossary"></a>用語集
 
@@ -117,7 +117,7 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 
 | 用語 | 定義 |
 | --- | --- |
-| [メディア機能](../concepts/device-capabilities/mobile-camera-image-permissions.md) | カメラやマイクなど、Teams アプリと統合できるネイティブ デバイス機能。 <br>**関連情報**: [機能](#c); [デバイス機能](#d) |
+| [メディア機能](../concepts/device-capabilities/media-capabilities.md) | カメラやマイクなど、Teams アプリと統合できるネイティブ デバイス機能。 <br>**関連情報**: [機能](#c); [デバイス機能](#d) |
 | [会議ボット](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | リアルタイムの音声、ビデオ、画面共有を使用して Teams の通話や会議と対話するボット。 <br>**関連情報**: [通話ボット](#c); [チャット ボット](#c) |
 | [会議のライフサイクル](../apps-in-teams-meetings/meeting-app-extensibility.md#meeting-lifecycle) | これは、会議前、会議中、および会議後のアプリ エクスペリエンスに及びます。 会議のライフサイクルの各段階で、タブ、ボット、メッセージ拡張機能を統合できます。 <br>**関連情報**: [会議中エクスペリエンス](#i) |
 | [会議ステージ](../sbs-meetings-stage-view.yml) | 会議拡張機能アプリの機能。 会議中にすべての参加者がアクセスできる共有スペースです。 これは、参加者がリアルタイムでアプリ コンテンツと対話して共同作業するのに役立ちます。 <br>**関連情報**: [ステージ ビュー](#s) |

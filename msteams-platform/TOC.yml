@@ -428,7 +428,7 @@
     - name: ブラウザーのデバイスのアクセス許可
       href: concepts/device-capabilities/browser-device-permissions.md
     - name: メディア機能を統合する
-      href: concepts/device-capabilities/mobile-camera-image-permissions.md
+      href: concepts/device-capabilities/media-capabilities.md
     - name: QR コードまたはバーコード スキャナー機能を統合する
       href: concepts/device-capabilities/qr-barcode-scanner-capability.md
     - name: 場所機能を統合する

@@ -6,12 +6,12 @@ keywords: カメラ メディア QR コード qrcode バー コード バーコ�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 1a8b89754ddf4f04fb2cc6f5890d8ce4c3f25dab
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 2dced2abc29ee21e50a3a37ccfed4811102cc8ce
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757718"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66130502"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>QR コードまたはバーコード スキャナー機能を統合する
 
@@ -27,7 +27,7 @@ QR またはバーコード スキャナー機能の統合の利点を次に示�
 * この機能を使用すると、ユーザーはスキャナー UI の中央にあるフレーム内の QR またはバーコードのみを配置する必要があり、コードは自動的にスキャンされます。 保存されたデータは、呼び出し元の Web アプリと共有されます。 これにより、長い製品コードやその他の関連情報を手動で入力する際の不便さと人的エラーを回避できます。
 
 QR またはバーコード スキャナー機能を統合するには、アプリ マニフェスト ファイルを更新し、[scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API を呼び出す必要があります。 効果的な統合を実現するには、ネイティブ QR またはバーコード スキャナー機能を使用できる [code スニペット](#code-snippet) で [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API を呼び出す方法をよく理解している必要があります。 API では、サポートされていないバーコード標準に対してエラーが発生します。
-Teams アプリのエラーを処理するには[、API 応答エラー](#error-handling)について理解しておくことが重要です。
+Teams アプリのエラーを処理するには、[API 応答エラー](#error-handling)を理解しておくことが重要です。
 
 > [!NOTE]
 > 現在、Microsoft Teams による QR バーコード スキャナー機能のサポートは、モバイル クライアントでのみ利用できます。
@@ -109,6 +109,6 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 ## <a name="see-also"></a>関連項目
 
-* [Teams でメディア機能を統合する](mobile-camera-image-permissions.md)
+* [メディア機能を統合する](media-capabilities.md)
 * [Teams で位置情報機能を統合する](location-capability.md)
 * [Teams でユーザー ピッカーを統合する](people-picker-capability.md)
