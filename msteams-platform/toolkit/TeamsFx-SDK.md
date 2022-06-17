@@ -1,17 +1,17 @@
 ---
 title: TeamsFx SDK
 author: MuyangAmigo
-description: TeamsFx SDK について
+description: このモジュールでは、TeamsFx SDK、コア概念とコード構造、高度なカスタマイズとシナリオについて説明します
 ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: ed110f95d8f25ba4595d8b96e08c5e49a0c9225e
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 7e2ecb4c64153a2ed06d235146165705227ef102
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123767"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142186"
 ---
 # <a name="teamsfx-sdk"></a>TeamsFx SDK
 

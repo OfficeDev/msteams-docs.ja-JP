@@ -1,81 +1,79 @@
 ---
-title: ボットのプロアクティブ メッセージング
-description: アプリ内のボットにプロアクティブ メッセージングを使用するMicrosoft Teams
+title: ボット用のプロアクティブ メッセージング
+description: このモジュールでは、ボットにプロアクティブ メッセージングを使用する方法と、Microsoft Teamsでのプロアクティブ メッセージングのベスト プラクティスについて説明します
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: Teams シナリオのプロアクティブ メッセージング会話ボット
-ms.openlocfilehash: 9b554699a86c369da92d9fc7512a098dc8b5a7bf
-ms.sourcegitcommit: 3dc9b539c6f7fbfb844c47a78e3b4d2200dabdad
+ms.openlocfilehash: ee193cd7dfcfec20f501483eabc3a485cff0caab
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64571006"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143131"
 ---
-# <a name="proactive-messaging-for-bots"></a>ボットのプロアクティブ メッセージング
+# <a name="proactive-messaging-for-bots"></a>ボット用のプロアクティブ メッセージング
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-プロアクティブ メッセージとは、ボットが会話を開始するために送信するメッセージです。 ボットに会話を開始させる理由として、次のようなものがあります。
+プロアクティブ メッセージは、会話を開始するためにボットによって送信されるメッセージです。 ボットに会話を開始させる理由として、次のようなものがあります。
 
-* 個人向けの会話におけるボットのウェルカム メッセージ
-* 投票の回答
-* 外部イベントの通知
+* 個人用ボットの会話のウェルカム メッセージ。
+* 応答をポーリングします。
+* 外部イベント通知。
+新しい会話スレッドを開始するメッセージの送信は、既存の会話に応答してメッセージを送信する場合とは異なります。ボットが新しい会話を開始すると、メッセージを投稿する既存の会話はありません。 プロアクティブ メッセージを送信するには、次の手順を実行する必要があります。
 
-新しい会話スレッドを開始するメッセージの送信は、既存の会話に応答してメッセージを送信する場合とは異なります。ボットが新しい会話を開始すると、メッセージを投稿する既存の会話はありません。 プロアクティブ メッセージを送信するには、次の必要があります。
-
-1. [何を言うのかを決める](#best-practices-for-proactive-messaging)
+1. [何を言うかを決める](#best-practices-for-proactive-messaging)
 1. [ユーザーの一意の ID とテナント ID を取得する](#obtain-necessary-user-information)
-1. [メッセージの送信](#examples)
+1. [メッセージを送信する](#examples)
 
-プロアクティブ メッセージを作成 **する場合**`MicrosoftAppCredentials.TrustServiceUrl`は、メッセージの送信に使用されるメッセージを作成する前に、サービス URL `ConnectorClient` を呼び出して渡す必要があります。 応答を受信しない場合は `401: Unauthorized` 、アプリによって応答が受信されます。 詳細については、以下の [サンプルを参照してください](#net-example-from-this-sample)。
+プロアクティブ メッセージを作成する場合は、メッセージの送信に使用するメッセージを作成`ConnectorClient`する前に、サービス URL を呼び出`MicrosoftAppCredentials.TrustServiceUrl`して渡す **必要があります**。 応答しない場合は、 `401: Unauthorized` アプリによって応答が受信されます。 詳細については、 [以下のサンプルを](#net-example-from-this-sample)参照してください。
 
 ## <a name="best-practices-for-proactive-messaging"></a>プロアクティブ メッセージングのベスト プラクティス
 
-プロアクティブ メッセージの送信は、ユーザーと通信する効果的な方法です。 ただし、ユーザーの観点からは、メッセージはプロンプトなしで表示されます。 ウェルカム メッセージがある場合、アプリを操作するのは初めてです。 この機能を使用し、このメッセージの目的を理解するためにユーザーに完全な情報を提供することが重要です。
+プロアクティブ メッセージを送信することは、ユーザーと通信するための効果的な方法です。 ただし、ユーザーの観点からは、メッセージはプロンプトなしで表示されます。 ウェルカム メッセージがある場合、アプリを操作するのは初めてです。 この機能を使用し、このメッセージの目的を理解するためにユーザーに完全な情報を提供することが重要です。
 
 プロアクティブ メッセージは、一般にウェルカム メッセージと通知の 2 つのカテゴリに分類されます。
 
 ### <a name="welcome-messages"></a>ウェルカム メッセージ
 
-プロアクティブ メッセージングを使用してウェルカム メッセージをユーザーに送信する場合は、ユーザーの観点からメッセージがプロンプトされていないと表示されます。 ウェルカム メッセージがある場合、アプリを操作するのは初めてです。 最適なウェルカム メッセージには、次のものが含まれます。
+プロアクティブ メッセージングを使用してウェルカム メッセージをユーザーに送信する場合は、ユーザーの観点から、メッセージがプロンプティングされていない状態で表示されることを確認します。 ウェルカム メッセージがある場合、アプリを操作するのは初めてです。 最適なウェルカム メッセージには、次のものが含まれます。
 
-* **このメッセージを受信する理由**: ユーザーがなぜこのメッセージを受信したのかは明らかです。 あなたのボットがチャネルにインストールされていて、すべてのユーザーにウェルカム メッセージを送信した場合は、どのチャネルにインストールされ、誰がインストールしたのかを通知する必要があります。
-* **何を提供しますか**: アプリで何ができますか? ユーザーはどのような価値を得られるのでしょうか?
-* **次に実行する必要がある** 操作: コマンドを試したり、何らかの方法でアプリを操作したりします。
+* **このメッセージを受け取る理由: このメッセージを受け取** る理由をユーザーに明確にする必要があります。 あなたのボットがチャネルにインストールされていて、すべてのユーザーにウェルカム メッセージを送信した場合は、どのチャネルにインストールされ、誰がインストールしたのかを通知する必要があります。
+* **何を提供しますか**:アプリで何ができますか? ユーザーはどのような価値を得られるのでしょうか?
+* **次に実行する必要がある操作**: コマンドを試すか、何らかの方法でアプリと対話するように招待します。
 
 ### <a name="notification-messages"></a>通知メッセージ
 
-プロアクティブ メッセージングを使用して通知を送信する場合は、ユーザーが通知に基づいて一般的なアクションを実行する明確なパスを持ち、通知が発生した理由を明確に理解する必要があります。 良好な通知メッセージには、通常、次のものが含まれます。
+プロアクティブ メッセージングを使用して通知を送信する場合は、ユーザーが通知に基づいて一般的なアクションを実行するための明確なパスと、通知が発生した理由を明確に理解する必要があります。 通常、適切な通知メッセージには次のものが含まれます。
 
-* **何が起こったか**: 通知の原因を明確に示します。
-* **何が起こったか**:通知を発生するために更新されたアイテム/物が明確である必要があります。
-* **Whoしました:** Who通知を送信する原因となるアクションを実行しましたか?
-* **ユーザーが通知に基** づいて簡単にアクションを実行できます。
-* **ユーザーがオプトアウトする方法**: 追加の通知をオプトアウトするパスをユーザーに提供します。
+* **発生した内容**: 通知の原因を明確に示します。
+* **発生した** 内容: 通知の原因として更新された項目/内容を明確にする必要があります。
+* **Whoしました。** Who通知が送信される原因となったアクションを実行しましたか?
+* **ユーザーができること**: ユーザーが通知に基づいて簡単にアクションを実行できるようにします。
+* **オプトアウトする方法**: ユーザーが追加の通知をオプトアウトするためのパスを指定します。
 
 ## <a name="obtain-necessary-user-information"></a>必要なユーザー情報を取得する
 
-ボットは、ユーザーの一意の ID とテナント ID をMicrosoft Teamsして、個々のユーザーと新しい *会話を**作成できます。* これらの値は、次のいずれかの方法で取得できます。
+ボットは、ユーザーの *一意の ID* と *テナント ID* を取得することで、個々のMicrosoft Teams ユーザーとの新しい会話を作成できます。 これらの値は、次のいずれかの方法で取得できます。
 
-* アプリ [がインストールされているチャネルから](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) チーム名簿を取得します。
-* ユーザーがチャネルでボットと対話するときにキャッシュ [する](~/resources/bot-v3/bot-conversations/bots-conv-channel.md)。
-* ユーザーがチャネル会話 [@mentioned、](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#-mentions) ボットは一部です。
-* アプリが個人用スコープにインストール[`conversationUpdate`](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)されている場合、または新しいメンバーがチャネルまたはグループ チャットに追加された場合に、それらをキャッシュします。
+* アプリがインストールされているチャネルから [チーム名簿をフェッチ](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) します。
+* ユーザーが [チャネルでボットと対話](~/resources/bot-v3/bot-conversations/bots-conv-channel.md)するときにキャッシュします。
+* ユーザーが [チャネル会話で@mentioned](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#-mentions) 場合、ボットは一部です。
+* アプリが個人用スコープにインストールされたとき、または新しいメンバーがチャネルまたはグループ チャットに追加されたときに、イベントを [受け取 `conversationUpdate`](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) ったときにキャッシュします。
 
 ### <a name="proactively-install-your-app-using-graph"></a>Graph を使用してアプリをプロアクティブにインストール
 
 > [!Note]
-> Graph を使用してアプリを積極的にインストールする方法は、現在ベータ版です。
+> グラフを使用してアプリをプロアクティブにインストールすることは、現在ベータ版です。
 
-以前にアプリをインストールまたは操作していないユーザーに事前にメッセージを送信する必要がある場合があります。 たとえば、[社内コミュニケーター](~/samples/app-templates.md#company-communicator)を使用して、組織全体にメッセージを送信する必要があるとします。 このシナリオでは、Graph APIを使用してユーザー向け`conversationUpdate`アプリをプロアクティブにインストールし、インストール時にアプリが受け取るイベントから必要な値をキャッシュできます。
+場合によっては、以前にアプリをインストールまたは操作していないユーザーに対してプロアクティブにメッセージを送信することが必要になる場合があります。 たとえば、[社内コミュニケーター](~/samples/app-templates.md#company-communicator)を使用して、組織全体にメッセージを送信する必要があるとします。 このシナリオでは、Graph APIを使用してユーザーのアプリを事前にインストールし、インストール時にアプリが受け取るイベントから`conversationUpdate`必要な値をキャッシュできます。
 
-組織のアプリ カタログまたはアプリ ストア内のアプリのみをインストールTeamsできます。
+インストールできるのは、組織のアプリ カタログまたはTeamsアプリ ストア内にあるアプリのみです。
 
-詳細については[、「ユーザー向けアプリ](/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)のインストール」Graphドキュメントを参照してください。 . [NET にもサンプルがあります](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)。
+詳細については、Graphドキュメントの「[ユーザー向けのアプリのインストール](/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)」を参照してください。 [.NET にはサンプル](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176)もあります。
 
 ## <a name="examples"></a>例
 
-REST API を使用して新しい会話を作成する前に、ベアラー トークンを認証して持っている必要があります。
+REST API を使用して新しい会話を作成する前に、必ず認証し、ベアラー トークンを持っていることを確認してください。
 
 ```json
 POST /v3/conversations
@@ -105,11 +103,11 @@ POST /v3/conversations
 }
 ```
 
-この ID は、個人チャットの一意の会話 ID です。 この値を保存し、ユーザーとの将来の対話のために再利用します。
+この ID は、個人用チャットの一意の会話 ID です。 この値をMicrosoft Storeし、今後ユーザーとやり取りするために再利用します。
 
 ### <a name="using-net"></a>.NET の使用
 
-この例では[、Microsoft.Bot.Connector.Teams NuGet](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)します。
+この例では、[Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet パッケージを使用します。
 
 ```csharp
 // Create or get existing chat conversation with user
@@ -130,7 +128,7 @@ Activity newActivity = new Activity()
 await client.Conversations.SendToConversationAsync(newActivity, response.Id);
 ```
 
-### <a name="using-nodejs"></a>ユーザー設定Node.js
+### <a name="using-nodejs"></a>Node.jsの使用
 
 ```javascript
 var address =
@@ -158,11 +156,11 @@ bot.send(msg);
 
 ## <a name="creating-a-channel-conversation"></a>チャネル会話の作成
 
-チームが追加したボットは、チャネルに投稿して新しい返信チェーンを作成できます。 SDK を使用している`startReplyChain()`場合Node.js Teamsを使用すると、正しいアクティビティ ID と会話 ID を持つ完全に入力されたアドレスが表示されます。 この機能を使用している場合C#の例を参照してください。
+チームが追加したボットは、チャネルに投稿して新しい返信チェーンを作成できます。 Node.js Teams SDK を使用している場合は、`startReplyChain()`正しいアクティビティ ID と会話 ID で完全に設定されたアドレスを指定します。 C# を使用している場合は、次の例を参照してください。
 
-または、REST API を使用して、リソースに POST 要求を発行 [`/conversations`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) することもできます。
+または、REST API を使用して、リソースに対して POST 要求を [`/conversations`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) 発行することもできます。
 
-### <a name="net-example-from-this-sample"></a>.NET の例 (この [サンプルから](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs))
+### <a name="net-example-from-this-sample"></a>.NET の例 ( [このサンプル](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs)から)
 
 ```csharp
 using Microsoft.Bot.Builder.Dialogs;
@@ -210,4 +208,4 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
 
 ## <a name="see-also"></a>関連項目
 
-[ボット フレームワークのサンプル](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)
+[Bot Framework Samples (Bot Framework のサンプル)](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)

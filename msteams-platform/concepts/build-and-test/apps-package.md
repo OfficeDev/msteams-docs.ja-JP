@@ -3,12 +3,12 @@ title: アプリをパッケージ化する
 description: テスト、アップロード、ストア発行用に Microsoft Teams アプリをパッケージ化する方法について説明します。
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: ec583ff0998baef7162156c8c5c5c07fde176321
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: d0315f641d345faf58429729d01e187899a4790f
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104092"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123991"
 ---
 # <a name="create-a-microsoft-teams-app-package"></a>Microsoft Teams アプリ パッケージを作成する
 

@@ -2,16 +2,15 @@
 title: アプリを設計する - デザイン システムを理解する
 description: アバター、レイアウト、アイコン、配色など、Microsoft Teams アプリの設計の基本について説明します。
 author: heath-hamilton
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: overview
-keywords: レイアウト グリッド アバター アイコン segoe ui タイポグラフィ
-ms.openlocfilehash: d4b8d610de0575024db5d7140c0452b00655ef91
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: d14be8730ba59a94947c595c7bfb5a2ff079259d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111298"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142886"
 ---
 # <a name="microsoft-teams-app-design-system"></a>Microsoft Teams アプリ設計システム
 

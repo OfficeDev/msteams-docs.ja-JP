@@ -1,16 +1,16 @@
 ---
 title: ボットを使用したチャネルとグループの会話
 author: surbhigupta
-description: チャネルまたはグループ チャットでボットのメッセージを送信、受信、処理する方法。 コード サンプルを使用して@mentionsを使用して、設計ガイドライン、会話スレッドを作成する方法について説明します
+description: チャネルまたはグループ チャットでボットのメッセージを送信、受信、処理する方法について説明します。 設計ガイドラインなどについて説明します。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 6b3adf491ccfed2401308f0b6d283047f24f91e2
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: e9edc06d65120748c6e87ba5a5916f55d6346a9e
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757179"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144412"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>ボットとのチャネルおよびグループ チャットの会話
 

@@ -1,15 +1,14 @@
 ---
 title: アプリをテストしてデバッグするためのセットアップを選択する
-description: ローカルおよびクラウドでホストされる環境で Microsoft Teams アプリをテストおよびデバッグするためのオプションについて説明します。
-keywords: チームがローカル クラウド ホストのホストでデバッグ アプリを実行する
+description: このモジュールでは、ローカルおよびクラウドでホストされている環境でMicrosoft Teamsアプリをテストおよびデバッグするためのオプションについて説明します。
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 7db690ff7d622e327d5029b6cb6fe8c3b101ada6
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 38259c31f9c6d29ffae22217a17ccf173b5ced59
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757011"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143418"
 ---
 # <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Microsoft Teams アプリをテストしてデバッグするためのセットアップを選択する
 
@@ -59,10 +58,12 @@ Microsoft Teams アプリをローカルで実行するための準備として 
 Microsoft Bot Framework に登録されているボットの場合は、この新しい ngrok エンドポイントを使用するようにボットのメッセージング エンドポイントを更新します。 たとえば、「 `https://2d1224fb.ngrok.io/api/messages` 」のように入力します。 ngrok が動作していることを検証する場合は、Bot Framework ポータルのテスト チャット ウィンドウでボットの応答をテストします。 エミュレーターと同様に、このテストでは、Teams固有の機能にアクセスすることはできません。
 
 > [!NOTE]
+>
 > * ボットのメッセージング エンドポイントを更新するには、Bot Framework を使用する必要があります。 [Bot Framework のボットのリスト](https://dev.botframework.com/bots)から、ボットを選択します。 ボットを Microsoft Azure に移行する必要はありません。 また、[App Studio](~/concepts/build-and-test/app-studio-overview.md) を使用してメッセージング エンドポイントを更新することもできます。
 
 > [!WARNING]
-> * App Studio を使用している場合は、Teams アプリを構成、配布、管理するための開発者ポータルを試してみることをお勧めします。App Studio は 2022 年 6 月 30 日までに非推奨になります
+>
+> * App Studio を使用している場合は、開発者ポータルで Teams アプリの設定、配布、管理を行うことをお勧めします。 App Studio は、2022 年 6 月 30 日までに廃止されます。
 
 ## <a name="cloud-hosted"></a>クラウド ホスト型
 

@@ -1,15 +1,14 @@
 ---
 title: アプリの概要をテストする
-description: Microsoft 365 で Teams カスタム アプリをテストしてデバッグするプロセスについて説明します。
+description: このモジュールでは、Microsoft 365でTeamsカスタム アプリをテストしてデバッグし、Microsoft 365 テナントにテスト データを追加するプロセスについて説明します。
 ms.topic: how-to
-ms.localizationpriority: high
-keywords: テスト アプリをアップロードする Microsoft 365 テナント チームを構成する
-ms.openlocfilehash: 98c00ece54e1654570556bac122e6760b283b73f
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 3fa27881a081021fbb405208a5f7b4a259012aaf
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111529"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144384"
 ---
 # <a name="test-your-app"></a>アプリのテスト
 

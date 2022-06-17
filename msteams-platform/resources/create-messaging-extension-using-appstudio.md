@@ -5,12 +5,12 @@ description: App Studio を使用してMicrosoft Teamsメッセージング拡�
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: 09bc7a7884f69c7c3ac4c8e195e5ac6d14d20990
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: b6eb248f84bdfb62c369ed2b95831c9d7eacec05
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032782"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142340"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>App Studio を使用してメッセージングの拡張機能を作成する
 
@@ -19,11 +19,11 @@ ms.locfileid: "66032782"
 
 高いレベルでは、メッセージング拡張機能を作成するには、次の手順を完了する必要があります。
 
-1. 開発環境を準備する
-2. Web サービスを作成してデプロイする (開発中は、ngrok などのトンネリング サービスを使用してローカルで実行する)
-3. Web サービスを Bot Framework に登録する
-4. アプリ パッケージを作成する
-5. Microsoft Teams にアプリ パッケージをアップロードする
+1. 開発環境を準備する。
+2. Web サービスを作成してデプロイします (開発中は、ngrok などのトンネリング サービスを使用してローカルで実行します)。
+3. Bot Framework に Web サービスを登録します。
+4. アプリ パッケージを作成します。
+5. Microsoft Teams にパッケージをアップロードする。
 
 Web サービスの作成、アプリ パッケージの作成、Web サービスの Bot Framework への登録は、任意の順序で行うことができます。 これらの 3 つの部分は非常に絡み合っているため、どの順序で行っても、他の部分を更新するには戻る必要があります。 登録にはデプロイされた Web サービスのメッセージング エンドポイントが必要であり、Web サービスには登録から作成された ID とパスワードが必要です。 また、アプリ マニフェストでは、Teamsを Web サービスに接続するためにその ID も必要です。
 

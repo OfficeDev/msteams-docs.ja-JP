@@ -1,17 +1,17 @@
 ---
 title: チャネル/グループ タブを作成する
 author: laujan
-description: コード例を使用してソース コードを確認するなど、Microsoft Teams 用 Yeoman Generator を使用してチャネルとグループ タブを作成するためのクイック スタート ガイド。
+description: このモジュールでは、コード例を使用してソース コードを確認するなど、yeoman Generator for Microsoft Teamsでチャネルとグループ タブを作成する方法について説明します。
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: cd50547e1b6d504d20d57ac1c23e741c6e043cf0
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 3ac2c126d2228fa17e693eebdf4b64a9149ef45f
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65672951"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142676"
 ---
 # <a name="channel-or-group-tab"></a>チャネル/グループ タブ
 
@@ -621,7 +621,7 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 
 1. [**開発者ポータル**](https://dev.teams.microsoft.com/home)に移動します。
 
-1. **[アプリ]** を開き、**[アプリのインポート]** を選択します。
+1. **アプリ** を開き、[**アプリのインポート**] を選択します。
 
 1. アプリ パッケージの名前は **tab.zip** です。 次のパスで使用できます:
 

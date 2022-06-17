@@ -1,23 +1,23 @@
 ---
 title: Teams Toolkitを使用して TeamsFx Projectで共同作業する
 author: yanjiang
-description: Teams Toolkitを使用して TeamsFx Projectで共同作業する
+description: この記事では、Teams Toolkitを使用して TeamsFx Projectで共同作業を行い、他の開発者と共同作業する方法について説明します。
 ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 099820252fd83a2d916e8d61f3b83b63291695e9
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 0f81990603b3e0275a057c489d7fac44ee0127cc
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66124019"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142060"
 ---
 # <a name="collaborate-on-teams-project-using-teams-toolkit"></a>Teams Toolkit を使用して Teams プロジェクトで共同作業する
 
 複数の開発者が連携して同じ TeamsFx プロジェクトのデバッグ、プロビジョニング、デプロイを行うことができますが、Teams アプリとMicrosoft Azure Active Directory (Azure AD) アプリの適切なアクセス許可を手動で設定する必要があります。 Teams Toolkitでは、開発者とプロジェクト所有者が TeamsFx プロジェクトに他の開発者またはコラボレーターを招待して、同じ TeamsFx プロジェクトをデバッグ、プロビジョニング、デプロイできるようにするコラボレーション機能がサポートされています。
 
-## <a name="prerequisites"></a>必須条件
+## <a name="prerequisites"></a>前提条件
 
 * Microsoft 365 サブスクリプション
 * 有効なサブスクリプションを持つ Azure

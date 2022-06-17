@@ -1,15 +1,15 @@
 ---
 title: シーケンシャル ワークフロー
-description: ユニバーサル アクションとコード サンプルを使用したアダプティブ カードのシーケンシャル ワークフローについて学習する
+description: このモジュールでは、ユニバーサル アクションとコード サンプルを使用したアダプティブ カードのシーケンシャル ワークフローについて説明します
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 32200fc7a4df12567ba4000aad34e5a229dbc466
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 40743ccd67386aae72685536ede1ae50d5aea907
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073782"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143313"
 ---
 # <a name="sequential-workflows"></a>シーケンシャル ワークフロー
 
@@ -127,8 +127,8 @@ var adaptiveCardResponse = JObject.FromObject(new
 
 |サンプルの名前 | 説明 | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Teams ケータリング ボット | アダプティブ カードを使用して、食品注文を受け入れるボットを作成します。 |[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| まだ利用できません。 |
-| シーケンシャル ワークフローアダプティブ カード | シーケンシャル ワークフロー、ユーザー固有のビュー、最新のアダプティブ カードをボットに実装する方法を示します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+| Teams ケータリング ボット | アダプティブ カードを使用して、料理の注文を受け付けるボットを作成します。 |[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| まだ利用できません。 |
+| シーケンシャル ワークフロー アダプティブ カード | シーケンシャル ワークフロー、ユーザー固有のビュー、最新のアダプティブ カードをボットに実装する方法を示します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## <a name="see-also"></a>関連項目
 

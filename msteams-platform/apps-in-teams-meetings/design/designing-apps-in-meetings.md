@@ -5,13 +5,12 @@ description: Teams会議でアプリを設計し、Microsoft Teams UI キット�
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-keywords: UI キット テンプレートの会議中の応答性の高い動作の共有会議ステージ
-ms.openlocfilehash: 5688e858fda4aa90fb4bfa75ca70c145308d97ca
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 9d5925df278591cc75abaaa8f030a2d7cfc1c80c
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123000"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142683"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Microsoft Teams 会議拡張機能の設計
 
@@ -187,11 +186,11 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
 
 ユーザーが会議ステージでアプリ コンテンツの一部またはすべてを共有および操作することを許可できます。 会議中にユーザーがこの機能を使用する方法の例を次に示します。
 
-* 文書の編集
+* ドキュメントを編集する。
 * ホワイト ボード
-* ダッシュボードの確認
-* ビデオを視聴する
-* ゲームをプレイする
+* ダッシュボードを確認する。
+* ビデオを見る。
+* ゲームをプレイしています。
 
 会議ステージで共有されるアプリは、共有画面と同じ領域を占有します。 また、ステージはすべての会議参加者の向きを同じように方向にさせます。
 

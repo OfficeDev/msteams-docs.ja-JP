@@ -1,15 +1,14 @@
 ---
 title: ボットにカード アクションを追加する
-description: Microsoft Teams のカード アクションと、ボットでの使用方法について説明します。
+description: このモジュールでは、Microsoft Teamsのカード アクションとは何か、アクションの種類、ボットでカード アクションを使用する方法について説明します
 ms.localizationpriority: medium
 ms.topic: conceptual
-keywords: チーム ボット カード アクション
-ms.openlocfilehash: 305706f3dfad820584f7a95e231870d258caa8ed
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: e06cb41645480423727924127501b6ea3f85f953
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756486"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144174"
 ---
 # <a name="card-actions"></a>カード アクション
 

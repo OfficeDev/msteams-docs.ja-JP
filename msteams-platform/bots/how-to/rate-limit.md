@@ -1,15 +1,14 @@
 ---
 title: Teams でレートを制限してボットを最適化する
-description: コード例を使用して、スレッドごとのボットあたりの制限とすべてのボットの制限あたりのボットの処理レート制限について説明します。 さらに、Microsoft Teamsのレート制限のベスト プラクティスについて説明します。
+description: コード例を使用して、スレッドあたりのボットあたりの制限とすべてのボットの制限あたりのボットの処理レート制限について説明します
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: teams bots のレート制限
-ms.openlocfilehash: a864970bd837ef4af3ccebe0b09ca4d38ac7b76b
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: f6afb9cd3b3894dff31ecaf5e8d9ece7204248a1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757151"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143733"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Teams でレートを制限してボットを最適化する
 

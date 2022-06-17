@@ -2,16 +2,15 @@
 title: SameSite Cookie 属性
 author: laujan
 description: SameSite Cookie、その属性、Teams タブ、タスク モジュール、メッセージング拡張機能における意味、Teams での認証など、Cookie の種類について説明します。
-keywords: Cookie 属性 SameSite
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: f93ee29198400a0cabd4512d9abb4de80cebb9da
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: fee4855c8dd6c8dfdb83bce8b6d4d0c5da348724
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756990"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142732"
 ---
 # <a name="samesite-cookie-attribute"></a>SameSite Cookie 属性
 

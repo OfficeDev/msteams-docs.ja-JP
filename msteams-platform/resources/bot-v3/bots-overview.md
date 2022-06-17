@@ -1,16 +1,15 @@
 ---
 title: Microsoft Teams アプリにボットを追加する
-description: Microsoft Teams でボットの開発を開始する方法について説明します
+description: このモジュールでは、Microsoft Teamsでボットの開発を開始する方法と、Teamsにボットを追加するためのすべての要件について説明します。
 ms.topic: conceptual
-keywords: Teams ボット開発
 ms.localizationpriority: medium
 ms.date: 05/20/2018
-ms.openlocfilehash: f592ae06efc2c416e70530fe2c46cbfbfc03140b
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 6c57371e0df5739d800fc07e46a014aeb3836bc8
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755854"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142361"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>Microsoft Teams アプリにボットを追加する
 
@@ -27,11 +26,11 @@ ms.locfileid: "65755854"
 
 ボットは、会話でやり取りする他のチーム メンバーと同じように表示されます。ただし、ボットには六角形のアバター アイコンがあり、常にオンラインです。
 
-ボットの動作は、関係する会話の種類に応じて多少異なります。 Teams のボットでは、[アプリ マニフェスト](~/resources/schema/manifest-schema.md)のスコープと呼ばれるいくつかの種類の会話がサポートされています。
+ボットの動作は、ボットが関係する会話の種類によって異なります。 Teams のボットでは、[アプリ マニフェスト](~/resources/schema/manifest-schema.md)のスコープと呼ばれるいくつかの種類の会話がサポートされています。
 
 * `teams` チャネル会話とも呼ばれます。
 * `personal` ボットと 1 人のユーザーとの会話。
-* `groupChat`: ボットと 2 人以上のユーザーとの会話。
+* `groupChat` ボットと 2 人以上のユーザー間の会話。
 
 詳細については、「[Microsoft Teams ボットと会話する](~/resources/bot-v3/bot-conversations/bots-conversations.md)」を参照してください。
 
@@ -60,7 +59,7 @@ SDK 拡張機能は、ボット ビルダー SDK を含む依存関係をイン�
 
 ## <a name="build-a-great-teams-bot"></a>優れたTeams ボットをビルドする
 
-次のトピックでは、Teams 用の優れたボットを作成するプロセスについて説明します。
+次の記事では、Teams用の優れたボットを作成するプロセスについて説明します。
 
 * [ボットを作成する](~/resources/bot-v3/bots-create.md): Bot Framework チームが提供する優れたツール、ドキュメント、コミュニティを活用します。
 * [ボットと会話する](~/resources/bot-v3/bot-conversations/bots-conversations.md): 基本的な会話フローを追加し、チャネル固有の機能を活用します。 .NET または Node.js で開発する場合は、ボット ビルダー SDK の拡張機能を使用して作業を簡略化します。

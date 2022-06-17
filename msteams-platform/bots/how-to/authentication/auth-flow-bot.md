@@ -1,15 +1,14 @@
 ---
 title: ボットのMicrosoft Teams認証フロー
-description: コード サンプルを使用したボットでのMicrosoft Teams認証フローについて説明します。
-keywords: teams 認証フロー ボット
+description: このモジュールでは、Microsoft Teamsとそのコード サンプルでボットの認証フローを実行する方法について説明します。
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 3e677c746b4cc548b4f8977dbaf61666c3fa85ce
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: de263a75b7b8077570dca2f94bf6937d9d339bbe
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756871"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143236"
 ---
 # <a name="authentication-flow-for-bots-in-microsoft-teams"></a>Microsoft Teams でのボットの認証フロー
 

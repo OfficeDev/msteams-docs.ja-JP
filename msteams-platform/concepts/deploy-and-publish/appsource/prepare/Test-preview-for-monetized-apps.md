@@ -1,17 +1,16 @@
 ---
 title: 収益化されたアプリのテスト プレビュー
 author: v-ypalikila
-description: オファーを公開する前に、Teams アプリの SaaS プレビュー オファーを作成してテストします。
+description: オファーをライブプッシュする前に、Teams アプリの SaaS プレビュー オファーを作成してテストする方法について説明します。 サービスとしてのソフトウェア (SaaS) オファーを作成し、Teams で収益化されたアプリのエンドツーエンドの購入エクスペリエンスをテストできます。
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
-keywords: チーム アプリ SaaS オファー プレビュー オファー テスト プレビュー収益化された SaaS
-ms.openlocfilehash: aff18ba3635b1d5f07cefe73b107211298043a74
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 3577ebc9fb9e6126b25b6e131e9abb8d902634b2
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073817"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123704"
 ---
 # <a name="test-preview-for-monetized-apps"></a>収益化されたアプリのテスト プレビュー
 

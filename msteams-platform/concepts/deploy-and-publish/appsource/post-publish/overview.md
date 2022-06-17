@@ -1,16 +1,16 @@
 ---
 title: 公開したアプリの保守およびサポート
-description: あなたの店が Teams ストアと AppSource にリストされたら考えること。
+description: 公開された Microsoft Teams アプリを管理する方法と、ストアが Teams ストアと AppSource に一覧表示された後の考え方について説明します。
 ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: cea78b40bbfbe8b309f9e3fa8c05f62404717b33
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: e01b5b8dc053559248bc3217a0807b69ec014669
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887808"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123049"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>公開された Microsoft Teams アプリを管理する
 
@@ -65,6 +65,17 @@ Microsoft は、Teams ストアにリストされているアプリに対して�
 ## <a name="complete-microsoft-365-certification"></a>完全な Microsoft 365 認定
 
 [Microsoft 365 認定](/microsoft-365-app-certification/docs/certification)は、サードパーティの Office アプリまたはアドインが Microsoft 365 エコシステムにインストールされている場合に、データとプライバシーが適切に保護されることを保証します。 認証により、アプリが Microsoft のテクノロジと互換性があり、クラウド アプリのセキュリティのベスト プラクティスに準拠し、Microsoft によってサポートされていることが確認されます。
+
+## <a name="stop-app-distribution"></a>アプリの配布を停止する
+
+[Microsoft コマーシャル マーケットプレース](/azure/marketplace/overview)からアプリを削除して、その検出と使用を防ぐことができます。
+
+発行後にアプリの配布を停止するには、次の手順に従います:
+
+1. [**製品の概要**] ページで、[**販売の停止**] を選択します。 Microsoft AppSource からアプリを削除します。
+1. アプリの登録解除を開始するには、 **パートナー センター** で [**概要**] ページを選択し、[**販売の停止**] を選択します。
+
+アプリの配布を停止した後も、パートナー センターで [**使用不可]** 状態で表示されます。 アプリをもう一度一覧表示する場合は、指示に従って[アプリをMicrosoft Teams ストアに発行します](/concepts/deploy-and-publish/appsource/publish#teams-app-submission)。
 
 ## <a name="see-also"></a>関連項目
 

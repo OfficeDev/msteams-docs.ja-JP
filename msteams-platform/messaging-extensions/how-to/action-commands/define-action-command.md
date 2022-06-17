@@ -1,16 +1,16 @@
 ---
 title: メッセージ拡張機能のアクション コマンドを定義する
 author: surbhigupta
-description: アプリ マニフェストの例を使用したメッセージング拡張機能アクション コマンドの概要
+description: このモジュールでは、Microsoft Teamsのアプリ マニフェストの例を使用して、メッセージング拡張機能アクション コマンドを定義する方法について説明します。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 7bdb3a0572ab7723a03768357260f252fbbf626c
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 64a11741612fdf8efbcca968fed3a3d78cda90b1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756899"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143432"
 ---
 # <a name="define-message-extension-action-commands"></a>メッセージ拡張機能のアクション コマンドを定義する
 

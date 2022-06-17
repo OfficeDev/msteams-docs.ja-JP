@@ -1,17 +1,16 @@
 ---
 title: タブ余白の変更
 author: surbhigupta
-description: タブ余白を削除すると、アプリのビルド エクスペリエンスが向上する方法について説明します。
-keywords: 余白のパディングを削除するタブ
+description: このモジュールでは、タブの余白を削除すると、アプリの構築エクスペリエンスが向上する方法について説明します。
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: 2bfa74e95a84314e261f8865c5581d4e1738e12a
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 178c8616a00bc64f10a39815db16d11dcea6eb40
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757186"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143320"
 ---
 # <a name="tab-margin-changes"></a>タブ余白の変更
 

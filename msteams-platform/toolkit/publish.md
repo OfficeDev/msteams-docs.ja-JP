@@ -1,16 +1,16 @@
 ---
 title: Teams ツールキットを使用して Teams アプリを公開する
 author: zyxiaoyuer
-description: Teams アプリを公開する
+description: このモジュールでは、Teams Toolkitを使用してTeams アプリを発行し、個々のスコープまたはサイドロードアクセス許可に発行する方法について説明します
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 2c3fdd78d833baba6bbd5f21640765577f29430b
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 0ae6ab1f128eccae6df4fff20364f590106ab146
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757452"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142606"
 ---
 # <a name="publish-teams-apps-using-teams-toolkit"></a>Teams ツールキットを使用して Teams アプリを公開する
 

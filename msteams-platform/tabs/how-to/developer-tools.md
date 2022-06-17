@@ -1,15 +1,14 @@
 ---
 title: Microsoft Teams タブの DevTools
-description: Microsoft Teams デスクトップ クライアントとデバッグを使用するときに DevTools にアクセスする方法について説明します
+description: このモジュールでは、Microsoft Teams デスクトップ クライアントとデバッグを使用するときに DevTools にアクセスする方法について説明します
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: devtools debug mobile chrome デスクトップ クライアント開発者ツール タブ
-ms.openlocfilehash: c4601711948df798bda6b7d4940b5436c66f8c97
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: de502588d6c1d4e11d7f68e2fff1c7e591d2918d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757480"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143012"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>Microsoft Teams タブの DevTools
 

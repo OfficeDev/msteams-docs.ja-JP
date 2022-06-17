@@ -1,17 +1,16 @@
 ---
 title: Teams Toolkit と Visual Studio を使用してアプリを構築する
-description: Microsoft Teams Toolkitを使用してVisual Studio内に直接優れたカスタム アプリの構築をはじめましょう。 Visual Studioでアプリを構成し、アプリを検証し、Visual Studioおよび開発者ポータルから発行する方法について説明します。
-keywords: teams Visual Studio ツールキット
+description: Teams Toolkitを使用してVisual Studio内でカスタム アプリを直接構築する方法と、Visual Studioでアプリを構成する方法、アプリを検証する方法などについて説明します。
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 1/13/2022
 ms.author: johmil
-ms.openlocfilehash: 9dbe606b99ef493a136381667bbd1c1da1f955b0
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: aa7fdaad1d56966031eb13b6b05f145c8e734988
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756458"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142046"
 ---
 # <a name="teams-toolkit-for-visual-studio"></a>Visual Studio 用 Teams ツールキット
 

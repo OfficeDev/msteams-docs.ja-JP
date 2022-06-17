@@ -1,23 +1,23 @@
 ---
 title: Teams アプリにシングル サインオンを追加する
 author: zyxiaoyuer
-description: Teams Toolkitのシングル サインオンの追加について説明します
+description: このモジュールでは、Teams Toolkitのシングル サインオン (SSO) を追加する方法、SSO のサポートを有効にする方法、SSO を使用するようにアプリケーションを更新する方法について説明します
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: e9b45f1bd95140eae8da851544dfa4ee87646225
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: b1c53da3a7af0676ca29006359971d881a3a8f5b
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123448"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144132"
 ---
 # <a name="add-single-sign-on-to-teams-app"></a>Teams アプリにシングル サインオンを追加する
 
 Microsoft Teamsは、サインインTeamsユーザー トークンを取得して Microsoft Graphやその他の API にアクセスするためのシングル サインオン機能をアプリケーションに提供します。 Teams Toolkitは、Azure AD のフローの一部と、いくつかの単純な API の背後にある統合を抽象化することで、対話を容易にします。 これにより、シングル サインオン (SSO) 機能をTeams アプリケーションに簡単に追加できます。
 
-チャット、チーム、またはチャネルでユーザーと対話するアプリケーションの場合、SSO はアダプティブ カードとしてマニフェストされ、ユーザーは Azure AD 同意フローを呼び出すために操作できます。
+チャット、チーム、またはチャネルでユーザーと対話するアプリケーションの場合、SSO はアダプティブ カードとしてマニフェストされ、ユーザーは Azure AD 同意フローを呼び出すために対話できます。
 
 ## <a name="enable-sso-support"></a>SSO サポートを有効にする
 

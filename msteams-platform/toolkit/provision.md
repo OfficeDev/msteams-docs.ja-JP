@@ -1,27 +1,27 @@
 ---
 title: Teams Toolkit を使用してクラウド リソースをプロビジョニングする
 author: MuyangAmigo
-description: クラウド リソースをプロビジョニングする
+description: このモジュールでは、Teams Toolkit、リソースの作成、リソースプロビジョニングのカスタマイズを使用してクラウド リソースをプロビジョニングする方法について説明します
 ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 6ab903ab731e3fe90161d2873f0ca8be5ed284fa
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 1c4232cfe51ae900414f474bcdd05c9a67d5c4c6
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757459"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144118"
 ---
 # <a name="use-teams-toolkit-to-provision-cloud-resources"></a>Teams Toolkit を使用してクラウド リソースをプロビジョニングする
 
-TeamsFx は Azure と Microsoft 365 クラウドと統合されています。これにより、アプリケーションを 1 つのコマンドで Azure に配置できます。 TeamsFx は Azure Resource Manager と統合されているため、アプリケーションでコード アプローチに必要な Azure リソースをプロビジョニングできます。  
+TeamsFx は Azure と Microsoft 365 クラウドと統合されています。これにより、アプリケーションを 1 つのコマンドで Azure に配置できます。 TeamsFx は Azure Resource Managerと統合されており、アプリケーションでコード アプローチに必要な Azure リソースをプロビジョニングできます。  
 
 ## <a name="prerequisites"></a>前提条件
 
 * アカウントの前提条件 クラウド リソースをプロビジョニングするには、次のアカウントが必要です。
 
-  * 有効なサブスクリプションのある Microsoft 365アカウント。
+  * 有効なサブスクリプションを持つアカウントをMicrosoft 365します。
   * 有効なサブスクリプションを持つ Azure。
   詳細については、[アプリをビルドするためのアカウントを準備する方法Teams](accounts.md)参照してください。
 
@@ -51,7 +51,7 @@ Teams Toolkitまたは TeamsFx CLI でプロビジョニング コマンドを�
 
 ### <a name="resource-creation-for-teams-tab-application"></a>Teams タブ アプリケーションのリソース作成
 
-|リソース|用途|説明 |
+|Resource|用途|説明 |
 |----------|--------------------------------|-----|
 | Azure Storage | タブ アプリをホストする | 静的 Web アプリ機能でタブ アプリをホストできるようにします |
 | 簡単な認証の App Service プラン | Simple Auth の Web アプリをホストする |該当なし |
@@ -60,7 +60,7 @@ Teams Toolkitまたは TeamsFx CLI でプロビジョニング コマンドを�
 
 ### <a name="resource-creation-for-teams-bot-or-message-extension-application"></a>Teams ボットまたはメッセージ拡張機能アプリケーションのリソース作成
 
-|リソース|用途| 説明 |
+|Resource|用途| 説明 |
 |----------|--------------------------------|-----|
 | Azure ボット サービス | アプリをボット フレームワークにボットとして登録します | ボットをTeamsに接続する |
 | ボットの App Service プラン | ボットの Web アプリをホストする |該当なし |
@@ -69,7 +69,7 @@ Teams Toolkitまたは TeamsFx CLI でプロビジョニング コマンドを�
 
 ### <a name="resource-creation-for-azure-functions-in-the-project"></a>プロジェクト内のAzure Functionsのリソース作成
 
-|リソース|用途| 説明|
+|Resource|用途| 説明|
 |----------|--------------------------------|-----|
 | 関数アプリの App Service プラン | 関数アプリをホストする |該当なし |
 | 関数アプリ | Azure Functions API をホストする | 他の Azure リソースにアクセスするためのユーザー割り当て ID を追加します。 <br /> クロスオリジン リソース共有 (CORS) ルールを追加して、タブ アプリからの要求を許可する <br /> Teams アプリからの要求のみを許可する認証設定を追加します。 <br /> [TeamsFx SDK](https://www.npmjs.com/package/@microsoft/teamsfx) で必要なアプリ設定を追加します |
@@ -78,7 +78,7 @@ Teams Toolkitまたは TeamsFx CLI でプロビジョニング コマンドを�
 
 ### <a name="resource-creation-for-azure-sql-in-the-project"></a>プロジェクト内のAzure SQLのリソース作成
 
-|リソース|用途 | 説明 |
+|Resource|用途 | 説明 |
 |----------|--------------------------------|-----|
 | Azure SQL サーバー | Azure SQL データベース インスタンスをホストする | すべての Azure サービスがサーバーにアクセスできるようにします |
 | Azure SQL データベース | アプリのデータをMicrosoft Storeする | ユーザー割り当て ID、読み取りまたは書き込みアクセス許可をデータベースに付与します |
@@ -86,7 +86,7 @@ Teams Toolkitまたは TeamsFx CLI でプロビジョニング コマンドを�
 
 ### <a name="resource-creation-for-azure-api-management-in-the-project"></a>プロジェクト内の Azure API Managementのリソース作成
 
-|リソース|用途|
+|Resource|用途|
 |----------|--------------------------------|
 | API 管理サービス用の Azure AD アプリケーション | API 管理サービスによって管理される Microsoft Power Platform アクセス API を許可する |
 | API 管理サービス | 関数アプリでホストされている API を管理する |
@@ -96,7 +96,7 @@ Teams Toolkitまたは TeamsFx CLI でプロビジョニング コマンドを�
 
 ### <a name="resources-created-when-including-azure-key-vault-in-the-project"></a>Azure Key Vaultをプロジェクトに含めると作成されたリソース
 
-|リソース|このリソースの目的|
+|関連情報|このリソースの目的|
 |----------|--------------------------------|
 | Azure Key Vault Service | 他の Azure Services で使用されるシークレット (Azure AD アプリ クライアント シークレットなど) を管理する |
 | ユーザー割り当て ID | Azure サービス間要求を認証する |
@@ -110,7 +110,7 @@ ARM を使用したプロビジョニングには、次のファイル、パラ�
 * テンプレートにパラメーターを渡すための ARM パラメーター ファイル (`azure.parameters.{your_env_name}.json`) はフォルダーにあります `.fx/configs` 。
 * このフォルダーにある `templates/azure`ARM テンプレート ファイルには、次のファイルが含まれています。
 
-| ファイル | 関数 | カスタマイズを許可する |
+| File | 職務 | カスタマイズを許可する |
 | --- | --- | --- |
 | main.bicep | Azure リソースプロビジョニングのエントリ ポイントを指定する | はい |
 | provision.bicep | Azure リソースを作成して構成する | はい |

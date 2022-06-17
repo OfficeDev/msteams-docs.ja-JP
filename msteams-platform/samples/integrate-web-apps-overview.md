@@ -1,17 +1,16 @@
 ---
 title: Web アプリを統合する
 author: Rajeshwari-v
-description: Web アプリケーションとデバイス機能を Microsoft Teams アプリと統合する概要。
+description: この記事では、Web アプリケーションとデバイス機能を Microsoft Teams アプリと統合する方法について説明します。 Power アプリ、Power Virtual Agents、Virtual Assistant、アプリ テンプレート、Shift コネクタ、Moodle LMS を作成するための Power プラットフォーム。
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-keywords: power platform power apps ユーザー ピッカー ディープ リンク virtual agent assistant share-to-Teams
-ms.openlocfilehash: dc31644fca25aeca12b7e5f3095ebae53a3c02ac
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: a5394962594acf60e88bff0c7449c17a2a4b7c17
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757669"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123539"
 ---
 # <a name="integrate-web-apps"></a>Web アプリを統合する
 

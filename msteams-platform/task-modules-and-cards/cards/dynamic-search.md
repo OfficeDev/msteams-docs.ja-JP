@@ -1,16 +1,16 @@
 ---
 title: アダプティブ カードの先行入力検索
 author: Rajeshwari-v
-description: アダプティブ カードの Input.ChoiceSet コントロールを使用した先行入力検索について説明します
+description: このモジュールでは、Input.ChoiceSet コントロールを使用したアダプティブ カードでの先行入力検索について説明し、先行入力検索を実装します
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 1e302a74ceffb88989989b42aa8a202d1e79fb36
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 205da5ca0171182047ccd06f7f2926f731ceb94d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103440"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143894"
 ---
 # <a name="typeahead-search-in-adaptive-cards"></a>アダプティブ カードの先行入力検索
 
@@ -42,7 +42,7 @@ ms.locfileid: "65103440"
 
 # <a name="mobile"></a>[モバイル](#tab/mobile)
 
-Android および iOS モバイル クライアントでは、アダプティブ カードでの先行入力検索がサポートされます。
+AndroidおよびiOSモバイル クライアントでは、アダプティブ カードでの先行入力検索がサポートされます。
 
 **シナリオ**
 
@@ -80,8 +80,8 @@ John は、Xbox リテール ストアで働く店員です。 ストアはボ�
 
 | プロパティ| 型 | 必須 | 説明 |
 |-----------|------|----------|-------------|
-| style | Compact <br/> Expanded <br/> Filtered | なし | 静的な先行入力でサポートされている検証の一覧にフィルター処理されたスタイルを追加します。|
-| choices.data | Data.Query | なし | バックエンドから選択肢のリモート セットをフェッチすることで、ユーザーの種類として動的な先行入力を有効にします。 |
+| style | Compact <br/> Expanded <br/> Filtered | 不要 | 静的な先行入力でサポートされている検証の一覧にフィルター処理されたスタイルを追加します。|
+| choices.data | Data.Query | いいえ | バックエンドから選択肢のリモート セットをフェッチすることで、ユーザーの種類として動的な先行入力を有効にします。 |
 
 ### <a name="dataquery-definition"></a>Data.Query 定義
 
@@ -90,8 +90,8 @@ John は、Xbox リテール ストアで働く店員です。 ストアはボ�
 | type | Data.Query | はい | Data.Query オブジェクトであることを指定します。|
 | データセット | String | はい | 動的にフェッチされるデータの種類を指定します。 |
 | value | String | いいえ | ユーザーがボットに指定 `ChoiceSet`した入力をボットに呼び出し要求を入力します。 |
-| count | 番号 | いいえ | 返す必要がある要素の数を指定するために、ボットへの呼び出し要求を設定します。 ユーザーが別の金額を送信する場合、ボットはそれを無視します。 |
-| skip | 番号 | なし | 呼び出し要求をボットに設定して、ユーザーがページ分割してリスト内で先に移動することを示します。 |
+| count | 番号 | 不要 | 返す必要がある要素の数を指定するために、ボットへの呼び出し要求を設定します。 ユーザーが別の金額を送信する場合、ボットはそれを無視します。 |
+| skip | 番号 | いいえ | 呼び出し要求をボットに設定して、ユーザーがページ分割してリスト内で先に移動することを示します。 |
 
 ### <a name="example"></a>例
 

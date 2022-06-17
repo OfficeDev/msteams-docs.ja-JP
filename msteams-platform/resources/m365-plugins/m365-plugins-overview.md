@@ -1,15 +1,15 @@
 ---
 title: Microsoft 365 プラグイン
-description: Microsoft 365 プラグインの詳細
+description: この記事では、Microsoft 365 プラグイン、プラグイン リスト、ラベル、Microsoft 365、One Note の操作などを取り扱います。
 ms.topic: Microsoft 365 plugins
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 3a1847a01687d2d363f29938ed589d3a12179c9c
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 5228803be99d77e24f5cd1731c826b1a28509097
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63454000"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66124047"
 ---
 # <a name="microsoft-365-plugins"></a>Microsoft 365 プラグイン
 
@@ -149,7 +149,7 @@ Microsoft ブロックは、Microsoft 365 統合機能を変更し、その多�
 
 ## <a name="oembed-filter"></a>oEmbed フィルター
 
-oEmbed フィルター プラグインは、Moodle 内の外部 HTML コンテンツの包含を簡略化することで、ユーザー エクスペリエンスを簡素化し、強化します。 oEmbed フィルターの利点を次に示します。 
+oEmbed フィルター プラグインは、Moodle 内の外部 HTML コンテンツの包含を簡略化することで、ユーザー エクスペリエンスを簡素化し、強化します。 oEmbed フィルターの利点を次に示します。
 
 * HTML ページにビデオを埋め込む時間を短縮します。
 * 複数のビデオ コンテンツ プロバイダーの埋め込みを有効にします。
@@ -163,4 +163,4 @@ oEmbed フィルター プラグインは、Moodle 内の外部 HTML コンテ�
 ## <a name="see-also"></a>関連項目
 
 * [Moodle のパートナー アプリ](../partner-apps-for-moodle.md)
-* [Moodle に関するよく寄せられる質問](../faqs.md)
+* [Moodle FAQ](../faqs.md)

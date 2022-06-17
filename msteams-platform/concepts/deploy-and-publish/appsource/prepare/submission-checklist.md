@@ -1,17 +1,16 @@
 ---
 title: ストア送信を準備する
-description: ストアに登録する Microsoft Teams アプリを送信する前の最後の手順について説明します。 アプリ パッケージの検証、テスト手順のコンパイル、ストア登録情報の詳細の作成について説明します。
+description: Microsoft Teams アプリをストアに登録する前の最後の手順について説明します。 アプリ パッケージなどを検証する方法について説明します。
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-keywords: 送信ストア配布アプリ パッケージの検証ガイドライン ローカライズ
-ms.openlocfilehash: 81c453a69b0c552c3e2db07edb6fd795d9c068ae
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: c71579900f910d2677ab0d48bab5a37853dfb69c
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033009"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123168"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Microsoft Teams のストア送信を準備する
 
@@ -20,7 +19,7 @@ Microsoft Teams アプリの設計、構築、テストが完了しました。 
 Microsoft Teams アプリ ストアへのアプリの発行の詳細については、次のビデオを参照してください。
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
+> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4WG3l>]
 <br>
 
 アプリを[パートナー センター](/office/dev/store/use-partner-center-to-submit-to-appsource)に送信する前に、次の手順を実行していることを確認してください。

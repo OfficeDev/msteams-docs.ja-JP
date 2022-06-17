@@ -4,12 +4,12 @@ description: Microsoft Teamsでサポートされているすべてのコンポ�
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: 1b1aa4e1e7cf1bff8ff37ec89d555bd1758d16db
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: deaf094ab18ddd2ebe70ea9594f41c108398bf32
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130516"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142738"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>参照: Microsoft Teams のパブリック開発者プレビュー マニフェスト スキーマ
 
@@ -315,11 +315,11 @@ Microsoft が生成したこのアプリの一意の識別子。 Microsoft Bot F
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
-|`name`|32 文字|✔|開発者の表示名。|
-|`websiteUrl`|2048 文字|✔|開発者の Web サイトの The https:// URL。 このリンクは、ユーザーを会社または製品固有のランディング ページに移動する必要があります。|
-|`privacyUrl`|2048 文字|✔|開発者のプライバシー ポリシーの https:// URL。|
-|`termsOfUseUrl`|2048 文字|✔|開発者の使用条件の https:// URL。|
-|`mpnId`|10 文字|✔|**省略可能** アプリを構築しているパートナー組織を識別するMicrosoft パートナー ネットワーク ID。|
+|`name`|32 文字|✔️|開発者の表示名。|
+|`websiteUrl`|2048 文字|✔️|開発者の Web サイトの The https:// URL。 このリンクは、ユーザーを会社または製品固有のランディング ページに移動する必要があります。|
+|`privacyUrl`|2048 文字|✔️|開発者のプライバシー ポリシーの https:// URL。|
+|`termsOfUseUrl`|2048 文字|✔️|開発者の使用条件の https:// URL。|
+|`mpnId`|10 文字|✔️|**省略可能** アプリを構築しているパートナー組織を識別するMicrosoft パートナー ネットワーク ID。|
 
 ## <a name="localizationinfo"></a>localizationInfo
 
@@ -329,7 +329,7 @@ Microsoft が生成したこのアプリの一意の識別子。 Microsoft Bot F
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
-|`defaultLanguageTag`|4 文字|✔|このトップ レベルのマニフェスト ファイル内の文字列の言語タグ。|
+|`defaultLanguageTag`|4 文字|✔️|このトップ レベルのマニフェスト ファイル内の文字列の言語タグ。|
 
 ### <a name="localizationinfoadditionallanguages"></a>localizationInfo.additionalLanguages
 
@@ -337,8 +337,8 @@ Microsoft が生成したこのアプリの一意の識別子。 Microsoft Bot F
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
-|`languageTag`|4 文字|✔|提供されたファイルの文字列の言語タグ。|
-|`file`|4 文字|✔|翻訳された文字列を含む .json ファイルへの相対ファイル パス。|
+|`languageTag`|4 文字|✔️|提供されたファイルの文字列の言語タグ。|
+|`file`|4 文字|✔️|翻訳された文字列を含む .json ファイルへの相対ファイル パス。|
 
 ## <a name="name"></a>name
 
@@ -348,7 +348,7 @@ Teams エクスペリエンスでユーザーに表示されるアプリ エク�
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
-|`short`|30 文字|✔|アプリの短い表示名。|
+|`short`|30 文字|✔️|アプリの短い表示名。|
 |`full`|100 文字||アプリのフル ネーム。アプリのフル ネームが 30 文字を超える場合に使用されます。|
 
 ## <a name="description"></a>description
@@ -361,8 +361,8 @@ Teams エクスペリエンスでユーザーに表示されるアプリ エク�
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
-|`short`|80 文字|✔|スペースが限られている場合に使用される、アプリ エクスペリエンスの簡単な説明。|
-|`full`|4,000 文字|✔|アプリの完全な説明。|
+|`short`|80 文字|✔️|スペースが限られている場合に使用される、アプリ エクスペリエンスの簡単な説明。|
+|`full`|4,000 文字|✔️|アプリの完全な説明。|
 
 ## <a name="icons"></a>アイコン
 
@@ -372,8 +372,8 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
-|`outline`|2048 文字|✔|透明な 32x32 PNG アウトライン アイコンへの相対ファイル パス。|
-|`color`|2048 文字|✔|フル カラーの 192x192 PNG アイコンへの相対ファイル パス。|
+|`outline`|2048 文字|✔️|透明な 32x32 PNG アウトライン アイコンへの相対ファイル パス。|
+|`color`|2048 文字|✔️|フル カラーの 192x192 PNG アイコンへの相対ファイル パス。|
 
 ## <a name="accentcolor"></a>accentColor
 
@@ -393,9 +393,9 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`configurationUrl`|String|2048 文字|✔|タブを構成するときに使用する https:// URL。|
+|`configurationUrl`|String|2048 文字|✔️|タブを構成するときに使用する https:// URL。|
 |`canUpdateConfiguration`|ブール値|||作成後にユーザーがタブの構成のインスタンスを更新できるかどうかを示す値。既定値: `true`|
-|`scopes`|列挙型の配列|1|✔|現在、構成可能なタブは、`team` スコープと `groupchat` スコープのみをサポートしています。 |
+|`scopes`|列挙型の配列|1|✔️|現在、構成可能なタブは、`team` スコープと `groupchat` スコープのみをサポートしています。 |
 |`context` |列挙型の配列|6 ||[タブがサポートされている](../../tabs/how-to/access-teams-context.md) `contextItem` スコープのセット。 既定値: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`|
 |`sharePointPreviewImage`|String|2048||SharePoint で使用するタブ プレビュー イメージへの相対ファイル パス。サイズ 1024 x 768。 |
 |`supportedSharePointHosts`|列挙型の配列|1||SharePoint でタブを使用できるようにする方法を定義します。オプションは `sharePointFullPage` と `sharePointWebPart` |
@@ -412,12 +412,12 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`entityId`|String|64 文字|✔|タブが表示されるエンティティの一意の識別子。|
-|`name`|String|128 文字|✔|チャネル インターフェイスのタブの表示名。|
-|`contentUrl`|String|2048 文字|✔|Teams キャンバスに表示されるエンティティ UI を指す https:// URL。|
+|`entityId`|String|64 文字|✔️|タブが表示されるエンティティの一意の識別子。|
+|`name`|String|128 文字|✔️|チャネル インターフェイスのタブの表示名。|
+|`contentUrl`|String|2048 文字|✔️|Teams キャンバスに表示されるエンティティ UI を指す https:// URL。|
 |`contentBotId`|   | | | Bot Framework ポータルでボットに指定された Microsoft Teams アプリ ID。 |
 |`websiteUrl`|String|2048 文字||ユーザーがブラウザでの表示を選択した場合に示す https:// URL。|
-|`scopes`|列挙型の配列|1|✔|現在、静的タブは `personal` スコープのみをサポートしています。つまり、個人的なエクスペリエンスの一部としてのみプロビジョニングできます。|
+|`scopes`|列挙型の配列|1|✔️|現在、静的タブは `personal` スコープのみをサポートしています。つまり、個人的なエクスペリエンスの一部としてのみプロビジョニングできます。|
 
 ## <a name="bots"></a>ボット
 
@@ -429,11 +429,11 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`botId`|String|64 文字|✔|Bot Framework に登録された、ボット用の一意の Microsoft アプリ ID。 これは、全体的な[アプリ ID](#id) と同じにすることができます。|
+|`botId`|String|64 文字|✔️|Bot Framework に登録された、ボット用の一意の Microsoft アプリ ID。 これは、全体的な[アプリ ID](#id) と同じにすることができます。|
 |`needsChannelSelector`|ブール値|||ボットを特定のチャネルに追加するためのユーザー用ヒントをボットで使用するかどうかの説明。既定: `false`|
 |`isNotificationOnly`|ブール値|||ボットが会話ボットではなく、一方向の通知専用ボットであるかどうかを示します。既定値: `false`|
 |`supportsFiles`|ブール値|||ボットが個人用チャットでファイルをアップロード/ダウンロードできるかどうかを示します。既定値: `false`|
-|`scopes`|列挙型の配列|3|✔|ボットがエクスペリエンスを提供するのは、`team` 内のチャネルのコンテキスでなのか、グループ チャット (`groupchat`) でなのか、あるいは個別のユーザーのみをエクスペリエンスの対象にする (`personal`) のかを指定します。これらのオプションは非排他的です。|
+|`scopes`|列挙型の配列|3|✔️|ボットがエクスペリエンスを提供するのは、`team` 内のチャネルのコンテキスでなのか、グループ チャット (`groupchat`) でなのか、あるいは個別のユーザーのみをエクスペリエンスの対象にする (`personal`) のかを指定します。これらのオプションは非排他的です。|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
@@ -441,8 +441,8 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`items.scopes`|列挙型の配列|3|✔|コマンド リストが有効なスコープを指定します。オプションは、 `team`、 `personal`、および `groupchat`です。|
-|`items.commands`|オブジェクトの配列|10|✔|ボットがサポートするコマンドの配列:<br>`title`: ボット コマンドの名前 (文字列、32)。<br>`description`: コマンド構文とその引数 (文字列、128) の簡単な説明または例。|
+|`items.scopes`|列挙型の配列|3|✔️|コマンド リストが有効なスコープを指定します。オプションは、 `team`、 `personal`、および `groupchat`です。|
+|`items.commands`|オブジェクトの配列|10|✔️|ボットがサポートするコマンドの配列:<br>`title`: ボット コマンドの名前 (文字列、32)。<br>`description`: コマンド構文とその引数 (文字列、128) の簡単な説明または例。|
 
 ## <a name="connectors"></a>コネクタ
 
@@ -454,9 +454,9 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`configurationUrl`|String|2048 文字|✔|コネクタを構成するときに使用する https:// URL。|
-|`connectorId`|String|64 文字|✔|[コネクタ開発者ダッシュボード](https://aka.ms/connectorsdashboard)の ID に一致するコネクタの一意の識別子です。|
-|`scopes`|列挙型の配列|1|✔|コネクタが `team`のチャネルのコンテキストでエクスペリエンスを提供するか、個々のユーザーのみを対象としたエクスペリエンスを提供するかを指定します (`personal`)。現時点では、 `team` スコープのみがサポートされています。|
+|`configurationUrl`|String|2048 文字|✔️|コネクタを構成するときに使用する https:// URL。|
+|`connectorId`|String|64 文字|✔️|[コネクタ開発者ダッシュボード](https://aka.ms/connectorsdashboard)の ID に一致するコネクタの一意の識別子です。|
+|`scopes`|列挙型の配列|1|✔️|コネクタが `team`のチャネルのコンテキストでエクスペリエンスを提供するか、個々のユーザーのみを対象としたエクスペリエンスを提供するかを指定します (`personal`)。現時点では、 `team` スコープのみがサポートされています。|
 
 ## <a name="composeextensions"></a>composeExtensions
 
@@ -471,9 +471,9 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 種類 | 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`botId`|String|64|✔|ボット フレームワークに登録されている、メッセージ拡張機能をサポートするボットの一意の Microsoft アプリ ID。 これは、全体的な[アプリ ID](#id) と同じにすることができます。|
+|`botId`|String|64|✔️|ボット フレームワークに登録されている、メッセージ拡張機能をサポートするボットの一意の Microsoft アプリ ID。 これは、全体的な[アプリ ID](#id) と同じにすることができます。|
 |`canUpdateConfiguration`|ブール値|||メッセージ拡張機能の構成をユーザーが更新できるかどうかを示す値。既定は `false` です。|
-|`commands`|オブジェクトの配列|10|✔|メッセージ拡張機能がサポートするコマンドの配列|
+|`commands`|オブジェクトの配列|10|✔️|メッセージ拡張機能がサポートするコマンドの配列|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
@@ -483,9 +483,9 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`id`|String|64 文字|✔|コマンドの ID。|
+|`id`|String|64 文字|✔️|コマンドの ID。|
 |`type`|String|64 文字||コマンドの種類。 `query` または `action` のいずれか。 既定: `query`|
-|`title`|String|32 文字|✔|ユーザーフレンドリーなコマンド名。|
+|`title`|String|32 文字|✔️|ユーザーフレンドリーなコマンド名。|
 |`description`|String|128 文字||このコマンドの目的を示すためにユーザーに表示される説明。|
 |`initialRun`|Boolean|||コマンドをパラメーターなしで最初に実行する必要があるかどうかを示すブール値。 既定: `false`|
 |`context`|文字列 (String) の配列|3||メッセージ拡張機能の呼び出し先を定義します。 `compose`、`commandBox`、`message` の任意の組み合わせ。 既定値は `["compose", "commandBox"]` です|
@@ -498,9 +498,9 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |`messageHandlers`|オブジェクトの配列|5||特定の条件が満たされた場合にアプリを呼び出すことができるハンドラーの一覧。ドメインは `validDomains` にも一覧表示されている必要があります。|
 |`messageHandlers.type`|String|||メッセージ ハンドラーの種類。`"link"`でなければなりません。|
 |`messageHandlers.value.domains`|文字列 (String) の配列|||リンク メッセージ ハンドラーが登録できるドメインの配列。|
-|`parameters`|オブジェクトの配列|5|✔|コマンドが取得するパラメーターの一覧。 最小: 1; 最大: 5|
-|`parameter.name`|String|64 文字|✔|クライアントに表示されるパラメーターの名前。これはユーザーの要求に含まれています。|
-|`parameter.title`|String|32 文字|✔|パラメーターのユーザーフレンドリーなタイトル。|
+|`parameters`|オブジェクトの配列|5|✔️|コマンドが取得するパラメーターの一覧。 最小: 1; 最大: 5|
+|`parameter.name`|String|64 文字|✔️|クライアントに表示されるパラメーターの名前。これはユーザーの要求に含まれています。|
+|`parameter.title`|String|32 文字|✔️|パラメーターのユーザーフレンドリーなタイトル。|
 |`parameter.description`|String|128 文字||このパラメーターの目的を説明するユーザーフレンドリーな文字列。|
 |`parameter.inputType`|String|128 文字||`fetchTask: true` のタスク モジュールに表示されるコントロールの型を定義します。 `text`, `textarea`, `number`, `date`, `time`, `toggle`, `choiceset` の 1 つ。|
 |`parameter.choices`|オブジェクトの配列|10||`choiceset` の選択オプション。 `parameter.inputType` が `choiceset` である場合にのみ使用してください。|
@@ -551,9 +551,9 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`id`|String|36 文字|✔|アプリの Microsoft Azure Active Directory (Azure AD) アプリケーション ID。 この ID は GUID である必要があります。|
-|`resource`|String|2048 文字|✔|SSO の認証トークンを取得するためのアプリのリソース URL。|
-|`applicationPermissions`|配列|最大 100 アイテム|✔|アプリケーションのリソースのアクセス許可。|
+|`id`|String|36 文字|✔️|アプリの Microsoft Azure Active Directory (Azure AD) アプリケーション ID。 この ID は GUID である必要があります。|
+|`resource`|String|2048 文字|✔️|SSO の認証トークンを取得するためのアプリのリソース URL。|
+|`applicationPermissions`|配列|最大 100 アイテム|✔️|アプリケーションのリソースのアクセス許可。|
 
 ## <a name="graphconnector"></a>graphConnector
 
@@ -563,7 +563,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`notificationUrl`|string|2048 文字|✔|アプリケーションの Graph コネクタ通知を送信する URL。|
+|`notificationUrl`|string|2048 文字|✔️|アプリケーションの Graph コネクタ通知を送信する URL。|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
 
@@ -596,9 +596,9 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`type`|string|32 文字|✔|通知の種類。 *以下を参照してください*。|
-|`description`|string|128 文字|✔|通知の簡単な説明。 *以下を参照してください*。|
-|`templateText`|string|128 文字|✔|例: "あなたに {actor} が作成したタスク {taskId}"|
+|`type`|string|32 文字|✔️|通知の種類。 *以下を参照してください*。|
+|`description`|string|128 文字|✔️|通知の簡単な説明。 *以下を参照してください*。|
+|`templateText`|string|128 文字|✔️|例: "あなたに {actor} が作成したタスク {taskId}"|
 
 ```json
 {
@@ -702,7 +702,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`offerId`| string | 2,048 文字 | ✔ | パブリッシャー ID とオファー ID を含む一意の識別子。 [パートナー センター](https://partner.microsoft.com/dashboard)で確認できます。文字列は `publisherId.offerId`として書式設定する必要があります。|
+|`offerId`| string | 2,048 文字 | ✔️ | パブリッシャー ID とオファー ID を含む一意の識別子。 [パートナー センター](https://partner.microsoft.com/dashboard)で確認できます。文字列は `publisherId.offerId`として書式設定する必要があります。|
 
 ## <a name="meetingextensiondefinition"></a>meetingExtensionDefinition
 
@@ -718,12 +718,12 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型|最大サイズ|必須 |説明|
 |---|---|---|---|---|
-|`id`|||✔| シーンの一意の識別子。 この ID は GUID である必要があります。 |
-|`name`| string | 128 文字 |✔| シーンの名前。 |
-|`file`|||✔| シーンの metadata json ファイルへの相対ファイル パス。 |
-|`preview`|||✔| シーンの PNG プレビュー アイコンへの相対ファイル パス。 |
-|`maxAudience`| integer | 50  |✔| シーンでサポートされている対象ユーザーの最大数。 |
-|`seatsReservedForOrganizersOrPresenters`| integer | 50 |✔| 開催者または発表者用に予約されたシートの数。|
+|`id`|||✔️| シーンの一意の識別子。 この ID は GUID である必要があります。 |
+|`name`| string | 128 文字 |✔️| シーンの名前。 |
+|`file`|||✔️| シーンの metadata json ファイルへの相対ファイル パス。 |
+|`preview`|||✔️| シーンの PNG プレビュー アイコンへの相対ファイル パス。 |
+|`maxAudience`| integer | 50  |✔️| シーンでサポートされている対象ユーザーの最大数。 |
+|`seatsReservedForOrganizersOrPresenters`| integer | 50 |✔️| 開催者または発表者用に予約されたシートの数。|
 
 ## <a name="authorization"></a>承認
 
@@ -745,8 +745,8 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型|最大サイズ|必須 |説明|
 |---|---|---|---|---|
-|`type`|string||✔| リソース固有のアクセス許可の種類。オプション: `Application` と `Delegated`。|
-|`name`|string|128 文字|✔|リソース固有のアクセス許可の名前。 詳細については、「[リソース固有のアプリケーションのアクセス許可](#resource-specific-application-permissions)」および「[リソース固有の委任されたアクセス許可](#resource-specific-delegated-permissions)」を参照してください|
+|`type`|string||✔️| リソース固有のアクセス許可の種類。オプション: `Application` と `Delegated`。|
+|`name`|string|128 文字|✔️|リソース固有のアクセス許可の名前。 詳細については、「[リソース固有のアプリケーションのアクセス許可](#resource-specific-application-permissions)」および「[リソース固有の委任されたアクセス許可](#resource-specific-delegated-permissions)」を参照してください|
 
 #### <a name="resource-specific-application-permissions"></a>リソース固有のアプリケーションのアクセス許可
 

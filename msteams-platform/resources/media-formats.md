@@ -1,21 +1,20 @@
 ---
 title: ボットでサポートされているメディア形式
-description: Microsoft Teamsのボットでは、オーディオコンテンツとビデオ コンテンツに対して次のメディア形式のみがサポートされます。
+description: このモジュールでは、Microsoft Teamsに関するボットについて説明します。オーディオ およびビデオ コンテンツでは、次のメディア形式のみがサポートされます。
 ms.topic: reference
 ms.localizationpriority: medium
-keywords: teams bots メディア形式
-ms.openlocfilehash: cf8939b6fd8e2a3d759488b45c4171dbc27f36bf
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: b202b02388e97e61904c83286932c07c518db8e0
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757340"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143670"
 ---
 # <a name="supported-media-formats-for-bots"></a>ボットでサポートされているメディア形式
 
 Microsoft Teams上のボットでは、オーディオ コンテンツとビデオ コンテンツに対して次のメディア形式のみがサポートされます。
 
-| フォーマット | 詳細情報 |
+| フォーマット | 詳細 |
 | --- | --- |
 | Vorbis | http://www.vorbis.com/ |
 | PCM_U8、PCM_S16LE、PCM_S32LE、PCM_F32LE、PCM_S16BE、PCM_S24BE、PCM_MULAW | https://wiki.multimedia.cx/?title=PCM |

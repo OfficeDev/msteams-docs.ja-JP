@@ -1,14 +1,14 @@
 ---
 title: アダプティブ カードのユニバーサル アクションの概要
-description: デスクトップ環境とモバイル環境のユーザー固有のビュー、シーケンシャル ワークフローのサポートなど、アダプティブ カードのユニバーサル アクションの簡単な概要
+description: デスクトップおよびモバイル環境のユーザー固有のビュー、シーケンシャル ワークフローのサポートなど、アダプティブ カードのユニバーサル アクションについて説明します
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: eb47da7a1a6bf765864e402b83badef664401404
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 82f2120164b745d021f2d2d8921ac8492015c6ed
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756472"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142088"
 ---
 # <a name="universal-actions-for-adaptive-cards"></a>アダプティブ カードのユニバーサル アクション
 
@@ -109,7 +109,7 @@ Teams と Outlook の両方に同じカードを送信し、基になるボッ�
 
 アダプティブ カードは、テキストやグラフィックスなどのコンテンツと、ユーザーが実行できるアクションの組み合わせです。 詳細については「[アダプティブ カード](http://adaptivecards.io/)」を参照してください。 アダプティブ カード用の新しいユニバーサル アクションでは、プラットフォームとアプリケーション間でアダプティブ カードアクションを一般的に処理できます。 詳細については、「[ユニバーサル アクション モデル](/adaptive-cards/authoring-cards/universal-action-model)」を参照してください。
 
-[クイック スタート ガイド](Work-with-universal-actions-for-adaptive-cards.md)を使用してシナリオを更新し、ユニバーサル アクションを活用することから始めることができます。
+[クイック スタート ガイド] を使用してシナリオを更新することで、作業を開始できます。(Work-with-universal-actions-for-adaptive-cards.md)、ユニバーサル アクションを活用します。
 
 ## <a name="next-step"></a>次の手順
 
@@ -121,4 +121,4 @@ Teams と Outlook の両方に同じカードを送信し、基になるボッ�
 * [ボットとは](~/bots/what-are-bots.md)
 * [アダプティブ カードの概要](~/task-modules-and-cards/what-are-cards.md)
 * [アダプティブ カード @ Microsoft ビルド 2020](https://youtu.be/hEBhwB72Qn4?t=1393)
-* [アダプティブ カード @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460)
+* [アダプティブ カード @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460)。

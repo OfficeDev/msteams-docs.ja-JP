@@ -1,17 +1,16 @@
 ---
 title: Teams でのチャットのリソース固有の同意をテストする
-description: サンプルの JSON ファイルで Postman を使用して、Teams でチャットのリソース固有の同意をテストする方法について説明します。
-ms.localizationpriority: high
+description: このモジュールでは、Postman とサンプル JSON ファイルを使用して、Teamsのチャットに対するリソース固有の同意をテストする方法について説明します。
+ms.localizationpriority: medium
 author: jecha
 ms.author: jecha
 ms.topic: how-to
-keywords: チーム認証 OAuth SSO Azure AD rsc Postman Graph
-ms.openlocfilehash: 7419316efbebf4f59c81432f7cd37db7a4a29e4a
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 2155ab68bc95dd643c9796102e2c0ebf7088baa4
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111179"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142865"
 ---
 # <a name="test-chat-rsc-postman-collection-for-json"></a>JSON のチャット RSC Postman コレクションをテストする
 

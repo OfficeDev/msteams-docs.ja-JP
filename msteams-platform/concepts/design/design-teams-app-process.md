@@ -1,16 +1,16 @@
 ---
 title: アプリの設計プロセス
 author: heath-hamilton
-description: 効果的な Microsoft Teams アプリを設計するために、Microsoft のツールとリソースをいつどのように使用すればよいかについて概要を説明します。
+description: Microsoft のツールとリソースを使用して効果的なMicrosoft Teams アプリを設計する方法とタイミングについて説明します。
 ms.localizationpriority: mediums
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 40d223180e0f8bcbfcd5aad27a9a3eb4ee571328
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 97ff20e0ffc6cc802c2226cc7767873cd3a25416
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297220"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144377"
 ---
 # <a name="design-process-for-microsoft-teams-apps"></a>Microsoft Teams アプリの設計プロセス
 

@@ -1,17 +1,16 @@
 ---
 title: ボット用のコマンド メニューを作成する
 author: surbhigupta
-description: Code サンプルを使用して、Microsoft Teams ボットのコマンド メニューを作成する方法について学びます。
+description: このモジュールでは、コード サンプルを使用してMicrosoft Teams ボットのコマンド メニューを作成して処理する方法について説明します。
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-keywords: コマンド メニュー 作成 メッセージ 会話 @mention
-ms.openlocfilehash: 5b96a9b995806678596cc8cedd45f4bb6e80827c
-ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
+ms.openlocfilehash: 7d8c702dd60c3e98b7f00543ce7ce8de9a76ae41
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66048991"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144405"
 ---
 # <a name="bot-command-menus"></a>Bot コマンド メニュー
 
@@ -42,11 +41,11 @@ ms.locfileid: "66048991"
 1. Teams を開き、左側のウィンドウから **[アプリ]** を選択します。 **[アプリ]** ページで **App Studio** を検索し、**[開く]** を選択します。
 
    > [!WARNING]
-   > App Studio を使用している場合は、Teams アプリを構成、配布、管理するための開発者ポータルを試してみることをお勧めします。App Studio は 2022 年 6 月 30 日までに非推奨になります
+   > App Studio を使用している場合は、開発者ポータルで Teams アプリの設定、配布、管理を行うことをお勧めします。 App Studio は、2022 年 6 月 30 日までに廃止されます。
 
    :::image type="content" source="conversations/Media/AppStudio.png" alt-text="appstudio-media":::
 
-2. **App Studio** で、**[マニフェスト エディター]** タブを選択します。既存のアプリ パッケージがない場合は、既存のアプリを作成またはインポートできます。 詳細については、「[App Studio で C# アプリ パッケージを更新する」を](../../get-started/deploy-csharp-app-studio.md)参照してください。
+2. **App Studio** で、**[マニフェスト エディター]** タブを選択します。既存のアプリ パッケージがない場合は、既存のアプリを作成またはインポートできます。 詳細については、「 [App Studio で C# アプリ パッケージを更新する」を](../../get-started/deploy-csharp-app-studio.md)参照してください。
 
 3. **[マニフェスト エディター]** の左側のウィンドウで、**[機能]** セクション内で **[ボット]** を選択します。
 
@@ -61,7 +60,6 @@ ms.locfileid: "66048991"
 7. **[スコープ]** チェック ボックスをオンにして、このコマンド メニューを表示する必要がある場所を選択し、**[保存]** を選択します。
 
    :::image type="content" source="media/AppStudio-NewCommandMenu.png" alt-text="App Studio の [新しいコマンド] メニュー ボタン "lightbox="media/AppStudio-NewCommandMenu.png "border="true":::
-
 
 ### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Manifest.json を編集してボットのコマンド メニューを作成する
 

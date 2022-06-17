@@ -1,16 +1,15 @@
 ---
 title: ボットとのチャネルおよびグループ チャット会話
-description: Microsoft Teams のチャネルでボットと会話するエンド ツー エンドのシナリオについて説明します。
-keywords: Teams シナリオ チャネル会話 ボット
+description: このモジュールでは、Microsoft Teamsのチャネルでボットと会話するエンドツーエンドのシナリオについて説明します。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/25/2019
-ms.openlocfilehash: 1b9d25b7ce6bc30c980634510b5fca7c60f155ef
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: HT
+ms.openlocfilehash: ad212108b9cce66e14cab5c850d8ff466d73c467
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453811"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142781"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Microsoft Teams ボットとのチャネルおよびグループ チャット会話
 
@@ -18,21 +17,21 @@ ms.locfileid: "63453811"
 
 Microsoft Teams でユーザーは、チャネルまたはグループ チャットの会話にボットを参加させることができます。 チームまたはチャットにボットを追加すると、会話のすべてのユーザーがボットの機能を会話内で利用できるようになります。 ボット内で、チーム情報のクエリの実行や、ユーザーの @メンションなど、Teams 固有の機能にアクセスすることもできます。
 
-チャネルおよびグループ チャットでのチャットは、ユーザーがボットを @メンションする必要がある点で、個人用チャットと異なります。 ボットを個人用、グループ チャット、チャネルなどの複数のスコープで使用する場合は、ボット メッセージがどのスコープから送信されたかを判別し、それに応じて処理する必要があります。
+チャネルとグループ チャットでのチャットは、ユーザーがボットを@mentionする必要がある点で、個人用チャットとは異なります。 ボットが個人用、グループ チャット、チャネルなどの複数のスコープで使用されている場合は、ボット メッセージが送信されたスコープを検出し、それに応じて処理する必要があります。
 
 ## <a name="designing-a-great-bot-for-channels-or-groups"></a>チャネルまたはグループ用に優れたボットを設計する
 
-チームに追加されたボットは、新たなチーム メンバーとなり、会話の一員として @メンションの対象になります。 実際、ボットは @メンションされた場合にのみメッセージを受信します。したがって、チャネル上のその他の会話はボットに送信されません。
+チームに追加されたボットは、新たなチーム メンバーとなり、会話の一員として @メンションの対象になります。 実際、ボットはメッセージが@mentionedときにのみ受信されるため、チャネル上の他の会話はボットに送信されません。
 
 グループまたはチャネル内のボットは、すべてのメンバーに関係する適切な情報を提供する必要があります。 ボットが、エクスペリエンスに関わるどんな情報でも提供できるのは確かですが、それとの会話がすべてのユーザーに表示される点に留意してください。 それで、グループまたはチャネル内の優れたボットは、すべてのユーザーに付加価値を提供するものであり、1 対 1 の会話に向いている情報を誤って共有することがないはずです。
 
-ボットは、追加の作業をせずにそのままで、すべてのスコープでの使用に完全に適している可能性があります。 Microsoft Teams では、すべてのスコープでボットを機能させることが想定されているわけではありませんが、サポートすることに決めたいずれのスコープでもボットがユーザーに付加価値をもたらすようにする必要があります。 スコープの詳細については、[Microsoft Teams のアプリ](~/concepts/build-and-test/app-studio-overview.md)に関する記事を参照してください。
+ボットは、同様に、より多くの作業を必要とせずに、すべてのスコープで完全に関連している可能性があります。 Microsoft Teamsでは、ボットがすべてのスコープで機能するとは思われませんが、サポートするスコープのうち、どのスコープでもボットがユーザーの価値を提供するようにする必要があります。 スコープの詳細については、[Microsoft Teams のアプリ](~/concepts/build-and-test/app-studio-overview.md)に関する記事を参照してください。
 
 グループまたはチャネルで動作するボットの開発では、個人の会話と同じ機能の多くを使用します。 ペイロード内の追加のイベントとデータで、Teams のグループおよびチャネルの情報を提供します。 それらの相違点、および一般的な機能の主な相違点について、以下のセクションで説明します。
 
 ### <a name="creating-messages"></a>メッセージの作成
 
-チャネルでメッセージを作成するボットの詳細については、「[ボットのプロアクティブ メッセージング](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)」、特に「[チャネル会話の作成](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md#creating-a-channel-conversation)」を参照してください。
+チャネルでメッセージを作成するボットの詳細については、「 [ボットのプロアクティブ メッセージング](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)」と「チャネル会話の [作成](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md#creating-a-channel-conversation)」を参照してください。
 
 ### <a name="receiving-messages"></a>メッセージの受信
 
@@ -54,7 +53,7 @@ REST API を使用する場合は、[`/conversations/{conversationId}/activities
 
 ### <a name="best-practice-welcome-messages-in-teams"></a>ベスト プラクティス: Teams でのウェルカム メッセージ
 
-ボットが最初にグループまたはチームに追加されるときには、通常、すべてのユーザーにそのボットを紹介するウェルカム メッセージを送信するとよいでしょう。 ウェルカム メッセージで、ボットの機能と、ユーザーへのメリットについて説明する必要があります。 理想的には、ユーザーがアプリとやり取りするためのコマンドもメッセージに含める必要があります。 これを行うには、`channelData` オブジェクトで `teamsAddMembers` eventType を使用して、ボットが `conversationUpdate` メッセージに応答するようにします。 ユーザーがチームに追加されるときにも同じイベントが送信されるため、必ず、`memberAdded` ID をボットのアプリ ID そのものにしてください。 詳細については、「[チーム メンバーまたはボットの追加](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)」を参照してください。
+ボットが最初にグループまたはチームに追加されたときは、ボットを紹介するウェルカム メッセージをすべてのユーザーに送信すると便利です。 ウェルカム メッセージで、ボットの機能と、ユーザーへのメリットについて説明する必要があります。 理想的には、ユーザーがアプリとやり取りするためのコマンドもメッセージに含める必要があります。 これを行うには、`channelData` オブジェクトで `teamsAddMembers` eventType を使用して、ボットが `conversationUpdate` メッセージに応答するようにします。 ユーザーがチームに追加されるときにも同じイベントが送信されるため、必ず、`memberAdded` ID をボットのアプリ ID そのものにしてください。 詳細については、 [チーム メンバーまたはボットの追加](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) に関するページを参照してください。
 
 ボットが追加されたときに、チームの各メンバーに個人用メッセージを送信することもできます。 これを行うには、[チーム名簿を取得](~/resources/bot-v3/bots-context.md#fetch-the-team-roster)し、各ユーザーに[ダイレクト メッセージ](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)を送信することができます。
 
@@ -67,7 +66,7 @@ REST API を使用する場合は、[`/conversations/{conversationId}/activities
 
 ## <a name="-mentions"></a>@メンション
 
-グループまたはチャネル内のボットは、メッセージでメンション ("@*ボット名*") されたときにのみ応答します。そのため、グループ チャネル内のボットによって受信されたすべてのメッセージにはその独自の名前が含まれており、メッセージの解析でそれが処理されるようにする必要があります。 さらにボットは、メンションされた他のユーザーを解析したり、メッセージの一部としてユーザーをメンションしたりすることができます。
+グループまたはチャネル内のボットは、メッセージ内で言及されたときにのみ ("@*botname*") 応答するため、グループ チャネル内のボットによって受信されたすべてのメッセージには独自の名前が含まれており、メッセージの解析によって処理されることを確認する必要があります。 さらにボットは、メンションされた他のユーザーを解析したり、メッセージの一部としてユーザーをメンションしたりすることができます。
 
 ### <a name="retrieving-mentions"></a>メンションの取得
 

@@ -1,15 +1,14 @@
 ---
-title: 開発者向けプレビュー
-description: Microsoft Teams の開発者向けパブリック プレビュー機能について説明します。
+title: Microsoft Teams の開発者向けパブリック プレビュー
+description: この記事では、Microsoft Teams および開発者プレビュー アプリ マニフェストのパブリック開発者プレビューに含まれる機能について説明します。
 ms.topic: conceptual
 ms.localizationpriority: high
-keywords: Teams プレビューの開発者向け機能
-ms.openlocfilehash: a671a8ed6a1e4a49c731bcad78dd0d454a6bb600
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 6efc0681ad15add36ddaf94d3ca89ef931e9f30e
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756878"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143985"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>Microsoft Teams の開発者向けパブリック プレビュー
 

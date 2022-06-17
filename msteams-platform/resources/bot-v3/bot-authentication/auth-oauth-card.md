@@ -1,70 +1,70 @@
 ---
-title: Azure Bot Service を使用した認証のTeams
-description: Azure Bot Service OAuthCard と、それが認証に使用される方法について説明します。
+title: Teamsでの認証に Azure Bot Serviceを使用する
+description: Azure Bot Service OAuthCard と認証に使用する方法について説明します
 ms.topic: conceptual
 localization_priority: Normal
-keywords: teams 認証 OAuthCard OAuth カード Azure Bot Service
-ms.openlocfilehash: 3d0df4f04625c5be3468d12319b54096ae06de90
-ms.sourcegitcommit: 825abed2f8784d2bab7407ba7a4455ae17bbd28f
+keywords: teams authentication OAuthCard OAuth カード Azure Bot Service
+ms.openlocfilehash: 7731e4d1148e50c748d9c5e1b55371628a78dea7
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52020682"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143166"
 ---
-# <a name="using-azure-bot-service-for-authentication-in-teams"></a>Azure Bot Service を使用した認証のTeams
+# <a name="using-azure-bot-service-for-authentication-in-teams"></a>Teamsでの認証に Azure Bot Serviceを使用する
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Azure Bot Service の OAuthCard がない場合、ボットに認証を実装する方法は複雑です。 Web エクスペリエンスの構築、外部 OAuth プロバイダーとの統合、トークン管理、および認証フローを安全に完了するための適切なサーバー間 API 呼び出しの処理が含まれます。 これにより、"マジック ナンバー" の入力が必要な不格好なエクスペリエンスが発生する可能性があります。
+Azure Bot Serviceの OAuthCard がなければ、ボットに認証を実装するのは複雑です。 Web エクスペリエンスの構築、外部 OAuth プロバイダーとの統合、トークン管理、適切なサーバー間 API 呼び出しの処理を行って認証フローを安全に完了することは、フルスタックの課題です。 これにより、"マジック ナンバー" の入力が必要な不器用なエクスペリエンスが発生する可能性があります。
 
-Azure Bot Service の OAuthCard を使用すると、Teamsにサインインして外部データ プロバイダーにアクセスする方が簡単になります。 既に認証を実装済みで、より簡単なものに切り替える場合も、ボット サービスに初めて認証を追加する場合でも、OAuthCard を使用すると、簡単に行えます。
+Azure Bot Serviceの OAuthCard を使用すると、Teams ボットがユーザーにサインインし、外部データ プロバイダーにアクセスしやすくなります。 認証を既に実装していて、よりシンプルなものに切り替えたい場合でも、初めてボット サービスに認証を追加する場合でも、OAuthCard を使うと簡単になります。
 
-[認証][](~/resources/bot-v3/bot-authentication/auth-flow-bot.md)の他のトピックでは、OAuthCard を使用せずに認証を記述します。そのため、Teams での認証を深く理解する場合や、OAuthCard を使用できない状況がある場合は、引き続きこれらのトピックを参照できます。
+[認証](~/resources/bot-v3/bot-authentication/auth-flow-bot.md)の他のトピックでは、OAuthCard を使用せずに認証について説明しているため、Teamsの認証をより深く理解したい場合や、OAuthCard を使用できない状況がある場合でも、これらのトピックを参照できます。
 
 ## <a name="support-for-the-oauthcard"></a>OAuthCard のサポート
 
 現在、OAuthCard を使用できる場所にはいくつかの制限があります。 これには、次のものが含まれます。
 
-* カードはゲスト アクセスでは [機能しません](/MicrosoftTeams/guest-access)
-* これは、無料のMicrosoft Teams[しません](https://products.office.com/microsoft-teams/free)
-* ボット認証にのみ使用できます
-* Azure Bot Service に登録されているボットでのみ [機能します。](https://azure.microsoft.com/services/bot-service/)
+* カードは [ゲスト アクセス](/MicrosoftTeams/guest-access)では機能しません。
+* [Microsoft Teams 無料版](https://products.office.com/microsoft-teams/free)では機能しません。
+* ボット認証にのみ使用できます。
+* これは、[Azure Bot Service](https://azure.microsoft.com/services/bot-service/)に登録されているボットでのみ機能します。
 
-## <a name="how-does-the-azure-bot-service-help-me-do-authentication"></a>Azure Bot Service は認証を行う上でどのように役立ちますか?
+## <a name="how-does-the-azure-bot-service-help-me-do-authentication"></a>Azure Bot Serviceはどのように認証を行うのに役立ちますか?
 
-OAuthCard を使用した完全なドキュメントについては、「Azure Bot Service 経由でボットに認証を追加する [」を参照してください](/azure/bot-service/bot-builder-tutorial-authentication?view=azure-bot-service-3.0&preserve-view=true)。 このトピックは Azure Bot Framework のドキュメント セットに含まれるので、このトピックに固有のTeams。
+OAuthCard を使用した完全なドキュメントについては、「[Azure Bot Serviceを使用してボットに認証を追加する](/azure/bot-service/bot-builder-tutorial-authentication?view=azure-bot-service-3.0&preserve-view=true)」を参照してください。 このトピックは Azure Bot Framework ドキュメント セットに含まれており、Teamsに固有のものではありません。
 
-次のセクションでは、OAuthCard を使用する方法について説明します。Teams。
+以降のセクションでは、Teamsで OAuthCard を使用する方法について説明します。
 
-## <a name="main-benefits-for-teams-developers"></a>開発者向けの主Teams利点
+## <a name="main-benefits-for-teams-developers"></a>Teams開発者にとっての主な利点
 
 OAuthCard は、次の方法で認証に役立ちます。
 
-* アウトオブボックスの Web ベース認証フローを提供します。外部ログイン エクスペリエンスに移動したり、リダイレクトを提供したりするために、Web ページを作成してホストする必要がなくなりました。
-* エンド ユーザーはシームレスです。完全なサインイン エクスペリエンスを、Teams。
-* 簡単なトークン管理が含まれています。トークン ストレージ システムを実装する必要がなくなりました。代わりに、Bot Service はトークンキャッシュを処理し、これらのトークンをフェッチするための安全なメカニズムを提供します。
+* すぐに使用できる Web ベースの認証フローを提供します。外部ログイン エクスペリエンスに誘導したり、リダイレクトを提供したりするために Web ページを記述してホストする必要がなくなりました。
+* エンド ユーザーにとってシームレスです。Teams内で完全なサインイン エクスペリエンスを完了します。
+* 簡単なトークン管理が含まれています。トークン ストレージ システムを実装する必要がなくなりました。代わりに、Bot Serviceはトークン キャッシュを処理し、トークンをフェッチするための安全なメカニズムを提供します。
 * 完全な SDK でサポートされています。ボット サービスから簡単に統合して使用できます。
-* Azure AD/MSA、Facebook、Google など、多くの一般的な OAuth プロバイダーをサポートしています。
+* Azure AD/MSA、Facebook、Google など、多くの一般的な OAuth プロバイダーをすぐにサポートしています。
 
-## <a name="when-should-i-implement-my-own-solution"></a>自分のソリューションをいつ実装する必要がありますか?
+## <a name="when-should-i-implement-my-own-solution"></a>自分のソリューションを実装する必要があるのはいつですか?
 
-アクセス トークンは機密情報であるため、外部サービスに保存する必要はありません。 この場合も、Teams 内で独自のトークン管理システムとログイン エクスペリエンスを実装できます (Teams[認証](~/resources/bot-v3/bot-authentication/auth-flow-bot.md)の他のトピックで説明します)。
+アクセス トークンは機密情報であるため、外部サービスに格納したくない場合があります。 この場合、Teams[認証](~/resources/bot-v3/bot-authentication/auth-flow-bot.md)に関するトピックの残りの部分で説明されているように、Teams内で独自のトークン管理システムとログイン エクスペリエンスを引き続き実装することもできます。
 
-## <a name="getting-started-with-oauthcard-in-teams"></a>OAuthCard の使用を開始する方法Teams
+## <a name="getting-started-with-oauthcard-in-teams"></a>Teamsでの OAuthCard の概要
 
 > [!NOTE]
-> このガイドでは、Bot Framework v3 SDK を使用しています。 v4 実装は、こちらを参照 [してください](/azure/bot-service/bot-builder-authentication?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)。 それ以外の場合は [サインイン] ボタンが認証ウィンドウを開かないので、マニフェストを作成し、セクションに token.botframework.com を含める `validDomains` 必要があります。 App [Studio を使用して](~/concepts/build-and-test/app-studio-overview.md) マニフェストを生成します。
+> このガイドでは、Bot Framework v3 SDK を使用しています。 v4 の実装 [については、こちらを参照してください](/azure/bot-service/bot-builder-authentication?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)。 マニフェストを作成し、セクションに token.botframework.com を `validDomains` 含める必要があります。そうしないと、[サインイン] ボタンが認証ウィンドウを開かないためです。 [App Studio を](~/concepts/build-and-test/app-studio-overview.md)使用してマニフェストを生成します。
 
-まず、外部認証プロバイダーをセットアップするように Azure ボット サービスを構成する必要があります。 詳細な [手順については、「ID プロバイダーの構成](~/concepts/authentication/configure-identity-provider.md) 」を参照してください。
+最初に、外部認証プロバイダーを設定するように Azure ボット サービスを構成する必要があります。 詳細な手順については、「 [ID プロバイダーの構成](~/concepts/authentication/configure-identity-provider.md) 」を参照してください。
 
-Azure Bot Service を使用して認証を有効にするには、コードに次の追加を行う必要があります。
+Azure Bot Serviceを使用して認証を有効にするには、コードに次の追加を行う必要があります。
 
-1. ボット token.botframework.com のログイン ページを埋め込むTeamsアプリ マニフェストのセクションにこの情報 `validDomains` を含める。
-2. ボットが認証されたリソースにアクセスする必要がある場合は常に、ボット サービスからトークンをフェッチします。 トークンが使用できない場合は、OAuthCard を含むメッセージを外部サービスへのログインを要求するユーザーに送信します。
-3. ログイン完了アクティビティを処理します。 これにより、認証要求とトークンがボットと現在対話しているユーザーに関連付けられる。
-4. 外部 REST API の呼び出しなど、ボットが認証されたアクションを実行する必要がある場合は常にトークンを取得します。
+1. TeamsはBot Serviceのログイン ページを`validDomains`埋め込むため、アプリ マニフェストのセクションに token.botframework.com を含めます。
+2. ボットが認証されたリソースにアクセスする必要がある場合は、Bot Serviceからトークンをフェッチします。 使用可能なトークンがない場合は、OAuthCard を含むメッセージをユーザーに送信し、外部サービスへのログインを要求します。
+3. ログイン完了アクティビティを処理します。 これにより、認証要求とトークンが、ボットと現在対話しているユーザーに関連付けられます。
+4. ボットが認証されたアクション (外部 REST API の呼び出しなど) を実行する必要がある場合は、必ずトークンを取得します。
 
-ダイアログ コードで、次のスニペット (C#) を追加する必要があります。これは、既存のアクセス トークンをチェックします。
+ダイアログ コードで、既存のアクセス トークンを確認する次のスニペット (C#) を追加する必要があります。
 
 ```CSharp
 // First ask Bot Service if it already has a token for this user
@@ -94,7 +94,7 @@ private async Task SendOAuthCardAsync(IDialogContext context, Activity activity)
 }
 ```
 
-ログイン完了アクティビティを処理するには、この Invoke を処理する必要があります。
+ログイン完了アクティビティを処理するには、次の呼び出しを処理する必要があります。
 
 ```CSharp
 if (activity.Name == "signin/verifyState")
@@ -108,7 +108,7 @@ if (activity.Name == "signin/verifyState")
 }
 ```
 
-ダイアログ コードで、ボット認証サービスからトークンを取得できます。
+ダイアログ コードで、Bot 認証サービスからトークンを取得できます。
 
 ```CSharp
 if (text.Contains("loginComplete"))
@@ -135,7 +135,7 @@ if (text.Contains("loginComplete"))
 
 ## <a name="using-oauthcard-with-messaging-extensions"></a>メッセージング拡張機能での OAuthCard の使用
 
-Azure Bot Service を使用して、サードパーティ プロバイダーをメッセージング拡張機能に接続することもできます。 フローはボットと同じですが、OAuthCard を返す代わりに、サービスはログイン プロンプトを返します。
+Azure Bot Serviceを使用して、サード パーティのプロバイダーをメッセージング拡張機能に接続することもできます。 フローはボットと同じですが、OAuthCard を返す代わりに、サービスはログイン プロンプトを返します。
 
 次のスニペット (C#) は、ログイン応答を作成する方法を示しています。
 
@@ -163,9 +163,9 @@ if (token == null)
 }
 ```
 
-上記の例では、プロパティに対して直接呼び出し `GetSignInLinkAsync` を行う必要 `client.OAuthApi` があります。
+上記の例では、プロパティに対して`client.OAuthApi`直接呼び出しを`GetSignInLinkAsync`行う必要があることに注意してください。
 
-ユーザーがログイン シーケンスを正常に完了すると、サービスは元のユーザー クエリを含む別の Invoke 要求と、"マジック コード" を含む状態パラメーター文字列を受け取ります。 これで、ユーザー ID と接続名と共に、この文字列を使用してトークンをフェッチできます。
+ユーザーがログイン シーケンスを正常に完了すると、サービスは、元のユーザー クエリを含む別の Invoke 要求と、"マジック コード" を含む状態パラメーター文字列を受け取ります。 この文字列と、ユーザー ID と接続名を使用してトークンをフェッチできるようになりました。
 
 ```CSharp
 var query = activity.GetComposeExtensionQueryData();

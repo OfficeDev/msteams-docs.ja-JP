@@ -5,12 +5,12 @@ description: 階層リンク、通知バー、ステージ ビューなどのTea
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 2b009d4a31181ed1794dafdb8e224b7239bebd81
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 145b5adbefcd1ccd5bc90007700cf4851c96b26b
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123420"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143425"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>高度な UI コンポーネントを使用したMicrosoft Teams アプリの設計
 
@@ -104,9 +104,9 @@ Fluent UI [アラート](https://fluentsite.z22.web.core.windows.net/0.59.0/comp
 
 ### <a name="top-use-cases"></a>上位のユース ケース
 
-* アプリ コンテンツに対するコンテキスト アクション
-* コンテキスト フィルターと検索
-* ナビゲーションと階層リンク
+* アプリ コンテンツに対するコンテキスト アクション。
+* コンテキスト フィルターと検索。
+* ナビゲーションと階層リンク。
 
 ### <a name="mobile"></a>Mobile
 

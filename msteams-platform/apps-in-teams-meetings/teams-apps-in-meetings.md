@@ -1,17 +1,16 @@
 ---
 title: Teams 会議用アプリ
 author: surbhigupta
-description: 参加者とユーザーの役割に基づく Teams 会議のアプリの概要
+description: この記事では、参加者とユーザーロールとアプリの拡張性に基づいて、Microsoft Teams会議でアプリがどのように機能するかを説明します。
 ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
-keywords: Teams アプリ会議ユーザー参加者ロール API
-ms.openlocfilehash: 3543cb8e1beff69484a6348f511a033ad09e1f6d
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: 332d0e382cbadbe41900e8cc65eb0266e94954dc
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668047"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142508"
 ---
 # <a name="apps-for-teams-meetings"></a>Teams 会議用アプリ
 

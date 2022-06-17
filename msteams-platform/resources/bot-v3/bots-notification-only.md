@@ -1,16 +1,15 @@
 ---
 title: 通知のみのボット
-description: Microsoft Teams 内の通知専用ボットについて説明します
-keywords: teams ボット通知
+description: このモジュールでは、Microsoft Teams、アプリ マニフェスト、およびそのベスト プラクティスと制限事項に含まれる通知専用ボットについて説明します。
 ms.topic: conceptual
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.date: 01/29/2020
-ms.openlocfilehash: 1ee009fb76a52bcebdd3fe24c7a672f1ed455b42
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 547ef73cfd036efe566afe15e4f50701a275c2cd
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111480"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144300"
 ---
 # <a name="notification-only-bots-in-microsoft-teams"></a>Microsoft Teams の通知専用ボット
 
@@ -19,7 +18,7 @@ ms.locfileid: "65111480"
 ボットの唯一の目的がユーザーに通知を配信することであり、会話ではない場合は、アプリ マニフェストのフィールドを `isNotificationOnly` 有効にすることができます。 これにより、次の変更が生成されます。
 
 * ユーザーは通知専用ボットにメッセージを送信できません。
-* ユーザーはボットを @メンションできません。
+* ユーザーはボットを@mentionできません。
 
 > [!NOTE]
 > ボットのみのアプリは、`isNotificationOnly: true` または `isNotificationOnly: false` の両方の場合にパーソナル アプリ トレイに表示されます。

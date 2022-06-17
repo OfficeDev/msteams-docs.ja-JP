@@ -1,17 +1,17 @@
 ---
 title: TeamsFx コマンド ライン インターフェイス
 author: MuyangAmigo
-description: TeamsFx コマンド ライン インターフェイスについて説明します
+description: このモジュールでは、TeamsFx ライブラリ、TeamsFx コマンド ライン インターフェイス、サポートされているコマンドとそのシナリオについて説明します。
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: f26593c409f0b2f7d64093fa90e65afebd27c0ec
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: d269da398280f51a3225414f279a25fcd5d9d7cf
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123795"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142074"
 ---
 # <a name="teamsfx-library"></a>TeamsFx ライブラリ
 
@@ -130,8 +130,8 @@ TeamsFx は、Teams アプリケーションの開発を加速するテキスト
 
 | コマンド | 説明 |
 |:----------------  |:-------------|
-| `teamsfx account login <service>`  | 選択したクラウド サービスにログインします。 サービス オプションは M365 または Azure です。 |
-| `teamsfx account logout <service>`  | 選択したクラウド サービスからログアウトします。 サービス オプションは M365 または Azure です。 |
+| `teamsfx account login <service>`  | 選択したクラウド サービスにログインします。 サービス オプションは、Microsoft 365または Azure です。 |
+| `teamsfx account logout <service>`  | 選択したクラウド サービスからログアウトします。 サービス オプションは、Microsoft 365または Azure です。 |
 | `teamsfx account set --subscription` | アカウント設定を更新してサブスクリプション ID を設定します。 |
 
 ## `teamsfx env`
@@ -181,8 +181,8 @@ teamsfx env add staging --env dev
 |`--open-api-document`| いいえ | プロジェクトに APIM リソースがある場合に適用されます。 開いている API ドキュメント ファイルパス。 |
 |`--api-prefix`| なし | プロジェクトに APIM リソースがある場合に適用されます。 API 名プレフィックス。 API の既定の一意の名前は `{api-prefix}-{resource-suffix}-{api-version}` です。 |
 |`--api-version`| なし | プロジェクトに APIM リソースがある場合に適用されます。 API バージョン。 |
-|`--include-app-manifest`| 不要 | アプリ マニフェストをTeams プラットフォームにデプロイするかどうか。 オプションは次`yes`のとおりです。`not` 既定値は `no` です。 |
-|`--include-aad-manifest`| なし | aad マニフェストをデプロイするかどうか。 オプションは次`yes`のとおりです。`not` 既定値は `no` です。 |
+|`--include-app-manifest`| いいえ | アプリ マニフェストをTeams プラットフォームにデプロイするかどうか。 オプションは次`yes`のとおりです。`not` 既定値は `no` です。 |
+|`--include-aad-manifest`| いいえ | aad マニフェストをデプロイするかどうか。 オプションは次`yes`のとおりです。`not` 既定値は `no` です。 |
 
 ## `teamsfx validate`
 
@@ -418,7 +418,7 @@ TeamsFx CLI には、コラボレーション シナリオ用のコマンドが�
       teamsfx account login Microsoft 365
       ```
 
-    * すべてのAzureリソースに対する共同作成者のアクセス許可を使用してAzureアカウントにログインします。
+    * すべての Azure リソースに対する共同作成者アクセス許可を持つ Azure アカウントにログインします。
 
       ```bash
       teamsfx account login azure

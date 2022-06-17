@@ -5,13 +5,12 @@ description: アプリの計画、ユース ケースの理解、アプリの機
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-keywords: エントリ ポイントの拡張性のユース ケースデバイス機能
-ms.openlocfilehash: ffcefbdfc5696f91872fcf828f9e40e58e224a6b
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: 469c21c69fc7be450f2e51c26ddb1cf3c67292f4
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602251"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142424"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Teams の機能を使用してアプリを計画する
 
@@ -21,9 +20,9 @@ ms.locfileid: "65602251"
 
 このセクションでは、次の方法について説明します:
 
-* ユース ケースを特定し、Teams の機能にマップする方法
-* 計画チェックリストの使用法
-* アプリの展開以外の計画を立てる方法
+* ユース ケースを特定し、Teams の機能にマップする方法。
+* 計画チェックリストの使用法。
+* アプリの展開以外の計画を立てる方法。
 
 ## <a name="plan-with-teams"></a>Teams で計画する
 

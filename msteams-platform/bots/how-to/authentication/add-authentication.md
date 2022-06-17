@@ -1,17 +1,16 @@
 ---
 title: Teams ボットに認証を追加する
 author: surbhigupta
-description: Azure Active Directory を使用して Microsoft Teams のボットに OAuth 認証を追加する方法。 認証が有効になっているボットを作成、デプロイ、統合する方法について説明します。
+description: Azure Active Directoryを使用して、Teamsのボットに OAuth 認証を追加する方法について説明します。 認証が有効になっているボットを作成、デプロイ、統合する方法について説明します。
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-keywords: リソース グループ ボット登録 Azure エミュレーター ボット マニフェストのデプロイ
-ms.openlocfilehash: 9594723f671f69a5dc4cb99f0ab48385603e3394
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 2a9ebf96f5795b6674646bc50dd856badf59152e
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756948"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142564"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Teams ボットに認証を追加する
 
@@ -339,7 +338,7 @@ Microsoft Teams チャネルに追加するには:
 1. 左側のウィンドウで **[設定]** を選択します。
 1. **[メッセージング エンドポイント]** ボックスに、上記で取得した URL に続いて `api/messages` を入力します。例: `https://botteamsauth.azurewebsites.net/api/messages`。
     > [!NOTE]
-    > 1 つのボットに対して許可されるメッセージング エンド ポイントは 1 つだけです
+    > 1 つのボットに対して許可されるメッセージング エンドポイントは 1 つだけです。
 1. 左上の **[保存]** ボタンを選択します。
 
 ## <a name="test-the-bot-using-the-emulator"></a>エミュレーターを使用してボットをテストする
@@ -627,6 +626,15 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 [!code-python[allow logout](~/../botbuilder-samples/samples/python/46.teams-auth/dialogs/logout_dialog.py?range=29-36&highlight=6)]
 
 ---
+
+## <a name="code-sample"></a>コード サンプル
+
+このセクションでは、Bot 認証 v3 SDK サンプルを提供します。
+
+| **サンプルの名前** | **説明** | **.NET** | **Node.js** | **Python** |
+|---------------|------------|------------|-------------|---------------|
+| ボット認証 | このサンプルは、Microsoft Teams のボットで認証を開始する方法を示しています。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| タブ、ボット、メッセージ拡張機能 (ME) SSO | このサンプルは、タブ、ボット、および ME の SSO (検索、アクション、linkunfurl) を示しています。 |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | 利用不可 |
 
 ## <a name="see-also"></a>関連項目
 

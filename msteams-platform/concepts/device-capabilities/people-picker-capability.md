@@ -1,16 +1,15 @@
 ---
 title: ユーザー ピッカーを統合する
-description: Teams JavaScript クライアント SDK を使用してユーザー ピッカー コントロールを統合する方法
-keywords: ユーザー ピッカー コントロール
+description: この記事では、Teams JavaScript クライアント SDK を使用してユーザー ピッカー コントロールを統合する方法と、ユーザーピッカーを使用する利点について説明します。
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 802bb2ab2a3224809e07c56d498ad85473ced492
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: f16145354b05ab584e295ffd23262d2b925e4249
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757592"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123028"
 ---
 # <a name="integrate-people-picker"></a>ユーザー ピッカーを統合する
 
@@ -52,7 +51,7 @@ Teams アプリでユーザー ピッカー入力コントロールを統合す�
 ユーザー ピッカー入力コントロールを使用すると、ユーザーは次の手順を使用してユーザーを検索して追加できます。
 
 1. 必要なユーザーの名前を入力します。 リストに名前の候補が表示されます。
-1. リストから必要なユーザーの名前を選択します。 
+1. リストから必要なユーザーの名前を選択します。
 
    :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="ピッカーとピッカー モバイル" border="true":::
 
@@ -61,7 +60,7 @@ Teams アプリでユーザー ピッカー入力コントロールを統合す�
 Web またはデスクトップ上のユーザー ピッカー コントロールは、Web アプリの上部にあるモーダル ウィンドウで起動され、ユーザーを追加するには、次の手順を使用します。
 
 1. 必要なユーザーの名前を入力します。 リストに名前の候補が表示されます。
-1. リストから必要なユーザーの名前を選択します。 
+1. リストから必要なユーザーの名前を選択します。
 
    :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="デスクトップ名によるユーザー ピッカー" border="true":::
 

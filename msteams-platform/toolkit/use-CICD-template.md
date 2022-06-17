@@ -1,17 +1,17 @@
 ---
-title: Teams アプリケーション開発者向けの GitHub、Azure DevOps、および Jenkins で CI/CD パイプライン テンプレートを使用する方法について説明します
+title: CI/CD テンプレート
 author: MuyangAmigo
-description: CI/CD テンプレート
+description: このモジュールでは、Teams Application DevelopersCI/CD テンプレート用の GitHub、Azure DevOps、および Jenkins で CI/CD パイプライン テンプレートを使用する方法について説明します
 ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 04/20/2022
-ms.openlocfilehash: c39ad23fe42fd9cfd97ae2fcf49390cf19fac4a2
-ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
+ms.openlocfilehash: db263d3c8cf7eff085e237e884ef5baafc200230
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65938934"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142599"
 ---
 # <a name="set-up-cicd-pipelines"></a>CI/CD パイプラインを設定する
 
@@ -19,7 +19,7 @@ TeamsFx は、Teams アプリケーションをビルドしながら開発ワー
 
 |ツールとテンプレート | 説明 |
 |---|---|
-|[TeamsFx-CLI-Action](https://github.com/OfficeDev/teamsfx-cli-action)|TeamsFx CLI と統合する GitHub アクション。|
+|[TeamsFx-CLI-Action](https://github.com/OfficeDev/teamsfx-cli-action)|TeamsFx CLI と統合するアクションをGitHubします。|
 |[Visual Studio Codeの Teams ツールキット](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| Teams アプリや、GitHub、Azure DevOps、および Jenkins の自動化ワークフローの開発に役立つ Visual Studio Code 拡張機能。 |
 |[TeamsFx CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) | Teams アプリや、GitHub、Azure DevOps、および Jenkins の自動化ワークフローの開発に役立つコマンドライン ツール。|
 |[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) と [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| GitHub、Azure DevOps、または Jenkins 以外の自動化用のスクリプト テンプレート。 |
@@ -46,12 +46,12 @@ CI/CD で GitHub を使用してパイプラインを設定するには:
 
 ### <a name="create-workflow-templates"></a>ワークフロー テンプレートを作成する
 
-GitHub を使用して、次のワークフロー テンプレートを作成できます。
+GitHubを使用して、次のワークフロー テンプレートを作成できます。
 
 **Visual Studio Codeの Teams ツールキット**
 
 1. Teams Toolkit を使用して新しい Teams アプリを作成します。
-1. 左側のナビゲーション バーから **Teams Toolkit** アイコン :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="API アイコン"::: を選択します。
+1. 左側 **Teams Toolkit** ナビゲーション バーから :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="アイコン API アイコン":::を選択します。
 1. **[CI/CD ワークフローの追加]** を選択します。
 1. コマンド プロンプトから環境を選択します。
 1. CI/CD プロバイダーとして **[GitHub]** を選択します。
@@ -93,12 +93,12 @@ CI/CD で Azure DevOps を使用してパイプラインを設定するには:
 
 ### <a name="create-workflow-templates"></a>ワークフロー テンプレートを作成する
 
-Azure DevOps を使用して、次のワークフロー テンプレートを作成できます。
+Azure DevOpsを使用して、次のワークフロー テンプレートを作成できます。
 
 **Visual Studio Codeの Teams ツールキット**
 
 1. Teams Toolkit を使用して新しい Teams アプリを作成します。
-2. 左側のナビゲーション バーから **Teams Toolkit** アイコン :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="API アイコン"::: を選択します。
+2. 左側 **Teams Toolkit** ナビゲーション バーから :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="アイコン API アイコン":::を選択します。
 3. **[CI/CD ワークフローの追加]** を選択します。
 4. コマンド プロンプトから環境を選択します。
 5. CI/CD プロバイダーとして **[Azure DevOps]** を選択します。
@@ -151,7 +151,7 @@ Jenkins を使用して、次のワークフロー テンプレートを作成�
 **Visual Studio Codeの Teams ツールキット**
 
 1. Teams Toolkit を使用して新しい Teams アプリを作成します。
-2. 左側のナビゲーション バーから **Teams Toolkit** アイコン :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="API アイコン"::: を選択します。
+2. 左側 **Teams Toolkit** ナビゲーション バーから :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="アイコン API アイコン":::を選択します。
 3. **[CI/CD ワークフローの追加]** を選択します。
 4. コマンド プロンプトから環境を選択します。
 5. CI/CD プロバイダーとして **[Jenkins]** を選択します。
@@ -229,7 +229,7 @@ Teams アプリのマニフェスト ファイルに関連する変更がある�
 
 アプリを発行するには、次の手順に従います。
 
-1. 対応するアカウントを使用して [Teams の開発者ポータル](https://dev.teams.microsoft.com) にサインインします。
+1. 対応するアカウントを使用して[、開発者ポータルにサインインしてTeams](https://dev.teams.microsoft.com)します。
 2. zip でアプリ パッケージをインポートし、 を選択します `App -> Import app -> Replace`。
 3. アプリの一覧でターゲット アプリを選択します。
 4. アプリを発行し、 を選択します `Publish -> Publish to your org`。

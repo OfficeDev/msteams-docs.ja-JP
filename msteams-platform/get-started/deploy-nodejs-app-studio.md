@@ -6,17 +6,17 @@ ms.custom: scenarios:getting-started; languages:ASP,Node.js
 ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
-ms.openlocfilehash: 7f423cfd33fdca9d40f2adfe32b59ace26d39adc
-ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
+ms.openlocfilehash: 15b5837fb8155d8b34b2c337a550ecbaaae9d86a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64737218"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142522"
 ---
 # <a name="update-nodejs-app-package-in-app-studio"></a>App Studio でアプリ パッケージNode.js更新する
 
 > [!TIP]
-> **開発者ポータルを試す**: App Studio が進化しました。 新しい[開発者ポータル](https://dev.teams.microsoft.com/)を使用して、Teams アプリを構成、配布、管理します。
+> **開発者ポータルを試す**: App Studio が進化しました。 新しい[開発者ポータル](https://dev.teams.microsoft.com/)を使用して Teams アプリを構成、配布および管理する。
 
 App Studio は、Teams ストアからインストールできるTeams アプリです。 これにより、アプリの作成と登録が簡略化されます。
 
@@ -128,7 +128,7 @@ Teams アプリにタブを追加するのは簡単です。 サンプル アプ
 
 #### <a name="messaging-extensions"></a>メッセージング拡張機能
 
-メッセージング拡張機能を使用すると、ユーザーはサービスから情報を要求し、その情報を投稿できます。 情報は、チャネル会話にカードの形式で投稿されます。 メッセージング拡張機能は、作成ボックスの下部に表示されます。
+メッセージ拡張機能を使用すると、ユーザーはサービスから情報を要求し、その情報を投稿できます。 情報は、カードの形式でチャネルの会話に投稿されます。 メッセージ拡張機能は、作成ボックスの下部に表示されます。
 
 メッセージング拡張機能をセットアップするには、次の手順を実行します。
 
@@ -178,7 +178,7 @@ Teams アプリにタブを追加するのは簡単です。 サンプル アプ
 1. [**チームに追加**] セクションで **[検索**] ボックスを選択し、サンプル アプリを追加するチームを選択します。 テスト用に特別なチームを設定できます。
 1. ダイアログ ボックスの下部にある [ **インストール** ] ボタンを選択します。
 
-    これで、アプリがTeamsで利用できるようになりました。 ただし、ホストされているアプリケーション環境をアプリ ID とパスワードで更新するまで、ボットとメッセージング拡張機能は機能しません。
+    アプリが Teams で利用できるようになりました。 ただし、ホストされているアプリケーション環境をアプリ ID とパスワードで更新するまで、ボットとメッセージング拡張機能は機能しません。
 
     <img  width="450px" alt="The finished app" src="~/assets/images/get-started/Finishedhelloworld.png"/>
 
@@ -194,7 +194,7 @@ WEBSITE_NODE_DEFAULT_VERSION=8.9.4
 
 環境変数は環境の一部です。 アプリのコードのみがアクセスできます。 第三者に公開されることはありません。
 
-ngrok を使用してアプリを実行している場合は、ローカル環境変数を設定する必要があります。 Visual Studio Codeを使用して[起動構成](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations)を追加できます。
+ngrok を使用してアプリを実行している場合は、ローカル環境変数を設定する必要があります。 Visual Studio Code を使用して[起動構成](https://code.visualstudio.com/Docs/editor/debugging#_launch-configurations)を追加できます。
 
 ```json
 {
@@ -217,13 +217,13 @@ ngrok を使用してアプリを実行している場合は、ローカル環�
 ここで、
 
 * ボットの承認資格情報は次のとおりです。
-  * MICROSOFT_APP_IDは ID です
-  * MICROSOFT_APP_PASSWORDはパスワードです
+  * MICROSOFT_APP_IDは ID です。
+  * MICROSOFT_APP_PASSWORDはパスワードです。
 * Visual Studio Code デバッグ コンソールでボットで何が起こっているかを示すNODE_DEBUG
 * NODE_CONFIG_DIRは、リポジトリのルートにあるディレクトリを指します (既定では、アプリがローカルで実行されると、フォルダー内のルート ディレクトリが `src` 検索されます)。
 
 > [!Note]
-> チュートリアルの前半から npm を停止していない場合は、Visual Studio Codeが起動構成変数を正しく取得するために実行`npm stop`する必要があります。
+> チュートリアルの前半からnpmを停止していない場合は、Visual Studio Code が起動構成変数を正しく取得するために実行`npm stop`する必要があります。
 
 <a name="ConfigureTheAppTab"></a>
 

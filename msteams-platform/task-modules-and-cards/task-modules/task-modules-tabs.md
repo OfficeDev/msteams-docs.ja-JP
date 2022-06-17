@@ -3,13 +3,12 @@ title: Microsoft Teams タブでタスク モジュールを使用する
 description: Teams タブからタスク モジュールを呼び出し、Microsoft Teams クライアント SDK を使用してその結果を送信する方法について説明します。 これにはコード サンプルが含まれています。
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: タスク モジュール teams タブ クライアント sdk
-ms.openlocfilehash: 61955a9afd070a17b17210239054819f02d3b484
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: a55ea89e67bf70254d52791d1ed5f0a1c573e89e
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756697"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142067"
 ---
 # <a name="use-task-modules-in-tabs"></a>タブでタスク モジュールを使用する
 

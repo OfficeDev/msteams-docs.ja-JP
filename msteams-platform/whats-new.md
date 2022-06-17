@@ -1,14 +1,14 @@
 ---
 title: Teams の開発者向けの新機能
-description: Microsoft Teams の新しい開発者向け機能とそれらの機能の機能強化について説明します。
+description: このラーニング パスでは、Microsoft Teams の新しい開発者向け機能とそれらの機能の強化について説明します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 8ca858211f87c9d514d655817b2a7887e70d4bf3
-ms.sourcegitcommit: 1fdafba2d49a07715315b3f50b910e2c8cb6680c
+ms.openlocfilehash: e7c361ab7ee2579e3b28df0e8d6f22538c8f4d52
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66118971"
+ms.locfileid: "66123189"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 

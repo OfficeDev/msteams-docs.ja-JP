@@ -1,16 +1,15 @@
 ---
 title: ボットからファイルを送受信する
-description: 個人用スコープ、チャネル スコープ、グループチャット スコープの Graph API を使用して、ボットを通じてファイルを送受信する方法について説明します。 v3 Bot Framework SDK に基づくコード サンプルを使用して Teams ボット API を使用します。
-keywords: Teams ボット ファイル送信受信
+description: 個人用、チャネル、グループのチャット スコープに対してGraph API を使用して、ボットを介してファイルを送受信する方法について説明します。
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 2baf356b8ec5cf0f7d3e68af81a34ccd178e90b9
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 96642885f6dd9581a5efdaba21249002282c5c9a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755903"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143369"
 ---
 # <a name="send-and-receive-files-through-your-bot"></a>ボットを介してファイルを送受信する
 
@@ -42,7 +41,7 @@ ms.locfileid: "65755903"
 
 ボットでファイルを送受信するには、マニフェストの `supportsFiles` プロパティを `true` に設定する必要があります。 このプロパティは、マニフェスト リファレンスの[ボット](~/resources/schema/manifest-schema.md#bots) セクションで説明されています。
 
-定義は次のようになります: `"supportsFiles": true`。 ボットが `supportsFiles` を有効にしない場合、次の機能は機能しません。
+定義は次のようになります: `"supportsFiles": true`。 ボットが有効 `supportsFiles`にしていない場合、次の機能は機能しません。
 
 ### <a name="receiving-files-in-personal-chat"></a>個人用チャットでファイルを受信する
 
@@ -83,7 +82,7 @@ ms.locfileid: "65755903"
 1. ファイルの書き込み許可を要求するメッセージをユーザーに送信します。 このメッセージには、アップロードするファイルの名前が記載された `FileConsentCard` 個の添付ファイルが含まれている必要があります。
 2. ユーザーがファイルのダウンロードを受け入れると、ボットはロケーション URL を使用して *Invoke* アクティビティを受け取ります。
 3. ファイルを転送するために、ボットは指定されたロケーション URL に直接 `HTTP POST` を実行します。
-4. オプションで、ユーザーが同じファイルのそれ以上のアップロードを受け入れないようにする場合は、元の同意カードを削除できます。
+4. 必要に応じて、ユーザーが同じファイルの追加のアップロードを受け入れることを許可しない場合は、元の同意カードを削除できます。
 
 #### <a name="message-requesting-permission-to-upload"></a>アップロードの許可を求めるメッセージ
 
@@ -165,7 +164,7 @@ ms.locfileid: "65755903"
 
 ### <a name="notifying-the-user-about-an-uploaded-file"></a>アップロードされたファイルについてユーザーに通知する
 
-ユーザーの OneDrive にファイルをアップロードした後、上記のメカニズムを使用するか、OneDrive ユーザー委任 API を使用するかにかかわらず、ユーザーに確認メッセージを送信する必要があります。 このメッセージには、ユーザーがクリックしてプレビューしたり、OneDrive で開いたり、ローカルにダウンロードしたりできる `FileCard` 個の添付ファイルが含まれている必要があります。
+ユーザーの OneDrive にファイルをアップロードした後、上記のメカニズムを使用するか、OneDrive ユーザー委任 API を使用するかにかかわらず、ユーザーに確認メッセージを送信する必要があります。 このメッセージには、`FileCard`ユーザーが選択できる添付ファイルが含まれている必要があります。プレビュー、OneDriveで開く、またはローカルでダウンロードできます。
 
 ```json
 {

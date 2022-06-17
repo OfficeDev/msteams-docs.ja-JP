@@ -1,17 +1,17 @@
 ---
 title: Teams Toolkitでアプリ マニフェストをTeamsする
 author: zyxiaoyuer
-description: Teams アプリ マニフェスト
+description: このモジュールでは、さまざまな環境でアプリ マニフェストTeams編集、プレビュー、カスタマイズする方法について説明します。
 ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: 4cfa9beac8f75b04df8ac916a1d0e4e45919ffe3
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 505f5aeaf6cdae995efd182535c4d5a8814f9ea1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123655"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143873"
 ---
 # <a name="edit-teams-app-manifest"></a>アプリ マニフェストTeams編集する
 
@@ -33,7 +33,7 @@ ms.locfileid: "66123655"
 * [ローカル環境でマニフェスト ファイルをプレビューする](#preview-manifest-file-in-local-environment)
 * [リモート環境でマニフェスト ファイルをプレビューする](#preview-manifest-file-in-remote-environment)
 
-### <a name="preview-manifest-file-in-local-environment"></a>ローカル環境でマニフェスト ファイルをプレビューする
+## <a name="preview-manifest-file-in-local-environment"></a>ローカル環境でマニフェスト ファイルをプレビューする
 
 ローカル環境でマニフェスト ファイルをプレビューするには、 **F5** キーを押してローカル デバッグを実行します。 既定のローカル設定が生成され、アプリ パッケージとプレビュー マニフェストがフォルダーの下に `build/appPackage` ビルドされます。
 
@@ -47,7 +47,7 @@ ms.locfileid: "66123655"
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="プレビュー":::
 
-### <a name="preview-manifest-file-in-remote-environment"></a>リモート環境でマニフェスト ファイルをプレビューする
+## <a name="preview-manifest-file-in-remote-environment"></a>リモート環境でマニフェスト ファイルをプレビューする
 
 **リモート環境でマニフェスト ファイルをプレビューするには**
 
@@ -150,7 +150,7 @@ Teams Toolkit は、ローカル環境とリモート環境の `manifest.templat
      }
      ```
 
-2. 構成ファイルに移動するには、いずれかの構成プレースホルダー [構成ファイル **に移動**] または [**状態ファイル**`manifest.template.json`の表示] を選択します。
+2. 構成ファイルに移動するには、構成プレースホルダーのいずれかを選択して構成 **ファイルに移動** するか、**状態ファイル**`manifest.template.json`を表示します。
 
 ### <a name="validate-manifest"></a>マニフェストを検証する
 

@@ -1,15 +1,15 @@
 ---
 title: よく寄せられる質問
-description: 一般的な質問の回答
+description: この Learning 記事では、Moodle LMS を使用しているときによく寄せられるいくつかの質問に対する回答を取得します。
 ms.topic: Frequently asked questions on Moodle LMS
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 944fc379f7623599c543171a8d57a7854b51a980
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 532a7b9c36cff3bf7499d909ddd260fa0c1785b3
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757550"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123483"
 ---
 # <a name="moodle-faq"></a>Moodle に関するよく寄せられる質問
 
@@ -65,7 +65,7 @@ Moodle LMS を使用する場合のいくつかの質問に対する回答を取
 
 <summary><b>教員が Teams にコースを同期させることができるようにしますか? コースの同期を制御できるのは、Moodle 管理者だけですか?</b></summary>
 
-既定では、Moodle 管理者だけが同期を構成できます。 チーム所有者はコースがチームに同期されるかどうかを制御することができ、**[コースでコース同期の構成を許可する]** が有効になっています。 この場合、チームの所有者は教員です。 このブロックは、適切な所有者権限を持つ個人に構成オプションを表示します。 
+既定では、Moodle 管理者だけが同期を構成できます。 チーム所有者はコースがチームに同期されるかどうかを制御することができ、**[コースでコース同期の構成を許可する]** が有効になっています。 この場合、チームの所有者は教員です。 このブロックは、適切な所有者権限を持つ個人に構成オプションを表示します。
 
 <!-- For more information, see Microsoft 365 block within the Moodle course interface. -->
 
@@ -189,5 +189,3 @@ Atto ツールバーの編集に関する詳細については、以下を参照
 <summary><b>製品や他の問題に関するサポートを受けることができるサポート サイトはありますか?</b></summary>
 
 製品とサービスの問題や開発者コミュニティのヘルプに関するサポートとヘルプについては、「[サポートとフィードバック](/microsoftteams/platform/feedback)」を参照してください。
-
-

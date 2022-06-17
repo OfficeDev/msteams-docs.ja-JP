@@ -1,16 +1,16 @@
 ---
 title: タスク モジュールの送信アクションに応答する
 author: surbhigupta
-description: メッセージング拡張機能のアクション コマンドからタスク モジュールの送信アクションに対して、プロアクティブ メッセージ、別のタスク モジュール、アダプティグ カード ボットなどで応答する方法をコード サンプルを使用して説明します。
+description: このモジュールでは、プロアクティブ メッセージなどを使用して、メッセージング拡張機能アクション コマンドからタスク モジュール送信アクションに応答する方法について説明します。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 16ad47f3b57dc5704ad106f8ec3593a2234d29d3
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 8bb61750d9b8cc52008e30e3b37b901a018915e7
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757564"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144027"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>タスク モジュールの送信アクションに応答する
 
@@ -32,10 +32,10 @@ ms.locfileid: "65757564"
 
 |応答の種類 | 作成 | コマンド バー | メッセージ |
 |--------------|:-------------:|:-------------:|:---------:|
-|カードの応答 | ✔ | ✔ | ✔ |
-|別のタスク モジュール | ✔ | ✔ | ✔ |
-|アダプティブ カードを使用したボット | ✔ | x | ✔ |
-| 応答なし | ✔ | ✔ | ✔ |
+|カードの応答 | ✔️ | ✔️ | ✔️ |
+|別のタスク モジュール | ✔️ | ✔️ | ✔️ |
+|アダプティブ カードを使用したボット | ✔️ | ❌ | ✔️ |
+| 応答なし | ✔️ | ✔️ | ✔️ |
 
 > [!NOTE]
 >

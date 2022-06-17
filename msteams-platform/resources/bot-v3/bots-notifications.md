@@ -1,18 +1,17 @@
 ---
 title: ボット イベントを処理する
-description: Microsoft Teams 用のボット内のイベントを処理する方法について説明します
-keywords: Teams のボット イベント
+description: このモジュールでは、Microsoft Teams、Teamsメンバーまたはボットの追加、チーム メンバーまたはボットの削除などのボット内のイベントを処理する方法について説明します
 ms.date: 05/20/2019
 ms.topic: how-to
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 3b077ce433032d98be66eb9113840701c2a74163
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 30ccb4ee8810154e2b36311d15217205de87b413
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111781"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142760"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>Microsoft Teams でボット イベントを処理する
 
@@ -28,7 +27,7 @@ Microsoft Teams は、ボットがアクティブなスコープで発生する�
 
 各ボット イベントは `Activity` オブジェクトとして送信されます。このオブジェクトに含まれる情報は `messageType` で定義されます。 `message` の種類のメッセージについては、[メッセージの送受信](~/resources/bot-v3/bot-conversations/bots-conversations.md)に関する記事を参照してください。
 
-Teams イベントとグループ イベントは、通常 `conversationUpdate` の種類からトリガーされ、追加の Teams イベント情報が `channelData` オブジェクトの一部として渡されます。このため、イベント ハンドラーは Teams `eventType` と追加のイベント固有のメタデータの `channelData` ペイロードに対してクエリを実行する必要があります。
+Teamsイベントとグループ イベントは、型から`conversationUpdate`トリガーされ、より多くのTeamsイベント情報がオブジェクトの`channelData`一部として渡されるため、イベント ハンドラーは、Teams`eventType`とより多くのイベント固有のメタデータのペイロードに対してクエリを実行`channelData`する必要があります。
 
 次の表に、ボットが受信してアクションを実行できるイベントの一覧を示します。
 
@@ -45,7 +44,7 @@ Teams イベントとグループ イベントは、通常 `conversationUpdate` 
 
 ## <a name="team-member-or-bot-addition"></a>チーム メンバーまたはボットの追加
 
-[`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true) イベントは、ボットが追加されているチームのメンバーシップの更新に関する情報を受信したときにボットに送信されます。 また、ボットが特定の個人の会話に初めて追加されたときにも更新を受け取ります。 ユーザー情報 (`Id`) はボットに対して一意であり、特定のユーザーにメッセージを送信するなど、サービスで今後使用するためにキャッシュできることにご注意ください。
+[`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#conversationupdate&preserve-view=true) イベントは、ボットが追加されているチームのメンバーシップの更新に関する情報を受信したときにボットに送信されます。 また、ボットが特定の個人の会話に初めて追加されたときにも更新を受け取ります。 ユーザー情報 (`Id`) はボットに対して一意であり、特定のユーザーにメッセージを送信するなど、サービスが今後使用するためにキャッシュできます。
 
 ### <a name="bot-or-user-added-to-a-team"></a>チームへのボットまたはユーザーの追加
 
@@ -323,7 +322,7 @@ bot.on('conversationUpdate', (msg) => {
 > [!NOTE]
 > すべてのチーム名に対してクエリを実行する機能はなく、チーム名は他のイベントのペイロードでは返されません。
 
-ボットが含まれているチームの名前が変更されると、そのボットは通知を受け取ります。 ボットは、`channelData` オブジェクト内に `eventType.teamRenamed` を含む `conversationUpdate` イベントを受信します。 ボットはチームの一部としてのみ存在しており、ボットが追加されているスコープ外の可視性は持たないため、チームの作成や削除に関する通知はないことにご注意ください。
+ボットが含まれているチームの名前が変更されると、そのボットは通知を受け取ります。 ボットは、`channelData` オブジェクト内に `eventType.teamRenamed` を含む `conversationUpdate` イベントを受信します。 ボットはチームの一部としてのみ存在し、追加されたスコープ外の可視性がないため、チームの作成または削除に関する通知はありません。
 
 ### <a name="schema-example-team-renamed"></a>スキーマ例: チームの名前の変更
 
@@ -450,7 +449,7 @@ bot.on('conversationUpdate', (msg) => {
 
 ## <a name="reactions"></a>リアクション
 
-`messageReaction` イベントは、もともとはボットによって送信されたメッセージに対してユーザーが反応を追加または削除したときに送信されます。 `replyToId` には、その特定のメッセージの ID が含まれます。
+イベントは `messageReaction` 、ユーザーがメッセージに対する反応を追加または削除したときに送信されます。これは、もともとボットによって送信されました。 `replyToId` には、その特定のメッセージの ID が含まれます。
 
 ### <a name="schema-example-a-user-likes-a-message"></a>スキーマ例: ユーザーがメッセージに "いいね!" する
 

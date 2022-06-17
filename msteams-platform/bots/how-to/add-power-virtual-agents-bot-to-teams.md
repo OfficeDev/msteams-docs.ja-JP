@@ -1,16 +1,16 @@
 ---
-title: Power Virtual Agents チャットボットを Teams に追加する
+title: Power Virtual Agents チャットボットを追加する
 author: surbhigupta
 description: Power Virtual Agents チャットボットを Teams プラットフォームに統合して、会話型チャットボットを作成し、Teams と統合する方法の詳細
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: a95b3fe3b9191facc2554262444bc4b558c372ed
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
-ms.translationtype: HT
+ms.openlocfilehash: efcf87f490d923ce5c5c5e0c675063defce40a1c
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63453839"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143250"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>Power Virtual Agents チャットボットを追加する
 

@@ -1,16 +1,15 @@
 ---
 title: アプリケーションでホストされるメディア ボットの要件と考察
-description: コード例とサンプルを使用して、Microsoft Teams 用のアプリケーションでホストされるメディア ボットの作成に関連する重要な要件と考慮事項、およびスケーラビリティとパフォーマンスに関する考慮事項について説明します。
+description: Teams用のアプリケーション ホスト型メディア ボットの作成に関連する重要な要件と考慮事項、スケーラビリティとパフォーマンスに関する考慮事項について説明します
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: アプリケーションでホストされるメディア Windows Server Azure VM
 ms.date: 11/16/2018
-ms.openlocfilehash: 987bb26ba7ad91f11228f7072d3e268ebd87dc5a
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 87cdbce71189f64c0d34fc0cddb5211355017007
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756612"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142487"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>アプリケーションでホストされるメディア ボットの要件と考察
 

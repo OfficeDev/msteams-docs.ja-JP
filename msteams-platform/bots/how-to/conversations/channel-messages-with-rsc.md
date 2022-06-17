@@ -1,15 +1,15 @@
 ---
 title: RSC のチャネル メッセージをすべて受信する
 author: surbhigupta12
-description: RSC アクセス許可のチャネル メッセージをすべて受信する
+description: このモジュールでは、RSC アクセス許可を持つすべてのチャネル メッセージを受信する方法と、ボットがすべてのチャネル メッセージを受信できるようにする方法について説明します
 ms.topic: conceptual
-ms.localizationpriority: high
-ms.openlocfilehash: 6b4c2add73c54aadd068c16171a0d340a0c79075
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: d0a8c05136d4ab98270d3d837c008f0e46bcae33
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111207"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143516"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>RSC のチャネル メッセージをすべて受信する
 

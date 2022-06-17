@@ -5,12 +5,12 @@ description: Microsoft Teams アプリをビルドし、Teams UI キットを取
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: ae2dee58bf19b5400fa162c06a0c73e6137626c2
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 1c83eea2a16234d869ee031f1a1856d26ba48a25
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123669"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142417"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>基本的なFluent UI コンポーネントを使用してMicrosoft Teams アプリを設計する
 
@@ -23,7 +23,7 @@ ms.locfileid: "66123669"
 <a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a> に基づいて、Microsoft Teams UI キットには、Teams アプリを構築するために特別に設計されたコンポーネントとパターンが含まれています。 UI キットでは、ここに示されているコンポーネントを直接デザインに取り込んで挿入し、各コンポーネントの使用方法の例をさらに確認できます。
 
 > [!div class="nextstepaction"]
-> [Microsoft Teams UI Kit (Figma) を入手する](https://www.figma.com/community/file/916836509871353159)
+> [Microsoft Teams UI キット (Figma)を取得](https://www.figma.com/community/file/916836509871353159)します。
 
 ## <a name="alert"></a>通知
 

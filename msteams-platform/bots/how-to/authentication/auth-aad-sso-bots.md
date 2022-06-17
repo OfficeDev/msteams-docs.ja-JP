@@ -1,15 +1,14 @@
 ---
 title: ボットのシングル サインオンのサポート
-description: ユーザー トークンを取得する方法について説明します。 現在、ボット開発者は、OAuth カードをサポートするサインイン カードまたは Azure ボット サービスを使用できます。
-keywords: トークン、ユーザー トークン、ボット向け SSO サポート、アクセス許可、Microsoft Graph、Azure AD
+description: ユーザー トークンを取得する方法について説明します。ボット開発者は、OAuth カードのサポートでサインイン カードまたは Azure ボット サービスを使用できます。
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: c10fe639417ad71814b060ba70e6a33c4ae4038f
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 37c7fcd62c6b85c2220e9db57060da03437d79da
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123469"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144146"
 ---
 # <a name="single-sign-on-sso-support-for-bots"></a>ボット向けのシングル サインオン (SSO) サポート
 

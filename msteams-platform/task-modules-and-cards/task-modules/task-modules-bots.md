@@ -1,15 +1,14 @@
 ---
 title: Microsoft Teams ボットでタスク モジュールを使用する
-description: Bot Framework カード、アダプティブ カード、ディープ リンクなど、Microsoft Teams ボットでタスク モジュールを使用する方法。
+description: Bot Framework カード、アダプティブ カード、ディープ リンクなど、Microsoft Teams ボットでタスク モジュールを使用する方法について説明します。
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: タスク モジュール チーム ボットディープ リンク アダプティブ カード
-ms.openlocfilehash: 443ff94fcc5c8b47dda5462555bf181c88b71ce3
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: e7bed83d9f13913b9a72997ac3679f844db3034a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756717"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142984"
 ---
 # <a name="use-task-modules-from-bots"></a>ボットでタスク モジュールを使用する
 

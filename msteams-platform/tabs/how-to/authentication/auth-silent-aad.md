@@ -1,15 +1,14 @@
 ---
 title: サイレント認証
-description: サイレント認証、シングル サインオン、タブ用の Azure AD について説明します
+description: このモジュールでは、サイレント認証、シングル サインオン、Azure AD をタブに対して実行する方法と動作方法について説明します
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: teams Authentication SSO Silent Azure AD タブ
-ms.openlocfilehash: 50d5d5327ee31286c7124f23b8fd4c8b07c71639
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: bb5b65e70192c4796d7c828d19512e2a414cf812
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033023"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144244"
 ---
 # <a name="silent-authentication"></a>サイレント認証
 

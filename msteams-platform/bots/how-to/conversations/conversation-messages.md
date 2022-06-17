@@ -1,16 +1,15 @@
 ---
 title: ボットの会話内のメッセージ
-description: Microsoft Teams ボットと会話する方法について説明します。 コード サンプルを使用して、チャネル データのTeams、メッセージへの通知、画像メッセージ、アダプティブ カードについて説明します。
+description: コード サンプルを使用して、Teams ボットとTeams チャネル データ、メッセージへの通知、画像メッセージ、アダプティブ カードとの会話を行う方法について説明します
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-keyword: receive message send message picture message channel data adaptive cards
-ms.openlocfilehash: 1704ff5fcbff177651a8ff6fec952fb76aa1a44c
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 7e71e6ce6c70967de9c9f086251772df8d758f4a
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033016"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142452"
 ---
 # <a name="messages-in-bot-conversations"></a>ボットの会話内のメッセージ
 
@@ -242,10 +241,10 @@ async def on_members_added_activity(
 
 | フォーマット    | ユーザーからボットへ | ボットからユーザーへ | メモ                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
-| リッチ テキスト | ✔                | ✔                | ボットは、リッチ テキスト、画像、カードを送信できます。 ユーザーは、リッチ テキストと画像をボットに送信できます。                                                                                        |
-| ピクチャ  | ✔                | ✔                | 最大 1024 ×1024 MB、PNG、JPEG、または GIF 形式で 1 MB。 アニメーション GIF はサポートされていません。  |
-| カード     | ✖                | ✔                | サポートされているカードについては、[Teams カードリファレンスを参照](~/task-modules-and-cards/cards/cards-reference.md)してください。 |
-| 絵文字    | ✔                | ✔                | Teamsは現在、顔を笑う U+1F600 など、UTF-16 を介した絵文字をサポートしています。 |
+| リッチ テキスト | ✔️                | ✔️                | ボットは、リッチ テキスト、画像、カードを送信できます。 ユーザーは、リッチ テキストと画像をボットに送信できます。                                                                                        |
+| ピクチャ  | ✔️                | ✔️                | 最大 1024 ×1024 MB、PNG、JPEG、または GIF 形式で 1 MB。 アニメーション GIF はサポートされていません。  |
+| カード     | ❌                | ✔️                | サポートされているカードについては、[Teams カードリファレンスを参照](~/task-modules-and-cards/cards/cards-reference.md)してください。 |
+| 絵文字    | ✔️                | ✔️                | Teamsは現在、顔を笑う U+1F600 など、UTF-16 を介した絵文字をサポートしています。 |
 
 ## <a name="notifications-to-your-message"></a>メッセージへの通知
 
@@ -335,7 +334,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 画像は最大 1024 ×1024 MB、PNG、JPEG、または GIF 形式で 1 MB です。 アニメーション GIF はサポートされていません。
 
-XML を使用して、各イメージの高さと幅を指定します。 マークダウンでは、イメージ サイズの既定値は 256×256 です。 次に例を示します。
+XML を使用して、各イメージの高さと幅を指定します。 マークダウンでは、イメージ サイズの既定値は 256×256 です。 以下に例を示します。
 
 * 使用: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
 * 使用しないでください: `![Duck on a rock](http://aka.ms/Fo983c)`.
@@ -387,7 +386,7 @@ XML を使用して、各イメージの高さと幅を指定します。 マー
      [ **閉じる** ] または [チャットの切り替え] を選択して、メッセージを閉じます。
 
      成功メッセージを表示しない場合は、プロパティで`msTeams``feedback`属性`hide`を`true`設定します。 次に例を示します。
-    
+
      ```json
         "content": {
             "type": "AdaptiveCard",
@@ -406,7 +405,6 @@ XML を使用して、各イメージの高さと幅を指定します。 マー
             ]
         } 
      ```
-    
 
 ボット内のカードとカードの詳細については、カードの [ドキュメントを参照してください](~/task-modules-and-cards/what-are-cards.md)。
 

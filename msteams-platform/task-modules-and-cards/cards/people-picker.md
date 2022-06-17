@@ -1,17 +1,16 @@
 ---
 title: アダプティブ カードのユーザー ピッカー
-description: アダプティブ カードで People Picker コントロールを使用する方法について説明します
+description: このモジュールでは、アダプティブ カードで People Picker コントロールを使用する方法とそのシナリオについて説明し、ユーザー選択を実装します。
 localization_priority: Medium
-keywords: アダプティブ カードのユーザー選択
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: 3d6305895239ca2b8a0c871e53723979feb3f890
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: 3b366ebc91e57a2e48dec03fb50aed24d704e41d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111634"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144167"
 ---
 # <a name="people-picker-in-adaptive-cards"></a>アダプティブ カードのユーザー ピッカー
 
@@ -61,7 +60,7 @@ Web クライアントとデスクトップ クライアントは、アダプテ
 > [!NOTE]
 > 現時点では、この機能は [パブリック開発者向けプレビュー](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) でのみ使用できます。
 
-Android および iOS モバイル クライアントでは、アダプティブ カードでのユーザー選択がサポートされます。 モバイルでユーザー選択ウィンドウを使用して、ユーザーを検索および選択して、ユーザー エクスペリエンスを向上させることができます。 検索エクスペリエンスは、モバイルの他のユーザー選択エクスペリエンスと似ています。
+AndroidおよびiOSモバイル クライアントは、アダプティブ カードでのユーザー選択をサポートします。 モバイルでユーザー選択ウィンドウを使用して、ユーザーを検索および選択して、ユーザー エクスペリエンスを向上させることができます。 検索エクスペリエンスは、モバイルの他のユーザー選択エクスペリエンスと似ています。
 
 ### <a name="reassignment-scenario-example"></a>再割り当てシナリオの例
 
@@ -101,7 +100,7 @@ Android および iOS モバイル クライアントでは、アダプティブ
 
 |プロパティ |型 |必須 |説明 |
 |----|----|----|----|
-|**choices.data** |**Data.Query** |なし |指定したデータセットから結果をフェッチすることで、さまざまなユーザーの種類に対して動的な自動完了を有効にします。 |
+|**choices.data** |**Data.Query** |不要 |指定したデータセットから結果をフェッチすることで、さまざまなユーザーの種類に対して動的な自動完了を有効にします。 |
 
 #### <a name="dataquery"></a>Data.Query
 

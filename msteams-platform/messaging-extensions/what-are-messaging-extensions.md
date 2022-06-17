@@ -1,16 +1,16 @@
 ---
 title: メッセージの拡張機能
 author: surbhigupta
-description: Microsoft Teams プラットフォームでのメッセージング拡張機能の概要
+description: このモジュールでは、メッセージング拡張機能と、メッセージ拡張機能がMicrosoft Teams プラットフォームで使用されるシナリオについて説明します。
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 52c9b5a890197f652c8debcae32bc6ab08d7f1c7
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: 5a63c1a36217f4c0aa237e38537be2e094acdea3
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602258"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144321"
 ---
 # <a name="message-extensions"></a>メッセージの拡張機能
 

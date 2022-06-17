@@ -1,17 +1,16 @@
 ---
 title: Teams アプリをカスタマイズする
 author: heath-hamilton
-description: Teams 管理者が組織用にアプリをカスタマイズする方法について説明します。
-ms.localizationpriority: high
+description: このモジュールでは、管理者Teams組織のTeams アプリをカスタマイズし、管理者が承認するまでTeamsアプリを非表示にする方法について説明します。
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-keywords: アクセント カラー, ブランド, 非表示, アプリ, 承認
-ms.openlocfilehash: 4728e6f34680d51983558d1ad96c47ffe3650234
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: 224f2d755ad74b7ded81cf6ffb1791169c6eb3b7
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111200"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143201"
 ---
 # <a name="customize-your-teams-app"></a>Teams アプリをカスタマイズする
 

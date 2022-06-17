@@ -1,15 +1,14 @@
 ---
 title: Microsoft Teams の通話と会議ボットを登録する
-description: Microsoft Teams 用に新しいオーディオ / ビデオ通話ボットを登録する方法、新しいボットを作成する方法、通話機能を追加する方法、グラフのアクセス許可を追加する方法について説明します。
+description: このモジュールでは、新しいオーディオ/ビデオ通話ボットをMicrosoft Teamsに登録する方法、新しいボットを作成する方法、通話機能を追加する方法、グラフのアクセス許可を追加する方法について説明します。
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: ボットのオーディオ / ビデオ オーディオ ビデオ メディアを呼び出す
-ms.openlocfilehash: 71ab66ab6c5f53405897447b8d531ed0ce6dac99
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: 74e786850f11a77cea5cc0980febb56d550ae671
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297164"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143796"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Microsoft Teams の通話と会議ボットを登録する
 

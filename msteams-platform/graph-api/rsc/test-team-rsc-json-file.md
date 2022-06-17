@@ -1,17 +1,16 @@
 ---
-title: チームのリソース固有の同意をテストTeams
-description: サンプル JSON ファイルを使用して Postman を使用して、Teamsに対するリソース固有の同意をテストする方法について説明します。
+title: Teamsでチームのリソース固有の同意をテストする
+description: このモジュールでは、サンプル JSON ファイルで Postman を使用して、Teamsのチームのリソース固有の同意をテストする方法について説明します。
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: how-to
-keywords: teams 承認 OAuth SSO Azure AD rsc Postman Graph
-ms.openlocfilehash: ab742dd9e472beec8e607c036639322fc916e1ac
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: 9688d4d2f4bf56a0c5c4fa41b7b5263d864bbd2f
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452684"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144069"
 ---
 # <a name="test-team-rsc-postman-collection-json"></a>テスト チーム RSC Postman コレクション JSON
 

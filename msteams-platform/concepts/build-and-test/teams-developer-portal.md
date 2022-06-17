@@ -1,16 +1,15 @@
 ---
 title: 開発者ポータルを使用してアプリを管理する
-description: 開発者ポータル for Microsoft Teamsを使用してアプリを構成、配布、管理する方法について説明します。
-keywords: 開発者ポータル チームの開始
+description: このモジュールでは、Microsoft Teams用開発者ポータルを使用してアプリを構成、配布、管理する方法について説明します。
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: c7ca898cd411028dffa6c8a197c78cd796f823e5
-ms.sourcegitcommit: a3567e3e1a52b8e3cb2072b037f0e75bd0f12e58
+ms.openlocfilehash: 948f22cf8f55a33e2d5b24b875678039fd101fc2
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65439326"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142368"
 ---
 # <a name="manage-your-teams-apps-using-developer-portal"></a>開発者ポータルを使用してTeams アプリを管理する
 
@@ -27,8 +26,8 @@ ms.locfileid: "65439326"
 
 開発者ポータルには、Teams アプリを登録するためのいくつかの方法があります。
 
-* まったく新しいアプリを登録する
-* 既存のアプリ パッケージをインポートする
+* まったく新しいアプリを登録します。
+* 既存のアプリ パッケージをインポートします。
 
 > [!NOTE]
 > [Visual Studio Code のMicrosoft Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)を使用してアプリを作成する場合は、開発者ポータルでそのアプリを管理できます。
@@ -103,7 +102,7 @@ Teams用開発者ポータルの [**概要**] ページで、アプリのアク�
 * オペレーティング システム
 * 分野
 
- :::image type="content" source="../../assets/images/tdp/dev-analytics-filter.PNG" alt-text="Filter":::
+ :::image type="content" source="../../assets/images/tdp/dev-analytics-filter.PNG" alt-text="フィルター":::
 
 目的のフィルターを選択したら、次の個々のウィジェットを調べることができます。
 

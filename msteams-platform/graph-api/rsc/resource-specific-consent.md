@@ -1,17 +1,16 @@
 ---
 title: Teams でリソース固有の同意を有効にする
-description: Teams におけるリソース固有の同意と、それを利用する方法について説明します。
-ms.localizationpriority: high
+description: このモジュールでは、Microsoft Teamsでのリソース固有の同意と、それを利用する方法について説明します。
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-keywords: teams authorization OAuth SSO Azure AD rsc Graph
-ms.openlocfilehash: 8a90d1280f94de099543d879028a84d538c588ac
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.openlocfilehash: f311723aa6bdb9fc95207169b7ab55434d246509
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111508"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144356"
 ---
 # <a name="resource-specific-consent"></a>リソース固有の同意
 
@@ -157,14 +156,14 @@ RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣
 
 次の値を使用して、アプリ マニフェストに [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) キーを追加します。
 
-|名前| 種類 | 説明|
+|名前| 型 | 説明|
 |---|---|---|
 |`id` |String |Azure ADアプリ ID。 詳細については、「[Azure AD ポータルでアプリを登録する](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)」を参照してください。|
 |`resource`|String| このフィールドには RSC での操作はありませんが、エラー応答を回避するために値を追加し、値を指定する必要があります。任意の文字列が実行されます。|
 
 アプリで必要なアクセス許可を指定します。
 
-|名前| 種類 | 説明|
+|名前| 型 | 説明|
 |---|---|---|
 |`authorization`|オブジェクト|アプリを実行する必要があるアクセス許可の一覧。 詳細については、[マニフェストでのリンク認可のプレースホルダー] を参照してください。
 
@@ -325,7 +324,7 @@ RSC アクセス許可は、アプリ マニフェスト JSON ファイルで宣
 
 次の値を使用して、アプリ マニフェストに [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) キーを追加します。
 
-|名前| 種類 | 説明|
+|名前| 型 | 説明|
 |---|---|---|
 |`id` |String |Azure ADアプリ ID。 詳細については、「[Azure AD ポータルでアプリを登録する](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)」を参照してください。|
 |`resource`|String| このフィールドには RSC での操作はありませんが、エラー応答を回避するために値を追加し、値を指定する必要があります。任意の文字列が実行されます。|

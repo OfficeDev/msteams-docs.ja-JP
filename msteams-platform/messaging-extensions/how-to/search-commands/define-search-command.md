@@ -1,16 +1,16 @@
 ---
 title: メッセージ拡張機能検索コマンドを定義する
 author: surbhigupta
-description: Microsoft Teams アプリのメッセージ拡張機能検索コマンドについて説明します。アプリ マニフェストを使用して検索コマンドを作成し、コード例とサンプルを手動で使用します。
+description: このモジュールでは、Teams アプリのメッセージ拡張機能検索コマンドについて説明し、アプリ マニフェストを使用して手動で検索コマンドを作成します。
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 987d690beca81574244ae6fbf9e6614ee097ebcb
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: e71e83f8fbd6b0d44257a2d38fd13486b087bc5e
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756619"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142809"
 ---
 # <a name="define-message-extension-search-commands"></a>メッセージ拡張機能検索コマンドを定義する
 

@@ -1,17 +1,17 @@
 ---
 title: クラウドにデプロイする
 author: MuyangAmigo
-description: クラウド、Azure、またはSharePointにアプリをデプロイする
+description: このモジュールでは、クラウド、Azure、またはSharePointにアプリをデプロイし、Teams Toolkitを使用してTeamsアプリをデプロイする方法について説明します。
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 1d0ade9abed4be212abfb96068626172c4f0f03e
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: f7870a81c221182c98a0619d99c7cce255fcc170
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104148"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142053"
 ---
 # <a name="deploy-to-the-cloud"></a>クラウドにデプロイする
 
@@ -23,7 +23,7 @@ Teams Toolkitは、アプリケーション内のフロントエンド コード
 
 ## <a name="prerequisite"></a>前提条件
 
-* バージョン v3.0.0 以降[Teams Toolkitインストール](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)します。
+* [Teams ツールキット バージョン v3.0.0+ をインストール](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)します。
 
 > [!NOTE]
 >
@@ -35,16 +35,16 @@ Teams Toolkitは、アプリケーション内のフロントエンド コード
 入門ガイドは、Teams Toolkitを使用したデプロイに役立ちます。 次を使用して、Teams アプリをデプロイできます。
 
 * [アプリを Azure にデプロイする](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch)
-* [アプリをSharePointにデプロイする](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)
+* [アプリを SharePoint にデプロイする](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)
 
 ## <a name="details-on-teams-app-workload"></a>Teams アプリワークロードの詳細
 
-| Teams アプリワークロード | ソースコード | 成果物をビルドする| ターゲット リソース |
+| Teams アプリワークロード | ソース コード | 成果物をビルドする| ターゲット リソース |
 |-------------|----------|---------------|---------------|
 |Reactを含むタブ </br> フロントエンド ワークロード| `yourProjectFolder/tabs`| `tabs/build` |Azure Storage |
 |SharePointのタブ </br> フロントエンド ワークロード | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |SharePoint アプリ カタログ |
-|Azure 関数上の API </br> バックエンド ワークロード | `yourProjectFolder/api`| 該当しない |Azure 関数 |
-|ボットとメッセージ拡張機能 </br> バックエンド ワークロード | `yourProjectFolder/bot` | 該当しない | Azure アプリ サービス |
+|Azure 関数上の API </br> バックエンド ワークロード | `yourProjectFolder/api`| 該当なし |Azure Functions |
+|ボットとメッセージ拡張機能 </br> バックエンド ワークロード | `yourProjectFolder/bot` | 該当なし | Azure アプリ サービス |
 
 > [!NOTE]
 > プロジェクトに Azure API 管理リソースを含め、デプロイをトリガーする場合。 Azure 関数の API を Azure API 管理サービスに発行できます。

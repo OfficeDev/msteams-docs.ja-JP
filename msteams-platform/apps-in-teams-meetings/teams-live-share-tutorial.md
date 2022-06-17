@@ -4,12 +4,12 @@ description: このモジュールでは、Live Share SDK の使用を開始す�
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: stevenic
-ms.openlocfilehash: 8dad224b74ff8a6d1252c4d1d27900f3bb5c6962
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: b13b37c73760d18cc11f30afca989c34ba1c1bb8
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668386"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143565"
 ---
 ---
 
@@ -101,7 +101,7 @@ start().catch((error) => console.error(error));
 
 ## <a name="join-a-fluid-container"></a>Fluid コンテナーを結合する
 
-すべてのアプリ ビューが共同作業である必要があるわけではありません。 `stage`ビューには _常に_ コラボレーション機能が必要です。ビューには`content`コラボレーション機能 _が必要な場合があります_。また、`config` ビューにはコラボレーション機能は必要 _ありません_。 共同作業機能が必要なビューの場合は、現在の会議に関連付けられている Fluid コンテナーに参加する必要があります。
+すべてのアプリ ビューが共同作業である必要があるわけではありません。 `stage`ビューには *常に* コラボレーション機能が必要です。ビューには`content`コラボレーション機能 *が必要な場合があります*。また、`config` ビューにはコラボレーション機能は必要 *ありません*。 共同作業機能が必要なビューの場合は、現在の会議に関連付けられている Fluid コンテナーに参加する必要があります。
 
 会議のコンテナーに参加するのは、新しい [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) を作成し、それを [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) メソッドと呼ぶのと同じくらい簡単です。  ローカルで実行する場合は、特別な `LOCAL_MODE_TENANT_ID` カスタム接続構成を渡す必要がありますが、それ以外の場合は、ローカル コンテナーの結合は、Teams でコンテナーを参加させるのと同じです。
 
@@ -192,15 +192,15 @@ function renderStage(diceMap, elem) {
 
 ### <a name="handle-remote-changes"></a>リモート変更を処理する
 
-`diceMap` から返される値は、特定の時点のスナップショットに過ぎません。 データの変更時にデータを最新の状態に保つには、`valueChanged` イベントが送信されるたびに `updateDice` を呼び出すように `diceMap` にイベント ハンドラーを設定する必要があります。 発生したイベントの一覧とそれらのイベントに渡される値を取得するには、 [SharedMap](https://fluidframework.com/docs/data-structures/map/) に関するサイトを参照してください。 
+`diceMap` から返される値は、特定の時点のスナップショットに過ぎません。 データの変更時にデータを最新の状態に保つには、`valueChanged` イベントが送信されるたびに `updateDice` を呼び出すように `diceMap` にイベント ハンドラーを設定する必要があります。 発生したイベントの一覧とそれらのイベントに渡される値を取得するには、 [SharedMap](https://fluidframework.com/docs/data-structures/map/) に関するサイトを参照してください。
 
-```js 
+```js
     diceMap.on("valueChanged", updateDice);
 ```
 
 ## <a name="write-the-side-panel-view"></a>サイド パネル ビューを記述する
 
-タブ `contentUrl` から `sidePanel` フレーム コンテキストで読み込まれたサイド パネルビューは、ユーザーが会議内でアプリを開いたときにサイド パネルに表示されます。 このビューの目的は、会議ステージにアプリを共有する前に、ユーザーがアプリのコンテンツを選択できるようにすることです。 Live Share SDK アプリの場合は、サイド パネル ビューをアプリのコンパニオン エクスペリエンスとして使用することもできます。 サイド パネル ビューから [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) を呼び出すと、ステージ ビューが接続されているのと同じ Fluid コンテナーに接続されます。 このコンテナーは、ステージ ビューとの通信に使用できます。 全員のステージ ビュー _および_ サイドパネル ビューと通信していることを確認してください。
+タブ `contentUrl` から `sidePanel` フレーム コンテキストで読み込まれたサイド パネルビューは、ユーザーが会議内でアプリを開いたときにサイド パネルに表示されます。 このビューの目的は、会議ステージにアプリを共有する前に、ユーザーがアプリのコンテンツを選択できるようにすることです。 Live Share SDK アプリの場合は、サイド パネル ビューをアプリのコンパニオン エクスペリエンスとして使用することもできます。 サイド パネル ビューから [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) を呼び出すと、ステージ ビューが接続されているのと同じ Fluid コンテナーに接続されます。 このコンテナーは、ステージ ビューとの通信に使用できます。 全員のステージ ビュー *および* サイドパネル ビューと通信していることを確認してください。
 
 サンプルのサイド パネル ビューでは、ユーザーに [ステージへの共有] ボタンの選択を求めるメッセージが表示されます。
 

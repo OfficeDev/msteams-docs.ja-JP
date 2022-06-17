@@ -1,17 +1,16 @@
 ---
 title: コンテンツ ページを作成する
 author: surbhigupta
-description: コンテンツ ページを作成する方法
-keywords: Teams タブ グループ チャネル構成可能スタティック
+description: このモジュールでは、タブとタブのコンテンツとデザインガイドラインのコンテンツ ページを作成する方法について説明します
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8de792faafeaa526a1abffe042394daeeb60cb3d
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 646e7f1a1177330fdb4db64b7e6cd1bde0df5db5
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757473"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142207"
 ---
 # <a name="create-a-content-page-for-your-tab"></a>タブのコンテンツ ページを作成する
 

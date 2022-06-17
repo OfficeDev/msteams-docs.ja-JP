@@ -1,14 +1,14 @@
 ---
 title: アダプティブ カードのユニバーサル アクションの操作
-description: アダプティブ カードのユニバーサル アクション (アダプティブ カードのユニバーサルアクションのスキーマ、モデルの更新、コード サンプルを使用した下位互換性など) の操作について説明します。
+description: アダプティブ カード用の UniversalActions のスキーマ、モデルの更新、下位互換性など、アダプティブ カードのユニバーサル アクションを操作する方法について説明します
 ms.topic: conceptual
-ms.localizationpriority: high
-ms.openlocfilehash: 768458b1bd7cad77288d1e8e0be5b231fd331891
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 17dd7fd611c593c3f5de0237e0aa61885ac630c0
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110275"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143880"
 ---
 # <a name="work-with-universal-actions-for-adaptive-cards"></a>アダプティブ カードのユニバーサル アクションの操作
 
@@ -25,7 +25,7 @@ ms.locfileid: "65110275"
 2. 自動更新モデルを活用したい場合や、シナリオにユーザー固有のビューが必要な場合は、アダプティブ カードに `refresh` 句を追加します。
 
     >[!NOTE]
-    > `userIds` プロパティを指定して、どのユーザーが自動更新を取得するかを特定します。
+    > 自動更新を `userIds` 取得するユーザーを識別するプロパティを指定します。
 
 3. ボットの中で `adaptiveCard/action` の起動要求を処理します。
 4. 起動要求のコンテキストを利用して、ユーザー向けに作成されたカードを返信します。
@@ -68,7 +68,7 @@ ms.locfileid: "65110275"
 
 * UserIds は、アダプティブ カードの `refresh` プロパティの一部であるユーザー MRI の配列です。
 
-* カードの更新セクションで `userIds` リスト プロパティを `userIds: []` として指定した場合、カードは自動的に更新されません。 代わりに、Web やデスクトップではトリプル ドット メニューに、モバイル (Android や iOS) では長押しコンテキスト メニューに、カードを手動で更新するための **[カードの更新]** オプションがユーザーに表示されます。
+* カードの更新セクションで `userIds` リスト プロパティを `userIds: []` として指定した場合、カードは自動的に更新されません。 代わりに、カードの **更新** オプションは、Teams Web クライアントまたはデスクトップのトリプル ドット メニューと、モバイルの長押しコンテキスト メニュー Teamsユーザーに表示されます。つまり、カードを手動で更新するAndroidまたはiOS。 または、シナリオにグループ チャットまたはチャネルで =60 メンバー <が含まれる場合は、更新プロパティを完全にスキップ`userIds`Teams選択することもできます。 Teams クライアントは、グループまたはチャネルに =60 ユーザーが<場合、すべてのユーザーの更新呼び出しを自動的に呼び出します。
 
 * UserIds プロパティが追加されたのは、Teams チャネルには多数のメンバーが含まれる場合があるためです。 すべてのメンバーが同時にチャネルを視聴している場合、無条件に自動更新を行うと、ボットへの同時呼び出しが多くなります。 `userIds` プロパティを常に含める必要があり、最大 *60 人のユーザー MRI* で自動更新を行うべきユーザーを特定する必要があります。
 
@@ -116,7 +116,7 @@ ms.locfileid: "65110275"
 |サンプルの名前 | 説明 | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Teams ケータリング ボット | アダプティブ カードを使用して、料理の注文を受け付けるボットを作成します。 |[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| まだ利用できません。 |
-| シーケンシャル ワークフロー アダプティブ カード | シーケンシャル ワークフロー、ユーザー固有のビュー、最新のアダプティブ カードをボットに実装する方法を示します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+| シーケンシャル ワークフロー アダプティブ カード | シーケンシャル ワークフロー、ユーザー固有のビュー、最新のアダプティブ カードをボットに実装する方法を示します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) .|
 
 ## <a name="see-also"></a>関連項目
 

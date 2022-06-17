@@ -1,16 +1,15 @@
 ---
 title: ボットとの 1 対 1 の会話
-description: Microsoft Teams のチャネルでボットと会話するエンド ツー エンドのシナリオについて説明します。
-keywords: Teams シナリオ 1on1 1to1 会話ボット
+description: このモジュールでは、Microsoft Teamsでボットと 1 対 1 の会話を行うエンドツーエンドのシナリオについて説明します。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 05/20/2019
-ms.openlocfilehash: eb08b542c707d9f520912cd04ca5b1b2b740d81c
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: e973e335558a54187a11d5146b52c5774d3cf758
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65297192"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144328"
 ---
 # <a name="have-a-personal-one-on-one-conversation-with-a-microsoft-teams-bot"></a>Microsoft Teams ボットで個人 (1 対 1) の会話を行う
 

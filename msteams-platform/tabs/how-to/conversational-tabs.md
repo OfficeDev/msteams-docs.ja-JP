@@ -1,17 +1,16 @@
 ---
 title: 会話タブを作成する
 author: surbhigupta
-description: チャネル タブの会話サブエンティティ チャットを作成し、コード サンプルを使用して会話を管理する方法について説明します
-keywords: teams タブ チャネル構成可能
+description: このモジュールでは、チャネル タブの会話サブエンティティ チャットを作成し、コード サンプルを使用して会話を管理する方法について説明します。
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: medium
-ms.openlocfilehash: ddf14d9d7dabe5b20cc21181783dc5c33f29eff9
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: f982c49c645a59f25182b7635839ece723c71ef3
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111655"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142081"
 ---
 # <a name="create-conversational-tabs"></a>会話タブを作成する
 
@@ -105,6 +104,6 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 * [Teams タブ](~/tabs/what-are-tabs.md)
 * [プライベート タブを作成する](~/tabs/how-to/create-personal-tab.md)
-* [[チャネルまたはグループの作成] タブ](~/tabs/how-to/create-channel-group-tab.md)
+* [[チャネル] または [グループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
 * [モバイルのタブ](~/tabs/design/tabs-mobile.md)
 * [アダプティブ カードを使用してタブをビルドする](~/tabs/how-to/build-adaptive-card-tabs.md)

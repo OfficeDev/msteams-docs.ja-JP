@@ -1,15 +1,15 @@
 ---
 title: カードとタスク モジュール
-description: アダプティブ カード、ヒーロー カード、サムネイル カードなど、Teams用のボットでサポートされているカードの種類について説明します。 カード アクションと、チャネル、ボット、またはディープ リンクでのタスク モジュールの呼び出しについて説明します。
+description: アダプティブ カード、ヒーロー カード、サムネイル カード、そのアクションなど、Teams用にボットでサポートされているカードの種類について説明します。
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: d68e45608d445e30a4d6b5ea8f5b662cfc22b116
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 4f2f964307c4cc8dbd3033b52af88a9b2c38d474
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756577"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143936"
 ---
 # <a name="cards-and-task-modules"></a>カードとタスク モジュール
 
@@ -34,9 +34,9 @@ Teamsのボットでは、次の種類のカードがサポートされていま
 
 次のカード アクションを追加して応答できます。
 
-* URL を開く
-* メッセージとペイロードをボットに送信する
-* OAuth フローを開始する
+* URL を開きます。
+* メッセージとペイロードをボットに送信します。
+* OAuth フローを開始します。
 
 アダプティブ カードの先行入力コントロールを使用して大規模なデータセット内で [動的な検索](~/task-modules-and-cards/cards/dynamic-search.md) エクスペリエンスを提供し、選択肢の数に制限がある範囲内で先行型静的検索を実行できます。 チャネルまたは個人用タブ、ボット、またはディープ リンクでタスク モジュールを呼び出します。 ユーザーのタブにタスク モジュールを追加することで、データ入力を必要とするワークフローに対するユーザーエクスペリエンスを向上させることができます。アダプティブ カードと Bot Framework カードのボタンを使用して、Teams ボットからタスク モジュールを呼び出すことができます。
 

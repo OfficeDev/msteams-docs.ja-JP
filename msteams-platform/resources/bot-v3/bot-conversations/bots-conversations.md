@@ -1,16 +1,15 @@
 ---
 title: ボットを使用してメッセージを送受信します
-description: Microsoft Teams でボットを使用してメッセージを送受信する方法について説明します
+description: このモジュールでは、Microsoft Teams ボット、プロアクティブ メッセージ、会話の基本、メッセージの内容、書式設定を使用して会話を行う方法について説明します
 ms.topic: overview
 ms.localizationpriority: medium
-keywords: Teamsボットメッセージ
 ms.date: 05/20/2019
-ms.openlocfilehash: 0d4665d098e0e14fa3de5f2667c7e970b545b284
-ms.sourcegitcommit: 430bf416bb8d1b74f926c8b5d5ffd3dbb0782286
-ms.translationtype: HT
+ms.openlocfilehash: fdf408a9e9d49c9c5c862a6b4dda3c7db7de93e8
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65296974"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143390"
 ---
 # <a name="have-a-conversation-with-a-microsoft-teams-bot"></a>Microsoft Teams ボットと会話する
 
@@ -74,7 +73,7 @@ Teamsがチームでテキストの書式設定をサポートする方法の詳
 
 画像は、メッセージに添付ファイルを追加して送信されます。 添付ファイルの詳細については、 [Bot Framework のドキュメント](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0&preserve-view=true)を参照してください。
 
-画像は最大 1024×1024 MB および 1 MB の PNG、JPEG、または GIF 形式にすることができます。アニメーション GIF はサポートされていません。
+画像は最大 1024 ×1024 MB、PNG、JPEG、または GIF 形式で 1 MB です。アニメーション GIF はサポートされていません。
 
 XML を使用して、各イメージの高さと幅を指定することをお勧めします。 Markdown を使用する場合、イメージ サイズの既定値は 256×256 です。 次に例を示します。
 
@@ -219,7 +218,7 @@ REST API を使用する場合は、[`/v3/conversations/{conversationId}/activit
 
 ### <a name="rest-api"></a>REST API
 
-メッセージ更新プログラムを発行するには、特定のアクティビティ ID を使用して `/v3/conversations/<conversationId>/activities/<activityId>/` エンドポイントに対して PUT 要求を実行するだけです。 このシナリオを完了するには、元の POST 呼び出しによって返されたアクティビティ ID をキャッシュする必要があります。
+メッセージの更新を発行するには、特定のアクティビティ ID を使用してエンドポイントに `/v3/conversations/<conversationId>/activities/<activityId>/` 対して PUT 要求を実行します。 このシナリオを完了するには、元の POST 呼び出しによって返されたアクティビティ ID をキャッシュする必要があります。
 
 ```json
 PUT /v3/conversations/19%3Aja0cu120i1jod12j%40skype.net/activities/012ujdo0128

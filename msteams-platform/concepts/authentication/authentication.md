@@ -1,15 +1,14 @@
 ---
 title: アプリ ユーザーの認証
-description: Teams での認証と、アプリでの認証の使用方法について説明します
+description: このモジュールでは、Teamsでの認証と、会話ボットのアプリ、Web ベースの認証フロー、OAuthPrompt フローで認証を使用する方法について説明します。
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: Teams 認証 OAuth SSO Microsoft Azure Active Directory (Azure AD)
-ms.openlocfilehash: db1a16959755668ec9aa298ed355ef657503ca03
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 0ea8813d8428036521cc4488668a30d82470a8d0
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65887759"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143467"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Microsoft Teams でユーザーを認証する
 
@@ -17,7 +16,7 @@ ms.locfileid: "65887759"
 
 次の 2 つの方法のいずれかで、アプリの認証を追加することを選択します。
 
-- **Teams アプリでシングル サインオン (SSO) を有効にする: Teams** 内の SSO は、アプリ ユーザーの Teams ID を使用してアプリへのアクセスを提供する認証方法です。 Teams にログインしているユーザーは、Teams 環境内でアプリに再度ログインする必要はありません。 アプリ ユーザーからの同意のみが必要な場合、Teams アプリは Azure Active Directory (AD) からそれらのアクセスの詳細を取得します。 アプリ ユーザーが同意した後は、再検証しなくても、他のデバイスからでもアプリにアクセスできます。
+- **Teams アプリでシングル サインオン (SSO) を有効にする**: Teams内の SSO は、アプリ ユーザーのTeams ID を使用してアプリへのアクセスを提供する認証方法です。 Teamsにログインしたユーザーは、Teams環境内でアプリに再度ログインする必要はありません。 アプリ ユーザーからの同意のみが必要な場合、Teams アプリはAzure Active Directory (AD) からアクセスの詳細を取得します。 アプリ ユーザーが同意した後は、再検証しなくても、他のデバイスからでもアプリにアクセスできます。
 
 - **サード パーティの OAuth プロバイダーを使用して認証を有効にする**: サード パーティの OAuth ID プロバイダー (IdP) を使用して、アプリ ユーザーを認証できます。 アプリ ユーザーは ID プロバイダーに登録されます。ID プロバイダーには、アプリとの信頼関係があります。 ユーザーがログインしようとすると、ID プロバイダーはアプリ ユーザーを検証し、アプリへのアクセスを提供します。 Azure AD は、このようなサード パーティの OAuth プロバイダーの 1 つです。 Google、Facebook、GitHub、その他のプロバイダーなど、他のプロバイダーを使用できます。
 

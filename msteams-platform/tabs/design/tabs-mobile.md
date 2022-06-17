@@ -1,75 +1,74 @@
 ---
 title: モバイルのタブ
-description: モバイル、認証、低帯域幅Microsoft Teams、モバイル クライアントでのテスト、配布などについて、タブを実装する方法について学習します。
+description: このモジュールでは、Microsoft Teams モバイル、認証、低帯域幅接続、モバイル クライアントでのテスト、配布などのタブの実装について説明します。
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: アプリのモバイル タブ チャネル グループ認証の配布
-ms.openlocfilehash: 520cad9d295b4f63ca437db5f69abc3ba9464faa
-ms.sourcegitcommit: 8a0ffd21c800eecfcd6d1b5c4abd8c107fcf3d33
+ms.openlocfilehash: da9757ee0153b3f2fe80e576e156f45bc90a15cd
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63452593"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144267"
 ---
 # <a name="tabs-on-mobile"></a>モバイルのタブ
 
-タブを含むアプリをMicrosoft Teamsする場合は、Android クライアントと iOS クライアントの両方でタブがどのように機能Microsoft Teamsがあります。 この記事では、考慮する必要がある主要なシナリオの一部について説明します。
+タブを含むMicrosoft Teams アプリを構築する場合は、Android クライアントとiOS Microsoft Teams クライアントの両方でタブがどのように機能するかをテストする必要があります。 この記事では、考慮する必要がある主なシナリオの一部について説明します。
 
-モバイル クライアントにチャネルまたはグループ タブを表示Teams場合[`setSettings()`](/javascript/api/@microsoft/teams-js/microsoftteams.settings?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-settings-setsettings&preserve-view=true)、構成にはプロパティの値が必要`websiteUrl`です。 最適なユーザー エクスペリエンスを実現するには、タブを作成する際に、この記事のモバイルタブのガイダンスに従う必要があります。
+Teamsモバイル クライアントにチャネルまたはグループ タブを表示することを選択した場合、構成にはプロパティの[`setSettings()`](/javascript/api/@microsoft/teams-js/microsoftteams.settings?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-settings-setsettings&preserve-view=true)値が`websiteUrl`必要です。 最適なユーザー エクスペリエンスを確保するには、この記事のモバイル上のタブのガイダンスに従ってタブを作成する必要があります。
 
-モバイル [ストアを通じて配布Teamsモバイル](~/concepts/deploy-and-publish/appsource/publish.md) クライアントに対する個別の承認プロセスがあります。 このようなアプリの既定の動作は次のとおりです。
+[Teams ストアを通じて配布される](~/concepts/deploy-and-publish/appsource/publish.md)アプリには、モバイル クライアントに対する個別の承認プロセスがあります。 このようなアプリの既定の動作は次のとおりです。
 
-| **アプリの機能** | **アプリが承認された場合の動作** | **アプリが承認されていない場合の動作** |
+| **アプリ機能** | **アプリが承認された場合の動作** | **アプリが承認されていない場合の動作** |
 | --- | --- | --- |
-| **[個人] タブ** | モバイル クライアントの下部バーにアプリが表示されます。 タブは、クライアントTeams開きます。 | モバイル クライアントの下部バーにアプリが表示されません。 |
-| **チャネルタブとグループ タブ** | タブが使用しているクライアントTeams開きます`contentUrl`。 | タブは、 を使用してクライアントの外部Teams開きます`websiteUrl`。 |
+| **個人用タブ** | モバイル クライアントの下部のバーにアプリが表示されます。 Teams クライアントでタブが開きます。 | モバイル クライアントの下部のバーにアプリが表示されません。 |
+| **チャネル タブとグループ タブ** | Teams クライアント`contentUrl`でタブが開きます。 | タブは、Teams クライアント`websiteUrl`の外部のブラウザーで開きます。 |
 
 > [!NOTE]
 >
-> * AppSource に送信された[アプリ](https://appsource.microsoft.com)は、モバイルの応答性Teams自動的に評価されます。 クエリの場合は、ユーザーに問い合 teamsubm@microsoft.com。
-> * AppSource を介して配布されていないすべてのアプリでは、タブは既定で Teams クライアント内のアプリ内 Web ビューで開き、個別の承認プロセスは必要ありません。
-> * アプリの既定の動作は、アプリ ストアを通じて配布Teamsです。 既定では、すべてのタブがクライアントでTeamsされます。
-> * モバイルに優しいアプリの評価を開始するには、アプリの詳細 teamsubm@microsoft.com 確認してください。
+> * Teamsで発行するために [AppSource](https://appsource.microsoft.com) に送信されたアプリは、モバイルの応答性のために自動的に評価されます。 クエリについては、teamsubm@microsoft.com に問い合 teamsubm@microsoft.com。
+> * AppSource を通じて配布されていないすべてのアプリの場合、既定では、Teams クライアント内のアプリ内 Web ビューでタブが開き、個別の承認プロセスは必要ありません。
+> * アプリの既定の動作は、Teams ストアを通じて配布される場合にのみ適用されます。 既定では、すべてのタブがTeams クライアントで開きます。
+> * モバイルに適したアプリの評価を開始するには、アプリの詳細を teamsubm@microsoft.com してください。
 
 ## <a name="authentication"></a>認証
 
-モバイル クライアントで認証を機能するには、JavaScript SDK Teamsバージョン 1.4.1 以上にアップグレードする必要があります。
+モバイル クライアントで認証を機能させるには、JavaScript SDK Teamsバージョン 1.4.1 以上にアップグレードする必要があります。
 
 ## <a name="low-bandwidth-and-intermittent-connections"></a>低帯域幅と断続的な接続
 
-モバイル クライアントは、低帯域幅と断続的な接続で機能します。 アプリは、ユーザーにコンテキスト メッセージを提供することで、タイムアウトを適切に処理する必要があります。 また、進行状況インジケーターを使用して、長時間実行されるプロセスに対するフィードバックをユーザーに提供する必要があります。
+モバイル クライアントは、低帯域幅と断続的な接続で機能します。 アプリは、ユーザーにコンテキスト メッセージを提供することで、タイムアウトを適切に処理する必要があります。 また、進行状況インジケーターを使用して、実行時間の長いプロセスについてユーザーにフィードバックを提供する必要もあります。
 
 ## <a name="testing-on-mobile-clients"></a>モバイル クライアントでのテスト
 
-さまざまなサイズと品質のモバイル デバイスでタブが適切に機能するを検証する必要があります。 Android デバイスの場合、 [DevTools を使用して](~/tabs/how-to/developer-tools.md) 、実行中にタブをデバッグできます。 タブレットを含む高パフォーマンスデバイスと低パフォーマンスデバイスの両方でテストをお勧めします。
+さまざまなサイズと品質のモバイル デバイスでタブが正しく機能することを検証する必要があります。 Android デバイスの場合は、[DevTools を](~/tabs/how-to/developer-tools.md)使用して、実行中にタブをデバッグできます。 Tablet PCを含め、パフォーマンスの高いデバイスと低パフォーマンスの両方のデバイスでテストすることをお勧めします。
 
 ## <a name="distribution"></a>配布
 
-モバイル クライアントで適切にTeams機能するには、モバイル ストアに一覧表示されているアプリTeams必要があります。 タブの可用性と動作は、アプリが承認されたかどうかによって異なります。
+Teams ストアに一覧表示されているアプリは、モバイル使用がTeamsモバイル クライアントで正常に機能することを承認する必要があります。 タブの可用性と動作は、アプリが承認されているかどうかによって異なります。
 
-### <a name="apps-on-teams-store-approved-for-mobile"></a>モバイル用にTeamsストア上のアプリ
+### <a name="apps-on-teams-store-approved-for-mobile"></a>モバイル向けに承認されたTeams ストア上のアプリ
 
-次の表では、アプリがモバイル ストアに表示され、モバイルでの使用が承認Teamsタブの可用性と動作について説明します。
+次の表では、アプリがTeams ストアに一覧表示され、モバイルでの使用が承認された場合のタブの可用性と動作について説明します。
 
 |機能   |モバイルの可用性   |モバイル動作|
 |----------|-----------|------------|
-|チャネル <br /> [グループ] タブ|はい|アプリの構成を使用Teamsモバイル クライアントのタブが開`contentUrl`きます。|
-|個人用アプリ|はい|[個人用アプリ] タブの各タブが、それぞれの構成Teamsモバイル クライアントで開`contentUrl`きます。|
+|チャネル <br /> [グループ] タブと [グループ] タブ|はい|アプリの構成を使用して、Teams モバイル クライアントで`contentUrl`タブが開きます。|
+|個人用アプリ|はい|個人用アプリ タブの各タブは、それぞれの`contentUrl`構成を使用してTeamsモバイル クライアントで開きます。|
 
-### <a name="apps-on-teams-store-not-approved-for-mobile"></a>モバイル向Teamsアプリが承認されていないアプリ
+### <a name="apps-on-teams-store-not-approved-for-mobile"></a>Teams ストア上のアプリがモバイルに対して承認されていない
 
-次の表は、アプリがモバイル ストアに表示されているが、モバイルでの使用がTeams場合のタブの可用性と動作について説明します。
+次の表では、アプリがTeams ストアに一覧表示されているがモバイルでの使用が承認されていない場合のタブの可用性と動作について説明します。
 
 | 機能 | モバイルの可用性 | モバイル動作 |
 |----------|-----------|------------|
-|[チャネルとグループ] タブ|はい|タブは、アプリの構成を使用して Teams `websiteUrl` モバイル クライアントではなく、デバイスの既定のブラウザーで開きます。これは、ソース コードの機能にも含める必要`setSettings()`[があります](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk#settings-namespace)。 ただし、ユーザーはアプリの横にある [Teams] を選択し、[開く]  を選択してアプリの構成をトリガーすることで、モバイル クライアントのタブを表示`contentUrl`できます。|
+|[チャネルとグループ] タブ|はい|タブは、アプリの構成を使用するモバイル クライアントTeamsではなく、デバイスの既定の`websiteUrl`ブラウザーで開きます。これは、ソース コードの`setSettings()`[関数](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk#settings-namespace)にも含める必要があります。 ただし、ユーザーは、アプリの横にある **[その他**] を選択し、[**開く**] を選択すると、Teamsモバイル クライアントのタブを表示できます。これにより、アプリの`contentUrl`構成がトリガーされます。|
 |個人用アプリ|なし|該当なし|
 
-### <a name="apps-not-on-teams-store"></a>アプリがストアTeamsしない
+### <a name="apps-not-on-teams-store"></a>Teams ストアにないアプリ
 
-アプリをサイドロードする場合や、組織のアプリ カタログに発行する場合、タブの動作は、モバイル向け Microsoft によって承認された Teams ストア アプリと同じです。
+アプリをサイドロードするか、組織のアプリ カタログに発行する場合、タブの動作は、Microsoft for mobile によって承認されたアプリTeamsストア アプリと同じです。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [タブのコンテキストを取得する](~/tabs/how-to/access-teams-context.md)
@@ -77,7 +76,7 @@ ms.locfileid: "63452593"
 ## <a name="see-also"></a>関連項目
 
 * [タブデザインのガイドライン](~/tabs/design/tabs.md)
-* [Teamsタブ](~/tabs/what-are-tabs.md)
+* [Teams タブ](~/tabs/what-are-tabs.md)
 * [プライベート タブを作成する](~/tabs/how-to/create-personal-tab.md)
-* [[チャネルまたはグループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
-* [モバイルのTeamsを計画する - Teams](~/concepts/design/plan-responsive-tabs-for-teams-mobile.md)
+* [[チャネル] または [グループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
+* [Teams モバイルの計画 - Teams](~/concepts/design/plan-responsive-tabs-for-teams-mobile.md)
