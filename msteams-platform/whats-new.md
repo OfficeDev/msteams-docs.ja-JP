@@ -3,12 +3,12 @@ title: Teams の開発者向けの新機能
 description: このラーニング パスでは、Microsoft Teams の新しい開発者向け機能とそれらの機能の強化について説明します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: e7c361ab7ee2579e3b28df0e8d6f22538c8f4d52
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 0b7c2078980748f8e0820348e23a22c57ac7c22f
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123189"
+ms.locfileid: "66130467"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -47,6 +47,7 @@ ms.locfileid: "66123189"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ----------------|
+| 2022/6/16 | デスクトップとモバイルをサポートするようにメディア機能を更新しました| [デバイス機能の統合] > [[メディア機能の統合](concepts/device-capabilities/media-capabilities.md)]|
 | 06/08/2022 | 成功メッセージに関するオプションのカード フィードバック| [ボットのビルド] > [ボットの会話] > [[ボットの会話のメッセージ]](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 | 06/03/2022 | 新しい構造と手順でタブ アプリの SSO を有効にするための認証モジュールの追加を更新しました | 認証の追加 > タブ > [タブ アプリでシングル サインオンを有効にする](tabs/how-to/authentication/tab-sso-overview.md) |
 | 05/24/2022 | SaaS オファーにリンクされたアプリを公開するための迅速な承認に関するその他のヒント | Teams ストアに公開 > 概要 > [SaaS オファーにリンクされたアプリを公開するための迅速な承認に関するその他のヒント](~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer) |
@@ -151,9 +152,9 @@ ms.locfileid: "66123189"
 |2021/3/5|既定のインストール範囲とグループ機能 | [アプリを配布する] > [[既定のインストール範囲とグループ機能]](concepts/deploy-and-publish/add-default-install-scope.md) |
 |2021/3/5|個人用アプリ タブの並べ替え | [タブの構築] > [[個人用アプリのチャット タブの並び替え]](tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs) |
 |2021/3/4|アダプティブ カードでの情報マスク | [カードとタスク モジュールの構築] > [カードの構築] > [[アダプティブ カードの情報マスキング]](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
-|2021/2/19|位置情報機能が追加されました。 <br/> 位置情報機能の情報が、デバイス機能の概要、ネイティブ デバイスのアクセス許可、メディア機能の統合、QR またはバーコード スキャナー機能の各ファイルに追加されます | • [アプリの基礎] > [デバイス機能] > [[概要]](concepts/device-capabilities/device-capabilities-overview.md) </br> • [アプリの基礎] > [デバイス機能] > [[デバイス アクセス許可の要求]](concepts/device-capabilities/native-device-permissions.md) </br> • [アプリの基礎] > [デバイス機能] > [[メディア機能を統合する]](concepts/device-capabilities/mobile-camera-image-permissions.md) </br> • [アプリの基礎] > [デバイス機能] > [[QR コードまたはバーコード スキャナー機能を統合する]](concepts/device-capabilities/qr-barcode-scanner-capability.md) </br> • [アプリの基礎] > [デバイス機能] > [[位置情報機能を統合する]](concepts/device-capabilities/location-capability.md) |
-|2021/2/18|QR コードまたはバーコード スキャナー機能が追加されました。 <br/> QR またはバーコード スキャナー機能の情報が、デバイス機能の概要、ネイティブ デバイスのアクセス許可、メディア機能の統合の各ファイルに追加されます | • [アプリの基礎] > [デバイス機能] > [[概要]](concepts/device-capabilities/device-capabilities-overview.md) </br> • [アプリの基礎] > [デバイス機能] > [[デバイス アクセス許可の要求]](concepts/device-capabilities/native-device-permissions.md) </br> • [アプリの基礎] > [デバイス機能] > [[メディア機能を統合する]](concepts/device-capabilities/mobile-camera-image-permissions.md) </br> • [アプリの基礎] > [デバイス機能] > [[QR コードまたはバーコード スキャナー機能を統合する]](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
-|2021/2/9|デバイス機能の概要が追加されました。 <br/> マイク機能の情報が、ネイティブ デバイスのアクセス許可、メディア機能の統合の各ファイルに追加されます |• [アプリの基礎] > [デバイス機能] > [[概要]](concepts/device-capabilities/device-capabilities-overview.md) </br> • [アプリの基礎] > • [デバイス機能] > [[デバイス アクセス許可の要求]](concepts/device-capabilities/native-device-permissions.md) </br> • [アプリの基礎] > [デバイス機能] > [[メディア機能を統合する]](concepts/device-capabilities/mobile-camera-image-permissions.md)|
+|2021/2/19|位置情報機能が追加されました。 <br/> 位置情報機能の情報が、デバイス機能の概要、ネイティブ デバイスのアクセス許可、メディア機能の統合、QR またはバーコード スキャナー機能の各ファイルに追加されます | • [アプリの基礎] > [デバイス機能] > [[概要]](concepts/device-capabilities/device-capabilities-overview.md) </br> • [アプリの基礎] > [デバイス機能] > [[デバイス アクセス許可の要求]](concepts/device-capabilities/native-device-permissions.md) </br> • [アプリの基礎] > [デバイス機能] > [[メディア機能を統合する]](concepts/device-capabilities/media-capabilities.md) </br> • [アプリの基礎] > [デバイス機能] > [[QR コードまたはバーコード スキャナー機能を統合する]](concepts/device-capabilities/qr-barcode-scanner-capability.md) </br> • [アプリの基礎] > [デバイス機能] > [[位置情報機能を統合する]](concepts/device-capabilities/location-capability.md) |
+|2021/2/18|QR コードまたはバーコード スキャナー機能が追加されました。 <br/> QR またはバーコード スキャナー機能の情報が、デバイス機能の概要、ネイティブ デバイスのアクセス許可、メディア機能の統合の各ファイルに追加されます | • [アプリの基礎] > [デバイス機能] > [[概要]](concepts/device-capabilities/device-capabilities-overview.md) </br> • [アプリの基礎] > [デバイス機能] > [[デバイス アクセス許可の要求]](concepts/device-capabilities/native-device-permissions.md) </br> • [アプリの基礎] > [デバイス機能] > [[メディア機能を統合する]](concepts/device-capabilities/media-capabilities.md) </br> • [アプリの基礎] > [デバイス機能] > [[QR コードまたはバーコード スキャナー機能を統合する]](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
+|2021/2/9|デバイス機能の概要が追加されました。 <br/> マイク機能の情報が、ネイティブ デバイスのアクセス許可、メディア機能の統合の各ファイルに追加されます |• [アプリの基礎] > [デバイス機能] > [[概要]](concepts/device-capabilities/device-capabilities-overview.md) </br> • [アプリの基礎] > • [デバイス機能] > [[デバイス アクセス許可の要求]](concepts/device-capabilities/native-device-permissions.md) </br> • [アプリの基礎] > [デバイス機能] > [[メディア機能を統合する]](concepts/device-capabilities/media-capabilities.md)|
 
 <br>
 

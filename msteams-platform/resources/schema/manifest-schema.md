@@ -3,12 +3,12 @@ title: マニフェスト スキーマの参照
 description: この記事では、Microsoft Teams リファレンスのマニフェスト スキーマ、スキーマ、およびサンプルの完全なマニフェストを紹介します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 5c28429a69bad5149d6c7014ce1596dd7ea07b19
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 49b3b1714d05f50ee6a4b186ff7a1a85d6209083
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123725"
+ms.locfileid: "66130509"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参照: Microsoft Teams のマニフェスト スキーマ
 
@@ -960,5 +960,5 @@ Teams アプリ マニフェスト ファイルを作成するには:
 * [Microsoft Teams アプリの構造を理解する](~/concepts/design/app-structure.md)
 * [アプリのカスタマイズを有効にする](~/concepts/design/enable-app-customization.md)
 * [アプリをローカライズする](~/concepts/build-and-test/apps-localization.md)
-* [メディア機能を統合する](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [メディア機能を統合する](~/concepts/device-capabilities/media-capabilities.md)
 * [Microsoft Teams の開発者向けパブリック プレビュー マニフェスト スキーマ](manifest-schema-dev-preview.md)

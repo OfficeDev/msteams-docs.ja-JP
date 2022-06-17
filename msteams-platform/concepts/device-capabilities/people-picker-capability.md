@@ -4,12 +4,12 @@ description: この記事では、Teams JavaScript クライアント SDK を使
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: f16145354b05ab584e295ffd23262d2b925e4249
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 0da107c4086d7eae568990746a877b79f030a564
+ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123028"
+ms.locfileid: "66130446"
 ---
 # <a name="integrate-people-picker"></a>ユーザー ピッカーを統合する
 
@@ -105,6 +105,6 @@ microsoftTeams.people.selectPeople((error: microsoftTeams.SdkError, people: micr
 
 ## <a name="see-also"></a>関連項目
 
-* [Teams でメディア機能を統合する](mobile-camera-image-permissions.md)
+* [メディア機能を統合する](~/concepts/device-capabilities/media-capabilities.md)
 * [Teams で QR コードまたはバーコード スキャナー機能を統合する](qr-barcode-scanner-capability.md)
 * [Teams で位置情報機能を統合する](location-capability.md)
