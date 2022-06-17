@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 2df7bf928109c1616bebf99d895c953c4a420e9a
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: 1f2422f6e5c32e30bba80141e53a6ab60b08e08b
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795134"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123546"
 ---
 # <a name="the-teams-solution"></a>Teams ソリューション
 
@@ -71,7 +71,7 @@ Teams アプリの設計から構築、配布まで、さまざまなツール�
 1. プロジェクトを計画し、要件を把握します。
 1. アプリを設計します。タブ UI を設計するには、Teams UI キットと UI ライブラリを使用します。
 1. Teams ツールキットを使用して JavaScript を使用してアプリを構築します。
-1. Microsoft Graph を使用して、さらに Teams の機能と M365 データを追加して、機能を拡張します。
+1. Microsoft Graph を使用して、さらに Teams の機能と Microsoft 365 データを追加して、機能を拡張します。
 1. サンプル ユーザー データを使用して開発者テナントでアプリをテストします。
 1. アプリを Azure にデプロイします。
 1. 開発者ポータルを使用してアプリを管理し、ストアに公開します。 SaaS オファー、アプリ内購入などのオプションを使用してアプリを収益化します。

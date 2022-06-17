@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: e2d9b08afb7be0d8d74596598876264f8efc10e0
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 66aa139669079cad2ebb2d552ccbf7c997f38a6a
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757284"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66124033"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Microsoft Teams ストアにアプリを発行する
 
@@ -20,7 +20,7 @@ Teams ストアに公開されたアプリは、Microsoft 365 アプリおよび
 
 ## <a name="understand-the-publishing-process"></a>公開プロセスを理解する
 
-アプリが運用環境に対応していると感じたら、Teams ストアにアプリを掲載するプロセスを開始できます。
+アプリが運用環境に対応している場合、Teams ストアにアプリを掲載するプロセスを開始できます。
 
 > [!TIP]
 > 送信前の手順に正確に従うと、Microsoft がアプリの公開を承認する可能性が高くなります。
@@ -51,7 +51,7 @@ Teams ストアに公開されたアプリは、Microsoft 365 アプリおよび
 
 * **機能とエクスペリエンスの詳細なテスト**
 
-  アプリはバリデーターによって徹底的にレビューされ、[Microsoft Commercial Marketplace の認定ポリシー](/legal/marketplace/certification-policies)に準拠していることを確認します。 
+  アプリはバリデーターによって徹底的にレビューされ、[Microsoft Commercial Marketplace の認定ポリシー](/legal/marketplace/certification-policies)に準拠していることを確認します。
   機能とユーザー エクスペリエンスの詳細なテスト、ユーザビリティ チェック、メタデータ チェックに焦点が当てられます。 アプリの検証は、デスクトップ、Web、およびモバイル クライアント間で実行されます。 提出後 24 時間以内に、詳細なテスト レポートを提供できるように努めています。
 
 * **ガイド付きアプリはコンシェルジュ サービスを通じて公開します**

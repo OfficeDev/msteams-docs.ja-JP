@@ -1,16 +1,15 @@
 ---
 title: Moodle ラーニング管理システム
-description: Teams と Moodle LMS 統合の概要
+description: Moodle LMS と Teams の統合、Moodle 学習管理、mConnect とディープ リンク、アクセシビリティ、およびユーザー要件のシナリオについて説明します。 この統合により、オーディオ、ビデオ通話、チャット、コースとアクティビティの管理、分析的な洞察などが提供されます。
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: surbhigupta
-keywords: moodle LMS mConnect ディープ リンク
-ms.openlocfilehash: dc5674ef092c9462786871aa8bb8618a84b141b8
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 61182fe5c11ba5c399d720ae043671983e262b1c
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757347"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66124026"
 ---
 # <a name="moodle-learning-management-system"></a>Moodle ラーニング管理システム
 
