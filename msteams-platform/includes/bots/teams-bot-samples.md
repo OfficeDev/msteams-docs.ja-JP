@@ -1,15 +1,15 @@
 ---
 title: Teams ボットのサンプル
-description: Bot Framework のTeamsサンプルについて説明します
+description: このラーニング モジュールを使用して、Bot Framework のTeamsサンプルについて学習します。これには、機能のデモンストレーションを行う作業サンプルが含まれます。
 localization_priority: Normal
 ms.topic: overview
 ms.author: surbhigupta12
-ms.openlocfilehash: 67a092138c3b466390d9d1f5d53f6a3ff84391cc
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 6074ada33b715ff414610910258583a9b7d11d6d
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104586"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66140872"
 ---
 ## <a name="teams-bot-samples"></a>Teams ボットのサンプル
 
