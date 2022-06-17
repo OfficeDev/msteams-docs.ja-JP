@@ -1,5 +1,5 @@
 ---
-title: Teams の開発者向けの新機能
+title: Teams の開発者向けの最新情報
 description: Microsoft Teams の新しい開発者向け機能とそれらの機能の機能強化について説明します。
 ms.topic: reference
 ms.localizationpriority: high
@@ -10,7 +10,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/13/2022
 ms.locfileid: "66048970"
 ---
-# <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
+# <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの最新情報
 
 一般提供 (GA) および開発者プレビュー版の Microsoft Teams プラットフォーム機能をご紹介します。 RSS フィード[![ダウンロード フィード](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)に登録することで、Teams プラットフォームの最新情報を取得できるようになりました。 詳細については、「[RSS フィードの構成](#get-latest-updates)」を参照してください。
 
@@ -20,7 +20,7 @@ ms.locfileid: "66048970"
 | --- | --- | --- |
 | 05/24/2022| [*開発者向けプレビュー*] <br> Live Share SDK による強化されたコラボレーション |  Teams会議用のアプリのビルド > Live Share を使用した強化されたコラボレーション > [概要](apps-in-teams-meetings/teams-live-share-overview.md) |
 |05/24/2022| Outlook と Office が有効なアプリを Teams ストアに送信する | Microsoft 365 間でアプリを拡張する [概要](m365-apps/overview.md) |
-|05/24/2022| TeamsJS バージョン 2.0.0 のアプリ ガイダンスと新機能| ツールと SDK > [Teams JavaScript クライアント SDK](tabs/how-to/using-teams-client-sdk.md)  |
+|05/24/2022| TeamsJS バージョン 2.0.0 のアプリ ガイダンスと最新情報| ツールと SDK > [Teams JavaScript クライアント SDK](tabs/how-to/using-teams-client-sdk.md)  |
 | 05/24/2022 | Visual Studio Code 用 Teams Toolkit バージョン 4.0.0 の一般提供開始 | ［ツールと SDK］ > ［Visual Studio Code 用 Teams Toolkit］ <br> • [Teams ツールキットの概要](toolkit/teams-toolkit-fundamentals.md) <br> • [Build コマンド ボットと JavaScript](toolkit/add-capability.md) <br> • [JavaScript を使用した通知ボットのビルド](toolkit/add-capability.md) <br> • [Teams アプリ マニフェストのプレビューとカスタマイズ](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [既存の API に接続します](toolkit/add-API-connection.md) <br> • [Teams アプリに機能を追加する](toolkit/add-capability.md) <br> • [シングル サインオン エクスペリエンスを追加する](toolkit/add-single-sign-on.md) <br> • [Teams アプリにクラウド リソースを追加する](toolkit/add-resource.md) |
 | 05/24/2022 | アプリ マニフェスト バージョン 1.13 が導入されました | アプリ マニフェスト > [Microsoft Teams のマニフェスト スキーマ](resources/schema/manifest-schema.md) |
 | 05/24/2022 | GCC と GCCH のボットとメッセージ拡張機能 | • [アプリの計画] > [[概要]](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • ボットの作成> [概要](bots/what-are-bots.md) </br> • メッセージ拡張機能の作成> [概要](messaging-extensions/what-are-messaging-extensions.md) |
@@ -52,7 +52,7 @@ ms.locfileid: "66048970"
 | 06/03/2022 | 新しい構造と手順でタブ アプリの SSO を有効にするための認証モジュールの追加を更新しました | 認証の追加 > タブ > [タブ アプリでシングル サインオンを有効にする](tabs/how-to/authentication/tab-sso-overview.md) |
 | 05/24/2022 | SaaS オファーにリンクされたアプリを公開するための迅速な承認に関するその他のヒント | Teams ストアに公開 > 概要 > [SaaS オファーにリンクされたアプリを公開するための迅速な承認に関するその他のヒント](~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer) |
 | 05/24/2022 | Outlook と Office が有効なアプリを Teams ストアに送信する | Microsoft 365 間でアプリを拡張する [概要](m365-apps/overview.md) |
-| 05/24/2022 | TeamsJS バージョン 2.0.0 のアプリ ガイダンスと新機能| ツールと SDK > [Teams JavaScript クライアント SDK](tabs/how-to/using-teams-client-sdk.md)  |
+| 05/24/2022 | TeamsJS バージョン 2.0.0 のアプリ ガイダンスと最新情報| ツールと SDK > [Teams JavaScript クライアント SDK](tabs/how-to/using-teams-client-sdk.md)  |
 | 05/24/2022 | Visual Studio Code 用 Teams Toolkit バージョン 4.0.0 の一般提供開始 | ［ツールと SDK］ > ［Visual Studio Code 用 Teams Toolkit］ <br> •  [Teams ツールキットの概要](toolkit/teams-toolkit-fundamentals.md) <br> • [Build コマンド ボットと JavaScript](toolkit/add-capability.md) <br> • [JavaScript を使用した通知ボットのビルド](toolkit/add-capability.md) <br> • [Teams アプリ マニフェストのプレビューとカスタマイズ](toolkit/TeamsFx-preview-and-customize-app-manifest.md) <br> • [既存の API に接続します](toolkit/add-API-connection.md) <br> • [Teams アプリに機能を追加する](toolkit/add-capability.md) <br> • [シングル サインオン エクスペリエンスを追加する](toolkit/add-single-sign-on.md) <br> • [Teams アプリにクラウド リソースを追加する](toolkit/add-resource.md) |
 | 05/24/2022 | アプリ マニフェスト バージョン 1.13 が導入されました | アプリ マニフェスト > [Microsoft Teams のマニフェスト スキーマ](resources/schema/manifest-schema.md) |
 | 5/24/2022|GCC と GCCH のボットとメッセージ拡張機能| • [アプリの計画] > [[概要]](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • ボットの作成> [概要](bots/what-are-bots.md) </br> • メッセージ拡張機能の作成> [概要](messaging-extensions/what-are-messaging-extensions.md) |
@@ -62,7 +62,7 @@ ms.locfileid: "66048970"
 | 2022/04/28 | アプリ検証エラーの一般的な理由 | [アプリの配布] > [Teams ストアへの公開] > [[アプリ検証エラーの一般的な理由](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)]|
 | 04/20/2022 |  CI/CD パイプラインを設定する | [ツールと SDK] > [Visual Studio Code 向け Teams ツールキット] > [[CI/CD パイプラインの設定]](toolkit/use-CICD-template.md)|
 | 04/19/2022 | Microsoft Teams でアプリをアップロードする | アプリを配布する > [アプリをアップロードする](concepts/deploy-and-publish/apps-upload.md)|
-| 04/01/2022 | Teams ボットを作成するためのステップバイステップのガイドを導入しました| [ボットの構築] > [ボットの会話] > [チャネルとグループの会話]  > [Teams 会話型ボットを作成するためのステップバイステップ ガイド](sbs-teams-conversation-bot.yml) |
+| 04/01/2022 | Teams ボットを作成するためのステップバイステップのガイドを導入しました| [ボットの構築] > [ボットの会話] > [チャネルとグループの会話] > [Teams 会話型ボットを作成するためのステップバイステップ ガイド](sbs-teams-conversation-bot.yml) |
 | 03/30/2022 | タブとボットを使用した Blazor アプリの [使用を開始するモジュール] の更新|  はじめに＞[Blazorを使用して初めてのアプリを構築する](sbs-gs-blazorupdate.yml)|
 |03/30/2022|ブラウザーのデバイスのアクセス許可 | [デバイス機能を統合する] > [[ブラウザーのデバイス アクセス許可]](concepts/device-capabilities/browser-device-permissions.md) |
 | 03/29/2022 |ユーザー ピッカーを統合する | [Teams との統合] > [[ユーザー ピッカーを統合する]](concepts/device-capabilities/people-picker-capability.md)
@@ -247,7 +247,7 @@ ms.locfileid: "66048970"
 | 2018/6/7 | Microsoft Teams テナント アプリ カタログの情報が追加されました。 | [Microsoft Teams アプリの公開](~/publishing/apps-publish.md)|
 | 2018/5/29 | Teams でアダプティブ カードがサポートされます。 | [Teams でのアダプティブ カードのアクション](task-modules-and-cards/cards/cards-reference.md) |
 | 2018/4/17 | replyToID が `Invoke` および `MessageBack` カード アクションのペイロードに追加されました。 これは、カード アクションの送信元のメッセージを更新する必要がある場合に特に便利です。 | [カード アクション](~/concepts/cards/cards-actions.md)|
-| 2018/4/12 | Teams プログラミング インターフェイスとこのドキュメント セットの変更を追跡するこのトピックが追加されました。 | [新機能](~/whats-new.md)|
+| 2018/4/12 | Teams プログラミング インターフェイスとこのドキュメント セットの変更を追跡するこのトピックが追加されました。 | [最新情報](~/whats-new.md)|
 | 2018/4/10 | 認証 URL で、パスにテナント ID を一貫して使用するように変更が行われました。 | [タブの認証フロー](~/concepts/authentication/auth-flow-tab.md)、[Azure AD タブ認証](~/concepts/authentication/auth-tab-AAD.md)|
 | 2018/4/6 | コマンド ボックスの使用に関するデザイン ガイドラインが追加されました。 |[コマンド ボックス](~/resources/design/framework/command-box.md)|
 | 2018/4/2 | ボットを使用して、アプリの通知を送信します。 |[通知のみのボット](~/concepts/bots/bots-notification-only.md)|
