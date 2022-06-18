@@ -1,16 +1,16 @@
 ---
 title: Teams アプリをデバッグする
-description: Teams Toolkit で Teams アプリをローカルでデバッグする
+description: このモジュールでは、Teams Toolkit と Teams Toolkit の主な機能で Teams アプリをローカルでデバッグする方法について説明します
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 5615175ef6dac7f232f276c73f2991db8433224c
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 5cc1d14122a7977170e3c4fa04aba782b0146af9
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123977"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142228"
 ---
 # <a name="debug-your-teams-app-locally"></a>Teams アプリをローカルでデバッグする
 
@@ -58,7 +58,7 @@ Teams アプリをデバッグするときに、タブ、ボット、メッセ�
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debug.png" alt-text="デバッグの停止":::
 
-## <a name="debug-your-teams-app-locally"></a>Teams アプリをローカルでデバッグする
+## <a name="debug-your-app-locally"></a>アプリをローカルでデバッグする
 
 次の手順は、Teams アプリをローカルでデバッグするのに役立ちます。
 

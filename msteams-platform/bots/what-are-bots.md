@@ -1,16 +1,16 @@
 ---
 title: Microsoft Teams のボット
 author: surbhigupta
-description: Microsoft Teams のボットの概要。
+description: このラーニング パスを使用して、Microsoft Teams の会話型ボットの使用を開始します。これはコード サンプルです。
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 81fa44730a26f3d7bcafdc9f37ec15b4eb7b1951
-ms.sourcegitcommit: aa95313cdab4fbf0a9f62a047ebbe6a5f1fbbf5d
+ms.openlocfilehash: 13f966d8c01cb6dcc9dc88fadaeb8ad0d348a2ff
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65602293"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143712"
 ---
 # <a name="bots-in-microsoft-teams"></a>Microsoft Teams のボット
 
@@ -39,7 +39,7 @@ ms.locfileid: "65602293"
 
 ボットは、会話インターフェイスを持つアプリです。 テキスト、対話型カード、音声を使用してボットと対話できます。 ボットの動作は、チャネルまたはグループ チャットの会話と 1 対 1 の会話で異なります。 会話は、Bot Framework コネクタを介して処理されます。 [会話の基本](~/bots/how-to/conversations/conversation-basics.md)を参照してください。
 
-ボットには、関連するコンテンツにアクセスし、ボットのエクスペリエンスを向上させるために、ユーザー プロファイルの詳細などのコンテキスト情報が必要です。「[Teams コンテキストを取得](~/bots/how-to/get-teams-context.md)」を参照してください。
+ボットには、関連するコンテンツにアクセスし、ボットのエクスペリエンスを向上させるために、ユーザー プロファイルの詳細などのコンテキスト情報が必要です。 [Teams コンテキストを取得](~/bots/how-to/get-teams-context.md)を参照してください。
 
 Graph API または Teams ボット API を使用して、ボットを介してファイルを送受信できます。 ボット[を介してファイルを送受信する方法](~/bots/how-to/bots-filesv4.md)を参照してください。
 

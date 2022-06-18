@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: 6df09a7398d26c4e0a69a2a9ac3f256b7086a9e0
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: d531b01a8de3663fed6806bc68386d9c4c894695
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668075"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142102"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Microsoft 365 間で Teams メッセージ拡張機能を拡張する
 
@@ -20,9 +20,9 @@ ms.locfileid: "65668075"
 
 > [!div class="checklist"]
 >
-> * アプリ マニフェストを更新する
-> * ボットの Outlook チャネルを追加する
-> * Teams でアプリをサイドロードする
+> * アプリ マニフェストを更新します。
+> * ボットの Outlook チャネルを追加します。
+> * 更新したアプリを Teams にサイドロードします。
 
 このガイドの残りの部分では、順を追ってこれらのステップを説明し、Outlook for Windows デスクトップと outlook.com の両方でメッセージ拡張機能をプレビューする方法を示します。
 
@@ -30,10 +30,10 @@ ms.locfileid: "65668075"
 
 このチュートリアルを完了するには、次のものが必要です。
 
-* Microsoft 365 開発者プログラム サンドボックス テナント
-* サンドボックス テナントの *Office 365 対象指定リリース* への登録
-* Microsoft 365 Apps *ベータ チャネル* からインストールされた Office アプリを含むテスト環境
-* (省略可能) Teams Toolkit 拡張機能を備えた Microsoft Visual Studio Code
+* Microsoft 365 開発者プログラム サンドボックス テナント。
+* サンドボックス テナントの *Office 365 対象指定リリース* への登録。
+* Microsoft 365 Apps *ベータ チャネル* からインストールされた Office アプリを含むテスト環境。
+* (省略可能) Teams Toolkit 拡張機能を備えた Microsoft Visual Studio Code。
 
 > [!div class="nextstepaction"]
 > [Microsoft 365 用に拡張された Teams アプリを発行する](publish.md)
@@ -90,7 +90,7 @@ Teams アプリ マニフェストを開き、`$schema` と `manifestVersion` �
 
 ---
 
-Teams Toolkit を使用してメッセージ拡張アプリを作成した場合は、それを使用してマニフェスト ファイルへの変更を検証し、エラーを特定できます。 コマンド パレット`Ctrl+Shift+P` を開き、**Teams: マニフェスト ファイルを検証します**。
+Teams Toolkit を使用してメッセージ拡張アプリを作成した場合は、それを使用してマニフェスト ファイルへの変更を検証し、エラーを特定できます。コマンド パレット `Ctrl+Shift+P` を開き、「**Teams: マニフェスト ファイルの検証**」を見つけます。
 
 ## <a name="add-an-outlook-channel-for-your-bot"></a>ボットの Outlook チャネルを追加する
 
@@ -115,7 +115,7 @@ Microsoft Teams では、メッセージ拡張機能は、ホストする Web �
 > [!NOTE]
 > このチュートリアルで提供される [サンプル アプリ](#quickstart) を使用している場合は、シナリオに Azure Active Directory (AAD) シングル サインオン認証が含まれていないため、この手順をスキップできます。
 
-メッセージ拡張機能の Azure Active Directory シングル サインオン (SSO) は、Outlook でも [Teams と同じように](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots)機能します。 ただし、テナントのアプリ登録ポータルでボットの Azure AD *アプリ登録* に複数のクライアント アプリケーション識別子を追加する必要があります。
+メッセージ拡張機能の Azure Active Directory (AD) シングル サインオン (SSO) は、Outlook でも [Teams と同じように](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots)機能します。しかし、テナントの *アプリ登録* ポータルで、ボットの Azure AD アプリ登録に複数のクライアント アプリケーション識別子を追加する必要があります。
 
 1. Azure 管理者アカウントを使用して、[Azure portal](https://portal.azure.com) にサインインします。
 1. **[アプリ登録]** を開きます。
@@ -167,7 +167,7 @@ Outlook on the web で実行されているアプリをプレビューするに�
 
     :::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="メール構成ウィンドウの下部にある [その他のアプリ] メニューをクリックして、メッセージ拡張機能を使用します":::
 
-メッセージ拡張機能が一覧表示されます。 そこからそれを呼び出し、Teams でメッセージを作成する場合と同じように使用できます。
+メッセージ拡張機能が一覧表示されます。そこから呼び出して、Teams でメッセージを作成する場合と同じように使用できます。
 
 ### <a name="outlook"></a>Outlook
 

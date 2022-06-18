@@ -1,17 +1,17 @@
 ---
 title: Teams Toolkit を使用して新しい Teams アプリを作成する
 author: zyxiaoyuer
-description: Teams Toolkit を使用して新しい Teams アプリを作成する
+description: このモジュールでは、Teams Toolkit を使用して新しい Teams アプリを作成し、ビュー サンプルを使用して新しい Teams アプリを作成する方法について説明します
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: d44f757141d31faaf4639a58fbbd31e5729e6f02
-ms.sourcegitcommit: 1e77573e47fad51a19545949fdac1241b13052e2
+ms.openlocfilehash: 4f85798c57c7816bed727e41adc69cf7dbc380d4
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65656153"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142221"
 ---
 # <a name="create-a-new-teams-app-using-teams-toolkit"></a>Teams Toolkit を使用して新しい Teams アプリを作成する
 
@@ -20,7 +20,7 @@ Teams Toolkit を使用して新しい Teams アプリを作成するには、�
 * [[新しい Teams アプリを作成]](create-new-project.md#create-a-new-teams-app)
 * [[サンプルを見る]](create-new-project.md#create-a-new-teams-app-using-view-samples)
 
-### <a name="create-a-new-teams-app"></a>新しい Teams アプリを作成する
+## <a name="create-a-new-teams-app"></a>新しい Teams アプリを作成する
 
 1. Visual Studio Code を開きます。
 1. Visual Studio Code のサイド バーで Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="true"::: アイコンを選択します。
@@ -29,17 +29,16 @@ Teams Toolkit を使用して新しい Teams アプリを作成するには、�
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar.png" alt-text="Teams ツールキットサイドバー":::
 
 1. **新しい Teams アプリを作成する** または **サンプルから開始** を選択できます。
-   
+
    :::image type="content" source="../assets/images/teams-toolkit-v2/select-create-app.png" alt-text="アプリを作成する":::
-   
-1. **新しい Teams アプリを作成する** を選択した場合、シナリオベースの Teams アプリ、Basic Teams アプリ、拡張 Teams アプリの 3 つのカテゴリのテンプレートが Microsoft 365 に表示されます。 
+
+1. **新しい Teams アプリを作成する** を選択した場合、シナリオベースの Teams アプリ、Basic Teams アプリ、拡張 Teams アプリの 3 つのカテゴリのテンプレートが Microsoft 365 に表示されます。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-capabilities.png" alt-text="Teams アプリのCapabilties":::
 
 1. 少なくとも 1 つのオプションを選択すると、Teams アプリの作成を開始できます。
 
-
-### <a name="create-a-new-teams-app-using-view-samples"></a>[サンプルを見る] を使用して、新しい Teams アプリを作成する
+## <a name="create-a-new-teams-app-using-view-samples"></a>[サンプルを見る] を使用して、新しい Teams アプリを作成する
 
 **[サンプルを見る]** を検索して既存のサンプルを選択すると、新しいアプリを作成することができます。 選択したサンプルには、Azure バックエンドを使用した To Do リストや、Microsoft Graph ツールキットとの統合など、一部の機能が既にある場合があります。
 
@@ -50,7 +49,7 @@ Teams Toolkit を使用して新しい Teams アプリを作成するには、�
     :::image type="content" source="../assets/images/teams-toolkit-v2/view-samples.png" alt-text="[サンプルを見る]":::
 
     次の図に示すように、サンプル ギャラリーが表示されます。
-   
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/sample-gallery.png" alt-text="サンプル ギャラリー":::
 
   サンプル ギャラリーは次のように調べることができます。

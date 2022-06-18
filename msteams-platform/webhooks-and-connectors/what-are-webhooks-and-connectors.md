@@ -1,16 +1,16 @@
 ---
 title: Webhook とコネクタ
 author: clearab
-description: Webhook とコネクタによって Web サービスがどのように Teams クライアントに接続されるかについて説明します。
+description: このモジュールでは、Webhook とコネクタによって Web サービスがどのように Teams クライアントに接続されるかについて説明します。
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 27b1647620291b278cc76491da13fe8687c4e314
-ms.sourcegitcommit: 9e448dcdfd78f4278e9600808228e8158d830ef7
+ms.openlocfilehash: 604f4bce563957afb477a58d47ef8235e4b5c30d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2022
-ms.locfileid: "62059673"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142179"
 ---
 # <a name="webhooks-and-connectors"></a>Webhook とコネクタ
 

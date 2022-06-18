@@ -1,15 +1,14 @@
 ---
 title: 外部 OAuth プロバイダーを使用する
-description: 外部 OAuth プロバイダーを使用した認証について説明します
+description: このモジュールでは、外部 OAuth プロバイダーを使用して認証を行う方法と、それを外部ブラウザーに追加する方法について説明します
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: 外部 OAuth プロバイダーを使用したチーム認証
-ms.openlocfilehash: dc47163b58bcf2ce39820b0ba9db4e6cb05774ef
-ms.sourcegitcommit: 35bdbda8f6bafa7eb49185dd71e0687917ceeebd
+ms.openlocfilehash: 8a7d89bbe3c6109e52a4d22f4bc26eace7acc5d1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64826965"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142277"
 ---
 # <a name="use-external-oauth-providers"></a>外部 OAuth プロバイダーを使用する
 

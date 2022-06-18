@@ -1,16 +1,15 @@
 ---
 title: プロアクティブ メッセージを送信する
-description: Microsoft Teams ボットでプロアクティブ メッセージを送信し、Microsoft Graph を使用してアプリをプロアクティブにインストールし、Bot Framework SDK v4 に基づいてコード サンプルを確認する方法について説明します。
+description: Teams ボットでプロアクティブ メッセージを送信し、Microsoft Graph を使用してアプリをインストールし、Bot Framework SDK v4 に基づいてコード サンプルを確認する方法について説明します
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
-Keywords: メッセージの送信、ユーザー ID の取得、チャネル ID の取得、会話 ID の取得
-ms.openlocfilehash: 7b1227dd69e8245b6ad318eb5e7425893075d878
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: cf163b8c74a74eeb83757e65fd79351176290fc9
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757578"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143509"
 ---
 # <a name="proactive-messages"></a>プロアクティブ メッセージ
 

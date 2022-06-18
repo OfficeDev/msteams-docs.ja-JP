@@ -2,16 +2,15 @@
 title: Microsoft Teams JavaScript クライアント SDK を使用してタブやその他のホストされたエクスペリエンスを構築する
 author: heath-hamilton
 ms.author: surbhigupta
-description: Teams、Office、Outlook の <iframe> でホストされたアプリ エクスペリエンスの構築に役立つ Microsoft Teams JavaScript クライアント SDK の概要。
+description: このモジュールでは、Microsoft Teams JavaScript クライアント SDK を学習します。これは、以下でホストされているアプリ エクスペリエンスの構築に役立ちます <iframe> でホストされたアプリ エクスペリエンスの構築に役立つ Microsoft Teams JavaScript クライアント SDK の概要。
 ms.localizationpriority: high
-keywords: Teams タブ グループ チャンネル 構成可能な静的 SDK JavaScript 個人用 M365
 ms.topic: conceptual
-ms.openlocfilehash: 3b607056e2e3e10ff6817acdea4425573f99c170
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 1909df76b3cc61f0d93e4efe40e02b99dc3de730
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66033044"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144216"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Microsoft Teams JavaScript クライアント SDK を使用してタブやその他のホストされたエクスペリエンスを構築する
 

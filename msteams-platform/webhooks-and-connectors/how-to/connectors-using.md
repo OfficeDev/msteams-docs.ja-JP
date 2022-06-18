@@ -1,16 +1,15 @@
 ---
 title: メッセージを作成して送信する
 author: laujan
-description: Microsoft Teams で Office 365 コネクタを使用する方法について説明します。
+description: このモジュールでは、Office 365 コネクタを使用し、Microsoft Teams で実行可能なメッセージを作成して送信する方法について説明します
 ms.topic: how-to
 ms.localizationpriority: high
-keywords: Teams Office365 コネクタ
-ms.openlocfilehash: a8c4c5cc9b0db3b1bb41477e413af7c864a493c4
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 86fe2237b5cf92c4fbc345f171cc8365baa0f348
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104078"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143264"
 ---
 # <a name="create-and-send-messages"></a>メッセージを作成して送信する
 
