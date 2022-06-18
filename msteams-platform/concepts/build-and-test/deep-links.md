@@ -1,14 +1,14 @@
 ---
 title: ディープ リンクの作成
-description: Teams ディープ リンクとアプリでの使用方法について説明します。
+description: ディープ リンクを作成する方法と、タブを使用して Microsoft Teams アプリ内でディープ リンクを使用して移動する方法について説明します。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: a1bd16f178508d62a2a38b6d8880a9315ee45ee3
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: bb0e9adf0541f428b46459598d41466d450bdca7
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756770"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123718"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成
 
@@ -245,7 +245,7 @@ TeamsJS の強い型付けされた API を使用することをお勧めしま�
 例: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 
 > [!NOTE]
-> 検索パラメーターは、空白 (` `) の代わりに `+` シグナルをサポートしていません。 URI エンコーディング コードがスペースに対して `%20` を返すことを確認します。たとえば、`?subject=test%20subject` は適切ですが、`?subject=test+subject` は不適切です。
+> 検索パラメーターは、空白 (``) の代わりに `+` シグナルをサポートしていません。 URI エンコーディング コードがスペースに対して `%20` を返すことを確認します。たとえば、`?subject=test%20subject` は適切ですが、`?subject=test+subject` は不適切です。
 
 クエリ パラメーターは次のとおりです。
 

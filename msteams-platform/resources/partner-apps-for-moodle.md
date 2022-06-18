@@ -1,15 +1,15 @@
 ---
 title: Moodle のパートナー アプリ
-description: パートナー アプリの概要
+description: Moodle のパートナー アプリ、Moodle、Saas オファリング、mConnect のパートナー アプリの主な利点について説明します。 Teams のユーザーに対して singe-sign-on SSO を有効にします。
 ms.topic: Partner apps
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: ecb3d7a8a36a67a6d18315d5af3180a65f1602f3
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: ee6840193d0b2ecaf1eab2a7e466bcd61382e06f
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757004"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123392"
 ---
 # <a name="partner-apps-for-moodle"></a>Moodle のパートナー アプリ
 
@@ -26,9 +26,9 @@ Microsoft Store は、Software as Service (SaaS) オファリングを検証す�
 
 ## <a name="mconnect"></a>mConnect
 
-mConnect アプリは、Moodle のコースとアクティビティを Teams に統合して、ユーザーの学習体験を向上させます。 
+mConnect アプリは、Moodle のコースとアクティビティを Teams に統合して、ユーザーの学習体験を向上させます。
 
-教育における信頼できる Microsoft ゴールド パートナーである Skooler は、mConnect アプリを開発し、必要なサポートを提供しています。 
+教育における信頼できる Microsoft ゴールド パートナーである Skooler は、mConnect アプリを開発し、必要なサポートを提供しています。
 
 mConnect を使用すると、Moodle 管理者は Moodle コースの Teams を自動的に設定し、Moodle の各コースですべての機能を利用できるようにすることができます。
 

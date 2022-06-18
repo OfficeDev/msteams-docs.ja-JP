@@ -1,16 +1,16 @@
 ---
 title: Microsoft Teams ストア検証ガイドライン
-description: Teams ストア (AppSource) に提出されるすべてのアプリが従う必要があるガイドラインについて説明します。
+description: この記事では、Teams ストア (AppSource) に送信されたすべてのアプリが従う必要があるガイドラインを示します。
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 7a35b58bb6612cce74b995cf2506e8a287f1b703
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: 316105d9ea6010094328ad7d204cfb765aecc022
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103973"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123844"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams ストア検証ガイドライン
 
@@ -23,6 +23,60 @@ ms.locfileid: "65103973"
 > * 特定のガイドラインは、*必須の修正* としてマークされます。 アプリの申請がこれらの必須のガイドラインを満たしていない場合は、Microsoft から改善のための手順を示すエラー レポートが送信されます。  アプリの申請は、問題を修正した場合にのみ Microsoft Teams ストアの検証に合格します。
 > * その他のガイドラインは、*修正の提案* としてマークされます。理想的なユーザー エクスペリエンスを得るためには、問題を修正することをお勧めします。ただし、問題を修正しない場合でも、アプリの申請が Teams ストアでの公開をブロックされることはありません。
 
+:::row:::
+   :::column:::
+      :::image type="content" source="../../../../assets/icons/value-proposition.png" alt-text="value-proposition-teams" link="#value-proposition" border="false":::
+   :::column-end:::
+   :::column span="":::
+     :::image type="content" source="../../../../assets/icons/security.png" alt-text="security-store" link="#security" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/function.png" alt-text="機能" link="#general-functionality-and-performance" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/package.png" alt-text="app-package" link="#app-package-and-store-listing" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/saas-offer.PNG" alt-text="SaaS" link="#apps-linked-to-saas-offer" border="false":::
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/tab.png" alt-text="tab-teams" link="#tabs" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="content" source="../../../../assets/icons/bot.png" alt-text="bot-teams" link="#bots-1" border="false":::
+   :::column-end:::
+   :::column span="":::
+     :::image type="content" source="../../../../assets/icons/messaging-extension.png" alt-text="メッセージング" link="#message-extensions" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/task-module.png" alt-text="task-module-teams" link="#task-modules" border="false":::
+   :::column-end:::
+     :::column span="":::
+      :::image type="content" source="../../../../assets/icons/meeting.png" alt-text="meeting-extension" link="#meeting-extensions" border="false":::
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/empty.png" alt-text="empty-2" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/notifications.png" alt-text="teams-notification" link="#notifications" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/microsoft-365.png" alt-text="microsoft" link="#microsoft-365-app-compliance-program" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/advertising.png" alt-text="advertising-teams" link="#advertising" border="false":::
+   :::column-end:::
+   :::column span="":::
+      :::image type="content" source="../../../../assets/icons/empty.png" alt-text="empty-1" border="false":::
+   :::column-end:::
+:::row-end:::
+
 ## <a name="value-proposition"></a>価値提案
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用認定ポリシー番号 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) に沿ったものであり、そのオファーの価値提案に関して、Microsoft Teams アプリの開発者に追加のガイダンスを提供します。
@@ -32,6 +86,8 @@ ms.locfileid: "65103973"
 [*必須の修正*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、Microsoft [商用認定ポリシー番号 1140.1.1](/legal/marketplace/certification-policies#114011-app-name) に沿ったものであり、それらのアプリの名前の指定に関して、開発者に追加のガイダンスを提供します。
+<br></br>
+<details><summary>詳細を知るために展開する</summary>
 
 アプリの名前は、ユーザーがストアでアプリを見つける際に重要な役割を果たします。 次のガイドラインを使用してアプリの名前を指定します。
 
@@ -39,7 +95,7 @@ ms.locfileid: "65103973"
 * 次のような Teams のコア機能の名前は、アプリ名に含めてはいけません。  
   * **チャット**
   * **連絡先**
-  * **カレンダー**
+  * **Calendar**
   * **通話**
   * **ファイル**
   * **アクティビティ**
@@ -57,15 +113,21 @@ ms.locfileid: "65103973"
  > [!TIP]  
  > Microsoft Teams ストアおよび Microsoft AppSource上に公開するアプリのブランド要素 (アプリ名、開発者名、アプリ アイコン、Microsoft AppSource スクリーンショット、ビデオ、短い説明、Web サイトなど) は、Microsoft の公式の提供物として表示してはいけません。ただし、アプリが公式の Microsoft 1P ライセンスを取得済みである場合はその限りではありません。
 
+</details>
+
 ### <a name="suitable-for-workplace-consumption"></a>職場での消費に適していること
 
 [*必須の修正*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、Microsoft 商用認定ポリシー番号 [1140.1.2](/legal/marketplace/certification-policies#114012-workplace-appropriateness)、[100.8](/legal/marketplace/certification-policies#1008-significant-value)、[100.10](/legal/marketplace/certification-policies#10010-inappropriate-content) に沿ったものであり、開発者に職場に適したアプリを構築するための追加のガイダンスを提供します。
+<br></br>
+<details><summary>詳細を知るために展開する</summary>
 
 アプリ コンテンツは、職場での一般的な消費に適したものであり、コマーシャル マーケットプレースの認証ポリシーに一覧表示されたすべての制限事項に従う必要があります。 宗教、政治、ギャンブル、長時間の娯楽などに関するコンテンツは禁止されています。
 
 アプリは、グループのコラボレーションを可能にするもの、個人の生産性を向上させるもの、またはその両方である必要があります。 チームの結束や交流を目的としたアプリでは、コラボレーションが促進され、複数の参加者が利用できるように設計されている必要があります。 アプリは、1 回のセッションに 60 分を超える時間を必要としたり、生産性に影響を与えるものであってはいけません。
+
+</details>
 
 ### <a name="similar-platforms-and-services"></a>類似したプラットフォームやサービス
 
@@ -86,6 +148,8 @@ ms.locfileid: "65103973"
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用認定ポリシー番号 1140.1.4](/legal/marketplace/certification-policies#114014-access-to-services) に沿ったものであり、外部サービスを使用したそれらのアプリの認証に関して、開発者にガイダンスを提供します。
 
 アプリ認証を実装する方法の詳細については、「[Teams での認証](~/concepts/authentication/authentication.md)」を参照してください。
+<br></br>
+<details><summary>詳細を知るために展開する</summary>
 
 #### <a name="authenticating-with-external-services"></a>外部サービスを使用した認証
 
@@ -101,8 +165,9 @@ ms.locfileid: "65103973"
   
 * **コンテンツ共有エクスペリエンス**: Teams チャネルでコンテンツを共有するために外部サービスを使用した認証を必要とするアプリは、外部サービスでその機能がサポートされている場合、コンテンツを切断または共有解除する方法をヘルプ ドキュメント (または同様のリソース) で明示する必要があります。これは、コンテンツの共有を解除する機能が、Teams アプリに存在する必要があるということではありません。
 
-## <a name="security"></a>セキュリティ
+</details>
 
+## <a name="security"></a>セキュリティ
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用認定ポリシー番号 1140.3](/legal/marketplace/certification-policies#11403-security) と一致します。
 
@@ -111,18 +176,12 @@ ms.locfileid: "65103973"
 [*必須の修正*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは [Microsoft 商用認定ポリシー番号 1140.3.1](/legal/marketplace/certification-policies#114031-financial-transactions) に沿ったもので、Teams インターフェイス内の財務情報の送信に関するガイダンスを提供し、Teams アプリのモバイル (Android および iOS) バージョンでの制限付き支払いのシナリオを開発者に対して示します。
+<br></br>
+<details><summary>詳細を知るために展開する</summary>
 
-アプリは、ユーザーに対して、Teams インターフェイス内で支払いを求めたり、ボットを介してユーザーに財務情報を送信してはいけません。  
+アプリは、ユーザーに対して、Teams インターフェイス内で支払いを求めたり、ボットを介してユーザーに財務情報を送信してはいけません。
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![[アプリ内決済]](~/assets/images/submission/validation-financial-information-1.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-financial-information-1.png" alt-text="validation-financial-info":::
 
 ユーザーがアプリの使用に同意する前に、使用条件、プライバシー ポリシー、プロファイル ページ、Web サイトなどで開示を行った場合に限り、安全な外部決済サービスにリンクすることができます。
 
@@ -132,55 +191,39 @@ iOS 版または Android 版 Teams で実行するアプリは、以下のガイ
 
 * アプリは、アプリ内購入、試用版の提供、有料版へのアップセルを目的とする UI、またはユーザーが他のコンテンツ、アプリ、アドインを購入するオンライン ストアを含めてはいけません。
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![アプリ内購入](~/assets/images/submission/validation-financial-information-in-app-purchase.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-financial-information-in-app-purchase.png" alt-text="validation-financial-info-in-app-purchase":::
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![オンライン ストア](~/assets/images/submission/validation-financial-information-online-stores.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-financial-information-online-stores.png" alt-text="validation-online-store":::
 
 * アプリでアカウントが必要な場合、ユーザーは無料でアカウントにサインアップできます。 **無料版** または **無料アカウント** という用語の使用は禁止されています。
 * アカウントを無期限にアクティブにするか、期間限定にするかを決めることができます。 アカウントの有効期限が切れたとき、アプリ内に、支払いを求めるUI、テキスト、またはリンクを表示してはいけません。
 * アプリのプライバシー ポリシーと使用条件には、商取引に関係した UIやリンクが含まれていてはいけません。
+
+</details>
 
 ### <a name="bots"></a>ボット
 
 [*必須の修正*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.3.2](/legal/marketplace/certification-policies#114032-bots-and-messaging-extension) に沿ったものです。
+<br></br>
+<details><summary>詳細を知るために展開する</summary>
 
 Microsoft Azure Bot Service を使用するアプリ (ボットやメッセージ拡張機能など) の場合、Microsoft [オンライン サービスの使用条件](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46)で定義されているすべての要件に従う必要があります。
 
 ボットを介してファイルをアップロードする場合は、必ずボットからユーザーに許可を求め、確認メッセージを表示しなければなりません。
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![確認メッセージ](~/assets/images/submission/validation-bot-confirmation-message.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-bot-confirmation-message.png" alt-text="validation-bot-confirmation":::
+
+</details>
 
 ### <a name="external-domains"></a>外部ドメイン
 
 [*必須の修正*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー番号 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains) に沿ったもので、`validDomains` マニフェスト プロパティでの制限付きドメインの使用に関する開発者向けのガイダンスを提供します。
+<br></br>
+<details><summary>詳細を知るために展開する</summary>
 
 組織の制御外のドメイン (ワイルドカードなど) やトンネリング サービスをアプリのドメイン構成に含めてはいけません。以下の例外があります。
 
@@ -190,6 +233,8 @@ Microsoft Azure Bot Service を使用するアプリ (ボットやメッセー�
 #### <a name="government-community-cloud-listings"></a>Government Community Cloud の一覧表示
 
 Government Community Cloud (GCC) ユーザーにアプリを配布するには、Teams ストアに重複して表示しないようにする一方で、認証プロセスでユーザーを特定し、GCC 固有の URL または予想される URL にルーティングする必要があります。
+
+</details>
 
 ### <a name="sensitive-content"></a>機密コンテンツ
 
@@ -208,10 +253,14 @@ Government Community Cloud (GCC) ユーザーにアプリを配布するには�
 [*必須の修正*]
 
 アプリの主要なユーザー シナリオにおいて、ユーザーがTeams から離れることがあってはなりません。  アプリ内のコンテンツの表示やユーザーとのやり取りは、ボット、アダプティブ カード、タブ、タスク モジュールなど、Teams の機能の範囲内で実行される必要があります。
+<br></br>
+<details><summary>詳細を知るために展開する</summary>
 
 ユーザーがTeams の範囲内に留まり、外部のサイトやアプリにリンクを介して移動しないようにします。 外部の機能を利用する必要があるシナリオの場合は、その機能の利用を開始する許可をユーザーから明示的に得る必要があります。
 
 外部の機能を開始するボタンの名前は、その操作によりユーザーが Teams から離れることが明確にわかるようなものである必要があります。 たとえば、「**Contoso.com への移動はこちら**」や「**Contoso.com で表示**」といった例が考えられます。
+
+</details>
 
 ### <a name="compatibility"></a>互換性
 
@@ -268,7 +317,11 @@ Teams アプリ マニフェストは、アプリの構成を定義します。
 
 [*必須の修正*]
 
-アイコンは、ユーザーが Teams ストアを閲覧する際に目にする主要な要素の 1 つです。 アイコンは、アプリのブランドや目的を伝えるとともに、以下の要件を満たす必要があります。
+アイコンは、ユーザーが Teams ストアを閲覧する際に目にする主要な要素の 1 つです。 
+<br></br>
+<details><summary>詳細を知るために展開する</summary>
+
+アイコンは、アプリのブランドや目的を伝えるとともに、以下の要件を満たす必要があります。
 
 * アプリ パッケージには、カラー アイコンおよびアウトライン アイコンという、2 つのアプリ アイコンの PNG ファイルを含める必要があります。
 * カラー アイコンの解像度は 192x192 ピクセルである必要があります。  アイコン記号の配色は自由ですが、無地または完全に透明な正方形の背景に配置する必要があります。
@@ -282,9 +335,13 @@ Teams アプリ マニフェストは、アプリの構成を定義します。
 
 詳細については、「[アイコンのガイドライン](~/concepts/build-and-test/apps-package.md#app-icons)」を参照してください。
 
+</details>
+
 ### <a name="app-descriptions"></a>アプリの説明
 
 アプリの簡潔な説明と詳しい説明が備わっている必要があります。 アプリ構成とパートナー センターでの説明が同じである必要があります。
+<br></br>
+<details><summary>詳細を知るために展開する</summary>
 
 アプリについての説明は、直接的にも間接的にも、他のブランド (Microsoft が所有するブランドか否かにかかわらず) を傷つけるものであってはいけません。  説明に根拠のない主張が含まれていないことを確認してください。 たとえば、「**効率が 200% 向上することを保証します**」という記述は不適切です。
 
@@ -307,7 +364,7 @@ Teams アプリ マニフェストは、アプリの構成を定義します。
 
 #### <a name="long-description"></a>詳しい説明
 
-詳しい説明では、アプリの価値提案、主要な対象ユーザー、対象の業界を強調する魅力的なストーリーを提供できます。 詳しい説明には 最大 4,000 文字まで記述できますが、ほとんどのユーザーには 300 ～ 500 文字程度までしか読まれません。
+詳しい説明では、アプリの価値提案、主要な対象ユーザー、対象の業界を強調する魅力的なストーリーを提供できます。 この説明は 4,000 文字にもなりますが、ほとんどのユーザーは 300 から 500 文字程度しか読みません。
 
 **すべきこと**:
 
@@ -346,11 +403,17 @@ Teams アプリ マニフェストは、アプリの構成を定義します。
 * 検証されていない主張を事実として記述する。 たとえば、「ベストです」、「トップです」、「〇〇にランク付けされています」といった表現を使用する (ただし、根拠ある事実である場合は、その限りではない)。
 * マーケットプレース上の他のオファーと比較する。
 
+</details>
+
 ### <a name="screenshots"></a>スクリーンショット
 
-スクリーンショットは、アプリ名、アイコン、説明を補完するために、アプリの視覚的なプレビューを提供します。次のことに注意してください。
+スクリーンショットは、アプリ名、アイコン、説明を補完するために、アプリの視覚的なプレビューを提供します。
+<br></br>
+<details><summary>詳細を知るために展開する</summary>
 
-* スクリーンショットは、1 件あたり 5 枚まで設定できます。
+次のことを覚えておいてください。
+
+* スクリーンショットは、1 つの一覧につき 5 枚まで設定できます。
 * サポートされているファイルの種類は、PNG、JPEG、GIF です。
 * 解像度は 1366x768 ピクセルである必要があります。
 * 最大サイズは 1,024KB です。
@@ -373,6 +436,8 @@ Teams アプリ マニフェストは、アプリの構成を定義します。
 
 > [!TIP]  
 > アプリを使用する理由を伝えるには、ビデオが最も効果的です。 ビデオは、ユーザーがリストで最初に見るものでもあります。 詳細については、「[ストアのリスト広告向けビデオを作成する](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#create-a-video)」を参照してください。
+
+</details>
 
 ### <a name="privacy-policy"></a>プライバシー ポリシー
 
@@ -401,11 +466,17 @@ Teams アプリに特化した特定のポリシーも、すべてのサービ�
 
 ### <a name="support-links"></a>サポート リンク
 
+[*必須の修正*]
+
 アプリのサポート URL は、認証が必要なものであってはいけません。 たとえば、ユーザーが問い合わせるためにログインするものであってはいけません。
+<br></br>
+<details><summary>詳細を知るために展開する</summary>
 
-サポート URL には、連絡先の詳細や、ユーザーがサポート チケットを発行するための方法を含める必要があります。 たとえば、サポート URL が GitHub でホストされている場合、GitHub ページは所有権下になければならず、ユーザーがサポート チケットを発行するには、連絡先の詳細や転送方法を含める必要があります。 [*必須の修正*]
+サポート URL には、連絡先の詳細や、ユーザーがサポート チケットを発行するための方法を含める必要があります。 たとえば、サポート URL が GitHub でホストされている場合、GitHub ページは所有権下になければならず、ユーザーがサポート チケットを発行するには、連絡先の詳細や転送方法を含める必要があります。
 
-  ![サポート URL](~/assets/images/submission/validation-supportlinks-authentication.png)  
+:::image type="content" source="../../../../assets/images/submission/validation-supportlinks-authentication.png" alt-text="validation-support-links-auth":::
+
+</details>
 
 ### <a name="localization"></a>ローカリゼーション
 
@@ -415,14 +486,20 @@ Teams アプリに特化した特定のポリシーも、すべてのサービ�
 
 ## <a name="apps-linked-to-saas-offer"></a>SaaS オファーに関連付けられたアプリ
 
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.5](/legal/marketplace/certification-policies?branch=pr-en-us-5673) に沿ったものです。 SaaS オファーにリンクされた Teams アプリを構築する場合は、これらのガイドラインに準拠していることを確認してください。
+<br></br>
+<details><summary>全般</summary>
+
 * ISV は、同じテナント内の複数のユーザー (サブスクライバー) が自身のサブスクリプションを管理し、テナント内のユーザーにライセンスを割り当てる機能をサポートする必要があります。
-*
- このプランは、SaaS プランに関連付けられた [Teams アプリの技術的要件](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer)をすべて満たす必要があります。
+* このプランは、SaaS プランに関連付けられた [Teams アプリの技術的要件](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer)をすべて満たす必要があります。
 * SaaS プランに関連付けられた Teams アプリは、[サービスとしての 1000 個のソフトウェア (SaaS)](/legal/marketplace/certification-policies#1000-software-as-a-service-saas)で定義されたすべての要件を満たす必要があります。
 * マニフェスト ファイル中の `subscriptionOffer` 要素で定義された詳細が正しくなければなりません。 アプリ マニフェストで、値 `publisherId.offerId` を使用してノード `subscriptionOffer` を追加または更新します。 たとえば、発行元 ID が `contoso1234` で、オファー ID が `offer01` である場合、アプリ マニフェストで指定する値は `contoso1234.offer01` である必要があります。
 * Teams アプリに関連付けられた SaaS プランは AppSource に存在する必要があり、プレビュー プランはストア承認には承諾されません。
 
-### <a name="offer-metadata"></a>オファーのメタデータ
+</details>
+
+</br>
+<details><summary>オファーのメタデータ</summary>
 
 * オファーのメタデータは、Teams のマニフェスト、AppSource における Teams アプリ登録の内容、および AppSource における SaaS オファーと一致していなければなりません。
 * Teams アプリと SaaS プランは、同じ発行元または開発者によるものでなければなりません。 アプリ マニフェストで参照される SaaS プランは、Teams アプリがコマーシャル マーケットプレースに申請される場合と同じ発行元に属している必要があります。
@@ -432,7 +509,10 @@ Teams アプリに特化した特定のポリシーも、すべてのサービ�
 * SaaS プランにリンクされた Teams アプリは、ユーザーごとに割り当てられたライセンスをサポートするように設計されています。 状況によっては、SaaSオファーが他の方法で構築される場合や、専用の購入フローが用意されている場合もあります。 それぞれの方法や購入フローに関しては、アプリのメタデータおよびサブスクリプション プランの詳細の中で、明確に説明されている必要があります。
 * SaaS オファーでは、購入フローのすべての該当する状態にあるすべてのユーザーに向けて、メッセージとガイダンスが提供される必要があります。
 
-### <a name="saas-offer-home-page-and-license-management"></a>SaaS プランのホーム ページとライセンス管理  
+</details>
+</br>
+
+<details><summary>SaaS プランのホーム ページとライセンス管理</summary>
 
 * サブスクライバーに製品の使用方法を紹介します。
 * サブスクライバーへのライセンスの割り当てを許可します。
@@ -441,19 +521,27 @@ Teams アプリに特化した特定のポリシーも、すべてのサービ�
 * ライセンスの割り当て後にユーザーに通知します。
 * アプリを Teams に追加して使い始める方法を、Teams チャット ボットやメール経由でユーザーに案内します。
 
-### <a name="usability-and-functionality"></a>ユーザビリティと機能の内容  
+</details>
+</br>
+
+<details><summary>ユーザビリティと機能の内容</summary>
 
 * ライセンスの購入と割り当てが正常に行われたら、次の情報が提供される必要があります。
 * ユーザーがサブスクライブしたプランの機能にアクセスする方法
 * ユーザーに対して提供される、サブスクリプション プランの付加価値と主要なメリット
 * Teams アプリから、SaaS アプリケーションのホーム ページへのリンクを提供し、サブスクライバーが将来にわたってライセンスを管理できるようにします。
 
-### <a name="configure-and-test-saas-application"></a>SaaS アプリケーションの構成とテスト
+</details>
+</br>
+
+<details><summary>SaaS アプリケーションの構成とテスト</summary>
 
 テスト目的でのアプリのセットアップが複雑な場合は、エンドツーエンドの機能ドキュメント、関連付けられた SaaS の構成手順、ライセンスとユーザー管理の手順を「構成用メモ」の一部として提供します。
 
 > [!TIP]  
 > アプリやライセンス管理の仕組みを説明したビデオを追加して、チームのテストをサポートすることができます。
+
+</details>
 
 ## <a name="tabs"></a>タブ
 
@@ -462,137 +550,56 @@ Teams アプリに特化した特定のポリシーも、すべてのサービ�
 > [!TIP]
 > 高品質なアプリ エクスペリエンスを作成するための詳細については、「[Teams タブ デザインのガイドライン](~/tabs/design/tabs.md)」を参照してください。
 
-### <a name="setup"></a>セットアップ
+</br>
+<details><summary>セットアップ</summary>
 
 * タブのセットアップでは、新規ユーザーを **待たせてはいけません**。 アクションやワークフローを完了するためのメッセージを提供します。 [*必須の修正*]
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![新規アカウントを作成](~/assets/images/submission/validation-tabs-setup-create-new-account.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-create-new-account.png" alt-text="validation-tabs-setup-create-new-acc":::
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![フォワード ガイダンスが見つからない](~/assets/images/submission/validation-tabs-missing-forward-guidance.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-tabs-missing-forward-guidance.png" alt-text="validation-tabs-missing-fwd-guidance":::
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![新規ユーザー登録](~/assets/images/submission/validation-tabs-setup-new-user.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-new-user.png" alt-text="validation-tabs-set-up-new-user":::
 
 * 最初の実行エクスペリエンスを最適なものにするには、タブの設定後ではなくセットアップ中に、ユーザーの認証を行う必要があります。 認証は、タブ構成ウィンドウの外側で行うことができます。 [*修正の提案*]
 
 * ユーザーは、Teams 内のタブ構成機能を離れて Teams の外でコンテンツを作成してから、Teams に戻ってピン留めしてはいけません。 タブ構成画面の範囲内で、構成の値と方法が説明される必要があります。 [*必須の修正*]
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![プロファイル名の取得](~/assets/images/submission/validation-tabs-setup-profile-name.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-profile-name.png" alt-text="validation-tabs-set-up-profile-name":::
 
 * Web サイトの全体が埋め込まれたようなタブ構成画面は禁止です。 タブ構成のエクスペリエンスは、十分に焦点が絞られたものでなければなりません。たとえば、ユーザーがプロジェクトをチャネル内で構成できる「プロジェクト管理アプリ」の場合、タブ構成画面では、ユーザーがアプリからプロジェクトを選択し、そのプロジェクトをチャネル内で構成していくプロセスに焦点が絞られなければなりません。[*必須の修正*]
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![構成機能](~/assets/images/submission/validation-tabs-setup-configuration-experience.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configuration-experience.png" alt-text="validation-tabs-setup-configuration-exp":::
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![構成画面](~/assets/images/submission/validation-tabs-setup-configuration-screen.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configuration-screen.png" alt-text="validation-tabs-set-up-configuration-screen":::
 
 * タブ構成画面では、ユーザーに URL の埋め込みを依頼してはいけません。 タブ構成のタイミングで、タブ構成画面からいったん離れてURL を取得し、もう一度戻って URL を入力することをユーザーに求める UX は、好ましいものではありません。 Teamsには、チャネル内に Web サイトへのリンクをピン留めする同様の機能がすでに存在しています。 したがって、タブ構成のタイミングでユーザーに Web サイトの URL を埋め込むよう求め、チャネル タブには Web サイトの全体が表示されるだけという限定的な使用方法が採用されている場合、アプリはユーザーに十分な価値を提供しているとは言えません。 [*必須の修正*]
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![構成済み URL](~/assets/images/submission/validation-tabs-setup-configured-url.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configured-url.png" alt-text="validation-tabs-set-up-configured-url":::
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![制限のある構成済み URL](~/assets/images/submission/validation-tabs-setup-configured-url-two.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configured-url-two.png" alt-text="validation-tabs-set-up-configured-url-two":::
 
-### <a name="views"></a>ビュー
+</details>
+</br>
+
+<details><summary>ビュー</summary>
 
 * サインイン画面領域では、大きなロゴを使用してはいけません。[*必須の修正*]
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![大きなロゴを表示する](~\assets\images\submission\validation-views-applogin.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-views-applogin.png" alt-text="validation-views-app-login":::
 
-* 複数のタブに分割して表示することで、コンテンツはシンプルになります。[*修正の提案*]
+* 複数のタブに分割して表示することで、コンテンツはシンプルになります。 [*修正の提案*]
 
-:::row:::
-   :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![複数のタブ](~/assets/images/submission/validation-views-multiple-tabs.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-views-multiple-tabs.png" alt-text="val-views-multiple-tabs":::
 
 * タブのヘッダーに重複がないようにしてください。タブのフレームワークにはアプリ アイコンとアプリ名が表示されるため、IFRAME​​ から重複するロゴを削除する必要があります。[*修正の提案*]
 
- :::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![重複するヘッダー ロゴ](~/assets/images/submission/validation-views-duplicate-header-logo.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+    :::image type="content" source="../../../../assets/images/submission/validation-views-duplicate-header-logo.png" alt-text="validation-views-duplicate-head-logo":::
 
-### <a name="navigation"></a>ナビゲーション
+</details>
+</br>
+
+<details><summary>ナビゲーション</summary>
 
 ナビゲーションに関するガイドラインは次のとおりです。
 
@@ -600,67 +607,19 @@ Teams アプリに特化した特定のポリシーも、すべてのサービ�
 
 Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-basic-ui-components.md) と [Advanced](~\concepts\design\design-teams-app-advanced-ui-components.md) を使用してアプリをデザインしてください。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![左ナビゲーション](~/assets/images/submission/validation-navigation-left-navigation.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-static-tab.png" alt-text="validation-nav-static-tab":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![アイコンとテキスト](~/assets/images/submission/validation-navigation-icon-text.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-horizontal-rail.png" alt-text="validation-nav-horizontal-rail":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![折りたたみ可能な左レール](~/assets/images/submission/validation-navigation-collapsable-left-rail.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-left-navigation.png" alt-text="validation-navigation-left-nav":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![静的タブ](~/assets/images/submission/validation-navigation-static-tab.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-icon-text.png" alt-text="validation-nav-icon-text":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![水平レール](~/assets/images/submission/validation-navigation-horizontal-rail.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-collapsable-left-rail.png" alt-text="validation-nav-collapsable-left-rail":::
 
-* 左レールにツールバーがあるタブは、Teams の左ナビゲーションから 20px の間隔を空ける必要があります。[*必須の修正*]
+* 左レールにツールバーがあるタブは、Teams の左ナビゲーションから 20px の間隔を空ける必要があります。 [*必須の修正プログラム*]
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![ツールバー間の間隔](~/assets/images/submission/validation-navigation-spacing-between-toolbar.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+    :::image type="content" source="../../../../assets/images/submission/validation-navigation-spacing-between-toolbar.png" alt-text="validation-nav-spacing-between-toolbar":::
 
 * パンくずや左ナビゲーションを辿ることにより、メインのタブ領域のレベル 2 (L2)、レベル 3 (L3) のビューに、第2、第3のタブが表示される必要があります。また、タブ ナビゲーションをサポートするために、以下のコンポーネントを含めることができます: [*必須の修正*]
   * 戻るボタン
@@ -670,83 +629,30 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
 
 * タブ内のディープ リンクは、外部の Web ページではなく、Teams 内の機能 (タスク モジュール、他のタブなど) にリンクされている必要があります。[*必須の修正*]
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![[表示] ボタンにリンクしていない](~/assets/images/submission/validation-navigation-view-button-not-linked-static-tab.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-navigation-view-button-not-linked-static-tab.png" alt-text="validation-nav-view-button-not-linked-static-tab":::
 
 * アプリのコア エクスペリエンスに対しては、タブから Teams 外部に移動することが可能であってはいけません。 一方、コア エクスペリエンス以外のワークフローに対しては、タブから Teams の外部にリダイレクトさせることができます。 たとえば、サポート チケットを発生する場合などです。 [*必須の修正*]
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![[構成] タブ内のコア ワークフロー](~/assets/images/submission/validation-navigation-core-workflow-within-configuration.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-navigation-core-workflow-within-configuration.png" alt-text="validation-nav-core-workflow-within-configuration":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![アプリ コア ワークフローで外部にリダイレクト](~/assets/images/submission/validation-navigation-core-workflow-redirects-outside.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-navigation-core-workflow-redirects-outside.png" alt-text="validation-nav-core-workflow-redirects-outside":::
 
-### <a name="usability"></a>ユーザビリティ
+</details>
+</br>
+
+<details><summary>ユーザビリティ</summary>
 
 * タブは、既存の Web サイトをホストする以上の価値を提供するものである必要があります。 [*必須の修正*]
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![ワークフローを指定するユーザービリティ アプリ](~/assets/images/submission/validation-usability-app-provides-workflows.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-app-provides-workflows.png" alt-text="validation-usability-app-provides-work-flow":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![使いやすい Web サイト I-Frame](~/assets/images/submission/validation-usability-website-i-framed.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-website-i-framed.png" alt-text="validation-usability-website-i-frame":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![使いやすい Teams アプリの同一性](~/assets/images/submission/validation-usability-teams-app-identical-website.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-teams-app-identical-website.png" alt-text="validation-usability-teams-app-identical-websites":::
 
 * タブ内でコンテンツを切り捨てたり、オーバーラップしたりしてはいけません。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![使いやすいコンテンツの切り捨て](~/assets/images/submission/validation-usability-content-truncation.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-content-truncation.png" alt-text="validation-usability-content-truncations":::
 
 * ユーザーがタブで最後に行った操作を取り消すことができるようにする必要があります。
 
@@ -754,37 +660,13 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
 
 * タブは Teams テーマに対応するものである必要があります。 ユーザーがテーマを変更すると、アプリのテーマにもその選択が反映される必要があります。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![使いやすさ 応答性の高いタブ](~/assets/images/submission/validation-usability-responsive-tabs.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-responsive-tabs.png" alt-text="validation-usability-responsive-tab":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![使いやすさ 応答しないタブ](~/assets/images/submission/validation-usability-unresponsive-tabs.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-unresponsive-tabs.png" alt-text="validation-usability-unresponsive-tab":::
 
 * タブには、Teams フォント、入力ランプ、カラー パレット、グリッド システム、モーション、声のトーンなど、Teams スタイルのコンポーネントを可能な限り使用する必要があります。詳細については、「[タブ デザイン ガイドライン](/microsoftteams/platform/tabs/design/tabs)」を参照してください。[*修正の提案*]
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![使いやすさ 異なるフォント](~/assets/images/submission/validation-usability-app-uses-diff-font.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-app-uses-diff-font.png" alt-text="validation-usability-app-uses-font":::
 
 * 設定を変更する必要があるアプリの機能が存在する場合は、**[設定]** タブを用意します。[*おすすめの修正プログラム*]
 * タブは、ページ内ナビゲーション、ダイアログの配置や使用方法、情報階層など、Teams の対話型デザインに沿ったものである必要があります。詳細については、「[Microsoft Teams Fluent UI キット](~/concepts/design/design-teams-app-basic-ui-components.md)」を参照してください。
@@ -797,27 +679,11 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
 
 * 作業効率や職場の生産性向上のために、アプリ内で個人スコープのビューを提供するには、個人向けアプリへのディープ リンクを使用して表示を絞り込むか、または構成可能タブ内の L2 ないしは L3 のビューに移動します。その際、ランディング ページはコンテキストごとに、すべてのユーザーに対して同じ状態に保ちます。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![使いやすさ 構成可能なタブ 個人情報](~/assets/images/submission/validation-usability-configurable-tab-personal-info.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-configurable-tab-personal-info.png" alt-text="validation-usability-configurable-tab-pers-info":::
 
 * 構成可能タブの機能は、十分に絞り込まれたものでなければなりません。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![使いやすさ 構成可能な入れ子のタブ](~/assets/images/submission/validation-usability-configurable-nested-tabs.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-usability-configurable-nested-tabs.png" alt-text="validation-usability-configurable-nested-tab":::
 
 * タブ エクスペリエンスは、モバイル (Android と iOS) で完全にレスポンシブでなければなりません。
 
@@ -825,6 +691,8 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
 >
 > * 個人用タブと一緒に個人用ボットを設定します。
 > * ユーザーが自分の個人用タブからコンテンツを共有できるようにします。
+
+</details>
 
 ## <a name="bots"></a>ボット
 
@@ -835,133 +703,62 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
 > [!TIP]
 > 高品質なアプリ エクスペリエンスを作成するための詳細については、「[Teams ボット デザインのガイドライン](~/bots/design/bots.md)」を参照してください。
 
-### <a name="bot-commands"></a>ボット コマンド
+</br>
+<details><summary>ボット コマンド</summary>
 
 ユーザーによる入力の分析からその意図を推定することは容易ではありません。 そのため、ボット コマンドでは、ボットが理解できる単語や語句の集合があらかじめユーザーに提供されます。
 
 * サポートされているボット コマンドをアプリ構成に一覧表示することを強く推奨します。 これらのコマンドは、ユーザーがボットにメッセージを送信しようとする際に、作成ボックスに表示されます。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![一覧表示されたボット コマンド](~/assets/images/submission/validation-bot-commands-listed.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
-  
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![リストにないボット コマンド](~/assets/images/submission/validation-bot-commands-not-listed.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-listed.png" alt-text="validation-bot-commands-list":::
+
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-not-listed.png" alt-text="validation-bot-commands-not-list":::
 
 * **Hi**、**Hello**、**Help** などの汎用的なコマンドを含め、ボットがサポートするすべてのコマンドが正しく動作する必要があります。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![ボット ヘルプ コマンド](~/assets/images/submission/validation-bot-help-command.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-help-command.png" alt-text="validation-bots-help-command":::
 
 * ボット コマンドは、ユーザーのワークフローを妨げるものではなく、常に前に進める方法を提供するものでなければいけません。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-       ![ボット コマンドの行き詰まり](~/assets/images/submission/validation-bot-commands-deadend.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-deadend.png" alt-text="validation-bot-commands-dead-end":::
 
 > [!TIP]
 > 個人用ボットの場合は、**[ヘルプ]** タブを設けて、ボットにより可能となる機能について詳しく説明します。
 
-### <a name="bot-welcome-messages"></a>ボットのウェルカム メッセージ
+</details>
+</br>
 
-* アプリの構成フローが複雑である場合 (エンタープライズ ライセンスが必須である、直感的なサインアップ フローが提供されていない、などの場合)、アプリのボットは初回実行時に必ず、ウェルカム メッセージを送信する必要があります。 最適なエクスペリエンスを得るために、ウェルカム メッセージには、ボットがユーザーに提供する価値、チャネルにボットをインストールしたユーザー、ボットを構成する方法、およびサポートされているすべてのボット コマンドの簡単な説明が含まれる必要があります。 ボタン付きのアダプティブ カードを使用してウェルカム メッセージを表示すると、より使いやすくなります。 詳細については、「[ボットのウェルカム メッセージをトリガーする方法](~/bots/how-to/conversations/send-proactive-messages.md)」を参照してください。 アプリの構成フローが複雑でない場合、ボットの初回実行時にウェルカム メッセージを表示させることは選択になります。 ただし、ウェルカム メッセージを表示させる場合は、ウェルカム メッセージのガイドラインに従う必要があります。
+<details><summary>ボットのウェルカム メッセージ</summary>
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![ウェルカム メッセージのあるボット](~/assets/images/submission/validation-bot-welcome-message.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+* アプリの構成フローが複雑である場合 (エンタープライズ ライセンスが必須である、直感的なサインアップ フローが提供されていない、などの場合)、アプリのボットは初回実行時に必ず、ウェルカム メッセージを送信する必要があります。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![ウェルカム メッセージのないボット](~/assets/images/submission/validation-bot-no-welcome-message.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+最適なエクスペリエンスを得るために、ウェルカム メッセージには、ボットがユーザーに提供する価値、チャネルにボットをインストールしたユーザー、ボットを構成する方法、およびサポートされているすべてのボット コマンドの簡単な説明が含まれる必要があります。 ボタン付きのアダプティブ カードを使用してウェルカム メッセージを表示すると、より使いやすくなります。 詳細については、「[ボットのウェルカム メッセージをトリガーする方法](~/bots/how-to/conversations/send-proactive-messages.md)」を参照してください。 アプリの構成フローが複雑でない場合、ボットの初回実行時にウェルカム メッセージを表示させることは選択になります。 ただし、ウェルカム メッセージを表示させる場合は、ウェルカム メッセージのガイドラインに従う必要があります。
 
-* チャネルやチャットでのボットのウェルカム メッセージは、初回実行時には省略可能であり、特にボットが個人用に利用でき、同様のアクションを実行する場合は省略できます。 ボットはユーザーに個別にウェルカム メッセージを送信してはいけません ([スパム](#bot-message-spamming)と見なされます)。 メッセージには、ボットを追加したユーザーもメンションしなければなりません。
+:::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message.png" alt-text="validation-bot-welcom-message":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![ウェルカム メッセージがトリガーされない](~/assets/images/submission/validation-bot-welcome-message-not-triggered.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-bot-no-welcome-message.png" alt-text="validation-bot-no-wel-come-message":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![ウェルカム メッセージがトリガーされる](~/assets/images/submission/validation-bot-welcome-message-triggered.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+* チャネルやチャットでのボットのウェルカム メッセージは、初回実行時には省略可能であり、特にボットが個人用に利用でき、同様のアクションを実行する場合は省略できます。 ボットはユーザーに個別にウェルカム メッセージを送信してはいけません ([スパム](#botmessagespamming)と見なされます)。 メッセージには、ボットを追加したユーザーもメンションしなければなりません。
+
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message-not-triggered.png" alt-text="validation-bot-welcome-message-not-trigger":::
+
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message-triggered.png" alt-text="validation-bot-wel-message-trigger":::
 
 > [!TIP]
 > 個別のユーザーへのウェルカム メッセージでは、カルーセル ツアーを使用してボットやその他のアプリ機能の概要を効果的に伝えることにより、ユーザーにボット コマンドを試すように促すことができます。 たとえば、「**タスクを作成する**」などです。
 
-### <a name="bot-message-spamming"></a>ボット メッセージのスパム
+</details>
+</br>
+
+<details><summary><a id="botmessagespamming">ボット メッセージのスパム</a></summary>
 
 ボットは、短期間に複数のメッセージを連続して送信するようなスパム行為をしてはいけません。
 
 * **チャネルやチャットでのボットメッセージ**: 複数の投稿を同時に行うことはスパム行為となるので避けてください。 1 つの記事を作成し、同じスレッドに返信してください。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![ボットによるワン メッセージのスパム](~/assets/images/submission/validation-bot-message-spamming-one-message.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-message-spamming-one-message.png" alt-text="validation-bot-message-spam-one-message":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![ボットによる複数のメッセージのスパム](~/assets/images/submission/validation-bot-message-spamming-multiple-messages.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-message-spamming-multiple-messages.png" alt-text="validation-bot-message-spam-multiple-message":::
 
 * **個人用アプリでのボット メッセージ**:
   * 短時間のうちに複数のメッセージを送信しないでください。
@@ -970,53 +767,26 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
   * フォーム (またはタスク モジュール) を使用して、ユーザーのすべての入力を一度に収集します。
   * 自然言語処理 (NLP) ベースの会話型チャットボットを利用すれば、マルチターンの会話により話し合いの進行が促進され、ワークフローを完了させることができます。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![タスク モジュールを使用するボット](~/assets/images/submission/validation-bot-messages-using-task-module.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-using-task-module.png" alt-text="validation-bot-message-using-task-module":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![複数の会話を使用するボット](~/assets/images/submission/validation-bot-messages-using-mutliple-conversation.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-using-mutliple-conversation.png" alt-text="validation-bot-messages-using-mutliple-conversations":::
 
 * **ウェルカム メッセージ**: 一定の間隔で同じウェルカム メッセージを繰り返してはいけません。 たとえば、チームに新しいメンバーが加わったとき、他のメンバーにウェルカム メッセージを送ることは、スパム行為とみなされます。 新しいメンバーへのメッセージは個人的に送信してください。
 
-### <a name="bot-notifications"></a>ボット通知
+</details>
+</br>
+
+<details><summary>ボット通知</summary>
 
 ボット通知には、ボットに定義された範囲 (チーム、チャット、個人用) に関連するコンテンツを含める必要があります。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![関連性のあるボット通知](~/assets/images/submission/validation-bot-notifications-relevant.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-bot-notifications-relevant.png" alt-text="validation-bot-notification-relevant":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![関連性のないボット通知](~/assets/images/submission/validation-bot-notifications-not-relevant.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-bot-notifications-not-relevant.png" alt-text="validation-bot-notification-not-relevant":::
 
-### <a name="bots-and-adaptive-cards"></a>ボットとアダプティブ カード
+</details>
+</br>
+<details><summary>ボットとアダプティブ カード</summary>
 
 アダプティブ カードは、ボット メッセージを表示するのに最適な方法です。 カードは簡素なものに限定してください。アクションは最大 6 つまでとします。 より多くのコンテンツを表示するには、タスク モジュールやタブの使用を検討してください。
 
@@ -1027,7 +797,10 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
 
 ボット エクスペリエンスは、モバイル上でレスポンシブ対応でなければなりません。 ボットの応答では、可能な限り、ワークフローを前に進める方法が提供されている必要があります。 ボットはレスポンシブ対応であり、かつ失敗時には適切なエラー メッセージが表示されなければなりません。 コラボレーション中のトリガーに基づいて、個人スコープからユーザーに対して送信されるボット メッセージからは、(メッセージの発信元を含む) コンテキスト情報が提供される必要があります。
 
-### <a name="notification-only-bots"></a>通知専用ボット
+</details>
+</br>
+
+<details><summary>通知専用ボット</summary>
 
 通知専用ボットによって構成されたアプリでは、コア アプリまたはバックエンドの特定のトリガーまたはイベントによってユーザーへの通知がトリガーされ、それによりユーザーに価値が提供されます。 たとえば、営業チームに対して、新しい潜在顧客や見込み客がフォローアップのために通知されてリストに追加される場合などがその例となります。 高品質の通知専用ボットは、ワークフローの完了やアラートなど、特定のイベント完了時にユーザーに定期的に通知します。
 
@@ -1038,28 +811,16 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
 
 「**新しい通知があります。クリックして表示してください**」という通知が提供されるだけで、ユーザーが Teams から離れなければそれ以外の機能が利用できない場合、Teams アプリにより十分な価値が提供されているとは言えません。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-          ![ボットの不適切な情報](~/assets/images/submission/validation-bot-notification-only-inadequete-info.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-static-tab.png" alt-text="validation-nav-static-tab":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-          ![ボットの適切な情報](~/assets/images/submission/validation-bot-notification-only-adequete-info.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-navigation-horizontal-rail.png" alt-text="validation-nav-horizontal-rail":::
+
+:::image type="content" source="../../../../assets/images/submission/validation-bot-notification-only-inadequete-info.png" alt-text="validation-bot-notifications-only-inadequete-info":::
 
 > [!TIP]
 > 投稿されたカード内に表示される情報を見直し、ユーザーが選択できる基本的なアクションのすべてが、Teams から離れることなく利用できるような形で提供されていることを確認してください (適用される機能の複雑さに関わらず)。
+
+</details>
 
 ## <a name="message-extensions"></a>メッセージの拡張機能
 
@@ -1070,107 +831,55 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
 > [!TIP]
 > 高品質なアプリ エクスペリエンスを作成するための詳細については、「[Teams メッセージ拡張機能デザインのガイドライン](~/messaging-extensions/design/messaging-extension-design.md)」を参照してください。
 
-### <a name="action-commands"></a>操作コマンド
+</br>
+<details><summary>操作コマンド</summary>
 
 操作ベースのメッセージ拡張機能では、以下のことを行う必要があります。
 
 * ユーザーがサインインなどの中間的な手順を行うことなく、メッセージに対するアクションを起こせるようにする。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-          ![中間ステップなし ](~/assets/images/submission/validation-messaging-extension-no-intermediate-step.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-no-intermediate-step.png" alt-text="validation-messaging-extension-no-intermediate-steps":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![中間ステップが利用可能](~/assets/images/submission/validation-messaging-extension-intermediate-step-available.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-intermediate-step-available.png" alt-text="validation-messaging-extension-intermediate-steps-available":::
 
-* メッセージ コンテキストを次のワーク ステートに渡す。[*必須の修正*]
+* メッセージ コンテキストを次の作業状態に渡す。 [*必須の修正プログラム*]
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![メッセージを伝達するアプリ](~/assets/images/submission/validation-messaging-extension-app-passes-message.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-app-passes-message.png" alt-text="validation-messaging-extension-app-passes-messages":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-        ![メッセージを伝達しないアプリ](~/assets/images/submission/validation-messaging-extension-app-doesnot-pass-message.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-app-doesnot-pass-message.png" alt-text="validation-messaging-extension-app-doesnot-pass-messages":::
 
 * アプリ内のチャット メッセージ、チャネルへの投稿、アクションの呼び出しによってトリガーされるアクション コマンドの名前には、一般動詞による表記だけではなく、ホスト アプリの名前も含めます。 たとえば、**[会議を開始]** ではなく **[Skype 会議を開始]**、**[ファイルをアップロード]** ではなく **[DocuSign にファイルをアップロード]** とします。 [*修正の提案*]
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![操作コマンド ホスト名](~/assets/images/submission/validation-messaging-extension-action-command-host-name.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-action-command-host-name.png" alt-text="validation-messaging-extension-action-command-host-names":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-          ![操作コマンド 動詞](~/assets/images/submission/validation-messaging-extension-action-command-verb.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-action-command-verb.png" alt-text="validation-messaging-extension-action-commands-verb":::
 
-### <a name="preview-links-link-unfurling"></a>プレビュー リンク (リンク展開)
+</details>
+</br>
+
+<details><summary>プレビュー リンク (リンク展開)</summary>
+
+[*必須の修正*]
 
 メッセージ拡張機能では、認識されたリンクが Teams の作成ボックスでプレビューされます。  制御外のドメイン (絶対 URL、ワイルドカードのいずれについても) を追加してはいけません。  たとえば、`yourapp.onmicrosoft.com` は有効ですが、`*.onmicrosoft.com` は無効です。 トップレベルの ドメインも禁止です。 たとえば、`*.com` および `*.org` が禁止となります。 [*必須の修正*]
 
-### <a name="search-commands"></a>検索コマンド
+</details>
+</br>
+
+<details><summary>検索コマンド</summary>
 
 * 検索ベースのメッセージ拡張機能では、ユーザーが効果的に検索できるようなテキストが用意されている必要があります。 [*必須の修正*]
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![ヘルプ テキストが利用可能](~/assets/images/submission/validation-search-commands-text-available.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-search-commands-text-available.png" alt-text="validation-search-command-text-available":::
 
 * @メンション実行可能ファイルは、明確で、理解しやすく、読みやすいものである必要があります。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-         ![検索コマンド 不明な実行可能ファイル](~/assets/images/submission/validation-search-command-unclear-executable.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-search-command-unclear-executable.png" alt-text="validation-search-commands-unclear-executable":::
 
-### <a name="search-based-message-extension-only-apps"></a>検索ベースのメッセージ拡張機能専用アプリ
+</details>
+</br>
+
+<details><summary>操作コマンド</summary>検索ベースのメッセージ拡張機能専用アプリ
 
 [*必須の修正*]
 
@@ -1181,64 +890,43 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
 1. 投稿されたカードにより十分な情報が提供され、ユーザーが追加で操作する必要がない。
 1. 投稿されたカードが、ユーザーがアクションを起こしたり、Teams 外部のリンクを開いて詳細を表示ことを決定するのに十分なプレビュー情報を提供している。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![不十分な検索ベースのメッセージング](~/assets/images/submission/validation-search-based-messaging-ext-inadequete-info.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-adequete-info.png" alt-text="validation-search-base-messaging-ext-adequete-info":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-   ![十分な検索ベースのメッセージング](~/assets/images/submission/validation-search-based-messaging-ext-adequete-info.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-inadequete-info.png" alt-text="validation-search-base-messaging-ext-inadequete-info":::
 
 リンク展開のみが提供されるアプリでは、Teams 内で十分な価値が提供されません。  アプリがリンク展開のみを提供し、他の機能が提供されない場合は、アプリ内に追加のワークフローを構築することを検討してください。
 
+</details>
+
 ## <a name="task-modules"></a>タスク モジュール
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.5](/legal/marketplace/certification-policies#114045-task-modules) に沿ったものです。
+[*必須の修正*]
 
-タスク モジュールには、アイコンと関連付けられたアプリの短い名前を含める必要があります。 タスク モジュールは、アプリ全体を埋め込んだり、特定の操作を完了するために必要なコンポーネントのみを表示するものであってはいけません。 [*必須の修正*]
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.5](/legal/marketplace/certification-policies#114045-task-modules) に沿ったものです。
+<br></br>
+<details><summary>詳細を知るために展開する</summary>
+
+タスク モジュールには、アイコンと関連付けられたアプリの短い名前を含める必要があります。 タスク モジュールは、アプリ全体を埋め込んだり、特定の操作を完了するために必要なコンポーネントのみを表示するものであってはいけません。
 
 詳細については、「[Teams タスク モジュールのデザイン ガイドライン](~\task-modules-and-cards\task-modules\design-teams-task-modules.md)」を参照してください。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-    ![コンポーネントを表示するタスク モジュール](~/assets/images/submission/validation-task-module-displays-components.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::  
+:::image type="content" source="../../../../assets/images/submission/validation-task-module-displays-components.png" alt-text="validation-task-module-displays-component":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-     ![アプリを埋め込むタスク モジュール](~/assets/images/submission/validation-task-module-embeds-app.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../../../assets/images/submission/validation-task-module-embeds-app.png" alt-text="validation-task-module-embed-app":::
 
 > [!TIP]
 > 高品質なアプリ エクスペリエンスを作成するための詳細については、「[Teams タスク モジュール デザインのガイドライン](~/task-modules-and-cards/task-modules/design-teams-task-modules.md)」を参照してください。
+
+</details>
 
 ## <a name="meeting-extensions"></a>ミーディング拡張機能
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.6](/legal/marketplace/certification-policies#114046-meeting-extensions) に沿ったものです。
 > [!TIP]
 > 高品質なアプリ エクスペリエンスを作成するための詳細については、「[Teams ミーティング拡張機能デザインのガイドライン](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)」を参照してください。
+
+</br>
+<details><summary>全般</summary>
 
 ミーティング拡張機能には、次のガイドラインを使用します。
 
@@ -1257,75 +945,55 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
 > [!TIP]
 > Teams モバイルで会議用アプリを有効にするには、マニフェストにおいて、`groupchat` を `configurableTabs` と `meetingDetailsTab` のスコープとして宣言するか、`meetingChatTab` と `meetingSidePanel` をコンテキスト プロパティとして宣言する必要があります。
 
-### <a name="pre-and-post-meeting-experience"></a>会議前後のエクスペリエンス
+</details>
+
+</br>
+<details><summary>会議前後のエクスペリエンス</summary>
 
 * 会議前後の画面は、一般的なタブ デザイン ガイドラインに準拠している必要があります。 詳細については、「[Teams デザイン ガイドライン](~/tabs/design/tabs.md)」を参照してください。
 * タブは横スクロールしてはいけません。
 * 複数の項目を表示する場合に、タブのレイアウトが整理されている必要があります。 たとえば、10 件を超える投票またはアンケートについては、「[レイアウトの例](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#after-a-meeting)」を参照してください。
 * アプリでアンケートや投票の結果がエクスポートされた場合に、「**結果が正常にダウンロードされました**」と表示してユーザーに通知する必要があります。
 
-### <a name="in-meeting-experience"></a>会議中のエクスペリエンス
+</details>
+
+</br>
+<details><summary>会議中のエクスペリエンス</summary>
 
 * アプリは、会議中のみダーク テーマを使用する必要があります。 詳細については、「[Teams デザイン ガイドライン](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#theming)」を参照してください。
 * 会議中にアプリ アイコンにカーソルを合わせると、ツールヒントにアプリ名が表示される必要があります。
 
- :::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![ツールヒント アプリ名の表示](~/assets/images/submission/validation-in-meeting-exp-display-app-name.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-exp-display-app-name.png" alt-text="validation-in-meeting-exp-display-app-names":::
 
 * メッセージ拡張機能は、会議中も会議以外のときと同じように機能する必要があります。
 
-### <a name="in-meeting-tabs"></a>会議中のタブ
+</details>
+
+</br>
+<details><summary>会議中のタブ</summary>
 
 * レスポンシブ対応である必要があります。
 * パディングとコンポーネントのサイズを一定に保つ必要があります。
 * 複数のレベルのナビゲーションがある場合は、戻るボタンが必要です。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![会議中の [戻る] ボタンが使用可能](~/assets/images/submission/validation-in-meeting-exp-back-button.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-exp-back-button.png" alt-text="validation-in-meeting-exp-back-buttons":::
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![会議中の [戻る] ボタンが存在しない](~/assets/images/submission/validation-in-meeting-exp-back-button-absent.png)
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-exp-back-button-absent.png" alt-text="validation-in-meeting-exp-back-buttons-absent":::
 
 * 閉じるボタンが複数あってはいけません。 タブを閉じるためのヘッダー ボタンがすでに埋め込まれているため、ユーザーを混乱させるかもしれません。
 * 横スクロールさせてはいけません。
 
-### <a name="in-meeting-dialogs"></a>会議中のダイアログ
+</details>
+
+</br>
+<details><summary>会議中のダイアログ</summary>
 
 * 頻繁に使用してはなければなりません。簡素でかつタスク指向性のあるシナリオに対してのみ使用してください。
 * コンテンツは 1 列に表示されていなければなりません。また、複数のナビゲーション レベルがあってはなりません。
 * タスク モジュールを使用してはいけません。
 * 会議ステージの中心に位置合わせする必要があります。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![会議中のダイアログが位置揃えされない](~/assets/images/submission/validation-in-meeting-dialog-not-aligned.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-dialog-not-aligned.png" alt-text="validation-in-meeting-dialog-not-align":::
 
 * ユーザーがボタンを選択したり、アクションを実行したりした後に閉じる必要があります。
 
@@ -1336,55 +1004,61 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
   * 各画像の最大サイズは 5 MB です。 シーンは、複数の画像のコレクションです。 制限は、個々の画像に対するものです。
   * 必要に応じて **[透明]** を選択します。 このチェック ボックスは、画像が選択されている場合に右パネルで使用できます。 シーン内で重なり合っている画像には、画像が重なっていることを示すために、「Transparent」とマークする必要があります。
 
+</details>
+
 ## <a name="notifications"></a>通知
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.7](/legal/marketplace/certification-policies#114047-notification-apis) に沿ったものです。
 
 アプリで [Microsoft Graph が提供するアクティビティ フィード API](/graph/teams-send-activityfeednotifications) を使用する場合は、以下のガイドラインを遵守してください。
-
-### <a name="general"></a>全般
+<br></br>
+<details><summary>全般</summary>
 
 * アプリ構成で指定されたすべての通知トリガーが動作する必要があります。
 * 通知は、アプリにおいて構成されているすべての言語についてローカライズされていなければなりません。
 * 通知は、ユーザーのアクションから 5 秒以内に表示される必要があります。
 
-### <a name="avatars"></a>アバター
+</details>
+</br>
+<details><summary>アバター</summary>
 
 * 通知のアバターは、アプリのカラー アイコンと一致している必要があります。
 * ユーザーによってトリガーされた通知には、そのユーザーのアバターが表示されなければなりません。
 
-### <a name="spamming"></a>スパム
+</details>
+</br>
+<details><summary>スパム</summary>
 
 * アプリは、1 分間に 10 件以上の通知をユーザーに送信してはいけません。
 * ボットとアクティビティ フィードは、同じ通知を重複してトリガーしてはいけません。
 * 通知は、ユーザーに何らかの価値を提供するものである必要があります。些細なイベントや無関係なイベントに使用してはいけません。
 
-### <a name="navigation-and-layout"></a>ナビゲーションとレイアウト
+</details>
+</br>
+<details><summary>ナビゲーションとレイアウト</summary>
 
 * 通知は、Teams アクティビティ フィードのレイアウトとエクスペリエンスに関するガイドラインに準拠する必要があります。
 * 通知を選択したユーザーは、Teams 内の関連コンテンツに誘導されなければなりません。
 
+</details>
+
 ## <a name="microsoft-365-app-compliance-program"></a>Microsoft 365 アプリ コンプライアンス プログラム
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.6](/legal/marketplace/certification-policies#11406-publisher-attestation) に沿ったものです。
+<br></br>
+<details><summary>詳細を知るために展開する</summary>
 
 Microsoft 365 アプリ コンプライアンス プログラムは、アプリに関するセキュリティおよびコンプライアンス情報を評価することにより、組織がリスクを評価し管理することを目的としています。 Teams ストアにアプリを公開する場合は、以下のプロセスを完了する必要があります。
 
-* **発行元の検証**: 管理者とエンド ユーザーが、Microsoft ID プラットフォームを利用するアプリの開発者の信頼性について理解する上で役立ちます。  検証が完了すると、Azure Active Directory (Azure AD) 同意ダイアログやその他の画面に青い「**確認済み**」バッジが表示されます。 詳細については、「[アプリを発行元確認済みとしてマークする](/azure/active-directory/develop/mark-app-as-publisher-verified)」を参照してください。  
+* **発行元の検証**: 管理者とエンド ユーザーが、Microsoft ID プラットフォームを利用するアプリの開発者の信頼性について理解する上で役立ちます。  検証が完了すると、Azure Active Directory (Azure AD) 同意ダイアログやその他の画面に青い「**確認済み**」バッジが表示されます。 詳細については、「[アプリを発行元確認済みとしてマークする](/azure/active-directory/develop/mark-app-as-publisher-verified)」を参照してください。
 
-:::row:::
-    :::column span="":::
-   :::column-end:::
-   :::column span="3":::
-      ![発行元の検証](~/assets/images/submission/validation-365-compliance-publisher-verification.png)  
-   :::column-end:::
-   :::column span="":::
-   :::column-end:::
-:::row-end:::
+    :::image type="content" source="../../../../assets/images/submission/validation-365-compliance-publisher-verification.png" alt-text="validation-365-compliance-publisher-verifications":::
 
 * **発行元の構成証明**: 潜在的な顧客がアプリの使用を適切な情報に基づいて判断できるように、一般的な情報、データの取り扱い、セキュリティとコンプライアンスに関する情報を共有するプロセス。
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: 過去に登録済みのアプリを提出する場合、そのアプリが Teams ストアに登録されるまでは、正式に発行元の構成証明を完了することができません。 登録されたことのあるアプリを更新する場合は、アプリの最新バージョンを提出する前に発行元の構成証明を完了してください。
+
+</details>
 
 ## <a name="advertising"></a>広告
 

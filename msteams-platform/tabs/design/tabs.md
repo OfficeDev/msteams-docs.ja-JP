@@ -1,17 +1,17 @@
 ---
 title: デスクトップ、Web、およびモバイル用のデザイン タブ
-description: デスクトップ、Web、およびモバイル用の Teams タブを設計する方法を学び、Microsoft Teams UI キットを入手します。 タブの機能と外観、ユーザー認証の構築、タブ通知、タブでのディープ リンクについて説明します。
+description: デスクトップ、Web、およびモバイル用のタブを設計する方法を学び、Microsoft Teams UI キットを入手します。 タブ、ユーザー認証の構築、タブ通知、ディープ リンクについて説明します。
 author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
 keywords: UI キット管理タブ セットアップ シングルサインオン sso ディープ リンク 役割ベースのビュー スレッド ディスカッション
-ms.openlocfilehash: c2c081a1cb0ca96cce7cc55a9e39facc9cd691db
-ms.sourcegitcommit: 781f34af2a95952bf437d0b7236ae995f4e14a08
+ms.openlocfilehash: 21f5dcdba9d2c201c14330deb9517bb470489ee2
+ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "60948587"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66123259"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Microsoft Teams 用のタブを設計する
 
