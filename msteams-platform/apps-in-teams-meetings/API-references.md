@@ -5,12 +5,12 @@ description: 例とコード サンプルを使用して会議アプリ API リ�
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: 380f470c51933e4be90d008261ab75eafc566f2c
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 018aa14b72a63575deaefb8ee53f7fe4de7474ef
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142949"
+ms.locfileid: "66150660"
 ---
 # <a name="meeting-apps-api-references"></a>会議アプリ API リファレンス
 
@@ -27,7 +27,7 @@ ms.locfileid: "66142949"
 
 |メソッド| 説明| ソース|
 |---|---|----|
-|[**ユーザー コンテキストを取得する**](#get-user-context-api)| コンテキスト情報を取得して、関連するコンテンツを [Teams] タブに表示します。| [MSTC SDK](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
+|[**ユーザー コンテキストを取得する**](#get-user-context-api)| コンテキスト情報を取得して、関連するコンテンツを [Microsoft Teams] タブに表示します。| [MSTC SDK](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
 |[**参加者を取得する**](#get-participant-api)| 会議 ID と参加者 ID によって参加者情報を取得します。 | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
 |[**会議中の通知を送信する**](#send-an-in-meeting-notification)| ユーザー ボット チャット用の既存の会話通知 API を使用して会議のシグナルを提供し、会議中の通知を示すユーザー アクションを通知できます。 | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**会議の詳細を取得する**](#get-meeting-details-api)| 会議の静的メタデータを取得します。 | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
@@ -427,11 +427,11 @@ Meeting Details API の JSON 応答本文は次のとおりです。
 
 ## <a name="send-real-time-captions-api"></a>リアルタイム キャプション API を送信する
 
-リアルタイム キャプション送信 API は、Microsoft Teams コミュニケーション アクセス リアルタイム翻訳 (CART) キャプションと、手入力されたクローズド キャプション用の POST エンドポイントを公開します。 このエンドポイントに送信されたテキスト コンテンツは、エンド ユーザーがキャプションを有効にした場合、Microsoft Teams 会議でエンド ユーザーに表示されます。
+送信リアルタイム キャプション API は、Teams通信アクセスリアルタイム翻訳 (CART) キャプション、人型クローズド キャプションの POST エンドポイントを公開します。 このエンドポイントに送信されたテキスト コンテンツは、キャプションを有効にすると、Teams会議のエンド ユーザーに表示されます。
 
 ### <a name="cart-url"></a>CART URL
 
-POST エンドポイントの CART URL は、Microsoft Teams 会議の **[会議オプション]** ページから取得できます。 詳細については、「[Microsoft Teams 会議での CART キャプション](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47)」をご覧ください。 CART キャプションを使用するために CART URL を変更する必要はありません。
+POST エンドポイントの CART URL は、Teams **会議の [会議オプション**] ページから取得できます。 詳細については、「[Microsoft Teams 会議での CART キャプション](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47)」をご覧ください。 CART キャプションを使用するために CART URL を変更する必要はありません。
 
 #### <a name="query-parameter"></a>クエリ パラメーター
 
@@ -841,10 +841,10 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 
 |サンプルの名前 | 説明 | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
-| 会議の拡張性 | トークンを渡すための Microsoft Teams 会議拡張性サンプル。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-| 会議コンテンツ バブル ボット | 会議でコンテンツ バブル ボットと対話するための Microsoft Teams 会議拡張性サンプル。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| 会議 meetingSidePanel | 会議中のサイド パネルと対話するための Microsoft Teams 会議拡張性サンプル。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| 会議の [詳細] タブ | 会議中の [詳細] タブと対話するための Microsoft Teams 会議拡張性サンプル。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+| 会議の拡張性 | トークンを渡すための会議機能拡張サンプルをTeamsします。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| 会議コンテンツ バブル ボット | 会議でコンテンツ バブル ボットと対話するための会議機能拡張サンプルをTeamsします。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
+| 会議 meetingSidePanel | サイド パネルの会議内で対話するための会議機能拡張サンプルをTeamsします。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
+| 会議の [詳細] タブ | 会議内の [詳細] タブを操作するための会議機能拡張サンプルをTeamsします。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 |会議イベントのサンプル|リアルタイムの Teams 会議イベントを示すサンプル アプリ|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 |採用会議のサンプル|採用シナリオの会議エクスペリエンスを示すサンプル アプリ。|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 |QR コードを使用したアプリのインストール|QR コードを生成し、QR コードを使用してアプリをインストールするサンプル アプリ|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|

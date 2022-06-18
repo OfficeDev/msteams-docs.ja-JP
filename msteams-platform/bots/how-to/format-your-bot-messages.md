@@ -5,12 +5,12 @@ description: このモジュールでは、取り消し線、順序付けされ�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 3bb58062a449d9122940064416cc621fc65603d1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: d50f47cde4c0e6af37ccffe4654109beeea73f8b
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143481"
+ms.locfileid: "66150789"
 ---
 # <a name="format-your-bot-messages"></a>ボット メッセージの書式を設定する
 
@@ -36,7 +36,7 @@ Teamsでは、マークダウンタグと XML または HTML 書式タグのサ�
 * リッチ カードでは、タイトルやサブタイトルのプロパティではなく、テキスト プロパティの書式設定のみがサポートされます。
 * リッチ カードでは、マークダウンやテーブルの書式設定はサポートされていません。
 
-テキスト コンテンツを書式設定したら、Microsoft Teamsでサポートされているすべてのプラットフォームで書式設定が機能することを確認します。
+テキスト コンテンツを書式設定したら、Teamsでサポートされているすべてのプラットフォームで書式設定が機能することを確認します。
 
 ## <a name="cross-platform-support"></a>クロスプラットフォームサポート
 
@@ -84,7 +84,7 @@ Teamsでは、マークダウンタグと XML または HTML 書式タグのサ�
 
 カードのサポートについては、「 [カードの書式設定](~/task-modules-and-cards/cards/cards-format.md)」を参照してください。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [ボット メッセージの更新および削除](~/bots/how-to/update-and-delete-bot-messages.md)

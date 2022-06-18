@@ -5,12 +5,12 @@ description: Azure Active Directoryを使用して、Teamsのボットに OAuth 
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 2a9ebf96f5795b6674646bc50dd856badf59152e
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: c66425550bdb989d8e0cb55d806a5e6b8fc92d6a
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142564"
+ms.locfileid: "66150765"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Teams ボットに認証を追加する
 
@@ -189,7 +189,7 @@ Microsoft Teams チャネルに追加するには:
 
 ### <a name="configure-the-identity-provider-connection-and-register-it-with-the-bot"></a>ID プロバイダー接続を構成し、ボットに登録する
 
-注: Microsoft Azure Active Directory (Azure AD) V1 と Microsoft Azure Active Directory (Azure AD) V2 のサービス プロバイダーには 2 つのオプションがあります。  2 つのプロバイダー間の違いは、[こちら](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison)にまとめられていますが、一般に、V2 はボットのアクセス許可の変更に関してより柔軟です。  Graph API アクセス許可がスコープ フィールドに一覧表示され、新しいアクセス許可が追加されると、ボットによって、ユーザーは次回のサインイン時に新しいアクセス許可に同意できるようになります。  V1 の場合、OAuth ダイアログで新しいアクセス許可を要求するには、ユーザーがボットの同意を削除する必要があります。
+ここでサービス プロバイダーには、Azure AD V1 と Azure AD V2 の 2 つのオプションがあります。  2 つのプロバイダー間の違いは、[こちら](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison)にまとめられていますが、一般に、V2 はボットのアクセス許可の変更に関してより柔軟です。  Graph API アクセス許可がスコープ フィールドに一覧表示され、新しいアクセス許可が追加されると、ボットによって、ユーザーは次回のサインイン時に新しいアクセス許可に同意できるようになります。  V1 の場合、OAuth ダイアログで新しいアクセス許可を要求するには、ユーザーがボットの同意を削除する必要があります。
 
 #### <a name="microsoft-azure-active-directory-azure-ad-v1"></a>Microsoft Azure Active Directory (Azure AD) V1
 
@@ -210,7 +210,7 @@ Microsoft Teams チャネルに追加するには:
 
         - *この組織ディレクトリ内のアカウントのみ (Microsoft のみ - シングル テナント)* または *任意の組織ディレクトリのアカウント (Microsoft Azure Active Directory (Azure AD) - マルチテナント)* を選択した場合は、前にMicrosoft Azure Active Directory (Azure) に記録した **テナント ID を** 入力します。AD) アプリ。 これは、認証できるユーザーに関連付けられているテナントになります。
 
-        - *任意の組織ディレクトリで [アカウント] を選択した場合 ([任意のMicrosoft Azure Active Directory (Azure AD)] - マルチテナントアカウントと個人用 Microsoft アカウント (Skype、Xbox、Outlookなど) は、* テナント ID の代わりに **共通** という単語を入力します。 それ以外の場合、Microsoft Azure Active Directory (Azure AD) アプリは、ID が選択されたテナントを通じて確認し、個人用 Microsoft アカウントを除外します。
+        - *任意の組織ディレクトリで [アカウント] を選択した場合 ([任意のMicrosoft Azure Active Directory (Azure AD)] - マルチテナントアカウントと個人用 Microsoft アカウント (Skype、Xbox、Outlookなど) は、* テナント ID の代わりに **共通** という単語を入力します。 それ以外の場合、Azure AD (Azure AD) アプリは、ID が選択されたテナントを介して検証し、個人用 Microsoft アカウントを除外します。
 
     h. **リソース URL** には、「`https://graph.microsoft.com/`」と入力します。 これは、現在のコード サンプルでは使用されません。  
     i. **[Scopes]** は空白のままにします。 次の図に例を示します。
@@ -229,15 +229,15 @@ Microsoft Teams チャネルに追加するには:
 1. フォームに次のように入力します。
 
     1. **名前**。 接続の名前を入力します。 この名前は、`appsettings.json` ファイルのボットで使用します。 たとえば、 *BotTeamsAuthADv2* です。
-    1. **サービス プロバイダー**。 **[Microsoft Azure Active Directory v2]** を選択します。 これを選択すると、Microsoft Azure Active Directory (Azure AD) 固有のフィールドが表示されます。
+    1. **サービス プロバイダー**。 **[Microsoft Azure Active Directory v2]** を選択します。 これを選択すると、Azure AD 固有のフィールドが表示されます。
     1. **クライアント ID**。上記の手順で、Azure ID プロバイダー アプリ用に記録したアプリケーション (クライアント) ID を入力します。
     1. **クライアント シークレット**。上記の手順で Azure ID プロバイダー アプリ用に記録したシークレットを入力します。
     1. **トークン交換 URL**。 空白のままにします。
     1. **テナント ID**、ID プロバイダー アプリの作成時に選択したサポートされているアカウントの種類に応じて、先ほど Azure ID アプリ用に記録した **ディレクトリ (テナント) ID** を入力するか、**common** を入力します。 割り当てる値を決定するには、次の条件に従います。
 
-        - *この組織ディレクトリ内のアカウントのみ (Microsoft のみ - シングル テナント)* または *任意の組織ディレクトリのアカウント (Microsoft Azure Active directory - マルチテナント)* を選択した場合は、Microsoft Azure Active Directory (Azure AD) アプリに対して前に記録した **テナント ID を** 入力します。 これは、認証できるユーザーに関連付けられているテナントになります。
+        - *この組織ディレクトリ内のアカウントのみ (Microsoft のみ - シングル テナント)* または *任意の組織ディレクトリのアカウント (Microsoft Azure Active directory - マルチ テナント)* のいずれかを選択した場合は、Azure AD アプリ用に前に記録した **テナント ID を** 入力します。 これは、認証できるユーザーに関連付けられているテナントになります。
 
-        - *任意の組織ディレクトリで [アカウント] を選択した場合 ([任意のMicrosoft Azure Active Directory (Azure AD)] - マルチテナントアカウントと個人用 Microsoft アカウント (Skype、Xbox、Outlookなど) は、* テナント ID の代わりに **共通** という単語を入力します。 それ以外の場合、Microsoft Azure Active Directory (Azure AD) アプリは、ID が選択されたテナントを通じて確認し、個人用 Microsoft アカウントを除外します。
+        - *任意の組織ディレクトリで [アカウント] を選択した場合 ([任意のMicrosoft Azure Active Directory (Azure AD)] - マルチテナントアカウントと個人用 Microsoft アカウント (Skype、Xbox、Outlookなど) は、* テナント ID の代わりに **共通** という単語を入力します。 それ以外の場合、Azure AD アプリは、ID が選択されたテナントを介して検証し、個人用 Microsoft アカウントを除外します。
 
     1. **スコープの** 場合は、このアプリケーションが必要とするグラフのアクセス許可のスペース区切りの一覧を入力します。User.Read User.ReadBasic.All Mail.Read
 
@@ -451,8 +451,8 @@ and when for these, and just reference that from here, along with the set of ste
 
 ### <a name="testing-the-bot-locally-in-teams"></a>Teams でボットをローカルでテストする
 
-Microsoft Teams は完全にクラウドベースの製品であり、HTTPS エンドポイントを使用してクラウドからアクセスするすべてのサービスを利用できるようにする必要があります。 そのため、ボット (サンプル) を Teams で動作させるには、任意のクラウドにコードを発行するか、**トンネリング** ツールを使用してローカルで実行されているインスタンスに外部からアクセスできるようにする必要があります。 [ngrok](https://ngrok.com/download) を使用することをお勧めします。これにより、コンピューターでローカルに開くポートの外部アドレス指定可能な URL が作成されます。
-Microsoft Teams アプリをローカルで実行するための準備として ngrok を設定するには、次の手順に従います:
+Teamsは完全にクラウドベースの製品であるため、アクセスするすべてのサービスを HTTPS エンドポイントを使用してクラウドから利用できるようにする必要があります。 そのため、ボット (サンプル) を Teams で動作させるには、任意のクラウドにコードを発行するか、**トンネリング** ツールを使用してローカルで実行されているインスタンスに外部からアクセスできるようにする必要があります。 [ngrok](https://ngrok.com/download) を使用することをお勧めします。これにより、コンピューターでローカルに開くポートの外部アドレス指定可能な URL が作成されます。
+Teams アプリをローカルで実行するための準備として ngrok を設定するには、次の手順に従います。
 
 1. ターミナル ウィンドウで、`ngrok.exe` がインストールされているディレクトリに移動します。 *環境変数* パスをポイントするように設定することをお勧めします。
 1. たとえば、`ngrok http 3978 --host-header=localhost:3978` を実行します。 必要に応じてポート番号を置き換えます。
@@ -461,7 +461,7 @@ Microsoft Teams アプリをローカルで実行するための準備として 
     ![teams ボット アプリ認証接続文字列 adv1](../../../assets/images/authentication/auth-bot-ngrok-start.PNG).
 
 1. 転送先の HTTPS アドレスをコピーします。 次のようになるはずです: `https://dea822bf.ngrok.io/`。
-1. `/api/messages` を追加して `https://dea822bf.ngrok.io/api/messages` を取得します。これは、コンピューター上でローカルで実行され、Microsoft Teams のチャットで Web 経由で到達できるボットの **メッセージ エンドポイント** です。
+1. `/api/messages` を追加して、`https://dea822bf.ngrok.io/api/messages` を取得します。 これは、コンピューター上でローカルで実行され、Teamsのチャットで Web 経由で到達可能なボットの **メッセージ エンドポイント** です。
 1. 実行する最後の手順の 1 つは、デプロイされたボットのメッセージ エンドポイントを更新することです。 この例では、ボットを Azure にデプロイしました。 それでは、次の手順を実行しましょう:
     1. ブラウザーで、[**Azure portal**][azure-portal] に移動して、サインインします。
     1. **[ボットの登録]** を選択します。
@@ -480,7 +480,7 @@ Microsoft Teams アプリをローカルで実行するための準備として 
 
 ### <a name="teamsappmanifestmanifestjson"></a>TeamsAppManifest/manifest.json
 
-このマニフェストには、Microsoft Teams がボットに接続するために必要な情報が含まれています。  
+このマニフェストには、ボットに接続するためにTeamsで必要な情報が含まれています。  
 
 ```json
 {
@@ -633,7 +633,7 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 
 | **サンプルの名前** | **説明** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
-| ボット認証 | このサンプルは、Microsoft Teams のボットで認証を開始する方法を示しています。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| ボット認証 | このサンプルでは、Teams用のボットで認証を開始する方法を示します。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
 | タブ、ボット、メッセージ拡張機能 (ME) SSO | このサンプルは、タブ、ボット、および ME の SSO (検索、アクション、linkunfurl) を示しています。 |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | 利用不可 |
 
 ## <a name="see-also"></a>関連項目

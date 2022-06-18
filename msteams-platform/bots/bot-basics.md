@@ -5,18 +5,18 @@ description: この記事では、Microsoft Teamsのボット アクティビテ
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 1d57d71e83e7e615e01f084b0fd4d5815dbe18e1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 488c01f47f5518673ec66c3dbac5f3bd8f6927f3
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143838"
+ms.locfileid: "66150863"
 ---
 # <a name="bot-activity-handlers"></a>ボットのアクティビティ ハンドラー
 
 このドキュメントは、主要な [Bot Framework のドキュメント](https://aka.ms/azure-bot-service-docs)の「[ボットのしくみ](https://aka.ms/how-bots-work)」に基づいています。 Microsoft Teams 用に開発されたボットと主要な Bot Framework の主な違いは、Teams で提供される機能にあります。
 
-ボットの会話ロジックを整理するために、アクティビティ ハンドラーが使用されます。 アクティビティは、Teams アクティビティ ハンドラーとボット ロジックを使用して 2 つの方法で処理されます。 Teams アクティビティ ハンドラーでは、Microsoft Teams 固有のイベントと対話がさらにサポートされます。 ボット オブジェクトには、会話の推論またはターンのロジックが含まれ、ターン ハンドラーを公開します。これは、ボット アダプターからの受信アクティビティを承諾できるメソッドです。
+ボットの会話ロジックを整理するために、アクティビティ ハンドラーが使用されます。 アクティビティは、Teams アクティビティ ハンドラーとボット ロジックを使用して 2 つの方法で処理されます。 Teams アクティビティ ハンドラーは、Teams固有のイベントと対話のサポートを追加します。 ボット オブジェクトには、会話の推論またはターンのロジックが含まれ、ターン ハンドラーを公開します。これは、ボット アダプターからの受信アクティビティを承諾できるメソッドです。
 
 ## <a name="teams-activity-handlers"></a>Teams のアクティビティ ハンドラー
 

@@ -4,12 +4,12 @@ description: Teams用のアプリケーション ホスト型メディア ボッ
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 11/16/2018
-ms.openlocfilehash: 87cdbce71189f64c0d34fc0cddb5211355017007
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 5ba9f630e75bd9271eda66a93e69d8506e2b368c
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142487"
+ms.locfileid: "66150792"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>アプリケーションでホストされるメディア ボットの要件と考察
 
@@ -39,7 +39,7 @@ ms.locfileid: "66142487"
 
 ## <a name="real-time-media-calls-stay-where-theyre-created"></a>リアルタイム メディア呼び出しは、作成された場所に留まる
 
-リアルタイム メディア呼び出しは、その呼び出しが作成されたコンピューターに留まります。 リアルタイム メディア呼び出しは、呼び出しを受け入れたか開始した仮想マシン (VM) インスタンスにピン留めされます。 Microsoft Teams 呼び出しまたは会議フローからその VM インスタンスへのメディアと、ボットが Microsoft Teams に返送するメディアも、その VM から発信される必要があります。 その VM が停止されたときに処理中のリアルタイム メディア呼び出しがある場合、それらの呼び出しは突然終了します。 保留中の VM シャットダウンに関する予備知識をボットが持っている場合は、ボットが呼び出しを終了できます。
+リアルタイム メディア呼び出しは、その呼び出しが作成されたコンピューターに留まります。 リアルタイム メディア呼び出しは、呼び出しを受け入れたか開始した仮想マシン (VM) インスタンスにピン留めされます。 Teams呼び出しまたは会議フローからその VM インスタンスへのメディアと、ボットがTeamsに返送するメディアも、その VM から発信される必要があります。 その VM が停止されたときに処理中のリアルタイム メディア呼び出しがある場合、それらの呼び出しは突然終了します。 保留中の VM シャットダウンに関する予備知識をボットが持っている場合は、ボットが呼び出しを終了できます。
 
 次のセクションでは、アプリケーションでホストされるメディア ボットのアクセシビリティについて詳しく説明します。
 

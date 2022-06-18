@@ -5,18 +5,18 @@ description: カメラ、画像、メディア、マイク、QR コードなど�
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 8795e3caef1582fca10ad8e0c396d98ef7b80422
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: de79edb8e751c302dd685d74a7f477e50178eaec
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130432"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150674"
 ---
 # <a name="device-capabilities"></a>デバイス機能
 
 Microsoft Teams プラットフォームは、組み込みのファーストパーティ エクスペリエンスに合わせて開発者機能を継続的に強化しています。 強化されたTeams プラットフォームにより、パートナーは、カメラ、QR またはバーコード スキャナー、フォト ギャラリー、マイク、場所などのデバイス機能を Web アプリと統合できます。 この統合により、アプリ開発の障壁が減り、開発サイクルが短縮され、開発者コミュニティの新しいシナリオやユース ケースが作成されます。
 
-デバイスのアクセス許可はブラウザーによって異なります。 以前は、ブラウザーがアクセス許可を付与する方法を処理し、これらのアクセス許可はMicrosoft Teamsで処理されるようになりました。 詳細については、「[ブラウザー デバイスのアクセス許可](browser-device-permissions.md)」を参照してください。
+デバイスのアクセス許可はブラウザーによって異なります。 以前は、ブラウザーでアクセス許可を付与する方法が処理され、これらのアクセス許可はTeamsで処理されるようになりました。 詳細については、「[ブラウザー デバイスのアクセス許可](browser-device-permissions.md)」を参照してください。
 
 ## <a name="native-device-capabilities"></a>ネイティブ デバイス機能
 
@@ -50,4 +50,4 @@ Microsoft Teams プラットフォームは、組み込みのファーストパ�
 
 | サンプルの名前           | 説明 | Node.js    |
 |:---------------------|:--------------|:---------|
-|デバイス アクセス許可 | デバイスのアクセス許可のタブ サンプル アプリMicrosoft Teams示す方法について説明します。 |[表示](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|
+|デバイス アクセス許可 | デバイスのアクセス許可のタブ サンプル アプリTeams示す方法について説明します。 |[表示](<https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs>)|

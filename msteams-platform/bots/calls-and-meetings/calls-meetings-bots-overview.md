@@ -3,12 +3,12 @@ title: 通話とオンライン会議のボット
 description: このモジュールでは、microsoft Graph API を使用して通話やオンライン会議を使用して、Microsoft Teams アプリが音声とビデオを使用してユーザーと対話する方法について説明し、リアルタイムのメディア ストリームについて学習します。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: bbeca082a561386d6c64d08e1d303975f9746f0a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 2fe13adaf662d70e7ca9e7f1ca3d73bac0208f53
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143852"
+ms.locfileid: "66150828"
 ---
 # <a name="calls-and-online-meetings-bots"></a>通話とオンライン会議のボット
 
@@ -51,7 +51,7 @@ Teams での通話は、純粋に音声のみ、または音声とビデオに�
 * ユーザーは、ボットの支援でピア ツー ピア通話を開始したり、ボットを既存のマルチパーティ通話に招待したりできます。 マルチパーティ通話は、Teams ユーザー インターフェイスではまだ有効になっていません。
 
     > [!NOTE]
-    > ユーザーが開始するボットへの通話は、現在 Microsoft Teams モバイル プラットフォームではサポートされていません。
+    > ユーザーがボットに対して開始した呼び出しは、現在、モバイル プラットフォームTeamsサポートされていません。
 
 * Graph へのアクセス許可は、ユーザーがボットとのピア ツー ピア通話を開始するためには必要ありません。 ボットがマルチパーティ通話に参加したり、ボットがユーザーとのピア ツー ピア通話を開始したりするには、ボットに追加のアクセス許可が必要です。
 * 通話はピア ツー ピアとして開始し、最終的にはマルチパーティ通話になります。 ボットに適切なアクセス許可が与えられながら、ボットは他のユーザーを招待することでマルチパーティ通話を開始できます。 ボットにグループ通話に参加するためのアクセス許可がなく、参加者が別の参加者を通話に追加した場合、ボットは通話から外されます。

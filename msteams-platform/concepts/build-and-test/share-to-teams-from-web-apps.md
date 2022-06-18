@@ -3,12 +3,12 @@ title: Web アプリから Teams に共有する
 description: コード サンプルを使用して、Web サイトのプレビューを使用して、Web サイトの埋め込みボタンTeams共有を追加する方法について説明します
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: d08086d01132d86605137bb6b622821239695c84
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 38e082166c0a2d66c5e2e26280fe1c8d9c3053a2
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123462"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150835"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Web アプリから Teams に共有する
 
@@ -51,7 +51,7 @@ ms.locfileid: "66123462"
     </div>
     ```
 
-    これを完了すると、Microsoft Teams アイコンが Web サイトに追加されます。 次の図は、[Teamsに共有] アイコンを示しています。
+    これを完了すると、Teams アイコンが Web サイトに追加されます。 次の図は、[Teamsに共有] アイコンを示しています。
 
     :::image type="content" source="~/assets/icons/share-to-teams-icon.png" alt-text="[Teamsに共有] アイコン" border="true":::
 
@@ -99,7 +99,7 @@ Web サイトがTeamsに共有されている場合、選択したチャネル�
 
 次の表に、必要なタグの概要を示します。
 
-|値|メタ タグ| Graphを開く|
+|Value|メタ タグ| Graphを開く|
 |----|----|----|
 |Title|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
 |説明|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
@@ -115,7 +115,7 @@ HTML の既定のバージョンまたは Open Graph バージョンのいずれ
 
 ## <a name="full-launcherjs-definition"></a>完全なlauncher.js定義
 
-| プロパティ | HTML 属性 | 種類 | 既定値 | 説明 |
+| プロパティ | HTML 属性 | 型 | 既定値 | 説明 |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
 | href | `data-href` | 文字列 | 該当なし | 共有するコンテンツの href。 |
 | preview | `data-preview` | ブール値 (文字列として) | `true` | 共有するコンテンツのプレビューを表示するかどうかを指定します。 |
