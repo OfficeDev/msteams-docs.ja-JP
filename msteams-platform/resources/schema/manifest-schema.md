@@ -3,12 +3,12 @@ title: マニフェスト スキーマの参照
 description: この記事では、Microsoft Teams リファレンスのマニフェスト スキーマ、スキーマ、およびサンプルの完全なマニフェストを紹介します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 49b3b1714d05f50ee6a4b186ff7a1a85d6209083
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: 2c7637f8ec3bd161827a2bd79f73b7374378e55b
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130509"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142725"
 ---
 # <a name="reference-manifest-schema-for-microsoft-teams"></a>参照: Microsoft Teams のマニフェスト スキーマ
 
@@ -375,10 +375,10 @@ ID は、Microsoft が生成したアプリの一意の識別子です。 ボッ
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
-|`name`|32 文字|✔|開発者の表示名。|
-|`websiteUrl`|2048 文字|✔|開発者の Web サイトの The https:// URL。 このリンクは、ユーザーを会社または製品固有のランディング ページに移動する必要があります。|
-|`privacyUrl`|2048 文字|✔|開発者のプライバシー ポリシーの https:// URL。|
-|`termsOfUseUrl`|2048 文字|✔|開発者の使用条件の https:// URL。|
+|`name`|32 文字|✔️|開発者の表示名。|
+|`websiteUrl`|2048 文字|✔️|開発者の Web サイトの The https:// URL。 このリンクは、ユーザーを会社または製品固有のランディング ページに移動する必要があります。|
+|`privacyUrl`|2048 文字|✔️|開発者のプライバシー ポリシーの https:// URL。|
+|`termsOfUseUrl`|2048 文字|✔️|開発者の使用条件の https:// URL。|
 |`mpnId`|10 文字| |**省略可能** アプリを構築しているパートナー組織を識別するMicrosoft パートナー ネットワーク ID。|
 
 ## <a name="name"></a>name
@@ -389,7 +389,7 @@ Teams エクスペリエンスでユーザーに表示されるアプリ エク�
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
-|`short`|30 文字|✔|アプリの短い表示名。|
+|`short`|30 文字|✔️|アプリの短い表示名。|
 |`full`|100 文字||アプリのフル ネーム。アプリのフル ネームが 30 文字を超える場合に使用されます。|
 
 ## <a name="description"></a>description
@@ -402,8 +402,8 @@ Teams エクスペリエンスでユーザーに表示されるアプリ エク�
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
-|`short`|80 文字|✔|スペースが限られている場合に使用される、アプリ エクスペリエンスの簡単な説明。|
-|`full`|4,000 文字|✔|アプリの完全な説明。|
+|`short`|80 文字|✔️|スペースが限られている場合に使用される、アプリ エクスペリエンスの簡単な説明。|
+|`full`|4,000 文字|✔️|アプリの完全な説明。|
 
 ## <a name="packagename"></a>packageName
 
@@ -419,7 +419,7 @@ Teams エクスペリエンスでユーザーに表示されるアプリ エク�
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
-|`defaultLanguageTag`||✔|このトップ レベルのマニフェスト ファイル内の文字列の言語タグ。|
+|`defaultLanguageTag`||✔️|このトップ レベルのマニフェスト ファイル内の文字列の言語タグ。|
 
 ### <a name="localizationinfoadditionallanguages"></a>localizationInfo.additionalLanguages
 
@@ -427,8 +427,8 @@ Teams エクスペリエンスでユーザーに表示されるアプリ エク�
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
-|`languageTag`||✔|提供されたファイルの文字列の言語タグ。|
-|`file`||✔|翻訳された文字列を含む .json ファイルへの相対ファイル パス。|
+|`languageTag`||✔️|提供されたファイルの文字列の言語タグ。|
+|`file`||✔️|翻訳された文字列を含む .json ファイルへの相対ファイル パス。|
 
 ## <a name="icons"></a>アイコン
 
@@ -438,8 +438,8 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
-|`outline`|32 x 32 ピクセル|✔|透明な 32x32 PNG アウトライン アイコンへの相対ファイル パス。|
-|`color`|192 x 192 ピクセル|✔|フル カラーの 192x192 PNG アイコンへの相対ファイル パス。|
+|`outline`|32 x 32 ピクセル|✔️|透明な 32x32 PNG アウトライン アイコンへの相対ファイル パス。|
+|`color`|192 x 192 ピクセル|✔️|フル カラーの 192x192 PNG アイコンへの相対ファイル パス。|
 
 ## <a name="accentcolor"></a>accentColor
 
@@ -457,8 +457,8 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`configurationUrl`|string|2048 文字|✔|タブを構成するときに使用する https:// URL。|
-|`scopes`|列挙型の配列|1|✔|現在、構成可能なタブは、`team` スコープと `groupchat` スコープのみをサポートしています。 |
+|`configurationUrl`|string|2048 文字|✔️|タブを構成するときに使用する https:// URL。|
+|`scopes`|列挙型の配列|1|✔️|現在、構成可能なタブは、`team` スコープと `groupchat` スコープのみをサポートしています。 |
 |`canUpdateConfiguration`|ブール値|||作成後にユーザーがタブの構成のインスタンスを更新できるかどうかを示す値。既定値: **true**。|
 |`context` |列挙型の配列|6 ||[タブがサポートされている](../../tabs/how-to/access-teams-context.md) `contextItem` スコープのセット。 既定値: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**。|
 |`sharePointPreviewImage`|string|2048||SharePoint で使用するタブ プレビュー イメージへの相対ファイル パス。サイズ 1024 x 768。 |
@@ -474,12 +474,12 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`entityId`|string|64 文字|✔|タブが表示されるエンティティの一意の識別子。|
-|`name`|string|128 文字|✔|チャネル インターフェイスのタブの表示名。|
-|`contentUrl`|string||✔|Teams キャンバスに表示されるエンティティ UI を指す https:// URL。|
+|`entityId`|string|64 文字|✔️|タブが表示されるエンティティの一意の識別子。|
+|`name`|string|128 文字|✔️|チャネル インターフェイスのタブの表示名。|
+|`contentUrl`|string||✔️|Teams キャンバスに表示されるエンティティ UI を指す https:// URL。|
 |`websiteUrl`|string|||ユーザーがブラウザでの表示を選択した場合に示す https:// URL。|
 |`searchUrl`|string|||ユーザーの検索クエリを指すhttps:// URL。|
-|`scopes`|列挙型の配列|1|✔|現在、静的タブは `personal` スコープのみをサポートしています。つまり、個人的なエクスペリエンスの一部としてのみプロビジョニングできます。|
+|`scopes`|列挙型の配列|1|✔️|現在、静的タブは `personal` スコープのみをサポートしています。つまり、個人的なエクスペリエンスの一部としてのみプロビジョニングできます。|
 |`context` | 列挙型の配列| 2|| タブがサポートされている `contextItem` 個のスコープのセット。|
 
 > [!NOTE]
@@ -495,8 +495,8 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`botId`|string|64 文字|✔|Bot Framework に登録された、ボット用の一意の Microsoft アプリ ID。 ID は、全体的な[アプリ ID](#id) と同じにすることができます。|
-|`scopes`|列挙型の配列|3|✔|ボットがエクスペリエンスを提供するのは、`team` 内のチャネルのコンテキスでなのか、グループ チャット (`groupchat`) でなのか、あるいは個別のユーザーのみをエクスペリエンスの対象にする (`personal`) のかを指定します。これらのオプションは非排他的です。|
+|`botId`|string|64 文字|✔️|Bot Framework に登録された、ボット用の一意の Microsoft アプリ ID。 ID は、全体的な[アプリ ID](#id) と同じにすることができます。|
+|`scopes`|列挙型の配列|3|✔️|ボットがエクスペリエンスを提供するのは、`team` 内のチャネルのコンテキスでなのか、グループ チャット (`groupchat`) でなのか、あるいは個別のユーザーのみをエクスペリエンスの対象にする (`personal`) のかを指定します。これらのオプションは非排他的です。|
 |`needsChannelSelector`|ブール値|||ボットがユーザー ヒントを使用してボットを特定のチャネルに追加するかどうかを説明します。既定値: **`false`**|
 |`isNotificationOnly`|Boolean|||ボットが会話ボットではなく、一方向の通知専用ボットであるかどうかを示します。既定値: **`false`**|
 |`supportsFiles`|Boolean|||ボットが個人用チャットでファイルをアップロード/ダウンロードできるかどうかを示します。既定値: **`false`**|
@@ -509,15 +509,15 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`items.scopes`|列挙型の配列|3|✔|コマンド リストが有効なスコープを指定します。オプションは、 `team`、 `personal`、および `groupchat`です。|
-|`items.commands`|オブジェクトの配列|10|✔|ボットがサポートするコマンドの配列:<br>`title`: ボット コマンドの名前 (文字列、32)<br>`description`: コマンド構文とその引数 (文字列、128) の簡単な説明または例。|
+|`items.scopes`|列挙型の配列|3|✔️|コマンド リストが有効なスコープを指定します。オプションは、 `team`、 `personal`、および `groupchat`です。|
+|`items.commands`|オブジェクトの配列|10|✔️|ボットがサポートするコマンドの配列:<br>`title`: ボット コマンドの名前 (文字列、32)<br>`description`: コマンド構文とその引数 (文字列、128) の簡単な説明または例。|
 
 ### <a name="botscommandlistscommands"></a>bots.commandLists.command
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|title|string|12 |✔|ボット コマンド名。|
-|description|string|128 文字|✔|簡単なテキストの説明またはコマンド構文とその引数の例。|
+|title|string|12 |✔️|ボット コマンド名。|
+|description|string|128 文字|✔️|簡単なテキストの説明またはコマンド構文とその引数の例。|
 
 ## <a name="connectors"></a>コネクタ
 
@@ -529,9 +529,9 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`configurationUrl`|string|2048 文字|✔|コネクタを構成するときに使用する https:// URL。|
-|`scopes`|列挙型の配列|1|✔|コネクタが `team`のチャネルのコンテキストでエクスペリエンスを提供するか、個々のユーザーのみを対象としたエクスペリエンスを提供するかを指定します (`personal`)。現時点では、 `team` スコープのみがサポートされています。|
-|`connectorId`|string|64 文字|✔|[コネクタ開発者ダッシュボード](https://aka.ms/connectorsdashboard)の ID に一致するコネクタの一意の識別子です。|
+|`configurationUrl`|string|2048 文字|✔️|コネクタを構成するときに使用する https:// URL。|
+|`scopes`|列挙型の配列|1|✔️|コネクタが `team`のチャネルのコンテキストでエクスペリエンスを提供するか、個々のユーザーのみを対象としたエクスペリエンスを提供するかを指定します (`personal`)。現時点では、 `team` スコープのみがサポートされています。|
+|`connectorId`|string|64 文字|✔️|[コネクタ開発者ダッシュボード](https://aka.ms/connectorsdashboard)の ID に一致するコネクタの一意の識別子です。|
 
 ## <a name="composeextensions"></a>composeExtensions
 
@@ -546,8 +546,8 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 種類 | 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`botId`|string|64|✔|ボット フレームワークに登録されている、メッセージ拡張機能をサポートするボットの一意の Microsoft アプリ ID。 ID は、全体のアプリ ID と同じにできます。|
-|`commands`|オブジェクトの配列|10|✔|メッセージ拡張機能がサポートするコマンドの配列。|
+|`botId`|string|64|✔️|ボット フレームワークに登録されている、メッセージ拡張機能をサポートするボットの一意の Microsoft アプリ ID。 ID は、全体のアプリ ID と同じにできます。|
+|`commands`|オブジェクトの配列|10|✔️|メッセージ拡張機能がサポートするコマンドの配列。|
 |`canUpdateConfiguration`|ブール型|||メッセージ拡張機能の構成をユーザーが更新できるかどうかを示す値。既定値: **false** です。|
 |`messageHandlers`|オブジェクトの配列|5||特定の条件が満たされた場合にアプリを呼び出すことができるハンドラーの一覧。|
 |`messageHandlers.type`|string|||メッセージ ハンドラーの種類。`"link"`でなければなりません。|
@@ -561,8 +561,8 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`id`|string|64 文字|✔|コマンドの ID。|
-|`title`|string|32 文字|✔|ユーザーフレンドリーなコマンド名。|
+|`id`|string|64 文字|✔️|コマンドの ID。|
+|`title`|string|32 文字|✔️|ユーザーフレンドリーなコマンド名。|
 |`type`|string|64 文字||コマンドの種類。 `query` または `action` のいずれか。 既定: **クエリ**|
 |`description`|string|128 文字||このコマンドの目的を示すためにユーザーに表示される説明。|
 |`initialRun`|Boolean|||ブール値は、コマンドがパラメーターなしで最初に実行されるかどうかを示します。既定値は **false** です。|
@@ -573,15 +573,15 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |`taskInfo.width`|string|||ダイアログの幅 - ピクセル単位の数値、または '大'、'中'、'小' などの既定のレイアウト。|
 |`taskInfo.height`|string|||ダイアログの高さ - ピクセル単位の数値、または '大'、'中'、'小' などの既定のレイアウト。|
 |`taskInfo.url`|string|||初期 Web ビュー URL。|
-|`parameters`|オブジェクトの配列|5 個の項目|✔|コマンドが取得するパラメーターの一覧。 最小: 1; 最大: 5。|
-|`parameters.name`|string|64 文字|✔|クライアントに表示されるパラメーターの名前。パラメーター名はユーザー要求に含まれます。|
-|`parameters.title`|string|32 文字|✔|パラメーターのユーザーフレンドリーなタイトル。|
+|`parameters`|オブジェクトの配列|5 個の項目|✔️|コマンドが取得するパラメーターの一覧。 最小: 1; 最大: 5。|
+|`parameters.name`|string|64 文字|✔️|クライアントに表示されるパラメーターの名前。パラメーター名はユーザー要求に含まれます。|
+|`parameters.title`|string|32 文字|✔️|パラメーターのユーザーフレンドリーなタイトル。|
 |`parameters.description`|string|128 文字||このパラメーターの目的を説明するユーザーフレンドリーな文字列。|
 |`parameters.value`|string|512 文字||パラメーターの初期値。 現在、値はサポートされていません|
 |`parameters.inputType`|string|128 文字||`fetchTask: true` のタスク モジュールに表示されるコントロールの種類を定義します。`text, textarea, number, date, time, toggle, choiceset`の 1 つ。|
 |`parameters.choices`|オブジェクトの配列|10 個||`choiceset` の選択オプションです。 `parameter.inputType` が `choiceset` である場合にのみ使用してください。|
-|`parameters.choices.title`|string|128 文字|✔|選択したタイトル。|
-|`parameters.choices.value`|string|512 文字|✔|Value of the choice.|
+|`parameters.choices.title`|string|128 文字|✔️|選択したタイトル。|
+|`parameters.choices.value`|string|512 文字|✔️|Value of the choice.|
 
 ## <a name="permissions"></a>アクセス許可
 
@@ -632,8 +632,8 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`id`|string|36 文字|✔|Azure AD のアプリケーション ID を指定します。 この ID は GUID である必要があります。|
-|`resource`|string|2048 文字|✔|SSO の認証トークンを取得するためのアプリのリソース URL。 </br> **注:** SSO を使用していない場合は、エラー応答を回避するために、このフィールドにダミーの文字列値 (たとえば、<https://notapplicable>) をアプリ マニフェストに入力してください。 |
+|`id`|string|36 文字|✔️|Azure AD のアプリケーション ID を指定します。 この ID は GUID である必要があります。|
+|`resource`|string|2048 文字|✔️|SSO の認証トークンを取得するためのアプリのリソース URL。 </br> **注:** SSO を使用していない場合は、エラー応答を回避するために、このフィールドにダミーの文字列値 (たとえば、<https://notapplicable>) をアプリ マニフェストに入力してください。 |
 
 ## <a name="graphconnector"></a>graphConnector
 
@@ -643,7 +643,7 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`notificationUrl`|string|2048 文字|✔|アプリケーションの Graph コネクタ通知を送信する URL。|
+|`notificationUrl`|string|2048 文字|✔️|アプリケーションの Graph コネクタ通知を送信する URL。|
 
 ## <a name="showloadingindicator"></a>showLoadingIndicator
 
@@ -676,9 +676,9 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`type`|string|32 文字|✔|通知の種類。 *以下を参照してください*。|
-|`description`|string|128 文字|✔|通知の簡単な説明。 *以下を参照してください*。|
-|`templateText`|string|128 文字|✔|例: "あなたに {actor} が作成したタスク {taskId}"|
+|`type`|string|32 文字|✔️|通知の種類。 *以下を参照してください*。|
+|`description`|string|128 文字|✔️|通知の簡単な説明。 *以下を参照してください*。|
+|`templateText`|string|128 文字|✔️|例: "あなたに {actor} が作成したタスク {taskId}"|
 
 ```json
 {
@@ -796,7 +796,7 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 
 |名前| 型|最大サイズ|必須|説明|
 |---|---|---|---|---|
-|`offerId`| string | 2,048 文字 | ✔ | パブリッシャー ID とオファー ID を含む一意の識別子。 [パートナー センター](https://partner.microsoft.com/dashboard)で確認できます。文字列は `publisherId.offerId`として書式設定する必要があります。|
+|`offerId`| string | 2,048 文字 | ✔️ | パブリッシャー ID とオファー ID を含む一意の識別子。 [パートナー センター](https://partner.microsoft.com/dashboard)で確認できます。文字列は `publisherId.offerId`として書式設定する必要があります。|
 
 ## <a name="meetingextensiondefinition"></a>meetingExtensionDefinition
 
@@ -812,12 +812,12 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 
 |名前| 型|最大サイズ|必須 |説明|
 |---|---|---|---|---|
-|`id`|||✔| シーンの一意の識別子。 この ID は GUID である必要があります。 |
-|`name`| string | 128 文字 |✔| シーンの名前。 |
-|`file`|||✔| シーンの metadata json ファイルへの相対ファイル パス。 |
-|`preview`|||✔| シーンの PNG プレビュー アイコンへの相対ファイル パス。 |
-|`maxAudience`| integer | 50  |✔| シーンでサポートされている対象ユーザーの最大数。 |
-|`seatsReservedForOrganizersOrPresenters`| integer | 50 |✔| 開催者または発表者用に予約されたシートの数。|
+|`id`|||✔️| シーンの一意の識別子。 この ID は GUID である必要があります。 |
+|`name`| string | 128 文字 |✔️| シーンの名前。 |
+|`file`|||✔️| シーンの metadata json ファイルへの相対ファイル パス。 |
+|`preview`|||✔️| シーンの PNG プレビュー アイコンへの相対ファイル パス。 |
+|`maxAudience`| integer | 50  |✔️| シーンでサポートされている対象ユーザーの最大数。 |
+|`seatsReservedForOrganizersOrPresenters`| integer | 50 |✔️| 開催者または発表者用に予約されたシートの数。|
 
 ## <a name="authorization"></a>承認
 
@@ -842,8 +842,8 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 
 |名前| 型|最大サイズ|必須 |説明|
 |---|---|---|---|---|
-|`type`|string||✔| リソース固有のアクセス許可の種類。オプション: `Application` と `Delegated`。|
-|`name`|string|128 文字|✔|リソース固有のアクセス許可の名前。 詳細については、「[リソース固有のアプリケーションのアクセス許可](#resource-specific-application-permissions)」および「[リソース固有の委任されたアクセス許可](#resource-specific-delegated-permissions)」を参照してください|
+|`type`|string||✔️| リソース固有のアクセス許可の種類。オプション: `Application` と `Delegated`。|
+|`name`|string|128 文字|✔️|リソース固有のアクセス許可の名前。 詳細については、「[リソース固有のアプリケーションのアクセス許可](#resource-specific-application-permissions)」および「[リソース固有の委任されたアクセス許可](#resource-specific-delegated-permissions)」を参照してください|
 
 #### <a name="resource-specific-application-permissions"></a>リソース固有のアプリケーションのアクセス許可
 

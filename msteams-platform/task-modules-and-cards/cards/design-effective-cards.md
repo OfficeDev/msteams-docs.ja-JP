@@ -1,15 +1,15 @@
 ---
 title: アプリのアダプティブ カードのデザイン
-description: Teams のアダプティブ カードをデザインして、Microsoft Teams UI Kit を取得するする方法を説明します。
+description: このモジュールでは、Teams のアダプティブ カードをデザインして、Microsoft Teams UI Kit を取得するする方法を説明します。
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 1575cfb4e5c97aaf5b4b849a32f3244b3d0626c7
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: f734f228575c3152d4f9498da6a7215cd1a98b8b
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103903"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142662"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Microsoft Teams のアプリのアダプティブ カードの設計
 
@@ -398,7 +398,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 # <a name="design"></a>[デザイン](#tab/design)
 
-表示しているサイズを変更する必要がない場合は、列を特定のピクセル幅に設定します。 この例では、50 ピクセルのサイズの左側の列を示していますが、サムネイルの横の説明ではカードの長さを伸ばしています
+表示しているサイズを変更する必要がない場合は、列を特定のピクセル幅に設定します。 この例では、50 ピクセルのサイズの左側の列を示していますが、サムネイルの横の説明ではカードの長さを伸ばしています。
 
 :::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="画像は、アダプティブ カードで列幅を設定する方法を示しています。":::
 

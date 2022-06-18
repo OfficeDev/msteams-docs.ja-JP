@@ -1,17 +1,16 @@
 ---
 title: アダプティブ カード タブを構築する
 author: KirtiPereira
-description: アクティビティの呼び出し、タスク モジュールのワークフローの理解、認証など、コード例を含むアダプティブ カードを使用したタブの作成について学習します。
+description: このモジュールでは、アクティビティの呼び出し、タスク モジュールのワークフローの理解、認証など、コード例を含むアダプティブ カードを使用したタブの作成について学習します。
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-keywords: アダプティブ カードの個人用アプリ認証データ フロー
-ms.openlocfilehash: 3c919cb6185481306985adfe9402ba0c31aac584
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: c71c8199e1606a7d36f2cdbd553ac5232b9a7926
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65110289"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143999"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>アダプティブ カードを使用してタブをビルドする
 

@@ -1,17 +1,17 @@
 ---
 title: Teams アプリを構築するためのアカウントを準備する
 author: zyxiaoyuer
-description: Teams アプリを構築するためのアカウントを準備する
+description: このモジュールでは、Microsoft 365 アカウントと開発者プログラムを使用して Teams アプリをビルドするアカウントを準備する方法について説明します。 バックエンド リソースをホストする Azure アカウント
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: a7b830ef0aba9b7e46a10d67de128aa9f3076eeb
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: f359488788c31941ea90bedb02c710c28fb98366
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66122916"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142214"
 ---
 # <a name="prepare-accounts-to-build-teams-apps"></a>Teams アプリを構築するためのアカウントを準備する
 

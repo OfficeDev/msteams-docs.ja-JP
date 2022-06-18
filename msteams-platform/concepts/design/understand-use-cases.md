@@ -1,16 +1,16 @@
 ---
 title: アプリのユース ケースと Teams 機能を理解する
 author: heath-hamilton
-description: この記事では、Microsoft Teams アプリの機能について説明します。また、Teams アプリを計画し、アプリ ユーザーとそのニーズ、Teams アプリで解決できるユーザーの問題を理解し、ユーザー認証とオンボーディング エクスペリエンスを計画します。
+description: この記事では、Microsoft Teams アプリの機能を学習し、Teams アプリと機能を計画および理解し、Teams アプリが解決するユーザーの問題についても学習します。
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: dbed78461fd39f4442c67ac7ec7523ca5cc09ba5
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: c2fc61024a9f0c2d9bcf21b549e226b0d264305d
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65104379"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142473"
 ---
 # <a name="understand-your-use-cases"></a>ユース ケースを理解する
 

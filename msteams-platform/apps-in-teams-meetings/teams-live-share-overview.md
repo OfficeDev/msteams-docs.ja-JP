@@ -4,12 +4,12 @@ description: このモジュールでは、Microsoft Live Share SDK とそのユ
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: 5fa509ee7835db80a99487ed7d42ab7d6ed8341d
-ms.sourcegitcommit: 09ee0305b827ad6d1368d892db3824c5dbad886f
+ms.openlocfilehash: dc05093f69627cc5872e25113e1ca2ca680c07c7
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65759656"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142501"
 ---
 ---
 
@@ -33,12 +33,12 @@ Live Share SDK は、数行のコードで各会議に関連付けられた特�
 
 Live Share SDK の主な利点を次に示します。
 
-* 手間のいらないセッション管理とセキュリティ
-* ステートフル分散データ構造とステートレス分散データ構造
-* ビデオとオーディオを簡単に同期するためのメディア拡張機能
-* 役割検証を使用して会議の特権を尊重する
-* 待ち時間が短く、無料で完全に管理されたサービス
-* インテリジェント オーディオ ダッキング
+* 手間のいらないセッション管理とセキュリティ。
+* ステートフル分散データ構造とステートレス分散データ構造。
+* ビデオとオーディオを簡単に同期するためのメディア拡張機能。
+* 役割検証を使用して会議の特権を尊重する。
+* 待ち時間が短く、無料で完全に管理されたサービス。
+* インテリジェント オーディオ ダッキング。
 
 :::image type="content" source="../assets/images/teams-live-share/Teams-live-share-schematics.png" alt-text="Teams Live Share":::
 

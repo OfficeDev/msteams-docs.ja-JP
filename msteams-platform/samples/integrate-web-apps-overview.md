@@ -5,12 +5,12 @@ description: この記事では、Web アプリケーションとデバイス機
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: a5394962594acf60e88bff0c7449c17a2a4b7c17
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 73fb039886d47a5f011b1dcfb9a8a3a46cb4ff6f
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123539"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144271"
 ---
 # <a name="integrate-web-apps"></a>Web アプリを統合する
 
@@ -33,8 +33,8 @@ ms.locfileid: "66123539"
 
 低コード プラットフォームは、ソフトウェア開発への直感的なアプローチを提供し、アプリケーションとプロセスを構築するためのコーディングをほとんどまたはまったく必要としません。 低コード プラットフォームを使用して、カスタム アプリを簡単に作成できます。 これらのプラットフォームは、ビジュアル インターフェイス、バック エンド サービスへのコネクタ、およびアプリケーションを構築、デバッグ、展開、および維持するための組み込みのアプリ ライフサイクル管理システムで構成されています。 Microsoft は、低コード属性を使用して Teams 互換アプリを迅速に構築するために、次の革新的なゲートウェイを提供しています。
 
-* Microsoft Power Platform
-* Microsoft Teams アプリ テンプレート
+* Microsoft Power Platform。
+* Microsoft Teams アプリ テンプレート。
 
 ## <a name="microsoft-power-platform"></a>Microsoft Power Platform
 

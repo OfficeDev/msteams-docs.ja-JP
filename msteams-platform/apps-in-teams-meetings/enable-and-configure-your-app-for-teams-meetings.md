@@ -1,15 +1,15 @@
 ---
 title: Teams 会議用アプリを有効化して構成する
 author: surbhigupta
-description: Teams 会議やさまざまな会議シナリオのためのアプリを有効化して構成し、アプリ マニフェストを更新し、機能 (会議中のダイアログ、共有会議ステージ、会議のサイドパネルなど) を構成します
+description: Teams 会議やさまざまな会議シナリオのためのアプリを有効化して構成し、アプリ マニフェストを更新し、機能などを構成する方法について説明します。
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 20253da4688009baabb746f3e71d0af47b2455d6
-ms.sourcegitcommit: f15bd0e90eafb00e00cf11183b129038de8354af
+ms.openlocfilehash: e7286399d27533d816e20f6b22e45f2526efdbe1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65111319"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142592"
 ---
 # <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Teams 会議用アプリを有効化して構成する
 
@@ -37,10 +37,10 @@ Teams 会議用アプリを有効にするには、アプリ マニフェスト�
 
 > [!NOTE]
 >
-> * [マニフェスト スキーマ](../resources/schema/manifest-schema-dev-preview.md)を使用してアプリ マニフェストを更新する必要があります。
 > * 会議のアプリには `groupchat` スコープが必要です。 `team` スコープは、チャネル内のタブでのみ機能します。
+> * 会議のアプリでは、次のコンテキストを使用できます: `meetingChatTab`、`meetingDetailsTab`、`meetingSidePanel`、`meetingStage`。
 
-アプリ マニフェストには、次のコード スニペットを含める必要があります。
+次のコード スニペットは、Teams 会議のアプリで使用される構成可能なタブの例です。
 
 ```json
 
@@ -114,8 +114,9 @@ Teams 会議は、組織の共同作業エクスペリエンスを提供しま�
 会議チャットで **@** キーを入力し、**[ボットを取得]** を選択します。
 
 > [!NOTE]
+>
 > * 会議内ダイアログでは、会議中のダイアログが表示され、ユーザーがアクセスできるアダプティブ カードが会議チャットに同時に投稿されます。 会議チャットのアダプティブ カードは、会議に出席しているユーザーや、Teams アプリが最小化されている場合に役立ちます。
-> * ユーザー ID は[タブ SSO](../tabs/how-to/authentication/auth-aad-sso.md) を使用して確認する必要があります。 認証後、アプリは `GetParticipant` API を使用してユーザー ロールを取得できます。
+> * ユーザー ID は[タブ SSO](../tabs/how-to/authentication/tab-sso-overview.md) を使用して確認する必要があります。 認証後、アプリは `GetParticipant` API を使用してユーザー ロールを取得できます。
 > * ユーザー ロールに基づいて、アプリにはロール固有のエクスペリエンスを提供する機能があります。 たとえば、ポーリング アプリでは、開催者と発表者のみが新しい投票を作成できます。
 > * ロールの割り当ては会議中に変更できます。 詳細については、「[Teams 会議での役割](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019)」を参照してください。
 
@@ -184,6 +185,7 @@ Teams 会議は、組織の共同作業エクスペリエンスを提供しま�
 アプリの特定の部分をステージに共有するには、Teams クライアント SDK ライブラリで関連 API を呼び出す必要があります。詳細については、「[API リファレンス](API-references.md)」を参照してください。
 
 > [!NOTE]
+>
 > * アプリの特定の部分をステージに共有するには、Teams マニフェスト バージョン 1.12 以降を使用します。
 > * アプリの特定の部分をステージに共有することは、Teams デスクトップ クライアントでのみサポートされています。
 

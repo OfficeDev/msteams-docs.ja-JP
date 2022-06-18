@@ -1,16 +1,15 @@
 ---
 title: カード内のテキストの書式設定
-description: Microsoft Teams でのカード テキストの書式設定について説明します
-keywords: teams ボット カード書式
+description: このモジュールでは、Microsoft Teams でのカード テキストの書式設定と、マークダウンを使用したカードの書式設定について説明します。
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: 9598ea8f241388e982d0ce0e05de0e5ed0b9e407
-ms.sourcegitcommit: 0117c4e750a388a37cc189bba8fc0deafc3fd230
+ms.openlocfilehash: b019c95b6cd8be32ef8d6d3ab10934cc8bcc56a1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65103952"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66144209"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams のカードの書式設定
 

@@ -1,18 +1,17 @@
 ---
 title: プライベート タブを作成する
 author: laujan
-description: Node.js を使用して、Microsoft Teams 用の Yeoman Generator、ASP.NET Core、ASP.NET Core MVC を使用した個人用タブを作成し、アプリ マニフェストを更新するためのクイック スタート ガイド。
+description: このモジュールでは、Node.js を使用して、Microsoft Teams 用の Yeoman Generator、ASP.NET Core、ASP.NET Core MVC を使用した個人用タブを作成し、アプリ マニフェストを更新する方法について説明します。
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
-keywords: yeoman ASP.NET MVC パッケージ appmanifest 会話ドメイン アクセス許可ストア
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 9da0078813d43584d415ccb9425a529decdc78bd
-ms.sourcegitcommit: 929391b6c04d53ea84a93145e2f29d6b96a64d37
+ms.openlocfilehash: 9cceb8f75976dcb7606d09a027e66c775e226365
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65673021"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143992"
 ---
 # <a name="create-a-personal-tab"></a>プライベート タブを作成する
 
@@ -296,10 +295,10 @@ gulp ngrok-serve
 
 1. Visual Studioで **F5** を選択するか、アプリケーションの [**デバッグ**] メニューから [**デバッグの開始**] を選択して、アプリケーションが正しく読み込まれたかどうかを確認します。 ブラウザーで、次の URL に移動します。
 
-    * <http://localhost:3978/>
-    * <http://localhost:3978/personalTab>
-    * <http://localhost:3978/privacy>
-    * <http://localhost:3978/tou>
+    * `<http://localhost:3978/>`
+    * `<http://localhost:3978/personalTab>`
+    * `<http://localhost:3978/privacy>`
+    * `<http://localhost:3978/tou>`
 
 <details>
 <summary><b>ソース コードを確認する</b></summary>
@@ -449,10 +448,10 @@ ngrok http 3978 --host-header=localhost
 
 1. Visual Studio で **F5** を選択するか、アプリケーションの [**デバッグ**] メニューから [**デバッグの開始**] を選択して、アプリケーションが正しく読み込まれたかどうかを確認します。 ブラウザーで、次の URL に移動します。
 
-    * <http://localhost:3978>
-    * <http://localhost:3978/personalTab>
-    * <http://localhost:3978/privacy>
-    * <http://localhost:3978/tou>
+    * `<http://localhost:3978>`
+    * `<http://localhost:3978/personalTab>`
+    * `<http://localhost:3978/privacy>`
+    * `<http://localhost:3978/tou>`
 
 <details>
 <summary><b>ソース コードを確認する</b></summary>
@@ -552,7 +551,7 @@ ngrok http 3978 --host-header=localhost
 
 1. [**開発者ポータル**](https://dev.teams.microsoft.com/home)に移動します。
 
-1. **[アプリ]** を開き、**[アプリのインポート]** を選択します。
+1. **アプリ** を開き、[**アプリのインポート**] を選択します。
 
 1. アプリ パッケージの名前は **tab.zip** です。 次のパスで使用できます:
 

@@ -1,17 +1,17 @@
 ---
 title: バックグランド プロセスのデバッグ
 author: zyxiaoyuer
-description: ローカル デバッグ中の Visual Studio Code と Teams Toolkit の機能
+description: このモジュールでは、ローカル デバッグ中に Visual Studio のコードと Teams Toolkit の機能を学習し、Teams アプリを登録して構成します
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: d692f3f6869767e4b9948b36e521a56d799ebe4b
-ms.sourcegitcommit: ff31cbe4840191f004d8fc61dd4fd93d35fcaecb
+ms.openlocfilehash: f2a94d92a157df20e956776f3a7e901219a45ffd
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65938927"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143586"
 ---
 # <a name="debug-background-processes"></a>バックグランド プロセスのデバッグ
 
@@ -51,8 +51,8 @@ Teams Toolkit は、デバッグ プロセス中に次の前提条件を確認�
 
   | プラットフォーム  | ソフトウェア|
   | --- | --- |
-  |Windows、macOs (x64)、Linux | **3.1 (推奨)**、5.0、6.0 |
-  |macOs (arm64) |6.0 |
+  |Windows、macOS (x64)、Linux | **3.1 (推奨)**、5.0、6.0 |
+  |macOS (arm64) |6.0 |
 
 * 開発証明書。Windows または MacOS のタブにローカルホストの開発証明書がインストールされていない場合、Teams Toolkit によってインストールが求められます。
 * `api/extensions.csproj` に定義されている Azure Functions バインド拡張機能。Azure Functions バインド拡張機能がインストールされていない場合、Teams Toolkit は Azure Functions バインド拡張機能をインストールします。

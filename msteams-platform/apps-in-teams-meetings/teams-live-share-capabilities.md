@@ -4,12 +4,12 @@ description: このモジュールでは、Live Share SDK 機能、RSC アクセ
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: c6ea321cf9a0bee33b44c54f273662663f23b433
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: f5986515f9916a0138524b919dca46d0cf0ee8d4
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756605"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66143243"
 ---
 ---
 
@@ -29,13 +29,13 @@ Live Share SDK は、最小限の労力で会議拡張機能の `sidePanel` と 
 **npm**
 
 ```bash
-$ npm install @microsoft/live-share --save
+npm install @microsoft/live-share --save
 ```
 
 **Yarn**
 
 ```bash
-$ yarn add @microsoft/live-share
+yarn add @microsoft/live-share
 ```
 
 ## <a name="register-rsc-permissions"></a>RSC アクセス許可を登録する
@@ -91,10 +91,10 @@ $ yarn add @microsoft/live-share
 
 ユーザーの会議に関連付けられたセッションに参加するには、次の手順に従います。
 
-1. Teams クライアント SDK を初期化する
-2. [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) を初期化する
-3. 同期する必要のあるデータ構造を定義します。 たとえば、`SharedMap` のように指定します。
-4. コンテナーに参加する
+1. Teams クライアント SDK を初期化します。
+2. [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) を初期化します。
+3. 同期する必要のあるデータ構造を定義します。 たとえば、「 `SharedMap` 」のように入力します。
+4. コンテナーに参加します。
 
 例:
 

@@ -1,15 +1,14 @@
 ---
 title: カードの種類
-description: Teams の Bot で使用できるすべてのカードとカード アクションについての説明
+description: このモジュールでは、Teams のボットで使用可能なカードとカード アクションについて説明し、ヒーロー、サムネイル、アダプティブ カードを作成します
 ms.localizationpriority: high
-keywords: Bot のカード リファレンス
 ms.topic: reference
-ms.openlocfilehash: 56dc77dfbb9d7d67d5846db13eca7351636814af
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 4633b1399068fffe95a9fff4b5320426617ae1d1
+ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032992"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66142627"
 ---
 # <a name="types-of-cards"></a>カードの種類
 
@@ -63,13 +62,13 @@ App Studio からヒーロー カード、サムネイル カード、アダプ�
 
 | カードの種類 | ボット | メッセージ拡張機能のプレビュー | メッセージ拡張機能の結果 | タスク モジュール | Webhookの送信 | 受信 Webhook | Office 365 コネクタ |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| アダプティブ カード | ✔ | ✖ | ✔ | ✔ | ✔ | ✔ | ✖ |
-| Office 365 コネクタ カード | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
-| ヒーロー カード | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
-| サムネイル カード | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
-| リスト カード | ✔ | ✖ | ✖ | ✖ | ✔ | ✔ | ✖ |
-| レシート カード | ✔ | ✖ | ✖ | ✖ | ✖ | ✔ | ✖ |
-| サインイン カード | ✔ | ✖ | ✖ | ✖ | ✖ | ✖ | ✖ |
+| アダプティブ カード | ✔️ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
+| Office 365 コネクタ カード | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ | ✔️ |
+| ヒーロー カード | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ✔️ | ❌ |
+| サムネイル カード | ✔️ | ✔️ | ✔️ | ❌ | ✔️ | ✔️ | ❌ |
+| リスト カード | ✔️ | ❌ | ❌ | ❌ | ✔️ | ✔️ | ❌ |
+| レシート カード | ✔️ | ❌ | ❌ | ❌ | ❌ | ✔️ | ❌ |
+| サインイン カード | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 > [!NOTE]
 > 受信 Webhooks のアダプティブ カードでは、ネイティブのアダプティブ カード スキーマ要素 (ただし、`Action.Submit` を除く) がすべて完全にサポートされます。 サポートされているアクションは [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html)、[**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html)、[**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)、および [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)です。
@@ -121,7 +120,7 @@ App Studio からヒーロー カード、サムネイル カード、アダプ�
 
 | Teams の Bot | メッセージ拡張機能  | コネクタ | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 > [!NOTE]
 >
@@ -304,7 +303,7 @@ App Studio からヒーロー カード、サムネイル カード、アダプ�
 
 | Teams の Bot | メッセージ拡張機能  | コネクタ | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 ### <a name="properties-of-a-hero-card"></a>ヒーロー カードのプロパティ
 
@@ -371,7 +370,7 @@ App Studio からヒーロー カード、サムネイル カード、アダプ�
 
 | Teams の Bot | メッセージ拡張機能  | コネクタ | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ |✔ |
+| ✔️ | ❌ | ❌ |✔️ |
 
 ### <a name="properties-of-a-list-card"></a>リスト カードのプロパティ
 
@@ -449,7 +448,7 @@ App Studio からヒーロー カード、サムネイル カード、アダプ�
 
 | Teams の Bot | メッセージ拡張機能  | コネクタ | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✔ | ✖ |
+| ✔️ | ✔️ | ✔️ | ❌ |
 
 ### <a name="properties-of-the-office-365-connector-card"></a>Office 365 コネクタ カードのプロパティ
 
@@ -571,7 +570,7 @@ Teams ではレシート カードがサポートされています。これに�
 
 | Teams の Bot | メッセージ拡張機能  | コネクタ | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 ### <a name="example-of-a-receipt-card"></a>レシート カードの例
 
@@ -645,7 +644,7 @@ Teams のサインイン カードは Bot Framework のサインイン カード
 
 | Teams の Bot | メッセージ拡張機能  | コネクタ | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ | ✔ |
+| ✔️ | ❌ | ❌ | ✔️ |
 
 ### <a name="additional-information-on-signin-cards"></a>サインイン カードに関する追加情報
 
@@ -664,7 +663,7 @@ Teams のサインイン カードは Bot Framework のサインイン カード
 
 | Teams の Bot | メッセージ拡張機能  | コネクタ | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 :::image type="content" source="../../assets/images/Cards/thumbnail.png" alt-text="サムネイル カード":::
 
@@ -747,7 +746,7 @@ Teams のサインイン カードは Bot Framework のサインイン カード
 
 | Teams の Bot | メッセージ拡張機能  | コネクタ | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✖ | ✖ | ✔ |
+| ✔️ | ❌ | ❌ | ✔️ |
 
 > [!NOTE]
 > カルーセルでは、メッセージごとに最大 10 枚のカードを表示することができます。
@@ -941,7 +940,7 @@ Teams のサインイン カードは Bot Framework のサインイン カード
 
 | Teams の Bot | メッセージ拡張機能  | コネクタ | Bot Framework |
 | --- | --- | --- | --- |
-| ✔ | ✔ | ✖ | ✔ |
+| ✔️ | ✔️ | ❌ | ✔️ |
 
 #### <a name="example-of-a-list-collection"></a>リスト コレクションの例
 
