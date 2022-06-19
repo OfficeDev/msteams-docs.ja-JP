@@ -3,12 +3,12 @@ title: ディープ リンクの作成
 description: ディープ リンクを作成する方法と、タブを使用して Microsoft Teams アプリ内でディープ リンクを使用して移動する方法について説明します。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: bb0e9adf0541f428b46459598d41466d450bdca7
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: e5e9596c6049e899e6cc807b7ce2128b322a971e
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123718"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150681"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成
 
@@ -91,7 +91,7 @@ microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subE
 
 ### <a name="consume-a-deep-link-from-a-tab"></a>タブからディープ リンクを使用する
 
-ディープ リンクに移動すると、Microsoft Teams はタブに移動するだけで、サブページ ID が存在する場合に Microsoft Teams JavaScript ライブラリを使用して取得するメカニズムを提供します。
+ディープ リンクに移動すると、Microsoft Teams はタブに移動するだけで、サブページ ID が存在する場合に Teams JavaScript ライブラリを使用して取得するメカニズムを提供します。
 
 TeamsJS v1 の [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) 呼び出し (`microsoftTeams.getContext()`) は、`subPageId` プロパティ (TeamsJS v1 の subEntityId) を含むコンテキストで解決される promise を返します (タブがディープ リンクを介して移動される場合)。 詳細については、「[PageInfo インターフェース](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true)」を参照してください。
 
@@ -109,7 +109,7 @@ TeamsJS v1 の [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
 > [!NOTE]
-> ボットがディープ リンクを使用して `TextBlock` を含むメッセージを送信する場合、ユーザーがリンクを選択すると、新しいブラウザー タブが開きます。 これは、Chrome および Microsoft Teams デスクトップ アプリ (いずれも Linux で実行されています) で発生します。
+> ボットがディープ リンクを使用して `TextBlock` を含むメッセージを送信する場合、ユーザーがリンクを選択すると、新しいブラウザー タブが開きます。 これは、Chrome および Teams デスクトップ アプリ (いずれも Linux で実行されています) で発生します。
 > ボットが同じディープ リンク URL を `Action.OpenUrl` に送信した場合、ユーザーがリンクを選択すると、現在のブラウザ タブで Teams タブが開きます。 新しいブラウザー タブは開きません。
 
 <!--- TBD: Edit this article.
@@ -446,7 +446,7 @@ TeamsJS の強い型付き API の使用をお勧めしますが、手動で作�
 
 | サンプルの名前 | 説明 | C# |Node.js|
 |-------------|-------------|------|----|
-|Subentity ID を使用するディープ リンク  |ボット チャットからタブに消費するサブエンティティ ID へのディープ リンクを示す Microsoft Teams サンプル アプリ。|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
+|Subentity ID を使用するディープ リンク  | ボット チャットからタブに消費するサブエンティティ ID へのディープ リンクを示す Teams サンプル アプリ。|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
 ## <a name="see-also"></a>関連項目
 

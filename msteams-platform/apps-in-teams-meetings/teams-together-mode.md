@@ -3,12 +3,12 @@ title: カスタム Together モードのシーン
 description: カスタム Together モードシーンを操作する
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 047e2aa04bfb0196ab7a01e91ce54b01d61f64bf
-ms.sourcegitcommit: 61003a14e8a179e1268bbdbd9cf5e904c5259566
+ms.openlocfilehash: bf02350378b308a1a6aa4f914c03f3ad4a3d9142
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64736869"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150646"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Teams でのカスタム Together モードのシーン
 
@@ -24,7 +24,7 @@ Microsoft Teams の Custom Together モードシーンは、次のアクショ�
 
 :::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="シーン専用アプリを作成する" border="false":::
 
-シーン専用のアプリは、Microsoft Teams のアプリのままです。 Scene Studio は、バックグラウンドでアプリ パッケージの作成を処理します。 1 つのアプリ パッケージ内の複数のシーンが、ユーザーに対してフラット リストとして表示されます。
+シーン専用のアプリは、Teams のアプリのままです。 Scene Studio は、バックグラウンドでアプリ パッケージの作成を処理します。 1 つのアプリ パッケージ内の複数のシーンが、ユーザーに対してフラット リストとして表示されます。
 
 > [!NOTE]
 > ユーザーはモバイルから Together モードを開始できません。ただし、ユーザーがモバイル経由で会議に参加し、デスクトップから Together モードを有効にすると、ビデオをオンにしたモバイル ユーザーはデスクトップの Together モードで表示されます。
@@ -34,7 +34,7 @@ Microsoft Teams の Custom Together モードシーンは、次のアクショ�
 カスタムの Together モードシーンを使用するには、次の基本的な知識が必要です。
 
 * シーン内のシーンとシートを定義します。
-* Microsoft デベロッパー アカウントを持ち、Microsoft Teams [開発者ポータル](../concepts/build-and-test/teams-developer-portal.md) と App Studio について理解を深めます。
+* Microsoft デベロッパー アカウントを持ち、Teams [開発者ポータル](../concepts/build-and-test/teams-developer-portal.md) と App Studio について理解を深めます。
 * [アプリサイドローディングの概念](../concepts/deploy-and-publish/apps-upload.md)について説明します。
 * 管理者が [**カスタム アプリ**](../concepts/deploy-and-publish/apps-upload.md)をアップロードするアクセス許可を付与していることを確認し、アプリのセットアップポリシーと会議ポリシーの一部としてすべてのフィルターをそれぞれ選択します。
 
@@ -50,7 +50,7 @@ Microsoft Teams の Custom Together モードシーンは、次のアクショ�
 
 ## <a name="build-a-scene-using-the-scene-studio"></a>Scene Studio を使用してシーンを構築する
 
-Microsoft には、シーンを構築できる Scene Studio があります。 これは、 [シーン エディター ( Teams 開発者ポータル) ](https://dev.teams.microsoft.com/scenes)で使用できます。 このドキュメントでは、Microsoft Teams 開発者ポータルの Scene Studio について説明します。 インターフェイスと機能はすべて、App Studio シーン デザイナーで同じです。
+Microsoft には、シーンを構築できる Scene Studio があります。 これは、 [シーン エディター ( Teams 開発者ポータル) ](https://dev.teams.microsoft.com/scenes)で使用できます。 このドキュメントでは、Teams 開発者ポータルの Scene Studio について説明します。 インターフェイスと機能はすべて、App Studio シーン デザイナーで同じです。
 
 Scene Studio のコンテキスト内のシーンは、次の要素を含む成果物です。
 
@@ -106,9 +106,9 @@ Scene Studio を使用してシーンを構築するには、次の手順を実�
 
     ![スポットの割り当て](../assets/images/apps-in-meetings/assign-spot.png)
 
-1. [**保存**] を選択し、[**Teamsで表示**] を選択して、Microsoft Teams でシーンをすばやくテストします。
+1. [**保存**] を選択し、[**Teamsで表示**] を選択して、Teams でシーンをすばやくテストします。
 
-    * Teamsで [**表示**] を選択すると、Teams 開発者ポータルの [**アプリ**] ページで表示できる Microsoft Teams アプリが自動的に作成されます。
+    * Teamsで [**表示**] を選択すると、Teams 開発者ポータルの [**アプリ**] ページで表示できる Teams アプリが自動的に作成されます。
     * **Teamsで見る** を選択すると、シーンの背後に appmanifest.json であるアプリ パッケージが自動的に作成されます。 メニューから  **Apps** に移動し、自動的に作成されたアプリ パッケージにアクセスできます。
     * 作成したシーンを削除するには、上部のバー **シーン を削除する**] を選択します。
 
@@ -217,7 +217,7 @@ Custom Together Mode シーンでは、現在の参加者の拡大表示がサ�
 1. 新しいテスト会議を作成します。
 
     >[!NOTE]
-    > Scene Studio **プレビュー** を選択すると、シーンは Microsoft Teams にアプリとしてインストールされます。 これは、開発者が Scene Studio からシーンをテストして試すモデルです。 シーンがアプリとして出荷されると、ユーザーはこれらのシーンをシーン ギャラリーに表示します。
+    > Scene Studio **プレビュー** を選択すると、シーンは Teams にアプリとしてインストールされます。 これは、開発者が Scene Studio からシーンをテストして試すモデルです。 シーンがアプリとして出荷されると、ユーザーはこれらのシーンをシーン ギャラリーに表示します。
 
 1. 左上隅にある **ギャラリー** ドロップダウンから、[ **Together Mode]** を選択します。 [ **ピッカー** ] ダイアログ ボックスが表示され、追加されたシーンを使用できます。
 

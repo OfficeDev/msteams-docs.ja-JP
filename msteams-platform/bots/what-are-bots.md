@@ -5,12 +5,12 @@ description: このラーニング パスを使用して、Microsoft Teams の�
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 13f966d8c01cb6dcc9dc88fadaeb8ad0d348a2ff
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 8fef926e88709db9e1d74b6e56f643d3b048dd3b
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143712"
+ms.locfileid: "66150842"
 ---
 # <a name="bots-in-microsoft-teams"></a>Microsoft Teams のボット
 
@@ -18,7 +18,7 @@ ms.locfileid: "66143712"
 
 > [!IMPORTANT]
 > 現在、ボットは Government Community Cloud (GCC) と GCC-High で利用できますが、国防総省 (DOD) では利用できません。
-> 
+>
 > Microsoft Teams 内のボット アプリケーションは、 [Azure Bot Service](/azure/bot-service/channel-connect-teams) を介して GCC-High で利用できます。
 
 会話ボットを使用すると、ユーザーはテキスト、対話型カード、タスク モジュールを使用して Web サービスと対話できます。
@@ -43,9 +43,9 @@ ms.locfileid: "66143712"
 
 Graph API または Teams ボット API を使用して、ボットを介してファイルを送受信できます。 ボット[を介してファイルを送受信する方法](~/bots/how-to/bots-filesv4.md)を参照してください。
 
-レート制限は、Teams アプリケーションに使用されるボットを最適化するために使用されます。 Microsoft Teams とそのユーザーを保護するために、ボット API は受信要求のレート制限を提供します。 [Teamsでレート制限を使用してボットを最適化](~/bots/how-to/rate-limit.md)を参照してください。
+レート制限は、Teams アプリケーションに使用されるボットを最適化するために使用されます。 Teams とそのユーザーを保護するために、ボット API は受信要求のレート制限を提供します。 [Teamsでレート制限を使用してボットを最適化](~/bots/how-to/rate-limit.md)を参照してください。
 
-通話やオンライン会議用のMicrosoft Graph API により、Microsoft Teams アプリで音声とビデオを使用してユーザーと対話できるようになりました。「[通話と会議のボット](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)」を参照してください。
+通話やオンライン会議用の Microsoft Graph API により、Microsoft Teams アプリは音声とビデオを使用してユーザーと対話できるようになりました。 [通話と会議のボット](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)を参照してください。
 
 Teams ボット API を使用して、チャットまたはチームのメンバーの情報を取得できます。 [チームまたはチャット メンバーをフェッチするための Teams ボット API に対する変更](~/resources/team-chat-member-api-changes.md)を参照してください。
 

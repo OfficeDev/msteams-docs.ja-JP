@@ -5,12 +5,12 @@ description: 会話名簿、シングル メンバーまたはチームの詳細
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: fc138a66bd5a489133c11db8a24b2a9d6d06634d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 51e241aacce149dfab7371ab9c1d8f987134b67e
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143761"
+ms.locfileid: "66150695"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Teams の特定のコンテキストをボット用に取得する
 
@@ -208,7 +208,7 @@ Response body
 
 * * *
 
-単一のメンバーの詳細を取得した後、チームの詳細を取得できます。 現在、チームの情報を取得するには、Microsoft Teams ボット API `TeamsInfo.GetMemberDetailsAsync` (C# の場合) または `TeamsInfo.getTeamDetails` (TypeScript の場合) を使用します。
+単一のメンバーの詳細を取得した後、チームの詳細を取得できます。 現在、チームの情報を取得するには、Teams ボット API `TeamsInfo.GetMemberDetailsAsync` (C# の場合) または `TeamsInfo.getTeamDetails` (TypeScript の場合) を使用します。
 
 ## <a name="get-teams-details"></a>チームの詳細を取得する
 
@@ -283,7 +283,7 @@ Response body
 
 * * *
 
-チームの詳細を取得したら、チーム内のチャネルのリストを取得できます。 現在、チーム内のチャネルのリストの情報を取得するには、Microsoft Teams ボット API `TeamsInfo.GetTeamChannelsAsync` (C# の場合) または `TeamsInfo.getTeamChannels` (TypeScript API の場合) を使用します。
+チームの詳細を取得したら、チーム内のチャネルのリストを取得できます。 現在、チーム内のチャネルのリストの情報を取得するには、Teams ボット API `TeamsInfo.GetTeamChannelsAsync` (C# の場合) または `TeamsInfo.getTeamChannels` (TypeScript API の場合) を使用します。
 
 ## <a name="get-the-list-of-channels-in-a-team"></a>チーム内のチャネルの一覧を取得します。
 

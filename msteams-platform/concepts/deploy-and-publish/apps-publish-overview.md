@@ -5,12 +5,12 @@ ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 72f902b340653cd6d57eccaf7bbd21e7ad608ebc
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 0efbc1e18d7cec6324ecc4cbec762d7b94c32511
+ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123532"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66150800"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Microsoft Teams アプリを配布する
 
@@ -22,7 +22,7 @@ Microsoft Teams アプリは、個人、チーム、組織、またはそれを�
 
 ## <a name="create-your-app-package"></a>アプリ パッケージを作成する
 
-Microsoft Teams アプリを配布するには、有効なアプリ パッケージが必要です。  アプリ パッケージは、**アプリ マニフェスト** と **アプリ アイコン** を含む zip ファイルです。
+Teams アプリを配布するには、有効なアプリ パッケージが必要です。  アプリ パッケージは、**アプリ マニフェスト** と **アプリ アイコン** を含む zip ファイルです。
 
 ## <a name="upload-your-app-in-teams"></a>Teams でアプリをアップロードする
 
