@@ -4,12 +4,12 @@ description: このモジュールでは、Microsoft Teams用開発者ポータ�
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 948f22cf8f55a33e2d5b24b875678039fd101fc2
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 391d6c671bf7c34a734eed3202df50ebdc4f9eae
+ms.sourcegitcommit: e429131d01df7103a467df2c42cdfe41ab822b10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142368"
+ms.lasthandoff: 06/20/2022
+ms.locfileid: "66164242"
 ---
 # <a name="manage-your-teams-apps-using-developer-portal"></a>開発者ポータルを使用してTeams アプリを管理する
 
@@ -21,6 +21,31 @@ ms.locfileid: "66142368"
 >
 > * 現在、開発者ポータルは、Government Community Cloud (GCC)、GCC-High、または国防総省 (DOD) テナントでは使用できません。
 > * ただし、通常のテナントを使用して、開発者ポータルでアプリを構築し、アプリをダウンロードし、[Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true)を使用して国内のクラウドにアプリをアップロードすることができます。 詳細については、「 [国内クラウドデプロイ](/graph/deployments)」を参照してください。
+
+> [!IMPORTANT]
+> App Studio から開発者ポータルに移行する場合は、次の表に、開発者ポータルでサポートされている機能の詳細を示します。
+
+| 機能 | App Studio | 開発者ポータル |
+| --- | --- | --- |
+| アプリ分析* | ❌ | ✔️ |
+| アプリの機能-Bots | ✔️ | ✔️ |
+| アプリの機能-コネクタ | ✔️ | ✔️ |
+| アプリの機能-メッセージング拡張機能 | ✔️ | ✔️ |
+| アプリの機能 -会議拡張機能 | ❌ | ✔️ |
+| アプリの機能 -個人用アプリ | ✔️ | ✔️ |
+| アプリの機能 -タブ | ✔️ | ✔️ |
+| アプリ環境 | ❌ | ✔️ |
+| アプリの言語 | ✔️ | ✔️ |
+| アプリ マニフェストのプレビューとダウンロード | ✔️ | ✔️ |
+| アプリのプランと価格 | ❌ | ✔️ |
+| アプリの発行 | ✔️ | ✔️ |
+| アプリのアクセス許可 | ❌ | ✔️ |
+| 共同開発者とのアプリ共有-共有 | ❌ | ✔️ |
+| アプリの検証 | ✔️ | ✔️ |
+| 新しいアプリを作成する | ✔️ | ✔️ |
+| zip パッケージを付与する | ✔️ | ✔️ |
+
+\**アプリ分析は間もなく GA で利用できるようになります。*
 
 ## <a name="register-an-app"></a>アプリを登録します
 

@@ -3,12 +3,12 @@ title: Microsoft Teams 用の App Studio を開始する
 description: この記事では、アプリ スタジオをMicrosoft Teamsしてインストールするためのアプリ スタジオを使用してアプリを構築し、管理する方法について説明します。
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: de1a3bb355ce7f033cc1f41e3e42d3e97de6d0c1
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: cf9f4a144886c67b2c2c667683d62a65fc4ee9c4
+ms.sourcegitcommit: e429131d01df7103a467df2c42cdfe41ab822b10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150702"
+ms.lasthandoff: 06/20/2022
+ms.locfileid: "66164266"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Microsoft Teams 用の App Studio を使用してアプリを管理する
 
@@ -30,15 +30,15 @@ App Studio はTeams アプリであり、Teams ストアにあります。 [App 
 
 ストアで、App Studio を検索します。
 
-![ストアでの App Studio の入力](~/assets/images/get-started/storeteamsappstudio.png)
+:::image type="content" source="../../assets/images/get-started/StoreTeamsAppStudio.png" alt-text="ストアでの App Studio の入力":::
 
 App Studio タイルを選択して、アプリのインストール ページを開きます。
 
-![App Studio の構成](~/assets/images/get-started/teamsappstudioconfiguration.png)
+:::image type="content" source="../../assets/images/get-started/teamsAppStudioConfiguration.png" alt-text="App Studio の構成":::
 
 **[インストール]** を選択します。
 
-![App Studio](~/assets/images/get-started/teamsappstudio.png)
+:::image type="content" source="../../assets/images/get-started/TeamsAppStudio.png" alt-text="App Studio":::
 
 App Studio に参加したら、[ **マニフェスト エディター** ] タブを選択し、既存のアプリをインポートするか、新しいアプリを作成できます。
 
@@ -148,6 +148,32 @@ Teams のベスト プラクティスに従ってアプリを作成するのは�
 * タブ
 * テーブル
 * アイコン
+
+## <a name="app-studio-to-developer-portal"></a>App Studio から開発者ポータルへ
+
+App Studio は非推奨になります。開発者ポータルを使用できます。 次の表に、開発者ポータルでサポートされている機能の詳細を示します。
+
+| 機能 | App Studio | 開発者ポータル |
+| --- | --- | --- |
+| アプリ分析* | ❌ | ✔️ |
+| アプリの機能-Bots | ✔️ | ✔️ |
+| アプリの機能-コネクタ | ✔️ | ✔️ |
+| アプリの機能-メッセージング拡張機能 | ✔️ | ✔️ |
+| アプリの機能 -会議拡張機能 | ❌ | ✔️ |
+| アプリの機能 -個人用アプリ | ✔️ | ✔️ |
+| アプリの機能 -タブ | ✔️ | ✔️ |
+| アプリ環境 | ❌ | ✔️ |
+| アプリの言語 | ✔️ | ✔️ |
+| アプリ マニフェストのプレビューとダウンロード | ✔️ | ✔️ |
+| アプリのプランと価格 | ❌ | ✔️ |
+| アプリの発行 | ✔️ | ✔️ |
+| アプリのアクセス許可 | ❌ | ✔️ |
+| 共同開発者とのアプリ共有-共有 | ❌ | ✔️ |
+| アプリの検証 | ✔️ | ✔️ |
+| 新しいアプリを作成する | ✔️ | ✔️ |
+| zip パッケージを付与する | ✔️ | ✔️ |
+
+\**アプリ分析は間もなく GA で利用できるようになります。*
 
 ## <a name="see-also"></a>関連項目
 
