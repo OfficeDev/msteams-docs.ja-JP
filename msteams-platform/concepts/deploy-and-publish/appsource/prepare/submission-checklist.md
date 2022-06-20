@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: c71579900f910d2677ab0d48bab5a37853dfb69c
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 29f98b024330c562e82722ddefffe68e94543bf6
+ms.sourcegitcommit: 46a2955f89b6a0e72449732eaa2bfea274191f67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123168"
+ms.lasthandoff: 06/20/2022
+ms.locfileid: "66163493"
 ---
 # <a name="prepare-your-microsoft-teams-store-submission"></a>Microsoft Teams のストア送信を準備する
 
@@ -19,7 +19,7 @@ Microsoft Teams アプリの設計、構築、テストが完了しました。 
 Microsoft Teams アプリ ストアへのアプリの発行の詳細については、次のビデオを参照してください。
 <br>
 
-> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4WG3l>]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
 <br>
 
 アプリを[パートナー センター](/office/dev/store/use-partner-center-to-submit-to-appsource)に送信する前に、次の手順を実行していることを確認してください。
