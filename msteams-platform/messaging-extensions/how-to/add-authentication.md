@@ -1,16 +1,16 @@
 ---
 title: メッセージ拡張機能に認証を追加する
 author: surbhigupta
-description: このモジュールでは、コード例とサンプルを使用してメッセージング拡張機能に認証を追加する方法について説明します
+description: この記事では、コード例とサンプルを使用してメッセージング拡張機能に認証を追加する方法について説明します。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: cca9aef8e08b9d997497e1531db928d8e29d7eac
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a400c7f367eddecf8e3c1b761d46b391deca3f86
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143544"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190274"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>メッセージ拡張機能に認証を追加する
 
@@ -41,11 +41,11 @@ ms.locfileid: "66143544"
 1. ユーザーがサインインしたら、ウィンドウを閉じて **認証コード** を Teams クライアントに送信する必要があります。
 1. Teams クライアントは、手順 5 で渡された認証コードを含むクエリをサービスに再発行します。
 
-サービスは、手順 6 で受け取った認証コードが手順 5 の認証コードと一致することを確認する必要があります。 これにより、悪意のあるユーザーがサインイン フローのなりすましや侵害を試みないようにします。 これにより、安全な認証シーケンスを終了させるための 「ループを閉じる」 効果があります。
+サービスは、手順 6 で受信した認証コードが手順 5 と一致することを確認する必要があります。 この手順により、悪意のあるユーザーがサインイン フローのスプーフィングや侵害を試みないようにします。 フローは効果的に "ループを閉じる" ので、セキュリティで保護された認証シーケンスを完了します。
 
 ### <a name="respond-with-a-sign-in-action"></a>サインイン アクションで応答する
 
-認証されていないユーザーにサインインを求めるには、認証 URL を含む `openUrl` 型の推奨アクションで応答します。
+認証されていないユーザーにサインインを求めるには、認証 URL を含む種類 `openUrl` の推奨アクションで応答します。
 
 #### <a name="response-example-for-a-sign-in-action"></a>サインイン アクションの応答の例
 

@@ -1,16 +1,16 @@
 ---
 title: メッセージ拡張機能の SSO サポート
 author: KirtiPereira
-description: このモジュールでは、コード サンプルを使用してメッセージング拡張機能のシングル サインオン (SSO) サポートを有効にする方法について説明します。
+description: この記事では、コード サンプルを使用してメッセージング拡張機能のシングル サインオン (SSO) サポートを有効にする方法について説明します。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: a0130f2730289c3e45dfa3aa4585e62bd430a48a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e891e147d4cc3216b6c2acb686505dd03353b385
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142851"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189858"
 ---
 # <a name="single-sign-on-support-for-message-extensions"></a>メッセージ拡張機能のシングル サインオンのサポート
 
@@ -123,8 +123,8 @@ SSO を有効にするには:
 
 | **サンプルの名前** | **説明** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
-| ボット認証 | このサンプルは、Microsoft Teams のボットで認証を開始する方法を示しています。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
-| タブ、ボット、メッセージ拡張機能 (ME) SSO | このサンプルは、タブ、ボット、および ME の SSO (検索、アクション、linkunfurl) を示しています。 |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | 利用不可 |
+| ボット認証 | このサンプルでは、Teams用のボットで認証を開始する方法を示します。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
+| タブ、ボット、メッセージ拡張機能 (ME) SSO | このサンプルでは、Tab、Bot、ME の SSO (検索、アクション、リンクの展開) を示します。 |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | 利用不可 |
 
 ## <a name="see-also"></a>関連項目
 

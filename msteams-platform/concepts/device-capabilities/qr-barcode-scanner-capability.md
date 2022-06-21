@@ -1,17 +1,16 @@
 ---
 title: QR コードまたはバーコード スキャナー機能を統合する
 author: Rajeshwari-v
-description: Teams JavaScript クライアント SDK を使用して QR またはバーコード スキャナー機能を活用する方法
-keywords: カメラ メディア QR コード qrcode バー コード バーコード スキャナースキャン機能ネイティブ デバイスのアクセス許可
+description: Teams JavaScript クライアント SDK を使用して QR またはバーコード スキャナー機能を活用し、QR またはバーコード スキャナー機能を統合する利点を理解する方法について説明します。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 2dced2abc29ee21e50a3a37ccfed4811102cc8ce
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: d9dc35002398be047f4cd84d7600b3d149677bd3
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130502"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189630"
 ---
 # <a name="integrate-qr-or-barcode-scanner-capability"></a>QR コードまたはバーコード スキャナー機能を統合する
 

@@ -4,12 +4,12 @@ description: Microsoft Teamsでサポートされているすべてのコンポ�
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: deaf094ab18ddd2ebe70ea9594f41c108398bf32
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: ec5d02c5804f3b2de1398936666577c2a31bc2d4
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142738"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189871"
 ---
 # <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>参照: Microsoft Teams のパブリック開発者プレビュー マニフェスト スキーマ
 
@@ -477,7 +477,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
-メッセージ拡張機能は、1 つ以上のコマンドを宣言する必要があります。 各コマンドは、UI ベースのエントリ ポイントからの潜在的な相互作用として Microsoft Teams に表示されます。 最大 10 個のコマンドがあります。
+メッセージ拡張機能は、1 つ以上のコマンドを宣言する必要があります。 各コマンドは、UI ベースのエントリ ポイントからの潜在的な相互作用としてTeamsに表示されます。 最大 10 個のコマンドがあります。
 
 各コマンド 項目は、次の構造を持つオブジェクトです。
 

@@ -6,12 +6,12 @@ author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: teams 認証 OAuth SSO Microsoft Azure Active Directory (Azure AD) rsc Postman Graph
-ms.openlocfilehash: 60014699aa1275df787fcf553ae04671d1105f1c
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: d0eba34c8477c00e400e89adee7b9f09604918b7
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65757445"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189877"
 ---
 # <a name="test-resource-specific-consent-permissions-in-teams"></a>Teams でリソース固有の同意アクセス許可をテストする
 
@@ -28,7 +28,7 @@ ms.locfileid: "65757445"
 
 <details>
 
-<summary><b>アプリ マニフェスト バージョン 1.12 の RSC アクセス許可</b></summary>
+<summary><b>アプリ マニフェスト バージョン 1.12 以降の RSC アクセス許可</b></summary>
 
 次の値を使用して、アプリ マニフェストに [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) キーを追加します。
 
@@ -39,7 +39,7 @@ ms.locfileid: "65757445"
 
 アプリで必要なアクセス許可を指定します。
 
-|名前| 型 | 説明|
+|名前| 種類 | 説明|
 |---|---|---|
 |`authorization`|オブジェクト|アプリを実行する必要があるアクセス許可の一覧。 詳細については、「[承認](../../resources/schema/manifest-schema.md#authorization)」を参照してください。|
 
@@ -198,7 +198,7 @@ ms.locfileid: "65757445"
 
 次の値を使用して、アプリ マニフェストに [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) キーを追加します。
 
-|名前| 型 | 説明|
+|名前| 種類 | 説明|
 |---|---|---|
 |`id` |String |Azure ADアプリ ID。 詳細については、「[Azure AD ポータルでアプリを登録する](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)」を参照してください。|
 |`resource`|String| このフィールドには RSC での操作はありませんが、エラー応答を回避するために値を追加し、値を指定する必要があります。任意の文字列が実行されます。|

@@ -1,17 +1,16 @@
 ---
 title: メディア機能を統合する
 author: Rajeshwari-v
-description: コード例を使用して、Teams JavaScript クライアント SDK を使用してメディア機能を有効にする方法について説明します
-keywords: カメラ イメージ マイク機能ネイティブ デバイスのアクセス許可メディア API
+description: Teams JavaScript クライアント SDK を使用して、コード例を使用してメディア機能を有効にする方法と、メディア機能を統合する利点についても説明します。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 586db765ff94449a137e131cd788cbc1732d55f2
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: 366c58ac283e687f8a297b8701b932f99550574e
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130533"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190234"
 ---
 # <a name="integrate-media-capabilities"></a>メディア機能を統合する
 

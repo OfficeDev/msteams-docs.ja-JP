@@ -4,12 +4,12 @@ description: このモジュールでは、Microsoft Bot Frameworkを使用し�
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 12/07/2018
-ms.openlocfilehash: 0b39593917585db73eccd36492bcbb7b9fdd6dfd
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a669b11baef8dc31a662ea2ad178ad3488f2d69e
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144013"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189523"
 ---
 # <a name="create-a-bot"></a>ボットを作成する
 
@@ -47,10 +47,11 @@ Microsoft Bot Framework を使用して作成されたすべてのボットは�
 > * [Bot Framework 内のボットのリスト](https://dev.botframework.com/bots)で既存のボットのプロパティを編集する際、特に [ngrok](https://ngrok.com) を使用している場合、ボットを初めて開発するときに一般的な "メッセージングエンドポイント" などを編集すると、[移行の状態] 列と青い [移行] ボタンが表示され、Microsoft Azure portal に移動します。 必要な場合を除き、[移行] ボタンをクリックしないでください。代わりに、ボットの名前をクリックすると、そのプロパティを編集できます。</br>
    ![ボットのプロパティを編集する](~/assets/images/bots/bf-migrate-bot-to-azure.png)
 > * Microsoft Azure を使用してボットを登録する場合、ボット コードは Microsoft Azure で *ホストされる* 必要はあります。
-> * Azure ポータルを使用してボットを登録する場合は、Microsoft Azure アカウントを持っている必要があります。 このアカウントは[無料で作成](https://azure.microsoft.com/free/)できます。 アカウントを作成するときは、ユーザーの ID を確認するためにユーザーはクレジット カードを提供する必要がありますが、課金はされません。Microsoft Teams を使用してのボットの作成と使用は常に無料です。
-> * App Studio を使用して、Microsoft Teams 内でアプリとボットの情報を直接登録/更新できるようになりました。 Direct Line、Web チャット、Skype、Facebook Messenger などの他のBot Framework チャネルを追加または構成する場合にのみ、Azure portal を使用する必要があります。
+> * Azure ポータルを使用してボットを登録する場合は、Microsoft Azure アカウントを持っている必要があります。 このアカウントは[無料で作成](https://azure.microsoft.com/free/)できます。 作成時に ID を確認するには、クレジット カードを指定する必要がありますが、料金は発生しません。Teamsでボットを作成して使用することは常に自由です。
+> * App Studio を使用して、Teams内で直接アプリとボットの情報を登録/更新できるようになりました。 Direct Line、Web チャット、Skype、Facebook Messenger などの他のBot Framework チャネルを追加または構成する場合にのみ、Azure portal を使用する必要があります。
 
 > [!WARNING]
+>
 >* App Studio を使用している場合は、Teams アプリを構成、配布、管理するための開発者ポータルを試してみることをお勧めします。App Studio は 2022 年 6 月 30 日までに非推奨になります
 
 ## <a name="see-also"></a>関連項目

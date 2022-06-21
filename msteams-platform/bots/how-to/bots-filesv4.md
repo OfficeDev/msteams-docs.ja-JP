@@ -4,12 +4,12 @@ description: 個人用スコープ、チャネル スコープ、グループチ
 ms.date: 05/20/2019
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: a7746b15798c46c807c276fb7d29f34b59858528
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9ac04b912de87ac6e048e7cb7577c0a61b1f9f83
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142928"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189648"
 ---
 # <a name="send-and-receive-files-through-the-bot"></a>ボットを介してファイルを送受信する方法
 
@@ -238,7 +238,7 @@ private static Attachment GetInlineAttachment()
 }
 ```
 
-### <a name="basic-example-in-c"></a>C# の基本的な例
+### <a name="basic-example-in-c"></a>C の基本的な例 #
 
 次のコードは、ボットのダイアログでファイルのアップロードを処理し、ファイルの同意リクエストを送信する方法の例を示しています。
 
@@ -332,3 +332,7 @@ private async Task SendFileCardAsync(ITurnContext turnContext, string filename, 
 
 > [!div class="nextstepaction"]
 > [Teams でレートを制限してボットを最適化する](~/bots/how-to/rate-limit.md)
+
+## <a name="see-also"></a>関連項目
+
+[Microsoft Teams の保護された API](/graph/teams-protected-apis)

@@ -6,12 +6,12 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 30ccb4ee8810154e2b36311d15217205de87b413
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 95d6439d396a61471c0e7dbe5942d4b88cc00a87
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142760"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189317"
 ---
 # <a name="handle-bot-events-in-microsoft-teams"></a>Microsoft Teams でボット イベントを処理する
 
@@ -48,7 +48,7 @@ Teamsイベントとグループ イベントは、型から`conversationUpdate`
 
 ### <a name="bot-or-user-added-to-a-team"></a>チームへのボットまたはユーザーの追加
 
-ペイロード内の `membersAdded` オブジェクトを含む `conversationUpdate` イベントは、ボットがチームに追加されるか、ボットが既に追加されているチームに新しいユーザーが追加されたときに送信されます。 Microsoft Teams では `channelData` オブジェクトに `eventType.teamMemberAdded` も追加されます。
+ペイロード内の `membersAdded` オブジェクトを含む `conversationUpdate` イベントは、ボットがチームに追加されるか、ボットが既に追加されているチームに新しいユーザーが追加されたときに送信されます。 Teamsオブジェクトにも追加`eventType.teamMemberAdded`されます`channelData`。
 
 このイベントはどちらの場合も送信されるため、追加されたのがユーザーかボット自体かを判断するには、`membersAdded` オブジェクトを解析する必要があります。 後者の場合、ユーザーがボットによって提供される機能を理解できるように、[ウェルカム メッセージ](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#best-practice-welcome-messages-in-teams)をチャネルに送信することがベスト プラクティスです。
 
@@ -227,7 +227,7 @@ bot.on('conversationUpdate', (msg) => {
 
 ## <a name="team-member-or-bot-removed"></a>チーム メンバーまたはボットの削除
 
-ペイロード内の `membersRemoved` オブジェクトを含む `conversationUpdate` イベントは、ボットがチームから削除されるか、ボットが追加されているチームからユーザーが削除されたときに送信されます。 Microsoft Teams では `channelData` オブジェクトに `eventType.teamMemberRemoved` も追加されます。 `membersAdded` オブジェクトと同様に、削除されたユーザーを判断するには、ボットのアプリ ID の `membersRemoved` オブジェクトを解析する必要があります。
+ペイロード内の `membersRemoved` オブジェクトを含む `conversationUpdate` イベントは、ボットがチームから削除されるか、ボットが追加されているチームからユーザーが削除されたときに送信されます。 Teamsオブジェクトにも追加`eventType.teamMemberRemoved`されます`channelData`。 `membersAdded` オブジェクトと同様に、削除されたユーザーを判断するには、ボットのアプリ ID の `membersRemoved` オブジェクトを解析する必要があります。
 
 ### <a name="schema-example-team-member-removed"></a>スキーマ例: チーム メンバーの削除
 

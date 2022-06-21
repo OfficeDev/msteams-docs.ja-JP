@@ -3,12 +3,12 @@ title: Teams でレートを制限してボットを最適化する
 description: コード例を使用して、スレッドあたりのボットあたりの制限とすべてのボットの制限あたりのボットの処理レート制限について説明します
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: f6afb9cd3b3894dff31ecaf5e8d9ece7204248a1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9f94ef6a047cf597421d788dfaca95656eac2318
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143733"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190241"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Teams でレートを制限してボットを最適化する
 
@@ -176,3 +176,7 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 > [!div class="nextstepaction"]
 > [通話と会議のボット](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+
+## <a name="see-also"></a>関連項目
+
+[実行時間の長い操作を管理する](/azure/bot-service/bot-builder-howto-long-operations-guidance?view=azure-bot-service-4.0&preserve-view=true)

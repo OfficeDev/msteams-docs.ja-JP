@@ -5,12 +5,12 @@ description: この記事では、Microsoft Bot Frameworkを使用してボッ�
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 0b344b6a2db0abc4d1769c47aca6f496f69b98d7
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 10e6535c015e63ecc88b57d56019c12bdb50d531
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142466"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189333"
 ---
 # <a name="bots-and-sdks"></a>ボットと SDK
 
@@ -61,6 +61,7 @@ Azure ボット サービスは Bot Framework と共に、インテリジェン�
 > Microsoft Teams 内のボット アプリケーションは、 [Azure Bot Service](/azure/bot-service/channel-connect-teams) を介して GCC-High で利用できます。
 
 > [!NOTE]
+>
 > * GCCH のボットは、マニフェスト バージョン v1.10 までしかサポートしません。
 > * アダプティブ カード内のイメージ URL は、GCCH 環境ではサポートされていません。 イメージ URL は、Base64 でエンコードされた DataUri に置き換えることができます。
 > * Azure Governmentでのボット チャネルの登録では、Web アプリ ボット、アプリ サービス (App Service プラン)、およびアプリケーション分析情報もプロビジョニングされますが、Azure bot Service のプロビジョニングのみ (アプリ サービスなし) はサポートされません。
@@ -70,12 +71,12 @@ Azure ボット サービスは Bot Framework と共に、インテリジェン�
 >   * リソース グループに移動し、未使用のリソースを手動で削除します。 アプリ サービス、App Service プラン (ボットの登録中に作成した場合)、アプリケーション分析情報 (ボットの登録中に有効にすることを選択した場合) などです。
 >   * az-cli を使用してボットの登録を行うこともできます。
 >
->     1. Azure にサインインしてサブスクリプションを設定する <br> 
->           &nbsp; az cloud set –name "AzureUSGovernment" <br> 
+>     1. Azure にサインインしてサブスクリプションを設定する <br>
+>           &nbsp; az cloud set –name "AzureUSGovernment" <br>
 >           &nbsp; az account set –name "`subscriptionname/id`.<br>
 >     1. アプリの登録を作成する  
->           &nbsp; az ad app create --display-name "`name`" <br> 
->           &nbsp; --password "`password`" --available-to-other-tenants。<br> 
+>           &nbsp; az ad app create --display-name "`name`" <br>
+>           &nbsp; --password "`password`" --available-to-other-tenants。<br>
 >           アプリ ID はここで作成されます。<br>
 >     1. ボット リソースを作成する <br>
 >           &nbsp; az bot create –resource-group "`resource-group`"<br>
@@ -117,7 +118,7 @@ Azure Government ポータルでボットの登録が発生した場合は、Azu
     * `ConnectionName` を、ボットに追加した OAuth 接続設定の名前に設定します。
 
     * `MicrosoftAppId` と `MicrosoftAppPassword` をボットのアプリ ID とアプリ シークレットに設定します。
-    
+
     ボット シークレットの文字によっては、パスワードの XML エスケープが必要になる場合があります。 たとえば、アンパサンド (&) は次のように `&amp;`エンコードする必要があります。
 
     ```json
@@ -129,16 +130,17 @@ Azure Government ポータルでボットの登録が発生した場合は、Azu
       "ConnectionName": ""
     }
     ```
+
 2. **Startup.cs の更新:**
 
     政府機関 *のクラウドなどのパブリックでない Azure クラウド* や、データ常駐のボットで OAuth を使用するには、 **Startup.cs** ファイルに次のコードを追加する必要があります。
-    
+
     ```csharp
     string uri = "<uri-to-use>";
     MicrosoftAppCredentials.TrustServiceUrl(uri);
     OAuthClientConfig.OAuthEndpoint = uri;
     ```
-    
+
     次の URI の 1 つはどこにありますか \<uri-to-use\> 。
 
     |**URI**|**説明**|
@@ -308,3 +310,4 @@ this.onMessage(async (context, next) => {
 * [Bot コマンド メニュー](~/bots/how-to/create-a-bot-commands-menu.md)
 * [Microsoft Teams でのボットの認証フロー](~/bots/how-to/authentication/auth-flow-bot.md)
 * [ボットでタスク モジュールを使用する](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+* [ボットを Azure に発行する](/azure/bot-service/bot-builder-deploy-az-cli)

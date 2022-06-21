@@ -4,12 +4,12 @@ description: このモジュールでは、Microsoft Teamsのチャネルでボ�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/25/2019
-ms.openlocfilehash: ad212108b9cce66e14cab5c850d8ff466d73c467
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e93b6cc18e38da4f6307fda3d30968bfa709dbf1
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142781"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190181"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Microsoft Teams ボットとのチャネルおよびグループ チャット会話
 
@@ -25,7 +25,7 @@ Microsoft Teams でユーザーは、チャネルまたはグループ チャッ
 
 グループまたはチャネル内のボットは、すべてのメンバーに関係する適切な情報を提供する必要があります。 ボットが、エクスペリエンスに関わるどんな情報でも提供できるのは確かですが、それとの会話がすべてのユーザーに表示される点に留意してください。 それで、グループまたはチャネル内の優れたボットは、すべてのユーザーに付加価値を提供するものであり、1 対 1 の会話に向いている情報を誤って共有することがないはずです。
 
-ボットは、同様に、より多くの作業を必要とせずに、すべてのスコープで完全に関連している可能性があります。 Microsoft Teamsでは、ボットがすべてのスコープで機能するとは思われませんが、サポートするスコープのうち、どのスコープでもボットがユーザーの価値を提供するようにする必要があります。 スコープの詳細については、[Microsoft Teams のアプリ](~/concepts/build-and-test/app-studio-overview.md)に関する記事を参照してください。
+ボットは、同様に、より多くの作業を必要とせずに、すべてのスコープで完全に関連している可能性があります。 Teamsでは、ボットがすべてのスコープで機能するとは思いませんが、サポートするスコープのうち、どのスコープでもボットがユーザーの価値を提供するようにする必要があります。 スコープの詳細については、[Microsoft Teams のアプリ](~/concepts/build-and-test/app-studio-overview.md)に関する記事を参照してください。
 
 グループまたはチャネルで動作するボットの開発では、個人の会話と同じ機能の多くを使用します。 ペイロード内の追加のイベントとデータで、Teams のグループおよびチャネルの情報を提供します。 それらの相違点、および一般的な機能の主な相違点について、以下のセクションで説明します。
 

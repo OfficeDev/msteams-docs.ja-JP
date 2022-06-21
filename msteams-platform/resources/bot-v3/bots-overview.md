@@ -4,12 +4,12 @@ description: このモジュールでは、Microsoft Teamsでボットの開発�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/20/2018
-ms.openlocfilehash: 6c57371e0df5739d800fc07e46a014aeb3836bc8
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: f3102e8a6a3fd424a4f4f25995d74911c83930ee
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142361"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189746"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>Microsoft Teams アプリにボットを追加する
 
@@ -34,11 +34,11 @@ ms.locfileid: "66142361"
 
 詳細については、「[Microsoft Teams ボットと会話する](~/resources/bot-v3/bot-conversations/bots-conversations.md)」を参照してください。
 
-Microsoft Teams アプリを使用すると、ボットをエクスペリエンスのスターにすることも、単なるヘルパーにすることもできます。 ボットは、 [タブ](~/tabs/what-are-tabs.md) や [メッセージ拡張機能](~/messaging-extensions/what-are-messaging-extensions.md)などの他の機能を含めることができる広範なアプリ パッケージの一部として配布されます。
+Teams アプリを使用すると、ボットをエクスペリエンスのスターにすることも、ヘルパーにすることもできます。 ボットは、 [タブ](~/tabs/what-are-tabs.md) や [メッセージ拡張機能](~/messaging-extensions/what-are-messaging-extensions.md)などの他の機能を含めることができる広範なアプリ パッケージの一部として配布されます。
 
 ## <a name="bot-apis"></a>ボット API
 
-Microsoft Teams は、ほとんどの [Microsoft Bot Framework](https://dev.botframework.com/) をサポートしています。 (Bot Framework に基づくボットが既にある場合は、そのボットを Microsoft Teams での動作に容易に適応させることができます)。[SDK](/microsoftteams/platform/#pivot=sdk-tools) を利用するには、C# か Node.js のどちらかを使用することをお勧めします。 これらのパッケージは、以下の基本的な Bot Builder SDK のクラスとメソッドを拡張します。
+Teamsでは、ほとんどのMicrosoft Bot Frameworkがサポート[されています](https://dev.botframework.com/)。 (Bot Framework に基づくボットが既にある場合は、Teamsで動作するように簡単に調整できます)。SDK を利用するには、C# またはNode.jsのいずれかを使用することをお勧[めします。](/microsoftteams/platform/#pivot=sdk-tools) これらのパッケージは、以下の基本的な Bot Builder SDK のクラスとメソッドを拡張します。
 
 * Office 365 コネクタ カードなどの専用のカードの使用。
 * アクティビティに関する Teams 固有のチャネル データの使用と設定。

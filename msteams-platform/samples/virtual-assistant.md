@@ -3,12 +3,12 @@ title: 仮想アシスタントを作成する
 description: アダプティブ カード、中断の処理などの機能を備えたコードの例とスニペットを使用して、Teams用のVirtual Assistant ボットを作成する方法について説明します。
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 4b1dc7168cc67cd455182dddd4dd2d14a0cf9c3d
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: a26f68edd2134c0bda066325915891aae5e8e2d0
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123063"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189516"
 ---
 # <a name="create-virtual-assistant"></a>仮想アシスタントを作成する
 
@@ -263,7 +263,11 @@ Teams アプリは、1 対 1 のチャット、グループ チャット、チ�
                 "id": "searchQuery",
                 "context": [ "compose", "commandBox" ],
                 "description": "Test command to run query",
-    ....   
+                 ....}
+         ]
+     }
+ ]
+                 
 ```
 
 対応する仮想アシスタント マニフェスト ファイルのコード スニペットは、次のセクションに示されています:
@@ -277,7 +281,11 @@ Teams アプリは、1 対 1 のチャット、グループ チャット、チ�
                 "id": "searchQuery:<skill_id>",
                 "context": [ "compose", "commandBox" ],
                 "description": "Test command to run query",
-    .... 
+                 ....}
+         ]
+     }
+ ]
+ 
 ```
 
 コマンドがユーザーによって呼び出されると、仮想アシスタントは、コマンド ID を解析して関連するスキルを識別し、追加のサフィックス `:<skill_id>` をコマンド ID から削除してアクティビティを更新し、対応するスキルに転送できます。 スキルのコードでは、追加のサフィックスを処理する必要はありません。 そのため、スキル間でのコマンド ID 間の競合は回避されます。 この方法では、**作成**、**commandBox**、**メッセージ** など、すべてのコンテキスト内のスキルのすべての検索コマンドとアクション コマンドに、仮想アシスタントが使用されます。
@@ -334,7 +342,7 @@ Teams アプリは、1 対 1 のチャット、グループ チャット、チ�
 
 ## <a name="example"></a>例
 
-次の例は、Book-a-room アプリ テンプレートを仮想アシスタントのスキルに変換する方法を示しています。Book-a-room は、ユーザーが現在の時刻から 30 分、60 分、または 90 分間会議室をすばやく見つけて予約できる Microsoft Teams のボットです。 既定は 30 分間です。 会議室予約ボットは、個人の会話または一対一の会話を対象としています。
+次の例は、Book-a-room アプリ テンプレートをVirtual Assistantスキルに変換する方法を示しています。Book-a-room は、ユーザーが現在の時刻から 30 分、60 分、または 90 分間会議室をすばやく見つけて予約できるTeamsです。 既定は 30 分間です。 会議室予約ボットは、個人の会話または一対一の会話を対象としています。
 次の図は、 **book a room** スキルを持つ仮想アシスタントを示しています。
 
 !["book a room" スキルで仮想アシスタントする](../assets/images/bots/virtual-assistant/book-a-room-skill.png)
@@ -343,7 +351,7 @@ Teams アプリは、1 対 1 のチャット、グループ チャット、チ�
 
 ### <a name="skill-manifest"></a>スキル マニフェスト
 
-スキル マニフェストは、スキルのメッセージング エンドポイント、ID、名前、およびその他の関連メタデータを公開する JSON ファイルです。 このマニフェストは、Microsoft Teams でアプリをサイドローディングするために使用されるマニフェストとは異なります。 仮想アシスタントでは、スキルをアタッチするための入力としてこのファイルへのパスが必要です。 ボットの wwwroot フォルダーに次のマニフェストを追加しました。
+スキル マニフェストは、スキルのメッセージング エンドポイント、ID、名前、およびその他の関連メタデータを公開する JSON ファイルです。 このマニフェストは、Teamsでアプリをサイドロードするために使用されるマニフェストとは異なります。 仮想アシスタントでは、スキルをアタッチするための入力としてこのファイルへのパスが必要です。 ボットの wwwroot フォルダーに次のマニフェストを追加しました。
 
 ```bash
 botskills connect --remoteManifest "<url to skill's manifest>" ..

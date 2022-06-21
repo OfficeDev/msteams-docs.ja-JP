@@ -4,12 +4,12 @@ description: このモジュールでは、ボット メッセージの書式設
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 9121573dfa6f5c7a96f04ed16bcb0d41de0b5c34
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9e331a17940ee482a0c2adcb81b57a17823ab668
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143334"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190163"
 ---
 # <a name="message-formatting-for-bots"></a>ボットのメッセージの書式設定
 
@@ -27,7 +27,7 @@ Microsoft Teamsでは、次の書式設定オプションがサポートされ�
 
 ## <a name="formatting-text-content"></a>テキスト コンテンツの書式設定
 
-Microsoft Teamsでは、Markdown と XML (HTML) の書式設定タグのサブセットがサポートされています。
+Teamsでは、Markdown と XML (HTML) の書式設定タグのサブセットがサポートされています。
 
 現時点では、次の制限事項が適用されます。
 
@@ -37,7 +37,7 @@ Microsoft Teamsでは、Markdown と XML (HTML) の書式設定タグのサブ�
 
 ## <a name="cross-platform-support"></a>クロスプラットフォームサポート
 
-Microsoft Teamsでサポートされているすべてのプラットフォームで書式設定を確実に機能させるには、一部のスタイルが現在すべてのプラットフォームでサポートされていない点に注意してください。
+Teamsでサポートされているすべてのプラットフォームで書式設定を確実に機能させるには、一部のスタイルが現在すべてのプラットフォームでサポートされていない点に注意してください。
 
 | Style                     | テキストのみのメッセージ | リッチ カード (XML のみ) |
 | ---                       | :---: | :---: |

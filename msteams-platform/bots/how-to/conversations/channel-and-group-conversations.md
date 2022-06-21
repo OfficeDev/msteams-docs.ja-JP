@@ -5,12 +5,12 @@ description: チャネルまたはグループ チャットでボットのメッ
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: e9edc06d65120748c6e87ba5a5916f55d6346a9e
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 47b706aea1e6ba292126d93a8e0b6ce173c4b588
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144412"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190263"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>ボットとのチャネルおよびグループ チャットの会話
 
@@ -26,6 +26,12 @@ Microsoft Teams ボットをチームまたはグループ チャットにイン
 > リソース固有の同意 (RSC) を使用すると、ボットは、インストールされているチーム内のすべてのチャネル メッセージを@mentionedせずに受信できます。 詳細については、「 [RSC を使用してすべてのチャネル メッセージを受信する](channel-messages-with-rsc.md)」を参照してください。
 >
 > メッセージまたはアダプティブ カードをプライベート チャネルに投稿することは現在サポートされていません。
+
+ボットとのチャネルチャットとグループチャットの会話については、次のビデオを参照してください。
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs]
+<br>
 
 ## <a name="design-guidelines"></a>デザインのガイドライン
 

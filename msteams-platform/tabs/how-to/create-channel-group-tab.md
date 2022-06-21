@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 3ac2c126d2228fa17e693eebdf4b64a9149ef45f
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 6bdece5b23999025b1e4ecd22b2fb8f87f7c3325
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142676"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189597"
 ---
 # <a name="channel-or-group-tab"></a>チャネル/グループ タブ
 
@@ -192,7 +192,7 @@ gulp ngrok-serve
 
 ### <a name="upload-your-application-to-teams"></a>Microsoft Teams にアプリ パッケージをアップロードする
 
-1. Microsoft Teams に移動し、**[アプリ]**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="[Teamsストア]"::: を選択します。
+1. Teamsに移動し、**アプリ**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Microsoft Store":::を選択します。
 1. **[アプリの管理]** を選択し、**[カスタム アプリをアップロード]** を選択します。
 1. プロジェクト ディレクトリに移動し、**./package** フォルダーに移動し、アプリ パッケージの zip フォルダーを選択し、**[開く]** を選択します。
 
@@ -248,9 +248,9 @@ gulp ngrok-serve
 
 1. Visual Studio で **[F5]** を選択するか、アプリケーションの **デバッグ** メニューから **[デバッグの開始]** を選択して、アプリケーションが正しく読み込まれたかどうかを確認します。 ブラウザーで、次の URL に移動します。
 
-    * https://localhost:3978/
-    * https://localhost:3978/privacy
-    * https://localhost:3978/tou
+    * <https://localhost:3978/>
+    * <https://localhost:3978/privacy>
+    * <https://localhost:3978/tou>
 
 <details>
 <summary><b>ソース コードを確認する</b></summary>
@@ -291,7 +291,7 @@ ASP.NET Core は、**Index** という名前のファイルをサイトの既定
 * 32 x 32 ピクセルの **透明なアウトライン アイコン**。
 * アプリの属性を指定する `manifest.json` ファイル。
 
-これらのファイルは、Teams へのタブのアップロードに使用するために、アプリ パッケージで zip 形式にする必要があります。 ユーザーがタブの追加または更新を選択すると、Microsoft Teams は、マニフェストで指定された `configurationUrl` を読み込み、IFrame に埋め込み、タブにレンダリングします。
+これらのファイルは、Teams へのタブのアップロードに使用するために、アプリ パッケージで zip 形式にする必要があります。 ユーザーがタブの追加または更新を選択すると、マニフェストで指定した内容を読み込み`configurationUrl`、IFrame に埋め込み、タブにレンダリングTeams。
 
 #### <a name="csproj"></a>.csproj
 
@@ -335,10 +335,10 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
     ```
-    
+
     > [!IMPORTANT]
     > 最新バージョンを表していないため、このページから `<script src="...">` URL をコピーして貼り付けないでください。 SDK の最新バージョンを取得するには、常に [Microsoft Teams JavaScript API](https://www.npmjs.com/package/@microsoft/teams-js) に移動してください。
-    
+
 1. `script` タグに `microsoftTeams.initialize();` の呼び出しを挿入します。
 
 1. Visual Studio ソリューション エクスプローラーで **[ページ]** フォルダーに移動し、**Tab.cshtml** を開きます。
@@ -394,7 +394,7 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 
 ### <a name="update-your-app-package-with-developer-portal"></a>開発者ポータルを使用してアプリ パッケージを更新する
 
-1. Microsoft Teams に移動します。 [Web ベースのバージョン](https://teams.microsoft.com)を使用する場合は、ブラウザーの[開発者ツール](~/tabs/how-to/developer-tools.md)を使用してフロントエンド コードを検査することができます。
+1. Teamsに移動します。 [Web ベースのバージョン](https://teams.microsoft.com)を使用する場合は、ブラウザーの[開発者ツール](~/tabs/how-to/developer-tools.md)を使用してフロントエンド コードを検査することができます。
 
 1. [**開発者ポータル**](https://dev.teams.microsoft.com/home)に移動します。
 
@@ -434,7 +434,7 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 1. **[チームに追加]** を選択して、チームのタブを設定します。 タブを構成し、**[保存]** を選択します。 タブが Teams で利用できるようになりました。
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="アップロードされたチャネル タブの ASPNET" border="true":::
-    
+
     これで、Teams でチャネル/グループ タブが正常に作成され、追加されました。
 
 ::: zone-end
@@ -468,9 +468,9 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 
 1. Visual Studio で **[F5]** を選択するか、アプリケーションの **デバッグ** メニューから **[デバッグの開始]** を選択して、アプリケーションが正しく読み込まれたかどうかを確認します。 ブラウザーで、次の URL に移動します。
 
-    * https://localhost:3978/
-    * https://localhost:3978/privacy
-    * https://localhost:3978/tou
+    * <https://localhost:3978/>
+    * <https://localhost:3978/privacy>
+    * <https://localhost:3978/tou>
 
 <details>
 <summary><b>ソース コードを確認する</b></summary>
@@ -563,15 +563,15 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
     ```
-    
+
     > [!IMPORTANT]
     > 最新バージョンを表していないため、このページから `<script src="...">` URL をコピーして貼り付けないでください。 SDK の最新バージョンを取得するには、常に [Microsoft Teams JavaScript API](https://www.npmjs.com/package/@microsoft/teams-js) に移動してください。
-    
+
 1. `script` タグに `microsoftTeams.initialize();` の呼び出しを挿入します。
 
 1. Visual Studio ソリューション エクスプローラーで **[タブ]** フォルダーに移動し、**Tab.cshtml** を開きます。
 
-    **Tab.cshtml** では、アプリケーションは、赤または灰色のアイコンでタブを表示するための 2 つのオプション ボタンをユーザーに表示します。 **[灰色を選択**] ボタンまたは **[赤を選択]** ボタンを選択すると、それぞれ `saveGray()` または `saveRed()` がトリガーされ、`settings.setValidityState(true)` が設定され、構成ページの **[保存]** ボタンが有効になります。 このコードは、構成要件が完了し、インストールを続行できることを Teams に知らせます。 `settings.setSettings` のパラメーターが設定されます。 最後に、コンテンツ URL が正常に解決されたことを示すために、`saveEvent.notifySuccess()` が呼び出されます。 
+    **Tab.cshtml** では、アプリケーションは、赤または灰色のアイコンでタブを表示するための 2 つのオプション ボタンをユーザーに表示します。 **[灰色を選択**] ボタンまたは **[赤を選択]** ボタンを選択すると、それぞれ `saveGray()` または `saveRed()` がトリガーされ、`settings.setValidityState(true)` が設定され、構成ページの **[保存]** ボタンが有効になります。 このコードは、構成要件が完了し、インストールを続行できることを Teams に知らせます。 `settings.setSettings` のパラメーターが設定されます。 最後に、コンテンツ URL が正常に解決されたことを示すために、`saveEvent.notifySuccess()` が呼び出されます。
 
 1. タブの HTTPS ngrok URL を使用して、各関数の `websiteUrl` と `contentUrl` の値を更新します。
 
@@ -617,7 +617,7 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 
 ### <a name="update-your-app-package-with-developer-portal"></a>開発者ポータルを使用してアプリ パッケージを更新する
 
-1. Microsoft Teams に移動します。 [Web ベースのバージョン](https://teams.microsoft.com)を使用する場合は、ブラウザーの[開発者ツール](~/tabs/how-to/developer-tools.md)を使用してフロントエンド コードを検査することができます。
+1. Teamsに移動します。 [Web ベースのバージョン](https://teams.microsoft.com)を使用する場合は、ブラウザーの[開発者ツール](~/tabs/how-to/developer-tools.md)を使用してフロントエンド コードを検査することができます。
 
 1. [**開発者ポータル**](https://dev.teams.microsoft.com/home)に移動します。
 
@@ -652,7 +652,7 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 1. **[チームに追加]** を選択して、チームのタブを設定します。 タブを構成し、**[保存]** を選択します。 タブが Teams で利用できるようになりました。
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="アップロードされたチャネル タブの ASPNET MVC" border="true":::
-    
+
     これで、Teams でチャネル/グループ タブが正常に作成され、追加されました。
 
 ::: zone-end

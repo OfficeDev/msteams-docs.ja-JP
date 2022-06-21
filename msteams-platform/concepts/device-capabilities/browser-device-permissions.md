@@ -1,15 +1,14 @@
 ---
 title: ブラウザーのデバイスのアクセス許可
-keywords: teams アプリ機能のアクセス許可
-description: Web クライアントでアプリのデバイス アクセス許可のサポートを安全に取り戻す
+description: Web クライアント内のアプリのカメラやマイクへのアクセスなど、デバイスのアクセス許可を安全に取り戻す方法について説明します。
 localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: f1d25a94f25756e1beed66c430547a7f2f706c5f
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 72c185257097ec739380bc2cc8390320beb24134
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150814"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190173"
 ---
 # <a name="device-permissions-for-the-browser"></a>ブラウザーのデバイスのアクセス許可
 

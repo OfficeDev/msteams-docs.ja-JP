@@ -5,12 +5,12 @@ description: このモジュールでは、アプリ マニフェストを含む
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: e166ced0b001414a89d24c81430c1b93431ff3a7
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: debbcdcf4c22f63262e16fda70c0e778bffa9379
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142816"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189998"
 ---
 # <a name="link-unfurling"></a>リンク展開
 
@@ -26,6 +26,11 @@ ms.locfileid: "66142816"
 Azure DevOps メッセージ拡張機能では、作業項目をポイントするメッセージ作成領域に貼り付けられた URL を検索するためにリンク展開を使用します。 次の図では、ユーザーがメッセージ拡張機能がカードに解決したAzure DevOpsにアイテムの URL を貼り付けています。
 
 :::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="リンク展開の例":::
+
+リンクの展開の詳細については、次のビデオを参照してください。
+<br>
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
+<br>
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>アプリ マニフェストにリンク展開を追加する
 

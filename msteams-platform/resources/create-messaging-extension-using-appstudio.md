@@ -5,12 +5,12 @@ description: App Studio を使用してMicrosoft Teamsメッセージング拡�
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
-ms.openlocfilehash: b6eb248f84bdfb62c369ed2b95831c9d7eacec05
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9f222f52a4eea3b59e6caf15e77b006a58a426d2
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142340"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190025"
 ---
 # <a name="create-a-messaging-extension-using-app-studio"></a>App Studio を使用してメッセージングの拡張機能を作成する
 
@@ -23,7 +23,7 @@ ms.locfileid: "66142340"
 2. Web サービスを作成してデプロイします (開発中は、ngrok などのトンネリング サービスを使用してローカルで実行します)。
 3. Bot Framework に Web サービスを登録します。
 4. アプリ パッケージを作成します。
-5. Microsoft Teams にパッケージをアップロードする。
+5. パッケージをTeamsにアップロードします。
 
 Web サービスの作成、アプリ パッケージの作成、Web サービスの Bot Framework への登録は、任意の順序で行うことができます。 これらの 3 つの部分は非常に絡み合っているため、どの順序で行っても、他の部分を更新するには戻る必要があります。 登録にはデプロイされた Web サービスのメッセージング エンドポイントが必要であり、Web サービスには登録から作成された ID とパスワードが必要です。 また、アプリ マニフェストでは、Teamsを Web サービスに接続するためにその ID も必要です。
 
@@ -56,7 +56,7 @@ Web サービスの作成、アプリ パッケージの作成、Web サービ�
 
 ### <a name="create-your-app-manifest-using-app-studio"></a>App Studio を使用してアプリ マニフェストを作成する
 
-Microsoft Teams クライアント内から App Studio アプリを使用すると、アプリ マニフェストの作成に役立ちます。
+Teams クライアント内から App Studio アプリを使用すると、アプリ マニフェストの作成に役立ちます。
 
 1. Teams クライアントで、左側のナビゲーション レールにあるオーバーフロー メニュー (**...**) から App Studio を開きます。 まだインストールされていない場合は、それを検索して行うことができます。
 2. [ **マニフェスト エディター** ] タブ **で [新しいアプリの作成** ] を選択します (または、既存のアプリにメッセージング拡張機能を追加する場合は、アプリ パッケージをインポートできます)
@@ -71,7 +71,7 @@ Microsoft Teams クライアント内から App Studio アプリを使用する�
 
 ### <a name="create-your-app-manifest-manually"></a>アプリ マニフェストを手動で作成する
 
-ボットとタブと同様に、 [アプリのアプリ マニフェスト](~/resources/schema/manifest-schema.md#composeextensions) を更新して、メッセージング拡張機能のプロパティを含めます。 これらのプロパティは、Microsoft Teams クライアントでのメッセージング拡張機能の表示と動作を制御します。 メッセージング拡張機能は、マニフェストの v1.0 以降でサポートされています。
+ボットとタブと同様に、 [アプリのアプリ マニフェスト](~/resources/schema/manifest-schema.md#composeextensions) を更新して、メッセージング拡張機能のプロパティを含めます。 これらのプロパティは、Teams クライアントでのメッセージング拡張機能の表示と動作を制御します。 メッセージング拡張機能は、マニフェストの v1.0 以降でサポートされています。
 
 #### <a name="declare-your-messaging-extension"></a>メッセージング拡張機能を宣言する
 
@@ -248,7 +248,7 @@ Microsoft Teams クライアント内から App Studio アプリを使用する�
 * [検索コマンドを作成する](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 * [リンク展開](~/messaging-extensions/how-to/link-unfurling.md)
 
-## <a name="learn-more"></a>詳細情報
+## <a name="learn-more"></a>詳細を見る
 
 クイック スタートで試してください。
 

@@ -4,12 +4,12 @@ author: surbhigupta
 description: 会議のライフサイクルTeams、デスクトップとモバイルでのユーザー会議のエクスペリエンス、ユーザーの種類、会議ライフサイクルにおけるボットとメッセージ拡張機能の統合について説明します。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: caea4d49526c01de497f72a1878f9520d6e22348
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 4bc4609f2fdf6bba8b170088d214846c35d45486
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142578"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189364"
 ---
 # <a name="unified-meetings-apps"></a>統合された会議アプリ
 
@@ -209,7 +209,7 @@ Teams統合会議アプリを使用すると、会議の参加者ロールに基
 
 次の表に、ユーザーの種類と、各ユーザーがアクセスできる機能の一覧を示します。
 
-| ユーザーの種類 | タブ | ボット | メッセージ拡張機能 | アダプティブ カード | タスク モジュール | 会議中ダイアログ | 会議ステージ |
+| ユーザーの種類 | タブ | ボット | メッセージの拡張機能 | アダプティブ カード | タスク モジュール | 会議中ダイアログ | 会議ステージ |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | 匿名ユーザー | 使用不可 | 使用不可 | 使用不可 | 会議チャットでの対話は許可されます。 | アダプティブ カードからの会議チャットでの対話は許可されます。 | 使用不可 | 使用不可 |
 | テナント Azure AD の一部であるゲスト | 対話は許可されます。 作成、更新、削除は許可されません。 | 使用不可 | 使用不可 | 会議チャットでの対話は許可されます。 | アダプティブ カードからの会議チャットでの対話は許可されます。 | 使用可能 | デスクトップ クライアントでのみ会議ステージでアプリを起動、表示、操作Teamsできます。 |
@@ -226,3 +226,4 @@ Teams統合会議アプリを使用すると、会議の参加者ロールに基
 * [ボット](../bots/what-are-bots.md)
 * [メッセージ拡張機能](../messaging-extensions/what-are-messaging-extensions.md)
 * [アプリをデザインする](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [Microsoft Teams 会議出席レポート](/microsoftteams/teams-analytics-and-reports/meeting-attendance-report)

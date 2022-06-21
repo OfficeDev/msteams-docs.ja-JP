@@ -4,24 +4,24 @@ description: この記事では、Microsoft Teamsでボットをテストして�
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 03/20/2019
-ms.openlocfilehash: 3cfb76443566a0ca5c279547f7b3db490c6095d3
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 71045071666ecc21cdc376590deef90223694d15
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143698"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189751"
 ---
 # <a name="test-and-debug-your-microsoft-teams-bot"></a>Microsoft Teams ボットのテストとデバッグ
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-ボットをテストするときは、ボットを実行するコンテキストと、Microsoft Teams に固有のデータを必要とするボットに追加した可能性のある機能の両方を考慮する必要があります。 ボットをテストするために選択したメソッドが、その機能と一致していることを確認します。
+ボットをテストする場合は、ボットを実行するコンテキストと、Microsoft Teamsに固有のデータを必要とするボットに追加した可能性のある機能の両方を考慮する必要があります。 ボットをテストするために選択したメソッドが、その機能と一致していることを確認します。
 
 ## <a name="test-by-uploading-to-teams"></a>Teams にアップロードしてテストする
 
 ボットをテストする最も包括的な方法は、アプリ パッケージを作成して Teams にアップロードすることです。 これは、すべてのスコープでボットで使用できる完全な機能をテストする唯一の方法です。
 
-アプリをアップロードするには、2 つの方法があります。 [App Studio](~/concepts/build-and-test/app-studio-overview.md) を使用することも、手動で[アプリ パッケージを作成](~/concepts/build-and-test/apps-package.md)して[アプリをアップロードする](~/concepts/deploy-and-publish/apps-upload.md)こともできます。 マニフェストを変更してアプリを再アップロードする必要がある場合は、変更されたアプリ パッケージをアップロードする前に [ボットを削除](#deleting-a-bot-from-teams) する必要があります。
+アプリをアップロードするには、2 つの方法があります。 [App Studio](~/concepts/build-and-test/app-studio-overview.md) を使用することも、手動で[アプリ パッケージを作成](~/concepts/build-and-test/apps-package.md)して[アプリをアップロードする](~/concepts/deploy-and-publish/apps-upload.md)こともできます。 マニフェストを変更し、アプリを再アップロードする必要がある場合は、変更されたアプリ パッケージをアップロードする前に [ボットを削除](#deleting-a-bot-from-teams) する必要があります。
 
 ## <a name="debug-your-bot-locally"></a>ローカルでボットのデバッグを行う
 
@@ -35,7 +35,7 @@ ngrok http <port> -host-header=localhost:<port>
 
 ## <a name="testing-your-bot-without-uploading-to-teams"></a>Teams にアップロードせずにボットをテストする
 
-場合によっては、Teams でアプリとしてボットをインストールせずにボットをテストする必要があります。 テストには 2 つの方法があります。 アプリとしてインストールせずにボットをテストすることは、ボットが使用可能で応答していることを確認するのに役立ちますが、ボットに追加した可能性のある Microsoft Teams 機能の範囲全てをテストすることはできません。 ボットを完全にテストする必要がある場合は、 [アップロードしてテストする](#test-by-uploading-to-teams)手順に従います。
+場合によっては、Teams でアプリとしてボットをインストールせずにボットをテストする必要があります。 テストには 2 つの方法があります。 ボットをアプリとしてインストールせずにテストすることは、ボットが使用可能で応答していることを確認するのに役立ちますが、ボットに追加した可能性のある機能の完全な幅Teamsテストすることはできません。 ボットを完全にテストする必要がある場合は、 [アップロードしてテストする](#test-by-uploading-to-teams)手順に従います。
 
 ### <a name="use-the-bot-emulator"></a>ボット エミュレーターを使用する
 
@@ -48,22 +48,23 @@ Bot Framework Emulatorの詳細な手順については、[こちら](/azure/bot
 >[!Important]
 >ID を使用したボットの会話は、テストのみを目的としています。
 
-ID を使用してボットとの会話を開始することもできます。 これを行うための 2 つの方法を次に示します。 これらの方法のいずれかを通じてボットが追加された場合、チャネル会話ではアドレス指定できず、タブやメッセージ拡張機能などの他の Microsoft Teams アプリ機能を利用することはできません。
+ID を使用してボットとの会話を開始することもできます。 これを行うための 2 つの方法を次に示します。 これらの方法のいずれかを通じてボットを追加すると、チャネルの会話ではアドレス指定できず、タブやメッセージ拡張機能などの他のMicrosoft Teams アプリ機能を利用することはできません。
 
-1. ボットの [[ボット ダッシュボード]](https://dev.botframework.com/bots) ページの **[チャネル]** で、**[Microsoft Teams に追加]** を選択します。 Microsoft Teams は、ボットとの個人用チャットで起動します。
-2. Microsoft Teams 内からボットのアプリ ID を直接参照します。
+1. ボットの [[ボット ダッシュボード]](https://dev.botframework.com/bots) ページの **[チャネル]** で、**[Microsoft Teams に追加]** を選択します。 Teamsは、ボットとの個人用チャットで起動します。
+2. Teams内からボットのアプリ ID を直接参照します。
    * ボットの [[ボット ダッシュボード]](https://dev.botframework.com/bots) ページの **[詳細]** で、ボットの **Microsoft App ID** をコピーします。
   
       :::image type="content" source="../../assets/images/bots_appid_botframework.png" alt-text="ボット ダッシュボード":::
   
-   * Microsoft Teams 内の **[チャット]** ウィンドウで、**[チャットの追加]** アイコンを選択します。 **[To:]** に、ボットの Microsoft アプリ ID を貼り付けます。
+   * Teams内の **[チャット**] ウィンドウで、[**チャットの追加**] アイコンを選択します。 **[To:]** に、ボットの Microsoft アプリ ID を貼り付けます。
   
       :::image type="content" source="../../assets/images/bots_uploading.png" alt-text="ボットの AppID のアップロード"border="true":::
 
      アプリ ID はボット名に解決する必要があります。
 
    * ボットを選択し、メッセージを送信して会話を開始します。
-   * または、Microsoft Teams の左上にある検索ボックスにボットのアプリ ID を貼り付けることができます。 検索結果ページで 、[ユーザー] タブに移動してボットを表示し、チャットを開始します。
+
+   * または、Microsoft Teams の左上にある検索ボックスにボットのアプリ ID を貼り付けることができます。 検索結果ページで、[ユーザー] タブに移動してボットを表示し、チャットを開始します。
 
 ボットは、チームに追加されたボットと同じように `conversationUpdate` イベントを受け取りますが、`channelData` オブジェクト内のチーム情報は含めなくなります。
 

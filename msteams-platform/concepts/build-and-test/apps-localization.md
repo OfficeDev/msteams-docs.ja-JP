@@ -4,12 +4,12 @@ description: Microsoft Teams アプリをローカライズし、アプリ マ�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/15/2018
-ms.openlocfilehash: 5c3d0612f0e7ce0e183d097469165cf2f9c337d0
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: cfb425bef1b09540c1049a3769c87d8def272314
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150667"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189593"
 ---
 # <a name="localize-your-app"></a>アプリをローカライズする
 
@@ -46,6 +46,9 @@ Microsoft Teams アプリをローカライズするには、次の要素を考�
 Microsoft Teamsアプリ スキーマ`v1.5`以降を使用して、アプリをローカライズします。 これを行うには、manifest.json ファイルの属性を以上に設定`$schema`し、プロパティを`manifestVersion`バージョンに`$schema`更新します (`1.5`この`https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json`場合)。
 
 アプリケーションが `localizationInfo` サポートする既定の言語でプロパティを追加します。 既定の言語は、ユーザーのクライアント設定が追加の言語と一致しない場合に、最終的なフォールバック言語として使用されます。
+
+> [!NOTE]
+> マニフェストのバージョンは、manifest.json ファイルと localization.json ファイルの両方で同じである必要があります。
 
 ### <a name="example-manifestjson-change"></a>manifest.json の変更例
 

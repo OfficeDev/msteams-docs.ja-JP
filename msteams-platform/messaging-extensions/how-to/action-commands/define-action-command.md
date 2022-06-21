@@ -5,12 +5,12 @@ description: このモジュールでは、Microsoft Teamsのアプリ マニフ
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 64a11741612fdf8efbcca968fed3a3d78cda90b1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 0d6979a3d0845be88e43e150451ee6e4097a6870
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143432"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189622"
 ---
 # <a name="define-message-extension-action-commands"></a>メッセージ拡張機能のアクション コマンドを定義する
 
@@ -23,6 +23,12 @@ ms.locfileid: "66143432"
 1. [操作コマンドはどこからトリガーできますか?](#select-action-command-invoke-locations)
 1. [タスク モジュールはどのように作成されますか?](#select-how-to-create-your-task-module)
 1. [最終メッセージまたはカードはボットからチャネルに送信されるか、またはユーザーが送信するためにメッセージまたはカードを作成メッセージ領域に挿入しますか?](#select-how-the-final-message-is-sent)
+
+メッセージ拡張アクション コマンドを定義する方法については、次のビデオを参照してください。
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+<br>
 
 ## <a name="select-action-command-invoke-locations"></a>操作コマンドを呼び出す場所を選択する
 
@@ -185,7 +191,7 @@ ms.locfileid: "66143432"
         "title": "Create To Do",
         "type": "action",
         "context": ["commandBox", "message", "compose"],
-        "fetchTask": true,
+        "fetchTask": false,
         "parameters": [
           {
             "name": "Name",
@@ -212,7 +218,7 @@ ms.locfileid: "66143432"
         "description": "Reassign a todo item",
         "title": "Reassign a todo item",
         "type": "action",
-        "fetchTask": true,
+        "fetchTask": false,
       }
     ]
   }

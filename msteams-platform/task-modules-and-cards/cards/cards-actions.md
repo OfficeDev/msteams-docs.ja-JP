@@ -3,12 +3,12 @@ title: ボットにカード アクションを追加する
 description: このモジュールでは、Microsoft Teamsのカード アクションとは何か、アクションの種類、ボットでカード アクションを使用する方法について説明します
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: e06cb41645480423727924127501b6ea3f85f953
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: d09caa4c7a0f324b712e93b678eac2a0b66567fc
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144174"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189759"
 ---
 # <a name="card-actions"></a>カード アクション
 
@@ -556,6 +556,16 @@ CardFactory.actions([
   }
 }
 ```
+
+## <a name="code-samples"></a>コード サンプル
+
+|S.no|カード| 説明|.NET|Javascript|Python|Java|
+|:--|:--|:--------------------------------------------------------|-----|------------|-----|----------------------------|
+|1|カードの使用|サムネイル、オーディオ、メディアなど、すべての種類のカードを紹介します。適切なダイアログにルーティングするウェルカム メッセージにボタンが表示されたカードを提示することで、ユーザーを歓迎する + マルチプロンプト ボットを構築します。|[.Net Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|
+|2|アダプティブ カード|マルチターン ダイアログでカードを使用して、名前と年齢のユーザー入力を取得する方法を示します。|[.NET Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|
+
+> [!NOTE]
+> Teamsのアダプティブ カードでは、メディア要素はサポートされていません
 
 ## <a name="next-step"></a>次の手順
 

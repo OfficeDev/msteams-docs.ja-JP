@@ -3,12 +3,12 @@ title: 開発者コミュニティのサポートとフィードバックをMicr
 description: 製品チームMicrosoft Teamsさまざまなフィードバックやサポート チャネルで開発者コミュニティに応答する方法について説明します。
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 1155df225aff3016f0c978dc9c84b4462874ea16
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: aa8518c095eed2357e1da80af5eec1b15c71759f
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144104"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190254"
 ---
 # <a name="support-and-feedback"></a>サポートとフィードバック
 
@@ -20,15 +20,15 @@ SLA ベースのサポートが必要な **業務の重要な問題** には、*
 |:------------|:------------|
 | **Microsoft Teams 製品の問題とエラー** | :::image type="icon" source="assets/icons/microsoft-icon.png" border="false":::Microsoft 365 の Premier サポート契約がある場合は、Microsoft 365 管理センターにアクセスし、サポート メニューを使用して、[お問い合わせをオープン](https://admin.microsoft.com/)にします。 |
 | **Azure のヘルプとサポート** | Azure サブスクリプションを購入している場合は、Azure 管理センターにアクセスし、[チケットをオープン](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportreq)にします。 |
-| **Microsoft Teams に関する一般的な質問** | Microsoft Teams に関する一般的な質問がある場合は、:::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: [Microsoft Teams コミュニティ](https://answers.microsoft.com/msteams/forum)で質問を送信します。|
+| **Teamsに関する一般的な質問** | Teamsに関する一般的な質問がある場合は、[Microsoft Teams Community](https://answers.microsoft.com/msteams/forum)に:::image type="icon" source="assets/icons/microsoft-icon.png" border="false":::質問を送信します。|
 
 ## <a name="developer-community-help"></a>開発者コミュニティのヘルプ
 
-Microsoft Teams の開発者コミュニティは、スタック オーバーフローと Microsoft Q&A を使用して、他の開発者とつながって、アイデアを得たり、説明を受けたり、クエリを送信したりします。 さらに、問題、制限事項、一般的な質問を提起するために必要なコミュニティ ヘルプの種類に応じて、他の連絡先やサイトを使用することもできます。
+開発者のコミュニティTeams、Stack Overflow と Microsoft Q&A を使用して、他の開発者と接続してアイデアを作成し、明確化を行い、クエリを送信します。 さらに、問題、制限事項、一般的な質問を提起するために必要なコミュニティ ヘルプの種類に応じて、他の連絡先やサイトを使用することもできます。
 
 ### <a name="developer-community-forums"></a>開発者コミュニティ フォーラム
 
-Microsoft Teams のアプリ開発に関する質問を共有したり回答したりすることで質問を投稿し、他のコミュニティ メンバーを支援します。
+アプリ開発に関するTeams質問を共有して回答することで、質問を投稿し、他のコミュニティ メンバーを支援します。
 
 | **コミュニティ チャネル**|   **Contact**  |
 |:---------------------|:---------------|

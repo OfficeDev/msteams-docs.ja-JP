@@ -1,16 +1,16 @@
 ---
 title: Microsoft 365 用の Teams アプリを発行する
-description: Teams、Outlook、OfficeのユーザーがMicrosoft 365対応のTeams アプリを検出できるようにします
+description: Teams、Outlook、OfficeのユーザーがMicrosoft 365対応のTeams アプリを検出できるようにする方法について説明します。
 ms.date: 05/24/2022
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 78a2d0354028426f4de98759a501e66530cf1166
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: ff0391bb82bed022ec372094546e3a5236e030ea
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668061"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190187"
 ---
 # <a name="publish-teams-apps-for-microsoft-365"></a>Microsoft 365 用の Teams アプリを発行する
 

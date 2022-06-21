@@ -1,15 +1,14 @@
 ---
 title: Microsoft Teams アプリのデバイスアクセス許可を要求する
-keywords: Teams アプリ 機能 アクセス許可 デバイス ネイティブ スキャン qr バーコード画像 オーディオ ビデオ
 description: スキャン QR、バーコード、画像、オーディオ、ビデオ機能など、ユーザーの同意を必要とするネイティブ機能へのアクセスを要求するためにアプリ マニフェストを更新する方法
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: a2ffcb378c3e46f7e940e7729eb62ad31d0745a9
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: c39673bd03d18c0aabb98e218bf13c41ce1eab9f
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150821"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189460"
 ---
 # <a name="request-device-permissions-for-your-teams-app"></a>Teams アプリのデバイスアクセス許可を要求する
 
@@ -127,7 +126,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 > * `camera`、`gallery`、および `microphone`の サポートは、[**selectMedia API**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true) を介して有効になります。 単一の画像キャプチャには [**captureImage API**](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#captureimage--error--sdkerror--files--file-------void-&preserve-view=true) を使用します。
 > * `location` のサポートは、[**getLocation API**](/javascript/api/@microsoft/teams-js/microsoftteams.location?.view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) を介して有効になります。 HTML5 位置情報 API は現在、デスクトップで完全にサポートされていないため、場所に対してこれを`getLocation API`使用Teams必要があります。
 
-以下に例を示します。
+次に例を示します。
 
 * ユーザーに自分の場所へのアクセスを求めるには、次のコマンドを呼び出す `getCurrentPosition()`必要があります。
 

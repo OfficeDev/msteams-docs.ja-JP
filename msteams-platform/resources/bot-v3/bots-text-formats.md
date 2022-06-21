@@ -4,12 +4,12 @@ description: このモジュールでは、ボットの会話におけるテキ�
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 03/29/2018
-ms.openlocfilehash: 2bec542b678f371e20317d1ea7d11b4e97f52338
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 0aea1472a323c0161567c4661c02956568cb2187
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142333"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189730"
 ---
 # <a name="formatting-bot-messages"></a>ボット メッセージの書式設定
 
@@ -27,7 +27,7 @@ Microsoft Teamsでは、次の書式設定オプションがサポートされ�
 
 ## <a name="formatting-text-content"></a>テキスト コンテンツの書式設定
 
-Microsoft Teamsでは、Markdown と XML (HTML) の書式設定タグのサブセットがサポートされています。
+Teamsでは、Markdown と XML (HTML) の書式設定タグのサブセットがサポートされています。
 
 現時点では、次の制限事項が適用されます。
 * テキストのみのメッセージでは、テーブルの書式設定はサポートされていません。
@@ -36,7 +36,7 @@ Microsoft Teamsでは、Markdown と XML (HTML) の書式設定タグのサブ�
 
 ### <a name="cross-platform-support"></a>クロスプラットフォームサポート
 
-Microsoft Teamsでサポートされているすべてのプラットフォームで書式設定を確実に機能させるには、一部のスタイルが現在すべてのプラットフォームでサポートされていない点に注意してください。
+Teamsでサポートされているすべてのプラットフォームで書式設定を確実に機能させるには、一部のスタイルが現在すべてのプラットフォームでサポートされていない点に注意してください。
 
 | Style                     | テキストのみのメッセージ | カード (XML のみ) |
 |---------------------------|--------------------|------------------|
@@ -83,6 +83,6 @@ Microsoft Teamsでサポートされているすべてのプラットフォー�
 | 順序付けられていないリスト | <ul><li>text</li><li>text</li></ul> | `* text`<br>`* text` | `<ul><li>text</li><li>text</li></ul>` |
 | 順序付きリスト | <ol><li>text</li><li>text</li></ol> | `1. text`<br>`2. text` | `<ol><li>text</li><li>text</li></ol>` |
 | プリフォームフォーマットされたテキスト | `text` | `` `text` `` | `<pre>text</pre>` |
-| blockquote | <blockquote>テキスト</blockquote> | `>text` | `<blockquote>text</blockquote>` |
+| blockquote | <blockquote>text</blockquote> | `>text` | `<blockquote>text</blockquote>` |
 | hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` | `<a href="https://www.bing.com/">Bing</a>` |
 | image link | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
