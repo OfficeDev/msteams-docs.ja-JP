@@ -138,10 +138,12 @@
       href: toolkit/visual-studio-overview.md
     - name: Teams 用 Yeoman ジェネレーター (GitHub)
       href: 'https://github.com/pnp/generator-teams'
-    - name: App Studio
-      href: concepts/build-and-test/app-studio-overview.md
-    - name: Teams の開発者ポータル
-      href: concepts/build-and-test/teams-developer-portal.md
+    - name: 開発者ポータル
+      items:
+        - name: Teams の開発者ポータル
+          href: concepts/build-and-test/teams-developer-portal.md
+        - name: App Studio
+          href: concepts/build-and-test/app-studio-overview.md
     - name: Teams JavaScript client SDK
       href: tabs/how-to/using-teams-client-sdk.md
     - name: ボットおよびメッセージ拡張機能用 Node.js Bot Framework (GitHub)
