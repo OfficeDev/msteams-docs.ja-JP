@@ -1,17 +1,16 @@
 ---
 title: Microsoft Graph を使用して外部プラットフォーム メッセージを Teams にインポートする
-description: Microsoft Graph を使用して外部プラットフォームから Teams にメッセージをインポートする方法について説明します
+description: Microsoft Graph を使用して外部プラットフォームから Teams にメッセージをインポートする方法について説明します。
 ms.localizationpriority: high
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
-keywords: teams インポート メッセージ api graph microsoft 移行する 移行 投稿
-ms.openlocfilehash: 3fb593bf72c1f8b495a45bad8eef6e2177684c7b
-ms.sourcegitcommit: eeaa8cbb10b9dfa97e9c8e169e9940ddfe683a7b
+ms.openlocfilehash: 248e288778ec43f4fd5e25f4b814b73fb89c0fe2
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65756921"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189719"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Microsoft Graph を使用してサードパーティのプラットフォーム メッセージを Teams にインポートする
 
@@ -59,14 +58,14 @@ Microsoft Graph を使用すると、ユーザーの既存のメッセージ履�
 
 |ScopeName|DisplayName|説明|型|管理者の同意はありましたか?|対象となるエンティティ/API|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|Microsoft Teams への移行の管理|Microsoft Teams に移行するためのリソースを作成して管理する|**アプリケーション専用**|**はい**|`POST /teams`|
+|`Teamwork.Migrate.All`|Microsoft Teams への移行の管理|Teams に移行するためのリソースを作成して管理する。|**アプリケーション専用**|**はい**|`POST /teams`|
 
 #### <a name="request-create-a-team-in-migration-state"></a>POST リクエストの例については、「要求 (移行状態でチームを作成する)」をご覧ください。
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams
-
 Content-Type: application/json
+
 {
   "@microsoft.graph.teamCreationMode": "migration",
   "template@odata.bind": "https://graph.microsoft.com/v1.0/teamsTemplates('standard')",
@@ -105,14 +104,14 @@ Content-Location: /teams/{team-id}
 
 |ScopeName|DisplayName|説明|型|管理者の同意はありましたか?|対象となるエンティティ/API|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|Microsoft Teams への移行の管理|Microsoft Teams に移行するためのリソースを作成して管理する|**アプリケーション専用**|**はい**|`POST /teams`|
+|`Teamwork.Migrate.All`|Microsoft Teams への移行の管理|Teams に移行するためのリソースを作成して管理する。|**アプリケーション専用**|**はい**|`POST /teams`|
 
 #### <a name="request-create-a-channel-in-migration-state"></a>リクエスト (移行状態でチャネルを作成する)
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/{team-id}/channels
-
 Content-Type: application/json
+
 {
   "@microsoft.graph.channelCreationMode": "migration",
   "displayName": "Architecture Discussion",
@@ -303,7 +302,6 @@ HTTP/1.1 200 OK
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/completeMigration
-
 ```
 
 #### <a name="response"></a>応答
@@ -336,10 +334,11 @@ HTTP/1.1 204 NoContent
 POST https://graph.microsoft.com/beta/teams/{team-id}/members
 Content-type: application/json
 Content-length: 30
+
 {
-"@odata.type": "#microsoft.graph.aadUserConversationMember",
-"roles": [],
-"user@odata.bind": "https://graph.microsoft.com/beta/users/{user-id}"
+   "@odata.type": "#microsoft.graph.aadUserConversationMember",
+   "roles": [],
+   "user@odata.bind": "https://graph.microsoft.com/beta/users/{user-id}"
 }
 ```
 

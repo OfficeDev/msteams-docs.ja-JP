@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 9cceb8f75976dcb7606d09a027e66c775e226365
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e9c89f6f1aed486582eb2f50ee8f8107f5ef8473
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143992"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189463"
 ---
 # <a name="create-a-personal-tab"></a>プライベート タブを作成する
 
@@ -249,7 +249,7 @@ gulp ngrok-serve
 
 ### <a name="upload-your-application-to-teams"></a>Microsoft Teams にアプリ パッケージをアップロードする
 
-1. Microsoft Teams に移動し、**[アプリ]**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="[Teamsストア]"::: を選択します。
+1. Teams に移動し、**[アプリ]**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="[Teams ストア]"::: を選択します。
 1. [**アプリの管理**] を選択し、[**カスタム アプリをアップロード**] します。
 1. プロジェクト ディレクトリに移動し、 **./package** フォルダーに移動し、zip フォルダーを選択して [**開く**] を選択します。
 
@@ -335,7 +335,7 @@ ASP.NET Core は、**Index** という名前のファイルをサイトの既定
 * 32 x 32 ピクセルの透明なアウトライン アイコン。
 * アプリの属性を指定する `manifest.json` ファイル。
 
-これらのファイルは、Teams へのタブのアップロードに使用するために、アプリ パッケージで zip 形式にする必要があります。 Microsoft Teams は、マニフェストで指定された `contentUrl` を読み込み、<iframe\> に埋め込み、タブにレンダリングします。
+これらのファイルは、Teams へのタブのアップロードに使用するために、アプリ パッケージで zip 形式にする必要があります。 Teams は、マニフェストで指定された `contentUrl` を読み込み、IFrame\> に埋め込み、タブにレンダリングします。
 
 #### <a name="csproj"></a>.csproj
 
@@ -484,7 +484,7 @@ ASP.NET Core では、Web ルート フォルダーは、アプリケーショ�
 * 32 x 32 ピクセルの **透明なアウトライン アイコン**。
 * アプリの属性を指定する `manifest.json` ファイル。
 
-これらのファイルは、Teams へのタブのアップロードに使用するために、アプリ パッケージで zip 形式にする必要があります。 Microsoft Teams は、マニフェストで指定された `contentUrl` を読み込み、IFrame に埋め込み、タブにレンダリングします。
+これらのファイルは、Teams へのタブのアップロードに使用するために、アプリ パッケージで zip 形式にする必要があります。 Teams は、マニフェストで指定された `contentUrl` を読み込み、IFrame に埋め込み、タブにレンダリングします。
 
 #### <a name="csproj"></a>.csproj
 

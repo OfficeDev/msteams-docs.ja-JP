@@ -1,21 +1,21 @@
 ---
-title: 開発者向けプレビュー
+title: Microsoft Teams の開発者向けパブリック プレビュー
 description: この記事では、Microsoft Teams および開発者プレビュー アプリ マニフェストのパブリック開発者プレビューに含まれる機能について説明します。
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 6a0f053020db1f703de5abf7d64accf5816422c9
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: e166d9c65d93569e8854759dce725f5edca104f9
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123921"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190251"
 ---
 # <a name="public-developer-preview-for-microsoft-teams"></a>Microsoft Teams の開発者向けパブリック プレビュー
 
 >[!NOTE]
 >プレビューに含まれている機能は完全でないため、一般公開前に変更される場合があります。 これらは、テストと調査のみを目的としています。 実稼働アプリケーションでは使用しないでください。
 
-開発者向けプレビューは、Microsoft Teams のリリース前の機能にいち早くアクセスできる開発者向けの公開プログラムです。 これにより、今後の機能を検索およびテストし、Microsoft Teams アプリに潜在的に含めることができます。 開発者向けプレビューのあらゆる機能に関する[フィードバック](~/feedback.md)をお待ちしております。 開発者向けプレビューは、Microsoft Teams クライアントごとに有効になっているので、組織全体への影響を心配する必要はありません。
+開発者向けプレビューは、Microsoft Teams のリリース前の機能にいち早くアクセスできる開発者向けの公開プログラムです。 これにより、今後の機能を検索およびテストし、Teams アプリに潜在的に含めることができます。 開発者向けプレビューのあらゆる機能に関する[フィードバック](~/feedback.md)をお待ちしております。 開発者向けプレビューは、Microsoft Teams クライアントごとに有効になっているので、組織全体への影響を心配する必要はありません。
 
 ## <a name="developer-preview-app-manifest"></a>開発者向けプレビューのアプリ マニフェスト
 

@@ -4,12 +4,12 @@ description: Teams ボットでプロアクティブ メッセージを送信し
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: high
-ms.openlocfilehash: cf163b8c74a74eeb83757e65fd79351176290fc9
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 4344a1c1a3d58d8bb3c06105b05a1b370b55e259
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143509"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190135"
 ---
 # <a name="proactive-messages"></a>プロアクティブ メッセージ
 
@@ -25,8 +25,9 @@ ms.locfileid: "66143509"
 > 現在、ボットは Government Community Cloud (GCC) と GCC-High で利用できますが、国防総省 (DOD) では利用できません。
 >
 > プロアクティブ メッセージの場合、ボットは政府機関のクラウド環境に対して次のエンドポイントを使用する必要があります。
->    * GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`。
->    * GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`。
+>
+> * GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`。
+> * GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`。
 
 ボットがプロアクティブなメッセージをユーザー、グループ チャット、またはチームに送信するには、ボットがメッセージを送信するためのアクセス権を持っている必要があります。 グループ チャットまたはチームの場合、ボットを含むアプリを最初にその場所にインストールする必要があります。
 必要に応じて、チーム内で [Microsoft Graph を使用してアプリをプロアクティブにインストール](#proactively-install-your-app-using-graph)したり、[アプリ ポリシー](/microsoftteams/teams-custom-app-policies-and-settings)を使用して、テナント内のチームやユーザーにアプリをプッシュしたりすることができます。 ユーザーの場合、自分でアプリをインストールしているか、アプリがインストールされているチームのメンバーである必要があります。
@@ -64,7 +65,9 @@ ms.locfileid: "66143509"
 
 会話が存在しない場合、または `conversationId` がわからない場合は、会話を作成する必要があります。 会話は 1 回だけ作成し、`conversationId` 値または `conversationReference` オブジェクトを保存する必要があります。
 
-会話が作成されたら、会話 ID を取得する必要があります。
+アプリが初めてインストールされたときに会話を取得できます。 会話が作成されたら、会話 ID を取得する必要があります。 `conversationId` は、会話更新イベントで使用できます。
+
+`conversationId` がない場合は、[Graph を使用してアプリをプロアクティブにインストール](#proactively-install-your-app-using-graph)し、`conversationId` を取得できます。
 
 ## <a name="get-the-conversation-id"></a>会話 ID を取得する
 
@@ -77,6 +80,13 @@ ms.locfileid: "66143509"
 正しいアドレス情報を取得したので、メッセージを送信することができます。 SDK を使用している場合は、メソッドを使用し、直接 API 呼び出しを行う `continueConversation` `conversationId` `tenantId` 必要があります。 メッセージを正常に送信するには、`conversationParameters` を正しく設定する必要があります。 [サンプル](#samples)セクションを参照するか、[コード サンプル](#code-sample)セクションに記載されているサンプルの 1 つを使用してください。
 
 プロアクティブなメッセージを送信したので、ユーザーとボットの間の情報交換を改善するために、プロアクティブなメッセージを送信する間、これらのベスト プラクティスに従う必要があります。
+
+ボットからプロアクティブなメッセージを送信する方法については、次のビデオを参照してください。
+
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
+<br>
 
 ## <a name="best-practices-for-proactive-messaging"></a>プロアクティブ メッセージングのベスト プラクティス
 

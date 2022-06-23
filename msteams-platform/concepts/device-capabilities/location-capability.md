@@ -1,17 +1,16 @@
 ---
 title: 場所機能を統合する
 author: Rajeshwari-v
-description: Teams JavaScript クライアント SDK を使用して、コード スニペットとサンプルを使用して位置情報機能を活用する方法について説明します
-keywords: 場所マップ機能のネイティブ デバイスのアクセス許可
+description: Teams JavaScript クライアント SDK を使用して、コード スニペットとサンプルを使用して位置情報機能を活用する方法について説明します。
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 0a2c7400801decd937243bbbe5dbcea307d13fc0
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: 00fdfe470dcc5028afb233f9fbe0c6a6f7ff1b2c
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130453"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189866"
 ---
 # <a name="integrate-location-capabilities"></a>場所機能を統合する
 

@@ -4,12 +4,12 @@ author: laujan
 description: このモジュールでは、Office 365 コネクタを使用し、Microsoft Teams で実行可能なメッセージを作成して送信する方法について説明します
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 86fe2237b5cf92c4fbc345f171cc8365baa0f348
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1d52760784e3d0bbbd1e4a87c576294530242629
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143264"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190103"
 ---
 # <a name="create-and-send-messages"></a>メッセージを作成して送信する
 
@@ -168,7 +168,7 @@ cURL を使用して webhook にメッセージを投稿するには、次の手
     > [!NOTE]
     > POST が成功した場合は、`curl`によって単純な **1** 出力が表示される必要があります。
 
-1. Microsoft Teams クライアントで、投稿された新しいカードを確認します。
+1. Teams クライアントで、投稿された新しいカードを確認します。
 
 # <a name="powershell"></a>[PowerShell](#tab/PowerShell)
 
@@ -185,7 +185,7 @@ PowerShell を使用して Webhook にメッセージを投稿するには、次
     > [!NOTE]
     > POST が成功した場合は、`Invoke-RestMethod`によって単純な **1** 出力が表示される必要があります。
 
-1. Webhook URL に関連付けられている Microsoft Teams チャネルを確認します。 チャネルに投稿された新しいカードを確認できます。 コネクタを使用してアプリをテストまたは発行する前に、次の操作を行う必要があります。
+1. Webhook URL に関連付けられている Teams チャネルを確認します。 チャネルに投稿された新しいカードを確認できます。 コネクタを使用してアプリをテストまたは発行する前に、次の操作を行う必要があります。
 
     * [アイコンを 2 つ含めます](../../concepts/build-and-test/apps-package.md#app-icons)。
     * マニフェストの `icons` 部分を、URL ではなくアイコンのファイル名に変更します。

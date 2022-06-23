@@ -5,12 +5,12 @@ description: このモジュールでは、Microsoft Teams で発信 Webhook を
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 5c86fd5e3885fd859d02489c81f81aa0502b965a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a290d7197c842c3920bd536fa71774fd82e47d84
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143285"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189890"
 ---
 # <a name="create-outgoing-webhook"></a>送信 Webhook を作成する
 
@@ -25,6 +25,12 @@ ms.locfileid: "66143285"
 * Try using &nbsp; to add spaces in codeblocks for indentation and remove the hard tabs.
 * Table with just a row is not really needed. Provide the content without tabulating it.
 --->
+
+送信 Webhook を作成する方法については、次のビデオを参照してください。
+<br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzu]
+<br>
 
 ## <a name="key-features-of-outgoing-webhook"></a>送信 Webhook の主な機能
 
@@ -109,7 +115,7 @@ ms.locfileid: "66143285"
 
 **成功または失敗の応答を送信するメソッドを作成する**
 
-送信 Webhook からの応答は、元のメッセージと同じ返信チェーンに表示されます。ユーザーがクエリを実行すると、Microsoft Teams はサービスに対して同期 HTTP 要求を発行し、コードには、メッセージに応答するための 5 秒間が与えられます。この時間を過ぎると、接続がタイムアウトして終了します。
+送信 Webhook からの応答は、元のメッセージと同じ返信チェーンに表示されます。 ユーザーがクエリを実行すると、Teams はサービスに対して同期 HTTP 要求を発行し、コードには、メッセージに応答するための 5 秒間が与えられます。この時間を過ぎると、接続がタイムアウトして終了します。
 
 ### <a name="example-response"></a>応答の例
 
@@ -232,7 +238,7 @@ var responseMsg = JSON.stringify({
 
 |**サンプルの名前** | **説明** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Webhookの送信 | Microsoft Teams で使用するカスタム ボットを作成するサンプルです。| [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
+| Webhookの送信 | Teams で使用するカスタム ボットを作成するサンプルです。| [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 
 ## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
 

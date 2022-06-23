@@ -1,15 +1,15 @@
 ---
 title: Teams アプリを Microsoft 365 全体に拡張するための開発環境を設定する
-description: Teams アプリを Microsoft 365 に拡張するための前提条件を次に示します。
+description: Teams アプリを Microsoft 365 全体に拡張するためのプレビュー ビルドを実行するために必要な前提条件について説明します。
 ms.date: 05/24/2022
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: fc96d8883f0ad09ebd321a392481e75d92ae8641
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: c0a1b265d4bc1aeb71232717ebc363d1b046da81
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668026"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189315"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Teams アプリを Microsoft 365 全体に拡張するための開発環境を設定する
 

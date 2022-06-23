@@ -4,12 +4,12 @@ description: Moodle LMS と Teams の統合、Moodle 学習管理、mConnect と
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: e782c6361be7a6ca95b6a21baf88bee63461f139
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 62e52835e63f6fd40633ca2c99097746ee7ab2e5
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143306"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189448"
 ---
 # <a name="moodle-learning-management-system"></a>Moodle ラーニング管理システム
 
@@ -33,7 +33,7 @@ This content is modified as per the requirement.-->
 
 Moodle LMS は、ユーザーが次のアプリにアクセスするのに役立ちます:
 
-* **Microsoft 365 プラグイン**: Microsoft 365 プラグインは、Moodle サイトと Microsoft Teams の間の統合を確実にできるように設計されています。 これらのプラグインは個別に、またはパートナーシップの下で、個別のユーザー要件を達成するために使用できます。 詳細については、[Microsoft 365 プラグイン](m365-plugins/m365-plugins-overview.md)を参照してください。
+* **Microsoft 365 プラグイン**: Microsoft 365 プラグインは、Moodle サイトと Teams の間の統合を確実にできるように設計されています。 これらのプラグインは個別に、またはパートナーシップの下で、個別のユーザー要件を達成するために使用できます。 詳細については、[Microsoft 365 プラグイン](m365-plugins/m365-plugins-overview.md)を参照してください。
 
 * **Moodle のパートナー アプリ**: Moodle と Teams 向けアプリの全てのパートナー セットは、Microsoft Store で提供されています。 詳細については、[Moodle のためのパートナー アプリ](partner-apps-for-moodle.md)を参照してください。
 

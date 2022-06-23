@@ -1,16 +1,16 @@
 ---
 title: Microsoft 365 間で Teams メッセージ拡張機能を拡張する
-description: 検索ベースのTeams メッセージ拡張機能を更新してOutlookで実行する方法を次に示します。
+description: アプリ マニフェストを更新し、Outlook チャネルを追加し、更新されたアプリをサイドローディングすることにより、検索ベースの Teams メッセージ拡張機能を Outlook で実行するように更新する方法について説明します。
 ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: d531b01a8de3663fed6806bc68386d9c4c894695
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 7c926f67181f58fc982b535853ec990bbae0651d
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142102"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66190198"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Microsoft 365 間で Teams メッセージ拡張機能を拡張する
 
@@ -106,9 +106,9 @@ Microsoft Teams では、メッセージ拡張機能は、ホストする Web �
 
     :::image type="content" source="images/azure-bot-channel-message-extensions.png" alt-text="zure ボット チャネル ウィンドウからボットの Outlook 'Message Extensions' チャネルを追加する":::
 
-1. Outlook チャネルがボットの **[チャネル]** ウィンドウに Microsoft Teams と共に表示されていることを確認します。
+1. Outlook チャネルがボットの **[チャネル]** ウィンドウに Teams と共に表示されていることを確認します。
 
-    :::image type="content" source="images/azure-bot-channels.png" alt-text="Microsoft Teams と Outlook チャネルの両方を一覧表示する Azure ボット チャネル ウィンドウ":::
+    :::image type="content" source="images/azure-bot-channels.png" alt-text="Teams と Outlook チャネルの両方を一覧表示する Azure ボット チャネル ウィンドウ":::
 
 ## <a name="update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso"></a>SSO の Microsoft Azure Active Directory (Azure AD) アプリの登録を更新する
 
@@ -133,7 +133,7 @@ Microsoft Teams では、メッセージ拡張機能は、ホストする Web �
 
 ## <a name="sideload-your-updated-message-extension-in-teams"></a>更新されたメッセージ拡張機能を Teams でサイドロードする
 
-最後の手順は、更新されたメッセージ拡張機能 ([アプリ パッケージ](/microsoftteams/platform/concepts/build-and-test/apps-package)) をMicrosoft Teamsにサイドロードすることです。 完了すると、メッセージ拡張機能がインストールされている *[アプリ]* に作成メッセージ領域から表示されます。
+最後の手順は、更新されたメッセージ拡張機能 ([アプリ パッケージ](/microsoftteams/platform/concepts/build-and-test/apps-package)) を Teams にサイドロードすることです。 完了すると、メッセージ拡張機能がインストールされている *[アプリ]* に作成メッセージ領域から表示されます。
 
 1. Teams アプリケーション (マニフェスト アイコンとアプリ [アイコン](/microsoftteams/platform/resources/schema/manifest-schema#icons)) を zip ファイルにパッケージ化します。 Teams Toolkit を使用してアプリを作成した場合は、Teams Toolkit の *[展開]* メニューの **[Zip Teams メタデータ パッケージ]** オプションを使用して簡単に行うことができます。
 

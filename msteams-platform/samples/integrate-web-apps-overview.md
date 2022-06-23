@@ -5,17 +5,17 @@ description: この記事では、Web アプリケーションとデバイス機
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 73fb039886d47a5f011b1dcfb9a8a3a46cb4ff6f
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 4df1e9ebbcdf23fce9c875384b2918c84fe0edd2
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144271"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189773"
 ---
 # <a name="integrate-web-apps"></a>Web アプリを統合する
 
 既存の Web アプリケーションの機能を Microsoft Teams プラットフォームに統合することにより、充実したユーザー エクスペリエンスを提供できます。 アプリを Teams にネイティブにするには、[Teams 設計ガイドライン](~/concepts/design/understand-use-cases.md)に従ってください。
-このドキュメントでは、Web アプリケーションを Teams と統合するための前提条件、Power アプリを作成する Power Platform、Power Virtual Agents、Virtual Assistant、アプリ テンプレート、Shift コネクタ、Moodle LMS、Web サイトの [Share-to-Teams] ボタンを作成する、 SharePoint の [Microsoft Teams] タブの追加、ディープ リンクの作成、およびデバイス機能の統合の概要を説明します。
+このドキュメントでは、Web アプリケーションを Teams と統合するための前提条件、Power アプリを作成する Power Platform、Power Virtual Agents、Virtual Assistant、アプリ テンプレート、Shift コネクタ、Moodle LMS、Web サイトの [Share-to-Teams] ボタンを作成する、 SharePoint の [Teams] タブの追加、ディープ リンクの作成、およびデバイス機能の統合の概要を説明します。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -45,7 +45,7 @@ Microsoft Power Platform は、Power BI、Power Apps、Power Automate、Power Vi
 
 ### <a name="power-apps"></a>Power Apps
 
-Power Apps を使用すると、ビジネス データに接続し、組織のニーズに合わせて調整されたビジネス アプリを構築できます。 Power Apps を使用すると、さまざまなアプリ シナリオで、キャンバス アプリを通じてビジネス上の課題を解決できます。 アプリをビルドしたら、Power Apps メーカー ポータルからエクスポートして、Microsoft Teams に埋め込むことができます。
+Power Apps を使用すると、ビジネス データに接続し、組織のニーズに合わせて調整されたビジネス アプリを構築できます。 Power Apps を使用すると、さまざまなアプリ シナリオで、キャンバス アプリを通じてビジネス上の課題を解決できます。 アプリをビルドしたら、Power Apps メーカー ポータルからエクスポートして、Teams に埋め込むことができます。
 
 ### <a name="power-virtual-agents"></a>Power Virtual Agents
 
@@ -61,7 +61,7 @@ Power Virtual Agents は、コードなしのガイド付きグラフィカル �
 
 ## <a name="install-moodle-lms"></a>Moodle LMS のインストール
 
-Moodle は人気のあるオープンソースのラーニング管理システム (LMS) です。 現在、Microsoft Teams と統合されています。 この統合により、教育者と教師は Moodle コースで共同作業を行い、成績や課題について質問したり、Teams 内で常に最新の通知を受け取ることができます。
+Moodle は人気のあるオープンソースのラーニング管理システム (LMS) です。 現在、Teams と統合されています。 この統合により、教育者と教師は Moodle コースで共同作業を行い、成績や課題について質問したり、Teams 内で常に最新の通知を受け取ることができます。
 
 ## <a name="create-a-share-to-teams-button-for-your-website"></a>Web サイトの [Teams で共有] ボタンを作成する
 
@@ -69,7 +69,7 @@ Moodle は人気のあるオープンソースのラーニング管理システ�
 
 ## <a name="add-a-microsoft-teams-tab-in-sharepoint"></a>SharePoint に Microsoft Teams タブを追加する
 
-SPFx Web パーツとして SharePoint に Microsoft Teams タブを追加することで、Microsoft Teams と SharePoint の間のリッチなインテグレーション エクスペリエンスを得ることができます。
+SPFx Web パーツとして SharePoint に [Teams] タブを追加することで、Teams と SharePoint の間のリッチなインテグレーション エクスペリエンスを得ることができます。
 
 ## <a name="create-deep-link"></a>ディープ リンクを作成する
 
@@ -77,7 +77,7 @@ Teams のエンティティへのディープ リンクを作成できます。 
 
 ## <a name="integrate-device-capabilities"></a>デバイスの機能を統合する
 
-Microsoft Teams プラットフォームは、組み込みのファーストパーティ エクスペリエンスに合わせて開発者機能を継続的に強化しています。 強化された Teams プラットフォームにより、パートナーは、Microsoft Teams JavaScript クライアント SDK で利用可能な専用 API を使用して、カメラ、QR またはバーコード スキャナー、フォト ギャラリー、マイク、位置情報などのネイティブ デバイス機能にアクセスして統合できます。
+Teams プラットフォームは、組み込みのファーストパーティ エクスペリエンスに合わせて開発者機能を継続的に強化しています。 強化された Teams プラットフォームにより、パートナーは、Microsoft Teams JavaScript クライアント SDK で利用可能な専用 API を使用して、カメラ、QR またはバーコード スキャナー、フォト ギャラリー、マイク、位置情報などのネイティブ デバイス機能にアクセスして統合できます。
 
 ## <a name="integrate-people-picker"></a>ユーザー ピッカーを統合する
 
@@ -85,9 +85,9 @@ Teams のネイティブ ユーザー ピッカー コントロールを統合�
 
 ## <a name="integrate-teams-in-your-external-app"></a>Teams を外部アプリに統合する
 
-Teams アプリを作成することで、独自のエクスペリエンスを Microsoft Teams に組み込むことができます。 このモデルを *元に戻して*、Teams またはその他の通信機能を独自の外部アプリ エクスペリエンスに統合する場合は、[Azure Communication Services](/azure/communication-services/overview) を参照してください。 Azure Communication Services は、REST API とクライアント ライブラリ SDK を備えたクラウドベースのサービスであり、通信を独自のカスタム アプリケーションに統合するのに役立ちます。 [UI ライブラリ](https://azure.github.io/communication-ui-library/)を使用して、通話やチャットの汎用または Teams スタイルの React Web コンポーネントを埋め込むことができます。
+Teams アプリを作成することで、独自のエクスペリエンスを Teams に組み込むことができます。 このモデルを *元に戻して*、Teams またはその他の通信機能を独自の外部アプリ エクスペリエンスに統合する場合は、[Azure Communication Services](/azure/communication-services/overview) を参照してください。 Azure Communication Services は、REST API とクライアント ライブラリ SDK を備えたクラウドベースのサービスであり、通信を独自のカスタム アプリケーションに統合するのに役立ちます。 [UI ライブラリ](https://azure.github.io/communication-ui-library/)を使用して、通話やチャットの汎用または Teams スタイルの React Web コンポーネントを埋め込むことができます。
 
-Azure Communication Services アプリケーションは、パブリック プレビュー機能を使用して、[Teams と相互運用し](/azure/communication-services/concepts/teams-interop)、カスタム アプリケーションが Teams 会議に匿名で参加できるようにすることができます。 たとえば、ビデオ通話をモバイル バンキング アプリケーションに統合し、エンドユーザーが Microsoft Teams を使用して銀行の従業員と仮想的に会うことができるようにすることができます。
+Azure Communication Services アプリケーションは、パブリック プレビュー機能を使用して、[Teams と相互運用し](/azure/communication-services/concepts/teams-interop)、カスタム アプリケーションが Teams 会議に匿名で参加できるようにすることができます。 たとえば、ビデオ通話をモバイル バンキング アプリケーションに統合し、エンドユーザーが Teams を使用して銀行の従業員と仮想的に会うことができるようにすることができます。
 
 また、Microsoft 365 ID を統合して、Teams ユーザーに代わってビデオと PSTN 通話を埋め込む外部アプリケーションを構築することもできます。 過去に [Skype for Business SDK](/skype-sdk/appsdk/skypeappsdk) を使用したことがある場合は、代わりに Azure Communication Services の一部としてこれらの機能を使用することをお勧めします。
 

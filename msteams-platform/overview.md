@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 3513f272254b578c94a9b9adcf7b70f1113e4509
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: 1df61412f8cf3e47340a7626004d3652a77b60e9
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795162"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189604"
 ---
 # <a name="teams-app-that-fits"></a>最適な Teams アプリ
 
@@ -39,7 +39,7 @@ Teams 開発者プラットフォームで、ニーズに合わせて Teams 機�
 
 ## <a name="build-apps-with-microsoft-teams-platform"></a>Microsoft Teams プラットフォームでアプリを構築する
 
-Microsoft Teams アプリは、重要な情報、共通のツール、信頼できるプロセスを提供し、ユーザーが集まり、学習し、仕事をする場を増やすことで、共同作業ワークスペースの生産性を向上させます。 アプリは、要件に合わせて Teams プラットフォームの機能を拡張する方法です。 新しいアプリを作成するか、既存のアプリを統合して、特定のビジネス ニーズに合わせて Microsoft Teams プラットフォームの利点を活用します。
+Teams アプリは、重要な情報、共通のツール、信頼できるプロセスを提供することで、コラボレーション ワークスペースの生産性を向上させ、ユーザーが集まり、学習し、仕事をする場を増やします。 アプリは、要件に合わせて Teams プラットフォームの機能を拡張する方法です。 新しいアプリを作成するか、既存のアプリを統合して、特定のビジネス ニーズに合わせて Teams プラットフォームの利点を活用します。
 
 アプリを構築することの利点は、組織の目標の達成や社内の生産性の向上まで、さまざまです。
 
@@ -75,7 +75,7 @@ Teams がアプリのニーズに最適である理由は次のとおりです�
 
 - **タブとボットを使用した個人用アプリ**
 
-    1 対 1 の会話ボットは、Microsoft Teams の機能の中でも自由度の高い機能です。 ボットとユーザーの間でのみ会話が行われます。 タスク モジュールを柔軟に組み込み、複雑な情報のセットを簡略化できます。
+    1 対 1 の会話ボットは、Teams の機能の中でも自由度の高い機能です。 ボットとユーザーの間でのみ会話が行われます。 タスク モジュールを柔軟に組み込み、複雑な情報のセットを簡略化できます。
 
     たとえば、アプリが複数の共同作業者が使用するデザイン ツールである場合、すべてのユーザーに通知する共有ボットは、ユーザー エンゲージメントを構築するのに役立ちます。
 

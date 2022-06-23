@@ -5,18 +5,18 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 66aa139669079cad2ebb2d552ccbf7c997f38a6a
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 210110974769c44258200a3e6b48d0cb68a48e07
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66124033"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189927"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Microsoft Teams ストアにアプリを発行する
 
 アプリを Microsoft Teams 内のストアに直接配布して、世界中の何百万ものユーザーにリーチできます。 アプリがストアでも紹介されている場合は、潜在的な顧客に即座にリーチできます。
 
-Teams ストアに公開されたアプリは、Microsoft 365 アプリおよびソリューションの公式マーケットプレイスである [Microsoft AppSource](https://appsource.microsoft.com) にも自動的に一覧表示されます。
+Teams ストアに公開されたアプリは、Microsoft 365 アプリおよびソリューションの公式マーケットプレイスである [Microsoft 商用マーケットプレイス](https://appsource.microsoft.com)にも自動的に一覧表示されます。
 
 ## <a name="understand-the-publishing-process"></a>公開プロセスを理解する
 
@@ -96,7 +96,7 @@ Teams ストアに公開されたアプリは、Microsoft 365 アプリおよび
 
   1. 事前に[パートナー センター アカウントを作成します](prepare/create-partner-center-dev-account.md)。 [パートナー センター アカウント](prepare/create-partner-center-dev-account.md)で問題が発生した場合は、[サポート チケット](/azure/marketplace/partner-center-portal/support)を作成します。
 
-  1. [ストア検証ガイドライン](prepare/teams-store-validation-guidelines.md)を再度確認して、アプリがストア要件に適合していることを確認します。 これにより、アプリで観察される問題の数が減り、その結果、アプリの承認にかかる時間が短縮されます。
+  1. [ストア検証ガイドライン](prepare/teams-store-validation-guidelines.md)を再度確認して、アプリがストア要件に適合していることを確認します。 レビューにより、アプリで観察される問題の数が減り、その結果、アプリの承認にかかる時間が短縮されます。
 
   1. アプリのテストと再テスト:
 

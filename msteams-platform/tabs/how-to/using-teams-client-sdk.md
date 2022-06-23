@@ -5,12 +5,12 @@ ms.author: surbhigupta
 description: このモジュールでは、Microsoft Teams JavaScript クライアント SDK を学習します。これは、以下でホストされているアプリ エクスペリエンスの構築に役立ちます <iframe> でホストされたアプリ エクスペリエンスの構築に役立つ Microsoft Teams JavaScript クライアント SDK の概要。
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 1909df76b3cc61f0d93e4efe40e02b99dc3de730
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 165b08b3936afe03f492d8e6983c5504d38bad8b
+ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144216"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66189509"
 ---
 # <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Microsoft Teams JavaScript クライアント SDK を使用してタブやその他のホストされたエクスペリエンスを構築する
 
@@ -235,7 +235,7 @@ TeamsJS v.2.0 以降では、API は JavaScript 名前空間の関数として�
 * *hostName* プロパティ値に基づいて、特定の機能がホストで使用できる、またはできないとは **考えないでください**。 代わりに、機能サポート (`isSupported`) を確認します。
 * *hostName* を使用して API 呼び出しをゲート **しないでください**。 代わりに、機能サポート (`isSupported`) を確認します。
 * *hostName* は、実行中のホストに基づいてアプリケーションのテーマを区別するために **使用します**。 たとえば、Teamsで実行する場合は Microsoft Teams の紫色を主なアクセント カラーとして使用し、Outlook で実行する場合は Outlook の青を使用できます。
-* *hostName* は、実行中のホストに基づいてユーザーに表示されるメッセージを区別するために **使用します**。 たとえば、Office on the web で実行する場合は *[タスクを Office で管理する]* を表示し、Microsoft Teams で実行する場合は *[Teams でタスクを管理する]* を表示します。
+* *hostName* は、実行中のホストに基づいてユーザーに表示されるメッセージを区別するために **使用します**。 たとえば、Office on the web で実行する場合は *[タスクを Office で管理する]* を表示し、Teams で実行する場合は *[Teams でタスクを管理する]* を表示します。
 
 #### <a name="namespaces"></a>名前空間
 
@@ -243,7 +243,7 @@ TeamsJS v.2.0 以降、API は名前空間として *機能* に編成されま�
 
 ##### <a name="app-namespace"></a>*app* 名前空間
 
-`app` 名前空間には、Microsoft Teams、Office、Outlook 全体におけるアプリの全体的な使用に必要な最上位レベルの API が含まれています。 他のさまざまな TeamsJS 名前空間のすべての API は、TeamsJS v.2.0 の時点で `app` 名前空間に移動しました。
+`app` 名前空間には、Teams、Office、Outlook 全体におけるアプリの全体的な使用に必要な最上位レベルの API が含まれています。 他のさまざまな TeamsJS 名前空間のすべての API は、TeamsJS v.2.0 の時点で `app` 名前空間に移動しました。
 
 | 元の名前空間 `global (window)` | 新しい名前空間 `app` |
 | - | - |
