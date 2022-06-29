@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 316105d9ea6010094328ad7d204cfb765aecc022
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 45c19a5d7089fae85326e303641a8c9a281c7eb0
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123844"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503740"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams ストア検証ガイドライン
 
@@ -83,7 +83,7 @@ ms.locfileid: "66123844"
 
 ### <a name="app-name"></a>アプリ名
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、Microsoft [商用認定ポリシー番号 1140.1.1](/legal/marketplace/certification-policies#114011-app-name) に沿ったものであり、それらのアプリの名前の指定に関して、開発者に追加のガイダンスを提供します。
 <br></br>
@@ -117,7 +117,7 @@ ms.locfileid: "66123844"
 
 ### <a name="suitable-for-workplace-consumption"></a>職場での消費に適していること
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、Microsoft 商用認定ポリシー番号 [1140.1.2](/legal/marketplace/certification-policies#114012-workplace-appropriateness)、[100.8](/legal/marketplace/certification-policies#1008-significant-value)、[100.10](/legal/marketplace/certification-policies#10010-inappropriate-content) に沿ったものであり、開発者に職場に適したアプリを構築するための追加のガイダンスを提供します。
 <br></br>
@@ -238,7 +238,7 @@ Government Community Cloud (GCC) ユーザーにアプリを配布するには�
 
 ### <a name="sensitive-content"></a>機密コンテンツ
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
 アプリは、クレジット カード、金融機関の支払い明細、健康情報、連絡先の追跡などの個人情報、およびその他の機密データを、それらの情報の表示を意図していないユーザーに向けて投稿してはいけません。
 
@@ -264,7 +264,7 @@ Government Community Cloud (GCC) ユーザーにアプリを配布するには�
 
 ### <a name="compatibility"></a>互換性
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
 アプリは、以下のオペレーティング システムやブラウザーの最新バージョンで完全に機能する必要があります。
 
@@ -279,7 +279,7 @@ Government Community Cloud (GCC) ユーザーにアプリを配布するには�
 
 ### <a name="response-time"></a>応答時間
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
 Teams アプリは、合理的な時間内に応答するか、読み込み中や入力中のインジケーター、メッセージ、または警告を表示する必要があります。
 
@@ -317,7 +317,7 @@ Teams アプリ マニフェストは、アプリの構成を定義します。
 
 [*必須の修正*]
 
-アイコンは、ユーザーが Teams ストアを閲覧する際に目にする主要な要素の 1 つです。 
+アイコンは、ユーザーが Teams ストアを閲覧する際に目にする主要な要素の 1 つです。
 <br></br>
 <details><summary>詳細を知るために展開する</summary>
 
@@ -388,7 +388,7 @@ Teams アプリ マニフェストは、アプリの構成を定義します。
 
 **してはいけないこと**:
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
 * 500 文字を超える。
 * **Microsoft** の省略形として **MS** や **MSFT** を使用する。
@@ -441,7 +441,7 @@ Teams アプリ マニフェストは、アプリの構成を定義します。
 
 ### <a name="privacy-policy"></a>プライバシー ポリシー
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
 Teams アプリに特化した特定のポリシーも、すべてのサービスを対象とした全体的なポリシーも、プライバシー ポリシーとして指定できます。
 
@@ -455,7 +455,7 @@ Teams アプリに特化した特定のポリシーも、すべてのサービ�
 
 ### <a name="terms-of-use"></a>使用条件
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
 次のガイドラインに沿って使用条件を記述します。
 
@@ -480,7 +480,7 @@ Teams アプリに特化した特定のポリシーも、すべてのサービ�
 
 ### <a name="localization"></a>ローカリゼーション
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
 アプリがローカリゼーションを提供する場合、アプリ パッケージには、Teams の言語設定に基づいて表示される言語の翻訳ファイルを含める必要があります。 ファイルは、Teams のローカリゼーション スキーマに準拠している必要があります。 詳細については、「[Teams のローカリゼーション スキーマ](~/concepts/build-and-test/apps-localization.md)」を参照してください。
 
@@ -861,7 +861,7 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
 
 [*必須の修正*]
 
-メッセージ拡張機能では、認識されたリンクが Teams の作成ボックスでプレビューされます。  制御外のドメイン (絶対 URL、ワイルドカードのいずれについても) を追加してはいけません。  たとえば、`yourapp.onmicrosoft.com` は有効ですが、`*.onmicrosoft.com` は無効です。 トップレベルの ドメインも禁止です。 たとえば、`*.com` および `*.org` が禁止となります。 [*必須の修正*]
+メッセージ拡張機能では、認識されたリンクが Teams の作成ボックスでプレビューされます。  制御外のドメイン (絶対 URL、ワイルドカードのいずれについても) を追加してはいけません。  たとえば、`yourapp.onmicrosoft.com` は有効ですが、`*.onmicrosoft.com` は無効です。 トップレベルの ドメインも禁止です。 たとえば、`*.com` および `*.org` が禁止となります。 [*必須の修正プログラム*]
 
 </details>
 </br>

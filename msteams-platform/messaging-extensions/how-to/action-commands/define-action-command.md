@@ -1,16 +1,16 @@
 ---
 title: メッセージ拡張機能のアクション コマンドを定義する
 author: surbhigupta
-description: このモジュールでは、Microsoft Teamsのアプリ マニフェストの例を使用して、メッセージング拡張機能アクション コマンドを定義する方法について説明します。
+description: このモジュールでは、Microsoft Teams でアプリ マニフェストの例を使用してメッセージング拡張機能アクション コマンドを定義する方法について説明します。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 0d6979a3d0845be88e43e150451ee6e4097a6870
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 75df991c0af1ca49a1fbba1846a01ff4b30236db
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189622"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503936"
 ---
 # <a name="define-message-extension-action-commands"></a>メッセージ拡張機能のアクション コマンドを定義する
 
@@ -27,7 +27,7 @@ ms.locfileid: "66189622"
 メッセージ拡張アクション コマンドを定義する方法については、次のビデオを参照してください。
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
 <br>
 
 ## <a name="select-action-command-invoke-locations"></a>操作コマンドを呼び出す場所を選択する
@@ -60,7 +60,7 @@ ms.locfileid: "66189622"
 
 コマンドの呼び出し元の選択に加えて、ユーザーのタスク モジュールでフォームを入力する方法も選択する必要があります。 タスク モジュール内でレンダリングされるフォームを作成するには、次の 3 つのオプションがあります。
 
-* **静的なパラメーターの一覧**: これは最も簡単なメソッドです。 アプリマニフェストのパラメーターの一覧は、Teams クライアントのレンダリングを定義できますが、この場合は書式設定を制御できません。
+* **静的なパラメーターの一覧**: これは最も簡単なメソッドです。 アプリ マニフェストで Teams クライアントがレンダリングするパラメーターの一覧を定義できますが、この場合は書式設定を制御できません。
 * **アダプティブ カード**: UI をより細かく制御できるアダプティブ カードの使用を選択できますが、使用可能な制御および書式設定オプションは制限されます。
 * **埋め込み Web ビュー**: カスタム Web ビューをタスク モジュールに埋め込んで、UI とコントロールを完全に制御することができます。
 

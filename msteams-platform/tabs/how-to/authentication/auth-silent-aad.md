@@ -3,20 +3,20 @@ title: サイレント認証
 description: このモジュールでは、サイレント認証、シングル サインオン、Azure AD をタブに対して実行する方法と動作方法について説明します
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: bb5b65e70192c4796d7c828d19512e2a414cf812
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: d4fdf501899b17d3ee64cf74b1a1fb52e0e749db
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144244"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503628"
 ---
-# <a name="silent-authentication"></a>サイレント認証
+# <a name="use-silent-authentication-in-azure-ad"></a>Azure AD でサイレント認証を使用する
 
 > [!IMPORTANT]
 > セキュリティ修正プログラムを含む Active Directory Authentication Library (ADAL) の Microsoft サポートと開発は、 **2022 年 6 月 30** 日に終了します。 引き続きサポートを受けるには、Microsoft Authentication Library (MSAL) を使用するようにアプリケーションを更新します。 [Microsoft Authentication Library (MSAL) へのアプリケーションの移行に関するページを](/azure/active-directory/develop/msal-migration)参照してください。
 
 > [!NOTE]
-> モバイル クライアントのタブで認証を機能させるには、JavaScript SDK バージョン 1.4.1 以降Teams使用していることを確認します。
+> モバイル クライアントのタブで認証を機能させるには、Teams JavaScript SDK バージョン 1.4.1 以降を使用していることを確認します。
 
 Azure AD のサイレント認証では、認証トークンをサイレント に更新することで、ユーザーが資格情報を入力する回数が最小限に抑えられます。 シングル サインオンの真のサポートについては、 [SSO のドキュメントを参照してください](~/tabs/how-to/authentication/tab-sso-overview.md)。
 
@@ -33,7 +33,7 @@ Active Directory 認証ライブラリでは、OAuth 2.0 の暗黙的な許可�
 
 ## <a name="how-to-do-silent-authentication"></a>サイレント認証を行う方法
 
-この記事のコードは、[認証サンプル ノード](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs)Teams Teamsサンプル アプリからのものです。
+この記事のコードは、Teams [認証サンプル ノードである Teams](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs) サンプル アプリからのものです。
 
 [Azure AD を使用してサイレントでシンプルな認証構成可能タブを開始](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) し、指示に従ってローカル コンピューターでサンプルを実行します。
 
@@ -129,7 +129,7 @@ if (authContext.isCallback(window.location.hash)) {
 Azure AD 認証でサインアウト フローを処理するには、次のコードを使用します。
 
 > [!NOTE]
-> Teamsタブまたはボットからログアウトすると、現在のセッションがクリアされます。
+> Teams タブまたはボットからログアウトすると、現在のセッションがクリアされます。
 
 ```javascript
 function logout() {

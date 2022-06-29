@@ -1,16 +1,16 @@
 ---
 title: ボットの要求ヘッダーにテナント ID と会話 ID を送信する
-description: このモジュールでは、Teamsのボットの要求ヘッダーにテナント ID と会話 ID を送信する方法について説明します。
+description: このモジュールでは、Teams のボットの要求ヘッダーにテナント ID と会話 ID を送信する方法について説明します。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: dab795a65cf1c6d62bd899c9fa5a5948c44fcdfb
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: b292db11ced764bbe235bee0f6f8f4829ba7b6c9
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144125"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503775"
 ---
-# <a name="send-tenant-id-and-conversation-id-to-the-request-headers-of-the-bot"></a>ボットの要求ヘッダーにテナント ID と会話 ID を送信する
+# <a name="request-headers-of-the-bot"></a>ボットのヘッダーをリクエストする
 
 ボットに対する現在の送信要求には、ペイロード全体をアンパックせずにボットがトラフィックをルーティングするのに役立つ情報がヘッダーまたは URL に含まれていません。 アクティビティは、https://<your_domain>/api/messages のような URL を通じてボットに送信されます。 ヘッダーに会話 ID とテナント ID を表示する要求を受信します。
 

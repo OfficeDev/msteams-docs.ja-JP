@@ -1,16 +1,16 @@
 ---
 title: 会議拡張機能の設計
 author: heath-hamilton
-description: Teams会議でアプリを設計し、Microsoft Teams UI キット、会議内タブ、ユース ケース、応答性の高い動作、共有会議ステージ、テーマ、ナビゲーションを取得する方法について説明します。
+description: Teams 会議でアプリの会議拡張機能を設計する方法について説明します。 Microsoft Teams UI Kit の UI テンプレートを使用して、会議タブの設計に役立ちます。
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 9d5925df278591cc75abaaa8f030a2d7cfc1c80c
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 92b33881e0fcb5eb6c9b10725d69f92d97e53063
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142683"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484684"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Microsoft Teams 会議拡張機能の設計
 
@@ -37,7 +37,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 #### <a name="mobile"></a>Mobile
 
-アプリが追加されると (デスクトップなど)、ユーザーは会議でアプリにアクセスするには、**[その他]** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: を選択します。
+アプリが追加されると (デスクトップなど)、ユーザーは会議で [**その他**:::image type="icon" source="../../assets/icons/teams-client-more.png":::] を選択してアプリにアクセスできます。
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="例では、モバイルでの会議中に会議の延長を追加する方法を示します" border="false":::
 
@@ -137,10 +137,10 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
 
 会議中ダイアログは、参加者が次の操作を行うユーザー (会議の開催者など) によってトリガーされます。
 
-* 簡単なフィードバックを提供する
-* 簡単なアンケートまたは投票を行う
-* 承認を送信する
-* アラームを取得する
+* 簡単なフィードバックを提供します。
+* 短いアンケートまたは投票を行います。
+* 承認を送信します。
+* リマインダーを取得します。
 
 ### <a name="mobile"></a>Mobile
 

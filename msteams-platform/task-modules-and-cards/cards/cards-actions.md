@@ -1,14 +1,14 @@
 ---
 title: ボットにカード アクションを追加する
-description: このモジュールでは、Microsoft Teamsのカード アクションとは何か、アクションの種類、ボットでカード アクションを使用する方法について説明します
+description: このモジュールでは、Microsoft Teams のカード アクションとは何か、アクションの種類、ボットでカード アクションを使用する方法について説明します
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: d09caa4c7a0f324b712e93b678eac2a0b66567fc
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: b9d73c09b9605ed9babbb2990c261dd920c3703b
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189759"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66483971"
 ---
 # <a name="card-actions"></a>カード アクション
 
@@ -429,7 +429,9 @@ CardFactory.actions([
 アダプティブ カード `Action.Submit`のペイロードを変更して、`Action.Submit` の `data` オブジェクトで `msteams` プロパティを使用して、既存の Bot Framework アクションをサポートすることもできます。 次のセクションでは、アダプティブ カードで既存の Bot Framework アクションを使用する方法について詳しく説明します。
 
 > [!NOTE]
-> Bot Framework アクションを含むデータに `msteams` を追加しても、アダプティブ カード タスク モジュールでは動作しません。
+>* Bot Framework アクションを含むデータに `msteams` を追加しても、アダプティブ カード タスク モジュールでは動作しません。
+> 
+>* Microsoft Teams では、プライマリまたはデクトゥクティブ `ActionStyle` はサポートされていません。 
 
 ### <a name="adaptive-cards-with-messageback-action"></a>messageBack アクションを備えたアダプティブ カード
 
@@ -559,13 +561,13 @@ CardFactory.actions([
 
 ## <a name="code-samples"></a>コード サンプル
 
-|S.no|カード| 説明|.NET|Javascript|Python|Java|
+|S.no|カード| description|.NET|Javascript|Python|Java|
 |:--|:--|:--------------------------------------------------------|-----|------------|-----|----------------------------|
 |1|カードの使用|サムネイル、オーディオ、メディアなど、すべての種類のカードを紹介します。適切なダイアログにルーティングするウェルカム メッセージにボタンが表示されたカードを提示することで、ユーザーを歓迎する + マルチプロンプト ボットを構築します。|[.Net Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|
 |2|アダプティブ カード|マルチターン ダイアログでカードを使用して、名前と年齢のユーザー入力を取得する方法を示します。|[.NET Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|
 
 > [!NOTE]
-> Teamsのアダプティブ カードでは、メディア要素はサポートされていません
+> Teams のアダプティブ カードでは、メディア要素はサポートされていません
 
 ## <a name="next-step"></a>次の手順
 

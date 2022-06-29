@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 7e2ecb4c64153a2ed06d235146165705227ef102
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e530adfc92f4edc1e25946a5af7c38300ae67777
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142186"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485637"
 ---
 # <a name="teamsfx-sdk"></a>TeamsFx SDK
 
@@ -177,8 +177,8 @@ TeamsFx SDK には、サード パーティ製ライブラリの構成を容易�
 
 必要な構成:
 
-* `sqlServerEndpoint`、`sqlUsername`、ユーザー ID を使用する場合は `sqlPassword`
-* `sqlServerEndpoint`、MSI ID を使用する場合は `sqlIdentityId`
+* `sqlServerEndpoint`、`sqlUsername``sqlPassword`ユーザー ID を使用する場合。
+* `sqlServerEndpoint`( `sqlIdentityId` MSI ID を使用する場合)。
 
 ### <a name="error-handling"></a>エラー処理
 

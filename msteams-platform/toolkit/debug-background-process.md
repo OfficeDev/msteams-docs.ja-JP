@@ -6,14 +6,14 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: f2a94d92a157df20e956776f3a7e901219a45ffd
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 112b7da9a5b0926bde9ed1e88f9ad4a0d6dedb5b
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143586"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503600"
 ---
-# <a name="debug-background-processes"></a>バックグランド プロセスのデバッグ
+# <a name="debug-background-process"></a>バックグランド プロセスのデバッグ
 
 ローカル デバッグ ワークフローには、`.vscode/launch.json` ファイルと `.vscode/tasks.json` ファイルが含まれ、Visual Studio Code (VS Code) でデバッガーを構成します。 VS Code がデバッガーを起動し、Microsoft Edge または Google Chrome は次のように新しいブラウザー インスタンスを起動します: 
 

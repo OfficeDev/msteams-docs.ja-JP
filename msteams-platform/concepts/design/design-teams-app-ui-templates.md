@@ -1,20 +1,20 @@
 ---
 title: UI テンプレートを使用したアプリの設計
 author: heath-hamilton
-description: Microsoft Teamsで一般的に見られる標準化された UI コンポーネント、レイアウト、パターンを使用して、アプリをより迅速に設計する方法について説明します。
+description: Microsoft Teams で一般的に見られる標準化された UI コンポーネント、レイアウト、パターンを使用して、アプリをより迅速に設計する方法について説明します。
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: d6323baf20c733eaddc1e8797a56d63effc45eab
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 497385a8fa87714c8c87409d9d42bb88c294918a
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142900"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484823"
 ---
-# <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>UI テンプレートを使用したMicrosoft Teams アプリの設計
+# <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>UI テンプレートを使用した Microsoft Teams アプリの設計
 
-UI テンプレートを使用して、Microsoft Teams アプリを迅速に設計します。 テンプレートは、一般的なTeamsユース ケースで動作するFluent UI ベースのコンポーネントのコレクションであり、ユーザーにとって最適なエクスペリエンスを把握する時間を増やします。
+UI テンプレートを使用して Microsoft Teams アプリを迅速に設計します。 テンプレートは、一般的な Teams ユース ケースで動作する Fluent UI ベースのコンポーネントのコレクションであり、ユーザーにとって最適なエクスペリエンスを把握する時間を増やします。
 
 ## <a name="getting-started-with-tools-and-samples"></a>ツールとサンプルの概要
 
@@ -22,7 +22,7 @@ UI テンプレートを使用して、Microsoft Teams アプリを迅速に設�
 
 ### <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-Microsoft Teams UI キットからアプリ設計用の UI テンプレートを入手します。これには、使用状況、構造、アクセシビリティ、ベスト プラクティスに関する広範な情報も含まれています。
+Microsoft Teams UI Kit からアプリ設計用の UI テンプレートを入手します。これには、使用状況、構造、アクセシビリティ、ベスト プラクティスに関する広範な情報も含まれています。
 
 > [!div class="nextstepaction"]
 > [UI キットを取得する (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -41,19 +41,19 @@ Microsoft Teams UI キットからアプリ設計用の UI テンプレートを
 
 ### <a name="sample-app"></a>サンプル アプリ
 
-サンプル アプリをインストールして、Teams コンテキスト内での UI テンプレートの外観と動作を確認します。
+サンプル アプリをインストールして、TEAMS コンテキスト内での UI テンプレートの外観と動作を確認します。
 
 > [!div class="nextstepaction"]
 > [サンプル アプリを取得する (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
 ## <a name="calendar"></a>予定表
 
-Teamsでは、予定表は、ユーザーが自分またはグループの今後および過去のイベントを表示、スケジュール、管理する場所です。
+Teams では、予定表は、ユーザーが自分またはグループの今後および過去のイベントを表示、スケジュール、管理する場所です。
 
 ### <a name="top-use-cases"></a>上位のユース ケース
 
 * 会議とイベントをスケジュールする
-* 今後の会議やイベントのリマインダーを取得する
+* 予定されている会議やイベントのリマインダーを取得します。
 * スケジュールを表示する
 
 ### <a name="desktop"></a>Desktop
@@ -62,13 +62,13 @@ Teamsでは、予定表は、ユーザーが自分またはグループの今後
 
 ## <a name="dashboard"></a>ダッシュボード
 
-ダッシュボードには、一元的な場所 (個人用アプリやタブTeamsなど) のさまざまな種類のコンテンツが表示されます。 ユーザーは、ダッシュボードに表示される内容の少なくとも一部をカスタマイズできる必要があります。
+ダッシュボードには、中央の場所 (Teams 個人用アプリやタブなど) にさまざまな種類のコンテンツが表示されます。 ユーザーは、ダッシュボードに表示される内容の少なくとも一部をカスタマイズできる必要があります。
 
 ### <a name="top-use-cases"></a>上位のユース ケース
 
 * データを分析する
 * レポート メトリック
-* 1 か所で異なる情報を整理する
+* 1 か所でさまざまな情報を整理します。
 
 ### <a name="mobile"></a>Mobile
 
@@ -84,8 +84,8 @@ Teamsでは、予定表は、ユーザーが自分またはグループの今後
 
 ### <a name="top-use-cases"></a>上位のユース ケース
 
-* 複雑な情報を表示する
-* ダッシュボードを作成する
+* 複雑な情報を表示します。
+* ダッシュボードを作成します。
 
 ### <a name="mobile"></a>Mobile
 
@@ -102,7 +102,7 @@ Teamsでは、予定表は、ユーザーが自分またはグループの今後
 ### <a name="top-use-cases"></a>上位のユース ケース
 
 * サインイン
-* ウェルカム メッセージと初回実行エクスペリエンス
+* ウェルカム メッセージと初回実行エクスペリエンス。
 * 成功メッセージ
 * エラー メッセージ
 
@@ -167,7 +167,7 @@ Teamsでは、予定表は、ユーザーが自分またはグループの今後
 
 ## <a name="sign-in"></a>サインイン
 
-さまざまなTeams コンテキストと ID プロバイダーのアプリ サインイン フローを設計できます。 次の例にはシングル サインオン (SSO) が含まれており、最も簡単な認証エクスペリエンスをお勧めします。
+さまざまな Teams コンテキストと ID プロバイダーのアプリ サインイン フローを設計できます。 次の例にはシングル サインオン (SSO) が含まれており、最も簡単な認証エクスペリエンスをお勧めします。
 
 ### <a name="top-use-case"></a>上位のユース ケース
 
@@ -183,7 +183,7 @@ Teamsでは、予定表は、ユーザーが自分またはグループの今後
 
 ## <a name="settings"></a>Settings
 
-設定画面は、ユーザーがアプリで自分の設定を構成できる場所です。 (注: 設定は[、基本的な UI コンポーネント](~/concepts/design/design-teams-app-basic-ui-components.md)のコンテナーです。
+設定画面では、ユーザーがアプリで自分の設定を構成できます。 (注: 設定は [、基本的な UI コンポーネント](~/concepts/design/design-teams-app-basic-ui-components.md)のコンテナーです。
 
 ### <a name="top-use-case"></a>上位のユース ケース
 
@@ -229,6 +229,6 @@ Teamsでは、予定表は、ユーザーが自分またはグループの今後
 
 ## <a name="see-also"></a>関連項目
 
-* [基本的なFluent UI コンポーネントを使用してアプリを設計する](~/concepts/design/design-teams-app-basic-ui-components.md)
-* [高度な UI コンポーネントを使用したMicrosoft Teams アプリの設計](~/concepts/design/design-teams-app-advanced-ui-components.md)
+* [基本的な Fluent UI コンポーネントを使用してアプリを設計する](~/concepts/design/design-teams-app-basic-ui-components.md)
+* [高度な UI コンポーネントを使用した Microsoft Teams アプリの設計](~/concepts/design/design-teams-app-advanced-ui-components.md)
 * [ボット メッセージの書式を設定する](~/bots/how-to/format-your-bot-messages.md)

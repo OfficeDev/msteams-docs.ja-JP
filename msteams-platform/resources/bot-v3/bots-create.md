@@ -1,15 +1,15 @@
 ---
 title: ボットを作成する
-description: このモジュールでは、Microsoft Bot Frameworkを使用してボットを作成し、Microsoft Teamsで作業する準備をする方法について説明します
+description: このモジュールでは、Microsoft Bot Frameworkを使用してボットを作成し、Microsoft Teams で作業する準備をする方法について説明します
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 12/07/2018
-ms.openlocfilehash: a669b11baef8dc31a662ea2ad178ad3488f2d69e
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: cc09f5a54298d385fa296f926e1e03e55e25c43c
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189523"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485287"
 ---
 # <a name="create-a-bot"></a>ボットを作成する
 
@@ -25,7 +25,7 @@ Microsoft Bot Framework を使用して作成されたすべてのボットは�
 
 1. [Bot Framework](https://dev.botframework.com/bots/new) を使用してボットを作成します。 **ボットの作成後は必ず、おすすめのチャネル一覧に Microsoft Teams をチャネルとして登録します。** アプリ パッケージまたはマニフェストを既に作成した場合は、生成した Microsoft App ID はどれでも再利用できます。
 
-   ![Bot Framework の登録ページ](~/assets/images/bots/bfregister.png)
+   :::image type="content" source="../../assets/images/bots/bfregister.png" alt-text="Bot Framework の登録ページ":::
 
 > [!NOTE]
 > ボットを Azure で作成しない場合は、こちらのリンクを使用して新しいボットを作成する **必要があります** ([Bot Framework](https://dev.botframework.com/bots/new))。 代わりに、Bot Framework ポータルで **[ボットを作成する]** をクリックすると、代わりに [Microsoft Azure でボットが作成](#bots-and-microsoft-azure)されます。
@@ -47,12 +47,12 @@ Microsoft Bot Framework を使用して作成されたすべてのボットは�
 > * [Bot Framework 内のボットのリスト](https://dev.botframework.com/bots)で既存のボットのプロパティを編集する際、特に [ngrok](https://ngrok.com) を使用している場合、ボットを初めて開発するときに一般的な "メッセージングエンドポイント" などを編集すると、[移行の状態] 列と青い [移行] ボタンが表示され、Microsoft Azure portal に移動します。 必要な場合を除き、[移行] ボタンをクリックしないでください。代わりに、ボットの名前をクリックすると、そのプロパティを編集できます。</br>
    ![ボットのプロパティを編集する](~/assets/images/bots/bf-migrate-bot-to-azure.png)
 > * Microsoft Azure を使用してボットを登録する場合、ボット コードは Microsoft Azure で *ホストされる* 必要はあります。
-> * Azure ポータルを使用してボットを登録する場合は、Microsoft Azure アカウントを持っている必要があります。 このアカウントは[無料で作成](https://azure.microsoft.com/free/)できます。 作成時に ID を確認するには、クレジット カードを指定する必要がありますが、料金は発生しません。Teamsでボットを作成して使用することは常に自由です。
-> * App Studio を使用して、Teams内で直接アプリとボットの情報を登録/更新できるようになりました。 Direct Line、Web チャット、Skype、Facebook Messenger などの他のBot Framework チャネルを追加または構成する場合にのみ、Azure portal を使用する必要があります。
+> * Azure ポータルを使用してボットを登録する場合は、Microsoft Azure アカウントを持っている必要があります。 このアカウントは[無料で作成](https://azure.microsoft.com/free/)できます。 作成時に ID を確認するには、クレジット カードを指定する必要がありますが、料金は発生しません。Teams でボットを作成して使用することは常に自由です。
+> * App Studio を使用して、Teams 内でアプリとボットの情報を直接登録/更新できるようになりました。 Direct Line、Web チャット、Skype、Facebook Messenger などの他のBot Framework チャネルを追加または構成する場合にのみ、Azure portal を使用する必要があります。
 
 > [!WARNING]
 >
->* App Studio を使用している場合は、Teams アプリを構成、配布、管理するための開発者ポータルを試してみることをお勧めします。App Studio は 2022 年 6 月 30 日までに非推奨になります
+>* App Studio を使用している場合は、開発者ポータルで Teams アプリの設定、配布、管理を行うことをお勧めします。 App Studio は、2022 年 8 月 1 日までに非推奨になります。
 
 ## <a name="see-also"></a>関連項目
 

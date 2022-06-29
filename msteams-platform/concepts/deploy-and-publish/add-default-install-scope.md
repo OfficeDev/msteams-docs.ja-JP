@@ -4,16 +4,16 @@ description: Teams アプリの既定のインストール オプションと共
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.openlocfilehash: 9055b765c30f83c4031ad0e2ba5f18f4e747ac3f
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 75ea4dbae2379e6d6e7e2cc707314207cd7186ca
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66122902"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503453"
 ---
-# <a name="configure-default-install-options-for-your-microsoft-teams-app"></a>Microsoft Teams アプリの既定のインストール オプションを構成する
+# <a name="configure-default-install-options-for-teams-app"></a>Teams アプリの既定のインストール オプションを構成する
 
-アプリでは、Teamsで複数のシナリオをサポートするのが一般的ですが、特定のスコープと機能を念頭に置いて設計した可能性があります。 たとえば、アプリが主にチームまたはチャネルで使用される場合は、ストアにユーザーが最初に表示するインストール オプションが **チームに追加** されていることを確認できます。
+アプリは Teams で複数のシナリオをサポートするのが一般的ですが、特定のスコープと機能を念頭に置いて設計した可能性があります。 たとえば、アプリが主にチームまたはチャネルで使用される場合は、ストアにユーザーが最初に表示するインストール オプションが **チームに追加** されていることを確認できます。
 
 :::row:::
    :::column span="2":::

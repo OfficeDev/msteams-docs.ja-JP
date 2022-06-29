@@ -1,16 +1,16 @@
 ---
 title: Teams ツールキットを使用して Teams アプリを公開する
 author: zyxiaoyuer
-description: このモジュールでは、Teams Toolkitを使用してTeams アプリを発行し、個々のスコープまたはサイドロードアクセス許可に発行する方法について説明します
+description: このモジュールでは、Teams Toolkit を使用して Teams アプリを発行し、個々のスコープまたはサイドロードアクセス許可に発行する方法について説明します
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 0ae6ab1f128eccae6df4fff20364f590106ab146
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 6c0f296549dc325548314e74f1f3ca7017b7aef0
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142606"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485357"
 ---
 # <a name="publish-teams-apps-using-teams-toolkit"></a>Teams ツールキットを使用して Teams アプリを公開する
 
@@ -41,7 +41,7 @@ Teams ツールキットの Treeview で **DEPLOYMENT** から `Zip Teams metada
 
 1. Teams クライアントで、左側のバーで **[アプリ]** を選択します。
 2. **[アプリの管理]** を選択します。
-3. **[アプリ の発行]** を選択します。
+3. **[アプリの発行] を選択します**。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pub.png" alt-text="publish":::
 
@@ -85,7 +85,7 @@ Teams アプリ申請 API の上に構築されたVisual Studio Code 用ツー�
 
 アプリを Microsoft Teams 内のストアに直接配布して、世界中の何百万ものユーザーにリーチできます。 アプリがストアでも紹介されている場合は、潜在的な顧客に即座にリーチできます。 Teams ストアに公開されたアプリは、Microsoft 365 アプリおよびソリューションの公式マーケットプレイスである Microsoft AppSource にも自動的に一覧表示されます。
 
-詳細については、「([アプリをMicrosoft Teams ストアに発行する](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store))」を参照してください。
+詳細については、「([Microsoft Teams ストアにアプリを発行する](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store))」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

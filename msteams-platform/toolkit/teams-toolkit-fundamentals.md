@@ -1,17 +1,17 @@
 ---
 title: Teams ツールキットの概要
 author: zyxiaoyuer
-description: このモジュールでは、Teams Toolkit、Teams Toolkitのインストール、Teams Toolkitのユーザー体験について説明します
+description: このモジュールでは、Teams Toolkit、Teams Toolkit のインストール、Teams Toolkit のユーザー体験について説明します
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
-ms.openlocfilehash: 529d7b6e18bf9ff0f28bb2230358f25f95b9e3db
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 49bf74276053f927f0337882d6f278ca64494128
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142200"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484613"
 ---
 # <a name="teams-toolkit-overview"></a>Teams ツールキットの概要
 
@@ -21,7 +21,7 @@ Teams Toolkit では、Visual Studio Code から Teams アプリを作成、デ�
 * 統合 ID
 * クラウド ストレージへのアクセス
 * Microsoft Graph からユーザー データにアクセスする
-* ゼロ構成アプローチを使用した Azure サービスとMicrosoft 365 サービス
+* ゼロ構成アプローチの Azure および Microsoft 365 サービス。
 
 Teams Toolkit は、Teams アプリのビルドに必要なすべてのツールを 1 か所にまとめています。
 
@@ -29,7 +29,7 @@ Teams Toolkit は、Teams アプリのビルドに必要なすべてのツール
 
 Teams Toolkit は手動作業を自動化し、Teams と Azure リソースの優れた統合を提供します。 次の画像は、Teams Toolkit のユーザー体験を示しています。
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey.png" alt-text="Teams Toolkit ユーザー体験" border="true":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey1.png" alt-text="Teams Toolkit のユーザー体験" border="true" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
 この体験の主なマイルストーンは次のとおりです。
 
@@ -46,7 +46,7 @@ Teams Toolkit は手動作業を自動化し、Teams と Azure リソースの�
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install toolkit-1.png" alt-text="インストール":::
 
-1. 検索ボックス **に「Teams Toolkit**」と入力します。
+1. 検索ボックスに **「Teams Toolkit** 」と入力します。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/install-toolkit2.png" alt-text="ツールキット":::
 
@@ -63,7 +63,7 @@ Toolkit のインストール後、次の画像に示すように Teams Toolkit 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/Teams-toolkit.png" alt-text="mini 関数":::
 
-**はじめに** を選択してTeams Toolkitを調べるか、[**新しいTeams アプリの作成**] を選択して 1 つのTeams プロジェクトを作成します。 Visual Studio Code でTeams Toolkitによって作成されたTeams プロジェクトがある場合は、次の図に示すように、すべての機能を備えたTeams Toolkit UI が表示されます。
+[ **作業の開始]** を選択して Teams Toolkit を調べるか、[ **新しい Teams アプリの作成** ] を選択して 1 つの Teams プロジェクトを作成します。 Teams Toolkit によって作成された Teams プロジェクトが Visual Studio Code で開かれている場合は、次の図に示すように、すべての機能を備えた Teams Toolkit UI が表示されます。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/teamstookit1.png" alt-text="スクリーン ショット ofteams ツールキット":::
 
@@ -71,7 +71,7 @@ Toolkit のインストール後、次の画像に示すように Teams Toolkit 
 
 ## <a name="accounts"></a>アカウント
 
-Teams アプリを開発するには、有効なサブスクリプションを持つ少なくとも 1 つのMicrosoft 365 アカウントが必要です。 Azure でバックエンド リソースをホストする場合は、Azure アカウントも必要です。 Teams Toolkitでは、Azure リソースのサインイン、プロビジョニング、デプロイに関する統合エクスペリエンスがサポートされます。 開始する前に、[無料の Azure アカウントを作成](https://azure.microsoft.com/free/) できます。
+Teams アプリを開発するには、有効なサブスクリプションを持つ少なくとも 1 つのMicrosoft 365 アカウントが必要です。 Azure でバックエンド リソースをホストする場合は、Azure アカウントも必要です。 Teams Toolkit では、Azure リソースのサインイン、プロビジョニング、デプロイを行うための統合エクスペリエンスがサポートされています。 開始する前に、[無料の Azure アカウントを作成](https://azure.microsoft.com/free/) できます。
 
 ## <a name="environment"></a>環境
 
@@ -89,11 +89,11 @@ Teams Toolkit は、Teams アプリ開発を簡単にする Teams アプリ プ�
 
 ### <a name="create-a-new-teams-app"></a>新しい Teams アプリを作成する
 
-新しいプロジェクトの作成またはサンプルからの開始を使用して、Teams Toolkitを使用して新しいTeams プロジェクトを作成することで、**Teamsアプリ** 開発 **を開始** するのに役立ちます。
+新しいプロジェクトの作成または **サンプルからの開始** を使用して Teams Toolkit を使用して新しい Teams **プロジェクトを作成** することで、Teams アプリ開発を開始できます。
 
 ### <a name="add-features"></a>機能の追加
 
-**これは、Tab** や **Bot** などの追加のTeams機能を段階的に追加したり、必要に応じて、開発ニーズに合った **Azure SQL Database** や **Azure Key Vaultなどの Azure** リソースを現在のTeams アプリに追加したりするのに役立ちます。 Teams アプリの **シングル サインオン** または **CI/CD ワークフロー** を追加することもできます。 
+**これにより、Tab** や **Bot** などの Teams 機能を段階的に追加したり、必要に応じて、開発ニーズに合った **Azure SQL Database** や **Azure Key Vaultなどの Azure** リソースを現在の Teams アプリに追加したりできます。 Teams アプリの **シングル サインオン** または **CI/CD ワークフロー** を追加することもできます。
 
 ### <a name="edit-manifest-file"></a>マニフェスト ファイルを編集する
 
@@ -105,7 +105,7 @@ Teams Toolkit は、Teams アプリ開発を簡単にする Teams アプリ プ�
 
 ### <a name="provision-in-the-cloud"></a>クラウドでのプロビジョニング
 
-Azure リソース マネージャーと統合され、アプリケーションでコード アプローチに必要な Azure リソースをプロビジョニングできます。
+Azure Resource Managerと統合され、アプリケーションでコード アプローチに必要な Azure リソースをプロビジョニングできます。
 
 ### <a name="deploy-to-the-cloud"></a>クラウドにデプロイする
 

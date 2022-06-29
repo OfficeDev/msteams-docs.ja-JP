@@ -1,19 +1,19 @@
 ---
-title: チャネル/グループ タブを作成する
+title: '[チャネルの作成] タブ'
 author: laujan
-description: このモジュールでは、コード例を使用してソース コードを確認するなど、yeoman Generator for Microsoft Teamsでチャネルとグループ タブを作成する方法について説明します。
+description: このモジュールでは、コード例を使用してソース コードを確認するなど、Microsoft Teams 用 Yeoman Generator を使用してチャネルとグループ タブを作成する方法について説明します。
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 6bdece5b23999025b1e4ecd22b2fb8f87f7c3325
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: b9696b4e41393595edc6a0bdb5d81a74bdf8c699
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189597"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503649"
 ---
-# <a name="channel-or-group-tab"></a>チャネル/グループ タブ
+# <a name="create-a-channel-tab"></a>[チャネルの作成] タブ
 
 チャネル/グループ タブは、コンテンツをチャネルやグループのチャットに配信します。また、専用の Web ベースのコンテンツまわりに関する共同作業スペースを作成するのに優れた方法です。
 
@@ -192,8 +192,8 @@ gulp ngrok-serve
 
 ### <a name="upload-your-application-to-teams"></a>Microsoft Teams にアプリ パッケージをアップロードする
 
-1. Teamsに移動し、**アプリ**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Microsoft Store":::を選択します。
-1. **[アプリの管理]** を選択し、**[カスタム アプリをアップロード]** を選択します。
+1. Teams に移動し、**[アプリ]**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="[Teams ストア]"::: を選択します。
+1. [**アプリの管理**] を選択し、[**カスタム アプリをアップロード**] します。
 1. プロジェクト ディレクトリに移動し、**./package** フォルダーに移動し、アプリ パッケージの zip フォルダーを選択し、**[開く]** を選択します。
 
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="アップロードされたチャネル タブ" border="true":::
@@ -291,7 +291,7 @@ ASP.NET Core は、**Index** という名前のファイルをサイトの既定
 * 32 x 32 ピクセルの **透明なアウトライン アイコン**。
 * アプリの属性を指定する `manifest.json` ファイル。
 
-これらのファイルは、Teams へのタブのアップロードに使用するために、アプリ パッケージで zip 形式にする必要があります。 ユーザーがタブの追加または更新を選択すると、マニフェストで指定した内容を読み込み`configurationUrl`、IFrame に埋め込み、タブにレンダリングTeams。
+これらのファイルは、Teams へのタブのアップロードに使用するために、アプリ パッケージで zip 形式にする必要があります。 ユーザーがタブの追加または更新を選択すると、Teams は指定されたマニフェストを `configurationUrl` 読み込み、IFrame に埋め込み、タブにレンダリングします。
 
 #### <a name="csproj"></a>.csproj
 
@@ -394,7 +394,7 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 
 ### <a name="update-your-app-package-with-developer-portal"></a>開発者ポータルを使用してアプリ パッケージを更新する
 
-1. Teamsに移動します。 [Web ベースのバージョン](https://teams.microsoft.com)を使用する場合は、ブラウザーの[開発者ツール](~/tabs/how-to/developer-tools.md)を使用してフロントエンド コードを検査することができます。
+1. Teams に移動します。 [Web ベースのバージョン](https://teams.microsoft.com)を使用する場合は、ブラウザーの[開発者ツール](~/tabs/how-to/developer-tools.md)を使用してフロントエンド コードを検査することができます。
 
 1. [**開発者ポータル**](https://dev.teams.microsoft.com/home)に移動します。
 
@@ -617,7 +617,7 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 
 ### <a name="update-your-app-package-with-developer-portal"></a>開発者ポータルを使用してアプリ パッケージを更新する
 
-1. Teamsに移動します。 [Web ベースのバージョン](https://teams.microsoft.com)を使用する場合は、ブラウザーの[開発者ツール](~/tabs/how-to/developer-tools.md)を使用してフロントエンド コードを検査することができます。
+1. Teams に移動します。 [Web ベースのバージョン](https://teams.microsoft.com)を使用する場合は、ブラウザーの[開発者ツール](~/tabs/how-to/developer-tools.md)を使用してフロントエンド コードを検査することができます。
 
 1. [**開発者ポータル**](https://dev.teams.microsoft.com/home)に移動します。
 

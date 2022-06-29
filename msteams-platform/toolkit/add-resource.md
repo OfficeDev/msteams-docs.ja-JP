@@ -1,17 +1,17 @@
 ---
 title: Teams アプリにリソースを追加する
 author: MuyangAmigo
-description: このモジュールでは、Teams Toolkit、利点、制限事項、機能のリソースを追加する方法について説明します
+description: このモジュールでは、Teams Toolkit のリソース、利点、制限事項、および機能を追加する方法について説明します
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 9d8c7b1fd6b4910e1024f10a44e54271a0fbb475
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a9848ecf16dfb8ff4034dc26dd350ce71c8e656e
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143859"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485644"
 ---
 # <a name="add-cloud-resources-to-teams-app"></a>Teams アプリにクラウド リソースを追加する
 
@@ -21,8 +21,8 @@ TeamsFx は、アプリケーション ホスティング用にクラウド リ�
 
 次の一覧は、TeamsFx にクラウド リソースを追加する利点を提供します。
 
-* 利便性を提供します
-* Teams Toolkitを使用して、すべての構成ファイルを自動生成し、Teams アプリに接続します
+* 利便性を提供します。
+* Teams Toolkit を使用して、すべての構成ファイルを自動生成し、Teams アプリに接続します。
 
 ## <a name="limitation"></a>制限
 
@@ -32,16 +32,16 @@ SPFx ベースのタブ プロジェクトを作成した場合、Azure クラ�
 
 **クラウド リソースは、次の方法で追加できます。**
 
-* Visual Studio Code でTeams Toolkitを使用してクラウド リソースを追加するには
-* コマンド パレットを使用してクラウド リソースを追加するには
+* Visual Studio Code で Teams Toolkit を使用してクラウド リソースを追加する場合。
+* コマンド パレットを使用してクラウド リソースを追加する場合。
 
   > [!NOTE]
   > Teams アプリでリソースを正常に追加した後は、環境ごとにプロビジョニングする必要があります。
   
-* **Visual Studio Code でTeams Toolkitを使用してクラウド リソースを追加するには:**
+* **Visual Studio Code で Teams Toolkit を使用してクラウド リソースを追加するには:**
 
    1. **Visual Studio Code** を開きます。
-   1. 左側 **の** パネルからTeams Toolkitを選択します。
+   1. 左側のパネルから **Teams Toolkit を** 選択します。
    1. **[開発**] で [**機能の追加]** を選択します。
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/select-feature-updated.png" alt-text="機能を追加する" border="true":::
@@ -49,7 +49,7 @@ SPFx ベースのタブ プロジェクトを作成した場合、Azure クラ�
 * **コマンド パレットを使用してクラウド リソースを追加するには:**
 
    1. **コマンド パレットを** 開きます。
-   1. **「Teams:機能の追加」と入力します**。
+   1. **Teams:機能の追加を入力します**。
    1. **[Enter]** キーを押します。
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features.png" alt-text="クラウド" border="true":::
@@ -74,19 +74,19 @@ SPFx ベースのタブ プロジェクトを作成した場合、Azure クラ�
 
 次のシナリオでは、TeamsFx は Azure サービスと統合されます。
 
-- [Azure 関数](/azure/azure-functions/functions-overview): Teams アプリケーション バックエンド用の Web API の作成など、オンデマンド要件を満たすサーバーレス ソリューション。
-- [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview): Teams アプリケーション データ ストアとして機能するサービスとしてのプラットフォーム (PaaS) のデータベース エンジン。
-- [Azure API 管理](deploy.md): API ゲートウェイを使用して、Teams アプリケーション用に作成された API を管理し、Power アプリなどの他のアプリケーションで使用するように公開できます。
-- [Azure Key Vault](/azure/key-vault/general/overview): クラウド アプリとサービスで使用される暗号化キーとその他のシークレットを保護します。
+* [Azure 関数](/azure/azure-functions/functions-overview): Teams アプリケーション バックエンド用の Web API の作成など、オンデマンド要件を満たすサーバーレス ソリューション。
+* [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview): Teams アプリケーション データ ストアとして機能するサービスとしてのプラットフォーム (PaaS) のデータベース エンジン。
+* [Azure API Management](deploy.md): API ゲートウェイを使用して、Teams アプリケーション用に作成された API を管理し、Power アプリなどの他のアプリケーションで使用するように公開できます。
+* [Azure Key Vault](/azure/key-vault/general/overview): クラウド アプリとサービスで使用される暗号化キーとその他のシークレットを保護します。
 
 ## <a name="add-cloud-resources"></a>クラウド リソースの追加
 
 プロジェクトにリソースを追加すると、次の変更が表示されます。
 
-- azure.parameter に追加された新しいパラメーター。プロビジョニングに必要な情報を提供する {env}.json。
-- 新しいコンテンツは ARM テンプレートの下 `templates/azure`に含まれます。ただし、ファイルは Azure リソースを追加するためのフォルダーにあります `templates/azure/teamsfx` 。
-- `templates/azure/teamsfx` フォルダー下のファイルは、追加された Azure リソースに対して TeamsFx に必要な構成が最新であることを確認するために再生成されるものです。
-- `.fx/projectSettings.json` は、プロジェクトで使用可能なリソースを追跡するために更新されます。
+* azure.parameter に追加された新しいパラメーター。プロビジョニングに必要な情報を提供する {env}.json。
+* 新しいコンテンツは ARM テンプレートの下 `templates/azure`に含まれます。ただし、ファイルは Azure リソースを追加するためのフォルダーにあります `templates/azure/teamsfx` 。
+* `templates/azure/teamsfx` フォルダー下のファイルは、追加された Azure リソースに対して TeamsFx に必要な構成が最新であることを確認するために再生成されるものです。
+* `.fx/projectSettings.json` は、プロジェクトで使用可能なリソースを追跡するために更新されます。
 
 プロジェクトにリソースを追加すると、次の追加の変更が表示されます。
 

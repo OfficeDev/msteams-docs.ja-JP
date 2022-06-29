@@ -1,17 +1,17 @@
 ---
 title: CI/CD テンプレート
 author: MuyangAmigo
-description: このモジュールでは、Teams Application DevelopersCI/CD テンプレート用の GitHub、Azure DevOps、および Jenkins で CI/CD パイプライン テンプレートを使用する方法について説明します
+description: このモジュールでは、GitHub、Azure DevOps、Jenkins for Teams Application DevelopersCI/CD テンプレートで CI/CD パイプライン テンプレートを使用する方法について説明します
 ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 04/20/2022
-ms.openlocfilehash: db263d3c8cf7eff085e237e884ef5baafc200230
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1b2f7258b661a2b194f2072c9ad8fd920d58983d
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142599"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485399"
 ---
 # <a name="set-up-cicd-pipelines"></a>CI/CD パイプラインを設定する
 
@@ -19,7 +19,7 @@ TeamsFx は、Teams アプリケーションをビルドしながら開発ワー
 
 |ツールとテンプレート | 説明 |
 |---|---|
-|[TeamsFx-CLI-Action](https://github.com/OfficeDev/teamsfx-cli-action)|TeamsFx CLI と統合するアクションをGitHubします。|
+|[TeamsFx-CLI-Action](https://github.com/OfficeDev/teamsfx-cli-action)|TeamsFx CLI と統合する GitHub アクション。|
 |[Visual Studio Codeの Teams ツールキット](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| Teams アプリや、GitHub、Azure DevOps、および Jenkins の自動化ワークフローの開発に役立つ Visual Studio Code 拡張機能。 |
 |[TeamsFx CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) | Teams アプリや、GitHub、Azure DevOps、および Jenkins の自動化ワークフローの開発に役立つコマンドライン ツール。|
 |[script-ci-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) と [script-cd-template.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh)| GitHub、Azure DevOps、または Jenkins 以外の自動化用のスクリプト テンプレート。 |
@@ -46,13 +46,22 @@ CI/CD で GitHub を使用してパイプラインを設定するには:
 
 ### <a name="create-workflow-templates"></a>ワークフロー テンプレートを作成する
 
-GitHubを使用して、次のワークフロー テンプレートを作成できます。
+GitHub を使用して、次のワークフロー テンプレートを作成できます。
 
 **Visual Studio Codeの Teams ツールキット**
 
 1. Teams Toolkit を使用して新しい Teams アプリを作成します。
-1. 左側 **Teams Toolkit** ナビゲーション バーから :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="アイコン API アイコン":::を選択します。
+
+1. 左側のウィンドウで **Teams Toolkit** アイコン :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png"::: を選択します。
+
+1. [**機能の追加]** を選択する
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/add-feature.png" alt-text="機能の追加":::
+
 1. **[CI/CD ワークフローの追加]** を選択します。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/toolkit-ci-cd-workflow.png" alt-text="CI/CD ワークフローを選択する":::
+
 1. コマンド プロンプトから環境を選択します。
 1. CI/CD プロバイダーとして **[GitHub]** を選択します。
 1. [CI]、[CD]、[プロビジョニング]、[Teams に発行] のオプションから 1 つ以上のテンプレートを選択します。
@@ -93,18 +102,18 @@ CI/CD で Azure DevOps を使用してパイプラインを設定するには:
 
 ### <a name="create-workflow-templates"></a>ワークフロー テンプレートを作成する
 
-Azure DevOpsを使用して、次のワークフロー テンプレートを作成できます。
+Azure DevOps を使用して、次のワークフロー テンプレートを作成できます。
 
 **Visual Studio Codeの Teams ツールキット**
 
 1. Teams Toolkit を使用して新しい Teams アプリを作成します。
-2. 左側 **Teams Toolkit** ナビゲーション バーから :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="アイコン API アイコン":::を選択します。
-3. **[CI/CD ワークフローの追加]** を選択します。
-4. コマンド プロンプトから環境を選択します。
-5. CI/CD プロバイダーとして **[Azure DevOps]** を選択します。
-6. [CI]、[CD]、[プロビジョニング]、および [Teams に発行] のオプションから 1 つ以上のテンプレートを選択します。
-7. テンプレートを開き、シナリオに合ったワークフローをカスタマイズします。
-8. `.azure/pipelines` にある README ファイルに従って、Azure DevOps でワークフローを設定します。
+2. 左側のウィンドウで **Teams Toolkit** アイコン :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png"::: を選択します。
+1. **[CI/CD ワークフローの追加]** を選択します。
+1. コマンド プロンプトから環境を選択します。
+1. CI/CD プロバイダーとして **[Azure DevOps]** を選択します。
+1. [CI]、[CD]、[プロビジョニング]、および [Teams に発行] のオプションから 1 つ以上のテンプレートを選択します。
+1. テンプレートを開き、シナリオに合ったワークフローをカスタマイズします。
+1. `.azure/pipelines` にある README ファイルに従って、Azure DevOps でワークフローを設定します。
 
 **TeamsFx CLI**
 
@@ -151,7 +160,7 @@ Jenkins を使用して、次のワークフロー テンプレートを作成�
 **Visual Studio Codeの Teams ツールキット**
 
 1. Teams Toolkit を使用して新しい Teams アプリを作成します。
-2. 左側 **Teams Toolkit** ナビゲーション バーから :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png" alt-text="アイコン API アイコン":::を選択します。
+2. 左側のウィンドウで **Teams Toolkit** アイコン :::image type="icon" source="../assets/images/teams-toolkit-v2/add-API/api-add-icon.png"::: を選択します。
 3. **[CI/CD ワークフローの追加]** を選択します。
 4. コマンド プロンプトから環境を選択します。
 5. CI/CD プロバイダーとして **[Jenkins]** を選択します。
@@ -229,7 +238,7 @@ Teams アプリのマニフェスト ファイルに関連する変更がある�
 
 アプリを発行するには、次の手順に従います。
 
-1. 対応するアカウントを使用して[、開発者ポータルにサインインしてTeams](https://dev.teams.microsoft.com)します。
+1. 対応するアカウントを使用して [Teams の開発者ポータル](https://dev.teams.microsoft.com) にサインインします。
 2. zip でアプリ パッケージをインポートし、 を選択します `App -> Import app -> Replace`。
 3. アプリの一覧でターゲット アプリを選択します。
 4. アプリを発行し、 を選択します `Publish -> Publish to your org`。

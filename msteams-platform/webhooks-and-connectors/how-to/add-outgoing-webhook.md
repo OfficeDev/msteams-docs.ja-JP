@@ -5,14 +5,14 @@ description: このモジュールでは、Microsoft Teams で発信 Webhook を
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: a290d7197c842c3920bd536fa71774fd82e47d84
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: c3f7c3a1574af944dfc2ae64f76ec4d538cedae3
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189890"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503320"
 ---
-# <a name="create-outgoing-webhook"></a>送信 Webhook を作成する
+# <a name="create-outgoing-webhooks"></a>送信 Webhook を作成する
 
 送信 Webhook はボットとして機能し、**@mention** を使用してチャネル内のメッセージを検索します。 外部 Web サービスに通知を送信し、カードや画像などの豊富なメッセージで応答します。 [Microsoft Bot Framework](https://dev.botframework.com/) を使用してボットを作成するプロセスをスキップすることができます。
 
@@ -107,7 +107,7 @@ ms.locfileid: "66189890"
 次のように、コードで要求に含まれる HMAC 署名を常に検証する必要があります。
 
 * メッセージの要求本文から HMAC トークンを生成します。 ほとんどのプラットフォームでこれを行うための標準ライブラリがあり、Node.js の場合は [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto)、C\# の場合は [Teams Webhook Sample](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) などがあります。 Microsoft Teams では、標準の SHA256 HMAC 暗号化を使用します。 本文を UTF8 でバイト配列に変換する必要があります。
-* Teams クライアントで送信 Webhook を登録したときに Teams によって提供されたセキュリティ トークンのバイト配列からハッシュを計算します。「[送信 Webhook を作成する](#create-outgoing-webhook)」を参照してください。
+* Teams クライアントで送信 Webhook を登録したときに Teams によって提供されたセキュリティ トークンのバイト配列からハッシュを計算します。「[送信 Webhook を作成する](#create-outgoing-webhooks)」を参照してください。
 * UTF-8 エンコーディングを使用してハッシュを文字列に変換します。
 * 生成されたハッシュの文字列の値と、HTTP 要求で指定された値を比較します。
 

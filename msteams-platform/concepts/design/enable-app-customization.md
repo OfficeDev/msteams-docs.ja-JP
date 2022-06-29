@@ -1,16 +1,16 @@
 ---
 title: Teams アプリをカスタマイズする
 author: heath-hamilton
-description: このモジュールでは、管理者Teams組織のTeams アプリをカスタマイズし、管理者が承認するまでTeamsアプリを非表示にする方法について説明します。
+description: このモジュールでは、Teams 管理者が組織用に Teams アプリをカスタマイズし、管理者が承認するまで Teams アプリを非表示にする方法について説明します。
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 224f2d755ad74b7ded81cf6ffb1791169c6eb3b7
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: c63a901aba88b8f9f77c3a3e54217204a3e91cc9
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143201"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503446"
 ---
 # <a name="customize-your-teams-app"></a>Teams アプリをカスタマイズする
 
@@ -44,7 +44,7 @@ Teams アプリのエクスペリエンスを向上させるために、開発�
 
 アプリを非表示にするには、アプリ マニフェスト ファイルで `defaultBlockUntilAdminAction` プロパティを `true` に設定します。 このプロパティが `true` に設定されている場合、Teams 管理センター > **[アプリの管理]** では、**[Blocked by publisher]\(発行元によってブロック済み\)** がアプリの **[状態]** に表示されます。
 
-![発行元によってブロックされたアプリを管理する](../../assets/images/apps-in-meetings/manageappsblockedapps.png)
+:::image type="content" source="../../assets/images/apps-in-meetings/manageappsblockedapps.png" alt-text="発行元によってブロックされたアプリを管理します。":::
 
 管理者は、ユーザーがアプリにアクセスできるようになる前にアクションを実行する要求を受け取ります。 **[アプリの管理]** で、管理者は **[許可]** を選択して、**[Blocked by publisher]\(発行元によってブロック済み\)** 状態のアプリを許可できます。
 

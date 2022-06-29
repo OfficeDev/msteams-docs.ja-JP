@@ -1,18 +1,18 @@
 ---
 title: リンク展開
 author: surbhigupta
-description: このモジュールでは、アプリ マニフェストを含むTeams アプリで、またはコード例とサンプルを手動で使用して、メッセージング拡張機能を使用してリンクを展開しないリンクを追加する方法について説明します。
+description: このモジュールでは、アプリ マニフェストを含む Teams アプリでメッセージング拡張機能を使用してリンクを展開する方法、またはコード例とサンプルを手動で使用する方法について説明します。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: debbcdcf4c22f63262e16fda70c0e778bffa9379
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: d12b443972472d4ee307b55c0e492cff844acad4
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189998"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503614"
 ---
-# <a name="link-unfurling"></a>リンク展開
+# <a name="add-link-unfurling"></a>リンク展開を追加する
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
@@ -23,7 +23,7 @@ ms.locfileid: "66189998"
 > * 現在、モバイル クライアントではリンク展開はサポートされていません。
 > * リンク展開の結果は、30 分間キャッシュされます。
 
-Azure DevOps メッセージ拡張機能では、作業項目をポイントするメッセージ作成領域に貼り付けられた URL を検索するためにリンク展開を使用します。 次の図では、ユーザーがメッセージ拡張機能がカードに解決したAzure DevOpsにアイテムの URL を貼り付けています。
+Azure DevOps メッセージ拡張機能では、作業項目をポイントするメッセージ作成領域に貼り付けられた URL を検索するためにリンク展開を使用します。 次の図では、メッセージ拡張機能がカードに解決した Azure DevOps 内のアイテムの URL をユーザーが貼り付けています。
 
 :::image type="content" source="~/assets/images/compose-extensions/messagingextensions_linkunfurling.png" alt-text="リンク展開の例":::
 
@@ -50,7 +50,7 @@ Azure DevOps メッセージ拡張機能では、作業項目をポイントす�
 ### <a name="add-link-unfurling-manually"></a>手動でリンク展開を追加する
 
 > [!NOTE]
-> Azure AD 経由で認証が追加された場合は、[ボットを使用してTeamsにリンクを展開解除します](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4)。
+> Azure AD を介して認証が追加された場合は、 [ボットを使用して Teams のリンクを展開解除します](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4)。
 
 メッセージ拡張機能でリンクを操作できるようにするには、まずアプリ マニフェストに `messageHandlers` 配列を追加する必要があります。 次の例は、リンク展開を手動で追加する方法を説明しています。
 

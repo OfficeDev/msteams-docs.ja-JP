@@ -4,14 +4,14 @@ description: Azure AD へのタブ アプリの登録について説明します
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams 認証タブ Microsoft Azure Active Directory (Azure AD) アクセス トークン SSO テナント スコープ
-ms.openlocfilehash: e508e80f4e2c881e848f628a12392e6ced5e6f4b
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 9ddc513e0dbe2f664325295dd4f8feb953e47b05
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65888201"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503523"
 ---
-# <a name="register-your-app-in-azure-ad"></a>Azure AD にアプリを登録する
+# <a name="register-your-tab-app-in-azure-ad"></a>Azure AD にタブ アプリを登録する
 
 Azure AD では、アプリ ユーザーの Teams ID に基づいてタブ アプリにアクセスできます。 Teams にサインインしたアプリ ユーザーにタブ アプリへのアクセス権を付与できるように、タブ アプリを Azure AD に登録する必要があります。
 
@@ -25,7 +25,7 @@ Azure AD で新しいアプリ登録を作成し、スコープ (アクセス許
 
 また、タブ アプリをターゲットにするプラットフォームまたはデバイスでアプリ ユーザーを認証するなど、追加の詳細を構成する必要がある場合もあります。
 
-ユーザー レベルの Graph API アクセス許可 (電子メール、プロファイル、offline_access、OpenId) がサポートされています。 追加の Graph スコープ (たとえば`User.Read``Mail.Read`、Graph スコープなど) へのアクセスが必要な場合は、「[Graph アクセス許可を持つアクセス トークンを取得する](tab-sso-graph-api.md)」を参照してください。
+ユーザー レベルのGraph APIアクセス許可 (電子メール、プロファイル、offline_access、OpenId) がサポートされます。 追加の Graph スコープ (たとえば`User.Read``Mail.Read`、Graph スコープなど) へのアクセスが必要な場合は、「[Graph アクセス許可を持つアクセス トークンを取得する](tab-sso-graph-api.md)」を参照してください。
 
 Azure AD 構成では、Teams でタブ アプリの SSO が有効になります。 アプリ ユーザーを検証するためのアクセス トークンで応答します。
 
@@ -57,14 +57,14 @@ Azure AD に新しいアプリを登録し、テナントとアプリのプラ�
 
 ### <a name="to-register-a-new-app-in-azure-ad"></a>Azure AD に新しいアプリを登録するには
 
-1. Web ブラウザーで [Azure portal](https://ms.portal.azure.com/) を開きます。
-   Microsoft Azure AD Portal ページが開きます。
+1. Web ブラウザーで[Azure portal](https://ms.portal.azure.com/)を開きます。
+   Microsoft Azure AD ポータル ページが開きます。
 
-2. **[アプリの登録**] アイコンを選択します。
+2. **アプリの登録** アイコンを選択します。
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Azure AD Portal ページ。" border="true":::
 
-   **[アプリの登録]** ページが表示されます。
+   **アプリの登録** ページが表示されます。
 
 3. [ **+ 新しい登録** ] アイコンを選択します。
 
@@ -185,7 +185,7 @@ Azure AD に新しいアプリを登録し、テナントとアプリのプラ�
 
     1. スコープ名を入力します。 これは必須フィールドです。
     2. このスコープに同意できるユーザーを選択します。 既定のオプションは **管理者のみです**。
-    3. **管理者の同意表示名** を入力します。 これは必須フィールドです。
+    3. **管理同意表示名** を入力します。 これは必須フィールドです。
     4. 管理者の同意の説明を入力します。 これは必須フィールドです。
     5. **[ユーザーの同意] 表示名** を入力します。
     6. ユーザー同意の説明の説明を入力します。
@@ -263,7 +263,7 @@ Azure AD に新しいアプリを登録し、テナントとアプリのプラ�
 
 おめでとうございます! タブ アプリの SSO を有効にするために必要な Azure AD のアプリ構成が完了しました。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [SSO を有効にするコードを構成する](tab-sso-code.md)
@@ -272,6 +272,6 @@ Azure AD に新しいアプリを登録し、テナントとアプリのプラ�
 
 - [Azure Active Directory のテナント](/azure/active-directory/develop/single-and-multi-tenant-apps)
 - [Microsoft Graph のアクセス許可とスコープを使用してタブ アプリを拡張する](tab-sso-graph-api.md)
-- [クイック スタート - Microsoft ID プラットフォームにアプリケーションを登録する](/azure/active-directory/develop/quickstart-register-app)
+- [クイック スタート - アプリケーションをMicrosoft ID プラットフォームに登録する](/azure/active-directory/develop/quickstart-register-app)
 - [クイック スタート: Web API を公開するようにアプリケーションを構成する](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis)
 - [OAuth 2.0 承認コード フロー](/azure/active-directory/develop/v2-oauth2-auth-code-flow)

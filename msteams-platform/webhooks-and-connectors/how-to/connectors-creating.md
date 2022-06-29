@@ -1,16 +1,16 @@
 ---
 title: Office 365 コネクタの作成
 author: laujan
-description: このモジュールでは、Office 365 コネクタの使用を開始し、Microsoft TeamsでTeams アプリにコネクタを追加する方法について説明します。
+description: このモジュールでは、Office 365 コネクタの使用を開始し、Microsoft Teams の Teams アプリにコネクタを追加する方法について説明します
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 1727ff46124c5c9dd5567ae63cea0826e806be2c
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: dec9acbf7ba2f52303b04a5219de575a96a792e5
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189327"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485348"
 ---
 # <a name="create-office-365-connectors"></a>Office 365 コネクタの作成
 
@@ -29,7 +29,7 @@ Office 365 コネクタを作成する方法については、次のビデオを
 
 コネクタを配布するには、[コネクタ開発者ダッシュボード](https://aka.ms/connectorsdashboard)にコネクタを登録します。
 
-コネクタをTeamsでのみ機能させるには、手順に従って、[アプリをMicrosoft Teams ストアの記事に公開する際にコネクタを](~/concepts/deploy-and-publish/appsource/publish.md)送信します。 それ以外の場合、登録済みのコネクタは、Outlook や Teams など、アプリケーションをサポートするすべての Office 365 製品で機能します。
+コネクタを Teams でのみ機能させるには、手順に従って、 [Microsoft Teams ストアの記事にアプリを公開する際にコネクタを](~/concepts/deploy-and-publish/appsource/publish.md) 送信します。 それ以外の場合、登録済みのコネクタは、Outlook や Teams など、アプリケーションをサポートするすべての Office 365 製品で機能します。
 
 > [!IMPORTANT]
 > コネクタは、コネクタ開発者ダッシュボードで **[保存]** を選択した後で登録されます。 AppSource でコネクタを発行する場合は、[Microsoft Teams アプリを AppSource に公開する](~/concepts/deploy-and-publish/apps-publish.md)の手順に従います。 AppSource でアプリを公開しない場合は、それを組織に直接配布します。 組織のコネクタを公開した後、コネクタ ダッシュボードでそれ以上のアクションは必要ありません。
@@ -47,7 +47,7 @@ Office 365 コネクタを作成する方法については、次のビデオを
     > * このコードでは、Webhook 設定を取得して保存イベントを処理することができます。 コードには、後でイベントを投稿するための Webhook が格納されます。
     > * 構成エクスペリエンスは、Teams 内にインラインで読み込まれます。
 
-既存の Web 構成エクスペリエンスを再利用することも、Teams 専用にホストされた別のバージョンを作成することもできます。 コードには、Teams JavaScript SDK を含める必要があります。 これにより、コードでは、現在のユーザー、チャネル、またはチーム コンテキストを取得し、認証フローの開始などの一般的な操作を実行するための API にアクセスできます。
+既存の Web 構成エクスペリエンスを再利用することも、Teams 専用にホストされた別のバージョンを作成することもできます。 コードには Teams JavaScript SDK を含める必要があります。 これにより、コードから API にアクセスして、現在のユーザー、チャネル、またはチーム コンテキストの取得や認証フローの開始などの一般的な操作を実行できます。
 
 構成エクスペリエンスを統合するには、以下の操作を行います。
 
@@ -143,7 +143,7 @@ Office 365 コネクタを作成する方法については、次のビデオを
 | `configName`  | `setSettings()` を呼び出す場合にコードで設定される構成名。 |
 | `contentUrl` | `setSettings()` を呼び出す場合にコードによって設定される、構成ページの URL。 |
 | `webhookUrl` | コネクタ用に作成された Webhook の URL。Webhook URL を使用して、構造化された JSON を投稿し、チャネルにカードを送信します。アプリケーションが正常にデータを返した場合のみ `webhookUrl` が返されます。 |
-| `appType` | 返される`mail`値は、 `groups``teams` Office 365 メール、Office 365 グループ、またはTeamsに対応します。 |
+| `appType` | 返される`mail`値は、 `groups``teams` Office 365 メール、Office 365 グループ、または Teams にそれぞれ対応できます。 |
 | `userObjectId` | コネクタの設定を開始した Office 365 ユーザに対応する一意の ID。セキュリティで保護されている必要があります。この値は、お客様のサービスで設定を行った Office 365 のユーザーを関連付けるために使用できます。 |
 
 #### <a name="handle-edits"></a>編集の処理
@@ -221,11 +221,11 @@ Office 365 コネクタを作成する方法については、次のビデオを
 ![コネクタ ダイアログ ボックスの [アップロード済み] セクションのスクリーンショット](~/assets/images/connectors/connector_dialog_uploaded.png)
 
 > [!NOTE]
-> フローは、ホストされたエクスペリエンスとしてTeams内で完全に発生します。
+> フローは、ホストされたエクスペリエンスとして Teams 内で完全に発生します。
 
 `HttpPOST` アクションが正しく動作していることを確認するために、[お使いのコネクタにメッセージを送信します](~/webhooks-and-connectors/how-to/connectors-using.md)。
 
-[ステップ バイ ステップ ガイド](../../sbs-teams-connectors.yml)に従って、Teamsでコネクタを作成してテストします。
+ステップ [バイ ステップ ガイド](../../sbs-teams-connectors.yml) に従って、Teams でコネクタを作成してテストします。
 
 ## <a name="distribute-webhook-and-connector"></a>Webhook とコネクタを配布する
 

@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: e01b5b8dc053559248bc3217a0807b69ec014669
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 3e73725bcfd1f51cc2f1ab82ba7437b205028c09
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123049"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484846"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>公開された Microsoft Teams アプリを管理する
 
@@ -75,7 +75,7 @@ Microsoft は、Teams ストアにリストされているアプリに対して�
 1. [**製品の概要**] ページで、[**販売の停止**] を選択します。 Microsoft AppSource からアプリを削除します。
 1. アプリの登録解除を開始するには、 **パートナー センター** で [**概要**] ページを選択し、[**販売の停止**] を選択します。
 
-アプリの配布を停止した後も、パートナー センターで [**使用不可]** 状態で表示されます。 アプリをもう一度一覧表示する場合は、指示に従って[アプリをMicrosoft Teams ストアに発行します](/concepts/deploy-and-publish/appsource/publish#teams-app-submission)。
+アプリの配布を停止した後も、パートナー センターで [**使用不可]** 状態で表示されます。 アプリをもう一度一覧表示する場合は、指示に従って[アプリをMicrosoft Teams ストアに発行します](../publish.md)。
 
 ## <a name="see-also"></a>関連項目
 

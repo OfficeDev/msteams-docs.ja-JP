@@ -4,14 +4,14 @@ author: surbhigupta
 description: Teams 会議やさまざまな会議シナリオのためのアプリを有効化して構成し、アプリ マニフェストを更新し、機能などを構成する方法について説明します。
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: e7286399d27533d816e20f6b22e45f2526efdbe1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a59ee31eb1837389b09f58c83a02f056ab55506a
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142592"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503362"
 ---
-# <a name="enable-and-configure-your-apps-for-teams-meetings"></a>Teams 会議用アプリを有効化して構成する
+# <a name="enable-and-configure-apps-for-meetings"></a>会議用アプリを有効にして構成する
 
 それぞれのチームには、コミュニケーションとタスクの共同作業を行うそれぞれの方法があります。 これらのさまざまなタスクを達成するために、会議用アプリを使用して Teams をカスタマイズします。 Teams 会議用アプリを有効にし、アプリ マニフェスト内の会議スコープで使用できるようにアプリを構成します。
 

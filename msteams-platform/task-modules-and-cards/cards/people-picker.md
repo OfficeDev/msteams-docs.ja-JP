@@ -5,17 +5,17 @@ localization_priority: Medium
 ms.topic: reference
 author: Rajeshwari-v
 ms.author: surbhigupta
-ms.openlocfilehash: 3b366ebc91e57a2e48dec03fb50aed24d704e41d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 9802cbc0f78a84db972640ed8f96321a71a82504
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144167"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503488"
 ---
 # <a name="people-picker-in-adaptive-cards"></a>アダプティブ カードのユーザー ピッカー
 
 >[!NOTE]
-> 現在、アダプティブ カードのユーザー選択ツールは、モバイル向けの [パブリック 開発者向けプレビュー](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) でのみ使用でき、デスクトップでは一般公開 (GA) されています。
+> 現在、アダプティブ カードのユーザー選択ツールは、 [Teams のパブリック開発者向けプレビュー](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-teams) でモバイル用とデスクトップ向けの一般公開 (GA) でのみ利用できます。
 
 ユーザー選択ウィンドウは、ユーザーがアダプティブ カードでユーザーを検索して選択するのに役立ちます。 チャット、チャネル、タスク モジュール、タブ間で機能するアダプティブ カードに、入力コントロールとして People Picker を追加できます。 People Picker では、次の機能がサポートされています。
 
@@ -58,9 +58,9 @@ Web クライアントとデスクトップ クライアントは、アダプテ
 # <a name="mobile"></a>[モバイル](#tab/mobile)
 
 > [!NOTE]
-> 現時点では、この機能は [パブリック開発者向けプレビュー](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-microsoft-teams) でのみ使用できます。
+> 現時点では、この機能は  [Teams のパブリック開発者向けプレビュー](../../resources/dev-preview/developer-preview-intro.md#public-developer-preview-for-teams) でのみ使用できます。
 
-AndroidおよびiOSモバイル クライアントは、アダプティブ カードでのユーザー選択をサポートします。 モバイルでユーザー選択ウィンドウを使用して、ユーザーを検索および選択して、ユーザー エクスペリエンスを向上させることができます。 検索エクスペリエンスは、モバイルの他のユーザー選択エクスペリエンスと似ています。
+Android および iOS モバイル クライアントでは、アダプティブ カードでのユーザー選択がサポートされます。 モバイルでユーザー選択ウィンドウを使用して、ユーザーを検索および選択して、ユーザー エクスペリエンスを向上させることができます。 検索エクスペリエンスは、モバイルの他のユーザー選択エクスペリエンスと似ています。
 
 ### <a name="reassignment-scenario-example"></a>再割り当てシナリオの例
 
@@ -100,7 +100,7 @@ AndroidおよびiOSモバイル クライアントは、アダプティブ カ�
 
 |プロパティ |型 |必須 |説明 |
 |----|----|----|----|
-|**choices.data** |**Data.Query** |不要 |指定したデータセットから結果をフェッチすることで、さまざまなユーザーの種類に対して動的な自動完了を有効にします。 |
+|**choices.data** |**Data.Query** |いいえ |指定したデータセットから結果をフェッチすることで、さまざまなユーザーの種類に対して動的な自動完了を有効にします。 |
 
 #### <a name="dataquery"></a>Data.Query
 

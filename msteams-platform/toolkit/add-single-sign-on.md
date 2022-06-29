@@ -1,27 +1,27 @@
 ---
 title: Teams アプリにシングル サインオンを追加する
 author: zyxiaoyuer
-description: このモジュールでは、Teams Toolkitのシングル サインオン (SSO) を追加する方法、SSO のサポートを有効にする方法、SSO を使用するようにアプリケーションを更新する方法について説明します
+description: このモジュールでは、Teams Toolkit のシングル サインオン (SSO) を追加する方法、SSO のサポートを有効にする方法、SSO を使用するようにアプリケーションを更新する方法について説明します
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: b1c53da3a7af0676ca29006359971d881a3a8f5b
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: ca310712a8fc6912b68ba6538044d504e46e00a2
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144132"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485609"
 ---
 # <a name="add-single-sign-on-to-teams-app"></a>Teams アプリにシングル サインオンを追加する
 
-Microsoft Teamsは、サインインTeamsユーザー トークンを取得して Microsoft Graphやその他の API にアクセスするためのシングル サインオン機能をアプリケーションに提供します。 Teams Toolkitは、Azure AD のフローの一部と、いくつかの単純な API の背後にある統合を抽象化することで、対話を容易にします。 これにより、シングル サインオン (SSO) 機能をTeams アプリケーションに簡単に追加できます。
+Microsoft Teams には、サインインしている Teams ユーザー トークンを取得して Microsoft Graph やその他の API にアクセスするためのシングル サインオン機能がアプリケーションに用意されています。 Teams Toolkit は、Azure AD フローの一部と、いくつかの単純な API の背後にある統合を抽象化することで、対話を容易にします。 これにより、Teams アプリケーションにシングル サインオン (SSO) 機能を簡単に追加できます。
 
 チャット、チーム、またはチャネルでユーザーと対話するアプリケーションの場合、SSO はアダプティブ カードとしてマニフェストされ、ユーザーは Azure AD 同意フローを呼び出すために対話できます。
 
 ## <a name="enable-sso-support"></a>SSO サポートを有効にする
 
-Teams Toolkitは、次のTeams機能に SSO を追加するのに役立ちます。
+Teams Toolkit は、次の Teams 機能に SSO を追加するのに役立ちます。
 
 * Tab
 * Bot
@@ -30,15 +30,15 @@ Teams Toolkitは、次のTeams機能に SSO を追加するのに役立ちます
 
 ### <a name="add-sso-using-visual-studio-code"></a>Visual Studio Code を使用して SSO を追加する
 
-次の手順は、Visual Studio Code のTeams Toolkitを使用して SSO を追加するのに役立ちます
+次の手順は、Visual Studio Code で Teams Toolkit を使用して SSO を追加するのに役立ちます
 
 1. **Microsoft Visual Studio Code** を開きます。
-2. 左側のナビゲーション バー Teams Toolkit :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="sso add sidebar"::: を選択します。
+2. 左側のナビゲーション バーから [Teams Toolkit :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="sso add sidebar"::: ] を選択します。
 3. **[開発**] で [**機能の追加]** を選択します。
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-add features.png" alt-text="sso 機能の追加":::
 
-    * コマンド パレットを開き、[**Teams: 機能の追加**] を選択することもできます。
+    * コマンド パレットを開き、[**Teams: 機能の追加]** を選択することもできます。
 
 4. **[シングル サインオン**] を選択します。
 
@@ -51,19 +51,19 @@ Teams Toolkitは、次のTeams機能に SSO を追加するのに役立ちます
 > [!Note]
 > この機能により、既存のすべての適用可能な機能に対して SSO が有効になります。 後でプロジェクトに機能を追加する場合は、同じ手順に従って SSO を有効にします。
 
-## <a name="customize-your-project-using-teams-toolkit"></a>Teams Toolkitを使用してプロジェクトをカスタマイズする
+## <a name="customize-your-project-using-teams-toolkit"></a>Teams Toolkit を使用してプロジェクトをカスタマイズする
 
-次の表に、プロジェクトTeams Toolkit加える変更の一覧を示します。
+次の表に、Teams Toolkit がプロジェクトに加える変更の一覧を示します。
 
    |**型**|**ファイル**|**用途**|
    |--------|--------|-----------|
    |Create|`aad.template.json` 下 `template/appPackage`|Azure AD アプリケーション マニフェストは、Azure AD アプリを表します。 `template/appPackage` は、ローカル デバッグまたはプロビジョニング ステージ中に Azure AD アプリを登録するのに役立ちます。|
-   |変更|`manifest.template.json` 下 `template/appPackage`|`webApplicationInfo` Teams アプリ マニフェスト テンプレートにオブジェクトが追加されます。 SSO を有効にするには、このフィールドが必要Teams。 この変更は、ローカル デバッグまたはプロビジョニングをトリガーするときに有効です。|
+   |変更|`manifest.template.json` 下 `template/appPackage`|Teams アプリ マニフェスト `webApplicationInfo` テンプレートにオブジェクトが追加されます。 Teams では、SSO を有効にするには、このフィールドが必要です。 この変更は、ローカル デバッグまたはプロビジョニングをトリガーするときに有効です。|
    |Create|`auth/tab`|参照コード、認証リダイレクト ページ、ファイル `README.md` は、タブ プロジェクトのこのパスに生成されます。|
    |Create|`auth/bot`|参照コード、認証リダイレクト ページ、ファイル `README.md` は、ボット プロジェクトのこのパスに生成されます。|
 
 > [!Note]
-> SSO を追加することで、ローカル デバッグをトリガーするまで、Teams Toolkitはクラウド内の何も変更しません。 コードを更新して、SSO がプロジェクトで動作していることを確認します。
+> SSO を追加することで、ローカル デバッグをトリガーするまで、Teams Toolkit はクラウド内の何も変更しません。 コードを更新して、SSO がプロジェクトで動作していることを確認します。
 
 ## <a name="update-your-application-to-use-sso"></a>SSO を使用するようにアプリケーションを更新する
 
@@ -77,7 +77,7 @@ Teams Toolkitは、次のTeams機能に SSO を追加するのに役立ちます
 <br><details>
 <summary><b>Tab プロジェクト </b></summary>
 
-1. フォルダー内の`auth/public`コピー`auth-start.html`と `auth-end.htm`** を .`tabs/public/` Teams Toolkitは、Azure AD のリダイレクト フローに対して、これら 2 つのエンドポイントを Azure AD に登録します。
+1. フォルダー内の`auth/public`コピー`auth-start.html`と `auth-end.htm`** を .`tabs/public/` Teams Toolkit は、Azure AD のリダイレクト フローに対して、これら 2 つのエンドポイントを Azure AD に登録します。
 
 2. [コピー先] の下にある`auth/tab`フォルダーをコピー`sso`します`tabs/src/sso/`。
 
@@ -316,7 +316,7 @@ export async function showUserImage(context, ssoToken, param) {
 
 ## <a name="debug-your-application"></a>アプリケーションをデバッグする
 
-F5 キーを押してアプリケーションをデバッグします。 Teams Toolkitでは、Azure AD マニフェスト ファイルを使用して、SSO 用の Azure AD アプリケーションを登録します。 ローカル デバッグ機能Teams Toolkitについては、「[Teams アプリをローカルでデバッグ](debug-local.md)する」を参照してください。
+F5 キーを押してアプリケーションをデバッグします。 Teams Toolkit では、Azure AD マニフェスト ファイルを使用して、SSO 用の Azure AD アプリケーションを登録します。 Teams Toolkit のローカル デバッグ機能については、「 [Teams アプリをローカルでデバッグする](debug-local.md)」を参照してください。
 
 ## <a name="customize-azure-ad-application-registration"></a>Azure AD アプリケーションの登録をカスタマイズする
 
@@ -327,11 +327,11 @@ Azure Portal で Azure AD アプリケーションを表示するには、「[Az
 
 次の概念は、SSO 認証に役立ちます。
 
-### <a name="working-of-sso-in-teams"></a>Teamsでの SSO の操作
+### <a name="working-of-sso-in-teams"></a>Teams での SSO の操作
 
 Microsoft Azure Active Directory (Azure AD) でのシングル サインオン (SSO) 認証では、ユーザーがサインイン資格情報を入力する必要がある回数を最小限に抑えるために、認証トークンが自動的に更新されます。 ユーザーがアプリの使用に同意した場合、ユーザーは自動的にサインインするため、別のデバイスで再度同意する必要はありません。
 
-タブとボットTeams SSO サポートのフローが似ています。詳細については、次を参照してください。
+Teams のタブとボットには、SSO サポートのフローが似ています。詳細については、次を参照してください。
 
 1. [タブでのシングル サインオン (SSO) 認証](../tabs/how-to/authentication/tab-sso-overview.md)
 2. [Bots でのシングル サインオン (SSO) 認証](../bots/how-to/authentication/auth-aad-sso-bots.md)
@@ -342,8 +342,8 @@ TeamsFx は、SSO を使用し、構成がゼロの 1 行のステートメン�
 
 TeamsFx SDK を使用すると、資格情報を使用して簡単な方法でユーザー認証コードを記述できます。
 
-1. ブラウザー環境のユーザー ID: `TeamsUserCredential` 現在Teamsユーザーの ID を表します。
-2. Node.js環境のユーザー ID: `OnBehalfOfUserCredentail` On-Behalf-Of フローと SSO トークンを使用します。
+1. ブラウザー環境のユーザー ID: `TeamsUserCredential` Teams の現在のユーザーの ID を表します。
+2. Node.js環境のユーザー ID: `OnBehalfOfUserCredential` On-Behalf-Of フローと SSO トークンを使用します。
 3. Node.js環境のアプリケーション ID: `AppCredential` アプリケーション ID を表します。
 
 TeamsFx SDK の詳細については、次を参照してください。

@@ -1,21 +1,21 @@
 ---
 title: クラウドにデプロイする
 author: MuyangAmigo
-description: このモジュールでは、クラウド、Azure、またはSharePointにアプリをデプロイし、Teams Toolkitを使用してTeamsアプリをデプロイする方法について説明します。
+description: このモジュールでは、クラウド、Azure、または SharePoint にアプリをデプロイし、Teams Toolkit を使用して Teams アプリをデプロイする方法について説明します。
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: f7870a81c221182c98a0619d99c7cce255fcc170
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 607214b329734f143d3bbcd9ede87ca85c9c97bb
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142053"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503334"
 ---
-# <a name="deploy-to-the-cloud"></a>クラウドにデプロイする
+# <a name="deploy-teams-app-to-the-cloud"></a>Teams アプリをクラウドに展開する
 
-Teams Toolkitは、アプリケーション内のフロントエンド コードとバックエンド コードを Azure でプロビジョニングされたクラウド リソースにデプロイまたはアップロードするのに役立ちます。
+Teams Toolkit を使用すると、アプリケーション内のフロントエンドコードとバックエンド コードを Azure でプロビジョニングされたクラウド リソースにデプロイまたはアップロードできます。
 
 * フロントエンド アプリケーションなどのタブは、Azure Storage にデプロイされ、静的 Web ホスティングまたは SharePoint サイト用に構成されます。
 * バックエンド API は Azure 関数にデプロイされます。
@@ -27,22 +27,22 @@ Teams Toolkitは、アプリケーション内のフロントエンド コード
 
 > [!NOTE]
 >
-> * TEAMSアプリ プロジェクトが VS コードで開かれていることを確認します。
+> * VS コードで Teams アプリ プロジェクトが開かれていることを確認します。
 > * プロジェクト コードをクラウドにデプロイする前に、 [クラウド リソースをプロビジョニングします](provision.md)。
 
-## <a name="deploy-teams-apps-using-teams-toolkit"></a>Teams Toolkitを使用してTeams アプリをデプロイする
+## <a name="deploy-teams-apps-using-teams-toolkit"></a>Teams Toolkit を使用して Teams アプリを展開する
 
-入門ガイドは、Teams Toolkitを使用したデプロイに役立ちます。 次を使用して、Teams アプリをデプロイできます。
+入門ガイドは、Teams Toolkit を使用して展開するのに役立ちます。 以下を使用して Teams アプリを展開できます。
 
 * [アプリを Azure にデプロイする](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8&branch)
 * [アプリを SharePoint にデプロイする](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4&branch)
 
 ## <a name="details-on-teams-app-workload"></a>Teams アプリワークロードの詳細
 
-| Teams アプリワークロード | ソース コード | 成果物をビルドする| ターゲット リソース |
+| Teams アプリのワークロード | ソース コード | 成果物をビルドする| ターゲット リソース |
 |-------------|----------|---------------|---------------|
 |Reactを含むタブ </br> フロントエンド ワークロード| `yourProjectFolder/tabs`| `tabs/build` |Azure Storage |
-|SharePointのタブ </br> フロントエンド ワークロード | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |SharePoint アプリ カタログ |
+|SharePoint を使用したタブ </br> フロントエンド ワークロード | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |SharePoint アプリ カタログ |
 |Azure 関数上の API </br> バックエンド ワークロード | `yourProjectFolder/api`| 該当なし |Azure Functions |
 |ボットとメッセージ拡張機能 </br> バックエンド ワークロード | `yourProjectFolder/bot` | 該当なし | Azure アプリ サービス |
 
@@ -53,7 +53,7 @@ Teams Toolkitは、アプリケーション内のフロントエンド コード
 
 * [クラウド リソースをさらに追加する](add-resource.md)
 * [Azure クラウド サービスを作成してデプロイする](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
-* [アプリの機能Teams追加する](add-capability.md)
+* [Teams アプリの機能をさらに追加する](add-capability.md)
 * [CI/CD パイプラインを使用してプロジェクト コードをデプロイする](use-CICD-template.md)
 * [複数の環境を管理する](TeamsFx-multi-env.md)
 * [Teams プロジェクトで他の開発者と協力する](TeamsFx-collaboration.md)

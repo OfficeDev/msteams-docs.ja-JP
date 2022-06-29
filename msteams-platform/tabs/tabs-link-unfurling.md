@@ -1,20 +1,20 @@
 ---
 title: タブのリンクの展開とステージ ビュー
 author: Rajeshwari-v
-description: リンクの展開を解除し、ステージ ビューを開き、アプリでタブTeamsピン留めする方法について説明します。 コード例とサンプルを使用してアダプティブ カードを使用して呼び出す方法について説明します。
+description: リンクを展開し、ステージ ビューを開き、Microsoft Teams アプリでタブを固定する方法について説明します。 コード例とサンプルを使用して、ステージ ビューとアダプティブ カードを使用したステージ ビューの呼び出しについて説明します。
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 07854a38fff8ded02fabba98926511e964f5baf0
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: fd3d38ce3772137bfcfa121a886c5271246096b6
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66122909"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484936"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>タブのリンクの展開とステージ ビュー
 
-ステージ ビューは、新しいユーザー インターフェイス (UI) コンポーネントです。 これにより、Teamsで全画面表示で開き、タブとしてピン留めされたコンテンツをレンダリングできます。
+ステージ ビューは、新しいユーザー インターフェイス (UI) コンポーネントです。 これにより、Teams で全画面表示で開き、タブとしてピン留めされたコンテンツをレンダリングできます。
 
 ## <a name="stage-view"></a>ステージ ビュー
 
@@ -87,7 +87,7 @@ ms.locfileid: "66122909"
 * ボットは `200` コードで応答します。
 
 > [!NOTE]
-> モバイル クライアントTeams、Microsoft Teams アプリを通じて配布されたアプリのステージ ビュー[を](../concepts/deploy-and-publish/apps-publish-overview.md)呼び出し、moblie 最適化エクスペリエンスを持たないと、デバイスの既定の Web ブラウザーが開きます。 ブラウザは、`TabInfo` オブジェクトの `websiteUrl` パラメータで指定された URL を開きます。
+> Teams モバイル クライアントでは、[[Teams ストア]](/platform/concepts/deploy-and-publish/apps-publish-overview.md) を介して配布されたアプリのステージ ビューを呼び出し、モバイル向けに最適化されたエクスペリエンスがない場合、デバイスの既定の Web ブラウザーが開きます。ブラウザは、`TabInfo` オブジェクトの `websiteUrl` パラメータで指定されたURLを開きます。
 
 ## <a name="invoke-stage-view-through-deep-link"></a>ディープ リンクを使用してステージ ビューを呼び出す
 

@@ -3,14 +3,14 @@ title: ボットのシングル サインオンのサポート
 description: ユーザー トークンを取得する方法について説明します。ボット開発者は、OAuth カードのサポートでサインイン カードまたは Azure ボット サービスを使用できます。
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 924262b492c85205a8f1ba4fd034e86ecdf82d53
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 5ce3fab237c8190670292616c05ee3bf51b4e7cb
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189728"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503656"
 ---
-# <a name="single-sign-on-sso-support-for-bots"></a>ボット向けのシングル サインオン (SSO) サポート
+# <a name="use-sso-authentication-for-bots"></a>ボットに SSO 認証を使用する
 
 Microsoft Azure Active Directory (Azure AD) のシングル サインオン認証では、ユーザーがサインイン資格情報の入力を必要とする回数を最小限に抑えるために、認証トークンが暗黙裡に更新されます。 ユーザーがアプリの使用に同意した場合、ユーザーは自動的にサインインするため、別のデバイスで再度同意する必要はありません。 タブとボットには、SSO のサポートに関して同様のフローがあります。 ただし、ボットは[トークンを要求](#request-a-bot-token)し、別のプロトコルで[応答](#receive-the-bot-token)を受け取ります。
 
@@ -19,7 +19,7 @@ Microsoft Azure Active Directory (Azure AD) のシングル サインオン認�
 
 ボットのシングル サインオン (SSO) のサポートについては、次のビデオを参照してください。
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OASc>]
 <br>
 
 ## <a name="bot-sso-at-runtime"></a>ランタイムにおけるボットの SSO
@@ -100,7 +100,7 @@ Azure AD ポータルを使用してアプリを登録する手順は、[タブ�
    >
    > 次の重要な制限に注意する必要があります。
    >
-   > * email、profile、offline_access、OpenId などのユーザー レベルの Microsoft Graph API アクセス許可のみがサポートされます。 他の Microsoft Graph スコープ (たとえば`User.Read``Mail.Read`、Microsoft [Graphのアクセス許可とスコープを使用してタブ アプリを拡張](../../../tabs/how-to/authentication/tab-sso-graph-api.md)する) にアクセスする必要がある場合は、「」を参照してください。
+   > * email、profile、offline_access、OpenId などのユーザー レベルの Microsoft Graph API アクセス許可のみがサポートされます。 他の Microsoft Graph スコープ (Microsoft Graph スコープなど`User.Read``Mail.Read`) にアクセスする必要がある場合は、「[Microsoft Graph のアクセス許可とスコープを使用してタブ アプリを拡張](../../../tabs/how-to/authentication/tab-sso-graph-api.md)する」を参照してください。
    > * アプリケーションのドメイン名は、Azure AD アプリケーションに登録したドメイン名と同じである必要があります。
    > * 現在、アプリごとに複数のドメインはサポートされていません。
    > * `azurewebsites.net` ドメインを使用するアプリケーションは大衆的であり、セキュリティ リスクである可能性があるため、サポートされていません。
@@ -362,7 +362,7 @@ Azure AD ポータルを使用してアプリを登録する手順は、[タブ�
 
 ### <a name="update-the-auth-sample"></a>認証サンプルを更新する
 
-[Teams 認証サンプル](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth)を開き、次の手順を実行してそれを更新します:
+[Teams 認証サンプル](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth)を開き、次の手順を実行して更新します。
 
 1. Teams ボットを更新し、次のコードを含めることで、受信要求の重複を除去します:
 
@@ -385,7 +385,7 @@ Azure AD ポータルを使用してアプリを登録する手順は、[タブ�
 
 |**サンプルの名前** | **説明** |**.NET** |**C#** |**Node.js** |
 |----------------|-----------------|--------------|--------------|--------------|
-|Bot framework SDK | このサンプル コードでは、Microsoft Teams用のボットで認証を開始する方法を示します。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)|
+|Bot framework SDK | このサンプル コードでは、Microsoft Teams のボットで認証を開始する方法を示します。 |[表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)|
 
 ## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
 

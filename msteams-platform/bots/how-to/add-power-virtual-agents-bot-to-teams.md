@@ -5,12 +5,12 @@ description: Power Virtual Agents チャットボットを Teams プラットフ
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 0f66a42cecbac25f82980c16e7f979c5d613816d
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 310b7d8a5e04259a205763b45cb2d2315c19c72a
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150849"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485203"
 ---
 # <a name="add-power-virtual-agents-chatbot"></a>Power Virtual Agents チャットボットを追加する
 
@@ -24,7 +24,7 @@ Power Virtual Agents を使用すると、顧客、他の従業員、または W
 
 > [!NOTE]
 >
-> * チャットボットをMicrosoft Teamsに追加すると、ボット コンテンツやユーザー チャット コンテンツなどの一部のデータがTeamsと共有されます。 これは、データが[組織のコンプライアンスおよび地理的または地域的な境界](/power-virtual-agents/data-location)の外に流れることを意味します。 <br/>
+> * Microsoft Teams にチャットボットを追加すると、ボット コンテンツやユーザー チャット コンテンツなどのデータの一部が Teams と共有されます。 これは、データが[組織のコンプライアンスおよび地理的または地域的な境界](/power-virtual-agents/data-location)の外に流れることを意味します。 <br/>
 > * Teams アプリ ストアに公開するアプリを作成するために Microsoft Power Platform を使用しないでください。 Microsoft Power Platform アプリは、組織のアプリ ストアにのみ公開できます。
 
 ## <a name="make-your-chatbot-available-in-teams-through-the-power-virtual-agents-portal"></a>Power Virtual Agents ポータルを通じて Teams でチャットボットを利用できるようにする
@@ -112,3 +112,4 @@ Teams のボットは、ボットとその機能に関する基本情報を提�
 * [Power Virtual Agents ポータル](https://powervirtualagents.microsoft.com)
 * [Power Virtual Agents ボットを公開する](/power-virtual-agents/publication-fundamentals-publish-channels)
 * [Microsoft Teams のセキュリティとコンプライアンス](/MicrosoftTeams/security-compliance-overview)
+* [人事 Power Virtual Agents ボット](/power-virtual-agents/teams/fundamentals-get-started-teams)

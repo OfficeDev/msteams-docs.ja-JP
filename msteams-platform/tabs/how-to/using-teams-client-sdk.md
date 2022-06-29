@@ -1,18 +1,18 @@
 ---
-title: Microsoft Teams JavaScript クライアント SDK を使用してタブやその他のホストされたエクスペリエンスを構築する
+title: Teams JavaScript client SDK
 author: heath-hamilton
 ms.author: surbhigupta
 description: このモジュールでは、Microsoft Teams JavaScript クライアント SDK を学習します。これは、以下でホストされているアプリ エクスペリエンスの構築に役立ちます <iframe> でホストされたアプリ エクスペリエンスの構築に役立つ Microsoft Teams JavaScript クライアント SDK の概要。
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 165b08b3936afe03f492d8e6983c5504d38bad8b
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: fddc06c2139796839500a99421d1e2c92a4318c0
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189509"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503922"
 ---
-# <a name="building-tabs-and-other-hosted-experiences-with-the-microsoft-teams-javascript-client-sdk"></a>Microsoft Teams JavaScript クライアント SDK を使用してタブやその他のホストされたエクスペリエンスを構築する
+# <a name="teams-javascript-client-sdk"></a>Teams JavaScript client SDK
 
 Microsoft Teams JavaScript クライアント SDK は、Teams、Office、Outlook でホストされたエクスペリエンスを作成するのに役立ちます。これらのサービスで、アプリ コンテンツは [iframe](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) でホストされます。 SDK は、次の Teams 機能を備えたアプリを開発するのに役立ちます。
 
@@ -42,7 +42,7 @@ TeamsJS v.2.0 では、特定の種類の Teams アプリをMicrosoft 365 エコ
 | appInitialization| | 非推奨。 `app` 名前空間に置き換えられました。 |
 | appInstallDialog | Teams||
 | 認証 | Teams、Outlook、Office | |
-| calendar | Teams、Outlook ||
+| calendar | Outlook ||
 | 通話 | Teams||
 | チャット |Teams||
 | ダイアログ | Teams、Outlook、Office | ダイアログ (以前は *タスク モジュール* という名前でした) を表す名前空間。 「[ダイアログ](#dialogs)」のメモを参照してください。 |

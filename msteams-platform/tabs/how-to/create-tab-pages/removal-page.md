@@ -5,16 +5,16 @@ description: このモジュールでは、タブの削除ページを作成す�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 81bc5f667d1be301965ccddf0709c8cb02f328e8
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: cc2d08176d4da365eac9d5a5fd48ff53dbf84461
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142634"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485217"
 ---
-# <a name="create-a-removal-page"></a>削除ページを作成する
+# <a name="tab-re-configuration-and-removal-page"></a>タブの再構成と削除ページ
 
-アプリの削除オプションと変更オプションをサポートすることで、ユーザー エクスペリエンスを拡張および強化できます。 Teamsを使用すると、ユーザーはチャネルタブまたはグループ タブの名前を変更または削除でき、インストール後にユーザーがタブを再構成できます。 さらに、タブの削除エクスペリエンスでは、コンテンツを削除またはアーカイブするための削除後のオプションがユーザーに提供されます。
+アプリの削除オプションと変更オプションをサポートすることで、ユーザー エクスペリエンスを拡張および強化できます。 Teams を使用すると、ユーザーはチャネルタブまたはグループ タブの名前を変更または削除でき、ユーザーはインストール後にタブを再構成できます。 さらに、タブの削除エクスペリエンスでは、コンテンツを削除またはアーカイブするための削除後のオプションがユーザーに提供されます。
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -24,9 +24,9 @@ ms.locfileid: "66142634"
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`canUpdateConfiguration`|Boolean|||タブの構成のインスタンスを作成後にユーザーが更新できるかどうかを示す値。 既定値は `true` です。 |
+|`canUpdateConfiguration`|ブール型|||タブの構成のインスタンスを作成後にユーザーが更新できるかどうかを示す値。 既定値は `true` です。 |
 
-タブがチャネルまたはグループ チャットにアップロードされると、Teamsタブの右クリック ドロップダウン メニューが追加されます。使用可能なオプションは、設定によって`canUpdateConfiguration`決まります。 次の表に、設定の詳細を示します。
+タブがチャネルまたはグループ チャットにアップロードされると、Teams によってタブの右クリック ドロップダウン メニューが追加されます。使用可能なオプションは、設定によって `canUpdateConfiguration` 決まります。 次の表に、設定の詳細を示します。
 
 | `canUpdateConfiguration`| true   | false | description |
 | ----------------------- | :----: | ----- | ----------- |
@@ -36,7 +36,7 @@ ms.locfileid: "66142634"
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>アプリケーションのタブ削除ページを作成する
 
-オプションの削除ページは、ホストする HTML ページであり、タブが削除されたときに表示されます。 削除ページの URL は、構成ページ内の `setConfig()` メソッド (以前 `setSettings()`) によって指定されます。 アプリ内のすべてのページと同様に、削除ページは[Teamsタブの前提条件](../../../tabs/how-to/tab-requirements.md)に準拠している必要があります。
+オプションの削除ページは、ホストする HTML ページであり、タブが削除されたときに表示されます。 削除ページの URL は、構成ページ内の `setConfig()` メソッド (以前 `setSettings()`) によって指定されます。 アプリ内のすべてのページと同様に、削除ページは [Teams タブの前提条件](../../../tabs/how-to/tab-requirements.md)に準拠している必要があります。
 
 ### <a name="register-a-remove-handler"></a>削除ハンドラーを登録する
 
@@ -58,7 +58,7 @@ ms.locfileid: "66142634"
 
 #### <a name="include-authentication"></a>認証を含める
 
-ユーザーがタブコンテンツを削除できるようにするには、認証が必要です。 コンテキスト情報は、認証要求と承認ページ URL の作成に役立ちます。 [タブの認証フロー Microsoft Teams参照してください](~/tabs/how-to/authentication/auth-flow-tab.md)。 タブ ページで使用されているすべてのドメインが配列に`manifest.json``validDomains`一覧表示されていることを確認します。
+ユーザーがタブコンテンツを削除できるようにするには、認証が必要です。 コンテキスト情報は、認証要求と承認ページ URL の作成に役立ちます。 タブについては、 [Microsoft Teams の認証フローに関するページを参照してください](~/tabs/how-to/authentication/auth-flow-tab.md)。 タブ ページで使用されているすべてのドメインが配列に`manifest.json``validDomains`一覧表示されていることを確認します。
 
 タブ削除コード ブロックの例を次に示します。
 
@@ -110,15 +110,15 @@ ms.locfileid: "66142634"
 
 ***
 
-ユーザーがタブのドロップダウン メニューから **[削除**] を選択すると、**構成ページ** に割り当てられている省略可能な`removeUrl`ページが IFrame に読み込Teams。 ユーザーには、呼び出`pages.config.setValidityState(true)`す関数が`onClick()`読み込まれたボタンが表示され、削除ページ IFrame の下部に表示される [**削除**] ボタンが有効になります。
+ユーザーがタブのドロップダウン メニューから **[削除**] を選択すると、Teams は **構成ページ** に割り当てられている省略可能な`removeUrl`ページを IFrame に読み込みます。 ユーザーには、呼び出`pages.config.setValidityState(true)`す関数が`onClick()`読み込まれたボタンが表示され、削除ページ IFrame の下部に表示される [**削除**] ボタンが有効になります。
 
-削除ハンドラーが実行された後、`removeEvent.notifySuccess()`または`removeEvent.notifyFailure()`コンテンツの削除結果のTeamsに通知します。
+削除ハンドラーが実行された後、 `removeEvent.notifySuccess()` または `removeEvent.notifyFailure()` コンテンツの削除結果を Teams に通知します。
 
 >[!NOTE]
 >
-> * 承認されたユーザーのタブに対する制御が禁止されないようにするために、成功と失敗の両方のケースでタブを削除Teams。
-> * イベント ハンドラーを `registerOnRemoveHandler` 呼び出すと、メソッドに応答するまでに 15 秒かかります。 既定では、Teamsは、呼び出`setValidityState(true)`さない場合でも 5 秒後に **[削除]** ボタンを有効にします。
-> * ユーザーが **[削除]** を選択すると、アクションが完了したかどうかにかかわらず、Teamsは 30 秒後にタブを削除します。
+> * 承認されたユーザーのタブに対する制御が禁止されないようにするために、Teams は成功と失敗の両方のケースでタブを削除します。
+> * イベント ハンドラーを `registerOnRemoveHandler` 呼び出すと、メソッドに応答するまでに 15 秒かかります。 既定では、Teams では、呼び出`setValidityState(true)`さない場合でも 5 秒後に **[削除]** ボタンが有効になります。
+> * ユーザーが **[削除]** を選択すると、アクションが完了したかどうかに関係なく、Teams は 30 秒後にタブを削除します。
 
 ## <a name="next-step"></a>次のステップ
 

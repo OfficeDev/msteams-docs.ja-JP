@@ -1,16 +1,16 @@
 ---
 title: ボットと SDK
 author: surbhigupta
-description: この記事では、Microsoft Bot Frameworkを使用してボットとボットMicrosoft Teams構築するためのツールと SDK について説明します。
+description: この記事では、Microsoft Bot Frameworkを使用して Microsoft Teams ボットとボットを構築するためのツールと SDK について説明します。
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 10e6535c015e63ecc88b57d56019c12bdb50d531
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 28cebe4634899a607bb13804997ffbe0649d54f2
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189333"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485686"
 ---
 # <a name="bots-and-sdks"></a>ボットと SDK
 
@@ -186,9 +186,10 @@ Microsoft Teams のボットは、1 対 1 の会話、グループ チャット�
 1 対 1 のチャットは、会話ボットがユーザーとやり取りする従来の方法です。 1 対 1 の会話ボットの例を次に示します。
 
 * Q&A ボット
-* 他のシステムでワークフローを開始するボット
-* ジョークを言うボット
-* メモを取るボット 1 対 1 のチャットボットを作成する前に、機能を表示するための方法として、会話ベースのインターフェイスが最適な方法であるかどうかを検討してください。
+* 他のシステムでワークフローを開始するボット。
+* ジョークを伝えるボット。
+* メモを取るボット。
+1 対 1 のチャットボットを作成する前に、会話ベースのインターフェイスが機能を提示する最適な方法であるかどうかを検討してください。
 
 ## <a name="disadvantages-of-bots"></a>ボットの欠点
 

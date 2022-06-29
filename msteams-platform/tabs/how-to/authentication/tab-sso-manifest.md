@@ -4,14 +4,14 @@ description: タブの SSO を有効にするためのマニフェストの更�
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams 認証タブ Microsoft Azure Active Directory (Azure AD) Graph API
-ms.openlocfilehash: 0bc50b61d5beac45ae11ec1264cd6fc4861e0738
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 437c16763e918430e91fe543c2dbc62d95452c5c
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65888286"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503481"
 ---
-# <a name="update-app-manifest-for-sso-and-preview-app"></a>SSO とプレビュー アプリのアプリ マニフェストを更新する
+# <a name="update-manifest-for-sso-and-preview-app"></a>SSO とプレビュー アプリのマニフェストを更新する
 
 Teams アプリ マニフェストを更新する前に、タブ アプリで SSO を有効にするコードを構成していることを確認します。
 
@@ -153,8 +153,6 @@ Teams でタブ アプリをプレビューするには:
     アプリをアップロードするオプションが表示されます。
 
 1. [ **カスタム アプリのアップロード** ] を選択して、タブ アプリを Teams にサイドロードします。
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sideload-tab-app.png" alt-text="タブ アプリを Teams にサイドロードする":::
 
 1. アプリ パッケージの zip ファイルを選択し、[ **追加**] を選択します。
 

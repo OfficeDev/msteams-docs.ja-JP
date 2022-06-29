@@ -1,22 +1,22 @@
 ---
-title: ボットを使用したチャネルとグループの会話
+title: チャネルまたはグループ チャット用の会話ボットを作成する
 author: surbhigupta
 description: チャネルまたはグループ チャットでボットのメッセージを送信、受信、処理する方法について説明します。 設計ガイドラインなどについて説明します。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 47b706aea1e6ba292126d93a8e0b6ce173c4b588
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 57f0f5e65d9236074512947d41b29041db4869d9
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190263"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503607"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>ボットとのチャネルおよびグループ チャットの会話
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Microsoft Teams ボットをチームまたはグループ チャットにインストールするには、ボットに`teams`スコープを追加します`groupchat`。 これにより、会話のすべてのメンバーがボットと対話できるようになります。 ボットがインストールされると、会話メンバーの一覧など、会話に関するメタデータにアクセスできます。 また、チームにインストールされると、ボットはそのチームに関する詳細とチャネルの完全なリストにアクセスできます。
+チームまたはグループ チャットに Microsoft Teams ボットをインストールするには、ボットに `teams` スコープを追加します `groupchat` 。 これにより、会話のすべてのメンバーがボットと対話できるようになります。 ボットがインストールされると、会話メンバーの一覧など、会話に関するメタデータにアクセスできます。 また、チームにインストールされると、ボットはそのチームに関する詳細とチャネルの完全なリストにアクセスできます。
 
 グループまたはチャネル内のボットは、@botnameに言及された場合にのみメッセージを受信します。 会話に送信された他のメッセージは受信しません。 ボットは直接 @メンションされる必要があります。 チームまたはチャネルがメンションされたとき、またはボットからメッセージに返信したときにボットがメッセージを@mentioningしない場合、ボットはメッセージを受け取りません。
 
@@ -35,7 +35,7 @@ Microsoft Teams ボットをチームまたはグループ チャットにイン
 
 ## <a name="design-guidelines"></a>デザインのガイドライン
 
-個人用チャットとは異なり、グループ チャットやチャネルでは、ボットで簡単な概要を提供する必要があります。 以上のボット設計ガイドラインに従う必要があります。 Teamsでボットを設計する方法の詳細については、[チャネルとチャットでボットの会話を設計する方法](~/bots/design/bots.md)を参照してください。
+個人用チャットとは異なり、グループ チャットやチャネルでは、ボットで簡単な概要を提供する必要があります。 以上のボット設計ガイドラインに従う必要があります。 Teams でボットを設計する方法の詳細については、 [チャネルとチャットでボットの会話を設計する方法を](~/bots/design/bots.md)参照してください。
 
 これで、新しい会話スレッドを作成し、チャネル内のさまざまな会話を簡単に管理できます。
 
@@ -280,7 +280,7 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 ## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
 
-[ステップ バイ ステップ ガイド](../../../sbs-teams-conversation-bot.yml)に従って、会話型ボットTeams作成します。
+ステップ [バイ ステップ ガイド](../../../sbs-teams-conversation-bot.yml)に従って、Teams の会話型ボットを作成します。
 
 ## <a name="next-step"></a>次のステップ
 
@@ -289,4 +289,7 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 ## <a name="see-also"></a>関連項目
 
-[Teams のコンテキストを取得する](~/bots/how-to/get-teams-context.md)
+* [Teams のコンテキストを取得する](~/bots/how-to/get-teams-context.md)
+* [ユーザーに代わってプライベート チャネルを作成する](/graph/api/channel-post#example-2-create-private-channel-on-behalf-of-user)
+* [ボットをWeb チャット チャネルに接続する](/azure/bot-service/bot-service-channel-connect-webchat)
+

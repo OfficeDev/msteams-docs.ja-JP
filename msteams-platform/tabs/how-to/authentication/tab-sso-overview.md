@@ -4,14 +4,14 @@ description: Teams での SSO 認証の概要とタブで使用する方法
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams 認証タブ Microsoft Azure Active Directory (Azure AD) SSO アクセス トークン アプリ マニフェスト
-ms.openlocfilehash: 3214faec45001dd244115636e0964a56781837a8
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: fa68f181e53f433aea7d5cae3a1cb22615284c4b
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65888148"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503768"
 ---
-# <a name="enable-single-sign-on-in-a-tab-app"></a>タブ アプリでシングル サインオンを有効にする
+# <a name="enable-sso-for-tab-app"></a>タブ アプリの SSO を有効にする
 
 <!--Single sign-on (SSO) allows a user to access an application or a web service after signing-in only once. The app users never have to go through authentication again.-->
 
@@ -132,7 +132,7 @@ Teams を最適なパフォーマンスでご利用いただくために、最�
 - 現時点では、Teams の SSO では OAuth 2.0 トークンのみがサポートされています。 SAML トークンはサポートされていません。
 - アプリごとに複数のドメインはサポートされていません。 詳細については、「 [LOB アプリ](tab-sso-register-aad.md#before-you-register-with-azure-ad)」を参照してください。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [Azure AD にタブ アプリケーションを登録する](tab-sso-register-aad.md)

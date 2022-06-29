@@ -4,20 +4,20 @@ description: コード スニペットを使用して Microsoft Teams Apps の�
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 11/01/2019
-ms.openlocfilehash: 35a61413ab9e9a672971ba6ce45b49f6dc645ab3
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: eea5c92f0f04cf09ba0dbcd92be638d3ae957901
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142354"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503460"
 ---
-# <a name="add-test-data-to-your-microsoft-365-test-tenant"></a>Microsoft 365 テスト テナントにテスト データを追加する
+# <a name="add-test-data-to-your-environment"></a>テスト データを環境に追加する
 
 Microsoft 365 開発者サブスクリプションを使用して、サンプル データを使用してMicrosoft Teams アプリをテストできます。
 
 ## <a name="prerequisites"></a>前提条件
 
-1. テスト テナントがない場合は、[Microsoft 365開発者プログラムに参加](/office/developer-program/office-365-developer-program)します。
+1. テスト テナントがない場合は、[Microsoft 365 開発者プログラムに参加](/office/developer-program/office-365-developer-program)します。
 2. [Microsoft 365 開発者サブスクリプションを設定する](/office/developer-program/office-365-developer-program-get-started)
 3. [サンプル データ パックを Microsoft 365 開発者サブスクリプションと共に使用して、Users コンテンツ パックをインストールします。](/office/developer-program/install-sample-packs)
 4. [Teams PowerShell モジュールをインストールします](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)。

@@ -5,14 +5,14 @@ description: このモジュールでは、受信 Webhook を Teams アプリに
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: a1cb8f3e686ad0e1ee956345095d07c97f7a137c
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 4b93e7118cbd9b22ef7022f19b9538fe156b59f6
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189902"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503495"
 ---
-# <a name="create-an-incoming-webhook"></a>受信 Webhook を作成する
+# <a name="create-incoming-webhooks"></a>受信 Webhook を作成する
 
 受信 Webhook を使用すると、外部アプリケーションからのコンテンツを Teams チャネル内で共有できるようになります。 Webhook は、追跡と通知を行うツールとして使用されます。 Webhook により、カード形式のメッセージを含む JSON ペイロードを送信するための一意の URL が提供されます。 カードは、1 つのトピックに関連するコンテンツとアクションを含むユーザー インターフェイス コンテナーです。 カードは、次の機能で使用できます。
 

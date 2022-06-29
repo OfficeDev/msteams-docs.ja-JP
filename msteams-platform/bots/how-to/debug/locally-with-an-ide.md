@@ -1,20 +1,20 @@
 ---
 title: ボットをローカルでテストしてデバッグする
 author: surbhigupta
-description: サイドローディングなどを使用して、Teams環境内の IDE を使用してボットをローカルでテストしてデバッグする方法について説明します
+description: サイドローディングなどを使用して Teams 環境内の IDE を使用してボットをローカルでテストしてデバッグする方法について説明します
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: c0fae3ccaf82eaf9e626a948959520d20dca3c01
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 3e1225991ad240f74e045a6941002b9eb7b5e81d
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150807"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503719"
 ---
-# <a name="test-and-debug-your-bot-locally"></a>ボットをローカルでテストしてデバッグする
+# <a name="test-and-debug-your-bot-locally-with-ide"></a>IDE を使用してボットをローカルでテストしてデバッグする
 
-ボットをテストするときは、ボットを実行するコンテキストと、Microsoft Teamsに固有のデータを必要とするボットに追加した可能性のある機能の両方を考慮する必要があります。 ボットをテストするために選択したメソッドが、その機能と一致していることを確認してください。
+ボットをテストするときは、ボットを実行するコンテキストと、Microsoft Teams に固有のデータを必要とするボットに追加した可能性のある機能の両方を考慮する必要があります。 ボットをテストするために選択したメソッドが、その機能と一致していることを確認してください。
 
 ## <a name="test-by-uploading-to-teams"></a>Teams にアップロードしてテストする
 
@@ -44,7 +44,7 @@ ngrok http <port> --host-header=localhost:<port>
 
 ## <a name="test-your-bot-without-uploading-to-teams"></a>Teams にアップロードせずにボットをテストする
 
-場合によっては、Teams でアプリとしてボットをインストールせずにボットをテストする必要があります。 ボットのテストには 2 つの方法があります。 ボットをアプリとしてインストールせずにテストすると、ボットが使用可能で応答していることを確認するのに役立ちます。 ただし、ボットに追加したMicrosoft Teams機能の完全な幅をテストすることはできません。 ボットを完全にテストする場合は、[アップロードによるテスト](#test-by-uploading-to-teams)を参照してください。
+場合によっては、Teams でアプリとしてボットをインストールせずにボットをテストする必要があります。 ボットのテストには 2 つの方法があります。 ボットをアプリとしてインストールせずにテストすると、ボットが使用可能で応答していることを確認するのに役立ちます。 ただし、ボットに追加した Microsoft Teams の機能の完全な幅をテストすることはできません。 ボットを完全にテストする場合は、[アップロードによるテスト](#test-by-uploading-to-teams)を参照してください。
 
 ### <a name="use-the-bot-emulator"></a>ボット エミュレーターを使用する
 
@@ -57,11 +57,11 @@ Bot Framework Emulator は、ボット開発者がローカルまたはリモー
 > [!Important]
 > ID を使用したボットとの会話は、テストのみを目的としています。 ボットに追加した Teams 固有の機能は動作しません。
 
-ID を使用してボットとの会話を開始します。 これらの方法のいずれかを通じてボットを追加すると、チャネル会話ではアドレス指定できず、タブやメッセージ拡張機能などの他のTeamsアプリ機能を利用することはできません。 次のいずれかの方法で会話を開始します。
+ID を使用してボットとの会話を開始します。 これらの方法のいずれかを通じてボットを追加すると、チャネル会話ではアドレス指定できず、タブやメッセージ拡張機能などの他の Teams アプリ機能を利用することはできません。 次のいずれかの方法で会話を開始します。
 
-* ボットの [[ボット ダッシュボード]](https://dev.botframework.com/bots) ページの **[チャネル]** で、**[Microsoft Teams に追加]** を選択します。 Teamsボットとの個人用チャットを開始します。
+* ボットの [[ボット ダッシュボード]](https://dev.botframework.com/bots) ページの **[チャネル]** で、**[Microsoft Teams に追加]** を選択します。 Teams によって、ボットとの個人用チャットが開始されます。
 
-* Teams内からボットのアプリ ID を直接参照します。
+* Teams 内からボットのアプリ ID を直接参照します。
    1. ボットの [[ボット ダッシュボード]](https://dev.botframework.com/bots) ページの **[詳細]** で、ボットの **Microsoft App ID** をコピーします。
   
       ![ボットの AppID を取得する](~/assets/images/bots_appid_botframework.png)
@@ -73,10 +73,10 @@ ID を使用してボットとの会話を開始します。 これらの方法�
       アプリ ID はボット名で解決する必要があります。
 
    3. ボットを選択し、メッセージを送信して会話を開始します。
-      または、Teamsの左上にある検索ボックスにボットのアプリ ID を貼り付けることができます。 検索結果ページで、**[ユーザー]** タブに移動してボットを表示し、チャットを開始します。
+      または、Teams の左上にある検索ボックスにボットのアプリ ID を貼り付けることができます。 検索結果ページで、**[ユーザー]** タブに移動してボットを表示し、チャットを開始します。
 
 > [!Note]
-> ボットのアプリ ID を参照するTeamsについては、[アプリのサイドローディングを](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)有効にします。
+> Teams でボットのアプリ ID を参照するには、 [アプリのサイドローディングを](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading)有効にします。
 
 ボットは、`channelData` オブジェクト内のチーム情報がなくても、チームに追加されたボットと同じように `conversationUpdate` イベントを受け取ります。
 

@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 7e17d4b07454013479936dc6e721cd1e2354b3ba
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: cd28dc6be82b37223268d526c9673c0545f0bca9
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143593"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485623"
 ---
 # <a name="designing-your-microsoft-teams-bot"></a>Microsoft Teams のボットをデザインする
 
@@ -190,7 +190,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 ### <a name="extract-intent-and-data-from-messages"></a>メッセージから意図やデータを抽出
 
-メッセージやクエリに応じて、相手がボットに何を求めているかをキャプチャする、意図の認識を目指してボットをデザインします。 意図は、メッセージやクエリを、アクションの影響を受ける 1 つ以上のデータ オブジェクトのある単一のアクションとして分類します。 
+メッセージやクエリに応じて、相手がボットに何を求めているかをキャプチャする、意図の認識を目指してボットをデザインします。 意図は、メッセージやクエリを、アクションの影響を受ける 1 つ以上のデータ オブジェクトのある単一のアクションとして分類します。
 
 次の例は、ボットに送信されるメッセージに含まれるユーザーの意図とデータの概要です。
 

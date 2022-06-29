@@ -5,12 +5,12 @@ description: このモジュールでは、チャネル タブの会話サブエ
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: medium
-ms.openlocfilehash: f982c49c645a59f25182b7635839ece723c71ef3
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 56fa54f1a8aa9dce9ba049ae300099c0c67ae263
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142081"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485671"
 ---
 # <a name="create-conversational-tabs"></a>会話タブを作成する
 
@@ -20,7 +20,7 @@ ms.locfileid: "66142081"
 
 ## <a name="prerequisites"></a>前提条件
 
-会話のサブエンティティをサポートするには、タブ Web アプリケーションでバックエンド データベース内のサブエンティティ↔会話間のマッピングを格納する機能が必要です。 これは`conversationId`提供されていますが、ユーザーが会話を続行するには、それを`conversationId`保存してTeamsに返す必要があります。
+会話のサブエンティティをサポートするには、タブ Web アプリケーションでバックエンド データベース内のサブエンティティ↔会話間のマッピングを格納する機能が必要です。 これは `conversationId` 提供されていますが、ユーザーが会話を続行するには、それを `conversationId` 保存して Teams に返す必要があります。
 
 ## <a name="start-a-new-conversation"></a>新しい会話を開始する
 
@@ -47,7 +47,7 @@ microsoftTeams.conversations.openConversation({“subEntityId”:”task-1”, �
 
 次の図は、会話パネルを示しています。
 
-![Conversational サブエンティティ - 会話を開始する](~/assets/images/tabs/conversational-subentities/start-conversation.png)
+:::image type="content" source="../../assets/images/tabs/conversational-subentities/start-conversation.png" alt-text="会話を開始する":::
 
 ユーザーが会話を開始する場合は、そのイベントのコールバックをリッスンして **conversationId** を取得して保存することが重要です。
 
@@ -65,7 +65,7 @@ microsoftTeams.conversations.onStartConversation = (conversationResponse) => {
 
 次の図は、適切な会話を含む会話パネルを示しています。
 
-![Conversational サブエンティティ - 会話を続行する](~/assets/images/tabs/conversational-subentities/continue-conversation.png)
+:::image type="content" source="../../assets/images/tabs/conversational-subentities/continue-conversation.png" alt-text="会話を続行する":::
 
 ## <a name="enhance-a-conversation"></a>会話を強化する
 
@@ -93,7 +93,7 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
 
 | サンプルの名前 | 説明 | C# |Node.js|
 |-------------|-------------|------|----|
-|[会話の作成] タブ| 会話の作成タブをデモンストレーションするためのタブ サンプル アプリをMicrosoft Teamsします。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
+|[会話の作成] タブ| 会話の作成タブをデモンストレーションするための Microsoft Teams タブ サンプル アプリ。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 
 ## <a name="next-step"></a>次の手順
 

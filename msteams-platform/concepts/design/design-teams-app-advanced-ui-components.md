@@ -1,24 +1,24 @@
 ---
 title: 高度な UI コンポーネントを使用してアプリを設計する
 author: heath-hamilton
-description: 階層リンク、通知バー、ステージ ビューなどのTeams UI コンポーネントと関連するユース ケースについて説明します。
+description: 階層リンク、通知バー、ステージ ビューなどの Teams UI コンポーネントと関連するユース ケースについて説明します。
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 145b5adbefcd1ccd5bc90007700cf4851c96b26b
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 30d429bf927b3cb9422fc4f3ea238ce9eceae49e
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143425"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485725"
 ---
-# <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>高度な UI コンポーネントを使用したMicrosoft Teams アプリの設計
+# <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>高度な UI コンポーネントを使用した Microsoft Teams アプリの設計
 
-次のコンポーネントは、ナビゲーションなどの一般的なTeams設計状況に使用できる[基本的な UI コンポーネント](~/concepts/design/design-teams-app-basic-ui-components.md)の組み合わせです。
+次のコンポーネントは、ナビゲーションなどの Teams の一般的な設計状況に使用できる [基本的な UI コンポーネント](~/concepts/design/design-teams-app-basic-ui-components.md) の組み合わせです。
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-<a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a> に基づいて、Microsoft Teams UI キットには、Teams アプリを構築するために特別に設計されたコンポーネントとパターンが含まれています。 UI キットでは、ここに示されているコンポーネントを直接デザインに取り込んで挿入し、各コンポーネントの使用方法の例をさらに確認できます。
+<a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a> に基づいて、Microsoft Teams UI Kit には、Teams アプリを構築するために特別に設計されたコンポーネントとパターンが含まれています。 UI キットでは、ここに示されているコンポーネントを直接デザインに取り込んで挿入し、各コンポーネントの使用方法の例をさらに確認できます。
 
 > [!div class="nextstepaction"]
 > [Microsoft Teams UI Kit (Figma) を入手する](https://www.figma.com/community/file/916836509871353159)
@@ -42,7 +42,7 @@ ms.locfileid: "66143425"
 
 ## <a name="left-nav"></a>左ナビゲーション
 
-左側のナビゲーションを使用して、Teams タブ内の複数のページを参照します。次の例では、左側のナビゲーションはチャネル リストとタブ コンテンツの間にあります。
+左側のナビゲーションを使用して、[Teams] タブ内の複数のページを参照します。次の例では、左側のナビゲーションはチャネル リストとタブ コンテンツの間にあります。
 
 ### <a name="top-use-cases"></a>上位のユース ケース
 
@@ -65,7 +65,7 @@ Fluent UI [アラート](https://fluentsite.z22.web.core.windows.net/0.59.0/comp
 
 ### <a name="top-use-cases"></a>上位のユース ケース
 
-* 重大なメッセージ、エラー、および警告
+* 重大なメッセージ、エラー、および警告。
 * 成功メッセージ
 * 情報メッセージまたはプロモーション メッセージ
 
@@ -79,13 +79,13 @@ Fluent UI [アラート](https://fluentsite.z22.web.core.windows.net/0.59.0/comp
 
 ## <a name="stage-view"></a>ステージ ビュー
 
-ステージ ビューを使用すると、ユーザーは、コンテキストを切り替えることなく、Teamsの大きな画面にコンテンツ (画像、ファイル、Web サイトなど) を表示できます。 このコンポーネントは、主にコンテンツを表示するためのコンポーネントです。 複雑な対話には使用しないでください。
+ステージ ビューを使用すると、ユーザーはコンテキストを切り替えずに Teams の大きな画面にコンテンツ (画像、ファイル、Web サイトなど) を表示できます。 このコンポーネントは、主にコンテンツを表示するためのコンポーネントです。 複雑な対話には使用しないでください。
 
 [ステージ ビュー](~/tabs/tabs-link-unfurling.md)を実装する方法について説明します。
 
 ### <a name="top-use-cases"></a>上位のユース ケース
 
-* 別のアプリやブラウザーの代わりに、Teams内の大きなサーフェスにコンテンツを表示する
+* 別のアプリやブラウザーの代わりに、Teams 内の大きな画面にコンテンツを表示します。
 * スポットライト メディアまたはその他のリッチ コンテンツ
 
 ### <a name="mobile"></a>Mobile

@@ -1,17 +1,17 @@
 ---
 title: パブリック開発者プレビュー マニフェスト スキーマ リファレンス
-description: Microsoft Teamsでサポートされているすべてのコンポーネントのサンプル マニフェスト ファイルと説明について説明します。
+description: Microsoft Teams でサポートされているすべてのコンポーネントのサンプル マニフェスト ファイルと説明について説明します。
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: ec5d02c5804f3b2de1398936666577c2a31bc2d4
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 1c42b405506aff9ae570d6792db4ff8f73fb9255
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189871"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503474"
 ---
-# <a name="reference-public-developer-preview-manifest-schema-for-microsoft-teams"></a>参照: Microsoft Teams のパブリック開発者プレビュー マニフェスト スキーマ
+# <a name="public-developer-preview-manifest-schema-for-teams"></a>Teams のパブリック開発者プレビュー マニフェスト スキーマ
 
 開発者プレビューを有効にする方法については、「[Microsoft Teams のパブリック開発者プレビュー](~/resources/dev-preview/developer-preview-intro.md)」を参照してください。
 
@@ -477,7 +477,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
 
-メッセージ拡張機能は、1 つ以上のコマンドを宣言する必要があります。 各コマンドは、UI ベースのエントリ ポイントからの潜在的な相互作用としてTeamsに表示されます。 最大 10 個のコマンドがあります。
+メッセージ拡張機能は、1 つ以上のコマンドを宣言する必要があります。 各コマンドは、UI ベースのエントリ ポイントからの潜在的な相互作用として Teams に表示されます。 最大 10 個のコマンドがあります。
 
 各コマンド 項目は、次の構造を持つオブジェクトです。
 
@@ -547,7 +547,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 オプション: 
 
-ユーザーが Azure AD アプリにシームレスにサインインできるように、Microsoft Azure Active Directory (Azure AD) アプリ ID とGraph情報を指定します。
+ユーザーが Azure AD アプリにシームレスにサインインできるように、Microsoft Azure Active Directory (Azure AD) アプリ ID と Graph 情報を指定します。
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
@@ -779,7 +779,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
     |---|---|
     |`InAppPurchase.Allow.User`|サインインしているユーザーの代わりに、アプリでユーザー マーケットプレース オファーを表示し、アプリ内でユーザーの購入を完了できるようにします。|
 
-* **Teamsライブ共有に対するリソース固有のアクセス許可**
+* **Teams ライブ共有のリソース固有のアクセス許可**
 
    |名前| 説明 |
    | ----- | ----- |

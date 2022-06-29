@@ -5,14 +5,14 @@ description: このモジュールでは、タブとタブのコンテンツと�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 646e7f1a1177330fdb4db64b7e6cd1bde0df5db5
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 21cc2559b7a6751981156deac1d2373f7ce0dfbe
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142207"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503355"
 ---
-# <a name="create-a-content-page-for-your-tab"></a>タブのコンテンツ ページを作成する
+# <a name="create-a-content-page"></a>コンテンツ ページを作成する
 
 コンテンツ ページは、Teams クライアント内でレンダリングされる Web ページです。これは次の一部です。
 
@@ -28,7 +28,7 @@ ms.locfileid: "66142207"
 
 タブの全体的な目的は、実用的な価値と明確な目的を持つ意味のある魅力的なコンテンツへのアクセスを提供することです。 
 
-タブデザインをクリーンにし、ナビゲーションを直感的に操作し、コンテンツをイマーシブなものにすることに集中する必要があります。詳細については、[タブデザインのガイドライン](~/tabs/design/tabs.md)と[ストアの検証ガイドラインMicrosoft Teams](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)参照してください。
+タブデザインをクリーンにし、ナビゲーションを直感的に操作し、コンテンツをイマーシブなものにすることに集中する必要があります。詳細については、 [タブデザインのガイドライン](~/tabs/design/tabs.md) と [Microsoft Teams ストアの検証ガイドライン](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)を参照してください。
 
 ## <a name="integrate-your-code-with-teams"></a>コードを Teams と統合する
 
@@ -88,7 +88,7 @@ SDK を使用して Teams と対話し、ディープ リンクを作成し、�
 
 ### <a name="deep-links"></a>ディープ リンク
 
-Teams のエンティティへのディープ リンクを作成できます。 これらは、タブ内のコンテンツと情報に移動するリンクを作成するために使用されます。詳細については、「[Teamsのコンテンツと機能へのディープ リンクを作成する](~/concepts/build-and-test/deep-links.md)」を参照してください。
+Teams のエンティティへのディープ リンクを作成できます。 これらは、タブ内のコンテンツと情報に移動するリンクを作成するために使用されます。詳細については、「 [Teams でコンテンツと機能へのディープ リンクを作成する](~/concepts/build-and-test/deep-links.md)」を参照してください。
 
 ### <a name="task-modules"></a>タスク モジュール
 
@@ -115,9 +115,9 @@ Teams のエンティティへのディープ リンクを作成できます。 
 
 1. マニフェストに `"showLoadingIndicator": true` を追加します。
 1. `app.initialize();` を呼び出します。
-1. **必須** ステップとして、`app.notifySuccess()` を呼び出して、アプリが正常に読み込まれたことを Teams に通知します。 次に、読み込みインジケーター Teams非表示にします (該当する場合)。 30 秒以内に呼び出されない場合`notifySuccess`、Teamsはアプリがタイムアウトしたことを前提とし、再試行オプションを使用してエラー画面を表示します。
+1. **必須** ステップとして、`app.notifySuccess()` を呼び出して、アプリが正常に読み込まれたことを Teams に通知します。 その後、Teams は読み込みインジケーター (該当する場合) を非表示にします。 30 秒以内に呼び出されない場合 `notifySuccess`  、Teams はアプリがタイムアウトしたと想定し、再試行オプションを使用してエラー画面を表示します。
 1. **必要に応じて**、画面に印刷する準備が整い、アプリケーションの残りのコンテンツを遅延読み込む場合は、読み込みインジケーターを呼び出 `app.notifyAppLoaded();`して手動で非表示にすることができます。
-1. アプリケーションが読み込まれない場合は、呼び出`app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});`してエラーについてTeamsに知らせ、必要に応じてエラー メッセージを入力できます。 エラー画面がユーザーに表示されます。 次のコードは、アプリケーションの読み込みに失敗した場合に示すことができる理由を定義する列挙体を示しています。
+1. アプリケーションが読み込まれない場合は、Teams に障害について知らせ、必要に応じてエラー メッセージを提供するように呼び出 `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` すことができます。 エラー画面がユーザーに表示されます。 次のコードは、アプリケーションの読み込みに失敗した場合に示すことができる理由を定義する列挙体を示しています。
 
     ```typescript
     /* List of failure reasons */

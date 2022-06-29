@@ -5,14 +5,14 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: df9f38be8202f9b982292847a7cfcc982e72fcb5
-ms.sourcegitcommit: 12510f34b00bfdd0b0e92d35c8dbe6ea1f6f0be2
+ms.openlocfilehash: 12bd5a6e2c72c1095fbb7f6f113cb9126b247289
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2022
-ms.locfileid: "66032817"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503957"
 ---
-# <a name="upload-your-app-in-microsoft-teams"></a>Microsoft Teams でアプリをアップロードする
+# <a name="upload-your-app-in-teams"></a>Teams でアプリをアップロードする
 
 組織または Teams ストアに公開しなくても、Microsoft Teams アプリを脇で発行できます。これは、以下のシナリオで有効です:
 
@@ -71,13 +71,13 @@ ms.locfileid: "66032817"
 1. **[アプリ]** に移動し、Teams で **[アプリを管理]** を選択して、すべてのチャネルにインストールされているアプリを表示するか、リスト形式で個人使用します。
 
     :::image type="content" source="~/assets/images/publish-app/manage-apps-list.png" alt-text="チームのアプリ一覧にアクセスする" border="true":::
-    
+
 1. アプリのドロップダウンを選択して、アプリがインストールされているすべてのスコープを表示します。
-    
+
     :::image type="content" source="~/assets/images/publish-app/app-scopes.png" alt-text="チームのアプリ スコープにアクセスする" border="true":::
-    
+
 1. アプリのスコープを選択して、チャネルまたは個人用ビューでアプリに移動します。 スコープの一覧は、個人スコープとチーム スコープのみで構成されています。 グループ チャット スコープにインストールされているアプリは、現在このビューに表示されていません。
-    
+
 Teams には、アプリを開く方法がいくつか用意されています。 詳細については、「 [Teamsでアプリにアクセスする](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a)」を参照してください。
 
 ### <a name="update-your-app"></a>アプリを更新する
@@ -92,7 +92,7 @@ Teams には、アプリを開く方法がいくつか用意されています�
 
 1. **[更新の表示]** を選択すると、更新オプションのあるウィンドウが表示されます。
 1. アプリを更新するには、**[更新]** ボタンを選択します。
-    
+
      :::image type="content" source="~/assets/images/publish-app/update-window.png" alt-text="アプリの管理で Teams アプリを更新する" border="true":::
 
      :::image type="content" source="~/assets/images/publish-app/updated-app.png" alt-text="更新されたアプリ" border="true":::
@@ -103,11 +103,11 @@ Teams からアプリを削除するには、次の手順に従います。
 
 1. **[アプリの管理]** でアプリを見つけます。
 1. インストールされたアプリのスコープで、&nbsp;:::image type="content" source="~/assets/images/publish-app/bin-icon.png" alt-text="[Teams のアプリを削除]" border="false":::&nbsp; を選択します。
-        
+
     :::image type="content" source="~/assets/images/publish-app/uninstall-from-channel.png" alt-text="チャネル内のアプリを削除する" border="true":::
 
 1. アプリを削除するには、**[削除]** を選択します。
-    
+
     :::image type="content" source="~/assets/images/publish-app/remove-app-teams.png" alt-text="Teams からアプリを削除する" border="true":::
 
 > [!NOTE]

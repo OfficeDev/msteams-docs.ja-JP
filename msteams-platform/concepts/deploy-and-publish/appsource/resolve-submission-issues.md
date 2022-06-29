@@ -1,26 +1,26 @@
 ---
 title: ストアの申請に関する問題を解決する
-description: この記事では、Microsoft Teams ストアの申請に関する問題のトラブルシューティングと修正を行う方法について説明します。
+description: この記事では、Microsoft Teams ストアの申請に関する問題のトラブルシューティングと修正方法について説明します。
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 51427f2023ba566391a3d0b544d74e5658464a7c
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 5faf2d3622e88febe9522f5e2df6716ec2680cca
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123210"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503873"
 ---
-# <a name="resolve-issues-if-your-microsoft-teams-store-submission-fails"></a>Microsoft Teams ストアの送信に失敗した場合に問題を解決する
+# <a name="resolve-issues-if-your-teams-store-submission-fails"></a>Teams ストアの申請が失敗した場合に問題を解決する
 
-Microsoft Teams ストアに発行されたアプリは、[Teams ストアの検証ガイドライン](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)と[商用マーケットプレース ポリシー](/legal/marketplace/certification-policies)を満たしている必要があります。
+Microsoft Teams ストアに発行されたアプリは、 [Teams ストアの検証ガイドライン](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) と [商用マーケットプレース ポリシー](/legal/marketplace/certification-policies)を満たしている必要があります。
 
 ストアの申請が失敗した場合、Microsoft は、アプリの準拠と公開を支援するコンシェルジェ検証サービスを提供します。
 
 ## <a name="get-help-directly-from-microsoft"></a>Microsoft から直接ヘルプを受ける
 
-Microsoft によって提供されるコンシェルジェ検証サービスは、開発者がアプリをTeams ストアに公開するのに役立ちます。 このサービスの一環として、Microsoft は、アプリが説明どおりに動作するかどうか、すべての適切なメタデータが含まれているかどうかを確認し、ユーザーに価値を提供します。
+Microsoft によって提供されるコンシェルジェ検証サービスは、開発者が Teams ストアにアプリを公開するのに役立ちます。 このサービスの一環として、Microsoft は、アプリが説明どおりに動作するかどうか、すべての適切なメタデータが含まれているかどうかを確認し、ユーザーに価値を提供します。
 
 アプリの提出に失敗した場合、Microsoft は提出から 24 時間以内に推奨事項を含むレビュー レポートを送信します。
 
@@ -30,7 +30,7 @@ Microsoft によって提供されるコンシェルジェ検証サービスは�
 
 * 各問題に対応する [検証ガイドライン](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) 。
 * 各問題を再現する方法に関する手順。
-* 公開されている開発者向けドキュメントに基づいて、各問題を解決するためのおすすめ。
+* 公開されている開発者向けドキュメントに基づいて、各問題を解決するための推奨事項。
 
 通常、問題を解決し、アプリを再送信するプロセスは次のようになります。
 
@@ -40,7 +40,7 @@ Microsoft によって提供されるコンシェルジェ検証サービスは�
    * アプリのテスト ノート (元の申請にこれらを含めなかった場合):
       * 少なくとも 2 つのアカウント (管理者と管理者以外のアカウント) の資格情報。
       * アプリを構成し、その機能をテストする手順。
-      * Teamsで使用されているアプリを示すビデオ。
+      * Teams で使用されているアプリを示すビデオ。
 1. Microsoft コンシェルジェ検証チームは、更新されたアプリを完全にテストします。
 1. 次のいずれかの操作を行います。
    * アプリに問題がなければ、パートナー センターにアプリを再送信します。
@@ -71,8 +71,8 @@ Microsoft によって提供されるコンシェルジェ検証サービスは�
 
 次の操作を実行すると、送信が成功する可能性があります。
 
-1. [Teams設計ガイドライン](~/concepts/design/design-teams-app-overview.md)に基づいてアプリを開発します。
-1. アプリがTeams[ストアの検証ガイドライン](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)と [Microsoft コマーシャル マーケットプレース認定ポリシー](/legal/marketplace/certification-policies)に準拠していることを確認します。
+1. [Teams の設計ガイドライン](~/concepts/design/design-teams-app-overview.md)に基づいてアプリを開発します。
+1. アプリが [Teams ストアの検証ガイドライン](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) と [Microsoft コマーシャル マーケットプレース認定ポリシー](/legal/marketplace/certification-policies)に準拠していることを確認します。
 1. [Microsoft Teams アプリ検証ツール](https://dev.teams.microsoft.com/appvalidation.html)を使用してアプリ パッケージをテストします。
 1. [Teams ストアの申請を準備します](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)。
 
@@ -102,7 +102,7 @@ Microsoft によって提供されるコンシェルジェ検証サービスは�
 
 <details>
 
-<summary><b>アプリの発行が承認されたことを示すメールがパートナー センターから届きました。アプリがTeams ストアにないのはなぜですか?</b></summary>
+<summary><b>アプリの発行が承認されたことを示すメールがパートナー センターから届きました。Teams ストアにアプリがないのはなぜですか?</b></summary>
 
 アプリが承認されると、発行には通常、アプリの機能に応じて 1 ~ 2 営業日かかります。アプリが 2 営業日後に発行されていない場合は、 <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a> にお問い合わせください。
 

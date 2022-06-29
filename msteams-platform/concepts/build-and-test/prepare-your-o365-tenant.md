@@ -1,14 +1,14 @@
 ---
 title: Microsoft 365 テナントを準備する
-description: このモジュールでは、Microsoft 365でTeamsを開始し、開発環境を作成する方法について説明します
+description: このモジュールでは、Microsoft 365 で Teams を使用し、開発環境を作成する方法について説明します
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: 241040767c610692873e5a68bd215849a8cd26a0
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: b52a74056dac01d6a946bd8f0166080b75a5fab5
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144391"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484888"
 ---
 # <a name="prepare-your-microsoft-365-tenant"></a>Microsoft 365 テナントを準備する
 
@@ -68,4 +68,5 @@ Microsoft 365 のサブスクライバーは、次のいずれかのプランを
 
 ## <a name="see-also"></a>関連項目
 
-[Microsoft 365 テスト テナントにテスト データを追加する](~/concepts/build-and-test/test-data.md)
+* [Microsoft 365 テスト テナントにテスト データを追加する](~/concepts/build-and-test/test-data.md)
+* [Microsoft 365 Multi-Geo](/microsoft-365/enterprise/microsoft-365-multi-geo?view=o365-worldwide&preserve-view=true)

@@ -1,17 +1,18 @@
 ---
 title: ボットからファイルを送受信する
-description: 個人用、チャネル、グループのチャット スコープに対してGraph API を使用して、ボットを介してファイルを送受信する方法について説明します。
+description: 個人用スコープ、チャネル スコープ、グループチャット スコープの Graph API を使用して、ボットを通じてファイルを送受信する方法について説明します。 v3 Bot Framework SDK に基づくコード サンプルを使用して Teams ボット API を使用します。
+keywords: Teams ボット ファイル送信受信
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/20/2019
-ms.openlocfilehash: 96642885f6dd9581a5efdaba21249002282c5c9a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 5d7b83890947a77a477c67197557c92aa6e7b103
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143369"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503586"
 ---
-# <a name="send-and-receive-files-through-your-bot"></a>ボットを介してファイルを送受信する
+# <a name="send-and-receive-files-using-bots"></a>ボットを使用してファイルを送受信する
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
@@ -164,7 +165,7 @@ ms.locfileid: "66143369"
 
 ### <a name="notifying-the-user-about-an-uploaded-file"></a>アップロードされたファイルについてユーザーに通知する
 
-ユーザーの OneDrive にファイルをアップロードした後、上記のメカニズムを使用するか、OneDrive ユーザー委任 API を使用するかにかかわらず、ユーザーに確認メッセージを送信する必要があります。 このメッセージには、`FileCard`ユーザーが選択できる添付ファイルが含まれている必要があります。プレビュー、OneDriveで開く、またはローカルでダウンロードできます。
+ユーザーの OneDrive にファイルをアップロードした後、上記のメカニズムを使用するか、OneDrive ユーザー委任 API を使用するかにかかわらず、ユーザーに確認メッセージを送信する必要があります。 このメッセージには、 `FileCard` ユーザーが選択できる添付ファイルが含まれている必要があります。プレビュー、OneDrive で開く、またはローカルでダウンロードできます。
 
 ```json
 {
@@ -187,7 +188,7 @@ ms.locfileid: "66143369"
 | `uniqueId` | OneDrive/SharePoint ドライブ アイテム ID。 |
 | `fileType` | pdf や docx などのファイルの種類。 |
 
-### <a name="basic-example-in-c"></a>C# の基本的な例
+### <a name="basic-example-in-c"></a>C の基本的な例 #
 
 次のサンプルは、ボットのダイアログでファイルのアップロードを処理し、ファイルの同意要求を送信する方法を示しています。
 
@@ -266,3 +267,7 @@ private static Attachment CreateFileConsentAttachment()
     return att;
 }
 ```
+
+## <a name="see-also"></a>関連項目
+
+[Microsoft Graph でのファイルの作業](/graph/api/resources/onedrive)

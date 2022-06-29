@@ -1,23 +1,23 @@
 ---
-title: Teams ToolkitでアプリケーションAzure Active Directory管理する
+title: Teams Toolkit で Azure Active Directory アプリケーションを管理する
 author: zyxiaoyuer
-description: Teams ToolkitでのアプリケーションAzure Active Directory管理について説明します
+description: Teams Toolkit での Azure Active Directory アプリケーションの管理について説明します
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 9ffd4e4fd8f346f49d715f2537942d02cd4892d9
-ms.sourcegitcommit: d9025e959dcdd011ed4feca820dae7c5d1251b27
+ms.openlocfilehash: 1f71d57e32bd6fb24cf75cc6027937337f29f972
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65755938"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503789"
 ---
-# <a name="azure-ad-manifest"></a>Azure AD マニフェスト
+# <a name="customize-azure-ad-manifest"></a>Azure AD マニフェストをカスタマイズする
 
 [Azure Active Directory (Azure AD) マニフェスト](/azure/active-directory/develop/reference-app-manifest)には、Microsoft ID プラットフォーム内の Azure AD アプリケーション オブジェクトのすべての属性の定義が含まれています。
 
-Teams Toolkit、Teams アプリケーション開発ライフサイクルの間にマニフェスト ファイルを信頼のソースとして使用して Azure AD アプリケーションを管理するようになりました。
+Teams Toolkit は、Teams アプリケーション開発ライフサイクル中にマニフェスト ファイルを信頼のソースとして使用して Azure AD アプリケーションを管理するようになりました。
 
 ## <a name="customize-azure-ad-manifest-template"></a>Azure AD マニフェスト テンプレートをカスタマイズする
 
@@ -39,7 +39,7 @@ Azure AD マニフェスト テンプレートをカスタマイズして、Azur
 
 ### <a name="customize-requiredresourceaccess"></a>requiredResourceAccess をカスタマイズする
 
-Teams アプリケーションで追加のアクセス許可を持つ API を呼び出すためにより多くのアクセス許可が必要な場合は、Azure AD マニフェスト テンプレートのプロパティを更新`requiredResourceAccess`する必要があります。 このプロパティの次の例を確認できます。
+Teams アプリケーションで追加のアクセス許可を持つ API を呼び出すより多くのアクセス許可が必要な場合は、Azure AD マニフェスト テンプレートのプロパティを更新 `requiredResourceAccess` する必要があります。 このプロパティの次の例を確認できます。
 
 ```JSON
 
@@ -181,7 +181,7 @@ Azure AD マニフェスト テンプレート ファイルの先頭には、プ
 
 ### <a name="required-resource-access-code-lens"></a>必要なリソース アクセス コード レンズ
 
-プロパティ内`requiredResourceAccess`の ID が UUID のみをサポートする`resourceAppId``resourceAccess`公式[の Azure AD マニフェスト スキーマ](/azure/active-directory/develop/reference-app-manifest)とは異なり、Teams Toolkitの Azure AD マニフェスト テンプレートでは、ユーザーが読み取り可能な文字列`Microsoft Graph`と`Office 365 SharePoint Online`アクセス許可もサポートされています。 UUID を入力すると、コード レンズはユーザーが読み取り可能な文字列を示し、それ以外の場合は UUID を示します。
+公式[の Azure AD マニフェスト スキーマ](/azure/active-directory/develop/reference-app-manifest)`resourceAppId`とは異なり、プロパティ内の ID は `requiredResourceAccess` UUID のみをサポートします`resourceAccess`。Teams Toolkit の Azure AD マニフェスト テンプレートでは、ユーザーが読み取り可能な文字列`Microsoft Graph`と`Office 365 SharePoint Online`アクセス許可もサポートされています。 UUID を入力すると、コード レンズはユーザーが読み取り可能な文字列を示し、それ以外の場合は UUID を示します。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add resource.png" alt-text="Addresource":::
 
@@ -232,7 +232,7 @@ Azure AD マニフェスト テンプレート ファイルの先頭には、プ
 
 4. 検索結果から Azure AD アプリケーションを選択して、詳細情報を表示します。
   
-5. Azure AD アプリ情報ページで、メニューを選択 `Manifest` して、このアプリケーションのマニフェストを表示します。 マニフェストのスキーマは、ファイル内 `aad.template.json` のスキーマと同じです。 マニフェストの詳細については、[アプリケーション マニフェストAzure Active Directory](/azure/active-directory/develop/reference-app-manifest)参照してください。
+5. Azure AD アプリ情報ページで、メニューを選択 `Manifest` して、このアプリケーションのマニフェストを表示します。 マニフェストのスキーマは、ファイル内 `aad.template.json` のスキーマと同じです。 マニフェストの詳細については、「 [Azure Active Directory アプリケーション マニフェスト」を](/azure/active-directory/develop/reference-app-manifest)参照してください。
   
      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view3.png" alt-text="view3":::
 
@@ -240,27 +240,27 @@ Azure AD マニフェスト テンプレート ファイルの先頭には、プ
   
 ## <a name="use-an-existing-azure-ad-application"></a>既存の Azure AD アプリケーションを使用する
 
-Teams プロジェクトには既存の Azure AD アプリケーションを使用できます。詳細については、「Teams [アプリケーションに既存の Azure AD アプリケーションを使用する](https://github.com/OfficeDev/TeamsFx/wiki/Customize-provision-behaviors#use-an-existing-aad-app-for-your-teams-app)」を参照してください。
+Teams プロジェクトに既存の Azure AD アプリケーションを使用できます。詳細については、「Teams [アプリケーションに既存の Azure AD アプリケーションを使用する](https://github.com/OfficeDev/TeamsFx/wiki/Customize-provision-behaviors#use-an-existing-aad-app-for-your-teams-app)」を参照してください。
 
 ## <a name="azure-ad-application-in-teams-application-development-lifecycle"></a>Teams アプリケーション開発ライフサイクルにおける Azure AD アプリケーション
 
-Teams アプリケーション開発ライフサイクルのさまざまな段階で Azure AD アプリケーションと対話する必要があります。
+Teams アプリケーション開発ライフサイクルのさまざまな段階で、Azure AD アプリケーションと対話する必要があります。
 
-1. **Projectを作成するには**
+1. **プロジェクトを作成するには**
 
-      既定で SSO のサポートが付属するTeams Toolkitを使用してプロジェクトを作成できます (例:`SSO-enabled tab` 新しいアプリを作成する方法の詳細については、「[Teams Toolkitを使用した新しいTeams アプリケーションの作成](create-new-project.md)」を参照してください。 Azure AD マニフェスト ファイルは自動的に作成 `templates\appPackage\aad.template.json`されます。 Teams Toolkitローカル開発中またはクラウドへのアプリケーションの移動中に、Azure AD アプリケーションを作成または更新します。
+      既定で SSO のサポートが付属する Teams Toolkit を使用してプロジェクトを作成できます (例:`SSO-enabled tab` 新しいアプリを作成する方法の詳細については、「 [Teams Toolkit を使用して新しい Teams アプリケーションを作成する」を](create-new-project.md)参照してください。 Azure AD マニフェスト ファイルは自動的に作成 `templates\appPackage\aad.template.json`されます。 Teams Toolkit は、ローカル開発中またはクラウドへのアプリケーションの移動中に、Azure AD アプリケーションを作成または更新します。
 
 2. **ボットまたはタブに SSO を追加するには**
 
-      SSO が組み込まれずにTeams アプリケーションを作成した後、Teams Toolkitプロジェクトの SSO を追加するのに段階的に役立ちます。 その結果、Azure AD マニフェスト ファイルが自動的に作成されます `templates\appPackage\aad.template.json`。
+      SSO が組み込まれずに Teams アプリケーションを作成すると、Teams Toolkit はプロジェクトの SSO を追加するのに段階的に役立ちます。 その結果、Azure AD マニフェスト ファイルが自動的に作成されます `templates\appPackage\aad.template.json`。
 
-      Teams Toolkitは、次のローカル デバッグ セッション中、またはアプリケーションをクラウドに移動するときに、Azure AD アプリケーションを作成または更新します。
+      Teams Toolkit は、次のローカル デバッグ セッション中、またはアプリケーションをクラウドに移動するときに、Azure AD アプリケーションを作成または更新します。
 
 3. **ローカルでビルドするには**
 
-    Teams Toolkitは、ローカル開発中に次の関数を実行します (F5 と呼ばれます)。
+    Teams Toolkit は、ローカル開発中に次の機能を実行します (F5 と呼ばれます)。
 
-    * ファイルを `state.local.json` 読み取って、既存の Azure AD アプリケーションを見つけます。 Azure AD アプリケーションが既に存在する場合は、既存の Azure AD アプリケーションを再利用Teams Toolkit。それ以外の場合は、ファイルを使用して新しいアプリケーションを作成する`aad.template.json`必要があります。
+    * ファイルを `state.local.json` 読み取って、既存の Azure AD アプリケーションを見つけます。 Azure AD アプリケーションが既に存在する場合、Teams Toolkit は既存の Azure AD アプリケーションを再利用します。それ以外の場合は、ファイルを使用して新しいアプリケーションを作成する `aad.template.json` 必要があります。
 
     * マニフェスト ファイルを使用した新しい Azure AD アプリケーションの作成時に、追加のコンテキスト (ローカル デバッグ エンドポイントを必要とする replyUrls プロパティなど) を必要とするマニフェスト ファイル内の一部のプロパティを最初に無視します。
 
@@ -270,9 +270,9 @@ Teams アプリケーション開発ライフサイクルのさまざまな段�
 
 4. **クラウド リソースをプロビジョニングするには**
 
-      クラウド リソースをプロビジョニングし、アプリケーションをクラウドに移行するときにアプリケーションをデプロイする必要があります。 ローカル開発などの段階で、Teams Toolkitは次の作業を行います。
+      クラウド リソースをプロビジョニングし、アプリケーションをクラウドに移行するときにアプリケーションをデプロイする必要があります。 Teams Toolkit は、ローカル開発などの段階で次の作業を行います。
 
-      * ファイルを `state.{env}.json` 読み取って、既存の Azure AD アプリケーションを見つけます。 Azure AD アプリケーションが既に存在する場合は、既存の Azure AD アプリケーションを再利用Teams Toolkit。それ以外の場合は、ファイルを使用して新しいアプリケーションを作成する`aad.template.json`必要があります。
+      * ファイルを `state.{env}.json` 読み取って、既存の Azure AD アプリケーションを見つけます。 Azure AD アプリケーションが既に存在する場合、Teams Toolkit は既存の Azure AD アプリケーションを再利用します。それ以外の場合は、ファイルを使用して新しいアプリケーションを作成する `aad.template.json` 必要があります。
 
       * マニフェスト ファイルを使用した新しい Azure AD アプリケーションの作成時に、追加のコンテキストを必要とするマニフェスト ファイルの一部のプロパティ (replyUrls プロパティにはフロントエンドやボット エンドポイントが必要) を最初に無視します。
 
@@ -284,13 +284,13 @@ Teams アプリケーション開発ライフサイクルのさまざまな段�
 
     * リモート環境用に [Azure AD アプリケーションの変更をデプロイして、リモート環境用](#deploy-azure-ad-application-changes-for-remote-environment) に Azure AD アプリケーションの変更をデプロイする方法を確認できます。
 
-    * Teams Toolkitは、Azure AD マニフェスト テンプレート ファイルに従って Azure AD アプリケーションを更新します。
+    * Teams Toolkit は、Azure AD マニフェスト テンプレート ファイルに従って Azure AD アプリケーションを更新します。
 
 ## <a name="limitations"></a>制限事項
 
-1. Teams Toolkit拡張機能は、Azure AD マニフェスト スキーマに一覧表示されているすべてのプロパティをサポートしているわけではありません。
+1. Teams Toolkit 拡張機能では、Azure AD マニフェスト スキーマに一覧表示されているすべてのプロパティがサポートされているわけではありません。
   
-      次の表に、Teams Toolkit拡張機能でサポートされていないプロパティを示します。
+      次の表に、Teams Toolkit 拡張機能でサポートされていないプロパティを示します。
 
       |**サポートされていないプロパティ**|**理由**|
       |-----------|----------|
@@ -313,4 +313,4 @@ Teams アプリケーション開発ライフサイクルのさまざまな段�
 
 ## <a name="see-also"></a>関連項目
 
-* [Toolkitでのアプリ マニフェストのプレビューとカスタマイズ](TeamsFx-preview-and-customize-app-manifest.md)
+* [Toolkit でのアプリ マニフェストのプレビューとカスタマイズ](TeamsFx-preview-and-customize-app-manifest.md)

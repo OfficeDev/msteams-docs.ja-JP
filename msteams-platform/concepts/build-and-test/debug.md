@@ -1,16 +1,16 @@
 ---
 title: アプリをテストしてデバッグするためのセットアップを選択する
-description: このモジュールでは、ローカルおよびクラウドでホストされている環境でMicrosoft Teamsアプリをテストおよびデバッグするためのオプションについて説明します。
+description: このモジュールでは、ローカルおよびクラウドでホストされている環境で Microsoft Teams アプリをテストおよびデバッグするためのオプションについて説明します。
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 351f1c444c2a6c9467f8f9d697303a2bf1357600
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 04a3e26d11961f2e08600b54f4612fb8f2a10cee
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150653"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503887"
 ---
-# <a name="choose-a-setup-to-test-and-debug-your-microsoft-teams-app"></a>Microsoft Teams アプリをテストしてデバッグするためのセットアップを選択する
+# <a name="choose-a-test-setup-and-debug-your-teams-app"></a>テストセットアップを選択し、Teams アプリをデバッグする
 
 Microsoft Teams アプリには 1 つ以上の機能が含まれており、それらを実行またはホストする方法は異なります。デバッグには、次のいずれかの方法を使用します。
 
@@ -28,7 +28,7 @@ Microsoft Teams アプリには 1 つ以上の機能が含まれており、そ�
 ## <a name="purely-local"></a>ローカル専用
 
 > [!NOTE]
-> ボットをローカルで実行しても、Teams アプリの機能や、参加者一覧の呼び出しやその他のチャネル固有の機能などの Teams 固有のボット機能にはアクセスできません。 さらに、Teams で実行するときに機能しない可能性があるボット Emulatorの Bot Framework によって許可される機能もあります。
+> ボットをローカルで実行しても、Teams アプリの機能や、参加者一覧の呼び出しやその他のチャネル固有の機能などの Teams 固有のボット機能にはアクセスできません。 さらに、一部の機能は、Teams で実行するときに機能しない可能性がある Bot Emulator の Bot Framework によって許可されます。
 
 ボットは Bot Emulator 内で実行できます。 これにより、ボットのコア ロジックの一部をテストし、メッセージの大まかなレイアウトを確認し、簡単なテストを実行できます。 手順は次のとおりです。
 
@@ -40,7 +40,7 @@ Microsoft Teams アプリには 1 つ以上の機能が含まれており、そ�
 
 ## <a name="locally-hosted"></a>ローカルにホストされている場合
 
-Teamsは完全にクラウドベースの製品であるため、アクセスするすべてのサービスを HTTPS エンドポイントを使用してパブリックに利用できるようにする必要があります。 そのため、アプリを Teams 内で動作させるには、任意のクラウドにコードを発行するか、ローカルで実行されているインスタンスに外部からアクセスできるようにする必要があります。 後者はトンネリング ソフトウェアを使用して実行できます。
+Teams は完全にクラウドベースの製品であり、アクセスするすべてのサービスが HTTPS エンドポイントを使用してパブリックに利用できるようにする必要があります。 そのため、アプリを Teams 内で動作させるには、任意のクラウドにコードを発行するか、ローカルで実行されているインスタンスに外部からアクセスできるようにする必要があります。 後者はトンネリング ソフトウェアを使用して実行できます。
 
 任意のツールを使用できますが、[ngrok](https://ngrok.com/download) を使用することをお勧めします。これにより、コンピューターでローカルに開くポートの外部アドレス指定可能な URL が作成されます。
 
@@ -55,7 +55,7 @@ Teams アプリをローカルで実行する準備として ngrok を設定す�
 
 使用している機能に基づいてプロジェクトで ngrok を使用するには、コード、構成、manifest.json ファイル内のすべての URL 参照を置き換えて、この URL エンドポイントを使用する必要があります。
 
-Microsoft Bot Framework に登録されているボットの場合は、この新しい ngrok エンドポイントを使用するようにボットのメッセージング エンドポイントを更新します。 たとえば、「 `https://2d1224fb.ngrok.io/api/messages` 」のように入力します。 ngrok が動作していることを検証する場合は、Bot Framework ポータルのテスト チャット ウィンドウでボットの応答をテストします。 エミュレーターと同様に、このテストでは、Teams固有の機能にアクセスすることはできません。
+Microsoft Bot Framework に登録されているボットの場合は、この新しい ngrok エンドポイントを使用するようにボットのメッセージング エンドポイントを更新します。 たとえば、「 `https://2d1224fb.ngrok.io/api/messages` 」のように入力します。 ngrok が動作していることを検証する場合は、Bot Framework ポータルのテスト チャット ウィンドウでボットの応答をテストします。 エミュレーターと同様に、このテストでは Teams 固有の機能にアクセスすることはできません。
 
 > [!NOTE]
 >
@@ -67,14 +67,14 @@ Microsoft Bot Framework に登録されているボットの場合は、この�
 
 ## <a name="cloud-hosted"></a>クラウド ホスト型
 
-外部アドレス指定可能な任意のサービスを使用して、開発および運用コードとその HTTPS エンドポイントをホストできます。 機能が同じサービスに存在するとは限らない。 ファイル内`manifest.json`のオブジェクトに一覧表示されているTeams アプリからすべてのドメインに[`validDomains`](~/resources/schema/manifest-schema.md#validdomains)アクセスする必要があります。
+外部アドレス指定可能な任意のサービスを使用して、開発および運用コードとその HTTPS エンドポイントをホストできます。 機能が同じサービスに存在するとは限らない。 ファイル内のオブジェクト`manifest.json`に一覧表示されている Teams アプリからすべてのドメインに[`validDomains`](~/resources/schema/manifest-schema.md#validdomains)アクセスする必要があります。
 
 > [!NOTE]
 > セキュリティで保護された環境を確保するには、参照する正確なドメインとサブドメインについて明示的に指定し、それらのドメインを制御する必要があります。たとえば、`*.azurewebsites.net` は推奨されませんが、`contoso.azurewebsites.net` をお勧めします。
 
 ## <a name="load-and-run-your-experience"></a>エクスペリエンスを読み込んで実行する
 
-Teams内でエクスペリエンスを読み込んで実行するには、パッケージを作成してTeamsにアップロードする必要があります。 詳細については、以下を参照してください。
+Teams 内でエクスペリエンスを読み込んで実行するには、パッケージを作成して Teams にアップロードする必要があります。 詳細については、以下を参照してください。
 
 * [Microsoft Teams アプリのパッケージを作成する](~/concepts/build-and-test/apps-package.md)。
 * [Microsoft Teams でアプリをアップロードする](~/concepts/deploy-and-publish/apps-upload.md)。
@@ -86,4 +86,4 @@ Teams内でエクスペリエンスを読み込んで実行するには、パッ
 
 ## <a name="see-also"></a>関連項目
 
-[ボットをローカルでテストしてデバッグする](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally)
+[IDE を使用してボットをローカルでテストしてデバッグする](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)

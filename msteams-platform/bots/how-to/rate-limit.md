@@ -1,14 +1,14 @@
 ---
-title: Teams でレートを制限してボットを最適化する
-description: コード例を使用して、スレッドあたりのボットあたりの制限とすべてのボットの制限あたりのボットの処理レート制限について説明します
+title: ボットのレート制限
+description: コード例を使用して、スレッドごとのボットごとの制限とすべてのボットの制限ごとのボットの処理レート制限について説明します
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f94ef6a047cf597421d788dfaca95656eac2318
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 38a8832c9a9a2c1368e36606b4b8c6af80341724
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190241"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503866"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Teams でレートを制限してボットを最適化する
 
@@ -82,7 +82,7 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
     }
 ```
 
-[一時的な障害処理](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29)を使用してバックオフと再試行を実行できます。 NuGet パッケージの取得とインストールに関するガイドラインについては、[ソリューションへの一時的な障害処理アプリケーション ブロックの追加に関するページを参照してください](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN)。 [一時的な障害処理](/azure/architecture/best-practices/transient-faults)も参照してください。
+[一時的な障害処理](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29)を使用してバックオフと再試行を実行できます。 NuGet パッケージの取得とインストールに関するガイドラインについては、 [ソリューションへの一時的な障害処理アプリケーション ブロックの追加に関するページを参照してください](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN)。 [一時的な障害処理](/azure/architecture/best-practices/transient-faults)も参照してください。
 
 一時的な例外を検出するための例を確認したら、指数バックオフの例を確認します。 失敗時に再試行する代わりに、指数バックオフを使用できます。
 
@@ -111,7 +111,7 @@ await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsyn
 
 このセクションで説明する `System.Action` 再試行ポリシーを使用して、メソッドの実行を実行することもできます。 また、参照先ライブラリでは、固定間隔または線形バックオフ メカニズムを指定することもできます。
 
-実行時に値を微調整および調整するために、構成ファイルの値と戦略をMicrosoft Storeします。
+値と戦略を構成ファイルに格納して、実行時に値を微調整および調整します。
 
 詳細については、「 [再試行パターン」を](/azure/architecture/patterns/retry)参照してください。
 
