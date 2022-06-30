@@ -4,12 +4,12 @@ description: Microsoft Graph を使用した API アクセス許可の構成に�
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams 認証タブ Microsoft Azure Active Directory (Azure AD) Graph API委任されたアクセス 許可アクセス トークンスコープ
-ms.openlocfilehash: 020148e8510e7e9b2ad14b893ccb8531f3a83402
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 474d02c5b5f90e58bfc57f72ab6ce095a0323b62
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485294"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558255"
 ---
 # <a name="extend-tab-app-with-microsoft-graph-permissions-and-scope"></a>Microsoft Graph のアクセス許可とスコープを使用してタブ アプリを拡張する
 
@@ -33,39 +33,39 @@ Microsoft Graph を使用してタブ アプリを拡張し、ユーザーに追
 
 2. 左側のウィンドウで [API の **管理** > **] アクセス許可** を選択します。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/api-permission-menu.png" alt-text="[アプリのアクセス許可] メニュー オプション。" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/api-permission-menu.png" alt-text="[アプリのアクセス許可] メニュー オプション。":::
 
     **[API アクセス許可]** ページが表示されます。
 
 3. **[+ アクセス許可の追加]** を選択して、Microsoft Graph APIアクセス許可を追加します。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-permission.png" alt-text="[アプリのアクセス許可] ページ。" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-permission.png" alt-text="[アプリのアクセス許可] ページ。":::
 
     [ **要求 API のアクセス許可]** ページが表示されます。
 
 4. **Microsoft Graph** を選択します。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/request-api-permission.png" alt-text="[API アクセス許可の要求] ページ。" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/request-api-permission.png" alt-text="[API アクセス許可の要求] ページ。":::
 
     Graph のアクセス許可のオプションが表示されます。
 
 5. **[委任されたアクセス許可**] を選択して、アクセス許可の一覧を表示します。
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/delegated-permission.png" alt-text="委任されたアクセス許可。" border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/delegated-permission.png" alt-text="委任されたアクセス許可。":::
 
 6. アプリに関連するアクセス許可を選択し、[ **アクセス許可の追加**] を選択します。
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-permission.png" alt-text="アクセス許可を選択します。" border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-permission.png" alt-text="アクセス許可を選択します。":::
 
     検索ボックスにアクセス許可名を入力して検索することもできます。
 
     アクセス許可が更新されたことを示すメッセージがブラウザーに表示されます。
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/updated-permission-msg.png" alt-text="アクセス許可が更新されたメッセージ。" border="false":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/updated-permission-msg.png" alt-text="アクセス許可が更新されたメッセージ。":::
 
     追加されたアクセス許可は、[ **API アクセス許可** ] ページに表示されます。
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configured-permissions.png" alt-text="API のアクセス許可が構成されます。" border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configured-permissions.png" alt-text="API のアクセス許可が構成されます。":::
 
     Microsoft Graph のアクセス許可を使用してアプリを構成しました。
 
@@ -86,19 +86,19 @@ URL が一意である限り、複数のプラットフォームの認証を構�
 
 1. 左側のウィンドウで [**認証** の **管理** > ] を選択します。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-platform.png" alt-text="プラットフォームの認証" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-platform.png" alt-text="プラットフォームの認証":::
 
     [ **プラットフォームの構成]** ページが表示されます。
 
 1. [ **+ プラットフォームの追加]** を選択します。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-platform.png" alt-text="プラットフォームを追加する" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-platform.png" alt-text="プラットフォームを追加する":::
 
     [ **プラットフォームの構成] ページが** 表示されます。
 
 1. タブ アプリ用に構成するプラットフォームを選択します。 プラットフォームの種類は、Web または SPA から選択できます。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configure-platform.png" alt-text="Web プラットフォームを選択する" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/configure-platform.png" alt-text="Web プラットフォームを選択する":::
 
     特定のプラットフォームの種類に対して複数のプラットフォームを構成できます。 リダイレクト URI が、構成するすべてのプラットフォームで一意であることを確認します。
 
@@ -109,7 +109,7 @@ URL が一意である限り、複数のプラットフォームの認証を構�
 
 1. プラットフォームの構成の詳細を入力します。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-web-platform.png" alt-text="Web プラットフォームを構成する" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/config-web-platform.png" alt-text="Web プラットフォームを構成する":::
 
     1. リダイレクト URI を入力します。 URI は一意である必要があります。
     2. フロント チャネルのログアウト URL を入力します。

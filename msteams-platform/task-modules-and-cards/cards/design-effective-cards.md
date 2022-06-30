@@ -4,12 +4,12 @@ description: このモジュールでは、Teams のアダプティブ カード
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: f734f228575c3152d4f9498da6a7215cd1a98b8b
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1f4f458d1ebdae103c6114b8c833c0e1afc2c0b1
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142662"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558157"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Microsoft Teams のアプリのアダプティブ カードの設計
 
@@ -17,7 +17,7 @@ ms.locfileid: "66142662"
 
 アダプティブ カード フレームワークは、Teams を含む多くの Microsoft 製品で使用されています。 メッセージ内のカードは、ボットまたはメッセージの拡張機能を介してユーザーに送信できます。 ユーザーは、カードが存在する場合、カードに対してアクションを実行することもできます。
 
-:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="アダプティブ カードの概要の例。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="アダプティブ カードの概要の例。":::
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
@@ -41,11 +41,11 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-hero-card.png" alt-text="モバイルでのアダプティブ カード ヒーロー カードの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-hero-card.png" alt-text="モバイルでのアダプティブ カード ヒーロー カードの例を示します。":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="アダプティブ カードのヒーロー カードの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="アダプティブ カードのヒーロー カードの例を示します。":::
 
 ### <a name="thumbnail"></a>サムネイル
 
@@ -53,11 +53,11 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-thumbnail-card.png" alt-text="モバイルでのアダプティブ カードのサムネイル カードの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-thumbnail-card.png" alt-text="モバイルでのアダプティブ カードのサムネイル カードの例を示します。":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="アダプティブ カードのサムネイル カードの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="アダプティブ カードのサムネイル カードの例を示します。":::
 
 ### <a name="list"></a>リスト
 
@@ -65,11 +65,11 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-list-card.png" alt-text="モバイルでのアダプティブ カードのリスト カードの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-list-card.png" alt-text="モバイルでのアダプティブ カードのリスト カードの例を示します。":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="アダプティブ カードのリスト カードの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="アダプティブ カードのリスト カードの例を示します。":::
 
 ### <a name="digest"></a>Digest
 
@@ -77,11 +77,11 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="モバイルでのアダプティブ カードのダイジェスト カードの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="モバイルでのアダプティブ カードのダイジェスト カードの例を示します。":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="アダプティブ カードのダイジェスト カードの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="アダプティブ カードのダイジェスト カードの例を示します。":::
 
 ### <a name="media"></a>メディア
 
@@ -89,11 +89,11 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-media-card.png" alt-text="モバイルでのアダプティブ カードのメディア カードの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-media-card.png" alt-text="モバイルでのアダプティブ カードのメディア カードの例を示します。":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="アダプティブ カードのメディア カードの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="アダプティブ カードのメディア カードの例を示します。":::
 
 ### <a name="people"></a>連絡先
 
@@ -101,11 +101,11 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-people-card.png" alt-text="モバイルでのアダプティブ カードの連絡先カードの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-people-card.png" alt-text="モバイルでのアダプティブ カードの連絡先カードの例を示します。":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="アダプティブ カードの連絡先カードの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="アダプティブ カードの連絡先カードの例を示します。":::
 
 ### <a name="request-ticket"></a>要求チケット
 
@@ -113,11 +113,11 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-request-ticket-card.png" alt-text="モバイルでのアダプティブ カードの要求チケット カードの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-request-ticket-card.png" alt-text="モバイルでのアダプティブ カードの要求チケット カードの例を示します。":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="アダプティブ カードの要求チケット カードの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="アダプティブ カードの要求チケット カードの例を示します。":::
 
 ### <a name="imageset"></a>ImageSet
 
@@ -125,11 +125,11 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-image-set-card.png" alt-text="モバイルでのアダプティブ カードの画像セット カードの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-image-set-card.png" alt-text="モバイルでのアダプティブ カードの画像セット カードの例を示します。":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="アダプティブ カードの画像セット カードの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="アダプティブ カードの画像セット カードの例を示します。":::
 
 ### <a name="actionset"></a>ActionSet
 
@@ -137,11 +137,11 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-action-set-card.png" alt-text="モバイルでのアダプティブ カードのアクション セット カードの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-action-set-card.png" alt-text="モバイルでのアダプティブ カードのアクション セット カードの例を示します。":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="アダプティブ カードのアクション セット カードの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="アダプティブ カードのアクション セット カードの例を示します。":::
 
 ### <a name="choiceset"></a>ChoiceSet
 
@@ -149,11 +149,11 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-choice-set-card.png" alt-text="モバイルでのアダプティブ カードの選択肢セット カードの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-choice-set-card.png" alt-text="モバイルでのアダプティブ カードの選択肢セット カードの例を示します。":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="アダプティブ カードの選択肢セット カードの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="アダプティブ カードの選択肢セット カードの例を示します。":::
 
 ## <a name="anatomy"></a>構造
 
@@ -161,7 +161,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-anatomy.png" alt-text="モバイルでのアダプティブ カードの構造の例を示しています。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-anatomy.png" alt-text="モバイルでのアダプティブ カードの構造の例を示しています。":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -171,7 +171,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="アダプティブ カードの構造の例を示しています。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="アダプティブ カードの構造の例を示しています。":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -655,7 +655,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="アダプティブ カードに少数のアクションのみを含める方法に関するベスト プラクティス。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="アダプティブ カードに少数のアクションのみを含める方法に関するベスト プラクティス。":::
 
 #### <a name="do-use-up-to-six-primary-actions"></a>Do: 最大 6 つの主要なアクションを使用します
 
@@ -663,7 +663,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="アダプティブ カードに対するアクションが多すぎてユーザーに負荷をかけないようにする方法についてのベスト プラクティスです。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="アダプティブ カードに対するアクションが多すぎてユーザーに負荷をかけないようにする方法についてのベスト プラクティスです。":::
 
 #### <a name="dont-use-more-than-six-primary-actions"></a>Don't: 6 つ以上のプライマリ アクションを使用しないでください
 
@@ -674,7 +674,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 ### <a name="frequency"></a>頻度
 
-:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="アダプティブ カードの頻度に関するベスト プラクティス。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="アダプティブ カードの頻度に関するベスト プラクティス。":::
 
 #### <a name="do-be-concise"></a>Do: 簡潔にしてください
 

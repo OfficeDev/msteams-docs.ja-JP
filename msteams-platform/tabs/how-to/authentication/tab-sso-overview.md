@@ -4,12 +4,12 @@ description: Teams での SSO 認証の概要とタブで使用する方法
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams 認証タブ Microsoft Azure Active Directory (Azure AD) SSO アクセス トークン アプリ マニフェスト
-ms.openlocfilehash: fa68f181e53f433aea7d5cae3a1cb22615284c4b
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: e394b58effbb21491f20a4a20bfa48bf42fd1484
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503768"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557723"
 ---
 # <a name="enable-sso-for-tab-app"></a>タブ アプリの SSO を有効にする
 
@@ -27,7 +27,7 @@ Teams の SSO を使用すると、アプリ ユーザーは Teams を使用し�
 
 アプリ ユーザーは、個人用の Microsoft アカウントまたは Microsoft 365 アカウントを使用して Teams にサインインします。 これを利用し、SSO を使用してアプリ ユーザーを認証および承認できます。
 
-&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-ux.png" alt-text="Teams タブ アプリでの SSO ユーザー エクスペリエンス" border="false":::
+&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-ux.png" alt-text="Teams タブ アプリでの SSO ユーザー エクスペリエンス":::
 
 - Teams は、アプリ ユーザーの ID を認証して格納します。
 - タブ アプリは、Teams によって既に検証されているアプリ ユーザーの保存された ID を使用します。
@@ -60,7 +60,7 @@ Teams の SSO を使用すると、アプリ ユーザーは Teams を使用し�
 
 次の図は、Teams アプリ ユーザーがタブ アプリにアクセスしようとしたときに SSO がどのように機能するかを示しています。
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png" alt-text="タブ シングル サインオンの SSO 図" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png" alt-text="タブ シングル サインオンの SSO 図" lightbox="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png":::
 
 | # | 操作 | どうなっているのですか |
 | --- | --- | --- |
@@ -99,7 +99,7 @@ SSO API を使用してアプリ ユーザーを認証できるシナリオは�
 
 タブ アプリの SSO を有効にするには:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png" alt-text="タブの SSO を有効にする手順" border="false" lightbox="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png":::
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png" alt-text="タブの SSO を有効にする手順" lightbox="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png":::
 
 1. **Azure AD に登録する: Azure** AD アプリを作成して、アプリ ID とアプリケーション ID URI を生成します。 アクセス トークンを生成するには、スコープを構成し、信頼されたクライアント アプリケーションを承認します。
 2. **コードの更新**: アクセス トークンを処理するコードを追加し、アプリ ユーザーがタブ アプリにアクセスしたときに呼び出 `getAuthToken()` し、Authorization ヘッダーでアプリのサーバー コードにこのトークンを送信し、アクセス トークンを受信したときにアクセス トークンを検証します。

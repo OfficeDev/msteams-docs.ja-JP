@@ -4,12 +4,12 @@ description: タブの SSO を有効にするためのマニフェストの更�
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams 認証タブ Microsoft Azure Active Directory (Azure AD) Graph API
-ms.openlocfilehash: 437c16763e918430e91fe543c2dbc62d95452c5c
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 90a1ac781ef521f4b236bdf26f50d44533fa815a
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503481"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558738"
 ---
 # <a name="update-manifest-for-sso-and-preview-app"></a>SSO とプレビュー アプリのマニフェストを更新する
 
@@ -24,7 +24,7 @@ Azure AD にタブ アプリを登録し、アプリ ID を取得しました。
 
 Teams アプリ マニフェスト `webApplicationInfo` ファイルでプロパティを構成します。 このプロパティを使用すると、アプリの SSO を使用して、アプリ ユーザーがタブ アプリにシームレスにアクセスできるようになります。
 
-&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Teams アプリ マニフェストの構成" border="false":::
+&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Teams アプリ マニフェストの構成":::
 
 `webApplicationInfo`には 2 つの要素があり、`id`.`resource`
 
@@ -138,7 +138,7 @@ Azure AD に登録したアプリケーション ID URI は、公開した API �
 
 Azure AD、アプリ コード、Teams マニフェスト ファイルで SSO を有効にするようにタブ アプリを構成しました。 Teams でタブ アプリをサイドロードし、Teams 環境でプレビューできるようになりました。
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="SSO アプリ" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-flow.png" alt-text="SSO アプリ":::
 
 Teams でタブ アプリをプレビューするには:
 
@@ -160,17 +160,17 @@ Teams でタブ アプリをプレビューするには:
 
 1. **[続行]** を選択します。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="必要な追加のアクセス許可について通知する [Teams] ダイアログ ボックス" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="必要な追加のアクセス許可について通知する [Teams] ダイアログ ボックス":::
 
     Azure AD の同意ダイアログが表示されます。
 
 1. Open-id スコープに同意するには、[ **同意する** ] を選択します。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Azure AD の同意ダイアログ" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Azure AD の同意ダイアログ":::
 
     Teams によってタブ アプリが開き、それを使用できます。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-app.png" alt-text="SSO が有効になっている Teams タブ アプリの例" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-app.png" alt-text="SSO が有効になっている Teams タブ アプリの例":::
 
     おめでとうございます! タブ アプリの SSO を有効にしました。
 

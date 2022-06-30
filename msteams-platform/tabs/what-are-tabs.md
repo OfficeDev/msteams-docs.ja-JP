@@ -5,14 +5,14 @@ description: このモジュールでは、Teams プラットフォーム、タ�
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 94fef69a1f11209fdb4512e7d140c2d6dbf813ef
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1ff0d77f03e98ab2865705ed9a5be3687ee6779a
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143649"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558143"
 ---
-# <a name="build-tabs-for-microsoft-teams"></a>Microsoft Teams 用のタブの構築
+# <a name="build-tabs-for-teams"></a>Teams の [ビルド] タブ
 
 タブとは、Microsoft Teams に組み込まれている Teams 対応 Web ページです。 これらは、アプリ マニフェストで宣言されたドメインを指す単純な HTML `<iframe\>` タグであり、個々のユーザーのチーム、グループ チャット、または個人用アプリ内のチャネルの一部として追加できます。 アプリにカスタム タブを含めて独自の Web コンテンツを Teams に埋め込んだり、Teams 固有の機能を Web コンテンツに追加したりできます。 詳細については、「[Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client)」を参照してください。
 

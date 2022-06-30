@@ -5,18 +5,18 @@ description: このモジュールでは、Teams アプリのタスク モジュ
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 9649f39720587d678573b99719db8d91ba5465b4
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 95d0d43e72a72220111c0afa81970a4fab986fc8
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143019"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558115"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Microsoft Teams のアプリのタスク モジュールの設計
 
 Teams アプリでタスク モジュールを使用して、モーダル ポップアップ エクスペリエンスを作成することができます。 この機能を使用して豊富なメディアと情報を表示し、複雑なタスクを完了します。
 
-:::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="タスク モジュールを示す例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="タスク モジュールを示す例。":::
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
@@ -43,7 +43,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 ### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="モバイルでのタスク モジュールの UI 構造を示す図。" border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="モバイルでのタスク モジュールの UI 構造を示す図。":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -55,7 +55,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="タスク モジュールの UI 構造を示す図。" border="false":::
+:::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="タスク モジュールの UI 構造を示す図。":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -82,11 +82,11 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 #### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/task-module/mobile-list.png" alt-text="モバイルでのタスク モジュールのリストの例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-list.png" alt-text="モバイルでのタスク モジュールのリストの例。":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/task-module/list.png" alt-text="タスク モジュールのリストの例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/list.png" alt-text="タスク モジュールのリストの例。":::
 
 ### <a name="form"></a>フォーム
 
@@ -94,11 +94,11 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 #### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/task-module/mobile-form.png" alt-text="モバイルでのタスク モジュールのフォームの例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-form.png" alt-text="モバイルでのタスク モジュールのフォームの例。":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/form.png" alt-text="タスク モジュールのフォームの例。" border="false":::
+:::image type="content" source="../../assets/form.png" alt-text="タスク モジュールのフォームの例。":::
 
 ### <a name="sign-in"></a>サインイン
 
@@ -106,11 +106,11 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 #### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/task-module/mobile-sign-in.png" alt-text="モバイルのタスク モジュールでのサインイン エクスペリエンスの例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-sign-in.png" alt-text="モバイルのタスク モジュールでのサインイン エクスペリエンスの例。":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="タスク モジュールでのサインイン エクスペリエンスの例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="タスク モジュールでのサインイン エクスペリエンスの例。":::
 
 ### <a name="media"></a>メディア
 
@@ -118,11 +118,11 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 #### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/task-module/mobile-media.png" alt-text="モバイルのタスク モジュールでのメディア コンテンツの例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-media.png" alt-text="モバイルのタスク モジュールでのメディア コンテンツの例。":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/task-module/media.png" alt-text="タスク モジュールのメディア コンテンツの例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/media.png" alt-text="タスク モジュールのメディア コンテンツの例。":::
 
 ### <a name="empty-state"></a>空の状態
 
@@ -130,11 +130,11 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 #### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/task-module/mobile-empty-state.png" alt-text="モバイルでのタスク モジュールの空の状態の例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-empty-state.png" alt-text="モバイルでのタスク モジュールの空の状態の例。":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="タスク モジュールの空の状態の例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="タスク モジュールの空の状態の例。":::
 
 ### <a name="image-gallery"></a>画像ギャラリー
 
@@ -142,11 +142,11 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 ##### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/task-module/mobile-image-gallery.png" alt-text="モバイルのタスク モジュールの画像ギャラリーの例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-image-gallery.png" alt-text="モバイルのタスク モジュールの画像ギャラリーの例。":::
 
 ##### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="タスク モジュールの画像ギャラリーの例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="タスク モジュールの画像ギャラリーの例。":::
 
 ### <a name="poll"></a>投票
 
@@ -154,11 +154,11 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 #### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/task-module/mobile-poll.png" alt-text="モバイルのタスク モジュールでの投票の例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/mobile-poll.png" alt-text="モバイルのタスク モジュールでの投票の例。":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="タスク モジュールでの投票の例。" border="false":::
+:::image type="content" source="../../assets/images/task-module/poll.png" alt-text="タスク モジュールでの投票の例。":::
 
 ## <a name="best-practices"></a>ベスト プラクティス
 
@@ -168,7 +168,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="タスク モジュールのベスト プラクティスを示す例 (一度に 1 つのタスク モジュール)。" border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="タスク モジュールのベスト プラクティスを示す例 (一度に 1 つのタスク モジュール)。":::
 
 #### <a name="do-use-one-task-module-at-a-time"></a>やるべきこと: 一度に 1 つのタスク モジュールを使用する
 
@@ -176,7 +176,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="タスク モジュールのベスト プラクティスを示す例 (タスク モジュールの上にダイアログを表示する)。" border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="タスク モジュールのベスト プラクティスを示す例 (タスク モジュールの上にダイアログを表示する)。":::
 
 #### <a name="dont-pop-a-dialog-on-top-of-a-task-module"></a>してはいけないこと: タスク モジュールの上にダイアログを表示する
 
@@ -189,7 +189,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="タスク モジュールのベスト プラクティスを示す例 (コンテンツの応答性が高いことを確認する)。" border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="タスク モジュールのベスト プラクティスを示す例 (コンテンツの応答性が高いことを確認する)。":::
 
 #### <a name="do-make-sure-the-content-is-responsive"></a>やるべきこと: コンテンツの応答性を確認する
 
@@ -197,7 +197,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="タスク モジュールのベスト プラクティスを示す例 (水平方向のスクロール バーを使用しない)。" border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="タスク モジュールのベスト プラクティスを示す例 (水平方向のスクロール バーを使用しない)。":::
 
 #### <a name="dont-use-horizontal-scroll-bars"></a>してはいけないこと: 水平方向のスクロール バーを使用する
 
@@ -210,7 +210,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="タスク モジュールのベスト プラクティスを示す例 (簡潔にまとめる)。" border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="タスク モジュールのベスト プラクティスを示す例 (簡潔にまとめる)。":::
 
 #### <a name="do-keep-it-short"></a>やるべきこと: 簡潔にまとめる
 
@@ -218,7 +218,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="タスク モジュールのベスト プラクティスを示す例 (長い対話がない)。" border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="タスク モジュールのベスト プラクティスを示す例 (長い対話がない)。":::
 
 #### <a name="dont-have-long-interactions"></a>してはいけないこと: 長い対話を行う
 
@@ -231,7 +231,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="タスク モジュールのベスト プラクティスを示す例 (インライン エラー メッセージを使用する)。" border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="タスク モジュールのベスト プラクティスを示す例 (インライン エラー メッセージを使用する)。":::
 
 #### <a name="do-use-inline-error-messages"></a>するべきこと: インライン エラー メッセージを使用する
 
@@ -239,7 +239,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="タスク モジュールのベスト プラクティスを示す例 (ダイアログにエラー メッセージを表示する)。" border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="タスク モジュールのベスト プラクティスを示す例 (ダイアログにエラー メッセージを表示する)。":::
 
 #### <a name="dont-put-error-messages-in-dialogs"></a>してはいけないこと: ダイアログにエラー メッセージを表示する
 

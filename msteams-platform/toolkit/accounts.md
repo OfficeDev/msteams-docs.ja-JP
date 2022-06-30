@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: f359488788c31941ea90bedb02c710c28fb98366
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 32877d96f3867e15c156bf97e727c158b68f9190
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142214"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558017"
 ---
 # <a name="prepare-accounts-to-build-teams-apps"></a>Teams アプリを構築するためのアカウントを準備する
 
@@ -77,7 +77,7 @@ Visual Studio Enterprise または Professional サブスクリプションを�
     3. [**アカウント**] 選択し、Microsoft 365 アカウントにログインします。
     4. 次の図に示すように、**サイドローディングが有効** なオプションを表示できるかどうかを確認します。
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="サイドローディングを有効にする" border="true":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading.png" alt-text="サイドローディングを有効にする":::
 
 * **Teams クライアントを使用してサイドローディングのアクセス許可を確認する**
 
@@ -85,11 +85,11 @@ Visual Studio Enterprise または Professional サブスクリプションを�
     2. 左側のパネルで [**アプリ**] を選択します。
     3. [**アプリ の発行**] を選択します。
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/publish2.png" alt-text="アプリを発行します。" border="true":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/publish2.png" alt-text="アプリを発行します。":::
 
     4. 次の図に示すように、[**カスタム アプリのアップロード**] オプションが表示されるかどうかを確認します。
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/upload2.png" alt-text="カスタム アプリをアップロード" border="true":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/upload2.png" alt-text="カスタム アプリをアップロード":::
 
         **[カスタム アプリのアップロード]** オプションを表示できない場合は、サイドローディングに必要なアクセス許可がないということです。
 
@@ -107,7 +107,7 @@ Visual Studio Enterprise または Professional サブスクリプションを�
 
   2. [**すべての** > **Teams の表示**]を選択します。
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="すべて表示" border="true":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/5.png" alt-text="すべて表示":::
 
      > [!Note]
      > **Teams** オプションが表示されるまで、**最大 24 時間** かかる場合があります。 テストと検証のために、[カスタム アプリを Teams 環境にアップロード](/microsoftteams/upload-custom-apps)することができます。

@@ -4,12 +4,12 @@ author: surbhigupta
 description: Teams 会議やさまざまな会議シナリオのためのアプリを有効化して構成し、アプリ マニフェストを更新し、機能などを構成する方法について説明します。
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: a59ee31eb1837389b09f58c83a02f056ab55506a
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: d00beadecbb2de2011a4cb6abbc94ce18a149eb1
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503362"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557737"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>会議用アプリを有効にして構成する
 
@@ -141,7 +141,7 @@ Teams 会議は、組織の共同作業エクスペリエンスを提供しま�
 
 会議中の通知では、タスク モジュールを使用しないでください。 タスク モジュールは会議チャットでは呼び出されません。 会議中の通知を表示するには、外部リソース URL を使用します。 会議チャットでデータを送信するには、`submitTask` メソッドを使用します。
 
-:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="会議中ダイアログを使用する方法を示す例。" border="true":::
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="会議中ダイアログを使用する方法を示す例。":::
 
 #### <a name="shared-meeting-stage"></a>共有会議ステージ
 

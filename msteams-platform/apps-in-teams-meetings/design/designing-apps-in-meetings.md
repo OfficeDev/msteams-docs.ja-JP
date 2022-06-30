@@ -5,12 +5,12 @@ description: Teams 会議でアプリの会議拡張機能を設計する方法�
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 92b33881e0fcb5eb6c9b10725d69f92d97e53063
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 7df89357f5c052fec5ff2a82cd721b9b7c06da94
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484684"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558087"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Microsoft Teams 会議拡張機能の設計
 
@@ -31,7 +31,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 会議の詳細で、ユーザーは **タブ +** を追加してアプリのポップアップを開き、会議用に最適化されたアプリを見つけることができます。
 
-:::image type="content" source="../../assets/images/apps-in-meetings/add-before-meeting.png" alt-text="例では、会議の前に会議の延長を追加する方法を示します" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/add-before-meeting.png" alt-text="例では、会議の前に会議の延長を追加する方法を示します":::
 
 ### <a name="add-during-a-meeting"></a>会議中に追加
 
@@ -39,23 +39,23 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 アプリが追加されると (デスクトップなど)、ユーザーは会議で [**その他**:::image type="icon" source="../../assets/icons/teams-client-more.png":::] を選択してアプリにアクセスできます。
 
-:::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="例では、モバイルでの会議中に会議の延長を追加する方法を示します" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="例では、モバイルでの会議中に会議の延長を追加する方法を示します":::
 
 #### <a name="desktop"></a>Desktop
 
 会議では、ユーザーは **[その他]** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: > **[アプリの追加** を選択し、目的のアプリを選択します。
 
-:::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="例では、会議中に会議の延長を追加する方法を示します。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="例では、会議中に会議の延長を追加する方法を示します。":::
 
 ## <a name="before-a-meeting"></a>会議の前
 
 会議の前に、アプリはタブでユーザーが利用できます。次の例は、会議中に回答するアンケートの質問の下書きを示しています。
 
-:::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="例では、通話の前に会議の詳細のコンテンツをアプリする方法を示します" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="例では、通話の前に会議の詳細のコンテンツをアプリする方法を示します":::
 
 ### <a name="anatomy-meeting-tab-before-and-after-meetings"></a>構造: [会議] タブ (会議の前後)
 
-:::image type="content" source="../../assets/images/apps-in-meetings/meeting-details-tab-anatomy.png" alt-text="例では、会議の前後の会議タブの構造解剖を示します。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/meeting-details-tab-anatomy.png" alt-text="例では、会議の前後の会議タブの構造解剖を示します。":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -88,15 +88,15 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="例では、モバイルの会議中タブに投票コンテンツを表示する方法を示します。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="例では、モバイルの会議中タブに投票コンテンツを表示する方法を示します。":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="例では、会議中タブで投票コンテンツを表示する方法を示します。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="例では、会議中タブで投票コンテンツを表示する方法を示します。":::
 
 ### <a name="anatomy-in-meeting-tab"></a>構造: 会議中タブ
 
-:::image type="content" source="../../assets/in-meeting-tab-anatomy.png" alt-text="例では、会議中タブの構造構造を示します。" border="false":::
+:::image type="content" source="../../assets/in-meeting-tab-anatomy.png" alt-text="例では、会議中タブの構造構造を示します。":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -111,7 +111,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 280 ピクセル幅の iframe 領域内でエッジ ツー エッジに合わせて会議中タブを最適化します。 iframe の左側と右側、およびタブ ヘッダーの間に 20 ピクセルのパディングがあります。 iframe はタブの下部まで完全に裁ち落としとなります。
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-spacing.png" alt-text="例では、会議中タブの間隔の大きさが表示されます。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-spacing.png" alt-text="例では、会議中タブの間隔の大きさが表示されます。":::
 
 ### <a name="scrolling"></a>スクロール
 
@@ -121,13 +121,13 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 * ユーザーには、スクロールしたコンテンツのみが表示されます (上または下に何も表示されません)。
 * スクロール バーは iframe コンテンツの一部です。
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-scrolling.png" alt-text="例では、会議中タブのスクロール方法を示します。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-scrolling.png" alt-text="例では、会議中タブのスクロール方法を示します。":::
 
 ### <a name="navigation"></a>ナビゲーション
 
 ナビゲーション レイヤーやコンテンツが多いシナリオでは、ユーザーがセカンダリ レイヤーに移動できるようにすることをお勧めします。 ユーザーは前のレイヤーに戻ることができる必要があります。
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav.png" alt-text="例では、会議中のナビゲーションが表示されます。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav.png" alt-text="例では、会議中のナビゲーションが表示されます。":::
 
 ## <a name="use-an-in-meeting-dialog"></a>会議中のダイアログを設計する
 
@@ -144,15 +144,15 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="例では、会議中ダイアログを使用する方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="例では、会議中ダイアログを使用する方法を示しています。":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="会議中ダイアログを使用する方法を示す例。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="会議中ダイアログを使用する方法を示す例。":::
 
 ### <a name="anatomy-in-meeting-dialog"></a>構造: 会議中ダイアログ
 
-:::image type="content" source="../../assets/in-meeting-dialog-anatomy.png" alt-text="例では、会議中ダイアログの構造解剖を示しています。" border="false":::
+:::image type="content" source="../../assets/in-meeting-dialog-anatomy.png" alt-text="例では、会議中ダイアログの構造解剖を示しています。":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -161,7 +161,7 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
 
 ### <a name="anatomy-in-meeting-dialog-header"></a>構造: 会議中ダイアログ ヘッダー
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-header-anatomy.png" alt-text="例では、会議中のダイアログ ヘッダーの構造構造を示します。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-header-anatomy.png" alt-text="例では、会議中のダイアログ ヘッダーの構造構造を示します。":::
 
 ヘッダーには 2 つのバリアントがあります。 可能であれば、バリアントをアバターと共に使用して、ダイアログが人物から送信されていることを強調します。
 
@@ -180,7 +180,7 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
 * **幅**: サポートされているサイズ範囲内の任意の場所でダイアログの iframe の幅を指定できます。
 * **高さ**: サポートされているサイズ範囲内の任意の場所で、ダイアログの iframe の高さを指定できます。 アプリのコンテンツが最大の高さを超えた場合に、ユーザーが垂直方向にスクロールできるようにすることもできます。
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="例では、会議中のダイアログが表示されます。幅: 最小 - 280 ピクセル (248 ピクセル iframe)。最大 460 ピクセル (428 ピクセル iframe)。高さ: 300 ピクセル (iframe)." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="例では、会議中のダイアログが表示されます。幅: 最小 - 280 ピクセル (248 ピクセル iframe)。最大 460 ピクセル (428 ピクセル iframe)。高さ: 300 ピクセル (iframe).":::
 
 ## <a name="use-the-shared-meeting-stage"></a>共有会議ステージを使用する
 
@@ -209,9 +209,9 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
    :::column-end:::
    :::column span="3":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review.png" alt-text="例では、共有会議ステージでレビューされているダッシュボードが表示されます。" border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review.png" alt-text="例では、共有会議ステージでレビューされているダッシュボードが表示されます。":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="例では、共有会議ステージでレビューされているダッシュボード コンポーネントを示しています。" border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="例では、共有会議ステージでレビューされているダッシュボード コンポーネントを示しています。":::
 
    :::column-end:::
 :::row-end:::
@@ -224,7 +224,7 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
    :::column-end:::
    :::column span="3":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-whiteboard.png" alt-text="例では、共有会議ステージ上のホワイトボードを示しています。" border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-whiteboard.png" alt-text="例では、共有会議ステージ上のホワイトボードを示しています。":::
 
    :::column-end:::
 :::row-end:::
@@ -237,14 +237,14 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
    :::column-end:::
    :::column span="3":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-quiz.png" alt-text="例では、共有会議ステージでクイズを示しています。" border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-quiz.png" alt-text="例では、共有会議ステージでクイズを示しています。":::
 
    :::column-end:::
 :::row-end:::
 
 ### <a name="anatomy-share-all-app-content-to-a-meeting"></a>構造: すべてのアプリ コンテンツを会議に共有する
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="画像は、すべてのアプリ コンテンツが共有されている場合の共有会議ステージの設計構造を示しています。" border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="画像は、すべてのアプリ コンテンツが共有されている場合の共有会議ステージの設計構造を示しています。":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -256,7 +256,7 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
 
 ### <a name="anatomy-share-specific-app-content-to-a-meeting"></a>構造: 特定のアプリ コンテンツを会議に共有する
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy-component.png" alt-text="画像は、特定のアプリ コンテンツのみが共有されている場合に、共有会議ステージの設計構造を示しています。" border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy-component.png" alt-text="画像は、特定のアプリ コンテンツのみが共有されている場合に、共有会議ステージの設計構造を示しています。":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -277,19 +277,19 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
 
 サイド パネルが開いていない場合、会議ステージは既定で 994 x 678 ピクセルで、最小 792 x 382 ピクセルにすることができます。
 
-:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="サイド パネルを閉じた共有会議ステージの応答性を示す画像。" border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="サイド パネルを閉じた共有会議ステージの応答性を示す画像。":::
 
 #### <a name="meeting-stage-with-side-panel"></a>会議ステージ (サイド パネル付き)
 
 サイド パネルが開いている場合、会議ステージは既定で 918 x 540 ピクセルで、最小 472 x 382 ピクセルにすることができます。
 
-:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-with-side-panel.png" alt-text="サイド パネルを開いた共有会議ステージの応答性を示す画像。" border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-with-side-panel.png" alt-text="サイド パネルを開いた共有会議ステージの応答性を示す画像。":::
 
 ## <a name="after-a-meeting"></a>会議後
 
 会議が終了した後に会議に戻り、アプリのコンテンツを表示できます。 この例では、会議の開催者は、**Contoso** タブで投票結果を確認できます (注: デザインの観点から見ると、会議前タブと会議後タブのエクスペリエンスに違いはありません)。
 
-:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="例の図は、会議後のタブを示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="例の図は、会議後のタブを示しています。":::
 
 ## <a name="best-practices"></a>ベスト プラクティス
 
@@ -299,7 +299,7 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/interaction-do.png" alt-text="例では、相互作用の数を制限する方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-do.png" alt-text="例では、相互作用の数を制限する方法を示しています。":::
 
 #### <a name="do-limit-the-number-of-interactions"></a>実行: 操作の数を制限する
 
@@ -307,7 +307,7 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/interaction-dont.png" alt-text="例では、不要な要素を導入しない方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-dont.png" alt-text="例では、不要な要素を導入しない方法を示しています。":::
 
 #### <a name="dont-introduce-unnecessary-elements"></a>禁止: 不要な要素の導入
 
@@ -318,7 +318,7 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-do.png" alt-text="例では、優先環境を作成する方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-do.png" alt-text="例では、優先環境を作成する方法を示しています。":::
 
 #### <a name="do-create-a-focused-environment"></a>実行: 優先環境の作成
 
@@ -326,7 +326,7 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-dont.png" alt-text="例では、会議中に競合するサーフェイスを含めないようにする方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-dont.png" alt-text="例では、会議中に競合するサーフェイスを含めないようにする方法を示しています。":::
 
 #### <a name="dont-include-competing-surfaces"></a>禁止: 競合するサーフェイスを含める
 
@@ -339,7 +339,7 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-do.png" alt-text="例では、単一列のダイアログ レイアウトの使用方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-do.png" alt-text="例では、単一列のダイアログ レイアウトの使用方法を示しています。":::
 
 #### <a name="do-use-a-one-column-dialog"></a>実行: 1 列のダイアログを使用
 
@@ -347,7 +347,7 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-dont.png" alt-text="例では、会議拡張機能のスペースを取り散らかさないようにする必要があることを示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-dont.png" alt-text="例では、会議拡張機能のスペースを取り散らかさないようにする必要があることを示しています。":::
 
 #### <a name="dont-clutter-the-space"></a>禁止: スペースを取り散らかす
 
@@ -358,7 +358,7 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-do.png" alt-text="例では、単一列のタブ レイアウトを示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-do.png" alt-text="例では、単一列のタブ レイアウトを示しています。":::
 
 #### <a name="do-use-a-one-column-tab"></a>実行: 1 列のタブを使用する
 
@@ -366,7 +366,7 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-dont.png" alt-text="例では、複数の列を含むタブを示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-dont.png" alt-text="例では、複数の列を含むタブを示しています。":::
 
 #### <a name="dont-use-multiple-columns"></a>禁止: 複数の列の使用
 
@@ -379,7 +379,7 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-do.png" alt-text="例では、プライマリ コントロールを右揃えする方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-do.png" alt-text="例では、プライマリ コントロールを右揃えする方法を示しています。":::
 
 #### <a name="do-right-align-the-primary-action"></a>実行: 主要操作を右揃えにする
 
@@ -387,7 +387,7 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-dont.png" alt-text="例では、主要操作を左揃えにしない方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-controls-dont.png" alt-text="例では、主要操作を左揃えにしない方法を示しています。":::
 
 #### <a name="dont-left-or-center-align-actions"></a>禁止: 操作を左揃えまたは中央揃えにする
 
@@ -401,9 +401,9 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
 :::row:::
    :::column span="":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-do.png" alt-text="例では、会議中タブで垂直スクロールを示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-do.png" alt-text="例では、会議中タブで垂直スクロールを示しています。":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-scroll-do.png" alt-text="例では、共有会議ステージで垂直スクロールを示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-scroll-do.png" alt-text="例では、共有会議ステージで垂直スクロールを示しています。":::
 
 #### <a name="do-scroll-vertically"></a>実行: 垂直方向にスクロールする
 
@@ -412,9 +412,9 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
    :::column-end:::
    :::column span="":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-dont.png" alt-text="例では、会議中タブで水平スクロールを示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-dont.png" alt-text="例では、会議中タブで水平スクロールを示しています。":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-scroll-dont.png" alt-text="例では、共有会議ステージで水平スクロールを示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-scroll-dont.png" alt-text="例では、共有会議ステージで水平スクロールを示しています。":::
 
 #### <a name="dont-scroll-horizontally"></a>禁止: 横方向にスクロール
 
@@ -427,7 +427,7 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-workflow-do.png" alt-text="例では、会議中タブで複雑なシナリオを示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-workflow-do.png" alt-text="例では、会議中タブで複雑なシナリオを示しています。":::
 
 #### <a name="do-surface-complex-scenarios-in-the-in-meeting-tab"></a>実行: 会議中タブでのサーフェイスの複雑なシナリオ
 
@@ -435,7 +435,7 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-workflow-dont.png" alt-text="例では、会議中ダイアログで複雑なシナリオを示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-workflow-dont.png" alt-text="例では、会議中ダイアログで複雑なシナリオを示しています。":::
 
 #### <a name="dont-make-in-meeting-dialogs-complex"></a>禁止: 会議中のダイアログを複雑にする
 
@@ -449,9 +449,9 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
 :::row:::
    :::column span="":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="例では、ダーク テーマの会議拡張機能を示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="例では、ダーク テーマの会議拡張機能を示しています。":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-do.png" alt-text="もう一例でも、ダーク テーマの会議拡張機能を示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-do.png" alt-text="もう一例でも、ダーク テーマの会議拡張機能を示しています。":::
 
 #### <a name="do-focus-on-dark-theme"></a>実行: ダーク テーマにフォーカスする
 
@@ -460,9 +460,9 @@ Teams 会議は、ユーザーがディスカッションや共有コンテン�
    :::column-end:::
    :::column span="":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-dont.png" alt-text="例では、会議テーマと一致しない色の会議拡張機能を示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-dont.png" alt-text="例では、会議テーマと一致しない色の会議拡張機能を示しています。":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-dont.png" alt-text="もう 1 つの例でも会議テーマと一致しない色の会議拡張機能を示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-dont.png" alt-text="もう 1 つの例でも会議テーマと一致しない色の会議拡張機能を示しています。":::
 
 #### <a name="dont-use-unfamiliar-colors"></a>禁止: 使い慣れていない色を使用する
 
@@ -475,7 +475,7 @@ Teams 会議は、ユーザーがディスカッションや共有コンテン�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-do.png" alt-text="例では、[戻る] ボタンを含む会議拡張機能を示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-do.png" alt-text="例では、[戻る] ボタンを含む会議拡張機能を示しています。":::
 
 #### <a name="do-have-a-back-button"></a>実行: [戻る] ボタンを付ける
 
@@ -483,7 +483,7 @@ Teams 会議は、ユーザーがディスカッションや共有コンテン�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-dont.png" alt-text="例では、2 つの [閉じる] ボタンを含む会議の延長を示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-dont.png" alt-text="例では、2 つの [閉じる] ボタンを含む会議の延長を示しています。":::
 
 #### <a name="dont-include-another-dismiss-button"></a>禁止: 別の [閉じる] ボタンを含める
 
@@ -496,7 +496,7 @@ Teams 会議は、ユーザーがディスカッションや共有コンテン�
    :::column span="":::
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-caution.png" alt-text="例では、会議中タブ内のモーダルを示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-nav-caution.png" alt-text="例では、会議中タブ内のモーダルを示しています。":::
 
 #### <a name="caution-avoid-modals-within-the-in-meeting-tab"></a>注意: 会議中タブ内でモーダルの使用は避けてください。
 
@@ -509,7 +509,7 @@ Teams 会議は、ユーザーがディスカッションや共有コンテン�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-responsiveness-do.png" alt-text="例では、会議の内線番号を適切に変更する方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-responsiveness-do.png" alt-text="例では、会議の内線番号を適切に変更する方法を示しています。":::
 
 #### <a name="do-resize-and-scale-your-app-responsively"></a>実行: アプリのサイズを変更し、スケーリングし、応答性を高める
 
@@ -517,7 +517,7 @@ Teams 会議は、ユーザーがディスカッションや共有コンテン�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-responsiveness-dont.png" alt-text="例では、会議拡張機能が適正にサイズ変更されていない例を示しています。" border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-responsiveness-dont.png" alt-text="例では、会議拡張機能が適正にサイズ変更されていない例を示しています。":::
 
 #### <a name="dont-crop-or-clip-primary-ui-components"></a>禁止: 主要 UI コンポーネントをトリミングまたはクリップする
 

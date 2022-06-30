@@ -4,14 +4,14 @@ description: Azure AD へのタブ アプリの登録について説明します
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams 認証タブ Microsoft Azure Active Directory (Azure AD) アクセス トークン SSO テナント スコープ
-ms.openlocfilehash: 9ddc513e0dbe2f664325295dd4f8feb953e47b05
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 01cb6cd54cf150af05b54617aec3159e9483d260
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503523"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558598"
 ---
-# <a name="register-your-tab-app-in-azure-ad"></a>Azure AD にタブ アプリを登録する
+# <a name="register-your-tab-app-in-azure-ad"></a>Azure AD でタブ アプリを登録する
 
 Azure AD では、アプリ ユーザーの Teams ID に基づいてタブ アプリにアクセスできます。 Teams にサインインしたアプリ ユーザーにタブ アプリへのアクセス権を付与できるように、タブ アプリを Azure AD に登録する必要があります。
 
@@ -19,7 +19,7 @@ Azure AD では、アプリ ユーザーの Teams ID に基づいてタブ ア�
 
 Azure AD にタブ アプリを登録し、SSO を有効にするには、アプリの構成 (アプリ ID の生成、API スコープの定義、信頼されたアプリケーションのクライアント ID の事前承認など) が必要です。
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Teams クライアント アプリにアクセス トークンを送信するように Azure AD を構成する" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Teams クライアント アプリにアクセス トークンを送信するように Azure AD を構成する":::
 
 Azure AD で新しいアプリ登録を作成し、スコープ (アクセス許可) を使用してその (Web) API を公開します。 Azure AD で公開されている API とアプリの間の信頼関係を構成します。 これにより、Teams クライアントは、アプリケーションとログイン ユーザーに代わってアクセス トークンを取得できます。 事前承認する信頼できるモバイル、デスクトップ、および Web アプリケーションのクライアント ID を追加できます。
 
@@ -62,19 +62,19 @@ Azure AD に新しいアプリを登録し、テナントとアプリのプラ�
 
 2. **アプリの登録** アイコンを選択します。
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Azure AD Portal ページ。" border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Azure AD Portal ページ。":::
 
    **アプリの登録** ページが表示されます。
 
 3. [ **+ 新しい登録** ] アイコンを選択します。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-registrations.png" alt-text="Azure AD Portal の新しい登録ページ。" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-registrations.png" alt-text="Azure AD Portal の新しい登録ページ。":::
 
     **[アプリケーション登録]** ページが表示されます。
 
 4. アプリ ユーザーに表示するアプリの名前を入力します。 この名前は、必要に応じて後の段階で変更できます。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="Azure AD Portal の [アプリの登録] ページ。" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="Azure AD Portal の [アプリの登録] ページ。":::
 
 5. アプリにアクセスできるユーザー アカウントの種類を選択します。 シングル テナントまたはマルチテナント オプション、またはプライベート Microsoft アカウントから選択できます。
 
@@ -96,11 +96,11 @@ Azure AD に新しいアプリを登録し、テナントとアプリのプラ�
 7. **[登録]** を選択します。
     アプリが作成されたことを示すメッセージがブラウザーに表示されます。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="Azure AD Portal にアプリを登録します。" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="Azure AD Portal にアプリを登録します。":::
 
     アプリ ID とその他の構成を含むページが表示されます。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="アプリの登録が成功しました。" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="アプリの登録が成功しました。":::
 
 8. **アプリケーション (クライアント)** ID からアプリ ID をメモして保存します。 後で Teams アプリ マニフェストを更新するために必要になります。
 
@@ -120,19 +120,19 @@ Azure AD に新しいアプリを登録し、テナントとアプリのプラ�
 
 1. 左側のウィンドウで [**API の公開** の **管理** > ] を選択します。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-api-menu.png" alt-text="API メニュー オプションを公開します。" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-api-menu.png" alt-text="API メニュー オプションを公開します。":::
 
     [ **API の公開]** ページが表示されます。
 
 1. **[Set]\(設定\)** を選択して、アプリケーション ID URI を次の`api://{AppID}`形式で生成します。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="アプリ ID URI を設定する" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="アプリ ID URI を設定する":::
 
     アプリケーション ID URI を設定するためのセクションが表示されます。
 
 1. ここで説明する形式でアプリケーション ID URI を入力します。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="アプリケーション ID URI" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="アプリケーション ID URI":::
 
     - **アプリケーション ID URI** には、アプリ ID (GUID) が形式`api://{AppID}`で事前に入力されています。
     - アプリケーション ID URI の形式は次のようになります `api://fully-qualified-domain-name.com/{AppID}`。
@@ -163,11 +163,11 @@ Azure AD に新しいアプリを登録し、テナントとアプリのプラ�
 
     アプリケーション ID URI が更新されたことを示すメッセージがブラウザーに表示されます。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="アプリケーション ID URI メッセージ" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="アプリケーション ID URI メッセージ":::
 
     アプリケーション ID URI がページに表示されます。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="アプリケーション ID URI が更新されました" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="アプリケーション ID URI が更新されました":::
 
 1. アプリケーション ID URI をメモして保存します。 後で Teams アプリ マニフェストを更新するために必要になります。
 
@@ -175,13 +175,13 @@ Azure AD に新しいアプリを登録し、テナントとアプリのプラ�
 
 1. **[この API で定義された** スコープ] セクションで [+ スコープの **追加]** を選択します。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-scope.png" alt-text="スコープを選択する" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-scope.png" alt-text="スコープを選択する":::
 
     [ **スコープの追加]** ページが表示されます。
 
 1. スコープを構成するための詳細を入力します。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="スコープの詳細を追加する" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="スコープの詳細を追加する":::
 
     1. スコープ名を入力します。 これは必須フィールドです。
     2. このスコープに同意できるユーザーを選択します。 既定のオプションは **管理者のみです**。
@@ -194,23 +194,23 @@ Azure AD に新しいアプリを登録し、テナントとアプリのプラ�
 
     スコープが追加されたことを示すメッセージがブラウザーに表示されます。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="スコープが追加されたメッセージ" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="スコープが追加されたメッセージ":::
 
     定義した新しいスコープがページに表示されます。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added.png" alt-text="追加および表示されるスコープ" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added.png" alt-text="追加および表示されるスコープ":::
 
 ### <a name="to-configure-authorized-client-application"></a>承認されたクライアント アプリケーションを構成するには
 
 1. **[Api の公開**] ページを **[承認済みクライアント アプリケーション**] セクションに移動し、[**+ クライアント アプリケーションの追加]** を選択します。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/auth-client-apps.png" alt-text="承認されたクライアント アプリケーション" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/auth-client-apps.png" alt-text="承認されたクライアント アプリケーション":::
 
     [ **クライアント アプリケーションの追加]** ページが表示されます。
 
 1. アプリの Web アプリケーションに対して承認するアプリケーションの Teams クライアントの適切なクライアント ID を入力します。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="クライアント アプリケーションを追加する" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="クライアント アプリケーションを追加する":::
 
     > [!NOTE]
     >
@@ -230,11 +230,11 @@ Azure AD に新しいアプリを登録し、テナントとアプリのプラ�
 
     承認されたクライアント アプリが追加されたことを示すメッセージがブラウザーに表示されます。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="クライアント アプリケーションがメッセージを追加しました" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="クライアント アプリケーションがメッセージを追加しました":::
 
     クライアント ID がページに表示されます。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="クライアント アプリの追加と表示" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="クライアント アプリの追加と表示":::
 
 > [!NOTE]
 > 複数のクライアント アプリケーションを承認できます。 承認された別のクライアント アプリケーションを構成するには、この手順の手順を繰り返します。
@@ -247,13 +247,13 @@ Azure AD に新しいアプリを登録し、テナントとアプリのプラ�
 
 1. 左側のウィンドウで [**マニフェスト** の **管理** > ] を選択します。
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-manifest.png" alt-text="Azure AD portal マニフェスト" border="true":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-manifest.png" alt-text="Azure AD portal マニフェスト":::
 
     Azure AD アプリケーション マニフェストが表示されます。
 
 1. プロパティの値`accessTokenAcceptedVersion`として **2** を入力します。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="承認済みアクセス トークンバージョンの値" border="true":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="承認済みアクセス トークンバージョンの値":::
 
 1. **[保存]** を選びます。
 
@@ -263,7 +263,7 @@ Azure AD に新しいアプリを登録し、テナントとアプリのプラ�
 
 おめでとうございます! タブ アプリの SSO を有効にするために必要な Azure AD のアプリ構成が完了しました。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [SSO を有効にするコードを構成する](tab-sso-code.md)

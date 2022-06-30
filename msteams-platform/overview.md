@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: 2f7d22c75bda7eb9ed820ac463214ed08bdc8cca
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: f894262918004e643370963ad8e67ef3183927b8
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485328"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558430"
 ---
 # <a name="teams-app-that-fits"></a>最適な Teams アプリ
 
@@ -27,7 +27,7 @@ Microsoft Teams では、Microsoft または外部のサービスによって提
 
 アプリがどのような分野でビジネス ニーズを満たすのに役立つかを見てみましょう。
 
-:::image type="content" source="../msteams-platform/assets/images/overview/why-teams-apps.png" alt-text="Teams アプリを構築する理由" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/why-teams-apps.png" alt-text="Teams アプリを構築する理由":::
 
 | **開発オプション** | **ビジネス チャンス** |
 | --- | --- |
@@ -53,7 +53,7 @@ Teams がアプリのニーズに最適である理由は次のとおりです�
 
     Teams はソーシャル プラットフォームです。交流を重視したカスタム アプリを使用することで、チームは社内文化を共同作業の場に広げることができます。 アプリを使用して投票を送信し、ユーザーが互いにフィードバックを共有し、つながりとコミュニケーションを可能にします。
 
-    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-social.png" alt-text="チームの文化を構築するために Teams アプリを使用する" border="false":::
+    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-social.png" alt-text="チームの文化を構築するために Teams アプリを使用する":::
 
 - **一般的なビジネス プロセス**
 
@@ -61,7 +61,7 @@ Teams がアプリのニーズに最適である理由は次のとおりです�
 
     アプリは、反復的なワークフローの自動化だけでなく、コミュニケーションの問題を解決することにも役立ちます。 チャット ボットは、IT 部門または人事部門へのメールや電話を簡単に置き換えることのできる機能です。
 
-    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-bot.png" alt-text="社内使用のための Teams アプリ" border="false":::
+    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-bot.png" alt-text="社内使用のための Teams アプリ":::
 
 - **Teams ストアの利点**
 
@@ -71,7 +71,7 @@ Teams がアプリのニーズに最適である理由は次のとおりです�
 
     既存の Web アプリ、SharePoint サイト (または SPFx 拡張機能)、PowerApp、またはその他の Web ベースのアプリケーションがある場合、それらの一部またはすべての Teams で有効にすることが効果的な場合があります。 Teams に既存のアプリを拡張し、対話機能を移植すると、アプリのユーザー ベースとユーザー エンゲージメントを向上させるのに役立ちます。
 
-    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-sp.png" alt-text="Teams タブとして移植された SharePoint タブ" border="false":::
+    :::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-sp.png" alt-text="Teams タブとして移植された SharePoint タブ":::
 
 - **タブとボットを使用した個人用アプリ**
 

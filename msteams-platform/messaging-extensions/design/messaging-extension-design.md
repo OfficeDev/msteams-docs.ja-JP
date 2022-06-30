@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: conceptual
-ms.openlocfilehash: f7da87ecbacbf5632b0aea9ec8aa5142443acace
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 2d3d31a0e59be22eb4f84bbdeb70897f4d584b83
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123949"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558752"
 ---
 # <a name="designing-your-microsoft-teams-message-extension"></a>Microsoft Teams メッセージ拡張機能のデザイン
 
@@ -35,11 +35,11 @@ Microsoft Teams UI Kit には、必要に応じて把握、変更できる要素
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-add-in-channel.png" alt-text="例は、モバイルのチャネルの作成ボックスの近くにメッセージ拡張機能を追加する方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-add-in-channel.png" alt-text="例は、モバイルのチャネルの作成ボックスの近くにメッセージ拡張機能を追加する方法を示しています。":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="例は、チャネルの作成ボックスの近くにメッセージ拡張機能を追加する方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="例は、チャネルの作成ボックスの近くにメッセージ拡張機能を追加する方法を示しています。":::
 
 ## <a name="set-up-a-message-extension"></a>メッセージ拡張機能を設定する
 
@@ -49,11 +49,11 @@ Teams アプリ間で一貫性を保つために、サインイン画面をカ�
 
 ### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-set-up.png" alt-text="モバイルでサインイン ボタンを含むメッセージ拡張機能の設定画面を示す例です。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-set-up.png" alt-text="モバイルでサインイン ボタンを含むメッセージ拡張機能の設定画面を示す例です。":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="サインイン ボタンを含むメッセージ拡張機能の設定画面を示す例です。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="サインイン ボタンを含むメッセージ拡張機能の設定画面を示す例です。":::
 
 ## <a name="types-of-message-extensions"></a>メッセージ拡張機能の種類
 
@@ -65,17 +65,17 @@ Teams アプリ間で一貫性を保つために、サインイン画面をカ�
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-search-command-type.png" alt-text="例では、モバイルで作成ボックスから起動された検索ベースのメッセージ拡張機能を示しています。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-search-command-type.png" alt-text="例では、モバイルで作成ボックスから起動された検索ベースのメッセージ拡張機能を示しています。":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="例では、作成ボックスから起動された検索ベースのメッセージ拡張機能を示しています。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="例では、作成ボックスから起動された検索ベースのメッセージ拡張機能を示しています。":::
 
 #### <a name="compose-box-layout-options"></a>作成ボックスのレイアウト オプション
 
 メッセージ拡張機能の検索結果を表示するには、[リスト ビューやグリッド ビュー](../../messaging-extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests)など、いくつかのオプションがあります。
 
-:::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="メッセージ拡張機能の検索結果のレイアウト オプションを示す図。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="メッセージ拡張機能の検索結果のレイアウト オプションを示す図。":::
 
 ### <a name="action-commands"></a>操作コマンド
 
@@ -93,11 +93,11 @@ Teams アプリ間で一貫性を保つために、サインイン画面をカ�
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-compose-box.png" alt-text="例は、モバイルで作成ボックスからメッセージ拡張機能を開く方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-compose-box.png" alt-text="例は、モバイルで作成ボックスからメッセージ拡張機能を開く方法を示しています。":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="例は、作成ボックスからメッセージ拡張機能を開く方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="例は、作成ボックスからメッセージ拡張機能を開く方法を示しています。":::
 
 ### <a name="from-a-chat-message-or-channel-post"></a>チャット メッセージまたはチャネルの投稿から
 
@@ -105,11 +105,11 @@ Teams アプリ間で一貫性を保つために、サインイン画面をカ�
 
 #### <a name="chat-message"></a>チャット メッセージ
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="例は、チャット メッセージからメッセージ拡張機能を開く方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="例は、チャット メッセージからメッセージ拡張機能を開く方法を示しています。":::
 
 #### <a name="channel-post"></a>チャネルの投稿
 
-:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="例は、モバイルでチャネルの投稿からメッセージ拡張機能を開く方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="例は、モバイルでチャネルの投稿からメッセージ拡張機能を開く方法を示しています。":::
 
 ## <a name="use-a-message-extension"></a>メッセージ拡張機能の使用
 
@@ -121,31 +121,31 @@ Teams アプリ間で一貫性を保つために、サインイン画面をカ�
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-search.png" alt-text="たとえば、モバイルで作成ボックスから挿入するコンテンツを検索するユーザーを示しています。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-search.png" alt-text="たとえば、モバイルで作成ボックスから挿入するコンテンツを検索するユーザーを示しています。":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="作成ボックスから挿入するコンテンツを検索するユーザーの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="作成ボックスから挿入するコンテンツを検索するユーザーの例を示します。":::
 
 **2. コンテンツの挿入**。投稿されると、他のユーザーが返信したり、コンテンツを選択してアプリの詳細情報を表示したりできます。
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-posted.png" alt-text="ユーザーがモバイルでチャネルの会話にコンテンツを投稿する例を示します。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-posted.png" alt-text="ユーザーがモバイルでチャネルの会話にコンテンツを投稿する例を示します。":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/insert-content-posted.png" alt-text="ユーザーがチャネルの会話にコンテンツを投稿する例を示します。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/insert-content-posted.png" alt-text="ユーザーがチャネルの会話にコンテンツを投稿する例を示します。":::
 
 ### <a name="take-action-on-a-message"></a>メッセージに対してアクションを取る
 
 **1. メッセージ​​拡張機能の選択**。 アプリには、1 つ以上のアクション コマンドを含めることができます。
 
-:::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="ユーザーがメッセージ拡張機能のアクション コマンドを選択する例を示しています。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="ユーザーがメッセージ拡張機能のアクション コマンドを選択する例を示しています。":::
 
 **2. アクションの完了**。 アプリは、メッセージ アクションによって送信されたコンテンツやデータを受信して処理できます。 ユーザーは会話を続けながら、アプリでアクションを完了します。
 
-:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="メッセージに対してアクションを実行する方法の例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="メッセージに対してアクションを実行する方法の例。":::
 
 ### <a name="preview-links"></a>リンクのプレビュー
 
@@ -155,21 +155,21 @@ Teams アプリ間で一貫性を保つために、サインイン画面をカ�
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-paste-preview-link.png" alt-text="例では、モバイルでユーザーが作成ボックスにリンクを貼り付ける例を示しています。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-paste-preview-link.png" alt-text="例では、モバイルでユーザーが作成ボックスにリンクを貼り付ける例を示しています。":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="たとえば、ユーザーが作成ボックスにリンクを貼り付ける例を示しています。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="たとえば、ユーザーが作成ボックスにリンクを貼り付ける例を示しています。":::
 
 **2. コンテンツの挿入**。アプリが作成ボックス内の URL を認識すると、Web コンテンツのコンテンツリッチなプレビューを提供するカードとしてリンクがレンダリングされます。(詳細については、[アダプティブ カード設計ガイドライン](../../task-modules-and-cards/cards/design-effective-cards.md) を参照してください。)
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-preview-link.png" alt-text="例は、モバイルで URL がアプリによって認識されるから作成ボックスにリッチ コンテンツを含める方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-insert-preview-link.png" alt-text="例は、モバイルで URL がアプリによって認識されるから作成ボックスにリッチ コンテンツを含める方法を示しています。":::
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/insert-preview-link.png" alt-text="例は、URL がアプリに認識されてから作成ボックスにリッチ コンテンツを含める方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/insert-preview-link.png" alt-text="例は、URL がアプリに認識されてから作成ボックスにリッチ コンテンツを含める方法を示しています。":::
 
 ## <a name="manage-a-message-extension"></a>メッセージ拡張機能の管理
 
@@ -183,7 +183,7 @@ Teams アプリ間で一貫性を保つために、サインイン画面をカ�
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/messaging-extension/mobile-anatomy-compose.png" alt-text="モバイルで作成ボックスのメッセージ拡張機能の UI 構造を示す図。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/mobile-anatomy-compose.png" alt-text="モバイルで作成ボックスのメッセージ拡張機能の UI 構造を示す図。":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -196,7 +196,7 @@ Teams アプリ間で一貫性を保つために、サインイン画面をカ�
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/messaging-extension/anatomy-compose.png" alt-text="作成ボックスのメッセージ拡張機能の UI 構造を示す図。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/anatomy-compose.png" alt-text="作成ボックスのメッセージ拡張機能の UI 構造を示す図。":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -211,7 +211,7 @@ Teams アプリ間で一貫性を保つために、サインイン画面をカ�
 
 ### <a name="message-extension-management-menu"></a>メッセージ拡張機能の管理メニュー
 
-:::image type="content" source="../../assets/images/messaging-extension/anatomy-management-menu.png" alt-text="メッセージ拡張機能の管理メニューの UI 構造を示す図。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/anatomy-management-menu.png" alt-text="メッセージ拡張機能の管理メニューの UI 構造を示す図。":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -226,7 +226,7 @@ Teams アプリ間で一貫性を保つために、サインイン画面をカ�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="セットアップと一般的な使用方法の例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="セットアップと一般的な使用方法の例。":::
 
 #### <a name="do-integrate-with-single-sign-on"></a>Do: シングル サインオンとの統合
 
@@ -234,7 +234,7 @@ SSO を使用すると、サインイン プロセスが簡単、高速になり
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="シングル サインオンとの統合の例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="シングル サインオンとの統合の例。":::
 
 #### <a name="dont-take-users-away-from-the-conversation"></a>Don't: ユーザーを会話から除外しないでください
 
@@ -251,7 +251,7 @@ SSO を使用すると、サインイン プロセスが簡単、高速になり
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="テンプレート作成の例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="テンプレート作成の例。":::
 
 #### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>Do: 可能であれば、Teams が設計作業の一部を処理できるようにします
 
@@ -259,7 +259,7 @@ SSO を使用すると、サインイン プロセスが簡単、高速になり
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="デザイン作業の処理の例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="デザイン作業の処理の例。":::
 
 #### <a name="dont-embed-your-entire-app-in-a-task-module"></a>Don't: アプリ全体をタスク モジュールに埋め込まないでください
 
@@ -272,7 +272,7 @@ SSO を使用すると、サインイン プロセスが簡単、高速になり
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="テーマの例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="テーマの例。":::
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>実行: Teams のカラー トークンを活用する
 
@@ -280,7 +280,7 @@ SSO を使用すると、サインイン プロセスが簡単、高速になり
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/theming-dont.png" alt-text="カラー トークンの例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/theming-dont.png" alt-text="カラー トークンの例。":::
 
 #### <a name="dont-hard-code-color-values"></a>Don't: 色の値をハードコード化しないでください
 
@@ -293,7 +293,7 @@ Teams のカラー トークンを使用しない場合、デザインのスケ�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/action-commands-do.png" alt-text="アクションの例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/action-commands-do.png" alt-text="アクションの例。":::
 
 #### <a name="do-include-action-commands-that-make-sense-in-context"></a>Do: コンテキストで意味のあるアクション コマンドを含めます
 
@@ -301,7 +301,7 @@ Teams のカラー トークンを使用しない場合、デザインのスケ�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/action-commands-dont.png" alt-text="アクション コマンドの例。" border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/action-commands-dont.png" alt-text="アクション コマンドの例。":::
 
 #### <a name="dont-include-actions-commands-that-arent-contextual"></a>Don't: コンテキストに依存しないアクション コマンドを含めないでください
 

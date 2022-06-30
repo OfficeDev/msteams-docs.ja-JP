@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 8b5aa93548ad08f8e1114b2d4b66b92fcd7195ba
-ms.sourcegitcommit: b7b41ec2a1f022eb15a1980d1b31d22df1170913
+ms.openlocfilehash: c85fe155500f695fe74edcf0c155526bc446411a
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65795127"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557982"
 ---
 # <a name="from-ideas-to-teams-app"></a>アイデアから Teams アプリへ
 
@@ -19,7 +19,7 @@ ms.locfileid: "65795127"
 
 次のシナリオを見てみましょう。
 
-:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario.png" alt-text="旅行会社の開発者は、顧客が旅行日よりも前に計画できるように、天気予報を送信するアプリをビルドします" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario.png" alt-text="旅行会社の開発者は、顧客が旅行日よりも前に計画できるように、天気予報を送信するアプリをビルドします":::
 
 開発者には、ユーザーをサポートするために、重要で関連性の高い情報を共有する方法が必要です。 これは、一般的なユーザー ストーリーです。 共感できますか? でも、このシナリオで Teams が適合するのはなぜでしょうか?
 
@@ -29,7 +29,7 @@ ms.locfileid: "65795127"
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-01.png" alt-text="ユーザー ストーリー - 私は旅行代理店の開発者で、旅行者向けのアプリをビルドしています" border="false":::
+      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-01.png" alt-text="ユーザー ストーリー - 私は旅行代理店の開発者で、旅行者向けのアプリをビルドしています":::
    :::column-end:::
    :::column span="":::
       #### <a name="understand-your-user"></a>ユーザーを理解する
@@ -50,12 +50,12 @@ ms.locfileid: "65795127"
         - どのような問題に対処する必要がありますか?
    :::column-end:::
    :::column span="":::
-       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-02.png" alt-text="目的地の天気予報を顧客に送信するアプリを開発したいと思っています..." border="false":::
+       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-02.png" alt-text="目的地の天気予報を顧客に送信するアプリを開発したいと思っています...":::
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-03.png" alt-text="...顧客が気象条件を知り、前もって計画できるようにするためです" border="false":::
+      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-03.png" alt-text="...顧客が気象条件を知り、前もって計画できるようにするためです":::
    :::column-end:::
    :::column span="":::
       #### <a name="list-app-requirements-and-benefits"></a>アプリの要件と利点をリストする
@@ -76,7 +76,7 @@ ms.locfileid: "65795127"
         - ユーザー エクスペリエンスに最も便利な機能は何ですか?
    :::column-end:::
    :::column span="":::
-       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-04.png" alt-text="顧客は旅行の準備が整いました!" border="false":::
+       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-04.png" alt-text="顧客は旅行の準備が整いました!":::
    :::column-end:::
 :::row-end:::
 

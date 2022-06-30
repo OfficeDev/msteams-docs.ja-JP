@@ -1,14 +1,14 @@
 ---
-title: 開発者コミュニティのサポートとフィードバックをMicrosoft Teamsする
-description: 製品チームMicrosoft Teamsさまざまなフィードバックやサポート チャネルで開発者コミュニティに応答する方法について説明します。
+title: Microsoft Teams 開発者コミュニティのサポートとフィードバック
+description: Microsoft Teams 製品チームが、さまざまなフィードバックとサポート チャネルで開発者コミュニティに応答する方法について説明します。
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: aa8518c095eed2357e1da80af5eec1b15c71759f
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: bd24ee9f9706bdf845dd518db2735c843f2b46ca
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190254"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558150"
 ---
 # <a name="support-and-feedback"></a>サポートとフィードバック
 
@@ -18,22 +18,22 @@ SLA ベースのサポートが必要な **業務の重要な問題** には、*
 
 | **製品サポート** | **Contact** |
 |:------------|:------------|
-| **Microsoft Teams 製品の問題とエラー** | :::image type="icon" source="assets/icons/microsoft-icon.png" border="false":::Microsoft 365 の Premier サポート契約がある場合は、Microsoft 365 管理センターにアクセスし、サポート メニューを使用して、[お問い合わせをオープン](https://admin.microsoft.com/)にします。 |
+| **Microsoft Teams 製品の問題とエラー** | :::image type="icon" source="assets/icons/microsoft-icon.png":::Microsoft 365 の Premier サポート契約がある場合は、Microsoft 365 管理センターにアクセスし、サポート メニューを使用して、[お問い合わせをオープン](https://admin.microsoft.com/)にします。 |
 | **Azure のヘルプとサポート** | Azure サブスクリプションを購入している場合は、Azure 管理センターにアクセスし、[チケットをオープン](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportreq)にします。 |
-| **Teamsに関する一般的な質問** | Teamsに関する一般的な質問がある場合は、[Microsoft Teams Community](https://answers.microsoft.com/msteams/forum)に:::image type="icon" source="assets/icons/microsoft-icon.png" border="false":::質問を送信します。|
+| **Teams に関する一般的な質問** | Teams に関する一般的な質問がある場合は、[Microsoft Teams Community](https://answers.microsoft.com/msteams/forum) に:::image type="icon" source="assets/icons/microsoft-icon.png":::質問を送信します。|
 
 ## <a name="developer-community-help"></a>開発者コミュニティのヘルプ
 
-開発者のコミュニティTeams、Stack Overflow と Microsoft Q&A を使用して、他の開発者と接続してアイデアを作成し、明確化を行い、クエリを送信します。 さらに、問題、制限事項、一般的な質問を提起するために必要なコミュニティ ヘルプの種類に応じて、他の連絡先やサイトを使用することもできます。
+開発者の Teams コミュニティでは、Stack Overflow と Microsoft Q&A を使用して、他の開発者とつながり、アイデアを得て、説明を得て、クエリを送信します。 さらに、問題、制限事項、一般的な質問を提起するために必要なコミュニティ ヘルプの種類に応じて、他の連絡先やサイトを使用することもできます。
 
 ### <a name="developer-community-forums"></a>開発者コミュニティ フォーラム
 
-アプリ開発に関するTeams質問を共有して回答することで、質問を投稿し、他のコミュニティ メンバーを支援します。
+Teams アプリ開発の質問を共有して回答することで、質問を投稿し、他のコミュニティ メンバーを支援します。
 
 | **コミュニティ チャネル**|   **Contact**  |
 |:---------------------|:---------------|
-|**コミュニティのヘルプ** | <ul> <li>:::image type="icon" source="assets/icons/stack-overflow-icon.png" border="false"::: [スタック オーバーフロー](https://stackoverflow.com/questions/tagged/microsoft-teams): 質問を投稿するには、`microsoft-teams` タグを使用します。 スタック オーバーフローのガイドラインに従って、わかりやすいタイトル、簡潔な問題説明、問題を再現するための詳細を提供します。 機能要求または広範な質問はトピック外です。 新しいユーザーの場合は、「[スタック オーバーフローのヘルプ センター](https://stackoverflow.com/help)」を参照してください。</li>  <li>:::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: [Microsoft Q&A](/answers/topics/office-teams-app-dev.html): スタック オーバーフローで投稿された質問に対する広範なサポートを提供しています。 質問を投稿するには、`office-teams-app-dev` タグを使用します。 スタック オーバーフローには、適切な質問に関する基準があり、[Microsoft Q&A](/answers/topics/office-teams-app-dev.html) には、これに関するオープン ポリシーがあります。 </li><ul> |
-| **コミュニティ チャット グループ** | :::image type="icon" source="assets/icons/Teams-icon.png" border="false":::[Microsoft Teams アプリ開発者](https://gitter.im/OfficeDev/MicrosoftTeamsAppDev)のための非公式のコミュニティ チャット ルームを使用します。 初めてサインインする場合は、**[サインインしてチャットを開始する]** を選択します。 すでにログインしている場合は、**[ルームに参加する]** を選択します。 |
+|**コミュニティのヘルプ** | <ul> <li>:::image type="icon" source="assets/icons/stack-overflow-icon.png"::: [スタック オーバーフロー](https://stackoverflow.com/questions/tagged/microsoft-teams): 質問を投稿するには、`microsoft-teams` タグを使用します。 スタック オーバーフローのガイドラインに従って、わかりやすいタイトル、簡潔な問題説明、問題を再現するための詳細を提供します。 機能要求または広範な質問はトピック外です。 新しいユーザーの場合は、「[スタック オーバーフローのヘルプ センター](https://stackoverflow.com/help)」を参照してください。</li>  <li>:::image type="icon" source="assets/icons/microsoft-icon.png"::: [Microsoft Q&A](/answers/topics/office-teams-app-dev.html): スタック オーバーフローで投稿された質問に対する広範なサポートを提供しています。 質問を投稿するには、`office-teams-app-dev` タグを使用します。 スタック オーバーフローには、適切な質問に関する基準があり、[Microsoft Q&A](/answers/topics/office-teams-app-dev.html) には、これに関するオープン ポリシーがあります。 </li><ul> |
+| **コミュニティ チャット グループ** | :::image type="icon" source="assets/icons/Teams-icon.png":::[Microsoft Teams アプリ開発者](https://gitter.im/OfficeDev/MicrosoftTeamsAppDev)のための非公式のコミュニティ チャット ルームを使用します。 初めてサインインする場合は、**[サインインしてチャットを開始する]** を選択します。 すでにログインしている場合は、**[ルームに参加する]** を選択します。 |
 
 ### <a name="report-issues"></a>問題の報告
 
@@ -43,10 +43,10 @@ SLA ベースのサポートが必要な **業務の重要な問題** には、*
 |:----------------------|:------------|
 | **プラットフォームの停止** | 問題を送信する前に、[Teams のプラットフォームの停止](https://aka.ms/TeamsPlatform/Outages)で、すでに発生している問題かどうかを確認します。 |
 | **サンプル** | サンプルに関する問題を、それぞれの [Microsoft Teams サンプル](https://github.com/OfficeDev/Microsoft-Teams-Samples) リポジトリに送信します。|
-|  **Teams Toolkit または TeamsFx SDK と CLI の問題** | <ul><li> :::image type="icon" source="assets/icons/GitHub-icon.png" border="false":::  [GitHub の問題](https://github.com/OfficeDev/TeamsFx/issues): [TeamsFx (Microsoft Teams フレームワーク) GitHub リポジトリ](https://github.com/OfficeDev/TeamsFx)で新しい問題を作成して問題を報告したり、機能要求を上げます。 クエリやコミュニティを活用するために、GitHub の問題を使用することをお勧めします。 <li> :::image type="icon" source="assets/icons/stack-overflow-icon.png" border="false"::: [スタック オーバーフロー](https://stackoverflow.com/questions/tagged/teams-toolkit): 質問を投稿するには、`teams-toolkit` タグを使用します。 スタック オーバーフローのガイドラインに従って、わかりやすいタイトル、簡潔な問題説明、問題を再現するための詳細を提供します。 機能要求または広範な質問はトピック外です。 </li> </ul> |
+|  **Teams Toolkit または TeamsFx SDK と CLI の問題** | <ul><li> :::image type="icon" source="assets/icons/GitHub-icon.png":::  [GitHub の問題](https://github.com/OfficeDev/TeamsFx/issues): [TeamsFx (Microsoft Teams フレームワーク) GitHub リポジトリ](https://github.com/OfficeDev/TeamsFx)で新しい問題を作成して問題を報告したり、機能要求を上げます。 クエリやコミュニティを活用するために、GitHub の問題を使用することをお勧めします。 <li> :::image type="icon" source="assets/icons/stack-overflow-icon.png"::: [スタック オーバーフロー](https://stackoverflow.com/questions/tagged/teams-toolkit): 質問を投稿するには、`teams-toolkit` タグを使用します。 スタック オーバーフローのガイドラインに従って、わかりやすいタイトル、簡潔な問題説明、問題を再現するための詳細を提供します。 機能要求または広範な質問はトピック外です。 </li> </ul> |
 | **ボットとメッセージの拡張機能 SDK の問題または提案** | ボットの言語 ([C#](https://github.com/Microsoft/botbuilder-dotnet/)、[JavaScript](https://github.com/Microsoft/botbuilder-js)、または [Python](https://github.com/Microsoft/botbuilder-python)) の SDK リポジトリに問題と機能要求を送信します。 `botframework` および `microsoft-teams` タグを使用して、[スタック オーバーフロー](https://stackoverflow.com/questions/tagged/botframework%20microsoft-teams)で、ハウツーの質問を投稿します。 |
 | **タブ SDK の問題または提案** | [Microsoft Teams JavaScript ライブラリ](https://github.com/OfficeDev/microsoft-teams-library-js/issues)の SDK リポジトリに問題と機能要求を送信します。 `microsoft-teams` タグを使用して、[スタック オーバーフロー](https://stackoverflow.com/questions/tagged/microsoft-teams)に SDK に関するハウツーの質問を投稿します。 |
-| **SDK の問題や提案をLive Shareする** | Live Share SDK の SDK リポジトリに問題と機能要求を送信[します](https://github.com/microsoft/live-share-sdk)。 `live-share` [スタック オーバーフロー](https://stackoverflow.com/questions/tagged/live-share+microsoft-teams)での SDK に関するハウツーの質問を投稿するには、タグと`microsoft-teams`タグを使用します。 |
+| **Live Share SDK の問題または提案** | [Live Share SDK](https://github.com/microsoft/live-share-sdk) の SDK リポジトリに問題と機能要求を送信します。 `live-share` および `microsoft-teams` タグを使用して、[スタック オーバーフロー](https://stackoverflow.com/questions/tagged/live-share+microsoft-teams)に SDK に関するハウツーの質問を投稿します。 |
 
 ### <a name="documentation-feedback"></a>ドキュメントのフィードバック
 
@@ -55,7 +55,7 @@ SLA ベースのサポートが必要な **業務の重要な問題** には、*
 | **コミュニティ チャネル** | **Contact** |
 |:--------------------------|:--------------------------|
 | **ドキュメントの問題** | ドキュメントのフッターにある、**[フィードバックの送信と表示]** セクションの **[このページ]** を選択して、[Microsoft Teams ドキュメントの GitHub](https://github.com/MicrosoftDocs/msteams-docs) リポジトリの [[問題]](https://github.com/MicrosoftDocs/msteams-docs/issues) を開きます。<br/>:::image type="content" source="assets/images/community-feedback-this-page.png" alt-text="このページのフィードバック":::|
-|**ドキュメントの更新**|更新する記事の右上にある **[編集]** を選択して、プル要求を:::image type="icon" source="assets/icons/GitHub-icon.png" border="false"::: [Microsoft Teams ドキュメント GitHub](https://github.com/MicrosoftDocs/msteams-docs) リポジトリに送信します。 <br /> :::image type="content" source="assets/images/community-feedback-edit.png" alt-text="変種オプション":::|
+|**ドキュメントの更新**|更新する記事の右上にある **[編集]** を選択して、プル要求を:::image type="icon" source="assets/icons/GitHub-icon.png"::: [Microsoft Teams ドキュメント GitHub](https://github.com/MicrosoftDocs/msteams-docs) リポジトリに送信します。 <br /> :::image type="content" source="assets/images/community-feedback-edit.png" alt-text="変種オプション":::|
 
 ### <a name="feature-request-and-general-help"></a>機能要求と一般的なヘルプ
 
@@ -63,7 +63,7 @@ SLA ベースのサポートが必要な **業務の重要な問題** には、*
 
 | **コミュニティ チャネル** | **Contact** |
 |:----------------------|:------------|
-| **機能の提案** | [Microsoft Teamsフィードバック ポータル](https://feedbackportal.microsoft.com/feedback/forum/ad198462-1c1c-ec11-b6e7-0022481f8472)に機能の:::image type="icon" source="assets/icons/Teams-icon.png" border="false":::提案を投稿します。 |
+| **機能の提案** | [Microsoft Teams フィードバック ポータル](https://feedbackportal.microsoft.com/feedback/forum/ad198462-1c1c-ec11-b6e7-0022481f8472)で機能に関する提案を:::image type="icon" source="assets/icons/Teams-icon.png":::投稿します。 |
 | **一般的な質問** | Microsoft Teams 開発者プラットフォームに関する一般的な質問を、[Microsoft Teams コミュニティ ヘルプ](mailto:microsoftteamsdev@microsoft.com)に送信します。 ここで触れているこのチャネルで質問を投稿し、他のモードの通信が適用されない場合にのみメールを使用することをお勧めします。 |
 
 ## <a name="see-also"></a>関連項目

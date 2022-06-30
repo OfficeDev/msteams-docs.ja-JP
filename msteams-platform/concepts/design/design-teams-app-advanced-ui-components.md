@@ -5,12 +5,12 @@ description: 階層リンク、通知バー、ステージ ビューなどの Te
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 30d429bf927b3cb9422fc4f3ea238ce9eceae49e
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 055ee4440982add222b76454f1ff4382f129ff21
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485725"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558843"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>高度な UI コンポーネントを使用した Microsoft Teams アプリの設計
 
@@ -32,13 +32,13 @@ ms.locfileid: "66485725"
 * 階層の通信
 * ナビゲーション
 
-### <a name="mobile"></a>Mobile
+### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="モバイルでの階層リンク テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="モバイルでの階層リンク テンプレートの例を示します。":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="デスクトップ上の階層リンク テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="デスクトップ上の階層リンク テンプレートの例を示します。":::
 
 ## <a name="left-nav"></a>左ナビゲーション
 
@@ -49,13 +49,13 @@ ms.locfileid: "66485725"
 * Teams タブ内の複数のページを参照します。
 * 複雑なアプリを複数のページに分割します。
 
-### <a name="mobile"></a>Mobile
+### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="モバイル上の左側のナビゲーション テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="モバイル上の左側のナビゲーション テンプレートの例を示します。":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="デスクトップ上の左側のナビゲーション テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="デスクトップ上の左側のナビゲーション テンプレートの例を示します。":::
 
 ## <a name="notification-bar"></a>通知バー
 
@@ -65,17 +65,17 @@ Fluent UI [アラート](https://fluentsite.z22.web.core.windows.net/0.59.0/comp
 
 ### <a name="top-use-cases"></a>上位のユース ケース
 
-* 重大なメッセージ、エラー、および警告。
+* 重大なメッセージ、エラー、および警告
 * 成功メッセージ
 * 情報メッセージまたはプロモーション メッセージ
 
-### <a name="mobile"></a>Mobile
+### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="モバイル上の通知バー UI テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="モバイル上の通知バー UI テンプレートの例を示します。":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="デスクトップ上の通知バー UI テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="デスクトップ上の通知バー UI テンプレートの例を示します。":::
 
 ## <a name="stage-view"></a>ステージ ビュー
 
@@ -85,18 +85,18 @@ Fluent UI [アラート](https://fluentsite.z22.web.core.windows.net/0.59.0/comp
 
 ### <a name="top-use-cases"></a>上位のユース ケース
 
-* 別のアプリやブラウザーの代わりに、Teams 内の大きな画面にコンテンツを表示します。
+* 別のアプリやブラウザーではなく、Teams 内の大きな画面にコンテンツを表示する
 * スポットライト メディアまたはその他のリッチ コンテンツ
 
-### <a name="mobile"></a>Mobile
+### <a name="mobile"></a>モバイル
 
 アプリは、アダプティブ カード、共有リンク、またはビジュアル コンポーネント (グラフなど) からステージを起動できます。
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-stage.png" alt-text="モバイルでのステージ テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-stage.png" alt-text="モバイルでのステージ テンプレートの例を示します。":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="デスクトップ上のステージ テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="デスクトップ上のステージ テンプレートの例を示します。":::
 
 ## <a name="toolbar"></a>ツールバー
 
@@ -108,10 +108,10 @@ Fluent UI [アラート](https://fluentsite.z22.web.core.windows.net/0.59.0/comp
 * コンテキスト フィルターと検索。
 * ナビゲーションと階層リンク。
 
-### <a name="mobile"></a>Mobile
+### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="モバイル上のツール バー テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="モバイル上のツール バー テンプレートの例を示します。":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="デスクトップ上のツール バー テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="デスクトップ上のツール バー テンプレートの例を示します。":::

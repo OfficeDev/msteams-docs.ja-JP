@@ -5,12 +5,12 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: f404c80a8b5db61636e175ca6439b32938358cac
-ms.sourcegitcommit: 3bfd0d2c4d83f306023adb45c8a3f829f7150b1d
+ms.openlocfilehash: 8bbfac3f72fb9ddbfb21d36f4a1ad2516af52b83
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65073301"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558059"
 ---
 # <a name="in-app-purchases"></a>アプリ内購入
 
@@ -87,21 +87,21 @@ Microsoft Teams は、アプリ内購入を実装して無料から有料の Tea
 
 1. アプリの詳細ダイアログで、**[サブスクリプションの購入]** または **[自分用に追加]** を選択します。
 
-    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="選択したアプリのサブスクリプションを購入します。" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplancontoso.png" alt-text="選択したアプリのサブスクリプションを購入します。":::
 
 1. **[自分用に追加]** は、アプリの無料試用版を提供し、後で有料版に **アップグレード** します。
 
-    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="選択したアプリのサブスクリプションへのアップグレード。" lightbox="../../../../assets/images/saas-offer/upgradeapp.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/upgradeapp.png" alt-text="選択したアプリのサブスクリプションへのアップグレード。" lightbox="../../../../assets/images/saas-offer/upgradeapp.png":::
 
 1. **[サブスクリプション プランを選ぶ]** ダイアログでプランを選択し、**[チェックアウト]** を選択します。
 
-    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="適切なサブスクリプション プランを選択する。" lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplancontoso.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplancontoso.png" alt-text="適切なサブスクリプション プランを選択する。" lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplancontoso.png":::
 
 1. トランザクションを完了し、**[今すぐ構成]** を選択してサブスクリプションを設定します。
 
-    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="サブスクリプションを設定する。" lightbox="../../../../assets/images/saas-offer/saas-offer-configure-now.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/saas-offer-configure-now.png" alt-text="サブスクリプションを設定する。" lightbox="../../../../assets/images/saas-offer/saas-offer-configure-now.png":::
 
-    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="サブスクリプションのランディング ページ。" lightbox="../../../../assets/images/saas-offer/getstarted.png" border="true":::
+    :::image type="content" source="~/assets/images/saas-offer/getstarted.png" alt-text="サブスクリプションのランディング ページ。" lightbox="../../../../assets/images/saas-offer/getstarted.png":::
 
 ## <a name="next-step"></a>次のステップ
 

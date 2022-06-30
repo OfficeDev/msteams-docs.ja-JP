@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: a939217f31feb957cc9f3205a99d8b235de56d8e
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 7dda8dd7e68e7452da164c8ec45d3352909f45ed
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142403"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558339"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Microsoft Teams の個人用アプリの設計
 
@@ -29,7 +29,7 @@ Microsoft Teams UI キットには、必要に応じて取得および変更で�
 
 ユーザーは、Teams の左側にある **[その他]** アイコン (次の例を参照) を選択して、Teams ストアまたはアプリ フライアウトから個人用アプリを追加できます。
 
-:::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="例は、フライアウト アプリから個人用アプリを追加する方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="例は、フライアウト アプリから個人用アプリを追加する方法を示しています。":::
 
 ## <a name="use-a-personal-app-private-workspace"></a>個人用アプリを使用する (プライベート ワークスペース)
 
@@ -41,7 +41,7 @@ Microsoft Teams UI キットには、必要に応じて取得および変更で�
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="例は、個人用タブのコンポーネントの構造を示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="例は、個人用タブのコンポーネントの構造を示しています。":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -50,7 +50,7 @@ Microsoft Teams UI キットには、必要に応じて取得および変更で�
 |C|**その他のメニュー**: アプリのその他のオプションと情報が含まれています。|
 |D|**プライマリ ナビゲーション**: アプリのその他の主要な Teams 機能へのナビゲーションを提供します。|
 
-:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="例は、個人用タブの構造を示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="例は、個人用タブの構造を示しています。":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -59,7 +59,7 @@ Microsoft Teams UI キットには、必要に応じて取得および変更で�
 
 #### <a name="desktop"></a>デスクトップ
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="この例は、個人用タブのコンポーネントの構造を示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="この例は、個人用タブのコンポーネントの構造を示しています。":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -68,7 +68,7 @@ Microsoft Teams UI キットには、必要に応じて取得および変更で�
 |C|**ポップアウト ビュー**: アプリのコンテンツを親ウィンドウからスタンドアロンの子ウィンドウにプッシュします。|
 |D|**その他のメニュー**: アプリのその他のオプションと情報が含まれています。 (または、**[設定]** をタブにすることもできます。)|
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="この例は、個人用タブの構造を示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="この例は、個人用タブの構造を示しています。":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -94,7 +94,7 @@ Microsoft Teams UI キットには、必要に応じて取得および変更で�
 
 #### <a name="mobile"></a>Mobile
 
-:::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="例は、個人用ボットのコンポーネントの構造を示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="例は、個人用ボットのコンポーネントの構造を示しています。":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -105,7 +105,7 @@ Microsoft Teams UI キットには、必要に応じて取得および変更で�
 
 #### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="例は、個人用ボット コンポーネントの構造を示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="例は、個人用ボット コンポーネントの構造を示しています。":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -117,7 +117,7 @@ Microsoft Teams UI キットには、必要に応じて取得および変更で�
 
 Teams の左側で、ユーザーは個人用アプリを右クリックして、他のアプリ オプションを固定、削除、および構成できます。
 
-:::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="例は、個人用アプリを管理するためのオプションを示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="例は、個人用アプリを管理するためのオプションを示しています。":::
 
 ## <a name="best-practices"></a>ベスト プラクティス
 
@@ -129,13 +129,13 @@ Teams の左側で、ユーザーは個人用アプリを右クリックして�
 
 レスポンシブ サイズ設定では、右側のタブが切り捨てられたり、表示されなくなったりする場合があります。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-do.png" alt-text="例は、最初のタブに最も関連性の高いコンテンツを表示する個人用アプリを示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-do.png" alt-text="例は、最初のタブに最も関連性の高いコンテンツを表示する個人用アプリを示しています。":::
 
 #### <a name="dont-lead-with-secondary-content-or-metadata"></a>実行しない: セカンダリ コンテンツまたはメタデータでリードする
 
 標準の Web アプリと同様に、タブ ナビゲーションは、アプリの主な機能を理解しやすい順序で実行する必要があります。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-dont.png" alt-text="例は、セカンダリ コンテンツまたはメタデータでリードする個人用アプリを示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-dont.png" alt-text="例は、セカンダリ コンテンツまたはメタデータでリードする個人用アプリを示しています。":::
 
 ### <a name="tab-hierarchy"></a>タブ階層
 
@@ -143,13 +143,13 @@ Teams の左側で、ユーザーは個人用アプリを右クリックして�
 
 タブは、アプリの主な機能とコンテンツを分類する必要があります。 レスポンシブ サイズ設定では、右側のコンテンツが切り捨てられたり、表示されなくなったりする場合があります。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-do.png" alt-text="例は、同じ階層のタブを持つ個人用アプリを示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-do.png" alt-text="例は、同じ階層のタブを持つ個人用アプリを示しています。":::
 
 #### <a name="dont-include-different-levels-of-hierarchy"></a>実行しない: さまざまなレベルの階層を含める
 
 コンテンツは、ユーザーが理解しやすい論理的な順序で実行する必要があります。 密接に関連する 2 つのタブがある場合は、それらを 1 つのタブに結合することを検討してください。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-dont.png" alt-text="例は、階層のレベルが異なる個人用アプリを示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-dont.png" alt-text="例は、階層のレベルが異なる個人用アプリを示しています。":::
 
 ### <a name="first-run-experience"></a>初回実行時エクスペリエンス
 
@@ -157,15 +157,15 @@ Teams の左側で、ユーザーは個人用アプリを右クリックして�
 
 個人用アプリを初めて使用するときは、少なくともウェルカム画面が表示されているはずです。 ボットの場合、ボットが実行できることを説明し、サインイン ボタンなどの迅速なアクションを提供します。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-do.png" alt-text="例は、個人用アプリの初回実行エクスペリエンスで何をするかを示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-do.png" alt-text="例は、個人用アプリの初回実行エクスペリエンスで何をするかを示しています。":::
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-fre-do.png" alt-text="別の例は、個人用アプリの初回実行エクスペリエンスで何をするかを示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-fre-do.png" alt-text="別の例は、個人用アプリの初回実行エクスペリエンスで何をするかを示しています。":::
 
 #### <a name="dont-start-with-a-blank-screen"></a>実行しない: 空白の画面から開始する
 
 アプリを初めて実行したときに何も表示されない場合、ユーザーは混乱する可能性があります。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-dont.png" alt-text="例は、個人用アプリの初回実行エクスペリエンスで何をしないかを示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-dont.png" alt-text="例は、個人用アプリの初回実行エクスペリエンスで何をしないかを示しています。":::
 
 ### <a name="personalized-content"></a>パーソナライズされたコンテンツ
 
@@ -173,17 +173,17 @@ Teams の左側で、ユーザーは個人用アプリを右クリックして�
 
 個人用タブであろうとボットであろうと、アプリ内のユーザーのアクティビティのみに関連するコンテンツを表示します。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-do.png" alt-text="例は、個人用アプリとパーソナライズされたコンテンツで何をするかを示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-do.png" alt-text="例は、個人用アプリとパーソナライズされたコンテンツで何をするかを示しています。":::
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-do.png" alt-text="別の例は、個人用アプリとパーソナライズされたコンテンツで何をするかを示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-do.png" alt-text="別の例は、個人用アプリとパーソナライズされたコンテンツで何をするかを示しています。":::
 
 #### <a name="dont-show-unrelated-or-overly-broad-content"></a>実行しない: 無関係または過度に広いコンテンツを表示する
 
 個人用コンテキストでは、ユーザーが参加していないチームのコンテンツを表示しないでください。 個人用ボットのコンテンツは、グループではなく個人に焦点を当てる必要があります。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-dont.png" alt-text="例は、個人用アプリとパーソナライズされたコンテンツで何をしないかを示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-dont.png" alt-text="例は、個人用アプリとパーソナライズされたコンテンツで何をしないかを示しています。":::
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-dont.png" alt-text="別の例は、個人用アプリとパーソナライズされたコンテンツで何をしないかを示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-dont.png" alt-text="別の例は、個人用アプリとパーソナライズされたコンテンツで何をしないかを示しています。":::
 
 ### <a name="complex-app-features"></a>複雑なアプリ機能
 
@@ -191,13 +191,13 @@ Teams の左側で、ユーザーは個人用アプリを右クリックして�
 
 アプリは Teams のコア タスクに重点を置く必要がありますが、ブラウザーで完全なスタンドアロン アプリを表示することはできます。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-do.png" alt-text="例は、個人用アプリで複雑なアプリ機能を処理する方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-do.png" alt-text="例は、個人用アプリで複雑なアプリ機能を処理する方法を示しています。":::
 
 #### <a name="dont-include-your-entire-app"></a>実行しない: アプリ全体を含める
 
 Teams 専用のアプリを作成していない限り、コラボレーション ツールでは意味をなさない機能がある可能性があります。
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="例は、個人用アプリで複雑なアプリ機能を処理しない方法を示しています。" border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="例は、個人用アプリで複雑なアプリ機能を処理しない方法を示しています。":::
 
 ## <a name="see-also"></a>関連項目
 

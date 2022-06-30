@@ -4,12 +4,12 @@ description: Teams での SSO 認証のトラブルシューティングとタ�
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams 認証タブ Microsoft Azure Active Directory (Azure AD) SSO エラーに関する質問
-ms.openlocfilehash: d738c992b008028456dc9318b2a0720178f6f66f
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 93365732ee284cd8cb903f7535d2770d0154d417
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503726"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558423"
 ---
 # <a name="troubleshoot-sso-authentication-in-teams"></a>Teams での SSO 認証のトラブルシューティング
 
@@ -101,7 +101,7 @@ Azure AD で行われた 1 つ以上のアプリ構成が正しくない場合�
 
 次の図は、Azure AD で構成されたアプリの詳細の例を示しています。
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-details.png" alt-text="Azure AD のアプリ構成値" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-details.png" alt-text="Azure AD のアプリ構成値":::
 
 Azure AD、クライアント側コード、Teams アプリ マニフェストの間で、次の値が一致することを確認します。
 

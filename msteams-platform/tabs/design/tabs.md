@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: afc856fb19a4dd17da85d0a721650abae3627fe4
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 8002b5ddf2fcb403978587819855468915813684
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144335"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558325"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Microsoft Teams 用のタブを設計する
 
@@ -35,13 +35,13 @@ Teams ストア (AppSource) から、または次のいずれかのコンテキ�
 
 ユーザーは、チャネルの **[その他]** ボタン (以下の例) を選択するか、タブが追加されたチャットを選択することで、タブにアクセスできます。
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-access-tab.png" alt-text="例は、チャネルに追加されているモバイル タブを示しています。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-access-tab.png" alt-text="例は、チャネルに追加されているモバイル タブを示しています。":::
 
 ### <a name="desktop"></a>デスクトップ
 
 次の例は、ユーザーがチャネルにタブを追加する方法を示しています。
 
-:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="例は、チャネルに追加されているタブを示しています。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="例は、チャネルに追加されているタブを示しています。":::
 
 ## <a name="set-up-a-tab"></a>タブを設定する
 
@@ -49,11 +49,11 @@ Teams ストア (AppSource) から、または次のいずれかのコンテキ�
 
 ### <a name="tab-configuration-dialog"></a>タブ構成ダイアログ
 
-:::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="例は、タブ構成モーダルを示しています。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="例は、タブ構成モーダルを示しています。":::
 
 #### <a name="anatomy-tab-configuration-dialog"></a>構造: タブ構成ダイアログ
 
-:::image type="content" source="../../assets/images/tabs/test.png" alt-text="タブ構成モーダルの UI 構造を示す図。" border="false":::
+:::image type="content" source="../../assets/images/tabs/test.png" alt-text="タブ構成モーダルの UI 構造を示す図。":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -70,7 +70,7 @@ Teams ストア (AppSource) から、または次のいずれかのコンテキ�
 
 ユーザーが最初に Microsoft 資格情報を使用してサインインする必要があるステップを追加できます。 この認証方法は、シングル サインオン (SSO) と呼ばれています。
 
-:::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="例は、タブ認証画面を示しています。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="例は、タブ認証画面を示しています。":::
 
 ### <a name="design-a-tab-setup-with-ui-templates"></a>UI テンプレートを使用してタブ セットアップを設計する
 
@@ -86,17 +86,17 @@ Teams ストア (AppSource) から、または次のいずれかのコンテキ�
 
 ### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab.png" alt-text="例は、タスクボードを備えたモバイル タブを示しています。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab.png" alt-text="例は、タスクボードを備えたモバイル タブを示しています。":::
 
 ### <a name="desktop"></a>デスクトップ
 
-:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="例では、タスク ボードを含むタブを示しています。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="例では、タスク ボードを含むタブを示しています。":::
 
 ### <a name="anatomy-tab"></a>構造: タブ
 
 #### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="タブの UI 構造を示す図。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="タブの UI 構造を示す図。":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -106,7 +106,7 @@ Teams ストア (AppSource) から、または次のいずれかのコンテキ�
 
 #### <a name="desktop"></a>デスクトップ
 
-:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="この図は、タブの UI 構造を示しています。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="この図は、タブの UI 構造を示しています。":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -136,11 +136,11 @@ Teams ストア (AppSource) から、または次のいずれかのコンテキ�
 
 #### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-channel.png" alt-text="例は、チャネル スレッドで説明されているモバイル タブを示しています。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-channel.png" alt-text="例は、チャネル スレッドで説明されているモバイル タブを示しています。":::
 
 #### <a name="desktop"></a>デスクトップ
 
-:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="例は、チャネル スレッドで説明されているタブを示しています。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="例は、チャネル スレッドで説明されているタブを示しています。":::
 
 ### <a name="tab-chat"></a>タブ チャット
 
@@ -148,11 +148,11 @@ Teams ストア (AppSource) から、または次のいずれかのコンテキ�
 
 #### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-side-chat.png" alt-text="例は、コンテキスト内のチャット領域を持つモバイル タブを示しています。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-side-chat.png" alt-text="例は、コンテキスト内のチャット領域を持つモバイル タブを示しています。":::
 
 #### <a name="desktop"></a>デスクトップ
 
-:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="例は、右側にチャットが開いているタブを示しています。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="例は、右側にチャットが開いているタブを示しています。":::
 
 ### <a name="permissions-and-role-based-views"></a>アクセス許可と役割ベースのビュー
 
@@ -166,7 +166,7 @@ Teams ストア (AppSource) から、または次のいずれかのコンテキ�
 
 #### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/tabs/mobile-design-manage-tab-menu-anatomy.png" alt-text="モバイル タブ メニューの UI 構造を示す図。" border="false":::
+:::image type="content" source="../../assets/images/tabs/mobile-design-manage-tab-menu-anatomy.png" alt-text="モバイル タブ メニューの UI 構造を示す図。":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -178,7 +178,7 @@ Teams ストア (AppSource) から、または次のいずれかのコンテキ�
 
 #### <a name="desktop"></a>デスクトップ
 
-:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="タブ メニューの UI 構造を示す図。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="タブ メニューの UI 構造を示す図。":::
 
 |カウンター|説明|
 |----------|-----------|
@@ -203,7 +203,7 @@ Teams ストア (AppSource) から、または次のいずれかのコンテキ�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="図は、タブ ナビゲーション デザインで何を行えば良いかを示しています。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="図は、タブ ナビゲーション デザインで何を行えば良いかを示しています。":::
 
 #### <a name="do-facilitate-conversation"></a>するべきこと: 会話を促進する
 
@@ -211,7 +211,7 @@ Teams ストア (AppSource) から、または次のいずれかのコンテキ�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="例は、タブ ナビゲーション デザインですべきでないことを示しています。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="例は、タブ ナビゲーション デザインですべきでないことを示しています。":::
 
 #### <a name="dont-treat-your-tab-like-any-other-webpage"></a>すべきでないこと: タブを他の Web ページと同様に扱う
 
@@ -224,7 +224,7 @@ Teams ストア (AppSource) から、または次のいずれかのコンテキ�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="例は、タブ ナビゲーション デザインで何を行えば良いかを示しています。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="例は、タブ ナビゲーション デザインで何を行えば良いかを示しています。":::
 
 #### <a name="do-limit-tasks-and-data"></a>するべきこと: タスクとデータを制限する
 
@@ -232,7 +232,7 @@ Teams ストア (AppSource) から、または次のいずれかのコンテキ�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-nav-dont.png" alt-text="タブ ナビゲーションデザインで何をしないかを示す図。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-dont.png" alt-text="タブ ナビゲーションデザインで何をしないかを示す図。":::
 
 #### <a name="dont-embed-your-entire-app"></a>すべきでない事: アプリ全体を埋め込まないでください
 
@@ -245,7 +245,7 @@ Teams ストア (AppSource) から、または次のいずれかのコンテキ�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-setup-do.png" alt-text="タブ セットアップの設計を実行する方法を示す図。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-do.png" alt-text="タブ セットアップの設計を実行する方法を示す図。":::
 
 #### <a name="do-keep-it-simple"></a>するべきこと: シンプルに保つ
 
@@ -253,7 +253,7 @@ Teams ストア (AppSource) から、または次のいずれかのコンテキ�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-setup-dont.png" alt-text="タブ セットアップの設計で何をしないかを示す図。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-setup-dont.png" alt-text="タブ セットアップの設計で何をしないかを示す図。":::
 
 #### <a name="dont-have-too-many-steps"></a>すべきでないこと: 手順を増やしすぎないでください。
 
@@ -266,7 +266,7 @@ Teams ストア (AppSource) から、または次のいずれかのコンテキ�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="タブのテーマをどうするかを示す図。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-do.png" alt-text="タブのテーマをどうするかを示す図。":::
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>実行: Teams のカラー トークンを活用する
 
@@ -274,7 +274,7 @@ Teams ストア (AppSource) から、または次のいずれかのコンテキ�
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="タブのテーマをどうすべきでないかを示す図。" border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-theming-dont.png" alt-text="タブのテーマをどうすべきでないかを示す図。":::
 
 #### <a name="dont-hard-code-color-values"></a>Don't: 色の値をハードコード化しないでください
 

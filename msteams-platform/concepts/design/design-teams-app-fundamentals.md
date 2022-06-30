@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: d14be8730ba59a94947c595c7bfb5a2ff079259d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 472af955ba5a508ea2fa892d9ece94977bdfb660
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142886"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558836"
 ---
 # <a name="microsoft-teams-app-design-system"></a>Microsoft Teams アプリ設計システム
 
@@ -29,7 +29,7 @@ Teams アプリ設計の基礎について簡単に説明します。 包括的�
 
    :::column-end:::
    :::column span="1":::
-      :::image type="content" source="../../assets/images/design-guidelines/teams-layout.png" alt-text="Teams レイアウトの概念図。" border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-layout.png" alt-text="Teams レイアウトの概念図。":::
    :::column-end:::
 
 :::row-end:::
@@ -47,7 +47,7 @@ Teams アプリ設計の基礎について簡単に説明します。 包括的�
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-avatars.png" alt-text="Teams アバターの概念図。" border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-avatars.png" alt-text="Teams アバターの概念図。":::
 
    :::column-end:::
 :::row-end:::
@@ -68,7 +68,7 @@ Teams アプリ設計の基礎について簡単に説明します。 包括的�
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-iconography.png" alt-text="Teams アイコンの概念図。" border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-iconography.png" alt-text="Teams アイコンの概念図。":::
 
    :::column-end:::
 :::row-end:::
@@ -87,7 +87,7 @@ Teams アプリ設計の基礎について簡単に説明します。 包括的�
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-typography.png" alt-text="Teams 文字体裁の概念図。" border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-typography.png" alt-text="Teams 文字体裁の概念図。":::
 
    :::column-end:::
 :::row-end:::
@@ -105,7 +105,7 @@ Teams アプリ設計の基礎について簡単に説明します。 包括的�
 
    :::column-end:::
    :::column span="1":::
-      :::image type="content" source="../../assets/images/design-guidelines/teams-color.png" alt-text="Teams 色の概念図。" border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-color.png" alt-text="Teams 色の概念図。":::
    :::column-end:::
 
 :::row-end:::
@@ -124,7 +124,7 @@ Teams アプリ設計の基礎について簡単に説明します。 包括的�
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/shape-and-elevation.png" alt-text="図形と昇格の概念。" border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/shape-and-elevation.png" alt-text="図形と昇格の概念。":::
 
    :::column-end:::
 :::row-end:::
@@ -142,7 +142,7 @@ Teams アプリ設計の基礎について簡単に説明します。 包括的�
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-copy-and-content.png" alt-text="コピーとコンテンツの概念イメージ。" border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-copy-and-content.png" alt-text="コピーとコンテンツの概念イメージ。":::
 
    :::column-end:::
 :::row-end:::

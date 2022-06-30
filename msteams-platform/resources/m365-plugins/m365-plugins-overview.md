@@ -4,12 +4,12 @@ description: この記事では、Microsoft 365 プラグイン、プラグイ�
 ms.topic: Microsoft 365 plugins
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 5228803be99d77e24f5cd1731c826b1a28509097
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: c09e2e15fd276c2007a989545cc5b5c0b23f2584
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66124047"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558591"
 ---
 # <a name="microsoft-365-plugins"></a>Microsoft 365 プラグイン
 
@@ -52,7 +52,7 @@ Open ID Connectプラグインを使用すると、ユーザーは、必要な�
 
 次の図は、OpenID 接続ログイン ページを表しています:
 
-:::image type="content" source="../../assets/images/MoodleInstructions/openid-connect.png" alt-text="open-id connect へのログイン" border="true":::
+:::image type="content" source="../../assets/images/MoodleInstructions/openid-connect.png" alt-text="open-id connect へのログイン":::
 
 ## <a name="microsoft-365-integration"></a>Microsoft 365 の統合
 
@@ -65,7 +65,7 @@ Microsoft 365 の統合は、複数の機能を備えた複数のアプリで構
 
 次の図は、Microsoft 365 統合セットアップ ページを表しています:
 
-:::image type="content" source="../../assets/images/MoodleInstructions/365-integration.png" alt-text="Microsoft 365 の統合" border="true":::
+:::image type="content" source="../../assets/images/MoodleInstructions/365-integration.png" alt-text="Microsoft 365 の統合":::
 
 ### <a name="user-functions"></a>ユーザー機能
 
@@ -87,7 +87,7 @@ Microsoft 365 リポジトリを使用すると、ユーザーは Moodle のデ�
 
 次の図は、Microsoft 365 統合ファイル リポジトリを表しています:
 
-:::image type="content" source="../../assets/images/MoodleInstructions/microsoft-365- repository.png" alt-text="M365 リポジトリ"  border="true":::
+:::image type="content" source="../../assets/images/MoodleInstructions/microsoft-365- repository.png" alt-text="M365 リポジトリ" :::
 
 ## <a name="teams-meetings"></a>Teams 会議
 
@@ -100,7 +100,7 @@ Teams会議プラグインを使用すると、ユーザーは予定表、割り
 
 次の図は、Teams 会議サインイン ページを示しています。
 
-:::image type="content" source="../../assets/images/MoodleInstructions/teams-meeting.png" alt-text="チーム会議にサインインする" border="true":::
+:::image type="content" source="../../assets/images/MoodleInstructions/teams-meeting.png" alt-text="チーム会議にサインインする":::
 
 ## <a name="microsoft-365-teams-theme"></a>Microsoft 365 Teamsテーマ
 
@@ -115,7 +115,7 @@ Microsoft 365 Teams テーマ プラグインは、Moodle コースのホーム 
 
 次の図は、ユーザーが設定した Teams テーマを示しています。
 
-:::image type="content" source="../../assets/images/MoodleInstructions/teams-theme.png" alt-text="Microsoft Teamsテーマ" border="true":::
+:::image type="content" source="../../assets/images/MoodleInstructions/teams-theme.png" alt-text="Microsoft Teamsテーマ":::
 
 ## <a name="onenote-integration"></a>OneNote の統合
 
@@ -145,7 +145,7 @@ Microsoft ブロックは、Microsoft 365 統合機能を変更し、その多�
 
 次の図は、Microsoft ブロック ユーザー インターフェイスを示しています:
 
-:::image type="content" source="../../assets/images/MoodleInstructions/microsoft-block-1.png" alt-text="Microsoft ブロック" border="true":::
+:::image type="content" source="../../assets/images/MoodleInstructions/microsoft-block-1.png" alt-text="Microsoft ブロック":::
 
 ## <a name="oembed-filter"></a>oEmbed フィルター
 
@@ -158,7 +158,7 @@ oEmbed フィルター プラグインは、Moodle 内の外部 HTML コンテ�
 
 次の図は、Moodle 内への外部 HTML コンテンツの包含を示しています:
 
-:::image type="content" source="../../assets/images/MoodleInstructions/oEmbed-filter.png" alt-text="oEmbed フィルター ページ" border="true":::
+:::image type="content" source="../../assets/images/MoodleInstructions/oEmbed-filter.png" alt-text="oEmbed フィルター ページ":::
 
 ## <a name="see-also"></a>関連項目
 

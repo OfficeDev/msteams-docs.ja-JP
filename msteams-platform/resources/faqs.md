@@ -4,12 +4,12 @@ description: この記事では、Moodle LMS を使用しているときによ�
 ms.topic: Frequently asked questions on Moodle LMS
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 45323bf169be059f96cedb797c29d9408f3564e6
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: c617b3db7982e192db6cde9375be751e2cf2bf26
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143103"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558297"
 ---
 # <a name="moodle-faq"></a>Moodle に関するよく寄せられる質問
 
@@ -53,9 +53,9 @@ Moodle LMS を使用する場合のいくつかの質問に対する回答を取
 
 次の画像は、ユーザー作成の制限オプションを示しています。
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-2.png" alt-text="同期" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-2.png" alt-text="同期":::
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-3.png" alt-text="Azure AD" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-3.png" alt-text="Azure AD":::
 
 <br>
 
@@ -71,11 +71,11 @@ Moodle LMS を使用する場合のいくつかの質問に対する回答を取
 
 次の画像は、**[コースでコース同期の構成を許可する]** オプションを示しています。
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-4.png" alt-text="管理者" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-4.png" alt-text="管理者":::
 
 次の画像は、コースの同期を示しています。
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-5.png" alt-text="同期" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-5.png" alt-text="同期":::
 
 <br>
 
@@ -123,11 +123,11 @@ Microsoft 365 資格情報を使用して署名できないユーザーに関す
 
 次の画像は、ユーザーが Microsoft 365 資格情報を使用して署名する際に表示されるエラー メッセージです。
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-6.png" alt-text="レポートの問題" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-6.png" alt-text="レポートの問題":::
 
 次の画像は、Azure Portal のエラーを示しています。
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-7.png" alt-text="Azure portal" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-7.png" alt-text="Azure portal":::
 
 **クライアント シークレット** の期限が切れている場合は、新しい **クライアント シークレット** を生成し、ページで検出した構成を更新する必要があります。 ユーザーは **クライアント シークレット** が更新された後に再度サインインすることができますが、再プロビジョニングには最大 24 時間かかる可能性があります。
 
@@ -143,7 +143,7 @@ Microsoft 365 資格情報を使用して署名できないユーザーに関す
 
 次の画像は、Teams インスタンスを示します。
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-8.png" alt-text="Teams インスタンス" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-8.png" alt-text="Teams インスタンス":::
 
 <br>
 
@@ -160,7 +160,7 @@ Atto エディター内で Teams アイコンを表示する **ツールバー�
 
 次の画像は、ツールバーの構成を調整した後のツールバー アイコンを示します。
 
-:::image type="content" source="../assets/images/MoodleInstructions/faq-9.png" alt-text="ツール バー" border="true":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq-9.png" alt-text="ツール バー":::
 
 :::image type="content" source="../assets/images/MoodleInstructions/faq-10.png" alt-text="リンク アイコン":::
 

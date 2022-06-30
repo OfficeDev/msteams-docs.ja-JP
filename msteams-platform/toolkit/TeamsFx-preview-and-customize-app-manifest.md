@@ -1,23 +1,23 @@
 ---
-title: Teams Toolkitでアプリ マニフェストをTeamsする
+title: Teams Toolkit の Teams アプリ マニフェスト
 author: zyxiaoyuer
-description: このモジュールでは、さまざまな環境でアプリ マニフェストTeams編集、プレビュー、カスタマイズする方法について説明します。
+description: このモジュールでは、さまざまな環境で Teams アプリ マニフェストを編集、プレビュー、カスタマイズする方法について説明します。
 ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: 505f5aeaf6cdae995efd182535c4d5a8814f9ea1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: f87175aa4a965d38e439a58ea726fe0af7c68fbd
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143873"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558003"
 ---
-# <a name="edit-teams-app-manifest"></a>アプリ マニフェストTeams編集する
+# <a name="edit-teams-app-manifest"></a>Teams アプリ マニフェストを編集する
 
-マニフェスト テンプレート ファイル `manifest.template.json` は、スキャフォールディング後にフォルダーの下で `templates/appPackage` 使用できます。 プレースホルダーを含むテンプレート ファイルと実際の値は、さまざまな環境のファイル`.fx/configs``.fx/states`を使用してTeams Toolkitによって解決されます。
+マニフェスト テンプレート ファイル `manifest.template.json` は、スキャフォールディング後にフォルダーの下で `templates/appPackage` 使用できます。 プレースホルダーを含むテンプレート ファイルと実際の値は、さまざまな環境のファイル`.fx/configs``.fx/states`を使用して Teams Toolkit によって解決されます。
 
-**実際のコンテンツを使用してマニフェストをプレビューするには、Teams Toolkitフォルダーの下に`build/appPackage`プレビュー マニフェスト ファイルを生成します**。
+**実際のコンテンツを使用してマニフェストをプレビューするために、Teams Toolkit はフォルダーの下にプレビュー マニフェスト ファイルを `build/appPackage` 生成します**。
 
 ```text
 └───build
@@ -41,7 +41,7 @@ ms.locfileid: "66143873"
 
 1. ファイルの`manifest.template.json`コードレンズで **[プレビュー**] を選択し、**ローカル** を選択します。
 2. ファイルのメニュー バー`manifest.template.json`で [**プレビュー マニフェスト ファイル**] を選択します。
-3. Treeview **で Zip Teamsメタデータ パッケージ** を選択し、**ローカル** を選択します。
+3. Treeview で **Zip Teams メタデータ パッケージ** を選択し、 **ローカル** を選択します。
 
 プレビュー ローカルは、イメージに示すように表示されます。
 
@@ -51,16 +51,16 @@ ms.locfileid: "66143873"
 
 **リモート環境でマニフェスト ファイルをプレビューするには**
 
-* [**development** in Teams Toolkit extension] で [**クラウドでプロビジョニング**] を選択するか、
+* Teams Toolkit 拡張機能の **[開発****] で [クラウドでプロビジョニング**] を選択するか、
 * トリガー Teams: コマンド パレットから **クラウドにプロビジョニング** します。
 
-リモート Teams アプリの構成を生成し、パッケージとプレビュー マニフェストをフォルダーの下に`build/appPackage`ビルドします。
+リモート Teams アプリの構成を生成し、パッケージとプレビュー マニフェストをフォルダーの下に `build/appPackage` ビルドします。
 
 次の手順で、リモート環境でマニフェスト ファイルをプレビューすることもできます。
 
 1. ファイルの`manifest.template.json`コードレンズで **[プレビュー**] を選択します。
 2. ファイルのメニュー バー`manifest.template.json`で [**プレビュー マニフェスト ファイル**] を選択します。
-3. Treeview **で Zip Teamsメタデータ パッケージ** を選択します。
+3. Treeview で **Zip Teams メタデータ パッケージ** を選択します。
 4. 環境を選択します。
 
 > [!NOTE]
@@ -72,9 +72,9 @@ ms.locfileid: "66143873"
 
 マニフェスト ファイルをプレビューしたら、次の方法でローカルの変更を Dev Portal に同期できます。
 
-1. アプリ マニフェストTeamsデプロイします。
+1. Teams アプリ マニフェストを展開します。
 
-   Teamsアプリ マニフェストは、次のいずれかの方法でデプロイできます。
+   Teams アプリ マニフェストは、次のいずれかの方法で展開できます。
 
    * ファイルに `manifest.template.json` 移動し、右クリックしてコンテキスト メニューから選択 `Deploy Teams app manifest` します。
 
@@ -86,20 +86,20 @@ ms.locfileid: "66143873"
 
 2. Teams プラットフォームに更新します。
 
-   次のいずれかの方法で、Teams プラットフォームに更新できます。
+   Teams プラットフォームは、次のいずれかの方法で更新できます。
 
-   * の左上隅にある`manifest.{env}.json`**プラットフォームTeams更新を** 選択します。
+   * の左上隅にある `manifest.{env}.json`**[Teams プラットフォームに更新]** を選択します。
 
-   * **トリガー Teams: の** メニュー バー`manifest.{env}.json`にあるプラットフォームTeamsマニフェストを更新します。
+   * **トリガー Teams: の** メニュー バー`manifest.{env}.json`にある Teams プラットフォームにマニフェストを更新します。
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/update-to-teams.png" alt-text="チームの更新":::
 
-Teamsをトリガーすることもできます。コマンド パレットから **マニフェストをTeamsプラットフォームに更新** します。
+Teams: コマンド パレットから **Teams プラットフォームにマニフェストを更新** することもできます。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/pre.png" alt-text="ツリー ビュー":::
 
 > [!NOTE]
-> エディターのコードレンズまたはメニュー バーからトリガーすると、現在のマニフェスト ファイルがTeams プラットフォームに更新されます。 コマンド パレットからトリガーするには、ターゲット環境を選択する必要があります。
+> エディター のコードレンズまたはメニュー バーからトリガーすると、現在のマニフェスト ファイルが Teams プラットフォームに更新されます。 コマンド パレットからトリガーするには、ターゲット環境を選択する必要があります。
 
  CLI コマンド:
 
@@ -115,10 +115,10 @@ Teamsをトリガーすることもできます。コマンド パレットか�
 構成ファイルの変更またはテンプレートの変更によりマニフェスト ファイルが古い場合は、次のいずれかのアクションを選択します。
 
 * **プレビューのみ**: ローカル マニフェスト ファイルは、現在の構成に従って上書きされます。
-* **プレビューと更新**: ローカル マニフェスト ファイルは、現在の構成に従って上書きされ、プラットフォームTeams更新されます。
+* **プレビューと更新**: ローカル マニフェスト ファイルは、現在の構成に従って上書きされ、Teams プラットフォームにも更新されます。
 * **キャンセル**: アクションは実行されません。
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre" border="true":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
 
 ## <a name="customize-teams-app-manifest"></a>Teams アプリ マニフェストをカスタマイズする
 
@@ -127,7 +127,7 @@ Teams Toolkit は、ローカル環境とリモート環境の `manifest.templat
 * `manifest.template.json`
 * `templates/appPackage`
 
-ローカル デバッグまたはプロビジョニング中に、Teams Toolkitから 、構成を`state.{env}.json`使用してマニフェスト`manifest.template.json`を読み込み、`config.{env}.json`[Dev Portal](https://dev.teams.microsoft.com/apps) でTeamsアプリを作成します。
+ローカルデバッグまたはプロビジョニング中に、Teams Toolkit は、Dev Portal の `manifest.template.json`構成を使用してマニフェストを `state.{env}.json`読み込み、 `config.{env}.json`Teams アプリを [作成します](https://dev.teams.microsoft.com/apps)。
 
 ## <a name="supported-placeholders-in-manifesttemplatejson"></a>manifest.template.json でサポートされているプレースホルダー
 
@@ -139,7 +139,7 @@ Teams Toolkit は、ローカル環境とリモート環境の `manifest.templat
 **カスタマイズされたパラメーターを追加するには**
 
 1. 次のようにカスタマイズされたパラメーターを追加します。</br>
-   a.  パターン`{{config.manifest.xx}}`を含むプレースホルダー`manifest.template.json`を追加します。</br>
+   a. パターン`{{config.manifest.xx}}`を含むプレースホルダー`manifest.template.json`を追加します。</br>
    b. に構成値 `config.{env}.json`を追加します。
 
      ```json
@@ -154,7 +154,7 @@ Teams Toolkit は、ローカル環境とリモート環境の `manifest.templat
 
 ### <a name="validate-manifest"></a>マニフェストを検証する
 
-**Zip Teamsメタデータ パッケージ** などの操作中に、Teams Toolkitはそのスキーマに対してマニフェストを検証します。 次の一覧では、マニフェストを検証するさまざまな方法を示します。
+**Zip Teams メタデータ パッケージ** などの操作中に、Teams Toolkit はマニフェストをスキーマと照合して検証します。 次の一覧では、マニフェストを検証するさまざまな方法を示します。
 
 * VSC では、コマンド パレットからトリガー `Teams: Validate manifest file` します。
 

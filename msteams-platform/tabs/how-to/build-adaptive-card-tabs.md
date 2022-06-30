@@ -5,12 +5,12 @@ description: このモジュールでは、アクティビティの呼び出し�
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: c42ea356e3654453d20f59a8be33412b1e608939
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 48415f4cba1a748dafd9d21e8429a59414769b98
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485250"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558178"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>アダプティブ カードを使用してタブをビルドする
 
@@ -31,7 +31,7 @@ ms.locfileid: "66485250"
 
 次の図は、デスクトップとモバイルのアダプティブ カードを含むビルド タブを示しています。
 
-:::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="タブでレンダリングされるアダプティブ カードの例。" border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="タブでレンダリングされるアダプティブ カードの例。":::
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -355,7 +355,7 @@ ms.locfileid: "66485250"
 
 次の図は、`tab/fetch` 呼び出しに対する認証データ フローのしくみの概要を示しています。
 
-:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow1.png" alt-text="アダプティブ カード タブ認証フローの例。" border="false" lightbox="../../assets/images/tabs/adaptive-cards-tab-auth-flow2.png":::
+:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow.png" alt-text="アダプティブ カード タブ認証フローの例。":::
 
 **`tab/fetch` 認証応答**
 

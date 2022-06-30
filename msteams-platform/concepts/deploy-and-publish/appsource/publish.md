@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 210110974769c44258200a3e6b48d0cb68a48e07
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 11893cb2db927935d399d83794b7680560adcc7d
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189927"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485735"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Microsoft Teams ストアにアプリを発行する
 
@@ -120,7 +120,7 @@ Teams ストアに公開されたアプリは、Microsoft 365 アプリおよび
 
         1. アプリがアプリの機能にアクセスするために追加の構成が必要な場合のセットアップ手順。 または、アプリで複雑な構成が必要な場合は、[プロビジョニングされたデモ テナント](/office/developer-program/microsoft-365-developer-program-get-started)に管理者アクセスを提供して、バリデーターが構成手順をスキップできるようにすることもできます。
 
-        1. アプリのデモ ビデオ録画キー ユーザー フローへのリンク。強くお勧めします。
+        1. アプリの主要なユーザー フローを示すデモ ビデオへのリンク。 これを強くお勧めします。
 
 * **アプリの申請を投稿する**
 

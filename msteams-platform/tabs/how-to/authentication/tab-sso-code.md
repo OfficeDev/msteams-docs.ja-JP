@@ -4,12 +4,12 @@ description: タブの SSO を有効にするためのコード構成につい�
 ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams 認証タブ Microsoft Azure Active Directory (Azure AD) Graph API
-ms.openlocfilehash: 3f095f3e2b0737b7afcdfe3bdcc96bd36d2f3847
-ms.sourcegitcommit: e16b51a49756e0fe4eaf239898e28d3021f552da
+ms.openlocfilehash: 0ce3e34f4cc36a3b4c08a21563261889266ebe79
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65888130"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558731"
 ---
 # <a name="add-code-to-enable-sso"></a>SSO を有効にするコードを追加する
 
@@ -20,7 +20,7 @@ SSO を有効にするコードを追加する前に、Azure AD にアプリを�
 
 Azure AD からアクセス トークンを取得するには、タブ アプリのクライアント側コードを構成する必要があります。 アクセス トークンは、タブ アプリの代わりに発行されます。 タブ アプリに追加の Microsoft Graph アクセス許可が必要な場合は、アクセス トークンをサーバー側に渡し、Microsoft Graph トークンと交換する必要があります。
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="アクセス トークンを処理するためのコードを構成する" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="アクセス トークンを処理するためのコードを構成する":::
 
 このセクションでは、以下について説明します。
 

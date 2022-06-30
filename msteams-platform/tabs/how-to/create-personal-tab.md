@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: e9c89f6f1aed486582eb2f50ee8f8107f5ef8473
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: f06772cc6ba7975d0434e1c7c1c1c510ce760f6c
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189463"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558395"
 ---
 # <a name="create-a-personal-tab"></a>プライベート タブを作成する
 
@@ -58,7 +58,7 @@ ms.locfileid: "66189463"
 
 1. Microsoft Teams アプリ ジェネレーターによって `manifest.json` ファイルを更新するように求められる、一連の質問に値を指定します。
 
-    :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Teams ジェネレーター" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Teams ジェネレーター":::
 
     <details>
     <summary><b>manifest.json ファイルを更新するための一連の質問</b></summary>
@@ -230,11 +230,11 @@ gulp build
 
 1. ブラウザーで `http://localhost:3007/<yourDefaultAppNameTab>/` を入力して、アプリケーションのホーム ページを表示します。
 
-    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="既定のタブ" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="既定のタブ":::
 
 1. `http://localhost:3007/<yourDefaultAppNameTab>/personal.html` を参照して、個人用タブを表示します。
 
-    :::image type="content" source="~/assets/images/tab-images/personalTab.PNG" alt-text="既定の html タブ" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personalTab.PNG" alt-text="既定の html タブ":::
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>タブへのセキュリティで保護されたトンネルを確立する
 
@@ -253,11 +253,11 @@ gulp ngrok-serve
 1. [**アプリの管理**] を選択し、[**カスタム アプリをアップロード**] します。
 1. プロジェクト ディレクトリに移動し、 **./package** フォルダーに移動し、zip フォルダーを選択して [**開く**] を選択します。
 
-    :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="個人用タブの追加" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="個人用タブの追加":::
 
 1. ダイアログで **[追加]** を選択します。 タブが Teams にアップロードされます。
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="個人用タブがアップロードされました" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="個人用タブがアップロードされました":::
 
 1. Teams の左側のウィンドウで省略記号 &#x25CF;&#x25CF;&#x25CF; を選択し、アップロードしたアプリを選択して個人用タブを表示します。
 
@@ -412,7 +412,7 @@ ngrok http 3978 --host-header=localhost
 
 1. [**追加**] を選択して、Teams にアプリを読み込みます。 タブが Teams で利用できるようになりました。
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="既定のタブ" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="既定のタブ":::
 
    これで、Teams に個人用タブが正常に作成され、追加されました。
   
@@ -581,7 +581,7 @@ ngrok http 3978 --host-header=localhost
 
 1. [**追加**] を選択して、Teams にアプリを読み込みます。 タブが Teams で利用できるようになりました。
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="個人タブ" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="個人タブ":::
   
    これで、Teams に個人用タブが正常に作成され、追加されました。
 

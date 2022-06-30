@@ -6,12 +6,12 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: b9696b4e41393595edc6a0bdb5d81a74bdf8c699
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: e64504839a5d2f7ccb9e8aa372d6dadadbc90c3b
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503649"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558577"
 ---
 # <a name="create-a-channel-tab"></a>[チャネルの作成] タブ
 
@@ -173,11 +173,11 @@ gulp build
 
 1. ブラウザーで `http://localhost:3007/<yourDefaultAppNameTab>/` を入力して、アプリケーションのホーム ページを表示します。
 
-    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="既定のタブ" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="既定のタブ":::
 
 1. タブ構成ページを表示するには、`http://localhost:3007/<yourDefaultAppNameTab>/config.html` に移動します。 以下の内容が表示されます。
 
-    :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="タブ構成ページ" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="タブ構成ページ":::
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>タブへのセキュリティで保護されたトンネルを確立する
 
@@ -196,7 +196,7 @@ gulp ngrok-serve
 1. [**アプリの管理**] を選択し、[**カスタム アプリをアップロード**] します。
 1. プロジェクト ディレクトリに移動し、**./package** フォルダーに移動し、アプリ パッケージの zip フォルダーを選択し、**[開く]** を選択します。
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="アップロードされたチャネル タブ" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="アップロードされたチャネル タブ":::
 
 1. ダイアログで **[追加]** を選択します。 タブが Teams にアップロードされます。
 
@@ -213,7 +213,7 @@ gulp ngrok-serve
 1. 指示に従ってタブを追加します。チャネル/グループ タブのカスタム構成ダイアログがあります。
 1. **[保存]** を選択すると、タブがチャネルのタブ バーに追加されます。
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="アップロードされたチャネル タブ" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="アップロードされたチャネル タブ":::
 
     これで、Teams でチャネル/グループ タブが正常に作成され、追加されました。
 
@@ -433,7 +433,7 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 
 1. **[チームに追加]** を選択して、チームのタブを設定します。 タブを構成し、**[保存]** を選択します。 タブが Teams で利用できるようになりました。
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="アップロードされたチャネル タブの ASPNET" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="アップロードされたチャネル タブの ASPNET":::
 
     これで、Teams でチャネル/グループ タブが正常に作成され、追加されました。
 
@@ -651,7 +651,7 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 
 1. **[チームに追加]** を選択して、チームのタブを設定します。 タブを構成し、**[保存]** を選択します。 タブが Teams で利用できるようになりました。
 
-    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="アップロードされたチャネル タブの ASPNET MVC" border="true":::
+    :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="アップロードされたチャネル タブの ASPNET MVC":::
 
     これで、Teams でチャネル/グループ タブが正常に作成され、追加されました。
 

@@ -1,14 +1,14 @@
 ---
 title: アプリ ユーザーの認証
-description: このモジュールでは、Teamsでの認証と、会話ボットのアプリ、Web ベースの認証フロー、OAuthPrompt フローで認証を使用する方法について説明します。
+description: このモジュールでは、Teams での認証と、会話ボットのアプリ、Web ベースの認証フロー、OAuthPrompt フローで認証を使用する方法について説明します
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ea8813d8428036521cc4488668a30d82470a8d0
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 5b5a083d0bd52a2c9233adaf6164821042236f85
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143467"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557870"
 ---
 # <a name="authenticate-users-in-microsoft-teams"></a>Microsoft Teams でユーザーを認証する
 
@@ -16,7 +16,7 @@ ms.locfileid: "66143467"
 
 次の 2 つの方法のいずれかで、アプリの認証を追加することを選択します。
 
-- **Teams アプリでシングル サインオン (SSO) を有効にする**: Teams内の SSO は、アプリ ユーザーのTeams ID を使用してアプリへのアクセスを提供する認証方法です。 Teamsにログインしたユーザーは、Teams環境内でアプリに再度ログインする必要はありません。 アプリ ユーザーからの同意のみが必要な場合、Teams アプリはAzure Active Directory (AD) からアクセスの詳細を取得します。 アプリ ユーザーが同意した後は、再検証しなくても、他のデバイスからでもアプリにアクセスできます。
+- **Teams アプリでシングル サインオン (SSO) を有効にする: Teams** 内の SSO は、アプリ ユーザーの Teams ID を使用してアプリへのアクセスを提供する認証方法です。 Teams にログインしているユーザーは、Teams 環境内でアプリに再度ログインする必要はありません。 アプリ ユーザーからの同意のみが必要な場合、Teams アプリは Azure Active Directory (AD) からそれらのアクセスの詳細を取得します。 アプリ ユーザーが同意した後は、再検証しなくても、他のデバイスからでもアプリにアクセスできます。
 
 - **サード パーティの OAuth プロバイダーを使用して認証を有効にする**: サード パーティの OAuth ID プロバイダー (IdP) を使用して、アプリ ユーザーを認証できます。 アプリ ユーザーは ID プロバイダーに登録されます。ID プロバイダーには、アプリとの信頼関係があります。 ユーザーがログインしようとすると、ID プロバイダーはアプリ ユーザーを検証し、アプリへのアクセスを提供します。 Azure AD は、このようなサード パーティの OAuth プロバイダーの 1 つです。 Google、Facebook、GitHub、その他のプロバイダーなど、他のプロバイダーを使用できます。
 
@@ -37,7 +37,7 @@ ms.locfileid: "66143467"
 :::row-end:::
 :::row:::
     :::column span="1":::
-        :::image type="content" source="../../assets/images/authentication/tab-sso-icon.png" alt-text="タブ アプリの SSO" link="../../tabs/how-to/authentication/tab-sso-overview.md" border="false":::
+        :::image type="content" source="../../assets/images/authentication/tab-sso-icon.png" alt-text="タブ アプリの SSO" link="../../tabs/how-to/authentication/tab-sso-overview.md":::
     :::column-end:::
     :::column span="1":::
         <br>
@@ -46,12 +46,12 @@ ms.locfileid: "66143467"
         
     :::column-end:::
     :::column span="1":::
-        :::image type="content" source="../../assets/images/authentication/tab-app-idp.png" alt-text="タブ アプリ用のサード パーティの OAuth プロバイダーを使用した認証。" link="../../tabs/how-to/authentication/auth-tab-aad.md" border="false":::
+        :::image type="content" source="../../assets/images/authentication/tab-app-idp.png" alt-text="タブ アプリ用のサード パーティの OAuth プロバイダーを使用した認証。" link="../../tabs/how-to/authentication/auth-tab-aad.md":::
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column span="1":::
-        :::image type="content" source="../../assets/images/authentication/bot-sso-icon.png" alt-text="ボット アプリの SSO" link="../../bots/how-to/authentication/auth-aad-sso-bots.md" border="false":::
+        :::image type="content" source="../../assets/images/authentication/bot-sso-icon.png" alt-text="ボット アプリの SSO" link="../../bots/how-to/authentication/auth-aad-sso-bots.md":::
     :::column-end:::
     :::column span="1":::
         <br>
@@ -60,12 +60,12 @@ ms.locfileid: "66143467"
         
     :::column-end:::
     :::column span="1":::
-        :::image type="content" source="../../assets/images/authentication/bot-app-idp.png" alt-text="ボット アプリ用のサード パーティ OAuth プロバイダーを使用した認証。" link="../../bots/how-to/authentication/add-authentication.md" border="false":::
+        :::image type="content" source="../../assets/images/authentication/bot-app-idp.png" alt-text="ボット アプリ用のサード パーティ OAuth プロバイダーを使用した認証。" link="../../bots/how-to/authentication/add-authentication.md":::
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column span="1":::
-        :::image type="content" source="../../assets/images/authentication/mex-sso-icon.png" alt-text="メッセージング拡張機能アプリの SSO" link="../../messaging-extensions/how-to/enable-SSO-auth-me.md" border="false":::
+        :::image type="content" source="../../assets/images/authentication/mex-sso-icon.png" alt-text="メッセージング拡張機能アプリの SSO" link="../../messaging-extensions/how-to/enable-SSO-auth-me.md":::
     :::column-end:::
     :::column span="1":::
         <br>
@@ -74,7 +74,7 @@ ms.locfileid: "66143467"
         
     :::column-end:::
     :::column span="1":::
-        :::image type="content" source="../../assets/images/authentication/mex-app-idp.png" alt-text="メッセージング拡張機能アプリ用のサード パーティの oAuth IdP を使用した認証。" link="../../messaging-extensions/how-to/add-authentication.md" border="false":::
+        :::image type="content" source="../../assets/images/authentication/mex-app-idp.png" alt-text="メッセージング拡張機能アプリ用のサード パーティの oAuth IdP を使用した認証。" link="../../messaging-extensions/how-to/add-authentication.md":::
     :::column-end:::
 :::row-end:::
 

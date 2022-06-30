@@ -1,15 +1,15 @@
 ---
 title: Microsoft Teams アプリにボットを追加する
-description: このモジュールでは、Microsoft Teamsでボットの開発を開始する方法と、Teamsにボットを追加するためのすべての要件について説明します。
+description: このモジュールでは、Microsoft Teams でボットの開発を開始する方法と、Teams でボットを追加するためのすべての要件について説明します
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 05/20/2018
-ms.openlocfilehash: f3102e8a6a3fd424a4f4f25995d74911c83930ee
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 31a88b169173aab179581acc9b038670f0c8112c
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189746"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558612"
 ---
 # <a name="add-bots-to-microsoft-teams-apps"></a>Microsoft Teams アプリにボットを追加する
 
@@ -18,9 +18,9 @@ ms.locfileid: "66189746"
 インテリジェント ボットを構築して接続し、チャットを通じて自然に Microsoft Teams ユーザーと対話します。 または、より広範な Teams アプリ エクスペリエンスの "コマンド ライン" インターフェイスとして使用する、単純なコマンド ベースのボットを提供します。 通知専用ボットを作成すると、ユーザーに関連する情報をチャネルまたはダイレクト メッセージで直接プッシュできます。 既存の Bot Framework ベースのボットを導入し、Teams 固有のサポートを追加して、エクスペリエンスを輝かせます。
 
 > [!IMPORTANT]
-> 現在、ボットはGovernment Community Cloud (GCC) とGCC-Highで利用できますが、国防総省 (DOD) では利用できません。
+> 現在、ボットは Government Community Cloud (GCC) とGCC-Highで利用できますが、国防総省 (DOD) では利用できません。
 
-:::image type="content" source="../../assets/images/bot_example.png" alt-text="ユーザーを支援するボットの例" border="true":::
+:::image type="content" source="../../assets/images/bot_example.png" alt-text="ユーザーを支援するボットの例":::
 
 ## <a name="what-you-need-to-know-bots"></a>知っておく必要がある情報: ボット
 
@@ -38,7 +38,7 @@ Teams アプリを使用すると、ボットをエクスペリエンスのス�
 
 ## <a name="bot-apis"></a>ボット API
 
-Teamsでは、ほとんどのMicrosoft Bot Frameworkがサポート[されています](https://dev.botframework.com/)。 (Bot Framework に基づくボットが既にある場合は、Teamsで動作するように簡単に調整できます)。SDK を利用するには、C# またはNode.jsのいずれかを使用することをお勧[めします。](/microsoftteams/platform/#pivot=sdk-tools) これらのパッケージは、以下の基本的な Bot Builder SDK のクラスとメソッドを拡張します。
+Teams では、ほとんどのMicrosoft Bot Frameworkがサポート[されています](https://dev.botframework.com/)。 (Bot Framework に基づくボットが既にある場合は、Teams で動作するように簡単に調整できます)。SDK を利用するには、C# またはNode.jsのいずれかを使用することをお勧[めします。](/microsoftteams/platform/#pivot=sdk-tools) これらのパッケージは、以下の基本的な Bot Builder SDK のクラスとメソッドを拡張します。
 
 * Office 365 コネクタ カードなどの専用のカードの使用。
 * アクティビティに関する Teams 固有のチャネル データの使用と設定。
@@ -59,7 +59,7 @@ SDK 拡張機能は、ボット ビルダー SDK を含む依存関係をイン�
 
 ## <a name="build-a-great-teams-bot"></a>優れたTeams ボットをビルドする
 
-次の記事では、Teams用の優れたボットを作成するプロセスについて説明します。
+次の記事では、Teams 用の優れたボットを作成するプロセスについて説明します。
 
 * [ボットを作成する](~/resources/bot-v3/bots-create.md): Bot Framework チームが提供する優れたツール、ドキュメント、コミュニティを活用します。
 * [ボットと会話する](~/resources/bot-v3/bot-conversations/bots-conversations.md): 基本的な会話フローを追加し、チャネル固有の機能を活用します。 .NET または Node.js で開発する場合は、ボット ビルダー SDK の拡張機能を使用して作業を簡略化します。

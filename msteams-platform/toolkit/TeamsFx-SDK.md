@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: e530adfc92f4edc1e25946a5af7c38300ae67777
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 4889f4a9f97ff6606ebb283156d42963816cd269
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485637"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557863"
 ---
 # <a name="teamsfx-sdk"></a>TeamsFx SDK
 
@@ -239,7 +239,7 @@ const profile = await graphClient.api("/me").get();
 <details>
 <summary><b>Bot または Azure Function で既存の API を呼び出す API クライアントを作成する</b></summary>
 
-:::image type="content" source="~/assets/images/teams-toolkit-v2/teams toolkit fundamentals/createapi-client.PNG" alt-text="API クライアントを作成する" border="false":::
+:::image type="content" source="~/assets/images/teams-toolkit-v2/teams toolkit fundamentals/createapi-client.PNG" alt-text="API クライアントを作成する":::
 
 </details>
 

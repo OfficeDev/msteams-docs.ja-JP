@@ -5,12 +5,12 @@ description: この記事では、Microsoft Teams アプリの機能を学習し
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: c2fc61024a9f0c2d9bcf21b549e226b0d264305d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 64eff648f1d44d5f7534083939822c26c4ae825f
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142473"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558444"
 ---
 # <a name="understand-your-use-cases"></a>ユース ケースを理解する
 
@@ -53,7 +53,7 @@ Teams アプリには、次の主要な機能のいずれか、またはすべ�
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-personal-apps-2021.png" alt-text="Teams クライアントでの個人用アプリの外観の概念表現。" border="false":::
+:::image type="content" source="../../assets/images/overview-personal-apps-2021.png" alt-text="Teams クライアントでの個人用アプリの外観の概念表現。":::
 
    :::column-end:::
 
@@ -70,7 +70,7 @@ Web ベースのコンテンツを[タブ](../../tabs/what-are-tabs.md)に表示
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-channel-chat-apps-2021.png" alt-text="Teams クライアントでタブがどのように表示されるかについての概念的な表現。" border="false":::
+:::image type="content" source="../../assets/images/overview-channel-chat-apps-2021.png" alt-text="Teams クライアントでタブがどのように表示されるかについての概念的な表現。":::
 
    :::column-end:::
 
@@ -87,7 +87,7 @@ Web ベースのコンテンツを[タブ](../../tabs/what-are-tabs.md)に表示
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-bots-2021.png" alt-text="Teams クライアントでボットがどのように表示されるかについての概念的な表現。" border="false":::
+:::image type="content" source="../../assets/images/overview-bots-2021.png" alt-text="Teams クライアントでボットがどのように表示されるかについての概念的な表現。":::
 
    :::column-end:::
 
@@ -105,7 +105,7 @@ Web ベースのコンテンツを[タブ](../../tabs/what-are-tabs.md)に表示
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="Teams クライアントでメッセージ拡張機能がどのように表示されるかについての概念的な表現。" border="false":::
+:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="Teams クライアントでメッセージ拡張機能がどのように表示されるかについての概念的な表現。":::
 
    :::column-end:::
 :::row-end:::
@@ -122,7 +122,7 @@ Web ベースのコンテンツを[タブ](../../tabs/what-are-tabs.md)に表示
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-meeting-extensions-2021.png" alt-text="Teams クライアントでの会議拡張機能の概念表現。" border="false":::
+:::image type="content" source="../../assets/images/overview-meeting-extensions-2021.png" alt-text="Teams クライアントでの会議拡張機能の概念表現。":::
 
    :::column-end:::
 :::row-end:::
@@ -139,7 +139,7 @@ Web ベースのコンテンツを[タブ](../../tabs/what-are-tabs.md)に表示
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-connectors.png" alt-text="Teams クライアントでコネクタがどのように表示されるかについての概念的な表現。" border="false":::
+:::image type="content" source="../../assets/images/overview-connectors.png" alt-text="Teams クライアントでコネクタがどのように表示されるかについての概念的な表現。":::
 
    :::column-end:::
 :::row-end:::
@@ -156,7 +156,7 @@ Web ベースのコンテンツを[タブ](../../tabs/what-are-tabs.md)に表示
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-graph.png" alt-text="Microsoft Graph for Teams についての概念的な表現。" border="false":::
+:::image type="content" source="../../assets/images/overview-graph.png" alt-text="Microsoft Graph for Teams についての概念的な表現。":::
 
    :::column-end:::
 :::row-end:::

@@ -5,12 +5,12 @@ description: オファーをライブプッシュする前に、Teams アプリ�
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.openlocfilehash: 3577ebc9fb9e6126b25b6e131e9abb8d902634b2
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 3637ca7d8c488b106ec570ea75cdc67b44d90600
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123704"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558745"
 ---
 # <a name="test-preview-for-monetized-apps"></a>収益化されたアプリのテスト プレビュー
 
@@ -26,11 +26,11 @@ ms.locfileid: "66123704"
 1. SaaS オファーの[プレビュー対象ユーザー](/azure/marketplace/create-new-saas-offer-preview)を追加します。
 1. **[ライブに移動]** の下の **[AppSource プレビュー]** リンクを選択して、*publisherId.offerId-preview* 形式のブラウザー アドレス バーでプレビュー オファー ID を見つけます。
 
-    :::image type="content" source="../../../../assets/images/apps-in-meetings/publish-status-publisher-signoff.png" alt-text="プレビュー オファー ID" border="true" :::
+    :::image type="content" source="../../../../assets/images/apps-in-meetings/publish-status-publisher-signoff.png" alt-text="プレビュー オファー ID" :::
 
 1. ブラウザーのアドレス バーからプレビュー オファー ID をコピーします。
 
-      :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-preview-offer-id.png" alt-text="プレビュー オファー ID" border="true" :::
+      :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-preview-offer-id.png" alt-text="プレビュー オファー ID" :::
 
     > [!NOTE]
     > パブリック オファー ID とは異なり、プレビュー オファー ID は *-preview* サフィックスで認識できます。例:**publisherId.offerId-preview**
@@ -68,7 +68,7 @@ subscriptionOffer プロパティがアプリ マニフェストに追加され�
 
 プレビュー オファーがアプリ マニフェストで指定され、プレビュー対象ユーザーがオファーのパートナー センターで定義されている場合、ユーザーには **[サブスクリプションの購入]** ボタンが表示されます。
 
-:::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-buy-subscription.png" alt-text="サブスクリプションを購入する" border="true":::
+:::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-buy-subscription.png" alt-text="サブスクリプションを購入する":::
 
 ### <a name="error-scenarios"></a>エラー シナリオ
 
@@ -76,13 +76,13 @@ subscriptionOffer プロパティがアプリ マニフェストに追加され�
 
   **-preview** でプランが見つかりません。 プレビュー対象ユーザーであることを確認してください。
 
-  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-audience.png" alt-text="プレビュー対象ユーザーなし" border="true" :::
+  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-audience.png" alt-text="プレビュー対象ユーザーなし" :::
 
 * アプリ マニフェストで指定されたオファー ID がプレビュー オファーでない場合、アプリはユーザーに次の警告メッセージを表示し、サイドローディングは無効になります。
   
   これはプレビュー オファーではありません。 必ず **-preview** をオファー ID に追加してください。
 
-  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-offer-id.png" alt-text="-preview なし" border="true" :::
+  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-offer-id.png" alt-text="-preview なし" :::
 
 ## <a name="see-also"></a>関連項目
 

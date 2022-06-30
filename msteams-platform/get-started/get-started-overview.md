@@ -3,12 +3,12 @@ title: 概要-開始する
 description: このモジュールでは、一般的なツール、基本的な概念、高度な機能を紹介する Microsoft Teams 開発者向けドキュメントの使用を開始する方法について説明します。
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 09522f4509d9e9c73c7b854b57fbb7ad5e982ba2
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 050e4a7bbf078686fa400858c684c6500ca71c1c
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143159"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558703"
 ---
 # <a name="get-started"></a>概要
 
@@ -50,7 +50,7 @@ Microsoft Teams 用のカスタマイズ アプリの構築・展開にあたり
 > [!div class="nextstepaction"]
 > [React を使用して JavaScript で Teams タブ アプリを構築する](../sbs-gs-javascript.yml)
 > [!div class="nextstepaction"]
-> [React を使用して JavaScript で Teams ボット アプリを構築する](../sbs-gs-bot.yml)
+> [JavaScript で Teams ボット アプリを構築する](../sbs-gs-bot.yml)
 > [!div class="nextstepaction"]
 > [React を使用して JavaScript で Teams メッセージ拡張アプリを構築する](../sbs-gs-msgext.yml)
 > [!div class="nextstepaction"]

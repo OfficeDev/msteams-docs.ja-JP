@@ -5,12 +5,12 @@ description: アプリの計画中に考慮すべき質問、ユーザーとそ�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 01dfa683150070a2508173fb55991388ad877517
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 60b0d1ed461ec7c632b1d488c65ac2c43f05f3ac
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123112"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558129"
 ---
 # <a name="teams-app-planning-checklist"></a>Teams アプリの計画チェックリスト
 
@@ -129,7 +129,7 @@ ms.locfileid: "66123112"
 
 Teams でアプリがホストされない。 ユーザーが Teams にアプリをインストールすると、構成ファイル (アプリ マニフェストとも呼ばれます) とアプリのアイコンのみを含むアプリ パッケージがインストールされます。 アプリのロジックとデータ ストレージは、開発中のローカルホストや Azure Web サービスなど、他の場所でホストされます。 Teams は HTTPS 経由でこれらのリソースにアクセスします。
 
-:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Teams アプリのアプリホスティングを示す図" border="true":::
+:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Teams アプリのアプリホスティングを示す図":::
 
 ## <a name="plan-beyond-app-building"></a>アプリのビルド以外の計画
 

@@ -5,12 +5,12 @@ description: アプリの計画、ユース ケースの理解、アプリの機
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: bb72b099c82e12190cbdb955d68362dda731a939
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 7f1d12f1fe1e38ba674ca0ef4f21619ea0eb1b4a
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150688"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558717"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Teams の機能を使用してアプリを計画する
 
@@ -28,7 +28,7 @@ ms.locfileid: "66150688"
 
 プラットフォームとしての Teams は、アプリ開発のあらゆる段階でツールキット、ライブラリ、アプリを提供します。 アプリ構築ライフサイクルに分割しましょう。
 
-:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="アプリの計画を示す図" border="true":::
+:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="アプリの計画を示す図":::
 
 * [ビルド前](#before-you-build)
 * [ビルド中](#during-build)
@@ -53,7 +53,7 @@ ms.locfileid: "66150688"
 
 * **Teams をプラットフォームとして使用**: Teams プラットフォームを使用すると、単一または複数機能のアプリを構築できます。 Teams アプリは、アプリ エクスペリエンスを強化する統合された製品とサービスによって支えられています。
 
-    :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Teams ソリューションの概念表現" border="true":::
+    :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Teams ソリューションの概念表現":::
 
     アプリは、タブ、ボット、メッセージ拡張機能、コネクタ、Webhook として、またはマルチ機能アプリとして Teams に表示されます。 これらの機能は、タスクとプロセスの自動化に役立つ Azure、Microsoft Graph、SharePoint、Power アプリによってバックエンドに搭載されています。
 

@@ -16,11 +16,11 @@ Visual Studio Code のサイド バーで Teams Toolkit :::image type="icon" sou
 
 1. **[クラウドにプロビジョニング]** を選択します。
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="プロビジョニング コマンドを示すスクリーンショット" border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="プロビジョニング コマンドを示すスクリーンショット":::
 
 1. Azure リソースに使用するサブスクリプションを選択します。
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="プロビジョニング用のリソースを示すスクリーンショット" border="false":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="プロビジョニング用のリソースを示すスクリーンショット":::
 
    > [!NOTE]
    > アプリをホストするために使用される Azure リソースは常にあります。
@@ -29,21 +29,21 @@ Visual Studio Code のサイド バーで Teams Toolkit :::image type="icon" sou
 
 1. [ **プロビジョニング**] を選択します。
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="プロビジョニング ダイアログのスクリーンショット。" border="true":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="プロビジョニング ダイアログのスクリーンショット。":::
 
    プロビジョニング プロセスによって、Azure クラウドにリソースが作成されます。 時間がかかる場合があります。 右下隅にあるダイアログを見て、進行状況を監視できます。 数分後、次の通知が表示されます。
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsg.png" alt-text="プロビジョニング完了のダイアログを示すスクリーンショット。" border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsg.png" alt-text="プロビジョニング完了のダイアログを示すスクリーンショット。":::
 
     必要に応じて、プロビジョニングされたリソースを表示できます。 このチュートリアルでは、リソースを表示する必要はありません。
 
     プロビジョニングされたリソースが **[環境** ] セクションに表示されます。
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="プロビジョニング完了のダイアログを示すスクリーンショット。" border="false":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="プロビジョニング完了のダイアログを示すスクリーンショット。":::
 
 1. プロビジョニングが完了したら、[**デプロイ]** パネルから [**クラウドにデプロイ**] を選択します。
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="クリックしてクラウドにデプロイする場所を示すスクリーンショット。" border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="クリックしてクラウドにデプロイする場所を示すスクリーンショット。":::
 
    プロビジョニングと同様に、デプロイには時間がかかります。 プロセスを監視するには、右下隅にあるダイアログを確認します。 数分後、完了通知が表示されます。
 
@@ -80,13 +80,13 @@ Visual Studio Code のサイド バーで Teams Toolkit :::image type="icon" sou
 1. 起動構成ドロップダウンから [ **Launch Remote (Edge)]** を選択します。
 1. **デバッグの開始 (F5)** を選択して、Azure からアプリを起動します。
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="起動アプリをリモートで示すスクリーンショット。" border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="起動アプリをリモートで示すスクリーンショット。":::
 
 1. アプリを Teams にサイドロードするように求められたら、[ **追加]** を選択します。
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="インストールされているアプリを示すスクリーンショット。" border="false":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="インストールされているアプリを示すスクリーンショット。":::
 
     おめでとうございます。最初のタブ アプリは Azure 環境で実行されています。
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="スクリーンショットは、アプリを今すぐまたは後で試すためのメッセージを示しています" border="true":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="スクリーンショットは、アプリを今すぐまたは後で試すためのメッセージを示しています":::
  

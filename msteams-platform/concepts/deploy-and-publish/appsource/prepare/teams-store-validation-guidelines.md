@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 45c19a5d7089fae85326e303641a8c9a281c7eb0
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: ac1b53cadcaab6b9ab82bdf62a3f4735a7abe2ad
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503740"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558122"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams ストア検証ガイドライン
 
@@ -25,67 +25,67 @@ ms.locfileid: "66503740"
 
 :::row:::
    :::column:::
-      :::image type="content" source="../../../../assets/icons/value-proposition.png" alt-text="value-proposition-teams" link="#value-proposition" border="false":::
+      :::image type="content" source="../../../../assets/icons/value-proposition.png" alt-text="value-proposition-teams" link="#value-proposition":::
    :::column-end:::
    :::column span="":::
-     :::image type="content" source="../../../../assets/icons/security.png" alt-text="security-store" link="#security" border="false":::
+     :::image type="content" source="../../../../assets/icons/security.png" alt-text="security-store" link="#security":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/function.png" alt-text="機能" link="#general-functionality-and-performance" border="false":::
+      :::image type="content" source="../../../../assets/icons/function.png" alt-text="機能" link="#general-functionality-and-performance":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/package.png" alt-text="app-package" link="#app-package-and-store-listing" border="false":::
+      :::image type="content" source="../../../../assets/icons/package.png" alt-text="app-package" link="#app-package-and-store-listing":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/saas-offer.PNG" alt-text="SaaS" link="#apps-linked-to-saas-offer" border="false":::
+      :::image type="content" source="../../../../assets/icons/saas-offer.PNG" alt-text="SaaS" link="#apps-linked-to-saas-offer":::
    :::column-end:::
 :::row-end:::
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/tab.png" alt-text="tab-teams" link="#tabs" border="false":::
+      :::image type="content" source="../../../../assets/icons/tab.png" alt-text="tab-teams" link="#tabs":::
    :::column-end:::
    :::column:::
-      :::image type="content" source="../../../../assets/icons/bot.png" alt-text="bot-teams" link="#bots-1" border="false":::
+      :::image type="content" source="../../../../assets/icons/bot.png" alt-text="bot-teams" link="#bots-1":::
    :::column-end:::
    :::column span="":::
-     :::image type="content" source="../../../../assets/icons/messaging-extension.png" alt-text="メッセージング" link="#message-extensions" border="false":::
+     :::image type="content" source="../../../../assets/icons/messaging-extension.png" alt-text="メッセージング" link="#message-extensions":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/task-module.png" alt-text="task-module-teams" link="#task-modules" border="false":::
+      :::image type="content" source="../../../../assets/icons/task-module.png" alt-text="task-module-teams" link="#task-modules":::
    :::column-end:::
      :::column span="":::
-      :::image type="content" source="../../../../assets/icons/meeting.png" alt-text="meeting-extension" link="#meeting-extensions" border="false":::
+      :::image type="content" source="../../../../assets/icons/meeting.png" alt-text="meeting-extension" link="#meeting-extensions":::
    :::column-end:::
 :::row-end:::
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/empty.png" alt-text="empty-2" border="false":::
+      :::image type="content" source="../../../../assets/icons/empty.png" alt-text="empty-2":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/notifications.png" alt-text="teams-notification" link="#notifications" border="false":::
+      :::image type="content" source="../../../../assets/icons/notifications.png" alt-text="teams-notification" link="#notifications":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/microsoft-365.png" alt-text="microsoft" link="#microsoft-365-app-compliance-program" border="false":::
+      :::image type="content" source="../../../../assets/icons/microsoft-365.png" alt-text="microsoft" link="#microsoft-365-app-compliance-program":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/advertising.png" alt-text="advertising-teams" link="#advertising" border="false":::
+      :::image type="content" source="../../../../assets/icons/advertising.png" alt-text="advertising-teams" link="#advertising":::
    :::column-end:::
    :::column span="":::
-      :::image type="content" source="../../../../assets/icons/empty.png" alt-text="empty-1" border="false":::
+      :::image type="content" source="../../../../assets/icons/empty.png" alt-text="empty-1":::
    :::column-end:::
 :::row-end:::
 
 ## <a name="value-proposition"></a>価値提案
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用認定ポリシー番号 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) に沿ったものであり、そのオファーの価値提案に関して、Microsoft Teams アプリの開発者に追加のガイダンスを提供します。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、[Microsoft 商用認定ポリシー番号 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) に沿ったものであり、そのオファーの価値提案に関して、Microsoft Teams アプリの開発者に追加のガイダンスを提供します。
 
 ### <a name="app-name"></a>アプリ名
 
 [*必須の修正プログラム*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、Microsoft [商用認定ポリシー番号 1140.1.1](/legal/marketplace/certification-policies#114011-app-name) に沿ったものであり、それらのアプリの名前の指定に関して、開発者に追加のガイダンスを提供します。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、Microsoft [商用認定ポリシー番号 1140.1.1](/legal/marketplace/certification-policies#114011-app-name) に沿ったものであり、それらのアプリの名前の指定に関して、開発者に追加のガイダンスを提供します。
 <br></br>
 <details><summary>詳細を知るために展開する</summary>
 
@@ -117,9 +117,9 @@ ms.locfileid: "66503740"
 
 ### <a name="suitable-for-workplace-consumption"></a>職場での消費に適していること
 
-[*必須の修正プログラム*]
+[*必須の修正*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、Microsoft 商用認定ポリシー番号 [1140.1.2](/legal/marketplace/certification-policies#114012-workplace-appropriateness)、[100.8](/legal/marketplace/certification-policies#1008-significant-value)、[100.10](/legal/marketplace/certification-policies#10010-inappropriate-content) に沿ったものであり、開発者に職場に適したアプリを構築するための追加のガイダンスを提供します。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、Microsoft 商用認定ポリシー番号 [1140.1.2](/legal/marketplace/certification-policies#114012-workplace-appropriateness)、[100.8](/legal/marketplace/certification-policies#1008-significant-value)、[100.10](/legal/marketplace/certification-policies#10010-inappropriate-content) に沿ったものであり、開発者に職場に適したアプリを構築するための追加のガイダンスを提供します。
 <br></br>
 <details><summary>詳細を知るために展開する</summary>
 
@@ -133,7 +133,7 @@ ms.locfileid: "66503740"
 
 [*必須の修正*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用認定ポリシー番号 1140.1.3](/legal/marketplace/certification-policies#114013-other-platforms-and-services) に沿ったものです。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、[Microsoft 商用認定ポリシー番号 1140.1.3](/legal/marketplace/certification-policies#114013-other-platforms-and-services) に沿ったものです。
 
 アプリ内では、Teams のエクスペリエンスが占有的である必要があります。アプリ コンテンツやアプリのメタデータには、他の同様のチャットベースのコラボレーション プラットフォームやサービスから取られた、名前、アイコン、またはイメージを含めてはいけません。ただし、アプリが特定の相互運用性を提供している場合はその限りではありません。
 
@@ -143,9 +143,9 @@ ms.locfileid: "66503740"
 
 ### <a name="authentication"></a>認証
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用認定ポリシー番号 1140.1.4](/legal/marketplace/certification-policies#114014-access-to-services) に沿ったものであり、外部サービスを使用したそれらのアプリの認証に関して、開発者にガイダンスを提供します。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、[Microsoft 商用認定ポリシー番号 1140.1.4](/legal/marketplace/certification-policies#114014-access-to-services) に沿ったものであり、外部サービスを使用したそれらのアプリの認証に関して、開発者にガイダンスを提供します。
 
 アプリ認証を実装する方法の詳細については、「[Teams での認証](~/concepts/authentication/authentication.md)」を参照してください。
 <br></br>
@@ -169,13 +169,13 @@ ms.locfileid: "66503740"
 
 ## <a name="security"></a>セキュリティ
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用認定ポリシー番号 1140.3](/legal/marketplace/certification-policies#11403-security) と一致します。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、[Microsoft 商用認定ポリシー番号 1140.3](/legal/marketplace/certification-policies#11403-security) と一致します。
 
 ### <a name="financial-information"></a>財務情報
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは [Microsoft 商用認定ポリシー番号 1140.3.1](/legal/marketplace/certification-policies#114031-financial-transactions) に沿ったもので、Teams インターフェイス内の財務情報の送信に関するガイダンスを提供し、Teams アプリのモバイル (Android および iOS) バージョンでの制限付き支払いのシナリオを開発者に対して示します。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは [Microsoft 商用認定ポリシー番号 1140.3.1](/legal/marketplace/certification-policies#114031-financial-transactions) に沿ったもので、Teams インターフェイス内の財務情報の送信に関するガイダンスを提供し、Teams アプリのモバイル (Android および iOS) バージョンでの制限付き支払いのシナリオを開発者に対して示します。
 <br></br>
 <details><summary>詳細を知るために展開する</summary>
 
@@ -203,9 +203,9 @@ iOS 版または Android 版 Teams で実行するアプリは、以下のガイ
 
 ### <a name="bots"></a>ボット
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.3.2](/legal/marketplace/certification-policies#114032-bots-and-messaging-extension) に沿ったものです。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.3.2](/legal/marketplace/certification-policies#114032-bots-and-messaging-extension) に沿ったものです。
 <br></br>
 <details><summary>詳細を知るために展開する</summary>
 
@@ -219,9 +219,9 @@ Microsoft Azure Bot Service を使用するアプリ (ボットやメッセー�
 
 ### <a name="external-domains"></a>外部ドメイン
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー番号 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains) に沿ったもので、`validDomains` マニフェスト プロパティでの制限付きドメインの使用に関する開発者向けのガイダンスを提供します。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー番号 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains) に沿ったもので、`validDomains` マニフェスト プロパティでの制限付きドメインの使用に関する開発者向けのガイダンスを提供します。
 <br></br>
 <details><summary>詳細を知るために展開する</summary>
 
@@ -246,11 +246,11 @@ Government Community Cloud (GCC) ユーザーにアプリを配布するには�
 
 ## <a name="general-functionality-and-performance"></a>一般的な機能とパフォーマンス
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4](/legal/marketplace/certification-policies#11404-functionality) に沿ったものです。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4](/legal/marketplace/certification-policies#11404-functionality) に沿ったものです。
 
 ### <a name="launching-external-functionality"></a>外部機能の起動
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
 アプリの主要なユーザー シナリオにおいて、ユーザーがTeams から離れることがあってはなりません。  アプリ内のコンテンツの表示やユーザーとのやり取りは、ボット、アダプティブ カード、タブ、タスク モジュールなど、Teams の機能の範囲内で実行される必要があります。
 <br></br>
@@ -264,7 +264,7 @@ Government Community Cloud (GCC) ユーザーにアプリを配布するには�
 
 ### <a name="compatibility"></a>互換性
 
-[*必須の修正プログラム*]
+[*必須の修正*]
 
 アプリは、以下のオペレーティング システムやブラウザーの最新バージョンで完全に機能する必要があります。
 
@@ -305,7 +305,7 @@ Teams アプリは、合理的な時間内に応答するか、読み込み中�
 
 ### <a name="app-manifest"></a>アプリ マニフェスト
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
 Teams アプリ マニフェストは、アプリの構成を定義します。
 
@@ -486,7 +486,7 @@ Teams アプリに特化した特定のポリシーも、すべてのサービ�
 
 ## <a name="apps-linked-to-saas-offer"></a>SaaS オファーに関連付けられたアプリ
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.5](/legal/marketplace/certification-policies?branch=pr-en-us-5673) に沿ったものです。 SaaS オファーにリンクされた Teams アプリを構築する場合は、これらのガイドラインに準拠していることを確認してください。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.5](/legal/marketplace/certification-policies?branch=pr-en-us-5673) に沿ったものです。 SaaS オファーにリンクされた Teams アプリを構築する場合は、これらのガイドラインに準拠していることを確認してください。
 <br></br>
 <details><summary>全般</summary>
 
@@ -545,7 +545,7 @@ Teams アプリに特化した特定のポリシーも、すべてのサービ�
 
 ## <a name="tabs"></a>タブ
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.2](/legal/marketplace/certification-policies#114042-tabs) に沿ったものです。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.2](/legal/marketplace/certification-policies#114042-tabs) に沿ったものです。
 アプリにタブが含まれている場合は、以下のガイドラインに従っていることを確認してください。
 > [!TIP]
 > 高品質なアプリ エクスペリエンスを作成するための詳細については、「[Teams タブ デザインのガイドライン](~/tabs/design/tabs.md)」を参照してください。
@@ -603,7 +603,7 @@ Teams アプリに特化した特定のポリシーも、すべてのサービ�
 
 ナビゲーションに関するガイドラインは次のとおりです。
 
-* タブは、Teams の主要なナビゲーションと競合するようなナビゲーションを設定してはなりません。 タブに左ナビゲーションを指定する場合は、アイコンのみやテキストが上下に並べて表示されたアイコンを含めてはいけません。 これは、テキストが上下に並べて表示されたアイコン (Teams のナビゲーション バーを模倣したもの) を表示するオプションを持つ折りたたみ可能なレールであってはいけません。 インライン テキストやテキストのみを持つアイコンを含めるか、タブ左レールの代わりにハンバーガー メニューを使用します。 [*必須の修正*]
+* タブは、Teams の主要なナビゲーションと競合するようなナビゲーションを設定してはなりません。 タブに左ナビゲーションを指定する場合は、アイコンのみやテキストが上下に並べて表示されたアイコンを含めてはいけません。 これは、テキストが上下に並べて表示されたアイコン (Teams のナビゲーション バーを模倣したもの) を表示するオプションを持つ折りたたみ可能なレールであってはいけません。 インライン テキストやテキストのみを持つアイコンを含めるか、タブ左レールの代わりにハンバーガー メニューを使用します。 [*必須の修正プログラム*]
 
 Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-basic-ui-components.md) と [Advanced](~\concepts\design\design-teams-app-advanced-ui-components.md) を使用してアプリをデザインしてください。
 
@@ -696,7 +696,7 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
 
 ## <a name="bots"></a>ボット
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.3](/legal/marketplace/certification-policies#114043-bots) に沿ったものです。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.3](/legal/marketplace/certification-policies#114043-bots) に沿ったものです。
 
 アプリにボットが含まれている場合は、以下のガイドラインに従っていることを確認してください。
 
@@ -824,7 +824,7 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
 
 ## <a name="message-extensions"></a>メッセージの拡張機能
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.4](/legal/marketplace/certification-policies#114044-messaging-extensions) に沿ったものです。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.4](/legal/marketplace/certification-policies#114044-messaging-extensions) に沿ったものです。
 
 アプリにメッセージ拡張機能が含まれている場合は、以下のガイドラインに従っていることを確認してください。
 
@@ -902,7 +902,7 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
 
 [*必須の修正*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.5](/legal/marketplace/certification-policies#114045-task-modules) に沿ったものです。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.5](/legal/marketplace/certification-policies#114045-task-modules) に沿ったものです。
 <br></br>
 <details><summary>詳細を知るために展開する</summary>
 
@@ -921,7 +921,7 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
 
 ## <a name="meeting-extensions"></a>ミーディング拡張機能
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.6](/legal/marketplace/certification-policies#114046-meeting-extensions) に沿ったものです。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.6](/legal/marketplace/certification-policies#114046-meeting-extensions) に沿ったものです。
 > [!TIP]
 > 高品質なアプリ エクスペリエンスを作成するための詳細については、「[Teams ミーティング拡張機能デザインのガイドライン](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)」を参照してください。
 
@@ -1008,7 +1008,7 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
 
 ## <a name="notifications"></a>通知
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.7](/legal/marketplace/certification-policies#114047-notification-apis) に沿ったものです。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.4.7](/legal/marketplace/certification-policies#114047-notification-apis) に沿ったものです。
 
 アプリで [Microsoft Graph が提供するアクティビティ フィード API](/graph/teams-send-activityfeednotifications) を使用する場合は、以下のガイドラインを遵守してください。
 <br></br>
@@ -1044,7 +1044,7 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
 
 ## <a name="microsoft-365-app-compliance-program"></a>Microsoft 365 アプリ コンプライアンス プログラム
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.6](/legal/marketplace/certification-policies#11406-publisher-attestation) に沿ったものです。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.6](/legal/marketplace/certification-policies#11406-publisher-attestation) に沿ったものです。
 <br></br>
 <details><summary>詳細を知るために展開する</summary>
 
@@ -1056,13 +1056,13 @@ Microsoft 365 アプリ コンプライアンス プログラムは、アプリ�
 
 * **発行元の構成証明**: 潜在的な顧客がアプリの使用を適切な情報に基づいて判断できるように、一般的な情報、データの取り扱い、セキュリティとコンプライアンスに関する情報を共有するプロセス。
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: 過去に登録済みのアプリを提出する場合、そのアプリが Teams ストアに登録されるまでは、正式に発行元の構成証明を完了することができません。 登録されたことのあるアプリを更新する場合は、アプリの最新バージョンを提出する前に発行元の構成証明を完了してください。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: 過去に登録済みのアプリを提出する場合、そのアプリが Teams ストアに登録されるまでは、正式に発行元の構成証明を完了することができません。 登録されたことのあるアプリを更新する場合は、アプリの最新バージョンを提出する前に発行元の構成証明を完了してください。
 
 </details>
 
 ## <a name="advertising"></a>広告
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png" border="false"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.7](/legal/marketplace/certification-policies#11407-advertising) に沿ったものです。
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.7](/legal/marketplace/certification-policies#11407-advertising) に沿ったものです。
 
 アプリは、動的な広告、バナー広告、メッセージ内広告などの広告を表示してはいけません。
 

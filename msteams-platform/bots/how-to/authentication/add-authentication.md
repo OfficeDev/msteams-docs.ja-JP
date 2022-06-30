@@ -5,12 +5,12 @@ description: Azure Active Directory を使用して Teams のボットに OAuth 
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 297307657905a1492abc68fde7d69cfbc0702497
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 8470e281d7a6f3c0e18acda0548bf1b9a7480d85
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484972"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558857"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Teams ボットに認証を追加する
 
@@ -141,7 +141,7 @@ Microsoft Teams チャネルに追加するには:
 
 1. **[最近使ったリソース]** セクションに一覧表示されているボット開きます。
 
-1. 左側のウィンドウで **[チャネル]** を選択し、**Microsoft Teams**:::image type="icon" source="../../../assets/icons/teams-icon.png" border="false":::を選択します。
+1. 左側のウィンドウで **[チャネル]** を選択し、**Microsoft Teams**:::image type="icon" source="../../../assets/icons/teams-icon.png":::を選択します。
 
    :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="チャネル Teams":::
 

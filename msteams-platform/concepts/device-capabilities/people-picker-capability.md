@@ -4,12 +4,12 @@ description: この記事では、Teams JavaScript クライアント SDK を使
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 0da107c4086d7eae568990746a877b79f030a564
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: d2be8b5cf0140b451ca870874f66e18aa727609f
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130446"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66557730"
 ---
 # <a name="integrate-people-picker"></a>ユーザー ピッカーを統合する
 
@@ -53,7 +53,7 @@ Teams アプリでユーザー ピッカー入力コントロールを統合す�
 1. 必要なユーザーの名前を入力します。 リストに名前の候補が表示されます。
 1. リストから必要なユーザーの名前を選択します。
 
-   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="ピッカーとピッカー モバイル" border="true":::
+   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="ピッカーとピッカー モバイル":::
 
 # <a name="desktop"></a>[デスクトップ](#tab/Sampledesktop)
 
@@ -62,7 +62,7 @@ Web またはデスクトップ上のユーザー ピッカー コントロー�
 1. 必要なユーザーの名前を入力します。 リストに名前の候補が表示されます。
 1. リストから必要なユーザーの名前を選択します。
 
-   :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="デスクトップ名によるユーザー ピッカー" border="true":::
+   :::image type="content" source="../../assets/images/tabs/select-people-picker-byname.png" alt-text="デスクトップ名によるユーザー ピッカー":::
 
 ---
 

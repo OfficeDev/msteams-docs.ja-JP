@@ -5,12 +5,12 @@ description: このラーニング パスを使用して、Microsoft Teams の�
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 6eea7c4d42ff63e11b5096542271e22d3e71328c
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 867aa827d83bd60432bd010eb6943cefccc82593
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503761"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558318"
 ---
 # <a name="build-bots-for-teams"></a>Teams 用のボットを構築する
 
@@ -33,7 +33,7 @@ ms.locfileid: "66503761"
 
 カード、テキスト、タスク モジュールの適切な組み合わせを使用して、便利なボットを作成します。 次の図は、テキストカードと対話型カードを使用して、1 対 1 のチャットでボットと会話するユーザーを示しています。
 
-:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="サンプル FAQ ボット" border="true":::
+:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="サンプル FAQ ボット":::
 
 ユーザーとボットの間のすべての対話は、アクティビティとして表されます。 ボットは、アクティビティを受け取ると、そのアクティビティ ハンドラーに渡します。 [ボット アクティビティ ハンドラー](~/bots/bot-basics.md)を参照してください。
 

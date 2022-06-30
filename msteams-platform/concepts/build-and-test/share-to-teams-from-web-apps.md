@@ -1,46 +1,46 @@
 ---
 title: Web アプリから Teams に共有する
-description: コード サンプルを使用して、Web サイトのプレビューを使用して、Web サイトの埋め込みボタンTeams共有を追加する方法について説明します
+description: コード サンプルを使用して、Web サイトのプレビューを使用して、Web サイトの [Teams に共有] 埋め込みボタンを追加する方法について説明します
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: de5bf1d762a39b5dce222cd4260f03bf461f5547
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: b555d0e111a16be2e5be45e07998aeb94e432901
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190016"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558479"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Web アプリから Teams に共有する
 
-サードパーティの Web サイトは、ランチャー スクリプトを使用して、Web ページに [Teams に共有​​] ボタンを埋め込むことができます。 [共有してTeams] ボタンを選択すると、ポップアップ ウィンドウで [共有してTeamsエクスペリエンス] が起動します。 これにより、コンテキストを切り替えることなく、任意のユーザーまたはMicrosoft Teams チャネルへのリンクを直接共有できます。
+サードパーティの Web サイトは、ランチャー スクリプトを使用して、Web ページに [Teams に共有​​] ボタンを埋め込むことができます。 [Teams に共有] ボタンを選択すると、ポップアップ ウィンドウで Teams への共有エクスペリエンスが起動します。 これにより、コンテキストを切り替えることなく、任意のユーザーまたは Microsoft Teams チャネルへのリンクを直接共有できます。
 
-次の図は、[Share to Teams プレビュー エクスペリエンス] のポップアップ ウィンドウを表示します。
+次の図は、Teams への共有プレビュー エクスペリエンスのポップアップ ウィンドウを表示します。
 
-:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="共有からTeamsへのポップアップ" border="true":::
+:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="チーム間の共有ポップアップ":::
 
 > [!NOTE]
 >
 > * Microsoft&nbsp;Edge と Google Chrome のデスクトップ バージョンのみがサポートされています。
 > * Freemium またはゲスト アカウントの使用はサポートされていません。
 
-また、Web アプリ、個人用アプリ、またはタブでホストされている [共有] から [Teams] ボタンに共有されているリンクのリンクを展開解除することもできます。詳細については、[リンク解除に関するページを](~/messaging-extensions/how-to/link-unfurling.md)参照してください。
+また、Web アプリ、個人用アプリ、またはタブでホストされている [Teams に共有] ボタンを使用して共有されているリンクのリンクを展開解除することもできます。詳細については、 [リンク解除に関するページを](~/messaging-extensions/how-to/link-unfurling.md)参照してください。
 
-次の図は、[Teamsに共有] ボタンを使用したリンクの展開解除エクスペリエンスを示しています。
+次の図は、[Teams に共有] ボタンを使用したリンク解除エクスペリエンスを示しています。
 
-:::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="Share-to-Teams リンクの展開解除" border="true":::
+:::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="Share-to-Teams のリンク展開":::
 
 > [!NOTE]
-> 共有の展開をTeamsにリンクすることは、現在、パブリック開発者向けプレビューでのみ利用できます。
+> Teams への共有でのリンク解除は、現在、パブリック開発者向けプレビューでのみ使用できます。
 
-この記事では、Web サイトの [Share to Teams] ボタンを作成して埋め込み、Web サイトのプレビューを作成し、共有をMicrosoft Teams for Educationに拡張する方法について説明します。
+この記事では、Web サイトの [Teams に共有] ボタンを作成して埋め込み、Web サイトプレビューを作成し、共有をMicrosoft Teams for Educationに拡張する方法について説明します。
 
-[Teamsに共有] ボタンを埋め込む方法については、次のビデオを参照してください。
+Teams に共有ボタンを埋め込む方法については、次のビデオを参照してください。
 <br>
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vhWH]
 <br>
 
 
-## <a name="embed-a-share-to-teams-button"></a>[Teamsに共有を埋め込む] ボタン
+## <a name="embed-a-share-to-teams-button"></a>Teams への共有の埋め込みボタン
 
 1. Web ページに `launcher.js` スクリプトを追加します。
 
@@ -57,11 +57,11 @@ ms.locfileid: "66190016"
     </div>
     ```
 
-    これを完了すると、Teams アイコンが Web サイトに追加されます。 次の図は、[Teamsに共有] アイコンを示しています。
+    これを完了すると、Teams アイコンが Web サイトに追加されます。 次の図は、[Teams に共有] アイコンを示しています。
 
-    :::image type="content" source="~/assets/icons/share-to-teams-icon.png" alt-text="[Teamsに共有] アイコン" border="true":::
+    :::image type="content" source="~/assets/icons/share-to-teams-icon.png" alt-text="Teams に共有アイコン":::
 
-1. または、[共有するTeams] ボタンの別のアイコン サイズが必要な場合は、属性を`data-icon-px-size`使用します。
+1. または、[Teams に共有] ボタンに別のアイコン サイズが必要な場合は、属性を `data-icon-px-size` 使用します。
 
     ```html
     <div
@@ -71,7 +71,7 @@ ms.locfileid: "66190016"
     </div>
     ```
 
-1. 共有リンクにユーザー認証が必要であり、リンクの URL プレビューが共有されるTeamsでは適切にレンダリングされない場合は、属性セットを追加して URL プレビューを`data-preview``false`無効にすることができます。
+1. 共有リンクにユーザー認証が必要で、リンクの URL プレビューが Teams では適切にレンダリングされない場合は、属性セット`false`を追加して URL プレビューを`data-preview`無効にすることができます。
 
     ```html
     <div
@@ -96,7 +96,7 @@ ms.locfileid: "66190016"
 
 ## <a name="craft-your-website-preview"></a>Web サイトのプレビューを作成する
 
-Web サイトがTeamsに共有されている場合、選択したチャネルに挿入されるカードには、Web サイトのプレビューが含まれます。 このプレビューの動作を制御するには、URL など、共有されている Web サイトに適切なメタデータを確実に `data-href` 追加します。  
+Web サイトが Teams と共有されている場合、選択したチャネルに挿入されるカードには、Web サイトのプレビューが含まれます。 このプレビューの動作を制御するには、URL など、共有されている Web サイトに適切なメタデータを確実に `data-href` 追加します。  
 
 プレビューを表示するには:
 
@@ -105,7 +105,7 @@ Web サイトがTeamsに共有されている場合、選択したチャネル�
 
 次の表に、必要なタグの概要を示します。
 
-|Value|メタ タグ| Graphを開く|
+|値|メタ タグ| グラフを開く|
 |----|----|----|
 |Title|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
 |説明|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
@@ -115,17 +115,17 @@ HTML の既定のバージョンまたは Open Graph バージョンのいずれ
 
 ## <a name="share-to-teams-for-education"></a>Microsoft Teams for Educationに共有する
 
-[共有先] ボタン Teamsを使用する教師には、共有リンクに`Create an Assignment`基づいて選択したチームに割り当てを迅速に作成できる追加オプションがあります。 次の図は、教育用にTeamsに共有を表示します。
+[チームに共有] ボタンを使用する教師には、共有リンクに `Create an Assignment` 基づいて選択したチームに割り当てを迅速に作成できる追加オプションがあります。 次の図は、教育機関向けの Teams への共有を示しています。
 
-:::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="ポップアップ教育Teams共有する":::
+:::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="Teams ポップアップ教育に共有する":::
 
 ## <a name="full-launcherjs-definition"></a>完全なlauncher.js定義
 
-| プロパティ | HTML 属性 | 種類 | 既定値 | 説明 |
+| プロパティ | HTML 属性 | 型 | 既定値 | 説明 |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
-| href | `data-href` | 文字列 | 該当なし | 共有するコンテンツの href。 |
+| href | `data-href` | string | 該当なし | 共有するコンテンツの href。 |
 | preview | `data-preview` | ブール値 (文字列として) | `true` | 共有するコンテンツのプレビューを表示するかどうかを指定します。 |
-| iconPxSize | `data-icon-px-size` | number (文字列として) | `32` | レンダリングする [Teamsに共有] ボタンのサイズ (ピクセル単位)。 |
+| iconPxSize | `data-icon-px-size` | number (文字列として) | `32` | レンダリングする [Teams に共有] ボタンのサイズ (ピクセル単位)。 |
 | msgText | `data-msg-text` | string | 該当なし | メッセージ作成ボックスのリンクの前に挿入される既定のテキスト。 最大文字数は 200 文字です。 |
 | assignInstr | `data-assign-instr` | string | 該当なし | 割り当て "命令" フィールドに挿入される既定のテキスト。 最大文字数は 200 文字です。 |
 | assignTitle | `data-assign-title` | string | 該当なし | 割り当て "タイトル" フィールドに挿入する既定のテキスト。 最大文字数は 50 文字です。 |
@@ -140,7 +140,7 @@ HTML の既定のバージョンまたは Open Graph バージョンのいずれ
 
 ### <a name="set-default-form-values"></a>既定のフォーム値を設定する
 
-[Share to Teams] フォームの次のフィールドの既定値を設定できます。
+[Teams への共有] フォームで、次のフィールドの既定値を設定することを選択できます。
 
 * 次のことを言います。 `msgText`
 * 割り当ての手順: `assignInstr`

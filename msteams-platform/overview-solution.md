@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 22722d764cf498ff96bb81e9ede65c4ae112011f
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 3f1caf4605766c16a51272a8d4c30436930c7100
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190114"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558675"
 ---
 # <a name="the-teams-solution"></a>Teams ソリューション
 
@@ -32,19 +32,19 @@ Teams のプランのビューが表示されました。 ユーザーのニー�
 | ユーザー アプリのニーズ | 予報を確認する | 旅行前の通知 | 登録済みユーザー |
 | --- |:---:|:---:|:---:|
 | **機能** | Bot | &nbsp; | &nbsp; |
-| **統合** | &nbsp; | &nbsp; | :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Microsoft Graph、天気 API |
+| **統合** | &nbsp; | &nbsp; | :::image type="icon" source="assets/icons/microsoft-icon.png"::: Microsoft Graph、天気 API |
 | **スコープ** | &nbsp; | 個人用アプリ | &nbsp; |
 | **統合ポイント** | &nbsp; | チャット | &nbsp; |
 
 **Teams アプリ ソリューション**: 個人チャット ボットアプリTeams で、旅行日より前に *登録ユーザー* に *予報通知を確認して送信* する Teams の *個人用チャット ボット*。
 
-:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="旅行会社の開発者は、旅行日よりも前に計画できるように、天気予報を顧客に送信する Teams 用のボットを構築します" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="旅行会社の開発者は、旅行日よりも前に計画できるように、天気予報を顧客に送信する Teams 用のボットを構築します":::
 
 Teams では、機能豊富なアプリ ソリューションをユーザーに提供するために、これらの機能と多くの機能が提供されます。このアプリを開発するには:
 
 1. 個人用チャット ボット アプリを作成します。
 1. 外部の天気予報 API と統合して接続し、特定の日付と場所の予報を要求します。
-1. 登録済みユーザーの :::image type="icon" source="assets/icons/teams-icon.png" border="false"::: Microsoft Graph と統合します。
+1. 登録済みユーザーの :::image type="icon" source="assets/icons/teams-icon.png"::: Microsoft Graph と統合します。
 1. ユーザーの旅行日と旅行先の場所に基づいて、予報の詳細を確認して送信します。
 
 ## <a name="choose-what-suits-you"></a>自分に合ったものを選ぶ
@@ -53,7 +53,7 @@ Teams では、機能豊富なアプリ ソリューションをユーザーに�
 
 Teams アプリを使用すると、ビルド環境を柔軟に選択できます。 これには、アプリ開発に取り組むツール、フレームワーク、言語が含まれています。
 
-:::image type="content" source="../msteams-platform/assets/images/overview/tools-of-your-choice.png" alt-text="ビジネス ニーズ アプリ" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/tools-of-your-choice.png" alt-text="ビジネス ニーズ アプリ":::
 
 特定の要件に対応する環境で Teams アプリを構築します。組み合わせを選択することもできます。
 
@@ -65,14 +65,14 @@ Teams アプリを使用すると、ユーザーはコラボレーション ワ�
 
 Teams は、アプリを構築するためのプラットフォームとして、さまざまなアプリとツールキットを提供します。 Teams プラットフォームは、アプリの計画から配布まで、あらゆる段階でサポートします。
 
-:::image type="content" source="../msteams-platform/assets/images/overview/teams-dev-life-cycle.png" alt-text="Teams アプリ開発のライフ サイクルを説明します。計画、設計、ビルド、拡張、テスト、デプロイ、配布を以下に箇条書きにします。" border="false":::
+:::image type="content" source="../msteams-platform/assets/images/overview/teams-dev-life-cycle.png" alt-text="Teams アプリ開発のライフ サイクルを説明します。計画、設計、ビルド、拡張、テスト、デプロイ、配布を以下に箇条書きにします。":::
 
 Teams アプリの設計から構築、配布まで、さまざまなツールとサービスを使用できます。開発フローの例を次に示します:
 
 1. プロジェクトを計画し、要件を把握します。
 1. アプリを設計します。タブ UI を設計するには、Teams UI キットと UI ライブラリを使用します。
 1. Teams ツールキットを使用して JavaScript を使用してアプリを構築します。
-1. :::image type="icon" source="assets/icons/microsoft-icon.png" border="false"::: Microsoft Graph を使用して、さらに Teams の機能と M365 データを追加して、機能を拡張します。
+1. :::image type="icon" source="assets/icons/microsoft-icon.png"::: Microsoft Graph を使用して、さらに Teams の機能と M365 データを追加して、機能を拡張します。
 1. サンプル ユーザー データを使用して開発者テナントでアプリをテストします。
 1. アプリを Azure にデプロイします。
 1. 開発者ポータルを使用してアプリを管理し、ストアに公開します。 SaaS オファー、アプリ内購入などのオプションを使用してアプリを収益化します。

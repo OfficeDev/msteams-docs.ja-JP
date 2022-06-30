@@ -3,18 +3,18 @@ title: Teams の開発者向けの新機能
 description: このラーニング パスでは、Microsoft Teams の新しい開発者向け機能とそれらの機能の強化について説明します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 0b7c2078980748f8e0820348e23a22c57ac7c22f
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: c11cf1d18c07693cb04b186b5f810ffca833590b
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130467"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558570"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
 一般提供 (GA) および開発者プレビュー版の Microsoft Teams プラットフォーム機能をご紹介します。 RSS フィード[![ダウンロード フィード](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)に登録することで、Teams プラットフォームの最新情報を取得できるようになりました。 詳細については、「[RSS フィードの構成](#get-latest-updates)」を参照してください。
 
-## <a name="microsoft-build-2022-image-typeicon-sourceassetsimagesbullhornpng-borderfalse"></a>Microsoft Build 2022 :::image type="icon" source="assets/images/bullhorn.png" border="false"
+## <a name="microsoft-build-2022-image-typeicon-sourceassetsimagesbullhornpng"></a>Microsoft Build 2022 :::image type="icon" source="assets/images/bullhorn.png"
 
 | 日付 | 機能 | ここから見つける |
 | --- | --- | --- |

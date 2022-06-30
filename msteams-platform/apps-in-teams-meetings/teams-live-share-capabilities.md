@@ -4,16 +4,16 @@ description: このモジュールでは、Live Share SDK 機能、RSC アクセ
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: v-ypalikila
-ms.openlocfilehash: f5986515f9916a0138524b919dca46d0cf0ee8d4
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 35d5228ac39dd1a9d58d699d8c989aeeceaf765d
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143243"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503348"
 ---
 ---
 
-# <a name="live-share-capabilities"></a>Live Share 機能
+# <a name="live-share-core-capabilities"></a>Live Share コア機能
 
 Live Share SDK は、最小限の労力で会議拡張機能の `sidePanel` と `meetingStage` コンテキストに追加できます。 この記事では、Live Share SDK をアプリに統合する方法と、SDK の主な機能を中心に説明します。
 

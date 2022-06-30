@@ -3,12 +3,12 @@ title: 外部 OAuth プロバイダーを使用する
 description: このモジュールでは、外部 OAuth プロバイダーを使用して認証を行う方法と、それを外部ブラウザーに追加する方法について説明します
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 8a7d89bbe3c6109e52a4d22f4bc26eace7acc5d1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a27d4fdb861ef7e893807af7a4427662a61fa021
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142277"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558766"
 ---
 # <a name="use-external-oauth-providers"></a>外部 OAuth プロバイダーを使用する
 
@@ -44,7 +44,7 @@ function authenticate(authenticateParameters?: AuthenticateParameters)
 
 次の画像は、外部ブラウザーに認証を追加するためのフローを示しています。
 
- :::image type="content" source="../../../assets/images/tabs/tabs-authenticate-OAuth.PNG" alt-text="authenticate-OAuth" border="true":::
+ :::image type="content" source="../../../assets/images/tabs/tabs-authenticate-OAuth.PNG" alt-text="authenticate-OAuth":::
 
 **外部ブラウザーに認証を追加するには**
 

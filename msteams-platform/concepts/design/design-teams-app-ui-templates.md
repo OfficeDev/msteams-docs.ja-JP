@@ -5,12 +5,12 @@ description: Microsoft Teams で一般的に見られる標準化された UI �
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 497385a8fa87714c8c87409d9d42bb88c294918a
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: c4a8b0b626092e4980ccac95f98148829dc06ccd
+ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484823"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66558724"
 ---
 # <a name="designing-your-microsoft-teams-app-with-ui-templates"></a>UI テンプレートを使用した Microsoft Teams アプリの設計
 
@@ -46,19 +46,19 @@ Microsoft Teams UI Kit からアプリ設計用の UI テンプレートを入�
 > [!div class="nextstepaction"]
 > [サンプル アプリを取得する (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
-## <a name="calendar"></a>予定表
+## <a name="calendar"></a>カレンダー
 
 Teams では、予定表は、ユーザーが自分またはグループの今後および過去のイベントを表示、スケジュール、管理する場所です。
 
 ### <a name="top-use-cases"></a>上位のユース ケース
 
 * 会議とイベントをスケジュールする
-* 予定されている会議やイベントのリマインダーを取得します。
+* 今後の会議やイベントのリマインダーを取得する
 * スケジュールを表示する
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/desktop-calendar.png" alt-text="デスクトップ上の予定表 UI テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/desktop-calendar.png" alt-text="デスクトップ上の予定表 UI テンプレートの例を示します。":::
 
 ## <a name="dashboard"></a>ダッシュボード
 
@@ -68,15 +68,15 @@ Teams では、予定表は、ユーザーが自分またはグループの今�
 
 * データを分析する
 * レポート メトリック
-* 1 か所でさまざまな情報を整理します。
+* 1 か所で異なる情報を整理する
 
-### <a name="mobile"></a>Mobile
+### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-dashboard.png" alt-text="モバイル上のダッシュボード UI テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-dashboard.png" alt-text="モバイル上のダッシュボード UI テンプレートの例を示します。":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="デスクトップ上のダッシュボード UI テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="デスクトップ上のダッシュボード UI テンプレートの例を示します。":::
 
 ## <a name="data-visualization"></a>データ可視化
 
@@ -84,16 +84,16 @@ Teams では、予定表は、ユーザーが自分またはグループの今�
 
 ### <a name="top-use-cases"></a>上位のユース ケース
 
-* 複雑な情報を表示します。
-* ダッシュボードを作成します。
+* 複雑な情報を表示する
+* ダッシュボードを作成する
 
-### <a name="mobile"></a>Mobile
+### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="モバイルでのデータ視覚化 UI テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="モバイルでのデータ視覚化 UI テンプレートの例を示します。":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="デスクトップ上のデータ視覚化 UI テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="デスクトップ上のデータ視覚化 UI テンプレートの例を示します。":::
 
 ## <a name="empty-state"></a>空の状態
 
@@ -102,17 +102,17 @@ Teams では、予定表は、ユーザーが自分またはグループの今�
 ### <a name="top-use-cases"></a>上位のユース ケース
 
 * サインイン
-* ウェルカム メッセージと初回実行エクスペリエンス。
+* ウェルカム メッセージと初回実行エクスペリエンス
 * 成功メッセージ
 * エラー メッセージ
 
-### <a name="mobile"></a>Mobile
+### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-empty-state.png" alt-text="モバイル上の空の状態 UI テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-empty-state.png" alt-text="モバイル上の空の状態 UI テンプレートの例を示します。":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="デスクトップ上の空の状態 UI テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="デスクトップ上の空の状態 UI テンプレートの例を示します。":::
 
 ## <a name="filter"></a>Filter
 
@@ -127,7 +127,7 @@ Teams では、予定表は、ユーザーが自分またはグループの今�
 * ダッシュボード
 * データ可視化
 
-:::image type="content" source="../../assets/images/ui-templates/filter.png" alt-text="フィルター テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/filter.png" alt-text="フィルター テンプレートの例を示します。":::
 
 ## <a name="form"></a>フォーム
 
@@ -140,13 +140,13 @@ Teams では、予定表は、ユーザーが自分またはグループの今�
 * Settings
 * ユーザー入力コレクション
 
-### <a name="mobile"></a>Mobile
+### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-form.png" alt-text="モバイル上のフォーム UI テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-form.png" alt-text="モバイル上のフォーム UI テンプレートの例を示します。":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/form.png" alt-text="デスクトップ上のフォーム UI テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/form.png" alt-text="デスクトップ上のフォーム UI テンプレートの例を示します。":::
 
 ## <a name="list"></a>リスト
 
@@ -157,13 +157,13 @@ Teams では、予定表は、ユーザーが自分またはグループの今�
 * データを表示する
 * アプリ コンテンツに対するコンテキスト アクション
 
-### <a name="mobile"></a>Mobile
+### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-list.png" alt-text="モバイル上のリスト UI テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-list.png" alt-text="モバイル上のリスト UI テンプレートの例を示します。":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="デスクトップ上のリスト UI テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="デスクトップ上のリスト UI テンプレートの例を示します。":::
 
 ## <a name="sign-in"></a>サインイン
 
@@ -173,13 +173,13 @@ Teams では、予定表は、ユーザーが自分またはグループの今�
 
 * ユーザーを認証する
 
-### <a name="mobile"></a>Mobile
+### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-sign-in.png" alt-text="モバイルでのサインイン UI テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-sign-in.png" alt-text="モバイルでのサインイン UI テンプレートの例を示します。":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="デスクトップでのサインイン UI テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="デスクトップでのサインイン UI テンプレートの例を示します。":::
 
 ## <a name="settings"></a>Settings
 
@@ -189,7 +189,7 @@ Teams では、予定表は、ユーザーが自分またはグループの今�
 
 * アプリの機能を管理する
 
-:::image type="content" source="../../assets/images/ui-templates/settings.png" alt-text="設定テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/settings.png" alt-text="設定テンプレートの例を示します。":::
 
 ## <a name="task-board"></a>タスク ボード
 
@@ -201,13 +201,13 @@ Teams では、予定表は、ユーザーが自分またはグループの今�
 * ブレーンストーミング。 さまざまなカテゴリにアイデアを追加する。
 * 並べ替えの演習。 あらゆる種類の情報をバケットに整理する。
 
-### <a name="mobile"></a>Mobile
+### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-task-board.png" alt-text="モバイル上のタスク ボード UI テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-task-board.png" alt-text="モバイル上のタスク ボード UI テンプレートの例を示します。":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="デスクトップ上のタスク ボード UI テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="デスクトップ上のタスク ボード UI テンプレートの例を示します。":::
 
 ## <a name="wizard"></a>ウィザード
 
@@ -219,13 +219,13 @@ Teams では、予定表は、ユーザーが自分またはグループの今�
 * オンボード
 * 初回実行エクスペリエンス
 
-### <a name="mobile"></a>Mobile
+### <a name="mobile"></a>モバイル
 
-:::image type="content" source="../../assets/images/ui-templates/mobile-wizard.png" alt-text="モバイル上のウィザード UI テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/mobile-wizard.png" alt-text="モバイル上のウィザード UI テンプレートの例を示します。":::
 
 ### <a name="desktop"></a>Desktop
 
-:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="デスクトップ上のウィザード UI テンプレートの例を示します。" border="false":::
+:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="デスクトップ上のウィザード UI テンプレートの例を示します。":::
 
 ## <a name="see-also"></a>関連項目
 
