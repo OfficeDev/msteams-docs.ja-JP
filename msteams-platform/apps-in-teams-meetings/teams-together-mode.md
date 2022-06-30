@@ -3,12 +3,12 @@ title: カスタム Together モードのシーン
 description: カスタム Together モードシーンを操作する
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: bf02350378b308a1a6aa4f914c03f3ad4a3d9142
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: bbb6758993d99115b3f7c9cd615dfc2b9ebf97ab
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150646"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484773"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Teams でのカスタム Together モードのシーン
 
@@ -22,7 +22,7 @@ Microsoft Teams の Custom Together モードシーンは、次のアクショ�
 
 次のプロセスでは、シーン専用のアプリを作成する概要を示します。
 
-:::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="シーン専用アプリを作成する" border="false":::
+:::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="シーン専用アプリを作成します。":::
 
 シーン専用のアプリは、Teams のアプリのままです。 Scene Studio は、バックグラウンドでアプリ パッケージの作成を処理します。 1 つのアプリ パッケージ内の複数のシーンが、ユーザーに対してフラット リストとして表示されます。
 
@@ -83,7 +83,7 @@ Scene Studio を使用してシーンを構築するには、次の手順を実�
 
 1. **イメージの追加** 選択して、環境にイメージを追加します。
 
-    ![環境に画像を追加する](../assets/images/apps-in-meetings/addimages.png)
+   :::image type="content" source="../assets/images/apps-in-meetings/addimages.png" alt-text="環境に画像を追加します。":::
 
     >[!NOTE]
     >[SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip)をダウンロードし、[SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) ファイルをイメージと一緒にできます。
@@ -104,7 +104,7 @@ Scene Studio を使用してシーンを構築するには、次の手順を実�
 
 1. 参加者の[**会議の開催者**] または [**発表者**] の役割を選択します。 会議では、1 人の参加者に会議開催者の役割を割り当てる必要があります。
 
-    ![スポットの割り当て](../assets/images/apps-in-meetings/assign-spot.png)
+   :::image type="content" source="../assets/images/apps-in-meetings/assign-spot.png" alt-text="参加者にスポットを割り当てます。":::
 
 1. [**保存**] を選択し、[**Teamsで表示**] を選択して、Teams でシーンをすばやくテストします。
 

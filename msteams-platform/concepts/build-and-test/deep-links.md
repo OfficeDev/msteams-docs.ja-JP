@@ -3,12 +3,12 @@ title: ディープ リンクの作成
 description: ディープ リンクを作成する方法と、タブを使用して Microsoft Teams アプリ内でディープ リンクを使用して移動する方法について説明します。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: e5e9596c6049e899e6cc807b7ce2128b322a971e
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: afa3ea185247ab4edb5ada3b657c4d1259674bc5
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150681"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485679"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成
 
@@ -40,8 +40,8 @@ Microsoft Teams JavaScript クライアント SDK (TeamsJS) を使用すると�
 >
 >Microsoft 365 (Outlook/Office) 全体にわたって拡張された Teams アプリのナビゲーションの動作は、次の 2 つの要因に依存します:
 >
-> * ディープ リンクが指すターゲット
-> * Teams アプリが実行されているホスト
+> * ディープ リンクが指すターゲット。
+> * Teams アプリが実行されているホスト。
 >
 > ディープ リンクのターゲットになっているホスト内で Teams アプリが実行されている場合、アプリはホスト内で直接開きます。 しかしながら、Teams アプリが実行されている別のホストからディープ リンクのターゲットとして指している場合、アプリは最初にブラウザーで開きます。
 
@@ -207,29 +207,12 @@ microsoftTeams.executeDeepLink(/*deepLink*/);
 
 ### <a name="open-a-scheduling-dialog"></a>スケジュール設定ダイアログを開く
 
-次のコードに示すように、Teams アプリからスケジュール設定ダイアログを開くことができます。 これは、アプリがカレンダーやスケジュールに関連するタスクをユーザーに支援する場合に特に便利です。
-
-# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
-
-```javascript
-// Open a scheduling dialog from your tab
-if(calendar.isSupported()) {
-   const calendarPromise = calendar.composeMeeting({
-      attendees: ["joe@contoso.com", "bob@contoso.com"],
-      content: "test content",
-      endTime: "2018-10-24T10:30:00-07:00"
-      startTime: "2018-10-24T10:00:00-07:00"
-      subject: "test subject"});
-   calendarPromise.
-      then((result) => {/*Successful operation*/}).
-      catch((error) => {/*Unsuccessful operation*/});
-}
-else { /* handle case where capability isn't supported */ }
-```
+> [!NOTE]
+> Teams でスケジュール設定ダイアログを開くには、Teams がまだカレンダー機能をサポートしていないため、開発者は元のディープリンク URL ベースのメソッドを引き続き使用する必要があります。
 
 カレンダーとその開発の詳細については、API リファレンス ドキュメントの[カレンダー](/javascript/api/@microsoft/teams-js/calendar?view=msteams-client-js-latest&preserve-view=true)名前空間を参照してください。
 
-# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
+### <a name="tabteams-js-v1"></a>tab/Teams JS v1
 
 ```javascript
 // Open a scheduling dialog from your tab
