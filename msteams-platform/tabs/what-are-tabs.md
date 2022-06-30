@@ -5,12 +5,12 @@ description: このモジュールでは、Teams プラットフォーム、タ�
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 1ff0d77f03e98ab2865705ed9a5be3687ee6779a
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 2f2ace5503caa509a875823a260b2903a4b6440e
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558143"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503894"
 ---
 # <a name="build-tabs-for-teams"></a>Teams の [ビルド] タブ
 
@@ -25,11 +25,11 @@ ms.locfileid: "66558143"
 
 次の画像は、個人用タブを示しています:
 
-:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="個人タブ" lightbox="../assets/images/tabs/personaltab.png":::
+:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="個人タブ" lightbox="../assets/images/tabs/personaltab.png" border="true":::
 
 次の画像は、Contoso チャネル タブを示しています:
 
-:::image type="content" source="../assets/images/tabs/tabs.png" alt-text="チャネル タブまたはグループ タブ" lightbox="../assets/images/tabs/tabs.png":::
+:::image type="content" source="../assets/images/tabs/tabs.png" alt-text="チャネル タブまたはグループ タブ" lightbox="../assets/images/tabs/tabs.png" border="true":::
 
 タブを操作する前に実行する必要がある前提条件はほとんどありません。
 

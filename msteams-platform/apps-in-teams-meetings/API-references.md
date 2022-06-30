@@ -1,16 +1,16 @@
 ---
 title: 会議アプリ API リファレンス
 author: surbhigupta
-description: 例とコード サンプルを使用して会議アプリ API リファレンスを識別する方法について説明します。Teamsアプリ会議ユーザー ロール API ユーザー コンテキスト通知シグナル クエリ。
+description: 例とコード サンプルを使用して会議アプリ API 参照を識別する方法について説明します。Teams アプリ会議ユーザー ロール API ユーザー コンテキスト通知シグナル クエリ。
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: ac940438d78d941069f779150a74cfc85b1e2b95
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: ba0f3758cf08649100cbc564c60eab3a86e3d155
+ms.sourcegitcommit: 779aa3220f6448a9dbbaea57e667ad95b5c39a2a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189438"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66561610"
 ---
 # <a name="meeting-apps-api-references"></a>会議アプリ API リファレンス
 
@@ -27,7 +27,7 @@ ms.locfileid: "66189438"
 
 |メソッド| 説明| ソース|
 |---|---|----|
-|[**ユーザー コンテキストを取得する**](#get-user-context-api)| コンテキスト情報を取得して、関連するコンテンツを [Microsoft Teams] タブに表示します。| [MSTC SDK](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
+|[**ユーザー コンテキストを取得する**](#get-user-context-api)| コンテキスト情報を取得して、関連するコンテンツを Microsoft Teams タブに表示します。| [MSTC SDK](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
 |[**参加者を取得する**](#get-participant-api)| 会議 ID と参加者 ID によって参加者情報を取得します。 | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
 |[**会議中の通知を送信する**](#send-an-in-meeting-notification)| ユーザー ボット チャット用の既存の会話通知 API を使用して会議のシグナルを提供し、会議中の通知を示すユーザー アクションを通知できます。 | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**会議の詳細を取得する**](#get-meeting-details-api)| 会議の静的メタデータを取得します。 | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
@@ -125,6 +125,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
    },
    "conversation":{
       "id":"<conversation id>",
+      "conversationType": "groupChat", 
       "isGroup":true
    }
 }
@@ -135,7 +136,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | プロパティ名 | 用途 |
 |---|---|
 | **user.id** | ユーザーの ID。 |
-| **user.aadObjectId** | ユーザーのオブジェクト ID をAzure Active Directoryします。 |
+| **user.aadObjectId** | ユーザーの Azure Active Directory オブジェクト ID。 |
 | **user.name** | ユーザーの名前 |
 | **user.givenName** | ユーザーの名。|
 | **user.surname** | ユーザーの姓。 |
@@ -346,7 +347,10 @@ POST /v3/conversations/{conversationId}/activities
 </details>
 
 > [!NOTE]
-> ボットは、RSC アクセス許可のマニフェストに `ChannelMeeting.ReadBasic.Group` を追加することで、すべてのチャネルで作成されたすべての会議から会議の開始イベントまたは終了イベントを自動的に受信できます。
+>
+> * ボットは、RSC アクセス許可のマニフェストに `ChannelMeeting.ReadBasic.Group` を追加することで、すべてのチャネルで作成されたすべての会議から会議の開始イベントまたは終了イベントを自動的に受信できます。
+>
+> * 1 対 1 の通話 `organizer` の場合はチャットのイニシエーターであり、グループ通話の場合 `organizer` は通話イニシエーターです。
 
 ### <a name="query-parameter"></a>クエリ パラメーター
 
@@ -367,7 +371,11 @@ await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
-利用不可
+```javascript
+
+Not available
+
+```
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -377,29 +385,108 @@ GET /v1/meetings/{meetingId}
 
 Meeting Details API の JSON 応答本文は次のとおりです。
 
-```json
-{ 
-   "details": { 
-        "id": "meeting ID", 
-        "msGraphResourceId": "", 
-        "scheduledStartTime": "2020-08-21T02:30:00+00:00", 
-        "scheduledEndTime": "2020-08-21T03:00:00+00:00", 
-        "joinUrl": "https://teams.microsoft.com/l/xx", 
-        "title": "All Hands", 
-        "type": "Scheduled" 
-    }, 
-    "conversation": { 
-            "isGroup": true, 
-            "conversationType": "groupchat", 
-            "id": "meeting chat ID" 
-    }, 
-    "organizer": { 
-        "id": "<organizer user ID>", 
-        "aadObjectId": "<AAD ID>", 
-        "tenantId": "<Tenant ID>" 
+* **スケジュールされた会議:**
+
+    ```json
+
+    {
+       "details":  { 
+             "id": "<meeting ID>", 
+             "msGraphResourceId": "MSowYmQ0M2I4OS1lN2QxLTQxNzAtOGZhYi00OWJjYjkwOTk1YWYqMCoqMTk6bWVldGluZ19OVEkyT0RjM01qUXROV1UyW", 
+             "scheduledStartTime": "2022-04-24T22:00:00Z", 
+             "scheduledEndTime": "2022-04-24T23:00:00Z", 
+             "joinUrl": "https://teams.microsoft.com/l/xx", 
+             "title": "All Hands", 
+             "type": "Scheduled" 
+         },
+        "conversation": { 
+             "isGroup": true, 
+             "conversationType": "groupChat", 
+             "id": "meeting chat ID" 
+             }, 
+        "organizer": { 
+             "id": "<organizer user ID>", 
+             "aadObjectId": "<AAD object ID>",
+             "objectId": "<organizer object ID>",
+             "tenantId": "<Tenant ID>" 
+         }
+    } 
+    ```
+
+* **1 対 1 の呼び出し:**
+
+    ```json
+    {
+        "details": {
+             "id": "<meeting ID>",
+             "type": "OneToOneCall"
+         },
+        "conversation": {
+             "isGroup": true,
+             "conversationType": "groupChat",
+             "id": "meeting chat ID"
+         },
+        "organizer  ": {
+             "id": "<organizer user ID>",
+             "aadObjectId": "<AAD object ID>",
+             "objectId": "<organizer object ID>",
+             "tenantId": "<Tenant ID>" 
+         }
     }
-} 
-```
+    
+    ```
+
+* **グループ呼び出し:**
+
+    ```json
+    {
+        "details": {
+             "id": "<meeting ID>",
+             "type": "GroupCall",
+             "joinUrl": "https://teams.microsoft.com/l/xx"
+         },
+        "conversation": {
+             "isGroup": true,
+             "conversationType": "groupChat",
+             "id": "meeting chat ID"
+         },
+        "organizer": {
+             "id": "<organizer user ID>",
+             "objectId": "<organizer object ID>",
+             "aadObjectId": "<AAD object ID>",
+             "tenantId": "<Tenant ID>" 
+         }
+    }
+    
+    ```
+
+* **インスタント会議:**
+
+    ```json
+    { 
+       "details": { 
+             "id": "<meeting ID>", 
+             "msGraphResourceId": "MSowYmQ0M2I4OS1lN2QxLTQxNzAtOGZhYi00OWJjYjkwOTk1YWYqMCoqMTk6bWVldGluZ19OVEkyT0RjM01qUXROV1UyW", 
+             "scheduledStartTime": "2022-04-24T22:00:00Z", 
+             "scheduledEndTime": "2022-04-24T23:00:00Z", 
+             "joinUrl": "https://teams.microsoft.com/l/xx", 
+             "title": "All Hands", 
+             "type": "MeetNow" 
+         }, 
+        "conversation": { 
+             "isGroup": true, 
+             "conversationType": "groupChat", 
+             "id": "meeting chat ID" 
+         },
+        "organizer": { 
+             "id": "<organizer user ID>", 
+             "aadObjectId": "<AAD object ID>", 
+             "tenantId": "<Tenant ID>" ,
+             "objectId": "<organizer object ID>"
+         }
+    }
+    
+    ```
 
 ---
 
@@ -411,13 +498,13 @@ Meeting Details API の JSON 応答本文は次のとおりです。
 | **details.scheduledEndTime** | 会議のスケジュールされた終了時刻 (UTC)。 |
 | **details.joinUrl** | 会議に参加するために使用される URL。 |
 | **details.title** | 会議のタイトル。 |
-| **details.type** | 会議の種類 (Adhoc、Broadcast、MeetNow、定期的、スケジュール、不明など)。 |
+| **details.type** | 会議の種類 ( GroupCall、OneToOneCall、Adhoc、Broadcast、MeetNow、定期的、スケジュール、不明など)。 |
 | **conversation.isGroup** | 会話に 2 人以上の参加者があるかどうかを示すブール値。 |
 | **conversation.conversationType** | 会話の種類。 |
 | **conversation.id** | 会議チャット ID。 |
 | **organizer.id** | 開催者のユーザー ID。 |
-| **organizer.aadObjectId** | 開催者のAzure Active Directory オブジェクト ID。 |
-| **organizer.tenantId** | 開催者のAzure Active Directoryテナント ID。 |
+| **organizer.aadObjectId** | 開催者の Azure Active Directory オブジェクト ID。 |
+| **organizer.tenantId** | 開催者の Azure Active Directory テナント ID。 |
 
 定期的な会議の種類の場合は、
 
@@ -427,11 +514,11 @@ Meeting Details API の JSON 応答本文は次のとおりです。
 
 ## <a name="send-real-time-captions-api"></a>リアルタイム キャプション API を送信する
 
-送信リアルタイム キャプション API は、Teams通信アクセスリアルタイム翻訳 (CART) キャプション、人型クローズド キャプションの POST エンドポイントを公開します。 このエンドポイントに送信されたテキスト コンテンツは、キャプションを有効にすると、Teams会議のエンド ユーザーに表示されます。
+送信リアルタイム キャプション API は、Teams コミュニケーション アクセスリアルタイム翻訳 (CART) のキャプション、人間型のクローズド キャプションの POST エンドポイントを公開します。 このエンドポイントに送信されたテキスト コンテンツは、キャプションが有効になっている Teams 会議のエンド ユーザーに表示されます。
 
 ### <a name="cart-url"></a>CART URL
 
-POST エンドポイントの CART URL は、Teams **会議の [会議オプション**] ページから取得できます。 詳細については、「[Microsoft Teams 会議での CART キャプション](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47)」をご覧ください。 CART キャプションを使用するために CART URL を変更する必要はありません。
+POST エンドポイントの CART URL は、Teams **会議の [会議オプション** ] ページから取得できます。 詳細については、「[Microsoft Teams 会議での CART キャプション](https://support.microsoft.com/office/use-cart-captions-in-a-microsoft-teams-meeting-human-generated-captions-2dd889e8-32a8-4582-98b8-6c96cf14eb47)」をご覧ください。 CART キャプションを使用するために CART URL を変更する必要はありません。
 
 #### <a name="query-parameter"></a>クエリ パラメーター
 
@@ -540,7 +627,7 @@ microsoftTeams.meeting.shareAppContentToStage((err, result) => {
 
 ## <a name="get-app-content-stage-sharing-state-api"></a>アプリ コンテンツ ステージの共有状態を取得する API
 
-この `getAppContentStageSharingState` API を使用すると、モバイルとデスクトップの両方の会議ステージでアプリの共有に関する情報を取得できます。
+`getAppContentStageSharingState` API を使用すると、会議ステージでのアプリの共有に関する情報を取得できます。
 
 ### <a name="query-parameter"></a>クエリ パラメーター
 
@@ -618,6 +705,9 @@ microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result) => {
 | **1000** | アプリには、共有のステージングを許可するアクセス許可がありません。|
 
 ## <a name="get-real-time-teams-meeting-events-api"></a>リアルタイムの Teams 会議イベントを取得する API
+
+> [!NOTE]
+> リアルタイム Teams 会議イベントは、スケジュールされた会議でのみサポートされます。
 
 ユーザーはリアルタイムの会議イベントを受信できます。 アプリが会議に関連付けられるとすぐに、実際の会議の開始時刻と終了時刻がボットと共有されます。 会議の実際の開始時刻と終了時刻は、スケジュールされた開始時刻と終了時刻とは異なります。 会議の詳細 API は、スケジュールされた開始時刻と終了時刻を提供します。 イベントは、実際の開始時刻と終了時刻を提供します。
 
@@ -819,7 +909,7 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 | **from.id** | 要求を送信したユーザーの ID。 |
 | **from.aadObjectId** | 要求を送信したユーザーの Azure Active Directory オブジェクト ID。 |
 | **conversation.isGroup** | 会話に 2 人以上の参加者があるかどうかを示すブール値。 |
-| **conversation.tenantId** | 会話または会議のテナント ID をAzure Active Directoryします。 |
+| **conversation.tenantId** | 会話または会議の Azure Active Directory テナント ID。 |
 | **conversation.id** | 会議チャット ID。 |
 | **recipient.id** | 要求を受け取るユーザーの ID。 |
 | **recipient.name** | 要求を受け取るユーザーの名前。 |
@@ -841,10 +931,10 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 
 |サンプルの名前 | 説明 | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
-| 会議の拡張性 | トークンを渡すための会議機能拡張サンプルをTeamsします。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
-| 会議コンテンツ バブル ボット | 会議でコンテンツ バブル ボットと対話するための会議機能拡張サンプルをTeamsします。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| 会議 meetingSidePanel | サイド パネルの会議内で対話するための会議機能拡張サンプルをTeamsします。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| 会議の [詳細] タブ | 会議内の [詳細] タブを操作するための会議機能拡張サンプルをTeamsします。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+| 会議の拡張性 | トークンを渡すための Teams 会議機能拡張サンプル。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+| 会議コンテンツ バブル ボット | 会議でコンテンツ バブル ボットと対話するための Teams 会議機能拡張サンプル。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
+| 会議 meetingSidePanel | サイド パネルの会議内で対話するための Teams 会議機能拡張サンプル。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
+| 会議の [詳細] タブ | 会議内の [詳細] タブと対話するための Teams 会議機能拡張サンプル。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 |会議イベントのサンプル|リアルタイムの Teams 会議イベントを示すサンプル アプリ|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|
 |採用会議のサンプル|採用シナリオの会議エクスペリエンスを示すサンプル アプリ。|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-recruitment-app/nodejs)|
 |QR コードを使用したアプリのインストール|QR コードを生成し、QR コードを使用してアプリをインストールするサンプル アプリ|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-installation-using-qr-code/nodejs)|
