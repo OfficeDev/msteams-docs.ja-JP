@@ -18,7 +18,7 @@
 - name: 作業の開始
   expanded: false
   items:
-    - name: 概要を開始する
+    - name: 概要
       href: get-started/get-started-overview.md
     - name: JavaScript を使用して初めてのタブ アプリを構築する
       href: sbs-gs-javascript.yml
@@ -110,7 +110,7 @@
           href: toolkit/provision.md
         - name: Teams アプリをクラウドに展開する
           href: toolkit/deploy.md
-        - name: Teams アプリ マニフェストのプレビューとカスタマイズ
+        - name: Teams アプリ マニフェストを編集する
           href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
         - name: Azure AD マニフェストをカスタマイズする
           href: toolkit/AAD-manifest-customization.md
@@ -128,7 +128,7 @@
           href: toolkit/publish.md
         - name: 複数の環境を管理する
           href: toolkit/TeamsFx-multi-env.md
-        - name: Teams ツールキットで他の開発者と協力する
+        - name: Teams プロジェクトで協力する
           href: toolkit/TeamsFx-collaboration.md
         - name: TeamsFx SDK
           href: toolkit/TeamsFx-SDK.md
@@ -164,7 +164,7 @@
               items:
                 - name: ボットを使用した個人の会話
                   href: resources/bot-v3/bot-conversations/bots-conv-personal.md
-                - name: ボットを使用したチャネルとグループの会話
+                - name: チャネルおよびグループ チャット会話ボット
                   href: resources/bot-v3/bot-conversations/bots-conv-channel.md
                 - name: 会話の開始
                   href: resources/bot-v3/bot-conversations/bots-conv-proactive.md
@@ -176,7 +176,7 @@
               href: resources/bot-v3/bots-notifications.md
             - name: ボットのコンテキスト
               href: resources/bot-v3/bots-context.md
-            - name: ファイルの送受信
+            - name: ファイルを送受信する
               href: resources/bot-v3/bots-files.md
             - name: 通知のみのボット
               href: resources/bot-v3/bots-notification-only.md
@@ -241,9 +241,9 @@
           items:
             - name: RSC のチャネル メッセージをすべて受信する
               href: bots/how-to/conversations/channel-messages-with-rsc.md
-        - name: ボットのコマンド メニューを作成する
+        - name: コマンド メニューを作成する
           href: bots/how-to/create-a-bot-commands-menu.md
-        - name: チャネルとグループ会話
+        - name: ボットとのチャネルおよびグループ チャットの会話
           href: bots/how-to/conversations/channel-and-group-conversations.md
         - name: Teams ボットの会話イベント
           href: bots/how-to/conversations/subscribe-to-conversation-events.md
@@ -251,13 +251,13 @@
           href: bots/how-to/conversations/send-proactive-messages.md
         - name: ボット メッセージの書式を設定する
           href: bots/how-to/format-your-bot-messages.md
-        - name: ボット メッセージの更新および削除
+        - name: ボットから送信されたメッセージを更新および削除する
           href: bots/how-to/update-and-delete-bot-messages.md
         - name: ボットのヘッダーをリクエストする
           href: bots/how-to/conversations/request-headers-of-the-bot.md
-    - name: コンテキストをボット用に取得する
+    - name: Teams の特定のコンテキストをボット用に取得する
       href: bots/how-to/get-teams-context.md
-    - name: ファイルを送受信する
+    - name: ボットを使用してファイルを送受信する
       href: bots/how-to/bots-filesv4.md
     - name: Teams でレートを制限してボットを最適化する
       href: bots/how-to/rate-limit.md
@@ -271,11 +271,11 @@
           href: bots/calls-and-meetings/registering-calling-bot.md
         - name: 着信通知
           href: bots/calls-and-meetings/call-notifications.md
-        - name: アプリケーションによりホストされているメディア
+        - name: アプリケーションでホストされるメディア ボットの要件と考察
           href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-        - name: サポートされているメディア形式
+        - name: ボットでサポートされているメディア形式
           href: resources/media-formats.md
-    - name: チームおよびチャット メンバーのボット API の変更
+    - name: チームまたはチャット メンバーをフェッチするための Teams ボット API の変更
       href: resources/team-chat-member-api-changes.md
 - name: メッセージの拡張機能のビルド
   items:
@@ -285,9 +285,9 @@
       items:
         - name: 操作コマンドを定義する
           href: messaging-extensions/how-to/action-commands/define-action-command.md
-        - name: タスク モジュールを作成する
+        - name: タスク モジュールの作成と送信
           href: messaging-extensions/how-to/action-commands/create-task-module.md
-        - name: 操作コマンドに返信する
+        - name: タスク モジュールの送信アクションに応答する
           href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
     - name: 検索コマンド
       items:
@@ -313,7 +313,7 @@
           href: apps-in-teams-meetings/teams-live-share-overview.md
         - name: はじめに
           items:
-            - name: クイック スタート
+            - name: クイック スタート ガイド
               href: apps-in-teams-meetings/teams-live-share-quick-start.md
             - name: サイコロ ローラーのチュートリアル
               href: apps-in-teams-meetings/teams-live-share-tutorial.md
@@ -389,15 +389,15 @@
           items:
             - name: 概要
               href: tabs/how-to/authentication/tab-sso-overview.md
-            - name: Azure ADでタブ アプリを登録する
+            - name: Azure AD でタブ アプリを登録する
               href: tabs/how-to/authentication/tab-sso-register-aad.md
             - name: SSO を有効にするコードを追加する
               href: tabs/how-to/authentication/tab-sso-code.md
-            - name: SSO 用のアプリ マニフェストを更新しプレビューする
+            - name: SSO 用のアプリ マニフェストを更新しアプリをプレビューする
               href: tabs/how-to/authentication/tab-sso-manifest.md
             - name: Microsoft Graph の権限または範囲を許可する
               href: tabs/how-to/authentication/tab-sso-graph-api.md
-            - name: トラブルシューティング
+            - name: SSO 認証のトラブルシューティング
               href: tabs/how-to/authentication/tab-sso-troubleshooting.md
         - name: サード パーティの OAuth IdP 認証を使用する
           items:
@@ -425,7 +425,7 @@
   items:
     - name: 概要
       href: concepts/device-capabilities/device-capabilities-overview.md
-    - name: デバイスのアクセス許可を要求する
+    - name: Teams アプリのデバイス アクセス許可を要求する
       href: concepts/device-capabilities/native-device-permissions.md
     - name: ブラウザーのデバイスのアクセス許可
       href: concepts/device-capabilities/browser-device-permissions.md
@@ -469,7 +469,7 @@
       href: concepts/build-and-test/test-app-overview.md
     - name: Microsoft 365 テナントを準備する
       href: concepts/build-and-test/prepare-your-o365-tenant.md
-    - name: テスト セットアップの選択
+    - name: テスト セットアップを選択し、Teams アプリをデバッグする
       href: concepts/build-and-test/debug.md
     - name: テスト データを環境に追加する
       href: concepts/build-and-test/test-data.md
@@ -479,7 +479,7 @@
           href: tabs/how-to/developer-tools.md
     - name: ボット
       items:
-        - name: IDE でローカルのデバッグを行う
+        - name: IDE を使用してボットをローカルでテストおよびデバッグする
           href: bots/how-to/debug/locally-with-an-ide.md
         - name: 検査ミドルウェアでボットのデバッグを行う
           href: /azure/bot-service/bot-service-debug-inspection-middleware
@@ -497,11 +497,11 @@
   items:
     - name: 概要
       href: concepts/deploy-and-publish/apps-publish-overview.md
-    - name: 既定のインストール オプションを構成する
+    - name: Teams アプリの既定のインストール オプションを構成する
       href: concepts/deploy-and-publish/add-default-install-scope.md
-    - name: アプリ パッケージを作成する
+    - name: Teams アプリ パッケージを作成する
       href: concepts/build-and-test/apps-package.md
-    - name: アプリをアップロードする
+    - name: Teams でアプリをアップロードする
       href: concepts/deploy-and-publish/apps-upload.md
     - name: 組織にアプリを公開する
       href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
@@ -511,13 +511,13 @@
           href: concepts/deploy-and-publish/appsource/publish.md
         - name: デザイン検証ガイドラインのレビュー
           href: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
-        - name: パートナー センター アカウントを作成する
+        - name: パートナー センターの開発者アカウントを作成する
           href: concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md
-        - name: ストア送信を準備する
+        - name: Teams のストア送信を準備する
           href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
         - name: アプリを送信する
           href: /office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-        - name: ストア送信が失敗した場合の問題を解決する
+        - name: Teams ストアの送信に失敗した場合に問題を解決する
           href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
         - name: 公開したアプリの保守およびサポート
           href: concepts/deploy-and-publish/appsource/post-publish/overview.md
@@ -529,7 +529,7 @@
   items:
     - name: 概要
       href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
-    - name: アプリに SaaS オファーを含める
+    - name: Teams アプリに SaaS オファーを含める
       href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
     - name: アプリ内購入
       href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
@@ -537,13 +537,13 @@
       href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: アプリ マニフェスト
   items:
-    - name: アプリ マニフェストのスキーマ
+    - name: Teams のアプリ マニフェストのスキーマ
       href: resources/schema/manifest-schema.md
     - name: 開発者向けパブリック プレビュー
       items:
         - name: 概要
           href: resources/dev-preview/developer-preview-intro.md
-        - name: マニフェスト スキーマ
+        - name: Teams のパブリック開発者プレビュー マニフェスト スキーマ
           href: resources/schema/manifest-schema-dev-preview.md
 - name: Teams との統合
   items:
@@ -595,7 +595,7 @@
           href: concepts/build-and-test/apps-localization.md
         - name: JSON スキーマの参照のローカライズ
           href: resources/schema/localization-schema.md
-    - name: サイレント認証を使用する
+    - name: Azure AD でサイレント認証を使用する
       href: tabs/how-to/authentication/auth-silent-aad.md
     - name: SameSite Cookie 属性
       href: resources/samesite-cookie-update.md

@@ -5,14 +5,14 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 0fdfb097def9b39e099536c2054cfaab21610770
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 7a5647c940f6f20babf4f0704b5b7781f4d065c4
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123641"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503327"
 ---
-# <a name="include-a-saas-offer-with-your-microsoft-teams-app"></a>Microsoft Teams アプリに SaaS オファーを含める
+# <a name="include-a-saas-offer-with-your-teams-app"></a>Teams アプリに SaaS オファーを含める
 
 :::row:::
    :::column span="3":::
@@ -47,7 +47,7 @@ ms.locfileid: "66123641"
 
 Teams アプリを収益化する方法を計画するとき、次の点を考慮します。
 
-* サブスクリプション モデルを決定します。 取引可能な SaaS プランには、複数のサブスクリプション プランを含めることができます。 誰でも利用できるパブリック サブスクリプション プランが最も一般的ですが、特定の顧客のみを対象に特典を用意する必要がある場合もあります。 詳細については、「[Microsoft コマーシャル マーケットプレースでのプライベート オファー](/azure/marketplace/private-offers)」を参照してください。
+* サブスクリプション モデルを決定します。 取引可能な SaaS プランには、複数のサブスクリプション プランを含めることができます。 誰でも利用できるパブリック サブスクリプション プランが最も一般的ですが、特定の顧客のみを対象に特典を用意する必要がある場合もあります。 詳細については、「[Microsoft コマーシャル マーケットプレースでのプライベート プラン](/azure/marketplace/private-plans)」を参照してください。
 * SaaS オファーの「[*Microsoft を通じた販売*」リスト オプション](/azure/marketplace/plan-saas-offer#listing-options)についてお読みください。これは、ユーザーが Teams ストアを通して直接サブスクリプション プランを購入するようにする場合に必要です。
 * [Azure Active Directory シングル サインオン (SSO)](/azure/marketplace/azure-ad-saas) がユーザーのサブスクリプションの購入と管理に役立つ方法を参照します。 (Microsoft Azure Active Directory (Azure AD) SSO は、SaaS オファーを含む Teamsアプリに必要です。)
 * 顧客による SaaS オファーの使用をサポートするために必要なインフラストラクチャを管理し、支払う責任があることを理解します。

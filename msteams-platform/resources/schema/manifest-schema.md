@@ -3,14 +3,14 @@ title: マニフェスト スキーマの参照
 description: この記事では、Microsoft Teams リファレンスのマニフェスト スキーマ、スキーマ、およびサンプルの完全なマニフェストを紹介します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 5a65fa1fdbf854749bf21a4d4ab395af74211fc5
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: 1a2ee91a74c5dfb79cb5c510fdc7a837d472b0db
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189357"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503733"
 ---
-# <a name="reference-manifest-schema-for-microsoft-teams"></a>参照: Microsoft Teams のマニフェスト スキーマ
+# <a name="app-manifest-schema-for-teams"></a>Teams のアプリ マニフェストのスキーマ
 
 Microsoft Teams アプリ マニフェストでは、アプリが Microsoft Teams 製品にどのように統合されるかを説明します。 アプリ マニフェストは、[`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json) でホストされているスキーマに準拠している必要があります。 以前のバージョン 1.0、1.1、...、1.12、および現在の 1.13 バージョン (以下の注を参照) はそれぞれサポートされています (URL で "v1.x" を使用)。
 各バージョンで行われた変更の詳細については、[マニフェスト変更ログ](https://github.com/OfficeDev/microsoft-teams-app-schema/releases)を参照してください。

@@ -4,18 +4,18 @@ description: このモジュールでは、Dice Roller サンプルをすばや�
 ms.topic: concept
 ms.localizationpriority: high
 ms.author: stevenic
-ms.openlocfilehash: caf2e7386c22f01edb43cf0ad5ec444d5e068d07
-ms.sourcegitcommit: c197fe4c721822b6195dfc5c7d8e9ccd47f142fe
+ms.openlocfilehash: 98150265f0c5876e726710cacc873db2ac23e9ee
+ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65668335"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66484587"
 ---
 ---
 
 # <a name="quick-start-guide"></a>クイック スタート ガイド
 
-Dice Roller サンプルを使用して、Live Share SDK で始めます。 この作業の開始は、[流動フレームワーククイックスタート](https://fluidframework.com/docs/start/quick-start/)の進化であり、コンピューターの localhost で sdk ベースの [Dice Roller サンプル](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) をすばやく実行するように設計されています。
+Dice Roller サンプルを使用して Live Share SDK の使用を開始することは、[流動フレームワーク クイック スタート](https://fluidframework.com/docs/start/quick-start/)の進化形であり、コンピューターのローカルホストで Live Share SDK ベースの [Dice Roller サンプル](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller)をすばやく実行するように設計されています。
 
 :::image type="content" source="../assets/images/teams-live-share/dice-roller.png" alt-text="DiceRoller サンプル":::
 
@@ -24,7 +24,7 @@ Dice Roller サンプルを使用して、Live Share SDK で始めます。 こ�
 
 ## <a name="set-up-your-development-environment"></a>開発環境をセットアップする
 
-これを開始するには、次の情報を参照してください。
+開始するには、次のものをインストールします。
 
 * [Node.js](https://nodejs.org/en/download): Live Share SDK では、Node.js LTS バージョン 12.17 以降がサポートされます。
 * [Visual Studio Code の最新バージョン](https://code.visualstudio.com/)。

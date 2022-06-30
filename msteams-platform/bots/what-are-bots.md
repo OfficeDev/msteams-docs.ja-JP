@@ -5,14 +5,14 @@ description: このラーニング パスを使用して、Microsoft Teams の�
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 8fef926e88709db9e1d74b6e56f643d3b048dd3b
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 6eea7c4d42ff63e11b5096542271e22d3e71328c
+ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150842"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66503761"
 ---
-# <a name="bots-in-microsoft-teams"></a>Microsoft Teams のボット
+# <a name="build-bots-for-teams"></a>Teams 用のボットを構築する
 
 ボットは、チャットボットまたは会話ボットとも呼ばれます。 これは、カスタマー サービスやサポート スタッフなどのユーザーが単純で反復的なタスクを実行するアプリです。 ボットの日常的な使用には、天気に関する情報を提供するボット、ディナーの予約を行うボット、旅行情報を提供するボットなどがあります。 ボットとのやり取りは、質問や回答を素早く行ったり、複雑な会話になったりする場合があります。
 
