@@ -297,7 +297,7 @@
           href: messaging-extensions/how-to/search-commands/respond-to-search.md
     - name: リンク展開を追加する
       href: messaging-extensions/how-to/link-unfurling.md
-- name: Teams 会議用のアプリを作成する
+- name: Teams 会議および通話用のアプリを作成する
   items:
     - name: 概要
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
