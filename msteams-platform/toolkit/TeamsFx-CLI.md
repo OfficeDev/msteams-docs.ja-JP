@@ -6,24 +6,24 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: d269da398280f51a3225414f279a25fcd5d9d7cf
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: b3ffa1d6b21ba94dcee9308eba03d4874fca2ba0
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142074"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66658941"
 ---
 # <a name="teamsfx-library"></a>TeamsFx ライブラリ
 
-Microsoft Teams Framework (TeamsFx) は、Microsoft Identity への簡単なアクセスなど、一般的な機能と統合パターンをカプセル化するライブラリです。 構成なしで Microsoft Teams 用のアプリを構築できます。
+Microsoft Teams Framework (TeamsFx) は、Microsoft Identity への簡単なアクセスなど、一般的な機能と統合パターンをカプセル化したライブラリです。 構成なしで Microsoft Teams 用のアプリを構築できます。
 
 TeamsFx の主な機能の一覧を次に示します。
 
 * **TeamsFx コラボレーション**: 開発者とプロジェクト所有者が TeamsFx プロジェクトに他のコラボレーターを招待できるようにします。 TeamsFx プロジェクトをデバッグおよび展開するために共同作業を行うことができます。
 
-* **TeamsFx CLI**: アプリケーション開発Teams高速化します。 また、自動化用のスクリプトに CLI を統合できる CI/CD シナリオも可能になります。
+* **TeamsFx CLI**: Teams アプリケーション開発を高速化します。 また、自動化用のスクリプトに CLI を統合できる CI/CD シナリオも可能になります。
 
-* **TeamsFx SDK**: Teams開発者向けに調整されたクライアントとサーバー側の両方のコードに対する単純な認証を含むプライマリ TeamsFx コード ライブラリなど、データベースへのアクセスを提供します。
+* **TeamsFx SDK: Teams** 開発者向けにカスタマイズされたクライアントコードとサーバー側コードの両方に対する簡単な認証を含むプライマリ TeamsFx コード ライブラリなど、データベースへのアクセスを提供します。
 
 ## <a name="teamsfx-command-line-interface"></a>TeamsFx コマンド ライン インターフェイス
 
@@ -62,7 +62,7 @@ TeamsFx は、Teams アプリケーションの開発を加速するテキスト
 
 ## `teamsfx new`
 
-既定では、対話型モードであり、`teamsfx new`新しいTeams アプリケーションを作成するためのガイドです。 フラグ`false`を [.] に設定`--interactive`すると、非対話型モードで作業できます。
+既定では、対話型モードであり、 `teamsfx new` 新しい Teams アプリケーションを作成するためのガイドです。 フラグ`false`を [.] に設定`--interactive`すると、非対話型モードで作業できます。
 
 | コマンド | 説明 |
 |:----------------  |:-------------|
@@ -75,7 +75,7 @@ TeamsFx は、Teams アプリケーションの開発を加速するテキスト
 |:---------------- |:-------------|:-------------|
 |`--app-name` | はい| Teams アプリケーションの名前です。|
 |`--interactive`| いいえ | オプションを対話形式で選択します。 オプションは `true` と `false` で、既定値は `true` です。|
-|`--capabilities`| いいえ| Teamsアプリケーション機能を選択します。オプションは `tab`、 , , `tab-non-sso`, `tab-spfx`, `bot``message-extension`, `notification``command-bot`, . `search-app``sso-launch-page` 既定値は `tab` です。|
+|`--capabilities`| いいえ| Teams アプリケーション機能を選択します。オプションは `tab`、 , , `tab-non-sso`, `tab-spfx`, `bot`, `message-extension``notification`, `sso-launch-page``command-bot`, `search-app`. 既定値は `tab` です。|
 |`--programming-language`| いいえ| プロジェクトのプログラミング言語です。 オプションは `javascript` または `typescript` で、デフォルト値は `javascript` です。|
 |`--folder`| いいえ | プロジェクト ディレクトリ。 このディレクトリの下に、アプリ名を持つサブ フォルダーが作成されます。 既定値は `./` です。|
 |`--spfx-framework-type`| いいえ| `SPFx tab` 機能が選択されている場合に適用されます。 フロントエンド フレームワーク。 オプションは `none`、 `react` および `minimal`既定値 `none`です。|
@@ -84,7 +84,7 @@ TeamsFx は、Teams アプリケーションの開発を加速するテキスト
 
 ### <a name="scenarios-for-teamsfx-new"></a>`teamsfx new` のシナリオ
 
-対話型モードを使用して、Teams アプリを作成できます。 次の一覧では、次を使用してすべてのパラメーター `teamsfx new`を制御するシナリオを示します。
+対話型モードを使用して Teams アプリを作成できます。 次の一覧では、次を使用してすべてのパラメーター `teamsfx new`を制御するシナリオを示します。
 
 * restify サーバーを使用した Http によってトリガーされた通知ボット
 
@@ -92,7 +92,7 @@ TeamsFx は、Teams アプリケーションの開発を加速するテキスト
   teamsfx new --interactive false --capabilities "notification" --bot-host-type-trigger "http-restify" --programming-language "typescript" --folder "./" --app-name       MyAppName
   ```
 
-* Teamsコマンドと応答ボット
+* Teams コマンドと応答ボット
 
   ```bash
   teamsfx new --interactive false --capabilities "command-bot" --programming-language "typescript" --folder "./" --app-name myAppName
@@ -110,28 +110,28 @@ TeamsFx は、Teams アプリケーションの開発を加速するテキスト
 
 | コマンド | 説明 |
 |:----------------  |:-------------|
-| `teamsfx add notification` | さまざまなトリガーを介してMicrosoft Teamsに通知を送信します。 |
+| `teamsfx add notification` | さまざまなトリガーを使用して Microsoft Teams に通知を送信します。 |
 | `teamsfx add command-and-response` | Microsoft Teams チャットで簡単なコマンドに応答します。|
-| `teamsfx add sso-tab` | Microsoft Teamsに埋め込まれた id 対応 web ページをTeamsします。|
-| `teamsfx add tab` | Microsoft Teamsに埋め込まれた Hello world Web ページ。|
+| `teamsfx add sso-tab` | Microsoft Teams に埋め込まれた Teams ID 対応 Web ページ。|
+| `teamsfx add tab` | Microsoft Teams に埋め込まれた Hello world Web ページ。|
 | `teamsfx add bot` | ユーザーが簡単で反復的なタスクを実行するための Hello world chatbot。 |
 | `teamsfx add message-extension` | ボタンとフォームを介した対話を可能にする Hello world メッセージ拡張機能。 |
 | `teamsfx add azure-function`| より少ないコードを記述できる、サーバーレスのイベントドリブンコンピューティング ソリューション。 |
 | `teamsfx add azure-apim` | すべての環境にわたる API 用のハイブリッドマルチクラウド管理プラットフォーム。|
 | `teamsfx add azure-sql` | クラウド用に構築された常に最新のリレーショナル データベース サービス。 |
 | `teamsfx add azure-keyvault` | シークレットを安全に格納してアクセスするためのクラウド サービス。 |
-| `teamsfx add sso` | Teams起動ページとボット機能のシングル Sign-On機能を開発します。 |
-| `teamsfx add api-connection [auth-type]` | TeamsFx SDK を使用して認証をサポートする API にConnectします。 |
+| `teamsfx add sso` | Teams の起動ページとボット機能の単一のSign-On機能を開発します。 |
+| `teamsfx add api-connection [auth-type]` | TeamsFx SDK を使用して認証サポートを使用して API に接続します。 |
 | `teamsfx add cicd` | GitHub、Azure DevOps、または Jenkins の CI/CD ワークフローを追加します。|
 
 ## `teamsfx account`
 
-次の表に、Azure やMicrosoft 365などのクラウド サービス アカウントを示します。
+次の表に、Azure や Microsoft 365 などのクラウド サービス アカウントを示します。
 
 | コマンド | 説明 |
 |:----------------  |:-------------|
-| `teamsfx account login <service>`  | 選択したクラウド サービスにログインします。 サービス オプションは、Microsoft 365または Azure です。 |
-| `teamsfx account logout <service>`  | 選択したクラウド サービスからログアウトします。 サービス オプションは、Microsoft 365または Azure です。 |
+| `teamsfx account login <service>`  | 選択したクラウド サービスにログインします。 サービス オプションは、Microsoft 365 または Azure です。 |
+| `teamsfx account logout <service>`  | 選択したクラウド サービスからログアウトします。 サービス オプションは、Microsoft 365 または Azure です。 |
 | `teamsfx account set --subscription` | アカウント設定を更新してサブスクリプション ID を設定します。 |
 
 ## `teamsfx env`
@@ -157,7 +157,7 @@ teamsfx env add staging --env dev
 
 | `teamsFx provision`コマンド | 説明 |
 |:----------------  |:-------------|
-| `teamsfx provision manifest` | 指定したマニフェスト ファイルで指定された対応する情報を使用して、Teams開発者ポータルでTeams アプリをプロビジョニングします。 |
+| `teamsfx provision manifest` | 特定のマニフェスト ファイルで指定された対応する情報を使用して、Teams 開発者ポータルで Teams アプリをプロビジョニングします。 |
 
 ### <a name="parameters-for-teamsfx-provision"></a>`teamsfx provision` のパラメーター
 
@@ -166,8 +166,8 @@ teamsfx env add staging --env dev
 |`--env`| はい| プロジェクトの環境を選択します。 |
 |`--subscription`| いいえ | Azure サブスクリプション ID を指定します。 |
 |`--resource-group`| いいえ | 既存のリソース グループの名前を設定します。 |
-|`--sql-admin-name`| なし | プロジェクトにSQLリソースがある場合に適用されます。 SQL の管理者名。|
-|`--sql-password`| なし| プロジェクトにSQLリソースがある場合に適用されます。 SQL の管理者パスワード。|
+|`--sql-admin-name`| なし | プロジェクトに SQL リソースがある場合に適用されます。 SQL の管理者名。|
+|`--sql-password`| なし| プロジェクトに SQL リソースがある場合に適用されます。 SQL の管理者パスワード。|
 
 ## `teamsfx deploy`
 
@@ -181,7 +181,7 @@ teamsfx env add staging --env dev
 |`--open-api-document`| いいえ | プロジェクトに APIM リソースがある場合に適用されます。 開いている API ドキュメント ファイルパス。 |
 |`--api-prefix`| なし | プロジェクトに APIM リソースがある場合に適用されます。 API 名プレフィックス。 API の既定の一意の名前は `{api-prefix}-{resource-suffix}-{api-version}` です。 |
 |`--api-version`| なし | プロジェクトに APIM リソースがある場合に適用されます。 API バージョン。 |
-|`--include-app-manifest`| いいえ | アプリ マニフェストをTeams プラットフォームにデプロイするかどうか。 オプションは次`yes`のとおりです。`not` 既定値は `no` です。 |
+|`--include-app-manifest`| いいえ | アプリ マニフェストを Teams プラットフォームに展開するかどうか。 オプションは次`yes`のとおりです。`not` 既定値は `no` です。 |
 |`--include-aad-manifest`| いいえ | aad マニフェストをデプロイするかどうか。 オプションは次`yes`のとおりです。`not` 既定値は `no` です。 |
 
 ## `teamsfx validate`
@@ -219,7 +219,7 @@ Teams アプリを公開用のパッケージにビルドします。
 |`--browser`| いいえ | Teams Web クライアントを開くためのブラウザー。 オプションはシステムの既定ブラウザなどの `chrome`、`edge`、`default` で、値は `default` です。 |
 |`--browser-arg`| いいえ | ブラウザに渡す引数。--browser が必要です。たとえば、--browser-args="--guest" のように、複数回使用できます。 |
 |`--sharepoint-site`| いいえ | SPFx プロジェクトのリモート プレビュー用の `{your-tenant-name}.sharepoint.com` などの SharePoint サイトの URL。 |
-|`--m365-host`| Teams、Outlook、またはOfficeでアプリケーションをプレビューします。 オプションは `teams`、および `office``outlook` . 既定値は `teams` です。 |
+|`--m365-host`| Teams、Outlook、または Office でアプリケーションをプレビューします。 オプションは `teams`、および `office``outlook` . 既定値は `teams` です。 |
 
 ### <a name="scenarios-for-teamsfx-preview"></a>`teamsfx preview` のシナリオ
 
@@ -262,7 +262,7 @@ Teams アプリを公開用のパッケージにビルドします。
 | パラメーター  | 要件 | 説明 |
 |:----------------  |:-------------|:-------------|
 |`--env`| はい | プロジェクトの既存の環境を選択します。 |
-|`--folder`| いいえ | プロジェクト構成の取得または設定に使用されるディレクトリProject。 既定値は `./` です。 |
+|`--folder`| いいえ | プロジェクト構成の取得または設定に使用されるプロジェクト ディレクトリ。 既定値は `./` です。 |
 |`--global`| いいえ | 構成に対応します。 true の場合、スコープはプロジェクト スコープではなくユーザー スコープに制限されます。 既定値は `false` です。 現在、サポートされているグローバル構成には`telemetry`、, , `validate-dotnet-sdk`, `validate-func-core-tools`. `validate-node` |
 
 ### <a name="scenarios-for-teamsfx-config"></a>`teamsfx config` のシナリオ
@@ -350,11 +350,11 @@ TeamsFx CLI には、コラボレーション シナリオ用のコマンドが�
   teamsfx permission grant --env dev --email user-email@user-tenant.com
   ```
 
-  必要なアクセス許可を受け取った後、プロジェクト作成者とコラボレーターはGitHubによって新しいコラボレーターとプロジェクトを共有でき、新しいコラボレーターはMicrosoft 365 アカウントのすべてのアクセス許可を持つことができます。
+  必要なアクセス許可を受け取った後、プロジェクト作成者とコラボレーターは GitHub によって新しいコラボレーターとプロジェクトを共有でき、新しいコラボレーターは Microsoft 365 アカウントのすべてのアクセス許可を持つことができます。
 
 * アクセス許可の状態を表示する
 
-  Project作成者とコラボレーターは、コマンドを使用`teamsfx permission status`して、特定の env に対Microsoft 365アカウントのアクセス許可を表示できます。
+  プロジェクトの作成者とコラボレーターは、コマンドを使用 `teamsfx permission status` して、特定の env に対する Microsoft 365 アカウントのアクセス許可を表示できます。
 
   ```bash
   teamsfx permission status --env dev
@@ -378,7 +378,7 @@ TeamsFx CLI には、コラボレーション シナリオ用のコマンドが�
       teamsfx new --interactive false --app-name newapp --host-type azure
       ```
 
-    * Microsoft 365 アカウントと Azure アカウントにログインするには:
+    * Microsoft 365 アカウントと Azure アカウントにログインするには、
 
       ```bash
       teamsfx account login azure
@@ -434,6 +434,27 @@ TeamsFx CLI には、コラボレーション シナリオ用のコマンドが�
 
     * Tab コードを更新し、プロジェクトをリモートにデプロイします。
     * リモートを起動すると、プロジェクトは正常に動作します。
+
+## <a name="deploy-to-azure-web-app-manually"></a>Azure Web アプリに手動でデプロイする
+
+1. SSO 有効化タブを作成します。
+2. プロジェクトをプロビジョニングする:
+
+      ```bash
+      teamsfx provision
+      ```
+
+3. 追加されたパッケージを`npm run build:teamsfx:dev``tabs`実行`npm install`してインストールします`api folder`。
+
+4. Windows アプリ サービス (マシンと同じ OS) を作成します。
+
+5. で実行するか、または実行`$ az webapp up --name --html --subscription`します`build``folder`。`tabs`
+
+6. 変更 `templates/azure/provision/frontendHosting.bicep`します。
+
+7. もう一度プロビジョニングします。 Teams Toolkit では、Azure Active Directory とマニフェストが自動的に更新されます。
+
+8. ビルドフォルダーまたは AppPackage フォルダーを `appPackage.dev.zip` 見つけて、Teams に追加します。
 
 ## <a name="see-also"></a>関連項目
 

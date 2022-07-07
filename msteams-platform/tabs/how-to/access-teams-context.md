@@ -3,12 +3,12 @@ title: タブのコンテキストを取得する
 description: このモジュールでは、タブ、ユーザー コンテキスト、および Access コンテキスト情報に対するユーザー コンテキストを取得する方法について説明します
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: d6723c4733bd127dd32970e3d1059a75771c8bee
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 1e530532b2cad41279a504d89fcdc2251a0455b7
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142312"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66658924"
 ---
 # <a name="get-context-for-your-tab"></a>タブのコンテキストを取得する
 
@@ -27,7 +27,7 @@ ms.locfileid: "66142312"
 * アプリ内のリソースを作成するか、指定したユーザーまたはチームに関連付けます。
 * Microsoft Azure Active Directory (Azure AD) またはその他の ID プロバイダーから認証フローを開始し、ユーザーがユーザー名を再入力する必要はありません。
 
-詳細については、「[Microsoft Teamsでユーザーを認証する」を参照してください](~/concepts/authentication/authentication.md)。
+詳細については、「 [Microsoft Teams でユーザーを認証する](~/concepts/authentication/authentication.md)」を参照してください。
 
 > [!IMPORTANT]
 > このユーザー情報はスムーズなユーザー エクスペリエンスを提供するのに役立ちますが、ID の証明として使用しないでください。  たとえば、攻撃者はブラウザーにページを読み込み、有害な情報や要求をレンダリングできます。
@@ -37,7 +37,7 @@ ms.locfileid: "66142312"
 コンテキスト情報には 2 つの方法でアクセスできます。
 
 * URL プレースホルダー値を挿入します。
-* [Microsoft Teams JavaScript クライアント SDK を使用します](/javascript/api/overview/msteams-client)。
+* [Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) を使用します。
 
 ### <a name="get-context-by-inserting-url-placeholder-values"></a>URL プレースホルダー値を挿入してコンテキストを取得する
 
@@ -61,15 +61,15 @@ ms.locfileid: "66142312"
 * ユーザー名は **user@example.com**。
 * 会社のテナント ID は **e2653c-etc** です。
 * id **00209384-etc** を持つOffice 365 グループのメンバーです。
-* ユーザーがTeamsテーマを **ダーク** に設定しました。
+* ユーザーが Teams のテーマを **ダーク** に設定しました。
 
-タブを構成すると、Teamsは次の URL を呼び出します。
+タブを構成すると、Teams は次の URL を呼び出します。
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
 ### <a name="get-context-by-using-the-microsoft-teams-javascript-library"></a>Microsoft Teams JavaScript ライブラリを使用してコンテキストを取得する
 
-git-issue-clarify-the-full-set-of-values-any-context-object-property-can-can-can-take: Microsoft Teams [JavaScript クライアント SDK](/javascript/api/overview/msteams-client) を呼び出`microsoftTeams.getContext(function(context) { /* ... */ })`して、上記の情報を取得することもできます。
+[Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) を使用して `microsoftTeams.getContext(function(context) { /* ... */ })` を呼び出す方法でも、上記の情報を取得できます。
 
 次のコードは、コンテキスト変数の例を示しています。
 
@@ -114,7 +114,7 @@ git-issue-clarify-the-full-set-of-values-any-context-object-property-can-can-can
 }
 ```
 
-また、関数を呼び出して[、Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) を使用して、上記の情報を`app.getContext()`取得することもできます。 詳細については、 [Context インターフェイス](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true)のプロパティを参照してください。
+関数を呼び出すことで [、Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) を使用して、上記の情報を `app.getContext()` 取得することもできます。 詳細については、 [Context インターフェイス](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true)のプロパティを参照してください。
 
 
 ## <a name="retrieve-context-in-private-channels"></a>プライベート チャネルでコンテキストを取得する
@@ -126,9 +126,9 @@ git-issue-clarify-the-full-set-of-values-any-context-object-property-can-can-can
 * `groupId`: プライベート チャネルの場合は未定義
 * `teamId`: プライベート チャネルの threadId に設定します
 * `teamName`: プライベート チャネルの名前に設定します
-* `teamSiteUrl`: プライベート チャネルの個別の一意のSharePoint サイトの URL に設定します。
-* `teamSitePath`: プライベート チャネルの個別の一意のSharePoint サイトのパスに設定します
-* `teamSiteDomain`: プライベート チャネルの個別の一意のSharePoint サイト ドメインのドメインに設定します
+* `teamSiteUrl`: プライベート チャネルの個別の一意の SharePoint サイトの URL に設定します
+* `teamSitePath`: プライベート チャネルの個別の一意の SharePoint サイトのパスに設定します
+* `teamSiteDomain`: プライベート チャネルの個別の一意の SharePoint サイト ドメインのドメインに設定します
 
 ページでこれらの値のいずれかを使用する場合、フィールドの `channelType` 値は `Private` 、ページがプライベート チャネルに読み込まれ、適切に応答できるかどうかを判断する必要があります。
 
@@ -144,9 +144,9 @@ git-issue-clarify-the-full-set-of-values-any-context-object-property-can-can-can
 * `groupId`: 共有チャネルの場合は未定義です。
 * `teamId`: チームの `threadId` ユーザーに設定すると、チャネルは現在のユーザーに対して共有されます。 ユーザーが複数のチームにアクセスできる場合は、 `teamId` 共有チャネルをホスト (作成) するチームに設定されます。
 * `teamName`: チームの名前に設定すると、現在のユーザーのチャネルが共有されます。 ユーザーが複数のチームにアクセスできる場合は、 `teamName` 共有チャネルをホスト (作成) するチームに設定されます。
-* `teamSiteUrl`: 共有チャネルの個別の一意のSharePoint サイトの URL に設定します。
-* `teamSitePath`: 共有チャネルの個別の一意のSharePoint サイトのパスに設定します。
-* `teamSiteDomain`: 共有チャネルの個別の一意のSharePoint サイト ドメインのドメインに設定します。
+* `teamSiteUrl`: 共有チャネルの個別の一意の SharePoint サイトの URL に設定します。
+* `teamSitePath`: 共有チャネルの個別の一意の SharePoint サイトのパスに設定します。
+* `teamSiteDomain`: 共有チャネルの個別の一意の SharePoint サイト ドメインのドメインに設定します。
 
 これらのフィールドの変更に加えて、共有チャネルで使用できる新しいフィールドは 2 つあります。
 
@@ -156,7 +156,7 @@ git-issue-clarify-the-full-set-of-values-any-context-object-property-can-can-can
 ページでこれらの値のいずれかを使用する場合、フィールドの `channelType` 値は `Shared` 、ページが共有チャネルに読み込まれ、適切に応答できるかどうかを判断する必要があります。
 
 > [!NOTE]
-> ユーザーがTeamsデスクトップまたは Web クライアントを再起動または再読み込みするたびに、新しい sessionID が作成されます。これは、Teams セッションによって追跡されますが、ユーザーがTeams アプリを終了し、Teams プラットフォームで再読み込みすると、アプリ セッションによって追跡される新しいアプリ sessionID が作成されます。
+> ユーザーが Teams デスクトップまたは Web クライアントを再起動または再読み込みするたびに、新しい sessionID が作成され、Teams セッションによって追跡されますが、ユーザーが Teams アプリを終了して Teams プラットフォームで再読み込みすると、新しいアプリ sessionID が作成され、アプリ セッションによって追跡されます。
 
 ## <a name="handle-theme-change"></a>テーマの変更を処理する
 

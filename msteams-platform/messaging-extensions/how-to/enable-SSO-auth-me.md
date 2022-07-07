@@ -5,12 +5,12 @@ description: この記事では、コード サンプルを使用してメッセ
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 674d8870989c42c25a121dc1f3a67616da5f57c1
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 750b101a1a084d6ee409a663f9ee8ae2b4876dfe
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503950"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66658914"
 ---
 # <a name="enable-sso-for-message-extensions"></a>メッセージ拡張機能用の SSO を有効化する
 
@@ -125,7 +125,7 @@ SSO を有効にするには:
 |---------------|------------|------------|-------------|---------------|
 | ボット認証 | このサンプルでは、Teams のボットで認証を開始する方法を示します。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
 | タブ、ボット、メッセージ拡張機能 (ME) SSO | このサンプルでは、Tab、Bot、ME の SSO (検索、アクション、リンクの展開) を示します。 |  [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | 該当なし |
-|Tab、Bot、および Message 拡張機能| このサンプルでは、SSO を使用して Bot、Tab、および Messaging エクステントで認証を確認する方法を示します | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) | 該当なし |
+|Tab、Bot、および Message 拡張機能| このサンプルでは、SSO を使用して Bot、Tab、および Message 拡張機能で認証を確認する方法を示します | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) | 該当なし |
 
 ## <a name="see-also"></a>関連項目
 
