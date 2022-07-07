@@ -1,36 +1,36 @@
 ---
-title: Azure AD を使用した Teams での SSO を使用したタブの認証の概要
-description: Teams での SSO 認証の概要とタブで使用する方法
+title: Azure AD を使用した Teams で SSO を使用したタブの認証の概要
+description: Teams での SSO 認証とタブで使用する方法の概要
 ms.topic: conceptual
-ms.localizationpriority: medium
-keywords: teams 認証タブ Microsoft Azure Active Directory (Azure AD) SSO アクセス トークン アプリ マニフェスト
-ms.openlocfilehash: e394b58effbb21491f20a4a20bfa48bf42fd1484
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: Teams 認証タブ Microsoft Azure Active Directory (Azure AD) SSO アクセス トークン マニフェスト
+ms.openlocfilehash: 54e2a691208db1613bf73e255f91bd4cba8960d6
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557723"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66659012"
 ---
 # <a name="enable-sso-for-tab-app"></a>タブ アプリの SSO を有効にする
 
 <!--Single sign-on (SSO) allows a user to access an application or a web service after signing-in only once. The app users never have to go through authentication again.-->
 
-Teams の SSO を使用すると、アプリ ユーザーは Teams を使用してアプリにアクセスできるという利点があります。 Microsoft または Microsoft 365 アカウントを使用して Teams にログインした後、アプリ ユーザーは、もう一度サインインしなくてもアプリを使用できます。 アプリは、Azure AD 経由でアクセスが許可されている任意のデバイス上のアプリ ユーザーが利用できます。
+Teams で SSO を使用すると、アプリ ユーザーは Teams を使用してアプリにアクセスできる利点があります。 Microsoft または Microsoft 365 アカウントを使用して Teams にログインすると、アプリ ユーザーは、もう一度サインインしなくてもアプリを使用できます。 アプリは、Azure AD 経由でアクセス権が付与されている任意のデバイス上でアプリ ユーザーが利用できます。
 
 このセクションで学習する内容は次のとおりです。
 
-1. **SSO ユーザー エクスペリエンス**: Teams は、アプリ ユーザーに真の SSO エクスペリエンスを提供します。 アプリ ユーザーは、もう一度サインインせずにアプリを使用できます。
-2. **Teams の実行時の SSO**: タブ アプリは、アプリ ユーザーの 1 回限りの認証と承認のために、実行時に Azure AD と対話します。
-3. **タブ アプリの SSO を有効にする: タブ アプリ** で SSO を実装するために必要なタスクを実装します。
+1. **SSO ユーザー エクスペリエンス**: Teams は、アプリ ユーザーに真の SSO エクスペリエンスを提供します。 アプリ ユーザーは、もう一度サインインしなくてもアプリを使用できます。
+2. **Teams 実行時の SSO**: タブ アプリは、アプリ ユーザーの 1 回限りの認証と承認のために、実行時に Azure AD を操作します。
+3. **タブ アプリの SSO を有効にする**: タブ アプリで SSO を実装するために必要なタスクを実装します。
 
 ## <a name="sso-user-experience-in-teams"></a>Teams での SSO ユーザー エクスペリエンス
 
-アプリ ユーザーは、個人用の Microsoft アカウントまたは Microsoft 365 アカウントを使用して Teams にサインインします。 これを利用し、SSO を使用してアプリ ユーザーを認証および承認できます。
+アプリ ユーザーは、個人用の Microsoft アカウントまたは Microsoft 365 アカウントを使用して Teams にサインインします。 これを活用し、SSO を使用してアプリ ユーザーを認証および承認できます。
 
 &nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-ux.png" alt-text="Teams タブ アプリでの SSO ユーザー エクスペリエンス":::
 
-- Teams は、アプリ ユーザーの ID を認証して格納します。
-- タブ アプリは、Teams によって既に検証されているアプリ ユーザーの保存された ID を使用します。
+- Teams は、アプリ ユーザーの ID を認証して保存します。
+- タブ アプリは、Teams によって既に検証されているアプリ ユーザーの保存済み ID を使用します。
 - アプリ ユーザーは、タブ アプリを使用するために ID を使用してアクセスするために Teams に同意する必要があります。
 - アプリ ユーザーは、Web、デスクトップ、またはモバイル クライアントでアプリにアクセスできます。
 
@@ -38,108 +38,108 @@ Teams の SSO を使用すると、アプリ ユーザーは Teams を使用し�
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-tab.gif" alt-text="タブ アプリでの SSO":::
 
-### <a name="enhance-user-experience-with-sso"></a>SSO を使用してユーザー エクスペリエンスを向上させる
+### <a name="enhance-user-experience-with-sso"></a>SSO を使用してユーザー エクスペリエンスを強化する
 
 アプリ ユーザーが SSO エクスペリエンスで得られる内容を次に示します。
 
-- Teams は、Azure AD から現在のアプリ ユーザーのアクセス トークンを取得します。 この Azure AD との対話は、アプリ ユーザーには表示されません。 これは、Teams 環境から離れることなくアプリへのアクセスを取得することに変換されます。
+- Teams は、Azure AD から現在のアプリ ユーザーのアクセス トークンを取得します。 この Azure AD との対話は、アプリ ユーザーには表示されません。 これは、Teams 環境を退出することなくアプリへのアクセス検の取得に変換されます。
 - アプリ ユーザーは、マルチテナント環境でのみ同意する必要があります。 アプリ ユーザーとアプリが同じテナントに存在する場合、アプリ ユーザーはアプリの使用に同意する必要はありません。
-- Teams に初めて同意した後、アプリ ユーザーは、他のデバイスでも、それ以上の同意を必要とせずにアプリを使用できます。 このため、ユーザー エクスペリエンスが向上します。
-  - または、テナント管理者は、アプリ ユーザーに代わって同意を付与できます。 このシナリオでは、テナント管理者がテナント内のアプリ ユーザーに対して同意した場合、アプリ ユーザーに同意を求めるメッセージをまったく表示する必要はありません。 つまり、アプリ ユーザーは同意ダイアログを表示せず、アプリにシームレスにアクセスできます。
-- アクセス トークンは、Teams 環境でのアプリのパフォーマンスと読み込み時間を向上させるために Teams によって事前にフェッチされます。
+- Teams に初めて同意した後、アプリ ユーザーは、他のデバイスでも、それ以上の同意の必要なくアプリを使用できます。 このため、ユーザー エクスペリエンスが向上します。
+  - または、テナント管理者は、アプリ ユーザーに代わって同意を付与できます。 このシナリオでは、テナント管理者がテナント内のアプリ ユーザーに同意した場合、アプリ ユーザーに同意を求めるメッセージを表示する必要はありません。 つまり、アプリ ユーザーは同意ダイアログを表示することなく、アプリにシームレスにアクセスできます。
+- アクセス トークンは、Teams 環境でのアプリのパフォーマンスと読み込み時間を向上させるために Teams によって事前に取得されます。
 - アプリ ユーザーは、Teams 環境でアプリにアクセスして使用するために、複数のパスワードを記憶したり記録したりする必要はありません。
 
 > [!NOTE]
-> アプリ ユーザーは、テナント内のすべての SharePoint および OneDrive アセットの読み取りと書き込みをアプリ ユーザーが許可するなど `Sites.ReadWrite.All`、一部のアクセス許可スコープにアクセス許可を与えることはできません。 このようなスコープの場合は、アプリ ユーザーの代わりに同意を付与するよりもテナント管理者のみです。
+> アプリ ユーザーは、テナント内のすべての SharePoint および OneDrive アセットの読み取りと書き込みをアプリ ユーザーが許可する `Sites.ReadWrite.All` などの一部のアクセス許可スコープにアクセス許可を与えることはできません。 このようなスコープの場合は、アプリ ユーザーの代わりに同意を付与できるのはテナント管理者のみです。
 
-ここでは、Teams 内で SSO エクスペリエンスを実現するために、実行時にバックエンドで何が起こるかを見てみましょう。
+ここでは、Teams 内で SSO エクスペリエンスを実現するために、実行時にバックエンドで発生することに目を向けてみましょう。
 
-## <a name="sso-in-teams-at-runtime"></a>実行時の Teams の SSO
+## <a name="sso-in-teams-at-runtime"></a>Teams 実行時の SSO
 
-タブ アプリで SSO を実現するには、現在ログインしている Teams アプリ ユーザーのアクセス トークンを取得します。 このプロセスには、タブ アプリ クライアントとサーバー、Teams クライアント、Azure AD が含まれます。 この操作中、アプリ ユーザーは Teams ID を使用してマルチテナント環境でアクセス トークンを取得することに同意する必要があります。
+タブ アプリで SSO を実現するには、現在ログインしている Teams アプリ ユーザーのアクセス トークンを取得します。 このプロセスには、タブ アプリ クライアント、サーバー、Teams クライアント、Azure AD が含まれます。 この操作中、アプリ ユーザーは Teams ID を使用してマルチテナント環境でアクセス トークンを取得することに同意する必要があります。
 
-次の図は、Teams アプリ ユーザーがタブ アプリにアクセスしようとしたときに SSO がどのように機能するかを示しています。
+次の図は、Teams アプリ ユーザーがタブ アプリにアクセスしようとした場合の SSO の機能を示しています。
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png" alt-text="タブ シングル サインオンの SSO 図" lightbox="../../../assets/images/authentication/teams-sso-tabs/sso-runtime-seqd.png":::
 
-| # | 操作 | どうなっているのですか |
+| # | 操作 | 何が起こっているのでしょうか |
 | --- | --- | --- |
-| 1 | タブ アプリ → Teams クライアント | タブ アプリは、アクセス トークンを取得するように Teams に `getAuthToken()`指示する JavaScript 呼び出しを行います。 |
+| 1 | タブ アプリ → Teams クライアント | タブ アプリは、アクセス トークンを取得するように Teams に指示する `getAuthToken()` への JavaScript 呼び出しを行います。 |
 | 2 | Teams クライアント → Azure AD | Teams は、Teams ID に基づいて、現在のアプリ ユーザーのアクセス トークンに対して Azure AD エンドポイントを要求します。 |
-| 3 | Azure AD →同意フォーム | 現在のアプリ ユーザーが初めてタブ アプリを使用している場合、アプリが保護されたデータにアクセスする必要がある場合、Teams は同意を求める要求を表示します。 アプリ ユーザー (または管理者) は、アプリ ユーザーの Teams ID を使用して Azure AD からアクセス トークンを取得することに Teams に同意する必要があります。 <br> または、2 要素認証などのステップアップ認証を要求する要求プロンプトが表示されます。 |
-| 4 | Azure AD → Teams クライアント | Azure AD は、Teams クライアントにアクセス トークンを送信します。 トークンは JSON Web トークン (JWT) であり、検証は、ほとんどの標準 OAuth フローでのトークン検証と同様に機能します。 Teams は、キャッシュされたトークンを返すために `getAuthToken()` 今後の呼び出しが行われるよう、ユーザーの代わりにトークンをキャッシュします。 |
-| 5 | Teams クライアント → タブ アプリ クライアント | Teams は、呼び出しによって返された結果オブジェクトの一部として、アクセス トークンをタブ アプリに `getAuthToken()` 送信します。 |
-| 6  | タブ アプリ (クライアント & サーバー間) | タブ アプリは、JavaScript を使用してアクセス トークンを解析し、アプリ ユーザーの電子メール アドレスなどの必要な情報を抽出します。 タブ アプリに返されるトークンは、アクセス トークンと ID トークンの両方です。 |
+| 3 | Azure AD → 同意フォーム | 現在のアプリ ユーザーが初めてタブ アプリを使用している場合、アプリが保護されたデータにアクセスする必要がある場合、Teams は同意を求める要求を表示します。 アプリ ユーザー (または管理者) は、アプリ ユーザーの Teams ID を使用して Azure AD からアクセス トークンを取得することについて Teams に同意する必要があります。 <br> または、2 要素認証などのステップアップ認証を要求する要求プロンプトが表示されます。 |
+| 4 | Azure AD → Teams クライアント | Azure AD では、Teams クライアントにアクセス トークンを送信します。 このトークンは、JSON Web トークン (JWT) です。この検証は最も標準的な OAuth でのトークンの検証とまったく同様に動作します。 Teams はユーザーの代わりにトークンをキャッシュし、`getAuthToken()` への今後の呼び出しが、キャッシュされたトークンを返すようにします。 |
+| 5 | Teams クライアント → タブ アプリ クライアント | `getAuthToken()` の呼び出しによって返される結果オブジェクトの一部として、Teams ではタブ アプリにアクセス トークン を送信します。 |
+| 6  | タブ アプリ (クライアントとサーバー間) | タブ アプリは JavaScript を使用してアクセス トークンで解析され、アプリ ユーザーのメール アドレスなどの必要な情報を抽出します。 タブ アプリに返されるトークンは、アクセス トークン と ID トークンの両方です。 |
 
-詳細については、「コードを [更新して SSO を有効にする」を](tab-sso-code.md)参照してください。
+詳細については、「[コードを更新して SSO を有効にする](tab-sso-code.md)」を参照してください。
 
 > [!IMPORTANT]
-> これは `getAuthToken()` 、電子メール、プロファイル、offline_access、OpenId など、限られたユーザー レベルの API のセットに同意する場合にのみ有効です。 これは、他の Graph スコープ (以下など`User.Read``Mail.Read`) には使用されません。 推奨される回避策については、「 [Microsoft Graph のアクセス許可を使用してアプリを拡張](tab-sso-graph-api.md)する」を参照してください。
+> `getAuthToken()` は、メール、プロファイル、offline_access、OpenId など、ユーザー レベルの API の限定された組み合わせに同意する場合にのみ有効です。 `User.Read` や `Mail.Read` など、その他の Graph スコープには使用されません。 推奨される回避策については、「[Microsoft Graph のアクセス許可を使用してアプリを拡張する](tab-sso-graph-api.md)」を参照してください。
 
-タブは Teams 対応の Web ページです。 タブ アプリ内でホストされている Web ページで SSO を有効にするには、 [Teams Javascript クライアント SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) を追加し `microsoftTeams.initialize()`、. 初期化後、アプリのアクセス トークンを取得するために呼び出 `microsoftTeams.getAuthToken()` します。
+タブは Teams 対応 Web ページです。 タブ アプリ内でホストされている Web ページで SSO を有効にするには、[Teams Javascript クライアント SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) を追加し、`microsoftTeams.initialize()` を呼び出します。 初期化したら、アプリのアクセス トークンを取得するために `microsoftTeams.getAuthToken()` を呼び出します。
 
 ### <a name="use-cases-for-enabling-sso"></a>SSO を有効にするためのユース ケース
 
-Id プロバイダーとして Azure AD をサポートするすべてのアプリに対して Teams で SSO を有効にすることができます。 タブ アプリでアプリ ユーザーを認証するために SSO を使用するだけでなく、それを使用して Teams 間でシームレスなアクセスを有効にすることもできます。
+ID プロバイダーとして Azure AD をサポートするすべてのアプリに、Teams で SSO を有効にすることができます。 タブ アプリでアプリ ユーザーを認証するために SSO を使用するだけでなく、それを使用して Teams 間でシームレスなアクセスを有効にすることもできます。
 
 SSO API を使用してアプリ ユーザーを認証できるシナリオは次のとおりです。
 
-- Teams タブ アプリ内でアプリ ユーザーを認証する場合、SSO API を使用すると、アプリ ユーザーは追加の認証を必要とせずに Teams でアプリを使用できます。 アプリ ユーザーの Teams ID に基づいて、Azure AD からそれらのアクセス トークンを取得できます。
-- アプリがボット、タブ、メッセージ拡張機能、またはアダプティブ カード内からタスク モジュールを使用している場合は、SSO API を使用してアプリ ユーザーを認証できます。
-- また、SSO API を使用して、ステージ ビューにアクセスするアプリ ユーザーを認証するために、再度検証する必要はありません。
+- Teams タブ アプリ内でアプリ ユーザーを認証する場合、SSO API を使用すると、アプリ ユーザーは追加の認証の必要なく Teams でアプリを使用できます。 アプリ ユーザーの Teams ID に基づいて、Azure AD からそれらのアクセス トークンを取得できます。
+- アプリがボット、タブ、メッセージ拡張機能、アダプティブ カード内からタスク モジュールを使用する場合は、SSO API を使用してアプリ ユーザーを認証できます。
+- また、SSO API を使用して、もう一度検証する必要なくステージ ビューにアクセスするアプリ ユーザーを認証することもできます。
 
 > [!TIP]
-> また、SSO API を使用して、Web コンテンツを埋め込む [タスク モジュール](../../../task-modules-and-cards/what-are-task-modules.md) でアプリ ユーザーを認証することもできます。
+> さらに、SSO API を使用して、Web コンテンツを組み込む [タスク モジュール](../../../task-modules-and-cards/what-are-task-modules.md) でアプリ ユーザーを認証することもできます。
 
-実行時に SSO を実現するには、アプリユーザーを認証および承認するための SSO を有効にするようにアプリを構成します。
+実行時に SSO を実現するには、アプリ ユーザーを認証して承認するための SSO を有効にするようにアプリを構成します。
 
 ## <a name="enable-sso-for-a-tab-app"></a>タブ アプリの SSO を有効にする
 
 このセクションでは、タブ アプリの SSO の実装に関連するタスクについて説明します。 これらのタスクは、言語とフレームワークに依存していません。
 
-タブ アプリの SSO を有効にするには:
+タブ アプリの SSO を有効にするには、以下の操作を行います。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png" alt-text="タブの SSO を有効にする手順" lightbox="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png":::
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png" alt-text="タブの SSO を有効にするための手順" lightbox="../../../assets/images/authentication/teams-sso-tabs/enable-sso.png":::
 
-1. **Azure AD に登録する: Azure** AD アプリを作成して、アプリ ID とアプリケーション ID URI を生成します。 アクセス トークンを生成するには、スコープを構成し、信頼されたクライアント アプリケーションを承認します。
-2. **コードの更新**: アクセス トークンを処理するコードを追加し、アプリ ユーザーがタブ アプリにアクセスしたときに呼び出 `getAuthToken()` し、Authorization ヘッダーでアプリのサーバー コードにこのトークンを送信し、アクセス トークンを受信したときにアクセス トークンを検証します。
-3. **Teams アプリ マニフェストを更新** する: アプリの代わりに Teams がアクセス トークンを要求できるように、Azure AD で生成されたアプリ ID とアプリケーション ID URI を使用して Teams クライアント アプリ マニフェストを更新します。
+1. **Azure AD に登録**: Azure AD アプリを作成して、アプリ ID とアプリケーション ID URI を生成します。 アクセス トークンを生成するには、スコープを構成し、信頼されたクライアント アプリケーションを承認します。
+2. **コードの更新**: アクセス トークンを処理するコードを追加し、アプリ ユーザーがタブ アプリにアクセスしたときに `getAuthToken()` を呼び出し、承認ヘッダーでアプリのサーバー コードにこのトークンを送信し、アクセス トークンの受信時にアクセス トークンを検証します。
+3. **Teams アプリ マニフェストの更新**: Azure AD で生成されたアプリ ID とアプリケーション ID URI を使用して Teams クライアント アプリ マニフェストを更新して、アプリの代わりに Teams がアクセス トークンを要求できるようにします。
 
 ## <a name="third-party-cookies-on-ios"></a>iOS のサードパーティ Cookie
 
-iOS 14 の更新後、Apple は既定ですべてのアプリに対する [サード パーティの Cookie](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) アクセスをブロックしました。 そのため、チャネル タブまたはチャット タブの認証にサード パーティの Cookie を利用するアプリと個人用アプリは、Teams iOS クライアントで認証ワークフローを完了できません。 プライバシーとセキュリティの要件に準拠するには、トークンベースのシステムに移行するか、ユーザー認証ワークフローにファーストパーティ Cookie を使用する必要があります。
+iOS 14 を更新すると、Apple は既定ですべてのアプリの[サードパーティ Cookie](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) のアクセスをブロックしました。 したがって、[チャネル] タブまたは [チャット] タブでの認証にサードパーティ Cookie を利用するアプリ、および個人用アプリは、Teams iOS クライアントでの認証ワークフローを完了できません。 プライバシーとセキュリティの要件に準拠するには、トークンベースのシステムに移行するか、ユーザー認証ワークフローにファーストパーティ Cookie を使用する必要があります。
 
 ### <a name="teams-mobile-client-support"></a>Teams モバイル クライアントのサポート
 
-Teams Mobile の場合、SSO をサポートするクライアント バージョンは次のとおりです。
+Teams モバイルの場合、SSO をサポートするクライアント バージョンは次のとおりです。
 
 - Teams for Android (1416/1.0.0.2020073101 以降)
 - Teams for iOS (バージョン: 2.0.18 以降)  
-- Teams JavaScript SDK (バージョン: 1.11 以降) で SSO が会議のサイド パネルで機能する
+- Teams JavaScript SDK (バージョン: 1.11 以降)。SSO を会議のサイド パネルで機能させるために必要です
 
 Teams を最適なパフォーマンスでご利用いただくために、最新バージョンの iOS および Android を使用してください。
 
 ## <a name="best-practices"></a>ベスト プラクティス
 
-ベスト プラクティスの一覧を次に示します。
+以下がベスト プラクティスの一覧です。
 
-- **必要な場合にのみアクセス トークンを呼び出** す: アクセス トークンが必要な場合にのみ呼び出 `getAuthToken()` します。 アプリ ユーザーがタブ アプリにアクセスするとき、またはアプリ ユーザーの検証を必要とする特定の関数を使用するときに呼び出すことができます。
-- **クライアント側のコードにアクセス トークンを格納** しないでください。アプリのクライアント側コードにアクセス トークンをキャッシュしたり格納したりしないでください。 Teams クライアントはアクセス トークンをキャッシュします (有効期限が切れた場合は新しいトークンを要求します)。 これにより、Web アプリからトークンが誤って漏えいすることはありません。
-- **Microsoft Graph 呼び出しにサーバー側コードを使用** する: 常にサーバー側のコードを使用して、Microsoft Graph 呼び出し、またはアクセス トークンを渡す必要があるその他の呼び出しを行います。 クライアントから Microsoft Graph への直接呼び出しを有効にするために、クライアントに OBO トークンを返しません。 これにより、トークンが傍受またはリークされないように保護できます。 詳細については、「 [Microsoft Graph のアクセス許可とスコープを使用してタブ アプリを拡張](tab-sso-graph-api.md)する」を参照してください。
+- **必要な場合にのみアクセス トークンを呼び出す**: アクセス トークンが必要な場合にのみ `getAuthToken()` を呼び出します。 アプリ ユーザーがタブ アプリにアクセスするとき、またはアプリ ユーザーの検証が必要な特定の関数を使用するときに呼び出すことができます。
+- **クライアント側のコードにアクセス トークンを格納しない**: アプリのクライアント側のコードにアクセス トークンをキャッシュしたり格納したりしないでください。 Teams クライアントはアクセス トークンをキャッシュします (有効期限が切れた場合は新しいトークンを要求します)。 これにより、Web アプリからトークンが偶発的に漏えいすることはありません。
+- **Microsoft Graph 呼び出しにサーバー側コードを使用する**: 常にサーバー側のコードを使用して、Microsoft Graph 呼び出し、またはアクセス トークンを渡す必要があるその他の呼び出しを行います。 クライアントから Microsoft Graph への直接呼び出しを有効にするために、クライアントに OBO トークンを返しません。 これにより、トークンが傍受またはリークされないように保護できます。 詳細については、「[Microsoft Graph のアクセス許可とスコープを使用してタブ アプリを拡張する](tab-sso-graph-api.md)」を参照してください。
 
 ## <a name="known-limitations"></a>既知の制限
 
 - 現時点では、Teams の SSO では OAuth 2.0 トークンのみがサポートされています。 SAML トークンはサポートされていません。
-- アプリごとに複数のドメインはサポートされていません。 詳細については、「 [LOB アプリ](tab-sso-register-aad.md#before-you-register-with-azure-ad)」を参照してください。
+- アプリごとの複数のドメインはサポートされていません。 詳細については、「[LOB アプリ](tab-sso-register-aad.md#before-you-register-with-azure-ad)」を参照してください。
 
 ## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
-> [Azure AD にタブ アプリケーションを登録する](tab-sso-register-aad.md)
+> [Azure AD でタブ アプリケーションを登録する](tab-sso-register-aad.md)
 
 ## <a name="see-also"></a>関連項目
 
-[タブ アプリで SSO を有効にするコードを構成する](tab-sso-code.md)
+[タブ アプリでコードを構成して SSO を有効にする](tab-sso-code.md)
 
 <!--
 ### Use cases for enabling SSO for tab app
