@@ -5,12 +5,12 @@ description: このモジュールでは、受信 Webhook を Teams アプリに
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 4b93e7118cbd9b22ef7022f19b9538fe156b59f6
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 5c826e3f8b041f1ef136fc8e7941c74ac35e7773
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503495"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66659028"
 ---
 # <a name="create-incoming-webhooks"></a>受信 Webhook を作成する
 
@@ -106,3 +106,4 @@ Teams チャネルから受信 Webhook を削除するには、次の手順に�
 * [メッセージを作成して送信する](~/webhooks-and-connectors/how-to/connectors-using.md)
 * [Web アプリから Teams に共有する](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)
+* [Azure Logic Apps でアクセスとデータをセキュリティ保護する](/azure/logic-apps/logic-apps-securing-a-logic-app)

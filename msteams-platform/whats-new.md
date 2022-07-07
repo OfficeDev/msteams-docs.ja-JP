@@ -1,14 +1,14 @@
 ---
-title: Teams の開発者向けの新機能
-description: このラーニング パスでは、Microsoft Teams の新しい開発者向け機能とそれらの機能の強化について説明します。
+title: Teams の開発者向けの新機能と更新情報
+description: 新しく導入された Microsoft Teams の開発者向け機能と、それらの機能に対する更新について説明します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 3ab4c771bb0bf0cab1fb7c71f2995d18af7b4289
-ms.sourcegitcommit: 779aa3220f6448a9dbbaea57e667ad95b5c39a2a
+ms.openlocfilehash: 52a8c9744fdc00b5e1305575f177883cb6c9ead4
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66561617"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66658956"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -266,7 +266,7 @@ ms.locfileid: "66561617"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ------------------ |
-| 06/30/2022 | インスタント会議、1 対 1、グループ通話用のアプリ| Teams 会議と通話用のアプリをビルド > [[概要]](apps-in-teams-meetings/teams-apps-in-meetings.md)|
+| 06/30/2022 | インスタント会議、1 対 1 通話、グループ通話用のアプリ| Teams 会議と通話用のアプリをビルド > [[概要]](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 | 2022/6/16 | Web アプリからの [Teams で共有] のリンク展開| [Teams との統合] > [Teams への共有] > [[Web アプリから Teams に共有する]](concepts/build-and-test/share-to-teams-from-web-apps.md) |
 | 06/06/2022| Teams ボットの会話とインストール イベントを更新する |  ボットの構築 > ボットの会話 > Teams ボットの会話イベント > [Teams ボットの会話イベント](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 |05/24/2022| Live Share SDK による強化されたコラボレーション |  Teams会議用のアプリのビルド > Live Share を使用した強化されたコラボレーション > [概要](apps-in-teams-meetings/teams-live-share-overview.md) |

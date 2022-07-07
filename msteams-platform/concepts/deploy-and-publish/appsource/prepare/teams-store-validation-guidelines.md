@@ -5,16 +5,16 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: ac1b53cadcaab6b9ab82bdf62a3f4735a7abe2ad
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 0c92ce5acee19a1c83bf5fc83e0b09ab6a6dfc4f
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558122"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66659035"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams ストア検証ガイドライン
 
-これらのガイドラインに従うことで、アプリが Microsoft Teams ストアの審査プロセスに合格する可能性が高まります。 Teams 固有のガイドラインは、Microsoft [コマーシャル マーケットプレース認定ポリシー](/legal/marketplace/certification-policies)を補完するものであり、新機能やユーザー フィードバック、ビジネス ルールの変更を反映して頻繁に更新されています。
+これらのガイドラインに従うことで、アプリが Microsoft Teams ストアの審査プロセスに合格する可能性が高まります。 Teams 固有のガイドラインは、Microsoft [コマーシャル マーケットプレース認定ポリシー](/legal/marketplace/certification-policies#1140-teams)を補完するものであり、新機能やユーザー フィードバック、ビジネス ルールの変更を反映して頻繁に更新されています。
 
 > [!NOTE]
 >
@@ -102,7 +102,7 @@ ms.locfileid: "66558122"
   * **アプリ**
   * **ヘルプ**
 * 開発者の名前を普通名詞の接頭辞または接尾辞として含める。 たとえば、**タスク** ではなく **Contoso タスク** がこれにあたります。
-* 共同ブランド化や共同販売を誤って示す可能性のある、**Teams** やその他の Microsoft 製品名 (Excel、PowerPoint、Word、OneDrive、SharePoint、OneNote、Azure、Surface、Xbox など) を使用してはいけません。 Microsoft ソフトウェア、製品、およびサービスの参照に関する詳細については、「[Microsoft の商標およびブランドに関するガイドライン](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general)」を参照してください。
+* ブランド提携や共同販売を誤って示す可能性のある、**Teams** やその他の Microsoft 製品の名前 (Excel、PowerPoint、Word、OneDrive、SharePoint、OneNote、Azure、Surface、Xbox など) を使用することはできません。 Microsoft ソフトウェア、製品、およびサービスの参照に関する詳細については、「[Microsoft の商標およびブランドに関するガイドライン](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general)」を参照してください。
 * アプリが Microsoft との公式パートナーシップのメンバーである場合、アプリの名前が最初に来る必要があります。たとえば、**Contoso Connector for Microsoft Teams** がこれにあたります。
 * ストアに登録済みのアプリや、コマーシャル マーケットプレース上のその他のオファーと同じ名前を使用してはいけません。
 * 卑猥な言葉や軽蔑的な言葉を含んではいけません。 名前には、人種や文化に配慮しない言葉が含まれてはいけません。
@@ -117,7 +117,7 @@ ms.locfileid: "66558122"
 
 ### <a name="suitable-for-workplace-consumption"></a>職場での消費に適していること
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、Microsoft 商用認定ポリシー番号 [1140.1.2](/legal/marketplace/certification-policies#114012-workplace-appropriateness)、[100.8](/legal/marketplace/certification-policies#1008-significant-value)、[100.10](/legal/marketplace/certification-policies#10010-inappropriate-content) に沿ったものであり、開発者に職場に適したアプリを構築するための追加のガイダンスを提供します。
 <br></br>
@@ -143,7 +143,7 @@ ms.locfileid: "66558122"
 
 ### <a name="authentication"></a>認証
 
-[*必須の修正プログラム*]
+[*必須の修正*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、[Microsoft 商用認定ポリシー番号 1140.1.4](/legal/marketplace/certification-policies#114014-access-to-services) に沿ったものであり、外部サービスを使用したそれらのアプリの認証に関して、開発者にガイダンスを提供します。
 
@@ -163,7 +163,7 @@ ms.locfileid: "66558122"
   * テナント管理者によるワンタイム セットアップが必要であるアプリでは、(他のテナント ユーザーがアプリをインストールして使用する前に) テナント管理者に対する依存関係を記述してそれが適用される形にアプリを構成しておく必要があります。  
   依存関係は、アプリのマニフェスト、AppSource の「詳細な説明」、初回実行時エクスペリエンスのすべてのタッチポイント (すなわち、ボットのようこそメッセージ、タブのセットアップないしは構成ページ)、ボットの応答や拡張機能や静的タブのコンテンツページのヘルプ テキスト (必須とされている) に記述されている必要があります。
   
-* **コンテンツ共有エクスペリエンス**: Teams チャネルでコンテンツを共有するために外部サービスを使用した認証を必要とするアプリは、外部サービスでその機能がサポートされている場合、コンテンツを切断または共有解除する方法をヘルプ ドキュメント (または同様のリソース) で明示する必要があります。これは、コンテンツの共有を解除する機能が、Teams アプリに存在する必要があるということではありません。
+* **コンテンツ共有エクスペリエンス**: Teams チャネルでコンテンツを共有するために外部サービスを使用した認証を必要とするアプリは、外部サービスでその機能がサポートされている場合、コンテンツを切断または共有解除する方法をヘルプ ドキュメント (または同様のリソース) で明示する必要があります。 これは、コンテンツの共有を解除する機能が、Teams アプリに存在する必要があるということではありません。
 
 </details>
 
@@ -173,7 +173,7 @@ ms.locfileid: "66558122"
 
 ### <a name="financial-information"></a>財務情報
 
-[*必須の修正プログラム*]
+[*必須の修正*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは [Microsoft 商用認定ポリシー番号 1140.3.1](/legal/marketplace/certification-policies#114031-financial-transactions) に沿ったもので、Teams インターフェイス内の財務情報の送信に関するガイダンスを提供し、Teams アプリのモバイル (Android および iOS) バージョンでの制限付き支払いのシナリオを開発者に対して示します。
 <br></br>
@@ -203,7 +203,7 @@ iOS 版または Android 版 Teams で実行するアプリは、以下のガイ
 
 ### <a name="bots"></a>ボット
 
-[*必須の修正プログラム*]
+[*必須の修正*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.3.2](/legal/marketplace/certification-policies#114032-bots-and-messaging-extension) に沿ったものです。
 <br></br>
@@ -219,7 +219,7 @@ Microsoft Azure Bot Service を使用するアプリ (ボットやメッセー�
 
 ### <a name="external-domains"></a>外部ドメイン
 
-[*必須の修正プログラム*]
+[*必須の修正*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー番号 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains) に沿ったもので、`validDomains` マニフェスト プロパティでの制限付きドメインの使用に関する開発者向けのガイダンスを提供します。
 <br></br>
@@ -264,7 +264,7 @@ Government Community Cloud (GCC) ユーザーにアプリを配布するには�
 
 ### <a name="compatibility"></a>互換性
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
 アプリは、以下のオペレーティング システムやブラウザーの最新バージョンで完全に機能する必要があります。
 
@@ -279,7 +279,7 @@ Government Community Cloud (GCC) ユーザーにアプリを配布するには�
 
 ### <a name="response-time"></a>応答時間
 
-[*必須の修正プログラム*]
+[*必須の修正*]
 
 Teams アプリは、合理的な時間内に応答するか、読み込み中や入力中のインジケーター、メッセージ、または警告を表示する必要があります。
 
@@ -480,7 +480,7 @@ Teams アプリに特化した特定のポリシーも、すべてのサービ�
 
 ### <a name="localization"></a>ローカリゼーション
 
-[*必須の修正プログラム*]
+[*必須の修正*]
 
 アプリがローカリゼーションを提供する場合、アプリ パッケージには、Teams の言語設定に基づいて表示される言語の翻訳ファイルを含める必要があります。 ファイルは、Teams のローカリゼーション スキーマに準拠している必要があります。 詳細については、「[Teams のローカリゼーション スキーマ](~/concepts/build-and-test/apps-localization.md)」を参照してください。
 
