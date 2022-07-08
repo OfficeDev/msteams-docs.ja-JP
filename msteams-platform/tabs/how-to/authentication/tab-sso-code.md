@@ -2,27 +2,27 @@
 title: タブの SSO を有効にするためのコード構成
 description: タブの SSO を有効にするためのコード構成について説明します
 ms.topic: how-to
-ms.localizationpriority: medium
-keywords: teams 認証タブ Microsoft Azure Active Directory (Azure AD) Graph API
-ms.openlocfilehash: 0ce3e34f4cc36a3b4c08a21563261889266ebe79
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: Teams 認証タブ Microsoft Azure Active Directory (Azure AD) Graph API
+ms.openlocfilehash: 466da3cbd879ed2546adcad87f6f55620d54256d
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558731"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66658938"
 ---
 # <a name="add-code-to-enable-sso"></a>SSO を有効にするコードを追加する
 
 SSO を有効にするコードを追加する前に、Azure AD にアプリを登録していることを確認します。
 
 > [!div class="nextstepaction"]
-> [Azure AD に登録する](tab-sso-register-aad.md)
+> [Azure AD に登録](tab-sso-register-aad.md)
 
 Azure AD からアクセス トークンを取得するには、タブ アプリのクライアント側コードを構成する必要があります。 アクセス トークンは、タブ アプリの代わりに発行されます。 タブ アプリに追加の Microsoft Graph アクセス許可が必要な場合は、アクセス トークンをサーバー側に渡し、Microsoft Graph トークンと交換する必要があります。
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="アクセス トークンを処理するためのコードを構成する":::
 
-このセクションでは、以下について説明します。
+このセクションでは、次の手順について説明します。
 
 - [クライアント側のコードを追加する](#add-client-side-code)
 - [アクセス トークンをサーバー側のコードに渡す](#pass-the-access-token-to-server-side-code)
@@ -30,24 +30,24 @@ Azure AD からアクセス トークンを取得するには、タブ アプリ
 
 ## <a name="add-client-side-code"></a>クライアント側のコードを追加する
 
-現在のアプリ ユーザーのアプリ アクセスを取得するには、クライアント側のコードがアクセス トークンを取得するために Teams を呼び出す必要があります。 検証プロセスを開始するために使用するために、 `getAuthToken()` クライアント側のコードを更新する必要があります。
+現在のアプリ ユーザーのアプリ アクセスを取得するには、クライアント側のコードがアクセス トークンを取得するために Teams を呼び出す必要があります。 `getAuthToken()` を使用して検証プロセスを開始するために、クライアント側のコードを更新する必要があります。
 
 <br>
 <details>
-<summary>getAuthToken() の詳細を確認する</summary>
+<summary>getAuthToken() に関する詳細情報</summary>
 <br>
-`getAuthToken()` は、Microsoft Teams JavaScript SDK のメソッドです。 アプリに代わって発行される Azure AD アクセス トークンを要求します。 有効期限が切れていない場合、トークンはキャッシュから取得されます。 有効期限が切れている場合は、新しいアクセス トークンを取得するために要求が Azure AD に送信されます。
+`getAuthToken()` は、Microsoft Teams JavaScript SDK のメソッドです。 アプリに代わって発行される Azure AD アクセス トークンを要求します。 有効期限が切れていない場合は、トークンをキャッシュから取得します。 有効期限が切れている場合は、新しいアクセス トークンを取得するために Azure AD に要求が送信されます。
 
- 詳細については、「 [getAuthToken」を](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-authentication-getauthtoken&preserve-view=true)参照してください。
+ 詳細については、[getAuthToken](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-authentication-getauthtoken&preserve-view=true) を参照してください。
 </details>
 
-### <a name="when-to-call-getauthtoken"></a>getAuthToken を呼び出すタイミング
+### <a name="when-to-call-getauthtoken"></a>getAccessToken を呼び出す場合
 
-現在のアプリ ユーザーにアクセス トークンが必要な場合に使用 `getAuthToken()` します。
+現在のアプリ ユーザーにアクセス トークンが必要な場合に `getAuthToken()` を使用します。
 
-| アクセス トークンが必要な場合... | getAuthToken().. を呼び出します。 |
+| アクセス トークンが必要な場合... | getAuthToken() を呼び出します... |
 | --- | --- |
-| アプリ ユーザーがアプリにアクセスする場合 | 内側 `microsoftTeams.initialize()`から . |
+| アプリ ユーザーがアプリにアクセスする場合 | 内側の `microsoftTeams.initialize()`から。 |
 | アプリの特定の機能を使用するには | アプリ ユーザーがサインインを必要とするアクションを実行した場合。 |
 
 ### <a name="add-code-for-getauthtoken"></a>getAuthToken のコードを追加する
@@ -55,9 +55,9 @@ Azure AD からアクセス トークンを取得するには、タブ アプリ
 JavaScript コード スニペットをタブ アプリに追加するには、次の手順を実行します。
 
 - `getAuthToken()` を呼び出します。
-- アクセス トークンを解析するか、サーバー側のコードに渡します。
+- アクセス トークンを解析するか、それをサーバー側コードに渡します。
 
-次のコード スニペットは、呼び出し `getAuthToken()`の例を示しています。
+次のコード スニペットに、`getAuthToken()` の呼び出しの例を示します。
 
 ```javascript
 microsoftTeams.initialize();
@@ -68,7 +68,7 @@ var authTokenRequest = {
 microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```
 
-トークンが必要なアクションを開始するすべての関数とハンドラーの呼び出し `getAuthToken()` を追加できます。
+`getAuthToken()` の呼び出しを、このトークンが必要とされる場所でアクションを開始するすべての関数とハンドラーに追加できます。
 
 <br>
 <details>
@@ -78,61 +78,61 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 </details>
 
-Teams はアクセス トークンを受け取ると、キャッシュされ、必要に応じて再利用されます。 このトークンは、Azure AD への別の呼び出しを行うことなく、有効期限が切れるまで、呼び出されるたびに `getAuthToken()` 使用できます。
+Teams は、アクセス トークンを受け取るとキャッシュされ、必要に応じて再利用されます。 このトークンは、Azure AD への別の呼び出しを行うことなく、有効期限が切れるまで、`getAuthToken()` が呼び出されるたびに使用できます。
 
 > [!IMPORTANT]
-> アクセス トークンのセキュリティのベスト プラクティスとして、
+> アクセス トークンのセキュリティのベスト プラクティスは以下のとおりです。
 >
-> - アクセス トークンが必要な場合にのみ、常に呼び出します `getAuthToken()` 。
+> - アクセス トークンが必要な場合は、常に `getAuthToken()` を呼び出します。
 > - Teams によってアクセス トークンがキャッシュされます。 キャッシュしたり、アプリのコードに格納したりしないでください。
 
 ### <a name="consent-dialog-for-getting-access-token"></a>アクセス トークンを取得するための同意ダイアログ
 
-ユーザー レベルのアクセス許可に対してアプリ `getAuthToken()` ユーザーの同意が必要な場合は、現在サインインしているアプリ ユーザーに Azure AD ダイアログが表示されます。
+`getAuthToken()` を呼び出し、ユーザー レベルのアクセス許可に対してアプリ ユーザーの同意が必要な場合は、現在サインインしているアプリ ユーザーに Azure AD ダイアログが表示されます。
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tabs-sso-prompt.png" alt-text="タブ シングル サインオン ダイアログ プロンプト":::
 
-表示される同意ダイアログは、Azure AD で定義された open-id スコープ用です。 アプリ ユーザーは同意を 1 回だけ行う必要があります。 同意した後、アプリ ユーザーは、付与されたアクセス許可とスコープにタブ アプリにアクセスして使用できます。
+表示される同意ダイアログは、Azure AD で定義された open-id スコープ用です。 アプリ ユーザーは同意を 1 回だけ行う必要があります。 同意した後、アプリ ユーザーは、付与されたアクセス許可とスコープ用のタブ アプリにアクセスして使用できます。
 
 > [!IMPORTANT]
 > 同意ダイアログが不要なシナリオ:
 >
-> - テナント管理者がテナントに代わって同意を与えた場合、アプリ ユーザーに同意を求めるメッセージをまったく表示する必要はありません。 つまり、アプリ ユーザーは同意ダイアログを表示せず、アプリにシームレスにアクセスできます。
-> - Teams で認証を要求しているのと同じテナントに Azure AD アプリが登録されている場合、アプリ ユーザーは同意を求められず、すぐにアクセス トークンが付与されます。 アプリ ユーザーは、Azure AD アプリが別のテナントに登録されている場合にのみ、これらのアクセス許可に同意します。
+> - テナント管理者がテナントに代わって同意した場合、アプリ ユーザーに同意を求めるメッセージを表示する必要はありません。 つまり、アプリ ユーザーは同意ダイアログを表示することなく、アプリにシームレスにアクセスできます。
+> - Azure AD アプリが Teams で認証要求を行うのと同じテナントに登録されている場合には、アプリ ユーザーが同意を求められることはなく、アクセス トークンがすぐ付与されます。 アプリ ユーザーは、Azure AD アプリが別のテナントに登録されている場合にのみ、これらのアクセス許可に同意します。
 
-エラーが発生した場合は、「 [Teams での SSO 認証のトラブルシューティング](tab-sso-troubleshooting.md)」を参照してください。
+エラーが発生した場合は、「[Teams での SSO 認証のトラブルシューティング](tab-sso-troubleshooting.md)」を参照してください。
 
 ### <a name="use-the-access-token-as-an-identity-token"></a>アクセス トークンを ID トークンとして使用する
 
-タブ アプリに返されるトークンは、アクセス トークンと ID トークンの両方です。 タブ アプリは、アクセス トークンとしてトークンを使用して、サーバー側の API に対して認証された HTTPS 要求を行うことができます。
+タブ アプリに返されるトークンは、アクセス トークン と ID トークンの両方です。 タブ アプリは、トークンを アクセス トークンとして使用して、サーバー側の API に対して認証された HTTPS 要求を行うことができます。
 
-返された `getAuthToken()` アクセス トークンは、トークン内の次の要求を使用してアプリ ユーザーの ID を確立するために使用できます。
+`getAuthToken()` から返されたアクセス トークンは、トークンの次の要求を使用してアプリ ユーザーの ID を確立するために使用できます。
 
-- `name`: アプリ ユーザーの表示名。
+- `name`: ユーザーの表示名。
 - `preferred_username`: アプリ ユーザーの電子メール アドレス。
-- `oid`: アプリ ユーザーの ID を表す GUID。
-- `tid`: アプリ ユーザーがサインインしているテナントを表す GUID。
+- `oid` - アプリ ユーザーの ID を表す GUID。
+- `tid` - アプリ ユーザーがサインインしているテナントを表す GUID。
 
 Teams は、ユーザーの設定など、アプリ ユーザーの ID に関連付けられたこの情報をキャッシュできます。
 
 > [!NOTE]
-> システム内のアプリ ユーザーを表す一意の ID を作成する必要がある場合は、「 [要求を使用してユーザーを確実に識別する](/azure/active-directory/develop/id-tokens#using-claims-to-reliably-identify-a-user-subject-and-object-id)」を参照してください。
+> システム内のユーザーを表す一意の ID を作成する必要がある場合は、「[クレームを使用してユーザーを確実に識別する](/azure/active-directory/develop/id-tokens#using-claims-to-reliably-identify-a-user-subject-and-object-id)」を参照してください。
 
 ## <a name="pass-the-access-token-to-server-side-code"></a>アクセス トークンをサーバー側のコードに渡す
 
 サーバー上の Web API にアクセスする必要がある場合は、アクセス トークンをサーバー側のコードに渡す必要があります。 Web API では、アクセス トークンをデコードして、そのトークンの要求を表示する必要があります。
 
 > [!NOTE]
-> 返されたアクセス トークンにユーザー プリンシパル名 (UPN) が表示されない場合は、Azure AD で [省略可能な要求](/azure/active-directory/develop/active-directory-optional-claims) として追加します。
-> 詳細については、「 [アクセス トークン](/azure/active-directory/develop/access-tokens)」を参照してください。
+> Azure AD では、返されたアクセス トークンでユーザー プリンシパル名 (UPN) を受け取らない場合、それを[オプションの要求](/azure/active-directory/develop/active-directory-optional-claims)に追加します。
+> 詳細については、「[アクセス トークン](/azure/active-directory/develop/access-tokens)」を参照してください。
 
-成功コールバック `getAuthToken()` で受信したアクセス トークンは、Web API へのアクセス (認証されたアプリ ユーザーの場合) を提供します。 必要に応じて、サーバー側のコードで [ID 情報](#use-the-access-token-as-an-identity-token)のトークンを解析することもできます。
+`getAuthToken()` のコールバックに成功して受け取ったアクセス トークンは、(認証されたアプリ ユーザー用の) Web API へのアクセスを提供します。 サーバー側のコードは、必要に応じてトークンを解析して [ID 情報](#use-the-access-token-as-an-identity-token)を取得することもできます。
 
-Microsoft Graph データを取得するためにアクセス トークンを渡す必要がある場合は、「 [Microsoft Graph のアクセス許可を持つタブ アプリを拡張](tab-sso-graph-api.md)する」を参照してください。
+Microsoft Graph データを取得するためにアクセス トークンを渡す必要がある場合は、「[Microsoft Graph のアクセス許可を持つタブ アプリを拡張する](tab-sso-graph-api.md)」を参照してください。
 
 ### <a name="code-for-passing-access-token-to-server-side"></a>アクセス トークンをサーバー側に渡すためのコード
 
-次のコードは、アクセス トークンをサーバー側に渡す例を示しています。 トークンは、サーバー側の Web API に要求を送信するときに `Authorization` ヘッダーに渡されます。 この例では JSON データを送信し、メソッドを `POST` 使用します。 `GET`サーバーに書き込まない場合は、アクセス トークンを送信するのに十分です。
+次のコードは、アクセス トークンをサーバー側に渡す例を示しています。 トークンは、サーバー側の Web API に要求を送信するときに `Authorization` ヘッダーに渡されます。 この例では JSON データを送信し、`POST` メソッドを使用します。 サーバーに書き込まない場合は、`GET` はアクセス トークンを送信するのに十分です。
 
 ```javascript
 $.ajax({
@@ -154,18 +154,18 @@ $.ajax({
 
 ### <a name="validate-the-access-token"></a>アクセス トークンを検証する
 
-サーバー上の Web API は、アクセス トークンをデコードし、クライアントから送信されているかどうかを確認する必要があります。 このトークンは、JSON Web トークン (JWT) です。そのため、この検証は最も標準的な OAuth でのトークンの検証とまったく同様に動作します。 Web API では、アクセス トークンをデコードする必要があります。 必要に応じて、jwt.ms などのツールにアクセス トークンを手動でコピーして貼り付けることができます。
+サーバー上の Web API は、アクセス トークンがクライアントから送信された場合、それをデコード詩、検証する必要があります。 このトークンは、JSON Web トークン (JWT) です。そのため、この検証は最も標準的な OAuth でのトークンの検証とまったく同様に動作します。 Web API では、アクセス トークンをデコードする必要があります。 必要に応じて、jwt.ms など、手動でツールにアクセス トークンをコピーして貼り付けます。
 
-JWT 検証を処理できるライブラリが多数用意されています。 基本的な検証には、次のものが含まれます。
+JWT の検証を処理できるライブラリが複数入手可能です。 基本的な検証には、次のものが含まれます。
 
 - トークンが整形式であることを確認する
 - トークンが意図した証明機関から発行されたことを確認する
-- トークンが Web API の対象になっていることを確認する
+- トークンが Web API をターゲットにしていることを確認する
 
 トークンの検証時には、次のガイドラインに注意してください。
 
 - 有効な SSO トークンは、Azure AD によって発行されます。 トークン内の `iss` クレームは、この値で始まっている必要があります。
-- トークンの `aud1` パラメーターは、Azure AD アプリの登録時に生成されたアプリ ID に設定されます。
+- トークンの `aud1` パラメーターは、Azure AD アプリ登録中に生成されるアプリ ID に設定されます。
 - トークンの `scp` パラメーターは `access_as_user` に設定します。
 
 #### <a name="example-access-token"></a>アクセス トークンの例
@@ -209,8 +209,8 @@ JWT 検証を処理できるライブラリが多数用意されています。 
 ## <a name="see-also"></a>関連項目
 
 - [jwt.ms](https://jwt.ms/)
-- [Active directory の省略可能な要求](/azure/active-directory/develop/active-directory-optional-claims)
+- [アクティブ ディレクトリの省略可能な要求](/azure/active-directory/develop/active-directory-optional-claims)
 - [アクセス トークン](/azure/active-directory/develop/access-tokens)
-- [Microsoft 認証ライブラリ (MSAL) の概要](/azure/active-directory/develop/msal-overview)
-- [Microsoft ID プラットフォーム ID トークン](/azure/active-directory/develop/id-tokens)
+- [Microsoft Authentication Library (MSAL) の概要](/azure/active-directory/develop/msal-overview)
+- [Microsoft ID プラットフォームの ID トークン](/azure/active-directory/develop/id-tokens)
 - [Microsoft ID プラットフォームのアクセス トークン](/azure/active-directory/develop/access-tokens#validating-tokens)
