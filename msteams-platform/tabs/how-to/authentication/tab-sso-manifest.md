@@ -2,43 +2,43 @@
 title: タブの SSO を有効にするためのマニフェストを更新する
 description: タブの SSO を有効にするためのマニフェストの更新について説明します
 ms.topic: how-to
-ms.localizationpriority: medium
-keywords: teams 認証タブ Microsoft Azure Active Directory (Azure AD) Graph API
-ms.openlocfilehash: 90a1ac781ef521f4b236bdf26f50d44533fa815a
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: MT
+ms.localizationpriority: high
+keywords: Teams 認証タブ Microsoft Azure Active Directory (Azure AD) Graph API
+ms.openlocfilehash: c4e558debe5aff41ad8d6ce76ba952b6d607cd24
+ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558738"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66658964"
 ---
-# <a name="update-manifest-for-sso-and-preview-app"></a>SSO とプレビュー アプリのマニフェストを更新する
+# <a name="update-manifest-for-sso-and-preview-app"></a>SSO 用のマニフェストを更新しアプリをプレビューする
 
-Teams アプリ マニフェストを更新する前に、タブ アプリで SSO を有効にするコードを構成していることを確認します。
+Teams アプリ マニフェストを更新する前に、タブ アプリで SSO を有効にするコードを構成していることを確認してください。
 
 > [!div class="nextstepaction"]
 > [コードを構成する](tab-sso-code.md)
 
-Azure AD にタブ アプリを登録し、アプリ ID を取得しました。 また、アクセス トークンを呼び出 `getAuthToken()` して処理するようにコードを構成しました。 ここで、Teams アプリ マニフェストを更新して、タブ アプリの SSO を有効にする必要があります。 Teams アプリ マニフェストでは、アプリを Teams に統合する方法について説明します。
+Azure AD にタブ アプリを登録し、アプリ ID を取得しました。 また、アクセス トークンを呼び出して `getAuthToken()` 処理するようにコードを構成しました。 ここで、Teams アプリ マニフェストを更新して、タブ アプリの SSO を有効にする必要があります。 Teams アプリ マニフェストは、アプリがどのように Teams に統合されるかを説明します。
 
 ## <a name="webapplicationinfo-property"></a>webApplicationInfo プロパティ
 
-Teams アプリ マニフェスト `webApplicationInfo` ファイルでプロパティを構成します。 このプロパティを使用すると、アプリの SSO を使用して、アプリ ユーザーがタブ アプリにシームレスにアクセスできるようになります。
+Teams アプリ マニフェスト ファイルで `webApplicationInfo` プロパティを構成します。 このプロパティがアプリの SSO を有効にして、アプリ ユーザーがタブ アプリにシームレスにアクセスできるようになります。
 
 &nbsp;&nbsp;:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Teams アプリ マニフェストの構成":::
 
-`webApplicationInfo`には 2 つの要素があり、`id`.`resource`
+`webApplicationInfo` には 2 つの要素があります、`id` および `resource`。
 
 | 要素 | 説明 |
 | --- | --- |
 | id | Azure AD で作成したアプリ ID (GUID) を入力します。 |
-| resource | スコープの作成時に Azure AD で作成したアプリのサブドメイン URI とアプリケーション ID URI を入力します。 **これを Azure AD** > **公開 API** セクションからコピーできます。 |
+| resource | スコープの作成時に Azure AD で作成したアプリのサブドメイン URI とアプリケーション ID URI を入力します。 これを **Azure AD** > **[API の公開]** セクションからコピーできます。 |
 
 > [!NOTE]
-> マニフェスト バージョン 1.5 以降を使用して、プロパティを `webApplicationInfo` 実装します。
+> `webApplicationInfo` プロパティを実装するには、マニフェスト バージョン 1.5 以上を使用します。
 
-Azure AD に登録したアプリケーション ID URI は、公開した API のスコープで構成されます。 使用する認証要求`getAuthToken()`が Teams アプリ マニフェストで`resource`指定されたドメインからのものであることを確認するために、アプリのサブドメイン URI を構成します。
+Azure AD に登録したアプリケーション ID URI は、公開した API のスコープで構成されます。 `getAuthToken()` を使用した認証要求が Teams アプリ マニフェストで指定されたドメインからのものであることを確認するために、アプリのサブドメイン URI `resource` を構成します。
 
-詳細については、「 [webApplicationInfo」を参照してください](../../../resources/schema/manifest-schema.md#webapplicationinfo)。
+詳細については、「[webApplicationInfo](../../../resources/schema/manifest-schema.md#webapplicationinfo)」を参照してください。
 
 ## <a name="to-configure-teams-app-manifest"></a>Teams アプリ マニフェストを構成するには
 
@@ -47,11 +47,11 @@ Azure AD に登録したアプリケーション ID URI は、公開した API �
 
   > [!NOTE]
   >
-  > - マニフェスト フォルダーは、プロジェクトのルートにある必要があります。 詳細については、「 [Microsoft Teams アプリ パッケージの作成」を](../../../concepts/build-and-test/apps-package.md)参照してください。
-  > - manifest.json を作成する方法の詳細については、「 [リファレンス: Microsoft Teams のマニフェスト スキーマ](../../../resources/schema/manifest-schema.md)」を参照してください。
+  > - マニフェスト フォルダーは、プロジェクトのルートにある必要があります。 詳細については、「[Microsoft Teams アプリ パッケージを作成する](../../../concepts/build-and-test/apps-package.md)」を参照してください。
+  > - manifest.json を作成する方法の詳細については、「[参照: Microsoft Teams のマニフェスト スキーマ](../../../resources/schema/manifest-schema.md)」を参照してください。
 
 1. manifest.json ファイルを開く
-1. 次のコード スニペットをマニフェスト ファイルに追加して、新しいプロパティを追加します。
+1. 次のコード スニペットをマニフェスト ファイルに追加して、新しいプロパティを追加します:
 
     ```json
     "webApplicationInfo": {
@@ -60,12 +60,12 @@ Azure AD に登録したアプリケーション ID URI は、公開した API �
     }
     ```
 
-    どこ
+    ここで、
     - {Azure AD AppId} は、Azure AD にアプリを登録したときに作成したアプリ ID です。 これは GUID です。
-    - {{サブドメイン}.app ID URI} は、Azure AD でスコープを作成するときに登録したアプリケーション ID URI です。
+    - {{Subdomain}.app ID URI} は、Azure AD でスコープを作成するときに登録したアプリケーション ID URI です。
 
-4. id プロパティで Azure AD からアプリ **ID を** 更新します。
-5. 次のプロパティでサブドメイン URL を更新します。
+4. **id** プロパティで Azure AD からのアプリ ID を更新します。
+5. 次のプロパティでサブドメイン URL を更新します:
    1. `contentUrl`
    2. `configurationUrl`
    3. `validDomains`
@@ -73,7 +73,7 @@ Azure AD に登録したアプリケーション ID URI は、公開した API �
 
 <br>
 <details>
-<summary>更新後のアプリ マニフェストの例を次に示します。</summary>
+<summary>更新後のアプリ マニフェストの例です。</summary>
 
 ```json
 {
@@ -132,7 +132,7 @@ Azure AD に登録したアプリケーション ID URI は、公開した API �
 </details>
 
 > [!NOTE]
-> デバッグ中に、ngrok を使用して Azure AD でアプリをテストできます。 その場合は、サブドメインを ngrok URL に `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` 置き換える必要があります。 ngrok サブドメインが変更されるたびに URL を更新する必要があります (たとえば、api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c)。
+> デバッグ中に、ngrok を使用して Azure AD でアプリをテストできます。 その場合は、サブドメイン `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` を ngrok URL に置き換える必要があります。 ngrok サブドメインが変更されるたびに URL を更新する必要があります。たとえば、api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c。
 
 ## <a name="sideload-and-preview-in-teams"></a>Teams でのサイドロードとプレビュー
 
@@ -144,29 +144,29 @@ Teams でタブ アプリをプレビューするには:
 
 1. アプリ パッケージを作成します。
 
-   アプリ パッケージは、アプリ マニフェスト ファイルとアプリ アイコンを含む zip ファイルです。
+   アプリ パッケージは、アプリ マニフェストとアプリ アイコンを含む ZIP ファイルです。
 
 1. Teams を開きます。
 
-1. [**アプリ** の管理]  > **を選択します。アプリ** > **をアップロードします**。
+1. **[アプリ]** > **[アプリの管理]** > **[アプリのアップロード]** を選択します。
 
     アプリをアップロードするオプションが表示されます。
 
-1. [ **カスタム アプリのアップロード** ] を選択して、タブ アプリを Teams にサイドロードします。
+1. **[カスタム アプリのアップロード]** を選択して、タブ アプリを Teams にサイドロードします。
 
-1. アプリ パッケージの zip ファイルを選択し、[ **追加**] を選択します。
+1. アプリ パッケージの ZIP ファイルを選択し、**[追加]** を選択します。
 
-    タブ アプリがサイドロードされ、ダイアログが表示され、必要になる可能性がある追加のアクセス許可が通知されます。
+    タブ アプリがサイドロードされ、ダイアログが表示され、必要になる可能性がある追加のアクセス許可を通知します。
 
 1. **[続行]** を選択します。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="必要な追加のアクセス許可について通知する [Teams] ダイアログ ボックス":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-consent.png" alt-text="必要な追加のアクセス許可について通知する [Teams] のダイアログ ボックス":::
 
     Azure AD の同意ダイアログが表示されます。
 
-1. Open-id スコープに同意するには、[ **同意する** ] を選択します。
+1. Open-ID スコープに同意するには、**[承諾する]** を選択します。
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Azure AD の同意ダイアログ":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/aad-sso-consent.png" alt-text="Azure AD の同意ダイアログのスクリーンショット":::
 
     Teams によってタブ アプリが開き、それを使用できます。
 
