@@ -5,12 +5,12 @@ ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 158905194ea29bfd2aca8149b8f8d6236905b754
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 8501cab5db2017d120ef72f61e43691104df7fa1
+ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484867"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695312"
 ---
 # <a name="resource-specific-consent"></a>リソース固有の同意
 
@@ -75,9 +75,9 @@ ms.locfileid: "66484867"
 
 ## <a name="enable-rsc-in-your-application"></a>アプリケーションで RSC を有効にする
 
-1. [Azure AD ポータルで同意設定を構成します](#configure-consent-settings-in-the-azure-ad-portal)。
-    1. [チーム内の RSC のグループ所有者の同意設定を構成します](#configure-group-owner-consent-settings-for-rsc-in-a-team)。
-    1. [チャットで RSC のユーザー同意設定を構成します](#configure-user-consent-settings-for-rsc-in-a-chat)。
+1. [同意設定を構成します](#configure-consent-settings)。
+    1. [Azure AD portal を使用して、チーム内の RSC のグループ所有者の同意設定を構成します](#configure-group-owner-consent-settings-for-rsc-in-a-team-using-the-azure-ad-portal)。
+    1. [Microsoft Graph API を使用して、チャット内の RSC のチャット所有者の同意設定を構成します](#configure-chat-owner-consent-settings-for-rsc-in-a-chat-using-the-microsoft-graph-apis)。
 1. [Azure AD ポータルを使用して、アプリを Microsoft ID プラットフォームに登録します](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal)。
 1. [Azure AD ポータルでアプリケーションのアクセス許可を確認します](#review-your-application-permissions-in-the-azure-ad-portal)。
 1. [ID プラットフォームからアクセス トークンを取得します](#obtain-an-access-token-from-the-microsoft-identity-platform)。
@@ -87,9 +87,9 @@ ms.locfileid: "66484867"
     1. [チームで追加された RSC アクセス許可がないかアプリを確認します](#check-your-app-for-added-rsc-permissions-in-a-team)。
     1. [チャットで RSC アクセス許可が追加されたかどうかをアプリで確認します](#check-your-app-for-added-rsc-permissions-in-a-chat)。
 
-## <a name="configure-consent-settings-in-the-azure-ad-portal"></a>Azure AD ポータルで同意設定を構成する
+## <a name="configure-consent-settings"></a>同意設定を構成する
 
-### <a name="configure-group-owner-consent-settings-for-rsc-in-a-team"></a>チーム内の RSC のグループ所有者の同意設定を構成する
+### <a name="configure-group-owner-consent-settings-for-rsc-in-a-team-using-the-azure-ad-portal"></a>Azure AD portal を使用してチームで RSC のグループ所有者の同意設定を構成する
 
 [グループ所有者の同意](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-portal)は、Microsoft Azure ポータル内で直接有効または無効にすることができます。
 
@@ -101,17 +101,13 @@ ms.locfileid: "66484867"
 
 さらに、PowerShell を使用してグループ所有者の同意を有効または無効にすることができます。｢[PowerShell を使用してグループ所有者の同意を構成する](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-powershell)」で説明されている手順に従います。
 
-### <a name="configure-user-consent-settings-for-rsc-in-a-chat"></a>チャットで RSC のユーザー同意設定を構成する
+### <a name="configure-chat-owner-consent-settings-for-rsc-in-a-chat-using-the-microsoft-graph-apis"></a>Microsoft Graph API を使用してチャットで RSC のチャット所有者の同意設定を構成する
 
-[ユーザーの同意](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal)は、Azure portal内で直接有効または無効にすることができます。
+Graph APIを使用してチャットの RSC を有効または無効にすることができます。 [**teamsAppSettings の**](/graph/api/teamsappsettings-update#example-1-enable-installation-of-apps-that-require-resource-specific-consent-in-chats-meetings)プロパティ`isChatResourceSpecificConsentEnabled`は、テナントでチャット RSC が有効になっているかどうかを制御します。
 
-1. [グローバル管理者または会社の管理者](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true)として [Azure portal](https://portal.azure.com) にサインインします。
-1. [**Azure Active Directory**]  >  [**エンタープライズ アプリケーション**]  >  [**同意とアクセス許可**]  > [ [**ユーザー同意設定**]](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings) を選択します。
-1. [**アプリケーションに対するユーザー同意**] とラベル付けられたコントロールを使って、ユーザー同意を有効化、無効化、または制限します。 既定値は、[**アプリに対するユーザーの同意を許可する] です**。 チャット メンバーが RSC を使用してアプリをインストールするには、そのユーザーに対してユーザーの同意を有効にする必要があります。
+   ![Graph RSC チームの構成](../../assets/images/rsc/graph-rsc-chat-configuration.png)
 
-    ![Azure RSC チャットの構成](../../assets/images/azure-rsc-chat-configuration.png)
-
-さらに、PowerShell を使用してユーザーの同意を有効または無効にすることができます。「[PowerShell を 使用したユーザーの同意の構成](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-powershell)」に関するページで説明されている手順に従います。
+>  プロパティの既定値は、チャットの RSC が最初に使用されたときに、[テナントでユーザーの同意設定](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal)がオンまたはオフになっているかどうかに基づいて、**ChatResourceSpecificConsentEnabled** です。 これは、a) [**teamsAppSettings**](/graph/api/teamsappsettings-get) の取得、または b) チャット/会議でのリソース固有のアクセス許可を持つ Teams アプリのインストールを初めて行うことができます。
 
 ## <a name="register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal"></a>Azure AD ポータルを使用してアプリを Microsoft ID プラットフォームに登録する
 
