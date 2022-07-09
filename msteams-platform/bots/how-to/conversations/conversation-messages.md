@@ -1,27 +1,27 @@
 ---
 title: ボットの会話内のメッセージ
-description: コード サンプルを使用して、Teams ボットとTeams チャネル データ、メッセージへの通知、画像メッセージ、アダプティブ カードとの会話を行う方法について説明します
+description: Teams ボットと Teams チャネル データ、メッセージへの通知、画像メッセージ、コード サンプルを使用したアダプティブ カードとの会話を行う方法について説明します
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e71e6ce6c70967de9c9f086251772df8d758f4a
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: d71a4df2548a27bf2da76434a0c90e96d0eaa6f7
+ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142452"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695300"
 ---
 # <a name="messages-in-bot-conversations"></a>ボットの会話内のメッセージ
 
-会話内の各メッセージは、型`messageType: message`の`Activity`オブジェクトです。 ユーザーがメッセージを送信すると、Teamsメッセージがボットに投稿されます。 Teamsボットのメッセージング エンドポイントに JSON オブジェクトを送信します。 ボットはメッセージを調べて種類を判別し、種類に応じて応答します。
+会話内の各メッセージは、型`messageType: message`の`Activity`オブジェクトです。 ユーザーがメッセージを送信すると、Teams はメッセージをボットに投稿します。 Teams は、ボットのメッセージング エンドポイントに JSON オブジェクトを送信します。 ボットはメッセージを調べて種類を判別し、種類に応じて応答します。
 
-基本的な会話は、Bot Framework コネクタ (単一の REST API) を介して処理されます。 この API を使用すると、ボットはTeamsやその他のチャネルと通信できます。 Bot Builder SDK には、次の機能が用意されています。
+基本的な会話は、Bot Framework コネクタ (単一の REST API) を介して処理されます。 この API を使用すると、ボットは Teams やその他のチャネルと通信できます。 Bot Builder SDK には、次の機能が用意されています。
 
 * Bot Framework コネクタに簡単にアクセスできます。
 * 会話のフローと状態を管理するための追加機能。
 * 自然言語処理 (NLP) などのコグニティブ サービスを組み込む簡単な方法。
 
-ボットは、プロパティを使用してTeamsからメッセージを`Text`受信し、1 つまたは複数のメッセージ応答をユーザーに送信します。
+ボットは、プロパティを使用して Teams からメッセージを `Text` 受信し、1 つまたは複数のメッセージ応答をユーザーに送信します。
 
 詳細については、「[ボット メッセージのユーザー属性」を](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1&branch=pr-en-us-5926#user-attribution-for-bots-messages)参照してください。
 
@@ -192,19 +192,19 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> メッセージ分割は、テキスト メッセージと添付ファイルが同じアクティビティ ペイロードで送信されるときに発生します。 このアクティビティは、Microsoft Teams別に別のアクティビティに分割されます。1 つはテキスト メッセージ、もう 1 つは添付ファイルを含みます。 アクティビティが分割されると、メッセージ ID は応答で受け取りません。これは、メッセージをプロアクティブに [更新または削除](~/bots/how-to/update-and-delete-bot-messages.md) するために使用されます。 メッセージ分割に応じて、別のアクティビティを送信することをお勧めします。
+> メッセージ分割は、テキスト メッセージと添付ファイルが同じアクティビティ ペイロードで送信されるときに発生します。 このアクティビティは、Microsoft Teams によって個別のアクティビティに分割されます。1 つはテキスト メッセージ、もう 1 つは添付ファイルを含みます。 アクティビティが分割されると、メッセージ ID は応答で受け取りません。これは、メッセージをプロアクティブに [更新または削除](~/bots/how-to/update-and-delete-bot-messages.md) するために使用されます。 メッセージ分割に応じて、別のアクティビティを送信することをお勧めします。
 
 ユーザーとボットの間で送信されるメッセージには、メッセージ内の内部チャネル データが含まれます。 このデータを使用すると、ボットはそのチャネルで適切に通信できます。 Bot Builder SDK を使用すると、メッセージ構造を変更できます。
 
 ## <a name="teams-channel-data"></a>Teamsチャネルデータ
 
-オブジェクトには`channelData`Teams固有の情報が含まれており、チーム ID とチャネル ID の決定的なソースです。 必要に応じて、これらの ID をキャッシュし、ローカル ストレージのキーとして使用できます。 `TeamsActivityHandler` SDK では、オブジェクトから重要な情報を`channelData`取り出して、簡単にアクセスできるようにします。 ただし、オブジェクトから `turnContext` 元のデータにいつでもアクセスできます。
+オブジェクトには `channelData` Teams 固有の情報が含まれており、チーム ID とチャネル ID の決定的なソースです。 必要に応じて、これらの ID をキャッシュし、ローカル ストレージのキーとして使用できます。 `TeamsActivityHandler` SDK では、オブジェクトから重要な情報を`channelData`取り出して、簡単にアクセスできるようにします。 ただし、オブジェクトから `turnContext` 元のデータにいつでもアクセスできます。
 
 オブジェクトは `channelData` 、チャネルの外部で行われるので、個人の会話のメッセージには含まれません。
 
 ボットに送信されるアクティビティの一般的な `channelData` オブジェクトには、次の情報が含まれています。
 
-* `eventType`: [チャネル変更](~/bots/how-to/conversations/subscribe-to-conversation-events.md)イベントの場合にのみ渡されるイベントの種類をTeamsします。
+* `eventType`: Teams イベントの種類は [、チャネル変更イベント](~/bots/how-to/conversations/subscribe-to-conversation-events.md)の場合にのみ渡されます。
 * `tenant.id`: すべてのコンテキストで渡されるMicrosoft Azure Active Directory (Azure AD) テナント ID。
 * `team`: 個人用チャットではなく、チャネル コンテキストでのみ渡されます。
   * `id`: チャネルの GUID。
@@ -242,13 +242,13 @@ async def on_members_added_activity(
 | フォーマット    | ユーザーからボットへ | ボットからユーザーへ | メモ                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | リッチ テキスト | ✔️                | ✔️                | ボットは、リッチ テキスト、画像、カードを送信できます。 ユーザーは、リッチ テキストと画像をボットに送信できます。                                                                                        |
-| ピクチャ  | ✔️                | ✔️                | 最大 1024 ×1024 MB、PNG、JPEG、または GIF 形式で 1 MB。 アニメーション GIF はサポートされていません。  |
-| カード     | ❌                | ✔️                | サポートされているカードについては、[Teams カードリファレンスを参照](~/task-modules-and-cards/cards/cards-reference.md)してください。 |
-| 絵文字    | ✔️                | ✔️                | Teamsは現在、顔を笑う U+1F600 など、UTF-16 を介した絵文字をサポートしています。 |
+| ピクチャ  | ✔️                | ✔️                | 最大 1024 × 1024 ピクセル、1 MB (PNG、JPEG、GIF 形式)。 アニメーション GIF はサポートされていません。  |
+| カード     | ❌                | ✔️                | サポートされている [カードについては、Teams カードリファレンス](~/task-modules-and-cards/cards/cards-reference.md) を参照してください。 |
+| 絵文字    | ✔️                | ✔️                | Teams は現在、顔を笑う U+1F600 などの UTF-16 を介して絵文字をサポートしています。 |
 
 ## <a name="notifications-to-your-message"></a>メッセージへの通知
 
-このプロパティを使用して、メッセージに通知を `Notification.Alert` 追加することもできます。 通知は、新しいタスク、メンション、コメントについてユーザーに通知します。 これらのアラートは、ユーザーが作業している内容や、アクティビティ フィードに通知を挿入して確認する必要がある内容に関連します。 ボット メッセージから通知をトリガーするには、objects `Notification.Alert` プロパティを `TeamsChannelData` true に設定 *します*。 通知が発生するかどうかは、個々のユーザーのTeams設定によって異なり、これらの設定をオーバーライドすることはできません。 通知の種類はバナーか、バナーとメールの両方です。
+このプロパティを使用して、メッセージに通知を `Notification.Alert` 追加することもできます。 通知は、新しいタスク、メンション、コメントについてユーザーに通知します。 これらのアラートは、ユーザーが作業している内容や、アクティビティ フィードに通知を挿入して確認する必要がある内容に関連します。 ボット メッセージから通知をトリガーするには、objects `Notification.Alert` プロパティを `TeamsChannelData` true に設定 *します*。 通知が発生するかどうかは、個々のユーザーの Teams 設定によって異なり、これらの設定をオーバーライドすることはできません。 通知の種類はバナーか、バナーとメールの両方です。
 
 > [!NOTE]
 > [ **概要]** フィールドには、フィード内の通知メッセージとしてユーザーからのテキストが表示されます。
@@ -334,7 +334,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 画像は最大 1024 ×1024 MB、PNG、JPEG、または GIF 形式で 1 MB です。 アニメーション GIF はサポートされていません。
 
-XML を使用して、各イメージの高さと幅を指定します。 マークダウンでは、イメージ サイズの既定値は 256×256 です。 以下に例を示します。
+XML を使用して、各イメージの高さと幅を指定します。 マークダウンでは、イメージ サイズの既定値は 256×256 です。 例として以下のようなものがあります。
 
 * 使用: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
 * 使用しないでください: `![Duck on a rock](http://aka.ms/Fo983c)`.
@@ -343,7 +343,7 @@ XML を使用して、各イメージの高さと幅を指定します。 マー
 
 ## <a name="adaptive-cards"></a>アダプティブ カード
 
-アダプティブ カードはボットで作成し、Teams、Web サイトなどの複数のアプリで表示できます。 詳細については「[アダプティブ カード](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)」を参照してください。
+アダプティブ カードは、ボットで作成し、Teams、Web サイトなどの複数のアプリに表示できます。 詳細については「[アダプティブ カード](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)」を参照してください。
 
 次のコードは、単純なアダプティブ カードを送信する例を示しています。
 

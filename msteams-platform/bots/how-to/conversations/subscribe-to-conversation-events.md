@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: イベント ボット チャネル メッセージの反応の会話
-ms.openlocfilehash: 9234b192788a1449d5da344b271f5028ce7fd110
-ms.sourcegitcommit: 73e6767127cb27462f819acd71a1e480580bcf83
+ms.openlocfilehash: 80e2bba2d610526a8a4485be79282432b27386fd
+ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2022
-ms.locfileid: "65906277"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695328"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams ボットの会話イベント
 
@@ -409,7 +409,7 @@ async def on_teams_channel_restored(
 
 1. ボット自体がインストールされ、会話に追加されると
 
-   > チーム コンテキストでは、アクティビティの conversation.id は、アプリのインストール中に `id` ユーザーが選択したチャネル、またはボットがインストールされたチャネル (現在 [パブリック開発者プレビュー](../../../resources/dev-preview/developer-preview-intro.md)で利用可能) に設定されます。
+   > チーム コンテキストでは、アクティビティの conversation.id は、アプリのインストール中に `id` ユーザーが選択したチャネル、またはボットがインストールされたチャネルに設定されます。
 
 2. ボットがインストールされている会話にユーザーが追加されたとき
 
@@ -1335,7 +1335,7 @@ async def on_reactions_removed(
 ![選択したチャネルを作成する](~/assets/videos/addteam.gif)
 
 > [!NOTE]
-> 選択したチャネル ID は、アプリがチームに `installationUpdate`インストールされたときに送信されるイベントの *追加* にのみ設定されます (現在 [、パブリック開発者プレビュー](../../../resources/dev-preview/developer-preview-intro.md)で利用できます)。
+> 選択したチャネル ID は、アプリがチームに `installationUpdate`インストールされたときに送信されるイベントの *追加* にのみ設定されます。
 
 # <a name="c"></a>[C#](#tab/dotnet)
 
