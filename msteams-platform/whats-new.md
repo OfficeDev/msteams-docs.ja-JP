@@ -3,12 +3,12 @@ title: Teams の開発者向けの新機能と更新情報
 description: 新しく導入された Microsoft Teams の開発者向け機能と、既存の機能の更新について説明します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 1013ebe18f10d848ff44a26085a0353d851b613c
-ms.sourcegitcommit: 6b1d06de67fe26b657ffb0cffebc0df9ccd843ef
+ms.openlocfilehash: bb569e2a6979c0a576ebaa7a8115da984dcc5bad
+ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2022
-ms.locfileid: "66680679"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695293"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -47,6 +47,7 @@ ms.locfileid: "66680679"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ----------------|
+| 07/08/2022| アプリのインストール中にユーザーが選択したチャネル ID を会話とインストール更新イベントを介してボットに送信する更新 |  ボットの構築 > ボットの会話 > Teams ボットの会話イベント > [Teams ボットの会話イベント](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 | 2022/6/16 | デスクトップとモバイルをサポートするようにメディア機能を更新しました| [デバイス機能の統合] > [[メディア機能の統合](concepts/device-capabilities/media-capabilities.md)]|
 | 06/08/2022 | 成功メッセージに関するオプションのカード フィードバック| [ボットのビルド] > [ボットの会話] > [[ボットの会話のメッセージ]](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 | 06/03/2022 | 新しい構造と手順でタブ アプリの SSO を有効にするための認証モジュールの追加を更新しました | 認証の追加 > タブ > [タブ アプリでシングル サインオンを有効にする](tabs/how-to/authentication/tab-sso-overview.md) |
@@ -268,7 +269,6 @@ ms.locfileid: "66680679"
 | -------- | --------- | ------------------ |
 | 06/30/2022 | インスタント会議、1 対 1 通話、グループ通話用のアプリ| Teams 会議と通話用のアプリをビルド > [[概要]](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 | 2022/6/16 | Web アプリからの [Teams で共有] のリンク展開| [Teams との統合] > [Teams への共有] > [[Web アプリから Teams に共有する]](concepts/build-and-test/share-to-teams-from-web-apps.md) |
-| 06/06/2022| Teams ボットの会話とインストール イベントを更新する |  ボットの構築 > ボットの会話 > Teams ボットの会話イベント > [Teams ボットの会話イベント](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 |05/24/2022| Live Share SDK による強化されたコラボレーション |  Teams会議用のアプリのビルド > Live Share を使用した強化されたコラボレーション > [概要](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 04/06/2022 | 個人用アプリまたはタブから Teams に共有する | [Teams と統合] > [Teams に共有] > [[個人用アプリまたはタブから Teams に共有]](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 02/07/2022 | ツールと SDK |Visual Studio Code 用 Teams ツールキット > </br> • [Teams アプリに機能を追加] > [[Teams アプリに機能を追加]](toolkit/add-capability.md) </br> • [クラウド リソースを Teams アプリに追加] > [[クラウド リソースを Teams アプリに追加]](toolkit/add-resource.md) |
