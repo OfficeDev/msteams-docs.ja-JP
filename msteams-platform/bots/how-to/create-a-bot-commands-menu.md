@@ -5,12 +5,12 @@ description: このモジュールでは、コード サンプルを使用して
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 65cf1506e6851dd6662ea4637cfb53179532798a
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 6252531565693f318550398967db16297bfd40c0
+ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503509"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66737420"
 ---
 # <a name="create-a-commands-menu"></a>コマンド メニューを作成する
 
@@ -41,7 +41,7 @@ ms.locfileid: "66503509"
 1. Teams を開き、左側のウィンドウから **[アプリ]** を選択します。 **[アプリ]** ページで **App Studio** を検索し、**[開く]** を選択します。
 
    > [!WARNING]
-   > App Studio を使用している場合は、開発者ポータルで Teams アプリの設定、配布、管理を行うことをお勧めします。 App Studio は、2022 年 6 月 30 日までに廃止されます。
+   > App Studio を使用している場合は、開発者ポータルで Teams アプリの設定、配布、管理を行うことをお勧めします。 App Studio は、2022 年 8 月 1 日までに非推奨になります。
 
    :::image type="content" source="conversations/Media/AppStudio.png" alt-text="appstudio-media":::
 

@@ -3,12 +3,12 @@ title: アプリをテストしてデバッグするためのセットアップ�
 description: このモジュールでは、ローカルおよびクラウドでホストされている環境で Microsoft Teams アプリをテストおよびデバッグするためのオプションについて説明します。
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 04a3e26d11961f2e08600b54f4612fb8f2a10cee
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 1f8a444a889eec15495272877ea1cca75f313629
+ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503887"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66737392"
 ---
 # <a name="choose-a-test-setup-and-debug-your-teams-app"></a>テストセットアップを選択し、Teams アプリをデバッグする
 
@@ -63,7 +63,7 @@ Microsoft Bot Framework に登録されているボットの場合は、この�
 
 > [!WARNING]
 >
-> * App Studio を使用している場合は、開発者ポータルで Teams アプリの設定、配布、管理を行うことをお勧めします。 App Studio は、2022 年 6 月 30 日までに廃止されます。
+> * App Studio を使用している場合は、開発者ポータルで Teams アプリの設定、配布、管理を行うことをお勧めします。 App Studio は、2022 年 8 月 1 日までに非推奨になります。
 
 ## <a name="cloud-hosted"></a>クラウド ホスト型
 
@@ -86,4 +86,4 @@ Teams 内でエクスペリエンスを読み込んで実行するには、パ�
 
 ## <a name="see-also"></a>関連項目
 
-[IDE を使用してボットをローカルでテストしてデバッグする](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)
+[IDE を使用してボットをローカルでテストおよびデバッグする](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)
