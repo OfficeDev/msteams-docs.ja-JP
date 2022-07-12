@@ -3,12 +3,12 @@ title: Microsoft Teams 開発者向けドキュメント - 用語集
 description: Microsoft Teams 開発者向けドキュメントで使用される用語について説明します
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 99872eb963c708e4b2a45f01e743ae9845ffa4b0
-ms.sourcegitcommit: b4986bf529c74444db67b7ce522b3b0d2c2a8e28
+ms.openlocfilehash: f5a8979e9f49fa73430ea9c1d547f462fe8d4e65
+ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66130425"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66737385"
 ---
 # <a name="glossary"></a>用語集
 
@@ -26,7 +26,7 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 | [アプリ パッケージ](../concepts/build-and-test/apps-package.md) | Teams アプリ パッケージは、アプリ マニフェスト ファイル、色アイコン、アウトライン アイコンを含む zip ファイルです。 |
 | [アプリのアクセス許可](../concepts/device-capabilities/browser-device-permissions.md#enable-apps-device-permissions) | デバイスのアクセス許可を有効にする Teams アプリのオプション。 アプリのマニフェスト ファイルで、アプリにデバイスのアクセス許可が必要であると宣言されている場合にのみ使用できます。 <br> **関連情報**: デバイスのアクセス許可 |
 | [アプリのスコープ](../concepts/design/app-structure.md) | ユーザーがあなたのアプリを使用できる Teams の領域。 アプリには、個人用、チャネル、チャット、会議など、1 つまたは複数のスコープを設定できます。 Teams アプリは、複数のスコープにわたって存在できます。 |
-| [App Studio](../concepts/build-and-test/app-studio-overview.md) | 独自の Microsoft Teams アプリの作成または統合を開始するアプリ。 開発者ポータルに進化しました。 <br> > App Studio を使用している場合は、Teams アプリを構成、配布、管理するための開発者ポータルを試してみることをお勧めします。App Studio は 2022 年 6 月 30 日までに非推奨になります<br> **関連情報**: [開発者ポータル](#d) |
+| [App Studio](../concepts/build-and-test/app-studio-overview.md) | 独自の Microsoft Teams アプリの作成または統合を開始するアプリ。 開発者ポータルに進化しました。 <br> App Studio を使用している場合は、Teams アプリを構成、配布、管理するための開発者ポータルを試してみることをお勧めします。 App Studio は、2022 年 8 月 1 日までに廃止されます。 <br> **関連情報**: [開発者ポータル](#d) |
 | アプリ トレイ | Teams モバイル アプリの下部バーにあるアプリケーション トレイ。 開いているが現在使用されていない、またはアクティブではないすべてのアプリが収集されます。 <br>**関連情報**: [Teams Mobile](#t) |
 | [Azure リソース](../toolkit/provision.md) | Teams アプリが Azure デプロイに使用できる Azure 経由で利用できるサービス。 ストレージ アカウント、Web アプリ、データベースなどです。 |
 | [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Microsoft クラウドベースの、ID およびアクセス管理サービスです。 認証されたユーザーが内部および外部の Azure リソースにアクセスするのに役立ちます。 |
