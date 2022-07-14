@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: ca310712a8fc6912b68ba6538044d504e46e00a2
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 5c70a88c7b67229143af881a46272d5cdc9a06c4
+ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485609"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66792831"
 ---
 # <a name="add-single-sign-on-to-teams-app"></a>Teams アプリにシングル サインオンを追加する
 
@@ -33,7 +33,7 @@ Teams Toolkit は、次の Teams 機能に SSO を追加するのに役立ちま
 次の手順は、Visual Studio Code で Teams Toolkit を使用して SSO を追加するのに役立ちます
 
 1. **Microsoft Visual Studio Code** を開きます。
-2. 左側のナビゲーション バーから [Teams Toolkit :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="sso add sidebar"::: ] を選択します。
+2. 左側のナビゲーション バーから [Teams Toolkit :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png" alt-text="sso add sidebar"::: ] を選択します。
 3. **[開発**] で [**機能の追加]** を選択します。
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/sso-add features.png" alt-text="sso 機能の追加":::
@@ -55,7 +55,7 @@ Teams Toolkit は、次の Teams 機能に SSO を追加するのに役立ちま
 
 次の表に、Teams Toolkit がプロジェクトに加える変更の一覧を示します。
 
-   |**型**|**ファイル**|**用途**|
+   |**種類**|**ファイル**|**用途**|
    |--------|--------|-----------|
    |Create|`aad.template.json` 下 `template/appPackage`|Azure AD アプリケーション マニフェストは、Azure AD アプリを表します。 `template/appPackage` は、ローカル デバッグまたはプロビジョニング ステージ中に Azure AD アプリを登録するのに役立ちます。|
    |変更|`manifest.template.json` 下 `template/appPackage`|Teams アプリ マニフェスト `webApplicationInfo` テンプレートにオブジェクトが追加されます。 Teams では、SSO を有効にするには、このフィールドが必要です。 この変更は、ローカル デバッグまたはプロビジョニングをトリガーするときに有効です。|

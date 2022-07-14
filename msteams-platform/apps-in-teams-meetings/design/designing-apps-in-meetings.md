@@ -5,12 +5,12 @@ description: Teams 会議でアプリの会議拡張機能を設計する方法�
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 7df89357f5c052fec5ff2a82cd721b9b7c06da94
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: c23e702c4d89e6afb2d81b6873ce45a91a02b362
+ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558087"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66792838"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Microsoft Teams 会議拡張機能の設計
 
@@ -358,7 +358,7 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-do.png" alt-text="例では、単一列のタブ レイアウトを示しています。":::
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="例では、単一列のタブ レイアウトを示しています。":::
 
 #### <a name="do-use-a-one-column-tab"></a>実行: 1 列のタブを使用する
 

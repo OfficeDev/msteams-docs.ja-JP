@@ -6,12 +6,12 @@ ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview of multiple environment
 ms.date: 11/29/2021
-ms.openlocfilehash: da5da86bf5e96989cf962d88105c47affa899f6e
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 13b9f640c57168858ee7c48a8f9dfc83b005c05a
+ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485651"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66793048"
 ---
 # <a name="manage-multiple-environments"></a>複数の環境を管理する
 
@@ -42,7 +42,7 @@ ms.locfileid: "66485651"
 
 **別のリモート環境を追加するには**:
 
-1. 左側のナビゲーション バーから **Teams** :::image type="content" source="../assets/images/teams-toolkit-v2/add-sso/teams-toolkit-sidebar-icon.png" alt-text="sso Add サイドバー"::: を選択します。
+1. 左側のナビゲーション バーから **Teams** :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png" alt-text="sso Add サイドバー"::: を選択します。
 2. 次の図に示すように、[ **+Teams: 新しい環境の作成** ] セクションで [ **環境** ] セクションを選択します。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create new env.png" alt-text="作成":::
@@ -78,7 +78,7 @@ Teams Toolkit を使用すると、構成ファイルとテンプレート フ�
 
 | シナリオ | 場所| 説明 |
 | --- | --- | --- |
-| Azure リソースをカスタマイズする | <ul> <li>下の Bicep ファイル `templates/azure`</li> <li>`.fx/azure.parameters.<envName>.json`</li></ul> | [ARM パラメーターとテンプレートをカスタマイズする](provision.md#customize-arm-parameters-and-templates) |
+| Azure リソースをカスタマイズする | <ul> <li>下の Bicep ファイル `templates/azure`</li> <li>`.fx/azure.parameters.<envName>.json`</li></ul> | [ARM パラメーターとテンプレートをカスタマイズする](provision.md#customize-arm-template-files) |
 | Teams アプリ用に既存の Azure AD アプリを再利用する | <ul> <li>`auth` のセクション`.fx/config.<envName>.json`</li> </ul> |  [Teams アプリに既存の Azure AD アプリを使用する](provision.md#use-an-existing-azure-ad-app-for-your-teams-app) |
 | ボット用に既存の Azure AD アプリを再利用する | <ul> <li>`bot` のセクション`.fx/config.<envName>.json`</li> </ul> | [ボットに既存の Azure AD アプリを使用する](provision.md#use-an-existing-azure-ad-app-for-your-bot) |
 | SQL のプロビジョニング中にユーザーの追加をスキップする | <ul> <li>`skipAddingSqlUser` 内のプロパティ`.fx/config.<envName>.json`</li> </ul> | [SQL データベースのユーザーの追加をスキップする](provision.md#skip-adding-user-for-sql-database) |

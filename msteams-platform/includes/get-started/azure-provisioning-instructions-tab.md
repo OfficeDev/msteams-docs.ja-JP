@@ -1,7 +1,7 @@
 ## <a name="deploy-your-app-to-azure"></a>アプリを Azure にデプロイする
 
 デプロイは 2 つの手順で構成されます。  まず、必要なクラウド リソースが作成されます (プロビジョニングとも呼ばれます)。 その後、アプリのコードが作成されたクラウド リソースにコピーされます。 このチュートリアルでは、タブ アプリをデプロイします。
-<br> 
+<br>
 <br>
 <details>
 <summary>プロビジョニングとデプロイの違いは何ですか?</summary>
@@ -33,7 +33,7 @@ Visual Studio Code のサイド バーで Teams Toolkit :::image type="icon" sou
 
    プロビジョニング プロセスによって、Azure クラウドにリソースが作成されます。 時間がかかる場合があります。 右下隅にあるダイアログを見て、進行状況を監視できます。 数分後、次の通知が表示されます。
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsg.png" alt-text="プロビジョニング完了のダイアログを示すスクリーンショット。":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="プロビジョニング完了のダイアログを示すスクリーンショット。":::
 
     必要に応じて、プロビジョニングされたリソースを表示できます。 このチュートリアルでは、リソースを表示する必要はありません。
 
