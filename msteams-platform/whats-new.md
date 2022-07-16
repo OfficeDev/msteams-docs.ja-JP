@@ -3,12 +3,12 @@ title: Teams の開発者向けの新機能と更新情報
 description: 新しく導入された Microsoft Teams の開発者向け機能と、既存の機能の更新について説明します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: bb569e2a6979c0a576ebaa7a8115da984dcc5bad
-ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
+ms.openlocfilehash: a358652f361dc080d916c4d548363776e7c092a4
+ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2022
-ms.locfileid: "66695293"
+ms.lasthandoff: 07/16/2022
+ms.locfileid: "66830807"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -269,15 +269,11 @@ ms.locfileid: "66695293"
 | -------- | --------- | ------------------ |
 | 06/30/2022 | インスタント会議、1 対 1 通話、グループ通話用のアプリ| Teams 会議と通話用のアプリをビルド > [[概要]](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 | 2022/6/16 | Web アプリからの [Teams で共有] のリンク展開| [Teams との統合] > [Teams への共有] > [[Web アプリから Teams に共有する]](concepts/build-and-test/share-to-teams-from-web-apps.md) |
-|05/24/2022| Live Share SDK による強化されたコラボレーション |  Teams会議用のアプリのビルド > Live Share を使用した強化されたコラボレーション > [概要](apps-in-teams-meetings/teams-live-share-overview.md) |
+|05/24/2022| Live Share SDK による強化されたコラボレーション | Teams会議用のアプリのビルド > Live Share を使用した強化されたコラボレーション > [概要](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 04/06/2022 | 個人用アプリまたはタブから Teams に共有する | [Teams と統合] > [Teams に共有] > [[個人用アプリまたはタブから Teams に共有]](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
-| 02/07/2022 | ツールと SDK |Visual Studio Code 用 Teams ツールキット > </br> • [Teams アプリに機能を追加] > [[Teams アプリに機能を追加]](toolkit/add-capability.md) </br> • [クラウド リソースを Teams アプリに追加] > [[クラウド リソースを Teams アプリに追加]](toolkit/add-resource.md) |
-| 02/03/2022 | アプリ マニフェスト バージョン 1.12 が導入されました | • [アプリ マニフェスト] > [[アプリ マニフェストのスキーマ]](resources/schema/manifest-schema.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー > [[マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md) |
-|2022/1/17 | モバイル版アダプティブ カードのユーザー ピッカー  | [カードとタスク モジュールの構築] > [カードの構築] > [[アダプティブ カードのユーザー ピッカー]](task-modules-and-cards/cards/people-picker.md)|
-|2022/1/10 | Visual Studio Code 用 Teams ツールキット | [ツールと SDK] > [Visual Studio Code 向け Teams ツールキット] > [[Teams ツールキットの基本]](toolkit/teams-toolkit-fundamentals.md) |
-| 2021/12/24 | タブ デバイスのアクセス許可を付与するためのステップバイステップ ガイドを導入しました | [アプリの基本] > [デバイス機能] > [[タブ デバイスのアクセス許可を付与するためのステップバイステップ ガイド]](sbs-tab-device-permissions.yml) |
-| 2021/11/15 | Outlook と Office で実行する個人用タブとメッセージ拡張機能 | [Teams アプリを Microsoft 365 全体に拡張する](~/m365-apps/overview.md) |
-| 2021/10/28 |ボットは、リソース固有のコンテンツ (RSC) を使用して、すべてのチャネル メッセージの受信を有効化できます | • [ボットの構築] > [ボットの会話] > [ボット会話のメッセージ] > [[RSC を使用してすべてのメッセージを受信する]](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • [ボットの構築] > [ボットの会話] > [[ボット会話の概要]](~/bots/how-to/conversations/conversation-basics.md) </br> • [ボットの構築] > [ボットの会話] > [[チャネルとグループの会話]](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー > [[開発者向けプレビュー マニフェスト スキーマ]](~/resources/schema/manifest-schema-dev-preview.md) |
+| 02/03/2022 | アプリ マニフェスト バージョン 1.13 が導入されました | [アプリ マニフェスト] > [開発者向けパブリック プレビュー] > [[マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md) |
+| 2022/1/17 | モバイル版アダプティブ カードのユーザー ピッカー | [カードとタスク モジュールの構築] > [カードの構築] > [[アダプティブ カードのユーザー ピッカー]](task-modules-and-cards/cards/people-picker.md)|
+| 2021/10/28 |ボットは、リソース固有のコンテンツ (RSC) を使用して、すべてのチャネル メッセージの受信を有効化できます | • [ボットの構築] > [ボットの会話] > [[ボット会話の概要]](~/bots/how-to/conversations/conversation-basics.md) </br> • [ボットの構築] > [ボットの会話] > [[チャネルとグループの会話]](~/bots/how-to/conversations/channel-and-group-conversations.md) |
 | 2021/6/16 | チャットのリソース固有の同意 | • [Microsoft Graph を使用した Teams データの活用] > [[リソース固有の同意]](graph-api/rsc/resource-specific-consent.md) </br> • [アプリのテスト] > [Microsoft Graph] > [[Teams でリソース固有の同意をテストする]](graph-api/rsc/test-resource-specific-consent.md)|
 
 詳細については、「[Teams の開発者向けパブリック プレビュー](~/resources/dev-preview/developer-preview-intro.md)」を参照してください。

@@ -6,12 +6,12 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 81cddad2297ec526f94a3ab362422028b14b4598
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 90a1e28f4c7bb3d0bc9530fc1af8ad4d4e373c9b
+ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557989"
+ms.lasthandoff: 07/16/2022
+ms.locfileid: "66830793"
 ---
 # <a name="add-capabilities-to-teams-apps"></a>Teams アプリに機能を追加する
 
@@ -61,7 +61,7 @@ TeamsFx でさらに機能を追加するための制限事項を次に示しま
    1. **Teams:機能の追加を入力します**。
    1. **[Enter]** キーを押します。
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/Teams-add-features.png" alt-text="チーム機能":::
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/teams-add-features.png" alt-text="コマンド パレットを使用して機能を追加する場合。":::
 
    1. ポップアップから、プロジェクトに追加する機能を選択します。
 

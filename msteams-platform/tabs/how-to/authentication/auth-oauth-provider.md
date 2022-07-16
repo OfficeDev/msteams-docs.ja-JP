@@ -3,12 +3,12 @@ title: 外部 OAuth プロバイダーを使用する
 description: このモジュールでは、外部 OAuth プロバイダーを使用して認証を行う方法と、それを外部ブラウザーに追加する方法について説明します
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: a27d4fdb861ef7e893807af7a4427662a61fa021
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 487e9c07615f3ed23f5ca43e5c7e6e4a98b8d0eb
+ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558766"
+ms.lasthandoff: 07/16/2022
+ms.locfileid: "66830786"
 ---
 # <a name="use-external-oauth-providers"></a>外部 OAuth プロバイダーを使用する
 
@@ -122,7 +122,7 @@ function authenticate(authenticateParameters?: AuthenticateParameters)
    3P アプリは、Teams モバイルのディープリンクを次の形式で生成し、セッション ID を含む認証コードを Teams に送り返します。
 
    ```JavaScript
-   return res.redirect(`msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&code=${req.query.code}`)
+   return res.redirect(`msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&result=${req.query.code}`)
    ```
 
  8. Teams は成功コールバックを呼び出し、結果を送信します。

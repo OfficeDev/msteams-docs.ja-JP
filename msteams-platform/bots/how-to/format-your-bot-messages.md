@@ -1,26 +1,26 @@
 ---
 title: ボット メッセージの書式を設定する
 author: surbhigupta
-description: このモジュールでは、取り消し線、順序付けされたリスト、ハイパーリンク、イメージ リンクなど、豊富な書式設定をボット メッセージに追加する方法について説明します。
+description: このモジュールでは、取り消し線、順序付けされたリスト、ハイパーリンク、イメージ リンクなど、豊富な書式設定とスタイルをボット メッセージに追加する方法について説明します。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: d50f47cde4c0e6af37ccffe4654109beeea73f8b
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: ae803ecb4ae971731d68eba44d08ad9c8b3d274c
+ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150789"
+ms.lasthandoff: 07/16/2022
+ms.locfileid: "66830800"
 ---
 # <a name="format-your-bot-messages"></a>ボット メッセージの書式を設定する
 
-メッセージの書式設定を使用すると、ボット メッセージに最適なメッセージを表示できます。 ボタン、テキスト、画像、オーディオ、ビデオなどの対話型要素を含む添付ファイルであるリッチ カードを含めるために、ボット メッセージを書式設定できます。
+メッセージの書式設定を使用すると、ボット メッセージに最適なメッセージを表示できます。 ボタン、テキスト、画像、オーディオ、ビデオなどの対話型要素を含む添付ファイルとしてリッチ カードを含めるために、ボット メッセージを書式設定できます。
 
 ## <a name="format-text-content"></a>テキスト コンテンツの書式設定
 
 ボット メッセージを書式設定するには、オプション [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) のプロパティを設定して、ボット メッセージのテキスト コンテンツのレンダリング方法を制御できます。
 
-Microsoft Teamsでは、次の書式設定オプションがサポートされています。
+Microsoft Teams では、次の書式設定オプションがサポートされています。
 
 | `TextFormat` 値 | 説明 |
 | --- | --- |
@@ -28,7 +28,7 @@ Microsoft Teamsでは、次の書式設定オプションがサポートされ�
 | markdown | テキストはマークダウンの書式設定として扱われ、必要に応じてチャネルにレンダリングする必要があります。 |
 | Xml | テキストは単純な XML マークアップです。 |
 
-Teamsでは、マークダウンタグと XML または HTML 書式タグのサブセットがサポートされます。
+Teams では、マークダウンタグと XML タグまたは HTML 書式設定タグのサブセットがサポートされています。
 
 現在、書式設定には次の制限が適用されます。
 
@@ -36,7 +36,7 @@ Teamsでは、マークダウンタグと XML または HTML 書式タグのサ�
 * リッチ カードでは、タイトルやサブタイトルのプロパティではなく、テキスト プロパティの書式設定のみがサポートされます。
 * リッチ カードでは、マークダウンやテーブルの書式設定はサポートされていません。
 
-テキスト コンテンツを書式設定したら、Teamsでサポートされているすべてのプラットフォームで書式設定が機能することを確認します。
+テキスト コンテンツを書式設定したら、Teams でサポートされているすべてのプラットフォームで書式設定が機能することを確認します。
 
 ## <a name="cross-platform-support"></a>クロスプラットフォームサポート
 
@@ -54,7 +54,7 @@ Teamsでは、マークダウンタグと XML または HTML 書式タグのサ�
 | 事前書式設定済みのテキスト         | ✔️ | ✔️ |
 | Blockquote                | ✔️ | ✔️ |
 | Hyperlink                 | ✔️ | ✔️ |
-| 画像リンク                | ✔️ | ❌ |
+| 画像リンク                | ❌ | ❌ |
 
 クロスプラットフォームサポートを確認したら、個々のプラットフォームによるサポートも利用できることを確認します。
 
@@ -64,7 +64,7 @@ Teamsでは、マークダウンタグと XML または HTML 書式タグのサ�
 
 ### <a name="text-only-messages"></a>テキストのみのメッセージ
 
-次の表に、デスクトップ、iOS、Androidでサポートされているスタイルの一覧を示します。
+次の表に、デスクトップ、iOS、Android でサポートされているスタイルの一覧を示します。
 
 | Style                     | Desktop | iOS | Android |
 | ---                       | :---: | :---: | :---: |
@@ -78,13 +78,13 @@ Teamsでは、マークダウンタグと XML または HTML 書式タグのサ�
 | 事前書式設定済みのテキスト         | ✔️ | ✔️ | ✔️ |
 | Blockquote                | ✔️ | ✔️ | ✔️ |
 | Hyperlink                 | ✔️ | ✔️ | ✔️ |
-| 画像リンク                | ✔️ | ✔️ | ✔️ |
+| 画像リンク                | ❌ | ❌ | ❌ |
 
 ### <a name="cards"></a>カード
 
 カードのサポートについては、「 [カードの書式設定](~/task-modules-and-cards/cards/cards-format.md)」を参照してください。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [ボット メッセージの更新および削除](~/bots/how-to/update-and-delete-bot-messages.md)
