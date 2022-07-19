@@ -3,12 +3,12 @@ title: Microsoft Teams アプリのデバイスアクセス許可を要求する
 description: スキャン QR、バーコード、画像、オーディオ、ビデオ機能など、ユーザーの同意を必要とするネイティブ機能へのアクセスを要求するためにアプリ マニフェストを更新する方法
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: e5ae6d2f5dda0d173e336b81d696de8847f591a2
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 9950dc43bf4d2c5dcdda26a489a2c7b661739f6b
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557716"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841730"
 ---
 # <a name="request-device-permissions-for-your-teams-app"></a>Teams アプリのデバイスアクセス許可を要求する
 
@@ -131,7 +131,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 * ユーザーに自分の場所へのアクセスを求めるには、次のコマンドを呼び出す `getCurrentPosition()`必要があります。
 
     ```JavaScript
-    navigator.geolocation.getCurrentPosition    (function (position) { /*... */ });
+    navigator.geolocation.getCurrentPosition(function (position) { /*... */ });
     ```
 
 * デスクトップまたは Web でカメラにアクセスするようにユーザーに求めるには、次のコマンドを呼び出す `getUserMedia()`必要があります。
@@ -216,6 +216,17 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 * マップ インターフェイス上の場所を共有するようにユーザーに求めるために、Teams アプリは次を呼び出 `getLocation()`すときにアクセス許可を求めます。
 
+    # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+    ```JavaScript
+     function getLocation() {
+        location.getLocation({ allowChooseLocation: true, showMap: true }).then((location) => { 
+            let currentLocation = JSON.stringify(location);
+     }).catch((error) => { /*Error getting location*/ })} 
+    ```
+
+    # <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
+
     ```JavaScript
      function getLocation() {
      microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
@@ -223,6 +234,10 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
      });
      } 
     ```
+
+    ***
+
+モバイルとデスクトップのユーザーに対して、デバイスのアクセス許可のプロンプトがどのように表示されるかを次に示します。
 
 # <a name="mobile"></a>[モバイル](#tab/mobile)
 

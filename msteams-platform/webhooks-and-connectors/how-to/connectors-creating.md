@@ -5,12 +5,12 @@ description: このモジュールでは、Office 365 コネクタの使用を�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: dec9acbf7ba2f52303b04a5219de575a96a792e5
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: a0e135864fd7c7d9775731e6c46faf9f24242943
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485348"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841641"
 ---
 # <a name="create-office-365-connectors"></a>Office 365 コネクタの作成
 
@@ -19,9 +19,10 @@ Microsoft Teams アプリを使用すると、Teams 内に既存の Office 365 �
 Office 365 コネクタを作成する方法については、次のビデオを参照してください。
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv>]
 <br>
 
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="add-a-connector-to-teams-app"></a>Teams アプリにコネクタを追加する
 
@@ -51,20 +52,23 @@ Office 365 コネクタを作成する方法については、次のビデオを
 
 構成エクスペリエンスを統合するには、以下の操作を行います。
 
-1. `microsoftTeams.initialize()` を呼び出して SDK を初期化します。
-1. `microsoftTeams.settings.setValidityState(true)` を呼び出して **[保存]** を有効にします。
+> [!NOTE]
+> Teams JavaScript クライアント SDK (TeamsJS) v.2.0.0 以降、 *設定* 名前空間内の API は非推奨となり、サブ名前空間内の *他* の API を含め `pages.getConfig()` 、ページ名前空間内 `pages.config` の同等の API が優先されました。 詳細については、「[TeamsJS バージョン 2.0 の新機能](../../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20)」を参照してください。
+
+1. `app.initialize()` を呼び出して SDK を初期化します。
+1. `pages.config.setValidityState(true)` を呼び出して **[保存]** を有効にします。
 
     > [!NOTE]
-    > ユーザーの選択またはフィールドの更新に対する応答として `microsoftTeams.settings.setValidityState(true)` を呼び出す必要があります。
+    > ユーザーの選択またはフィールドの更新に対する応答として `microsoftTeams.pages.config.setValidityState(true)` を呼び出す必要があります。
 
-1. ユーザーが **[保存]** を選択した場合に呼び出される `microsoftTeams.settings.registerOnSaveHandler()` イベント ハンドラーを登録します。
-1. `microsoftTeams.settings.setSettings()` を呼び出し、コネクタ設定を保存します。保存された設定は、ユーザーがコネクタの既存の構成を更新しようとした場合にも、構成ダイアログに表示されます。
-1. `microsoftTeams.settings.getSettings()` を呼び出し、URL を含む Webhook プロパティを取得します。
+1. ユーザーが **[保存]** を選択した場合に呼び出される `microsoftTeams.pages.config.registerOnSaveHandler()` イベント ハンドラーを登録します。
+1. `microsoftTeams.pages.config.setConfig()` を呼び出し、コネクタ設定を保存します。保存された設定は、ユーザーがコネクタの既存の構成を更新しようとした場合にも、構成ダイアログに表示されます。
+1. `microsoftTeams.pages.getConfig()` を呼び出し、URL を含む Webhook プロパティを取得します。
 
     > [!NOTE]
-    > 再設定する場合は、ページが最初にロードされたときに `microsoftTeams.settings.getSettings()` を呼び出す必要があります。
+    > 再設定する場合は、ページが最初にロードされたときに `microsoftTeams.pages.getConfig()` を呼び出す必要があります。
 
-1. ユーザーがコネクタを削除した場合に呼び出される `microsoftTeams.settings.registerOnRemoveHandler()` イベント ハンドラーを登録します。
+1. ユーザーがコネクタを削除した場合に呼び出される `microsoftTeams.pages.config.registerOnRemoveHandler()` イベント ハンドラーを登録します。
 
 このイベントにより、サービスはクリーンアップ アクションを実行できます。
 
@@ -83,17 +87,18 @@ Office 365 コネクタを作成する方法については、次のビデオを
     </section>
 </div>
 
-<script src="https://statics.teams.microsoft.com/sdk/v1.5.2/js/MicrosoftTeams.min.js" crossorigin="anonymous"></script>
+<script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-Q2Z9S56exI6Oz/ThvYaV0SUn8j4HwS8BveGPmuwLXe4CvCUEGlL80qSzHMnvGqee" crossorigin="anonymous"></script>
 <script src="/Scripts/jquery-1.10.2.js"></script>
 
-<script type="text/javascript">
-
+<script type="module">
+        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
+        
         function onClick() {
-            microsoftTeams.settings.setValidityState(true);
+            pages.config.setValidityState(true);
         }
 
-        microsoftTeams.initialize();
-        microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
+        await app.initialize();
+        pages.config.registerOnSaveHandler(function (saveEvent) {
             var radios = document.getElementsByName('notificationType');
 
             var eventType = '';
@@ -103,22 +108,22 @@ Office 365 コネクタを作成する方法については、次のビデオを
                 eventType = radios[1].value;
             }
 
-            microsoftTeams.settings.setSettings({
-                 entityId: eventType,
+            await pages.config.setConfig({
+                entityId: eventType,
                 contentUrl: "https://YourSite/Connector/Setup",
                 removeUrl:"https://YourSite/Connector/Setup",
-                 configName: eventType
+                configName: eventType
                 });
 
-            microsoftTeams.settings.getSettings(function (settings) {
-                // We get the Webhook URL in settings.webhookUrl which needs to be saved. 
+            pages.getConfig().then(async (config) {
+                // We get the Webhook URL from config.webhookUrl which needs to be saved. 
                 // This can be used later to send notification.
             });
 
             saveEvent.notifySuccess();
         });
 
-        microsoftTeams.settings.registerOnRemoveHandler(function (removeEvent) {
+        pages.config.registerOnRemoveHandler(function (removeEvent) {
             alert("Removed" + JSON.stringify(removeEvent));
         });
 
@@ -128,46 +133,46 @@ Office 365 コネクタを作成する方法については、次のビデオを
 ページの読み込みの一部としてユーザーを認証するには、[タブの認証フロー](~/tabs/how-to/authentication/auth-flow-tab.md)を参照して、ページが埋め込まれたときにサインインを統合してください。
 
 > [!NOTE]
-> クロス クライアントの互換性の理由により、コードは `authenticate()` を呼び出す前に、URL と成功または失敗のコールバック メソッドで `microsoftTeams.authentication.registerAuthenticationHandlers()` を呼び出す必要があります。
+> TeamsJS v.2.0.0 より前は、クライアント間の互換性上の理由から、コードを呼び出す `microsoftTeams.authentication.registerAuthenticationHandlers()` 前に URL と成功または失敗のコールバック メソッドを使用して呼び出す `authenticate()` 必要があります。 TeamsJS v.2.0.0 以降では、 *registerAuthenticationHandlers* は、必要な認証パラメーターを使用して [authentication()](/javascript/api/@microsoft/teams-js/authentication#@microsoft-teams-js-authentication-authenticate) を直接呼び出すのを優先して非推奨になりました。
 
-#### <a name="getsettings-response-properties"></a>`GetSettings` 件の応答のプロパティ
+#### <a name="getconfig-response-properties"></a>`getConfig` 件の応答のプロパティ
 
 >[!NOTE]
->`getSettings` の呼び出しによって返されるパラメーターは、タブからこのメソッドを呼び出した場合、[js settings](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings) でドキュメント化されたものとは異なります。
+>このメソッドを `getConfig` タブから呼び出すと、呼び出しによって返されるパラメーターは異なり、 [参照](/javascript/api/@microsoft/teams-js/pages#@microsoft-teams-js-pages-getconfig)に記載されているものとは異なります。
 
-`GetSetting` 件の応答のプロパティのパラメーターとその詳細についてはとおりです。
+`getConfig` 件の応答のプロパティのパラメーターとその詳細についてはとおりです。
 
 | パラメーター   | 詳細 |
 |-------------|---------|
-| `entityId`       | `setSettings()` を呼び出す場合にコードで設定されたエンティティ ID。 |
-| `configName`  | `setSettings()` を呼び出す場合にコードで設定される構成名。 |
-| `contentUrl` | `setSettings()` を呼び出す場合にコードによって設定される、構成ページの URL。 |
+| `entityId`       | `setConfig()` を呼び出す場合にコードで設定されたエンティティ ID。 |
+| `configName`  | `setConfig()` を呼び出す場合にコードで設定される構成名。 |
+| `contentUrl` | `setConfig()` を呼び出す場合にコードによって設定される、構成ページの URL。 |
 | `webhookUrl` | コネクタ用に作成された Webhook の URL。Webhook URL を使用して、構造化された JSON を投稿し、チャネルにカードを送信します。アプリケーションが正常にデータを返した場合のみ `webhookUrl` が返されます。 |
 | `appType` | 返される`mail`値は、 `groups``teams` Office 365 メール、Office 365 グループ、または Teams にそれぞれ対応できます。 |
 | `userObjectId` | コネクタの設定を開始した Office 365 ユーザに対応する一意の ID。セキュリティで保護されている必要があります。この値は、お客様のサービスで設定を行った Office 365 のユーザーを関連付けるために使用できます。 |
 
 #### <a name="handle-edits"></a>編集の処理
 
-コードは、既存のコネクタ構成を編集するために戻るユーザーを処理する必要があります。 これを行うには、初期構成時に以下のパラメーターを指定して `microsoftTeams.settings.setSettings()` を呼び出します。
+コードは、既存のコネクタ構成を編集するために戻るユーザーを処理する必要があります。 これを行うには、初期構成時に以下のパラメーターを指定して `microsoftTeams.pages.config.setConfig()` を呼び出します。
 
 * `entityId` は、ユーザーがサービスによって構成および理解されたことを表すカスタム ID です。
 * `configName` は、構成コードで取得できる名前です。
 * `contentUrl` は、ユーザーが既存のコネクタ構成を編集したときに読み込まれるカスタム URL です。
 
-この呼び出しは、保存イベント ハンドラーの一部として行われます。 次に、`contentUrl` がロードされると、コードは `getSettings()` を呼び出して、構成ユーザー インターフェイスの設定やフォームを事前に入力する必要があります。
+この呼び出しは、保存イベント ハンドラーの一部として行われます。 次に、`contentUrl` がロードされると、コードは `getConfig()` を呼び出して、構成ユーザー インターフェイスの設定やフォームを事前に入力する必要があります。
 
 #### <a name="handle-removals"></a>削除の処理
 
-ユーザーが既存のコネクタ構成を削除したときに、イベント ハンドラーを実行できます。 このハンドラーは、`microsoftTeams.settings.registerOnRemoveHandler()` メソッドを実装することで登録します。 このハンドラーは、データベースからエントリを削除するなどのクリーンアップ操作を実行するために使用されます。
+ユーザーが既存のコネクタ構成を削除したときに、イベント ハンドラーを実行できます。 このハンドラーは、`microsoftTeams.pages.config.registerOnRemoveHandler()` メソッドを実装することで登録します。 このハンドラーは、データベースからエントリを削除するなどのクリーンアップ操作を実行するために使用されます。
 
 ### <a name="include-the-connector-in-your-manifest"></a>マニフェストにコネクタを含める
 
-ポータルから自動生成された `Teams app manifest` ファイルをダウンロードします。 アプリをテストまたは発行する前に、次の手順を実行します。
+開発者ポータル ()<https://dev.teams.microsoft.com> から自動生成された *Teams アプリ マニフェスト* をダウンロードします。 アプリをテストまたは発行する前に、次の手順を実行します。
 
 1. [アイコンを 2 つ含めます](../../concepts/build-and-test/apps-package.md#app-icons)。
 1. マニフェストの `icons` 部分を、URL ではなくアイコンのファイル名に変更します。
 
-次の manifest.json ファイルには、アプリをテストして送信するために必要な要素が含まれています。
+次の *manifest.json* ファイルには、アプリのテストと送信に必要な要素が含まれています。
 
 > [!NOTE]
 > 次の例の `id` と `connectorId` を、コネクタの GUID に置き換えます。
@@ -231,7 +236,7 @@ Office 365 コネクタを作成する方法については、次のビデオを
 
 1. チームに[受信 Webhook を直接セットアップ](~/webhooks-and-connectors/how-to/add-incoming-webhook.md#create-an-incoming-webhook)します。
 
-1. [構成ページ](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience)を追加して、受信 Webhook を Office 365 コネクタで公開します。
+1. [構成ページ](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience)を追加し、受信 Webhook をOffice 365 コネクタに発行します。
 
 1. [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) への提出の一部としてコネクタをパッケージ化して公開します。
 

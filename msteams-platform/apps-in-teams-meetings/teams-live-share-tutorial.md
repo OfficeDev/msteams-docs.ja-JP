@@ -1,18 +1,18 @@
 ---
 title: Live Share コード チュートリアル
+author: surbhigupta
 description: このモジュールでは、Live Share SDK の使用を開始する方法と、Live Share SDK を使用して Dice Roller サンプルをビルドする方法について説明します
-ms.topic: concept
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
-ms.openlocfilehash: 8af4a452820a01c0a535106e9273d953cb5f0713
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.date: 04/07/2022
+ms.openlocfilehash: 0210962126604733c4d66ba0db4276ff36cfd6b7
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484629"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841800"
 ---
----
-
 # <a name="dice-roller-code-tutorial"></a>Dice Roller コードのチュートリアル
 
 Dice Roller サンプル アプリでは、ユーザーにロールボタンが付いたサイコロが表示されます。 サイコロがロールされると、Live Share SDK は流動フレームワークを使用してクライアント間でデータを同期するため、すべてのユーザーに同じ結果が表示されます。 データを同期するには、 [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/01.dice-roller/src/app.js) ファイルで次の手順を実行します。

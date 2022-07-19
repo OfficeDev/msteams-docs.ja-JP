@@ -1,18 +1,18 @@
 ---
 title: Live Share クイック スタート
+author: surbhigupta
 description: このモジュールでは、Dice Roller サンプルをすばやく試す方法について説明します
-ms.topic: concept
+ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
-ms.openlocfilehash: 98150265f0c5876e726710cacc873db2ac23e9ee
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.date: 04/07/2022
+ms.openlocfilehash: 10bf4b3ce67322c25517d82af2d06a654a4d8668
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484587"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841786"
 ---
----
-
 # <a name="quick-start-guide"></a>クイック スタート ガイド
 
 Dice Roller サンプルを使用して Live Share SDK の使用を開始することは、[流動フレームワーク クイック スタート](https://fluidframework.com/docs/start/quick-start/)の進化形であり、コンピューターのローカルホストで Live Share SDK ベースの [Dice Roller サンプル](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller)をすばやく実行するように設計されています。
@@ -37,25 +37,25 @@ Dice Roller サンプルを使用して Live Share SDK の使用を開始する�
 1. [Live Share SDK](https://github.com/microsoft/live-share-sdk) リポジトリを複製して、サンプル アプリをテストします。
 
     ```bash
-    $ git clone https://github.com/microsoft/live-share-sdk.git
+    git clone https://github.com/microsoft/live-share-sdk.git
     ```
 
 1. 次のコマンドを実行して、Dice Roller サンプル アプリ フォルダーに移動します。
 
    ```bash
-    $ cd live-share-sdk\samples\01.dice-roller
+    cd live-share-sdk\samples\01.dice-roller
    ```
 
 1. 次のコマンドを実行して、依存関係パッケージをインストールします。
 
     ```bash
-    $ npm install
+    npm install
     ```
 
 1. 次のコマンドを実行してローカルの Web サーバーを起動します。
 
    ```bash
-   $ npm start
+   npm start
    ```
   
      新しいブラウザー タブで `http://localhost:8080` URL が開き、Dice Roller ゲームが表示されます。

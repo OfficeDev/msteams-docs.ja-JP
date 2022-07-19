@@ -5,12 +5,12 @@ description: このモジュールでは、チャネル タブの会話サブエ
 ms.topic: conceptual
 ms.author: lomeybur
 ms.localizationpriority: medium
-ms.openlocfilehash: 56fa54f1a8aa9dce9ba049ae300099c0c67ae263
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: f039c8cb03aa874993f64d32030eb226c59a707d
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485671"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841983"
 ---
 # <a name="create-conversational-tabs"></a>会話タブを作成する
 
@@ -39,7 +39,7 @@ microsoftTeams.conversations.openConversation(openConversationRequest);
    > チャネル タブの **channelId** は省略可能です。 ただし、チャネルタブと静的タブ間で実装を維持する場合は、同じ方法をお勧めします。
 * **title**: チャット パネルでユーザーに表示されるタイトル。
 
-これらの値のほとんどは、API から `getContext` 取得することもできます。
+これらの値のほとんどは、API から [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) 取得することもできます (`microsoftTeams.getContext()` TeamsJS v1)。 詳細については、「[PageInfo インターフェイス」を](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true)参照してください。
 
 ```javascript
 microsoftTeams.conversations.openConversation({“subEntityId”:”task-1”, “entityId”: “tabInstanceId-1”, “channelId”: ”19:baa6e71f65b948d189bf5c892baa8e5a@thread.skype”, “title”: "Task Title”});

@@ -5,14 +5,14 @@ description: このモジュールでは、タブの削除ページを作成す�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: cc2d08176d4da365eac9d5a5fd48ff53dbf84461
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: ad17916c0dde7d15c5bcfc49659ead1b4186ad1c
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485217"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841975"
 ---
-# <a name="tab-re-configuration-and-removal-page"></a>タブの再構成と削除ページ
+# <a name="create-a-removal-page"></a>削除ページを作成する
 
 アプリの削除オプションと変更オプションをサポートすることで、ユーザー エクスペリエンスを拡張および強化できます。 Teams を使用すると、ユーザーはチャネルタブまたはグループ タブの名前を変更または削除でき、ユーザーはインストール後にタブを再構成できます。 さらに、タブの削除エクスペリエンスでは、コンテンツを削除またはアーカイブするための削除後のオプションがユーザーに提供されます。
 
@@ -24,19 +24,19 @@ ms.locfileid: "66485217"
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`canUpdateConfiguration`|ブール型|||タブの構成のインスタンスを作成後にユーザーが更新できるかどうかを示す値。 既定値は `true` です。 |
+|`canUpdateConfiguration`|Boolean|||タブの構成のインスタンスを作成後にユーザーが更新できるかどうかを示す値。 既定値は `true` です。 |
 
 タブがチャネルまたはグループ チャットにアップロードされると、Teams によってタブの右クリック ドロップダウン メニューが追加されます。使用可能なオプションは、設定によって `canUpdateConfiguration` 決まります。 次の表に、設定の詳細を示します。
 
-| `canUpdateConfiguration`| true   | false | description |
+| `canUpdateConfiguration`| true   | false | 説明 |
 | ----------------------- | :----: | ----- | ----------- |
-|     Settings            |   √    |       |`configurationUrl`ページは IFrame で再読み込みされ、ユーザーはタブを再構成できます。 |
+|     設定            |   √    |       |`configurationUrl`ページは IFrame で再読み込みされ、ユーザーはタブを再構成できます。 |
 |     名前の変更              |   √    |   √   | ユーザーは、タブ バーに表示されるタブ名を変更できます。          |
 |     削除              |   √    |   √   |  プロパティと値が`removeURL`**構成ページ** に含まれている場合、**削除ページ** は IFrame に読み込まれ、ユーザーに表示されます。 削除ページが含まれていない場合は、ユーザーに確認ダイアログ ボックスが表示されます。          |
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>アプリケーションのタブ削除ページを作成する
 
-オプションの削除ページは、ホストする HTML ページであり、タブが削除されたときに表示されます。 削除ページの URL は、構成ページ内の `setConfig()` メソッド (以前 `setSettings()`) によって指定されます。 アプリ内のすべてのページと同様に、削除ページは [Teams タブの前提条件](../../../tabs/how-to/tab-requirements.md)に準拠している必要があります。
+オプションの削除ページは、ホストする HTML ページであり、タブが削除されたときに表示されます。 削除ページの URL は、構成ページ内の `setConfig()` メソッド (または `setSettings()` TeamsJS v.2.0.0 より前) によって指定されます。 アプリ内のすべてのページと同様に、削除ページは [Teams タブの前提条件](../../../tabs/how-to/tab-requirements.md)に準拠している必要があります。
 
 ### <a name="register-a-remove-handler"></a>削除ハンドラーを登録する
 
@@ -58,7 +58,7 @@ ms.locfileid: "66485217"
 
 #### <a name="include-authentication"></a>認証を含める
 
-ユーザーがタブコンテンツを削除できるようにするには、認証が必要です。 コンテキスト情報は、認証要求と承認ページ URL の作成に役立ちます。 タブについては、 [Microsoft Teams の認証フローに関するページを参照してください](~/tabs/how-to/authentication/auth-flow-tab.md)。 タブ ページで使用されているすべてのドメインが配列に`manifest.json``validDomains`一覧表示されていることを確認します。
+ユーザーがタブコンテンツを削除できるようにするには、認証が必要です。 コンテキスト情報は、認証要求と承認ページ URL の作成に役立ちます。 タブについては、 [Microsoft Teams の認証フローに関するページを参照してください](~/tabs/how-to/authentication/auth-flow-tab.md)。 タブ ページで使用されているすべてのドメインが、アプリ マニフェストの配列に `validDomains` 一覧表示されていることを確認します。
 
 タブ削除コード ブロックの例を次に示します。
 
@@ -67,8 +67,9 @@ ms.locfileid: "66485217"
 ```html
 <body>
   <button onclick="onClick()">Delete this tab and all underlying data?</button>
-  <script>
-    app.initialize();
+  <script type="module">
+        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
+    await app.initialize();
     pages.config.registerOnRemoveHandler((removeEvent) => {
       // Here you can designate the tab content to be removed and/or archived.
         const configPromise = pages.getConfig();

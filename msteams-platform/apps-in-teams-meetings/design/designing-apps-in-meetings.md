@@ -5,12 +5,13 @@ description: Teams 会議でアプリの会議拡張機能を設計する方法�
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: c23e702c4d89e6afb2d81b6873ce45a91a02b362
-ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
+ms.date: 04/07/2022
+ms.openlocfilehash: d9cdf301d6b1fb53813e9db42114d2ff24411e8c
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2022
-ms.locfileid: "66792838"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66842039"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Microsoft Teams 会議拡張機能の設計
 
@@ -105,7 +106,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 |3|**ヘッダー**: アプリ名が含まれます。|
 |4|**[閉じる] ボタン**: タブを閉じます。フッターのアクションではなく、常に右上の閉じるアイコンを使用します。|
 |5|**[通知] バー**: エラー アラートがヘッダーのすぐ下に表示され、残りの iframe コンテンツが 20 ピクセル下にプッシュされます。|
-|6 |**iframe**: アプリのコンテンツを表示します。|
+|6|**iframe**: アプリのコンテンツを表示します。|
 
 ### <a name="spacing"></a>Spacing
 

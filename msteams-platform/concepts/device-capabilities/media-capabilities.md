@@ -5,18 +5,18 @@ description: Teams JavaScript クライアント SDK を使用して、コード
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: a2ee4843f5330ab9102540ea1c5dcb87bd8dc19c
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: b4e552f77b181d005f4a2f3da7967a0fdb1f3ac5
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558710"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841779"
 ---
 # <a name="integrate-media-capabilities"></a>メディア機能を統合する
 
 カメラやマイクなどのネイティブ デバイス機能を Teams アプリと統合できます。 統合には、アプリがユーザーの[デバイスアクセス許可](native-device-permissions.md)にアクセスするために必要なツールを提供する [Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) を使用できます。 適切なメディア機能 API を使用して、カメラやマイクなどのデバイス機能を Microsoft Teams アプリ内の Teams プラットフォームと統合し、より豊富なエクスペリエンスを構築します。 メディア機能は、Teams Web クライアント、デスクトップ、モバイルで使用できます。 メディア機能を統合するには、アプリ マニフェスト ファイルを更新し、メディア機能 API を呼び出す必要があります。
 
-効果的な統合を実現するには、ネイティブ メディア機能を使用できる、それぞれの API を呼び出すための [コード スニペット](#code-snippets) を十分に理解している必要があります。 Teams アプリのエラーを処理するには、[API 応答エラー](#error-handling) を理解しておくことが重要です。
+効果的な統合を実現するには、ネイティブ メディア機能を使用できる、それぞれの API を呼び出すための [コード スニペット](#code-snippets) を十分に理解している必要があります。 Teams アプリのエラーを処理するには、[API 応答エラー](#error-handling)を理解しておくことが重要です。
 
 ## <a name="advantages"></a>メリット
 
@@ -46,7 +46,7 @@ Teams アプリにデバイス機能を統合する主な利点は、ネイテ�
 
 ## <a name="media-capability-apis"></a>メディア機能 API
 
-[selectMedia](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true)、[getMedia](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediachunk?view=msteams-client-js-latest&preserve-view=true)、[viewImages](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageuri?view=msteams-client-js-latest&preserve-view=true) API を使用すると、ネイティブ メディア機能を次のように使用できます。
+[selectMedia](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia)、[getMedia](/javascript/api/@microsoft/teams-js/media.media#@microsoft-teams-js-media-media-getmedia)、[viewImages](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-viewimages) API を使用すると、ネイティブ メディア機能を次のように使用できます。
 
 * ネイティブ **マイク** を使用して、ユーザーがデバイスから **オーディオを録音** (10 分間の会話を録音) できるようにします。
 * ネイティブ **カメラ コントロール** を使用して、ユーザーが外出先で **画像をキャプチャおよびアタッチ** できるようにします。
@@ -58,7 +58,7 @@ Teams アプリにデバイス機能を統合する主な利点は、ネイテ�
   
 > [!IMPORTANT]
 >
-> * `selectMedia`、`getMedia`、および `viewImages` API は、タスク モジュール、タブ、個人用アプリなど、複数の Teams サーフェスから呼び出すことができます。 詳細については、「[Teams アプリのエントリ ポイント](../extensibility-points.md)」を参照してください。</br>
+> * `selectMedia`、`getMedia`、および `viewImages` API は、タスク モジュール、タブ、個人用アプリなど、複数の Teams サーフェスから呼び出すことができます。 詳細については、「 [Teams アプリのエントリ ポイント」を](../extensibility-points.md)参照してください。</br>
 > * `selectMedia` API は、さまざまな入力構成を通じてカメラとマイクの両方の機能をサポートします。
 > * マイク機能にアクセスするための API は `selectMedia` 、モバイル クライアントでのみサポートされます。
 
@@ -66,10 +66,10 @@ Teams アプリにデバイス機能を統合する主な利点は、ネイテ�
 
 | API      | 説明   |
 | --- | --- |
-| [**selectMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true) (**カメラ)**| この API を使用すると、ユーザーは **デバイス カメラからメディアをキャプチャまたは選択** し、それを Web アプリに返すことができます。 ユーザーは、送信前に画像の編集、トリミング、回転、注釈付け、または描画を行うことができます。 `selectMedia` に対応して、Web アプリは、選択した画像のメディア ID と、選択したメディアのサムネイルを受信します。 この API は、 [ImageProps](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageprops?view=msteams-client-js-latest&preserve-view=true) 構成を使用してさらに構成できます。 |
-| [**selectMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.media?view=msteams-client-js-latest&preserve-view=true) (**マイク**)| マイク機能にアクセスするための `4` api で `selectMedia` [mediaType](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediatype?view=msteams-client-js-latest&preserve-view=true) を設定します。 この API を使用すると、ユーザーはデバイスのマイクからオーディオを録音し、記録されたクリップを Web アプリに返すこともできます。 ユーザーは、送信前に記録プレビューを一時停止、再記録、再生できます。  **selectMedia** に応答して、Web アプリは選択されたオーディオ録音のメディア ID を受け取ります。 <br/> 会話を記録するための期間を分単位で構成する必要がある場合は、`maxDuration` を使用します。 現在の記録時間は 10 分です。その後、記録は終了します。  |
-| [**getMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediachunk?view=msteams-client-js-latest&preserve-view=true)| この API は、メディア サイズに関係なく、`selectMedia` API によってキャプチャされたメディアをチャンク単位で取得します。 これらのチャンクは、ファイルまたは BLOB として組み立てられ、Web アプリに送り返されます。 メディアを小さなチャンクに分割すると、大きなファイル転送が容易になります。 |
-| [**viewImages**](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageuri?view=msteams-client-js-latest&preserve-view=true)| この API を使用すると、ユーザーはスクロール可能なリストとして全画面表示モードで画像を表示できます。|
+| [**selectMedia**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia) (**カメラ)**| この API を使用すると、ユーザーは **デバイス カメラからメディアをキャプチャまたは選択** し、それを Web アプリに返すことができます。 ユーザーは、送信前に画像の編集、トリミング、回転、注釈付け、または描画を行うことができます。 `selectMedia` に対応して、Web アプリは、選択した画像のメディア ID と、選択したメディアのサムネイルを受信します。 この API は、 [ImageProps](/javascript/api/@microsoft/teams-js/media.imageprops) 構成を使用してさらに構成できます。 |
+| [**selectMedia**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia) (**マイク**)| マイク機能にアクセスするための API で `selectMedia` [mediaType](/javascript/api/@microsoft/teams-js/media.mediatype) を `4` (Audio) に設定します。 この API を使用すると、ユーザーはデバイスマイクからオーディオを録音し、記録されたクリップを Web アプリに返すこともできます。 ユーザーは、送信前に記録プレビューを一時停止、再記録、再生できます。  **selectMedia** に応答して、Web アプリは選択されたオーディオ録音のメディア ID を受け取ります。 <br/> 会話を記録するための期間を分単位で構成する必要がある場合は、`maxDuration` を使用します。 現在の記録時間は 10 分です。その後、記録は終了します。  |
+| [**getMedia**](/javascript/api/@microsoft/teams-js/media.media#@microsoft-teams-js-media-media-getmedia)| この API は、メディア サイズに関係なく、`selectMedia` API によってキャプチャされたメディアをチャンク単位で取得します。 これらのチャンクは、ファイルまたは BLOB として組み立てられ、Web アプリに送り返されます。 メディアを小さなチャンクに分割すると、大きなファイル転送が容易になります。 |
+| [**viewImages**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-viewimages)| この API を使用すると、ユーザーはスクロール可能なリストとして全画面表示モードで画像を表示できます。|
 
 # <a name="mobile"></a>[モバイル](#tab/mobile)
 
@@ -106,7 +106,7 @@ Teams アプリでこれらのエラーを適切に処理してください。 �
 | **3000** | NO_HW_SUPPORT | ハードウェアは機能をサポートしていません。|
 | **4000**| 引数が無効です | いくつかの引数は無効です。|
 |  **8000** | USER_ABORT |ユーザーが操作を中止します。|
-| **9000**| OLD_PLATFORM | プラットフォーム コードが古く、この API は実装されていません。|
+| **9000**| OLD_PLATFORM | プラットフォーム コードは古く、この API は実装されていません。|
 | **10,000**| SIZE_EXCEEDED |  戻り値が大きすぎて、プラットフォーム サイズの境界を超えています。|
 
 ## <a name="code-snippets"></a>コード スニペット

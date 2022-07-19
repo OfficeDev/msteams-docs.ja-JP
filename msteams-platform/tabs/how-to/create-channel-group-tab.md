@@ -6,16 +6,18 @@ ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: e64504839a5d2f7ccb9e8aa372d6dadadbc90c3b
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: cc1145bd3c3ea6c12aad4231cceb9a8cd2a24488
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558577"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841709"
 ---
 # <a name="create-a-channel-tab"></a>[チャネルの作成] タブ
 
 チャネル/グループ タブは、コンテンツをチャネルやグループのチャットに配信します。また、専用の Web ベースのコンテンツまわりに関する共同作業スペースを作成するのに優れた方法です。
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ::: zone pivot="node-java-script"
 
@@ -261,14 +263,15 @@ gulp ngrok-serve
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
-  {
-    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-  }
+{
+    services.AddMvc(options => options.EnableEndpointRouting = false);
+}
+
 public void Configure(IApplicationBuilder app)
-  {
+{
     app.UseStaticFiles();
     app.UseMvc();
-  }
+}
 ```
 
 #### <a name="wwwroot-folder"></a>wwwroot フォルダー
@@ -333,17 +336,17 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js"></script>
     ```
 
     > [!IMPORTANT]
     > 最新バージョンを表していないため、このページから `<script src="...">` URL をコピーして貼り付けないでください。 SDK の最新バージョンを取得するには、常に [Microsoft Teams JavaScript API](https://www.npmjs.com/package/@microsoft/teams-js) に移動してください。
 
-1. `script` タグに `microsoftTeams.initialize();` の呼び出しを挿入します。
+1. `script` タグに `microsoftTeams.app.initialize();` の呼び出しを挿入します。
 
 1. Visual Studio ソリューション エクスプローラーで **[ページ]** フォルダーに移動し、**Tab.cshtml** を開きます。
 
-    **Tab.cshtml** では、アプリケーションは、赤または灰色のアイコンでタブを表示するための 2 つのオプション ボタンをユーザーに表示します。 **[灰色を選択**] ボタンまたは **[赤を選択]** ボタンを選択すると、それぞれ `saveGray()` または `saveRed()` がトリガーされ、`settings.setValidityState(true)` が設定され、構成ページの **[保存]** ボタンが有効になります。 このコードは、構成要件が完了し、インストールを続行できることを Teams に知らせます。 `settings.setSettings` のパラメーターが設定されます。 最後に、コンテンツ URL が正常に解決されたことを示すために、`saveEvent.notifySuccess()` が呼び出されます。
+    **Tab.cshtml** 内では、アプリケーションによって、赤または灰色のアイコンでタブを表示するための 2 つのオプションがユーザーに表示されます。 **[灰色の選択]** ボタンまたは **[赤の選択]** ボタンがトリガー`saveGray()`されるか、それぞれ`saveRed()`設定`pages.config.setValidityState(true)`され、構成ページで **[保存]** が有効になります。 このコードを使用すると、要件の構成が完了し、インストールを続行できることを Teams に知らせます。 `pages.config.setConfig` のパラメーターが設定されます。 最後に、コンテンツ URL が正常に解決されたことを示すために、`saveEvent.notifySuccess()` が呼び出されます。
 
 1. タブの HTTPS ngrok URL を使用して、各関数の `websiteUrl` と `contentUrl` の値を更新します。
 
@@ -352,27 +355,29 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
     ```javascript
         
         let saveGray = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-                microsoftTeams.settings.setSettings({
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
+                microsoftTeams.pages.config.setConfig({
                     websiteUrl: `https://y8rCgT2b.ngrok.io`,
                     contentUrl: `https://y8rCgT2b.ngrok.io/gray/`,
                     entityId: "grayIconTab",
-                    suggestedDisplayName: "MyNewTab"
+                    suggestedDisplayName: "MyNewTab",
+                    removeUrl: ""
                 });
                 saveEvent.notifySuccess();
             });
         }
 
         let saveRed = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-                microsoftTeams.settings.setSettings({
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
+                microsoftTeams.pages.config.setConfig({
                     websiteUrl: `https://y8rCgT2b.ngrok.io`,
                     contentUrl: `https://y8rCgT2b.ngrok.io/red/`,
                     entityId: "redIconTab",
-                    suggestedDisplayName: "MyNewTab"
+                    suggestedDisplayName: "MyNewTab",
+                    removeUrl: ""
                 });
                 saveEvent.notifySuccess();
-        });
+            });
         }
     ```
 
@@ -481,14 +486,15 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
-  {
-    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-  }
+{
+    services.AddMvc(options => options.EnableEndpointRouting = false);
+}
+
 public void Configure(IApplicationBuilder app)
-  {
+{
     app.UseStaticFiles();
     app.UseMvc();
-  }
+}
 ```
 
 #### <a name="wwwroot-folder"></a>wwwroot フォルダー
@@ -561,17 +567,17 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js"></script>
     ```
 
     > [!IMPORTANT]
     > 最新バージョンを表していないため、このページから `<script src="...">` URL をコピーして貼り付けないでください。 SDK の最新バージョンを取得するには、常に [Microsoft Teams JavaScript API](https://www.npmjs.com/package/@microsoft/teams-js) に移動してください。
 
-1. `script` タグに `microsoftTeams.initialize();` の呼び出しを挿入します。
+1. `script` タグに `microsoftTeams.app.initialize();` の呼び出しを挿入します。
 
 1. Visual Studio ソリューション エクスプローラーで **[タブ]** フォルダーに移動し、**Tab.cshtml** を開きます。
 
-    **Tab.cshtml** では、アプリケーションは、赤または灰色のアイコンでタブを表示するための 2 つのオプション ボタンをユーザーに表示します。 **[灰色を選択**] ボタンまたは **[赤を選択]** ボタンを選択すると、それぞれ `saveGray()` または `saveRed()` がトリガーされ、`settings.setValidityState(true)` が設定され、構成ページの **[保存]** ボタンが有効になります。 このコードは、構成要件が完了し、インストールを続行できることを Teams に知らせます。 `settings.setSettings` のパラメーターが設定されます。 最後に、コンテンツ URL が正常に解決されたことを示すために、`saveEvent.notifySuccess()` が呼び出されます。
+    **Tab.cshtml** 内では、アプリケーションによって、赤または灰色のアイコンでタブを表示するための 2 つのオプションがユーザーに表示されます。 **[灰色の選択]** ボタンまたは **[赤の選択]** ボタンがトリガー`saveGray()`されるか、それぞれ`saveRed()`設定`pages.config.setValidityState(true)`され、構成ページで **[保存]** が有効になります。 このコードを使用すると、要件の構成が完了し、インストールを続行できることを Teams に知らせます。 `pages.config.setConfig` のパラメーターが設定されます。 最後に、コンテンツ URL が正常に解決されたことを示すために、`saveEvent.notifySuccess()` が呼び出されます。
 
 1. タブの HTTPS ngrok URL を使用して、各関数の `websiteUrl` と `contentUrl` の値を更新します。
 
@@ -580,24 +586,26 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
     ```javascript
 
         let saveGray = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-                microsoftTeams.settings.setSettings({
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
+                microsoftTeams.pages.config.setConfig({
                     websiteUrl: `https://y8rCgT2b.ngrok.io`,
                     contentUrl: `https://y8rCgT2b.ngrok.io/gray/`,
                     entityId: "grayIconTab",
-                    suggestedDisplayName: "MyNewTab"
+                    suggestedDisplayName: "MyNewTab",
+                    removeUrl:""
                 });
                 saveEvent.notifySuccess();
             });
         }
     
         let saveRed = () => {
-            microsoftTeams.settings.registerOnSaveHandler(function (saveEvent) {
-                microsoftTeams.settings.setSettings({
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
+                microsoftTeams.pages.config.setConfig({
                     websiteUrl: `https://y8rCgT2b.ngrok.io`,
                     contentUrl: `https://y8rCgT2b.ngrok.io/red/`,
                     entityId: "redIconTab",
-                    suggestedDisplayName: "MyNewTab"
+                    suggestedDisplayName: "MyNewTab",
+                    removeUrl:""
                 });
                 saveEvent.notifySuccess();
             });

@@ -5,16 +5,17 @@ description: 例とコード サンプルを使用して会議アプリ API 参�
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-ms.openlocfilehash: ba0f3758cf08649100cbc564c60eab3a86e3d155
-ms.sourcegitcommit: 779aa3220f6448a9dbbaea57e667ad95b5c39a2a
+ms.date: 04/07/2022
+ms.openlocfilehash: 4e32937e906a472359c6d4d7788143e551e8a002
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66561610"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841955"
 ---
 # <a name="meeting-apps-api-references"></a>会議アプリ API リファレンス
 
-会議の拡張性では、会議のエクスペリエンスを向上させるための API が提供されます。 掲載されている API のヘルプを使用すると、次のことを実行できます。
+会議の拡張性により、会議のエクスペリエンスを向上させる API が提供されます。 掲載されている API のヘルプを使用すると、次のことを実行できます。
 
 * 会議のライフサイクル内でアプリをビルドしたり、既存のアプリを統合したりする。
 * API を使用して、アプリに会議を認識させる。
@@ -32,9 +33,9 @@ ms.locfileid: "66561610"
 |[**会議中の通知を送信する**](#send-an-in-meeting-notification)| ユーザー ボット チャット用の既存の会話通知 API を使用して会議のシグナルを提供し、会議中の通知を示すユーザー アクションを通知できます。 | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**会議の詳細を取得する**](#get-meeting-details-api)| 会議の静的メタデータを取得します。 | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**リアルタイム キャプションを送信する**](#send-real-time-captions-api)| 進行中の会議にリアルタイム キャプションを送信します。 | [MSTC SDK](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
-|[**アプリ コンテンツをステージに共有する**](#share-app-content-to-stage-api)| 会議でアプリのサイド パネルからアプリの特定の部分を会議ステージに対して共有します。 | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
-|[**アプリ コンテンツ ステージの共有状態を取得する**](#get-app-content-stage-sharing-state-api)| 会議ステージでアプリの共有状態に関する情報を取得します。 | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting.iappcontentstagesharingstate?view=msteams-client-js-latest&preserve-view=true) |
-|[**アプリ コンテンツ ステージの共有機能を取得する**](#get-app-content-stage-sharing-capabilities-api)| 共有のためのアプリの機能を会議ステージに取得します。 | [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting.iappcontentstagesharingcapabilities?view=msteams-client-js-latest&preserve-view=true) |
+|[**アプリ コンテンツをステージに共有する**](#share-app-content-to-stage-api)| 会議でアプリのサイド パネルからアプリの特定の部分を会議ステージに対して共有します。 | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting) |
+|[**アプリ コンテンツ ステージの共有状態を取得する**](#get-app-content-stage-sharing-state-api)| 会議ステージでアプリの共有状態に関する情報を取得します。 | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
+|[**アプリ コンテンツ ステージの共有機能を取得する**](#get-app-content-stage-sharing-capabilities-api)| 共有のためのアプリの機能を会議ステージに取得します。 | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
 |[**リアルタイムの Teams 会議イベントを取得する**](#get-real-time-teams-meeting-events-api)|実際の開始時刻や終了時刻など、リアルタイムの会議イベントを取得します。| [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 
 ## <a name="get-user-context-api"></a>ユーザー コンテキストを取得する API 
@@ -508,9 +509,9 @@ Meeting Details API の JSON 応答本文は次のとおりです。
 
 定期的な会議の種類の場合は、
 
-**startDate**: パターンの適用を開始する日付を指定します。 startDate の値は、イベント リソースの start プロパティの日付値に対応している必要があります。 パターンと一致しない場合、会議の最初の回はこの日付には発生しないことにご注意ください。
+**startDate**: パターンの適用を開始する日付を指定します。 startDate の値は、イベント リソースの start プロパティの日付値に対応している必要があります。 パターンに合わない場合、この日付に会議の最初の出現が発生しない可能性があることに注意してください。
 
-**endDate**: パターンの適用を停止する日付を指定します。 パターンと一致しない場合、会議の最後の回はこの日付には発生しないことにご注意ください。
+**endDate**: パターンの適用を停止する日付を指定します。 パターンに合わない場合、会議の最後の出現はこの日付に発生しない可能性があることに注意してください。
 
 ## <a name="send-real-time-captions-api"></a>リアルタイム キャプション API を送信する
 

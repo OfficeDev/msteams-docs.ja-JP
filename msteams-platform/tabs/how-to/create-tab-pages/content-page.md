@@ -5,12 +5,12 @@ description: このモジュールでは、タブとタブのコンテンツと�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 21cc2559b7a6751981156deac1d2373f7ce0dfbe
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 4fd9c301ba48f346b9e721f5d6b3baa13ca50c04
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503355"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841970"
 ---
 # <a name="create-a-content-page"></a>コンテンツ ページを作成する
 
@@ -26,7 +26,7 @@ ms.locfileid: "66503355"
 
 ## <a name="tab-content-and-design-guidelines"></a>タブのコンテンツとデザインのガイドライン
 
-タブの全体的な目的は、実用的な価値と明確な目的を持つ意味のある魅力的なコンテンツへのアクセスを提供することです。 
+タブの全体的な目的は、実用的な価値と明確な目的を持つ意味のある魅力的なコンテンツへのアクセスを提供することです。
 
 タブデザインをクリーンにし、ナビゲーションを直感的に操作し、コンテンツをイマーシブなものにすることに集中する必要があります。詳細については、 [タブデザインのガイドライン](~/tabs/design/tabs.md) と [Microsoft Teams ストアの検証ガイドライン](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)を参照してください。
 
@@ -43,14 +43,13 @@ Teams でページを表示するには、[Microsoft Teams JavaScript クライ�
 <html>
 <head>
 ...
-    <script src= 'https://statics.teams.cdn.office.net/sdk/v2.0.0/js/MicrosoftTeams.min.js'></script>
+    <script src= 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js'></script>
 ...
-</head>
-
 <body>
 ...
-    <script>
-    app.initialize();
+    <script type="module">
+        import {app} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
+        await app.initialize();
     </script>
 ...
 </body>

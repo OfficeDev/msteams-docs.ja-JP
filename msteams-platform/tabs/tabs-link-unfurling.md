@@ -5,16 +5,18 @@ description: リンクを展開し、ステージ ビューを開き、Microsoft
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: fd3d38ce3772137bfcfa121a886c5271246096b6
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 9a12a32f15f0eb580b30897459d28b16bc88dccc
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484936"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841990"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>タブのリンクの展開とステージ ビュー
 
 ステージ ビューは、新しいユーザー インターフェイス (UI) コンポーネントです。 これにより、Teams で全画面表示で開き、タブとしてピン留めされたコンテンツをレンダリングできます。
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## <a name="stage-view"></a>ステージ ビュー
 
@@ -87,17 +89,18 @@ ms.locfileid: "66484936"
 * ボットは `200` コードで応答します。
 
 > [!NOTE]
+
 > Teams モバイル クライアントでは、[[Teams ストア]](/platform/concepts/deploy-and-publish/apps-publish-overview.md) を介して配布されたアプリのステージ ビューを呼び出し、モバイル向けに最適化されたエクスペリエンスがない場合、デバイスの既定の Web ブラウザーが開きます。ブラウザは、`TabInfo` オブジェクトの `websiteUrl` パラメータで指定されたURLを開きます。
 
 ## <a name="invoke-stage-view-through-deep-link"></a>ディープ リンクを使用してステージ ビューを呼び出す
 
-タブからディープ リンクを介してステージ ビューを呼び出すには、ディープ リンク URL を `microsoftTeams.executeDeeplink(url)` API でラップする必要があります。 ディープ リンクは、カード内の `OpenURL` アクションを介して渡すこともできます。
+タブからディープ リンクを介してステージ ビューを呼び出すには、ディープ リンク URL を `app.openLink(url)` API でラップする必要があります。 ディープ リンクは、カード内の `OpenURL` アクションを介して渡すこともできます。
 
 ### <a name="syntax"></a>構文
 
-構文は次のようになります。
+ディープ リンク構文を次に示します。
 
-<https://teams.microsoft.com/l/stage/{appId}/0?context>={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}
+`<https://teams.microsoft.com/l/stage/{appId}/0?context>={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}`
 
 ### <a name="examples"></a>例
 
@@ -109,24 +112,24 @@ ms.locfileid: "66484936"
 
 エンコードされていない URL:
 
-<https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context>={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191,"websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true,"title":"Quotes: その他","threadId":"19:9UryYW9rjwcluster-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}
+`<https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context>={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes: Miscellaneous","threadId":"19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}`
 
 エンコードされた URL:
 
-<https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%2C%22threadId%22%3A%2219:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2%22%7D>
+`<https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%2C%22threadId%22%3A%2219:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2%22%7D>`
 
 **例 2: threadId のない URL**
 
 エンコードされていない URL:
 
-<https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context>={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191,"websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true,"title":"Quotes: その他"}
+`<https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context>={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes: Miscellaneous"}`
 
 エンコード済み
 
-<https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%7D>
+`<https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%7D>`
 
 > [!NOTE]
-> URL を貼り付ける前に、すべてのディープリンクをエンコードする必要があります。 エンコードされていない URL はサポートされていません。
+> URL を貼り付ける前に、すべてのディープ リンクをエンコードする必要があります。 エンコードされていない URL はサポートされていません。
 >
 > * `name` はディープ リンクで省略可能です。 含まれていない場合は、アプリ名に置き換えられます。
 > * ディープ リンクは、`OpenURL` アクションを介して渡すこともできます。
