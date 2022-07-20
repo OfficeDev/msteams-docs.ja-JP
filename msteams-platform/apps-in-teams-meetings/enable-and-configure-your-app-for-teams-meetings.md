@@ -3,13 +3,15 @@ title: Teams 会議用アプリを有効化して構成する
 author: surbhigupta
 description: Teams 会議やさまざまな会議シナリオのためのアプリを有効化して構成し、アプリ マニフェストを更新し、機能などを構成する方法について説明します。
 ms.topic: conceptual
+ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: d00beadecbb2de2011a4cb6abbc94ce18a149eb1
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.date: 04/07/2022
+ms.openlocfilehash: 556eb1e3e9b25d3c64f0eddd6688531622148f90
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557737"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841898"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>会議用アプリを有効にして構成する
 
@@ -126,9 +128,9 @@ Teams 会議は、組織の共同作業エクスペリエンスを提供しま�
 
 #### <a name="meeting-sidepanel"></a>会議の SidePanel
 
-`meetingSidePanel` では、開催者と発表者が異なるビューとアクションのセットを使用できるように、会議のエクスペリエンスをカスタマイズできます。 アプリ マニフェストで、`meetingSidePanel` をコンテキスト配列に追加する必要があります。 会議とすべてのシナリオでは、アプリは幅が 320 ピクセルの会議内タブにレンダリングされます。 詳細については、「[FrameContext インターフェイス](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true)」を参照してください。
+`meetingSidePanel` では、開催者と発表者が異なるビューとアクションのセットを使用できるように、会議のエクスペリエンスをカスタマイズできます。 アプリ マニフェストで、`meetingSidePanel` をコンテキスト配列に追加する必要があります。 会議とすべてのシナリオでは、アプリは幅が 320 ピクセルの会議内タブにレンダリングされます。 詳細については、「 [FrameInfo インターフェイス](/javascript/api/@microsoft/teams-js/frameinfo) (TeamsJS v.2.0.0 より前は `FrameContext` と呼ばれていました)」を参照してください。
 
-`userContext` API を使用して要求をルーティングするには、「[Teams SDK](../tabs/how-to/access-teams-context.md#user-context)」を参照してください。 詳細については、「[タブの Teams 認証フロー](../tabs/how-to/authentication/auth-flow-tab.md)」を参照してください。 タブの認証フローは、Web サイトの認証フローに似ています。 そのため、タブは OAuth 2.0 を直接使用できます。 詳細については、「[Microsoft ID プラットフォームと OAuth 2.0 認証コード フロー](/azure/active-directory/develop/v2-oauth2-auth-code-flow)」を参照してください。
+[ユーザーのコンテキストを使用して、リクエストをルーティング](../tabs/how-to/access-teams-context.md#user-context)できます。 詳細については、「[タブの Teams 認証フロー](../tabs/how-to/authentication/auth-flow-tab.md)」を参照してください。 タブの認証フローは、Web サイトの認証フローに似ています。 タブは OAuth 2.0 を直接使用できます。 詳細については、「[Microsoft ID プラットフォームと OAuth 2.0 認証コード フロー](/azure/active-directory/develop/v2-oauth2-auth-code-flow)」を参照してください。
 
 メッセージ拡張機能は、ユーザーが会議中ビューを使用しているとき、期待どおりに機能します。 ユーザーは、メッセージ拡張カードを作成して投稿できます。 会議中の AppName は、会議中のアプリ名の U バーを示すツールヒントです。
 

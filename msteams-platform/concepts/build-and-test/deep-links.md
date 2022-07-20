@@ -3,12 +3,12 @@ title: ディープ リンクの作成
 description: ディープ リンクを作成する方法と、タブを使用して Microsoft Teams アプリ内でディープ リンクを使用して移動する方法について説明します。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 2927a963387ccd2bab5401f15f3a3f21cbc714dc
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
+ms.openlocfilehash: dbb9c7568c955d7c70db978efa30f28025f708e4
+ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658928"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66841962"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成
 
@@ -210,9 +210,27 @@ microsoftTeams.executeDeepLink(/*deepLink*/);
 > [!NOTE]
 > Teams でスケジュール設定ダイアログを開くには、Teams がまだカレンダー機能をサポートしていないため、開発者は元のディープリンク URL ベースのメソッドを引き続き使用する必要があります。
 
-カレンダーとその開発の詳細については、API リファレンス ドキュメントの[カレンダー](/javascript/api/@microsoft/teams-js/calendar?view=msteams-client-js-latest&preserve-view=true)名前空間を参照してください。
+カレンダーの操作の詳細については、API リファレンス ドキュメントの[カレンダー](/javascript/api/@microsoft/teams-js/calendar?view=msteams-client-js-latest&preserve-view=true)名前空間を参照してください。
 
-### <a name="tabteams-js-v1"></a>tab/Teams JS v1
+# <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
+
+```javascript
+// Open a scheduling dialog from your tab
+if(calendar.isSupported()) {
+   const calendarPromise = calendar.composeMeeting({
+      attendees: ["joe@contoso.com", "bob@contoso.com"],
+      content: "test content",
+      endTime: "2018-10-24T10:30:00-07:00",
+      startTime: "2018-10-24T10:00:00-07:00",
+      subject: "test subject"});
+   calendarPromise.
+      then((result) => {/*Successful operation*/}).
+      catch((error) => {/*Unsuccessful operation*/});
+}
+else { /* handle case where capability isn't supported */ }
+```
+
+# <a name="teamsjs-v1"></a>[TeamsJS v1](#tab/teamsjs-v1)
 
 ```javascript
 // Open a scheduling dialog from your tab
@@ -220,6 +238,8 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/meeting/new?subjec
 ```
 
 ---
+
+または、Teams の組み込みのスケジューリング ダイアログへのディープ リンクを手動で作成できます。
 
 #### <a name="generate-a-deep-link-to-the-scheduling-dialog"></a>スケジュール設定ダイアログへのディープ リンクを作成する
 
