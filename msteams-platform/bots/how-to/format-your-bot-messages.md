@@ -5,16 +5,19 @@ description: このモジュールでは、取り消し線、順序付けされ�
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: ae803ecb4ae971731d68eba44d08ad9c8b3d274c
-ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
+ms.openlocfilehash: 43a64a5ab7d44058831b643f2516839c248e9af1
+ms.sourcegitcommit: 904cca011c3f27d1d90ddd80c3d0300a8918e412
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2022
-ms.locfileid: "66830800"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66895483"
 ---
 # <a name="format-your-bot-messages"></a>ボット メッセージの書式を設定する
 
 メッセージの書式設定を使用すると、ボット メッセージに最適なメッセージを表示できます。 ボタン、テキスト、画像、オーディオ、ビデオなどの対話型要素を含む添付ファイルとしてリッチ カードを含めるために、ボット メッセージを書式設定できます。
+
+> [!NOTE]
+> ボット メッセージサイズの制限は 40 KB です。 ボット メッセージサイズの制限が 40 KB を超えると、ボットは状態コード (RequestEntityTooLarge) を受け取ります `413` 。エラー コード `MessageSizeTooBig`が含まれています。 ボット メッセージ サイズの制限には、UTF-16 としてエンコードされたメッセージ ペイロード全体が含まれており、ベース 64 でエンコードされたイメージは含まれません。
 
 ## <a name="format-text-content"></a>テキスト コンテンツの書式設定
 
@@ -84,7 +87,7 @@ Teams では、マークダウンタグと XML タグまたは HTML 書式設定
 
 カードのサポートについては、「 [カードの書式設定](~/task-modules-and-cards/cards/cards-format.md)」を参照してください。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [ボット メッセージの更新および削除](~/bots/how-to/update-and-delete-bot-messages.md)

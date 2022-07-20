@@ -571,6 +571,8 @@
           href: resources/m365-plugins/m365-plugins-overview.md
         - name: Moodle のパートナー アプリ
           href: resources/partner-apps-for-moodle.md
+        - name: Moodle LMS のインストール
+          href: resources/moodleInstructions.md
         - name: Moodle に関するよく寄せられる質問
           href: resources/faqs.md
     - name: Teams への共有
