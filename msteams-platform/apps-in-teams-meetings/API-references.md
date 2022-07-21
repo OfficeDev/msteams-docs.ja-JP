@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 4e32937e906a472359c6d4d7788143e551e8a002
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: aee6e93a6824838ff48d7fb92839af30dd8ce7c6
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841955"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919761"
 ---
 # <a name="meeting-apps-api-references"></a>会議アプリ API リファレンス
 
@@ -134,7 +134,7 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 
 ---
 
-| プロパティ名 | 用途 |
+| プロパティ名 | 説明 |
 |---|---|
 | **user.id** | ユーザーの ID。 |
 | **user.aadObjectId** | ユーザーの Azure Active Directory オブジェクト ID。 |
@@ -226,7 +226,7 @@ POST /v3/conversations/{conversationId}/activities
     "channelData": {
         "notification": {
             "alertInMeeting": true,
-            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
+            "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&<completionBotId>=<BOT_APP_ID>"
         }
     },
     "replyToId": "1493070356924"
@@ -235,7 +235,7 @@ POST /v3/conversations/{conversationId}/activities
 
 ---
 
-| プロパティ名 | 用途 |
+| プロパティ名 | 説明 |
 |---|---|
 | **type** | 動作状況の種類。 |
 | **text** | メッセージのテキスト コンテンツ。 |
@@ -243,6 +243,8 @@ POST /v3/conversations/{conversationId}/activities
 | **channelData.notification.alertInMeeting** | 会議中に通知をユーザーに表示するかどうかを示すブール値。 |
 | **channelData.notification.externalResourceUrl** | 通知の外部リソース URL の値。|
 | **replyToId** | スレッドの親メッセージまたはルート メッセージの ID。 |
+| **APP_ID** | マニフェストで宣言されたアプリ ID。 |
+| **completionBotId** | ボット アプリ ID |
 
 ### <a name="response-codes"></a>応答コード
 
@@ -491,7 +493,7 @@ Meeting Details API の JSON 応答本文は次のとおりです。
 
 ---
 
-| プロパティ名 | 用途 |
+| プロパティ名 | 説明 |
 |---|---|
 | **details.id** | BASE64 文字列としてエンコードされた会議の ID。 |
 | **details.msGraphResourceId** | MS Graph API呼び出しに特に使用される MsGraphResourceId。 |
@@ -899,7 +901,7 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 }
 ```
 
-| プロパティ名 | 用途 |
+| プロパティ名 | 説明 |
 |---|---|
 | **name** | ユーザーの名前|
 | **type** | アクティビティの種類。 |

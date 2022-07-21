@@ -5,16 +5,19 @@ description: このモジュールでは、Microsoft Teams でアプリ マニ�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 75df991c0af1ca49a1fbba1846a01ff4b30236db
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 6ac26e8d066da249ae1b105d2375da1a7e2df6db
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503936"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919845"
 ---
 # <a name="define-message-extension-action-commands"></a>メッセージ拡張機能のアクション コマンドを定義する
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+
+> [!NOTE]
+> メッセージ アクションが開始されると、添付ファイルの詳細は呼び出しアクティビティの `turncontext` 一部として送信されません。
 
 操作コマンドでは、Teams でタスク モジュールを呼び出すためのモーダル ポップアップをユーザーに表示できます。 タスク モジュールは、情報を収集または表示し、対話を処理し、Teams に情報を送信します。 このドキュメントでは、操作コマンドを呼び出す場所の選択、タスク モジュールの作成、最終メッセージまたはカードの送信、App Studio を使用した操作コマンドの作成、手動での作成方法について説明します。
 
@@ -27,7 +30,7 @@ ms.locfileid: "66503936"
 メッセージ拡張アクション コマンドを定義する方法については、次のビデオを参照してください。
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
 <br>
 
 ## <a name="select-action-command-invoke-locations"></a>操作コマンドを呼び出す場所を選択する
@@ -84,7 +87,7 @@ ms.locfileid: "66503936"
 **App Studio** または **開発者ポータル** を使用して操作コマンドを作成できます。
 
 > [!WARNING]
- > App Studio を使用している場合は、Teams アプリを構成、配布、管理するための開発者ポータル [開発者ポータル](https://dev.teams.microsoft.com/) を試してみることをお勧めします。App Studio は 2022 年 6 月 30 日までに非推奨になります。
+ > App Studio を使用している場合は、Teams アプリを構成、配布、管理するために[開発者ポータル](https://dev.teams.microsoft.com/)を試してみることをお勧めします。 App Studio は、2022 年 8 月 1 日までに廃止されます。
 
 # <a name="app-studio"></a>[App Studio](#tab/AS)
 

@@ -5,12 +5,12 @@ description: このモジュールでは、Teams 管理者が組織用に Teams 
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: c63a901aba88b8f9f77c3a3e54217204a3e91cc9
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 0a7a98c5d981f35bc60a6099873a445b45caa071
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503446"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919824"
 ---
 # <a name="customize-your-teams-app"></a>Teams アプリをカスタマイズする
 
@@ -23,7 +23,7 @@ ms.locfileid: "66503446"
 * 組織のブランドに合わせてアプリのアクセント カラーを変更する。
 * アプリ名を "*Contoso*" から "*Contoso エージェント*" に更新する。この名前が組織内のユーザーに表示されます。 (注: チャットまたはチャネルにコネクタを追加しているユーザーには、元のアプリ名 *Contoso* が引き続き表示されます)。
 
-この機能は、[Teams の開発者ポータル](https://dev.teams.microsoft.com/home)で有効にできます。 これは `configurableProperties` を構成します。この構成は Teams アプリ マニフェストの 1.10 より前のバージョンでは使用できません。
+この機能を有効にするには、バージョン 1.11 以降の [Teams アプリ マニフェストのセクションで`configurableProperties`顧客が](/microsoftteams/platform/resources/schema/manifest-schema#configurableproperties)カスタマイズできるアプリ プロパティを定義します。 開発者ポータルを使用してアプリのマニフェストを編集することを選択した場合は、 [Teams 用開発者ポータル](https://dev.teams.microsoft.com/home) で行うことができます。
 
 ### <a name="test-your-app"></a>アプリのテスト
 

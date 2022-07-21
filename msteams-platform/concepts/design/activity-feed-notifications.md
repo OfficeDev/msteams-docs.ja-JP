@@ -5,12 +5,12 @@ description: Teams アプリのアクティビティ フィード通知を設計
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: reference
-ms.openlocfilehash: 923519965b5ae6debaf256032f9bc4cdaada2f6e
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 9a17027f7dd68993a118f24bb23cfff0a56651e1
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558010"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919768"
 ---
 # <a name="designing-activity-feed-notifications-for-your-microsoft-teams-app"></a>Microsoft Teams アプリのアクティビティ フィード通知の設計
 
@@ -37,7 +37,7 @@ ms.locfileid: "66558010"
 |3|**タイトル (1 行目): アクター + 理由**: *アクター*: アクティビティを開始したユーザーまたはアプリの名前。 *理由*: アクティビティについて説明します。|
 |4|**タイムスタンプ**: アクティビティがいつ発生したかを示します。|
 |5|**場所 (2 行目)**: Teams でアクティビティが発生した場所を示します。|
-|6 |**テキスト プレビュー (3 行目)**: 通知の先頭から切り捨てられた行を表示します。|
+|6|**テキスト プレビュー (3 行目)**: 通知の先頭から切り捨てられた行を表示します。|
 
 ## <a name="types-of-activity-feed-notification-cards"></a>アクティビティ フィード通知カードの種類
 
@@ -74,7 +74,11 @@ ms.locfileid: "66558010"
 
 ---
 
-## <a name="next-step"></a>次のステップ
+## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
+
+Teams でアクティビティ フィード通知を送信するには、 [ステップ バイ ステップ ガイド](../../sbs-graphactivity-feedbroadcast.yml) に従ってください。
+
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [アクティビティ フィード通知を実装する](/graph/teams-send-activityfeednotifications)

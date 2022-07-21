@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.date: 04/07/2022
-ms.openlocfilehash: 760b108ac343e6805989c9dc1e709d8f15e3b684
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 01886d298320ddbc5736fc86c29ba2f9585c5562
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841905"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919852"
 ---
 # <a name="unified-meetings-apps"></a>統合された会議アプリ
 
@@ -41,8 +41,7 @@ Teams 統合会議アプリは、次の概念に基づいています。
 > 会議にタブを統合した場合、アプリはタブの Teams [シングル サインオン (SSO) 認証フローに](../tabs/how-to/authentication/tab-sso-overview.md)従う必要があります。
 
 > [!NOTE]
->
-> * Teams 会議拡張機能タブ アプリのアプリの追加オプションは、Teams Web クライアントではサポートされていません。
+> Teams 会議拡張機能タブ アプリのアプリの追加オプションは、Teams Web クライアントではサポートされていません。
 
 #### <a name="pre-meeting-app-experience"></a>会議前のアプリ エクスペリエンス
 
@@ -226,7 +225,7 @@ Teams 統合会議アプリを使用すると、会議の参加者ロールに�
 > * フェデレーション ユーザーは、呼び出しでタブ アプリを操作できません。
 > * フェデレーション ユーザーがテナント内ユーザーまたはゲスト ユーザーを含む既存の呼び出しに追加された場合、すべての参加者はアプリの追加、更新、または削除を行う機能を失います。 ただし、フェデレーション ユーザーを呼び出しに招待する前に追加されたアプリを操作できるのは、既存のテナント内ユーザーまたはゲスト ユーザーだけです。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [Teams 会議用にアプリを有効にして構成する](enable-and-configure-your-app-for-teams-meetings.md)
