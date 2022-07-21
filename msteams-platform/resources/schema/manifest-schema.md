@@ -3,12 +3,12 @@ title: マニフェスト スキーマの参照
 description: この記事では、Microsoft Teams リファレンスのマニフェスト スキーマ、スキーマ、およびサンプルの完全なマニフェストを紹介します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 1a2ee91a74c5dfb79cb5c510fdc7a837d472b0db
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 92de9161a27cd9a11691da757f32ae2be2b783c2
+ms.sourcegitcommit: 904cca011c3f27d1d90ddd80c3d0300a8918e412
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503733"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66895497"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Teams のアプリ マニフェストのスキーマ
 
@@ -460,7 +460,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |`configurationUrl`|string|2048 文字|✔️|タブを構成するときに使用する https:// URL。|
 |`scopes`|列挙型の配列|1|✔️|現在、構成可能なタブは、`team` スコープと `groupchat` スコープのみをサポートしています。 |
 |`canUpdateConfiguration`|ブール値|||作成後にユーザーがタブの構成のインスタンスを更新できるかどうかを示す値。既定値: **true**。|
-|`context` |列挙型の配列|6 ||[タブがサポートされている](../../tabs/how-to/access-teams-context.md) `contextItem` スコープのセット。 既定値: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**。|
+|`context` |列挙型の配列|6||[タブがサポートされている](../../tabs/how-to/access-teams-context.md) `contextItem` スコープのセット。 既定値: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**。|
 |`sharePointPreviewImage`|string|2048||SharePoint で使用するタブ プレビュー イメージへの相対ファイル パス。サイズ 1024 x 768。 |
 |`supportedSharePointHosts`|列挙型の配列|1||SharePoint でタブを使用できるようにする方法を定義します。オプションは `sharePointFullPage` と `sharePointWebPart` |
 
@@ -505,7 +505,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
-ボットがユーザーに推奨できるコマンドのオプションの一覧。 オブジェクトは、型 `object` のすべての要素を持つ配列 (最大 2 つの要素) です。 ボットがサポートするスコープごとに個別のコマンド リストを定義する必要があります。 詳細については、「[ボット メニュー](~/bots/how-to/create-a-bot-commands-menu.md)」を参照してください。
+ボットがユーザーに推奨できるコマンドの一覧。 オブジェクトは、型 `object` のすべての要素を持つ配列 (最大 2 つの要素) です。 ボットがサポートするスコープごとに個別のコマンド リストを定義する必要があります。 詳細については、「[ボット メニュー](~/bots/how-to/create-a-bot-commands-menu.md)」を参照してください。
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
@@ -660,7 +660,10 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 個人用アプリがタブ ヘッダー バーなしでレンダリングされるかどうかを示します (全画面表示モードを示します)。 既定値は **false** です。
 
 > [!NOTE]
-> `isFullScreen` は、組織に発行されたアプリでのみ機能します。
+>
+> * `isFullScreen` は、組織に発行されたアプリでのみ機能します。 サイドロードされて発行されているサード パーティ製アプリでは、このプロパティを使用できません (無視されます)。
+>
+> * `isFullScreen=true` は、Teams が提供するヘッダー バーとタイトルを個人用アプリとタスク モジュールのダイアログから削除します。
 
 ## <a name="activities"></a>activities
 
