@@ -1,20 +1,20 @@
 ---
 title: 基本的な Fluent UI コンポーネントを使用してアプリを設計する
 author: heath-hamilton
-description: Microsoft Teams アプリを構築し、Teams UI キットを入手するために使用される UI コンポーネントについて説明します。 Fluent kit breadcrumb ボタン カード カルーセルドロップダウン Coachmark ピッカー ピボットトグル ツールヒントについて説明します
+description: Teams UI キットの Fluent UI コンポーネントを使用して Microsoft Teams アプリを設計する方法について説明します。
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 4f3295036315819413f262e5a224dd2231eb431d
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 78c44e8188210feed1123a9a0bfa8a027a4923a9
+ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557758"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66962441"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>基本的な Fluent UI コンポーネントを使用した Microsoft Teams アプリの設計
 
-次の基本的な Fluent UI コンポーネントを使用して、Teams アプリを最初からビルドできます。 可能な限りフラットに設計されたこれらのコンポーネントは、さまざまなユース ケース、テーマ、画面サイズで動作します。
+次の基本的な Fluent UI コンポーネントを使用して、Teams アプリを最初から設計して構築できます。 可能な限りフラットに設計されたこれらのコンポーネントは、さまざまなユース ケース、テーマ、画面サイズで動作します。
 
 このページの図は、Teams の既定の (明るい) テーマと暗いテーマでのコンポーネントの外観を示しています。
 

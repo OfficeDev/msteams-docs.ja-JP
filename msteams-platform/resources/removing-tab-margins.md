@@ -5,12 +5,12 @@ description: このモジュールでは、タブの余白を削除すると、�
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: d99b58529cf15da4357d44d6bcfdcc9801b995ba
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: c809f91a4ca11bc6006720fc70092f74386a4187
+ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558283"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66962427"
 ---
 # <a name="tab-margin-changes"></a>タブ余白の変更
 
@@ -39,7 +39,7 @@ ms.locfileid: "66558283"
 **Teams が以前に適用したタブ余白のサイズは何ですか?**
 
 * 左右: 20 ピクセル
-* Top: 16 px
+* 上: 16 ピクセル
 * 下: 0 ピクセル
 
 > [!IMPORTANT]
