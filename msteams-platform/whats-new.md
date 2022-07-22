@@ -3,12 +3,12 @@ title: Teams の開発者向けの新機能と更新情報
 description: 新しく導入された Microsoft Teams の開発者向け機能と、既存の機能の更新について説明します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: e060d1da7e618fe7730839aba0b676a9cb93ce7a
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 02e2ea46b29c79be642a88389e8f18e1e310338b
+ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66842032"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66919838"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -36,6 +36,7 @@ ms.locfileid: "66842032"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ----------------|
+| 07/21/2022 | アクティビティ フィード通知を送信するためのステップ バイ ステップ ガイドを導入しました | アプリの設計 > UI コンポーネント > アクティビティ フィード通知 > [アクティビティ フィード通知の送信](sbs-graphactivity-feedbroadcast.yml) |
 | 07/08/2022| アプリのインストール中にユーザーが選択したチャネル ID を会話とインストール更新イベントを介してボットに送信する更新 |  ボットの構築 > ボットの会話 > Teams ボットの会話イベント > [Teams ボットの会話イベント](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 | 2022/6/16 | デスクトップとモバイルをサポートするようにメディア機能を更新しました| [デバイス機能の統合] > [[メディア機能の統合](concepts/device-capabilities/media-capabilities.md)]|
 | 06/08/2022 | 成功メッセージに関するオプションのカード フィードバック| [ボットのビルド] > [ボットの会話] > [[ボットの会話のメッセージ]](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
