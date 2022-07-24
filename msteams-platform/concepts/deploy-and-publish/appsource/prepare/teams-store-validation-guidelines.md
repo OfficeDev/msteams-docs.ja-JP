@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 0c92ce5acee19a1c83bf5fc83e0b09ab6a6dfc4f
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
+ms.openlocfilehash: c351214e019b0f794e4f279f69458da6adbf6dce
+ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659035"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66962476"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams ストア検証ガイドライン
 
@@ -83,7 +83,7 @@ ms.locfileid: "66659035"
 
 ### <a name="app-name"></a>アプリ名
 
-[*必須の修正プログラム*]
+[*必須の修正*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、Microsoft [商用認定ポリシー番号 1140.1.1](/legal/marketplace/certification-policies#114011-app-name) に沿ったものであり、それらのアプリの名前の指定に関して、開発者に追加のガイダンスを提供します。
 <br></br>
@@ -131,7 +131,7 @@ ms.locfileid: "66659035"
 
 ### <a name="similar-platforms-and-services"></a>類似したプラットフォームやサービス
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、[Microsoft 商用認定ポリシー番号 1140.1.3](/legal/marketplace/certification-policies#114013-other-platforms-and-services) に沿ったものです。
 
@@ -143,7 +143,7 @@ ms.locfileid: "66659035"
 
 ### <a name="authentication"></a>認証
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、[Microsoft 商用認定ポリシー番号 1140.1.4](/legal/marketplace/certification-policies#114014-access-to-services) に沿ったものであり、外部サービスを使用したそれらのアプリの認証に関して、開発者にガイダンスを提供します。
 
@@ -173,7 +173,7 @@ ms.locfileid: "66659035"
 
 ### <a name="financial-information"></a>財務情報
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは [Microsoft 商用認定ポリシー番号 1140.3.1](/legal/marketplace/certification-policies#114031-financial-transactions) に沿ったもので、Teams インターフェイス内の財務情報の送信に関するガイダンスを提供し、Teams アプリのモバイル (Android および iOS) バージョンでの制限付き支払いのシナリオを開発者に対して示します。
 <br></br>
@@ -219,7 +219,7 @@ Microsoft Azure Bot Service を使用するアプリ (ボットやメッセー�
 
 ### <a name="external-domains"></a>外部ドメイン
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー番号 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains) に沿ったもので、`validDomains` マニフェスト プロパティでの制限付きドメインの使用に関する開発者向けのガイダンスを提供します。
 <br></br>
@@ -264,7 +264,7 @@ Government Community Cloud (GCC) ユーザーにアプリを配布するには�
 
 ### <a name="compatibility"></a>互換性
 
-[*必須の修正プログラム*]
+[*必須の修正*]
 
 アプリは、以下のオペレーティング システムやブラウザーの最新バージョンで完全に機能する必要があります。
 
@@ -290,7 +290,7 @@ Teams アプリは、合理的な時間内に応答するか、読み込み中�
 
 ## <a name="app-package-and-store-listing"></a>アプリ パッケージと Store 登録情報
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
 アプリケーション パッケージは、正しく書式設定され、すべての必要な情報とコンポーネントが含まれている必要があります。
 
@@ -305,7 +305,7 @@ Teams アプリは、合理的な時間内に応答するか、読み込み中�
 
 ### <a name="app-manifest"></a>アプリ マニフェスト
 
-[*必須の修正プログラム*]
+[*必須の修正*]
 
 Teams アプリ マニフェストは、アプリの構成を定義します。
 
@@ -315,7 +315,7 @@ Teams アプリ マニフェストは、アプリの構成を定義します。
 
 ### <a name="app-icons"></a>アプリのアイコン
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
 アイコンは、ユーザーが Teams ストアを閲覧する際に目にする主要な要素の 1 つです。
 <br></br>
@@ -388,7 +388,7 @@ Teams アプリ マニフェストは、アプリの構成を定義します。
 
 **してはいけないこと**:
 
-[*必須の修正プログラム*]
+[*必須の修正*]
 
 * 500 文字を超える。
 * **Microsoft** の省略形として **MS** や **MSFT** を使用する。
@@ -455,7 +455,7 @@ Teams アプリに特化した特定のポリシーも、すべてのサービ�
 
 ### <a name="terms-of-use"></a>使用条件
 
-[*必須の修正プログラム*]
+[*必須の修正*]
 
 次のガイドラインに沿って使用条件を記述します。
 
