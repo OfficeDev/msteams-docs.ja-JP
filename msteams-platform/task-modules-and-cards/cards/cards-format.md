@@ -4,12 +4,12 @@ description: このモジュールでは、Microsoft Teams でのカード テ�
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: b019c95b6cd8be32ef8d6d3ab10934cc8bcc56a1
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e54e31ca9866349fea0ca8b10277f75b94454304
+ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144209"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66962434"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams のカードの書式設定
 
@@ -22,7 +22,7 @@ ms.locfileid: "66144209"
 
 書式設定のサポートはカードの種類によって異なります。カードのレンダリングは、デスクトップとモバイルの Microsoft Teams クライアント間、およびデスクトップ ブラウザーの Teams 間でわずかに異なる場合があります。
 
-Teams カードにはインライン画像を含めることができます。 サポートされているイメージ形式は、.png、.jpg、または .gif 形式です。 サイズは 1024 x 1024 px 以内、ファイル サイズは 1 MB 未満にしてください。 アニメーション .gif 画像はサポートされていません。 詳細については、「[カードの種類](./cards-reference.md#inline-card-images)」を参照してください。
+Teams カードにはインライン画像を含めることができます。 サポートされているイメージ形式は、.png、.jpg、または .gif 形式です。 サイズは 1024 x 1024 ピクセル以内、ファイル サイズは 1 MB 未満にしてください。 アニメーション .gif 画像はサポートされていません。 詳細については、「[カードの種類](./cards-reference.md#inline-card-images)」を参照してください。
 
 サポートされている特定のスタイルを含む Markdown を使用して、アダプティブカードと Office 365 コネクタ カードを書式設定できます。  
 
