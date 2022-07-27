@@ -5,12 +5,12 @@ description: このモジュールでは、Microsoft Teams でアプリ マニ�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 6ac26e8d066da249ae1b105d2375da1a7e2df6db
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: dda990bcde10b6ff644bc034e91b838c681b842f
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919845"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035290"
 ---
 # <a name="define-message-extension-action-commands"></a>メッセージ拡張機能のアクション コマンドを定義する
 
@@ -19,7 +19,7 @@ ms.locfileid: "66919845"
 > [!NOTE]
 > メッセージ アクションが開始されると、添付ファイルの詳細は呼び出しアクティビティの `turncontext` 一部として送信されません。
 
-操作コマンドでは、Teams でタスク モジュールを呼び出すためのモーダル ポップアップをユーザーに表示できます。 タスク モジュールは、情報を収集または表示し、対話を処理し、Teams に情報を送信します。 このドキュメントでは、操作コマンドを呼び出す場所の選択、タスク モジュールの作成、最終メッセージまたはカードの送信、App Studio を使用した操作コマンドの作成、手動での作成方法について説明します。
+アクション コマンドを使用すると、Teams のタスク モジュールと呼ばれるモーダル ポップアップをユーザーに表示できます。 タスク モジュールは、情報を収集または表示し、対話を処理し、Teams に情報を送信します。 このドキュメントでは、操作コマンドを呼び出す場所の選択、タスク モジュールの作成、最終メッセージまたはカードの送信、App Studio を使用した操作コマンドの作成、手動での作成方法について説明します。
 
 操作コマンドを作成する前に、次の要因を決定する必要があります。
 

@@ -5,12 +5,12 @@ description: SameSite Cookie、その属性、Teams タブ、タスク モジュ
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: fee4855c8dd6c8dfdb83bce8b6d4d0c5da348724
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 8f61788779d34183f7000271245e683f2750f739
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142732"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035325"
 ---
 # <a name="samesite-cookie-attribute"></a>SameSite Cookie 属性
 
@@ -60,7 +60,7 @@ SameSite Cookie 属性は次のとおりです。
 ### <a name="tabs-task-modules-and-message-extensions"></a>タブ、タスク モジュール、メッセージ拡張機能
 
 * Teams タブは、`<iframes>` を使用して、最上位レベルまたはファースト パーティのコンテキストで表示されるコンテンツを埋め込みます。
-* タスク モジュールを使用すると、Teams アプリケーションでモーダル ポップアップ エクスペリエンスを作成することができます。 タブと同様に、モーダル ウィンドウが現在のページ内で開きます。
+* タスク モジュールを使用すると、Teams アプリケーションでモーダル ポップアップ エクスペリエンスを作成できます。 タブと同様に、モーダル ウィンドウが現在のページ内で開きます。
 * メッセージ拡張機能を使用すると、外部リソースからのチャット メッセージに強化されたコンテンツを挿入できます。
 
 `<iframe>` に表示される場合、埋め込みコンテンツで使用される Cookie は、サード パーティーとみなされます。さらに、ページ上のリモート リソースが要求 `<img>`、`<script>` タグ、外部フォント、カスタマイズされたコンテンツとともに送信される Cookie に依存している場合は、`SameSite=None; Secure` など、サイト横断的に使用できるようにマークされているか、フォールバックが確実に実行されている必要があります。

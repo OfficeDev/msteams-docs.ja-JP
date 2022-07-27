@@ -5,12 +5,12 @@ description: このモジュールでは、最初の呼び出しアクション�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: a7ab29456605f7465dfba24cf58059fc173c883e
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 58b5d246c113262fa478a36246a224a52d160154
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503341"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035185"
 ---
 # <a name="create-and-send-task-module"></a>タスク モジュールの作成と送信
 
@@ -648,7 +648,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 |プロパティ名|用途|
 |---|---|
-|`type`| フォームを表示する `continue` か、単純なポップアップを表示する `message` のいずれかを指定できます。 |
+|`type`| フォームを表示するか `continue` 、 `message` 単純なポップアップを表示できます。 |
 |`value`| フォームの `taskInfo` オブジェクト、またはメッセージの `string` オブジェクトのいずれかです。 |
 
 taskInfo オブジェクトのスキーマは次のとおりです。

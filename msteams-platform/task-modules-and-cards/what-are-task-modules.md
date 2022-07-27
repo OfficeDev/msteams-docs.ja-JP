@@ -1,16 +1,16 @@
 ---
 title: タスク モジュール
 author: surbhigupta
-description: このモジュールでは、モーダル ポップアップ エクスペリエンスを追加して、Microsoft Teams アプリからユーザーに情報を収集または表示する方法について説明します。
+description: このモジュールでは、Microsoft Teams アプリからユーザーに情報を収集または表示するためのモーダル ポップアップ エクスペリエンスを追加する方法について説明します
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: f5bed6e92200d19fc99f8f91d632dd04d61a1722
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 23d6a0f1645fefe66544c755ddb617eba9ea8f3e
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143600"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035297"
 ---
 # <a name="task-modules"></a>タスク モジュール
 
@@ -26,9 +26,9 @@ ms.locfileid: "66143600"
 
 タスク モジュールは次の 3 つの方法で呼び出すことができます。
 
-* チャネル タブまたは個人用タブ: Microsoft Teams タブ SDK を使用すると、タブのボタン、リンク、またはメニューからタスク モジュールを呼び出すことができます。詳細については、[タブでのタスク モジュールの使用に関するページを参照してください](~/task-modules-and-cards/task-modules/task-modules-tabs.md)。
-* ボット: ボットから送信された [カード](~/task-modules-and-cards/cards/cards-reference.md) のボタンを使用します。 これは、チャネル内のすべてのユーザーがボットで何をしているかを確認する必要がない場合に便利です。 たとえば、ユーザーがチャネル内の投票に応答する場合、そのポーリングが作成されているレコードを表示することは役に立ちません。 詳細については、[Teams ボットからのタスク モジュールの使用](~/task-modules-and-cards/task-modules/task-modules-bots.md)に関するページを参照してください。
-* ディープ リンクからTeams外: URL を作成して、どこからでもタスク モジュールを呼び出すこともできます。 詳細については、 [タスク モジュールのディープ リンク構文に関するページを](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax)参照してください。
+* チャネルタブまたは個人用タブ: Microsoft Teams タブ SDK を使用すると、タブのボタン、リンク、またはメニューからタスク モジュールを呼び出すことができます。詳細については、 [タブでのタスク モジュールの使用に関するページを参照してください](~/task-modules-and-cards/task-modules/task-modules-tabs.md)。
+* ボット: ボットから送信された [カード](~/task-modules-and-cards/cards/cards-reference.md) のボタンを使用します。 これは、チャネル内のすべてのユーザーがボットで何をしているかを確認する必要がない場合に便利です。 たとえば、ユーザーがチャネル内の投票に応答する場合、そのポーリングが作成されているレコードを表示することは役に立ちません。 詳細については、 [Teams ボットのタスク モジュールの使用](~/task-modules-and-cards/task-modules/task-modules-bots.md)に関するページを参照してください。
+* ディープ リンクから Teams の外部: どこからでもタスク モジュールを呼び出す URL を作成することもできます。 詳細については、 [タスク モジュールのディープ リンク構文に関するページを](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax)参照してください。
 
 ## <a name="components-of-a-task-module"></a>タスク モジュールのコンポーネント
 
@@ -50,7 +50,7 @@ ms.locfileid: "66143600"
 6. [TaskInfo オブジェクト](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object)のプロパティを使用してアダプティブ カードを`card`表示する場合は、パディングが追加されます。 詳細については、 [HTML または JavaScript タスク モジュールのタスク モジュール CSS に関するページ](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-css-for-html-or-javascript-task-modules)を参照してください。
 7. **[サインアップ**] を選択すると、[アダプティブ カード] ボタンがレンダリングされます。 独自のページを使用する場合は、独自のボタンを作成します。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [タスク モジュールを呼び出して閉じる](~/task-modules-and-cards/task-modules/invoking-task-modules.md)

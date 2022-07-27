@@ -3,12 +3,12 @@ title: ボットにカード アクションを追加する
 description: このモジュールでは、Microsoft Teams のカード アクションとは何か、アクションの種類、ボットでカード アクションを使用する方法について説明します
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: b9d73c09b9605ed9babbb2990c261dd920c3703b
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 84198e8a7ec5c0664ea9fcd2147b039fa5742b2c
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66483971"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035304"
 ---
 # <a name="card-actions"></a>カード アクション
 
@@ -29,7 +29,7 @@ Teams のボットやメッセージ拡張機能で使用されるカードは�
 >
 >* Teams は、前のテーブルに記載されていない `CardAction` タイプをサポートしていません。
 >* Teams は `potentialActions` プロパティをサポートしていません。
->* カード アクションは、Bot Framework や Azure Bot Service の[おすすめの操作](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true)とは異なります。 おすすめの操作は、Microsoft Teams ではサポートされていません。 Teams ボット メッセージにボタンを表示させる場合は、カードを使用します。
+>* カード アクションは、Bot Framework や Azure Bot Service の[おすすめの操作](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true)とは異なります。
 >* カード アクションをメッセージ拡張機能の一部として使用している場合、カードがチャネルに送信されるまでアクションは機能しません。 カードがメッセージの作成ボックスに入っている間は、アクションは機能しません。
 
 ## <a name="action-type-openurl"></a>アクション タイプ openUrl

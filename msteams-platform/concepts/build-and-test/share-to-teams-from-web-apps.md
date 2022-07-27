@@ -3,12 +3,12 @@ title: Web アプリから Teams に共有する
 description: コード サンプルを使用して、Web サイトのプレビューを使用して、Web サイトの [Teams に共有] 埋め込みボタンを追加する方法について説明します
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: b555d0e111a16be2e5be45e07998aeb94e432901
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 4266852b1e99e5ba23fab32df9705f77ccb33e20
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558479"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035318"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Web アプリから Teams に共有する
 
@@ -16,7 +16,7 @@ ms.locfileid: "66558479"
 
 次の図は、Teams への共有プレビュー エクスペリエンスのポップアップ ウィンドウを表示します。
 
-:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="チーム間の共有ポップアップ":::
+:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Share-to-Teams ポップアップ":::
 
 > [!NOTE]
 >
@@ -38,7 +38,6 @@ Teams に共有ボタンを埋め込む方法については、次のビデオ�
 <br>
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vhWH]
 <br>
-
 
 ## <a name="embed-a-share-to-teams-button"></a>Teams への共有の埋め込みボタン
 
@@ -117,18 +116,18 @@ HTML の既定のバージョンまたは Open Graph バージョンのいずれ
 
 [チームに共有] ボタンを使用する教師には、共有リンクに `Create an Assignment` 基づいて選択したチームに割り当てを迅速に作成できる追加オプションがあります。 次の図は、教育機関向けの Teams への共有を示しています。
 
-:::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="Teams ポップアップ教育に共有する":::
+:::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="Teams に共有するポップアップ教育":::
 
 ## <a name="full-launcherjs-definition"></a>完全なlauncher.js定義
 
 | プロパティ | HTML 属性 | 型 | 既定値 | 説明 |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
-| href | `data-href` | string | 該当なし | 共有するコンテンツの href。 |
+| href | `data-href` | 文字列 | 該当なし | 共有するコンテンツの href。 |
 | preview | `data-preview` | ブール値 (文字列として) | `true` | 共有するコンテンツのプレビューを表示するかどうかを指定します。 |
 | iconPxSize | `data-icon-px-size` | number (文字列として) | `32` | レンダリングする [Teams に共有] ボタンのサイズ (ピクセル単位)。 |
-| msgText | `data-msg-text` | string | 該当なし | メッセージ作成ボックスのリンクの前に挿入される既定のテキスト。 最大文字数は 200 文字です。 |
-| assignInstr | `data-assign-instr` | string | 該当なし | 割り当て "命令" フィールドに挿入される既定のテキスト。 最大文字数は 200 文字です。 |
-| assignTitle | `data-assign-title` | string | 該当なし | 割り当て "タイトル" フィールドに挿入する既定のテキスト。 最大文字数は 50 文字です。 |
+| msgText | `data-msg-text` | 文字列 | 該当なし | メッセージ作成ボックスのリンクの前に挿入される既定のテキスト。 最大文字数は 200 文字です。 |
+| assignInstr | `data-assign-instr` | 文字列 | 該当なし | 割り当て "命令" フィールドに挿入される既定のテキスト。 最大文字数は 200 文字です。 |
+| assignTitle | `data-assign-title` | 文字列 | 該当なし | 割り当て "タイトル" フィールドに挿入する既定のテキスト。 最大文字数は 50 文字です。 |
 
 ### <a name="methods"></a>メソッド
 

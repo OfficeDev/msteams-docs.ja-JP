@@ -4,12 +4,12 @@ description: Teams ボットと Teams チャネル データ、メッセージ�
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: d71a4df2548a27bf2da76434a0c90e96d0eaa6f7
-ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
+ms.openlocfilehash: 20cac5ed941e572e4d13cfd4535cb8be7d481355
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2022
-ms.locfileid: "66695300"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035198"
 ---
 # <a name="messages-in-bot-conversations"></a>ボットの会話内のメッセージ
 
@@ -196,6 +196,38 @@ async def on_members_added_activity(
 
 ユーザーとボットの間で送信されるメッセージには、メッセージ内の内部チャネル データが含まれます。 このデータを使用すると、ボットはそのチャネルで適切に通信できます。 Bot Builder SDK を使用すると、メッセージ構造を変更できます。
 
+## <a name="send-suggested-actions"></a>推奨されるアクションを送信する
+
+推奨されるアクションを使用すると、ユーザーが入力を提供するために選択できるボタンをボットに表示できます。 推奨されるアクションは、ユーザーがキーボードで応答を入力するのではなく、質問に答えたり、ボタンを選択して選択したりできるようにすることで、ユーザー エクスペリエンスを向上させます。 ボタンは、ユーザーが選択した後もリッチ カード内のユーザーが表示され、アクセス可能なままですが、推奨されるアクションではボタンは使用できません。 これにより、ユーザーは会話内で古いボタンを選択できなくなります。
+
+メッセージに推奨されるアクションを追加するには、[Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) オブジェクトのプロパティを設定`suggestedActions`して、ユーザーに表示するボタンを表す [CardAction](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) オブジェクトの一覧を指定します。 For more information, see [`SugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions)
+
+推奨されるアクションの実装とエクスペリエンスの例を次に示します。
+
+``` json
+"suggestedActions": {
+    "actions": [
+      {
+        "type": "imBack",
+        "title": "Action 1",
+        "value": "Action 1"
+      },
+      {
+        "type": "imBack",
+        "title": "Action 2",
+        "value": "Action 2"
+      }
+    ],
+    "to": [<list of recepientIds>]
+  }
+```
+
+:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="ボットが推奨するアクション" border="true":::
+
+> [!NOTE]
+> * `SuggestedActions` は、アダプティブ カードや添付ファイルではなく、1 対 1 のチャット ボットとテキスト ベースのメッセージでのみサポートされます。
+> * 現在 `imBack` 、サポートされている唯一のアクションの種類であり、Teams には最大 3 つの推奨アクションが表示されます。
+
 ## <a name="teams-channel-data"></a>Teamsチャネルデータ
 
 オブジェクトには `channelData` Teams 固有の情報が含まれており、チーム ID とチャネル ID の決定的なソースです。 必要に応じて、これらの ID をキャッシュし、ローカル ストレージのキーとして使用できます。 `TeamsActivityHandler` SDK では、オブジェクトから重要な情報を`channelData`取り出して、簡単にアクセスできるようにします。 ただし、オブジェクトから `turnContext` 元のデータにいつでもアクセスできます。
@@ -334,7 +366,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 画像は最大 1024 ×1024 MB、PNG、JPEG、または GIF 形式で 1 MB です。 アニメーション GIF はサポートされていません。
 
-XML を使用して、各イメージの高さと幅を指定します。 マークダウンでは、イメージ サイズの既定値は 256×256 です。 例として以下のようなものがあります。
+XML を使用して、各イメージの高さと幅を指定します。 マークダウンでは、イメージ サイズの既定値は 256×256 です。 次に例を示します。
 
 * 使用: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
 * 使用しないでください: `![Duck on a rock](http://aka.ms/Fo983c)`.
