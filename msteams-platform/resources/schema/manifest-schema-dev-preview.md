@@ -4,12 +4,12 @@ description: Microsoft Teams でサポートされているすべてのコンポ
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: 1c42b405506aff9ae570d6792db4ff8f73fb9255
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: c6552ce9a216dbf8c2f416002f6c98b977650160
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503474"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058208"
 ---
 # <a name="public-developer-preview-manifest-schema-for-teams"></a>Teams のパブリック開発者プレビュー マニフェスト スキーマ
 
@@ -396,7 +396,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |`configurationUrl`|String|2048 文字|✔️|タブを構成するときに使用する https:// URL。|
 |`canUpdateConfiguration`|ブール値|||作成後にユーザーがタブの構成のインスタンスを更新できるかどうかを示す値。既定値: `true`|
 |`scopes`|列挙型の配列|1|✔️|現在、構成可能なタブは、`team` スコープと `groupchat` スコープのみをサポートしています。 |
-|`context` |列挙型の配列|6 ||[タブがサポートされている](../../tabs/how-to/access-teams-context.md) `contextItem` スコープのセット。 既定値: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`|
+|`context` |列挙型の配列|6||[タブがサポートされている](../../tabs/how-to/access-teams-context.md) `contextItem` スコープのセット。 既定値: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`|
 |`sharePointPreviewImage`|String|2048||SharePoint で使用するタブ プレビュー イメージへの相対ファイル パス。サイズ 1024 x 768。 |
 |`supportedSharePointHosts`|列挙型の配列|1||SharePoint でタブを使用できるようにする方法を定義します。オプションは `sharePointFullPage` と `sharePointWebPart` |
 
@@ -667,6 +667,17 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 * `privacyUrl`: 開発者のプライバシー ポリシーの HTTPS URL。
 * `termsOfUseUrl`: 開発者の使用条件の HTTPS URL。
 
+## <a name="supportedchanneltypes"></a>supportedChannelTypes
+
+**オプション** - 配列
+
+非標準チャネルでアプリを有効にします。 アプリがチーム スコープをサポートしていて、このプロパティが定義されている場合、Teams はそれに応じて各チャネルの種類でアプリを有効にします。 現在、プライベート チャネルと共有チャネルの種類がサポートされています。
+
+> [!NOTE]
+>
+> * アプリがチーム スコープをサポートしている場合、このプロパティで定義されている値に関係なく、標準チャネルで機能します。
+> * アプリは、適切に機能する各チャネルの種類の一意のプロパティを考慮できます。 プライベート チャネルと共有チャネルのタブを有効にするには、プライベート チャネル [でコンテキストを取得](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) し、 [共有チャネルでコンテキストを取得](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels)する方法に関する説明を参照してください。
+
 ## <a name="defaultinstallscope"></a>defaultInstallScope
 
 **省略可能** - 文字列
@@ -713,6 +724,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`scenes`|オブジェクトの配列| 5 個の項目||会議でサポートされているシーン。|
+|`supportsStreaming`|Boolean|||アプリが会議のオーディオとビデオのコンテンツをリアルタイムの会議プロトコル (RTMP) エンドポイントにストリーミングできるかどうかを示す値。 既定値は **false** です。|
 
 ### <a name="meetingextensiondefinitionscenes"></a>meetingExtensionDefinition.scenes
 

@@ -3,12 +3,12 @@ title: ディープ リンクの作成
 description: ディープ リンクを作成する方法と、タブを使用して Microsoft Teams アプリ内でディープ リンクを使用して移動する方法について説明します。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: dbb9c7568c955d7c70db978efa30f28025f708e4
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 90fb16ed7629425958aa52ee776bef9d58748136
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841962"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058222"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成
 
@@ -17,7 +17,7 @@ ms.locfileid: "66841962"
 * アプリのタブの 1 つにあるコンテンツにユーザーを移動します。 たとえば、アプリには、ユーザーに重要なアクティビティを通知するメッセージを送信するボットを含めることができます。 ユーザーが通知をタップすると、ディープ リンクがタブに移動し、ユーザーがアクティビティの詳細を表示できるようになります。
 * アプリは、必要なパラメーターを使用してディープ リンクを事前に入力して、チャットの作成や会議のスケジュール設定などの特定のユーザー タスクを自動化または単純化します。 これにより、ユーザーが手動で情報を入力する必要がなくなります。
 
-Microsoft Teams JavaScript クライアント SDK (TeamsJS) を使用すると、ナビゲーションのプロセスが簡略化されます。 多くのシナリオで、タブ内のコンテンツや情報への移動やチャット ダイアログの起動でさえ、SDK はエクスペリエンスを向上させ、ディープ リンクの取り扱いを置き換えることができる強い型付け API を提供します。 これらの API は、他のホスト (Outlook、Office) で実行される可能性がある Teams アプリに推奨されます。また、使用されている機能がそのホストでサポートされていることを確認する方法も提供されます。 次のセクションでは、ディープ リンクに関する情報を示しますが、TeamsJS v2 のリリースで、それを要求するために、使用されたシナリオがどのように変更されたかについても要点に注目して説明します。
+Microsoft Teams JavaScript クライアント SDK (TeamsJS) を使用すると、ナビゲーションのプロセスが簡略化されます。 タブ内のコンテンツや情報への移動やチャット ダイアログの起動など、SDK は多くのシナリオでエクスペリエンスを向上させ、ディープ リンクの代わりとなる、指定された API を提供します。 これらの API は、他のホスト (Outlook、Office) で実行される可能性がある Teams アプリに推奨されます。また、使用されている機能がそのホストでサポートされていることを確認する方法も提供されます。 次のセクションでは、ディープ リンクに関する情報を示しますが、TeamsJS v2 のリリースで、それを要求するために、使用されたシナリオがどのように変更されたかについても要点に注目して説明します。
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -51,7 +51,7 @@ Teams アプリ内のエンティティへのディープ リンクを作成で�
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 
-これを実装するには、UI に最適ならどのような方法でも、**リンクのコピー** アクションを各項目に追加します。 ユーザーがこの操作を実行したら、[pages.shareDeepLink()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-sharedeeplink&preserve-view=true) を呼び出して、ユーザーがクリップボードにコピーできるリンクを含むダイアログ ボックスを表示します。 この呼び出しを行うときは、アイテムの ID を渡します。それはリンクがフォローされ、タブが再読み込みされたときに [コンテキスト](~/tabs/how-to/access-teams-context.md) 内に戻るアイテムです。
+これを実装するには、UI に最適ないずれかの方法で、**リンクのコピー** アクションを各アイテムに追加します。 ユーザーがこの操作を実行したら、[pages.shareDeepLink()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-sharedeeplink&preserve-view=true) を呼び出して、ユーザーがクリップボードにコピーできるリンクを含むダイアログ ボックスを表示します。 この呼び出しを行うときは、アイテムの ID を渡します。 リンクがフォローされ、タブが再読み込みされると、[コンテキスト](~/tabs/how-to/access-teams-context.md)に戻されます。
 
 ```javascript
 pages.shareDeepLink({ subPageId: <subPageId>, subPageLabel: <subPageLabel>, subPageWebUrl: <subPageWebUrl> })
@@ -91,7 +91,7 @@ microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subE
 
 ### <a name="consume-a-deep-link-from-a-tab"></a>タブからディープ リンクを使用する
 
-ディープ リンクに移動すると、Microsoft Teams はタブに移動するだけで、サブページ ID が存在する場合に Teams JavaScript ライブラリを使用して取得するメカニズムを提供します。
+ディープ リンクにアクセスすると、Microsoft Teams はそのタブに移動し、サブページ ID が存在する場合は Teams JavaScript ライブラリを使用して取得するメカニズムを提供します。
 
 TeamsJS v1 の [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) 呼び出し (`microsoftTeams.getContext()`) は、`subPageId` プロパティ (TeamsJS v1 の subEntityId) を含むコンテキストで解決される promise を返します (タブがディープ リンクを介して移動される場合)。 詳細については、「[PageInfo インターフェース](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true)」を参照してください。
 
@@ -128,10 +128,10 @@ TeamsJS v1 の [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view
 | パラメーター名 | 説明 | 例 |
 |:------------|:--------------|:---------------------|
 | `appId`&emsp; | Teams 管理センターからの ID。 |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
-| `entityId`&emsp; | [タブの構成時](~/tabs/how-to/create-tab-pages/configuration-page.md)に指定した、タブ内のアイテムの ID。|Tasklist123|
+| `entityId`&emsp; | [タブの構成](~/tabs/how-to/create-tab-pages/configuration-page.md)時に指定したタブ内のアイテムの ID です。ディープ リンク用の URL を生成する場合は、引き続き entityID を URL のパラメーター名として使用します。 タブを構成する際は、コンテキスト オブジェクトは entityID を {page.id} として参照します。 |Tasklist123|
 | `entityWebUrl` または `subEntityWebUrl`&emsp; | クライアントがタブのレンダリングをサポートしていない場合に使用するフォールバック URL を含むオプションのフィールド。 | `https://tasklist.example.com/123` または `https://tasklist.example.com/list123/task456` |
 | `entityLabel` または `subEntityLabel`&emsp; | ディープ リンクを表示するときに使用する、タブ内のアイテムのラベル。 | タスク リスト 123 または "タスク 456" |
-| `context.subEntityId`&emsp; | タブ内のアイテムの ID。 |Task456 |
+| `context.subEntityId`&emsp; | タブ内のアイテムの ID です。ディープ リンク用の URL を生成する際は、URL のパラメーター名として subEntityId を引き続き使用します。 タブを構成する場合、コンテキスト オブジェクトは subEntityID を subPageID として参照します。 |Task456 |
 | `context.channelId`&emsp; | タブ[コンテキスト](~/tabs/how-to/access-teams-context.md)から使用可能な Microsoft Teams チャネル ID。 このプロパティは、**チーム** のスコープを持つ構成可能なタブでのみ使用できます。 **個人** のスコープを持つ静的タブでは使用できません。| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 | `chatId`&emsp; | グループ チャットと会議チャットのタブ[コンテキスト](~/tabs/how-to/access-teams-context.md)から使用可能な ChatId | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
 | `contextType`&emsp; |  チャットは会議でサポートされている唯一の contextType です | チャット |
@@ -169,7 +169,7 @@ TeamsJS v1 の [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view
 
 ## <a name="navigation-from-your-tab"></a>タブからのナビゲーション
 
-TeamsJS またはディープ リンクを使用して、タブから Teams 内のコンテンツに移動できます。 これは、タブでユーザーを Teams の他のコンテンツであるチャンネル、メッセージ、別のタブなどに接続したり、スケジュール ダイアログを開いたりする必要がある場合にも便利です。 以前は、ナビゲーションにはディープ リンクが必要だったかもしれませんが、多くのインスタンスで SDK を使用して実現できるようになりました。 以降のセクションでは両方の方法について説明しますが、可能な場合 SDK の強い型指定を活用することが推奨されます。
+TeamsJS またはディープ リンクを使用して、タブから Teams 内のコンテンツに移動できます。 これは、タブでユーザーを Teams の他のコンテンツであるチャンネル、メッセージ、別のタブなどに接続したり、スケジュール ダイアログを開いたりする必要がある場合にも便利です。 以前は、ナビゲーションにはディープ リンクが必要だったかもしれませんが、多くのインスタンスで SDK を使用して実現できるようになりました。 以降のセクションでは両方の方法について説明しますが、可能な場合 SDK の型指定を活用することが推奨されます。
 
 TeamsJS を使用する利点の 1 つは、特に他のホスト (Outlook と Office) で実行される可能性がある Teams アプリの場合に、使用しようとしている機能をホストがサポートしていることを確認できる点です。 ホストによる機能のサポートを確認するには、API の名前空間に関連付けられている `isSupported()` 関数を使用できます。 TeamsJS SDK は、名前空間を通じて API を系統的に機能化します。 たとえば、 `pages` 名前空間における API の用法に先立ち、`pages.isSupported()` から返されたブール値を確認し、アプリとアプリ UI のコンテキスト内で適切なアクションを実行できます。  
 
@@ -243,7 +243,7 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/meeting/new?subjec
 
 #### <a name="generate-a-deep-link-to-the-scheduling-dialog"></a>スケジュール設定ダイアログへのディープ リンクを作成する
 
-TeamsJS の強い型付けされた API を使用することをお勧めしますが、Teams の組み込みスケジュール ダイアログへのディープ リンクを手動で作成することもできます。 ボット、コネクタ、またはメッセージ拡張カードで使用できるディープ リンクには、次の形式を使用します: `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
+TeamsJS の型指定された API を使用することをお勧めしますが、Teams の組み込みスケジュール ダイアログへのディープ リンクを手動で作成することもできます。 ボット、コネクタ、またはメッセージ拡張カードで使用できるディープ リンクには、次の形式を使用します: `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
 例: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=test%3Acontent`
 
@@ -307,7 +307,7 @@ if(chat.isSupported()) {
 else { /* handle case where capability isn't supported */ }
 ```
 
-強い型付き API の使用をお勧めしますが、ボット、コネクタ、またはメッセージ拡張カードで使用できる手動で作成されたディープ リンクには、次の形式を使用することもできます。
+型指定された API の使用をお勧めしますが、ボット、コネクタ、またはメッセージ拡張カードで使用できる手動で作成されたディープ リンクには、次の形式を使用することもできます。
 
 `https://teams.microsoft.com/l/chat/0/0?users=<user1>,<user2>,...&topicName=<chat name>&message=<precanned text>`
 
@@ -316,7 +316,7 @@ else { /* handle case where capability isn't supported */ }
 クエリ パラメーターは次のとおりです。
 
 * `users`: チャットの参加者を表すユーザー ID のコンマで区切られたリスト。 アクションを実行するユーザーは、常に参加者として含まれます。 現在、[ユーザーID] フィールドは、メール アドレスのみなどの Microsoft Azure Active Directory (Azure AD) UserPrincipalName をサポートしています。
-* `topicName`: 3 人以上のユーザーとのチャットの場合、チャット 表示名のオプションのフィールド。 このフィールドが指定されていない場合、チャットの表示名は参加者の名前に基づいています。
+* `topicName`: チャットに 3 人以上のユーザーがいる場合の、チャットの表示名の省略可能なフィールドです。 このフィールドが指定されていない場合、チャットの表示名は参加者の名前に基づいています。
 * `message`: チャットがドラフト状態のときに現在のユーザーの作成ボックスに挿入するメッセージ テキストのオプションのフィールド。
 
 ボットでこのディープ リンクを使用するには、これをカードのボタンの URL ターゲットとして指定するか、`openUrl` アクション タイプでアクションをタップします。
@@ -430,7 +430,7 @@ else { /* handle case where capability isn't supported */ }
 
 #### <a name="generate-a-deep-link-to-a-call"></a>通話へのディープ リンクを生成する
 
-TeamsJS の強い型付き API の使用をお勧めしますが、手動で作成されたディープ リンクを使用して通話を開始することもできます。
+TeamsJS の型指定された API の使用をお勧めしますが、手動で作成されたディープ リンクを使用して通話を開始することもできます。
 
 | ディープ リンク | フォーマット | 例 |
 |-----------|--------|---------|

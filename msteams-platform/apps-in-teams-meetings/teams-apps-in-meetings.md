@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 97dcb7076797531b510b323e5d7671a8afed0961
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 5dc0793ee899d5423b81af6e07083fd03c8e5621
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841891"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058250"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Teams の会議と通話用のアプリ
 
@@ -51,6 +51,8 @@ Teams では、次の会議の種類について、会議中のアプリへの�
 会議の拡張性機能を使用して、会議のエクスペリエンスを向上します。 この機能を使用すると、会議内にアプリを統合できます。 また、タブ、ボット、メッセージ拡張機能を統合できる会議のライフサイクルのさまざまなステージもあります。 さまざまな参加者の役割とユーザーの種類を識別し、会議イベントを取得し、会議中のダイアログを生成できます。
 
 会議用のアプリを使用して Teams をカスタマイズするには、アプリ マニフェストを更新して Teams 会議用のアプリを有効にし、会議シナリオ用にアプリを構成します。
+
+アプリが重要な情報を共有している場合は、共有チャネル内の外部メンバーに対するアプリのアクセス許可をカスタマイズします。 [共有チャネル](../concepts/build-and-test/Shared-channels.md)のアプリのアクセス許可は、ホスト チームのアプリ名簿とホスト テナントのアプリ ポリシーに従います。
 
 新しいカスタム Together モード シーン機能により、ユーザーは 1 か所でチームとの会議で共同作業を行うことができます。
 

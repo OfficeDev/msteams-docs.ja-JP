@@ -3,12 +3,12 @@ title: Teams の開発者向けの新機能と更新情報
 description: 新しく導入された Microsoft Teams の開発者向け機能と、既存の機能の更新について説明します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 8b490e3f6b536839a1f27009a8a787242a0bbd81
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: d0254748a0c103976ba949f8597c8955ddcfe101
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035178"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058278"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -36,6 +36,9 @@ ms.locfileid: "67035178"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ----------------|
+| 2022 年 7 月 28 日 | Teams の表示画像と連絡先カードを会議内通知用に追加する| Teams の会議と通話用のアプリを作成する > 会議用のアプリを有効にして構成する > <[会議内通知](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#in-meeting-notification) |
+| 2022 年 7 月 28 日 | Teams で共有チャネルを作成にする | Teams の会議と通話用のアプリを作成する > [共有チャネル](concepts/build-and-test/Shared-channels.md) |
+| 2022 年 7 月 28 日|アプリ マニフェスト バージョン 1.14 が導入されました| アプリ マニフェスト > [Teams 用のアプリ マニフェスト スキーマ](resources/schema/manifest-schema.md)|
 | 2022 年 7 月 26 日|ボットに推奨されるアクション| [ボットのビルド] > [ボットの会話] > [[ボットの会話のメッセージ]](bots/how-to/conversations/conversation-messages.md#send-suggested-actions)|
 | 07/21/2022 | アクティビティ フィード通知を送信するためのステップ バイ ステップ ガイドを導入しました | アプリの設計 > UI コンポーネント > アクティビティ フィード通知 > [アクティビティ フィード通知の送信](sbs-graphactivity-feedbroadcast.yml) |
 | 07/08/2022| アプリのインストール中にユーザーが選択したチャネル ID を会話とインストール更新イベントを介してボットに送信する更新 |  ボットの構築 > ボットの会話 > Teams ボットの会話イベント > [Teams ボットの会話イベント](bots/how-to/conversations/subscribe-to-conversation-events.md) |
