@@ -1,5 +1,5 @@
 ---
-title: 概要 - Microsoft Teams ストアにアプリを発行する
+title: 概要 - Microsoft Teams ストアにアプリを公開する
 description: アプリをパートナー センターに送信し、Microsoft Teams ストア (および AppSource) に公開するためのプロセスについて説明します。
 ms.topic: overview
 author: heath-hamilton
@@ -12,9 +12,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/29/2022
 ms.locfileid: "66485735"
 ---
-# <a name="publish-your-app-to-the-microsoft-teams-store"></a>Microsoft Teams ストアにアプリを発行する
+# <a name="publish-your-app-to-the-microsoft-teams-store"></a>Microsoft Teams ストアにアプリを公開する
 
-アプリを Microsoft Teams 内のストアに直接配布して、世界中の何百万ものユーザーにリーチできます。 アプリがストアでも紹介されている場合は、潜在的な顧客に即座にリーチできます。
+アプリを Microsoft Teams 内のストアに直接配信して、世界中の何百万ものユーザーに届けることができます。 アプリがストアでも紹介されている場合は、潜在的な顧客に即座にリーチできます。
 
 Teams ストアに公開されたアプリは、Microsoft 365 アプリおよびソリューションの公式マーケットプレイスである [Microsoft 商用マーケットプレイス](https://appsource.microsoft.com)にも自動的に一覧表示されます。
 
@@ -23,7 +23,7 @@ Teams ストアに公開されたアプリは、Microsoft 365 アプリおよび
 アプリが運用環境に対応している場合、Teams ストアにアプリを掲載するプロセスを開始できます。
 
 > [!TIP]
-> 送信前の手順に正確に従うと、Microsoft がアプリの公開を承認する可能性が高くなります。
+> 提出前の手順に厳密に従うことで、Microsoft がアプリの公開を承認する可能性が高くなります。
 
 :::row:::
    :::column span="":::
@@ -41,22 +41,22 @@ Teams ストアに公開されたアプリは、Microsoft 365 アプリおよび
 
 1. [パートナー センターの開発者アカウントを作成します](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)。
 
-1. 自動テストの実行、テスト ノートの編集、ストア リストの作成など、レビュー プロセスを迅速化するための重要なタスクを含む、[ストア提出の準備をします](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)。
+1. レビュー プロセスの迅速化に役立つ重要なタスクは色々ありますが、特に自動テストの実行、テスト ノートの編集、ストア リストの作成などを行い、[ストアに提出する準備をします](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)。
 
 1. パートナー センターから[アプリを送信します](/office/dev/store/add-in-submission-guide)。
 
-1. 送信に失敗した場合は、Microsoft と直接連携して[問題を解決し、アプリを再送信してください](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)。
+1. 送信に失敗した場合は、Microsoft に直接連絡して[問題を解決し、アプリを再送信してください](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)。
 
-## <a name="what-to-expect-after-you-submit-your-app"></a>アプリを送信した後、何を期待しますか?
+## <a name="what-to-expect-after-you-submit-your-app"></a>アプリを送信した後のプロセス
 
 * **機能とエクスペリエンスの詳細なテスト**
 
-  アプリはバリデーターによって徹底的にレビューされ、[Microsoft Commercial Marketplace の認定ポリシー](/legal/marketplace/certification-policies)に準拠していることを確認します。
+  アプリは公開審査を行うチームによって徹底的にレビューされ、[Microsoft Commercial Marketplace の認定ポリシー](/legal/marketplace/certification-policies)に準拠していることを確認します。
   機能とユーザー エクスペリエンスの詳細なテスト、ユーザビリティ チェック、メタデータ チェックに焦点が当てられます。 アプリの検証は、デスクトップ、Web、およびモバイル クライアント間で実行されます。 提出後 24 時間以内に、詳細なテスト レポートを提供できるように努めています。
 
-* **ガイド付きアプリはコンシェルジュ サービスを通じて公開します**
+* **コンシェルジュ サービスによるアプリ公開の案内**
 
-  アプリに問題がない場合、アプリは承認され、Teams ストアに公開されます。 一方、問題が存在する場合は、パートナー センターから、障害の詳細が記載された自動検証レポートを受け取ります。 アプリを Teams ストアに正常に公開し、このプロセスをガイドするために、検証チームは、コンシェルジュ サービス [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) から次の情報を含むパーソナライズされたメールを送信します。
+  アプリに問題がない場合、アプリは承認され、Teams ストアに公開されます。 一方、問題が存在する場合は、パートナー センターから、障害の詳細が記載された自動検証レポートを受け取ります。 アプリを Teams ストアにスムーズに公開できるように、またその一連の作業案内のために、審査チームはコンシェルジュ サービス [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) から個別に次の情報を含む電子メールで連絡を行います。
 
   * すべての問題のサマリー
 
@@ -64,9 +64,9 @@ Teams ストアに公開されたアプリは、Microsoft 365 アプリおよび
 
     * 必須の修正: 問題は、アプリの承認前に修正する必要があります。
 
-    * 推奨される修正: 問題は、アプリのエクスペリエンスを向上させるための推奨事項であるため、アプリの承認後に修正できます。
+    * 推奨される修正: アプリのエクスペリエンスを向上させる推奨事項であるため、これらの問題はアプリの承認後に修正しても構いません。
 
-    * ブロッカー: 問題により、検証チームはアプリの機能をさらにテストできなくなり、検証を続行するには解決する必要があります。
+    * ブロッカー: これらの問題により、審査チームはアプリの機能をこれ以上テストできないので、検証を続けるために解決する必要があります。
 
     * クエリ: クエリを共有して、アプリに関連する特定の質問への回答を得ることができます。
 
@@ -74,9 +74,9 @@ Teams ストアに公開されたアプリは、Microsoft 365 アプリおよび
 
   * ガイダンス ドキュメントへのリンクを使用して、報告された問題を修正するための推奨事項。
 
-  問題のリストを確認したら、報告されたすべての問題を修正し、更新されたアプリ パッケージをメールで共有して、検証チームがアプリを徹底的に再検証できるようにします。 報告された問題に関連する質問がある場合は、検証チーム ([teamsubm@microsoft.com](mailto:teamsubm@microsoft.com)) に連絡してください。
+  問題のリストを確認したら、報告されたすべての問題を修正し、更新されたアプリ パッケージをメールで共有して、審査チームがアプリを徹底的に再検証できるようにします。 報告された問題に関連する質問がある場合は、審査チーム ([teamsubm@microsoft.com](mailto:teamsubm@microsoft.com)) に連絡してください。
 
-  アプリに問題が残っているか、リグレッションの問題が観察された場合、検証チームは更新された検証レポートをあなたと共有します。 アプリにブロッカーが含まれている場合、ブロッカーが解決された後にアプリが検証されると、新しい問題が報告されることがあります。 検証チームは、修正の展開後のアプリのリグレッションの問題にも気付くことがあります。 バグで構成されるアプリのすべての問題をクローズし、Teams ストアへの公開が承認されるまでには、数回の再送信が必要です。
+  未解決の問題、リグレッションの問題がアプリに認められた場合、審査チームは更新された検証レポートをあなたと共有します。 アプリにブロッカーが含まれている場合、ブロッカーが解決された後にアプリが検証されると、新しい問題が報告されることがあります。 審査チームは、修正の展開後のアプリのリグレッションの問題にも気付くことがあります。 バグのあるアプリの問題をすべて解決し、Teams ストアへの公開の承認を得るには幾度か再送信が必要です。
 
   報告されたすべての問題がクローズされ、パートナー センターで最終的な提出が行われた後、検証チームがアプリを承認して公開します。 アプリが Teams ストアで利用できるようになるまで少なくとも 1 営業日かかります。
 
@@ -86,15 +86,15 @@ Teams ストアに公開されたアプリは、Microsoft 365 アプリおよび
 
   新しく公開されたアプリのデータがレポートに表示されるまでに約 1 週間かかります。
 
-## <a name="tips-for-rapid-approval-to-publish-your-app"></a>アプリを公開するための迅速な承認のヒント
+## <a name="tips-for-rapid-approval-to-publish-your-app"></a>迅速に承認を得てアプリを公開するヒント
 
 * **設計フェーズ中**
 
-  アプリのライフ サイクルの早い段階 (設計段階) で[ストア検証ガイドライン](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)を確認し、ストアの要件に沿ってアプリを構築していることを確認します。 これらのガイドラインに沿ってアプリを構築すると、保存ポリシーに準拠していないためにやり直すのを防ぐことができます。
+  アプリのライフサイクルの早い段階 (設計段階) で[ストア検証ガイドライン](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)を確認し、ストアの要件に沿ってアプリをビルドしていることを確認します。 ガイドラインに沿ってアプリをビルドすると、ストア ポリシー違反を理由に修正を余儀なくされることはなくなります。
 
-* **アプリの申請の前に**
+* **アプリ提出の前に**
 
-  1. 事前に[パートナー センター アカウントを作成します](prepare/create-partner-center-dev-account.md)。 [パートナー センター アカウント](prepare/create-partner-center-dev-account.md)で問題が発生した場合は、[サポート チケット](/azure/marketplace/partner-center-portal/support)を作成します。
+  1. 事前に余裕をもって[パートナー センター アカウントを作成します。](prepare/create-partner-center-dev-account.md) [パートナー センター アカウント](prepare/create-partner-center-dev-account.md)で問題が発生した場合は、[サポート チケット](/azure/marketplace/partner-center-portal/support)を作成します。
 
   1. [ストア検証ガイドライン](prepare/teams-store-validation-guidelines.md)を再度確認して、アプリがストア要件に適合していることを確認します。 レビューにより、アプリで観察される問題の数が減り、その結果、アプリの承認にかかる時間が短縮されます。
 
@@ -104,13 +104,13 @@ Teams ストアに公開されたアプリは、Microsoft 365 アプリおよび
 
         :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="Teams ストア アプリの検証を開発者ポータル" lightbox="../../../assets/images/submission/teams-validation-developer-portal.png":::
 
-     1. アプリを申請する前にアプリを徹底的にセルフテストして、ストア ポリシーに準拠していることを確認します。 Teams でアプリをサイドロードし、アプリのエンドツーエンドのユーザー フローをテストします。 機能が期待どおりに機能し、リンクが壊れていないこと、ユーザー エクスペリエンスがブロックされていないこと、制限事項が明確に強調されていることを確認してください。
+     1. アプリを提出する前にアプリを徹底的にセルフテストして、ストア ポリシーに準拠していることを確認します。 Teams でアプリをサイドロードし、アプリのエンドツーエンドのユーザー フローをテストします。 機能が期待どおりに機能し、リンクが壊れていないこと、ユーザー エクスペリエンスがブロックされていないこと、制限事項が明確に強調されていることを確認してください。
 
      1. デスクトップ、Web、モバイル クライアント間でアプリをテストします。 アプリがさまざまなフォーム ファクターで応答することを確認します。
   
   1. アプリを送信する前に、[公開元の確認](/azure/active-directory/develop/publisher-verification-overview)を完了します。 問題が発生した場合は、解決のための[サポート チケット](/azure/marketplace/partner-center-portal/support)を作成できます。
 
-  1. アプリの申請の準備をするときは、[チェックリストに従い](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist)、提出パッケージの一部として次の詳細を含めます。
+  1. アプリ提出の準備をするときは、[チェックリストに従い](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist)、提出パッケージの一部として次の詳細を含めます。
 
         1. 徹底的に検証されたアプリ パッケージ。
 
@@ -118,11 +118,11 @@ Teams ストアに公開されたアプリは、Microsoft 365 アプリおよび
 
         1. アプリの機能とサポートされているシナリオの詳細を説明するテスト手順。
 
-        1. アプリがアプリの機能にアクセスするために追加の構成が必要な場合のセットアップ手順。 または、アプリで複雑な構成が必要な場合は、[プロビジョニングされたデモ テナント](/office/developer-program/microsoft-365-developer-program-get-started)に管理者アクセスを提供して、バリデーターが構成手順をスキップできるようにすることもできます。
+        1. アプリがアプリの機能にアクセスするために追加の構成が必要な場合のセットアップ手順。 または、アプリで複雑な構成が必要な場合は、[プロビジョニングされたデモ テナント](/office/developer-program/microsoft-365-developer-program-get-started)に管理者アクセスを提供して、公開審査を行うチームが構成手順をスキップできるようにすることもできます。
 
         1. アプリの主要なユーザー フローを示すデモ ビデオへのリンク。 これを強くお勧めします。
 
-* **アプリの申請を投稿する**
+* **アプリ提出を投稿する**
 
   * 検証レポートを確認した後、検証レポートに関連する質問がある場合、または報告された問題を解決するために追加のサポートが必要な場合は、メール スレッドに返信してください。
 
@@ -136,11 +136,11 @@ Teams ストアに公開されたアプリは、Microsoft 365 アプリおよび
 
 * **設計フェーズ中**
 
-  [リンクされた SaaS オファーで公開されたアプリに固有のストア検証ガイドライン](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer)をアプリのライフ サイクルの早い段階 (設計段階) で確認し、[SaaS オファーにリンクされた Teams アプリに適用されるストア要件と Microsoft Commercial Marketplace ポリシー](/legal/marketplace/certification-policies#11405-teams-app-linked-to-software-as-a-service-saas-offers)に沿ってアプリを構築するようにします。 これらのガイドラインに沿ってアプリを構築すると、保存ポリシーに準拠していないためにやり直すのを防ぐことができます。
+  [リンクされた SaaS オファーで公開されたアプリに固有のストア検証ガイドライン](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer)をアプリのライフ サイクルの早い段階 (設計段階) で確認し、[SaaS オファーにリンクされた Teams アプリに適用されるストア要件と Microsoft Commercial Marketplace ポリシー](/legal/marketplace/certification-policies#11405-teams-app-linked-to-software-as-a-service-saas-offers)に沿ってアプリを構築するようにします。 ガイドラインに沿ってアプリをビルドすると、ストア ポリシー違反を理由に修正を余儀なくされることはなくなります。
 
-* **アプリの申請の前に**
+* **アプリ提出の前に**
 
-  1. アプリの申請の準備をするときは、次のことを確認してください。
+  1. アプリ提出の準備をするときは、次のことを確認してください。
 
       1. アプリは、AppSource のライブ (既に公開されている) SaaS オファーにリンクされており、価格情報を含む少なくとも 1 つのプランがあります。
 
