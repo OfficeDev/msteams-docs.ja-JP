@@ -3,12 +3,12 @@ title: Microsoft Teams 開発者向けドキュメント - 用語集
 description: Microsoft Teams 開発者向けドキュメントで使用される用語について説明します
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: f5a8979e9f49fa73430ea9c1d547f462fe8d4e65
-ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
+ms.openlocfilehash: 251adf781689d3633bd9e332d9c40df73aae264f
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "66737385"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035157"
 ---
 # <a name="glossary"></a>用語集
 
@@ -71,7 +71,7 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 | [デバイス機能](../concepts/device-capabilities/device-capabilities-overview.md) | カメラ、マイク、バーコード スキャナー、フォト ギャラリーなどの組み込みデバイスをモバイルまたはデスクトップで使用できます。 Microsoft Teams JavaScript クライアント SDK で利用可能な専用 API を使用して、モバイルまたはデスクトップで次のデバイス機能にアクセスできます。 <br>**関連情報**: [機能](#c); [メディア機能](#m); [場所機能](#l) |
 | [デバイス許可](../concepts/device-capabilities/browser-device-permissions.md) | アプリで構成できる Teams アプリ設定。 これを使用して、アプリがネイティブ デバイス機能にアクセスして利用するためのアクセス許可を要求します。 Teams の設定でデバイスのアクセス許可を管理できます。 <br>**関連情報**: [アプリのアクセス許可](#a) |
 | [開発環境](../toolkit/teamsfx-multi-env.md#create-a-new-environment) | Teams Toolkit によって既定で作成される開発環境の種類。 リモート環境またはクラウド環境の構成を表します。 プロジェクトには複数のリモート環境を含めることができます。 Teams Toolkit を使用して、より多くの開発環境をプロジェクトに追加できます。 <br>**関連情報** [環境](#e); [ローカル環境](#l) |
-| [DevTools](../tabs/how-to/developer-tools.md) | ブラウザーの Devtools は、コンソール ログの表示、ランタイム ネットワーク要求の表示または変更、コードへのブレークポイントの追加 (JavaScript)、Teams アプリの対話型デバッグの実行に使用されます。 この機能は、開発者プレビューが有効にされた後、デスクトップ クライアントと Android クライアントでのみ使用できます。 |
+| [DevTools](../tabs/how-to/developer-tools.md) | ブラウザーの DevTools は、コンソール ログの表示、ランタイム ネットワーク要求の表示または変更、コードへのブレークポイントの追加 (JavaScript)、Teams アプリの対話型デバッグの実行に使用されます。 この機能は、開発者プレビューが有効にされた後、デスクトップ クライアントと Android クライアントでのみ使用できます。 |
 | [動的検索](../task-modules-and-cards/cards/dynamic-search.md#dynamic-typeahead-search) | 大規模なデータ セットからデータを検索して選択するのに役立つアダプティブ カードの検索機能。 ユーザーが検索文字列を入力すると、選択肢をフィルターで除外できます。 <br>**関連情報**: [静的検索](#s) |
 
 ## <a name="e"></a>E

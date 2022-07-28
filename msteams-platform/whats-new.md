@@ -3,12 +3,12 @@ title: Teams の開発者向けの新機能と更新情報
 description: 新しく導入された Microsoft Teams の開発者向け機能と、既存の機能の更新について説明します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 02e2ea46b29c79be642a88389e8f18e1e310338b
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: 8b490e3f6b536839a1f27009a8a787242a0bbd81
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919838"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035178"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -36,6 +36,7 @@ ms.locfileid: "66919838"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ----------------|
+| 2022 年 7 月 26 日|ボットに推奨されるアクション| [ボットのビルド] > [ボットの会話] > [[ボットの会話のメッセージ]](bots/how-to/conversations/conversation-messages.md#send-suggested-actions)|
 | 07/21/2022 | アクティビティ フィード通知を送信するためのステップ バイ ステップ ガイドを導入しました | アプリの設計 > UI コンポーネント > アクティビティ フィード通知 > [アクティビティ フィード通知の送信](sbs-graphactivity-feedbroadcast.yml) |
 | 07/08/2022| アプリのインストール中にユーザーが選択したチャネル ID を会話とインストール更新イベントを介してボットに送信する更新 |  ボットの構築 > ボットの会話 > Teams ボットの会話イベント > [Teams ボットの会話イベント](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 | 2022/6/16 | デスクトップとモバイルをサポートするようにメディア機能を更新しました| [デバイス機能の統合] > [[メディア機能の統合](concepts/device-capabilities/media-capabilities.md)]|

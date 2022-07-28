@@ -5,12 +5,12 @@ description: このモジュールでは、Teams アプリのタスク モジュ
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 95d0d43e72a72220111c0afa81970a4fab986fc8
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 07dd0457d49b167226da2fa10e91d87e6f674b6f
+ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558115"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "67035269"
 ---
 # <a name="designing-task-modules-for-your-microsoft-teams-app"></a>Microsoft Teams のアプリのタスク モジュールの設計
 
@@ -64,7 +64,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 |3|**ヘッダー**: ヘッダーを明確かつ簡潔にします。 ユーザーに完了させたいタスクについて説明します。
 |4|**閉じるボタン**: タスク モジュールを閉じます。 アプリ コンテンツに保存されていない変更は適用されません。|
 |5|**IFRAME​​**: アプリ コンテンツをホストする応答性の高いスペース。|
-|6 |**アクション (省略可能)**: アプリ コンテンツに関連するボタン。|
+|6|**アクション (省略可能)**: アプリ コンテンツに関連するボタン。|
 
 ## <a name="designing-with-ui-templates"></a>UI テンプレートを使用して設計する
 
