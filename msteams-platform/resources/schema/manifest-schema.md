@@ -3,16 +3,16 @@ title: マニフェスト スキーマの参照
 description: この記事では、Microsoft Teams リファレンスのマニフェスト スキーマ、スキーマ、およびサンプルの完全なマニフェストを紹介します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 92de9161a27cd9a11691da757f32ae2be2b783c2
-ms.sourcegitcommit: 904cca011c3f27d1d90ddd80c3d0300a8918e412
+ms.openlocfilehash: 9208bcef1195baee58678e410fddf82df3ef6b51
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66895497"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058215"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Teams のアプリ マニフェストのスキーマ
 
-Microsoft Teams アプリ マニフェストでは、アプリが Microsoft Teams 製品にどのように統合されるかを説明します。 アプリ マニフェストは、[`https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json) でホストされているスキーマに準拠している必要があります。 以前のバージョン 1.0、1.1、...、1.12、および現在の 1.13 バージョン (以下の注を参照) はそれぞれサポートされています (URL で "v1.x" を使用)。
+Microsoft Teams アプリ マニフェストでは、アプリが Microsoft Teams 製品にどのように統合されるかを説明します。 アプリ マニフェストは、[`https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json) でホストされているスキーマに準拠している必要があります。 以前のバージョン 1.0、1.1、...、1.13、および現在のバージョン 1.14 は、それぞれサポートされています (URL に "v1.x" を使用)。
 各バージョンで行われた変更の詳細については、[マニフェスト変更ログ](https://github.com/OfficeDev/microsoft-teams-app-schema/releases)を参照してください。
 
 次の表は、さまざまなアプリのシナリオに応じた TeamsJS バージョンとアプリ マニフェスト バージョンを示しています。
@@ -25,8 +25,8 @@ Microsoft Teams アプリ マニフェストでは、アプリが Microsoft Team
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.13",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.14",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
     "packageName": "com.example.myapp",
@@ -777,6 +777,17 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 * `privacyUrl`: 開発者のプライバシー ポリシーの HTTPS URL。
 * `termsOfUseUrl`: 開発者の使用条件の HTTPS URL。
 
+## <a name="supportedchanneltypes"></a>supportedChannelTypes
+
+**オプション** - 配列
+
+非標準チャネルでアプリを有効にします。 アプリがチーム スコープをサポートしていて、このプロパティが定義されている場合、Teams ではそれに応じてそれぞれの種類のチャネルでアプリが有効になります。 現時点では、プライベート チャネルと共有チャネルがサポートされています。
+
+> [!NOTE]
+>
+> * アプリがチーム スコープをサポートしている場合、このプロパティで定義されている値に関係なく、標準チャネルで機能します。
+> * アプリは、それぞれの種類のチャネルの一意のプロパティを考慮して、適切に機能することができます。 プライベート チャネルと共有チャネルのタブを有効にするには、「[プライベート チャネルのコンテキストの取得](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels)」および「[共有チャネルのコンテキストの取得](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels)を参照してください。
+
 ## <a name="defaultblockuntiladminaction"></a>defaultBlockUntilAdminAction
 
 **省略可能** — ブール値
@@ -810,6 +821,7 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`scenes`|オブジェクトの配列| 5 個の項目||会議でサポートされているシーン。|
+|`supportsStreaming`|ブール型|||アプリが会議のオーディオとビデオのコンテンツをリアルタイム会議プロトコル (RTMP) エンドポイントにストリーミングできるかどうかを示す値です。 既定値は **false** です。|
 
 ### <a name="meetingextensiondefinitionscenes"></a>meetingExtensionDefinition.scenes
 
