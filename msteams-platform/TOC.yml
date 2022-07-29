@@ -307,6 +307,8 @@
       href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
     - name: 会議アプリ API リファレンス
       href: apps-in-teams-meetings/API-references.md
+    - name: 共有チャネルをビルドする
+      href: concepts/build-and-test/Shared-channels.md
     - name: Live Share による強化されたコラボレーション
       items:
         - name: 概要

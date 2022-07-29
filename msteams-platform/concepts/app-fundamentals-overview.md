@@ -5,12 +5,12 @@ description: アプリの計画、ユース ケースの理解、アプリの機
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 7f1d12f1fe1e38ba674ca0ef4f21619ea0eb1b4a
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: c859c20c900b4fcf8a5797c79881b0aba0a86b93
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558717"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058243"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Teams の機能を使用してアプリを計画する
 
@@ -55,7 +55,7 @@ ms.locfileid: "66558717"
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Teams ソリューションの概念表現":::
 
-    アプリは、タブ、ボット、メッセージ拡張機能、コネクタ、Webhook として、またはマルチ機能アプリとして Teams に表示されます。 これらの機能は、タスクとプロセスの自動化に役立つ Azure、Microsoft Graph、SharePoint、Power アプリによってバックエンドに搭載されています。
+    アプリは、タブ、ボット、メッセージング拡張機能、コネクタ、Webhook として、またはマルチ機能アプリとして Teams に表示されます。 これらの機能は、タスクとプロセスの自動化に役立つ Azure、Microsoft Graph、SharePoint、Power アプリによってバックエンドに搭載されています。
 
     これらの機能を組み合わせることで、アプリ ソリューションが実現します。
 
@@ -66,17 +66,9 @@ ms.locfileid: "66558717"
 * アプリを Teams やその他のアプリ (Microsoft 365、Microsoft Graphなど) と統合します。
 * 開発者ポータルを使用して、アプリを構成、管理、デプロイします。
 
-#### <a name="government-community-cloud"></a>Government Community Cloud
+### <a name="government-community-cloud"></a>Government Community Cloud
 
 Government Community Cloud (GCC) は、政府機関向けの商用環境のコピーです。 国防総省 (DOD) と連邦請負業者は、厳格なサイバーセキュリティとコンプライアンスの要件を満たす必要があります。 このため、DOD および連邦請負業者のニーズを満たすために GCC-High が作成されました。 GCC-High は DOD クラウドのコピーですが、独自の独立環境に存在します。 DOD クラウドは国防総省専用に構築されています。
-
-政府機関向けクラウドのエンドポイントは次のとおりです:
-
-| Tenant | GCC | GCC-High | DOD |
-|-------------|---------|---|---|
-|Teams クライアント|`https://teams.microsoft.com`|`https://gov.teams.microsoft.us/`|`https://dod.teams.microsoft.us/` |
-|Teams 管理者 |`https://admin.teams.microsoft.com/`|`https://admin.gov.teams.microsoft.us/`|`https://admin.dod.teams.microsoft.us`|
-|Microsoft Graph |`https://graph.microsoft.com`|`https://graph.microsoft.us`|`https://dod-graph.microsoft.us`|
 
 次の表に、GCC、GCC-High、DOD の Teams の機能と可用性を示します。
 
@@ -85,13 +77,14 @@ Government Community Cloud (GCC) は、政府機関向けの商用環境のコ�
 | 社内で開発されたアプリと同様に、Teams が所有するアプリ | ✔️ アプリは、GCC がある場合有効です | ✔️ アプリは、GCC-High がある場合有効です | ✔️ アプリは、DOD がある場合有効です |
 | Microsoft アプリ | ✔️ GCC に準拠している Microsoft アプリ | ✔️ GCC-High に準拠している Microsoft アプリ | ✔️ DOD に準拠している Microsoft アプリ |
 | サードパーティ製アプリを許可する | ✔️ サードパーティのアプリが利用可能です。既定では無効に設定されており、テナント管理者が独自の裁量で有効にします。 | ❌ | ❌ |
-| カスタム タブ アプリまたは LOB タブ アプリ |  ✔️ | ✔️ (****コンプライアンス UI**_) | ✔️ (_ ***コンプライアンス UI***) |
-| カスタム ボットまたは LOB ボット | ✔️ | ✔️ (****コンプライアンス UI***) | ❌ |
-| カスタム メッセージ拡張機能 | ✔️ | ✔️ | ❌ |
+| ボット | ✔️ | ❌ | ❌ |
+| カスタム タブ アプリまたは LOB タブ アプリ |  ✔️ | ✔️ | ✔️ |
 | アプリのサイドローディング | ✔️ | ❌ | ❌ |
+| カスタム ボットまたは LOB ボット | ✔️ | ❌ | ❌ |
+| メッセージング拡張機能を作成する | ❌ | ❌ | ❌ |
 | カスタム コネクタ | ❌ | ❌ | ❌ |
 
-****コンプライアンス UI***: サード パーティの通信を有効にすることで、お客様はそのような通信が Microsoft ではなくサード パーティを通じて処理されることを承諾しています。 サービス内のサード パーティボットとの接続に関連するリスクを軽減することは、お客様ご自身の責任となります。 Microsoft は、お客様がサービスとの接続を許可する第三者のセキュリティに関して、明示または黙示を問わず、何ら保証するものではありません。 ボットを有効にすると、利用するボットに基づいて、このテナントを超えてシステム境界が拡張されます。 これが FedRAMP、DFARS、ITAR などのコンプライアンス要件を満たしていることを確認するのは、お客様の責任です。接続するエンドポイントと URL のリスクとコンプライアンスを評価するのは、お客様の責任です。
+**コンプライアンス UI**: サード パーティの通信を有効にすることで、お客様はこのような通信が Microsoft ではなくサード パーティを通じて処理されることを承諾するものとします。 サービス内のサード パーティボットとの接続に関連するリスクを軽減することは、お客様ご自身の責任となります。 Microsoft は、お客様がサービスとの接続を許可する第三者のセキュリティに関して、明示または黙示を問わず、何ら保証するものではありません。 ボットを有効にすると、利用するボットに基づいて、このテナントを超えてシステム境界が拡張されます。 これが FedRAMP、DFARS、ITAR などのコンプライアンス要件を満たしていることを確認するのは、お客様の責任です。接続するエンドポイントと URL のリスクとコンプライアンスを評価するのは、お客様の責任です。
 
 次のリストは、機能に対する GCC、GCC-High、および DOD の可用性を特定するのに役立ちます。
 
