@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: 556eb1e3e9b25d3c64f0eddd6688531622148f90
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: e374e53b7d34837cb0de28d6586b2417f9ae4652
+ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841898"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "67058269"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>会議用アプリを有効にして構成する
 
@@ -144,6 +144,33 @@ Teams 会議は、組織の共同作業エクスペリエンスを提供しま�
 会議中の通知では、タスク モジュールを使用しないでください。 タスク モジュールは会議チャットでは呼び出されません。 会議中の通知を表示するには、外部リソース URL を使用します。 会議チャットでデータを送信するには、`submitTask` メソッドを使用します。
 
 :::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="会議中ダイアログを使用する方法を示す例。":::
+
+また、Teams の表示画像と連絡先カードを、ユーザーのMRI とペイロードで渡された表示名を持つトークン `onBehalfOf` に基づいて、会議中の通知に追加することもできます。 ペイロードの例を次に示します:
+
+```json
+    {
+       "type": "message",
+       "text": "John Phillips assigned you a weekly todo",
+       "summary": "Don't forget to meet with Marketing next week",
+       "channelData": {
+           onBehalfOf: [
+             { 
+               itemId: 0, 
+               mentionType: 'person', 
+               mri: context.activity.from.id, 
+               displayname: context.activity.from.name 
+             }
+            ],
+           "notification": {
+           "alertInMeeting": true,
+           "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
+            }
+        },
+       "replyToId": "1493070356924"
+    }
+```
+
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-people-card.png" alt-text="例は、会議中ダイアログで Teams 表示画像と連絡先カードを表示する方法を示しています。" border="true":::
 
 #### <a name="shared-meeting-stage"></a>共有会議ステージ
 
