@@ -1,38 +1,35 @@
 ---
 title: 個人用アプリまたはタブから Teams に共有する
-description: 個人用アプリまたはタブで [共有してTeams] ボタンを有効にする方法、制限事項、エンド ユーザー エクスペリエンスについて説明します。
+description: 個人用アプリまたはタブで [Teams に共有] ボタンを有効にする方法、制限事項、エンド ユーザー エクスペリエンスについて説明します。
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a676dd90d9b02332869b5584b1e067be8bfcf19
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: 5d70c8d399b4a065419341bc24763f7aa0f50af6
+ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123935"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67232198"
 ---
 # <a name="share-to-teams-from-personal-app-or-tab"></a>個人用アプリまたはタブから Teams に共有する
 
-> [!NOTE]
-> 現在、Teamsへの共有は[、パブリック開発者向けプレビュー](../../resources/dev-preview/developer-preview-intro.md)でのみ利用できます。
+Teams に共有すると、ユーザーは個人用アプリまたはタブから Teams 内の他のユーザーまたはグループまたはチャネルにコンテンツを共有できます。 ユーザーは [Teams に共有] を選択して、ポップアップ ウィンドウで Teams への共有エクスペリエンスを起動できます。 ポップアップ ウィンドウを使用すると、ユーザーは他のユーザーまたはグループまたはチャネルを追加してコンテンツを共有できます。
 
-Teamsに共有すると、ユーザーは個人用アプリまたはタブから、Teams内の他のユーザーまたはグループまたはチャネルにコンテンツを共有できます。 ユーザーは[共有してTeams] を選択し、ポップアップ ウィンドウで [Share to Teams エクスペリエンス] を起動できます。 ポップアップ ウィンドウを使用すると、ユーザーは他のユーザーまたはグループまたはチャネルを追加してコンテンツを共有できます。
-
-次の図は、[Teamsへの共有] ポップアップ ウィンドウを示しています。
+次の図は、[Teams への共有] ポップアップ ウィンドウを示しています。
 
 :::image type="content" source="../../assets/images/share-to-teams/share-to-teams.PNG" alt-text="share-to-teams-pop-up":::
 
-## <a name="enable-share-to-teams-button"></a>[Teamsに共有を有効にする] ボタン
+## <a name="enable-share-to-teams-button"></a>[Teams に共有を有効にする] ボタン
 
 > [!NOTE]
-> [JavaScript クライアント SDK または Microsoft Teams JavaScript クライアント SDK](../../tabs/how-to/using-teams-client-sdk.md) [v2 プレビュー](../../tabs/how-to/using-teams-client-sdk.md) (`@microsoft/teams-js@1.11.0-beta.7`またはそれ以降) をMicrosoft Teamsして、個人用アプリまたはタブの [Share to Teams] を有効にしていることを確認します。
+> [JavaScript クライアント SDK をMicrosoft Teams](../../tabs/how-to/using-teams-client-sdk.md)するか[、JavaScript クライアント SDK v2 プレビュー](../../tabs/how-to/using-teams-client-sdk.md) (`@microsoft/teams-js@1.11.0-beta.7`またはそれ以降) をMicrosoft Teamsして、個人用アプリまたはタブの Teams への共有を有効にしていることを確認します。
 
-share to Teamsを有効にするには:
+Teams への共有を有効にするには:
 
-1. **Javascript クライアント SDK を使用して** 個人用アプリまたはタブTeams作成します。
+1. **Teams Javascript クライアント SDK** を使用して個人用アプリまたはタブを作成します。
 
-2. **[Teamsに共有する**] ボタンを作成します。
+2. **[Teams に共有] ボタンを** 作成します。
 
-3. [Teamsに共有] ボタンで、コンテンツ ペイロードを使用して呼び出`microsoftTeams.sharing.shareWebContent`します。
+3. [Teams に共有] ボタンで、コンテンツ ペイロードを使用して呼び出 `microsoftTeams.sharing.shareWebContent` します。
 
 次の例では、コンテンツ ペイロードを作成する方法について説明します。
 
@@ -58,7 +55,7 @@ microsoftTeams.sharing.shareWebContent({
 |`message`| 作成ボックスに読み込まれる既定のメッセージ |
 | `preview` | URL プレビューを有効にするように設定する`true` |
 
-次の図は、[Teamsに共有] オプションを示しています。
+次の図は、[Teams に共有] オプションを示しています。
 
 :::image type="content" source="../../assets/images/share-to-teams/share-button.PNG" alt-text="share-to-teams-button":::
 
@@ -85,16 +82,16 @@ microsoftTeams.sharing.shareWebContent({
 
 ## <a name="limitations"></a>制限事項
 
-[Teamsに共有] ボタンを追加する場合の制限事項:
+[Teams に共有] ボタンを追加する場合の制限事項:
 
-* [Teamsに共有] ボタンは、Teams内で実行されているアプリでホストまたは埋め込むことができます。
-* **Teams Javascript クライアント SDK** を使用して作成したアプリに、[Teamsに共有] ボタンを追加できます。
+* [Teams に共有] ボタンは、Teams 内で実行されているアプリでホストまたは埋め込むことができます。
+* **Teams Javascript クライアント SDK** を使用して作成したアプリに、[Teams に共有] ボタンを追加できます。
 
-## <a name="end-user-share-to-teams-experience"></a>エンド ユーザーがTeamsエクスペリエンスに共有する
+## <a name="end-user-share-to-teams-experience"></a>Teams エクスペリエンスへのエンド ユーザー共有
 
 個人用アプリまたはタブで [チームへの共有] ボタンを有効にした後、コンテンツを共有できます。 アクセスするには、次の手順に従います。
 
-1. 個人用アプリまたはタブを開き、[**Teamsに共有**] を選択します。
+1. 個人用アプリまたはタブを開き、[ **Teams に共有**] を選択します。
 
     :::image type="content" source="../../assets/images/share-to-teams/share-button.PNG" alt-text="share-to-teams-button":::
 

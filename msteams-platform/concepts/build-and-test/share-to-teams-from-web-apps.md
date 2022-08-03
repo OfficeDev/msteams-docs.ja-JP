@@ -3,16 +3,16 @@ title: Web アプリから Teams に共有する
 description: コード サンプルを使用して、Web サイトのプレビューを使用して、Web サイトの [Teams に共有] 埋め込みボタンを追加する方法について説明します
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: 4266852b1e99e5ba23fab32df9705f77ccb33e20
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 1d7b9b6ae80b224e67f24a589fae5e6af7e7f839
+ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035318"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67232338"
 ---
 # <a name="share-to-teams-from-web-apps"></a>Web アプリから Teams に共有する
 
-サードパーティの Web サイトは、ランチャー スクリプトを使用して、Web ページに [Teams に共有​​] ボタンを埋め込むことができます。 [Teams に共有] ボタンを選択すると、ポップアップ ウィンドウで Teams への共有エクスペリエンスが起動します。 これにより、コンテキストを切り替えることなく、任意のユーザーまたは Microsoft Teams チャネルへのリンクを直接共有できます。
+サードパーティの Web サイトは、ランチャー スクリプトを使用して、Web ページに [Teams に共有​​] ボタンを埋め込むことができます。 [Teams に共有] ボタンを選択すると、ポップアップ ウィンドウで Teams への共有エクスペリエンスが起動します。 これにより、コンテキストを切り替えることなく、任意のユーザーまたはMicrosoft Teams チャネルへのリンクを直接共有できます。
 
 次の図は、Teams への共有プレビュー エクスペリエンスのポップアップ ウィンドウを表示します。
 
@@ -28,9 +28,6 @@ ms.locfileid: "67035318"
 次の図は、[Teams に共有] ボタンを使用したリンク解除エクスペリエンスを示しています。
 
 :::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="Share-to-Teams のリンク展開":::
-
-> [!NOTE]
-> Teams への共有でのリンク解除は、現在、パブリック開発者向けプレビューでのみ使用できます。
 
 この記事では、Web サイトの [Teams に共有] ボタンを作成して埋め込み、Web サイトプレビューを作成し、共有をMicrosoft Teams for Educationに拡張する方法について説明します。
 
@@ -104,11 +101,11 @@ Web サイトが Teams と共有されている場合、選択したチャネル
 
 次の表に、必要なタグの概要を示します。
 
-|値|メタ タグ| グラフを開く|
+|Value|メタ タグ| グラフを開く|
 |----|----|----|
 |Title|`<meta name="title" content="Example Page Title">`|`<meta property="og:title" content="Example Page Title">`|
 |説明|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
-|サムネイル 画像| なし。 |`<meta property="og:image" content="http://example.com/image.jpg">`|
+|サムネイル 画像| 何一つ。 |`<meta property="og:image" content="http://example.com/image.jpg">`|
 
 HTML の既定のバージョンまたは Open Graph バージョンのいずれかを使用できます。
 
@@ -120,14 +117,14 @@ HTML の既定のバージョンまたは Open Graph バージョンのいずれ
 
 ## <a name="full-launcherjs-definition"></a>完全なlauncher.js定義
 
-| プロパティ | HTML 属性 | 型 | 既定値 | 説明 |
+| プロパティ | HTML 属性 | Type | 既定値 | 説明 |
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
 | href | `data-href` | 文字列 | 該当なし | 共有するコンテンツの href。 |
 | preview | `data-preview` | ブール値 (文字列として) | `true` | 共有するコンテンツのプレビューを表示するかどうかを指定します。 |
 | iconPxSize | `data-icon-px-size` | number (文字列として) | `32` | レンダリングする [Teams に共有] ボタンのサイズ (ピクセル単位)。 |
 | msgText | `data-msg-text` | 文字列 | 該当なし | メッセージ作成ボックスのリンクの前に挿入される既定のテキスト。 最大文字数は 200 文字です。 |
-| assignInstr | `data-assign-instr` | 文字列 | 該当なし | 割り当て "命令" フィールドに挿入される既定のテキスト。 最大文字数は 200 文字です。 |
-| assignTitle | `data-assign-title` | 文字列 | 該当なし | 割り当て "タイトル" フィールドに挿入する既定のテキスト。 最大文字数は 50 文字です。 |
+| assignInstr | `data-assign-instr` | string | 該当なし | 割り当て "命令" フィールドに挿入される既定のテキスト。 最大文字数は 200 文字です。 |
+| assignTitle | `data-assign-title` | string | 該当なし | 割り当て "タイトル" フィールドに挿入する既定のテキスト。 最大文字数は 50 文字です。 |
 
 ### <a name="methods"></a>メソッド
 

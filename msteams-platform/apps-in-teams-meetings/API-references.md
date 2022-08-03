@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: aee6e93a6824838ff48d7fb92839af30dd8ce7c6
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: 20a0380bb6e8282f9ced47621b17b1633d09e28b
+ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919761"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67232261"
 ---
 # <a name="meeting-apps-api-references"></a>会議アプリ API リファレンス
 
@@ -28,7 +28,7 @@ ms.locfileid: "66919761"
 
 |メソッド| 説明| ソース|
 |---|---|----|
-|[**ユーザー コンテキストを取得する**](#get-user-context-api)| コンテキスト情報を取得して、関連するコンテンツを Microsoft Teams タブに表示します。| [MSTC SDK](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
+|[**ユーザー コンテキストを取得する**](#get-user-context-api)| コンテキスト情報を取得して、関連するコンテンツを [Microsoft Teams] タブに表示します。| [MSTC SDK](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
 |[**参加者を取得する**](#get-participant-api)| 会議 ID と参加者 ID によって参加者情報を取得します。 | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
 |[**会議中の通知を送信する**](#send-an-in-meeting-notification)| ユーザー ボット チャット用の既存の会話通知 API を使用して会議のシグナルを提供し、会議中の通知を示すユーザー アクションを通知できます。 | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**会議の詳細を取得する**](#get-meeting-details-api)| 会議の静的メタデータを取得します。 | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
@@ -37,6 +37,8 @@ ms.locfileid: "66919761"
 |[**アプリ コンテンツ ステージの共有状態を取得する**](#get-app-content-stage-sharing-state-api)| 会議ステージでアプリの共有状態に関する情報を取得します。 | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
 |[**アプリ コンテンツ ステージの共有機能を取得する**](#get-app-content-stage-sharing-capabilities-api)| 共有のためのアプリの機能を会議ステージに取得します。 | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
 |[**リアルタイムの Teams 会議イベントを取得する**](#get-real-time-teams-meeting-events-api)|実際の開始時刻や終了時刻など、リアルタイムの会議イベントを取得します。| [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
+| [**着信オーディオ スピーカーを取得する**](#get-incoming-audio-speaker) | アプリが会議ユーザーの受信オーディオ スピーカー設定を取得できるようにします。| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**着信オーディオを切り替える**](#toggle-incoming-audio) | アプリで、会議ユーザーの受信オーディオ スピーカー設定をミュートからミュート解除、またはその逆に切り替えることができます。| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 
 ## <a name="get-user-context-api"></a>ユーザー コンテキストを取得する API 
 
@@ -144,8 +146,8 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | **user.email** | ユーザーのメール ID。 |
 | **user.userPrincipalName** | ユーザーの UPN。 |
 | **user.tenantId** | Azure Active Directory テナント ID。 |
-| **user.userRole** | ユーザーのロール (例: 'admin' または 'user')。 |
-| **meeting.role** | 会議の参加者の役割。 例: 'Organizer' または 'Presenter' または 'Attendee'。 |
+| **user.userRole** | ユーザーのロール。 たとえば、'admin' や 'user' などです。 |
+| **meeting.role** | 会議の参加者の役割。 たとえば、'Organizer' や 'Presenter' や 'Attendee' などです。 |
 | **meeting.inMeeting** | 参加者が会議に参加しているかどうかを示す値。 |
 | **conversation.id** | 会議チャット ID。 |
 | **conversation.isGroup** | 会話に 2 人以上の参加者があるかどうかを示すブール値。 |
@@ -501,7 +503,7 @@ Meeting Details API の JSON 応答本文は次のとおりです。
 | **details.scheduledEndTime** | 会議のスケジュールされた終了時刻 (UTC)。 |
 | **details.joinUrl** | 会議に参加するために使用される URL。 |
 | **details.title** | 会議のタイトル。 |
-| **details.type** | 会議の種類 ( GroupCall、OneToOneCall、Adhoc、Broadcast、MeetNow、定期的、スケジュール、不明など)。 |
+| **details.type** | 会議の種類 (GroupCall、OneToOneCall、Adhoc、ブロードキャスト、MeetNow、定期的、スケジュール、または不明)。 |
 | **conversation.isGroup** | 会話に 2 人以上の参加者があるかどうかを示すブール値。 |
 | **conversation.conversationType** | 会話の種類。 |
 | **conversation.id** | 会議チャット ID。 |
@@ -922,13 +924,91 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 | **channelData.tenant.id** | Azure Active Directory テナント ID。 |
 | **channelData.source** | イベントが発生または呼び出されたソース名。 |
 | **channelData.meeting.id** | 会議に関連付けられている既定の ID。 |
-| **値。MeetingType** | 会議の種類。 |
-| **値。タイトル** | 会議の件名。 |
-| **値。Id** | 会議に関連付けられている既定の ID。 |
-| **値。JoinUrl** | 会議の参加 URL。 |
-| **値。Starttime** | 会議の開始時刻 (UTC)。 |
-| **値。Endtime** | 会議の終了時刻 (UTC)。 |
+| **価値。MeetingType** | 会議の種類。 |
+| **価値。タイトル** | 会議の件名。 |
+| **価値。身分証明書** | 会議に関連付けられている既定の ID。 |
+| **価値。JoinUrl** | 会議の参加 URL。 |
+| **価値。StartTime** | 会議の開始時刻 (UTC)。 |
+| **価値。EndTime** | 会議の終了時刻 (UTC)。 |
 | **locale**| クライアントによって設定されたメッセージのロケール。 |
+
+## <a name="get-incoming-audio-speaker"></a>着信オーディオ スピーカーを取得する
+
+API `getIncomingClientAudioState` を使用すると、アプリは会議ユーザーの受信オーディオ スピーカー設定を取得できます。 この API は、Teams クライアント SDK を通して使用できます。
+
+> [!NOTE]
+> `getIncomingClientAudioState`モバイル用 API は現在、[パブリック開発者プレビュー](../resources/dev-preview/developer-preview-intro.md)でのみ使用できます。
+
+### <a name="query-parameter"></a>クエリ パラメーター
+
+次の表に、クエリ パラメーターを示します。
+
+|値|型|必須|説明|
+|---|---|----|---|
+|**callback**| String | はい | コールバックには、2 つのパラメーター `error` と `result`. *エラーには、エラー* の種類`SdkError`を含めることができるか`null`、オーディオ フェッチが成功した場合です。 *結果* には、オーディオ フェッチが成功したときに true または false の値が含まれるか、オーディオ フェッチが失敗したときに null を含めることができます。 結果が true の場合、受信オーディオはミュートされ、結果が false の場合はミュートされません。 |
+
+### <a name="example"></a>例
+
+```typescript
+function getIncomingClientAudioState(
+    callback: (error: SdkError | null, result: boolean | null) => void,
+  ): void {
+    if (!callback) {
+      throw new Error('[get incoming client audio state] Callback cannot be null');
+    }
+    ensureInitialized(FrameContexts.sidePanel, FrameContexts.meetingStage);
+    sendMessageToParent('getIncomingClientAudioState', callback);
+  }
+
+```
+
+### <a name="response-codes"></a>応答コード
+
+次の表に、応答コードを示します。
+
+|応答コード|説明|
+|---|---|
+| **500** | 内部エラー。 |
+| **501** | API は現在のコンテキストではサポートされていません。|
+| **1000** | アプリには、共有のステージングを許可するための適切なアクセス許可がありません。|
+
+## <a name="toggle-incoming-audio"></a>着信オーディオを切り替える
+
+この `toggleIncomingClientAudio` API を使用すると、アプリは会議ユーザーの受信オーディオ スピーカー設定をミュートからミュート解除、またはその逆に切り替えることができます。 この API は、Teams クライアント SDK を通して使用できます。
+
+> [!NOTE]
+> `toggleIncomingClientAudio`モバイル用 API は現在、[パブリック開発者プレビュー](../resources/dev-preview/developer-preview-intro.md)でのみ使用できます。
+
+### <a name="query-parameter"></a>クエリ パラメーター
+
+次の表に、クエリ パラメーターを示します。
+
+|値|型|必須|説明|
+|---|---|----|---|
+|**callback**| String | はい | コールバックには、2 つのパラメーター `error` と `result`. *エラーには、エラー* の種類`SdkError`を含めることができるか、切`null`り替えが成功した場合です。 *結果* には、トグルが成功した場合は true または false の値を含めることができます。トグルが失敗した場合は null です。 結果が true の場合、受信オーディオはミュートされ、結果が false の場合はミュートされません。 |
+
+### <a name="example"></a>例
+
+```typescript
+function toggleIncomingClientAudio(callback: (error: SdkError | null, result: boolean | null) => void): void {
+    if (!callback) {
+      throw new Error('[toggle incoming client audio] Callback cannot be null');
+    }
+    ensureInitialized(FrameContexts.sidePanel, FrameContexts.meetingStage);
+    sendMessageToParent('toggleIncomingClientAudio', callback);
+  }
+
+```
+
+### <a name="response-code"></a>応答コード
+
+次の表に、応答コードを示します。
+
+|応答コード|説明|
+|---|---|
+| **500** | 内部エラー。 |
+| **501** | API は現在のコンテキストではサポートされていません。|
+| **1000** | アプリには、共有のステージングを許可するための適切なアクセス許可がありません。|
 
 ## <a name="code-sample"></a>コード サンプル
 
