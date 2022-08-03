@@ -561,6 +561,44 @@
           href: samples/teams-low-code-solutions.md
         - name: Power Virtual Agents チャットボットを追加する
           href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
+    - name: コラボレーション コントロール
+      items:
+        - name: 概要
+          href: samples/collaboration-control.md
+        - name: コラボレーション コントロールのインストール
+          href: samples/install-collaboration-control.md
+        - name: コラボレーション コントロールを使用してアプリを作成する
+          href: samples/app-with-collaboration-controls.md
+        - name: コラボレーション コントロールを備えたアプリを Teams に展開する
+          href: samples/deploy-collaboration-control-in-teams.md
+        - name: コラボレーション コントロール アプリのオプション構成
+          items:
+            - name: Power Automate
+              href: samples/collaboration-control-power-automate.md
+            - name: 外部クライアントのタスクを構成する
+              href: samples/configure-tasks.md
+            - name: タスク、会議、ファイル用の仮想テーブル
+              items:
+                - name: 概要
+                  href: samples/virtual-tables-for-tasks.md
+                - name: 仮想テーブル Web API
+                  href: samples/virtual-tables-api.md
+                - name: 仮想テーブル エンティティ リファレンス
+                  href: samples/virtual-table-entity-references.md
+        - name: コラボレーション コントロールと設定 API
+          items:
+            - name: 概要
+              href: samples/collaboration-api-reference.md
+            - name: コラボレーション - カスタム API
+              href: /rest/api/industry/collaboration-toolkit/collaboration-custom-ap-is
+            - name: コラボレーション - 標準 OData API
+              href: /rest/api/industry/collaboration-toolkit/collaboration-standard-o-data-ap-is
+            - name: 設定 - カスタム API
+              href: /rest/api/industry/collaboration-toolkit/settings-custom-ap-is
+            - name: 設定 - 標準 OData API
+              href: /rest/api/industry/collaboration-toolkit/settings-standard-o-data-ap-is
+        - name: コラボレーション コントロールの制限
+          href: samples/collaboration-controls-limitations.md
     - name: Microsoft Teams 用のアプリ テンプレート
       href: samples/app-templates.md
     - name: 本番対応の Shifts コネクタ

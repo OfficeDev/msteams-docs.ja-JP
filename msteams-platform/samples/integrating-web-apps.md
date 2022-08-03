@@ -1,23 +1,23 @@
 ---
 author: heath-hamilton
-description: 既存の Web アプリと Microsoft Teamsを統合するためのベスト プラクティスまたは考慮事項について説明します。 API の要件、認証、およびアプリとTeamsのディープ リンクに関する情報が提供されます。
+description: 既存の Web アプリと Microsoft Teamsを統合するためのベスト プラクティスまたは考慮事項について説明します。 アプリと Teams の API 要件、認証、ディープ リンクに関する情報が提供されます。
 ms.author: surbhigupta
 ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Teams 統合に関する考慮事項
-ms.openlocfilehash: 2df2d9be6962a70c4eb8a933a7c1893ae4bbdb25
-ms.sourcegitcommit: 5070746e736edb4ae77cd3efcb2ab8bb2e5819a0
+ms.openlocfilehash: acc018315ce2378707829363929b36f7897307c2
+ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66123802"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "67178612"
 ---
 # <a name="considerations-for-teams-integration"></a>Teams 統合に関する考慮事項
 
 Web アプリを Teams と適切に統合することで、Teams のソーシャルおよびコラボレーション機能に適した Web アプリを作成できます。
   
-Teamsと統合できるさまざまな種類のアプリは次のとおりです。
+Teams と統合できるさまざまな種類のアプリは次のとおりです。
 
 * **スタンドアロン アプリ**: スタンドアロン アプリは、単一ページまたは大規模で複雑なアプリです。 ユーザーは Teams でその一部の側面を使用できます。
 * **コラボレーション アプリ**: Teams 固有のソーシャル機能とコラボレーション機能用に既に構築されたアプリ。
@@ -30,7 +30,7 @@ Teamsと統合できるさまざまな種類のアプリは次のとおりです
 
 ***統合シナリオ**: スタンドアロン アプリ、コラボレーション アプリ、SharePoint*
 
-Teams アプリには、必要で想定される共同作業機能が含まれている必要があります。 アプリ統合を操作するには、開発用語Teams理解しておくことが重要です。
+Teams アプリには、必要で想定される共同作業機能が含まれている必要があります。 アプリの統合を操作するには、Teams 開発の用語を理解しておくことが重要です。
 
 |アプリの一般的な機能   |Teams プラットフォーム機能   |
 |----------|-----------|
@@ -90,7 +90,7 @@ Teams には、サード パーティ製アプリの Azure AD を備えたシン
 > [!IMPORTANT]
 > 現時点では、サイドローディング アプリは Government Community Cloud (GCC) で利用できますが、GCC-High および国防総省 (DOD) では使用できません。 GCC では、サード パーティ製アプリは既定で無効になっています。 GCC のサード パーティ製アプリを有効にするには、「[アプリのアクセス許可ポリシーを管理する](/microsoftteams/teams-app-permission-policies)」と「[アプリの管理](/microsoftteams/manage-apps)」を参照してください。
 
-SharePoint ページでは、SSO のみを使用でき、ID がSharePoint アプリであるため、SSO を別のアプリで動作させる場合は、別の Azure AD ID を追加できません。
+SharePoint ページの場合、SSO のみを使用でき、ID が SharePoint アプリであるために別のアプリで SSO を機能させる場合は、別の Azure AD ID を追加できません。
 
 [Teams での認証](../concepts/authentication/authentication.md)の詳細については、こちらを参照してください。
 
