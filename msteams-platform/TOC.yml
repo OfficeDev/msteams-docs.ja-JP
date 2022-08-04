@@ -138,10 +138,14 @@
       href: toolkit/visual-studio-overview.md
     - name: Teams 用 Yeoman ジェネレーター (GitHub)
       href: 'https://github.com/pnp/generator-teams'
-    - name: 開発者ポータル
+    - name: Teams の開発者ポータル
       items:
-        - name: Teams の開発者ポータル
+        - name: 概要
           href: concepts/build-and-test/teams-developer-portal.md
+        - name: 開発者ポータルでアプリを管理する
+          href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
+        - name: 開発者ポータルでアプリの使用状況を分析する
+          href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md
         - name: App Studio
           href: concepts/build-and-test/app-studio-overview.md
     - name: Teams JavaScript client SDK
@@ -309,6 +313,14 @@
       href: apps-in-teams-meetings/API-references.md
     - name: 共有チャネルをビルドする
       href: concepts/build-and-test/Shared-channels.md
+    - name: Graph API を使用して会議のトランスクリプトを取得する
+      items:
+        - name: 概要
+          href: graph-api/meeting-transcripts/overview-transcripts.md
+        - name: 会議 ID と開催者 ID をフェッチする
+          href: graph-api/meeting-transcripts/fetch-id.md
+        - name: トランスクリプトを取得する
+          href: /graph/api/resources/calltranscript
     - name: Live Share による強化されたコラボレーション
       items:
         - name: 概要

@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 11893cb2db927935d399d83794b7680560adcc7d
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 4641d19a6df93cf4dc575653bde0318f429ca551
+ms.sourcegitcommit: f2449520011b8a2094173ddcd7fe816256061e5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485735"
+ms.lasthandoff: 08/02/2022
+ms.locfileid: "67158067"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Microsoft Teams ストアにアプリを公開する
 
@@ -47,7 +47,7 @@ Teams ストアに公開されたアプリは、Microsoft 365 アプリおよび
 
 1. 送信に失敗した場合は、Microsoft に直接連絡して[問題を解決し、アプリを再送信してください](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)。
 
-## <a name="what-to-expect-after-you-submit-your-app"></a>アプリを送信した後のプロセス
+## <a name="what-to-expect-after-you-submit-your-app"></a>アプリを送信した後、何を期待しますか?
 
 * **機能とエクスペリエンスの詳細なテスト**
 
@@ -146,7 +146,7 @@ Teams ストアに公開されたアプリは、Microsoft 365 アプリおよび
 
       1. アプリ マニフェストに `publisherId.offerId` の形式で `subscriptionOffer` の詳細が正しく記載されています。
 
-      1. リンクされた SaaS オファーが、名前付き[ユーザー モデル](/azure/marketplace/create-new-saas-offer-plans)に割り当てられたライセンスをサポートするように設計されていることを確認する必要があります。 定額料金などの他の価格設定モデルをサポートするリンクされた SaaS オファーは、現在 Teams ストアへの公開には受け入れられていません。
+      1. リンクされた SaaS オファーが、 [SaaS 価格モデル](/azure/marketplace/create-new-saas-offer-plans)に割り当てられたライセンスをサポートするように設計されていることを確認する必要があります。
 
       1. テスト手順またはセットアップ手順を含めるか、アプリの機能とサポートされているシナリオの詳細を示すデモ ビデオへのリンク、およびテスターが SaaS ポータル ワークフローを簡単に理解できるようにするための追加情報を含めます。
 
