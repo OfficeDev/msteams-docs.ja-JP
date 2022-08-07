@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: d37acc71ade61f23bbca32257ef7b30578948bcc
-ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
+ms.openlocfilehash: 32aa12e69d32c8b50a05df994021fb9dfcc248b1
+ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "66737406"
+ms.lasthandoff: 08/06/2022
+ms.locfileid: "67264163"
 ---
 # <a name="prepare-your-teams-store-submission"></a>Teams のストア送信を準備する
 
@@ -29,7 +29,7 @@ Microsoft Teams アプリ ストアへのアプリの発行の詳細について
 アプリがテスト環境で動作している場合がありますが、送信プロセス中に問題が発生しないようにアプリ パッケージを確認する必要があります。
 
 > [!WARNING]
-> App Studio を使用している場合は、Teams アプリを構成、配布、管理するための[開発者ポータル](https://dev.teams.microsoft.com/)を試してみることをお勧めします。 App Studio は、2022 年 8 月 1 日までに廃止されます。
+> App Studio を使用している場合は、Teams アプリを構成、配布、管理するための[開発者ポータル](https://dev.teams.microsoft.com/)を試してみることをお勧めします。 App Studio は 2022 年 8 月 1 日に非推奨となります。
 
 Microsoft Teams アプリ検証ツールを使用すると、パートナー センターに送信する前に問題を特定して修正できます。 このツールは、ストアの検証中に使用したものと同じテスト ケースに対して、アプリの構成を自動的にチェックします。
 
