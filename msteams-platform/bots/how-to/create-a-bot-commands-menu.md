@@ -1,16 +1,16 @@
 ---
 title: ボット用のコマンド メニューを作成する
 author: surbhigupta
-description: このモジュールでは、コード サンプルを使用して Microsoft Teams ボットのコマンド メニューを作成して処理する方法について説明します。
+description: このモジュールでは、コード サンプルを使用して、Microsoft Teams ボットのコマンド メニューを作成して処理する方法について説明します。
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 6252531565693f318550398967db16297bfd40c0
-ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
+ms.openlocfilehash: 1dff29ca48a7efb3338816394c177de7779714ee
+ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "66737420"
+ms.lasthandoff: 08/06/2022
+ms.locfileid: "67264177"
 ---
 # <a name="create-a-commands-menu"></a>コマンド メニューを作成する
 
@@ -41,7 +41,7 @@ ms.locfileid: "66737420"
 1. Teams を開き、左側のウィンドウから **[アプリ]** を選択します。 **[アプリ]** ページで **App Studio** を検索し、**[開く]** を選択します。
 
    > [!WARNING]
-   > App Studio を使用している場合は、開発者ポータルで Teams アプリの設定、配布、管理を行うことをお勧めします。 App Studio は、2022 年 8 月 1 日までに非推奨になります。
+   > App Studio を使用している場合は、開発者ポータルで Teams アプリの設定、配布、管理を行うことをお勧めします。 App Studio は、2022 年 8 月 1 日に非推奨になりました。
 
    :::image type="content" source="conversations/Media/AppStudio.png" alt-text="appstudio-media":::
 

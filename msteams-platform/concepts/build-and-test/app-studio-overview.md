@@ -1,19 +1,19 @@
 ---
 title: Microsoft Teams 用の App Studio を開始する
-description: この記事では、Microsoft Teams 用アプリ スタジオとアプリ スタジオのインストールを使用してアプリをビルドおよび管理する方法について説明します。
+description: この記事では、アプリ スタジオをMicrosoft Teamsしてインストールするためのアプリ スタジオを使用してアプリをビルドし、管理する方法について説明します。
 ms.localizationpriority: medium
 ms.topic: overview
-ms.openlocfilehash: 6ec2e1dfc064302de096cb356641a773e7dceb35
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: ac036e6f62741a2d7de52ec2498d75c152929141
+ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485707"
+ms.lasthandoff: 08/06/2022
+ms.locfileid: "67264156"
 ---
 # <a name="manage-your-apps-with-app-studio-for-microsoft-teams"></a>Microsoft Teams 用の App Studio を使用してアプリを管理する
 
 > [!WARNING]
-> **開発者ポータルを試す**: App Studio が進化しました。 新しい[開発者ポータル](https://dev.teams.microsoft.com/)を使用して Teams アプリを構成、配布および管理する。 <br> App Studio は、2022 年 8 月 1 日までに非推奨になります。
+> **開発者ポータルを試す**: App Studio が進化しました。 新しい[開発者ポータル](https://dev.teams.microsoft.com/)を使用して Teams アプリを構成、配布および管理する。 <br> App Studio は、2022 年 8 月 1 日に非推奨になりました。
 
 App Studio を使用すると、Microsoft Teams アプリの作成や統合を簡単に始めることができます。自分の組織用にカスタム アプリを開発する場合も、世界各地のチーム用に SaaS アプリケーションを開発する場合も、App Studio ではマニフェストの作成とアプリのパッケージングが合理化され、Card Editor や React 制御ライブラリなどの便利なツールが提供されます。
 

@@ -1,14 +1,14 @@
 ---
 title: アプリをテストしてデバッグするためのセットアップを選択する
-description: このモジュールでは、ローカルおよびクラウドでホストされている環境で Microsoft Teams アプリをテストおよびデバッグするためのオプションについて説明します。
+description: このモジュールでは、ローカルおよびクラウドでホストされている環境でMicrosoft Teamsアプリをテストおよびデバッグするためのオプションについて説明します。
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 1f8a444a889eec15495272877ea1cca75f313629
-ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
+ms.openlocfilehash: 6b06955df7fbe236deb05fc0e057062aa5f9b180
+ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "66737392"
+ms.lasthandoff: 08/06/2022
+ms.locfileid: "67264135"
 ---
 # <a name="choose-a-test-setup-and-debug-your-teams-app"></a>テストセットアップを選択し、Teams アプリをデバッグする
 
@@ -63,7 +63,7 @@ Microsoft Bot Framework に登録されているボットの場合は、この�
 
 > [!WARNING]
 >
-> * App Studio を使用している場合は、開発者ポータルで Teams アプリの設定、配布、管理を行うことをお勧めします。 App Studio は、2022 年 8 月 1 日までに非推奨になります。
+> * App Studio を使用している場合は、開発者ポータルで Teams アプリの設定、配布、管理を行うことをお勧めします。 App Studio は、2022 年 8 月 1 日に非推奨になりました。
 
 ## <a name="cloud-hosted"></a>クラウド ホスト型
 

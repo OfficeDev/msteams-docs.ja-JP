@@ -1,16 +1,16 @@
 ---
 title: メッセージ拡張機能のアクション コマンドを定義する
 author: surbhigupta
-description: このモジュールでは、Microsoft Teams でアプリ マニフェストの例を使用してメッセージング拡張機能アクション コマンドを定義する方法について説明します。
+description: このモジュールでは、Microsoft Teamsのアプリ マニフェストの例を使用して、メッセージング拡張機能アクション コマンドを定義する方法について説明します。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: dda990bcde10b6ff644bc034e91b838c681b842f
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 2769dc4d76f6b417f3264dd321b0d5c5e794c9f8
+ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035290"
+ms.lasthandoff: 08/06/2022
+ms.locfileid: "67264184"
 ---
 # <a name="define-message-extension-action-commands"></a>メッセージ拡張機能のアクション コマンドを定義する
 
@@ -87,7 +87,7 @@ ms.locfileid: "67035290"
 **App Studio** または **開発者ポータル** を使用して操作コマンドを作成できます。
 
 > [!WARNING]
- > App Studio を使用している場合は、Teams アプリを構成、配布、管理するために[開発者ポータル](https://dev.teams.microsoft.com/)を試してみることをお勧めします。 App Studio は、2022 年 8 月 1 日までに廃止されます。
+ > App Studio を使用している場合は、Teams アプリを構成、配布、管理するために[開発者ポータル](https://dev.teams.microsoft.com/)を試してみることをお勧めします。 App Studio は、2022 年 8 月 1 日に非推奨になりました。
 
 # <a name="app-studio"></a>[App Studio](#tab/AS)
 

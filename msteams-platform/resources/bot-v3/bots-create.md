@@ -1,15 +1,15 @@
 ---
 title: ボットを作成する
-description: このモジュールでは、Microsoft Bot Frameworkを使用してボットを作成し、Microsoft Teams で作業する準備をする方法について説明します
+description: このモジュールでは、Microsoft Bot Frameworkを使用してボットを作成し、Microsoft Teamsで作業する準備をする方法について説明します
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 12/07/2018
-ms.openlocfilehash: d6e4f2eba93d7b4e7a657b5ee088de46d0fa0211
-ms.sourcegitcommit: 526ad8562d3bacc13141cd7f695aa5f3f3752052
+ms.openlocfilehash: 0f53f26c8cb54c1d21cbe305d3ea1d433bfb864b
+ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "66737413"
+ms.lasthandoff: 08/06/2022
+ms.locfileid: "67264170"
 ---
 # <a name="create-a-bot"></a>ボットを作成する
 
@@ -52,7 +52,7 @@ Microsoft Bot Framework を使用して作成されたすべてのボットは�
 
 > [!WARNING]
 >
->* App Studio を使用している場合は、開発者ポータルで Teams アプリの設定、配布、管理を行うことをお勧めします。 App Studio は 2022 年 8 月 1 日までに非推奨になります
+>* App Studio を使用している場合は、開発者ポータルで Teams アプリの設定、配布、管理を行うことをお勧めします。 App Studio は、2022 年 8 月 1 日に非推奨になりました。
 
 ## <a name="see-also"></a>関連項目
 
