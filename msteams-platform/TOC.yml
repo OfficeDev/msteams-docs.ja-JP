@@ -132,10 +132,22 @@
           href: toolkit/TeamsFx-collaboration.md
         - name: TeamsFx SDK
           href: toolkit/TeamsFx-SDK.md
+    - name: Visual Studio 用 Teams ツールキット
+      items:
+        - name: Teams ツールキットの概要
+          href: toolkit/teams-toolkit-overview-visual-studio.md
+        - name: Teams アプリの新規作成
+          href: toolkit/create-new-teams-app-for-Visual-Studio.md
+        - name: Teams アプリをデバッグする
+          href: toolkit/debug-teams-app-visual-studio.md
+        - name: クラウド リソースをプロビジョニングする
+          href: toolkit/provision VS.md
+        - name: Teams アプリをクラウドに展開する
+          href: toolkit/deploy to the cloud for VS.md
+        - name: Teams アプリ マニフェストを編集する
+          href: toolkit/VS-TeamsFx-preview-and-customize-app-manifest.md
     - name: Teams ツールキット CLI
       href: toolkit/TeamsFx-CLI.md
-    - name: Visual Studio 用 Teams ツールキット
-      href: toolkit/visual-studio-overview.md
     - name: Teams 用 Yeoman ジェネレーター (GitHub)
       href: 'https://github.com/pnp/generator-teams'
     - name: Teams の開発者ポータル
