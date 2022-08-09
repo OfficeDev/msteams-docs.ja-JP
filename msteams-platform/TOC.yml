@@ -141,9 +141,9 @@
         - name: Teams アプリをデバッグする
           href: toolkit/debug-teams-app-visual-studio.md
         - name: クラウド リソースをプロビジョニングする
-          href: toolkit/provision VS.md
+          href: toolkit/Provision cloud resources using Visual Studio.md
         - name: Teams アプリをクラウドに展開する
-          href: toolkit/deploy to the cloud for VS.md
+          href: toolkit/Deploy Teams app to the cloud using Visual Studio.md
         - name: Teams アプリ マニフェストを編集する
           href: toolkit/VS-TeamsFx-preview-and-customize-app-manifest.md
     - name: Teams ツールキット CLI
