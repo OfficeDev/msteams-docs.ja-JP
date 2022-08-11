@@ -1,28 +1,28 @@
 ---
 title: ボットをローカルでテストしてデバッグする
 author: surbhigupta
-description: サイドローディングなどを使用して Teams 環境内の IDE を使用してボットをローカルでテストしてデバッグする方法について説明します
+description: サイドローディングなどを使用して、Teams 環境内の IDE を使用してボットをローカルでテストしてデバッグする方法について説明します。
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 3e1225991ad240f74e045a6941002b9eb7b5e81d
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: c2b68279000da27aa055e591bcccc0a91e7f3769
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503719"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312206"
 ---
-# <a name="test-and-debug-your-bot-locally-with-ide"></a>IDE を使用してボットをローカルでテストしてデバッグする
+# <a name="test-and-debug-your-bot-locally-with-ide"></a>IDE を使用してボットをローカルでテストおよびデバッグする
 
 ボットをテストするときは、ボットを実行するコンテキストと、Microsoft Teams に固有のデータを必要とするボットに追加した可能性のある機能の両方を考慮する必要があります。 ボットをテストするために選択したメソッドが、その機能と一致していることを確認してください。
 
 ## <a name="test-by-uploading-to-teams"></a>Teams にアップロードしてテストする
 
-ボットをテストする最も包括的な方法は、アプリ パッケージを作成して Teams にアップロードすることです。 これは、すべてのスコープでボットで使用できる完全な機能をテストする唯一の方法です。
+ボットをテストする最も包括的な方法は、アプリ パッケージを作成して Teams にアップロードすることです。 アプリ パッケージを Teams にアップロードすることは、すべてのスコープでボットが利用できる完全な機能をテストする唯一の方法です。
 
 アプリをアップロードするには、以下の 2 つの方法があります。
 
-* [App Studio](~/concepts/build-and-test/app-studio-overview.md) を使用します。
+* [Teams 用の開発者ポータルを使用します](~/concepts/build-and-test/teams-developer-portal.md)。
 * [アプリ パッケージを手動で作成](~/concepts/build-and-test/apps-package.md)し、[アプリをアップロード](~/concepts/deploy-and-publish/apps-upload.md)します。
 
 > [!NOTE]
@@ -57,7 +57,7 @@ Bot Framework Emulator は、ボット開発者がローカルまたはリモー
 > [!Important]
 > ID を使用したボットとの会話は、テストのみを目的としています。 ボットに追加した Teams 固有の機能は動作しません。
 
-ID を使用してボットとの会話を開始します。 これらの方法のいずれかを通じてボットを追加すると、チャネル会話ではアドレス指定できず、タブやメッセージ拡張機能などの他の Teams アプリ機能を利用することはできません。 次のいずれかの方法で会話を開始します。
+ID を使用してボットとの会話を開始します。 これらの方法のいずれかを通じてボットを追加すると、チャネルの会話ではアドレス指定できず、タブやメッセージ拡張機能などの他の Teams アプリ機能を利用することはできません。 次のいずれかの方法で会話を開始します。
 
 * ボットの [[ボット ダッシュボード]](https://dev.botframework.com/bots) ページの **[チャネル]** で、**[Microsoft Teams に追加]** を選択します。 Teams によって、ボットとの個人用チャットが開始されます。
 
@@ -66,7 +66,7 @@ ID を使用してボットとの会話を開始します。 これらの方法�
   
       ![ボットの AppID を取得する](~/assets/images/bots_appid_botframework.png)
   
-   2. Microsoft Teams 内の **[チャット]** ウィンドウを開き、**[チャットの追加]** アイコンを選択します。 **[宛先]** に、ボットの Microsoft アプリ ID を貼り付けます。
+   2. Microsoft Teams を開き、[チャット] ウィンドウで [ **チャットの追加]** アイコンを選択します。 **[宛先]** に、ボットの Microsoft アプリ ID を貼り付けます。
   
       ![ボットのアップロード](~/assets/images/bots_uploading.png)
 
@@ -96,7 +96,7 @@ ID を使用してボットとの会話を開始します。 これらの方法�
 
 ## <a name="delete-a-bot-from-teams"></a>Teams からボットを削除する
 
-Teams からボットを完全に削除するには、**ボット ダッシュボード** に移動し、Teams チャネルを編集します。 ページの下部にある **[削除]** をクリックします。 これにより、ユーザーがボットを検出、追加、および操作できなくなります。 これにより、他のユーザーの Teams インスタンスからボットが削除されることはありませんが、ボットの機能も停止します。
+Teams からボットを完全に削除するには、**ボット ダッシュボード** に移動し、Teams チャネルを編集します。 ページの下部にある **[削除]** をクリックします。 Teams からボットを削除すると、ユーザーがボットを検出、追加、操作できなくなります。 Teams からボットを削除しても、他のユーザーの Teams インスタンスからボットは削除されませんが、ボットの機能も停止します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,15 +1,15 @@
 ---
 title: ボットとのチャネルおよびグループ チャット会話
-description: このモジュールでは、Microsoft Teamsのチャネルでボットと会話するエンドツーエンドのシナリオについて説明します。
+description: このモジュールでは、Microsoft Teams のチャネルでボットと会話するエンドツーエンドのシナリオについて説明します。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/25/2019
-ms.openlocfilehash: e93b6cc18e38da4f6307fda3d30968bfa709dbf1
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: ab11ad4a11769daa236e6fe10e1ef30782b2cda0
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190181"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312185"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-microsoft-teams-bot"></a>Microsoft Teams ボットとのチャネルおよびグループ チャット会話
 
@@ -25,7 +25,7 @@ Microsoft Teams でユーザーは、チャネルまたはグループ チャッ
 
 グループまたはチャネル内のボットは、すべてのメンバーに関係する適切な情報を提供する必要があります。 ボットが、エクスペリエンスに関わるどんな情報でも提供できるのは確かですが、それとの会話がすべてのユーザーに表示される点に留意してください。 それで、グループまたはチャネル内の優れたボットは、すべてのユーザーに付加価値を提供するものであり、1 対 1 の会話に向いている情報を誤って共有することがないはずです。
 
-ボットは、同様に、より多くの作業を必要とせずに、すべてのスコープで完全に関連している可能性があります。 Teamsでは、ボットがすべてのスコープで機能するとは思いませんが、サポートするスコープのうち、どのスコープでもボットがユーザーの価値を提供するようにする必要があります。 スコープの詳細については、[Microsoft Teams のアプリ](~/concepts/build-and-test/app-studio-overview.md)に関する記事を参照してください。
+ボットは、同様に、より多くの作業を必要とせずに、すべてのスコープで完全に関連している可能性があります。 Teams では、ボットがすべてのスコープで機能するとは思いませんが、サポートするスコープに対してボットがユーザーの価値を提供することを確認する必要があります。 スコープの詳細については、[Microsoft Teams のアプリ](~/concepts/build-and-test/teams-developer-portal.md)に関する記事を参照してください。
 
 グループまたはチャネルで動作するボットの開発では、個人の会話と同じ機能の多くを使用します。 ペイロード内の追加のイベントとデータで、Teams のグループおよびチャネルの情報を提供します。 それらの相違点、および一般的な機能の主な相違点について、以下のセクションで説明します。
 
@@ -53,13 +53,13 @@ REST API を使用する場合は、[`/conversations/{conversationId}/activities
 
 ### <a name="best-practice-welcome-messages-in-teams"></a>ベスト プラクティス: Teams でのウェルカム メッセージ
 
-ボットが最初にグループまたはチームに追加されたときは、ボットを紹介するウェルカム メッセージをすべてのユーザーに送信すると便利です。 ウェルカム メッセージで、ボットの機能と、ユーザーへのメリットについて説明する必要があります。 理想的には、ユーザーがアプリとやり取りするためのコマンドもメッセージに含める必要があります。 これを行うには、`channelData` オブジェクトで `teamsAddMembers` eventType を使用して、ボットが `conversationUpdate` メッセージに応答するようにします。 ユーザーがチームに追加されるときにも同じイベントが送信されるため、必ず、`memberAdded` ID をボットのアプリ ID そのものにしてください。 詳細については、 [チーム メンバーまたはボットの追加](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) に関するページを参照してください。
+ボットが最初にグループまたはチームに追加されたときは、ボットを紹介するウェルカム メッセージをすべてのユーザーに送信すると便利です。 ウェルカム メッセージで、ボットの機能と、ユーザーへのメリットについて説明する必要があります。 理想的には、ユーザーがアプリとやり取りするためのコマンドもメッセージに含める必要があります。 これを行うには、`channelData` オブジェクトで `teamsAddMembers` eventType を使用して、ボットが `conversationUpdate` メッセージに応答するようにします。 ユーザーがチームに追加されるときにも同じイベントが送信されるため、必ず、`memberAdded` ID をボットのアプリ ID そのものにしてください。 詳細については、「 [チーム メンバーまたはボットの追加](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)」を参照してください。
 
 ボットが追加されたときに、チームの各メンバーに個人用メッセージを送信することもできます。 これを行うには、[チーム名簿を取得](~/resources/bot-v3/bots-context.md#fetch-the-team-roster)し、各ユーザーに[ダイレクト メッセージ](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md)を送信することができます。
 
 次の状況では、ボットからウェルカム メッセージを送信 *しない* ことをお勧めします。
 
-* チームが大規模である (主観的に、たとえば 100 人以上のメンバーなど)。 ウェルカム メッセージを見るすべてのユーザーにボットの価値提案を明確に伝えないなら、ボットは "スパム" と見なされ、追加したユーザーに苦情が寄せられる可能性があります。
+* チームは大規模です (明らかに、100 人以上のメンバーなど)。 ウェルカム メッセージを見るすべてのユーザーにボットの価値提案を明確に伝えないなら、ボットは "スパム" と見なされ、追加したユーザーに苦情が寄せられる可能性があります。
 * ボットは、チームにまず追加されるのではなく、グループまたはチャネルでまずメンションされる。
 * グループまたはチャネルの名前が変更される。
 * チーム メンバーがグループまたはチャネルに追加される。
@@ -194,7 +194,7 @@ session.send(generalMessage);
 
 ## <a name="accessing-groupchat-or-channel-scope"></a>groupChat または channel スコープへのアクセス
 
-ボットは、グループおよびチームでのメッセージの送受信以上の操作を行うことができます。 たとえば、チャネルの一覧や、プロフィール情報を含むメンバーの一覧をフェッチすることもできます。 詳細については、「[Microsoft Teams ボットのためにコンテキストを取得する](~/resources/bot-v3/bots-context.md)」を参照してください。
+ボットは、グループおよびチームでのメッセージの送受信以上の操作を行うことができます。 たとえば、プロファイル情報やチャネルの一覧など、メンバーの一覧をフェッチすることもできます。 詳細については、「[Microsoft Teams ボットのためにコンテキストを取得する](~/resources/bot-v3/bots-context.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

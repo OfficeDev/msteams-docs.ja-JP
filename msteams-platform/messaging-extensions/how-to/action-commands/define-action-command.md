@@ -1,16 +1,16 @@
 ---
 title: メッセージ拡張機能のアクション コマンドを定義する
 author: surbhigupta
-description: このモジュールでは、Microsoft Teamsのアプリ マニフェストの例を使用して、メッセージング拡張機能アクション コマンドを定義する方法について説明します。
+description: このモジュールでは、Microsoft Teams でアプリ マニフェストの例を使用してメッセージング拡張機能アクション コマンドを定義する方法について説明します。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 2769dc4d76f6b417f3264dd321b0d5c5e794c9f8
-ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
+ms.openlocfilehash: 6612309fc6d96a6e40e504edf14dc054f7412a30
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "67264184"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67311998"
 ---
 # <a name="define-message-extension-action-commands"></a>メッセージ拡張機能のアクション コマンドを定義する
 
@@ -30,7 +30,7 @@ ms.locfileid: "67264184"
 メッセージ拡張アクション コマンドを定義する方法については、次のビデオを参照してください。
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
 <br>
 
 ## <a name="select-action-command-invoke-locations"></a>操作コマンドを呼び出す場所を選択する
@@ -79,71 +79,61 @@ ms.locfileid: "67264184"
 
 操作コマンドをアプリ マニフェストに追加するには、アプリ マニフェスト JSON の最上位レベルに新しい `composeExtension` オブジェクトを追加する必要があります。これを行うには、次のいずれかの方法を使用します。
 
-* [App Studio を使用して操作コマンドを作成する](#create-an-action-command-using-app-studio)
+* [開発者ポータルを使用してアクション コマンドを作成する](#create-an-action-command-using-developer-portal)
 * [操作コマンドを手動で作成する](#create-an-action-command-manually)
 
-### <a name="create-an-action-command-using-app-studio"></a>App Studio を使用して操作コマンドを作成する
+### <a name="create-an-action-command-using-developer-portal"></a>開発者ポータルを使用してアクション コマンドを作成する
 
-**App Studio** または **開発者ポータル** を使用して操作コマンドを作成できます。
-
-> [!WARNING]
- > App Studio を使用している場合は、Teams アプリを構成、配布、管理するために[開発者ポータル](https://dev.teams.microsoft.com/)を試してみることをお勧めします。 App Studio は、2022 年 8 月 1 日に非推奨になりました。
+**開発者ポータル** を使用してアクション コマンドを作成できます。
 
 # <a name="app-studio"></a>[App Studio](#tab/AS)
 
 > [!NOTE]
 > 操作コマンドを作成するための前提条件は、メッセージ拡張機能をすでに作成していることです。 メッセージ拡張機能を作成する方法については、「[メッセージ拡張機能の作成](~/messaging-extensions/how-to/create-messaging-extension.md)」を参照してください。
 
-**操作コマンドを作成するには**
+アクション コマンドを作成するには:
 
-1. Microsoft Teams クライアントから **App Studio** を開き、**[マニフェスト エディター]** タブを選択します。
-1. **App Studio** でアプリ パッケージをすでに作成している場合は、一覧から選択します。 アプリ パッケージを作成していない場合は、既存のパッケージをインポートします。
-1. アプリ パッケージをインポートしたら、**[機能]** で **[メッセージ拡張機能]** を選択します。 メッセージ拡張機能を設定するためのポップアップ ウィンドウが表示されます。
-1. ウィンドウで **[セットアップ]** を選択して、アプリ エクスペリエンスにメッセージ拡張機能を含めます。 次の図は、メッセージ拡張機能設定ウィンドウを表示します。
+1. Microsoft Teams クライアントから **開発者ポータル** を開き、[ **アプリ** ] タブを選択します。 **開発者ポータル** でアプリ パッケージを既に作成している場合は、一覧から選択します。 アプリ パッケージを作成していない場合は、既存のパッケージをインポートします。
+1. アプリ パッケージをインポートしたら、[アプリ **の機能**] で **[メッセージ拡張機能**] を選択します。
+1. メッセージ拡張機能を作成するには、Microsoft 登録ボットが必要です。 既存のボットを使用するか、新しいボットを作成できます。 [ **新しいボットの作成** ] オプションを選択し、新しいボットに名前を付けてから、[ **作成**] を選択します。
 
-    :::image type="content" source="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt-text="メッセージング拡張機能設定":::
+   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="このスクリーンショットは、開発者ポータルでボットを作成する方法を示しています。":::
 
-1. メッセージ拡張機能を作成するには、Microsoft 登録ボットが必要です。 既存のボットを使用するか、新しいボットを作成できます。 **[新しいボットの作成]** オプションを選択し、新しいボットの名前を付けて、**[作成]** を選択します。 次の図は、メッセージ拡張機能のボット作成を示しています。
+1. 既存のボットを使用するには、 **既存のボットを選択** し、ドロップダウン リストから既存のボットを選択するか、ボット ID が既に作成されている場合は **[ボット ID の入力** ] を選択します。
 
-    :::image type="content" source="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt-text="メッセージング拡張機能用のボットを作成する":::
+1. メッセージング拡張機能のスコープを選択し、[保存] を選択 **します**。
 
-1. 既存のボットを使用するには、**[既存のボットを使用する]** を選択し、**[既存のボットのいずれかを選択する]** を選択してドロップダウンから既存のボットを選択し、**[ボット名]** を指定し、ボット ID がすでに作成されている場合は **[保存]** を選択するか、**[別のボット ID に接続する]** を選択し、**[ボット名]** を指定して **[保存]** を選択します。
+1. [**コマンド**] セクションで **[コマンドの追加]** を選択して、メッセージ拡張機能の動作を決定するコマンドを含めます。
 
-    :::image type="content" source="~/assets/images/messaging-extension/use-existing-bot.png" alt-text="メッセージング拡張機能に既存のボットを使用する":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="スクリーンショットは、メッセージ拡張機能の動作を定義するコマンドを追加する方法を示しています。":::
 
-1. メッセージ拡張機能の動作を決定するコマンドを含めるには、メッセージ拡張機能ページの **[コマンド] セクション** で **[追加]** を選択します。次の画像は、メッセージ拡張機能のコマンドの追加を表示します。
+1. **[アクション]** を選択し、パラメーターの種類を選択します。
 
-    :::image type="content" source="~/assets/images/messaging-extension/include-command.png" alt-text="コマンドを含める":::
+1. **コマンド ID**、**コマンド タイトル**、および **コマンドの説明** を入力します。
 
-1. **[ユーザーが Teams 内にいる間に外部サービスでアクションをトリガーできるようにする]** を選択します。 次の画像は、操作コマンドの選択を示しています。
+1. すべてのパラメーターを入力し、ドロップダウン リストから入力の種類を選択します。
 
-    :::image type="content" source="~/assets/images/messaging-extension/action-command-selection.png" alt-text="操作コマンドの選択":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="スクリーンショットは、メッセージ拡張機能のコマンドを定義するパラメーターを追加する方法を示しています。":::
 
-1. 一連の静的パラメーターを使用してタスク モジュールを作成するには、**[コマンドの静的パラメーターのセットを定義する]** を選択します。
+1. **[プレビュー リンク****] で [ドメインの追加]** を選択します。
 
-    次の画像は、操作コマンドの静的パラメーターの選択を示しています。
+1. 有効なドメインを入力し、[ **追加**] を選択します。
 
-    :::image type="content" source="~/assets/images/messaging-extension/action-command-static-parameter-selection.png" alt-text="操作コマンドの静的パラメーターの選択":::
-
-    次の画像は、静的パラメーターの設定例を示しています。
-
-    :::image type="content" source="~/assets/images/messaging-extension/setting-up-of-static-parameter.png" alt-text="操作コマンドの静的パラメーターの設定":::
-
-    次の画像は、静的パラメーター テストの例を示しています。
-
-    :::image type="content" source="~/assets/images/messaging-extension/static-parameter-testing.png" alt-text="操作コマンドの静的パラメーター のテスト":::
-
-1. 動的パラメーターを使用するには、**[ボットからパラメーターの動的セットを取得する]** を選択します。 次の画像は、操作コマンドのパラメーターの選択を示しています。
-
-    :::image type="content" source="~/assets/images/messaging-extension/action-command-dynamic-parameter-selection.png" alt-text="操作コマンドの動的パラメーターの選択":::
-
-1. **[コマンド ID]** と **[タイトル]** を追加します。
-1. 操作コマンドを呼び出す場所を選択します。 次の画像は、操作コマンドを呼び出す場所を示しています。
-
-    :::image type="content" source="~/assets/images/messaging-extension/action-command-invoke-location.png" alt-text="操作コマンドを呼び出す場所":::
+   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="スクリーンショットは、リンク解除用の有効なドメインをメッセージング拡張機能に追加する方法を示しています。":::
 
 1. **[保存]** を選択します。
-1. 詳細なパラメーターを追加するには、**[パラメーター]** セクションで **[追加]** ボタンを選択します。
+
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-save.PNG" alt-text="スクリーンショットは、メッセージ拡張機能のすべての設定とパラメーターを保存する方法を示しています。":::
+
+**追加のパラメーターを追加するには**
+
+1. コマンド セクションで省略記号を選択し、 **パラメーターの編集** を選択します。
+
+   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="スクリーンショットは、メッセージ拡張機能のパラメーターを追加する方法を示しています。":::
+
+1. [ **パラメーターの追加]** を選択し、すべてのパラメーターを入力します。
+
+   :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="スクリーンショットは、メッセージ拡張機能のパラメーターを追加する方法を示しています。"lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
 
 ### <a name="create-an-action-command-manually"></a>操作コマンドを手動で作成する
 
@@ -185,43 +175,54 @@ ms.locfileid: "67264184"
 ...
 "composeExtensions": [
   {
-    "botId": "12a3c29f-1fc5-4d97-a142-12bb662b7b23",
-    "canUpdateConfiguration": true,
+    "botId": "c8fa3cf6-b1f0-4ba8-a5bf-a241bc29adf3",
+    "scopes": [
+      "personal",
+      "groupchat"
+    ],
     "commands": [
       {
-        "id": "addTodo",
-        "description": "Create a To Do item",
-        "title": "Create To Do",
+        "id": "To do",
         "type": "action",
-        "context": ["commandBox", "message", "compose"],
+        "title": "Create To do",
+        "description": "Create a To do",
+        "initialRun": true,
         "fetchTask": false,
+        "context": [
+          "commandBox",
+          "compose"
+        ],
         "parameters": [
           {
             "name": "Name",
-            "description": "To Do Title",
             "title": "Title",
+            "description": "To do Title",
             "inputType": "text"
           },
           {
             "name": "Description",
-            "description": "Description of the task",
             "title": "Description",
+            "description": "Description of the task",
             "inputType": "textarea"
           },
           {
             "name": "Date",
-            "description": "Due date for the task",
             "title": "Date",
+            "description": "Due date for the task",
             "inputType": "date"
           }
         ]
-      },
+      }
+    ],
+    "canUpdateConfiguration": true,
+    "messageHandlers": [
       {
-        "id": "reassignTodo",
-        "description": "Reassign a todo item",
-        "title": "Reassign a todo item",
-        "type": "action",
-        "fetchTask": false,
+        "type": "link",
+        "value": {
+          "domains": [
+            "yourapp.onmicrosoft.com"
+          ]
+        }
       }
     ]
   }

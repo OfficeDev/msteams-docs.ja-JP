@@ -1,14 +1,14 @@
 ---
 title: アプリをテストしてデバッグするためのセットアップを選択する
-description: このモジュールでは、ローカルおよびクラウドでホストされている環境でMicrosoft Teamsアプリをテストおよびデバッグするためのオプションについて説明します。
+description: このモジュールでは、ローカルおよびクラウドでホストされている環境で Microsoft Teams アプリをテストおよびデバッグするためのオプションについて説明します。
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 6b06955df7fbe236deb05fc0e057062aa5f9b180
-ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
+ms.openlocfilehash: 5f2a53db5540656d3fd62047ed0fef9256ba62d6
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "67264135"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312192"
 ---
 # <a name="choose-a-test-setup-and-debug-your-teams-app"></a>テストセットアップを選択し、Teams アプリをデバッグする
 
@@ -58,12 +58,7 @@ Teams アプリをローカルで実行する準備として ngrok を設定す�
 Microsoft Bot Framework に登録されているボットの場合は、この新しい ngrok エンドポイントを使用するようにボットのメッセージング エンドポイントを更新します。 たとえば、「 `https://2d1224fb.ngrok.io/api/messages` 」のように入力します。 ngrok が動作していることを検証する場合は、Bot Framework ポータルのテスト チャット ウィンドウでボットの応答をテストします。 エミュレーターと同様に、このテストでは Teams 固有の機能にアクセスすることはできません。
 
 > [!NOTE]
->
-> * ボットのメッセージング エンドポイントを更新するには、Bot Framework を使用する必要があります。 [Bot Framework のボットのリスト](https://dev.botframework.com/bots)から、ボットを選択します。 ボットを Microsoft Azure に移行する必要はありません。 また、[App Studio](~/concepts/build-and-test/app-studio-overview.md) を使用してメッセージング エンドポイントを更新することもできます。
-
-> [!WARNING]
->
-> * App Studio を使用している場合は、開発者ポータルで Teams アプリの設定、配布、管理を行うことをお勧めします。 App Studio は、2022 年 8 月 1 日に非推奨になりました。
+> ボットのメッセージング エンドポイントを更新するには、Bot Framework を使用する必要があります。 [Bot Framework のボットのリスト](https://dev.botframework.com/bots)から、ボットを選択します。 ボットを Microsoft Azure に移行する必要はありません。 [また、Teams 用開発者ポータル](~/concepts/build-and-test/teams-developer-portal.md)を使用してメッセージング エンドポイントを更新することもできます。
 
 ## <a name="cloud-hosted"></a>クラウド ホスト型
 
@@ -87,3 +82,5 @@ Teams 内でエクスペリエンスを読み込んで実行するには、パ�
 ## <a name="see-also"></a>関連項目
 
 [IDE を使用してボットをローカルでテストおよびデバッグする](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)
+
+[Microsoft Teams タブの DevTools](../../tabs/how-to/developer-tools.md)

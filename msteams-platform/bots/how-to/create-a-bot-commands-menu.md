@@ -1,16 +1,16 @@
 ---
 title: ボット用のコマンド メニューを作成する
 author: surbhigupta
-description: このモジュールでは、コード サンプルを使用して、Microsoft Teams ボットのコマンド メニューを作成して処理する方法について説明します。
+description: このモジュールでは、コード サンプルを使用して Microsoft Teams ボットのコマンド メニューを作成して処理する方法について説明します。
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 1dff29ca48a7efb3338816394c177de7779714ee
-ms.sourcegitcommit: fb0942afb8be32d92df282dec03fbb3b13f8f303
+ms.openlocfilehash: e14afc31839368c7826a6ee15a6f779b5f6f47b1
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2022
-ms.locfileid: "67264177"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312311"
 ---
 # <a name="create-a-commands-menu"></a>コマンド メニューを作成する
 
@@ -30,36 +30,34 @@ ms.locfileid: "67264177"
 
 ## <a name="create-a-command-menu-for-your-bot"></a>ボット用のコマンド メニューを作成する
 
-コマンド メニューは、アプリ マニフェスト内で定義されます。 **App Studio** を使用して作成するか、アプリ マニフェストに手動で追加します。
+コマンド メニューは、アプリ マニフェスト内で定義されます。 **開発者ポータル** を使用して作成するか、アプリ マニフェストに手動で追加できます。
 
-### <a name="create-a-command-menu-for-your-bot-using-app-studio"></a>App Studio を使用してボットのコマンド メニューを作成する
+### <a name="create-a-command-menu-for-your-bot-using-developer-portal"></a>開発者ポータルを使用してボットのコマンド メニューを作成する
 
 ボットのコマンド メニューを作成するための前提条件は、既存のアプリ マニフェストを編集する必要があるということです。 コマンド メニューを追加する手順は、新しいマニフェストを作成するか、それとも既存のマニフェストを編集するかに関わらず、同じです。
 
-**App Studio を使用してボットのコマンド メニューを作成するには**
+開発者ポータルを使用してボットのコマンド メニューを作成するには:
 
-1. Teams を開き、左側のウィンドウから **[アプリ]** を選択します。 **[アプリ]** ページで **App Studio** を検索し、**[開く]** を選択します。
+1. Teams を開き、左側のウィンドウから **[アプリ]** を選択します。 [ **アプリ** ] ページで **、開発者ポータル** を検索し、[ **開く**] を選択します。
 
-   > [!WARNING]
-   > App Studio を使用している場合は、開発者ポータルで Teams アプリの設定、配布、管理を行うことをお勧めします。 App Studio は、2022 年 8 月 1 日に非推奨になりました。
+   :::image type="content" source="../../assets/images/tdp/add-dev-portal.png" alt-text="スクリーンショットは、Teams クライアントに開発者ポータルを追加する方法を示しています。":::
+  
+1. **開発者ポータル** で、[**アプリ**] タブを選択します。既存のアプリ パッケージがない場合は、既存のアプリを作成またはインポートできます。 詳細については、「 [Teams 用開発者ポータル](../../concepts/build-and-test/teams-developer-portal.md)」を参照してください。
 
-   :::image type="content" source="conversations/Media/AppStudio.png" alt-text="appstudio-media":::
+1. [ **アプリ** ] タブを選択し、左側のウィンドウで **[アプリの機能** ] を選択し、[ **ボット**] を選択します。
 
-2. **App Studio** で、**[マニフェスト エディター]** タブを選択します。既存のアプリ パッケージがない場合は、既存のアプリを作成またはインポートできます。 詳細については、「 [App Studio で C# アプリ パッケージを更新する」を](../../get-started/deploy-csharp-app-studio.md)参照してください。
+1. [ **コマンド] セクションで [コマンドの追加]** **を** 選択します。
 
-3. **[マニフェスト エディター]** の左側のウィンドウで、**[機能]** セクション内で **[ボット]** を選択します。
+   :::image type="content" source="../../assets/images/tdp/add-a-bot-command.png" alt-text="スクリーンショットは、開発者ポータルでボットのコマンドを追加する方法を示しています。":::
 
-4. **[マニフェスト エディター]** の右側のウィンドウで、**[コマンド]** セクションで **[追加]** を選択します。 **[新規コマンド]** 画面が表示されます。
+1. ボットの **コマンド** メニューとして表示されるコマンドを入力します。
 
-   :::image type="content" source="media/AppStudio-CommandMenu-Add.png" alt-text="アプリのパッケージを選択する" lightbox="media/AppStudio-CommandMenu-Add.png "border="true":::
+1. メニューのコマンド テキストの下に表示される **説明** を入力します。 **説明** は、コマンドの目的の簡単な説明である必要があります。
 
-5. ボットのコマンド メニューとして表示する必要がある **コマンド テキスト** を入力します。
+1. [ **スコープ** ] チェック ボックスをオンにし、[ **追加**] を選択します。
+   これにより、コマンド メニューを表示する必要がある場所が定義されます。
 
-6. メニューのコマンド テキストの下に表示する必要がある **ヘルプ テキスト** を入力します。 **ヘルプ テキスト** は、コマンドの目的を簡単に説明する必要があります。
-
-7. **[スコープ]** チェック ボックスをオンにして、このコマンド メニューを表示する必要がある場所を選択し、**[保存]** を選択します。
-
-   :::image type="content" source="media/AppStudio-NewCommandMenu.png" alt-text="App Studio の [新しいコマンド] メニュー ボタン "lightbox="media/AppStudio-NewCommandMenu.png "border="true":::
+   :::image type="content" source="../../assets/images/tdp/bot-command.png" alt-text="スクリーンショットは、ボットのコマンド、説明、スコープを追加する方法を示しています。":::
 
 ### <a name="create-a-command-menu-for-your-bot-by-editing-manifestjson"></a>Manifest.json を編集してボットのコマンド メニューを作成する
 

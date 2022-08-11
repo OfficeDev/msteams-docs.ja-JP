@@ -5,18 +5,18 @@ description: このモジュールでは、アプリ マニフェストを含む
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d12b443972472d4ee307b55c0e492cff844acad4
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 50dc2ee5a6ba8b8578e2947c5a85303be5bac5f5
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503614"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312228"
 ---
 # <a name="add-link-unfurling"></a>リンク展開を追加する
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-このドキュメントでは、App Studio または手動でアプリ マニフェストにリンク解除を追加する方法について説明します。 リンク展開を使用すると、特定のドメインの URL がメッセージ作成領域に貼り付けられたときに、アプリが `invoke` アクティビティを受信するように登録することができます。 には `invoke` 、作成メッセージ領域に貼り付けられた完全な URL が含まれています。 ユーザーが追加情報やアクションの登録を解除できるカードを使用して応答できます。 これは、URL を検索用語として使用する検索コマンドとして機能します。
+このドキュメントでは、開発者ポータルまたは手動でアプリ マニフェストにリンク解除を追加する方法について説明します。 リンク展開を使用すると、特定のドメインの URL がメッセージ作成領域に貼り付けられたときに、アプリが `invoke` アクティビティを受信するように登録することができます。 には `invoke` 、作成メッセージ領域に貼り付けられた完全な URL が含まれています。 ユーザーが追加情報やアクションの登録を解除できるカードを使用して応答できます。 これは、URL を検索用語として使用する検索コマンドとして機能します。
 
 > [!NOTE]
 >
@@ -34,18 +34,21 @@ Azure DevOps メッセージ拡張機能では、作業項目をポイントす�
 
 ## <a name="add-link-unfurling-to-your-app-manifest"></a>アプリ マニフェストにリンク展開を追加する
 
-アプリ マニフェストにリンク展開を追加するには、アプリ マニフェスト JSON の `composeExtensions` セクションに新しい `messageHandlers` 配列を追加します。 App Studio の助けを借りて、または手動で配列を追加できます。 ドメイン リストには、`*.example.com` などのワイルドカードを含めることができます。 これは、ドメインの 1 つのセグメントと正確に一致します。`a.b.example.com` と一致させる必要がある場合は、`*.*.example.com` を使用してください。
+アプリ マニフェストにリンク展開を追加するには、アプリ マニフェスト JSON の `composeExtensions` セクションに新しい `messageHandlers` 配列を追加します。 開発者ポータルの助けを借りて、または手動で配列を追加できます。 ドメイン リストには、`*.example.com` などのワイルドカードを含めることができます。 これは、ドメインの 1 つのセグメントと正確に一致します。`a.b.example.com` と一致させる必要がある場合は、`*.*.example.com` を使用してください。
 
 > [!NOTE]
 > 直接、またはワイルドカードを使用して、コントロールに含まれていないドメインを追加しないでください。 たとえば、`yourapp.onmicrosoft.com` は有効ですが、`*.onmicrosoft.com` は無効です。 最上位レベルのドメインは禁止されています 。たとえば、`*.com``*.org`.
 
-### <a name="add-link-unfurling-using-app-studio"></a>App Studio を使用してリンク展開を追加する
+### <a name="add-link-unfurling-using-developer-portal"></a>開発者ポータルを使用してリンクを展開解除する
 
-1. Microsoft Teams クライアントから **App Studio** を開き、**[マニフェスト エディター]** タブを選択します。
+1. Microsoft Teams クライアントから **開発者ポータル** を開き、[ **アプリ** ] タブを選択します。
 1. アプリ マニフェストを読み込みます。
-1. **[メッセージ拡張機能]** ページで、検索したいドメインを **[メッセージ ハンドラー]** セクションに追加します。次の画像では、プロセスについて説明します。
+1. [**アプリ機能**] の [**メッセージング拡張機能**] ページで、既存のボットを選択するか、新しいボットを作成します。
+1. **[保存]** を選択します。
+1. [**プレビュー リンク**] セクション **で [ドメインの追加**] を選択し、有効なドメインを入力します。
+1. **[追加]** を選択します。 次の図にこのプロセスを示します。
 
-    :::image type="content" source="~/assets/images/link-unfurling.png" alt-text="App Studio の [メッセージ ハンドラー] セクション":::
+   :::image type="content" source="../../assets/images/tdp/add-domain-button.PNG" alt-text="開発者ポータルのメッセージ ハンドラー セクションのスクリーンショット。" lightbox="../../assets/images/tdp/add-domain.PNG":::
 
 ### <a name="add-link-unfurling-manually"></a>手動でリンク展開を追加する
 

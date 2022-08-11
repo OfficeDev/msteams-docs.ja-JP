@@ -5,12 +5,12 @@ description: Azure Active Directory を使用して Teams のボットに OAuth 
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 5fc21d6e0e761da71670035cd2af1ee2006cc9c6
-ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
+ms.openlocfilehash: 6cfd765ba467d2c8b03ae4f86b4ab8727c21b9b7
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2022
-ms.locfileid: "66792971"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312150"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Teams ボットに認証を追加する
 
@@ -445,7 +445,7 @@ and when for these, and just reference that from here, along with the set of ste
 1. **[チームに追加]** ボタンを選択します。
 1. 次のウィンドウで、ボットを使用するチームを選択します。
 1. **[ボットの設定]** ボタンを選択します。
-1. 左のパネルにある 3 つのドット (&#x25cf;&#x25cf;&#x25cf;) を選択します。 次に、**[App Studio]** アイコンを選択します。
+1. 左のパネルにある 3 つのドット (&#x25cf;&#x25cf;&#x25cf;) を選択します。 次に、 **開発者ポータル** アイコンを選択します。
 1. **[マニフェスト エディター]** タブを選択します。アップロードしたボットのアイコンが表示されます。
 1. また、ボットとメッセージを交換するために使用できるボットをチャットリストに連絡先として表示できます。
 

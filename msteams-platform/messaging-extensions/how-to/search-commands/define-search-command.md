@@ -5,12 +5,12 @@ description: このモジュールでは、Teams アプリのメッセージ拡�
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: c131a511c5c16eac4bf57093bbbeed9bd4172e97
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: cdc3bd5de10fb85970c74065f12164dc36d81fe3
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503943"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312269"
 ---
 # <a name="define-message-extension-search-commands"></a>メッセージ拡張機能検索コマンドを定義する
 
@@ -42,44 +42,54 @@ ms.locfileid: "66503943"
 
 ## <a name="add-the-search-command-to-your-app-manifest"></a>検索コマンドをアプリ マニフェストに追加する
 
-検索コマンドをアプリ マニフェストに追加するには、アプリ マニフェスト JSON の最上位レベルに新しい `composeExtension` オブジェクトを追加する必要があります。 検索コマンドは、App Studio の助けを借りて追加することも、手動で追加することもできます。
+検索コマンドをアプリ マニフェストに追加するには、アプリ マニフェスト JSON の最上位レベルに新しい `composeExtension` オブジェクトを追加する必要があります。 検索コマンドは、開発者ポータルの助けを借りて追加することも、手動で追加することもできます。
 
-### <a name="create-a-search-command-using-app-studio"></a>App Studio を使用して検索コマンドを作成する
+### <a name="create-a-search-command-using-developer-portal"></a>開発者ポータルを使用して検索コマンドを作成する
 
 検索コマンドを作成するための前提条件は、メッセージ拡張機能を既に作成している必要があるということです。 メッセージ拡張機能を作成する方法については、「[メッセージ拡張機能の作成](~/messaging-extensions/how-to/create-messaging-extension.md)」を参照してください。
 
-検索コマンドを作成するには:
+**操作コマンドを作成するには**
 
-1. Microsoft Teams クライアントから **App Studio** を開き、**[マニフェスト エディター]** タブを選択します。
-1. **App Studio** でアプリ パッケージを既に作成している場合は、一覧から選択します。 アプリ パッケージを作成していない場合は、既存のパッケージをインポートします。
-1. アプリ パッケージをインポートしたら、[機能] で **[メッセージ拡張機能** ] を選択 **します**。 メッセージ拡張機能を設定するためのポップアップ ウィンドウが表示されます。
-1. ウィンドウで **[セットアップ]** を選択して、アプリ エクスペリエンスにメッセージ拡張機能を含めます。 次の図は、メッセージ拡張機能の設定ページを示しています。
+1. Microsoft Teams クライアントから **開発者ポータル** を開き、[ **アプリ** ] タブを選択します。 **開発者ポータル** でアプリ パッケージを既に作成している場合は、一覧から選択します。 アプリ パッケージを作成していない場合は、既存のパッケージをインポートします。
+1. アプリ パッケージをインポートしたら、[アプリ **の機能**] で **[メッセージ拡張機能**] を選択します。
+1. メッセージ拡張機能を作成するには、Microsoft 登録ボットが必要です。 既存のボットを使用するか、新しいボットを作成できます。 [ **新しいボットの作成** ] オプションを選択し、新しいボットに名前を付けてから、[ **作成**] を選択します。
 
-    :::image type="content" source="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt-text="メッセージング拡張機能設定":::
+   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="このスクリーンショットは、開発者ポータルでボットを作成する方法を示しています。":::
 
-1. メッセージ拡張機能を作成するには、Microsoft 登録ボットが必要です。 既存のボットを使用するか、新しいボットを作成できます。 **[新しいボットの作成]** オプションを選択し、新しいボットの名前を付けて、**[作成]** を選択します。 次の図は、メッセージ拡張機能のボット作成を示しています。
+1. 既存のボットを使用するには、 **既存のボットを選択** し、ドロップダウン リストから既存のボットを選択するか、ボット ID が既に作成されている場合は **[ボット ID の入力** ] を選択します。
 
-    :::image type="content" source="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt-text="メッセージング拡張機能用のボットを作成する":::
+1. メッセージング拡張機能のスコープを選択し、[保存] を選択 **します**。
 
-1. 既存のボットを使用するには、**[既存のボットを使用する]** を選択し、**[既存のボットのいずれかを選択する]** を選択してドロップダウンから既存のボットを選択し、**[ボット名]** を指定し、ボット ID がすでに作成されている場合は **[保存]** を選択するか、**[別のボット ID に接続する]** を選択し、**[ボット名]** を指定して **[保存]** を選択します。
-
-    :::image type="content" source="~/assets/images/messaging-extension/use-existing-bot.png" alt-text="メッセージング拡張機能に既存のボットを使用する":::
-
-1. メッセージ拡張機能の動作を決定するコマンドを含めるには、メッセージ拡張機能ページの [**コマンド] セクション** で [**追加]** を選択します。
+1. [**コマンド**] セクションで **[コマンドの追加]** を選択して、メッセージ拡張機能の動作を決定するコマンドを含めます。
 次の画像は、メッセージ拡張機能のコマンドの追加を表示します。
 
-    :::image type="content" source="~/assets/images/messaging-extension/include-command.png" alt-text="コマンドを含める":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="スクリーンショットは、メッセージ拡張機能の動作を定義するコマンドを追加する方法を示しています。":::
 
-1. [ **ユーザーがサービスに対して情報のクエリを実行できるようにする] を選択し、メッセージに挿入します**。 次の図は、検索コマンド パラメーターの選択を示しています。
+1. [ **検索** ] を選択し、 **コマンド ID**、 **コマンド タイトル**、および **コマンドの説明** を入力します。
 
-    :::image type="content" source="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt-text="検索コマンド パラメーターの選択":::
+1. すべてのパラメーターを入力し、ドロップダウン リストから入力の種類を選択します。
 
-1. **[コマンド ID]** と **[タイトル]** を追加します。
-1. 検索コマンドを呼び出す必要がある場所を選択します。 次の図は、検索コマンドの呼び出し場所を示しています。
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="スクリーンショットは、メッセージ拡張機能のコマンドを定義するパラメーターを追加する方法を示しています。":::
 
-    :::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt-text="検索コマンド呼び出し場所の選択":::
+1. **[プレビュー リンク****] で [ドメインの追加]** を選択します。
 
-1. 検索パラメーターを追加し、[ **保存**] を選択します。
+1. 有効なドメインを入力し、[ **追加**] を選択します。
+
+   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="スクリーンショットは、リンク解除用の有効なドメインをメッセージング拡張機能に追加する方法を示しています。":::
+
+1. **[保存]** を選択します。
+
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-save.PNG" alt-text="スクリーンショットは、メッセージ拡張機能のすべての設定とパラメーターを保存する方法を示しています。":::
+
+**追加のパラメーターを追加するには**
+
+1. コマンド セクションで省略記号を選択し、 **パラメーターの編集** を選択します。
+
+   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="スクリーンショットは、メッセージ拡張機能のパラメーターを追加する方法を示しています。":::
+
+1. [ **パラメーターの追加]** を選択し、すべてのパラメーターを入力します。
+
+   :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="スクリーンショットは、メッセージ拡張機能のパラメーターを追加する方法を示しています。"lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
 
 ### <a name="create-a-search-command-manually"></a>検索コマンドを手動で作成する
 

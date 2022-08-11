@@ -1,17 +1,17 @@
 ---
 title: 会議アプリ API リファレンス
 author: surbhigupta
-description: 例とコード サンプルを使用して会議アプリ API 参照を識別する方法について説明します。Teams アプリ会議ユーザー ロール API ユーザー コンテキスト通知シグナル クエリ。
+description: この記事では、Teams クライアントと Bot Framework SDK で使用できる会議アプリ API リファレンスと、例、コード サンプル、応答コードについて説明します。
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 20a0380bb6e8282f9ced47621b17b1633d09e28b
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: 5620c720953fea4f39056a0efa553110e3d3e9cb
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232261"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67311954"
 ---
 # <a name="meeting-apps-api-references"></a>会議アプリ API リファレンス
 
@@ -28,7 +28,7 @@ ms.locfileid: "67232261"
 
 |メソッド| 説明| ソース|
 |---|---|----|
-|[**ユーザー コンテキストを取得する**](#get-user-context-api)| コンテキスト情報を取得して、関連するコンテンツを [Microsoft Teams] タブに表示します。| [MSTC SDK](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
+|[**ユーザー コンテキストを取得する**](#get-user-context-api)| コンテキスト情報を取得して、関連するコンテンツを Microsoft Teams タブに表示します。| [MSTC SDK](/microsoftteams/platform/tabs/how-to/access-teams-context#get-context-by-using-the-microsoft-teams-javascript-library) |
 |[**参加者を取得する**](#get-participant-api)| 会議 ID と参加者 ID によって参加者情報を取得します。 | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
 |[**会議中の通知を送信する**](#send-an-in-meeting-notification)| ユーザー ボット チャット用の既存の会話通知 API を使用して会議のシグナルを提供し、会議中の通知を示すユーザー アクションを通知できます。 | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**会議の詳細を取得する**](#get-meeting-details-api)| 会議の静的メタデータを取得します。 | [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
@@ -924,12 +924,12 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 | **channelData.tenant.id** | Azure Active Directory テナント ID。 |
 | **channelData.source** | イベントが発生または呼び出されたソース名。 |
 | **channelData.meeting.id** | 会議に関連付けられている既定の ID。 |
-| **価値。MeetingType** | 会議の種類。 |
-| **価値。タイトル** | 会議の件名。 |
-| **価値。身分証明書** | 会議に関連付けられている既定の ID。 |
-| **価値。JoinUrl** | 会議の参加 URL。 |
-| **価値。StartTime** | 会議の開始時刻 (UTC)。 |
-| **価値。EndTime** | 会議の終了時刻 (UTC)。 |
+| **値。MeetingType** | 会議の種類。 |
+| **値。タイトル** | 会議の件名。 |
+| **値。Id** | 会議に関連付けられている既定の ID。 |
+| **値。JoinUrl** | 会議の参加 URL。 |
+| **値。Starttime** | 会議の開始時刻 (UTC)。 |
+| **値。Endtime** | 会議の終了時刻 (UTC)。 |
 | **locale**| クライアントによって設定されたメッセージのロケール。 |
 
 ## <a name="get-incoming-audio-speaker"></a>着信オーディオ スピーカーを取得する
@@ -937,7 +937,9 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 API `getIncomingClientAudioState` を使用すると、アプリは会議ユーザーの受信オーディオ スピーカー設定を取得できます。 この API は、Teams クライアント SDK を通して使用できます。
 
 > [!NOTE]
-> `getIncomingClientAudioState`モバイル用 API は現在、[パブリック開発者プレビュー](../resources/dev-preview/developer-preview-intro.md)でのみ使用できます。
+>
+> * `getIncomingClientAudioState`モバイル向け API は現在、[パブリック開発者プレビュー](../resources/dev-preview/developer-preview-intro.md)で利用できます。
+> * リソース固有の同意はマニフェスト バージョン 1.12 以降で使用できるため、この API はマニフェスト バージョン 1.11 以前のバージョンでは機能しません。
 
 ### <a name="query-parameter"></a>クエリ パラメーター
 
@@ -977,7 +979,9 @@ function getIncomingClientAudioState(
 この `toggleIncomingClientAudio` API を使用すると、アプリは会議ユーザーの受信オーディオ スピーカー設定をミュートからミュート解除、またはその逆に切り替えることができます。 この API は、Teams クライアント SDK を通して使用できます。
 
 > [!NOTE]
-> `toggleIncomingClientAudio`モバイル用 API は現在、[パブリック開発者プレビュー](../resources/dev-preview/developer-preview-intro.md)でのみ使用できます。
+>
+> * `toggleIncomingClientAudio`モバイル向け API は現在、[パブリック開発者プレビュー](../resources/dev-preview/developer-preview-intro.md)で利用できます。
+> * リソース固有の同意はマニフェスト バージョン 1.12 以降で使用できるため、この API はマニフェスト バージョン 1.11 以前のバージョンでは機能しません。
 
 ### <a name="query-parameter"></a>クエリ パラメーター
 
