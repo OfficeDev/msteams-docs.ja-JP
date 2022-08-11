@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: 会議用のアプリを有効にして構成する方法の詳細
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: b8f91bb0e409c7632451af54a55dd25a968b84cb
-  ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+  ms.openlocfilehash: 8d2dd247689c2224adadd2a21a67536df4cfc81c
+  ms.sourcegitcommit: 42602e8ec917f5033c0b6a95cf65b428db3c5b0a
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 06/30/2022
-  ms.locfileid: "66558437"
+  ms.lasthandoff: 08/09/2022
+  ms.locfileid: "67286114"
 items:
 - durationInMinutes: 1
   content: >
@@ -36,13 +36,13 @@ items:
       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png" alt-text="meetings ステージ ビュー":::
 - title: 前提条件
   durationInMinutes: 1
-  content: "\n次のツールをインストールし、開発環境を設定してください。\n\n* 有効なアカウントを持つ [Microsoft Teams](https://teams.microsoft.com/)\n* [Visual Studio の最新バージョン](https://visualstudio.microsoft.com/downloads/)\n* [nodejs の最新バージョン](https://nodejs.org/en/download/) \n* [最新バージョンの ngrok](https://ngrok.com/download) (開発ボックス テスト用のみ) または同等のトンネリング ソリューション\n\n  > [!NOTE]\n  > ngrok をダウンロードしたら、サインアップして [authtoken](https://ngrok.com/download) をインストールします。\n\n 次のテクノロジに関する実用的な知識が必要です。\n\n* [C#](https://docs.microsoft.com/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)\n* [ECMAScript6](http://es6-features.org/#Constants)\n* [ASP.NET コアの最新バージョン](https://docs.microsoft.com/aspnet/core/?view=aspnetcore-3.1) \n* [React.JSの最新バージョン ](https://reactjs.org/tutorial/tutorial.html) \n"
+  content: "\n次のツールをインストールし、開発環境をセットアップしてください。\n\n* 有効なアカウントを持つ [Microsoft Teams](https://teams.microsoft.com/)\n* [Visual Studio の最新バージョン](https://visualstudio.microsoft.com/downloads/)\n* [nodejs の最新バージョン](https://nodejs.org/en/download/) \n* [最新バージョンの ngrok](https://ngrok.com/download) (開発ボックス テスト用のみ) または同等のトンネリング ソリューション\n\n  > [!NOTE]\n  > ngrok をダウンロードしたら、サインアップして [authtoken](https://ngrok.com/download) をインストールします。\n\n 次のテクノロジに関する実用的な知識が必要です。\n\n* [C#](https://docs.microsoft.com/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)\n* [ECMAScript6](http://es6-features.org/#Constants)\n* [ASP.NET コアの最新バージョン](https://docs.microsoft.com/aspnet/core/?view=aspnetcore-3.1) \n* [React.JSの最新バージョン ](https://reactjs.org/tutorial/tutorial.html) \n"
 - title: ローカル環境を設定する
   durationInMinutes: 1
   content: "\n1. [Microsoft Teams のサンプルを](https://github.com/OfficeDev/Microsoft-Teams-Samples)開きます。\n1. [ **コード**] を選択します。\n1. ドロップダウン メニューから[ **Open with GitHub Desktop]\\(GitHub Desktop で開く\\**) を選択します。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/clone-repository.png\" alt-text=\"リポジトリを複製する\":::\n\n1. [ **複製**] を選択します。 \n"
 - title: ローカル Web サーバーのトンネルを設定する
   durationInMinutes: 1
-  content: "ngrok またはコマンド プロンプトを使用して、ローカルで実行されている Web サーバーのパブリックに利用可能な HTTPS エンドポイントへのトンネルを作成します。 ngrok で次のコマンドを実行します。\n\n ```bash\n ngrok http -host-header=localhost 3978\n ``` \n   > [!TIP]\n   > **ERR_NGROK_4018** が発生した場合は、コマンド プロンプトに表示されている手順に従って、ngrok にサインアップして認証します。 `ngrok http -host-header=localhost 3978` コマンドを実行します。\n\n  :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/ngrok1.png\" alt-text=\"コマンド プロンプトを使用したトンネル\":::\n"
+  content: "ngrok またはコマンド プロンプトを使用して、ローカルで実行されている Web サーバーのパブリックに利用可能な HTTPS エンドポイントへのトンネルを作成します。 ngrok で次のコマンドを実行します。\n\n ```bash\n ngrok http --host-header=localhost 3978\n ``` \n   > [!TIP]\n   > **ERR_NGROK_4018** が発生した場合は、コマンド プロンプトに表示されている手順に従って、ngrok にサインアップして認証します。 `ngrok http --host-header=localhost 3978` コマンドを実行します。\n\n  :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/ngrok1.png\" alt-text=\"コマンド プロンプトを使用したトンネル\":::\n"
 - title: マニフェスト ファイルを設定する
   durationInMinutes: 1
   content: "1. 複製されたリポジトリ内のnode.js フォルダー内の **manifest.json** に移動します。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/manifest-path1.png\" alt-text=\"manifest.json のパス\":::\n\n1. Visual Studio で **manifest.json を** 開き、次の変更を加えます。\n\n     * ボットの **Microsoft アプリ ID に** 置き換えます`<<App-ID>>`。\n     * ngrok ドメイン名の完全修飾に置き換えます `<<BASE-URL>>` 。\n     * 完全修飾 ngrok ドメイン名に置き換えます `<<VALID DOMAIN>>` 。\n     \n     :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/manifest file-1.png\" alt-text=\"マニフェスト ファイル\":::   \n"
@@ -51,14 +51,14 @@ items:
   content: "1. 複製されたリポジトリで、 **サンプル** > **会議 -ステージ ビュー** > **nodejs** に移動します。\n\n1. **nodejs** フォルダーパスをコピーします。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/app-manifest1.png\" alt-text=\"フォルダー パス\":::\n\n1. 新しい **コマンド プロンプト** ウィンドウを開き、現在のディレクトリをコピーした **nodejs** パスに変更します。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/nodejs-path.png\" alt-text=\"nodejs のパス\":::\n\n1. **コマンド プロンプト** で次のコマンドを実行して、パッケージと依存関係をダウンロードします。\n\n   ```Command-Prompt\n    npm install\n    ```  \n\n1. **コマンド プロンプト** で次のコマンドを実行して、アプリを起動します。\n\n   ```Command-Prompt\n   npm start\n   ```\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/npm install.png\" alt-text=\"ビルドと実行\":::\n   \n"
 - title: Teams に会議ステージを追加する
   durationInMinutes: 1
-  content: "\n1. 複製されたリポジトリで、 **会議のステージ ビュー> nodejs> マニフェスト>サンプルに移動します**。\n\n1. **マニフェスト** フォルダーに存在する次のファイルを含む.zipを作成します。 \n   * manifest.json\n   * icon-outline.png\n   * icon-color.png\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/meeting-stage-view-file1.png\" alt-text=\"マニフェスト\":::\n\n1. 発表者と出席者を含む Teams 会議を作成します。\n\n1. 会議が作成されたら、会議の詳細ページに移動し、[ **アプリの追加]** を選択します。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/addapp.png\" alt-text=\"アプリの追加\":::\n   \n1. ポップアップ ウィンドウで、[ **アプリの管理**] を選択します。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/meeting-token-generator-manageapps.png\" alt-text=\"アプリを管理する\":::\n\n1. **[カスタム アプリをアップロードする]** を選択します。 \n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/upload-custom-app.png\" alt-text=\"ファイルをアップロードする\":::\n\n1. **[開く]** を選択して、**マニフェスト** フォルダーに作成した.zip ファイルをアップロードします。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/meeting-stage-view-upload-app1.png\" alt-text=\"アプリをアップロードする\":::\n\n1. [**追加**] を選択します。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/add-an-app-in meeting.png\" alt-text=\"会議にアプリを追加する\":::\n\n   [ **アプリの管理]** セクションには、アプリケーションの一覧が表示されます。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/list-of-apps.png\" alt-text=\"アプリケーションの一覧\":::\n"
+  content: "\n1. 複製されたリポジトリで、 **会議のステージ ビュー> nodejs> マニフェスト>サンプルに移動します**。\n\n1. **マニフェスト** フォルダーに存在する次のファイルを含む.zipを作成します。 \n   * manifest.json\n   * icon-outline.png\n   * icon-color.png\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/meeting-stage-view-file1.png\" alt-text=\"マニフェスト\":::\n\n1. 発表者と出席者を含む Teams 会議を作成します。\n\n1. 会議が作成されたら、会議の詳細ページに移動し、[ **アプリの追加]** を選択します。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/addapp.png\" alt-text=\"アプリの追加\":::\n   \n1. ポップアップ ウィンドウで、[ **アプリの管理**] を選択します。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/meeting-token-generator-manageapps.png\" alt-text=\"アプリを管理する\":::\n\n1. **[カスタム アプリをアップロードする]** を選択します。 \n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/upload-custom-app.png\" alt-text=\"ファイルをアップロードする\":::\n\n1. **[開く]** を選択して、**マニフェスト** フォルダーに作成した.zip ファイルをアップロードします。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/meeting-stage-view-upload-app1.png\" alt-text=\"アプリをアップロードする\":::\n\n1. **[追加]** を選択します。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/add-an-app-in meeting.png\" alt-text=\"会議にアプリを追加する\":::\n\n   [ **アプリの管理]** セクションには、アプリケーションの一覧が表示されます。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/list-of-apps.png\" alt-text=\"アプリケーションの一覧\":::\n"
 - title: Teams でアプリを操作する
   durationInMinutes: 1
   content: "1. Teams 会議に移動します。\n\n1. **[アプリの追加]** を選択します。 \n\n   アプリの選択ページで、アプリは **会議中のアプリ** として表示されます。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/app in meeting.png\" alt-text=\"会議ステージ ビューのアプリ\":::\n\n1. **会議中のアプリを選択します**。\n\n1. **[保存]** を選択します。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/welcome app.png\" alt-text=\"アプリへようこそ\":::\n\n1. 会議を開始します。 \n\n   アイコンは、会議コントロール バーに表示されます。\n   \n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/meeting app in teams.png\" alt-text=\"会議アプリ\":::\n\n1. スプリント状態タスクを更新するには、次を追加します。\n\n   * **割り当て対象**\n   * **説明**\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/add-status.png\" alt-text=\"会議で状態を追加する\":::\n   \n   サイド パネル ビューのアプリ:\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/side panel view.png\" alt-text=\"パネル ビュー\":::\n"
-- title: チャレンジを完了する
+- title: 課題の完了
   durationInMinutes: 1
   content: >
-    このようなことを思い付いたのですか?
+    このようなものを思いついたのですか?
 
 
     :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png" alt-text="ステージ ビューの出力":::

@@ -6,14 +6,14 @@ ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: f87175aa4a965d38e439a58ea726fe0af7c68fbd
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 2365d7adbebca011af9d4204b2a305a6131f72a5
+ms.sourcegitcommit: 209b9942c02b5affdd995348902114d3b9805c61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558003"
+ms.lasthandoff: 08/09/2022
+ms.locfileid: "67288144"
 ---
-# <a name="edit-teams-app-manifest"></a>Teams アプリ マニフェストを編集する
+# <a name="edit-teams-app-manifest-for-visual-studio"></a>Visual Studio の Teams アプリ マニフェストを編集する
 
 マニフェスト テンプレート ファイル `manifest.template.json` は、スキャフォールディング後にフォルダーの下で `templates/appPackage` 使用できます。 プレースホルダーを含むテンプレート ファイルと実際の値は、さまざまな環境のファイル`.fx/configs``.fx/states`を使用して Teams Toolkit によって解決されます。
 

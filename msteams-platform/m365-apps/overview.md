@@ -1,16 +1,16 @@
 ---
 title: Teams アプリを Microsoft 365 全体に拡張する (プレビュー)
-description: このモジュールでは、Microsoft 365 の他の高使用率領域で Teams アプリ エクスペリエンスを構築および更新する方法について説明します。
+description: この記事では、Teams アプリ エクスペリエンスを構築、更新、拡張する方法と、Microsoft 365 の他の高使用率領域で使用されるアプリを作成する方法について説明します。
 ms.date: 05/24/2022
 ms.topic: Conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: ec724b99e69cf496d25984d8dc800040d5817882
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: 208843d9d4c46d29b095ffaf7260f28889f8ed45
+ms.sourcegitcommit: 209b9942c02b5affdd995348902114d3b9805c61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919831"
+ms.lasthandoff: 08/09/2022
+ms.locfileid: "67288214"
 ---
 # <a name="extend-teams-apps-across-microsoft-365"></a>Teams アプリを Microsoft 365 全体に拡張する
 
@@ -20,7 +20,7 @@ Microsoft 365 全体に Teams アプリを拡張すると、1 つのコードベ
 
 Teams アプリ プラットフォームは、Microsoft 365 エコシステムに全体的に進化し、拡大し続けています。 Microsoft 365 全体の Teams アプリ プラットフォーム要素 (Teams、Outlook、Office をアプリケーション ホストとして) の現在のサポートを次に示します。
 
-|          | アプリ マニフェスト要素 | Teams のサポート |Outlook* のサポート | Office* のサポート | メモ |
+|          | アプリ マニフェスト要素 | Teams のサポート |Outlook* のサポート | Office* のサポート | Notes |
 |--|--|--|--|--|--|
 | [**タブ**](../tabs/what-are-tabs.md) (個人用スコープ)    |`staticTabs`  | Web、デスクトップ、モバイル | Web (ターゲット リリース)、デスクトップ (ベータ チャネル) | Web (対象となるリリース)| Microsoft 365 では、チャネルスコープとグループ スコープはまだサポートされていません。 メモを参照 [してください](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook)。
 | [**メッセージ拡張機能**](../messaging-extensions/what-are-messaging-extensions.md) (検索ベース)| `composeExtensions` | Web、デスクトップ、モバイル| Web (ターゲット リリース)、デスクトップ (ベータ チャネル)| - |Microsoft 365 では、アクション ベースはまだサポートされていません。 メモを参照 [してください](extend-m365-teams-message-extension.md#preview-your-message-extension-in-outlook)。 |
@@ -71,7 +71,7 @@ Microsoft 365 対応の Teams アプリとして公開されると、アプリ�
 
 詳細については、「 [Microsoft 365 用の Teams アプリの発行」を](publish.md)参照してください。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 Microsoft 365 用の Teams アプリをビルドするように開発環境を設定します。
 
