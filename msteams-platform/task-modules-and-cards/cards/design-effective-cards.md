@@ -4,12 +4,12 @@ description: このモジュールでは、Teams のアダプティブ カード
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 1f4f458d1ebdae103c6114b8c833c0e1afc2c0b1
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 669c117ddd344b1ad77dc5983e89fd59e2405a47
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558157"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312084"
 ---
 # <a name="designing-adaptive-cards-for-your-microsoft-teams-app"></a>Microsoft Teams のアプリのアダプティブ カードの設計
 
@@ -204,11 +204,11 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 **Do**: この画面では、カードの下部に 2 つの列があります。 入力コンポーネントの幅は `stretch` に設定され、**[選択]** ボタンの幅は `auto` に設定されています。 これにより、ボタンが完全に表示されたままになります。
 
-:::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="画像は、アダプティブ カードで列の幅を設定する方法を示しています。":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-do.png" alt-text="スクリーンショットは、アダプティブ カードの列の幅を設定する方法を示しています。":::
 
 **Don't**: この画面では、両方の列で `width` が `auto` に設定されています。 これにより、右側の **[選択]** ボタンが入力と比較してわずかに切り取られます。
 
-:::image type="content" source="~/assets/images/adaptive-cards/width-auto-dont.png" alt-text="画像は、アダプティブ カードで列幅を設定しない方法を示しています。":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-dont.png" alt-text="スクリーンショットは、アダプティブ カードで列の幅を設定しない方法を示しています。":::
 
 # <a name="code"></a>[コード](#tab/code)
 
@@ -388,11 +388,11 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 **Do**: レイアウトは、列数が少ないモバイルでより適切に表示される傾向があります。
 
-:::image type="content" source="~/assets/images/adaptive-cards/column-amount-do.png" alt-text="画像は、アダプティブ カードの適切な列数を示しています。":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-column-amount-do.png" alt-text="スクリーンショットは、アダプティブ カードの適切な列の数を示しています。":::
 
 **Don't**: 使用する列が多すぎると、モバイルでカードのコンテンツが乱雑になる可能性があります。
 
-:::image type="content" source="~/assets/images/adaptive-cards/column-amount-dont.png" alt-text="画像は、列が多すぎるとアダプティブ カードのレイアウトに悪影響を与える可能性があることを示しています。":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-column-amount-dont.png" alt-text="スクリーンショットは、列が多すぎるとアダプティブ カードのレイアウトに悪影響を与える可能性があることを示しています。":::
 
 #### <a name="example-fixed-width-has-its-place"></a>例: 固定幅を使用した方が良い場合もあります。
 
@@ -400,7 +400,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 表示しているサイズを変更する必要がない場合は、列を特定のピクセル幅に設定します。 この例では、50 ピクセルのサイズの左側の列を示していますが、サムネイルの横の説明ではカードの長さを伸ばしています。
 
-:::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="画像は、アダプティブ カードで列幅を設定する方法を示しています。":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-do.png" alt-text="スクリーンショットは、アダプティブ カードで列の幅を設定する方法を示しています。":::
 
 # <a name="code"></a>[コード](#tab/code)
 
@@ -548,17 +548,17 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 [`TextBlock`](https://adaptivecards.io/explorer/TextBlock.html)、[`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html)、または [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) のいずれを使用している場合でも、`wrap` プロパティを `true` に設定して、モバイルでカードのテキストが切り捨てられないようにします。
 
-#### <a name="example-making-sure-text-doesnt-truncate"></a>例: テキストが切り捨てられないことを確認する
+#### <a name="example-making-sure-text-dont-truncate"></a>例: テキストが切り詰められないことを確認する
 
 # <a name="design"></a>[デザイン](#tab/design)
 
 **Do**: この画面では、カードの `wrap` プロパティが `true` に設定されています。 これにより、テキストを任意の画面サイズに合わせることができます。
 
-:::image type="content" source="~/assets/images/adaptive-cards/text-wrap-true.png" alt-text="画像は、アダプティブ カードでテキストを折り返す方法を示しています。":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-text-wrap-true.png" alt-text="スクリーンショットは、アダプティブ カードでテキストを折り返す方法を示しています。":::
 
 **Don't**: この画面では、カードは `wrap` プロパティを使用していないため、モバイル画面ではテキストが途切れます。
 
-:::image type="content" source="~/assets/images/adaptive-cards/text-wrap-false.png" alt-text="画像は、アダプティブ カードでテキストを折り返さないとどうなるかを示しています。":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-text-wrap-false.png" alt-text="スクリーンショットは、アダプティブ カードでテキストを折り返さないとどうなるかを示しています。":::
 
 # <a name="code"></a>[コード](#tab/code)
 
@@ -655,7 +655,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="アダプティブ カードに少数のアクションのみを含める方法に関するベスト プラクティス。":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="スクリーンショットは、アダプティブ カードに少数のアクションのみを含める方法に関するベスト プラクティスを示しています。":::
 
 #### <a name="do-use-up-to-six-primary-actions"></a>Do: 最大 6 つの主要なアクションを使用します
 
@@ -663,7 +663,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="アダプティブ カードに対するアクションが多すぎてユーザーに負荷をかけないようにする方法についてのベスト プラクティスです。":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="スクリーンショットは、アダプティブ カードに対するアクションが多すぎてユーザーに負荷をかけないようにする方法についてのベスト プラクティスを示しています。":::
 
 #### <a name="dont-use-more-than-six-primary-actions"></a>Don't: 6 つ以上のプライマリ アクションを使用しないでください
 
@@ -674,7 +674,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 ### <a name="frequency"></a>頻度
 
-:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="アダプティブ カードの頻度に関するベスト プラクティス。":::
+:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="スクリーンショットは、アダプティブ カードの頻度に関するベスト プラクティスを示しています。":::
 
 #### <a name="do-be-concise"></a>Do: 簡潔にしてください
 
