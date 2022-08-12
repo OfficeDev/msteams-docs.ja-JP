@@ -5,12 +5,12 @@ description: アプリの計画中に考慮すべき質問、ユーザーとそ�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 60b0d1ed461ec7c632b1d488c65ac2c43f05f3ac
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 78dd40e13c3bdac359cc5201bda92a5b1daccfb8
+ms.sourcegitcommit: 42602e8ec917f5033c0b6a95cf65b428db3c5b0a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558129"
+ms.lasthandoff: 08/09/2022
+ms.locfileid: "67286120"
 ---
 # <a name="teams-app-planning-checklist"></a>Teams アプリの計画チェックリスト
 
@@ -27,12 +27,14 @@ ms.locfileid: "66558129"
 <details>
 <summary>ユーザーを理解する</summary>
 
+ユーザーとその懸念事項を理解することは、Teams アプリがどのように役立つかを示す最初の指標です。 問題に関するユース ケースを構築し、アプリで問題を解決する方法を決定し、ソリューションを描画します。 詳細については、「[アプリのユース ケースについて](understand-use-cases.md)」を参照してください。
+
 | # | 考慮する要因 |
 | --- | --- |
-| 1 | ユーザーは主にモバイル クライアントの現場担当者ですか? |
-| 2 | 多くのゲスト ユーザーがアプリへのアクセスを必要とすることを期待していますか? |
+| 1 | ユーザーは主にモバイル クライアントを使用する現場担当者ですか? |
+| 2 | 多くの外部ユーザーがアプリへのアクセスを必要とすることを期待していますか? |
 | 3 | チームとチャネル、または主にグループ チャットを使用していますか? |
-| 4 | プライマリ ユーザーは技術的にどの程度高度ですか? |
+| 4 | プライマリ ユーザーは技術的な知識をどの程度持っていますか? |
 | 5 | 完全なオンボーディング エクスペリエンスが必要ですか? それともいくつかのポインターが必要な場合があります。 |
 
 </details>
@@ -63,10 +65,12 @@ ms.locfileid: "66558129"
 <details>
 <summary>認証を提供する</summary>
 
+認証はアプリ ユーザーを検証し、不当なアクセスに対してアプリとアプリのユーザーをセキュリティで保護することです。 アプリに適した認証方法を使用して、Teams アプリを使用たいアプリ ユーザーを検証できます。 詳細については、 「[Microsoft Teams でのユーザーの認証](../authentication/authentication.md)」を参照してください。
+
 | # | 考慮する要因|
 |--- | --- |
 | 1 | ユーザーは自分のロールに基づいてデータのさまざまなビューにアクセスしますか? |
-| 2 | 関与している PII はありますか? |
+| 2 | 顧客コンテンツは関係していますか? |
 | 3 | 対話もユーザー ロールに基づいて行われますか? |
 | 4 | 外部ユーザーはアプリにアクセスしますか? |
 
@@ -74,6 +78,8 @@ ms.locfileid: "66558129"
 <br>
 <details>
 <summary>オンボーディング エクスペリエンスを計画する</summary>
+
+優れた Teams アプリを構築することは、ユーザーのニーズを満たす適切な機能の組み合わせを見つけることです。 シームレスなオンボード エクスペリエンスをユーザーに提供するために、アプリの使用方法と操作を説明するステップ バイ ステップ ガイドを作成できます。 たとえば、「[Teams 会話ボットの作成](../../sbs-teams-conversation-bot.yml)」を参照してください。
 
 | # | 考慮する要因 |
 | --- | --- |
@@ -109,17 +115,23 @@ ms.locfileid: "66558129"
 <details>
 <summary>ビルド環境の選択</summary>
 
+Teams を使用すると、アプリの要件に最適なビルド環境を選択できます。 Teams Toolkit やその他の SDK (C#、Blazor、Node.js など) を使用して作業を開始します。 詳細については、「[Teams 機能を使用してアプリを計画する](../app-fundamentals-overview.md)」を参照してください。
+
 提案: アプリのニーズに基づいて適切な環境を選択するのに役立つオプション。
 </details>
 <br>
 <details>
 <summary>アプリのテストを計画する</summary>
 
+アプリを Microsoft Teams と統合した後、アプリを発行する前にテストする必要があります。 最終的な目標は、アプリのユーザーをできるだけ多く獲得することです。したがって、ユーザーが使用できる複数のデバイスでアプリをテストするようにしてください。 詳細については、「[アプリのテスト](../build-and-test/test-app-overview.md)」を参照してください。
+
 提案: アプリに最適なテスト環境を決定するのに役立つオプション。
 </details>
 <br>
 <details>
 <summary>アプリの配布を計画する</summary>
+
+Microsoft Teams アプリは、個人、チーム、組織、またはそれを使用する任意のユーザーに提供できます。 配布方法は、ユーザーのニーズ、ビジネス、技術要件、アプリの目標など、いくつかの要因によって異なります。 詳細については、「[Microsoft Teams アプリの配布](../deploy-and-publish/apps-publish-overview.md)」を参照してください。
 
 提案: 最適な配布モデルを決定するのに役立つオプション。
 
@@ -129,7 +141,7 @@ ms.locfileid: "66558129"
 
 Teams でアプリがホストされない。 ユーザーが Teams にアプリをインストールすると、構成ファイル (アプリ マニフェストとも呼ばれます) とアプリのアイコンのみを含むアプリ パッケージがインストールされます。 アプリのロジックとデータ ストレージは、開発中のローカルホストや Azure Web サービスなど、他の場所でホストされます。 Teams は HTTPS 経由でこれらのリソースにアクセスします。
 
-:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Teams アプリのアプリホスティングを示す図":::
+:::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Teams アプリのアプリホスティングを示す図。":::
 
 ## <a name="plan-beyond-app-building"></a>アプリのビルド以外の計画
 
