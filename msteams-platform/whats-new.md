@@ -3,12 +3,12 @@ title: Teams の開発者向けの新機能と更新情報
 description: 新しく導入された Microsoft Teams の開発者向け機能と、既存の機能の更新について説明します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 6e6326cb415a034fafec92879d0d20ab3ec9c472
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: 11d4501aa8080a27b74581aefcb33795ded4ef78
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232282"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67312241"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -36,6 +36,7 @@ ms.locfileid: "67232282"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ----------------|
+| 08/09/2022 | Visual Studio 2022 用 Teams ツールキットが導入されました | [ツールと SDK] > [Visual Studio 向け Teams ツールキット] > [[Visual Studio 向け Teams ツールキットの概要]](toolkit/teams-toolkit-overview-visual-studio.md) |
 | 08/03/2022 | 個人用アプリまたはタブから Teams に共有する | [Teams と統合] > [Teams に共有] > [[個人用アプリまたはタブから Teams に共有]](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 08/03/2022 | 会議後のシナリオで会議のトランスクリプトを取得する機能が追加されました。 | [Teams 会議と通話用のアプリを構築する] > [Graph API を使用して会議のトランスクリプトを取得する] > [[概要]](graph-api/meeting-transcripts/overview-transcripts.md) |
 | 08/03/2022 | Web アプリからの [Teams で共有] のリンク展開 | [Teams との統合] > [Teams への共有] > [[Web アプリから Teams に共有する]](concepts/build-and-test/share-to-teams-from-web-apps.md) |
@@ -227,7 +228,6 @@ ms.locfileid: "67232282"
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ------------------ |
 | 2018 年 11 月 12 日 | リリースされたバージョンの Teams で、グループ チャットでタブを使用できるようになりました。 この作業の一環として、タブ セクションが分かりやすく作り直されました。| [構成可能なタブ](~/concepts/tabs/tabs-configurable.md) |
-| 2018/11/11 | Node JS と .NET/C# の概要は、Teams で App Studio を使用するために更新され、Node ベースの Teams アプリを Azure でホスティングするための新しいセクションが追加されました。 | [C#/.NET と App Studio を使用して Microsoft Teams プラットフォームの使用を開始する](~/get-started/get-started-dotnet-app-studio.md)、[Node JS と App Studio を使用して Microsoft Teams プラットフォームの使用を開始する](~/get-started/get-started-nodejs-app-studio.md)、[Node Teams アプリを Azure にホストする](~/get-started/get-started-nodejs-in-azure.md)|
 | 2018/11/9 | ユーザー間のプライベート チャットへのディープ リンクを作成できるようになりました。 | [チャットへのディープ リンクの設定](concepts/build-and-test/deep-links.md#navigate-to-a-chat) |
 | 2018 年 11 月 8 日 | SharePoint Framework 1.7 がリリースされたことに伴い、Microsoft Teams タブを SharePoint Framework の Web パーツとして使用できる新機能が追加されました。 | [SharePoint のタブ](~/concepts/tabs/tabs-in-sharepoint.md) |
 | 2018/11/5 | **タスク モジュール** 機能がリリースされました。 タスク モジュールを使用すると、Teams アプリケーションでボットとタブの両方からモーダル ポップアップ エクスペリエンスを作成することができます。 ポップアップ内で、独自のカスタム HTML/JavaScript コードを実行したり、YouTube や Microsoft Stream ビデオなどの `<iframe>` ベースのウィジェットを表示したり、[アダプティブ カード](/adaptive-cards/)を表示したりすることができます。 | [タスク モジュールの概要](~/concepts/task-modules/task-modules-overview.md)、[タブ内のタスク モジュール](~/concepts/task-modules/task-modules-tabs.md)、[ボット内のタスク モジュール](~/concepts/task-modules/task-modules-bots.md) |
@@ -251,7 +251,6 @@ ms.locfileid: "67232282"
 | 2018/4/2 | ボットを使用して、アプリの通知を送信します。 |[通知のみのボット](~/concepts/bots/bots-notification-only.md)|
 | 2018/3/27 | プロアクティブなメッセージングのためのドキュメントを展開しました。 |[会話の開始](./concepts/bots/bot-conversations/bots-conv-proactive.md)|
 | 2018/3/15 | カードのドキュメントがリファクタリングされました。 |[カード](~/concepts/cards/cards.md)、[カード アクション](~/concepts/cards/cards-actions.md)、[カードの書式設定](~/concepts/cards/cards-format.md)、[カード リファレンス](~/concepts/cards/cards-reference.md)|
-| 2018/3/3 | Teams App Studio のドキュメントが追加されました。 |[Teams App Studio を使用したアプリの迅速な開発](~/get-started/get-started-app-studio.md)、[App Studio でのコントロール ライブラリの使用](~/get-started/app-studio-component-library.md)|
 | 2018/2/27 | AsTeamsChannelAccounts() メソッドのデモを行うサンプル コードが追加されました。 |[コンテキストをボット用に取得する](~/concepts/bots/bots-context.md)|
 | 2018/2/5 | C# の使用を開始するためのトピックが追加されました。 |[Microsoft Teams プラットフォームで C#/.NET を使い始める](./get-started/get-started-dotnet-app-studio.md)|
 |

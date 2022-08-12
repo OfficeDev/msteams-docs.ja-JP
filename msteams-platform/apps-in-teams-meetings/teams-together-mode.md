@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: f59a5765d58008586ff1ce9b238b9aa69c1aefb6
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: d54d2ffaa6035778ba195c9e2eba44c2e096892e
+ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841793"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67311968"
 ---
 # <a name="custom-together-mode-scenes-in-teams"></a>Teams でのカスタム Together モードのシーン
 
@@ -37,7 +37,7 @@ Microsoft Teams の Custom Together モードシーンは、次のアクショ�
 カスタムの Together モードシーンを使用するには、次の基本的な知識が必要です。
 
 * シーン内のシーンとシートを定義します。
-* Microsoft デベロッパー アカウントを持ち、Teams [開発者ポータル](../concepts/build-and-test/teams-developer-portal.md) と App Studio について理解を深めます。
+* Microsoft デベロッパー アカウントを持ち、Teams [開発者ポータル](../concepts/build-and-test/teams-developer-portal.md) について理解を深めます。
 * [アプリサイドローディングの概念](../concepts/deploy-and-publish/apps-upload.md)について説明します。
 * 管理者が [**カスタム アプリ**](../concepts/deploy-and-publish/apps-upload.md)をアップロードするアクセス許可を付与していることを確認し、アプリのセットアップポリシーと会議ポリシーの一部としてすべてのフィルターをそれぞれ選択します。
 
@@ -53,7 +53,7 @@ Microsoft Teams の Custom Together モードシーンは、次のアクショ�
 
 ## <a name="build-a-scene-using-the-scene-studio"></a>Scene Studio を使用してシーンを構築する
 
-Microsoft には、シーンを構築できる Scene Studio があります。 これは、 [シーン エディター ( Teams 開発者ポータル) ](https://dev.teams.microsoft.com/scenes)で使用できます。 このドキュメントでは、Teams 開発者ポータルの Scene Studio について説明します。 インターフェイスと機能はすべて、App Studio シーン デザイナーで同じです。
+Microsoft には、シーンを構築できる Scene Studio があります。 これは、 [シーン エディター ( Teams 開発者ポータル) ](https://dev.teams.microsoft.com/scenes)で使用できます。 このドキュメントでは、Teams 開発者ポータルの Scene Studio について説明します。
 
 Scene Studio のコンテキスト内のシーンは、次の要素を含む成果物です。
 
