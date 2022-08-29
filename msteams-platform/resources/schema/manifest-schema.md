@@ -3,12 +3,12 @@ title: マニフェスト スキーマの参照
 description: この記事では、Microsoft Teams リファレンスのマニフェスト スキーマ、スキーマ、およびサンプルの完全なマニフェストを紹介します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 9208bcef1195baee58678e410fddf82df3ef6b51
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
-ms.translationtype: HT
+ms.openlocfilehash: c7867faf23e9abea0ae139de5cdd1cd11ba239e6
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058215"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363439"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Teams のアプリ マニフェストのスキーマ
 
@@ -358,7 +358,7 @@ Microsoft Teams アプリ マニフェストでは、アプリが Microsoft Team
 
 このバージョン文字列は、[semver](http://semver.org/) 標準 (MAJOR.MINOR.PATCH) に従う必要があります。
 
-## <a name="id"></a>id
+## <a name="id"></a>ID
 
 **必須** — Microsoft アプリ ID
 
@@ -398,7 +398,7 @@ Teams エクスペリエンスでユーザーに表示されるアプリ エク�
 
 ユーザーに、アプリについて説明します。AppSource に送信されたアプリの場合、これらの値は AppSource エントリの情報と一致する必要があります。
 
-説明があなたの経験をについて述べており、潜在的な顧客があなたの経験が何をするかを理解するのに役立つことを確認してください。 外部アカウントを使用する必要がある場合は、完全な説明にするよう気を配る必要があります。 `short` と `full` の値は異なっている必要があります。 短い説明を長い説明の中で繰り返すことはできません。また、他のアプリ名を含めることはできません。
+説明があなたの経験をについて述べており、潜在的な顧客があなたの経験が何をするかを理解するのに役立つことを確認してください。 外部アカウントを使用する必要がある場合は、完全な説明にするよう気を配る必要があります。 `short` と `full` の値は異なっている必要があります。 短い説明を長い説明内で繰り返すことはできません。また、他のアプリ名を含めてはなりません。
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
@@ -453,7 +453,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 **省略可能** — 配列
 
-アプリ エクスペリエンスにチーム チャネル タブ エクスペリエンスがあり、追加する前に追加の構成が必要な場合に使用されます。 構成可能なタブは、`team` スコープおよび `groupchat` スコープでのみサポートされており、同じタブを複数回構成できます。 ただし、マニフェストで定義できるのは 1 回のみです。
+アプリ エクスペリエンスに、追加する前に追加の構成が必要なチーム チャネル タブ エクスペリエンスがある場合に使用されます。 構成可能なタブは、`team` スコープおよび `groupchat` スコープでのみサポートされており、同じタブを複数回構成できます。 ただし、マニフェストで定義できるのは 1 回のみです。
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
@@ -615,7 +615,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 アプリが Teams クライアント内にロードすることを予測する Web サイトの有効なドメインのリスト。 ドメイン リストには、`*.example.com` などのワイルドカードを含めることができます。 有効なドメインは、ドメインの 1 つのセグメントと正確に一致します。 `a.b.example.com` と一致させる必要がある場合は、`*.*.example.com` を使用してください。 タブ構成またはコンテンツ UI がタブ構成以外のドメインに移動する場合は、そのドメインをここで指定する必要があります。
 
-サポートする ID プロバイダーのドメインをアプリに含め **ない** でください。 たとえば、Google ID を使用して認証するには、accounts.google.com にリダイレクトする必要がありますが、`validDomains[]` に accounts.google.com を含めないでください。
+サポートする ID プロバイダーのドメインをアプリに含め **ない** でください。 たとえば、Google ID を使用して認証を行うには、accounts.google.com にリダイレクトする必要があります。ただし、accounts.google.com を `validDomains[]`含めてはなりません。
 
 正常に機能するために独自の SharePoint URL を必要とする Teams アプリでは、有効なドメインリストに "{teamsitedomain}" が含まれています。
 
@@ -633,13 +633,13 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`id`|string|36 文字|✔️|Azure AD のアプリケーション ID を指定します。 この ID は GUID である必要があります。|
-|`resource`|string|2048 文字|✔️|SSO の認証トークンを取得するためのアプリのリソース URL。 </br> **注:** SSO を使用していない場合は、エラー応答を回避するために、このフィールドにダミーの文字列値 (たとえば、<https://notapplicable>) をアプリ マニフェストに入力してください。 |
+|`resource`|string|2048 文字|✔️|SSO の認証トークンを取得するためのアプリのリソース URL。 </br> **メモ：** SSO を使用していない場合は、エラー応答を回避するために、このフィールドにダミーの文字列値をアプリ マニフェストに <https://notapplicable> 入力してください。 |
 
 ## <a name="graphconnector"></a>graphConnector
 
 **省略可能** — オブジェクト
 
-アプリの Graph コネクタ構成を指定します。 これが存在する場合は [、webApplicationInfo.id](#webapplicationinfo) も指定する必要があります。
+アプリの Graph コネクタ構成を指定します。 これが存在する場合は、 [webApplicationInfo.id](#webapplicationinfo) も指定する必要があります。
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
@@ -767,15 +767,15 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 
 次のプロパティを定義できます。
 
-* `name`: アプリの表示名。
-* `shortDescription`: アプリの簡単な説明。
-* `longDescription`: アプリの長い説明。
-* `smallImageUrl`: アプリのアウトライン アイコン。
-* `largeImageUrl`: アプリの色アイコン。
-* `accentColor`: 使用する色とアウトライン アイコンの背景。
-* `developerUrl`: 開発者の Web サイトの HTTPS URL。
-* `privacyUrl`: 開発者のプライバシー ポリシーの HTTPS URL。
-* `termsOfUseUrl`: 開発者の使用条件の HTTPS URL。
+* [name](#name): アプリの表示名。
+* [shortDescription](#description): アプリの簡単な説明。
+* [longDescription](#description): アプリの長い説明。
+* [smallImageUrl](#icons): アプリのアウトライン アイコン。
+* [largeImageUrl](#icons): アプリの色アイコン。
+* [accentColor](#accentcolor): 使用する色とアウトライン アイコンの背景。
+* [developerUrl](#developer): 開発者の Web サイトの HTTPS URL。
+* [privacyUrl](#developer): 開発者のプライバシー ポリシーの HTTPS URL。
+* [termsOfUseUrl](#developer): 開発者の使用条件の HTTPS URL。
 
 ## <a name="supportedchanneltypes"></a>supportedChannelTypes
 

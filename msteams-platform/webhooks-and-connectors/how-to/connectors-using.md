@@ -4,12 +4,12 @@ author: laujan
 description: このモジュールでは、Office 365 コネクタを使用し、Microsoft Teams で実行可能なメッセージを作成して送信する方法について説明します
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 1d52760784e3d0bbbd1e4a87c576294530242629
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
-ms.translationtype: HT
+ms.openlocfilehash: 6e50877f1afbebe1e132c6461fbae30445227f43
+ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190103"
+ms.lasthandoff: 08/13/2022
+ms.locfileid: "67337216"
 ---
 # <a name="create-and-send-messages"></a>メッセージを作成して送信する
 
@@ -289,3 +289,5 @@ try
 * [Teams ボットメッセージのレート制限](~/bots/how-to/rate-limit.md)
 * [アダプティブ カードを使用してタブをビルドする](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Microsoft Teams のカードの書式設定](~/task-modules-and-cards/cards/cards-format.md)
+* [JavaScript を使用した通知ボットのビルド](../../sbs-gs-notificationbot.yml)
+* [JavaScript を使用して初めてのボット アプリを構築する](../../sbs-gs-bot.yml)

@@ -5,12 +5,12 @@ ms.topic: how-to
 author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 96b80409697c9347fac82138d0e929c5c874725a
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 702f8c6c53038fcedbd30a34262f2ed49eb03752
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558101"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363453"
 ---
 # <a name="upload-your-app-in-teams"></a>Teams でアプリをアップロードする
 
@@ -24,7 +24,9 @@ ms.locfileid: "66558101"
 > アプリを複数回サイドローディングすると、メッセージング拡張機能の複数のインスタンスが表示されます。
 
 > [!IMPORTANT]
-> 現時点では、サイドローディング アプリは Government Community Cloud (GCC) で利用できますが、GCC-High および国防総省 (DOD) では使用できません。
+>
+> * 現在、アプリのサイドローディングは Government Community Cloud (GCC) でのみ可能であり、GCC-Highおよび国防総省 (DOD) では不可能です。
+> * アプリのインストールは、Teams デスクトップ アプリでのみサポートされます。
 
 ## <a name="prerequisites"></a>前提条件
 

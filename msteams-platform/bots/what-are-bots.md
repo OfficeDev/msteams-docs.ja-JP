@@ -1,18 +1,21 @@
 ---
 title: Microsoft Teams のボット
 author: surbhigupta
-description: このラーニング パスを使用して、Microsoft Teams の会話型ボットの使用を開始します。これはコード サンプルです。
+description: この記事では、Microsoft Teams の会話ボットを使用して、ファイルの共有、プロアクティブ通知の送信、対話型カードの送信、通話、ボット コマンドの呼び出し、IVR の呼び出しを行います。
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: f04f41ac100f243f7560f63364475cd877cf7bf3
-ms.sourcegitcommit: eb480bf056a46837d18b4ea35e465486cc68f981
-ms.translationtype: HT
+ms.openlocfilehash: 90176b63c64d23ae76a8c98515e37455ab0742c0
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66912262"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363509"
 ---
 # <a name="build-bots-for-teams"></a>Teams 用のボットを構築する
+
+> [!NOTE]
+> Teams 用の新しい世代開発ツールを使用して、最初のボット アプリまたは通知ボット アプリを作成することをお勧めします。 詳細については、「 [Teams Toolkit for Visual Studio Code」と「Teams](../toolkit/teams-toolkit-fundamentals.md) [Toolkit for Visual Studio」を](../toolkit/teams-toolkit-overview-visual-studio.md)参照してください。
 
 ボットは、チャットボットまたは会話ボットとも呼ばれます。 これは、カスタマー サービスやサポート スタッフなどのユーザーが単純で反復的なタスクを実行するアプリです。 ボットの日常的な使用には、天気に関する情報を提供するボット、ディナーの予約を行うボット、旅行情報を提供するボットなどがあります。 ボットとのやり取りは、質問や回答を素早く行ったり、複雑な会話になったりする場合があります。
 
@@ -26,17 +29,17 @@ ms.locfileid: "66912262"
 
 会話ボットを使用すると、ユーザーはテキスト、対話型カード、タスク モジュールを使用して Web サービスと対話できます。
 
-:::image type="content" source="../assets/images/invokebotwithtext.png" alt-text="テキストを使用した Web サービス"lightbox="../assets/images/invokebotwithtext.png":::
+:::image type="content" source="../assets/images/invokebotwithtext.png" alt-text="スクリーンショットは、テキストを使用した Web サービスを示す例です。"lightbox="../assets/images/invokebotwithtext.png":::
 
-:::image type="content" source="../assets/images/invokebotwithcard.png" alt-text="対話型カードを使用した Web サービス"lightbox="../assets/images/invokebotwithcard.png"border="true":::
+:::image type="content" source="../assets/images/invokebotwithcard.png" alt-text="スクリーンショットは、対話型カードを使用した Web サービスを示す例です。"lightbox="../assets/images/invokebotwithcard.png"border="true":::
 
-:::image type="content" source="../assets/images/task-module-example.png" alt-text="タスク モジュールを使用した Web サービス"lightbox="../assets/images/task-module-example.png"border="true":::
+:::image type="content" source="../assets/images/task-module-example.png" alt-text="スクリーンショットは、タスク モジュールを使用する Web サービスを示す例です。" lightbox="../assets/images/task-module-example-expanded.png":::
 
 会話ボットは非常に柔軟です。 ボットは、人工知能と自然言語処理を含むいくつかの基本的なコマンドまたは複雑なタスクを処理できます。 ボットは、大規模なアプリケーションの一部にすることも、スタンドアロンにすることもできます。
 
 カード、テキスト、タスク モジュールの適切な組み合わせを使用して、便利なボットを作成します。 次の図は、テキストカードと対話型カードを使用して、1 対 1 のチャットでボットと会話するユーザーを示しています。
 
-:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="サンプル FAQ ボット":::
+:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="スクリーンショットは、サンプルの FAQ ボットを示す例です。":::
 
 ユーザーとボットの間のすべての対話は、アクティビティとして表されます。 ボットは、アクティビティを受け取ると、そのアクティビティ ハンドラーに渡します。 [ボット アクティビティ ハンドラー](~/bots/bot-basics.md)を参照してください。
 
@@ -65,6 +68,9 @@ Teams ボット API を使用して、チャットまたはチームのメンバ
 |サンプルの名前 | 説明 | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
 | ボットの毎日のタスクリマインダー| 定期的なタスクをスケジュールし、スケジュールされた時刻にリマインダーを受け取る方法を示します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/nodejs) |
+| Hello World ボット | これは、Bot 拡張機能と Message 拡張機能の両方の機能を備えたシンプルな hello world アプリケーションです。 |  | [表示](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/hello-world-bot) |
+| アダプティブ カード通知 | これは、Bots を使用してさまざまなアダプティブ カードで通知を送信する方法を示すサンプルです。 |  | [表示](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/adaptive-card-notification) |
+| 受信 Webhook 通知 | これは、Microsoft Teams チャネルで受信 Webhook 経由で通知を送信する方法を示すサンプルです。 |  | [表示](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/incoming-webhook-notification) |
 
 ## <a name="see-also"></a>関連項目
 
@@ -74,3 +80,5 @@ Teams ボット API を使用して、チャットまたはチームのメンバ
 * [Teams ボットに認証を追加する](~/bots/how-to/authentication/add-authentication.md)
 * [ボットのアクティビティ ハンドラー](~/bots/bot-basics.md)
 * [Teams ボットの会話イベント](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+* [JavaScript を使用して初めてのボット アプリを構築する](../sbs-gs-bot.yml)
+* [JavaScript を使用した通知ボットのビルド](../sbs-gs-notificationbot.yml)
