@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.date: 04/07/2022
-ms.openlocfilehash: 01886d298320ddbc5736fc86c29ba2f9585c5562
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: 3c9265f48191f4078d66b4166ce3a3c0650e762d
+ms.sourcegitcommit: b060a3901a3ba770ea6fca96d0ab477c252af1a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919852"
+ms.lasthandoff: 08/23/2022
+ms.locfileid: "67417508"
 ---
 # <a name="unified-meetings-apps"></a>統合された会議アプリ
 
@@ -38,7 +38,7 @@ Teams 統合会議アプリは、次の概念に基づいています。
 タブを使用すると、チームのメンバーは会議内の特定のスペースでサービスとコンテンツにアクセスできます。 チームは、タブを直接操作し、タブの中で使用できるツールとデータに関する会話を行います。 Teams 会議では、次を選択してタブを追加できます。 <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>をクリックし、インストールするアプリを選択します。
 
 > [!IMPORTANT]
-> 会議にタブを統合した場合、アプリはタブの Teams [シングル サインオン (SSO) 認証フローに](../tabs/how-to/authentication/tab-sso-overview.md)従う必要があります。
+> 会議にタブ アプリを統合している場合は、 [タブの Teams シングル サインオン (SSO) 認証フロー](../tabs/how-to/authentication/tab-sso-overview.md)に従うことをお勧めします。
 
 > [!NOTE]
 > Teams 会議拡張機能タブ アプリのアプリの追加オプションは、Teams Web クライアントではサポートされていません。
@@ -212,7 +212,7 @@ Teams 統合会議アプリを使用すると、会議の参加者ロールに�
 
 次の表に、ユーザーの種類と、スケジュールされた会議で各ユーザーがアクセスできる機能の一覧を示します。
 
-| ユーザーの種類 | タブ | ボット | メッセージの拡張機能 | アダプティブ カード | タスク モジュール | 会議中ダイアログ | 会議ステージ |
+| ユーザーの種類 | タブ | ボット | メッセージ拡張機能 | アダプティブ カード | タスク モジュール | 会議中ダイアログ | 会議ステージ |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | 匿名ユーザー | 使用不可 | 使用不可 | 使用不可 | 会議チャットでの対話は許可されます。 | アダプティブ カードからの会議チャットでの対話は許可されます。 | 使用不可 | 使用不可 |
 | テナント Azure AD の一部であるゲスト | 対話は許可されます。 作成、更新、削除は許可されません。 | 使用不可 | 使用不可 | 会議チャットでの対話は許可されます。 | アダプティブ カードからの会議チャットでの対話は許可されます。 | Available | Teams デスクトップ クライアントでのみ、会議ステージでアプリを開始、表示、操作できます |
@@ -225,7 +225,7 @@ Teams 統合会議アプリを使用すると、会議の参加者ロールに�
 > * フェデレーション ユーザーは、呼び出しでタブ アプリを操作できません。
 > * フェデレーション ユーザーがテナント内ユーザーまたはゲスト ユーザーを含む既存の呼び出しに追加された場合、すべての参加者はアプリの追加、更新、または削除を行う機能を失います。 ただし、フェデレーション ユーザーを呼び出しに招待する前に追加されたアプリを操作できるのは、既存のテナント内ユーザーまたはゲスト ユーザーだけです。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [Teams 会議用にアプリを有効にして構成する](enable-and-configure-your-app-for-teams-meetings.md)

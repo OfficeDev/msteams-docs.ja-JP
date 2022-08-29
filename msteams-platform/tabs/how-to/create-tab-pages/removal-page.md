@@ -1,16 +1,16 @@
 ---
 title: タブ削除のページを作成する
 author: surbhigupta
-description: このモジュールでは、タブの削除ページを作成する方法と、インストール後にタブを再構成できるようにする方法について説明します
-ms.localizationpriority: medium
+description: インストール後にタブを再構成できるようにする方法について説明します。 Microsoft Teams アプリで削除オプションと変更オプションをサポートすることで、ユーザー エクスペリエンスを拡張します。
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: ad17916c0dde7d15c5bcfc49659ead1b4186ad1c
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 6aa06cae222ad89b89b2eddc0ba224db0ff4225f
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841975"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450409"
 ---
 # <a name="create-a-removal-page"></a>削除ページを作成する
 
@@ -24,13 +24,13 @@ ms.locfileid: "66841975"
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`canUpdateConfiguration`|Boolean|||タブの構成のインスタンスを作成後にユーザーが更新できるかどうかを示す値。 既定値は `true` です。 |
+|`canUpdateConfiguration`|ブール型|||タブの構成のインスタンスを作成後にユーザーが更新できるかどうかを示す値。 既定値は `true` です。 |
 
 タブがチャネルまたはグループ チャットにアップロードされると、Teams によってタブの右クリック ドロップダウン メニューが追加されます。使用可能なオプションは、設定によって `canUpdateConfiguration` 決まります。 次の表に、設定の詳細を示します。
 
 | `canUpdateConfiguration`| true   | false | 説明 |
 | ----------------------- | :----: | ----- | ----------- |
-|     設定            |   √    |       |`configurationUrl`ページは IFrame で再読み込みされ、ユーザーはタブを再構成できます。 |
+|     Settings            |   √    |       |`configurationUrl`ページは IFrame で再読み込みされ、ユーザーはタブを再構成できます。 |
 |     名前の変更              |   √    |   √   | ユーザーは、タブ バーに表示されるタブ名を変更できます。          |
 |     削除              |   √    |   √   |  プロパティと値が`removeURL`**構成ページ** に含まれている場合、**削除ページ** は IFrame に読み込まれ、ユーザーに表示されます。 削除ページが含まれていない場合は、ユーザーに確認ダイアログ ボックスが表示されます。          |
 

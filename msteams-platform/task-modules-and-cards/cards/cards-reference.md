@@ -1,14 +1,14 @@
 ---
 title: カードの種類
-description: このモジュールでは、Teams のボットで使用可能なカードとカード アクションについて説明し、ヒーロー、サムネイル、アダプティブ カードを作成します
+description: このモジュールでは、Teams のボットで使用できるカードとカードアクションについて説明し、ヒーロー、サムネイル、アダプティブ カードを作成します。
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: f5d71e2e766f81b9481b60a801ea419ba3c14968
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
-ms.translationtype: HT
+ms.openlocfilehash: 0f58c4d9d003cff5eaf67d0094f76f908a412864
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67311961"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435028"
 ---
 # <a name="types-of-cards"></a>カードの種類
 
@@ -71,7 +71,10 @@ Teams の開発者ポータルからヒーロー カード、サムネイル カ
 | サインイン カード | ✔️ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 > [!NOTE]
-> 受信 Webhooks のアダプティブ カードでは、ネイティブのアダプティブ カード スキーマ要素 (ただし、`Action.Submit` を除く) がすべて完全にサポートされます。 サポートされているアクションは [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html)、[**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html)、[**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)、および [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)です。
+>
+> * 受信 Webhooks のアダプティブ カードでは、ネイティブのアダプティブ カード スキーマ要素 (ただし、`Action.Submit` を除く) がすべて完全にサポートされます。 サポートされているアクションは [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html)、[**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html)、[**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html)、および [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)です。
+>
+> * アダプティブ カードでは、受信 Webhook O365 コネクタの種類のみがサポートされ、他の O365 コネクタの種類はサポートされません。
 
 ## <a name="common-properties-for-all-cards"></a>すべてのカードの共通プロパティ
 
@@ -636,11 +639,11 @@ Teams ではレシート カードがサポートされています。これに�
 
 Teams のサインイン カードは Bot Framework のサインイン カードと似ていますが、Teams のサインイン カードでサポートされているアクションは `signin` と `openUrl` の 2 つのみです。
 
-サインイン アクションは、サインイン カードだけでなく、Teams のすべてのカードで使用できます。 詳細については、「[ボットでの認証フロー](~/bots/how-to/authentication/auth-flow-bot.md)」を参照してください。
+ログイン アクションは、ログイン カードだけでなく、Teams 内の任意のカードから使用できます。 詳細については、「[ボットでの認証フロー](~/bots/how-to/authentication/auth-flow-bot.md)」を参照してください。
 
-### <a name="support-for-signin-cards"></a>サインイン カードでのサポート
+### <a name="support-for-log-in-cards"></a>ログイン カードのサポート
 
-次の表に、サインイン カードをサポートする機能を示します:
+次の表に、サインイン カードをサポートする機能を示します。
 
 | Teams の Bot | メッセージ拡張機能  | コネクタ | Bot Framework |
 | --- | --- | --- | --- |
@@ -650,7 +653,7 @@ Teams のサインイン カードは Bot Framework のサインイン カード
 
 以下の Bot Framework リファレンスを参照してください。
 
-* [サインイン カード Node.js](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
+* [ログイン カード Node.js](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
 * [サインイン カード C#](/dotnet/api/microsoft.bot.schema.signincard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## <a name="thumbnail-card"></a>サムネイル カード

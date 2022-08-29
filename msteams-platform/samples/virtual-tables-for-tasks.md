@@ -1,16 +1,16 @@
 ---
 title: コラボレーション コントロール アプリのタスク、会議、ファイルの仮想テーブル
 author: surbhigupta
-description: このモジュールでは、Microsoft Teamsのコラボレーション コントロール アプリのタスク、会議、ファイルの仮想テーブルについて説明します。
+description: このモジュールでは、Microsoft Teams のコラボレーション コントロール アプリのタスク、会議、ファイルの仮想テーブルについて説明します。
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 58572dc51164d18dcfcbf44012543bd5400c3921
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 1913b379e9f24d36948a05190a4ae1804a8ec728
+ms.sourcegitcommit: 442d2c8e80a2605b6d0215c973557471f18f8121
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67179231"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "67314596"
 ---
 # <a name="virtual-tables-for-tasks-meetings-files"></a>タスク、会議、ファイルの仮想テーブル
 
@@ -54,7 +54,7 @@ ms.locfileid: "67179231"
 
 このガイドで説明するシナリオでは、Planner プランとタスクの仮想テーブルを使用します。 説明されているシナリオは、タスク コラボレーション コントロールで使用されているものと同じです。 ユーザーの視点から見ると、シナリオは Planner プランと複数のタスクがどのように作成され、特定のビジネス レコードに関連付けられているかを示します。 このシナリオでは、ビジネス レコードに関連付けられているタスクを取得する方法と、特定のプランナー タスクを読み取り、更新、削除する方法を示します。
 
-次のシーケンス図では、タスク コラボレーション コントロール、 [コラボレーション API](~/samples/collaboration-api-reference.md) 、Planner プランおよびタスク仮想テーブルなど、クライアント間の相互作用について説明します。
+次のシーケンス図では、タスク コラボレーション コントロール、 [コラボレーション API](/rest/api/industry/collaboration-controls/) 、Planner プランおよびタスク仮想テーブルなど、クライアント間の相互作用について説明します。
 
 :::image type="content" source="~/assets/images/collaboration-control/vt-sequence.png" alt-text="仮想テーブルのシーケンス図":::
 
@@ -250,7 +250,7 @@ Planner プランを作成し、上記 `Group ID` で作成したコラボレー
 * `$filter`: $filter システム クエリを使用して、コラボレーション セッションに関連付けられているレコードを要求します (コラボレーション ルート レコードの ID を指定します)。
 * `$select`: $select システム クエリ オプションを使用して、特定のプロパティを要求します。
 
-# <a name="response"></a>[応答](#tab/response3)
+# <a name="response"></a>[Response](#tab/response3)
 
 ```http
     HTTP/1.1 200 OK 
@@ -307,7 +307,7 @@ Planner プランを作成し、上記 `Group ID` で作成したコラボレー
 
 * `plannerTaskId`: Planner タスク レコードの主キーはプロパティです `m365_graphplannertaskid` 。
 
-# <a name="response"></a>[応答](#tab/response4)
+# <a name="response"></a>[Response](#tab/response4)
 
 ```http
     HTTP/1.1 200 OK 
@@ -394,7 +394,7 @@ Planner タスクを更新して、前の手順で `PlannerTask ID` 作成した
 
 * `@odata.etag`: タスクの Etag は、最新バージョンを取得するために読み取りを実行する必要があります。
 
-# <a name="response"></a>[応答](#tab/response6)
+# <a name="response"></a>[Response](#tab/response6)
 
 ```http
     HTTP/1.1 204 No Content
@@ -534,7 +534,7 @@ POST https://login.microsoftonline.com/<AZURE_APP_TENANT_ID>/oauth2/token
 
 プロパティが `collaborationRootId` 要求から欠落しています。
 
-# <a name="response"></a>[応答](#tab/response8)
+# <a name="response"></a>[Response](#tab/response8)
 
 ```http
     HTTP/1.1 400 Bad Request 
@@ -584,7 +584,7 @@ POST https://login.microsoftonline.com/<AZURE_APP_TENANT_ID>/oauth2/token
 
 ---
 
-この問題を解決するには、応答のエラー メッセージを確認する必要があります。このメッセージが上記のメッセージに設定されている場合は、仮想レコードが関連付けられていないことを意味します。 このレコードの関連付けを作成するには、 [Associate Collaboration Map - REST API](/rest/api/industry/collaboration-toolkit/collaboration-custom-ap-is/associate-collaboration-map) を呼び出す必要があります。
+この問題を解決するには、応答のエラー メッセージを確認する必要があります。このメッセージが上記のメッセージに設定されている場合は、仮想レコードが関連付けられていないことを意味します。 このレコードの関連付けを作成するには、 [Associate Collaboration Map - REST API](/rest/api/industry/collaboration-controls/collaboration-custom-ap-is/associate-collaboration-map) を呼び出す必要があります。
 
 ### <a name="attempt-to-read-a-virtual-record-and-the-graph-resource-has-been-deleted"></a>仮想レコードの読み取りを試み、Graph リソースが削除されました
 
@@ -598,7 +598,7 @@ POST https://login.microsoftonline.com/<AZURE_APP_TENANT_ID>/oauth2/token
 
 プロパティは `plannerTaskId` 、削除された Planner タスクに関連付けられます。
 
-# <a name="response"></a>[応答](#tab/response10)
+# <a name="response"></a>[Response](#tab/response10)
 
 ```http
     HTTP/1.1 404 Not Found 

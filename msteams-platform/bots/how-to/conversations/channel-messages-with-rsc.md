@@ -1,15 +1,15 @@
 ---
 title: RSC のチャネル メッセージをすべて受信する
 author: surbhigupta12
-description: このモジュールでは、RSC アクセス許可を持つすべてのチャネル メッセージを受信する方法と、ボットがすべてのチャネル メッセージを受信できるようにする方法について説明します
+description: ボットが RSC アクセス許可を使用して@mentionedすることなく、すべてのチャネル メッセージを受信できるようにします。 マニフェストの webApplicationInfo または承認セクションを参照してください。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: d0a8c05136d4ab98270d3d837c008f0e46bcae33
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: bd740c999139d9b5f98c10800646501dd55e87f5
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143516"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363467"
 ---
 # <a name="receive-all-channel-messages-with-rsc"></a>RSC のチャネル メッセージをすべて受信する
 
@@ -33,8 +33,7 @@ RSC を使用して、チームの所有者に対して、@mention すること�
 
 ボットがすべてのチャネル メッセージを受信するには、Teams アプリ マニフェストで `webApplicationInfo` プロパティで指定された `ChannelMessage.Read.Group` 権限を使用して RSC を構成する必要があります。
 
-![アプリ マニフェストの更新](~/bots/how-to/conversations/Media/appmanifest.png)
-
+:::image type="content" source="~/bots/how-to/conversations/Media/appmanifest.png" alt-text="アプリ マニフェストの更新のスクリーンショット。":::
 
 `webApplicationInfo` オブジェクトの例を次に示します。
 
@@ -46,12 +45,12 @@ RSC を使用して、チームの所有者に対して、@mention すること�
 
 ```json
 "webApplicationInfo": {
-"id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
-"resource": "https://AnyString",
-"applicationPermissions": [
-"ChannelMessage.Read.Group"
-    ]
-  }
+  "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+  "resource": "https://AnyString",
+  "applicationPermissions": [
+    "ChannelMessage.Read.Group"
+  ]
+}
 ```
 
 ## <a name="sideload-in-a-team"></a>チーム内のサイドロード
@@ -62,29 +61,29 @@ RSC を使用して、チームの所有者に対して、@mention すること�
 1. 左側のウィンドウから省略記号 &#x25CF;&#x25CF;&#x25CF; を選択します。 ドロップダウン メニューが表示されます。
 1. ドロップダウン メニューから **[表示]** を選択します。 アプリの詳細が表示されます。
 
-   ![チームでのアプリの管理](~/bots/how-to/conversations/Media/managingteam.png)
-
-      :::image type="content" source="Media/managingteam.png" alt-text="チームの管理"border="true":::
+   :::image type="content" source="Media/managingteam.png" alt-text="Teams アプリケーションでのチームオプションの管理のスクリーンショット。":::
 
 1. **[アプリ]** を選択します。 複数のアプリが表示されます。
+
 1. 右下から **[カスタム アプリのアップロード]** を選択します
 
-      :::image type="content" source="Media/uploadingcustomapp.png" alt-text="カスタム アプリのアップロード":::
+      :::image type="content" source="Media/uploadingcustomapp.png" alt-text="カスタム アプリ オプションをアップロードするスクリーンショット。":::
   
 1. **[開く]** ダイアログ ボックスからアプリ パッケージを選択します。
+
 1. [**開く**]を選択します。
 
-      :::image type="content" source="Media/selectapppackage.png" alt-text="アプリのパッケージを選択する"lightbox="Media/selectapppackage.png"border="true":::
+      :::image type="content" source="Media/selectapppackage.png" alt-text="開いているダイアログ ボックスのスクリーンショット。アプリ パッケージを選択します。" lightbox="Media/selectapppackage.png":::
 
 1. アプリの詳細ポップアップから **[追加]** を選択し、選択したチームにボットを追加します。
 
-      :::image type="content" source="Media/addingbot.png" alt-text="アプリにボットを追加"lightbox="Media/addingbot.png"border="true":::
+      :::image type="content" source="Media/addingbot.png" alt-text="チームにボットを追加する [追加] ボタンのスクリーンショット。" lightbox="Media/addingbot.png":::
 
 1. チャネルを選択し、ボットのチャネルにメッセージを入力します。
 
     ボットは、@メンションされずにメッセージを受信します。
 
-      :::image type="content" source="Media/botreceivingmessage.png" alt-text="メッセージを受信するボット"lightbox="Media/botreceivingmessage.png"border="true":::
+      :::image type="content" source="Media/botreceivingmessage.png" alt-text="チャネルでメッセージを受信しているボットのスクリーンショット。" lightbox="Media/botreceivingmessage.png":::
 
 ## <a name="code-snippets"></a>コード スニペット
 
@@ -128,3 +127,4 @@ this.onMessage(async (context, next) => {
 * [リソース固有の同意](/microsoftteams/resource-specific-consent)
 * [リソース固有の同意のアクセス許可をテストする](/microsoftteams/platform/graph-api/rsc/test-resource-specific-consent)
 * [Teams にカスタム アプリをアップロードする](~/concepts/deploy-and-publish/apps-upload.md)
+* [チャネル内のメッセージに対する返信を一覧表示する](/graph/api/chatmessage-list-replies?view=graph-rest-1.0&tabs=http&preserve-view=true)

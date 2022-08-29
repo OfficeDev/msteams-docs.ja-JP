@@ -1,17 +1,17 @@
 ---
 title: 会議拡張機能の設計
 author: heath-hamilton
-description: Teams 会議でアプリの会議拡張機能を設計する方法について説明します。 Microsoft Teams UI Kit の UI テンプレートを使用して、会議タブの設計に役立ちます。
+description: 設計ガイドラインを実装し、UI テンプレートを使用して Teams の会議拡張機能を設計する方法について説明します。
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 04/07/2022
-ms.openlocfilehash: d9cdf301d6b1fb53813e9db42114d2ff24411e8c
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: d0d994a7966f3ee172b29e6f9a6f1d4d4a2edff0
+ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66842039"
+ms.lasthandoff: 08/15/2022
+ms.locfileid: "67338852"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Microsoft Teams 会議拡張機能の設計
 

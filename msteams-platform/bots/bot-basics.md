@@ -1,16 +1,16 @@
 ---
 title: ボットのアクティビティ ハンドラー
 author: surbhigupta
-description: この記事では、Microsoft Teams のボット アクティビティ ハンドラー、フレームワーク、Teams アクティビティ ハンドラー、ボット ロジックについて説明します。
+description: メッセージ、チャネル、チーム、メンバー、メンション、認証、Microsoft Bot Framework SDK を使用したカード アクションの Microsoft Teams イベントとアクティビティ ハンドラーについて説明します。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: c1d3acb4328f61f15d4751aedff3d413d18072fd
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: 4780c4c2ca3965186411f7927f1fb5b555647004
+ms.sourcegitcommit: b918181217995a47be34632e1051d0f4d4d481b0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485574"
+ms.lasthandoff: 08/12/2022
+ms.locfileid: "67321209"
 ---
 # <a name="bot-activity-handlers"></a>ボットのアクティビティ ハンドラー
 

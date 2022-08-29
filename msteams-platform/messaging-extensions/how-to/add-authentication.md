@@ -5,16 +5,19 @@ description: この記事では、コード例とサンプルを使用してメ�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: a400c7f367eddecf8e3c1b761d46b391deca3f86
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
+ms.openlocfilehash: c863a68f991dd62d51a534df04469eadfdb366e8
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190274"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435049"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>メッセージ拡張機能に認証を追加する
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+
+> [!NOTE]
+> メッセージ拡張機能に認証を追加した後、ユーザーはマニフェストの "**validDomains**" セクションに "**token.botframework.com**" を追加する必要があります。
 
 ## <a name="identify-the-user"></a>ユーザーを識別する
 
@@ -75,14 +78,14 @@ ms.locfileid: "66190274"
 
 サインイン エクスペリエンスは応答性が高く、ポップアップ ウィンドウ内に収まる必要があります。 メッセージ パッシングを使用する [Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) と統合する必要があります。
 
-Microsoft Teams 内で実行される他の埋め込みエクスペリエンスと同様に、ウィンドウ内のコードは、最初に `microsoftTeams.initialize()` を呼び出す必要があります。 コードで OAuth フローを実行する場合は、Teams ユーザー ID をウィンドウに渡し、OAuth サインイン URL に渡すことができます。
+Microsoft Teams 内で実行される他の埋め込みエクスペリエンスと同様に、ウィンドウ内のコードは、最初に `app.initialize()` を呼び出す必要があります。 コードで OAuth フローを実行する場合は、Teams ユーザー ID をウィンドウに渡し、OAuth サインイン URL に渡すことができます。
 
 ### <a name="complete-the-sign-in-flow"></a>サインイン フローを完了する
 
 サインイン要求が完了し、ページにリダイレクトされたら、次の手順を実行する必要があります。
 
 1. セキュリティ コード (乱数) を生成します。 このコードは、OAuth 2.0 トークンなどのサインイン フローで取得した資格情報を使用して、サービスにキャッシュする必要があります。
-1. `microsoftTeams.authentication.notifySuccess` を呼び出して、セキュリティ コードを渡します。
+1. `authentication.notifySuccess` を呼び出して、セキュリティ コードを渡します。
 
 この時点でウィンドウが閉じ、コントロールが Teams クライアントに渡されます。 クライアントは、`state` プロパティのセキュリティ コードと共に、元のユーザー クエリを再発行します。 コードでは、セキュリティ コードを使用して、前に保存した資格情報を検索して認証シーケンスを完了し、ユーザー要求を完了できます。
 

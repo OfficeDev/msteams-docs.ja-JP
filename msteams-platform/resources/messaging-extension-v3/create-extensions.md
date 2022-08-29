@@ -3,18 +3,18 @@ title: メッセージ拡張機能を使用した操作の開始
 description: このモジュールでは、ユーザーが外部サービスをトリガーできるようにアクション ベースのメッセージ拡張機能を作成する方法について説明します
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 9b40c7a74b1d7680ac47016a9e0174a2c4c06e8c
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 6159738b0ef17370f8cf67ab83c9fa420f4ef723
+ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143677"
+ms.lasthandoff: 08/13/2022
+ms.locfileid: "67337146"
 ---
 # <a name="initiate-actions-with-message-extensions"></a>メッセージ拡張機能を使用した操作の開始
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
 
-アクション ベースのメッセージ拡張機能を使用すると、ユーザーはTeams中に外部サービスでアクションをトリガーできます。
+アクション ベースのメッセージ拡張機能を使用すると、ユーザーは Teams 内で外部サービスでアクションをトリガーできます。
 
 ![メッセージ拡張カードの例](~/assets/images/compose-extensions/ceexample.png)
 
@@ -25,6 +25,9 @@ ms.locfileid: "66143677"
 ## <a name="action-type-message-extensions"></a>アクションの種類のメッセージ拡張機能
 
 メッセージ拡張機能からアクションを開始するには、パラメーター`action`を `type` . 検索と作成コマンドを含むマニフェストの例を次に示します。 1 つのメッセージ拡張機能には、最大 10 個の異なるコマンドを含めることができます。 これには、複数の検索コマンドと複数のアクション ベースのコマンドの両方を含めることができます。
+
+ > [!NOTE]
+ >`justInTimeInstall` は、アプリカタログにアプリをアップロードするときに機能しますが、アプリをサイドロードすると失敗します。
 
 ### <a name="complete-app-manifest-example"></a>完全なアプリ マニフェストの例
 
@@ -232,13 +235,13 @@ ms.locfileid: "66143677"
 
 ## <a name="collecting-input-from-users"></a>ユーザーからの入力の収集
 
-Teamsのエンド ユーザーから情報を収集するには、3 つの方法があります。
+Teams のエンド ユーザーから情報を収集するには、3 つの方法があります。
 
 ### <a name="static-parameter-list"></a>静的パラメーターの一覧
 
-このメソッドでは、"To Doの作成" コマンドで上に示したように、マニフェスト内のパラメーターの静的な一覧を定義するだけです。 このメソッドを使用するには、マニフェストでパラメーターが設定`false`されていることと、パラメーターを定義していることを確認`fetchTask`します。
+このメソッドでは、"Create To Do" コマンドで上に示したように、マニフェスト内のパラメーターの静的なリストを定義するだけです。 このメソッドを使用するには、マニフェストでパラメーターが設定`false`されていることと、パラメーターを定義していることを確認`fetchTask`します。
 
-ユーザーが静的パラメーターを持つコマンドを選択すると、Teamsはマニフェストに定義されたパラメーターを含むフォームをタスク モジュールに生成します。 [送信] をクリックすると、a `composeExtension/submitAction` がボットに送信されます。 予想される応答のセットの詳細については、「 [送信への応答」を](#responding-to-submit)参照してください。
+ユーザーが静的パラメーターを持つコマンドを選択すると、Teams はマニフェストに定義されたパラメーターを含むフォームをタスク モジュールに生成します。 [送信] をクリックすると、a `composeExtension/submitAction` がボットに送信されます。 予想される応答のセットの詳細については、「 [送信への応答」を](#responding-to-submit)参照してください。
 
 ### <a name="dynamic-input-using-an-adaptive-card"></a>アダプティブ カードを使用した動的入力
 
@@ -445,8 +448,9 @@ Teamsのエンド ユーザーから情報を収集するには、3 つの方法
 
 このフローを有効にするには、次の例のようにタスク モジュールが応答する必要があります。これにより、プレビュー メッセージがユーザーに表示されます。
 
->[!Note]
->には `activityPreview` 、 `message` アダプティブ カードの添付ファイルが 1 つだけ含まれるアクティビティが含まれている必要があります。
+> [!NOTE]
+> には `activityPreview` 、 `message` アダプティブ カードの添付ファイルが 1 つだけ含まれるアクティビティが含まれている必要があります。
+
 
 ```json
 {
@@ -560,7 +564,7 @@ teamChatConnector.onComposeExtensionSubmitAction((
 
 # <a name="cnet"></a>[C#/.NET](#tab/dotnet)
 
-このサンプルでは、Microsoft.Bot.Connector.Teamsを使用したこのフローを示します。[SDK (v3)](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams)。
+このサンプルでは、 [Microsoft.Bot.Connector.Teams SDK (v3)](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) を使用してこのフローを示します。
 
 ```csharp
 public class MessagesController : ApiController

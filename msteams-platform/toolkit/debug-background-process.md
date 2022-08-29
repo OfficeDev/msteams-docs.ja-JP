@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: 112b7da9a5b0926bde9ed1e88f9ad4a0d6dedb5b
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
-ms.translationtype: HT
+ms.openlocfilehash: 9891e2b93133484d4bb8394100f4e628841517f7
+ms.sourcegitcommit: 234944867eeccbba5da6be43120e9683977bdfd8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503600"
+ms.lasthandoff: 08/23/2022
+ms.locfileid: "67407568"
 ---
 # <a name="debug-background-process"></a>バックグランド プロセスのデバッグ
 
@@ -34,7 +34,7 @@ Teams Toolkit は、デバッグ プロセス中に次の前提条件を確認�
   |プロジェクトの種類|Node.js LTS バージョン|
   |----------|--------------------------------|
   |Tab | 14、16 (推奨) |
-  |SPFx タブ | 12、14 (推奨)|
+  |SPFx タブ | 14、16 (推奨)|
   |Bot |  14、16 (推奨)|
   |メッセージ拡張機能: | 14、16 (推奨) |
 

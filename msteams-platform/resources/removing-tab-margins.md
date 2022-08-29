@@ -1,16 +1,16 @@
 ---
 title: タブ余白の変更
 author: surbhigupta
-description: このモジュールでは、タブの余白を削除すると、アプリの構築エクスペリエンスが向上する方法について説明します。
+description: UI キットを使用して Microsoft Teams のタブの周囲の余白を削除する方法について説明します。 余分なパディング効果、左、右、上、下の余白サイズを把握します。
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.openlocfilehash: c809f91a4ca11bc6006720fc70092f74386a4187
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
+ms.openlocfilehash: 715c6b735323e442490de8634384054be565e7a8
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962427"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450444"
 ---
 # <a name="tab-margin-changes"></a>タブ余白の変更
 

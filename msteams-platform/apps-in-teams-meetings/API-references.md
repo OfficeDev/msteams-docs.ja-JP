@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 5620c720953fea4f39056a0efa553110e3d3e9cb
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: 8277e0fb947ac109f3482c31613c01fd924fa139
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67311954"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435014"
 ---
 # <a name="meeting-apps-api-references"></a>会議アプリ API リファレンス
 
@@ -37,8 +37,8 @@ ms.locfileid: "67311954"
 |[**アプリ コンテンツ ステージの共有状態を取得する**](#get-app-content-stage-sharing-state-api)| 会議ステージでアプリの共有状態に関する情報を取得します。 | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
 |[**アプリ コンテンツ ステージの共有機能を取得する**](#get-app-content-stage-sharing-capabilities-api)| 共有のためのアプリの機能を会議ステージに取得します。 | [MSTC SDK](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
 |[**リアルタイムの Teams 会議イベントを取得する**](#get-real-time-teams-meeting-events-api)|実際の開始時刻や終了時刻など、リアルタイムの会議イベントを取得します。| [MSBF SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
-| [**着信オーディオ スピーカーを取得する**](#get-incoming-audio-speaker) | アプリが会議ユーザーの受信オーディオ スピーカー設定を取得できるようにします。| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
-| [**着信オーディオを切り替える**](#toggle-incoming-audio) | アプリで、会議ユーザーの受信オーディオ スピーカー設定をミュートからミュート解除、またはその逆に切り替えることができます。| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**受信オーディオ状態を取得する**](#get-incoming-audio-state) | アプリが会議ユーザーの受信オーディオ状態設定を取得できるようにします。| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**着信オーディオを切り替える**](#toggle-incoming-audio) | アプリで、会議ユーザーの受信オーディオ状態設定をミュートからミュート解除、またはその逆に切り替えることができます。| [MSTC SDK](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 
 ## <a name="get-user-context-api"></a>ユーザー コンテキストを取得する API 
 
@@ -932,15 +932,44 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 | **値。Endtime** | 会議の終了時刻 (UTC)。 |
 | **locale**| クライアントによって設定されたメッセージのロケール。 |
 
-## <a name="get-incoming-audio-speaker"></a>着信オーディオ スピーカーを取得する
+## <a name="get-incoming-audio-state"></a>受信オーディオ状態を取得する
 
-API `getIncomingClientAudioState` を使用すると、アプリは会議ユーザーの受信オーディオ スピーカー設定を取得できます。 この API は、Teams クライアント SDK を通して使用できます。
+API `getIncomingClientAudioState` を使用すると、アプリは会議ユーザーの受信オーディオ状態設定を取得できます。 この API は、Teams クライアント SDK を通して使用できます。
 
 > [!NOTE]
 >
 > * `getIncomingClientAudioState`モバイル向け API は現在、[パブリック開発者プレビュー](../resources/dev-preview/developer-preview-intro.md)で利用できます。
 > * リソース固有の同意はマニフェスト バージョン 1.12 以降で使用できるため、この API はマニフェスト バージョン 1.11 以前のバージョンでは機能しません。
 
+### <a name="manifest"></a>マニフェスト
+
+```JSON
+"authorization": {
+    "permissions": {
+      "resourceSpecific": [
+        {
+          "name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
+          "type": "Delegated"
+        }
+      ]
+    }
+  }
+```
+  
+### <a name="example"></a>例
+
+```javascript
+callback = (errcode, result) => {
+        if (errcode) {
+            // Handle error code
+        }
+        else {
+            // Handle success code
+        }
+    }
+
+microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
+```
 ### <a name="query-parameter"></a>クエリ パラメーター
 
 次の表に、クエリ パラメーターを示します。
@@ -948,22 +977,7 @@ API `getIncomingClientAudioState` を使用すると、アプリは会議ユー�
 |値|型|必須|説明|
 |---|---|----|---|
 |**callback**| String | はい | コールバックには、2 つのパラメーター `error` と `result`. *エラーには、エラー* の種類`SdkError`を含めることができるか`null`、オーディオ フェッチが成功した場合です。 *結果* には、オーディオ フェッチが成功したときに true または false の値が含まれるか、オーディオ フェッチが失敗したときに null を含めることができます。 結果が true の場合、受信オーディオはミュートされ、結果が false の場合はミュートされません。 |
-
-### <a name="example"></a>例
-
-```typescript
-function getIncomingClientAudioState(
-    callback: (error: SdkError | null, result: boolean | null) => void,
-  ): void {
-    if (!callback) {
-      throw new Error('[get incoming client audio state] Callback cannot be null');
-    }
-    ensureInitialized(FrameContexts.sidePanel, FrameContexts.meetingStage);
-    sendMessageToParent('getIncomingClientAudioState', callback);
-  }
-
-```
-
+  
 ### <a name="response-codes"></a>応答コード
 
 次の表に、応答コードを示します。
@@ -976,34 +990,51 @@ function getIncomingClientAudioState(
 
 ## <a name="toggle-incoming-audio"></a>着信オーディオを切り替える
 
-この `toggleIncomingClientAudio` API を使用すると、アプリは会議ユーザーの受信オーディオ スピーカー設定をミュートからミュート解除、またはその逆に切り替えることができます。 この API は、Teams クライアント SDK を通して使用できます。
+この `toggleIncomingClientAudio` API を使用すると、アプリは会議ユーザーの受信オーディオ状態設定をミュートからミュート解除、またはその逆に切り替えることができます。 この API は、Teams クライアント SDK を通して使用できます。
 
 > [!NOTE]
 >
 > * `toggleIncomingClientAudio`モバイル向け API は現在、[パブリック開発者プレビュー](../resources/dev-preview/developer-preview-intro.md)で利用できます。
 > * リソース固有の同意はマニフェスト バージョン 1.12 以降で使用できるため、この API はマニフェスト バージョン 1.11 以前のバージョンでは機能しません。
 
+### <a name="manifest"></a>マニフェスト
+
+```JSON
+"authorization": {
+    "permissions": {
+        "resourceSpecific": [
+            {
+                "name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
+                "type": "Delegated"
+            }
+        ]
+    }
+}
+```
+ 
+### <a name="example"></a>例
+
+```javascript
+callback = (error, result) => {
+        if (error) {
+            // Handle error code
+        }
+        else {
+            // Handle success code
+        }
+    }
+
+microsoftTeams.meeting.toggleIncomingClientAudio(this.callback)
+```
+  
 ### <a name="query-parameter"></a>クエリ パラメーター
 
 次の表に、クエリ パラメーターを示します。
 
 |値|型|必須|説明|
 |---|---|----|---|
-|**callback**| String | はい | コールバックには、2 つのパラメーター `error` と `result`. *エラーには、エラー* の種類`SdkError`を含めることができるか、切`null`り替えが成功した場合です。 *結果* には、トグルが成功した場合は true または false の値を含めることができます。トグルが失敗した場合は null です。 結果が true の場合、受信オーディオはミュートされ、結果が false の場合はミュートされません。 |
-
-### <a name="example"></a>例
-
-```typescript
-function toggleIncomingClientAudio(callback: (error: SdkError | null, result: boolean | null) => void): void {
-    if (!callback) {
-      throw new Error('[toggle incoming client audio] Callback cannot be null');
-    }
-    ensureInitialized(FrameContexts.sidePanel, FrameContexts.meetingStage);
-    sendMessageToParent('toggleIncomingClientAudio', callback);
-  }
-
-```
-
+|**callback**| String | はい | コールバックには、2 つのパラメーター `error` と `result`. *エラーには、エラー* の種類`SdkError`を含めることができるか、切`null`り替えが成功した場合です。 *結果* には、トグルが成功した場合は true または false の値を含めることができます。トグルが失敗した場合は null です。 結果が true の場合、受信オーディオはミュートされ、結果が false の場合はミュートされません。
+  
 ### <a name="response-code"></a>応答コード
 
 次の表に、応答コードを示します。

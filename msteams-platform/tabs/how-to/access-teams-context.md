@@ -1,14 +1,14 @@
 ---
 title: タブのコンテキストを取得する
-description: このモジュールでは、タブ、ユーザー コンテキスト、および Access コンテキスト情報に対するユーザー コンテキストを取得する方法について説明します
-ms.localizationpriority: medium
+description: タブのコンテキスト、ユーザー、チーム、または会社のコンテキスト、情報へのアクセス、プライベートチャネルまたは共有チャネルでのコンテキストの取得、テーマの変更の処理について説明します。
+ms.localizationpriority: high
 ms.topic: how-to
-ms.openlocfilehash: dc42c9aff0c62df18dad77af3d36db5bc7b3dd4e
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: ddd3d35d9069dd185fa4e77913ca0873e2d31b24
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058117"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450388"
 ---
 # <a name="get-context-for-your-tab"></a>タブのコンテキストを取得する
 
@@ -302,7 +302,7 @@ microsoftTeams.getContext((context) => {
 
 `theme`関数内の引数は、値`default`が 、 、 または `dark``contrast`.
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [アダプティブ カードを使用してタブをビルドする](~/tabs/how-to/build-adaptive-card-tabs.md)

@@ -3,12 +3,12 @@ title: Teams の開発者向けの新機能と更新情報
 description: 新しく導入された Microsoft Teams の開発者向け機能と、既存の機能の更新について説明します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 11d4501aa8080a27b74581aefcb33795ded4ef78
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
-ms.translationtype: HT
+ms.openlocfilehash: caff618c574fb550225dad729056e77a7fc53229
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312241"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435007"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -40,6 +40,7 @@ ms.locfileid: "67312241"
 | 08/03/2022 | 個人用アプリまたはタブから Teams に共有する | [Teams と統合] > [Teams に共有] > [[個人用アプリまたはタブから Teams に共有]](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 08/03/2022 | 会議後のシナリオで会議のトランスクリプトを取得する機能が追加されました。 | [Teams 会議と通話用のアプリを構築する] > [Graph API を使用して会議のトランスクリプトを取得する] > [[概要]](graph-api/meeting-transcripts/overview-transcripts.md) |
 | 08/03/2022 | Web アプリからの [Teams で共有] のリンク展開 | [Teams との統合] > [Teams への共有] > [[Web アプリから Teams に共有する]](concepts/build-and-test/share-to-teams-from-web-apps.md) |
+| 08/01/2021| 注意: 開発者ポータルは GA になり、App Studio は 2022 年 8 月 1 日から非推奨になりました。 | [ツールと SDK] > [[Teams の開発者ポータル]](concepts/build-and-test/teams-developer-portal.md) |
 | 2022 年 7 月 28 日 | Teams の表示画像と連絡先カードを会議内通知用に追加する| Teams の会議と通話用のアプリを作成する > 会議用のアプリを有効にして構成する > <[会議内通知](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#in-meeting-notification) |
 | 2022 年 7 月 28 日 | Teams で共有チャネルを作成にする | Teams の会議と通話用のアプリを作成する > [共有チャネル](concepts/build-and-test/Shared-channels.md) |
 | 2022 年 7 月 28 日|アプリ マニフェスト バージョン 1.14 が導入されました| アプリ マニフェスト > [Teams 用のアプリ マニフェスト スキーマ](resources/schema/manifest-schema.md)|
@@ -263,6 +264,7 @@ ms.locfileid: "67312241"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ------------------ |
+| 08/23/2022 | モバイルで Teams 会議ステージにアプリを共有する | Teams 会議と通話用のアプリをビルド> [会議用のアプリを有効にして構成する](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
 | 08/03/2022 | Teams 会議ステージでアプリの API をミュートおよびミュート解除する | [Teams 会議と通話用のアプリをビルドする] > [[会議アプリの API リファレンス]](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 08/02/2022| Teams のコラボレーション コントロール| [Teams との統合] > [[コラボレーション コントロール]](samples/collaboration-control.md)|
 | 06/30/2022 | インスタント会議、1 対 1 通話、グループ通話用のアプリ| Teams 会議と通話用のアプリをビルド > [[概要]](apps-in-teams-meetings/teams-apps-in-meetings.md)|

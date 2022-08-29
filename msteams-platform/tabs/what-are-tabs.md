@@ -1,16 +1,16 @@
 ---
 title: Microsoft Teams のタブ
 author: surbhigupta
-description: このモジュールでは、Teams プラットフォームでのカスタム タブの作成方法、タブ機能、タブのユーザー シナリオについて説明します
+description: Microsoft Teams に埋め込まれたタブ、Web ページを構築する方法について説明します。 個人用、チャネル、またはグループ タブの一部としてコンテンツ ページを作成します。また、アダプティブ カードを使用してタブを作成する方法についても説明します。
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 38781b844b9aa84c39daa4cae909ec11ad197175
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
-ms.translationtype: HT
+ms.openlocfilehash: d175e9c1a9f8515db57c54503fd3f83cb7970777
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058236"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450395"
 ---
 # <a name="build-tabs-for-teams"></a>Teams の [ビルド] タブ
 

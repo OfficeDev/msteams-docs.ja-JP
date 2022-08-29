@@ -1,19 +1,19 @@
 ---
 title: ボットの会話内のメッセージ
-description: Teams ボットと Teams チャネル データ、メッセージへの通知、画像メッセージ、コード サンプルを使用したアダプティブ カードとの会話を行う方法について説明します
+description: メッセージ、推奨されるアクション、通知、添付ファイル、画像、アダプティブ カード、スロットルの状態エラー コード応答を送信する方法について説明します。
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 20cac5ed941e572e4d13cfd4535cb8be7d481355
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 3500e9791f712c6141822e499805e58df150c7e5
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035198"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363446"
 ---
 # <a name="messages-in-bot-conversations"></a>ボットの会話内のメッセージ
 
-会話内の各メッセージは、型`messageType: message`の`Activity`オブジェクトです。 ユーザーがメッセージを送信すると、Teams はメッセージをボットに投稿します。 Teams は、ボットのメッセージング エンドポイントに JSON オブジェクトを送信します。 ボットはメッセージを調べて種類を判別し、種類に応じて応答します。
+会話内の各メッセージは、型`messageType: message`の`Activity`オブジェクトです。 ユーザーがメッセージを送信すると、Microsoft Teams はメッセージをボットに投稿します。 Teams はボットのメッセージング エンドポイントに JSON オブジェクトを送信し、Teams ではメッセージングに使用できるエンドポイントは 1 つだけです。 ボットはメッセージを調べて種類を判別し、種類に応じて応答します。
 
 基本的な会話は、Bot Framework コネクタ (単一の REST API) を介して処理されます。 この API を使用すると、ボットは Teams やその他のチャネルと通信できます。 Bot Builder SDK には、次の機能が用意されています。
 
@@ -198,7 +198,8 @@ async def on_members_added_activity(
 
 ## <a name="send-suggested-actions"></a>推奨されるアクションを送信する
 
-推奨されるアクションを使用すると、ユーザーが入力を提供するために選択できるボタンをボットに表示できます。 推奨されるアクションは、ユーザーがキーボードで応答を入力するのではなく、質問に答えたり、ボタンを選択して選択したりできるようにすることで、ユーザー エクスペリエンスを向上させます。 ボタンは、ユーザーが選択した後もリッチ カード内のユーザーが表示され、アクセス可能なままですが、推奨されるアクションではボタンは使用できません。 これにより、ユーザーは会話内で古いボタンを選択できなくなります。
+推奨されるアクションを使用すると、ユーザーが入力を提供するために選択できるボタンをボットに表示できます。 推奨されるアクションは、ユーザーがキーボードで応答を入力するのではなく、質問に答えたり、ボタンを選択して選択したりできるようにすることで、ユーザー エクスペリエンスを向上させます。
+ボタンは、ユーザーが選択した後もリッチ カード内のユーザーが表示され、アクセス可能なままですが、推奨されるアクションではボタンは使用できません。 これにより、ユーザーは会話内で古いボタンを選択できなくなります。
 
 メッセージに推奨されるアクションを追加するには、[Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) オブジェクトのプロパティを設定`suggestedActions`して、ユーザーに表示するボタンを表す [CardAction](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) オブジェクトの一覧を指定します。 For more information, see [`SugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions)
 
@@ -225,6 +226,7 @@ async def on_members_added_activity(
 :::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="ボットが推奨するアクション" border="true":::
 
 > [!NOTE]
+>
 > * `SuggestedActions` は、アダプティブ カードや添付ファイルではなく、1 対 1 のチャット ボットとテキスト ベースのメッセージでのみサポートされます。
 > * 現在 `imBack` 、サポートされている唯一のアクションの種類であり、Teams には最大 3 つの推奨アクションが表示されます。
 
@@ -366,7 +368,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 画像は最大 1024 ×1024 MB、PNG、JPEG、または GIF 形式で 1 MB です。 アニメーション GIF はサポートされていません。
 
-XML を使用して、各イメージの高さと幅を指定します。 マークダウンでは、イメージ サイズの既定値は 256×256 です。 次に例を示します。
+XML を使用して、各イメージの高さと幅を指定します。 マークダウンでは、イメージ サイズの既定値は 256×256 です。 例:
 
 * 使用: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
 * 使用しないでください: `![Duck on a rock](http://aka.ms/Fo983c)`.

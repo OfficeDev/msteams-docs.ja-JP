@@ -3,26 +3,25 @@ title: ディープ リンクの作成
 description: この記事では、ディープ リンクを作成する方法と、タブを使用して Microsoft Teams アプリ内でディープ リンクを使用して移動する方法について説明します。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 9113491db788b187a86db21c97867540a35777d2
-ms.sourcegitcommit: f192d7685ee3ddf4a55dc9787d56744403c3f8f9
-ms.translationtype: HT
+ms.openlocfilehash: 463a7f37ca481058133ca5dbd646225f02bab4ab
+ms.sourcegitcommit: d8183bad448990f7c79b1956a6c9761c27712b4c
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "67302466"
+ms.lasthandoff: 08/29/2022
+ms.locfileid: "67452361"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成
 
 ディープ リンクは、Teams および Teams アプリ内の情報と機能をユーザーと接続するために使用できるナビゲーション メカニズムです。 ディープ リンクの作成が役立つシナリオは次のとおりです:
 
 * アプリのタブの 1 つにあるコンテンツにユーザーを移動します。 たとえば、アプリには、ユーザーに重要なアクティビティを通知するメッセージを送信するボットを含めることができます。 ユーザーが通知をタップすると、ディープ リンクがタブに移動し、ユーザーがアクティビティの詳細を表示できるようになります。
-* アプリは、必要なパラメーターを使用してディープ リンクを事前に入力して、チャットの作成や会議のスケジュール設定などの特定のユーザー タスクを自動化または単純化します。 これにより、ユーザーが手動で情報を入力する必要がなくなります。
+* アプリは、特定のユーザー タスクを自動化または簡略化します。 必要なパラメーターを使用してディープ リンクを事前に設定することで、チャットを作成したり、会議をスケジュールしたりできます。 これにより、ユーザーが手動で情報を入力する必要がなくなります。
 
-Microsoft Teams JavaScript クライアント SDK (TeamsJS) を使用すると、ナビゲーションのプロセスが簡略化されます。 タブ内のコンテンツや情報への移動やチャット ダイアログの起動など、SDK は多くのシナリオでエクスペリエンスを向上させ、ディープ リンクの代わりとなる、指定された API を提供します。 これらの API は、他のホスト (Outlook、Office) で実行される可能性がある Teams アプリに推奨されます。また、使用されている機能がそのホストでサポートされていることを確認する方法も提供されます。 次のセクションでは、ディープ リンクに関する情報を示しますが、TeamsJS v2 のリリースで、それを要求するために、使用されたシナリオがどのように変更されたかについても要点に注目して説明します。
+Microsoft Teams JavaScript クライアント SDK (TeamsJS) を使用すると、ナビゲーションのプロセスが簡略化されます。 タブ内のコンテンツや情報への移動やチャット ダイアログの起動など、多くのシナリオで使用できます。 SDK は、エクスペリエンスを向上させる型指定された API を提供し、ディープ リンクの使用を置き換えることができます。 これらの API は、他のホスト (Outlook、Office) で実行される可能性がある Teams アプリに推奨されます。また、使用されている機能がそのホストでサポートされていることを確認する方法も提供されます。 次のセクションでは、ディープ リンクに関する情報を示しますが、TeamsJS v2 のリリースで、それを要求するために、使用されたシナリオがどのように変更されたかについても要点に注目して説明します。
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 > [!NOTE]
->
 > ディープ リンクの動作は、さまざまな要因に依存します。 次の一覧では、Teams エンティティに対するディープ リンクの動作の概要を示します。
 >
 > **タブ**:  
@@ -389,11 +388,11 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 アプリが Teams ストアの一覧に表示されたら、アプリのディープ リンクを作成します。 Teams を起動するためのリンクを作成するには、アプリ ID を次の URL に追加します: `https://teams.microsoft.com/l/app/<your-app-id>`。 アプリをインストールするダイアログ ボックスが表示されます。
 
 > [!NOTE]
-> 現在、アプリへのディープ リンクはモバイル プラットフォームではサポートされていません。
+> アプリがモバイル プラットフォームに対して承認されている場合は、モバイル上のアプリにディープ リンクできます。 Teams-iOS でディープ リンクを機能させるには、Apple App Store Connect Team ID も必要です。 詳細については、[Apple App Store Connect チーム ID を更新する方法に関する記事を](../deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md#update-apple-app-store-connect-team-id-on-partner-center)参照してください。
 
 ### <a name="deep-linking-for-sharepoint-framework-tabs"></a>SharePoint Framework タブのディープ リンク
 
-次のディープ リンク形式は、ボット、コネクタ、またはメッセージ拡張カードで使用できます: `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
+次のディープ リンク形式は、ボット、コネクタ、またはメッセージ拡張カードで使用できます: `https://teamsc.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
 
 > [!NOTE]
 > ボットがディープ リンクを含む TextBlock メッセージを送信すると、ユーザーがリンクを選択すると新しいブラウザ タブが開きます。 これは、Linuxで 実行されている Chrome および Microsoft Teams デスクトップ アプリで発生します。

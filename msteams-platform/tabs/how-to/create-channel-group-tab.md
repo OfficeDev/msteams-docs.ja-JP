@@ -1,21 +1,23 @@
 ---
 title: '[チャネルの作成] タブ'
 author: laujan
-description: このモジュールでは、コード例を使用してソース コードを確認するなど、Microsoft Teams 用 Yeoman Generator を使用してチャネルとグループ タブを作成する方法について説明します。
-ms.localizationpriority: medium
+description: Node.js、ASP.NET Core、ASP.NET Core MVC を含むカスタム チャネル、グループ タブを作成します。 アプリの生成、パッケージの作成、アプリのビルドと実行、シークレット トンネル、Teams へのアップロード
+ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: cc1145bd3c3ea6c12aad4231cceb9a8cd2a24488
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 1b668a0e89ba2f2c77a56623d25ed11c1caaf7ea
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841709"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450472"
 ---
 # <a name="create-a-channel-tab"></a>[チャネルの作成] タブ
 
 チャネル/グループ タブは、コンテンツをチャネルやグループのチャットに配信します。また、専用の Web ベースのコンテンツまわりに関する共同作業スペースを作成するのに優れた方法です。
+
+チャネルまたはグループ タブを構築するための [前提条件](~/tabs/how-to/tab-requirements.md) がすべて揃っていることを確認します。
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -212,12 +214,12 @@ gulp ngrok-serve
     >"composeExtensions": [],
     >```
 
-1. 指示に従ってタブを追加します。チャネル/グループ タブのカスタム構成ダイアログがあります。
+1. タブを追加する手順に従います。チャネルまたはグループ タブのカスタム構成ダイアログがあります。
 1. **[保存]** を選択すると、タブがチャネルのタブ バーに追加されます。
 
     :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="アップロードされたチャネル タブ":::
 
-    これで、Teams でチャネル/グループ タブが正常に作成され、追加されました。
+    これで、Teams でチャネルまたはグループ タブが正常に作成され、追加されました。
 
 ::: zone-end
 
@@ -440,7 +442,7 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="アップロードされたチャネル タブの ASPNET":::
 
-    これで、Teams でチャネル/グループ タブが正常に作成され、追加されました。
+    これで、Teams でチャネルまたはグループ タブが正常に作成され、追加されました。
 
 ::: zone-end
 
@@ -661,7 +663,7 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 
     :::image type="content" source="~/assets/images/tab-images/channeltabaspnetuploaded.png" alt-text="アップロードされたチャネル タブの ASPNET MVC":::
 
-    これで、Teams でチャネル/グループ タブが正常に作成され、追加されました。
+    これで、Teams でチャネルまたはグループ タブが正常に作成され、追加されました。
 
 ::: zone-end
 

@@ -1,16 +1,16 @@
 ---
 title: コンテンツ ページを作成する
 author: surbhigupta
-description: このモジュールでは、タブとタブのコンテンツとデザインガイドラインのコンテンツ ページを作成する方法について説明します
-ms.localizationpriority: medium
+description: Teams クライアント内の Web ページについて説明し、個人用、チャネル、またはグループのカスタム タブの一部です。コンテンツ ページを作成し、タスク モジュール内に Web ビューとして埋め込みます。
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 4fd9c301ba48f346b9e721f5d6b3baa13ca50c04
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 34e106bfa0fdfa6b881d1a2fcd5685c022ac5d87
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841970"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450374"
 ---
 # <a name="create-a-content-page"></a>コンテンツ ページを作成する
 
@@ -33,6 +33,9 @@ ms.locfileid: "66841970"
 ## <a name="integrate-your-code-with-teams"></a>コードを Teams と統合する
 
 Teams でページを表示するには、[Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) を含め、ページの読み込み後に `app.initialize()` の呼び出しを含める必要があります。
+
+> [!NOTE]
+> キャッシュが原因で、コンテンツや UI の変更がタブ アプリに反映されるまでには、24 ~ 48 時間近くかかります。
 
 次のコードは、ページと Teams クライアントの通信方法の例を示しています。
 

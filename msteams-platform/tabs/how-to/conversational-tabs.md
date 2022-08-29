@@ -1,16 +1,16 @@
 ---
 title: 会話タブを作成する
 author: surbhigupta
-description: このモジュールでは、チャネル タブの会話サブエンティティ チャットを作成し、コード サンプルを使用して会話を管理する方法について説明します。
+description: Microsoft Teams で会話タブを作成して、会話を開始、続行、強化、閉じる方法について説明します。
 ms.topic: conceptual
 ms.author: lomeybur
-ms.localizationpriority: medium
-ms.openlocfilehash: 4ba0545d78f892941836994d054a3fafcee183a4
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
+ms.localizationpriority: high
+ms.openlocfilehash: 37816fab1f8ca402e806dec3ec5cca77dd15cf95
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962420"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450423"
 ---
 # <a name="create-conversational-tabs"></a>会話タブを作成する
 

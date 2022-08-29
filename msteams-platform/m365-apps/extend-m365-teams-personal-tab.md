@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 1110d195be91c73f9e0f60f15a94f2cdbdfa083b
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: 93e87648dc64a7b5b005b4a6162828e573bb034b
+ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919775"
+ms.lasthandoff: 08/13/2022
+ms.locfileid: "67337237"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Teams 個人用タブを Microsoft 365 全体に拡張する
 
@@ -246,6 +246,7 @@ Office または Outlook へのローカル デバッグを初めて実行する
 | Todo List | ReactとAzure Functionsを使用して構築された SSO を使用した編集可能な todo リスト。 Teams でのみ動作します (このサンプル アプリを使用して、このチュートリアルで説明されているアップグレード プロセスを試してください)。 | [表示](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
 | Todo List (Microsoft 365) | ReactとAzure Functionsを使用して構築された SSO を使用した編集可能な todo リスト。 Teams、Outlook、Office で動作します。 | [表示](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | イメージ エディター (Microsoft 365) | Microsoft Graph APIを使用してイメージを作成、編集、開き、保存します。 Teams、Outlook、Office で動作します。 | [表示](https://github.com/OfficeDev/m365-extensibility-image-editor) |
+| サンプル起動ページ (Microsoft 365) | SSO 認証を紹介し、異なるホストで使用可能な TeamsJS SDK 機能を活用します。 Teams、Outlook、Office で動作します。 | [表示](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
 
 ## <a name="next-step"></a>次の手順
 

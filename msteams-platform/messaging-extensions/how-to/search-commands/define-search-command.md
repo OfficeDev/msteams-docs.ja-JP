@@ -5,12 +5,12 @@ description: このモジュールでは、Teams アプリのメッセージ拡�
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: cdc3bd5de10fb85970c74065f12164dc36d81fe3
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: 5cddfcc5f4fd3088e72538c6243b5f4fbf19767c
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312269"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363474"
 ---
 # <a name="define-message-extension-search-commands"></a>メッセージ拡張機能検索コマンドを定義する
 
@@ -24,7 +24,7 @@ ms.locfileid: "67312269"
 メッセージ拡張機能検索コマンドを定義する方法については、次のビデオを参照してください。
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
 <br>
 
 ## <a name="select-search-command-invoke-locations"></a>検索コマンドの呼び出し場所を選択する
@@ -113,6 +113,7 @@ Teams クライアントでユーザーに表示されるテキストを定義�
 | `parameter.description` | このプロパティは、パラメーターの目的または指定する必要がある値の例を記述します。 この値は UI に表示されます。 | はい | 1.0 |
 | `parameter.title` | このプロパティは、ユーザー フレンドリな短いパラメーターのタイトルまたはラベルです。 | はい | 1.0 |
 | `parameter.inputType` | このプロパティは、必要な入力の種類に設定されます。 使用可能な値には`text`、, , `textarea`, `number`, `date`, `time``toggle`. 既定値は .`text` | いいえ | 1.4 |
+| `parameters.value` | パラメーターの初期値。 現在、値はサポートされていません | いいえ | 1.5 |
 
 #### <a name="example"></a>例
 

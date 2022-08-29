@@ -1,15 +1,15 @@
 ---
 title: 開発者ポータルを使用してアプリを管理する
-description: この記事では、Microsoft Teams用開発者ポータルを使用してアプリを構成、配布、管理する方法について説明します。
+description: この記事では、Microsoft Teams 用開発者ポータルを使用してアプリを構成、配布、管理する方法について説明します。
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 12f1def758e4ef108f9670e0cc696c7ce197e485
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: 82b755408aa633768ff5a0c01a1c347cadb6a0a7
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232445"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435077"
 ---
 # <a name="manage-your-apps-in-developer-portal"></a>開発者ポータルでアプリを管理する
 
@@ -154,9 +154,9 @@ Teams でアプリをインストールしてレンダリングするには、Te
 1. ボット管理ページで、[ **新しいボット**] を選択します。
 1. 名前を入力し、[ **追加**] を選択します。
 
-:::image type="content" source="../../assets/images/tdp/tools-in-dev-portal.png" alt-text="スクリーンショットは、開発者ポータルのツールを示す例です。これは、主な機能を構築するのに役立ちます。":::
+   :::image type="content" source="../../assets/images/tdp/tools-in-dev-portal.png" alt-text="スクリーンショットは、開発者ポータルのツールを示す例です。これは、主な機能を構築するのに役立ちます。":::
 
-開発者ポータルから Bot Framework ポータルに移動し、アイコンやその他のプロパティを更新するようにボットを構成できます。
+開発者ポータルから Bot Framework Portal に移動し、アイコンやその他のプロパティを更新するようにボットを構成できます。
 
 ## <a name="see-also"></a>関連項目
 

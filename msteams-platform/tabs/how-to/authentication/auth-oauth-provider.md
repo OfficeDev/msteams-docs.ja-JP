@@ -3,38 +3,38 @@ title: 外部 OAuth プロバイダーを使用する
 description: このモジュールでは、外部 OAuth プロバイダーを使用して認証を行う方法と、それを外部ブラウザーに追加する方法について説明します
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 00b722b2b8fd61e3c8fd620ae7bd277da0e7a89b
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
-ms.translationtype: HT
+ms.openlocfilehash: 62f056fd852eda320a180fa61cf5693ef0105b8b
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962413"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435070"
 ---
 # <a name="use-external-oauth-providers"></a>外部 OAuth プロバイダーを使用する
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 更新された `authenticate()` APIを使用して、Google、GitHub、LinkedIn、Facebook などの外部またはサードパーティ (3P) の OAuth プロバイダーをサポートできます。
 
 ```JavaScript
-function authenticate(authenticateParameters?: AuthenticateParameters)
-``` 
+function authenticate(authenticateParameters: AuthenticatePopUpParameters): Promise<string>
+```
 
 外部 OAuth プロバイダーをサポートするために、以下が `authenticate()` API に追加されています。
 
 * `isExternal` パラメーター
 * 既存の `url` パラメーターの 2 つのプレースホルダー値
 
-次の表に、`authenticate()` APIパラメーターと関数のリストとその説明を示します。
+次の表に、API パラメーター (`AuthenticatePopUpParameters`) とその説明と関数の`authenticate()`一覧を示します。
 
 | パラメーター| 説明|
 | --- | --- |
 |`isExternal` | パラメーターの種類はブール値です。これは、認証ウィンドウが外部ブラウザーで開くことを示します。|
-|`failureCallback`| 認証が失敗し、認証ポップアップが失敗の理由を指定すると、関数が呼び出されます。|
 |`height` |ポップアップの優先高さ。 許容範囲外の場合、値は無視できます。|
-|`successCallback`| 認証が成功すると関数が呼び出され、認証ポップアップから結果が返されます。Authcode がその結果です。|
 |`url`  <br>|認証ポップアップ用の 3P アプリ サーバーの URL。次の 2 つのパラメーター プレースホルダーがあります。</br> <br> - `oauthRedirectMethod`: `{}` でプレースホルダーを渡します。このプレースホルダーは、Teams プラットフォームによるディープリンクまたは Web ページに置き換えられます。これは、通話がモバイル プラットフォームから発信されているかどうかをアプリ サーバーに通知します。</br> <br> - `authId`: このプレースホルダーは UUID に置き換えられます。 アプリ サーバーはそれを使用してセッションを維持します。| 
 |`width`|ポップアップの優先幅。 許容範囲外の場合、値は無視できます。|
 
-パラメーターの詳細については、「[パラメーターの認証インターフェイス](/javascript/api/@microsoft/teams-js/microsoftteams.authentication.authenticateparameters?view=msteams-client-js-latest&preserve-view=true)」を参照してください。
+パラメーターの詳細については、 [authenticate(AuthenticatePopUpParameters)](/javascript/api/@microsoft/teams-js/authentication#@microsoft-teams-js-authentication-authenticate) 関数を参照してください。
 
 ## <a name="add-authentication-to-external-browsers"></a>外部ブラウザーへの認証の追加
 
@@ -50,13 +50,14 @@ function authenticate(authenticateParameters?: AuthenticateParameters)
 
 1. 外部認証ログイン プロセスを開始します。
 
-   3P アプリは、`isExternal` を true に設定して SDK 関数 `microsoftTeams.authentication.authenticate` を呼び出し、外部の認証ログイン プロセスを開始します。 
+   3P アプリは、`isExternal` を true に設定して SDK 関数 `authentication.authenticate` を呼び出し、外部の認証ログイン プロセスを開始します。
 
    渡された `url` には、`{authId}` および `{oauthRedirectMethod}` のプレースホルダーが含まれます。  
 
 
     ```JavaScript
-    microsoftTeams.authentication.authenticate({
+    import { authentication } from "@microsoft/teams-js";
+    authentication.authenticate({
        url: 'https://3p.app.server/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId}',
        isExternal: true,
        successCallback: function (result) {
@@ -69,7 +70,7 @@ function authenticate(authenticateParameters?: AuthenticateParameters)
 
 2. Teams リンクが外部ブラウザーで開きます。
 
-   Teams クライアントは、`oauthRedirectMethod` および `authId` のプレースホルダーを適切な値に置き換えた後、外部ブラウザーで URL を開きます。 
+   Teams クライアントは、`oauthRedirectMethod` および `authId` のプレースホルダーを適切な値に置き換えた後、外部ブラウザーで URL を開きます。
 
    #### <a name="example"></a>例
 
@@ -87,11 +88,11 @@ function authenticate(authenticateParameters?: AuthenticateParameters)
    |`authId` | ディープリンクを通じて Teams に送り返す必要がある、この特定の認証要求用に Teams が作成した request-id。|
 
     > [!TIP]
-    > 3P アプリは、OAuthProvider のログイン URL を生成しながら、OAuth `state` クエリ パラメーターで `authId`、`oauthRedirectMethod` をマーシャリングできます。 OAuthProvider が 3P サーバーにリダイレクトし、3P アプリが「**6. Teams への 3P アプリ サーバーの応答**」で説明されているように認証応答を Teams に送り返すために値を使用する場合、`state` には渡された `authId` と `oauthRedirectMethod` が含まれます。 
+    > 3P アプリは、OAuthProvider のログイン URL を生成しながら、OAuth `state` クエリ パラメーターで `authId`、`oauthRedirectMethod` をマーシャリングできます。 OAuthProvider が 3P サーバーにリダイレクトし、3P アプリが「**6. Teams への 3P アプリ サーバーの応答**」で説明されているように認証応答を Teams に送り返すために値を使用する場合、`state` には渡された `authId` と `oauthRedirectMethod` が含まれます。
 
 4. 3P アプリ サーバーは、指定された `url` にリダイレクトします。
 
-   3P アプリ サーバーは、外部ブラウザーの OAuth プロバイダー認証ページにリダイレクトします。 `redirect_uri` は、3P アプリ サーバーの専用ルートです。 `redirect_uri` を OAuth プロバイダーの開発コンソールに静的として登録できます。パラメーターは状態オブジェクトを通じて送信する必要があります。 
+   3P アプリ サーバーは、外部ブラウザーの OAuth プロバイダー認証ページにリダイレクトします。 `redirect_uri` は、3P アプリ サーバーの専用ルートです。 `redirect_uri` を OAuth プロバイダーの開発コンソールに静的として登録できます。パラメーターは状態オブジェクトを通じて送信する必要があります。
 
    #### <a name="example"></a>例
 

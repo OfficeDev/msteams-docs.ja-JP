@@ -1,16 +1,16 @@
 ---
 title: 基本的な Fluent UI コンポーネントを使用してアプリを設計する
 author: heath-hamilton
-description: Teams UI キットの Fluent UI コンポーネントを使用して Microsoft Teams アプリを設計する方法について説明します。
+description: Teams UI キットの UI コンポーネントを使用して Microsoft Teams アプリをビルドする方法について説明します。 Fluent キット、階層リンク、ボタン カード、カルーセル、ドロップダウン、トグルなどの UI コンポーネントを使用する方法について説明します。
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 78c44e8188210feed1123a9a0bfa8a027a4923a9
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
+ms.openlocfilehash: bf90f0979e8a7b8670af8f8295be9f913b15dc36
+ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962441"
+ms.lasthandoff: 08/15/2022
+ms.locfileid: "67338789"
 ---
 # <a name="designing-your-microsoft-teams-app-with-basic-fluent-ui-components"></a>基本的な Fluent UI コンポーネントを使用した Microsoft Teams アプリの設計
 

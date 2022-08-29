@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
 ms.date: 04/07/2022
-ms.openlocfilehash: 0210962126604733c4d66ba0db4276ff36cfd6b7
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
-ms.translationtype: HT
+ms.openlocfilehash: 511083fea77c40cec0134e6620c741c3c4da8829
+ms.sourcegitcommit: 134ce9381891e51e6327f1f611fdfd60c90cca18
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841800"
+ms.lasthandoff: 08/24/2022
+ms.locfileid: "67425618"
 ---
 # <a name="dice-roller-code-tutorial"></a>Dice Roller コードのチュートリアル
 
@@ -29,8 +29,8 @@ Dice Roller サンプル アプリでは、ユーザーにロールボタンが�
 ## <a name="set-up-the-application"></a>アプリケーションを設定します。
 
 まず、必要なモジュールをインポートします。 このサンプルでは、流動フレームワークの [SharedMap DDS](https://fluidframework.com/docs/data-structures/map/) と、Live Share SDK の [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) を使用します。 このサンプルでは、Teams会議の機能拡張がサポートされているため、[[Teams クライアント SDK]](https://github.com/OfficeDev/microsoft-teams-library-js) を含める必要があります。 最後に、サンプルはローカルとTeams会議の両方で実行するように設計されているため、[サンプルをローカルでテスト](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious)するために必要な追加の流動フレームワーク部分を含める必要があります。
-  
-アプリケーションは、コンテナーで使用できる一連の *初期オブジェクト* を定義するスキーマを使用して、Fluid コンテナーを作成します。 このサンプルでは、SharedMap を使用して、ロールされた最新のダイ値を格納します。 詳細については、「[データ プライバシー](https://fluidframework.com/docs/build/data-modeling/)」を参照してください。
+
+アプリケーションは、コンテナーで使用できる一連の _初期オブジェクト_ を定義するスキーマを使用して、Fluid コンテナーを作成します。 このサンプルでは、SharedMap を使用して、ロールされた最新のダイ値を格納します。 詳細については、「[データ プライバシー](https://fluidframework.com/docs/build/data-modeling/)」を参照してください。
 
 Teams 会議アプリ、複数のビュー (コンテンツ、構成、ステージ) が必要です。 レンダリングするビューを識別し、必要な初期化を実行するのに役立つ `start()` 関数を作成します。 アプリで Web ブラウザーと Teams 会議内の両方の実行をサポートし、`start()` 関数が `inTeams=true` クエリ パラメーターを検索して、Teamsで実行されているかどうかを判断できるようにします。 Teams で実行する場合は、他の teams-js メソッドを呼び出す`app.initialize()`前にアプリケーションを呼び出す必要があります。
 
@@ -51,7 +51,7 @@ const root = document.getElementById("content");
 const diceValueKey = "dice-value-key";
 
 const containerSchema = {
-  initialObjects: { diceMap: SharedMap }
+  initialObjects: { diceMap: SharedMap },
 };
 
 function onContainerFirstCreated(container) {
@@ -59,36 +59,33 @@ function onContainerFirstCreated(container) {
   container.initialObjects.diceMap.set(diceValueKey, 1);
 }
 
-
 // STARTUP LOGIC
 
 async function start() {
-
   // Check for page to display
-  let view = searchParams.get('view') || 'stage';
+  let view = searchParams.get("view") || "stage";
 
   // Check if we are running on stage.
-  if (!!searchParams.get('inTeams')) {
-
+  if (!!searchParams.get("inTeams")) {
     // Initialize teams app
     await app.initialize();
 
     // Get our frameContext from context of our app in Teams
     const context = await app.getContext();
-    if (context.page.frameContext == 'meetingStage') {
-      view = 'stage';
+    if (context.page.frameContext == "meetingStage") {
+      view = "stage";
     }
   }
 
   // Load the requested view
   switch (view) {
-    case 'content':
+    case "content":
       renderSidePanel(root);
       break;
-    case 'config':
+    case "config":
       renderSettings(root);
       break;
-    case 'stage':
+    case "stage":
     default:
       const { container } = await joinContainer();
       renderStage(container.initialObjects.diceMap, root);
@@ -101,27 +98,29 @@ start().catch((error) => console.error(error));
 
 ## <a name="join-a-fluid-container"></a>Fluid コンテナーを結合する
 
-すべてのアプリ ビューが共同作業である必要があるわけではありません。 `stage`ビューには *常に* コラボレーション機能が必要です。ビューには`content`コラボレーション機能 *が必要な場合があります*。また、`config` ビューにはコラボレーション機能は必要 *ありません*。 共同作業機能が必要なビューの場合は、現在の会議に関連付けられている Fluid コンテナーに参加する必要があります。
+すべてのアプリ ビューが共同作業である必要があるわけではありません。 `stage`ビューには _常に_ コラボレーション機能が必要です。ビューには`content`コラボレーション機能 _が必要な場合があります_。また、`config` ビューにはコラボレーション機能は必要 _ありません_。 共同作業機能が必要なビューの場合は、現在の会議に関連付けられている Fluid コンテナーに参加する必要があります。
 
-会議のコンテナーに参加するのは、新しい [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) を作成し、それを [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) メソッドと呼ぶのと同じくらい簡単です。  ローカルで実行する場合は、特別な `LOCAL_MODE_TENANT_ID` カスタム接続構成を渡す必要がありますが、それ以外の場合は、ローカル コンテナーの結合は、Teams でコンテナーを参加させるのと同じです。
+会議のコンテナーに参加するのは、新しい [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) を作成し、それを [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) メソッドと呼ぶのと同じくらい簡単です。 ローカルで実行する場合は、特別な `LOCAL_MODE_TENANT_ID` カスタム接続構成を渡す必要がありますが、それ以外の場合は、ローカル コンテナーの結合は、Teams でコンテナーを参加させるのと同じです。
 
 ```js
 async function joinContainer() {
   // Are we running in teams?
   let client;
-  if (!!searchParams.get('inTeams')) {
-      // Create client
-      client = new TeamsFluidClient();
+  if (!!searchParams.get("inTeams")) {
+    // Create client
+    client = new TeamsFluidClient();
   } else {
-      // Create client and configure for testing
-      client = new TeamsFluidClient({
-        connection: {
-          tenantId: LOCAL_MODE_TENANT_ID,
-          tokenProvider: new InsecureTokenProvider("", { id: "123", name: "Test User" }),
-          orderer: "http://localhost:7070",
-          storage: "http://localhost:7070",
-        }
-      });
+    // Create client and configure for testing
+    client = new TeamsFluidClient({
+      connection: {
+        type: "local",
+        tokenProvider: new InsecureTokenProvider("", {
+          id: "123",
+          name: "Test User",
+        }),
+        endpoint: "http://localhost:7070",
+      },
+    });
   }
 
   // Join container
@@ -150,19 +149,19 @@ stageTemplate["innerHTML"] = `
     <div class="dice"></div>
     <button class="roll"> Roll </button>
   </div>
-`
+`;
 function renderStage(diceMap, elem) {
-    elem.appendChild(stageTemplate.content.cloneNode(true));
-    const rollButton = elem.querySelector(".roll");
-    const dice = elem.querySelector(".dice");
+  elem.appendChild(stageTemplate.content.cloneNode(true));
+  const rollButton = elem.querySelector(".roll");
+  const dice = elem.querySelector(".dice");
 
-    rollButton.onclick = () => updateDice(Math.floor(Math.random() * 6)+1);
+  rollButton.onclick = () => updateDice(Math.floor(Math.random() * 6) + 1);
 
-    const updateDice = (value) => {
-        // Unicode 0x2680-0x2685 are the sides of a die (⚀⚁⚂⚃⚄⚅).
-        dice.textContent = String.fromCodePoint(0x267f + value);
-    };
-    updateDice(1);
+  const updateDice = (value) => {
+    // Unicode 0x2680-0x2685 are the sides of a die (⚀⚁⚂⚃⚄⚅).
+    dice.textContent = String.fromCodePoint(0x267f + value);
+  };
+  updateDice(1);
 }
 ```
 
@@ -175,7 +174,8 @@ function renderStage(diceMap, elem) {
 このパターンは、ビューがローカル変更とリモート変更の両方で同じ動作を可能にするため、Fluid では一般的です。
 
 ```js
-    rollButton.onclick = () => diceMap.set("dice-value-key", Math.floor(Math.random() * 6)+1);
+rollButton.onclick = () =>
+  diceMap.set("dice-value-key", Math.floor(Math.random() * 6) + 1);
 ```
 
 ### <a name="rely-on-fluid-data"></a>Fluid データに依存する
@@ -183,11 +183,11 @@ function renderStage(diceMap, elem) {
 次に行う必要のある変更は、`updateDice` 関数を変更して、任意の値を受け入れないようにすることです。 つまり、アプリはローカルのサイコロ値を直接変更できなくなりました。 代わりに、値は呼び出される`SharedMap`たびに`updateDice`取得されます。
 
 ```js
-    const updateDice = () => {
-        const diceValue = diceMap.get("dice-value-key");
-        dice.textContent = String.fromCodePoint(0x267f + diceValue);
-    };
-    updateDice();
+const updateDice = () => {
+  const diceValue = diceMap.get("dice-value-key");
+  dice.textContent = String.fromCodePoint(0x267f + diceValue);
+};
+updateDice();
 ```
 
 ### <a name="handle-remote-changes"></a>リモート変更を処理する
@@ -195,12 +195,12 @@ function renderStage(diceMap, elem) {
 `diceMap` から返される値は、特定の時点のスナップショットに過ぎません。 データの変更時にデータを最新の状態に保つには、`valueChanged` イベントが送信されるたびに `updateDice` を呼び出すように `diceMap` にイベント ハンドラーを設定する必要があります。 発生したイベントの一覧とそれらのイベントに渡される値を取得するには、 [SharedMap](https://fluidframework.com/docs/data-structures/map/) に関するサイトを参照してください。
 
 ```js
-    diceMap.on("valueChanged", updateDice);
+diceMap.on("valueChanged", updateDice);
 ```
 
 ## <a name="write-the-side-panel-view"></a>サイド パネル ビューを記述する
 
-タブ `contentUrl` から `sidePanel` フレーム コンテキストで読み込まれたサイド パネルビューは、ユーザーが会議内でアプリを開いたときにサイド パネルに表示されます。 このビューの目的は、会議ステージにアプリを共有する前に、ユーザーがアプリのコンテンツを選択できるようにすることです。 Live Share SDK アプリの場合は、サイド パネル ビューをアプリのコンパニオン エクスペリエンスとして使用することもできます。 サイド パネル ビューから [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) を呼び出すと、ステージ ビューが接続されているのと同じ Fluid コンテナーに接続されます。 このコンテナーは、ステージ ビューとの通信に使用できます。 全員のステージ ビュー *および* サイドパネル ビューと通信していることを確認してください。
+タブ `contentUrl` から `sidePanel` フレーム コンテキストで読み込まれたサイド パネルビューは、ユーザーが会議内でアプリを開いたときにサイド パネルに表示されます。 このビューの目的は、会議ステージにアプリを共有する前に、ユーザーがアプリのコンテンツを選択できるようにすることです。 Live Share SDK アプリの場合は、サイド パネル ビューをアプリのコンパニオン エクスペリエンスとして使用することもできます。 サイド パネル ビューから [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) を呼び出すと、ステージ ビューが接続されているのと同じ Fluid コンテナーに接続されます。 このコンテナーは、ステージ ビューとの通信に使用できます。 全員のステージ ビュー _および_ サイドパネル ビューと通信していることを確認してください。
 
 サンプルのサイド パネル ビューでは、ユーザーに [ステージへの共有] ボタンの選択を求めるメッセージが表示されます。
 
@@ -220,7 +220,7 @@ sidePanelTemplate["innerHTML"] = `
 `;
 
 function renderSidePanel(elem) {
-    elem.appendChild(sidePanelTemplate.content.cloneNode(true));
+  elem.appendChild(sidePanelTemplate.content.cloneNode(true));
 }
 ```
 
@@ -228,7 +228,7 @@ function renderSidePanel(elem) {
 
 アプリマニフェストの `configurationUrl` を介して読み込まれた設定ビューは、ユーザーが最初に Teams 会議にアプリを追加したときに表示されます。 このビューにより、開発者は、ユーザー入力に基づいて会議に固定されるタブの `contentUrl` を構成できます。 `contentUrl` を設定するためにユーザー入力が必要ない場合でも、このページは現在必要です。
 
-> [!Important]
+> [!IMPORTANT]
 > Live Share SDK の [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) は、タブ `settings` コンテキストではサポートされていません。
 
 サンプルの設定ビューでは、保存ボタンを選択するようにユーザーに求められます。
@@ -249,21 +249,21 @@ settingsTemplate["innerHTML"] = `
 `;
 
 function renderSettings(elem) {
-    elem.appendChild(settingsTemplate.content.cloneNode(true));
+  elem.appendChild(settingsTemplate.content.cloneNode(true));
 
-    // Save the configurable tab
-    pages.config.registerOnSaveHandler(saveEvent => {
-      pages.config.setConfig({
-        websiteUrl: window.location.origin,
-        contentUrl: window.location.origin + '?inTeams=1&view=content',
-        entityId: 'DiceRollerFluidLiveShare',
-        suggestedDisplayName: 'DiceRollerFluidLiveShare'
-      });
-      saveEvent.notifySuccess();
+  // Save the configurable tab
+  pages.config.registerOnSaveHandler((saveEvent) => {
+    pages.config.setConfig({
+      websiteUrl: window.location.origin,
+      contentUrl: window.location.origin + "?inTeams=1&view=content",
+      entityId: "DiceRollerFluidLiveShare",
+      suggestedDisplayName: "DiceRollerFluidLiveShare",
     });
+    saveEvent.notifySuccess();
+  });
 
-    // Enable the Save button in config dialog
-    pages.config.setValidityState(true);
+  // Enable the Save button in config dialog
+  pages.config.setValidityState(true);
 }
 ```
 
@@ -281,11 +281,11 @@ function renderSettings(elem) {
 
 1. ngrok を使用して、ポート 8080 を使用してトンネルを作成します。 次のコマンドを実行します。
 
-    ```
-     `ngrok http 8080 --host-header=localhost`
-    ```
+   ```bash
+    ngrok http 8080 --host-header=localhost
+   ```
 
-    新しい ngrok ターミナルが新しいURL (たとえば `https:...ngrok.io`)で開きます。 新しい URL は、アプリを指すトンネルであり、アプリで `manifest.json` 更新する必要があります。
+   新しい ngrok ターミナルが新しいURL (たとえば `https:...ngrok.io`)で開きます。 新しい URL は、アプリを指すトンネルであり、アプリで `manifest.json` 更新する必要があります。
 
 ### <a name="create-the-app-package-to-sideload-into-teams"></a>Teams にサイドロードするアプリ パッケージを作成する
 
@@ -296,20 +296,21 @@ function renderSettings(elem) {
    `https://<<BASE_URI_DOMAIN>>` を ngrok の http エンドポイントに置き換えます 。
 
 1. 次のシナリオでは、これらのプロパティを更新できます。
-   * `developer.name` を自分の名前に設定します。
-   * `developer.websiteUrl` を Web サイトで更新します。
-   * `developer.privacyUrl` をプライバシー ポリシーを使用して更新します。
-   * `developer.termsOfUseUrl` の使用条件を更新します。
+
+   - `developer.name` を自分の名前に設定します。
+   - `developer.websiteUrl` を Web サイトで更新します。
+   - `developer.privacyUrl` をプライバシー ポリシーを使用して更新します。
+   - `developer.termsOfUseUrl` の使用条件を更新します。
 
 1. `manifest.zip` を作成するマニフェスト フォルダーの内容を zip 化します。 `manifest.zip` に `manifest.json` ソース ファイル、`color` アイコン、および `outline` アイコンのみが含まれていることを確認します。
 
    1. Windowsで、`.\manifest` ディレクトリ内のすべてのファイルを選択し、圧縮します。
-  
+
    > [!NOTE]
    >
-   > * 含まれているフォルダーを zip にしないでください。
-   > * zip ファイルにわかりやすい名前を付けます。 たとえば、「 `DiceRollerLiveShare` 」のように入力します。
-  
+   > - 含まれているフォルダーを zip にしないでください。
+   > - zip ファイルにわかりやすい名前を付けます。 たとえば、「 `DiceRollerLiveShare` 」のように入力します。
+
    マニフェストの詳細については、「[Teams マニフェストのドキュメント](../resources/schema/manifest-schema.md)」を参照してください
 
 ### <a name="sideload-your-app-into-a-meeting"></a>アプリを会議にサイドロードする
@@ -357,8 +358,8 @@ function renderSettings(elem) {
 
 ## <a name="code-samples"></a>コード サンプル
 
-| サンプルの名前 | 説明                                                      | JavaScript                                                                           |
-| :---------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| サンプルの名前 | 説明                                                     | JavaScript                                                                           |
+| :---------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | Dice Roller | 接続されているすべてのクライアントがサイコロをふり、結果を表示できるようにします。 | [表示](https://github.com/microsoft/live-share-sdk/tree/main/samples/01.dice-roller) |
 
 ## <a name="next-step"></a>次の手順
@@ -368,8 +369,8 @@ function renderSettings(elem) {
 
 ## <a name="see-also"></a>関連項目
 
-* [GitHub リポジトリ](https://github.com/microsoft/live-share-sdk)
-* [LIVE SHARE SDK リファレンス ドキュメント](/javascript/api/@microsoft/live-share/)
-* [Live Share Media SDK リファレンス ドキュメント](/javascript/api/@microsoft/live-share-media/)
-* [Live Share FAQ](teams-live-share-faq.md)
-* [会議の Teams アプリ](teams-apps-in-meetings.md)
+- [GitHub リポジトリ](https://github.com/microsoft/live-share-sdk)
+- [LIVE SHARE SDK リファレンス ドキュメント](/javascript/api/@microsoft/live-share/)
+- [Live Share Media SDK リファレンス ドキュメント](/javascript/api/@microsoft/live-share-media/)
+- [Live Share FAQ](teams-live-share-faq.md)
+- [会議の Teams アプリ](teams-apps-in-meetings.md)

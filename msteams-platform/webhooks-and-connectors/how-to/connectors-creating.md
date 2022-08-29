@@ -5,12 +5,12 @@ description: このモジュールでは、Office 365 コネクタの使用を�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: a0e135864fd7c7d9775731e6c46faf9f24242943
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: bb4bd02553ebb49752fa6450cd0f94f41dcc7ac8
+ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841641"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "67363489"
 ---
 # <a name="create-office-365-connectors"></a>Office 365 コネクタの作成
 
@@ -19,7 +19,7 @@ Microsoft Teams アプリを使用すると、Teams 内に既存の Office 365 �
 Office 365 コネクタを作成する方法については、次のビデオを参照してください。
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv]
 <br>
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
@@ -260,3 +260,5 @@ Office 365 コネクタを作成する方法については、次のビデオを
 * [Office 365 コネクタを作成する](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [管理者がコネクタを有効または無効にする方法](/MicrosoftTeams/office-365-custom-connectors#enable-or-disable-connectors-in-teams)
 * [管理者が組織内でカスタム コネクタを発行する方法](/MicrosoftTeams/office-365-custom-connectors)
+* [JavaScript を使用した通知ボットのビルド](../../sbs-gs-notificationbot.yml)
+* [JavaScript を使用して初めてのボット アプリを構築する](../../sbs-gs-bot.yml)

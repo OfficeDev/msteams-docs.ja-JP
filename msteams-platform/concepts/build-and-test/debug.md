@@ -3,12 +3,12 @@ title: アプリをテストしてデバッグするためのセットアップ�
 description: このモジュールでは、ローカルおよびクラウドでホストされている環境で Microsoft Teams アプリをテストおよびデバッグするためのオプションについて説明します。
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 5f2a53db5540656d3fd62047ed0fef9256ba62d6
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: b064fb4ef06576251a91a4727a84bb4519d4d352
+ms.sourcegitcommit: d8183bad448990f7c79b1956a6c9761c27712b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312192"
+ms.lasthandoff: 08/29/2022
+ms.locfileid: "67452354"
 ---
 # <a name="choose-a-test-setup-and-debug-your-teams-app"></a>テストセットアップを選択し、Teams アプリをデバッグする
 
@@ -81,6 +81,5 @@ Teams 内でエクスペリエンスを読み込んで実行するには、パ�
 
 ## <a name="see-also"></a>関連項目
 
-[IDE を使用してボットをローカルでテストおよびデバッグする](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)
-
-[Microsoft Teams タブの DevTools](../../tabs/how-to/developer-tools.md)
+* [IDE を使用してボットをローカルでテストおよびデバッグする](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)
+* [Microsoft Teams タブの DevTools](../../tabs/how-to/developer-tools.md)

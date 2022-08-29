@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: c351214e019b0f794e4f279f69458da6adbf6dce
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
-ms.translationtype: HT
+ms.openlocfilehash: 65d6a8683249c7b076705087675029eb91f6eb24
+ms.sourcegitcommit: d3b7b4a12c757b97cf0e996bedd22335a9a70afc
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962476"
+ms.lasthandoff: 08/23/2022
+ms.locfileid: "67417651"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams ストア検証ガイドライン
 
@@ -430,7 +430,6 @@ Teams アプリ マニフェストは、アプリの構成を定義します。
 [*修正の提案*]
 
 * スマートフォンやノート PC など、特定のデバイスを表示する。
-* アプリ内で表示されない Chrome や UI のキャプチャ を含める。
 * Teams やブラウザの UI をキャプチャしたものをスクリーンショットの一部として含める。
 * Teams 外でアプリが使用されている場面など、アプリの実際の UI を正確に反映していないモックアップを含める。
 
@@ -861,7 +860,7 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
 
 [*必須の修正*]
 
-メッセージ拡張機能では、認識されたリンクが Teams の作成ボックスでプレビューされます。  制御外のドメイン (絶対 URL、ワイルドカードのいずれについても) を追加してはいけません。  たとえば、`yourapp.onmicrosoft.com` は有効ですが、`*.onmicrosoft.com` は無効です。 トップレベルの ドメインも禁止です。 たとえば、`*.com` および `*.org` が禁止となります。 [*必須の修正プログラム*]
+メッセージ拡張機能では、認識されたリンクが Teams の作成ボックスでプレビューされます。  制御外のドメイン (絶対 URL、ワイルドカードのいずれについても) を追加してはいけません。  たとえば、`yourapp.onmicrosoft.com` は有効ですが、`*.onmicrosoft.com` は無効です。 トップレベルの ドメインも禁止です。 たとえば、`*.com` および `*.org` が禁止となります。 [*必須の修正*]
 
 </details>
 </br>

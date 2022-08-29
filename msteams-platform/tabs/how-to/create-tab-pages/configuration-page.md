@@ -1,16 +1,16 @@
 ---
 title: 構成ページを作成する
 author: surbhigupta
-description: このモジュールでは、コンテキスト データの取得など、設定用のチャネルまたはグループ チャットを構成する構成ページを作成する方法について説明します。
-ms.localizationpriority: medium
+description: ユーザーから情報を収集する構成ページを作成します。 また、Microsoft Teams タブのコンテキスト データを取得し、認証について理解し、タブを変更または削除します。
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: e7e49d0d67967e6e203fd1e7a72c6a41ad2251cd
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.openlocfilehash: 7708a9319e4a9d8898ee20c2d274744a1a09cfcf
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841702"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450381"
 ---
 # <a name="create-a-configuration-page"></a>構成ページを作成する
 
@@ -174,9 +174,10 @@ ms.locfileid: "66841702"
 
 >[!NOTE]
 >
->* タイムアウトまでに保存操作 (registerOnSaveHandler へのコールバック) を完了するまでに 30 秒かかります。 タイムアウト後、一般的なエラー メッセージが表示されます。
+>* タイムアウトまでに保存操作 (コールバック `registerOnSaveHandler`先) を完了するまでに 30 秒かかります。 タイムアウト後、一般的なエラー メッセージが表示されます。
 >* `registerOnSaveHandler()` を使用して保存ハンドラーを登録する場合、コールバックは `saveEvent.notifySuccess()` または `saveEvent.notifyFailure()` を呼び出して、構成の結果を示す必要があります。
 >* 保存ハンドラーを登録しない場合、ユーザーが **[保存]** を選択すると、`saveEvent.notifySuccess()` 呼び出しが自動的に行われます。
+>* 一意 `entityId`であることを確認します。 タブの最初のインスタンスへのリダイレクトを複製 `entityId` します。
 
 ### <a name="get-context-data-for-your-tab-settings"></a>タブのコンテキストを取得する
 
@@ -292,7 +293,7 @@ document.write(getId());
 
 ## <a name="modify-or-remove-a-tab"></a>タブを変更または削除する
 
-マニフェストの `canUpdateConfiguration` プロパティ `true`を . これにより、ユーザーはチャネルまたはグループ タブを変更、再構成、または名前変更できます。タブが削除されたときのコンテンツへの影響についてユーザーに通知します。 これを行うには、アプリに [削除オプション] ページを含め、(以前の) 構成でプロパティの`setConfig()`値`removeUrl`を`setSettings()`設定します。 ユーザーは個人用タブをアンインストールできますが、変更することはできません。 詳細については、「[タブの削除ページを作成する](~/tabs/how-to/create-tab-pages/removal-page.md)」を参照してください。
+マニフェストの `canUpdateConfiguration` プロパティ `true`を . これにより、ユーザーはチャネルまたはグループ タブを変更または再構成できます。タブの名前は、Teams ユーザー インターフェイスを使用してのみ行うことができます。 タブが削除されたときのコンテンツへの影響についてユーザーに通知します。 これを行うには、アプリに [削除オプション] ページを含め、(以前の) 構成でプロパティの`setConfig()`値`removeUrl`を`setSettings()`設定します。 ユーザーは個人用タブをアンインストールできますが、変更することはできません。 詳細については、「[タブの削除ページを作成する](~/tabs/how-to/create-tab-pages/removal-page.md)」を参照してください。
 
 削除ページ用`setSettings()`の Microsoft Teams `setConfig()` (以前の) 構成:
 

@@ -5,12 +5,12 @@ description: Teams an Microsoft Power Platform で利用可能な Microsoft の�
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 74dd4eb094c31510319932ec96cbb0db34a1fca5
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 59730f586ff90a6f0de9061c41ccc6c2e24385ef
+ms.sourcegitcommit: 68bf3adb8aaae07caf684f7d9efb5cb7c84598b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503313"
+ms.lasthandoff: 08/19/2022
+ms.locfileid: "67382938"
 ---
 # <a name="create-low-code-custom-apps-for-teams"></a>Teams 用のローコード カスタム アプリを作成する
 
@@ -25,7 +25,11 @@ Microsoft Power Platform は、Power BI、Power Apps、Power Automate、以前�
 :::image type="content" source="../assets/images/power-platform-and-teams/ms-power-platform.png" alt-text="Power Platform サービス":::
 
 > [!NOTE]
-> Microsoft Power Platform を使用して、Teams アプリ ストアに発行するアプリを作成することはできません。 Microsoft Power Platform アプリは、組織のアプリ ストアにのみ発行できます。
+>
+> - すべての組織のユーザー向けに Teams ストアで Power アプリを公開する場合は、この [フォーム](https://go.microsoft.com/fwlink/?linkid=2204468)に入力してください。
+> - 特定の組織のアプリを発行する場合は、次を参照してください。
+>   - 詳細情報: [Power Apps と Microsoft Teams の統合](/power-apps/teams/overview)。
+>   - [Power Apps を使用して Microsoft Teams でアプリを作成する](/power-apps/teams/create-apps-overview)
 
 ### <a name="-teams-and-power-bi"></a>✔ Teams と Power BI
 

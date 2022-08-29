@@ -1,16 +1,16 @@
 ---
 title: タブのリンクの展開とステージ ビュー
 author: Rajeshwari-v
-description: リンクを展開し、ステージ ビューを開き、Microsoft Teams アプリでタブを固定する方法について説明します。 コード例とサンプルを使用して、ステージ ビューとアダプティブ カードを使用したステージ ビューの呼び出しについて説明します。
+description: Web コンテンツを表示するために呼び出される全画面表示 UI コンポーネントであるステージ ビューについて説明します。 リンク解除は、アダプティブ カードを使用して URL をタブに変換するために使用されます。
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.localizationpriority: medium
-ms.openlocfilehash: 9a12a32f15f0eb580b30897459d28b16bc88dccc
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
+ms.localizationpriority: high
+ms.openlocfilehash: b31f9aa1ad00a0cf255df4aa1976470c3add3551
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841990"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450451"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>タブのリンクの展開とステージ ビュー
 

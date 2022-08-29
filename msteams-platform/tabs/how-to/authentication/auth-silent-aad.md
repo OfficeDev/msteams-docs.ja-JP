@@ -3,12 +3,12 @@ title: サイレント認証
 description: このモジュールでは、サイレント認証、シングル サインオン、Azure AD をタブに対して実行する方法と動作方法について説明します
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 7df394bf43bd004e0a430b011ad5aad9c23d6983
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 048e92c0709541b6a044249fb35ab016b372fabc
+ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035311"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "67435042"
 ---
 # <a name="use-silent-authentication-in-azure-ad"></a>Azure AD でサイレント認証を使用する
 
@@ -57,7 +57,7 @@ Active Directory 認証ライブラリをタブ ページに含め、クライ�
 
 ### <a name="get-the-user-context"></a>ユーザー コンテキストを取得する
 
-タブのコンテンツ ページで、現在のユーザーのサインイン ヒントを取得するために呼び出 `microsoftTeams.getContext()` します。 このヒントは、Azure AD の呼び出しで使用 `loginHint` されます。
+タブのコンテンツ ページで、現在のユーザーのサインイン ヒントを取得するために呼び出 `app.getContext()` します。 このヒントは、Azure AD の呼び出しで使用 `loginHint` されます。
 
 ```javascript
 // Set up extra query parameters for Active Directory Authentication Library
@@ -109,16 +109,17 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 
 Active Directory 認証ライブラリは、サインイン コールバック ページで呼び出 `AuthenticationContext.handleWindowCallback(hash)` すことによって、Azure AD の結果を解析します。
 
-有効なユーザーが存在することを確認し、呼び出 `microsoftTeams.authentication.notifySuccess()` すか `microsoftTeams.authentication.notifyFailure()` 、メイン タブのコンテンツ ページに状態を報告します。
+有効なユーザーが存在することを確認し、呼び出 `authentication.notifySuccess()` すか `authentication.notifyFailure()` 、メイン タブのコンテンツ ページに状態を報告します。
 
 ```javascript
+import { authentication } from "@microsoft/teams-js";
 if (authContext.isCallback(window.location.hash)) {
     authContext.handleWindowCallback(window.location.hash);
     if (window.parent === window) {
         if (authContext.getCachedUser()) {
-            microsoftTeams.authentication.notifySuccess();
+            authentication.notifySuccess();
         } else {
-            microsoftTeams.authentication.notifyFailure(authContext.getLoginError());
+            authentication.notifyFailure(authContext.getLoginError());
         }
     }
 }

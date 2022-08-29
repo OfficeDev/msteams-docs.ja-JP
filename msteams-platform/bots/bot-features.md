@@ -1,16 +1,16 @@
 ---
 title: ボットと SDK
 author: surbhigupta
-description: この記事では、Microsoft Bot Frameworkを使用して Microsoft Teams ボットとボットを構築するためのツールと SDK について説明します。
+description: この記事では、Microsoft Teams ボット用のツールと Bot Framework SDK (C#、Python、Java、JavaScript) について説明し、長所と短所について説明します。
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: ae95a56dc12435b97934bd1bbfc05167fbe2c11c
-ms.sourcegitcommit: eb480bf056a46837d18b4ea35e465486cc68f981
+ms.openlocfilehash: a3ba6c1ac32b24aefc8d751482bdb7bde53d1a73
+ms.sourcegitcommit: b918181217995a47be34632e1051d0f4d4d481b0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66912255"
+ms.lasthandoff: 08/12/2022
+ms.locfileid: "67321188"
 ---
 # <a name="bots-and-sdks"></a>ボットと SDK
 

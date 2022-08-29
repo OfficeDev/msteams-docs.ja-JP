@@ -1,16 +1,16 @@
 ---
 title: 前提条件
 author: surbhigupta
-description: このモジュールでは、Microsoft Teamsのすべてのタブの要件と、タブを作成するためのツールについて説明します。
-ms.localizationpriority: medium
+description: この記事では、Microsoft Teams の個人用タブ、チャネル タブ、またはグループ タブを作成するための前提条件について説明します。タブの構築に必要なツールについて説明します。
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 50497e0f4af4cb12a97cd355d3a81714398c9ab2
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: e1160566f73a63a7de87653900cdc64ba7cb0e52
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142620"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450416"
 ---
 # <a name="prerequisites"></a>前提条件
 
@@ -36,7 +36,7 @@ Teams の個人用およびチャネルまたはグループのタブを作成�
 
 * Teams モバイル クライアントに 、チャネル/グループ タブを表示するように選択した場合、`setConfig()` の構成には `websiteUrl` プロパティの値を設定する必要があります。
 
-* [Microsoft Teams] タブでは、自己署名証明書を使用するイントラネット Web サイトを読み込む機能はサポートされていません。
+* Microsoft Teams タブでは、自己署名証明書を使用するイントラネット Web サイトを読み込む機能はサポートされていません。
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 

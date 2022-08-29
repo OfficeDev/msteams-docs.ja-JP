@@ -1,22 +1,22 @@
 ---
 title: アダプティブ カード タブを構築する
 author: KirtiPereira
-description: このモジュールでは、アクティビティの呼び出し、タスク モジュールのワークフローの理解、認証など、コード例を含むアダプティブ カードを使用したタブの作成について学習します。
+description: アダプティブ カードでフロントエンドをレンダリングするアダプティブ カードを使用してタブを構築する方法について説明します。バックエンドはボットによって供給されます。 呼び出しアクティビティを調べて、送信を処理します。
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 48415f4cba1a748dafd9d21e8429a59414769b98
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: c4b0db0f67af2cf28f5930d4ad0b09e51fb11815
+ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558178"
+ms.lasthandoff: 08/27/2022
+ms.locfileid: "67450465"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>アダプティブ カードを使用してタブをビルドする
 
 > [!IMPORTANT]
 >
-> * アダプティブ カードを含むタブは、現在、個人用アプリとしてのみサポートされています。
+> アダプティブ カードを含むタブは、現在、個人用アプリとしてのみサポートされています。
 
 従来の方法を使用してタブを開発する場合、次の問題が発生する可能性があります。
 
