@@ -5,19 +5,19 @@ description: このモジュールでは、受信 Webhook を Teams アプリに
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 5c826e3f8b041f1ef136fc8e7941c74ac35e7773
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: ade5d5f30261cfd77140ab3cc9332bba15c76be8
+ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659028"
+ms.lasthandoff: 08/13/2022
+ms.locfileid: "67337139"
 ---
 # <a name="create-incoming-webhooks"></a>受信 Webhook を作成する
 
 受信 Webhook を使用すると、外部アプリケーションからのコンテンツを Teams チャネル内で共有できるようになります。 Webhook は、追跡と通知を行うツールとして使用されます。 Webhook により、カード形式のメッセージを含む JSON ペイロードを送信するための一意の URL が提供されます。 カードは、1 つのトピックに関連するコンテンツとアクションを含むユーザー インターフェイス コンテナーです。 カードは、次の機能で使用できます。
 
 * ボット
-* メッセージの拡張機能
+* メッセージ拡張機能
 * コネクタ
 
 受信 Webhook を作成する方法については、次のビデオを参照してください。
@@ -107,3 +107,5 @@ Teams チャネルから受信 Webhook を削除するには、次の手順に�
 * [Web アプリから Teams に共有する](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [Web アプリを統合する](~/samples/integrate-web-apps-overview.md)
 * [Azure Logic Apps でアクセスとデータをセキュリティ保護する](/azure/logic-apps/logic-apps-securing-a-logic-app)
+* [JavaScript を使用した通知ボットのビルド](../../sbs-gs-notificationbot.yml)
+* [JavaScript を使用して初めてのボット アプリを構築する](../../sbs-gs-bot.yml)

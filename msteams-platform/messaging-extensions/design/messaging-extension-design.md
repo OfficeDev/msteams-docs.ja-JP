@@ -1,16 +1,16 @@
 ---
 title: メッセージ拡張機能のデザイン
-description: Teams のメッセージ拡張機能をデザインして、Microsoft Teams UI Kit を取得する方法をご紹介します。 Teams デザイン ガイドライン リファレンス、メッセージ拡張機能のヒント、ベスト プラクティスについて説明します
+description: Teams のメッセージ拡張機能をデザインして、Microsoft Teams UI Kit を取得する方法をご紹介します。 Teams の設計ガイドラインに関するリファレンス メッセージ拡張機能のヒントとベスト プラクティスについて説明します。
 author: heath-hamilton
 ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: conceptual
-ms.openlocfilehash: 2d3d31a0e59be22eb4f84bbdeb70897f4d584b83
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: ab456458c5e7ec5b71ae02c4071d86365f4805cf
+ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558752"
+ms.lasthandoff: 08/15/2022
+ms.locfileid: "67338901"
 ---
 # <a name="designing-your-microsoft-teams-message-extension"></a>Microsoft Teams メッセージ拡張機能のデザイン
 
@@ -57,7 +57,7 @@ Teams アプリ間で一貫性を保つために、サインイン画面をカ�
 
 ## <a name="types-of-message-extensions"></a>メッセージ拡張機能の種類
 
-メッセージ拡張機能には、検索コマンド、アクション コマンド、またはその両方を含めることができます。 コマンドは、アプリの機能と、それらが Teams のユース ケースへの適合状況によって異なります。
+メッセージ拡張機能には、検索コマンド、アクション コマンド、またはその両方を含めることができます。 コマンドは、アプリの機能と、Teams のユース ケース内でどのように適合するかによって異なります。
 
 ### <a name="search-commands"></a>検索コマンド
 
@@ -192,7 +192,7 @@ Teams アプリ間で一貫性を保つために、サインイン画面をカ�
 |3|**検索ボックス**: ユーザーが挿入するアプリ コンテンツを検索できるようにします。|
 |4|**タブ メニュー (省略可能)**: 複数のコンテンツ カテゴリを提供します。|
 |5|**[アクション コマンド] メニュー (省略可能)**: アクション コマンドのリストを表示します (指定した場合)。|
-|6 |**アプリ コンテンツ**: 主に検索結果を表示します。|
+|6|**アプリ コンテンツ**: 主に検索結果を表示します。|
 
 #### <a name="desktop"></a>Desktop
 
@@ -201,11 +201,11 @@ Teams アプリ間で一貫性を保つために、サインイン画面をカ�
 |カウンター|説明|
 |----------|-----------|
 |1|**アプリのロゴ**: アプリのロゴの色アイコン。|
-|2.|**アプリ名**: アプリのフル ネーム|
+|2|**アプリ名**: アプリのフル ネーム|
 |3|**[アクション コマンド] メニュー アイコン (省略可能)**: メッセージ拡張機能のアクション コマンドのリストを開きます (指定した場合)。
 |4|**検索ボックス**: ユーザーが挿入するアプリ コンテンツを検索できるようにします。|
 |5|**タブ メニュー (省略可能)**: 複数のコンテンツ カテゴリを提供します。|
-|6 |**[アクション コマンド] メニュー (省略可能)**: アクション コマンドのリストを表示します (指定した場合)。|
+|6|**[アクション コマンド] メニュー (省略可能)**: アクション コマンドのリストを表示します (指定した場合)。|
 |7 |**アプリ コンテンツ**: 主に検索結果を表示します。 この例では、リスト レイアウトを使用しています (グリッド レイアウトは別のオプションです)。|
 |8 |**アプリのロゴ**: アプリのロゴの枠線アイコン。|
 
@@ -251,7 +251,7 @@ SSO を使用すると、サインイン プロセスが簡単、高速になり
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="テンプレート作成の例。":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="テンプレートの例。":::
 
 #### <a name="do-let-teams-handle-some-of-the-design-work-if-possible"></a>Do: 可能であれば、Teams が設計作業の一部を処理できるようにします
 
@@ -259,7 +259,7 @@ SSO を使用すると、サインイン プロセスが簡単、高速になり
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="デザイン作業の処理の例。":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="設計作業を処理する例。":::
 
 #### <a name="dont-embed-your-entire-app-in-a-task-module"></a>Don't: アプリ全体をタスク モジュールに埋め込まないでください
 

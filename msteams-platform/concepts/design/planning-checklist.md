@@ -1,16 +1,16 @@
 ---
 title: Teams アプリ開発の計画に役立つ質問
 author: heath-hamilton
-description: アプリの計画中に考慮すべき質問、ユーザーとそのニーズの理解、アプリで解決される問題、ユーザー認証、オンボード エクスペリエンス。
+description: チェックリストを使用してアプリを計画し、アプリ開発の重要な詳細を計画に含める方法について説明します。
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: 78dd40e13c3bdac359cc5201bda92a5b1daccfb8
-ms.sourcegitcommit: 42602e8ec917f5033c0b6a95cf65b428db3c5b0a
-ms.translationtype: HT
+ms.openlocfilehash: dd33aa3dbef8579f06d951138739301f5886b70e
+ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2022
-ms.locfileid: "67286120"
+ms.lasthandoff: 08/15/2022
+ms.locfileid: "67338768"
 ---
 # <a name="teams-app-planning-checklist"></a>Teams アプリの計画チェックリスト
 
