@@ -3,19 +3,21 @@ title: ボットのシングル サインオンのサポート
 description: ユーザー トークンを取得する方法について説明します。ボット開発者は、OAuth カードのサポートでサインイン カードまたは Azure ボット サービスを使用できます。
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: ea0c7efff7c5d31097226cd689d8988d5ef51694
-ms.sourcegitcommit: 4d1740b235000d51711a9170ac0f026c63c945ac
+ms.openlocfilehash: 46f9ee905f470563fb2a402f9addabfcf09601b6
+ms.sourcegitcommit: 36c6a5ba1dcd27a15ba31f479e534eab69aa17e1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/04/2022
-ms.locfileid: "66611500"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67465380"
 ---
 # <a name="use-sso-authentication-for-bots"></a>ボットに SSO 認証を使用する
 
 Microsoft Azure Active Directory (Azure AD) のシングル サインオン認証では、ユーザーがサインイン資格情報の入力を必要とする回数を最小限に抑えるために、認証トークンが暗黙裡に更新されます。 ユーザーがアプリの使用に同意した場合、ユーザーは自動的にサインインするため、別のデバイスで再度同意する必要はありません。 タブとボットには、SSO のサポートに関して同様のフローがあります。 ただし、ボットは[トークンを要求](#request-a-bot-token)し、別のプロトコルで[応答](#receive-the-bot-token)を受け取ります。
 
 >[!NOTE]
-> OAuth 2.0 は、Azure AD およびその他の多くの ID プロバイダーによって使用される認証と承認のためのオープンな標準です。 OAuth 2.0 の基本的な解釈は、Teams で認証を操作するための前提条件です。
+> * OAuth 2.0 は、Azure AD およびその他の多くの ID プロバイダーによって使用される認証と承認のためのオープンな標準です。 OAuth 2.0 の基本的な解釈は、Teams で認証を操作するための前提条件です。
+>
+> * Bot SSO は、1 対 1 のチャットでのみサポートされます。
 
 ボットのシングル サインオン (SSO) のサポートについては、次のビデオを参照してください。
 <br>

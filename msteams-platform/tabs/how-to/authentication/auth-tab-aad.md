@@ -3,12 +3,12 @@ title: サード パーティの OAuth 認証を構成する
 description: この記事では、Teams 認証タブMicrosoft Azure AD、Teams での認証、およびタブで使用する方法について説明します。
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.openlocfilehash: 18a643af2b8a15940915145d02207f2aec93b014
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: 1afc7e7512c75c9002849801cfc14fb8eb1aa726
+ms.sourcegitcommit: 36c6a5ba1dcd27a15ba31f479e534eab69aa17e1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435000"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67465373"
 ---
 # <a name="configure-third-party-oauth-idp-authentication"></a>サード パーティの OAuth IdP 認証を構成する
 
@@ -58,7 +58,7 @@ Azure AD は、ほとんどの ID プロバイダーと同様に、そのコン�
 ```javascript
 import { authentication } from "@microsoft/teams-js";
 authentication.authenticate({
-    url: window.location.origin + "/tab/simple-start-v2"),
+    url: window.location.origin + "/tab/simple-start-v2",
     width: 600,
     height: 535})
 .then((result) => {
