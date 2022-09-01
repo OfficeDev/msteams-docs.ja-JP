@@ -4,12 +4,12 @@ description: Teams ボットでプロアクティブ メッセージを送信し
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 964dd5bf33ab527ea1dcf5307e7d9ae94a29d9ec
-ms.sourcegitcommit: d3eb976f5883c1f019083b516289537ff8263cad
+ms.openlocfilehash: 41c7d1ecd4c57bda98bb72dd66546df21fe74754
+ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2022
-ms.locfileid: "67442985"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67488265"
 ---
 # <a name="proactive-messages"></a>プロアクティブ メッセージ
 
@@ -50,9 +50,9 @@ ms.locfileid: "67442985"
 
 * アプリが特定のコンテキストにインストールされると、アクティビティが[`onMembersAdded`](~/bots/how-to/conversations/subscribe-to-conversation-events.md)表示されます。
 * アプリがインストールされているコンテキストに新しいユーザーが追加されると、[`onMembersAdded`アクティビティ](~/bots/how-to/conversations/subscribe-to-conversation-events.md)を受信します。
+* ボットが受信するすべてのイベントには、ボット コンテキスト (TurnContext オブジェクト) から取得できる必要な情報が含まれています。
 * アプリがインストールされているチームで[チャネルのリスト](~/bots/how-to/get-teams-context.md)を取得することができます。
 * アプリがインストールされているチームで[メンバー リスト](~/bots/how-to/get-teams-context.md)を取得することができます。
-* ボットが受け取るすべてのアクティビティには、必要な情報が含まれている必要があります。
 
 情報を取得する方法に関係なく、新しい会話を`tenantId`保存するか、または作成します`userId``channelId`。 `teamId` を使って、チームの一般チャネルや既定のチャネルに新しい会話スレッドを作成することもできます。
 
@@ -346,3 +346,4 @@ POST /v3/conversations
 * [ユーザーにプロアクティブ通知を送信する](/azure/bot-service/bot-builder-howto-proactive-message)
 * [JavaScript を使用して初めてのボット アプリを構築する](../../../sbs-gs-bot.yml)
 * [プロアクティブ メッセージを送信する JavaScript を使用して通知ボットを構築する](../../../sbs-gs-notificationbot.yml)
+* [TurnContext](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest"&preserve-view=true")

@@ -5,12 +5,12 @@ ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
-ms.openlocfilehash: 229fa56331f9c8797d0511d77a86e418bbdb7103
-ms.sourcegitcommit: 209b9942c02b5affdd995348902114d3b9805c61
+ms.openlocfilehash: 525f49de49312d91705bc3a14c4a5da12bd44fdf
+ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2022
-ms.locfileid: "67288200"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67488279"
 ---
 # <a name="send-proactive-installation-messages"></a>プロアクティブ インストール メッセージを送信する
 
@@ -249,3 +249,4 @@ server.get('/api/notify', async (req, res) => {
 * [ユーザー SDK v4 にプロアクティブ通知を送信する](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
 * [Microsoft Teams のユーザーにアクティビティ フィード通知を送信する](/graph/teams-send-activityfeednotifications)
 * [チームにアプリを追加する - Microsoft Graph v1.0](/graph/api/team-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
+* [Microsoft Teams の保護された API](/graph/teams-protected-apis)

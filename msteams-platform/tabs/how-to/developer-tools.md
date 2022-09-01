@@ -3,16 +3,16 @@ title: Microsoft Teams タブの DevTools
 description: このモジュールでは、Microsoft Teams デスクトップ クライアントとデバッグを使用するときに DevTools にアクセスする方法について説明します
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: de502588d6c1d4e11d7f68e2fff1c7e591d2918d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: a0d5e3ea15fd796c2c426f1cf1457171f0abe7b2
+ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143012"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "67488272"
 ---
 # <a name="devtools-for-microsoft-teams-tabs"></a>Microsoft Teams タブの DevTools
 
-Teamsがブラウザーで実行されている場合は、ブラウザーの DevTools: F12 on Windows または MacOS の Command-Option-I に簡単にアクセスできます。 ダッシュボードでは、次の項目にもアクセスできます。
+Teams がブラウザーで実行されている場合は、ブラウザーの DevTools: F12 on Windows または MacOS の Command-Option-I に簡単にアクセスできます。 ダッシュボードでは、次の項目にもアクセスできます。
 
 1. コンソール ログを表示します。
 1. 実行時に HTML、CSS、およびネットワーク要求を表示または変更します。
@@ -50,3 +50,7 @@ Teams Android クライアントから DevTools を有効にすることもで�
 1. 次の図のように、デバッグするタブで **検査** を選択します。
 
    ![Android DevTools](~/assets/images/android-devtools.png)
+
+## <a name="see-also"></a>関連項目
+
+[Teams クライアント キャッシュをクリアする](/microsoftteams/troubleshoot/teams-administration/clear-teams-cache)
