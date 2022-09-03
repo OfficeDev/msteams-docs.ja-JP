@@ -1,16 +1,16 @@
 ---
 title: メッセージ拡張機能の SSO サポート
 author: KirtiPereira
-description: この記事では、コード サンプルを使用してメッセージング拡張機能のシングル サインオン (SSO) サポートを有効にする方法について説明します。
+description: Azure AD とコード サンプルを使用して、Teams メッセージ拡張機能アプリでシングル サインオン (SSO) を有効にします。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.openlocfilehash: 750b101a1a084d6ee409a663f9ee8ae2b4876dfe
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
+ms.openlocfilehash: 999094e1649008e6d0528c8ac44c21a3f5f2f7a4
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658914"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586848"
 ---
 # <a name="enable-sso-for-message-extensions"></a>メッセージ拡張機能用の SSO を有効化する
 

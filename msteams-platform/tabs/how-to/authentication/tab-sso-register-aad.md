@@ -1,15 +1,15 @@
 ---
 title: Azure AD にタブ アプリを登録する
-description: Azure AD へのタブ アプリの登録について説明します
+description: アプリ ID URI、アクセス トークンのスコープ、信頼されたクライアントの事前承認を構成して、Azure AD でシングル サインオン (SSO) を構成します。
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams 認証タブ Microsoft Azure Active Directory (Azure AD) アクセス トークン SSO テナント スコープ
-ms.openlocfilehash: 60d3ce73d92a75a5520dbbc096ba140fb1daa174
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 1387b1f426e433ea98bc950c932f271785fa5dd4
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659001"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586799"
 ---
 # <a name="register-your-tab-app-in-azure-ad"></a>Azure AD でタブ アプリを登録する
 

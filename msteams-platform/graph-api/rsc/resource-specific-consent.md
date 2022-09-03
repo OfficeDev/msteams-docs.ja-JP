@@ -5,12 +5,12 @@ ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 8501cab5db2017d120ef72f61e43691104df7fa1
-ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
+ms.openlocfilehash: 7321c3dbf1f2a3493a1d457cfd80d7fc1efb01d6
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2022
-ms.locfileid: "66695312"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586708"
 ---
 # <a name="resource-specific-consent"></a>リソース固有の同意
 
@@ -107,7 +107,7 @@ Graph APIを使用してチャットの RSC を有効または無効にするこ
 
    ![Graph RSC チームの構成](../../assets/images/rsc/graph-rsc-chat-configuration.png)
 
->  プロパティの既定値は、チャットの RSC が最初に使用されたときに、[テナントでユーザーの同意設定](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal)がオンまたはオフになっているかどうかに基づいて、**ChatResourceSpecificConsentEnabled** です。 これは、a) [**teamsAppSettings**](/graph/api/teamsappsettings-get) の取得、または b) チャット/会議でのリソース固有のアクセス許可を持つ Teams アプリのインストールを初めて行うことができます。
+> プロパティの既定値は、チャットの RSC が最初に使用されたときに、[テナントでユーザーの同意設定](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal)がオンまたはオフになっているかどうかに基づいて、**ChatResourceSpecificConsentEnabled** です。 これは、a) [**teamsAppSettings**](/graph/api/teamsappsettings-get) の取得、または b) チャット/会議でのリソース固有のアクセス許可を持つ Teams アプリのインストールを初めて行うことができます。
 
 ## <a name="register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal"></a>Azure AD ポータルを使用してアプリを Microsoft ID プラットフォームに登録する
 

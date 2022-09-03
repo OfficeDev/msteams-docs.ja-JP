@@ -4,12 +4,12 @@ description: このモジュールでは、Microsoft Teams でのカード テ�
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: e54e31ca9866349fea0ca8b10277f75b94454304
-ms.sourcegitcommit: 06fdb41c124f82ea1b66181485339cb200ea7162
-ms.translationtype: HT
+ms.openlocfilehash: e6cbccdb436b8d84f5d139b6a082765f22f373c6
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "66962434"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586960"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams のカードの書式設定
 
@@ -326,6 +326,9 @@ Teams プラットフォームでは、既存の言及 ID に加えて、Azure A
 ### <a name="full-width-adaptive-card"></a>全幅アダプティブ カード
 
 `msteams` プロパティを使用して、アダプティブ カードの幅を拡張し、追加のキャンバス スペースを利用できます。 次のセクションでは、プロパティの使用方法について説明します。
+
+> [!NOTE]
+> モバイル パネルや会議サイド パネルなどの狭いフォーム 要素で全幅アダプティブ カードをテストし、コンテンツが切り捨てられていないことを確認します。
 
 #### <a name="construct-full-width-cards"></a>全幅カードを作成する
 

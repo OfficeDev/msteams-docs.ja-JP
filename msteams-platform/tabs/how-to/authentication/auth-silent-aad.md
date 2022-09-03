@@ -1,14 +1,14 @@
 ---
 title: サイレント認証
-description: このモジュールでは、サイレント認証、シングル サインオン、Azure AD をタブに対して実行する方法と動作方法について説明します
+description: タブとその動作について、Azure AD を使用してタブ アプリを構成します。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 048e92c0709541b6a044249fb35ab016b372fabc
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: ef80c44e38e32666f68b13e42e1f815a4c351353
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435042"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586778"
 ---
 # <a name="use-silent-authentication-in-azure-ad"></a>Azure AD でサイレント認証を使用する
 

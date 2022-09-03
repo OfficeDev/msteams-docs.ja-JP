@@ -1,15 +1,15 @@
 ---
 title: Teams で SSO を使用したタブの認証のトラブルシューティング
-description: Teams での SSO 認証のトラブルシューティングとタブでの使用方法
+description: Teams でのシングル サインオン (SSO) 認証の問題と、タブ アプリでシングル サインオン (SSO) を使用する方法のトラブルシューティングを行います。
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams 認証タブ Microsoft Azure Active Directory (Azure AD) SSO エラーに関する質問
-ms.openlocfilehash: fa17ffef08f85124a230f76419158f4216f55416
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 8396b42c217ea58a0a4709e1dbd8580da32da991
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658950"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586897"
 ---
 # <a name="troubleshoot-sso-authentication-in-teams"></a>Teams での SSO 認証のトラブルシューティング
 

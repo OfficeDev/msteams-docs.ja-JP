@@ -1,15 +1,15 @@
 ---
 title: Azure AD を使用した Teams で SSO を使用したタブの認証の概要
-description: Teams での SSO 認証とタブで使用する方法の概要
+description: Teams でのシングル サインオン (SSO) 認証と、タブでシングル サインオン (SSO) 認証を有効にする方法について説明します。
 ms.topic: conceptual
 ms.localizationpriority: high
 keywords: Teams 認証タブ Microsoft Azure Active Directory (Azure AD) SSO アクセス トークン マニフェスト
-ms.openlocfilehash: 54e2a691208db1613bf73e255f91bd4cba8960d6
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 367a7f0f02d6b1b32af42316774bd171afdaf703
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66659012"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586995"
 ---
 # <a name="enable-sso-for-tab-app"></a>タブ アプリの SSO を有効にする
 
@@ -69,7 +69,7 @@ Teams で SSO を使用すると、アプリ ユーザーは Teams を使用し�
 | 3 | Azure AD → 同意フォーム | 現在のアプリ ユーザーが初めてタブ アプリを使用している場合、アプリが保護されたデータにアクセスする必要がある場合、Teams は同意を求める要求を表示します。 アプリ ユーザー (または管理者) は、アプリ ユーザーの Teams ID を使用して Azure AD からアクセス トークンを取得することについて Teams に同意する必要があります。 <br> または、2 要素認証などのステップアップ認証を要求する要求プロンプトが表示されます。 |
 | 4 | Azure AD → Teams クライアント | Azure AD では、Teams クライアントにアクセス トークンを送信します。 このトークンは、JSON Web トークン (JWT) です。この検証は最も標準的な OAuth でのトークンの検証とまったく同様に動作します。 Teams はユーザーの代わりにトークンをキャッシュし、`getAuthToken()` への今後の呼び出しが、キャッシュされたトークンを返すようにします。 |
 | 5 | Teams クライアント → タブ アプリ クライアント | `getAuthToken()` の呼び出しによって返される結果オブジェクトの一部として、Teams ではタブ アプリにアクセス トークン を送信します。 |
-| 6  | タブ アプリ (クライアントとサーバー間) | タブ アプリは JavaScript を使用してアクセス トークンで解析され、アプリ ユーザーのメール アドレスなどの必要な情報を抽出します。 タブ アプリに返されるトークンは、アクセス トークン と ID トークンの両方です。 |
+| 6 | タブ アプリ (クライアントとサーバー間) | タブ アプリは JavaScript を使用してアクセス トークンで解析され、アプリ ユーザーのメール アドレスなどの必要な情報を抽出します。 タブ アプリに返されるトークンは、アクセス トークン と ID トークンの両方です。 |
 
 詳細については、「[コードを更新して SSO を有効にする](tab-sso-code.md)」を参照してください。
 

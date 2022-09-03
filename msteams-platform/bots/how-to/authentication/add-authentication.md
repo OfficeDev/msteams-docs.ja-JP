@@ -1,16 +1,16 @@
 ---
 title: Teams ボットに認証を追加する
 author: surbhigupta
-description: Azure Active Directory を使用して Teams のボットに OAuth 認証を追加する方法について説明します。 認証が有効になっているボットを作成、デプロイ、統合する方法について説明します。
+description: Azure AD を使用して Teams のボット アプリに対してサード パーティの OAuth プロバイダーを使用して認証を有効にする方法について説明します。
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 6cfd765ba467d2c8b03ae4f86b4ab8727c21b9b7
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: ed30f4600630b047ad410b88ed8e04e91989088c
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312150"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586855"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Teams ボットに認証を追加する
 

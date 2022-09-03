@@ -1,16 +1,16 @@
 ---
 title: メッセージ拡張機能に認証を追加する
 author: surbhigupta
-description: この記事では、コード例とサンプルを使用してメッセージング拡張機能に認証を追加する方法について説明します。
+description: Azure AD の構成とコード サンプルを使用して、サード パーティの OAuth プロバイダーを使用して Teams メッセージ拡張機能アプリで認証を有効にします。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: c863a68f991dd62d51a534df04469eadfdb366e8
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: 4d5288d0145e60a263b439adfff3a5ae825caf23
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435049"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586981"
 ---
 # <a name="add-authentication-to-your-message-extension"></a>メッセージ拡張機能に認証を追加する
 

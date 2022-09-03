@@ -1,15 +1,15 @@
 ---
 title: タブの SSO を有効にするためのマニフェストを更新する
-description: タブの SSO を有効にするためのマニフェストの更新について説明します
+description: タブのシングル サインオン (SSO) を有効にするための Teams マニフェストを更新し、SSO 認証をテストするために Teams クライアントにサイドロードします。
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams 認証タブ Microsoft Azure Active Directory (Azure AD) Graph API
-ms.openlocfilehash: c4e558debe5aff41ad8d6ce76ba952b6d607cd24
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 1af4120914343b7fb2b37e6c2458ac43fcaa9d47
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658964"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67587002"
 ---
 # <a name="update-manifest-for-sso-and-preview-app"></a>SSO 用のマニフェストを更新しアプリをプレビューする
 

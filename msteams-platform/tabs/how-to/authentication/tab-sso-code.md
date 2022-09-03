@@ -1,15 +1,15 @@
 ---
 title: タブの SSO を有効にするためのコード構成
-description: タブの SSO を有効にするためのコード構成について説明します
+description: シングル サインオン (SSO) を有効にするために、アプリ ユーザーの Teams ID を使用してアクセス トークンを要求および受信するためのタブ アプリのコードを更新します。
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams 認証タブ Microsoft Azure Active Directory (Azure AD) Graph API
-ms.openlocfilehash: 466da3cbd879ed2546adcad87f6f55620d54256d
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 71c532b62b53ea0efb11da72c30d7e9d32804897
+ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658938"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67586785"
 ---
 # <a name="add-code-to-enable-sso"></a>SSO を有効にするコードを追加する
 
