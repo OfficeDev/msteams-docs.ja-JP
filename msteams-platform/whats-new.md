@@ -3,12 +3,12 @@ title: Teams の開発者向けの新機能と更新情報
 description: 新しく導入された Microsoft Teams の開発者向け機能と、既存の機能の更新について説明します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: ecacc4edcad11f764d5916db2b1db9cca77bbb1c
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: b13cc93e515c1b4daf08e3f218a7059e34615f0d
+ms.sourcegitcommit: 3baca27a93e5a68eaaa52810700076f08f4c88a8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605083"
+ms.locfileid: "67605783"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -36,6 +36,7 @@ ms.locfileid: "67605083"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ----------------|
+| 09/06/2022 | `selectMedia` カメラを使用してビデオをキャプチャするための API | [デバイス機能の統合] > [[メディア機能の統合](concepts/device-capabilities/media-capabilities.md#code-snippets)] |
 | 08/09/2022 | Visual Studio 2022 用 Teams ツールキットが導入されました | [ツールと SDK] > [Visual Studio 向け Teams ツールキット] > [[Visual Studio 向け Teams ツールキットの概要]](toolkit/teams-toolkit-overview-visual-studio.md) |
 | 08/03/2022 | 個人用アプリまたはタブから Teams に共有する | [Teams と統合] > [Teams に共有] > [[個人用アプリまたはタブから Teams に共有]](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 08/03/2022 | 会議後のシナリオで会議のトランスクリプトを取得する機能が追加されました。 | [Teams 会議と通話用のアプリを構築する] > [Graph API を使用して会議のトランスクリプトを取得する] > [[概要]](graph-api/meeting-transcripts/overview-transcripts.md) |
