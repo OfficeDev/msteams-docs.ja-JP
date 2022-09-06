@@ -5,18 +5,20 @@ description: この記事では、Microsoft Teams ボット用のツールと Bo
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 6eac34d7d767078820cdc41eb090fa2af16af76c
-ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
+ms.openlocfilehash: b8d9f81216ea82aff3a5be9ec96c4f1dd79e9603
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "67488251"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605020"
 ---
 # <a name="bots-and-sdks"></a>ボットと SDK
 
 次のいずれかのツールまたは機能を使用して、Microsoft Teams で動作するボットを作成できます。
 
 * [Microsoft Bot Framework SDK](#bots-with-the-microsoft-bot-framework)
+* [Azure Active Directory](~/bots/how-to/authentication/auth-aad-sso-bots.md#develop-an-sso-teams-bot)
+* [開発者ポータル](~/concepts/build-and-test/manage-your-apps-in-developer-portal.md#configure)
 * [Power Virtual Agents](#bots-with-power-virtual-agents)
 * [仮想アシスタント](~/samples/virtual-assistant.md)
 * [Webhook とコネクタ](#bots-with-webhooks-and-connectors)

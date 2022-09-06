@@ -3,12 +3,12 @@ title: ボットにカード アクションを追加する
 description: このモジュールでは、Microsoft Teams のカード アクションとは何か、アクションの種類、ボットでカード アクションを使用する方法について説明します
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 84198e8a7ec5c0664ea9fcd2147b039fa5742b2c
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 1c55470d068c2a7e0db5b90c0a0c09a2942316ce
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035304"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605013"
 ---
 # <a name="card-actions"></a>カード アクション
 
@@ -37,7 +37,9 @@ Teams のボットやメッセージ拡張機能で使用されるカードは�
 `openUrl` アクション タイプでは、既定のブラウザーで起動する URL を指定します。
 
 > [!NOTE]
-> どのボタンが選択されたかの通知は、ボットでは受信しません。
+>
+> * 選択されたボタンに関する通知はボットに届きません。
+> * 数字を含むコンピューター名は URL ではサポートされていません。
 
 `openUrl` を使用すると、以下のプロパティを含むアクションを作成することができます。
 
@@ -561,7 +563,7 @@ CardFactory.actions([
 
 ## <a name="code-samples"></a>コード サンプル
 
-|S.no|カード| description|.NET|Javascript|Python|Java|
+|S.no|カード| 説明|.NET|Javascript|Python|Java|
 |:--|:--|:--------------------------------------------------------|-----|------------|-----|----------------------------|
 |1|カードの使用|サムネイル、オーディオ、メディアなど、すべての種類のカードを紹介します。適切なダイアログにルーティングするウェルカム メッセージにボタンが表示されたカードを提示することで、ユーザーを歓迎する + マルチプロンプト ボットを構築します。|[.Net Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|
 |2|アダプティブ カード|マルチターン ダイアログでカードを使用して、名前と年齢のユーザー入力を取得する方法を示します。|[.NET Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|

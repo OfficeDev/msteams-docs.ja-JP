@@ -1,15 +1,15 @@
 ---
 title: Microsoft Graph のアクセス許可を使用してタブ アプリを拡張する
-description: Microsoft Graph を使用した API アクセス許可の構成について説明します
+description: シングル サインオン (SSO) を有効にするために、Microsoft Graph で追加のアクセス許可とスコープを構成します。
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams 認証タブ Microsoft Azure Active Directory (Azure AD) Graph API 委任されたアクセス許可アクセス トークン スコープ
-ms.openlocfilehash: 4ca708847144e72d80557943edcc163297c85c48
-ms.sourcegitcommit: 07f41abbeb1572a306a789485953c5588d65051e
-ms.translationtype: HT
+ms.openlocfilehash: 3232d1104a715b8c50f39b1e70d58fa18d970b7c
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66658996"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605090"
 ---
 # <a name="extend-tab-app-with-microsoft-graph-permissions-and-scope"></a>Microsoft Graph のアクセス許可とスコープを使用してタブ アプリを拡張する
 

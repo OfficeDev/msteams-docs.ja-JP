@@ -1,14 +1,14 @@
 ---
 title: サード パーティの OAuth プロバイダーを使用して認証を有効にする
-description: この記事では、タブ、サード パーティの OAuth プロバイダー、Azure AD による OAuth、および認証コード サンプルの Teams 認証フローについて説明します。
+description: Azure AD の構成とコード サンプルを使用してサード パーティの OAuth プロバイダーを使用するタブの Teams 認証フローについて説明します。
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 33300461e16f5a8ab5e1e69f5fea775adb2359aa
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: c9969e154dae2f0d2439c1d8513af34970723e5c
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435059"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605041"
 ---
 # <a name="enable-authentication-using-third-party-oauth-provider"></a>サード パーティの OAuth プロバイダーを使用して認証を有効にする
 

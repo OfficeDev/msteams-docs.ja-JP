@@ -3,12 +3,12 @@ title: 個人用アプリまたはタブから Teams に共有する
 description: 個人用アプリまたはタブで [Teams に共有] ボタンを有効にする方法、制限事項、エンド ユーザー エクスペリエンスについて説明します。
 ms.topic: reference
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d70c8d399b4a065419341bc24763f7aa0f50af6
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
+ms.openlocfilehash: cd4de40fdb557300ad957df03f463a0879f44b0e
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232198"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605062"
 ---
 # <a name="share-to-teams-from-personal-app-or-tab"></a>個人用アプリまたはタブから Teams に共有する
 
@@ -21,7 +21,7 @@ Teams に共有すると、ユーザーは個人用アプリまたはタブか�
 ## <a name="enable-share-to-teams-button"></a>[Teams に共有を有効にする] ボタン
 
 > [!NOTE]
-> [JavaScript クライアント SDK をMicrosoft Teams](../../tabs/how-to/using-teams-client-sdk.md)するか[、JavaScript クライアント SDK v2 プレビュー](../../tabs/how-to/using-teams-client-sdk.md) (`@microsoft/teams-js@1.11.0-beta.7`またはそれ以降) をMicrosoft Teamsして、個人用アプリまたはタブの Teams への共有を有効にしていることを確認します。
+> [Microsoft Teams JavaScript クライアント SDK](../../tabs/how-to/using-teams-client-sdk.md) または [Microsoft Teams JavaScript クライアント SDK v2 プレビュー](../../tabs/how-to/using-teams-client-sdk.md) (`@microsoft/teams-js@1.11.0-beta.7`またはそれ以降) を使用して、個人用アプリまたはタブで Teams との共有を有効にしていることを確認します。
 
 Teams への共有を有効にするには:
 
@@ -98,9 +98,6 @@ microsoftTeams.sharing.shareWebContent({
 2. 他のユーザーまたはグループまたはチャネルを追加してコンテンツを共有します。
 
     :::image type="content" source="../../assets/images/share-to-teams/add-recepient.PNG" alt-text="add-recipient":::
-
-    > [!NOTE]
-    > これについて **何かを言って** メモを追加できます。
 
 3. **共有** を選択します。
 

@@ -5,12 +5,12 @@ ms.localizationpriority: high
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
-ms.openlocfilehash: 3003f147d3861996fb17e3833144b6a6018f6550
-ms.sourcegitcommit: 024be23411bc0f2573d19f48f9266021f9b76f0d
+ms.openlocfilehash: 759fe9af0178af47c5f14b849269ab9ab444c35f
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "67488258"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605034"
 ---
 # <a name="import-third-party-platform-messages-to-teams-using-microsoft-graph"></a>Microsoft Graph を使用してサードパーティのプラットフォーム メッセージを Teams にインポートする
 
@@ -387,4 +387,5 @@ HTTP/1.1 204 No Content
 
 * [Microsoft Graph と Teams の統合](/graph/teams-concept-overview)
 * [Microsoft Teams エクスポート API を使ってコンテンツをエクスポートする](/microsoftteams/export-teams-content)
-* [Microsoft Teams API のライセンスと支払いの要件 ](/graph/teams-licenses)
+* [Microsoft Teams サービスの制限](/graph/throttling-limits#microsoft-teams-service-limits)
+* [Microsoft Teams API のライセンスと支払いの要件](/graph/teams-licenses)

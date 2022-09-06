@@ -3,12 +3,12 @@ title: Teams の開発者向けの新機能と更新情報
 description: 新しく導入された Microsoft Teams の開発者向け機能と、既存の機能の更新について説明します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: caff618c574fb550225dad729056e77a7fc53229
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: ecacc4edcad11f764d5916db2b1db9cca77bbb1c
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435007"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605083"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -122,7 +122,7 @@ ms.locfileid: "67435007"
 |2021/10/20| 会議の詳細 API とリアルタイム Teams 会議イベント | [Teams 会議用のアプリをビルドする] > [[会議の詳細 API を取得する]](apps-in-teams-meetings/API-references.md#get-meeting-details-api) |
 |2021/10/18| タブのリンクの展開とステージ ビュー | [タブの構築] > [[タブのリンクの展開とステージ ビュー]](tabs/tabs-link-unfurling.md) |
 |2021/10/8| アダプティブ カードの設計に関する新しいベスト プラクティス | [アプリの設計] > [UI コンポーネント] > [[Teams アプリのアダプティブ カードを設計する]](task-modules-and-cards/cards/design-effective-cards.md) |
-|2021/10/5| 管理者がアプリの表示を許可するまで Teams アプリを非表示にします | [アプリの設計] > [[管理者が承認するまで Teams アプリを非表示にする]](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) |
+|2021/10/5| 管理者がアプリの表示を許可するまで Teams アプリを非表示にします | アプリを設計>管理者が [承認するまで、ユーザーのアプリを既定でブロックする](concepts/design/enable-app-customization.md#block-apps-by-default-for-users-until-an-admin-approves) |
 |2021/10/5| Teams モバイル用のアプリを計画します | [アプリの基礎] > [[Teams モバイルの応答タブを計画する]](concepts/design/plan-responsive-tabs-for-teams-mobile.md) |
 |2021/10/4| Teams アプリを管理するために、新しい Teams 向け開発者ポータルが導入されました | [ツールと SDK] > [[Teams の開発者ポータル]](concepts/build-and-test/teams-developer-portal.md) |
 |2021/9/21|Teams は、ボットや受信 Webhook 向けのユーザーのメンションで Azure AD オブジェクト ID と UPN をサポートしています | • [カードとタスク モジュールの構築] > [カードの構築] > [[ユーザーのメンションでの Azure AD オブジェクト ID と UPN]](task-modules-and-cards/what-are-cards.md#support-for-azure-ad-object-id-and-upn-in-user-mention) </br> • [カードとタスク モジュールの構築] > [カードの構築] > [[カードの概要]](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |

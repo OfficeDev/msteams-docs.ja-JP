@@ -3,12 +3,12 @@ title: マニフェスト スキーマの参照
 description: この記事では、Microsoft Teams リファレンスのマニフェスト スキーマ、スキーマ、およびサンプルの完全なマニフェストを紹介します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: c7867faf23e9abea0ae139de5cdd1cd11ba239e6
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: 488929d98b9dff04086e5c3496550da9fd111aa1
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363439"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67605027"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Teams のアプリ マニフェストのスキーマ
 
@@ -792,7 +792,7 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 
 **省略可能** — ブール値
 
-`defaultBlockUntilAdminAction` プロパティ が **true** に 設定されている場合、管理者が許可するまで、アプリは既定でユーザーから非表示になります。 **true** に 設定すると、アプリは、すべてのテナントとエンド ユーザーに対して非表示になります。 テナント管理者は、Teams 管理センターでアプリを確認し、アプリを許可またはブロックするためのアクションを実行できます。 既定値は **false** です。 既定のアプリ ブロックの詳細については、「[管理者が承認するまで Teams アプリを非表示にする](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves)」を参照してください。
+`defaultBlockUntilAdminAction` プロパティ が **true** に 設定されている場合、管理者が許可するまで、アプリは既定でユーザーから非表示になります。 **true** に 設定すると、アプリは、すべてのテナントとエンド ユーザーに対して非表示になります。 テナント管理者は、Teams 管理センターでアプリを確認し、アプリを許可またはブロックするためのアクションを実行できます。 既定値は **false** です。 既定のアプリ ブロックの詳細については、「[管理者が承認するまでユーザーのアプリを既定でブロックする」を](../../concepts/design/enable-app-customization.md#block-apps-by-default-for-users-until-an-admin-approves)参照してください。
 
 ## <a name="publisherdocsurl"></a>publisherDocsUrl
 

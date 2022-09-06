@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.date: 04/07/2022
-ms.openlocfilehash: d1de26a953e1ec0e1f02c18cd7db50441e9dd9d5
-ms.sourcegitcommit: 36c6a5ba1dcd27a15ba31f479e534eab69aa17e1
+ms.openlocfilehash: e08304cb59ec78ff784c87c01ea588a53adbe21d
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "67465387"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67604865"
 ---
 # <a name="unified-meetings-apps"></a>統合された会議アプリ
 
@@ -237,3 +237,4 @@ Teams 統合会議アプリを使用すると、会議の参加者ロールに�
 * [メッセージ拡張機能](../messaging-extensions/what-are-messaging-extensions.md)
 * [アプリをデザインする](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 * [Microsoft Teams 会議出席レポート](/microsoftteams/teams-analytics-and-reports/meeting-attendance-report)
+* [OneDrive for Business および SharePoint の会議の記録オプションをセットアップする](/MicrosoftTeams/tmr-meeting-recording-change#set-up-the-meeting-recording-option-for-onedrive-for-business-and-sharepoint)

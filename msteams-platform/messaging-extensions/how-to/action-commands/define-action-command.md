@@ -5,12 +5,12 @@ description: このモジュールでは、Microsoft Teams でアプリ マニ�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 0b51d34aaacfe38c077b03b5df8bb6a9227c5b61
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: 45dbdabc744a58eb031c6e9a9f7415ecdf18cdcb
+ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363460"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "67604858"
 ---
 # <a name="define-message-extension-action-commands"></a>メッセージ拡張機能のアクション コマンドを定義する
 
@@ -85,8 +85,6 @@ ms.locfileid: "67363460"
 ### <a name="create-an-action-command-using-developer-portal"></a>開発者ポータルを使用してアクション コマンドを作成する
 
 **開発者ポータル** を使用してアクション コマンドを作成できます。
-
-# <a name="app-studio"></a>[App Studio](#tab/AS)
 
 > [!NOTE]
 > 操作コマンドを作成するための前提条件は、メッセージ拡張機能をすでに作成していることです。 メッセージ拡張機能を作成する方法については、「[メッセージ拡張機能の作成](~/messaging-extensions/how-to/create-messaging-extension.md)」を参照してください。
