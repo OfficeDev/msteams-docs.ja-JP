@@ -18,7 +18,11 @@ Visual Studio Code のサイド バーで Teams Toolkit :::image type="icon" sou
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="プロビジョニング コマンドを示すスクリーンショット":::
 
-1. Azure リソースに使用するサブスクリプションを選択します。
+1. 既存のサブスクリプションの任意のユーザーを選択します。
+
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/select-subscription.png" alt-text="サブスクリプションの選択":::
+
+1. Azure リソースに使用するリソース グループを選択します。
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="プロビジョニング用のリソースを示すスクリーンショット":::
 
@@ -27,9 +31,9 @@ Visual Studio Code のサイド バーで Teams Toolkit :::image type="icon" sou
 
     ダイアログでは、Azure でリソースを実行するときにコストが発生する可能性があることを警告します。
 
-1. [ **プロビジョニング**] を選択します。
+1. **[プロビジョニング]** を選択します。
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="プロビジョニング ダイアログのスクリーンショット。":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-confirm1.png" alt-text="サブスクリプションの選択":::
 
    プロビジョニング プロセスによって、Azure クラウドにリソースが作成されます。 時間がかかる場合があります。 右下隅にあるダイアログを見て、進行状況を監視できます。 数分後、次の通知が表示されます。
 
@@ -89,4 +93,3 @@ Visual Studio Code のサイド バーで Teams Toolkit :::image type="icon" sou
     おめでとうございます。最初のタブ アプリは Azure 環境で実行されています。
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="スクリーンショットは、アプリを今すぐまたは後で試すためのメッセージを示しています":::
- 
