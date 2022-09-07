@@ -3,12 +3,12 @@ title: Microsoft Teams 開発者向けドキュメント - 用語集
 description: Microsoft Teams 開発者向けドキュメントで使用される用語について説明します
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 742c2c940c5b3c39037b28eaf6ecc14fac3b0874
-ms.sourcegitcommit: 68bf3adb8aaae07caf684f7d9efb5cb7c84598b9
+ms.openlocfilehash: 962fa2ce2fb52fc3687da59b1453800a8d841e8e
+ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2022
-ms.locfileid: "67382945"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616801"
 ---
 # <a name="glossary"></a>用語集
 
@@ -70,7 +70,7 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 | 展開 | アプリケーションのバックエンドコードとフロントエンド コードをアップロードするプロセス。 デプロイ時に、アプリのコードがプロビジョニング中に作成したリソースにコピーされます。 <br>**関連情報**: [プロビジョニング](#p) |
 | [デバイス機能](../concepts/device-capabilities/device-capabilities-overview.md) | カメラ、マイク、バーコード スキャナー、フォト ギャラリーなどの組み込みデバイスをモバイルまたはデスクトップで使用できます。 Microsoft Teams JavaScript クライアント SDK で利用可能な専用 API を使用して、モバイルまたはデスクトップで次のデバイス機能にアクセスできます。 <br>**関連情報**: [機能](#c); [メディア機能](#m); [場所機能](#l) |
 | [デバイス許可](../concepts/device-capabilities/browser-device-permissions.md) | アプリで構成できる Teams アプリ設定。 これを使用して、アプリがネイティブ デバイス機能にアクセスして利用するためのアクセス許可を要求します。 Teams の設定でデバイスのアクセス許可を管理できます。 <br>**関連情報**: [アプリのアクセス許可](#a) |
-| [開発環境](../toolkit/teamsfx-multi-env.md#create-a-new-environment) | Teams Toolkit によって既定で作成される開発環境の種類。 リモート環境またはクラウド環境の構成を表します。 プロジェクトには複数のリモート環境を含めることができます。 Teams Toolkit を使用して、より多くの開発環境をプロジェクトに追加できます。 <br>**関連情報** [環境](#e); [ローカル環境](#l) |
+| [開発環境](../toolkit/TeamsFx-multi-env.md#create-new-environment) | Teams Toolkit によって既定で作成される開発環境の種類。 リモート環境またはクラウド環境の構成を表します。 プロジェクトには複数のリモート環境を含めることができます。 Teams Toolkit を使用して、より多くの開発環境をプロジェクトに追加できます。 <br>**関連情報** [環境](#e); [ローカル環境](#l) |
 | [DevTools](../tabs/how-to/developer-tools.md) | ブラウザーの DevTools は、コンソール ログの表示、ランタイム ネットワーク要求の表示または変更、コードへのブレークポイントの追加 (JavaScript)、Teams アプリの対話型デバッグの実行に使用されます。 この機能は、開発者プレビューが有効にされた後、デスクトップ クライアントと Android クライアントでのみ使用できます。 |
 | [動的検索](../task-modules-and-cards/cards/dynamic-search.md#dynamic-typeahead-search) | 大規模なデータ セットからデータを検索して選択するのに役立つアダプティブ カードの検索機能。 ユーザーが検索文字列を入力すると、選択肢をフィルターで除外できます。 <br>**関連情報**: [静的検索](#s) |
 
@@ -111,7 +111,7 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 | 用語 | 定義 |
 | --- | --- |
 | [リンク展開](../messaging-extensions/how-to/link-unfurling.md) | メッセージ作成領域に貼り付けられたリンクを展開するためにメッセージ拡張機能と会議で使用される機能。 リンクが展開され、リンクに関する追加情報が アダプティブ カード または会議ステージ ビューに表示されます。 |
-| [ローカル環境](../toolkit/teamsfx-multi-env.md#create-a-new-environment) | Teams Toolkit によって作成される既定の開発環境。  <br>**関連情報**: [環境](#e); [開発環境](#d) |
+| [ローカル環境](../toolkit/TeamsFx-multi-env.md#create-new-environment) | Teams Toolkit によって作成される既定の開発環境。  <br>**関連情報**: [環境](#e); [開発環境](#d) |
 | [ローカル ワークベンチ](../sbs-gs-spfx.yml) | SPFx を使用して作成された Visual Studio Code で Teams アプリを実行およびデバッグするための既定のオプション。 <br>**関連情報**: [Workbench](#w); [Teams ワークベンチ](#t) |
 | [場所機能](../concepts/device-capabilities/location-capability.md) | アプリと統合して、アプリ ユーザーの場所を把握し、コラボレーション エクスペリエンスを強化できるデバイス機能。この機能は現在、Teams モバイル クライアントでのみ使用できます。 <br>**関連情報**: [機能](#c); [メディア機能](#m); [デバイス](#d); [Teams モバイル](#t) |
 | [低コード アプリ](../samples/teams-low-code-solutions.md) | コーディングをほとんどまたはまったく必要とせず、迅速に開発および展開できる Microsoft Power Platform を使用して最初から構築されたカスタム Teams アプリ。 |

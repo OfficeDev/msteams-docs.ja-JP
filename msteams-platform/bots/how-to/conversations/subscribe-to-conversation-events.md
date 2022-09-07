@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: イベント ボット チャネル メッセージの反応の会話
-ms.openlocfilehash: 80e2bba2d610526a8a4485be79282432b27386fd
-ms.sourcegitcommit: 90e6397684360c32e943eb711970494be355b225
+ms.openlocfilehash: d7bdd35f887c9f59000139aa36352b0b416465c6
+ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2022
-ms.locfileid: "66695328"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616997"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams ボットの会話イベント
 
@@ -581,7 +581,6 @@ async def on_teams_members_added(
 
 メンバーが削除したアクティビティ `eventType` は、イベントがチーム コンテキストから送信されたときに設定 `teamMemberRemoved` されます。 新たに削除されたメンバーがボット自身なのかユーザーなのかを判断するには、`turnContext` のうちの `Activity` オブジェクトを確認します。 リストにオブジェクトの`MembersRemoved`フィールド`Recipient`と`id`同じオブジェクトが`id`含まれている場合、追加されたメンバーはボット、それ以外の場合はユーザーです。 ボットの ID は 、 `28:<MicrosoftAppId>`.
 
-
 > [!NOTE]
 > ユーザーがテナントから完全に削除されると、`membersRemoved conversationUpdate` イベントがトリガーされます。
 
@@ -673,7 +672,6 @@ export class MyBot extends TeamsActivityHandler {
     }
 }
 ```
-
 
 # <a name="python"></a>[Python](#tab/python)
 
@@ -1340,24 +1338,27 @@ async def on_reactions_removed(
 # <a name="c"></a>[C#](#tab/dotnet)
 
 ```csharp
-protected override async Task
-OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken) {
-var activity = turnContext.Activity; if
-(string.Equals(activity.Action, "Add",
-StringComparison.InvariantCultureIgnoreCase)) {
-// TO:DO Installation workflow }
-else
-{ // TO:DO Uninstallation workflow
-} return; }
+protected override async Task OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+    var activity = turnContext.Activity;
+    if (string.Equals(activity.Action, "Add", StringComparison.InvariantCultureIgnoreCase))
+    {
+        // TO:DO Installation workflow
+    }
+    else
+    {
+        // TO:DO Uninstallation workflow
+    }
+    return;
+}
 ```
 
 イベントをキャプチャするための代替方法として、シナリオを *追加* または *削除* するための専用ハンドラーを使用することもできます。
 
 ```csharp
-protected override async Task
-OnInstallationUpdateAddAsync(ITurnContext<IInstallationUpdateActivity>
-turnContext, CancellationToken cancellationToken) {
-// TO:DO Installation workflow return;
+protected override async Task OnInstallationUpdateAddAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+    // TO:DO Installation workflow return;
 }
 ```
 

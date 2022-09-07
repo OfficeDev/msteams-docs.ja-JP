@@ -1,23 +1,31 @@
 ---
-title: Teams Toolkit の Teams アプリ マニフェスト
+title: Teams Toolkit で Teams アプリ マニフェストをカスタマイズする
 author: zyxiaoyuer
 description: このモジュールでは、さまざまな環境で Teams アプリ マニフェストを編集、プレビュー、カスタマイズする方法について説明します。
 ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: 2365d7adbebca011af9d4204b2a305a6131f72a5
-ms.sourcegitcommit: 209b9942c02b5affdd995348902114d3b9805c61
+ms.openlocfilehash: a3c8031c8c810fb7425a07c4627bb773cec2de5a
+ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2022
-ms.locfileid: "67288144"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616687"
 ---
-# <a name="edit-teams-app-manifest-for-visual-studio"></a>Visual Studio の Teams アプリ マニフェストを編集する
+# <a name="customize-teams-app-manifest"></a>Teams アプリ マニフェストをカスタマイズする
+
+Teams アプリ マニフェストでは、アプリを Microsoft Teams 製品に統合する方法について説明します。 マニフェストの詳細については、「 [Teams のアプリ マニフェスト スキーマ」を参照してください](../resources/schema/manifest-schema.md)。 このセクションでは、次の手順について説明します。
+
+* [ローカル環境でマニフェスト ファイルをプレビューする](#preview-manifest-file-in-local-environment)
+* [リモート環境でマニフェスト ファイルをプレビューする](#preview-manifest-file-in-remote-environment)
+* [ローカルの変更を Dev Portal に同期する](#sync-local-changes-to-dev-portal)
+* [Teams アプリ マニフェストをカスタマイズする](#customize-teams-app-manifest)
+* [マニフェストを検証する](#validate-manifest)
 
 マニフェスト テンプレート ファイル `manifest.template.json` は、スキャフォールディング後にフォルダーの下で `templates/appPackage` 使用できます。 プレースホルダーを含むテンプレート ファイルと実際の値は、さまざまな環境のファイル`.fx/configs``.fx/states`を使用して Teams Toolkit によって解決されます。
 
-**実際のコンテンツを使用してマニフェストをプレビューするために、Teams Toolkit はフォルダーの下にプレビュー マニフェスト ファイルを `build/appPackage` 生成します**。
+実際のコンテンツを使用してマニフェストをプレビューするために、Teams Toolkit はフォルダーの下にプレビュー マニフェスト ファイルを `build/appPackage` 生成します。
 
 ```text
 └───build
@@ -37,11 +45,36 @@ ms.locfileid: "67288144"
 
 ローカル環境でマニフェスト ファイルをプレビューするには、 **F5** キーを押してローカル デバッグを実行します。 既定のローカル設定が生成され、アプリ パッケージとプレビュー マニフェストがフォルダーの下に `build/appPackage` ビルドされます。
 
-次の手順に従って、ローカル マニフェスト ファイルをプレビューすることもできます。
+2 つの方法でローカル マニフェスト ファイルをプレビューすることもできます
 
-1. ファイルの`manifest.template.json`コードレンズで **[プレビュー**] を選択し、**ローカル** を選択します。
-2. ファイルのメニュー バー`manifest.template.json`で [**プレビュー マニフェスト ファイル**] を選択します。
-3. Treeview で **Zip Teams メタデータ パッケージ** を選択し、 **ローカル** を選択します。
+* codelens でプレビュー オプションを使用する
+* **Zip Teams メタデータ パッケージ オプションを** 使用する
+
+次の手順は、codelens でプレビュー オプションを使用してローカル マニフェスト ファイルをプレビューするのに役立ちます。
+
+1. ファイルの`manifest.template.json`コードレンズで **[プレビュー**] を選択します。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="プレビュー":::
+
+1. ローカルを選択 **します**。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-env1.png" alt-text="環境の選択1":::
+
+次の手順は、 **Zip Teams メタデータ パッケージ** オプションを使用してローカル マニフェスト ファイルをプレビューするのに役立ちます。
+
+1. ファイルを選択 `manifest.template.json` します。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-manifest-json.png" alt-text="[マニフェスト] を選択します":::
+
+1. Visual Studio Code ツール バーで Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: アイコンを選択します。
+
+1. [展開] **で [Zip Teams メタデータ パッケージ****] を選択します**。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-metadata-package.png" alt-text="Teams メタデータ パッケージを選択する":::
+
+1. ローカルを選択 **します**。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-env1.png" alt-text="環境を選択する":::
 
 プレビュー ローカルは、イメージに示すように表示されます。
 
@@ -49,28 +82,63 @@ ms.locfileid: "67288144"
 
 ## <a name="preview-manifest-file-in-remote-environment"></a>リモート環境でマニフェスト ファイルをプレビューする
 
-**リモート環境でマニフェスト ファイルをプレビューするには**
+Visual Studio Code を使用してマニフェスト ファイルをプレビューするには:
 
-* Teams Toolkit 拡張機能の **[開発****] で [クラウドでプロビジョニング**] を選択するか、
+* Teams Toolkit 拡張機能の **[開発**] で [**クラウドでのプロビジョニング**] を選択します
+  
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/provision.png" alt-text="クラウド リソースをプロビジョニングする":::
+
+コマンド パレットを使用してマニフェスト ファイルをプレビューするには:
+
 * トリガー Teams: コマンド パレットから **クラウドにプロビジョニング** します。
+
+  :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/command palatte.png" alt-text="コマンド パレットを使用してクラウド リソースをプロビジョニングする":::
 
 リモート Teams アプリの構成を生成し、パッケージとプレビュー マニフェストをフォルダーの下に `build/appPackage` ビルドします。
 
-次の手順で、リモート環境でマニフェスト ファイルをプレビューすることもできます。
+リモート環境で 2 つの方法でマニフェスト ファイルをプレビューすることもできます
+
+* codelens でプレビュー オプションを使用する
+* **Zip Teams メタデータ パッケージ オプションを** 使用する
+
+次の手順は、codelens でプレビュー オプションを使用してマニフェスト ファイルをプレビューするのに役立ちます。
 
 1. ファイルの`manifest.template.json`コードレンズで **[プレビュー**] を選択します。
-2. ファイルのメニュー バー`manifest.template.json`で [**プレビュー マニフェスト ファイル**] を選択します。
-3. Treeview で **Zip Teams メタデータ パッケージ** を選択します。
-4. 環境を選択します。
 
-> [!NOTE]
-> 複数の環境がある場合は、イメージに示すようにプレビューする環境を選択する必要があります。
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/preview-23.png" alt-text="プレビュー":::
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="env を追加する":::
+1. 環境を選択します。
+
+   > [!NOTE]
+   > 複数の環境がある場合は、イメージに示すようにプレビューする環境を選択する必要があります。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="env を追加する":::
+
+次の手順は、リモート環境で **Zip Teams メタデータ パッケージ** オプションを使用してマニフェスト ファイルをプレビューするのに役立ちます。
+
+1. ファイルを選択 `manifest.template.json` します。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-manifest-json.png" alt-text="[マニフェスト] を選択します":::
+
+1. Visual Studio Code ツール バーで Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: アイコンを選択します。
+
+1. [展開] **で [Zip Teams メタデータ パッケージ****] を選択します**。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-metadata-package.png" alt-text="Teams メタデータ パッケージを選択する":::
+
+1. 環境を選択します。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview-1.png" alt-text="env を追加する":::
+
+   > [!NOTE]
+   > 複数の環境がある場合は、イメージに示すようにプレビューする環境を選択する必要があります。
 
 ## <a name="sync-local-changes-to-dev-portal"></a>ローカルの変更を Dev Portal に同期する
 
 マニフェスト ファイルをプレビューしたら、次の方法でローカルの変更を Dev Portal に同期できます。
+
+> [!NOTE]
+> 開発者ポータルの詳細については、「 [Teams 用開発者ポータル](../concepts/build-and-test/teams-developer-portal.md)」を参照してください。
 
 1. Teams アプリ マニフェストを展開します。
 
@@ -129,7 +197,7 @@ Teams Toolkit は、ローカル環境とリモート環境の `manifest.templat
 
 ローカルデバッグまたはプロビジョニング中に、Teams Toolkit は、Dev Portal の `manifest.template.json`構成を使用してマニフェストを `state.{env}.json`読み込み、 `config.{env}.json`Teams アプリを [作成します](https://dev.teams.microsoft.com/apps)。
 
-## <a name="supported-placeholders-in-manifesttemplatejson"></a>manifest.template.json でサポートされているプレースホルダー
+### <a name="supported-placeholders-in-manifesttemplatejson"></a>manifest.template.json でサポートされているプレースホルダー
 
 次の一覧では、サポートされているプレースホルダーを次に `manifest.template.json`示します。
 
@@ -169,7 +237,7 @@ Teams Toolkit は、ローカル環境とリモート環境の `manifest.templat
 
 ---
 
-## Codelenses and hovers
+## To preview values for local and dev environment
 
 In `manifest.template.json`, you can navigate to codelens to preview the values for `local` and `dev` environment.
 

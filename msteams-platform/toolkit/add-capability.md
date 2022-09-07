@@ -1,73 +1,72 @@
 ---
 title: Teams アプリに機能を追加する
-author: MuyangAmigo
-description: このモジュールでは、Teams Toolkit の機能、利点、制限事項、および機能を追加する方法について説明します
-ms.author: zhany
+author: surbhigupta
+description: このモジュールでは、Teams Toolkit の機能を追加する方法について説明します
+ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 90a1e28f4c7bb3d0bc9530fc1af8ad4d4e373c9b
-ms.sourcegitcommit: 0c734a5809ad6eb36255c97f38589c67d0971741
+ms.openlocfilehash: fe78407c0a269d26a63e23efe5a04a1cd0d83e4b
+ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2022
-ms.locfileid: "66830793"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67616980"
 ---
-# <a name="add-capabilities-to-teams-apps"></a>Teams アプリに機能を追加する
+# <a name="add-capabilities-to-microsoft-teams-apps"></a>Microsoft Teams アプリに機能を追加する
 
-Teams Toolkit で機能を追加すると、既存の Teams アプリに追加機能を追加できます。次の表に、Teams アプリの機能を示します。
+Teams Toolkit を使用して機能を追加すると、既存の Teams アプリに追加機能を含めるのに役立ちます。 機能を追加する利点は、Teams Toolkit を使用してソース コードを自動的に追加することで、アプリに関数を追加できることです。 Teams アプリで作成したプロジェクトに基づいて、さまざまな機能を選択することもできます。 次の表に、Teams アプリの機能を示します。
 
-|**機能**|**説明**|
-|--------|-------------|
-| タブ |  タブは、アプリ マニフェストで宣言されたドメインを参照する単純な HTML タグです。 個々のユーザーのチーム、グループ チャット、または個人用アプリ内のチャネルの一部としてタブを追加できます。|
-| ボット |  ボットは、テキスト、対話型カード、タスク モジュールを使用して Web サービスと対話するのに役立ちます。|
-| メッセージの拡張機能 | メッセージ拡張機能は、Microsoft Teams クライアントのボタンとフォームを使用して Web サービスを操作するのに役立ちます。|
+|機能|説明|サポートされているその他の機能|
+|--------|-------------|-----------------|
+|**Basic Teams アプリ**|              |
+| Tab |  タブは、アプリ マニフェストで宣言されたドメインを参照する単純な HTML タグです。 個々のユーザーのチーム、グループ チャット、または個人用アプリ内のチャネルの一部としてタブを追加できます。|Tab, notification bot, command bot, bot, message extension|
+|[SPFx] タブ| SPFx タブ アプリは Microsoft 365 でホストされており、クライアント側の SPFx ソリューションの開発とホスティングがサポートされています|None|
+|[SSO 対応] タブ|シングル サインオン機能を使用してユーザーを許可する SSO 対応タブ アプリを構築できます|SSO 対応タブ, 通知ボット, コマンド ボット, ボット, メッセージ拡張機能|
+| Bot |  ボットは、テキスト、対話型カード、タスク モジュールを使用して Web サービスと対話するのに役立ちます。|メッセージ拡張機能、SSO 対応タブ、タブ|
+| メッセージ拡張機能: | メッセージ拡張機能は、Microsoft Teams クライアントのボタンとフォームを使用して Web サービスを操作するのに役立ちます。|ボット、SSO 対応タブ、タブ|
+|**シナリオベースの Teams アプリ**|             |
+| 通知ボット | 通知ボットは、Teams チャネルまたはグループ チャットまたは個人用チャットでメッセージをプロアクティブに送信します。 カードやテキストなどの HTTP 要求を使用して通知ボットをトリガーできます。 |SSO 対応タブ、タブ|
+| コマンド ボット | コマンド ボットを使用すると、コマンド ボットを使用して繰り返しタスクを自動化できます。 アダプティブ カードを使用してチャットで送信された簡単なコマンドに応答します。 |SSO 対応タブ、タブ|
 
-## <a name="advantages"></a>メリット
-
-次の一覧では、TeamsFx でさらに機能を追加する利点を提供します。
-
-* 利便性を提供します。
-* Teams Toolkit を使用してソース コードを自動的に追加することで、アプリにさらに関数を追加します。
-
-## <a name="limitations"></a>制限事項
-
-TeamsFx でさらに機能を追加するための制限事項を次に示します。
-
-* 最大 16 個のインスタンスにタブを追加できます。
-* 1 つのインスタンスごとにボットとメッセージ拡張機能を追加できます。
+> [!NOTE]
+> 最大 16 個のインスタンスにタブを追加できます。 ボットとメッセージ拡張機能に関しては、インスタンスごとに 1 つずつ追加できます。
 
 ## <a name="add-capabilities"></a>機能の追加
 
-**次の方法で機能を追加できます。**
+次の方法で機能を追加できます。
 
-* Visual Studio Code で Teams Toolkit を使用して機能を追加する。
-* コマンド パレットを使用して機能を追加する場合。
+* [Microsoft Visual Studio Code での Teams Toolkit の使用](#using-teams-toolkit-in-microsoft-visual-studio-code)
+* [コマンド パレットの使用](#using-the-command-palette)
+* [TeamsFx CLI の使用](#using-teamsfx-cli)
 
-  > [!Note]
-  > Teams アプリで機能を正常に追加した後は、環境ごとにプロビジョニングする必要があります。
-
-* **Visual Studio Code で Teams Toolkit を使用して機能を追加するには、**
+### <a name="using-teams-toolkit-in-microsoft-visual-studio-code"></a>Microsoft Visual Studio Code での Teams Toolkit の使用
 
    1. **Visual Studio Code** を開きます。
-   1. 左側のパネルから **Teams Toolkit を** 選択します。
+   1. アクティビティ バーから **Teams Toolkit** を選択します。
    1. **[開発**] で [**機能の追加]** を選択します。
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="更新された 1 つ":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123.png" alt-text="Teams Toolkit から機能を追加する":::
 
-* **コマンド パレットを使用して機能を追加するには:**
+      > [!NOTE]
+      > Teams アプリで機能を正常に追加したら、環境ごとにプロビジョニングする必要があります。
 
-   1. **コマンド パレットを** 開きます。
-   1. **Teams:機能の追加を入力します**。
-   1. **[Enter]** キーを押します。
+### <a name="using-the-command-palette"></a>コマンド パレットの使用
+
+   1. **[コマンド** パレットの表示 > **] を** 選択します。または **Ctrl + Shift + P** キーを押します。
+
+      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add-capabilities-command-palette.png" alt-text="コマンド パレットから機能を追加する":::
+
+   1. **Teams に入る: 機能を追加** します。
+   1. Enter キーを押します。
 
       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/teams-add-features.png" alt-text="コマンド パレットを使用して機能を追加する場合。":::
 
-   1. ポップアップから、プロジェクトに追加する機能を選択します。
+   1. ポップアップから、プロジェクトに追加する必要がある機能を選択します。
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/notification-add-capabilities.png" alt-text="通知":::
 
-## <a name="add-capabilities-using-teamsfx-cli"></a>TeamsFx CLI を使用して機能を追加する
+### <a name="using-teamsfx-cli"></a>TeamsFx CLI の使用
 
 * **プロジェクト ディレクトリ** をプロジェクト フォルダーに変更します。
 * 次の表に、機能と必要なコマンドの一覧を示します。
@@ -81,43 +80,18 @@ TeamsFx でさらに機能を追加するための制限事項を次に示しま
   |ボットを追加するには |`teamsfx add bot`|
   |メッセージ拡張機能を追加するには |`teamsfx add message extension`|
 
-## <a name="available-capabilities-to-add-for-different-teams-project"></a>さまざまな Teams プロジェクトに追加できる機能
+## <a name="changes-after-adding-capabilities"></a>機能を追加した後の変更
 
-Teams アプリで作成したプロジェクトに基づいて、さまざまな機能を追加することもできます。
-次の表に、プロジェクトに追加できる機能の一覧を示します。
+次の表は、機能を追加するときにアプリのファイルに表示される変更を示しています。
 
-|既存の機能|サポートされているその他の機能|
-|--------------------|--------------------|
-|[SPFx] タブ |なし|
-|[SSO 対応] タブ |SSO 対応タブ, 通知ボット, コマンド ボット, ボット, メッセージ拡張機能|
-|通知ボット |SSO 対応タブ、タブ|
-|コマンド ボット |SSO 対応タブ、タブ|
-|Tab |Tab, notification bot, command bot, bot, message extension|
-|Bot |メッセージ拡張機能、SSO 対応タブ、タブ|
-|メッセージ拡張機能: |ボット、SSO 対応タブ、タブ |
-
-## <a name="add-bot-tab-and-message-extension"></a>ボット、タブ、メッセージ拡張機能を追加する
-
-ボットとメッセージ拡張機能を追加した後、プロジェクトの変更は次のようになります。
-
-* ボット テンプレート コードは、パス `yourProjectFolder/bot`を持つサブフォルダーに追加されます。 これには、プロジェクトに **hello world** ボット アプリケーション テンプレートが含まれます。
-* `launch.json` フォルダー `task.json` の下 `.vscode` には、Visual Studio Code に必要なスクリプトが含まれるフォルダーが更新され、アプリケーションをローカルでデバッグするときに実行されます。
-* `manifest.template.json` フォルダー下の `templates/appPackage` ファイルが更新されます。これには、Teams プラットフォーム内のアプリケーションを表すマニフェスト ファイル内のボット関連情報が含まれます。 変更点は次のとおりです。
-  * ボットの ID
-  * ボットのスコープ
-  * hello world ボット アプリケーションが応答できるコマンド
-* 下の `templates/azure/teamsfx` ファイルが更新され `templates/azure/provision/xxx`、.bicep ファイルが再生成されます。
-* 下の `.fx/config` ファイルは再生成され、新しく追加された機能に対して適切な構成でプロジェクトが設定されます。
-
-タブを追加すると、プロジェクトの変更は次のようになります。
-
-* フロントエンド タブ テンプレート コードは、プロジェクトへの **hello world** タブ アプリケーション テンプレートを含むパス`yourProjectFolder/tab`を持つサブフォルダーに追加されます。
-* `launch.json` フォルダー `task.json` の下 `.vscode` には、Visual Studio Code に必要なスクリプトが含まれるフォルダーが更新され、アプリケーションをローカルでデバッグするときに実行されます。
-* `manifest.template.json` フォルダー下の `templates/appPackage` ファイルが更新されます。これには、Teams プラットフォームのアプリケーションを表すマニフェスト ファイル内のタブ関連情報が含まれます。 変更は次のとおりです。
-  * 構成可能なタブと静的タブ
-  * タブのスコープ
-* 下の `templates/azure/teamsfx` ファイルが更新され `templates/azure/provision/xxx`、.bicep ファイルが再生成されます。
-* 下 `.fx/config` のファイルは再生成され、新しく追加された機能に対して適切な構成でプロジェクトが設定されます。
+|機能を追加する|説明| 変更内容|
+|------------|------------------------|---------|
+|ボット、メッセージ拡張機能、タブ|**hello world**&nbsp;ボットまたはタブ アプリケーション テンプレートをプロジェクトに含めます。|フロントエンド ボットまたはタブ テンプレート のコードは、パス `yourProjectFolder/bot` を持つサブフォルダーに追加されるか、それぞれ `yourProjectFolder/tab` 追加されます。|
+| ボット、メッセージ拡張機能、タブ |Visual Studio Code に必要なスクリプトが含まれており、アプリケーションをローカルでデバッグする場合に実行されます。 |ファイル `launch.json` と `task.json` フォルダーの下 `.vscode` が更新されます。|
+| ボットとメッセージの拡張機能|Teams Platform のアプリケーションを表すボットまたはタブ関連情報をマニフェスト ファイルに含めます。|フォルダー下`templates/appPackage`のファイル`manifest.template.json`が更新され、Teams プラットフォームのアプリケーションを表すマニフェスト ファイルにタブ関連情報が含まれます。 変更は、ボットの ID、ボットのスコープ、hello world ボットまたはタブ アプリケーションが応答できるコマンドで表示されます。|
+|Tab|Teams Platform のアプリケーションを表すボットまたはタブ関連情報をマニフェスト ファイルに含めます。|フォルダー下`templates/appPackage`のファイル`manifest.template.json`が更新され、Teams プラットフォームのアプリケーションを表すマニフェスト ファイルにタブ関連情報が含まれます。 変更は、構成可能なタブと静的タブ、およびタブのスコープに表示されます。|
+|ボット、メッセージ拡張機能、タブ|teamsfx にボットまたはタブ関連&nbsp;の情報を含め、Azure 関数を統合するためのファイルをプロビジョニングします。|下の `templates/azure/teamsfx` ファイルが更新され `templates/azure/provision/xxx`、.bicep ファイルが再生成されます。|
+|ボット、メッセージ拡張機能、タブ|新しく追加された機能に適した構成でプロジェクトが設定されていることを確認します。|下の `.fx/config` ファイルは再生成されます|
 
 ## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
 
