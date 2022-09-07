@@ -98,40 +98,66 @@
       items:
         - name: Teams ツールキットの概要
           href: toolkit/teams-toolkit-fundamentals.md
-        - name: Teams アプリの新規作成
-          href: toolkit/create-new-project.md
-        - name: Teams アプリを構築するためのアカウントを準備する
-          href: toolkit/accounts.md
-        - name: Teams アプリをローカルでデバッグする
-          href: toolkit/debug-local.md
-        - name: バックグランド プロセスのデバッグ
-          href: toolkit/debug-background-process.md
-        - name: クラウド リソースをプロビジョニングする
-          href: toolkit/provision.md
-        - name: Teams アプリをクラウドに展開する
-          href: toolkit/deploy.md
-        - name: Teams アプリ マニフェストを編集する
-          href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
-        - name: Azure AD マニフェストをカスタマイズする
-          href: toolkit/AAD-manifest-customization.md
-        - name: Teams アプリに機能を追加する
-          href: toolkit/add-capability.md
-        - name: Teams アプリにクラウド リソースを追加する
-          href: toolkit/add-resource.md
-        - name: Teams アプリにシングル サインオンを追加する
-          href: toolkit/add-single-sign-on.md
-        - name: Teams アプリに API 接続を追加する
-          href: toolkit/add-API-connection.md
-        - name: CI/CD パイプラインを設定する
-          href: toolkit/use-CICD-template.md
-        - name: Teams ツールキットを使用して Teams アプリを公開する
-          href: toolkit/publish.md
-        - name: 複数の環境を管理する
-          href: toolkit/TeamsFx-multi-env.md
-        - name: Teams プロジェクトで協力する
-          href: toolkit/TeamsFx-collaboration.md
-        - name: TeamsFx SDK
-          href: toolkit/TeamsFx-SDK.md
+        - name: Teams Toolkit のインストール
+          href: toolkit/install-Teams-Toolkit.md
+        - name: Teams Toolkit を調べる
+          href: toolkit/explore-Teams-Toolkit.md
+        - name: Microsoft Teams Toolkit を使用してアプリをビルドする準備をする
+          href: toolkit/build-environments.md
+        - name: Teams Toolkit を使用してアプリを作成する
+          items:
+            - name: Teams アプリを作成するための前提条件
+              href: toolkit/tools-prerequisites.md
+            - name: 新しい Teams アプリ プロジェクトを作成する
+              href: toolkit/create-new-project.md
+            - name: Teams アプリを開発する
+              items:
+                - name: 環境の追加と管理
+                  href: toolkit/TeamsFx-multi-env.md
+                - name: マルチ機能アプリを作成する
+                  href: toolkit/add-capability.md
+                - name: 機能ベースのクラウド リソースを作成する
+                  href: toolkit/add-resource.md
+                - name: 既存のサード パーティ API を統合する
+                  href: toolkit/add-API-connection.md
+            - name: マニフェストをカスタマイズする
+              items:
+                - name: Teams アプリ マニフェストをカスタマイズする
+                  href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
+                - name: Azure AD マニフェストを編集する
+                  href: toolkit/AAD-manifest-customization.md
+            - name: TeamsFx SDK
+              href: toolkit/TeamsFx-SDK.md
+            - name: Teams アプリをデバッグする
+              items:
+                - name: 概要
+                  href: toolkit/debug-overview.md
+                - name: Teams アプリをローカルでデバッグする
+                  href: toolkit/debug-local.md
+                - name: バックグランド プロセスのデバッグ
+                  href: toolkit/debug-background-process.md
+            - name: Azure でアプリをホストする
+              items:
+                - name: クラウド リソースをプロビジョニングする
+                  href: toolkit/provision.md
+                - name: Teams アプリをクラウドに展開する
+                  href: toolkit/deploy.md
+            - name: Teams アプリをテストする
+              items:
+                - name: 統合と共同作業
+                  href: toolkit/TeamsFx-collaboration.md
+                - name: Teams 環境でのアプリのサイドロードとテスト
+                  href: toolkit/sideload-and-test-app.md
+                - name: さまざまな環境でアプリの動作をテストする
+                  href: toolkit/test-app-behavior.md
+        - name: Teams アプリの発行
+          items:
+            - name: Teams ツールキットを使用して Teams アプリを公開する
+              href: toolkit/publish.md
+            - name: 開発者ポータルと統合する
+              href: toolkit/Integrate-with-developer-portal.md
+        - name: FAQ
+          href: toolkit/faq.md
     - name: Visual Studio 用 Teams ツールキット
       items:
         - name: Teams ツールキットの概要
@@ -385,7 +411,7 @@
           displayName: Ephemeral data structures
         - name: メディア同期
           href: apps-in-teams-meetings/teams-live-share-media-capabilities.md
-          displayName: 'Audio ducking,'
+          displayName: Audio ducking
         - name: 使い方ガイド
           items:
             - name: アジャイル ポーカー チュートリアル
@@ -404,12 +430,15 @@
       href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
     - name: 送信 Webhook を作成する
       href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
+      displayName: 'HMAC security token, access, channel'
     - name: 受信 Webhook を作成する
       href: webhooks-and-connectors/how-to/add-incoming-webhook.md
+      displayName: 'Access, permissions'
     - name: Office 365 コネクタの作成
       href: webhooks-and-connectors/how-to/connectors-creating.md
     - name: メッセージを作成して送信する
       href: webhooks-and-connectors/how-to/connectors-using.md
+      displayName: 'Access, settings, configuration'
 - name: カードとタスク モジュールを作成する
   items:
     - name: 概要
@@ -418,34 +447,44 @@
       items:
         - name: 概要
           href: task-modules-and-cards/what-are-cards.md
+          displayName: 'People picker, type-ahead'
         - name: カードの種類
           href: task-modules-and-cards/cards/cards-reference.md
+          displayName: 'Flexible layout, receipt card, carousel card, setting'
         - name: Microsoft Teams のカードの書式設定
           href: task-modules-and-cards/cards/cards-format.md
+          displayName: 'Information masking, background, extension, notification'
         - name: カード アクション
           href: task-modules-and-cards/cards/cards-actions.md
         - name: アダプティブ カードのユーザー ピッカー
           href: task-modules-and-cards/cards/people-picker.md
+          displayName: 'Setting, channel, static typeahead'
         - name: アダプティブ カードの先行入力検索
           href: task-modules-and-cards/cards/dynamic-search.md
         - name: アダプティブ カードのユニバーサル アクション
           items:
             - name: 概要
               href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/overview.md
+              displayName: 'Access, extension, channel, communication'
             - name: アダプティブ カードのユニバーサル アクションの操作
               href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-universal-actions-for-adaptive-cards.md
+              displayName: 'Setting, channels,'
             - name: ユーザー固有のビュー
               href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/User-Specific-Views.md
+              displayName: 'Poll creator controls, channel, extension'
             - name: シーケンシャル ワークフロー
               href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Sequential-Workflows.md
+              displayName: Channel
             - name: 最新のカード
               href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md
     - name: タスク モジュールを作成する
       items:
         - name: 概要
           href: task-modules-and-cards/what-are-task-modules.md
+          displayName: Channel
         - name: タスク モジュールを呼び出して閉じる
           href: task-modules-and-cards/task-modules/invoking-task-modules.md
+          displayName: 'Access, module sizing'
         - name: タブでタスク モジュールを使用する
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
         - name: ボットでタスク モジュールを使用する
