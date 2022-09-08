@@ -493,86 +493,115 @@
   items:
     - name: 概要
       href: concepts/authentication/authentication.md
+      displayName: Access
     - name: タブ
       items:
         - name: タブ アプリの SSO を有効にする
           items:
             - name: 概要
               href: tabs/how-to/authentication/tab-sso-overview.md
+              displayName: 'Cookies, channel, access, permissions'
             - name: Azure AD でタブ アプリを登録する
               href: tabs/how-to/authentication/tab-sso-register-aad.md
+              displayName: 'Access, permissions, configurations, browser, extension'
             - name: SSO を有効にするコードを追加する
               href: tabs/how-to/authentication/tab-sso-code.md
+              displayName: 'Extension, access, permissions'
             - name: SSO 用のアプリ マニフェストを更新しアプリをプレビューする
               href: tabs/how-to/authentication/tab-sso-manifest.md
+              displayName: 'Access, permissions'
             - name: Microsoft Graph の権限または範囲を許可する
               href: tabs/how-to/authentication/tab-sso-graph-api.md
+              displayName: 'Access, permissions, channel, browser, configuration, delegated'
             - name: SSO 認証のトラブルシューティング
               href: tabs/how-to/authentication/tab-sso-troubleshooting.md
+              displayName: 'Access, permissions, configurations'
         - name: サード パーティの OAuth IdP 認証を使用する
           items:
             - name: 概要
               href: tabs/how-to/authentication/auth-flow-tab.md
+              displayName: 'Access, configuration'
             - name: サード パーティの OAuth IdP 認証を構成する
               href: tabs/how-to/authentication/auth-tab-aad.md
+              displayName: 'Access, configuration, cookies'
             - name: 外部 OAuth プロバイダーを使用する
               href: tabs/how-to/authentication/auth-oauth-provider.md
     - name: ボット
       items:
         - name: ボットの認証フロー
           href: bots/how-to/authentication/auth-flow-bot.md
+          displayName: Access
         - name: 認証をボットに追加する
           href: bots/how-to/authentication/add-authentication.md
+          displayName: 'Configuration, delegate, emulator, tunneling, channels'
         - name: SSO 認証を利用する
           href: bots/how-to/authentication/auth-aad-sso-bots.md
+          displayName: 'Acces, permissions, configuration, settings'
     - name: メッセージの拡張機能
       items:
         - name: メッセージ拡張機能に認証を追加する
           href: messaging-extensions/how-to/add-authentication.md
+          displayName: Configuration
         - name: メッセージ拡張機能用の SSO を有効化する
           href: messaging-extensions/how-to/enable-SSO-auth-me.md
+          displayName: 'Setting, extensions'
 - name: デバイスの機能を統合する
   items:
     - name: 概要
       href: concepts/device-capabilities/device-capabilities-overview.md
+      displayName: 'Access, premissions'
     - name: Teams アプリのデバイス アクセス許可を要求する
       href: concepts/device-capabilities/native-device-permissions.md
     - name: ブラウザーのデバイスのアクセス許可
       href: concepts/device-capabilities/browser-device-permissions.md
     - name: メディア機能を統合する
       href: concepts/device-capabilities/media-capabilities.md
+      displayName: 'Access, permissions, whiteboard, configuration'
     - name: QR コードまたはバーコード スキャナー機能を統合する
       href: concepts/device-capabilities/qr-barcode-scanner-capability.md
+      displayName: 'Access, permissions, configuration'
     - name: 場所機能を統合する
       href: concepts/device-capabilities/location-capability.md
+      displayName: 'Access, permissions, configurations'
 - name: Microsoft Graph を使用したTeams データを使用する
   items:
     - name: 概要
       href: /graph/teams-concept-overview
+      displayname: 'Permissions, communication, channels, delegated, reports, extensions'
     - name: Microsoft Graph ツールキット
       href: /graph/toolkit/overview
+      displayName: 'Access, routing'
     - name: 作業の開始
       href: /graph/toolkit/get-started/build-a-microsoft-teams-tab
+      displayName: 'Access, report, MSAL2'
     - name: リソース固有の同意
       href: graph-api/rsc/resource-specific-consent.md
+      displayName: 'Access, permissions, delegated, channel, organizer, notifications'
     - name: Graph API を使用してメッセージを送信するアプリの事前インストール
       href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
+      displayName: 'Permissions, delegated, channel, notifications'
     - name: サードパーティのメッセージをインポートする
       href: graph-api/import-messages/import-external-messages-to-teams.md
+      displayName: 'Permission, channel, communications, setting'
     - name: コード サンプル
       href: 'https://github.com/OfficeDev/microsoft-teams-samples#graph-apis'
 - name: アプリを Microsoft 365 全体に拡張する
   items:
     - name: 概要
       href: m365-apps/overview.md
+      displayName: 'Access, permissions, channel, extensions'
     - name: 前提条件
       href: m365-apps/prerequisites.md
+      displayName: 'Channel, configuration, settings, extensions'
     - name: 'Office と Outlook の [Teams パーソナル] タブを有効にする'
       href: m365-apps/extend-m365-teams-personal-tab.md
+      displayName: 'Access, permissions, channel, report, browser'
     - name: Outlook の Teams メッセージ拡張機能を有効にする
       href: m365-apps/extend-m365-teams-message-extension.md
+      displayName: 'Access, channel, report, communication'
     - name: Microsoft 365 用の Teams アプリを発行する
       href: m365-apps/publish.md
+      displayName: 'Access, permissions, channel, extensions'
 - name: アプリのテスト
   items:
     - name: 概要
@@ -649,7 +678,7 @@
   items:
     - name: 概要
       href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
-      displayName: 'Pricing model, SaaS offer, In-app purchases,'
+      displayName: 'Pricing model, SaaS offer, In-app purchases'
     - name: Teams アプリに SaaS オファーを含める
       href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
       displayName: 'Transactable Software-as-a-Service, Recloud app'
@@ -658,15 +687,18 @@
     - name: 収益化されたアプリのテスト プレビュー
       href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: アプリ マニフェスト
-  items:
+  itesms:
     - name: Teams のアプリ マニフェストのスキーマ
       href: resources/schema/manifest-schema.md
+      displayName: 'Access, permissions, configuration, browser, channel, notification, background, delegated, organizer'
     - name: 開発者向けパブリック プレビュー
       items:
         - name: 概要
           href: resources/dev-preview/developer-preview-intro.md
+          displayName: 'Access, setting'
         - name: Teams のパブリック開発者プレビュー マニフェスト スキーマ
           href: resources/schema/manifest-schema-dev-preview.md
+          displayName: 'Access, permission, channel, browser, configuraiton, chat, notifications, delegated, background, organizer'
 - name: Teams との統合
   items:
     - name: 概要
