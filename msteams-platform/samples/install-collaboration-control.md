@@ -1,18 +1,18 @@
 ---
-title: コラボレーション コントロールをインストールする
+title: コラボレーション コントロールのインストール
 author: surbhigupta
 description: このモジュールでは、Power アプリとMicrosoft 365 E3を使用してコラボレーション コントロールをインストールする方法と、コラボレーション コントロール ソリューションをインストールする方法について説明します。
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: aa4259855ba0c95906d7196ffd83c093bea89ea9
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: ae7e3e93576e14f07784e8ded65858940e2cea21
+ms.sourcegitcommit: 14fb175842e49888fc99ae813ce8a2b85fe1ff94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67179243"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67617979"
 ---
-# <a name="install-collaboration-controls"></a>コラボレーション コントロールをインストールする
+# <a name="install-collaboration-controls"></a>コラボレーション コントロールのインストール
 
 > [!NOTE]
 > 現在、コラボレーション コントロールは [、パブリック開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md)でのみ使用できます。
@@ -20,7 +20,7 @@ ms.locfileid: "67179243"
 この記事では、コラボレーション コントロールをインストールする方法について説明します。 コラボレーション コントロールを使用してCollaboration Manager アプリケーションをビルドおよびデプロイするには、次のものが必要です。
 
 * **Power Apps**: コラボレーション コントロールを使用してモデル 駆動型アプリケーションをビルドして実行します。
-* **M365 E3 以降**: カスタム アプリケーションをMicrosoft Teamsに展開し、Planner にタスクを格納し、SharePoint のファイル、Outlook の会議に展開します。
+* **M365 E3 以降**: カスタム アプリケーションを Microsoft Teams に展開し、Planner にタスクを格納し、SharePoint のファイル、Outlook の会議を保存します。
 
 Power Platform 環境にコンポーネントをインストールするには、次のロールが必要です。
 
@@ -31,9 +31,10 @@ Power Platform 環境にコンポーネントをインストールするには�
 
 ## <a name="install-the-collaboration-controls-solutions"></a>コラボレーション コントロール ソリューションをインストールする
 
-プライベート リンクを使用して、コラボレーション コントロールを dataverse 環境にインストールします。 このリンクは、組織内外の他のユーザーと共有することはできません。
+コラボレーション コントロールは、[Microsoft AppSource](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1) を使用して dataverse 環境にインストールします。
 
-リンクを受け取り、コラボレーション コントロールを dataverse 環境にインストールした後にのみ、独自のモデル駆動型アプリ内でコンポーネントを構成して使用できます。
+
+独自のモデル駆動型アプリ内でコンポーネントを構成して使用できるのは、 [Microsoft AppSource](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1)  を参照し、Dataverse 環境にコラボレーション コントロールをインストールした後だけです。
 
 コラボレーション コントロールには、次のソリューションが含まれます。
 
@@ -57,7 +58,7 @@ Power Platform 環境にコンポーネントをインストールするには�
 
 インストールする前に、Power Platform 環境または管理者テナントである必要があります。 データベースを含むデータバース環境が必要です。 お持ちでない場合は、インストールを続行するために [新しい](/power-platform/admin/create-environment) ファイルを作成する必要があります。
 
-ソリューションをインストールするには、まず [Microsoft AppSource] を参照し、次の手順を実行します。
+ソリューションをインストールするには、 [Microsoft AppSource に](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1) 移動し、次の手順を実行します。
 
 1. [ **今すぐ取得] ボタンを** 選択します。
 

@@ -5,12 +5,12 @@ description: このモジュールでは、受信 Webhook を Teams アプリに
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: ade5d5f30261cfd77140ab3cc9332bba15c76be8
-ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.openlocfilehash: de46f651c3dd6df741b4fef47c9813dfd88a6fe0
+ms.sourcegitcommit: 0ac53c430c055897ecebc129eab49336820c18c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2022
-ms.locfileid: "67337139"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67618283"
 ---
 # <a name="create-incoming-webhooks"></a>受信 Webhook を作成する
 
@@ -52,16 +52,16 @@ Teams チャネルに受信 Webhook を追加するには、次の手順に従�
 1. Webhook を追加するチャネルを開き、上部のナビゲーション バーから &#8226;&#8226;&#8226; **[その他のオプション]** を選択します。
 1. ドロップダウン メニューから **コネクタ** を選択します。
 
-    ![コネクタの選択](~/assets/images/connectors.png)
+   :::image type="content" source="../../assets/images/connectors.png" alt-text="このスクリーンショットは、コネクタを選択する方法を示しています。":::
 
 1. **受信 Webhook** を検索し、**[追加]** 選択します。
 1. **[構成］** を選択して名前を指定し、必要に応じて Webhook のイメージをアップロードします。
 
-    ![[構成] ボタン](~/assets/images/configure.png)
+   :::image type="content" source="../../assets/images/configure.png" alt-text="このスクリーンショットは、Webhook のイメージを構成してアップロードする方法を示しています。":::
 
 1. ダイアログ ウィンドウに表示される一意の Webhook URL をコピーして保存します。 URL はチャネルにマッピングされ、それを使用して Teams に情報を送信することができます。 **[完了]** を選択します。
 
-    ![一意の URL](~/assets/images/url.png)
+   :::image type="content" source="../../assets/images/url.png" alt-text="このスクリーンショットは、一意の Webhook URL を示しています。":::
 
 Webhook は Teams チャネルで利用できます。
 
@@ -79,19 +79,19 @@ Teams チャネルから受信 Webhook を削除するには、次の手順に�
 1. **[管理]** で **[構成済み]** を選択します。
 1. **<*1*>構成済み** を選択して、現在のコネクタの一覧を表示します。
 
-    ![構成済みの Webhook](~/assets/images/configured.png)
+   :::image type="content" source="../../assets/images/configured.png" alt-text="このスクリーンショットは、現在のコネクタの一覧を表示するように構成する方法を示しています。":::
 
 1. 削除するコネクタの **[管理]** を選択します。
 
-    ![Webhook の管理](~/assets/images/manage.png)
+   :::image type="content" source="../../assets/images/manage.png" alt-text="このスクリーンショットは、削除するコネクタを管理する方法を示しています。":::
 
 1. **[削除 ]** を選択して、**[構成の削除]** ダイアログ ボックスを表示します。
 
-    ![構成の削除](~/assets/images/removeconfiguration.png)
+   :::image type="content" source="../../assets/images/removeconfiguration.png" alt-text="このスクリーンショットは、[構成の削除] ダイアログ ボックスを表示する方法を示しています。":::
 
 1. ダイアログ ボックスのフィールドに入力し、チェックボックスをオンにし、**[削除]** を選択します。
 
-    ![最終削除](~/assets/images/finalremove.png)
+   :::image type="content" source="../../assets/images/finalremove.png" alt-text="このスクリーンショットは、Teams チャネルから受信 Webhook を削除する方法を示しています。":::
 
 ## <a name="code-sample"></a>コード サンプル
 

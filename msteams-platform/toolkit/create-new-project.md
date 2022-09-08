@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: e64daa0c3288f97286177e814204404522a6d6b9
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 8500f5ba1f54b28f68f9b56c0a42aedfff108e64
+ms.sourcegitcommit: c806c5ffe277c740d0d7b8f62e72ade562029194
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616625"
+ms.locfileid: "67617797"
 ---
 # <a name="create-a-new-teams-project"></a>新しい Teams プロジェクトを作成する
 
@@ -29,40 +29,49 @@ Teams Toolkit で [新しい Teams アプリの作成] を選択すると **、�
 **アプリを作成するには**
 
 1. Visual Studio Code を開きます。
-1. Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: アイコンを選択します。
+
+1. 左側のナビゲーション バーで Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: アイコンを選択します。
+
 1. **[新しい Teams アプリを作成]** を選択します。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-teams-app.png" alt-text="Teams ツールキットサイドバー":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Teams ツールキットのサイド バーにある [新しいプロジェクトの作成] リンクの位置":::。
 
-1. **[新しい Teams アプリを作成]** を選択して、Teams Toolkit を使用してアプリを作成します。
+1. タブ **がアプリ** 機能として選択されていることを確認します。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/select-create-app.png" alt-text="アプリを作成する":::
-
-1. このチュートリアルでは、アプリをビルドする機能として **[Tab]** を選択します。
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/select-tabapp1.png" alt-text="アプリ機能の選択":::
-
-   > [!NOTE]
-   > 要件に基づいて、任意の種類の機能を選択できます。
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-capabilities-tabapp.png" alt-text="アプリ機能の選択":::
 
 1. プログラミング言語として **[JavaScript]** を選択します。
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/select-language-tab.png" alt-text="プログラミング言語を選択する方法を示すスクリーンショット":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-language-tab.png" alt-text="プログラミング言語を選択する方法のスクリーンショット":::
 
-1. プロジェクト ワークスペースの場所を選択し、 **フォルダーを選択します**。
+1. **既定の場所** にプロジェクト ルート フォルダーを格納するには、[既定のフォルダー] を選択します。
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/select-folder1.png" alt-text="select-folder":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-default-location.png" alt-text="既定の場所を選択する":::
 
-1. このチュートリアルでは、アプリケーション名として入力 `helloworld` します。 **Enter** キーを押します。
+   次の手順では、既定の場所を変更する方法について説明します。
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/enter-name-tab.png" alt-text="アプリ名を入力する場所を示すスクリーンショット":::
+      1. **[参照] を選択します**。
 
-   > [!NOTE]
-   > 他の機能には独自のアプリケーション名を入力し、英数字のみを使用することを確認できます。
+          :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-browse.png" alt-text="ストレージの参照を選択する":::
+
+      1. プロジェクト ワークスペースの場所を選択します。
+
+      1. フォルダーの **選択を選択します**。
+
+          :::image type="content" source="../assets/images/teams-toolkit-v2/select-folder.png" alt-text="ストレージ用の select-folder":::
+
+1. アプリケーション名として `helloworld` と入力します。 英数字のみを使用してください。 **Enter** キーを押します。
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/enter-name-tab1.png" alt-text="アプリ名を入力する場所を示すスクリーンショット。":::
+
+1. 既定では、プロジェクトは 10 秒以内に新しいウィンドウで開きます。 現在のウィンドウで開く場合は、[現在のウィンドウ **で開く**] を選択します。
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/new-window-notification.png" alt-text="新しいウィンドウ通知":::
 
    数秒で Teams タブ アプリが作成されます。
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/tap-app-created1.png" alt-text="作成されたアプリを示すスクリーンショット":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/tap-app-created1.png" alt-text="作成されたアプリを示すスクリーンショット。":::
+
 
 ### <a name="directory-structure-for-different-app-types"></a>さまざまな種類のアプリのディレクトリ構造
 

@@ -6,12 +6,12 @@ ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
-ms.openlocfilehash: a3c8031c8c810fb7425a07c4627bb773cec2de5a
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 3828c357307c5f7bfd94935a75dc9d6f5cedbc39
+ms.sourcegitcommit: c806c5ffe277c740d0d7b8f62e72ade562029194
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616687"
+ms.locfileid: "67617790"
 ---
 # <a name="customize-teams-app-manifest"></a>Teams アプリ マニフェストをカスタマイズする
 
@@ -20,7 +20,7 @@ Teams アプリ マニフェストでは、アプリを Microsoft Teams 製品�
 * [ローカル環境でマニフェスト ファイルをプレビューする](#preview-manifest-file-in-local-environment)
 * [リモート環境でマニフェスト ファイルをプレビューする](#preview-manifest-file-in-remote-environment)
 * [ローカルの変更を Dev Portal に同期する](#sync-local-changes-to-dev-portal)
-* [Teams アプリ マニフェストをカスタマイズする](#customize-teams-app-manifest)
+* [Teams アプリ マニフェストをカスタマイズする](#customize-your-teams-app-manifest)
 * [マニフェストを検証する](#validate-manifest)
 
 マニフェスト テンプレート ファイル `manifest.template.json` は、スキャフォールディング後にフォルダーの下で `templates/appPackage` 使用できます。 プレースホルダーを含むテンプレート ファイルと実際の値は、さまざまな環境のファイル`.fx/configs``.fx/states`を使用して Teams Toolkit によって解決されます。
@@ -188,7 +188,7 @@ Teams: コマンド パレットから **Teams プラットフォームにマニ
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest preview -3.png" alt-text="pre":::
 
-## <a name="customize-teams-app-manifest"></a>Teams アプリ マニフェストをカスタマイズする
+## <a name="customize-your-teams-app-manifest"></a>Teams アプリ マニフェストをカスタマイズする
 
 Teams Toolkit は、ローカル環境とリモート環境の `manifest.template.json` フォルダーにある次のマニフェスト テンプレート ファイルで構成されています。
 

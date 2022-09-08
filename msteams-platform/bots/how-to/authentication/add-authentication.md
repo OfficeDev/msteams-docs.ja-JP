@@ -5,12 +5,12 @@ description: Azure AD を使用して Teams のボット アプリに対して�
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: ed30f4600630b047ad410b88ed8e04e91989088c
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: ff7e4e8d3ffede250bd89ecca7b0e3d8054a646b
+ms.sourcegitcommit: 0ac53c430c055897ecebc129eab49336820c18c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586855"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "67618385"
 ---
 # <a name="add-authentication-to-your-teams-bot"></a>Teams ボットに認証を追加する
 
@@ -91,67 +91,67 @@ Azure Bot リソースの登録では、Web サービスがボットとして Bo
 1. ドロップダウン リストから **[リソース グループ]** を選択します。
 1. **Microsoft アプリ ID** の **マルチテナント** として **アプリ種類** を選択します。
 
-    ![マルチテナント機能](~/assets/images/adaptive-cards/multi-tenant.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/multi-tenant.png" alt-text="このスクリーンショットは、Microsoft AppID のマルチテナントを選択する方法を示しています。":::
 
 1. **[確認 + 作成]** を選びます。
 
-    ![Azure Bot の作成](~/assets/images/adaptive-cards/create-azure-bot.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/create-azure-bot.png" alt-text="このスクリーンショットは、Azure ボットを作成する方法を示しています。":::
 
 1. 検証に合格した場合は、**[作成]** を選択します。
 
     ボット サービスがプロビジョニングされるまで少し時間がかかります。
 
-    ![Azure Bot の検証](~/assets/images/adaptive-cards/validation-pane.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/validation-pane.png" alt-text="このスクリーンショットは、Azure ボットの検証がどのように渡されるかを示しています。":::
 
-1. **[リソースに移動]** を選択します。ボットと関連リソースがリソース グループに一覧表示されます。
+1. [**リソースに移動**] を選びます。 ボットと関連リソースがリソース グループに一覧表示されます。
 
-    ![リソースに移動](~/assets/images/adaptive-cards/go-to-resource-card.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/go-to-resource-card.png" alt-text="このスクリーンショットは、リソース グループを選択する方法を示しています。":::
 
     これで、Azure ボットが作成されます。
 
-    ![Azure ボット リソースが作成されました](~/assets/images/adaptive-cards/azure-bot-ui.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/azure-bot-ui.png" alt-text="このスクリーンショットは、Azure ボット リソースを作成する方法を示しています。":::
 
 クライアント シークレットを作成するには:
 
 1. **[設定]** で、**[構成]** を選択します。後で参照できるように、**Microsoft アプリ ID** (クライアント ID) を保存します。
 
-    ![Microsoft アプリ ID](~/assets/images/adaptive-cards/config-microsoft-app-id.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/config-microsoft-app-id.png" alt-text="このスクリーンショットは、クライアント シークレットを作成するために Microsoft App ID を追加する方法を示しています。":::
 
 1. **Microsoft アプリ ID** の横にある [**管理**] を選択します。
 
-   :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="ボットを管理する":::
+   :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="このスクリーンショットは、ボットの管理を作成する方法を示しています。":::
 
 1. **[クライアント シークレット]** セクションで、**[新しいクライアント シークレット]** を選択します。**[クライアント シークレットの追加]** ウィンドウが表示されます。
 
-    ![新しいクライアント シークレット](~/assets/images/meetings-side-panel/newclientsecret.png)
+   :::image type="content" source="../../../assets/images/meetings-side-panel/newclientsecret.PNG" alt-text="このスクリーンショットは、新しいクライアント シークレットを作成する方法を示しています。":::
 
 1. **[説明]** を入力し、**[追加]** を選択します。
 
-    ![クライアント シークレット](~/assets/images/adaptive-cards/client-secret.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/client-secret.png" alt-text="スクリーンショットは、クライアント シークレットの説明を入力する方法を示しています。":::
 
 1. **[値]** の列で、**[クリップボードにコピー]** を選択し、将来参照できるようにクライアント シークレット ID を保存します。
 
-    ![クライアント シークレットの値](~/assets/images/adaptive-cards/client-secret-value.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/client-secret-value.png" alt-text="スクリーンショットは、今後の参照のためにクライアント シークレット ID を保存する方法を示しています。":::
 
 Microsoft Teams チャネルに追加するには:
 
 1. **[ホーム]** に移動します。
 
-    ![ホーム ページを設定する](~/assets/images/adaptive-cards/bot-home-page.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/bot-home-page.png" alt-text="このスクリーンショットは、ボットのホーム ページを示しています。":::
 
 1. **[最近使ったリソース]** セクションに一覧表示されているボット開きます。
 
 1. 左側のウィンドウで **[チャネル]** を選択し、**Microsoft Teams**:::image type="icon" source="../../../assets/icons/teams-icon.png":::を選択します。
 
-    :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="チャネルで Teams を選択する":::
+   :::image type="content" source="../../../assets/images/adaptive-cards/channel-teams.png" alt-text="このスクリーンショットは、チャネルで Teams を選択する方法を示しています。":::
 
 1. サービス利用規約に同意するチェック ボックスをオンにし、**[承諾する]** を選択します。</br>
 
-    ![サービス利用規約の選択](~/assets/images/adaptive-cards/select-terms-of-service.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/select-terms-of-service.png" alt-text="このスクリーンショットは、サービスの場合に用語を設定する方法を示しています。":::
 
 1. **[保存]** を選択します。
 
-    ![[Teams] を選択します](~/assets/images/adaptive-cards/select-teams.png)
+   :::image type="content" source="../../../assets/images/adaptive-cards/select-teams.png" alt-text="このスクリーンショットは、Microsoft Teams チャネルを追加する方法を示しています。":::
 
 詳細については、「[Microsoft Teams 用にボットを作成する](../create-a-bot-for-teams.md)」を参照してください。
 
@@ -196,8 +196,10 @@ Microsoft Teams チャネルに追加するには:
 1. [**Azure portal**][azure-portal] で、ダッシュボードからリソース グループを選択します。
 1. ボット登録リンクを選択します。
 1. リソース ページを開き、**[設定]** の下にある **[構成]** を選択します。
-1. **[OAuth 接続設定の追加]** を選択します。次の図は、リソース ページの対応する選択項目を示したものです。  
-![SampleAppDemoBot 構成](~/assets/images/authentication/sample-app-demo-bot-configuration.png)
+1. **[OAuth 接続設定の追加]** を選択します。次の図は、リソース ページの対応する選択項目を示したものです。
+
+   ![SampleAppDemoBot 構成](~/assets/images/authentication/sample-app-demo-bot-configuration.png)
+
 1. フォームに次のように入力します。
 
     1. **名前**。 接続の名前を入力します。 この名前は、`appsettings.json` ファイルのボットで使用します。 たとえば、 *BotTeamsAuthADv1* です。
@@ -215,7 +217,7 @@ Microsoft Teams チャネルに追加するには:
     h. **リソース URL** には、「`https://graph.microsoft.com/`」と入力します。 これは、現在のコード サンプルでは使用されません。  
     i. **[Scopes]** は空白のままにします。 次の図に例を示します。
 
-    ![Teams ボット アプリ認証接続文字列 adv1 ビュー](../../../assets/images/authentication/auth-bot-identity-connection-adv1.png)
+    :::image type="content" source="../../../assets/images/authentication/auth-bot-identity-connection-adv1.PNG" alt-text="このスクリーンショットは、Teams ボット認証ボット ID 接続 adv1 を追加する方法を示しています。":::
 
 1. **[保存]** を選択します。
 
@@ -224,7 +226,9 @@ Microsoft Teams チャネルに追加するには:
 1. [**Azure portal**][azure-portal] で、ダッシュボードから Azure Bot を選択します。
 1. リソース ページで、**[設定]** にある **[構成]** を選択します。
 1. **[OAuth 接続設定の追加]** を選択します。  
-次の図は、リソース ページで対応する選択を表示します。 ![SampleAppDemoBot Configuration](~/assets/images/authentication/sample-app-demo-bot-configuration.png)
+   次の図は、リソース ページの対応する選択を示しています。
+
+   :::image type="content" source="../../../assets/images/authentication/sample-app-demo-bot-configuration.png" alt-text="このスクリーンショットは、リソース ページで対応する選択内容を示しています。":::
 
 1. フォームに次のように入力します。
 
@@ -250,12 +254,12 @@ Microsoft Teams チャネルに追加するには:
 1. 初回実行時には、アカウントの選択を求める新しいブラウザー ウィンドウが開きます。使用するアカウントを選択します。
 1. 次に、ID プロバイダーにデータ (資格情報) の使用を許可するように求められます。次の画像で例を示します。
 
-    ![teams ボット認証接続文字列 adv1](../../../assets/images/authentication/auth-bot-connection-test-accept.PNG)
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-connection-test-accept.PNG" alt-text="スクリーンショットは、Teams ボット認証接続文字列 adv1 を追加する方法を示しています。":::
 
 1. **[同意する]** を選択します。
 1. これにより、**[テスト接続] から \<your-connection-name> [成功]** ページにリダイレクトされます。 エラーが発生した場合は、ページを更新します。 次の図に例を示します。
 
-    ![teams ボット アプリ認証接続 str adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-connection-test-token.PNG" alt-text="スクリーンショットは、Teams アプリ認証接続文字列 adv1 を追加する方法を示しています。":::
 
 接続名は、ユーザー認証トークンを取得するためにボット コードによって使用されます。
 
@@ -325,14 +329,14 @@ Microsoft Teams チャネルに追加するには:
 1. **[公開]** ボタンをクリックします。
 1. 次のダイアログ ウィンドウで、必要な情報を入力します。 例を次に示します。
 
-    ![auth-app-service](../../../assets/images/authentication/auth-bot-app-service.png)
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-app-service.png" alt-text="このスクリーンショットは、認証アプリ サービスに必要な情報を入力する方法を示しています。":::
 
 1. **[作成]** を選択します。
 1. デプロイが正常に完了すると、Visual Studio に反映されます。 さらに、既定のブラウザーに、"*ボットの準備ができました!*" というページが表示されます。 URL は次のようになります: `https://botteamsauth.azurewebsites.net/`。 ファイルに保存します。
 1. ブラウザーで、[**Azure portal**][azure-portal] に移動して、サインインします。
 1. リソース グループを確認します。ボットは他のリソースと共に一覧表示されます。次の画像で例を示します。
 
-    ![teams-bot-auth-app-service-group](../../../assets/images/authentication/auth-bot-app-service-in-group.png)
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-app-service-in-group.png" alt-text="このスクリーンショットは、リソース グループとボットを確認する方法を示しています。":::
 
 1. リソース グループで、ボット登録名 (リンク) を選択します。
 1. 左側のウィンドウで **[設定]** を選択します。
@@ -386,11 +390,11 @@ Microsoft Teams チャネルに追加するには:
 
     次の図は、ログイン後のボット UI の例です。
 
-    ![認証ボット ログイン エミュレーター](../../../assets/images/authentication/auth-bot-login-emulator.PNG)
+    :::image type="content" source="../../../assets/images/authentication/auth-bot-login-emulator.PNG" alt-text="このスクリーンショットは、ログインした後のボット UI の例を示しています。":::
 
 1. ボットから *トークンの表示* を求められたときに **[はい**] を選択すると、次のような応答が返されます。
 
-    ![認証ボット ログイン エミュレーター トークン](../../../assets/images/authentication/auth-bot-login-emulator-token.png)
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-login-emulator-token.png" alt-text="このスクリーンショットは、同意を選択する方法を示しています。":::
 
 1. サインアウトするには、入力チャット ボックスに「**logout**」と入力します。これによりユーザー トークンが解放され、もう一度サインインするまでボットはユーザーの代理として動作できなくなります。
 
@@ -413,15 +417,15 @@ and when for these, and just reference that from here, along with the set of ste
 1. メッセージが表示されたら、該当するユーザーのアカウントを選択します。
     次の図は、ログイン後のボット UI の例です。
 
-    ![デプロイされた認証ボット ログイン](../../../assets/images/authentication/auth-bot-login-deployed.PNG).
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-login-deployed.PNG" alt-text="このスクリーンショットは、ログインした後の Teams ボット UI の例を示しています。":::
 
 1. **[はい]** ボタンを選択して、認証トークンを表示します。 次の図に例を示します。
 
-    ![認証ボット ログイン デプロイ済みトークン](../../../assets/images/authentication/auth-bot-login-deployed-token.PNG).
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-login-deployed-token.PNG" alt-text="このスクリーンショットは、[はい] ボタンを選択して認証トークンを表示する方法を示しています。":::
 
 1. 「ログアウト」と入力してサインアウトします。
 
-    ![デプロイ済みの認証ボットがログアウト](../../../assets/images/authentication/auth-bot-deployed-logout.PNG)
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-deployed-logout.PNG" alt-text="このスクリーンショットは、ログアウトを入力してサインアウトする方法を示しています。":::
 
 > [!NOTE]
 > サインインで問題が発生した場合は、前の手順で説明したように、接続を再度テストしてみてください。 これにより、認証トークンが再作成される可能性があります。
@@ -440,7 +444,7 @@ and when for these, and just reference that from here, along with the set of ste
 1. `TeamsAppManifest` フォルダーに移動し、zip 形式のマニフェストをアップロードします。
 次のウィザードが表示されます。
 
-    ![認証ボット チームのアップロード](../../../assets/images/authentication/auth-bot-teams-upload.png)
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-teams-upload.png" alt-text="このスクリーンショットは、Teams にアップロードされたボットの例を示しています。":::
 
 1. **[チームに追加]** ボタンを選択します。
 1. 次のウィンドウで、ボットを使用するチームを選択します。
@@ -458,7 +462,7 @@ Teams アプリをローカルで実行するための準備として ngrok を�
 1. たとえば、`ngrok http 3978 --host-header=localhost:3978` を実行します。 必要に応じてポート番号を置き換えます。
 これにより、ngrok が起動し、指定したポートでリッスンします。 その返しとして、ngrok が実行されている限り有効な外部アドレス指定可能な URL が提供されます。 次の図に例を示します。
 
-    ![teams ボット アプリ認証接続文字列 adv1](../../../assets/images/authentication/auth-bot-ngrok-start.PNG).
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-ngrok-start.PNG" alt-text="このスクリーンショットは、Teams ボット アプリ認証接続文字列 adv1 を示しています":::
 
 1. 転送先の HTTPS アドレスをコピーします。 次のようになるはずです: `https://dea822bf.ngrok.io/`。
 1. `/api/messages` を追加して、`https://dea822bf.ngrok.io/api/messages` を取得します。 これは、コンピューター上でローカルで実行され、Teams のチャットで Web 経由で到達可能なボットの **メッセージ エンドポイント** です。
@@ -471,7 +475,7 @@ Teams アプリをローカルで実行するための準備として ngrok を�
 1. Bot Framework ポータルの **[Web チャットのテスト]** を使用して、ローカルでの実行中にボットをテストします。 エミュレーターと同様に、このテストでは Teams 固有の機能にアクセスすることはできません。
 1. `ngrok` が実行されているターミナル ウィンドウでは、ボットと Web チャット クライアントの間の HTTP トラフィックを確認できます。 より詳細なビューが必要な場合は、ブラウザー ウィンドウで、前のターミナル ウィンドウから取得した `http://127.0.0.1:4040` を入力します。 次の図に例を示します。
 
-    ![認証ボット チームの ngrok テスト](../../../assets/images/authentication/auth-bot-teams-ngrok-testing.png).
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-teams-ngrok-testing.png" alt-text="このスクリーンショットは、認証ボット チームの ngrok テストを示しています。":::
 
 > [!NOTE]
 > ngrok を停止して再起動すると、URL が変更されます。 プロジェクトで ngrok を使用するには、また使用している機能に応じて、すべての URL 参照を更新する必要があります。
@@ -654,6 +658,3 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 [teams-auth-bot-py]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/46.teams-auth
 
 [teams-auth-bot-js]: https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth
-
-[azure-aad-blade]: https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview
-[aad-registration-blade]: https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredAppsPreview
