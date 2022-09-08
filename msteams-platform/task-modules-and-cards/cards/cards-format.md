@@ -4,12 +4,12 @@ description: このモジュールでは、Microsoft Teams でのカード テ�
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
-ms.openlocfilehash: e6cbccdb436b8d84f5d139b6a082765f22f373c6
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: 24ea264a1af4bbed94251f4d74602a17aa01e3e3
+ms.sourcegitcommit: a34a6c87ce756ef4f7a55e7f18fc72a446fbe913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586960"
+ms.lasthandoff: 09/08/2022
+ms.locfileid: "67627038"
 ---
 # <a name="format-cards-in-microsoft-teams"></a>Microsoft Teams のカードの書式設定
 
@@ -121,6 +121,9 @@ Android では、アダプティブ カード Markdown の書式設定が次の�
 ``` json
 { "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.0", "body": [ { "type": "Container", "items": [ { "type": "TextBlock", "text": "Publish Adaptive Card with emojis 🥰 ", "weight": "bolder", "size": "medium" }, ] }, ], }
 ```
+
+> [!NOTE]
+> REST API を使用している場合は、要求ヘッダーに設定 `charset=UTF-8` してアダプティブ カードに絵文字を追加します。
 
 :::image type="content" source="../../assets/images/Cards/adaptive-card-emoji.png" alt-text="絵文字付きのアダプティブ カード":::
 
