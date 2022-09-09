@@ -3,12 +3,12 @@ title: Microsoft Teams 開発者コミュニティのサポートとフィード
 description: Microsoft Teams 製品チームが、さまざまなフィードバックとサポート チャネルで開発者コミュニティに応答する方法について説明します。
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: bd24ee9f9706bdf845dd518db2735c843f2b46ca
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 70df325781e5cbc6d18731d4aa0d31dd26b7817a
+ms.sourcegitcommit: 8e57439ad8258bf3315d29fd8e54d4bf15057346
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558150"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67636053"
 ---
 # <a name="support-and-feedback"></a>サポートとフィードバック
 
@@ -65,6 +65,7 @@ Teams アプリ開発の質問を共有して回答することで、質問を�
 |:----------------------|:------------|
 | **機能の提案** | [Microsoft Teams フィードバック ポータル](https://feedbackportal.microsoft.com/feedback/forum/ad198462-1c1c-ec11-b6e7-0022481f8472)で機能に関する提案を:::image type="icon" source="assets/icons/Teams-icon.png":::投稿します。 |
 | **一般的な質問** | Microsoft Teams 開発者プラットフォームに関する一般的な質問を、[Microsoft Teams コミュニティ ヘルプ](mailto:microsoftteamsdev@microsoft.com)に送信します。 ここで触れているこのチャネルで質問を投稿し、他のモードの通信が適用されない場合にのみメールを使用することをお勧めします。 |
+| **フィードバック インタビュー** | お客様からのフィードバックを重視しています。 プラットフォームのドキュメント、コミュニティ フォーラムの回答、Teams ストアの発行プロセスを活用した経験についてお問い合わせいただく場合は、お気軽に [スロットをご予約](https://aka.ms/bookdevfeedback)ください。|
 
 ## <a name="see-also"></a>関連項目
 
