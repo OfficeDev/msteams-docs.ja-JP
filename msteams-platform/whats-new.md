@@ -3,12 +3,12 @@ title: Teams の開発者向けの新機能と更新情報
 description: 新しく導入された Microsoft Teams の開発者向け機能と、既存の機能の更新について説明します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: b13cc93e515c1b4daf08e3f218a7059e34615f0d
-ms.sourcegitcommit: 3baca27a93e5a68eaaa52810700076f08f4c88a8
+ms.openlocfilehash: aae169cc03b51e1f0db04564234be4876d39ce49
+ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605783"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67635302"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -288,6 +288,7 @@ Microsoft では、Teams 開発者が質問をしたり、バグを報告した�
 ## <a name="get-latest-updates"></a>最新の更新プログラムを取得する
 
 [RSS フィード](https://aka.ms/TeamsPlatformUpdates)を構成することで、Teams プラットフォーム更新プログラムを取得できます。
+
 
 ### <a name="to-configure-rss-feed"></a>RSS フィードを構成するには
 

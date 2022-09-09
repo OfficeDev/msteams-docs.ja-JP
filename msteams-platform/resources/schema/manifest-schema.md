@@ -3,12 +3,12 @@ title: マニフェスト スキーマの参照
 description: この記事では、Microsoft Teams リファレンスのマニフェスト スキーマ、スキーマ、およびサンプルの完全なマニフェストを紹介します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 488929d98b9dff04086e5c3496550da9fd111aa1
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: db72e9e40a5bf4381b4e7e47090b4f6cfcb1d1d8
+ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605027"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67635337"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Teams のアプリ マニフェストのスキーマ
 
@@ -786,7 +786,7 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 > [!NOTE]
 >
 > * アプリがチーム スコープをサポートしている場合、このプロパティで定義されている値に関係なく、標準チャネルで機能します。
-> * アプリは、それぞれの種類のチャネルの一意のプロパティを考慮して、適切に機能することができます。 プライベート チャネルと共有チャネルのタブを有効にするには、「[プライベート チャネルのコンテキストの取得](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels)」および「[共有チャネルのコンテキストの取得](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels)を参照してください。
+> * アプリは、それぞれの種類のチャネルの一意のプロパティを考慮して、適切に機能することができます。 プライベート チャネルと共有チャネルのタブを有効にするには、「[プライベート チャネルでコンテキストを取得](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels)し、[共有チャネルでコンテキストを取得する](../../tabs/how-to/access-teams-context.md#get-context-in-shared-channels)」を参照してください。
 
 ## <a name="defaultblockuntiladminaction"></a>defaultBlockUntilAdminAction
 

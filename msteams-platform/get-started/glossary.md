@@ -3,12 +3,12 @@ title: Microsoft Teams 開発者向けドキュメント - 用語集
 description: Microsoft Teams 開発者向けドキュメントで使用される用語について説明します
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 962fa2ce2fb52fc3687da59b1453800a8d841e8e
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 9680286f21cec9252d01506621a0fec011fca17f
+ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616801"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67635323"
 ---
 # <a name="glossary"></a>用語集
 
@@ -102,7 +102,6 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 
 | 用語 | 定義 |
 | --- | --- |
-| [ID プロバイダー](../concepts/authentication/configure-identity-provider.md) | ユーザーに資格情報を格納して提供するエンティティ。 ユーザーは ID プロバイダーにも登録できます。  <br>**関連情報**: [認証](#a) |
 | [着信 Webhook](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | これにより、外部アプリは Teams チャネルでコンテンツを共有できます。 これらの Webhook は、追跡および通知ツールとして使用されます。 <br>**関連情報**: [Webhook](#w); [発信 Webhook](#o) |
 | [会議中のアプリ エクスペリエンス](../apps-in-teams-meetings/meeting-app-extensibility.md#in-meeting-app-experience) | Teams 会議ライフサイクルのステージ。会議中のアプリ エクスペリエンスを使用すると、アプリと会議内ダイアログ ボックスを使用して、会議中に参加者とのやり取りを行うことができます。 <br>**関連情報**: [会議のライフサイクル](#m) |
 

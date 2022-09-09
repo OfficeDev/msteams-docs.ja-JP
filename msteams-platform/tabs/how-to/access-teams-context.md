@@ -3,12 +3,12 @@ title: タブのコンテキストを取得する
 description: タブのコンテキスト、ユーザー、チーム、または会社のコンテキスト、情報へのアクセス、プライベートチャネルまたは共有チャネルでのコンテキストの取得、テーマの変更の処理について説明します。
 ms.localizationpriority: high
 ms.topic: how-to
-ms.openlocfilehash: ddd3d35d9069dd185fa4e77913ca0873e2d31b24
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 2048f46e6cbe181a755df12b61c5153aacc21186
+ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450388"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67635309"
 ---
 # <a name="get-context-for-your-tab"></a>タブのコンテキストを取得する
 
@@ -241,31 +241,8 @@ microsoftTeams.getContext((context) => {
 
 ページでこれらの値のいずれかを使用する場合、フィールドの `channel.membershipType` 値は `Private` 、ページがプライベート チャネルに読み込まれ、適切に応答できるかどうかを判断する必要があります。
 
-## <a name="retrieve-context-in-microsoft-teams-connect-shared-channels"></a>Microsoft Teams Connect共有チャネルでコンテキストを取得する
-
 > [!NOTE]
-> 現在、Microsoft Teams Connect共有チャネルは開発者向けプレビュー版のみです。
-
-コンテンツ ページがMicrosoft Teams Connect共有チャネルに読み込まれると、共有チャネル内の一意の`getContext`ユーザー名簿が原因で、通話から受信したデータが変更されます。
-コンテンツ ページが共有チャネル内にある場合、次のフィールドが変更されます。
-
-* `team.groupId`: 共有チャネルの場合は未定義です。
-* `team.internalId`: チームの `threadId` ユーザーに設定すると、チャネルは現在のユーザーに対して共有されます。 ユーザーが複数のチームにアクセスできる場合は、共有チャネルをホスト (作成) するチームに設定されます。
-* `team.displayName`: チームの名前に設定すると、現在のユーザーのチャネルが共有されます。 ユーザーが複数のチームにアクセスできる場合は、共有チャネルをホスト (作成) するチームに設定されます。
-* `sharepointSite.url`: 共有チャネルの個別の一意の SharePoint サイトの URL に設定します。
-* `sharepointSite.path`: 共有チャネルの個別の一意の SharePoint サイトのパスに設定します。
-* `sharepointSite.domain`: 共有チャネルの個別の一意の SharePoint サイト ドメインのドメインに設定します。
-
-これらのフィールドの変更に加えて、共有チャネルで使用できる新しいフィールドは 2 つあります。
-
-* `hostTeamGroupId`: ホスティング チームに `team.groupId` 関連付けられているか、共有チャネルを作成したチームに設定します。 このプロパティを使用すると、Microsoft Graph API呼び出しで共有チャネルのメンバーシップを取得できます。
-* `hostTeamTenantId`: ホスティング チームに `channel.ownerTenantId` 関連付けられているか、共有チャネルを作成したチームに設定します。 このプロパティは、*コンテキスト* オブジェクトのフィールドにある`user.tenant.id`現在のユーザーのテナント ID と相互参照して、ユーザーがホスティング チームのテナントの内部か外部かを判断できます。
-
-ページでこれらの値のいずれかを使用する場合、フィールドの `channel.membershipType` 値は `Shared` 、ページが共有チャネルに読み込まれ、適切に応答できるかどうかを判断する必要があります。
-
-> [!NOTE]
-> `teamSiteUrl` 標準チャネルにも適しています。
-> ページでこれらの値のいずれかを使用する場合、フィールドの `channelType` 値は `Shared` 、ページが共有チャネルに読み込まれ、適切に応答できるかどうかを判断する必要があります。
+>`teamSiteUrl` 標準チャネルにも適しています。 ページでこれらの値のいずれかを使用する場合、フィールドの `channelType` 値は `Shared` 、ページが共有チャネルに読み込まれ、適切に応答できるかどうかを判断する必要があります。
 
 ## <a name="get-context-in-shared-channels"></a>共有チャネルでコンテキストを取得する
 
@@ -278,7 +255,7 @@ microsoftTeams.getContext((context) => {
 
 | プロパティ | 説明 |
 |----------|--------------|
-|`channelId`| このプロパティは、SC チャネル スレッド ID に設定されます。|
+|`channelId`| プロパティは、共有チャネルのスレッド ID に設定されます。|
 |`channelType`| このプロパティは、共有チャネルに対して `sharedChannel` 設定されます。|
 |`groupId`|プロパティは共有チャネル用です `null` 。|
 |`hostTenantId`| プロパティが新しく追加され、ホストのテナント ID が記述されます。これは、現在のユーザーの `tid` テナント ID プロパティと比較するのに役立ちます。 |

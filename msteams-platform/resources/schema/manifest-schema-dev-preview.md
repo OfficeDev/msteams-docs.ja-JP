@@ -4,12 +4,12 @@ description: Microsoft Teams でサポートされているすべてのコンポ
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: c6552ce9a216dbf8c2f416002f6c98b977650160
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: a436e8db6756f3550d17bb85330770d08b15f4b0
+ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058208"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67635330"
 ---
 # <a name="public-developer-preview-manifest-schema-for-teams"></a>Teams のパブリック開発者プレビュー マニフェスト スキーマ
 
@@ -671,12 +671,12 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 **オプション** - 配列
 
-非標準チャネルでアプリを有効にします。 アプリがチーム スコープをサポートしていて、このプロパティが定義されている場合、Teams はそれに応じて各チャネルの種類でアプリを有効にします。 現在、プライベート チャネルと共有チャネルの種類がサポートされています。
+非標準チャネルでアプリを有効にします。 アプリがチーム スコープをサポートしていて、このプロパティが定義されている場合、Teams ではそれに応じてそれぞれの種類のチャネルでアプリが有効になります。 現時点では、プライベート チャネルと共有チャネルがサポートされています。
 
 > [!NOTE]
 >
 > * アプリがチーム スコープをサポートしている場合、このプロパティで定義されている値に関係なく、標準チャネルで機能します。
-> * アプリは、適切に機能する各チャネルの種類の一意のプロパティを考慮できます。 プライベート チャネルと共有チャネルのタブを有効にするには、プライベート チャネル [でコンテキストを取得](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) し、 [共有チャネルでコンテキストを取得](~/tabs/how-to/access-teams-context.md#retrieve-context-in-microsoft-teams-connect-shared-channels)する方法に関する説明を参照してください。
+> * アプリは、それぞれの種類のチャネルの一意のプロパティを考慮して、適切に機能することができます。 プライベート チャネルと共有チャネルのタブを有効にするには、「[プライベート チャネルでコンテキストを取得](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels)し、[共有チャネルでコンテキストを取得する](../../tabs/how-to/access-teams-context.md#get-context-in-shared-channels)」を参照してください。
 
 ## <a name="defaultinstallscope"></a>defaultInstallScope
 
@@ -724,7 +724,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`scenes`|オブジェクトの配列| 5 個の項目||会議でサポートされているシーン。|
-|`supportsStreaming`|Boolean|||アプリが会議のオーディオとビデオのコンテンツをリアルタイムの会議プロトコル (RTMP) エンドポイントにストリーミングできるかどうかを示す値。 既定値は **false** です。|
+|`supportsStreaming`|ブール型|||アプリが会議のオーディオとビデオのコンテンツをリアルタイム会議プロトコル (RTMP) エンドポイントにストリーミングできるかどうかを示す値です。 既定値は **false** です。|
 
 ### <a name="meetingextensiondefinitionscenes"></a>meetingExtensionDefinition.scenes
 
