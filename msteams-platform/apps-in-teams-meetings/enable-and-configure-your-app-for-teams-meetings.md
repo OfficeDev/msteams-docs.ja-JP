@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: 2201319113817b4837553accc11d6ce6c8b3d4cd
-ms.sourcegitcommit: 51e4e43bc73182c5992e45b145cf1f7cdc0dd48c
+ms.openlocfilehash: e73193622ac88a642f671584f744c4e01db62567
+ms.sourcegitcommit: ffcfab268abbca398d1a75df158f73630490c330
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2022
-ms.locfileid: "67418851"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67636162"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>会議用アプリを有効にして構成する
 
@@ -227,7 +227,7 @@ Teams 会議は、組織の共同作業エクスペリエンスを提供しま�
 > [!NOTE]
 >
 > * アプリの特定の部分をステージに共有するには、Teams マニフェスト バージョン 1.12 以降を使用します。
-> * 現時点では、Teams デスクトップ クライアントでのみ、アプリの特定の部分を会議ステージに共有できます。
+> * Teams デスクトップ クライアントでのみ、アプリの特定の部分を会議ステージに共有できます。 モバイル ユーザーは、アプリの特定の部分を共有して、 [API をステージングする共有](API-references.md#share-app-content-to-stage-api)を使用してステージングできます。
 
 ### <a name="after-a-meeting"></a>会議後
 

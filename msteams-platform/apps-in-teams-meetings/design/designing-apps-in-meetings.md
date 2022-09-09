@@ -6,12 +6,12 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 04/07/2022
-ms.openlocfilehash: d0d994a7966f3ee172b29e6f9a6f1d4d4a2edff0
-ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.openlocfilehash: 9022f9cb7ad01808481a5ac9fb4a730459213300
+ms.sourcegitcommit: ffcfab268abbca398d1a75df158f73630490c330
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2022
-ms.locfileid: "67338852"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "67636176"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Microsoft Teams 会議拡張機能の設計
 
@@ -194,9 +194,6 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
 * ゲームをプレイしています。
 
 会議ステージで共有されるアプリは、共有画面と同じ領域を占有します。 また、ステージはすべての会議参加者の向きを同じように方向にさせます。
-
-> [!NOTE]
-> 現在、モバイル ユーザーは会議ステージでアプリのコンテンツを共有できません。 ただし、デスクトップから共有されているコンテンツを表示できます。
 
 ### <a name="use-cases"></a>使用例
 
