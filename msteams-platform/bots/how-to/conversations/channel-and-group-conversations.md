@@ -5,12 +5,12 @@ description: チャネルまたはグループ チャットでボットのメッ
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 57f0f5e65d9236074512947d41b29041db4869d9
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 91e696644698a609f6870aad9f4242e797b8e6bc
+ms.sourcegitcommit: 2d48459e0cdf92c097954ecc785f0ea257d423b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503607"
+ms.lasthandoff: 09/12/2022
+ms.locfileid: "67646140"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>ボットとのチャネルおよびグループ チャットの会話
 
@@ -23,14 +23,14 @@ ms.locfileid: "66503607"
 > [!NOTE]
 > この機能は現在、 [パブリック開発者向けプレビュー](../../../resources/dev-preview/developer-preview-intro.md) でのみ使用できます。
 >
-> リソース固有の同意 (RSC) を使用すると、ボットは、インストールされているチーム内のすべてのチャネル メッセージを@mentionedせずに受信できます。 詳細については、「 [RSC を使用してすべてのチャネル メッセージを受信する](channel-messages-with-rsc.md)」を参照してください。
+> リソース固有の同意 (RSC) を使用して、ボットは、インストールされているチーム内のすべてのチャネル メッセージを@mentionedすることなく受信できます。 詳細については、「 [RSC を使用してすべてのチャネル メッセージを受信する](channel-messages-with-rsc.md)」を参照してください。
 >
 > メッセージまたはアダプティブ カードをプライベート チャネルに投稿することは現在サポートされていません。
 
 ボットとのチャネルチャットとグループチャットの会話については、次のビデオを参照してください。
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs>]
 <br>
 
 ## <a name="design-guidelines"></a>デザインのガイドライン
@@ -41,7 +41,7 @@ ms.locfileid: "66503607"
 
 ## <a name="create-new-conversation-threads"></a>新しい会話スレッドを作成する
 
-ボットがチームにインストールされている場合は、既存のスレッドに返信するのではなく、新しい会話スレッドを作成する必要があります。 2 つの会話を区別するのは困難な場合があります。 会話がスレッド化されている場合は、チャネル内のさまざまな会話を整理および管理する方が簡単です。 これは [プロアクティブ メッセージング](~/bots/how-to/conversations/send-proactive-messages.md)の形式です。
+ボットがチームにインストールされている場合は、既存のスレッドに返信するのではなく、新しい会話スレッドを作成する必要があります。 場合によっては、2 つの会話を区別することは困難です。 会話がスレッド化されている場合は、チャネル内のさまざまな会話を整理して管理する方が簡単です。 これは [プロアクティブ メッセージング](~/bots/how-to/conversations/send-proactive-messages.md)の形式です。
 
 次に、オブジェクトを使用してメンションを `entities` 取得し、そのオブジェクトを使用してメッセージにメンションを `Mention` 追加できます。
 
@@ -267,11 +267,14 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 ボットが最初にグループまたはチームに追加されたら、概要メッセージを送信する必要があります。 メッセージには、ボットの機能とその使用方法について簡単に説明する必要があります。 eventType を使用してイベントを `conversationUpdate` サブスクライブする `teamMemberAdded` 必要があります。  イベントは、新しいチーム メンバーが追加されたときに送信されます。 追加された新しいメンバーがボットであるかどうかを確認します。 詳細については、 [新しいチーム メンバーにウェルカム メッセージを送信する方法に関するページを](~/bots/how-to/conversations/send-proactive-messages.md)参照してください。
 
-ボットが追加されたときに、各チーム メンバーに個人用メッセージを送信します。 これを行うには、チーム名簿を取得し、各ユーザーにダイレクト メッセージを送信します。
+ボットが追加されたときに、チームの各メンバーに個人用メッセージを送信できます。 これを行うには、 [チーム名簿を取得](../../../resources/bot-v3/bots-context.md#fetch-the-team-roster) し、各ユーザーに [ダイレクト メッセージ](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md)を送信します。
+
+>[!NOTE]
+> ボットによって送信されたメッセージが関連し、最初のメッセージに値を追加し、ユーザーをスパムしないようにします。
 
 次の場合は、メッセージを送信しないでください。
 
-* チームは大きく、たとえば 100 人を超えるメンバーです。 ボットはスパムと見なされ、それを追加したユーザーは苦情を受け取ることができます。 ウェルカム メッセージを表示するすべてのユーザーに、ボットの価値提案を明確に伝える必要があります。
+* チームが大きい場合 (たとえば、100 人を超えるメンバー)。 ボットはスパムと見なされ、それを追加したユーザーは苦情を受け取ることができます。 ウェルカム メッセージを表示するすべてのユーザーに、ボットの価値提案を明確に伝える必要があります。
 * ボットは、最初にチームに追加されるのではなく、グループまたはチャネルで最初に言及されます。
 * グループまたはチャネルの名前が変更される。
 * チーム メンバーがグループまたはチャネルに追加される。
@@ -292,4 +295,3 @@ async def _mention_activity(self, turn_context: TurnContext):
 * [Teams のコンテキストを取得する](~/bots/how-to/get-teams-context.md)
 * [ユーザーに代わってプライベート チャネルを作成する](/graph/api/channel-post#example-2-create-private-channel-on-behalf-of-user)
 * [ボットをWeb チャット チャネルに接続する](/azure/bot-service/bot-service-channel-connect-webchat)
-

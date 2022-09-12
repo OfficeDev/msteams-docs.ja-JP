@@ -697,7 +697,6 @@
   itesms:
     - name: Teams のアプリ マニフェストのスキーマ
       href: resources/schema/manifest-schema.md
-      displayName: 'Access, permissions, configuration, browser, channel, notification, background, delegated, organizer'
     - name: 開発者向けパブリック プレビュー
       items:
         - name: 概要
@@ -705,7 +704,6 @@
           displayName: 'Access, setting'
         - name: Teams のパブリック開発者プレビュー マニフェスト スキーマ
           href: resources/schema/manifest-schema-dev-preview.md
-          displayName: 'Access, permission, channel, browser, configuraiton, chat, notifications, delegated, background, organizer'
 - name: Teams との統合
   items:
     - name: 概要
