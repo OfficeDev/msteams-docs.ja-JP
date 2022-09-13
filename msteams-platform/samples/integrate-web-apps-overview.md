@@ -5,12 +5,12 @@ description: この記事では、Web アプリケーションとデバイス機
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 4df1e9ebbcdf23fce9c875384b2918c84fe0edd2
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
-ms.translationtype: HT
+ms.openlocfilehash: 19cf5b580c2d25e90eb90bd1fef9a78c75111092
+ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66189773"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "67653182"
 ---
 # <a name="integrate-web-apps"></a>Web アプリを統合する
 
@@ -49,7 +49,7 @@ Power Apps を使用すると、ビジネス データに接続し、組織の�
 
 ### <a name="power-virtual-agents"></a>Power Virtual Agents
 
-Power Virtual Agents は、コードなしのガイド付きグラフィカル インターフェイス ソリューションです。 これは、Microsoft Power Platform と Bot Framework 上に構築されています。 これにより、チームのすべてのメンバーが、Teams プラットフォームと簡単に統合できる豊富な会話型チャットボットを作成および維持できるようになります。 開発環境をセットアップしたり、Web サービスを作成したり、Bot Framework に直接登録したりすることなく、Teams 用のインテリジェントな仮想エージェントを設計、開発、および公開できます。
+Power Virtual Agents は、コードなしのガイド付きグラフィカル インターフェイス ソリューションです。 これは、Microsoft Power Platform と Bot Framework 上に構築されています。 これにより、チームのすべてのメンバーが、Teams プラットフォームと簡単に統合できる豊富な会話型チャットボットを作成および維持できるようになります。 開発環境を設定したり、Web サービスを作成したり、Bot Framework に直接登録したりする必要なく、Teams 用のインテリジェント仮想エージェントを設計、開発、発行できます。
 
 ### <a name="create-virtual-assistant"></a>仮想アシスタントを作成する
 
@@ -106,4 +106,4 @@ Azure Communication Services アプリケーションは、パブリック プ�
 * [SharePoint に Teams タブを追加する](~/tabs/how-to/tabs-in-sharepoint.md)
 * [ディープ リンクの作成](~/concepts/build-and-test/deep-links.md)
 * [デバイス機能](~/concepts/device-capabilities/device-capabilities-overview.md)
-* [ユーザー ピッカー コントロール](~/concepts/device-capabilities/people-picker-capability.md)
+* [ユーザー選択コントロール](~/concepts/device-capabilities/people-picker-capability.md)

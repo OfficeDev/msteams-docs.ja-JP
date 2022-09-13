@@ -120,6 +120,8 @@
                   href: toolkit/add-resource.md
                 - name: 既存のサード パーティ API を統合する
                   href: toolkit/add-API-connection.md
+                - name: Teams アプリにシングル サインオンを追加する
+                  href: toolkit/add-single-sign-on.md
             - name: マニフェストをカスタマイズする
               items:
                 - name: Teams アプリ マニフェストをカスタマイズする
@@ -146,6 +148,8 @@
               items:
                 - name: 統合と共同作業
                   href: toolkit/TeamsFx-collaboration.md
+                - name: CI/CD パイプラインを設定する
+                  href: toolkit/use-CICD-template.md
                 - name: Teams 環境でのアプリのサイドロードとテスト
                   href: toolkit/sideload-and-test-app.md
                 - name: さまざまな環境でアプリの動作をテストする

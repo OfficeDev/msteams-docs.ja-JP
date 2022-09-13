@@ -1,17 +1,17 @@
 ---
 author: heath-hamilton
-description: 既存の Web アプリと Microsoft Teamsを統合するためのベスト プラクティスまたは考慮事項について説明します。 アプリと Teams の API 要件、認証、ディープ リンクに関する情報が提供されます。
+description: 既存の Web アプリと Microsoft Teams を統合するためのベスト プラクティスまたは考慮事項について説明します。 アプリと Teams の API 要件、認証、ディープ リンクに関する情報が提供されます。
 ms.author: surbhigupta
 ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
 title: Teams 統合に関する考慮事項
-ms.openlocfilehash: acc018315ce2378707829363929b36f7897307c2
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 994747586610ac9301e1cc1a6d752ad77816af97
+ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178612"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "67653169"
 ---
 # <a name="considerations-for-teams-integration"></a>Teams 統合に関する考慮事項
 
@@ -75,7 +75,7 @@ Teams アプリには、必要で想定される共同作業機能が含まれ�
 
 ***統合シナリオ**: スタンドアロン アプリ、コラボレーション アプリ*
 
-アプリの API とデータ構造は、Teams と統合するときにアプリをサポートする必要があります。 サポートを拡張するには、[ID マッピング](../concepts/authentication/configure-identity-provider.md)、[ディープ リンク](../concepts/build-and-test/deep-links.md) サポート、[Microsoft Graphの組み込み](/graph/teams-concept-overview)のための Teams に関するコンテキスト情報を使用して API とデータ構造を拡張する必要があります。
+アプリの API とデータ構造は、Teams と統合するときにアプリをサポートする必要があります。 サポートを拡張するには、[ID マッピング](../concepts/authentication/authentication.md)、[ディープ リンク](../concepts/build-and-test/deep-links.md) サポート、[Microsoft Graphの組み込み](/graph/teams-concept-overview)のための Teams に関するコンテキスト情報を使用して API とデータ構造を拡張する必要があります。
 
 Teams [タブ](../tabs/how-to/access-teams-context.md)または[ボット](../bots/how-to/get-teams-context.md)のコンテキストを取得する方法について説明します。
 

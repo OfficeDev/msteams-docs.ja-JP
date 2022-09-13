@@ -5,12 +5,12 @@ description: Microsoft Teams に埋め込まれたタブ、Web ページを構�
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: d175e9c1a9f8515db57c54503fd3f83cb7970777
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 1dfae9411b7c8b087bc3cd4c69593d54e2d70bb3
+ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450395"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "67653190"
 ---
 # <a name="build-tabs-for-teams"></a>Teams の [ビルド] タブ
 
@@ -80,7 +80,7 @@ Teams には、個人用タブとチャネル タブ、またはグループ タ
 
 ### <a name="tools-to-build-tabs"></a>タブを作成するツール
 
-* [Microsoft Visual Studio Code 用 Teams ツールキット](../toolkit/visual-studio-code-overview.md)
+* [Visual Studio Code 用 Teams ツールキット](../toolkit/teams-toolkit-fundamentals.md)
 * [Visual Studio 用 Teams ツールキット](../toolkit/visual-studio-overview.md)
 
 ## <a name="next-step"></a>次のステップ

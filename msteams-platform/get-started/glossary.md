@@ -3,12 +3,12 @@ title: Microsoft Teams 開発者向けドキュメント - 用語集
 description: Microsoft Teams 開発者向けドキュメントで使用される用語について説明します
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 9680286f21cec9252d01506621a0fec011fca17f
-ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
+ms.openlocfilehash: 2cf9b4c3533b86e45247316e9c6a9da8517494d2
+ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67635323"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "67653162"
 ---
 # <a name="glossary"></a>用語集
 
@@ -25,7 +25,7 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 | [アプリ マニフェスト](../resources/schema/manifest-schema.md) | Teams アプリ マニフェストは、アプリが Microsoft Teams 製品にどのように統合されるかを説明します。 マニフェストは、最新の[マニフェスト スキーマ](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json)に適合している必要があります。 |
 | [アプリ パッケージ](../concepts/build-and-test/apps-package.md) | Teams アプリ パッケージは、アプリ マニフェスト ファイル、色アイコン、アウトライン アイコンを含む zip ファイルです。 |
 | [アプリのアクセス許可](../concepts/device-capabilities/browser-device-permissions.md#enable-apps-device-permissions) | デバイスのアクセス許可を有効にする Teams アプリのオプション。 アプリのマニフェスト ファイルで、アプリにデバイスのアクセス許可が必要であると宣言されている場合にのみ使用できます。 <br> 「デバイスの [アクセス許可](#d)」**も参照してください**。 |
-| [アプリのスコープ](../concepts/design/app-structure.md) | ユーザーがあなたのアプリを使用できる Teams の領域。 アプリには、個人用、チャネル、チャット、会議など、1 つまたは複数のスコープを設定できます。 Teams アプリは、複数のスコープにわたって存在できます。 |
+| [アプリのスコープ](../concepts/design/understand-use-cases.md#app-scope) | ユーザーがあなたのアプリを使用できる Teams の領域。 アプリには、個人用、チャネル、チャット、会議など、1 つまたは複数のスコープを設定できます。 Teams アプリは、複数のスコープにわたって存在できます。 |
 | アプリ トレイ | Teams モバイル アプリの下部バーにあるアプリケーション トレイ。 開いているが現在使用されていない、またはアクティブではないすべてのアプリが収集されます。 <br>**関連情報**: [Teams Mobile](#t) |
 | [Azure リソース](../toolkit/provision.md) | Teams アプリが Azure デプロイに使用できる Azure 経由で利用できるサービス。 ストレージ アカウント、Web アプリ、データベースなどです。 |
 | [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Microsoft クラウドベースの、ID およびアクセス管理サービスです。 認証されたユーザーが内部リソースと外部リソースにアクセスするのに役立ちます。 |
@@ -54,7 +54,7 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 | [クラウド リソース](../toolkit/add-resource.md) | Teams アプリが使用できるインターネットを経由してクラウド上で利用できるサービス。 ストレージ アカウント、Web アプリ、データベースなどです。 |
 | [コラボレーション アプリ](../concepts/extensibility-points.md) | ユーザーが他のユーザーと共同作業ワークスペースで作業するための機能を備えたアプリ。 <br> **関連情報**: [スタンドアロン アプリ](#s) |
 | [拡張機能の作成](../resources/schema/manifest-schema.md#composeextensions) | メッセージ拡張機能を参照するアプリ マニフェスト (`composeExtensions`) のプロパティ。 これは、拡張機能を認証するか、続行するように構成する必要がある場合に使用されます。 <br>**関連情報**: [アプリ マニフェスト](#a); [メッセージ拡張機能](#m) |
-| [コマンド ボックス](../resources/schema/manifest-schema.md) | Teams コマンド ボックスからメッセージ拡張機能を呼び出すように構成できるアプリ マニフェスト (`commandBox`) のコンテキストの種類。 |
+| [CommandBox](../resources/schema/manifest-schema.md) | Teams コマンド ボックスからメッセージ拡張機能を呼び出すように構成できるアプリ マニフェスト (`commandBox`) のコンテキストの種類。 |
 | [Connector](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) | これを使用して、ユーザーは Web サービスから通知とメッセージを受信するようにサブスクライブできます。 コネクタにより、サービスが Teams チャネルにメッセージを投稿するための HTTPS エンドポイントが通常はカードの形式で公開されます。 <br> **関連情報**: [Webhook](#w) |
 | 会話 | Microsoft Teams アプリ (タブまたはボット) と 1 人以上のユーザーの間で送信される一連のメッセージ。 会話には、チャネル、個人用、グループ チャットの 3 つのスコープを設定できます。 <br>**関連情報**: [1 対 1 チャット](#o); [グループ チャット](#g); [チャネル](#c) |
 | [会話型ボット](../bots/how-to/conversations/conversation-messages.md) |  これにより、ユーザーはテキスト、対話型カード、タスク モジュールを使用して Web サービスと対話できます。 <br>**関連情報** [チャット ボット](#c) |
@@ -102,6 +102,7 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 
 | 用語 | 定義 |
 | --- | --- |
+| [ID プロバイダー](../concepts/authentication/authentication.md) | ユーザーに資格情報を格納して提供するエンティティ。 また、ユーザーは自分で登録することもできます。  <br>**関連情報**: [認証](#a) |
 | [着信 Webhook](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | これにより、外部アプリは Teams チャネルでコンテンツを共有できます。 これらの Webhook は、追跡および通知ツールとして使用されます。 <br>**関連情報**: [Webhook](#w); [発信 Webhook](#o) |
 | [会議中のアプリ エクスペリエンス](../apps-in-teams-meetings/meeting-app-extensibility.md#in-meeting-app-experience) | Teams 会議ライフサイクルのステージ。会議中のアプリ エクスペリエンスを使用すると、アプリと会議内ダイアログ ボックスを使用して、会議中に参加者とのやり取りを行うことができます。 <br>**関連情報**: [会議のライフサイクル](#m) |
 
@@ -126,7 +127,7 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 | [メッセージ拡張機能](../messaging-extensions/what-are-messaging-extensions.md) | メッセージ拡張機能は、アプリのコンテンツを挿入したり、メッセージを操作したりするためのショートカットです。会話から離れることなく、メッセージ拡張機能を使用できます。 <br>**関連情報**: [検索コマンド](#s); [アクション コマンド](#a) |
 | [会議の拡張機能](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | ホワイトボード、ダッシュボードなど、会議のライフサイクル中に生産性を高めるために使用するように設計されたアプリ。 |
 | [Microsoft 365 アカウント](../toolkit/accounts.md#microsoft-365-developer-account-types) | Microsoft 365 アカウントには、25 のユーザー ライセンスを含めることができますが、開発目的のみの使用となります。 |
-| [Microsoft 365 開発者プログラム](../toolkit/accounts.md)| Microsoft 365 開発者プログラムは、Microsoft 365 を拡張するアプリの構築に役立ちます。 |
+| [Microsoft 365 開発者プログラム](../toolkit/tools-prerequisites.md)| Microsoft 365 開発者プログラムは、Microsoft 365 を拡張するアプリの構築に役立ちます。 |
 | [Microsoft Graph Explorer](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | Microsoft 365 のデータとインテリジェンスへのゲートウェイ。Microsoft 365、Windows 10、および Enterprise Mobility + Security のデータにアクセスできる統合されたプログラミング モデルが用意されています。 |
 | [Microsoft Teams](../overview.md) | Microsoft Teams は、チームがリモートで共同作業を行うのに役立つグループ コラボレーション ソフトウェアです。 |
 | [Microsoft Teams プラットフォーム](../concepts/app-fundamentals-overview.md) | Microsoft Teams 開発者プラットフォームを使用すると、開発者は独自のアプリやサービスを Teams と簡単に統合できます。 |
