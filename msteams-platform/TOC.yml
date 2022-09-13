@@ -705,7 +705,6 @@
       items:
         - name: 概要
           href: resources/dev-preview/developer-preview-intro.md
-          displayName: 'Access, setting'
         - name: Teams のパブリック開発者プレビュー マニフェスト スキーマ
           href: resources/schema/manifest-schema-dev-preview.md
 - name: Teams との統合
