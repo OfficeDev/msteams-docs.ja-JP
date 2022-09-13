@@ -698,7 +698,7 @@
     - name: 収益化されたアプリのテスト プレビュー
       href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
 - name: アプリ マニフェスト
-  itesms:
+  items:
     - name: Teams のアプリ マニフェストのスキーマ
       href: resources/schema/manifest-schema.md
     - name: 開発者向けパブリック プレビュー
