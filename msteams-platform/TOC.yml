@@ -94,7 +94,7 @@
       href: concepts/design/enable-app-customization.md
 - name: ツールと SDK
   items:
-    - name: Visual Studio Code 用 Teams ツールキット
+    - name: Teams ツールキット
       items:
         - name: Teams ツールキットの概要
           href: toolkit/teams-toolkit-fundamentals.md
@@ -162,20 +162,6 @@
               href: toolkit/Integrate-with-developer-portal.md
         - name: FAQ
           href: toolkit/faq.md
-    - name: Visual Studio 用 Teams ツールキット
-      items:
-        - name: Teams ツールキットの概要
-          href: toolkit/teams-toolkit-overview-visual-studio.md
-        - name: Teams アプリの新規作成
-          href: toolkit/create-new-teams-app-for-Visual-Studio.md
-        - name: Teams アプリをデバッグする
-          href: toolkit/debug-teams-app-visual-studio.md
-        - name: クラウド リソースをプロビジョニングする
-          href: toolkit/provision-cloud-resources.md
-        - name: Teams アプリをクラウドに展開する
-          href: toolkit/deploy-teams-app.md
-        - name: Teams アプリ マニフェストを編集する
-          href: toolkit/VS-TeamsFx-preview-and-customize-app-manifest.md
     - name: Teams ツールキット CLI
       href: toolkit/TeamsFx-CLI.md
     - name: Teams 用 Yeoman ジェネレーター (GitHub)
@@ -670,7 +656,7 @@
           displayName: 'Value proposition, app package and store listing, advertising, stacked text, Fluent UI components, whiteboarding apps, message spamming, Avatars,'
         - name: パートナー センターの開発者アカウントを作成する
           href: concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md
-          displayName: Update Apple app store
+          displayName: 'Update Apple app store,app acquisition on mobile'
         - name: Teams のストア送信を準備する
           href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
           displayName: 'Testing instructions, publisher verification, attestation'

@@ -1,16 +1,16 @@
 ---
 title: Teams 個人用タブ アプリを Microsoft 365 に拡張する
-description: この記事では、Outlook と Office の両方で実行するように個人用タブを更新することで、Microsoft 365 全体で Teams 個人用タブ アプリを拡張する方法について説明します。
+description: この記事では、Outlook と Office の両方で実行するように個人用タブを更新することで、Teams 個人用タブ アプリを Microsoft 365 全体に拡張する方法について説明します。
 ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 93e87648dc64a7b5b005b4a6162828e573bb034b
-ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.openlocfilehash: ac9e9f9ecff238fc39c916f6b2975f1062fa2744
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2022
-ms.locfileid: "67337237"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781209"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Teams 個人用タブを Microsoft 365 全体に拡張する
 
@@ -46,7 +46,7 @@ Outlook と Office で実行するように個人用アプリを更新するに�
 
 このチュートリアルを完了するためにサンプル コードを使用する場合は、 [Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) のセットアップ手順に従って、Visual Studio Code 用 Teams Toolkit 拡張機能を使用して個人用タブ アプリを作成し、この記事に戻って Microsoft 365 用に更新します。
 
-または、次のクイック スタート セクションで、基本的なシングル Sign-On *hello world* アプリが既に有効になっている Microsoft 365 を使用し、 [Teams でアプリをサイドロード](#sideload-your-app-in-teams) する手順に進むことができます。
+または、次のクイック スタート セクションで Microsoft 365 が既に有効になっている基本的なシングル サインオン *hello world* アプリを使用し、 [Teams でアプリをサイドロード](#sideload-your-app-in-teams) する手順に進むことができます。
 
 ### <a name="quickstart"></a>クイックスタート
 
@@ -190,7 +190,7 @@ Windows デスクトップの Outlook で実行されているアプリを表示
 Outlook on the web でアプリを表示するには:
 
 1. [Outlook on the web](https://outlook.office.com) に移動し、開発テナント アカウントを使用してサインインします。
-1. サイド バーの省略記号 (**...**) を選択します。 サイドロードされたアプリのタイトルが、インストールされているアプリの間に表示されます。
+1. サイド バーで、[  **その他のアプリ**] を選択します。 サイドロードされたアプリのタイトルが、インストールされているアプリの間に表示されます。
 1. アプリ アイコンを選択して、Outlook on the webで実行されているアプリを起動してプレビューします。
 
     :::image type="content" source="images/outlook-web-more-apps.png" alt-text="outlook.com のサイド バーにある楕円 ([その他のアプリ]) オプションをクリックして、インストールされている個人用タブを表示する":::
@@ -200,7 +200,7 @@ Outlook on the web でアプリを表示するには:
 Windows デスクトップの Office で実行されているアプリを表示するには:
 
 1. Office を起動し、開発テナント アカウントを使用してサインインします。
-1. サイド バーの省略記号 (**...**) を選択します。 サイドロードされたアプリのタイトルが、インストールされているアプリの間に表示されます。
+1. サイド バーの **[アプリ** ] アイコンを選択します。 サイドロードされたアプリのタイトルが、インストールされているアプリの間に表示されます。
 1. アプリ アイコンを選択して、Office でアプリを起動します。
 
     :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Office デスクトップ クライアントのサイドバーにある楕円（[その他のアプリ]）オプションをクリックして、インストールされている個人用タブを表示する":::
@@ -233,7 +233,7 @@ Teams Toolkit では、Teams に加えて、Office と Outlook で実行され�
 
 :::image type="content" source="images/toolkit-debug-targets.png" alt-text="Teams Toolkit で Teams、Outlook、Office のデバッグ ターゲットから選択する":::
 
-Office または Outlook へのローカル デバッグを初めて実行すると、Microsoft 365 テナント アカウントにサインインし、自己署名証明書をインストールするように求められます。 Teams を手動でインストールするように求めるメッセージも表示されます。 **[Teams にインストール] を** 選択してブラウザー ウィンドウを開き、アプリを手動でインストールします。 次に、[ **続行** ] をクリックして、Office/Outlook でアプリのデバッグに進みます。
+Office または Outlook へのローカル デバッグを初めて実行すると、Microsoft 365 テナント アカウントにサインインし、自己署名証明書をインストールするように求められます。 Teams を手動でインストールするように求めるメッセージも表示されます。 **[Teams にインストール] を** 選択してブラウザー ウィンドウを開き、アプリを手動でインストールします。 次に、[ **続行** ] を選択して、Office/Outlook でアプリのデバッグに進みます。
 
 :::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="Toolkit ダイアログ Teams のインストール":::
 
@@ -246,7 +246,7 @@ Office または Outlook へのローカル デバッグを初めて実行する
 | Todo List | ReactとAzure Functionsを使用して構築された SSO を使用した編集可能な todo リスト。 Teams でのみ動作します (このサンプル アプリを使用して、このチュートリアルで説明されているアップグレード プロセスを試してください)。 | [表示](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
 | Todo List (Microsoft 365) | ReactとAzure Functionsを使用して構築された SSO を使用した編集可能な todo リスト。 Teams、Outlook、Office で動作します。 | [表示](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | イメージ エディター (Microsoft 365) | Microsoft Graph APIを使用してイメージを作成、編集、開き、保存します。 Teams、Outlook、Office で動作します。 | [表示](https://github.com/OfficeDev/m365-extensibility-image-editor) |
-| サンプル起動ページ (Microsoft 365) | SSO 認証を紹介し、異なるホストで使用可能な TeamsJS SDK 機能を活用します。 Teams、Outlook、Office で動作します。 | [表示](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
+| サンプル起動ページ (Microsoft 365) | 異なるホストで使用可能な SSO 認証と TeamsJS SDK の機能について説明します。 Teams、Outlook、Office で動作します。 | [表示](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
 
 ## <a name="next-step"></a>次の手順
 

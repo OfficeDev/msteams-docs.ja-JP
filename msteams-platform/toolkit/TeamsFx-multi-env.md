@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 11/29/2021
-ms.openlocfilehash: 4a4b67399b2ec7c78fa536b06ee7faa9bb352468
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 964e7d8ad6e643d26178e04fb9ce706bb177f1d1
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616948"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780997"
 ---
 # <a name="manage-multiple-environments"></a>複数の環境を管理する
 
@@ -118,7 +118,7 @@ Teams アプリ名`myapp(dev)`は、既定の環境と`myapp(staging)`ステー�
 3. 新しい環境を作成し、存在しない場合は名前を付 `staging` けることができます。
 4. 構成ファイル `.fx/configs/config.staging.json`を開きます。
 5. 同じプロパティを更新します `myapp(staging)`。
-6. これで、プロビジョニング コマンドと`staging`環境を`dev`実行して、リモート環境でアプリ名を更新できます。 Teams Toolkit でプロビジョニング コマンドを実行するには、「 [プロビジョニング](provision.md#provision-using-teams-toolkit)」を参照してください。
+6. これで、プロビジョニング コマンドと`staging`環境を`dev`実行して、リモート環境でアプリ名を更新できます。 Teams Toolkit でプロビジョニング コマンドを実行するには、「 [プロビジョニング](provision.md#provision-using-teams-toolkit-in-visual-studio-code)」を参照してください。
 
 </details>
 

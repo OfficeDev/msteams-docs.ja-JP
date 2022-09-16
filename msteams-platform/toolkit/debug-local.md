@@ -6,16 +6,23 @@ ms.author: v-amprasad
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
-ms.openlocfilehash: 68999351232deb60015259840147d2a1ab55681a
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+zone_pivot_groups: teams-app-platform
+ms.openlocfilehash: 5aeaba2248306d8f638ed2529dac964d96ffaea5
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616567"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780866"
 ---
 # <a name="debug-your-microsoft-teams-app-locally"></a>Microsoft Teams アプリをローカルでデバッグする
 
-Microsoft Teams Toolkit は、Teams アプリをローカルでデバッグおよびプレビューするのに役立ちます。 デバッグ プロセス中、Teams Toolkit は自動的にアプリ サービスを開始し、デバッガーを起動し、Teams アプリをサイドロードします。 デバッグ後、Teams Web クライアントで Teams アプリをローカルでプレビューできます。 アプリをデバッグする前に、Teams Toolkit を設定する必要があります。
+Teams Toolkit は、Teams アプリをローカルでデバッグおよびプレビューするのに役立ちます。 デバッグ プロセス中、Teams Toolkit は自動的にアプリ サービスを開始し、デバッガーを起動し、Teams アプリをサイドロードします。 デバッグ後、Teams Web クライアントで Teams アプリをローカルでプレビューできます。
+
+::: zone pivot="visual-studio-code"
+
+## <a name="debug-your-microsoft-teams-app-locally-for-visual-studio-code"></a>Visual Studio Code 用に Microsoft Teams アプリをローカルでデバッグする
+
+Visual Studio Code の Teams Toolkit では、Teams アプリのデバッグをローカルで自動化する機能が提供されます。 Visual Studio では、タブ、ボット、メッセージ拡張機能をデバッグできます。 アプリをデバッグする前に、Teams Toolkit を設定する必要があります。
 
 ## <a name="set-up-your-teams-toolkit-for-debugging"></a>デバッグ用に Teams Toolkit を設定する
 
@@ -140,9 +147,73 @@ Teams Toolkit によってブラウザー インスタンスが起動され、Te
 > [!div class="nextstepaction"]
 > [バックグランド プロセスのデバッグ](debug-background-process.md)
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+## <a name="debug-your-microsoft-teams-app-locally-using-visual-studio"></a>Visual Studio を使用して Microsoft Teams アプリをローカルでデバッグする
+
+Teams ツールキットは、Microsoft Teams アプリをローカルでデバッグおよびプレビューするのに役立ちます。 Visual Studio では、タブ、ボット、メッセージ拡張機能をデバッグできます。 Teams ツールキットを使用して、Visual Studio でアプリをローカルにデバッグできます。これを行うには、次の操作を実行します。
+
+### <a name="set-up-ngrok-only-for-bot-and-message-extension-app"></a>Ngrok を設定する (ボットとメッセージ拡張機能アプリの場合のみ)
+
+コマンド プロンプトを使用して、次のコマンドを実行します。
+
+```
+ngrok http 5130
+```
+
+### <a name="set-up-your-teams-toolkit"></a>Teams Toolkit を設定する
+
+プロジェクトを作成した後、Teams ツールキットを使用して次の手順を実行して、アプリをデバッグします。
+
+1. **プロジェクト** を右クリックします。
+1. **Teams Toolkit** >  の [**Teams アプリの依存関係の準備] を選択します**。
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png" alt-text="ローカル デバッグ用の Teams アプリの依存関係" lightbox="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png":::
+
+   > [!NOTE]
+   > このシナリオでは、プロジェクト名は MyTeamsApp1 です
+
+   サインインする前に、Microsoft 365 アカウントにサイド ローディングのアクセス許可が必要です。  Teams アプリをテナントにアップロードできることを確認します。これを行わないと、Teams アプリが Teams クライアントで実行できない場合があります。
+
+1. **Microsoft 365 アカウント** にサインインし、[**続行**] を選択します。
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-signin-m365.png" alt-text="Microsoft 365 アカウントにサインインする":::
+
+   > [!Note]
+   > サイドローディングのアクセス許可の詳細については、<https://aka.ms/teamsfx-sideloading-option> にアクセスしてください。
+
+1. [ **デバッグ** > **開始デバッグ]** を選択するか、 **F5** を直接選択します。
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-Startdebug.png" alt-text="デバッグの開始":::
+
+   Visual Studio がブラウザーの Microsoft Teams クライアント内で Teams アプリを起動します。
+
+   > [!Note]
+   > 詳細については、<https://aka.ms/teamsfx-vs-debug> にアクセスしてください。
+
+1. Microsoft Teams が読み込まれたら、**[追加]** を選択して Teams にアプリをインストールします。
+
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-add-loadapp.png" alt-text="[追加] を選択してアプリを読み込む":::
+
+   > [!TIP]
+   > デバッグ中に Visual Studio のホット リロード機能を使用することもできます。 詳細については、<https://aka.ms/teamsfx-vs-hotreload> にアクセスしてください。
+
+   > [!NOTE]
+   > 通知ボット アプリをデバッグするときは、通知をトリガーするために必ず HTTP 要求を '<http://localhost:5130/api/notification>' に投稿してください。 プロジェクトの作成時に HTTP トリガーを選択した場合、curl (Windows コマンド プロンプト)、Postman などの任意の API ツールを使用できます。
+
+   > [!TIP]
+   > Teams アプリ マニフェスト ファイル (/templates/appPackage/manifest.template.json) に変更を加える場合、Teams アプリの依存関係を準備するコマンドを必ず実行してください。 Teams アプリをローカルで再度実行する前に実行します。
+
+::: zone-end
+
 ## <a name="see-also"></a>関連項目
 
 * [Teams Toolkit を使用してクラウド リソースをプロビジョニングする](provision.md)
 * [Teams アプリに機能を追加する](add-capability.md)
 * [クラウドにデプロイする](deploy.md)
 * [Teams Toolkit で複数の環境を管理する](TeamsFx-multi-env.md)
+* [Visual Studio を使用してクラウド リソースをプロビジョニングする](provision-cloud-resources.md)
+* [Visual Studio を使用して Teams アプリをクラウドに展開する](deploy-teams-app.md)
+* [Visual Studio を使用して Teams アプリ マニフェストを編集する](VS-TeamsFx-preview-and-customize-app-manifest.md)

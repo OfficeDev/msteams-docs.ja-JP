@@ -5,12 +5,12 @@ ms.author: surbhigupta
 description: このモジュールでは、Microsoft Teams JavaScript クライアント SDK を学習します。これは、以下でホストされているアプリ エクスペリエンスの構築に役立ちます <iframe> でホストされたアプリ エクスペリエンスの構築に役立つ Microsoft Teams JavaScript クライアント SDK の概要。
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: fddc06c2139796839500a99421d1e2c92a4318c0
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
-ms.translationtype: HT
+ms.openlocfilehash: a3d1785dc96284e858d14bbef8b8acc0d466b1bc
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503922"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781067"
 ---
 # <a name="teams-javascript-client-sdk"></a>Teams JavaScript client SDK
 
@@ -408,7 +408,6 @@ Teams に加えて Outlook と Office で実行するときのスケーラビリ
 | `userLicenseType`| `app.Context.user.licenseType` |
 | `userObjectId` | `app.Context.user.id`|
 | `userTeamRole` | `app.Context.team.userRole`|
-| `userDisplayName` | `app.Context.user.displayName` |
 | 該当なし | `app.Context.app.host.name`|
 
 ## <a name="updating-to-the-teams-client-sdk-v200"></a>Teams クライアント SDK v.2.0.0 への更新

@@ -6,16 +6,23 @@ ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 9ad2c9d16901990344ca521599b94b84b0e76217
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+zone_pivot_groups: teams-app-platform
+ms.openlocfilehash: 179a3002533e296e03dc0bb367b43880e95c3a1f
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616927"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781103"
 ---
 # <a name="deploy-teams-app-to-the-cloud"></a>Teams アプリをクラウドに展開する
 
-Teams Toolkit を使用すると、アプリケーション内のフロントエンドコードとバックエンド コードを Azure でプロビジョニングされたクラウド リソースにデプロイまたはアップロードできます。 次をクラウドにデプロイできます。
+Teams Toolkit を使用すると、アプリケーション内のフロントエンドコードとバックエンド コードを Azure でプロビジョニングされたクラウド リソースにデプロイまたはアップロードできます。
+
+::: zone pivot="visual-studio-code"
+
+## <a name="deploy-teams-app-to-the-cloud-using-visual-studio-code"></a>Visual Studio Code を使用して Teams アプリをクラウドにデプロイする
+
+次をクラウドにデプロイできます。
 
 * フロントエンド アプリケーションなどのタブは、Azure Storage にデプロイされ、静的 Web ホスティングまたは SharePoint サイト用に構成されます。
 * バックエンド API は Azure 関数にデプロイされます。
@@ -43,8 +50,80 @@ Teams Toolkit を使用すると、アプリケーション内のフロントエ
 > [!NOTE]
 > プロジェクトに Azure API 管理リソースを含め、デプロイをトリガーすると、Azure Functions で API を Azure API 管理サービスに発行できます。
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+## <a name="deploy-teams-app-to-the-cloud-using-visual-studio"></a>Visual Studio を使用して Teams アプリをクラウドに展開する
+
+Visual Studio では、次のアプリを展開できます。
+
+* フロントエンド アプリケーションなどのタブ アプリは、静的な Web ホスティング用に構成された Azure ストレージに展開されます。
+* Azure 関数トリガーを使用した通知ボット アプリを Azure 関数に展開できます。
+* ボット アプリまたはメッセージ拡張機能を Azure アプリ サービスに展開できます。
+
+展開後、使用を開始する前に、Teams クライアントまたは Web ブラウザーでアプリをプレビューできます。
+
+## <a name="deploy-teams-app-using-teams-toolkit"></a>Teams ツールキットを使用して Teams アプリを展開する
+
+1. Visual Studio を開きます。
+1. **[新しいプロジェクトを作成する]** を選択するか、一覧から既存のプロジェクトを開きます。
+1. プロジェクト **MyTeamsApp1** > **Teams Toolkit** > **Deploy to the cloud を** 右クリックします。
+
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-cloud.png" alt-text="[クラウドに展開する]":::
+
+   > [!NOTE]
+   > このシナリオでは、プロジェクト名は MyTeamsApp1 です。
+
+1. 確認ダイアログで **[展開]** を選択します。
+
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-confirmation.png" alt-text="[クラウドに展開する] の確認ダイアログ":::
+
+   デプロイ プロセスが完了すると、ポップアップが表示され、正常にデプロイされたことを確認できます。 出力ウィンドウで状態を確認することもできます。
+
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/VS-deploy-popup.png" alt-text="[クラウドに展開する] のポップアップ":::
+
+### <a name="preview-your-app"></a>アプリをプレビューする
+
+アプリをプレビューするには、まず Zip アプリ パッケージを作成し、Teams クライアントにサイドロードする必要があります。
+
+1. **Project** > **Teams Toolkit** > **Zip アプリ パッケージを選択します**。
+1. [ **ローカル]** または [ **Azure 用]** のオプションを選択して Teams アプリ パッケージを生成します。
+
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-ZipApp-package1.png" alt-text="Teams アプリ パッケージを作成する":::
+
+**Teams クライアントでアプリをプレビューするには**
+
+1. [**Teams で Project** > **Teams Toolkit** >  プレビュー] を選択 **します**。
+
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-preview-teams2.png" alt-text="Teams クライアントで Teams アプリをプレビューする":::
+
+   これで、アプリは Teams にサイドロードされます。
+
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/sideload-teams.png" alt-text="Teams クライアントで Teams アプリをサイドロードする":::
+
+アプリをプレビューするもう 1 つの方法:
+
+1. **ソリューション エクスプローラー** でプロジェクト **MyTeamsApp1** を右クリックします。
+1. **Teams で Teams Toolkit** > **プレビュー** を選択して、Web ブラウザーで Teams アプリを起動します。
+
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/vs-deploy-preview-teams.png" alt-text="Web ブラウザーで Teams アプリをプレビューする":::
+
+   > [!NOTE]
+   > 同じメニュー オプションが [プロジェクト] メニューでも使用できます。
+
+   これで、アプリは Teams にサイドロードされます。
+
+   :::image type="content" source="../assets/images/deploy-teams-app-cloud-vs/sideload-teams.png" alt-text="Teams クライアントで Teams アプリをサイドロードする":::
+
+::: zone-end
+
 ## <a name="see-also"></a>関連項目
 
 * [Azure クラウド サービスを作成してデプロイする](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
 * [マルチ機能 Teams アプリを作成する](add-capability.md)
 * [Microsoft Teams アプリにクラウド リソースを追加する](add-resource.md)
+* [Visual Studio で新しい Teams アプリを作成する](create-new-teams-app-for-Visual-Studio.md)
+* [Visual Studio を使用してクラウド リソースをプロビジョニングする](provision-cloud-resources.md)
+* [Visual Studio を使用して Teams アプリ マニフェストを編集する](VS-TeamsFx-preview-and-customize-app-manifest.md)
+* [Visual Studio を使用して Teams アプリをローカルでデバッグする](debug-teams-app-visual-studio.md)

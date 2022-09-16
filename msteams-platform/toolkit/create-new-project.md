@@ -6,14 +6,21 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 8500f5ba1f54b28f68f9b56c0a42aedfff108e64
-ms.sourcegitcommit: c806c5ffe277c740d0d7b8f62e72ade562029194
+zone_pivot_groups: teams-app-platform
+ms.openlocfilehash: e9f1d0cbfcc1de9ced3cd0bac6f26f9218aecd40
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67617797"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67781141"
 ---
 # <a name="create-a-new-teams-project"></a>新しい Teams プロジェクトを作成する
+
+このセクションでは、Visual Studio Code と Visual Studio を使用して新しい Teams プロジェクトを作成する方法について説明します。
+
+::: zone pivot="visual-studio-code"
+
+## <a name="create-a-new-teams-project-for-visual-studio-code"></a>Visual Studio Code 用の新しい Teams プロジェクトを作成する
 
 Teams Toolkit で [新しい Teams アプリの作成] を選択すると **、新しい** Teams プロジェクトをビルドできます。 Teams Toolkit では、次の種類のアプリを作成できます。
 
@@ -71,7 +78,6 @@ Teams Toolkit で [新しい Teams アプリの作成] を選択すると **、�
    数秒で Teams タブ アプリが作成されます。
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/tap-app-created1.png" alt-text="作成されたアプリを示すスクリーンショット。":::
-
 
 ### <a name="directory-structure-for-different-app-types"></a>さまざまな種類のアプリのディレクトリ構造
 
@@ -163,9 +169,109 @@ Teams の基本的なアプリとディレクトリ構造には、すべての�
 
 </details>
 
+::: zone-end
+
+::: zone pivot="visual-studio"
+
+## <a name="create-new-teams-app-in-visual-studio"></a>Visual Studio で新しい Teams アプリを作成する
+
+Teams ツールキットは、Teams アプリを作成するための Microsoft Teams アプリ テンプレートを Visual Studio に用意しています。  新しいプロジェクトを作成するときに必要な Teams アプリ テンプレートを検索して選択できます。 Teams アプリ テンプレートを作成できます。
+
+* タブ アプリ
+* コマンド ボット
+* 通知ボット
+* メッセージ拡張機能アプリ
+
+## <a name="prerequisites"></a>前提条件
+
+| &nbsp; | インストール | 使用するには... |
+| --- | --- | --- |
+| &nbsp; | **必須** | &nbsp; |
+| &nbsp; | Visual Studio バージョン 17.3 | Visual Studio のエンタープライズ エディションをインストールし、"ASP.NET" ワークロードと Microsoft Teams 開発ツールをインストールできます。 |
+| &nbsp; | Teams ツールキット | アプリのプロジェクト スキャフォールディングを作成する Visual Studio 拡張機能。 最新バージョン​​を使用します。 |
+| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams を使用して、チャット、会議、通話用のアプリを通じて共同作業を行うすべてのユーザーと 1 か所で共同作業を行うことができます。 |
+ | &nbsp; | [Microsoft 365 テナントを準備する](../concepts/build-and-test/prepare-your-o365-tenant.md) | アプリをインストールするための適切なアクセス許可を持つ Teams アカウントにアクセスします。 |
+
+## <a name="create-a-new-teams-app"></a>Teams アプリの新規作成
+
+新しい Teams アプリを作成する手順は、通知ボットを除くすべての種類のアプリで似ています。 次の手順は、新しいタブ アプリを作成するのに役立ちます。
+
+1. Visual Studio を開きます。
+1. 次の 2 つのオプションのいずれかを使用して、新しいプロジェクトを作成します。
+
+     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project1_1.png" alt-text="最初からコードを使用して新しいプロジェクトを作成する":::
+
+    * [**作業の開始**] で [**新しいプロジェクトの作成**] を選択すると、コード スキャフォールディングを使用してプロジェクト テンプレートを選択できます。
+    * コードスキャフォールディングなしでプロジェクトを作成するには、[ **コードなしで続行** ] を選択し、Visual Studio で **[ファイル** > **の新しい** > **プロジェクト** ] を選択します。
+
+        :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project2_1.png" alt-text="[ファイル] メニューから新規プロジェクトを作成する":::
+
+   [ **新しいプロジェクトの作成** ] ウィンドウが表示されます。  
+
+1. 検索ボックスにチームを入力し、一覧から **Microsoft Teams アプリ** を選択し、[ **次へ**] を選択します。
+
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/visual-studio.png" alt-text="Microsoft Teams アプリを検索して選択する":::
+
+   [ **新しいプロジェクトの構成]** ウィンドウが表示されます。
+
+     :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-ms-teams-app-project-name_1.png" alt-text="アプリケーションに名前を付ける":::
+
+    1. プロジェクトに適した名前を入力します。
+
+         > [!NOTE]
+         > 入力するプロジェクト名も自動的に **ソリューション名** に入力されます。 必要に応じて、プロジェクト名に影響を与えずにソリューション名を変更できます。
+
+    1. プロジェクト ワークスペースを作成するフォルダー パスを選択します。
+    1. 必要に応じて、別のソリューション名を入力します。
+    1. 必要に応じて、プロジェクトとソリューションを同じフォルダーに保存するオプションをオンにします。 このチュートリアルでは、このオプションは必要ありません。
+    1. **[作成]** を選択します。
+
+   [ **新しい Teams アプリケーションの作成** ] ウィンドウが表示されます。
+
+1. このチュートリアルでは、 **タブ** を選択して新しいチーム アプリケーションを作成し、[ **作成**] を選択します。
+
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-ms-teams-app-type_3.png" alt-text="Teams アプリの種類を選択する":::
+
+   > [!NOTE]
+   > プロジェクトに必要な種類の Teams アプリを選択できます。
+
+   **[Teams Toolkit へようこそ**] ウィンドウの **はじめに** が表示されます。
+
+   :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-getting-started-page.png" alt-text="はじめに teams ツールキットを選択する":::
+
+### <a name="directory-structure"></a>ディレクトリ構造
+
+Teams Toolkit には、アプリをビルドするためのすべてのコンポーネントが備わっています。 プロジェクトを作成した後、エクスプローラーの下にプロジェクト のフォルダーとファイルを表示できます。
+
+* **基本的な Teams アプリのディレクトリ構造**
+
+  :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project-solution-explorer_1.png" alt-text="teams ツールキットソリューション エクスプローラータブを選択する":::
+
+* **シナリオ ベースの Teams アプリのディレクトリ構造**
+
+  :::image type="content" source="../assets/images/Tools-and-SDK-revamp/Create-new-app-VS/vs-create-new-project-solution-explorer.png" alt-text="ソリューション エクスプローラー teams ツールキットを選択する":::
+
+## <a name="teams-app-templates-in-teams-toolkit-for-visual-studio"></a>Visual Studio 用 Teams ツールキットの Teams アプリ テンプレート
+
+Teams ツールキットで、Teams アプリ テンプレートが既にさまざまな種類の Teams アプリ用に設定されていることがわかります。 次の表に、使用可能なすべてのテンプレートを示します。
+
+|Teams アプリのテンプレート  |説明  |
+|---------|---------|
+|通知ボット     |通知ボット アプリは Teams クライアントに通知を送信できます。通知をトリガーする方法は複数あります。 たとえば、HTTP 要求または時間単位で通知をトリガーします。 また、ビジネス シナリオに基づいて通知のトリガーを選択することもできます。         |
+|コマンド ボット     |ユーザーは、コマンドを入力してボットと対話するためにコマンド ボット アプリを使用できます。         |
+|Tab     |タブ アプリは Teams 内に Web ページを表示し、Teams アカウントを使用してシングル サインオンを有効にします。         |
+|メッセージ拡張機能     |メッセージ拡張機能アプリには、アダプティブ カードの作成、Nugget パッケージの検索、"dev.botframework.com" ドメインのリンクの展開などの簡単な機能が実装されています。         |
+
+> [!NOTE]
+> プロジェクトが作成されると、Teams Toolkit によって [作業の **開始** ] ウィンドウが自動的に開きます。 [ **作業の開始** ] ウィンドウで手順を確認し、Teams Toolkit のさまざまな機能を確認できるようになりました。
+
+::: zone-end
+
 ## <a name="see-also"></a>関連項目
 
 * [Blazor を使用して Teams アプリを構築する](../sbs-gs-blazorupdate.yml)
 * [C# または .NETを使用して Teams アプリをビルドする](../sbs-gs-csharp.yml)
 * [すべての種類の環境の前提条件と Teams アプリの作成](tools-prerequisites.md)
 * [Microsoft Teams Toolkit を使用してアプリをビルドする準備をする](build-environments.md)
+* [Visual Studio を使用してクラウド リソースをプロビジョニングする](provision-cloud-resources.md)
+* [Visual Studio を使用して Teams アプリをクラウドに展開する](deploy-teams-app.md)

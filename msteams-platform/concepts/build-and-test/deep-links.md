@@ -3,12 +3,12 @@ title: ディープ リンクの作成
 description: この記事では、ディープ リンクを作成する方法と、タブを使用して Microsoft Teams アプリ内でディープ リンクを使用して移動する方法について説明します。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 463a7f37ca481058133ca5dbd646225f02bab4ab
-ms.sourcegitcommit: d8183bad448990f7c79b1956a6c9761c27712b4c
+ms.openlocfilehash: f3c5859ed124d173d617a75694ac5b9179e1181c
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2022
-ms.locfileid: "67452361"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780885"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成
 
@@ -392,7 +392,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ### <a name="deep-linking-for-sharepoint-framework-tabs"></a>SharePoint Framework タブのディープ リンク
 
-次のディープ リンク形式は、ボット、コネクタ、またはメッセージ拡張カードで使用できます: `https://teamsc.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
+次のディープ リンク形式は、ボット、コネクタ、またはメッセージ拡張カードで使用できます: `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
 
 > [!NOTE]
 > ボットがディープ リンクを含む TextBlock メッセージを送信すると、ユーザーがリンクを選択すると新しいブラウザ タブが開きます。 これは、Linuxで 実行されている Chrome および Microsoft Teams デスクトップ アプリで発生します。

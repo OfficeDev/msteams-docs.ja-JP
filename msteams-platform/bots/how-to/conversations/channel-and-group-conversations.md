@@ -5,12 +5,12 @@ description: チャネルまたはグループ チャットでボットのメッ
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 91e696644698a609f6870aad9f4242e797b8e6bc
-ms.sourcegitcommit: 2d48459e0cdf92c097954ecc785f0ea257d423b9
+ms.openlocfilehash: 8db8858ff746ce466b8cfef1cfa210111662cbeb
+ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2022
-ms.locfileid: "67646140"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67780934"
 ---
 # <a name="channel-and-group-chat-conversations-with-a-bot"></a>ボットとのチャネルおよびグループ チャットの会話
 
@@ -30,7 +30,7 @@ ms.locfileid: "67646140"
 ボットとのチャネルチャットとグループチャットの会話については、次のビデオを参照してください。
 <br>
 
-> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs>]
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NzEs]
 <br>
 
 ## <a name="design-guidelines"></a>デザインのガイドライン
