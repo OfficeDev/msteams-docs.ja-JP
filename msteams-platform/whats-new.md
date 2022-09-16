@@ -3,12 +3,12 @@ title: Teams の開発者向けの新機能と更新情報
 description: 新しく導入された Microsoft Teams の開発者向け機能と、既存の機能の更新について説明します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: aae169cc03b51e1f0db04564234be4876d39ce49
-ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
+ms.openlocfilehash: bd1c8ff2d9216ba0f1611fd48d8df943e2f75a35
+ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67635302"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67786970"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -36,6 +36,7 @@ ms.locfileid: "67635302"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ----------------|
+| 09/16/2022 | 検索ベースのメッセージ拡張機能のアダプティブ カードでユニバーサル アクションがサポートされるようになりました。 | Build Message Extensions > Search コマンド>検索コマンド>[検索ベースのメッセージ拡張機能のユニバーサル アクションを](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)定義する |
 | 09/06/2022 | `selectMedia` カメラを使用してビデオをキャプチャするための API | [デバイス機能の統合] > [[メディア機能の統合](concepts/device-capabilities/media-capabilities.md#code-snippets)] |
 | 08/09/2022 | Visual Studio 2022 用 Teams ツールキットが導入されました | [ツールと SDK] > [Visual Studio 向け Teams ツールキット] > [[Visual Studio 向け Teams ツールキットの概要]](toolkit/teams-toolkit-overview-visual-studio.md) |
 | 08/03/2022 | 個人用アプリまたはタブから Teams に共有する | [Teams と統合] > [Teams に共有] > [[個人用アプリまたはタブから Teams に共有]](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
@@ -288,7 +289,6 @@ Microsoft では、Teams 開発者が質問をしたり、バグを報告した�
 ## <a name="get-latest-updates"></a>最新の更新プログラムを取得する
 
 [RSS フィード](https://aka.ms/TeamsPlatformUpdates)を構成することで、Teams プラットフォーム更新プログラムを取得できます。
-
 
 ### <a name="to-configure-rss-feed"></a>RSS フィードを構成するには
 

@@ -357,6 +357,8 @@
           href: messaging-extensions/how-to/search-commands/define-search-command.md
         - name: 検索コマンドに応答する
           href: messaging-extensions/how-to/search-commands/respond-to-search.md
+        - name: 検索ベースのメッセージ拡張機能のユニバーサル アクション
+          href: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
           displayName: Handle tap actions
     - name: リンク展開を追加する
       href: messaging-extensions/how-to/link-unfurling.md

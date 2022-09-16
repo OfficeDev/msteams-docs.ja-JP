@@ -1,16 +1,16 @@
 ---
 title: メッセージ拡張機能検索コマンドを定義する
 author: surbhigupta
-description: このモジュールでは、Teams アプリのメッセージ拡張機能検索コマンドについて説明し、アプリ マニフェストを使用して手動で検索コマンドを作成します。
+description: このモジュールでは、検索コマンドの呼び出し場所と、メッセージング拡張機能の検索コマンドを作成する方法について説明します。
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 5cddfcc5f4fd3088e72538c6243b5f4fbf19767c
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: f562763cc84979874fac612f125b536fa9e6bc36
+ms.sourcegitcommit: 19f3e4e9088d0a07c9b567e76640d498b9d1981f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363474"
+ms.lasthandoff: 09/16/2022
+ms.locfileid: "67786963"
 ---
 # <a name="define-message-extension-search-commands"></a>メッセージ拡張機能検索コマンドを定義する
 
@@ -34,11 +34,11 @@ ms.locfileid: "67363474"
 * メッセージ作成領域: 作成メッセージ領域の下部にあるボタン。
 * コマンド ボックス: コマンド ボックスで@mentioningします。
 
-  メッセージ作成領域から検索コマンドが呼び出されると、ユーザーは結果を会話に送信します。 コマンド ボックスから呼び出されると、ユーザーは結果のカードを操作するか、他の場所で使用するためにコピーします。
+  作成メッセージ領域から検索コマンドが呼び出されると、ユーザーは結果を会話に送信します。 コマンド ボックスから呼び出されると、ユーザーは結果のカードを操作するか、他の場所で使用するためにコピーします。
 
 次の図は、検索コマンドの呼び出し場所を示しています。
 
-:::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-locations.png" alt-text="検索コマンドの呼び出し場所":::
+:::image type="content" source="~/assets/images/messaging-extension/search-command-invoke-locations.png" alt-text="スクリーンショットは、Teams チャネル内の検索コマンドの呼び出し場所を示しています。":::
 
 ## <a name="add-the-search-command-to-your-app-manifest"></a>検索コマンドをアプリ マニフェストに追加する
 
@@ -54,7 +54,7 @@ ms.locfileid: "67363474"
 1. アプリ パッケージをインポートしたら、[アプリ **の機能**] で **[メッセージ拡張機能**] を選択します。
 1. メッセージ拡張機能を作成するには、Microsoft 登録ボットが必要です。 既存のボットを使用するか、新しいボットを作成できます。 [ **新しいボットの作成** ] オプションを選択し、新しいボットに名前を付けてから、[ **作成**] を選択します。
 
-   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="このスクリーンショットは、開発者ポータルでボットを作成する方法を示しています。":::
+   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="スクリーンショットは、Teams 開発者ポータルでアプリのボットを構成するオプションを示しています。":::
 
 1. 既存のボットを使用するには、 **既存のボットを選択** し、ドロップダウン リストから既存のボットを選択するか、ボット ID が既に作成されている場合は **[ボット ID の入力** ] を選択します。
 
@@ -63,19 +63,19 @@ ms.locfileid: "67363474"
 1. [**コマンド**] セクションで **[コマンドの追加]** を選択して、メッセージ拡張機能の動作を決定するコマンドを含めます。
 次の画像は、メッセージ拡張機能のコマンドの追加を表示します。
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="スクリーンショットは、メッセージ拡張機能の動作を定義するコマンドを追加する方法を示しています。":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="スクリーンショットは、Teams 開発者ポータルでコマンドを追加して、メッセージ拡張機能の動作を定義する方法を示しています。":::
 
 1. [ **検索** ] を選択し、 **コマンド ID**、 **コマンド タイトル**、および **コマンドの説明** を入力します。
 
 1. すべてのパラメーターを入力し、ドロップダウン リストから入力の種類を選択します。
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="スクリーンショットは、メッセージ拡張機能のコマンドを定義するパラメーターを追加する方法を示しています。":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="スクリーンショットは、メッセージ拡張機能の Teams 開発者ポータルでコマンドを定義するパラメーターを追加する方法を示しています。":::
 
 1. **[プレビュー リンク****] で [ドメインの追加]** を選択します。
 
 1. 有効なドメインを入力し、[ **追加**] を選択します。
 
-   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="スクリーンショットは、リンク解除用の有効なドメインをメッセージング拡張機能に追加する方法を示しています。":::
+   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="スクリーンショットは、リンクの展開を解除するために、メッセージング拡張機能に有効なドメインを追加する方法を示しています。":::
 
 1. **[保存]** を選択します。
 
@@ -85,7 +85,7 @@ ms.locfileid: "67363474"
 
 1. コマンド セクションで省略記号を選択し、 **パラメーターの編集** を選択します。
 
-   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="スクリーンショットは、メッセージ拡張機能のパラメーターを追加する方法を示しています。":::
+   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="スクリーンショットは、メッセージ拡張機能のパラメーターを編集する方法を示しています。":::
 
 1. [ **パラメーターの追加]** を選択し、すべてのパラメーターを入力します。
 
@@ -109,7 +109,7 @@ Teams クライアントでユーザーに表示されるテキストを定義�
 | プロパティ名 | 用途 | は必須ですか? | マニフェストの最小バージョン |
 |---|---|---|---|
 | `parameters` | このプロパティは、コマンドのパラメーターの静的な一覧を定義します。 | いいえ | 1.0 |
-| `parameter.name` | このプロパティは、パラメーターの名前を説明します。 これは、ユーザー要求でサービスに送信されます。 | はい | 1.0 |
+| `parameter.name` | このプロパティは、パラメーターの名前を説明します。 ユーザー `parameter.name` 要求でサービスに送信されます。 | はい | 1.0 |
 | `parameter.description` | このプロパティは、パラメーターの目的または指定する必要がある値の例を記述します。 この値は UI に表示されます。 | はい | 1.0 |
 | `parameter.title` | このプロパティは、ユーザー フレンドリな短いパラメーターのタイトルまたはラベルです。 | はい | 1.0 |
 | `parameter.inputType` | このプロパティは、必要な入力の種類に設定されます。 使用可能な値には`text`、, , `textarea`, `number`, `date`, `time``toggle`. 既定値は .`text` | いいえ | 1.4 |
@@ -142,6 +142,7 @@ Teams クライアントでユーザーに表示されるテキストを定義�
   ],
 ...
 }
+
 ```
 
 完全なアプリ マニフェストについては、「 [アプリ マニフェスト スキーマ」](~/resources/schema/manifest-schema.md)を参照してください。
