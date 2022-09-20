@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 8277e0fb947ac109f3482c31613c01fd924fa139
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: c151217bc2a93de9337688b562b9f63f142c09fa
+ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435014"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "67833726"
 ---
 # <a name="meeting-apps-api-references"></a>会議アプリ API リファレンス
 
@@ -355,7 +355,7 @@ POST /v3/conversations/{conversationId}/activities
 >
 > * ボットは、RSC アクセス許可のマニフェストに `ChannelMeeting.ReadBasic.Group` を追加することで、すべてのチャネルで作成されたすべての会議から会議の開始イベントまたは終了イベントを自動的に受信できます。
 >
-> * 1 対 1 の通話 `organizer` の場合はチャットのイニシエーターであり、グループ通話の場合 `organizer` は通話イニシエーターです。
+> * 1 対 1 の通話 `organizer` の場合はチャットのイニシエーターであり、グループ通話の場合 `organizer` は通話イニシエーターです。 パブリック チャネル会議の場合は、 `organizer`チャネル投稿を作成したユーザーです。
 
 ### <a name="query-parameter"></a>クエリ パラメーター
 
@@ -416,6 +416,33 @@ Meeting Details API の JSON 応答本文は次のとおりです。
              "tenantId": "<Tenant ID>" 
          }
     } 
+    ```
+
+* **スケジュールされたチャネル会議:**
+
+    ```json
+    { 
+        "details": { 
+        "msGraphResourceId": "MSoxNmUwYjdiYi05M2Q1LTQzNTItOTllMC0yM2VlNWYyZmZmZTIqMTY2MDc1ODYwNzc0MCoqMTk6a0RtQkpEWFZsYWl0QWhHcVB2SzBtRExZbHVTWnJub01WX1MxeFNkTjQxNDFAdGhyZWFkLnRhY3Yy", 
+        "scheduledStartTime": "2022-08-17T18:00:00Z", 
+        "scheduledEndTime": "2022-08-17T18:30:00Z", 
+        "type": "ChannelScheduled", 
+        "id": "MCMxOTprRG1CSkRYVmxhaXRBaEdxUHZLMG1ETFlsdVNacm5vTVZfUzF4U2RONDE0MUB0aHJlYWQudGFjdjIjMTY2MDc1ODYwNzc0MA==", 
+        "joinUrl": "https://teams.microsoft.com/l/meetup-join/19%3akDmBJDXVlaitAhGqPvK0mDLYluSZrnoMV_S1xSdN4141%40thread.tacv2/1660758607740?context=%7b%22Tid%22%3a%229f044231-b634-4bdd-b29d-2776e3dbd699%22%2c%22Oid%22%3a%2216e0b7bb-93d5-4352-99e0-23ee5f2fffe2%22%7d", 
+        "title": "Test channel meeting"
+    }, 
+    "conversation": { 
+        "isGroup": true, 
+        "conversationType": "channel", 
+        "id": "19:kDmBJDXVlaitAhGqPvK0mDLYluSZrnoMV_S1xSdN4141@thread.tacv2;messageid=1660758607740"
+    }, 
+    "organizer": { 
+        "tenantId": "9f044231-b634-4bdd-b29d-2776e3dbd699", 
+        "objectId": "16e0b7bb-93d5-4352-99e0-23ee5f2fffe2", 
+        "id": "29:1q4D6ekLXEAALkrqyLXUIcwtVSdXx31bf6vMdfahmkTb9euYVYSsN9x4133pXLV_I2idpVriFe40e19XEZt57bQ", 
+        "aadObjectId": "16e0b7bb-93d5-4352-99e0-23ee5f2fffe2"
+    }
+    }
     ```
 
 * **1 対 1 の呼び出し:**
@@ -503,7 +530,7 @@ Meeting Details API の JSON 応答本文は次のとおりです。
 | **details.scheduledEndTime** | 会議のスケジュールされた終了時刻 (UTC)。 |
 | **details.joinUrl** | 会議に参加するために使用される URL。 |
 | **details.title** | 会議のタイトル。 |
-| **details.type** | 会議の種類 (GroupCall、OneToOneCall、Adhoc、ブロードキャスト、MeetNow、定期的、スケジュール、または不明)。 |
+| **details.type** | 会議の種類 (GroupCall、ChannelScheduled、OneToOneCall、Adhoc、Broadcast、MeetNow、定期的、スケジュール、または不明)。 |
 | **conversation.isGroup** | 会話に 2 人以上の参加者があるかどうかを示すブール値。 |
 | **conversation.conversationType** | 会話の種類。 |
 | **conversation.id** | 会議チャット ID。 |
