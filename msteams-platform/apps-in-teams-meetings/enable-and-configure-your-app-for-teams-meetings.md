@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: e73193622ac88a642f671584f744c4e01db62567
-ms.sourcegitcommit: ffcfab268abbca398d1a75df158f73630490c330
+ms.openlocfilehash: b01155abe9ec421310b169c7a2b50c49e211b4b7
+ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67636162"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "67833709"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>会議用アプリを有効にして構成する
 
@@ -23,7 +23,7 @@ Teams 会議用アプリを使用すると、アプリの機能を会議のラ�
 
 * Teams アプリを開発する方法について理解します。 Teams アプリを開発する方法の詳細については、「[Teams アプリの開発](../overview.md)」を参照してください。
 
-* スコープ内の構成可能なタブをサポートするアプリを `groupchat` 使用します。 詳細については、「[グループ チャット スコープ](../resources/schema/manifest-schema.md#configurabletabs)」および「[グループ タブをビルドする](../build-your-first-app/build-channel-tab.md)」を参照してください。
+* groupchat またはチーム スコープで構成可能なタブをサポートするアプリを使用します。 詳細については、 [スコープ](../resources/schema/manifest-schema.md#configurabletabs) を参照し、 [最初のタブ アプリをビルドします](../build-your-first-app/build-channel-tab.md)。
 
 * 会議前後のシナリオのための一般的な [Teams タブ デザイン ガイドライン](../tabs/design/tabs.md)に準拠している必要があります。 会議中のエクスペリエンスについては、「[[会議内] タブの設計ガイドライン](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab)」および「[会議中ダイアログの設計ガイドライン](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)」を参照してください。
 
@@ -39,7 +39,8 @@ Teams 会議用アプリを有効にするには、アプリ マニフェスト�
 
 > [!NOTE]
 >
-> * 会議のアプリには `groupchat` スコープが必要です。 `team` スコープは、チャネル内のタブでのみ機能します。
+> * 会議のアプリでは、必要またはスコープが必要 `groupchat` です `team` 。 スコープは `team` 、チャネルまたはチャネル会議のタブに対して機能します。
+> * スケジュールされたチャネル会議でのタブの追加をサポートするには、アプリ マニフェストのスコープ セクションで **チーム** **スコープ** を指定します。 **チーム** スコープがない場合、アプリはチャネル会議のポップアップに表示されません。
 > * 会議のアプリでは、次のコンテキストを使用できます: `meetingChatTab`、`meetingDetailsTab`、`meetingSidePanel`、`meetingStage`。
 
 次のコード スニペットは、Teams 会議のアプリで使用される構成可能なタブの例です。
@@ -81,7 +82,7 @@ Teams 会議用アプリを有効にするには、アプリ マニフェスト�
 | **meetingChatTab** | スケジュールされた会議の一連のユーザー間のグループ チャットのヘッダーにあるタブ。 **meetingChatTab** または **meetingDetailsTab** を指定すると、アプリをモバイルで実行できるようになります。 |
 | **meetingDetailsTab** | 予定表の会議の詳細ビューのヘッダーにあるタブ。 **meetingChatTab** または **meetingDetailsTab** を指定すると、アプリをモバイルで実行できるようになります。 |
 | **meetingSidePanel** | 統合バー (U バー) 経由で開かれる会議内パネル。 |
-| **meetingStage** | 会議ステージに共有できる `meetingSidePanel` からのアプリ。 Teams ルーム クライアントでは、このアプリを使用できません。 |
+| **meetingStage** | 会議ステージに共有できる `meetingSidePanel` からのアプリ。 このアプリは、モバイル クライアントでも Teams Room クライアントでも使用できません。 |
 
 Teams 会議用アプリを有効にしたら、会議の前、会議中、会議後にアプリを構成する必要があります。
 
@@ -100,9 +101,9 @@ Teams 会議は、組織の共同作業エクスペリエンスを提供しま�
 会議にタブを追加するには:
 
 1. 予定表で、タブを追加する会議を選択します。
-1. [ **詳細** ] タブを選択し、[ :::image type="content" source="../assets/images/apps-in-meetings/plusbutton.png" alt-text="詳細] タブの [プラス] ボタン アイコンを使用してアプリを Tab としてインストールする方法を示すスクリーンショット":::を選択します。
+1. **[詳細]** タブを選択し、次を選択します: <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>.
 
-   :::image type="content" source="../assets/images/apps-in-meetings/premeeting.png" alt-text="スクリーンショットでは、Teams 会議の [会議前] タブでアプリをタブとしてインストールする方法について説明します。":::
+    <img src="../assets/images/apps-in-meetings/PreMeeting1.png" alt="Pre-meeting experience" width="900"/>
 
 1. 表示されるタブ ギャラリーで、追加するアプリを選択し、必要に応じて手順に従います。アプリはタブとしてインストールされます。
 
@@ -143,7 +144,7 @@ Teams 会議は、組織の共同作業エクスペリエンスを提供しま�
 
 会議中の通知では、タスク モジュールを使用しないでください。 タスク モジュールは会議チャットでは呼び出されません。 会議中の通知を表示するには、外部リソース URL を使用します。 会議チャットでデータを送信するには、`submitTask` メソッドを使用します。
 
-:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="スクリーンショットは、会議中ダイアログを使用する方法を示す例です。":::
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="会議中ダイアログを使用する方法を示す例。":::
 
 また、Teams の表示画像と連絡先カードを、ユーザーのMRI とペイロードで渡された表示名を持つトークン `onBehalfOf` に基づいて、会議中の通知に追加することもできます。 ペイロードの例を次に示します:
 
@@ -183,18 +184,7 @@ Teams 会議は、組織の共同作業エクスペリエンスを提供しま�
 
 参加者は、アプリのサイド パネルの [ステージで共有] ボタンを使用して、アプリ全体を共同作業会議ステージに共有できます。
 
-> [!NOTE]
-> モバイルでアプリ全体を会議ステージに共有することは、現在 [パブリック開発者プレビュー](../resources/dev-preview/developer-preview-intro.md)でのみ利用できます。
-
-# <a name="desktop"></a>[デスクトップ](#tab/Desktop)
-
-:::image type="content" source="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt-text="このスクリーンショットでは、デスクトップ上の共同作業会議ステージにアプリ全体を共有する方法について説明します。":::
-
-# <a name="mobile"></a>[モバイル](#tab/mobile)
-
-:::image type="content" source="../assets/images/share-apps-in-teams-meeting.PNG" alt-text="このスクリーンショットでは、モバイル上の共同作業会議ステージにアプリ全体を共有する方法について説明しています。":::
-
----
+<img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
 
 アプリ全体をステージに共有するには、アプリ マニフェストで `meetingStage` と `meetingSidePanel` をフレーム コンテキストとして構成する必要があります。次に例を示します。
 
@@ -220,7 +210,7 @@ Teams 会議は、組織の共同作業エクスペリエンスを提供しま�
 
 参加者は、ステージで共有 API を使用して、アプリの特定の部分を共同作業会議ステージに共有できます。 API は、Teams クライアント SDK 内で使用でき、アプリのサイド パネルから呼び出されます。
 
-:::image type="content" source="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt-text="スクリーンショットでは、Teams 会議の会議ステージにアプリの特定の部分を共有する方法について説明します。":::
+<img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
 
 アプリの特定の部分をステージに共有するには、Teams クライアント SDK ライブラリで関連 API を呼び出す必要があります。詳細については、「[API リファレンス](API-references.md)」を参照してください。
 
@@ -244,7 +234,7 @@ Teams 会議は、組織の共同作業エクスペリエンスを提供しま�
 ## <a name="step-by-step-guides"></a>ステップ バイ ステップのガイド
 
 * [ステップバイステップ ガイド](../sbs-meeting-token-generator.yml)に従って、Teams 会議で会議トークンを生成します。
-* ステップ [バイ ステップ ガイド](../sbs-meetings-sidepanel.yml) に従って、Teams 会議で会議 SidePanel を生成します。
+* [ステップバイステップ ガイド](../sbs-meetings-sidepanel.yml)に従って、Teams 会議で会議サイドパネルを生成します。
 * [ステップバイステップ ガイド](../sbs-meetings-stage-view.yml)に従って、Teams 会議で会議ステージ ビューを共有します。
 * [ステップバイステップ ガイド](../sbs-meeting-content-bubble.yml)に従って、Teams 会議で会議コンテンツ バブルを生成します。
 
