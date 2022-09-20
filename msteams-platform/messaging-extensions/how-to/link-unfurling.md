@@ -5,12 +5,12 @@ description: このモジュールでは、アプリ マニフェストを含む
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 50dc2ee5a6ba8b8578e2947c5a85303be5bac5f5
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: 48c015050efe469446aea9016a33effe8ad3ba3a
+ms.sourcegitcommit: 6ea8c3fe0ccea0204285ea5f994913d173925ffd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312228"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "67833391"
 ---
 # <a name="add-link-unfurling"></a>リンク展開を追加する
 
@@ -22,6 +22,7 @@ ms.locfileid: "67312228"
 >
 > * 現在、モバイル クライアントではリンク展開はサポートされていません。
 > * リンク展開の結果は、30 分間キャッシュされます。
+> * リンクの展開解除には、メッセージング拡張機能コマンドは必要ありません。 ただし、メッセージング拡張機能の必須プロパティであるため、マニフェストには少なくとも 1 つのコマンドが必要です。 詳細については、[拡張機能の作成](/microsoftteams/platform/resources/schema/manifest-schema)に関するページを参照してください。
 
 Azure DevOps メッセージ拡張機能では、作業項目をポイントするメッセージ作成領域に貼り付けられた URL を検索するためにリンク展開を使用します。 次の図では、メッセージ拡張機能がカードに解決した Azure DevOps 内のアイテムの URL をユーザーが貼り付けています。
 
