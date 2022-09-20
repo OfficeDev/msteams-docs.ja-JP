@@ -6,22 +6,22 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: fe78407c0a269d26a63e23efe5a04a1cd0d83e4b
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 5f0aa26276c2db7651fac473049cac0aa75f14dd
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616980"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806858"
 ---
-# <a name="add-capabilities-to-microsoft-teams-apps"></a>Microsoft Teams アプリに機能を追加する
+# <a name="add-capabilities-to-teams-apps"></a>Teams アプリに機能を追加する
 
-Teams Toolkit を使用して機能を追加すると、既存の Teams アプリに追加機能を含めるのに役立ちます。 機能を追加する利点は、Teams Toolkit を使用してソース コードを自動的に追加することで、アプリに関数を追加できることです。 Teams アプリで作成したプロジェクトに基づいて、さまざまな機能を選択することもできます。 次の表に、Teams アプリの機能を示します。
+Teams Toolkit を使用して機能を追加すると、既存の Microsoft Teams アプリに追加機能を含めるのに役立ちます。 機能を追加する利点は、Teams Toolkit を使用してソース コードを自動的に追加することで、アプリに関数を追加できることです。 Teams アプリで作成したプロジェクトに基づいて、さまざまな機能を選択することもできます。 次の表に、Teams アプリの機能を示します。
 
 |機能|説明|サポートされているその他の機能|
 |--------|-------------|-----------------|
 |**Basic Teams アプリ**|              |
 | Tab |  タブは、アプリ マニフェストで宣言されたドメインを参照する単純な HTML タグです。 個々のユーザーのチーム、グループ チャット、または個人用アプリ内のチャネルの一部としてタブを追加できます。|Tab, notification bot, command bot, bot, message extension|
-|[SPFx] タブ| SPFx タブ アプリは Microsoft 365 でホストされており、クライアント側の SPFx ソリューションの開発とホスティングがサポートされています|None|
+|[SPFx] タブ| SPFx タブ アプリは Microsoft 365 でホストされており、クライアント側の SPFx ソリューションの開発とホスティングがサポートされています|なし|
 |[SSO 対応] タブ|シングル サインオン機能を使用してユーザーを許可する SSO 対応タブ アプリを構築できます|SSO 対応タブ, 通知ボット, コマンド ボット, ボット, メッセージ拡張機能|
 | Bot |  ボットは、テキスト、対話型カード、タスク モジュールを使用して Web サービスと対話するのに役立ちます。|メッセージ拡張機能、SSO 対応タブ、タブ|
 | メッセージ拡張機能: | メッセージ拡張機能は、Microsoft Teams クライアントのボタンとフォームを使用して Web サービスを操作するのに役立ちます。|ボット、SSO 対応タブ、タブ|

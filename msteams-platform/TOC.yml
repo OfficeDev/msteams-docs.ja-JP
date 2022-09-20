@@ -102,7 +102,7 @@
           href: toolkit/install-Teams-Toolkit.md
         - name: Teams Toolkit を調べる
           href: toolkit/explore-Teams-Toolkit.md
-        - name: Microsoft Teams Toolkit を使用してアプリをビルドする準備をする
+        - name: Teams Toolkit を使用してアプリをビルドする準備をする
           href: toolkit/build-environments.md
         - name: Teams Toolkit を使用してアプリを作成する
           items:
@@ -164,8 +164,6 @@
           href: toolkit/faq.md
     - name: Teams ツールキット CLI
       href: toolkit/TeamsFx-CLI.md
-    - name: Teams 用 Yeoman ジェネレーター (GitHub)
-      href: 'https://github.com/pnp/generator-teams'
     - name: Teams の開発者ポータル
       items:
         - name: 概要
@@ -180,6 +178,8 @@
       href: 'https://github.com/Microsoft/botbuilder-js'
     - name: ボットおよびメッセージ拡張機能用 .NET Bot Framework (GitHub)
       href: 'https://github.com/Microsoft/botbuilder-dotnet'
+    - name: Teams 用 Yeoman ジェネレーター (GitHub)
+      href: 'https://github.com/pnp/generator-teams'
     - name: Microsoft Graph SDK
       href: /graph/sdks/sdks-overview
     - name: 従来の SDK

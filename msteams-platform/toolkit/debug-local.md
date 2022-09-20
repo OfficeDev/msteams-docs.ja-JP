@@ -7,16 +7,17 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 5aeaba2248306d8f638ed2529dac964d96ffaea5
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 1c1052e2542354cd1b403d8a3df0be24cbd01bee
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780866"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806753"
 ---
-# <a name="debug-your-microsoft-teams-app-locally"></a>Microsoft Teams アプリをローカルでデバッグする
+# <a name="debug-your-teams-app-locally"></a>Teams アプリをローカルでデバッグする
 
-Teams Toolkit は、Teams アプリをローカルでデバッグおよびプレビューするのに役立ちます。 デバッグ プロセス中、Teams Toolkit は自動的にアプリ サービスを開始し、デバッガーを起動し、Teams アプリをサイドロードします。 デバッグ後、Teams Web クライアントで Teams アプリをローカルでプレビューできます。
+
+Teams ツールキットは、Microsoft Teams アプリをローカルでデバッグおよびプレビューするのに役立ちます。 デバッグ プロセス中、Teams Toolkit は自動的にアプリ サービスを開始し、デバッガーを起動し、Teams アプリをサイドロードします。 デバッグ後、Teams Web クライアントで Teams アプリをローカルでプレビューできます。
 
 ::: zone pivot="visual-studio-code"
 
@@ -151,7 +152,7 @@ Teams Toolkit によってブラウザー インスタンスが起動され、Te
 
 ::: zone pivot="visual-studio"
 
-## <a name="debug-your-microsoft-teams-app-locally-using-visual-studio"></a>Visual Studio を使用して Microsoft Teams アプリをローカルでデバッグする
+## <a name="debug-your-teams-app-locally-using-visual-studio"></a>Visual Studio を使用して Teams アプリをローカルでデバッグする
 
 Teams ツールキットは、Microsoft Teams アプリをローカルでデバッグおよびプレビューするのに役立ちます。 Visual Studio では、タブ、ボット、メッセージ拡張機能をデバッグできます。 Teams ツールキットを使用して、Visual Studio でアプリをローカルにデバッグできます。これを行うには、次の操作を実行します。
 
@@ -214,6 +215,3 @@ ngrok http 5130
 * [Teams アプリに機能を追加する](add-capability.md)
 * [クラウドにデプロイする](deploy.md)
 * [Teams Toolkit で複数の環境を管理する](TeamsFx-multi-env.md)
-* [Visual Studio を使用してクラウド リソースをプロビジョニングする](provision-cloud-resources.md)
-* [Visual Studio を使用して Teams アプリをクラウドに展開する](deploy-teams-app.md)
-* [Visual Studio を使用して Teams アプリ マニフェストを編集する](VS-TeamsFx-preview-and-customize-app-manifest.md)

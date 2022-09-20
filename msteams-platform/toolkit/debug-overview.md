@@ -7,22 +7,28 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: fcb1ceae7f49109ba3936c7c12258f2fe4d1e01c
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: d2bdebcb75a9e145cbb874b2d7cc263c78050e07
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781020"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806923"
 ---
-# <a name="debug-your-microsoft-teams-app"></a>Microsoft Teams アプリをデバッグする
+# <a name="debug-your-teams-app"></a>Teams アプリをデバッグする
 
-Teams Toolkit は、Teams アプリのデバッグとプレビューに役立ちます。 デバッグは、Teams でプログラムが正常に実行されるように、問題やバグを確認、検出、修正するプロセスです。
+
+Teams Toolkit は、Microsoft Teams アプリのデバッグとプレビューに役立ちます。 デバッグは、Teams でプログラムが正常に実行されるように、問題やバグを確認、検出、修正するプロセスです。
 
 ::: zone pivot="visual-studio-code"
+
+## <a name="debug-your-teams-app-for-visual-studio-code"></a>Visual Studio Code 用の Teams アプリをデバッグする
+
+Microsoft Visual Studio Code の Teams Toolkit は、デバッグ プロセスを自動化します。 エラーを検出して修正したり、Teams アプリをプレビューしたりできます。 デバッグ設定をカスタマイズして、タブまたはボットを作成することもできます。
 
 ## <a name="debug-your-microsoft-teams-app-for-visual-studio-code"></a>Visual Studio Code 用の Microsoft Teams アプリをデバッグする
 
 Visual Studio Code の Teams Toolkit では、デバッグ プロセスが自動化されます。 エラーを検出して修正したり、Teams アプリをプレビューしたりできます。 デバッグ設定をカスタマイズして、タブまたはボットを作成することもできます。
+
 デバッグ プロセス中:
 
 * Teams Toolkit では、アプリ サービスが自動的に開始され、デバッガーが起動され、Teams アプリがサイドロードされます。
@@ -203,7 +209,7 @@ Teams Toolkit は、Visual Studio Code マルチターゲット デバッグを�
 
 ::: zone pivot="visual-studio"
 
-## <a name="debug-your-microsoft-teams-app-using-visual-studio"></a>Visual Studio を使用して Microsoft Teams アプリをデバッグする
+## <a name="debug-your-teams-app-using-visual-studio"></a>Visual Studio を使用して Teams アプリをデバッグする
 
 Teams Toolkit は、アプリのスタートアップ サービスを自動化し、デバッグを開始し、Teams アプリをサイドロードします。 デバッグ後、Teams Web クライアントで Teams アプリをプレビューできます。 また、ボット エンドポイントを使用するようにデバッグ設定をカスタマイズしたり、構成済みアプリを読み込むように環境変数をカスタマイズしたりできます。 Visual Studio では、タブ、ボット、メッセージ拡張機能をデバッグできます。 デバッグ プロセス中、Teams Toolkit では次のデバッグ機能がサポートされます。
 
@@ -312,6 +318,3 @@ Teams クライアントで実行する代わりに、Teams アプリを Web ア
 * [Teams Toolkit を使用してクラウド リソースをプロビジョニングする](provision.md)
 * [クラウドにデプロイする](deploy.md)
 * [Teams アプリ マニフェストのプレビューとカスタマイズ](TeamsFx-preview-and-customize-app-manifest.md)
-* [Visual Studio を使用してクラウド リソースをプロビジョニングする](provision-cloud-resources.md)
-* [Visual Studio を使用して Teams アプリをクラウドに展開する](deploy-teams-app.md)
-* [Visual Studio を使用して Teams アプリ マニフェストを編集する](VS-TeamsFx-preview-and-customize-app-manifest.md)

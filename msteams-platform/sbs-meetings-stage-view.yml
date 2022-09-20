@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: 会議用のアプリを有効にして構成する方法の詳細
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 8228a5b558845aa26a6ccea4c3e3a8b1212b5076
-  ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+  ms.openlocfilehash: 798023d6033a151035aa34c3e108edf812e19fe9
+  ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 08/15/2022
-  ms.locfileid: "67338796"
+  ms.lasthandoff: 09/19/2022
+  ms.locfileid: "67806880"
 items:
 - durationInMinutes: 1
   content: >
@@ -36,7 +36,7 @@ items:
       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png" alt-text="meetings ステージ ビュー":::
 - title: 前提条件
   durationInMinutes: 1
-  content: "\n次のツールをインストールし、開発環境をセットアップしてください。\n\n* 有効なアカウントを持つ [Microsoft Teams](https://teams.microsoft.com/)\n* [Visual Studio の最新バージョン](https://visualstudio.microsoft.com/downloads/)\n* [nodejs の最新バージョン](https://nodejs.org/en/download/) \n* [最新バージョンの ngrok](https://ngrok.com/download) (開発ボックス テスト用のみ) または同等のトンネリング ソリューション\n\n  > [!NOTE]\n  > ngrok をダウンロードしたら、サインアップして [authtoken](https://ngrok.com/download) をインストールします。\n\n 次のテクノロジに関する実用的な知識が必要です。\n\n* [C#](https://docs.microsoft.com/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)\n* [ECMAScript6](http://es6-features.org/#Constants)\n* [ASP.NET コアの最新バージョン](https://docs.microsoft.com/aspnet/core/?view=aspnetcore-3.1) \n* [React.JSの最新バージョン ](https://reactjs.org/tutorial/tutorial.html) \n"
+  content: "\n次のツールをインストールし、開発環境をセットアップしてください。\n\n* 有効なアカウントを持つ [Microsoft Teams](https://teams.microsoft.com/)\n* [Visual Studio の最新バージョン](https://visualstudio.microsoft.com/downloads/)\n* [nodejs の最新バージョン](https://nodejs.org/en/download/) \n* [最新バージョンの ngrok](https://ngrok.com/download) (開発ボックス テスト用のみ) または同等のトンネリング ソリューション\n\n  > [!NOTE]\n  > ngrok をダウンロードしたら、サインアップして [authtoken](https://ngrok.com/download) をインストールします。\n\n 次のテクノロジに関する実用的な知識が必要です。\n\n* [C#](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)\n* [ECMAScript6](http://es6-features.org/#Constants)\n* [ASP.NET コアの最新バージョン](/aspnet/core/?view=aspnetcore-3.1) \n* [React.JSの最新バージョン ](https://reactjs.org/tutorial/tutorial.html) \n"
 - title: ローカル環境を設定する
   durationInMinutes: 1
   content: "\n1. [Microsoft Teams のサンプルを](https://github.com/OfficeDev/Microsoft-Teams-Samples)開きます。\n1. [ **コード**] を選択します。\n1. ドロップダウン メニューから[ **Open with GitHub Desktop]\\(GitHub Desktop で開く\\**) を選択します。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/sbs-meetings-stage-view/clone-repository.png\" alt-text=\"リポジトリを複製する\":::\n\n1. [ **複製**] を選択します。 \n\n   > [!NOTE]\n   > \"Filename too long\" というエラーが発生した場合は、選択した管理者ターミナルに git コマンド 'git config --system core.longpaths true' を適用します。\n"

@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 95a42e4bd2064bc1ce4b775f13ba990890bc6776
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: bdcf92b52956eee6db21eb03d115a494c0f063e9
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780731"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806774"
 ---
 # <a name="teams-toolkit-overview"></a>Teams ツールキットの概要
 
@@ -131,10 +131,11 @@ Teams Toolkit for Visual Studio では、Microsoft Visual Studio Code の Teams 
 * [Microsoft.TeamsFx.Conversation 名前空間](/../dotnet/api/Microsoft.TeamsFx.Conversation)
 * [Microsoft.TeamsFx.Helper 名前空間](/../dotnet/api/Microsoft.TeamsFx.Helper)
 
+::: zone-end
+
 ## <a name="see-also"></a>関連項目
 
 * [Visual Studio で新しい Teams アプリを作成する](create-new-teams-app-for-Visual-Studio.md)
 * [Visual Studio を使用してクラウド リソースをプロビジョニングする](provision-cloud-resources.md)
 * [Visual Studio を使用して Teams アプリをクラウドに展開する](deploy-teams-app.md)
 
-::: zone-end

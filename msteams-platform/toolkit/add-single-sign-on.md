@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 5c70a88c7b67229143af881a46272d5cdc9a06c4
-ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
+ms.openlocfilehash: b2016cefcdf476e32860f80a76606c04bf892f5d
+ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2022
-ms.locfileid: "66792831"
+ms.lasthandoff: 09/19/2022
+ms.locfileid: "67806795"
 ---
 # <a name="add-single-sign-on-to-teams-app"></a>Teams アプリにシングル サインオンを追加する
 
@@ -55,7 +55,7 @@ Teams Toolkit は、次の Teams 機能に SSO を追加するのに役立ちま
 
 次の表に、Teams Toolkit がプロジェクトに加える変更の一覧を示します。
 
-   |**種類**|**ファイル**|**用途**|
+   |**型**|**ファイル**|**用途**|
    |--------|--------|-----------|
    |Create|`aad.template.json` 下 `template/appPackage`|Azure AD アプリケーション マニフェストは、Azure AD アプリを表します。 `template/appPackage` は、ローカル デバッグまたはプロビジョニング ステージ中に Azure AD アプリを登録するのに役立ちます。|
    |変更|`manifest.template.json` 下 `template/appPackage`|Teams アプリ マニフェスト `webApplicationInfo` テンプレートにオブジェクトが追加されます。 Teams では、SSO を有効にするには、このフィールドが必要です。 この変更は、ローカル デバッグまたはプロビジョニングをトリガーするときに有効です。|
@@ -353,4 +353,4 @@ TeamsFx SDK の詳細については、次を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-* [Teams アプリを構築するためのアカウントを準備する](accounts.md)
+* [Teams アプリを作成するための前提条件](tools-prerequisites.md)
