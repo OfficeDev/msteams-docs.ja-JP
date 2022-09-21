@@ -3,12 +3,12 @@ title: Teams の開発者向けの新機能と更新情報
 description: 新しく導入された Microsoft Teams の開発者向け機能と、既存の機能の更新について説明します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 8f057c4f16fb1c22e1bebcaaef0396ab55fec107
-ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
+ms.openlocfilehash: b5ca7ab2aa0a2861b8cc9d402e30eec5409b9aff
+ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2022
-ms.locfileid: "67833740"
+ms.lasthandoff: 09/21/2022
+ms.locfileid: "67858903"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -169,7 +169,7 @@ ms.locfileid: "67833740"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ------------------ |
-|2020/11/30|Teams Toolkit とタブ用 Visual Studio Code を使用した ID プラットフォームの統合 |[Teams ツールキットとタブ用 Visual Studio Code を使用したシングル サインオン認証](toolkit/visual-studio-code-tab-sso.md)|
+|2020/11/30|Teams Toolkit とタブ用 Visual Studio Code を使用した ID プラットフォームの統合 |[Teams ツールキットとタブ用 Visual Studio Code を使用したシングル サインオン認証](toolkit/add-single-sign-on.md)|
 |2020/11/16|Teams アプリ マニフェストがバージョン 1.8 に更新されました。|[参照: Microsoft Teams のマニフェスト スキーマ](resources/schema/manifest-schema.md)|
 |2020/11/10|Teams ボットの設計ガイドライン |[ボット デザイン ガイドライン](bots/design/bots.md)|
 |2020/9/30|モバイル デバイスでのボットとのファイルの送受信がサポートされるようになりました |[ボットを介してファイルを送受信する](resources/bot-v3/bots-files.md)|
@@ -184,7 +184,7 @@ ms.locfileid: "67833740"
 |2020/7/20|AppSource 申請用の Teams アプリ検証ツール |[Teams アプリ認証ツール](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 |2020/7/15|Teams の仮想アシスタントを作成します |[Microsoft Teams 用仮想アシスタント](samples/virtual-assistant.md)|
 |2020/7/14|ネイティブ読み込みインジケーターのドキュメントの表示 |[ネイティブ読み込みインジケーターの表示](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
-|2020/7/1|Visual Studio Code ツールキットを使用して Teams アプリの構築を開始します |[Microsoft Teams ツールキットと Visual Studio Code を使用してアプリを構築する](toolkit/visual-studio-code-overview.md) |
+|2020/7/1|Visual Studio Code ツールキットを使用して Teams アプリの構築を開始します |[Microsoft Teams ツールキットと Visual Studio Code を使用してアプリを構築する](sbs-gs-javascript.yml) |
 |2020/7/1|Teams Web クライアントおよびデスクトップ クライアント向けタブのシングル サインオンの一般提供 |[シングル サインオン (SSO)](tabs/how-to/authentication/tab-sso-overview.md)|
 |2020/6/5| マニフェスト スキーマがバージョン 1.7 に更新されました。| [参照: Microsoft Teams のマニフェスト スキーマ](resources/schema/manifest-schema.md)|
 |2020/5/18|Power Virtual Agent と Teams の統合 |[Power Virtual Agent チャットボットを Microsoft Teams と統合する](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|

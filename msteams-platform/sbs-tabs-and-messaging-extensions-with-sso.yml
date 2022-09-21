@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: 詳細については、タブの SSO 認証に関するページを参照してください。
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: c0e9ff9397c2afd70ab7de1a03b4fb04727dcec3
-  ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+  ms.openlocfilehash: 7932c22485aaeffc39bd1339e92740afe51396e6
+  ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/19/2022
-  ms.locfileid: "67806865"
+  ms.lasthandoff: 09/21/2022
+  ms.locfileid: "67858931"
 items:
 - durationInMinutes: 1
   content: "Azure Active Directory シングル サインオン (Azure AD SSO) は、Teams でユーザーを認証するのに役立ちます。 \n\n**タブとメッセージ拡張機能に対する Azure AD SSO のステップ バイ ステップ ガイドの主な側面**:\n\n * 最初のサインイン後、Azure AD SSO を使用すると、ユーザーは自動的にサインインできます。\n * ユーザーがサインイン資格情報をもう一度入力せずに他のデバイスにサインインできるようにします。\n * ログインしているユーザーのトークンを取得します。   \n\nこのステップ バイ ステップ ガイドは、Azure AD SSO 認証を有効にするタブとメッセージ拡張機能を作成するのに役立ちます。 次の出力が表示されます。\n\n  ![おめでとうございます画像](~/assets/images/Tab-ME-SSO/hello-megan-profile245.png)   \n"

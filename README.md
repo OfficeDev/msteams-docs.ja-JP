@@ -8,7 +8,7 @@ Microsoft Teams は、チャット、会議、通話、ファイルなど、コ�
 
 Teams ドキュメントは、Microsoft Docs技術ドキュメント ライブラリの一部です。 コンテンツは、ドキュメントセットと呼ばれるグループに編成され、それぞれが 1 つのエンティティとして管理される関連ドキュメントのグループを表します。 質問をしたり、提案をしたり、更新プログラムを提供したりすることもできます。 [Teams のドキュメントに貢献する方法について説明します](https://learn.microsoft.com/microsoftteams/platform/resources/teams-contributor-reference/)。
 
-Microsoft ドキュメントに投稿するには、 [共同作成者ガイドの概要](https://learn.microsoft.com/contribute/)を参照してください。
+Microsoft Docsに貢献するには、[共同作成者ガイドの概要](https://learn.microsoft.com/contribute/)を参照してください。
 
 Microsoft 標準とスタイル ガイドの詳細については、 [Microsoft スタイル ガイド](https://learn.microsoft.com/style-guide/welcome/)を参照してください。
 

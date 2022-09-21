@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: 開始の概要に戻る
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 4bf5a7a99ffb56aed3e2f7dcbe79245382b586a6
-  ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+  ms.openlocfilehash: 15f85f53fd3dd5c9f46078fb592575e0d98ea0bc
+  ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/19/2022
-  ms.locfileid: "67806887"
+  ms.lasthandoff: 09/21/2022
+  ms.locfileid: "67858924"
 items:
 - durationInMinutes: 1
   content: "最初の Teams アプリを使用して Microsoft Teams アプリの開発を開始します。 メッセージ拡張機能 Teams アプリを作成します。 \n\nアプリには、独自の UI と UX が付属する機能があります。\n\n:::image type=\"content\" source=\"~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png\" alt-text=\"このアプリを示すダイアグラムには、3 つの機能があります。\":::\n\n\nこのチュートリアルでは、次の方法について学ぶことができます:\n\n- Teams Toolkit を使用して新しいプロジェクトを設定する方法。\n- メッセージ拡張機能アプリをビルドする方法。\n- アプリをデプロイする方法。\n"

@@ -5,12 +5,12 @@ description: Teams an Microsoft Power Platform で利用可能な Microsoft の�
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 59730f586ff90a6f0de9061c41ccc6c2e24385ef
-ms.sourcegitcommit: 68bf3adb8aaae07caf684f7d9efb5cb7c84598b9
+ms.openlocfilehash: 0cee1547424df7952f2ba9864981814871a511f7
+ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2022
-ms.locfileid: "67382938"
+ms.lasthandoff: 09/21/2022
+ms.locfileid: "67858910"
 ---
 # <a name="create-low-code-custom-apps-for-teams"></a>Teams 用のローコード カスタム アプリを作成する
 
@@ -59,10 +59,10 @@ Teams で新しい [Power Virtual Agents アプリ](https://aka.ms/pva-teams-doc
 
 |  トピック  |  リンク  |
 |:---------|:----------------------|
-|Power BI|[Power BI for App Maker](/learn/browse/?expanded=power-platform&products=power-bi&roles=maker)</br>[開発者向け Power BI](/learn/browse/?expanded=power-platform&products=power-bi&roles=developer)|
-|Power Apps|[Power Apps for App Maker](/learn/browse/?products=power-apps&roles=maker)</br>[開発者向け Power Apps](/learn/browse/?products=power-apps)|
-|Power Automate|[Power Automate for App Maker](/learn/browse/?expanded=power-platform&products=power-automate&roles=maker)</br>[開発者向けの Power Automate](/learn/browse/?expanded=power-platform&products=power-automate&roles=developer)|
-|Power Virtual Agents|[アプリ作成者と開発者向けの Power Virtual Agent](/learn/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
+|Power BI|[Power BI for App Maker](/training/browse/?expanded=power-platform&products=power-bi&roles=maker)</br>[開発者向け Power BI](/training/browse/?expanded=power-platform&products=power-bi&roles=developer)|
+|Power Apps|[Power Apps for App Maker](/training/browse/?products=power-apps&roles=maker)</br>[開発者向け Power Apps](/training/browse/?products=power-apps)|
+|Power Automate|[Power Automate for App Maker](/training/browse/?expanded=power-platform&products=power-automate&roles=maker)</br>[開発者向けの Power Automate](/training/browse/?expanded=power-platform&products=power-automate&roles=developer)|
+|Power Virtual Agents|[アプリ作成者と開発者向けの Power Virtual Agent](/training/browse/?products=power-virtual-agents&expanded=power-platform&roles=maker)|
 
 ### <a name="-project-oakdale-preview"></a>✔ Project Oakdale (プレビュー)
 
