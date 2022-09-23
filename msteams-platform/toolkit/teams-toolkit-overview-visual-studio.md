@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
-ms.openlocfilehash: 0f51d2c44eef3ec09d48581a797c63d501be8644
-ms.sourcegitcommit: f192d7685ee3ddf4a55dc9787d56744403c3f8f9
-ms.translationtype: HT
+ms.openlocfilehash: 3685d105f13024507b880c35040b9d798a6d845f
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "67302452"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67990918"
 ---
 # <a name="teams-toolkit-overview-for-visual-studio"></a>Visual Studio 用 Teams ツールキットの概要
 
@@ -45,7 +45,7 @@ Teams ツールキットは手動作業を自動化し、Teams と Azure リソ�
 
 ## <a name="install-teams-toolkit-for-visual-studio"></a>Visual Studio 用 Teams ツールキットのインストール
 
-最新の Visual Studio インストーラーは、[Visual Studio のダウンロード ページ](https://visualstudio.microsoft.com/vs/preview/)からダウンロードできます。
+最新の Visual Studio インストーラーは、[Visual Studio のダウンロード ページ](https://visualstudio.microsoft.com)からダウンロードできます。
 
 > [!NOTE]
 > Visual Studio をインストールする前に、最初に Visual Studio インストーラーをインストールする必要があります。

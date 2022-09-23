@@ -5,12 +5,12 @@ description: このモジュールでは、受信 Webhook を Teams アプリに
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: de46f651c3dd6df741b4fef47c9813dfd88a6fe0
-ms.sourcegitcommit: 0ac53c430c055897ecebc129eab49336820c18c2
+ms.openlocfilehash: 4dd4790f6ff545b01999be7911129a53ab12c72d
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67618283"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67990946"
 ---
 # <a name="create-incoming-webhooks"></a>受信 Webhook を作成する
 
@@ -20,9 +20,12 @@ ms.locfileid: "67618283"
 * メッセージ拡張機能
 * コネクタ
 
+> [!IMPORTANT]
+> 受信 Webhook 以外の通知ボット Teams アプリを作成することもできます。 同様に実行されますが、通知ボットにはより多くの機能があります。 詳細については、「JavaScript または[受信 Webhook 通知サンプル](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification)[を使用した通知ボットのビルド](../../sbs-gs-notificationbot.yml)」を参照してください。 作業を開始するには、 [Teams Toolkit を](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) 今すぐダウンロードし、調査します。 詳細については、「 [Teams Toolkit ドキュメント」を](../../toolkit/teams-toolkit-fundamentals.md)参照してください。
+
 受信 Webhook を作成する方法については、次のビデオを参照してください。
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY>]
 
 ## <a name="key-features-of-an-incoming-webhook"></a>受信 Webhook の主な機能
 
@@ -32,7 +35,7 @@ ms.locfileid: "67618283"
 | -------- | ----------- |
 |受信 Webhook を使用したアダプティブ カード | アダプティブ カードは、受信 Webhook を介して送信できます。 詳細については、「[受信 Webhookを使用してアダプティブ カードを送信する](../../webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook)」を参照してください。|
 |アクション可能なメッセージングのサポート|アクション可能なメッセージ カードは、Teams を含むすべての Office 365 グループでサポートされています。 カード経由でメッセージを送信する場合は、アクション可能なメッセージ カード形式を使用する必要があります。 詳細については、「[従来の操作可能なメッセージ カード リファレンス](/outlook/actionable-messages/message-card-reference)」と「[メッセージ カードのプレイグラウンド](https://messagecardplayground.azurewebsites.net)」を参照してください。|
-|独立した HTTPS メッセージングのサポート|カードでは、情報が明確にかつ一貫性をもって提供されます。HTTPS POST 要求を送信できるツールまたはフレームワークは、受信 Webhook を介して Teams にメッセージを送信できます。|
+|独立した HTTPS メッセージングのサポート|Cards provide information clearly and consistently. Any tool or framework that can send HTTPS POST requests can send messages to Teams through an Incoming Webhook.|
 |Markdown のサポート|アクション可能なメッセージング カードのすべてのテキスト フィールドで、基本的な Markdown がサポートされています。 カードで HTML マークアップを使用しないでください。 HTML は無視され、プレーン テキストとして扱われます。|
 |スコープ構成|受信 Webhook のスコープが設定され、チャネル レベルで構成されます。|
 |セキュリティで保護されたリソース定義|メッセージは JSON ペイロードとして書式設定されます。 この宣言型メッセージング構造は、悪意のあるコードの挿入を防ぎます。|
@@ -95,9 +98,9 @@ Teams チャネルから受信 Webhook を削除するには、次の手順に�
 
 ## <a name="code-sample"></a>コード サンプル
 
-| サンプルの名前           | 説明 | C#    | Node.js   |
+| サンプルの名前           | 説明 | C#    |  TypeScript |
 |:---------------------|:--------------|:---------|:--------|
-|着信 Webhook|このサンプル コードでは、受信 Webhook を使用してカードを送信する方法を示します。 |[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/nodejs) |
+|着信 Webhook|このサンプル コードでは、受信 Webhook を使用してカードを送信する方法を示します。 |[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[表示](https://github.com/OfficeDev/TeamsFx-Samples/tree/release/incoming-webhook-notification) |
 
 ## <a name="see-also"></a>関連項目
 

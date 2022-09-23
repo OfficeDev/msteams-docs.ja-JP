@@ -4,12 +4,12 @@ description: Teams ボットでプロアクティブ メッセージを送信し
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: adecf29766909fb9a8692aa135e09c41a307c867
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: ec787b827323a462d3ab9ebd76686f5833740534
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586904"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67990939"
 ---
 # <a name="proactive-messages"></a>プロアクティブ メッセージ
 
@@ -22,12 +22,10 @@ ms.locfileid: "67586904"
 * 予定されたメッセージ
 
 > [!IMPORTANT]
-> ボットは Government Community Cloud (GCC) およびGCC-Highで利用できますが、国防総省 (DOD) 環境では利用できません。
 >
-> プロアクティブ メッセージの場合、ボットは政府機関のクラウド環境に対して次のエンドポイントを使用する必要があります。
+> * プロアクティブ メッセージを送信するには、まず、JavaScript または[受信 Webhook 通知サンプル](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification)[を使用して通知ボットを構築](../../../sbs-gs-notificationbot.yml)することをお勧めします。 作業を開始するには、 [Teams Toolkit explore をダウンロードします](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) 。 詳細については、「 [Teams Toolkit ドキュメント」を](../../../toolkit/teams-toolkit-fundamentals.md)参照してください。
 >
-> * GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`。
-> * GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`。
+> * 現在、ボットは Government Community Cloud (GCC) と GCC-High で利用できますが、国防総省 (DOD) では利用できません。 プロアクティブ メッセージの場合、ボットは政府機関のクラウド環境に対して次のエンドポイントを使用する必要があります。 <br> - GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`<br> - GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`.
 
 プロアクティブ メッセージをユーザー、グループ チャット、またはチームに送信するには、ボットがメッセージを送信するために必要なアクセス権を持っている必要があります。 グループ チャットまたはチームの場合、ボットを含むアプリを最初にその場所にインストールする必要があります。
 
@@ -87,7 +85,7 @@ ms.locfileid: "67586904"
 
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4NHyk>]
 <br>
 
 ### <a name="understand-who-blocked-muted-or-uninstalled-a-bot"></a>ボットをブロック、ミュート、またはアンインストールしたユーザーを把握する

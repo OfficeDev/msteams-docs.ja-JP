@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 07/29/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: c784e5d2242381a919500b16ab922a397bfc5d9e
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 9b6492efed353e2f3228a04da292141679401e66
+ms.sourcegitcommit: ef545fac5c0dbe970d81f53b1631930e9196eba3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780689"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67991657"
 ---
 # <a name="install-teams-toolkit"></a>Teams Toolkit のインストール
 
@@ -94,7 +94,7 @@ Teams Toolkit は、既定で最新バージョンにアップグレードされ
 
 インストールを開始する前に、Visual Studio インストーラーをインストールする必要があります。
 
-[Visual Studio](https://visualstudio.microsoft.com/vs/preview/) のダウンロード ページから最新のVisual Studio インストーラーをダウンロードできます。
+[Visual Studio](https://visualstudio.microsoft.com) のダウンロード ページから最新のVisual Studio インストーラーをダウンロードできます。
 
 ## <a name="steps-to-install-teams-toolkit"></a>Teams Toolkit をインストールする手順
 

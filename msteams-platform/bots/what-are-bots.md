@@ -5,19 +5,19 @@ description: この記事では、Microsoft Teams の会話ボットを使用し
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 90176b63c64d23ae76a8c98515e37455ab0742c0
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: b9d0bda0d733a3b4a3204449ca9fd2ed6746ac98
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363509"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67990911"
 ---
 # <a name="build-bots-for-teams"></a>Teams 用のボットを構築する
 
-> [!NOTE]
-> Teams 用の新しい世代開発ツールを使用して、最初のボット アプリまたは通知ボット アプリを作成することをお勧めします。 詳細については、「 [Teams Toolkit for Visual Studio Code」と「Teams](../toolkit/teams-toolkit-fundamentals.md) [Toolkit for Visual Studio」を](../toolkit/teams-toolkit-overview-visual-studio.md)参照してください。
-
 ボットは、チャットボットまたは会話ボットとも呼ばれます。 これは、カスタマー サービスやサポート スタッフなどのユーザーが単純で反復的なタスクを実行するアプリです。 ボットの日常的な使用には、天気に関する情報を提供するボット、ディナーの予約を行うボット、旅行情報を提供するボットなどがあります。 ボットとのやり取りは、質問や回答を素早く行ったり、複雑な会話になったりする場合があります。
+
+> [!NOTE]
+> まず、 [JavaScript を使用して最初のボット アプリをビルド](../sbs-gs-bot.yml) するか、Teams 用の新しい世代開発ツールを使用して [JavaScript で通知ボットをビルド](../sbs-gs-notificationbot.yml) することをお勧めします。 詳細については、「 [Teams Toolkit の概要」を](../toolkit/teams-toolkit-fundamentals.md)参照してください。
 
 > [!IMPORTANT]
 >

@@ -3,12 +3,12 @@ title: マニフェスト スキーマの参照
 description: この記事では、Microsoft Teams リファレンスのマニフェスト スキーマ、スキーマ、およびサンプルの完全なマニフェストを紹介します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: db72e9e40a5bf4381b4e7e47090b4f6cfcb1d1d8
-ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
+ms.openlocfilehash: 68208d7a3c2ff1547d6b686cad966f5878bc8780
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67635337"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67990932"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Teams のアプリ マニフェストのスキーマ
 
@@ -396,7 +396,7 @@ Teams エクスペリエンスでユーザーに表示されるアプリ エク�
 
 **必須**— オブジェクト
 
-ユーザーに、アプリについて説明します。AppSource に送信されたアプリの場合、これらの値は AppSource エントリの情報と一致する必要があります。
+アプリについてユーザーに説明します。 AppSource に送信されるアプリの場合、これらの値は AppSource エントリの情報と一致する必要があります。
 
 説明があなたの経験をについて述べており、潜在的な顧客があなたの経験が何をするかを理解するのに役立つことを確認してください。 外部アカウントを使用する必要がある場合は、完全な説明にするよう気を配る必要があります。 `short` と `full` の値は異なっている必要があります。 短い説明を長い説明内で繰り返すことはできません。また、他のアプリ名を含めてはなりません。
 
@@ -409,13 +409,13 @@ Teams エクスペリエンスでユーザーに表示されるアプリ エク�
 
 **省略可能** — 文字列
 
-逆引きドメイン表記でのアプリの一意識別子。たとえば、com.example.myapp などです。最大長: 64 文字。
+A unique identifier for the app in reverse domain notation; for example, com.example.myapp. Maximum length: 64 characters.
 
 ## <a name="localizationinfo"></a>localizationInfo
 
 **省略可能** — オブジェクト
 
-既定の言語の指定を許可し、より多くの言語ファイルへのポインターを提供します。詳細については、「[ローカライズ](~/concepts/build-and-test/apps-localization.md)」を参照してください。
+Allows the specification of a default language and provides pointers to more language files. For more information, see [localization](~/concepts/build-and-test/apps-localization.md).
 
 |名前| 最大サイズ | 必須 | 説明|
 |---|---|---|---|
@@ -459,10 +459,10 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 文字|✔️|タブを構成するときに使用する https:// URL。|
 |`scopes`|列挙型の配列|1|✔️|現在、構成可能なタブは、`team` スコープと `groupchat` スコープのみをサポートしています。 |
-|`canUpdateConfiguration`|ブール値|||作成後にユーザーがタブの構成のインスタンスを更新できるかどうかを示す値。既定値: **true**。|
+|`canUpdateConfiguration`|ブール値|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: **true**.|
 |`context` |列挙型の配列|6||[タブがサポートされている](../../tabs/how-to/access-teams-context.md) `contextItem` スコープのセット。 既定値: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**。|
-|`sharePointPreviewImage`|string|2048||SharePoint で使用するタブ プレビュー イメージへの相対ファイル パス。サイズ 1024 x 768。 |
-|`supportedSharePointHosts`|列挙型の配列|1||SharePoint でタブを使用できるようにする方法を定義します。オプションは `sharePointFullPage` と `sharePointWebPart` |
+|`sharePointPreviewImage`|string|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
+|`supportedSharePointHosts`|列挙型の配列|1||Defines how your tab is made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -483,7 +483,8 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |`context` | 列挙型の配列| 2|| タブがサポートされている `contextItem` 個のスコープのセット。|
 
 > [!NOTE]
-> サードパーティの開発者は searchUrl 機能を使用できません。関連するコンテンツを表示したり、認証フローを開始したりするために、タブにコンテキスト依存の情報が必要な場合は、「 [Microsoft Teams タブのコンテキストを取得する](../../tabs/how-to/access-teams-context.md)」を参照してください。
+> The searchUrl feature is not available for the third-party developers.
+> If your tabs require context-dependent information to display relevant content or for initiating an authentication flow, For more information, see [Get context for your Microsoft Teams tab](../../tabs/how-to/access-teams-context.md).
 
 ## <a name="bots"></a>ボット
 
@@ -496,10 +497,10 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`botId`|string|64 文字|✔️|Bot Framework に登録された、ボット用の一意の Microsoft アプリ ID。 ID は、全体的な[アプリ ID](#id) と同じにすることができます。|
-|`scopes`|列挙型の配列|3|✔️|ボットがエクスペリエンスを提供するのは、`team` 内のチャネルのコンテキスでなのか、グループ チャット (`groupchat`) でなのか、あるいは個別のユーザーのみをエクスペリエンスの対象にする (`personal`) のかを指定します。これらのオプションは非排他的です。|
-|`needsChannelSelector`|ブール値|||ボットがユーザー ヒントを使用してボットを特定のチャネルに追加するかどうかを説明します。既定値: **`false`**|
-|`isNotificationOnly`|Boolean|||ボットが会話ボットではなく、一方向の通知専用ボットであるかどうかを示します。既定値: **`false`**|
-|`supportsFiles`|Boolean|||ボットが個人用チャットでファイルをアップロード/ダウンロードできるかどうかを示します。既定値: **`false`**|
+|`scopes`|列挙型の配列|3|✔️|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupchat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
+|`needsChannelSelector`|ブール型|||Describes whether or not the bot uses a user hint to add the bot to a specific channel. Default: **`false`**|
+|`isNotificationOnly`|ブール値|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default: **`false`**|
+|`supportsFiles`|ブール値|||Indicates whether the bot supports the ability to upload/download files in personal chat. Default: **`false`**|
 |`supportsCalling`|ブール値|||ボットが音声通話をサポートしている場所を示す値。 **重要**: このプロパティは現在実験中です。 実験的なプロパティは完全ではない可能性があり、完全に利用可能になる前に変更される可能性があります。  このプロパティは、テストと探索の目的でのみ提供されており、本番アプリケーションで使用することはできません。 既定値: **`false`**|
 |`supportsVideo`|Boolean|||ボットがビデオ通話をサポートしている場所を示す値。 **重要**: このプロパティは現在実験中です。 実験的なプロパティは完全ではない可能性があり、完全に利用可能になる前に変更される可能性があります。  このプロパティは、テストと探索の目的でのみ提供されており、本番アプリケーションで使用することはできません。 既定値: **`false`**|
 
@@ -509,7 +510,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`items.scopes`|列挙型の配列|3|✔️|コマンド リストが有効なスコープを指定します。オプションは、 `team`、 `personal`、および `groupchat`です。|
+|`items.scopes`|列挙型の配列|3|✔️|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupchat`.|
 |`items.commands`|オブジェクトの配列|10|✔️|ボットがサポートするコマンドの配列:<br>`title`: ボット コマンドの名前 (文字列、32)<br>`description`: コマンド構文とその引数 (文字列、128) の簡単な説明または例。|
 
 ### <a name="botscommandlistscommands"></a>bots.commandLists.command
@@ -530,7 +531,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`configurationUrl`|string|2048 文字|✔️|コネクタを構成するときに使用する https:// URL。|
-|`scopes`|列挙型の配列|1|✔️|コネクタが `team`のチャネルのコンテキストでエクスペリエンスを提供するか、個々のユーザーのみを対象としたエクスペリエンスを提供するかを指定します (`personal`)。現時点では、 `team` スコープのみがサポートされています。|
+|`scopes`|列挙型の配列|1|✔️|Specifies whether the Connector offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). Currently, only the `team` scope is supported.|
 |`connectorId`|string|64 文字|✔️|[コネクタ開発者ダッシュボード](https://aka.ms/connectorsdashboard)の ID に一致するコネクタの一意の識別子です。|
 
 ## <a name="composeextensions"></a>composeExtensions
@@ -548,9 +549,9 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |---|---|---|---|---|
 |`botId`|string|64|✔️|ボット フレームワークに登録されている、メッセージ拡張機能をサポートするボットの一意の Microsoft アプリ ID。 ID は、全体のアプリ ID と同じにできます。|
 |`commands`|オブジェクトの配列|10|✔️|メッセージ拡張機能がサポートするコマンドの配列。|
-|`canUpdateConfiguration`|ブール型|||メッセージ拡張機能の構成をユーザーが更新できるかどうかを示す値。既定値: **false** です。|
+|`canUpdateConfiguration`|ブール型|||A value indicating whether the configuration of a message extension can be updated by the user. Default: **false**.|
 |`messageHandlers`|オブジェクトの配列|5||特定の条件が満たされた場合にアプリを呼び出すことができるハンドラーの一覧。|
-|`messageHandlers.type`|string|||メッセージ ハンドラーの種類。`"link"`でなければなりません。|
+|`messageHandlers.type`|string|||The type of message handler. Must be `"link"`.|
 |`messageHandlers.value.domains`|文字列の配列|||リンク メッセージ ハンドラーが登録できるドメインの配列。|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -565,20 +566,20 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |`title`|string|32 文字|✔️|ユーザーフレンドリーなコマンド名。|
 |`type`|string|64 文字||コマンドの種類。 `query` または `action` のいずれか。 既定: **クエリ**|
 |`description`|string|128 文字||このコマンドの目的を示すためにユーザーに表示される説明。|
-|`initialRun`|Boolean|||ブール値は、コマンドがパラメーターなしで最初に実行されるかどうかを示します。既定値は **false** です。|
+|`initialRun`|Boolean|||A Boolean value indicates whether the command runs initially with no parameters. Default is **false**.|
 |`context`|文字列の配列|3||メッセージ拡張機能の呼び出し先を定義します。 `compose`、`commandBox`、`message` の任意の組み合わせ。 既定値は `["compose","commandBox"]` です。|
-|`fetchTask`|Boolean|||タスク モジュールを動的にフェッチする必要があるかどうかを示すブール値。既定値は **false** です。|
+|`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the task module dynamically. Default is **false**.|
 |`taskInfo`|object|||メッセージ拡張コマンドを使用するときにプリロードするタスク モジュールを指定します。|
 |`taskInfo.title`|string|64 文字||最初のダイアログ タイトル。|
 |`taskInfo.width`|string|||ダイアログの幅 - ピクセル単位の数値、または '大'、'中'、'小' などの既定のレイアウト。|
 |`taskInfo.height`|string|||ダイアログの高さ - ピクセル単位の数値、または '大'、'中'、'小' などの既定のレイアウト。|
 |`taskInfo.url`|string|||初期 Web ビュー URL。|
 |`parameters`|オブジェクトの配列|5 個の項目|✔️|コマンドが取得するパラメーターの一覧。 最小: 1; 最大: 5。|
-|`parameters.name`|string|64 文字|✔️|クライアントに表示されるパラメーターの名前。パラメーター名はユーザー要求に含まれます。|
+|`parameters.name`|string|64 文字|✔️|The name of the parameter as it appears in the client. The parameter name is included in the user request.|
 |`parameters.title`|string|32 文字|✔️|パラメーターのユーザーフレンドリーなタイトル。|
 |`parameters.description`|string|128 文字||このパラメーターの目的を説明するユーザーフレンドリーな文字列。|
 |`parameters.value`|string|512 文字||パラメーターの初期値。 現在、値はサポートされていません|
-|`parameters.inputType`|string|128 文字||`fetchTask: false` のタスク モジュールに表示されるコントロールの種類を定義します。`text, textarea, number, date, time, toggle, choiceset`の 1 つ。|
+|`parameters.inputType`|string|128 文字||Defines the type of control displayed on a task module for`fetchTask: false` . One of `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|オブジェクトの配列|10 個||`choiceset` の選択オプションです。 `parameter.inputType` が `choiceset` である場合にのみ使用してください。|
 |`parameters.choices.title`|string|128 文字|✔️|選択したタイトル。|
 |`parameters.choices.value`|string|512 文字|✔️|Value of the choice.|
@@ -587,12 +588,12 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 **省略可能** —文字列の配列
 
-`string`の配列。アプリが要求するアクセス許可を指定します。これにより、拡張機能の動作がエンド ユーザーに通知されます。次のオプションは非排他的です。
+An array of `string`, which specifies which permissions the app requests, which let end users know how the extension does. The following options are non-exclusive:
 
 * `identity`&emsp; にはユーザー ID 情報が必要です。
 * `messageTeamMembers`&emsp; にはチーム メンバーに直接メッセージを送信するためのアクセス許可が必要です。
 
-アプリの更新中にこれらのアクセス許可を変更すると、ユーザーは更新されたアプリを実行した後に同意プロセスを繰り返します。詳細については、「 [アプリの更新](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)」を参照してください。
+Changing these permissions during app update, causes your users to repeat the consent process after they run the updated app. For more information, see [Updating your app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md).
 
 > [!NOTE]
 > アクセス許可は現在非推奨になっています。
@@ -601,7 +602,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 **省略可能** —文字列の配列
 
-アプリがアクセスを要求するユーザーのデバイス上のネイティブ機能を提供します。オプションは次のとおりです。
+Provides the native features on a user's device that your app requests access to. Options are:
 
 * `geolocation`
 * `media`
@@ -649,7 +650,7 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 
 **省略可能** — ブール値
 
-アプリまたはタブの読み込み中に読み込みインジケーターを表示するかどうかを示します。既定値は **false** です。
+Indicates if or not to show the loading indicator when an app or tab is loading. Default is **false**.
 >[!NOTE]
 >アプリマニフェストで `showLoadingIndicator` を true として選択した場合、ページを正しく読み込むには、「[ネイティブの読み込みインジケーターを表示する](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)」ドキュメントの説明に従って、タブとタスクモジュールのコンテンツページを変更します。
 
@@ -680,7 +681,7 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`type`|string|32 文字|✔️|通知の種類。 *以下を参照してください*。|
-|`description`|string|128 文字|✔️|通知の簡単な説明。 *以下を参照してください*。|
+|`description`|string|128 文字|✔️|A brief description of the notification. *See below*.|
 |`templateText`|string|128 文字|✔️|例: "あなたに {actor} が作成したタスク {taskId}"|
 
 ```json
@@ -744,7 +745,7 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 
 **省略可能** - オブジェクト
 
-グループのインストール スコープを選択すると、ユーザーがアプリをインストールするときに既定の機能が定義されます。オプションは次のとおりです。
+When a group install scope is selected, it will define the default capability when the user installs the app. Options are:
 
 * `team`
 * `groupchat`
@@ -752,9 +753,9 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`team`|string|||選択したインストール スコープが `team`の場合、このフィールドは使用可能な既定の機能を指定します。オプション: `tab`、 `bot`、または `connector`。|
-|`groupchat`|文字列|||選択したインストール スコープが `groupchat`の場合、このフィールドは使用可能な既定の機能を指定します。オプション: `tab`、 `bot`、または `connector`。|
-|`meetings`|文字列|||選択したインストール スコープが `meetings`の場合、このフィールドは使用可能な既定の機能を指定します。オプション: `tab`、 `bot`、または `connector`。|
+|`team`|string|||When the install scope selected is `team`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
+|`groupchat`|string|||When the install scope selected is `groupchat`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
+|`meetings`|string|||When the install scope selected is `meetings`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
 
 ## <a name="configurableproperties"></a>configurableProperties
 
@@ -810,13 +811,13 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 
 |名前| 型|最大サイズ|必須|説明|
 |---|---|---|---|---|
-|`offerId`| string | 2,048 文字 | ✔️ | パブリッシャー ID とオファー ID を含む一意の識別子。 [パートナー センター](https://partner.microsoft.com/dashboard)で確認できます。文字列は `publisherId.offerId`として書式設定する必要があります。|
+|`offerId`| string | 2,048 文字 | ✔️ | A unique identifier that includes your Publisher ID and Offer ID, which you can find in [Partner Center](https://partner.microsoft.com/dashboard). You must format the string as `publisherId.offerId`.|
 
 ## <a name="meetingextensiondefinition"></a>meetingExtensionDefinition
 
 **省略可能** - オブジェクト
 
-会議拡張機能の定義を指定します。詳細については、「[Teamsのカスタム Together Mode シーン](../../apps-in-teams-meetings/teams-together-mode.md)」を参照してください。
+Specify meeting extension definition. For more information, see [custom Together Mode scenes in Teams](../../apps-in-teams-meetings/teams-together-mode.md).
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
@@ -839,7 +840,7 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 **省略可能** — オブジェクト
 
 > [!NOTE]
-> `manifestVersion` プロパティを 1.12 に設定した場合、承認プロパティは以前のバージョン (バージョン 1.11 以前) のマニフェストと互換性がありません。承認はマニフェスト バージョン 1.12 でサポートされています。
+> If you set the `manifestVersion` property to 1.12, the authorization property is incompatible with the older versions (version 1.11 or earlier) of the manifest. Authorization is supported for manifest version 1.12.
 
 アプリの承認に関する情報を指定して統合します。
 
@@ -857,7 +858,7 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 
 |名前| 型|最大サイズ|必須 |説明|
 |---|---|---|---|---|
-|`type`|string||✔️| リソース固有のアクセス許可の種類。オプション: `Application` と `Delegated`。|
+|`type`|string||✔️| The type of the resource-specific permission. Options: `Application` and `Delegated`.|
 |`name`|string|128 文字|✔️|リソース固有のアクセス許可の名前。 詳細については、「[リソース固有のアプリケーションのアクセス許可](#resource-specific-application-permissions)」および「[リソース固有の委任されたアクセス許可](#resource-specific-delegated-permissions)」を参照してください|
 
 #### <a name="resource-specific-application-permissions"></a>リソース固有のアプリケーションのアクセス許可
@@ -875,6 +876,7 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
     |`ChannelMeetingParticipant.Read.Group`| サインインしたユーザーの代理で、このチームに関連付けられたチャネル会議の名前、役割、ID、参加時間と退会時間などの参加者情報を読み取ることができるようにします。|
     |`InAppPurchase.Allow.Group`| サインインしているユーザーの代わりに、このチームのユーザーにマーケットプレース オファーを表示し、アプリ内での購入を完了できるようにします。|
     |`ChannelMeetingStage.Write.Group`| サインインしているユーザーの代わりに、このチームに関連付けられているチャネル会議の会議ステージにコンテンツをアプリが表示できるようにします。|
+    |`LiveShareSession.ReadWrite.Group`|アプリで、このチームに関連付けられている会議の Live Share セッションを作成して同期し、サインインしているユーザーに代わって、メンバーの会議ロールなどの会議の名簿に関する関連情報にアクセスできるようにします。|
 
 * **チャットまたは会議用のリソース固有の委任されたアクセス許可**
 
@@ -884,6 +886,8 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
     |`MeetingStage.Write.Chat`|サインインしているユーザーの代わりに、このチャットに関連付けられている会議の会議ステージにコンテンツをアプリが表示できるようにします。|
     |`OnlineMeetingParticipant.Read.Chat`|サインインしたユーザーの代理で、このチャットに関連付けられた会議の名前、役割、ID、参加時間と退会時間などの参加者情報を読み取ることができるようにします。|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|サインインしているユーザーの代わりに、このチャットに関連付けられている会議の参加者の着信オーディオをアプリで切り替えられるようにします。|
+    |`LiveShareSession.ReadWrite.Chat`|アプリで、このチャットに関連付けられている会議の Live Share セッションを作成して同期し、サインインしているユーザーに代わって会議のメンバーの会議ロールなどの会議の名簿に関する関連情報にアクセスできるようにします。|   
+   |`OnlineMeetingIncomingAudio.Detect.Chat`|サインインしているユーザーに代わって、このチャットに関連付けられている会議の受信オーディオの状態の変化をアプリが検出できるようにします。|
 
 * **ユーザーのリソース固有の委任されたアクセス許可**
 

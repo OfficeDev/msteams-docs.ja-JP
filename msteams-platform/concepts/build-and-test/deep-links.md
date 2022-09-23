@@ -3,12 +3,12 @@ title: ディープ リンクの作成
 description: この記事では、ディープ リンクを作成する方法と、タブを使用して Microsoft Teams アプリ内でディープ リンクを使用して移動する方法について説明します。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: f3c5859ed124d173d617a75694ac5b9179e1181c
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: ea279c9bd4883507df4f56fbf514080940da52b4
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780885"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67991002"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成
 
@@ -258,7 +258,7 @@ TeamsJS の型指定された API を使用することをお勧めしますが�
 * `content`: 会議の詳細フィールドの省略可能なフィールド。
 
 > [!NOTE]
-> 現在、場所の指定はサポートされていません。UTC オフセットを指定する必要があります。これは、開始時刻と終了時刻を生成するときのタイム ゾーンを意味します。
+> Currently, specifying the location isn't supported. You must specify the UTC offset, it means time zones when generating your start and end times.
 
 ボットとのこのディープ リンクを使用するには、カードのボタンで URL を対象として指定するか、[ `openUrl` アクションの種類] で [アクション] をタップします。
 
@@ -348,7 +348,7 @@ else { /* handle case where capability isn't supported */ }
 
 クエリ パラメーターは次のとおりです。
 
-* `fileId`: Sharepoint Online の一意のファイル ID (`sourcedoc` とも呼ばれます)。たとえば、`1FA202A5-3762-4F10-B550-C04F81F6ACBD` です。
+* `fileId`: Unique file ID from Sharepoint Online, also known as `sourcedoc`. For example,`1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
 * `tenantId`: `0d9b645f-597b-41f0-a2a3-ef103fbd91bb` などのテナント ID。
 * `fileType`: .docx、.pptx、.xlsx、.pdf などのサポートされているファイルの種類
 * `objectUrl`: ファイルのオブジェクト URL。 形式は `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext` です。 たとえば、「 `https://microsoft.sharepoint.com/teams/(filepath)` 」のように入力します。
@@ -385,7 +385,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ### <a name="deep-linking-to-an-app"></a>アプリへのディープ リンク
 
-アプリが Teams ストアの一覧に表示されたら、アプリのディープ リンクを作成します。 Teams を起動するためのリンクを作成するには、アプリ ID を次の URL に追加します: `https://teams.microsoft.com/l/app/<your-app-id>`。 アプリをインストールするダイアログ ボックスが表示されます。
+アプリが Teams ストアの一覧に表示されたら、アプリのディープ リンクを作成します。 Teams を起動するためのリンクを作成するには、アプリ ID を次の URL に追加します: `https://teams.microsoft.com/l/app/<your-app-id>`。 アプリをインストールまたは開くダイアログ ボックスが表示されます。
 
 > [!NOTE]
 > アプリがモバイル プラットフォームに対して承認されている場合は、モバイル上のアプリにディープ リンクできます。 Teams-iOS でディープ リンクを機能させるには、Apple App Store Connect Team ID も必要です。 詳細については、[Apple App Store Connect チーム ID を更新する方法に関する記事を](../deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md#update-apple-app-store-connect-team-id-on-partner-center)参照してください。

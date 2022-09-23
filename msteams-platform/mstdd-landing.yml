@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: d6673489a45fb33141738ee553c97805e8fd1257
-  ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
+  ms.openlocfilehash: c97800d01e7444ff10bf5fc31c785d00d076e217
+  ms.sourcegitcommit: ef545fac5c0dbe970d81f53b1631930e9196eba3
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/20/2022
-  ms.locfileid: "67833719"
+  ms.lasthandoff: 09/23/2022
+  ms.locfileid: "67991643"
 landingContent:
 - title: 最新の情報を確認する
   linkLists:
@@ -30,7 +30,7 @@ landingContent:
     - text: スケジュールされたチャネル会議の会議アプリのサポートを導入しました
       url: apps-in-teams-meetings/meeting-app-extensibility.md
     - text: Visual Studio 2022 用 Teams ツールキットが導入されました
-      url: toolkit/teams-toolkit-overview-visual-studio.md
+      url: toolkit/teams-toolkit-fundamentals.md
     - text: コラボレーション コントロール [開発者プレビュー]
       url: samples/collaboration-control.md
     - text: 共有チャネルを構築する
@@ -191,7 +191,7 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: Distribution
+    - text: 配布
       url: ~/concepts/deploy-and-publish/apps-publish-overview.md
     - text: Microsoft Teams でアプリをアップロードする
       url: ~/concepts/deploy-and-publish/apps-upload.md

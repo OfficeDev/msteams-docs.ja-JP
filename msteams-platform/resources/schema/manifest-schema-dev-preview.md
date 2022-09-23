@@ -4,12 +4,12 @@ description: Microsoft Teams でサポートされているすべてのコンポ
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: e7b74ab4c610e1cb3b71c8045c3cb93626f0efc9
-ms.sourcegitcommit: 3215a931285ae738c248d145c07fb98656dd42ed
+ms.openlocfilehash: c019b686d27df4927ca721f36bacb5018c5ad596
+ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2022
-ms.locfileid: "67675834"
+ms.lasthandoff: 09/23/2022
+ms.locfileid: "67990925"
 ---
 # <a name="public-developer-preview-manifest-schema-for-teams"></a>Teams のパブリック開発者プレビュー マニフェスト スキーマ
 
@@ -356,7 +356,7 @@ Teams エクスペリエンスでユーザーに表示されるアプリ エク�
 
 必須:
 
-ユーザーに、アプリについて説明します。AppSource に送信されたアプリの場合、これらの値は AppSource エントリの情報と一致する必要があります。
+アプリについてユーザーに説明します。 AppSource に送信されるアプリの場合、これらの値は AppSource エントリの情報と一致する必要があります。
 
 説明が、あなたの経験を正確に説明し、潜在的な顧客があなたの経験が何かを理解するのに役立つ情報を提供することを確認してください。 また、完全な説明で、使用に外部アカウントが必要かどうかにも注意する必要があります。 の値 `short` と `full` 同じにしないでください。  短い説明を長い説明の中で繰り返すことはできません。また、他のアプリ名を含めることはできません。
 
@@ -395,11 +395,11 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 文字|✔️|タブを構成するときに使用する https:// URL。|
-|`canUpdateConfiguration`|ブール値|||作成後にユーザーがタブの構成のインスタンスを更新できるかどうかを示す値。既定値: `true`|
+|`canUpdateConfiguration`|ブール値|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: `true`|
 |`scopes`|列挙型の配列|1|✔️|現在、構成可能なタブは、`team` スコープと `groupchat` スコープのみをサポートしています。 |
 |`context` |列挙型の配列|6||[タブがサポートされている](../../tabs/how-to/access-teams-context.md) `contextItem` スコープのセット。 既定値: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`|
-|`sharePointPreviewImage`|String|2048||SharePoint で使用するタブ プレビュー イメージへの相対ファイル パス。サイズ 1024 x 768。 |
-|`supportedSharePointHosts`|列挙型の配列|1||SharePoint でタブを使用できるようにする方法を定義します。オプションは `sharePointFullPage` と `sharePointWebPart` |
+|`sharePointPreviewImage`|String|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
+|`supportedSharePointHosts`|列挙型の配列|1||Defines how your tab will be made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart` |
 
 ## <a name="statictabs"></a>staticTabs
 
@@ -431,10 +431,10 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`botId`|String|64 文字|✔️|Bot Framework に登録された、ボット用の一意の Microsoft アプリ ID。 これは、全体的な[アプリ ID](#id) と同じにすることができます。|
-|`needsChannelSelector`|ブール値|||ボットを特定のチャネルに追加するためのユーザー用ヒントをボットで使用するかどうかの説明。既定: `false`|
-|`isNotificationOnly`|ブール値|||ボットが会話ボットではなく、一方向の通知専用ボットであるかどうかを示します。既定値: `false`|
-|`supportsFiles`|ブール値|||ボットが個人用チャットでファイルをアップロード/ダウンロードできるかどうかを示します。既定値: `false`|
-|`scopes`|列挙型の配列|3|✔️|ボットがエクスペリエンスを提供するのは、`team` 内のチャネルのコンテキスでなのか、グループ チャット (`groupchat`) でなのか、あるいは個別のユーザーのみをエクスペリエンスの対象にする (`personal`) のかを指定します。これらのオプションは非排他的です。|
+|`needsChannelSelector`|ブール値|||Describes whether or not the bot utilizes a user hint to add the bot to a specific channel. Default: `false`|
+|`isNotificationOnly`|ブール値|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. Default: `false`|
+|`supportsFiles`|ブール型|||Indicates whether the bot supports the ability to upload/download files in personal chat. Default: `false`|
+|`scopes`|列挙型の配列|3|✔️|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupchat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
 
 ### <a name="botscommandlists"></a>bots.commandLists
 
@@ -442,7 +442,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`items.scopes`|列挙型の配列|3|✔️|コマンド リストが有効なスコープを指定します。オプションは、 `team`、 `personal`、および `groupchat`です。|
+|`items.scopes`|列挙型の配列|3|✔️|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupchat`.|
 |`items.commands`|オブジェクトの配列|10|✔️|ボットがサポートするコマンドの配列:<br>`title`: ボット コマンドの名前 (文字列、32)。<br>`description`: コマンド構文とその引数 (文字列、128) の簡単な説明または例。|
 
 ## <a name="connectors"></a>コネクタ
@@ -457,7 +457,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |---|---|---|---|---|
 |`configurationUrl`|String|2048 文字|✔️|コネクタを構成するときに使用する https:// URL。|
 |`connectorId`|String|64 文字|✔️|[コネクタ開発者ダッシュボード](https://aka.ms/connectorsdashboard)の ID に一致するコネクタの一意の識別子です。|
-|`scopes`|列挙型の配列|1|✔️|コネクタが `team`のチャネルのコンテキストでエクスペリエンスを提供するか、個々のユーザーのみを対象としたエクスペリエンスを提供するかを指定します (`personal`)。現時点では、 `team` スコープのみがサポートされています。|
+|`scopes`|列挙型の配列|1|✔️|Specifies whether the Connector offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). Currently, only the `team` scope is supported.|
 
 ## <a name="composeextensions"></a>composeExtensions
 
@@ -473,7 +473,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |名前| 種類 | 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`botId`|String|64|✔️|ボット フレームワークに登録されている、メッセージ拡張機能をサポートするボットの一意の Microsoft アプリ ID。 これは、全体的な[アプリ ID](#id) と同じにすることができます。|
-|`canUpdateConfiguration`|ブール値|||メッセージ拡張機能の構成をユーザーが更新できるかどうかを示す値。既定は `false` です。|
+|`canUpdateConfiguration`|ブール値|||A value indicating whether the configuration of a message extension can be updated by the user. The default is `false`.|
 |`commands`|オブジェクトの配列|10|✔️|メッセージ拡張機能がサポートするコマンドの配列|
 
 ### <a name="composeextensionscommands"></a>composeExtensions.commands
@@ -496,11 +496,11 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |`taskInfo.width`|String|||ダイアログの幅 - ピクセル単位の数値、または '大'、'中'、'小' などの既定のレイアウト。|
 |`taskInfo.height`|String|||ダイアログの高さ - ピクセル単位の数値、または '大'、'中'、'小' などの既定のレイアウト。|
 |`taskInfo.url`|String|||初期 Web ビュー URL。|
-|`messageHandlers`|オブジェクトの配列|5||特定の条件が満たされた場合にアプリを呼び出すことができるハンドラーの一覧。ドメインは `validDomains` にも一覧表示されている必要があります。|
-|`messageHandlers.type`|String|||メッセージ ハンドラーの種類。`"link"`でなければなりません。|
+|`messageHandlers`|オブジェクトの配列|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`.|
+|`messageHandlers.type`|文字列|||The type of message handler. Must be `"link"`.|
 |`messageHandlers.value.domains`|文字列 (String) の配列|||リンク メッセージ ハンドラーが登録できるドメインの配列。|
 |`parameters`|オブジェクトの配列|5|✔️|コマンドが取得するパラメーターの一覧。 最小: 1; 最大: 5|
-|`parameter.name`|String|64 文字|✔️|クライアントに表示されるパラメーターの名前。これはユーザーの要求に含まれています。|
+|`parameter.name`|String|64 文字|✔️|クライアントに表示されるパラメーターの名前。 これはユーザー要求に含まれます。|
 |`parameter.title`|String|32 文字|✔️|パラメーターのユーザーフレンドリーなタイトル。|
 |`parameter.description`|String|128 文字||このパラメーターの目的を説明するユーザーフレンドリーな文字列。|
 |`parameter.inputType`|String|128 文字||`fetchTask: true` のタスク モジュールに表示されるコントロールの型を定義します。 `text`, `textarea`, `number`, `date`, `time`, `toggle`, `choiceset` の 1 つ。|
@@ -523,7 +523,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 **省略可能** 文字列の配列
 
-アプリがアクセスを要求する可能性のあるユーザーのデバイス上のネイティブ機能を指定します。オプションは次のとおりです。
+Specifies the native features on a user's device that your app may request access to. Options are:
 
 * `geolocation`
 * `media`
@@ -578,7 +578,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
  **省略可能** — ブール値
 
-タブ ヘッダー バーの有無にかかわらず、個人用アプリがレンダリングされる場所を示します。既定値は **false** です。
+Indicate where a personal app is rendered with or without a tab header bar. Default is **false**.
 
 > [!NOTE]
 > `isFullScreen` は、組織に発行されたアプリでのみ機能します。
@@ -598,7 +598,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`type`|string|32 文字|✔️|通知の種類。 *以下を参照してください*。|
-|`description`|string|128 文字|✔️|通知の簡単な説明。 *以下を参照してください*。|
+|`description`|string|128 文字|✔️|A brief description of the notification. *See below*.|
 |`templateText`|string|128 文字|✔️|例: "あなたに {actor} が作成したタスク {taskId}"|
 
 ```json
@@ -694,7 +694,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 **省略可能** - オブジェクト
 
-グループのインストール スコープを選択すると、ユーザーがアプリをインストールするときに既定の機能が定義されます。オプションは次のとおりです。
+When a group install scope is selected, it will define the default capability when the user installs the app. Options are:
 
 * `team`
 * `groupchat`
@@ -702,9 +702,9 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`team`|string|||選択したインストール スコープが `team`の場合、このフィールドは使用可能な既定の機能を指定します。オプション: `tab`、 `bot`、または `connector`。|
-|`groupchat`|文字列|||選択したインストール スコープが `groupchat`の場合、このフィールドは使用可能な既定の機能を指定します。オプション: `tab`、 `bot`、または `connector`。|
-|`meetings`|文字列|||選択したインストール スコープが `meetings`の場合、このフィールドは使用可能な既定の機能を指定します。オプション: `tab`、 `bot`、または `connector`。|
+|`team`|string|||When the install scope selected is `team`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
+|`groupchat`|string|||When the install scope selected is `groupchat`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
+|`meetings`|string|||When the install scope selected is `meetings`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
 
 ## <a name="subscriptionoffer"></a>subscriptionOffer
 
@@ -714,13 +714,13 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
-|`offerId`| string | 2,048 文字 | ✔️ | パブリッシャー ID とオファー ID を含む一意の識別子。 [パートナー センター](https://partner.microsoft.com/dashboard)で確認できます。文字列は `publisherId.offerId`として書式設定する必要があります。|
+|`offerId`| string | 2,048 文字 | ✔️ | A unique identifier that includes your Publisher ID and Offer ID, which you can find in [Partner Center](https://partner.microsoft.com/dashboard). You must format the string as `publisherId.offerId`.|
 
 ## <a name="meetingextensiondefinition"></a>meetingExtensionDefinition
 
 **省略可能** - オブジェクト
 
-会議拡張機能の定義を指定します。詳細については、「[Teamsのカスタム Together Mode シーン](../../apps-in-teams-meetings/teams-together-mode.md)」を参照してください。
+Specify meeting extension definition. For more information, see [custom Together Mode scenes in Teams](../../apps-in-teams-meetings/teams-together-mode.md).
 
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
@@ -758,7 +758,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
 
 |名前| 型|最大サイズ|必須 |説明|
 |---|---|---|---|---|
-|`type`|string||✔️| リソース固有のアクセス許可の種類。オプション: `Application` と `Delegated`。|
+|`type`|string||✔️| The type of the resource-specific permission. Options: `Application` and `Delegated`.|
 |`name`|string|128 文字|✔️|リソース固有のアクセス許可の名前。 詳細については、「[リソース固有のアプリケーションのアクセス許可](#resource-specific-application-permissions)」および「[リソース固有の委任されたアクセス許可](#resource-specific-delegated-permissions)」を参照してください|
 
 #### <a name="resource-specific-application-permissions"></a>リソース固有のアプリケーションのアクセス許可
@@ -776,6 +776,7 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
     |`ChannelMeetingParticipant.Read.Group`| サインインしたユーザーの代理で、このチームに関連付けられたチャネル会議の名前、役割、ID、参加時間と退会時間などの参加者情報を読み取ることができるようにします。|
     |`InAppPurchase.Allow.Group`| サインインしているユーザーの代わりに、このチームのユーザーにマーケットプレース オファーを表示し、アプリ内での購入を完了できるようにします。|
     |`ChannelMeetingStage.Write.Group`| サインインしているユーザーの代わりに、このチームに関連付けられているチャネル会議の会議ステージにコンテンツをアプリが表示できるようにします。|
+    |`LiveShareSession.ReadWrite.Group`|アプリで、このチームに関連付けられている会議の Live Share セッションを作成して同期し、サインインしているユーザーに代わって、メンバーの会議ロールなどの会議の名簿に関する関連情報にアクセスできるようにします。|
 
 * **チャットまたは会議用のリソース固有の委任されたアクセス許可**
 
@@ -785,21 +786,14 @@ Teams アプリ内で使用されるアイコン。 アイコン ファイルは
     |`MeetingStage.Write.Chat`|サインインしているユーザーの代わりに、このチャットに関連付けられている会議の会議ステージにコンテンツをアプリが表示できるようにします。|
     |`OnlineMeetingParticipant.Read.Chat`|サインインしたユーザーの代理で、このチャットに関連付けられた会議の名前、役割、ID、参加時間と退会時間などの参加者情報を読み取ることができるようにします。|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|サインインしているユーザーの代わりに、このチャットに関連付けられている会議の参加者の着信オーディオをアプリで切り替えられるようにします。|
+    |`LiveShareSession.ReadWrite.Chat`|アプリで、このチャットに関連付けられている会議の Live Share セッションを作成して同期し、サインインしているユーザーに代わって会議のメンバーの会議ロールなどの会議の名簿に関する関連情報にアクセスできるようにします。|
+   |`OnlineMeetingIncomingAudio.Detect.Chat`|サインインしているユーザーに代わって、このチャットに関連付けられている会議の受信オーディオの状態の変化をアプリが検出できるようにします。|
 
 * **ユーザーのリソース固有の委任されたアクセス許可**
 
     |**[名前]**|**説明**|
     |---|---|
     |`InAppPurchase.Allow.User`|サインインしているユーザーの代わりに、アプリでユーザー マーケットプレース オファーを表示し、アプリ内でユーザーの購入を完了できるようにします。|
-
-* **Teams ライブ共有のリソース固有のアクセス許可**
-
-   |名前| 説明 |
-   | ----- | ----- |
-   |`LiveShareSession.ReadWrite.Chat`|<!--- need info --->|
-   |`LiveShareSession.ReadWrite.Channel`|<!--- need info --->|
-   |`MeetingStage.Write.Chat`|<!--- need info --->|
-   |`OnlineMeetingIncomingAudio.Detect.Chat`|<!--- need info --->|
 
 ## <a name="see-also"></a>関連項目
 
