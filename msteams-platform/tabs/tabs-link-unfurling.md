@@ -5,12 +5,12 @@ description: Web コンテンツを表示するために呼び出される全画
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: b31f9aa1ad00a0cf255df4aa1976470c3add3551
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: c11e65958e14db8f29206ff3585680818c18c5af
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450451"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027292"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>タブのリンクの展開とステージ ビュー
 
@@ -24,7 +24,7 @@ ms.locfileid: "67450451"
 
 ## <a name="advantage-of-stage-view"></a>ステージ ビューの利点
 
-ステージ ビューは、Teams でコンテンツを表示するよりシームレスなエクスペリエンスを提供するのに役立ちます。ユーザーは、コンテキストを離れることなく、アプリが提供するコンテンツを開いて表示できます。また、コンテンツをチャットまたはチャネルに固定して、後ですばやくアクセスできるようにすることで、アプリへのユーザーエンゲージメントを高めることができます。
+Stage View helps provide a more seamless experience of viewing content in Teams. Users can open and view the content provided by your app without leaving the context, and they can pin the content to the chat or channel for future quick access leading to a higher user engagement with your app.
 
 ## <a name="stage-view-vs-task-module"></a>ステージ ビューとタスク モジュール
 
@@ -84,13 +84,13 @@ ms.locfileid: "67450451"
 
 ステージ ビューを呼び出すプロセスを次に示します。
 
-* ユーザーが **[表示]** を選択すると、ボットは `invoke` 要求を受け取ります。リクエストタイプは `composeExtension/queryLink` です。
+* When the user selects **View**, the bot receives an `invoke` request. The request type is `composeExtension/queryLink`.
 * `invoke` ボットからの応答には、型 `tab/tabInfoAction` が含まれるアダプティブ カードが含まれています。
 * ボットは `200` コードで応答します。
 
 > [!NOTE]
-
-> Teams モバイル クライアントでは、[[Teams ストア]](/platform/concepts/deploy-and-publish/apps-publish-overview.md) を介して配布されたアプリのステージ ビューを呼び出し、モバイル向けに最適化されたエクスペリエンスがない場合、デバイスの既定の Web ブラウザーが開きます。ブラウザは、`TabInfo` オブジェクトの `websiteUrl` パラメータで指定されたURLを開きます。
+>
+> On Teams mobile clients, invoking Stage View for apps distributed through the [Teams store](~/concepts/deploy-and-publish/apps-publish-overview.md) and not having a moblie-optimized experience opens the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
 
 ## <a name="invoke-stage-view-through-deep-link"></a>ディープ リンクを使用してステージ ビューを呼び出す
 
@@ -141,8 +141,8 @@ ms.locfileid: "67450451"
 |:-----------|:---------|:------------|:-----------------------|
 | `entityId` | String | 64 | このプロパティは、タブに表示されるエンティティの固有の識別子です。 これは必須フィールドです。|
 | `name` | String | 128 | このプロパティは、チャネル インターフェイスのタブの表示名です。 この入力フィールドは省略できます。|
-| `contentUrl` | String | 2048 | このプロパティは、チーム キャンバスに表示されるエンティティ UI を指す https:// URL です。これは必須フィールドです。|
-| `websiteUrl?` | String | 2048 | このプロパティは、ユーザーがブラウザーで表示することを選択した場合にポイントする https:// URL です。これは必須フィールドです。|
+| `contentUrl` | String | 2048 | This property is the https:// URL that points to the entity UI to be displayed in the Teams canvas. This is a required field.|
+| `websiteUrl?` | String | 2048 | This property is the https:// URL to point at, if a user selects to view in a browser. This is a required field.|
 | `removeUrl?` | String | 2048 | このプロパティは、ユーザーがタブを削除したときに表示される UI を指す https:// URL です。これは省略可能なフィールドです。|
 
 ## <a name="code-sample"></a>コード サンプル

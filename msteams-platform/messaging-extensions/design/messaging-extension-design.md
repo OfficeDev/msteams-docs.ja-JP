@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.author: surbhigupta
 ms.topic: conceptual
-ms.openlocfilehash: ab456458c5e7ec5b71ae02c4071d86365f4805cf
-ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.openlocfilehash: bb85c9c7d00fea47796e171cc1a0175367462942
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2022
-ms.locfileid: "67338901"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027082"
 ---
 # <a name="designing-your-microsoft-teams-message-extension"></a>Microsoft Teams メッセージ拡張機能のデザイン
 
@@ -117,7 +117,7 @@ Teams アプリ間で一貫性を保つために、サインイン画面をカ�
 
 ### <a name="insert-content-into-a-message"></a>メッセージにコンテンツを挿入する
 
-**1. メッセージ拡張機能の選択**。ユーザーは、作成ボックスから共有するコンテンツを検索できます。
+**1. Select a message extension**. Users can search for the content they want to share from the compose box.
 
 #### <a name="mobile"></a>Mobile
 
@@ -127,7 +127,7 @@ Teams アプリ間で一貫性を保つために、サインイン画面をカ�
 
 :::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="作成ボックスから挿入するコンテンツを検索するユーザーの例を示します。":::
 
-**2. コンテンツの挿入**。投稿されると、他のユーザーが返信したり、コンテンツを選択してアプリの詳細情報を表示したりできます。
+**2. Insert content**. Once posted, others can reply or select the content to see more information in your app.
 
 #### <a name="mobile"></a>Mobile
 
@@ -161,7 +161,7 @@ Teams アプリ間で一貫性を保つために、サインイン画面をカ�
 
 :::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="たとえば、ユーザーが作成ボックスにリンクを貼り付ける例を示しています。":::
 
-**2. コンテンツの挿入**。アプリが作成ボックス内の URL を認識すると、Web コンテンツのコンテンツリッチなプレビューを提供するカードとしてリンクがレンダリングされます。(詳細については、[アダプティブ カード設計ガイドライン](../../task-modules-and-cards/cards/design-effective-cards.md) を参照してください。)
+**2. Insert content**. If your app recognizes the URL in the compose box, it renders the link as a card that provides a content-rich preview of the web content. (See [Adaptive Cards design guidelines](../../task-modules-and-cards/cards/design-effective-cards.md) for more information.)
 
 #### <a name="mobile"></a>Mobile
 
@@ -230,7 +230,7 @@ Teams アプリ間で一貫性を保つために、サインイン画面をカ�
 
 #### <a name="do-integrate-with-single-sign-on"></a>Do: シングル サインオンとの統合
 
-SSO を使用すると、サインイン プロセスが簡単、高速になり、セキュリティで保護されます。また、ユーザーが既に個人用アプリにサインインしている場合は、メッセージ拡張機能にアクセスするためにもう一度サインインする必要はありません。
+SSO makes the sign-in process easier, faster, and secure. Also, if a user has already signed in to your personal app, they don’t have to also sign in again to access the message extension.
 
    :::column-end:::
    :::column span="":::
@@ -276,7 +276,7 @@ SSO を使用すると、サインイン プロセスが簡単、高速になり
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>実行: Teams のカラー トークンを活用する
 
-各 Teams テーマには独自の配色があります。 テーマの変更を自動的に処理するには、デザインで<a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">カラー トークン (Fluent UI)</a> を使用します。
+各 Teams テーマには独自の配色があります。 テーマの変更を自動的に処理するには、デザインで[カラー トークン (Fluent UI)](https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme) を使用します。
 
    :::column-end:::
    :::column span="":::

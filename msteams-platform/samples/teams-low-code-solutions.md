@@ -5,12 +5,12 @@ description: Teams an Microsoft Power Platform で利用可能な Microsoft の�
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: conceptual
-ms.openlocfilehash: 0cee1547424df7952f2ba9864981814871a511f7
-ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
+ms.openlocfilehash: 05553535f146316dddef311a9a7c2f859fedc3f8
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2022
-ms.locfileid: "67858910"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027229"
 ---
 # <a name="create-low-code-custom-apps-for-teams"></a>Teams 用のローコード カスタム アプリを作成する
 
@@ -43,7 +43,7 @@ Teams の新しい [Power Apps アプリ](https://go.microsoft.com/fwlink/?linki
 
 ### <a name="-teams-and-power-automate"></a>✔ Teams と Power Automate
 
-Teams の [Power Automate アプリ](/power-automate/flows-teams)を使用して、Teams 環境内で[繰り返し作業タスク](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/)を直接自動化するフローを作成できます。 [Microsoft Teams の任意のメッセージからフローをトリガー](/power-automate/trigger-flow-teams-message)し、[Power Automate 内でアダプティブ カードを使用](/power-automate/create-adaptive-cards)できます。 さらに、Teams の新しい [Power Apps アプリ](https://go.microsoft.com/fwlink/?linkid=2143539) 内から Microsoft Teams をカスタマイズして追加するフローを構築できます。
+Teams の [Power Automate アプリ](/power-automate/teams/install-teams-app)を使用して、Teams 環境内で[繰り返し作業タスク](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/)を直接自動化するフローを作成できます。 [Microsoft Teams の任意のメッセージからフローをトリガー](/power-automate/trigger-flow-teams-message)し、[Power Automate 内でアダプティブ カードを使用](/power-automate/create-adaptive-cards)できます。 さらに、Teams の新しい [Power Apps アプリ](https://go.microsoft.com/fwlink/?linkid=2143539) 内から Microsoft Teams をカスタマイズして追加するフローを構築できます。
 
 ### <a name="-teams-and-power-virtual-agents"></a>✔ Teams と Power Virtual Agent
 

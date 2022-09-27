@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 8002b5ddf2fcb403978587819855468915813684
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 26e6982cf7b00d21fb8a15e0d8f194ac8d08ac7d
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558325"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68026998"
 ---
 # <a name="design-your-tab-for-microsoft-teams"></a>Microsoft Teams 用のタブを設計する
 
@@ -62,7 +62,7 @@ Teams ストア (AppSource) から、または次のいずれかのコンテキ�
 |3|**iframe**: アプリのコンテンツ(タブ設定や認証など) のレスポンシブなスペース。|
 |4|**リンクについて**: 完全な説明、アプリに必要な権限、プライバシー ポリシーとサービス使用条件へのリンクなど、アプリに関する詳細情報を表示するダイアログを開きます。|
 |5|**[閉じる] ボタン**: ダイアログを閉じます。|
-|6 |**[チーム メンバーに通知する] オプション**: このダイアログは、タブを追加したことを他の人に知らせる投稿を作成するかどうかをユーザーに確認します。|
+|6|**[チーム メンバーに通知する] オプション**: このダイアログは、タブを追加したことを他の人に知らせる投稿を作成するかどうかをユーザーに確認します。|
 |7 |**[戻る] ボタン**: ダイアログが開いた場所に基づいて、ひとつ前の手順に移動します。|
 |8 |**[保存]** ボタン: タブ セットアップを完了します。|
 
@@ -270,7 +270,7 @@ Teams ストア (AppSource) から、または次のいずれかのコンテキ�
 
 #### <a name="do-take-advantage-of-teams-color-tokens"></a>実行: Teams のカラー トークンを活用する
 
-各 Teams テーマには独自の配色があります。 テーマの変更を自動的に処理するには、デザインで<a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">カラー トークン (Fluent UI)</a> を使用します。
+各 Teams テーマには独自の配色があります。 テーマの変更を自動的に処理するには、デザインで[カラー トークン (Fluent UI)](https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme) を使用します。
 
    :::column-end:::
    :::column span="":::

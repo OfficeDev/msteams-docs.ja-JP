@@ -5,16 +5,16 @@ author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: overview
-ms.openlocfilehash: 472af955ba5a508ea2fa892d9ece94977bdfb660
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: 654bc49cfc671b849e3b88aae1eefa5d1bbaef02
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558836"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68026977"
 ---
 # <a name="microsoft-teams-app-design-system"></a>Microsoft Teams アプリ設計システム
 
-Teams アプリ設計の基礎について簡単に説明します。 包括的なガイダンスと例については、「<a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Microsoft Teams UI キット (Figma)</a>」 を参照してください。
+Teams アプリ設計の基礎について簡単に説明します。 包括的なガイダンスと例については、「[Microsoft Teams UI キット (Figma)](https://www.figma.com/community/file/916836509871353159)」 を参照してください。
 
 ## <a name="layout"></a>レイアウト
 
@@ -42,7 +42,7 @@ Teams アプリ設計の基礎について簡単に説明します。 包括的�
 
       アバターは、Teams 内の人物、チーム、ボット、またはエンティティをグラフィカルに表したものです。 アバター グループは、多くの場合、ライブ アクティビティを伝達したり、縦のスペースを保持する方法で名簿を表すために使用されます。 
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">完全なアバター ガイドライン (Figma) を参照する</a>
+      * [完全なアバター ガイドライン (Figma) を参照する](https://www.figma.com/community/file/916836509871353159)
 
    :::column-end:::
    :::column span="1":::
@@ -62,7 +62,7 @@ Teams アプリ設計の基礎について簡単に説明します。 包括的�
 
       アプリ全体で Fluent UI アイコンを使用することもできます。
 
-      * <a href="https://www.figma.com/community/file/836835755999342788" target="_blank">最新の Fluent アイコン セット (Figma) を取得する</a>
+      * [最新の Fluent アイコン セット (Figma) を取得する](https://www.figma.com/community/file/836835755999342788)
       * [アイコン (Fluent UI) を実装する](https://developer.microsoft.com/fluentui#/styles/web/icons)
 
    :::column-end:::
@@ -81,7 +81,7 @@ Teams アプリ設計の基礎について簡単に説明します。 包括的�
 
       Teams は、タイプ ランプとさまざまなフォント サイズやウェイトに Segoe UI を使用することで、階層を作成し、読みやすさを確保しています。
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">完全なガイドライン (Figma) を参照してください</a>
+      * [完全なガイドライン (Figma) を参照してください](https://www.figma.com/community/file/916836509871353159)
       * [文字体裁 (Fluent UI) を実装する](https://developer.microsoft.com/fluentui#/styles/web/typography)
 
    :::column-end:::
@@ -100,7 +100,7 @@ Teams アプリ設計の基礎について簡単に説明します。 包括的�
 
       Teams Web とデスクトップでは既定のテーマ (明るいテーマ)、ダーク テーマ、ハイコントラスト テーマがサポートされていますが、Teams モバイルでは明るいテーマとダーク テーマがサポートされています。 各テーマには独自の配色があります。
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">フル カラー ガイドラインと使用可能なカラー トークンを参照してください (Figma)</a>
+      * [フル カラー ガイドラインと使用可能なカラー トークンを参照してください (Figma)](https://www.figma.com/community/file/916836509871353159)
       * [色を実装する (Fluent UI)](https://fluentsite.z22.web.core.windows.net/0.51.7/colors)
 
    :::column-end:::
@@ -118,7 +118,7 @@ Teams アプリ設計の基礎について簡単に説明します。 包括的�
 
       図形と昇格を使用して、アプリに追加の階層を作成できます。 
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">完全な図形と昇格のガイドラインを参照してください (Figma)</a>
+      * [完全な図形と昇格のガイドラインを参照してください (Figma)](https://www.figma.com/community/file/916836509871353159)
       * [図形と昇格を実装する (Fluent UI)](https://developer.microsoft.com/fluentui#/styles/web/elevation)
 
    :::column-end:::
@@ -137,7 +137,7 @@ Teams アプリ設計の基礎について簡単に説明します。 包括的�
 
       Teams の一部であると感じるには、一般に、アプリのコピーは次の [ [Microsoft 音声原則]](/style-guide/brand-voice-above-all-simple-human) に従う必要があります。暖かくリラックスし、鮮明でクリアで、すぐに使用できます。
 
-      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">完全なコピーとコンテンツのガイドライン (ボットの作成を含む) (Figma) を参照してください</a>
+      * [完全なコピーとコンテンツのガイドライン (ボットの作成を含む) (Figma) を参照してください](https://www.figma.com/community/file/916836509871353159)
 
    :::column-end:::
    :::column span="1":::

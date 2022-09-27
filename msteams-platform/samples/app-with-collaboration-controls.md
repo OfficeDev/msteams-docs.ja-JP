@@ -5,12 +5,12 @@ description: このモジュールでは、Teams のコラボレーション コ
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: b5300a66fa8a5948a2081e90e8ad138858d38f3f
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: e712c55dd4543edda9115751be09d81d1795f02b
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67179510"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027341"
 ---
 # <a name="create-a-new-model-driven-app-with-collaboration-controls-for-teams"></a>Teams のコラボレーション コントロールを使用して新しいモデル駆動型アプリを作成する
 
@@ -163,7 +163,7 @@ ms.locfileid: "67179510"
 > [!NOTE]
 > 設定はアプリを起動する際に役立つため、推奨される手順に従っていることを確認してください。 コントロールの起動と保存に問題がある場合は、値を再確認します。
 
-新しいチームを作成するか、Microsoft Teamsの既存のチームを使用してアプリケーションをホストし、設定変数を作成することで、グループ ID を取得できます。
+新しいチームを作成するか、Microsoft Teams で既存のチームを使用してアプリケーションをホストし、設定変数を作成することで、グループ ID を取得できます。
 
 新しいチームを作成するには、 [最初からチームを作成する方法に関するページを](https://support.microsoft.com/en-us/office/create-a-team-from-scratch-174adf5f-846b-4780-b765-de1a0a737e2b)参照してください。
 
@@ -190,9 +190,9 @@ ms.locfileid: "67179510"
          :::image type="content" source="../assets/images/collaboration-control/graph-permissions.png" alt-text="スクリーンショットは、グラフ エクスプローラーを示す例です。":::
 
      1. ホスト名をホスト名に置き換え、サイト パスへの相対パスを指定し、.`https://graph.microsoft.com/v1.0/sites/{hostname}:/{relative-path-to-site}` 次に例を示します。
-         1. サイト URL が = の場合 <https://myhostname.sharepoint.com/sites/MySiteName>
-         1. ホスト名 = myhostname.sharepoint.com
-         1. サイトへの相対パス = sites/MySiteName
+         1. サイト URL が = の場合 `https://myhostname.sharepoint.com/sites/MySiteName`
+         1. ホスト名 = `myhostname.sharepoint.com`
+         1. サイトへの相対パス = `sites/MySiteName`
 
               :::image type="content" source="../assets/images/collaboration-control/graph-call.png" alt-text="スクリーンショットは、Graph 呼び出しを示す例です。":::
 
@@ -251,7 +251,7 @@ Notes コントロールには設定値は必要ありません。 これで、�
 
 1. 保存されたタスクがタスクの一覧に表示されます。
 
-1. すべてのタスクはMicrosoft Plannerによってサポートされます。 ユーザーは、Microsoft Teams内のタスク アプリを使用して、割り当てられているすべてのタスクを表示できます。 作業を開始するには、省略記号 **...** を選択します。 Teams の左側のウィンドウに表示されます。 Planner と To Do でタスクを検索して選択します。
+1. すべてのタスクはMicrosoft Plannerによってサポートされます。 ユーザーは、Microsoft Teams 内のタスク アプリを使用して、割り当てられているすべてのタスクを表示できます。 作業を開始するには、省略記号 **...** を選択します。 Teams の左側のウィンドウに表示されます。 Planner と To Do でタスクを検索して選択します。
 
      :::image type="content" source="../assets/images/collaboration-control/tasks-planner.png" alt-text="スクリーンショットは、Planner と To Do によるタスクの例です。":::
 
@@ -282,7 +282,7 @@ Notes コントロールには設定値は必要ありません。 これで、�
 
 :::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="スクリーンショットでは、顧客の予約をスケジュールする方法について説明しています。":::
 
-ユーザーは、社内会議と顧客の予約の両方を自分の会議リストに表示できます。 会議の開始後、ユーザーは [ **参加** ] ボタンを選択して参加できます。このボタンをクリックすると、会議がMicrosoft Teamsで直接開きます。
+ユーザーは、社内会議と顧客の予約の両方を自分の会議リストに表示できます。 会議の開始後、ユーザーは [ **参加** ] ボタンを選択して参加できます。このボタンを選択すると、Microsoft Teams で直接会議が開きます。
 
 会議は Outlook によってサポートされるため、ユーザーは Bookings に移動するか、Outlook カレンダーに移動して、1 つの予定表に一覧表示されたすべての会議を表示できます。 内部会議は共有予定表に一覧表示されます。
 

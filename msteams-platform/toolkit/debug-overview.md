@@ -7,15 +7,14 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: d2bdebcb75a9e145cbb874b2d7cc263c78050e07
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: 3b125d6f2f1029191debc547b3cc49b30cd47089
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806923"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027061"
 ---
 # <a name="debug-your-teams-app"></a>Teams アプリをデバッグする
-
 
 Teams Toolkit は、Microsoft Teams アプリのデバッグとプレビューに役立ちます。 デバッグは、Teams でプログラムが正常に実行されるように、問題やバグを確認、検出、修正するプロセスです。
 

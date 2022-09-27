@@ -3,12 +3,12 @@ title: マニフェスト スキーマの参照
 description: この記事では、Microsoft Teams リファレンスのマニフェスト スキーマ、スキーマ、およびサンプルの完全なマニフェストを紹介します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 68208d7a3c2ff1547d6b686cad966f5878bc8780
-ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
+ms.openlocfilehash: b1795af69256eec27e34917cad0b24924f490083
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67990932"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68026970"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Teams のアプリ マニフェストのスキーマ
 
@@ -634,7 +634,7 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 |名前| 型| 最大サイズ | 必須 | 説明|
 |---|---|---|---|---|
 |`id`|string|36 文字|✔️|Azure AD のアプリケーション ID を指定します。 この ID は GUID である必要があります。|
-|`resource`|string|2048 文字|✔️|SSO の認証トークンを取得するためのアプリのリソース URL。 </br> **メモ：** SSO を使用していない場合は、エラー応答を回避するために、このフィールドにダミーの文字列値をアプリ マニフェストに <https://notapplicable> 入力してください。 |
+|`resource`|string|2048 文字|✔️|SSO の認証トークンを取得するためのアプリのリソース URL。 </br> **メモ：** SSO を使用していない場合は、エラー応答を回避するために、このフィールドにダミーの文字列値をアプリ マニフェストに `https://notapplicable` 入力してください。 |
 
 ## <a name="graphconnector"></a>graphConnector
 
@@ -886,7 +886,7 @@ Specify meeting extension definition. For more information, see [custom Together
     |`MeetingStage.Write.Chat`|サインインしているユーザーの代わりに、このチャットに関連付けられている会議の会議ステージにコンテンツをアプリが表示できるようにします。|
     |`OnlineMeetingParticipant.Read.Chat`|サインインしたユーザーの代理で、このチャットに関連付けられた会議の名前、役割、ID、参加時間と退会時間などの参加者情報を読み取ることができるようにします。|
     |`OnlineMeetingParticipant.ToggleIncomingAudio.Chat`|サインインしているユーザーの代わりに、このチャットに関連付けられている会議の参加者の着信オーディオをアプリで切り替えられるようにします。|
-    |`LiveShareSession.ReadWrite.Chat`|アプリで、このチャットに関連付けられている会議の Live Share セッションを作成して同期し、サインインしているユーザーに代わって会議のメンバーの会議ロールなどの会議の名簿に関する関連情報にアクセスできるようにします。|   
+    |`LiveShareSession.ReadWrite.Chat`|アプリで、このチャットに関連付けられている会議の Live Share セッションを作成して同期し、サインインしているユーザーに代わって会議のメンバーの会議ロールなどの会議の名簿に関する関連情報にアクセスできるようにします。|
    |`OnlineMeetingIncomingAudio.Detect.Chat`|サインインしているユーザーに代わって、このチャットに関連付けられている会議の受信オーディオの状態の変化をアプリが検出できるようにします。|
 
 * **ユーザーのリソース固有の委任されたアクセス許可**

@@ -3,12 +3,12 @@ title: Microsoft Teams 開発者向けドキュメント - 用語集
 description: Microsoft Teams 開発者向けドキュメントで使用される用語について説明します
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 2cf9b4c3533b86e45247316e9c6a9da8517494d2
-ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
+ms.openlocfilehash: c8a9a663244803efb113c09857e21523218108d2
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "67653162"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027327"
 ---
 # <a name="glossary"></a>用語集
 
@@ -20,7 +20,7 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 | --- | --- |
 | [アクション コマンド](../messaging-extensions/how-to/action-commands/define-action-command.md) | ポップアップを使用して情報を収集または表示するメッセージ拡張機能アプリの種類。 <br>**関連情報**: 「[メッセージ拡張機能](#m); [検索コマンド](#s) |
 | [アダプティブ カード](../task-modules-and-cards/what-are-cards.md) | ボットまたはメッセージ拡張機能によって会話に追加されたアクション可能なコンテンツ スニペット。 リッチ コミュニケーションのために、これらのカードでテキスト、グラフィックス、ボタンを使用します。 |
-| [匿名ユーザー](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | Azure AD ID を持っておらず、テナントとフェデレーションされていない Teams 会議の参加者の種類。これらは、会議の外部ユーザーのようなものです。 <br>**関連情報**: [フェデレーション ユーザー](#f) |
+| [匿名ユーザー](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | A type of participant in a Teams meeting who doesn't have an Azure AD identity and isn't federated with a tenant. They are like external users in a meeting. <br>**関連情報**: [フェデレーション ユーザー](#f) |
 | [アプリ カタログ](../toolkit/publish.md) | 組織の内部使用のために SharePoint アプリと Office アプリを格納するサイト。 <br>**関連情報**: [SPFx](#s) |
 | [アプリ マニフェスト](../resources/schema/manifest-schema.md) | Teams アプリ マニフェストは、アプリが Microsoft Teams 製品にどのように統合されるかを説明します。 マニフェストは、最新の[マニフェスト スキーマ](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json)に適合している必要があります。 |
 | [アプリ パッケージ](../concepts/build-and-test/apps-package.md) | Teams アプリ パッケージは、アプリ マニフェスト ファイル、色アイコン、アウトライン アイコンを含む zip ファイルです。 |
@@ -36,7 +36,7 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 
 | 用語 | 定義 |
 | --- | --- |
-| [Blazor](../get-started/get-started-overview.md) | 開発者が C# と HTML を使用して Web アプリを作成できるようにする、無料のオープン ソース Web フレームワーク。Microsoft によって開発されています。 |
+| [Blazor](../get-started/get-started-overview.md) | A free and open-source web framework that enables developers to create web apps using C# and HTML. It's being developed by Microsoft. |
 | [Bicep](../toolkit/provision.md) | 宣言型言語。つまり、要素は任意の順序で表示できます。 命令型言語とは異なり、要素の順序はデプロイの処理方法に影響しません。 |
 | [ボット](../bots/what-are-bots.md) | ボットは、プログラムされた反復タスクを実行するアプリです。 <br> **関連情報**: [会話型ボット](#c); [チャット ボット](#c) |
 | [ボット エミュレーター](../bots/how-to/debug/locally-with-an-ide.md#use-the-bot-emulator) | ローカルまたはリモートでボットをテストおよびデバッグできるデスクトップ アプリケーション。 |
@@ -78,7 +78,7 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 
 | 用語 | 定義 |
 | --- | --- |
-| [E5 開発者アカウント](../toolkit/accounts.md) | Microsoft 365 を拡張するアプリを構築するための E5 開発者サブスクリプション。 管理者を含めて最大 25 個のユーザーライセンスを含めることができますが、開発目的のみの使用となります。  <br>**関連情報**: [Microsoft 365 アカウント](#m) |
+| [E5 開発者アカウント](../toolkit/tools-prerequisites.md#accounts-to-build-your-teams-app) | Microsoft 365 を拡張するアプリを構築するための E5 開発者サブスクリプション。 管理者を含めて最大 25 個のユーザーライセンスを含めることができますが、開発目的のみの使用となります。  <br>**関連情報**: [Microsoft 365 アカウント](#m) |
 | [エントリ ポイント](../concepts/app-fundamentals-overview.md) | チーム、チャネル、チャットなど、ユーザーがあなたのアプリを使用できる Team アプリのアクセス ポイント。 |
 | [環境](../toolkit/teamsfx-multi-env.md) | アプリ プロジェクトに対して複数の開発環境を作成して使用できるようにする Teams Toolkit の機能。 Teams Toolkit が既定で作成する開発環境は、ローカル環境と開発環境の 2 つです。 <br>**関連情報**: [ローカル環境](#l); [開発環境](#d) |
 
@@ -104,7 +104,7 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 | --- | --- |
 | [ID プロバイダー](../concepts/authentication/authentication.md) | ユーザーに資格情報を格納して提供するエンティティ。 また、ユーザーは自分で登録することもできます。  <br>**関連情報**: [認証](#a) |
 | [着信 Webhook](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | これにより、外部アプリは Teams チャネルでコンテンツを共有できます。 これらの Webhook は、追跡および通知ツールとして使用されます。 <br>**関連情報**: [Webhook](#w); [発信 Webhook](#o) |
-| [会議中のアプリ エクスペリエンス](../apps-in-teams-meetings/meeting-app-extensibility.md#in-meeting-app-experience) | Teams 会議ライフサイクルのステージ。会議中のアプリ エクスペリエンスを使用すると、アプリと会議内ダイアログ ボックスを使用して、会議中に参加者とのやり取りを行うことができます。 <br>**関連情報**: [会議のライフサイクル](#m) |
+| [会議中のアプリ エクスペリエンス](../apps-in-teams-meetings/meeting-app-extensibility.md#in-meeting-app-experience) | A stage of Teams meeting lifecycle. With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. <br>**関連情報**: [会議のライフサイクル](#m) |
 
 ## <a name="l"></a>L
 
@@ -113,7 +113,7 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 | [リンク展開](../messaging-extensions/how-to/link-unfurling.md) | メッセージ作成領域に貼り付けられたリンクを展開するためにメッセージ拡張機能と会議で使用される機能。 リンクが展開され、リンクに関する追加情報が アダプティブ カード または会議ステージ ビューに表示されます。 |
 | [ローカル環境](../toolkit/TeamsFx-multi-env.md#create-new-environment) | Teams Toolkit によって作成される既定の開発環境。  <br>**関連情報**: [環境](#e); [開発環境](#d) |
 | [ローカル ワークベンチ](../sbs-gs-spfx.yml) | SPFx を使用して作成された Visual Studio Code で Teams アプリを実行およびデバッグするための既定のオプション。 <br>**関連情報**: [Workbench](#w); [Teams ワークベンチ](#t) |
-| [場所機能](../concepts/device-capabilities/location-capability.md) | アプリと統合して、アプリ ユーザーの場所を把握し、コラボレーション エクスペリエンスを強化できるデバイス機能。この機能は現在、Teams モバイル クライアントでのみ使用できます。 <br>**関連情報**: [機能](#c); [メディア機能](#m); [デバイス](#d); [Teams モバイル](#t) |
+| [場所機能](../concepts/device-capabilities/location-capability.md) | A device capability that you can integrate with your app to know the geographical location of the app user for an enhanced collaborative experience. This feature is currently available only for Teams mobile clients only. <br>**関連情報**: [機能](#c); [メディア機能](#m); [デバイス](#d); [Teams モバイル](#t) |
 | [低コード アプリ](../samples/teams-low-code-solutions.md) | コーディングをほとんどまたはまったく必要とせず、迅速に開発および展開できる Microsoft Power Platform を使用して最初から構築されたカスタム Teams アプリ。 |
 
 ## <a name="m"></a>M
@@ -124,11 +124,11 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 | [会議ボット](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | リアルタイムの音声、ビデオ、画面共有を使用して Teams の通話や会議と対話するボット。 <br>**関連情報**: [通話ボット](#c); [チャット ボット](#c) |
 | [会議のライフサイクル](../apps-in-teams-meetings/meeting-app-extensibility.md#meeting-lifecycle) | これは、会議前、会議中、および会議後のアプリ エクスペリエンスに及びます。 会議のライフサイクルの各段階で、タブ、ボット、メッセージ拡張機能を統合できます。 <br>**関連情報**: [会議中エクスペリエンス](#i) |
 | [会議ステージ](../sbs-meetings-stage-view.yml) | 会議拡張機能アプリの機能。 会議中にすべての参加者がアクセスできる共有スペースです。 これは、参加者がリアルタイムでアプリ コンテンツと対話して共同作業するのに役立ちます。 <br>**関連情報**: [ステージ ビュー](#s) |
-| [メッセージ拡張機能](../messaging-extensions/what-are-messaging-extensions.md) | メッセージ拡張機能は、アプリのコンテンツを挿入したり、メッセージを操作したりするためのショートカットです。会話から離れることなく、メッセージ拡張機能を使用できます。 <br>**関連情報**: [検索コマンド](#s); [アクション コマンド](#a) |
+| [メッセージ拡張機能](../messaging-extensions/what-are-messaging-extensions.md) | Message extensions are shortcuts for inserting app content or acting on a message. You can use a message extension without navigating away from the conversation. <br>**関連情報**: [検索コマンド](#s); [アクション コマンド](#a) |
 | [会議の拡張機能](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | ホワイトボード、ダッシュボードなど、会議のライフサイクル中に生産性を高めるために使用するように設計されたアプリ。 |
 | [Microsoft 365 アカウント](../toolkit/accounts.md#microsoft-365-developer-account-types) | Microsoft 365 アカウントには、25 のユーザー ライセンスを含めることができますが、開発目的のみの使用となります。 |
 | [Microsoft 365 開発者プログラム](../toolkit/tools-prerequisites.md)| Microsoft 365 開発者プログラムは、Microsoft 365 を拡張するアプリの構築に役立ちます。 |
-| [Microsoft Graph Explorer](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | Microsoft 365 のデータとインテリジェンスへのゲートウェイ。Microsoft 365、Windows 10、および Enterprise Mobility + Security のデータにアクセスできる統合されたプログラミング モデルが用意されています。 |
+| [Microsoft Graph Explorer](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | The gateway to data and intelligence in Microsoft 365. It provides a unified programmability model that you can use to access data in Microsoft 365, Windows 10, and Enterprise Mobility + Security. |
 | [Microsoft Teams](../overview.md) | Microsoft Teams は、チームがリモートで共同作業を行うのに役立つグループ コラボレーション ソフトウェアです。 |
 | [Microsoft Teams プラットフォーム](../concepts/app-fundamentals-overview.md) | Microsoft Teams 開発者プラットフォームを使用すると、開発者は独自のアプリやサービスを Teams と簡単に統合できます。 |
 | [Microsoft Teams UI ライブラリ](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-library) | Microsoft Teams UI ライブラリは、個々の Teams UI テンプレートと関連コンポーネントをブラウザーで表示およびテストするのに役立ちます。 |
@@ -151,7 +151,7 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 | [個人用アプリ](../concepts/design/personal-apps.md) | 個人用アプリは、個人用スコープを持つ Teams アプリケーションです。 1 人のユーザーとの対話に重点を置きます。 埋め込み Web エクスペリエンスを提供するユーザーまたは個人用タブとの 1 対 1 の会話に参加する会話ボット、またはその両方を行うことができます。 <br>**関連情報**: [共有アプリ](#s) |
 | [Power Virtual Agents](../bots/how-to/add-power-virtual-agents-bot-to-teams.md) | チームのすべてのメンバーが、Teams プラットフォームと簡単に統合できるリッチで会話型のチャット ボットを作成できるコード不要のガイド付きグラフィカル インターフェイス ソリューション。 |
 | [プロアクティブ メッセージ](../bots/how-to/conversations/send-proactive-messages.md) | ウェルカム メッセージ、通知、スケジュールされたメッセージなど、ユーザーからの要求に応答していないボットによって送信されたメッセージ。 |
-| [プロビジョニング](../toolkit/provision.md) | Azure と Microsoft 365 でアプリ用にリソースを作成するプロセスです。ただし、コード (HTML、CSS、JavaScript など) はリソースにコピーされません。これは、展開の前提条件です。 <br>**関連情報**: [展開](#d) |
+| [プロビジョニング](../toolkit/provision.md) | A process that creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources. It's a prerequisite to deployment. <br>**関連情報**: [展開](#d) |
 
 ## <a name="r"></a>R
 
@@ -168,12 +168,12 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 | [検索コマンド](../messaging-extensions/how-to/search-commands/define-search-command.md) | ユーザーが外部システムを検索し、カードを使用して検索結果をメッセージに含めることができるメッセージ拡張機能アプリの種類。 <br>**関連情報**: [メッセージ拡張機能](#m); [アクション コマンド](#a) |
 | [シーケンシャル ワークフロー](../task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md) | ボットがユーザー応答に基づいてユーザーとの会話を実行できるようにするワークフロー。 |
 | [共有アプリ](../concepts/extensibility-points.md#shared-app-experiences) | ユーザーが共同作業や対話を行うことができるチーム、チャネル、またはチャットに存在するアプリ。 <br>**関連情報:** 個人用アプリ |
-| [SharePoint サイト コレクション](../sbs-gs-spfx.yml) | SharePoint アプリのコレクション サイト。SharePoint サイトに SPFx ベースのアプリを展開するには、このサイトの管理者アカウントが必要です。 <br>**関連情報**: SPFx |
+| [SharePoint サイト コレクション](../sbs-gs-spfx.yml) | A collection site for SharePoint apps. You need to have an administrator account for this site before you can deploy your SPFx-based app on the SharePoint site. <br>**関連情報**: SPFx |
 | [サイドロード](../toolkit/publish.md#publish-to-individual-scope-or-sideload-permission) | Teams アプリを配布する前に Teams 環境でテストするために Teams クライアントに読み込まれるプロセス。 |
 | [SidePanel](../sbs-meetings-sidepanel.yml) | 開催者と発表者が異なるビューとアクションのセットを持つ会議のエクスペリエンスをカスタマイズできるようにする Teams 会議アプリの機能。 |
 | [SPFx](../sbs-gs-spfx.yml) | SharePoint Framework (SPFx) は、Microsoft Teams と SharePoint 用のクライアント側ソリューションを構築するための開発モデルです。 |
 | SSO | シングル サインオンの頭字語。ユーザーがソフトウェア プラットフォーム (Microsoft 365 など) の独立したサービスに 1 回だけサインインする必要がある認証方法。 その後、ユーザーは認証を再度実行しなくても、すべてのサービスにアクセスできます。 <br>**関連情報**: [認証](#a) |
-| [ステージ ビュー](../sbs-meetings-stage-view.yml) | Teams で全画面表示で開き、タブとしてピン留めされたコンテンツをレンダリングできるユーザー インターフェイス コンポーネント。Teams 内で Web コンテンツを表示するために呼び出されます。会議ステージと同じ *ではない* ことに注意してください。 <br>**関連情報**: [会議ステージ](#m) |
+| [ステージ ビュー](../sbs-meetings-stage-view.yml) | A user interface component that lets you render the content that is opened in full screen in Teams and pinned as a tab. It's invoked to surface web content within Teams. Note that it is *not* the same as meeting stage. <br>**関連情報**: [会議ステージ](#m) |
 | [スタンドアロン アプリ](../samples/integrating-web-apps.md) | 1 ページまたは大規模で複雑なアプリ。 ユーザーは Teams でその一部の側面を使用できます。 <br>**関連情報**: [コラボレーション アプリ](#c) |
 | [静的検索](../task-modules-and-cards/cards/dynamic-search.md) | ユーザーがアダプティブ カード ペイロードで事前に指定された値から検索できるようにする先行入力検索のメソッド。 <br>**関連情報**: [動的検索](#d) |
 | [ストア検証ガイドライン](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) | アプリを Teams ストアに送信する前に検証するための Teams 固有のガイドラインのセット。 <br>**関連情報**: [Teams ストア](#t) |
@@ -186,9 +186,9 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 | [タブ チャット](../tabs/how-to/conversational-tabs.md) | 動的タブでユーザーが優先会話エクスペリエンスを持つタブの種類。 |
 | [タスク モジュール](../task-modules-and-cards/what-are-task-modules.md) | タスクを完了したり、ビデオを表示したり、ダッシュボードを表示したりするためのモーダル ポップアップを作成する Teams アプリの機能。 |
 | [スレッド ディスカッション](../tabs/design/tabs.md#thread-discussion) | ユーザー間のチャネルまたはチャットに投稿された会話。 <br>**関連情報** [会話](#c); [チャネル](#c) |
-| [Teams](../overview.md) | Microsoft Teams は、組織にとって最高のメッセージ アプリです。リアルタイムのコラボレーションやコミュニケーション、会議、ファイルやアプリの共有ができるワークスペースです。 |
+| [Teams](../overview.md) | Microsoft Teams is the ultimate message app for your organization. It's a workspace for real-time collaboration and communication, meetings, file and app sharing. |
 | [Teams ツールキット](../toolkit/teams-toolkit-fundamentals.md) | Microsoft Teams ツールキットを使用すると、Visual Studio Code 環境内で直接カスタムの Teams アプリを構築できます。  |
-| [TeamsFx](../toolkit/teamsfx-cli.md) | TeamsFx は、Teams アプリケーションの開発を加速するテキスト ベースのコマンド ライン インターフェイスです。TeamsFx CLI とも呼ばれます。|
+| [TeamsFx](../toolkit/teamsfx-cli.md) | TeamsFx is a text-based command line interface that accelerates Teams application development. It's also called TeamsFx CLI.|
 | [TeamsFx SDK](../toolkit/teamsfx-sdk.md) | TeamsFx SDK は、TeamsFx ツールキットまたは CLI を使用してスキャフォールディングされたプロジェクトで事前構成されています。 |
 | [TeamsJS SDK](../tabs/how-to/using-teams-client-sdk.md) | TeamsJS SDK を使用すると、Teams でホストされたエクスペリエンスを作成できます。 TeamsJS v.2.0.0 以降では、Outlook と Office で実行するように Teams アプリを拡張できます。 |
 | [Teams モバイル](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) | Microsoft Teams はモバイル アプリとして利用できます。 |
@@ -213,7 +213,7 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 
 | 用語 | 定義 |
 | --- | --- |
-| [Web サイトの URL](../tabs/design/tabs-mobile.md) | アプリ マニフェスト ファイル (`websiteUrl`) 内のプロパティ。アプリを組織の Web サイトまたは関連する製品のランディング ページにリンクします。これは、Teams モバイル クライアントの必須の構成です。 <br>**関連情報**: [アプリ マニフェスト](#a); [Teams モバイル](#t) |
+| [Web サイトの URL](../tabs/design/tabs-mobile.md) | A property in the app manifest file (`websiteUrl`) that links the app to the website of the organization or landing page of the relevant product. It's a mandatory configuration for Teams mobile client. <br>**関連情報**: [アプリ マニフェスト](#a); [Teams モバイル](#t) |
 | [Web アプリ](../samples/integrate-web-apps-overview.md) | Web サーバー上で実行されるアプリ。 Microsoft Teams プラットフォームと統合できます。 |
 | [Webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md) | これは、外部アプリとの統合に使用される Teams アプリの機能です。 <br>**関連情報**: 受信 Webhook; 発信 Webhook |
 | [Web パーツ](../sbs-gs-spfx.yml) | Visual Studio Code と SharePoint Framework を使用して作成された Teams アプリでページまたはサイトを構築するために使用される UI コンポーネント。 <br>**関連情報**: [SPFx](#s) |

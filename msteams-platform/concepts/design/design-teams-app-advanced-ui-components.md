@@ -5,12 +5,12 @@ description: 階層リンク、通知バー、ステージ ビューなどの Te
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
-ms.openlocfilehash: 055ee4440982add222b76454f1ff4382f129ff21
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
+ms.openlocfilehash: d0c95c680e4cbf81776ebe7d5b0a580b5cff7d2d
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558843"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027348"
 ---
 # <a name="designing-your-microsoft-teams-app-with-advanced-ui-components"></a>高度な UI コンポーネントを使用した Microsoft Teams アプリの設計
 
@@ -18,7 +18,7 @@ ms.locfileid: "66558843"
 
 ## <a name="microsoft-teams-ui-kit"></a>Microsoft Teams UI Kit
 
-<a href="https://fluentsite.z22.web.core.windows.net/" target="_blank">Fluent UI</a> に基づいて、Microsoft Teams UI Kit には、Teams アプリを構築するために特別に設計されたコンポーネントとパターンが含まれています。 UI キットでは、ここに示されているコンポーネントを直接デザインに取り込んで挿入し、各コンポーネントの使用方法の例をさらに確認できます。
+[Fluent UI](https://fluentsite.z22.web.core.windows.net/) に基づいて、Microsoft Teams UI Kit には、Teams アプリを構築するために特別に設計されたコンポーネントとパターンが含まれています。 UI キットでは、ここに示されているコンポーネントを直接デザインに取り込んで挿入し、各コンポーネントの使用方法の例をさらに確認できます。
 
 > [!div class="nextstepaction"]
 > [Microsoft Teams UI Kit (Figma) を入手する](https://www.figma.com/community/file/916836509871353159)
@@ -32,7 +32,7 @@ ms.locfileid: "66558843"
 * 階層の通信
 * ナビゲーション
 
-### <a name="mobile"></a>モバイル
+### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="モバイルでの階層リンク テンプレートの例を示します。":::
 
@@ -49,7 +49,7 @@ ms.locfileid: "66558843"
 * Teams タブ内の複数のページを参照します。
 * 複雑なアプリを複数のページに分割します。
 
-### <a name="mobile"></a>モバイル
+### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="モバイル上の左側のナビゲーション テンプレートの例を示します。":::
 
@@ -69,7 +69,7 @@ Fluent UI [アラート](https://fluentsite.z22.web.core.windows.net/0.59.0/comp
 * 成功メッセージ
 * 情報メッセージまたはプロモーション メッセージ
 
-### <a name="mobile"></a>モバイル
+### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="モバイル上の通知バー UI テンプレートの例を示します。":::
 
@@ -88,7 +88,7 @@ Fluent UI [アラート](https://fluentsite.z22.web.core.windows.net/0.59.0/comp
 * 別のアプリやブラウザーではなく、Teams 内の大きな画面にコンテンツを表示する
 * スポットライト メディアまたはその他のリッチ コンテンツ
 
-### <a name="mobile"></a>モバイル
+### <a name="mobile"></a>Mobile
 
 アプリは、アダプティブ カード、共有リンク、またはビジュアル コンポーネント (グラフなど) からステージを起動できます。
 
@@ -108,7 +108,7 @@ Fluent UI [アラート](https://fluentsite.z22.web.core.windows.net/0.59.0/comp
 * コンテキスト フィルターと検索。
 * ナビゲーションと階層リンク。
 
-### <a name="mobile"></a>モバイル
+### <a name="mobile"></a>Mobile
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="モバイル上のツール バー テンプレートの例を示します。":::
 

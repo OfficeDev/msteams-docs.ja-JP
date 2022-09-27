@@ -1,27 +1,27 @@
 ---
-title: Microsoft Teamsでコラボレーション コントロールを使用してアプリをデプロイする
+title: Microsoft Teams でコラボレーション コントロールを使用してアプリを展開する
 author: surbhigupta
-description: このモジュールでは、Microsoft Teamsでコラボレーション コントロールを使用してアプリをデプロイする方法と、他のユーザーがアプリを使用できるようにする方法について説明します。
+description: このモジュールでは、Microsoft Teams でコラボレーション コントロールを使用してアプリを展開する方法と、他のユーザーがアプリを使用できるようにする方法について説明します。
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 0ea4f1c25a84ec1bcbefc379e5021815a5bea650
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 75a2aa9d09247ac152c31df02f2bb8d4fb507619
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67179408"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027306"
 ---
-# <a name="deploy-collaboration-controls-to-microsoft-teams"></a>コラボレーション コントロールをMicrosoft Teamsにデプロイする
+# <a name="deploy-collaboration-controls-to-microsoft-teams"></a>コラボレーション コントロールを Microsoft Teams に展開する
 
-コラボレーション コントロールは現在、Microsoft Teams内で最適に機能します。 個人用アプリとタブ アプリの両方として Teams アプリ内に埋め込むことができる新しいアプリを作成できます。
+コラボレーション コントロールは現在、Microsoft Teams 内で最適に機能します。 個人用アプリとタブ アプリの両方として Teams アプリ内に埋め込むことができる新しいアプリを作成できます。
 
 > [!NOTE]
 > 現在、コラボレーション コントロールは [、パブリック開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md)でのみ使用できます。
 
 ## <a name="configure-the-app-for-teams"></a>Teams 用にアプリを構成する
 
-[モデル駆動型アプリケーションの作成](/samples/app-with-collaboration-controls.md#create-a-model-driven-application)で作成したアプリには、左側のウィンドウが 1 つだけあり、複雑なコマンドはありません。 そのため、Teams にアプリを追加する前に、左側のウィンドウを非表示にして、よりわかりやすいヘッダー ビューを作成できます。
+[モデル駆動型アプリケーションの作成](~/samples/app-with-collaboration-controls.md#create-a-model-driven-application)で作成したアプリには、左側のウィンドウが 1 つだけあり、複雑なコマンドはありません。 そのため、Teams にアプリを追加する前に、左側のウィンドウを非表示にして、よりわかりやすいヘッダー ビューを作成できます。
 
 > [!NOTE]
 > 左側のウィンドウと高密度ヘッダーをユーザーに表示する場合は、次の手順を有効にしないでください。
@@ -60,15 +60,15 @@ ms.locfileid: "67179408"
 
      :::image type="content" source="../assets/images/collaboration-control/publish-cusomization.png" alt-text="すべてのカスタマイズを発行する":::
 
-## <a name="add-the-app-to-microsoft-teams-app-catalog"></a>アプリカタログにアプリを追加Microsoft Teams
+## <a name="add-the-app-to-microsoft-teams-app-catalog"></a>Microsoft Teams アプリ カタログにアプリを追加する
 
-設定が定義されると、アプリをMicrosoft Teamsに追加できるようになりました。 まず、Power Apps Maker ポータルの **[アプリ**] ページに移動し、作成したアプリを見つけて省略記号を選択します **。...**
+設定が定義されたので、Microsoft Teams にアプリを追加できるようになりました。 まず、Power Apps Maker ポータルの **[アプリ**] ページに移動し、作成したアプリを見つけて省略記号を選択します **。...**
 
 アプリを Teams に追加するには、[Teams **に追加]** を選択します。
 
 :::image type="content" source="../assets/images/collaboration-control/add-to-teams.png" alt-text="Teams に追加する":::
 
-**[Teams に追加]** を選択するとダイアログが開き、詳細を確認して **[アプリのダウンロード**] を選択すると、Microsoft Teamsアプリ マニフェストがデバイスに保存されます。
+**[Teams に追加]** を選択するとダイアログが開き、詳細を確認して **[アプリのダウンロード**] を選択すると、Microsoft Teams アプリ マニフェストがデバイスに保存されます。
 
 :::image type="content" source="../assets/images/collaboration-control/colab-manager-inspection.png" alt-text="スクリーンショットは、コラボレーション マネージャーの検査を示す例です":::
 
@@ -95,7 +95,7 @@ ms.locfileid: "67179408"
 
 1. すべての必須フィールドを追加します。
      1. **チーム名:** 名前が部署内で一意であることを確認します。
-     1. **形容：** チームの説明を入力します。
+     1. **説明：** チームの説明を入力します。
      1. **部署:** ドロップダウン リストから部署を選択します。
      1. **管理者：** 文字を入力して、管理者として割り当てる組織内のユーザーを検索します。
      1. **チームの種類:** チームの種類を選択します。 次の手順では、ドロップダウン リストから [所有者] を選択したことを前提としています。 他のチームの種類 (Microsoft 365 チームとMicrosoft Azure Active Directory チーム) では、Azure Active Directory からチーム メンバーが自動的に設定されます。

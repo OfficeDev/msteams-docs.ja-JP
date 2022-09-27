@@ -4,12 +4,12 @@ description: アプリ ID URI、アクセス トークンのスコープ、信�
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams 認証タブ Microsoft Azure Active Directory (Azure AD) アクセス トークン SSO テナント スコープ
-ms.openlocfilehash: 4cbe07c37a12ef3f2902c2a2760ed07ed99e4af6
-ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
+ms.openlocfilehash: 92b974840262fedb268aa7c160aa28fc0a33e2cb
+ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "67653200"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68027096"
 ---
 # <a name="register-your-tab-app-in-azure-ad"></a>Azure AD でタブ アプリを登録する
 
@@ -154,8 +154,8 @@ Azure AD に新しいアプリを登録し、テナントとアプリのプラ�
     >
     >   | 使用される基本リソース名以下の場合 | URL は次のようになります... | 形式は以下でサポートされています... |
     >   | --- | --- | --- |
-    >   | *demoapplication* | **<https://demoapplication.example.net>** | すべてのプラットフォーム。|
-    >   | *DemoApplication* | **<https://DemoApplication.example.net>** | デスクトップ、Web、および iOS のみ。 Android ではサポートされていません。 |
+    >   | *demoapplication* | `https://demoapplication.example.net` | すべてのプラットフォーム。|
+    >   | *DemoApplication* | `https://DemoApplication.example.net` | デスクトップ、Web、および iOS のみ。 Android ではサポートされていません。 |
     >
     >    基本リソース名として小文字のオプション *demoapplication* を使用します。
 
