@@ -5,12 +5,12 @@ ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 4641d19a6df93cf4dc575653bde0318f429ca551
-ms.sourcegitcommit: f2449520011b8a2094173ddcd7fe816256061e5e
-ms.translationtype: HT
+ms.openlocfilehash: f8891edb11134570a79c5483eea722a44ad48b91
+ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2022
-ms.locfileid: "67158067"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68044652"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Microsoft Teams ストアにアプリを公開する
 
@@ -124,7 +124,7 @@ Teams ストアに公開されたアプリは、Microsoft 365 アプリおよび
 
 * **アプリ提出を投稿する**
 
-  * 検証レポートを確認した後、検証レポートに関連する質問がある場合、または報告された問題を解決するために追加のサポートが必要な場合は、メール スレッドに返信してください。
+  * 検証レポートを確認したら、検証レポートに関連するクエリを含む電子メール スレッドに返信するか、報告された問題を解決するために追加のサポートが必要な場合。
 
   * アプリが承認されるまで、報告された問題を解決するのに十分な開発者帯域幅があることを確認してください。
 

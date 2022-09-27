@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 65d6a8683249c7b076705087675029eb91f6eb24
-ms.sourcegitcommit: d3b7b4a12c757b97cf0e996bedd22335a9a70afc
+ms.openlocfilehash: 65b59c42050d1523b13448ed1ed598914d64969c
+ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2022
-ms.locfileid: "67417651"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68044701"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams ストア検証ガイドライン
 
@@ -21,7 +21,7 @@ ms.locfileid: "67417651"
 > * 一部のガイドラインは、アプリに適用できない場合があります。 たとえば、アプリにボットが含まれていない場合は、ボット関連のガイドラインを無視することができます。
 > * これらのガイドラインを Microsoft の商用認定ポリシーに相互参照し、検証プロセスで発生した合格または不合格のシナリオの例を示す「やるべきこと」と「やってはいけないこと」を追加しました。
 > * 特定のガイドラインは、*必須の修正* としてマークされます。 アプリの申請がこれらの必須のガイドラインを満たしていない場合は、Microsoft から改善のための手順を示すエラー レポートが送信されます。  アプリの申請は、問題を修正した場合にのみ Microsoft Teams ストアの検証に合格します。
-> * その他のガイドラインは、*修正の提案* としてマークされます。理想的なユーザー エクスペリエンスを得るためには、問題を修正することをお勧めします。ただし、問題を修正しない場合でも、アプリの申請が Teams ストアでの公開をブロックされることはありません。
+> * Other guidelines are marked as *Suggested Fix*. For an ideal user experience, we suggest that you fix the issues, however, your app submission will not be blocked from publishing on the Teams store, if you choose not to fix the issues.
 
 :::row:::
    :::column:::
@@ -103,10 +103,10 @@ ms.locfileid: "67417651"
   * **ヘルプ**
 * 開発者の名前を普通名詞の接頭辞または接尾辞として含める。 たとえば、**タスク** ではなく **Contoso タスク** がこれにあたります。
 * ブランド提携や共同販売を誤って示す可能性のある、**Teams** やその他の Microsoft 製品の名前 (Excel、PowerPoint、Word、OneDrive、SharePoint、OneNote、Azure、Surface、Xbox など) を使用することはできません。 Microsoft ソフトウェア、製品、およびサービスの参照に関する詳細については、「[Microsoft の商標およびブランドに関するガイドライン](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general)」を参照してください。
-* アプリが Microsoft との公式パートナーシップのメンバーである場合、アプリの名前が最初に来る必要があります。たとえば、**Contoso Connector for Microsoft Teams** がこれにあたります。
+* If your app is part of an official partnership with Microsoft, the name of your app must come first. For example, **Contoso Connector for Microsoft Teams**.
 * ストアに登録済みのアプリや、コマーシャル マーケットプレース上のその他のオファーと同じ名前を使用してはいけません。
 * 卑猥な言葉や軽蔑的な言葉を含んではいけません。 名前には、人種や文化に配慮しない言葉が含まれてはいけません。
-* 一意である必要があります。ご使用のアプリ (Contoso) が Microsoft Teams ストアと Microsoft AppSource に一覧表示されていて、Contoso Mexico のように地域に特化した別のアプリを一覧表示する場合、申請が次の条件を満たす必要があります。
+* Must be unique. If your app (Contoso) is listed in the Microsoft Teams store and  Microsoft AppSource and you want to list another app specific to a geography, such as Contoso Mexico, your submission must meet the following criteria:
   * タイトル、メタデータ、最初の応答アプリ エクスペリエンス、ヘルプ セクションでアプリの地域固有の機能を呼び出します。 たとえば、タイトルは「Contoso Mexico」でなければなりません。 アプリのタイトルは、エンド ユーザーの混乱を避けるために、既存のアプリと同じ開発者を明確に区別する必要があります。
   * パートナー センターでアプリ パッケージをアップロードする場合は、**[可用性]** セクションでアプリを利用できる適切な **マーケット** を選択します。
 
@@ -196,7 +196,7 @@ iOS 版または Android 版 Teams で実行するアプリは、以下のガイ
     :::image type="content" source="../../../../assets/images/submission/validation-financial-information-online-stores.png" alt-text="validation-online-store":::
 
 * アプリでアカウントが必要な場合、ユーザーは無料でアカウントにサインアップできます。 **無料版** または **無料アカウント** という用語の使用は禁止されています。
-* アカウントを無期限にアクティブにするか、期間限定にするかを決めることができます。 アカウントの有効期限が切れたとき、アプリ内に、支払いを求めるUI、テキスト、またはリンクを表示してはいけません。
+* You can determine whether an account is active indefinitely or for a limited time. When the account expires the app must not show UI, text, or links indicating the need to pay.
 * アプリのプライバシー ポリシーと使用条件には、商取引に関係した UIやリンクが含まれていてはいけません。
 
 </details>
@@ -225,7 +225,7 @@ Microsoft Azure Bot Service を使用するアプリ (ボットやメッセー�
 <br></br>
 <details><summary>詳細を知るために展開する</summary>
 
-組織の制御外のドメイン (ワイルドカードなど) やトンネリング サービスをアプリのドメイン構成に含めてはいけません。以下の例外があります。
+Don't include domains outside of your organization's control (including wildcards) and tunneling services in your app's domain configurations. The following exceptions include:
 
 * アプリ内で Azure Bot Service の OAuthCard が使用されている場合、有効なドメイン (validDomains) に `token.botframework.com` を含める必要があります。そうしない場合は、**[サインイン]** ボタンが機能しません。
 * アプリが SharePoint に依存している場合は、`{teamSiteDomain}` コンテキスト プロパティを使用して、関連するルート SharePoint サイトを有効なドメインとして含めることができます。
@@ -420,7 +420,7 @@ Teams アプリ マニフェストは、アプリの構成を定義します。
 
 **すべきこと**:
 
-* アプリの機能 (ユーザーとボットのコミュニケーションの内容など) に重点を置く。
+* Focus on your app's capabilities. For example, how people can communicate with your bot.
 * アプリを正確に表現するコンテンツを含めます。
 * 賢明な表現を使用する。
 * スクリーンショットには、ブランドを反映する色で縁取りを加え、マーケティング コンテンツを含める。
@@ -526,9 +526,9 @@ Teams アプリに特化した特定のポリシーも、すべてのサービ�
 <details><summary>ユーザビリティと機能の内容</summary>
 
 * ライセンスの購入と割り当てが正常に行われたら、次の情報が提供される必要があります。
-* ユーザーがサブスクライブしたプランの機能にアクセスする方法
-* ユーザーに対して提供される、サブスクリプション プランの付加価値と主要なメリット
-* Teams アプリから、SaaS アプリケーションのホーム ページへのリンクを提供し、サブスクライバーが将来にわたってライセンスを管理できるようにします。
+  * ユーザーがサブスクライブしたプランの機能にアクセスする方法
+  * ユーザーに対して提供される、サブスクリプション プランの付加価値と主要なメリット
+  * Teams アプリから、SaaS アプリケーションのホーム ページへのリンクを提供し、サブスクライバーが将来にわたってライセンスを管理できるようにします。
 
 </details>
 </br>
@@ -566,7 +566,7 @@ Teams アプリに特化した特定のポリシーも、すべてのサービ�
 
     :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-profile-name.png" alt-text="validation-tabs-set-up-profile-name":::
 
-* Web サイトの全体が埋め込まれたようなタブ構成画面は禁止です。 タブ構成のエクスペリエンスは、十分に焦点が絞られたものでなければなりません。たとえば、ユーザーがプロジェクトをチャネル内で構成できる「プロジェクト管理アプリ」の場合、タブ構成画面では、ユーザーがアプリからプロジェクトを選択し、そのプロジェクトをチャネル内で構成していくプロセスに焦点が絞られなければなりません。[*必須の修正*]
+* Tab configuration screen must not embed an entire website. Keep your configuration experience focused. For example, if you're building a project management app that lets users configure a project in a channel, keep the tab configuration screen focused on allowing the user to select a project from your app to configure in the channel. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-configuration-experience.png" alt-text="validation-tabs-setup-configuration-exp":::
 
@@ -583,7 +583,7 @@ Teams アプリに特化した特定のポリシーも、すべてのサービ�
 
 <details><summary>ビュー</summary>
 
-* サインイン画面領域では、大きなロゴを使用してはいけません。[*必須の修正*]
+* The sign in screen area must not use large logos. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-views-applogin.png" alt-text="validation-views-app-login":::
 
@@ -591,7 +591,7 @@ Teams アプリに特化した特定のポリシーも、すべてのサービ�
 
     :::image type="content" source="../../../../assets/images/submission/validation-views-multiple-tabs.png" alt-text="val-views-multiple-tabs":::
 
-* タブのヘッダーに重複がないようにしてください。タブのフレームワークにはアプリ アイコンとアプリ名が表示されるため、IFRAME​​ から重複するロゴを削除する必要があります。[*修正の提案*]
+* Tabs shouldn't have a duplicate header. Remove the duplicate logo from the iframe since the tab framework already displays the app icon and name. [*Suggested Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-views-duplicate-header-logo.png" alt-text="validation-views-duplicate-head-logo":::
 
@@ -620,13 +620,13 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
 
     :::image type="content" source="../../../../assets/images/submission/validation-navigation-spacing-between-toolbar.png" alt-text="validation-nav-spacing-between-toolbar":::
 
-* パンくずや左ナビゲーションを辿ることにより、メインのタブ領域のレベル 2 (L2)、レベル 3 (L3) のビューに、第2、第3のタブが表示される必要があります。また、タブ ナビゲーションをサポートするために、以下のコンポーネントを含めることができます: [*必須の修正*]
+* The secondary and third pages in a tab must be opened in a level two (L2) and level three (L3) view in the main tab area, which is navigated via breadcrumbs or left navigation. You can also include the following components to aid tab navigation: [*Mandatory Fix*]
   * 戻るボタン
   * ページ ヘッダー
   * ハンバーガー メニュー
-* タブの横スクロールは禁止です。ただし、 ホワイトボード アプリなど、ユーザーがアプリの操作感を損なうことなく共同作業を行うために大きなキャンバスを必要とするアプリでは、ビジネス上の必要性に応じて横スクロールを使用できます。[*修正の提案*]
+* Tab must not have a horizontal scroll. Whiteboarding apps and other apps that require a larger canvas to allow users to collaborate without a perceived broken app experience, can use horizontal scroll depending on their business need. [*Suggested Fix*]
 
-* タブ内のディープ リンクは、外部の Web ページではなく、Teams 内の機能 (タスク モジュール、他のタブなど) にリンクされている必要があります。[*必須の修正*]
+* Deep links in tabs must not link to an external webpage but within Teams. For example, task modules or other tabs. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-navigation-view-button-not-linked-static-tab.png" alt-text="validation-nav-view-button-not-linked-static-tab":::
 
@@ -663,12 +663,12 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
 
     :::image type="content" source="../../../../assets/images/submission/validation-usability-unresponsive-tabs.png" alt-text="validation-usability-unresponsive-tab":::
 
-* タブには、Teams フォント、入力ランプ、カラー パレット、グリッド システム、モーション、声のトーンなど、Teams スタイルのコンポーネントを可能な限り使用する必要があります。詳細については、「[タブ デザイン ガイドライン](/microsoftteams/platform/tabs/design/tabs)」を参照してください。[*修正の提案*]
+* Tabs must use Teams-styled components such as, Teams fonts, type ramps, color palettes, grid system, motion, tone of voice, and so on, whenever possible. For more information, see [tab design guidelines](/microsoftteams/platform/tabs/design/tabs). [*Suggested Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-usability-app-uses-diff-font.png" alt-text="validation-usability-app-uses-font":::
 
 * 設定を変更する必要があるアプリの機能が存在する場合は、**[設定]** タブを用意します。[*おすすめの修正プログラム*]
-* タブは、ページ内ナビゲーション、ダイアログの配置や使用方法、情報階層など、Teams の対話型デザインに沿ったものである必要があります。詳細については、「[Microsoft Teams Fluent UI キット](~/concepts/design/design-teams-app-basic-ui-components.md)」を参照してください。
+* Tabs must follow Teams interaction design such as, in-page navigation, position and use of dialogs, information hierarchies, and so on. For more information, see [Microsoft Teams Fluent UI kit](~/concepts/design/design-teams-app-basic-ui-components.md)
 
 * IFRAME 内のタブ コンテンツは、Teams のコア機能を模倣した機能を含んではなりません。 たとえば、ボット、メッセージの拡張機能、通話、会議などです。
 
@@ -705,7 +705,7 @@ Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-ba
 </br>
 <details><summary>ボット コマンド</summary>
 
-ユーザーによる入力の分析からその意図を推定することは容易ではありません。 そのため、ボット コマンドでは、ボットが理解できる単語や語句の集合があらかじめユーザーに提供されます。
+Analyzing user input and predicting user intent is difficult. Bot commands provide users a set of words or phrases for your bot to understand.
 
 * サポートされているボット コマンドをアプリ構成に一覧表示することを強く推奨します。 これらのコマンドは、ユーザーがボットにメッセージを送信しようとする際に、作成ボックスに表示されます。
 

@@ -1,4 +1,4 @@
-## <a name="about-microsoft-teams-and-the-docs"></a>Microsoft Teams とドキュメントについて
+## <a name="about-microsoft-teams-and-its-documentation"></a>Microsoft Teams とそのドキュメントについて
 
 Microsoft Teams は、チャット、会議、通話、ファイルなど、コラボレーションのためのさまざまなサービスを組み合わせたクラウド ベースの通信プラットフォームです。 Teams は Microsoft 365 に十分に統合されており、複数のワークロードを統合されたコミュニケーションとコラボレーション システムに結合します。 さらに、Teams は、他のツールやサードパーティ製品の統合機能を提供します。
 
@@ -6,9 +6,9 @@ Microsoft Teams は、チャット、会議、通話、ファイルなど、コ�
 
 ## <a name="how-to-contribute"></a>投稿する方法
 
-Teams ドキュメントは、Microsoft Docs技術ドキュメント ライブラリの一部です。 コンテンツは、ドキュメントセットと呼ばれるグループに編成され、それぞれが 1 つのエンティティとして管理される関連ドキュメントのグループを表します。 質問をしたり、提案をしたり、更新プログラムを提供したりすることもできます。 [Teams のドキュメントに貢献する方法について説明します](https://learn.microsoft.com/microsoftteams/platform/resources/teams-contributor-reference/)。
+Microsoft Teams のドキュメントは、Microsoft Learn テクニカル ドキュメント ライブラリの一部です。 コンテンツは、ドキュメントセットと呼ばれるグループに編成され、それぞれが 1 つのエンティティとして管理される関連ドキュメントのグループを表します。 質問をしたり、提案をしたり、更新プログラムを提供したりすることもできます。 [Teams のドキュメントに貢献する方法について説明します](https://learn.microsoft.com/microsoftteams/platform/resources/teams-contributor-reference/)。
 
-Microsoft Docsに貢献するには、[共同作成者ガイドの概要](https://learn.microsoft.com/contribute/)を参照してください。
+Microsoft Learn に貢献するには、 [共同作成者ガイドの概要](https://learn.microsoft.com/contribute/)を参照してください。
 
 Microsoft 標準とスタイル ガイドの詳細については、 [Microsoft スタイル ガイド](https://learn.microsoft.com/style-guide/welcome/)を参照してください。
 

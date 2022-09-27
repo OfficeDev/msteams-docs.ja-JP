@@ -5,12 +5,12 @@ ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 0efbc1e18d7cec6324ecc4cbec762d7b94c32511
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
-ms.translationtype: HT
+ms.openlocfilehash: b194e435ec6152993ce1269875d431ab4ef03aef
+ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150800"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68044673"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Microsoft Teams アプリを配布する
 
@@ -18,7 +18,7 @@ Microsoft Teams アプリは、個人、チーム、組織、またはそれを�
 
 ## <a name="configure-default-install-options"></a>既定のインストール オプションを構成する
 
-既定のインストール オプションを構成します。 たとえば、アプリの主な機能がボットである場合、ユーザーがアプリをチームにインストールするときにボットを既定の機能にすることもできます。
+既定のインストール オプションを構成できます。 たとえば、アプリの主な機能がボットの場合、ユーザーがアプリをチームにインストールするときに、ボットを既定の機能にすることができます。
 
 ## <a name="create-your-app-package"></a>アプリ パッケージを作成する
 

@@ -633,8 +633,8 @@
     - name: Teams でアプリをアップロードする
       href: concepts/deploy-and-publish/apps-upload.md
     - name: 組織にアプリを公開する
-      href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-      displayName: 'App catalog, allow and block apps'
+      href: /microsoftteams/upload-custom-apps
+      displayName: 'upload custom apps to organization, Org-wide app settings, Remove a custom app from your organization''s store'
     - name: Teams ストアに公開する
       items:
         - name: 概要

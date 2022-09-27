@@ -5,16 +5,16 @@ author: surbhigupta
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: contributor-guide
-ms.openlocfilehash: 5a9b2f16b23eaa4879062c104a85b223564cc10c
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: 4a0c522b5e9d4bcf99ee884de41b1d75846b004a
+ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806760"
+ms.lasthandoff: 09/27/2022
+ms.locfileid: "68044666"
 ---
 # <a name="contribute-to-teams-documentation"></a>Teams ドキュメントに投稿する
 
-Teams ドキュメントは、**Microsoft Docs** 技術ドキュメント ライブラリの一部です。 コンテンツは、ドキュメントセットと呼ばれるグループに編成され、それぞれが 1 つのエンティティとして管理される関連ドキュメントのグループを表します。 同じドキュメントセット内のアーティクルの URL パスの拡張子は 、次の場合 `learn.microsoft.com`と同じです。 たとえば、 `/learn.microsoft.com/microsoftteams/...` Teams docset ファイル パスの先頭です。 Teams の記事は Markdown 構文で記述され、GitHub でホストされています。
+Teams のドキュメントは、 **Microsoft Learn** テクニカル ドキュメント ライブラリの一部です。 コンテンツは、ドキュメントセットと呼ばれるグループに編成され、それぞれが 1 つのエンティティとして管理される関連ドキュメントのグループを表します。 同じドキュメントセット内のアーティクルの URL パスの拡張子は 、次の場合 `learn.microsoft.com`と同じです。 たとえば、 `/learn.microsoft.com/microsoftteams/...` Teams docset ファイル パスの先頭です。 Teams の記事は Markdown 構文で記述され、GitHub でホストされています。
 
 ## <a name="set-up-your-workspace"></a>ワークスペースを設定する
 
@@ -28,13 +28,13 @@ Teams ドキュメントは、**Microsoft Docs** 技術ドキュメント ライ
 >
 > * VS Code 内にインストールする:
 
-   1. サイド アクティビティ バーの **[拡張機能] アイコン** を選択するか、[**表示 =>拡張機能**] コマンドまたは Ctrl + Shift + X キーを押して、**Microsoft Docs作成パックを検索します**。
+   1. サイド アクティビティ バーの **[拡張機能] アイコン** を選択するか、[ **表示 ] = [拡張機能の>** ] コマンドまたは Ctrl + Shift + X キーを押して、 **Docs Authoring Pack を検索します**。
    1. [**インストール**] を選択します。
    1. インストール後、[ **インストール** ] は [ **管理** ] 歯車ボタンに変更されます。
 
-## <a name="review-the-microsoft-docs-contributors-guide"></a>Microsoft Docs共同作成者ガイドを確認する
+## <a name="review-the-microsoft-docs-contributor-guide"></a>Microsoft Docs共同作成者ガイドを確認する
 
-共同作成者ガイドでは、**Microsoft Docs** プラットフォームで技術コンテンツを作成、発行、更新する方向を提供します。
+共同作成者ガイドでは、 **Microsoft Learn** プラットフォームで技術コンテンツを作成、発行、更新する方向を提供します。
 
 ## <a name="microsoft-writing-style-and-content-guides"></a>Microsoft の書き込み、スタイル、およびコンテンツ ガイド
 
@@ -46,7 +46,7 @@ Teams ドキュメントは、**Microsoft Docs** 技術ドキュメント ライ
 
 ## <a name="markdown-reference"></a>MarkDown リファレンス
 
-**Microsoft Docs** ページは **MarkDown** 構文で記述され、[Markdig](https://github.com/lunet-io/markdig) エンジンを使用して解析されます。 特定のタグと書式設定規則の詳細については、「 [Docs Markdown リファレンス」を参照してください](/contribute/markdown-reference)。
+**Microsoft Learn** ページは **MarkDown** 構文で記述され、 [Markdig](https://github.com/lunet-io/markdig) エンジンを介して解析されます。 特定のタグと書式設定規則の詳細については、「 [Docs Markdown リファレンス」を参照してください](/contribute/markdown-reference)。
 
 ## <a name="file-paths"></a>ファイル パス
 
@@ -59,26 +59,26 @@ Teams ドキュメントは、**Microsoft Docs** 技術ドキュメント ライ
 > &emsp;&#x2714; 前にスラッシュを付けずに相対パスを使用します。<br>
 > &emsp;&#x2714; Markdown ファイル拡張子を含めます。<br>
 >例:  **親ディレクトリ/ディレクトリ/path-to-article.md** —> [Microsoft Teams 用のアプリを構築する](../concepts/building-an-app.md) <br><br>
-> Teams プラットフォームのドキュメントセットの **一部ではない** Microsoft Docs ライブラリの記事を参照するには:<br>
+> Teams プラットフォーム のドキュメントセットの **一部ではない** Microsoft Learn の記事を参照するには、次の手順を実行します。<br>
 > &emsp;&#x2714; スラッシュで始まる相対パスを使用します。<br>
 > &emsp;&#x2714; ファイル拡張子を含めないでください。 <br>
 > 例: **/docset/address-to-file-location** —> [Microsoft Graph APIを使用して Microsoft Teams と連携する](/graph/api/resources/teams-api-overview)<br><br>
-> GitHub などのMicrosoft Docs ライブラリの外部にあるページを参照するには、完全な`https`ファイル パスを使用します。<br>
+> GitHub などの Microsoft Learn の外部のページを参照するには、完全な `https` ファイル パスを使用します。<br>
 
 ## <a name="code-samples-and-snippets"></a>コード サンプルとスニペット
 
-コード サンプルは、API と SDK を効果的に使用するために重要な役割を果たします。 よく示されたコード サンプルは、説明的なテキストや指示情報だけでなく、物事がどのように動作するかを明確に伝えることができます。 コード サンプルは、正確で簡潔で、十分に文書化され、リーダーフレンドリである必要があります。 読みやすいコードは、理解しやすく、テスト、デバッグ、保守、変更、拡張が容易である必要があります。 詳細については、 [ドキュメントにコードを含める方法に関するページを参照](/contribute/code-in-docs)してください。
+コード サンプルは、API と SDK を効果的に使用するために重要な役割を果たします。 よく示されたコード サンプルは、説明的なテキストや指示情報だけでなく、物事がどのように動作するかを明確に伝えることができます。 コード サンプルは、正確で簡潔で、十分に文書化され、リーダーフレンドリである必要があります。 読みやすいコードは、理解しやすく、テスト、デバッグ、保守、変更、拡張が容易である必要があります。 詳細については、 [記事にコードを含める方法を](/contribute/code-in-docs)参照してください。
 
 ## <a name="next-step"></a>次のステップ
 
 > [!div class="nextstepaction"]
-> [Microsoft Docs更新プログラムと最新のお知らせを取得する](/teamblog)
+> [Microsoft Learn の更新プログラムと最新のお知らせを入手する](/teamblog)
 
 ## <a name="see-also"></a>関連項目
 
-* [Microsoft Docs](/)
-* [共同作成者ガイド](/contribute)
-* [ドキュメント スタイルと音声クイック スタート](/contribute/style-quick-start)
+* [Microsoft Learn](/)
+* [Microsoft Learn ドキュメント共同作成者ガイド](/contribute)
+* [Microsoft Learn のスタイルと音声のクイック スタート](/contribute/style-quick-start)
 * [最先端: ソース コードの読みやすさに関するヒント](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips)
 * [Teams のドキュメント](/microsoftteams/platform/overview)
 * [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)
