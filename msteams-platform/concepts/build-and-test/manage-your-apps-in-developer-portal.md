@@ -4,12 +4,12 @@ description: この記事では、Microsoft Teams 用開発者ポータルを使
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 82b755408aa633768ff5a0c01a1c347cadb6a0a7
-ms.sourcegitcommit: d5628e0d50c3f471abd91c3a3c2f99783b087502
+ms.openlocfilehash: 02b9272c2c0d325501c28d150ac728230ac65255
+ms.sourcegitcommit: 9ebb516ac448627e1deb42e18703791fc2ad583d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2022
-ms.locfileid: "67435077"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68098919"
 ---
 # <a name="manage-your-apps-in-developer-portal"></a>開発者ポータルでアプリを管理する
 
@@ -56,7 +56,7 @@ Teams でアプリをインストールしてレンダリングするには、Te
   * 会議の拡張機能
   * アクティビティ フィード通知
 * **アクセス許可**: このセクションでは、デバイスのアクセス許可、チームのアクセス許可、チャットまたは会議のアクセス許可、アプリのユーザーアクセス許可を付与できます。
-* **シングル サインオン**: シングル サインオン (SSO) でユーザーを認証するようにアプリを構成できます。
+* **シングル サインオン**: Azure AD に登録されたボットは、シングル Sign-On (SSO) をサポートしています。 ボットが Bot Framework Portal (または Bot Management の開発者ポータル内) に登録されている場合、これらのボットは SSO をサポートしていないため、SSO をサポートするには Azure AD にボットを登録する必要があります。 Azure AD に登録されているボットの場合は、 **アプリケーション ID URI を追加します**。 Azure AD からアプリケーション ID URI を取得するには、「 [ボットに SSO 認証を使用する」を](../../bots/how-to/authentication/auth-aad-sso-bots.md)参照してください。
 * **言語**: アプリの言語を設定または変更できます。
 * **ドメイン**: Teams クライアントにアプリを読み込むドメインを追加できます (例: *.example.com)。
 
@@ -81,7 +81,7 @@ Teams でアプリをインストールしてレンダリングするには、Te
 * **アプリコンテンツ**: 次の追加機能を使用してアプリを構成できます。
   
   * 読み込みインジケーター: ホストされているアプリのコンテンツ (タブやタスク モジュールなど) が読み込み中であることをユーザーに知らせるインジケーターを表示します。
-  * 全画面表示モード: アプリ ヘッダーのない個人用アプリを表示します。 組織に公開されたアプリでのみサポートされます。
+  * 全画面表示モード: アプリ ヘッダーのない個人用アプリを表示します。 組織に公開されているアプリでのみサポートされます。
 
 * **環境**
 
