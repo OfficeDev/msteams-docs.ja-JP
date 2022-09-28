@@ -1,16 +1,16 @@
 ---
 title: 収益化されたアプリのテスト プレビュー
 author: v-ypalikila
-description: オファーをライブプッシュする前に、Teams アプリの SaaS プレビュー オファーを作成してテストする方法について説明します。 サービスとしてのソフトウェア (SaaS) オファーを作成し、Teams で収益化されたアプリのエンドツーエンドの購入エクスペリエンスをテストできます。
+description: オファーを公開する前に、Teams アプリの SaaS プレビュー オファーを作成してテストします。 プレビュー オファー ID を作成し、プレビュー オファー ID を使用してアプリを構成し、サイドロードします。
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.openlocfilehash: 3637ca7d8c488b106ec570ea75cdc67b44d90600
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 98b9876a93fe6040cf66a16475fe7fdacf98a520
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558745"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100792"
 ---
 # <a name="test-preview-for-monetized-apps"></a>収益化されたアプリのテスト プレビュー
 
@@ -33,13 +33,13 @@ ms.locfileid: "66558745"
       :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-monetized-apps-preview-offer-id.png" alt-text="プレビュー オファー ID" :::
 
     > [!NOTE]
-    > パブリック オファー ID とは異なり、プレビュー オファー ID は *-preview* サフィックスで認識できます。例:**publisherId.offerId-preview**
+    > Unlike a public offer ID, the Preview offer ID can be recognized with the *-preview* suffix. For example, **publisherId.offerId-preview**.
 
 ## <a name="configure-your-app-with-the-preview-offer-id"></a>プレビュー オファー ID を使用してアプリを構成する
 
 開始する前に、ユーザーが Teams ストアでサブスクリプション プランを確認できるように、**プレビュー対象ユーザー** を備えた開発者アカウントを使用して **開発者ポータル** にサインインします。
 
-プレビュー オファー ID を生成したら、オファー ID を Teams アプリにリンクします。オファー ID をリンクするには:
+After you've generated your Preview offer ID, link the offer ID to your Teams app. To link the offer ID:
 
 1. [開発者ポータル](https://dev.teams.microsoft.com/)に移動し、開発者の資格情報を使用してサインインします。
 1. 左側のウィンドウから **[アプリ]** を選択します。

@@ -1,19 +1,19 @@
 ---
 title: アプリケーションでホストされるメディア ボットの要件と考察
-description: Teams用のアプリケーション ホスト型メディア ボットの作成に関連する重要な要件と考慮事項、スケーラビリティとパフォーマンスに関する考慮事項について説明します
+description: Microsoft Teams、スケーラビリティ、およびパフォーマンス用のアプリケーションホスト型メディア ボットを作成する方法について説明します。 リモート メディアとローカル メディアのさまざまなシナリオのサンプルを参照してください。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 11/16/2018
-ms.openlocfilehash: 5ba9f630e75bd9271eda66a93e69d8506e2b368c
-ms.sourcegitcommit: 9d318eda5589ea8f5519d05cb83e0acf3e13e2f4
+ms.openlocfilehash: 8643575f2fcb64cbfe6349c32d0b1b3df98ea31e
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66150792"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100876"
 ---
 # <a name="requirements-and-considerations-for-application-hosted-media-bots"></a>アプリケーションでホストされるメディア ボットの要件と考察
 
-アプリケーションでホストされるメディア ボットでは、オーディオおよびビデオ メディア ストリームにアクセスするために [`Microsoft.Graph.Communications.Calls.Media` .NET ライブラリ](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/)が必要です。このボットは、Windows Server オンプレミス マシンまたは Azure の Windows Server ゲスト オペレーティング システム (OS) にデプロイする必要があります。
+An application-hosted media bot requires the [`Microsoft.Graph.Communications.Calls.Media` .NET library](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) to access the audio and video media streams. The bot must be deployed on a Windows Server on-premises machine or a Windows Server guest Operating System (OS) in Azure.
 
 > [!NOTE]
 >
@@ -39,7 +39,7 @@ ms.locfileid: "66150792"
 
 ## <a name="real-time-media-calls-stay-where-theyre-created"></a>リアルタイム メディア呼び出しは、作成された場所に留まる
 
-リアルタイム メディア呼び出しは、その呼び出しが作成されたコンピューターに留まります。 リアルタイム メディア呼び出しは、呼び出しを受け入れたか開始した仮想マシン (VM) インスタンスにピン留めされます。 Teams呼び出しまたは会議フローからその VM インスタンスへのメディアと、ボットがTeamsに返送するメディアも、その VM から発信される必要があります。 その VM が停止されたときに処理中のリアルタイム メディア呼び出しがある場合、それらの呼び出しは突然終了します。 保留中の VM シャットダウンに関する予備知識をボットが持っている場合は、ボットが呼び出しを終了できます。
+リアルタイム メディア呼び出しは、その呼び出しが作成されたコンピューターに留まります。 リアルタイム メディア呼び出しは、呼び出しを受け入れたか開始した仮想マシン (VM) インスタンスにピン留めされます。 Teams 呼び出しまたは会議フローからその VM インスタンスへのメディアと、ボットが Teams に返送するメディアも、その VM から発信される必要があります。 その VM が停止されたときに処理中のリアルタイム メディア呼び出しがある場合、それらの呼び出しは突然終了します。 保留中の VM シャットダウンに関する予備知識をボットが持っている場合は、ボットが呼び出しを終了できます。
 
 次のセクションでは、アプリケーションでホストされるメディア ボットのアクセシビリティについて詳しく説明します。
 

@@ -1,22 +1,22 @@
 ---
 title: アプリの計画の概要
 author: heath-hamilton
-description: アプリの計画、ユース ケースの理解、アプリの機能、およびその他の Teams 機能の要素を紹介します。
+description: ユース ケースと Microsoft Teams アプリの機能を理解し、ユース ケースをマップし、モバイル用の応答性の高いタブを計画します。 GCC、GCC-High、DOD の Teams の機能と可用性について説明します。
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: c859c20c900b4fcf8a5797c79881b0aba0a86b93
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
-ms.translationtype: HT
+ms.openlocfilehash: eb72d4296ee6b91bae1775ad79eef06139abb59e
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058243"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100421"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Teams の機能を使用してアプリを計画する
 
 優れた Teams アプリを構築することは、ユーザーのニーズを満たす適切な機能の組み合わせを見つけることです。 アプリの設計、機能は、この目的から生まれています。
 
-その中心にあるのは、Teams はコラボレーション プラットフォームです。また、ソーシャル プラットフォームでもあり、ネイティブにクロスプラットフォームであり、Office 365 の中心に位置し、アプリを作成するための個人用キャンバスを提供します。
+At its heart, Teams is a collaboration platform. It's also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps.
 
 このセクションでは、次の方法について説明します:
 
@@ -76,7 +76,7 @@ Government Community Cloud (GCC) は、政府機関向けの商用環境のコ�
 |-------------|---------|---|---|
 | 社内で開発されたアプリと同様に、Teams が所有するアプリ | ✔️ アプリは、GCC がある場合有効です | ✔️ アプリは、GCC-High がある場合有効です | ✔️ アプリは、DOD がある場合有効です |
 | Microsoft アプリ | ✔️ GCC に準拠している Microsoft アプリ | ✔️ GCC-High に準拠している Microsoft アプリ | ✔️ DOD に準拠している Microsoft アプリ |
-| サードパーティ製アプリを許可する | ✔️ サードパーティのアプリが利用可能です。既定では無効に設定されており、テナント管理者が独自の裁量で有効にします。 | ❌ | ❌ |
+| サードパーティ製アプリを許可する | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
 | ボット | ✔️ | ❌ | ❌ |
 | カスタム タブ アプリまたは LOB タブ アプリ |  ✔️ | ✔️ | ✔️ |
 | アプリのサイドローディング | ✔️ | ❌ | ❌ |

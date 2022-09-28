@@ -1,15 +1,15 @@
 ---
 title: メッセージを作成して送信する
 author: laujan
-description: このモジュールでは、Office 365 コネクタを使用し、Microsoft Teams で実行可能なメッセージを作成して送信する方法について説明します
+description: アクション可能なメッセージを作成し、受信 Webhook、Office 365 コネクタ、cURL、または PowerShell 経由でメッセージを送信します。 アダプティブ カードを送信します。 時間ベースのトランザクション。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 5014c23d13dd8f0b1c694c144e936c624c602d40
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: ce7f2dd8eba6aaa98156ea118a9724dcd79fd989
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806781"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100463"
 ---
 # <a name="create-and-send-messages"></a>メッセージを作成して送信する
 
@@ -258,10 +258,10 @@ PowerShell を使用して Webhook にメッセージを投稿するには、次
 | 7200 | 150  |
 | 86400  | 1800  |
 
-[指数バックオフを備えた再試行ロジック](/azure/architecture/patterns/retry)では、要求が 1 秒以内に制限を超えている場合のレート制限を軽減できます。レート制限達しないように、[ベスト プラクティス](../../bots/how-to/rate-limit.md)に従ってください。
+A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests are exceeding the limits within a second. Follow [best practices](../../bots/how-to/rate-limit.md) to avoid hitting the rate limits.
 
 > [!NOTE]
-> [指数バックオフを備えた再試行ロジック](/azure/architecture/patterns/retry)では、要求が 1 秒以内に制限を超えている場合のレート制限を軽減できます。レート制限に達しないように、[HTTP 429 応答](../../bots/how-to/rate-limit.md#handle-http-429-responses)を参照してください。
+> A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests are exceeding the limits within a second. Refer [HTTP 429 responses](../../bots/how-to/rate-limit.md#handle-http-429-responses) to avoid hitting the rate limits.
 
 ```csharp
 // Please note that response body needs to be extracted and read 

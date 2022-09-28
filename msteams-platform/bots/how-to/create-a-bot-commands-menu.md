@@ -1,18 +1,21 @@
 ---
 title: ボット用のコマンド メニューを作成する
 author: surbhigupta
-description: このモジュールでは、コード サンプルを使用して Microsoft Teams ボットのコマンド メニューを作成して処理する方法について説明します。
+description: Microsoft Teams ボットのコマンド メニューを作成して処理する方法とベスト プラクティスについて説明します。 マニフェストからコマンドを削除する方法について説明します。
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: e14afc31839368c7826a6ee15a6f779b5f6f47b1
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
+ms.openlocfilehash: 0e0f9ce9ada0cde0aa6f7b6b29c7badb07dd7db9
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312311"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100904"
 ---
 # <a name="create-a-commands-menu"></a>コマンド メニューを作成する
+
+> [!NOTE]
+> Teams 用の新しい世代開発ツールを使用して JavaScript を使用してコマンド ボットをビルドする手順に従って [、コマンド ボット](../../sbs-gs-commandbot.yml) を作成することをお勧めします。 Teams Toolkit の詳細については、「 [Visual Studio Code の Teams Toolkit の概要」と「Visual Studio](../../toolkit/teams-toolkit-fundamentals.md) [の Teams Toolkit の概要」を](../../toolkit/teams-toolkit-overview-visual-studio.md)参照してください。
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 

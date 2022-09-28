@@ -1,16 +1,16 @@
 ---
 title: メッセージ拡張機能のアクション コマンドを定義する
 author: surbhigupta
-description: このモジュールでは、Microsoft Teams でアプリ マニフェストの例を使用してメッセージング拡張機能アクション コマンドを定義する方法について説明します。
+description: Microsoft Teams のアプリ マニフェストの例を使用して、メッセージング拡張機能アクション コマンドを定義する方法について説明します。 アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法のサンプル (.NET、Node.js)。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 45dbdabc744a58eb031c6e9a9f7415ecdf18cdcb
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: cb7d8512b6e8de980778733c39b19e7c1d63fae6
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67604858"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100736"
 ---
 # <a name="define-message-extension-action-commands"></a>メッセージ拡張機能のアクション コマンドを定義する
 
@@ -77,7 +77,7 @@ ms.locfileid: "67604858"
 
 ## <a name="add-the-action-command-to-your-app-manifest"></a>アプリ マニフェストに操作コマンドを追加する
 
-操作コマンドをアプリ マニフェストに追加するには、アプリ マニフェスト JSON の最上位レベルに新しい `composeExtension` オブジェクトを追加する必要があります。これを行うには、次のいずれかの方法を使用します。
+To add the action command to the app manifest, you must add a new `composeExtension` object to the top level of the app manifest JSON. You can use one of the following ways to do so:
 
 * [開発者ポータルを使用してアクション コマンドを作成する](#create-an-action-command-using-developer-portal)
 * [操作コマンドを手動で作成する](#create-an-action-command-manually)
@@ -149,9 +149,9 @@ ms.locfileid: "67604858"
 
 | プロパティ名 | 用途 | は必須ですか? | マニフェストの最小バージョン |
 |---|---|---|---|
-| `parameters` | このプロパティでは、コマンドのパラメーターの静的な一覧について説明します。`fetchTask` が `false` である場合にのみ使用します。 | いいえ | 1.0 |
+| `parameters` | This property describes the static list of parameters for the command. Only use when `fetchTask` is `false`. | いいえ | 1.0 |
 | `parameter.name` | このプロパティは、パラメーターの名前を説明します。 これは、ユーザー要求でサービスに送信されます。 | はい | 1.0 |
-| `parameter.description` | このプロパティは、指定する必要がある値のパラメーターの目的または例を説明します。この値は UI に表示されます。 | はい | 1.0 |
+| `parameter.description` | This property describes the parameter’s purposes or example of the value that should be provided. This value appears in the UI. | はい | 1.0 |
 | `parameter.title` | このプロパティは、ユーザー フレンドリな短いパラメーターのタイトルまたはラベルです。 | はい | 1.0 |
 | `parameter.inputType` | このプロパティは、必要な入力の種類に設定されます。 指定できる値には`text`、`textarea`、`number`、`date`、`time`、`toggle` などがあります。 既定値は `text` に設定されていません。 | いいえ | 1.4 |
 

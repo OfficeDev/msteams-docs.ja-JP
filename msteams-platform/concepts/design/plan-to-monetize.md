@@ -1,15 +1,15 @@
 ---
 title: アプリの収益化を計画する
-description: このラーニング モジュールでは、Microsoft Teams アプリを収益化する計画と、グローバルな可視性に最適な収益化オプションを理解する方法について説明します。
+description: Microsoft Teams アプリの収益化を計画し、グローバルな可視性に最適な収益化オプションについても理解します。
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: bb6f33d568b16d5f8f2aeb4d900b3d658d2bd6bb
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 0bc933282990437742f99a53da5ee386efd9020c
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558136"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100344"
 ---
 # <a name="plan-to-monetize-your-app"></a>アプリの収益化を計画する
 

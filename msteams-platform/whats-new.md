@@ -1,15 +1,15 @@
 ---
 title: Teams の開発者向けの新機能と更新情報
-description: 新しく導入された Microsoft Teams の開発者向け機能と、既存の機能の更新について説明します。
+description: Microsoft Teams の新しい開発者向け機能と、既存の機能の更新、非推奨のメモ、および変更について説明します。 最新の更新プログラムの RSS フィードをサブスクライブします。
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 2540738b2001363c6bc4466bcaa0b4754d4935cc
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: f10194e224aee438472a4487ede3db49792bf77c
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027179"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100162"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 

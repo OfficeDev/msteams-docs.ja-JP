@@ -1,16 +1,16 @@
 ---
 title: タスク モジュールの作成と送信
 author: surbhigupta
-description: このモジュールでは、最初の呼び出しアクションを処理し、アクション メッセージング拡張機能コマンドからタスク モジュールで応答する方法について説明します
+description: タスク モジュールを作成して送信する方法について説明します。 最初の呼び出しアクションを処理し、アクション メッセージ拡張機能コマンドからタスク モジュールを使用して応答します。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 58b5d246c113262fa478a36246a224a52d160154
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: d6e85a52af435d131bea0a700ccf13b536a30b9a
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035185"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100316"
 ---
 # <a name="create-and-send-task-module"></a>タスク モジュールの作成と送信
 
@@ -22,12 +22,12 @@ ms.locfileid: "67035185"
 
 ## <a name="the-initial-invoke-request"></a>最初の呼び出し要求
 
-最初の呼び出し要求の過程で、サービスは型 `composeExtension/fetchTask` の `Activity` オブジェクトを受信します。アダプティブ カードまたは埋め込み Web ビューへの URL を含む `task` オブジェクトで応答する必要があります。最初の呼び出しペイロードには、標準のボット アクティビティ プロパティとともに次の要求メタデータが含まれます。
+In the process of the initial invoke request, your service receives an `Activity` object of type `composeExtension/fetchTask`, and you must respond with a `task` object containing either an Adaptive Card or a URL to the embedded web view. Along with the standard bot activity properties, the initial invoke payload contains the following request metadata:
 
 |プロパティ名|用途|
 |---|---|
 |`type`| 要求の種類。 `invoke` である必要があります。 |
-|`name`| サービスに対して発行されるコマンドの種類。`composeExtension/fetchTask` である必要があります。 |
+|`name`| サービスに対して発行されるコマンドの種類。 `composeExtension/fetchTask` である必要があります。 |
 |`from.id`| 要求を送信したユーザーの ID。 |
 |`from.name`| 要求を送信したユーザーの名前。 |
 |`from.aadObjectId`| 要求を送信したユーザーの Azure Active Directory オブジェクト ID。 |
@@ -36,7 +36,7 @@ ms.locfileid: "67035185"
 |`channelData.team.id`| チーム ID (要求がチャネルで行われた場合)。 |
 |`value.commandId` | 呼び出されたコマンドの ID が含まれます。 |
 |`value.commandContext` | イベントをトリガーしたコンテキスト。 `compose` である必要があります。 |
-|`value.context.theme` | ユーザーのクライアント テーマ。これは、埋め込み Web ビューの書式設定に役立ちます。`default`、`contrast`、または `dark` である必要があります。 |
+|`value.context.theme` | ユーザーのクライアント テーマ。これは、埋め込み Web ビューの書式設定に役立ちます。 `default`、`contrast`、または `dark` である必要があります。 |
 
 ### <a name="example"></a>例
 
@@ -77,7 +77,7 @@ ms.locfileid: "67035185"
 |プロパティ名|用途|
 |---|---|
 |`type`| 要求の種類。 `invoke` である必要があります。 |
-|`name`| サービスに対して発行されるコマンドの種類。`composeExtension/fetchTask` である必要があります。 |
+|`name`| サービスに対して発行されるコマンドの種類。 `composeExtension/fetchTask` である必要があります。 |
 |`from.id`| 要求を送信したユーザーの ID。 |
 |`from.name`| 要求を送信したユーザーの名前。 |
 |`from.aadObjectId`| 要求を送信したユーザーの Azure Active Directory オブジェクト ID。 |
@@ -86,7 +86,7 @@ ms.locfileid: "67035185"
 |`ChannelData.legacy. replyToId`| このメッセージが返信となるメッセージの ID を取得または設定します。 |
 |`value.commandId` | 呼び出されたコマンドの ID が含まれます。 |
 |`value.commandContext` | イベントをトリガーしたコンテキスト。 `compose` である必要があります。 |
-|`value.context.theme` | ユーザーのクライアント テーマ。これは、埋め込み Web ビューの書式設定に役立ちます。`default`、`contrast`、または `dark` である必要があります。 |
+|`value.context.theme` | ユーザーのクライアント テーマ。これは、埋め込み Web ビューの書式設定に役立ちます。 `default`、`contrast`、または `dark` である必要があります。 |
 
 ### <a name="example"></a>例
 
@@ -128,7 +128,7 @@ ms.locfileid: "67035185"
 |プロパティ名|用途|
 |---|---|
 |`type`| 要求の種類。 `invoke` である必要があります。 |
-|`name`| サービスに対して発行されるコマンドの種類。`composeExtension/fetchTask` である必要があります。 |
+|`name`| サービスに対して発行されるコマンドの種類。 `composeExtension/fetchTask` である必要があります。 |
 |`from.id`| 要求を送信したユーザーの ID。 |
 |`from.name`| 要求を送信したユーザーの名前。 |
 |`from.aadObjectId`| 要求を送信したユーザーの Azure Active Directory オブジェクト ID。 |
@@ -137,7 +137,7 @@ ms.locfileid: "67035185"
 |`ChannelData.legacy. replyToId`| このメッセージが返信となるメッセージの ID を取得または設定します。 |
 |`value.commandId` | 呼び出されたコマンドの ID が含まれます。 |
 |`value.commandContext` | イベントをトリガーしたコンテキスト。 `compose` である必要があります。 |
-|`value.context.theme` | ユーザーのクライアント テーマ。これは、埋め込み Web ビューの書式設定に役立ちます。`default`、`contrast`、または `dark` である必要があります。 |
+|`value.context.theme` | ユーザーのクライアント テーマ。これは、埋め込み Web ビューの書式設定に役立ちます。 `default`、`contrast`、または `dark` である必要があります。 |
 
 ### <a name="example"></a>例
 
@@ -227,7 +227,7 @@ ms.locfileid: "67035185"
 |プロパティ名|用途|
 |---|---|
 |`type`| 要求の種類。 `invoke` である必要があります。 |
-|`name`| サービスに対して発行されるコマンドの種類。`composeExtension/fetchTask` である必要があります。 |
+|`name`| サービスに対して発行されるコマンドの種類。 `composeExtension/fetchTask` である必要があります。 |
 |`from.id`| 要求を送信したユーザーの ID。 |
 |`from.name`| 要求を送信したユーザーの名前。 |
 |`from.aadObjectId`| 要求を送信したユーザーの Azure Active Directory オブジェクト ID。 |
@@ -238,7 +238,7 @@ ms.locfileid: "67035185"
 |`ChannelData.legacy. replyToId`| このメッセージが返信となるメッセージの ID を取得または設定します。 |
 |`value.commandId` | 呼び出されたコマンドの ID が含まれます。 |
 |`value.commandContext` | イベントをトリガーしたコンテキスト。 `compose` である必要があります。 |
-|`value.context.theme` | ユーザーのクライアント テーマ。これは、埋め込み Web ビューの書式設定に役立ちます。`default`、`contrast`、または `dark` である必要があります。 |
+|`value.context.theme` | ユーザーのクライアント テーマ。これは、埋め込み Web ビューの書式設定に役立ちます。 `default`、`contrast`、または `dark` である必要があります。 |
 
 ### <a name="example"></a>例
 
@@ -293,7 +293,7 @@ ms.locfileid: "67035185"
 |プロパティ名|用途|
 |---|---|
 |`type`| 要求の種類。 `invoke` である必要があります。 |
-|`name`| サービスに対して発行されるコマンドの種類。`composeExtension/fetchTask` である必要があります。 |
+|`name`| サービスに対して発行されるコマンドの種類。 `composeExtension/fetchTask` である必要があります。 |
 |`from.id`| 要求を送信したユーザーの ID。 |
 |`from.name`| 要求を送信したユーザーの名前。 |
 |`from.aadObjectId`| 要求を送信したユーザーの Azure Active Directory オブジェクト ID。 |
@@ -304,7 +304,7 @@ ms.locfileid: "67035185"
 |`ChannelData.legacy. replyToId`| このメッセージが返信となるメッセージの ID を取得または設定します。 |
 |`value.commandId` | 呼び出されたコマンドの ID が含まれます。 |
 |`value.commandContext` | イベントをトリガーしたコンテキスト。 `compose` である必要があります。 |
-|`value.context.theme` | ユーザーのクライアント テーマ。これは、埋め込み Web ビューの書式設定に役立ちます。`default`、`contrast`、または `dark` である必要があります。 |
+|`value.context.theme` | ユーザーのクライアント テーマ。これは、埋め込み Web ビューの書式設定に役立ちます。 `default`、`contrast`、または `dark` である必要があります。 |
 
 ### <a name="example"></a>例
 
@@ -402,7 +402,7 @@ ms.locfileid: "67035185"
 |プロパティ名|用途|
 |---|---|
 |`type`| 要求の種類。 `invoke` である必要があります。 |
-|`name`| サービスに対して発行されるコマンドの種類。`composeExtension/fetchTask` である必要があります。 |
+|`name`| サービスに対して発行されるコマンドの種類。 `composeExtension/fetchTask` である必要があります。 |
 |`from.id`| 要求を送信したユーザーの ID。 |
 |`from.name`| 要求を送信したユーザーの名前。 |
 |`from.aadObjectId`| 要求を送信したユーザーの Azure Active Directory オブジェクト ID。 |
@@ -410,7 +410,7 @@ ms.locfileid: "67035185"
 |`channelData.source.name`| タスク モジュールが呼び出されるソース名。 |
 |`value.commandId` | 呼び出されたコマンドの ID が含まれます。 |
 |`value.commandContext` | イベントをトリガーしたコンテキスト。 `compose` である必要があります。 |
-|`value.context.theme` | ユーザーのクライアント テーマ。これは、埋め込み Web ビューの書式設定に役立ちます。`default`、`contrast`、または `dark` である必要があります。 |
+|`value.context.theme` | ユーザーのクライアント テーマ。これは、埋め込み Web ビューの書式設定に役立ちます。 `default`、`contrast`、または `dark` である必要があります。 |
 
 ### <a name="example"></a>例
 

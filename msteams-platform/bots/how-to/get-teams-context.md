@@ -1,16 +1,16 @@
 ---
 title: Teams の特定のコンテキストをボット用に取得する
 author: surbhigupta
-description: 会話名簿、シングル メンバーまたはチームの詳細、チャネル リスト、コード サンプルなど、ボットに対する Team 固有のコンテキストを取得する方法について説明します。
+description: ボットの Teams 固有のコンテキストを取得し、ユーザー プロファイルをフェッチし、1 人のメンバー、チーム、チームの詳細に含まれるチャネルの一覧を取得します。 新しいチャネル スレッドの作成に関するサンプル。
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: 70079b1aa7db17c6fd76bc4c28832ea0b07d345d
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: a2d884809a538d16b5c5a1e62e2a064fbeaa2a76
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605076"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100141"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Teams の特定のコンテキストをボット用に取得する
 

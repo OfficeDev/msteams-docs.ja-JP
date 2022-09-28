@@ -1,14 +1,14 @@
 ---
 title: Microsoft Teams 開発者向けドキュメント - 用語集
-description: Microsoft Teams 開発者向けドキュメントで使用される用語について説明します
+description: Microsoft Teams 開発者向けドキュメントで使用される一般的な用語、意味、定義について説明します。
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 53682fd717faf623c77b706d30896519e2754dae
-ms.sourcegitcommit: df3b507a3834fd7c9d4bb1d1098df267998414d4
+ms.openlocfilehash: 8673752e4af13e837793e790c4f7bc14007ff48e
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027513"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100862"
 ---
 # <a name="glossary"></a>用語集
 
@@ -78,7 +78,7 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 
 | 用語 | 定義 |
 | --- | --- |
-| [E5 開発者アカウント](../toolkit/tools-prerequisites.md) | Microsoft 365 を拡張するアプリを構築するための E5 開発者サブスクリプション。 管理者を含めて最大 25 個のユーザーライセンスを含めることができますが、開発目的のみの使用となります。  <br>**関連情報**: [Microsoft 365 アカウント](#m) |
+| [E5 開発者アカウント](../toolkit/tools-prerequisites.md#accounts-to-build-your-teams-app) | Microsoft 365 を拡張するアプリを構築するための E5 開発者サブスクリプション。 管理者を含めて最大 25 個のユーザーライセンスを含めることができますが、開発目的のみの使用となります。  <br>**関連情報**: [Microsoft 365 アカウント](#m) |
 | [エントリ ポイント](../concepts/app-fundamentals-overview.md) | チーム、チャネル、チャットなど、ユーザーがあなたのアプリを使用できる Team アプリのアクセス ポイント。 |
 | [環境](../toolkit/teamsfx-multi-env.md) | アプリ プロジェクトに対して複数の開発環境を作成して使用できるようにする Teams Toolkit の機能。 Teams Toolkit が既定で作成する開発環境は、ローカル環境と開発環境の 2 つです。 <br>**関連情報**: [ローカル環境](#l); [開発環境](#d) |
 

@@ -1,17 +1,17 @@
 ---
 title: 概要 - Microsoft Teams プラットフォームのユーザー ストーリー
 author: heath-hamilton
-description: アプリのアイデアがどのように適合するかに関する概要となるユーザー ストーリーについて説明します。
+description: Microsoft Teams アプリが Teams 環境でユーザーを支援する方法について説明します。 ユーザー、問題、アプリの要件、利点、ユーザー中心のソリューションを理解します。
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: c85fe155500f695fe74edcf0c155526bc446411a
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 905e357438e9913b64fd46c60a645d0d3d5d3cb0
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66557982"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100708"
 ---
 # <a name="from-ideas-to-teams-app"></a>アイデアから Teams アプリへ
 

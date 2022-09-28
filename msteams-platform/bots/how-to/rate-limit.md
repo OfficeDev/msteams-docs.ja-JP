@@ -1,14 +1,13 @@
 ---
 title: ボットのレート制限
-description: コード例を使用して、スレッドごとのボットごとの制限とすべてのボットの制限ごとのボットの処理レート制限について説明します
-ms.topic: conceptual
+description: レート制限を使用してボットを最適化する方法について説明します。 ボット スレッドの制限に従って、一時的な例外を検出します。 指数バックオフを実行することもできます。
 ms.localizationpriority: medium
-ms.openlocfilehash: 38a8832c9a9a2c1368e36606b4b8c6af80341724
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 487f251be40894464e55b891a7386cd8a04abe25
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503866"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100428"
 ---
 # <a name="optimize-your-bot-with-rate-limiting-in-teams"></a>Teams でレートを制限してボットを最適化する
 

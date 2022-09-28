@@ -1,23 +1,23 @@
 ---
 title: 着信通知
-description: このモジュールでは、着信呼び出しからの通知の処理、コード サンプルを使用した呼び出しのリダイレクトと認証に関する詳細な技術情報について説明します
+description: 着信通知プロトコルについて説明します。呼び出しをレガシ形式から Graph 形式に変換し、リージョンアフィニティをリダイレクトし、コールバックを認証します。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 04/02/2019
-ms.openlocfilehash: fd68b85a3c6f5f4682a728461d792093bcd8cac0
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: d5bdd20cb9cb7deef7419acb1da4ac96da2d89a4
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143831"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100659"
 ---
 # <a name="incoming-call-notifications"></a>着信通知
 
-[Microsoft Teamsの通話と会議ボットを登録する](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)際に、呼び出し URL の Webhook について説明します。 この URL は、ボットへのすべての着信呼び出しの Webhook エンドポイントです。
+[Microsoft Teams の通話と会議ボットを登録する](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)際に、URL を呼び出すための Webhook について説明します。 この URL は、ボットへのすべての着信呼び出しの Webhook エンドポイントです。
 
 ## <a name="protocol-determination"></a>プロトコルの決定
 
-受信通知は、以前の[Skype プロトコル](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)との互換性を確保するために従来の形式で提供されます。 呼び出しを Microsoft Graph プロトコルに変換するには、ボットは通知がレガシ形式であるかどうかを判断し、次の応答を提供する必要があります。
+受信通知は、以前の [Skype プロトコル](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true)との互換性を確保するために従来の形式で提供されます。 呼び出しを Microsoft Graph プロトコルに変換するには、通知がレガシ形式であるかどうかをボットが判断し、次の応答を提供する必要があります。
 
 ```http
 HTTP/1.1 204 No Content
@@ -67,7 +67,7 @@ Authentication: Bearer <TOKEN>
 ]
 ```
 
-OAuth トークンには次の値があり、Skypeによって署名されます。
+OAuth トークンには次の値があり、Skype によって署名されます。
 
 ```json
 {

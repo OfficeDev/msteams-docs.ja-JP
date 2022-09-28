@@ -1,21 +1,21 @@
 ---
 title: アプリの収益化の概要
-description: Saas オファーを使用して価格モデルを選択することを含む、Microsoft Teams アプリを収益化する方法について説明します。
+description: アプリを収益化します。 サポートされている価格モデルは、無料試用版、アプリ内購入、およびアプリとの SaaS オファーを含みます。
 author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 9b684fccb108b733a63ae6b61e002bc24bde32ef
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
-ms.translationtype: HT
+ms.openlocfilehash: 67dfa765d27327cee15977d17dfecf955cae8bca
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485511"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100582"
 ---
 # <a name="monetize-your-app"></a>アプリを収益化する
 
 Microsoft Teams アプリ ストアには、アプリを収益化し、ユーザーと関わり合って顧客を獲得できるようにする機能が用意されています。 このセクションのトピックでは、これらの機能をアプリに組み込む方法について説明します。
-
+ 
 ## <a name="choose-a-pricing-model"></a>価格モデルを選択する
 
 :::row:::

@@ -1,16 +1,16 @@
 ---
 title: Microsoft Graph を使用して、Teams でのプロアクティブなボットのインストールとメッセージングを承認する
-description: この記事では、Teams でのプロアクティブ メッセージングと、それを実装する方法について説明します。 コード サンプルを使用してプロアクティブなアプリのインストールとメッセージングを有効にする方法について説明します。
+description: Graph API を使用してアプリをプロアクティブにインストールします。 ボットが現在インストールされているかどうかを確認し、会話 chatId を取得してプロアクティブ メッセージを送信します。
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: Overview
-ms.openlocfilehash: cee1b0078c3a963f41d811b1fac9daa0fbe65f77
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: 5c45eff85b3a46f27e91e4740513c48c05588198
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67604851"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100750"
 ---
 # <a name="send-proactive-installation-messages"></a>プロアクティブ インストール メッセージを送信する
 

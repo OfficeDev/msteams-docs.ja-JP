@@ -1,16 +1,16 @@
 ---
 title: Teams アプリを Microsoft 365 全体に拡張する (プレビュー)
-description: この記事では、Teams アプリ エクスペリエンスを構築、更新、拡張する方法と、Microsoft 365 の他の高使用率領域で使用されるアプリを作成する方法について説明します。
+description: Microsoft M365 (Teams、Outlook、Office をアプリケーション ホストとして) にわたって Teams アプリをビルド、更新、拡張する方法について説明します。 Microsoft AppSource の申請。
 ms.date: 05/24/2022
 ms.topic: Conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: fec2a91d250044e638783ecb25175771a60f3cdd
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 835af580a23a5fa4bcf99bf5fd2f091d076df489
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781074"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100621"
 ---
 # <a name="extend-teams-apps-across-microsoft-365"></a>Teams アプリを Microsoft 365 全体に拡張する
 
@@ -20,9 +20,9 @@ Microsoft 365 全体に Teams アプリを拡張すると、1 つのコードベ
 
 Teams アプリ プラットフォームは、Microsoft 365 エコシステムに全体的に進化し、拡大し続けています。 Microsoft 365 全体の Teams アプリ プラットフォーム要素 (Teams、Outlook、Office をアプリケーション ホストとして) の現在のサポートを次に示します。
 
-|          | アプリ マニフェスト要素 | Teams のサポート |Outlook* のサポート | Office* のサポート | 備考 |
+|          | アプリ マニフェスト要素 | Teams のサポート |Outlook* のサポート | Office* のサポート | メモ |
 |--|--|--|--|--|--|
-| [**タブ**](../tabs/what-are-tabs.md) (個人用スコープ)    |`staticTabs`  | Web、デスクトップ、モバイル | Web (ターゲット リリース)、デスクトップ (ベータ チャネル) | Web (ターゲット リリース)、デスクトップ (ベータ チャネル)| Microsoft 365 では、チャネルスコープとグループ スコープはまだサポートされていません。 メモを参照 [してください](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook)。
+| [**タブ**](../tabs/what-are-tabs.md) (個人用スコープ)    |`staticTabs`  | Web、デスクトップ、モバイル | Web (ターゲット リリース)、デスクトップ (ベータ チャネル) | Web (対象リリース)、デスクトップ (ベータ チャネル)、Mobile (Android)| Microsoft 365 では、チャネルスコープとグループ スコープはまだサポートされていません。 メモを参照 [してください](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook)。
 | [**メッセージ拡張機能**](../messaging-extensions/what-are-messaging-extensions.md) (検索ベース)| `composeExtensions` | Web、デスクトップ、モバイル| Web (ターゲット リリース)、デスクトップ (ベータ チャネル)| - |Microsoft 365 では、アクション ベースはまだサポートされていません。 メモを参照 [してください](extend-m365-teams-message-extension.md#preview-your-message-extension-in-outlook)。 |
 | [**Office アドイン**](/office/dev/add-ins/develop/json-manifest-overview) (プレビュー) | `extensions` | - | Web、デスクトップ | - | [devPreview](../resources/schema/manifest-schema-dev-preview.md) マニフェスト バージョンでのみ使用できます。 メモを参照 [してください](#office-add-ins-preview)。|
 
@@ -38,6 +38,10 @@ Teams アプリ マニフェストと SDK のバージョン管理に関する�
 Outlook と Office の両方で実行される Teams 個人用タブ アプリケーションとして Web アプリを拡張することで、自分の仕事の状況に合わせて、ユーザーに連絡を取ります。
 
 :::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="スクリーンショットは、Outlook、Office、Teams で実行されている個人用タブを示す例です。":::
+
+モバイルでは、Android 用 Office アプリで実行されている Teams 個人用タブをテストしてデバッグできます。
+
+:::image type="content" source="images/office-mobile-personal-tab.png" alt-text="スクリーンショットは、Office で実行されている個人用タブを示す例です。":::
 
 また、検索ベースの Teams メッセージ拡張機能をOutlook on the webと Windows デスクトップに拡張して、Microsoft Teams クライアントだけでなく、Outlook の作成メッセージ領域を通じて結果を検索および共有することもできます。
 

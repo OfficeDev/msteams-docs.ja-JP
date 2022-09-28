@@ -1,17 +1,17 @@
 ---
 title: アプリを構築するための Teams ソリューション
 author: heath-hamilton
-description: アプリを構築するための Teams ソリューションの概要について説明し、アプリの計画から配布までのサポートを提供します。
+description: Microsoft 365 の計画、設計、構築、拡張、テスト、配布、収益化、および Teams との統合を行う方法について説明します。
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 10e35af5ec4993ea93579f70afc120ff0aa8b18a
-ms.sourcegitcommit: 4eeede81a0ae8ec985c6a1ad4f608df58371402f
-ms.translationtype: HT
+ms.openlocfilehash: ac4f3a208484a093460a14777a351aa4abc10af7
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2022
-ms.locfileid: "66793062"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100785"
 ---
 # <a name="the-teams-solution"></a>Teams ソリューション
 
@@ -22,7 +22,7 @@ Microsoft Teams プラットフォームは、Teams 用のアプリを作成す�
 
 Teams のプランのビューが表示されました。 ユーザーのニーズに対応付けることができるようになりました。 シナリオをもう一度見てみましょう。
 
-ツアーおよび旅行会社の開発者は、ユーザーである旅行者向けのアプリを構築したいと考えています。アプリは次のことを行う必要があります。
+ツアーおよび旅行会社の開発者は、ユーザーである旅行者向けのアプリを構築したいと考えています。 アプリでは、次の手順を実行する必要があります:
 
 - 旅行業者に登録されている旅行者に予報を確認して送信します。
 - 計画できるように、出発日の前日にユーザーに通知します。
@@ -40,7 +40,7 @@ Teams のプランのビューが表示されました。 ユーザーのニー�
 
 :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="旅行会社の開発者は、旅行日よりも前に計画できるように、天気予報を顧客に送信する Teams 用のボットを構築します":::
 
-Teams では、機能豊富なアプリ ソリューションをユーザーに提供するために、これらの機能と多くの機能が提供されます。このアプリを開発するには:
+Teams offers these and many more capabilities to bring your users a feature-rich app solution. To develop this app:
 
 1. 個人用チャット ボット アプリを作成します。
 1. 外部の天気予報 API と統合して接続し、特定の日付と場所の予報を要求します。
@@ -55,7 +55,7 @@ Teams アプリを使用すると、ビルド環境を柔軟に選択できま�
 
 :::image type="content" source="../msteams-platform/assets/images/overview/tools-of-your-choice.png" alt-text="ビジネス ニーズ アプリ":::
 
-特定の要件に対応する環境で Teams アプリを構築します。組み合わせを選択することもできます。
+Build your Teams app in the environment that works for your particular requirements. You can even select a combination.
 
 たとえば、Teams ツールキットを使用して JavaScript を使用してアプリをビルドし、SharePoint サイトでホストできます。
 
@@ -67,10 +67,10 @@ Teams は、アプリを構築するためのプラットフォームとして�
 
 :::image type="content" source="../msteams-platform/assets/images/overview/teams-dev-life-cycle.png" alt-text="Teams アプリ開発のライフ サイクルを説明します。計画、設計、ビルド、拡張、テスト、デプロイ、配布を以下に箇条書きにします。":::
 
-Teams アプリの設計から構築、配布まで、さまざまなツールとサービスを使用できます。開発フローの例を次に示します:
+From designing to building and distributing a Teams app, you can use various tools and services. An example development flow can be:
 
 1. プロジェクトを計画し、要件を把握します。
-1. アプリを設計します。タブ UI を設計するには、Teams UI キットと UI ライブラリを使用します。
+1. Design the app. Use Teams UI Kit and UI Library for designing tabs UI.
 1. Teams ツールキットを使用して JavaScript を使用してアプリを構築します。
 1. :::image type="icon" source="assets/icons/microsoft-icon.png"::: Microsoft Graph を使用して、さらに Teams の機能と M365 データを追加して、機能を拡張します。
 1. サンプル ユーザー データを使用して開発者テナントでアプリをテストします。
@@ -122,7 +122,7 @@ Teams アプリの設計から構築、配布まで、さまざまなツール�
         **アプリを作成する**
     :::column-end:::
     :::column span="2":::
-        アプリ開発のインスピレーションをお探しですか? 忠実度の高い概念モックを使用した実際のシナリオと業界ソリューションのリストを参照して、Teams アプリがユーザーを支援するさまざまな方法を理解します。
+        Looking for app development inspiration? Browse our list of real-world scenarios and industry solutions with high fidelity concept mocks to understand the various ways a Teams app can help your users.
 
         > [!div class="nextstepaction"]
         > [アプリのシナリオを見る](https://adoption.microsoft.com/en-us/extensibility-look-book-gallery/)
@@ -194,7 +194,7 @@ Teams JavaScript クライアント SDK v2 Preview を使用すると、他の�
         **小さなコードが大きな意味を持つ**
     :::column-end:::
     :::column span="2":::
-        優れた Teams アプリを構築するのに、専門のプログラマーである必要はありません。いくつかのローコード ソリューションの中から、1 つを試してみましょう。
+        You don't need to be an expert programmer to build a great Teams app. Try one of several low-code solutions.
 
         > [!div class="nextstepaction"]
         > [ローコード アプリの作成](samples/teams-low-code-solutions.md)

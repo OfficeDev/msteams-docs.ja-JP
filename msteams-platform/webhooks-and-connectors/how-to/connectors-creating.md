@@ -1,20 +1,20 @@
 ---
 title: Office 365 コネクタの作成
 author: laujan
-description: このモジュールでは、Office 365 コネクタの使用を開始し、Microsoft Teams の Teams アプリにコネクタを追加する方法について説明します
+description: Office 365 コネクタの使用を開始します。 Microsoft Teams の Teams アプリにコネクタを追加します。 Sample(.NET、Node.js) Office 365 Teams チャネルへの通知を生成するコネクタ。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: bb4bd02553ebb49752fa6450cd0f94f41dcc7ac8
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: 977bcac5daa3185177fbc9a3b441c245541914df
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363489"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100729"
 ---
 # <a name="create-office-365-connectors"></a>Office 365 コネクタの作成
 
-Microsoft Teams アプリを使用すると、Teams 内に既存の Office 365 コネクタを追加したり、新しい Office 365 コネクタを作成したりできます。詳細については、[自分でコネクタを開発する](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector)を参照してください。
+With Microsoft Teams apps, you can add your existing Office 365 Connector or build a new one within Teams. For more information, see [build your own connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
 
 Office 365 コネクタを作成する方法については、次のビデオを参照してください。
 <br>
@@ -62,7 +62,7 @@ Office 365 コネクタを作成する方法については、次のビデオを
     > ユーザーの選択またはフィールドの更新に対する応答として `microsoftTeams.pages.config.setValidityState(true)` を呼び出す必要があります。
 
 1. ユーザーが **[保存]** を選択した場合に呼び出される `microsoftTeams.pages.config.registerOnSaveHandler()` イベント ハンドラーを登録します。
-1. `microsoftTeams.pages.config.setConfig()` を呼び出し、コネクタ設定を保存します。保存された設定は、ユーザーがコネクタの既存の構成を更新しようとした場合にも、構成ダイアログに表示されます。
+1. Call `microsoftTeams.pages.config.setConfig()` to save the connector settings. The saved settings are also shown in the configuration dialog if the user tries to update an existing configuration for your connector.
 1. `microsoftTeams.pages.getConfig()` を呼び出し、URL を含む Webhook プロパティを取得します。
 
     > [!NOTE]
@@ -147,9 +147,9 @@ Office 365 コネクタを作成する方法については、次のビデオを
 | `entityId`       | `setConfig()` を呼び出す場合にコードで設定されたエンティティ ID。 |
 | `configName`  | `setConfig()` を呼び出す場合にコードで設定される構成名。 |
 | `contentUrl` | `setConfig()` を呼び出す場合にコードによって設定される、構成ページの URL。 |
-| `webhookUrl` | コネクタ用に作成された Webhook の URL。Webhook URL を使用して、構造化された JSON を投稿し、チャネルにカードを送信します。アプリケーションが正常にデータを返した場合のみ `webhookUrl` が返されます。 |
+| `webhookUrl` | The webhook URL created for the connector. Use the webhook URL to POST structured JSON to send cards to the channel. The `webhookUrl` is returned only when the application returns data successfully. |
 | `appType` | 返される`mail`値は、 `groups``teams` Office 365 メール、Office 365 グループ、または Teams にそれぞれ対応できます。 |
-| `userObjectId` | コネクタの設定を開始した Office 365 ユーザに対応する一意の ID。セキュリティで保護されている必要があります。この値は、お客様のサービスで設定を行った Office 365 のユーザーを関連付けるために使用できます。 |
+| `userObjectId` | The unique ID corresponding to the Office 365 user who initiated the set up of the connector. It must be secured. This value can be used to associate the user in Office 365, who has set up the configuration in your service. |
 
 #### <a name="handle-edits"></a>編集の処理
 
@@ -219,7 +219,7 @@ Office 365 コネクタを作成する方法については、次のビデオを
 
 ## <a name="test-your-connector"></a>コネクタをテストする
 
-コネクタをテストするには、他のアプリと同じ方法でコネクタをチームにアップロードします。「[マニフェストにコネクタを含める](#include-the-connector-in-your-manifest)」での指示どおりに修正した 2 つのアイコン ファイルとコネクタ開発者ダッシュボードからマニフェスト ファイルを使用して、.zip パッケージを作成できます。
+To test your connector, upload it to a team with any other app. You can create a .zip package using the manifest file from the two icon files and connectors Developer Dashboard, modified as directed in [Include the connector in your Manifest](#include-the-connector-in-your-manifest).
 
 アプリをアップロードしたら、任意のチャネルからコネクタ リストを開きます。 一番下までスクロールして、アプリが **[アップロード済み]** セクションに表示されていることを確認します。
 

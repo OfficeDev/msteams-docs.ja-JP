@@ -1,16 +1,16 @@
 ---
 title: Teams アプリを Microsoft 365 全体に拡張するための開発環境を設定する
-description: この記事では、Teams アプリを Microsoft 365 全体に拡張するためのプレビュー ビルドを実行するために必要な前提条件について説明します。
+description: Microsoft 365 全体に Teams アプリを拡張するための開発環境を設定するための要件。 Microsoft Teams と Microsoft Office アプリケーションのビルドを実行するために必要な構成について説明します。
 ms.date: 05/24/2022
 ms.custom: m365apps
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 965c9d8b7b05141aa6add18bba51512bd9e0a213
-ms.sourcegitcommit: b13361f342c76d637321df21d2ef900471bf0eef
+ms.openlocfilehash: 64caf4784286cd3eaf2c32a28a3fe655ba88bcc7
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2022
-ms.locfileid: "67457292"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100954"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Teams アプリを Microsoft 365 全体に拡張するための開発環境を設定する
 
@@ -70,6 +70,8 @@ Office 365 リリース オプションの詳細については、*Microsoft 365
 
 ## <a name="install-office-apps-in-your-test-environment"></a>Office アプリをテスト環境にインストールする
 
+### <a name="desktop"></a>Desktop
+
 最近の *ベータ チャネル ビルド* を使用して、Windows デスクトップ上の Outlook で実行されている Teams アプリをプレビューできます。 テスト テナントの [Microsoft 365 Apps 更新チャネルを変更して](/deployoffice/change-update-channels?WT.mc_id=M365-MVP-5002016)、Office 365 ベータ チャネル ビルドをインストールする必要があるかどうかを確認します。
 
 テスト環境で Office 365 ベータ チャネル アプリケーションをインストールするには:
@@ -90,6 +92,27 @@ Office 365 リリース オプションの詳細については、*Microsoft 365
 
     一覧に表示されない場合は、テスト環境に [Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/) をインストールします。
 
+### <a name="mobile"></a>Mobile
+
+ベータ プログラムに参加することで、Office アプリ for Android で実行されている Teams 個人用タブをプレビューできます。
+
+最新の Office アプリ ベータ ビルドを物理 Android デバイスまたは Android エミュレーターにインストールするには:
+
+1. Google Play で [サポートされている Android デバイスを](https://support.google.com/googleplay/answer/1727131)使用していることを確認します。
+1. Android デバイスで **Play ストア** を起動します。.
+1. Office を検索し、 **Microsoft Office: [編集] & [共有]** を選択します。
+1. [ **インストール** ] ボタンを選択します。
+
+    :::image type="content" source="images/office-android-install.png" alt-text="Microsoft Office のスクリーンショット: Google Play ストアでアプリ&共有を編集する":::
+
+1. インストールが完了 **したら、[ベータ版への参加] セクション** で [**参加**] を選択します。
+
+    :::image type="content" source="images/office-android-join-beta.png" alt-text="ベータ版に参加する画面のスクリーンショット":::
+
+1. Office アプリを起動し、テスト テナントの資格情報を使用してサインインします。
+1. プロファイル **(Me) >設定** を開き、メニューの下部までスクロールします。
+2. Android で Office アプリ バージョン 16.0.15726.20000 以降を使用していることを確認します。
+
 ## <a name="switch-to-the-developer-preview-version-of-teams"></a>Teams の開発者プレビュー バージョンに切り替える
 
 Microsoft Teams クライアントから [[パブリック開発者プレビュー]](../resources/dev-preview/developer-preview-intro.md) に切り替える必要があります。
@@ -104,7 +127,7 @@ Microsoft Teams クライアントから [[パブリック開発者プレビュ�
 
 必要に応じて、[Visual Studio Code](https://code.visualstudio.com/)を使用して、Teams アプリを Office と Outlook に拡張できます。
 
-拡張機能 [Teams Toolkit for Visual Studio Code](https://aka.ms/teams-toolkit) (`v2.10.0` 以降) には、Outlook および Office と互換性のある既存の Teams コードを変更するのに役立つコマンドが用意されています。詳細については、「[Office および Outlook 用の Teams 個人用タブを有効にする](extend-m365-teams-personal-tab.md)」 を参照してください。
+The extension [Teams Toolkit for Visual Studio Code](https://aka.ms/teams-toolkit) (`v2.10.0` or later) provides commands that can help modify your existing Teams code to be compatible with Outlook and Office. For more information, see [enable Teams personal tab for Office and Outlook](extend-m365-teams-personal-tab.md).
 
 ## <a name="next-step"></a>次のステップ
 

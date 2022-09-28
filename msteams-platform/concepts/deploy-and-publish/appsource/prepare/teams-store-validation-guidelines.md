@@ -1,16 +1,16 @@
 ---
 title: Microsoft Teams ストア検証ガイドライン
-description: この記事では、Teams ストア (AppSource) に送信されたすべてのアプリが従う必要があるガイドラインを示します。
+description: アプリが Microsoft Teams ストアの申請プロセスに合格する可能性を高める方法について説明します。 必須の修正プログラムと推奨される修正プログラムについて理解します。 検証ガイドラインを確認します。
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 65b59c42050d1523b13448ed1ed598914d64969c
-ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
+ms.openlocfilehash: ed428ba714f5e6cf409f7ded25e8b0df22cd61a4
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68044701"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100302"
 ---
 # <a name="microsoft-teams-store-validation-guidelines"></a>Microsoft Teams ストア検証ガイドライン
 
@@ -83,7 +83,7 @@ ms.locfileid: "68044701"
 
 ### <a name="app-name"></a>アプリ名
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、Microsoft [商用認定ポリシー番号 1140.1.1](/legal/marketplace/certification-policies#114011-app-name) に沿ったものであり、それらのアプリの名前の指定に関して、開発者に追加のガイダンスを提供します。
 <br></br>
@@ -117,7 +117,7 @@ ms.locfileid: "68044701"
 
 ### <a name="suitable-for-workplace-consumption"></a>職場での消費に適していること
 
-[*必須の修正プログラム*]
+[*必須の修正*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、Microsoft 商用認定ポリシー番号 [1140.1.2](/legal/marketplace/certification-policies#114012-workplace-appropriateness)、[100.8](/legal/marketplace/certification-policies#1008-significant-value)、[100.10](/legal/marketplace/certification-policies#10010-inappropriate-content) に沿ったものであり、開発者に職場に適したアプリを構築するための追加のガイダンスを提供します。
 <br></br>
@@ -131,7 +131,7 @@ ms.locfileid: "68044701"
 
 ### <a name="similar-platforms-and-services"></a>類似したプラットフォームやサービス
 
-[*必須の修正プログラム*]
+[*必須の修正*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、[Microsoft 商用認定ポリシー番号 1140.1.3](/legal/marketplace/certification-policies#114013-other-platforms-and-services) に沿ったものです。
 
@@ -173,7 +173,7 @@ ms.locfileid: "68044701"
 
 ### <a name="financial-information"></a>財務情報
 
-[*必須の修正プログラム*]
+[*必須の修正*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは [Microsoft 商用認定ポリシー番号 1140.3.1](/legal/marketplace/certification-policies#114031-financial-transactions) に沿ったもので、Teams インターフェイス内の財務情報の送信に関するガイダンスを提供し、Teams アプリのモバイル (Android および iOS) バージョンでの制限付き支払いのシナリオを開発者に対して示します。
 <br></br>
@@ -203,7 +203,7 @@ iOS 版または Android 版 Teams で実行するアプリは、以下のガイ
 
 ### <a name="bots"></a>ボット
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー 番号 1140.3.2](/legal/marketplace/certification-policies#114032-bots-and-messaging-extension) に沿ったものです。
 <br></br>
@@ -219,7 +219,7 @@ Microsoft Azure Bot Service を使用するアプリ (ボットやメッセー�
 
 ### <a name="external-domains"></a>外部ドメイン
 
-[*必須の修正プログラム*]
+[*必須の修正*]
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: このセクションは、[Microsoft 商用マーケットプレース ポリシー番号 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains) に沿ったもので、`validDomains` マニフェスト プロパティでの制限付きドメインの使用に関する開発者向けのガイダンスを提供します。
 <br></br>
@@ -238,7 +238,7 @@ Government Community Cloud (GCC) ユーザーにアプリを配布するには�
 
 ### <a name="sensitive-content"></a>機密コンテンツ
 
-[*必須の修正プログラム*]
+[*必須の修正*]
 
 アプリは、クレジット カード、金融機関の支払い明細、健康情報、連絡先の追跡などの個人情報、およびその他の機密データを、それらの情報の表示を意図していないユーザーに向けて投稿してはいけません。
 
@@ -264,7 +264,7 @@ Government Community Cloud (GCC) ユーザーにアプリを配布するには�
 
 ### <a name="compatibility"></a>互換性
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
 アプリは、以下のオペレーティング システムやブラウザーの最新バージョンで完全に機能する必要があります。
 
@@ -290,7 +290,7 @@ Teams アプリは、合理的な時間内に応答するか、読み込み中�
 
 ## <a name="app-package-and-store-listing"></a>アプリ パッケージと Store 登録情報
 
-[*必須の修正プログラム*]
+[*必須の修正*]
 
 アプリケーション パッケージは、正しく書式設定され、すべての必要な情報とコンポーネントが含まれている必要があります。
 
@@ -315,7 +315,7 @@ Teams アプリ マニフェストは、アプリの構成を定義します。
 
 ### <a name="app-icons"></a>アプリのアイコン
 
-[*必須の修正プログラム*]
+[*必須の修正*]
 
 アイコンは、ユーザーが Teams ストアを閲覧する際に目にする主要な要素の 1 つです。
 <br></br>
@@ -454,7 +454,7 @@ Teams アプリに特化した特定のポリシーも、すべてのサービ�
 
 ### <a name="terms-of-use"></a>使用条件
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
 次のガイドラインに沿って使用条件を記述します。
 
@@ -479,7 +479,7 @@ Teams アプリに特化した特定のポリシーも、すべてのサービ�
 
 ### <a name="localization"></a>ローカリゼーション
 
-[*必須の修正*]
+[*必須の修正プログラム*]
 
 アプリがローカリゼーションを提供する場合、アプリ パッケージには、Teams の言語設定に基づいて表示される言語の翻訳ファイルを含める必要があります。 ファイルは、Teams のローカリゼーション スキーマに準拠している必要があります。 詳細については、「[Teams のローカリゼーション スキーマ](~/concepts/build-and-test/apps-localization.md)」を参照してください。
 
@@ -602,7 +602,7 @@ Teams アプリに特化した特定のポリシーも、すべてのサービ�
 
 ナビゲーションに関するガイドラインは次のとおりです。
 
-* タブは、Teams の主要なナビゲーションと競合するようなナビゲーションを設定してはなりません。 タブに左ナビゲーションを指定する場合は、アイコンのみやテキストが上下に並べて表示されたアイコンを含めてはいけません。 これは、テキストが上下に並べて表示されたアイコン (Teams のナビゲーション バーを模倣したもの) を表示するオプションを持つ折りたたみ可能なレールであってはいけません。 インライン テキストやテキストのみを持つアイコンを含めるか、タブ左レールの代わりにハンバーガー メニューを使用します。 [*必須の修正プログラム*]
+* タブは、Teams の主要なナビゲーションと競合するようなナビゲーションを設定してはなりません。 タブに左ナビゲーションを指定する場合は、アイコンのみやテキストが上下に並べて表示されたアイコンを含めてはいけません。 これは、テキストが上下に並べて表示されたアイコン (Teams のナビゲーション バーを模倣したもの) を表示するオプションを持つ折りたたみ可能なレールであってはいけません。 インライン テキストやテキストのみを持つアイコンを含めるか、タブ左レールの代わりにハンバーガー メニューを使用します。 [*必須の修正*]
 
 Fluent UI コンポーネントの [Basic](~/concepts/design/design-teams-app-basic-ui-components.md) と [Advanced](~\concepts\design\design-teams-app-advanced-ui-components.md) を使用してアプリをデザインしてください。
 
@@ -860,7 +860,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 [*必須の修正*]
 
-メッセージ拡張機能では、認識されたリンクが Teams の作成ボックスでプレビューされます。  制御外のドメイン (絶対 URL、ワイルドカードのいずれについても) を追加してはいけません。  たとえば、`yourapp.onmicrosoft.com` は有効ですが、`*.onmicrosoft.com` は無効です。 トップレベルの ドメインも禁止です。 たとえば、`*.com` および `*.org` が禁止となります。 [*必須の修正*]
+メッセージ拡張機能では、認識されたリンクが Teams の作成ボックスでプレビューされます。  制御外のドメイン (絶対 URL、ワイルドカードのいずれについても) を追加してはいけません。  たとえば、`yourapp.onmicrosoft.com` は有効ですが、`*.onmicrosoft.com` は無効です。 トップレベルの ドメインも禁止です。 たとえば、`*.com` および `*.org` が禁止となります。 [*必須の修正プログラム*]
 
 </details>
 </br>

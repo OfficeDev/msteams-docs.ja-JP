@@ -1,16 +1,15 @@
 ---
 title: Teams アプリ開発の計画に役立つ質問
 author: heath-hamilton
-description: チェックリストを使用してアプリを計画し、アプリ開発の重要な詳細を計画に含める方法について説明します。
-ms.topic: conceptual
+description: チェックリストを使用してアプリを計画し、アプリ開発の重要な詳細を計画に含める方法について説明します。 アプリのライフサイクルを計画する。 Teams アプリをホストすることを計画します。
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.openlocfilehash: dd33aa3dbef8579f06d951138739301f5886b70e
-ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.openlocfilehash: 932e8ea564a6cc47bb2b8dbe4e01256d0688cefa
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2022
-ms.locfileid: "67338768"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100715"
 ---
 # <a name="teams-app-planning-checklist"></a>Teams アプリの計画チェックリスト
 
@@ -106,9 +105,9 @@ ms.locfileid: "67338768"
 
 | # | 考慮する要因 |
 | --- | --- |
-| 1 | アプリによって表示される情報は、タブで、またはボットを介して提供され、チームのほとんどのメンバーに関連し、有用ですか? たとえば、スクラム アプリなどです。 |
+| 1 | Is the information presented by the app, either in tab or through a bot, relevant and useful for most of the members in a Team? For example, Scrum app. |
 | 2 | アプリのコンテキストは、追加先のチームによって変わる可能性がありますか? たとえば、Planner のタスクはチームによって異なります。 |
-| 3 | 共同作業が必要なペルソナのすべてのメンバーが 1 つのチームに属している可能性はありますか? たとえば、チケットで作業しているエージェントなどです。 |
+| 3 | Is it possible that all members in a persona who need to collaborate are a part of a single team? For example, agents working on a ticket. |
 
 </details>
 <br>

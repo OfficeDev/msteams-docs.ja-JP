@@ -1,16 +1,16 @@
 ---
 title: リンク展開
 author: surbhigupta
-description: このモジュールでは、アプリ マニフェストを含む Teams アプリでメッセージング拡張機能を使用してリンクを展開する方法、またはコード例とサンプルを手動で使用する方法について説明します。
+description: アプリ マニフェストまたは手動で Microsoft Teams アプリでメッセージング拡張機能を使用してリンクを展開解除するリンクを追加します。 開発者ポータルを使用してリンクを展開解除します。 呼び出し要求を処理するように Web サービス コードを更新する方法。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 48c015050efe469446aea9016a33effe8ad3ba3a
-ms.sourcegitcommit: 6ea8c3fe0ccea0204285ea5f994913d173925ffd
+ms.openlocfilehash: 57d3ed45bebfc221f376bf7e08aef73a5b4c40ae
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2022
-ms.locfileid: "67833391"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100631"
 ---
 # <a name="add-link-unfurling"></a>リンク展開を追加する
 

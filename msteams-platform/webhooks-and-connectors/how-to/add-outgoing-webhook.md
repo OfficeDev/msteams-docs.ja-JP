@@ -1,16 +1,16 @@
 ---
 title: 送信 Webhook を作成する
 author: laujan
-description: このモジュールでは、Microsoft Teams で発信 Webhook を作成する方法、その主な機能とコード サンプルについて説明します
+description: Microsoft Teams で送信 Webhook を作成する方法、その主な機能と、Teams で使用するカスタム ボットを作成するためのコード サンプル (.NET、Node.js) について説明します。
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: e86f3825e39340cb228b24dccc770b2d302fb848
-ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.openlocfilehash: 8e4e097d20986badc2ca014156f33772d1b997dd
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2022
-ms.locfileid: "67337160"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100491"
 ---
 # <a name="create-outgoing-webhooks"></a>送信 Webhook を作成する
 
@@ -53,7 +53,7 @@ ms.locfileid: "67337160"
 
     ![Teams チャネル](~/assets/images/teamschannel.png)
 
-1. **Teams** ページで、送信 Webhook を作成するために必要なチームを選択し、&#8226;&#8226;&#8226; を選択します。ドロップダウン メニューで **[チームの管理]** を選択します。
+1. In the **Teams** page, select the required team to create an Outgoing Webhook and select the &#8226;&#8226;&#8226;. In the dropdown menu, select **Manage team**:
 
     ![送信 Webhook を作成する](~/assets/images/outgoingwebhook1.png)
 
@@ -72,7 +72,7 @@ ms.locfileid: "67337160"
     * **説明**: プロフィール カード、チームのレベルのアプリ ダッシュボードに表示される詳細な文字列です。
     * **プロフィール画像**: Webhook のアプリ アイコンで、省力可能です。
 
-1. **[作成]** を選択します。送信 Webhook が、現在のチームのチャネルに追加されます。
+1. Select **Create**. The Outgoing Webhook is added to the current team's channel:
 
     ![送信 Webhook を作成する](~/assets/images/outgoingwebhook.png)
 
@@ -102,12 +102,12 @@ ms.locfileid: "67337160"
 
 要求ヘッダーの認証には、"HMAC 03TCao0i55H1eVKUusZOTZRjtvYTs + mO41mPL + R1e1U =" という値を使用します。
 
-サービスが受け取る呼び出しが本物の Teams クライアントからの呼び出しのみになるよう、Teams により HTTP `hmac` ヘッダーに HMAC コードが提供されます。このコードは常に認証プロトコルに含める必要があります。
+To ensure that your service is receiving calls only from actual Teams clients, Teams provides an HMAC code in the HTTP `hmac` authorization header. Always include the code in your authentication protocol.
 
 次のように、コードで要求に含まれる HMAC 署名を常に検証する必要があります。
 
 * メッセージの要求本文から HMAC トークンを生成します。 ほとんどのプラットフォームでこれを行うための標準ライブラリがあり、Node.js の場合は [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto)、C\# の場合は [Teams Webhook Sample](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) などがあります。 Microsoft Teams では、標準の SHA256 HMAC 暗号化を使用します。 本文を UTF8 でバイト配列に変換する必要があります。
-* Teams クライアントで送信 Webhook を登録したときに Teams によって提供されたセキュリティ トークンのバイト配列からハッシュを計算します。「[送信 Webhook を作成する](#create-outgoing-webhooks)」を参照してください。
+* Compute the hash from the byte array of the security token provided by Teams when you registered the Outgoing Webhook in the Teams client. See [create an Outgoing Webhook](#create-outgoing-webhooks).
 * UTF-8 エンコーディングを使用してハッシュを文字列に変換します。
 * 生成されたハッシュの文字列の値と、HTTP 要求で指定された値を比較します。
 
@@ -131,7 +131,7 @@ ms.locfileid: "67337160"
 > [!NOTE]
 >
 > * アダプティブ カード、ヒーロー カード、テキスト メッセージは、送信 Webhook で添付ファイルとして送信できます。
-> * カードでは、書式設定がサポートされています。詳細については、「[マークダウンを使用したカードの書式設定](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#format-cards-with-markdown)」を参照してください。
+> * Cards support formatting. For more information, see [format cards with markdown](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#format-cards-with-markdown).
 > * 送信 Webhook のアダプティブ カードは、`openURL` 件のカード アクションのみをサポートします。
 
 以下のコードは、アダプティブ カードの応答例です。

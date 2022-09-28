@@ -1,14 +1,14 @@
 ---
 title: マニフェスト スキーマの参照
-description: この記事では、Microsoft Teams リファレンスのマニフェスト スキーマ、スキーマ、およびサンプルの完全なマニフェストを紹介します。
+description: この記事では、Microsoft Teams のリファレンス、スキーマ、サンプルフル マニフェストのパブリック マニフェスト スキーマの最新バージョンを用意します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: b1795af69256eec27e34917cad0b24924f490083
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 23bdb87bd1f5f3ea1fadb2527f64b5bebec0b157
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68026970"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100169"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Teams のアプリ マニフェストのスキーマ
 

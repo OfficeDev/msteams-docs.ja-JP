@@ -1,14 +1,14 @@
 ---
 title: Microsoft Teams の通話と会議ボットを登録する
-description: このモジュールでは、Microsoft Teams 用の新しいオーディオ/ビデオ通話ボットを登録する方法、新しいボットを作成する方法、通話機能を追加する方法、グラフのアクセス許可を追加する方法について説明します。
+description: Microsoft Teams 用の新しいオーディオ/ビデオ通話ボットを登録する方法、新しいボットを作成する方法、通話機能を追加する方法、グラフのアクセス許可を追加する方法について説明します。 通話の作成、会議への参加、通話の転送を行うサンプル。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 74c0f5dab2fe8efbcfee73d8c356675384f83683
-ms.sourcegitcommit: 234944867eeccbba5da6be43120e9683977bdfd8
+ms.openlocfilehash: 2563d94e944a7d4058d1417be2f3816e3f565bff
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2022
-ms.locfileid: "67407575"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100925"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Microsoft Teams の通話と会議ボットを登録する
 
@@ -22,8 +22,8 @@ ms.locfileid: "67407575"
 
 通話とオンライン会議ボットには、 Teams でボットのオーディオまたはビデオを有効にする manifest.json に次の 2 つの追加設定があります。
 
-* `bots[0].supportsCalling`。この設定が存在し、かつ `true` に設定されている場合、Teams はボットが通話やオンライン会議に参加することを許可します。
-* `bots[0].supportsVideo`。この設定が存在し、かつ `true` に設定されている場合は、ボットがビデオをサポートしていることを Teams が認識します。
+* `bots[0].supportsCalling`. If present and set to `true`, Teams allows your bot to participate in calls and online meetings.
+* `bots[0].supportsVideo`. If present and set to `true`, Teams knows that your bot supports video.
 
 IDE でこれらの値について、通話と会議ボットの manifest.json スキーマを適切に検証する場合は、次のように `$schema` 属性を変更できます。
 
@@ -39,7 +39,7 @@ IDE でこれらの値について、通話と会議ボットの manifest.json �
 
 Teams 用の新しいボットを作成するには:
 
-1. このリンク (`https://dev.botframework.com/bots/new`) を使用して新しいボットを作成します。または、Bot Framework ポータルで **[ボットの作成]** ボタンを選択する場合は、Microsoft Azure でボットを作成します。この場合、Azure アカウントを持っている必要があります。
+1. Use this link to create a new bot, `https://dev.botframework.com/bots/new`. Alternately, if you select the **Create a bot** button in the Bot Framework portal, you create your bot in Microsoft Azure, for which you must have an Azure account.
 1. Teams チャネルを追加します。
 1. チャネル ページの **[ 通話 ]** タブを選択します。 **[ 通話を有効にする ]** を選択し、たとえば `https://contoso.com/teamsapp/api/calling` のような、着信通知を受信する HTTPS URL を使用して **Webhook (通話用)** を更新します。 詳細については、 「[チャネルの構成](/bot-framework/portal-configure-channels)」を参照してください。
 
@@ -81,9 +81,9 @@ Graph は、アプリがリソースに対して持つアクセスを制御す�
 
 ### <a name="get-tenant-administrator-consent"></a>テナント管理者の同意を取得する
 
-Azure AD V1 エンドポイントを使用するアプリの場合、テナント管理者は、組織にアプリがインストールされるときに [Microsoft Azure ポータル](https://portal.azure.com)を使用して、アプリケーションのアクセス許可に同意できます。または、アプリでサインアップ エクスペリエンスを提供して、管理者が構成済みのアクセス許可に同意できるようにすることができます。管理者の同意が Azure AD によって記録されると、アプリは再度同意を要求しなくてもトークンを要求できます。
+For apps using the Azure AD V1 endpoint, a tenant administrator can consent to the application permissions using the [Microsoft Azure portal](https://portal.azure.com) when your app is installed in their organization. Alternately, you can provide a sign-up experience in your app through which administrators can consent to the permissions you configured. Once administrator consent is recorded by Azure AD, your app can request tokens without having to request consent again.
 
-管理者に依頼して、 [Microsoft Azure ポータル](https://portal.azure.com)でアプリに必要なアクセス許可を付与できます。より優れた選択肢は Azure AD v2 `/adminconsent` エンドポイントを使用して管理者にサインアップ エクスペリエンスを提供することです。詳細については、「[管理者同意 URL の作成手順](/graph/auth-v2-service#3-get-administrator-consent)」を参照してください。
+You can rely on an administrator to grant the permissions your app needs at the [Microsoft Azure portal](https://portal.azure.com). A better option is to provide a sign-up experience for administrators by using the Azure AD V2 `/adminconsent` endpoint. For more information, see [instructions on constructing an Admin consent URL](/graph/auth-v2-service#3-get-administrator-consent).
 
 > [!NOTE]
 > テナント管理者の同意 URL を作成するには、 [アプリ登録ポータル](https://apps.dev.microsoft.com/) で構成されたリダイレクト URI または応答 URL が必要です。 ボットの応答 URL を追加するには、ボットの登録にアクセスし、[**詳細オプション** > **アプリケーション マニフェストの編集**] を選択します。 リダイレクト URL をコレクション `replyUrls` に追加します。

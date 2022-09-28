@@ -1,14 +1,14 @@
 ---
 title: 概要-開始する
-description: このモジュールでは、一般的なツール、基本的な概念、高度な機能を紹介する Microsoft Teams 開発者向けドキュメントの使用を開始する方法について説明します。
+description: 作業を開始します。 言語 (Node.js、C#、Java、Python) と開発環境に基づいて初めての Microsoft Teams アプリを構築し、アプリの機能、SDK を理解します。
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 0ad8e4f2b1251bc6a66fdff8335dc654ac346ce2
-ms.sourcegitcommit: 69a45722c5c09477bbff3ba1520e6c81d2d2d997
-ms.translationtype: HT
+ms.openlocfilehash: 4ad64240c97ab11da6a999f87621fdff6d70ebe2
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67312283"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100435"
 ---
 # <a name="get-started"></a>概要
 

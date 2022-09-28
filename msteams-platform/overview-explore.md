@@ -1,17 +1,17 @@
 ---
 title: アプリをビルドするためのプラットフォームとしての Teams を調べる
 author: heath-hamilton
-description: デスクトップとモバイルでのアプリの Microsoft Teams プラットフォーム機能の概要について説明します。
+description: デスクトップとモバイルでのアプリの Microsoft Teams プラットフォーム機能。 タブ、ボット、メッセージング拡張機能、webhook、コネクタ、Microsoft Graph、またはアダプティブ カード。
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 11/02/2021
-ms.openlocfilehash: 8843cb92657161234d6e5f6d1eae1bd66bdc6041
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: b49c4013184b11f686e460cd23441acf1b4faff1
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558829"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100309"
 ---
 # <a name="explore-teams-platform-features"></a>Teams プラットフォームの機能を調べる
 
@@ -23,7 +23,7 @@ Teams では、機能豊富な環境でアプリをビルドできます。 ア�
 
 | 機能 | 説明 | 目的 |
 | --- | --- | --- |
-|タブ | タブとは、Microsoft Teams に組み込まれている Teams 対応 Web ページです。チーム内のチャネルの一部、グループ チャット、個々のユーザーの個人用アプリとして追加できます。 | 個人用タブ、チャネルまたはグループ タブ、ステージ ビュー、リンク展開。 |
+|タブ | Tabs are Teams-aware webpages embedded in Microsoft Teams. You can add them as part of a channel inside a team, group chat, or personal app for an individual user. | 個人用タブ、チャネルまたはグループ タブ、ステージ ビュー、リンク展開。 |
 | ボット | ボットは、チャットボットまたは会話ボットとも呼ばれます。 ユーザーによる簡単で反復的な自動化されたタスクを実行するアプリです。 ボットの操作には、簡単な質問と回答や、サービスへのアクセスを提供する複雑な会話などがあります。 | カスタマー サービス、天気に関する情報、ディナーの予約、旅行情報の提供。 |
 | メッセージ拡張機能: | メッセージング拡張機能を使用すると、ユーザーは Web サービス Teams クライアントを操作できます。 外部システムでアクションを検索または開始します。 操作の結果は、書式設定されたカードとして Teams クライアントに送信できます。 | リソースの予約、予約されたタイム スロットをチャネルに知らせます。 作業項目を検索し、アダプティブ カードとしてグループと共有します。 Teams のメッセージに基づいてトラッキング システムにバグを作成し、そのバグをユーザーに割り当て、そのバグの詳細情報が記載されたカードを会話スレッドに送信します。 |
 |ミーディング拡張機能 | 会議の生産性を高めるようアプリを作成できます。 | 通話中にアンケートを記入するよう依頼したり、会議のフローを中断しない簡単なリマインダーを送信したりします。 |

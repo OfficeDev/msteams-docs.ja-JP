@@ -1,16 +1,16 @@
 ---
 title: ボットから送信されたメッセージを更新および削除する
 author: WashingtonKayaker
-description: さまざまな環境で、およびコード サンプルを使用して REST API を使用して、Microsoft Teams ボットから送信されたメッセージを更新および削除する方法について説明します。
+description: さまざまな環境で、およびサンプル (.NET、Node.js、Python) を使用して REST API を使用して、Microsoft Teams ボットから送信されたメッセージを更新および削除する方法について説明します。
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: bd52a3cfa27153c4349d50f4263dc29346fdfb45
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: d85bb7086661eba58c6cf852cab599970fdc9c80
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503803"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100820"
 ---
 # <a name="update-and-delete-messages-sent-from-bot"></a>ボットから送信されたメッセージを更新および削除する 
 

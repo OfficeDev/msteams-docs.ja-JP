@@ -1,16 +1,16 @@
 ---
 title: 概要 - アプリを配布する
-description: この記事では、Microsoft Teams アプリの公開、アプリのアップロードと展開、および GCC のオプションについて説明します。
+description: Microsoft Teams ストアまたは組織にアプリを配布、発行する方法について説明します。アプリのエンドポイントが Government Community Cloud (GCC) 組織の要件に準拠する必要がある方法を理解します。
 ms.topic: conceptual
 author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: b194e435ec6152993ce1269875d431ab4ef03aef
-ms.sourcegitcommit: 377a4b712b50a211851aeecc1029414939945390
+ms.openlocfilehash: df17129ce1e51093351683ad01db3be9e65c5770
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68044673"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100722"
 ---
 # <a name="distribute-your-microsoft-teams-app"></a>Microsoft Teams アプリを配布する
 

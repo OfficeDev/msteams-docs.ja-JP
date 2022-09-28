@@ -1,27 +1,27 @@
 ---
 title: Microsoft Teams プラットフォーム用のアプリを構築する
 author: heath-hamilton
-description: 開発者がカスタム アプリを使用して Microsoft Teams の機能を拡張する方法の概要について説明します。
+description: Microsoft Teams、Teams プラットフォームでアプリを構築する理由、Teams アプリがビジネス ニーズを満たす方法について説明します。
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: lajanuar
 ms.date: 05/24/2021
-ms.openlocfilehash: f894262918004e643370963ad8e67ef3183927b8
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 143f316a6f5153185e78b2efa4ec1db3dc9c1fa6
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558430"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100204"
 ---
 # <a name="teams-app-that-fits"></a>最適な Teams アプリ
 
 Microsoft Teams では、Microsoft または外部のサービスによって提供されるアプリのコレクションが用意されています。 Teams アプリは、タブ、ボット、メッセージ拡張機能、またはこれら 3 つの任意の組み合わせです。 これらのアプリは、Teams での共同作業エクスペリエンスの価値を向上させます。
 
-アプリには、個人用アプリと共有アプリがあります。個人用アプリでは、1 対 1 のコミュニケーションが可能です。共有アプリでは、複数のユーザーがアプリ空間を共有して共同作業を行うことができます。
+Apps can be personal or shared. A personal app enables a one-on-one communication, and a shared app lets multiple users share app space to collaborate.
 
 ## <a name="driving-organizational-goals"></a>組織の目標を推進する
 
-組織では、共同作業とコミュニケーションが重要です。簡潔なコミュニケーション、必要なサービスとの統合、外出先でのアクセシビリティは、組織がますますアプリに頼るようになっている理由です。
+Collaboration and communication are key for an organization. Concise communication, integration with necessary services, and on-the-go accessibility is why organizations are increasingly choosing to rely on apps.
 
 組織は、顧客とつながり、サービスを提供し、情報を共有するためにアプリを使用します。 しかし、これだけではありません。 アプリは、ユーザーが一緒に作業するために集まる場所です。 よく配置されたアプリは、社外および社内のビジネス ニーズに合った統一感のある環境を構築するのに役立ちます。
 
@@ -47,7 +47,7 @@ Teams がアプリのニーズに最適である理由は次のとおりです�
 
 - **コミュニケーションおよびコラボレーション**
 
-    最も効果的な Teams アプリでは、別のシステムから情報を取り込み、その情報について会話し、ユーザーが実行できる操作が提供されます。Teams では、これらすべてのタスクを Teams クライアント内で直接実行できます。また、外部システムでのイベントまたはアクションに基づいて、対象ユーザーに情報をプッシュすることもできます。
+    Most successful Teams apps involve pulling information from another system, having a conversation about it, and letting users to take action. Teams lets you do all these tasks directly within the Teams client. You can even push information to a targeted audience based on an event or action in an external system.
 
 - **ソーシャルなやり取り**
 
@@ -57,7 +57,7 @@ Teams がアプリのニーズに最適である理由は次のとおりです�
 
 - **一般的なビジネス プロセス**
 
-    営業電話レポートの作成や共有、プロジェクトのタイムラインの追跡、共用リソースの確保、ヘルプ デスクへのリクエストの送信などのタスクは、反復的なタスクです。これらは、Teams アプリとして提供するのに向いています。
+    Tasks like creating and sharing a sales call report, tracking your project timeline, reserving common resources, submitting help desk requests are repetitive tasks. They make for effective Teams apps.
 
     アプリは、反復的なワークフローの自動化だけでなく、コミュニケーションの問題を解決することにも役立ちます。 チャット ボットは、IT 部門または人事部門へのメールや電話を簡単に置き換えることのできる機能です。
 

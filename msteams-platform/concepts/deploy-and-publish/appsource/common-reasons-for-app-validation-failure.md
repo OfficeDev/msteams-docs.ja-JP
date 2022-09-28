@@ -1,16 +1,16 @@
 ---
 title: アプリ検証エラーの一般的な理由
-description: アプリの検証に失敗し、アプリが Teams ストア申請プロセスに合格する可能性を高める最も一般的な理由を説明します。
+description: アプリの検証に失敗する最も一般的な理由について説明します。 破損したリンク、説明のエラー、無効なポリシー リンク、有効なドメイン ガイドライン違反、無効なサポート リンクなど。
 ms.topic: overview
 author: v-ypalikila
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.openlocfilehash: b8d0b0eb44a3071a6831500cfae41952e520399e
-ms.sourcegitcommit: 6d87e131eeae6846cadecf6ba775cecd010b4ffc
-ms.translationtype: HT
+ms.openlocfilehash: 1743bfc861afbbad851d2bfa6ff4236dca680ecf
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65132805"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100911"
 ---
 # <a name="common-reasons-for-app-validation-failure"></a>アプリ検証エラーの一般的な理由
 

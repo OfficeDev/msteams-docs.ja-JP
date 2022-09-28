@@ -1,16 +1,16 @@
 ---
 title: 受信 Webhook を作成する
 author: laujan
-description: このモジュールでは、受信 Webhook を Teams アプリに追加し、それを使用して外部要求を Teams に投稿する方法について説明します
+description: Teams アプリに着信 Webhook を作成し、Teams に外部要求を投稿します。 着信 Webhook を削除します。 着信 Webhook を使用してカードを送信するサンプル コード(C#,Node.js)。
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 4dd4790f6ff545b01999be7911129a53ab12c72d
-ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
+ms.openlocfilehash: c439a7147ea4fe76e2cd1778396b4936a6313a23
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67990946"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100477"
 ---
 # <a name="create-incoming-webhooks"></a>受信 Webhook を作成する
 

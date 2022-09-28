@@ -1,16 +1,16 @@
 ---
 title: ストア送信を準備する
-description: Microsoft Teams アプリをストアに登録する前の最後の手順について説明します。 アプリ パッケージなどを検証する方法について説明します。
+description: Microsoft Teams アプリをストアに登録する前の最後の手順について説明します。 アプリ パッケージを検証する方法について説明します。 パートナー センターで Apple App Store Connect チーム ID を更新する方法について説明します。
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 9413469579d4d010c76ecfd42a2eb66936c80a0c
-ms.sourcegitcommit: 3baca27a93e5a68eaaa52810700076f08f4c88a8
+ms.openlocfilehash: 373fee0b0c0b132357596e495014dc4535205b64
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605755"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100442"
 ---
 # <a name="prepare-your-teams-store-submission"></a>Teams のストア送信を準備する
 
@@ -33,7 +33,7 @@ Microsoft Teams アプリ検証ツールを使用すると、パートナー セ
 1. [Microsoft Teams アプリ検証ツール](https://dev.teams.microsoft.com/appvalidation.html)に移動します。 (注: このツールは、[Teams の開発者ポータル](~/concepts/build-and-test/teams-developer-portal.md) でも使用できます。
 1. アプリ パッケージをアップロードして、自動化されたテストを実行します。
 1. **[事前チェックリスト]** に移動し、自動化が困難なテスト ケースを確認します。
-1. [構成の問題](~/resources/schema/manifest-schema.md)またはアプリ全般の問題を修正します。これらの問題は、自動化されたテストでエラーが発生した場合、またはチェックリストのすべての条件を満たしていない場合に発生します。
+1. [Fix issues with your configurations](~/resources/schema/manifest-schema.md) or app in general. These issues occur if the automated tests give you errors or you haven't met all the criteria in the checklist.
 
 ## <a name="compile-testing-instructions"></a>コンパイルのテスト手順
 
@@ -97,7 +97,7 @@ Microsoft が機能を完全に理解できるよう、アプリの録画を提�
 
 #### <a name="short-description"></a>簡潔な説明
 
-アプリの簡潔な概要です。対象ユーザーに直接伝わり、独創性に満ちた魅力的なものにする必要があります。簡潔な説明を 1 文にまとめます。
+A concise summary of your app that should be original, engaging, and directed at your target audience. Keep the short description to one sentence.
 
 :::row:::
 
@@ -167,7 +167,7 @@ Microsoft が機能を完全に理解できるよう、アプリの録画を提�
 
 ### <a name="create-a-video"></a>ビデオを作成する
 
-アプリを使用する理由を伝えるには、登録情報にビデオを使用することが最も効果的です。ビデオで次の質問に答えます。
+A video in your listing can be the most effective way to communicate why people should use your app. Address the following questions in a video:
 
 * アプリの対象ユーザーは?
 * アプリで解決できる問題は?
@@ -179,7 +179,7 @@ YouTube または Vimeo ビデオの URL を追加できます。
 #### <a name="best-practices-for-videos"></a>ビデオのベスト プラクティス
 
 * ビデオを 60 - 90 秒の間にします。
-* 品質を目指します。登録情報で、ビデオはスクリーンショットの前に表示されます。
+* Aim for quality. In a listing, users will see your video before screenshots.
 * 製品の価値をストーリー形式で伝えます。
 * 製品の動作を示します。
 

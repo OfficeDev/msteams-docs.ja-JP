@@ -1,16 +1,16 @@
 ---
 title: 検索コマンドに応答する
 author: surbhigupta
-description: このモジュールでは、コード例とサンプルを使用して、Microsoft Teams アプリのメッセージ拡張機能から検索コマンドに応答する方法について説明します
+description: Microsoft Teams アプリのメッセージ拡張機能から検索コマンドに応答する方法について説明します。 ユーザー要求に応答する方法について説明します。
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 99720d4f914cd507f6fff2bce2386eb1a67622af
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: bc1034db9a5b63d861f1abbe98f22c73556710b2
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66143705"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100561"
 ---
 # <a name="respond-to-search-command"></a>検索コマンドに応答する
 
@@ -21,7 +21,7 @@ ms.locfileid: "66143705"
 * 検索ボックスに文字が入力されます。
 * `initialRun` がアプリ マニフェストで true に設定されている場合は、検索コマンドが呼び出されるとすぐに呼び出しメッセージが表示されます。 詳細については、既定の [クエリ](#default-query)に関するページを参照してください。
 
-このドキュメントでは、カードとプレビューの形式でユーザー要求に応答する方法と、Microsoft Teamsが既定のクエリを発行する条件について説明します。
+このドキュメントでは、カードとプレビューの形式でユーザー要求に応答する方法と、Microsoft Teams が既定のクエリを発行する条件について説明します。
 
 要求パラメーターは、次のプロパティを `value` 含む要求内のオブジェクトにあります。
 
@@ -79,7 +79,7 @@ class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
 
 ## <a name="respond-to-user-requests"></a>ユーザー要求に応答する
 
-ユーザーがクエリを実行すると、Microsoft Teamsはサービスに対して同期 HTTP 要求を発行します。 その時点で、コードは `5` 要求に対する HTTP 応答を提供するのに数秒かかります。 この間、サービスは追加のルックアップ、または要求の処理に必要なその他のビジネス ロジックを実行できます。
+ユーザーがクエリを実行すると、Microsoft Teams はサービスに対して同期 HTTP 要求を発行します。 その時点で、コードは `5` 要求に対する HTTP 応答を提供するのに数秒かかります。 この間、サービスは追加のルックアップ、または要求の処理に必要なその他のビジネス ロジックを実行できます。
 
 サービスは、ユーザー クエリと一致する結果で応答する必要があります。 応答は、HTTP 状態コードと、次の `200 OK` プロパティを持つ有効なアプリケーションまたは JSON オブジェクトを示す必要があります。
 
@@ -94,7 +94,7 @@ class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
 
 ### <a name="response-card-types-and-previews"></a>応答カードの種類とプレビュー
 
-Teamsでは、次の種類のカードがサポートされています。
+Teams では、次の種類のカードがサポートされています。
 
 * [サムネイル カード](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [ヒーロー カード](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
@@ -107,7 +107,7 @@ Teamsでは、次の種類のカードがサポートされています。
 
 Office 365 コネクタ カードの詳細については、「[Office 365 コネクタ カードの使用](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)」を参照してください。
 
-結果の一覧がMicrosoft Teams UI に表示され、各項目のプレビューが表示されます。 プレビューは、次の 2 つの方法のいずれかで生成されます。
+結果一覧が Microsoft Teams UI に表示され、各項目のプレビューが表示されます。 プレビューは、次の 2 つの方法のいずれかで生成されます。
 
 * オブジェクト内の `preview` プロパティを `attachment` 使用します。 添付ファイルは `preview` 、ヒーローカードまたはサムネイル カードにのみ使用できます。
 * オブジェクトの基本 `title`プロパティ `text`と `image` プロパティ `attachment` から抽出します。 基本プロパティは、プロパティが `preview` 指定されていない場合にのみ使用されます。
@@ -387,7 +387,7 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
 
 ## <a name="default-query"></a>既定のクエリ
 
-マニフェストに設定`initialRun`すると、ユーザーが最初に`true`メッセージ **拡張機能を開** いたときに既定のクエリが発行Microsoft Teams。 サービスは、事前に設定された一連の結果でこのクエリに応答できます。 これは、検索コマンドで認証または構成が必要な場合、最近表示されたアイテム、お気に入り、またはユーザー入力に依存しないその他の情報を表示する場合に便利です。
+マニフェストに`true`設定`initialRun`した場合、Microsoft Teams は、ユーザーが最初にメッセージ拡張機能を開いたときに **既定** のクエリを発行します。 サービスは、事前に設定された一連の結果でこのクエリに応答できます。 これは、検索コマンドで認証または構成が必要な場合、最近表示されたアイテム、お気に入り、またはユーザー入力に依存しないその他の情報を表示する場合に便利です。
 
 既定のクエリは、通常のユーザー クエリと同じ構造を持ち、フィールドは次の`name`オブジェクトに示すように設定および`value`設定`true`されます。`initialRun`
 

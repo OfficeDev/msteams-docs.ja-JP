@@ -1,20 +1,20 @@
 ---
 title: Microsoft 365 用の Teams アプリを発行する
-description: この記事では、Microsoft 365 対応の Teams アプリを Teams、Outlook、Office のユーザーが検出できるようにする方法について説明します。
+description: Microsoft 365 対応の Teams アプリを Teams、Outlook、Office のユーザーが検出できるようにする方法について説明します。 シングルテナント、マルチテナント分散について知る。
 ms.date: 05/24/2022
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: c99114ed397b9c20f699ffee165189ec7c4fd26d
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
+ms.openlocfilehash: 01806f5aa7e3a5b0cb79cb6a2562cbf104f031bb
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919817"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100939"
 ---
 # <a name="publish-teams-apps-for-microsoft-365"></a>Microsoft 365 用の Teams アプリを発行する
 
-Microsoft 365 対応の Teams アプリは、Microsoft Teams での運用環境での使用でサポートされています。 これらのアプリを配布して、 *対象となるリリース* バージョンの outlook.com と office.com を使用する対象ユーザーと、Outlook for Windows デスクトップの *ベータ チャネル* ビルドをプレビューできます。 Microsoft 365 対応 Teams アプリの配布オプションとプロセスは、従来の Teams アプリと同じです。
+Microsoft Teams では、運用用の Microsoft 365 対応 Teams アプリがサポートされています。 これらのアプリは、 *対象リリース*  (開発プレビュー) バージョンの Outlook.com と Office.com、Windows デスクトップ用 Outlook の *ベータ チャネル* ビルド、Android 用 Office アプリの Office Current Channel (開発プレビュー) ビルドを使用する対象ユーザーに配布できます。 Microsoft 365 対応 Teams アプリの配布オプションとプロセスは、従来の Teams アプリと同じです。
 
 発行後、アプリは、Teams ストアに加えて、Outlook および Office アプリ ストアからインストール可能なアプリとして検出できるようになります。 アプリでは、Outlook と Office 全体の Teams で定義されているアクセス許可が使用されます。 Teams 管理者は、組織内のユーザー [に対して Microsoft 365 全体の Teams アプリへのアクセスを管理](/MicrosoftTeams/manage-third-party-teams-apps) できます。
 

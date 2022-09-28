@@ -1,16 +1,16 @@
 ---
 title: 公開したアプリの保守およびサポート
-description: 公開された Microsoft Teams アプリを管理する方法と、ストアが Teams ストアと AppSource に一覧表示された後の考え方について説明します。
+description: 公開された Microsoft Teams アプリと、ストアが Teams ストアと AppSource に一覧表示された後に行う操作を管理する方法について説明します。 アプリの使用状況を分析し、更新プログラムを発行し、アプリを昇格し、Microsoft 365 認定を完了します。
 ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 3e73725bcfd1f51cc2f1ab82ba7437b205028c09
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
-ms.translationtype: HT
+ms.openlocfilehash: f05613a54ea87660611bb4a4d66d2f88f9ee3b46
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484846"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100330"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>公開された Microsoft Teams アプリを管理する
 
@@ -35,7 +35,7 @@ ms.locfileid: "66484846"
 
 * アプリ ID を変更しないでください。
 * アプリのバージョン番号を増やします。
-* パートナー センターで、更新を行うために **[新しいアプリの追加]** を選択しないでください。代わりにアプリのページに移動します。
+* In Partner Center, don't select **Add a new app** to do the update. Go to your app's page instead.
 
 ### <a name="app-updates-requiring-user-consent"></a>ユーザーの同意を必要とするアプリの更新
 
@@ -50,7 +50,7 @@ ms.locfileid: "66484846"
 * 個人用タブを追加します。
 * チャネルとグループ タブを追加します。
 * コネクタを追加します。
-* Microsoft Azure Active Directory (Azure AD) アプリの登録に関連する構成を変更します。詳細については、「[`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo)」を参照してください。
+* Modify configurations related to your Microsoft Azure Active Directory (Azure AD) app registration. For more information, see [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ## <a name="fix-issues-with-your-published-app"></a>公開したアプリの問題を修正する
 

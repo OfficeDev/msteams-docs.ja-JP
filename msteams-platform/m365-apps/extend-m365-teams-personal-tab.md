@@ -1,20 +1,20 @@
 ---
 title: Teams 個人用タブ アプリを Microsoft 365 に拡張する
-description: この記事では、Outlook と Office の両方で実行するように個人用タブを更新することで、Teams 個人用タブ アプリを Microsoft 365 全体に拡張する方法について説明します。
+description: Outlook と Office で実行するように個人用アプリを更新します。 マニフェストと TeamsJS SDK V2 を更新し、同意のセキュリティを修正し、SSO 用に Azure AD アプリの登録を更新します。
 ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: ac9e9f9ecff238fc39c916f6b2975f1062fa2744
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: cb6b7ee27e95045c218805181531ad96a1357f89
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781209"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100773"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Teams 個人用タブを Microsoft 365 全体に拡張する
 
-個人用タブは、Microsoft Teams エクスペリエンスを向上させる優れた方法です。 個人用タブを使用すると、ユーザーがエクスペリエンスを離れるか、もう一度サインインしなくても、Teams 内でアプリケーションへのアクセス権をユーザーに提供できます。 このプレビューを使用すると、他の Microsoft 365 アプリケーション内で個人用タブを点灯させることができます。 このチュートリアルでは、既存の Teams 個人用タブを取得し、Outlook デスクトップと Web エクスペリエンスの両方、および Office on the web (office.com) で実行するように更新するプロセスを示します。
+個人用タブは、Microsoft Teams エクスペリエンスを向上させる優れた方法です。 個人用タブを使用すると、ユーザーがエクスペリエンスを離れるか、もう一度サインインしなくても、Teams 内でアプリケーションへのアクセス権をユーザーに提供できます。 このプレビューを使用すると、他の Microsoft 365 アプリケーション内で個人用タブを点灯させることができます。 このチュートリアルでは、既存の Teams 個人用タブを取得し、Outlook と Office デスクトップと Web の両方のエクスペリエンスと Android 用 Office アプリで実行するように更新するプロセスについて説明します。
 
 Outlook と Office で実行するように個人用アプリを更新するには、次の手順に従います。
 
@@ -141,8 +141,12 @@ Microsoft Teams と同様に、タブ アプリケーションは Office およ�
     |Teams Web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
     |Office Web  |4765445b-32c6-49b0-83e6-1d93765276ca|
     |Office デスクトップ  | 0ec893e0-5785-4de6-99da-4ed124e5296c |
+    |Office Mobile  | d3590ed6-52b3-4102-aeff-aad2292ab01c |
     |Outlook デスクトップ、モバイル | d3590ed6-52b3-4102-aeff-aad2292ab01c |
     |Outlook Web | bc59ab01-8403-45c6-8796-ac3ef710b3e3|
+
+    > [!NOTE]
+    > Microsoft 365 クライアント アプリケーションの中には、クライアント ID を共有するものもあります。
 
 ## <a name="sideload-your-app-in-teams"></a>Teams でアプリをサイドロード
 
@@ -164,7 +168,7 @@ Office と Outlook でアプリを実行する最後の手順は、更新され�
 
     :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Teams の [カスタム アプリをアップロード] オプション":::
 
-Teams にサイドロードすると、Outlook と Office で個人用タブを使用できるようになります。 アプリをサイドロードするために Teams にサインインするときに使用したのと同じ資格情報でサインインしてください。
+Teams にサイドロードすると、Outlook と Office で個人用タブを使用できるようになります。 Teams でアプリをサイドロードするために使用したのと同じ資格情報でサインインする必要があります。 Android 用 Office アプリを実行するときは、Office アプリから個人用タブ アプリを使用するためにアプリを再起動する必要があります。
 
 アプリをピン留めしてすばやくアクセスすることも、左側のサイドバーにある最近のアプリケーション間の省略記号 (**...**) ポップアップでアプリを見つけることもできます。 Teams でアプリをピン留めしても、Office または Outlook ではアプリとしてピン留めされません。
 
@@ -215,6 +219,19 @@ Office on the web で実行されているアプリをプレビューするに�
 
     :::image type="content" source="images/office-web-more-apps.png" alt-text="インストールされている個人用タブを表示するには、office.com のサイド バーにある [その他のアプリ] オプションをクリックします":::
 
+### <a name="office-app-for-android"></a>Android 用 Office アプリ
+
+> [!NOTE]
+> アプリをインストールする前に、 [最新の Office アプリ ベータ ビルドをインストールし、ベータ](prerequisites.md#mobile) プログラムの一部になる手順を実行します。
+
+Android 用 Office アプリで実行されているアプリを表示するには:
+
+1. Office アプリを起動し、開発テナント アカウントを使用してサインインします。 Office アプリ for Android が Teams でアプリをサイドロードする前に既に実行されていた場合は、インストールされているアプリの中でアプリを表示するために再起動する必要があります。
+1. **[アプリ**] アイコンを選択します。 サイドロードされたアプリは、インストールされているアプリの間に表示されます。
+1. アプリ アイコンを選択して、Android 用 Office アプリでアプリを起動します。
+
+:::image type="content" source="images/office-mobile-apps.png" alt-text="Office アプリのサイド バーにある [アプリ] オプションをタップすると、インストールされている個人用タブが表示されます":::
+
 ## <a name="troubleshooting"></a>トラブルシューティング
 
 現在、Outlook クライアントと Office クライアントでは、Teams アプリケーションの種類と機能のサブセットがサポートされています。 このサポートは、時間の経過と共に拡張されます。
@@ -239,6 +256,26 @@ Office または Outlook へのローカル デバッグを初めて実行する
 
 フィードバックを提供し、 [Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx/issues) での Teams Toolkit デバッグ エクスペリエンスに関する問題を報告します。
 
+#### <a name="mobile-debugging"></a>モバイル デバッグ
+
+Teams Toolkit (`F5`) のデバッグは、Android 用 Office アプリではまだサポートされていません。 Android 用 Office アプリで実行されているアプリをリモートでデバッグする方法を次に示します。
+
+1. 物理 Android デバイスを使用してデバッグする場合は、開発用コンピューターに接続し、 [USB デバッグ](https://developer.android.com/studio/debug/dev-options)のオプションを有効にします。 これは、Android エミュレーターで既定で有効になっています。
+1. Android デバイスから Office アプリを起動します。
+1. プロファイル **の [Me > Settings] > [デバッグを許可する**] を開き、[ **リモート デバッグを有効にする]** オプションをオンにします。
+
+    :::image type="content" source="images/office-android-enable-remote-debugging.png" alt-text="リモート デバッグを有効にするを示すスクリーンショット":::
+
+1. 終了 **設定**。
+1. プロファイル画面を終了します。
+1. **[アプリ] を** 選択し、サイドロードされたアプリを起動して Office アプリ内で実行します。
+1. Android デバイスが開発用コンピューターに接続されていることを確認します。 開発用コンピューターから、ブラウザーを開いて DevTools 検査ページに移動します。 たとえば、Microsoft Edge に移動して `edge://inspect/#devices` 、デバッグが有効な Android WebView の一覧を表示します。
+1. タブの `Microsoft Teams Tab` URL を見つけて **検査** を選択し、DevTools を使用してアプリのデバッグを開始します。
+
+    :::image type="content" source="images/office-android-debug.png" alt-text="devtool の Web ビューの一覧を示すスクリーンショット":::
+
+1. Android WebView 内でタブ アプリをデバッグします。 同様に、Android デバイスで通常の Web サイトを [リモートでデバッグ](/microsoft-edge/devtools-guide-chromium/remote-debugging) します。
+
 ## <a name="code-sample"></a>コード サンプル
 
 | **サンプルの名前** | **説明** | **Node.js** |
@@ -247,6 +284,7 @@ Office または Outlook へのローカル デバッグを初めて実行する
 | Todo List (Microsoft 365) | ReactとAzure Functionsを使用して構築された SSO を使用した編集可能な todo リスト。 Teams、Outlook、Office で動作します。 | [表示](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | イメージ エディター (Microsoft 365) | Microsoft Graph APIを使用してイメージを作成、編集、開き、保存します。 Teams、Outlook、Office で動作します。 | [表示](https://github.com/OfficeDev/m365-extensibility-image-editor) |
 | サンプル起動ページ (Microsoft 365) | 異なるホストで使用可能な SSO 認証と TeamsJS SDK の機能について説明します。 Teams、Outlook、Office で動作します。 | [表示](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
+| Northwind Orders アプリ | Microsoft TeamsJS SDK V2 を使用してチーム アプリケーションを他の M365 ホスト アプリに拡張する方法を示します。 Teams、Outlook、Office で動作します。 モバイル向けに最適化されています。| [表示](https://github.com/microsoft/app-camp/tree/main/experimental/ExtendTeamsforM365) |
 
 ## <a name="next-step"></a>次の手順
 

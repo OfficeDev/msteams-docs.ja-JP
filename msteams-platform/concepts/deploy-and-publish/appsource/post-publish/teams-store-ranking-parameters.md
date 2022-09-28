@@ -1,16 +1,16 @@
 ---
 title: Microsoft Teams ストアのランク付けパラメーター
-description: Microsoft Teams ストアが、一連のランキング パラメーターを使用してストア内のアプリの検索結果をランク付けし、関連する検索結果をユーザーに配信する方法について説明します。
+description: Microsoft Teams ストアのランク付けパラメーターについて説明します。 アプリの配置を決定するために使用される主なパラメーターは、履歴使用状況データ、ユーザー エンゲージメント データ、アプリの品質と値、聴覚の関連性、アプリの更新です。
 ms.topic: reference
 ms.localizationpriority: high
 author: v-ypalikila
 ms.author: v-ypalikila
-ms.openlocfilehash: 3a667247e0e67e4454effe2226e8775ac3fa0c3e
-ms.sourcegitcommit: 7bbb7caf729a00b267ceb8af7defffc91903d945
-ms.translationtype: HT
+ms.openlocfilehash: 558ac86814ddb61660ca2409418754fd33730c7b
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66190008"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100337"
 ---
 # <a name="microsoft-teams-store-ranking-parameters"></a>Microsoft Teams ストアのランク付けパラメーター
 

@@ -1,16 +1,16 @@
 ---
 title: アプリに SaaS オファーを含める
-description: この記事では、サブスクリプション ベースの価格モデルで Microsoft Teams アプリを収益化し、Microsoft Teams アプリに SaaS オファーを含める方法について説明します。
+description: Teams ストアの登録情報からサブスクリプション プランを直接販売することで、Microsoft Teams アプリを収益化する方法について説明します。 発行アプリ、エンド ユーザー、管理者の購入エクスペリエンスについて説明します。
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: e9182df9f6c3c5d7f84654022e658ac6d670e50d
-ms.sourcegitcommit: 209b9942c02b5affdd995348902114d3b9805c61
-ms.translationtype: HT
+ms.openlocfilehash: 3fe41b635f9789e7f96eeb41f17526205924dadf
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2022
-ms.locfileid: "67288186"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100638"
 ---
 # <a name="include-a-saas-offer-with-your-teams-app"></a>Teams アプリに SaaS オファーを含める
 
@@ -69,7 +69,7 @@ Teams アプリを収益化するには、SaaS フルフィルメント API と�
 
 * Teams アプリの取引可能な SaaS オファーでは、サブスクリプション プラン (ライセンス) は、グループまたは組織全体ではなく、個々のユーザーに割り当てられる必要があります。
 * ユーザーにサブスクリプション プランが割り当てられたら、Teams ボットまたはメールで通知します。 メッセージには、Teams にアプリを追加して開始する方法を含めます。
-* 複数の管理者のアイデアをサポートします。つまり、同じ組織内の複数のユーザーが独自のサブスクリプションを購入して管理できます。
+* 複数の管理者という概念をサポートします。 つまり、同じ組織の複数のユーザーが自分のサブスクリプションを購入および管理できます。
 
 ## <a name="build-a-landing-page-for-subscription-management"></a>サブスクリプション管理のためのランディング ページを作成する
 
@@ -109,7 +109,7 @@ SaaS フルフィルメント API を統合し、ユーザーがサブスクリ�
 
     * **[Microsoft 365 の統合]** で、アプリの登録情報に AppSource リンクを追加します。 この手順により、ユーザーが Teams に加えて AppSource でもサブスクリプション プランを購入できます。
 
-1. 発行元とオファー ID を保存します。(開発者ポータルでオファーをアプリにリンクするため、後で必要になります)。
+1. 発行元 ID とオファー ID を保存します。 (開発者ポータルでオファーをアプリにリンクするために後で必要になります)。
 
 1. オファーをコマーシャル マーケットプレースに公開します。
 

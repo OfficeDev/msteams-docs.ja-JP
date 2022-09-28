@@ -1,15 +1,15 @@
 ---
 title: パブリック開発者プレビュー マニフェスト スキーマ リファレンス
-description: Microsoft Teams でサポートされているすべてのコンポーネントのサンプル マニフェスト ファイルと説明について説明します。
+description: 開発者プレビューを有効にする方法について説明します。 Microsoft Teams のパブリック開発者プレビュー マニフェスト スキーマのサンプル。
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: c019b686d27df4927ca721f36bacb5018c5ad596
-ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
+ms.openlocfilehash: 5122ab4c0d2a3668c8ca7568a3ce65ee69b980a8
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67990925"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100295"
 ---
 # <a name="public-developer-preview-manifest-schema-for-teams"></a>Teams のパブリック開発者プレビュー マニフェスト スキーマ
 

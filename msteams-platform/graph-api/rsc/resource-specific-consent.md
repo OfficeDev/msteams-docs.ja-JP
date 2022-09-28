@@ -1,16 +1,16 @@
 ---
 title: Teams でリソース固有の同意を有効にする
-description: この記事では、Microsoft Teams でのリソース固有の同意と、それを利用する方法について説明します。
+description: サポートされている詳細なリソース固有の同意 (RSC) アクセス許可について説明します。これにより、チームの所有者とチャット所有者はアプリケーションに対する同意を付与できます。
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: reference
-ms.openlocfilehash: 7321c3dbf1f2a3493a1d457cfd80d7fc1efb01d6
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: 558ddd3603c9545781a3ebe06b7878df48b1333c
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586708"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100890"
 ---
 # <a name="resource-specific-consent"></a>リソース固有の同意
 

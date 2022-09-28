@@ -1,16 +1,16 @@
 ---
 title: ボット メッセージの書式を設定する
 author: surbhigupta
-description: このモジュールでは、取り消し線、順序付けされたリスト、ハイパーリンク、イメージ リンクなど、豊富な書式設定とスタイルをボット メッセージに追加する方法について説明します。
+description: 取り消し線、順序付けされたリスト、順序付けされていないリスト、ハイパーリンク、画像リンクなどのボット メッセージの書式設定とスタイル設定を行う方法について説明します。 クロスプラットフォームサポートについて理解する。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 63c201e2126181793ce09a962b5352fb3418cff2
-ms.sourcegitcommit: 217025a61ed9c3b76b507fe95563142abc6d0318
+ms.openlocfilehash: 4e3b777ba5e94c8bac541d0178122f16f218eba0
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "67363495"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100183"
 ---
 # <a name="format-your-bot-messages"></a>ボット メッセージの書式を設定する
 
@@ -25,7 +25,7 @@ ms.locfileid: "67363495"
 
 Microsoft Teams では、次の書式設定オプションがサポートされています。
 
-| `TextFormat` 値 | 説明 |
+| `TextFormat` 値 | [説明] |
 | --- | --- |
 | プレーン | テキストは、書式を適用せずに生のテキストとして扱う必要があります。|
 | markdown | テキストはマークダウンの書式設定として扱われ、必要に応じてチャネルにレンダリングする必要があります。 |

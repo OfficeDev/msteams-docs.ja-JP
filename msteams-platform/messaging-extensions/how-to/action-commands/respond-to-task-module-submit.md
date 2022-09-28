@@ -1,16 +1,16 @@
 ---
 title: タスク モジュールの送信アクションに応答する
 author: surbhigupta
-description: このモジュールでは、プロアクティブ メッセージなどを使用して、メッセージング拡張機能アクション コマンドからタスク モジュール送信アクションに応答する方法について説明します。
+description: プロアクティブ メッセージを使用してメッセージ拡張機能アクション コマンドからタスク モジュール送信アクションに応答する方法について説明します。 検索コマンドを定義し、検索に応答します。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 8bb61750d9b8cc52008e30e3b37b901a018915e7
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 827c939080aa2eff182115966351356b0d71e3a9
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66144027"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100484"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>タスク モジュールの送信アクションに応答する
 

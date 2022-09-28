@@ -1,14 +1,14 @@
 ---
 title: ブラウザーのデバイスのアクセス許可
-description: Web クライアント内のアプリのカメラやマイクへのアクセスなど、デバイスのアクセス許可を安全に取り戻す方法について説明します。
+description: カメラやマイクへのアクセスなど、デバイスのアクセス許可を必要とするアプリでは、ユーザーが Web ブラウザーでアプリレベルごとに手動でアクセス許可を付与する必要があります。
 localization_priority: medium
 ms.topic: how-to
-ms.openlocfilehash: ac4695d119b04ee71334ccb2baa820c0e15bff88
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: a9df46a3bacd66b32efceaf2f2069e92c2cc64a3
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035080"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100575"
 ---
 # <a name="device-permissions-for-the-browser"></a>ブラウザーのデバイスのアクセス許可
 

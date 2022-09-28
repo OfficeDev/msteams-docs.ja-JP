@@ -1,16 +1,16 @@
 ---
 title: アプリのユース ケースと Teams 機能を理解する
 author: heath-hamilton
-description: この記事では、Microsoft Teams アプリの機能を学習し、Teams アプリと機能を計画および理解し、Teams アプリが解決するユーザーの問題についても学習します。
+description: Microsoft Teaams アプリの cabilities- タブ、ボット、会議の拡張機能、メッセージ拡張機能、Webhook コネクタ、個人用アプリ エクスペリエンス、共有アプリ エクスペリエンスについて説明します。
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 64eff648f1d44d5f7534083939822c26c4ae825f
-ms.sourcegitcommit: c398dfdae9ed96f12e1401ac7c8d0228ff9c0a2b
-ms.translationtype: HT
+ms.openlocfilehash: 8a78fe23f244fc37d7bbeda5f854b3cbeb800303
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66558444"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100456"
 ---
 # <a name="understand-your-use-cases"></a>ユース ケースを理解する
 
@@ -31,7 +31,7 @@ ms.locfileid: "66558444"
 
 ## <a name="microsoft-teams-app-features"></a>Microsoft Teams アプリの機能
 
-Teams を拡張する方法は複数あり、アプリごとに異なります。Teams アプリの機能は次の機能を提供します。
+There are multiple ways to extend Teams so every app is unique. Teams app features offer:
 
 - [アプリの機能](#app-capabilities)
 - [アプリのスコープ](#app-scope)
@@ -173,7 +173,7 @@ Web ベースのコンテンツを[タブ](../../tabs/what-are-tabs.md)に表示
 - **個人用アプリ エクスペリエンス**: 個人用アプリは、ユーザーが自分のタスクに集中したり、重要なアクティビティを表示したりするのに役立つ専用のスペースまたはボットです。
 - **共有アプリ エクスペリエンス**: Teams、チャネル、およびチャットは共同作業スペースです。 これらのコンテキストのアプリは、そのスペース内のすべてのユーザーが利用できます。 通常、共同作業スペースでは、アプリの操作や新しい社会的対話の実現に重点が置かれます。
 
-アプリは、さまざまなスコープにまたがって存在できます。次に例を示します。
+アプリは、さまざまなスコープにまたがって存在できます。 例:
 
 - アプリは、中央の共有場所 (タブ) にデータを表示できます。
 - また、同じ情報を個人の会話インターフェイス (ボット) を介して表示することもできます。

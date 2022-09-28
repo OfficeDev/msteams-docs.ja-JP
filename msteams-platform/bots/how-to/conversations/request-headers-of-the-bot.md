@@ -1,14 +1,14 @@
 ---
 title: ボットの要求ヘッダーにテナント ID と会話 ID を送信する
-description: このモジュールでは、Teams のボットの要求ヘッダーにテナント ID と会話 ID を送信する方法について説明します。
+description: Teams のボットの要求ヘッダーに存在するテナント ID と会話 ID を使用して、ペイロード全体をアンパックせずにボット トラフィックをルーティングする方法について説明します。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: b292db11ced764bbe235bee0f6f8f4829ba7b6c9
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: 3132d91d4b3d0b290ee8e1fb35ebeea076217fe8
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503775"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100148"
 ---
 # <a name="request-headers-of-the-bot"></a>ボットのヘッダーをリクエストする
 

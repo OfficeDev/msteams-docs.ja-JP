@@ -5,12 +5,12 @@ ms.author: surbhigupta
 description: このモジュールでは、Microsoft Teams JavaScript クライアント SDK を学習します。これは、以下でホストされているアプリ エクスペリエンスの構築に役立ちます <iframe> でホストされたアプリ エクスペリエンスの構築に役立つ Microsoft Teams JavaScript クライアント SDK の概要。
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: a3d1785dc96284e858d14bbef8b8acc0d466b1bc
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: ca5a02a067c44aaeab52bdde3c7be3a45c6797df
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781067"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100155"
 ---
 # <a name="teams-javascript-client-sdk"></a>Teams JavaScript client SDK
 
@@ -38,10 +38,10 @@ TeamsJS v.2.0 では、特定の種類の Teams アプリをMicrosoft 365 エコ
 
 |機能 | ホストのサポート | 備考 |
 |-----------|--------------|-------|
-| アプリ | Teams、Outlook、Office | 名前空間はアプリの初期化とライフサイクルを表します。 |
+| アプリ | Teams、Outlook、Office、Android 用 Office アプリ | 名前空間はアプリの初期化とライフサイクルを表します。 |
 | appInitialization| | 非推奨。 `app` 名前空間に置き換えられました。 |
 | appInstallDialog | Teams||
-| 認証 | Teams、Outlook、Office | |
+| 認証 | Teams、Outlook、Office、Android 用 Office アプリ | |
 | calendar | Outlook ||
 | 通話 | Teams||
 | チャット |Teams||
@@ -49,7 +49,7 @@ TeamsJS v.2.0 では、特定の種類の Teams アプリをMicrosoft 365 エコ
 | 場所 |Teams| 「[アプリのアクセス許可](#app-permissions)」のメモを参照してください。|
 | mail | Outlook (Windows デスクトップのみ)||
 | メディア |Teams| 「[アプリのアクセス許可](#app-permissions)」のメモを参照してください。|
-| ページ | Teams、Outlook、Office | ページ ナビゲーションを表す名前空間。 「[ディープ リンクの設定](#deep-linking)」のメモを参照してください。 |
+| ページ | Teams、Outlook、Office、Android 用 Office アプリ | ページ ナビゲーションを表す名前空間。 「[ディープ リンクの設定](#deep-linking)」のメモを参照してください。 |
 | people |Teams||
 | 設定 || 非推奨。 `pages.config` に置き換えられました。|
 | 共有 | Teams||

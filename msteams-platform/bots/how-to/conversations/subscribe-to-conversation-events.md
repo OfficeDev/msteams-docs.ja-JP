@@ -1,17 +1,17 @@
 ---
 title: 会話イベント
 author: WashingtonKayaker
-description: Microsoft Teams ボットからの会話イベント、チャネル イベントの更新、チーム メンバー イベント、メッセージ リアクション イベントをコード サンプルを使用した操作方法。
+description: サンプル (.NET、Node.js、Python) を使用して、Microsoft Teams ボットからの会話イベント、チャネル イベントの更新、チーム メンバー イベント、メッセージリアクション イベントを操作します。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 keywords: イベント ボット チャネル メッセージの反応の会話
-ms.openlocfilehash: d7bdd35f887c9f59000139aa36352b0b416465c6
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 6bf1be094afc778317f2e4d5a7657514d35b9777
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616997"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100358"
 ---
 # <a name="conversation-events-in-your-teams-bot"></a>Teams ボットの会話イベント
 

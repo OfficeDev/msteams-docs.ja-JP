@@ -1,16 +1,16 @@
 ---
 title: Webhook とコネクタ
 author: clearab
-description: このモジュールでは、Webhook とコネクタによって Web サービスがどのように Teams クライアントに接続されるかについて説明します。
+description: Webhook とコネクタが、Microsoft Teams のチャネルとチームに Web サービスを接続する方法について説明します。 受信、送信 Webhook、Office 365 コネクタについて説明します。
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: bb453367eb0d8f4c2c1a54681d67dc38fb3e0358
-ms.sourcegitcommit: ef545fac5c0dbe970d81f53b1631930e9196eba3
+ms.openlocfilehash: 94c84b577dfb20cb823167d3af84f5460bb87554
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67991650"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100449"
 ---
 # <a name="webhooks-and-connectors"></a>Webhook とコネクタ
 

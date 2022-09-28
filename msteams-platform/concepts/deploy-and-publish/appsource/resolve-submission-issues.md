@@ -1,18 +1,18 @@
 ---
 title: ストアの申請に関する問題を解決する
-description: この記事では、Microsoft Teams ストアの申請に関する問題のトラブルシューティングと修正方法について説明します。
+description: Microsoft Teams ストアの申請に関する問題のトラブルシューティングと修正方法について説明します。 Microsoft から直接ヘルプを受け、問題を解決し、アプリを再送信します。
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: 5faf2d3622e88febe9522f5e2df6716ec2680cca
-ms.sourcegitcommit: ffc57e128f0ae21ad2144ced93db7c78a5ae25c4
+ms.openlocfilehash: daa64a7f21071632b7c0728bf51829ca9540ebce
+ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66503873"
+ms.lasthandoff: 09/28/2022
+ms.locfileid: "68100281"
 ---
-# <a name="resolve-issues-if-your-teams-store-submission-fails"></a>Teams ストアの申請が失敗した場合に問題を解決する
+# <a name="resolve-issues-if-your-teams-store-submission-fails"></a>Teams ストアの送信に失敗した場合に問題を解決する
 
 Microsoft Teams ストアに発行されたアプリは、 [Teams ストアの検証ガイドライン](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) と [商用マーケットプレース ポリシー](/legal/marketplace/certification-policies)を満たしている必要があります。
 
@@ -49,7 +49,7 @@ Microsoft によって提供されるコンシェルジェ検証サービスは�
 > [!CAUTION]
 > 複数の申請エラーを回避するには、Microsoft コンシェルジェ検証チームがアプリを承認するまで、パートナー センターでアプリを再送信しないでください。
 
-## <a name="faq"></a>よくあるご質問 (FAQ)
+## <a name="faq"></a>よく寄せられる質問
 
 アプリの申請の問題を解決するときによく寄せられる質問に対する回答を取得します。
 
