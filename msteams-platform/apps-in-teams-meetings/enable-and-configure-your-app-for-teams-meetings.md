@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: b01155abe9ec421310b169c7a2b50c49e211b4b7
-ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
+ms.openlocfilehash: d0e7cf82685588977beb426ec6cc2ed75b2249c6
+ms.sourcegitcommit: 600d3b13d47ca42ab5ba7abf18bccc7e912180e4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2022
-ms.locfileid: "67833709"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68158821"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>会議用アプリを有効にして構成する
 
@@ -105,7 +105,7 @@ Teams 会議は、組織の共同作業エクスペリエンスを提供しま�
 
     <img src="../assets/images/apps-in-meetings/PreMeeting1.png" alt="Pre-meeting experience" width="900"/>
 
-1. 表示されるタブ ギャラリーで、追加するアプリを選択し、必要に応じて手順に従います。アプリはタブとしてインストールされます。
+1. In the tab gallery that appears, select the app that you want to add and follow the steps as required. The app is installed as a tab.
 
 会議にメッセージ拡張機能を追加するには:
 
@@ -177,7 +177,7 @@ Teams 会議は、組織の共同作業エクスペリエンスを提供しま�
 
 共有会議ステージを使用すると、会議参加者はアプリ コンテンツの操作と共同作業をリアルタイムで行うことができます。 次の方法で、共同作業会議ステージにアプリを共有できます。
 
-* Teams クライアントの [ステージで共有] ボタンを使用して[アプリ全体をステージに共有](#share-entire-app-to-stage)します。
+* Teams クライアントの会議サイド パネルまたは[ディープリンク](~/concepts/build-and-test/deep-links.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)を介して、[共有からステージへ] ボタンを使用して[、アプリ全体](#share-entire-app-to-stage)を共有してステージングします。
 * Teams クライアント SDK の API を使用して、[アプリの特定の部分をステージに共有](#share-specific-parts-of-the-app-to-stage)します。
 
 ##### <a name="share-entire-app-to-stage"></a>アプリ全体をステージに共有する
@@ -186,22 +186,22 @@ Teams 会議は、組織の共同作業エクスペリエンスを提供しま�
 
 <img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
 
-アプリ全体をステージに共有するには、アプリ マニフェストで `meetingStage` と `meetingSidePanel` をフレーム コンテキストとして構成する必要があります。次に例を示します。
+To share the entire app to stage, in the app manifest you must configure `meetingStage` and `meetingSidePanel` as frame contexts. For example:
 
 ```json
 "configurableTabs": [
-    {
+   {
       "configurationUrl": "https://contoso.com/teamstab/configure",
       "canUpdateConfiguration": true,
       "scopes": [
-        "groupchat"
-      ],
+         "groupchat"
+        ],
       "context":[
-        "meetingSidePanel",
-        "meetingStage"
-     ]
+         "meetingSidePanel",
+         "meetingStage"
+        ]
     }
-  ]
+]
 ```
 
 詳細については、「[アプリ マニフェスト](../resources/schema/manifest-schema-dev-preview.md#configurabletabs)」を参照してください。
@@ -212,7 +212,7 @@ Teams 会議は、組織の共同作業エクスペリエンスを提供しま�
 
 <img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
 
-アプリの特定の部分をステージに共有するには、Teams クライアント SDK ライブラリで関連 API を呼び出す必要があります。詳細については、「[API リファレンス](API-references.md)」を参照してください。
+To share specific parts of the app to stage, you must invoke the related APIs in the Teams client SDK library. For more information, see [API reference](API-references.md).
 
 > [!NOTE]
 >

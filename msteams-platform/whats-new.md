@@ -4,12 +4,12 @@ description: Microsoft Teams の新しい開発者向け機能と、既存の機
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: f10194e224aee438472a4487ede3db49792bf77c
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: e54f37ae2c330275fb0dd51de34c2f8bcd721bba
+ms.sourcegitcommit: 600d3b13d47ca42ab5ba7abf18bccc7e912180e4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100162"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68158828"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -31,6 +31,7 @@ ms.locfileid: "68100162"
 
 **2022 年 9 月**
 
+* ***2022 年 9 月 29*** 日: [会議のステージにコンテンツを共有するためのディープ リンクを生成します。](concepts/build-and-test/deep-links.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 * ***2022 年 9 月 16*** 日: [検索ベースのメッセージ拡張機能のアダプティブ カードでユニバーサル アクションがサポートされるようになりました。](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
 * ***2022 年 9 月 6*** 日: [API を使用してカメラを使用してビデオをキャプチャするためのコード スニペットを `selectMedia` 導入しました。](concepts/device-capabilities/media-capabilities.md#code-snippets)
 
