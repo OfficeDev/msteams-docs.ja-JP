@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: bdcf92b52956eee6db21eb03d115a494c0f063e9
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: ca65a34796886ff8eb6a0c13aaa11af319739dc8
+ms.sourcegitcommit: 1db4429f34da213aa749e483a4ceb83c14b07de3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806774"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68158264"
 ---
 # <a name="teams-toolkit-overview"></a>Teams ツールキットの概要
 
@@ -59,10 +59,10 @@ Teams Toolkit は手動作業を自動化し、Teams と Azure リソースの�
 | Teams アプリの発行 | 次のものが含まれます。 <br> - アプリを発行する <br> - 管理者の承認を管理する <br> - 公開して保存する <br> - 開発者ポータルと統合する |
 
 ### <a name="entities-integrated-with-teams-toolkit"></a>Teams Toolkit と統合されたエンティティ
-
+ 
 Teams Toolkit は Visual Studio Code の拡張機能です。 Azure AD や Microsoft 365、開発者ポータル、Microsoft グラフなど、Teams Toolkit 内の次のエンティティと統合されています。 すべてのエンティティは Teams Toolkit 内に統合されており、ユーザーがアプリを作成するのに役立ちます。
 
-| Entities | 説明 |
+| Entities | [説明] |
 | ---- | ---- |
 | Azure AD  | Azure Active Directory (Azure AD) は、クラウドベースの ID とアクセス管理サービスです。 このサービスは、従業員が Microsoft 365、Azure portal、その他数千の SaaS アプリケーションなどの外部リソースにアクセスするのに役立ちます。 |
 | Microsoft 365  | アプリの開発中に Teams 開発者アカウント。|
