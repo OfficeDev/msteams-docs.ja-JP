@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 5e24b4c6209d2e0c719a6613272876206dc0e173
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 498a003e8fdc58d1eb0d9db4abb7b4b151143a19
+ms.sourcegitcommit: 275bb05daee25ae710238cbd49f588e6da1ffdf1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450402"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68158682"
 ---
 # <a name="create-a-personal-tab"></a>プライベート タブを作成する
 
@@ -130,7 +130,8 @@ ms.locfileid: "67450402"
     * **タブのMicrosoft Azure Active Directory (Azure AD) シングル サインオンのサポートが必要ですか?**
 
       タブの Azure AD シングル サインオンを含め **ない** ことを選択します。既定値は yes で、**n** と入力します。
-
+    > [!NOTE]
+    > タブのタブのホーム ページは、ユーザーが戻るボタンを選択して (またはタブから移動して) ホーム ページに戻ったときにのみ表示されます。 タブは、デザインによって前の状態を維持または保持しません。
     </details>
 
 ### <a name="add-a-content-page-to-the-personal-tab"></a>個人用タブにコンテンツ ページを追加する

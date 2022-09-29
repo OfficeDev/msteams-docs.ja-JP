@@ -173,7 +173,7 @@
               href: toolkit/publish.md
             - name: 開発者ポータルと統合する
               href: toolkit/Integrate-with-developer-portal.md
-        - name: FAQ
+        - name: よく寄せられる質問
           href: toolkit/faq.md
     - name: Teams ツールキット CLI
       href: toolkit/TeamsFx-CLI.md
@@ -265,13 +265,13 @@
       displayName: Teams store apps approved by Microsoft for mobile
     - name: タブのコンテキストを取得する
       href: tabs/how-to/access-teams-context.md
-      displayName: 'User context, authenticaion flow from Microsoft Azure Active Deirecotry, retrieve context, theme changes'
+      displayName: 'User context, authentication flow from Microsoft Azure Active Directory, retrieve context, theme changes'
     - name: 共有チャネル用のアプリを構築する
       href: concepts/build-and-test/shared-channels.md
       displayName: 'Cross-tenant notifications, context for shared channel, apps and permissions in shared channels'
     - name: アダプティブ カードを使用してタブをビルドする
       href: tabs/how-to/build-adaptive-card-tabs.md
-      displayName: 'Slow load times, iFrame constartints, invoke activities, task module, task fetch, task submit, authentication'
+      displayName: 'Slow load times, iFrame constraints, invoke activities, task module, task fetch, task submit, authentication'
     - name: タブのリンクの展開とステージ ビュー
       href: tabs/tabs-link-unfurling.md
       displayName: Tab in stage view
@@ -320,7 +320,7 @@
           href: bots/how-to/conversations/request-headers-of-the-bot.md
     - name: Teams の特定のコンテキストをボット用に取得する
       href: bots/how-to/get-teams-context.md
-      dispalyName: Fetch roster or user profile
+      displayName: Fetch roster or user profile
     - name: ボットを使用してファイルを送受信する
       href: bots/how-to/bots-filesv4.md
       displayName: File consent and upload files to Teams from a bot
@@ -342,7 +342,7 @@
           displayName: 'Redirects for region affinity, GeoDNS resolution'
         - name: アプリケーションでホストされるメディア ボットの要件と考察
           href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-          dispalyName: 'Service Fabric with Virtual Machine Scale Sets, instance-level public'
+          displayName: 'Service Fabric with Virtual Machine Scale Sets, instance-level public'
         - name: ボットでサポートされているメディア形式
           href: resources/media-formats.md
     - name: チームまたはチャット メンバーをフェッチするための Teams ボット API の変更
@@ -423,7 +423,7 @@
           href: apps-in-teams-meetings/teams-live-share-faq.md
     - name: Teams でのカスタム Together モードのシーン
       href: apps-in-teams-meetings/teams-together-mode.md
-      displayName: 'Single vitrual scene, scene studio'
+      displayName: 'Single virtual scene, scene studio'
 - name: Webhook とコネクタを作成する
   items:
     - name: 概要
@@ -481,7 +481,7 @@
           href: task-modules-and-cards/what-are-task-modules.md
         - name: タスク モジュールを呼び出して閉じる
           href: task-modules-and-cards/task-modules/invoking-task-modules.md
-          displayName: 'JavaScript task modules,keyboard and accessility guidelines, module sizing'
+          displayName: 'JavaScript task modules, keyboard and accessibility guidelines, module sizing'
         - name: タブでタスク モジュールを使用する
           href: task-modules-and-cards/task-modules/task-modules-tabs.md
         - name: ボットでタスク モジュールを使用する
@@ -551,7 +551,7 @@
   items:
     - name: 概要
       href: /graph/teams-concept-overview
-      displayname: 'Permissions, communication, channels, delegated, reports, extensions'
+      displayName: 'Permissions, communication, channels, delegated, reports, extensions'
     - name: Microsoft Graph ツールキット
       href: /graph/toolkit/overview
       displayName: 'Access, routing'
@@ -576,10 +576,10 @@
       href: m365-apps/prerequisites.md
     - name: 'Office と Outlook の [Teams パーソナル] タブを有効にする'
       href: m365-apps/extend-m365-teams-personal-tab.md
-      displayName: 'Microoft 365, Office 365'
+      displayName: 'Microsoft 365, Office 365'
     - name: Outlook の Teams メッセージ拡張機能を有効にする
       href: m365-apps/extend-m365-teams-message-extension.md
-      displayName: 'Microoft 365, Office 365'
+      displayName: 'Microsoft 365, Office 365'
     - name: Microsoft 365 用の Teams アプリを発行する
       href: m365-apps/publish.md
 - name: アプリのテスト
@@ -744,7 +744,7 @@
       displayName: 'Champion Management Platform, Company Communicator, FAQ Plus, Icebreaker, Microsoft 365 Learning Pathways, Microsoft Teams Emergency Operations Center (TEOC), Tournaments of Teams'
     - name: 本番対応の Shifts コネクタ
       href: samples/shifts-wfm-connectors.md
-      displayName: 'Teams Shifts Workforce management (WFM),'
+      displayName: Teams Shifts Workforce management (WFM)
     - name: Moodle LMS
       items:
         - name: 概要
