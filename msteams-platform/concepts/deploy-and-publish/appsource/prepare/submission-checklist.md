@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 373fee0b0c0b132357596e495014dc4535205b64
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 9d850b76bddf288e766bdcc039711ef1d3059df8
+ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100442"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68160714"
 ---
 # <a name="prepare-your-teams-store-submission"></a>Teams のストア送信を準備する
 
@@ -19,7 +19,7 @@ Microsoft Teams アプリの設計、構築、テストが完了しました。 
 Microsoft Teams アプリ ストアへのアプリの発行の詳細については、次のビデオを参照してください。
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
+> [!VIDEO <https://www.microsoft.com/videoplayer/embed/RE4WG3l>]
 <br>
 
 アプリを[パートナー センター](/office/dev/store/use-partner-center-to-submit-to-appsource)に送信する前に、次の手順を実行していることを確認してください。
@@ -30,7 +30,10 @@ Microsoft Teams アプリ ストアへのアプリの発行の詳細について
 
 Microsoft Teams アプリ検証ツールを使用すると、パートナー センターに送信する前に問題を特定して修正できます。 このツールは、ストアの検証中に使用したものと同じテスト ケースに対して、アプリの構成を自動的にチェックします。
 
-1. [Microsoft Teams アプリ検証ツール](https://dev.teams.microsoft.com/appvalidation.html)に移動します。 (注: このツールは、[Teams の開発者ポータル](~/concepts/build-and-test/teams-developer-portal.md) でも使用できます。
+1. [Microsoft Teams アプリ検証ツール](https://dev.teams.microsoft.com/appvalidation.html)に移動します。
+
+   [Teams 用開発者ポータル](~/concepts/build-and-test/teams-developer-portal.md)を使用してアプリを検証することもできます。
+
 1. アプリ パッケージをアップロードして、自動化されたテストを実行します。
 1. **[事前チェックリスト]** に移動し、自動化が困難なテスト ケースを確認します。
 1. [Fix issues with your configurations](~/resources/schema/manifest-schema.md) or app in general. These issues occur if the automated tests give you errors or you haven't met all the criteria in the checklist.
@@ -185,18 +188,36 @@ YouTube または Vimeo ビデオの URL を追加できます。
 
 ### <a name="select-a-category-for-your-app"></a>アプリのカテゴリを選択する
 
-送信のときに、アプリを分類するように求められます。 次の表は、Teams ストアのカテゴリを[パートナー センター](https://aka.ms/PartnerCenterHomePage)に一覧表示されているカテゴリにマップします。
+送信のときに、アプリを分類するように求められます。 アプリは、次のカテゴリに基づいて分類できます。
 
-| Teams カテゴリ       | パートナー センターのカテゴリ  |
-|:---------------------|:---------------|
-| データの視覚化と BI | 分析、データ可視化、BI |
-| 開発者ツール | 開発者ツール、IT 管理者 |
-| 教育 | 教育 |
-| 人事&採用| 人事と採用 |
-| 生産性 | コンテンツ管理、ファイルとドキュメント、生産性、トレーニングとチュートリアル、ユーティリティ |
-| プロジェクト管理 | コミュニケーション、プロジェクト管理、ワークフロー、ビジネス管理 |
-| セールスおよびサポート | 顧客と連絡先の管理、カスタマー サポート、財務管理、営業およびマーケティング |
-| Social | 画像とビデオ ギャラリー、ライフスタイル、ニュースと天気、ソーシャル、旅行、ナビゲーション |
+|Categories  |
+|--------------|
+| Microsoft |
+| Education |
+| 生産性 |
+| ビデオ ギャラリー&画像 |
+| プロジェクト管理 |
+| ユーティリティ |
+| Social |
+| コミュニケーション |
+| コンテンツ管理 |
+| ドキュメント&ファイル |
+| ワークフロー&ビジネス管理 |
+| IT/管理 |
+| 人事&採用|
+| 開発者ツール |
+| 会議&スケジュール設定 |
+| BI &データ視覚化 |
+| トレーニング&チュートリアル |
+| ニュース&天気 |
+| カスタマー サポート |
+| 関連情報 |
+| 営業&マーケティング |
+| ルック & feel |
+| 顧客&連絡先管理 (CRM) |
+| 財務管理 |
+| マップ & フィード |
+| その他 |
 
 ### <a name="localize-your-store-listing"></a>ストアの登録情報をローカライズする
 

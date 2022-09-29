@@ -4,12 +4,12 @@ description: Microsoft Teams の新しい開発者向け機能と、既存の機
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: e54f37ae2c330275fb0dd51de34c2f8bcd721bba
-ms.sourcegitcommit: 600d3b13d47ca42ab5ba7abf18bccc7e912180e4
+ms.openlocfilehash: 5aad27389416a5e10920ebc00521274fc8f7d907
+ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/29/2022
-ms.locfileid: "68158828"
+ms.locfileid: "68160728"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -31,6 +31,7 @@ ms.locfileid: "68158828"
 
 **2022 年 9 月**
 
+* ***2022 年 9 月 29*** 日: [Teams モバイル アプリで、ローカル デバイスへのファイルのダウンロードがサポートされるようになりました。](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)
 * ***2022 年 9 月 29*** 日: [会議のステージにコンテンツを共有するためのディープ リンクを生成します。](concepts/build-and-test/deep-links.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 * ***2022 年 9 月 16*** 日: [検索ベースのメッセージ拡張機能のアダプティブ カードでユニバーサル アクションがサポートされるようになりました。](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
 * ***2022 年 9 月 6*** 日: [API を使用してカメラを使用してビデオをキャプチャするためのコード スニペットを `selectMedia` 導入しました。](concepts/device-capabilities/media-capabilities.md#code-snippets)
@@ -291,9 +292,10 @@ ms.locfileid: "68158828"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ------------------ |
+| 08/23/2022 | モバイルで Teams 会議ステージにアプリを共有する | Teams 会議と通話用のアプリをビルド> [会議用のアプリを有効にして構成する](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
 | 08/10/2022 | スケジュールされたパブリック チャネル会議用のアプリ | Teams 会議と通話用のアプリをビルド > [[概要]](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 08/03/2022 | Teams 会議ステージでアプリの API をミュートおよびミュート解除する | [Teams 会議と通話用のアプリをビルドする] > [[会議アプリの API リファレンス]](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
-| 08/02/2022| Teams のコラボレーション コントロール| [Teams との統合] > [[コラボレーション コントロール]](samples/collaboration-control.md)|
+| 08/02/2022| Teams のコラボレーション コントロール| [Teams との統合] > [[コラボレーション コントロール]](samples/collaboration-control.md) |
 | 06/30/2022 | インスタント会議、1 対 1 通話、グループ通話用のアプリ| Teams 会議と通話用のアプリをビルド > [[概要]](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |05/24/2022| Live Share SDK による強化されたコラボレーション | Teams会議用のアプリのビルド > Live Share を使用した強化されたコラボレーション > [概要](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 02/03/2022 | アプリ マニフェスト バージョン 1.13 が導入されました | [アプリ マニフェスト] > [開発者向けパブリック プレビュー] > [[マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md) |

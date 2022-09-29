@@ -649,6 +649,9 @@
         - name: Teams のストア送信を準備する
           href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
           displayName: 'Testing instructions, store listing'
+        - name: パートナー センターで Apple App Store Connect Team ID を更新する
+          href: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
+          displayName: Enable users to install your app on Teams iOS Platform.
         - name: アプリを送信する
           href: /office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
         - name: Teams ストアの送信に失敗した場合に問題を解決する

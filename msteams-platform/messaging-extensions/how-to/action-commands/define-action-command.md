@@ -5,12 +5,12 @@ description: Microsoft Teams のアプリ マニフェストの例を使用し�
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: cb7d8512b6e8de980778733c39b19e7c1d63fae6
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 7fbfc848c8ba59f46d3651996e46c37c8076ca76
+ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100736"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68160644"
 ---
 # <a name="define-message-extension-action-commands"></a>メッセージ拡張機能のアクション コマンドを定義する
 
@@ -99,7 +99,7 @@ To add the action command to the app manifest, you must add a new `composeExtens
 
 1. 既存のボットを使用するには、 **既存のボットを選択** し、ドロップダウン リストから既存のボットを選択するか、ボット ID が既に作成されている場合は **[ボット ID の入力** ] を選択します。
 
-1. メッセージング拡張機能のスコープを選択し、[保存] を選択 **します**。
+1. ボットのスコープを選択し、 **保存します**。
 
 1. [**コマンド**] セクションで **[コマンドの追加]** を選択して、メッセージ拡張機能の動作を決定するコマンドを含めます。
 
@@ -167,17 +167,13 @@ To add the action command to the app manifest, you must add a new `composeExtens
 
 #### <a name="app-manifest-example"></a>アプリ マニフェストの例
 
-次のセクションは、2 つのアクション コマンドを定義する `composeExtensions` オブジェクトの例です。 完全なマニフェストの例ではありません。 完全なアプリ マニフェスト スキーマについては、「[アプリ マニフェスト スキーマ](~/resources/schema/manifest-schema.md)」を参照してください。
-
+このセクションは、完全なマニフェストの例ではありません。 完全なアプリ マニフェスト スキーマについては、「 [アプリ マニフェスト スキーマ](~/resources/schema/manifest-schema.md)」を参照してください。 2 つのアクション コマンドを定義するオブジェクトの `composeExtensions` 例を次に示します。
+ 
 ```json
 ...
 "composeExtensions": [
   {
     "botId": "c8fa3cf6-b1f0-4ba8-a5bf-a241bc29adf3",
-    "scopes": [
-      "personal",
-      "groupchat"
-    ],
     "commands": [
       {
         "id": "To do",

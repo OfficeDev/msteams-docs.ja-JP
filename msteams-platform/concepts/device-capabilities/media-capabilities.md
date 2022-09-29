@@ -5,12 +5,12 @@ description: Teams JavaScript クライアント SDK を使用して、コード
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: 25d8fb9c52e0dee02d8057f1fe4714f7f3f1f613
-ms.sourcegitcommit: 3baca27a93e5a68eaaa52810700076f08f4c88a8
+ms.openlocfilehash: d7bfedc0a439f428287cb1443df2a66fcff670ab
+ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605790"
+ms.lasthandoff: 09/29/2022
+ms.locfileid: "68160637"
 ---
 # <a name="integrate-media-capabilities"></a>メディア機能を統合する
 
@@ -20,9 +20,9 @@ ms.locfileid: "67605790"
 
 ## <a name="advantages"></a>メリット
 
-Teams アプリでデバイス機能を統合する主な利点は、ネイティブ Teams コントロールを使用して、ユーザーに豊富でイマーシブなエクスペリエンスを提供することです。 次のシナリオでは、メディア機能の利点を示します。
+デバイス機能を Teams アプリに統合する利点は、ネイティブ Teams コントロールを使用して、ユーザーに豊富でイマーシブなエクスペリエンスを提供できることです。 次のシナリオでは、メディア機能の利点を示します。
 
-* ユーザーが携帯電話で物理的なホワイトボードに描画された大まかなモックアップをキャプチャし、キャプチャした画像を Teams グループ チャットの投票オプションとして使用できるようにします。
+* ユーザーが携帯電話で物理ホワイトボードに描画された大まかなモックアップをキャプチャし、キャプチャした画像を Teams グループ チャットの投票オプションとして使用できるようにします。
 
 * ユーザーがオーディオ メッセージを録音し、インシデント チケットに添付できるようにします。
 
@@ -69,7 +69,7 @@ Teams アプリでデバイス機能を統合する主な利点は、ネイテ�
 | API      | 説明   |
 | --- | --- |
 | [**selectMedia**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia) (**カメラ)**| この API を使用すると、ユーザーは **デバイス カメラからメディアをキャプチャまたは選択** し、それを Web アプリに返すことができます。 ユーザーは、送信前に画像の編集、トリミング、回転、注釈付け、または描画を行うことができます。 `selectMedia` に対応して、Web アプリは、選択した画像のメディア ID と、選択したメディアのサムネイルを受信します。 この API は、 [ImageProps](/javascript/api/@microsoft/teams-js/media.imageprops) 構成を使用してさらに構成できます。 |
-| [**selectMedia**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia) (**マイク**)| マイク機能にアクセスするための API で `selectMedia` [mediaType](/javascript/api/@microsoft/teams-js/media.mediatype) を `4` (Audio) に設定します。 この API を使用すると、ユーザーはデバイスマイクからオーディオを録音し、記録されたクリップを Web アプリに返すこともできます。 ユーザーは、送信前に記録プレビューを一時停止、再記録、再生できます。  **selectMedia** に応答して、Web アプリは選択されたオーディオ録音のメディア ID を受け取ります。 <br/> 会話を記録するための期間を分単位で構成する必要がある場合は、`maxDuration` を使用します。 現在の記録時間は 10 分です。その後、記録は終了します。  |
+| [**selectMedia**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia) (**マイク**)| マイク機能にアクセスするための API で `selectMedia` [mediaType](/javascript/api/@microsoft/teams-js/media.mediatype) を `4` (Audio) に設定します。 この API を使用すると、ユーザーはデバイスマイクからオーディオを録音し、記録されたクリップを Web アプリに返すこともできます。 ユーザーは、送信前に記録プレビューを一時停止、再記録、再生できます。  **selectMedia** に応答して、Web アプリは選択したオーディオ録音のメディア ID を受信します。 <br/> 会話を記録するための期間を分単位で構成する必要がある場合は、使用 `maxDuration`します。 現在の記録時間は 10 分です。その後、記録は終了します。  |
 | [**getMedia**](/javascript/api/@microsoft/teams-js/media.media#@microsoft-teams-js-media-media-getmedia)| この API は、メディア サイズに関係なく、`selectMedia` API によってキャプチャされたメディアをチャンク単位で取得します。 これらのチャンクは、ファイルまたは BLOB として組み立てられ、Web アプリに送り返されます。 メディアを小さなチャンクに分割すると、大きなファイル転送が容易になります。 |
 | [**viewImages**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-viewimages)| この API を使用すると、ユーザーはスクロール可能なリストとして全画面表示モードで画像を表示できます。|
 
@@ -80,7 +80,6 @@ Teams アプリでデバイス機能を統合する主な利点は、ネイテ�
 :::image type="content" source="~/assets/images/tabs/media-capability-mobile2.png" alt-text="図は、モバイルの画像機能を示しています。":::
 
 > [!NOTE]
->
 > Android バージョンが 7 未満のデバイスでは、ネイティブ Teams カメラ エクスペリエンスではなく、 `selectMedia` ネイティブ Android カメラ エクスペリエンスが API によって起動されます。
 
 次の図は、マイク機能に対する API の Web アプリ エクスペリエンス `selectMedia` を示しています。
@@ -383,6 +382,23 @@ Teams アプリでこれらのエラーを適切に処理してください。 �
         }
     });
     });
+    ```
+
+## <a name="file-download-on-teams-mobile"></a>Teams Mobile でのファイルのダウンロード
+
+ユーザーが Webview からモバイル デバイスにファイルをダウンロードできるようにアプリを構成できます。
+
+>[!NOTE]
+> ファイルのダウンロードは Android Teams モバイル クライアントでのみサポートされ、認証されていないファイルのみをダウンロードできます。
+
+有効にするには、次の手順に従います。
+
+1. Teams アプリ [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) ファイルを更新するには、プロパティを`devicePermissions`追加し、[更新マニフェスト](#update-manifest)に示すように指定`media`します。
+
+2. 次の形式を使用し、HMTL ダウンロード属性を Web ページに追加します。
+
+    ```html
+    <a href="path_to_file" download="download">Download</a>
     ```
 
 ## <a name="see-also"></a>関連項目

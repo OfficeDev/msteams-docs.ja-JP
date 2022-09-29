@@ -3,12 +3,12 @@ title: ディープ リンクの作成
 description: この記事では、ディープ リンクを作成する方法と、タブを使用して Microsoft Teams アプリ内でディープ リンクを使用して移動する方法について説明します。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: e41fd72f7560de856988f45e02b63444f58888a5
-ms.sourcegitcommit: 600d3b13d47ca42ab5ba7abf18bccc7e912180e4
+ms.openlocfilehash: b02a29b74204e9ef8f61633642bd42cd178c8350
+ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/29/2022
-ms.locfileid: "68158848"
+ms.locfileid: "68160721"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成
 
@@ -388,7 +388,7 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 アプリが Teams ストアの一覧に表示されたら、アプリのディープ リンクを作成します。 Teams を起動するためのリンクを作成するには、アプリ ID を次の URL に追加します: `https://teams.microsoft.com/l/app/<your-app-id>`。 アプリをインストールまたは開くダイアログ ボックスが表示されます。
 
 > [!NOTE]
-> アプリがモバイル プラットフォームに対して承認されている場合は、モバイル上のアプリにディープ リンクできます。 Teams-iOS でディープ リンクを機能させるには、Apple App Store Connect Team ID も必要です。 詳細については、[Apple App Store Connect チーム ID を更新する方法に関する記事を](../deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md#update-apple-app-store-connect-team-id-on-partner-center)参照してください。
+> アプリがモバイル プラットフォームに対して承認されている場合は、モバイル上のアプリにディープ リンクできます。 Teams-iOS でディープ リンクを機能させるには、Apple App Store Connect Team ID も必要です。 詳細については、[Apple App Store Connect チーム ID を更新する方法に関する記事を](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md)参照してください。
 
 ### <a name="deep-linking-for-sharepoint-framework-tabs"></a>SharePoint Framework タブのディープ リンク
 
