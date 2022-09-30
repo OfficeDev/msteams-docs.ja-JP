@@ -6,12 +6,12 @@ keywords: Microsoft Teams テンプレートのサンプル デモ
 ms.localizationpriority: medium
 ms.author: lajanuar
 author: surbhigupta
-ms.openlocfilehash: 7f99a15ee8138c029e3ae0c68ae52152f0efc6bb
-ms.sourcegitcommit: dd70fedbe74f13725e0cb8dd4f56ff6395a1c8bc
+ms.openlocfilehash: 1314221e5962db045a5e75b8dadbcb6a868c959c
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "67058124"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243039"
 ---
 # <a name="app-templates-for-microsoft-teams"></a>Microsoft Teams 用のアプリ テンプレート
 
@@ -83,7 +83,7 @@ Get Started アプリ テンプレートを使用すると、Teams 内で Micros
 
 ## <a name="microsoft-teams-emergency-operations-center-teoc"></a>Microsoft Teams 緊急運用センター (TEOC)
 
-Microsoft Teams Emergency Operations Center (TEOC) ソリューション テンプレートは、Microsoft 365 プラットフォームの機能を利用して、Microsoft Lists、SharePoint などの強力なサービスを使用してインシデント対応、情報共有、フィールド通信を一元化します。 Microsoft がサポートするオープンソース ソリューションは、コア機能を提供し、特定の代理店の要件を満たすように拡張できます。
+Microsoft Teams Emergency Operations Center (TEOC) ソリューション テンプレートは、Microsoft 365 プラットフォームの機能を利用して、Microsoft Lists、SharePoint などの強力なサービスを使用して、インシデント対応、情報共有、フィールド通信を一元化します。 Microsoft がサポートするオープンソース ソリューションは、コア機能を提供し、特定の代理店の要件を満たすように拡張できます。
 
 [GitHub で入手する](https://github.com/OfficeDev/microsoft-teams-emergency-operations-center/)
 
@@ -99,7 +99,7 @@ Microsoft Teams Emergency Operations Center (TEOC) ソリューション テン�
 
 > [!NOTE]
 >
-> * Microsoft はソース コードを積極的に管理していません。ソース コードはすべてオープンソースであり、特定の要件を満たすようにソース コードを探索、フォーク、変更できます。
+> * Microsoft is not actively managing the source code. The complete source code is open source and you can explore, fork, and modify the source code to meet your specific requirements.
 > * Microsoft Power Platform を使用して、Teams アプリ ストアに発行するアプリを作成することはできません。 Microsoft Power Platform アプリは、組織のアプリ ストアにのみ発行できます。
 
 次の表では、アプリ テンプレートのコード サンプルについて説明します。  

@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: 790c6324f012da8aabe7c4489a414d9887e03640
-ms.sourcegitcommit: 4ba6392eced76ba6baeb6d6dd9ba426ebf4ab24f
-ms.translationtype: HT
+ms.openlocfilehash: 2fc0a66683bb5454bfb8fbced64e97618522fce7
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66919733"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243515"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Microsoft 365 間で Teams メッセージ拡張機能を拡張する
 
@@ -90,7 +90,7 @@ Teams アプリ マニフェストを開き、`$schema` と `manifestVersion` �
 
 ---
 
-Teams Toolkit を使用してメッセージ拡張アプリを作成した場合は、それを使用してマニフェスト ファイルへの変更を検証し、エラーを特定できます。コマンド パレット `Ctrl+Shift+P` を開き、「**Teams: マニフェスト ファイルの検証**」を見つけます。
+If you used Teams Toolkit to create your message extension app, you can use it to validate the changes to your manifest file and identify any errors. Open the command palette `Ctrl+Shift+P` and find **Teams: Validate manifest file**.
 
 ## <a name="add-an-outlook-channel-for-your-bot"></a>ボットの Outlook チャネルを追加する
 
@@ -98,7 +98,7 @@ Microsoft Teams では、メッセージ拡張機能は、ホストする Web �
 
 ユーザーが Outlook からメッセージ拡張機能を操作するには、Outlook チャネルをボットに追加する必要があります。
 
-1. [Microsoft Azure ポータル](https://portal.azure.com) (以前に登録した場合は [Bot Framework ポータル](https://dev.botframework.com)) から、ボット リソースに移動します。
+1. [Microsoft Azure portal](https://portal.azure.com) (以前に登録した場合は [Bot Framework ポータル](https://dev.botframework.com)) から、ボット リソースに移動します。
 
 1. *[設定]* から **[チャネル]** を選択します。
 
@@ -115,7 +115,7 @@ Microsoft Teams では、メッセージ拡張機能は、ホストする Web �
 > [!NOTE]
 > このチュートリアルで提供される [サンプル アプリ](#quickstart) を使用している場合は、シナリオに Azure Active Directory (AAD) シングル サインオン認証が含まれていないため、この手順をスキップできます。
 
-メッセージ拡張機能の Azure Active Directory (AD) シングル サインオン (SSO) は、Outlook でも [Teams と同じように](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots)機能します。しかし、テナントの *アプリ登録* ポータルで、ボットの Azure AD アプリ登録に複数のクライアント アプリケーション識別子を追加する必要があります。
+Azure Active Directory (AD) Single-sign on (SSO) for message extensions works the same way in Outlook [as it does in Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). However you need to add several client application identifiers to the Azure AD app registration of your bot in your tenant's *App registrations* portal.
 
 1. Azure 管理者アカウントを使用して、[Azure portal](https://portal.azure.com) にサインインします。
 1. **[アプリ登録]** を開きます。
@@ -167,7 +167,7 @@ Outlook on the web で実行されているアプリをプレビューするに�
 
     :::image type="content" source="images/outlook-web-compose-more-apps.png" alt-text="メール構成ウィンドウの下部にある [その他のアプリ] メニューをクリックして、メッセージ拡張機能を使用します":::
 
-メッセージ拡張機能が一覧表示されます。そこから呼び出して、Teams でメッセージを作成する場合と同じように使用できます。
+Your message extension is listed. You can invoke it from there and use it just as you would while composing a message in Teams.
 
 ### <a name="outlook"></a>Outlook
 

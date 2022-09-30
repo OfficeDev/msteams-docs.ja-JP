@@ -5,12 +5,12 @@ keywords: teams アプリ開発のトラブルシューティング
 localization_priority: Normal
 ms.topic: troubleshooting
 ms.date: 07/09/2018
-ms.openlocfilehash: ea6a452d3e3ace7c78e29f6829ac124eea8219d6
-ms.sourcegitcommit: 6f1bd36b1071e256bdc14e6ccb31dfdda9ca6d6b
+ms.openlocfilehash: 0b3f4f7b3a38b6e61b4fbc7e58c5ed5897ed427e
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66048963"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243473"
 ---
 # <a name="troubleshoot-your-microsoft-teams-app"></a>Microsoft Teams アプリのトラブルシューティング
 
@@ -26,6 +26,9 @@ ms.locfileid: "66048963"
 
 * コンテンツを .`<iframe>`
 * コンテンツ ドメインがマニフェストの [validDomains](~/resources/schema/manifest-schema.md#validdomains) リストにありません。
+
+> [!NOTE]
+> 指定されたタブ URL がログイン画面にリダイレクトされると、空白のタブが表示されます。 ログイン ページは、クリックジャックに対する保護として iFrame でレンダリングされません。 認証ロジックでは、リダイレクト以外の方法を使用する必要があります。
 
 ### <a name="the-save-button-isnt-enabled-on-the-settings-dialog"></a>[設定] ダイアログで [保存] ボタンが有効になっていない
 
@@ -50,7 +53,7 @@ ms.locfileid: "66048963"
 
 ### <a name="cant-authenticate-the-user-or-display-your-auth-provider-in-your-tab"></a>ユーザーを認証できない、またはタブに認証プロバイダーを表示できない
 
-サイレント認証を行う場合を除き、[Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) によって提供される認証プロセスに従う必要があります。
+サイレント認証を行う場合を除き、 [Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) によって提供される認証プロセスに従う必要があります。
 
 > [!NOTE]
 > すべての認証フローをドメインで開始および終了する必要があります。このフローは、マニフェストの `validDomains` オブジェクトに一覧表示する必要があります。
@@ -89,10 +92,10 @@ ms.locfileid: "66048963"
 
 * JSON が無効です。 JSON 構文を自動的に検証する [Visual Studio Code](https://code.visualstudio.com) や [Visual Studio](https://www.visualstudio.com/vs/) などの IDE を使用します。
 * エンコードの問題。 *manifest.json* ファイルには UTF-8 を使用します。 その他のエンコードは、特に BOM では読み取れない場合があります。
-* 形式が正しくない .zip パッケージ。 *manifest.json* ファイルは、 .zip ファイルの最上位レベルにある必要があります。 既定の Mac ファイル圧縮では *、manifest.json* がサブディレクトリに配置され、Microsoft Teamsに正しく読み込まれない場合があることに注意してください。
+* 形式が正しくない .zip パッケージ。 *manifest.json* ファイルは、 .zip ファイルの最上位レベルにある必要があります。 既定の Mac ファイル圧縮では *、manifest.json* がサブディレクトリに配置される場合があり、Microsoft Teams では正しく読み込まれません。
 
 ### <a name="another-extension-with-same-id-exists"></a>同じ ID を持つ別の拡張機能が存在する
 
-更新されたパッケージを同じ ID で再度アップロードする場合は、タブのテーブル行の末尾にある **[置換**] アイコンを **アップロード** ボタンではなく選択します。
+更新されたパッケージを同じ ID で再度アップロードする場合は、[**アップロード**] ボタンではなく、タブのテーブル行の末尾にある **[置換**] アイコンを選択します。
 
 更新されたパッケージを再アップロードしない場合は、 ID が一意であることを確認します。

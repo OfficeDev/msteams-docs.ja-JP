@@ -1,50 +1,50 @@
 ---
 title: コラボレーション コントロール アプリの制限事項と既知の問題
 author: surbhigupta
-description: このモジュールでは、Microsoft Teamsのコラボレーション コントロール アプリの制限事項と既知の問題について説明します。
+description: このモジュールでは、Microsoft Teams のコラボレーション コントロール アプリの制限事項と既知の問題について説明します。
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 6961b5fc51cc8aa2a2ad0620c8a8ef5032005f40
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: fe403c566b47be6509ff0d11113c34a8fc667cc9
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67179297"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243389"
 ---
 # <a name="limitations-and-known-issues"></a>制限事項と既知の問題
 
 > [!NOTE]
-> 現在、コラボレーション コントロールは [、パブリック開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md)でのみ使用できます。
+> 現在、コラボレーション コントロールは [パブリック開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md)でのみ使用できます。
 
 コラボレーション コントロールの制限事項を次に示します。
 
 * Canvas アプリではコンポーネントを使用できません。
 * コンポーネントでは、完全なタブ ビューのみがサポートされます。
 
-     :::image type="content" source="../assets/images/collaboration-control/tasks-tab.png" alt-text="タスク" border="true":::
+     :::image type="content" source="../assets/images/collaboration-control/tasks-tab.png" alt-text="スクリーンショットはタスクを示しています。" border="true":::
 
 * 選択したサブグリッド ビューは適用されません。 コラボレーション レコードのすべてのタスク、会議、またはメモが表示されます。
 
-     :::image type="content" source="../assets/images/collaboration-control/subgrid-view.png" alt-text="サブグリッド ビュー" border= "true":::
+     :::image type="content" source="../assets/images/collaboration-control/subgrid-view.png" alt-text="スクリーンショットは、タスクのサブグリッド ビューを示しています。" border= "true":::
 
 * タイムライン コントロールに追加されたアクティビティは、コンポーネントに作成されたコンポーネント、タスク、会議、メモには表示されません。タイムライン コントロールには含まれません。
 * コンポーネントにアクセスする前に新しいレコードを保存する必要があります。それ以外の場合は空の画面が表示されます。
 * コンポーネントは、追加するフォームまたはアプリからテーマを継承しません。
-* ローカライズは、Microsoft Teams内でアプリを実行する場合にのみ使用できます。
+* ローカライズは、Microsoft Teams 内でアプリを実行する場合にのみ使用できます。
 * Microsoft Edge strict モードはサポートされておらず、クロスサイト Cookie が必要です。
 
 **管理 センターは、インストールまたはアップグレードが完了しても更新されません**
 
-[コラボレーション コントロールのインストール](~/samples/install-collaboration-control.md)手順に従うと、Power Platform 管理センターにリダイレクトされます。 バナーはインストールの開始時に表示されますが、インストールが完了しても更新されません。 状態はインストール中に一覧表示され、インストールが完了すると一覧から消える可能性があります。 ソリューションの一覧 [https://make.powerapps.com/](https://make.preview.powerapps.com/) を表示して、インストールが完了したことを確認できます。
+[コラボレーション コントロールのインストール](~/samples/install-collaboration-control.md)手順に従うと、Power Platform 管理センターにリダイレクトされます。 バナーはインストールの開始時に表示されますが、インストールが完了しても更新されません。 状態はインストール中に一覧表示され、完了すると一覧に表示されない可能性があります。 ソリューションの一覧 [https://make.powerapps.com/](https://make.preview.powerapps.com/) を表示して、インストールが完了したことを確認できます。
 
-**インストール中の表示: インストール**:::image type="content" source="../assets/images/collaboration-control/view-during-installation.png" alt-text="中の表示" border="true":::
+**インストール中の表示:** :::image type="content" source="../assets/images/collaboration-control/view-during-installation.png" alt-text="スクリーンショットは、インストール中のプロセスを示しています。" border="true":::
 
-**インストール後の表示: インストール**:::image type="content" source="../assets/images/collaboration-control/view-after-installation.png" alt-text="後の表示" border="true":::
+**インストール後の表示:** :::image type="content" source="../assets/images/collaboration-control/view-after-installation.png" alt-text="スクリーンショットは、インストールの完了を示しています。" border="true":::
 
 コントロールを新しいバージョンにアップグレードすると、同じインストールが開始されたバナーが表示されますが、アップグレードが完了しても、コントロールの状態は引き続きインストールされます。 アップグレードが完了したことを確認するには、ソリューションの一覧 [https://make.powerapps.com/](https://make.preview.powerapps.com/)を確認します。所要時間は約 15 分です。
 
-また、新しいバージョンがインストールされ、以前のバージョンが削除された特定のソリューションの履歴を確認することもできます。 :::image type="content" source="../assets/images/collaboration-control/history.png" alt-text="履歴チェック" border="true":::
+また、新しいバージョンがインストールされ、以前のバージョンが削除された特定のソリューションの履歴を確認することもできます。 :::image type="content" source="../assets/images/collaboration-control/history.png" alt-text="スクリーンショットは、インストールおよび削除されたバージョンの特定のソリューションの履歴を示しています。" border="true":::
 
 ## <a name="bookings-meetings"></a>Bookings Meetings
 
@@ -52,7 +52,7 @@ ms.locfileid: "67179297"
 
 **会議出席者の状態が正しくありません**
 
-出席者の RSVPs が会議に参加している場合、参加者の応答の状態が、議事録ビューと会議の詳細の両方で正しく表示されない場合があります。 [拒否] ボタンを選択すると、画面にエラー メッセージが返される場合もあります。
+出席者の RSVPs が会議に参加している場合、参加者の応答の状態が、議事録ビューと会議の詳細の両方で正しく表示されない場合があります。 拒否ボタンを選択すると、画面にエラー メッセージが返されることがあります。
 
 ## <a name="tasks"></a>タスク
 
@@ -68,19 +68,19 @@ ms.locfileid: "67179297"
 
 キーワード テキスト フィルターを使用してタスクを検索すると、"BeginsWith" 演算子を使用して "ゲスト" タスクが返されます。 "メンバー" タスクは、"Contains" 演算子を使用して返されます。
 
-## <a name="files"></a>ファイル
+## <a name="files"></a>Files
 
-ファイルのアーカイブ後にアーカイブ フォルダーに移動すると、アーカイブ フォルダーが重複する可能性があります。  アーカイブ フォルダーからファイル のメイン ビューに移動すると問題が解決し、アーカイブされたファイルは削除されません。
+ファイルのアーカイブ後にアーカイブ フォルダーに移動すると、アーカイブ フォルダーが重複する可能性があります。  アーカイブ フォルダーからファイル のメイン ビューに移動すると問題が解決され、アーカイブされたファイルは削除されません。
 
-## <a name="controls"></a>Controls
+## <a name="controls"></a>コントロール
 
 **コントロールの保存に失敗する**
 
 コントロールがタスクまたは会議の保存に失敗した場合、グループ ID またはチャネル ID が正しく構成されていない可能性があります。  
 
-解決策 1: ID が正しいことを確認し、設定の演習に従って設定が適用されていることを確認します。  
+解決策 1: ID が正しいことを確認し、設定が設定の演習に従って適用されていることを確認します。  
 
-解決策 2: Power Apps 環境と Teams 環境が同じテナントにあることを確認してください。  
+解決策 2: Power Apps 環境と Teams 環境が同じテナントにあることを確認します。  
 
 **コントロールの読み込みまたはエラーの表示に失敗する**
 
@@ -88,11 +88,11 @@ ms.locfileid: "67179297"
 
 例:
 
-:::image type="content" source="../assets/images/collaboration-control/sync-fail.png" alt-text="制御同期が失敗する":::
+:::image type="content" source="../assets/images/collaboration-control/sync-fail.png" alt-text="スクリーンショットは、コントロールの同期が失敗する方法を示しています。":::
 
 これにより、コンソール ログに次のようにレンダリングされます。
 
-:::image type="content" source="../assets/images/collaboration-control/control-fail.png" alt-text="制御が失敗する" border="true":::
+:::image type="content" source="../assets/images/collaboration-control/control-fail.png" alt-text="スクリーンショットは、consol ログからの制御の失敗の例です。" border="true":::
 
 解決策: ブラウザーを更新するか、Teams アプリでタブを再読み込みします。
 
@@ -114,7 +114,7 @@ Teams にアップロードした後でアプリ名、アイコン、または�
 > [!TIP]
 > Teams デスクトップ クライアントでエラーが発生した場合は、Teams Web でレプリケートしてエラー ログをキャプチャしてみてください。
 
-## <a name="faq"></a>よくあるご質問 (FAQ)
+## <a name="faq"></a>よく寄せられる質問
 
 <br>
 

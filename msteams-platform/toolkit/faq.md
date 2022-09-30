@@ -1,17 +1,17 @@
 ---
-title: FAQ
+title: よく寄せられる質問
 author: MuyangAmigo
 description: このモジュールでは、Visual Studio Code を使用した Teams Toolkit の FAQ を参照してください
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 2b229b14db563a6b7a4dc587ac67c872d461ec72
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: 6a6c6599ff036cf7b81dd30b00e5608db3dc4cc2
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806902"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243376"
 ---
 # <a name="faq-for-teams-toolkit"></a>Teams Toolkit の FAQ
 

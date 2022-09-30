@@ -4,12 +4,12 @@ description: Teams ボットでプロアクティブ メッセージを送信し
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: ec787b827323a462d3ab9ebd76686f5833740534
-ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
+ms.openlocfilehash: 13db8624cfd9b8bc73adce0a418fe5283455bf5f
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67990939"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243025"
 ---
 # <a name="proactive-messages"></a>プロアクティブ メッセージ
 
@@ -25,7 +25,7 @@ ms.locfileid: "67990939"
 >
 > * プロアクティブ メッセージを送信するには、まず、JavaScript または[受信 Webhook 通知サンプル](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification)[を使用して通知ボットを構築](../../../sbs-gs-notificationbot.yml)することをお勧めします。 作業を開始するには、 [Teams Toolkit explore をダウンロードします](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) 。 詳細については、「 [Teams Toolkit ドキュメント」を](../../../toolkit/teams-toolkit-fundamentals.md)参照してください。
 >
-> * 現在、ボットは Government Community Cloud (GCC) と GCC-High で利用できますが、国防総省 (DOD) では利用できません。 プロアクティブ メッセージの場合、ボットは政府機関のクラウド環境に対して次のエンドポイントを使用する必要があります。 <br> - GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`<br> - GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`.
+> * 現在、ボットは Government Community Cloud (GCC) と GCC-High で利用できますが、国防総省 (DOD) では利用できません。 プロアクティブ メッセージの場合、ボットは政府機関のクラウド環境に対して次のエンドポイントを使用する必要があります。 <br> -Gcc： `https://smba.infra.gcc.teams.microsoft.com/gcc`<br> - GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`.
 
 プロアクティブ メッセージをユーザー、グループ チャット、またはチームに送信するには、ボットがメッセージを送信するために必要なアクセス権を持っている必要があります。 グループ チャットまたはチームの場合、ボットを含むアプリを最初にその場所にインストールする必要があります。
 
@@ -195,9 +195,21 @@ public class NotifyController : ControllerBase
 
     public async Task<IActionResult> Get()
     {
-        foreach (var conversationReference in _conversationReferences.Values)
+        foreach (var conversationReference in _conversationReferences.Values) // Loop of all conversation references must be updated to get it from backend system.
         {
-            await ((BotAdapter)_adapter).ContinueConversationAsync(_appId, conversationReference, BotCallback, default(CancellationToken));
+            var newReference = new ConversationReference()
+        {
+            Bot = new ChannelAccount()
+            {
+                Id = conversationReference.Bot.Id
+            },
+            Conversation = new ConversationAccount()
+            {
+                Id = conversationReference.Conversation.Id
+            },
+            ServiceUrl = conversationReference.ServiceUrl,
+        };
+            await ((BotAdapter)_adapter).ContinueConversationAsync(_appId, newReference, BotCallback, default(CancellationToken));
         }
         
         // Let the caller know proactive messages have been sent

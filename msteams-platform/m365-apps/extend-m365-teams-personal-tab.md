@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: cb6b7ee27e95045c218805181531ad96a1357f89
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 562bda342cc9067c96213703cd0f6725e9da66d1
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100773"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243508"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Teams 個人用タブを Microsoft 365 全体に拡張する
 
@@ -193,7 +193,7 @@ Windows デスクトップの Outlook で実行されているアプリを表示
 
 Outlook on the web でアプリを表示するには:
 
-1. [Outlook on the web](https://outlook.office.com) に移動し、開発テナント アカウントを使用してサインインします。
+1. [Outlook on the web](https://outlook.office.com)に移動し、開発テナント アカウントを使用してサインインします。
 1. サイド バーで、[  **その他のアプリ**] を選択します。 サイドロードされたアプリのタイトルが、インストールされているアプリの間に表示されます。
 1. アプリ アイコンを選択して、Outlook on the webで実行されているアプリを起動してプレビューします。
 

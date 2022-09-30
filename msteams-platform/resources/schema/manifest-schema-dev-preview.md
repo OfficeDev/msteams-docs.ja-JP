@@ -4,12 +4,12 @@ description: 開発者プレビューを有効にする方法について説明�
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: 5122ab4c0d2a3668c8ca7568a3ce65ee69b980a8
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: d3e7db2a3f50d989cd6d8596eea20ea491c56564
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100295"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243172"
 ---
 # <a name="public-developer-preview-manifest-schema-for-teams"></a>Teams のパブリック開発者プレビュー マニフェスト スキーマ
 
@@ -535,7 +535,7 @@ Specifies the native features on a user's device that your app may request acces
 
 **省略可能**、特に明記されている場合は **必須** を除く
 
-アプリがコンテンツの読み込みを期待する有効なドメインのリスト。 ドメイン リストには、`*.example.com` などのワイルドカードを含めることができます。 これは、ドメインの 1 つのセグメントと正確に一致します。`a.b.example.com` と一致させる必要がある場合は、`*.*.example.com` を使用してください。 タブ構成またはコンテンツ UI が、タブ構成に使用するドメイン以外のドメインに移動する必要がある場合は、そのドメインをここで指定する必要があります。
+アプリがコンテンツの読み込みを期待する有効なドメインのリスト。 ドメイン リストには、`*.example.com` などのワイルドカードを含めることができます。 これは、ドメインの 1 つのセグメントと正確に一致します。`a.b.example.com` と一致させる必要がある場合は、`*.*.example.com` を使用してください。 タブ構成またはコンテンツ UI が、タブ構成に使用するドメイン以外の他のドメインに移動する必要がある場合は、ここでそのドメインを指定する必要があります。
 
 ただし、サポートする ID プロバイダーのドメインをアプリに含める必要は **ありません**。 たとえば、Google ID を使用して認証を行うには、accounts.google.com にリダイレクトする必要がありますが、accounts.google.com `validDomains[]`を含めてはなりません。
 

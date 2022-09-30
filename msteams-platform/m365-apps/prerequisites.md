@@ -5,12 +5,12 @@ ms.date: 05/24/2022
 ms.custom: m365apps
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 64caf4784286cd3eaf2c32a28a3fe655ba88bcc7
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 1c808e2ecb15b87781daaf5879e72d415bc1b441
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100954"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243326"
 ---
 # <a name="set-up-your-dev-environment-for-extending-teams-apps-across-microsoft-365"></a>Teams アプリを Microsoft 365 全体に拡張するための開発環境を設定する
 
@@ -84,7 +84,7 @@ Office 365 リリース オプションの詳細については、*Microsoft 365
 1. Outlook (デスクトップ クライアント) を開き、テスト テナント資格情報を使用してメール アカウントを設定します。
 1. **［ファイル］** > **［Office アカウント］** > **［Outlook について］** を開き、Outlook の Microsoft 365 *［ベータ チャネル］* ビルドを実行していることを確認します。
 
-    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="Office アカウントから [Outlook について] にアクセスして、ベータ チャネル ビルドを実行していることを確認します。":::
+    :::image type="content" source="images/outlook-about-beta-channel.png" alt-text="Office アカウントの [Outlook について] に移動して、ベータ チャネル ビルドを実行していることを確認します。":::
 
 1. *Microsoft Edge WebView2 ランタイム* がインストールされていることを確認します。 Windows の **［スタート］** > **［アプリと機能］** を開、**webview** を検索します。
 
@@ -96,7 +96,7 @@ Office 365 リリース オプションの詳細については、*Microsoft 365
 
 ベータ プログラムに参加することで、Office アプリ for Android で実行されている Teams 個人用タブをプレビューできます。
 
-最新の Office アプリ ベータ ビルドを物理 Android デバイスまたは Android エミュレーターにインストールするには:
+最新の Office アプリ ベータ版をインストールするには、物理 Android デバイスまたは Android エミュレーターにビルドします。
 
 1. Google Play で [サポートされている Android デバイスを](https://support.google.com/googleplay/answer/1727131)使用していることを確認します。
 1. Android デバイスで **Play ストア** を起動します。.

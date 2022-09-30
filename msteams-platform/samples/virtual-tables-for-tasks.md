@@ -5,12 +5,12 @@ description: このモジュールでは、Microsoft Teams のコラボレーシ
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 1913b379e9f24d36948a05190a4ae1804a8ec728
-ms.sourcegitcommit: 442d2c8e80a2605b6d0215c973557471f18f8121
+ms.openlocfilehash: 2571787d5fba47c4ada3765dd13dd36ef1f8f63a
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "67314596"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243046"
 ---
 # <a name="virtual-tables-for-tasks-meetings-files"></a>タスク、会議、ファイルの仮想テーブル
 
@@ -19,7 +19,7 @@ ms.locfileid: "67314596"
 コラボレーション コントロールのコア ソリューションには、コラボレーション コントロールによって作成されたデータへのプログラムによるアクセスに使用できる一連の [仮想テーブル](/power-apps/developer/data-platform/virtual-entities/get-started-ve)が含まれています。
 
 > [!NOTE]
-> 現在、コラボレーション コントロールは [、パブリック開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md)でのみ使用できます。
+> 現在、コラボレーション コントロールは [パブリック開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md)でのみ使用できます。
 
 > [!TIP]
 > [仮想テーブル](/power-apps/developer/data-platform/virtual-entities/get-started-ve) は仮想エンティティとも呼ばれ、外部システムに存在するデータを、データのレプリケーションなしで、多くの場合はカスタム コーディングなしで、Microsoft Dataverse のテーブルとしてシームレスに表すことによって統合できます。
@@ -45,18 +45,18 @@ ms.locfileid: "67314596"
 
 1. コラボレーション コントロールがインストールされている Dataverse 環境。
 1. Dataverse 環境内のユーザー アカウント。 **これには、コラボレーション コントロールのユーザー** ロールが割り当てられています。
-1. たとえば、サード パーティのツール: Microsoft Dataverse インスタンスに対して認証を行い、Web API 要求を作成して送信し、応答を表示できる、ユーザーまたはカスタム C# コードを投稿します。  
+1. サード パーティ製のツール (たとえば、Microsoft Dataverse インスタンスに対して認証を行い、Web API 要求を作成して送信し、応答を表示することを可能にする Post man やカスタム C# コードなど)。  
 
 > [!TIP]
 > Microsoft では、Dataverse インスタンスに接続し、Postman を使用して Web API で操作を実行する Postman 環境を構成する方法について説明します。 [Microsoft Dataverse Web API で Postman を使用する方法に関するページを](/power-apps/developer/data-platform/webapi/use-postman-web-api)参照してください。
 
 ## <a name="virtual-tables-sample-scenario"></a>仮想テーブルのサンプル シナリオ
 
-このガイドで説明するシナリオでは、Planner プランとタスクの仮想テーブルを使用します。 説明されているシナリオは、タスク コラボレーション コントロールで使用されているものと同じです。 ユーザーの視点から見ると、シナリオは Planner プランと複数のタスクがどのように作成され、特定のビジネス レコードに関連付けられているかを示します。 このシナリオでは、ビジネス レコードに関連付けられているタスクを取得する方法と、特定のプランナー タスクを読み取り、更新、削除する方法を示します。
+このガイドで説明するシナリオでは、Planner プランとタスクの仮想テーブルを使用します。 説明されているシナリオは、タスク コラボレーション コントロールで使用されているものと同じです。 ユーザーの視点から見ると、シナリオは Planner プランと複数のタスクがどのように作成され、特定のビジネス レコードに関連付けられているかを示します。 このシナリオでは、ビジネス レコードに関連付けられているタスクを取得する方法と、特定のプランナー タスクを読み取り、更新、削除する方法について説明します。
 
 次のシーケンス図では、タスク コラボレーション コントロール、 [コラボレーション API](/rest/api/industry/collaboration-controls/) 、Planner プランおよびタスク仮想テーブルなど、クライアント間の相互作用について説明します。
 
-:::image type="content" source="~/assets/images/collaboration-control/vt-sequence.png" alt-text="仮想テーブルのシーケンス図":::
+:::image type="content" source="~/assets/images/collaboration-control/vt-sequence.png" alt-text="図は、仮想テーブルのシーケンス図を示しています。":::
 
 ## <a name="virtual-tables-basic-operations"></a>仮想テーブルの基本的な操作
 
@@ -108,7 +108,7 @@ ms.locfileid: "67314596"
 
 ---
 
-後続の `collaborationRootId` 要求で必要となるので、追跡します。
+後続の `collaborationRootId` 要求で必要な情報を追跡します。
 
 **タスク 3: Planner プランを作成する**
 
@@ -132,7 +132,7 @@ Planner プランを作成し、上記 `Group ID` で作成したコラボレー
 
 * `collaborationRootId`: このプランを関連付けるコラボレーション セッションを識別し、タスク 2 の値を使用します。
 
-* `groupId`: このプランを所有するグループを識別し、手順 1 の値を使用します。
+* `groupId`: このプランを所有しているグループを識別し、手順 1 の値を使用します。
 
 * `planTitle`: プランのタイトル
 
@@ -161,7 +161,7 @@ Planner プランを作成し、上記 `Group ID` で作成したコラボレー
 
 ---
 
-後続の`m365_id` 要求で必要となるので、追跡します。
+後続の`m365_id` 要求で必要な情報を追跡します。
 
 **タスク 4: Planner タスクを作成する**
 
@@ -184,7 +184,7 @@ Planner プランを作成し、上記 `Group ID` で作成したコラボレー
 
 ```
 
-* `collaborationRootId`: このプランを関連付けるコラボレーション セッションを識別し、タスク 2 の値を指定します。
+* `collaborationRootId`: このプランを関連付けるコラボレーション セッションを識別し、タスク 2 の値を使用します。
 * `planId`: このタスクが割り当てられるプランを識別し、前の手順の値を使用します。
 * `taskTitle`: タスクのタイトル
 
@@ -230,7 +230,7 @@ Planner プランを作成し、上記 `Group ID` で作成したコラボレー
 
 ---
 
-後続の `m365_graphplannertaskid` 要求で必要となるので、追跡します。
+後続の `m365_graphplannertaskid` 要求で必要な情報を追跡します。
 
 > [!NOTE]
 > Planner `m365_graphplannertaskid` Task 仮想テーブル内のレコードの主キーです。 このレコードと対話するために仮想テーブルに対するすべての後続の要求では、この主キーを使用する必要があります。 これは、このドキュメントの以降の `plannerTaskId` 手順と呼ばれます。

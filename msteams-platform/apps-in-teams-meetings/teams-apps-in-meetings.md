@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: a462c3e4f5e6aef332fbb0b05cce8b1f2fa7d5a7
-ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
+ms.openlocfilehash: 10604f4101185b2c18a619308e6551182809c290
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67990890"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243207"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Teams の会議と通話用のアプリ
 
@@ -46,6 +46,10 @@ Teams では、次の会議の種類について、会議中のアプリへの�
 ![会議アプリ拡張性](../assets/images/apps-in-meetings/meetingappextensibility.png)
 
 この記事では、会議アプリの拡張性、API リファレンス、会議用のアプリの有効化と構成、および Teams のカスタム Together モード シーンの概要を説明します。
+
+> [!Note]
+>
+> 会議アプリ (サイド パネル、会議ステージ) は、Teams デスクトップ クライアントでサポートされています。 Teams Web クライアントと同様に、開発者プレビューが有効になっている場合にのみサポートされます。
 
 * **会議アプリを拡張** する: 会議機能拡張機能を使用して、会議エクスペリエンスを強化します。 この機能を使用すると、会議内にアプリを統合できます。 また、タブ、ボット、メッセージ拡張機能を統合できる会議のライフサイクルのさまざまなステージもあります。 さまざまな参加者の役割とユーザーの種類を識別し、会議イベントを取得し、会議中のダイアログを生成できます。
 * **会議用のアプリを構成する: 会議** 用のアプリを使用して Teams をカスタマイズするには、アプリ マニフェストを更新して Teams 会議用のアプリを有効にし、会議シナリオ用にアプリを構成します。

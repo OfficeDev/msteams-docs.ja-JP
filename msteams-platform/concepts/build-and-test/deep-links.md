@@ -3,12 +3,12 @@ title: ディープ リンクの作成
 description: この記事では、ディープ リンクを作成する方法と、タブを使用して Microsoft Teams アプリ内でディープ リンクを使用して移動する方法について説明します。
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: b02a29b74204e9ef8f61633642bd42cd178c8350
-ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
+ms.openlocfilehash: 7a9af415a6fdc4f2cb1f9fd04ba79e8b197a40fc
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68160721"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243221"
 ---
 # <a name="create-deep-links"></a>ディープ リンクの作成
 
@@ -322,7 +322,7 @@ else { /* handle case where capability isn't supported */ }
 
 ### <a name="generate-deep-links-to-channel-conversation"></a>チャネル会話へのディープ リンクを生成する
 
-このディープ リンク形式を使用して、以下のチャネル スレッド内の特定の会話に移動します。
+チャネル スレッド内の特定の会話に移動するには、次のディープ リンク形式を使用します。
 
 `https://teams.microsoft.com/l/message/<channelId>/<parentMessageId>?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=<parentMessageId>&teamName=<teamName>&channelName=<channelName>&createdTime=<createdTime>`
 

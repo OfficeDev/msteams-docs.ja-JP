@@ -5,17 +5,17 @@ author: v-npaladugu
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 67dfa765d27327cee15977d17dfecf955cae8bca
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 144328aff254f94a3bcfc7e383e82dfa93d0d8fd
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100582"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243578"
 ---
 # <a name="monetize-your-app"></a>アプリを収益化する
 
 Microsoft Teams アプリ ストアには、アプリを収益化し、ユーザーと関わり合って顧客を獲得できるようにする機能が用意されています。 このセクションのトピックでは、これらの機能をアプリに組み込む方法について説明します。
- 
+
 ## <a name="choose-a-pricing-model"></a>価格モデルを選択する
 
 :::row:::
@@ -70,6 +70,10 @@ Microsoft Teams アプリ ストアには、アプリを収益化し、ユーザ
 
     :::column-end:::
 :::row-end:::
+
+**Teams でサード パーティ製アプリのライセンスを管理する**
+
+Microsoft ライセンス管理を使用すると、独立系ソフトウェア ベンダー (ISV) は Teams で購入した SaaS ライセンスを管理して、SaaS ライセンスの割り当て、割り当て解除、使用、追跡を簡単に行うことができます。 詳細については、「 [Teams でサード パーティ製アプリのライセンスを管理する](include-saas-offer.md#manage-license-for-third-party-apps-in-teams)」を参照してください。
 
 ## <a name="next-step"></a>次のステップ
 

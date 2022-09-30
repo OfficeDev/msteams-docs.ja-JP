@@ -3,12 +3,12 @@ title: メッセージ拡張機能を使用した操作の開始
 description: このモジュールでは、ユーザーが外部サービスをトリガーできるようにアクション ベースのメッセージ拡張機能を作成する方法について説明します
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 6159738b0ef17370f8cf67ab83c9fa420f4ef723
-ms.sourcegitcommit: 5c12af6a379c7cace409fda94677ea0334d7a3dd
+ms.openlocfilehash: e72d4c5d7ca7ecaa0ced14f28cc321d0a93a19c3
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2022
-ms.locfileid: "67337146"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243571"
 ---
 # <a name="initiate-actions-with-message-extensions"></a>メッセージ拡張機能を使用した操作の開始
 

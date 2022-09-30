@@ -1,23 +1,23 @@
 ---
 title: 仮想テーブル Web API
 author: surbhigupta
-description: このモジュールでは、コラボレーション コントロール アプリ用の Virtual Tables Web API、仮想テーブルの並べ替え、Microsoft Teamsでのフィルター処理について説明します。
+description: このモジュールでは、コラボレーション コントロール アプリ用の Virtual Tables Web API、Microsoft Teams での仮想テーブルの並べ替え、フィルター処理について説明します。
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 31784cfabccdfa861044e74be533c00f134ea851
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: b15c7972dfc0152d458e4ad895ed6d4f7e45cd4c
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67179411"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243550"
 ---
 # <a name="virtual-tables-web-api"></a>仮想テーブル Web API
 
-Dataverse Web API を使用して仮想テーブルから複数のレコードを取得する場合は、並べ替え、フィルター処理、ページ分割をサポートするために追加のクエリ パラメーターを含めることができます。 これらの機能は、Microsoft Graph APIによって提供されるサポートに依存しているため、コラボレーション コントロールの仮想テーブル全体で一様にサポートされていません。 各仮想テーブルがサポートする内容の詳細については、仮想テーブル エンティティ リファレンスを参照してください。
+Dataverse Web API を使用して仮想テーブルから複数のレコードを取得する場合は、並べ替え、フィルター処理、ページ分割をサポートするために追加のクエリ パラメーターを含めることができます。 これらの機能は、Microsoft Graph APIによって提供されるサポートに依存しているため、コラボレーション コントロールの仮想テーブル全体で一様にサポートされていません。 各仮想テーブルがサポートする内容の詳細については、「仮想テーブル エンティティ リファレンス」を参照してください。
 
 > [!NOTE]
-> 現在、コラボレーション コントロールは [、パブリック開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md)でのみ使用できます。
+> 現在、コラボレーション コントロールは [パブリック開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md)でのみ使用できます。
 
 ## <a name="virtual-table-sorting"></a>仮想テーブルの並べ替え
 
@@ -38,11 +38,11 @@ Dataverse Web API を使用して仮想テーブルから複数のレコード�
 
 ## <a name="virtual-table-filtering"></a>仮想テーブルのフィルター処理
 
-仮想テーブルでは、OData $filter クエリ パラメーターを使用して、行を返す条件を設定できます。 仮想テーブルは、Dataverse Web API でサポートされているのと同じ OData 演算子を使用してクエリが実行されます。
+仮想テーブルでは、OData $filter クエリ パラメーターを使用して、行が返される条件を設定できます。 仮想テーブルは、Dataverse Web API でサポートされているのと同じ OData 演算子を使用してクエリが実行されます。
 
 * **比較演算子**
 
-  |演算子|説明|例|
+  |オペレーター|説明|例|
   |----|----|----|
   |eq|等しい|$filter=m365_name eq 'Contoso'|
   |ne|等しくない|$filter=m365_name ne 'Contoso'|
@@ -53,7 +53,7 @@ Dataverse Web API を使用して仮想テーブルから複数のレコード�
 
 * **論理演算子**
 
-  |演算子|説明|例|
+  |オペレーター|説明|例|
   |----|----|----|
   |and|論理 and |$filter=m365_name eq 'Contoso' と m365_price eq 50.0|
   |or|論理 or |$filter=m365_name ne 'Contoso' または m365_price eq 50.0|
@@ -61,7 +61,7 @@ Dataverse Web API を使用して仮想テーブルから複数のレコード�
 
 * **グループ化演算子**
 
-  |演算子|説明|例|
+  |オペレーター|説明|例|
   |----|----|----|
   |( )|優先順位のグループ化 |$filter=(eq 'Contoso' と m365_price eq 50.0 m365_name) または contains(m365_subject,'Team Sync')|
 
@@ -80,7 +80,7 @@ Dataverse Web API を使用して仮想テーブルから複数のレコード�
 * Graph イベント
 
 > [!Note]
-> フィルター処理は、それぞれの Graph リソースのすべての属性ではサポートされていません。 ユーザーがサポートされていない属性を持つ仮想テーブルでフィルター処理しようとすると、このフィルターは無視されます。 これは、フィルター処理をサポートしていない列の Dataverse Web API と同じ動作です。
+> フィルター処理は、それぞれの Graph リソースのすべての属性ではサポートされていません。 ユーザーがサポートされていない属性を使用して仮想テーブルでフィルター処理しようとすると、このフィルターは無視されます。 これは、フィルター処理をサポートしていない列の Dataverse Web API と同じ動作です。
 
 例:
 
@@ -172,7 +172,7 @@ URL にオプションを渡 `$top` すことで、返すレコードの数を�
 ---
 
 > [!Note]
-> 応答にはプロパティは含 `@nextLink` まれません。 ユース ケースで次のページ リンクを返す必要がある場合は、$top URI パラメーターを渡す代わりに、セクション 1 で説明されている odata.maxpagesize 基本設定ヘッダーを使用できます。
+> 応答にはプロパティは `@nextLink` 含まれません。 ユース ケースで次のページ リンクを返す必要がある場合は、$top URI パラメーターを渡す代わりに、セクション 1 で説明されている odata.maxpagesize 基本設定ヘッダーを使用できます。
 
 現在、次の仮想テーブルでは、特定のページのフェッチがサポートされています。
 

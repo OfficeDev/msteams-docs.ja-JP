@@ -4,12 +4,12 @@ description: この記事では、検索ベースのメッセージ拡張機能�
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 07/20/2019
-ms.openlocfilehash: aece6f0984e1a6979f5a591fb271010e508b51a1
-ms.sourcegitcommit: 1cda2fd3498a76c09e31ed7fd88175414ad428f7
+ms.openlocfilehash: 789563d3a11a7e83d59b1653cc0cf45af2354dc9
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "67035227"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243032"
 ---
 # <a name="search-with-message-extensions"></a>メッセージ拡張機能を使用して検索する
 

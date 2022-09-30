@@ -6,12 +6,12 @@ ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 04/07/2022
-ms.openlocfilehash: 9022f9cb7ad01808481a5ac9fb4a730459213300
-ms.sourcegitcommit: ffcfab268abbca398d1a75df158f73630490c330
+ms.openlocfilehash: 2c458752e081efd170a757a39789aca4f7360bc6
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67636176"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243130"
 ---
 # <a name="designing-your-microsoft-teams-meeting-extension"></a>Microsoft Teams 会議拡張機能の設計
 
@@ -26,7 +26,7 @@ Microsoft Teams UI Kit には、必要に応じて変更できる要素を含む
 
 ## <a name="add-a-meeting-extension"></a>会議拡張機能の追加
 
-ユーザーは、会議の前後に会議の延長を追加できます。 また、Teams ストアから特定の会議用のアプリを直接追加することもできます。
+ユーザーは、会議の前後に会議の延長を追加できます。 また、Teams ストアから直接特定の会議用のアプリを追加することもできます。
 
 ### <a name="add-before-a-meeting"></a>会議の前
 
@@ -268,12 +268,12 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
 
 会議ステージで共有されるアプリのサイズは、会議の状態と、ユーザーによるウィンドウのサイズを変更方法によって異なります。 ブラウザーと同様に、ナビゲーションとコントロールのパディングと応答性の高いレイアウトを維持します。
 
-* **サイド パネル**: ユーザーは、会議中にいつでもサイド パネルを開いてチャットしたり、名簿を表示したり、アプリ (つまり、会議中タブ) を使用したりできます。 ステージは、パネルが開いているときに動的に再配置されます。
+* **サイド パネル**: ユーザーは、会議中にいつでもサイド パネルを開いてチャットしたり、名簿を表示したり、アプリ (会議内タブ) を使用したりできます。 ステージは、パネルが開いているときに動的に再配置されます。
 * **ビデオとオーディオ グリッド**: ビデオグリッドとオーディオ グリッドは、会議の参加者を表示するために常に表示されます。 ユーザーが会議の参加者にスポットライトを当てたりピン留めしたりすると、印刷の向きに応じて参加者グリッドの高さや幅が増えます。
 
 #### <a name="meeting-stage-without-side-panel"></a>会議ステージ (サイド パネルなし)
 
-サイド パネルが開いていない場合、会議ステージは既定で 994 x 678 ピクセルで、最小 792 x 382 ピクセルにすることができます。
+サイド パネルが開いていない場合、会議ステージは既定で 994 x 678 ピクセルで、最小 792x382 ピクセルにすることができます。
 
 :::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="サイド パネルを閉じた共有会議ステージの応答性を示す画像。":::
 
@@ -341,7 +341,7 @@ Teams 会議ステージに会議中ダイアログが表示されます。 ユ�
 
 #### <a name="do-use-a-one-column-dialog"></a>実行: 1 列のダイアログを使用
 
-ダイアログは会議ステージの中心にあるため、ユーザーの不満を避けるために、タスクの完了を迅速かつ簡単にする必要があります。
+ダイアログは会議の段階の中心にあるため、タスクの完了は迅速で、ユーザーの不満を回避するために簡単である必要があります。
 
    :::column-end:::
    :::column span="":::

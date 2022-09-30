@@ -1,16 +1,16 @@
 ---
 title: コラボレーション コントロール アプリで外部クライアントのタスクを構成する
 author: surbhigupta
-description: このモジュールでは、Microsoft Teamsのコラボレーション コントロール アプリで外部クライアントのタスクを構成する方法について説明します。
+description: このモジュールでは、Microsoft Teams のコラボレーション コントロール アプリで外部クライアントのタスクを構成する方法について説明します。
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: bb98ab632b335717a61499600aef01e652fd0dee
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 7d458cc97429772695958606835edd4ef953b5db
+ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67179336"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68243165"
 ---
 # <a name="configure-tasks-for-external-clients"></a>外部クライアントのタスクを構成する
 
@@ -19,9 +19,9 @@ ms.locfileid: "67179336"
 有効にするには、必要な MDA フォームのサブグリッド コンポーネントにアタッチされている Tasks PCF コントロールの各インスタンスに XML 文字列を渡す追加の手順が必要です。 XML 文字列はパラメーター化されたクエリであり、コントロールは顧客情報を含むテーブルから必要なデータを抽出できます。
 
 > [!NOTE]
-> 現在、コラボレーション コントロールは [、パブリック開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md)でのみ使用できます。
+> 現在、コラボレーション コントロールは [パブリック開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md)でのみ使用できます。
 
-外部タスクを作成する手順を次に示します。
+外部タスクを作成するには、次の手順に従います。
 
 1. Customer などの新しいカスタム エンティティを作成するか、連絡先などの既存の顧客エンティティを再利用します。
 
@@ -40,7 +40,7 @@ ms.locfileid: "67179336"
 
     * クエリ結果は、各ユーザー オブジェクトに対して次のプロパティを返す必要があります。
       * ID
-      * displayname
+      * Displayname
       * 電子メールは、必要に応じてエイリアスを使用します。
     * クエリには、呼び出し元が結果の数を制限できるように、 **@top** パラメーターが含まれている必要があります。
     * クエリには、必要 **に応** じて、関連レコードだけで結果をフィルター処理するパラメーター@rootEntityId必要があります。
@@ -81,19 +81,19 @@ ms.locfileid: "67179336"
 
 1. [ **タスク** ] タブが見つかるまで、クラシック フォーム デザイナー内を移動します。サブグリッドをダブルクリックして、そのプロパティ ダイアログを開きます。
 
-    :::image type="content" source="~/assets/images/collaboration-control/subgrid-property.png" alt-text="[タスク] プロパティ ダイアログ":::
+    :::image type="content" source="~/assets/images/collaboration-control/subgrid-property.png" alt-text="タスク プロパティ ダイアログを示すスクリーンショット。":::
 
 1. プロパティ ダイアログで、次の図に示すようにプロパティを設定します。
 
-    :::image type="content" source="~/assets/images/collaboration-control/tasks-property.png" alt-text="Tasks プロパティの設定":::
+    :::image type="content" source="~/assets/images/collaboration-control/tasks-property.png" alt-text="Sceenshot は、Tasks プロパティの設定でプロパティを設定することを示しています。":::
 
-1. [コントロール] タブに移動し、[カスタム タスク] プロパティの :::image type="icon" source="~/assets/images/collaboration-control/edit-icon.png" alt-text="[タスクの編集"::: ] を選択して、上記で生成された Fetch XML を追加します。
+1. [コントロール] タブに移動し、[スクリーンショット] を選択 :::image type="icon" source="~/assets/images/collaboration-control/edit-icon.png" alt-text="してタスクを編集する方法を示します。"::: をクリックして、上記で生成された Fetch XML を追加します。
 
 1. Fetch XML を貼り付ける
 
-    :::image type="content" source="~/assets/images/collaboration-control/set-fetchproperties.png" alt-text="XML プロパティの設定をフェッチする":::
+    :::image type="content" source="~/assets/images/collaboration-control/set-fetchproperties.png" alt-text="Fetch XML を貼り付ける方法を示すスクリーンショット。":::
 
-    :::image type="content" source="~/assets/images/collaboration-control/custom-tasksproperty.png" alt-text="XML カスタム プロパティ設定をフェッチする":::
+    :::image type="content" source="~/assets/images/collaboration-control/custom-tasksproperty.png" alt-text="スクリーンショットは、カスタム プロパティ設定を構成する方法を示しています。":::
 
 1. [プロパティの構成] の [カスタム タスク] ウィンドウと [プロパティの設定] ウィンドウで **[OK] を選択します** 。
 
