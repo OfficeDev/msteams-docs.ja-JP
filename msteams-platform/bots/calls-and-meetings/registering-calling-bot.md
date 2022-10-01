@@ -3,12 +3,12 @@ title: Microsoft Teams の通話と会議ボットを登録する
 description: Microsoft Teams 用の新しいオーディオ/ビデオ通話ボットを登録する方法、新しいボットを作成する方法、通話機能を追加する方法、グラフのアクセス許可を追加する方法について説明します。 通話の作成、会議への参加、通話の転送を行うサンプル。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 2563d94e944a7d4058d1417be2f3816e3f565bff
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 3fe8d0adde45242738b8023c5478c24769561d1c
+ms.sourcegitcommit: 53818e55dfe0dbdf874d578a40982f7db444f89b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100925"
+ms.lasthandoff: 10/01/2022
+ms.locfileid: "68319938"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Microsoft Teams の通話と会議ボットを登録する
 
@@ -93,9 +93,10 @@ You can rely on an administrator to grant the permissions your app needs at the 
 
 ## <a name="code-sample"></a>コード サンプル
 
-| **サンプルの名前** | **説明** | **Graph** |
+| **サンプルの名前** | **説明** | **C#** |
 |---------------|----------|--------|
 | 通話ボットと会議ボット | サンプル アプリでは、ボットが通話を作成し、会議に参加し、通話を転送する方法を示します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
+| リアルタイム会議イベント |サンプル アプリでは、ボットがリアルタイムの会議イベントを受信する方法を示します。|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|
 
 ## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
 
@@ -111,3 +112,4 @@ You can rely on an administrator to grant the permissions your app needs at the 
 * [着信通知](~/bots/calls-and-meetings/call-notifications.md)
 * [ローカル PC で通話ボットとオンライン会議ボットを開発する](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
 * [アプリのアクセス許可を表示し、管理者の同意を与える](/MicrosoftTeams/app-permissions-admin-center)
+* [Microsoft Graph でクラウド コミュニケーション API を操作する](/graph/api/resources/communications-api-overview)
