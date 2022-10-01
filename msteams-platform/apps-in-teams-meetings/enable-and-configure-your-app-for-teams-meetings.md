@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 04/07/2022
-ms.openlocfilehash: d0e7cf82685588977beb426ec6cc2ed75b2249c6
-ms.sourcegitcommit: 600d3b13d47ca42ab5ba7abf18bccc7e912180e4
+ms.openlocfilehash: 631fa01f8e3909495281a95205a70f88a729648f
+ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68158821"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68295978"
 ---
 # <a name="enable-and-configure-apps-for-meetings"></a>会議用アプリを有効にして構成する
 
@@ -177,7 +177,7 @@ Teams 会議は、組織の共同作業エクスペリエンスを提供しま�
 
 共有会議ステージを使用すると、会議参加者はアプリ コンテンツの操作と共同作業をリアルタイムで行うことができます。 次の方法で、共同作業会議ステージにアプリを共有できます。
 
-* Teams クライアントの会議サイド パネルまたは[ディープリンク](~/concepts/build-and-test/deep-links.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)を介して、[共有からステージへ] ボタンを使用して[、アプリ全体](#share-entire-app-to-stage)を共有してステージングします。
+* Teams クライアントの [ステージで共有] ボタンを使用して[アプリ全体をステージに共有](#share-entire-app-to-stage)します。
 * Teams クライアント SDK の API を使用して、[アプリの特定の部分をステージに共有](#share-specific-parts-of-the-app-to-stage)します。
 
 ##### <a name="share-entire-app-to-stage"></a>アプリ全体をステージに共有する

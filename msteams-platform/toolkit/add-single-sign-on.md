@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: b2016cefcdf476e32860f80a76606c04bf892f5d
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: 9c221b0903d4541c4b0601e14ea347680140dfb9
+ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806795"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "68295964"
 ---
 # <a name="add-single-sign-on-to-teams-app"></a>Teams アプリにシングル サインオンを追加する
 
@@ -55,12 +55,12 @@ Teams Toolkit は、次の Teams 機能に SSO を追加するのに役立ちま
 
 次の表に、Teams Toolkit がプロジェクトに加える変更の一覧を示します。
 
-   |**型**|**ファイル**|**用途**|
+   |**Type**|**ファイル**|**用途**|
    |--------|--------|-----------|
    |Create|`aad.template.json` 下 `template/appPackage`|Azure AD アプリケーション マニフェストは、Azure AD アプリを表します。 `template/appPackage` は、ローカル デバッグまたはプロビジョニング ステージ中に Azure AD アプリを登録するのに役立ちます。|
    |変更|`manifest.template.json` 下 `template/appPackage`|Teams アプリ マニフェスト `webApplicationInfo` テンプレートにオブジェクトが追加されます。 Teams では、SSO を有効にするには、このフィールドが必要です。 この変更は、ローカル デバッグまたはプロビジョニングをトリガーするときに有効です。|
-   |Create|`auth/tab`|参照コード、認証リダイレクト ページ、ファイル `README.md` は、タブ プロジェクトのこのパスに生成されます。|
-   |Create|`auth/bot`|参照コード、認証リダイレクト ページ、ファイル `README.md` は、ボット プロジェクトのこのパスに生成されます。|
+   |Create|`auth/tab`|参照コード、認証リダイレクト ページ、および `README.md` ファイルは、タブ プロジェクトのこのパスに生成されます。|
+   |Create|`auth/bot`|このパスでは、ボット プロジェクトの参照コード、認証リダイレクト ページ、ファイル `README.md` が生成されます。|
 
 > [!Note]
 > SSO を追加することで、ローカル デバッグをトリガーするまで、Teams Toolkit はクラウド内の何も変更しません。 コードを更新して、SSO がプロジェクトで動作していることを確認します。
@@ -95,221 +95,267 @@ Teams Toolkit は、次の Teams 機能に SSO を追加するのに役立ちま
 
     ```
 
-5. コンポーネントをコンポーネント`InitTeamsFx`に`<InitTeamsFx />`置き換えるには、次の行`<AddSSO />`を`AddSso`置き換えます。
+5. 置換前の行
+
+   `<AddSSO />` を使用 `<InitTeamsFx />` して、コンポーネントを `AddSso` コンポーネントに `InitTeamsFx` 置き換えます。
 
 </details>
 <details>
 <summary><b>ボット プロジェクト </b></summary>
 
-1. フォルダーをコピー先にコピー `auth/bot/public` します `bot/src`。 2 つのフォルダーには、認証リダイレクトに使用される HTML ページが含まれています。これらのページにルーティングを追加するには、ファイルを変更 `bot/src/index` する必要があります。
+#### <a name="set-up-the-azure-ad-redirects"></a>Azure AD リダイレクトを設定する
 
-2. フォルダーをコピー先にコピー `auth/bot/sso` します `bot/src`。 2 つのフォルダーには、SSO 実装の参照として次の 3 つのファイルが含まれています。
+1. フォルダーを移動します`auth/bot/public``bot/src`。 このフォルダーには、ボット アプリケーションがホストする HTML ページが含まれています。 Azure AD でシングル サインオン フローが開始されると、ユーザーは HTML ページにリダイレクトされます。
+1. `bot/src/index` HTML ページに適切な`restify`ルートを追加するように変更します。
 
-    * `showUserInfo`: SSO トークンを使用してユーザー情報を取得する関数を実装します。 これに従って、SSO トークンを必要とする独自のメソッドを作成できます。
+    ```ts
+    const path = require("path");
 
-    * `ssoDialog`: SSO に使用される [ComponentDialog](/javascript/api/botbuilder-dialogs/componentdialog?view=botbuilder-ts-latest&preserve-view=true) を作成します。
+    server.get(
+        "/auth-*.html",
+        restify.plugins.serveStatic({
+            directory: path.join(__dirname, "public"),
+        })
+    );
+    ```
 
-    * `teamsSsoBot`: トリガーできるコマンドを使用`ssoDialog`して [TeamsActivityHandler](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest&preserve-view=true) を作成し、追加`showUserInfo`します。
+#### <a name="update-your-app"></a>アプリを更新する
 
-3. コード サンプルに従って、このファイルに独自のコマンドを `addCommand` 登録します (省略可能)。
+SSO コマンド ハンドラー `ProfileSsoCommandHandler` は、Azure AD トークンを使用して Microsoft Graph を呼び出します。 このトークンは、ログインしている Teams ユーザー トークンを使用して取得されます。 フローは、必要に応じて同意ダイアログを表示するダイアログにまとめされます。
 
-4. で実行 `npm install isomorphic-fetch` します `bot/`。
+1. フォルダーの下の`auth/bot/sso`ファイルを移動`profileSsoCommandHandler`します`bot/src`。 `ProfileSsoCommandHandler` class は、SSO トークンを使用してユーザー情報を取得し、このメソッドに従って独自の SSO コマンド ハンドラーを作成するための SSO コマンド ハンドラーです。
+1. ファイルを開き `package.json` 、teamsfx SDK バージョン>= 1.2.0 であることを確認します
+1. フォルダー内で`bot`コマンドを`npm install isomorphic-fetch --save`実行します。
+1. ts スクリプトの場合は、フォルダー内で`bot`コマンドを`npm install copyfiles --save-dev`実行し、次の行を次の行に`package.json`置き換えます。
 
-5. package.json で次の行の下`bot/`で実行`npm install copyfiles`し、置き換えます。
-  
-   ```JSON
+    ```json
+    "build": "tsc --build && shx cp -r ./src/adaptiveCards ./lib/src",
+    ```
 
-   "build": "tsc --build",
+     および 
+
+    ```json
+    "build": "tsc --build && shx cp -r ./src/adaptiveCards ./lib/src && copyfiles src/public/*.html lib/",
+    ```
+
+    これにより、ボット プロジェクトをビルドするときに認証リダイレクトに使用される HTML ページがコピーされます。
+
+1. SSO 同意フローを機能させるには、ファイル内の次のコードを `bot/src/index` 置き換えます。
+
+    ```ts
+    server.post("/api/messages", async (req, res) => {
+        await commandBot.requestHandler(req, res);
+    });
+    ```
+
+     および 
+
+    ```ts
+    server.post("/api/messages", async (req, res) => {
+        await commandBot.requestHandler(req, res).catch((err) => {
+            // Error message including "412" means it is waiting for user's consent, which is a normal process of SSO, sholdn't throw this error.
+            if (!err.message.includes("412")) {
+                throw err;
+            }
+        });
+    });
+    ```
+
+1. たとえば`bot/src/internal/initialize`、SSO 構成と SSO コマンド ハンドラーを追加するためのオプション`ConversationBot`を置き換えます。
+
+    ```ts
+    export const commandBot = new ConversationBot({
+        ...
+        command: {
+            enabled: true,
+            commands: [new HelloWorldCommandHandler()],
+        },
+    });
+    ```
+
+     および 
+
+    ```ts
+    import { ProfileSsoCommandHandler } from "../profileSsoCommandHandler";
+
+    export const commandBot = new ConversationBot({
+        ...
+        // To learn more about ssoConfig, please refer teamsfx sdk document: https://docs.microsoft.com/microsoftteams/platform/toolkit/teamsfx-sdk
+        ssoConfig: {
+            aad :{
+                scopes:["User.Read"],
+            },
+        },
+        command: {
+            enabled: true,
+            commands: [new HelloWorldCommandHandler() ],
+            ssoCommands: [new ProfileSsoCommandHandler()],
+        },
+    });
+    ```
+
+1. Teams アプリ マニフェストにコマンドを登録します。 ボットの下に`commands`次の行を開`templates/appPackage/manifest.template.json`き、`commandLists`追加します。
+
+    ```json
+    {
+        "title": "profile",
+        "description": "Show user profile using Single Sign On feature"
+    }
+    ```
+
+#### <a name="add-a-new-sso-command-to-the-bot-optional"></a>ボットに新しい SSO コマンドを追加する (省略可能)
+
+プロジェクトに SSO を正常に追加したら、新しい SSO コマンドを追加できます。
+
+1. 次のような`photoSsoCommandHandler.ts``photoSsoCommandHandler.js`新しいファイルを作成し、独自の `bot/src/` SSO コマンド ハンドラーを追加して、Graph APIを呼び出します。
+
+    ```TypeScript
+    // for TypeScript:
+    import { Activity, TurnContext, ActivityTypes } from "botbuilder";
+    import "isomorphic-fetch";
+    import {
+        CommandMessage,
+        TriggerPatterns,
+        TeamsFx,
+        createMicrosoftGraphClient,
+        TeamsFxBotSsoCommandHandler,
+        TeamsBotSsoPromptTokenResponse,
+    } from "@microsoft/teamsfx";
+
+    export class PhotoSsoCommandHandler implements TeamsFxBotSsoCommandHandler {
+        triggerPatterns: TriggerPatterns = "photo";
+
+        async handleCommandReceived(
+            context: TurnContext,
+            message: CommandMessage,
+            tokenResponse: TeamsBotSsoPromptTokenResponse,
+        ): Promise<string | Partial<Activity> | void> {
+            await context.sendActivity("Retrieving user information from Microsoft Graph ...");
+
+            const teamsfx = new TeamsFx().setSsoToken(tokenResponse.ssoToken);
+
+            const graphClient = createMicrosoftGraphClient(teamsfx, ["User.Read"]);
+
+            let photoUrl = "";
+            try {
+                const photo = await graphClient.api("/me/photo/$value").get();
+                const arrayBuffer = await photo.arrayBuffer();
+                const buffer=Buffer.from(arrayBuffer, 'binary');
+                photoUrl = "data:image/png;base64," + buffer.toString("base64");
+            } catch {
+                // Could not fetch photo from user's profile, return empty string as placeholder.
+            }
+            if (photoUrl) {
+                const photoMessage: Partial<Activity> = {
+                    type: ActivityTypes.Message, 
+                    text: 'This is your photo:', 
+                    attachments: [
+                        {
+                            name: 'photo.png',
+                            contentType: 'image/png',
+                            contentUrl: photoUrl
+                        }
+                    ]
+                };
+                return photoMessage;
+            } else {
+                return "Could not retrieve your photo from Microsoft Graph. Please make sure you have uploaded your photo.";
+            }
+        }
+    }
+    ```
+
+    ```javascript
+    // for JavaScript:
+    const { ActivityTypes } = require("botbuilder");
+    require("isomorphic-fetch");
+    const { createMicrosoftGraphClient, TeamsFx } = require("@microsoft/teamsfx");
+
+    class PhotoSsoCommandHandler {
+        triggerPatterns = "photo";
+
+        async handleCommandReceived(context, message, tokenResponse) {
+            await context.sendActivity("Retrieving user information from Microsoft Graph ...");
+
+            const teamsfx = new TeamsFx().setSsoToken(tokenResponse.ssoToken);
+
+            const graphClient = createMicrosoftGraphClient(teamsfx, ["User.Read"]);
+        
+            let photoUrl = "";
+            try {
+                const photo = await graphClient.api("/me/photo/$value").get();
+                const arrayBuffer = await photo.arrayBuffer();
+                const buffer=Buffer.from(arrayBuffer, 'binary');
+                photoUrl = "data:image/png;base64," + buffer.toString("base64");
+            } catch {
+            // Could not fetch photo from user's profile, return empty string as placeholder.
+            }
+            if (photoUrl) {
+                const photoMessage = {
+                    type: ActivityTypes.Message, 
+                    text: 'This is your photo:', 
+                    attachments: [
+                        {
+                            name: 'photo.png',
+                            contentType: 'image/png',
+                            contentUrl: photoUrl
+                        }
+                    ]
+                };
+                return photoMessage;
+            } else {
+                return "Could not retrieve your photo from Microsoft Graph. Please make sure you have uploaded your photo.";
+            }
+        }
+    }
+
+    module.exports = {
+        PhotoSsoCommandHandler,
+    };
 
     ```
 
-    および 
+1. 配列`bot/src/internal/initialize.ts`にインスタンスを追加`PhotoSsoCommandHandler`します`ssoCommands`。
 
-   ```JSON
+    ```ts
+    // for TypeScript:
+    import { PhotoSsoCommandHandler } from "../photoSsoCommandHandler";
 
-   "build": "tsc --build && copyfiles public/*.html lib/",
+    export const commandBot = new ConversationBot({
+        ...
+        command: {
+            ...
+            ssoCommands: [new ProfileSsoCommandHandler(), new PhotoSsoCommandHandler()],
+        },
+    });
+    ```
 
-   ```
+    ```javascript
+    // for JavaScript:
+    ...
+    const { PhotoSsoCommandHandler } = require("../photoSsoCommandHandler");
 
-   このボット プロジェクトのビルド中に、認証リダイレクトに使用される HTML ページがコピーされます。
+    const commandBot = new ConversationBot({
+        ...
+        command: {
+            ...
+            ssoCommands: [new ProfileSsoCommandHandler(), new PhotoSsoCommandHandler()]
+        },
+    });
+    ...
 
-6. 次のファイルを追加したら、ファイルに`bot/src/index`新しい`teamsSsoBot`インスタンスを作成する必要があります。 次のコードを置き換えます。
+    ```
 
-   ```Bash
-  
-   // Process Teams activity with Bot Framework.
-   server.post("/api/messages", async (req, res) => {
-   await commandBot.requestHandler(req, res);
-   });  
+1. Teams アプリ マニフェストにコマンドを登録します。 ボットの下に`commands`次の行を開`templates/appPackage/manifest.template.json`き、`commandLists`追加します。
 
-   ```
+    ```JSON
 
-    および 
+    {
+        "title": "photo",
+        "description": "Show user photo using Single Sign On feature"
+    }
 
-   ```Bash
-
-   const handler = new TeamsSsoBot();
-   // Process Teams activity with Bot Framework.
-   server.post("/api/messages", async (req, res) => {
-       await commandBot.requestHandler(req, res, async (context)=> {
-           await handler.run(context);
-       });
-   });
-
-   ```
-
-7. ファイルに HTML ルートを `bot/src/index` 追加します。
-
-   ```Bash
-
-   server.get(
-       "/auth-*.html",
-       restify.plugins.serveStatic({
-           directory: path.join(__dirname, "public"),
-       })
-   );
-
-   ```
-
-8. インポートする次の行を`bot/src/index`追加し、`path`次の行を追加します。`teamsSsoBot`
-
-   ```Bash
-
-   // For ts:
-   import { TeamsSsoBot } from "./sso/teamsSsoBot";
-   const path = require("path");
-
-   // For js:
-   const { TeamsSsoBot } = require("./sso/teamsSsoBot");
-   const path = require("path");
-
-   ```
-
-9. Teams アプリ マニフェストにコマンドを登録します。 ボットの下に`command`次の行を開`templates/appPackage/manifest.template.json`き、`commandLists`追加します。
-
-   ```JSON
-
-   {
-       "title": "show",
-       "description": "Show user profile using Single Sign On feature"
-   }
-
-   ```
-
-</details>
-<details>
-<summary><b>ボットに新しいコマンドを追加する </b></summary>
-
-> [!NOTE]
-> 現在、これらの手順は 、 `command bot`. 最初 `bot`に [bot-sso サンプル](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2/bot-sso)を参照してください。
-
-次の手順は、プロジェクトに SSO を追加した後に、新しいコマンドを追加するのに役立ちます。
-
-1. 下に新しいファイル (`todo.ts`または`todo.js`) を`bot/src/`作成し、独自のビジネス ロジックを追加して、Graph APIを呼び出します。
-
-# <a name="typescript"></a>[TypeScript](#tab/typescript)
-
-   ```typescript
-   // for TypeScript:
-export async function showUserImage(
-    context: TurnContext,
-    ssoToken: string,
-    param: any[]
-): Promise<DialogTurnResult> {
-    await context.sendActivity("Retrieving user photo from Microsoft Graph ...");
-
-    // Init TeamsFx instance with SSO token
-    const teamsfx = new TeamsFx().setSsoToken(ssoToken);
-
-    // Update scope here. For example: Mail.Read, etc.
-    const graphClient = createMicrosoftGraphClient(teamsfx, param[0]);
-    
-    // You can add following code to get your photo:
-    // let photoUrl = "";
-    // try {
-    //   const photo = await graphClient.api("/me/photo/$value").get();
-    //   photoUrl = URL.createObjectURL(photo);
-    // } catch {
-    //   // Could not fetch photo from user's profile, return empty string as placeholder.
-    // }
-    // if (photoUrl) {
-    //   await context.sendActivity(
-    //     `You can find your photo here: ${photoUrl}`
-    //   );
-    // } else {
-    //   await context.sendActivity("Could not retrieve your photo from Microsoft Graph. Please make sure you have uploaded your photo.");
-    // }
-
-    return;
-}  
-   ```
-
-# <a name="javascript"></a>[JavaScript](#tab/javascript)
-
-   ```javaScript
-   // for JavaScript:
-export async function showUserImage(context, ssoToken, param) {
-    await context.sendActivity("Retrieving user photo from Microsoft Graph ...");
-
-    // Init TeamsFx instance with SSO token
-    const teamsfx = new TeamsFx().setSsoToken(ssoToken);
-
-    // Update scope here. For example: Mail.Read, etc.
-    const graphClient = createMicrosoftGraphClient(teamsfx, param[0]);
-    
-    // You can add following code to get your photo:
-    // let photoUrl = "";
-    // try {
-    //   const photo = await graphClient.api("/me/photo/$value").get();
-    //   photoUrl = URL.createObjectURL(photo);
-    // } catch {
-    //   // Could not fetch photo from user's profile, return empty string as placeholder.
-    // }
-    // if (photoUrl) {
-    //   await context.sendActivity(
-    //     `You can find your photo here: ${photoUrl}`
-    //   );
-    // } else {
-    //   await context.sendActivity("Could not retrieve your photo from Microsoft Graph. Please make sure you have uploaded your photo.");
-    // }
-
-    return;
-}
-   ```
-
----
-
-2. 新しいコマンドを登録する
-
-   * で使用する新しいコマンド登録に次の`teamsSsoBot`行を`addCommand`追加します。
-
-     ```bash
-
-     this.dialog.addCommand("ShowUserProfile", "show", showUserInfo);
-
-     ```
-
-   * 上記の行の後に次の行を追加して、新しいコマンド `photo` を登録し、上記で追加したメソッド `showUserImage` にフックアップします。
-
-     ```bash
-
-     // As shown here, you can add your own parameter into the `showUserImage` method
-     // You can also use regular expression for the command here
-     const scope = ["User.Read"];
-     this.dialog.addCommand("ShowUserPhoto", new RegExp("photo\s*.*"), showUserImage, scope);
-
-     ```
-
-3. Teams アプリ マニフェストにコマンドを登録します。 ボットの下に`command`次の行を開`templates/appPackage/manifest.template.json`き、`commandLists`追加します。
-
-   ```JSON
-
-   {
-       "title": "photo",
-       "description": "Show user photo using Single Sign On feature"
-   }
-
-   ```
+    ```
 
 </details>
 <br>
@@ -320,8 +366,8 @@ F5 キーを押してアプリケーションをデバッグします。 Teams T
 
 ## <a name="customize-azure-ad-application-registration"></a>Azure AD アプリケーションの登録をカスタマイズする
 
-[Azure AD アプリ マニフェスト](/azure/active-directory/develop/reference-app-manifest)を使用すると、アプリケーション登録のさまざまな側面をカスタマイズできます。 必要に応じてマニフェストを更新できます。 目的の API にアクセスするための追加の API アクセス許可を含める必要がある場合は、目的の API [にアクセスするための API アクセス許可](https://github.com/OfficeDev/TeamsFx/wiki/#customize-aad-manifest-template)に関するページを参照してください。
-Azure Portal で Azure AD アプリケーションを表示するには、「[Azure portalで Azure AD アプリケーションを表示する](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#How-to-view-the-AAD-app-on-the-Azure-portal)」を参照してください。
+[Azure AD アプリ マニフェスト](/azure/active-directory/develop/reference-app-manifest)を使用すると、アプリケーション登録のさまざまな側面をカスタマイズできます。 必要に応じてマニフェストを更新できます。 目的の API にアクセスするための API アクセス許可をさらに含める必要がある場合は、目的の API [にアクセスするための API アクセス許可](https://github.com/OfficeDev/TeamsFx/wiki/#customize-aad-manifest-template)に関するページを参照してください。
+Azure portalで Azure AD アプリケーションを表示するには、「Azure portal[で Azure AD アプリケーションを表示する](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#How-to-view-the-AAD-app-on-the-Azure-portal)」を参照してください。
 
 ## <a name="sso-authentication-concepts"></a>SSO 認証の概念
 

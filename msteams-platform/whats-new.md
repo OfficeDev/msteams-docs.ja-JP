@@ -4,12 +4,12 @@ description: Microsoft Teams の新しい開発者向け機能と、既存の機
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 8c618862056d6cc8b7a76cfd504be32f341d11ca
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: 674da73dfbbb5417ef498315da0b3219466a4935
+ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243424"
+ms.locfileid: "68295971"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -33,7 +33,6 @@ ms.locfileid: "68243424"
 
 * ***2022 年 9 月 30*** 日: [Teams でサード パーティ製アプリの SaaS ライセンスを管理する](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)
 * ***2022 年 9 月 29*** 日: [Teams モバイル アプリで、ローカル デバイスへのファイルのダウンロードがサポートされるようになりました。](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)
-* ***2022 年 9 月 29*** 日: [会議のステージにコンテンツを共有するためのディープ リンクを生成します。](concepts/build-and-test/deep-links.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 * ***2022 年 9 月 16*** 日: [検索ベースのメッセージ拡張機能のアダプティブ カードでユニバーサル アクションがサポートされるようになりました。](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
 * ***2022 年 9 月 6*** 日: [API を使用してカメラを使用してビデオをキャプチャするためのコード スニペットを `selectMedia` 導入しました。](concepts/device-capabilities/media-capabilities.md#code-snippets)
 
