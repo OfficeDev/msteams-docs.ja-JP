@@ -7,12 +7,12 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 175854db36b85a1fc68cc299bd733b7abd539ac9
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: a0174d113d441e2318f4f9f4165211f46df1876e
+ms.sourcegitcommit: ea7b7b8ebb4b2acdd0b9a3411c59a9a91a06f409
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780972"
+ms.lasthandoff: 10/03/2022
+ms.locfileid: "68350462"
 ---
 # <a name="provision-cloud-resources"></a>クラウド リソースをプロビジョニングする
 
@@ -131,7 +131,7 @@ ARM を使用したプロビジョニングには、次のファイル、パラ�
 | provision.bicep | Azure リソースを作成して構成する | はい |
 | config.bicep | TeamsFx に必要な構成を Azure リソースに追加する | はい |
 | provision/xxx.bicep | 使用される各 Azure リソースを作成して構成する `provision.bicep` | はい |
-| teamsfx/xxx.bicep | によって使用される各 Azure リソースに TeamsFx の必要な構成を追加する `config.bicep`| 不要 |
+| teamsfx/xxx.bicep | によって使用される各 Azure リソースに TeamsFx の必要な構成を追加する `config.bicep`| いいえ |
 
 > [!NOTE]
 > リソースまたは機能をプロジェクトに追加すると再生成 `teamsfx/xxx.bicep` され、同じカスタマイズはできません。 Bicep ファイルを変更するには、Git を使用してファイルに対する `teamsfx/xxx.bicep` 変更を追跡できます。これにより、リソースや機能の追加中に変更が失われるのを抑えることができます。
@@ -189,7 +189,7 @@ TeamsFx ツールが正しく機能するようにするには、次の要件を
 
 次のシナリオをカスタマイズできます。
 
-#### <a name="use-an-existing-azure-ad-app-for-your-bot"></a>ボットに既存の Azure AD アプリを使用する
+#### <a name="use-an-existing-azure-ad-app-for-your-teams-app"></a>Teams アプリに既存の Azure AD アプリを使用する
 
 次の構成スニペットをファイルに `.fx/configs/config.{env}.json` 追加して、Teams アプリ用に自分で作成した Azure AD アプリを使用できます。 Azure AD アプリを作成するには、次を参照してください <https://aka.ms/teamsfx-existing-aad-doc>。
 
@@ -207,7 +207,7 @@ TeamsFx ツールが正しく機能するようにするには、次の要件を
 > [!NOTE]
 > 複数の環境で同じ Azure AD アプリを共有しないようにしてください。 Azure AD アプリを更新するアクセス許可がない場合は、Azure AD アプリを手動で更新する方法に関する手順に関する警告を受け取ることができます。 手順に従って、プロビジョニング後に Azure AD アプリを更新します。
 
-#### <a name="use-an-existing-azure-ad-app-for-your-teams-app"></a>Teams アプリに既存の Azure AD アプリを使用する
+#### <a name="use-an-existing-azure-ad-app-for-your-bot"></a>ボットに既存の Azure AD アプリを使用する
 
 次の構成スニペットをファイルに `.fx/configs/config.{env}.json` 追加して、ボット用に自分で作成した Azure AD アプリを使用できます。
 
@@ -543,7 +543,7 @@ TeamsFx ツールが正しく機能することを確認するには、次の要
 
 自分で作成した Azure AD アプリを使用するように構成スニペットを追加することで、ボットまたは Teams アプリをカスタマイズできます。 これは、次の方法で実行できます。
 
-#### <a name="use-an-existing-azure-ad-app-for-your-bot"></a>ボットに既存の Azure AD アプリを使用する
+#### <a name="use-an-existing-azure-ad-app-for-your-teams-app"></a>Teams アプリに既存の Azure AD アプリを使用する
 
 次の構成スニペット `.fx/configs/config.{env}.json` を追加して、Teams アプリ用に作成した Azure AD アプリを使用できます。 Azure AD アプリを作成するには、リンク <https://aka.ms/teamsfx-existing-aad-doc> に移動します。
 
@@ -561,7 +561,7 @@ TeamsFx ツールが正しく機能することを確認するには、次の要
 > [!NOTE]
 > 複数の環境で同じ Azure AD アプリを共有しないようにしてください。 Azure AD アプリを更新するアクセス許可がない場合は、Azure AD アプリを手動で更新する手順を含む警告が表示されます。 プロビジョニング後に Azure AD アプリを更新するには、この手順に従います。
 
-#### <a name="use-an-existing-azure-ad-app-for-your-teams-app"></a>Teams アプリに既存の Azure AD アプリを使用する
+#### <a name="use-an-existing-azure-ad-app-for-your-bot"></a>ボットに既存の Azure AD アプリを使用する
 
 次の構成スニペット `.fx/configs/config.{env}.json` を追加して、ボット用に作成された Azure AD アプリを使用できます。
 

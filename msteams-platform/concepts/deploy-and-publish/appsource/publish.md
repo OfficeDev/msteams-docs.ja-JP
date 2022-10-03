@@ -1,16 +1,16 @@
 ---
 title: 概要 - Microsoft Teams ストアにアプリを公開する
-description: Microsoft Teams ストアにアプリを発行するプロセス、提出後に期待すること、SaaS オファーにリンクされた ypu アプリとアプリを公開するための迅速な承認のヒントを受け取ります。
+description: Microsoft Teams ストアにアプリを発行するプロセス、提出後に期待すること、SaaS オファーにリンクされたアプリとアプリを発行するための迅速な承認のためのヒントについて説明します。
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: dcc674a8df0ead4a3cdc774bd797a73dcc0caa23
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: d64a5eda5f728a87991b361d5ec17b95c6ac49cd
+ms.sourcegitcommit: ea7b7b8ebb4b2acdd0b9a3411c59a9a91a06f409
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100932"
+ms.lasthandoff: 10/03/2022
+ms.locfileid: "68350455"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Microsoft Teams ストアにアプリを公開する
 
