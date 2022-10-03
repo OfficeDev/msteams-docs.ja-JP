@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: c4e1b595a226095485e88448c8bd25006c0c58ca
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 0febbd535f5375f03599009d32d9b613cf5af6d6
+ms.sourcegitcommit: e4ccbbdce620418c129689c0ba6ad246a81068c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027334"
+ms.lasthandoff: 10/03/2022
+ms.locfileid: "68329085"
 ---
 # <a name="create-a-channel-tab"></a>[チャネルの作成] タブ
 
@@ -197,7 +197,7 @@ gulp ngrok-serve
 ### <a name="upload-your-application-to-teams"></a>Microsoft Teams にアプリ パッケージをアップロードする
 
 1. Teams に移動し、**[アプリ]**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="[Teams ストア]"::: を選択します。
-1. [**アプリの管理**] を選択し、[**カスタム アプリをアップロード**] します。
+1. [**アプリの管理] を** > 選択 **します。アプリ** > を **アップロードする カスタム アプリをアップロードします**。
 1. プロジェクト ディレクトリに移動し、**./package** フォルダーに移動し、アプリ パッケージの zip フォルダーを選択し、**[開く]** を選択します。
 
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="アップロードされたチャネル タブ":::
@@ -426,9 +426,9 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 
 1. **[開発者情報]** で、必要な詳細を追加し、**Web サイト (有効な HTTPS URL である必要があります)** に ngrok HTTPS URL を指定します。
 
-1. **[アプリの URL]** で、プライバシー ポリシーを `https://<yourngrokurl>/privacy` に、利用規約を `https://<yourngrokurl>/tou` に更新して保存します。
+1. **アプリの URL** で、プライバシー ポリシーを `https://<yourngrokurl>/privacy` に、利用規約を `https://<yourngrokurl>/tou` に更新して保存します。
 
-1. **[アプリの機能]** で、[グループ アプリとチャネル アプリ] を選択します。 `https://<yourngrokurl>/tab` で **構成 URL** を更新し、**[スコープ]** タブを選択します。
+1. **アプリの機能** で、[**グループアプリとチャネル アプリ**] を選択します。 `https://<yourngrokurl>/tab` で **構成 URL** を更新し、**[スコープ]** タブを選択します。
 
 1. **[保存]** を選択します。
 
@@ -647,9 +647,9 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 
 1. **[開発者情報]** で、必要な詳細を追加し、**Web サイト (有効な HTTPS URL である必要があります)** に ngrok HTTPS URL を指定します。
 
-1. **[アプリの URL]** で、プライバシー ポリシーを `https://<yourngrokurl>/privacy` に、利用規約を `https://<yourngrokurl>/tou` に更新して保存します。
+1. **アプリの URL** で、プライバシー ポリシーを `https://<yourngrokurl>/privacy` に、利用規約を `https://<yourngrokurl>/tou` に更新して保存します。
 
-1. **[アプリの機能]** で、[グループ アプリとチャネル アプリ] を選択します。 `https://<yourngrokurl>/tab` で **構成 URL** を更新し、**[スコープ]** タブを選択します。
+1. **アプリの機能** で、[**グループアプリとチャネル アプリ**] を選択します。 `https://<yourngrokurl>/tab` で **構成 URL** を更新し、**[スコープ]** タブを選択します。
 
 1. **[保存]** を選択します。
 

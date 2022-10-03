@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 498a003e8fdc58d1eb0d9db4abb7b4b151143a19
-ms.sourcegitcommit: 275bb05daee25ae710238cbd49f588e6da1ffdf1
+ms.openlocfilehash: 25f4db19c2f89031d5bb4566793586d1c8988ceb
+ms.sourcegitcommit: e4ccbbdce620418c129689c0ba6ad246a81068c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68158682"
+ms.lasthandoff: 10/03/2022
+ms.locfileid: "68329092"
 ---
 # <a name="create-a-personal-tab"></a>プライベート タブを作成する
 
@@ -251,7 +251,7 @@ gulp ngrok-serve
 ### <a name="upload-your-application-to-teams"></a>Microsoft Teams にアプリ パッケージをアップロードする
 
 1. Teams に移動し、**[アプリ]**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="[Teams ストア]"::: を選択します。
-1. [**アプリの管理**] を選択し、[**カスタム アプリをアップロード**] します。
+1. [**アプリの管理] を** > 選択 **します。アプリ** > を **アップロードする カスタム アプリをアップロードします**。
 1. プロジェクト ディレクトリに移動し、 **./package** フォルダーに移動し、zip フォルダーを選択して [**開く**] を選択します。
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="個人用タブの追加":::
@@ -399,9 +399,9 @@ ngrok http 3978 --host-header=localhost
 
 1. **[開発者情報]** で、必要な詳細を追加し、**Web サイト (有効な HTTPS URL である必要があります)** に ngrok HTTPS URL を指定します。
 
-1. **アプリの URL** で、プライバシー ポリシーを `https://<yourngrokurl>/privacy` に、利用規約を `https://<yourngrokurl>/tou` に更新して保存します。
+1. **アプリの URL で**、プライバシー ポリシーと使用条件を`https://<yourngrokurl>/privacy`更新して`https://<yourngrokurl>/tou`**、[保存]** を選択します。
 
-1. **アプリの機能** で、[**個人用アプリ**]  >  [**初めての個人用アプリ タブを作成**] を選択し、[名前] を入力して、[**コンテンツ URL**] を `https://<yourngrokurl>/personalTab` で更新します。 [Web サイト URL] フィールドを空白のままにし、ドロップダウン リストと [**追加**] から personalTab として [**コンテキスト**] を選択します。
+1. **アプリの機能** で、[**個人用アプリ**]  >  [**初めての個人用アプリ タブを作成**] を選択し、[名前] を入力して、[**コンテンツ URL**] を `https://<yourngrokurl>/personalTab` で更新します。 [Web サイトの URL] フィールドを空白のままにし、ドロップダウン リストから [ **Context** as personalTab] を選択し、[ **確認**] を選択します。
 
 1. **[保存]** を選択します。
 
@@ -566,11 +566,11 @@ ngrok http 3978 --host-header=localhost
 
 1. **[説明]** にアプリの短い説明と長い説明を追加します。
 
-1. **[開発者情報]** で、必要な詳細を追加し、**Web サイト (有効な HTTPS URL である必要があります)** に ngrok HTTPS URL を指定します。
+1. **開発者情報** で、必要な詳細を追加し、**Web サイトに (有効な HTTPS URL である必要があります)** ngrok HTTPS URL を指定します。
 
-1. **アプリの URL** で、プライバシー ポリシーを `https://<yourngrokurl>/privacy` に、利用規約を `https://<yourngrokurl>/tou` に更新して保存します。
+1. **アプリの URL で**、プライバシー ポリシーと使用条件を`https://<yourngrokurl>/privacy`更新して`https://<yourngrokurl>/tou`**、[保存]** を選択します。
 
-1. **アプリの機能** で、[**個人用アプリ**]  >  [**初めての個人用アプリ タブを作成**] を選択し、[名前] を入力して、[**コンテンツ URL**] を `https://<yourngrokurl>/personalTab` で更新します。 [Web サイト URL] フィールドを空白のままにし、ドロップダウン リストと [**追加**] から personalTab として [**コンテキスト**] を選択します。
+1. **アプリの機能** で、[**個人用アプリ**]  >  [**初めての個人用アプリ タブを作成**] を選択し、[名前] を入力して、[**コンテンツ URL**] を `https://<yourngrokurl>/personalTab` で更新します。 [Web サイトの URL] フィールドを空白のままにし、ドロップダウン リストから [ **Context** as personalTab] を選択し、[ **確認**] を選択します。
 
 1. **[保存]** を選択します。
 
