@@ -5,17 +5,17 @@ description: このモジュールでは、Power アプリとMicrosoft 365 E3を
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: ae7e3e93576e14f07784e8ded65858940e2cea21
-ms.sourcegitcommit: 14fb175842e49888fc99ae813ce8a2b85fe1ff94
+ms.openlocfilehash: 5a253c9e7373a2df9e1161e6d3fc9d9b1c8ccdaa
+ms.sourcegitcommit: f2ac771cbd608e872604e9ac8ffec2d08f55ee1a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67617979"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68373032"
 ---
 # <a name="install-collaboration-controls"></a>コラボレーション コントロールのインストール
 
 > [!NOTE]
-> 現在、コラボレーション コントロールは [、パブリック開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md)でのみ使用できます。
+> 現在、コラボレーション コントロールは [パブリック開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md)でのみ使用できます。
 
 この記事では、コラボレーション コントロールをインストールする方法について説明します。 コラボレーション コントロールを使用してCollaboration Manager アプリケーションをビルドおよびデプロイするには、次のものが必要です。
 
@@ -33,12 +33,11 @@ Power Platform 環境にコンポーネントをインストールするには�
 
 コラボレーション コントロールは、[Microsoft AppSource](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1) を使用して dataverse 環境にインストールします。
 
-
 独自のモデル駆動型アプリ内でコンポーネントを構成して使用できるのは、 [Microsoft AppSource](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1)  を参照し、Dataverse 環境にコラボレーション コントロールをインストールした後だけです。
 
 コラボレーション コントロールには、次のソリューションが含まれます。
 
-|**設定ソリューション** | **用途** |
+|**設定のソリューション** | **用途** |
 |---|---|
 | コラボレーション コントロールの設定 | コラボレーション コントロールを強化する設定インフラストラクチャを保持する |
 | コラボレーション コントロールの設定オブジェクト | コラボレーション コントロールで使用される定義済みの設定値を提供します。|
@@ -62,20 +61,20 @@ Power Platform 環境にコンポーネントをインストールするには�
 
 1. [ **今すぐ取得] ボタンを** 選択します。
 
-   :::image type="content" source="../assets/images/collaboration-control/preview-form.png" alt-text="プレビュー フォーム "border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/preview-form.png" alt-text="コラボレーション コントロールを表示するための [Get it now]\(今すぐ取得\) ボタンのスクリーンショット。"border="true":::
 
 1. アカウントでサインインし、フォームに入力して **[続行**] を選択します。
 
-   :::image type="content" source="../assets/images/collaboration-control/overview.png" alt-text="コラボレーション制御の概要" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/overview.png" alt-text="コラボレーション コントロールの概要のスクリーンショット。" border="true":::
 
-   :::image type="content" source="../assets/images/collaboration-control/collaboration-controls-preview.png" alt-text="コラボレーション コントロールのプレビュー" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-controls-preview.png" alt-text="コラボレーション コントロールのインストール プレビューのスクリーンショット。" border="true":::
 
 1. Power Platform 管理 センターに移動します。 ドロップダウン メニューから環境を選択し、使用条件とポリシーステートメントに同意します。
 
    > [!TIP]
    > 環境を選択したときにアクセス許可エラーが表示される場合は、環境のドロップダウン メニューの外側を選択して、問題が解決するかどうかを確認してください。
 
-   :::image type="content" source="../assets/images/collaboration-control/install-environment.png" alt-text="コラボレーション制御環境をインストールする" border="true":::
+   :::image type="content" source="../assets/images/collaboration-control/install-environment.png" alt-text="インストール コラボレーション制御環境の例を示すスクリーンショット。" border="true":::
 
 1. [ **インストール**] を選択すると、インストールが完了するまでに約 15 分かかる場合があります。
 
@@ -85,7 +84,7 @@ Power Platform 環境にコンポーネントをインストールするには�
 
 1. [ **ソリューション** ] タブを選択して、適切な環境にインストールしたすべてのソリューションを表示します。
 
-   :::image type="content" source="../assets/images/collaboration-control/solutions.png" alt-text="ソリューションコラボレーション制御" border= "true":::
+   :::image type="content" source="../assets/images/collaboration-control/solutions.png" alt-text="すべてのソリューション コラボレーション コントロールを表示する [ソリューション] タブを示すスクリーンショット。" border= "true":::
 
 > [!NOTE]
 > コラボレーション コントロールはプレビューであり、要素は時間の経過と共に変化し、破壊的変更の可能性があります。 コラボレーション コントロールは、運用環境ではサポートされていません。

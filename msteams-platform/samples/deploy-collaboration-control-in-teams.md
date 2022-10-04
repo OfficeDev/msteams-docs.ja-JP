@@ -5,19 +5,19 @@ description: このモジュールでは、Microsoft Teams でコラボレーシ
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 75a2aa9d09247ac152c31df02f2bb8d4fb507619
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 816dd8052cdfb13ab83bfc34ae2a99a16f9f9569
+ms.sourcegitcommit: f2ac771cbd608e872604e9ac8ffec2d08f55ee1a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027306"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68373039"
 ---
 # <a name="deploy-collaboration-controls-to-microsoft-teams"></a>コラボレーション コントロールを Microsoft Teams に展開する
 
 コラボレーション コントロールは現在、Microsoft Teams 内で最適に機能します。 個人用アプリとタブ アプリの両方として Teams アプリ内に埋め込むことができる新しいアプリを作成できます。
 
 > [!NOTE]
-> 現在、コラボレーション コントロールは [、パブリック開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md)でのみ使用できます。
+> 現在、コラボレーション コントロールは [パブリック開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md)でのみ使用できます。
 
 ## <a name="configure-the-app-for-teams"></a>Teams 用にアプリを構成する
 
@@ -34,31 +34,31 @@ ms.locfileid: "68027306"
 
 1. 定義を検索 **して選択します**。
 
-     :::image type="content" source="../assets/images/collaboration-control/settings-defnition.png" alt-text="定義の設定":::
+     :::image type="content" source="../assets/images/collaboration-control/settings-defnition.png" alt-text="Power アプリでの検索と定義の設定を示すスクリーンショット。":::
 
 1. 設定定義の一覧からナビゲーション バーを検索して **非表示にする** を選択します。 これにより、アプリケーションの左側のウィンドウが非表示になります。
 
-     :::image type="content" source="../assets/images/collaboration-control/hide-the-nav-bar.png" alt-text="ナビゲーション バーを非表示にする":::
+     :::image type="content" source="../assets/images/collaboration-control/hide-the-nav-bar.png" alt-text="スクリーンショットは、ナビゲーション バーを非表示にする方法を示しています。":::
 
 1. 編集ウィンドウのアプリケーションの右下に、「 **アプリ値の設定**」というタイトルのセクションがあります。 モダン アプリ デザイナーを使用してアプリを作成した場合、アプリが一覧に表示されます。 アプリの下にある **[新しいアプリの値** ] を選択します。
 
 1. 値を **[いいえ]** から **[はい**] に変更します。
 
-     :::image type="content" source="../assets/images/collaboration-control/value-to-yes.png" alt-text="値を yes に変更する":::
+     :::image type="content" source="../assets/images/collaboration-control/value-to-yes.png" alt-text="スクリーンショットには、変更値を [はい] に選択するドロップダウンが表示されます。":::
 
 1. **[保存] を選択します。**
 
 1. 設定定義の一覧から **アプリ高密度ページ ヘッダー** を検索して選択し、プロセスを繰り返します。
 
-     :::image type="content" source="../assets/images/collaboration-control/density-page-header.png" alt-text="密度ページ ヘッダー":::
+     :::image type="content" source="../assets/images/collaboration-control/density-page-header.png" alt-text="スクリーンショットは、アプリの高密度ページ ヘッダーを選択する方法を示しています。":::
 
 1. [ **ソリューションに戻る] を選択します**。
 
-     :::image type="content" source="../assets/images/collaboration-control/default-solution.png" alt-text="既定のソリューション":::
+     :::image type="content" source="../assets/images/collaboration-control/default-solution.png" alt-text="スクリーンショットには、既定のソリューションが示されています。":::
 
 1. [ **すべてのカスタマイズの発行]** を選択して、完了したすべての作業を公開します。
 
-     :::image type="content" source="../assets/images/collaboration-control/publish-cusomization.png" alt-text="すべてのカスタマイズを発行する":::
+     :::image type="content" source="../assets/images/collaboration-control/publish-cusomization.png" alt-text="すべてのカスタマイズを発行します。":::
 
 ## <a name="add-the-app-to-microsoft-teams-app-catalog"></a>Microsoft Teams アプリ カタログにアプリを追加する
 
@@ -66,11 +66,11 @@ ms.locfileid: "68027306"
 
 アプリを Teams に追加するには、[Teams **に追加]** を選択します。
 
-:::image type="content" source="../assets/images/collaboration-control/add-to-teams.png" alt-text="Teams に追加する":::
+:::image type="content" source="../assets/images/collaboration-control/add-to-teams.png" alt-text="Teams に追加します。":::
 
 **[Teams に追加]** を選択するとダイアログが開き、詳細を確認して **[アプリのダウンロード**] を選択すると、Microsoft Teams アプリ マニフェストがデバイスに保存されます。
 
-:::image type="content" source="../assets/images/collaboration-control/colab-manager-inspection.png" alt-text="スクリーンショットは、コラボレーション マネージャーの検査を示す例です":::
+:::image type="content" source="../assets/images/collaboration-control/colab-manager-inspection.png" alt-text="スクリーンショットは、コラボレーション マネージャーの検査を示す例です。":::
 
 アプリを Teams にアップロードするには、「 [Team でアプリをアップロードする](~/concepts/deploy-and-publish/apps-upload.md)」を参照してください。
 
@@ -100,7 +100,7 @@ ms.locfileid: "68027306"
      1. **管理者：** 文字を入力して、管理者として割り当てる組織内のユーザーを検索します。
      1. **チームの種類:** チームの種類を選択します。 次の手順では、ドロップダウン リストから [所有者] を選択したことを前提としています。 他のチームの種類 (Microsoft 365 チームとMicrosoft Azure Active Directory チーム) では、Azure Active Directory からチーム メンバーが自動的に設定されます。
 
-         :::image type="content" source="../assets/images/collaboration-control/new-team.png" alt-text="新しいチーム":::
+         :::image type="content" source="../assets/images/collaboration-control/new-team.png" alt-text="新しいチームの種類を選択するためのスクリーンショット。":::
 
      1. チーム名を書き留めます。 このチームをレコードの所有者として割り当てるには、後でこれが必要になります。
 
@@ -115,7 +115,7 @@ ms.locfileid: "68027306"
 
 1. 新しいチーム メンバーを追加するには、[ **+ チーム メンバーの追加]** を選択し、追加する組織のユーザーを選択します。
 
-     :::image type="content" source="../assets/images/collaboration-control/add-team-members.png" alt-text="スクリーンショットでは、チーム メンバーを追加する方法について説明しています":::
+     :::image type="content" source="../assets/images/collaboration-control/add-team-members.png" alt-text="スクリーンショットでは、チーム メンバーを追加する方法について説明しています。":::
 
 1. チーム メンバーを削除するには、ユーザーを選択し、[削除] を選択 **します**。
 
@@ -125,7 +125,7 @@ ms.locfileid: "68027306"
 
 1. [ **セキュリティ ロール**] を選択します。
 
-     :::image type="content" source="../assets/images/collaboration-control/users-permission.png" alt-text="ユーザーのアクセス許可":::
+     :::image type="content" source="../assets/images/collaboration-control/users-permission.png" alt-text="ユーザーのアクセス許可の新しいチーム メンバーを追加するためのスクリーンショットが表示されます。":::
 
 1. ページの左上にある **[新しいロール** ] を選択すると、新しいページが開きます。
 
@@ -135,7 +135,7 @@ ms.locfileid: "68027306"
 
      1. コラボレーション エンティティ、 **コラボレーション マップ**、 **コラボレーション メタデータ**、およびコラボレーション ルートごとに組織のアクセス許可 (完全な緑色の円) を付与 **します**。
 
-         :::image type="content" source="../assets/images/collaboration-control/collab-map.png" alt-text="コラボレーション マップ":::
+         :::image type="content" source="../assets/images/collaboration-control/collab-map.png" alt-text="スクリーンショットは、コラボレーション マップでセキュリティ ロールを作成する方法を示しています。":::
 
 1. **[保存して****閉じる**] を選択します。
 
@@ -147,7 +147,7 @@ ms.locfileid: "68027306"
 
 1. ヘッダーから [ **セキュリティ ロールの管理** ] を選択します。
 
-     :::image type="content" source="../assets/images/collaboration-control/edit-team.png" alt-text="チームを編集する":::
+     :::image type="content" source="../assets/images/collaboration-control/edit-team.png" alt-text="スクリーンショットには、コラボレーション マップ、コラボレーション メタデータ、およびコラボレーション ルートが表示されます。編集チーム用です。":::
 
 1. [セキュリティ ロールで作成されたロールを選択します](#create-a-security-role)。
 

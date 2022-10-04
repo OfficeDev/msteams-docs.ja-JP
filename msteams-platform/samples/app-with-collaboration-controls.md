@@ -5,19 +5,19 @@ description: このモジュールでは、Teams のコラボレーション コ
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.topic: conceptual
-ms.openlocfilehash: 119e02f6cc31d8642447e4e7406d461faff3a731
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: f75f7ea3b014a9373ba1d643cede7055aa333ef5
+ms.sourcegitcommit: f2ac771cbd608e872604e9ac8ffec2d08f55ee1a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243060"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68373046"
 ---
 # <a name="create-a-new-model-driven-app-with-collaboration-controls-for-teams"></a>Teams のコラボレーション コントロールを使用して新しいモデル駆動型アプリを作成する
 
 コラボレーション コントロールは、 [モデル駆動型アプリケーション](/power-apps/maker/model-driven-apps/model-driven-app-overview)向けに設計されています。 次のセクションでは、モデル駆動型アプリを作成する方法について説明します。
 
 > [!NOTE]
-> 現在、コラボレーション コントロールは [、パブリック開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md)でのみ使用できます。
+> 現在、コラボレーション コントロールは [パブリック開発者向けプレビュー](~/resources/dev-preview/developer-preview-intro.md)でのみ使用できます。
 
 ## <a name="create-a-model-driven-application"></a>モデル駆動型アプリケーションを作成する
 
@@ -27,11 +27,11 @@ ms.locfileid: "68243060"
 
 1. [ **新しいソリューション]** を選択して、今後のすべてのカスタマイズにホームを提供できるようにします。
 
-   :::image type="content" source="../assets/images/collaboration-control/new-solution.png" alt-text="スクリーンショットは、新しいソリューションを示す例です。":::
+   :::image type="content" source="../assets/images/collaboration-control/new-solution.png" alt-text="スクリーンショットは、新しいソリューションを示す例です。これにより、将来のすべてのカスタマイズにホームが提供されます。":::
 
 1. 新しいソリューションの名前と発行元を指定します。このソリューションはカスタム Collaboration Managerを保持します。
 
-   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager.png" alt-text="スクリーンショットは、コラボレーション マネージャーを示す例です。":::
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager.png" alt-text="スクリーンショットは、新しいソリューションの発行元の詳細を示す例です。":::
 
 1. [**作成**] を選択します
 
@@ -47,33 +47,33 @@ ms.locfileid: "68243060"
 
 1. **[保存]** を選択します。
 
-1. テーブルの作成が完了したら、追加の列、リレーションシップなどを追加してカスタマイズできます (省略可能)。
+1. テーブルを作成したら、追加の列、リレーションシップなどを追加してカスタマイズできます (省略可能)。
 
 1. 次に、[新しいアプリ モデル駆動型アプリ] を選択して **、新しい** >  > **モデル駆動型アプリを** 作成できます。
 
-   :::image type="content" source="../assets/images/collaboration-control/model-driven-app.png" alt-text="スクリーンショットは、新しいモデル駆動型アプリを示す例です。":::
+   :::image type="content" source="../assets/images/collaboration-control/model-driven-app.png" alt-text="スクリーンショットは、新しいモデル 駆動型アプリを作成する方法を示す例です。":::
 
 1. 新しい **モダン アプリ デザイナー (プレビュー)** を選択して、新しいアプリを開きます。
 
-   :::image type="content" source="../assets/images/collaboration-control/model-driven-app-blank.png" alt-text="スクリーンショットは、新しいモデル駆動型アプリが空白であることを示す例です。":::
+   :::image type="content" source="../assets/images/collaboration-control/model-driven-app-blank.png" alt-text="スクリーンショットは、新しいモデル駆動型アプリが空白であることを示す例であり、作成エクスペリエンスを選択できます。":::
 
 1. [作成] を選択 **します。**
 
 1. アプリに名前を付けて、[**作成**] を選択します。
 
-   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspection.png" alt-text="スクリーンショットは、検査用のコラボレーション マネージャーを示す例です。":::
+   :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspection.png" alt-text="スクリーンショットは、検査用にコラボレーション マネージャーを追加し、新しいモデル駆動型アプリを作成する例です。":::
 
 1. [ **ページの追加] を選択します。**
 
 1. **テーブル ベースのビューとフォームを選択します。**
 
-   :::image type="content" source="../assets/images/collaboration-control/table-based.png" alt-text="スクリーンショットは、テーブル ベースのビューとフォームを示す例です。":::
+   :::image type="content" source="../assets/images/collaboration-control/table-based.png" alt-text="スクリーンショットは、テーブル ベースのビューとフォームを示し、ページの種類を選択できる例です。":::
 
 1. **[次へ**] を選択します。
 
 1. 前に作成したテーブルを検索して選択します。
 
-   :::image type="content" source="../assets/images/collaboration-control/table-view-form-pages.png" alt-text="スクリーンショットは、テーブル ビューのフォーム ページを示す例です。":::
+   :::image type="content" source="../assets/images/collaboration-control/table-view-form-pages.png" alt-text="スクリーンショットは、テーブル ビューのフォーム ページを示し、作成したテーブルを選択できる例です。":::
 
 1. [ **追加] を選択します。**
 
@@ -111,36 +111,36 @@ ms.locfileid: "68243060"
 
 1. コントロール ドロワーの [コラボレーション (プレビュー)] カテゴリを展開し、タスク (プレビュー) コントロールを [タスク] フォームのセクションにドラッグします。
 
-     :::image type="content" source="../assets/images/collaboration-control/collab-preview.png" alt-text="タスク フォームのセクションにコントロールをプレビューする":::
+     :::image type="content" source="../assets/images/collaboration-control/collab-preview.png" alt-text="スクリーンショットでは、タスク フォームのセクションにコントロールをプレビューする方法について説明します。":::
 
 3. テーブルを [アクティビティ] に設定&、[完了] を選択します。
 
-     :::image type="content" source="../assets/images/collaboration-control/select-table-activities.png" alt-text="アクティビティのテーブルを選択する":::
+     :::image type="content" source="../assets/images/collaboration-control/select-table-activities.png" alt-text="アクティビティにテーブルを選択する方法を示すスクリーンショット。":::
 
 5. プロパティで [ラベルの非表示] を選択します。
 
-     :::image type="content" source="../assets/images/collaboration-control/hide-label-properties.png" alt-text="ラベルを非表示にするを選択する":::
+     :::image type="content" source="../assets/images/collaboration-control/hide-label-properties.png" alt-text="[ラベルの非表示] を選択する方法を示すスクリーンショット。":::
 
 1. タスク コントロールが表示されます。
 
-     :::image type="content" source="../assets/images/collaboration-control/new-collab-control.png" alt-text="タスク コントロールの表示":::
+     :::image type="content" source="../assets/images/collaboration-control/new-collab-control.png" alt-text="タスク コントロールの表示の例を示すスクリーンショット。":::
 
 1. タスクの手順を繰り返して、承認、ファイル、会議、メモのコントロールをアプリに追加します。
-1. すべてのコントロールが追加されると、フォーム デザイナーで下に表示されるコントロールが表示されます。 フォーム デザイナーでコントロールがレンダリングされない場合 (空白のフォームなど) は、Power Apps でアプリを実行し、"構成" ページまたは "空の状態" が存在すると、コントロールが正常に追加されたことを意味します。
+1. すべてのコントロールを追加すると、フォーム デザイナーで下に表示されるコントロールが表示されます。 フォーム デザイナーでコントロールがレンダリングされない場合 (空白のフォームなど) は、Power Apps でアプリを実行し、"構成" ページまたは "空の状態" が存在すると、コントロールが正常に追加されたことを意味します。
 
-     :::image type="content" source="../assets/images/collaboration-control/new-collab-approval.png" alt-text="コントロール フォーム デザイナー":::
+     :::image type="content" source="../assets/images/collaboration-control/new-collab-approval.png" alt-text="スクリーンショットは、コントロール フォーム デザイナーが正常に追加されたことを示しています。":::
 
 1. Power Apps で Power アプリを選択して実行できるようになりました。
 
-     :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspections-power-apps.png" alt-text="検査用のコラボレーション マネージャー":::
+     :::image type="content" source="../assets/images/collaboration-control/collaboration-manager-for-inspections-power-apps.png" alt-text="検査のために [コラボレーション マネージャー] を選択して、Power アプリを実行するスクリーンショット。":::
 
 1. **[+ 新規**] を選択して新しいレコードを作成し、レコードを開きます。
 
-     :::image type="content" source="../assets/images/collaboration-control/power-apps-open-the-record.png" alt-text="スクリーンショットは、レコードを開く Power Apps を示す例です。":::
+     :::image type="content" source="../assets/images/collaboration-control/power-apps-open-the-record.png" alt-text="新しいレコードを作成するスクリーンショット。":::
 
 1. 次の図のように表示される各タブのビューを表示できるようになりました。
 
-     :::image type="content" source="../assets/images/collaboration-control/tabs.png" alt-text="スクリーンショットは、タスクを示す例です。":::
+     :::image type="content" source="../assets/images/collaboration-control/tabs.png" alt-text="スクリーンショットは、各タブのビューを示す例です。":::
 
      > [!TIP]
      > コントロールは、レコードがアプリケーションに保存された後にのみ表示されます。 コントロール タブがレコードに表示されない場合は、ブラウザーを更新するか、Power Apps からアプリを再発行してみてください。
@@ -161,7 +161,7 @@ ms.locfileid: "68243060"
 |ドライブ ID|SharePoint ファイル|
 
 > [!NOTE]
-> 設定はアプリを起動する際に役立つため、推奨される手順に従っていることを確認してください。 コントロールの起動と保存に問題がある場合は、値を再確認します。
+> 設定はアプリを起動するために重要であるため、推奨される手順に従っていることを確認してください。 コントロールの起動と保存に問題がある場合は、値を再確認します。
 
 新しいチームを作成するか、Microsoft Teams で既存のチームを使用してアプリケーションをホストし、設定変数を作成することで、グループ ID を取得できます。
 
@@ -173,7 +173,7 @@ ms.locfileid: "68243060"
 
 1. 省略記号を選択します **。[****Get link to team]\(チームへのリンクを取得する\**) を選択します。
 
-     :::image type="content" source="../assets/images/collaboration-control/get-link.png" alt-text="スクリーンショットでは、チームにリンクを取得する方法について説明しています。":::
+     :::image type="content" source="../assets/images/collaboration-control/get-link.png" alt-text="チームにリンクを取得する方法を示すスクリーンショット。":::
 
 1. リンクをコピーし、URL から値 `groupId` を記録します。 この値は後の段階で使用し、ソリューションの設定を定義します。
 
@@ -187,7 +187,7 @@ ms.locfileid: "68243060"
 
      1. **サイト ID**: [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) を使用してサインインし、Directory.ReadWrite.All と User.ReadWrite.All にアクセス許可を付与する
 
-         :::image type="content" source="../assets/images/collaboration-control/graph-permissions.png" alt-text="スクリーンショットは、グラフ エクスプローラーを示す例です。":::
+         :::image type="content" source="../assets/images/collaboration-control/graph-permissions.png" alt-text="グラフ エクスプローラーを示す例をスクリーンショットに示します。":::
 
      1. ホスト名をホスト名に置き換え、サイト パスへの相対パスを指定し、.`https://graph.microsoft.com/v1.0/sites/{hostname}:/{relative-path-to-site}` 次に例を示します。
          1. サイト URL が = の場合 `https://myhostname.sharepoint.com/sites/MySiteName`
@@ -229,11 +229,11 @@ ms.locfileid: "68243060"
 
 1. [ **構成] を** 選択し、[全般] タブに移動してグループ ID を追加します。
 
-     :::image type="content" source="../assets/images/collaboration-control/groupid-general.png" alt-text="スクリーンショットでは、[全般] タブでグループ ID を追加する方法について説明します。":::
+     :::image type="content" source="../assets/images/collaboration-control/groupid-general.png" alt-text="[全般] タブでグループ ID を追加する方法を示すスクリーンショット。":::
 
 1. [ファイル] タブを開き、サイト ID とドライブ ID を追加します。
 
-     :::image type="content" source="../assets/images/collaboration-control/files-tab.png" alt-text="スクリーンショットでは、[ファイル] タブにサイト ID とドライブ ID を追加する方法について説明します。":::
+     :::image type="content" source="../assets/images/collaboration-control/files-tab.png" alt-text="[ファイル] タブにサイト ID とドライブ ID を追加する方法を示すスクリーンショット。":::
 
 Notes コントロールには設定値は必要ありません。 これで、アプリケーションでタスクや会議などのエンティティを作成できるようになりました。 コントロールの起動と保存で問題が発生している場合は、設定値を再確認します。
 
@@ -247,7 +247,7 @@ Notes コントロールには設定値は必要ありません。 これで、�
 
 1. チームの新しいタスクを作成するには、[ **タスクの追加]** を選択します。 タスクに関する詳細を指定し、チームの関連するユーザーに割り当て、[保存] を選択できるダイアログが開きます。
 
-     :::image type="content" source="../assets/images/collaboration-control/add-task.png" alt-text="スクリーンショットでは、タスクを追加する方法について説明しています。":::
+     :::image type="content" source="../assets/images/collaboration-control/add-task.png" alt-text="タスクを追加する方法を示すスクリーンショット。":::
 
 1. 保存されたタスクがタスクの一覧に表示されます。
 
@@ -276,11 +276,11 @@ Notes コントロールには設定値は必要ありません。 これで、�
 
 **[新しい会議**] ダイアログで、ユーザーは会議に関する関連情報を入力し、[**保存]** を選択できます。 会議が会議の一覧に表示されます。
 
-:::image type="content" source="../assets/images/collaboration-control/new-meeting.png" alt-text="スクリーンショットでは、新しい会議をスケジュールする方法について説明しています。":::
+:::image type="content" source="../assets/images/collaboration-control/new-meeting.png" alt-text="新しい会議をスケジュールする方法を示すスクリーンショット。":::
 
 顧客と外部会議をスケジュールするには、[ **新しい会議** ] ボタンの横にあるドロップダウンを選択し、 **Customer Booking** を選択します。 **[新しい会議**] ドロップダウンで **[顧客の予約**] オプションを使用できない場合は、アプリが [設定] でMicrosoft Bookingsするように構成されていて、ユーザーが Bookings 管理者ロールを持っているかどうかを確認します。 詳細については、「 [Bookings にスタッフを追加する」を](/microsoft-365/bookings/add-staff?view=o365-worldwide&preserve-view=true)参照してください。 Bookings ビジネス内にサービスを追加することで、予約の種類を追加できます。
 
-:::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="スクリーンショットでは、顧客の予約をスケジュールする方法について説明しています。":::
+:::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="スクリーンショットは、顧客の予約をスケジュールする方法について説明しています。":::
 
 ユーザーは、社内会議と顧客の予約の両方を自分の会議リストに表示できます。 会議の開始後、ユーザーは [ **参加** ] ボタンを選択して参加できます。このボタンを選択すると、Microsoft Teams で直接会議が開きます。
 
@@ -294,13 +294,13 @@ Notes コントロールには設定値は必要ありません。 これで、�
 
 左側のウィンドウの [共有予定表] に、ユーザーの名前を含む追加の予定表が表示されます。
 
-:::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="スクリーンショットでは、顧客の予約をスケジュールする方法について説明しています。":::
+:::image type="content" source="../assets/images/collaboration-control/customer-booking.png" alt-text="スクリーンショットは、顧客の予約をスケジュールする方法について説明しています。":::
 
 ### <a name="add-files"></a>ファイルの追加
 
 アプリケーションの [**ファイル**] タブを開き、[**アップロード**] を選択して、OneDrive for Businessまたはコンピューターからファイルをアップロードします。 ファイルが正常にアップロードされると、メイン リスト ビューが自動的に更新され、リスト内のファイルが表示されます。
 
-:::image type="content" source="../assets/images/collaboration-control/meeting-calendar.png" alt-text="スクリーンショットでは、共有予定表を開く方法について説明しています。":::
+:::image type="content" source="../assets/images/collaboration-control/meeting-calendar.png" alt-text="共有予定表を開く方法を示すスクリーンショット。":::
 
 ### <a name="approvals"></a>承認
 
@@ -310,7 +310,7 @@ Notes コントロールには設定値は必要ありません。 これで、�
 
 1. 承認要求がない場合、ユーザーには次の画面が表示されます。
 
-      :::image type="content" source="../assets/images/collaboration-control/no-approvals.png" alt-text="スクリーンショットは、承認要求を示さない例です。":::
+      :::image type="content" source="../assets/images/collaboration-control/no-approvals.png" alt-text="承認要求を示さない例を示すスクリーンショット。":::
 
 1. **[新しい承認要求**] を選択して、承認要求フォームを開きます。
 
@@ -318,7 +318,7 @@ Notes コントロールには設定値は必要ありません。 これで、�
 
 1. [承認要求] フォームで、必要なフィールドに入力し、[ **送信**] を選択して要求を作成し、一覧に追加します。
 
-      :::image type="content" source="../assets/images/collaboration-control/approvals-list.png" alt-text="スクリーンショットは、承認の一覧を示す例です。":::
+      :::image type="content" source="../assets/images/collaboration-control/approvals-list.png" alt-text="承認の一覧を示す例をスクリーンショットに示します。":::
 
 1. 承認を選択して詳細を表示します。
 
