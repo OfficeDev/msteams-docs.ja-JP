@@ -3,12 +3,12 @@ title: メッセージ拡張機能を使用した操作の開始
 description: このモジュールでは、ユーザーが外部サービスをトリガーできるようにアクション ベースのメッセージ拡張機能を作成する方法について説明します
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: e72d4c5d7ca7ecaa0ced14f28cc321d0a93a19c3
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: c087e8d3866215a1ed55c0bc503b34f920a4e436
+ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243571"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68376614"
 ---
 # <a name="initiate-actions-with-message-extensions"></a>メッセージ拡張機能を使用した操作の開始
 
@@ -18,13 +18,11 @@ ms.locfileid: "68243571"
 
 ![メッセージ拡張カードの例](~/assets/images/compose-extensions/ceexample.png)
 
-次のセクションでは、これを行う方法について説明します。
-
 [!include[Common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
 ## <a name="action-type-message-extensions"></a>アクションの種類のメッセージ拡張機能
 
-メッセージ拡張機能からアクションを開始するには、パラメーター`action`を `type` . 検索と作成コマンドを含むマニフェストの例を次に示します。 1 つのメッセージ拡張機能には、最大 10 個の異なるコマンドを含めることができます。 これには、複数の検索コマンドと複数のアクション ベースのコマンドの両方を含めることができます。
+メッセージ拡張機能からアクションを開始するには、パラメーター`action`を `type` . 検索と作成コマンドを含むマニフェストの例を次に示します。 1 つのメッセージ拡張機能には、最大 10 個の異なるコマンドを含め、複数の検索およびアクション ベースのコマンドを含めることができます。
 
  > [!NOTE]
  >`justInTimeInstall` は、アプリカタログにアプリをアップロードするときに機能しますが、アプリをサイドロードすると失敗します。
@@ -37,7 +35,6 @@ ms.locfileid: "68243571"
   "manifestVersion": "1.5",
   "version": "1.0",
   "id": "57a3c29f-1fc5-4d97-a142-35bb662b7b23",
-  "packageName": "com.microsoft.teams.samples.Todo",
   "developer": {
     "name": "John Developer",
     "websiteUrl": "http://todobotservice.azurewebsites.net/",
@@ -133,7 +130,7 @@ ms.locfileid: "68243571"
 
 ### <a name="initiate-actions-from-messages"></a>メッセージからアクションを開始する
 
-メッセージ作成領域からアクションを開始するだけでなく、メッセージ拡張機能を使用してメッセージからアクションを開始することもできます。 これにより、処理のためにメッセージの内容をボットに送信し、必要に応じて、送信する応答に関するページで説明されているメソッドを使用して応答でそのメッセージ [に返信できます](#responding-to-submit)。 応答は、送信する前にユーザーが編集できるメッセージへの応答として挿入されます。 ユーザーはオーバーフロー `...` メニューからメッセージ拡張機能にアクセスし、次の図のように選択 `Take action` できます。
+メッセージ作成領域からアクションを開始し、メッセージ拡張機能を使用してメッセージからアクションを開始することもできます。これにより、メッセージの内容をボットに送信して処理することができます。 必要に応じて、「送信する応答」で説明されている方法を使用して、応答でそのメッセージ [に返信](#responding-to-submit)できます。 応答は、送信する前にユーザーが編集できるメッセージへの応答として挿入されます。 ユーザーはオーバーフロー `...` メニューからメッセージ拡張機能にアクセスし、次の図のように選択 `Take action` できます。
 
 ![メッセージからアクションを開始する例](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
@@ -313,7 +310,7 @@ Teams のエンド ユーザーから情報を収集するには、3 つの方�
 
 ### <a name="request-to-install-your-conversational-bot"></a>会話型ボットのインストールを要求する
 
-アプリに会話ボットが含まれている場合は、タスク モジュールを読み込む前に、会話にインストールされていることを確認します。 これは、タスク モジュールの追加コンテキストを取得する必要がある場合に役立ちます。 たとえば、ユーザー選択コントロールを設定するために名簿をフェッチする必要がある場合や、チーム内のチャネルの一覧を取得する必要がある場合があります。
+アプリに会話ボットが含まれている場合は、タスク モジュールを読み込む前に会話にインストールされていることを確認して、タスク モジュールのコンテキストを増やします。 たとえば、ユーザー選択コントロールを設定するために名簿をフェッチする必要がある場合や、チーム内のチャネルの一覧を取得する必要がある場合があります。
 
 このフローを容易にするために、メッセージ拡張機能が最初に呼び出しを `composeExtension/fetchTask` 受け取ったときに、ボットが現在のコンテキストにインストールされているかどうかを確認します。 これを取得するには、名簿の取得呼び出しを試みます。 たとえば、ボットがインストールされていない場合は、ユーザーにボットのインストールを要求するアクションを含むアダプティブ カードを返します。 ユーザーには、その場所にアプリをインストールするためのアクセス許可が必要です。 インストールできない場合は、管理者に問い合わせるメッセージが表示されます。
 
@@ -379,15 +376,15 @@ Teams のエンド ユーザーから情報を収集するには、3 つの方�
 
 ### <a name="task-module-response"></a>タスク モジュールの応答
 
-これは、拡張機能がダイアログを連結して詳細情報を取得する必要がある場合に使用されます。 応答は、前に説明したものとまったく同じです `fetchTask` 。
+タスク モジュールの応答は、拡張機能でダイアログを連結して詳細情報を取得する必要がある場合に使用されます。 応答は、前に説明したものとまったく同じです `fetchTask` 。
 
 ### <a name="compose-extension-authconfig-response"></a>拡張機能の認証/構成応答を作成する
 
-これは、拡張機能を認証するか、続行するように構成する必要がある場合に使用されます。 詳細については、検索 [セクションの「認証」セクション](~/resources/messaging-extension-v3/search-extensions.md#authentication) を参照してください。
+拡張機能の認証または構成を続行するために拡張機能を認証または構成する必要がある場合は、作成拡張機能の認証/構成応答が使用されます。 詳細については、検索 [セクションの「認証」セクション](~/resources/messaging-extension-v3/search-extensions.md#authentication) を参照してください。
 
 ### <a name="compose-extension-result-response"></a>拡張機能の結果応答を作成する
 
-これは、コマンドの結果として作成ボックスにカードを挿入するために使用されます。 検索コマンドで使用されるのと同じ応答ですが、配列内の 1 つのカードまたは 1 つの結果に制限されます。
+Compose extension result response は、コマンドの結果として、作成ボックスにカードを挿入するために使用されます。 検索コマンドで使用されるのと同じ応答ですが、配列内の 1 つのカードまたは 1 つの結果に制限されます。
 
 ```json
 {
@@ -450,7 +447,6 @@ Teams のエンド ユーザーから情報を収集するには、3 つの方�
 
 > [!NOTE]
 > には `activityPreview` 、 `message` アダプティブ カードの添付ファイルが 1 つだけ含まれるアクティビティが含まれている必要があります。
-
 
 ```json
 {

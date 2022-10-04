@@ -4,12 +4,12 @@ description: 開発者プレビューを有効にする方法について説明�
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 11/15/2021
-ms.openlocfilehash: d3e7db2a3f50d989cd6d8596eea20ea491c56564
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: 2278b2f500ce89f239cae59ffab7f432a8d170f5
+ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243172"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68376600"
 ---
 # <a name="public-developer-preview-manifest-schema-for-teams"></a>Teams のパブリック開発者プレビュー マニフェスト スキーマ
 
@@ -28,7 +28,6 @@ Microsoft Teams マニフェストは、アプリが Microsoft Teams プラッ�
     "manifestVersion": "devPreview",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
-    "packageName": "com.example.myapp",
     "devicePermissions": [
         "geolocation",
         "media"
@@ -301,12 +300,6 @@ Microsoft Teams マニフェストは、アプリが Microsoft Teams プラッ�
 **必須** &ndash; Microsoft アプリ ID
 
 Microsoft が生成したこのアプリの一意の識別子。 Microsoft Bot Frameworkを介してボットを登録している場合、またはタブの Web アプリが Microsoft に既にサインインしている場合は、ID を既に持っており、ここに入力する必要があります。 それ以外の場合は、Microsoft アプリケーション登録ポータル ([マイ アプリケーション](https://apps.dev.microsoft.com)) で新しい ID を生成し、ここに入力し、ボットを [追加](~/bots/how-to/create-a-bot-for-teams.md)するときに再利用する必要があります。
-
-## <a name="packagename"></a>packageName
-
-**必須** &ndash; 文字列
-
-逆ドメイン表記のこのアプリの一意の識別子。たとえば、com.example.myapp などです。
 
 ## <a name="developer"></a>developer
 

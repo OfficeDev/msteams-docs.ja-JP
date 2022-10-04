@@ -3,12 +3,12 @@ title: マニフェスト スキーマの参照
 description: この記事では、Microsoft Teams のリファレンス、スキーマ、サンプルフル マニフェストのパブリック マニフェスト スキーマの最新バージョンを用意します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: 23bdb87bd1f5f3ea1fadb2527f64b5bebec0b157
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: f797c44b49c29227ec973c0066bf98ee25590d35
+ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100169"
+ms.lasthandoff: 10/04/2022
+ms.locfileid: "68376572"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Teams のアプリ マニフェストのスキーマ
 
@@ -29,7 +29,6 @@ Microsoft Teams アプリ マニフェストでは、アプリが Microsoft Team
     "manifestVersion": "1.14",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
-    "packageName": "com.example.myapp",
     "localizationInfo": {
         "defaultLanguageTag": "en-us",
         "additionalLanguages": [
@@ -404,12 +403,6 @@ Teams エクスペリエンスでユーザーに表示されるアプリ エク�
 |---|---|---|---|
 |`short`|80 文字|✔️|スペースが限られている場合に使用される、アプリ エクスペリエンスの簡単な説明。|
 |`full`|4,000 文字|✔️|アプリの完全な説明。|
-
-## <a name="packagename"></a>packageName
-
-**省略可能** — 文字列
-
-A unique identifier for the app in reverse domain notation; for example, com.example.myapp. Maximum length: 64 characters.
 
 ## <a name="localizationinfo"></a>localizationInfo
 
@@ -910,7 +903,7 @@ Teams アプリ マニフェスト ファイルを作成するには:
 <br>
 
 > [!NOTE]
-> ここに示すマニフェストのサンプル コンテンツは、タブ アプリ専用です。 サブドメイン URI とパッケージ名にサンプル値を使用しています。 詳細については[サンプル マニフェスト スキーマ](#sample-full-manifest)をご覧ください。
+> ここに示すマニフェストのサンプル コンテンツは、タブ アプリ専用です。 サブドメイン URI の値の例を使用します。 詳細については[サンプル マニフェスト スキーマ](#sample-full-manifest)をご覧ください。
 
   ```json
 { 
@@ -918,7 +911,6 @@ Teams アプリ マニフェスト ファイルを作成するには:
  "manifestVersion": "1.12", 
  "version": "1.0.0", 
  "id": "{new GUID for this Teams app - not the Azure AD App ID}", 
- "packageName": "com.contoso.teamsauthsso", 
  "developer": { 
  "name": "Microsoft", 
  "websiteUrl": "https://www.microsoft.com", 
