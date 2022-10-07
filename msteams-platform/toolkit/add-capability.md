@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 5f0aa26276c2db7651fac473049cac0aa75f14dd
-ms.sourcegitcommit: dccb48902e08484692ab927415bcd3d61dc50db2
+ms.openlocfilehash: 29ba0fff62678a18222f0229701546515b7d4c38
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2022
-ms.locfileid: "67806858"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499189"
 ---
 # <a name="add-capabilities-to-teams-apps"></a>Teams アプリに機能を追加する
 
@@ -21,7 +21,7 @@ Teams Toolkit を使用して機能を追加すると、既存の Microsoft Team
 |--------|-------------|-----------------|
 |**Basic Teams アプリ**|              |
 | Tab |  タブは、アプリ マニフェストで宣言されたドメインを参照する単純な HTML タグです。 個々のユーザーのチーム、グループ チャット、または個人用アプリ内のチャネルの一部としてタブを追加できます。|Tab, notification bot, command bot, bot, message extension|
-|[SPFx] タブ| SPFx タブ アプリは Microsoft 365 でホストされており、クライアント側の SPFx ソリューションの開発とホスティングがサポートされています|なし|
+|[SPFx] タブ| SPFx タブ アプリは Microsoft 365 でホストされており、クライアント側の SPFx ソリューションの開発とホスティングがサポートされています|None|
 |[SSO 対応] タブ|シングル サインオン機能を使用してユーザーを許可する SSO 対応タブ アプリを構築できます|SSO 対応タブ, 通知ボット, コマンド ボット, ボット, メッセージ拡張機能|
 | Bot |  ボットは、テキスト、対話型カード、タスク モジュールを使用して Web サービスと対話するのに役立ちます。|メッセージ拡張機能、SSO 対応タブ、タブ|
 | メッセージ拡張機能: | メッセージ拡張機能は、Microsoft Teams クライアントのボタンとフォームを使用して Web サービスを操作するのに役立ちます。|ボット、SSO 対応タブ、タブ|
@@ -71,11 +71,11 @@ Teams Toolkit を使用して機能を追加すると、既存の Microsoft Team
 * **プロジェクト ディレクトリ** をプロジェクト フォルダーに変更します。
 * 次の表に、機能と必要なコマンドの一覧を示します。
 
-  |機能とシナリオ| コマンド|
+  |機能とシナリオ| command|
   |-----------------------|----------|
   |通知ボットを追加するには |`teamsfx add notification`|
   |コマンド ボットを追加するには |`teamsfx add command-and-response`|
-  |sso 対応タブを追加するには |`teamsfx add sso-tab`|
+  |SSO 対応タブを追加するには |`teamsfx add sso-tab`|
   |タブを追加するには |`teamsfx add tab`|
   |ボットを追加するには |`teamsfx add bot`|
   |メッセージ拡張機能を追加するには |`teamsfx add message extension`|

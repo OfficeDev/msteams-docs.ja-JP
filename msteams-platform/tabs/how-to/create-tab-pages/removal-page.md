@@ -5,12 +5,12 @@ description: インストール後にタブを再構成できるようにする�
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 6aa06cae222ad89b89b2eddc0ba224db0ff4225f
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 964872d0de88d7462bec68d84f7b1e1ecf3681ec
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450409"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499295"
 ---
 # <a name="create-a-removal-page"></a>削除ページを作成する
 
@@ -30,9 +30,9 @@ ms.locfileid: "67450409"
 
 | `canUpdateConfiguration`| true   | false | 説明 |
 | ----------------------- | :----: | ----- | ----------- |
-|     Settings            |   √    |       |`configurationUrl`ページは IFrame で再読み込みされ、ユーザーはタブを再構成できます。 |
+|     Settings            |   √    |       |`configurationUrl`ページは iFrame で再読み込みされ、ユーザーはタブを再構成できます。 |
 |     名前の変更              |   √    |   √   | ユーザーは、タブ バーに表示されるタブ名を変更できます。          |
-|     削除              |   √    |   √   |  プロパティと値が`removeURL`**構成ページ** に含まれている場合、**削除ページ** は IFrame に読み込まれ、ユーザーに表示されます。 削除ページが含まれていない場合は、ユーザーに確認ダイアログ ボックスが表示されます。          |
+|     削除              |   √    |   √   |  プロパティと値が`removeURL`**構成ページ** に含まれている場合、**削除ページ** は iFrame に読み込まれ、ユーザーに表示されます。 削除ページが含まれていない場合は、ユーザーに確認ダイアログ ボックスが表示されます。          |
 
 ## <a name="create-a-tab-removal-page-for-your-application"></a>アプリケーションのタブ削除ページを作成する
 
@@ -111,7 +111,7 @@ ms.locfileid: "67450409"
 
 ***
 
-ユーザーがタブのドロップダウン メニューから **[削除**] を選択すると、Teams は **構成ページ** に割り当てられている省略可能な`removeUrl`ページを IFrame に読み込みます。 ユーザーには、呼び出`pages.config.setValidityState(true)`す関数が`onClick()`読み込まれたボタンが表示され、削除ページ IFrame の下部に表示される [**削除**] ボタンが有効になります。
+ユーザーがタブのドロップダウン メニューから **[削除**] を選択すると、Teams は **構成ページ** に割り当てられているオプション `removeUrl` ページを iFrame に読み込みます。 ユーザーには、呼び出`pages.config.setValidityState(true)`す関数が`onClick()`読み込まれたボタンが表示され、削除ページ iFrame の下部に表示される **[削除**] ボタンが有効になります。
 
 削除ハンドラーが実行された後、 `removeEvent.notifySuccess()` または `removeEvent.notifyFailure()` コンテンツの削除結果を Teams に通知します。
 

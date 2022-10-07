@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 11/29/2021
-ms.openlocfilehash: 964e7d8ad6e643d26178e04fb9ce706bb177f1d1
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 20bdb351eeff9a11d9460cf8206cfdc7dcbea0ff
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780997"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499301"
 ---
 # <a name="manage-multiple-environments"></a>複数の環境を管理する
 
@@ -156,7 +156,7 @@ Teams アプリ名`myapp(dev)`は、既定の環境と`myapp(staging)`ステー�
 4. 構成ファイル `.fx/configs/config.staging.json`を開きます。
 5. 同じプロパティ `my app description for staging`を .
 6. Teams アプリ マニフェスト テンプレート `templates/appPackage/manifest.template.json`を開きます。
-7. mustache 構文を使用してファイルを構成するで定義されている **変数** を使用するようにプロパティ **`short`****`description`** > を更新します。**`{{config.manifest.description.short}}`**
+7. 中かっこ構文を使用してファイルを構成するで定義されている **変数** を使用するようにプロパティ **`short`****`description`** > を更新します。**`{{config.manifest.description.short}}`**
   
   更新対象 `manifest.template.json` は次のとおりです。
 

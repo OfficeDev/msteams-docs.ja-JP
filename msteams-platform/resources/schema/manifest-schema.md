@@ -3,12 +3,12 @@ title: マニフェスト スキーマの参照
 description: この記事では、Microsoft Teams のリファレンス、スキーマ、サンプルフル マニフェストのパブリック マニフェスト スキーマの最新バージョンを用意します。
 ms.topic: reference
 ms.localizationpriority: high
-ms.openlocfilehash: f797c44b49c29227ec973c0066bf98ee25590d35
-ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
+ms.openlocfilehash: 2638c668bf1363a0f997786bcb958689626c70c6
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68376572"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499175"
 ---
 # <a name="app-manifest-schema-for-teams"></a>Teams のアプリ マニフェストのスキーマ
 
@@ -643,9 +643,9 @@ Azure Active Directory アプリ ID と Microsoft Graph 情報を提供して、
 
 **省略可能** — ブール値
 
-Indicates if or not to show the loading indicator when an app or tab is loading. Default is **false**.
+アプリまたはタブの読み込み中に読み込みインジケーターを表示するかどうかを示します。 既定値は **false** です。
 >[!NOTE]
->アプリマニフェストで `showLoadingIndicator` を true として選択した場合、ページを正しく読み込むには、「[ネイティブの読み込みインジケーターを表示する](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)」ドキュメントの説明に従って、タブとタスクモジュールのコンテンツページを変更します。
+>アプリ マニフェストで true を選択 `showLoadingIndicator` した場合、ページを正しく読み込むには、「 [ネイティブ読み込みインジケーター](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) ドキュメントを表示する」の説明に従って、タブとタスク モジュールのコンテンツ ページを変更します。
 
 ## <a name="isfullscreen"></a>IsFullScreen
 

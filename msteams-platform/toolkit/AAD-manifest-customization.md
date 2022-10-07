@@ -6,12 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
-ms.openlocfilehash: 2091649581686b376d2486a874118d36fd6a984b
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 0df9cc75b6a9775f9369b6a3bf8b95c35941207b
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67616654"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499322"
 ---
 # <a name="edit-azure-ad-manifest"></a>Azure AD マニフェストを編集する
 
@@ -278,7 +278,7 @@ Teams アプリケーション開発ライフサイクルのさまざまな段�
 
     * マニフェスト ファイルを使用した新しい Azure AD アプリケーションの作成時に、より多くのコンテキストを必要とするマニフェスト ファイル内の一部のプロパティ (ローカル デバッグ エンドポイントを必要とする replyUrls プロパティなど) を最初に無視します。
 
-    * ローカル開発環境の起動が正常に完了すると、作成ステージ中に使用できない Azure AD アプリケーションの identifierUris、replyUrls、およびその他のプロパティがそれに応じて更新されます。
+    * ローカル開発環境が正常に開始されると、作成ステージ中に使用できない Azure AD アプリケーションの identifierUris、replyUrls、およびその他のプロパティがそれに応じて更新されます。
 
     * Azure AD アプリケーションに対して行った変更は、次のローカル デバッグ セッション中に読み込まれます。 [Azure AD アプリケーションの変更](https://github.com/OfficeDev/TeamsFx/wiki/)を手動で適用する Azure AD アプリケーションの変更を確認できます。
 

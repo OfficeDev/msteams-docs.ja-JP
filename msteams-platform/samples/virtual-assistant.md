@@ -3,12 +3,12 @@ title: 仮想アシスタントを作成する
 description: アダプティブ カード、中断の処理などの機能を備えたコードの例とスニペットを使用して Teams 用の Virtual Assistant ボットを作成する方法について説明します。
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.openlocfilehash: 12339ed10f1c6a6e30ebb74320fbf69018a6d3f9
-ms.sourcegitcommit: 0bb822b30739e4a532a36764dad2dbf35a81ba29
+ms.openlocfilehash: 4f35edee79dba5b6a8faa9720906915bec27d6d5
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67178605"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499280"
 ---
 # <a name="create-virtual-assistant"></a>仮想アシスタントを作成する
 
@@ -34,7 +34,7 @@ ms.locfileid: "67178605"
 
 ## <a name="create-a-teams-focused-virtual-assistant"></a>Teams にフォーカスを当てた仮想アシスタントを作成する
 
-Microsoft は、仮想アシスタントとスキルを構築するための[Microsoft Visual Studio テンプレート](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate)を公開しました。 Visual Studio テンプレートを使用すると、アクションを含む限られたリッチ カードをサポートするテキスト ベースのエクスペリエンスを利用して、仮想アシスタントを作成できます。 Visual Studio ベース テンプレートが強化され、Microsoft Teams プラットフォーム機能が追加され、優れた Teams アプリ エクスペリエンスが強化されました。 いくつかの機能には、豊富なアダプティブ カード、タスク モジュール、チームまたはグループ チャット、メッセージ拡張機能のサポートが含まれます。 仮想アシスタントを Microsoft Teams に拡張する方法の詳細については、「[チュートリアル: 仮想アシスタントを Microsoft Teams に拡張する](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/)」を参照してください。
+Microsoft は、仮想アシスタントとスキルを構築するための[Microsoft Visual Studio テンプレート](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate)を公開しました。 Visual Studio テンプレートを使用すると、アクションを含む限られたリッチ カードをサポートするテキスト ベースのエクスペリエンスを利用して、仮想アシスタントを作成できます。 Microsoft Teams プラットフォームの機能と優れた Teams アプリ エクスペリエンスを強化するために、Visual Studio ベース テンプレートが強化されました。 いくつかの機能には、豊富なアダプティブ カード、タスク モジュール、チームまたはグループ チャット、メッセージ拡張機能のサポートが含まれます。 仮想アシスタントを Microsoft Teams に拡張する方法の詳細については、「[チュートリアル: 仮想アシスタントを Microsoft Teams に拡張する](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/)」を参照してください。
 次の図は、仮想アシスタント ソリューションの概要図を示しています。
 
 ![仮想アシスタント ソリューションの概要図](../assets/images/bots/virtual-assistant/high-level-diagram.png)
@@ -564,7 +564,7 @@ botskills connect --remoteManifest "<url to skill's manifest>" --luisFolder "<pa
     }
 ```
 
-[Bot Framework Solutions リポジトリ](https://github.com/microsoft/botframework-components/tree/main/skills/csharp)から既存のスキルを活用したり、新しいスキルをゼロから作成したりすることもできます。 新しいスキルを作成する方法については、「[新しいスキルを作成するためのチュートリアル](https://microsoft.github.io/botframework-solutions/overview/skills/)」を参照してください。 仮想アシスタントおよびスキル アーキテクチャのドキュメントについては、「[仮想アシスタントとスキル アーキテクチャ](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true)」を参照してください。  
+[Bot Framework Solutions リポジトリ](https://github.com/microsoft/botframework-components/tree/main/skills/csharp)から既存のスキルを活用したり、新しいスキルをゼロから作成したりすることもできます。 新しいスキルを作成する方法については、「[新しいスキルを作成するためのチュートリアル](https://microsoft.github.io/botframework-solutions/overview/skills/)」を参照してください。 Virtual Assistant と skills アーキテクチャのドキュメントについては、 [Virtual Assistant と skills アーキテクチャに関する](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true)ドキュメントを参照してください。  
 
 ## <a name="limitations-of-virtual-assistant"></a>仮想アシスタントの制限事項
 

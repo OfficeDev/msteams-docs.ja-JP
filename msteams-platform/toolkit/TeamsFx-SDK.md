@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: 9d870680e146564bb23db0193d2e2b116a249009
-ms.sourcegitcommit: 16898eebeddc1bc1ac0d9862b4627c3bb501c109
+ms.openlocfilehash: e28e726a1915cdbc8fddf501b0352d160673516c
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2022
-ms.locfileid: "68327588"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499168"
 ---
 # <a name="teamsfx-sdk"></a>TeamsFx SDK
 
@@ -179,6 +179,7 @@ Visual Studio Code Toolkit を使用して Azure 関数またはボット プロ
 * clientSecret (M365_CLIENT_SECRET)
 * applicationIdUri (M365_APPLICATION_ID_URI)
 * apiEndpoint (API_ENDPOINT)
+
 * sqlServerEndpoint (SQL_ENDPOINT) // は、sql インスタンスがある場合にのみ使用されます
 * sqlUsername (SQL_USER_NAME) // は、sql インスタンスがある場合にのみ使用されます
 * sqlPassword (SQL_PASSWORD) // は、sql インスタンスがある場合にのみ使用されます
@@ -254,9 +255,9 @@ try {
     <details>
     <summary><b>Microsoft Graph Toolkit との統合</b></summary>
 
-    [Microsoft Graph Toolkit (mgt)](https://aka.ms/mgt) ライブラリは、Microsoft Graph を搭載したさまざまな認証プロバイダーと UI コンポーネントのコレクションです。
+    [Microsoft Graph Toolkit](https://aka.ms/mgt) ライブラリは、Microsoft Graph を搭載したさまざまな認証プロバイダーと UI コンポーネントのコレクションです。
 
-    パッケージは`@microsoft/mgt-teamsfx-provider`、クラスを使用`TeamsFx`して`TeamsFxProvider`ユーザーにサインインし、Graph で使用するトークンを取得するクラスを公開します。
+    このパッケージは `@microsoft/mgt-teamsfx-provider` 、クラスを `TeamsFxProvider` 使用 `TeamsFx` してユーザーにサインインし、Microsoft Graph で使用するトークンを取得するクラスを公開します。
 
     1. 次の必要なパッケージをインストールできます。
 

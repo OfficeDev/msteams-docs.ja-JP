@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 25f4db19c2f89031d5bb4566793586d1c8988ceb
-ms.sourcegitcommit: e4ccbbdce620418c129689c0ba6ad246a81068c0
+ms.openlocfilehash: 40fecae63c563ae110dedf9e1430f5207574f969
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2022
-ms.locfileid: "68329092"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499211"
 ---
 # <a name="create-a-personal-tab"></a>プライベート タブを作成する
 
@@ -193,13 +193,13 @@ ms.locfileid: "68329092"
 
 1. 更新された `manifest.json` ファイルを保存します。
 
-1. 次のパスから Visual Studio Code で **Tab.ts** を開き、IFrame でコンテンツ ページを提供します:
+1. 次のパスから Visual Studio Code で **Tab.ts** を開き、iFrame でコンテンツ ページを提供します。
 
     ```bash
     ./src/server/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
     ```
 
-1. IFrame デコレーターの一覧に次を追加します。
+1. iFrame デコレーターの一覧に次を追加します。
 
     ```typescript
      @PreventIframe("/<yourDefaultTabName Tab>/personal.html")
@@ -485,7 +485,7 @@ ASP.NET Core では、Web ルート フォルダーは、アプリケーショ�
 * 32 x 32 ピクセルの **透明なアウトライン アイコン**。
 * アプリの属性を指定する `manifest.json` ファイル。
 
-これらのファイルは、Teams へのタブのアップロードに使用するために、アプリ パッケージで zip 形式にする必要があります。 Teams は、マニフェストで指定された `contentUrl` を読み込み、IFrame に埋め込み、タブにレンダリングします。
+これらのファイルは、Teams へのタブのアップロードに使用するために、アプリ パッケージで zip 形式にする必要があります。 Teams は、マニフェストで指定した値を読み込 `contentUrl` み、iFrame に埋め込み、タブにレンダリングします。
 
 #### <a name="csproj"></a>.csproj
 

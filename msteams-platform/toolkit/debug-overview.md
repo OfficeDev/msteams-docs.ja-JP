@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 3b125d6f2f1029191debc547b3cc49b30cd47089
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 624cad282e181ed56cbc3041f725b046ca061c72
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027061"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499161"
 ---
 # <a name="debug-your-teams-app"></a>Teams アプリをデバッグする
 
@@ -46,7 +46,7 @@ Teams Toolkit では、次のデバッグ機能がサポートされています
 * [ホット リロード](#hot-reload)
 * [デバッグの停止](#stop-debugging)
 
-Teams Toolkit は、デバッグ プロセス中にバックグラウンド機能を実行します。これには、デバッグに必要な前提条件の検証が含まれます。検証プロセスの進行状況は、Teams Toolkit の出力チャネルで確認できます。 セットアップ プロセスでは、Teams アプリを登録して構成できます。
+Teams Toolkit は、デバッグ プロセス中にバックグラウンド機能を実行します。これには、デバッグに必要な前提条件の検証が含まれます。 検証プロセスの進行状況は、Teams Toolkit の出力チャネルで確認できます。 セットアップ プロセスでは、Teams アプリを登録して構成できます。
 
 ### <a name="start-debugging"></a>デバッグの開始
 

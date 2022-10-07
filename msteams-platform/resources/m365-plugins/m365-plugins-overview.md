@@ -4,12 +4,12 @@ description: この記事では、Microsoft 365 プラグイン、プラグイ�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: Surbhigupta
-ms.openlocfilehash: 438093c5ffe9990c5aa7c8175131c654019c3120
-ms.sourcegitcommit: 79d525c0be309200e930cdd942bc2c753d0b718c
-ms.translationtype: HT
+ms.openlocfilehash: 56ba41598fb7d9e75aff92f240f7a3132988c1ec
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66841751"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499308"
 ---
 # <a name="microsoft-365-plugins"></a>Microsoft 365 プラグイン
 
@@ -36,7 +36,7 @@ Microsoft 365 プラグインは、Moodle Web サイトと Teams 間の統合を
 |[**Microsoft 365 の統合**](#microsoft-365-integration)|Moodle で各コースの Teams インスタンスを作成し、教職員を所有者として、学生をチーム メンバーとして同期します。|local_o365|
 |[**Microsoft 365 リポジトリ**](#microsoft-365-repository) |Moodle のストレージのニーズを減らすために、ファイル リポジトリ の Microsoft 365 OneDrive コンテンツをサポートしています。| repository_office 365|
 |[**Teams 会議**](#teams-meetings) |Moodle の Atto エディターで Teams 会議リンクを作成できるようにします。|atto_teamsmeeting |
-|[**Teams テーマ**](#microsoft-365-teams-theme)| Teams の Moodle iframe 内の Moodle ブロックと余分なクロムを削除します。これは、コースを Teams インスタンスにマッピングするときに適用されます。| themeboost_o365teams |
+|[**Teams テーマ**](#microsoft-365-teams-theme)| Teams の Moodle iFrames 内で Moodle ブロックと追加のクロムを削除します。これは、コースを Teams インスタンスにマッピングするときに適用されます。| themeboost_o365teams |
 |[**OneNote**](#onenote-integration)| OneNote を割り当て、提出、フィードバックに使用できるようにします。|local_onenote, assignsubmission_onenote および assignfeedback_onenote </br>|  
 |[**Microsoft Block**](#microsoft-block) | Moodle 内の Microsoft 365 クイック アクセス ブロックを、Microsoft 365 コラボレーション サービスへのリンクを使って有効化し、Microsoft Office のリンクをインストールします。|block_microsoft |
 |[**oEmbed Filter**](#oembed-filter) | Moodle でビデオ リンクを有効にする。|Filter_oembed|

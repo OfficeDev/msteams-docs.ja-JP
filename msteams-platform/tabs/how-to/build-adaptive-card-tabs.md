@@ -5,12 +5,12 @@ description: アダプティブ カードでフロントエンドをレンダリ
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 33c9d42ff2d2d5d13676261c7197e287fcacff59
-ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
+ms.openlocfilehash: c69ca5f366e973fcd17e04ef490514526bef0f96
+ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68376628"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68499287"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>アダプティブ カードを使用してタブをビルドする
 
@@ -25,7 +25,7 @@ ms.locfileid: "68376628"
 * iFrame 制約
 * サーバーのメンテナンスとコスト
 
-アダプティブ カード タブは、Teams でタブを作成する新しい方法です。 IFrame に Web コンテンツを埋め込む代わりに、アダプティブ カードをタブにレンダリングできます。フロント エンドはアダプティブ カードでレンダリングされますが、バックエンドはボットによって供給されます。 ボットは、要求を受け入れ、レンダリングされるアダプティブ カードで適切に応答する役割を担います。
+アダプティブ カード タブは、Teams でタブを作成する新しい方法です。 iFrame に Web コンテンツを埋め込む代わりに、アダプティブ カードをタブにレンダリングできます。フロントエンドはアダプティブ カードでレンダリングされますが、バックエンドはボットによって供給されます。 ボットは、要求を受け入れ、レンダリングされるアダプティブ カードで適切に応答する役割を担います。
 
 デスクトップ、Web、モバイルでネイティブな既製のユーザー インターフェイス (UI) 構成要素を使用してタブを構築できます。 この記事は、アプリ マニフェストに対して行う必要がある変更を理解するのに役立ちます。 また、この記事では、呼び出しアクティビティがアダプティブ カードを使用してタブで情報を要求して送信する方法と、タスク モジュール ワークフローに対する影響についても説明します。
 
