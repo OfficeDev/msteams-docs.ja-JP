@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: ボットとのチャネルおよびグループ チャットの会話
   ms.custom: mvc
   ms.localizationpriority: none
-  ms.openlocfilehash: 1e6c281a22a393bfe78de864566dd39249165a93
-  ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+  ms.openlocfilehash: d1f9da64703ae54b4311dda987de709478bef9f0
+  ms.sourcegitcommit: ac59d469b823b80e65ee6f7be11ec5c365977a1c
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/27/2022
-  ms.locfileid: "68027243"
+  ms.lasthandoff: 10/06/2022
+  ms.locfileid: "68489941"
 items:
 - durationInMinutes: 1
   content: >
@@ -39,19 +39,7 @@ items:
     :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="最終的な出力。"lightbox="assets/images/conversation-bot/final-output.png":::
 - title: 前提条件
   durationInMinutes: 1
-  content: >
-    開発環境を設定するには、次のツールをインストールします。
-
-
-    * [テナントOffice 365](https://developer.microsoft.com/en-us/microsoft-365/dev-program)
-
-    * [Ngrok](https://ngrok.com/) または同等のトンネリング ソリューション
-
-    * [Visual Studio](https://visualstudio.microsoft.com/downloads/) の最新バージョン
-
-    * [.NET Core SDK バージョン 3.1](https://dotnet.microsoft.com/en-us/download)
-
-    * Microsoft Teams と Teams アカウント
+  content: "開発環境を設定するには、次のツールをインストールします。\n\n| &nbsp; | インストール | 使用するには... |\n | --- | --- | --- |\n | **必須** | &nbsp; | &nbsp; |\n | &nbsp; | [Microsoft 365 開発者アカウント](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | アプリをインストールするための適切なアクセス許可を持つ Teams アカウントにアクセスします。 |\n | &nbsp; | [Ngrok](https://ngrok.com/download) | Teams アプリの機能 (会話ボット、メッセージ拡張機能、受信 Webhook) には、受信接続が必要です。 トンネルは、開発システムを Teams に接続します。 タブのみを含むアプリでは必須ではありません。 このパッケージはプロジェクト ディレクトリ内にインストールされます (npm `devDependencies` を使用)。 |\n | &nbsp; | [Visual Studio 2022 バージョン 17.3](https://visualstudio.microsoft.com)<br> 次の 2 つのワークロードのいずれかをインストールします。<br> • **ASP.NET と Web 開発** <br> • **.NET Core クロスプラットフォーム開発** | Visual Studio 2022 でエンタープライズ バージョンをインストールし、ワークロードをインストールできます。 |   \n | &nbsp; | [.NET Core SDK バージョン 3.1](https://dotnet.microsoft.com/en-us/download) | ローカル デバッグとAzure Functions アプリのデプロイ用にカスタマイズされたバインド。 .NET 3.1 (またはそれ以降) SDK をグローバルにインストールしていない場合は、ポータブル バージョンをインストールできます。 |\n | &nbsp; | [Microsoft Teams と Teams アカウント](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams は、チャット、会議、通話、すべて 1 か所のアプリを通じて、共同作業するすべてのユーザーと共同作業を行います。 |\n"
 - title: 会話ボットを設定する
   durationInMinutes: 5
   content: "Azure でボットを開発してホストするときに、ボットを Azure ボット サービスに登録します。 次の手順を実行します。\n\n1. ngrok を使用して、Web サーバーのエンドポイントへのトンネルを作成します。\n1. Azure アカウントでボット チャネル登録を作成します。\n1. ボットの SSO 認証を有効にするクライアント シークレットを作成します。\n1. ダウンストリーム呼び出しの API アクセス許可を追加します。\n1. 作成した ngrok トンネルにメッセージング エンドポイントを追加します。\n1. Microsoft Teams チャネルを追加して、ボットを Teams チャネルにデプロイします。\n\n**ngrok トンネルを作成する**\n\nngrok を使用して、ローカルで実行されている Web サーバーのパブリックに利用可能な HTTPS エンドポイントへのトンネルを作成します。 ngrok で次のコマンドを実行します。\n\n```bash\nngrok http --host-header=rewrite 3978\n```\n\n**Azure アカウントでボット チャネル登録を作成する**\n\n1. Azure portalにアクセス[します](https://portal.azure.com/)。\n1. **[リソースの作成]** を選択します。\n1. 検索ボックスで **Azure Bot** を検索します。\n1. **Azure Bot** を選択します。\n\n    :::image type=\"content\" source=\"./assets/images/azure-bot.png\" alt-text=\"Azure ボット。\":::\n\n1. **[作成]** を選択します。\n1. **[ボット ハンドル]** フィールドでボット ハンドル名を入力します。\n1. ドロップダウン リストから **[サブスクリプション]** を選択します。\n1. ドロップダウン リストから既存 **のリソース グループ** を選択するか、新しいリソース グループを作成し、[ **新規作成**] を選択し、リソース名を入力 **して、[OK] を** 選択し、[ **新しいリソース グループの場所** ] ドロップダウン リストから必要な場所を選択します。\n\n    :::image type=\"content\" source=\"./assets/images/conversation-bot/create-azure-bot.png\" alt-text=\"Azure ボットを作成します。\":::\n\n1. **Microsoft アプリ ID** の **マルチテナント** として **アプリ種類** を選択します。\n\n    > [!NOTE]\n    > [ **作成の種類** ] の [Microsoft アプリ ID] セクションでは、新しいボットを作成するために [ **新しい Microsoft アプリ ID** の作成] が既に選択されています。 ボットを既に登録している場合は、[ **既存のアプリの登録を使用** する] を選択することもできます。 [既存のアプリ ID] フィールドに Microsoft **アプリ ID を** 入力し、[ **既存のアプリ パスワード** ] フィールドに値を入力します。 \n1. **[確認 + 作成]** を選びます。\n\n    :::image type=\"content\" source=\"./assets/images/conversation-bot/review-create.png\" alt-text=\"確認して作成します。\":::\n\n1. 検証に合格した場合は、[ **作成]** を選択します。 ボット サービスがプロビジョニングされるまで少し時間がかかります。\n\n    :::image type=\"content\" source=\"./assets/images/conversation-bot/validation-passed.png\" alt-text=\"ボットの検証。\":::\n\n1. [**リソースに移動**] を選びます。 ボットと関連リソースがリソース グループに一覧表示されます。\n\n    これで、Azure ボットが作成されました。\n\n    :::image type=\"content\" source=\"./assets/images/conversation-bot/go-to-resource.png\" alt-text=\"リソース カードに移動します。\":::\n\n**クライアント シークレットを作成するには**\n\n1. **[構成設定]** で、**[追加]** を選択します。 将来の参照のために、**Microsoft アプリ ID** (クライアント ID) を保存します。\n\n    :::image type=\"content\" source=\"./assets/images/conversation-bot/microsoft-app-id.png\" alt-text=\"Microsoft アプリ ID。\":::\n\n1. **Microsoft アプリ ID** の横にある **[管理**] を選択します。\n\n   :::image type=\"content\" source=\"~/assets/images/manage-bot-label.png\" alt-text=\"ボットを管理する\":::\n\n1. [ **クライアント シークレット** ] セクションで、[ **新しいクライアント シークレット**] を選択します。 [ **クライアント シークレットの追加]** ウィンドウが表示されます。  \n\n    :::image type=\"content\" source=\"./assets/images/meetings-side-panel/newclientsecret.png\" alt-text=\"新しいクライアント シークレット。\":::\n\n1. **[説明]** を入力し、**[追加]** を選択します。\n\n    :::image type=\"content\" source=\"./assets/images/conversation-bot/add-client-secret.png\" alt-text=\"クライアント シークレットを追加します。\":::\n\n1. [**値]** 列で [**クリップボードにコピー**] を選択し、今後参照できるようにクライアント シークレット ID を保存します。\n\n    :::image type=\"content\" source=\"./assets/images/conversation-bot/value.png\" alt-text=\"値カード。\":::\n\n**ダウンストリーム呼び出しの API アクセス許可を追加するには**\n\n1. ボットの **[管理** ] ウィンドウで、[ **API アクセス許可**] を選択します。\n1. [**アクセス許可を追加**] を選択します。 **[要求 API のアクセス許可** ] ウィンドウが表示されます。\n1. **Microsoft API を** 選択し、**Microsoft Graph** を選択します。\n1. **[アプリケーションのアクセス許可**] を選択し、アクセス許可を選択します。\n1. たとえば、 `User.Read`アプリで必要なユーザーアクセス許可をダウンストリーム API に追加します。\n1. **[アクセス許可の追加]** を選択します。\n\n    :::image type=\"content\" source=\"./assets/images/conversation-bot/api-permissions.png\" alt-text=\"API アクセス許可を追加します。\"lightbox=\"assets/images/conversation-bot/api-permissions.png\":::\n\n**メッセージング エンドポイントを追加するには**\n\n1. ボットの **ホーム** ページに移動し、左側のウィンドウの **[設定]** で **[構成**] を選択します。\n1. ngrok に移動します。\n1. 次の図に示すように、HTTPS URL (https から io) をコピーします。\n    \n   :::image type=\"content\" source=\"../msteams-platform/assets/images/ngrok-url.png\" alt-text=\"ngrok HTTPS URL\":::\n   \n1. **メッセージング エンドポイント** で、ngrok から使用できる HTTPS URL を追加し、URL の最後に **/api/messages** を追加します。\n    \n    :::image type=\"content\" source=\"./assets/images/conversation-bot/messaging-endpoint.png\" alt-text=\"メッセージング エンドポイント。\":::\n\n1. **[適用]** を選択します。\n\n**Microsoft Teams チャネルを追加するには**\n\n1. **[ホーム]** に移動します。\n1. [ **最近使ったリソース** ] セクションで、ボットを開きます。\n1. 左側のウィンドウで **[チャネル**] を選択し、**Microsoft Teams** を選択します。 <img src=\"~/assets/images/bots/teamsicon.png\" alt=\"Teams icon\" width=\"20\"/> 使用可能なチャネルの一覧から選択できます。    \n    \n    :::image type=\"content\" source=\"~/assets/images/adaptive-cards/channel-teams.png\" alt-text=\"チャネルで Teams を選択する\":::\n\n1. サービス利用規約に同意するチェック ボックスをオンにし、**[承諾する]** を選択します。\n\n    :::image type=\"content\" source=\"./assets/images/conversation-bot/terms-of-service.png\" alt-text=\"サービスの利用規約。\":::\n\n1. **[保存]** を選択します。\n\n    Azure Bot Serviceでボットを正常に設定したので、ボット サービス接続を設定する必要があります。\n"

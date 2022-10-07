@@ -11,18 +11,18 @@ metadata:
   nextTutorialTitle: メッセージ拡張機能アクション コマンドを有効にする方法の詳細
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 8b0b4ea1780d1157db9f496933619fccecd20552
-  ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+  ms.openlocfilehash: 5cc3b94a0980b3761ac3f8255874bff6c9d0fa9c
+  ms.sourcegitcommit: ac59d469b823b80e65ee6f7be11ec5c365977a1c
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/30/2022
-  ms.locfileid: "68243312"
+  ms.lasthandoff: 10/06/2022
+  ms.locfileid: "68490242"
 items:
 - durationInMinutes: 1
   content: "メッセージ拡張機能を使用すると、ユーザーは Microsoft Teams クライアントで Web サービスを操作できます。 これらは、メッセージ作成領域、コマンド ボックス、またはメッセージから直接、外部システムでアクションを開始するのに役立ちます。\n\n**アクション ベースのメッセージ拡張機能の主な機能**\n\n* 情報を収集または表示するためのモーダル ポップアップをユーザーに表示します。\n* メッセージ作成領域、コマンド ボックス、またはメッセージからアクション コマンドをトリガーします。 \n\nこのステップ バイ ステップ ガイドは、Teams アクションベースのメッセージ拡張機能を構築し、メッセージとメッセージの作成領域からアクションを開始するのに役立ちます。 次の出力が表示されます。\n   \n  ![出力](~/assets/images/sbs-messagingextension-action/sharemessageoutput1.png)\n"
 - title: 前提条件
   durationInMinutes: 1
-  content: "次のツールをインストールし、開発環境をセットアップしてください。  \n\n* 有効なアカウントを持つ [Microsoft Teams](https://teams.microsoft.com/)\n* [.NET Core SDK](https://dotnet.microsoft.com/download) バージョン 3.1\n* [Visual Studio の最新バージョン](https://visualstudio.microsoft.com/downloads/)\n* [ngrok](https://ngrok.com/download) の最新バージョン (devbox テスト用のみ) または同等のトンネリング ソリューション\n\n  > [!NOTE]\n  > ngrok をダウンロードしたら、サインアップして [authtoken](https://ngrok.com/download) をインストールします。\n"
+  content: "次のツールをインストールし、開発環境をセットアップしてください。  \n\n | &nbsp; | インストール | 使用するには... |\n | --- | --- | --- |\n | **必須** | &nbsp; | &nbsp; |\n | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams は、チャット、会議、通話、すべて 1 か所のアプリを通じて、共同作業するすべてのユーザーと共同作業を行います。|\n | &nbsp; | [Visual Studio 2022 バージョン 17.3](https://visualstudio.microsoft.com)<br> 次の 2 つのワークロードのいずれかをインストールします。<br> • **ASP.NET と Web 開発** <br> • **.NET Core クロスプラットフォーム開発** | Visual Studio 2022 でエンタープライズ バージョンをインストールし、ワークロードをインストールできます。 |\n | &nbsp; | [.NET Core SDK バージョン 3.1](https://dotnet.microsoft.com/en-us/download) | ローカル デバッグとAzure Functions アプリのデプロイ用にカスタマイズされたバインド。 .NET 3.1 (またはそれ以降) SDK をグローバルにインストールしていない場合は、ポータブル バージョンをインストールできます。 |\n | &nbsp; | [ngrok](https://ngrok.com/download) | Teams アプリの機能 (会話ボット、メッセージ拡張機能、受信 Webhook) には、受信接続が必要です。 トンネルは、開発システムを Teams に接続します。 タブのみを含むアプリでは必須ではありません。 このパッケージはプロジェクト ディレクトリ内にインストールされます (npm `devDependencies` を使用)。 |\n\n  > [!NOTE]\n  > ngrok をダウンロードしたら、サインアップして [authtoken](https://ngrok.com/download) をインストールします。\n"
 - title: ローカル環境を設定する
   durationInMinutes: 1
   content: "リポジトリをローカル GitHub に複製 `BotBuilder-Samples` します。  \n\n 1. [BotBuilder-Samples を](https://github.com/Microsoft/BotBuilder-Samples)開きます。\n 1. [ **コード**] を選択します。\n 1. ドロップダウン メニューから[ **Open with GitHub Desktop]\\(GitHub Desktop で開く\\**) を選択します。\n\n    ![リポジトリを複製する](~/assets/images/sbs-messagingextension-action/botbuilder-sample.png)\n\n 1. [ **複製**] を選択します。 \n"

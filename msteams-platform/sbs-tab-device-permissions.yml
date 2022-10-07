@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: ブラウザーのデバイスアクセス許可の詳細
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 7ce86d763811fb80bbdb79517682f9972b51fd03
-  ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+  ms.openlocfilehash: 90f0562fc24a3d363a1435b16cff15ba73f42b3e
+  ms.sourcegitcommit: ac59d469b823b80e65ee6f7be11ec5c365977a1c
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/30/2022
-  ms.locfileid: "68243557"
+  ms.lasthandoff: 10/06/2022
+  ms.locfileid: "68490921"
 items:
 - durationInMinutes: 1
   content: >
@@ -33,15 +33,14 @@ items:
 
 
 
-    * 有効なアカウントを持つ [Microsoft Teams](https://www.microsoft.com/en-in/microsoft-teams/log-in)
-
-    * [Microsoft 365 開発者アカウント](https://developer.microsoft.com/en-us/microsoft-365/dev-program) またはアプリをインストールするための適切なアクセス許可を持つ Teams アカウントへのアクセス
-
-    * [Visual Studio の最新バージョン](https://code.visualstudio.com/Download)
-
-    * [nodejs の最新バージョン](https://nodejs.org/en/download/)
-
-    * [最新バージョンの ngrok](https://ngrok.com/download) (開発ボックス テスト用のみ) または同等のトンネリング ソリューション
+    *| &nbsp; | インストール | 使用するには... |
+     | --- | --- | --- |
+     | **必須** | &nbsp; | &nbsp; |
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams は、チャット、会議、通話、すべて 1 か所のアプリを通じて、共同作業するすべてのユーザーと共同作業を行います。|
+     | &nbsp; | [Microsoft 365 開発者アカウント](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | アプリをインストールするための適切なアクセス許可を持つ Teams アカウントにアクセスします。 |
+     | &nbsp; | [Visual Studio 2022 バージョン 17.3](https://visualstudio.microsoft.com)<br> 次の 2 つのワークロードのいずれかをインストールします。<br> • **ASP.NET と Web 開発** <br> • **.NET Core クロスプラットフォーム開発** | Visual Studio 2022 でエンタープライズ バージョンをインストールし、ワークロードをインストールできます。 |
+     | &nbsp; | [Node.jsと NPM](https://nodejs.org/) | バックエンド JavaScript ランタイム環境。 最新の v16 LTS リリースを使用します。|
+     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams アプリの機能 (会話ボット、メッセージ拡張機能、受信 Webhook) には、受信接続が必要です。 トンネルは、開発システムを Teams に接続します。 タブのみを含むアプリでは必須ではありません。 このパッケージはプロジェクト ディレクトリ内にインストールされます (npm `devDependencies` を使用)。 |
 
       > [!NOTE]
       > ngrok をダウンロードしたら、サインアップして [authtoken](https://ngrok.com/download) をインストールします。

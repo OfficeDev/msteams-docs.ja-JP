@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: 会議用のアプリを有効にして構成する方法の詳細
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 7301003a6a69119ec1ca0658b90a53f2184dac38
-  ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+  ms.openlocfilehash: 396f1e1a2a085e18d4a8778998953e7eff517fbc
+  ms.sourcegitcommit: ac59d469b823b80e65ee6f7be11ec5c365977a1c
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/30/2022
-  ms.locfileid: "68243151"
+  ms.lasthandoff: 10/06/2022
+  ms.locfileid: "68490746"
 items:
 - durationInMinutes: 1
   content: >
@@ -59,7 +59,7 @@ items:
        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-final-output.png" alt-text="最終的な出力":::
 - title: 前提条件
   durationInMinutes: 1
-  content: "次のツールをインストールし、開発環境を設定します。 \n\n * 有効なアカウントを持つ [Microsoft Teams](https://teams.microsoft.com/) \n * [無料の Teams 開発者テナントを取得する](https://developer.microsoft.com/microsoft-365/dev-program)\n * [.NET Core SDK の最新バージョン](https://dotnet.microsoft.com/download)\n * [Visual Studio の最新バージョン](https://visualstudio.microsoft.com/downloads/)\n * [nodejs の最新バージョン](https://nodejs.org/en/download/)\n * [最新バージョンの ngrok](https://ngrok.com/download) または同等のトンネリング ソリューション\n \n   > [!NOTE]\n   > ngrok をダウンロードしたら、サインアップして [authtoken](https://ngrok.com/download) をインストールします。\n \n 次のテクノロジに関する実用的な知識が必要です。\n\n * [C#](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)\n * [ECMAScript6](http://es6-features.org/#Constants)\n * [ASP.NET コアの最新バージョン](/aspnet/core/?view=aspnetcore-3.1)\n * [React.JSの最新バージョン ](https://reactjs.org/tutorial/tutorial.html) \n \n"
+  content: "次のツールをインストールし、開発環境を設定します。 \n\n  | &nbsp; | インストール | 使用するには... |\n  | --- | --- | --- |\n  | **必須** | &nbsp; | &nbsp; |\n  | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams は、チャット、会議、通話、すべて 1 か所のアプリを通じて、共同作業するすべてのユーザーと共同作業を行います。|\n  | &nbsp; | [Visual Studio 2022 バージョン 17.3](https://visualstudio.microsoft.com)<br> 次の 2 つのワークロードのいずれかをインストールします。<br> • **ASP.NET と Web 開発** <br> • **.NET Core クロスプラットフォーム開発** | Visual Studio 2022 でエンタープライズ バージョンをインストールし、ワークロードをインストールできます。 |\n  | &nbsp; | [Microsoft 365 開発者アカウント](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | アプリをインストールするための適切なアクセス許可を持つ Teams アカウントにアクセスします。 |\n  | &nbsp; | [.NET Core SDK バージョン 3.1](https://dotnet.microsoft.com/en-us/download) | ローカル デバッグとAzure Functions アプリのデプロイ用にカスタマイズされたバインド。 .NET 3.1 (またはそれ以降) SDK をグローバルにインストールしていない場合は、ポータブル バージョンをインストールできます。 |\n  | &nbsp; | [Node.jsと NPM](https://nodejs.org/) | バックエンド JavaScript ランタイム環境。 最新の v16 LTS リリースを使用します。|\n  | &nbsp; | [ngrok](https://ngrok.com/download) | Teams アプリの機能 (会話ボット、メッセージ拡張機能、受信 Webhook) には、受信接続が必要です。 トンネルは、開発システムを Teams に接続します。 タブのみを含むアプリでは必須ではありません。 このパッケージはプロジェクト ディレクトリ内にインストールされます (npm `devDependencies` を使用)。 |\n \n   > [!NOTE]\n   > ngrok をダウンロードしたら、サインアップして [authtoken](https://ngrok.com/download) をインストールします。\n \n 次のテクノロジに関する実用的な知識が必要です。\n\n * [C#](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)\n * [ECMAScript6](http://es6-features.org/#Constants)\n * [ASP.NET コアの最新バージョン](/aspnet/core/?view=aspnetcore-3.1)\n * [React.JSの最新バージョン ](https://reactjs.org/tutorial/tutorial.html) \n \n"
 - title: ローカル環境を設定する
   durationInMinutes: 1
   content: "1. [Microsoft Teams のサンプルを](https://github.com/OfficeDev/Microsoft-Teams-Samples)開きます。\n1. [ **コード**] を選択します。\n1. ドロップダウン メニューから[ **Open with GitHub Desktop]\\(GitHub Desktop で開く\\**) を選択します。\n\n   :::image type=\"content\" source=\"~/assets/images/meeting-token-generator/sbs-bot-builder-samples.png\" alt-text=\"ボット\":::\n\n1. [ **複製**] を選択します。 \n\n   > [!NOTE]\n   > \"Filename too long\" というエラーが発生した場合は、選択した管理者ターミナルに git コマンド 'git config --system core.longpaths true' を適用します。\n"

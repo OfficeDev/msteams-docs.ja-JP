@@ -11,18 +11,18 @@ metadata:
   nextTutorialTitle: 送信 Webhook の詳細を読む
   ms.custom: mvc
   ms.localizationpriority: High
-  ms.openlocfilehash: d15f2d03d349ea5012bc3439d986a669036c0c65
-  ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+  ms.openlocfilehash: a34d28daeef5f7936217892760de0aeab446665d
+  ms.sourcegitcommit: ac59d469b823b80e65ee6f7be11ec5c365977a1c
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/30/2022
-  ms.locfileid: "68243564"
+  ms.lasthandoff: 10/06/2022
+  ms.locfileid: "68489920"
 items:
 - durationInMinutes: 1
   content: "Webhook は、Microsoft Teams が外部アプリと統合するのに役立ちます。 Teams では、送信 Webhook はボットとして機能し、 **@mention** を使用してチャネル内のメッセージを検索します。 送信 Webhook を使用すると、ユーザーは、Microsoft Bot Frameworkを介してボットを作成するプロセス全体を実行することなく、Web サービスにメッセージを送信できます。 送信 Webhook は、TEAMS から JSON ペイロードを受け入れるサービスにデータを投稿します。 \n\n**発信 Webhook の主な機能**\n\n* 任意の外部 Web サービスに通知を送信します。\n* カードや画像を含むリッチ テキスト メッセージで応答します。 \n* 個人またはプライベートのスコープ内ではなく、パブリック チャネルでメッセージを受信します。\n* HTTP POST を Web サービスに送信し、応答を取得します。 \n\n > [!NOTE]\n > 送信 Webhook は、チーム内の名簿やチャネルの一覧を取得するなど、他の API にはアクセスできません。\n\nこのステップ バイ ステップ ガイドは、Teams で送信 Webhook を作成するのに役立ちます。 次の出力が表示されます。\n\n![準備](~/assets/images/sbs-outgoing-webhooks/output-result1.png)\n"
 - title: 前提条件
   durationInMinutes: 1
-  content: "次のツールをインストールし、開発環境をセットアップしてください。  \n\n* 有効なアカウントを持つ [Microsoft Teams](https://teams.microsoft.com/)\n* [Visual Studio の最新バージョン](https://visualstudio.microsoft.com/downloads/)\n* [ngrok](https://ngrok.com/download) の最新バージョン (devbox テスト用のみ) または同等のトンネリング ソリューション\n\n  > [!NOTE]\n  > ngrok をダウンロードしたら、サインアップして [authtoken](https://ngrok.com/download) をインストールします。\n"
+  content: "次のツールをインストールし、開発環境をセットアップしてください。  \n\n | &nbsp; | インストール | 使用するには... |\n | --- | --- | --- |\n | **必須** | &nbsp; | &nbsp; |\n | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams は、チャット、会議、通話、すべて 1 か所のアプリを通じて、共同作業するすべてのユーザーと共同作業を行います。|\n | &nbsp; | [Visual Studio 2022 バージョン 17.3](https://visualstudio.microsoft.com)<br> 次の 2 つのワークロードのいずれかをインストールします。<br> • **ASP.NET と Web 開発** <br> • **.NET Core クロスプラットフォーム開発** | Visual Studio 2022 でエンタープライズ バージョンをインストールし、ワークロードをインストールできます。 |\n | &nbsp; | [ngrok](https://ngrok.com/download) | Teams アプリの機能 (会話ボット、メッセージ拡張機能、受信 Webhook) には、受信接続が必要です。 トンネルは、開発システムを Teams に接続します。 タブのみを含むアプリでは必須ではありません。 このパッケージはプロジェクト ディレクトリ内にインストールされます (npm `devDependencies` を使用)。 |\n\n  > [!NOTE]\n  > ngrok をダウンロードしたら、サインアップして [authtoken](https://ngrok.com/download) をインストールします。\n"
 - title: ローカル環境を設定する
   durationInMinutes: 1
   content: "リポジトリをローカル GitHub に複製 `Microsoft-Teams-Samples` します。  \n\n 1. [Microsoft Teams のサンプルを](https://github.com/OfficeDev/Microsoft-Teams-Samples)開きます。\n 1. [ **コード**] を選択します。\n 1. ドロップダウン メニューから[ **Open with GitHub Desktop]\\(GitHub Desktop で開く\\**) を選択します。\n\n    ![Clone](~/assets/images/sbs-outgoing-webhooks/clone-repository.png)\n\n 1. [ **複製**] を選択します。 \n"
