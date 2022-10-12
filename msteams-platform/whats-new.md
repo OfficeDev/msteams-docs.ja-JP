@@ -4,12 +4,12 @@ description: Microsoft Teams の新しい開発者向け機能と、既存の機
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 674da73dfbbb5417ef498315da0b3219466a4935
-ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
+ms.openlocfilehash: 07a4edf8751707a9ae0268b05b0314c85f471209
+ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68295971"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68537578"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -284,15 +284,16 @@ ms.locfileid: "68295971"
 
 開発者向けプレビューは、リリース前の Teams プラットフォーム機能にいち早くアクセスできる公開プログラムです。
 
-**2022 年 9 月**
+**2022 年 10 月**
 
-***2022 年 9 月 23*** 日: [スケジュールされたチャネル会議の会議アプリのサポートを導入しました。](apps-in-teams-meetings/meeting-app-extensibility.md)
+***2022 年 10 月 11*** 日: [会議のステージにコンテンツを共有するためのディープ リンクを生成します。](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 
 :::column-end:::
 :::row-end:::
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ------------------ |
+| 09/23/2022 | スケジュールされたチャネル会議の会議アプリのサポートを導入しました。 | Teams 会議用のアプリを作成し、[統合会議アプリ](apps-in-teams-meetings/meeting-app-extensibility.md)>呼び出す |
 | 08/23/2022 | モバイルで Teams 会議ステージにアプリを共有する | Teams 会議と通話用のアプリをビルド> [会議用のアプリを有効にして構成する](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
 | 08/10/2022 | スケジュールされたパブリック チャネル会議用のアプリ | Teams 会議と通話用のアプリをビルド > [[概要]](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 08/03/2022 | Teams 会議ステージでアプリの API をミュートおよびミュート解除する | [Teams 会議と通話用のアプリをビルドする] > [[会議アプリの API リファレンス]](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
