@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: 0ab0bf436ce3ca27b55a68ea2c80f1451f4d967e
-ms.sourcegitcommit: 134ce9381891e51e6327f1f611fdfd60c90cca18
+ms.openlocfilehash: 31b962d747a792b58a9efc9e2c52e42dc841ed18
+ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "67425587"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68552495"
 ---
 # <a name="live-share-media-capabilities"></a>Live Share メディア機能
 
@@ -26,8 +26,8 @@ Live Share SDK を使用すると、わずか数行のコードを使用して�
 npm を使用して SDK の最新バージョンをアプリケーションに追加するには:
 
 ```bash
-npm install @microsoft/live-share --save
-npm install @microsoft/live-share-media --save
+npm install @microsoft/live-share@next --save
+npm install @microsoft/live-share-media@next --save
 ```
 
 または
@@ -35,8 +35,8 @@ npm install @microsoft/live-share-media --save
 [Yarn](https://yarnpkg.com/) を使用して SDK の最新バージョンをアプリケーションに追加するには:
 
 ```bash
-yarn add @microsoft/live-share
-yarn add @microsoft/live-share-media
+yarn add @microsoft/live-share@next
+yarn add @microsoft/live-share-media@next
 ```
 
 ## <a name="media-sync-overview"></a>メディア同期の概要
@@ -45,8 +45,8 @@ Live Share SDK には、メディア同期に関連する 2 つの主要なク�
 
 | クラス                                                                                        | 説明                                                                                                                                       |
 | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [EphemeralMediaSession](/javascript/api/@microsoft/live-share-media/ephemeralmediasession)     | 独立したメディア ストリームでメディア トランスポート コントロールと再生状態を調整するように設計されたカスタム エフェメラル オブジェクト。                          |
-| [MediaPlayerSynchronizer](/javascript/api/@microsoft/live-share-media/mediaplayersynchronizer) | インターフェイスを実装`IMediaPlayer`するすべてのオブジェクト (HTML5 `<video>` や -- を使用して `EphemeralMediaSession`) を`<audio>`同期します。 |
+| [LiveMediaSession](/javascript/api/@microsoft/live-share-media/livemediasession)     | 独立したメディア ストリームでメディア トランスポート コントロールと再生状態を調整するように設計されたカスタム ライブ オブジェクト。                          |
+| [MediaPlayerSynchronizer](/javascript/api/@microsoft/live-share-media/mediaplayersynchronizer) | インターフェイスを実装`IMediaPlayer`するすべてのオブジェクト (HTML5 `<video>` や -- を使用して `LiveMediaSession`) を`<audio>`同期します。 |
 
 例:
 
@@ -61,19 +61,15 @@ Live Share SDK には、メディア同期に関連する 2 つの主要なク�
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
 ```javascript
-import * as microsoftTeams from "@microsoft/teams-js";
-import { TeamsFluidClient, UserMeetingRole } from "@microsoft/live-share";
-import { EphemeralMediaSession } from "@microsoft/live-share-media";
-
-// Initialize the Teams Client SDK
-await microsoftTeams.app.initialize();
+import { LiveShareClient, UserMeetingRole } from "@microsoft/live-share";
+import { LiveMediaSession } from "@microsoft/live-share-media";
 
 // Setup the Fluid container
-const client = new TeamsFluidClient();
+const liveShare = new LiveShareClient();
 const schema = {
-  initialObjects: { mediaSession: EphemeralMediaSession },
+  initialObjects: { mediaSession: LiveMediaSession },
 };
-const { container } = await client.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 const { mediaSession } = container.initialObjects;
 
 // Get the player from your document and create synchronizer
@@ -88,21 +84,17 @@ await mediaSession.initialize(allowedRoles);
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```TypeScript
-import * as microsoftTeams from "@microsoft/teams-js";
-import { TeamsFluidClient, UserMeetingRole } from "@microsoft/live-share";
-import { EphemeralMediaSession, IMediaPlayer, MediaPlayerSynchronizer } from "@microsoft/live-share-media";
+import { LiveShareClient, UserMeetingRole } from "@microsoft/live-share";
+import { LiveMediaSession, IMediaPlayer, MediaPlayerSynchronizer } from "@microsoft/live-share-media";
 import { ContainerSchema } from "fluid-framework";
 
-// Initialize the Teams Client SDK
-await microsoftTeams.app.initialize();
-
 // Join the Fluid container
-const client = new TeamsFluidClient();
+const liveShare = new LiveShareClient();
 const schema: ContainerSchema = {
-  initialObjects: { mediaSession: EphemeralMediaSession },
+  initialObjects: { mediaSession: LiveMediaSession },
 };
-const { container } = await client.joinContainer(schema);
-const mediaSession = container.initialObjects.mediaSession as EphemeralMediaSession;
+const { container } = await liveShare.joinContainer(schema);
+const mediaSession = container.initialObjects.mediaSession as LiveMediaSession;
 
 // Get the player from your document and create synchronizer
 const player: IMediaPlayer = document.getElementById("player") as HTMLVideoElement;
@@ -115,7 +107,7 @@ await mediaSession.initialize(allowedRoles);
 
 ---
 
-グループの `EphemeralMediaSession` 再生状態に対する変更を自動的にリッスンします。 `MediaPlayerSynchronizer`によって出力された`EphemeralMediaSession`状態変更をリッスンし、HTML5 `<video>` や`<audio>`要素などの指定された`IMediaPlayer`オブジェクトに適用します。 バッファー イベントなど、ユーザーが意図的に開始しなかった再生状態の変更を回避するには、プレイヤーから直接ではなく、シンクロナイザーを通じてトランスポート コントロールを呼び出す必要があります。
+グループの `LiveMediaSession` 再生状態に対する変更を自動的にリッスンします。 `MediaPlayerSynchronizer`によって出力された`LiveMediaSession`状態変更をリッスンし、HTML5 `<video>` や`<audio>`要素などの指定された`IMediaPlayer`オブジェクトに適用します。 バッファー イベントなど、ユーザーが意図的に開始しなかった再生状態の変更を回避するには、プレイヤーから直接ではなく、シンクロナイザーを通じてトランスポート コントロールを呼び出す必要があります。
 
 例:
 
@@ -156,13 +148,13 @@ document.getElementById("change-track-button").onclick = () => {
 ```
 
 > [!NOTE]
-> オブジェクトを使用してメディアを `EphemeralMediaSession` 手動で同期できますが、通常 `MediaPlayerSynchronizer`は . アプリで使用するプレーヤーによっては、Web プレーヤーのインターフェイスを [IMediaPlayer](/javascript/api/@microsoft/live-share-media/imediaplayer) インターフェイスと一致させるためにデリゲート shim を作成する必要がある場合があります。
+> オブジェクトを使用してメディアを `LiveMediaSession` 手動で同期できますが、通常 `MediaPlayerSynchronizer`は . アプリで使用するプレーヤーによっては、Web プレーヤーのインターフェイスを [IMediaPlayer](/javascript/api/@microsoft/live-share-media/imediaplayer) インターフェイスと一致させるためにデリゲート shim を作成する必要がある場合があります。
 
 ## <a name="suspensions-and-wait-points"></a>一時停止と待機ポイント
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-media-out-of-sync.png" alt-text="発表者との一時停止同期を示すスクリーンショット。":::
 
-`EphemeralMediaSession` オブジェクトの同期を一時的に停止する場合は、一時停止を使用できます。 [MediaSessionCoordinatorSuspension](/javascript/api/@microsoft/live-share-media/ephemeralmediasessioncoordinatorsuspension) オブジェクトは既定でローカルです。これは、ユーザーが見逃したものに追いついたり、休憩したりする場合に役立ちます。 ユーザーが一時停止を終了すると、同期が自動的に再開されます。
+`LiveMediaSession` オブジェクトの同期を一時的に停止する場合は、一時停止を使用できます。 [MediaSessionCoordinatorSuspension](/javascript/api/@microsoft/live-share-media/livemediasessioncoordinatorsuspension) オブジェクトは既定でローカルです。これは、ユーザーが見逃したものに追いついたり、休憩したりする場合に役立ちます。 ユーザーが一時停止を終了すると、同期が自動的に再開されます。
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
@@ -235,18 +227,18 @@ document.getElementById("ready-up-button")!.onclick = () => {
 
 ## <a name="audio-ducking"></a>オーディオ ダッキング
 
-Live Share SDK では、インテリジェントなオーディオ ダッキングがサポートされます。 アプリケーションで _試験的_ な機能を使用するには、次をコードに追加します。
+Live Share SDK では、インテリジェントなオーディオ ダッキングがサポートされます。 コードに次を追加することで、アプリケーションでこの機能を使用できます。
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
 ```javascript
-import * as microsoftTeams from "@microsoft/teams-js";
+import { meeting } from "@microsoft/teams-js";
 
 // ... set up MediaPlayerSynchronizer
 
 // Register speaking state change handler through Teams Client SDK
 let volumeTimer;
-microsoftTeams.meeting.registerSpeakingStateChangeHandler((speakingState) => {
+meeting.registerSpeakingStateChangeHandler((speakingState) => {
   if (speakingState.isSpeakingDetected && !volumeTimer) {
     // If someone in the meeting starts speaking, periodically
     // lower the volume using your MediaPlayerSynchronizer's
@@ -267,13 +259,13 @@ microsoftTeams.meeting.registerSpeakingStateChangeHandler((speakingState) => {
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```TypeScript
-import * as microsoftTeams from "@microsoft/teams-js";
+import { meeting } from "@microsoft/teams-js";
 
 // ... set up MediaPlayerSynchronizer
 
 // Register speaking state change handler through Teams Client SDK
 let volumeTimer: NodeJS.Timeout | undefined;
-microsoftTeams.meeting.registerSpeakingStateChangeHandler((speakingState: microsoftTeams.meeting.ISpeakingState) => {
+meeting.registerSpeakingStateChangeHandler((speakingState: meeting.ISpeakingState) => {
   if (speakingState.isSpeakingDetected && !volumeTimer) {
     // If someone in the meeting starts speaking, periodically
     // lower the volume using your MediaPlayerSynchronizer's
@@ -317,24 +309,23 @@ microsoftTeams.meeting.registerSpeakingStateChangeHandler((speakingState: micros
 ```
 
 > [!NOTE]
-> オーディオ ダッキングに使用される `registerSpeakingStateChangeHandler` API は、現在、話している非ローカル ユーザーに対してのみ機能します。
+> オーディオ ダッキングに使用される API は `registerSpeakingStateChangeHandler` 、現在、Microsoft Teams デスクトップとスケジュールされた会議の種類でのみ機能します。
 
 ## <a name="code-samples"></a>コード サンプル
 
 | サンプルの名前          | 説明                                                                                                                               | JavaScript                                     |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
-| React ビデオ          | EphemeralMediaSession オブジェクトが HTML5 ビデオでどのように機能するかを示す基本的な例。                                                        | [表示](https://aka.ms/liveshare-reactvideo)    |
+| React ビデオ          | LiveMediaSession オブジェクトが HTML5 ビデオでどのように動作するかを示す基本的な例。                                                        | [表示](https://aka.ms/liveshare-reactvideo)    |
 | React メディア テンプレート | 接続されているすべてのクライアントが一緒にビデオを視聴し、共有プレイリストを作成し、誰が管理しているのかを転送し、ビデオに注釈を付けることができるようにします。 | [表示](https://aka.ms/liveshare-mediatemplate) |
 
 ## <a name="next-step"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [アジャイル ポーカー チュートリアル](../sbs-teams-live-share.yml)
+> [Live Share キャンバス](teams-live-share-canvas.md)
 
 ## <a name="see-also"></a>関連項目
 
 - [Live Share SDK FAQ](teams-live-share-faq.md)
 - [LIVE SHARE SDK リファレンス ドキュメント](/javascript/api/@microsoft/live-share/)
 - [Live Share Media SDK リファレンス ドキュメント](/javascript/api/@microsoft/live-share-media/)
-- [リファレンス ドキュメント](https://aka.ms/livesharedocs)
 - [会議の Teams アプリ](teams-apps-in-meetings.md)

@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: b53d7c01722faa51824e0df17586bc8a385438b0
-ms.sourcegitcommit: 134ce9381891e51e6327f1f611fdfd60c90cca18
+ms.openlocfilehash: 7cea66e58461814e3b2cd3be85e979b7a5b75c4b
+ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "67425611"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68552512"
 ---
 ---
 
@@ -25,7 +25,7 @@ Live Share を使用する場合の一般的な質問に対する回答を取得
 
 <summary><b>独自の Azure Fluid Relay サービスを使用できますか?</b></summary>
 
-はい。 `TeamsFluidClient` クラスを作成するときに、独自の `AzureConnectionConfig` を定義できます。 Live Share では、作成したコンテナーが会議に関連付けられますが、コンテナーのトークンに署名するためのインターフェイスを実装 `ITokenProvider` する必要があります。 たとえば、Azure クラウド関数を使用してサーバーからアクセス トークンを要求する指定 `AzureFunctionTokenProvider`された関数を使用できます。
+はい。 Live Share を初期化するときに、独自 `AzureConnectionConfig`の . Live Share では、作成したコンテナーが会議に関連付けられますが、コンテナーのトークンに署名するためのインターフェイスを実装 `ITokenProvider` する必要があります。 たとえば、Azure クラウド関数を使用してサーバーからアクセス トークンを要求する指定 `AzureFunctionTokenProvider`された関数を使用できます。
 
 ほとんどの場合、無料のホステッド サービスを使用することが有益であると思われますが、Live Share アプリに独自の Azure Fluid Relay サービスを使用することが有益な場合があります。 次の場合は、カスタム AFR サービス接続の使用を検討してください。
 
@@ -53,7 +53,7 @@ Live Share のホストされた Azure Fluid Relay サービスによって作�
 
 <summary><b>Live Share はどのような種類の会議をサポートしていますか?</b></summary>
 
-プレビュー中は、スケジュールされた会議のみがサポートされ、すべての参加者が会議予定表に参加している必要があります。 1 対 1 の通話、グループ通話、今すぐ会議などの会議の種類はサポートされていません。
+スケジュールされた会議、1 対 1 の通話、グループ通話、会議がサポートされます。 チャネル会議はまだサポートされていません。
 
 <br>
 
@@ -79,7 +79,7 @@ Live Share のホストされた Azure Fluid Relay サービスによって作�
 </details>
 
 <details>
-<summary><b>Teams の外部で Live Share の一時的なデータ構造を使用できますか?</b></summary>
+<summary><b>Teams の外部で Live Share のデータ構造を使用できますか?</b></summary>
 
 現在、Live Share パッケージでは、Teams クライアント SDK が正しく機能している必要があります。 Microsoft Teams 内の `@microsoft/live-share` 機能、または `@microsoft/live-share-media` Microsoft Teams 以外では機能しません。 これが興味のある場合は、 [ここでディスカッションを開始](https://github.com/microsoft/live-share-sdk/discussions)できます。
 
@@ -106,7 +106,7 @@ Live Share のホストされた Azure Fluid Relay サービスによって作�
 
 ブラウザーでローカルでテストするときの変更に起因する `initialObjects` エラーを修正するには、URL からハッシュされたコンテナー ID を削除し、ページを再読み込みします。 Teams 会議でテストしている場合は、新しい会議を開始してもう一度やり直してください。
 
-アプリを新規 `SharedObject` または `EphemeralObject` インスタンスで頻繁に更新する予定がある場合は、新しいスキーマ変更を運用環境にデプロイする方法を検討する必要があります。 実際のリスクは比較的低く、持続性は短くなりますが、変更をロールアウトする時点でアクティブなセッションが存在する可能性があります。 セッション内の既存のユーザーは影響を受けませんが、重大な変更をデプロイした後にそのセッションに参加しているユーザーは、セッションへの接続に問題がある可能性があります。 これを軽減するために、次の解決策の一部を検討してください。
+アプリを新規 `SharedObject` または `LiveObject` インスタンスで頻繁に更新する予定がある場合は、新しいスキーマ変更を運用環境にデプロイする方法を検討する必要があります。 実際のリスクは比較的低く、持続性は短くなりますが、変更をロールアウトする時点でアクティブなセッションが存在する可能性があります。 セッション内の既存のユーザーは影響を受けませんが、重大な変更をデプロイした後にそのセッションに参加しているユーザーは、セッションへの接続に問題がある可能性があります。 これを軽減するために、次の解決策の一部を検討してください。
 
 * 通常の営業時間外に Web アプリケーションのスキーマ変更をデプロイします。
 * 変更するのではなく`initialObjects`、スキーマに加えられたすべての変更に使用`dynamicObjectTypes`します。
@@ -121,7 +121,7 @@ Live Share のホストされた Azure Fluid Relay サービスによって作�
 <details>
 <summary><b>Live Share を使用して出力できる変更イベントの数に制限はありますか?</b></summary>
 
-Live Share はプレビュー段階ですが、Live Share を通じて生成されるイベントに対する制限は適用されません。 最適なパフォーマンスを得るには、50 ミリ秒以上ごとに 1 つのメッセージに対して、または`EphemeralObject`インスタンスから`SharedObject`生成された変更を破棄する必要があります。 これは、カーソルの位置の同期、インク、ページの周囲のオブジェクトのドラッグなど、マウスまたはタッチ座標に基づいて変更を送信する場合に特に重要です。
+Live Share はプレビュー段階ですが、Live Share を通じて生成されるイベントに対する制限は適用されません。 最適なパフォーマンスを得るには、50 ミリ秒以上ごとに 1 つのメッセージに対して、または`LiveObject`インスタンスから`SharedObject`生成された変更を破棄する必要があります。 これは、カーソルの位置の同期、インク、ページの周囲のオブジェクトのドラッグなど、マウスまたはタッチ座標に基づいて変更を送信する場合に特に重要です。
 
 <br>
 

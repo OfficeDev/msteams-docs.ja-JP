@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 07/21/2022
-ms.openlocfilehash: baa192bf82e059b1cfe7a9fc8979874710f266b1
-ms.sourcegitcommit: 134ce9381891e51e6327f1f611fdfd60c90cca18
+ms.openlocfilehash: b8bec005450515fbef7dfb60e58fac1325235b62
+ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2022
-ms.locfileid: "67425635"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68552519"
 ---
 ---
 
@@ -27,17 +27,17 @@ ms.locfileid: "67425635"
 
 ## <a name="connect-to-azure-fluid-relay-service"></a>Azure Fluid Relay サービスに接続する
 
-`TeamsFluidClient` クラスを作成するときに、独自の `AzureConnectionConfig` を定義できます。 Live Share では、作成したコンテナーが会議に関連付けられますが、コンテナーのトークンに署名するためのインターフェイスを実装 `ITokenProvider` する必要があります。 この例では、Azure `AzureFunctionTokenProvider`クラウド関数を使用してサーバーからアクセス トークンを要求する Azure について説明します。
+初期化を `LiveShareClient`呼び出すときは、独自 `AzureConnectionConfig`の . Live Share では、作成したコンテナーが会議に関連付けられますが、コンテナーのトークンに署名するためのインターフェイスを実装 `ITokenProvider` する必要があります。 この例では、Azure `AzureFunctionTokenProvider`クラウド関数を使用してサーバーからアクセス トークンを要求する Azure について説明します。
 
 # <a name="javascript"></a>[JavaScript](#tab/javascript)
 
 ```javascript
-import { TeamsFluidClient, EphemeralPresence } from "@microsoft/live-share";
+import { LiveShareClient, LivePresence } from "@microsoft/live-share";
 import { SharedMap } from "fluid-framework";
 import { AzureFunctionTokenProvider } from "@fluidframework/azure-client";
 
 // Define a custom connection for your app
-const clientProps = {
+const options = {
   connection: {
     tenantId: "MY_TENANT_ID",
     tokenProvider: new AzureFunctionTokenProvider(
@@ -49,14 +49,14 @@ const clientProps = {
   },
 };
 // Join the Fluid container
-const client = new TeamsFluidClient(clientProps);
+const liveShare = new LiveShareClient(options);
 const schema = {
   initialObjects: {
-    presence: EphemeralPresence,
+    presence: LivePresence,
     ticTacToePositions: SharedMap,
   },
 };
-const { container } = await client.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 
 // ... ready to start app sync logic
 ```
@@ -64,12 +64,16 @@ const { container } = await client.joinContainer(schema);
 # <a name="typescript"></a>[TypeScript](#tab/typescript)
 
 ```TypeScript
-import { TeamsFluidClient, EphemeralPresence, ITeamsFluidClientOptions } from "@microsoft/live-share";
+import {
+  LiveShareClient,
+  ILiveShareClientOptions,
+  LivePresence,
+} from "@microsoft/live-share";
 import { SharedMap } from "fluid-framework";
 import { AzureFunctionTokenProvider } from "@fluidframework/azure-client";
 
 // Define a custom connection for your app
-const clientProps: ITeamsFluidClientOptions = {
+const options: ILiveShareClientOptions = {
   connection: {
     tenantId: "MY_TENANT_ID",
     tokenProvider: new AzureFunctionTokenProvider(
@@ -81,14 +85,14 @@ const clientProps: ITeamsFluidClientOptions = {
   },
 };
 // Join the Fluid container
-const client = new TeamsFluidClient(clientProps);
+const liveShare = new LiveShareClient(options);
 const schema = {
   initialObjects: {
-    presence: EphemeralPresence,
+    presence: LivePresence,
     ticTacToePositions: SharedMap,
   },
 };
-const { container } = await client.joinContainer(schema);
+const { container } = await liveShare.joinContainer(schema);
 
 // ... ready to start app sync logic
 ```
@@ -110,21 +114,21 @@ Azure Fluid Relay は、任意の Web ベースのアプリケーションで動
 Live Share には、次のようなアプリ内の他の機能を強化する一般的な会議シナリオに役立つ機能があります。
 
 * [コンテナーマッピング](#container-mapping)
-* [エフェメラル オブジェクトとロール検証](#ephemeral-objects-and-role-verification)
+* [ライブ オブジェクトとロールの検証](#live-objects-and-role-verification)
 * [メディア同期](#media-synchronization)
 
 ### <a name="container-mapping"></a>コンテナーマッピング
 
-Live Share の `TeamsFluidClient` クラスは、一意の会議識別子を Fluid コンテナーにマッピングする役割を担います。これにより、すべての会議参加者が同じコンテナーに参加できるようになります。 このプロセスの一環として、クライアントは既に存在する `containerId` 会議にマップされた会議への接続を試みます。 存在しない場合は、コンテナーを`AzureClient`使用してコンテナーを作成し、それを他の`containerId`会議参加者に中継するために使用`AzureConnectionConfig`されます。
+`@microsoft/live-share` In `LiveShareClient` は、すべての会議参加者が同じコンテナーに参加することを保証する、一意の会議識別子を Fluid コンテナーにマッピングする役割を担います。 このプロセスの一環として、クライアントは既に存在する `containerId` 会議にマップされた会議への接続を試みます。 存在しない場合は、コンテナーを`AzureClient`使用してコンテナーを作成し、それを他の`containerId`会議参加者に中継するために使用`AzureConnectionConfig`されます。
 
 アプリに既に Fluid コンテナーを作成し、他のメンバーと共有するメカニズムがある場合 (会議ステージで共有されている URL に挿入 `containerId` するなど) は、アプリでは必要ない場合があります。
 
-### <a name="ephemeral-objects-and-role-verification"></a>エフェメラル オブジェクトとロール検証
+### <a name="live-objects-and-role-verification"></a>ライブ オブジェクトとロールの検証
 
-Live Share の一時的なデータ構造 (`EphemeralPresence`たとえば、`EphemeralState``EphemeralEvent`会議でのコラボレーションに合わせて調整されているため、Microsoft Teams の外部で使用される Fluid コンテナーではサポートされていません)。 ロール検証などの機能は、アプリがユーザーの期待に合わせて調整するのに役立ちます。
+Live Share のライブ データ構造 (たとえば`LivePresence`、`LiveState``LiveEvent`会議でのコラボレーションに合わせて調整されているため、Microsoft Teams の外部で使用される Fluid コンテナーではサポートされていません)。 ロール検証などの機能は、アプリがユーザーの期待に合わせて調整するのに役立ちます。
 
 > [!NOTE]
-> さらに利点として、一時的なオブジェクトは、従来の Fluid データ構造と比較して、メッセージの待機時間が速くなります。
+> また、ライブ オブジェクトの利点として、従来の Fluid データ構造と比較して、メッセージ待ち時間が短縮されます。
 
 詳細については、「 [コア機能](../teams-live-share-capabilities.md) 」ページを参照してください。
 

@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
 ms.date: 04/07/2022
-ms.openlocfilehash: f6dd6bb0f130e69f4147ae73be085795d75b1083
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: ee88797d007e736eb7958e462d8697f379c99413
+ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780815"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68552575"
 ---
 # <a name="dice-roller-code-tutorial"></a>Dice Roller コードのチュートリアル
 
@@ -28,7 +28,7 @@ Dice Roller サンプル アプリでは、ユーザーにロールボタンが�
 
 ## <a name="set-up-the-application"></a>アプリケーションを設定します。
 
-まず、必要なモジュールをインポートします。 このサンプルでは、流動フレームワークの [SharedMap DDS](https://fluidframework.com/docs/data-structures/map/) と、Live Share SDK の [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) を使用します。 このサンプルでは、Teams会議の機能拡張がサポートされているため、[[Teams クライアント SDK]](https://github.com/OfficeDev/microsoft-teams-library-js) を含める必要があります。 最後に、サンプルはローカルとTeams会議の両方で実行するように設計されているため、[サンプルをローカルでテスト](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious)するために必要な追加の流動フレームワーク部分を含める必要があります。
+まず、必要なモジュールをインポートします。 このサンプルでは、Fluid Framework と [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) クラスの [SharedMap DDS](https://fluidframework.com/docs/data-structures/map/) を使用します。 このサンプルでは、Teams会議の機能拡張がサポートされているため、[[Teams クライアント SDK]](https://github.com/OfficeDev/microsoft-teams-library-js) を含める必要があります。 最後に、サンプルはローカルとTeams会議の両方で実行するように設計されているため、[サンプルをローカルでテスト](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious)するために必要な追加の流動フレームワーク部分を含める必要があります。
 
 アプリケーションは、コンテナーで使用できる一連の _初期オブジェクト_ を定義するスキーマを使用して、Fluid コンテナーを作成します。 このサンプルでは、SharedMap を使用して、ロールされた最新のダイ値を格納します。 詳細については、「[データ プライバシー](https://fluidframework.com/docs/build/data-modeling/)」を参照してください。
 
@@ -38,9 +38,8 @@ Teams 会議アプリ、複数のビュー (コンテンツ、構成、ステー
 
 ```js
 import { SharedMap } from "fluid-framework";
-import { TeamsFluidClient } from "@microsoft/live-share";
 import { app, pages } from "@microsoft/teams-js";
-import { LOCAL_MODE_TENANT_ID } from "@fluidframework/azure-client";
+import { LiveShareClient, testLiveShare } from "@microsoft/live-share";
 import { InsecureTokenProvider } from "@fluidframework/test-client-utils";
 
 const searchParams = new URL(window.location).searchParams;
@@ -100,36 +99,26 @@ start().catch((error) => console.error(error));
 
 すべてのアプリ ビューが共同作業である必要があるわけではありません。 `stage`ビューには _常に_ コラボレーション機能が必要です。ビューには`content`コラボレーション機能 _が必要な場合があります_。また、`config` ビューにはコラボレーション機能は必要 _ありません_。 共同作業機能が必要なビューの場合は、現在の会議に関連付けられている Fluid コンテナーに参加する必要があります。
 
-会議のコンテナーに参加するのは、新しい [TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) を作成し、それを [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) メソッドと呼ぶのと同じくらい簡単です。 ローカルで実行する場合は、特別な `LOCAL_MODE_TENANT_ID` カスタム接続構成を渡す必要がありますが、それ以外の場合は、ローカル コンテナーの結合は、Teams でコンテナーを参加させるのと同じです。
+会議のコンテナーに参加するのは、 [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) を初期化し、 [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) メソッドを呼び出すのと同じくらい簡単です。
+
+ローカルで実行している場合は、 [testLiveShare](/javascript/api/@microsoft/live-share/testliveshare) をインポートし、その [initialize()](/javascript/api/@microsoft/live-share.testliveshare#@microsoft-live-share-testliveshare-initialize) メソッドを呼び出すことができます。 次に、 [joinContainer()](/javascript/api/@microsoft/live-share.testliveshare#@microsoft-live-share-testliveshare-joincontainer) メソッドを使用してセッションに接続します。
 
 ```js
 async function joinContainer() {
   // Are we running in teams?
-  let client;
   if (!!searchParams.get("inTeams")) {
     // Create client
-    client = new TeamsFluidClient();
-  } else {
-    // Create client and configure for testing
-    client = new TeamsFluidClient({
-      connection: {
-        type: "local",
-        tokenProvider: new InsecureTokenProvider("", {
-          id: "123",
-          name: "Test User",
-        }),
-        endpoint: "http://localhost:7070",
-      },
-    });
+    const liveShare = new LiveShareClient();
+    // Join container
+    return await liveShare.joinContainer(containerSchema, onContainerFirstCreated);
   }
-
-  // Join container
-  return await client.joinContainer(containerSchema, onContainerFirstCreated);
+  // Create client and configure for testing
+  testLiveShare.initialize();
+  return await testLiveShare.joinContainer(containerSchema, onContainerFirstCreated);
 }
 ```
 
-> [!NOTE]
-> ローカルでテストすると、TeamsFluidClient によってブラウザー URL が更新され、作成されたテスト コンテナーの ID が含まれます。 そのリンクを他のブラウザー タブにコピーすると、TeamsFluidClient が作成されたテスト コンテナーに参加します。 アプリケーション URL の変更がアプリケーションの操作を妨げる場合、テスト コンテナー ID の格納に使用される戦略は、TeamsFluidClient に渡される [setLocalTestContainerId](/javascript/api/@microsoft/live-share/iteamsfluidclientoptions#@microsoft-live-share-iteamsfluidclientoptions-setlocaltestcontainerid) オプションと [getLocalTestContainerId](/javascript/api/@microsoft/live-share/iteamsfluidclientoptions#@microsoft-live-share-iteamsfluidclientoptions-getlocaltestcontainerid) オプションを使用してカスタマイズできます。
+ローカルでテストする場合は、 `testLiveShare` 作成されたテスト コンテナーの ID を含むブラウザー URL を更新します。 そのリンクを他のブラウザー タブにコピーすると、 `testLiveShare` 作成されたテスト コンテナーに参加します。 アプリケーション URL の変更がアプリケーションの操作に干渉する場合、テスト コンテナー ID の格納に使用される戦略は、[setLocalTestContainerId オプションと getLocalTestContainerId](/javascript/api/@microsoft/live-share.iliveshareclientoptions#@microsoft-live-share-iliveshareclientoptions-setlocaltestcontainerid) オプションを[](/javascript/api/@microsoft/live-share.iliveshareclientoptions#@microsoft-live-share-iliveshareclientoptions-getlocaltestcontainerid)`LiveShareClient`使用してカスタマイズできます。
 
 ## <a name="write-the-stage-view"></a>ステージ ビューを記述する
 
@@ -200,7 +189,7 @@ diceMap.on("valueChanged", updateDice);
 
 ## <a name="write-the-side-panel-view"></a>サイド パネル ビューを記述する
 
-タブ `contentUrl` から `sidePanel` フレーム コンテキストで読み込まれたサイド パネルビューは、ユーザーが会議内でアプリを開いたときにサイド パネルに表示されます。 このビューの目的は、会議ステージにアプリを共有する前に、ユーザーがアプリのコンテンツを選択できるようにすることです。 Live Share SDK アプリの場合は、サイド パネル ビューをアプリのコンパニオン エクスペリエンスとして使用することもできます。 サイド パネル ビューから [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) を呼び出すと、ステージ ビューが接続されているのと同じ Fluid コンテナーに接続されます。 このコンテナーは、ステージ ビューとの通信に使用できます。 全員のステージ ビュー _および_ サイドパネル ビューと通信していることを確認してください。
+タブ `contentUrl` から `sidePanel` フレーム コンテキストで読み込まれたサイド パネルビューは、ユーザーが会議内でアプリを開いたときにサイド パネルに表示されます。 このビューの目的は、会議ステージにアプリを共有する前に、ユーザーがアプリのコンテンツを選択できるようにすることです。 Live Share SDK アプリの場合は、サイド パネル ビューをアプリのコンパニオン エクスペリエンスとして使用することもできます。 サイド パネル ビューから [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) を呼び出すと、ステージ ビューが接続されているのと同じ Fluid コンテナーに接続されます。 このコンテナーは、ステージ ビューとの通信に使用できます。 全員のステージ ビュー _および_ サイドパネル ビューと通信していることを確認してください。
 
 サンプルのサイド パネル ビューでは、ユーザーに [ステージへの共有] ボタンの選択を求めるメッセージが表示されます。
 
@@ -228,8 +217,8 @@ function renderSidePanel(elem) {
 
 アプリマニフェストの `configurationUrl` を介して読み込まれた設定ビューは、ユーザーが最初に Teams 会議にアプリを追加したときに表示されます。 このビューにより、開発者は、ユーザー入力に基づいて会議に固定されるタブの `contentUrl` を構成できます。 `contentUrl` を設定するためにユーザー入力が必要ない場合でも、このページは現在必要です。
 
-> [!IMPORTANT]
-> Live Share SDK の [joinContainer()](/javascript/api/@microsoft/live-share/teamsfluidclient#@microsoft-live-share-teamsfluidclient-joincontainer) は、タブ `settings` コンテキストではサポートされていません。
+> [!NOTE]
+> Live Share の [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) は、タブ `settings` コンテキストではサポートされていません。
 
 サンプルの設定ビューでは、保存ボタンを選択するようにユーザーに求められます。
 
