@@ -1,16 +1,16 @@
 ---
 title: Microsoft 365 用の Teams アプリを発行する
-description: Microsoft 365 対応の Teams アプリを Teams、Outlook、Office のユーザーが検出できるようにする方法について説明します。 シングルテナント、マルチテナント分散について知る。
-ms.date: 05/24/2022
+description: Microsoft 365 対応の Teams アプリを、単一テナントとマルチテナント配布を通じて Teams、Outlook、Office のユーザーが検出できるようにする方法について説明します。
+ms.date: 10/10/2022
 ms.topic: conceptual
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 01806f5aa7e3a5b0cb79cb6a2562cbf104f031bb
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: b225624970a380679b2b1a508bf3b4d2882de72e
+ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100939"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68537522"
 ---
 # <a name="publish-teams-apps-for-microsoft-365"></a>Microsoft 365 用の Teams アプリを発行する
 
@@ -42,7 +42,7 @@ Teams 管理者は、Teams [管理センター](https://admin.teams.microsoft.co
 
 ## <a name="multitenant-distribution"></a>マルチテナント分布
 
-Outlook と Office が有効になっている Teams アプリの [Microsoft AppSource](https://appsource.microsoft.com/) (Microsoft コマーシャル マーケットプレース) 提出プロセスは、従来の Teams アプリと同じです。 唯一の違いは、アプリ パッケージで Teams アプリ マニフェスト [バージョン 1.13](../tabs/how-to/using-teams-client-sdk.md) を使用する必要がある点です。これにより、Microsoft 365 全体で実行される Teams アプリのサポートが導入されます。
+Outlook と Office が有効になっている Teams アプリの [Microsoft コマーシャル マーケットプレース](https://appsource.microsoft.com/) (Microsoft AppSource) 申請プロセスは、従来の Teams アプリと同じです。 唯一の違いは、アプリ パッケージで Teams アプリ マニフェスト [バージョン 1.13](../tabs/how-to/using-teams-client-sdk.md) を使用する必要がある点です。これにより、Microsoft 365 全体で実行される Teams アプリのサポートが導入されます。
 
 > [!TIP]
 > Teams 開発者ポータルを使用して [、アプリ パッケージを検証](https://dev.teams.microsoft.com/validation) し、( [Microsoft パートナー ネットワーク](https://partner.microsoft.com/)経由で) Teams ストアに送信する前にエラーや警告を解決します。

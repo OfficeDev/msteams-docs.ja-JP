@@ -1,16 +1,16 @@
 ---
 title: Teams 個人用タブ アプリを Microsoft 365 に拡張する
-description: Outlook と Office で実行するように個人用アプリを更新します。 マニフェストと TeamsJS SDK V2 を更新し、同意のセキュリティを修正し、SSO 用に Azure AD アプリの登録を更新します。
-ms.date: 05/24/2022
+description: Microsoft Teams に加えて、Outlook と Office で実行するように個人用タブ アプリを更新する方法について説明します。
+ms.date: 10/10/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 562bda342cc9067c96213703cd0f6725e9da66d1
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: 99b95d72e75bf43381ea441cf2e94f9cf63edc7e
+ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243508"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68537592"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Teams 個人用タブを Microsoft 365 全体に拡張する
 
@@ -35,6 +35,7 @@ Outlook と Office で実行するように個人用アプリを更新するに�
 * Microsoft 365 開発者プログラム サンドボックス テナント
 * *[Office 365 対象指定リリース]* に登録されているサンドボックス テナント
 * Microsoft 365 Apps *ベータ チャネル* からインストールされた Office アプリを含むコンピューター
+* (省略可能)Android 用 Office アプリがインストールされ、*ベータ プログラム* に登録されている Android デバイスまたはエミュレーター
 * (省略可能) Microsoft Visual Studio コードの [Teams ツールキット](https://aka.ms/teams-toolkit) 拡張機能を使用してコードを更新する
 
 > [!div class="nextstepaction"]
@@ -46,7 +47,7 @@ Outlook と Office で実行するように個人用アプリを更新するに�
 
 このチュートリアルを完了するためにサンプル コードを使用する場合は、 [Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) のセットアップ手順に従って、Visual Studio Code 用 Teams Toolkit 拡張機能を使用して個人用タブ アプリを作成し、この記事に戻って Microsoft 365 用に更新します。
 
-または、次のクイック スタート セクションで Microsoft 365 が既に有効になっている基本的なシングル サインオン *hello world* アプリを使用し、 [Teams でアプリをサイドロード](#sideload-your-app-in-teams) する手順に進むことができます。
+または、次の [クイック スタート](#quickstart) セクションで Microsoft 365 が既に有効になっている基本的なシングル サインオン *hello world* アプリを使用し、[Teams でアプリをサイドロード](#sideload-your-app-in-teams)する手順に進むことができます。
 
 ### <a name="quickstart"></a>クイックスタート
 
@@ -93,7 +94,7 @@ Teams ツールキットを使用して個人用アプリを作成した場合�
 
 Outlook と Office で実行するには、アプリで npm パッケージ `@microsoft/teams-js@2.0.0` (またはそれ以降) を参照する必要があります。 Outlook と Office ではダウンレベル バージョンのコードがサポートされていますが、非推奨の警告がログに記録され、Outlook と Office のダウンレベル バージョンの TeamsJS のサポートは最終的に停止します。
 
-Teams Toolkit を使用すると、1.x TeamsJS バージョンから TeamsJS バージョン 2.0.0 にアップグレードするために必要なコード変更を特定して自動化できます。 または、同じ手順を手動で実行することもできます。詳細については、 [Microsoft Teams JavaScript クライアント SDK](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) を参照してください。
+Teams Toolkit を使用すると、1.x TeamsJS バージョンから TeamsJS バージョン 2.x.x にアップグレードするために必要なコード変更を特定して自動化できます。 または、同じ手順を手動で実行することもできます。詳細については、 [Microsoft Teams JavaScript クライアント SDK](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) を参照してください。
 
 1. *コマンド パレット* を開きます。 `Ctrl+Shift+P`
 1. コマンド`Teams: Upgrade Teams JS SDK and code references`を実行します。
@@ -102,8 +103,8 @@ Teams Toolkit を使用すると、1.x TeamsJS バージョンから TeamsJS バ
 
 > [!div class="checklist"]
 >
-> * teams-js@2.0.0 のステートメントをインポートする
-> * teams-js@2.0.0 の[関数、列挙型、およびインターフェイス呼び出し](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20)
+> * teams-js@2.x.x の Import ステートメント
+> * teams-js@2.x.x の[関数、列挙型、インターフェイス呼び出し](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20)
 > * `TODO` コメントリマインダーは、 [コンテキスト](../tabs/how-to/using-teams-client-sdk.md#updates-to-the-context-interface) インターフェイスの変更の影響を受ける可能性がある領域にフラグを設定します
 > * [コールバック関数を Promise に変換する](../tabs/how-to/using-teams-client-sdk.md#callbacks-converted-to-promises)ための `TODO` コメント リマインダー
 
@@ -226,7 +227,7 @@ Office on the web で実行されているアプリをプレビューするに�
 
 Android 用 Office アプリで実行されているアプリを表示するには:
 
-1. Office アプリを起動し、開発テナント アカウントを使用してサインインします。 Office アプリ for Android が Teams でアプリをサイドロードする前に既に実行されていた場合は、インストールされているアプリの中でアプリを表示するために再起動する必要があります。
+1. Office アプリを起動し、開発テナント アカウントを使用してサインインします。 Office アプリ for Android が Teams でアプリをサイドロードする前に既に実行されていた場合は、インストールされているアプリ間でアプリを表示するには、アプリを再起動する必要があります。
 1. **[アプリ**] アイコンを選択します。 サイドロードされたアプリは、インストールされているアプリの間に表示されます。
 1. アプリ アイコンを選択して、Android 用 Office アプリでアプリを起動します。
 

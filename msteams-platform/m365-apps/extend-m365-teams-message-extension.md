@@ -1,16 +1,16 @@
 ---
 title: Microsoft 365 間で Teams メッセージ拡張機能を拡張する
-description: この記事では、アプリ マニフェストを更新し、Outlook チャネルを追加し、更新されたアプリをサイドローディングすることにより、検索ベースの Teams メッセージ拡張機能を Outlook で実行するように更新する方法について説明します。
-ms.date: 05/24/2022
+description: Microsoft Teams に加えて、Outlook で実行するように検索ベースのメッセージ拡張機能を更新する方法について説明します。
+ms.date: 10/10/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: high
-ms.openlocfilehash: 2fc0a66683bb5454bfb8fbced64e97618522fce7
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: a0de61f0d1b6414d4ab35b54e4ec708f3b868948
+ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243515"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "68537508"
 ---
 # <a name="extend-a-teams-message-extension-across-microsoft-365"></a>Microsoft 365 間で Teams メッセージ拡張機能を拡張する
 
@@ -36,7 +36,11 @@ ms.locfileid: "68243515"
 * (省略可能) Teams Toolkit 拡張機能を備えた Microsoft Visual Studio Code。
 
 > [!div class="nextstepaction"]
-> [Microsoft 365 用に拡張された Teams アプリを発行する](publish.md)
+> [前提条件のインストール](prerequisites.md)
+
+## <a name="link-unfurling"></a>リンク展開
+
+検索ベースのメッセージ拡張機能で Teams での[リンクの展開が](../messaging-extensions/how-to/link-unfurling.md)サポートされている場合は、このチュートリアルの手順を完了すると、Outlook on the webおよび Windows デスクトップ環境でのリンクの展開も可能になります。 以下の [コード サンプル](#code-sample) セクションでは、テスト用の簡単なリンク展開アプリを提供します。
 
 ## <a name="prepare-your-message-extension-for-the-upgrade"></a>アップグレードのメッセージ拡張機能を準備する
 
@@ -115,7 +119,7 @@ Microsoft Teams では、メッセージ拡張機能は、ホストする Web �
 > [!NOTE]
 > このチュートリアルで提供される [サンプル アプリ](#quickstart) を使用している場合は、シナリオに Azure Active Directory (AAD) シングル サインオン認証が含まれていないため、この手順をスキップできます。
 
-Azure Active Directory (AD) Single-sign on (SSO) for message extensions works the same way in Outlook [as it does in Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). However you need to add several client application identifiers to the Azure AD app registration of your bot in your tenant's *App registrations* portal.
+メッセージ拡張機能の Azure Active Directory シングル サインオン (SSO) は、Outlook でも [Teams と同じように](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots)機能します。 ただし、テナントの *アプリの登録* ポータルで、ボットの Azure AD アプリ登録にいくつかのクライアント アプリケーション識別子を追加する必要があります。
 
 1. Azure 管理者アカウントを使用して、[Azure portal](https://portal.azure.com) にサインインします。
 1. **[アプリ登録]** を開きます。
@@ -201,6 +205,7 @@ Your message extension is listed. You can invoke it from there and use it just a
 | **サンプルの名前** | **説明** | **Node.js** |
 |---------------|--------------|--------|
 | NPM Search Connector | Teams Toolkit を使用して、メッセージ拡張機能アプリをビルドします。 Teams、Outlook で動作します。 |  [表示](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/NPM-search-connector-M365) |
+| Teams Link Unfurling | リンクの展開を示すシンプルな Teams アプリ。 Teams、Outlook で動作します。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/55.teams-link-unfurling)
 
 ## <a name="next-step"></a>次の手順
 
