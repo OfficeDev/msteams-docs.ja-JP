@@ -6,18 +6,18 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: 31b962d747a792b58a9efc9e2c52e42dc841ed18
-ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
+ms.openlocfilehash: 0a1b7a48ffaf0cd71fd0aac2ecf7c1fe2c5970f1
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68552495"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560590"
 ---
 # <a name="live-share-media-capabilities"></a>Live Share メディア機能
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-media-capabilities-docs-feature-1.png" alt-text="Teams Live Share メディア同期":::
 
-ビデオとオーディオは、現代の世界と職場の重要な部分です。 会議で一緒にビデオを視聴することに関して、品質、アクセシビリティ、およびライセンス保護を向上させるためにできることがもっとあるという幅広いフィードバックが寄せられています。
+ビデオとオーディオは、現代の世界と職場の重要な部分です。 会議でビデオを一緒に視聴することで、品質、アクセシビリティ、ライセンス保護を向上させるために、より多くのことが可能であるというさまざまなフィードバックが聞こえました。
 
 Live Share SDK を使用すると、わずか数行のコードを使用して、任意の HTML `<video>` と`<audio>`要素に対して堅牢な **メディア同期** が可能になります。 プレイヤーの状態とトランスポート コントロール レイヤーでメディアを同期することにより、アプリで利用できる最高の品質を提供しながら、ビューとライセンスを個別に関連付けることができます。
 

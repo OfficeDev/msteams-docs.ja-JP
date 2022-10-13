@@ -5,12 +5,12 @@ description: Office 365 コネクタの使用を開始します。 Microsoft Tea
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 06/16/2021
-ms.openlocfilehash: 82fa425b3a2edb4db72c327655bdc8513d6b51f3
-ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
+ms.openlocfilehash: 8e9b1d831858bcf9aefeedbafcb098744470e1d7
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68376579"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560744"
 ---
 # <a name="create-office-365-connectors"></a>Office 365 コネクタの作成
 
@@ -19,7 +19,7 @@ With Microsoft Teams apps, you can add your existing Office 365 Connector or bui
 Office 365 コネクタを作成する方法については、次のビデオを参照してください。
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv>]
 <br>
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
@@ -87,17 +87,15 @@ Office 365 コネクタを作成する方法については、次のビデオを
     </section>
 </div>
 
-<script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-Q2Z9S56exI6Oz/ThvYaV0SUn8j4HwS8BveGPmuwLXe4CvCUEGlL80qSzHMnvGqee" crossorigin="anonymous"></script>
+<script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" integrity="sha384-Q2Z9S56exI6Oz/ThvYaV0SUn8j4HwS8BveGPmuwLXe4CvCUEGlL80qSzHMnvGqee" crossorigin="anonymous"></script>
 <script src="/Scripts/jquery-1.10.2.js"></script>
 
-<script type="module">
-        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
-        
+<script>
         function onClick() {
             pages.config.setValidityState(true);
         }
 
-        await app.initialize();
+        await microsoftTeams.app.initialize();
         pages.config.registerOnSaveHandler(function (saveEvent) {
             var radios = document.getElementsByName('notificationType');
 
@@ -149,7 +147,7 @@ Office 365 コネクタを作成する方法については、次のビデオを
 | `contentUrl` | `setConfig()` を呼び出す場合にコードによって設定される、構成ページの URL。 |
 | `webhookUrl` | The webhook URL created for the connector. Use the webhook URL to POST structured JSON to send cards to the channel. The `webhookUrl` is returned only when the application returns data successfully. |
 | `appType` | 返される`mail`値は、 `groups``teams` Office 365 メール、Office 365 グループ、または Teams にそれぞれ対応できます。 |
-| `userObjectId` | The unique ID corresponding to the Office 365 user who initiated the set up of the connector. It must be secured. This value can be used to associate the user in Office 365, who has set up the configuration in your service. |
+| `userObjectId` | コネクタのセットアップを開始したOffice 365 ユーザーに対応する一意の ID。 セキュリティで保護する必要があります。 この値を使用すると、サービスで構成を設定したOffice 365のユーザーを関連付けることができます。 |
 
 #### <a name="handle-edits"></a>編集の処理
 
@@ -163,7 +161,7 @@ Office 365 コネクタを作成する方法については、次のビデオを
 
 #### <a name="handle-removals"></a>削除の処理
 
-ユーザーが既存のコネクタ構成を削除したときに、イベント ハンドラーを実行できます。 このハンドラーは、`microsoftTeams.pages.config.registerOnRemoveHandler()` メソッドを実装することで登録します。 このハンドラーは、データベースからエントリを削除するなどのクリーンアップ操作を実行するために使用されます。
+ユーザーが既存のコネクタ構成を削除したときに、イベント ハンドラーを実行できます。 このハンドラーは、`microsoftTeams.pages.config.registerOnRemoveHandler()` メソッドを実装することで登録します。 このハンドラーは、データベースからエントリを削除するなど、クリーンアップ操作を実行するために使用されます。
 
 ### <a name="include-the-connector-in-your-manifest"></a>マニフェストにコネクタを含める
 

@@ -6,18 +6,18 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 10/04/2022
-ms.openlocfilehash: 3845d890de365eca8029a3f28d770586a6929743
-ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
+ms.openlocfilehash: 9d1a776432f728c1e56caa357089be6e47c17e4c
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68552632"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560611"
 ---
 # <a name="live-share-canvas-overview"></a>Live Share キャンバスの概要
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-docs-feature-1.png" alt-text="Teams Live Share メディア同期":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-docs-feature-1.png" alt-text="スクリーンショットは、Teams 会議の他の会議参加者と同期したキャンバスの例を示しています。":::
 
-世界中の会議室や教室では、ホワイトボードはコラボレーションの重要な部分です。 しかし、現代では、ホワイトボードは十分ではありません。 PowerPoint などの多数のデジタル ツールが現代のコラボレーションの中心であるため、同じクリエイティブな可能性を実現することが不可欠です。
+世界中の会議室や教室では、ホワイトボードはコラボレーションの重要な部分です。 しかし、現代では、ホワイトボードは十分ではありません。 PowerPoint などの多数のデジタル ツールが現代のコラボレーションの中心であり、同じクリエイティブな可能性を実現することが不可欠です。
 
 よりシームレスなコラボレーションを実現するために、Microsoft はPowerPoint Liveを作成しました。これは、Teams でのユーザーの作業に役立つものになりました。 発表者は、ペン、蛍光ペン、レーザー ポインターを使用して、すべてのユーザーが見ることができるスライドに注釈を付けて、重要な概念に注意を引くことができます。 Live Share キャンバスを使用すると、アプリは最小限の労力でPowerPoint Liveインク ツールの機能を利用できます。
 
@@ -103,7 +103,7 @@ await liveCanvas.initialize(inkingManager);
 
 ---
 
-## <a name="canvas-tools--cursors"></a>キャンバス ツール&カーソル
+## <a name="canvas-tools-and-cursors"></a>キャンバス ツールとカーソル
 
 Live Share キャンバスのセットアップと同期が完了したので、ペン ツールを選択するボタンなど、ユーザーが操作できるようにキャンバスを構成できます。 このセクションでは、使用可能なツールとその使用方法について説明します。
 
@@ -113,7 +113,7 @@ Live Share キャンバスの各インク ツールは、ユーザーが描画�
 
 #### <a name="pen-tool"></a>ペンツール
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-pen-tool.gif" alt-text="Teams Live Share キャンバス ペン ツール":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-pen-tool.gif" alt-text="GIF は、ペン ツールを使用してキャンバスにストロークを描画する例を示しています。":::
 
 ペン ツールは、キャンバスに格納されているソリッド ストロークを描画します。 既定のチップ図形は円です。
 
@@ -151,7 +151,7 @@ document.getElementById("pen-tip-size").onclick = () => {
 
 #### <a name="highlighter-tool"></a>蛍光ペン ツール
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-highlighter-tool.gif" alt-text="Teams Live Share キャンバス 蛍光ペン ツール":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-highlighter-tool.gif" alt-text="GIF は、蛍光ペン ツールを使用してキャンバスに半透明のストロークを描画する例を示しています。":::
 
 蛍光ペン ツールは、キャンバスに格納されている半透明のストロークを描画します。 既定のチップ図形は正方形です。
 
@@ -189,7 +189,7 @@ document.getElementById("highlighter-tip-size").onclick = () => {
 
 #### <a name="eraser-tool"></a>消しゴム ツール
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-eraser-tool.gif" alt-text="Teams Live Share キャンバス消しゴム ツール":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-eraser-tool.gif" alt-text="GIF は、消しゴム ツールを使用してキャンバス上のストロークを消去する例を示しています。":::
 
 消しゴム ツールは、パスをまたがるストローク全体を消去します。
 
@@ -219,7 +219,7 @@ document.getElementById("eraser-size").onclick = () => {
 
 #### <a name="point-eraser-tool"></a>ポイント消しゴム ツール
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-point-eraser-tool.gif" alt-text="Teams Live Share キャンバス ポイント消しゴム ツール":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-point-eraser-tool.gif" alt-text="GIF は、ポイント消しゴム ツールを使用してキャンバス上のストローク内の個々のポイントを削除する例を示しています。":::
 
 ポイント消しゴム ツールは、既存のストロークを半分に分割することで、そのパスを横断するストローク内の個々のポイントを消去します。 このツールは計算コストが高く、ユーザーのフレーム レートが遅くなる可能性があります。
 
@@ -247,7 +247,7 @@ document.getElementById("point-eraser").onclick = () => {
 
 #### <a name="laser-pointer"></a>レーザー ポインター
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-laser-tool.gif" alt-text="Teams Live Share キャンバス レーザー ポインター ツール":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-laser-tool.gif" alt-text="GIF は、レーザー ポインター ツールを使用してキャンバスにストロークを描画する例を示しています。":::
 
 レーザー ポインターは、マウスを動かすとレーザーの先端に後続の効果があるため、一意です。 ストロークを描画すると、後続の効果が短時間レンダリングされ、完全にフェードアウトします。 このツールは、発表者がストロークを消去するためにツールを切り替える必要がないため、会議中に画面上の情報を指摘するのに最適です。
 
@@ -285,7 +285,7 @@ document.getElementById("laser-tip-size").onclick = () => {
 
 #### <a name="line-and-arrow-tools"></a>線と矢印のツール
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-line-tool.gif" alt-text="Teams Live Share キャンバスライン ツール":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-line-tool.gif" alt-text="GIF は、線と矢印ツールを使用してキャンバスに直線を描画する例を示しています。":::
 
 線ツールを使用すると、ユーザーは終点に適用できるオプションの矢印を使用して、ある点から別の点に直線を描画できます。
 
@@ -333,7 +333,7 @@ document.getElementById("line-tip-size").onclick = () => {
 
 ### <a name="cursors"></a>カーソル
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-cursors.gif" alt-text="Teams Live Share カーソル共有":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-cursors.gif" alt-text="GIF は、キャンバス上でカーソルを共有するユーザーの例を示しています。":::
 
 ユーザーがキャンバス上で互いのカーソル位置を追跡できるように、アプリケーションでライブ カーソルを有効にすることができます。 インクツールとは異なり、カーソルはクラス全体で動作します `LiveCanvas` 。 必要に応じて、各ユーザーを識別する名前と画像を指定できます。 カーソルは、個別に有効にすることも、インクツールを使用して有効にすることもできます。
 
@@ -357,7 +357,7 @@ Web 上のほとんどのアプリケーションでは、画面サイズやア�
 
 この概念を視覚化するのに役立つ簡単な図を次に示します。
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-capabilities-docs-diagram-1.png" alt-text="Live Share キャンバス ビューポートの視覚化":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-canvas-capabilities-docs-diagram-1.png" alt-text="デスクトップ ユーザーとモバイル ユーザーの全画面表示キャンバス レイアウトを示すスクリーンショット。":::
 
 この動作は、次の方法でカスタマイズできます。
 

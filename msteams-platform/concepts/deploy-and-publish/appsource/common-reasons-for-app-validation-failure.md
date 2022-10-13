@@ -1,16 +1,16 @@
 ---
 title: アプリ検証エラーの一般的な理由
-description: アプリの検証に失敗する最も一般的な理由について説明します。 破損したリンク、説明のエラー、無効なポリシー リンク、有効なドメイン ガイドライン違反、無効なサポート リンクなど。
+description: リンクの破損、予期しないエラー、クラッシュ、有効なドメイン ガイドライン違反、機能バグなど、アプリ検証エラーの最も一般的な理由について説明します。
 ms.topic: overview
 author: v-ypalikila
 ms.author: v-ypalikila
 ms.localizationpriority: high
-ms.openlocfilehash: 1743bfc861afbbad851d2bfa6ff4236dca680ecf
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 65144510fcb6a63c1c5cfaed4c344185917dee9a
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100911"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560653"
 ---
 # <a name="common-reasons-for-app-validation-failure"></a>アプリ検証エラーの一般的な理由
 

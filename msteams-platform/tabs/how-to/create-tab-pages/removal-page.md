@@ -5,12 +5,12 @@ description: インストール後にタブを再構成できるようにする�
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 964872d0de88d7462bec68d84f7b1e1ecf3681ec
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: 40d6024d01b608c99347e9df65883906d7cb276d
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499295"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560450"
 ---
 # <a name="create-a-removal-page"></a>削除ページを作成する
 
@@ -40,7 +40,7 @@ ms.locfileid: "68499295"
 
 ### <a name="register-a-remove-handler"></a>削除ハンドラーを登録する
 
-必要に応じて、削除ページ ロジック内で、ユーザーが既存の `registerOnRemoveHandler((RemoveEvent) => {}` タブ構成を削除したときにイベント ハンドラーを呼び出すことができます。 このメソッドはインターフェイスを [`RemoveEvent`](/javascript/api/@microsoft/teams-js/pages.config.removeevent?view=msteams-client-js-latest&preserve-view=true) 取り込み、ユーザーがコンテンツを削除しようとしたときにハンドラー内のコードを実行します。 このメソッドは、基になるリソースの削除などのクリーンアップ操作を実行するために使用され、タブのコンテンツを供給します。 一度に登録できる削除ハンドラーは 1 つだけです。
+必要に応じて、削除ページ ロジック内で、ユーザーが既存の `registerOnRemoveHandler((RemoveEvent) => {}` タブ構成を削除したときにイベント ハンドラーを呼び出すことができます。 このメソッドはインターフェイスを [`RemoveEvent`](/javascript/api/@microsoft/teams-js/pages.config.removeevent?view=msteams-client-js-latest&preserve-view=true) 取り込み、ユーザーがコンテンツを削除しようとしたときにハンドラー内のコードを実行します。 このメソッドは、基になるリソースを削除してタブ コンテンツを供給するなど、クリーンアップ操作を実行するために使用されます。 一度に登録できる削除ハンドラーは 1 つだけです。
 
 インターフェイスは `RemoveEvent` 、次の 2 つのメソッドを使用してオブジェクトを記述します。
 
@@ -67,9 +67,8 @@ ms.locfileid: "68499295"
 ```html
 <body>
   <button onclick="onClick()">Delete this tab and all underlying data?</button>
-  <script type="module">
-        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
-    await app.initialize();
+  <script>
+    await microsoftTeams.app.initialize();
     pages.config.registerOnRemoveHandler((removeEvent) => {
       // Here you can designate the tab content to be removed and/or archived.
         const configPromise = pages.getConfig();

@@ -4,12 +4,12 @@ description: Microsoft Teams の新しい開発者向け機能と、既存の機
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 07a4edf8751707a9ae0268b05b0314c85f471209
-ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
+ms.openlocfilehash: b1c06e5ea6e46adf5a40d29015bf79a30d653107
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68537578"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560751"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -29,12 +29,10 @@ ms.locfileid: "68537578"
 
 すべてのアプリ開発者が利用可能な Microsoft Teams プラットフォーム機能。
 
-**2022 年 9 月**
+**2022 年 10 月**
 
-* ***2022 年 9 月 30*** 日: [Teams でサード パーティ製アプリの SaaS ライセンスを管理する](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)
-* ***2022 年 9 月 29*** 日: [Teams モバイル アプリで、ローカル デバイスへのファイルのダウンロードがサポートされるようになりました。](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)
-* ***2022 年 9 月 16*** 日: [検索ベースのメッセージ拡張機能のアダプティブ カードでユニバーサル アクションがサポートされるようになりました。](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
-* ***2022 年 9 月 6*** 日: [API を使用してカメラを使用してビデオをキャプチャするためのコード スニペットを `selectMedia` 導入しました。](concepts/device-capabilities/media-capabilities.md#code-snippets)
+* ***2022 年 10 月 12*** 日: [アプリは、インスタント会議、1 対 1、グループ通話でサポートされます。](apps-in-teams-meetings/teams-apps-in-meetings.md)
+* ***2022 年 10 月 12*** 日: [Live Share キャンバス](apps-in-teams-meetings/teams-live-share-canvas.md)
 
 :::column-end:::
 :::row-end:::
@@ -45,6 +43,10 @@ ms.locfileid: "68537578"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ----------------|
+| 09/30/2022|Teams でサード パーティ製アプリの SaaS ライセンスを管理する|アプリの収益化> Teams アプリで SaaS オファーを含める> [Teams でサード パーティ製アプリのライセンスを管理する](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)|
+| 09/29/2022|Teams モバイル アプリで、ローカル デバイスへのファイルのダウンロードがサポートされるようになりました。|デバイス機能の統合> [Teams モバイルでのファイルのダウンロード](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)>メディア機能の統合|
+| 09/16/2022|検索ベースのメッセージ拡張機能のアダプティブ カードでユニバーサル アクションがサポートされるようになりました。|検索ベースのメッセージ拡張機能のユニバーサル アクション>検索コマンド>[メッセージ拡張機能を](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)ビルドする|
+| 09/06/2022|API を使用してカメラを使用してビデオをキャプチャするためのコード スニペットを `selectMedia` 導入しました。| デバイス機能を統合>[コード スニペット](concepts/device-capabilities/media-capabilities.md#code-snippets)>メディア機能を統合する|
 | 08/09/2022 | Visual Studio 2022 用 Teams ツールキットが導入されました | [ツールと SDK] > [Visual Studio 向け Teams ツールキット] > [[Visual Studio 向け Teams ツールキットの概要]](toolkit/teams-toolkit-overview-visual-studio.md) |
 | 08/03/2022 | 個人用アプリまたはタブから Teams に共有する | [Teams と統合] > [Teams に共有] > [[個人用アプリまたはタブから Teams に共有]](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 08/03/2022 | 会議後のシナリオで会議のトランスクリプトを取得する機能が追加されました。 | [Teams 会議と通話用のアプリを構築する] > [Graph API を使用して会議のトランスクリプトを取得する] > [[概要]](graph-api/meeting-transcripts/overview-transcripts.md) |
@@ -208,7 +210,7 @@ ms.locfileid: "68537578"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ------------------ |
-| 2020/12/26 | The `replyToId` parameter in payloads sent to a bot is no longer encrypted, allowing you to use this value to construct deeplinks to these messages. Message payloads include the encrypted values in the parameter `legacy.replyToId`.  |
+| 2020/12/26 | `replyToId`ボットに送信されたペイロード内のパラメーターは暗号化されなくなり、この値を使用してこれらのメッセージへのディープ リンクを作成できます。 メッセージのペイロードには、パラメーター `legacy.replyToId` の暗号化された値が含まれます。  |
 | 2019/11/5 | Teams JavaScript SDK を使用したシングル サインオン。 | [シングル サインオン](tabs/how-to/authentication/tab-sso-overview.md) |
 | 2019/10/31 | 会話ボットとメッセージ拡張機能のドキュメントが 4.6 Bot Framework SDK に合わせて更新されました。 v3 SDK のドキュメントが [リソース] セクションで利用できます。 | すべてのボットとメッセージ拡張機能のドキュメント |
 | 2019/10/31 | 新しいドキュメントの構造と記事の大幅なリファクタリング。 デッド リンクや 404 が発生した場合は、GitHub イシューを作成して報告してください。 | すべての項目です。 |
@@ -298,7 +300,6 @@ ms.locfileid: "68537578"
 | 08/10/2022 | スケジュールされたパブリック チャネル会議用のアプリ | Teams 会議と通話用のアプリをビルド > [[概要]](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 08/03/2022 | Teams 会議ステージでアプリの API をミュートおよびミュート解除する | [Teams 会議と通話用のアプリをビルドする] > [[会議アプリの API リファレンス]](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 08/02/2022| Teams のコラボレーション コントロール| [Teams との統合] > [[コラボレーション コントロール]](samples/collaboration-control.md) |
-| 06/30/2022 | インスタント会議、1 対 1 通話、グループ通話用のアプリ| Teams 会議と通話用のアプリをビルド > [[概要]](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |05/24/2022| Live Share SDK による強化されたコラボレーション | Teams会議用のアプリのビルド > Live Share を使用した強化されたコラボレーション > [概要](apps-in-teams-meetings/teams-live-share-overview.md) |
 | 02/03/2022 | アプリ マニフェスト バージョン 1.13 が導入されました | [アプリ マニフェスト] > [開発者向けパブリック プレビュー] > [[マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md) |
 | 2022/1/17 | モバイル版アダプティブ カードのユーザー ピッカー | [カードとタスク モジュールの構築] > [カードの構築] > [[アダプティブ カードのユーザー ピッカー]](task-modules-and-cards/cards/people-picker.md)|

@@ -1,16 +1,16 @@
 ---
 title: ストア送信を準備する
-description: Microsoft Teams アプリをストアに登録する前の最後の手順について説明します。 アプリ パッケージを検証する方法について説明します。 パートナー センターで Apple App Store Connect チーム ID を更新する方法について説明します。
+description: ストアに一覧表示されるように Microsoft Teams アプリを送信する前の最後の手順。 アプリ パッケージを検証し、発行元の検証と構成証明を完了します。
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: c78cfb103b9e6bd57218b6ca31edeae54c4ecca1
-ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
+ms.openlocfilehash: bec6c900a0f478b2243685215f094b9a051c44f1
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68376607"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560681"
 ---
 # <a name="prepare-your-teams-store-submission"></a>Teams のストア送信を準備する
 

@@ -1,16 +1,16 @@
 ---
 title: ストアの申請に関する問題を解決する
-description: Microsoft Teams ストアの申請に関する問題のトラブルシューティングと修正方法について説明します。 Microsoft から直接ヘルプを受け、問題を解決し、アプリを再送信します。
+description: Microsoft Teams ストアの申請に関する問題のトラブルシューティングと修正を行います。 Microsoft から直接ヘルプを受け、問題を解決し、アプリを再送信します。
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.openlocfilehash: daa64a7f21071632b7c0728bf51829ca9540ebce
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 729275b141fc30571dcfc1a1b5e303734d216aa2
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100281"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560716"
 ---
 # <a name="resolve-issues-if-your-teams-store-submission-fails"></a>Teams ストアの送信に失敗した場合に問題を解決する
 

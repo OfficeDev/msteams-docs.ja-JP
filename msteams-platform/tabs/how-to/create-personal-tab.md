@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 40fecae63c563ae110dedf9e1430f5207574f969
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: 187f1b40c60d8f7d88b75e6f666239ab70717cf6
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499211"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560737"
 ---
 # <a name="create-a-personal-tab"></a>プライベート タブを作成する
 
@@ -31,7 +31,7 @@ ms.locfileid: "68499211"
     npm install yo gulp-cli --global
     ```
 
-1. コマンド プロンプトで、次のコマンドを入力して、Microsoft Teams アプリ ジェネレーターをインストールします。
+1. コマンド プロンプトで、次のコマンドを入力して Microsoft Teams アプリ ジェネレーターをインストールします。
 
     ```cmd
     npm install generator-teams --global
@@ -56,7 +56,7 @@ ms.locfileid: "68499211"
     yo teams
     ```
 
-1. Microsoft Teams アプリ ジェネレーターによって `manifest.json` ファイルを更新するように求められる、一連の質問に値を指定します。
+1. Microsoft Teams アプリ ジェネレーターによってファイルを更新するように求められた一連の質問に値を入力します `manifest.json` 。
 
     :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Teams ジェネレーター":::
 
@@ -223,7 +223,7 @@ gulp build
 
 #### <a name="run-your-application"></a>アプリケーションを実行する
 
-1. コマンド プロンプトで次のコマンドを入力して、ローカル Web サーバーを起動します。
+1. コマンド プロンプトで、次のコマンドを入力してローカル Web サーバーを起動します。
 
     ```cmd
     gulp serve
@@ -262,7 +262,7 @@ gulp ngrok-serve
 
 1. Teams の左側のウィンドウで省略記号 &#x25CF;&#x25CF;&#x25CF; を選択し、アップロードしたアプリを選択して個人用タブを表示します。
 
-   これで、Teams に個人用タブが正常に作成され、追加されました。
+   これで、Teams で個人用タブが正常に作成され、追加されました。
   
    Teams に個人用タブがあるため、個人用タブを[並べ替える](#reorder-static-personal-tabs)こともできます。
 
@@ -371,13 +371,15 @@ Visual Studio ソリューション エクスプローラーで、プロジェ�
     <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
     ```
 
-1. Visual Studio ソリューション エクスプローラー [**Pages**] フォルダーから **PersonalTab.cshtml** を開き、`app.initialize()` を `<script>` タグに追加して保存します。
+1. Visual Studio ソリューション エクスプローラーで、**Pages** フォルダーから **PersonalTab.cshtml** を開き、タグを`<script>`追加`microsoftTeams.app.initialize()`します。
+
+1. **[保存]** を選択します。
 
 1. Visual Studioで **F5** を選択するか、アプリケーションの [**デバッグ**] メニューから [**デバッグの開始**] を選択します。
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>タブへのセキュリティで保護されたトンネルを確立する
 
-プロジェクト ディレクトリのルートにあるコマンド プロンプトで、次のコマンドを実行して、タブへのセキュリティで保護されたトンネルを確立します:
+プロジェクト ディレクトリのルートにあるコマンド プロンプトで、次のコマンドを実行して、タブへのセキュリティで保護されたトンネルを確立します。
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -389,7 +391,7 @@ ngrok http 3978 --host-header=localhost
 
 1. **アプリ** を開き、[**アプリのインポート**] を選択します。
 
-1. アプリ パッケージファイル名は `tab.zip` で、`/bin/Debug/netcoreapp3.1/tab.zip` パスで使用できます。
+1. アプリ パッケージ ファイル名は `tab.zip` パスで `/bin/Debug/netcoreapp3.1/tab.zip` 使用できます。
 
 1. 開発者ポータルで `tab.zip` を選択して開きます。
 
@@ -401,7 +403,7 @@ ngrok http 3978 --host-header=localhost
 
 1. **アプリの URL で**、プライバシー ポリシーと使用条件を`https://<yourngrokurl>/privacy`更新して`https://<yourngrokurl>/tou`**、[保存]** を選択します。
 
-1. **アプリの機能** で、[**個人用アプリ**]  >  [**初めての個人用アプリ タブを作成**] を選択し、[名前] を入力して、[**コンテンツ URL**] を `https://<yourngrokurl>/personalTab` で更新します。 [Web サイトの URL] フィールドを空白のままにし、ドロップダウン リストから [ **Context** as personalTab] を選択し、[ **確認**] を選択します。
+1. **[アプリの機能**] で、[**個人用アプリ** > **の作成] を選択して最初の個人用アプリ タブ** に名前を入力し、**コンテンツ URL を**`https://<yourngrokurl>/personalTab`更新します。 [Web サイトの URL] フィールドを空白のままにし、ドロップダウン リストから [ **Context** as personalTab] を選択し、[ **確認**] を選択します。
 
 1. **[保存]** を選択します。
 
@@ -415,7 +417,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="既定のタブ":::
 
-   これで、Teams に個人用タブが正常に作成され、追加されました。
+   これで、Teams で個人用タブが正常に作成され、追加されました。
   
    Teams に個人用タブがあるため、個人用タブを[並べ替える](#reorder-static-personal-tabs)こともできます。
 
@@ -536,13 +538,15 @@ Visual Studio ソリューション エクスプローラーで、プロジェ�
     <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
     ```
 
-1. Visual Studio ソリューション エクスプローラーで、[**ビュー**]  >  [**PersonalTab**] フォルダーから **PersonalTab.cshtml** を開き、`<script>` タグ内で `app.initialize()` を追加して保存します。
+1. Visual Studio ソリューション エクスプローラーで、**Views** >  PersonalTab **フォルダーから** **PersonalTab.cshtml** を開き、タグ内に`<script>`追加`microsoftTeams.app.initialize()`します。
+
+1. **[保存]** を選択します。
 
 1. Visual Studioで **F5** を選択するか、アプリケーションの [**デバッグ**] メニューから [**デバッグの開始**] を選択します。
 
 ### <a name="establish-a-secure-tunnel-to-your-tab"></a>タブへのセキュリティで保護されたトンネルを確立する
 
-プロジェクト ディレクトリのルートにあるコマンド プロンプトで、次のコマンドを実行して、タブへのセキュリティで保護されたトンネルを確立します:
+プロジェクト ディレクトリのルートにあるコマンド プロンプトで、次のコマンドを実行して、タブへのセキュリティで保護されたトンネルを確立します。
 
 ```cmd
 ngrok http 3978 --host-header=localhost
@@ -570,7 +574,7 @@ ngrok http 3978 --host-header=localhost
 
 1. **アプリの URL で**、プライバシー ポリシーと使用条件を`https://<yourngrokurl>/privacy`更新して`https://<yourngrokurl>/tou`**、[保存]** を選択します。
 
-1. **アプリの機能** で、[**個人用アプリ**]  >  [**初めての個人用アプリ タブを作成**] を選択し、[名前] を入力して、[**コンテンツ URL**] を `https://<yourngrokurl>/personalTab` で更新します。 [Web サイトの URL] フィールドを空白のままにし、ドロップダウン リストから [ **Context** as personalTab] を選択し、[ **確認**] を選択します。
+1. **[アプリの機能**] で、[**個人用アプリ** > **の作成] を選択して最初の個人用アプリ タブ** に名前を入力し、**コンテンツ URL を**`https://<yourngrokurl>/personalTab`更新します。 [Web サイトの URL] フィールドを空白のままにし、ドロップダウン リストから [ **Context** as personalTab] を選択し、[ **確認**] を選択します。
 
 1. **[保存]** を選択します。
 
@@ -584,7 +588,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="個人タブ":::
   
-   これで、Teams に個人用タブが正常に作成され、追加されました。
+   これで、Teams で個人用タブが正常に作成され、追加されました。
 
    Teams に個人用タブがあるため、個人用タブを[並べ替える](#reorder-static-personal-tabs)こともできます。
 
@@ -592,7 +596,7 @@ ngrok http 3978 --host-header=localhost
 
 ## <a name="reorder-static-personal-tabs"></a>静的な個人用タブの並べ替え
 
-マニフェスト バージョン 1.7 以降では、開発者が個人用アプリ内のすべてのタブを再配置できます。 特に、開発者は [**ボット チャット**] タブを移動できます。このタブは、常に既定で最初の位置 (個人用アプリ タブ ヘッダー内の任意の場所) に移動できます。 2 つの予約済みタブ `entityId` キーワードが宣言されます:**会話** と **プロフィール**。
+マニフェスト バージョン 1.7 以降では、開発者が個人用アプリ内のすべてのタブを再配置できます。 **ボット チャット** タブは、常に既定で最初の位置に移動できます。このタブは、個人用アプリのタブ ヘッダー内の任意の場所に移動できます。 2 つの予約済みタブ `entityId` キーワードが宣言されます:**会話** と **プロフィール**。
 
 **個人用** スコープを使用してボットを作成すると、既定では個人用アプリの最初のタブ位置に表示されます。 別の位置に移動する場合は、予約済みのキーワードである "**会話**" を使用して静的タブ オブジェクトをマニフェストに追加する必要があります。 [**会話**] タブは、`staticTabs` 配列内の [**会話**] タブを追加する場所に応じて、Web またはデスクトップに表示されます。
 

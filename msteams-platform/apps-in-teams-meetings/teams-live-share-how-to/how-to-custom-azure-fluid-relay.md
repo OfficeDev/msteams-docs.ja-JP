@@ -6,18 +6,18 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 07/21/2022
-ms.openlocfilehash: b8bec005450515fbef7dfb60e58fac1325235b62
-ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
+ms.openlocfilehash: 1bbedae4d8611987bfd90277c487f8aabede868b
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68552519"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560583"
 ---
 ---
 
 # <a name="custom-azure-fluid-relay-service"></a>カスタム Azure Fluid Relay サービス
 
-無料のホステッド サービスを使用することをお勧めしますが、Live Share アプリに独自の Azure Fluid Relay サービスを使用することが有益な状況があります。
+無料のホステッド サービスを使用することをお勧めしますが、Live Share アプリに独自の Azure Fluid Relay サービスを使用すると有益な状況があります。
 
 ## <a name="pre-requisites"></a>前提条件
 

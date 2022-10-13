@@ -6,16 +6,16 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: 6d2e1dc9d49ab1ec551fd814ba8baa330e9ace3f
-ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
+ms.openlocfilehash: 0e2c2a41eee5bf77dfeaf7150eede97a4b60ded8
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68552550"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560625"
 ---
 # <a name="live-share-core-capabilities"></a>Live Share コア機能
 
-:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-core-capabilities-hero.png" alt-text="Teams Live Share":::
+:::image type="content" source="../assets/images/teams-live-share/Teams-live-share-core-capabilities-hero.png" alt-text="スクリーンショットは、ライブ共有機能を示す Teams 会議でアジャイル のゲームをプレイしているユーザーの例を示しています。":::
 
 Live Share SDK は、最小限の労力で会議拡張機能の `sidePanel` と `meetingStage` コンテキストに追加できます。 この記事では、Live Share SDK をアプリに統合する方法と、SDK の主な機能を中心に説明します。
 
@@ -86,7 +86,7 @@ yarn add @microsoft/live-share@next
 
 ## <a name="join-a-meeting-session"></a>会議セッションに参加する
 
-ユーザーの会議に関連付けられたセッションに参加するには、次の手順に従います。
+ユーザーの会議に関連付けられているセッションに参加するには、次の手順に従います。
 
 1. [LiveShareClient を初期化します](/javascript/api/@microsoft/live-share/liveshareclient)。
 2. 同期する必要のあるデータ構造を定義します。 たとえば、「 `SharedMap` 」のように入力します。
@@ -221,7 +221,7 @@ Live Share SDK には、新しい Live Share `SharedObject` クラスのセッ�
 
 ### <a name="livepresence-example"></a>LivePresence の例
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-presence.png" alt-text="Teams Live Share プレゼンス":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-presence.png" alt-text="スクリーンショットは、Live Share プレゼンスを使用して sessionTeams で利用できるユーザーを示す例を示しています。":::
 
 この `LivePresence` クラスを使用すると、セッションに参加しているユーザーの追跡がこれまで以上に簡単になります。 メソッドを`.initialize()``.updatePresence()`呼び出すときに、名前やプロファイル画像など、そのユーザーのカスタム メタデータを割り当てることができます。 イベントを `presenceChanged` リッスンすることで、各クライアントは最新 `LivePresenceUser` のオブジェクトを受け取り、すべてのプレゼンス更新を一意 `userId`のレコードごとに 1 つのレコードに集約します。
 
@@ -317,7 +317,7 @@ function onUserDidLogIn(userName: string, profilePicture: string) {
 
 ### <a name="liveevent-example"></a>LiveEvent の例
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-event.png" alt-text="通知を表示するための Teams Live Share イベント":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-event.png" alt-text="スクリーンショットは、イベントに変更が加えられたときに通知を表示する Teams クライアントの例を示しています。":::
 
 `LiveEvent` は、会議中に他のクライアントに簡単なイベントを送信するのに最適な方法です。 セッションの通知を送信する場合などのシナリオに便利です。
 
@@ -399,7 +399,7 @@ notifications.sendEvent({
 
 ### <a name="livetimer-example"></a>LiveTimer の例
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-timer.png" alt-text="Teams Live Share カウントダウン タイマー":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-timer.png" alt-text="スクリーンショットは、残り 9 秒のカウント ダウン タイマーの例を示しています。":::
 
 `LiveTimer` では、グループのメディテーション タイマーやゲームのラウンド タイマーなど、制限時間があるシナリオを有効にします。
 

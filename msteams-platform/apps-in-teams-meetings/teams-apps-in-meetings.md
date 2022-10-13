@@ -6,12 +6,12 @@ ms.topic: overview
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.date: 04/07/2022
-ms.openlocfilehash: 86cccc05a2c22cd337ae696d232c09c52728523c
-ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
+ms.openlocfilehash: 2e022ab2a39d399395a1aaf43ca6b282d24b81b7
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68537529"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560534"
 ---
 # <a name="apps-for-teams-meetings-and-calls"></a>Teams の会議と通話用のアプリ
 
@@ -19,7 +19,9 @@ ms.locfileid: "68537529"
 
 > [!NOTE]
 >
-> インスタント会議、スケジュールされたパブリック チャネル会議、1 対 1、グループ通話用のアプリは、現在 [、パブリック 開発者向けプレビュー](../resources/dev-preview/developer-preview-intro.md)でのみ利用できます。
+> * スケジュールされたパブリック チャネル会議用のアプリは、現在 [、パブリック開発者向けプレビュー](../resources/dev-preview/developer-preview-intro.md)でのみ使用できます。
+>
+> * アプリは、 [公衆交換電話網 (PSTN)](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options) および [エンドツーエンドの暗号化された Teams 通話](https://support.microsoft.com/office/use-end-to-end-encryption-for-teams-calls-1274b4d2-b5c5-4b24-a376-606fa6728a90)ではサポートされていません。
 
 Teams では、次の会議の種類について、会議中のアプリへのアクセスがサポートされます。
 

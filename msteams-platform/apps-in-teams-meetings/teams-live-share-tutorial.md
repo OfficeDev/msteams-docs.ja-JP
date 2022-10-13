@@ -6,16 +6,16 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: stevenic
 ms.date: 04/07/2022
-ms.openlocfilehash: ee88797d007e736eb7958e462d8697f379c99413
-ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
+ms.openlocfilehash: 66ff0cfed7fcd34d741a35ff4aa30e507adf8717
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68552575"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560541"
 ---
 # <a name="dice-roller-code-tutorial"></a>Dice Roller コードのチュートリアル
 
-Dice Roller サンプル アプリでは、ユーザーにロールボタンが付いたサイコロが表示されます。 サイコロがロールされると、Live Share SDK は流動フレームワークを使用してクライアント間でデータを同期するため、すべてのユーザーに同じ結果が表示されます。 データを同期するには、 [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/01.dice-roller/src/app.js) ファイルで次の手順を実行します。
+Dice Roller サンプル アプリでは、ユーザーにロールボタンが付いたサイコロが表示されます。 サイコロがロールされると、Live Share SDK は Fluid Framework を使用してクライアント間でデータを同期するため、すべてのユーザーに同じ結果が表示されます。 データを同期するには、 [app.js](https://github.com/microsoft/live-share-sdk/blob/main/samples/01.dice-roller/src/app.js) ファイルで次の手順を実行します。
 
 1. [アプリケーションを設定する](#set-up-the-application)
 2. [Fluid コンテナーを結合する](#join-a-fluid-container)
@@ -28,11 +28,14 @@ Dice Roller サンプル アプリでは、ユーザーにロールボタンが�
 
 ## <a name="set-up-the-application"></a>アプリケーションを設定します。
 
-まず、必要なモジュールをインポートします。 このサンプルでは、Fluid Framework と [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) クラスの [SharedMap DDS](https://fluidframework.com/docs/data-structures/map/) を使用します。 このサンプルでは、Teams会議の機能拡張がサポートされているため、[[Teams クライアント SDK]](https://github.com/OfficeDev/microsoft-teams-library-js) を含める必要があります。 最後に、サンプルはローカルとTeams会議の両方で実行するように設計されているため、[サンプルをローカルでテスト](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious)するために必要な追加の流動フレームワーク部分を含める必要があります。
+まず、必要なモジュールをインポートします。 このサンプルでは、Fluid Framework の [SharedMap DDS](https://fluidframework.com/docs/data-structures/map/) と Live Share SDK [の TeamsFluidClient](/javascript/api/@microsoft/live-share/teamsfluidclient) を使用します。 このサンプルでは Teams 会議機能拡張がサポートされているため、 [Teams クライアント SDK](https://github.com/OfficeDev/microsoft-teams-library-js) を含める必要があります。 最後に、サンプルはローカルと Teams の両方の会議で実行するように設計されているため、 [サンプルをローカルでテスト](https://fluidframework.com/docs/testing/testing/#azure-fluid-relay-as-an-abstraction-for-tinylicious)するために、より多くの Fluid Framework の部分を含める必要があります。
 
-アプリケーションは、コンテナーで使用できる一連の _初期オブジェクト_ を定義するスキーマを使用して、Fluid コンテナーを作成します。 このサンプルでは、SharedMap を使用して、ロールされた最新のダイ値を格納します。 詳細については、「[データ プライバシー](https://fluidframework.com/docs/build/data-modeling/)」を参照してください。
+アプリケーションは、コンテナーで使用できる一連の _初期オブジェクト_ を定義するスキーマを使用して、Fluid コンテナーを作成します。 このサンプルでは、SharedMap を使用して、ロールされた現在のサイコロ値を格納します。 詳細については、「[データ プライバシー](https://fluidframework.com/docs/build/data-modeling/)」を参照してください。
 
-Teams 会議アプリ、複数のビュー (コンテンツ、構成、ステージ) が必要です。 レンダリングするビューを識別し、必要な初期化を実行するのに役立つ `start()` 関数を作成します。 アプリで Web ブラウザーと Teams 会議内の両方の実行をサポートし、`start()` 関数が `inTeams=true` クエリ パラメーターを検索して、Teamsで実行されているかどうかを判断できるようにします。 Teams で実行する場合は、他の teams-js メソッドを呼び出す`app.initialize()`前にアプリケーションを呼び出す必要があります。
+Teams 会議アプリには、コンテンツ、構成、ステージなどの複数のビューが必要です。 ビューを `start()` 識別するのに役立つ関数を作成できます。 これは、必要な初期化をレンダリングして実行するのに役立ちます。 アプリでは、Web ブラウザーと Teams 会議内の両方でローカルで実行できます。 この関数は `start()` 、クエリ パラメーターを `inTeams=true` 検索して、Teams で実行されているかどうかを判断します。
+
+> [!NOTE]
+> Teams で実行する場合は、他の teams-js メソッドを呼び出す `app.initialize()` 前にアプリケーションを呼び出す必要があります。
 
 クエリ パラメーターに `inTeams=true` 加えて、クエリ パラメーターを `view=content|config|stage` 使用して、レンダリングする必要があるビューを決定できます。
 
@@ -97,7 +100,7 @@ start().catch((error) => console.error(error));
 
 ## <a name="join-a-fluid-container"></a>Fluid コンテナーを結合する
 
-すべてのアプリ ビューが共同作業である必要があるわけではありません。 `stage`ビューには _常に_ コラボレーション機能が必要です。ビューには`content`コラボレーション機能 _が必要な場合があります_。また、`config` ビューにはコラボレーション機能は必要 _ありません_。 共同作業機能が必要なビューの場合は、現在の会議に関連付けられている Fluid コンテナーに参加する必要があります。
+アプリのすべてのビューが共同作業である必要はありません。 `stage`ビューには _常に_ コラボレーション機能が必要です。ビューには`content`コラボレーション機能 _が必要な場合があります_。また、`config` ビューにはコラボレーション機能は必要 _ありません_。 共同作業機能が必要なビューの場合は、現在の会議に関連付けられている Fluid コンテナーに参加する必要があります。
 
 会議のコンテナーに参加するのは、 [LiveShareClient](/javascript/api/@microsoft/live-share/liveshareclient) を初期化し、 [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) メソッドを呼び出すのと同じくらい簡単です。
 
@@ -128,7 +131,7 @@ async function joinContainer() {
 
 Fluid 機能を使用せずにローカル データを使用してビューを簡単に作成し、アプリの重要な部分を変更して Fluid を追加できます。
 
-この `renderStage` 関数は、渡された HTML 要素に `stageTemplate` を追加し、 **ロール** ボタンが選択されるたびにランダムなサイコロ値を持つ作業用サイコロ ローラーを作成します。 `diceMap` は、次のいくつかの手順で使用されます。
+この関数は `renderStage` 、 `stageTemplate` 渡された HTML 要素に追加され、 **ロール** ボタンが選択されるたびにランダムなサイコロ値を持つ作業用サイコロ ローラーを作成します。 `diceMap` は、次のいくつかの手順で使用されます。
 
 ```js
 const stageTemplate = document.createElement("template");
@@ -158,7 +161,7 @@ function renderStage(diceMap, elem) {
 
 ### <a name="modify-fluid-data"></a>Fluid データを変更する
 
-アプリケーションで Fluid の使用を開始するために最初に変更することは、ユーザーが `rollButton` を選択したときに何が起こるかです。 ローカル状態を直接更新する代わりに、ボタンは、渡された `diceMap` の `value` キーに格納されている番号を更新します。 `diceMap` はFluid `SharedMap` であるため、変更はすべてのクライアントに分散されます。 `diceMap` を変更すると、`valueChanged` イベントが発行され、イベント ハンドラーがビューの更新をトリガーできます。
+アプリケーションで Fluid の使用を開始するために最初に変更することは、ユーザーが `rollButton` を選択したときに何が起こるかです。 ローカル状態を直接更新する代わりに、ボタンは、渡された `diceMap` の `value` キーに格納されている番号を更新します。 `diceMap` はFluid `SharedMap` であるため、変更はすべてのクライアントに分散されます。 イベントに変更を `diceMap` 加えた場合、 `valueChanged` イベントが生成され、イベント ハンドラーによってビューの更新がトリガーされる可能性があります。
 
 このパターンは、ビューがローカル変更とリモート変更の両方で同じ動作を可能にするため、Fluid では一般的です。
 
@@ -169,7 +172,7 @@ rollButton.onclick = () =>
 
 ### <a name="rely-on-fluid-data"></a>Fluid データに依存する
 
-次に行う必要のある変更は、`updateDice` 関数を変更して、任意の値を受け入れないようにすることです。 つまり、アプリはローカルのサイコロ値を直接変更できなくなりました。 代わりに、値は呼び出される`SharedMap`たびに`updateDice`取得されます。
+次に行う必要がある変更は、任意の値を `updateDice` 受け入れなくなったため、関数を変更することです。 つまり、アプリはローカルのサイコロ値を直接変更できなくなりました。 代わりに、値は呼び出される`SharedMap`たびに`updateDice`取得されます。
 
 ```js
 const updateDice = () => {
@@ -189,7 +192,7 @@ diceMap.on("valueChanged", updateDice);
 
 ## <a name="write-the-side-panel-view"></a>サイド パネル ビューを記述する
 
-タブ `contentUrl` から `sidePanel` フレーム コンテキストで読み込まれたサイド パネルビューは、ユーザーが会議内でアプリを開いたときにサイド パネルに表示されます。 このビューの目的は、会議ステージにアプリを共有する前に、ユーザーがアプリのコンテンツを選択できるようにすることです。 Live Share SDK アプリの場合は、サイド パネル ビューをアプリのコンパニオン エクスペリエンスとして使用することもできます。 サイド パネル ビューから [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) を呼び出すと、ステージ ビューが接続されているのと同じ Fluid コンテナーに接続されます。 このコンテナーは、ステージ ビューとの通信に使用できます。 全員のステージ ビュー _および_ サイドパネル ビューと通信していることを確認してください。
+タブ `contentUrl` から `sidePanel` フレーム コンテキストで読み込まれたサイド パネルビューは、ユーザーが会議内でアプリを開いたときにサイド パネルに表示されます。 サイド パネル ビューの目的は、アプリを会議ステージに共有する前に、ユーザーがアプリのコンテンツを選択できるようにすることです。 Live Share SDK アプリの場合は、サイド パネル ビューをアプリのコンパニオン エクスペリエンスとして使用することもできます。 サイド パネル ビューから [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) を呼び出すと、ステージ ビューが接続されているのと同じ Fluid コンテナーに接続されます。 このコンテナーは、ステージ ビューとの通信に使用できます。 全員のステージ ビュー _および_ サイドパネル ビューと通信していることを確認してください。
 
 サンプルのサイド パネル ビューでは、ユーザーに [ステージへの共有] ボタンの選択を求めるメッセージが表示されます。
 
@@ -215,7 +218,7 @@ function renderSidePanel(elem) {
 
 ## <a name="write-the-settings-view"></a>設定ビューを記述する
 
-アプリマニフェストの `configurationUrl` を介して読み込まれた設定ビューは、ユーザーが最初に Teams 会議にアプリを追加したときに表示されます。 このビューにより、開発者は、ユーザー入力に基づいて会議に固定されるタブの `contentUrl` を構成できます。 `contentUrl` を設定するためにユーザー入力が必要ない場合でも、このページは現在必要です。
+アプリ マニフェストに読み込まれた `configurationUrl` 設定ビューは、最初に Teams 会議にアプリを追加したときにユーザーに表示されます。 このビューにより、開発者は、ユーザー入力に基づいて会議に固定されるタブの `contentUrl` を構成できます。 `contentUrl` を設定するためにユーザー入力が必要ない場合でも、このページは現在必要です。
 
 > [!NOTE]
 > Live Share の [joinContainer()](/javascript/api/@microsoft/live-share/liveshareclient#@microsoft-live-share-liveshareclient-joincontainer) は、タブ `settings` コンテキストではサポートされていません。
@@ -306,7 +309,7 @@ function renderSettings(elem) {
 
 1. Teams を開きます。
 
-1. Teams の予定表から会議をスケジュールします。 少なくとも 1 人の出席者を会議に招待していることを確認します。
+1. Teams の予定表から会議をスケジュールします。 会議に少なくとも 1 人の出席者を招待していることを確認します。
 
 1. 会議に参加します。
 

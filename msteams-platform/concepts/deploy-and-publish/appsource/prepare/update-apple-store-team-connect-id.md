@@ -1,16 +1,16 @@
 ---
 title: パートナー センターで Apple Store Connect チーム ID を更新する
-description: Microsoft パートナー センターで Apple App Store Connect Team ID を更新して、エンド ユーザーが Teams iOS プラットフォームにアプリをインストールできるようにする方法について説明します。
+description: Microsoft パートナー センターで Apple App Store Connect Team ID を更新して、エンド ユーザーが Teams iOS プラットフォームでアプリを検索して取得できるようにします。
 ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: v-ypalikila
-ms.openlocfilehash: faccd01e8dde76f61c007ffe772d79995d3a7ffd
-ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
+ms.openlocfilehash: a936e2c8f135f0d30617739bd5808601be02fec7
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68160739"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560723"
 ---
 # <a name="update-apple-app-store-connect-team-id-on-partner-center"></a>パートナー センターで Apple App Store Connect Team ID を更新する
 

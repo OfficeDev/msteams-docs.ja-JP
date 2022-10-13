@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.localizationpriority: none
 ms.author: surbhigupta
 ms.date: 04/07/2022
-ms.openlocfilehash: 4807b85ed1b520b84701bcd727fda88cf77808eb
-ms.sourcegitcommit: 08bd7f1b9c654b95d3639ca88052c9ca9a8c3f67
+ms.openlocfilehash: db90b3e3f026eced56c626a082f5ec6be04cb893
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2022
-ms.locfileid: "67833689"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560646"
 ---
 # <a name="unified-meetings-apps"></a>統合された会議アプリ
 
@@ -29,7 +29,7 @@ Teams 統合会議アプリは、次の概念に基づいています。
 
 > [!NOTE]
 >
-> * インスタント会議、スケジュールされたパブリック チャネル会議、1 対 1、グループ通話用のアプリは、現在 [、パブリック 開発者向けプレビュー](../resources/dev-preview/developer-preview-intro.md)でのみ利用できます。
+> * スケジュールされたパブリック チャネル会議用のアプリは、現在 [、パブリック開発者向けプレビュー](../resources/dev-preview/developer-preview-intro.md)でのみ使用できます。
 >
 > * ボット、カード、メッセージ拡張機能、メッセージ アクションなどの会議拡張機能は、Web クライアントでサポートされています。 ただし、現在、タブ、コンテンツ バブル、ステージへの共有などのホストされたエクスペリエンスは完全にはサポートされていません。
 

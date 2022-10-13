@@ -6,16 +6,16 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 0febbd535f5375f03599009d32d9b613cf5af6d6
-ms.sourcegitcommit: e4ccbbdce620418c129689c0ba6ad246a81068c0
+ms.openlocfilehash: 6431a80f7340ad641f92ca5b7c8c55f83cf5c9fd
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2022
-ms.locfileid: "68329085"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560492"
 ---
 # <a name="create-a-channel-tab"></a>[チャネルの作成] タブ
 
-チャネル/グループ タブは、コンテンツをチャネルやグループのチャットに配信します。また、専用の Web ベースのコンテンツまわりに関する共同作業スペースを作成するのに優れた方法です。
+チャネルタブまたはグループ タブは、チャネルやグループ チャットにコンテンツを配信します。これにより、専用の Web ベースのコンテンツに関する共同作業スペースを作成できます。
 
 チャネルまたはグループ タブを構築するための [前提条件](~/tabs/how-to/tab-requirements.md) がすべて揃っていることを確認します。
 
@@ -55,7 +55,7 @@ ms.locfileid: "68329085"
     yo teams
     ```
 
-1. Microsoft Teams アプリ ジェネレーターによって求められる一連の質問に値を入力し、`manifest.json` ファイルを更新します。
+1. Microsoft Teams アプリ ジェネレーターによってファイルを更新するように求められた一連の質問に値を `manifest.json` 入力します。
 
     ![ジェネレーターを開くスクリーンショット](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -76,7 +76,7 @@ ms.locfileid: "68329085"
 
     * **(会社) 名 (最大 32 文字)**
 
-        会社名はアプリ マニフェストで使用されます。 会社名を入力するか、**Enter** キーを押して既定の名前をそのまま使用します。
+        会社名は、アプリ マニフェストで使用できます。 会社名を入力するか、**Enter** キーを押して既定の名前をそのまま使用します。
 
     * **使用するマニフェスト バージョン**
 
@@ -94,7 +94,7 @@ ms.locfileid: "68329085"
 
         **( &ast; ) A タブ** を選択します。
 
-    * **このソリューションをホストする URL**
+    * **このソリューションをホストする URL は?**
 
         既定では、ジェネレーターは Azure Web サイトの URL を提案します。 アプリをローカルでのみテストしているため、有効な URL は必要ありません。
 
@@ -169,7 +169,7 @@ gulp build
 
 #### <a name="run-your-application"></a>アプリケーションを実行する
 
-1. コマンド プロンプトで次のコマンドを入力して、ローカル Web サーバーを起動します。
+1. コマンド プロンプトで、次のコマンドを入力してローカル Web サーバーを起動します。
 
     ```bash
     gulp serve
@@ -179,7 +179,7 @@ gulp build
 
     :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="既定のタブ":::
 
-1. タブ構成ページを表示するには、`http://localhost:3007/<yourDefaultAppNameTab>/config.html` に移動します。 以下の内容が表示されます。
+1. タブ構成ページを表示するには、`http://localhost:3007/<yourDefaultAppNameTab>/config.html` に移動します。
 
     :::image type="content" source="~/assets/images/tab-images/configurationPage.png" alt-text="タブ構成ページ":::
 
@@ -338,7 +338,10 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
     ```
 
     > [!IMPORTANT]
@@ -346,7 +349,7 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 
 1. `script` タグに `microsoftTeams.app.initialize();` の呼び出しを挿入します。
 
-1. Visual Studio ソリューション エクスプローラーで **[ページ]** フォルダーに移動し、**Tab.cshtml** を開きます。
+1. Visual Studio ソリューション エクスプローラーで **Pages** フォルダーに移動し、**Tab.cshtml を** 開きます
 
     **Tab.cshtml** 内では、アプリケーションによって、赤または灰色のアイコンでタブを表示するための 2 つのオプションがユーザーに表示されます。 **[灰色の選択]** ボタンまたは **[赤の選択]** ボタンがトリガー`saveGray()`されるか、それぞれ`saveRed()`設定`pages.config.setValidityState(true)`され、構成ページで **[保存]** が有効になります。 このコードを使用すると、要件の構成が完了し、インストールを続行できることを Teams に知らせます。 `pages.config.setConfig` のパラメーターが設定されます。 最後に、コンテンツ URL が正常に解決されたことを示すために、`saveEvent.notifySuccess()` が呼び出されます。
 
@@ -515,7 +518,7 @@ ASP.NET Core では、Web ルート フォルダーは、アプリケーショ�
 
 #### <a name="csproj"></a>.csproj
 
-Visual Studio ソリューション エクスプローラー ウィンドウで、プロジェクトを右クリックし、**[プロジェクト ファイルの編集]** を選択します。 ファイルの最後にアプリケーションのビルド時に zip フォルダーを作成して更新する次のコードが表示されます。
+Visual Studio ソリューション エクスプローラー ウィンドウで、プロジェクトを右クリックし、**[プロジェクト ファイルの編集]** を選択します。 ファイルの最後には、アプリケーションのビルド時に zip フォルダーを作成して更新する次のコードが表示されます。
 
 ```xml
 <PropertyGroup>
@@ -537,15 +540,15 @@ Visual Studio ソリューション エクスプローラー ウィンドウで�
 
 #### <a name="models"></a>モデル
 
-**ChannelGroup.cs** は、構成中にコントローラーから呼び出されるメッセージ オブジェクトとメソッドを表わします。
+**ChannelGroup.cs は、** 構成中にコントローラーから呼び出すことができるメッセージ オブジェクトとメソッドを示します。
 
 #### <a name="views"></a>ビュー
 
 これらは、ASP.NET Core MVC のさまざまなビューです。
 
-* ホーム: ASP.NET Core は、**Index** という名前のファイルをサイトの既定またはホーム ページとして扱います。 ブラウザー URL がサイトのルートを指すと、**Index.cshtml** がアプリケーションのホーム ページとして表示されます。
+* ホーム: ASP.NET Core は、**Index** という名前のファイルをサイトの既定またはホーム ページとして扱います。 ブラウザー URL がサイトのルートを指している場合、 **Index.cshtml** をアプリケーションのホーム ページとして表示できます。
 
-* 共有: 部分ビュー マークアップ **_Layout.cshtml** には、アプリケーションの全体的なページ構造と共有ビジュアル要素が含まれています。 また、Teams ライブラリも参照します。
+* 共有: **_Layout.cshtml** の部分ビュー マークアップには、アプリケーションの全体的なページ構造と、Teams ライブラリも参照する共有ビジュアル要素が含まれています。
 
 #### <a name="controllers"></a>コントローラー
 
@@ -569,7 +572,10 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 
     ```html
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js"></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
     ```
 
     > [!IMPORTANT]
@@ -577,7 +583,7 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 
 1. `script` タグに `microsoftTeams.app.initialize();` の呼び出しを挿入します。
 
-1. Visual Studio ソリューション エクスプローラーで **[タブ]** フォルダーに移動し、**Tab.cshtml** を開きます。
+1. Visual Studio ソリューション エクスプローラーで、**Tab** フォルダーに移動し、**Tab.cshtml を** 開きます
 
     **Tab.cshtml** 内では、アプリケーションによって、赤または灰色のアイコンでタブを表示するための 2 つのオプションがユーザーに表示されます。 **[灰色の選択]** ボタンまたは **[赤の選択]** ボタンがトリガー`saveGray()`されるか、それぞれ`saveRed()`設定`pages.config.setValidityState(true)`され、構成ページで **[保存]** が有効になります。 このコードを使用すると、要件の構成が完了し、インストールを続行できることを Teams に知らせます。 `pages.config.setConfig` のパラメーターが設定されます。 最後に、コンテンツ URL が正常に解決されたことを示すために、`saveEvent.notifySuccess()` が呼び出されます。
 

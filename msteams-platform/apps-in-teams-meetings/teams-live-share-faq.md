@@ -6,12 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.author: v-ypalikila
 ms.date: 04/07/2022
-ms.openlocfilehash: 7cea66e58461814e3b2cd3be85e979b7a5b75c4b
-ms.sourcegitcommit: 0fa0bc081da05b2a241fd8054488d9fd0104e17b
+ms.openlocfilehash: 857c81a364798efd79256c8cdf609a7d625342ad
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68552512"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560604"
 ---
 ---
 
@@ -121,7 +121,7 @@ Live Share のホストされた Azure Fluid Relay サービスによって作�
 <details>
 <summary><b>Live Share を使用して出力できる変更イベントの数に制限はありますか?</b></summary>
 
-Live Share はプレビュー段階ですが、Live Share を通じて生成されるイベントに対する制限は適用されません。 最適なパフォーマンスを得るには、50 ミリ秒以上ごとに 1 つのメッセージに対して、または`LiveObject`インスタンスから`SharedObject`生成された変更を破棄する必要があります。 これは、カーソルの位置の同期、インク、ページの周囲のオブジェクトのドラッグなど、マウスまたはタッチ座標に基づいて変更を送信する場合に特に重要です。
+Live Share はプレビュー段階ですが、Live Share を通じて出力されるイベントに対する制限は適用されません。 最適なパフォーマンスを得るには、50 ミリ秒以上ごとに 1 つのメッセージに対して、または`LiveObject`インスタンスから`SharedObject`生成された変更を破棄する必要があります。 これは、カーソルの位置の同期、インク、ページの周囲のオブジェクトのドラッグなど、マウスまたはタッチ座標に基づいて変更を送信する場合に特に重要です。
 
 <br>
 

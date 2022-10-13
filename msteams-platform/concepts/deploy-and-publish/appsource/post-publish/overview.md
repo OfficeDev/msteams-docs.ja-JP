@@ -1,16 +1,16 @@
 ---
 title: 公開したアプリの保守およびサポート
-description: 公開された Microsoft Teams アプリと、ストアが Teams ストアと AppSource に一覧表示された後に行う操作を管理する方法について説明します。 アプリの使用状況を分析し、更新プログラムを発行し、アプリを昇格し、Microsoft 365 認定を完了します。
+description: 公開された Microsoft Teams アプリを管理します。 アプリの使用状況を分析し、更新プログラムを発行し、アプリを昇格し、Microsoft 365 認定を完了します。
 ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: f05613a54ea87660611bb4a4d66d2f88f9ee3b46
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 77b17cb837312bca5b253fbd99fba2d0503f1744
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100330"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560471"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>公開された Microsoft Teams アプリを管理する
 

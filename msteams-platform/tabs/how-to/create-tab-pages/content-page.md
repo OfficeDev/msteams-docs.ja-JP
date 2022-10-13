@@ -5,12 +5,12 @@ description: Teams クライアント内の Web ページについて説明し�
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 34e106bfa0fdfa6b881d1a2fcd5685c022ac5d87
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 362b63f44abf1afdf1572d967eb703f0836d4a45
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450374"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560464"
 ---
 # <a name="create-a-content-page"></a>コンテンツ ページを作成する
 
@@ -46,13 +46,16 @@ Teams でページを表示するには、[Microsoft Teams JavaScript クライ�
 <html>
 <head>
 ...
-    <script src= 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js'></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
 ...
+</head>
 <body>
 ...
-    <script type="module">
-        import {app} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
-        await app.initialize();
+    <script>
+    microsoftTeams.app.initialize();
     </script>
 ...
 </body>
@@ -68,7 +71,6 @@ Teams でページを表示するには、[Microsoft Teams JavaScript クライ�
     <script src= 'https://statics.teams.cdn.office.net/sdk/v1.10.0/js/MicrosoftTeams.min.js'></script>
 ...
 </head>
-
 <body>
 ...
     <script>
@@ -86,7 +88,7 @@ SDK を使用して Teams と対話し、ディープ リンクを作成し、�
 
 ### <a name="use-the-sdk-to-interact-with-teams"></a>SDK を使用して Teams と対話する
 
-[Teams クライアント JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md) には、コンテンツ ページの開発時に役立つ多くの追加機能が用意されています。
+[Teams クライアント JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md) には、コンテンツ ページの開発時に役立つ機能が多数用意されています。
 
 ### <a name="deep-links"></a>ディープ リンク
 
@@ -117,7 +119,7 @@ Teams のエンティティへのディープ リンクを作成できます。 
 
 1. マニフェストに `"showLoadingIndicator": true` を追加します。
 1. `app.initialize();` を呼び出します。
-1. **必須** ステップとして、`app.notifySuccess()` を呼び出して、アプリが正常に読み込まれたことを Teams に通知します。 その後、Teams は読み込みインジケーター (該当する場合) を非表示にします。 30 秒以内に呼び出されない場合 `notifySuccess`  、Teams はアプリがタイムアウトしたと想定し、再試行オプションを使用してエラー画面を表示します。
+1. **必須** ステップとして、`app.notifySuccess()` を呼び出して、アプリが正常に読み込まれたことを Teams に通知します。 その後、Teams は読み込みインジケーター (該当する場合) を非表示にします。 30 秒以内に呼び出されない場合 `notifySuccess`  、Teams はアプリがタイムアウトしたと想定し、再試行オプションを含むエラー画面を表示します。
 1. **必要に応じて**、画面に印刷する準備が整い、アプリケーションの残りのコンテンツを遅延読み込む場合は、読み込みインジケーターを呼び出 `app.notifyAppLoaded();`して手動で非表示にすることができます。
 1. アプリケーションが読み込まれない場合は、Teams に障害について知らせ、必要に応じてエラー メッセージを提供するように呼び出 `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` すことができます。 エラー画面がユーザーに表示されます。 次のコードは、アプリケーションの読み込みに失敗した場合に示すことができる理由を定義する列挙体を示しています。
 

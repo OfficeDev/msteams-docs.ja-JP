@@ -5,12 +5,12 @@ description: ユーザーから情報を収集する構成ページを作成し�
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 7708a9319e4a9d8898ee20c2d274744a1a09cfcf
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 5db345ce0653407b750afa96e6f82fff949f98f6
+ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450381"
+ms.lasthandoff: 10/13/2022
+ms.locfileid: "68560660"
 ---
 # <a name="create-a-configuration-page"></a>構成ページを作成する
 
@@ -24,7 +24,7 @@ ms.locfileid: "67450381"
 
 ## <a name="configure-a-channel-or-group-chat-tab"></a>チャネルまたはグループチャット タブを構成する
 
-アプリケーションは、[ Microsoft Teams JavaScript クライアントSDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) を参照し、`app.initialize()` を呼び出す必要があります。 使用される URL は、セキュリティで保護された HTTPS エンドポイントであり、クラウドから使用できる必要があります。
+アプリケーションは、[ Microsoft Teams JavaScript クライアントSDK](/javascript/api/overview/msteams-client) を参照し、`app.initialize()` を呼び出す必要があります。 使用される URL は、セキュリティで保護された HTTPS エンドポイントである必要があり、クラウドから使用できます。
 
 ### <a name="example"></a>例
 
@@ -38,17 +38,19 @@ ms.locfileid: "67450381"
 
 ```html
 <head>
-    <script src='https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js'></script>
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
 <body>
     <button onclick="(document.getElementById('icon').src = '/images/iconGray.png'); colorClickGray()">Select Gray</button>
     <img id="icon" src="/images/teamsIcon.png" alt="icon" style="width:100px" />
     <button onclick="(document.getElementById('icon').src = '/images/iconRed.png'); colorClickRed()">Select Red</button>
 
-    <script type="module">
-        import {app, pages} from 'https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js';
-        await app.initialize();
+    <script>
+        await microsoftTeams.app.initialize();
         let saveGray = () => {
-            pages.config.registerOnSaveHandler((saveEvent) => {
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
                 const configPromise = pages.config.setConfig({
                     websiteUrl: "https://yourWebsite.com",
                     contentUrl: "https://yourWebsite.com/gray",
@@ -62,7 +64,7 @@ ms.locfileid: "67450381"
         }
 
         let saveRed = () => {
-            pages.config.registerOnSaveHandler((saveEvent) => {
+            microsoftTeams.pages.config.registerOnSaveHandler((saveEvent) => {
                 const configPromise = pages.config.setConfig({
                     websiteUrl: "https://yourWebsite.com",
                     contentUrl: "https://yourWebsite.com/red",
@@ -81,14 +83,14 @@ ms.locfileid: "67450381"
         const colorClickGray = () => {
             gr.display = "block";
             rd.display = "none";
-            pages.config.setValidityState(true);
+            microsoftTeams.pages.config.setValidityState(true);
             saveGray()
         }
 
         const colorClickRed = () => {
             rd.display = "block";
             gr.display = "none";
-            pages.config.setValidityState(true);
+            microsoftTeams.pages.config.setValidityState(true);
             saveRed();
         }
     </script>
@@ -215,7 +217,7 @@ ms.locfileid: "67450381"
 
 ```html
 <script>
-   await app.initialize();
+   await microsoftTeams.app.initialize();
    const getId = () => {
         let urlParams = new URLSearchParams(document.location.search.substring(1));
         let blueTeamId = urlParams.get('team');
