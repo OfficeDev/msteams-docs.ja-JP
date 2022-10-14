@@ -5,16 +5,16 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: ad6a69f05225c6821ec1d8ee8ba1f569044247ff
-ms.sourcegitcommit: 2d2a08f671c3d19381403ba1af5dff1f06bb4dd6
+ms.openlocfilehash: 4646d47c5aa325291f060ea192dcc1705b414ac7
+ms.sourcegitcommit: bd96080c78f25eb0a67ce176df5e255be348f7b1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2022
-ms.locfileid: "67338824"
+ms.lasthandoff: 10/14/2022
+ms.locfileid: "68575797"
 ---
 # <a name="designing-your-personal-app-for-microsoft-teams"></a>Microsoft Teams の個人用アプリの設計
 
-個人用アプリは、ボット、プライベート ワークスペース、またはその両方にすることができます。 コンテンツを作成または表示する場所のように機能する場合もあれば、アプリが複数のチャネルのタブとして構成されている場合に、ユーザーが自分のものすべてを一目で確認できる場合もあります。
+個人用アプリは、ボット、プライベート ワークスペース、またはその両方にすることができます。 コンテンツを作成または表示する場所として機能する場合があります。 それ以外の場合は、アプリが複数のチャネルのタブとして構成されている場合に、ユーザーが自分の物であるすべてのものを鳥の目で見るビューをユーザーに提供します。
 
 アプリのデザインに役立てるために、次の情報では、Teams でユーザーがどのように個人用アプリを追加、使用、管理できるかを説明、図解しています。
 
@@ -47,8 +47,39 @@ Microsoft Teams UI キットには、必要に応じて取得および変更で�
 |----------|-----------|
 |A|**アプリ属性**: アプリ名。|
 |B|**タブ**: 個人用アプリのナビゲーションを提供します。|
-|C|**その他のメニュー**: アプリのその他のオプションと情報が含まれています。|
+|C|**その他のメニュー**: その他のアプリのオプションと情報が含まれています。|
 |D|**プライマリ ナビゲーション**: アプリのその他の主要な Teams 機能へのナビゲーションを提供します。|
+
+#### <a name="configure-and-add-multiple-actions-in-navbar"></a>**NavBar で複数のアクションを構成して追加する**
+
+右上のナビゲーション バーに複数のアクションを追加し、アプリ内の追加アクション用のオーバーフロー メニューを作成できます。
+
+>[!NOTE]
+> オーバーフロー メニューを含め、ナビゲーション バーに最大 5 つのアクションを追加できます。
+
+:::image type="content" source="../../assets/images/overflow-menu-and-multiple-actionsoptions.png" alt-text="スクリーンショットは、ナビゲーション バーとオーバーフロー メニューを示す例です。":::
+
+**NavBar で複数のアクションを構成して追加** するには、[setNavBarMenu](/javascript/api/@microsoft/teams-js/microsoftteams.menus?view=msteams-client-js-1.12.1&preserve-view=true) API を呼び出します。 にプロパティ`MenuItem`を追加します`displayMode enum`。 ナビゲーション `displayMode enum` バーにメニューを表示する方法を定義します。 既定値 `displayMode enum` は `ifRoom`.
+
+NavBar で使用可能な要件と領域に基づいて、次のいずれかを考慮して設定 `displayMode enum` します。
+
+* 空きがある場合は、NavBar にアイテムを配置するように設定 `ifRoom = 0` します。
+* 空きがない場合は、その項目は常に NavBar のオーバーフロー メニューに配置されますが、NavBar には配置されないように設定 `overflowOnly = 1`します。
+
+複数のアクションのオーバーフロー メニューを使用して NavBar を構成する例を次に示します。
+
+```typescript
+const menuItems = [item1, item2, item3, item4, item5]
+microsoftTeams.menus.setNavBarMenu(menuItems, (id: string) => {
+  output(`Clicked ${id}`)
+  return true;
+})
+```
+
+> [!NOTE]
+> API では `setNavBarMenu` 、[ **更新]** ボタンは制御されません。 既定で表示されます。
+
+:::image type="content" source="../../assets/images/overflow-menu-and-multple-actions.png" alt-text="スクリーンショットは、オーバーフロー メニューのナビゲーション バーと複数のアクションを示す例です。":::
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="例は、個人用タブの構造を示しています。":::
 
@@ -66,7 +97,7 @@ Microsoft Teams UI キットには、必要に応じて取得および変更で�
 |A|**アプリの属性**: アプリのロゴと名前。|
 |B|**タブ**: 個人用アプリのナビゲーションを提供します。|
 |C|**ポップアウト ビュー**: アプリのコンテンツを親ウィンドウからスタンドアロンの子ウィンドウにプッシュします。|
-|D|**その他のメニュー**: アプリのその他のオプションと情報が含まれています。 (または、**[設定]** をタブにすることもできます。)|
+|D|**その他のメニュー**: その他のアプリのオプションと情報が含まれています。 (または、**[設定]** をタブにすることもできます。)|
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="この例は、個人用タブの構造を示しています。":::
 
@@ -102,6 +133,30 @@ Microsoft Teams UI キットには、必要に応じて取得および変更で�
 |B|**[戻る] ボタン**: ユーザーをプライベート ワークスペースに戻します。|
 |C|**ボット メッセージ**: ボットは、多くの場合、カード (アダプティブ カードなど) の形式でメッセージと通知を送信します。|
 |D|**[作成] ボックス**: メッセージをボットに送信するための入力フィールド。|
+
+#### <a name="configure-back-button"></a>[戻る構成] ボタン
+
+Teams アプリで [戻る] ボタンを選択すると、アプリ内を移動せずに Teams プラットフォームに戻ります。
+
+アプリ内を移動するには、[戻る] ボタンを構成して、[戻る] ボタンを選択すると、前の手順に戻ってアプリ内を移動できます。
+
+**戻るボタンを構成** するには、次のいずれかの条件に応じて戻るボタンの機能を処理する [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true&branch=pr-en-us-6801&preserve-view=true) API を呼び出します。
+
+* に`false`設定すると`registerBackButtonHandler`、JavaScript SDK によって API が`navigateBack`呼び出され、Teams プラットフォームが戻るボタンを処理します。
+* に`true`設定すると`registerBackButtonHandler`、アプリは戻るボタンの機能を処理し (前の手順に戻ってアプリ内を移動できます)、Teams プラットフォームはそれ以上のアクションを実行しません。
+
+戻るボタンを構成する例を次に示します。
+
+```typescript
+microsoftTeams.registerBackButtonHandler(() => {
+  const selectOption = registerBackReturn.options[registerBackReturn.selectedIndex].value
+  var isHandled = false
+  if (selectOption == 'true') 
+    isHandled = true;
+  output(`onBack isHandled ${isHandled}`)
+  return isHandled;
+})
+```
 
 #### <a name="desktop"></a>Desktop
 
@@ -204,4 +259,6 @@ Teams 専用のアプリを作成していない限り、コラボレーショ�
 個人用アプリの範囲によっては、次の他の設計ガイドラインが役立つ場合があります。
 
 * [タブの設計](../../tabs/design/tabs.md)
-* [ボットの設計](../../bots/design/bots.md)
+* [ボットをデザインする](../../bots/design/bots.md)
+* [registerBackButtonHandler](/javascript/api/@microsoft/teams-js/pages.backstack?view=msteams-client-js-latest&preserve-view=true&branch=pr-en-us-6801&preserve-view=true)
+* [DisplayMode 列挙型](/javascript/api/@microsoft/teams-js/menus.displaymode?view=msteams-client-js-latest&preserve-view=true)
