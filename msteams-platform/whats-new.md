@@ -4,12 +4,12 @@ description: Microsoft Teams の新しい開発者向け機能と、既存の機
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: b1c06e5ea6e46adf5a40d29015bf79a30d653107
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 069c908c18377b440d21e44c0a95594d2904722b
+ms.sourcegitcommit: bd96080c78f25eb0a67ce176df5e255be348f7b1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560751"
+ms.lasthandoff: 10/14/2022
+ms.locfileid: "68575776"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -31,6 +31,8 @@ ms.locfileid: "68560751"
 
 **2022 年 10 月**
 
+* ***2022 年 10 月 13*** 日: [NavBar を構成し、複数のアクションのオーバーフロー メニューを作成します](concepts/design/personal-apps.md#configure-and-add-multiple-actions-in-navbar)。
+* ***2022 年 10 月 13*** 日: [アプリの [戻る] ボタンを構成](concepts/design/personal-apps.md#configure-back-button)します。
 * ***2022 年 10 月 12*** 日: [アプリは、インスタント会議、1 対 1、グループ通話でサポートされます。](apps-in-teams-meetings/teams-apps-in-meetings.md)
 * ***2022 年 10 月 12*** 日: [Live Share キャンバス](apps-in-teams-meetings/teams-live-share-canvas.md)
 
