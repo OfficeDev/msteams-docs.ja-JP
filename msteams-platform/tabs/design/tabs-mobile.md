@@ -3,12 +3,12 @@ title: モバイルのタブ
 description: Android および iOS Microsoft Teams クライアント (モバイル) でのタブ機能、認証、低帯域幅接続、テスト、または配布方法について説明します。
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 604d1ed8cabd745359e4714bc1b5fe82e67c7662
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 0dbb74d5c2854897f82708aa83a0c49df4f28890
+ms.sourcegitcommit: bd96080c78f25eb0a67ce176df5e255be348f7b1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450479"
+ms.lasthandoff: 10/14/2022
+ms.locfileid: "68575769"
 ---
 # <a name="tabs-on-mobile"></a>モバイルのタブ
 
@@ -42,7 +42,7 @@ Teams モバイル クライアントにチャネルまたはグループ タブ
 
 さまざまなサイズと品質のモバイル デバイスでタブが正しく機能することを検証する必要があります。 Android デバイスの場合、 [DevTools を](~/tabs/how-to/developer-tools.md) 使用して、実行中にタブをデバッグできます。 タブレットを含め、パフォーマンスの高いデバイスと低パフォーマンスの両方のデバイスでテストすることをお勧めします。
 
-## <a name="distribution"></a>Distribution
+## <a name="distribution"></a>配布
 
 Teams ストアに一覧表示されているアプリは、Teams モバイル クライアントで正常に機能するには、モバイルでの使用を承認する必要があります。 タブの可用性と動作は、アプリが承認されているかどうかによって異なります。
 
@@ -62,7 +62,12 @@ Teams ストアに一覧表示されているアプリは、Teams モバイル �
 | 機能 | モバイルの可用性 | モバイル動作 |
 |----------|-----------|------------|
 |[チャネルとグループ] タブ|はい|アプリの構成を使用する Teams モバイル クライアントではなく、デバイスの既定の`websiteUrl`ブラウザーでタブが開きます。これは、ソース コードの`setSettings()`[関数](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk#settings-namespace)にも含める必要があります。 ただし、ユーザーは Teams モバイル クライアントのタブを表示するには、アプリの横にある **[その他** ] を選択し、[ **開く**] を選択すると、アプリの `contentUrl` 構成がトリガーされます。|
-|個人用アプリ|なし|該当なし|
+|個人用アプリ|いいえ|対象外|
+
+> [!NOTE]
+> モバイル アプリにボットとタブの両方の機能がある場合、ボット メッセージはチャット セクションに表示されます。
+>
+> ボット アプリの **[チャット** ] を選択し、[ **その他 ] (...)** を選択すると、そのアプリのタブ機能が一覧に表示されません。 ただし、[**チャット**] セクションの右下にある **[その他] (...)** を選択した場合は、そのアプリのボット アプリ機能へのリンクを含むタブ アプリを表示できます。
 
 ### <a name="apps-not-on-teams-store"></a>Teams ストアにないアプリ
 
