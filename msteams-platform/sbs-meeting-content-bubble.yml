@@ -1,25 +1,25 @@
 ### YamlMime:Tutorial
-title: 会議のコンテンツ バブルを生成する
+title: 会議を生成する
 metadata:
-  title: 会議のコンテンツ バブルを生成する
-  description: このラーニング モジュールでは、Teams のボットと出席者を使用して会議コンテンツ バブルに返信を送信する方法について説明します。
+  title: 会議中の通知を生成する
+  description: この学習モジュールでは、Teams のボットを使用して会議内通知に返信を送信する方法について説明します。
   audience: Developer
   level: Beginner
   ms.date: 12/03/2021
   ms.topic: interactive-tutorial
-  nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+  nextTutorialHref: apps-in-teams-meetings/build-tabs-for-meeting.md
   nextTutorialTitle: 会議用のアプリを有効にして構成する方法の詳細
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: fbb175597c3d3a83437014d4a2e739eb5c233c3c
-  ms.sourcegitcommit: ac59d469b823b80e65ee6f7be11ec5c365977a1c
+  ms.openlocfilehash: 7d5b3ff2b2e09802d31bdb66be7a44ab12f01c7e
+  ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 10/06/2022
-  ms.locfileid: "68491513"
+  ms.lasthandoff: 10/20/2022
+  ms.locfileid: "68615262"
 items:
 - durationInMinutes: 1
-  content: "Teams は、ボットを使用してコンテンツ バブルを生成し、対話するのに役立ちます。\n\n**会議コンテンツ バブルの主な機能**:\n\n* アダプティブ カードに一覧表示されている議題項目を表示します。\n* 特定の議題で任意のオプションを選択します。\n* チャットで送信されたコンテンツ バブルまたはアダプティブ カードにフィードバックを送信します。\n\n> [!NOTE]\n> 会議コンテンツ バブルは、Azure AD ユーザーでのみ使用でき、匿名ユーザーには使用できません。\n\nこのステップ バイ ステップ ガイドは、Teams 会議のボットと出席者を使用して会議コンテンツバブルを生成するのに役立ちます。 次の出力が表示されます。\n\n  :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png\" alt-text=\"会議コンテンツバブルの概要\":::\n\n \n"
+  content: "Teams は、ボットを使用して会議内通知を生成し、対話するのに役立ちます。\n\n**会議内通知の主な機能**:\n\n* アダプティブ カードに一覧表示されている議題項目を表示します。\n* 特定の議題で任意のオプションを選択します。\n* 会議中の通知またはチャットで送信されたアダプティブ カードにフィードバックを送信します。\n\n> [!NOTE]\n> 会議中の通知は、Azure AD ユーザーでのみ使用でき、匿名ユーザーには使用できません。\n\nこのステップ バイ ステップ ガイドは、Teams 会議で出席者と会議を行うボットを使用して会議内通知を生成するのに役立ちます。 次の出力が表示されます。\n\n  :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png\" alt-text=\"会議内通知の概要\":::\n\n \n"
 - title: 前提条件
   durationInMinutes: 1
   content: "次のツールをインストールし、開発環境をセットアップしてください。  \n\n | &nbsp; | インストール | 使用するには... |\n | --- | --- | --- |\n | **必須** | &nbsp; | &nbsp; |\n | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams は、チャット、会議、通話、すべて 1 か所のアプリを通じて、共同作業するすべてのユーザーと共同作業を行います。|\n | &nbsp; | [Visual Studio 2022 バージョン 17.3](https://visualstudio.microsoft.com)<br> 次の 2 つのワークロードのいずれかをインストールします。<br> • **ASP.NET と Web 開発** <br> • **.NET Core クロスプラットフォーム開発** | Visual Studio 2022 でエンタープライズ バージョンをインストールし、ワークロードをインストールできます。 |\n | &nbsp; | [.NET Core SDK バージョン 3.1](https://dotnet.microsoft.com/en-us/download) | ローカル デバッグとAzure Functions アプリのデプロイ用にカスタマイズされたバインド。 .NET 3.1 (またはそれ以降) SDK をグローバルにインストールしていない場合は、ポータブル バージョンをインストールできます。 |\n | &nbsp; | [ngrok](https://ngrok.com/download) | Teams アプリの機能 (会話ボット、メッセージ拡張機能、受信 Webhook) には、受信接続が必要です。 トンネルは、開発システムを Teams に接続します。 タブのみを含むアプリでは必須ではありません。 このパッケージはプロジェクト ディレクトリ内にインストールされます (npm `devDependencies` を使用)。 |\n\n  > [!NOTE]\n  > ngrok をダウンロードしたら、サインアップして [authtoken](https://ngrok.com/download) をインストールします。\n\n[C#](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments) に関する実用的な知識があることを確認します。\n"
@@ -54,13 +54,13 @@ items:
 - title: サービスをビルドして実行する
   durationInMinutes: 1
   content: "**Visual Studio を使用してサービスをビルドして実行するには**\n\n   1. **Visual Studio を開きます**。\n   1. **[ファイル** > **を開く** > **] プロジェクト/ソリューション** に移動します。\n\n       :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/meeting-token-generator-VSopenfile_1.png\" alt-text=\"ファイルを開く\":::\n\n   1. **ContentBubbleBot.sln ファイルを** 開きます。\n\n       :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/proj-sln_1.png\" alt-text=\"ファイルを開く\":::\n\n   1. **F5** キーを押してプロジェクトを実行します。\n\n      Web ページが開き、メッセージが表示されます **。ボットの準備は完了です。**\n\n       :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/your-bot-is-ready.png\" alt-text=\"アプリの準備完了\"::: \n"
-- title: Teams に会議コンテンツ バブル アプリを追加する
+- title: Teams に会議内通知アプリを追加する
   durationInMinutes: 1
-  content: "\n1. 複製されたリポジトリで、 **csharp > リソース > マニフェスト** に移動します。\n\n1. **マニフェスト** フォルダーに存在する次のファイルを含む.zipを作成します。 \n   * manifest.json\n   * icon-outline.png\n   * icon-color.png\n\n    :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/create-manifest-zip_1.png\" alt-text=\"Zip ファイル\"::: \n\n1. 発表者と出席者を含む会議を作成します。\n\n1. 会議が作成されたら、[**アプリの追加]** を選択します **+**。\n\n    :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/add-an-app.png\" alt-text=\"アプリの追加\"::: \n\n1. ポップアップ ウィンドウで、[ **アプリの管理**] を選択します。\n\n    :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/manage-apps_1.png\" alt-text=\"アプリを管理する\"::: \n\n1. **[カスタム アプリをアップロードする]** を選択します。 \n\n    :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/upload-custom-app_1.png\" alt-text=\"カスタム アプリをアップロードする\"::: \n\n1. **[開く]** を選択して、**マニフェスト** フォルダーに作成した.zip ファイルをアップロードします。\n\n    :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/Zip-file_1.png\" alt-text=\"zip アプリをアップロードする\":::\n\n1. **[追加]** を選択します。\n\n    :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/content-bubble-demo_1.png\" alt-text=\"アプリを追加する\"::: \n\n1. [ **アプリの管理]** セクションには、アプリケーションの一覧が表示されます。\n\n    :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/Manage.png\" alt-text=\"アプリを管理する\"::: \n\n1. Teams 会議チャットに移動します。\n\n1. **Content Bubble Demo** アプリは、会議チャットに自動応答を送信します。\n\n     :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/content-bubble-demo-first-reply.png\" alt-text=\"Content Bubble Demo reply\"::: \n\n1. **Hello** メッセージをボットに送信します。\n\n     :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/content-bubble-demo-second-reply.png\" alt-text=\"ボットのメンション\"::: \n\n1. ボットから、アダプティブ カードに一覧表示されている議題項目が送信されます。\n\n1. 任意のオプションを選択し、[ **プッシュ 議題** ] を選択して返信を送信します。\n\n    :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/push-agenda.png\" alt-text=\"ボットからアダプティブ カードが送信される\"::: \n\n1. ボットは **フィードバック** アダプティブ カードを送信します。\n\n1. [ **はい**] または [ **いいえ**] を選択します。\n\n1. **[送信]** を選択します。\n\n    :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/content-bubble-feedback.png\" alt-text=\"ボットからフィードバック カードが送信される\"::: \n\n    ボットはフィードバック メッセージを送信します。\n  \n"
+  content: "\n1. 複製されたリポジトリで、 **csharp > リソース > マニフェスト** に移動します。\n\n1. **マニフェスト** フォルダーに存在する次のファイルを含む.zipを作成します。 \n   * manifest.json\n   * icon-outline.png\n   * icon-color.png\n\n    :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/create-manifest-zip_1.png\" alt-text=\"Zip ファイル\"::: \n\n1. 発表者と出席者を含む会議を作成します。\n\n1. 会議が作成されたら、[**アプリの追加]** を選択します **+**。\n\n    :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/add-an-app.png\" alt-text=\"アプリの追加\"::: \n\n1. ポップアップ ウィンドウで、[ **アプリの管理**] を選択します。\n\n    :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/manage-apps_1.png\" alt-text=\"アプリを管理する\"::: \n\n1. **[カスタム アプリをアップロードする]** を選択します。 \n\n    :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/upload-custom-app_1.png\" alt-text=\"カスタム アプリをアップロードする\"::: \n\n1. **[開く]** を選択して、**マニフェスト** フォルダーに作成した.zip ファイルをアップロードします。\n\n    :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/Zip-file_1.png\" alt-text=\"zip アプリをアップロードする\":::\n\n1. **[追加]** を選択します。\n\n    :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/content-bubble-demo_1.png\" alt-text=\"アプリを追加する\"::: \n\n1. [ **アプリの管理]** セクションには、アプリケーションの一覧が表示されます。\n\n    :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/Manage.png\" alt-text=\"アプリを管理する\"::: \n\n1. Teams 会議チャットに移動します。\n\n1. **会議内通知デモ** アプリは、会議チャットに自動返信を送信します。\n\n     :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/content-bubble-demo-first-reply.png\" alt-text=\"会議中の通知デモの返信\"::: \n\n1. **Hello** メッセージをボットに送信します。\n\n     :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/content-bubble-demo-second-reply.png\" alt-text=\"ボットのメンション\"::: \n\n1. ボットから、アダプティブ カードに一覧表示されている議題項目が送信されます。\n\n1. 任意のオプションを選択し、[ **プッシュ 議題** ] を選択して返信を送信します。\n\n    :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/push-agenda.png\" alt-text=\"ボットからアダプティブ カードが送信される\"::: \n\n1. ボットは **フィードバック** アダプティブ カードを送信します。\n\n1. [ **はい**] または [ **いいえ**] を選択します。\n\n1. **[送信]** を選択します。\n\n    :::image type=\"content\" source=\"~/assets/images/meeting-content-bubble/content-bubble-feedback.png\" alt-text=\"ボットからフィードバック カードが送信される\"::: \n\n    ボットはフィードバック メッセージを送信します。\n  \n"
 - title: 課題の完了
   durationInMinutes: 1
   content: >
     このようなものを思いついたのですか?
 
-     :::image type="content" source="~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png" alt-text="Content Bubble Demo デスクトップとモバイル":::
-- content: 会議コンテンツバブルアプリの生成を開始するためのチュートリアルを完了しました。
+     :::image type="content" source="~/assets/images/meeting-content-bubble/desktop-and-mobile-image-final.png" alt-text="会議中の通知デモ デスクトップとモバイル":::
+- content: 会議内通知アプリの生成を開始するためのチュートリアルを完了しました。

@@ -4,12 +4,12 @@ description: Microsoft Teams の新しい開発者向け機能と、既存の機
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 069c908c18377b440d21e44c0a95594d2904722b
-ms.sourcegitcommit: bd96080c78f25eb0a67ce176df5e255be348f7b1
+ms.openlocfilehash: d1ad99b5fff30f5329525fc536e62f5690c0e9a9
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2022
-ms.locfileid: "68575776"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615325"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -31,6 +31,7 @@ ms.locfileid: "68575776"
 
 **2022 年 10 月**
 
+* ***2022 年 10 月 19*** 日: [TEAMS 用開発者ポータルが GCC テナントで利用できるようになりました](concepts/build-and-test/teams-developer-portal.md)。
 * ***2022 年 10 月 13*** 日: [NavBar を構成し、複数のアクションのオーバーフロー メニューを作成します](concepts/design/personal-apps.md#configure-and-add-multiple-actions-in-navbar)。
 * ***2022 年 10 月 13*** 日: [アプリの [戻る] ボタンを構成](concepts/design/personal-apps.md#configure-back-button)します。
 * ***2022 年 10 月 12*** 日: [アプリは、インスタント会議、1 対 1、グループ通話でサポートされます。](apps-in-teams-meetings/teams-apps-in-meetings.md)
@@ -54,7 +55,7 @@ ms.locfileid: "68575776"
 | 08/03/2022 | 会議後のシナリオで会議のトランスクリプトを取得する機能が追加されました。 | [Teams 会議と通話用のアプリを構築する] > [Graph API を使用して会議のトランスクリプトを取得する] > [[概要]](graph-api/meeting-transcripts/overview-transcripts.md) |
 | 08/03/2022 | Web アプリからの [Teams で共有] のリンク展開 | [Teams との統合] > [Teams への共有] > [[Web アプリから Teams に共有する]](concepts/build-and-test/share-to-teams-from-web-apps.md) |
 | 08/01/2022| 注意: 開発者ポータルは GA になり、App Studio は 2022 年 8 月 1 日から非推奨になりました。 | [ツールと SDK] > [[Teams の開発者ポータル]](concepts/build-and-test/teams-developer-portal.md) |
-| 2022 年 7 月 28 日 | Teams の表示画像と連絡先カードを会議内通知用に追加する| Teams の会議と通話用のアプリを作成する > 会議用のアプリを有効にして構成する > <[会議内通知](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#in-meeting-notification) |
+| 2022 年 7 月 28 日 | Teams の表示画像と連絡先カードを会議内通知用に追加する| Teams 会議用のアプリのビルドと通話> Teams 会議のアプリの有効化と構成> [Teams 会議の会議内通知の作成](apps-in-teams-meetings/in-meeting-notification-for-meeting.md) |
 | 2022 年 7 月 28 日 | Teams で共有チャネルを作成にする | Teams の会議と通話用のアプリを作成する > [共有チャネル](concepts/build-and-test/Shared-channels.md) |
 | 2022 年 7 月 28 日|アプリ マニフェスト バージョン 1.14 が導入されました| アプリ マニフェスト > [Teams 用のアプリ マニフェスト スキーマ](resources/schema/manifest-schema.md)|
 | 2022 年 7 月 26 日|ボットに推奨されるアクション| [ボットのビルド] > [ボットの会話] > [[ボットの会話のメッセージ]](bots/how-to/conversations/conversation-messages.md#send-suggested-actions)|
@@ -94,10 +95,10 @@ ms.locfileid: "68575776"
 | 02/18/2022 | ユース ケースの Teams 機能へのマッピングとアプリ計画チェックリストを含めるために、[アプリの基礎] モジュールを [アプリの計画] に更新しました | [[アプリの計画] > [概要]](~/concepts/app-fundamentals-overview.md) |
 | 02/17/2022 | アプリを送信した後、何を期待しますか?| アプリを配布する > Teams ストアに公開する > [概要](concepts/deploy-and-publish/appsource/publish.md) |
 | 2022/02/15 | ボットから Teams にファイルをアップロードする方法のステップバイステップ ガイドが導入されました | 「ボットを作成する」 > 「ファイルを送受信する」 > 「[ボットから Teams にファイルをアップロードするためのステップバイステップ ガイド](sbs-file-handling-in-bot.yml)」 |
-| 02/11/2022 | 共有会議ステージ| • [Teams 会議用アプリのビルド] > [[共有会議ステージ]](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage) </br> • [Teams 会議用アプリのビルド] > [[Meeting apps API リファレンス]](apps-in-teams-meetings/API-references.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー] > [[開発者向けプレビュー マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md)|
+| 02/11/2022 | 共有会議ステージ| • [Teams 会議用アプリのビルド] > [[共有会議ステージ]](apps-in-teams-meetings/build-tabs-for-meeting.md) </br> • Teams 会議用のアプリのビルド> [Teams 会議用のアプリのビルド](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー] > [[開発者向けプレビュー マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md)|
 | 02/08/2022 | 通話と会議ボットを作成するステップバイステップ ガイドを導入しました| [ボットの構築] > [通話と会議のボット] > [通話と会議のボットの登録] > [[通話と会議のボットを作成するためのステップバイステップ ガイド]](sbs-calling-and-meeting.yml) |
 | 02/02/2022 | アプリ マニフェスト バージョン 1.12 が導入されました | [アプリ マニフェスト] > [[アプリ マニフェストのスキーマ]](resources/schema/manifest-schema.md) |
-| 2022 年 1 月 25 日 | リアルタイム キャプション API を送信する | [Teams Meetings 用のアプリを作成する] > [Meeting Apps API リファレンス] > [[Meeting Apps API リファレンス]](apps-in-teams-meetings/API-references.md#send-real-time-captions-api)|
+| 2022 年 1 月 25 日 | リアルタイム キャプション API を送信する | Teams 会議用アプリのビルド>会議アプリ API リファレンス> [高度な会議 API](apps-in-teams-meetings/meeting-apps-apis.md)|
 | 01/19/2022 | アダプティブ カードは、完了フィードバックを形成します | ボットのビルド > ボットの会話 > ボットの会話のメッセージ > [フォーム完了フィードバック](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 | 2022/1/17 | デスクトップ版アダプティブ カードのユーザー ピッカー | [カードとタスク モジュールの構築] > [カードの構築] > [[アダプティブ カードのユーザー ピッカー]](task-modules-and-cards/cards/people-picker.md)|
 
@@ -129,8 +130,8 @@ ms.locfileid: "68575776"
 |2021/11/13| ボットは、リソース固有のコンテンツ (RSC) を使用して、すべてのチャネル メッセージの受信を有効化できます | • [ボットの構築] > [ボットの会話] > [ボット会話のメッセージ] > [[RSC を使用してすべてのチャネル メッセージを受信する]](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • [ボットの構築] > [ボットの会話] > [[ボット会話の概要]](~/bots/how-to/conversations/conversation-basics.md) </br> • [ボットの構築] > [ボットの会話] > [[チャネルとグループの会話]](~/bots/how-to/conversations/channel-and-group-conversations.md) |
 |2021/10/28| 取引可能な SaaS プランを使用して Teams アプリを収益化する | [アプリの配布] > [Teams ストアに公開する] > [[SaaS プランを Teams アプリに含める]](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
 |2021/10/25| ステップバイステップのガイドの新しい構造と手順を使用して Microsoft Teams 開発者ドキュメントの [使用を開始する] モジュールが更新されました | [使用を開始する] > [[最初の Teams アプリの使用を開始する]](get-started/get-started-overview.md) |
-|2021/10/20| 一般提供で会議ステージを使用できるようになりました | [Teams 会議用アプリの作成] > [[Teams 会議用アプリを有効化して構成する]](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |
-|2021/10/20| 会議の詳細 API とリアルタイム Teams 会議イベント | [Teams 会議用のアプリをビルドする] > [[会議の詳細 API を取得する]](apps-in-teams-meetings/API-references.md#get-meeting-details-api) |
+|2021/10/20| 一般提供で会議ステージを使用できるようになりました | [Teams 会議用アプリの作成] > [[Teams 会議用アプリを有効化して構成する]](apps-in-teams-meetings/build-tabs-for-meeting.md) |
+|2021/10/20| 会議の詳細 API とリアルタイム Teams 会議イベント | [Teams 会議用のアプリをビルドする] > [[会議の詳細 API を取得する]](apps-in-teams-meetings/meeting-apps-apis.md) |
 |2021/10/18| タブのリンクの展開とステージ ビュー | [タブの構築] > [[タブのリンクの展開とステージ ビュー]](tabs/tabs-link-unfurling.md) |
 |2021/10/8| アダプティブ カードの設計に関する新しいベスト プラクティス | [アプリの設計] > [UI コンポーネント] > [[Teams アプリのアダプティブ カードを設計する]](task-modules-and-cards/cards/design-effective-cards.md) |
 |2021/10/5| 管理者がアプリの表示を許可するまで Teams アプリを非表示にします | アプリを設計>管理者が [承認するまで、ユーザーのアプリを既定でブロックする](concepts/design/enable-app-customization.md#block-apps-by-default-for-users-until-an-admin-approves) |
@@ -143,7 +144,7 @@ ms.locfileid: "68575776"
 |2021/8/19| 会話スレッドにボットをインストールしたときに受信するインストール更新イベント | [ボットの構築] > [ボットの会話] > [[インストール更新イベント]](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event) |
 |2021/8/12|アダプティブ カードを使用してタブをビルドする| [タブの構築] > [[アダプティブ カードを使用してタブを構築する]](tabs/how-to/build-adaptive-card-tabs.md) |
 |2021/8/4|タブのエクスペリエンスを囲む余白がなくなります | [タブの構築] > [[タブの余白を削除する]](resources/removing-tab-margins.md) |
-|2021/7/8|Teams モバイルに会議中のアプリのサポートが追加されました | [Teams 会議用アプリの構築] > [[会議アプリの拡張性]](apps-in-teams-meetings/meeting-app-extensibility.md) |
+|2021/7/8|Teams モバイルに会議中のアプリのサポートが追加されました | Teams 会議用のアプリをビルド> [Teams 会議用のアプリをビルドする](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md) |
 |2021/6/28|ユーザー ピッカー機能を統合する | [Teams との統合] > [[ユーザー ピッカー機能を統合する]](concepts/device-capabilities/people-picker-capability.md) |  
 |2021/6/25| プロアクティブ メッセージを送信するためのステップバイステップのガイドを導入しました | [ボットの構築] > [ボットの会話] > [プロアクティブ メッセージ] > [[プロアクティブ メッセージを送信するためのステップバイステップのガイド]](sbs-send-proactive.yml) |
 |2021/6/9| `allowExpand` 属性を使用したアダプティブ カードの画像のステージ ビュー | [カードとタスク モジュールの構築] > [カードの構築] > [[アダプティブ カードの画像用ステージ ビュー]](task-modules-and-cards/cards/cards-format.md#stage-view-for-images-in-adaptive-cards) |
@@ -290,14 +291,14 @@ ms.locfileid: "68575776"
 
 **2022 年 10 月**
 
-***2022 年 10 月 11*** 日: [会議のステージにコンテンツを共有するためのディープ リンクを生成します。](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
+***2022 年 10 月 11*** 日: [会議のステージにコンテンツを共有するためのディープ リンクを生成します。](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 
 :::column-end:::
 :::row-end:::
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ------------------ |
-| 09/23/2022 | スケジュールされたチャネル会議の会議アプリのサポートを導入しました。 | Teams 会議用のアプリを作成し、[統合会議アプリ](apps-in-teams-meetings/meeting-app-extensibility.md)>呼び出す |
+| 09/23/2022 | スケジュールされたチャネル会議の会議アプリのサポートを導入しました。 | Teams 会議用のアプリを作成し、Teams 会議 [と通話用のアプリ>呼び出します](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 08/23/2022 | モバイルで Teams 会議ステージにアプリを共有する | Teams 会議と通話用のアプリをビルド> [会議用のアプリを有効にして構成する](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
 | 08/10/2022 | スケジュールされたパブリック チャネル会議用のアプリ | Teams 会議と通話用のアプリをビルド > [[概要]](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 08/03/2022 | Teams 会議ステージでアプリの API をミュートおよびミュート解除する | [Teams 会議と通話用のアプリをビルドする] > [[会議アプリの API リファレンス]](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
