@@ -4,12 +4,12 @@ description: この記事では、開発者ポータルの詳細と、まった�
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.openlocfilehash: 0e099700d6129dc2db7b12e0a699fc903c9d32c8
-ms.sourcegitcommit: b060a3901a3ba770ea6fca96d0ab477c252af1a2
+ms.openlocfilehash: b0619fc328e6bc30decfe5868692281037489654
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2022
-ms.locfileid: "67417501"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615136"
 ---
 # <a name="developer-portal-for-teams"></a>Teams の開発者ポータル
 
@@ -19,9 +19,8 @@ ms.locfileid: "67417501"
 
 > [!NOTE]
 >
-> * 現在、開発者ポータルは Government Community Cloud (GCC)、GCC-High、または国防総省 (DOD) テナントでは使用できません。
+> * 現在、開発者ポータルは Government Community Cloud (GCC)-High または国防総省 (DOD) テナントでは使用できません。
 > * ただし、通常のテナントを使用して、開発者ポータルでアプリを構築し、アプリをダウンロードし、 [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) を使用してアプリを国内クラウドにアップロードすることができます。 詳細については、「 [国内クラウドデプロイ](/graph/deployments)」を参照してください。
-> * 現時点では、AdBlocker が有効になっている場合、開発者ポータルはブラウザーに読み込まれません。 ブラウザーで開発者ポータルを続行するには、AdBlocker を無効にします。
 
 ## <a name="register-an-app"></a>アプリを登録します
 

@@ -5,12 +5,12 @@ description: ユース ケースと Microsoft Teams アプリの機能を理解�
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: eb72d4296ee6b91bae1775ad79eef06139abb59e
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: fcc360410d4af501d4097c6269b3e1157a6e742b
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100421"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615178"
 ---
 # <a name="plan-your-app-with-teams-features"></a>Teams の機能を使用してアプリを計画する
 
@@ -88,7 +88,7 @@ Government Community Cloud (GCC) は、政府機関向けの商用環境のコ�
 
 次のリストは、機能に対する GCC、GCC-High、および DOD の可用性を特定するのに役立ちます。
 
-* サード パーティ製アプリについては、「[Web Apps](../samples/integrating-web-apps.md)」および「[会議アプリ拡張性](../apps-in-teams-meetings/meeting-app-extensibility.md)」を参照してください。
+* サード パーティ製アプリについては、「[Web Apps](../samples/integrating-web-apps.md)」および「[会議アプリ拡張性](../apps-in-teams-meetings/teams-apps-in-meetings.md)」を参照してください。
 * ボットについては、「[ Teams の最初の会話ボットを構築する](../get-started/first-app-bot.md)」、「[Teams ボットの設計](../bots/design/bots.md)」、「[Microsoft Teams アプリにボットを追加する](../resources/bot-v3/bots-overview.md)」、「[Teams でのボット](../bots/what-are-bots.md)」を山荘してください。
 * アプリのサイド ローディングについては、「[カスタマイズする Teams アプリを有効にする](../concepts/design/enable-app-customization.md)」、「[Microsoft Teams アプリの配布](../concepts/deploy-and-publish/apps-publish-overview.md)」、「[Teams でアプリをアップロードする](../concepts/deploy-and-publish/apps-upload.md)」を参照してください。
 * カスタム コネクタについては、「[Teams 用 Office 365 コネクタの作成](../webhooks-and-connectors/how-to/connectors-creating.md)」を参照してください。

@@ -3,12 +3,12 @@ title: Microsoft Teams 開発者向けドキュメント - 用語集
 description: Microsoft Teams 開発者向けドキュメントで使用される一般的な用語、意味、定義について説明します。
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: 8673752e4af13e837793e790c4f7bc14007ff48e
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: dd9da44439223fa9de7e795498dd6f67a7bc45e8
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100862"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615234"
 ---
 # <a name="glossary"></a>用語集
 
@@ -20,7 +20,6 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 | --- | --- |
 | [アクション コマンド](../messaging-extensions/how-to/action-commands/define-action-command.md) | ポップアップを使用して情報を収集または表示するメッセージ拡張機能アプリの種類。 <br>**関連情報**: 「[メッセージ拡張機能](#m); [検索コマンド](#s) |
 | [アダプティブ カード](../task-modules-and-cards/what-are-cards.md) | ボットまたはメッセージ拡張機能によって会話に追加されたアクション可能なコンテンツ スニペット。 リッチ コミュニケーションのために、これらのカードでテキスト、グラフィックス、ボタンを使用します。 |
-| [匿名ユーザー](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | A type of participant in a Teams meeting who doesn't have an Azure AD identity and isn't federated with a tenant. They are like external users in a meeting. <br>**関連情報**: [フェデレーション ユーザー](#f) |
 | [アプリ カタログ](../toolkit/publish.md) | 組織の内部使用のために SharePoint アプリと Office アプリを格納するサイト。 <br>**関連情報**: [SPFx](#s) |
 | [アプリ マニフェスト](../resources/schema/manifest-schema.md) | Teams アプリ マニフェストは、アプリが Microsoft Teams 製品にどのように統合されるかを説明します。 マニフェストは、最新の[マニフェスト スキーマ](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json)に適合している必要があります。 |
 | [アプリ パッケージ](../concepts/build-and-test/apps-package.md) | Teams アプリ パッケージは、アプリ マニフェスト ファイル、色アイコン、アウトライン アイコンを含む zip ファイルです。 |
@@ -86,7 +85,6 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 
 | 用語 | 定義 |
 | --- | --- |
-| [フェデレーション ユーザー](../apps-in-teams-meetings/meeting-app-extensibility.md#user-types-in-a-meeting) | 外部で会議に招待されている Teams アプリ会議のユーザーの種類。 このユーザーには、承認された Teams パートナーによってフェデレーションされた有効な資格情報があります。 外部ユーザーとも呼ばれます。 <br>**関連情報**: [匿名ユーザー](#a) |
 | [初回実行エクスペリエンス](../concepts/design/design-teams-app-ui-templates.md)|初回実行エクスペリエンス (FRE) は、ユーザーによる製品の概要です。FRE は、ユーザーが製品の機能、機能、利点を使い始めるのに役立ち、ユーザーが製品を使用し直して使用し続ける影響を与えます。|
 
 ## <a name="g"></a>G
@@ -104,7 +102,7 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 | --- | --- |
 | [ID プロバイダー](../concepts/authentication/authentication.md) | ユーザーに資格情報を格納して提供するエンティティ。 また、ユーザーは自分で登録することもできます。  <br>**関連情報**: [認証](#a) |
 | [着信 Webhook](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | これにより、外部アプリは Teams チャネルでコンテンツを共有できます。 これらの Webhook は、追跡および通知ツールとして使用されます。 <br>**関連情報**: [Webhook](#w); [発信 Webhook](#o) |
-| [会議中のアプリ エクスペリエンス](../apps-in-teams-meetings/meeting-app-extensibility.md#in-meeting-app-experience) | A stage of Teams meeting lifecycle. With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. <br>**関連情報**: [会議のライフサイクル](#m) |
+| [会議中のアプリ エクスペリエンス](../apps-in-teams-meetings/teams-apps-in-meetings.md) | A stage of Teams meeting lifecycle. With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. <br>**関連情報**: [会議のライフサイクル](#m) |
 
 ## <a name="l"></a>L
 
@@ -122,7 +120,7 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 | --- | --- |
 | [メディア機能](../concepts/device-capabilities/media-capabilities.md) | カメラやマイクなど、Teams アプリと統合できるネイティブ デバイス機能。 <br>**関連情報**: [機能](#c); [デバイス機能](#d) |
 | [会議ボット](../bots/calls-and-meetings/calls-meetings-bots-overview.md) | リアルタイムの音声、ビデオ、画面共有を使用して Teams の通話や会議と対話するボット。 <br>**関連情報**: [通話ボット](#c); [チャット ボット](#c) |
-| [会議のライフサイクル](../apps-in-teams-meetings/meeting-app-extensibility.md#meeting-lifecycle) | これは、会議前、会議中、および会議後のアプリ エクスペリエンスに及びます。 会議のライフサイクルの各段階で、タブ、ボット、メッセージ拡張機能を統合できます。 <br>**関連情報**: [会議中エクスペリエンス](#i) |
+| [会議のライフサイクル](../apps-in-teams-meetings/teams-apps-in-meetings.md) | これは、会議前、会議中、および会議後のアプリ エクスペリエンスに及びます。 会議のライフサイクルの各段階で、タブ、ボット、メッセージ拡張機能を統合できます。 <br>**関連情報**: [会議中エクスペリエンス](#i) |
 | [会議ステージ](../sbs-meetings-stage-view.yml) | 会議拡張機能アプリの機能。 会議中にすべての参加者がアクセスできる共有スペースです。 これは、参加者がリアルタイムでアプリ コンテンツと対話して共同作業するのに役立ちます。 <br>**関連情報**: [ステージ ビュー](#s) |
 | [メッセージ拡張機能](../messaging-extensions/what-are-messaging-extensions.md) | Message extensions are shortcuts for inserting app content or acting on a message. You can use a message extension without navigating away from the conversation. <br>**関連情報**: [検索コマンド](#s); [アクション コマンド](#a) |
 | [会議の拡張機能](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | ホワイトボード、ダッシュボードなど、会議のライフサイクル中に生産性を高めるために使用するように設計されたアプリ。 |

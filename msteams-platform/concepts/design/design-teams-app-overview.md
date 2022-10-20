@@ -1,16 +1,16 @@
 ---
 title: カスタム アプリの設計
 author: heath-hamilton
-description: Microsoft Teams UI キット、ベスト プラクティス、例など、アプリとリソースMicrosoft Teams設計する方法について説明します。
+description: Microsoft Teams のアプリとリソースを設計する方法については、Microsoft Teams UI キット、ベスト プラクティス、例などをご覧ください。
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.openlocfilehash: 442d092be36f5d49e68fc997394e8846c4394f8d
-ms.sourcegitcommit: ca84b5fe5d3b97f377ce5cca41c48afa95496e28
+ms.openlocfilehash: 341c64b2afda7574b6d230257290220e2c97d325
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66142879"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615311"
 ---
 # <a name="designing-your-microsoft-teams-app"></a>Microsoft Teams のアプリの設計
 
@@ -185,7 +185,7 @@ Web ベースのツールでアダプティブ カードを設計します。
 
 ## <a name="see-also"></a>関連項目
 
-* [Teams 会議用アプリを有効化して構成する](../../apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+* [会議ステージ用にアプリを有効にして構成する](../../apps-in-teams-meetings/build-tabs-for-meeting.md)
 * [Microsoft Teams のボットをデザインする](~/bots/design/bots.md)
 * [仮想アシスタントを作成する](~/samples/virtual-assistant.md)
 * [Microsoft Teams のアプリのタスク モジュールの設計](~/task-modules-and-cards/task-modules/design-teams-task-modules.md)
