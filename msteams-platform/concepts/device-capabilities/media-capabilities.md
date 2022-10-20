@@ -5,12 +5,12 @@ description: Teams JavaScript クライアント SDK を使用して、コード
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.openlocfilehash: d7bfedc0a439f428287cb1443df2a66fcff670ab
-ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
+ms.openlocfilehash: bfa63b42383e507f004b0225c64f381e47e547f0
+ms.sourcegitcommit: 1ea035bc20303070268db38472839584ad4280b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68160637"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68653372"
 ---
 # <a name="integrate-media-capabilities"></a>メディア機能を統合する
 
@@ -51,7 +51,7 @@ ms.locfileid: "68160637"
 [selectMedia](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia)、[getMedia](/javascript/api/@microsoft/teams-js/media.media#@microsoft-teams-js-media-media-getmedia)、[viewImages](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-viewimages) API を使用すると、ネイティブ メディア機能を次のように使用できます。
 
 * ネイティブ **マイク** を使用して、ユーザーがデバイスから **オーディオを録音** (10 分間の会話を録音) できるようにします。
-* ネイティブ **カメラ コントロール** を使用して、ユーザーが外出先で **画像をキャプチャして添付** し、 **ビデオをキャプチャ** (最大 5 分のビデオを記録) できるようにします。
+* ネイティブ **カメラ コントロール** を使用して、ユーザーが外出先で **画像をキャプチャして添付** し、 **ビデオをキャプチャ** (最大 5 分間のビデオを記録) できるようにします。
 * ネイティブ **ギャラリーのサポート** を使用して、ユーザーが添付ファイルとして **デバイス イメージを選択** できるようにします。
 * ネイティブ **イメージ ビューアー コントロール** を使用して、一度に **複数のイメージをプレビュー** します。
 * SDK ブリッジを介した **大規模なイメージ転送** (1 MB から 50 MB) をサポートします。
@@ -61,8 +61,9 @@ ms.locfileid: "68160637"
 > [!IMPORTANT]
 >
 > * `selectMedia`、`getMedia`、および `viewImages` API は、タスク モジュール、タブ、個人用アプリなど、複数の Teams サーフェスから呼び出すことができます。 詳細については、「 [Teams アプリのエントリ ポイント」を](../extensibility-points.md)参照してください。</br>
-> * `selectMedia` API は、さまざまな入力構成を通じてカメラとマイクの両方の機能をサポートします。
+> * API は `selectMedia` 、さまざまな入力構成を通じてカメラとマイクの両方の機能をサポートします。
 > * マイク機能にアクセスするための API は `selectMedia` 、モバイル クライアントでのみサポートされます。
+> * アップロードされるイメージの最大数は、API によって [`maxMediaCount`](/javascript/api/@microsoft/teams-js/media.mediainputs#@microsoft-teams-js-media-mediainputs-maxmediacount) 返される配列の合計サイズによっても `selectMedia` 決まります。 配列サイズが 4 MB を超える場合は、配列サイズが 4 MB を超えていないことを確認します。API によってエラー コード 10000 が生成され、エラーがSIZE_EXCEEDEDされます。
 
 次の表に、デバイスのメディア機能を有効にする API のセットを示します。
 
