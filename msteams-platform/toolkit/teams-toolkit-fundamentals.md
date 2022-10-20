@@ -7,16 +7,14 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 84a18c736c59c992bb4e3e51962ed631483f7f2b
-ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
+ms.openlocfilehash: 786bfd318f1cefa4329e54b5a19cba89a823bb5b
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68296026"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615339"
 ---
 # <a name="teams-toolkit-overview"></a>Teams ツールキットの概要
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png" alt-text="Teams Toolkit のユーザー体験" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
 Teams Toolkit を使用すると、Visual Studio と Visual Studio Code を使用して Microsoft Teams のアプリ開発を簡単に開始できます。
 
@@ -26,6 +24,8 @@ Teams Toolkit を使用すると、Visual Studio と Visual Studio Code を使�
 * コードとしてのインフラストラクチャと Bicep を使用した Azure でのホスティングのスマート な既定値
 * 環境機能を使用して、開発、テスト、プローブなどの一意の構成を作成する
 * 組み込みの発行ツールを使用して、アプリを組織または Teams App Storeに持ち込む
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png" alt-text="Teams Toolkit のユーザー体験" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
 ## <a name="available-for-visual-studio-and-visual-studio-code"></a>Visual Studio と Visual Studio Code で使用できます
 

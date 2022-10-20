@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.openlocfilehash: 77b17cb837312bca5b253fbd99fba2d0503f1744
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: cbb97bd1fcd3422af968e7928436f4da1ae4038d
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560471"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615290"
 ---
 # <a name="maintain-your-published-microsoft-teams-app"></a>公開された Microsoft Teams アプリを管理する
 
@@ -23,11 +23,6 @@ ms.locfileid: "68560471"
 新しく公開されたアプリのデータがレポートに表示されるまでに約 1 週間かかります。
 
 ## <a name="publish-updates-to-your-app"></a>アプリに更新プログラムを発行する
-
-> [!NOTE]
-> Teams ストアが進化しました。
->
-> 以前は、アプリ タイルで省略記号を選択してリンクをコピーしました。 更新された Teams ストア エクスペリエンスを使用すると、アプリの [詳細] タブから同じものにアクセスできます。 この更新プログラムは、2022 年 3 月 1 日までに一般提供 (GA) される予定です。
 
 パートナー センターでは、アプリに変更 (新機能やメタデータなど) を送信できます。 これらの変更には、新しいレビュー プロセスが必要です。
 

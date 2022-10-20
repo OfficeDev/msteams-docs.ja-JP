@@ -7,16 +7,16 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 179a3002533e296e03dc0bb367b43880e95c3a1f
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 4f5afe23e9d8deefdf2b1b182fa51cfe034e5c4d
+ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781103"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68615143"
 ---
 # <a name="deploy-teams-app-to-the-cloud"></a>Teams アプリをクラウドに展開する
 
-Teams Toolkit を使用すると、アプリケーション内のフロントエンドコードとバックエンド コードを Azure でプロビジョニングされたクラウド リソースにデプロイまたはアップロードできます。
+Teams Toolkit を使用すると、アプリケーション内のフロントエンド コードとバックエンド コードを Azure でプロビジョニングされたクラウド リソースにデプロイまたはアップロードできます。
 
 ::: zone pivot="visual-studio-code"
 
@@ -25,8 +25,8 @@ Teams Toolkit を使用すると、アプリケーション内のフロントエ
 次をクラウドにデプロイできます。
 
 * フロントエンド アプリケーションなどのタブは、Azure Storage にデプロイされ、静的 Web ホスティングまたは SharePoint サイト用に構成されます。
-* バックエンド API は Azure 関数にデプロイされます。
-* ボットまたはメッセージ拡張機能は、Azure アプリ サービスにデプロイされます。
+* バックエンド API はAzure Functionsにデプロイされます。
+* ボットまたはメッセージ拡張機能は、Azure App Serviceにデプロイされます。
 
   > [!NOTE]
   > Azure クラウドにアプリ コードをデプロイする前に、 [クラウド リソースのプロビジョニング](provision.md)を正常に完了する必要があります。
@@ -44,11 +44,11 @@ Teams Toolkit を使用すると、アプリケーション内のフロントエ
 |-------------|----------|---------------|---------------|
 |Reactを含むタブ </br> フロントエンド ワークロード| `yourProjectFolder/tabs`| `tabs/build` |Azure Storage |
 |SharePoint を使用したタブ </br> フロントエンド ワークロード | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |SharePoint アプリ カタログ |
-|Azure 関数上の API </br> バックエンド ワークロード | `yourProjectFolder/api`| 対象外 |Azure Functions |
-|ボットとメッセージ拡張機能 </br> バックエンド ワークロード | `yourProjectFolder/bot` | 対象外 | Azure アプリ サービス |
+|Azure Functionsの API </br> バックエンド ワークロード | `yourProjectFolder/api`| 対象外 |Azure Functions |
+|ボットとメッセージ拡張機能 </br> バックエンド ワークロード | `yourProjectFolder/bot` | 対象外 | Azure App Services |
 
 > [!NOTE]
-> プロジェクトに Azure API 管理リソースを含め、デプロイをトリガーすると、Azure Functions で API を Azure API 管理サービスに発行できます。
+> プロジェクトに Azure API 管理リソースを含め、デプロイをトリガーすると、Azure Functionsで API を Azure API 管理サービスに発行できます。
 
 ::: zone-end
 
@@ -58,9 +58,9 @@ Teams Toolkit を使用すると、アプリケーション内のフロントエ
 
 Visual Studio では、次のアプリを展開できます。
 
-* フロントエンド アプリケーションなどのタブ アプリは、静的な Web ホスティング用に構成された Azure ストレージに展開されます。
-* Azure 関数トリガーを使用した通知ボット アプリを Azure 関数に展開できます。
-* ボット アプリまたはメッセージ拡張機能を Azure アプリ サービスに展開できます。
+* フロントエンド アプリケーションなどのタブ アプリは、静的 Web ホスティング用に構成された Azure Storage にデプロイされます。
+* Azure Functionsトリガーを含む通知ボット アプリは、Azure Functionsにデプロイできます。
+* ボット アプリまたはメッセージ拡張機能は、Azure アプリ Services にデプロイできます。
 
 展開後、使用を開始する前に、Teams クライアントまたは Web ブラウザーでアプリをプレビューできます。
 

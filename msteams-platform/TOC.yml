@@ -271,7 +271,9 @@
       displayName: 'Cross-tenant notifications, context for shared channel, apps and permissions in shared channels'
     - name: アダプティブ カードを使用してタブをビルドする
       href: tabs/how-to/build-adaptive-card-tabs.md
-      displayName: 'Slow load times, iFrame constraints, invoke activities, task module, task fetch, task submit, authentication'
+      displayName: 'Slow load times, iFrame constartints, invoke activities, task module, task fetch, task submit, authentication'
+    - name: Microsoft Teams で Fluid を使用する
+      href: tabs/how-to/using-fluid-msteam.md
     - name: タブのリンクの展開とステージ ビュー
       href: tabs/tabs-link-unfurling.md
       displayName: Tab in stage view
@@ -378,15 +380,20 @@
   items:
     - name: 概要
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
-    - name: 統合された会議アプリ
-      href: apps-in-teams-meetings/meeting-app-extensibility.md
-      displayName: 'Chat tab, poll survey, user access, federated users'
-    - name: 会議用アプリを有効にして構成する
-      href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-      displayName: 'meeting token generator app, meeting scenario'
-    - name: 会議アプリ API リファレンス
-      href: apps-in-teams-meetings/API-references.md
-      displayName: 'CART URL, channel, permissions, access, audio state'
+    - name: Teams 会議用のアプリを有効にして構成する
+      items:
+        - name: 会議のタブを作成する
+          href: apps-in-teams-meetings/build-tabs-for-meeting.md
+        - name: 会議ステージ用のアプリをビルドする
+          href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
+        - name: 会議の会議内通知を作成する
+          href: apps-in-teams-meetings/in-meeting-notification-for-meeting.md
+        - name: 会議チャット用の拡張可能な会話を構築する
+          href: apps-in-teams-meetings/build-extensible-conversation-for-meeting-chat.md
+        - name: 匿名ユーザー用のアプリを作成する
+          href: apps-in-teams-meetings/build-apps-for-anonymous-user.md
+        - name: 会議アプリ API
+          href: apps-in-teams-meetings/meeting-apps-apis.md
     - name: Graph API を使用して会議のトランスクリプトを取得する
       items:
         - name: 概要
