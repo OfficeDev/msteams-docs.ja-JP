@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 624cad282e181ed56cbc3041f725b046ca061c72
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: 5f0e909c9b6fbccc1f1a9a886858177f4673f85f
+ms.sourcegitcommit: 707dad21dc3cf79ac831afe05096c0341bcf2fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499161"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68653694"
 ---
 # <a name="debug-your-teams-app"></a>Teams アプリをデバッグする
 
@@ -88,71 +88,82 @@ Microsoft 365 に既にサインアップしている場合は、Microsoft 365 �
 
 ## <a name="customize-debug-settings"></a>デバッグ設定をカスタマイズする
 
-Teams Toolkit を使用すると、いくつかの前提条件をオフにして、デバッグ設定をカスタマイズしてタブまたはボットを作成できます。
+Teams Toolkit を使用すると、デバッグ設定をカスタマイズして、タブまたはボットを作成できます。 カスタマイズ可能なオプションの完全な一覧の詳細については、 [デバッグ設定に](https://aka.ms/teamsfx-debug-tasks)関するドキュメントを参照してください。
+
+### <a name="customize-scenarios"></a>シナリオをカスタマイズする
 
 <br>
 
 <details>
-<summary><b>ボット エンドポイントを使用する</b></summary>
 
-1. Visual Studio Code の設定で、[ **Ngrok のインストールと開始 (ngrok)]** をオフにする必要があります。
+<summary><b>前提条件チェックをスキップする</b></summary>
 
-1. エンドポイントに`.fx/configs/config.local.json`構成を設定`siteEndpoint`できます。
+で`.fx/configs/tasks.json``"prerequisites"``"Validate & install prerequisites"` > `"args"` > 、スキップする前提条件チェックを更新します。
 
-```json
-{
-    "bot": {
-        "siteEndpoint": "https://your-bot-tunneling-url"
-    }
-}
-
-```
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/bot-endpoint.png" alt-text="ボット エンドポイントのカスタマイズ":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/debug/skip-prerequisite-checks.png" alt-text="前提条件チェックをスキップする":::
 
 </details>
 
 <details>
 <summary><b>開発証明書を使用する</b></summary>
 
-1. Visual Studio Code の設定で、[ **開発証明書が信頼されていることを確認する (devCert)]** をオフにする必要があります。
-
-1. 証明書ファイル パス`.fx/configs/config.local.json`と`sslKeyFile`キー ファイル パスに設定`sslCertFile`および構成できます。
-
-```json
-{
-    "frontend": {
-        "sslCertFile": "",
-        "sslKeyFile": ""
-    }
-}
-```
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate-customize.png" alt-text="証明書のカスタマイズ":::
+1. で`.fx/configs/tasks.json`、下のチェック ボックスをオフにします >  > `"prerequisites"``"devCert"``"Validate & install prerequisites"``"args"`。
+1. 証明書ファイルパスとキー ファイル パスに "SSL_CRT_FILE" と "SSL_KEY_FILE" を `.env.teamsfx.local` 設定します。
 
 </details>
 
 <details>
-<summary><b>開始スクリプトを使用して App Services を開始する</b></summary>
+<summary><b>npm install args をカスタマイズする</b></summary>
 
-1. タブでは、スクリプトを更新`dev:teamsfx``tabs/package.json`する必要があります。
-
-1. ボットまたはメッセージ拡張機能の場合は、スクリプトを更新`dev:teamsfx``bot/package.json`する必要があります。
-
-1. Azure Functionsでは、TypeScript 更新スクリプトと TypeScript 更新`dev:teamsfx`スクリプトの`api/package.json`スクリプトを更新`watch:teamsfx`する必要があります。
-
-   > [!NOTE]
-   > 現時点では、タブ、ボット、メッセージ拡張機能アプリ、Azure Functions ポートはカスタマイズをサポートしていません。
+で`.fx/configs/tasks.json`、npmInstallArgs を .`"Install npm packages"`
+  
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/customize-npm-install.png" alt-text="npm パッケージをインストールする":::
 
 </details>
 
 <details>
+<summary><b>ポートを変更する</b></summary>
+
+* Bot
+  1. プロジェクト全体を検索`"3978"`し、表示形式`tasks.json`を検索します。および `index.js`. `ngrok.yml`
+  1. ポートに置き換えます。
+     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-bot.png" alt-text="ボットのポートを置き換える":::
+* Tab
+  1. で `.fx/configs/tasks.json`、検索します `"53000"`。
+  1. ポートに置き換えます。
+     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-tab.png" alt-text="タブのポートを置き換える":::
+
+</details>
+
+<details>
+<summary><b>独自のアプリ パッケージを使用する</b></summary>
+
+で`.fx/configs/tasks.json`、アプリ パッケージのパスに設定`"appPackagePath"``"Build & upload Teams manifest"`します。
+
+  :::image type="content" source="../assets/images/teams-toolkit-v2/debug/app-package-path.png" alt-text="独自のアプリ パッケージ パスを使用する":::
+
+</details>
+
+<details>
+<summary><b>独自のトンネルを使用する</b></summary>
+
+1. で`.fx/configs/tasks.json``"Start Teams App Locally"`、更新`"Start Local tunnel"`できます。
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-local-tunnel.png" alt-text="独自のトンネルを使用する":::
+1. 独自のトンネル サービスを起動し、.`"botMessagingEndpoint"` `.fx/configs/tasks.json` `"Set up bot"`
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/set-up-bot.png" alt-text="メッセージング エンドポイントを更新する":::
+
+</details>
+
+<details>
+
 <summary><b>環境変数の追加</b></summary>
 
 タブ、ボット、メッセージ拡張機能、および Azure Functions の `.env.teamsfx.local` ファイルに環境変数を追加できます。 Teams Toolkit は、ローカル デバッグ中にサービスを開始するために追加した環境変数を読み込みます。
 
  > [!NOTE]
- > 環境変数がホット リロードをサポートしていないため、新しい環境変数を追加した後は、新しいローカル デバッグを開始するようにします。
+ > 環境変数はホット リロードをサポートしていないため、新しい環境変数を追加した後で新しいローカル デバッグを開始してください。
 
 </details>
 
@@ -161,7 +172,7 @@ Teams Toolkit を使用すると、いくつかの前提条件をオフにして
 
 Teams Toolkit は、Visual Studio Code マルチターゲット デバッグを利用して、タブ、ボット、メッセージ拡張機能、および Azure Functions を同時にデバッグします。 部分コンポーネントをデバッグするには、`.vscode/launch.json` と `.vscode/tasks.json` を更新できます。 タブとAzure Functions プロジェクトを含むボットでのみタブをデバッグする場合は、次の手順を使用します。
 
-1. コメント **`Attach to Bot`** と **`Attach to Backend`** デバッグ の複合ファイル ( `.vscode/launch.json`.
+1. でデバッグ の複合を更新 `"Attach to Bot"` および `"Attach to Backend"` デバッグから取得します `.vscode/launch.json`。
 
    ```json
    {
@@ -181,7 +192,7 @@ Teams Toolkit は、Visual Studio Code マルチターゲット デバッグを�
    }
    ```
 
-2. .vscode/tasks.json のすべてのタスクの開始からボットをコメント **`Start Backend`** および開始します。
+2. .vscode/tasks.json のすべてのタスクを更新 `"Start Backend"` して `"Start Bot"` 開始します。
 
    ```json
    {

@@ -7,12 +7,12 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 24d231ef7a76ede1d45176d5869caa9a76a791be
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.openlocfilehash: 730317fd6480b583d7b293a4e032589d01c99db0
+ms.sourcegitcommit: 707dad21dc3cf79ac831afe05096c0341bcf2fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68026963"
+ms.lasthandoff: 10/20/2022
+ms.locfileid: "68653663"
 ---
 # <a name="debug-your-teams-app-locally"></a>Teams アプリをローカルでデバッグする
 
@@ -23,6 +23,10 @@ Teams ツールキットは、Microsoft Teams アプリをローカルでデバ�
 ## <a name="debug-your-microsoft-teams-app-locally-for-visual-studio-code"></a>Visual Studio Code 用に Microsoft Teams アプリをローカルでデバッグする
 
 Visual Studio Code の Teams Toolkit では、Teams アプリのデバッグをローカルで自動化する機能が提供されます。 Visual Studio では、タブ、ボット、メッセージ拡張機能をデバッグできます。 アプリをデバッグする前に、Teams Toolkit を設定する必要があります。
+
+> [!NOTE]
+>
+> 古い Teams Toolkit プロジェクトをアップグレードして新しいタスクを使用できます。詳細については、[デバッグ設定に](https://aka.ms/teamsfx-debug-upgrade-new-tasks)関するドキュメントを参照してください
 
 ## <a name="set-up-your-teams-toolkit-for-debugging"></a>デバッグ用に Teams Toolkit を設定する
 
@@ -110,7 +114,7 @@ Teams Toolkit によってブラウザー インスタンスが起動され、Te
 
 次の図は、タブ、ボットまたはメッセージ拡張機能、およびAzure Functionsの実行中に、Visual Studio Code の **[OUTPUT**] タブと **[ターミナル**] タブにタスク名を表示します。
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal.png" alt-text="アプリ サービスの開始":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal1.png" alt-text="アプリ サービスの開始" lightbox="../assets/images/teams-toolkit-v2/debug/Terminal1.png":::
 
 ### <a name="launches-debug-configurations"></a>デバッグ構成を起動します
 
