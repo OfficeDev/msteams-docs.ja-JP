@@ -4,12 +4,12 @@ description: 新しい Microsoft Teams 開発者向け機能と、既存の機�
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 99da7ecfc60d681246b0e5c7ea9448235fc37bf3
-ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
+ms.openlocfilehash: 946dad871ce27ebd4a317ddf816592a3238ac2aa
+ms.sourcegitcommit: 4e355e22ddcd10ba9a8f37965c4f5c8fa04f5776
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/26/2022
-ms.locfileid: "68699186"
+ms.locfileid: "68701042"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -31,6 +31,7 @@ ms.locfileid: "68699186"
 
 **2022 年 10 月**
 
+* ***2022 年 10 月 26*** 日: [会議内ドキュメント署名アプリを構築する](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-an-in-meeting-document-signing-app)
 * ***2022 年 10 月 19*** 日: [Teams 用開発者ポータルが GCC テナントで使用できるようになりました](concepts/build-and-test/teams-developer-portal.md)。
 * ***2022 年 10 月 13*** 日: [NavBar を構成し、複数のアクションのオーバーフロー メニューを作成します](concepts/design/personal-apps.md#configure-and-add-multiple-actions-in-navbar)。
 * ***2022 年 10 月 13*** 日: [アプリの [戻る] ボタンを構成します](concepts/design/personal-apps.md#configure-back-button)。
