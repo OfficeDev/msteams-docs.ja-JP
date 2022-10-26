@@ -2,13 +2,13 @@
 title: Graph API を使用してトランスクリプトをフェッチする
 description: 会議のトランスクリプトをフェッチするための API について説明します
 ms.localizationpriority: high
-ms.topic: concept
-ms.openlocfilehash: c3882134a9954cff3f2cd4aa038902540a6af250
-ms.sourcegitcommit: 990a36fb774e614146444d4adaa2c9bcdb835998
-ms.translationtype: HT
+ms.topic: conceptual
+ms.openlocfilehash: 2142bc1346a032f27d8612f6081156d2c4927e8f
+ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2022
-ms.locfileid: "67232407"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "68699179"
 ---
 # <a name="use-graph-apis-to-fetch-transcript"></a>Graph API を使用してトランスクリプトをフェッチする
 
@@ -46,7 +46,7 @@ GET /users('{userId}')/onlineMeetings('{meetingId}')/transcripts
 
 | ヘッダー       | 値 |
 |:---------------|:--------|
-| Authorization  | ベアラー {token}。必須。  |
+| Authorization  | Bearer {token}. Required.  |
 
 **要求本文**
 
@@ -68,7 +68,7 @@ GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/
 ```
 
 <br>
-<b>応答</b>
+<b>Response</b>
 <br>
 
 > [!NOTE]
@@ -116,7 +116,7 @@ GET users('{userId}')/onlineMeetings('{meetingId}')/transcripts('{transcriptId}'
 
 | ヘッダー       | 値 |
 |:---------------|:--------|
-| Authorization  | ベアラー {token}。必須。  |
+| Authorization  | Bearer {token}. Required.  |
 
 **要求本文**
 
@@ -178,7 +178,7 @@ GET users('{userId}')/onlineMeetings('{meetingId}')/transcripts('{transcriptId}'
 
 | ヘッダー       | 値 |
 |:---------------|:--------|
-| Authorization  | ベアラー {token}。必須。  |
+| Authorization  | Bearer {token}. Required.  |
 | 承諾  | text/vtt または application/vnd.openxmlformats-officedocument.wordprocessingml.document. オプション。  |
 
 **要求本文**

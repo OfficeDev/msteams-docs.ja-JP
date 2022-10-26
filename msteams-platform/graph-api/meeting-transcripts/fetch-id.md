@@ -2,13 +2,13 @@
 title: 会議のトランスクリプトをフェッチするための会議 ID と開催者 ID を取得する
 description: 会議のトランスクリプトをフェッチするための会議 ID と開催者 ID の取得のプロセスについて説明します。
 ms.localizationpriority: high
-ms.topic: concept
-ms.openlocfilehash: 8be611f72a1ddac84bbe596a1bfc00621cb7c038
-ms.sourcegitcommit: c1032ea4f48c4bbf5446798ff7d46d7e6e9f55d2
+ms.topic: conceptual
+ms.openlocfilehash: 0f9502b9e4f399725b115ece7c6ab5b705a1bf3f
+ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2022
-ms.locfileid: "68027313"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "68699172"
 ---
 # <a name="obtain-meeting-id-and-organizer-id"></a>会議 ID と開催者 ID を取得する
 
@@ -510,7 +510,7 @@ GET /v1/meetings/{meetingId}
 この例では次のようになっています。
 
 - 会議 ID は `msGraphResourceId` の値として含まれています: *MSo2NzAyYWZiNi0xMDliLTRjMzItYTE0MS02ZTY1NDY5NTAyYjkqMCoqMTk6bWVl dGluZ19OV00xTVRJNU56TXROamd6TXkwMFlXUTRMVGhtT1dRdFpUZzNNVEJtT1RnM 1ltVXpAdGhyZWFkLnYy*。
-- 開催者 ID は、*6702afb6-109b-4c32-a141-6e65469502b9* の値`aadObjectId``organizer`として含まれています。
+- 開催者 ID は、 の値`aadObjectId``organizer`として含まれています: *6702afb6-109b-4c32-a141-6e65469502b9*。
 
 </details>
 

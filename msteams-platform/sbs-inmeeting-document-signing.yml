@@ -1,0 +1,112 @@
+### YamlMime:Tutorial
+title: 会議内ドキュメントの署名を作成する
+metadata:
+  title: 会議内ドキュメント署名アプリをビルドする
+  description: この学習モジュールでは、Teams で会議内ドキュメント署名アプリを構築する方法について説明します。
+  audience: Developer
+  level: Beginner
+  ms.date: 27/07/2022
+  ms.topic: interactive-tutorial
+  nextTutorialHref: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
+  nextTutorialTitle: 詳細については、Teams 会議ステージ用のアプリを構築する
+  ms.custom: mvc
+  ms.localizationpriority: high
+  ms.openlocfilehash: b69d40abc8c160d44bdd46cd4a221d8592d709d6
+  ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
+  ms.translationtype: MT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 10/26/2022
+  ms.locfileid: "68699325"
+items:
+- durationInMinutes: 1
+  content: "会議署名は、ユーザーがリアルタイム シナリオでドキュメントに署名できるようにする Microsoft Teams サンプル アプリです。 ユーザーが会議中に 1 回のセッションでドキュメントを確認および署名できるようにすることで、エクスペリエンスが向上します。\nこのサンプルでは、ユーザーが現在のテナント ID を使用してドキュメントに電子的に署名できます。 ユーザーは会議中に次のドキュメントに署名できます。\n* 購入契約。\n* 発注書。\n\nテンプレートは、コード サンプルや共同作業ドキュメントの確認や承認など、他のシナリオにも適用できます。\nユーザーは、他の種類の署名を組み込むようにカスタマイズできます。 \n* 手書き署名。\n* 証明書ベースの署名。\n\nこのステップ バイ ステップ ガイドは、会議内ドキュメント署名アプリを構築するのに役立ちます。 このガイドを完了すると、次の出力が表示されます。\n\n  :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/final-output.png\" alt-text=\"最終出力\":::\n"
+- title: 前提条件
+  durationInMinutes: 1
+  content: "開発環境用に次のツールをインストールしてください。  \n\n* [ngrok または同等の](https://ngrok.com/download) トンネリング ソリューションの最新バージョン。\n\n  > [!NOTE]\n  > ngrok をダウンロードしたら、サインアップして [authtoken を](https://ngrok.com/download)インストールします。\n\n* [Visual Studio の最新バージョン](https://visualstudio.microsoft.com/downloads/)。\n* [Core SDK of.NET 最新バージョン](https://dotnet.microsoft.com/download)。\n\n開発環境を設定するために、次のアカウントが作成されていることを確認します。 \n\n* [Microsoft Teams](https://teams.microsoft.com/) アカウント。\n\n  > [!TIP]\n  > Microsoft Teams アカウントがゲスト アカウントではないことを確認します。\n\n* [Microsoft 365 開発者アカウント](https://developer.microsoft.com/en-us/microsoft-365/dev-program)。 ない場合は、アプリをインストールするための適切なアクセス許可を持つ Teams アカウントにアクセスできる必要があります。\n\n## <a name=\"set-up-your-teams-development-tenant\"></a>Teams 開発テナントを設定する\n\n   **テナント** は、Teams でチャット、ファイルの共有、組織の会議の実行を行うスペースやコンテナーのようなものです。 アプリをサイドロードしてテストすることもできます。\n\n### <a name=\"check-for-sideloading-option\"></a>サイドローディング オプションを確認する\n\n   アプリを作成したら、アプリを配布せずに Teams に読み込む必要があります。 サイドローディングと呼ばれます。 このオプションを表示するには、Microsoft 365 アカウントにサインインします。\n\n   > [!NOTE]\n   > サイドローディングは、Teams のローカル環境でアプリをプレビューおよびテストするために必要です。 サイドローディングを有効にして、Teams でアプリをローカルでプレビューしてテストします。\n\n   既にテナントがあり、管理者アクセス権はありますか? 実際にあるかどうかを確認しましょう。\n\nTeams でアプリのサイドロードを確認するには:\n\n1. Teams クライアントで、[ストア] を選択 **します**。\n1. **[アプリの管理]** を選択します。\n1. [**アプリ の発行**] を選択します。\n1. **[カスタム アプリのアップロード]** オプションを探します。 オプションが表示された場合は、アプリのサイドローディングが有効です。\n\n    :::image type=\"content\" source=\"~/assets/images/bots/upload-custom-app1.png\" alt-text=\"図は、Teams でカスタム アプリをアップロードするオプションを示しています。\":::\n\n    > [!NOTE]\n    > カスタム アプリをアップロードするオプションが見つからない場合は、Teams 管理者に問い合わせてください。  \n\n## <a name=\"download-the-code-sample\"></a>コード サンプルをダウンロードする\n\n  このステップ バイ ステップ ガイドでは、 [会議内ドキュメント署名](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-share-to-stage-signing/csharp) コード サンプルを使用する必要があります。 コード サンプルを使用するには、GitHub からリポジトリを複製します。\n"
+- title: アプリを作成して登録する
+  durationInMinutes: 5
+  content: >
+    次の手順は、Azure portalでアプリを作成して登録するのに役立ちます。
+
+
+    * Azure AD でアプリの登録を作成します。
+
+    * ngrok を使用してトンネルを作成します。
+
+
+    ## <a name="create-an-app-registration-in-azure-ad"></a>Azure AD アプリ登録を作成する
+
+
+    Azure AD に新しいアプリを登録し、テナントとアプリのプラットフォームを構成します。 Teams アプリ マニフェスト ファイルで後で更新される新しいアプリ ID を生成します。
+
+
+    ### <a name="to-register-a-new-app-in-azure-ad"></a>Azure AD に新しいアプリを登録するには
+
+
+    1. Web ブラウザーで [Azure portal](https://ms.portal.azure.com/) を開きます。
+
+    Microsoft Azure AD Portal ページが開きます。
+
+
+    2. **[アプリの登録]** アイコンを選択します。
+
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/azure-portal.png" alt-text="Azure AD Portal ページ。":::
+
+        **[アプリの登録]** ページが表示されます。
+
+    3. [**+ 新しい登録**] アイコンを選択します。
+
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-registrations.png" alt-text="Azure AD Portal の新しい登録ページ。":::
+
+        **[アプリケーション登録]** ページが表示されます。
+
+    4. アプリ ユーザーに表示するアプリの名前を入力します。 必要に応じて、後の段階でこの名前を変更できます。
+
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/register-app.png" alt-text="Azure AD Portal の [アプリの登録] ページ。":::
+
+    5. アプリにアクセスできるユーザー アカウントの種類として [ **マルチテナント** ] を選択します。
+
+
+    6. **[登録]** を選択します。
+        アプリが作成されたことを示すメッセージがブラウザーに表示されます。
+
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-created-msg.png" alt-text="Azure 管理ポータルでアプリを登録する":::
+
+        アプリ ID とその他の構成を含むページが表示されます。
+
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-created.png" alt-text="アプリの登録が成功しました。":::
+
+    7. **アプリケーション (クライアント) ID** からアプリ ID をメモして保存します。 後で Teams アプリ マニフェストを更新するために必要になります。
+
+
+    アプリは Azure AD に登録されています。 これで、アプリのアプリ ID が表示されます。
+
+
+    ## <a name="to-create-a-tunnel-for-local-web-server"></a>ローカル Web サーバーのトンネルを作成するには
+
+
+    ngrok を使用して、ローカルで実行されている Web サーバーのパブリックに利用可能な HTTPS エンドポイントへのトンネルを作成します。 ngrok で次のコマンドを実行します。
+
+     ```bash
+     ngrok http https://localhost:44326 -host-header=localhost:44326
+     ```
+
+      ngrok トンネル情報が表示されます。
+
+      :::image type="content" source="../msteams-platform/assets/images/sbs-inmeeting-doc-signing/ngrok1.png" alt-text="ngrok HTTPS URL":::
+- title: Azure AD アプリの登録を更新する
+  durationInMinutes: 1
+  content: "\n1. [Azure portal](https://portal.azure.com/) にアクセスします。\n\n1. **Azure Active Directory** を選択します。\n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/select-azure-directory.png\" alt-text=\"[Azure active Directory] を選択します\":::\n\n1. 左側のナビゲーション パネルで、[ **アプリの登録**] を選択します。\n\n1. アプリを選択します。\n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/app-registration.png\" alt-text=\"アプリの登録\":::\n\n1. [**管理**] で [**API の公開**] を選択します。\n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/exposeanapi.png\" alt-text=\"API を公開する\":::\n\n1. [ **設定] を選択します**。\n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/select-set.png\" alt-text=\"[Set]\\(設定\\)\":::\n\n1. の形式`api://your ngrok/AppID`で **アプリケーション ID URI を** 設定し、[保存] を選択 **します**。\n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/app-uri1.png\" alt-text=\"アプリ URI\":::\n    \n   次の図は、アプリケーション ID URI を示しています。\n    \n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/appIDuri1.png\" alt-text=\"アプリ ID URI\":::\n\n    > [!NOTE]\n    > ngrok などのトンネリング サービスを使用している場合は、ngrok サブドメインが変更されるたびに値を更新してください。\n    > `For example: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`は `f631****.ngrok.io` 新しい ngrok サブドメイン名です。\n\n1. **[スコープの追加]** を選択します。 \n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/addascope.png\" alt-text=\"[スコープの追加]\":::\n\n    [ **スコープの追加]** セクションが表示されます。\n\n1. スコープを追加するには、次の詳細を入力します。\n\n   :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/add-a-scope-page1.png\" alt-text=\"スコープ ページを追加する\":::\n\n   1. **スコープ名** として「access_as_user」と入力します。\n\n      > [!NOTE]\n      > **スコープ名** は、最後に追加された **アプリケーション ID URI** と`/access_as_user`一致する必要があります。\n\n   1. **[同意できるのはだれですか?]** を **[管理者とユーザー]** に設定します。\n\n   1. スコープの適切な値を使用して、管理者とユーザーの同意プロンプトを `access_as_user` 構成します。</br>\n\n      * **同意の表示名** として「Teams はユーザーのプロファイルにアクセス管理」と入力します。\n\n      * **同意の説明** として「Teams がアプリの Web API を現在のユーザーとして呼び出すことができます」と入力管理。\n\n      * ユーザー **の同意の表示名** として、「Teams はユーザー プロファイルにアクセスし、ユーザーの代わりに要求を行うことができます」と入力します。\n\n      * ユーザー **の同意の説明** として、「Teams でユーザーと同じ権限でこのアプリの API を呼び出せるようにする」と入力します。\n\n   1. **[状態]** が **[有効]** に設定されていることを確認してください。\n\n   1. [ **スコープの追加]** を選択して、スコープの詳細を保存します。\n\n      アプリスコープが構成されている。\n\n        :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/scopes1.png\" alt-text=\"Scope\":::\n\n1. [承認されたクライアント アプリケーション] セクションで [**クライアント アプリケーションの****追加]** を選択します。 \n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/add-client-application.png\" alt-text=\"クライアント アプリケーションの選択\":::\n\n   [ **クライアント アプリケーションの追加]** セクションが表示されます。\n\n1. クライアント アプリケーションの詳細を入力します。\n\n     :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/authorizedscope1.png\" alt-text=\"クライアント アプリケーションの追加 2\":::\n\n    1. 承認するアプリケーションの **クライアント ID を** 入力します。 これは、承認するクライアント アプリケーションのアプリケーション ID です。 クライアント アプリケーションの承認には、次の ID を使用します。\n\n       | **クライアント ID** | **承認の場合** |\n       | --- | --- |\n       | `1fec8e78-bce4-4aaf-ab1b-5451cc387264` | Teams デスクトップまたはモバイル アプリケーション |\n       | `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` | Teams Web アプリケーション |\n     \n       > [!NOTE]\n       > デスクトップ アプリケーションと Web アプリケーションの承認を個別に追加する必要があります。\n\n    1. [ **承認されたスコープ]** を選択して、サービスによって返されるトークンの種類を決定します。\n\n    次の図は、クライアント ID を表示します。\n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/clientapps.png\" alt-text=\"クライアント アプリケーション\"::: \n\n**Graph のアクセス許可を構成する**\n\n1. 左側のパネルで、[ **API アクセス許可**] を選択します。 \n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/select-api-permissions.png\" alt-text=\"API のアクセス許可を選択する\"::: \n    \n   > [!NOTE]\n   > ユーザーは、Azure AD アプリが別のテナントに登録されている場合にのみ、これらのアクセス許可に同意する必要があります。\n\n1. [**アクセス許可を追加**] を選択します。\n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/addpermission.png\" alt-text=\"アクセス許可の追加\"::: \n\n1. **[Microsoft Graph]** を選択します。\n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/microsoft-graph.png\" alt-text=\"Microsoft Graph\"::: \n\n1. [**委任されたアクセス許可**] を選択します。\n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/delegated-permission.png\" alt-text=\"Delegated-permission\"::: \n\n1. Graph のアクセス許可を選択します。\n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/permissions.png\" alt-text=\"Delegated-permission\":::\n\n    1. アクセス許可の一覧から、次を選択します。</br>\n     * **email**\n     * **offline_access**\n     * **Openid**\n     * **profile**\n     * **User.Read**\n     * **User.ReadBasic.All**\n\n    1. **[アクセス許可の追加]** を選択します。  \n\n**プラットフォームを構成するためのリダイレクト URI を設定するには**\n\n1. 左側のパネルで、[ **認証** ] を選択してリダイレクト URI を設定します。 \n\n   > [!NOTE]\n   > アプリに IT 管理者の同意が付与されていない場合、ユーザーは初めてアプリを使用する際に同意を提供する必要があります。\n           \n1. **[プラットフォームの追加]** を選択します。\n      \n    [ **プラットフォームの構成]** セクションが表示されます。\n\n1. **[Web]** を選びます。\n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/select-authentication.png\" alt-text=\"[認証] を選択します\":::\n\n1. プラットフォームの詳細を構成します。\n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/authend.png\" alt-text=\"Auth-end\":::\n\n    1. 完全修飾ドメイン名に追加して、アプリの `auth-end` リダイレクト URI を入力します。</br> \n   `https://your ngrok/auth-end`. </br>\n\n     1. 次のチェック ボックスをオンにして、 **暗黙的な許可フローとハイブリッド フロー** を有効にします。\n         * **ID トークン**\n         * **アクセス トークン**\n\n     1. **[構成]** を選択します。\n\nAzure AD アプリの登録と構成を完了しました。v\n"
+- title: アプリ設定とマニフェスト ファイルを設定する
+  durationInMinutes: 1
+  content: "Azure AD アプリを構成したら、アプリ設定とマニフェスト ファイルでアプリの詳細を構成する必要があります。 \n\n**アプリ設定を構成するには**\n\n1. 複製されたリポジトリの **MeetingSigning.Web** フォルダーを参照し、Visual Studio で **appsettings.json** を開きます。\n\n      :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/appsettingslocation.png\" alt-text=\"アプリ設定の場所\":::\n\n1. appsettings.json で次の情報を更新します。  \n\n     * のすべての出現箇所を `<<aad-id>>` アプリの Microsoft アプリ ID に置き換えます。\n     * のすべての出現箇所を `<<client secret>>` アプリのクライアント シークレットに置き換えます。\n\n      :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/appsettings2.png\" alt-text=\"アプリの設定\":::\n\n1. ファイルを保存します。\n\n**アプリ マニフェスト ファイルを構成するには**\n\n1. 複製したリポジトリの **Manifest** フォルダーを参照し、Visual Studio で **manifest.json** を開きます。\n\n     :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/manifestlocation.png\" alt-text=\"マニフェスト ファイルの場所\":::\n\n1. manifest.json で次の変更を行います。\n\n     * のすべての出現箇所を `<<deployment-url>` 完全修飾 ngrok ドメイン名に置き換えます。\n     * のすべての出現箇所を `<<aad-id>>` アプリの **Microsoft アプリ ID に** 置き換えます。\n\n     :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/manifest-file1.png\" alt-text=\"マニフェスト イメージ2\":::\n\n1. ファイルを保存します。\n\nアプリ設定とアプリ マニフェストの詳細を構成しました。\n"
+- title: サービスをビルドして実行する
+  durationInMinutes: 1
+  content: "**Visual Studio を使用してサービスをビルドして実行するには**\n\n   1. **Visual Studio を** 開きます。\n\n   1. **[ファイル** > を **開く****] [プロジェクト/ソリューション**]  >  に移動します。\n\n       :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/project-solution.png\" alt-text=\"ファイルを開く\":::\n\n   1. ソース フォルダーからソリューション ファイル **を** 選択します。\n\n       :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/Tokenfileready.png\" alt-text=\"ソリューション ファイル\":::   \n\n      ソリューションが Visual Studio で開きます。\n\n   1. **F5** キーを押してプロジェクトを実行します。\n\n   1. 以下のダイアログが表示されたら、**[はい]** を選択します:\n\n        :::image type=\"content\" source=\"~/assets/images/meetings-side-panel/certificate.png\" alt-text=\"信頼証明書\":::\n\n      次の Web ページが開きます。\n\n       :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/appisready1.png\" alt-text=\"アプリの準備完了\"::: \n  \n  これで、アプリを Teams クライアントにサイドロードする準備ができました。\n"
+- title: Teams に会議署名アプリを追加する
+  durationInMinutes: 1
+  content: "\n1. 複製したリポジトリで、[ **ソース > MeetingSigning.Web > マニフェスト]** を参照します。\n\n1. **Manifest** フォルダーに存在する次のファイルを含むアプリ パッケージ (.zip ファイル) を作成します。\n\n   * manifest.json\n   * icon-outline.png\n   * icon-color.png\n\n     :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/zipfile.png\" alt-text=\"Zip ファイル\"::: \n\n1. 数人の発表者と出席者を含む Teams で会議を作成します。\n\n1. 会議が開始されたら、[**アプリの管理] を選択します** > 。\n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/add-app-teams.png\" alt-text=\"Teams にアプリを追加する\"::: \n\n1. **[カスタム アプリをアップロードする]** を選択します。\n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/upload-an-app.png\" alt-text=\"Teams にアプリをアップロードする\"::: \n\n1. 作成した会議署名アプリ パッケージを選択し、[ **開く**] を選択します。\n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/select-open.png\" alt-text=\"[開く] を選択します\"::: \n\n1. [ **追加] を** 選択して、会議にアプリをインストールします。\n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/select-add.png\" alt-text=\"アプリを追加する\":::\n\n   これで、会議署名アプリが会議に追加されます。\n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/add-app-to-meeting.png\" alt-text=\"会議にアプリを追加する\":::\n\n1. 会議の詳細ページに戻るし、[**アプリ** > **会議署名** アプリ] を選択します。\n    \n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/add-meeting-signing-app.png\" alt-text=\"会議への会議署名アプリの追加\":::\n\n   [ **会議の署名** ] ウィンドウが表示されます。\n\n1. **[保存]** を選択します。\n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/install-meeting-signing.png\" alt-text=\"会議署名アプリをインストールする\"::: \n\n   これで、会議の署名アプリが会議ウィンドウに表示されます。\n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/meeting-app.png\" alt-text=\"会議署名アプリ\":::         \n\n1. Teams の会議チャットに移動し、[ **会議の署名** ] タブを選択し、[ **ドキュメントの作成**] を選択します。\n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/create-documentation.png\" alt-text=\"ドキュメントの作成\"::: \n\n   [ **会議の署名** ] ウィンドウが表示されます。  \n\n1. [会議署名] ウィンドウに次の詳細を入力します。\n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/create-documents.png\" alt-text=\"ドキュメントの作成\":::  \n\n    1. 確認する必要なドキュメントを選択します。 \n    1. ドキュメントの閲覧者を入力します。\n    1. ドキュメントの署名者を入力します。\n    1. **[完了]** を選択します。\n\n1. [ **同意]** を選択して、アカウントからデータにアクセスするためのアクセス許可をアプリに付与します。\n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/give-consent.png\" alt-text=\"同意を与える\"::: \n\n   ブラウザー ウィンドウが表示されます。\n\n1. 資格情報を使用して Teams にサインインし、[サインイン] を選択 **します**。\n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/teams-login-after-consent.png\" alt-text=\"同意後の Teams ログイン\"::: \n\n   Teams では、ドキュメントを正常に作成するための通知を受け取ります。\n\n    :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/doc-success-upload.png\" alt-text=\"ドキュメントの成功のアップロード\":::              \n\n 1. Teams 会議に戻るし、サイド パネルでドキュメントを表示できるようになりました。 \n \n 1. [ **会議に共有] を選択して、会議** でドキュメントを共有します。\n\n     :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/view-doc-in-sidepanel.png\" alt-text=\"サイドパネルでドキュメントを表示する\":::\n\n 1. [ **クリックして署名] を選択します**。\n\n     :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/doc-shared-in-meeting.png\" alt-text=\"会議で共有されるドキュメント\":::\n\n    [ **会議の署名** ] ウィンドウが表示されます\n    \n 1. **[完了]** を選択します。   \n\n     :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/meeting-signing-confirm.png\" alt-text=\"会議署名の確認\":::\n"
+- title: 課題の完了
+  durationInMinutes: 1
+  content: "このようなものを思いついたのですか?\n\n   :::image type=\"content\" source=\"~/assets/images/sbs-inmeeting-doc-signing/final-output.png\" alt-text=\"会議署名アプリの最終的な出力\"::: \n"
+- content: おめでとうございます。 **会議内署名** アプリを作成するためのチュートリアルを完了しました。

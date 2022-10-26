@@ -1,24 +1,24 @@
 ---
 title: Teams の開発者向けの新機能と更新情報
-description: Microsoft Teams の新しい開発者向け機能と、既存の機能の更新、非推奨のメモ、および変更について説明します。 最新の更新プログラムの RSS フィードをサブスクライブします。
+description: 新しい Microsoft Teams 開発者向け機能と、既存の機能、非推奨ノート、変更に関する更新プログラムについて説明します。 最新の更新プログラムを RSS フィードにサブスクライブします。
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: d1ad99b5fff30f5329525fc536e62f5690c0e9a9
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: 99da7ecfc60d681246b0e5c7ea9448235fc37bf3
+ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615325"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "68699186"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
 ::: zone pivot="ga-feature"
 
-一般公開されている Microsoft Teams プラットフォーム機能 (GA) を確認します。 RSS フィード[![ダウンロード フィード](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)に登録することで、Teams プラットフォームの最新情報を取得できるようになりました。 詳細については、「[RSS フィードの構成](#get-latest-updates)」を参照してください。
+一般公開 (GA) されている Microsoft Teams プラットフォーム機能について説明します。 RSS フィード[![ダウンロード フィード](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)に登録することで、Teams プラットフォームの最新情報を取得できるようになりました。 詳細については、「[RSS フィードの構成](#get-latest-updates)」を参照してください。
 
 ## <a name="generally-available"></a>一般公開
-
+ 
 :::row:::
 :::column:::
 
@@ -31,10 +31,10 @@ ms.locfileid: "68615325"
 
 **2022 年 10 月**
 
-* ***2022 年 10 月 19*** 日: [TEAMS 用開発者ポータルが GCC テナントで利用できるようになりました](concepts/build-and-test/teams-developer-portal.md)。
+* ***2022 年 10 月 19*** 日: [Teams 用開発者ポータルが GCC テナントで使用できるようになりました](concepts/build-and-test/teams-developer-portal.md)。
 * ***2022 年 10 月 13*** 日: [NavBar を構成し、複数のアクションのオーバーフロー メニューを作成します](concepts/design/personal-apps.md#configure-and-add-multiple-actions-in-navbar)。
-* ***2022 年 10 月 13*** 日: [アプリの [戻る] ボタンを構成](concepts/design/personal-apps.md#configure-back-button)します。
-* ***2022 年 10 月 12*** 日: [アプリは、インスタント会議、1 対 1、グループ通話でサポートされます。](apps-in-teams-meetings/teams-apps-in-meetings.md)
+* ***2022 年 10 月 13*** 日: [アプリの [戻る] ボタンを構成します](concepts/design/personal-apps.md#configure-back-button)。
+* ***2022 年 10 月 12*** 日: [インスタント会議、1 対 1、およびグループ通話でアプリがサポートされます。](apps-in-teams-meetings/teams-apps-in-meetings.md)
 * ***2022 年 10 月 12*** 日: [Live Share キャンバス](apps-in-teams-meetings/teams-live-share-canvas.md)
 
 :::column-end:::
@@ -46,16 +46,17 @@ ms.locfileid: "68615325"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ----------------|
-| 09/30/2022|Teams でサード パーティ製アプリの SaaS ライセンスを管理する|アプリの収益化> Teams アプリで SaaS オファーを含める> [Teams でサード パーティ製アプリのライセンスを管理する](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)|
-| 09/29/2022|Teams モバイル アプリで、ローカル デバイスへのファイルのダウンロードがサポートされるようになりました。|デバイス機能の統合> [Teams モバイルでのファイルのダウンロード](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)>メディア機能の統合|
-| 09/16/2022|検索ベースのメッセージ拡張機能のアダプティブ カードでユニバーサル アクションがサポートされるようになりました。|検索ベースのメッセージ拡張機能のユニバーサル アクション>検索コマンド>[メッセージ拡張機能を](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)ビルドする|
-| 09/06/2022|API を使用してカメラを使用してビデオをキャプチャするためのコード スニペットを `selectMedia` 導入しました。| デバイス機能を統合>[コード スニペット](concepts/device-capabilities/media-capabilities.md#code-snippets)>メディア機能を統合する|
+| 10/26/2022 | 会議参加者がリアルタイムでドキュメントに署名できるようにするための会議内アプリを構築します。 | Teams 会議と通話用のアプリを構築する> Teams 会議用のアプリを有効にして構成する> Teams 会議ステージ用アプリを構築する> [会議内ドキュメント署名アプリを構築する](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-an-in-meeting-document-signing-app) |
+| 09/30/2022|Teams でサード パーティ製アプリの SaaS ライセンスを管理します。|アプリの収益化 > Teams アプリに SaaS オファーを含める> [Teams でサード パーティ製アプリのライセンスを管理](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)する|
+| 09/29/2022|Teams モバイル アプリで、ローカル デバイスへのファイルダウンロードがサポートされるようになりました。|デバイス機能を統合する> [Teams モバイルでファイルをダウンロード](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)>メディア機能を統合する|
+| 09/16/2022|検索ベースのメッセージ拡張機能のアダプティブ カードでユニバーサル アクションがサポートされるようになりました。|検索ベースのメッセージ拡張機能のユニバーサル アクション>検索コマンド>[メッセージ拡張機能を](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)構築する|
+| 09/06/2022|API を使用してカメラを使用してビデオをキャプチャするためのコード スニペットを `selectMedia` 導入しました。| デバイス機能を統合する> [コード スニペット](concepts/device-capabilities/media-capabilities.md#code-snippets)>メディア機能を統合する|
 | 08/09/2022 | Visual Studio 2022 用 Teams ツールキットが導入されました | [ツールと SDK] > [Visual Studio 向け Teams ツールキット] > [[Visual Studio 向け Teams ツールキットの概要]](toolkit/teams-toolkit-overview-visual-studio.md) |
 | 08/03/2022 | 個人用アプリまたはタブから Teams に共有する | [Teams と統合] > [Teams に共有] > [[個人用アプリまたはタブから Teams に共有]](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 08/03/2022 | 会議後のシナリオで会議のトランスクリプトを取得する機能が追加されました。 | [Teams 会議と通話用のアプリを構築する] > [Graph API を使用して会議のトランスクリプトを取得する] > [[概要]](graph-api/meeting-transcripts/overview-transcripts.md) |
 | 08/03/2022 | Web アプリからの [Teams で共有] のリンク展開 | [Teams との統合] > [Teams への共有] > [[Web アプリから Teams に共有する]](concepts/build-and-test/share-to-teams-from-web-apps.md) |
 | 08/01/2022| 注意: 開発者ポータルは GA になり、App Studio は 2022 年 8 月 1 日から非推奨になりました。 | [ツールと SDK] > [[Teams の開発者ポータル]](concepts/build-and-test/teams-developer-portal.md) |
-| 2022 年 7 月 28 日 | Teams の表示画像と連絡先カードを会議内通知用に追加する| Teams 会議用のアプリのビルドと通話> Teams 会議のアプリの有効化と構成> [Teams 会議の会議内通知の作成](apps-in-teams-meetings/in-meeting-notification-for-meeting.md) |
+| 2022 年 7 月 28 日 | Teams の表示画像と連絡先カードを会議内通知用に追加する| Teams 会議と通話用のアプリを構築する> Teams 会議のアプリを有効にして構成する> [Teams 会議の会議内通知を作成する](apps-in-teams-meetings/in-meeting-notification-for-meeting.md) |
 | 2022 年 7 月 28 日 | Teams で共有チャネルを作成にする | Teams の会議と通話用のアプリを作成する > [共有チャネル](concepts/build-and-test/Shared-channels.md) |
 | 2022 年 7 月 28 日|アプリ マニフェスト バージョン 1.14 が導入されました| アプリ マニフェスト > [Teams 用のアプリ マニフェスト スキーマ](resources/schema/manifest-schema.md)|
 | 2022 年 7 月 26 日|ボットに推奨されるアクション| [ボットのビルド] > [ボットの会話] > [[ボットの会話のメッセージ]](bots/how-to/conversations/conversation-messages.md#send-suggested-actions)|
@@ -95,10 +96,10 @@ ms.locfileid: "68615325"
 | 02/18/2022 | ユース ケースの Teams 機能へのマッピングとアプリ計画チェックリストを含めるために、[アプリの基礎] モジュールを [アプリの計画] に更新しました | [[アプリの計画] > [概要]](~/concepts/app-fundamentals-overview.md) |
 | 02/17/2022 | アプリを送信した後、何を期待しますか?| アプリを配布する > Teams ストアに公開する > [概要](concepts/deploy-and-publish/appsource/publish.md) |
 | 2022/02/15 | ボットから Teams にファイルをアップロードする方法のステップバイステップ ガイドが導入されました | 「ボットを作成する」 > 「ファイルを送受信する」 > 「[ボットから Teams にファイルをアップロードするためのステップバイステップ ガイド](sbs-file-handling-in-bot.yml)」 |
-| 02/11/2022 | 共有会議ステージ| • [Teams 会議用アプリのビルド] > [[共有会議ステージ]](apps-in-teams-meetings/build-tabs-for-meeting.md) </br> • Teams 会議用のアプリのビルド> [Teams 会議用のアプリのビルド](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー] > [[開発者向けプレビュー マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md)|
+| 02/11/2022 | 共有会議ステージ| • [Teams 会議用アプリのビルド] > [[共有会議ステージ]](apps-in-teams-meetings/build-tabs-for-meeting.md) </br> • Teams 会議用アプリの構築> [Teams 会議用アプリの構築](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md) </br> • [アプリ マニフェスト] > [開発者向けパブリック プレビュー] > [[開発者向けプレビュー マニフェスト スキーマ]](resources/schema/manifest-schema-dev-preview.md)|
 | 02/08/2022 | 通話と会議ボットを作成するステップバイステップ ガイドを導入しました| [ボットの構築] > [通話と会議のボット] > [通話と会議のボットの登録] > [[通話と会議のボットを作成するためのステップバイステップ ガイド]](sbs-calling-and-meeting.yml) |
 | 02/02/2022 | アプリ マニフェスト バージョン 1.12 が導入されました | [アプリ マニフェスト] > [[アプリ マニフェストのスキーマ]](resources/schema/manifest-schema.md) |
-| 2022 年 1 月 25 日 | リアルタイム キャプション API を送信する | Teams 会議用アプリのビルド>会議アプリ API リファレンス> [高度な会議 API](apps-in-teams-meetings/meeting-apps-apis.md)|
+| 2022 年 1 月 25 日 | リアルタイム キャプション API を送信する | Teams 会議用アプリ>会議アプリ API リファレンス> [高度な会議 API を構築する](apps-in-teams-meetings/meeting-apps-apis.md)|
 | 01/19/2022 | アダプティブ カードは、完了フィードバックを形成します | ボットのビルド > ボットの会話 > ボットの会話のメッセージ > [フォーム完了フィードバック](bots/how-to/conversations/conversation-messages.md#form-completion-feedback)|
 | 2022/1/17 | デスクトップ版アダプティブ カードのユーザー ピッカー | [カードとタスク モジュールの構築] > [カードの構築] > [[アダプティブ カードのユーザー ピッカー]](task-modules-and-cards/cards/people-picker.md)|
 
@@ -134,7 +135,7 @@ ms.locfileid: "68615325"
 |2021/10/20| 会議の詳細 API とリアルタイム Teams 会議イベント | [Teams 会議用のアプリをビルドする] > [[会議の詳細 API を取得する]](apps-in-teams-meetings/meeting-apps-apis.md) |
 |2021/10/18| タブのリンクの展開とステージ ビュー | [タブの構築] > [[タブのリンクの展開とステージ ビュー]](tabs/tabs-link-unfurling.md) |
 |2021/10/8| アダプティブ カードの設計に関する新しいベスト プラクティス | [アプリの設計] > [UI コンポーネント] > [[Teams アプリのアダプティブ カードを設計する]](task-modules-and-cards/cards/design-effective-cards.md) |
-|2021/10/5| 管理者がアプリの表示を許可するまで Teams アプリを非表示にします | アプリを設計>管理者が [承認するまで、ユーザーのアプリを既定でブロックする](concepts/design/enable-app-customization.md#block-apps-by-default-for-users-until-an-admin-approves) |
+|2021/10/5| 管理者がアプリの表示を許可するまで Teams アプリを非表示にします | アプリの設計 > [管理者が承認するまで、ユーザーのアプリを既定でブロックする](concepts/design/enable-app-customization.md#block-apps-by-default-for-users-until-an-admin-approves) |
 |2021/10/5| Teams モバイル用のアプリを計画します | [アプリの基礎] > [[Teams モバイルの応答タブを計画する]](concepts/design/plan-responsive-tabs-for-teams-mobile.md) |
 |2021/10/4| Teams アプリを管理するために、新しい Teams 向け開発者ポータルが導入されました | [ツールと SDK] > [[Teams の開発者ポータル]](concepts/build-and-test/teams-developer-portal.md) |
 |2021/9/21|Teams は、ボットや受信 Webhook 向けのユーザーのメンションで Azure AD オブジェクト ID と UPN をサポートしています | • [カードとタスク モジュールの構築] > [カードの構築] > [[ユーザーのメンションでの Azure AD オブジェクト ID と UPN]](task-modules-and-cards/what-are-cards.md#support-for-azure-ad-object-id-and-upn-in-user-mention) </br> • [カードとタスク モジュールの構築] > [カードの構築] > [[カードの概要]](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |
@@ -144,7 +145,7 @@ ms.locfileid: "68615325"
 |2021/8/19| 会話スレッドにボットをインストールしたときに受信するインストール更新イベント | [ボットの構築] > [ボットの会話] > [[インストール更新イベント]](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event) |
 |2021/8/12|アダプティブ カードを使用してタブをビルドする| [タブの構築] > [[アダプティブ カードを使用してタブを構築する]](tabs/how-to/build-adaptive-card-tabs.md) |
 |2021/8/4|タブのエクスペリエンスを囲む余白がなくなります | [タブの構築] > [[タブの余白を削除する]](resources/removing-tab-margins.md) |
-|2021/7/8|Teams モバイルに会議中のアプリのサポートが追加されました | Teams 会議用のアプリをビルド> [Teams 会議用のアプリをビルドする](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md) |
+|2021/7/8|Teams モバイルに会議中のアプリのサポートが追加されました | Teams 会議用アプリの構築> [Teams 会議用アプリの構築](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md) |
 |2021/6/28|ユーザー ピッカー機能を統合する | [Teams との統合] > [[ユーザー ピッカー機能を統合する]](concepts/device-capabilities/people-picker-capability.md) |  
 |2021/6/25| プロアクティブ メッセージを送信するためのステップバイステップのガイドを導入しました | [ボットの構築] > [ボットの会話] > [プロアクティブ メッセージ] > [[プロアクティブ メッセージを送信するためのステップバイステップのガイド]](sbs-send-proactive.yml) |
 |2021/6/9| `allowExpand` 属性を使用したアダプティブ カードの画像のステージ ビュー | [カードとタスク モジュールの構築] > [カードの構築] > [[アダプティブ カードの画像用ステージ ビュー]](task-modules-and-cards/cards/cards-format.md#stage-view-for-images-in-adaptive-cards) |
@@ -213,7 +214,7 @@ ms.locfileid: "68615325"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ------------------ |
-| 2020/12/26 | `replyToId`ボットに送信されたペイロード内のパラメーターは暗号化されなくなり、この値を使用してこれらのメッセージへのディープ リンクを作成できます。 メッセージのペイロードには、パラメーター `legacy.replyToId` の暗号化された値が含まれます。  |
+| 2020/12/26 | `replyToId`ボットに送信されるペイロードのパラメーターは暗号化されなくなり、この値を使用してこれらのメッセージへのディープ リンクを構築できます。 メッセージのペイロードには、パラメーター `legacy.replyToId` の暗号化された値が含まれます。  |
 | 2019/11/5 | Teams JavaScript SDK を使用したシングル サインオン。 | [シングル サインオン](tabs/how-to/authentication/tab-sso-overview.md) |
 | 2019/10/31 | 会話ボットとメッセージ拡張機能のドキュメントが 4.6 Bot Framework SDK に合わせて更新されました。 v3 SDK のドキュメントが [リソース] セクションで利用できます。 | すべてのボットとメッセージ拡張機能のドキュメント |
 | 2019/10/31 | 新しいドキュメントの構造と記事の大幅なリファクタリング。 デッド リンクや 404 が発生した場合は、GitHub イシューを作成して報告してください。 | すべての項目です。 |
@@ -275,7 +276,7 @@ ms.locfileid: "68615325"
 
 ::: zone pivot="dev-preview"
 
-開発者向けプレビュー段階の Microsoft Teams プラットフォーム機能について説明します。 RSS フィード[![ダウンロード フィード](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)に登録することで、Teams プラットフォームの最新情報を取得できるようになりました。 詳細については、「[RSS フィードの構成](#get-latest-updates)」を参照してください。
+開発者プレビューの Microsoft Teams プラットフォーム機能について説明します。 RSS フィード[![ダウンロード フィード](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)に登録することで、Teams プラットフォームの最新情報を取得できるようになりました。 詳細については、「[RSS フィードの構成](#get-latest-updates)」を参照してください。
 
 ## <a name="developer-preview"></a>開発者向けプレビュー
 
@@ -291,15 +292,15 @@ ms.locfileid: "68615325"
 
 **2022 年 10 月**
 
-***2022 年 10 月 11*** 日: [会議のステージにコンテンツを共有するためのディープ リンクを生成します。](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
+***2022 年 10 月 11*** 日: [会議のステージに向けてコンテンツを共有するためのディープ リンクを生成します。](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 
 :::column-end:::
 :::row-end:::
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ------------------ |
-| 09/23/2022 | スケジュールされたチャネル会議の会議アプリのサポートを導入しました。 | Teams 会議用のアプリを作成し、Teams 会議 [と通話用のアプリ>呼び出します](apps-in-teams-meetings/teams-apps-in-meetings.md) |
-| 08/23/2022 | モバイルで Teams 会議ステージにアプリを共有する | Teams 会議と通話用のアプリをビルド> [会議用のアプリを有効にして構成する](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
+| 09/23/2022 | スケジュールされたチャネル会議の会議アプリのサポートを導入しました。 | Teams 会議用のアプリを構築し、Teams 会議と通話 [用アプリ>呼び出し](apps-in-teams-meetings/teams-apps-in-meetings.md) |
+| 08/23/2022 | モバイルで Teams 会議ステージにアプリを共有する | Teams 会議および通話用アプリを構築する> [会議用アプリを有効にして構成する](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
 | 08/10/2022 | スケジュールされたパブリック チャネル会議用のアプリ | Teams 会議と通話用のアプリをビルド > [[概要]](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 08/03/2022 | Teams 会議ステージでアプリの API をミュートおよびミュート解除する | [Teams 会議と通話用のアプリをビルドする] > [[会議アプリの API リファレンス]](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 08/02/2022| Teams のコラボレーション コントロール| [Teams との統合] > [[コラボレーション コントロール]](samples/collaboration-control.md) |
@@ -331,7 +332,7 @@ ms.locfileid: "68615325"
 
 **2022 年 8 月**
 
-***2022 年 8 月 1*** 日: App Studio は非推奨となり、Teams 用 [の開発者ポータル](concepts/build-and-test/teams-developer-portal.md) を使用します。
+***2022 年 8 月 1*** 日: App Studio は非推奨となり、 [Teams 用開発者ポータル](concepts/build-and-test/teams-developer-portal.md) を使用します。
 
 :::column-end:::
 :::row-end:::
@@ -355,7 +356,7 @@ Microsoft では、Teams 開発者が質問をしたり、バグを報告した�
 1. Microsoft Teams を開きます。
 1. 左側のウィンドウから **Teams** を選択します。
 1. チーム内のチャネルを選択します。
-1. 省略記号 &#x25CF;&#x25CF;&#x25CF; を選択し、ドロップダウン リストから [ **コネクタ**] を選択します。
+1. 省略記号 &#x25CF;&#x25CF;&#x25CF; を選択し、ドロップダウン リストから [コネクタ] を選択 **します**。
 1. 表示された **[コネクタ]** ダイアログ ボックスで **RSS** を検索します。
 1. **[構成]** を選択します。
 1. **[RSS 接続の名前の入力]** で名前を入力します。

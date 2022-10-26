@@ -3,7 +3,7 @@ title: Microsoft Teams 開発者向けドキュメント
 summary: Microsoft Teams 開発者向けドキュメントの概要へようこそ。 Microsoft Teams アプリは、重要な情報、共通のツール、信頼できるプロセスを提供し、ユーザーが集まり、学習し、仕事をする場を増やします。
 metadata:
   title: Microsoft Teams 開発者向けドキュメント
-  description: Teams 用のアプリの構築の概要
+  description: Teams 用アプリの構築の概要
   ms.service: msteams
   ms.subservice: subservice
   ms.topic: landing-page
@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: ea9e2643aa280749887a323fb442db3c37f6e552
-  ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+  ms.openlocfilehash: c70a978c8d369d8caf486c35c39c9aed48b94fcb
+  ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 10/20/2022
-  ms.locfileid: "68615297"
+  ms.lasthandoff: 10/26/2022
+  ms.locfileid: "68699165"
 landingContent:
 - title: 最新の情報を確認する
   linkLists:
@@ -27,7 +27,7 @@ landingContent:
       url: https://gitter.im/OfficeDev/home
   - linkListType: whats-new
     links:
-    - text: Teams 用開発者ポータルが GCC テナントで使用できるようになりました
+    - text: TEAMS 用開発者ポータルが GCC テナントで使用できるようになりました
       url: concepts/build-and-test/teams-developer-portal.md
     - text: Live Share キャンバス
       url: apps-in-teams-meetings/teams-live-share-canvas.md
@@ -49,9 +49,9 @@ landingContent:
   linkLists:
   - linkListType: get-started
     links:
-    - text: アプリのビルドの概要
+    - text: アプリの構築の概要
       url: ../msteams-platform/get-started/get-started-overview.md
-    - text: GitHub の使用を開始する
+    - text: GitHub の概要
       url: /contribute/additional-resources
     - text: 用語集
       url: ~/get-started/glossary.md
@@ -77,7 +77,7 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: SaaS オファーにリンクされたアプリのガイドライン
+    - text: SaaS オファーにリンクされているアプリのガイドライン
       url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
     - text: Microsoft Teams ストア検証ガイドライン
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
@@ -101,7 +101,7 @@ landingContent:
       url: ~/concepts/design/design-teams-app-overview.md
     - text: コード サンプル
       url: https://github.com/OfficeDev/Microsoft-Teams-Samples
-    - text: Teams 会議ステージ用のアプリをビルドする
+    - text: Teams 会議ステージ用のアプリを構築する
       url: ~/apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
   - linkListType: whats-new
     links:
@@ -135,11 +135,11 @@ landingContent:
       url: ~/sbs-tab-device-permissions.yml
     - text: Teams 会話ボットを作成する
       url: ~/sbs-teams-conversation-bot.yml
-    - text: 通話と会議ボットを作成する
+    - text: 通話ボットと会議ボットを作成する
       url: ~/sbs-calling-and-meeting.yml
     - text: タブとメッセージ拡張機能の SSO を構成する
       url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml
-    - text: アダプティブ カードを使用してタブを作成する
+    - text: アダプティブ カードを使用してタブを構築する
       url: ~/sbs-tab-with-adaptive-cards.yml
     - text: プロアクティブ メッセージを送信するボットを構築する
       url: ~/sbs-send-proactive.yml
@@ -151,8 +151,10 @@ landingContent:
       url: ~/sbs-meetings-sidepanel.yml
   - linkListType: tutorial
     links:
-    - text: アクティビティ フィード通知を送信する
+    - text: アクティビティ フィード通知の送信
       url: ~/sbs-graphactivity-feedbroadcast.yml
+    - text: 会議内ドキュメント署名アプリを構築する
+      url: ~/sbs-inmeeting-document-signing.yml
   - linkListType: tutorial
     links:
     - text: Build コマンド ボットと JavaScript
@@ -161,17 +163,17 @@ landingContent:
       url: sbs-gs-notificationbot.yml
     - text: ボットから Teams にファイルをアップロードする
       url: ~/sbs-file-handling-in-bot.yml
-    - text: 会議のコンテンツ バブルを生成する
+    - text: 会議コンテンツ バブルを生成する
       url: ~/sbs-meeting-content-bubble.yml
     - text: Microsoft Teams からタスク モジュールを呼び出す
       url: ~/sbs-botbuilder-taskmodule.yml
-    - text: 検索ベースのメッセージ拡張機能をビルドする
+    - text: 検索ベースのメッセージ拡張機能を構築する
       url: ~/sbs-messagingextension-searchcommand.yml
-    - text: ビルド アクション ベースのメッセージ拡張機能
+    - text: アクション ベースのメッセージ拡張機能をビルドする
       url: ~/sbs-meetingextension-action.yml
-    - text: 送信 Webhook をビルドする
+    - text: 送信 Webhook を構築する
       url: ~/sbs-outgoing-webhooks.yml
-    - text: ボットを使用して Teams のリンクを展開解除する
+    - text: ボットを使用して Teams のリンクを削除する
       url: ~/sbs-botbuilder-linkunfurling.yml
     - text: Teams コネクタを構築する
       url: ~/sbs-teams-connectors.yml
@@ -181,7 +183,7 @@ landingContent:
     links:
     - text: Teams アプリのシナリオを構築する
       url: https://adoption.microsoft.com/en-us/extensibility-look-book-gallery/
-    - text: Teams アプリのシナリオのベスト プラクティス
+    - text: Teams アプリ シナリオのベスト プラクティス
       url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=bestpractices
     - text: Teams 用のローコード アプリを調べる
       url: ~/samples/teams-low-code-solutions.md

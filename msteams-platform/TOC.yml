@@ -126,7 +126,7 @@
               items:
                 - name: 環境の追加と管理
                   href: toolkit/TeamsFx-multi-env.md
-                - name: マルチ機能アプリを作成する
+                - name: 複数機能アプリを作成する
                   href: toolkit/add-capability.md
                   displayName: Multiple capabilities app
                 - name: 機能ベースのクラウド リソースを作成する
@@ -135,7 +135,7 @@
                   href: toolkit/add-API-connection.md
                 - name: Teams アプリにシングル サインオンを追加する
                   href: toolkit/add-single-sign-on.md
-            - name: マニフェストをカスタマイズする
+            - name: マニフェストのカスタマイズ
               items:
                 - name: Teams アプリ マニフェストをカスタマイズする
                   href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
@@ -165,13 +165,13 @@
                   href: toolkit/use-CICD-template.md
                 - name: Teams 環境でのアプリのサイドロードとテスト
                   href: toolkit/sideload-and-test-app.md
-                - name: さまざまな環境でアプリの動作をテストする
+                - name: 異なる環境でアプリの動作をテストする
                   href: toolkit/test-app-behavior.md
         - name: Teams アプリの発行
           items:
             - name: Teams ツールキットを使用して Teams アプリを公開する
               href: toolkit/publish.md
-            - name: 開発者ポータルと統合する
+            - name: 開発者ポータルとの統合
               href: toolkit/Integrate-with-developer-portal.md
         - name: よく寄せられる質問
           href: toolkit/faq.md
@@ -380,17 +380,17 @@
   items:
     - name: 概要
       href: apps-in-teams-meetings/teams-apps-in-meetings.md
-    - name: Teams 会議用のアプリを有効にして構成する
+    - name: Teams 会議のアプリを有効にして構成する
       items:
-        - name: 会議のタブを作成する
+        - name: 会議用のビルド タブ
           href: apps-in-teams-meetings/build-tabs-for-meeting.md
-        - name: 会議ステージ用のアプリをビルドする
+        - name: 会議ステージ用のアプリを構築する
           href: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
         - name: 会議の会議内通知を作成する
           href: apps-in-teams-meetings/in-meeting-notification-for-meeting.md
         - name: 会議チャット用の拡張可能な会話を構築する
           href: apps-in-teams-meetings/build-extensible-conversation-for-meeting-chat.md
-        - name: 匿名ユーザー用のアプリを作成する
+        - name: 匿名ユーザー向けのアプリを構築する
           href: apps-in-teams-meetings/build-apps-for-anonymous-user.md
         - name: 会議アプリ API
           href: apps-in-teams-meetings/meeting-apps-apis.md
@@ -659,7 +659,7 @@
         - name: Teams のストア送信を準備する
           href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
           displayName: 'Testing instructions, store listing, Microsoft Teams app validation tool, compile testing instructions, admin account and non admin account, preconfigured account, premium or upgraded features, tenant configuration'
-        - name: パートナー センターで Apple App Store Connect Team ID を更新し、モバイルでアプリを取得する
+        - name: パートナー センターで Apple App Store Connect チーム ID を更新し、モバイルでアプリを入手する
           href: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
           displayName: Enable users to install your app on Teams iOS platform.
         - name: アプリを送信する
