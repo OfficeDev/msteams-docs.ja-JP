@@ -43,6 +43,8 @@
       href: sbs-gs-notificationbot.yml
     - name: Build コマンド ボットと JavaScript
       href: sbs-gs-commandbot.yml
+    - name: ワークフロー ボットを構築する
+      href: sbs-gs-workflow-bot.yml
     - name: コード サンプル
       href: 'https://github.com/OfficeDev/Microsoft-Teams-Samples'
 - name: アプリを計画する
@@ -141,8 +143,6 @@
                   href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
                 - name: Azure AD マニフェストを編集する
                   href: toolkit/AAD-manifest-customization.md
-            - name: TeamsFx SDK
-              href: toolkit/TeamsFx-SDK.md
             - name: Teams アプリをデバッグする
               items:
                 - name: 概要
@@ -175,6 +175,8 @@
               href: toolkit/Integrate-with-developer-portal.md
         - name: よく寄せられる質問
           href: toolkit/faq.md
+    - name: TeamsFx SDK
+      href: toolkit/TeamsFx-SDK.md
     - name: Teams ツールキット CLI
       href: toolkit/TeamsFx-CLI.md
     - name: Teams の開発者ポータル

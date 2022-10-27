@@ -5,18 +5,18 @@ ms.date: 10/10/2022
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
-ms.openlocfilehash: 99b95d72e75bf43381ea441cf2e94f9cf63edc7e
-ms.sourcegitcommit: 20070f1708422d800d7b1d84b85cbce264616ead
+ms.openlocfilehash: 2e16b27b0854e9dc4f92e1c7ce4dc35c2af1f5c4
+ms.sourcegitcommit: 6926cf5eee55d5047c11ca13afc7f6f23e270396
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "68537592"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "68739926"
 ---
 # <a name="extend-a-teams-personal-tab-across-microsoft-365"></a>Teams 個人用タブを Microsoft 365 全体に拡張する
 
-個人用タブは、Microsoft Teams エクスペリエンスを向上させる優れた方法です。 個人用タブを使用すると、ユーザーがエクスペリエンスを離れるか、もう一度サインインしなくても、Teams 内でアプリケーションへのアクセス権をユーザーに提供できます。 このプレビューを使用すると、他の Microsoft 365 アプリケーション内で個人用タブを点灯させることができます。 このチュートリアルでは、既存の Teams 個人用タブを取得し、Outlook と Office デスクトップと Web の両方のエクスペリエンスと Android 用 Office アプリで実行するように更新するプロセスについて説明します。
+個人用タブは、Microsoft Teams エクスペリエンスを向上させる優れた方法です。 個人用タブを使用すると、ユーザーがエクスペリエンスを離れるか、もう一度サインインしなくても、Teams 内でアプリケーションへのアクセス権をユーザーに提供できます。 このプレビューを使用すると、他の Microsoft 365 アプリケーション内で個人用タブを点灯させることができます。 このチュートリアルでは、既存の Teams 個人用タブを取得し、Outlook と Office のデスクトップと Web の両方のエクスペリエンスと Android 用 Office アプリで実行するように更新するプロセスについて説明します。
 
-Outlook と Office で実行するように個人用アプリを更新するには、次の手順に従います。
+Outlook と Office で実行するように個人用アプリを更新するには、次の手順が必要です。
 
 > [!div class="checklist"]
 >
@@ -43,30 +43,30 @@ Outlook と Office で実行するように個人用アプリを更新するに�
 
 ## <a name="prepare-your-personal-tab-for-the-upgrade"></a>アップグレードの個人用タブを準備する
 
-既存の個人用タブ アプリがある場合は、テスト用の運用プロジェクトのコピーまたはブランチを作成し、アプリ マニフェストでアプリ ID を更新して、新しい識別子 (運用環境のアプリ ID とは異なるテスト用) を使用します。
+既存の個人用タブ アプリがある場合は、テスト用の運用プロジェクトのコピーまたはブランチを作成し、アプリ マニフェストのアプリ ID を更新して、新しい識別子 (テスト用の運用アプリ ID とは異なる) を使用するようにします。
 
-このチュートリアルを完了するためにサンプル コードを使用する場合は、 [Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) のセットアップ手順に従って、Visual Studio Code 用 Teams Toolkit 拡張機能を使用して個人用タブ アプリを作成し、この記事に戻って Microsoft 365 用に更新します。
+サンプル コードを使用してこのチュートリアルを完了する場合は、 [Todo List サンプル](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) のセットアップ手順に従って、Visual Studio Code 用 Teams Toolkit 拡張機能を使用して個人用タブ アプリをビルドしてから、この記事に戻って Microsoft 365 用に更新してください。
 
-または、次の [クイック スタート](#quickstart) セクションで Microsoft 365 が既に有効になっている基本的なシングル サインオン *hello world* アプリを使用し、[Teams でアプリをサイドロード](#sideload-your-app-in-teams)する手順に進むことができます。
+または、次の [クイック スタート](#quickstart) セクションで Microsoft 365 が既に有効になっている基本的なシングル サインオン *hello world* アプリを使用し、[Teams でアプリのサイドロード](#sideload-your-app-in-teams)に進むことができます。
 
 ### <a name="quickstart"></a>クイックスタート
 
-Outlook と Office での実行が既に有効になっている [個人用タブ](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365) から始めるには、Visual Studio Code 用の Teams Toolkit 拡張機能を使用します。
+Outlook と Office での実行が既に有効になっている [個人用タブ](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365) から開始するには、Visual Studio Code 用の Teams Toolkit 拡張機能を使用します。
 
 1. Visual Studio Code から、コマンド パレット (`Ctrl+Shift+P`) を開き、「`Teams: Create a new Teams app`」と入力します。
-1. **[SSO が有効な個人用] タブを選択します**。
+1. [ **SSO が有効な個人用] タブを選択します**。
 
     :::image type="content" source="images/toolkit-tab-sample.png" alt-text="Teams ツールキットの Todo List サンプル (Teams、Outlook、Office で動作)":::
 
 1. ワークスペース フォルダーのために、ローカル コンピューター上の場所を選択します。
-1. コマンド パレット (`Ctrl+Shift+P`) を開き、Azure `Teams: Provision in the cloud` アカウントに必要なアプリ リソース (App Service プラン、ストレージ アカウント、Function App、Managed Identity) を作成します。
+1. コマンド パレット (`Ctrl+Shift+P`) を開き、「」と入力`Teams: Provision in the cloud`して、Azure アカウントで必要なアプリ リソース (App Serviceプラン、ストレージ アカウント、関数アプリ、マネージド ID) を作成します。
 1. コマンド パレット (`Ctrl+Shift+P`) を開き、「`Teams: Deploy to the cloud`」と入力して、サンプル コードを Azure のプロビジョニング済みリソースにデプロイしてアプリを起動します。
 
-ここから、先に進んで [Teams でアプリをサイドロード](#sideload-your-app-in-teams) し、Outlook と Office でアプリをプレビューできます。 (アプリ マニフェストと TeamsJS API 呼び出しは、Microsoft 365 用に既に更新されています)。
+ここから、「 [Teams でアプリをサイドロード](#sideload-your-app-in-teams) する」に進み、Outlook と Office でアプリをプレビューできます。 (アプリ マニフェストと TeamsJS API 呼び出しは、Microsoft 365 用に既に更新されています)。
 
 ## <a name="update-the-app-manifest"></a>アプリ マニフェストを更新します。
 
-[Teams の開発者マニフェスト](../resources/schema/manifest-schema.md) スキーマ バージョン`1.13`を使用して、Teams の個人用タブを Outlook と Office で実行できるようにする必要があります。
+[Teams 開発者マニフェスト](../resources/schema/manifest-schema.md) スキーマ バージョン`1.13`を使用して、Teams の個人用タブを Outlook と Office で実行できるようにする必要があります。
 
 アプリ マニフェストを更新するには、次の 2 つのオプションがあります。
 
@@ -88,44 +88,44 @@ Teams アプリ マニフェストを開き、`$schema` と `manifestVersion` �
 
 ---
 
-Teams ツールキットを使用して個人用アプリを作成した場合は、それを使用してマニフェスト ファイルの変更を検証し、エラーを特定することもできます。 コマンド パレット (`Ctrl+Shift+P`) を開き、 **Teams: Validate マニフェスト ファイルを探します**。
+Teams ツールキットを使用して個人用アプリを作成した場合は、それを使用してマニフェスト ファイルの変更を検証し、エラーを特定することもできます。 コマンド パレット (`Ctrl+Shift+P`) を開き、[ **Teams: マニフェスト ファイルの検証]** を見つけます。
 
 ## <a name="update-sdk-references"></a>SDK 参照を更新する
 
-Outlook と Office で実行するには、アプリで npm パッケージ `@microsoft/teams-js@2.0.0` (またはそれ以降) を参照する必要があります。 Outlook と Office ではダウンレベル バージョンのコードがサポートされていますが、非推奨の警告がログに記録され、Outlook と Office のダウンレベル バージョンの TeamsJS のサポートは最終的に停止します。
+Outlook と Office で実行するには、アプリで npm パッケージ `@microsoft/teams-js@2.0.0` (またはそれ以上) を参照する必要があります。 ダウンレベルバージョンのコードは Outlook と Office でサポートされていますが、非推奨の警告はログに記録され、Outlook と Office での TeamsJS のダウンレベル バージョンのサポートは最終的に停止します。
 
-Teams Toolkit を使用すると、1.x TeamsJS バージョンから TeamsJS バージョン 2.x.x にアップグレードするために必要なコード変更を特定して自動化できます。 または、同じ手順を手動で実行することもできます。詳細については、 [Microsoft Teams JavaScript クライアント SDK](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) を参照してください。
+Teams Toolkit を使用すると、1.x TeamsJS バージョンから TeamsJS バージョン 2.x.x にアップグレードするために必要なコード変更を特定して自動化できます。 または、同じ手順を手動で実行することもできます。詳細については、「 [Microsoft Teams JavaScript クライアント SDK](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20) 」を参照してください。
 
 1. *コマンド パレット* を開きます。 `Ctrl+Shift+P`
 1. コマンド`Teams: Upgrade Teams JS SDK and code references`を実行します。
 
-完了すると、 *package.json* ファイルが参照 `@microsoft/teams-js@2.0.0` (またはそれ以降) され、ファイル `*.js/.ts` と `*.jsx/.tsx` ファイルは次のように更新されます。
+完了すると、 *package.json* ファイルが参照 `@microsoft/teams-js@2.0.0` (以上) され、ファイル `*.js/.ts` と `*.jsx/.tsx` ファイルは次のように更新されます。
 
 > [!div class="checklist"]
 >
-> * teams-js@2.x.x の Import ステートメント
-> * teams-js@2.x.x の[関数、列挙型、インターフェイス呼び出し](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20)
-> * `TODO` コメントリマインダーは、 [コンテキスト](../tabs/how-to/using-teams-client-sdk.md#updates-to-the-context-interface) インターフェイスの変更の影響を受ける可能性がある領域にフラグを設定します
+> * teams-js@2.x.x のステートメントをインポートする
+> * teams-js@2.x.x の[関数、列挙型、インターフェイスの呼び出し](../tabs/how-to/using-teams-client-sdk.md#whats-new-in-teamsjs-version-20)
+> * `TODO`[コンテキスト](../tabs/how-to/using-teams-client-sdk.md#updates-to-the-context-interface) インターフェイスの変更によって影響を受ける可能性がある領域にフラグを付けるコメント リマインダー
 > * [コールバック関数を Promise に変換する](../tabs/how-to/using-teams-client-sdk.md#callbacks-converted-to-promises)ための `TODO` コメント リマインダー
 
 > [!IMPORTANT]
-> *.html* ファイル内のコードはアップグレード ツールではサポートされておらず、手動による変更が必要です。
+> .htmlファイル内 *の* コードはアップグレード ツールではサポートされていないため、手動で変更する必要があります。
 
 ## <a name="configure-content-security-policy-headers"></a>コンテンツ セキュリティ ポリシー ヘッダーを構成する
 
 Microsoft Teams と同様に、タブ アプリケーションは Office および Outlook Web クライアントの [iframe 要素](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) 内でホストされます。
 
-アプリで [コンテンツ セキュリティ ポリシー](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) ヘッダーを使用する場合は、CSP ヘッダーで次のすべての [フレーム先祖](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) を許可してください。
+アプリで [コンテンツ セキュリティ ポリシー](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) ヘッダーを使用する場合は、CSP ヘッダーで次のすべての [フレーム先祖を](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) 許可してください。
 
 |Microsoft 365 ホスト| frame-ancestor 権限|
 |--|--|
 | Teams | `teams.microsoft.com` |
-| Office | `*.office.com` |
-| Outlook | `outlook.office.com`, `outlook.office365.com`, `outlook-sdf.office.com`, `outlook-sdf.office365.com` |
+| Office | `*.microsoft365.com`, `*.office.com` |
+| Outlook | `outlook.live.com`, `outlook.office.com`, `outlook.office365.com`, `outlook-sdf.office.com`, `outlook-sdf.office365.com` |
 
 ## <a name="update-azure-ad-app-registration-for-sso"></a>SSO の Azure AD アプリ登録を更新します
 
-個人用タブの [Azure Active Directory (AD) シングル サインオン (SSO)](../tabs/how-to/authentication/tab-sso-overview.md) は、Office と Outlook と Teams の場合と同じように機能します。 ただし、テナントの *アプリの登録* ポータルで、タブ アプリの Azure AD アプリ登録にいくつかのクライアント アプリケーション識別子を追加する必要があります。
+個人用タブの [Azure Active Directory (AD) シングル サインオン (SSO)](../tabs/how-to/authentication/tab-sso-overview.md) は、Office と Outlook で Teams と同じように機能します。 ただし、テナントのアプリの登録 ポータルで、タブ アプリの Azure AD アプリ登録に複数のクライアント アプリケーション識別子を追加 *する* 必要があります。
 
 1. サンドボックス テナント アカウントで [[Microsoft Azure ポータル]](https://portal.azure.com) にサインインします。
 1. **[アプリの登録]** ブレードを開きます。
@@ -147,13 +147,13 @@ Microsoft Teams と同様に、タブ アプリケーションは Office およ�
     |Outlook Web | bc59ab01-8403-45c6-8796-ac3ef710b3e3|
 
     > [!NOTE]
-    > Microsoft 365 クライアント アプリケーションの中には、クライアント ID を共有するものもあります。
+    > 一部の Microsoft 365 クライアント アプリケーションでは、クライアント ID が共有されます。
 
 ## <a name="sideload-your-app-in-teams"></a>Teams でアプリをサイドロード
 
-Office と Outlook でアプリを実行する最後の手順は、更新された個人用タブ [アプリ パッケージ](..//concepts/build-and-test/apps-package.md) を Microsoft Teams にサイドロードすることです。
+Office と Outlook でアプリを実行するための最後の手順は、Microsoft Teams で更新された個人用タブ [アプリ パッケージ](..//concepts/build-and-test/apps-package.md) をサイドロードすることです。
 
-1. Teams アプリケーション ([マニフェスト](../resources/schema/manifest-schema.md) アイコンと [アプリ アイコン](/microsoftteams/platform/resources/schema/manifest-schema#icons)) を zip ファイルにパッケージ化します。 Teams Toolkit を使用してアプリを作成した場合は、Teams Toolkit の **[展開]** メニューの **[Zip Teams メタデータ パッケージ]** オプションを使用して簡単に行うことができます。
+1. Teams アプリケーション ([マニフェスト](../resources/schema/manifest-schema.md) と [アプリ アイコン](/microsoftteams/platform/resources/schema/manifest-schema#icons)) を zip ファイルにパッケージ化します。 Teams Toolkit を使用してアプリを作成した場合は、Teams Toolkit の **[展開]** メニューの **[Zip Teams メタデータ パッケージ]** オプションを使用して簡単に行うことができます。
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="Visual Studio Code 用のTeams ツールキット拡張機能の 'Zip Teams メタデータ パッケージ' オプション":::
 
@@ -169,23 +169,23 @@ Office と Outlook でアプリを実行する最後の手順は、更新され�
 
     :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Teams の [カスタム アプリをアップロード] オプション":::
 
-Teams にサイドロードすると、Outlook と Office で個人用タブを使用できるようになります。 Teams でアプリをサイドロードするために使用したのと同じ資格情報でサインインする必要があります。 Android 用 Office アプリを実行するときは、Office アプリから個人用タブ アプリを使用するためにアプリを再起動する必要があります。
+Teams にサイドローディングされた後、個人用タブは Outlook と Office で使用できます。 Teams でアプリをサイドロードするために使用したのと同じ資格情報でサインインする必要があります。 Android 用 Office アプリを実行するときは、Office アプリから個人用タブ アプリを使用するには、アプリを再起動する必要があります。
 
-アプリをピン留めしてすばやくアクセスすることも、左側のサイドバーにある最近のアプリケーション間の省略記号 (**...**) ポップアップでアプリを見つけることもできます。 Teams でアプリをピン留めしても、Office または Outlook ではアプリとしてピン留めされません。
+アプリをピン留めしてすばやくアクセスすることも、左側のサイドバーにある最近のアプリケーション間の省略記号 (**...**) ポップアップでアプリを見つけることもできます。 Teams でアプリをピン留めしても、Office や Outlook ではアプリとしてピン留めされません。
 
 ## <a name="preview-your-personal-tab-in-other-microsoft-365-experiences"></a>他の Microsoft 365 エクスペリエンスで個人用タブをプレビューする
 
-Office および Outlook、Web、Windows デスクトップ クライアントで実行されているアプリをプレビューする方法を次に示します。
+Office と Outlook、Web、および Windows デスクトップ クライアントで実行されているアプリをプレビューする方法を次に示します。
 
 > [!NOTE]
-> Teams からアプリをアンインストールすると、Outlook と Office の **[その他のアプリ]** カタログからもアプリが削除されます。 上記の Teams Toolkit サンプル アプリを使用している場合。
+> Teams からアプリをアンインストールすると、Outlook と Office の **[その他のアプリ]** カタログからも削除されます。 上記の Teams Toolkit サンプル アプリを使用している場合。
 
 ### <a name="outlook-on-windows"></a>Windows での Outlook
 
 Windows デスクトップの Outlook で実行されているアプリを表示するには:
 
 1. Outlook を起動し、開発テナント アカウントを使用してサインインします。
-1. サイド バーで、[  **その他のアプリ**] を選択します。 サイドロードされたアプリのタイトルが、インストールされているアプリの間に表示されます。
+1. サイド バーで、[  **その他のアプリ**] を選択します。 サイドロードされたアプリ タイトルが、インストールされているアプリの中に表示されます。
 1. アプリ アイコンを選択して、Outlook でアプリを起動します。
 
     :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Outlook デスクトップ クライアントのサイドバーにある楕円（[その他のアプリ]）オプションをクリックして、インストールされている個人用タブを表示する":::
@@ -195,7 +195,7 @@ Windows デスクトップの Outlook で実行されているアプリを表示
 Outlook on the web でアプリを表示するには:
 
 1. [Outlook on the web](https://outlook.office.com)に移動し、開発テナント アカウントを使用してサインインします。
-1. サイド バーで、[  **その他のアプリ**] を選択します。 サイドロードされたアプリのタイトルが、インストールされているアプリの間に表示されます。
+1. サイド バーで、[  **その他のアプリ**] を選択します。 サイドロードされたアプリ タイトルが、インストールされているアプリの中に表示されます。
 1. アプリ アイコンを選択して、Outlook on the webで実行されているアプリを起動してプレビューします。
 
     :::image type="content" source="images/outlook-web-more-apps.png" alt-text="outlook.com のサイド バーにある楕円 ([その他のアプリ]) オプションをクリックして、インストールされている個人用タブを表示する":::
@@ -205,7 +205,7 @@ Outlook on the web でアプリを表示するには:
 Windows デスクトップの Office で実行されているアプリを表示するには:
 
 1. Office を起動し、開発テナント アカウントを使用してサインインします。
-1. サイド バーの **[アプリ** ] アイコンを選択します。 サイドロードされたアプリのタイトルが、インストールされているアプリの間に表示されます。
+1. サイド バーの [ **アプリ** ] アイコンを選択します。 サイドロードされたアプリ タイトルが、インストールされているアプリの中に表示されます。
 1. アプリ アイコンを選択して、Office でアプリを起動します。
 
     :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Office デスクトップ クライアントのサイドバーにある楕円（[その他のアプリ]）オプションをクリックして、インストールされている個人用タブを表示する":::
@@ -215,43 +215,43 @@ Windows デスクトップの Office で実行されているアプリを表示�
 Office on the web で実行されているアプリをプレビューするには:
 
 1. テスト テナント資格情報 **を使用して office.com** にログインします。
-1. サイド バーの **[アプリ** ] アイコンを選択します。 サイドロードされたアプリのタイトルが、インストールされているアプリの間に表示されます。
+1. サイド バーの [ **アプリ** ] アイコンを選択します。 サイドロードされたアプリ タイトルが、インストールされているアプリの中に表示されます。
 1. アプリ アイコンを選択して、Office on the webでアプリを起動します。
 
-    :::image type="content" source="images/office-web-more-apps.png" alt-text="インストールされている個人用タブを表示するには、office.com のサイド バーにある [その他のアプリ] オプションをクリックします":::
+    :::image type="content" source="images/office-web-more-apps.png" alt-text="office.com のサイド バーの [その他のアプリ] オプションをクリックすると、インストールされている個人用タブが表示されます":::
 
 ### <a name="office-app-for-android"></a>Android 用 Office アプリ
 
 > [!NOTE]
-> アプリをインストールする前に、 [最新の Office アプリ ベータ ビルドをインストールし、ベータ](prerequisites.md#mobile) プログラムの一部になる手順を実行します。
+> アプリをインストールする前に、 [最新の Office アプリ ベータ ビルドをインストールし、ベータ](prerequisites.md#mobile) プログラムの一部となる手順を実行します。
 
 Android 用 Office アプリで実行されているアプリを表示するには:
 
-1. Office アプリを起動し、開発テナント アカウントを使用してサインインします。 Office アプリ for Android が Teams でアプリをサイドロードする前に既に実行されていた場合は、インストールされているアプリ間でアプリを表示するには、アプリを再起動する必要があります。
-1. **[アプリ**] アイコンを選択します。 サイドロードされたアプリは、インストールされているアプリの間に表示されます。
+1. Office アプリを起動し、開発テナント アカウントを使用してサインインします。 Teams でアプリをサイドロードする前に、Android 用 Office アプリが既に実行されていた場合は、インストールされているアプリの中でアプリを表示するには、アプリを再起動する必要があります。
+1. [ **アプリ** ] アイコンを選択します。 サイドロードされたアプリは、インストールされているアプリの間に表示されます。
 1. アプリ アイコンを選択して、Android 用 Office アプリでアプリを起動します。
 
-:::image type="content" source="images/office-mobile-apps.png" alt-text="Office アプリのサイド バーにある [アプリ] オプションをタップすると、インストールされている個人用タブが表示されます":::
+:::image type="content" source="images/office-mobile-apps.png" alt-text="Office アプリのサイド バーの [アプリ] オプションをタップして、インストールされている個人用タブを表示します":::
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 
-現在、Outlook クライアントと Office クライアントでは、Teams アプリケーションの種類と機能のサブセットがサポートされています。 このサポートは、時間の経過と共に拡張されます。
+現在、Teams アプリケーションの種類と機能のサブセットは、Outlook クライアントと Office クライアントでサポートされています。 このサポートは時間の経過と同時に拡張されます。
 
-さまざまな TeamsJS 機能のホスト サポートを確認するには、 [Microsoft 365](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook) サポートを参照してください。
+さまざまな TeamsJS 機能のホスト サポートを確認するには、 [Microsoft 365](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook) のサポートに関するページを参照してください。
 
-Teams アプリの Microsoft 365 ホストとプラットフォームのサポートの全体的な概要については、「 [Microsoft 365 全体で Teams アプリを拡張](overview.md)する」を参照してください。
+Teams アプリに対する Microsoft 365 ホストとプラットフォームのサポートの概要については、「 [Microsoft 365 全体で Teams アプリを拡張](overview.md)する」を参照してください。
 
-実行時に特定の機能のホスト サポートを確認するには、その機能 (名前空間) で関数を `isSupported()` 呼び出し、必要に応じてアプリの動作を調整します。 これにより、アプリは、それをサポートするホストの UI と機能を明るくし、そうでないホストで正常なフォールバック エクスペリエンスを提供できます。 詳細については、「 [アプリ エクスペリエンスを区別する](../tabs/how-to/using-teams-client-sdk.md#differentiate-your-app-experience)」を参照してください。
+実行時に特定の機能のホスト サポートを確認するには、その機能 (名前空間) で関数を `isSupported()` 呼び出し、必要に応じてアプリの動作を調整します。 これにより、アプリをサポートするホストの UI と機能を明るくし、サポートされていないホストで適切なフォールバック エクスペリエンスを提供できます。 詳細については、「 [アプリ エクスペリエンスを区別する](../tabs/how-to/using-teams-client-sdk.md#differentiate-your-app-experience)」を参照してください。
 
 [Microsoft Teams 開発者コミュニティ チャネル](/microsoftteams/platform/feedback)を使用して、問題を報告し、フィードバックを提供します。
 
 ### <a name="debugging"></a>デバッグ
 
-Teams Toolkit では、Teams に加えて、Office と Outlook で実行されているタブ アプリケーションをデバッグ (`F5`) できます。
+Teams Toolkit から、Teams に加えて、Office と Outlook で実行されているタブ アプリケーションをデバッグ (`F5`) できます。
 
 :::image type="content" source="images/toolkit-debug-targets.png" alt-text="Teams Toolkit で Teams、Outlook、Office のデバッグ ターゲットから選択する":::
 
-Office または Outlook へのローカル デバッグを初めて実行すると、Microsoft 365 テナント アカウントにサインインし、自己署名証明書をインストールするように求められます。 Teams を手動でインストールするように求めるメッセージも表示されます。 **[Teams にインストール] を** 選択してブラウザー ウィンドウを開き、アプリを手動でインストールします。 次に、[ **続行** ] を選択して、Office/Outlook でアプリのデバッグに進みます。
+Office または Outlook へのローカル デバッグを初めて実行すると、Microsoft 365 テナント アカウントにサインインし、自己署名テスト証明書をインストールするように求められます。 また、Teams を手動でインストールするように求められます。 [ **Teams にインストール]** を選択してブラウザー ウィンドウを開き、アプリを手動でインストールします。 次に、[ **続行]** を選択して続行し、Office/Outlook でアプリをデバッグします。
 
 :::image type="content" source="images/toolkit-dialog-teams-install.png" alt-text="Toolkit ダイアログ Teams のインストール":::
 
@@ -261,21 +261,21 @@ Office または Outlook へのローカル デバッグを初めて実行する
 
 Teams Toolkit (`F5`) のデバッグは、Android 用 Office アプリではまだサポートされていません。 Android 用 Office アプリで実行されているアプリをリモートでデバッグする方法を次に示します。
 
-1. 物理 Android デバイスを使用してデバッグする場合は、開発用コンピューターに接続し、 [USB デバッグ](https://developer.android.com/studio/debug/dev-options)のオプションを有効にします。 これは、Android エミュレーターで既定で有効になっています。
+1. 物理 Android デバイスを使用してデバッグする場合は、それを開発マシンに接続し、 [USB デバッグ](https://developer.android.com/studio/debug/dev-options)のオプションを有効にします。 これは、Android エミュレーターで既定で有効になっています。
 1. Android デバイスから Office アプリを起動します。
-1. プロファイル **の [Me > Settings] > [デバッグを許可する**] を開き、[ **リモート デバッグを有効にする]** オプションをオンにします。
+1. [Me **> Settings]\**(デバッグを許可する\) >プロファイルを開き、[ **リモート デバッグを有効にする] オプションを** オンに切り替えます。
 
     :::image type="content" source="images/office-android-enable-remote-debugging.png" alt-text="リモート デバッグを有効にするを示すスクリーンショット":::
 
-1. 終了 **設定**。
+1. **終了設定**。
 1. プロファイル画面を終了します。
-1. **[アプリ] を** 選択し、サイドロードされたアプリを起動して Office アプリ内で実行します。
-1. Android デバイスが開発用コンピューターに接続されていることを確認します。 開発用コンピューターから、ブラウザーを開いて DevTools 検査ページに移動します。 たとえば、Microsoft Edge に移動して `edge://inspect/#devices` 、デバッグが有効な Android WebView の一覧を表示します。
-1. タブの `Microsoft Teams Tab` URL を見つけて **検査** を選択し、DevTools を使用してアプリのデバッグを開始します。
+1. [ **アプリ]** を選択し、サイドロードされたアプリを起動して Office アプリ内で実行します。
+1. Android デバイスが開発マシンに接続されていることを確認します。 開発マシンから、ブラウザーを開いて DevTools 検査ページに移動します。 たとえば、Microsoft Edge で に `edge://inspect/#devices` 移動して、デバッグが有効な Android WebView の一覧を表示します。
+1. タブ URL で を `Microsoft Teams Tab` 見つけ、[ **検査** ] を選択して DevTools を使用してアプリのデバッグを開始します。
 
     :::image type="content" source="images/office-android-debug.png" alt-text="devtool の Web ビューの一覧を示すスクリーンショット":::
 
-1. Android WebView 内でタブ アプリをデバッグします。 同様に、Android デバイスで通常の Web サイトを [リモートでデバッグ](/microsoft-edge/devtools-guide-chromium/remote-debugging) します。
+1. Android WebView 内でタブ アプリをデバッグします。 同じ方法で、Android デバイス上の通常の Web サイトを [リモートでデバッグ](/microsoft-edge/devtools-guide-chromium/remote-debugging) します。
 
 ## <a name="code-sample"></a>コード サンプル
 
@@ -284,8 +284,8 @@ Teams Toolkit (`F5`) のデバッグは、Android 用 Office アプリではま�
 | Todo List | ReactとAzure Functionsを使用して構築された SSO を使用した編集可能な todo リスト。 Teams でのみ動作します (このサンプル アプリを使用して、このチュートリアルで説明されているアップグレード プロセスを試してください)。 | [表示](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend)  |
 | Todo List (Microsoft 365) | ReactとAzure Functionsを使用して構築された SSO を使用した編集可能な todo リスト。 Teams、Outlook、Office で動作します。 | [表示](https://github.com/OfficeDev/TeamsFx-Samples/tree/ga/todo-list-with-Azure-backend-M365)|
 | イメージ エディター (Microsoft 365) | Microsoft Graph APIを使用してイメージを作成、編集、開き、保存します。 Teams、Outlook、Office で動作します。 | [表示](https://github.com/OfficeDev/m365-extensibility-image-editor) |
-| サンプル起動ページ (Microsoft 365) | 異なるホストで使用可能な SSO 認証と TeamsJS SDK の機能について説明します。 Teams、Outlook、Office で動作します。 | [表示](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
-| Northwind Orders アプリ | Microsoft TeamsJS SDK V2 を使用してチーム アプリケーションを他の M365 ホスト アプリに拡張する方法を示します。 Teams、Outlook、Office で動作します。 モバイル向けに最適化されています。| [表示](https://github.com/microsoft/app-camp/tree/main/experimental/ExtendTeamsforM365) |
+| サンプル起動ページ (Microsoft 365) | さまざまなホストで使用できる SSO 認証と TeamsJS SDK 機能を示します。 Teams、Outlook、Office で動作します。 | [表示](https://github.com/OfficeDev/microsoft-teams-library-js/tree/main/apps/sample-app) |
+| Northwind Orders アプリ | Microsoft TeamsJS SDK V2 を使用して、Teams アプリケーションを他の M365 ホスト アプリに拡張する方法を示します。 Teams、Outlook、Office で動作します。 モバイル向けに最適化されています。| [表示](https://github.com/microsoft/app-camp/tree/main/experimental/ExtendTeamsforM365) |
 
 ## <a name="next-step"></a>次の手順
 

@@ -12,12 +12,12 @@ metadata:
   ms.author: msauthor
   ms.date: 11/10/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: c70a978c8d369d8caf486c35c39c9aed48b94fcb
-  ms.sourcegitcommit: 372aade09e62ac7e5936215173a6632fbb042c9d
+  ms.openlocfilehash: 4ca17af82eddcfe4648436ff56246419f57f4d55
+  ms.sourcegitcommit: 6926cf5eee55d5047c11ca13afc7f6f23e270396
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 10/26/2022
-  ms.locfileid: "68699165"
+  ms.lasthandoff: 10/27/2022
+  ms.locfileid: "68739919"
 landingContent:
 - title: 最新の情報を確認する
   linkLists:
@@ -73,6 +73,8 @@ landingContent:
       url: sbs-gs-commandbot.yml
     - text: JavaScript を使用した通知ボットのビルド
       url: sbs-gs-notificationbot.yml
+    - text: ワークフロー ボットを構築する
+      url: sbs-gs-workflow-bot.yml
 - title: アプリを収益化する
   linkLists:
   - linkListType: concept

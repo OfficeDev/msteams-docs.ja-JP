@@ -4,12 +4,12 @@ description: 新しい Microsoft Teams 開発者向け機能と、既存の機�
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 946dad871ce27ebd4a317ddf816592a3238ac2aa
-ms.sourcegitcommit: 4e355e22ddcd10ba9a8f37965c4f5c8fa04f5776
+ms.openlocfilehash: 154f2ae1c293f39c0be5f6f6517fc1607688754f
+ms.sourcegitcommit: 6926cf5eee55d5047c11ca13afc7f6f23e270396
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2022
-ms.locfileid: "68701042"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "68740612"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -18,7 +18,7 @@ ms.locfileid: "68701042"
 一般公開 (GA) されている Microsoft Teams プラットフォーム機能について説明します。 RSS フィード[![ダウンロード フィード](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)に登録することで、Teams プラットフォームの最新情報を取得できるようになりました。 詳細については、「[RSS フィードの構成](#get-latest-updates)」を参照してください。
 
 ## <a name="generally-available"></a>一般公開
- 
+
 :::row:::
 :::column:::
 
@@ -31,6 +31,7 @@ ms.locfileid: "68701042"
 
 **2022 年 10 月**
 
+* ***2022 年 10 月 27*** 日: [Teams 用ワークフロー ボットの概要](sbs-gs-workflow-bot.yml)
 * ***2022 年 10 月 26*** 日: [会議内ドキュメント署名アプリを構築する](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-an-in-meeting-document-signing-app)
 * ***2022 年 10 月 19*** 日: [Teams 用開発者ポータルが GCC テナントで使用できるようになりました](concepts/build-and-test/teams-developer-portal.md)。
 * ***2022 年 10 月 13*** 日: [NavBar を構成し、複数のアクションのオーバーフロー メニューを作成します](concepts/design/personal-apps.md#configure-and-add-multiple-actions-in-navbar)。
