@@ -1,16 +1,16 @@
 ---
 title: 概要 - Microsoft Teams ストアにアプリを公開する
-description: Microsoft Teams ストアまたは AppSource にアプリを発行します。 送信後に必要な情報、SaaS オファーにリンクされたアプリの迅速な承認と発行に関するヒント。
+description: Microsoft Teams ストアまたは AppSource にアプリを発行します。 送信後に予想される内容、迅速な承認と SaaS オファーにリンクされたアプリの公開に関するヒント。
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 95d310467ae5fad80d07a61d6b790dcd086feb35
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: f3981ccc9437c28b288a86912dd2b878e729c101
+ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560730"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68773507"
 ---
 # <a name="publish-your-app-to-the-microsoft-teams-store"></a>Microsoft Teams ストアにアプリを公開する
 
@@ -124,7 +124,7 @@ Teams ストアに公開されたアプリは、Microsoft 365 アプリおよび
 
 * **アプリ提出を投稿する**
 
-  * 検証レポートを確認したら、検証レポートに関連するクエリを含む電子メール スレッドに返信するか、報告された問題を解決するために追加のサポートが必要な場合。
+  * 検証レポートを確認したら、検証レポートに関連するすべてのクエリを含む電子メール スレッドに返信するか、報告された問題を解決するために追加のサポートが必要な場合は、返信します。
 
   * アプリが承認されるまで、報告された問題を解決するのに十分な開発者帯域幅があることを確認してください。
 
@@ -172,6 +172,7 @@ Teams ストアに公開されたアプリは、Microsoft 365 アプリおよび
 
 ## <a name="see-also"></a>関連項目
 
+* [Microsoft Teams ストアで Teams アプリを発行する](/training/modules/microsoft-teams-publish-app-to-store/)
 * [Microsoft 365 アプリ ストアへの公開](/office/dev/store/)
 * [Teams アプリをアップロードする](~/concepts/deploy-and-publish/apps-upload.md)
 * [Teams アプリを組織に公開する](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)

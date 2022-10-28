@@ -2,30 +2,30 @@
 title: タブ デバイスのアクセス許可を付与する
 metadata:
   title: タブ デバイスのアクセス許可を付与する
-  description: Microsoft Teams アプリの場所、カメラ、マイクへのアクセスなどのタブ デバイスのアクセス許可を付与する方法について説明します。
+  description: Microsoft Teams アプリの場所、カメラ、マイクアクセスなどのタブ デバイスのアクセス許可を付与する方法について説明します。
   audience: Developer
   level: Beginner
   ms.date: 12/24/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: concepts/device-capabilities/browser-device-permissions.md
-  nextTutorialTitle: ブラウザーのデバイスアクセス許可の詳細
+  nextTutorialTitle: 詳しくは、ブラウザーのデバイスアクセス許可に関するページをご覧ください。
   ms.custom: mvc
   ms.localizationpriority: high
-  ms.openlocfilehash: 90f0562fc24a3d363a1435b16cff15ba73f42b3e
-  ms.sourcegitcommit: ac59d469b823b80e65ee6f7be11ec5c365977a1c
+  ms.openlocfilehash: 268982d898361a2f59a107c073a3603de19c6149
+  ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 10/06/2022
-  ms.locfileid: "68490921"
+  ms.lasthandoff: 10/28/2022
+  ms.locfileid: "68773463"
 items:
 - durationInMinutes: 1
   content: >
-    場所、カメラ、マイクへのアクセスなど、デバイスのアクセス許可を必要とする Teams アプリでは、ユーザーが Web ブラウザーで手動でアクセス許可を付与する必要があります。 以前は、ブラウザーがアクセス許可を付与する方法を処理していましたが、これらのアクセス許可は Microsoft Teams で処理されるようになりました。
+    場所、カメラ、マイクへのアクセスなど、デバイスのアクセス許可を必要とする Teams アプリでは、ユーザーが Web ブラウザーでアクセス許可を手動で付与する必要があります。 以前は、ブラウザーがアクセス許可を付与する方法を処理していましたが、これらのアクセス許可は Microsoft Teams で処理されるようになりました。
 
 
     このステップ バイ ステップ ガイドは、Teams でタブ デバイスのアクセス許可を付与するのに役立ちます。 次の出力が表示されます。
 
-      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/output1.png" alt-text="最終的な出力":::
+      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/output1.png" alt-text="最終出力":::
 - title: 前提条件
   durationInMinutes: 1
   content: >
@@ -36,45 +36,45 @@ items:
     *| &nbsp; | インストール | 使用するには... |
      | --- | --- | --- |
      | **必須** | &nbsp; | &nbsp; |
-     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams は、チャット、会議、通話、すべて 1 か所のアプリを通じて、共同作業するすべてのユーザーと共同作業を行います。|
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams は、チャット、会議、通話、すべてのアプリを通じて作業するすべてのユーザーと 1 か所で共同作業を行います。|
      | &nbsp; | [Microsoft 365 開発者アカウント](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | アプリをインストールするための適切なアクセス許可を持つ Teams アカウントにアクセスします。 |
      | &nbsp; | [Visual Studio 2022 バージョン 17.3](https://visualstudio.microsoft.com)<br> 次の 2 つのワークロードのいずれかをインストールします。<br> • **ASP.NET と Web 開発** <br> • **.NET Core クロスプラットフォーム開発** | Visual Studio 2022 でエンタープライズ バージョンをインストールし、ワークロードをインストールできます。 |
      | &nbsp; | [Node.jsと NPM](https://nodejs.org/) | バックエンド JavaScript ランタイム環境。 最新の v16 LTS リリースを使用します。|
-     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams アプリの機能 (会話ボット、メッセージ拡張機能、受信 Webhook) には、受信接続が必要です。 トンネルは、開発システムを Teams に接続します。 タブのみを含むアプリでは必須ではありません。 このパッケージはプロジェクト ディレクトリ内にインストールされます (npm `devDependencies` を使用)。 |
+     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams アプリの機能 (会話型ボット、メッセージ拡張機能、受信 Webhook) には、受信接続が必要です。 トンネルは、開発システムを Teams に接続します。 タブのみを含むアプリには必要ありません。 このパッケージはプロジェクト ディレクトリ内にインストールされます (npm `devDependencies` を使用)。 |
 
       > [!NOTE]
-      > ngrok をダウンロードしたら、サインアップして [authtoken](https://ngrok.com/download) をインストールします。
+      > ngrok をダウンロードしたら、サインアップして [authtoken を](https://ngrok.com/download)インストールします。
 - title: ローカル環境を設定する
   durationInMinutes: 1
   content: >
-    1. [Microsoft Teams のサンプルを](https://github.com/OfficeDev/Microsoft-Teams-Samples)開きます。
+    1. [Microsoft Teams サンプル](https://github.com/OfficeDev/Microsoft-Teams-Samples)を開きます。
 
 
-    1. [ **コード**] を選択します。
+    1. [ **コード] を選択します**。
 
 
-    1. ドロップダウン メニューから[ **Open with GitHub Desktop]\(GitHub Desktop で開く\**) を選択します。
+    1. ドロップダウン メニューから、[ **GitHub Desktop で開く**] を選択します。
 
 
-       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/cloner-epository-tab-device.png" alt-text="リポジトリを複製する":::
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/cloner-epository-tab-device.png" alt-text="リポジトリの複製":::
 
 
-    1. [ **複製**] を選択します。
+    1. [ **複製] を選択します**。
 - title: ローカル Web サーバーのトンネルを設定する
   durationInMinutes: 1
-  content: "ngrok またはコマンド プロンプトを使用して、ローカルで実行されている Web サーバーのパブリックに利用可能な HTTPS エンドポイントへのトンネルを作成します。 ngrok で次のコマンドを実行します。\n\n```bash\nngrok http --host-header=localhost 3000\n``` \n  > [!TIP]\n  > **ERR_NGROK_4018** が発生した場合は、コマンド プロンプトに表示されている手順に従って、ngrok にサインアップして認証します。 `ngrok http --host-header=localhost 3000` コマンドを実行します。\n\n  :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/ngrok-tab-device.png\" alt-text=\" ngrok tunnelling\":::\n"
+  content: "ngrok またはコマンド プロンプトを使用して、ローカルで実行されている Web サーバーのパブリックに利用可能な HTTPS エンドポイントへのトンネルを作成します。 ngrok で次のコマンドを実行します。\n\n```bash\nngrok http --host-header=localhost 3000\n``` \n  > [!TIP]\n  > **ERR_NGROK_4018** が発生した場合は、コマンド プロンプトに表示されている手順に従ってサインアップし、ngrok を認証します。 `ngrok http --host-header=localhost 3000` コマンドを実行します。\n\n  :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/ngrok-tab-device.png\" alt-text=\" ngrok トンネリング\":::\n"
 - title: マニフェスト ファイルを設定する
   durationInMinutes: 1
-  content: "1. 複製されたリポジトリの **manifest.json** に移動します。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifestjson-tab-device.png\" alt-text=\"マニフェスト ファイル\":::\n\n1. Visual Studio で **manifest.json を** 開き、次の変更を加えます。\n  \n   すべての場所で https:// パーツを除く ngrok の http エンドポイントに置き換えます `<<BASE_URI_DOMAIN>>` 。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/tab-device-VS-update1.png\" alt-text=\"visual studio で ngrok を更新する\":::\n          \n"
+  content: "1. 複製されたリポジトリの **manifest.json** に移動します。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifestjson-tab-device.png\" alt-text=\"マニフェスト ファイル\":::\n\n1. Visual Studio で **manifest.json** を開き、次の変更を行います。\n  \n   を、すべての場所の https:// 部分を除く ngrok の http エンドポイントに置き換えます `<<BASE_URI_DOMAIN>>` 。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/tab-device-VS-update1.png\" alt-text=\"visual Studio で ngrok を更新する\":::\n          \n"
 - title: npm を使用してクライアント アプリをビルドして実行する
   durationInMinutes: 1
-  content: "1. 複製されたリポジトリで、 **nodejs > tab-device-permissions >サンプル** に移動します。\n\n1. **nodejs** フォルダーパスをコピーします。 \n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/nodejs-path-tab-device.png\" alt-text=\"パスをコピーする\":::  \n\n1. 新しい **コマンド プロンプト** ウィンドウを開き、現在のディレクトリをコピーした **nodejs** パスに変更します。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/nodejs-new-folder-path-tab-device.png\" alt-text=\"パスをコピーする\":::     \n\n1. **コマンド プロンプト** で次のコマンドを実行して、パッケージと依存関係をダウンロードします。\n\n   ```Command-Prompt\n    npm install\n    ```  \n\n1. **コマンド プロンプト** で次のコマンドを実行して、アプリを起動します。\n\n   ```Command-Prompt\n   npm start\n   ```\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/npm-start-install1.png\" alt-text=\"npm をインストールして起動する\":::     \n\n1. ブラウザーに次の出力が表示されます。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/sbs-react.png\" alt-text=\"ブラウザーの出力\":::     \n"
+  content: "1. 複製したリポジトリで、 **nodejs > tab-device-permissions >サンプルに移動します**。\n\n1. **nodejs** フォルダー パスをコピーします。 \n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/nodejs-path-tab-device.png\" alt-text=\"パスをコピーする\":::  \n\n1. 新しい **コマンド プロンプト** ウィンドウを開き、現在のディレクトリをコピーした **nodejs** パスに変更します。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/nodejs-new-folder-path-tab-device.png\" alt-text=\"パスをコピーする\":::     \n\n1. **コマンド プロンプト** で次のコマンドを実行して、パッケージと依存関係をダウンロードします。\n\n   ```Command-Prompt\n    npm install\n    ```  \n\n1. **コマンド プロンプト** で次のコマンドを実行して、アプリを起動します。\n\n   ```Command-Prompt\n   npm start\n   ```\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/npm-start-install1.png\" alt-text=\"npm をインストールして起動する\":::     \n\n1. ブラウザーでは、次の出力を確認できます。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/sbs-react.png\" alt-text=\"ブラウザーの出力\":::     \n"
 - title: Teams にタブ デバイスのアクセス許可を追加する
   durationInMinutes: 1
-  content: "# <a name=\"desktop\"></a>[デスクトップ](#tab/desktop) \n\n\n1. 複製されたリポジトリで、**tab-device-permissions** > **nodejs** >  appPackage の **サンプル** > を **入手しました**。\n\n1. **appPackage** フォルダーに存在する次のファイルを含む.zipを作成します。 \n   * manifest.json\n   * icon-outline.png\n   * icon-color.png\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifest-zip-tab-device1.png\" alt-text=\"zip を作成する\":::        \n \n 1. **Microsoft Teams** に移動します。\n\n 1. **[アプリ]** を選択します。\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/apps-tab-device1.png\" alt-text=\"アプリを選択する\":::         \n\n 1. 左下隅にある [ **アプリの管理**] を選択します。\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manage-apps-tab-device.png\" alt-text=\"アプリの管理を選択する\":::         \n\n 1. **[カスタム アプリをアップロードする]** を選択します。\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/upload-custom-app-tab-device1.png\" alt-text=\"カスタム アプリをアップロードする\":::           \n\n 1. [ **開く]** を選択して、 **appPackage** フォルダーに作成した.zip ファイルをアップロードします。\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device1.png\" alt-text=\"マニフェスト zip を追加する\":::             \n\n 1. **[追加]** を選択します。\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/sbs-add-desktop.png\" alt-text=\"アプリ タブデバイスのアクセス許可を追加する\":::               \n\n 1. [ **デバイスのアクセス許可] タブ** を選択すると、次の出力が表示されます。\n \n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/desktop-teams-permission1.png\" alt-text=\"デスクトップにタブ デバイスを追加する\"::: \n\n\n# <a name=\"browser\"></a>[Browser](#tab/Browser)\n\n\n1. 複製されたリポジトリで、 **サンプル** > **の tab-device-permissions** > **nodejs** > **appPackage** に移動します。\n\n1. **appPackage** フォルダーに存在する次のファイルを含む.zipを作成します。 \n   * manifest.json\n   * icon-outline.png\n   * icon-color.png\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifest-zip-tab-device1.png\" alt-text=\"zip を作成する\":::        \n\n1. **Microsoft Teams** に移動します。 \n\n1. **[アプリ]** を選択します。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/apps-tab-device1.png\" alt-text=\"アプリを選択する\":::         \n\n1. 左下隅にある [ **アプリの管理**] を選択します。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manage-apps-tab-device.png\" alt-text=\"アプリの管理を選択する\":::         \n\n1. **[カスタム アプリをアップロードする]** を選択します。 \n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/upload-custom-app-tab-device1.png\" alt-text=\"カスタム アプリをアップロードする\":::           \n\n1. [ **開く]** を選択して、 **appPackage** フォルダーに作成した.zip ファイルをアップロードします。\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device1.png\" alt-text=\"マニフェスト zip を追加する\":::             \n\n1. **[追加]** を選択します。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/sbs-add-browser-teams1.png\" alt-text=\"アプリ タブデバイスのアクセス許可を追加する\":::               \n\n1. [ **デバイスのアクセス許可] タブ** を選択すると、次の出力が表示されます。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/browser-tab-device1.png\" alt-text=\"場所を取得する\":::\n\n\n# <a name=\"mobile\"></a>[モバイル](#tab/mobile)\n\n \n  モバイルで Teams を開き、次の出力を表示します。\n\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/mobile-teams-output1.png\" alt-text=\"モバイル タブ デバイス\":::                   \n\n \n"
+  content: "# <a name=\"desktop\"></a>[デスクトップ](#tab/desktop) \n\n\n1. 複製したリポジトリで、**tab-device-permissions** > **nodejs** > **appPackage** の **サンプル** > に移動しました。\n\n1. **appPackage** フォルダーに存在する次のファイルを含む.zipを作成します。 \n   * manifest.json\n   * icon-outline.png\n   * icon-color.png\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifest-zip-tab-device1.png\" alt-text=\"zip を作成する\":::        \n \n 1. **Microsoft Teams** に移動します。\n\n 1. **[アプリ]** を選択します。\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/apps-tab-device1.png\" alt-text=\"アプリを選択する\":::         \n\n 1. 左下隅にある [ **アプリの管理**] を選択します。\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manage-apps-tab-device.png\" alt-text=\"[アプリの管理] を選択します\":::         \n\n 1. [ **アプリのアップロード] を選択します**。\n\n 1. [ **カスタマイズされたアプリのアップロード] を選択します**。\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/upload-custom-app-tab-device1.png\" alt-text=\"カスタム アプリをアップロードする\":::           \n\n 1. [ **開く** ] を選択して、 **appPackage** フォルダーに作成した.zip ファイルをアップロードします。\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device1.png\" alt-text=\"マニフェスト zip を追加する\":::             \n\n 1. **[追加]** を選択します。\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/sbs-add-desktop.png\" alt-text=\"アプリ タブ デバイスのアクセス許可を追加する\":::               \n\n 1. [ **デバイスのアクセス許可] タブを選択** すると、次の出力が表示されます。\n \n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/desktop-teams-permission1.png\" alt-text=\"デスクトップにタブ デバイスを追加する\"::: \n\n\n# <a name=\"browser\"></a>[Browser](#tab/Browser)\n\n\n1. 複製したリポジトリで、 **サンプル** > **タブデバイスアクセス許可** > **nodejs** > **appPackage** に移動します。\n\n1. **appPackage** フォルダーに存在する次のファイルを含む.zipを作成します。 \n   * manifest.json\n   * icon-outline.png\n   * icon-color.png\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifest-zip-tab-device1.png\" alt-text=\"zip を作成する\":::        \n\n1. **Microsoft Teams** に移動します。 \n\n1. **[アプリ]** を選択します。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/apps-tab-device1.png\" alt-text=\"アプリを選択する\":::         \n\n1. 左下隅にある [ **アプリの管理**] を選択します。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manage-apps-tab-device.png\" alt-text=\"[アプリの管理] を選択します\":::         \n\n1. **[カスタム アプリをアップロードする]** を選択します。 \n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/upload-custom-app-tab-device1.png\" alt-text=\"カスタム アプリをアップロードする\":::           \n\n1. [ **開く** ] を選択して、 **appPackage** フォルダーに作成した.zip ファイルをアップロードします。\n\n     :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/manifest-folder-upload-tab-device1.png\" alt-text=\"マニフェスト zip を追加する\":::             \n\n1. **[追加]** を選択します。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/sbs-add-browser-teams1.png\" alt-text=\"アプリ タブ デバイスのアクセス許可を追加する\":::               \n\n1. [ **デバイスのアクセス許可] タブを選択** すると、次の出力が表示されます。\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/browser-tab-device1.png\" alt-text=\"場所を取得する\":::\n\n\n# <a name=\"mobile\"></a>[モバイル](#tab/mobile)\n\n \n  モバイルで Teams を開き、次の出力を表示します。\n\n\n   :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/mobile-teams-output1.png\" alt-text=\"モバイル タブ デバイス\":::                   \n\n \n"
 - title: アプリのテスト
   durationInMinutes: 1
-  content: "タブ デバイスのアクセス許可アプリでユーザーがアクセス許可を付与できるようにするには、アプリを Teams に正常にアップロードした後でアプリをテストする必要があります。\n\n # <a name=\"desktop\"></a>[デスクトップ](#tab/Desktop)\n\n  デスクトップでアプリをテストするには、[ **アプリのアクセス許可]** アイコンを選択して、アクセス許可要求へのアクセスを許可します。\n\n    \n  :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/desktop-teams-permission1.png\" alt-text=\"デスクトップ\":::                   \n  \n  \n   # <a name=\"browser\"></a>[Browser](#tab/Browser)\n\n  \n  ブラウザーでアプリをテストするには、 **アプリのアクセス許可** アイコンを選択して、アクセス許可要求へのアクセスを許可します。\n\n    \n  :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/browser-tab-device1.png\" alt-text=\"場所を取得する\":::                   \n \n \n # <a name=\"mobile\"></a>[モバイル](#tab/Mobile)\n\n  \n  モバイルでアプリをテストするには、次のポップアップ ウィンドウが表示され、アクションのコースを選択します。\n\n  * アクセス許可を付与する場合は、[ **許可]** を選択します。\n  * アクセス許可を付与しない場合は、[ **DENY** ] を選択します。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/prompt-mobile-app1.png\" alt-text=\"モバイル出力\":::                   \n--- \n"
+  content: "タブ デバイスのアクセス許可アプリでユーザーがアクセス許可を付与できるようにするには、アプリを Teams に正常にアップロードした後でアプリをテストする必要があります。\n\n # <a name=\"desktop\"></a>[デスクトップ](#tab/Desktop)\n\n  デスクトップでアプリをテストするには、[ **アプリのアクセス許可]** アイコンを選択して、アクセス許可要求へのアクセスを許可します。\n\n    \n  :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/desktop-teams-permission1.png\" alt-text=\"デスクトップ\":::                   \n  \n  \n   # <a name=\"browser\"></a>[Browser](#tab/Browser)\n\n  \n  ブラウザーでアプリをテストするには、[ **アプリのアクセス許可]** アイコンを選択して、アクセス許可要求へのアクセスを許可します。\n\n    \n  :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/browser-tab-device1.png\" alt-text=\"場所を取得する\":::                   \n \n \n # <a name=\"mobile\"></a>[モバイル](#tab/Mobile)\n\n  \n  モバイルでアプリをテストするには、次のポップアップ ウィンドウが表示され、アクションのコースが選択されます。\n\n  * アクセス許可を付与する場合は、[ **許可] を** 選択します。\n  * アクセス許可を付与しない場合は、[ **拒否** ] を選択します。\n\n    :::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/prompt-mobile-app1.png\" alt-text=\"モバイル出力\":::                   \n--- \n"
 - title: 課題の完了
   durationInMinutes: 1
   content: "このようなものを思いついたのですか?\n\n:::image type=\"content\" source=\"../msteams-platform/assets/images/tab-device-permission/output1.png\" alt-text=\"location\":::                   \n"

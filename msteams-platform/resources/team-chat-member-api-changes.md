@@ -1,31 +1,31 @@
 ---
 title: チームおよびチャット メンバーのボット API の変更
 author: ojasvichoudhary
-description: このモジュールでは、チームとチャットのメンバーを取得するために使用される Bot API の今後の変更と進行中の変更について説明します
+description: このモジュールでは、チームとチャットのメンバーを取得するために使用される Bot API に対する今後の変更と進行中の変更について説明します
 ms.localizationpriority: medium
 ms.topic: reference
 ms.author: ojchoudh
-ms.openlocfilehash: b2e9258975de236116e5b9e33aef4aaf914ec797
-ms.sourcegitcommit: 3aaccc48906fc6f6fbf79916af5664bf55537250
+ms.openlocfilehash: 8160f59f1bb08cf205d057fa6c1e5df7a4e61240
+ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68295957"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68773486"
 ---
 # <a name="teams-bot-api-changes-to-fetch-team-or-chat-members"></a>チームまたはチャット メンバーをフェッチするための Teams ボット API の変更
 
 >[!NOTE]
-> API と API の`TeamsInfo.getMembers``TeamsInfo.GetMembersAsync`非推奨プロセスが開始されました。 最初は、1 分間に 5 つの要求に大きく調整され、チームあたり最大 10,000 人のメンバーが返されます。 これにより、チーム のサイズが大きくなると、完全な名簿は返されません。
-> バージョン 4.10 以降の Bot Framework SDK に更新し、ページ分割された API エンドポイントまたは `TeamsInfo.GetMemberAsync` 単一ユーザー API に切り替える必要があります。 これは、古い SDK が [membersAdded](../bots/how-to/conversations/subscribe-to-conversation-events.md#members-added) イベント中にこれらの API を呼び出すので、これらの API を直接使用していない場合でも、ボットにも適用されます。 今後の変更の一覧を表示するには、「 [API の変更](team-chat-member-api-changes.md#api-changes)」を参照してください。
+> API と `TeamsInfo.GetMembersAsync` API の`TeamsInfo.getMembers`非推奨プロセスが開始されました。 最初は、1 分あたり 5 つの要求に大幅に調整され、チームごとに最大 10,000 人のメンバーが返されます。 これにより、チーム サイズが大きくなると、完全な名簿が返されません。
+> Bot Framework SDK のバージョン 4.10 以降に更新し、ページ分割された API エンドポイントまたはシングル ユーザー API に `TeamsInfo.GetMemberAsync` 切り替える必要があります。 これは、古い SDK が [メンバーの追加](../bots/how-to/conversations/subscribe-to-conversation-events.md#members-added) イベント中にこれらの API を呼び出すので、これらの API を直接使用していない場合でもボットにも適用されます。 今後の変更の一覧を表示するには、「 [API の変更](team-chat-member-api-changes.md#api-changes)」を参照してください。
 
-現在、チャットまたはチームの 1 人以上のメンバーの情報を取得する場合は、C# または TypeScript または `TeamsInfo.getMembers` Node.js API 用[に Microsoft Teams ボット API を](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)`TeamsInfo.GetMembersAsync`使用できます。 詳細については、 [フェッチ名簿またはユーザー プロファイル](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)に関するトピックを参照してください。
+現在、チャットまたはチームの 1 人以上のメンバーの情報を取得する場合は、C# 用または TypeScript API `TeamsInfo.GetMembersAsync` または `TeamsInfo.getMembers` Node.js API 用[の Microsoft Teams ボット](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile) API を使用できます。 詳細については、「 [名簿またはユーザー プロファイルをフェッチ](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile)する」を参照してください。
 
 これらの API には、次の欠点があります。
 
-* 大規模なチームの場合、パフォーマンスが低下し、タイムアウトが発生する可能性が高くなります。Teams が 2017 年初頭にリリースされて以来、チームの最大サイズは大幅に増加しています。 `GetMembersAsync`メンバーリスト全体を返すか`getMembers`返すか、API 呼び出しが大規模なチームに戻るまでに時間がかかり、呼び出しがタイムアウトし、もう一度やり直す必要があるのが一般的です。
-* 1 人のユーザーのプロファイルの詳細を取得するのは困難です。1 人のユーザーのプロファイル情報を取得するには、メンバー リスト全体を取得し、目的のユーザーを検索する必要があります。 Bot Framework SDK には、簡単にするためのヘルパー関数がありますが、効率的ではありません。
+* 大規模なチームの場合、パフォーマンスが低下し、タイムアウトが発生する可能性が高くなります。Teams が 2017 年初めにリリースされて以来、チームの最大サイズはかなり大きくなりました。 `GetMembersAsync`メンバー リスト全体を返す場合、`getMembers`大規模なチームに対して API 呼び出しが返されるまでに長い時間がかかり、呼び出しがタイムアウトになるのは一般的であり、もう一度やり直す必要があります。
+* 1 人のユーザーのプロファイルの詳細を取得するのは困難です。1 人のユーザーのプロファイル情報を取得するには、メンバー リスト全体を取得し、目的のユーザーを検索する必要があります。 Bot Framework SDK には、よりシンプルにするためにヘルパー関数がありますが、効率的ではありません。
 
-組織全体のチームの導入により、これらの API をOffice 365のプライバシー制御とより適切に調整する必要があります。 大規模なチームで使用されるボットは、Microsoft Graph のアクセス許可と同様の基本的なプロファイル情報を `User.ReadBasic.All` 取得できます。 テナント管理者は、テナントで使用できるアプリとボットを大きく制御できますが、これらの設定は Microsoft Graph とは異なります。
+組織全体のチームの導入により、これらの API をOffice 365プライバシー制御とより適切に連携させる必要があります。 大規模なチームで使用されるボットは、Microsoft Graph のアクセス許可と同様の基本的なプロファイル情報を `User.ReadBasic.All` 取得できます。 テナント管理者は、テナントで使用できるアプリとボットを十分に制御できますが、これらの設定は Microsoft Graph とは異なります。
 
 次のコードは、Teams ボット API によって返される内容のサンプル JSON 表現を提供します。
 
@@ -60,19 +60,18 @@ ms.locfileid: "68295957"
 
 今後の API の変更を次に示します。
 
-* チャットまたはチームのメンバーのプロファイル情報を取得するための新しい API が作成 [`TeamsInfo.GetPagedMembersAsync`](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile) されます。 この API は、Bot Framework バージョン 4.8 以降の SDK で使用できるようになりました。 他のすべてのバージョンで開発する場合は、このメソッドを使用します [`GetConversationPagedMembers`](/dotnet/api/microsoft.bot.connector.conversationsextensions.getconversationpagedmembersasync?view=botbuilder-dotnet-stable&preserve-view=true) 。
+* チャットまたはチームのメンバーのプロファイル情報を取得するための新しい API が作成 [`TeamsInfo.GetPagedMembersAsync`](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile) されます。 この API は、Bot Framework バージョン 4.8 以降の SDK で使用できるようになりました。 その他のすべてのバージョンで開発する場合は、 メソッドを使用します [`GetConversationPagedMembers`](/dotnet/api/microsoft.bot.connector.conversationsextensions.getconversationpagedmembersasync?view=botbuilder-dotnet-stable&preserve-view=true) 。
 
     > [!NOTE]
     > v3 または v4 では、それぞれ 3.30.2 または 4.8 以降の最新のポイント リリースにアップグレードすることをお勧めします。
 
-* 1 人のユーザーのプロファイル情報を取得するための新しい API が作成 [`TeamsInfo.GetMemberAsync`](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#get-single-member-details) されます。 チームまたはチャットの ID と [UPN](/windows/win32/ad/naming-properties#userprincipalname) `userPrincipalName`(Microsoft Azure Active Directory (Azure AD) オブジェクト ID、または Teams ユーザー ID `objectId``id` をパラメーターとして受け取り、そのユーザーのプロファイル情報を返します。
+* 1 人のユーザーのプロファイル情報を取得するための新しい API が作成 [`TeamsInfo.GetMemberAsync`](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#get-single-member-details) されます。 チームまたはチャットの ID と[、](/windows/win32/ad/naming-properties#userprincipalname)`userPrincipalName`Microsoft Azure Active Directory (Azure AD) オブジェクト ID、または Teams ユーザー ID `objectId``id` をパラメーターとして取得し、そのユーザーのプロファイル情報を返します。
 
     > [!NOTE]
-    > `objectId`は、Bot Framework メッセージのオブジェクトで呼び出されたものと`Activity`一致するように`aadObjectId`変更されます。 新しい API は、Bot Framework SDK のバージョン 4.8 以降で使用できます。 Teams SDK 拡張機能 Bot Framework 3.x でも利用できます。 一方、 [REST](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#get-single-member-details) エンドポイントを使用できます。
+    > `objectId` が に `aadObjectId` 変更され、Bot Framework メッセージの `Activity` オブジェクトで呼び出される内容と一致します。 新しい API は、Bot Framework SDK のバージョン 4.8 以降で使用できます。 Teams SDK 拡張機能 Bot Framework 3.x でも使用できます。 一方、 [REST](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#get-single-member-details) エンドポイントを使用できます。
 
-* `TeamsInfo.GetMembersAsync` C# および `TeamsInfo.getMembers` TypeScript またはNode.jsでは正式に非推奨です。 新しい API が使用可能になったら、ボットを更新して使用する必要があります。 これは、 [これらの API が使用する基になる REST API](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#tabpanel_CeZOj-G++Q_json) にも適用されます。
-* 2022 年後半までに、ボットはチャットまたはチームのメンバーのプロパティを`email`事前に取得`userPrincipalName`できません。 ボットは、Graph API を使用して必要な情報を取得する必要があります。 新しい `GetConversationPagedMembers` API では、2022 年後半からプロパティと`email`プロパティを返`userPrincipalName`すことはできません。 ボットは、アクセス トークンと共にGraph APIを使用して情報を取得する必要があります。
+* `TeamsInfo.GetMembersAsync` C# と `TeamsInfo.getMembers` TypeScript または Node.js では正式に非推奨です。 新しい API が使用可能になったら、それを使用するようにボットを更新する必要があります。 これは、 [これらの API が使用する基になる REST API にも](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#tabpanel_CeZOj-G++Q_json)適用されます。
+* 2022 年後半までに、ボットはチャットまたはチームのメンバーの または `email` プロパティを事前に取得`userPrincipalName`できません。 ボットは、Graph API を使用して必要な情報を取得する必要があります。 新しい `GetConversationPagedMembers` API は、 プロパティと `email` プロパティを `userPrincipalName` 2022 年後半から返すことはできません。
 
-> [!NOTE]
->
-> [Graph API](/microsoftteams/platform/resources/team-chat-member-api-changes#api-changes)とアクセス トークンを使用して情報を取得することをお勧めします。
+    > [!NOTE]
+    > [Graph API](/graph/api/user-get?view=graph-rest-1.0&tabs=http&preserve-view=true#examples)とアクセス トークンを使用して情報を取得することをお勧めします。

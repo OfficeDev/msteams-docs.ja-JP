@@ -1,16 +1,16 @@
 ---
 title: アプリのユース ケースと Teams 機能を理解する
 author: heath-hamilton
-description: Microsoft Teaams アプリの cabilities- タブ、ボット、会議の拡張機能、メッセージ拡張機能、Webhook コネクタ、個人用アプリ エクスペリエンス、共有アプリ エクスペリエンスについて説明します。
+description: タブ、ボット、会議拡張機能、メッセージ拡張機能、Webhook コネクタ、個人用アプリ エクスペリエンス、共有アプリ エクスペリエンスなどの Microsoft Teams アプリ機能について説明します。
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: 8a78fe23f244fc37d7bbeda5f854b3cbeb800303
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 296f6d2e8fe5088c480490cc0dbcc035f9f659ec
+ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100456"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68773514"
 ---
 # <a name="understand-your-use-cases"></a>ユース ケースを理解する
 
@@ -20,21 +20,22 @@ ms.locfileid: "68100456"
 
 アプリでユーザー要件を満たすには、まずユーザーの要件を理解する必要があります。
 
-- **ユーザーを理解する**:
-  - ユーザーの問題を認識し、ユーザーが直面する一般的な問題の解決策を特定します。
-  - ユーザーのニーズを満たす適切な機能の組み合わせを見つけて、Teams アプリを構築します。
-  - ユース ケースを理解して、エンド ユーザーがアプリを操作する方法を理解します。
+* **ユーザーを理解する**:
+  * ユーザーの問題を認識し、ユーザーが直面する一般的な問題の解決策を特定します。
+  * ユーザーのニーズを満たす適切な機能の組み合わせを見つけて、Teams アプリを構築します。
+  * ユース ケースを理解して、エンド ユーザーがアプリを操作する方法を理解します。
+  * アプリを [Teams アプリ ストアに発行して、アプリを Microsoft Teams ストア](/training/modules/microsoft-teams-publish-app-to-store/) の申請プロセスに合格させる方法については、リーン モジュールを参照することをお勧めします。
 
-- **問題を理解する**: アプリが解決する必要のある主要な問題を解決します。
+* **問題を理解する**: アプリが解決する必要のある主要な問題を解決します。
 
-- **統合を検討する**: アプリに必要なアプリとサービス (認証、Microsoft Graph、Web アプリなど) を特定します。
+* **統合を検討する**: アプリに必要なアプリとサービス (認証、Microsoft Graph、Web アプリなど) を特定します。
 
 ## <a name="microsoft-teams-app-features"></a>Microsoft Teams アプリの機能
 
 There are multiple ways to extend Teams so every app is unique. Teams app features offer:
 
-- [アプリの機能](#app-capabilities)
-- [アプリのスコープ](#app-scope)
+* [アプリの機能](#app-capabilities)
+* [アプリのスコープ](#app-scope)
 
 ### <a name="app-capabilities"></a>アプリの機能
 
@@ -150,7 +151,7 @@ Web ベースのコンテンツを[タブ](../../tabs/what-are-tabs.md)に表示
 
 #### <a name="microsoft-graph-for-teams"></a>Microsoft Graph for Teams
 
-[Microsoft Graph API for Teams](/graph/teams-concept-overview) は、アプリの機能を作成または強化するのに役立つチーム、チャネル、ユーザー、メッセージに関する情報へのアクセスを提供します。
+[Microsoft Graph API for Teams](/graph/teams-concept-overview) では、アプリの機能を作成または強化するのに役立つチーム、チャネル、ユーザー、メッセージに関する情報にアクセスできます。
 
    :::column-end:::
 
@@ -170,13 +171,13 @@ Web ベースのコンテンツを[タブ](../../tabs/what-are-tabs.md)に表示
 
 アプリには、次のいずれかのスコープを指定できます。
 
-- **個人用アプリ エクスペリエンス**: 個人用アプリは、ユーザーが自分のタスクに集中したり、重要なアクティビティを表示したりするのに役立つ専用のスペースまたはボットです。
-- **共有アプリ エクスペリエンス**: Teams、チャネル、およびチャットは共同作業スペースです。 これらのコンテキストのアプリは、そのスペース内のすべてのユーザーが利用できます。 通常、共同作業スペースでは、アプリの操作や新しい社会的対話の実現に重点が置かれます。
+* **個人用アプリ エクスペリエンス**: 個人用アプリは、ユーザーが自分のタスクに集中したり、重要なアクティビティを表示したりするのに役立つ専用のスペースまたはボットです。
+* **共有アプリ エクスペリエンス**: Teams、チャネル、およびチャットは共同作業スペースです。 これらのコンテキストのアプリは、そのスペース内のすべてのユーザーが利用できます。 通常、共同作業スペースでは、アプリの操作や新しい社会的対話の実現に重点が置かれます。
 
 アプリは、さまざまなスコープにまたがって存在できます。 例:
 
-- アプリは、中央の共有場所 (タブ) にデータを表示できます。
-- また、同じ情報を個人の会話インターフェイス (ボット) を介して表示することもできます。
+* アプリは、中央の共有場所 (タブ) にデータを表示できます。
+* また、同じ情報を個人の会話インターフェイス (ボット) を介して表示することもできます。
 
 ユーザーは同一のアクティビティを実行するためにキャンバス タブでアプリを操作するか、会話型ボットを使用する場合があります。
 
