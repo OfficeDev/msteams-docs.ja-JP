@@ -1,16 +1,16 @@
 ---
 title: Microsoft Teams のタブ
 author: surbhigupta
-description: Microsoft Teams に埋め込まれたタブ、Web ページを構築する方法について説明します。 個人用、チャネル、またはグループ タブの一部としてコンテンツ ページを作成します。また、アダプティブ カードを使用してタブを作成する方法についても説明します。
+description: Microsoft Teams に埋め込まれたタブ、Web ページを構築する方法について説明します。 個人用、チャネル、またはグループ タブの一部としてコンテンツ ページを作成します。また、アダプティブ カードを使用してタブを構築する方法についても説明します。
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: lajanuar
-ms.openlocfilehash: 1dfae9411b7c8b087bc3cd4c69593d54e2d70bb3
-ms.sourcegitcommit: 937ea793889fc1efa9ec6a52374d5098be1117e0
+ms.openlocfilehash: 0bf8593c4cb27b54893c88c5f47bf1cbd489f9a0
+ms.sourcegitcommit: 6b262c2044b7c5f6f99e64c5cee11a5b28a00139
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "67653190"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68772509"
 ---
 # <a name="build-tabs-for-teams"></a>Teams の [ビルド] タブ
 
@@ -21,7 +21,7 @@ ms.locfileid: "67653190"
 
 次の画像は、個人用タブを示しています:
 
-:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="個人タブ" lightbox="../assets/images/tabs/personaltab.png":::
+:::image type="content" source="../assets/images/tabs/personaltab.png" alt-text="Teams デスクトップ クライアントの個人用タブの例を示すスクリーンショット。":::
 
 次の画像は、Contoso チャネル タブを示しています:
 
@@ -72,7 +72,7 @@ Teams には、個人用タブとチャネル タブ、またはグループ タ
 
 カスタム タブは、アプリ パッケージのアプリ マニフェストで宣言されます。 アプリのタブとして含める Web ページごとに、URL と範囲を定義します。 また、[Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) をページに追加して、ページの読み込みが終了したら `microsoftTeams.initialize()` を呼び出す必要があります。 Teams はページを表示し、Teams 固有の情報 (Teams クライアントがダーク テーマを実行しているなど) へのアクセスを提供します。
 
-チャネル/グループ または 個人 スコープ内でタブを表示するかどうかを選択した場合は、タブに <iframe 付き\> HTML [コンテンツ ページ](~/tabs/how-to/create-tab-pages/content-page.md)を表示する必要があります。個人用タブの場合、コンテンツ URL は `staticTabs` 配列内の `contentUrl` プロパティによって Teams アプリのマニフェストに直接設定されます。タブのコンテンツはすべてのユーザーに対して同じです。
+Whether you choose to expose your tab within the channel or group, or personal scope, you must present an <iframe\> HTML [content page](~/tabs/how-to/create-tab-pages/content-page.md) in your tab. For personal tabs, the content URL is set directly in your Teams app manifest by the `contentUrl` property in the `staticTabs` array. Your tab's content is the same for all users.
 
 チャネル タブまたはグループ タブの場合は、追加の構成ページを作成することもできます。 このページでは、コンテンツ ページの URL を構成できます。通常、URL クエリ文字列パラメーターを使用して、そのコンテキストに適したコンテンツを読み込みます。 これは、チャネル/グループ タブを複数のチームまたはグループ チャットに追加できるためです。 以降にインストールが行われるたびに、ユーザーはタブを構成して、必要に応じてエクスペリエンスを調整することが出来ます。 ユーザーがタブを追加またはタブを構成すると、Teams ユーザー インターフェイス (UI) に表示されているタブに URL が関連付けられます。 タブを構成すると、その URL にパラメーターが追加されます。 たとえば、Azure Boards タブを追加すると、構成ページで、タブにロードするボードを選択することができます。 構成ページの URL は、アプリ マニフェストの `configurableTabs` 配列の `configurationUrl` プロパティで指定します。
 
