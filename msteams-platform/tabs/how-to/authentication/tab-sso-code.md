@@ -1,15 +1,15 @@
 ---
 title: タブの SSO を有効にするためのコード構成
-description: シングル サインオン (SSO) を有効にするために、アプリ ユーザーの Teams ID を使用してアクセス トークンを要求および受信するためのタブ アプリのコードを更新します。
+description: シングル サインオン (SSO) を有効にするためにアプリ ユーザーの Teams ID を使用してアクセス トークンを要求および受信するためのタブ アプリのコードを更新します。
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams 認証タブ Microsoft Azure Active Directory (Azure AD) Graph API
-ms.openlocfilehash: 71c532b62b53ea0efb11da72c30d7e9d32804897
-ms.sourcegitcommit: 82c585d287d61924ce3a3bba3e9caeff35c9a27a
+ms.openlocfilehash: 20b11032227a08d057a6cdae8e46154004bfdb02
+ms.sourcegitcommit: bb15ce26cd65bec90991b703069424ab4b4e1a61
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67586785"
+ms.lasthandoff: 10/28/2022
+ms.locfileid: "68772266"
 ---
 # <a name="add-code-to-enable-sso"></a>SSO を有効にするコードを追加する
 
@@ -36,7 +36,7 @@ Azure AD からアクセス トークンを取得するには、タブ アプリ
 <details>
 <summary>getAuthToken() に関する詳細情報</summary>
 <br>
-`getAuthToken()` は、Microsoft Teams JavaScript SDK のメソッドです。 アプリに代わって発行される Azure AD アクセス トークンを要求します。 有効期限が切れていない場合は、トークンをキャッシュから取得します。 有効期限が切れている場合は、新しいアクセス トークンを取得するために Azure AD に要求が送信されます。
+`getAuthToken()` は、Microsoft Teams JavaScript SDK のメソッドです。 アプリに代わって発行される Azure AD アクセス トークンを要求します。 トークンの有効期限が切れていない場合、トークンはキャッシュから取得されます。 有効期限が切れている場合は、新しいアクセス トークンを取得するために Azure AD に要求が送信されます。
 
  詳細については、[getAuthToken](/javascript/api/@microsoft/teams-js/microsoftteams.authentication?view=msteams-client-js-latest#@microsoft-teams-js-microsoftteams-authentication-getauthtoken&preserve-view=true) を参照してください。
 </details>
@@ -47,7 +47,7 @@ Azure AD からアクセス トークンを取得するには、タブ アプリ
 
 | アクセス トークンが必要な場合... | getAuthToken() を呼び出します... |
 | --- | --- |
-| アプリ ユーザーがアプリにアクセスする場合 | 内側の `microsoftTeams.initialize()`から。 |
+| アプリ ユーザーがアプリにアクセスする場合 | の後 `microsoftTeams.initialize()`。 |
 | アプリの特定の機能を使用するには | アプリ ユーザーがサインインを必要とするアクションを実行した場合。 |
 
 ### <a name="add-code-for-getauthtoken"></a>getAuthToken のコードを追加する
