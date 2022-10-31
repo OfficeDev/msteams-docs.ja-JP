@@ -1,16 +1,16 @@
 ---
 title: アプリに SaaS オファーを含める
-description: Teams ストアの登録情報からサブスクリプション プランを直接販売することで、Microsoft Teams アプリを収益化する方法について説明します。 発行アプリ、エンド ユーザー、管理者の購入エクスペリエンスについて説明します。
+description: Teams ストアの登録情報からサブスクリプション プランを直接販売することで、Microsoft Teams アプリを収益化する方法について説明します。 アプリの発行、エンド ユーザー、管理者の購入エクスペリエンスについて理解します。
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.openlocfilehash: 23327ea2765eb5496f8cfb157cdd194fcc13aaf7
-ms.sourcegitcommit: edfe85e312c73e34aa795922c4b7eb0647528d48
+ms.openlocfilehash: 500dbd4b3677c802a19eb3d454aa35cad2791f3d
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "68243256"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791826"
 ---
 # <a name="include-a-saas-offer-with-your-teams-app"></a>Teams アプリに SaaS オファーを含める
 
@@ -73,24 +73,24 @@ Teams アプリを収益化するには、SaaS フルフィルメント API と�
 
 ## <a name="manage-license-for-third-party-apps-in-teams"></a>Teams でサード パーティ製アプリのライセンスを管理する
 
-Teams では、独立系ソフトウェア ベンダー (ISV) の管理者またはユーザーが、Teams ストアフロントから購入したサード パーティ製アプリの SaaS ライセンスを管理できます。 ISV 管理者またはユーザーは、SaaS ライセンスを簡単に割り当て、割り当て解除、使用、追跡できます。
+Teams では、独立系ソフトウェア ベンダー (ISV) の管理者またはユーザーが、Teams ネットショップから購入したサード パーティ製アプリの SaaS ライセンスを管理できます。 ISV 管理者またはユーザーは、SaaS ライセンスを簡単に割り当て、割り当て解除、使用、追跡できます。
 
 Teams でアプリのライセンス管理を有効にするには、次の手順に従います。
 
 1. [パートナー センターでオファーを作成する](#create-an-offer-in-partner-center)
 1. [Teams アプリを更新する](#update-your-teams-app)
 1. [購入後](#post-purchase)
-1. [Graph Usage Right API と統合する](#integrate-with-graph-usage-right-api)
+1. [Graph Usage Right API との統合](#integrate-with-graph-usage-right-api)
 
 ### <a name="create-an-offer-in-partner-center"></a>パートナー センターでオファーを作成する
 
-1. [パートナー センター](https://partner.microsoft.com/)にサインインし、**パートナー センター** を選択します。
+1. [パートナー センター](https://partner.microsoft.com/)にサインインし、[**パートナー センター**] を選択します。
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/partner-center-home-page.png" alt-text="スクリーンショットは、パートナー センター アカウントにログインする方法を示しています。":::
 
-1. **ホーム** ページで、[**Marketplace プラン**] タブを選択して、コマーシャル マーケットプレース オファーを定義します。
+1. [ **ホーム** ] ページで、[ **Marketplace オファー** ] タブを選択して、コマーシャル マーケットプレース オファーを定義します。
 
-   :::image type="content" source="~/assets/images/first-party-license-mgt/home-page.png" alt-text="スクリーンショットは、パートナー センターのホーム ページと Marketplace オファー タブを示しています。":::
+   :::image type="content" source="~/assets/images/first-party-license-mgt/home-page.png" alt-text="スクリーンショットは、パートナー センターのホーム ページと [Marketplace オファー] タブを示しています。":::
 
 1. 左側のウィンドウで [ **概要** ] を選択します。
 
@@ -98,21 +98,21 @@ Teams でアプリのライセンス管理を有効にするには、次の手�
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/commercial-marketplace.png" alt-text="スクリーンショットは、新しいオファーを選択できるマーケットプレース オファー ページを示しています。":::
 
-1. **オファー ID と****オファーエイリアス** を入力し、[**作成**] を選択します。
+1. **「オファー ID」** と「**オファーエイリアス**」と入力し、[**作成**] を選択します。
 
    > [!NOTE]
-   > テスト目的でオファーを作成する場合は、オファーエイリアスの末尾に **-ISVPILOT** というテキストを追加します。 これは、オファーがテスト目的であることを認定チームに示します。 Microsoft は **、-ISVPILOT** を使用してオファーを定期的に削除します。 そのため、ライセンス管理機能をテストする以外の理由で、このタグを使用しないでください。
+   > テスト目的でオファーを作成する場合は、オファー エイリアスの末尾に **-ISVPILOT** というテキストを追加します。 これは、オファーがテスト目的であることを認定チームに示します。 Microsoft は **、-ISVPILOT** を使用してオファーを定期的に削除します。 そのため、ライセンス管理機能のテスト以外の理由でこのタグを使用しないでください。
 
-   :::image type="content" source="~/assets/images/first-party-license-mgt/saas.png" alt-text="スクリーンショットは、パートナー センターでオファー ID とオファーエイリアスを入力する方法を示しています。":::
+   :::image type="content" source="~/assets/images/first-party-license-mgt/saas.png" alt-text="スクリーンショットは、パートナー センターでオファー ID とオファー エイリアスを入力する方法を示しています。":::
 
-1. [プランのセットアップ] ページの [セットアップの詳細] で、[はい] チェック ボックスをオンにし **、Microsoft に代わって顧客ライセンスを管理** します。
+1. [オファーのセットアップ] ページの [セットアップの詳細] で、[ **はい、Microsoft に代わって顧客ライセンスを管理する**] チェック ボックスをオンにします。
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="スクリーンショットは、Teams 内でアプリを管理するためのライセンスを設定するためのオファーのセットアップ ページを示しています。":::
 
    > [!NOTE]
    >
-   > * これは 1 回限りの設定であり、プランが公開された後は変更できません。 これにより、顧客は Teams 内でアプリのライセンスを管理できます。
-   > * アプリ マニフェストでは、アプリに対して 1 つのオファーのみがサポートされます。 プランで利用可能なすべてのプランに対して適切なライセンス管理ソリューションを選択すると、プランがライブにプッシュされた後でこのオプションを変更することはできません。
+   > * これは 1 回限りの設定であり、オファーが発行された後は変更できません。 これにより、顧客は Teams 内でアプリのライセンスを管理できます。
+   > * アプリ マニフェストは、1 つのアプリに対して 1 つのオファーのみをサポートします。 オファーで利用可能なすべてのプランに適切なライセンス管理ソリューションを選択します。オファーが公開にプッシュされた後にこのオプションを変更することはできません。
 
 1. [ **下書きを保存] を選択します**。
 
@@ -123,34 +123,34 @@ Teams でアプリのライセンス管理を有効にするには、次の手�
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/plan-overview.png" alt-text="スクリーンショットは、パートナー センターでアプリの新しいプランを作成するためのプランの概要を示しています。":::
 
-1. プラン ID とプラン名を入力し、[ **作成**] を選択します。
+1. 「プラン ID」と「プラン名」と入力し、[ **作成**] を選択します。
 
-1. **プラン名とプラン** の **説明を** 入力します。
+1. **[プラン名] と [プラン** の **説明] を入力します**。
 
    > [!NOTE]
-   > プラン情報は、Teams マーケットプレースと [Appsource](https://appsource.microsoft.com/) のプラン一覧 ([プラン] セクション) に表示されます。
+   > プラン情報は、オファーの一覧 (プラン セクション) の下の Teams マーケットプレースと [Appsource](https://appsource.microsoft.com/) に表示されます。
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/plan-listing.png" alt-text="スクリーンショットには、アプリのプラン名とプランの説明を追加するプラン ページが示されています。":::
 
 1. [ **下書きを保存] を選択します**。
 
-1. 左側のウィンドウで **[価格と可用性** ] を選択します。
+1. 左側のウィンドウから [ **価格と可用性** ] を選択します。
 
 1. 価格と可用性の詳細を追加します。
 
-   :::image type="content" source="~/assets/images/first-party-license-mgt/pricing-availability.png" alt-text="スクリーンショットには、アプリの SaaS オファーを追加するための価格と可用性のページが示されています。":::
+   :::image type="content" source="~/assets/images/first-party-license-mgt/pricing-availability.png" alt-text="スクリーンショットは、アプリの SaaS オファーを追加するための価格と可用性ページを示しています。":::
 
 1. [ **下書きを保存] を選択します**。
 
-1. ページの上部にある **[プランの概要** ] を選択して、このオファー用に作成したすべてのプランを示す一覧ページに移動します。
+1. ページの上部にある [ **プランの概要** ] を選択して、このオファー用に作成したすべてのプランを表示する登録情報ページに移動します。
 
-   :::image type="content" source="~/assets/images/first-party-license-mgt/list-of-plans-created.png" alt-text="スクリーンショットは、サービス ID、価格モデル、可用性、状態、アクションを含むプラン一覧ページを示しています。":::
+   :::image type="content" source="~/assets/images/first-party-license-mgt/list-of-plans-created.png" alt-text="スクリーンショットは、サービス ID、価格モデル、可用性、状態、アクションを含むプランの一覧ページを示しています。":::
 
-1. Microsoft Graph Usage Rights API と統合するために作成したプランのサービス ID をコピーします。
+1. 作成したプランのサービス ID をコピーして、Microsoft Graph Usage Rights API と統合します。
 
 ### <a name="update-your-teams-app"></a>Teams アプリを更新する
 
-Teams アプリを更新して有料機能にマップし、 [Teams アプリを](https://aka.ms/TMTG) プランにマップして発行します。
+Teams アプリを更新して有料機能にマップし、 [Teams アプリを](https://aka.ms/TMTG) オファーにマップして発行します。
 
 ### <a name="post-purchase"></a>購入後
 
@@ -158,41 +158,41 @@ Teams アプリを更新して有料機能にマップし、 [Teams アプリを
 
 1. サブスクリプションの購入が正常に完了すると、顧客はサブスクリプションのアクティブ化のためにアプリのランディング ページにリダイレクトされます。 これは、 [Teams で収益化されたアプリ](https://aka.ms/TMTG)をユーザーが購入するための既存のエクスペリエンスです。
 
-1. 顧客がランディング ページでサブスクリプション購入をアクティブ化すると、顧客は、リダイレクト URL リンクまたはパブリッシャーランディング ページで選択したボタンを介して Teams のサブスクリプション ページに [リダイレクト](https://teams.microsoft.com/_#/subscriptionManagement) されます。
+1. 顧客がランディング ページでサブスクリプション購入をアクティブ化すると、顧客は、パブリッシャーのランディング ページでユーザーが選択した [リダイレクト URL](https://teams.microsoft.com/_#/subscriptionManagement) リンクまたはボタンを介して Teams のサブスクリプション ページにリダイレクトされます。
 
-### <a name="integrate-with-graph-usage-right-api"></a>Graph Usage Right API と統合する
+### <a name="integrate-with-graph-usage-right-api"></a>Graph Usage Right API との統合
 
-Graph Usage Right API と統合して、購入ライセンスをお持ちのお客様がアプリの起動時にユーザーのアクセス許可を管理します。 Usage Rights API への Graph 呼び出しを使用して、アプリに対するユーザーのアクセス許可を決定する必要があります。
+Graph Usage Right API と統合して、購入ライセンスを持つ顧客によるアプリ起動時のユーザーアクセス許可を管理します。 Usage Rights API への Graph 呼び出しを使用して、アプリに対するユーザーのアクセス許可を決定する必要があります。
 
 Graph API を呼び出して、プランの有効なサブスクリプションを持つ現在ログインしているユーザーがアプリにアクセスできるかどうかを判断できます。 Graph UsageRight API を呼び出してユーザーのアクセス許可を確認するには、次の手順に従います。
 
-1. ユーザー OBO トークンを取得する: [ユーザーに代わってアクセスを取得する - Microsoft Graph |Microsoft Docs](/graph/auth-v2-user)。
+1. ユーザー OBO トークン[の取得: ユーザーの代わりにアクセスを取得する - Microsoft Graph |Microsoft Docs](/graph/auth-v2-user)。
 
 1. Graph を呼び出してユーザーのオブジェクト ID を取得する: [Microsoft Graph APIを使用する - Microsoft Graph |Microsoft Docs](/graph/use-the-api)。
 
-1. UsageRights API を呼び出して、ユーザーがプランに対するライセンスを持っているかどうかを確認[する ユーザーの使用状況を一覧表示するRights - Microsoft Graph ベータ |Microsoft Docs](/graph/api/user-list-usagerights?view=graph-rest-beta&tabs=http&preserve-view=true)。
+1. UsageRights API を呼び出して、ユーザーがプランのライセンスを持っているかどうかを確認する[ユーザーの使用状況の一覧表示Rights - Microsoft Graph ベータ版 |Microsoft Docs](/graph/api/user-list-usagerights?view=graph-rest-beta&tabs=http&preserve-view=true)。
 
    > [!NOTE]
    > UsageRights を呼び出すには、最小限 `User.Read` のアクセス許可が必要です。
-   > UsageRights API は現在ベータ版です。 バージョンを V1 に更新した後、ISV ユーザーはベータ版から V1 バージョンにアップグレードする必要があります。
+   > UsageRights API は現在ベータ版です。 バージョンが V1 に更新された後、ISV ユーザーはベータ版から V1 バージョンにアップグレードする必要があります。
 
 ### <a name="check-license-usage-in-partner-center-analytics"></a>パートナー センター分析でライセンスの使用状況を確認する
 
 1. [パートナー センター](https://partner.microsoft.com/)にサインインします。
 1. 左側のウィンドウで、[ **コマーシャル マーケットプレース] > [> ライセンスの分析**] に移動します。
-1. レポート ウィジェットで **[プラン] と [テナント** ] を選択して、月ごとの使用状況を確認します。
+1. レポート ウィジェットで [ **プラン] と [テナント]** を選択して、月ごとの使用状況を確認します。
 
 ## <a name="build-a-landing-page-for-subscription-management"></a>サブスクリプション管理のためのランディング ページを作成する
 
 Teams ストアでアプリのサブスクリプション プランの購入を完了すると、ユーザーはコマーシャル マーケットプレースからランディング ページに移動します。ここでは、サブスクリプションを管理できます (組織の特定のユーザーにライセンスを割り当てるなど)。
 
-[いいえ] を選択します。そのような場合 **は、お客様のライセンスを自分で管理することをお好み** になります。
+[いいえ] を選択します。このような場合は **、顧客ライセンスを自分で管理する必要** があります。
 
 詳細な手順については、「[SaaS オファーのランディング ページを作成する](/azure/marketplace/azure-ad-transactable-saas-landing-page)」を参照してください。
 
-ユーザーがアプリのサブスクリプション プランの購入を完了し、ランディング ページに移動せずに Teams に留まる場合は、[はい] を選択します。 **Microsoft に代わって顧客ライセンスを管理します**。
+アプリのサブスクリプション プランの購入が完了し、ランディング ページに移動せずに Teams に留まりたい場合 **は、[はい、Microsoft に代わって顧客ライセンスを管理する**] を選択します。
 
-詳細については、 [ファースト パーティのライセンス管理](/platform/concepts/deploy-and-publish/appsource/prepare/first-party-license-management)に関するページを参照してください。
+詳細については、「 [Teams でサード パーティ製アプリのライセンスを管理する](#manage-license-for-third-party-apps-in-teams)」を参照してください。
 
 ### <a name="best-practices-for-landing-pages"></a>ランディング ページのベスト プラクティス
 

@@ -7,22 +7,22 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 5f0e909c9b6fbccc1f1a9a886858177f4673f85f
-ms.sourcegitcommit: 707dad21dc3cf79ac831afe05096c0341bcf2fee
+ms.openlocfilehash: db6e3b99ab737b7ea8cac393e6ee3e0830cd0acc
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68653694"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791791"
 ---
 # <a name="debug-your-teams-app"></a>Teams アプリをデバッグする
 
-Teams Toolkit は、Microsoft Teams アプリのデバッグとプレビューに役立ちます。 デバッグは、Teams でプログラムが正常に実行されるように、問題やバグを確認、検出、修正するプロセスです。
+Teams Toolkit は、Microsoft Teams アプリをデバッグしてプレビューするのに役立ちます。 デバッグとは、問題やバグを確認、検出、修正して、プログラムが Teams で正常に実行されることを確認するプロセスです。
 
 ::: zone pivot="visual-studio-code"
 
 ## <a name="debug-your-teams-app-for-visual-studio-code"></a>Visual Studio Code 用の Teams アプリをデバッグする
 
-Microsoft Visual Studio Code の Teams Toolkit は、デバッグ プロセスを自動化します。 エラーを検出して修正したり、Teams アプリをプレビューしたりできます。 デバッグ設定をカスタマイズして、タブまたはボットを作成することもできます。
+Microsoft Visual Studio Code の Teams Toolkit では、デバッグ プロセスが自動化されます。 エラーを検出して修正したり、Teams アプリをプレビューしたりできます。 デバッグ設定をカスタマイズして、タブまたはボットを作成することもできます。
 
 ## <a name="debug-your-microsoft-teams-app-for-visual-studio-code"></a>Visual Studio Code 用の Microsoft Teams アプリをデバッグする
 
@@ -30,11 +30,11 @@ Visual Studio Code の Teams Toolkit では、デバッグ プロセスが自動
 
 デバッグ プロセス中:
 
-* Teams Toolkit では、アプリ サービスが自動的に開始され、デバッガーが起動され、Teams アプリがサイドロードされます。
-* Teams Toolkit は、デバッグのバックグラウンド プロセス中に前提条件を確認します。
+* Teams Toolkit は、アプリ サービスを自動的に起動し、デバッガーを起動し、Teams アプリをサイドロードします。
+* Teams Toolkit は、デバッグ バックグラウンド プロセス中に前提条件を確認します。
 * Teams アプリは、デバッグ後に Teams Web クライアントでローカルでプレビューできます。
 * また、ボット エンドポイント、開発証明書、またはデバッグ部分コンポーネントを使用して構成済みアプリを読み込むデバッグ設定をカスタマイズすることもできます。
-* Microsoft Visual Studio Code を使用すると、タブ、ボット、メッセージ拡張機能、およびAzure Functionsをデバッグできます。
+* Microsoft Visual Studio Code を使用すると、タブ、ボット、メッセージ拡張機能、Azure Functionsをデバッグできます。
 
 ## <a name="key-debug-features-of-teams-toolkit"></a>Teams Toolkit の主なデバッグ機能
 
@@ -46,11 +46,11 @@ Teams Toolkit では、次のデバッグ機能がサポートされています
 * [ホット リロード](#hot-reload)
 * [デバッグの停止](#stop-debugging)
 
-Teams Toolkit は、デバッグ プロセス中にバックグラウンド機能を実行します。これには、デバッグに必要な前提条件の検証が含まれます。 検証プロセスの進行状況は、Teams Toolkit の出力チャネルで確認できます。 セットアップ プロセスでは、Teams アプリを登録して構成できます。
+Teams Toolkit では、デバッグ プロセス中にバックグラウンド機能が実行されます。これには、デバッグに必要な前提条件の検証が含まれます。 確認プロセスの進行状況は、Teams Toolkit の出力チャネルで確認できます。 セットアップ プロセスでは、Teams アプリを登録して構成できます。
 
 ### <a name="start-debugging"></a>デバッグの開始
 
-**F5** キーを 1 回の操作として押して、デバッグを開始できます。 Teams Toolkit は、前提条件の確認を開始し、Azure AD アプリ、Teams アプリ、ボットを登録し、サービスを開始し、ブラウザーを起動します。
+**F5** キーを 1 回の操作として押すと、デバッグを開始できます。 Teams Toolkit は、前提条件の確認を開始し、Azure AD アプリ、Teams アプリ、ボットを登録し、サービスを開始し、ブラウザーを起動します。
 
 ### <a name="multi-target-debugging"></a>マルチターゲット デバッグ
 
@@ -58,19 +58,19 @@ Teams Toolkit では、マルチターゲット デバッグ機能を利用し�
 
 ### <a name="toggle-breakpoints"></a>ブレークポイントの切り替え
 
-タブ、ボット、メッセージ拡張機能、および Azure Functions のソース コードのブレークポイントを切り替えることができます。 ブレークポイントは、Web ブラウザーで Teams アプリを操作するときに実行されます。 次の図は、ブレークポイントの切り替えを示しています。
+タブ、ボット、メッセージ拡張機能、および Azure Functions のソース コードのブレークポイントを切り替えることができます。 ブレークポイントは、Web ブラウザーで Teams アプリを操作するときに実行されます。 次の図は、トグル ブレークポイントを示しています。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/toggle-points.png" alt-text="ブレークポイントの切り替え" lightbox="../assets/images/teams-toolkit-v2/debug/toggle-points.png":::
 
 ### <a name="hot-reload"></a>ホット リロード
 
-Teams アプリをデバッグするときに、タブ、ボット、メッセージ拡張機能、およびAzure Functionsのソース コードを更新して保存できます。 アプリが再読み込みされ、デバッガーがプログラミング言語に再アタッチされます。
+Teams アプリをデバッグするときに、タブ、ボット、メッセージ拡張機能、Azure Functionsのソース コードを同時に更新して保存できます。 アプリが再読み込みされ、デバッガーがプログラミング言語に再アタッチされます。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hot-reload.png" alt-text="ソース コードのホット リロード" lightbox="../assets/images/teams-toolkit-v2/debug/hot-reload.png":::
 
 ### <a name="stop-debugging"></a>デバッグの停止
 
-ローカル デバッグを完了したら、フローティング デバッグ ツール バーから **[停止] (Shift + F5)** または **[Alt] Disconnect (Shift + F5)** を選択して、すべてのデバッグ セッションを停止し、タスクを終了できます。 次の図は、デバッグの停止アクションを示しています。
+ローカル デバッグを完了したら、フローティング デバッグ ツール バーから **Stop (Shift + F5)** または **[Alt] Disconnect (Shift + F5)** を選択して、すべてのデバッグ セッションを停止し、タスクを終了できます。 次の図は、デバッグの停止アクションを示しています。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debug.png" alt-text="デバッグの停止":::
 
@@ -80,56 +80,56 @@ Teams アプリをデバッグするときに、タブ、ボット、メッセ�
 
 ### <a name="sign-in-to-microsoft-365"></a>Microsoft 365 にサインインする
 
-Microsoft 365 に既にサインアップしている場合は、Microsoft 365 にサインインします。 詳細については、[Microsoft 365 開発者プログラムに関するページを](tools-prerequisites.md#microsoft-365-developer-program)参照してください。
+Microsoft 365 に既にサインアップしている場合は、Microsoft 365 にサインインします。 詳細については、「[Microsoft 365 開発者プログラム](tools-prerequisites.md#microsoft-365-developer-program)」を参照してください。
 
 ### <a name="toggle-breakpoints"></a>ブレークポイントの切り替え
 
-詳細については、「ブレークポイントの切り替え」を参照してください。詳細については、「タブ、ボット、メッセージ拡張機能、およびAzure Functionsのソース コードでブレークポイントを[切り替](#toggle-breakpoints)えることができます。
+タブ、ボット、メッセージ拡張機能、およびAzure Functionsのソース コードでブレークポイントを切り替えることができることを確認します。詳細については、「[ブレークポイントの切り替え](#toggle-breakpoints)」を参照してください。
 
 ## <a name="customize-debug-settings"></a>デバッグ設定をカスタマイズする
 
-Teams Toolkit を使用すると、デバッグ設定をカスタマイズして、タブまたはボットを作成できます。 カスタマイズ可能なオプションの完全な一覧の詳細については、 [デバッグ設定に](https://aka.ms/teamsfx-debug-tasks)関するドキュメントを参照してください。
+Teams Toolkit を使用すると、デバッグ設定をカスタマイズしてタブまたはボットを作成できます。 カスタマイズ可能なオプションの完全な一覧の詳細については、 [デバッグ設定に](https://aka.ms/teamsfx-debug-tasks)関するドキュメントを参照してください。
 
-### <a name="customize-scenarios"></a>シナリオをカスタマイズする
+### <a name="customize-scenarios"></a>シナリオのカスタマイズ
 
 <br>
 
 <details>
 
-<summary><b>前提条件チェックをスキップする</b></summary>
+<summary><b>前提条件のチェックをスキップする</b></summary>
 
 で`.fx/configs/tasks.json``"prerequisites"``"Validate & install prerequisites"` > `"args"` > 、スキップする前提条件チェックを更新します。
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/debug/skip-prerequisite-checks.png" alt-text="前提条件チェックをスキップする":::
+  :::image type="content" source="../assets/images/teams-toolkit-v2/debug/skip-prerequisite-checks.png" alt-text="前提条件のチェックをスキップする":::
 
 </details>
 
 <details>
 <summary><b>開発証明書を使用する</b></summary>
 
-1. で`.fx/configs/tasks.json`、下のチェック ボックスをオフにします >  > `"prerequisites"``"devCert"``"Validate & install prerequisites"``"args"`。
-1. 証明書ファイルパスとキー ファイル パスに "SSL_CRT_FILE" と "SSL_KEY_FILE" を `.env.teamsfx.local` 設定します。
+1. で`.fx/configs/tasks.json`、 の下のチェック を外します >  > `"prerequisites"``"devCert"``"Validate & install prerequisites"``"args"`。
+1. の "SSL_CRT_FILE" と "SSL_KEY_FILE" を `.env.teamsfx.local` 証明書ファイル パスとキー ファイル パスに設定します。
 
 </details>
 
 <details>
 <summary><b>npm install args をカスタマイズする</b></summary>
 
-で`.fx/configs/tasks.json`、npmInstallArgs を .`"Install npm packages"`
+で、 の `.fx/configs/tasks.json`下に npmInstallArgs を設定します `"Install npm packages"`。
   
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/customize-npm-install.png" alt-text="npm パッケージをインストールする":::
 
 </details>
 
 <details>
-<summary><b>ポートを変更する</b></summary>
+<summary><b>ポートの変更</b></summary>
 
 * Bot
-  1. プロジェクト全体を検索`"3978"`し、表示形式`tasks.json`を検索します。および `index.js`. `ngrok.yml`
+  1. プロジェクト全体を検索`"3978"`し、、および `index.js`で`tasks.json``ngrok.yml`外観を探します。
   1. ポートに置き換えます。
      :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-bot.png" alt-text="ボットのポートを置き換える":::
 * Tab
-  1. で `.fx/configs/tasks.json`、検索します `"53000"`。
+  1. で `.fx/configs/tasks.json`を検索します `"53000"`。
   1. ポートに置き換えます。
      :::image type="content" source="../assets/images/teams-toolkit-v2/debug/modify-ports-tab.png" alt-text="タブのポートを置き換える":::
 
@@ -138,7 +138,7 @@ Teams Toolkit を使用すると、デバッグ設定をカスタマイズして
 <details>
 <summary><b>独自のアプリ パッケージを使用する</b></summary>
 
-で`.fx/configs/tasks.json`、アプリ パッケージのパスに設定`"appPackagePath"``"Build & upload Teams manifest"`します。
+で `.fx/configs/tasks.json`、アプリ パッケージのパスに設定 `"appPackagePath"` します `"Build & upload Teams manifest"` 。
 
   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/app-package-path.png" alt-text="独自のアプリ パッケージ パスを使用する":::
 
@@ -147,10 +147,10 @@ Teams Toolkit を使用すると、デバッグ設定をカスタマイズして
 <details>
 <summary><b>独自のトンネルを使用する</b></summary>
 
-1. で`.fx/configs/tasks.json``"Start Teams App Locally"`、更新`"Start Local tunnel"`できます。
+1. で `.fx/configs/tasks.json` `"Start Teams App Locally"`を更新 `"Start Local tunnel"`できます。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-local-tunnel.png" alt-text="独自のトンネルを使用する":::
-1. 独自のトンネル サービスを起動し、.`"botMessagingEndpoint"` `.fx/configs/tasks.json` `"Set up bot"`
+1. 独自のトンネル サービスを起動し、 の下`"Set up bot"`にある独自のメッセージ エンドポイントに`.fx/configs/tasks.json`更新`"botMessagingEndpoint"`します。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/set-up-bot.png" alt-text="メッセージング エンドポイントを更新する":::
 
@@ -163,7 +163,7 @@ Teams Toolkit を使用すると、デバッグ設定をカスタマイズして
 タブ、ボット、メッセージ拡張機能、および Azure Functions の `.env.teamsfx.local` ファイルに環境変数を追加できます。 Teams Toolkit は、ローカル デバッグ中にサービスを開始するために追加した環境変数を読み込みます。
 
  > [!NOTE]
- > 環境変数はホット リロードをサポートしていないため、新しい環境変数を追加した後で新しいローカル デバッグを開始してください。
+ > 環境変数ではホット リロードがサポートされていないため、新しい環境変数を追加した後で新しいローカル デバッグを開始してください。
 
 </details>
 
@@ -172,7 +172,7 @@ Teams Toolkit を使用すると、デバッグ設定をカスタマイズして
 
 Teams Toolkit は、Visual Studio Code マルチターゲット デバッグを利用して、タブ、ボット、メッセージ拡張機能、および Azure Functions を同時にデバッグします。 部分コンポーネントをデバッグするには、`.vscode/launch.json` と `.vscode/tasks.json` を更新できます。 タブとAzure Functions プロジェクトを含むボットでのみタブをデバッグする場合は、次の手順を使用します。
 
-1. でデバッグ の複合を更新 `"Attach to Bot"` および `"Attach to Backend"` デバッグから取得します `.vscode/launch.json`。
+1. のデバッグ 複合から と `"Attach to Backend"` を`.vscode/launch.json`更新`"Attach to Bot"`します。
 
    ```json
    {
@@ -192,7 +192,7 @@ Teams Toolkit は、Visual Studio Code マルチターゲット デバッグを�
    }
    ```
 
-2. .vscode/tasks.json のすべてのタスクを更新 `"Start Backend"` して `"Start Bot"` 開始します。
+2. .vscode/tasks.json の [すべて開始] タスクから と `"Start Bot"` を更新`"Start Backend"`します。
 
    ```json
    {
@@ -221,7 +221,7 @@ Teams Toolkit は、Visual Studio Code マルチターゲット デバッグを�
 
 ## <a name="debug-your-teams-app-using-visual-studio"></a>Visual Studio を使用して Teams アプリをデバッグする
 
-Teams Toolkit は、アプリのスタートアップ サービスを自動化し、デバッグを開始し、Teams アプリをサイドロードします。 デバッグ後、Teams Web クライアントで Teams アプリをプレビューできます。 また、ボット エンドポイントを使用するようにデバッグ設定をカスタマイズしたり、構成済みアプリを読み込むように環境変数をカスタマイズしたりできます。 Visual Studio では、タブ、ボット、メッセージ拡張機能をデバッグできます。 デバッグ プロセス中、Teams Toolkit では次のデバッグ機能がサポートされます。
+Teams Toolkit は、アプリのスタートアップ サービスを自動化し、デバッグを開始し、Teams アプリをサイド ロードします。 デバッグ後、Teams Web クライアントで Teams アプリをプレビューできます。 また、ボット エンドポイントを使用するようにデバッグ設定をカスタマイズしたり、構成済みアプリを読み込むように環境変数をカスタマイズしたりできます。 Visual Studio では、タブ、ボット、メッセージ拡張機能をデバッグできます。 デバッグ プロセス中、Teams Toolkit では次のデバッグ機能がサポートされます。
 
 * Teams アプリの依存関係を準備する
 * デバッグの開始
@@ -237,8 +237,8 @@ Teams Toolkit は、アプリのスタートアップ サービスを自動化�
 | &nbsp; | Visual Studio 2022 バージョン 17.3 | Visual Studio のエンタープライズ エディションをインストールし、"ASP.NET" ワークロードと Microsoft Teams 開発ツールをインストールできます。 |
 | &nbsp; | Teams ツールキット | アプリのプロジェクト スキャフォールディングを作成する Visual Studio 拡張機能。 最新バージョン​​を使用します。 |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams を使用して、チャット、会議、通話用のアプリを通じて共同作業を行うすべてのユーザーと 1 か所で共同作業を行うことができます。 |
-| &nbsp; | [Microsoft 365 テナントを準備する](../concepts/build-and-test/prepare-your-o365-tenant.md) | アプリをインストールするための適切なアクセス許可を持つ Teams アカウントにアクセスします。 |
-| &nbsp; | [Microsoft 365 開発者アカウント](/../concepts/build-and-test/prepare-your-o365-tenant) | アプリをインストールするための適切なアクセス許可を持つ Teams アカウントにアクセスします。 |
+| &nbsp; | [Microsoft 365 テナントを準備する](~/concepts/build-and-test/prepare-your-o365-tenant.md) | アプリをインストールするための適切なアクセス許可を持つ Teams アカウントにアクセスします。 |
+| &nbsp; | [Microsoft 365 開発者アカウント](~/concepts/build-and-test/prepare-your-o365-tenant.md) | アプリをインストールするための適切なアクセス許可を持つ Teams アカウントにアクセスします。 |
 | &nbsp; | Azure Tools と [Microsoft Azure CLI](/cli/azure/install-azure-cli) | 保存されたデータにアクセスしたり、Azure で Teams アプリ用のクラウドベースのバックエンドをデプロイしたりするための Azure ツール。 |
 |&nbsp;  | **Optional** | &nbsp; |
 |&nbsp; |[Ngrok](https://ngrok.com/) | Ngrok は、Azure Bot Framework からローカル コンピューターに外部メッセージを転送するために使用されます。|
@@ -310,15 +310,15 @@ Teams クライアントで実行する代わりに、Teams アプリを Web ア
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png" alt-text="launchurl を削除してチームを Web アプリとして起動する" lightbox="../assets/images/debug-teams-app/vs-localdebug-launch-teamsapp-webapp.png":::
 
-1. **[ソリューション**] を右クリックし、[**プロパティ**] を選択します。
+1. **[ソリューション**] を右クリックし、[プロパティ] を選択 **します**。
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-solution-properties.png" alt-text="[ソリューション] を右クリックし、[プロパティ] を選択する" lightbox="../assets/images/debug-teams-app/vs-localdebug-solution-properties.png":::
 
-1. ダイアログ ボックスで [**構成プロパティ** > の **構成**] を選択します。
-1. **[デプロイ]** チェック ボックスをオフにします。
+1. ダイアログ ボックスで [ **構成プロパティ** > **の構成]** を選択します。
+1. [ **デプロイ** ] チェック ボックスをオフにします。
 1. **[OK]** をクリックします。
 
-   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-disable-deploy.png" alt-text="構成プロパティでのデプロイをオフにする" lightbox="../assets/images/debug-teams-app/vs-localdebug-disable-deploy.png":::
+   :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-disable-deploy.png" alt-text="構成プロパティでデプロイをオフにする" lightbox="../assets/images/debug-teams-app/vs-localdebug-disable-deploy.png":::
 
 ::: zone-end
 

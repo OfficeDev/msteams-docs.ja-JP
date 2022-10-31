@@ -3,16 +3,16 @@ title: Microsoft Teams 開発者向けドキュメント - 用語集
 description: Microsoft Teams 開発者向けドキュメントで使用される一般的な用語、意味、定義について説明します。
 ms.localizationpriority: high
 ms.topic: reference
-ms.openlocfilehash: dd9da44439223fa9de7e795498dd6f67a7bc45e8
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: 74717387d83e32e240a21b83d87a89bcb4591145
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615234"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791441"
 ---
 # <a name="glossary"></a>用語集
 
-Teams 開発者向けドキュメントで使用される一般的な用語と定義。
+Microsoft Teams 開発者向けドキュメントで使用される一般的な用語と定義。
 
 ## <a name="a"></a>A
 
@@ -23,13 +23,13 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 | [アプリ カタログ](../toolkit/publish.md) | 組織の内部使用のために SharePoint アプリと Office アプリを格納するサイト。 <br>**関連情報**: [SPFx](#s) |
 | [アプリ マニフェスト](../resources/schema/manifest-schema.md) | Teams アプリ マニフェストは、アプリが Microsoft Teams 製品にどのように統合されるかを説明します。 マニフェストは、最新の[マニフェスト スキーマ](https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json)に適合している必要があります。 |
 | [アプリ パッケージ](../concepts/build-and-test/apps-package.md) | Teams アプリ パッケージは、アプリ マニフェスト ファイル、色アイコン、アウトライン アイコンを含む zip ファイルです。 |
-| [アプリのアクセス許可](../concepts/device-capabilities/browser-device-permissions.md#enable-apps-device-permissions) | デバイスのアクセス許可を有効にする Teams アプリのオプション。 アプリのマニフェスト ファイルで、アプリにデバイスのアクセス許可が必要であると宣言されている場合にのみ使用できます。 <br> 「デバイスの [アクセス許可](#d)」**も参照してください**。 |
+| [アプリのアクセス許可](../concepts/device-capabilities/browser-device-permissions.md#enable-apps-device-permissions) | デバイスのアクセス許可を有効にする Teams アプリのオプション。 アプリのマニフェスト ファイルで、アプリにデバイスのアクセス許可が必要であると宣言されている場合にのみ使用できます。 <br> 「[デバイスのアクセス許可](#d)**」も参照してください**。 |
 | [アプリのスコープ](../concepts/design/understand-use-cases.md#app-scope) | ユーザーがあなたのアプリを使用できる Teams の領域。 アプリには、個人用、チャネル、チャット、会議など、1 つまたは複数のスコープを設定できます。 Teams アプリは、複数のスコープにわたって存在できます。 |
 | アプリ トレイ | Teams モバイル アプリの下部バーにあるアプリケーション トレイ。 開いているが現在使用されていない、またはアクティブではないすべてのアプリが収集されます。 <br>**関連情報**: [Teams Mobile](#t) |
 | [Azure リソース](../toolkit/provision.md) | Teams アプリが Azure デプロイに使用できる Azure 経由で利用できるサービス。 ストレージ アカウント、Web アプリ、データベースなどです。 |
 | [Azure Active Directory](../tabs/how-to/authentication/auth-tab-aad.md) | Microsoft クラウドベースの、ID およびアクセス管理サービスです。 認証されたユーザーが内部リソースと外部リソースにアクセスするのに役立ちます。 |
-| [認証](../concepts/authentication/authentication.md) | アプリにアクセスするためのユーザーの ID を検証するプロセス。 <br> **関連情報**: [ID プロバイダー](#i); [SSO](#s) |
-| [認証フロー](../concepts/authentication/authentication.md) | ユーザーがアプリに対して認証する方法。 Teams アプリの場合は、Azure Active Directory (AAD) を使用してシングル サインオン (SSO) を使用することをお勧めしますが、サードパーティの OAuth プロバイダーを使用する方法もあります。|
+| [認証](../concepts/authentication/authentication.md) | アプリにアクセスするためにユーザーの ID を検証するプロセス。 <br> **関連情報**: [ID プロバイダー](#i); [SSO](#s) |
+| [認証フロー](../concepts/authentication/authentication.md) | ユーザーがアプリに対して認証する方法。 Teams アプリの場合は、Azure Active Directory (AAD) を使用してシングル サインオン (SSO) を使用することをお勧めしますが、代わりにサードパーティの OAuth プロバイダーを使用することもできます。|
 
 ## <a name="b"></a>B
 
@@ -63,7 +63,7 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 | 用語 | 定義 |
 | --- | --- |
 | [ディープ リンク](../concepts/build-and-test/deep-links.md) | Teams アプリでは、Teams 内の情報や機能へのディープ リンクを作成したり、ユーザーをあなたのアプリ内のコンテンツに移動させたりするのに役立ちます。 |
-|[米国国防総省 (DoD)](../concepts/app-fundamentals-overview.md#government-community-cloud)| DoD 環境では、国防総省のセキュリティ要件ガイドライン、国防総省の連邦取得規則補足 (DFARS)、および武器規制における国際トラフィック (ITAR) への準拠が提供されます。|
+|[米国国防総省 (DoD)](../concepts/app-fundamentals-overview.md#government-community-cloud)| DoD 環境は、国防総省のセキュリティ要件ガイドライン、国防連邦買収規則の補足 (DFARS)、および国際武器規制 (ITAR) に準拠しています。|
 | [Teams の開発者ポータル](../concepts/build-and-test/teams-developer-portal.md) | Microsoft Teams アプリを構成、配布、管理するための主要なツール。 開発者ポータルを使用すると、アプリで同僚と共同作業したり、ランタイム環境を設定したり、その他多くのことをしたりすることができます。 |
 | [開発者向けプレビュー](../resources/dev-preview/developer-preview-intro.md) | Microsoft Teams の未リリース機能への早期アクセスを提供する開発者向けのパブリック プログラム。 これにより、Microsoft Teams アプリに含める候補として今後導入予定の機能を検索およびテストすることができます。 |
 | 展開 | アプリケーションのバックエンドコードとフロントエンド コードをアップロードするプロセス。 デプロイ時に、アプリのコードがプロビジョニング中に作成したリソースにコピーされます。 <br>**関連情報**: [プロビジョニング](#p) |
@@ -85,14 +85,14 @@ Teams 開発者向けドキュメントで使用される一般的な用語と�
 
 | 用語 | 定義 |
 | --- | --- |
-| [初回実行エクスペリエンス](../concepts/design/design-teams-app-ui-templates.md)|初回実行エクスペリエンス (FRE) は、ユーザーによる製品の概要です。FRE は、ユーザーが製品の機能、機能、利点を使い始めるのに役立ち、ユーザーが製品を使用し直して使用し続ける影響を与えます。|
+| [初回実行時エクスペリエンス](../concepts/design/design-teams-app-ui-templates.md)|First-run Experience (FRE) は、ユーザーが製品を紹介する方法です。FREは、ユーザーが製品の機能、機能、利点を使い始めるのに役立ち、ユーザーが製品を使用し続けるのに影響を与えます。|
 
 ## <a name="g"></a>G
 
 | 用語 | 定義 |
 | --- | --- |
-|[政府機関コミュニティ クラウド (GCC)](../concepts/app-fundamentals-overview.md#government-community-cloud)| GCC 環境では、FedRAMP High、Defense Federal Acquisition Regulations Supplement (DFARS)、および連邦税務情報システム (CJI および FTI データ型) の要件など、クラウド サービスに対する連邦政府の要件に準拠しています。|
-|[政府機関コミュニティ クラウド (GCC) High](../concepts/app-fundamentals-overview.md#government-community-cloud)|GCC の環境が高い環境では、国防総省 (DoD) セキュリティ要件ガイドライン、国防総省の連邦取得規則補足 (DFARS)、および武器規制における国際トラフィック (ITAR) への準拠が提供されます。<br>**参照**: [国防総省 (DoD)](#d)|
+|[Government コミュニティ クラウド (GCC)](../concepts/app-fundamentals-overview.md#government-community-cloud)| GCC 環境では、FedRAMP High、Defense Federal Acquisition Regulations Supplement (DFARS)、刑事司法および連邦税情報システム (CJI および FTI データ型) の要件など、クラウド サービスの連邦要件に準拠しています。|
+|[Government community cloud (GCC) High](../concepts/app-fundamentals-overview.md#government-community-cloud)|GCC の高い環境では、国防総省 (DoD) のセキュリティ要件ガイドライン、防衛連邦買収規則の補足 (DFARS)、および国際武器規制 (ITAR) に準拠しています。<br>「[国防総省 (DoD)」](#d)**も参照してください**。|
 | [Graph API](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | Microsoft Cloud サービス リソースへのアクセスを可能にするMicrosoft Graph 用の RESTful Web API です。 <br>**関連情報**: [Microsoft Graph エクスプローラー](#m) |
 | [グループ チャット](../resources/bot-v3/bot-conversations/bots-conversations.md) | @mention を使用してボットを呼び出すことで、ユーザーがグループ設定でボットとチャットできるチャット機能。 <br>**関連情報**: [1 対 1 のチャット](#o); [チャット ボット](#c) |
 

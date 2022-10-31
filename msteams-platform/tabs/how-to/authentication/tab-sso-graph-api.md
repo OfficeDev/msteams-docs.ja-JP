@@ -4,12 +4,12 @@ description: シングル サインオン (SSO) を有効にするために、Mi
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: Teams 認証タブ Microsoft Azure Active Directory (Azure AD) Graph API 委任されたアクセス許可アクセス トークン スコープ
-ms.openlocfilehash: 5315190787570f38ae2a469bf0c6a421c9003176
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 11620e10ed736ce9fe88e3bb755acfbabfec3f47
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67780850"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791721"
 ---
 # <a name="extend-tab-app-with-microsoft-graph-permissions-and-scope"></a>Microsoft Graph のアクセス許可とスコープを使用してタブ アプリを拡張する
 
@@ -221,7 +221,7 @@ Microsoft Graph データにアクセスする必要がある場合は、サー�
     - `?scope={scopes}` の代わりに、 `?prompt=consent&scope={scopes}` を使用します。
     - `{scopes}` に `Mail.Read` や `User.Read` など、ユーザーに求めるすべてのスコープが含まれていることを確認します。
 
-    タブ アプリの増分同意を処理するには、 [増分および動的なユーザーの同意](/azure/active-directory/develop/v2-permissions-and-consent)に関するページを参照してください。
+    タブ アプリの増分同意を処理するには、「 [増分と動的なユーザーの同意](/azure/active-directory/develop/v2-permissions-and-consent)」を参照してください。
 5. ユーザーにその他のアクセス許可が付与されたら、OBO フローを再試行して、これらの他の API へのアクセスを取得します。
     </details>
 

@@ -7,16 +7,16 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 730317fd6480b583d7b293a4e032589d01c99db0
-ms.sourcegitcommit: 707dad21dc3cf79ac831afe05096c0341bcf2fee
+ms.openlocfilehash: 65eb9599bb60b35448aaf1b6239fc155b7d397d5
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68653663"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791574"
 ---
 # <a name="debug-your-teams-app-locally"></a>Teams アプリをローカルでデバッグする
 
-Teams ツールキットは、Microsoft Teams アプリをローカルでデバッグおよびプレビューするのに役立ちます。 デバッグ プロセス中、Teams Toolkit は自動的にアプリ サービスを開始し、デバッガーを起動し、Teams アプリをサイドロードします。 デバッグ後、Teams Web クライアントで Teams アプリをローカルでプレビューできます。
+Teams ツールキットは、Microsoft Teams アプリをローカルでデバッグおよびプレビューするのに役立ちます。 デバッグ プロセス中に、Teams Toolkit によってアプリ サービスが自動的に開始され、デバッガーが起動され、Teams アプリがサイドロードされます。 デバッグ後、Teams Web クライアントで Teams アプリをローカルでプレビューできます。
 
 ::: zone pivot="visual-studio-code"
 
@@ -26,19 +26,19 @@ Visual Studio Code の Teams Toolkit では、Teams アプリのデバッグを�
 
 > [!NOTE]
 >
-> 古い Teams Toolkit プロジェクトをアップグレードして新しいタスクを使用できます。詳細については、[デバッグ設定に](https://aka.ms/teamsfx-debug-upgrade-new-tasks)関するドキュメントを参照してください
+> 古い Teams Toolkit プロジェクトをアップグレードして新しいタスクを使用できます。詳細については、「[デバッグ設定のドキュメント](https://aka.ms/teamsfx-debug-upgrade-new-tasks)」を参照してください
 
-## <a name="set-up-your-teams-toolkit-for-debugging"></a>デバッグ用に Teams Toolkit を設定する
+## <a name="set-up-your-teams-toolkit-for-debugging"></a>デバッグ用に Teams ツールキットを設定する
 
 次の手順は、デバッグ プロセスを開始する前に Teams Toolkit を設定するのに役立ちます。
 
 # <a name="windows"></a>[Windows](#tab/Windows)
 
-1. **[RUN AND** DEBUG] ドロップダウンからアクティビティ バーの [デバッグ **(Edge)]** または [**デバッグ (Chrome)]** を選択します。
+1. [**RUN AND DEBUG ▷** ] ドロップダウンから、アクティビティ バーで [デバッグ **(Edge)]** または [**デバッグ (Chrome)]** を選択します。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="ブラウザー オプション":::
 
-1. [**Run Start Debugging (F5)]\(デバッグの開始を実行** > \) を選択します。
+1. [**デバッグ****の開始の** 実行  >  ] (F5) を選択します。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="デバッグの開始":::
 
@@ -56,7 +56,7 @@ Visual Studio Code の Teams Toolkit では、Teams アプリのデバッグを�
    > [!TIP]
    > 開発証明書について知るには **[詳細情報]** を選択できます。
 
-5. [**セキュリティ警告**] ダイアログ ボックスに **[はい**] を選択します。
+5. [**セキュリティ警告**] ダイアログ ボックスに [**はい] を** 選択します。
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="証明機関":::
 
@@ -64,7 +64,7 @@ Visual Studio Code の Teams Toolkit では、Teams アプリのデバッグを�
 
 # <a name="macos"></a>[macOS](#tab/macOS)
 
-1. **[RUN AND** DEBUG] ドロップダウンから [**Debug Edge**] または [**Debug Chrome**] を選択します。
+1. [**RUN AND DEBUG ▷** ] ドロップダウンから [**デバッグ エッジ**] または [**デバッグ Chrome**] を選択します。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="ブラウザー リスト":::
 
@@ -86,7 +86,7 @@ Visual Studio Code の Teams Toolkit では、Teams アプリのデバッグを�
    > [!TIP]
    > 開発証明書について知るには **[詳細情報]** を選択できます。
 
-5. **ユーザー名** と **パスワード** を入力し、[**更新設定]** を選択します。
+5. **[ユーザー名]** と **[パスワード**] を入力し、[**設定の更新**] を選択します。
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="Mac サインイン":::
 
@@ -112,7 +112,7 @@ Teams Toolkit によってブラウザー インスタンスが起動され、Te
 |  ボットまたはメッセージ拡張機能 |  **ボットの開始** |  ボット |
 |  Azure Functions |  **バックエンドの開始** |  API |
 
-次の図は、タブ、ボットまたはメッセージ拡張機能、およびAzure Functionsの実行中に、Visual Studio Code の **[OUTPUT**] タブと **[ターミナル**] タブにタスク名を表示します。
+次の図は、タブ、ボットまたはメッセージ拡張機能、およびAzure Functionsの実行中に、Visual Studio Code の **OUTPUT** タブと **TERMINAL** タブにタスク名を表示しています。
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal1.png" alt-text="アプリ サービスの開始" lightbox="../assets/images/teams-toolkit-v2/debug/Terminal1.png":::
 
@@ -122,7 +122,7 @@ Teams Toolkit によってブラウザー インスタンスが起動され、Te
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/launch-debuggers.png" alt-text="デバッガーの起動":::
 
-次の表に、タブ、ボット、メッセージ拡張機能アプリ、およびAzure Functionsを含むプロジェクトのデバッグ構成名と種類を示します。
+次の表に、タブ、ボットまたはメッセージ拡張機能アプリ、およびAzure Functionsを含むプロジェクトのデバッグ構成の名前と種類を示します。
 
 |  コンポーネント |  デバッグ構成名  | デバッグ構成の種類 |
 | --- | --- | --- |
@@ -130,7 +130,7 @@ Teams Toolkit によってブラウザー インスタンスが起動され、Te
 |  ボットまたはメッセージ拡張機能 |   **ボットにアタッチ** |  PWA ノード |
 | Azure Functions |   **バックエンドにアタッチ** |  PWA ノード |
 
-次の表に、ボット アプリを使用したプロジェクトのデバッグ構成名と種類の一覧を示します。Azure Functionsタブ アプリはありません。
+次の表に、ボット アプリ、Azure Functions、タブ アプリを使用しないプロジェクトのデバッグ構成の名前と種類を示します。
 
 |  コンポーネント |  デバッグ構成名  | デバッグ構成の種類  |
 | --- | --- | --- |
@@ -140,7 +140,7 @@ Teams Toolkit によってブラウザー インスタンスが起動され、Te
 
 ### <a name="sideloads-the-teams-app"></a>Teams アプリをサイドロードする
 
-[ **フロントエンドにアタッチ]** または **[起動ボット]** の構成では、Edge ブラウザーまたは Chrome ブラウザー インスタンスを起動して、Teams クライアントを Web ページに読み込みます。 Teams クライアントが読み込まれた後、Teams は、起動構成 Microsoft Teams で定義されたサイドローディング URL によって制御される Teams アプリをサイドロード [します](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint})。 Teams クライアントが Web ブラウザーに読み込まれたら、要件に従ってドロップダウンから [ **追加]** を選択するか、オプションを選択します。
+[ **フロントエンドにアタッチ]** または **[ボットの起動]** 構成では、Web ページで Teams クライアントを読み込むための Edge または Chrome ブラウザー インスタンスが起動します。 Teams クライアントが読み込まれた後、Teams は、起動構成 [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}) で定義されているサイドローディング URL によって制御される Teams アプリをサイドロードします。 Teams クライアントが Web ブラウザーに読み込まれたら、[ **追加]** を選択するか、要件に従ってドロップダウンからオプションを選択します。
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="ローカル デバッグを追加する" lightbox="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png":::
 
@@ -172,7 +172,7 @@ ngrok http 5130
 プロジェクトを作成した後、Teams ツールキットを使用して次の手順を実行して、アプリをデバッグします。
 
 1. **プロジェクト** を右クリックします。
-1. **Teams Toolkit** >  の [**Teams アプリの依存関係の準備] を選択します**。
+1. [ **Teams Toolkit** > **] [Teams アプリの依存関係の準備] の順に選択します**。
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png" alt-text="ローカル デバッグ用の Teams アプリの依存関係" lightbox="../assets/images/debug-teams-app/vs-localdebug-teamsappdependencies.png":::
 
@@ -181,14 +181,14 @@ ngrok http 5130
 
    サインインする前に、Microsoft 365 アカウントにサイド ローディングのアクセス許可が必要です。  Teams アプリをテナントにアップロードできることを確認します。これを行わないと、Teams アプリが Teams クライアントで実行できない場合があります。
 
-1. **Microsoft 365 アカウント** にサインインし、[**続行**] を選択します。
+1. **Microsoft 365 アカウント** にサインインし、[続行] を選択 **します**
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-signin-m365.png" alt-text="Microsoft 365 アカウントにサインインする":::
 
    > [!Note]
    > サイドローディングのアクセス許可の詳細については、<https://aka.ms/teamsfx-sideloading-option> にアクセスしてください。
 
-1. [ **デバッグ** > **開始デバッグ]** を選択するか、 **F5** を直接選択します。
+1. [ **デバッグ** > **] [デバッグの開始] の順に** 選択するか、 **F5** を直接選択します。
 
    :::image type="content" source="../assets/images/debug-teams-app/vs-localdebug-Startdebug.png" alt-text="デバッグの開始":::
 
@@ -205,7 +205,7 @@ ngrok http 5130
    > デバッグ中に Visual Studio のホット リロード機能を使用することもできます。 詳細については、<https://aka.ms/teamsfx-vs-hotreload> にアクセスしてください。
 
    > [!NOTE]
-   > 通知ボット アプリをデバッグするときは、通知をトリガーするために必ず HTTP 要求を '<http://localhost:5130/api/notification>' に投稿してください。 プロジェクトの作成時に HTTP トリガーを選択した場合、curl (Windows コマンド プロンプト)、Postman などの任意の API ツールを使用できます。
+   > 通知ボット アプリをデバッグするときに、通知を `http://localhost:5130/api/notification` トリガーする HTTP 要求を に投稿してください。 プロジェクトの作成時に HTTP トリガーを選択した場合、curl (Windows コマンド プロンプト)、Postman などの任意の API ツールを使用できます。
 
    > [!TIP]
    > Teams アプリ マニフェスト ファイル (/templates/appPackage/manifest.template.json) に変更を加える場合、Teams アプリの依存関係を準備するコマンドを必ず実行してください。 Teams アプリをローカルで再度実行する前に実行します。

@@ -1,67 +1,67 @@
 ---
 title: タブのコンテキストを取得する
-description: タブのコンテキスト、ユーザー、チーム、または会社のコンテキスト、情報へのアクセス、プライベートチャネルまたは共有チャネルでのコンテキストの取得、テーマの変更の処理について説明します。
+description: タブのコンテキスト、ユーザー、チーム、または会社のコンテキスト、情報へのアクセス、プライベートまたは共有チャネルでのコンテキストの取得、テーマの変更の処理について説明します。
 ms.localizationpriority: high
 ms.topic: how-to
-ms.openlocfilehash: 2048f46e6cbe181a755df12b61c5153aacc21186
-ms.sourcegitcommit: bd30d33af59dd870a309ae72b4c4496c9c1f920d
+ms.openlocfilehash: f0a54dc749d1132918e3ec47ac614aff3ce8aab8
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "67635309"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791546"
 ---
 # <a name="get-context-for-your-tab"></a>タブのコンテキストを取得する
 
-タブには、関連するコンテンツを表示するためのコンテキスト情報が必要です。
+関連するコンテンツを表示するには、タブにコンテキスト情報が必要です。
 
 * ユーザー、チーム、または会社に関する基本情報。
 * ロケールとテーマの情報。
-* `page.id` `page.subPageId`このタブの内容 (TeamsJS v.2.0.0 以前と`subEntityId`呼ばれます`entityId`) を識別します。
+* `page.id`このタブの内容を識別する と `page.subPageId` (TeamsJS v.2.0.0 以前と`subEntityId`呼ばれます`entityId`)。
 
 ## <a name="user-context"></a>ユーザー コンテキスト
 
 ユーザー、チーム、または会社に関するコンテキストは、次の場合に特に役立ちます。
 
-* アプリ内のリソースを作成するか、指定したユーザーまたはチームに関連付けます。
-* Microsoft Azure Active Directory (Azure AD) またはその他の ID プロバイダーから認証フローを開始し、ユーザーがユーザー名を再入力する必要はありません。
+* アプリでリソースを作成するか、指定したユーザーまたはチームに関連付けます。
+* Microsoft Azure Active Directory (Azure AD) またはその他の ID プロバイダーから認証フローを開始し、ユーザーが再度ユーザー名を入力する必要はありません。
 
 詳細については、「 [Microsoft Teams でユーザーを認証する](~/concepts/authentication/authentication.md)」を参照してください。
 
 > [!IMPORTANT]
-> このユーザー情報はスムーズなユーザー エクスペリエンスを提供するのに役立ちますが、ID の証明として使用しないでください。  たとえば、攻撃者はブラウザーにページを読み込み、有害な情報や要求をレンダリングできます。
+> このユーザー情報はスムーズなユーザー エクスペリエンスを提供するのに役立ちますが、ID 証明として使用しないでください。  たとえば、攻撃者はブラウザーにページを読み込み、有害な情報や要求をレンダリングすることができます。
 
-## <a name="access-context-information"></a>コンテキスト情報にアクセスする
+## <a name="access-context-information"></a>アクセス コンテキスト情報
 
 コンテキスト情報には 2 つの方法でアクセスできます。
 
-* [URL プレースホルダー値を](#get-context-by-inserting-url-placeholder-values)使用する。
+* [URL プレースホルダー値](#get-context-by-inserting-url-placeholder-values)の使用。
 * Microsoft Teams JavaScript クライアント SDK [コンテキスト](/javascript/api/@microsoft/teams-js/app.context) オブジェクトから。
 
 ### <a name="get-context-by-inserting-url-placeholder-values"></a>URL プレースホルダー値を挿入してコンテキストを取得する
 
-構成やコンテンツ URL では、プレースホルダーを使用します。 Microsoft Teams では、実際の構成やコンテンツ URL を決定する際に、プレースホルダーを該当する値で置き換えます。 使用可能なプレースホルダーには、 [コンテキスト](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) オブジェクト上のすべてのフィールドが含まれます。 一般的なプレースホルダーには、次のプロパティがあります。
+構成やコンテンツ URL では、プレースホルダーを使用します。 Microsoft Teams では、実際の構成やコンテンツ URL を決定する際に、プレースホルダーを該当する値で置き換えます。 使用可能なプレースホルダーには、 [コンテキスト](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) オブジェクトのすべてのフィールドが含まれます。 一般的なプレースホルダーには、次のプロパティがあります。
 
-* [{page.id}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-id): 最初にページを構成するときに定義されたページの開発者が定義した一意 [の](~/tabs/how-to/create-tab-pages/configuration-page.md) ID。 (TeamsJS v.2.0.0 より前と呼ばれます `{entityId}` )。
-* [{page.subPageId}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-subpageid): ページ内の特定の項目の [ディープ リンク](~/concepts/build-and-test/deep-links.md) を生成するときに定義される、このコンテンツポイントのサブページに対する開発者定義の一意の ID。 (TeamsJS v.2.0.0 より前と呼ばれます `{subEntityId}` )。
-* [{user.loginHint}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-loginhint): Azure AD のサインイン ヒントとして適した値。 これは通常、ホーム テナント内の現在のユーザーのログイン名です。 (TeamsJS v.2.0.0 より前と呼ばれます `{loginHint}` )。
-* [{user.userPrincipalName}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-userprincipalname): 現在のテナント内の現在のユーザーのユーザー プリンシパル名。 (TeamsJS v.2.0.0 より前と呼ばれます `{userPrincipalName}` )。
-* [{user.id}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-id): 現在のテナント内の現在のユーザーの Azure AD オブジェクト ID。 (TeamsJS v.2.0.0 より前と呼ばれます `{userObjectId}` )。
-* [{app.theme}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-theme): 現在のユーザー インターフェイス (UI) テーマ (例: `default`、 `dark`、、 `contrast`. (TeamsJS v.2.0.0 より前と呼ばれます `{theme}` )。
-* [{team.groupId}](/javascript/api/@microsoft/teams-js/app.teaminfo#@microsoft-teams-js-app-teaminfo-groupid): タブが存在するOffice 365 グループの ID。 (TeamsJS v.2.0.0 より前と呼ばれます `{groupId}` )
-* [{user.tenant.id}](/javascript/api/@microsoft/teams-js/app.tenantinfo#@microsoft-teams-js-app-tenantinfo-id): 現在のユーザーの Azure AD テナント ID。 (TeamsJS v.2.0.0 より前と呼ばれます `{tid}` )。
-* [{app.locale}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-locale): *languageId-countryId* として書式設定されたユーザーの現在のロケール (例 `en-us`: . (TeamsJS v.2.0.0 より前と呼ばれます `{locale}` )。
+* [{page.id}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-id): 最初にページを構成するときに定義されたページの開発者が定義した一意 [の](~/tabs/how-to/create-tab-pages/configuration-page.md) ID。 (TeamsJS v.2.0.0 より前と `{entityId}` 呼ばれます)。
+* [{page.subPageId}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-subpageid): ページ内の特定のアイテムの [ディープ リンク](~/concepts/build-and-test/deep-links.md) を生成するときに定義された、このコンテンツ ポイントのサブページの開発者が定義した一意の ID。 (TeamsJS v.2.0.0 より前と `{subEntityId}` 呼ばれます)。
+* [{user.loginHint}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-loginhint): Azure AD のサインイン ヒントとして適した値。 これは通常、ホーム テナント内の現在のユーザーのログイン名です。 (TeamsJS v.2.0.0 より前と `{loginHint}` 呼ばれます)。
+* [{user.userPrincipalName}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-userprincipalname): 現在のテナント内の現在のユーザーのユーザー プリンシパル名。 (TeamsJS v.2.0.0 より前と `{userPrincipalName}` 呼ばれます)。
+* [{user.id}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-id): 現在のテナント内の現在のユーザーの Azure AD オブジェクト ID。 (TeamsJS v.2.0.0 より前と `{userObjectId}` 呼ばれます)。
+* [{app.theme}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-theme): 、 などの`default``dark``contrast`現在のユーザー インターフェイス (UI) テーマ。 (TeamsJS v.2.0.0 より前と `{theme}` 呼ばれます)。
+* [{team.groupId}](/javascript/api/@microsoft/teams-js/app.teaminfo#@microsoft-teams-js-app-teaminfo-groupid): タブが存在するOffice 365 グループの ID。 (TeamsJS v.2.0.0 より前と `{groupId}` 呼ばれます)
+* [{user.tenant.id}](/javascript/api/@microsoft/teams-js/app.tenantinfo#@microsoft-teams-js-app-tenantinfo-id): 現在のユーザーの Azure AD テナント ID。 (TeamsJS v.2.0.0 より前と `{tid}` 呼ばれます)。
+* [{app.locale}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-locale): *languageId-countryId*`en-us` などの形式のユーザーの現在のロケール。 (TeamsJS v.2.0.0 より前と `{locale}` 呼ばれます)。
 
 > [!NOTE]
 > 以前の `{upn}` プレースホルダーは、現在では非推奨となっています。 後方互換性のため、現在は `{user.loginHint}` の同義語となっています。
 
-たとえば、アプリ マニフェストで、tab *configurationUrl* 属性 `"https://www.contoso.com/config?name={user.loginHint}&tenant={user.tenant.id}&group={team.groupId}&theme={app.theme}"` を設定し、サインインしているユーザーが次の属性を持っている場合です。
+たとえば、アプリ マニフェストで Tab *configurationUrl* 属性を に `"https://www.contoso.com/config?name={user.loginHint}&tenant={user.tenant.id}&group={team.groupId}&theme={app.theme}"` 設定し、サインインしているユーザーに次の属性がある場合です。
 
 * ユーザー名は **user@example.com**。
-* 会社のテナント ID は **e2653c-etc** です。
+* 会社のテナント ID は **e2653c-etc です**。
 * ID **00209384-etc** を持つOffice 365 グループのメンバーです。
-* ユーザーが Teams のテーマを **ダーク** に設定しました。
+* ユーザーが Teams テーマを **ダーク** に設定しました。
 
-. . . その後、Teams はタブを構成するときに次の URL を呼び出します。
+. . . 次に、Teams はタブを構成するときに次の URL を呼び出します。
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
@@ -69,7 +69,7 @@ ms.locfileid: "67635309"
 
 [Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) を使用して `microsoftTeams.getContext(function(context) { /* ... */ })` を呼び出す方法でも、上記の情報を取得できます。
 
-次のコードは、コンテキスト変数の例を示しています。
+次のコードでは、コンテキスト変数の例を示します。
 
 ```json
 {
@@ -180,7 +180,7 @@ microsoftTeams.getContext((context) => {
 
 ---
 
-次の表に、コンテキスト オブジェクトの一般的に使用される *コンテキスト* プロパティを示します。
+次の表は、コンテキスト オブジェクトの一般的に使用される *コンテキスト* プロパティの一覧です。
 
 | TeamsJS v2 名 | TeamsJS v1 名 | 説明 |
 |-----------------|-----------------|-------------|
@@ -190,45 +190,45 @@ microsoftTeams.getContext((context) => {
 | channel.displayName | channelName | コンテンツが関連付けられているチャネルの名前。 |
 | chat.id | chatId | コンテンツが関連付けられているチャットの Microsoft Teams ID。 |
 | app.locale | ロケール | languageId-countryId (en-us など) として書式設定されたアプリに対してユーザーが構成した現在のロケール。 |
-| page.id | entityId | このコンテンツが指すページの開発者定義の一意の ID。 |
-| page.subPageId | subEntityId | このコンテンツが指すサブページの開発者定義の一意の ID。 このフィールドは、特定のコンテンツへのスクロールやアクティブ化など、ページ内の特定の状態に復元するために使用する必要があります。 |
-| user.loginHint | loginHint | Azure AD で認証するときにlogin_hintとして使用するのに適した値。 悪意のあるユーザーはブラウザーでコンテンツを実行できるため、この値はユーザーが誰であるかについてのヒントとしてのみ使用し、ID の証明として使用しないでください。 このフィールドは、マニフェストで ID アクセス許可が要求された場合にのみ使用できます。 |
-| user.userPrincipalName | Upn | 現在のユーザーの UPN。 これは、外部認証された UPN (ゲスト ユーザーなど) である可能性があります。 悪意のあるユーザーはブラウザーでコンテンツを実行するため、この値はユーザーが誰であるかについてのヒントとしてのみ使用し、ID の証明として使用しないでください。 このフィールドは、マニフェストで ID アクセス許可が要求された場合にのみ使用できます。 |
-| user.id | userObjectId | 現在のユーザーの Azure AD オブジェクト ID。 悪意のあるユーザーはブラウザーでコンテンツを実行するため、この値はユーザーが誰であるかについてのヒントとしてのみ使用し、ID の証明として使用しないでください。 このフィールドは、マニフェストで ID アクセス許可が要求された場合にのみ使用できます。 |
-| user.tenant.id | Tid | 現在のユーザーの Azure AD テナント ID。 悪意のあるユーザーはブラウザーでコンテンツを実行できるため、この値はユーザーが誰であるかについてのヒントとしてのみ使用し、ID の証明として使用しないでください。 このフィールドは、マニフェストで ID アクセス許可が要求された場合にのみ使用できます。 |
+| page.id | entityId | このコンテンツが指すページの開発者が定義した一意の ID。 |
+| page.subPageId | subEntityId | このコンテンツが指すサブページの開発者が定義した一意の ID。 このフィールドは、ページ内の特定の状態 (特定のコンテンツへのスクロールやアクティブ化など) に復元するために使用する必要があります。 |
+| user.loginHint | loginHint | Azure AD で認証するときにlogin_hintとして使用するのに適した値。 悪意のあるユーザーはブラウザーでコンテンツを実行できるため、この値は、ユーザーが誰であるかについてのヒントとしてのみ使用し、ID の証明として使用しないでください。 このフィールドは、マニフェストで ID アクセス許可が要求された場合にのみ使用できます。 |
+| user.userPrincipalName | Upn | 現在のユーザーの UPN。 これは、外部で認証された UPN (ゲスト ユーザーなど) である可能性があります。 悪意のあるパーティがブラウザーでコンテンツを実行するため、この値は、ユーザーが誰であるかについてのヒントとしてのみ使用し、ID の証明として使用しないでください。 このフィールドは、マニフェストで ID アクセス許可が要求された場合にのみ使用できます。 |
+| user.id | userObjectId | 現在のユーザーの Azure AD オブジェクト ID。 悪意のあるパーティがブラウザーでコンテンツを実行するため、この値は、ユーザーが誰であるかについてのヒントとしてのみ使用し、ID の証明として使用しないでください。 このフィールドは、マニフェストで ID アクセス許可が要求された場合にのみ使用できます。 |
+| user.tenant.id | Tid | 現在のユーザーの Azure AD テナント ID。 悪意のあるユーザーはブラウザーでコンテンツを実行できるため、この値は、ユーザーが誰であるかについてのヒントとしてのみ使用し、ID の証明として使用しないでください。 このフィールドは、マニフェストで ID アクセス許可が要求された場合にのみ使用できます。 |
 | team.groupId | groupId | コンテンツが関連付けられているチームのOffice 365 グループ ID。 このフィールドは、マニフェストで ID アクセス許可が要求された場合にのみ使用できます。 |
-| app.theme  | theme | 現在の UI テーマ: 既定、暗、コントラスト |
+| app.theme  | theme | 現在の UI テーマ: 既定、濃色、コントラスト |
 | page.isFullScreen | IsFullScreen | ページが全画面表示モードであるかどうかを示します。 |
 | team.type | teamType | チームの種類。 |
 | sharepointSite.teamSiteUrl | teamSiteUrl | チームに関連付けられているルート SharePoint サイト。 |
 | sharepointSite.teamSiteDomain | teamSiteDomain | チームに関連付けられているルート SharePoint サイトのドメイン。 |
 | sharepointSite.teamSitePath | teamSitePath | チームに関連付けられている SharePoint サイトへの相対パス。 |
 | channel.relativeUrl | channelRelativeUrl | チャネルに関連付けられている SharePoint フォルダーへの相対パス。 |
-| app.host.sessionId | Sessionid | テレメトリ データの関連付けに使用する、現在のホスト セッションの一意の ID。 |
+| app.host.sessionId | Sessionid | テレメトリ データの関連付けに使用する現在のホスト セッションの一意の ID。 |
 | team.userRole | userTeamRole | チーム内のユーザーのロール。 悪意のあるユーザーはブラウザーでコンテンツを実行できるため、この値はユーザーのロールに関するヒントとしてのみ使用し、ロールの証明として使用しないでください。 |
-| team.isArchived | isTeamArchived | チームがアーカイブされているかどうかを示します。 アプリでは、アーカイブされたチームに関連付けられているコンテンツに対する変更を防ぐために、これをシグナルとして使用する必要があります。 |
-| app.host.clientType | hostClientType | ホスト クライアントの種類。 可能な値は、android、ios、Web、デスクトップ、リベルです。 |
+| team.isArchived | isTeamArchived | チームがアーカイブされているかどうかを示します。 アプリでは、アーカイブされたチームに関連付けられているコンテンツに対する変更を防ぐためのシグナルとしてこれを使用する必要があります。 |
+| app.host.clientType | hostClientType | ホスト クライアントの種類。 使用可能な値は、android、ios、Web、デスクトップ、rigel です |
 | page.frameContext | frameContext | ページ URL が読み込まれるコンテキスト (コンテンツ、タスク、設定、削除、sidePanel) |
 | sharepoint | sharepoint | SharePoint コンテキスト。 これは、SharePoint でホストされている場合にのみ使用できます。 |
-| user.tenant.teamsSku | tenantSKU | 現在のユーザー テナントのライセンスの種類。 可能な値はエンタープライズ、無料、edu、不明です |
-| user.licenseType | userLicenseType | 現在のユーザーのライセンスの種類。 指定できる値は、E1、E3、E5 のエンタープライズ プランです。 |
+| user.tenant.teamsSku | tenantSKU | 現在のユーザー テナントのライセンスの種類。 使用可能な値は、エンタープライズ、無料、edu、不明です |
+| user.licenseType | userLicenseType | 現在のユーザーのライセンスの種類。 使用可能な値は、E1、E3、E5 エンタープライズ プランです |
 | app.parentMessageId | parentMessageId | このタスク モジュールが起動された親メッセージの ID。 これは、ボット カードから起動されたタスク モジュールでのみ使用できます。 |
 | app.host.ringId | ringId | 現在のリング ID。 |
-| app.sessionId | appSessionId | テレメトリ データの関連付けに使用する、現在のホスト セッションの一意の ID。 |
-| user.isCallingAllowed | isCallingAllowed | 現在ログインしているユーザーに対して呼び出しを許可するかどうかを表します。 |
+| app.sessionId | appSessionId | テレメトリ データの関連付けに使用する現在のホスト セッションの一意の ID。 |
+| user.isCallingAllowed | isCallingAllowed | 現在ログインしているユーザーに対して呼び出しが許可されるかどうかを表します。 |
 | user.isPSTNCallingAllowed | isPSTNCallingAllowed | 現在のユーザーに対して PSTN 通話が許可されているかどうかを示します |
 | meeting.id | meetingId | 会議コンテキストで実行するときにタブで使用される会議 ID。 |
 | channel.defaultOneNoteSectionId | defaultOneNoteSectionId | チャネルにリンクされている OneNote セクション ID。 |
 | page.isMultiWindow | isMultiWindow | タブがポップアップ ウィンドウ内にあるかどうかを示します。 |
 
-詳細については、[コンテキスト インターフェイスと *コンテキスト* インターフェイス](using-teams-client-sdk.md#updates-to-the-context-interface) [API リファレンス](/javascript/api/@microsoft/teams-js/app.context)の更新を参照してください。
+詳細については、「[コンテキスト インターフェイスへの更新」と *「コンテキスト* インターフェイス](using-teams-client-sdk.md#updates-to-the-context-interface) API リファレンス [](/javascript/api/@microsoft/teams-js/app.context)」を参照してください。
 
 ## <a name="retrieve-context-in-private-channels"></a>プライベート チャネルでコンテキストを取得する
 
 > [!NOTE]
-> プライベート チャネルは現在、プライベート開発者向けプレビューでのみ提供されています。
+> プライベート チャネルは現在、プライベート開発者プレビューのみです。
 
-コンテンツ ページがプライベート チャネルに読み込まれると、チャネルのプライバシーを `getContext` 保護するために、通話から受信したデータが難読化されます。
+コンテンツ ページがプライベート チャネルに読み込まれると、呼び出しから `getContext` 受信したデータは難読化され、チャネルのプライバシーが保護されます。
 
 コンテンツ ページがプライベート チャネルにある場合、次のフィールドが変更されます。
 
@@ -242,12 +242,12 @@ microsoftTeams.getContext((context) => {
 ページでこれらの値のいずれかを使用する場合、フィールドの `channel.membershipType` 値は `Private` 、ページがプライベート チャネルに読み込まれ、適切に応答できるかどうかを判断する必要があります。
 
 > [!NOTE]
->`teamSiteUrl` 標準チャネルにも適しています。 ページでこれらの値のいずれかを使用する場合、フィールドの `channelType` 値は `Shared` 、ページが共有チャネルに読み込まれ、適切に応答できるかどうかを判断する必要があります。
+>`teamSiteUrl` 標準チャネルにも適しています。 ページでこれらの値のいずれかを使用する場合、ページが共有チャネルに読み込まれ、適切に応答できるかどうかを判断するには、フィールドの `channelType` 値を にする必要があります `Shared` 。
 
 ## <a name="get-context-in-shared-channels"></a>共有チャネルでコンテキストを取得する
 
-コンテンツ UX が共有チャネルに読み込まれる場合は、共有チャネルの変更の呼び出しから `getContext` 受信したデータを使用します。 タブで次のいずれかの値を使用する場合は、フィールドに `channelType` 入力して、タブが共有チャネルに読み込まれているかどうかを判断し、適切に応答する必要があります。
-共有チャネルの `groupId` 場合、値は、ホスト チームの groupId が `null`共有チャネルの真のメンバーシップを正確に反映していないためです。 これに対処するために、`hostTeamGroupID`プロパティと`hostTenantID`プロパティが新しく追加され、メンバーシップを取得するために Microsoft Graph API呼び出しを行う場合に便利です。 `hostTeam` は、共有チャネルを作成したチームを指します。 `currentTeam` は、現在のユーザーが共有チャネルにアクセスしているチームを指します。
+コンテンツ UX が共有チャネルに読み込まれる場合は、共有チャネルの変更の呼び出しから `getContext` 受信したデータを使用します。 タブで次のいずれかの値を使用する場合は、フィールドを設定 `channelType` して、タブが共有チャネルに読み込まれているかどうかを判断し、適切に応答する必要があります。
+共有チャネルの `groupId` 場合、ホスト チームの groupId は共有チャネルの真のメンバーシップを正確に反映しないため、値は `null`です。 これに対処するために、 プロパティと `hostTenantID` プロパティが新しく追加され、`hostTeamGroupID`メンバーシップを取得するための Microsoft Graph API呼び出しを行う場合に便利です。 `hostTeam` は、共有チャネルを作成したチームを指します。 `currentTeam` は、現在のユーザーが共有チャネルにアクセスしている Team を指します。
 
 これらの概念の詳細については、「 [共有チャネル](~/concepts/build-and-test/shared-channels.md)」を参照してください。
 
@@ -255,29 +255,29 @@ microsoftTeams.getContext((context) => {
 
 | プロパティ | 説明 |
 |----------|--------------|
-|`channelId`| プロパティは、共有チャネルのスレッド ID に設定されます。|
-|`channelType`| このプロパティは、共有チャネルに対して `sharedChannel` 設定されます。|
+|`channelId`| プロパティは、共有チャネル スレッド ID に設定されます。|
+|`channelType`| プロパティは、共有チャネルに対して に `sharedChannel` 設定されます。|
 |`groupId`|プロパティは共有チャネル用です `null` 。|
-|`hostTenantId`| プロパティが新しく追加され、ホストのテナント ID が記述されます。これは、現在のユーザーの `tid` テナント ID プロパティと比較するのに役立ちます。 |
-|`hostTeamGroupId`| このプロパティは新しく追加され、共有チャネル メンバーシップを取得するために Microsoft Graph API呼び出しを行う場合に便利な、ホスト チームの Azure AD グループ ID を記述します。 |
+|`hostTenantId`| プロパティが新しく追加され、ホストのテナント ID が記述され、現在のユーザーの `tid` テナント ID プロパティと比較するのに役立ちます。 |
+|`hostTeamGroupId`| プロパティが新しく追加され、ホスト チームの Azure AD グループ ID が記述され、Microsoft Graph API呼び出しを行って共有チャネル メンバーシップを取得するのに役立ちます。 |
 |`teamId`|プロパティが新しく追加され、現在の共有チームのスレッド ID に設定されます。 |
-|`teamName`|プロパティは、現在の共有チームの `teamName`. |
-|`teamType`|プロパティは、現在の共有チームの `teamType`.|
-|`teamSiteUrl`|このプロパティは、共有チャネル `channelSiteUrl`の説明です。|
-|`teamSitePath`| このプロパティは、共有チャネル `channelSitePath`の説明です。|
-|`teamSiteDomain`| このプロパティは、共有チャネル `channelSiteDomain`の説明です。|
-|`tenantSKU`| このプロパティは、ホスト チーム `tenantSKU`の .|
+|`teamName`|プロパティは、現在の共有チームの `teamName`に設定されます。 |
+|`teamType`|プロパティは、現在の共有チームの `teamType`に設定されます。|
+|`teamSiteUrl`|プロパティは、共有チャネル `channelSiteUrl`の について説明します。|
+|`teamSitePath`| プロパティは、共有チャネル `channelSitePath`の について説明します。|
+|`teamSiteDomain`| プロパティは、共有チャネル `channelSiteDomain`の について説明します。|
+|`tenantSKU`| プロパティは、ホスト チームの `tenantSKU`について説明します。|
 |`tid`|  プロパティは、現在のユーザーのテナント ID を記述します。|
 |`userObjectId`|  プロパティは、現在のユーザーの ID を記述します。|
-|`userPrincipalName`| このプロパティは、現在のユーザーの UPN を表します。|
+|`userPrincipalName`| プロパティは、現在のユーザーの UPN について説明します。|
 
-共有チャネルの詳細については、「 [共有](~/concepts/build-and-test/shared-channels.md)チャネル」を参照してください。
+共有チャネルの詳細については、「共有 [チャネル」を](~/concepts/build-and-test/shared-channels.md)参照してください。
 
 ## <a name="handle-theme-change"></a>テーマの変更を処理する
 
-テーマが変更された場合は、アプリを登録して通知を受け取 `microsoftTeams.app.registerOnThemeChangeHandler(function(theme) { /* ... */ })`ることができます。
+を呼び出 `microsoftTeams.app.registerOnThemeChangeHandler(function(theme) { /* ... */ })`すことで、テーマが変更された場合に通知されるようにアプリを登録できます。
 
-`theme`関数内の引数は、値`default`が 、 、 または `dark``contrast`.
+関数の引数は`theme`、または `contrast`の`default``dark`値を持つ文字列です。
 
 ## <a name="next-step"></a>次のステップ
 
@@ -286,7 +286,7 @@ microsoftTeams.getContext((context) => {
 
 ## <a name="see-also"></a>関連項目
 
-* [タブデザインのガイドライン](../../tabs/design/tabs.md)
+* [タブデザインガイドライン](../../tabs/design/tabs.md)
 * [Teams タブ](~/tabs/what-are-tabs.md)
 * [プライベート タブを作成する](~/tabs/how-to/create-personal-tab.md)
 * [[チャネル] または [グループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)

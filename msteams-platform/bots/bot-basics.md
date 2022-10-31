@@ -1,31 +1,31 @@
 ---
 title: ボットのアクティビティ ハンドラー
 author: surbhigupta
-description: メッセージ、チャネル、チーム、メンバー、メンション、認証、Microsoft Bot Framework SDK を使用したカード アクションの Microsoft Teams イベントとアクティビティ ハンドラーについて説明します。
+description: Microsoft Bot Framework SDK を使用したメッセージ、チャネル、チーム、メンバー、メンション、認証、カード アクションの Microsoft Teams イベントとアクティビティ ハンドラーについて説明します。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: 4780c4c2ca3965186411f7927f1fb5b555647004
-ms.sourcegitcommit: b918181217995a47be34632e1051d0f4d4d481b0
+ms.openlocfilehash: 6599fbecd9166e053952bbbf70c7a2bea7ab48e3
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2022
-ms.locfileid: "67321209"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791679"
 ---
 # <a name="bot-activity-handlers"></a>ボットのアクティビティ ハンドラー
 
 このドキュメントは、主要な [Bot Framework のドキュメント](https://aka.ms/azure-bot-service-docs)の「[ボットのしくみ](https://aka.ms/how-bots-work)」に基づいています。 Microsoft Teams 用に開発されたボットと主要な Bot Framework の主な違いは、Teams で提供される機能にあります。
 
-ボットの会話ロジックを整理するために、アクティビティ ハンドラーが使用されます。 アクティビティは、Teams アクティビティ ハンドラーとボット ロジックを使用して 2 つの方法で処理されます。 Teams アクティビティ ハンドラーは、Teams 固有のイベントと対話のサポートを追加します。 ボット オブジェクトには、会話の推論またはターンのロジックが含まれ、ターン ハンドラーを公開します。これは、ボット アダプターからの受信アクティビティを承諾できるメソッドです。
+アクティビティ ハンドラーは、ボットの会話ロジックを整理するために使用されます。 アクティビティは、Teams アクティビティ ハンドラーとボット ロジックを使用して 2 つの方法で処理されます。 Teams アクティビティ ハンドラーは、Teams 固有のイベントと相互作用のサポートを追加します。 ボット オブジェクトには、会話の推論またはターンのロジックが含まれ、ターン ハンドラーを公開します。これは、ボット アダプターからの受信アクティビティを承諾できるメソッドです。
 
 ## <a name="teams-activity-handlers"></a>Teams のアクティビティ ハンドラー
 
 Teams のアクティビティ ハンドラーは、Microsoft Bot Framework のアクティビティ ハンドラーから派生したものです。 すべての Teams アクティビティをルーティングしてから、Teams 以外の特定のアクティビティを処理できるようにします。
 
-Teams のボットがアクティビティを受信すると、アクティビティ ハンドラーにルーティングされます。 すべてのアクティビティは、ターン ハンドラーと呼ばれる 1 つのベース ハンドラーを経由してルーティングされます。 ターン ハンドラーは、受信したアクティビティを管理するために必要なアクティビティ ハンドラーを呼び出します。 Teams ボットは、Bot Framework の `ActivityHandler` クラスから派生した `TeamsActivityHandler` クラスから派生したものです。
+Teams 用のボットがアクティビティを受け取ると、アクティビティ ハンドラーにルーティングされます。 すべてのアクティビティは、ターン ハンドラーと呼ばれる 1 つのベース ハンドラーを経由してルーティングされます。 ターン ハンドラーは、受信したアクティビティを管理するために必要なアクティビティ ハンドラーを呼び出します。 Teams ボットは、Bot Framework の `ActivityHandler` クラスから派生した `TeamsActivityHandler` クラスから派生したものです。
 
 > [!NOTE]
-> ボットアクティビティの処理に 15 秒以上かかる場合、Teams はボット エンドポイントに再試行要求を送信します。 そのため、ボットに重複する要求が表示されます。
+> ボット アクティビティの処理に 15 秒以上かかる場合、Teams はボット エンドポイントに再試行要求を送信します。 そのため、ボットに重複する要求が表示されます。
 
 # <a name="c"></a>[C#](#tab/csharp)
 
@@ -33,7 +33,7 @@ Teams のボットがアクティビティを受信すると、アクティビ�
 
 Teams アクティビティ ハンドラー クラスには、主に `OnConversationUpdateActivityAsync` と `OnInvokeActivityAsync` の 2 つの Teams アクティビティ ハンドラーがあります。 `OnConversationUpdateActivityAsync` はすべての会話更新アクティビティをルーティングし、`OnInvokeActivityAsync` は Teams によって呼び出されたすべてのアクティビティをルーティングします。
 
-特定の Teams のアクティビティ ハンドラーのロジックを実装するには、「[ボット ロジック](#bot-logic)」セクションに示すように、ボット内のメソッドをオーバーライドする必要があります。 これらのハンドラーの基本実装はありません。 そのため、オーバーライドに必要なロジックを追加します。
+特定の Teams のアクティビティ ハンドラーのロジックを実装するには、「[ボット ロジック](#bot-logic)」セクションに示すように、ボット内のメソッドをオーバーライドする必要があります。 これらのハンドラーの基本実装はありません。 したがって、オーバーライドに必要なロジックを追加します。
 
 Teams のアクティビティ ハンドラーのコード スニペット:
 
@@ -103,7 +103,7 @@ protected override Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> te
 
 Teams アクティビティ ハンドラー クラスには、主に `dispatchConversationUpdateActivity` と `onInvokeActivity` の 2 つの Teams アクティビティ ハンドラーがあります。 `dispatchConversationUpdateActivity` はすべての会話更新アクティビティをルーティングし、`onInvokeActivity` は Teams によって呼び出されたすべてのアクティビティをルーティングします。
 
-特定の Teams のアクティビティ ハンドラーのロジックを実装するには、「[ボット ロジック](#bot-logic)」セクションに示すように、ボット内のメソッドをオーバーライドする必要があります。 これらのハンドラーのボット ロジックを定義し、最後に必ず `next()` を呼び出してください。 呼び出すと `next()`、次のハンドラーが確実に実行されます。
+特定の Teams のアクティビティ ハンドラーのロジックを実装するには、「[ボット ロジック](#bot-logic)」セクションに示すように、ボット内のメソッドをオーバーライドする必要があります。 これらのハンドラーのボット ロジックを定義し、最後に必ず `next()` を呼び出してください。 を呼び出 `next()`すと、次のハンドラーが確実に実行されます。
 
 Teams のアクティビティ ハンドラーのコード スニペット:
 
@@ -173,13 +173,13 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 Teams アクティビティ ハンドラー クラスには、主に `on_conversation_update_activity` と `on_invoke_activity` の 2 つの Teams アクティビティ ハンドラーがあります。 `on_conversation_update_activity` はすべての会話更新アクティビティをルーティングし、`on_invoke_activity` は Teams によって呼び出されたすべてのアクティビティをルーティングします。
 
-特定の Teams のアクティビティ ハンドラーのロジックを実装するには、「[ボット ロジック](#bot-logic)」セクションに示すように、ボット内のメソッドをオーバーライドする必要があります。 これらのハンドラーの基本実装はありません。 そのため、オーバーライドに必要なロジックを追加します。
+特定の Teams のアクティビティ ハンドラーのロジックを実装するには、「[ボット ロジック](#bot-logic)」セクションに示すように、ボット内のメソッドをオーバーライドする必要があります。 これらのハンドラーの基本実装はありません。 したがって、オーバーライドに必要なロジックを追加します。
 
 ---
 
 ## <a name="bot-logic"></a>ボット ロジック
 
-ボット ロジックは、1 つ以上のボット チャネルから受信したアクティビティを処理し、それに応じて送信アクティビティを生成します。 Teams アクティビティ ハンドラー クラスから派生したボットは、最初に Teams アクティビティをチェックします。 Teams アクティビティがないか確認したら、他のすべてのアクティビティが Bot Framework のアクティビティ ハンドラーに渡されます。
+ボット ロジックは、1 つ以上のボット チャネルから受信したアクティビティを処理し、それに応じて送信アクティビティを生成します。 これは、Teams アクティビティ ハンドラー クラスから派生したボットに当てはまります。これは、最初に Teams アクティビティをチェックします。 Teams アクティビティがないか確認したら、他のすべてのアクティビティが Bot Framework のアクティビティ ハンドラーに渡されます。
 
 # <a name="c"></a>[C#](#tab/csharp)
 
@@ -192,7 +192,7 @@ Teams アクティビティ ハンドラー クラスには、主に `on_convers
 
 アクティビティ ハンドラーは、メッセージ スレッドの代わりに新しいメンバーがチームに追加されるチームのコンテキストで異なります。
 
-定義されているハンドラー `ActivityHandler` の一覧には、次のものが含まれます。
+で `ActivityHandler` 定義されているハンドラーの一覧には、次のイベントが含まれます。
 
 | イベント | ハンドラー | 説明 |
 | :-- | :-- | :-- |
@@ -208,7 +208,7 @@ Teams アクティビティ ハンドラー クラスには、主に `on_convers
 
 #### <a name="teams-specific-activity-handlers"></a>Teams に固有のアクティビティ ハンドラー
 
-`TeamsActivityHandler` は、「主要な Bot Framework ハンドラー」セクションのハンドラーの一覧を拡張して、次が含まれます。
+では `TeamsActivityHandler` 、コア Bot Framework ハンドラー セクションのハンドラーの一覧が拡張され、次のイベントが含まれます。
 
 | イベント | ハンドラー | 説明 |
 | :-- | :-- | :-- |
@@ -221,7 +221,7 @@ Teams アクティビティ ハンドラー クラスには、主に `on_convers
 
 #### <a name="teams-invoke-activities"></a>Teams の呼び出しアクティビティ
 
-Teams アクティビティ ハンドラーから呼び出される Teams アクティビティ ハンドラーの一覧には、 `OnInvokeActivityAsync` 次のものが含まれます。
+Teams アクティビティ ハンドラーから呼び出される Teams アクティビティ ハンドラーの `OnInvokeActivityAsync` 一覧には、次の呼び出しの種類が含まれています。
 
 | 呼び出しの種類                    | ハンドラー                              | 説明                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -229,7 +229,7 @@ Teams アクティビティ ハンドラーから呼び出される Teams アク
 | fileConsent/invoke              | `OnTeamsFileConsentAcceptAsync`      | このメソッドは、ファイルの同意カードがユーザーによって承諾されたときに呼び出されます。 |
 | fileConsent/invoke              | `OnTeamsFileConsentAsync`            | このメソッドは、ファイルの同意カード アクティビティがコネクタから受信されたときに呼び出されます。 |
 | fileConsent/invoke              | `OnTeamsFileConsentDeclineAsync`     | このメソッドは、ファイルの同意カードがユーザーによって拒否されたときに呼び出されます。 |
-| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | このメソッドは、Office 365 コネクタ カードアクション アクティビティがコネクタから受信されたときに呼び出されます。 |
+| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | このメソッドは、Office 365 コネクタ カード アクション アクティビティがコネクタから受信されたときに呼び出されます。 |
 | signin/verifyState              | `OnTeamsSigninVerifyStateAsync`      | このメソッドは、signIn 検証状態がコネクタから受信されたときに呼び出されます。 |
 | task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | このメソッドは、タスク モジュールがフェッチされたときにロジックを提供するために、派生クラスでオーバーライドできます。 |
 | task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | このメソッドは、タスク モジュールが送信されたときにロジックを提供するために、派生クラスでオーバーライドできます。 |
@@ -245,7 +245,7 @@ Teams アクティビティ ハンドラーから呼び出される Teams アク
 
 アクティビティ ハンドラーは、メッセージ スレッドの代わりに新しいメンバーがチームに追加されるチームのコンテキストで異なります。
 
-定義されているハンドラー `ActivityHandler` の一覧には、次のものが含まれます。
+で `ActivityHandler` 定義されているハンドラーの一覧には、次のイベントが含まれます。
 
 | イベント | ハンドラー | 説明 |
 | :-- | :-- | :-- |
@@ -260,7 +260,7 @@ Teams アクティビティ ハンドラーから呼び出される Teams アク
 
 #### <a name="teams-specific-activity-handlers"></a>Teams に固有のアクティビティ ハンドラー
 
-`TeamsActivityHandler` は、「主要な Bot Framework ハンドラー」セクションのハンドラーの一覧を拡張して、次が含まれます。
+では `TeamsActivityHandler` 、コア Bot Framework ハンドラー セクションのハンドラーの一覧が拡張され、次のイベントが含まれます。
 
 | イベント | ハンドラー | 説明 |
 | :-- | :-- | :-- |
@@ -273,7 +273,7 @@ Teams アクティビティ ハンドラーから呼び出される Teams アク
 
 #### <a name="teams-invoke-activities"></a>Teams の呼び出しアクティビティ
 
-Teams アクティビティ ハンドラーから呼び出される Teams アクティビティ ハンドラーの一覧には、 `onInvokeActivity` 次のものが含まれます。
+Teams アクティビティ ハンドラーから呼び出される Teams アクティビティ ハンドラーの `onInvokeActivity` 一覧には、次のものが含まれます。
 
 | 呼び出しの種類                    | ハンドラー                              | 説明                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -281,7 +281,7 @@ Teams アクティビティ ハンドラーから呼び出される Teams アク
 | fileConsent/invoke              | `handleTeamsFileConsentAccept`      | このメソッドは、ファイルの同意カードがユーザーによって承諾されたときに呼び出されます。 |
 | fileConsent/invoke              | `handleTeamsFileConsent`            | このメソッドは、ファイルの同意カード アクティビティがコネクタから受信されたときに呼び出されます。 |
 | fileConsent/invoke              | `handleTeamsFileConsentDecline`     | このメソッドは、ファイルの同意カードがユーザーによって拒否されたときに呼び出されます。 |
-| actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | このメソッドは、Office 365 コネクタ カードアクション アクティビティがコネクタから受信されたときに呼び出されます。 |
+| actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | このメソッドは、Office 365 コネクタ カード アクション アクティビティがコネクタから受信されたときに呼び出されます。 |
 | signin/verifyState              | `handleTeamsSigninVerifyState`      | このメソッドは、signIn 検証状態がコネクタから受信されたときに呼び出されます。 |
 | task/fetch                      | `handleTeamsTaskModuleFetch`        | このメソッドは、タスク モジュールがフェッチされたときにロジックを提供するために、派生クラスでオーバーライドできます。 |
 | task/submit                     | `handleTeamsTaskModuleSubmit`       | このメソッドは、タスク モジュールが送信されたときにロジックを提供するために、派生クラスでオーバーライドできます。 |
@@ -297,7 +297,7 @@ Teams アクティビティ ハンドラーから呼び出される Teams アク
 
 アクティビティ ハンドラーは、メッセージ スレッドの代わりに新しいメンバーがチームに追加されるチームのコンテキストで異なります。
 
-定義されているハンドラー `ActivityHandler` の一覧には、次のものが含まれます。
+で `ActivityHandler` 定義されているハンドラーの一覧には、次のイベントが含まれます。
 
 | イベント | ハンドラー | 説明 |
 | :-- | :-- | :-- |
@@ -313,7 +313,7 @@ Teams アクティビティ ハンドラーから呼び出される Teams アク
 
 #### <a name="teams-specific-activity-handlers"></a>Teams に固有のアクティビティ ハンドラー
 
-`TeamsActivityHandler` は、「主要な Bot Framework ハンドラー」セクションのハンドラーの一覧を拡張して、次が含まれます。
+では `TeamsActivityHandler` 、コア Bot Framework ハンドラー セクションのハンドラーの一覧が拡張され、次のイベントが含まれます。
 
 | イベント | ハンドラー | 説明 |
 | :-- | :-- | :-- |
@@ -326,7 +326,7 @@ Teams アクティビティ ハンドラーから呼び出される Teams アク
 
 #### <a name="teams-invoke-activities"></a>Teams の呼び出しアクティビティ
 
-Teams アクティビティ ハンドラーから呼び出される Teams アクティビティ ハンドラーの一覧には、 `on_invoke_activity` 次のものが含まれます。
+Teams アクティビティ ハンドラーから呼び出される Teams アクティビティ ハンドラーの `on_invoke_activity` 一覧には、次の呼び出しの種類が含まれています。
 
 | 呼び出しの種類                    | ハンドラー                              | 説明                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
@@ -334,7 +334,7 @@ Teams アクティビティ ハンドラーから呼び出される Teams アク
 | fileConsent/invoke              | `on_teams_file_consent_accept`      | このメソッドは、ファイルの同意カードがユーザーによって承諾されたときに呼び出されます。 |
 | fileConsent/invoke              | `on_teams_file_consent`            | このメソッドは、ファイルの同意カード アクティビティがコネクタから受信されたときに呼び出されます。 |
 | fileConsent/invoke              | `on_teams_file_consent_decline`     | このメソッドは、ファイルの同意カードがユーザーによって拒否されたときに呼び出されます。 |
-| actionableMessage/executeAction | `on_teams_o365_connector_card_action` | このメソッドは、Office 365 コネクタ カードアクション アクティビティがコネクタから受信されたときに呼び出されます。 |
+| actionableMessage/executeAction | `on_teams_o365_connector_card_action` | このメソッドは、Office 365 コネクタ カード アクション アクティビティがコネクタから受信されたときに呼び出されます。 |
 | signin/verifyState              | `on_teams_signin_verify_state`      | このメソッドは、signIn 検証状態がコネクタから受信されたときに呼び出されます。 |
 | task/fetch                      | `on_teams_task_module_fetch`        | このメソッドは、タスク モジュールがフェッチされたときにロジックを提供するために、派生クラスでオーバーライドできます。 |
 | task/submit                     | `on_teams_task_module_submit`       | このメソッドは、タスク モジュールが送信されたときにロジックを提供するために、派生クラスでオーバーライドできます。 |
@@ -345,7 +345,7 @@ Teams アクティビティ ハンドラーから呼び出される Teams アク
 
 ---
 
-ボット アクティビティ ハンドラーについて理解したので、会話と、ボットが受信または送信するメッセージに応じて、ボットの動作が異なる方法を見てみましょう。
+ボット アクティビティ ハンドラーについて理解したので、会話と、ボットが受信または送信するメッセージに応じてボットがどのように動作するかを確認しましょう。
 
 ## <a name="next-step"></a>次のステップ
 

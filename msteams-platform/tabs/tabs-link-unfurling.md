@@ -1,16 +1,16 @@
 ---
 title: タブのリンクの展開とステージ ビュー
 author: Rajeshwari-v
-description: Web コンテンツを表示するために呼び出される全画面表示 UI コンポーネントであるステージ ビューについて説明します。 リンク解除は、アダプティブ カードを使用して URL をタブに変換するために使用されます。
+description: Web コンテンツを表示するために呼び出される全画面表示 UI コンポーネントであるステージ ビューについて説明します。 リンクの展開は、アダプティブ カードを使用して URL をタブに変換するために使用されます。
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: 41fce323ff65dd264e8dca71120ea126ddfcf16f
-ms.sourcegitcommit: 93c2fcd78a2fbb4550d180d295d98d1b3944ca67
+ms.openlocfilehash: 57ff75ac5861f6f348f676c85cc8ac702ece9842
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2022
-ms.locfileid: "68484921"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791567"
 ---
 # <a name="tabs-link-unfurling-and-stage-view"></a>タブのリンクの展開とステージ ビュー
 
@@ -30,7 +30,7 @@ Stage View helps provide a more seamless experience of viewing content in Teams.
 
 |ステージ ビュー|タスク モジュール|
 |:-----------|:-----------|
-|ステージ ビューは、ページ、ダッシュボード、ファイルなど、ユーザーに表示する豊富なコンテンツがある場合に便利です。 全画面表示キャンバスでコンテンツをレンダリングするのに役立つ豊富な機能が提供されます。|[タスク モジュール](../task-modules-and-cards/task-modules/task-modules-tabs.md) は、ユーザーの注意を必要とするメッセージを表示したり、次の手順に進むのに必要な情報を収集したりするのに特に便利です。|
+|ステージ ビューは、ページ、ダッシュボード、ファイルなど、ユーザーに表示する豊富なコンテンツがある場合に便利です。 これは、全画面表示キャンバスでコンテンツをレンダリングするのに役立つ豊富な機能を提供します。|[タスク モジュール](../task-modules-and-cards/task-modules/task-modules-tabs.md) は、ユーザーの注意を必要とするメッセージを表示したり、次の手順に進むのに必要な情報を収集したりするのに特に便利です。|
   
 ## <a name="invoke-stage-view"></a>ステージ ビューを呼び出す
 
@@ -45,9 +45,9 @@ Stage View helps provide a more seamless experience of viewing content in Teams.
 
 次の画像は、アダプティブ カードから開かれたステージを示しています。
 
-[![アダプティブ カードからステージを開く](~/assets/images/tab-images/open-stage-from-adaptive-card1.png)](~/assets/images/tab-images/open-stage-from-adaptive-card1.png#lightbox)
+:::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card1.png" alt-text="アダプティブ カードからのオープン ステージを示すスクリーンショット。"lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card1.png":::
 
-[![ステージを開く](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)](~/assets/images/tab-images/open-stage-from-adaptive-card2.png#lightbox)
+:::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card2.png" alt-text="カードから開いているステージを示すスクリーンショット。"lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card2.png":::
 
 ### <a name="example"></a>例
 
@@ -90,7 +90,7 @@ Stage View helps provide a more seamless experience of viewing content in Teams.
 
 > [!NOTE]
 >
-> Teams モバイル クライアントで、 [Teams ストア](~/concepts/deploy-and-publish/apps-publish-overview.md) を通じて配布されたアプリのステージ ビューを呼び出し、モバイル最適化エクスペリエンスを持たないと、デバイスの既定の Web ブラウザーが開きます。 ブラウザは、`TabInfo` オブジェクトの `websiteUrl` パラメータで指定された URL を開きます。
+> Teams モバイル クライアントでは、 [Teams ストア](~/concepts/deploy-and-publish/apps-publish-overview.md) を介して配布され、モバイル最適化エクスペリエンスを持たないアプリのステージ ビューを呼び出すと、デバイスの既定の Web ブラウザーが開きます。 ブラウザは、`TabInfo` オブジェクトの `websiteUrl` パラメータで指定された URL を開きます。
 
 ## <a name="invoke-stage-view-through-deep-link"></a>ディープ リンクを使用してステージ ビューを呼び出す
 
@@ -104,7 +104,7 @@ Stage View helps provide a more seamless experience of viewing content in Teams.
 
 ### <a name="examples"></a>例
 
-ユーザーが URL を入力すると、アダプティブ カードに割り当て解除されます。
+ユーザーが URL を入力すると、アダプティブ カードに展開されます。
 
 ステージ ビューを呼び出すディープ リンクの例を次に示します。
 

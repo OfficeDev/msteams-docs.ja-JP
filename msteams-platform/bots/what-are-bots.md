@@ -1,23 +1,23 @@
 ---
 title: Microsoft Teams のボット
 author: surbhigupta
-description: この記事では、Microsoft Teams の会話ボットを使用して、ファイルの共有、プロアクティブ通知の送信、対話型カードの送信、通話、ボット コマンドの呼び出し、IVR の呼び出しを行います。
+description: この記事では、Microsoft Teams の会話ボットを使用して、ファイルの共有、プロアクティブ通知の送信、対話型カードの送信、通話、ボット コマンドの呼び出し、IVR を行います。
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: anclear
-ms.openlocfilehash: b9d0bda0d733a3b4a3204449ca9fd2ed6746ac98
-ms.sourcegitcommit: b9ec2a17094cb8b24c3017815257431fb0a679d0
+ms.openlocfilehash: 4f421c5bcc8251976a54bf5f94b7dafbcc50c64c
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "67990911"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791581"
 ---
 # <a name="build-bots-for-teams"></a>Teams 用のボットを構築する
 
 ボットは、チャットボットまたは会話ボットとも呼ばれます。 これは、カスタマー サービスやサポート スタッフなどのユーザーが単純で反復的なタスクを実行するアプリです。 ボットの日常的な使用には、天気に関する情報を提供するボット、ディナーの予約を行うボット、旅行情報を提供するボットなどがあります。 ボットとのやり取りは、質問や回答を素早く行ったり、複雑な会話になったりする場合があります。
 
 > [!NOTE]
-> まず、 [JavaScript を使用して最初のボット アプリをビルド](../sbs-gs-bot.yml) するか、Teams 用の新しい世代開発ツールを使用して [JavaScript で通知ボットをビルド](../sbs-gs-notificationbot.yml) することをお勧めします。 詳細については、「 [Teams Toolkit の概要」を](../toolkit/teams-toolkit-fundamentals.md)参照してください。
+> まず、 [JavaScript を使用して最初のボット アプリをビルド](../sbs-gs-bot.yml) するか、新しい世代の Teams 開発ツールを使用して [JavaScript を使用して通知ボットをビルド](../sbs-gs-notificationbot.yml) することをお勧めします。 詳細については、「 [Teams Toolkit の概要](../toolkit/teams-toolkit-fundamentals.md)」を参照してください。
 
 > [!IMPORTANT]
 >
@@ -58,19 +58,19 @@ Teams ボット API を使用して、チャットまたはチームのメンバ
 <!--- TBD: For quick scanning, see if the above information can be itemized as a list.
 --->
 
-## <a name="next-step"></a>次のステップ
-
-> [!div class="nextstepaction"]
-> [ボットと SDK](~/bots/bot-features.md)
-
 ## <a name="code-samples"></a>コード サンプル
 
 |サンプルの名前 | 説明 | C# | Node.js |
 |----------------|-----------------|--------------|--------------|
 | ボットの毎日のタスクリマインダー| 定期的なタスクをスケジュールし、スケジュールされた時刻にリマインダーを受け取る方法を示します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/nodejs) |
-| Hello World ボット | これは、Bot 拡張機能と Message 拡張機能の両方の機能を備えたシンプルな hello world アプリケーションです。 |  | [表示](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/hello-world-bot) |
-| アダプティブ カード通知 | これは、Bots を使用してさまざまなアダプティブ カードで通知を送信する方法を示すサンプルです。 |  | [表示](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/adaptive-card-notification) |
-| 受信 Webhook 通知 | これは、Microsoft Teams チャネルで受信 Webhook 経由で通知を送信する方法を示すサンプルです。 |  | [表示](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/incoming-webhook-notification) |
+| Hello World ボット | これは、Bot と Message の両方の拡張機能を備えたシンプルな hello world アプリケーションです。 | 該当なし | [表示](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/hello-world-bot) |
+| アダプティブ カード通知 | これは、ボットを使用してさまざまなアダプティブ カードで通知を送信する方法を示すサンプルです。 | 該当なし | [表示](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/adaptive-card-notification) |
+| 受信 Webhook 通知 | これは、Microsoft Teams チャネルで受信 Webhook 経由で通知を送信する方法を示すサンプルです。 | 該当なし | [表示](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/incoming-webhook-notification) |
+
+## <a name="next-step"></a>次のステップ
+
+> [!div class="nextstepaction"]
+> [ボットと SDK](~/bots/bot-features.md)
 
 ## <a name="see-also"></a>関連項目
 

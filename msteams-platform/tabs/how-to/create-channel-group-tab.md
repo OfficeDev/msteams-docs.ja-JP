@@ -1,23 +1,23 @@
 ---
 title: チャネル タブまたはグループ タブを作成する
 author: laujan
-description: Node.js、ASP.NET Core、ASP.NET Core MVC を含むカスタム チャネル、グループ タブを作成します。 アプリの生成、パッケージの作成、アプリのビルドと実行、シークレット トンネル、Teams へのアップロード
+description: Node.js、ASP.NET Core、ASP.NET Core MVC を使用してカスタム チャネル、グループ タブを作成します。 アプリの生成、パッケージの作成、アプリのビルドと実行、シークレット トンネル、Teams へのアップロード
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: c21be77b03bf99224467213a4c257635388c57eb
-ms.sourcegitcommit: 40d4bde10b6820c62e49e2400b10ab3569c8c815
+ms.openlocfilehash: 2ad44d0c43df7193106474fc3b6534d9ddde5bfc
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2022
-ms.locfileid: "68615241"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791665"
 ---
 # <a name="create-a-channel-tab-or-group-tab"></a>チャネル タブまたはグループ タブを作成する
 
-チャネルタブまたはグループ タブは、チャネルやグループ チャットにコンテンツを配信します。これにより、専用の Web ベースのコンテンツに関する共同作業スペースを作成できます。
+チャネルまたはグループ タブは、チャネルやグループ チャットにコンテンツを配信します。これは、専用の Web ベースのコンテンツを中心とした共同作業スペースを作成するのに役立ちます。
 
-チャネルまたはグループ タブを構築するための [前提条件](~/tabs/how-to/tab-requirements.md) がすべて揃っていることを確認します。
+チャネルまたはグループ タブを構築するための [前提条件](~/tabs/how-to/tab-requirements.md) がすべて満たされていることを確認します。
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -49,13 +49,13 @@ ms.locfileid: "68615241"
 
 1. コマンド プロンプトで、チャネル/グループ タブの新しいディレクトリを作成します。
 
-1. 新しいディレクトリに次のコマンドを入力して、Microsoft Teams アプリ ジェネレーターを起動します。
+1. 新しいディレクトリに次のコマンドを入力して、Microsoft Teams アプリ ジェネレーターを開始します。
 
     ```cmd
     yo teams
     ```
 
-1. Microsoft Teams アプリ ジェネレーターによってファイルを更新するように求められた一連の質問に値を `manifest.json` 入力します。
+1. Microsoft Teams アプリ ジェネレーターによってファイルを更新するように求める一連の質問に値を指定します `manifest.json` 。
 
     ![ジェネレーターを開くスクリーンショット](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -76,7 +76,7 @@ ms.locfileid: "68615241"
 
     * **(会社) 名 (最大 32 文字)**
 
-        会社名は、アプリ マニフェストで使用できます。 会社名を入力するか、**Enter** キーを押して既定の名前をそのまま使用します。
+        会社名はアプリ マニフェストで使用できます。 会社名を入力するか、**Enter** キーを押して既定の名前をそのまま使用します。
 
     * **使用するマニフェスト バージョン**
 
@@ -94,9 +94,9 @@ ms.locfileid: "68615241"
 
         **( &ast; ) A タブ** を選択します。
 
-    * **このソリューションをホストする URL は?**
+    * **このソリューションをホストする URL?**
 
-        既定では、ジェネレーターは Azure Web サイトの URL を提案します。 アプリをローカルでのみテストしているため、有効な URL は必要ありません。
+        既定では、ジェネレーターは Azure Web サイト URL を提案します。 アプリをローカルでのみテストしているため、有効な URL は必要ありません。
 
     * **アプリ/タブが読み込まれたときに、読み込みインジケーターを表示しますか?**
 
@@ -197,7 +197,7 @@ gulp ngrok-serve
 ### <a name="upload-your-application-to-teams"></a>Microsoft Teams にアプリ パッケージをアップロードする
 
 1. Teams に移動し、**[アプリ]**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="[Teams ストア]"::: を選択します。
-1. [**アプリの管理] を** > 選択 **します。アプリ** > を **アップロードする カスタム アプリをアップロードします**。
+1. [**アプリの管理] [アプリ** >  > **のアップロード****] [カスタム アプリのアップロード] の順に選択します**。
 1. プロジェクト ディレクトリに移動し、**./package** フォルダーに移動し、アプリ パッケージの zip フォルダーを選択し、**[開く]** を選択します。
 
     :::image type="content" source="~/assets/images/tab-images/channeltabadded.png" alt-text="アップロードされたチャネル タブ":::
@@ -214,7 +214,7 @@ gulp ngrok-serve
     >"composeExtensions": [],
     >```
 
-1. タブを追加する手順に従います。チャネルまたはグループ タブのカスタム構成ダイアログがあります。
+1. タブを追加するための指示に従います。チャネルまたはグループ タブのカスタム構成ダイアログがあります。
 1. **[保存]** を選択すると、タブがチャネルのタブ バーに追加されます。
 
     :::image type="content" source="~/assets/images/tab-images/channeltabuploaded.png" alt-text="アップロードされたチャネル タブ":::
@@ -296,7 +296,7 @@ ASP.NET Core は、**Index** という名前のファイルをサイトの既定
 * 32 x 32 ピクセルの **透明なアウトライン アイコン**。
 * アプリの属性を指定する `manifest.json` ファイル。
 
-これらのファイルは、Teams へのタブのアップロードに使用するために、アプリ パッケージで zip 形式にする必要があります。 ユーザーがタブの追加または更新を選択すると、Teams は指定されたマニフェストを `configurationUrl` 読み込み、IFrame に埋め込み、タブにレンダリングします。
+これらのファイルは、Teams へのタブのアップロードに使用するために、アプリ パッケージで zip 形式にする必要があります。 ユーザーがタブの追加または更新を選択すると、Teams はマニフェストで指定された を `configurationUrl` 読み込み、IFrame に埋め込み、タブにレンダリングします。
 
 #### <a name="csproj"></a>.csproj
 
@@ -349,9 +349,9 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 
 1. `script` タグに `microsoftTeams.app.initialize();` の呼び出しを挿入します。
 
-1. Visual Studio ソリューション エクスプローラーで **Pages** フォルダーに移動し、**Tab.cshtml を** 開きます
+1. Visual Studio ソリューション エクスプローラーで、**Pages** フォルダーに移動し **、Tab.cshtml を開きます**
 
-    **Tab.cshtml** 内では、アプリケーションによって、赤または灰色のアイコンでタブを表示するための 2 つのオプションがユーザーに表示されます。 **[灰色の選択]** ボタンまたは **[赤の選択]** ボタンがトリガー`saveGray()`されるか、それぞれ`saveRed()`設定`pages.config.setValidityState(true)`され、構成ページで **[保存]** が有効になります。 このコードを使用すると、要件の構成が完了し、インストールを続行できることを Teams に知らせます。 `pages.config.setConfig` のパラメーターが設定されます。 最後に、コンテンツ URL が正常に解決されたことを示すために、`saveEvent.notifySuccess()` が呼び出されます。
+    **Tab.cshtml** 内で、アプリケーションは、赤または灰色のアイコンでタブを表示するための 2 つのオプションをユーザーに提示します。 **[灰色の選択]** または **[赤の選択]** ボタンがトリガー`saveGray()`されるか、それぞれ`saveRed()`が設定`pages.config.setValidityState(true)`され、構成ページで **[保存]** が有効になります。 このコードを使用すると、要件の構成が完了したことを Teams に知ることができ、インストールを続行できます。 `pages.config.setConfig` のパラメーターが設定されます。 最後に、コンテンツ URL が正常に解決されたことを示すために、`saveEvent.notifySuccess()` が呼び出されます。
 
 1. タブの HTTPS ngrok URL を使用して、各関数の `websiteUrl` と `contentUrl` の値を更新します。
 
@@ -410,10 +410,10 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 
 1. **[アプリ]** を開き、**[アプリのインポート]** を選択します。
 
-<!--- TBD: This steps seems to be removed from main now so commenting it for now.
+   <!--- TBD: This steps seems to be removed from main now so commenting it for now.
 
-1. Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available from the following path:
---->
+   Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It is available from the following path:
+   --->
 
 1. アプリ パッケージの名前は `tab.zip` です。 次のパスで使用できます:
 
@@ -431,7 +431,7 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 
 1. **アプリの URL** で、プライバシー ポリシーを `https://<yourngrokurl>/privacy` に、利用規約を `https://<yourngrokurl>/tou` に更新して保存します。
 
-1. **アプリの機能** で、[**グループアプリとチャネル アプリ**] を選択します。 `https://<yourngrokurl>/tab` で **構成 URL** を更新し、**[スコープ]** タブを選択します。
+1. [ **アプリの機能**] で、[ **グループとチャネル アプリ**] を選択します。 `https://<yourngrokurl>/tab` で **構成 URL** を更新し、**[スコープ]** タブを選択します。
 
 1. **[保存]** を選択します。
 
@@ -518,7 +518,7 @@ ASP.NET Core では、Web ルート フォルダーは、アプリケーショ�
 
 #### <a name="csproj"></a>.csproj
 
-Visual Studio ソリューション エクスプローラー ウィンドウで、プロジェクトを右クリックし、**[プロジェクト ファイルの編集]** を選択します。 ファイルの最後には、アプリケーションのビルド時に zip フォルダーを作成して更新する次のコードが表示されます。
+Visual Studio ソリューション エクスプローラー ウィンドウで、プロジェクトを右クリックし、**[プロジェクト ファイルの編集]** を選択します。 ファイルの最後に、アプリケーションのビルド時に zip フォルダーを作成して更新する次のコードが表示されます。
 
 ```xml
 <PropertyGroup>
@@ -540,15 +540,15 @@ Visual Studio ソリューション エクスプローラー ウィンドウで�
 
 #### <a name="models"></a>モデル
 
-**ChannelGroup.cs は、** 構成中にコントローラーから呼び出すことができるメッセージ オブジェクトとメソッドを示します。
+**ChannelGroup.cs** では、構成中にコントローラーから呼び出すことができるメッセージ オブジェクトとメソッドが表示されます。
 
 #### <a name="views"></a>ビュー
 
 これらは、ASP.NET Core MVC のさまざまなビューです。
 
-* ホーム: ASP.NET Core は、**Index** という名前のファイルをサイトの既定またはホーム ページとして扱います。 ブラウザー URL がサイトのルートを指している場合、 **Index.cshtml** をアプリケーションのホーム ページとして表示できます。
+* ホーム: ASP.NET Core は、**Index** という名前のファイルをサイトの既定またはホーム ページとして扱います。 ブラウザーの URL がサイトのルートを指している場合、 **Index.cshtml** をアプリケーションのホーム ページとして表示できます。
 
-* 共有: **_Layout.cshtml** の部分ビュー マークアップには、アプリケーションの全体的なページ構造と、Teams ライブラリも参照する共有ビジュアル要素が含まれています。
+* 共有: 部分ビュー マークアップ **_Layout.cshtml** には、アプリケーションの全体的なページ構造と、Teams ライブラリも参照する共有ビジュアル要素が含まれています。
 
 #### <a name="controllers"></a>コントローラー
 
@@ -583,9 +583,9 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 
 1. `script` タグに `microsoftTeams.app.initialize();` の呼び出しを挿入します。
 
-1. Visual Studio ソリューション エクスプローラーで、**Tab** フォルダーに移動し、**Tab.cshtml を** 開きます
+1. Visual Studio ソリューション エクスプローラーで **、Tab** フォルダーに移動し **、Tab.cshtml を開きます**。
 
-    **Tab.cshtml** 内では、アプリケーションによって、赤または灰色のアイコンでタブを表示するための 2 つのオプションがユーザーに表示されます。 **[灰色の選択]** ボタンまたは **[赤の選択]** ボタンがトリガー`saveGray()`されるか、それぞれ`saveRed()`設定`pages.config.setValidityState(true)`され、構成ページで **[保存]** が有効になります。 このコードを使用すると、要件の構成が完了し、インストールを続行できることを Teams に知らせます。 `pages.config.setConfig` のパラメーターが設定されます。 最後に、コンテンツ URL が正常に解決されたことを示すために、`saveEvent.notifySuccess()` が呼び出されます。
+    **Tab.cshtml** 内で、アプリケーションは、赤または灰色のアイコンでタブを表示するための 2 つのオプションをユーザーに提示します。 **[灰色の選択]** または **[赤の選択]** ボタンがトリガー`saveGray()`されるか、それぞれ`saveRed()`が設定`pages.config.setValidityState(true)`され、構成ページで **[保存]** が有効になります。 このコードを使用すると、要件の構成が完了したことを Teams に知ることができ、インストールを続行できます。 `pages.config.setConfig` のパラメーターが設定されます。 最後に、コンテンツ URL が正常に解決されたことを示すために、`saveEvent.notifySuccess()` が呼び出されます。
 
 1. タブの HTTPS ngrok URL を使用して、各関数の `websiteUrl` と `contentUrl` の値を更新します。
 
@@ -655,7 +655,7 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 
 1. **アプリの URL** で、プライバシー ポリシーを `https://<yourngrokurl>/privacy` に、利用規約を `https://<yourngrokurl>/tou` に更新して保存します。
 
-1. **アプリの機能** で、[**グループアプリとチャネル アプリ**] を選択します。 `https://<yourngrokurl>/tab` で **構成 URL** を更新し、**[スコープ]** タブを選択します。
+1. [ **アプリの機能**] で、[ **グループとチャネル アプリ**] を選択します。 `https://<yourngrokurl>/tab` で **構成 URL** を更新し、**[スコープ]** タブを選択します。
 
 1. **[保存]** を選択します。
 
@@ -685,4 +685,4 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 * [モバイルのタブ](~/tabs/design/tabs-mobile.md)
 * [アダプティブ カードを使用してタブをビルドする](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [削除ページを作成する](~/tabs/how-to/create-tab-pages/removal-page.md)
-* [Teams のタブとして SharePoint ページを追加する](https://support.microsoft.com/en-us/office/add-a-sharepoint-page-list-or-document-library-as-a-tab-in-teams-131edef1-455f-4c67-a8ce-efa2ebf25f0b)
+* [Teams で SharePoint ページをタブとして追加する](https://support.microsoft.com/en-us/office/add-a-sharepoint-page-list-or-document-library-as-a-tab-in-teams-131edef1-455f-4c67-a8ce-efa2ebf25f0b)

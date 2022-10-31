@@ -1,16 +1,16 @@
 ---
 title: Teams モバイル用のアプリを計画する
 author: surbhigupta
-description: このラーニング モジュールでは、Teams モバイルでアプリを作成する計画を立て、アプリをビルドするためのさまざまな段階を理解する方法について説明します。
+description: この学習モジュールでは、Teams モバイルでアプリを作成する計画を立て、アプリを構築するためのさまざまなステージを理解する方法について説明します。
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
-ms.openlocfilehash: 23f42e07f8c7b44cbcda35b5ed5f8fe17a320271
-ms.sourcegitcommit: c7fbb789b9654e9b8238700460b7ae5b2a58f216
+ms.openlocfilehash: e7cf4508f723efa1b2a0445d304e080677b257ff
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66484021"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791560"
 ---
 # <a name="plan-responsive-tabs-for-teams-mobile"></a>Teams モバイルの応答タブを計画する
 
@@ -40,8 +40,8 @@ ms.locfileid: "66484021"
 
    モバイルでエンゲージメントするための完全なアプリ エクスペリエンスを提供します。 ユーザーがアプリを操作する際に、デスクトップ エクスペリエンスと同等以上の、モバイルで完全な没入型エクスペリエンスを提供します。 ユーザーに優れたエクスペリエンスを提供するには、すべてのユース ケースをモバイルでレスポンシブにします。
 
-> [!TIP]
-> 設計ガイドラインに関する情報を取得するには、[Teams アプリの設計プロセス](design-teams-app-process.md)に関するページを参照してください。
+    > [!TIP]
+    > 設計ガイドラインに関する情報を取得するには、[Teams アプリの設計プロセス](design-teams-app-process.md)に関するページを参照してください。
 
 ## <a name="use-cases"></a>使用例
 
@@ -63,7 +63,7 @@ Teams モバイル プラットフォームでダッシュボードおよびデ�
 
 * ダッシュボードと概要。
 * データ ビジュアル、マップ、インフォグラフィック。
-* グラフ、グラフ、およびテーブル。
+* グラフ、グラフ、テーブル。
 
 :::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png" alt-text="視覚化の形式でデータを表示します。":::
 
@@ -85,7 +85,7 @@ Teams モバイル プラットフォームでダッシュボードおよびデ�
 
 * タイトルと説明を変更します。
 * データ項目を挿入して視覚化を作成します。
-* チャネルまたはグループ チャットで視覚化を共有します。
+* チャネルまたはグループ チャットで視覚エフェクトを共有する。
 
 :::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png" alt-text="ユーザーがグラフ グラフィックスなどのコンテンツを作成できるようにします。":::
 
@@ -111,22 +111,22 @@ Teams モバイル プラットフォームでタスク ボーディング ア�
 
 2 番目のステージでは、ユーザーに次のアプリ アクセス権を提供できます。
 
-* 必須フィールドを持つタスクまたはアイテムを作成して、ユーザーの認知負荷を軽減します。
+* 必須フィールドを使用してタスクまたは項目を作成し、ユーザーの認知負荷を軽減します。
 * ボードの種類またはビューを変更します。
 * ビューを展開してタスクを確認します。
 * タスク モジュールを使用して詳細ビューを表示します。
 * タスクをさまざまなカテゴリに移動します。
 * メールやアクティビティ フィードを使用して、チャットやチャネルで関連するタスクを共有します。
 
-:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png" alt-text="ユーザーのコグニティブ負荷を軽減するタスクを作成します。":::
+:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png" alt-text="ユーザーの認知負荷を軽減するタスクを作成します。":::
 
 有効化:
 
 3 番目のステージでは、次のアクティビティでユーザーのエクスペリエンスを有効にすることができます。
 
 * 新しいプロジェクトとボードを追加します。
-* **提案**、**アクティブ**、終了など、さまざまなカテゴリを追加および変更 **します**。
-* コメント、添付ファイル、およびその他の複雑な機能のタスクを構成します。
+* 提案、**アクティブ**、クローズなど、さまざまなカテゴリ **を** 追加および変更 **します**。
+* コメント、添付ファイル、その他の複雑な機能のタスクを構成します。
 
 :::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-enablement.png" alt-text="プロジェクトとボードを追加して、ユーザー エクスペリエンスを有効にします。":::
 
@@ -156,21 +156,21 @@ Teams モバイル プラットフォームでタスク ボーディング ア�
 
 2 番目のステージでは、次のアクションを導入できます。
 
-* コラボレーション用の新しいボードまたは署名用の新しいドキュメントを作成します。
-* ボードを内部で共有し、ゲストと共有します。
+* コラボレーション用の新しいボードを作成するか、署名用の新しいドキュメントを作成します。
+* ボードを内部的に共有し、ゲストと共有します。
 * 管理者のアクセス許可を構成します。
 
 > [!TIP]
 > 小さな画面に簡単に表示できるアクションを公開します。
 
-:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png" alt-text="コラボレーション用の新しいボードを作成する方法について説明します。":::
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png" alt-text="コラボレーションのための新しいボードの作成について説明します。":::
 
 有効化:
 
 3 番目の段階では、ユーザーに完全なエクスペリエンスを提供します。 次のアクティビティを使用して、ユーザーのエクスペリエンスを有効にすることができます。
 
-* テキスト、図形、クイック ノートを追加します。
-* コンテンツの周囲を移動します。
+* テキスト、図形、クイック ノートを追加する。
+* コンテンツの周りを移動します。
 * レイヤーとフィルターを追加します。
 * 削除、元に戻す、やり直す操作。
 * JS SDK API を使用してカメラとマイクにアクセスします。 デバイス機能の詳細については、 [デバイス機能の概要に関するページ](../device-capabilities/device-capabilities-overview.md)を参照してください。

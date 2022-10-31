@@ -4,12 +4,12 @@ description: Teams ボットでプロアクティブ メッセージを送信す
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: dec8739cbab66e9ddd6aac18038a001b1fdfa104
-ms.sourcegitcommit: b72f51377f41be18ee9b70b042f736605f755cf1
+ms.openlocfilehash: ff2a4310f2dea57fd5fd1d2550474c3361bf8a90
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2022
-ms.locfileid: "68670050"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791462"
 ---
 # <a name="proactive-messages"></a>プロアクティブ メッセージ
 
@@ -337,8 +337,8 @@ POST /v3/conversations
 |---------------|--------------|--------|-------------|--------|
 | Teams での会話の基本  | 1 対 1 のプロアクティブ メッセージの送信など、Teams での会話の基本をご紹介します。| [表示](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [表示](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
 | チャネルで新しいスレッドを開始する | チャネルで新しいスレッドを作成する方法をご紹介します。 | [表示](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [表示](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [表示](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
-| アプリのプロアクティブ インストールとプロアクティブ通知の送信 | このサンプルは、ユーザー向けのアプリのプロアクティブなインストールを使用し、Microsoft Graph API を呼び出してプロアクティブな通知を送信する方法を示しています。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | |
-| プロアクティブ メッセージング | これは、Bots を使用してプロアクティブなアラーム メッセージを送信するために、ユーザーの会話参照情報を保存する方法を示すサンプルです。 | 近日対応予定 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging-teamsfx) | - |
+| アプリのプロアクティブ インストールとプロアクティブ通知の送信 | このサンプルは、ユーザー向けのアプリのプロアクティブなインストールを使用し、Microsoft Graph API を呼び出してプロアクティブな通知を送信する方法を示しています。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | 該当なし |
+| プロアクティブ メッセージング | これは、Bots を使用してプロアクティブなアラーム メッセージを送信するために、ユーザーの会話参照情報を保存する方法を示すサンプルです。 | 該当なし | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging-teamsfx) | 該当なし |
 
 > [!div class="nextstepaction"]
 > [プロアクティブ メッセージングのその他のコード サンプル](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)

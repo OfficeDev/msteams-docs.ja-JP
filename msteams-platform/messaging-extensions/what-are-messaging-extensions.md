@@ -1,23 +1,23 @@
 ---
 title: メッセージの拡張機能
 author: surbhigupta
-description: メッセージ拡張機能の使用方法、種類、および Microsoft Teams プラットフォームで使用されるシナリオについて説明します。 アクションに関するサンプルと検索ベースのメッセージ拡張機能。
+description: メッセージ拡張機能の使用方法、その種類、および Microsoft Teams プラットフォームで使用されるシナリオについて説明します。 アクションと検索ベースのメッセージ拡張機能のサンプル。
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 766a135a55b3894c985a0701bb883d45519b496b
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 09dad55a4ca0b59e517f55e12f24d8ea8d687313
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100274"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791735"
 ---
 # <a name="message-extensions"></a>メッセージの拡張機能
 
-メッセージ拡張機能を使用すると、ユーザーは、Microsoft Teams クライアントのボタンとフォームを使用して Web サービスを操作することができます。 ユーザーは、外部システムのメッセージ作成領域、コマンド ボックスから、またはメッセージから直接、操作を検索したり、開始したりできます。 その操作の結果は、豊富な形式のカードの形式で Teams クライアントに返送できます。
+メッセージ拡張機能を使用すると、ユーザーは、Microsoft Teams クライアントのボタンとフォームを使用して Web サービスを操作することができます。 ユーザーは、外部システムのメッセージ作成領域、コマンド ボックスから、またはメッセージから直接、操作を検索したり、開始したりできます。 その操作の結果は、リッチフォーマットされたカードの形式で Teams クライアントに送信できます。
 
 > [!IMPORTANT]
-> メッセージ拡張機能は Government Community Cloud (GCC) およびGCC-High環境で使用できますが、国防総省 (DoD) 環境では使用できません。
+> メッセージ拡張機能は Government Community Cloud (GCC) 環境とGCC-High環境で使用できますが、国防総省 (DoD) 環境では使用できません。
 
 このドキュメントでは、メッセージ拡張機能、さまざまなシナリオで実行されるタスク、メッセージ拡張機能の動作、操作コマンドと検索コマンド、リンク展開の概要について説明します。
 
@@ -38,12 +38,12 @@ ms.locfileid: "68100274"
 
 ## <a name="understand-how-message-extensions-work"></a>メッセージ拡張機能のしくみを理解する
 
-メッセージ拡張機能は、ホストする Web サービスと、Teams クライアントで Web サービスが呼び出される場所を定義するアプリ マニフェストで構成されます。 Web サービスは Bot Framework のメッセージング スキーマとセキュリティで保護された通信プロトコルを利用するので、Web サービスを Bot Framework でボットとして登録する必要があります。
+メッセージ拡張機能は、ホストする Web サービスと、Teams クライアントで Web サービスを呼び出す場所を定義するアプリ マニフェストで構成されます。 Web サービスは Bot Framework のメッセージング スキーマとセキュリティで保護された通信プロトコルを利用するので、Web サービスを Bot Framework でボットとして登録する必要があります。
 
 > [!NOTE]
 > Web サービスは手動で作成できますが、[Bot Framework SDK](https://github.com/microsoft/botframework-sdk) を使用してプロトコルを操作してください。
 
-Teams アプリのアプリ マニフェストでは、1 つのメッセージ拡張機能が最大 10 個の異なるコマンドで定義されます。 各コマンドは、操作や検索などの種類と、呼び出されたクライアント内の場所を定義します。 呼び出し場所は、メッセージ作成領域、コマンド バー、およびメッセージです。 呼び出し時に、Web サービスは、すべての関連情報を持つ JSON ペイロードを含む HTTPS メッセージを受信します。 JSON ペイロードを使用して応答し、有効にする次の対話を Teams クライアントが認識できるようにします。
+Teams アプリのアプリ マニフェストでは、1 つのメッセージ拡張機能が最大 10 個の異なるコマンドで定義されます。 各コマンドは、アクションや検索などの型と、呼び出されるクライアント内の場所を定義します。 呼び出し場所は、メッセージ作成領域、コマンド バー、およびメッセージです。 呼び出し時に、Web サービスは、すべての関連情報を持つ JSON ペイロードを含む HTTPS メッセージを受信します。 JSON ペイロードを使用して応答し、有効にする次の対話を Teams クライアントが認識できるようにします。
 
 ## <a name="types-of-message-extension-commands"></a>メッセージ拡張機能のコマンドの種類
 
@@ -71,7 +71,7 @@ Teams アプリのアプリ マニフェストでは、1 つのメッセージ�
 
 ## <a name="link-unfurling"></a>リンク展開
 
-Web サービスは、メッセージ作成領域に URL が貼り付けられたときに呼び出されます。 この機能は、リンク展開として知られています。 特定のドメインを含む URL がメッセージ作成領域に貼り付けられたときに、呼び出しを受け取るよう登録することができます。 お客様の Web サービスは、URL を詳細情報が記載されたカードに "展開" することができ、そのカードでは標準的な Web サイトのプレビュー カードよりも多くの情報を提供できます。 ボタンを追加すると、Teams クライアントを離れることなく、ユーザーがすぐにアクションを実行できるようになります。
+Web サービスは、メッセージ作成領域に URL が貼り付けられたときに呼び出されます。 この機能は、リンク展開として知られています。 特定のドメインを含む URL がメッセージ作成領域に貼り付けられたときに、呼び出しを受け取るよう登録することができます。 お客様の Web サービスは、URL を詳細情報が記載されたカードに "展開" することができ、そのカードでは標準的な Web サイトのプレビュー カードよりも多くの情報を提供できます。 ボタンを追加して、ユーザーが Teams クライアントを離れずにすぐにアクションを実行できるようにします。
 次の画像は、リンクがメッセージ拡張機能に貼り付けられたときのリンク展開機能を示しています。
 
 :::image type="content" source="../assets/images/messaging-extension/unfurl-link.png" alt-text="リンクを展開する":::
@@ -238,7 +238,7 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 |------------|-------------|----------------|------------|------------|
 | 操作ベースのコマンドを使用したメッセージ拡張機能 | このサンプルは、操作ベースのメッセージ拡張機能を構築する方法を示しています。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
 | 検索ベースのコマンドを使用したメッセージ拡張機能 | このサンプルは、検索ベースのメッセージ拡張機能を構築する方法を示しています。 | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [表示](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
-|タスク スケジュール用のメッセージ拡張機能操作|このサンプルは、メッセージ拡張機能操作コマンドからタスクをスケジュールし、スケジュールされた日時にリマインダー カードを取得する方法を示しています。|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)|
+|タスク スケジュール用のメッセージ拡張機能操作|このサンプルは、メッセージ拡張機能操作コマンドからタスクをスケジュールし、スケジュールされた日時にリマインダー カードを取得する方法を示しています。|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)| 該当なし |
 
 ## <a name="next-step"></a>次の手順
 

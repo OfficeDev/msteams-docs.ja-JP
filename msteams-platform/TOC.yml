@@ -274,8 +274,6 @@
     - name: アダプティブ カードを使用してタブをビルドする
       href: tabs/how-to/build-adaptive-card-tabs.md
       displayName: 'Slow load times, iFrame constartints, invoke activities, task module, task fetch, task submit, authentication'
-    - name: Microsoft Teams で Fluid を使用する
-      href: tabs/how-to/using-fluid-msteam.md
     - name: タブのリンクの展開とステージ ビュー
       href: tabs/tabs-link-unfurling.md
       displayName: Tab in stage view
@@ -570,6 +568,8 @@
     - name: 作業の開始
       href: /graph/toolkit/get-started/build-a-microsoft-teams-tab
       displayName: 'Access, report, MSAL2'
+    - name: Teams アプリのアクセス許可
+      href: graph-api/app-permissions/teams-app-permissions.md
     - name: リソース固有の同意
       href: graph-api/rsc/resource-specific-consent.md
       displayName: 'Permissions, delegated'

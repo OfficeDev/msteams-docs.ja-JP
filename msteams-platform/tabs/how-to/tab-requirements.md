@@ -1,16 +1,16 @@
 ---
 title: 前提条件
 author: surbhigupta
-description: この記事では、Microsoft Teams の個人用タブ、チャネル タブ、またはグループ タブを作成するための前提条件について説明します。タブの構築に必要なツールについて説明します。
+description: この記事では、Microsoft Teams の個人用、チャネル、またはグループ タブを構築するための前提条件について説明します。タブの作成に必要なツールを把握します。
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: e1160566f73a63a7de87653900cdc64ba7cb0e52
-ms.sourcegitcommit: 87bba925d005eb331d876a0b9b75154f8100e911
+ms.openlocfilehash: 77714171491896f5d61088a20ab7c324227606c1
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2022
-ms.locfileid: "67450416"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791812"
 ---
 # <a name="prerequisites"></a>前提条件
 
@@ -30,7 +30,7 @@ Teams の個人用およびチャネルまたはグループのタブを作成�
 
 * Teams クライアントのテーマ、デザイン、および意図に基づいてタブのスタイルを設定します。 タブは、特定のニーズに対応し、タブのチャネル位置に関連するタスクの小さなセットまたはデータのサブセットに焦点を当てるように構築されている場合に最適に機能します。
 
-* コンテンツ ページ内で、スクリプト タグを使用して、[Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) への参照を追加します。 ページが読み込まれたら、呼び出しを `app.initialize()`行います。それ以外の場合、ページは表示されません。
+* コンテンツ ページ内で、スクリプト タグを使用して、[Microsoft Teams JavaScript クライアント SDK](/javascript/api/overview/msteams-client) への参照を追加します。 ページが読み込まれたら、 を `app.initialize()`呼び出します。それ以外の場合、ページは表示されません。
 
 * モバイル クライアントで認証を機能させるには、Teams JavaScript SDK 1.4.1 以降にアップグレードする必要があります。
 
@@ -48,7 +48,7 @@ Teams の個人用およびチャネルまたはグループのタブを作成�
 | &nbsp; | [Node.js](https://nodejs.org/en/download/) | バックエンド JavaScript ランタイム環境。 最新の v16 LTS リリースを使用します。|
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (推奨) または [Google Chrome](https://www.google.com/chrome/) | 開発者ツールを備えたブラウザー。 |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript、TypeScript、または SharePoint Framework (SPFx) ビルド環境。 |
-| &nbsp; | [Visual Studio 2019](https://visualstudio.com/download)、**ASP.NET と Web 開発**、**または .NET Core クロスプラットフォーム開発** ワークロード | .NET。Visual Studio 2019 の無料コミュニティ エディションをインストールできます。 |
+| &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)、 **ASP.NET および Web 開発**、または **.NET Core クロスプラットフォーム開発** ワークロード | .NET. Visual Studio 2022 の無料コミュニティ エディションをインストールできます。 |
 | &nbsp; | [Git](https://git-scm.com/downloads) | GitHub のサンプル アプリ リポジトリを使用するには、Git を使用します。 |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams を使用して、チャット、会議、通話用のアプリを通じて共同作業を行うすべてのユーザーと 1 か所で共同作業を行うことができます。 |
 | &nbsp; | [ngrok](https://ngrok.com/download) | Ngrok はリバース プロキシ ソフトウェア ツールです。 Ngrok は、ローカルで実行されている Web サーバーのパブリックに利用可能な HTTPS エンドポイントへのトンネルを作成します。 サーバーの Web エンドポイントは、コンピューター上の現在のセッション中に使用できます。 コンピューターがシャットダウンまたはスリープ状態になると、サービスは使用できなくなります。 |

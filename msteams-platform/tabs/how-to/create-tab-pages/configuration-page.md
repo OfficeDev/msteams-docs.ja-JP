@@ -1,16 +1,16 @@
 ---
 title: 構成ページを作成する
 author: surbhigupta
-description: ユーザーから情報を収集する構成ページを作成します。 また、Microsoft Teams タブのコンテキスト データを取得し、認証について理解し、タブを変更または削除します。
+description: ユーザーから情報を収集するための構成ページを作成します。 また、Microsoft Teams タブのコンテキスト データを取得し、認証について知り、タブを変更または削除します。
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: 5db345ce0653407b750afa96e6f82fff949f98f6
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 51e5ef0a6752ab70ede4d2da699f78910c08f6c9
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560660"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791699"
 ---
 # <a name="create-a-configuration-page"></a>構成ページを作成する
 
@@ -30,7 +30,7 @@ ms.locfileid: "68560660"
 
 構成ページの例を次の図に示します。
 
-<img src="~/assets/images/tab-images/configuration-page.png" alt="Configuration page" width="400"/>
+:::image type="content" source="../../../assets/images/tab-images/configuration-page.png" alt-text="構成ページを示すスクリーンショット。":::
 
 次のコードは、構成ページに対応するコードの例です。
 
@@ -160,11 +160,11 @@ ms.locfileid: "68560660"
 
 次の図は、**[灰色]** のアイコンが選択されたタブコンテンツを表示します。
 
-<img src="~/assets/images/tab-images/configure-tab-with-gray.png" alt="Configure tab with select gray" width="400"/>
+:::image type="content" source="../../../assets/images/tab-images/configure-tab-with-gray.png" alt-text="スクリーンショットは、[構成] タブと [灰色] の選択を示しています。":::
 
 次の図は、**[赤]** のアイコンが選択されたタブコンテンツを表示します。
 
-<img src="~/assets/images/tab-images/configure-tab-with-red.png" alt="Configure tab with select red" width="400"/>
+:::image type="content" source="../../../assets/images/tab-images/configure-tab-with-red.png" alt-text="スクリーンショットは、赤を選択した [構成] タブを示しています。":::
 
 適切なボタンを選択すると、`saveGray()` または `saveRed()` のいずれかがトリガーされ、以下が呼び出されます。
 
@@ -172,14 +172,14 @@ ms.locfileid: "68560660"
 * `pages.config.registerOnSaveHandler()`イベント ハンドラーがトリガーされます。
 * アプリの構成ページで **[保存]** が有効になっています。
 
-構成ページ コードは、構成要件が満たされ、インストールを続行できることを Teams に通知します。 ユーザーが **[保存]** を選択すると、`Config` インターフェースで定義されているように `pages.config.setConfig()` のパラメーターが設定されます。 詳細については、「 [構成インターフェイス」を](/javascript/api/@microsoft/teams-js/pages.config?)参照してください。 `saveEvent.notifySuccess()` は、コンテンツ URL が正常に解決されたことを示すために呼び出されます。
+構成ページ コードは、構成要件が満たされ、インストールを続行できることを Teams に通知します。 ユーザーが **[保存]** を選択すると、`Config` インターフェースで定義されているように `pages.config.setConfig()` のパラメーターが設定されます。 詳細については、 [構成インターフェイスに関するページを](/javascript/api/@microsoft/teams-js/pages.config?)参照してください。 `saveEvent.notifySuccess()` は、コンテンツ URL が正常に解決されたことを示すために呼び出されます。
 
 >[!NOTE]
 >
->* タイムアウトまでに保存操作 (コールバック `registerOnSaveHandler`先) を完了するまでに 30 秒かかります。 タイムアウト後、一般的なエラー メッセージが表示されます。
+>* タイムアウトの前に、保存操作 (へのコールバック) を完了するまでに `registerOnSaveHandler`30 秒かかります。 タイムアウト後、一般的なエラー メッセージが表示されます。
 >* `registerOnSaveHandler()` を使用して保存ハンドラーを登録する場合、コールバックは `saveEvent.notifySuccess()` または `saveEvent.notifyFailure()` を呼び出して、構成の結果を示す必要があります。
 >* 保存ハンドラーを登録しない場合、ユーザーが **[保存]** を選択すると、`saveEvent.notifySuccess()` 呼び出しが自動的に行われます。
->* 一意 `entityId`であることを確認します。 タブの最初のインスタンスへのリダイレクトを複製 `entityId` します。
+>* 一意 `entityId`であることを確認します。 重複リダイレクト `entityId` は、タブの最初のインスタンスにリダイレクトされます。
 
 ### <a name="get-context-data-for-your-tab-settings"></a>タブのコンテキストを取得する
 
@@ -247,7 +247,7 @@ document.write(getId());
 
 ### <a name="use-the-getcontext-function-to-retrieve-context"></a>関数を `getContext()` 使用してコンテキストを取得する
 
-この関数は `app.getContext()` 、 [コンテキスト インターフェイス](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) オブジェクトを使用して解決する Promise を返します。
+関数は `app.getContext()` 、 [コンテキスト インターフェイス](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest&preserve-view=true) オブジェクトで解決される promise を返します。
 
 次のコードは、この関数を構成ページに追加してコンテキスト値を取得する例を示しています。
 
@@ -295,9 +295,9 @@ document.write(getId());
 
 ## <a name="modify-or-remove-a-tab"></a>タブを変更または削除する
 
-マニフェストの `canUpdateConfiguration` プロパティ `true`を . これにより、ユーザーはチャネルまたはグループ タブを変更または再構成できます。タブの名前は、Teams ユーザー インターフェイスを使用してのみ行うことができます。 タブが削除されたときのコンテンツへの影響についてユーザーに通知します。 これを行うには、アプリに [削除オプション] ページを含め、(以前の) 構成でプロパティの`setConfig()`値`removeUrl`を`setSettings()`設定します。 ユーザーは個人用タブをアンインストールできますが、変更することはできません。 詳細については、「[タブの削除ページを作成する](~/tabs/how-to/create-tab-pages/removal-page.md)」を参照してください。
+マニフェストの `canUpdateConfiguration` プロパティを に `true`設定します。 これにより、ユーザーはチャネルまたはグループ タブを変更または再構成できます。タブの名前は、Teams ユーザー インターフェイスでのみ変更できます。 タブが削除されたときのコンテンツへの影響についてユーザーに通知します。 これを行うには、アプリに削除オプション ページを含め、 (以前`setSettings()`の) 構成で プロパティの値`removeUrl`を`setConfig()`設定します。 ユーザーは個人用タブをアンインストールできますが、変更することはできません。 詳細については、「[タブの削除ページを作成する](~/tabs/how-to/create-tab-pages/removal-page.md)」を参照してください。
 
-削除ページ用`setSettings()`の Microsoft Teams `setConfig()` (以前の) 構成:
+削除ページの Microsoft Teams `setConfig()` (旧 `setSettings()`称) 構成:
 
 # <a name="teamsjs-v2"></a>[TeamsJS v2](#tab/teamsjs-v2)
 

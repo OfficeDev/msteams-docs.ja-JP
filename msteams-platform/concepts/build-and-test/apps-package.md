@@ -1,18 +1,18 @@
 ---
 title: アプリをパッケージ化する
-description: Microsoft Teams アプリをパッケージ化し、Teams にアップロードする方法について説明します。 アプリ パッケージを作成し、カスタム アップロードを有効にし、HTTP を使用してアプリが実行され、アクセスできることを確認します。
+description: Microsoft Teams アプリをパッケージ化して Teams にアップロードする方法について説明します。 アプリ パッケージを作成し、カスタム アップロードを有効にし、アプリが実行されていて、HTTP を使用してアクセスできることを確認します。
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.openlocfilehash: 87f9e8c6447c8f2712eea40c7c9db2bda3459550
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: cd2bb1c2f0ff97a28f467334148c283142b2d535
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100197"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791455"
 ---
 # <a name="create-teams-app-package"></a>Teams アプリ パッケージを作成する
 
-Microsoft Teams アプリを配布する予定のアプリ パッケージが必要です。 有効なパッケージは、次を含む ZIP ファイルです。
+ただし、アプリ パッケージは必要ですが、Microsoft Teams アプリを配布する予定です。 有効なパッケージは、次を含む ZIP ファイルです。
 
 * **アプリ マニフェスト**: アプリの機能、必要なリソース、その他の重要な属性など、アプリの構成方法について説明します。
 * **アプリ アイコン**: 各パッケージには、アプリの色とアウトライン アイコンが必要です。

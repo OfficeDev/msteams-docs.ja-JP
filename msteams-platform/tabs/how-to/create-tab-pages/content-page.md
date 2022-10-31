@@ -5,12 +5,12 @@ description: Teams クライアント内の Web ページについて説明し�
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
-ms.openlocfilehash: dad5451c4255ad97cb14a13983f1701a52f39bb9
-ms.sourcegitcommit: 0e4fcbc5efff4bfa1dbfba1e5467bbfaa6638705
+ms.openlocfilehash: 5dcc46567e14d183437982c7ffde26528c836810
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2022
-ms.locfileid: "68773444"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791539"
 ---
 # <a name="create-a-content-page"></a>コンテンツ ページを作成する
 
@@ -111,7 +111,7 @@ Teams のエンティティへのディープ リンクを作成できます。 
 
 > [!NOTE]
 >
-> * モバイル クライアントでの動作は、ネイティブ読み込みインジケーター プロパティでは構成できません。 モバイル クライアントでは、コンテンツ ページと iframe ベースのタスク モジュール全体で、このインジケーターが既定で表示されます。 モバイル上のこのインジケーターは、コンテンツをフェッチする要求が行われたときに表示され、要求が完了するとすぐに無視されます。
+> モバイル クライアントでの動作は、ネイティブ読み込みインジケーター プロパティでは構成できません。 モバイル クライアントでは、コンテンツ ページと iframe ベースのタスク モジュール全体で、このインジケーターが既定で表示されます。 モバイル上のこのインジケーターは、コンテンツをフェッチする要求が行われたときに表示され、要求が完了するとすぐに無視されます。
 
 アプリ マニフェストで `showLoadingIndicator : true` を指定した場合、すべてのタブ構成、コンテンツ、削除ページ、およびすべての iframe ベースのタスク モジュールは、次の手順に従う必要があります。
 

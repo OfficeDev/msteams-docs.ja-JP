@@ -6,12 +6,12 @@ ms.author: v-amprasad
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
-ms.openlocfilehash: abcda0dd19388d1cdce2f2b440ecbae833b5f9c3
-ms.sourcegitcommit: 6926cf5eee55d5047c11ca13afc7f6f23e270396
+ms.openlocfilehash: a0bec3166228b53dd4a6da336b42632ba2475582
+ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2022
-ms.locfileid: "68740605"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68791756"
 ---
 # <a name="add-capabilities-to-teams-apps"></a>Teams アプリに機能を追加する
 
@@ -94,7 +94,7 @@ Teams Toolkit を使用して機能を追加すると、既存の Microsoft Team
 |ボット、メッセージ拡張機能、タブ|teamsfx にボットまたはタブ関連&nbsp;の情報を含め、Azure 関数を統合するためのファイルをプロビジョニングします。|の下の `templates/azure/teamsfx` ファイルが更新され `templates/azure/provision/xxx`、.bicep ファイルが再生成されます。|
 |ボット、メッセージ拡張機能、タブ|新しく追加された機能の適切な構成でプロジェクトが設定されていることを確認します。|の下の `.fx/config` ファイルが再生成されます|
 
-## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
+## <a name="step-by-step-guides"></a>ステップ バイ ステップのガイド
 
 * 詳細 [な](../sbs-gs-commandbot.yml) ガイドに従って、Microsoft Teams でコマンド ボットをビルドします。
 
