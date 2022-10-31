@@ -5,12 +5,12 @@ description: この記事では、Microsoft Teams ボット用のツールと Bo
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
-ms.openlocfilehash: b8d9f81216ea82aff3a5be9ec96c4f1dd79e9603
-ms.sourcegitcommit: d92e14fad6567fe91fd52ee6c213836740316683
+ms.openlocfilehash: e1be981a381846ab17220254336571ea40bf2752
+ms.sourcegitcommit: 10debe0f01574a21aab54bfac692a4c8373263a8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "67605020"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68789899"
 ---
 # <a name="bots-and-sdks"></a>ボットと SDK
 
@@ -41,7 +41,7 @@ Teams ボットは以下から構成されます。
 * メッセージ拡張要求を処理する。
 
 > [!IMPORTANT]
-> 任意の Web プログラミング技術で Teams アプリを開発し、[Bot Framework REST API](/bot-framework/rest-api/bot-framework-rest-overview) を直接呼び出すことができますが、すべてのケースでトークン処理を実行する必要があります。
+> You can develop Teams apps in any web programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly. But you must perform token handling in all cases.
 
 ## <a name="bots-with-power-virtual-agents"></a>Power Virtual Agents を使用したボット
 
@@ -52,7 +52,7 @@ Teams ボットは以下から構成されます。
 
 ## <a name="bots-with-webhooks-and-connectors"></a>Webhook とコネクタを使用したボット
 
-Webhook とコネクタは、ボットを Web サービスに接続します。 Webhook とコネクタを使用すると、ワークフローやその他のシンプルなコマンドの作成など、基本的なやり取りを行うためのボットを作成することができます。 これらは、作成するチームでのみ使用でき、会社のワークフローに固有の簡単なプロセスを対象としています。 詳細については、「[Webhook とコネクタとは](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)」を参照してください。
+Webhook とコネクタは、ボットを Web サービスに接続します。 Webhook とコネクタを使用すると、ワークフローやその他のシンプルなコマンドの作成など、基本的なやり取りを行うためのボットを作成することができます。 これらは、作成するチームでのみ使用でき、会社のワークフローに固有の単純なプロセスを対象としています。 詳細については、「[Webhook とコネクタとは](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)」を参照してください。
 
 ## <a name="advantages-of-bots"></a>ボットの利点
 
@@ -66,7 +66,7 @@ Microsoft Teams のボットは、1 対 1 の会話、グループ チャット�
 
 ### <a name="in-a-channel"></a>チャネル
 
-チャネルには、最大 2,000 人まで、複数のユーザーによるスレッド形式の会話が含まれます。 これにより、ボットが大規模になる可能性がでてきますが、それぞれの対話を簡潔にする必要があります。 従来の複数ターンの対話は機能しません。 多くの情報を収集するためには、対話型カードまたはタスク モジュールを使用するか、1 対 1 の会話に変更する必要があります。 ボットは、そのメッセージが存在 `@mentioned`するメッセージにのみアクセスできます。 Microsoft Graph および組織レベルのアクセス許可を使用して会話から追加のメッセージを取得できます。
+チャネルには、最大 2,000 人まで、複数のユーザーによるスレッド形式の会話が含まれます。 これにより、ボットが大規模になる可能性がでてきますが、それぞれの対話を簡潔にする必要があります。 従来のマルチターン操作は機能しません。 多くの情報を収集するためには、対話型カードまたはタスク モジュールを使用するか、1 対 1 の会話に変更する必要があります。 ボットは、 の `@mentioned`メッセージにのみアクセスできます。 Microsoft Graph および組織レベルのアクセス許可を使用して会話から追加のメッセージを取得できます。
 
 ボットは、次の場合にチャネルで適切に機能します。
 
@@ -77,7 +77,7 @@ Microsoft Teams のボットは、1 対 1 の会話、グループ チャット�
 
 ### <a name="in-a-group-chat"></a>グループ チャット
 
-グループ チャットは、3 人以上のユーザー同士で行われる非スレッドの会話です。 チャネルよりもメンバーは少なく、一時的な会話が多いのが特徴です。 チャネルと同様に、ボットは、そのチャネルが直接存在 `@mentioned` するメッセージにのみアクセスできます。
+グループ チャットは、3 人以上のユーザー同士で行われる非スレッドの会話です。 チャネルよりもメンバーは少なく、一時的な会話が多いのが特徴です。 チャネルと同様に、ボットは直接アクセスできるメッセージ `@mentioned` にのみアクセスできます。
 
 チャネルでボットの方がうまく機能する場合は、グループ チャットでもうまく機能します。
 
@@ -89,15 +89,15 @@ Microsoft Teams のボットは、1 対 1 の会話、グループ チャット�
 * 他のシステムでワークフローを開始するボット。
 * ジョークを伝えるボット。
 * メモを取るボット。
-1 対 1 のチャットボットを作成する前に、会話ベースのインターフェイスが機能を提示する最適な方法であるかどうかを検討してください。
+1 対 1 のチャットボットを作成する前に、会話ベースのインターフェイスが機能を提示する最善の方法であるかどうかを検討してください。
 
 ## <a name="disadvantages-of-bots"></a>ボットの欠点
 
-ボットとユーザーの間のダイアログが広範になると、タスクの完了に要する時間が長くなり、複雑になります。 過剰なコマンド (特に広範なコマンド) をサポートするボットは、ユーザーが成功したり、肯定的に表示されたりすることはありません。
+ボットとユーザーの間のダイアログが広範になると、タスクの完了に要する時間が長くなり、複雑になります。 過剰なコマンド (特に広範なコマンド) をサポートするボットは、成功しないか、ユーザーによって肯定的に表示されます。
 
 ### <a name="have-multi-turn-experiences-in-chat"></a>チャットではマルチターンのやり取りが交わされる
 
-広範なダイアログでは、開発者が状態を維持する必要があります。 この状態を終了するには、ユーザーがタイムアウトするか、[ **キャンセル]** を選択する必要があります。 また、このプロセスは面倒です。 たとえば、次の会話シナリオを参照してください。
+広範なダイアログでは、開発者が状態を維持する必要があります。 この状態を終了するには、ユーザーがタイムアウトするか、[ **キャンセル**] を選択する必要があります。 また、このプロセスは面倒です。 たとえば、次の会話シナリオを参照してください。
 
 ユーザー: Megan との会議をスケジュールして。
 
@@ -117,7 +117,7 @@ Microsoft Teams のボットは、1 対 1 の会話、グループ チャット�
 
 ### <a name="maintain-a-large-knowledge-base"></a>維持するサポート情報が大規模である
 
-ボットの欠点の 1 つは、未ランクの応答で大規模な取得サポート情報を維持することは困難です。 ボットは、長いリストから答えを調べ出すようなものではなく、短く簡潔なやり取りに最適です。
+ボットの欠点の 1 つは、ランクなしの応答を使用して大規模な取得サポート情報を維持するのが難しいことです。 ボットは、長いリストから答えを調べ出すようなものではなく、短く簡潔なやり取りに最適です。
 
 ## <a name="code-snippets"></a>コード スニペット
 
@@ -209,6 +209,7 @@ this.onMessage(async (context, next) => {
 * [通話と会議のボット](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 * [ボットの会話](~/bots/how-to/conversations/conversation-basics.md)
 * [Bot コマンド メニュー](~/bots/how-to/create-a-bot-commands-menu.md)
+* [Bot Framework Composerでカスタム トリガーを作成する](/composer/how-to-create-custom-triggers)
 * [Microsoft Teams でのボットの認証フロー](~/bots/how-to/authentication/auth-flow-bot.md)
 * [ボットでタスク モジュールを使用する](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [ボットを Azure に発行する](/azure/bot-service/bot-builder-deploy-az-cli)

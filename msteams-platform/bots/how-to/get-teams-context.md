@@ -1,16 +1,16 @@
 ---
 title: Teams の特定のコンテキストをボット用に取得する
 author: surbhigupta
-description: ボットの Teams 固有のコンテキストを取得し、ユーザー プロファイルをフェッチし、1 人のメンバー、チーム、チームの詳細に含まれるチャネルの一覧を取得します。 新しいチャネル スレッドの作成に関するサンプル。
+description: ボットの Teams 固有のコンテキストを取得し、ユーザー プロファイルを取得し、チームの詳細で単一メンバー、チームのチャネルの一覧を取得します。 新しいチャネル スレッドの作成に関するサンプル。
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: lajanuar
-ms.openlocfilehash: a2d884809a538d16b5c5a1e62e2a064fbeaa2a76
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 1958d45bf4fac927c32b628ea8aebc4c1c03ad46
+ms.sourcegitcommit: 10debe0f01574a21aab54bfac692a4c8373263a8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100141"
+ms.lasthandoff: 10/31/2022
+ms.locfileid: "68789990"
 ---
 # <a name="get-teams-specific-context-for-your-bot"></a>Teams の特定のコンテキストをボット用に取得する
 
@@ -377,4 +377,5 @@ Response body
 
 ## <a name="see-also"></a>関連項目
 
-[アプリをローカライズする](../../concepts/build-and-test/apps-localization.md)
+* [アプリをローカライズする](../../concepts/build-and-test/apps-localization.md)
+* [ユーザー、グループ、チーム、または Outlook 連絡先のプロフィール写真を取得する](/graph/api/profilephoto-get)
