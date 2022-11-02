@@ -4,12 +4,12 @@ description: 新しい Microsoft Teams 開発者向け機能と、既存の機�
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
-ms.openlocfilehash: 95dc1e09eb54880e1e3412947914d263f3792fb1
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 54f5c515c9ce9831df09a58087a37fe637ff6c49
+ms.sourcegitcommit: d58f670fed6ff217c52d2e00c0bee441fcb96920
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791588"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819691"
 ---
 # <a name="whats-new-for-developers-in-microsoft-teams"></a>Microsoft Teams の開発者向けの新機能
 
@@ -29,15 +29,9 @@ ms.locfileid: "68791588"
 
 すべてのアプリ開発者が利用できる Teams プラットフォーム機能。
 
-**2022 年 10 月**
+**2022 年 11 月**
 
-* ***2022 年 10 月 27*** 日: [Teams 用ワークフロー ボットの概要](sbs-gs-workflow-bot.yml)
-* ***2022 年 10 月 26*** 日: [会議内ドキュメント署名アプリを構築する](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-an-in-meeting-document-signing-app)
-* ***2022 年 10 月 19*** 日: [Teams 用開発者ポータルが GCC テナントで使用できるようになりました](concepts/build-and-test/teams-developer-portal.md)。
-* ***2022 年 10 月 13*** 日: [NavBar を構成し、複数のアクションのオーバーフロー メニューを作成します](concepts/design/personal-apps.md#configure-and-add-multiple-actions-in-navbar)。
-* ***2022 年 10 月 13*** 日: [アプリの [戻る] ボタンを構成します](concepts/design/personal-apps.md#configure-back-button)。
-* ***2022 年 10 月 12*** 日: [インスタント会議、1 対 1、およびグループ通話でアプリがサポートされます。](apps-in-teams-meetings/teams-apps-in-meetings.md)
-* ***2022 年 10 月 12*** 日: [Live Share キャンバス](apps-in-teams-meetings/teams-live-share-canvas.md)
+***2022 年 11 月 2 日***: [ボット API のグローバル ルーティングをサポートします](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation)。
 
 :::column-end:::
 :::row-end:::
@@ -48,7 +42,13 @@ ms.locfileid: "68791588"
 
 | **Date** | **Update** | **ここで検索** |
 | -------- | --------- | ----------------|
-| 10/26/2022 | 会議参加者がリアルタイムでドキュメントに署名できるようにするための会議内アプリを構築します。 | Teams 会議と通話用のアプリを構築する> Teams 会議用のアプリを有効にして構成する> Teams 会議ステージ用アプリを構築する> [会議内ドキュメント署名アプリを構築する](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-an-in-meeting-document-signing-app) |
+| 10/27/2022 | Teams 用ワークフロー ボットの概要。 | Teams Toolkit >ツールと SDK > Teams ツールキットを使用してアプリを作成> Teams アプリを開発する> Teams [ワークフロー ボットの作成](sbs-gs-workflow-bot.yml)>複数機能アプリを作成する |
+| 10/26/2022 | 会議参加者がリアルタイムでドキュメントに署名できるようにするための会議内アプリを構築します。 | Teams 会議と通話用のアプリを構築する> Teams 会議のアプリを有効にして構成する> [Teams 会議ステージ用のアプリを構築する](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-an-in-meeting-document-signing-app) |
+| 10/19/2022| TEAMS 用開発者ポータルが GCC テナントで使用できるようになりました。 | Teams 用開発者ポータル>ツールと SDK > [概要](concepts/build-and-test/teams-developer-portal.md)|
+| 10/13/2022| NavBar を構成し、複数のアクションのオーバーフロー メニューを作成します。 | 個人用アプリ>アプリ機能>アプリを設計 [する](concepts/design/personal-apps.md#configure-and-add-multiple-actions-in-navbar)|
+| 10/13/2022| アプリの [戻る] ボタンを構成します。 | 個人用アプリ>アプリ機能>アプリを設計 [する](concepts/design/personal-apps.md#configure-back-button)|
+| 10/12/2022| アプリは、インスタント会議、1 対 1、およびグループ通話でサポートされます。 | Teams 会議と通話用のアプリをビルド > [[概要]](apps-in-teams-meetings/teams-apps-in-meetings.md)|
+| 10/12/2022| Live Share キャンバス | Live Share > [Canvas](apps-in-teams-meetings/teams-live-share-canvas.md) との強化されたコラボレーション> Teams 会議および通話用のアプリを構築する|
 | 09/30/2022|Teams でサード パーティ製アプリの SaaS ライセンスを管理します。|アプリの収益化 > Teams アプリに SaaS オファーを含める> [Teams でサード パーティ製アプリのライセンスを管理](concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md#manage-license-for-third-party-apps-in-teams)する|
 | 09/29/2022|Teams モバイル アプリで、ローカル デバイスへのファイルダウンロードがサポートされるようになりました。|デバイス機能を統合する> [Teams モバイルでファイルをダウンロード](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)>メディア機能を統合する|
 | 09/16/2022|検索ベースのメッセージ拡張機能のアダプティブ カードでユニバーサル アクションがサポートされるようになりました。|検索ベースのメッセージ拡張機能のユニバーサル アクション>検索コマンド>[メッセージ拡張機能を](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)構築する|

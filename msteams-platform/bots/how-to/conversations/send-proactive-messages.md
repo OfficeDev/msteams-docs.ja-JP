@@ -4,12 +4,12 @@ description: Teams ボットでプロアクティブ メッセージを送信す
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: ff2a4310f2dea57fd5fd1d2550474c3361bf8a90
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 7e50719e9befd807127a1eae4022b4af67a9fc00
+ms.sourcegitcommit: d58f670fed6ff217c52d2e00c0bee441fcb96920
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791462"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819684"
 ---
 # <a name="proactive-messages"></a>プロアクティブ メッセージ
 
@@ -25,7 +25,7 @@ ms.locfileid: "68791462"
 >
 > * プロアクティブ メッセージを送信するには、JavaScript または[受信 Webhook 通知サンプル](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification)[を使用して通知ボットを構築](../../../sbs-gs-notificationbot.yml)することをお勧めします。 開始するには、 [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) の探索をダウンロードします。 詳細については、「 [Teams Toolkit ドキュメント](../../../toolkit/teams-toolkit-fundamentals.md)」を参照してください。
 >
-> * 現在、ボットは Government Community Cloud (GCC) と GCC-High で利用できますが、国防総省 (DOD) では利用できません。 プロアクティブ メッセージの場合、ボットは政府機関のクラウド環境に対して次のエンドポイントを使用する必要があります。 <br> -Gcc： `https://smba.infra.gcc.teams.microsoft.com/gcc`<br> - GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`。
+> * 現在、ボットは Government Community Cloud (GCC) と GCC-High で利用できますが、国防総省 (DOD) では利用できません。 プロアクティブ メッセージの場合、ボットは政府機関のクラウド環境に対して次のエンドポイントを使用する必要があります。 <br> -Gcc： `https://smba.infra.gcc.teams.microsoft.com/gcc`<br> - GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`
 
 ユーザー、グループ チャット、またはチームにプロアクティブ メッセージを送信するには、ボットがメッセージを送信するために必要なアクセス権を持っている必要があります。 グループ チャットまたはチームの場合、ボットを含むアプリを最初にその場所にインストールする必要があります。
 
@@ -44,7 +44,7 @@ ms.locfileid: "68791462"
 
 ## <a name="get-the-user-id-team-id-or-channel-id"></a>ユーザー ID、チーム ID、またはチャネル ID を取得する
 
-チャネルに新しい会話または会話スレッドを作成するには、正しい ID が必要です。 この ID は、次のいずれかの方法で受信または取得できます。
+チャネル内のユーザーまたはスレッドとの新しい会話を作成でき、正しい ID が必要です。 この ID は、次のいずれかの方法で受信または取得できます。
 
 * アプリが特定のコンテキストにインストールされると、アクティビティを[`onMembersAdded`](~/bots/how-to/conversations/subscribe-to-conversation-events.md)受け取ります。
 * アプリがインストールされているコンテキストに新しいユーザーが追加されると、[`onMembersAdded`アクティビティ](~/bots/how-to/conversations/subscribe-to-conversation-events.md)を受信します。
@@ -60,11 +60,21 @@ ms.locfileid: "68791462"
 
 ## <a name="create-the-conversation"></a>会話を作成する
 
-会話が存在しない場合、または が不明な場合は作成します `conversationId`。 会話を 1 回だけ作成し、値または`conversationReference`オブジェクトを`conversationId`格納します。
+会話が存在しない場合や、 がわからない場合は作成 `conversationId`できます。 会話を 1 回だけ作成し、値または`conversationReference`オブジェクトを`conversationId`格納します。
+
+会話を作成するには、、 `serviceUrl`が必要`userId``tenantId`です。
+
+の場合 `serviceUrl`は、フローまたはグローバル サービス URL の 1 つをトリガーする受信アクティビティの値を使用します。 `serviceUrl`プロアクティブ なシナリオをトリガーする受信アクティビティから を使用できない場合は、次のグローバル URL エンドポイントを使用します。
+
+* 公共： `https://smba.trafficmanager.net/teams/`
+* Gcc： `https://smba.infra.gcc.teams.microsoft.com/gcc`
+* GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`
+
+コード サンプルについては、サンプルの呼び出し`CreateConversationAsync`[**を参照**](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/57.teams-conversation-bot/Bots/TeamsConversationBot.cs)してください。
 
 アプリが初めてインストールされたときに会話を取得できます。 会話が作成されたら、 [会話 ID を取得します](#get-the-conversation-id)。 `conversationId` は、会話更新イベントで使用できます。
 
-がない場合は `conversationId`、 [Graph を使用してアプリをプロアクティブにインストール](#proactively-install-your-app-using-graph) して を `conversationId`取得できます。
+がない場合は `conversationId`、 [Graph を使用してアプリを事前にインストール](#proactively-install-your-app-using-graph) して を `conversationId`取得できます。
 
 ## <a name="get-the-conversation-id"></a>会話 ID を取得する
 
