@@ -5,12 +5,12 @@ description: Teams アプリのメッセージ拡張機能検索コマンドに�
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: c126d6436c5fb091804c92caeb2876c09392bd9b
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 9ec7ea734e331fcfb563702d18284f4831c369f6
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791833"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820179"
 ---
 # <a name="define-message-extension-search-commands"></a>メッセージ拡張機能の検索コマンドを定義する
 
@@ -24,7 +24,7 @@ ms.locfileid: "68791833"
 メッセージ拡張機能の検索コマンドを定義する方法については、次のビデオを参照してください。
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK>]
 <br>
 
 ## <a name="select-search-command-invoke-locations"></a>検索コマンド呼び出しの場所を選択する
@@ -161,3 +161,11 @@ Teams クライアントでユーザーに表示されるテキストを定義�
 
 > [!div class="nextstepaction"]
 > [検索コマンドに応答します](~/messaging-extensions/how-to/search-commands/respond-to-search.md)。
+
+## <a name="see-also"></a>関連項目
+
+* [カード](../../../task-modules-and-cards/what-are-cards.md)
+* [タスク モジュール](../../../task-modules-and-cards/what-are-task-modules.md)
+* [Teams のアプリ マニフェストのスキーマ](../../../resources/schema/manifest-schema.md)
+* [Teams の開発者ポータル](../../../concepts/build-and-test/teams-developer-portal.md)
+* [メッセージの拡張機能](../../what-are-messaging-extensions.md)

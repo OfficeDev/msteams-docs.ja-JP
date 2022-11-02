@@ -6,12 +6,12 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 2ad44d0c43df7193106474fc3b6534d9ddde5bfc
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 56243743f4c26995eb5bcf30bba7eeaaeccbbedc
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791665"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820011"
 ---
 # <a name="create-a-channel-tab-or-group-tab"></a>チャネル タブまたはグループ タブを作成する
 
@@ -680,9 +680,8 @@ ngrok を実行したままコマンド プロンプトを確実に維持し、U
 
 ## <a name="see-also"></a>関連項目
 
-* [Teams タブ](~/tabs/what-are-tabs.md)
-* [プライベート タブを作成する](~/tabs/how-to/create-personal-tab.md)
-* [モバイルのタブ](~/tabs/design/tabs-mobile.md)
-* [アダプティブ カードを使用してタブをビルドする](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [削除ページを作成する](~/tabs/how-to/create-tab-pages/removal-page.md)
+* [Teams の [ビルド] タブ](../what-are-tabs.md)
+* [プライベート タブを作成する](create-personal-tab.md)
+* [Teams の開発者ポータル](../../concepts/build-and-test/teams-developer-portal.md)
+* [アダプティブ カードを使用してタブをビルドする](build-adaptive-card-tabs.md)
 * [Teams で SharePoint ページをタブとして追加する](https://support.microsoft.com/en-us/office/add-a-sharepoint-page-list-or-document-library-as-a-tab-in-teams-131edef1-455f-4c67-a8ce-efa2ebf25f0b)

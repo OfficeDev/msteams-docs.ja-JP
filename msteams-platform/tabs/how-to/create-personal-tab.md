@@ -1,17 +1,17 @@
 ---
 title: プライベート タブを作成する
 author: laujan
-description: 個人用タブを作成する方法について説明します。Node.js、ASP.NET Core、または ASP.NET Core MVC 環境を選択します。 アプリの生成、コンテンツの追加、パッケージの作成、アプリのビルドと実行を行います。
+description: 個人用タブを作成する方法について説明します。Node.js、ASP.NET Core、または MVC 環境 ASP.NET Core選択します。 アプリの生成、コンテンツの追加、パッケージの作成、アプリのビルドと実行。
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.author: lajanuar
 zone_pivot_groups: teams-app-environment
-ms.openlocfilehash: 187f1b40c60d8f7d88b75e6f666239ab70717cf6
-ms.sourcegitcommit: 1248901a5e59db67bae091f60710aabe7562016a
+ms.openlocfilehash: 5afb145bdba5639b71a7b56ac8884dc465127d35
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2022
-ms.locfileid: "68560737"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820004"
 ---
 # <a name="create-a-personal-tab"></a>プライベート タブを作成する
 
@@ -50,13 +50,13 @@ ms.locfileid: "68560737"
 
 1. コマンド プロンプトで、個人用タブの新しいディレクトリを作成します。
 
-1. 新しいディレクトリに次のコマンドを入力して、Microsoft Teams アプリ ジェネレーターを起動します。
+1. 新しいディレクトリに次のコマンドを入力して、Microsoft Teams アプリ ジェネレーターを開始します。
 
     ```cmd
     yo teams
     ```
 
-1. Microsoft Teams アプリ ジェネレーターによってファイルを更新するように求められた一連の質問に値を入力します `manifest.json` 。
+1. ファイルを更新するように Microsoft Teams アプリ ジェネレーターから求められた一連の質問に値を指定します `manifest.json` 。
 
     :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Teams ジェネレーター":::
 
@@ -97,7 +97,7 @@ ms.locfileid: "68560737"
 
     * **このソリューションをホストする URL**
 
-      既定では、ジェネレーターは Azure Web サイトの URL を提案します。 アプリをローカルでのみテストしているため、有効な URL は必要ありません。
+      既定では、ジェネレーターは Azure Web サイト URL を提案します。 アプリをローカルでのみテストしているため、有効な URL は必要ありません。
 
     * **アプリ/タブが読み込まれたときに、読み込みインジケーターを表示しますか?**
 
@@ -131,7 +131,7 @@ ms.locfileid: "68560737"
 
       タブの Azure AD シングル サインオンを含め **ない** ことを選択します。既定値は yes で、**n** と入力します。
     > [!NOTE]
-    > タブのタブのホーム ページは、ユーザーが戻るボタンを選択して (またはタブから移動して) ホーム ページに戻ったときにのみ表示されます。 タブは、デザインによって前の状態を維持または保持しません。
+    > タブでは、ユーザーが戻るボタン (またはタブから移動) を選択してホーム ページに戻った場合にのみ、タブのホーム ページが表示されます。 タブは、デザインによって以前の状態を維持または保持しません。
     </details>
 
 ### <a name="add-a-content-page-to-the-personal-tab"></a>個人用タブにコンテンツ ページを追加する
@@ -193,7 +193,7 @@ ms.locfileid: "68560737"
 
 1. 更新された `manifest.json` ファイルを保存します。
 
-1. 次のパスから Visual Studio Code で **Tab.ts** を開き、iFrame でコンテンツ ページを提供します。
+1. 次のパスから Visual Studio Code で **Tab.ts** を開き、iFrame にコンテンツ ページを提供します。
 
     ```bash
     ./src/server/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
@@ -251,7 +251,7 @@ gulp ngrok-serve
 ### <a name="upload-your-application-to-teams"></a>Microsoft Teams にアプリ パッケージをアップロードする
 
 1. Teams に移動し、**[アプリ]**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="[Teams ストア]"::: を選択します。
-1. [**アプリの管理] を** > 選択 **します。アプリ** > を **アップロードする カスタム アプリをアップロードします**。
+1. [**アプリの管理] [アプリ** >  > **のアップロード****] [カスタム アプリのアップロード] の順に選択します**。
 1. プロジェクト ディレクトリに移動し、 **./package** フォルダーに移動し、zip フォルダーを選択して [**開く**] を選択します。
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="個人用タブの追加":::
@@ -371,7 +371,7 @@ Visual Studio ソリューション エクスプローラーで、プロジェ�
     <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
     ```
 
-1. Visual Studio ソリューション エクスプローラーで、**Pages** フォルダーから **PersonalTab.cshtml** を開き、タグを`<script>`追加`microsoftTeams.app.initialize()`します。
+1. Visual Studio ソリューション エクスプローラーで、**Pages** フォルダーから **PersonalTab.cshtml** を開き、タグを追加`microsoftTeams.app.initialize()`します`<script>`。
 
 1. **[保存]** を選択します。
 
@@ -391,7 +391,7 @@ ngrok http 3978 --host-header=localhost
 
 1. **アプリ** を開き、[**アプリのインポート**] を選択します。
 
-1. アプリ パッケージ ファイル名は `tab.zip` パスで `/bin/Debug/netcoreapp3.1/tab.zip` 使用できます。
+1. アプリ パッケージ ファイル名は であり `tab.zip` 、パスで `/bin/Debug/netcoreapp3.1/tab.zip` 使用できます。
 
 1. 開発者ポータルで `tab.zip` を選択して開きます。
 
@@ -401,9 +401,9 @@ ngrok http 3978 --host-header=localhost
 
 1. **[開発者情報]** で、必要な詳細を追加し、**Web サイト (有効な HTTPS URL である必要があります)** に ngrok HTTPS URL を指定します。
 
-1. **アプリの URL で**、プライバシー ポリシーと使用条件を`https://<yourngrokurl>/privacy`更新して`https://<yourngrokurl>/tou`**、[保存]** を選択します。
+1. **[アプリ URL] で**、[プライバシー ポリシー] と [使用条件] を に`https://<yourngrokurl>/privacy``https://<yourngrokurl>/tou`更新し、[保存] を選択 **します**。
 
-1. **[アプリの機能**] で、[**個人用アプリ** > **の作成] を選択して最初の個人用アプリ タブ** に名前を入力し、**コンテンツ URL を**`https://<yourngrokurl>/personalTab`更新します。 [Web サイトの URL] フィールドを空白のままにし、ドロップダウン リストから [ **Context** as personalTab] を選択し、[ **確認**] を選択します。
+1. [**アプリの機能**] で、[**個人用アプリ**] [**最初の個人用アプリ** > の作成] タブを選択し、名前を入力し、 で`https://<yourngrokurl>/personalTab`**コンテンツ URL を** 更新します。 [Web サイト URL] フィールドは空白のままにし、ドロップダウン リスト **から [Context** as personalTab] を選択し、[確認] を選択 **します**。
 
 1. **[保存]** を選択します。
 
@@ -487,7 +487,7 @@ ASP.NET Core では、Web ルート フォルダーは、アプリケーショ�
 * 32 x 32 ピクセルの **透明なアウトライン アイコン**。
 * アプリの属性を指定する `manifest.json` ファイル。
 
-これらのファイルは、Teams へのタブのアップロードに使用するために、アプリ パッケージで zip 形式にする必要があります。 Teams は、マニフェストで指定した値を読み込 `contentUrl` み、iFrame に埋め込み、タブにレンダリングします。
+これらのファイルは、Teams へのタブのアップロードに使用するために、アプリ パッケージで zip 形式にする必要があります。 Teams は、マニフェストで指定された を `contentUrl` 読み込み、それを iFrame に埋め込み、タブにレンダリングします。
 
 #### <a name="csproj"></a>.csproj
 
@@ -538,7 +538,7 @@ Visual Studio ソリューション エクスプローラーで、プロジェ�
     <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
     ```
 
-1. Visual Studio ソリューション エクスプローラーで、**Views** >  PersonalTab **フォルダーから** **PersonalTab.cshtml** を開き、タグ内に`<script>`追加`microsoftTeams.app.initialize()`します。
+1. Visual Studio ソリューション エクスプローラーで、**Views** > **PersonalTab** フォルダーから **PersonalTab.cshtml** を開き、タグ内にを追加`microsoftTeams.app.initialize()`します`<script>`。
 
 1. **[保存]** を選択します。
 
@@ -570,11 +570,11 @@ ngrok http 3978 --host-header=localhost
 
 1. **[説明]** にアプリの短い説明と長い説明を追加します。
 
-1. **開発者情報** で、必要な詳細を追加し、**Web サイトに (有効な HTTPS URL である必要があります)** ngrok HTTPS URL を指定します。
+1. [ **開発者情報**] で、必要な詳細を追加し、 **Web サイト (有効な HTTPS URL である必要があります)** に ngrok HTTPS URL を指定します。
 
-1. **アプリの URL で**、プライバシー ポリシーと使用条件を`https://<yourngrokurl>/privacy`更新して`https://<yourngrokurl>/tou`**、[保存]** を選択します。
+1. **[アプリ URL] で**、[プライバシー ポリシー] と [使用条件] を に`https://<yourngrokurl>/privacy``https://<yourngrokurl>/tou`更新し、[保存] を選択 **します**。
 
-1. **[アプリの機能**] で、[**個人用アプリ** > **の作成] を選択して最初の個人用アプリ タブ** に名前を入力し、**コンテンツ URL を**`https://<yourngrokurl>/personalTab`更新します。 [Web サイトの URL] フィールドを空白のままにし、ドロップダウン リストから [ **Context** as personalTab] を選択し、[ **確認**] を選択します。
+1. [**アプリの機能**] で、[**個人用アプリ**] [**最初の個人用アプリ** > の作成] タブを選択し、名前を入力し、 で`https://<yourngrokurl>/personalTab`**コンテンツ URL を** 更新します。 [Web サイト URL] フィールドは空白のままにし、ドロップダウン リスト **から [Context** as personalTab] を選択し、[確認] を選択 **します**。
 
 1. **[保存]** を選択します。
 
@@ -596,7 +596,7 @@ ngrok http 3978 --host-header=localhost
 
 ## <a name="reorder-static-personal-tabs"></a>静的な個人用タブの並べ替え
 
-マニフェスト バージョン 1.7 以降では、開発者が個人用アプリ内のすべてのタブを再配置できます。 **ボット チャット** タブは、常に既定で最初の位置に移動できます。このタブは、個人用アプリのタブ ヘッダー内の任意の場所に移動できます。 2 つの予約済みタブ `entityId` キーワードが宣言されます:**会話** と **プロフィール**。
+マニフェスト バージョン 1.7 以降では、開発者が個人用アプリ内のすべてのタブを再配置できます。 **ボット チャット** タブは移動できます。これは常に既定で最初の位置に設定され、個人用アプリ タブ ヘッダー内の任意の場所に移動できます。 2 つの予約済みタブ `entityId` キーワードが宣言されます:**会話** と **プロフィール**。
 
 **個人用** スコープを使用してボットを作成すると、既定では個人用アプリの最初のタブ位置に表示されます。 別の位置に移動する場合は、予約済みのキーワードである "**会話**" を使用して静的タブ オブジェクトをマニフェストに追加する必要があります。 [**会話**] タブは、`staticTabs` 配列内の [**会話**] タブを追加する場所に応じて、Web またはデスクトップに表示されます。
 
@@ -625,8 +625,10 @@ ngrok http 3978 --host-header=localhost
 
 ## <a name="see-also"></a>関連項目
 
-* [Teams タブ](~/tabs/what-are-tabs.md)
-* [モバイルのタブ](~/tabs/design/tabs-mobile.md)
-* [アダプティブ カードを使用してタブをビルドする](~/tabs/how-to/build-adaptive-card-tabs.md)
-* [会話タブを作成する](~/tabs/how-to/conversational-tabs.md)
+* [Teams の [ビルド] タブ](../what-are-tabs.md)
+* [チャネル タブまたはグループ タブを作成する](create-channel-group-tab.md)
 * [個人用アプリまたはタブから Teams に共有する](~/concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
+* [Teams の開発者ポータル](../../concepts/build-and-test/teams-developer-portal.md)
+* [Teams のアプリ マニフェストのスキーマ](../../resources/schema/manifest-schema.md)
+* [アダプティブ カードを使用してタブをビルドする](build-adaptive-card-tabs.md)
+* [モバイルのタブ](../design/tabs-mobile.md)

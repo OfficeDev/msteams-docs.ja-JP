@@ -1,16 +1,16 @@
 ---
 title: メッセージ拡張機能のアクション コマンドを定義する
 author: surbhigupta
-description: Microsoft Teams のアプリ マニフェストの例を使用して、メッセージング拡張機能アクション コマンドを定義する方法について説明します。 アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュール送信アクションに応答する方法のサンプル (.NET、Node.js)。
+description: Microsoft Teams のアプリ マニフェストの例を使用して、メッセージング拡張機能アクション コマンドを定義する方法について説明します。 アクション コマンドを定義し、タスク モジュールを作成し、タスク モジュールの送信アクションに応答する方法のサンプル (.NET、Node.js)。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 7fbfc848c8ba59f46d3651996e46c37c8076ca76
-ms.sourcegitcommit: c74e1e12175969c75e112a580949f96d2610c24e
+ms.openlocfilehash: b4d40e3a3ba4f684a0b34fcebab21f988d79de87
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2022
-ms.locfileid: "68160644"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820095"
 ---
 # <a name="define-message-extension-action-commands"></a>メッセージ拡張機能のアクション コマンドを定義する
 
@@ -30,7 +30,7 @@ ms.locfileid: "68160644"
 メッセージ拡張アクション コマンドを定義する方法については、次のビデオを参照してください。
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG]
+> [!VIDEO <https://www.microsoft.com/en-us/videoplayer/embed/RE4OANG>]
 <br>
 
 ## <a name="select-action-command-invoke-locations"></a>操作コマンドを呼び出す場所を選択する
@@ -63,7 +63,7 @@ ms.locfileid: "68160644"
 
 コマンドの呼び出し元の選択に加えて、ユーザーのタスク モジュールでフォームを入力する方法も選択する必要があります。 タスク モジュール内でレンダリングされるフォームを作成するには、次の 3 つのオプションがあります。
 
-* **静的なパラメーターの一覧**: これは最も簡単なメソッドです。 アプリ マニフェストで Teams クライアントがレンダリングするパラメーターの一覧を定義できますが、この場合は書式設定を制御できません。
+* **静的なパラメーターの一覧**: これは最も簡単なメソッドです。 Teams クライアントがレンダリングするパラメーターの一覧はアプリマニフェストで定義できますが、この場合は書式設定を制御できません。
 * **アダプティブ カード**: UI をより細かく制御できるアダプティブ カードの使用を選択できますが、使用可能な制御および書式設定オプションは制限されます。
 * **埋め込み Web ビュー**: カスタム Web ビューをタスク モジュールに埋め込んで、UI とコントロールを完全に制御することができます。
 
@@ -92,46 +92,46 @@ To add the action command to the app manifest, you must add a new `composeExtens
 アクション コマンドを作成するには:
 
 1. Microsoft Teams クライアントから **開発者ポータル** を開き、[ **アプリ** ] タブを選択します。 **開発者ポータル** でアプリ パッケージを既に作成している場合は、一覧から選択します。 アプリ パッケージを作成していない場合は、既存のパッケージをインポートします。
-1. アプリ パッケージをインポートしたら、[アプリ **の機能**] で **[メッセージ拡張機能**] を選択します。
-1. メッセージ拡張機能を作成するには、Microsoft 登録ボットが必要です。 既存のボットを使用するか、新しいボットを作成できます。 [ **新しいボットの作成** ] オプションを選択し、新しいボットに名前を付けてから、[ **作成**] を選択します。
+1. アプリ パッケージをインポートした後、[アプリ **の機能**] で [**メッセージ拡張機能**] を選択します。
+1. メッセージ拡張機能を作成するには、Microsoft 登録ボットが必要です。 既存のボットを使用するか、新しいボットを作成できます。 [ **新しいボットの作成** ] オプションを選択し、新しいボットに名前を付けて、[ **作成**] を選択します。
 
-   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="このスクリーンショットは、開発者ポータルでボットを作成する方法を示しています。":::
+   :::image type="content" source="../../../assets/images/tdp/bot-page.png" alt-text="スクリーンショットは、開発者ポータルでボットを作成する方法を示しています。":::
 
-1. 既存のボットを使用するには、 **既存のボットを選択** し、ドロップダウン リストから既存のボットを選択するか、ボット ID が既に作成されている場合は **[ボット ID の入力** ] を選択します。
+1. 既存のボットを使用するには、[ **既存のボットの選択** ] を選択し、ドロップダウン リストから既存のボットを選択するか、ボット ID が既に作成されている場合は **[ボット ID の入力** ] を選択します。
 
-1. ボットのスコープを選択し、 **保存します**。
+1. ボットのスコープを選択し、[ **保存] を選択します**。
 
-1. [**コマンド**] セクションで **[コマンドの追加]** を選択して、メッセージ拡張機能の動作を決定するコマンドを含めます。
+1. [**コマンド**] セクションで [**コマンドの追加]** を選択して、メッセージ拡張機能の動作を決定するコマンドを含めます。
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="スクリーンショットは、メッセージ拡張機能の動作を定義するコマンドを追加する方法を示しています。":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command.PNG" alt-text="メッセージ拡張機能の動作を定義するコマンドを追加する方法を示すスクリーンショット。":::
 
-1. **[アクション]** を選択し、パラメーターの種類を選択します。
+1. [ **アクション] を** 選択し、[パラメーターの種類] を選択します。
 
-1. **コマンド ID**、**コマンド タイトル**、および **コマンドの説明** を入力します。
+1. **コマンド ID**、**コマンド タイトル、コマンド****の説明** を入力します。
 
 1. すべてのパラメーターを入力し、ドロップダウン リストから入力の種類を選択します。
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="スクリーンショットは、メッセージ拡張機能のコマンドを定義するパラメーターを追加する方法を示しています。":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-parameter.PNG" alt-text="メッセージ拡張機能のコマンドを定義するパラメーターを追加する方法を示すスクリーンショット。":::
 
-1. **[プレビュー リンク****] で [ドメインの追加]** を選択します。
+1. [**プレビュー リンク**] **で [ドメインの追加]** を選択します。
 
 1. 有効なドメインを入力し、[ **追加**] を選択します。
 
-   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="スクリーンショットは、リンク解除用の有効なドメインをメッセージング拡張機能に追加する方法を示しています。":::
+   :::image type="content" source="../../../assets/images/tdp/add-domain.PNG" alt-text="リンク展開の有効なドメインをメッセージング拡張機能に追加する方法を示すスクリーンショット。":::
 
 1. **[保存]** を選択します。
 
-   :::image type="content" source="../../../assets/images/tdp/add-a-command-save.PNG" alt-text="スクリーンショットは、メッセージ拡張機能のすべての設定とパラメーターを保存する方法を示しています。":::
+   :::image type="content" source="../../../assets/images/tdp/add-a-command-save.PNG" alt-text="メッセージ拡張機能のすべての設定とパラメーターを保存する方法を示すスクリーンショット。":::
 
-**追加のパラメーターを追加するには**
+**パラメーターを追加するには**
 
-1. コマンド セクションで省略記号を選択し、 **パラメーターの編集** を選択します。
+1. コマンド セクションで省略記号を選択し、[ **パラメーターの編集**] を選択します。
 
-   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="スクリーンショットは、メッセージ拡張機能のパラメーターを追加する方法を示しています。":::
+   :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="メッセージ拡張機能のパラメーターを追加する方法を示すスクリーンショット。":::
 
-1. [ **パラメーターの追加]** を選択し、すべてのパラメーターを入力します。
+1. [ **パラメーターの追加] を** 選択し、すべてのパラメーターを入力します。
 
-   :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="スクリーンショットは、メッセージ拡張機能のパラメーターを追加する方法を示しています。"lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
+   :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="メッセージ拡張機能のパラメーターを追加する方法を示すスクリーンショット。"lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
 
 ### <a name="create-an-action-command-manually"></a>操作コマンドを手動で作成する
 
@@ -155,7 +155,7 @@ To add the action command to the app manifest, you must add a new `composeExtens
 | `parameter.title` | このプロパティは、ユーザー フレンドリな短いパラメーターのタイトルまたはラベルです。 | はい | 1.0 |
 | `parameter.inputType` | このプロパティは、必要な入力の種類に設定されます。 指定できる値には`text`、`textarea`、`number`、`date`、`time`、`toggle` などがあります。 既定値は `text` に設定されていません。 | いいえ | 1.4 |
 
-埋め込み Web ビューを使用している場合は、必要に応じて、ボットを `taskInfo` 直接呼び出さずに Web ビューをフェッチするオブジェクトを追加できます。 このオプションを選択した場合、動作はパラメーターの静的な一覧を使用する動作と類似します。 ボットとの最初の対話が [タスク モジュール送信アクションに応答する](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)場合。 オブジェクトを使用している場合は、パラメーター`false`を `taskInfo` `fetchTask` .
+埋め込み Web ビューを使用している場合は、必要に応じて オブジェクトを `taskInfo` 追加して、ボットを直接呼び出さずに Web ビューをフェッチできます。 このオプションを選択した場合、動作はパラメーターの静的な一覧を使用する動作と類似します。 ボットとの最初の対話が [タスク モジュール送信アクションに応答する](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)場合。 オブジェクトを使用している場合は、 パラメーターを `taskInfo` `fetchTask` に設定する `false`必要があります。
 
 | プロパティ名 | 用途 | は必須ですか? | マニフェストの最小バージョン |
 |---|---|---|---|
@@ -167,8 +167,8 @@ To add the action command to the app manifest, you must add a new `composeExtens
 
 #### <a name="app-manifest-example"></a>アプリ マニフェストの例
 
-このセクションは、完全なマニフェストの例ではありません。 完全なアプリ マニフェスト スキーマについては、「 [アプリ マニフェスト スキーマ](~/resources/schema/manifest-schema.md)」を参照してください。 2 つのアクション コマンドを定義するオブジェクトの `composeExtensions` 例を次に示します。
- 
+このセクションは、完全なマニフェストの例ではありません。 完全なアプリ マニフェスト スキーマについては、「 [アプリ マニフェスト スキーマ](~/resources/schema/manifest-schema.md)」を参照してください。 次に、2 つのアクション コマンドを `composeExtensions` 定義するオブジェクトの例を示します。
+
 ```json
 ...
 "composeExtensions": [
@@ -236,12 +236,20 @@ To add the action command to the app manifest, you must add a new `composeExtens
 
 ## <a name="next-step"></a>次の手順
 
-アダプティブ カードまたは埋め込み Web ビューをオブジェクトなしで `taskInfo` 使用する場合は、次の手順に進みます。
+アダプティブ カードまたはオブジェクトのない `taskInfo` 埋め込み Web ビューを使用している場合は、次の手順を実行します。
 
 > [!div class="nextstepaction"]
 > [タスク モジュールを使用した作成と応答](~/messaging-extensions/how-to/action-commands/create-task-module.md)
 
-パラメーターまたは埋め込み Web ビューをオブジェクトと共 `taskInfo` に使用する場合は、次の手順に進みます。
+オブジェクトでパラメーターまたは埋め込み Web ビュー `taskInfo` を使用している場合、次の手順は次のとおりです。
 
 > [!div class="nextstepaction"]
 > [タスク モジュールの送信アクションへの応答](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+
+## <a name="see-also"></a>関連項目
+
+* [カード](../../../task-modules-and-cards/what-are-cards.md)
+* [タスク モジュール](../../../task-modules-and-cards/what-are-task-modules.md)
+* [Teams のアプリ マニフェストのスキーマ](../../../resources/schema/manifest-schema.md)
+* [Teams の開発者ポータル](../../../concepts/build-and-test/teams-developer-portal.md)
+* [メッセージの拡張機能](../../what-are-messaging-extensions.md)

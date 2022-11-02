@@ -1,22 +1,22 @@
 ---
 title: アダプティブ カード タブを構築する
 author: KirtiPereira
-description: アダプティブ カードでフロントエンドをレンダリングするアダプティブ カードを使用してタブを構築する方法について説明します。バックエンドはボットによって供給されます。 呼び出しアクティビティを調べて、送信を処理します。
+description: アダプティブ カードでフロントエンドをレンダリングするアダプティブ カードを使用してタブを構築する方法について説明します。バックエンドはボットによって動作します。 呼び出しアクティビティを調べて送信を処理します。
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.openlocfilehash: c69ca5f366e973fcd17e04ef490514526bef0f96
-ms.sourcegitcommit: 637b8f93b103297b1ff9f1af181680fca6f4499d
+ms.openlocfilehash: 31aecc7ab7744d0b45061d2434d8709c776c52e8
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2022
-ms.locfileid: "68499287"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820130"
 ---
 # <a name="build-tabs-with-adaptive-cards"></a>アダプティブ カードを使用してタブをビルドする
 
 > [!IMPORTANT]
 >
-> アダプティブ カードを含むタブは、現在、個人用アプリとしてのみサポートされています。
+> アダプティブ カードを含むタブは、個人用アプリとしてのみサポートされます。
 
 従来の方法を使用してタブを開発する場合、次の問題が発生する可能性があります。
 
@@ -25,7 +25,7 @@ ms.locfileid: "68499287"
 * iFrame 制約
 * サーバーのメンテナンスとコスト
 
-アダプティブ カード タブは、Teams でタブを作成する新しい方法です。 iFrame に Web コンテンツを埋め込む代わりに、アダプティブ カードをタブにレンダリングできます。フロントエンドはアダプティブ カードでレンダリングされますが、バックエンドはボットによって供給されます。 ボットは、要求を受け入れ、レンダリングされるアダプティブ カードで適切に応答する役割を担います。
+アダプティブ カード タブは、Teams でタブを作成する新しい方法です。 Web コンテンツを iFrame に埋め込む代わりに、アダプティブ カードをタブにレンダリングできます。フロントエンドはアダプティブ カードでレンダリングされますが、バックエンドはボットによって動作します。 ボットは、要求を受け入れ、レンダリングされるアダプティブ カードで適切に応答する役割を担います。
 
 デスクトップ、Web、モバイルでネイティブな既製のユーザー インターフェイス (UI) 構成要素を使用してタブを構築できます。 この記事は、アプリ マニフェストに対して行う必要がある変更を理解するのに役立ちます。 また、この記事では、呼び出しアクティビティがアダプティブ カードを使用してタブで情報を要求して送信する方法と、タスク モジュール ワークフローに対する影響についても説明します。
 
@@ -45,7 +45,7 @@ ms.locfileid: "68499287"
 タブをレンダリングする個人用アプリには、アプリ マニフェストに `staticTabs` 配列を含める必要があります。 アダプティブ カード タブは、`contentBotId` プロパティが `staticTab` 定義で指定されたときにレンダリングされます。 静的タブ定義には、アダプティブ カード タブを指定する `contentBotId` または一般的なホストされた Web コンテンツ タブ エクスペリエンスを指定する `contentUrl` のいずれかが含まれている必要があります。
 
 > [!NOTE]
-> この `contentBotId` プロパティは現在、マニフェスト バージョン 1.9 以降で使用できます。
+> プロパティは `contentBotId` マニフェスト バージョン 1.9 以降で使用できます。
 
 [アダプティブ カード] タブが通信する必要のある `botId` を `contentBotId` プロパティに指定します。 [アダプティブ カード] タブ用に構成された `entityId` は、各呼び出し要求の `tabContext` パラメーターで送信され、同じボットから電力を供給されるアダプティブ カード タブを区別するために使用できます。 その他の静的タブ定義フィールドの詳細については、[[マニフェスト スキーマ]](../../resources/schema/manifest-schema.md#statictabs) を参照してください。
 
@@ -437,9 +437,8 @@ ms.locfileid: "68499287"
 
 ## <a name="see-also"></a>関連項目
 
-* [アダプティブ カード](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
-* [Teams タブ](~/tabs/what-are-tabs.md)
-* [プライベート タブを作成する](~/tabs/how-to/create-personal-tab.md)
-* [[チャネル] または [グループ] タブを作成する](~/tabs/how-to/create-channel-group-tab.md)
-* [モバイルのタブ](~/tabs/design/tabs-mobile.md)
-* [フォームの完了に関するフィードバック](~/bots/how-to/conversations/conversation-messages.md#form-completion-feedback)
+* [Teams の [ビルド] タブ](../what-are-tabs.md)
+* [モバイルのタブ](../design/tabs-mobile.md)
+* [カード](../../task-modules-and-cards/what-are-cards.md)
+* [タブでタスク モジュールを使用する](../../task-modules-and-cards/task-modules/task-modules-tabs.md)
+* [フォームの完了に関するフィードバック](../../bots/how-to/conversations/conversation-messages.md#form-completion-feedback)

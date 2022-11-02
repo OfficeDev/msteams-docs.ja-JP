@@ -5,12 +5,12 @@ description: 共有チャネルをTeams Connectして、テナントを切り替
 ms.author: surbhigupta
 localization_priority: Normal
 ms.topic: conceptual
-ms.openlocfilehash: d1f2d212c33f80ce6a5d27e93bda0551d26542dd
-ms.sourcegitcommit: 10debe0f01574a21aab54bfac692a4c8373263a8
+ms.openlocfilehash: d8c6e46a67c8cfeb1e8fa9bf0196a74fb6e183c6
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68789927"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819955"
 ---
 # <a name="microsoft-teams-connect-shared-channels"></a>共有チャネルをMicrosoft Teams Connectする
 
@@ -112,4 +112,4 @@ SupportedChannelTypes は、標準以外のチャネルでアプリを有効に�
 * [Teams のアプリ マニフェストのスキーマ](../../resources/schema/manifest-schema.md)
 * [Microsoft Teamsの共有チャネル](/MicrosoftTeams/shared-channels)
 * [チャネル リソースの種類](/graph/api/resources/channel)
-* [Teams の場所のアイテム保持ポリシー](/microsoft-365/compliance/create-retention-policies)
+* [Teams の場所のリテンション ポリシー](/microsoft-365/compliance/create-retention-policies)

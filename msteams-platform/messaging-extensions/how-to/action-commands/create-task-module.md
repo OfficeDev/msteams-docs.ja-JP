@@ -1,16 +1,16 @@
 ---
 title: タスク モジュールの作成と送信
 author: surbhigupta
-description: タスク モジュールを作成して送信する方法について説明します。 最初の呼び出しアクションを処理し、アクション メッセージ拡張機能コマンドからタスク モジュールを使用して応答します。
+description: タスク モジュールを作成して送信する方法について説明します。 最初の呼び出しアクションを処理し、アクション メッセージ拡張コマンドのタスク モジュールで応答します。
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: d6e85a52af435d131bea0a700ccf13b536a30b9a
-ms.sourcegitcommit: 75d0072c021609af33ce584d671f610d78b3aaef
+ms.openlocfilehash: 08629f59979923a397c08809fc20b50c81a30c58
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2022
-ms.locfileid: "68100316"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820116"
 ---
 # <a name="create-and-send-task-module"></a>タスク モジュールの作成と送信
 
@@ -648,7 +648,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 |プロパティ名|用途|
 |---|---|
-|`type`| フォームを表示するか `continue` 、 `message` 単純なポップアップを表示できます。 |
+|`type`| フォームを表示することも `continue` 、単純なポップアップを表示することもできます `message` 。 |
 |`value`| フォームの `taskInfo` オブジェクト、またはメッセージの `string` オブジェクトのいずれかです。 |
 
 taskInfo オブジェクトのスキーマは次のとおりです。
@@ -995,4 +995,9 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## <a name="see-also"></a>関連項目
 
-[操作コマンドを定義する](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+* [カード](../../../task-modules-and-cards/what-are-cards.md)
+* [アダプティブ カードのユーザー ピッカー](../../../task-modules-and-cards/cards/people-picker.md)
+* [タスク モジュール](../../../task-modules-and-cards/what-are-task-modules.md)
+* [Teams のアプリ マニフェストのスキーマ](../../../resources/schema/manifest-schema.md)
+* [メッセージ拡張機能のアクション コマンドを定義する](define-action-command.md)
+* [メッセージの拡張機能](../../what-are-messaging-extensions.md)

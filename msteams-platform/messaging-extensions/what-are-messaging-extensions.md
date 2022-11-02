@@ -5,12 +5,12 @@ description: メッセージ拡張機能の使用方法、その種類、およ�
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.openlocfilehash: 09dad55a4ca0b59e517f55e12f24d8ea8d687313
-ms.sourcegitcommit: 84747a9e3c561c2ca046eda0b52ada18da04521d
+ms.openlocfilehash: 6b486e732542cbd6fdfeaecbef74b9724a024e67
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2022
-ms.locfileid: "68791735"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819976"
 ---
 # <a name="message-extensions"></a>メッセージの拡張機能
 
@@ -247,6 +247,11 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 
 ## <a name="see-also"></a>関連項目
 
-* [メッセージ拡張機能の検索コマンドを定義する](~/messaging-extensions/how-to/search-commands/define-search-command.md)
-* [メッセージ拡張機能を作成する](../build-your-first-app/build-messaging-extension.md)
-* [検索ベースのメッセージング拡張機能のユニバーサル アクション](how-to/search-commands/universal-actions-for-search-based-message-extensions.md)
+* [機能にマッピングされたアプリの機能](../concepts/design/map-use-cases.md#app-capabilities-mapped-to-features)
+* [JavaScript を使用して最初のメッセージ拡張アプリを作成する](../sbs-gs-msgext.yml)
+* [Microsoft Teams メッセージ拡張機能のデザイン](design/messaging-extension-design.md)
+* [メッセージ拡張機能のアクション コマンドを定義する](how-to/action-commands/define-action-command.md)
+* [メッセージ拡張機能の検索コマンドを定義する](how-to/search-commands/define-search-command.md)
+* [リンク展開を追加する](how-to/link-unfurling.md)
+* [Teams のアプリ マニフェストのスキーマ](../resources/schema/manifest-schema.md)
+* [Teams の開発者ポータル](../concepts/build-and-test/teams-developer-portal.md)

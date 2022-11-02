@@ -5,12 +5,12 @@ description: プロアクティブ メッセージを使用してメッセージ
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.openlocfilehash: 472bde652e60a8029bd54c7a1360412ab9710ada
-ms.sourcegitcommit: bb15ce26cd65bec90991b703069424ab4b4e1a61
+ms.openlocfilehash: 96ba10d59eccbc95a73455641425a01a9f3f2c47
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2022
-ms.locfileid: "68772308"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68820144"
 ---
 # <a name="respond-to-the-task-module-submit-action"></a>タスク モジュールの送信アクションに応答する
 
@@ -616,4 +616,6 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ## <a name="see-also"></a>関連項目
 
-[検索コマンドに応答する](~/messaging-extensions/how-to/search-commands/respond-to-search.md)
+* [Teams のアプリ マニフェストのスキーマ](../../../resources/schema/manifest-schema.md)
+* [検索コマンドに応答する](../search-commands/respond-to-search.md)
+* [メッセージの拡張機能](../../what-are-messaging-extensions.md)

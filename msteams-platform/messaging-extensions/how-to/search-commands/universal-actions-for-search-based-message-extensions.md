@@ -1,26 +1,26 @@
 ---
 title: 検索ベースのメッセージ拡張機能のユニバーサル アクション
 author: v-ypalikila
-description: この記事では、検索ベースのメッセージ拡張機能のユニバーサル アクションとアダプティブ カードの自動更新について説明します。
+description: この記事では、検索ベースのメッセージ拡張機能のアダプティブ カードのユニバーサル アクションと自動更新について説明します。
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: medium
-ms.openlocfilehash: 78b8c525b51603245fc379a826fa0cc11cbc5fd8
-ms.sourcegitcommit: 176bbca74ba46b7ac298899d19a2d75087fb37c1
+ms.openlocfilehash: 18f5b783797d69144aac82e5ebd95fc30dad57a2
+ms.sourcegitcommit: 9ea9a70d2591bce6b8c980d22014e160f7b45f91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2022
-ms.locfileid: "68376593"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68819969"
 ---
 # <a name="universal-actions-for-search-based-message-extensions"></a>検索ベースのメッセージ拡張機能のユニバーサル アクション
 
-検索ベースのメッセージ拡張機能のアダプティブ カードでユニバーサル アクションがサポートされるようになりました。 検索ベースのメッセージ拡張機能でユニバーサル アクションを有効にするには、アプリが [アダプティブ カードのユニバーサル アクションのスキーマ](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#schema-for-universal-actions-for-adaptive-cards) と、次の要件に準拠している必要があります。
+検索ベースのメッセージ拡張機能のアダプティブ カードでユニバーサル アクションがサポートされるようになりました。 検索ベースのメッセージ拡張機能に対してユニバーサル アクションを有効にするには、アプリが [アダプティブ カードのユニバーサル アクションのスキーマ](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#schema-for-universal-actions-for-adaptive-cards) と次の要件に準拠している必要があります。
 
 1. アプリには、アプリ マニフェストで会話ボットが定義されている必要があります。
-1. 会話型ボットが既にある場合は、メッセージ拡張機能で使用されているのと同じボットを使用する必要があります。
-1. カードがグループで送信された場合、アプリはマニフェストでボットを指定するかスコープを指定 `team` する `groupchat` 必要があります。
+1. 既に会話ボットがある場合は、メッセージ拡張機能で使用されているのと同じボットを使用する必要があります。
+1. カードがグループで送信される場合、アプリはマニフェストでボットに対してまたは`groupchat`スコープを指定`team`する必要があります。
 
-次の値を含む JSON スキーマの`team``groupchat`例:
+と `groupchat` の値を持つ `team` JSON スキーマの例:
 
 ```json
 {
@@ -47,9 +47,9 @@ ms.locfileid: "68376593"
 }
 ```
 
-## <a name="automatic-refresh-for-adaptive-cards-in-search-based-message-extensions"></a>検索ベースのメッセージ拡張機能のアダプティブ カードの自動更新
+## <a name="automatic-refresh-for-adaptive-cards-in-search-based-message-extensions"></a>検索ベースのメッセージ拡張機能でのアダプティブ カードの自動更新
 
-検索ベースのメッセージ拡張機能でアダプティブ カードの自動更新を有効にして、ユーザーが常に最新の情報を表示できるようにします。 有効にするには、プロパティで配列を`29:<ID>`定義`userIds`します`8:orgid:<AAD ID>``refresh`。 詳細については、「 [アダプティブ カードのユニバーサル アクションの操作」を](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#user-ids-in-refresh)参照してください。
+検索ベースのメッセージ拡張機能でアダプティブ カードの自動更新を有効にして、ユーザーが常に最新の情報を確実に表示できるようにします。 有効にするには、 プロパティで または `8:orgid:<AAD ID>` 形式の`29:<ID>`配列を`refresh`定義`userIds`します。 詳細については、「 [アダプティブ カードのユニバーサル アクションの操作」を](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#user-ids-in-refresh)参照してください。
 
 プロパティ内の配列の`userIds``refresh`例:
 
@@ -84,9 +84,9 @@ ms.locfileid: "68376593"
 ```
 
 > [!NOTE]
-> グループ チャットまたはチャネル内のすべてのユーザーが 60 人以下の場合 *、自動更新が* 有効になります。 60 を超えるユーザーを含む会話 (グループ チャットまたはチャネル) の場合、ユーザーはメッセージ オプション メニューの更新ボタンを使用して最新の結果を取得できます。
+> 自動更新は、60 ユーザー以下のグループ チャットまたはチャネル内のすべてのユーザー *に対して* 有効になります。 60 人を超えるユーザーとの会話 (グループ チャットまたはチャネル) の場合、ユーザーはメッセージ オプション メニューの [更新] ボタンを使用して最新の結果を取得できます。
 
-プロパティの`Action.Execute``refresh`例:
+プロパティ内の の`Action.Execute``refresh`例:
 
 ```json
     {
@@ -116,18 +116,19 @@ ms.locfileid: "68376593"
 
 ## <a name="just-in-time-install"></a>Just-In-Time インストール
 
-Just-In-Time (JIT) を使用すると、グループ チャットまたはチャネルに複数のユーザーのカードまたはメッセージ拡張機能をインストールできます。 検索ベースのメッセージ拡張機能でユニバーサル アクションをサポートするために、ボットはユーザーによってカード (と共 `Action.Execute`に) が送信される会話に追加されます。
+Just-In-Time (JIT) を使用すると、グループ チャットまたはチャネルに複数のユーザーのカードまたはメッセージ拡張機能をインストールできます。 検索ベースのメッセージ拡張機能でユニバーサル アクションをサポートするために、ボットが会話に追加され、カード (と ) `Action.Execute`がユーザーによって送信されます。
 
 ユーザーがカードを選択してグループ チャットまたはチャネルで送信すると、 **JIT** インストール プロンプトが表示されます。 ユーザーが **送信** オプションを選択すると、バックグラウンドでチャットまたはチャネル内のすべてのユーザーに対してアプリが追加されます。
 
 > [!NOTE]
-> スキーマが定義されていない`Action.Execute``refresh`アプリの場合、インストール プロンプトはユーザーに表示されません。
+> と スキーマが定義されていない`Action.Execute``refresh`アプリの場合、インストール プロンプトはユーザーに表示されません。
 
-動的 ME と JIT のインストール ユーザー フローの例:
+動的 ME および JIT インストール ユーザー フローの例:
 
-  :::image type="content" source="../../../assets/videos/dynamic-me-jit-flow.gif" alt-text="GIF には、動的メッセージ拡張機能と JIT インストールのユーザー フローが表示されます。":::
+  :::image type="content" source="../../../assets/videos/dynamic-me-jit-flow.gif" alt-text="GIF は、動的メッセージ拡張機能と JIT インストールのユーザー フローを示します。":::
 
 ## <a name="see-also"></a>関連項目
 
 * [メッセージの拡張機能](../../what-are-messaging-extensions.md)
+* [アダプティブ カード](../../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
 * [アダプティブ カードのユニバーサル アクション](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Overview.md)
