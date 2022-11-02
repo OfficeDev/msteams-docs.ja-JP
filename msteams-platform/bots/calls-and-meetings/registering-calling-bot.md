@@ -1,14 +1,14 @@
 ---
 title: Microsoft Teams の通話と会議ボットを登録する
-description: Microsoft Teams 用の新しいオーディオ/ビデオ通話ボットを登録する方法、新しいボットを作成する方法、通話機能を追加する方法、グラフのアクセス許可を追加する方法について説明します。 通話の作成、会議への参加、通話の転送を行うサンプル。
+description: Microsoft Teams 用に新しいオーディオ/ビデオ通話ボットを登録する方法、新しいボットを作成する方法、通話機能を追加する方法、グラフのアクセス許可を追加する方法について説明します。 通話の作成、会議への参加、通話の転送を行うサンプル。
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.openlocfilehash: 3fe8d0adde45242738b8023c5478c24769561d1c
-ms.sourcegitcommit: 53818e55dfe0dbdf874d578a40982f7db444f89b
+ms.openlocfilehash: 6ee71c6ca790bdc2016c02143256e2d21b9595f2
+ms.sourcegitcommit: 88fb2e9a18de3bd84e3c604ff235fc753c8de8f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2022
-ms.locfileid: "68319938"
+ms.lasthandoff: 11/02/2022
+ms.locfileid: "68817976"
 ---
 # <a name="register-calls-and-meetings-bot-for-microsoft-teams"></a>Microsoft Teams の通話と会議ボットを登録する
 
@@ -58,7 +58,7 @@ Graph は、アプリがリソースに対して持つアクセスを制御す�
 |アクセス許可    |表示文字列   |説明 |管理者の同意が必要 |
 |:-----------------------------|:-----------------------------------------|:-----------------|:-----------------|
 | Calls.Initiate.All |アプリ プレビューからの 1 対 1 通話の発信開始。 |アプリで、サインインしているユーザーがいなくても、1 人のユーザーに発信し、組織のディレクトリ内のユーザーに通話を転送することができるようにします。|はい|
-| Calls.InitiateGroupCall.All |発信 1:1 を開始し、アプリ プレビューから通話をグループ化します。 |アプリが 1 人のユーザー、複数のユーザーに発信通話を発信し、通話を転送し、サインインしているユーザーなしで組織内の会議に参加者を追加できるようにします。|はい|
+| Calls.InitiateGroupCall.All |アプリ プレビューから発信 1:1 とグループ呼び出しを開始します。 |アプリで、1 人のユーザー、複数のユーザーに送信通話を発信し、通話を転送し、サインインしているユーザーなしで組織内の会議に参加者を追加できるようにします。|はい|
 | Calls.JoinGroupCall.All |グループ通話と会議にアプリ プレビューとして参加する。 |アプリで、サインインしているユーザーがいなくても、組織のグループ通話やスケジュールされた会議に参加することができるようにします。 このアプリは、ディレクトリ ユーザーの特権を使用してテナントの会議に参加します。|はい|
 | Calls.JoinGroupCallasGuest.All |グループ通話と会議にゲスト プレビューとして参加する。 |アプリで、サインインしているユーザーがいなくても、組織のグループ通話とスケジュールされた会議に匿名で参加することができるようにします。 このアプリは、テナントの会議にゲストとして参加します。|はい|
 | Calls.AccessMedia.All |通話内のメディア ストリームにアプリ プレビューとしてアクセスする。 |アプリで、サインインしているユーザーがいなくても、通話内のメディア ストリームに直接アクセスすることができるようにします。|はい|
@@ -96,11 +96,11 @@ You can rely on an administrator to grant the permissions your app needs at the 
 | **サンプルの名前** | **説明** | **C#** |
 |---------------|----------|--------|
 | 通話ボットと会議ボット | サンプル アプリでは、ボットが通話を作成し、会議に参加し、通話を転送する方法を示します。 | [表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
-| リアルタイム会議イベント |サンプル アプリでは、ボットがリアルタイムの会議イベントを受信する方法を示します。|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|
+| リアルタイム会議イベント |サンプル アプリは、Bot がリアルタイムの会議イベントを受信する方法を示しています。|[表示](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|
 
 ## <a name="step-by-step-guide"></a>ステップ バイ ステップのガイド
 
-[ステップ バイ ステップ ガイド](../../sbs-calling-and-meeting.yml)に従って、ボットで通話と会議を設定します。
+[詳細なガイド](../../sbs-calling-and-meeting.yml)に従って、Teams 通話ボットと会議ボットを設定します。
 
 ## <a name="next-step"></a>次の手順
 
