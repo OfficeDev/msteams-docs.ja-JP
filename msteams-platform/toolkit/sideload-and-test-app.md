@@ -6,55 +6,55 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
-ms.openlocfilehash: ee1d3ee3a4f545a6c988c421fb18626a4a7276b7
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 721b3a30bcc8c2fa49bb06491f4ab24bbeb844fd
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67617217"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833003"
 ---
 # <a name="sideload-and-test-app-in-teams-environment"></a>Teams 環境でのアプリのサイドロードとテスト
 
-API 接続を追加した後、Teams Toolkit ローカル環境で API 接続をテストし、アプリケーションをクラウドにデプロイできます。 CI/CD パイプラインでは、異なるプラットフォームでセットアップした後、リソースをプロビジョニングおよびデプロイするために Azure サービス プリンシパルを作成する必要があります。
+API 接続を追加した後、Teams Toolkit ローカル環境で API 接続をテストし、アプリケーションをクラウドにデプロイできます。 CI/CD パイプラインでは、別のプラットフォームでセットアップした後、リソースをプロビジョニングしてデプロイするために Azure サービス プリンシパルを作成する必要があります。
 
-このセクションでは、次のことを学習します。
+このセクションでは、
 
-* [ローカル環境で API 接続をテストする](#test-api-connection-in-local-environment)
+* [ローカル環境での API 接続のテスト](#test-api-connection-in-local-environment)
 * [アプリケーションを Azure にデプロイする](#deploy-your-application-to-azure)
 * [CI/CD リソースのプロビジョニングとデプロイ](#provision-and-deploy-cicd-resources)
 
-## <a name="test-api-connection-in-local-environment"></a>ローカル環境で API 接続をテストする
+## <a name="test-api-connection-in-local-environment"></a>ローカル環境での API 接続のテスト
 
-次の手順は、Teams Toolkit ローカル環境で API 接続をテストするのに役立ちます。
+次の手順は、Teams Toolkit ローカル環境での API 接続のテストに役立ちます。
 
- 1. **npm install を実行する**
+ 1. **npm インストールを実行する**
 
-    下または`api`フォルダーで`bot`実行`npm install`して、追加されたパッケージをインストールします。
+    または `api` フォルダーで`bot`を実行`npm install`して、追加されたパッケージをインストールします。
 
- 2. **API 資格情報をローカル アプリケーション設定に追加する**
+ 2. **ローカル アプリケーション設定に API 資格情報を追加する**
 
-    Teams Toolkit は資格情報を要求しませんが、ローカル アプリケーション設定ファイルにプレースホルダーを残します。 プレースホルダーを API にアクセスするための適切な資格情報に置き換えます。 ローカル アプリケーション設定ファイルは、`.env.teamsfx.local`フォルダー内の`bot``api`ファイルです。
+    Teams Toolkit は資格情報を要求しませんが、プレースホルダーはローカル アプリケーション設定ファイルに残ります。 プレースホルダーを、API にアクセスするための適切な資格情報に置き換えます。 ローカル アプリケーション設定ファイルは、 `.env.teamsfx.local` または `api` フォルダー内の`bot`ファイルです。
 
  3. **API クライアントを使用して API 要求を行う**
 
-    API へのアクセスが必要なソース コードから API クライアントをインポートします。
+    API へのアクセスを必要とするソース コードから API クライアントをインポートします。
 
     ```BASH
     import { yourApiClient } from '{relative path to the generated file}'
     ```
 
- 4. **ターゲット API に対する http 要求を生成する (Axios を使用)**
+ 4. **ターゲット API への http(s) 要求を生成する (Axios を使用)**
 
     生成された API クライアントは Axios API クライアントです。 Axios クライアントを使用して API に要求を行います。
 
      > [!Note]
-     > [Axios](https://www.npmjs.com/package/axios) は、http 要求に役立つ一般的な nodejs パッケージです。 http 要求を行う方法の詳細については、 [axios のサンプル ドキュメント](https://axios-http.com/docs/example) を参照して、http を作成する方法を確認してください。
+     > [Axios](https://www.npmjs.com/package/axios) は、http(s) 要求に役立つ一般的な nodejs パッケージです。 http(s) 要求を行う方法の詳細については、http を作成する方法の詳細については、 [Axios のサンプル ドキュメント](https://axios-http.com/docs/example) を参照してください。
 
 ## <a name="deploy-your-application-to-azure"></a>アプリケーションを Azure にデプロイする
 
-Azure にアプリケーションをデプロイするには、適切な環境のアプリケーション設定に認証を追加する必要があります。 たとえば、API の資格情報 `dev` が異なる場合があります `prod`。 環境のニーズに基づいて、Teams Toolkit を構成します。
+アプリケーションを Azure にデプロイするには、適切な環境のアプリケーション設定に認証を追加する必要があります。 たとえば、API の資格情報と の資格情報が`dev``prod`異なる場合があります。 環境のニーズに基づいて、Teams Toolkit を構成します。
 
-Teams Toolkit では、ローカル環境が構成されます。 ブートストラップされたサンプル コードには、構成する必要があるアプリ設定を示すコメントが含まれています。 アプリケーション設定の詳細については、「アプリ設定の追加」を参照してください [。](https://github.com/OfficeDev/TeamsFx/wiki/%5BDocument%5D-Add-app-settings)
+Teams Toolkit によってローカル環境が構成されます。 ブートストラップされたサンプル コードには、構成する必要があるアプリ設定を示すコメントが含まれています。 アプリケーション設定の詳細については、「アプリ設定の[追加](https://github.com/OfficeDev/TeamsFx/wiki/%5BDocument%5D-Add-app-settings)」を参照してください。
 
 ## <a name="provision-and-deploy-cicd-resources"></a>CI/CD リソースのプロビジョニングとデプロイ
 
@@ -63,7 +63,7 @@ CI/CD 内で Azure を対象とするリソースをプロビジョニングお�
 Azure サービス プリンシパルを作成するには、次の手順に従います。
 
 1. Microsoft Azure Active Directory (Azure AD) アプリケーションをシングル テナントに登録します。
-2. Azure AD アプリケーションに、Azure サブスクリプションにアクセスするためのロールを割り当てます。`Contributor` ロールをお勧めします。
+2. Assign a role to your Azure AD application to access your Azure subscription. The `Contributor` role is recommended.
 3. 新しい Azure AD アプリケーション シークレットを作成します。
 
 > [!TIP]
@@ -77,4 +77,4 @@ Azure サービス プリンシパルを作成するには、次の手順に従�
 
 ## <a name="see-also"></a>関連項目
 
-* [Teams ツールキットを使用して Teams アプリを公開する](publish.md)
+[Teams ツールキットを使用して Teams アプリを公開する](publish.md)

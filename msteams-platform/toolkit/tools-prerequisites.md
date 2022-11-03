@@ -6,32 +6,32 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-ms.openlocfilehash: 412b7bfedb6ba39f1d38f42aac56cc793ea385b1
-ms.sourcegitcommit: ed7488415f814d0f60faa15ee8ec3d64ee336380
+ms.openlocfilehash: 1870f42a4f5d6589603d31dae955aa6d487b0305
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "67617151"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833185"
 ---
 # <a name="prerequisites-for-creating-your-teams-app"></a>Teams アプリを作成するための前提条件
 
 Teams アプリの作成を開始する前に、次の前提条件が満たされていることを確認します。
 
-* [Teams アプリを構築するための基本的な要件](#basic-requirements-to-build-your-teams-app)
-* [アカウントを準備して Teams アプリを構築する](#accounts-to-build-your-teams-app)
-* [サイドローディングアクセス許可](#sideloading-permission)
+* [Teams アプリをビルドするための基本的な要件](#basic-requirements-to-build-your-teams-app)
+* [Teams アプリをビルドするためのアカウントの準備](#accounts-to-build-your-teams-app)
+* [サイドローディングのアクセス許可](#sideloading-permission)
 
-## <a name="basic-requirements-to-build-your-teams-app"></a>Teams アプリを構築するための基本的な要件
+## <a name="basic-requirements-to-build-your-teams-app"></a>Teams アプリをビルドするための基本的な要件
 
 Teams アプリのビルドを開始する前に、次の要件が満たされていることを確認します。
 
-| &nbsp; | 基本的な要件 | 使用する場合| 環境の種類の場合|
+| &nbsp; | 基本的な要件 | を使用する場合| 環境の種類|
    | --- | --- | --- |
    | **必須** | &nbsp; | &nbsp; | &nbsp; |
    | &nbsp; | Teams ツールキット| アプリのプロジェクト スキャフォールディングを作成する Microsoft Visual Studio Code 拡張機能。 最新バージョンを使用します。 | JavaScript と SPFx|
-   | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | チャット、会議、通話のためのアプリを通じて作業するすべてのユーザーと共同作業を行います。すべて 1 か所で行うことができます。| JavaScript と SPFx|
+   | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | チャット、会議、通話のアプリを通じて作業するすべてのユーザーと 1 か所で共同作業を行うことができます。| JavaScript と SPFx|
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | バックエンド JavaScript ランタイム環境。 最新の v16 LTS リリースを使用します。| JavaScript と SPFx|
-   | &nbsp; |[ノード パッケージ マネージャー (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) | Node.jsアプリケーションと ASP.NET Core アプリケーションの両方で使用するパッケージをインストールして管理します。| JavaScript と SPFx|
+   | &nbsp; |[Node Package Manager (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) | Node.jsアプリケーションと ASP.NET Coreアプリケーションの両方で使用するパッケージをインストールして管理します。| JavaScript と SPFx|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (推奨) または [Google Chrome](https://www.google.com/chrome/) | 開発者ツールを備えたブラウザー。 | JavaScript と SPFx|
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript、TypeScript、または SharePoint Framework (SPFx) ビルド環境。 バージョン 1.55 以降を使用してください。 | JavaScript と SPFx|
    | **Optional** | &nbsp; | &nbsp; | &nbsp; |
@@ -42,17 +42,17 @@ Teams アプリのビルドを開始する前に、次の要件が満たされ�
 
    > [!NOTE]
    >
-   > * このドキュメントは、Teams Toolkit バージョン 4.0.0 および Nodejs バージョン 16 でテストされています。
-   > * Microsoft Graph サービスの詳細については、Microsoft Graph エクスプローラーをブックマークします。 このブラウザー ベースのツールを使用すると、アプリの外部で Microsoft Graph にクエリを実行してアクセスできます。
+   > * このドキュメントは、Teams Toolkit バージョン 4.0.0 と Nodejs バージョン 16 でテストされます。
+   > * Microsoft Graph サービスについて学習するには、Microsoft Graph エクスプローラーをブックマークします。 このブラウザー ベースのツールを使用すると、アプリの外部で Microsoft Graph に対してクエリを実行してアクセスできます。
 
-## <a name="accounts-to-build-your-teams-app"></a>Teams アプリを構築するためのアカウント
+## <a name="accounts-to-build-your-teams-app"></a>Teams アプリをビルドするためのアカウント
 
 Teams アプリのビルドを開始する前に、次のアカウントがあることを確認します。
 
-| アカウント | 使用する場合| 環境の種類の場合|
+| アカウント | を使用する場合| 環境の種類|
 | --- | --- |
-|[有効なサブスクリプションのある Microsoft 365 アカウント](#microsoft-365-developer-program)|アプリの開発中に Teams 開発者アカウント。| JavaScript と SPFx|
-|[Azure アカウント](accounts.md#azure-account-to-host-backend-resources)|Azure 上のバックエンド リソース。| JavaScript と SPFx|
+|[有効なサブスクリプションのある Microsoft 365 アカウント](#microsoft-365-developer-program)|アプリの開発中の Teams 開発者アカウント。| JavaScript と SPFx|
+|[Azure アカウント](#azure-account)|Azure 上のバックエンド リソース。| JavaScript と SPFx|
 |[SharePoint コレクション サイト管理者アカウント](#sharepoint-collection-site-administrator-account) |ホスティング用のデプロイ。| SPFx|
 
 ### <a name="microsoft-365-developer-program"></a>Microsoft 365 開発者プログラム
@@ -75,7 +75,7 @@ Visual Studio Enterprise または Professional サブスクリプションを�
 
     :::column-end:::
     :::column span="1":::
-             :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/personal-account-icon.png" alt-text="個人アカウント。":::
+             :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/personal-account-icon.png" alt-text="個人用アカウント。":::
    :::column-end:::
 
   :::row-end:::
@@ -86,13 +86,13 @@ Visual Studio Enterprise または Professional サブスクリプションを�
 
     :::column span="3":::
 
-       このアカウントでは、すべての小規模、中規模、エンタープライズのビジネス レベルの Microsoft クラウド サービスにアクセスできます。 サービスには、Azure、Microsoft Intune、または Microsoft 365 が含まれます。 
+       このアカウントを使用すると、すべての小規模、中規模、およびエンタープライズのビジネス レベルの Microsoft クラウド サービスにアクセスできます。 サービスには、Azure、Microsoft Intune、または Microsoft 365 が含まれます。 
 
        組織としてこのいずれかのサービスにサインアップすると、組織を表すクラウド ベースのディレクトリが Azure AD に自動的にプロビジョニングされます。
 
     :::column-end:::
     :::column span="1":::
-             :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/work-account-icon.png" alt-text="ワーク アカウント。":::
+             :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/work-account-icon.png" alt-text="職場アカウント。":::
     :::column-end:::
 
   :::row-end:::
@@ -113,17 +113,17 @@ Visual Studio Enterprise または Professional サブスクリプションを�
 
 Visual Studio Code で Teams Toolkit を使用して Teams アプリまたは Teams アプリのバックエンド リソースをホストするには、Azure アカウントが必要です。 次のシナリオでは、Azure サブスクリプションが必要です。
 
-* Azure 以外の別のクラウド プロバイダーに既に既存のアプリがあり、Teams プラットフォームでアプリを統合する場合は、Azure サブスクリプションが必要です。
-* Azure サブスクリプションを選択して、別のクラウド プロバイダーを使用してバックエンド リソースをホストするか、パブリック ドメインから利用できる場合は独自のサーバーでホストできます。
+* Azure 以外の別のクラウド プロバイダーに既存のアプリが既にあり、Teams プラットフォームでアプリを統合する場合は、Azure サブスクリプションが必要です。
+* Azure サブスクリプションを選択して、別のクラウド プロバイダーを使用してバックエンド リソースをホストするか、パブリック ドメインから使用できる場合は独自のサーバーでホストできます。
 
 > [!NOTE]
 > 開始する前に [、無料アカウントを作成](https://azure.microsoft.com/free/) する必要があります。
 
 ### <a name="sharepoint-collection-site-administrator-account"></a>SharePoint コレクション サイト管理者アカウント
 
-SPFx 環境を使用して Teams アプリを作成するときに、ホスト用の展開時に SharePoint コレクション サイト管理者アカウントが必要になります。 Microsoft 365 開発者プログラム テナントを使用している場合は、そのときに作成した管理者アカウントを使用することができます。
+SPFx 環境を使用して Teams アプリを作成するときは、ホスト用の展開時に SharePoint コレクション サイト管理者アカウントが必要です。 Microsoft 365 開発者プログラム テナントを使用している場合は、そのときに作成した管理者アカウントを使用することができます。
 
-## <a name="sideloading-permission"></a>サイドローディングアクセス許可
+## <a name="sideloading-permission"></a>サイドローディングのアクセス許可
 
 アプリを作成したら、アプリを配布せずに Teams に読み込む必要があります。 このプロセスはサイドローディングと呼ばれます。 このオプションを表示するには、Microsoft 365 アカウントにサインインします。
 
@@ -134,11 +134,11 @@ Visual Studio Code または Teams クライアントを使用して、サイド
 <summary><b>Visual Studio Code を使用してサイドローディングアクセス許可を確認する</b></summary>
 
 1. **Visual Studio Code** を開きます。
-1. Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: ツール バーから Teams Toolkit アイコンを選択します。
+1. [Teams ツールキット :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: ] ツール バーから [Teams ツールキット] アイコンを選択します。
 
    > [!NOTE]
-   > このオプションが表示できない場合は、「 [Teams Toolkit をインストール](install-Teams-Toolkit.md) して Teams Toolkit 拡張機能を Visual Studio Code にインストールする」を参照してください。
-1. [**ACCOUNTS**] **で [M365 に** サインイン] を選択し、Microsoft 365 アカウントにサインインします。
+   > オプションが表示できない場合は、「 [Teams Toolkit をインストール](install-Teams-Toolkit.md) して Visual Studio Code に Teams Toolkit 拡張機能をインストールする」を参照してください。
+1. [**アカウント**] **で [M365 にサインイン**] を選択し、Microsoft 365 アカウントにサインインします。
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/accounts.png" alt-text="アカウントの詳細":::
 
@@ -170,25 +170,25 @@ Visual Studio Code または Teams クライアントを使用して、サイド
 * テナント管理者の場合は、Teams 管理センターでテナントまたは組織のサイドローディング設定を有効にします。
 * テナント管理者でない場合は、テナント管理者に問い合わせ、サイドローディングを有効にする必要があります。
 
-管理者権限がある場合は、次の手順に従って、管理センターを使用してカスタム アプリをアップロードします。
+管理者権限がある場合は、次の手順を実行して、管理センターを使用してカスタム アプリをアップロードします。
 
   1. 管理者の資格情報で [Microsoft 365 管理センター](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/)にサインインします。
 
-  1. Teams >アイコンを :::image type="icon" source="../assets/images/teams-toolkit-v2/showall icon.PNG"::: 選択 **します**。
+  1. Teams の :::image type="icon" source="../assets/images/teams-toolkit-v2/showall icon.PNG"::: アイコン>選択 **します**。
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/m365-admin-center.png" alt-text="Microsoft 365 管理センター":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/m365-admin-center.png" alt-text="Microsoft 365 管理 センター":::
 
      > [!Note]
      > **Teams** オプションが表示されるまで、**最大 24 時間** かかる場合があります。 テストと検証のために、[カスタム アプリを Teams 環境にアップロード](/microsoftteams/upload-custom-apps)することができます。
 
-  1. 管理者資格情報を使用して Microsoft Teams 管理センターにサインインします。
-  1. **Teams アプリ** > の:::image type="icon" source="../assets/images/teams-toolkit-v2/showall icon.PNG":::**セットアップ ポリシー**>アイコンを選択します。
+  1. 管理者の資格情報を使用して Microsoft Teams 管理センターにサインインします。
+  1. **[Teams アプリ** > の **セットアップ ポリシー**] :::image type="icon" source="../assets/images/teams-toolkit-v2/showall icon.PNG"::: >アイコンを選択します。
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/m365-admin-center1.png" alt-text="Microsoft 365 管理 center1":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/m365-admin-center1.png" alt-text="Microsoft 365 管理 センター1":::
 
-  1. グローバルを選択 **する (組織全体の既定値)**
+  1. [ **グローバル] を選択します (組織全体の既定値)**
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/select-manage-policies.png" alt-text="[ポリシーの管理] を選択する":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/select-manage-policies.png" alt-text="[ポリシーの管理] を選択します":::
 
   1. [**カスタム アプリのアップロード**] を "**オン**" に切り替えます。
 
@@ -199,7 +199,7 @@ Visual Studio Code または Teams クライアントを使用して、サイド
      > [!Note]
      > データが反映されるまでに最大 24 時間かかることがあります。 その間、[**テナントのアップロード**] を使用してアプリをテストできます。 アプリの .zip パッケージ ファイルをアップロードするには、「[カスタム アプリのアップロード](/microsoftteams/teams-app-setup-policies)」を参照してください。
 
-     Visual Studio Code または Teams クライアントを使用してサイドローディングアクセス許可を確認する手順に記載されている手順[を使用してサイドローディングアクセス許可](#sideloading-permission)が付与されていることを確認します。
+     Visual Studio Code または Teams クライアントを使用したサイドローディングアクセス許可の確認に関するページで説明されている手順[を使用して、サイドローディングアクセス許可](#sideloading-permission)が付与されていることを確認します。
 
 </details>
 

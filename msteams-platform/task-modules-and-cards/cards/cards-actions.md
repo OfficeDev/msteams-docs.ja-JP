@@ -1,14 +1,14 @@
 ---
 title: ボットにカード アクションを追加する
-description: このモジュールでは、Microsoft Teams のカード アクションとは何か、アクションの種類、ボットでカード アクションを使用する方法について説明します
+description: このモジュールでは、Microsoft Teams のカード アクション、アクションの種類、およびボットでカード アクションを使用する方法について説明します
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.openlocfilehash: 1111e8dfe71ad1289f5057b6cb76b98c3ca8d99b
-ms.sourcegitcommit: 31032e3dee47232c3f8fc9ed1f2168cc0cbcfb7e
+ms.openlocfilehash: 77f2631ae55f5794567d83233e1311d935cefabc
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2022
-ms.locfileid: "67858893"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833178"
 ---
 # <a name="card-actions"></a>カード アクション
 
@@ -38,8 +38,8 @@ Teams のボットやメッセージ拡張機能で使用されるカードは�
 
 > [!NOTE]
 >
-> * 選択されたボタンに関する通知はボットに届きません。
-> * 数字を含むコンピューター名は URL ではサポートされていません。
+> * ボットは、どのボタンが選択されたかに関する通知を受け取りません。
+> * 数値を持つマシン名は、URL ではサポートされていません。
 
 `openUrl` を使用すると、以下のプロパティを含むアクションを作成することができます。
 
@@ -99,7 +99,7 @@ CardFactory.actions([
 | `value` | アクションが実行された場合に、ボットに送信されます。 固有の識別子や JSON オブジェクトなど、アクションのコンテキストをエンコードすることができます。 |
 | `text` | アクションが実行された場合に、ボットに送信されます。 このプロパティを使用して、ボット開発を簡略化します。 コードでは、トップレベルのプロパティをチェックして、ボット ロジックをディスパッチすることができます。 |
 
-柔軟性 `messageBack` とは、コードを使用 `displayText`しないだけでは、履歴に表示されるユーザー メッセージを残できないことを意味します。
+の `messageBack` 柔軟性は、 を使用 `displayText`しないだけでは、コードが履歴に表示されるユーザー メッセージを残すことができないことを意味します。
 
 # <a name="json"></a>[JSON](#tab/json)
 
@@ -433,7 +433,7 @@ CardFactory.actions([
 > [!NOTE]
 >* Bot Framework アクションを含むデータに `msteams` を追加しても、アダプティブ カード タスク モジュールでは動作しません。
 > 
->* Microsoft Teams では、プライマリまたはデクトゥクティブ `ActionStyle` はサポートされていません。 
+>* Microsoft Teams では、プライマリまたは desctuctive `ActionStyle` はサポートされていません。 
 
 ### <a name="adaptive-cards-with-messageback-action"></a>messageBack アクションを備えたアダプティブ カード
 
@@ -563,13 +563,13 @@ CardFactory.actions([
 
 ## <a name="code-samples"></a>コード サンプル
 
-|S.no|カード| 説明|.NET|Javascript|Python|Java|
+|S.no|カード| 説明|.NET|JavaScript|Python|Java|
 |:--|:--|:--------------------------------------------------------|-----|------------|-----|----------------------------|
-|1|カードの使用|サムネイル、オーディオ、メディアなど、すべての種類のカードを紹介します。適切なダイアログにルーティングするウェルカム メッセージにボタンが表示されたカードを提示することで、ユーザーを歓迎する + マルチプロンプト ボットを構築します。|[.Net Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|
-|2|アダプティブ カード|マルチターン ダイアログでカードを使用して、名前と年齢のユーザー入力を取得する方法を示します。|[.NET Core](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[Python](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[Java](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|
+|1|カードの使用|サムネイル、オーディオ、メディアなど、すべてのカードの種類を紹介します。適切なダイアログにルーティングするウェルカム メッセージにボタンを含むカードを提示することで、ウェルカム ユーザーとマルチプロンプト ボットを基に構築します。|[表示](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[表示](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[表示](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[表示](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|
+|2|アダプティブ カード|複数ターンダイアログでカードを使用して、名前と年齢のユーザー入力を取得する方法を示します。|[表示](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[表示](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[表示](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[表示](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|
 
 > [!NOTE]
-> Teams のアダプティブ カードでは、メディア要素はサポートされていません
+> メディア要素は、Teams のアダプティブ カードではサポートされていません
 
 ## <a name="next-step"></a>次の手順
 
