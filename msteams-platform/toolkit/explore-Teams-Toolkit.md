@@ -1,22 +1,22 @@
 ---
 title: Teams Toolkit を調べる
 author: zyxiaoyuer
-description: このモジュールでは、Teams Toolkit の探索について説明します
+description: このモジュールでは、Teams Toolkit の探索について学習します
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 07/29/2022
 zone_pivot_groups: teams-app-platform
-ms.openlocfilehash: 0126953ac43b463460dcfd07c66354d39b53d690
-ms.sourcegitcommit: de7496f9586316bed12d115cd3e4c18ba0854d4f
+ms.openlocfilehash: 0fa31c52b206738cfb174519fc6d3c445b604a8e
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2022
-ms.locfileid: "67781048"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833129"
 ---
 # <a name="explore-teams-toolkit"></a>Teams Toolkit を調べる
 
-このドキュメントでは、Visual Studio Code と Visual Studio の両方に対する Teams Toolkit の説明と基本的な使用方法と共に、さまざまな UI 要素を理解できます。
+このドキュメントでは、Visual Studio Code と Visual Studio の両方について、Teams Toolkit のさまざまな UI 要素と説明と基本的な使用方法について説明します。
 
 ::: zone pivot="visual-studio-code"
 
@@ -32,7 +32,7 @@ Teams Toolkit のインストール後、次の図に示すように Teams Toolk
 | &nbsp; | **チュートリアル** | さまざまなチュートリアルにアクセスします。 |
 | &nbsp; | **ドキュメント** | Microsoft Teams 開発者向けドキュメントにアクセスします。 |
 | 2 | **新しい Teams アプリを作成する** | 要件に基づいて新しい Teams アプリを作成します。 |
-| 3 | **サンプルを表示する** | 既存のサンプルに基づいて、さまざまな種類のアプリをビルドします。 |
+| 3 | **サンプルの表示** | 既存のサンプルに基づいてさまざまな種類のアプリをビルドします。 |
 | 4 | **フォルダーを開く** | 既存の Teams アプリを開きます。 |
 | 5 | **新しいファイル** | 新しいファイルを作成します。 |
 | &nbsp; | **ファイルを開く** | 既存のファイルを開きます。 |
@@ -51,13 +51,13 @@ Teams Toolkit の作業ウィンドウから、その他の UI 要素を調べ�
 
 Teams Toolkit UI のツアーを見てみましょう。
 
- Visual Studio Code ツール バーの Teams Toolkit には、次のアイコンが関連しています。
+ Visual Studio Code ツール バーでは、次のアイコンが Teams Toolkit に関連します。
 
 | アイコン | 説明 |
 | --- | --- |
-| **エクスプローラー** :::image type="icon" source="../assets/images/teams-toolkit-v2/file-explorer-icon.PNG":::  | アプリのディレクトリ構造を表示します。 |
-| **実行とデバッグ** :::image type="icon" source="../assets/images/teams-toolkit-v2/run-debug-icon.PNG":::  | ローカルまたはリモートのデバッグ プロセスを開始します。 |
-| **Teams ツールキット** :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: | Teams Toolkit で作業ウィンドウを表示するには |
+| **エクスプローラー** :::image type="icon" source="../assets/images/teams-toolkit-v2/file-explorer-icon.PNG":::  | アプリのディレクトリ構造を表示するには。 |
+| **実行とデバッグ** :::image type="icon" source="../assets/images/teams-toolkit-v2/run-debug-icon.PNG":::  | ローカルまたはリモートのデバッグ プロセスを開始する。 |
+| **Teams ツールキット** :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: | Teams Toolkit で作業ウィンドウを表示するには。 |
 
 作業ウィンドウから、次のセクションを確認できます。
 
@@ -69,23 +69,23 @@ Teams Toolkit UI のツアーを見てみましょう。
 
         Teams アプリを開発するには、次のアカウントが必要です。
         
-        * **M365 にサインイン** する: アプリのビルドに有効な E5 サブスクリプションで Microsoft 365 アカウントを使用します。
+        * **M365 にサインインする**: アプリをビルドするために、有効な E5 サブスクリプションで Microsoft 365 アカウントを使用します。
 
-        * **Azure にサインインする: Azure** アカウントを使用して Azure にアプリをデプロイします。 開始する前に、[無料の Azure アカウントを作成](https://azure.microsoft.com/free/) できます。
+        * **Azure にサインインする: Azure** にアプリをデプロイするために Azure アカウントを使用します。 開始する前に、[無料の Azure アカウントを作成](https://azure.microsoft.com/free/) できます。
    :::column-end:::
 :::row-end:::
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/environment1.png" alt-text="[環境] セクション":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/environment1.png" alt-text="環境セクション":::
    :::column-end:::
    :::column span="":::
 
-        Teams アプリを展開するには、次の環境が必要です。
+        Teams アプリをデプロイするには、次の環境が必要です。
         
-       * **local: ローカル** コンピューター環境の構成を使用して、既定のローカル環境にアプリをデプロイします。
+       * **local**: ローカル コンピューター環境の構成を使用して、既定のローカル環境にアプリをデプロイします。
 
-        * **dev**: リモートまたはクラウド環境の構成を使用して、既定の開発環境にアプリをデプロイします。 必要に応じて、より多くの環境を作成できます。
+        * **dev**: リモート環境またはクラウド環境構成を使用して、既定の開発環境にアプリをデプロイします。 必要に応じて、より多くの環境を作成できます。
    :::column-end:::
 :::row-end:::
 
@@ -97,13 +97,13 @@ Teams Toolkit UI のツアーを見てみましょう。
 
         Teams アプリを作成してカスタマイズするには、次の機能が必要です。
         
-       * **新しい Teams アプリを作成する**: ツールキット ウィザードを使用して、アプリ開発用のプロジェクト スキャフォールディングを準備します。
+       * **新しい Teams アプリを作成** する: ツールキット ウィザードを使用して、アプリ開発用のプロジェクト スキャフォールディングを準備します。
 
-        * **サンプルを表示する**: Teams Toolkit のサンプル アプリのいずれかを選択します。 ツールキットは GitHub からアプリ コードをダウンロードし、サンプル アプリをビルドできます。
+        * **サンプルの表示**: Teams Toolkit のサンプル アプリのいずれかを選択します。 ツールキットは GitHub からアプリ コードをダウンロードし、サンプル アプリをビルドできます。
         
-        * **機能の追加**: 開発プロセス中に Teams アプリに必要なその他の Teams 機能を追加し、アプリに適したオプションのクラウド リソースを追加します。
+        * **機能の追加**: 開発プロセス中に他の必要な Teams 機能を Teams アプリに追加し、アプリに適したオプションのクラウド リソースを追加します。
        
-        * **マニフェスト ファイルを編集する**: Teams アプリと Teams クライアントの統合を編集します。
+        * **マニフェスト ファイルの編集**: Teams アプリと Teams クライアントの統合を編集します。
    :::column-end:::
 :::row-end:::
 
@@ -113,15 +113,15 @@ Teams Toolkit UI のツアーを見てみましょう。
    :::column-end:::
    :::column span="":::
 
-        Teams アプリをプロビジョニング、展開、発行するには、次の機能が必要です。
+        Teams アプリをプロビジョニング、デプロイ、発行するには、次の機能が必要です。
         
         * **クラウドでのプロビジョニング**: アプリケーションに Azure リソースを割り当てます。 Teams Toolkit は Azure Resource Manager と統合されています。
 
         * **Zip Teams メタデータ パッケージ: Teams** または開発者ポータルにアップロードできるアプリ パッケージを作成します。 アプリ マニフェストとアプリ アイコンが含まれています。
         
-        * **クラウドにデプロイする**: ソース コードを Azure にデプロイします。
+        * **クラウドへのデプロイ**: ソース コードを Azure にデプロイします。
        
-        * **Teams に発行** する: 開発したアプリを発行し、個人、チーム、チャネル、組織などのスコープに配布します。
+        * **Teams に発行する**: 開発したアプリを発行し、個人用、チーム、チャネル、組織などのスコープに配布します。
         
         * **Teams 用開発者ポータル**: 開発者ポータルを使用して、Teams アプリを構成および管理します。 
    :::column-end:::
@@ -135,13 +135,13 @@ Teams Toolkit UI のツアーを見てみましょう。
 
         Teams Toolkit の詳細にアクセスするには。 次のドキュメントとリソースが必要です。
         
-        * **作業の開始**: Visual Studio Code で Teams Toolkit の作業の開始に関するヘルプを表示します。
+        * **はじめに**: Visual Studio Code 内で Teams Toolkit の概要ヘルプを表示します。
 
         * **チュートリアル**: 選択すると、さまざまなチュートリアルにアクセスできます。
         
         * **ドキュメント**: Microsoft Teams 開発者向けドキュメントにアクセスする場合に選択します。
        
-        * **GitHub で問題を報告** する: GitHub ページにアクセスし、問題を発生させる場合に選択します。
+        * **GitHub で問題を報告する: GitHub** ページにアクセスして問題を発生させる場合に選択します。
    :::column-end:::
 :::row-end:::
 
@@ -151,24 +151,24 @@ Teams Toolkit UI のツアーを見てみましょう。
 
 ## <a name="explore-teams-toolkit-for-visual-studio"></a>Teams Toolkit for Visual Studio を調べる
 
-Teams Toolkit をインストールした後は、次の 2 つの方法で Teams Toolkit のオプションを表示できます。
+Teams Toolkit をインストールした後、次の 2 つの方法で Teams Toolkit オプションを表示できます。
 
 # <a name="project"></a>[プロジェクト](#tab/prj)
 
-**Project** で Teams Toolkit にアクセスできます。
+Teams Toolkit には **、[プロジェクト**] でアクセスできます。
 
-1. **Project** > **Teams Toolkit を選択します**。
-1. さまざまな Teams Toolkit オプションにアクセスできるようになりました。
+1. **[Project** > **Teams Toolkit] を** 選択します。
+1. さまざまな Teams ツールキット オプションにアクセスできるようになりました。
 
    :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu_1.png" alt-text="Teams ツールキットの操作メニュー":::
 
 # <a name="solution-explorer"></a>[ソリューション エクスプローラー](#tab/solutionexplorer)
 
-   **ソリューション エクスプローラー** で Teams Toolkit にアクセスできます。
+   Teams Toolkit には **、ソリューション エクスプローラー** でアクセスできます。
 
-1. **[表示]** >  **を選択ソリューション エクスプローラー** パネルソリューション エクスプローラー表示します。
+1. [**表示** > **ソリューション エクスプローラー**] を選択して、パネルソリューション エクスプローラー表示します。
 1. **プロジェクト** を右クリックします。
-1. **Teams Toolkit を** 選択して、さまざまな Teams Toolkit オプションにアクセスします。
+1. [ **Teams Toolkit** ] を選択して、さまざまな Teams Toolkit オプションにアクセスします。
 
    :::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-operations-menu1_1.png" alt-text="プロジェクトからの Teams ツールキットの操作":::
 
@@ -177,17 +177,17 @@ Teams Toolkit をインストールした後は、次の 2 つの方法で Teams
 
 ---
 
-Teams プロジェクトを作成したら、Teams Toolkit for Visual Studio で次の関数を実行できます。
+Teams プロジェクトを作成したら、Teams Toolkit for Visual Studio で次の機能を実行できます。
 
-:::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-menu-options.png"alt-text="[プロジェクト] メニューからの Teams ツールキットの操作":::
+:::image type="content" source="../assets/images/teams-toolkit-overview/teams-toolkit-menu-options.png"alt-text="[プロジェクト] メニューからの Teams ツールキット操作":::
 
 |関数  |説明  |
 |---------|---------|
-|Teams アプリの依存関係を準備する     |ローカル デバッグを実行する前に、この手順を実行します。これにより、ローカル デバッグの依存関係を設定し、Teams プラットフォームに Teams アプリを登録するのに役立ちます。 Microsoft 365 アカウントが必要です。 詳細については、「[Visual Studio を使用して Teams アプリをローカルでデバッグする](debug-teams-app-visual-studio.md)」を参照してください。         |
+|Teams アプリの依存関係を準備する     |ローカル デバッグを実行する前に、この手順を実行します。これにより、ローカル デバッグの依存関係を設定し、Teams プラットフォームに Teams アプリを登録するのに役立ちます。 Microsoft 365 アカウントが必要です。 詳細については、「[Visual Studio を使用して Teams アプリをローカルでデバッグする](debug-local.md)」を参照してください。         |
 |マニフェスト ファイルを開く     |Teams マニフェスト ファイルを開くには、パラメーターにカーソルを合わせて値をプレビューします。 詳細については、「[Visual Studio を使用して Teams アプリ マニフェストを編集する](VS-TeamsFx-preview-and-customize-app-manifest.md)」を参照してください。         |
 |Teams 開発者ポータルでマニフェストを更新する     |マニフェスト ファイルを更新した後でなければ、プロジェクト全体を再度展開することなくマニフェスト ファイルを Azure に再展開することはできません。 このコマンドを使用して、変更をリモートに更新します。 詳細については、「[Visual Studio を使用して Teams アプリ マニフェストを編集する](VS-TeamsFx-preview-and-customize-app-manifest.md)」を参照してください。       |
 |クラウドへのプロビジョニング     |このオプションは、Teams アプリをホストする Azure リソースを作成するのに役立ちます。 詳細については、「[Visual Studio を使用してクラウド リソースをプロビジョニングする](provision-cloud-resources.md)」を参照してください。        |
-|クラウドに展開する     |このオプションを使用すると、"クラウドへのプロビジョニング" を行ったときに作成された Azure リソースにコードをコピーできます。 詳細については、「[Visual Studio を使用して Teams アプリをクラウドに展開する](deploy-teams-app.md)」を参照してください。        |
+|クラウドに展開する     |このオプションを使用すると、"クラウドへのプロビジョニング" を行ったときに作成された Azure リソースにコードをコピーできます。 詳細については、「[Visual Studio を使用して Teams アプリをクラウドに展開する](deploy.md#deploy-teams-app-to-the-cloud-using-visual-studio)」を参照してください。        |
 |Teams でプレビュー     |このオプションを選択すると、Teams Web クライアントが起動し、ブラウザーで Teams アプリをプレビューできます。         |
 |Zip アプリ パッケージ     |このオプションでは、プロジェクトの下の `Build` フォルダーに Teams アプリ パッケージを生成します。 パッケージを Teams クライアントにアップロードし、Teams アプリを実行できます。         |
 
@@ -197,11 +197,11 @@ Teams プロジェクトを作成したら、Teams Toolkit for Visual Studio で
 
 * [Teams Toolkit のインストール](install-Teams-Toolkit.md)
 * [Teams Toolkit を使用して新しい Teams アプリを作成する](create-new-project.md)
-* [Microsoft Teams Toolkit を使用してアプリをビルドする準備をする](build-environments.md)
+* [Microsoft Teams Toolkit を使用してアプリを構築する準備をする](build-environments.md)
 * [Teams Toolkit を使用してクラウド リソースをプロビジョニングする](provision.md)
-* [Visual Studio で新しい Teams アプリを作成する](create-new-teams-app-for-Visual-Studio.md)
+* [Visual Studio で新しい Teams アプリを作成する](create-new-project.md#create-new-teams-app-in-visual-studio)
 * [Visual Studio を使用してクラウド リソースをプロビジョニングする](provision-cloud-resources.md)
-* [Visual Studio を使用して Teams アプリをクラウドに展開する](deploy-teams-app.md)
+* [Visual Studio を使用して Teams アプリをクラウドに展開する](deploy.md#deploy-teams-app-to-the-cloud-using-visual-studio)
 
 <!--  
 :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ui-elements.png" alt-text="UI Elements":::

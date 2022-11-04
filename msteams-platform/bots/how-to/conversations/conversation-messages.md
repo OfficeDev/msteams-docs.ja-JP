@@ -4,12 +4,12 @@ description: メッセージ、推奨されるアクション、通知、添付�
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-ms.openlocfilehash: 99594722225350e102b47d7a77314212192f7820
-ms.sourcegitcommit: 75ce5a6f7540775b768f69a9cf18dac17e5055d4
+ms.openlocfilehash: 16849a9e8ed97854e91934aef9de463eb355fec5
+ms.sourcegitcommit: c3601696cced9aadc764f1e734646ee7711f154c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2022
-ms.locfileid: "68657626"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "68833206"
 ---
 # <a name="messages-in-bot-conversations"></a>ボットの会話内のメッセージ
 
@@ -18,7 +18,7 @@ ms.locfileid: "68657626"
 基本的な会話は、1 つの REST API である Bot Framework コネクタを介して処理されます。 この API を使用すると、ボットは Teams やその他のチャネルと通信できます。 Bot Builder SDK には、次の機能があります。
 
 * Bot Framework コネクタに簡単にアクセスできます。
-* 会話フローと状態を管理するための追加機能。
+* 会話フローと状態を管理する機能。
 * 自然言語処理 (NLP) などのコグニティブ サービスを組み込む簡単な方法。
 
 ボットは、 プロパティを使用して Teams からメッセージを `Text` 受信し、1 つまたは複数のメッセージ応答をユーザーに送信します。
@@ -460,8 +460,9 @@ Teams アプリでこれらのエラーを適切に処理してください。 �
 | 400 | **コード**: `Bad Argument` <br/> **メッセージ**: *シナリオ固有 | ボットによって提供される要求ペイロードが無効です。 詳細については、「エラー メッセージ」を参照してください。 | いいえ | エラーの要求ペイロードを再評価します。 詳細については、返されたエラー メッセージを確認してください。 |
 | 401 | **コード**: `BotNotRegistered` <br/> **メッセージ**: このボットの登録が見つかりません。 | このボットの登録が見つかりませんでした。 | いいえ | ボット ID とパスワードを確認します。 ボット ID (AAD ID) が Teams 開発者ポータルに登録されているか、Azure の Azure ボット チャネル登録を介して "Teams" チャネルが有効になっていることを確認します。|
 | 403 | **コード**: `BotDisabledByAdmin` <br/> **メッセージ**: テナント管理者がこのボットを無効にしました | テナント管理者は、ユーザーとボット アプリ間の相互作用をブロックしました。 テナント管理者は、アプリ ポリシー内のユーザーのアプリを許可する必要があります。 詳細については、「 [アプリ ポリシー](/microsoftteams/app-policies)」を参照してください。 | いいえ | ボットとの対話が、ボットがブロックされなくなったことを示す会話内のユーザーによって明示的に開始されるまで、会話への投稿を停止します。 |
-| 403 | **コード**: `BotNotInConversationRoster` <br/> **メッセージ**: ボットは会話名簿の一部ではありません。 | ボットは会話の一部ではありません。 会話でアプリを再インストールする必要があります。 | いいえ | 追加の会話要求を送信する前に、ボットが再追加されたことを示すイベントを待 [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) ちます。|
+| 403 | **コード**: `BotNotInConversationRoster` <br/> **メッセージ**: ボットは会話名簿の一部ではありません。 | ボットは会話の一部ではありません。 会話でアプリを再インストールする必要があります。 | いいえ | 別の会話要求を送信する前に、ボットが再追加されたことを示すイベントを待 [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) ちます。|
 | 403 | **コード**: `ConversationBlockedByUser` <br/> **メッセージ**: ユーザーはボットとの会話をブロックしました。 | ユーザーは、モデレート設定を使用して、個人用チャットまたはチャネルでボットをブロックしました。 | いいえ | キャッシュから会話を削除します。 ボットとの対話が会話内のユーザーによって明示的に開始され、ボットがブロックされなくなったことを示すまで、会話への投稿を停止します。 |
+| 403 |**コード**: `InvalidBotApiHost` <br/> **メッセージ**: ボット API ホストが無効です。 GCC テナントの場合は、 を呼び出 `https://smba.infra.gcc.teams.microsoft.com`してください。|GCC テナントに属する会話のパブリック API エンドポイントと呼ばれるボット。| いいえ | 会話のサービス URL を に `https://smba.infra.gcc.teams.microsoft.com` 更新し、要求を再試行します。|
 | 403 | **コード**: `NotEnoughPermissions` <br/> **メッセージ**: *シナリオ固有 | ボットには、要求されたアクションを実行するための必要なアクセス許可がありません。 | いいえ | エラー メッセージから必要なアクションを決定します。 |
 | 404 | **コード**: `ActivityNotFoundInConversation` <br/> **メッセージ**: 会話が見つかりません。 | 指定されたメッセージ ID が会話で見つかりませんでした。 メッセージが存在しないか、削除されています。 | いいえ | 送信されるメッセージ ID が予期される値であるかどうかを確認します。 キャッシュされた場合は、ID を削除します。 |
 | 404 | **コード**: `ConversationNotFound` <br/> **メッセージ**: 会話が見つかりません。 | 会話が存在しないか削除されているため、見つかりませんでした。 | いいえ | 送信された会話 ID が予期される値であるかどうかを確認します。 キャッシュされた場合は、ID を削除します。 |
@@ -479,6 +480,7 @@ Teams アプリでこれらのエラーを適切に処理してください。 �
 
 |状態コード | 再試行戦略 |
 |----------------|-----------------|
+| 403 | の `InvalidBotApiHost`GCC API `https://smba.infra.gcc.teams.microsoft.com` を呼び出して再試行します。|
 | 412 | 指数バックオフを使用して再試行します。 |
 | 429 | ヘッダーを使用して再試行して `Retry-After` 、要求の間の待機時間 (使用可能な場合) を秒単位で判断します。 それ以外の場合は、可能であれば、スレッド ID を使用して指数バックオフを使用して再試行してください。 |
 | 502 | 指数バックオフを使用して再試行します。 |
