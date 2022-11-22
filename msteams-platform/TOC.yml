@@ -502,14 +502,13 @@
   items:
     - name: 概要
       href: concepts/authentication/authentication.md
-      displayName: Authentication method
-    - name: タブ
+    - name: Teams アプリの SSO を有効にする
       items:
         - name: タブ アプリの SSO を有効にする
           items:
-            - name: 概要
+            - name: タブ SSO の概要
               href: tabs/how-to/authentication/tab-sso-overview.md
-            - name: Azure AD でタブ アプリを登録する
+            - name: Azure AD でタブ アプリを構成する
               href: tabs/how-to/authentication/tab-sso-register-aad.md
             - name: SSO を有効にするコードを追加する
               href: tabs/how-to/authentication/tab-sso-code.md
@@ -517,33 +516,32 @@
               href: tabs/how-to/authentication/tab-sso-manifest.md
             - name: Microsoft Graph の権限または範囲を許可する
               href: tabs/how-to/authentication/tab-sso-graph-api.md
-              displayName: Configure authentication for different platforms
-            - name: SSO 認証のトラブルシューティング
-              href: tabs/how-to/authentication/tab-sso-troubleshooting.md
-        - name: サード パーティの OAuth IdP 認証を使用する
+        - name: ボットとメッセージ拡張機能アプリの SSO を有効にする
           items:
             - name: 概要
-              href: tabs/how-to/authentication/auth-flow-tab.md
-            - name: サード パーティの OAuth IdP 認証を構成する
-              href: tabs/how-to/authentication/auth-tab-aad.md
-            - name: 外部 OAuth プロバイダーを使用する
-              href: tabs/how-to/authentication/auth-oauth-provider.md
-    - name: ボット
+              href: bots/how-to/authentication/bot-sso-overview.md
+            - name: Azure AD でアプリを構成する
+              href: bots/how-to/authentication/bot-sso-register-aad.md
+            - name: SSO を有効にするコードを追加する
+              href: bots/how-to/authentication/bot-sso-code.md
+            - name: SSO 用のマニフェストを更新しアプリをプレビューする
+              href: bots/how-to/authentication/bot-sso-manifest.md
+            - name: Microsoft Graph の権限または範囲を許可する
+              href: bots/how-to/authentication/bot-sso-graph-api.md
+        - name: SSO 認証のトラブルシューティング
+          href: tabs/how-to/authentication/tab-sso-troubleshooting.md
+    - name: サード パーティの IdP 認証を使用する
       items:
-        - name: ボットの認証フロー
-          href: bots/how-to/authentication/auth-flow-bot.md
-        - name: 認証をボットに追加する
+        - name: 概要
+          href: tabs/how-to/authentication/auth-flow-tab.md
+        - name: サード パーティの IdP 認証をタブ アプリに追加する
+          href: tabs/how-to/authentication/auth-tab-aad.md
+        - name: ボット アプリにサード パーティ IdP 認証を追加する
           href: bots/how-to/authentication/add-authentication.md
-          displayName: 'Create an authentication-enabled bot, deploy the bot to Azure and associate it with an identity provider, integrate the bot within Microsoft Teams'
-        - name: SSO 認証を利用する
-          href: bots/how-to/authentication/auth-aad-sso-bots.md
-    - name: メッセージの拡張機能
-      items:
-        - name: メッセージ拡張機能に認証を追加する
+        - name: サード パーティの IdP 認証をメッセージ拡張機能アプリに追加する
           href: messaging-extensions/how-to/add-authentication.md
-          displayName: Configuration
-        - name: メッセージ拡張機能用の SSO を有効化する
-          href: messaging-extensions/how-to/enable-SSO-auth-me.md
+    - name: 外部 OAuth プロバイダーを使用する
+      href: tabs/how-to/authentication/auth-oauth-provider.md
 - name: デバイスの機能を統合する
   items:
     - name: 概要
